@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-08-23T03:29:25.212Z",
+  "geradoEm": "2026-08-23T06:57:51.527Z",
   "site": "sc-domain:otecnicodeinformatica.com.br",
   "disponivel": true,
   "rotas": [
@@ -19,7 +19,7 @@
       "path": "/bairros/cajuru",
       "url": "https://otecnicodeinformatica.com.br/bairros/cajuru",
       "status": "NO_DATA",
-      "coverageState": "Detectada, mas não indexada no momento",
+      "coverageState": "O Google não reconhece o URL",
       "ultimoCrawl": null,
       "canonicalGoogle": null,
       "canonicalDeclarado": null,
