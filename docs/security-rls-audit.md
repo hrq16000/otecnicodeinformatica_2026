@@ -1,15 +1,26 @@
 # RLS & Role-Permission Audit
 
-Last reviewed: 2026-06-22
+Last reviewed: 2026-08-23 (Rodada 5 — column-level hardening)
 
-All four tables in the `public` schema have RLS enabled and follow least-privilege:
+All tables in the `public` schema have RLS enabled and follow least-privilege:
 
 | Table | RLS | anon | authenticated | service_role | Policies |
 | --- | --- | --- | --- | --- | --- |
 | `funnel_submissions` | ✅ | INSERT (validated) | INSERT + admin SELECT/UPDATE via `has_role` | full | 3 |
-| `reviews` | ✅ | SELECT only where `verified=true AND published=true` | admin-only INSERT/UPDATE/DELETE/SELECT via `has_role` | full | 5 |
+| `reviews` | ✅ | SELECT of **public columns only** where `verified=true AND published=true` | admin-only INSERT/UPDATE/DELETE/SELECT via `has_role` | full | 5 |
+| `partners` | ✅ | SELECT of **public columns only** where `status='ativo'` | own row (owner) + admin; sensitive columns not granted | full | 5 |
 | `user_roles` | ✅ | — | SELECT own row only (`user_id = auth.uid()`) | full (admin writes) | 1 |
 | `og_validation_status` | ✅ | SELECT (public OG/SEO metadata only) | SELECT | full | 1 |
+
+## Column-level grants (Rodada 5)
+
+RLS cannot restrict columns, so sensitive fields are excluded from the role GRANTs:
+
+- `partners`: `documento`, `documento_tipo`, `notas_admin`, `plano_expira_em`, `user_id`, `aceite_termos_em` are **not** granted to `anon`/`authenticated`. Admin reads them through the `SECURITY DEFINER` function `admin_list_partners`.
+- `reviews`: `client_phone`, `origin_path`, `origin_protocol`, `service_closed_at`, `authorized_publication` are **not** granted to `anon`. `authenticated` only reaches rows through admin policies.
+- Public surfaces are the `security_invoker` views `partners_public` and `reviews_public`, already consumed by the app.
+
+
 
 ## Function hardening
 
