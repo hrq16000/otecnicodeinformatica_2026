@@ -1,6 +1,7 @@
 import { useMemo } from "react";
 import { useRouterState } from "@tanstack/react-router";
 import { SCHEMA_SLOTS, SLOT_PRIORITY, useJsonLdSlot } from '@/lib/jsonLdSlots';
+import { buildHomeFaqSchema } from '@/lib/homeFaq';
 import { buildLocalBusinessSchema } from '@/lib/localBusinessJsonLd';
 import { buildOrganizationSchema } from '@/lib/organizationJsonLd';
 import { SITE_BASE_URL } from "@/lib/siteConfig";
@@ -28,22 +29,9 @@ export const JsonLdSchema = () => {
     hasMap: "https://www.google.com/maps/search/?api=1&query=T%C3%A9cnico+em+Curitiba",
   }), []);
 
-  const faqSchema = useMemo(() => ({
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      { "@type": "Question", "name": "Quanto custa o serviço de técnico de informática em Curitiba?",
-        "acceptedAnswer": { "@type": "Answer", "text": "A visita técnica começa em R$ 99,99. valor do atendimento no local e você só paga se aprovar. Aceitamos PIX, cartão e dinheiro." } },
-      { "@type": "Question", "name": "O técnico vai até minha casa ou empresa?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Sim. Atendimento domiciliar em toda Curitiba e região metropolitana (São José dos Pinhais, Araucária, Campo Largo, Pinhais, Colombo). O técnico vai com todas as ferramentas." } },
-      { "@type": "Question", "name": "Quanto tempo demora para o técnico chegar?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Na maioria dos casos atendemos conforme a disponibilidade da agenda, com deslocamento médio de 30 a 60 minutos. Para urgências há atendimento prioritário." } },
-      { "@type": "Question", "name": "Vocês consertam notebook de qualquer marca?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Sim. Dell, HP, Lenovo, Acer, Asus, Samsung, LG, Positivo e outras. Limpeza, formatação, troca de tela, teclado, bateria e placa-mãe." } },
-      { "@type": "Question", "name": "Os serviços têm garantia?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Sim. O serviço executado tem 90 dias de garantia sobre a mão de obra, registrada por escrito no valor aprovado. Peças e componentes seguem a garantia do fornecedor/fabricante." } }
-    ]
-  }), []);
+  // Paridade obrigatória com o bloco visível da home (HomeFaqSsr):
+  // mesma fonte de dados, mesmo texto, ambos no HTML servido.
+  const faqSchema = useMemo(() => buildHomeFaqSchema(), []);
 
   const websiteSchema = useMemo(() => ({
     "@context": "https://schema.org",
