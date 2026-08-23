@@ -38,7 +38,24 @@ import { runClientInit } from "@/lib/clientInit";
 
 // Google Consent Mode v2 — precisa rodar antes de qualquer ping (LGPD).
 // Portado do <head> do index.html pré-migração.
+/**
+ * Buffer pré-hidratação do CTA de WhatsApp: o botão é servido no HTML, mas o
+ * handler React só existe depois da hidratação. Sem isto, um toque rápido no
+ * CTA principal não abre nada e o lead se perde. O clique é enfileirado e
+ * drenado pelo funil assim que ele monta.
+ */
+const WA_PREHYDRATION_SCRIPT = `
+window.__waFunnelQueue = window.__waFunnelQueue || [];
+document.addEventListener('click', function (e) {
+  if (document.documentElement.dataset.hydrated === '1') return;
+  var t = e.target && e.target.closest ? e.target.closest('[data-wa-funnel="required"]') : null;
+  if (!t) return;
+  window.__waFunnelQueue.push({ location: t.getAttribute('data-cta-location') || 'float' });
+}, true);
+`;
+
 const CONSENT_MODE_SCRIPT = `
+
 window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 window.gtag = gtag;
