@@ -5,6 +5,7 @@ import { JsonLdSchema } from "@/components/JsonLdSchema";
 import { HeroTriagem } from "@/components/home/HeroTriagem";
 import { ContextosBento } from "@/components/home/ContextosBento";
 import { FaixaFotografica } from "@/components/home/FaixaFotografica";
+import { HomeFaqSsr } from "@/components/home/HomeFaqSsr";
 
 
 import { TrustStrip } from "@/components/TrustStrip";
@@ -60,6 +61,8 @@ const Index = () => {
         <TrustStrip />
         <ContextosBento />
         <FaixaFotografica />
+        {/* FAQ no HTML servido: paridade obrigatória com o FAQPage JSON-LD. */}
+        <HomeFaqSsr />
 
 
 
