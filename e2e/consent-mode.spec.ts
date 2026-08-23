@@ -22,9 +22,12 @@ const installConsentSpy = async (page: import("@playwright/test").Page) => {
     const push = w.dataLayer.push.bind(w.dataLayer);
     w.dataLayer.push = (...args: unknown[]) => {
       for (const a of args) {
-        if (Array.isArray(a) && a[0] === "consent" && a[1] === "update") {
+        // gtag() empurra o objeto `arguments` (array-like, não Array):
+        // por isso a leitura é por índice, não por Array.isArray.
+        const al = a as { length?: number; [i: number]: unknown } | null;
+        if (al && typeof al.length === "number" && al[0] === "consent" && al[1] === "update") {
           (window as unknown as { __consentUpdates: Update[] }).__consentUpdates.push(
-            a[2] as Update,
+            al[2] as Update,
           );
         }
       }

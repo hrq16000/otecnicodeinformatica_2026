@@ -55,11 +55,14 @@ document.addEventListener('click', function (e) {
 `;
 
 const CONSENT_MODE_SCRIPT = `
-
 window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-window.gtag = gtag;
-gtag('consent', 'default', {
+// Idempotente: nunca sobrescreve um gtag já instalado (spies de teste,
+// tag manager carregado antes). Sem declaração \`function gtag\` — uma
+// declaração global de mesmo nome clobbaria o gtag existente na hoist.
+if (typeof window.gtag !== 'function') {
+  window.gtag = function () { window.dataLayer.push(arguments); };
+}
+window.gtag('consent', 'default', {
   ad_storage: 'denied',
   ad_user_data: 'denied',
   ad_personalization: 'denied',
@@ -71,7 +74,7 @@ gtag('consent', 'default', {
 try {
   var saved = localStorage.getItem('lgpd_consent_v1');
   if (saved === 'granted') {
-    gtag('consent', 'update', {
+    window.gtag('consent', 'update', {
       ad_storage: 'granted',
       ad_user_data: 'granted',
       ad_personalization: 'granted',
@@ -79,7 +82,7 @@ try {
     });
   }
 } catch(e){}
-gtag('js', new Date());
+window.gtag('js', new Date());
 `.trim();
 
 export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()({
