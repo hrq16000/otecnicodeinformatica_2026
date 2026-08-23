@@ -186,13 +186,28 @@ const UNICOS = new Set(["FAQPage", "BreadcrumbList"]);
 const errors = [];
 let paginas = 0;
 let nosValidados = 0;
+let naoRenderizadas = 0;
 
-for (const rel of listarPaginas(DIST)) {
-  if (IGNORAR.some((re) => re.test(rel))) continue;
-  const html = readFileSync(path.join(DIST, rel), "utf8");
+/** Texto realmente visível: sem scripts, sem tags, sem entidades. */
+const textoVisivel = (html) =>
+  html
+    .replace(/<script[\s\S]*?<\/script>/gi, " ")
+    .replace(/<style[\s\S]*?<\/style>/gi, " ")
+    .replace(/<[^>]+>/g, " ")
+    .replace(/&[a-z]+;/gi, " ")
+    .replace(/\s+/g, " ");
+
+for (const rota of ROTAS) {
+  const html = htmlDaRota(rota, DIST);
+  if (!html) {
+    errors.push(`${rota}: FAIL_ROUTE_NOT_RENDERED (SSR não devolveu HTML 200)`);
+    naoRenderizadas++;
+    continue;
+  }
   if (/<meta[^>]+name=["']robots["'][^>]*noindex/i.test(html)) continue;
   paginas++;
-  const rota = `/${rel.replace(/index\.html$/, "").replace(/\/$/, "")}` || "/";
+  const visivel = textoVisivel(html);
+
 
   const nodes = [...html.matchAll(/<script type="application\/ld\+json"[^>]*>([\s\S]*?)<\/script>/gi)]
     .map((m) => {
