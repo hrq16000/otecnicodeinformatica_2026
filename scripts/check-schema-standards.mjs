@@ -123,8 +123,16 @@ function validarService(node, push) {
   if (areas.length === 0) push("Service sem 'areaServed'");
 }
 
+/** Normaliza aspas tipográficas e espaços para comparar schema × HTML. */
+const normalizar = (s) =>
+  s
+    .replace(/[\u2018\u2019\u02BC]/g, "'")
+    .replace(/[\u201C\u201D]/g, '"')
+    .replace(/[\u00A0\u202F]/g, " ")
+    .replace(/\s+/g, " ");
+
 /** Trecho estável da pergunta para procurar no texto visível. */
-const amostra = (s) => s.replace(/\s+/g, " ").trim().slice(0, 28);
+const amostra = (s) => normalizar(s).trim().slice(0, 28);
 
 function validarFaqPage(node, push, ctx = {}) {
   const perguntas = node.mainEntity ? [].concat(node.mainEntity) : [];
