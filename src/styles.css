@@ -613,10 +613,13 @@
     50% { transform: scale(1.02); }
   }
 
-  /* ── WhatsApp Float Pulse ── */
+  /* ── WhatsApp Float Pulse ──
+     O pulso anima apenas a sombra: `transform: scale()` alterava a caixa do
+     botão continuamente, deixando o CTA "nunca estável" para leitores/robôs e
+     para o clique automatizado. O efeito visual permanece, sem mexer no layout. */
   @keyframes waPulse {
-    0%, 100% { transform: scale(1); }
-    50% { transform: scale(1.03); }
+    0%, 100% { box-shadow: 0 4px 20px hsl(var(--whatsapp) / 0.35); }
+    50% { box-shadow: 0 6px 28px hsl(var(--whatsapp) / 0.55); }
   }
   .wa-pulse {
     animation: waPulse 5s var(--anim-ease-in-out) infinite;
@@ -624,6 +627,7 @@
   .wa-pulse:hover {
     animation-play-state: paused;
   }
+
 
   /* ── Ripple Effect ── */
   .ripple-container {
