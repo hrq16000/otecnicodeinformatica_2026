@@ -209,7 +209,7 @@ const ComputadorLento = () => {
     <div className="min-h-screen bg-background">
       <PageSEO title={TITLE} description={DESCRIPTION} path={PATH} />
       <Header />
-      {/* "Problemas" é nível taxonômico, não rota: fica sem link no visual e sem URL no BreadcrumbList. */}
+      {/* "Problemas" é o hub real /problemas: recebe link visual e URL no BreadcrumbList. */}
       <Breadcrumbs items={[{ label: "Problemas", href: "/problemas" }, { label: "Computador lento" }]} />
 
       <section className="bg-[hsl(var(--hero-bg))] text-white">
