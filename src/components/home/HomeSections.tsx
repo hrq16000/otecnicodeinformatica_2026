@@ -578,27 +578,8 @@ export const HomeSections = () => {
       </section>
 
 
-      {/* 9. FAQ */}
-      <section className="py-14 md:py-18">
-        <div className="container mx-auto">
-          <SectionTitle
-            eyebrow="Dúvidas frequentes"
-            title="O que as pessoas perguntam antes de chamar"
-            sub="Respostas diretas sobre valor, modalidade, peças e limites técnicos."
-          />
-          <div className="mx-auto max-w-3xl divide-y divide-border rounded-2xl border border-border bg-card">
-            {faqs.map((f) => (
-              <details key={f.q} className="group px-5 py-4">
-                <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-sm font-bold text-foreground marker:hidden [&::-webkit-details-marker]:hidden">
-                  {f.q}
-                  <span className="text-accent transition-transform group-open:rotate-45" aria-hidden="true">+</span>
-                </summary>
-                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{f.a}</p>
-              </details>
-            ))}
-          </div>
-        </div>
-      </section>
+      {/* 9. FAQ — movida para HomeFaqSsr (renderizada no SSR, acima do bloco lazy)
+          para garantir paridade com o FAQPage JSON-LD. Não duplicar aqui. */}
 
       {/* 9b. PROVAS DE E-E-A-T (só renderiza com dado real cadastrado) */}
       <EeatProofsSection className="bg-secondary/40" />
