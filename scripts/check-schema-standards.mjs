@@ -206,14 +206,19 @@ let paginas = 0;
 let nosValidados = 0;
 let naoRenderizadas = 0;
 
-/** Texto realmente visível: sem scripts, sem tags, sem entidades. */
+/** Texto realmente visível: sem scripts, sem tags, sem entidades, normalizado. */
 const textoVisivel = (html) =>
-  html
-    .replace(/<script[\s\S]*?<\/script>/gi, " ")
-    .replace(/<style[\s\S]*?<\/style>/gi, " ")
-    .replace(/<[^>]+>/g, " ")
-    .replace(/&[a-z]+;/gi, " ")
-    .replace(/\s+/g, " ");
+  normalizar(
+    html
+      .replace(/<script[\s\S]*?<\/script>/gi, " ")
+      .replace(/<style[\s\S]*?<\/style>/gi, " ")
+      .replace(/<[^>]+>/g, " ")
+      .replace(/&#(?:x27|39);/gi, "'")
+      .replace(/&quot;/gi, '"')
+      .replace(/&amp;/gi, "&")
+      .replace(/&[a-z]+;|&#\d+;/gi, " "),
+  );
+
 
 for (const rota of ROTAS) {
   const html = htmlDaRota(rota, DIST);
