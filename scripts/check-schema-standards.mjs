@@ -2,45 +2,45 @@
 /**
  * GATE — conformidade dos schemas estruturais com os padrões do schema.org.
  *
- * Varre TODO o HTML estático de dist/ e valida, por rota pública indexável:
+ * Universo: as URLs CURADAS indexáveis (fonte única `lib/curated-urls.mjs`),
+ * renderizadas pelo harness SSR. A versão anterior varria `dist/**\/index.html`;
+ * no stack TanStack Start esses arquivos não existem mais, então o gate passava
+ * com "0 nós em 0 páginas" — verde por cegueira. Agora o universo vazio é
+ * BLOQUEIO (fail-closed).
+ *
+ * Valida, por rota pública indexável:
  *   • LocalBusiness  — name, url, address (PostalAddress com streetAddress/
  *                      addressLocality/addressRegion/postalCode/addressCountry),
  *                      areaServed e openingHoursSpecification bem formado.
  *   • Service        — name, serviceType/description, provider e areaServed.
- *   • FAQPage        — mainEntity[] com Question(name) + acceptedAnswer(Answer.text).
+ *   • FAQPage        — mainEntity[] com Question(name) + acceptedAnswer(Answer.text)
+ *                      E paridade com a FAQ VISÍVEL da página.
  *   • BreadcrumbList — itemListElement[] com position sequencial (1..n), name e item.
  *   • Duplicidade    — nenhum tipo estrutural repetido na mesma página com o mesmo @id
  *                      (ou mais de um FAQPage/BreadcrumbList por rota).
  *
- * Fail-closed: campo inválido ou duplicidade reprova o build.
+ * Fail-closed: campo inválido, duplicidade ou rota não renderizada reprova.
  * Uso: node scripts/check-schema-standards.mjs [dist]
  */
-import { existsSync, readFileSync, readdirSync, statSync } from "node:fs";
 import path from "node:path";
+import { CURATED_PATHS } from "./lib/curated-urls.mjs";
+import { prepararSsr, htmlDaRota, abortarSeBloqueado } from "./lib/ssr-harness.mjs";
 
 const DIST = path.resolve(process.argv[2] || "dist");
 
-if (!existsSync(DIST)) {
-  console.error(`BLOQUEADO: ${DIST} não existe — rode "npm run build" antes.`);
+/** Rotas privadas/utilitárias nunca fazem parte do universo curado. */
+const IGNORAR = [/^\/admin(\/|$)/, /^\/debug(\/|$)/, /^\/status-os(\/|$)/, /^\/funil-indisponivel$/];
+
+const ROTAS = [...new Set(CURATED_PATHS)].filter((p) => !IGNORAR.some((re) => re.test(p))).sort();
+
+if (ROTAS.length === 0) {
+  console.error("BLOQUEADO: universo curado vazio — o gate não tem o que validar (fail-closed).");
   process.exit(1);
 }
 
-const IGNORAR = [/^404\.html$/, /^admin\//, /^debug\//, /^status-os\//, /^funil-indisponivel\//];
+await prepararSsr(ROTAS, { dist: DIST });
+abortarSeBloqueado("schema-standards");
 
-/** Lista recursiva de index.html em dist/. */
-function listarPaginas(dir, base = "") {
-  const out = [];
-  for (const entry of readdirSync(dir)) {
-    const abs = path.join(dir, entry);
-    const rel = base ? `${base}/${entry}` : entry;
-    if (statSync(abs).isDirectory()) {
-      out.push(...listarPaginas(abs, rel));
-    } else if (entry === "index.html" || rel === "404.html") {
-      out.push(rel);
-    }
-  }
-  return out;
-}
 
 const flatten = (n) =>
   Array.isArray(n)
