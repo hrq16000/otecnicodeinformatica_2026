@@ -253,7 +253,7 @@ for (const rota of ROTAS) {
         if (idsPorTipo.has(chave)) errors.push(`${rota}: ${tipo} duplicado com @id "${id}"`);
         idsPorTipo.set(chave, true);
       }
-      validar(node, (msg) => errors.push(`${rota}: ${msg}`));
+      validar(node, (msg) => errors.push(`${rota}: ${msg}`), { visivel, rota });
     }
   }
 
