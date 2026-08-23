@@ -1,47 +1,61 @@
 # Micro-rodada Qualidade 1 — dívida dos gates legados + lacuna de schema
 
-## 1. Gates migrados para o stack SSR/TanStack Start
+Escopo: dívida técnica e governança. Nenhuma URL nova, nenhum bairro, nenhuma
+alteração nas 5 pontes da Discovery 1, nos 4 bairros da Local 2 ou nos pilares 9B/9C.
+
+## Estado inicial
+
+| Gate | Estado | Causa |
+| --- | --- | --- |
+| `check:internal-links` | PASS | já migrado ao universo TanStack (441 rotas por arquivo) |
+| `check:orphan-pages` | PASS | já usa route manifest + URLs curadas |
+| `check:malha-interna` | FAIL | lia `dist/<rota>/index.html`; no TanStack Start esse arquivo não existe mais |
+| `check:schema-standards` | PASS **vácuo** | varria `dist/**/index.html` e validava "0 nós em 0 páginas" |
+
+## Findings e classificação
+
+| Finding | Classificação | Correção |
+| --- | --- | --- |
+| `malha-interna`: 12 rotas "HTML estático ausente em dist" | LEGACY_FALSE_POSITIVE | gate migrado para `ssr-harness.mjs` (`prepararSsr` + `htmlDaRota`), com `FAIL_ROUTE_NOT_RENDERED` fail-closed |
+| `schema-standards`: universo vazio | LEGACY_FALSE_POSITIVE (verde por cegueira) | universo passou a ser `CURATED_PATHS` renderizado por SSR; universo vazio agora é BLOQUEIO |
+| `FAQPage` da home emitido em 27 artigos de blog e demais rotas | REAL_DEFECT | slot global de FAQ passou a valer só na home (paridade com `HomeFaqSsr`); rotas com FAQ própria seguem preenchendo o slot em `SLOT_PRIORITY.page` |
+| `/servicos/remocao-de-virus`: 1 pergunta "invisível" | LEGACY_FALSE_POSITIVE do comparador | normalização de aspas tipográficas e entidades numéricas (`&#x27;`) nos dois lados |
+| `/problemas/computador-lento` e `/problemas/notebook-nao-liga`: `BreadcrumbList` com nível intermediário sem `item` | REAL_DEFECT | "Problemas" é hub real (`/problemas`), agora com `href` no breadcrumb visual e URL no schema |
+
+Nenhum threshold foi afrouxado, nenhuma allowlist por pathname foi criada e
+nenhum arquivo gerado (`routeTree.gen.ts`) foi editado.
+
+## Nova regra estrutural: FAQPage exige FAQ visível
+
+`check:schema-standards` passou a validar paridade entre `FAQPage.mainEntity[].name`
+e o texto visível servido no SSR. Um `FAQPage` sem bloco correspondente na página
+reprova o gate — é a política do Google e o contrato do projeto.
+
+## Resultado final
 
 | Gate | Antes | Depois |
 | --- | --- | --- |
-| `check:internal-links` | 775 falsos positivos (lia `App.tsx` inexistente) | 441 rotas derivadas de `src/routes/**`, 161 URLs de sitemap, 0 erro |
-| `check:orphan-pages` | ruído de componentes sem rota | montagem resolvida via `legacyRouteElements.tsx`; 8 skips informativos, 0 defeito |
-| `check:malha-interna` | reciprocidade cega quebrada | arestas dirigidas semânticas (2 mútuas + 2 dirigidas), 16 páginas OK |
+| `check:malha-interna` | FAIL (12 rotas) | PASS — 16 páginas de serviço, 4 arestas obrigatórias (2 mútuas, 2 dirigidas) |
+| `check:internal-links` | PASS | PASS — 424 destinos, 10 assets e 3 rotas privadas classificados |
+| `check:orphan-pages` | PASS | PASS — 441 rotas, 153 curadas, 8 componentes sem rota classificados |
+| `check:schema-standards` | PASS vácuo (0 páginas) | PASS real — 321 nós em 153/153 URLs curadas, 0 não renderizadas |
+| `check:jsonld-references` · `check:rich-results` · `check:robots` · `check:sitemap-source` | PASS | PASS |
+| `typecheck` | PASS | PASS |
 
-Fonte única nova: `scripts/lib/tanstack-routes.mjs` (padrões de rota a partir do nome do arquivo,
-segmentos dinâmicos `$`, layouts `_`, assets e rotas privadas classificados — não viram "link quebrado").
+## Vereditos
 
-Testes de regressão: `src/__tests__/gates-tanstack-routes.test.ts` (inclui caso negativo — rota
-inexistente não pode ser reconhecida).
+1. `check:malha-interna` verde sem reciprocidade artificial — SIM (arestas dirigidas preservadas).
+2. `check:internal-links` distingue rota, asset e artefato gerado — SIM.
+3. `check:orphan-pages` mede apenas rotas/URLs reais — SIM.
+4. URLs indexáveis órfãs — 0.
+5. `/blog/como-resolver-tela-azul-windows` satisfaz o contrato editorial — SIM: emite `["BlogPosting","Article","TechArticle"]` + `BreadcrumbList` únicos e **deixou de emitir** o `FAQPage` indevido.
+6. Algum gate foi afrouxado — NÃO.
+7. Pipeline confiável — SIM: cada PASS agora descreve HTML realmente servido.
 
-## 2. Lacuna estrutural de schema (causa-raiz)
+## Pendências
 
-O blog injetava JSON-LD por `useEffect` no `document` → invisível no HTML servido. Além disso o
-`JsonLdSsrSink` só era renderizado dentro do `PageSEO`, que fica **antes** dos demais componentes na
-árvore: tudo que registrava slot depois (Organization, WebSite, LocalBusiness, Service, FAQ) ficava
-fora do HTML do SSR.
-
-Correções:
-
-- `src/pages/BlogPost.tsx`: schemas construídos no render e registrados via `useJsonLdSlot`
-  (`article` quando aprovado no registro editorial, `web-page` quando rascunho — fail-closed mantido).
-- `src/routes/__root.tsx`: **sink único do site** depois do `<Outlet />`, com `InstitutionalJsonLd`
-  movido para dentro do provider do coletor. Sinks locais removidos (evita nó duplicado por slot).
-- `src/components/PageSEO.tsx`: `isPartOf` virou referência pura `{ "@id": … }` (antes redefinia
-  `#website`).
-- `src/pages/ColetaEntrega.tsx`: `provider` apontava para `#localbusiness` inexistente na rota → `#organization`.
-- `src/pages/servico-bairro/ServicoBairroTemplate.tsx` e as 5 páginas de cidade herdadas:
-  removida a redefinição local de `LocalBusiness` (mesmo `@id` do nó global / sem `address`).
-
-## 3. Resultado dos gates
-
-```
-check:internal-links      ✔ 0 link quebrado
-check:orphan-pages        ✔ 0 órfão
-check:malha-interna       ✔ 16 páginas
-check:jsonld-references   ✔ 109 rotas curadas (era 197 falhas)
-check:schema-standards    ✔ 347 nós em 154 páginas (era 11 duplicidades)
-check:rich-results        ✔ 0 erro (era 5)
-```
-
-Nenhum threshold foi afrouxado e nenhuma exceção por pathname foi adicionada.
+- Não existe script `npm run unit` no projeto; a suíte Vitest só roda com configuração
+  jsdom dedicada (execução direta acusa falhas pré-existentes de ambiente, sem relação
+  com esta rodada). Recomendo tratar isso numa rodada própria de infraestrutura de testes.
+- `check:rich-results` mantém 3 AVISOS (não bloqueantes) sobre `description` de `Service`
+  e `telephone` de `LocalBusiness` em duas rotas de serviço × cidade.

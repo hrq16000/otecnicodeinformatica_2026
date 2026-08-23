@@ -100,7 +100,10 @@ export const JsonLdSchema = () => {
 
   // Entidades institucionais globais — um slot cada, cedidos a schemas de rota.
   useJsonLdSlot(SCHEMA_SLOTS.localBusiness, localBusinessSchema, SLOT_PRIORITY.global);
-  useJsonLdSlot(SCHEMA_SLOTS.faq, faqSchema, SLOT_PRIORITY.global);
+  // FAQPage é a FAQ VISÍVEL da home (HomeFaqSsr): fora dela não existe bloco
+  // correspondente na página, e emitir o schema global criaria FAQPage sem
+  // conteúdo visível. Rotas com FAQ própria preenchem o slot em SLOT_PRIORITY.page.
+  useJsonLdSlot(SCHEMA_SLOTS.faq, isHome ? faqSchema : null, SLOT_PRIORITY.global);
   useJsonLdSlot(SCHEMA_SLOTS.website, websiteSchema, SLOT_PRIORITY.global);
   useJsonLdSlot(SCHEMA_SLOTS.organization, organizationSchema, SLOT_PRIORITY.global);
   useJsonLdSlot(SCHEMA_SLOTS.itemListServices, serviceItemListSchema, SLOT_PRIORITY.global);

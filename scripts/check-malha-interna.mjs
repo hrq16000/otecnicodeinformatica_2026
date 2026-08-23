@@ -6,7 +6,9 @@
  * páginas mais relevantes da sua vizinhança semântica (não para uma lista
  * genérica) e que os pares declarados sejam recíprocos.
  *
- * Regras verificadas no HTML SERVIDO (dist/<rota>/index.html):
+ * Regras verificadas no HTML SERVIDO pelo SSR (harness único, Micro-rodada
+ * Qualidade 1 — o stack TanStack Start não grava mais um HTML por rota em
+ * dist/, então ler arquivo estático transformava o gate em falha permanente):
  *  1. toda página de serviço curada linka ≥ 3 outras URLs curadas;
  *  2. toda página de serviço linka pelo menos 1 destino do seu próprio par
  *     semântico declarado abaixo (vizinhança de intenção);
@@ -14,10 +16,11 @@
  *  4. nenhuma página de serviço curada aponta para rota noindex consolidada
  *     (/servicos/manutencao-tv, /servicos/conserto-celular, /cftv).
  *
+ * Fail-closed: sem SSR disponível o gate aborta com UNKNOWN, nunca passa.
  * Uso: node scripts/check-malha-interna.mjs [dist]
  */
-import { readFileSync, existsSync } from "node:fs";
 import { CURATED_PATHS } from "./lib/curated-urls.mjs";
+import { prepararSsr, htmlDaRota, abortarSeBloqueado } from "./lib/ssr-harness.mjs";
 
 const DIST = process.argv[2] ?? "dist";
 
@@ -87,11 +90,6 @@ const CONSOLIDADAS_NOINDEX = ["/servicos/manutencao-tv", "/servicos/conserto-cel
 
 const CURATED = new Set(CURATED_PATHS);
 
-function htmlFor(path) {
-  const file = path === "/" ? `${DIST}/index.html` : `${DIST}${path}/index.html`;
-  return existsSync(file) ? readFileSync(file, "utf8") : null;
-}
-
 function linksOf(html) {
   const out = new Set();
   for (const m of html.matchAll(/href="(\/[^"#?]*)"/g)) {
@@ -104,12 +102,16 @@ const falhas = [];
 const servicos = CURATED_PATHS.filter((p) => /^\/servicos\/[^/]+$/.test(p));
 const mapa = new Map();
 
+await prepararSsr(servicos, { dist: DIST });
+abortarSeBloqueado("malha-interna");
+
 for (const path of servicos) {
-  const html = htmlFor(path);
+  const html = htmlDaRota(path, DIST);
   if (!html) {
-    falhas.push(`${path} → HTML estático ausente em ${DIST}`);
+    falhas.push(`${path} → FAIL_ROUTE_NOT_RENDERED (SSR não devolveu HTML 200)`);
     continue;
   }
+
   const links = linksOf(html);
   mapa.set(path, links);
 

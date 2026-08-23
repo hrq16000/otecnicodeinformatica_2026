@@ -2,45 +2,45 @@
 /**
  * GATE — conformidade dos schemas estruturais com os padrões do schema.org.
  *
- * Varre TODO o HTML estático de dist/ e valida, por rota pública indexável:
+ * Universo: as URLs CURADAS indexáveis (fonte única `lib/curated-urls.mjs`),
+ * renderizadas pelo harness SSR. A versão anterior varria `dist/**\/index.html`;
+ * no stack TanStack Start esses arquivos não existem mais, então o gate passava
+ * com "0 nós em 0 páginas" — verde por cegueira. Agora o universo vazio é
+ * BLOQUEIO (fail-closed).
+ *
+ * Valida, por rota pública indexável:
  *   • LocalBusiness  — name, url, address (PostalAddress com streetAddress/
  *                      addressLocality/addressRegion/postalCode/addressCountry),
  *                      areaServed e openingHoursSpecification bem formado.
  *   • Service        — name, serviceType/description, provider e areaServed.
- *   • FAQPage        — mainEntity[] com Question(name) + acceptedAnswer(Answer.text).
+ *   • FAQPage        — mainEntity[] com Question(name) + acceptedAnswer(Answer.text)
+ *                      E paridade com a FAQ VISÍVEL da página.
  *   • BreadcrumbList — itemListElement[] com position sequencial (1..n), name e item.
  *   • Duplicidade    — nenhum tipo estrutural repetido na mesma página com o mesmo @id
  *                      (ou mais de um FAQPage/BreadcrumbList por rota).
  *
- * Fail-closed: campo inválido ou duplicidade reprova o build.
+ * Fail-closed: campo inválido, duplicidade ou rota não renderizada reprova.
  * Uso: node scripts/check-schema-standards.mjs [dist]
  */
-import { existsSync, readFileSync, readdirSync, statSync } from "node:fs";
 import path from "node:path";
+import { CURATED_PATHS } from "./lib/curated-urls.mjs";
+import { prepararSsr, htmlDaRota, abortarSeBloqueado } from "./lib/ssr-harness.mjs";
 
 const DIST = path.resolve(process.argv[2] || "dist");
 
-if (!existsSync(DIST)) {
-  console.error(`BLOQUEADO: ${DIST} não existe — rode "npm run build" antes.`);
+/** Rotas privadas/utilitárias nunca fazem parte do universo curado. */
+const IGNORAR = [/^\/admin(\/|$)/, /^\/debug(\/|$)/, /^\/status-os(\/|$)/, /^\/funil-indisponivel$/];
+
+const ROTAS = [...new Set(CURATED_PATHS)].filter((p) => !IGNORAR.some((re) => re.test(p))).sort();
+
+if (ROTAS.length === 0) {
+  console.error("BLOQUEADO: universo curado vazio — o gate não tem o que validar (fail-closed).");
   process.exit(1);
 }
 
-const IGNORAR = [/^404\.html$/, /^admin\//, /^debug\//, /^status-os\//, /^funil-indisponivel\//];
+await prepararSsr(ROTAS, { dist: DIST });
+abortarSeBloqueado("schema-standards");
 
-/** Lista recursiva de index.html em dist/. */
-function listarPaginas(dir, base = "") {
-  const out = [];
-  for (const entry of readdirSync(dir)) {
-    const abs = path.join(dir, entry);
-    const rel = base ? `${base}/${entry}` : entry;
-    if (statSync(abs).isDirectory()) {
-      out.push(...listarPaginas(abs, rel));
-    } else if (entry === "index.html" || rel === "404.html") {
-      out.push(rel);
-    }
-  }
-  return out;
-}
 
 const flatten = (n) =>
   Array.isArray(n)
@@ -123,13 +123,39 @@ function validarService(node, push) {
   if (areas.length === 0) push("Service sem 'areaServed'");
 }
 
-function validarFaqPage(node, push) {
+/** Normaliza aspas tipográficas e espaços para comparar schema × HTML. */
+const normalizar = (s) =>
+  s
+    .replace(/[\u2018\u2019\u02BC]/g, "'")
+    .replace(/[\u201C\u201D]/g, '"')
+    .replace(/[\u00A0\u202F]/g, " ")
+    .replace(/\s+/g, " ");
+
+/** Trecho estável da pergunta para procurar no texto visível. */
+const amostra = (s) => normalizar(s).trim().slice(0, 28);
+
+function validarFaqPage(node, push, ctx = {}) {
   const perguntas = node.mainEntity ? [].concat(node.mainEntity) : [];
   if (perguntas.length === 0) {
     push("FAQPage sem 'mainEntity'");
     return;
   }
+  // Política do Google e contrato do projeto: FAQPage só pode existir quando a
+  // FAQ está VISÍVEL na própria página. Sem paridade, o schema é removido — não
+  // se afrouxa o gate.
+  if (typeof ctx.visivel === "string") {
+    const invisiveis = perguntas
+      .map((q) => texto(q?.name))
+      .filter((n) => n && !ctx.visivel.includes(amostra(n)));
+    if (invisiveis.length) {
+      push(
+        `FAQPage com ${invisiveis.length}/${perguntas.length} pergunta(s) sem correspondência visível na página ` +
+          `(ex.: "${invisiveis[0]}")`,
+      );
+    }
+  }
   const vistos = new Set();
+
   perguntas.forEach((q, i) => {
     if (!q || typeof q !== "object") {
       push(`FAQPage.mainEntity[${i}] inválido`);
@@ -186,13 +212,33 @@ const UNICOS = new Set(["FAQPage", "BreadcrumbList"]);
 const errors = [];
 let paginas = 0;
 let nosValidados = 0;
+let naoRenderizadas = 0;
 
-for (const rel of listarPaginas(DIST)) {
-  if (IGNORAR.some((re) => re.test(rel))) continue;
-  const html = readFileSync(path.join(DIST, rel), "utf8");
+/** Texto realmente visível: sem scripts, sem tags, sem entidades, normalizado. */
+const textoVisivel = (html) =>
+  normalizar(
+    html
+      .replace(/<script[\s\S]*?<\/script>/gi, " ")
+      .replace(/<style[\s\S]*?<\/style>/gi, " ")
+      .replace(/<[^>]+>/g, " ")
+      .replace(/&#(?:x27|39);/gi, "'")
+      .replace(/&quot;/gi, '"')
+      .replace(/&amp;/gi, "&")
+      .replace(/&[a-z]+;|&#\d+;/gi, " "),
+  );
+
+
+for (const rota of ROTAS) {
+  const html = htmlDaRota(rota, DIST);
+  if (!html) {
+    errors.push(`${rota}: FAIL_ROUTE_NOT_RENDERED (SSR não devolveu HTML 200)`);
+    naoRenderizadas++;
+    continue;
+  }
   if (/<meta[^>]+name=["']robots["'][^>]*noindex/i.test(html)) continue;
   paginas++;
-  const rota = `/${rel.replace(/index\.html$/, "").replace(/\/$/, "")}` || "/";
+  const visivel = textoVisivel(html);
+
 
   const nodes = [...html.matchAll(/<script type="application\/ld\+json"[^>]*>([\s\S]*?)<\/script>/gi)]
     .map((m) => {
@@ -220,7 +266,7 @@ for (const rel of listarPaginas(DIST)) {
         if (idsPorTipo.has(chave)) errors.push(`${rota}: ${tipo} duplicado com @id "${id}"`);
         idsPorTipo.set(chave, true);
       }
-      validar(node, (msg) => errors.push(`${rota}: ${msg}`));
+      validar(node, (msg) => errors.push(`${rota}: ${msg}`), { visivel, rota });
     }
   }
 
@@ -239,5 +285,6 @@ if (errors.length > 0) {
 }
 
 console.log(
-  `OK — schema.org conforme: ${nosValidados} nó(s) LocalBusiness/Service/FAQPage/BreadcrumbList em ${paginas} página(s) indexáveis.`,
+  `OK — schema.org conforme: ${nosValidados} nó(s) LocalBusiness/Service/FAQPage/BreadcrumbList em ${paginas} ` +
+    `página(s) indexáveis de ${ROTAS.length} URL(s) curada(s) (não renderizadas: ${naoRenderizadas}).`,
 );
