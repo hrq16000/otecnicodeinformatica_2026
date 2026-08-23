@@ -272,5 +272,6 @@ if (errors.length > 0) {
 }
 
 console.log(
-  `OK — schema.org conforme: ${nosValidados} nó(s) LocalBusiness/Service/FAQPage/BreadcrumbList em ${paginas} página(s) indexáveis.`,
+  `OK — schema.org conforme: ${nosValidados} nó(s) LocalBusiness/Service/FAQPage/BreadcrumbList em ${paginas} ` +
+    `página(s) indexáveis de ${ROTAS.length} URL(s) curada(s) (não renderizadas: ${naoRenderizadas}).`,
 );
