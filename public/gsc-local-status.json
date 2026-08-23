@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-08-16T00:44:13.699Z",
+  "geradoEm": "2026-08-23T03:29:25.212Z",
   "site": "sc-domain:otecnicodeinformatica.com.br",
   "disponivel": true,
   "rotas": [
@@ -7,19 +7,19 @@
       "slug": "boqueirao",
       "path": "/bairros/boqueirao",
       "url": "https://otecnicodeinformatica.com.br/bairros/boqueirao",
-      "status": "NO_DATA",
-      "coverageState": "O Google não reconhece o URL",
-      "ultimoCrawl": null,
-      "canonicalGoogle": null,
-      "canonicalDeclarado": null,
-      "robots": "ROBOTS_TXT_STATE_UNSPECIFIED"
+      "status": "INDEXED",
+      "coverageState": "Enviada e indexada",
+      "ultimoCrawl": "2026-08-18T15:40:07Z",
+      "canonicalGoogle": "https://otecnicodeinformatica.com.br/bairros/boqueirao",
+      "canonicalDeclarado": "https://otecnicodeinformatica.com.br/bairros/boqueirao",
+      "robots": "ALLOWED"
     },
     {
       "slug": "cajuru",
       "path": "/bairros/cajuru",
       "url": "https://otecnicodeinformatica.com.br/bairros/cajuru",
       "status": "NO_DATA",
-      "coverageState": "O Google não reconhece o URL",
+      "coverageState": "Detectada, mas não indexada no momento",
       "ultimoCrawl": null,
       "canonicalGoogle": null,
       "canonicalDeclarado": null,
@@ -29,12 +29,12 @@
       "slug": "pinheirinho",
       "path": "/bairros/pinheirinho",
       "url": "https://otecnicodeinformatica.com.br/bairros/pinheirinho",
-      "status": "NO_DATA",
-      "coverageState": "O Google não reconhece o URL",
-      "ultimoCrawl": null,
-      "canonicalGoogle": null,
-      "canonicalDeclarado": null,
-      "robots": "ROBOTS_TXT_STATE_UNSPECIFIED"
+      "status": "INDEXED",
+      "coverageState": "Enviada e indexada",
+      "ultimoCrawl": "2026-08-18T15:37:46Z",
+      "canonicalGoogle": "https://otecnicodeinformatica.com.br/bairros/pinheirinho",
+      "canonicalDeclarado": "https://otecnicodeinformatica.com.br/bairros/pinheirinho",
+      "robots": "ALLOWED"
     },
     {
       "slug": "cidade-jardim-sjp",
