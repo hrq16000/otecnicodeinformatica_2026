@@ -123,13 +123,31 @@ function validarService(node, push) {
   if (areas.length === 0) push("Service sem 'areaServed'");
 }
 
-function validarFaqPage(node, push) {
+/** Trecho estável da pergunta para procurar no texto visível. */
+const amostra = (s) => s.replace(/\s+/g, " ").trim().slice(0, 28);
+
+function validarFaqPage(node, push, ctx = {}) {
   const perguntas = node.mainEntity ? [].concat(node.mainEntity) : [];
   if (perguntas.length === 0) {
     push("FAQPage sem 'mainEntity'");
     return;
   }
+  // Política do Google e contrato do projeto: FAQPage só pode existir quando a
+  // FAQ está VISÍVEL na própria página. Sem paridade, o schema é removido — não
+  // se afrouxa o gate.
+  if (typeof ctx.visivel === "string") {
+    const invisiveis = perguntas
+      .map((q) => texto(q?.name))
+      .filter((n) => n && !ctx.visivel.includes(amostra(n)));
+    if (invisiveis.length) {
+      push(
+        `FAQPage com ${invisiveis.length}/${perguntas.length} pergunta(s) sem correspondência visível na página ` +
+          `(ex.: "${invisiveis[0]}")`,
+      );
+    }
+  }
   const vistos = new Set();
+
   perguntas.forEach((q, i) => {
     if (!q || typeof q !== "object") {
       push(`FAQPage.mainEntity[${i}] inválido`);
