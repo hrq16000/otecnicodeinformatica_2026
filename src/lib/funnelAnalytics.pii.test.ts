@@ -1,3 +1,4 @@
+// @vitest-environment jsdom
 import { describe, it, expect, beforeEach, vi } from "vitest";
 import { sanitizeTelemetry, BLOCKED_TELEMETRY_KEYS, track, trackFunnelBusinessProfile } from "./funnelAnalytics";
 

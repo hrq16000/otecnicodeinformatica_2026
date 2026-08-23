@@ -1,3 +1,4 @@
+// @vitest-environment jsdom
 import { describe, it, expect, beforeEach } from "vitest";
 import { avaliarClique, resetDedup, DEDUP_CONFIG } from "./clickDedup";
 

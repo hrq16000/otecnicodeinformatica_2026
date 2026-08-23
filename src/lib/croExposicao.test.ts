@@ -1,3 +1,4 @@
+// @vitest-environment jsdom
 import { beforeEach, describe, expect, it, vi } from "vitest";
 import { exposicaoJaRegistrada, registrarExposicao } from "./croExposicao";
 import type { ExperimentoCro } from "./croRodada7";
