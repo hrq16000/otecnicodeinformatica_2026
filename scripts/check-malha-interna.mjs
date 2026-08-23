@@ -90,11 +90,6 @@ const CONSOLIDADAS_NOINDEX = ["/servicos/manutencao-tv", "/servicos/conserto-cel
 
 const CURATED = new Set(CURATED_PATHS);
 
-function htmlFor(path) {
-  const file = path === "/" ? `${DIST}/index.html` : `${DIST}${path}/index.html`;
-  return existsSync(file) ? readFileSync(file, "utf8") : null;
-}
-
 function linksOf(html) {
   const out = new Set();
   for (const m of html.matchAll(/href="(\/[^"#?]*)"/g)) {
@@ -107,12 +102,16 @@ const falhas = [];
 const servicos = CURATED_PATHS.filter((p) => /^\/servicos\/[^/]+$/.test(p));
 const mapa = new Map();
 
+await prepararSsr(servicos, { dist: DIST });
+abortarSeBloqueado("malha-interna");
+
 for (const path of servicos) {
-  const html = htmlFor(path);
+  const html = htmlDaRota(path, DIST);
   if (!html) {
-    falhas.push(`${path} → HTML estático ausente em ${DIST}`);
+    falhas.push(`${path} → FAIL_ROUTE_NOT_RENDERED (SSR não devolveu HTML 200)`);
     continue;
   }
+
   const links = linksOf(html);
   mapa.set(path, links);
 
