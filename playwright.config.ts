@@ -1,3 +1,5 @@
+import { existsSync } from "node:fs";
+import { resolve } from "node:path";
 import { defineConfig, devices } from "@playwright/test";
 
 /**
@@ -15,8 +17,35 @@ import { defineConfig, devices } from "@playwright/test";
  */
 const CI = !!process.env.CI;
 
+// O alvo de preview (4173) só existe quando há build em `dist/`. Subir esse
+// servidor sem build faz TODA a suíte falhar por timeout de webServer — falso
+// vermelho de infraestrutura. Ele passa a ser opt-in explícito: quando o build
+// existe (ou E2E_PREVIEW=1), entra na lista; caso contrário, apenas o dev.
+const temBuild = existsSync(resolve(process.cwd(), "dist/server/server.js"));
+const usarPreview = process.env.E2E_PREVIEW === "1" || temBuild;
+
+const webServer = [
+  {
+    command: "npm run dev",
+    url: "http://localhost:8080",
+    reuseExistingServer: true,
+    timeout: 120_000,
+  },
+];
+
+if (usarPreview) {
+  webServer.push({
+    command: "npm run preview -- --port 4173 --strictPort",
+    url: "http://localhost:4173",
+    reuseExistingServer: true,
+    timeout: 120_000,
+  });
+}
+
 export default defineConfig({
   testDir: "e2e",
+  // Vitest cuida de src/**; aqui só entram specs E2E.
+  testMatch: /.*\.spec\.ts$/,
   timeout: 60_000,
   expect: { timeout: 10_000 },
   fullyParallel: true,
@@ -37,18 +66,6 @@ export default defineConfig({
     { name: "chromium", use: { ...devices["Desktop Chrome"] } },
     { name: "mobile", use: { ...devices["Pixel 7"] } },
   ],
-  webServer: [
-    {
-      command: "npm run dev",
-      url: "http://localhost:8080",
-      reuseExistingServer: true,
-      timeout: 120_000,
-    },
-    {
-      command: "npm run preview -- --port 4173 --strictPort",
-      url: "http://localhost:4173",
-      reuseExistingServer: true,
-      timeout: 120_000,
-    },
-  ],
+  webServer,
 });
+

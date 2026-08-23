@@ -6,9 +6,39 @@ on:
   pull_request:
 
 jobs:
-  build:
+  # Camada 1 — testes de código (Vitest). Não sobe navegador, não builda.
+  # Playwright NUNCA roda aqui; Vitest NUNCA coleta e2e/ (gate test:list).
+  unit:
     runs-on: ubuntu-latest
     timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - name: Install deps
+        run: npm ci --no-audit --no-fund
+      - name: Inventário de testes (isolamento de runners, fail-closed)
+        run: npm run test:list
+      - name: Testes unitários (Vitest — projetos unit + scripts)
+        run: npm run test:unit
+      - name: Testes de integração (Vitest — jsdom)
+        run: npm run test:integration
+      - name: Testes de nó puro dos utilitários de borda
+        run: npm run test:node-scripts
+      - name: Inventário de testes (artefato)
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: test-inventory
+          path: reports/test-inventory.json
+          if-no-files-found: warn
+
+  build:
+    needs: unit
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
     steps:
       - uses: actions/checkout@v4
       - uses: oven-sh/setup-bun@v2
