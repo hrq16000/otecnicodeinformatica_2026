@@ -121,6 +121,8 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     ],
     scripts: [
       { children: CONSENT_MODE_SCRIPT },
+      { children: WA_PREHYDRATION_SCRIPT },
+
       {
         src: "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3762170279587706",
         async: true,
