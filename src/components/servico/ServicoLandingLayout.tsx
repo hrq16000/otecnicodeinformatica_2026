@@ -31,6 +31,13 @@ import { getSessionId } from "@/lib/funnelSubmission";
 import { copyCtaMobile } from "@/lib/experimentosCtaMobile";
 import { whatsappLinkComContexto } from "@/lib/waContextLink";
 import { getGeoContext } from "@/lib/geoContext";
+import {
+  RespostaRapida,
+  TabelaDiagnosticaBloco,
+  BlocosTecnicos,
+} from "@/components/BlocosEnriquecimento";
+import { ENRIQUECIMENTO_SERVICOS } from "@/lib/enriquecimentoServicos";
+
 
 export interface ServicoLandingData {
   /** Slug curto usado em tracking e no path (/servicos/<path>) */
@@ -119,6 +126,9 @@ export const ServicoLandingLayout = ({ data }: { data: ServicoLandingData }) => 
     etapa: "triagem",
   });
   const isEmpresarial = data.variante === "empresarial";
+  /** Enriquecimento 2 — blocos técnicos opcionais desta página de serviço. */
+  const enriquecimento = ENRIQUECIMENTO_SERVICOS[data.path];
+
   const heroB2B = data.heroEmpresarial ?? EMPRESARIAL_SERVICO_HERO;
   const contextoB2B = data.contextoEmpresarial ?? EMPRESARIAL_CONTEXTO_CARDS;
 
@@ -314,6 +324,16 @@ export const ServicoLandingLayout = ({ data }: { data: ServicoLandingData }) => 
 
       {data.caixasPosicao === "antes-incluso" && caixasBlock}
 
+      {/* Enriquecimento 2 — resposta direta antes do conteúdo comercial */}
+      {enriquecimento?.respostaRapida && (
+        <section className="bg-background pt-10">
+          <div className="container mx-auto max-w-3xl px-4">
+            <RespostaRapida texto={enriquecimento.respostaRapida} />
+          </div>
+        </section>
+      )}
+
+
 
 
       {/* O que está incluso */}
@@ -483,7 +503,20 @@ export const ServicoLandingLayout = ({ data }: { data: ServicoLandingData }) => 
 
 
 
+      {/* Enriquecimento 2 — tabela diagnóstica e blocos de decisão */}
+      {(enriquecimento?.tabelaDiagnostica || enriquecimento?.blocos) && (
+        <section className="bg-background pb-4">
+          <div className="container mx-auto max-w-3xl px-4">
+            {enriquecimento?.tabelaDiagnostica ? (
+              <TabelaDiagnosticaBloco tabela={enriquecimento.tabelaDiagnostica} />
+            ) : null}
+            <BlocosTecnicos blocos={enriquecimento?.blocos} />
+          </div>
+        </section>
+      )}
+
       <PoliticaAtendimentoBloco />
+
 
       {/* FAQ */}
       <section id="faq" className="scroll-mt-24 py-14 md:py-16 bg-secondary">
