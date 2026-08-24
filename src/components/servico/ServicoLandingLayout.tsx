@@ -31,6 +31,13 @@ import { getSessionId } from "@/lib/funnelSubmission";
 import { copyCtaMobile } from "@/lib/experimentosCtaMobile";
 import { whatsappLinkComContexto } from "@/lib/waContextLink";
 import { getGeoContext } from "@/lib/geoContext";
+import {
+  RespostaRapida,
+  TabelaDiagnosticaBloco,
+  BlocosTecnicos,
+} from "@/components/BlocosEnriquecimento";
+import { ENRIQUECIMENTO_SERVICOS } from "@/lib/enriquecimentoServicos";
+
 
 export interface ServicoLandingData {
   /** Slug curto usado em tracking e no path (/servicos/<path>) */
