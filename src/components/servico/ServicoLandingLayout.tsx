@@ -493,7 +493,20 @@ export const ServicoLandingLayout = ({ data }: { data: ServicoLandingData }) => 
 
 
 
+      {/* Enriquecimento 2 — tabela diagnóstica e blocos de decisão */}
+      {(enriquecimento?.tabelaDiagnostica || enriquecimento?.blocos) && (
+        <section className="bg-background pb-4">
+          <div className="container mx-auto max-w-3xl px-4">
+            {enriquecimento?.tabelaDiagnostica ? (
+              <TabelaDiagnosticaBloco tabela={enriquecimento.tabelaDiagnostica} />
+            ) : null}
+            <BlocosTecnicos blocos={enriquecimento?.blocos} />
+          </div>
+        </section>
+      )}
+
       <PoliticaAtendimentoBloco />
+
 
       {/* FAQ */}
       <section id="faq" className="scroll-mt-24 py-14 md:py-16 bg-secondary">
