@@ -314,6 +314,16 @@ export const ServicoLandingLayout = ({ data }: { data: ServicoLandingData }) => 
 
       {data.caixasPosicao === "antes-incluso" && caixasBlock}
 
+      {/* Enriquecimento 2 — resposta direta antes do conteúdo comercial */}
+      {enriquecimento?.respostaRapida && (
+        <section className="bg-background pt-10">
+          <div className="container mx-auto max-w-3xl px-4">
+            <RespostaRapida texto={enriquecimento.respostaRapida} />
+          </div>
+        </section>
+      )}
+
+
 
 
       {/* O que está incluso */}
