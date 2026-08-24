@@ -46,7 +46,10 @@ export default function Status() {
         Diagnóstico em tempo real do funcionamento do site no seu navegador.
       </p>
 
+      <DeployVersionCheck />
+
       <section
+
         className={`rounded-xl border p-4 mb-6 ${
           healthy ? "border-emerald-500/40 bg-emerald-500/5" : "border-amber-500/50 bg-amber-500/10"
         }`}
