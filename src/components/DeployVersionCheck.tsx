@@ -90,6 +90,10 @@ export const DeployVersionCheck = () => {
             ? new Date(manifesto.buildTime).toLocaleString("pt-BR")
             : new Date(APP_BUILD_INFO.buildTime).toLocaleString("pt-BR")}
         </dd>
+        <dt>Quem respondeu</dt>
+        <dd data-testid="camada-resposta">
+          {camada ? `${camada.rotulo} · ${camada.detalhe}` : "—"}
+        </dd>
       </dl>
       {estado === "divergente" && (
         <p className="mt-2 text-sm">
