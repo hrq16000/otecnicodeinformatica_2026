@@ -126,6 +126,9 @@ export const ServicoLandingLayout = ({ data }: { data: ServicoLandingData }) => 
     etapa: "triagem",
   });
   const isEmpresarial = data.variante === "empresarial";
+  /** Enriquecimento 2 — blocos técnicos opcionais desta página de serviço. */
+  const enriquecimento = ENRIQUECIMENTO_SERVICOS[data.path];
+
   const heroB2B = data.heroEmpresarial ?? EMPRESARIAL_SERVICO_HERO;
   const contextoB2B = data.contextoEmpresarial ?? EMPRESARIAL_CONTEXTO_CARDS;
 
