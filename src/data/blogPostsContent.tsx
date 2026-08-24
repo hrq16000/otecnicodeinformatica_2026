@@ -1693,6 +1693,9 @@ docker run -d --name db --network minha-rede postgres
       <>
         <p className="lead">Muitos programas maliciosos são silenciosos: não travam a tela nem exibem avisos óbvios. Outros são barulhentos, cheios de pop-ups e alertas falsos. Este guia ajuda a diferenciar <strong>sintoma</strong> de <strong>confirmação</strong> e a agir com segurança — sem cair em golpes que se disfarçam de solução.</p>
 
+        <h2>Resposta rápida</h2>
+        <p>Sintoma não é confirmação. Pop-ups fora do navegador, página inicial trocada, programas desconhecidos instalados e antivírus desativado sozinho, quando aparecem juntos, indicam infecção com alta probabilidade. Arquivos renomeados ou inacessíveis exigem parar o uso imediatamente e desconectar o equipamento da rede. Nunca ligue para números exibidos em telas de alerta nem instale "limpadores" sugeridos por elas: essa é a própria fraude. Troque senhas críticas a partir de outro dispositivo confiável.</p>
+
         <h2>Sinais que merecem atenção</h2>
         <ul>
           <li>Pop-ups e propagandas abrindo sozinhos, inclusive fora do navegador.</li>
@@ -1756,6 +1759,52 @@ docker run -d --name db --network minha-rede postgres
         </div>
 
         <EditorialReferences slug="como-saber-se-pc-tem-virus-malware" />
+        <h2>Sintoma, causa provável e verificação</h2>
+        <p>Boa parte dos sintomas atribuídos a vírus tem explicação mais simples. A tabela separa o que exige verificação técnica do que costuma ser configuração ou hardware.</p>
+        <div className="not-prose my-8 overflow-x-auto rounded-xl border border-border">
+          <table className="w-full text-sm">
+            <thead><tr><th className="text-left p-2 border-b">Sintoma</th><th className="text-left p-2 border-b">Causa provável</th><th className="text-left p-2 border-b">Verificação</th></tr></thead>
+            <tbody>
+              <tr><td className="p-2 border-b">Pop-ups fora do navegador</td><td className="p-2 border-b">Adware instalado junto de outro programa</td><td className="p-2 border-b">Revisar a lista de aplicativos instalados por data de instalação</td></tr>
+              <tr><td className="p-2 border-b">Busca e página inicial alteradas</td><td className="p-2 border-b">Extensão de navegador indesejada</td><td className="p-2 border-b">Desativar as extensões e reabrir o navegador</td></tr>
+              <tr><td className="p-2 border-b">Lentidão com uso alto de processador</td><td className="p-2 border-b">Processo em segundo plano — de mineração a indexação legítima</td><td className="p-2 border-b">Abrir o gerenciador de tarefas e identificar o processo dominante</td></tr>
+              <tr><td className="p-2 border-b">Arquivos renomeados ou inacessíveis</td><td className="p-2 border-b">Ransomware</td><td className="p-2 border-b">Parar o uso, desconectar da rede e preservar o estado do disco</td></tr>
+              <tr><td className="p-2 border-b">Antivírus desativado sozinho</td><td className="p-2 border-b">Ameaça com privilégio administrativo</td><td className="p-2 border-b">Verificar se a reativação é bloqueada; se for, tratar como comprometimento</td></tr>
+              <tr><td className="p-2 border-b">Tela de alerta com telefone de suporte</td><td className="p-2 border-b">Golpe de falso suporte, não infecção</td><td className="p-2 border-b">Fechar a janela ou desligar o equipamento; nunca ligar para o número</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h2>Árvore de decisão</h2>
+        <ol>
+          <li>Há arquivos bloqueados, renomeados ou pedido de resgate? Pare tudo, desconecte da rede e não formate: existem chances de preservação que a formatação elimina.</li>
+          <li>Não há bloqueio, mas contas foram acessadas sem autorização? A prioridade é troca de senhas e verificação em duas etapas, em outro dispositivo.</li>
+          <li>Só há sintomas de navegador (busca trocada, propaganda)? Comece por extensões e programas instalados recentemente.</li>
+          <li>Os sintomas voltam depois da limpeza? O caminho de entrada continua aberto — instalador de terceiros, senha reutilizada ou dispositivo compartilhado.</li>
+          <li>Mais de um computador da mesma rede apresenta o comportamento na mesma semana? Trate como incidente de rede e isole antes de limpar.</li>
+        </ol>
+
+        <h2>Erros comuns</h2>
+        <ul>
+          <li>Instalar vários antivírus ao mesmo tempo: eles se bloqueiam e o resultado fica pior.</li>
+          <li>Formatar por impulso sem backup, perdendo dados que ainda seriam preserváveis.</li>
+          <li>Trocar senhas a partir do computador possivelmente comprometido.</li>
+          <li>Pagar resgate em caso de ransomware: não há garantia de devolução e o pagamento financia o ataque.</li>
+          <li>Conceder acesso remoto a quem entrou em contato por telefone ou mensagem sem solicitação.</li>
+        </ul>
+
+        <h2>Limites de segurança</h2>
+        <p>Nenhuma verificação garante ausência de infecção: ameaças recentes podem não ser reconhecidas na hora, e a limpeza depende do tipo de ameaça encontrada. Também não é honesto prometer remoção sem risco algum — dependendo do caso, há chance de perda de dados, e isso precisa ser avaliado antes, não depois. Em ambiente empresarial, mexer no equipamento antes de preservar evidências pode inviabilizar a investigação e o acionamento de seguro. Ransomware, especificamente, não tem solução universal: sem backup íntegro, muitas vezes não há caminho técnico de recuperação.</p>
+
+        <h2>Termos que aparecem no diagnóstico</h2>
+        <ul>
+          <li><strong>Adware:</strong> programa que exibe propaganda e costuma vir embutido em instaladores.</li>
+          <li><strong>Ransomware:</strong> ameaça que criptografa arquivos e exige pagamento.</li>
+          <li><strong>Vetor de entrada:</strong> o caminho pelo qual a ameaça chegou ao equipamento.</li>
+          <li><strong>Persistência:</strong> mecanismo que faz a ameaça voltar após reinício ou limpeza parcial.</li>
+          <li><strong>Verificação em duas etapas:</strong> segundo fator que impede o uso da senha vazada.</li>
+        </ul>
+
       </>
 
     ),
@@ -2437,6 +2486,9 @@ docker run -d --name db --network minha-rede postgres
       <>
         <p className="lead">Trocar o HD por um SSD é um dos upgrades mais perceptíveis em computadores mais antigos. Ainda assim, não é uma solução para qualquer problema. Vale entender o que realmente muda, o que continua limitado e o que precisa ser avaliado antes de investir.</p>
 
+        <h2>Resposta rápida</h2>
+        <p>Trocar o HD por SSD compensa quando a lentidão aparece na inicialização, na abertura de programas e no uso simultâneo de arquivos — sinal de que o armazenamento é o gargalo. Não compensa como solução isolada quando falta memória, quando o processador é o limite ou quando o sistema está corrompido ou infectado. Antes de comprar, confirme a interface aceita pelo equipamento (SATA 2,5" ou NVMe M.2) e o espaço físico disponível. Com o disco atual apresentando ruído ou erro de leitura, o backup vem antes de qualquer upgrade.</p>
+
         <h2>O que muda com o SSD</h2>
         <p>O SSD guarda dados em memória flash, sem partes móveis. Na prática, o que mais se sente:</p>
         <ul>
@@ -2500,6 +2552,55 @@ docker run -d --name db --network minha-rede postgres
             <li><Link to="/servicos/formatacao" className="text-accent">Formatação e instalação do sistema</Link></li>
           </ul>
         </div>
+        <h2>Sintoma, gargalo provável e teste</h2>
+        <p>O mesmo sintoma de "computador lento" tem causas distintas. A tabela ajuda a decidir se o SSD resolve o caso ou se o dinheiro deveria ir para outro componente.</p>
+        <div className="not-prose my-8 overflow-x-auto rounded-xl border border-border">
+          <table className="w-full text-sm">
+            <thead><tr><th className="text-left p-2 border-b">Sintoma</th><th className="text-left p-2 border-b">Gargalo provável</th><th className="text-left p-2 border-b">Teste antes de comprar</th></tr></thead>
+            <tbody>
+              <tr><td className="p-2 border-b">Demora longa para chegar à área de trabalho</td><td className="p-2 border-b">Armazenamento</td><td className="p-2 border-b">Observar o uso do disco em 100% durante a inicialização</td></tr>
+              <tr><td className="p-2 border-b">Travamento ao abrir muitos programas</td><td className="p-2 border-b">Memória insuficiente</td><td className="p-2 border-b">Verificar o consumo de memória com o uso habitual aberto</td></tr>
+              <tr><td className="p-2 border-b">Lentidão em edição de vídeo, planilha pesada ou compilação</td><td className="p-2 border-b">Processador</td><td className="p-2 border-b">Observar o processador constante em uso máximo na tarefa</td></tr>
+              <tr><td className="p-2 border-b">Lentidão que surgiu de repente</td><td className="p-2 border-b">Sistema corrompido ou infecção</td><td className="p-2 border-b">Checar programas iniciados automaticamente e fazer verificação de segurança</td></tr>
+              <tr><td className="p-2 border-b">Cliques, ruídos ou erro de leitura</td><td className="p-2 border-b">Disco em falha</td><td className="p-2 border-b">Priorizar backup imediato; o upgrade vira consequência, não causa</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h2>Árvore de decisão</h2>
+        <ol>
+          <li>O disco atual dá sinais de falha (ruído, travamento ao ler arquivo, erro de leitura)? Faça backup antes de qualquer coisa e não clone um disco com defeito.</li>
+          <li>O equipamento aceita NVMe? Se aceitar e houver slot livre, o SSD NVMe é o caminho; se só houver interface SATA, o SSD SATA ainda representa ganho grande sobre o HD.</li>
+          <li>Há apenas um slot ocupado pelo HD? Verifique se a máquina permite manter os dois discos — muitos notebooks aceitam SSD no M.2 e HD na baia de 2,5".</li>
+          <li>O sistema atual está estável? Se estiver, clonar economiza tempo. Se estiver instável ou infectado, instalação limpa evita levar o problema junto.</li>
+          <li>A queixa continua depois do SSD? O gargalo era outro: memória, processador ou software.</li>
+        </ol>
+
+        <h2>Erros comuns</h2>
+        <ul>
+          <li>Comprar SSD M.2 sem confirmar se o slot da máquina é NVMe ou apenas SATA: o formato é o mesmo, a compatibilidade não.</li>
+          <li>Clonar um sistema já corrompido e esperar que o disco novo resolva a instabilidade.</li>
+          <li>Escolher a menor capacidade disponível e ficar sem espaço em poucos meses.</li>
+          <li>Descartar o HD antigo sem apagar os dados com segurança.</li>
+          <li>Tratar o SSD como backup: ele é o novo original, não uma cópia.</li>
+        </ul>
+
+        <h2>Limites de segurança</h2>
+        <p>Nenhum upgrade transforma um equipamento antigo em um modelo atual, e não existe número universal de ganho: o resultado depende do conjunto. A clonagem exige que o destino comporte os dados em uso e pode falhar quando o disco de origem já apresenta setores com erro — nesse cenário, tentar clonar repetidamente aumenta o desgaste e reduz a chance de recuperar arquivos. Em notebooks com disco criptografado, é indispensável ter a chave de recuperação antes de mover o sistema: sem ela, o acesso aos dados pode ser perdido de forma definitiva.</p>
+
+        <h2>Termos que aparecem na compra</h2>
+        <ul>
+          <li><strong>SATA:</strong> interface mais antiga, usada por HDs e por SSDs de 2,5".</li>
+          <li><strong>NVMe:</strong> protocolo de alto desempenho para SSDs conectados diretamente à placa.</li>
+          <li><strong>M.2:</strong> formato físico do módulo; pode ser SATA ou NVMe, e isso muda a compatibilidade.</li>
+          <li><strong>Clonagem:</strong> cópia integral do disco atual para o novo, mantendo sistema e programas.</li>
+          <li><strong>Instalação limpa:</strong> sistema instalado do zero, sem herdar configurações e falhas anteriores.</li>
+        </ul>
+
+        <p>Para avaliar o estado do disco atual e definir entre clonagem e instalação limpa com atendimento presencial em Curitiba e São José dos Pinhais, veja <Link to="/servicos/upgrade-ssd-ram" className="text-accent">upgrade de SSD e memória</Link>.</p>
+
+        <EditorialReferences slug="quando-trocar-hd-por-ssd" />
+
       </>
     ),
   },
@@ -2512,6 +2613,9 @@ docker run -d --name db --network minha-rede postgres
     content: (
       <>
         <p className="lead">Fotos, documentos e trabalho podem sumir em segundos por falha de disco, vírus ou descuido. Backup preventivo é o que separa um susto de um prejuízo. E, ao contrário do que muita gente pensa, mover arquivos para outra pasta do mesmo disco <strong>não é backup</strong> — se o disco falhar, tudo vai junto.</p>
+
+        <h2>Resposta rápida</h2>
+        <p>Backup é ter cópias independentes do original, em lugares que não falham juntos. A referência prática mais usada mantém três cópias do que importa, em dois tipos diferentes de mídia, com uma delas fora do local do computador. Sincronização em nuvem sozinha não cumpre esse papel: exclusão e criptografia se propagam para as cópias sincronizadas. E backup só existe de verdade depois que uma restauração foi testada — abrir um arquivo restaurado é o único teste que vale.</p>
 
         <h2>O que conta como backup de verdade</h2>
         <p>Backup é ter cópias em lugares independentes do original. Quanto mais separados os riscos, melhor:</p>
@@ -2568,6 +2672,53 @@ docker run -d --name db --network minha-rede postgres
         </div>
 
         <EditorialReferences slug="backup-como-proteger-seus-arquivos" />
+        <h2>Risco, o que ele atinge e qual cópia protege</h2>
+        <p>Escolher onde guardar a cópia depende do risco que se quer cobrir. A tabela mostra por que uma única cópia, por melhor que seja, deixa cenários descobertos.</p>
+        <div className="not-prose my-8 overflow-x-auto rounded-xl border border-border">
+          <table className="w-full text-sm">
+            <thead><tr><th className="text-left p-2 border-b">Risco</th><th className="text-left p-2 border-b">O que ele atinge</th><th className="text-left p-2 border-b">Cópia que protege</th></tr></thead>
+            <tbody>
+              <tr><td className="p-2 border-b">Falha do disco</td><td className="p-2 border-b">Somente o disco original</td><td className="p-2 border-b">Qualquer cópia fora daquele disco</td></tr>
+              <tr><td className="p-2 border-b">Exclusão ou sobrescrita acidental</td><td className="p-2 border-b">Original e cópias sincronizadas</td><td className="p-2 border-b">Cópia com versões anteriores retidas</td></tr>
+              <tr><td className="p-2 border-b">Ransomware</td><td className="p-2 border-b">Tudo que estiver acessível no momento do ataque</td><td className="p-2 border-b">Cópia desconectada ou com retenção imutável</td></tr>
+              <tr><td className="p-2 border-b">Furto, incêndio ou alagamento</td><td className="p-2 border-b">Todos os equipamentos do mesmo local</td><td className="p-2 border-b">Cópia fora do local (nuvem ou mídia guardada em outro endereço)</td></tr>
+              <tr><td className="p-2 border-b">Surto elétrico</td><td className="p-2 border-b">Equipamentos ligados na mesma instalação</td><td className="p-2 border-b">Mídia desconectada da tomada e da máquina</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h2>Árvore de decisão</h2>
+        <ol>
+          <li>Existe alguma cópia fora do disco original? Se não, comece por aí — é a lacuna que causa a maior parte das perdas domésticas.</li>
+          <li>Existe cópia que não é sobrescrita automaticamente quando o original muda? Se não existir, o cenário de exclusão e de ransomware continua descoberto.</li>
+          <li>Existe cópia fora do local físico? Se não, furto e incêndio levam tudo de uma vez.</li>
+          <li>A última restauração foi testada nos últimos meses? Se nunca foi, trate a cópia como não confirmada.</li>
+          <li>Se um dos itens acima falhar durante um incidente em curso — arquivos já inacessíveis ou disco com ruído — pare de usar o equipamento: cada nova gravação reduz a chance de recuperação.</li>
+        </ol>
+
+        <h2>Erros comuns</h2>
+        <ul>
+          <li>Copiar arquivos para outra pasta ou outra partição do mesmo disco e chamar isso de backup.</li>
+          <li>Manter o disco externo permanentemente conectado, exposto aos mesmos riscos do original.</li>
+          <li>Confiar na sincronização de nuvem sem verificar se o serviço mantém versões anteriores e por quanto tempo.</li>
+          <li>Fazer backup do que é facilmente recuperável (instaladores, filmes) e esquecer documentos e fotos insubstituíveis.</li>
+          <li>Não registrar onde as cópias estão nem como acessá-las — backup que ninguém encontra não é backup.</li>
+        </ul>
+
+        <h2>Limites de segurança</h2>
+        <p>Backup previne perda; não recupera o que já sumiu. Depois de uma falha, a tentativa de resgate é um processo incerto, mais caro e sem garantia de trazer tudo de volta. Também não existe cópia que dispense verificação: mídia externa envelhece, serviço de nuvem muda de política de retenção e conta pode ser perdida por falha no acesso. Para dados sensíveis, a cópia herda as mesmas exigências de privacidade do original — guardar sem criptografia move o risco de lugar em vez de eliminá-lo.</p>
+
+        <h2>Termos que ajudam a decidir</h2>
+        <ul>
+          <li><strong>Retenção:</strong> por quanto tempo versões antigas continuam disponíveis.</li>
+          <li><strong>Versionamento:</strong> capacidade de voltar a um estado anterior do arquivo.</li>
+          <li><strong>Cópia fora do local:</strong> cópia mantida em endereço diferente do equipamento original.</li>
+          <li><strong>Restauração testada:</strong> arquivo efetivamente recuperado e aberto a partir da cópia.</li>
+          <li><strong>Imutabilidade:</strong> propriedade que impede alterar ou apagar a cópia durante um período definido.</li>
+        </ul>
+
+        <p>Se os arquivos já estão inacessíveis, o caminho deixa de ser preventivo: veja <Link to="/servicos/recuperacao-de-dados" className="text-accent">recuperação de dados</Link>. Para montar a rotina antes do problema, com atendimento em Curitiba e região metropolitana, a avaliação do equipamento está em <Link to="/servicos/manutencao-de-computador" className="text-accent">manutenção de computador</Link>.</p>
+
       </>
 
     ),
@@ -3331,6 +3482,9 @@ docker run -d --name db --network minha-rede postgres
       <>
         <p className="lead">A maioria das empresas pequenas acredita ter backup porque os arquivos ficam em uma pasta na nuvem. Sincronização e backup, porém, resolvem problemas diferentes — e a confusão entre os dois só aparece no dia em que algo precisa ser restaurado.</p>
 
+        <h2>Resposta rápida</h2>
+        <p>Para empresa, o critério de escolha não é preço por gigabyte: é retenção, granularidade de restauração, escopo do que entra na cópia, imutabilidade e tempo real para voltar a operar. Armazenamento sincronizado não atende sozinho, porque exclusão e criptografia se propagam. O serviço adequado permite recuperar um arquivo específico de uma data específica, mantém cópias que não podem ser apagadas durante um período definido e é testado em restauração periódica — não apenas configurado uma vez.</p>
+
         <h2>A diferença que decide tudo</h2>
         <p><strong>Sincronização</strong> mantém o mesmo conteúdo em vários lugares. Se o arquivo é apagado, corrompido ou criptografado, a alteração se propaga para todas as cópias — foi exatamente o que se pediu que ela fizesse.</p>
         <p><strong>Backup</strong> guarda estados anteriores, independentes do arquivo atual. Ele responde a uma pergunta que a sincronização não responde: como estava esse arquivo na semana passada, antes do erro.</p>
@@ -3373,6 +3527,56 @@ docker run -d --name db --network minha-rede postgres
 
         <h2>Resumo prático</h2>
         <p>Pasta sincronizada não é backup. Compare retenção, granularidade, escopo, imutabilidade e tempo de restauração antes de comparar preço. Mantenha ao menos uma camada fora do alcance das estações de trabalho, inclua e-mail e bancos de dados no escopo e teste a restauração todo mês — o teste é a única evidência de que a rotina existe.</p>
+        <h2>Critério, pergunta objetiva e evidência</h2>
+        <p>Contrato de backup se avalia por respostas verificáveis, não por descrição comercial. A tabela traduz cada critério em uma pergunta e na evidência que a comprova.</p>
+        <div className="not-prose my-8 overflow-x-auto rounded-xl border border-border">
+          <table className="w-full text-sm">
+            <thead><tr><th className="text-left p-2 border-b">Critério</th><th className="text-left p-2 border-b">Pergunta ao fornecedor</th><th className="text-left p-2 border-b">Evidência que comprova</th></tr></thead>
+            <tbody>
+              <tr><td className="p-2 border-b">Retenção</td><td className="p-2 border-b">Por quanto tempo as versões antigas ficam disponíveis?</td><td className="p-2 border-b">Política escrita com prazo em dias, não "histórico recente"</td></tr>
+              <tr><td className="p-2 border-b">Granularidade</td><td className="p-2 border-b">É possível restaurar um único arquivo de uma data específica?</td><td className="p-2 border-b">Restauração de teste executada e registrada</td></tr>
+              <tr><td className="p-2 border-b">Escopo</td><td className="p-2 border-b">O que exatamente entra na cópia: estações, servidor, e-mail, sistema de gestão?</td><td className="p-2 border-b">Lista dos itens protegidos, com o que ficou de fora</td></tr>
+              <tr><td className="p-2 border-b">Imutabilidade</td><td className="p-2 border-b">A cópia pode ser apagada por quem tem acesso administrativo?</td><td className="p-2 border-b">Recurso de retenção imutável habilitado e demonstrado</td></tr>
+              <tr><td className="p-2 border-b">Tempo de restauração</td><td className="p-2 border-b">Em quanto tempo a operação volta depois de uma perda total?</td><td className="p-2 border-b">Teste cronometrado, com número real</td></tr>
+              <tr><td className="p-2 border-b">Responsabilidade</td><td className="p-2 border-b">Quem responde pela cópia e quem confere o resultado?</td><td className="p-2 border-b">Nome do responsável e periodicidade da conferência por escrito</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h2>Árvore de decisão</h2>
+        <ol>
+          <li>O que a empresa não pode perder está identificado (fiscal, contratos, base de clientes, projetos)? Sem esse inventário, qualquer contratação é palpite.</li>
+          <li>Existe cópia que não é apagada quando o original é apagado? Se não existir, sincronização está sendo confundida com backup.</li>
+          <li>A restauração já foi testada com um arquivo real? Se nunca foi, o serviço está configurado, não comprovado.</li>
+          <li>Há cópia fora do provedor principal? Depender de um único fornecedor concentra o risco de indisponibilidade e de conta perdida.</li>
+          <li>Existe responsável nomeado por conferir a cópia todo mês? Rotina sem dono deixa de acontecer no primeiro mês corrido.</li>
+        </ol>
+
+        <h2>Erros comuns</h2>
+        <ul>
+          <li>Proteger o servidor e esquecer as estações onde o trabalho realmente é produzido.</li>
+          <li>Contratar espaço em nuvem e não configurar retenção, ficando apenas com a última versão.</li>
+          <li>Deixar as credenciais de administração da cópia nas mesmas contas que um ataque comprometeria primeiro.</li>
+          <li>Escolher pelo custo mensal sem calcular o custo de uma hora de operação parada.</li>
+          <li>Nunca testar a restauração e descobrir a falha durante o incidente.</li>
+        </ul>
+
+        <h2>Limites de segurança</h2>
+        <p>Backup em nuvem não elimina indisponibilidade: durante uma restauração grande, a operação depende da banda disponível e pode levar horas ou dias, o que precisa entrar no planejamento. Também não substitui obrigações legais próprias de cada setor sobre guarda e privacidade de dados — a cópia herda as mesmas exigências do original. E nenhum fornecedor pode garantir recuperação integral quando a cópia não abrange o dado perdido: o escopo contratado define o limite real, não a expectativa da empresa.</p>
+
+        <h2>Termos de contrato que mudam o resultado</h2>
+        <ul>
+          <li><strong>Retenção:</strong> prazo em que versões antigas permanecem recuperáveis.</li>
+          <li><strong>Imutabilidade:</strong> impossibilidade de alterar ou excluir a cópia durante o período definido.</li>
+          <li><strong>Ponto de recuperação:</strong> quanto de trabalho se aceita perder entre uma cópia e a seguinte.</li>
+          <li><strong>Tempo de recuperação:</strong> prazo aceitável para voltar a operar depois da falha.</li>
+          <li><strong>Escopo:</strong> conjunto exato de equipamentos e sistemas cobertos pelo contrato.</li>
+        </ul>
+
+        <p>Para desenhar o escopo, testar a restauração e definir responsáveis com acompanhamento presencial em Curitiba e região, o serviço está em <Link to="/servicos/backup-para-empresas" className="text-accent">backup para empresas</Link>.</p>
+
+        <EditorialReferences slug="backup-nuvem-empresas-qual-escolher" />
+
       </>
     ),
   },
@@ -10384,6 +10588,9 @@ crontab -e
       <>
         <p className="lead">Configurar um roteador é simples quando a ordem das etapas é respeitada. A maior parte das dores de cabeça com Wi-Fi doméstico nasce de três decisões tomadas nos primeiros minutos: onde o aparelho foi colocado, qual senha ficou ativa e se ele continua repetindo a função do modem da operadora. Este guia percorre a configuração inicial na sequência correta.</p>
 
+        <h2>Resposta rápida</h2>
+        <p>Ligue o roteador, acesse o painel pelo endereço impresso na etiqueta do próprio equipamento e troque duas senhas diferentes: a do Wi-Fi e a de administração. Defina o padrão de segurança em WPA3 ou, quando não houver, WPA2 com AES, e desligue o WPS. Em 2,4 GHz, prefira os canais 1, 6 ou 11; a faixa de 5 GHz atende melhor quem fica perto do roteador. Atualize o firmware antes de conectar os aparelhos e deixe a rede de convidados separada para visitantes e automação.</p>
+
         <h2>Antes de ligar: escolha o lugar</h2>
         <p>Wi-Fi é rádio. O aparelho deve ficar em posição central em relação aos cômodos usados, elevado do chão, longe de caixas metálicas, do micro-ondas e de espelhos grandes. Roteador dentro do armário do corredor ou atrás da TV é a causa mais comum de queda de sinal — e nenhuma configuração compensa isso depois.</p>
         <p>Se o ponto de entrada da operadora fica num canto ruim da casa, vale mais estender o cabo até um ponto central do que aceitar a posição imposta pela tomada.</p>
@@ -10421,6 +10628,56 @@ crontab -e
         <h2>Quando o problema não é configuração</h2>
         <p>Se o sinal cai sempre no mesmo cômodo, nenhuma configuração resolve — o caso é de cobertura, e a saída é um ponto de acesso adicional ligado por cabo, não um repetidor colocado onde o sinal já é fraco. Se a queda ocorre na casa toda, em horários fixos, a investigação passa pelo enlace da operadora. E se o roteador reinicia sozinho, o suspeito costuma ser a fonte de alimentação ou o superaquecimento.</p>
         <p>Para melhorar cobertura, veja o guia de <Link to="/blog/como-melhorar-sinal-wifi-em-casa">como melhorar o sinal de Wi-Fi em casa</Link>. Para saber quem está conectado à sua rede, leia <Link to="/blog/como-saber-quem-esta-usando-meu-wifi">como identificar dispositivos no Wi-Fi</Link>. Quando o projeto envolve vários pontos, cabeamento ou rede de empresa, a página de <Link to="/servicos/redes-e-wifi">configuração de redes e Wi-Fi</Link> descreve como o serviço é feito.</p>
+        <h2>Configuração, motivo e verificação</h2>
+        <p>Cada ajuste do painel tem um motivo técnico e uma forma objetiva de conferir se ficou correto. Configuração que não pode ser verificada não deveria ser dada como concluída.</p>
+        <div className="not-prose my-8 overflow-x-auto rounded-xl border border-border">
+          <table className="w-full text-sm">
+            <thead><tr><th className="text-left p-2 border-b">Ajuste</th><th className="text-left p-2 border-b">Por que importa</th><th className="text-left p-2 border-b">Como verificar</th></tr></thead>
+            <tbody>
+              <tr><td className="p-2 border-b">Senha de administração</td><td className="p-2 border-b">Protege as configurações; a de fábrica é pública</td><td className="p-2 border-b">Sair do painel e entrar de novo; a senha antiga deve falhar</td></tr>
+              <tr><td className="p-2 border-b">Padrão de segurança WPA3/WPA2-AES</td><td className="p-2 border-b">Padrões antigos (WEP e TKIP) são quebráveis</td><td className="p-2 border-b">A tela de conexão do celular deve indicar WPA2 ou WPA3</td></tr>
+              <tr><td className="p-2 border-b">WPS desligado</td><td className="p-2 border-b">Permite conexão sem senha, por botão</td><td className="p-2 border-b">Tentar conectar por WPS: não deve haver resposta</td></tr>
+              <tr><td className="p-2 border-b">Canal 1, 6 ou 11 em 2,4 GHz</td><td className="p-2 border-b">Evita sobreposição com redes vizinhas</td><td className="p-2 border-b">Comparar a estabilidade antes e depois em um cômodo distante</td></tr>
+              <tr><td className="p-2 border-b">Firmware atualizado</td><td className="p-2 border-b">Fecha falhas já corrigidas pelo fabricante</td><td className="p-2 border-b">O painel deve informar que não há atualização pendente</td></tr>
+              <tr><td className="p-2 border-b">Rede de convidados ativa</td><td className="p-2 border-b">Isola visitantes e automação da rede principal</td><td className="p-2 border-b">Conectar um aparelho à rede de convidados e tentar alcançar outro equipamento da casa</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h2>Árvore de decisão</h2>
+        <ol>
+          <li>O painel abre pelo endereço da etiqueta? Se não abre, confirme que o computador está conectado ao próprio roteador e não a um repetidor.</li>
+          <li>Abriu, mas a senha de fábrica não funciona? O equipamento pode já ter sido configurado por terceiros: restaure ao padrão de fábrica antes de continuar.</li>
+          <li>A internet chega ao roteador mas não aos aparelhos? Verifique se o modo de operação está correto — roteador, ponto de acesso ou repetidor mudam completamente o comportamento.</li>
+          <li>Os aparelhos conectam mas caem em um cômodo específico? O problema é cobertura, não configuração; o ajuste está em posicionamento ou pontos adicionais.</li>
+          <li>Tudo conectado e ainda lento em todos os pontos? Aí a investigação passa para o link contratado e para o equipamento da operadora.</li>
+        </ol>
+
+        <h2>Erros comuns</h2>
+        <ul>
+          <li>Usar a mesma senha para o Wi-Fi e para o painel de administração.</li>
+          <li>Deixar dois equipamentos distribuindo endereços na mesma rede (roteador da operadora e roteador próprio), o que gera quedas intermitentes.</li>
+          <li>Instalar o roteador dentro de armário, atrás da TV ou no chão, e depois culpar o plano contratado.</li>
+          <li>Esconder o nome da rede acreditando que isso é proteção: dificulta a conexão dos aparelhos e não impede quem procura.</li>
+          <li>Ativar apenas 5 GHz e perder conexão de aparelhos antigos que só operam em 2,4 GHz.</li>
+        </ul>
+
+        <h2>Limites de segurança</h2>
+        <p>Configuração correta reduz risco, mas não garante velocidade: a taxa contratada, a qualidade do cabeamento interno e a distância continuam mandando no resultado. Restaurar o padrão de fábrica apaga inclusive os dados de autenticação da operadora em equipamentos combinados — confirme antes como reconfigurá-los. E nenhum ajuste no painel corrige equipamento com fonte defeituosa ou porta danificada: quedas que acontecem sempre no mesmo horário, com reinício automático, apontam para hardware, não para configuração.</p>
+
+        <h2>Termos que aparecem no painel</h2>
+        <ul>
+          <li><strong>SSID:</strong> o nome visível da rede sem fio.</li>
+          <li><strong>Modo ponte:</strong> o equipamento deixa de rotear e apenas repassa a conexão para outro roteador.</li>
+          <li><strong>DHCP:</strong> serviço que entrega endereços IP automaticamente aos aparelhos.</li>
+          <li><strong>Banda dupla:</strong> operação simultânea em 2,4 GHz (alcance) e 5 GHz (velocidade a curta distância).</li>
+          <li><strong>Mesh:</strong> conjunto de pontos que formam uma única rede, com transição automática entre eles.</li>
+        </ul>
+
+        <p>Quando a casa ou o escritório exige mais de um ponto de acesso, cabeamento ou separação de redes, o serviço presencial em Curitiba está em <Link to="/servicos/redes-e-wifi" className="text-accent">redes e Wi-Fi</Link>.</p>
+
+        <EditorialReferences slug="como-configurar-roteador-wifi-iniciantes" />
+
       </>
     ),
   },
@@ -10565,6 +10822,9 @@ crontab -e
       <>
         <p className="lead">A suspeita costuma começar assim: a internet ficou lenta sem motivo, ou apareceu um aparelho desconhecido na lista do roteador. Antes de trocar tudo, vale entender o que a lista de dispositivos realmente mostra — e o que ela não mostra.</p>
 
+        <h2>Resposta rápida</h2>
+        <p>Abra o painel do roteador e procure a lista de dispositivos conectados ou clientes DHCP: ela é a única fonte confiável, porque enxerga também o que está em economia de energia. Compare a lista com o inventário dos aparelhos da casa, desligando um por vez para identificar o que não reconhecer. Nome estranho não prova invasão — celulares modernos usam endereço físico aleatório por rede. Se, mesmo com todos os aparelhos desligados, restar alguém conectado, ou se houver configuração alterada sem sua ação, troque a senha do Wi-Fi e a senha de administração, desligue WPS e acesso remoto e atualize o firmware.</p>
+
         <h2>Onde ver os aparelhos conectados</h2>
         <p>O lugar confiável é o painel do próprio roteador, normalmente em uma seção chamada "dispositivos conectados", "clientes DHCP" ou "mapa da rede". Ali aparecem o nome informado por cada aparelho, o endereço IP recebido e o endereço físico (MAC) da placa de rede.</p>
         <p>Aplicativos de celular que "escaneiam a rede" ajudam a ter uma visão rápida, mas só enxergam o que responde no momento da varredura. Um aparelho desligado ou em economia de energia não aparece — por isso a lista do roteador é a referência.</p>
@@ -10608,6 +10868,55 @@ crontab -e
         <h2>Quando a lentidão não é intrusão</h2>
         <p>Antes de concluir que alguém está usando sua internet, verifique atualizações de sistema em segundo plano, backups em nuvem, streaming em alta resolução e câmeras enviando vídeo o tempo todo. Também é comum o gargalo estar na cobertura, e não na banda contratada — o teste de velocidade próximo ao roteador e no cômodo problemático mostra a diferença em poucos minutos.</p>
         <p>Se o diagnóstico apontar cobertura, o caminho está em <Link to="/blog/como-melhorar-sinal-wifi-em-casa">como melhorar o sinal de Wi-Fi em casa</Link>. Se o roteador nunca passou por uma configuração cuidadosa, comece por <Link to="/blog/como-configurar-roteador-wifi-iniciantes">como configurar um roteador do zero</Link>. Para revisão completa de rede, cabeamento e pontos de acesso, veja <Link to="/servicos/redes-e-wifi">configuração de redes e Wi-Fi</Link>.</p>
+        <h2>Causa, sintoma e teste</h2>
+        <p>A suspeita de "alguém usando meu Wi-Fi" quase sempre tem uma de quatro origens. A tabela liga cada causa ao sintoma típico e ao teste que confirma ou descarta a hipótese antes de qualquer alteração na rede.</p>
+        <div className="not-prose my-8 overflow-x-auto rounded-xl border border-border">
+          <table className="w-full text-sm">
+            <thead><tr><th className="text-left p-2 border-b">Causa provável</th><th className="text-left p-2 border-b">Sintoma observado</th><th className="text-left p-2 border-b">Teste que confirma</th></tr></thead>
+            <tbody>
+              <tr><td className="p-2 border-b">Aparelho da própria casa não reconhecido</td><td className="p-2 border-b">Nome genérico ou código de fabricante na lista</td><td className="p-2 border-b">Desligar o Wi-Fi de um aparelho por vez e ver qual entrada some</td></tr>
+              <tr><td className="p-2 border-b">Endereço físico aleatório do celular</td><td className="p-2 border-b">O mesmo aparelho aparece com identidades diferentes ao longo dos dias</td><td className="p-2 border-b">Desativar o endereço privado nas opções da rede no celular e reconectar</td></tr>
+              <tr><td className="p-2 border-b">Consumo de banda por serviço em segundo plano</td><td className="p-2 border-b">Lentidão em horários específicos, sem dispositivo novo</td><td className="p-2 border-b">Pausar backup em nuvem, atualizações e streaming e repetir o teste de velocidade</td></tr>
+              <tr><td className="p-2 border-b">Cobertura ruim confundida com intrusão</td><td className="p-2 border-b">Lentidão só em alguns cômodos; ao lado do roteador tudo funciona</td><td className="p-2 border-b">Medir a velocidade ao lado do roteador e no cômodo problemático</td></tr>
+              <tr><td className="p-2 border-b">Acesso indevido real</td><td className="p-2 border-b">Dispositivo ativo com a casa toda desligada; configuração alterada sozinha</td><td className="p-2 border-b">Trocar a senha do Wi-Fi e verificar se a entrada desconhecida reaparece</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h2>Árvore de decisão</h2>
+        <ol>
+          <li>A lista mostra algum dispositivo ativo com todos os aparelhos da casa desligados? Se não, o problema provavelmente é consumo ou cobertura, não intrusão.</li>
+          <li>Se sim, alguma configuração do roteador mudou sem você mexer (DNS, acesso remoto, rede de visitantes)? Se mudou, trate como roteador comprometido: atualização de firmware e reconfiguração completa, não apenas bloqueio de um endereço.</li>
+          <li>Se nada mudou, troque primeiro a senha do Wi-Fi. Se a entrada desconhecida some e não volta, o caso está resolvido.</li>
+          <li>Se a entrada volta mesmo após a troca de senha, a senha de administração provavelmente também está comprometida. Restaure o roteador ao padrão de fábrica e configure do zero.</li>
+          <li>Se o equipamento é antigo, não recebe mais firmware do fabricante e o problema persiste, a substituição passa a ser a alternativa técnica realista.</li>
+        </ol>
+
+        <h2>Erros comuns</h2>
+        <ul>
+          <li>Confiar apenas no aplicativo de varredura do celular: ele lista só quem responde durante a varredura.</li>
+          <li>Tratar filtro de endereço físico como segurança. Ele organiza a rede, mas o endereço pode ser copiado.</li>
+          <li>Trocar a senha do Wi-Fi e esquecer a senha de administração do painel — que é a que protege as configurações.</li>
+          <li>Bloquear entradas uma a uma sem investigar por que apareceram.</li>
+          <li>Concluir que houve invasão a partir de um nome desconhecido, sem checar o inventário da casa.</li>
+        </ul>
+
+        <h2>Limites de segurança</h2>
+        <p>Nenhuma lista de dispositivos comprova, por si só, que houve invasão: ela mostra quem obteve endereço na rede, não a intenção de quem obteve. Também não há como recuperar, pelo painel doméstico, o histórico do que um dispositivo acessou. Se o caso envolve suspeita de acesso a contas, câmeras internas ou dados sensíveis, a troca de senha resolve a rede, mas não substitui a revisão das contas em outro dispositivo confiável. Restaurar o roteador ao padrão de fábrica apaga toda a configuração — anote antes os dados de acesso da operadora, sob risco de ficar sem internet até reconfigurar.</p>
+
+        <h2>Termos que aparecem no painel</h2>
+        <ul>
+          <li><strong>Cliente DHCP:</strong> aparelho que recebeu automaticamente um endereço IP do roteador.</li>
+          <li><strong>Endereço físico (MAC):</strong> identificador da placa de rede; pode ser aleatório por rede em celulares recentes.</li>
+          <li><strong>WPS:</strong> conexão sem digitar senha, apertando um botão; é o atalho mais explorado em redes domésticas.</li>
+          <li><strong>Firmware:</strong> o sistema interno do roteador; atualizações corrigem falhas exploradas remotamente.</li>
+          <li><strong>Rede de convidados:</strong> rede separada que impede o visitante de alcançar os demais aparelhos da casa.</li>
+        </ul>
+
+        <p>Se a rede precisa de revisão completa — cabeamento, posicionamento e pontos de acesso — o atendimento em Curitiba e região metropolitana está descrito em <Link to="/servicos/redes-e-wifi" className="text-accent">configuração de redes e Wi-Fi</Link>.</p>
+
+        <EditorialReferences slug="como-saber-quem-esta-usando-meu-wifi" />
+
       </>
     ),
   },

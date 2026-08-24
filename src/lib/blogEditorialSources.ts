@@ -177,6 +177,28 @@ export const EDITORIAL_SOURCES: Record<string, EditorialSource> = {
       "Planejamento de contingência e restauração de dados; a restauração precisa ser testada, não apenas configurada.",
     ],
   },
+  "wifi-alliance-security": {
+    id: "wifi-alliance-security",
+    title: "Wi-Fi Security | Wi-Fi Alliance",
+    publisher: "Wi-Fi Alliance",
+    url: "https://www.wi-fi.org/discover-wi-fi/security",
+    accessedAt: "2026-08-16",
+    sourceType: "official",
+    supports: [
+      "WPA3 é o padrão de segurança atual para redes Wi-Fi; WPA2 permanece como base mínima aceitável.",
+    ],
+  },
+  "ms-optimize-drives": {
+    id: "ms-optimize-drives",
+    title: "Desfragmentar e otimizar unidades no Windows",
+    publisher: "Microsoft Support",
+    url: "https://support.microsoft.com/pt-br/windows/desfragmentar-o-computador-com-windows-10-048aefac-7f1f-4632-d48a-9700c4ec702a",
+    accessedAt: "2026-08-16",
+    sourceType: "official",
+    supports: [
+      "O Windows trata discos mecânicos e unidades de estado sólido de formas diferentes na otimização de unidades.",
+    ],
+  },
   "wifi-alliance-home": {
     id: "wifi-alliance-home",
     title: "Wi-Fi Alliance connects and expands home Wi-Fi",
@@ -230,7 +252,7 @@ export const ARTICLE_SOURCE_MANIFEST: Record<string, ArticleSourceManifest> = {
   },
   "como-configurar-roteador-wifi-iniciantes": {
     slug: "como-configurar-roteador-wifi-iniciantes",
-    sources: [],
+    sources: ["wifi-alliance-security", "wifi-alliance-home"],
     technicalReview: "reviewed",
     factChecked: true,
     factCheckedAt: "2026-08-12",
@@ -240,7 +262,7 @@ export const ARTICLE_SOURCE_MANIFEST: Record<string, ArticleSourceManifest> = {
   },
   "como-saber-quem-esta-usando-meu-wifi": {
     slug: "como-saber-quem-esta-usando-meu-wifi",
-    sources: [],
+    sources: ["wifi-alliance-security"],
     technicalReview: "reviewed",
     factChecked: true,
     factCheckedAt: "2026-08-12",
@@ -304,7 +326,7 @@ export const ARTICLE_SOURCE_MANIFEST: Record<string, ArticleSourceManifest> = {
   },
   "quando-trocar-hd-por-ssd": {
     slug: "quando-trocar-hd-por-ssd",
-    sources: [],
+    sources: ["ms-optimize-drives", "ms-bitlocker-recovery"],
     technicalReview: "reviewed",
     factChecked: true,
     factCheckedAt: "2026-07-12",
@@ -440,7 +462,7 @@ export const ARTICLE_SOURCE_MANIFEST: Record<string, ArticleSourceManifest> = {
   },
   "backup-nuvem-empresas-qual-escolher": {
     slug: "backup-nuvem-empresas-qual-escolher",
-    sources: [],
+    sources: ["cisa-backup", "nist-sp-800-34", "cisa-stop-ransomware"],
     technicalReview: "reviewed",
     factChecked: true,
     factCheckedAt: "2026-08-12",
