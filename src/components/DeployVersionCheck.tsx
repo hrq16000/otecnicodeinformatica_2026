@@ -38,11 +38,15 @@ export const DeployVersionCheck = () => {
     APP_BUILD_INFO.version;
   const [estado, setEstado] = useState<Estado>("verificando");
   const [manifesto, setManifesto] = useState<Manifest | null>(null);
+  const [camada, setCamada] = useState<Camada | null>(null);
 
   useEffect(() => {
     let vivo = true;
     fetch(`/build-version.json?t=${Date.now()}`, { cache: "no-store" })
-      .then((r) => (r.ok ? r.json() : Promise.reject(new Error(String(r.status)))))
+      .then((r) => {
+        if (vivo) setCamada(classificarCamada(r.headers));
+        return r.ok ? r.json() : Promise.reject(new Error(String(r.status)));
+      })
       .then((data: Manifest) => {
         if (!vivo) return;
         setManifesto(data);
