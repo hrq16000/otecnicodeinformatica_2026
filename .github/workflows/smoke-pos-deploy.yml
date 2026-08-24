@@ -1,0 +1,44 @@
+# Smoke pós-deploy — identidade do bundle publicado + páginas críticas em SSR.
+#
+# Confere que a produção está servindo o mesmo build do manifesto
+# (/build-version.json), que as URLs comerciais e as enriquecidas respondem 200
+# com o conteúdo esperado e registra a camada que respondeu (origem × CDN).
+name: Smoke pós-deploy
+
+on:
+  workflow_dispatch:
+    inputs:
+      base:
+        description: "URL base a validar (padrão: SITE_BASE_URL)"
+        type: string
+        required: false
+  repository_dispatch:
+    types: [site-published]
+
+concurrency:
+  group: smoke-pos-deploy
+  cancel-in-progress: true
+
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      SITE_BASE_URL: ${{ inputs.base || vars.SITE_BASE_URL }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Instalar dependências
+        run: npm ci
+
+      - name: Smoke pós-deploy (bundle + URLs críticas)
+        run: npm run smoke:pos-deploy
+
+      - name: Smoke de borda (404 real e redirects)
+        if: always()
+        run: npm run smoke:edge:post-deploy

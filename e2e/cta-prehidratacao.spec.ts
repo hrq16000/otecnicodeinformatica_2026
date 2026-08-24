@@ -1,4 +1,4 @@
-import { test, expect, type Page } from "@playwright/test";
+import { test, expect, devices, type Page } from "@playwright/test";
 
 /**
  * Não-regressão do buffer pré-hidratação do CTA flutuante.
@@ -28,7 +28,15 @@ const eventsNamed = (page: Page, name: string) =>
     return calls.filter((c) => c[0] === "event" && c[1] === evName).map((c) => c[2]);
   }, name);
 
-test.describe("CTA flutuante — toque pré-hidratação", () => {
+const VIEWPORTS = [
+  { nome: "desktop", viewport: { width: 1280, height: 900 } },
+  { nome: "mobile", viewport: devices["Pixel 5"].viewport },
+] as const;
+
+for (const { nome, viewport } of VIEWPORTS) {
+test.describe(`CTA flutuante — toque pré-hidratação (${nome})`, () => {
+  test.use({ viewport });
+
   test.beforeEach(async ({ page, context }) => {
     await installGtagSpy(page);
     await context.route("https://wa.me/**", (route) => route.fulfill({ status: 204, body: "" }));
@@ -85,3 +93,4 @@ test.describe("CTA flutuante — toque pré-hidratação", () => {
     expect(await eventsNamed(page, "triage_start")).toHaveLength(1);
   });
 });
+}
