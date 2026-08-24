@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
+import { DeployVersionCheck } from "@/components/DeployVersionCheck";
 import { APP_BUILD_INFO } from "@/lib/errorReporter";
 import { WHATSAPP_NUMBER as WA_NUMBER } from "@/lib/siteConfig";
+
 
 type AppError = {
   kind?: string;
