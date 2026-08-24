@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-08-23T06:57:51.527Z",
+  "geradoEm": "2026-08-24T23:58:14.820Z",
   "site": "sc-domain:otecnicodeinformatica.com.br",
   "disponivel": true,
   "rotas": [
@@ -19,7 +19,7 @@
       "path": "/bairros/cajuru",
       "url": "https://otecnicodeinformatica.com.br/bairros/cajuru",
       "status": "NO_DATA",
-      "coverageState": "O Google não reconhece o URL",
+      "coverageState": "Detectada, mas não indexada no momento",
       "ultimoCrawl": null,
       "canonicalGoogle": null,
       "canonicalDeclarado": null,
@@ -41,7 +41,7 @@
       "path": "/bairros/cidade-jardim-sjp",
       "url": "https://otecnicodeinformatica.com.br/bairros/cidade-jardim-sjp",
       "status": "NO_DATA",
-      "coverageState": "O Google não reconhece o URL",
+      "coverageState": "Detectada, mas não indexada no momento",
       "ultimoCrawl": null,
       "canonicalGoogle": null,
       "canonicalDeclarado": null,
