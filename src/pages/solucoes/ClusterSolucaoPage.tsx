@@ -12,6 +12,7 @@ import {
   RespostaRapida,
   TabelaDiagnosticaBloco,
   BlocosTecnicos,
+  FontesPrimarias,
 } from "@/components/BlocosEnriquecimento";
 import { enriquecimentoDe } from "@/lib/enriquecimentoConteudo";
 import { SCHEMA_SLOTS, SLOT_PRIORITY, useJsonLdSlot } from "@/lib/jsonLdSlots";
@@ -194,6 +195,12 @@ const ClusterSolucaoPage = () => {
         <PoliticaAtendimentoBloco variant="inline" />
 
         <BlocosTecnicos blocos={extra?.blocos} />
+
+        {extra?.tabelaExtra ? (
+          <TabelaDiagnosticaBloco tabela={extra.tabelaExtra} id="tabela-decisao" />
+        ) : null}
+
+        <FontesPrimarias fontes={extra?.fontes} />
 
         <section className="mt-12" aria-labelledby="faq">
           <h2 id="faq" className="mb-4 font-heading text-2xl font-bold text-foreground">

@@ -523,4 +523,11 @@ export const ENRIQUECIMENTO_1: Record<string, EnriquecimentoConteudo> = {
 };
 
 /** Busca o enriquecimento por caminho canônico da página. */
-export const enriquecimentoDe = (path: string) => ENRIQUECIMENTO_1[path];
+import { ENRIQUECIMENTO_4A, mesclarEnriquecimento } from "./enriquecimentoAtp4a";
+
+/**
+ * Enriquecimento aplicável a uma página: base da Rodada 1 combinada com os
+ * blocos da Rodada 4A (ATP). Nada é sobrescrito — apenas somado.
+ */
+export const enriquecimentoDe = (path: string) =>
+  mesclarEnriquecimento(ENRIQUECIMENTO_1[path], ENRIQUECIMENTO_4A[path]);
