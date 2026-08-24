@@ -38,8 +38,9 @@ for (const slug of SERVICOS) {
     await expect(page.locator("#resposta-rapida")).toHaveCount(1);
     await expect(page.locator("#tabela-diagnostica")).toHaveCount(1);
 
-    const texto = await page.locator("#resposta-rapida").innerText();
+    const texto = await page.locator('section[aria-labelledby="resposta-rapida"]').innerText();
     expect(texto.length).toBeGreaterThan(120);
+
 
     // A tabela precisa ter linhas reais (sintoma × causa × verificar).
     const linhas = page.locator("table tbody tr");
