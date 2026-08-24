@@ -8,6 +8,12 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 import { PoliticaAtendimentoBloco } from "@/components/PoliticaAtendimentoBloco";
 import { Button } from "@/components/ui/button";
 import NotFound from "@/pages/NotFound";
+import {
+  RespostaRapida,
+  TabelaDiagnosticaBloco,
+  BlocosTecnicos,
+} from "@/components/BlocosEnriquecimento";
+import { enriquecimentoDe } from "@/lib/enriquecimentoConteudo";
 import { SCHEMA_SLOTS, SLOT_PRIORITY, useJsonLdSlot } from "@/lib/jsonLdSlots";
 import { clusterSolucao } from "@/lib/clusterSolucoes";
 import { whatsappLink, absoluteUrl } from "@/lib/siteConfig";
@@ -62,6 +68,9 @@ const ClusterSolucaoPage = () => {
 
   if (!dados) return <NotFound />;
 
+  // Micro-Rodada Enriquecimento 1 — blocos opcionais por página (sem URL nova).
+  const extra = enriquecimentoDe(dados.path);
+
   const waHref = whatsappLink(dados.waMessage);
 
   return (
@@ -105,6 +114,10 @@ const ClusterSolucaoPage = () => {
             </Link>
           </Button>
         </div>
+
+        {extra?.respostaRapida ? <RespostaRapida texto={extra.respostaRapida} /> : null}
+
+        {extra?.tabelaDiagnostica ? <TabelaDiagnosticaBloco tabela={extra.tabelaDiagnostica} /> : null}
 
         <section className="mt-12" aria-labelledby="indicacoes">
           <h2 id="indicacoes" className="mb-4 font-heading text-2xl font-bold text-foreground">
@@ -179,6 +192,8 @@ const ClusterSolucaoPage = () => {
         </section>
 
         <PoliticaAtendimentoBloco variant="inline" />
+
+        <BlocosTecnicos blocos={extra?.blocos} />
 
         <section className="mt-12" aria-labelledby="faq">
           <h2 id="faq" className="mb-4 font-heading text-2xl font-bold text-foreground">

@@ -13,6 +13,12 @@ import { ProximosPassos } from "@/components/informatica/ProximosPassos";
 import InterlinksContextuais from "@/components/problemas/InterlinksContextuais";
 import { TriagemContexto } from "@/components/problemas/TriagemContexto";
 import NotFound from "@/pages/NotFound";
+import {
+  RespostaRapida,
+  TabelaDiagnosticaBloco,
+  BlocosTecnicos,
+} from "@/components/BlocosEnriquecimento";
+import { enriquecimentoDe } from "@/lib/enriquecimentoConteudo";
 import { SCHEMA_SLOTS, SLOT_PRIORITY, useJsonLdSlot } from "@/lib/jsonLdSlots";
 import { clusterProblema } from "@/lib/clusterProblemas";
 import { absoluteUrl, siteConfig } from "@/lib/siteConfig";
@@ -156,6 +162,9 @@ const ClusterProblemaPage = () => {
 
   if (!dados) return <NotFound />;
 
+  // Micro-Rodada Enriquecimento 1 — blocos opcionais por página (sem URL nova).
+  const extra = enriquecimentoDe(dados.path);
+
   /**
    * CTA contextual por seção: mensagem pré-preenchida (sintoma + equipamento +
    * bairro + urgência) e link com UTM/identificadores de rota, seção e rolagem,
@@ -288,6 +297,10 @@ const ClusterProblemaPage = () => {
         )}
 
 
+        {extra?.respostaRapida ? <RespostaRapida texto={extra.respostaRapida} /> : null}
+
+        {extra?.tabelaDiagnostica ? <TabelaDiagnosticaBloco tabela={extra.tabelaDiagnostica} /> : null}
+
         <section className="mt-12" aria-labelledby="sintomas">
           <h2 id="sintomas" className="mb-4 font-heading text-2xl font-bold text-foreground">
             Como o problema costuma se manifestar
@@ -375,6 +388,8 @@ const ClusterProblemaPage = () => {
 
 
         <PoliticaAtendimentoBloco variant="inline" />
+
+        <BlocosTecnicos blocos={extra?.blocos} />
 
         <section className="mt-12" aria-labelledby="faq">
           <h2 id="faq" className="mb-4 font-heading text-2xl font-bold text-foreground">
