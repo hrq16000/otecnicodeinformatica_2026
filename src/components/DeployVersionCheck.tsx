@@ -3,6 +3,24 @@ import { APP_BUILD_INFO } from "@/lib/errorReporter";
 
 type Manifest = { version: string; buildTime: string };
 type Estado = "verificando" | "ok" | "divergente" | "indisponivel";
+/** Camada que respondeu ao pedido do manifesto. */
+type Camada = { rotulo: string; detalhe: string };
+
+/** Traduz headers de borda em uma leitura humana: origem, CDN ou cache antigo. */
+const classificarCamada = (h: Headers): Camada => {
+  const cf = h.get("cf-cache-status");
+  const age = Number(h.get("age") ?? "0");
+  const via = h.get("x-served-by") ?? h.get("server") ?? "";
+  const idade = age > 0 ? `${age}s de cache` : "sem idade de cache";
+  if (!cf) return { rotulo: "Origem (sem CDN identificada)", detalhe: `${idade}${via ? ` · ${via}` : ""}` };
+  const c = cf.toUpperCase();
+  if (c === "HIT") return { rotulo: "CDN — resposta em cache", detalhe: `${idade}${via ? ` · ${via}` : ""}` };
+  if (c === "MISS" || c === "EXPIRED" || c === "REVALIDATED")
+    return { rotulo: `Origem através da CDN (${c.toLowerCase()})`, detalhe: idade };
+  if (c === "DYNAMIC" || c === "BYPASS")
+    return { rotulo: "Origem — cache ignorado", detalhe: `${c.toLowerCase()} · ${idade}` };
+  return { rotulo: `CDN (${c.toLowerCase()})`, detalhe: idade };
+};
 
 /**
  * Verificação automática de identidade do deploy.
