@@ -35,8 +35,10 @@ import {
   RespostaRapida,
   TabelaDiagnosticaBloco,
   BlocosTecnicos,
+  FontesPrimarias,
 } from "@/components/BlocosEnriquecimento";
 import { ENRIQUECIMENTO_SERVICOS } from "@/lib/enriquecimentoServicos";
+import { ENRIQUECIMENTO_4A, mesclarEnriquecimento } from "@/lib/enriquecimentoAtp4a";
 
 
 export interface ServicoLandingData {
@@ -127,7 +129,10 @@ export const ServicoLandingLayout = ({ data }: { data: ServicoLandingData }) => 
   });
   const isEmpresarial = data.variante === "empresarial";
   /** Enriquecimento 2 — blocos técnicos opcionais desta página de serviço. */
-  const enriquecimento = ENRIQUECIMENTO_SERVICOS[data.path];
+  const enriquecimento = mesclarEnriquecimento(
+    ENRIQUECIMENTO_SERVICOS[data.path],
+    ENRIQUECIMENTO_4A[`/servicos/${data.path}`],
+  );
 
   const heroB2B = data.heroEmpresarial ?? EMPRESARIAL_SERVICO_HERO;
   const contextoB2B = data.contextoEmpresarial ?? EMPRESARIAL_CONTEXTO_CARDS;
@@ -504,13 +509,17 @@ export const ServicoLandingLayout = ({ data }: { data: ServicoLandingData }) => 
 
 
       {/* Enriquecimento 2 — tabela diagnóstica e blocos de decisão */}
-      {(enriquecimento?.tabelaDiagnostica || enriquecimento?.blocos) && (
+      {(enriquecimento?.tabelaDiagnostica || enriquecimento?.tabelaExtra || enriquecimento?.blocos) && (
         <section className="bg-background pb-4">
           <div className="container mx-auto max-w-3xl px-4">
             {enriquecimento?.tabelaDiagnostica ? (
               <TabelaDiagnosticaBloco tabela={enriquecimento.tabelaDiagnostica} />
             ) : null}
             <BlocosTecnicos blocos={enriquecimento?.blocos} />
+            {enriquecimento?.tabelaExtra ? (
+              <TabelaDiagnosticaBloco tabela={enriquecimento.tabelaExtra} id="tabela-decisao" />
+            ) : null}
+            <FontesPrimarias fontes={enriquecimento?.fontes} />
           </div>
         </section>
       )}
