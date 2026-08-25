@@ -3,22 +3,24 @@
 import { supabase } from "@/integrations/supabase/client";
 import { withDevMock } from "@/lib/devMocks";
 
-export async function pingIndexNow(urls: string | string[]) {
+type IndexNowResult = { ok: true; data: unknown } | { ok: false; error: string };
+
+export async function pingIndexNow(urls: string | string[]): Promise<IndexNowResult> {
   const list = Array.isArray(urls) ? urls : [urls];
-  if (list.length === 0) return { ok: false, error: "empty" } as const;
-  return withDevMock(
+  if (list.length === 0) return { ok: false, error: "empty" };
+  return withDevMock<IndexNowResult>(
     "indexnow-ping",
     { urls: list },
-    { ok: true, data: { mocked: true, urls: list } } as const,
+    { ok: true, data: { mocked: true, urls: list } },
     async () => {
       try {
         const { data, error } = await supabase.functions.invoke("indexnow-ping", {
           body: { urls: list },
         });
-        if (error) return { ok: false, error: error.message } as const;
-        return { ok: true, data } as const;
+        if (error) return { ok: false, error: error.message };
+        return { ok: true, data };
       } catch (e) {
-        return { ok: false, error: e instanceof Error ? e.message : "unknown" } as const;
+        return { ok: false, error: e instanceof Error ? e.message : "unknown" };
       }
     },
   );
