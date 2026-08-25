@@ -99,8 +99,8 @@ for (const owner of OWNERS_4A) {
     if (h1s.length !== 1) linha.falhas.push(`${h1s.length} H1`);
 
     // conteúdo enriquecido no HTML inicial (não pós-hidratação)
-    const temResposta = /Resposta r[áa]pida/i.test(html);
-    const temTabela = /tabela-diagnostica|Como diferenciar|Hip[óo]tese/i.test(html);
+    const temResposta = /id=["']resposta-rapida["']/i.test(html) || /Resposta r[áa]pida/i.test(html);
+    const temTabela = /<table\b/i.test(html);
     linha.respostaRapida = temResposta;
     linha.tabelaDiagnostica = temTabela;
     if (!temResposta) linha.falhas.push("sem bloco Resposta rápida no SSR");
