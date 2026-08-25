@@ -46,7 +46,7 @@ interface RegiaoRaw {
   cidadePadrao: string;
   /** Regiões vizinhas usadas na reciprocidade cruzada de links. */
   vizinhas: RegiaoMalhaId[];
-  bairros: { nome: string; slug: string; cidade?: string }[];
+  bairros: { nome: string; slug: string; cidade?: string; path?: string }[];
 }
 
 const REGIOES_RAW: RegiaoRaw[] = [
