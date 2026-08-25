@@ -383,7 +383,11 @@ export const CidadeLandingLayout = ({ data }: { data: CidadeData }) => {
             </div>
           </div>
         </section>
+
+        {/* Rodada 4C — conteúdo local autoral; fail-closed por cidade. */}
+        <BlocosLocal4c path={path} />
       </main>
+
       <Footer />
     </div>
   );
