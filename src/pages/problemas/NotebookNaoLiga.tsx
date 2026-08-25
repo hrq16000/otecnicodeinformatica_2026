@@ -12,6 +12,13 @@ import { Button } from "@/components/ui/button";
 import { TrustStrip } from "@/components/TrustStrip";
 import { PageTableOfContents } from "@/components/ui/PageTableOfContents";
 import { RealImageSection } from "@/components/RealImageSection";
+import {
+  BlocosTecnicos,
+  FontesPrimarias,
+  RespostaRapida,
+  TabelaDiagnosticaBloco,
+} from "@/components/BlocosEnriquecimento";
+import { enriquecimentoDe } from "@/lib/enriquecimentoConteudo";
 import { ServicosCorrelatos } from "@/components/informatica/ServicosCorrelatos";
 import { ProximosPassos } from "@/components/informatica/ProximosPassos";
 import { SCHEMA_SLOTS, SLOT_PRIORITY, useJsonLdSlot } from "@/lib/jsonLdSlots";
@@ -155,6 +162,9 @@ const NotebookNaoLiga = () => {
 
   const cta = (location: string) => () => trackCTAClick("whatsapp", `problema-notebook-nao-liga-${location}`);
 
+  // Rodada 4B — blocos de enriquecimento por caminho canônico (sem URL nova).
+  const extra = enriquecimentoDe(PATH);
+
   return (
     <div className="min-h-screen bg-background">
       <PageSEO title={TITLE} description={DESCRIPTION} path={PATH} />
@@ -209,6 +219,8 @@ const NotebookNaoLiga = () => {
             { id: "faq", label: "Perguntas frequentes" },
           ]}
         />
+
+        {extra?.respostaRapida && <RespostaRapida texto={extra.respostaRapida} />}
 
         <section id="energia-vs-imagem" className="mb-12 scroll-mt-24">
           <p className="tldr mb-6 text-muted-foreground" data-speakable>
@@ -452,6 +464,12 @@ const NotebookNaoLiga = () => {
             },
           ]}
         />
+
+        {extra?.tabelaExtra && (
+          <TabelaDiagnosticaBloco tabela={extra.tabelaExtra} id="tabela-enriquecimento-4b" />
+        )}
+        <BlocosTecnicos blocos={extra?.blocos} />
+        <FontesPrimarias fontes={extra?.fontes} />
 
         <section id="faq" className="mb-12 scroll-mt-24">
           <h2 className="mb-6 text-2xl font-bold text-foreground">Perguntas frequentes</h2>

@@ -10,20 +10,22 @@
  * Também salva um "print" textual do HTML público (snapshot bruto + texto
  * visível) por URL, para servir de evidência do que o crawler recebeu.
  *
- * Uso: node scripts/smoke-owners-4a.mjs [--base=https://...]
+ * Uso: node scripts/smoke-owners-4a.mjs [--base=https://...] [--rodada=4a|4b|todos]
  * Saída: reports/smoke-4a/<slug>.html, reports/smoke-4a.json e docs (md).
  */
 import { mkdirSync, writeFileSync } from "node:fs";
 import { resolve } from "node:path";
 import { BASE_URL } from "./lib/site-env.mjs";
 import { extrairTextoVisivel } from "./lib/content-fingerprint.mjs";
-import { OWNERS_4A } from "./lib/owners-4a.mjs";
+import { resolverOwners } from "./lib/owners.mjs";
+
+const { rodada: RODADA, owners: OWNERS } = resolverOwners(process.argv, "4a");
 
 const argBase = process.argv.find((a) => a.startsWith("--base="));
 const BASE = (argBase ? argBase.slice(7) : process.env.SITE_BASE_URL || BASE_URL).replace(/\/$/, "");
 
 
-const OUT_DIR = resolve(process.cwd(), "reports/smoke-4a");
+const OUT_DIR = resolve(process.cwd(), `reports/smoke-${RODADA}`);
 mkdirSync(OUT_DIR, { recursive: true });
 
 const slug = (p) => p.replace(/^\//, "").replace(/\//g, "_");
@@ -57,7 +59,7 @@ function analisarJsonLd(html) {
 
 const resultados = [];
 
-for (const owner of OWNERS_4A) {
+for (const owner of OWNERS) {
   const url = `${BASE}${owner.path}`;
   const linha = { ...owner, url, falhas: [] };
   try {
@@ -121,10 +123,10 @@ for (const owner of OWNERS_4A) {
 
 const ok = resultados.filter((r) => r.veredito === "PASS").length;
 const relatorio = { geradoEm: new Date().toISOString(), base: BASE, pass: ok, total: resultados.length, resultados };
-writeFileSync(resolve(process.cwd(), "reports/smoke-4a.json"), `${JSON.stringify(relatorio, null, 2)}\n`);
+writeFileSync(resolve(process.cwd(), `reports/smoke-${RODADA}.json`), `${JSON.stringify(relatorio, null, 2)}\n`);
 
 const md = [
-  "# Smoke público — owners da Rodada 4A",
+  `# Smoke público — owners da Rodada ${RODADA.toUpperCase()}`,
   "",
   `- Base: \`${BASE}\``,
   `- Executado em: ${relatorio.geradoEm}`,
@@ -136,9 +138,9 @@ const md = [
     `| \`${r.path}\` | ${r.status === 200 ? "✅" : `❌ ${r.status}`} | ${/noindex/i.test(r.robots ?? "") ? "❌" : "✅"} | ${r.canonical === r.url ? "✅" : "❌"} | ${r.h1 === 1 ? "✅ 1" : `❌ ${r.h1}`} | ${r.respostaRapida && r.tabelaDiagnostica ? `✅ ${r.palavras}p` : "❌"} | ${r.jsonld && !r.jsonld.invalidos && !r.jsonld.dupIds?.length ? `✅ ${r.jsonld.tipos?.join(", ")}` : "❌"} | ${r.linksInternos ?? 0} |`,
   ),
   "",
-  "Snapshots do HTML público em `reports/smoke-4a/` (HTML bruto + texto visível extraído).",
+  `Snapshots do HTML público em \`reports/smoke-${RODADA}/\` (HTML bruto + texto visível extraído).`,
 ].join("\n");
-writeFileSync(resolve(process.cwd(), "docs/relatorio-smoke-4a.md"), `${md}\n`);
+writeFileSync(resolve(process.cwd(), `docs/relatorio-smoke-${RODADA}.md`), `${md}\n`);
 
-console.log(`\n${ok}/${resultados.length} PASS — reports/smoke-4a.json · docs/relatorio-smoke-4a.md`);
+console.log(`\n${ok}/${resultados.length} PASS — reports/smoke-${RODADA}.json · docs/relatorio-smoke-${RODADA}.md`);
 process.exit(ok === resultados.length ? 0 : 1);

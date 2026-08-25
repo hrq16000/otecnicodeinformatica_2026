@@ -11,6 +11,13 @@ import { PoliticaAtendimentoBloco } from "@/components/PoliticaAtendimentoBloco"
 import { TrustStrip } from "@/components/TrustStrip";
 import { PageTableOfContents } from "@/components/ui/PageTableOfContents";
 import { RealImageSection } from "@/components/RealImageSection";
+import {
+  BlocosTecnicos,
+  FontesPrimarias,
+  RespostaRapida,
+  TabelaDiagnosticaBloco,
+} from "@/components/BlocosEnriquecimento";
+import { enriquecimentoDe } from "@/lib/enriquecimentoConteudo";
 import { ServicosCorrelatos } from "@/components/informatica/ServicosCorrelatos";
 import { ProximosPassos } from "@/components/informatica/ProximosPassos";
 
@@ -205,6 +212,9 @@ const ComputadorLento = () => {
 
   const cta = (location: string) => () => trackCTAClick("whatsapp", `problema-computador-lento-${location}`);
 
+  // Rodada 4B — blocos de enriquecimento por caminho canônico (sem URL nova).
+  const extra = enriquecimentoDe(PATH);
+
   return (
     <div className="min-h-screen bg-background">
       <PageSEO title={TITLE} description={DESCRIPTION} path={PATH} />
@@ -258,6 +268,8 @@ const ComputadorLento = () => {
             { id: "faq", label: "Perguntas frequentes" },
           ]}
         />
+
+        {extra?.respostaRapida && <RespostaRapida texto={extra.respostaRapida} />}
 
         <section id="causas-familias" className="scroll-mt-24 mb-12">
           <h2 className="mb-4 text-2xl font-bold text-foreground">Lentidão é sintoma, não diagnóstico</h2>
@@ -518,6 +530,12 @@ const ComputadorLento = () => {
             },
           ]}
         />
+
+        {extra?.tabelaExtra && (
+          <TabelaDiagnosticaBloco tabela={extra.tabelaExtra} id="tabela-enriquecimento-4b" />
+        )}
+        <BlocosTecnicos blocos={extra?.blocos} />
+        <FontesPrimarias fontes={extra?.fontes} />
 
         <section id="faq" className="scroll-mt-24 mb-12">
 

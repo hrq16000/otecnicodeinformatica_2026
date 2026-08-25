@@ -291,7 +291,9 @@
     "test:node-scripts:postbuild": "node --test scripts/lib/edge-router.test.mjs",
     "lastmod:fingerprint": "node scripts/update-content-fingerprints.mjs",
     "check:lastmod-fingerprint": "node scripts/update-content-fingerprints.mjs --check",
-    "smoke:4a": "node scripts/smoke-owners-4a.mjs",
+    "smoke:4a": "node scripts/smoke-owners-4a.mjs --rodada=4a",
+    "smoke:4b": "node scripts/smoke-owners-4a.mjs --rodada=4b",
+    "smoke:owners": "node scripts/smoke-owners-4a.mjs --rodada=todos",
     "report:index-status": "node scripts/report-index-status.mjs",
     "indexnow:changed": "node scripts/indexnow-ping.mjs --changed"
   },

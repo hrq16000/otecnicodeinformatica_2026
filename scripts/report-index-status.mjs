@@ -14,7 +14,9 @@
  */
 import { writeFileSync, readFileSync, existsSync } from "node:fs";
 import { resolve } from "node:path";
-import { OWNERS_4A } from "./lib/owners-4a.mjs";
+import { resolverOwners } from "./lib/owners.mjs";
+
+const { owners: OWNERS } = resolverOwners(process.argv, "todos");
 
 const GATEWAY = "https://connector-gateway.lovable.dev/google_search_console";
 const SITE = process.env.GSC_SITE_URL ?? "sc-domain:otecnicodeinformatica.com.br";
@@ -26,7 +28,7 @@ const disponivel = Boolean(lovableKey && gscKey);
 const argUrls = process.argv.find((a) => a.startsWith("--urls="));
 const paths = argUrls
   ? argUrls.slice(7).split(",").map((p) => p.trim()).filter(Boolean)
-  : OWNERS_4A.map((o) => o.path);
+  : OWNERS.map((o) => o.path);
 
 const dias = (n) => new Date(Date.now() - n * 86400000).toISOString().slice(0, 10);
 
@@ -87,7 +89,7 @@ for (const path of paths) {
   const base = {
     path,
     url,
-    cluster: OWNERS_4A.find((o) => o.path === path)?.cluster ?? null,
+    cluster: OWNERS.find((o) => o.path === path)?.cluster ?? null,
     impressoes28d: perf ? Math.round(linha?.impressions ?? 0) : "NO_DATA",
     cliques28d: perf ? Math.round(linha?.clicks ?? 0) : "NO_DATA",
     posicao28d: linha?.position ? Number(linha.position.toFixed(1)) : perf ? null : "NO_DATA",

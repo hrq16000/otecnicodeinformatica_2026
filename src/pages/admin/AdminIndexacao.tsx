@@ -1,5 +1,7 @@
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { Card } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { exportarCsv, exportarJson, exportarPdf } from "@/lib/exportarRelatorio";
 
 /**
  * PAINEL DE INDEXAÇÃO POR URL — Google (GSC) · Bing · IndexNow.
@@ -51,8 +53,30 @@ interface StatusIndexacao {
     totalUrls: number;
     keyFileOk: boolean;
     porUrl: Record<string, boolean>;
+    alerta?: { enviado: boolean; motivo?: string; status?: number } | null;
   } | null;
 }
+
+/**
+ * Reobservação agendada: marcos fixos contados a partir do snapshot atual.
+ * Não dispara nada sozinho — sinaliza o que já venceu para o operador rodar
+ * `npm run report:index-status`. Sem data, nada é inventado.
+ */
+const MARCOS_REOBSERVACAO = [
+  { dias: 3, rotulo: "D+3 — primeira leitura de crawl" },
+  { dias: 7, rotulo: "D+7 — cobertura e canonical" },
+  { dias: 14, rotulo: "D+14 — impressões iniciais" },
+  { dias: 28, rotulo: "D+28 — janela completa de performance" },
+];
+
+const agenda = (geradoEm: string) => {
+  const base = new Date(geradoEm).getTime();
+  const agora = Date.now();
+  return MARCOS_REOBSERVACAO.map((m) => {
+    const quando = new Date(base + m.dias * 86400000);
+    return { ...m, quando, vencido: quando.getTime() <= agora };
+  });
+};
 
 const CORES: Record<string, string> = {
   INDEXED: "bg-emerald-500/15 text-emerald-500",
@@ -76,6 +100,7 @@ const dataCurta = (iso?: string | null) => (iso ? new Date(iso).toLocaleString("
 const AdminIndexacao = () => {
   const [dados, setDados] = useState<StatusIndexacao | null>(null);
   const [erro, setErro] = useState<string | null>(null);
+  const marcos = useMemo(() => (dados ? agenda(dados.geradoEm) : []), [dados]);
 
   useEffect(() => {
     fetch("/index-status.json", { cache: "no-store" })
@@ -126,6 +151,63 @@ const AdminIndexacao = () => {
             </Card>
           </div>
 
+          <div className="mt-4 flex flex-wrap gap-2">
+            <Button
+              variant="outline"
+              size="sm"
+              onClick={() =>
+                exportarCsv(
+                  "indexacao-por-url",
+                  dados.rotas.map((r) => ({
+                    path: r.path,
+                    cluster: r.cluster ?? "",
+                    status: r.google.status,
+                    coverageState: r.google.coverageState ?? "",
+                    robotsTxtState: r.google.robotsTxtState ?? "",
+                    ultimoCrawl: r.google.ultimoCrawl ?? "",
+                    canonicalGoogle: r.google.canonicalGoogle ?? "",
+                    impressoes28d: r.impressoes28d,
+                    cliques28d: r.cliques28d,
+                    posicao28d: r.posicao28d ?? "",
+                    indexnow:
+                      dados.indexnow && dados.indexnow.porUrl[r.url] !== undefined
+                        ? dados.indexnow.porUrl[r.url]
+                          ? "aceita"
+                          : "falha"
+                        : "sem dado",
+                  })),
+                )
+              }
+            >
+              Exportar CSV
+            </Button>
+            <Button variant="outline" size="sm" onClick={() => exportarJson("indexacao-por-url", dados)}>
+              Exportar JSON
+            </Button>
+            <Button variant="outline" size="sm" onClick={() => exportarPdf("relatorio-indexacao", "Indexação por URL")}>
+              Exportar PDF
+            </Button>
+          </div>
+
+          <Card className="mt-4 p-4 text-sm">
+            <div className="font-medium">Reobservação agendada</div>
+            <p className="mt-1 text-xs text-muted-foreground">
+              Marcos contados a partir do snapshot ({dataCurta(dados.geradoEm)}). Vencido significa que já vale rodar{" "}
+              <code>npm run report:index-status</code> novamente — nada é coletado automaticamente aqui.
+            </p>
+            <ul className="mt-3 space-y-1">
+              {marcos.map((m) => (
+                <li key={m.dias} className="flex flex-wrap items-center gap-2 text-xs">
+                  <Badge tom={m.vencido ? "bg-amber-500/15 text-amber-500" : CORES.NO_DATA}>
+                    {m.vencido ? "vencido" : "aguardando"}
+                  </Badge>
+                  <span>{m.rotulo}</span>
+                  <span className="text-muted-foreground">{m.quando.toLocaleDateString("pt-BR")}</span>
+                </li>
+              ))}
+            </ul>
+          </Card>
+
           {dados.indexnow && (
             <Card className="mt-4 p-4 text-sm">
               <div className="font-medium">
@@ -138,10 +220,19 @@ const AdminIndexacao = () => {
                 {dados.indexnow.totalUrls} URL(s) · key file {dados.indexnow.keyFileOk ? "acessível" : "INACESSÍVEL"} ·{" "}
                 {dataCurta(dados.indexnow.geradoEm)}
               </div>
+              {(!dados.indexnow.sucesso || !dados.indexnow.keyFileOk) && (
+                <div className="mt-2 rounded border border-destructive/30 bg-destructive/5 p-2 text-xs text-destructive">
+                  Alerta{" "}
+                  {dados.indexnow.alerta?.enviado
+                    ? `enviado ao webhook (HTTP ${dados.indexnow.alerta.status ?? "—"})`
+                    : `NÃO enviado: ${dados.indexnow.alerta?.motivo ?? "webhook não configurado"}`}
+                  . Diagnóstico completo por endpoint em <code>reports/indexnow-log.json</code>.
+                </div>
+              )}
             </Card>
           )}
 
-          <div className="mt-6 overflow-x-auto">
+          <div className="mt-6 overflow-x-auto" id="relatorio-indexacao">
             <table className="w-full border-collapse text-sm">
               <thead>
                 <tr className="border-b text-left text-xs uppercase text-muted-foreground">

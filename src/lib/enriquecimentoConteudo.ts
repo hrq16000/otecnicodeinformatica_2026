@@ -524,10 +524,14 @@ export const ENRIQUECIMENTO_1: Record<string, EnriquecimentoConteudo> = {
 
 /** Busca o enriquecimento por caminho canônico da página. */
 import { ENRIQUECIMENTO_4A, mesclarEnriquecimento } from "./enriquecimentoAtp4a";
+import { ENRIQUECIMENTO_4B } from "./enriquecimentoAtp4b";
 
 /**
  * Enriquecimento aplicável a uma página: base da Rodada 1 combinada com os
- * blocos da Rodada 4A (ATP). Nada é sobrescrito — apenas somado.
+ * blocos das Rodadas 4A e 4B (ATP). Nada é sobrescrito — apenas somado.
  */
 export const enriquecimentoDe = (path: string) =>
-  mesclarEnriquecimento(ENRIQUECIMENTO_1[path], ENRIQUECIMENTO_4A[path]);
+  mesclarEnriquecimento(
+    mesclarEnriquecimento(ENRIQUECIMENTO_1[path], ENRIQUECIMENTO_4A[path]),
+    ENRIQUECIMENTO_4B[path],
+  );

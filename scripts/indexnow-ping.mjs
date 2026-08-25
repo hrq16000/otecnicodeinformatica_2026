@@ -175,6 +175,59 @@ writeFileSync(
   `${JSON.stringify(registro, null, 2)}\n`,
 );
 
+/**
+ * ALERTA DETALHADO (Rodada 4B) — envia o diagnóstico completo da falha para o
+ * webhook configurado (Slack ou genérico). Fail-safe: sem URL configurada ou
+ * com erro de rede, apenas registra em log e segue.
+ */
+async function alertar(reg) {
+  const hook = process.env.INDEXNOW_ALERT_WEBHOOK || process.env.SLACK_WEBHOOK_URL;
+  const falhas = reg.tentativas.filter((t) => t.classe !== "OK");
+  const precisaAlertar = !reg.sucesso || !reg.keyFile.ok || falhas.length > 0;
+  if (!precisaAlertar) return { enviado: false, motivo: "sem falha a reportar" };
+  const linhas = [
+    `IndexNow — ${reg.sucesso ? "aceito com ressalvas" : "FALHOU"} (modo ${reg.modo}, ${reg.totalUrls} URL(s))`,
+    `host: ${reg.host}`,
+    `key file: ${reg.keyFile.ok ? "ok" : `INACESSÍVEL (${reg.keyFile.url} → HTTP ${reg.keyFile.status})`}`,
+    ...falhas.map(
+      (t) => `✗ ${t.endpoint} — HTTP ${t.status || "-"} · ${t.classe} · ${t.duracaoMs}ms · ${(t.corpo || "").slice(0, 160)}`,
+    ),
+    ...reg.urls.filter((u) => !u.aceita).map((u) => `  · não aceita: ${u.url}`),
+    "ação sugerida: " + (
+      !reg.keyFile.ok
+        ? "publicar/expor o arquivo de chave na raiz do domínio"
+        : falhas.some((t) => t.classe === "AUTH_KEY")
+          ? "conferir INDEXNOW_KEY e o conteúdo do arquivo de chave"
+          : falhas.every((t) => t.classe === "NETWORK")
+            ? "rede indisponível no runner — reexecutar npm run indexnow:changed"
+            : "verificar payload/limite de URLs e reexecutar"
+    ),
+  ];
+  const texto = linhas.join("\n");
+  if (!hook) {
+    console.warn(`[indexnow] alerta não enviado (sem INDEXNOW_ALERT_WEBHOOK):\n${texto}`);
+    return { enviado: false, motivo: "webhook ausente" };
+  }
+  try {
+    const res = await fetch(hook, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ text: texto, detalhes: { host: reg.host, keyFile: reg.keyFile, tentativas: reg.tentativas } }),
+    });
+    console.log(`[indexnow] alerta enviado ao webhook — HTTP ${res.status}`);
+    return { enviado: res.ok, status: res.status };
+  } catch (e) {
+    console.warn(`[indexnow] falha ao enviar alerta: ${e.message}`);
+    return { enviado: false, motivo: e.message };
+  }
+}
+
+registro.alerta = await alertar(registro);
+writeFileSync(
+  resolve(process.cwd(), "public/indexnow-status.json"),
+  `${JSON.stringify(registro, null, 2)}\n`,
+);
+
 for (const u of porUrl) console.log(`  · ${u.url} → ${u.aceita ? "ACEITA" : "FALHA"}`);
 if (!keyFile.ok) console.warn(`[indexnow] ALERTA KEY_LOCATION: ${keyLocation} respondeu ${keyFile.status}`);
 if (!registro.sucesso) {
