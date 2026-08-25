@@ -348,17 +348,21 @@
     min-width: 0;
   }
 
+  /* `overflow-x: hidden` em html/body cria contexto de rolagem e quebra o
+     `position: fixed` do header em vários navegadores (topo sumindo no scroll).
+     `overflow-x: clip` corta o transbordo horizontal SEM criar esse contexto. */
   html {
     scroll-behavior: smooth;
-    overflow-x: hidden;
+    overflow-x: clip;
   }
 
   body {
     @apply bg-background text-foreground font-sans antialiased;
-    overflow-x: hidden;
+    overflow-x: clip;
     overflow-wrap: break-word;
     word-wrap: break-word;
   }
+
 
   h1, h2, h3, h4, h5, h6 {
     @apply font-heading font-bold;
