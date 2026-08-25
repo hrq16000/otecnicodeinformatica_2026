@@ -1,0 +1,44 @@
+# Relatório automático pós-deploy — indexação (GSC/Bing) + diff de sitemap/lastmod.
+#
+# Roda depois de cada publicação e uma vez por dia, para detectar cedo:
+# URL removida do sitemap, lastmod que retrocedeu, perda de INDEXED ou queda
+# forte de impressões. Fail-closed: sem credenciais o bloco do Google fica
+# UNKNOWN — nunca zero.
+name: Pós-deploy — indexação e sitemap
+
+on:
+  workflow_dispatch:
+  repository_dispatch:
+    types: [site-published]
+  schedule:
+    - cron: "40 6 * * *"
+
+concurrency:
+  group: post-deploy-indexacao
+  cancel-in-progress: true
+
+jobs:
+  indexacao:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Relatório de indexação e diff
+        env:
+          LOVABLE_API_KEY: ${{ secrets.LOVABLE_API_KEY }}
+          GOOGLE_SEARCH_CONSOLE_API_KEY: ${{ secrets.GOOGLE_SEARCH_CONSOLE_API_KEY }}
+          GSC_SITE_URL: ${{ vars.GSC_SITE_URL }}
+          BING_WEBMASTER_API_KEY: ${{ secrets.BING_WEBMASTER_API_KEY }}
+          VITE_SITE_DOMAIN: ${{ vars.VITE_SITE_DOMAIN }}
+        run: node scripts/report-post-deploy-indexacao.mjs
+      - name: Resumo no job
+        if: always()
+        run: cat reports/post-deploy-indexacao.md >> "$GITHUB_STEP_SUMMARY" || true
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: post-deploy-indexacao
+          path: reports/post-deploy-indexacao.*

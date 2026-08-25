@@ -151,10 +151,29 @@ const dataCurta = (iso?: string | null) => (iso ? new Date(iso).toLocaleString("
 const slugId = (path: string) => path.replace(/[^a-z0-9]+/gi, "-").replace(/^-|-$/g, "") || "home";
 
 
+/** Snapshot da observação 2 (rodada 5A) — gerado fora do runtime. */
+interface ObservacaoCohorts {
+  geradoEm: string;
+  searchConsole?: string;
+  cohorts: {
+    id: string;
+    rotulo: string;
+    urls: number;
+    crawledPosMudanca: number;
+    indexed: number;
+    crawledNotIndexed: number;
+    impressoes28d: number | string;
+    cliques28d: number | string;
+    decisao: string;
+  }[];
+  vereditos?: Record<string, unknown>;
+}
+
 const AdminIndexacao = () => {
   const [dados, setDados] = useState<StatusIndexacao | null>(null);
   const [rich, setRich] = useState<MonitorRichResults | null>(null);
   const [diff, setDiff] = useState<StatusSsrDiff | null>(null);
+  const [cohorts, setCohorts] = useState<ObservacaoCohorts | null>(null);
   const [erro, setErro] = useState<string | null>(null);
   const marcos = useMemo(() => (dados ? agenda(dados.geradoEm) : []), [dados]);
   const richPorPath = useMemo(
@@ -179,6 +198,10 @@ const AdminIndexacao = () => {
       .then((r) => (r.ok ? r.json() : null))
       .then(setDiff)
       .catch(() => setDiff(null));
+    fetch("/observacao-2-cohorts.json", { cache: "no-store" })
+      .then((r) => (r.ok ? r.json() : null))
+      .then(setCohorts)
+      .catch(() => setCohorts(null));
   }, []);
 
 
@@ -223,6 +246,65 @@ const AdminIndexacao = () => {
               </div>
             </Card>
           </div>
+
+          <Card className="mt-4 p-4 text-sm">
+            <div className="font-medium">
+              Funil por cohort — observação pós-enriquecimento (4A–4F){" "}
+              {cohorts ? (
+                <Badge tom={CORES.NO_DATA}>{dataCurta(cohorts.geradoEm)}</Badge>
+              ) : (
+                <Badge>sem snapshot</Badge>
+              )}
+            </div>
+            {!cohorts ? (
+              <p className="mt-1 text-xs text-muted-foreground">
+                Rode <code>npm run report:observacao-2</code> para gerar{" "}
+                <code>/observacao-2-cohorts.json</code>.
+              </p>
+            ) : (
+              <>
+                <p className="mt-1 text-xs text-muted-foreground">
+                  Search Console: {cohorts.searchConsole ?? "UNKNOWN"}. Ausência de dado aparece como
+                  NO_DATA — nunca como zero.
+                </p>
+                <div className="mt-3 overflow-x-auto">
+                  <table className="w-full text-xs">
+                    <thead className="text-muted-foreground">
+                      <tr className="border-b">
+                        <th className="py-1 text-left font-medium">Cohort</th>
+                        <th className="py-1 text-right font-medium">URLs</th>
+                        <th className="py-1 text-right font-medium">Crawl pós-mudança</th>
+                        <th className="py-1 text-right font-medium">Indexed</th>
+                        <th className="py-1 text-right font-medium">CNI</th>
+                        <th className="py-1 text-right font-medium">Impressões 28d</th>
+                        <th className="py-1 text-right font-medium">Cliques 28d</th>
+                        <th className="py-1 text-left font-medium">Decisão</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {cohorts.cohorts.map((c) => (
+                        <tr key={c.id} className="border-b last:border-0">
+                          <td className="py-1">{c.rotulo}</td>
+                          <td className="py-1 text-right">{c.urls}</td>
+                          <td className="py-1 text-right">{c.crawledPosMudanca}</td>
+                          <td className="py-1 text-right">{c.indexed}</td>
+                          <td className="py-1 text-right">{c.crawledNotIndexed}</td>
+                          <td className="py-1 text-right">{fmt(c.impressoes28d)}</td>
+                          <td className="py-1 text-right">{fmt(c.cliques28d)}</td>
+                          <td className="py-1">
+                            <Badge tom={c.decisao === "OBSERVE" ? CORES.NO_DATA : CORES.DISCOVERED_NOT_INDEXED}>
+                              {c.decisao}
+                            </Badge>
+                          </td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              </>
+            )}
+          </Card>
+
 
           <div className="mt-4 flex flex-wrap gap-2">
             <Button

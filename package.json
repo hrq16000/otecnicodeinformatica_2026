@@ -311,7 +311,12 @@
     "check:index-headers": "node scripts/check-index-headers.mjs dist",
     "check:phone-visibility": "node scripts/check-phone-visibility.mjs dist",
     "report:authority-coverage": "node scripts/report-authority-coverage.mjs",
-    "report:vitals-b2b": "node scripts/report-vitals-b2b.mjs"
+    "report:vitals-b2b": "node scripts/report-vitals-b2b.mjs",
+    "report:observacao-2": "node scripts/report-observacao-2.mjs",
+    "report:post-deploy-indexacao": "node scripts/report-post-deploy-indexacao.mjs",
+    "report:post-deploy-indexacao:baseline": "node scripts/report-post-deploy-indexacao.mjs --baseline",
+    "report:post-deploy-indexacao:strict": "node scripts/report-post-deploy-indexacao.mjs --strict",
+    "test:og-cards": "playwright test e2e/og-twitter-cards.spec.ts"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.2",

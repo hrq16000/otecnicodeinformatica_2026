@@ -35,6 +35,8 @@ export function runClientInit() {
   });
 
   void import("@/lib/ctaRuntimeGuard").then(({ installCtaRuntimeGuard }) => installCtaRuntimeGuard());
+  // Medição de leads por rota: WhatsApp e (se existir) toque em telefone.
+  void import("@/lib/leadTapTracking").then(({ installLeadTapTracking }) => installLeadTapTracking());
   // Observabilidade (Sentry/OTLP) — só ativa quando as envs estão configuradas.
   void import("@/lib/observability").then(({ iniciarObservabilidade }) => iniciarObservabilidade());
   // RODADA 1 — trava de indexação + analytics só da propriedade própria.

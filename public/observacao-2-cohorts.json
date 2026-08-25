@@ -1,0 +1,1499 @@
+{
+  "geradoEm": "2026-08-25T04:19:26.008Z",
+  "rodada": "5A — observação pós-enriquecimento",
+  "site": "sc-domain:otecnicodeinformatica.com.br",
+  "gscDisponivel": true,
+  "bing": "UNKNOWN",
+  "indexnow": {
+    "geradoEm": "2026-08-25T01:42:17.543Z",
+    "sucesso": true,
+    "totalUrls": 5
+  },
+  "amostraMinimaCtr": 100,
+  "cohorts": [
+    {
+      "id": "A",
+      "nome": "ATP técnico (4A + 4B)",
+      "urls": 11,
+      "crawlPosMudanca": 0,
+      "indexed": 3,
+      "cni": 0,
+      "impressoes28d": 4,
+      "cliques28d": 0,
+      "decisao": "OBSERVE"
+    },
+    {
+      "id": "B",
+      "nome": "Comercial local (4C)",
+      "urls": 6,
+      "crawlPosMudanca": 0,
+      "indexed": 4,
+      "cni": 0,
+      "impressoes28d": 2,
+      "cliques28d": 0,
+      "decisao": "OBSERVE"
+    },
+    {
+      "id": "C",
+      "nome": "B2B (4D)",
+      "urls": 6,
+      "crawlPosMudanca": 0,
+      "indexed": 2,
+      "cni": 0,
+      "impressoes28d": 10,
+      "cliques28d": 0,
+      "decisao": "OBSERVE"
+    },
+    {
+      "id": "D",
+      "nome": "Redes e remoto (4E)",
+      "urls": 4,
+      "crawlPosMudanca": 0,
+      "indexed": 0,
+      "cni": 0,
+      "impressoes28d": 0,
+      "cliques28d": 0,
+      "decisao": "OBSERVE"
+    },
+    {
+      "id": "E",
+      "nome": "Autoridade consolidada (4F)",
+      "urls": 2,
+      "crawlPosMudanca": 0,
+      "indexed": 0,
+      "cni": 0,
+      "impressoes28d": 0,
+      "cliques28d": 0,
+      "decisao": "OBSERVE"
+    }
+  ],
+  "owners": [
+    {
+      "path": "/problemas/computador-esquentando",
+      "url": "https://otecnicodeinformatica.com.br/problemas/computador-esquentando",
+      "cohort": "A",
+      "cohortNome": "ATP técnico (4A + 4B)",
+      "rodada": "4A",
+      "intent": "A — superaquecimento / desliga sozinho",
+      "ultimaMudancaMaterial": "2026-08-25",
+      "hashConteudo": "7cd96be17aca",
+      "sitemap": "sitemap-problemas.xml",
+      "indexnow": "NO_DATA",
+      "google": {
+        "estado": "UNKNOWN",
+        "verdict": "NEUTRAL",
+        "coverageState": "URL is unknown to Google",
+        "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+        "indexingState": "INDEXING_STATE_UNSPECIFIED",
+        "lastCrawlTime": "NO_DATA",
+        "canonicalDeclarado": "NO_DATA",
+        "canonicalGoogle": "NO_DATA"
+      },
+      "postChangeCrawl": "UNKNOWN",
+      "descoberta": {
+        "estado": "HEALTHY",
+        "inbound": 5,
+        "depth": 3
+      },
+      "performance": {
+        "d7": {
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": 0,
+          "position": null
+        },
+        "d28": {
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": 0,
+          "position": null
+        },
+        "amostraCtr": "INSUFFICIENT_SAMPLE"
+      },
+      "queries": "NO_DATA",
+      "decisao": "OBSERVE",
+      "justificativa": "sem evidência pós-crawl suficiente"
+    },
+    {
+      "path": "/solucoes/ssd",
+      "url": "https://otecnicodeinformatica.com.br/solucoes/ssd",
+      "cohort": "A",
+      "cohortNome": "ATP técnico (4A + 4B)",
+      "rodada": "4A",
+      "intent": "B — SSD × HD",
+      "ultimaMudancaMaterial": "2026-08-25",
+      "hashConteudo": "7fea8b7cde4a",
+      "sitemap": "sitemap-solucoes.xml",
+      "indexnow": "NO_DATA",
+      "google": {
+        "estado": "DISCOVERED_AWAITING_CRAWL",
+        "verdict": "NEUTRAL",
+        "coverageState": "Discovered - currently not indexed",
+        "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+        "indexingState": "INDEXING_STATE_UNSPECIFIED",
+        "lastCrawlTime": "NO_DATA",
+        "canonicalDeclarado": "NO_DATA",
+        "canonicalGoogle": "NO_DATA"
+      },
+      "postChangeCrawl": "UNKNOWN",
+      "descoberta": {
+        "estado": "HEALTHY",
+        "inbound": 4,
+        "depth": 2
+      },
+      "performance": {
+        "d7": {
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": 0,
+          "position": null
+        },
+        "d28": {
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": 0,
+          "position": null
+        },
+        "amostraCtr": "INSUFFICIENT_SAMPLE"
+      },
+      "queries": "NO_DATA",
+      "decisao": "OBSERVE",
+      "justificativa": "sem evidência pós-crawl suficiente"
+    },
+    {
+      "path": "/servicos/upgrade-ssd-ram",
+      "url": "https://otecnicodeinformatica.com.br/servicos/upgrade-ssd-ram",
+      "cohort": "A",
+      "cohortNome": "ATP técnico (4A + 4B)",
+      "rodada": "4A",
+      "intent": "C — RAM ou SSD",
+      "ultimaMudancaMaterial": "2026-08-25",
+      "hashConteudo": "c881cffebd56",
+      "sitemap": "sitemap-servicos.xml",
+      "indexnow": "NO_DATA",
+      "google": {
+        "estado": "INDEXED",
+        "verdict": "PASS",
+        "coverageState": "Submitted and indexed",
+        "robotsTxtState": "ALLOWED",
+        "indexingState": "INDEXING_ALLOWED",
+        "lastCrawlTime": "2026-08-17T00:50:47Z",
+        "canonicalDeclarado": "https://otecnicodeinformatica.com.br/servicos/upgrade-ssd-ram",
+        "canonicalGoogle": "https://otecnicodeinformatica.com.br/servicos/upgrade-ssd-ram"
+      },
+      "postChangeCrawl": "NO",
+      "descoberta": {
+        "estado": "HEALTHY",
+        "inbound": 157,
+        "depth": 2
+      },
+      "performance": {
+        "d7": {
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": 0,
+          "position": null
+        },
+        "d28": {
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": 0,
+          "position": null
+        },
+        "amostraCtr": "INSUFFICIENT_SAMPLE"
+      },
+      "queries": "NO_DATA",
+      "decisao": "OBSERVE",
+      "justificativa": "sem evidência pós-crawl suficiente"
+    },
+    {
+      "path": "/problemas/hd-fazendo-barulho",
+      "url": "https://otecnicodeinformatica.com.br/problemas/hd-fazendo-barulho",
+      "cohort": "A",
+      "cohortNome": "ATP técnico (4A + 4B)",
+      "rodada": "4A",
+      "intent": "D — recuperar dados / HD com barulho",
+      "ultimaMudancaMaterial": "2026-08-25",
+      "hashConteudo": "f3519d349321",
+      "sitemap": "sitemap-problemas.xml",
+      "indexnow": "NO_DATA",
+      "google": {
+        "estado": "DISCOVERED_AWAITING_CRAWL",
+        "verdict": "NEUTRAL",
+        "coverageState": "Discovered - currently not indexed",
+        "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+        "indexingState": "INDEXING_STATE_UNSPECIFIED",
+        "lastCrawlTime": "NO_DATA",
+        "canonicalDeclarado": "NO_DATA",
+        "canonicalGoogle": "NO_DATA"
+      },
+      "postChangeCrawl": "UNKNOWN",
+      "descoberta": {
+        "estado": "HEALTHY",
+        "inbound": 5,
+        "depth": 2
+      },
+      "performance": {
+        "d7": {
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": 0,
+          "position": null
+        },
+        "d28": {
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": 0,
+          "position": null
+        },
+        "amostraCtr": "INSUFFICIENT_SAMPLE"
+      },
+      "queries": "NO_DATA",
+      "decisao": "OBSERVE",
+      "justificativa": "sem evidência pós-crawl suficiente"
+    },
+    {
+      "path": "/servicos/formatacao",
+      "url": "https://otecnicodeinformatica.com.br/servicos/formatacao",
+      "cohort": "A",
+      "cohortNome": "ATP técnico (4A + 4B)",
+      "rodada": "4A",
+      "intent": "E — formatar PC / Windows",
+      "ultimaMudancaMaterial": "2026-08-25",
+      "hashConteudo": "4b272cd1c48a",
+      "sitemap": "sitemap-servicos.xml",
+      "indexnow": "NO_DATA",
+      "google": {
+        "estado": "DISCOVERED_AWAITING_CRAWL",
+        "verdict": "NEUTRAL",
+        "coverageState": "Discovered - currently not indexed",
+        "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+        "indexingState": "INDEXING_STATE_UNSPECIFIED",
+        "lastCrawlTime": "NO_DATA",
+        "canonicalDeclarado": "NO_DATA",
+        "canonicalGoogle": "NO_DATA"
+      },
+      "postChangeCrawl": "UNKNOWN",
+      "descoberta": {
+        "estado": "HEALTHY",
+        "inbound": 158,
+        "depth": 1
+      },
+      "performance": {
+        "d7": {
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": 0,
+          "position": null
+        },
+        "d28": {
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": 0,
+          "position": null
+        },
+        "amostraCtr": "INSUFFICIENT_SAMPLE"
+      },
+      "queries": "NO_DATA",
+      "decisao": "OBSERVE",
+      "justificativa": "sem evidência pós-crawl suficiente"
+    },
+    {
+      "path": "/servicos/remocao-de-virus",
+      "url": "https://otecnicodeinformatica.com.br/servicos/remocao-de-virus",
+      "cohort": "A",
+      "cohortNome": "ATP técnico (4A + 4B)",
+      "rodada": "4A",
+      "intent": "F — vírus / malware",
+      "ultimaMudancaMaterial": "2026-08-25",
+      "hashConteudo": "7520a6428bc0",
+      "sitemap": "sitemap-servicos.xml",
+      "indexnow": "NO_DATA",
+      "google": {
+        "estado": "DISCOVERED_AWAITING_CRAWL",
+        "verdict": "NEUTRAL",
+        "coverageState": "Discovered - currently not indexed",
+        "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+        "indexingState": "INDEXING_STATE_UNSPECIFIED",
+        "lastCrawlTime": "NO_DATA",
+        "canonicalDeclarado": "NO_DATA",
+        "canonicalGoogle": "NO_DATA"
+      },
+      "postChangeCrawl": "UNKNOWN",
+      "descoberta": {
+        "estado": "HEALTHY",
+        "inbound": 157,
+        "depth": 2
+      },
+      "performance": {
+        "d7": {
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": 0,
+          "position": null
+        },
+        "d28": {
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": 0,
+          "position": null
+        },
+        "amostraCtr": "INSUFFICIENT_SAMPLE"
+      },
+      "queries": "NO_DATA",
+      "decisao": "OBSERVE",
+      "justificativa": "sem evidência pós-crawl suficiente"
+    },
+    {
+      "path": "/problemas/notebook-nao-liga",
+      "url": "https://otecnicodeinformatica.com.br/problemas/notebook-nao-liga",
+      "cohort": "A",
+      "cohortNome": "ATP técnico (4A + 4B)",
+      "rodada": "4B",
+      "intent": "A — notebook/PC não liga",
+      "ultimaMudancaMaterial": "2026-08-25",
+      "hashConteudo": "3909c85e3d3d",
+      "sitemap": "sitemap-problemas.xml",
+      "indexnow": {
+        "enviadaEm": "2026-08-25T01:42:17.543Z",
+        "aceita": true
+      },
+      "google": {
+        "estado": "DISCOVERED_AWAITING_CRAWL",
+        "verdict": "NEUTRAL",
+        "coverageState": "Discovered - currently not indexed",
+        "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+        "indexingState": "INDEXING_STATE_UNSPECIFIED",
+        "lastCrawlTime": "NO_DATA",
+        "canonicalDeclarado": "NO_DATA",
+        "canonicalGoogle": "NO_DATA"
+      },
+      "postChangeCrawl": "UNKNOWN",
+      "descoberta": {
+        "estado": "HEALTHY",
+        "inbound": 15,
+        "depth": 1
+      },
+      "performance": {
+        "d7": {
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": 0,
+          "position": null
+        },
+        "d28": {
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": 0,
+          "position": null
+        },
+        "amostraCtr": "INSUFFICIENT_SAMPLE"
+      },
+      "queries": "NO_DATA",
+      "decisao": "OBSERVE",
+      "justificativa": "sem evidência pós-crawl suficiente"
+    },
+    {
+      "path": "/problemas/computador-nao-da-imagem",
+      "url": "https://otecnicodeinformatica.com.br/problemas/computador-nao-da-imagem",
+      "cohort": "A",
+      "cohortNome": "ATP técnico (4A + 4B)",
+      "rodada": "4B",
+      "intent": "B — liga mas não dá imagem",
+      "ultimaMudancaMaterial": "2026-08-25",
+      "hashConteudo": "3e44e533d862",
+      "sitemap": "sitemap-problemas.xml",
+      "indexnow": {
+        "enviadaEm": "2026-08-25T01:42:17.543Z",
+        "aceita": true
+      },
+      "google": {
+        "estado": "INDEXED",
+        "verdict": "PASS",
+        "coverageState": "Submitted and indexed",
+        "robotsTxtState": "ALLOWED",
+        "indexingState": "INDEXING_ALLOWED",
+        "lastCrawlTime": "2026-08-13T12:07:17Z",
+        "canonicalDeclarado": "https://otecnicodeinformatica.com.br/problemas/computador-nao-da-imagem",
+        "canonicalGoogle": "https://otecnicodeinformatica.com.br/problemas/computador-nao-da-imagem"
+      },
+      "postChangeCrawl": "NO",
+      "descoberta": {
+        "estado": "HEALTHY",
+        "inbound": 6,
+        "depth": 2
+      },
+      "performance": {
+        "d7": {
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": 0,
+          "position": null
+        },
+        "d28": {
+          "impressions": 1,
+          "clicks": 0,
+          "ctr": 0,
+          "position": 10
+        },
+        "amostraCtr": "INSUFFICIENT_SAMPLE"
+      },
+      "queries": "NO_DATA",
+      "decisao": "OBSERVE",
+      "justificativa": "sem evidência pós-crawl suficiente"
+    },
+    {
+      "path": "/problemas/computador-lento",
+      "url": "https://otecnicodeinformatica.com.br/problemas/computador-lento",
+      "cohort": "A",
+      "cohortNome": "ATP técnico (4A + 4B)",
+      "rodada": "4B",
+      "intent": "C — lento / travando",
+      "ultimaMudancaMaterial": "2026-08-25",
+      "hashConteudo": "29168accabb9",
+      "sitemap": "sitemap-problemas.xml",
+      "indexnow": {
+        "enviadaEm": "2026-08-25T01:42:17.543Z",
+        "aceita": true
+      },
+      "google": {
+        "estado": "INDEXED",
+        "verdict": "PASS",
+        "coverageState": "Submitted and indexed",
+        "robotsTxtState": "ALLOWED",
+        "indexingState": "INDEXING_ALLOWED",
+        "lastCrawlTime": "2026-08-15T07:00:14Z",
+        "canonicalDeclarado": "https://otecnicodeinformatica.com.br/problemas/computador-lento",
+        "canonicalGoogle": "https://otecnicodeinformatica.com.br/problemas/computador-lento"
+      },
+      "postChangeCrawl": "NO",
+      "descoberta": {
+        "estado": "HEALTHY",
+        "inbound": 33,
+        "depth": 1
+      },
+      "performance": {
+        "d7": {
+          "impressions": 3,
+          "clicks": 0,
+          "ctr": 0,
+          "position": 6.3
+        },
+        "d28": {
+          "impressions": 3,
+          "clicks": 0,
+          "ctr": 0,
+          "position": 6.3
+        },
+        "amostraCtr": "INSUFFICIENT_SAMPLE"
+      },
+      "queries": "NO_DATA",
+      "decisao": "OBSERVE",
+      "justificativa": "sem evidência pós-crawl suficiente"
+    },
+    {
+      "path": "/solucoes/backup",
+      "url": "https://otecnicodeinformatica.com.br/solucoes/backup",
+      "cohort": "A",
+      "cohortNome": "ATP técnico (4A + 4B)",
+      "rodada": "4B",
+      "intent": "D — backup",
+      "ultimaMudancaMaterial": "2026-08-25",
+      "hashConteudo": "cb56c06f2ecd",
+      "sitemap": "sitemap-solucoes.xml",
+      "indexnow": {
+        "enviadaEm": "2026-08-25T01:42:17.543Z",
+        "aceita": true
+      },
+      "google": {
+        "estado": "UNKNOWN",
+        "verdict": "NEUTRAL",
+        "coverageState": "URL is unknown to Google",
+        "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+        "indexingState": "INDEXING_STATE_UNSPECIFIED",
+        "lastCrawlTime": "NO_DATA",
+        "canonicalDeclarado": "NO_DATA",
+        "canonicalGoogle": "NO_DATA"
+      },
+      "postChangeCrawl": "UNKNOWN",
+      "descoberta": {
+        "estado": "HEALTHY",
+        "inbound": 6,
+        "depth": 2
+      },
+      "performance": {
+        "d7": {
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": 0,
+          "position": null
+        },
+        "d28": {
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": 0,
+          "position": null
+        },
+        "amostraCtr": "INSUFFICIENT_SAMPLE"
+      },
+      "queries": "NO_DATA",
+      "decisao": "OBSERVE",
+      "justificativa": "sem evidência pós-crawl suficiente"
+    },
+    {
+      "path": "/solucoes/formatacao",
+      "url": "https://otecnicodeinformatica.com.br/solucoes/formatacao",
+      "cohort": "A",
+      "cohortNome": "ATP técnico (4A + 4B)",
+      "rodada": "4B",
+      "intent": "E — Windows 10 × Windows 11 / formatar",
+      "ultimaMudancaMaterial": "2026-08-25",
+      "hashConteudo": "be2df5598add",
+      "sitemap": "sitemap-solucoes.xml",
+      "indexnow": {
+        "enviadaEm": "2026-08-25T01:42:17.543Z",
+        "aceita": true
+      },
+      "google": {
+        "estado": "DISCOVERED_AWAITING_CRAWL",
+        "verdict": "NEUTRAL",
+        "coverageState": "Discovered - currently not indexed",
+        "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+        "indexingState": "INDEXING_STATE_UNSPECIFIED",
+        "lastCrawlTime": "NO_DATA",
+        "canonicalDeclarado": "NO_DATA",
+        "canonicalGoogle": "NO_DATA"
+      },
+      "postChangeCrawl": "UNKNOWN",
+      "descoberta": {
+        "estado": "HEALTHY",
+        "inbound": 3,
+        "depth": 3
+      },
+      "performance": {
+        "d7": {
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": 0,
+          "position": null
+        },
+        "d28": {
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": 0,
+          "position": null
+        },
+        "amostraCtr": "INSUFFICIENT_SAMPLE"
+      },
+      "queries": "NO_DATA",
+      "decisao": "OBSERVE",
+      "justificativa": "sem evidência pós-crawl suficiente"
+    },
+    {
+      "path": "/tecnico-informatica-curitiba",
+      "url": "https://otecnicodeinformatica.com.br/tecnico-informatica-curitiba",
+      "cohort": "B",
+      "cohortNome": "Comercial local (4C)",
+      "rodada": "4C",
+      "intent": "contratação de técnico — Curitiba",
+      "ultimaMudancaMaterial": "2026-08-25",
+      "hashConteudo": "f22cf3ddc25f",
+      "sitemap": "sitemap-regioes.xml",
+      "indexnow": "NO_DATA",
+      "google": {
+        "estado": "INDEXED",
+        "verdict": "PASS",
+        "coverageState": "Submitted and indexed",
+        "robotsTxtState": "ALLOWED",
+        "indexingState": "INDEXING_ALLOWED",
+        "lastCrawlTime": "2026-08-12T03:37:49Z",
+        "canonicalDeclarado": "https://otecnicodeinformatica.com.br/tecnico-informatica-curitiba",
+        "canonicalGoogle": "https://otecnicodeinformatica.com.br/tecnico-informatica-curitiba"
+      },
+      "postChangeCrawl": "NO",
+      "descoberta": {
+        "estado": "HEALTHY",
+        "inbound": 157,
+        "depth": 2
+      },
+      "performance": {
+        "d7": {
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": 0,
+          "position": null
+        },
+        "d28": {
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": 0,
+          "position": null
+        },
+        "amostraCtr": "INSUFFICIENT_SAMPLE"
+      },
+      "queries": "NO_DATA",
+      "decisao": "OBSERVE",
+      "justificativa": "sem evidência pós-crawl suficiente"
+    },
+    {
+      "path": "/assistencia-tecnica-curitiba",
+      "url": "https://otecnicodeinformatica.com.br/assistencia-tecnica-curitiba",
+      "cohort": "B",
+      "cohortNome": "Comercial local (4C)",
+      "rodada": "4C",
+      "intent": "bancada / ordem de serviço",
+      "ultimaMudancaMaterial": "2026-08-21",
+      "hashConteudo": "UNKNOWN",
+      "sitemap": "AUSENTE",
+      "indexnow": "NO_DATA",
+      "google": {
+        "estado": "UNKNOWN",
+        "verdict": "NEUTRAL",
+        "coverageState": "URL is unknown to Google",
+        "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+        "indexingState": "INDEXING_STATE_UNSPECIFIED",
+        "lastCrawlTime": "NO_DATA",
+        "canonicalDeclarado": "NO_DATA",
+        "canonicalGoogle": "NO_DATA"
+      },
+      "postChangeCrawl": "UNKNOWN",
+      "descoberta": {
+        "estado": "HEALTHY",
+        "inbound": 4,
+        "depth": 1
+      },
+      "performance": {
+        "d7": {
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": 0,
+          "position": null
+        },
+        "d28": {
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": 0,
+          "position": null
+        },
+        "amostraCtr": "INSUFFICIENT_SAMPLE"
+      },
+      "queries": "NO_DATA",
+      "decisao": "OBSERVE",
+      "justificativa": "sem evidência pós-crawl suficiente"
+    },
+    {
+      "path": "/atendimento-domicilio",
+      "url": "https://otecnicodeinformatica.com.br/atendimento-domicilio",
+      "cohort": "B",
+      "cohortNome": "Comercial local (4C)",
+      "rodada": "4C",
+      "intent": "visita no endereço",
+      "ultimaMudancaMaterial": "2026-08-25",
+      "hashConteudo": "83a04d41edd9",
+      "sitemap": "sitemap-main.xml",
+      "indexnow": "NO_DATA",
+      "google": {
+        "estado": "INDEXED",
+        "verdict": "PASS",
+        "coverageState": "Submitted and indexed",
+        "robotsTxtState": "ALLOWED",
+        "indexingState": "INDEXING_ALLOWED",
+        "lastCrawlTime": "2026-08-12T08:25:41Z",
+        "canonicalDeclarado": "https://otecnicodeinformatica.com.br/atendimento-domicilio",
+        "canonicalGoogle": "https://otecnicodeinformatica.com.br/atendimento-domicilio"
+      },
+      "postChangeCrawl": "NO",
+      "descoberta": {
+        "estado": "HEALTHY",
+        "inbound": 157,
+        "depth": 2
+      },
+      "performance": {
+        "d7": {
+          "impressions": 1,
+          "clicks": 0,
+          "ctr": 0,
+          "position": 8
+        },
+        "d28": {
+          "impressions": 2,
+          "clicks": 0,
+          "ctr": 0,
+          "position": 7
+        },
+        "amostraCtr": "INSUFFICIENT_SAMPLE"
+      },
+      "queries": "NO_DATA",
+      "decisao": "OBSERVE",
+      "justificativa": "sem evidência pós-crawl suficiente"
+    },
+    {
+      "path": "/atendimento-remoto",
+      "url": "https://otecnicodeinformatica.com.br/atendimento-remoto",
+      "cohort": "B",
+      "cohortNome": "Comercial local (4C)",
+      "rodada": "4C",
+      "intent": "sessão remota",
+      "ultimaMudancaMaterial": "2026-08-25",
+      "hashConteudo": "b1c2e73e4e7a",
+      "sitemap": "sitemap-main.xml",
+      "indexnow": "NO_DATA",
+      "google": {
+        "estado": "INDEXED",
+        "verdict": "PASS",
+        "coverageState": "Submitted and indexed",
+        "robotsTxtState": "ALLOWED",
+        "indexingState": "INDEXING_ALLOWED",
+        "lastCrawlTime": "2026-08-14T12:09:18Z",
+        "canonicalDeclarado": "https://otecnicodeinformatica.com.br/atendimento-remoto",
+        "canonicalGoogle": "https://otecnicodeinformatica.com.br/atendimento-remoto"
+      },
+      "postChangeCrawl": "NO",
+      "descoberta": {
+        "estado": "HEALTHY",
+        "inbound": 157,
+        "depth": 2
+      },
+      "performance": {
+        "d7": {
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": 0,
+          "position": null
+        },
+        "d28": {
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": 0,
+          "position": null
+        },
+        "amostraCtr": "INSUFFICIENT_SAMPLE"
+      },
+      "queries": "NO_DATA",
+      "decisao": "OBSERVE",
+      "justificativa": "sem evidência pós-crawl suficiente"
+    },
+    {
+      "path": "/areas-atendidas",
+      "url": "https://otecnicodeinformatica.com.br/areas-atendidas",
+      "cohort": "B",
+      "cohortNome": "Comercial local (4C)",
+      "rodada": "4C",
+      "intent": "cobertura e deslocamento",
+      "ultimaMudancaMaterial": "2026-08-25",
+      "hashConteudo": "19f53fae3005",
+      "sitemap": "sitemap-main.xml",
+      "indexnow": "NO_DATA",
+      "google": {
+        "estado": "UNKNOWN",
+        "verdict": "NEUTRAL",
+        "coverageState": "URL is unknown to Google",
+        "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+        "indexingState": "INDEXING_STATE_UNSPECIFIED",
+        "lastCrawlTime": "NO_DATA",
+        "canonicalDeclarado": "NO_DATA",
+        "canonicalGoogle": "NO_DATA"
+      },
+      "postChangeCrawl": "UNKNOWN",
+      "descoberta": {
+        "estado": "HEALTHY",
+        "inbound": 157,
+        "depth": 2
+      },
+      "performance": {
+        "d7": {
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": 0,
+          "position": null
+        },
+        "d28": {
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": 0,
+          "position": null
+        },
+        "amostraCtr": "INSUFFICIENT_SAMPLE"
+      },
+      "queries": "NO_DATA",
+      "decisao": "OBSERVE",
+      "justificativa": "sem evidência pós-crawl suficiente"
+    },
+    {
+      "path": "/tecnico-informatica-sao-jose-pinhais",
+      "url": "https://otecnicodeinformatica.com.br/tecnico-informatica-sao-jose-pinhais",
+      "cohort": "B",
+      "cohortNome": "Comercial local (4C)",
+      "rodada": "4C",
+      "intent": "contratação — São José dos Pinhais",
+      "ultimaMudancaMaterial": "2026-08-25",
+      "hashConteudo": "a1480e826056",
+      "sitemap": "sitemap-regioes.xml",
+      "indexnow": "NO_DATA",
+      "google": {
+        "estado": "INDEXED",
+        "verdict": "PASS",
+        "coverageState": "Submitted and indexed",
+        "robotsTxtState": "ALLOWED",
+        "indexingState": "INDEXING_ALLOWED",
+        "lastCrawlTime": "2026-08-16T10:34:53Z",
+        "canonicalDeclarado": "https://otecnicodeinformatica.com.br/tecnico-informatica-sao-jose-pinhais",
+        "canonicalGoogle": "https://otecnicodeinformatica.com.br/tecnico-informatica-sao-jose-pinhais"
+      },
+      "postChangeCrawl": "NO",
+      "descoberta": {
+        "estado": "HEALTHY",
+        "inbound": 157,
+        "depth": 2
+      },
+      "performance": {
+        "d7": {
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": 0,
+          "position": null
+        },
+        "d28": {
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": 0,
+          "position": null
+        },
+        "amostraCtr": "INSUFFICIENT_SAMPLE"
+      },
+      "queries": "NO_DATA",
+      "decisao": "OBSERVE",
+      "justificativa": "sem evidência pós-crawl suficiente"
+    },
+    {
+      "path": "/empresa-de-ti-curitiba",
+      "url": "https://otecnicodeinformatica.com.br/empresa-de-ti-curitiba",
+      "cohort": "C",
+      "cohortNome": "B2B (4D)",
+      "rodada": "4D",
+      "intent": "empresa de TI",
+      "ultimaMudancaMaterial": "2026-08-25",
+      "hashConteudo": "aff1b35115fc",
+      "sitemap": "sitemap-main.xml",
+      "indexnow": "NO_DATA",
+      "google": {
+        "estado": "UNKNOWN",
+        "verdict": "NEUTRAL",
+        "coverageState": "URL is unknown to Google",
+        "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+        "indexingState": "INDEXING_STATE_UNSPECIFIED",
+        "lastCrawlTime": "NO_DATA",
+        "canonicalDeclarado": "NO_DATA",
+        "canonicalGoogle": "NO_DATA"
+      },
+      "postChangeCrawl": "UNKNOWN",
+      "descoberta": {
+        "estado": "HEALTHY",
+        "inbound": 22,
+        "depth": 2
+      },
+      "performance": {
+        "d7": {
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": 0,
+          "position": null
+        },
+        "d28": {
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": 0,
+          "position": null
+        },
+        "amostraCtr": "INSUFFICIENT_SAMPLE"
+      },
+      "queries": "NO_DATA",
+      "decisao": "OBSERVE",
+      "justificativa": "sem evidência pós-crawl suficiente"
+    },
+    {
+      "path": "/empresas",
+      "url": "https://otecnicodeinformatica.com.br/empresas",
+      "cohort": "C",
+      "cohortNome": "B2B (4D)",
+      "rodada": "4D",
+      "intent": "hub empresarial",
+      "ultimaMudancaMaterial": "2026-08-22",
+      "hashConteudo": "UNKNOWN",
+      "sitemap": "AUSENTE",
+      "indexnow": "NO_DATA",
+      "google": {
+        "estado": "UNKNOWN",
+        "verdict": "NEUTRAL",
+        "coverageState": "URL is unknown to Google",
+        "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+        "indexingState": "INDEXING_STATE_UNSPECIFIED",
+        "lastCrawlTime": "NO_DATA",
+        "canonicalDeclarado": "NO_DATA",
+        "canonicalGoogle": "NO_DATA"
+      },
+      "postChangeCrawl": "UNKNOWN",
+      "descoberta": {
+        "estado": "HEALTHY",
+        "inbound": 5,
+        "depth": 2
+      },
+      "performance": {
+        "d7": {
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": 0,
+          "position": null
+        },
+        "d28": {
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": 0,
+          "position": null
+        },
+        "amostraCtr": "INSUFFICIENT_SAMPLE"
+      },
+      "queries": "NO_DATA",
+      "decisao": "OBSERVE",
+      "justificativa": "sem evidência pós-crawl suficiente"
+    },
+    {
+      "path": "/servicos/suporte-tecnico-empresarial",
+      "url": "https://otecnicodeinformatica.com.br/servicos/suporte-tecnico-empresarial",
+      "cohort": "C",
+      "cohortNome": "B2B (4D)",
+      "rodada": "4D",
+      "intent": "suporte PJ",
+      "ultimaMudancaMaterial": "2026-08-25",
+      "hashConteudo": "7c7b01804101",
+      "sitemap": "sitemap-servicos.xml",
+      "indexnow": "NO_DATA",
+      "google": {
+        "estado": "INDEXED",
+        "verdict": "PASS",
+        "coverageState": "Submitted and indexed",
+        "robotsTxtState": "ALLOWED",
+        "indexingState": "INDEXING_ALLOWED",
+        "lastCrawlTime": "2026-08-17T04:04:09Z",
+        "canonicalDeclarado": "https://otecnicodeinformatica.com.br/servicos/suporte-tecnico-empresarial",
+        "canonicalGoogle": "https://otecnicodeinformatica.com.br/servicos/suporte-tecnico-empresarial"
+      },
+      "postChangeCrawl": "NO",
+      "descoberta": {
+        "estado": "HEALTHY",
+        "inbound": 158,
+        "depth": 1
+      },
+      "performance": {
+        "d7": {
+          "impressions": 10,
+          "clicks": 0,
+          "ctr": 0,
+          "position": 77.8
+        },
+        "d28": {
+          "impressions": 10,
+          "clicks": 0,
+          "ctr": 0,
+          "position": 77.8
+        },
+        "amostraCtr": "INSUFFICIENT_SAMPLE"
+      },
+      "queries": [
+        {
+          "query": "help desk terceirizado curitiba",
+          "impressions": 2,
+          "clicks": 0,
+          "position": 70
+        },
+        {
+          "query": "suporte ti empresarial curitiba",
+          "impressions": 2,
+          "clicks": 0,
+          "position": 84.5
+        },
+        {
+          "query": "suporte técnico empresarial curitiba",
+          "impressions": 2,
+          "clicks": 0,
+          "position": 69.5
+        },
+        {
+          "query": "suporte técnico para empresas curitiba",
+          "impressions": 2,
+          "clicks": 0,
+          "position": 74
+        },
+        {
+          "query": "assistência técnica de ti",
+          "impressions": 1,
+          "clicks": 0,
+          "position": 85
+        },
+        {
+          "query": "suporte técnico para empresa",
+          "impressions": 1,
+          "clicks": 0,
+          "position": 97
+        }
+      ],
+      "decisao": "OBSERVE",
+      "justificativa": "sem evidência pós-crawl suficiente"
+    },
+    {
+      "path": "/servicos/manutencao-preventiva-empresas",
+      "url": "https://otecnicodeinformatica.com.br/servicos/manutencao-preventiva-empresas",
+      "cohort": "C",
+      "cohortNome": "B2B (4D)",
+      "rodada": "4D",
+      "intent": "preventiva PJ",
+      "ultimaMudancaMaterial": "2026-08-25",
+      "hashConteudo": "5b4c4b75f2ea",
+      "sitemap": "sitemap-servicos.xml",
+      "indexnow": "NO_DATA",
+      "google": {
+        "estado": "UNKNOWN",
+        "verdict": "NEUTRAL",
+        "coverageState": "URL is unknown to Google",
+        "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+        "indexingState": "INDEXING_STATE_UNSPECIFIED",
+        "lastCrawlTime": "NO_DATA",
+        "canonicalDeclarado": "NO_DATA",
+        "canonicalGoogle": "NO_DATA"
+      },
+      "postChangeCrawl": "UNKNOWN",
+      "descoberta": {
+        "estado": "HEALTHY",
+        "inbound": 8,
+        "depth": 2
+      },
+      "performance": {
+        "d7": {
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": 0,
+          "position": null
+        },
+        "d28": {
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": 0,
+          "position": null
+        },
+        "amostraCtr": "INSUFFICIENT_SAMPLE"
+      },
+      "queries": "NO_DATA",
+      "decisao": "OBSERVE",
+      "justificativa": "sem evidência pós-crawl suficiente"
+    },
+    {
+      "path": "/servicos/backup-para-empresas",
+      "url": "https://otecnicodeinformatica.com.br/servicos/backup-para-empresas",
+      "cohort": "C",
+      "cohortNome": "B2B (4D)",
+      "rodada": "4D",
+      "intent": "backup PJ",
+      "ultimaMudancaMaterial": "2026-08-25",
+      "hashConteudo": "2f5a9be93ed7",
+      "sitemap": "sitemap-servicos.xml",
+      "indexnow": "NO_DATA",
+      "google": {
+        "estado": "INDEXED",
+        "verdict": "PASS",
+        "coverageState": "Submitted and indexed",
+        "robotsTxtState": "ALLOWED",
+        "indexingState": "INDEXING_ALLOWED",
+        "lastCrawlTime": "2026-08-14T23:53:17Z",
+        "canonicalDeclarado": "https://otecnicodeinformatica.com.br/servicos/backup-para-empresas",
+        "canonicalGoogle": "https://otecnicodeinformatica.com.br/servicos/backup-para-empresas"
+      },
+      "postChangeCrawl": "NO",
+      "descoberta": {
+        "estado": "HEALTHY",
+        "inbound": 15,
+        "depth": 2
+      },
+      "performance": {
+        "d7": {
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": 0,
+          "position": null
+        },
+        "d28": {
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": 0,
+          "position": null
+        },
+        "amostraCtr": "INSUFFICIENT_SAMPLE"
+      },
+      "queries": "NO_DATA",
+      "decisao": "OBSERVE",
+      "justificativa": "sem evidência pós-crawl suficiente"
+    },
+    {
+      "path": "/servicos/suporte-home-office",
+      "url": "https://otecnicodeinformatica.com.br/servicos/suporte-home-office",
+      "cohort": "C",
+      "cohortNome": "B2B (4D)",
+      "rodada": "4D",
+      "intent": "home office",
+      "ultimaMudancaMaterial": "2026-08-25",
+      "hashConteudo": "c586b85ecf0b",
+      "sitemap": "sitemap-servicos.xml",
+      "indexnow": "NO_DATA",
+      "google": {
+        "estado": "DISCOVERED_AWAITING_CRAWL",
+        "verdict": "NEUTRAL",
+        "coverageState": "Discovered - currently not indexed",
+        "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+        "indexingState": "INDEXING_STATE_UNSPECIFIED",
+        "lastCrawlTime": "NO_DATA",
+        "canonicalDeclarado": "NO_DATA",
+        "canonicalGoogle": "NO_DATA"
+      },
+      "postChangeCrawl": "UNKNOWN",
+      "descoberta": {
+        "estado": "HEALTHY",
+        "inbound": 8,
+        "depth": 2
+      },
+      "performance": {
+        "d7": {
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": 0,
+          "position": null
+        },
+        "d28": {
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": 0,
+          "position": null
+        },
+        "amostraCtr": "INSUFFICIENT_SAMPLE"
+      },
+      "queries": "NO_DATA",
+      "decisao": "OBSERVE",
+      "justificativa": "sem evidência pós-crawl suficiente"
+    },
+    {
+      "path": "/problemas/wifi-instavel",
+      "url": "https://otecnicodeinformatica.com.br/problemas/wifi-instavel",
+      "cohort": "D",
+      "cohortNome": "Redes e remoto (4E)",
+      "rodada": "4E",
+      "intent": "wi-fi cai / lento",
+      "ultimaMudancaMaterial": "2026-08-25",
+      "hashConteudo": "d68703c486f3",
+      "sitemap": "sitemap-problemas.xml",
+      "indexnow": "NO_DATA",
+      "google": {
+        "estado": "UNKNOWN",
+        "verdict": "NEUTRAL",
+        "coverageState": "URL is unknown to Google",
+        "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+        "indexingState": "INDEXING_STATE_UNSPECIFIED",
+        "lastCrawlTime": "NO_DATA",
+        "canonicalDeclarado": "NO_DATA",
+        "canonicalGoogle": "NO_DATA"
+      },
+      "postChangeCrawl": "UNKNOWN",
+      "descoberta": {
+        "estado": "HEALTHY",
+        "inbound": 14,
+        "depth": 1
+      },
+      "performance": {
+        "d7": {
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": 0,
+          "position": null
+        },
+        "d28": {
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": 0,
+          "position": null
+        },
+        "amostraCtr": "INSUFFICIENT_SAMPLE"
+      },
+      "queries": "NO_DATA",
+      "decisao": "OBSERVE",
+      "justificativa": "sem evidência pós-crawl suficiente"
+    },
+    {
+      "path": "/solucoes/diagnostico",
+      "url": "https://otecnicodeinformatica.com.br/solucoes/diagnostico",
+      "cohort": "D",
+      "cohortNome": "Redes e remoto (4E)",
+      "rodada": "4E",
+      "intent": "diagnóstico de rede",
+      "ultimaMudancaMaterial": "2026-08-25",
+      "hashConteudo": "f43da6ad7eff",
+      "sitemap": "sitemap-solucoes.xml",
+      "indexnow": "NO_DATA",
+      "google": {
+        "estado": "UNKNOWN",
+        "verdict": "NEUTRAL",
+        "coverageState": "URL is unknown to Google",
+        "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+        "indexingState": "INDEXING_STATE_UNSPECIFIED",
+        "lastCrawlTime": "NO_DATA",
+        "canonicalDeclarado": "NO_DATA",
+        "canonicalGoogle": "NO_DATA"
+      },
+      "postChangeCrawl": "UNKNOWN",
+      "descoberta": {
+        "estado": "HEALTHY",
+        "inbound": 3,
+        "depth": 2
+      },
+      "performance": {
+        "d7": {
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": 0,
+          "position": null
+        },
+        "d28": {
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": 0,
+          "position": null
+        },
+        "amostraCtr": "INSUFFICIENT_SAMPLE"
+      },
+      "queries": "NO_DATA",
+      "decisao": "OBSERVE",
+      "justificativa": "sem evidência pós-crawl suficiente"
+    },
+    {
+      "path": "/equipamentos/roteador",
+      "url": "https://otecnicodeinformatica.com.br/equipamentos/roteador",
+      "cohort": "D",
+      "cohortNome": "Redes e remoto (4E)",
+      "rodada": "4E",
+      "intent": "roteador",
+      "ultimaMudancaMaterial": "2026-08-25",
+      "hashConteudo": "9b0d62abe423",
+      "sitemap": "sitemap-equipamentos.xml",
+      "indexnow": "NO_DATA",
+      "google": {
+        "estado": "UNKNOWN",
+        "verdict": "NEUTRAL",
+        "coverageState": "URL is unknown to Google",
+        "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+        "indexingState": "INDEXING_STATE_UNSPECIFIED",
+        "lastCrawlTime": "NO_DATA",
+        "canonicalDeclarado": "NO_DATA",
+        "canonicalGoogle": "NO_DATA"
+      },
+      "postChangeCrawl": "UNKNOWN",
+      "descoberta": {
+        "estado": "WEAK_DISCOVERY",
+        "inbound": 2,
+        "depth": 3
+      },
+      "performance": {
+        "d7": {
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": 0,
+          "position": null
+        },
+        "d28": {
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": 0,
+          "position": null
+        },
+        "amostraCtr": "INSUFFICIENT_SAMPLE"
+      },
+      "queries": "NO_DATA",
+      "decisao": "OBSERVE",
+      "justificativa": "sem evidência pós-crawl suficiente"
+    },
+    {
+      "path": "/servicos/redes-e-wifi",
+      "url": "https://otecnicodeinformatica.com.br/servicos/redes-e-wifi",
+      "cohort": "D",
+      "cohortNome": "Redes e remoto (4E)",
+      "rodada": "4E",
+      "intent": "serviço de redes",
+      "ultimaMudancaMaterial": "2026-08-25",
+      "hashConteudo": "29c2a00fd1f5",
+      "sitemap": "sitemap-servicos.xml",
+      "indexnow": "NO_DATA",
+      "google": {
+        "estado": "DISCOVERED_AWAITING_CRAWL",
+        "verdict": "NEUTRAL",
+        "coverageState": "Discovered - currently not indexed",
+        "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+        "indexingState": "INDEXING_STATE_UNSPECIFIED",
+        "lastCrawlTime": "NO_DATA",
+        "canonicalDeclarado": "NO_DATA",
+        "canonicalGoogle": "NO_DATA"
+      },
+      "postChangeCrawl": "UNKNOWN",
+      "descoberta": {
+        "estado": "HEALTHY",
+        "inbound": 158,
+        "depth": 1
+      },
+      "performance": {
+        "d7": {
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": 0,
+          "position": null
+        },
+        "d28": {
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": 0,
+          "position": null
+        },
+        "amostraCtr": "INSUFFICIENT_SAMPLE"
+      },
+      "queries": "NO_DATA",
+      "decisao": "OBSERVE",
+      "justificativa": "sem evidência pós-crawl suficiente"
+    },
+    {
+      "path": "/equipamentos/notebook",
+      "url": "https://otecnicodeinformatica.com.br/equipamentos/notebook",
+      "cohort": "E",
+      "cohortNome": "Autoridade consolidada (4F)",
+      "rodada": "4F",
+      "intent": "hub de notebook",
+      "ultimaMudancaMaterial": "2026-08-25",
+      "hashConteudo": "e1803cbdde0c",
+      "sitemap": "sitemap-equipamentos.xml",
+      "indexnow": "NO_DATA",
+      "google": {
+        "estado": "UNKNOWN",
+        "verdict": "NEUTRAL",
+        "coverageState": "URL is unknown to Google",
+        "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+        "indexingState": "INDEXING_STATE_UNSPECIFIED",
+        "lastCrawlTime": "NO_DATA",
+        "canonicalDeclarado": "NO_DATA",
+        "canonicalGoogle": "NO_DATA"
+      },
+      "postChangeCrawl": "UNKNOWN",
+      "descoberta": {
+        "estado": "WEAK_DISCOVERY",
+        "inbound": 3,
+        "depth": 4
+      },
+      "performance": {
+        "d7": {
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": 0,
+          "position": null
+        },
+        "d28": {
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": 0,
+          "position": null
+        },
+        "amostraCtr": "INSUFFICIENT_SAMPLE"
+      },
+      "queries": "NO_DATA",
+      "decisao": "OBSERVE",
+      "justificativa": "sem evidência pós-crawl suficiente"
+    },
+    {
+      "path": "/problemas/arquivos-apagados",
+      "url": "https://otecnicodeinformatica.com.br/problemas/arquivos-apagados",
+      "cohort": "E",
+      "cohortNome": "Autoridade consolidada (4F)",
+      "rodada": "4F",
+      "intent": "recuperação de arquivos",
+      "ultimaMudancaMaterial": "2026-08-25",
+      "hashConteudo": "33ded01c9cc4",
+      "sitemap": "sitemap-problemas.xml",
+      "indexnow": "NO_DATA",
+      "google": {
+        "estado": "UNKNOWN",
+        "verdict": "NEUTRAL",
+        "coverageState": "URL is unknown to Google",
+        "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+        "indexingState": "INDEXING_STATE_UNSPECIFIED",
+        "lastCrawlTime": "NO_DATA",
+        "canonicalDeclarado": "NO_DATA",
+        "canonicalGoogle": "NO_DATA"
+      },
+      "postChangeCrawl": "UNKNOWN",
+      "descoberta": {
+        "estado": "HEALTHY",
+        "inbound": 7,
+        "depth": 1
+      },
+      "performance": {
+        "d7": {
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": 0,
+          "position": null
+        },
+        "d28": {
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": 0,
+          "position": null
+        },
+        "amostraCtr": "INSUFFICIENT_SAMPLE"
+      },
+      "queries": "NO_DATA",
+      "decisao": "OBSERVE",
+      "justificativa": "sem evidência pós-crawl suficiente"
+    }
+  ],
+  "cohort9b": {
+    "id": "national_foundations_9b",
+    "urls": [
+      {
+        "path": "/blog/o-que-e-informatica",
+        "estado": "DISCOVERED_AWAITING_CRAWL",
+        "lastCrawlTime": "NO_DATA",
+        "impressoes28d": 0,
+        "cliques28d": 0
+      },
+      {
+        "path": "/blog/informatica-basica",
+        "estado": "DISCOVERED_AWAITING_CRAWL",
+        "lastCrawlTime": "NO_DATA",
+        "impressoes28d": 0,
+        "cliques28d": 0
+      },
+      {
+        "path": "/blog/como-aprender-informatica",
+        "estado": "DISCOVERED_AWAITING_CRAWL",
+        "lastCrawlTime": "NO_DATA",
+        "impressoes28d": 0,
+        "cliques28d": 0
+      }
+    ],
+    "gate9c": "BLOCKED"
+  },
+  "vereditos": {
+    "ownersObservados": 29,
+    "crawlsPosEnriquecimento": 0,
+    "indexed": 9,
+    "crawledNotIndexedReal": 0,
+    "canonicalConflicts": 0,
+    "blocked": 0,
+    "orphans": 0,
+    "acaoEditorialJustificada": 0,
+    "clique9b": "NÃO",
+    "gate9c": "BLOCKED",
+    "novosBairros": "NÃO",
+    "expandirConteudo": "NÃO"
+  }
+}
