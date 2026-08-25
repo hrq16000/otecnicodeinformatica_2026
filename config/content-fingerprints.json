@@ -1,0 +1,226 @@
+{
+  "geradoEm": "2026-08-25T00:33:51.526Z",
+  "dist": "./dist",
+  "rotas": {
+    "/anuncie": {
+      "hash": "d3c358cafa41",
+      "lastmod": "2026-08-08",
+      "origem": "bootstrap"
+    },
+    "/areas-atendidas": {
+      "hash": "0b00e9f7afe3",
+      "lastmod": "2026-08-08",
+      "origem": "bootstrap"
+    },
+    "/atendimento-domicilio": {
+      "hash": "b9c2793e37fc",
+      "lastmod": "2026-08-06",
+      "origem": "bootstrap"
+    },
+    "/atendimento-remoto": {
+      "hash": "0fac581a50b4",
+      "lastmod": "2026-08-06",
+      "origem": "bootstrap"
+    },
+    "/como-funciona": {
+      "hash": "5e9af499715a",
+      "lastmod": "2026-08-06",
+      "origem": "bootstrap"
+    },
+    "/equipamentos": {
+      "hash": "b28c344a027c",
+      "lastmod": "2026-08-12",
+      "origem": "bootstrap"
+    },
+    "/equipamentos-atendidos": {
+      "hash": "1dc1aead8a62",
+      "lastmod": "2026-08-06",
+      "origem": "bootstrap"
+    },
+    "/equipamentos/desktop": {
+      "hash": "cfe89988eeba",
+      "lastmod": "2026-08-12",
+      "origem": "bootstrap"
+    },
+    "/equipamentos/impressora": {
+      "hash": "072bc51c0e1c",
+      "lastmod": "2026-08-12",
+      "origem": "bootstrap"
+    },
+    "/equipamentos/notebook": {
+      "hash": "2e8f1841dff3",
+      "lastmod": "2026-08-12",
+      "origem": "bootstrap"
+    },
+    "/equipamentos/roteador": {
+      "hash": "2b37d3d476ce",
+      "lastmod": "2026-08-12",
+      "origem": "bootstrap"
+    },
+    "/guia-tecnico-informatica": {
+      "hash": "51b0985754de",
+      "lastmod": "2026-08-09",
+      "origem": "bootstrap"
+    },
+    "/precos-e-politicas": {
+      "hash": "c8e9a594e391",
+      "lastmod": "2026-08-06",
+      "origem": "bootstrap"
+    },
+    "/problemas": {
+      "hash": "acf048f6ff72",
+      "lastmod": "2026-08-12",
+      "origem": "bootstrap"
+    },
+    "/problemas/arquivos-apagados": {
+      "hash": "40118bde3d5a",
+      "lastmod": "2026-08-12",
+      "origem": "bootstrap"
+    },
+    "/problemas/cheiro-de-queimado": {
+      "hash": "1607ae659777",
+      "lastmod": "2026-08-13",
+      "origem": "bootstrap"
+    },
+    "/problemas/computador-desliga-sozinho": {
+      "hash": "6e0ebba64560",
+      "lastmod": "2026-08-12",
+      "origem": "bootstrap"
+    },
+    "/problemas/computador-esquentando": {
+      "hash": "94ffe3cfbb41",
+      "lastmod": "2026-08-25",
+      "origem": "bootstrap"
+    },
+    "/problemas/computador-lento": {
+      "hash": "17698e47c0b1",
+      "lastmod": "2026-08-09",
+      "origem": "bootstrap"
+    },
+    "/problemas/computador-nao-da-imagem": {
+      "hash": "276ae1366ab0",
+      "lastmod": "2026-08-13",
+      "origem": "bootstrap"
+    },
+    "/problemas/hd-fazendo-barulho": {
+      "hash": "f3519d349321",
+      "lastmod": "2026-08-25",
+      "origem": "bootstrap"
+    },
+    "/problemas/notebook-molhado": {
+      "hash": "d43d910b7d93",
+      "lastmod": "2026-08-12",
+      "origem": "bootstrap"
+    },
+    "/problemas/notebook-nao-carrega": {
+      "hash": "91d05f6dfe1d",
+      "lastmod": "2026-08-12",
+      "origem": "bootstrap"
+    },
+    "/problemas/notebook-nao-liga": {
+      "hash": "0b92051eb488",
+      "lastmod": "2026-08-09",
+      "origem": "bootstrap"
+    },
+    "/problemas/tela-azul": {
+      "hash": "1fc62aeeadb5",
+      "lastmod": "2026-08-12",
+      "origem": "bootstrap"
+    },
+    "/problemas/wifi-instavel": {
+      "hash": "5ba107e24a14",
+      "lastmod": "2026-08-12",
+      "origem": "bootstrap"
+    },
+    "/seguranca-dos-dados": {
+      "hash": "1b2bf2ca9e22",
+      "lastmod": "2026-08-06",
+      "origem": "bootstrap"
+    },
+    "/servicos/formatacao": {
+      "hash": "b40b2a9be749",
+      "lastmod": "2026-08-25",
+      "origem": "bootstrap"
+    },
+    "/servicos/manutencao-de-computador": {
+      "hash": "a531bcb0693b",
+      "lastmod": "2026-08-04",
+      "origem": "bootstrap"
+    },
+    "/servicos/manutencao-de-notebook": {
+      "hash": "240d5f5954ba",
+      "lastmod": "2026-08-04",
+      "origem": "bootstrap"
+    },
+    "/servicos/montagem-de-pc": {
+      "hash": "c1768c707feb",
+      "lastmod": "2026-08-06",
+      "origem": "bootstrap"
+    },
+    "/servicos/pc-gamer": {
+      "hash": "861b7cecc9b7",
+      "lastmod": "2026-08-11",
+      "origem": "bootstrap"
+    },
+    "/servicos/recuperacao-de-dados": {
+      "hash": "663fc23982f6",
+      "lastmod": "2026-08-06",
+      "origem": "bootstrap"
+    },
+    "/servicos/redes-e-wifi": {
+      "hash": "573a7bcee159",
+      "lastmod": "2026-08-06",
+      "origem": "bootstrap"
+    },
+    "/servicos/remocao-de-virus": {
+      "hash": "7520a6428bc0",
+      "lastmod": "2026-08-25",
+      "origem": "bootstrap"
+    },
+    "/servicos/suporte-home-office": {
+      "hash": "2a9b60d2c7e5",
+      "lastmod": "2026-08-06",
+      "origem": "bootstrap"
+    },
+    "/servicos/upgrade-ssd-ram": {
+      "hash": "c881cffebd56",
+      "lastmod": "2026-08-25",
+      "origem": "bootstrap"
+    },
+    "/sobre": {
+      "hash": "4258b12c8f9d",
+      "lastmod": "2026-08-06",
+      "origem": "bootstrap"
+    },
+    "/solucoes": {
+      "hash": "dd86e18814b8",
+      "lastmod": "2026-08-12",
+      "origem": "bootstrap"
+    },
+    "/solucoes/backup": {
+      "hash": "39def745040f",
+      "lastmod": "2026-08-12",
+      "origem": "bootstrap"
+    },
+    "/solucoes/diagnostico": {
+      "hash": "04f9fd3e9df9",
+      "lastmod": "2026-08-12",
+      "origem": "bootstrap"
+    },
+    "/solucoes/formatacao": {
+      "hash": "9652b1fa06a8",
+      "lastmod": "2026-08-12",
+      "origem": "bootstrap"
+    },
+    "/solucoes/recuperacao-de-dados": {
+      "hash": "1f8e2ed4b505",
+      "lastmod": "2026-08-12",
+      "origem": "bootstrap"
+    },
+    "/solucoes/ssd": {
+      "hash": "c02ec74d4295",
+      "lastmod": "2026-08-25",
+      "origem": "bootstrap"
+    }
+  }
+}
