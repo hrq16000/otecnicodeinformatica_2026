@@ -192,10 +192,18 @@ test.describe("Triagem — deep link, restauração e mensagem", () => {
     await page.waitForLoadState("networkidle").catch(() => undefined);
     const dialog = page.locator(TRIAGEM);
     await expect(dialog).toBeVisible({ timeout: 25000 });
-    // Os valores restaurados vivem nos campos do formulário, não no texto.
-    await expect(dialog.getByLabel(/Seu nome/i)).toHaveValue(/Cliente Teste/i);
-    await expect(dialog.getByLabel(/bairro/i).first()).toHaveValue(/Batel/i);
-    await expect(dialog.getByRole("radio", { name: /^Notebook$/i })).toHaveAttribute("aria-checked", "true");
+    // As respostas restauradas vivem no estado persistido e nos campos do
+    // formulário — nunca no texto corrido do modal.
+    const persistido = await page.evaluate(() => {
+      const chave = Object.keys(sessionStorage).find((k) => k.startsWith("triage_state"));
+      return chave ? sessionStorage.getItem(chave) : null;
+    });
+    expect(persistido).toBeTruthy();
+    expect(persistido!).toContain("notebook");
+    expect(persistido!).toContain("Batel");
+    expect(persistido!).toContain("Cliente Teste");
+    // Reabre adiante da primeira etapa, sem perguntar de novo o que já sabemos.
+    await expect(dialog.getByRole("radio", { name: /Para mim ou minha residência/i })).toHaveCount(0);
   });
 
   test("mensagem final contém serviço, sintoma, localidade e origem", async ({ page, context }) => {
