@@ -140,6 +140,7 @@ export const WhatsAppFunnel = () => {
   const [originLocation, setOriginLocation] = useState("cta");
   const [presetMessage, setPresetMessage] = useState<string | null>(null);
   const [invalidField, setInvalidField] = useState<string | null>(null);
+  const [invalidMessage, setInvalidMessage] = useState<string | null>(null);
   const [pulse, setPulse] = useState(false);
   const [fallback, setFallback] = useState<{ message: string; url: string } | null>(null);
   const [copied, setCopied] = useState(false);
@@ -226,6 +227,7 @@ export const WhatsAppFunnel = () => {
     advanceTimer.current = setTimeout(() => {
       setStep((s) => Math.min(s + 1, totalSteps - 1));
       setInvalidField(null);
+      setInvalidMessage(null);
       isTransitioning.current = false;
     }, delay);
 
@@ -233,7 +235,13 @@ export const WhatsAppFunnel = () => {
 
   const focusFirstIncomplete = useCallback((s: number, a: TriageAnswers) => {
     const v = validateStep(s, a);
-    if (v.ok || !v.firstIncomplete) return;
+    if (v.ok) {
+      setInvalidField(null);
+      setInvalidMessage(null);
+      return;
+    }
+    setInvalidMessage(v.reason ?? "Complete os campos obrigatórios para continuar.");
+    if (!v.firstIncomplete) return;
     setInvalidField(v.firstIncomplete);
     const el = fieldRefs.current.get(v.firstIncomplete);
     if (el) {
@@ -895,6 +903,7 @@ export const WhatsAppFunnel = () => {
                         field={f}
                         value={f.id.startsWith("biz-") ? answers.business[f.id] ?? "" : answers.fields[f.id] ?? ""}
                         invalid={invalidField === f.id}
+                        error={invalidField === f.id ? invalidMessage ?? undefined : undefined}
                         onChange={(v) => setField(f.id, v)}
                         onSelect={(v) => maybeAutoAdvance(computeNext(f.id, v))}
                       />
@@ -904,7 +913,7 @@ export const WhatsAppFunnel = () => {
                         {RECURRING_NOTICE}
                       </p>
                     )}
-                    <FunnelNav onBack={back} onNext={handleNext} canNext={canAdvance} />
+                    <FunnelNav onBack={back} onNext={handleNext} canNext={canAdvance} blockedMessage={invalidMessage} />
                   </div>
                 )}
 
@@ -918,11 +927,12 @@ export const WhatsAppFunnel = () => {
                         field={f}
                         value={answers.business[f.id] ?? ""}
                         invalid={invalidField === f.id}
+                        error={invalidField === f.id ? invalidMessage ?? undefined : undefined}
                         onChange={(v) => setField(f.id, v)}
                         onSelect={(v) => maybeAutoAdvance(computeNext(f.id, v))}
                       />
                     ))}
-                    <FunnelNav onBack={back} onNext={handleNext} canNext={canAdvance} />
+                    <FunnelNav onBack={back} onNext={handleNext} canNext={canAdvance} blockedMessage={invalidMessage} />
                   </div>
                 )}
 
@@ -936,6 +946,7 @@ export const WhatsAppFunnel = () => {
                         field={f}
                         value={f.id.startsWith("biz-") ? answers.business[f.id] ?? "" : answers.fields[f.id] ?? ""}
                         invalid={invalidField === f.id}
+                        error={invalidField === f.id ? invalidMessage ?? undefined : undefined}
                         onChange={(v) => setField(f.id, v)}
                       />
                     ))}
@@ -970,7 +981,7 @@ export const WhatsAppFunnel = () => {
                       <InfoBox title="Valor mínimo" value={rules.minPrice} />
                       <InfoBox title="Prazo estimado" value={rules.prazo} />
                     </div>
-                    <FunnelNav onBack={back} onNext={handleNext} canNext={canAdvance} />
+                    <FunnelNav onBack={back} onNext={handleNext} canNext={canAdvance} blockedMessage={invalidMessage} />
                   </div>
                 )}
 
@@ -999,7 +1010,7 @@ export const WhatsAppFunnel = () => {
                         );
                       })}
                     </div>
-                    <FunnelNav onBack={back} onNext={handleNext} canNext={canAdvance} />
+                    <FunnelNav onBack={back} onNext={handleNext} canNext={canAdvance} blockedMessage={invalidMessage} />
 
                   </div>
                 )}
@@ -1014,11 +1025,12 @@ export const WhatsAppFunnel = () => {
                         field={f}
                         value={f.id === "symptom" ? answers.symptom ?? "" : answers.fields[f.id] ?? ""}
                         invalid={invalidField === f.id}
+                        error={invalidField === f.id ? invalidMessage ?? undefined : undefined}
                         onChange={(v) => setField(f.id, v)}
                         onSelect={(v) => maybeAutoAdvance(computeNext(f.id, v))}
                       />
                     ))}
-                    <FunnelNav onBack={back} onNext={handleNext} canNext={canAdvance} />
+                    <FunnelNav onBack={back} onNext={handleNext} canNext={canAdvance} blockedMessage={invalidMessage} />
                   </div>
                 )}
 
@@ -1037,6 +1049,7 @@ export const WhatsAppFunnel = () => {
                         field={f}
                         value={f.id === "__event" ? answers.fields.__event ?? "" : answers.fields[f.id] ?? ""}
                         invalid={invalidField === f.id}
+                        error={invalidField === f.id ? invalidMessage ?? undefined : undefined}
                         onChange={(v) => setField(f.id, v)}
                         onSelect={(v) => maybeAutoAdvance(computeNext(f.id, v))}
                       />
@@ -1063,7 +1076,7 @@ export const WhatsAppFunnel = () => {
                         })}
                       </div>
                     </div>
-                    <FunnelNav onBack={back} onNext={handleNext} canNext={canAdvance} />
+                    <FunnelNav onBack={back} onNext={handleNext} canNext={canAdvance} blockedMessage={invalidMessage} />
                   </div>
                 )}
 
@@ -1132,6 +1145,7 @@ export const WhatsAppFunnel = () => {
                     <FunnelNav
                       onBack={back}
                       onNext={handleNext}
+                      blockedMessage={invalidMessage}
                       canNext={
                         canAdvance &&
                         (criteriosOk || !categoriaPorEquipamento(answers.equipment)) &&
@@ -1232,15 +1246,37 @@ export const WhatsAppFunnel = () => {
 
 // ---------- subcomponents ----------
 const FunnelNav = ({
-  onBack, onNext, canNext, nextLabel = "Continuar",
-}: { onBack: () => void; onNext: () => void; canNext: boolean; nextLabel?: string }) => (
-  <div className="flex gap-2 pt-1">
-    <Button variant="outline" size="sm" onClick={onBack} className="gap-1">
-      <ArrowLeft className="h-4 w-4" /> Voltar
-    </Button>
-    <Button onClick={onNext} disabled={!canNext} className="ml-auto gap-1">
-      {nextLabel} <ArrowRight className="h-4 w-4" />
-    </Button>
+  onBack, onNext, canNext, nextLabel = "Continuar", blockedMessage,
+}: {
+  onBack: () => void;
+  onNext: () => void;
+  canNext: boolean;
+  nextLabel?: string;
+  blockedMessage?: string | null;
+}) => (
+  // O botão nunca fica desabilitado: clicar com a etapa incompleta leva o
+  // usuário ao campo que falta e explica o motivo (em vez de travar sem pista).
+  <div className="space-y-2 pt-1">
+    <div aria-live="polite" className="min-h-0">
+      {!canNext && blockedMessage && (
+        <p className="rounded-lg border border-destructive/40 bg-destructive/10 px-3 py-2 text-xs font-medium text-destructive">
+          {blockedMessage}
+        </p>
+      )}
+    </div>
+    <div className="flex gap-2">
+      <Button variant="outline" size="sm" onClick={onBack} className="gap-1">
+        <ArrowLeft className="h-4 w-4" /> Voltar
+      </Button>
+      <Button
+        onClick={onNext}
+        aria-disabled={!canNext}
+        data-blocked={!canNext ? "1" : undefined}
+        className={`ml-auto gap-1 ${canNext ? "" : "opacity-60"}`}
+      >
+        {nextLabel} <ArrowRight className="h-4 w-4" />
+      </Button>
+    </div>
   </div>
 );
 
