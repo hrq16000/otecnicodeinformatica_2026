@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-08-25T01:15:29.665Z",
+  "geradoEm": "2026-08-25T01:40:59.515Z",
   "rodada": "todos",
   "googleDisponivel": true,
   "bing": "UNKNOWN",
@@ -243,5 +243,5 @@
       "fonteComparacao": "declarado (Google UNKNOWN)"
     }
   ],
-  "historicoTamanho": 1
+  "historicoTamanho": 2
 }

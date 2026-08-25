@@ -1,20 +1,26 @@
 {
-  "geradoEm": "2026-08-25T01:15:29.172Z",
+  "geradoEm": "2026-08-25T01:40:59.711Z",
   "rodada": "todos",
   "origem": "dist",
-  "baselinePromovida": true,
+  "baselinePromovida": false,
   "total": 11,
   "regressoes": 0,
   "rotas": [
     {
       "path": "/problemas/computador-esquentando",
       "cluster": "A — superaquecimento / desliga sozinho",
-      "estado": "NEW",
+      "estado": "UNCHANGED",
       "perdas": [],
       "ganhos": [],
-      "hashBaseline": null,
+      "hashBaseline": "0fbaa7402d6c",
       "hashAtual": "0fbaa7402d6c",
-      "jsonldBaseline": null,
+      "jsonldBaseline": [
+        "City",
+        "ContactPoint",
+        "OpeningHoursSpecification",
+        "Organization",
+        "WebSite"
+      ],
       "jsonldAtual": [
         "City",
         "ContactPoint",
@@ -22,19 +28,25 @@
         "Organization",
         "WebSite"
       ],
-      "palavrasBaseline": null,
+      "palavrasBaseline": 2622,
       "palavrasAtual": 2622,
-      "baselineDe": null
+      "baselineDe": "2026-08-25T01:15:29.080Z"
     },
     {
       "path": "/solucoes/ssd",
       "cluster": "B — SSD × HD",
-      "estado": "NEW",
+      "estado": "UNCHANGED",
       "perdas": [],
       "ganhos": [],
-      "hashBaseline": null,
+      "hashBaseline": "c02ec74d4295",
       "hashAtual": "c02ec74d4295",
-      "jsonldBaseline": null,
+      "jsonldBaseline": [
+        "City",
+        "ContactPoint",
+        "OpeningHoursSpecification",
+        "Organization",
+        "WebSite"
+      ],
       "jsonldAtual": [
         "City",
         "ContactPoint",
@@ -42,19 +54,41 @@
         "Organization",
         "WebSite"
       ],
-      "palavrasBaseline": null,
+      "palavrasBaseline": 2362,
       "palavrasAtual": 2362,
-      "baselineDe": null
+      "baselineDe": "2026-08-25T01:15:29.096Z"
     },
     {
       "path": "/servicos/upgrade-ssd-ram",
       "cluster": "C — RAM ou SSD",
-      "estado": "NEW",
+      "estado": "UNCHANGED",
       "perdas": [],
       "ganhos": [],
-      "hashBaseline": null,
+      "hashBaseline": "c881cffebd56",
       "hashAtual": "c881cffebd56",
-      "jsonldBaseline": null,
+      "jsonldBaseline": [
+        "Answer",
+        "BreadcrumbList",
+        "City",
+        "ComputerRepairService",
+        "ContactPoint",
+        "FAQPage",
+        "ImageObject",
+        "ListItem",
+        "LocalBusiness",
+        "Offer",
+        "OpeningHoursSpecification",
+        "Organization",
+        "PostalAddress",
+        "PriceSpecification",
+        "ProfessionalService",
+        "Question",
+        "Service",
+        "SpeakableSpecification",
+        "State",
+        "WebPage",
+        "WebSite"
+      ],
       "jsonldAtual": [
         "Answer",
         "BreadcrumbList",
@@ -78,19 +112,38 @@
         "WebPage",
         "WebSite"
       ],
-      "palavrasBaseline": null,
+      "palavrasBaseline": 3236,
       "palavrasAtual": 3236,
-      "baselineDe": null
+      "baselineDe": "2026-08-25T01:15:29.102Z"
     },
     {
       "path": "/problemas/hd-fazendo-barulho",
       "cluster": "D — recuperar dados / HD com barulho",
-      "estado": "NEW",
+      "estado": "UNCHANGED",
       "perdas": [],
       "ganhos": [],
-      "hashBaseline": null,
+      "hashBaseline": "f3519d349321",
       "hashAtual": "f3519d349321",
-      "jsonldBaseline": null,
+      "jsonldBaseline": [
+        "Answer",
+        "BreadcrumbList",
+        "City",
+        "ComputerRepairService",
+        "ContactPoint",
+        "FAQPage",
+        "ListItem",
+        "LocalBusiness",
+        "OpeningHoursSpecification",
+        "Organization",
+        "PostalAddress",
+        "ProfessionalService",
+        "Question",
+        "State",
+        "TechArticle",
+        "Thing",
+        "WebPage",
+        "WebSite"
+      ],
       "jsonldAtual": [
         "Answer",
         "BreadcrumbList",
@@ -111,19 +164,25 @@
         "WebPage",
         "WebSite"
       ],
-      "palavrasBaseline": null,
+      "palavrasBaseline": 2535,
       "palavrasAtual": 2535,
-      "baselineDe": null
+      "baselineDe": "2026-08-25T01:15:29.112Z"
     },
     {
       "path": "/servicos/formatacao",
       "cluster": "E — formatar PC / Windows",
-      "estado": "NEW",
+      "estado": "UNCHANGED",
       "perdas": [],
       "ganhos": [],
-      "hashBaseline": null,
+      "hashBaseline": "b40b2a9be749",
       "hashAtual": "b40b2a9be749",
-      "jsonldBaseline": null,
+      "jsonldBaseline": [
+        "City",
+        "ContactPoint",
+        "OpeningHoursSpecification",
+        "Organization",
+        "WebSite"
+      ],
       "jsonldAtual": [
         "City",
         "ContactPoint",
@@ -131,19 +190,41 @@
         "Organization",
         "WebSite"
       ],
-      "palavrasBaseline": null,
+      "palavrasBaseline": 3589,
       "palavrasAtual": 3589,
-      "baselineDe": null
+      "baselineDe": "2026-08-25T01:15:29.118Z"
     },
     {
       "path": "/servicos/remocao-de-virus",
       "cluster": "F — vírus / malware",
-      "estado": "NEW",
+      "estado": "UNCHANGED",
       "perdas": [],
       "ganhos": [],
-      "hashBaseline": null,
+      "hashBaseline": "7520a6428bc0",
       "hashAtual": "7520a6428bc0",
-      "jsonldBaseline": null,
+      "jsonldBaseline": [
+        "Answer",
+        "BreadcrumbList",
+        "City",
+        "ComputerRepairService",
+        "ContactPoint",
+        "FAQPage",
+        "ImageObject",
+        "ListItem",
+        "LocalBusiness",
+        "Offer",
+        "OpeningHoursSpecification",
+        "Organization",
+        "PostalAddress",
+        "PriceSpecification",
+        "ProfessionalService",
+        "Question",
+        "Service",
+        "SpeakableSpecification",
+        "State",
+        "WebPage",
+        "WebSite"
+      ],
       "jsonldAtual": [
         "Answer",
         "BreadcrumbList",
@@ -167,19 +248,25 @@
         "WebPage",
         "WebSite"
       ],
-      "palavrasBaseline": null,
+      "palavrasBaseline": 3549,
       "palavrasAtual": 3549,
-      "baselineDe": null
+      "baselineDe": "2026-08-25T01:15:29.130Z"
     },
     {
       "path": "/problemas/notebook-nao-liga",
       "cluster": "A — notebook/PC não liga",
-      "estado": "NEW",
+      "estado": "UNCHANGED",
       "perdas": [],
       "ganhos": [],
-      "hashBaseline": null,
+      "hashBaseline": "819911ee2d78",
       "hashAtual": "819911ee2d78",
-      "jsonldBaseline": null,
+      "jsonldBaseline": [
+        "City",
+        "ContactPoint",
+        "OpeningHoursSpecification",
+        "Organization",
+        "WebSite"
+      ],
       "jsonldAtual": [
         "City",
         "ContactPoint",
@@ -187,19 +274,25 @@
         "Organization",
         "WebSite"
       ],
-      "palavrasBaseline": null,
+      "palavrasBaseline": 3229,
       "palavrasAtual": 3229,
-      "baselineDe": null
+      "baselineDe": "2026-08-25T01:15:29.138Z"
     },
     {
       "path": "/problemas/computador-nao-da-imagem",
       "cluster": "B — liga mas não dá imagem",
-      "estado": "NEW",
+      "estado": "UNCHANGED",
       "perdas": [],
       "ganhos": [],
-      "hashBaseline": null,
+      "hashBaseline": "8431e670fa87",
       "hashAtual": "8431e670fa87",
-      "jsonldBaseline": null,
+      "jsonldBaseline": [
+        "City",
+        "ContactPoint",
+        "OpeningHoursSpecification",
+        "Organization",
+        "WebSite"
+      ],
       "jsonldAtual": [
         "City",
         "ContactPoint",
@@ -207,19 +300,25 @@
         "Organization",
         "WebSite"
       ],
-      "palavrasBaseline": null,
+      "palavrasBaseline": 2614,
       "palavrasAtual": 2614,
-      "baselineDe": null
+      "baselineDe": "2026-08-25T01:15:29.145Z"
     },
     {
       "path": "/problemas/computador-lento",
       "cluster": "C — lento / travando",
-      "estado": "NEW",
+      "estado": "UNCHANGED",
       "perdas": [],
       "ganhos": [],
-      "hashBaseline": null,
+      "hashBaseline": "ac51e0ca90bd",
       "hashAtual": "ac51e0ca90bd",
-      "jsonldBaseline": null,
+      "jsonldBaseline": [
+        "City",
+        "ContactPoint",
+        "OpeningHoursSpecification",
+        "Organization",
+        "WebSite"
+      ],
       "jsonldAtual": [
         "City",
         "ContactPoint",
@@ -227,19 +326,25 @@
         "Organization",
         "WebSite"
       ],
-      "palavrasBaseline": null,
+      "palavrasBaseline": 3517,
       "palavrasAtual": 3517,
-      "baselineDe": null
+      "baselineDe": "2026-08-25T01:15:29.154Z"
     },
     {
       "path": "/solucoes/backup",
       "cluster": "D — backup",
-      "estado": "NEW",
+      "estado": "UNCHANGED",
       "perdas": [],
       "ganhos": [],
-      "hashBaseline": null,
+      "hashBaseline": "ebd3e3d48fb7",
       "hashAtual": "ebd3e3d48fb7",
-      "jsonldBaseline": null,
+      "jsonldBaseline": [
+        "City",
+        "ContactPoint",
+        "OpeningHoursSpecification",
+        "Organization",
+        "WebSite"
+      ],
       "jsonldAtual": [
         "City",
         "ContactPoint",
@@ -247,19 +352,25 @@
         "Organization",
         "WebSite"
       ],
-      "palavrasBaseline": null,
+      "palavrasBaseline": 1960,
       "palavrasAtual": 1960,
-      "baselineDe": null
+      "baselineDe": "2026-08-25T01:15:29.165Z"
     },
     {
       "path": "/solucoes/formatacao",
       "cluster": "E — Windows 10 × Windows 11 / formatar",
-      "estado": "NEW",
+      "estado": "UNCHANGED",
       "perdas": [],
       "ganhos": [],
-      "hashBaseline": null,
+      "hashBaseline": "c271dc170e74",
       "hashAtual": "c271dc170e74",
-      "jsonldBaseline": null,
+      "jsonldBaseline": [
+        "City",
+        "ContactPoint",
+        "OpeningHoursSpecification",
+        "Organization",
+        "WebSite"
+      ],
       "jsonldAtual": [
         "City",
         "ContactPoint",
@@ -267,9 +378,9 @@
         "Organization",
         "WebSite"
       ],
-      "palavrasBaseline": null,
+      "palavrasBaseline": 1533,
       "palavrasAtual": 1533,
-      "baselineDe": null
+      "baselineDe": "2026-08-25T01:15:29.170Z"
     }
   ]
 }
