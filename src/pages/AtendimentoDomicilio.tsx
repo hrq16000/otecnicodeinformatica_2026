@@ -20,6 +20,7 @@ import { SCHEMA_SLOTS, SLOT_PRIORITY, useJsonLdSlot } from "@/lib/jsonLdSlots";
 import { Button } from "@/components/ui/button";
 import { MessageCircle, MapPin, Clock, Shield, Home, User, Briefcase, CheckCircle, Truck, AlertTriangle, ArrowRight, Camera } from "lucide-react";
 import { WHATSAPP_NUMBER as WA_NUMBER } from "@/lib/siteConfig";
+import { BlocosLocal4c } from "@/components/local/BlocosLocal4c";
 
 const WHATSAPP_NUMBER = WA_NUMBER;
 const WHATSAPP_MESSAGE = "Preciso verificar a possibilidade de atendimento técnico em domicílio.";
@@ -587,6 +588,7 @@ const AtendimentoDomicilio = () => {
         <TrustSection />
         <CTASection />
         <PilarEditorialLinks pilar="/atendimento-domicilio" />
+        <BlocosLocal4c path="/atendimento-domicilio" />
       </main>
       <RealImageSection imageKey="atendimentoDomiciliar" secondaryImageKey="tecnicoTrabalhando" layout="duo" caption="Atendimento técnico diretamente na sua casa" secondaryCaption="Diagnóstico profissional a domicílio" />
       <BlocoInteligencia />

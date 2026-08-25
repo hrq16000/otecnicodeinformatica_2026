@@ -24,6 +24,7 @@ import { SCHEMA_SLOTS, SLOT_PRIORITY, useJsonLdSlot } from "@/lib/jsonLdSlots";
 import { LocalBusinessJsonLd } from "@/components/LocalBusinessJsonLd";
 import { siteConfig, whatsappLink, absoluteUrl } from "@/lib/siteConfig";
 import { trackPageView, trackCTAClick } from "@/lib/analytics";
+import { BlocosLocal4c } from "@/components/local/BlocosLocal4c";
 
 /**
  * Página dominante para a intenção "técnico de informática em Curitiba".
@@ -808,6 +809,7 @@ const TecnicoInformaticaCuritiba = () => {
           className="bg-secondary/40"
         />
         <PilarEditorialLinks pilar="/servicos/manutencao-de-computador" />
+        <BlocosLocal4c path="/tecnico-informatica-curitiba" />
       </main>
       <Footer />
     </div>

@@ -12,6 +12,7 @@ import { CIDADES_RMC_NOMES } from "@/lib/bairrosSelect";
 import { BAIRROS_DIRECTORY_POR_CIDADE, bairroHref } from "@/lib/bairrosDirectory";
 
 import { trackPageView, trackCTAClick } from "@/lib/analytics";
+import { BlocosLocal4c } from "@/components/local/BlocosLocal4c";
 
 const PATH = "/areas-atendidas";
 const TITLE = "Áreas Atendidas em Curitiba e Região | Bairros e Cidades";
@@ -419,6 +420,7 @@ const AreasAtendidas = () => {
             </nav>
           </div>
         </section>
+        <BlocosLocal4c path="/areas-atendidas" />
       </main>
       <Footer />
     </div>
