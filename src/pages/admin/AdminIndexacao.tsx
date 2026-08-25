@@ -306,6 +306,48 @@ const AdminIndexacao = () => {
             )}
           </Card>
 
+          {/*
+            ALERTAS CRÍTICOS — leitura direta do snapshot, sem inventar número.
+            Bloqueio por robots, conflito de canonical e rotas rastreadas sem
+            indexação são os três sinais que exigem ação humana imediata.
+          */}
+          {(() => {
+            const bloqueadas = dados.rotas.filter((r) =>
+              /BLOCKED/i.test(`${r.google.robotsTxtState ?? ""} ${r.google.coverageState ?? ""}`),
+            );
+            const conflitos = dados.rotas.filter(
+              (r) => r.google.canonicalGoogle && r.google.canonicalGoogle !== r.url,
+            );
+            const semIndexacao = dados.rotas.filter((r) =>
+              /NOT_INDEXED/i.test(r.google.status ?? ""),
+            );
+            const criticos = bloqueadas.length + conflitos.length;
+            return (
+              <Card className="mt-4 p-4 text-sm" data-testid="alertas-criticos">
+                <div className="font-medium">
+                  Alertas críticos{" "}
+                  <Badge tom={criticos ? "bg-destructive/15 text-destructive" : CORES.INDEXED}>
+                    {criticos} crítico(s)
+                  </Badge>
+                </div>
+                <ul className="mt-2 space-y-1 text-xs">
+                  <li data-testid="alerta-robots-blocked">
+                    Bloqueadas por robots: <strong>{bloqueadas.length}</strong>
+                    {bloqueadas.length > 0 && ` — ${bloqueadas.map((r) => r.path).join(", ")}`}
+                  </li>
+                  <li data-testid="alerta-canonical-conflito">
+                    Conflito de canonical: <strong>{conflitos.length}</strong>
+                    {conflitos.length > 0 && ` — ${conflitos.map((r) => r.path).join(", ")}`}
+                  </li>
+                  <li data-testid="alerta-nao-indexadas">
+                    Rastreadas e não indexadas: <strong>{semIndexacao.length}</strong>
+                    {semIndexacao.length > 0 && ` — ${semIndexacao.map((r) => r.path).join(", ")}`}
+                  </li>
+                </ul>
+              </Card>
+            );
+          })()}
+
 
           <div className="mt-4 flex flex-wrap gap-2">
             <Button
