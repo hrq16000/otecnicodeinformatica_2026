@@ -192,9 +192,10 @@ test.describe("Triagem — deep link, restauração e mensagem", () => {
     await page.waitForLoadState("networkidle").catch(() => undefined);
     const dialog = page.locator(TRIAGEM);
     await expect(dialog).toBeVisible({ timeout: 25000 });
-    const conteudo = (await dialog.textContent()) ?? "";
-    expect(conteudo).toMatch(/Notebook/i);
-    expect(conteudo).toMatch(/Batel/i);
+    // Os valores restaurados vivem nos campos do formulário, não no texto.
+    await expect(dialog.getByLabel(/Seu nome/i)).toHaveValue(/Cliente Teste/i);
+    await expect(dialog.getByLabel(/bairro/i).first()).toHaveValue(/Batel/i);
+    await expect(dialog.getByRole("radio", { name: /^Notebook$/i })).toHaveAttribute("aria-checked", "true");
   });
 
   test("mensagem final contém serviço, sintoma, localidade e origem", async ({ page, context }) => {
