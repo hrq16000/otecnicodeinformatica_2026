@@ -32,8 +32,26 @@ const HOJE = new Date().toISOString().slice(0, 10);
 const anterior = existsSync(STORE) ? JSON.parse(readFileSync(STORE, "utf8")) : { geradoEm: null, rotas: {} };
 const rotasAnteriores = anterior.rotas ?? {};
 
-/** Universo: rotas curadas do sitemap + rotas já registradas. */
-const universo = new Set([...Object.keys(LASTMOD), ...Object.keys(rotasAnteriores)]);
+/** Universo: URLs realmente publicadas nos sitemaps + declaradas + registradas. */
+function pathsDosSitemaps() {
+  const dir = resolve(process.cwd(), "public");
+  const out = [];
+  for (const f of readdirSync(dir).filter((x) => x.startsWith("sitemap") && x.endsWith(".xml"))) {
+    const xml = readFileSync(resolve(dir, f), "utf8");
+    for (const m of xml.matchAll(/<loc>([^<]+)<\/loc>/g)) {
+      const u = m[1].trim();
+      if (u.endsWith(".xml")) continue;
+      try {
+        out.push(new URL(u).pathname.replace(/(.)\/$/, "$1"));
+      } catch {
+        /* ignora loc inválido */
+      }
+    }
+  }
+  return out;
+}
+
+const universo = new Set([...pathsDosSitemaps(), ...Object.keys(LASTMOD), ...Object.keys(rotasAnteriores)]);
 
 const rotas = {};
 const mudou = [];
