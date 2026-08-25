@@ -1671,15 +1671,28 @@ docker run -d --name db --network minha-rede postgres
         <p>Um segundo padrão comum em home office é o acúmulo de agentes em segundo plano: antivírus duplicados, clientes de sincronização de nuvem, atualizadores de fabricantes e aplicativos de reunião que iniciam junto com o sistema. Cada um consome pouco; somados, competem por disco e memória exatamente nos primeiros minutos do expediente, quando você mais precisa da máquina pronta. Documentar o que está ativo antes de mexer evita desligar algo essencial para o trabalho.</p>
         <p>Se o computador é a ferramenta principal de renda, vale tratar a lentidão como manutenção preventiva e não como emergência: uma avaliação com o equipamento ainda funcionando permite planejar troca de disco, ampliação de memória ou reinstalação em um horário que não interrompa entregas.</p>
 
+        <h2>Guias detalhados deste cluster</h2>
+        <p>Esta página é o ponto de partida. Cada causa provável tem um guia próprio, com o passo a passo completo:</p>
+        <ul>
+          <li><Link to="/blog/limpar-arquivos-temporarios-windows" className="text-accent">Limpar arquivos temporários e liberar espaço no Windows</Link> — quando o disco do sistema está quase cheio.</li>
+          <li><Link to="/blog/memoria-ram-insuficiente-sintomas" className="text-accent">Memória RAM insuficiente: sintomas reais</Link> — como confirmar antes de comprar pente.</li>
+          <li><Link to="/blog/testar-memoria-ram-memtest86" className="text-accent">Testar a memória RAM com Memtest86+</Link> — quando a lentidão vem junto com travamentos.</li>
+        </ul>
+
+        <h2>Quando chamar um técnico</h2>
+        <p>Procure ajuda profissional se: o equipamento ainda está na garantia (abrir pode anular), você não tem experiência com hardware interno, há risco de perda de dados importantes ou a lentidão continua depois de liberar espaço e revisar os programas de inicialização.</p>
+
         <div className="bg-accent/10 rounded-xl p-6 my-8">
           <h3 className="text-accent font-bold mb-2">Quer descobrir a causa real da lentidão?</h3>
-          <p className="text-muted-foreground mb-3">Um diagnóstico técnico mostra se o caso pede limpeza, upgrade, formatação ou reparo — sem chute.</p>
+          <p className="text-muted-foreground mb-3">Um diagnóstico técnico mostra se o caso pede limpeza, upgrade, formatação ou reparo — sem chute. Orçamento pelo WhatsApp, sem compromisso.</p>
           <ul className="mb-0">
             <li><Link to="/servicos/manutencao-de-computador" className="text-accent">Manutenção de computador</Link></li>
             <li><Link to="/servicos/upgrade-ssd-ram" className="text-accent">Upgrade de SSD e memória</Link></li>
+            <li><Link to="/servicos/formatacao-de-computador" className="text-accent">Formatação e reinstalação do Windows</Link></li>
             <li><Link to="/diagnostico-tecnico" className="text-accent">Como funciona o diagnóstico técnico</Link></li>
           </ul>
         </div>
+
       </>
     ),
   },
