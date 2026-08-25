@@ -585,7 +585,7 @@ export const ARTICLE_SOURCE_MANIFEST: Record<string, ArticleSourceManifest> = {
     sources: [],
     technicalReview: "reviewed",
     factChecked: true,
-    factCheckedAt: "2026-08-26",
+    factCheckedAt: "2026-08-25",
     stableKnowledge: true,
     notes:
       "Revisão concluída (Onda 10C): papel do espaço livre no arquivo de paginação e na escrita em SSD, escopo real do Sensor de Armazenamento e da Limpeza de Disco, efeito de remover Windows.old e por que limpadores de registro e desfragmentação de SSD não são recomendados. Conhecimento técnico estável — sem fonte visível.",
@@ -595,7 +595,7 @@ export const ARTICLE_SOURCE_MANIFEST: Record<string, ArticleSourceManifest> = {
     sources: [],
     technicalReview: "reviewed",
     factChecked: true,
-    factCheckedAt: "2026-08-26",
+    factCheckedAt: "2026-08-25",
     stableKnowledge: true,
     notes:
       "Revisão concluída (Onda 10C): leitura correta dos campos Em uso, Confirmado e Em cache no Gerenciador de Tarefas, distinção entre falta de memória e gargalo de disco, critérios de compatibilidade (tipo, formato, slots, limite da placa, memória soldada) e ganho de dual channel. Conhecimento técnico estável — sem fonte visível.",
@@ -605,7 +605,7 @@ export const ARTICLE_SOURCE_MANIFEST: Record<string, ArticleSourceManifest> = {
     sources: [],
     technicalReview: "reviewed",
     factChecked: true,
-    factCheckedAt: "2026-08-26",
+    factCheckedAt: "2026-08-25",
     stableKnowledge: true,
     notes:
       "Revisão concluída (Onda 10C): significado das categorias MEMORY_MANAGEMENT, IRQL_NOT_LESS_OR_EQUAL, PAGE_FAULT_IN_NONPAGED_AREA, CRITICAL_PROCESS_DIED, DPC_WATCHDOG_VIOLATION, SYSTEM_SERVICE_EXCEPTION, INACCESSIBLE_BOOT_DEVICE e WHEA_UNCORRECTABLE_ERROR; localização dos registros em Visualizador de Eventos e minidumps. Sem promessa de resultado. Conhecimento técnico estável — sem fonte visível.",
@@ -615,7 +615,7 @@ export const ARTICLE_SOURCE_MANIFEST: Record<string, ArticleSourceManifest> = {
     sources: [],
     technicalReview: "reviewed",
     factChecked: true,
-    factCheckedAt: "2026-08-26",
+    factCheckedAt: "2026-08-25",
     stableKnowledge: true,
     notes:
       "Revisão concluída (Onda 10C): motivo de testar fora do sistema operacional, criação da mídia inicializável, número de passagens, critério de que um único erro já caracteriza defeito, isolamento entre módulo e slot e influência de perfis XMP/EXPO. Conhecimento técnico estável — sem fonte visível.",

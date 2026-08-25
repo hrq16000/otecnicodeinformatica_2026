@@ -12270,7 +12270,7 @@ bcdboot C:\\Windows /s S: /f UEFI`}</code></pre>
     title: "Como limpar arquivos temporários e liberar espaço no Windows",
     excerpt:
       "Onde o Windows guarda arquivos temporários, quanto isso realmente pesa no desempenho e como limpar com segurança — sem programas de faxina e sem apagar o que faz falta.",
-    date: "2026-08-26",
+    date: "2026-08-25",
     readTime: "11 min",
     category: "Procedimentos Técnicos",
     content: (
@@ -12328,7 +12328,7 @@ bcdboot C:\\Windows /s S: /f UEFI`}</code></pre>
     title: "Memória RAM insuficiente: sintomas, como confirmar e quando fazer upgrade",
     excerpt:
       "Como distinguir falta de memória de disco lento ou vírus, ler o Gerenciador de Tarefas sem se enganar e decidir se o upgrade de RAM resolve o seu caso.",
-    date: "2026-08-26",
+    date: "2026-08-25",
     readTime: "12 min",
     category: "Procedimentos Técnicos",
     content: (
@@ -12393,7 +12393,7 @@ bcdboot C:\\Windows /s S: /f UEFI`}</code></pre>
     title: "Códigos de erro da tela azul: como ler e o que cada um indica",
     excerpt:
       "O que significam MEMORY_MANAGEMENT, IRQL_NOT_LESS_OR_EQUAL, CRITICAL_PROCESS_DIED e outros códigos — e como usá-los para separar defeito de driver, memória ou disco.",
-    date: "2026-08-26",
+    date: "2026-08-25",
     readTime: "13 min",
     category: "Procedimentos Técnicos",
     content: (
@@ -12455,7 +12455,7 @@ bcdboot C:\\Windows /s S: /f UEFI`}</code></pre>
     title: "Como testar a memória RAM com Memtest86+ (passo a passo)",
     excerpt:
       "Quando testar a memória, como criar a mídia de inicialização, quantas passagens fazer e como interpretar erros para saber qual módulo trocar.",
-    date: "2026-08-26",
+    date: "2026-08-25",
     readTime: "11 min",
     category: "Procedimentos Técnicos",
     content: (

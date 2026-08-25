@@ -382,7 +382,7 @@ export const EDITORIAL_WAVE = [
   // ── Onda 10C — satélites de lentidão extrema e tela azul.
   {
     slug: "limpar-arquivos-temporarios-windows",
-    approvedAt: "2026-08-26",
+    approvedAt: "2026-08-25",
     pilar: "/blog/computador-lento-causas-solucoes",
     pilarLabel: "Computador lento: causas e soluções",
     apoio: "/blog/memoria-ram-insuficiente-sintomas",
@@ -391,7 +391,7 @@ export const EDITORIAL_WAVE = [
   },
   {
     slug: "memoria-ram-insuficiente-sintomas",
-    approvedAt: "2026-08-26",
+    approvedAt: "2026-08-25",
     pilar: "/servicos/upgrade-ssd-ram",
     pilarLabel: "Upgrade de SSD e memória",
     apoio: "/blog/testar-memoria-ram-memtest86",
@@ -400,7 +400,7 @@ export const EDITORIAL_WAVE = [
   },
   {
     slug: "codigos-de-erro-tela-azul-windows",
-    approvedAt: "2026-08-26",
+    approvedAt: "2026-08-25",
     pilar: "/blog/como-resolver-tela-azul-windows",
     pilarLabel: "Como resolver a tela azul do Windows",
     apoio: "/blog/testar-memoria-ram-memtest86",
@@ -409,7 +409,7 @@ export const EDITORIAL_WAVE = [
   },
   {
     slug: "testar-memoria-ram-memtest86",
-    approvedAt: "2026-08-26",
+    approvedAt: "2026-08-25",
     pilar: "/diagnostico-tecnico",
     pilarLabel: "Diagnóstico técnico",
     apoio: "/blog/codigos-de-erro-tela-azul-windows",
