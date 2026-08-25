@@ -22,6 +22,7 @@ export const TermosOs = ({ blocos, aceitos, onToggle }: Props) => (
     type="multiple"
     defaultValue={blocos.map((b) => b.id)}
     className="divide-y divide-border rounded-xl border border-border bg-card"
+    data-testid="os-termos"
   >
     {blocos.map((bloco) => (
       <AccordionItem key={bloco.id} value={bloco.id} className="border-0 px-4">
@@ -34,18 +35,24 @@ export const TermosOs = ({ blocos, aceitos, onToggle }: Props) => (
               <p key={p}>{p}</p>
             ))}
           </div>
-          <label
-            className="mt-4 flex cursor-pointer items-start gap-3 rounded-lg border border-border bg-background/60 p-3 transition-colors hover:bg-background"
-            htmlFor={`aceite-${bloco.id}`}
-          >
+          {/* Sem <label htmlFor>: o Checkbox é um button e o label duplicaria
+              o toggle, cancelando o próprio clique. */}
+          <div className="mt-4 flex items-start gap-3 rounded-lg border border-border bg-background/60 p-3 transition-colors hover:bg-background">
             <Checkbox
               id={`aceite-${bloco.id}`}
               checked={Boolean(aceitos[bloco.id])}
               onCheckedChange={(v) => onToggle(bloco.id, v === true)}
               className="mt-0.5"
+              aria-labelledby={`aceite-texto-${bloco.id}`}
             />
-            <span className="text-sm leading-snug text-foreground">{bloco.aceite}</span>
-          </label>
+            <span
+              id={`aceite-texto-${bloco.id}`}
+              className="cursor-pointer text-sm leading-snug text-foreground"
+              onClick={() => onToggle(bloco.id, !aceitos[bloco.id])}
+            >
+              {bloco.aceite}
+            </span>
+          </div>
         </AccordionContent>
       </AccordionItem>
     ))}

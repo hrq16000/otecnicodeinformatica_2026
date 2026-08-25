@@ -1,0 +1,2519 @@
+{
+  "gerado_em": "2026-08-25T06:09:05.096Z",
+  "modo": "online",
+  "identidade": {
+    "nome": "O Técnico de Informática",
+    "dominio": "https://otecnicodeinformatica.com.br",
+    "contato": "WhatsApp (número canônico via VITE_WHATSAPP_NUMBER — nunca em texto visível)",
+    "cidadesPresenciais": [
+      "Curitiba",
+      "São José dos Pinhais"
+    ],
+    "alcanceRemoto": "Suporte remoto para todo o Brasil; operação presencial apenas nas cidades acima.",
+    "descricao": "Assistência técnica de informática em Curitiba e São José dos Pinhais: diagnóstico, reparo, redes e suporte remoto para pessoas e empresas."
+  },
+  "backlinks_5b": {
+    "referringDomains": 108,
+    "backlinks": 187,
+    "authorityScore": 2,
+    "classificacao": "Perfil dominado por diretórios automáticos e agregadores — nenhum sinal editorial legítimo.",
+    "acao": "Não desautorizar em massa; buscar citações de entidade e menções editoriais reais."
+  },
+  "perfis": [
+    {
+      "plataforma": "Google Business Profile",
+      "estado": "MANUAL_REQUIRED",
+      "evidencia5b": "Sem acesso administrativo comprovado no repositório.",
+      "prioridade": "P1",
+      "acao": "Revisar site, categoria, área de serviço, serviços, descrição e fotos reais. Não criar endereço nem filial."
+    },
+    {
+      "plataforma": "Bing Places",
+      "estado": "SETUP_CANDIDATE",
+      "evidencia5b": "Nenhum perfil identificado na auditoria off-page.",
+      "prioridade": "P2",
+      "acao": "Avaliar criação alinhada à identidade canônica. Não declarar VERIFIED sem evidência."
+    }
+  ],
+  "same_as": {
+    "politica": "Somente perfis oficiais, públicos, controlados e estáveis. Diretórios não entram.",
+    "aprovados": [],
+    "avaliados": []
+  },
+  "mencoes_sem_link": [],
+  "parceiros": [],
+  "diretorios": [
+    {
+      "nome": "Agregadores automáticos já presentes no perfil",
+      "classificacao": "LOW_VALUE",
+      "acao": "Nenhuma. Não solicitar novos links dessa natureza."
+    }
+  ],
+  "baseline_busca_marca": [
+    "O Técnico de Informática",
+    "otecnicodeinformatica.com.br",
+    "O Técnico de Informática Curitiba",
+    "O Técnico de Informática São José dos Pinhais"
+  ],
+  "fontes_citadas": [
+    {
+      "source_url": "https://exemplo.com",
+      "target_url": null,
+      "publisher": "exemplo.com",
+      "type": "referencia_editorial",
+      "status": null,
+      "estado": "FALHA",
+      "redirecionado": false,
+      "final_url": null,
+      "origens": [
+        "src/__tests__/utm-link-builder.test.ts"
+      ],
+      "last_seen": "2026-08-25T06:09:05.096Z"
+    },
+    {
+      "source_url": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d115063.98825866027!2d-49.35951754843749!3d-25.494912899999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94dce35351c67f2f%3A0xf9e5a1e1d08a0c6a!2sCuritiba%2C%20PR!5e0!3m2!1spt-BR!2sbr!4v1705000000000!5m2!1spt-BR!2sbr",
+      "target_url": null,
+      "publisher": "google.com",
+      "type": "referencia_editorial",
+      "status": 404,
+      "estado": "QUEBRADO",
+      "redirecionado": false,
+      "final_url": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d115063.98825866027!2d-49.35951754843749!3d-25.494912899999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94dce35351c67f2f%3A0xf9e5a1e1d08a0c6a!2sCuritiba%2C%20PR!5e0!3m2!1spt-BR!2sbr!4v1705000000000!5m2!1spt-BR!2sbr",
+      "origens": [
+        "src/components/CoverageMapSection.tsx"
+      ],
+      "last_seen": "2026-08-25T06:09:05.096Z"
+    },
+    {
+      "source_url": "https://analytics.google.com/",
+      "target_url": null,
+      "publisher": "analytics.google.com",
+      "type": "referencia_editorial",
+      "status": 403,
+      "estado": "ATENCAO",
+      "redirecionado": true,
+      "final_url": "https://analytics.google.com/analytics/web/",
+      "origens": [
+        "src/components/GA4ChecklistPanel.tsx"
+      ],
+      "last_seen": "2026-08-25T06:09:05.096Z"
+    },
+    {
+      "source_url": "https://ads.google.com/",
+      "target_url": null,
+      "publisher": "ads.google.com",
+      "type": "referencia_editorial",
+      "status": 200,
+      "estado": "OK",
+      "redirecionado": true,
+      "final_url": "https://business.google.com/nl/google-ads/?ucbcb=1",
+      "origens": [
+        "src/components/GA4ChecklistPanel.tsx"
+      ],
+      "last_seen": "2026-08-25T06:09:05.096Z"
+    },
+    {
+      "source_url": "https://developers.facebook.com/tools/debug/",
+      "target_url": null,
+      "publisher": "developers.facebook.com",
+      "type": "referencia_editorial",
+      "status": 200,
+      "estado": "OK",
+      "redirecionado": false,
+      "final_url": "https://developers.facebook.com/tools/debug/",
+      "origens": [
+        "src/components/GA4ChecklistPanel.tsx"
+      ],
+      "last_seen": "2026-08-25T06:09:05.096Z"
+    },
+    {
+      "source_url": "https://cards-dev.twitter.com/validator",
+      "target_url": null,
+      "publisher": "cards-dev.twitter.com",
+      "type": "referencia_editorial",
+      "status": 403,
+      "estado": "ATENCAO",
+      "redirecionado": true,
+      "final_url": "https://twitter.com/login?redirect_after_login=https%3A%2F%2Fcards-dev.twitter.com%2Fvalidator",
+      "origens": [
+        "src/components/GA4ChecklistPanel.tsx"
+      ],
+      "last_seen": "2026-08-25T06:09:05.096Z"
+    },
+    {
+      "source_url": "https://www.linkedin.com/post-inspector/",
+      "target_url": null,
+      "publisher": "linkedin.com",
+      "type": "referencia_editorial",
+      "status": 200,
+      "estado": "OK",
+      "redirecionado": false,
+      "final_url": "https://www.linkedin.com/post-inspector/",
+      "origens": [
+        "src/components/GA4ChecklistPanel.tsx"
+      ],
+      "last_seen": "2026-08-25T06:09:05.096Z"
+    },
+    {
+      "source_url": "https://www.google.com/maps/search/?api=1&query=T%C3%A9cnico+em+Curitiba",
+      "target_url": null,
+      "publisher": "google.com",
+      "type": "referencia_editorial",
+      "status": 200,
+      "estado": "OK",
+      "redirecionado": false,
+      "final_url": "https://www.google.com/maps/search/?api=1&query=T%C3%A9cnico+em+Curitiba",
+      "origens": [
+        "src/components/JsonLdSchema.tsx"
+      ],
+      "last_seen": "2026-08-25T06:09:05.096Z"
+    },
+    {
+      "source_url": "https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb",
+      "target_url": null,
+      "publisher": "dl.google.com",
+      "type": "referencia_editorial",
+      "status": 200,
+      "estado": "OK",
+      "redirecionado": false,
+      "final_url": "https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb",
+      "origens": [
+        "src/data/blogPostsContent.tsx"
+      ],
+      "last_seen": "2026-08-25T06:09:05.096Z"
+    },
+    {
+      "source_url": "https://flathub.org/repo/flathub.flatpakrepo",
+      "target_url": null,
+      "publisher": "flathub.org",
+      "type": "referencia_editorial",
+      "status": 200,
+      "estado": "OK",
+      "redirecionado": true,
+      "final_url": "https://dl.flathub.org/repo/flathub.flatpakrepo",
+      "origens": [
+        "src/data/blogPostsContent.tsx"
+      ],
+      "last_seen": "2026-08-25T06:09:05.096Z"
+    },
+    {
+      "source_url": "http://IP-DO-SERVIDOR",
+      "target_url": null,
+      "publisher": "ip-do-servidor",
+      "type": "referencia_editorial",
+      "status": null,
+      "estado": "FALHA",
+      "redirecionado": false,
+      "final_url": null,
+      "origens": [
+        "src/data/blogPostsContent.tsx"
+      ],
+      "last_seen": "2026-08-25T06:09:05.096Z"
+    },
+    {
+      "source_url": "http://repo.exemplo.com/ubuntu",
+      "target_url": null,
+      "publisher": "repo.exemplo.com",
+      "type": "referencia_editorial",
+      "status": null,
+      "estado": "FALHA",
+      "redirecionado": false,
+      "final_url": null,
+      "origens": [
+        "src/data/blogPostsContent.tsx"
+      ],
+      "last_seen": "2026-08-25T06:09:05.096Z"
+    },
+    {
+      "source_url": "https://repo.exemplo.com/key.gpg",
+      "target_url": null,
+      "publisher": "repo.exemplo.com",
+      "type": "referencia_editorial",
+      "status": null,
+      "estado": "FALHA",
+      "redirecionado": false,
+      "final_url": null,
+      "origens": [
+        "src/data/blogPostsContent.tsx"
+      ],
+      "last_seen": "2026-08-25T06:09:05.096Z"
+    },
+    {
+      "source_url": "https://download.docker.com/linux/ubuntu/gpg",
+      "target_url": null,
+      "publisher": "download.docker.com",
+      "type": "referencia_editorial",
+      "status": 200,
+      "estado": "OK",
+      "redirecionado": false,
+      "final_url": "https://download.docker.com/linux/ubuntu/gpg",
+      "origens": [
+        "src/data/blogPostsContent.tsx"
+      ],
+      "last_seen": "2026-08-25T06:09:05.096Z"
+    },
+    {
+      "source_url": "https://download.docker.com/linux/ubuntu",
+      "target_url": null,
+      "publisher": "download.docker.com",
+      "type": "referencia_editorial",
+      "status": 200,
+      "estado": "OK",
+      "redirecionado": true,
+      "final_url": "https://download.docker.com/linux/ubuntu/",
+      "origens": [
+        "src/data/blogPostsContent.tsx"
+      ],
+      "last_seen": "2026-08-25T06:09:05.096Z"
+    },
+    {
+      "source_url": "https://download.docker.com/linux/fedora/docker-ce.repo",
+      "target_url": null,
+      "publisher": "download.docker.com",
+      "type": "referencia_editorial",
+      "status": 200,
+      "estado": "OK",
+      "redirecionado": false,
+      "final_url": "https://download.docker.com/linux/fedora/docker-ce.repo",
+      "origens": [
+        "src/data/blogPostsContent.tsx"
+      ],
+      "last_seen": "2026-08-25T06:09:05.096Z"
+    },
+    {
+      "source_url": "https://precisodeum.com.br",
+      "target_url": null,
+      "publisher": "precisodeum.com.br",
+      "type": "referencia_editorial",
+      "status": 200,
+      "estado": "OK",
+      "redirecionado": true,
+      "final_url": "https://precisodeum.com.br/",
+      "origens": [
+        "src/data/blogPostsContent.tsx",
+        "src/pages/SejaParceiro.tsx"
+      ],
+      "last_seen": "2026-08-25T06:09:05.096Z"
+    },
+    {
+      "source_url": "https://precisodeum.com.br/cadastro",
+      "target_url": null,
+      "publisher": "precisodeum.com.br",
+      "type": "referencia_editorial",
+      "status": 200,
+      "estado": "OK",
+      "redirecionado": false,
+      "final_url": "https://precisodeum.com.br/cadastro",
+      "origens": [
+        "src/data/blogPostsContent.tsx"
+      ],
+      "last_seen": "2026-08-25T06:09:05.096Z"
+    },
+    {
+      "source_url": "https://precisodeum.com.br/dashboard/vagas",
+      "target_url": null,
+      "publisher": "precisodeum.com.br",
+      "type": "referencia_editorial",
+      "status": 200,
+      "estado": "OK",
+      "redirecionado": false,
+      "final_url": "https://precisodeum.com.br/dashboard/vagas",
+      "origens": [
+        "src/data/blogPostsContent.tsx"
+      ],
+      "last_seen": "2026-08-25T06:09:05.096Z"
+    },
+    {
+      "source_url": "https://precisodeum.com.br/vagas",
+      "target_url": null,
+      "publisher": "precisodeum.com.br",
+      "type": "referencia_editorial",
+      "status": 200,
+      "estado": "OK",
+      "redirecionado": false,
+      "final_url": "https://precisodeum.com.br/vagas",
+      "origens": [
+        "src/data/blogPostsContent.tsx"
+      ],
+      "last_seen": "2026-08-25T06:09:05.096Z"
+    },
+    {
+      "source_url": "https://raw.githubusercontent.com/angristan/openvpn-install/master/openvpn-install.sh",
+      "target_url": null,
+      "publisher": "raw.githubusercontent.com",
+      "type": "referencia_editorial",
+      "status": 200,
+      "estado": "OK",
+      "redirecionado": false,
+      "final_url": "https://raw.githubusercontent.com/angristan/openvpn-install/master/openvpn-install.sh",
+      "origens": [
+        "src/data/blogPostsContent.tsx"
+      ],
+      "last_seen": "2026-08-25T06:09:05.096Z"
+    },
+    {
+      "source_url": "https://192.168.1.1",
+      "target_url": null,
+      "publisher": "192.168.1.1",
+      "type": "referencia_editorial",
+      "status": null,
+      "estado": "FALHA",
+      "redirecionado": false,
+      "final_url": null,
+      "origens": [
+        "src/data/blogPostsContent.tsx"
+      ],
+      "last_seen": "2026-08-25T06:09:05.096Z"
+    },
+    {
+      "source_url": "https://learn.microsoft.com/pt-br/",
+      "target_url": null,
+      "publisher": "learn.microsoft.com",
+      "type": "referencia_editorial",
+      "status": 200,
+      "estado": "OK",
+      "redirecionado": false,
+      "final_url": "https://learn.microsoft.com/pt-br/",
+      "origens": [
+        "src/data/blogPostsContent.tsx"
+      ],
+      "last_seen": "2026-08-25T06:09:05.096Z"
+    },
+    {
+      "source_url": "https://www.computer.org/",
+      "target_url": null,
+      "publisher": "computer.org",
+      "type": "referencia_editorial",
+      "status": 200,
+      "estado": "OK",
+      "redirecionado": false,
+      "final_url": "https://www.computer.org/",
+      "origens": [
+        "src/data/blogPostsContent.tsx"
+      ],
+      "last_seen": "2026-08-25T06:09:05.096Z"
+    },
+    {
+      "source_url": "https://cartilha.cert.br/",
+      "target_url": null,
+      "publisher": "cartilha.cert.br",
+      "type": "referencia_editorial",
+      "status": 200,
+      "estado": "OK",
+      "redirecionado": false,
+      "final_url": "https://cartilha.cert.br/",
+      "origens": [
+        "src/data/blogPostsContent.tsx",
+        "src/lib/blogEditorialSources.ts"
+      ],
+      "last_seen": "2026-08-25T06:09:05.096Z"
+    },
+    {
+      "source_url": "https://www.gov.br/mec/pt-br",
+      "target_url": null,
+      "publisher": "gov.br",
+      "type": "referencia_editorial",
+      "status": 403,
+      "estado": "ATENCAO",
+      "redirecionado": false,
+      "final_url": "https://www.gov.br/mec/pt-br",
+      "origens": [
+        "src/data/blogPostsContent.tsx"
+      ],
+      "last_seen": "2026-08-25T06:09:05.096Z"
+    },
+    {
+      "source_url": "https://exemplo.com.br/contato",
+      "target_url": null,
+      "publisher": "exemplo.com.br",
+      "type": "referencia_editorial",
+      "status": null,
+      "estado": "FALHA",
+      "redirecionado": false,
+      "final_url": null,
+      "origens": [
+        "src/data/blogPostsContent.tsx"
+      ],
+      "last_seen": "2026-08-25T06:09:05.096Z"
+    },
+    {
+      "source_url": "https://learn.microsoft.com/pt-br/windows/",
+      "target_url": null,
+      "publisher": "learn.microsoft.com",
+      "type": "referencia_editorial",
+      "status": 200,
+      "estado": "OK",
+      "redirecionado": false,
+      "final_url": "https://learn.microsoft.com/pt-br/windows/",
+      "origens": [
+        "src/data/blogPostsContent.tsx"
+      ],
+      "last_seen": "2026-08-25T06:09:05.096Z"
+    },
+    {
+      "source_url": "https://documentation.libreoffice.org/pt-br/",
+      "target_url": null,
+      "publisher": "documentation.libreoffice.org",
+      "type": "referencia_editorial",
+      "status": 200,
+      "estado": "OK",
+      "redirecionado": true,
+      "final_url": "https://documentation.libreoffice.org/pt-br/portugues/",
+      "origens": [
+        "src/data/blogPostsContent.tsx"
+      ],
+      "last_seen": "2026-08-25T06:09:05.096Z"
+    },
+    {
+      "source_url": "https://learn.microsoft.com/pt-br/training/",
+      "target_url": null,
+      "publisher": "learn.microsoft.com",
+      "type": "referencia_editorial",
+      "status": 200,
+      "estado": "OK",
+      "redirecionado": false,
+      "final_url": "https://learn.microsoft.com/pt-br/training/",
+      "origens": [
+        "src/data/blogPostsContent.tsx"
+      ],
+      "last_seen": "2026-08-25T06:09:05.096Z"
+    },
+    {
+      "source_url": "https://www.fundacaobradesco.org.br/",
+      "target_url": null,
+      "publisher": "fundacaobradesco.org.br",
+      "type": "referencia_editorial",
+      "status": null,
+      "estado": "FALHA",
+      "redirecionado": false,
+      "final_url": null,
+      "origens": [
+        "src/data/blogPostsContent.tsx"
+      ],
+      "last_seen": "2026-08-25T06:09:05.096Z"
+    },
+    {
+      "source_url": "https://pt.khanacademy.org/computing",
+      "target_url": null,
+      "publisher": "pt.khanacademy.org",
+      "type": "referencia_editorial",
+      "status": 200,
+      "estado": "OK",
+      "redirecionado": false,
+      "final_url": "https://pt.khanacademy.org/computing",
+      "origens": [
+        "src/data/blogPostsContent.tsx"
+      ],
+      "last_seen": "2026-08-25T06:09:05.096Z"
+    },
+    {
+      "source_url": "https://code.org/",
+      "target_url": null,
+      "publisher": "code.org",
+      "type": "referencia_editorial",
+      "status": 200,
+      "estado": "OK",
+      "redirecionado": true,
+      "final_url": "https://code.org/en-US",
+      "origens": [
+        "src/data/blogPostsContent.tsx"
+      ],
+      "last_seen": "2026-08-25T06:09:05.096Z"
+    },
+    {
+      "source_url": "https://lovable.dev",
+      "target_url": null,
+      "publisher": "lovable.dev",
+      "type": "referencia_editorial",
+      "status": 403,
+      "estado": "ATENCAO",
+      "redirecionado": true,
+      "final_url": "https://lovable.dev/",
+      "origens": [
+        "src/integrations/supabase/previewAuthStorage.ts"
+      ],
+      "last_seen": "2026-08-25T06:09:05.096Z"
+    },
+    {
+      "source_url": "https://exemplo.com/servicos/manutencao",
+      "target_url": null,
+      "publisher": "exemplo.com",
+      "type": "referencia_editorial",
+      "status": null,
+      "estado": "FALHA",
+      "redirecionado": false,
+      "final_url": null,
+      "origens": [
+        "src/lib/__tests__/problemIntentPolicy.test.ts"
+      ],
+      "last_seen": "2026-08-25T06:09:05.096Z"
+    },
+    {
+      "source_url": "https://commons.wikimedia.org/w/index.php?curid=194512723",
+      "target_url": null,
+      "publisher": "commons.wikimedia.org",
+      "type": "referencia_editorial",
+      "status": 200,
+      "estado": "OK",
+      "redirecionado": false,
+      "final_url": "https://commons.wikimedia.org/w/index.php?curid=194512723",
+      "origens": [
+        "src/lib/blogEditorialRegistry.ts"
+      ],
+      "last_seen": "2026-08-25T06:09:05.096Z"
+    },
+    {
+      "source_url": "https://commons.wikimedia.org/w/index.php?curid=130534314",
+      "target_url": null,
+      "publisher": "commons.wikimedia.org",
+      "type": "referencia_editorial",
+      "status": 200,
+      "estado": "OK",
+      "redirecionado": false,
+      "final_url": "https://commons.wikimedia.org/w/index.php?curid=130534314",
+      "origens": [
+        "src/lib/blogEditorialRegistry.ts"
+      ],
+      "last_seen": "2026-08-25T06:09:05.096Z"
+    },
+    {
+      "source_url": "https://commons.wikimedia.org/w/index.php?curid=113932150",
+      "target_url": null,
+      "publisher": "commons.wikimedia.org",
+      "type": "referencia_editorial",
+      "status": 200,
+      "estado": "OK",
+      "redirecionado": false,
+      "final_url": "https://commons.wikimedia.org/w/index.php?curid=113932150",
+      "origens": [
+        "src/lib/blogEditorialRegistry.ts"
+      ],
+      "last_seen": "2026-08-25T06:09:05.096Z"
+    },
+    {
+      "source_url": "https://commons.wikimedia.org/wiki/File:Laptop_hardware.jpg",
+      "target_url": null,
+      "publisher": "commons.wikimedia.org",
+      "type": "referencia_editorial",
+      "status": 200,
+      "estado": "OK",
+      "redirecionado": false,
+      "final_url": "https://commons.wikimedia.org/wiki/File:Laptop_hardware.jpg",
+      "origens": [
+        "src/lib/blogEditorialRegistry.ts"
+      ],
+      "last_seen": "2026-08-25T06:09:05.096Z"
+    },
+    {
+      "source_url": "https://commons.wikimedia.org/wiki/File:Actuator_arm_assembly_of_a_hard_disk_drive.jpg",
+      "target_url": null,
+      "publisher": "commons.wikimedia.org",
+      "type": "referencia_editorial",
+      "status": 200,
+      "estado": "OK",
+      "redirecionado": false,
+      "final_url": "https://commons.wikimedia.org/wiki/File:Actuator_arm_assembly_of_a_hard_disk_drive.jpg",
+      "origens": [
+        "src/lib/blogEditorialRegistry.ts"
+      ],
+      "last_seen": "2026-08-25T06:09:05.096Z"
+    },
+    {
+      "source_url": "https://commons.wikimedia.org/wiki/File:Toshiba_Laptop_Hard_Drive.jpg",
+      "target_url": null,
+      "publisher": "commons.wikimedia.org",
+      "type": "referencia_editorial",
+      "status": 200,
+      "estado": "OK",
+      "redirecionado": false,
+      "final_url": "https://commons.wikimedia.org/wiki/File:Toshiba_Laptop_Hard_Drive.jpg",
+      "origens": [
+        "src/lib/blogEditorialRegistry.ts"
+      ],
+      "last_seen": "2026-08-25T06:09:05.096Z"
+    },
+    {
+      "source_url": "https://commons.wikimedia.org/wiki/File:256GB_2230_NVME_SSD_%2B_256GB_NGFF_SSD.jpg",
+      "target_url": null,
+      "publisher": "commons.wikimedia.org",
+      "type": "referencia_editorial",
+      "status": 200,
+      "estado": "OK",
+      "redirecionado": false,
+      "final_url": "https://commons.wikimedia.org/wiki/File:256GB_2230_NVME_SSD_%2B_256GB_NGFF_SSD.jpg",
+      "origens": [
+        "src/lib/blogEditorialRegistry.ts"
+      ],
+      "last_seen": "2026-08-25T06:09:05.096Z"
+    },
+    {
+      "source_url": "https://commons.wikimedia.org/wiki/File:TP-Link_TL-WR740N_router_HS5.jpg",
+      "target_url": null,
+      "publisher": "commons.wikimedia.org",
+      "type": "referencia_editorial",
+      "status": 200,
+      "estado": "OK",
+      "redirecionado": false,
+      "final_url": "https://commons.wikimedia.org/wiki/File:TP-Link_TL-WR740N_router_HS5.jpg",
+      "origens": [
+        "src/lib/blogEditorialRegistry.ts"
+      ],
+      "last_seen": "2026-08-25T06:09:05.096Z"
+    },
+    {
+      "source_url": "https://commons.wikimedia.org/wiki/File:Home_wifi.jpg",
+      "target_url": null,
+      "publisher": "commons.wikimedia.org",
+      "type": "referencia_editorial",
+      "status": 200,
+      "estado": "OK",
+      "redirecionado": false,
+      "final_url": "https://commons.wikimedia.org/wiki/File:Home_wifi.jpg",
+      "origens": [
+        "src/lib/blogEditorialRegistry.ts"
+      ],
+      "last_seen": "2026-08-25T06:09:05.096Z"
+    },
+    {
+      "source_url": "https://commons.wikimedia.org/wiki/File:MEMZ_Trojan_running_on_Samsung_N130,_13_December_2019.jpg",
+      "target_url": null,
+      "publisher": "commons.wikimedia.org",
+      "type": "referencia_editorial",
+      "status": 200,
+      "estado": "OK",
+      "redirecionado": false,
+      "final_url": "https://commons.wikimedia.org/wiki/File:MEMZ_Trojan_running_on_Samsung_N130,_13_December_2019.jpg",
+      "origens": [
+        "src/lib/blogEditorialRegistry.ts"
+      ],
+      "last_seen": "2026-08-25T06:09:05.096Z"
+    },
+    {
+      "source_url": "https://commons.wikimedia.org/wiki/File:Computer_virus_scam.jpg",
+      "target_url": null,
+      "publisher": "commons.wikimedia.org",
+      "type": "referencia_editorial",
+      "status": 200,
+      "estado": "OK",
+      "redirecionado": false,
+      "final_url": "https://commons.wikimedia.org/wiki/File:Computer_virus_scam.jpg",
+      "origens": [
+        "src/lib/blogEditorialRegistry.ts"
+      ],
+      "last_seen": "2026-08-25T06:09:05.096Z"
+    },
+    {
+      "source_url": "https://commons.wikimedia.org/wiki/File:Laptop_overheating_due_to_dust-clogged_internal_heatsinks_in_2.5_year_old_laptop.jpg",
+      "target_url": null,
+      "publisher": "commons.wikimedia.org",
+      "type": "referencia_editorial",
+      "status": 200,
+      "estado": "OK",
+      "redirecionado": false,
+      "final_url": "https://commons.wikimedia.org/wiki/File:Laptop_overheating_due_to_dust-clogged_internal_heatsinks_in_2.5_year_old_laptop.jpg",
+      "origens": [
+        "src/lib/blogEditorialRegistry.ts"
+      ],
+      "last_seen": "2026-08-25T06:09:05.096Z"
+    },
+    {
+      "source_url": "https://commons.wikimedia.org/wiki/File:Thermal_compound_Applied.JPG",
+      "target_url": null,
+      "publisher": "commons.wikimedia.org",
+      "type": "referencia_editorial",
+      "status": 200,
+      "estado": "OK",
+      "redirecionado": false,
+      "final_url": "https://commons.wikimedia.org/wiki/File:Thermal_compound_Applied.JPG",
+      "origens": [
+        "src/lib/blogEditorialRegistry.ts"
+      ],
+      "last_seen": "2026-08-25T06:09:05.096Z"
+    },
+    {
+      "source_url": "https://commons.wikimedia.org/wiki/File:Maxtor_HDD_and_Intel_SSD_20100117.jpg",
+      "target_url": null,
+      "publisher": "commons.wikimedia.org",
+      "type": "referencia_editorial",
+      "status": 200,
+      "estado": "OK",
+      "redirecionado": false,
+      "final_url": "https://commons.wikimedia.org/wiki/File:Maxtor_HDD_and_Intel_SSD_20100117.jpg",
+      "origens": [
+        "src/lib/blogEditorialRegistry.ts"
+      ],
+      "last_seen": "2026-08-25T06:09:05.096Z"
+    },
+    {
+      "source_url": "https://commons.wikimedia.org/wiki/File:WesterDigital-Black-NVMe-SSD.jpg",
+      "target_url": null,
+      "publisher": "commons.wikimedia.org",
+      "type": "referencia_editorial",
+      "status": 200,
+      "estado": "OK",
+      "redirecionado": false,
+      "final_url": "https://commons.wikimedia.org/wiki/File:WesterDigital-Black-NVMe-SSD.jpg",
+      "origens": [
+        "src/lib/blogEditorialRegistry.ts"
+      ],
+      "last_seen": "2026-08-25T06:09:05.096Z"
+    },
+    {
+      "source_url": "https://commons.wikimedia.org/wiki/File:2017_Petya_cyberattack_screenshot.jpg",
+      "target_url": null,
+      "publisher": "commons.wikimedia.org",
+      "type": "referencia_editorial",
+      "status": 200,
+      "estado": "OK",
+      "redirecionado": false,
+      "final_url": "https://commons.wikimedia.org/wiki/File:2017_Petya_cyberattack_screenshot.jpg",
+      "origens": [
+        "src/lib/blogEditorialRegistry.ts"
+      ],
+      "last_seen": "2026-08-25T06:09:05.096Z"
+    },
+    {
+      "source_url": "https://commons.wikimedia.org/wiki/File:BalticServers_data_center.jpg",
+      "target_url": null,
+      "publisher": "commons.wikimedia.org",
+      "type": "referencia_editorial",
+      "status": 200,
+      "estado": "OK",
+      "redirecionado": false,
+      "final_url": "https://commons.wikimedia.org/wiki/File:BalticServers_data_center.jpg",
+      "origens": [
+        "src/lib/blogEditorialRegistry.ts"
+      ],
+      "last_seen": "2026-08-25T06:09:05.096Z"
+    },
+    {
+      "source_url": "https://commons.wikimedia.org/wiki/File:Epson-inkjet-printer.jpg",
+      "target_url": null,
+      "publisher": "commons.wikimedia.org",
+      "type": "referencia_editorial",
+      "status": 200,
+      "estado": "OK",
+      "redirecionado": false,
+      "final_url": "https://commons.wikimedia.org/wiki/File:Epson-inkjet-printer.jpg",
+      "origens": [
+        "src/lib/blogEditorialRegistry.ts"
+      ],
+      "last_seen": "2026-08-25T06:09:05.096Z"
+    },
+    {
+      "source_url": "https://commons.wikimedia.org/wiki/File:LG_Smart_TV_WIFI_%2B_IR_Remote_04.jpg",
+      "target_url": null,
+      "publisher": "commons.wikimedia.org",
+      "type": "referencia_editorial",
+      "status": 200,
+      "estado": "OK",
+      "redirecionado": false,
+      "final_url": "https://commons.wikimedia.org/wiki/File:LG_Smart_TV_WIFI_%2B_IR_Remote_04.jpg",
+      "origens": [
+        "src/lib/blogEditorialRegistry.ts"
+      ],
+      "last_seen": "2026-08-25T06:09:05.096Z"
+    },
+    {
+      "source_url": "https://commons.wikimedia.org/wiki/File:ATX_power_supply_interior.jpg",
+      "target_url": null,
+      "publisher": "commons.wikimedia.org",
+      "type": "referencia_editorial",
+      "status": 200,
+      "estado": "OK",
+      "redirecionado": false,
+      "final_url": "https://commons.wikimedia.org/wiki/File:ATX_power_supply_interior.jpg",
+      "origens": [
+        "src/lib/blogEditorialRegistry.ts"
+      ],
+      "last_seen": "2026-08-25T06:09:05.096Z"
+    },
+    {
+      "source_url": "https://commons.wikimedia.org/wiki/File:ASRock_K7VT4A_Pro_Mainboard.jpg",
+      "target_url": null,
+      "publisher": "commons.wikimedia.org",
+      "type": "referencia_editorial",
+      "status": 200,
+      "estado": "OK",
+      "redirecionado": false,
+      "final_url": "https://commons.wikimedia.org/wiki/File:ASRock_K7VT4A_Pro_Mainboard.jpg",
+      "origens": [
+        "src/lib/blogEditorialRegistry.ts"
+      ],
+      "last_seen": "2026-08-25T06:09:05.096Z"
+    },
+    {
+      "source_url": "https://commons.wikimedia.org/wiki/File:Working_on_my_laptop.jpg",
+      "target_url": null,
+      "publisher": "commons.wikimedia.org",
+      "type": "referencia_editorial",
+      "status": 200,
+      "estado": "OK",
+      "redirecionado": false,
+      "final_url": "https://commons.wikimedia.org/wiki/File:Working_on_my_laptop.jpg",
+      "origens": [
+        "src/lib/blogEditorialRegistry.ts"
+      ],
+      "last_seen": "2026-08-25T06:09:05.096Z"
+    },
+    {
+      "source_url": "https://commons.wikimedia.org/wiki/File:VAIO_TZ_laptop_hard_disk.jpg",
+      "target_url": null,
+      "publisher": "commons.wikimedia.org",
+      "type": "referencia_editorial",
+      "status": 200,
+      "estado": "OK",
+      "redirecionado": false,
+      "final_url": "https://commons.wikimedia.org/wiki/File:VAIO_TZ_laptop_hard_disk.jpg",
+      "origens": [
+        "src/lib/blogEditorialRegistry.ts"
+      ],
+      "last_seen": "2026-08-25T06:09:05.096Z"
+    },
+    {
+      "source_url": "https://commons.wikimedia.org/wiki/File:Replacing_hardware_160210-F-KR223-021.jpg",
+      "target_url": null,
+      "publisher": "commons.wikimedia.org",
+      "type": "referencia_editorial",
+      "status": 200,
+      "estado": "OK",
+      "redirecionado": false,
+      "final_url": "https://commons.wikimedia.org/wiki/File:Replacing_hardware_160210-F-KR223-021.jpg",
+      "origens": [
+        "src/lib/blogEditorialRegistry.ts"
+      ],
+      "last_seen": "2026-08-25T06:09:05.096Z"
+    },
+    {
+      "source_url": "https://commons.wikimedia.org/wiki/File:Acer_desktop_computers_in_computer_classroom_of_Baozhong_Junior_High_School_20121009.jpg",
+      "target_url": null,
+      "publisher": "commons.wikimedia.org",
+      "type": "referencia_editorial",
+      "status": 200,
+      "estado": "OK",
+      "redirecionado": false,
+      "final_url": "https://commons.wikimedia.org/wiki/File:Acer_desktop_computers_in_computer_classroom_of_Baozhong_Junior_High_School_20121009.jpg",
+      "origens": [
+        "src/lib/blogEditorialRegistry.ts"
+      ],
+      "last_seen": "2026-08-25T06:09:05.096Z"
+    },
+    {
+      "source_url": "https://commons.wikimedia.org/wiki/File:Student_on_computer.jpg",
+      "target_url": null,
+      "publisher": "commons.wikimedia.org",
+      "type": "referencia_editorial",
+      "status": 200,
+      "estado": "OK",
+      "redirecionado": false,
+      "final_url": "https://commons.wikimedia.org/wiki/File:Student_on_computer.jpg",
+      "origens": [
+        "src/lib/blogEditorialRegistry.ts"
+      ],
+      "last_seen": "2026-08-25T06:09:05.096Z"
+    },
+    {
+      "source_url": "https://commons.wikimedia.org/wiki/File:Students_working_on_class_assignment_in_computer_lab.jpg",
+      "target_url": null,
+      "publisher": "commons.wikimedia.org",
+      "type": "referencia_editorial",
+      "status": 200,
+      "estado": "OK",
+      "redirecionado": false,
+      "final_url": "https://commons.wikimedia.org/wiki/File:Students_working_on_class_assignment_in_computer_lab.jpg",
+      "origens": [
+        "src/lib/blogEditorialRegistry.ts"
+      ],
+      "last_seen": "2026-08-25T06:09:05.096Z"
+    },
+    {
+      "source_url": "https://learn.microsoft.com/en-us/windows/whats-new/windows-11-requirements",
+      "target_url": null,
+      "publisher": "learn.microsoft.com",
+      "type": "referencia_editorial",
+      "status": 200,
+      "estado": "OK",
+      "redirecionado": false,
+      "final_url": "https://learn.microsoft.com/en-us/windows/whats-new/windows-11-requirements",
+      "origens": [
+        "src/lib/blogEditorialSources.ts"
+      ],
+      "last_seen": "2026-08-25T06:09:05.096Z"
+    },
+    {
+      "source_url": "https://support.microsoft.com/en-us/windows/create-installation-media-for-windows-99a58364-8c02-206f-aa6f-40c3b507420d",
+      "target_url": null,
+      "publisher": "support.microsoft.com",
+      "type": "referencia_editorial",
+      "status": 200,
+      "estado": "OK",
+      "redirecionado": true,
+      "final_url": "https://support.microsoft.com/en-US/Windows/Deployment/Install-Upgrade/create-installation-media-for-windows",
+      "origens": [
+        "src/lib/blogEditorialSources.ts"
+      ],
+      "last_seen": "2026-08-25T06:09:05.096Z"
+    },
+    {
+      "source_url": "https://support.microsoft.com/en-us/windows/activate-windows-c39005d4-95ee-b91e-b399-2820fda32227",
+      "target_url": null,
+      "publisher": "support.microsoft.com",
+      "type": "referencia_editorial",
+      "status": 200,
+      "estado": "OK",
+      "redirecionado": true,
+      "final_url": "https://support.microsoft.com/en-US/Windows/activation/activate-windows",
+      "origens": [
+        "src/lib/blogEditorialSources.ts"
+      ],
+      "last_seen": "2026-08-25T06:09:05.096Z"
+    },
+    {
+      "source_url": "https://support.microsoft.com/en-us/windows/finding-your-bitlocker-recovery-key-in-windows-6b71ad27-0b89-ea08-f143-056f5ab347d6",
+      "target_url": null,
+      "publisher": "support.microsoft.com",
+      "type": "referencia_editorial",
+      "status": 200,
+      "estado": "OK",
+      "redirecionado": true,
+      "final_url": "https://support.microsoft.com/en-US/Windows/Security/Encryption/find-your-bitlocker-recovery-key",
+      "origens": [
+        "src/lib/blogEditorialSources.ts"
+      ],
+      "last_seen": "2026-08-25T06:09:05.096Z"
+    },
+    {
+      "source_url": "https://support.microsoft.com/en-us/office/protect-yourself-from-tech-support-scams",
+      "target_url": null,
+      "publisher": "support.microsoft.com",
+      "type": "referencia_editorial",
+      "status": 200,
+      "estado": "OK",
+      "redirecionado": false,
+      "final_url": "https://support.microsoft.com/en-us/office/protect-yourself-from-tech-support-scams",
+      "origens": [
+        "src/lib/blogEditorialSources.ts"
+      ],
+      "last_seen": "2026-08-25T06:09:05.096Z"
+    },
+    {
+      "source_url": "https://www.cisa.gov/stopransomware/ransomware-guide",
+      "target_url": null,
+      "publisher": "cisa.gov",
+      "type": "referencia_editorial",
+      "status": 200,
+      "estado": "OK",
+      "redirecionado": false,
+      "final_url": "https://www.cisa.gov/stopransomware/ransomware-guide",
+      "origens": [
+        "src/lib/blogEditorialSources.ts"
+      ],
+      "last_seen": "2026-08-25T06:09:05.096Z"
+    },
+    {
+      "source_url": "https://www.cisa.gov/audiences/small-and-medium-businesses/secure-your-business/back-up-business-data",
+      "target_url": null,
+      "publisher": "cisa.gov",
+      "type": "referencia_editorial",
+      "status": 200,
+      "estado": "OK",
+      "redirecionado": false,
+      "final_url": "https://www.cisa.gov/audiences/small-and-medium-businesses/secure-your-business/back-up-business-data",
+      "origens": [
+        "src/lib/blogEditorialSources.ts"
+      ],
+      "last_seen": "2026-08-25T06:09:05.096Z"
+    },
+    {
+      "source_url": "https://csrc.nist.gov/pubs/sp/800/34/r1/upd1/final",
+      "target_url": null,
+      "publisher": "csrc.nist.gov",
+      "type": "referencia_editorial",
+      "status": 404,
+      "estado": "QUEBRADO",
+      "redirecionado": false,
+      "final_url": "https://csrc.nist.gov/pubs/sp/800/34/r1/upd1/final",
+      "origens": [
+        "src/lib/blogEditorialSources.ts"
+      ],
+      "last_seen": "2026-08-25T06:09:05.096Z"
+    },
+    {
+      "source_url": "https://www.wi-fi.org/discover-wi-fi/security",
+      "target_url": null,
+      "publisher": "wi-fi.org",
+      "type": "referencia_editorial",
+      "status": 200,
+      "estado": "OK",
+      "redirecionado": true,
+      "final_url": "https://www.wi-fi.org/security",
+      "origens": [
+        "src/lib/blogEditorialSources.ts",
+        "src/lib/enriquecimento4eRedes.ts"
+      ],
+      "last_seen": "2026-08-25T06:09:05.096Z"
+    },
+    {
+      "source_url": "https://support.microsoft.com/pt-br/windows/desfragmentar-o-computador-com-windows-10-048aefac-7f1f-4632-d48a-9700c4ec702a",
+      "target_url": null,
+      "publisher": "support.microsoft.com",
+      "type": "referencia_editorial",
+      "status": 200,
+      "estado": "OK",
+      "redirecionado": true,
+      "final_url": "https://support.microsoft.com/pt-BR/Windows/Experience/Storage-FileManagement/defragment-optimize-your-data-drives-in-windows",
+      "origens": [
+        "src/lib/blogEditorialSources.ts"
+      ],
+      "last_seen": "2026-08-25T06:09:05.096Z"
+    },
+    {
+      "source_url": "https://www.wi-fi.org/news-events/newsroom/wi-fi-alliance-connects-and-expands-home-wi-fi",
+      "target_url": null,
+      "publisher": "wi-fi.org",
+      "type": "referencia_editorial",
+      "status": 200,
+      "estado": "OK",
+      "redirecionado": false,
+      "final_url": "https://www.wi-fi.org/news-events/newsroom/wi-fi-alliance-connects-and-expands-home-wi-fi",
+      "origens": [
+        "src/lib/blogEditorialSources.ts"
+      ],
+      "last_seen": "2026-08-25T06:09:05.096Z"
+    },
+    {
+      "source_url": "https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?auto=format&fit=crop&w=1200&q=70",
+      "target_url": null,
+      "publisher": "images.unsplash.com",
+      "type": "referencia_editorial",
+      "status": 200,
+      "estado": "OK",
+      "redirecionado": false,
+      "final_url": "https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?auto=format&fit=crop&w=1200&q=70",
+      "origens": [
+        "src/lib/categoryLocalGeo.ts"
+      ],
+      "last_seen": "2026-08-25T06:09:05.096Z"
+    },
+    {
+      "source_url": "https://images.unsplash.com/photo-1601944177325-f8867652837f?auto=format&fit=crop&w=1200&q=70",
+      "target_url": null,
+      "publisher": "images.unsplash.com",
+      "type": "referencia_editorial",
+      "status": 200,
+      "estado": "OK",
+      "redirecionado": false,
+      "final_url": "https://images.unsplash.com/photo-1601944177325-f8867652837f?auto=format&fit=crop&w=1200&q=70",
+      "origens": [
+        "src/lib/categoryLocalGeo.ts"
+      ],
+      "last_seen": "2026-08-25T06:09:05.096Z"
+    },
+    {
+      "source_url": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=70",
+      "target_url": null,
+      "publisher": "images.unsplash.com",
+      "type": "referencia_editorial",
+      "status": 200,
+      "estado": "OK",
+      "redirecionado": false,
+      "final_url": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=70",
+      "origens": [
+        "src/lib/categoryLocalGeo.ts"
+      ],
+      "last_seen": "2026-08-25T06:09:05.096Z"
+    },
+    {
+      "source_url": "https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=1200&q=70",
+      "target_url": null,
+      "publisher": "images.unsplash.com",
+      "type": "referencia_editorial",
+      "status": 200,
+      "estado": "OK",
+      "redirecionado": false,
+      "final_url": "https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=1200&q=70",
+      "origens": [
+        "src/lib/categoryLocalGeo.ts"
+      ],
+      "last_seen": "2026-08-25T06:09:05.096Z"
+    },
+    {
+      "source_url": "https://support.microsoft.com/pt-br/windows/corrigir-problemas-de-conex%C3%A3o-wi-fi-no-windows-9424a1f7-6a3b-65a6-4d78-7f07eee84d2c",
+      "target_url": null,
+      "publisher": "support.microsoft.com",
+      "type": "referencia_editorial",
+      "status": 200,
+      "estado": "OK",
+      "redirecionado": true,
+      "final_url": "https://support.microsoft.com/pt-BR/Windows/Experience/Connectivity-Networking/fix-wi-fi-connection-issues-in-windows",
+      "origens": [
+        "src/lib/enriquecimento4eRedes.ts"
+      ],
+      "last_seen": "2026-08-25T06:09:05.096Z"
+    },
+    {
+      "source_url": "https://www.wi-fi.org/discover-wi-fi",
+      "target_url": null,
+      "publisher": "wi-fi.org",
+      "type": "referencia_editorial",
+      "status": 200,
+      "estado": "OK",
+      "redirecionado": true,
+      "final_url": "https://www.wi-fi.org/",
+      "origens": [
+        "src/lib/enriquecimento4eRedes.ts"
+      ],
+      "last_seen": "2026-08-25T06:09:05.096Z"
+    },
+    {
+      "source_url": "https://www.gov.br/anatel/pt-br",
+      "target_url": null,
+      "publisher": "gov.br",
+      "type": "referencia_editorial",
+      "status": 200,
+      "estado": "OK",
+      "redirecionado": false,
+      "final_url": "https://www.gov.br/anatel/pt-br",
+      "origens": [
+        "src/lib/enriquecimento4eRedes.ts"
+      ],
+      "last_seen": "2026-08-25T06:09:05.096Z"
+    },
+    {
+      "source_url": "https://www.cisa.gov/news-events/news/home-network-security",
+      "target_url": null,
+      "publisher": "cisa.gov",
+      "type": "referencia_editorial",
+      "status": 200,
+      "estado": "OK",
+      "redirecionado": false,
+      "final_url": "https://www.cisa.gov/news-events/news/home-network-security",
+      "origens": [
+        "src/lib/enriquecimento4eRedes.ts"
+      ],
+      "last_seen": "2026-08-25T06:09:05.096Z"
+    },
+    {
+      "source_url": "https://www.cisa.gov/news-events/news/securing-network-infrastructure-devices",
+      "target_url": null,
+      "publisher": "cisa.gov",
+      "type": "referencia_editorial",
+      "status": 200,
+      "estado": "OK",
+      "redirecionado": false,
+      "final_url": "https://www.cisa.gov/news-events/news/securing-network-infrastructure-devices",
+      "origens": [
+        "src/lib/enriquecimento4eRedes.ts"
+      ],
+      "last_seen": "2026-08-25T06:09:05.096Z"
+    },
+    {
+      "source_url": "https://www.cisa.gov/news-events/news/avoiding-social-engineering-and-phishing-attacks",
+      "target_url": null,
+      "publisher": "cisa.gov",
+      "type": "referencia_editorial",
+      "status": 200,
+      "estado": "OK",
+      "redirecionado": false,
+      "final_url": "https://www.cisa.gov/news-events/news/avoiding-social-engineering-and-phishing-attacks",
+      "origens": [
+        "src/lib/enriquecimento4eRedes.ts"
+      ],
+      "last_seen": "2026-08-25T06:09:05.096Z"
+    },
+    {
+      "source_url": "https://support.microsoft.com/pt-br/windows/proteja-se-contra-golpes-de-suporte-t%C3%A9cnico-2ebf91bd-f94c-2a8a-e541-f5c800d18435",
+      "target_url": null,
+      "publisher": "support.microsoft.com",
+      "type": "referencia_editorial",
+      "status": 200,
+      "estado": "OK",
+      "redirecionado": true,
+      "final_url": "https://support.microsoft.com/pt-BR/Office/protect-yourself-from-tech-support-scams",
+      "origens": [
+        "src/lib/enriquecimento4eRedes.ts"
+      ],
+      "last_seen": "2026-08-25T06:09:05.096Z"
+    },
+    {
+      "source_url": "https://www.intel.com.br/content/www/br/pt/support/articles/000005597/processors.html",
+      "target_url": null,
+      "publisher": "intel.com.br",
+      "type": "referencia_editorial",
+      "status": 200,
+      "estado": "OK",
+      "redirecionado": false,
+      "final_url": "https://www.intel.com.br/content/www/br/pt/support/articles/000005597/processors.html",
+      "origens": [
+        "src/lib/enriquecimentoAtp4a.ts"
+      ],
+      "last_seen": "2026-08-25T06:09:05.096Z"
+    },
+    {
+      "source_url": "https://www.amd.com/en/support",
+      "target_url": null,
+      "publisher": "amd.com",
+      "type": "referencia_editorial",
+      "status": 200,
+      "estado": "OK",
+      "redirecionado": true,
+      "final_url": "https://www.amd.com/en/support/download/drivers.html",
+      "origens": [
+        "src/lib/enriquecimentoAtp4a.ts"
+      ],
+      "last_seen": "2026-08-25T06:09:05.096Z"
+    },
+    {
+      "source_url": "https://nvmexpress.org/about/",
+      "target_url": null,
+      "publisher": "nvmexpress.org",
+      "type": "referencia_editorial",
+      "status": 200,
+      "estado": "OK",
+      "redirecionado": true,
+      "final_url": "https://nvmexpress.org/temp-author-6",
+      "origens": [
+        "src/lib/enriquecimentoAtp4a.ts"
+      ],
+      "last_seen": "2026-08-25T06:09:05.096Z"
+    },
+    {
+      "source_url": "https://learn.microsoft.com/pt-br/windows/security/operating-system-security/data-protection/bitlocker/",
+      "target_url": null,
+      "publisher": "learn.microsoft.com",
+      "type": "referencia_editorial",
+      "status": 200,
+      "estado": "OK",
+      "redirecionado": false,
+      "final_url": "https://learn.microsoft.com/pt-br/windows/security/operating-system-security/data-protection/bitlocker/",
+      "origens": [
+        "src/lib/enriquecimentoAtp4a.ts"
+      ],
+      "last_seen": "2026-08-25T06:09:05.096Z"
+    },
+    {
+      "source_url": "https://learn.microsoft.com/pt-br/troubleshoot/windows-client/performance/introduction-to-the-page-file",
+      "target_url": null,
+      "publisher": "learn.microsoft.com",
+      "type": "referencia_editorial",
+      "status": 200,
+      "estado": "OK",
+      "redirecionado": false,
+      "final_url": "https://learn.microsoft.com/pt-br/troubleshoot/windows-client/performance/introduction-to-the-page-file",
+      "origens": [
+        "src/lib/enriquecimentoAtp4a.ts"
+      ],
+      "last_seen": "2026-08-25T06:09:05.096Z"
+    },
+    {
+      "source_url": "https://www.backblaze.com/cloud-storage/resources/hard-drive-test-data",
+      "target_url": null,
+      "publisher": "backblaze.com",
+      "type": "referencia_editorial",
+      "status": 200,
+      "estado": "OK",
+      "redirecionado": false,
+      "final_url": "https://www.backblaze.com/cloud-storage/resources/hard-drive-test-data",
+      "origens": [
+        "src/lib/enriquecimentoAtp4a.ts"
+      ],
+      "last_seen": "2026-08-25T06:09:05.096Z"
+    },
+    {
+      "source_url": "https://learn.microsoft.com/pt-br/windows-server/administration/windows-commands/chkdsk",
+      "target_url": null,
+      "publisher": "learn.microsoft.com",
+      "type": "referencia_editorial",
+      "status": 200,
+      "estado": "OK",
+      "redirecionado": false,
+      "final_url": "https://learn.microsoft.com/pt-br/windows-server/administration/windows-commands/chkdsk",
+      "origens": [
+        "src/lib/enriquecimentoAtp4a.ts"
+      ],
+      "last_seen": "2026-08-25T06:09:05.096Z"
+    },
+    {
+      "source_url": "https://learn.microsoft.com/pt-br/lifecycle/products/",
+      "target_url": null,
+      "publisher": "learn.microsoft.com",
+      "type": "referencia_editorial",
+      "status": 200,
+      "estado": "OK",
+      "redirecionado": false,
+      "final_url": "https://learn.microsoft.com/pt-br/lifecycle/products/",
+      "origens": [
+        "src/lib/enriquecimentoAtp4a.ts"
+      ],
+      "last_seen": "2026-08-25T06:09:05.096Z"
+    },
+    {
+      "source_url": "https://www.cisa.gov/stopransomware",
+      "target_url": null,
+      "publisher": "cisa.gov",
+      "type": "referencia_editorial",
+      "status": 200,
+      "estado": "OK",
+      "redirecionado": false,
+      "final_url": "https://www.cisa.gov/stopransomware",
+      "origens": [
+        "src/lib/enriquecimentoAtp4a.ts",
+        "src/lib/enriquecimentoAtp4b.ts"
+      ],
+      "last_seen": "2026-08-25T06:09:05.096Z"
+    },
+    {
+      "source_url": "https://learn.microsoft.com/pt-br/defender-endpoint/microsoft-defender-offline",
+      "target_url": null,
+      "publisher": "learn.microsoft.com",
+      "type": "referencia_editorial",
+      "status": 200,
+      "estado": "OK",
+      "redirecionado": false,
+      "final_url": "https://learn.microsoft.com/pt-br/defender-endpoint/microsoft-defender-offline",
+      "origens": [
+        "src/lib/enriquecimentoAtp4a.ts"
+      ],
+      "last_seen": "2026-08-25T06:09:05.096Z"
+    },
+    {
+      "source_url": "https://support.microsoft.com/pt-br/windows/op%C3%A7%C3%B5es-de-inicializa%C3%A7%C3%A3o-avan%C3%A7adas-incluindo-modo-de-seguran%C3%A7a-b90e7808-80b5-a291-d4b8-1a1af602b617",
+      "target_url": null,
+      "publisher": "support.microsoft.com",
+      "type": "referencia_editorial",
+      "status": 200,
+      "estado": "OK",
+      "redirecionado": true,
+      "final_url": "https://support.microsoft.com/pt-BR/Windows/Experience/Startup-Boot/windows-startup-settings",
+      "origens": [
+        "src/lib/enriquecimentoAtp4b.ts"
+      ],
+      "last_seen": "2026-08-25T06:09:05.096Z"
+    },
+    {
+      "source_url": "https://support.microsoft.com/pt-br/windows/dicas-para-melhorar-o-desempenho-do-pc-no-windows-b3b3ef5b-5953-fb6a-2528-4bbed82fba96",
+      "target_url": null,
+      "publisher": "support.microsoft.com",
+      "type": "referencia_editorial",
+      "status": 200,
+      "estado": "OK",
+      "redirecionado": true,
+      "final_url": "https://support.microsoft.com/pt-BR/Windows/Experience/Performance-Optimization/tips-to-improve-pc-performance-in-windows",
+      "origens": [
+        "src/lib/enriquecimentoAtp4b.ts"
+      ],
+      "last_seen": "2026-08-25T06:09:05.096Z"
+    },
+    {
+      "source_url": "https://www.microsoft.com/pt-br/windows/windows-11-specifications",
+      "target_url": null,
+      "publisher": "microsoft.com",
+      "type": "referencia_editorial",
+      "status": 200,
+      "estado": "OK",
+      "redirecionado": false,
+      "final_url": "https://www.microsoft.com/pt-br/windows/windows-11-specifications",
+      "origens": [
+        "src/lib/enriquecimentoAtp4b.ts"
+      ],
+      "last_seen": "2026-08-25T06:09:05.096Z"
+    },
+    {
+      "source_url": "https://www.flickr.com/photos/10154402@N03",
+      "target_url": null,
+      "publisher": "flickr.com",
+      "type": "referencia_editorial",
+      "status": 200,
+      "estado": "OK",
+      "redirecionado": false,
+      "final_url": "https://www.flickr.com/photos/10154402@N03",
+      "origens": [
+        "src/lib/fotosLicenciadas.ts"
+      ],
+      "last_seen": "2026-08-25T06:09:05.096Z"
+    },
+    {
+      "source_url": "https://www.flickr.com/photos/10154402@N03/5325490543",
+      "target_url": null,
+      "publisher": "flickr.com",
+      "type": "referencia_editorial",
+      "status": 200,
+      "estado": "OK",
+      "redirecionado": false,
+      "final_url": "https://www.flickr.com/photos/10154402@N03/5325490543",
+      "origens": [
+        "src/lib/fotosLicenciadas.ts"
+      ],
+      "last_seen": "2026-08-25T06:09:05.096Z"
+    },
+    {
+      "source_url": "https://creativecommons.org/licenses/by/2.0/",
+      "target_url": null,
+      "publisher": "creativecommons.org",
+      "type": "referencia_editorial",
+      "status": 200,
+      "estado": "OK",
+      "redirecionado": false,
+      "final_url": "https://creativecommons.org/licenses/by/2.0/",
+      "origens": [
+        "src/lib/fotosLicenciadas.ts"
+      ],
+      "last_seen": "2026-08-25T06:09:05.096Z"
+    },
+    {
+      "source_url": "https://www.flickr.com/photos/36006949@N00",
+      "target_url": null,
+      "publisher": "flickr.com",
+      "type": "referencia_editorial",
+      "status": 200,
+      "estado": "OK",
+      "redirecionado": false,
+      "final_url": "https://www.flickr.com/photos/36006949@N00",
+      "origens": [
+        "src/lib/fotosLicenciadas.ts"
+      ],
+      "last_seen": "2026-08-25T06:09:05.096Z"
+    },
+    {
+      "source_url": "https://www.flickr.com/photos/36006949@N00/5465427706",
+      "target_url": null,
+      "publisher": "flickr.com",
+      "type": "referencia_editorial",
+      "status": 200,
+      "estado": "OK",
+      "redirecionado": false,
+      "final_url": "https://www.flickr.com/photos/36006949@N00/5465427706",
+      "origens": [
+        "src/lib/fotosLicenciadas.ts"
+      ],
+      "last_seen": "2026-08-25T06:09:05.096Z"
+    },
+    {
+      "source_url": "https://www.flickr.com/photos/36006949@N00/2508871570",
+      "target_url": null,
+      "publisher": "flickr.com",
+      "type": "referencia_editorial",
+      "status": 200,
+      "estado": "OK",
+      "redirecionado": false,
+      "final_url": "https://www.flickr.com/photos/36006949@N00/2508871570",
+      "origens": [
+        "src/lib/fotosLicenciadas.ts"
+      ],
+      "last_seen": "2026-08-25T06:09:05.096Z"
+    },
+    {
+      "source_url": "https://www.flickr.com/photos/68503235@N00",
+      "target_url": null,
+      "publisher": "flickr.com",
+      "type": "referencia_editorial",
+      "status": 200,
+      "estado": "OK",
+      "redirecionado": false,
+      "final_url": "https://www.flickr.com/photos/68503235@N00",
+      "origens": [
+        "src/lib/fotosLicenciadas.ts"
+      ],
+      "last_seen": "2026-08-25T06:09:05.096Z"
+    },
+    {
+      "source_url": "https://www.flickr.com/photos/68503235@N00/5081408605",
+      "target_url": null,
+      "publisher": "flickr.com",
+      "type": "referencia_editorial",
+      "status": 200,
+      "estado": "OK",
+      "redirecionado": false,
+      "final_url": "https://www.flickr.com/photos/68503235@N00/5081408605",
+      "origens": [
+        "src/lib/fotosLicenciadas.ts"
+      ],
+      "last_seen": "2026-08-25T06:09:05.096Z"
+    },
+    {
+      "source_url": "https://www.flickr.com/photos/115225894@N07",
+      "target_url": null,
+      "publisher": "flickr.com",
+      "type": "referencia_editorial",
+      "status": 200,
+      "estado": "OK",
+      "redirecionado": false,
+      "final_url": "https://www.flickr.com/photos/115225894@N07",
+      "origens": [
+        "src/lib/fotosLicenciadas.ts"
+      ],
+      "last_seen": "2026-08-25T06:09:05.096Z"
+    },
+    {
+      "source_url": "https://www.flickr.com/photos/115225894@N07/54385668345",
+      "target_url": null,
+      "publisher": "flickr.com",
+      "type": "referencia_editorial",
+      "status": 200,
+      "estado": "OK",
+      "redirecionado": false,
+      "final_url": "https://www.flickr.com/photos/115225894@N07/54385668345",
+      "origens": [
+        "src/lib/fotosLicenciadas.ts"
+      ],
+      "last_seen": "2026-08-25T06:09:05.096Z"
+    },
+    {
+      "source_url": "https://www.flickr.com/photos/14529257@N03",
+      "target_url": null,
+      "publisher": "flickr.com",
+      "type": "referencia_editorial",
+      "status": 200,
+      "estado": "OK",
+      "redirecionado": false,
+      "final_url": "https://www.flickr.com/photos/14529257@N03",
+      "origens": [
+        "src/lib/fotosLicenciadas.ts"
+      ],
+      "last_seen": "2026-08-25T06:09:05.096Z"
+    },
+    {
+      "source_url": "https://www.flickr.com/photos/14529257@N03/4778137965",
+      "target_url": null,
+      "publisher": "flickr.com",
+      "type": "referencia_editorial",
+      "status": 200,
+      "estado": "OK",
+      "redirecionado": false,
+      "final_url": "https://www.flickr.com/photos/14529257@N03/4778137965",
+      "origens": [
+        "src/lib/fotosLicenciadas.ts"
+      ],
+      "last_seen": "2026-08-25T06:09:05.096Z"
+    },
+    {
+      "source_url": "https://wa.me/5541999999999",
+      "target_url": null,
+      "publisher": "wa.me",
+      "type": "referencia_editorial",
+      "status": 200,
+      "estado": "OK",
+      "redirecionado": true,
+      "final_url": "https://api.whatsapp.com/send/?phone=5541999999999&text&type=phone_number&app_absent=0",
+      "origens": [
+        "src/lib/funnel/triageMigration.test.ts"
+      ],
+      "last_seen": "2026-08-25T06:09:05.096Z"
+    },
+    {
+      "source_url": "https://ipwho.is/?fields=city,region,success",
+      "target_url": null,
+      "publisher": "ipwho.is",
+      "type": "referencia_editorial",
+      "status": 200,
+      "estado": "OK",
+      "redirecionado": false,
+      "final_url": "https://ipwho.is/?fields=city,region,success",
+      "origens": [
+        "src/lib/geoContext.ts"
+      ],
+      "last_seen": "2026-08-25T06:09:05.096Z"
+    },
+    {
+      "source_url": "https://connector-gateway.lovable.dev/google_search_console",
+      "target_url": null,
+      "publisher": "connector-gateway.lovable.dev",
+      "type": "referencia_editorial",
+      "status": 404,
+      "estado": "QUEBRADO",
+      "redirecionado": false,
+      "final_url": "https://connector-gateway.lovable.dev/google_search_console",
+      "origens": [
+        "src/lib/gsc.functions.ts",
+        "src/lib/gsc.server.ts"
+      ],
+      "last_seen": "2026-08-25T06:09:05.096Z"
+    },
+    {
+      "source_url": "https://unsplash.com/license",
+      "target_url": null,
+      "publisher": "unsplash.com",
+      "type": "referencia_editorial",
+      "status": 401,
+      "estado": "ATENCAO",
+      "redirecionado": true,
+      "final_url": "https://unsplash.com/.within.website?redir=%2Flicense",
+      "origens": [
+        "src/lib/imageCredits.ts"
+      ],
+      "last_seen": "2026-08-25T06:09:05.096Z"
+    },
+    {
+      "source_url": "https://www.pexels.com/license/",
+      "target_url": null,
+      "publisher": "pexels.com",
+      "type": "referencia_editorial",
+      "status": 403,
+      "estado": "ATENCAO",
+      "redirecionado": false,
+      "final_url": "https://www.pexels.com/license/",
+      "origens": [
+        "src/lib/imageCredits.ts"
+      ],
+      "last_seen": "2026-08-25T06:09:05.096Z"
+    },
+    {
+      "source_url": "https://unsplash.com",
+      "target_url": null,
+      "publisher": "unsplash.com",
+      "type": "referencia_editorial",
+      "status": 401,
+      "estado": "ATENCAO",
+      "redirecionado": true,
+      "final_url": "https://unsplash.com/.within.website?redir=%2F",
+      "origens": [
+        "src/lib/imageCredits.ts"
+      ],
+      "last_seen": "2026-08-25T06:09:05.096Z"
+    },
+    {
+      "source_url": "https://www.pexels.com",
+      "target_url": null,
+      "publisher": "pexels.com",
+      "type": "referencia_editorial",
+      "status": 403,
+      "estado": "ATENCAO",
+      "redirecionado": true,
+      "final_url": "https://www.pexels.com/",
+      "origens": [
+        "src/lib/imageCredits.ts"
+      ],
+      "last_seen": "2026-08-25T06:09:05.096Z"
+    },
+    {
+      "source_url": "https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=600&q=70",
+      "target_url": null,
+      "publisher": "images.unsplash.com",
+      "type": "referencia_editorial",
+      "status": 200,
+      "estado": "OK",
+      "redirecionado": false,
+      "final_url": "https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=600&q=70",
+      "origens": [
+        "src/lib/images.ts"
+      ],
+      "last_seen": "2026-08-25T06:09:05.096Z"
+    },
+    {
+      "source_url": "https://images.unsplash.com/photo-1597872200969-2b65d56bd16b?auto=format&fit=crop&w=600&q=70",
+      "target_url": null,
+      "publisher": "images.unsplash.com",
+      "type": "referencia_editorial",
+      "status": 200,
+      "estado": "OK",
+      "redirecionado": false,
+      "final_url": "https://images.unsplash.com/photo-1597872200969-2b65d56bd16b?auto=format&fit=crop&w=600&q=70",
+      "origens": [
+        "src/lib/images.ts"
+      ],
+      "last_seen": "2026-08-25T06:09:05.096Z"
+    },
+    {
+      "source_url": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=600&q=70",
+      "target_url": null,
+      "publisher": "images.unsplash.com",
+      "type": "referencia_editorial",
+      "status": 200,
+      "estado": "OK",
+      "redirecionado": false,
+      "final_url": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=600&q=70",
+      "origens": [
+        "src/lib/images.ts",
+        "src/pages/servicos/ManutencaoTV.tsx"
+      ],
+      "last_seen": "2026-08-25T06:09:05.096Z"
+    },
+    {
+      "source_url": "https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=600&q=70",
+      "target_url": null,
+      "publisher": "images.unsplash.com",
+      "type": "referencia_editorial",
+      "status": 200,
+      "estado": "OK",
+      "redirecionado": false,
+      "final_url": "https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=600&q=70",
+      "origens": [
+        "src/lib/images.ts"
+      ],
+      "last_seen": "2026-08-25T06:09:05.096Z"
+    },
+    {
+      "source_url": "https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=600&q=70",
+      "target_url": null,
+      "publisher": "images.unsplash.com",
+      "type": "referencia_editorial",
+      "status": 200,
+      "estado": "OK",
+      "redirecionado": false,
+      "final_url": "https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=600&q=70",
+      "origens": [
+        "src/lib/images.ts",
+        "src/pages/servicos/ManutencaoTV.tsx"
+      ],
+      "last_seen": "2026-08-25T06:09:05.096Z"
+    },
+    {
+      "source_url": "https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=600&q=70",
+      "target_url": null,
+      "publisher": "images.unsplash.com",
+      "type": "referencia_editorial",
+      "status": 200,
+      "estado": "OK",
+      "redirecionado": false,
+      "final_url": "https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=600&q=70",
+      "origens": [
+        "src/lib/images.ts"
+      ],
+      "last_seen": "2026-08-25T06:09:05.096Z"
+    },
+    {
+      "source_url": "https://images.unsplash.com/photo-1531492746076-161ca9bcad58?auto=format&fit=crop&w=600&q=70",
+      "target_url": null,
+      "publisher": "images.unsplash.com",
+      "type": "referencia_editorial",
+      "status": 200,
+      "estado": "OK",
+      "redirecionado": false,
+      "final_url": "https://images.unsplash.com/photo-1531492746076-161ca9bcad58?auto=format&fit=crop&w=600&q=70",
+      "origens": [
+        "src/lib/images.ts"
+      ],
+      "last_seen": "2026-08-25T06:09:05.096Z"
+    },
+    {
+      "source_url": "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=600&q=70",
+      "target_url": null,
+      "publisher": "images.unsplash.com",
+      "type": "referencia_editorial",
+      "status": 200,
+      "estado": "OK",
+      "redirecionado": false,
+      "final_url": "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=600&q=70",
+      "origens": [
+        "src/lib/images.ts"
+      ],
+      "last_seen": "2026-08-25T06:09:05.096Z"
+    },
+    {
+      "source_url": "https://images.unsplash.com/photo-1557597774-9d273605dfa9?auto=format&fit=crop&w=600&q=70",
+      "target_url": null,
+      "publisher": "images.unsplash.com",
+      "type": "referencia_editorial",
+      "status": 200,
+      "estado": "OK",
+      "redirecionado": false,
+      "final_url": "https://images.unsplash.com/photo-1557597774-9d273605dfa9?auto=format&fit=crop&w=600&q=70",
+      "origens": [
+        "src/lib/images.ts"
+      ],
+      "last_seen": "2026-08-25T06:09:05.096Z"
+    },
+    {
+      "source_url": "https://images.unsplash.com/photo-1588508065123-287b28e013da?auto=format&fit=crop&w=600&q=70",
+      "target_url": null,
+      "publisher": "images.unsplash.com",
+      "type": "referencia_editorial",
+      "status": 200,
+      "estado": "OK",
+      "redirecionado": false,
+      "final_url": "https://images.unsplash.com/photo-1588508065123-287b28e013da?auto=format&fit=crop&w=600&q=70",
+      "origens": [
+        "src/lib/images.ts"
+      ],
+      "last_seen": "2026-08-25T06:09:05.096Z"
+    },
+    {
+      "source_url": "https://images.unsplash.com/photo-1587202372775-e229f172b9d7?auto=format&fit=crop&w=600&q=70",
+      "target_url": null,
+      "publisher": "images.unsplash.com",
+      "type": "referencia_editorial",
+      "status": 200,
+      "estado": "OK",
+      "redirecionado": false,
+      "final_url": "https://images.unsplash.com/photo-1587202372775-e229f172b9d7?auto=format&fit=crop&w=600&q=70",
+      "origens": [
+        "src/lib/images.ts"
+      ],
+      "last_seen": "2026-08-25T06:09:05.096Z"
+    },
+    {
+      "source_url": "https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?auto=format&fit=crop&w=600&q=70",
+      "target_url": null,
+      "publisher": "images.unsplash.com",
+      "type": "referencia_editorial",
+      "status": 200,
+      "estado": "OK",
+      "redirecionado": false,
+      "final_url": "https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?auto=format&fit=crop&w=600&q=70",
+      "origens": [
+        "src/lib/images.ts",
+        "src/pages/servicos/ManutencaoTV.tsx"
+      ],
+      "last_seen": "2026-08-25T06:09:05.096Z"
+    },
+    {
+      "source_url": "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=600&q=70",
+      "target_url": null,
+      "publisher": "images.unsplash.com",
+      "type": "referencia_editorial",
+      "status": 200,
+      "estado": "OK",
+      "redirecionado": false,
+      "final_url": "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=600&q=70",
+      "origens": [
+        "src/lib/images.ts"
+      ],
+      "last_seen": "2026-08-25T06:09:05.096Z"
+    },
+    {
+      "source_url": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=600&q=70",
+      "target_url": null,
+      "publisher": "images.unsplash.com",
+      "type": "referencia_editorial",
+      "status": 200,
+      "estado": "OK",
+      "redirecionado": false,
+      "final_url": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=600&q=70",
+      "origens": [
+        "src/lib/images.ts"
+      ],
+      "last_seen": "2026-08-25T06:09:05.096Z"
+    },
+    {
+      "source_url": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=600&q=70",
+      "target_url": null,
+      "publisher": "images.unsplash.com",
+      "type": "referencia_editorial",
+      "status": 200,
+      "estado": "OK",
+      "redirecionado": false,
+      "final_url": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=600&q=70",
+      "origens": [
+        "src/lib/images.ts"
+      ],
+      "last_seen": "2026-08-25T06:09:05.096Z"
+    },
+    {
+      "source_url": "https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?auto=format&fit=crop&w=600&q=70",
+      "target_url": null,
+      "publisher": "images.unsplash.com",
+      "type": "referencia_editorial",
+      "status": 200,
+      "estado": "OK",
+      "redirecionado": false,
+      "final_url": "https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?auto=format&fit=crop&w=600&q=70",
+      "origens": [
+        "src/lib/images.ts"
+      ],
+      "last_seen": "2026-08-25T06:09:05.096Z"
+    },
+    {
+      "source_url": "https://images.unsplash.com/photo-1531545514256-b1400bc00f31?auto=format&fit=crop&w=600&q=70",
+      "target_url": null,
+      "publisher": "images.unsplash.com",
+      "type": "referencia_editorial",
+      "status": 200,
+      "estado": "OK",
+      "redirecionado": false,
+      "final_url": "https://images.unsplash.com/photo-1531545514256-b1400bc00f31?auto=format&fit=crop&w=600&q=70",
+      "origens": [
+        "src/lib/images.ts"
+      ],
+      "last_seen": "2026-08-25T06:09:05.096Z"
+    },
+    {
+      "source_url": "https://images.unsplash.com/photo-1601944177325-f8867652837f?auto=format&fit=crop&w=600&q=70",
+      "target_url": null,
+      "publisher": "images.unsplash.com",
+      "type": "referencia_editorial",
+      "status": 200,
+      "estado": "OK",
+      "redirecionado": false,
+      "final_url": "https://images.unsplash.com/photo-1601944177325-f8867652837f?auto=format&fit=crop&w=600&q=70",
+      "origens": [
+        "src/lib/images.ts"
+      ],
+      "last_seen": "2026-08-25T06:09:05.096Z"
+    },
+    {
+      "source_url": "https://api.whatsapp.com/send",
+      "target_url": null,
+      "publisher": "api.whatsapp.com",
+      "type": "referencia_editorial",
+      "status": 200,
+      "estado": "OK",
+      "redirecionado": false,
+      "final_url": "https://api.whatsapp.com/send",
+      "origens": [
+        "src/lib/problemasWaTemplates.test.ts",
+        "src/lib/problemasWaTemplates.ts"
+      ],
+      "last_seen": "2026-08-25T06:09:05.096Z"
+    },
+    {
+      "source_url": "https://developers.google.com/maps/documentation/places/web-service/place-id",
+      "target_url": null,
+      "publisher": "developers.google.com",
+      "type": "referencia_editorial",
+      "status": 200,
+      "estado": "OK",
+      "redirecionado": false,
+      "final_url": "https://developers.google.com/maps/documentation/places/web-service/place-id",
+      "origens": [
+        "src/lib/reviewRequest.ts"
+      ],
+      "last_seen": "2026-08-25T06:09:05.096Z"
+    },
+    {
+      "source_url": "https://g.page/r/CQ_TECNICO_CURITIBA_PLACE_ID/review",
+      "target_url": null,
+      "publisher": "g.page",
+      "type": "referencia_editorial",
+      "status": 200,
+      "estado": "OK",
+      "redirecionado": true,
+      "final_url": "https://www.google.com/",
+      "origens": [
+        "src/lib/reviewRequest.ts"
+      ],
+      "last_seen": "2026-08-25T06:09:05.096Z"
+    },
+    {
+      "source_url": "https://sentry.io",
+      "target_url": null,
+      "publisher": "sentry.io",
+      "type": "referencia_editorial",
+      "status": 200,
+      "estado": "OK",
+      "redirecionado": true,
+      "final_url": "https://sentry.io/welcome/",
+      "origens": [
+        "src/lib/sentryDrilldown.ts"
+      ],
+      "last_seen": "2026-08-25T06:09:05.096Z"
+    },
+    {
+      "source_url": "https://wa.me/5541997086380?text=oi",
+      "target_url": null,
+      "publisher": "wa.me",
+      "type": "referencia_editorial",
+      "status": 200,
+      "estado": "OK",
+      "redirecionado": true,
+      "final_url": "https://api.whatsapp.com/send/?phone=5541997086380&text=oi&type=phone_number&app_absent=0",
+      "origens": [
+        "src/lib/whatsappUtm.test.ts"
+      ],
+      "last_seen": "2026-08-25T06:09:05.096Z"
+    },
+    {
+      "source_url": "https://wa.me/5541997086380?text=oi&utm_source=site&utm_medium=cta&utm_campaign=home&click_location=hero",
+      "target_url": null,
+      "publisher": "wa.me",
+      "type": "referencia_editorial",
+      "status": 200,
+      "estado": "OK",
+      "redirecionado": true,
+      "final_url": "https://api.whatsapp.com/send/?phone=5541997086380&text=oi&type=phone_number&app_absent=0&utm_campaign=home&utm_source=site",
+      "origens": [
+        "src/lib/whatsappUtm.test.ts"
+      ],
+      "last_seen": "2026-08-25T06:09:05.096Z"
+    },
+    {
+      "source_url": "https://x",
+      "target_url": null,
+      "publisher": "x",
+      "type": "referencia_editorial",
+      "status": null,
+      "estado": "FALHA",
+      "redirecionado": false,
+      "final_url": null,
+      "origens": [
+        "src/lib/whatsappUtm.ts"
+      ],
+      "last_seen": "2026-08-25T06:09:05.096Z"
+    },
+    {
+      "source_url": "https://www.google.com/settings/ads",
+      "target_url": null,
+      "publisher": "google.com",
+      "type": "referencia_editorial",
+      "status": 200,
+      "estado": "OK",
+      "redirecionado": true,
+      "final_url": "https://www.google.com/ads/preferences/html/blocked-cookies.html",
+      "origens": [
+        "src/pages/PoliticaCookiesAnuncios.tsx",
+        "src/pages/PoliticaPrivacidade.tsx"
+      ],
+      "last_seen": "2026-08-25T06:09:05.096Z"
+    },
+    {
+      "source_url": "https://www.aboutads.info/choices/",
+      "target_url": null,
+      "publisher": "aboutads.info",
+      "type": "referencia_editorial",
+      "status": 429,
+      "estado": "ATENCAO",
+      "redirecionado": true,
+      "final_url": "https://optout.aboutads.info/",
+      "origens": [
+        "src/pages/PoliticaCookiesAnuncios.tsx",
+        "src/pages/PoliticaPrivacidade.tsx"
+      ],
+      "last_seen": "2026-08-25T06:09:05.096Z"
+    },
+    {
+      "source_url": "https://pt.wikipedia.org/wiki/Almirante_Tamandar%C3%A9",
+      "target_url": null,
+      "publisher": "pt.wikipedia.org",
+      "type": "referencia_editorial",
+      "status": 200,
+      "estado": "OK",
+      "redirecionado": false,
+      "final_url": "https://pt.wikipedia.org/wiki/Almirante_Tamandar%C3%A9",
+      "origens": [
+        "src/pages/TecnicoInformaticaAlmiranteTamandare.tsx"
+      ],
+      "last_seen": "2026-08-25T06:09:05.096Z"
+    },
+    {
+      "source_url": "https://pt.wikipedia.org/wiki/Campo_Magro",
+      "target_url": null,
+      "publisher": "pt.wikipedia.org",
+      "type": "referencia_editorial",
+      "status": 200,
+      "estado": "OK",
+      "redirecionado": false,
+      "final_url": "https://pt.wikipedia.org/wiki/Campo_Magro",
+      "origens": [
+        "src/pages/TecnicoInformaticaCampoMagro.tsx"
+      ],
+      "last_seen": "2026-08-25T06:09:05.096Z"
+    },
+    {
+      "source_url": "https://pt.wikipedia.org/wiki/Fazenda_Rio_Grande",
+      "target_url": null,
+      "publisher": "pt.wikipedia.org",
+      "type": "referencia_editorial",
+      "status": 200,
+      "estado": "OK",
+      "redirecionado": false,
+      "final_url": "https://pt.wikipedia.org/wiki/Fazenda_Rio_Grande",
+      "origens": [
+        "src/pages/TecnicoInformaticaFazendaRioGrande.tsx"
+      ],
+      "last_seen": "2026-08-25T06:09:05.096Z"
+    },
+    {
+      "source_url": "https://pt.wikipedia.org/wiki/Piraquara",
+      "target_url": null,
+      "publisher": "pt.wikipedia.org",
+      "type": "referencia_editorial",
+      "status": 200,
+      "estado": "OK",
+      "redirecionado": false,
+      "final_url": "https://pt.wikipedia.org/wiki/Piraquara",
+      "origens": [
+        "src/pages/TecnicoInformaticaPiraquara.tsx"
+      ],
+      "last_seen": "2026-08-25T06:09:05.096Z"
+    },
+    {
+      "source_url": "https://pt.wikipedia.org/wiki/Quatro_Barras",
+      "target_url": null,
+      "publisher": "pt.wikipedia.org",
+      "type": "referencia_editorial",
+      "status": 200,
+      "estado": "OK",
+      "redirecionado": false,
+      "final_url": "https://pt.wikipedia.org/wiki/Quatro_Barras",
+      "origens": [
+        "src/pages/TecnicoInformaticaQuatroBarras.tsx"
+      ],
+      "last_seen": "2026-08-25T06:09:05.096Z"
+    },
+    {
+      "source_url": "https://…",
+      "target_url": null,
+      "publisher": null,
+      "type": "referencia_editorial",
+      "status": null,
+      "estado": "FALHA",
+      "redirecionado": false,
+      "final_url": null,
+      "origens": [
+        "src/pages/admin/AdminCasos.tsx"
+      ],
+      "last_seen": "2026-08-25T06:09:05.096Z"
+    },
+    {
+      "source_url": "https://images.unsplash.com/photo-1580982327559-c1202864eb05?auto=format&fit=crop&w=600&q=70",
+      "target_url": null,
+      "publisher": "images.unsplash.com",
+      "type": "referencia_editorial",
+      "status": 200,
+      "estado": "OK",
+      "redirecionado": false,
+      "final_url": "https://images.unsplash.com/photo-1580982327559-c1202864eb05?auto=format&fit=crop&w=600&q=70",
+      "origens": [
+        "src/pages/servicos/ManutencaoTV.tsx"
+      ],
+      "last_seen": "2026-08-25T06:09:05.096Z"
+    },
+    {
+      "source_url": "https://images.unsplash.com/photo-1552975084-6e027cd345c2?auto=format&fit=crop&w=600&q=70",
+      "target_url": null,
+      "publisher": "images.unsplash.com",
+      "type": "referencia_editorial",
+      "status": 200,
+      "estado": "OK",
+      "redirecionado": false,
+      "final_url": "https://images.unsplash.com/photo-1552975084-6e027cd345c2?auto=format&fit=crop&w=600&q=70",
+      "origens": [
+        "src/pages/servicos/ManutencaoTV.tsx"
+      ],
+      "last_seen": "2026-08-25T06:09:05.096Z"
+    },
+    {
+      "source_url": "https://images.unsplash.com/photo-1461151304267-38535e780c79?auto=format&fit=crop&w=600&q=70",
+      "target_url": null,
+      "publisher": "images.unsplash.com",
+      "type": "referencia_editorial",
+      "status": 200,
+      "estado": "OK",
+      "redirecionado": false,
+      "final_url": "https://images.unsplash.com/photo-1461151304267-38535e780c79?auto=format&fit=crop&w=600&q=70",
+      "origens": [
+        "src/pages/servicos/ManutencaoTV.tsx"
+      ],
+      "last_seen": "2026-08-25T06:09:05.096Z"
+    },
+    {
+      "source_url": "https://www.googletagmanager.com",
+      "target_url": null,
+      "publisher": "googletagmanager.com",
+      "type": "referencia_editorial",
+      "status": 404,
+      "estado": "QUEBRADO",
+      "redirecionado": true,
+      "final_url": "https://www.googletagmanager.com/",
+      "origens": [
+        "src/routes/__root.tsx"
+      ],
+      "last_seen": "2026-08-25T06:09:05.096Z"
+    },
+    {
+      "source_url": "https://www.google-analytics.com",
+      "target_url": null,
+      "publisher": "google-analytics.com",
+      "type": "referencia_editorial",
+      "status": 200,
+      "estado": "OK",
+      "redirecionado": true,
+      "final_url": "https://marketingplatform.google.com/about/analytics/",
+      "origens": [
+        "src/routes/__root.tsx"
+      ],
+      "last_seen": "2026-08-25T06:09:05.096Z"
+    },
+    {
+      "source_url": "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3762170279587706",
+      "target_url": null,
+      "publisher": "pagead2.googlesyndication.com",
+      "type": "referencia_editorial",
+      "status": 200,
+      "estado": "OK",
+      "redirecionado": false,
+      "final_url": "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3762170279587706",
+      "origens": [
+        "src/routes/__root.tsx"
+      ],
+      "last_seen": "2026-08-25T06:09:05.096Z"
+    }
+  ],
+  "dominios": [
+    {
+      "referring_domain": "commons.wikimedia.org",
+      "links": 27,
+      "quebrados": 0
+    },
+    {
+      "referring_domain": "images.unsplash.com",
+      "links": 25,
+      "quebrados": 0
+    },
+    {
+      "referring_domain": "flickr.com",
+      "links": 11,
+      "quebrados": 0
+    },
+    {
+      "referring_domain": "learn.microsoft.com",
+      "links": 9,
+      "quebrados": 0
+    },
+    {
+      "referring_domain": "support.microsoft.com",
+      "links": 9,
+      "quebrados": 0
+    },
+    {
+      "referring_domain": "cisa.gov",
+      "links": 6,
+      "quebrados": 0
+    },
+    {
+      "referring_domain": "pt.wikipedia.org",
+      "links": 5,
+      "quebrados": 0
+    },
+    {
+      "referring_domain": "precisodeum.com.br",
+      "links": 4,
+      "quebrados": 0
+    },
+    {
+      "referring_domain": "google.com",
+      "links": 3,
+      "quebrados": 1
+    },
+    {
+      "referring_domain": "download.docker.com",
+      "links": 3,
+      "quebrados": 0
+    },
+    {
+      "referring_domain": "wi-fi.org",
+      "links": 3,
+      "quebrados": 0
+    },
+    {
+      "referring_domain": "wa.me",
+      "links": 3,
+      "quebrados": 0
+    },
+    {
+      "referring_domain": "exemplo.com",
+      "links": 2,
+      "quebrados": 0
+    },
+    {
+      "referring_domain": "repo.exemplo.com",
+      "links": 2,
+      "quebrados": 0
+    },
+    {
+      "referring_domain": "gov.br",
+      "links": 2,
+      "quebrados": 0
+    },
+    {
+      "referring_domain": "unsplash.com",
+      "links": 2,
+      "quebrados": 0
+    },
+    {
+      "referring_domain": "pexels.com",
+      "links": 2,
+      "quebrados": 0
+    },
+    {
+      "referring_domain": "analytics.google.com",
+      "links": 1,
+      "quebrados": 0
+    },
+    {
+      "referring_domain": "ads.google.com",
+      "links": 1,
+      "quebrados": 0
+    },
+    {
+      "referring_domain": "developers.facebook.com",
+      "links": 1,
+      "quebrados": 0
+    },
+    {
+      "referring_domain": "cards-dev.twitter.com",
+      "links": 1,
+      "quebrados": 0
+    },
+    {
+      "referring_domain": "linkedin.com",
+      "links": 1,
+      "quebrados": 0
+    },
+    {
+      "referring_domain": "dl.google.com",
+      "links": 1,
+      "quebrados": 0
+    },
+    {
+      "referring_domain": "flathub.org",
+      "links": 1,
+      "quebrados": 0
+    },
+    {
+      "referring_domain": "ip-do-servidor",
+      "links": 1,
+      "quebrados": 0
+    },
+    {
+      "referring_domain": "raw.githubusercontent.com",
+      "links": 1,
+      "quebrados": 0
+    },
+    {
+      "referring_domain": "192.168.1.1",
+      "links": 1,
+      "quebrados": 0
+    },
+    {
+      "referring_domain": "computer.org",
+      "links": 1,
+      "quebrados": 0
+    },
+    {
+      "referring_domain": "cartilha.cert.br",
+      "links": 1,
+      "quebrados": 0
+    },
+    {
+      "referring_domain": "exemplo.com.br",
+      "links": 1,
+      "quebrados": 0
+    },
+    {
+      "referring_domain": "documentation.libreoffice.org",
+      "links": 1,
+      "quebrados": 0
+    },
+    {
+      "referring_domain": "fundacaobradesco.org.br",
+      "links": 1,
+      "quebrados": 0
+    },
+    {
+      "referring_domain": "pt.khanacademy.org",
+      "links": 1,
+      "quebrados": 0
+    },
+    {
+      "referring_domain": "code.org",
+      "links": 1,
+      "quebrados": 0
+    },
+    {
+      "referring_domain": "lovable.dev",
+      "links": 1,
+      "quebrados": 0
+    },
+    {
+      "referring_domain": "csrc.nist.gov",
+      "links": 1,
+      "quebrados": 1
+    },
+    {
+      "referring_domain": "intel.com.br",
+      "links": 1,
+      "quebrados": 0
+    },
+    {
+      "referring_domain": "amd.com",
+      "links": 1,
+      "quebrados": 0
+    },
+    {
+      "referring_domain": "nvmexpress.org",
+      "links": 1,
+      "quebrados": 0
+    },
+    {
+      "referring_domain": "backblaze.com",
+      "links": 1,
+      "quebrados": 0
+    },
+    {
+      "referring_domain": "microsoft.com",
+      "links": 1,
+      "quebrados": 0
+    },
+    {
+      "referring_domain": "creativecommons.org",
+      "links": 1,
+      "quebrados": 0
+    },
+    {
+      "referring_domain": "ipwho.is",
+      "links": 1,
+      "quebrados": 0
+    },
+    {
+      "referring_domain": "connector-gateway.lovable.dev",
+      "links": 1,
+      "quebrados": 1
+    },
+    {
+      "referring_domain": "api.whatsapp.com",
+      "links": 1,
+      "quebrados": 0
+    },
+    {
+      "referring_domain": "developers.google.com",
+      "links": 1,
+      "quebrados": 0
+    },
+    {
+      "referring_domain": "g.page",
+      "links": 1,
+      "quebrados": 0
+    },
+    {
+      "referring_domain": "sentry.io",
+      "links": 1,
+      "quebrados": 0
+    },
+    {
+      "referring_domain": "x",
+      "links": 1,
+      "quebrados": 0
+    },
+    {
+      "referring_domain": "aboutads.info",
+      "links": 1,
+      "quebrados": 0
+    },
+    {
+      "referring_domain": "googletagmanager.com",
+      "links": 1,
+      "quebrados": 1
+    },
+    {
+      "referring_domain": "google-analytics.com",
+      "links": 1,
+      "quebrados": 0
+    },
+    {
+      "referring_domain": "pagead2.googlesyndication.com",
+      "links": 1,
+      "quebrados": 0
+    }
+  ],
+  "resumo": {
+    "links_verificados": 155,
+    "ok": 132,
+    "atencao": 9,
+    "quebrados": 4,
+    "timeout": 10,
+    "perfis_manual_required": 1,
+    "p1_pendentes": 1,
+    "mencoes_sem_link": 0,
+    "referring_domains_5b": 108
+  }
+}
