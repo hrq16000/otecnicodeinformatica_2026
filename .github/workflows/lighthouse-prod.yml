@@ -19,13 +19,13 @@ jobs:
         run: sleep 60
       - name: Run Lighthouse against production (mobile)
         run: |
-          lighthouse https://tecnicocuritiba.com.br/ \
+          lighthouse https://otecnicodeinformatica.com.br/ \
             --output=json --output=html \
             --output-path=./lh-mobile \
             --form-factor=mobile --quiet --chrome-flags="--headless --no-sandbox" || true
       - name: Run Lighthouse against production (desktop)
         run: |
-          lighthouse https://tecnicocuritiba.com.br/ \
+          lighthouse https://otecnicodeinformatica.com.br/ \
             --output=json --output=html \
             --output-path=./lh-desktop \
             --preset=desktop --quiet --chrome-flags="--headless --no-sandbox" || true

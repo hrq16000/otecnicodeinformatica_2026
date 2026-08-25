@@ -13,14 +13,25 @@ import type {
  * próprios títulos, tabela e itens em src/lib/cluster*.ts.
  */
 
-export const RespostaRapida = ({ texto }: { texto: string }) => (
-  <section className="mt-8 rounded-xl border border-accent/40 bg-accent/5 p-5" aria-labelledby="resposta-rapida">
-    <h2 id="resposta-rapida" className="font-heading text-xl font-bold text-foreground">
-      Resposta rápida
+export const RespostaRapida = ({
+  texto,
+  titulo = "Resposta rápida",
+  id = "resposta-rapida",
+}: {
+  texto: string;
+  /** Rótulo do bloco. Rotas com mais de um bloco usam títulos distintos
+   *  para não repetir o mesmo H2 na mesma página (gate check:geo). */
+  titulo?: string;
+  id?: string;
+}) => (
+  <section className="mt-8 rounded-xl border border-accent/40 bg-accent/5 p-5" aria-labelledby={id}>
+    <h2 id={id} className="font-heading text-xl font-bold text-foreground">
+      {titulo}
     </h2>
     <p className="mt-2 text-base leading-relaxed text-muted-foreground">{texto}</p>
   </section>
 );
+
 
 const FechoLink = ({ fecho }: { fecho: FechoContextual }) => (
   <p className="mt-4 text-sm leading-relaxed text-muted-foreground">

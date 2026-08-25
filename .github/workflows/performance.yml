@@ -1,0 +1,39 @@
+name: performance-servicos
+
+# Budgets de performance por rota de serviço (Rodada 4F).
+# Bloqueia o merge quando LCP, CLS ou TBT (proxy de INP em laboratório)
+# regride acima do orçamento definido em lighthouserc.servicos.json.
+
+on:
+  pull_request:
+    paths:
+      - "src/**"
+      - "public/**"
+      - "vite.config.ts"
+      - "lighthouserc.servicos.json"
+      - ".github/workflows/performance.yml"
+  workflow_dispatch:
+
+jobs:
+  budgets:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: npm
+      - run: npm ci
+      - run: npm run build
+        env:
+          VITE_SITE_DOMAIN: https://otecnicodeinformatica.com.br
+      - name: Lighthouse CI — budgets por rota de serviço
+        run: npx --yes @lhci/cli@0.14.x autorun --config=lighthouserc.servicos.json
+      - name: Publicar relatórios
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: lhci-servicos
+          path: reports/lhci-servicos
+          if-no-files-found: ignore

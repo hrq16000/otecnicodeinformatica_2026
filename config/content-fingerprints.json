@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-08-25T03:19:03.805Z",
+  "geradoEm": "2026-08-25T03:54:16.473Z",
   "dist": "./dist",
   "rotas": {
     "/": {
@@ -23,7 +23,7 @@
       "origem": "hash-change"
     },
     "/atendimento-remoto": {
-      "hash": "a54551d1975b",
+      "hash": "b1c2e73e4e7a",
       "lastmod": "2026-08-25",
       "origem": "hash-change"
     },
@@ -363,7 +363,7 @@
       "origem": "hash-change"
     },
     "/equipamentos/roteador": {
-      "hash": "9308022b0000",
+      "hash": "9b0d62abe423",
       "lastmod": "2026-08-25",
       "origem": "hash-change"
     },
@@ -458,7 +458,7 @@
       "origem": "bootstrap"
     },
     "/problemas/wifi-instavel": {
-      "hash": "e7f7b8d54396",
+      "hash": "d68703c486f3",
       "lastmod": "2026-08-25",
       "origem": "hash-change"
     },
@@ -618,7 +618,7 @@
       "origem": "hash-change"
     },
     "/servicos/redes-e-wifi": {
-      "hash": "855b70770a5d",
+      "hash": "29c2a00fd1f5",
       "lastmod": "2026-08-25",
       "origem": "hash-change"
     },
@@ -718,7 +718,7 @@
       "origem": "hash-change"
     },
     "/solucoes/diagnostico": {
-      "hash": "c8e4129fde04",
+      "hash": "f43da6ad7eff",
       "lastmod": "2026-08-25",
       "origem": "hash-change"
     },
