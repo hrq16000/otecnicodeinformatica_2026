@@ -17,6 +17,7 @@ import { Footer } from "@/components/Footer";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import { siteConfig, whatsappLink, absoluteUrl } from "@/lib/siteConfig";
 import { trackPageView, trackCTAClick } from "@/lib/analytics";
+import { BlocosLocal4c } from "@/components/local/BlocosLocal4c";
 import {
   SERVICOS_CANONICOS,
   PROCESSO_ATENDIMENTO,
