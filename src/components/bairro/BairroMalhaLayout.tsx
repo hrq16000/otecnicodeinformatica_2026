@@ -53,9 +53,7 @@ export const BairroMalhaLayout = ({ bairro }: { bairro: BairroMalha }) => {
   const path = bairro.path;
   const titulo = tituloBairro(bairro);
   const descricao = descricaoBairro(bairro);
-  const waHref = whatsappLink(
-    `Olá! Preciso de assistência técnica de informática no ${bairro.nome} (${bairro.cidade}).`,
-  );
+  const waHref = whatsappLink(mensagemBairro(bairro));
 
   useEffect(() => {
     trackPageView(path, titulo);
