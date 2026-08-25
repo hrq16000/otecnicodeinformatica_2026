@@ -151,10 +151,29 @@ const dataCurta = (iso?: string | null) => (iso ? new Date(iso).toLocaleString("
 const slugId = (path: string) => path.replace(/[^a-z0-9]+/gi, "-").replace(/^-|-$/g, "") || "home";
 
 
+/** Snapshot da observação 2 (rodada 5A) — gerado fora do runtime. */
+interface ObservacaoCohorts {
+  geradoEm: string;
+  searchConsole?: string;
+  cohorts: {
+    id: string;
+    rotulo: string;
+    urls: number;
+    crawledPosMudanca: number;
+    indexed: number;
+    crawledNotIndexed: number;
+    impressoes28d: number | string;
+    cliques28d: number | string;
+    decisao: string;
+  }[];
+  vereditos?: Record<string, unknown>;
+}
+
 const AdminIndexacao = () => {
   const [dados, setDados] = useState<StatusIndexacao | null>(null);
   const [rich, setRich] = useState<MonitorRichResults | null>(null);
   const [diff, setDiff] = useState<StatusSsrDiff | null>(null);
+  const [cohorts, setCohorts] = useState<ObservacaoCohorts | null>(null);
   const [erro, setErro] = useState<string | null>(null);
   const marcos = useMemo(() => (dados ? agenda(dados.geradoEm) : []), [dados]);
   const richPorPath = useMemo(
@@ -179,6 +198,10 @@ const AdminIndexacao = () => {
       .then((r) => (r.ok ? r.json() : null))
       .then(setDiff)
       .catch(() => setDiff(null));
+    fetch("/observacao-2-cohorts.json", { cache: "no-store" })
+      .then((r) => (r.ok ? r.json() : null))
+      .then(setCohorts)
+      .catch(() => setCohorts(null));
   }, []);
 
 
