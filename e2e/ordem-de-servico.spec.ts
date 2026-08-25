@@ -6,47 +6,60 @@ import { expect, test } from "@playwright/test";
  * WhatsApp e restauração do rascunho após recarregar.
  */
 
-const preencherEstavel = async (
+const preencher = async (
   page: import("@playwright/test").Page,
   equipamento: string,
   defeito: string,
 ) => {
-  // O bundle da rota chega depois do SSR e remonta a árvore: só damos o
-  // formulário por preenchido quando os valores sobrevivem à remontagem.
-  await expect(async () => {
-    await page.getByLabel("Seu nome").fill("Cliente Teste");
-    await page.getByLabel("Equipamento", { exact: true }).fill(equipamento);
-    await page.getByLabel("O que está acontecendo").fill(defeito);
-    await page.waitForTimeout(2500);
-    await expect(page.getByLabel("Equipamento", { exact: true })).toHaveValue(equipamento, {
-      timeout: 2000,
-    });
-    await expect(page.getByLabel("O que está acontecendo")).toHaveValue(defeito, { timeout: 2000 });
-  }).toPass({ timeout: 45_000 });
+  // O buffer de pré-hidratação garante que o que é digitado antes do React
+  // assumir o DOM seja reaplicado: preencher direto tem de bastar.
+  await page.getByLabel("Seu nome").fill("Cliente Teste");
+  await page.getByLabel("Equipamento", { exact: true }).fill(equipamento);
+  await page.getByLabel("O que está acontecendo").fill(defeito);
+  await expect(page.getByLabel("Equipamento", { exact: true })).toHaveValue(equipamento);
+  await expect(page.getByLabel("O que está acontecendo")).toHaveValue(defeito);
 };
 
-const preencher = preencherEstavel;
-
 const aceitarTudo = async (page: import("@playwright/test").Page) => {
-  // Cada aceite vive dentro de um item do acordeão: abrir, ler, marcar.
-  const gatilhos = page.locator('[data-testid="os-termos"] button[data-state]');
-  const total = await gatilhos.count();
-  for (let i = 0; i < total; i += 1) {
-    const gatilho = gatilhos.nth(i);
-    if ((await gatilho.getAttribute("data-state")) === "closed") await gatilho.click();
-  }
-  const caixas = page.locator('[id^="aceite-"]');
-  const quantidade = await caixas.count();
-  for (let i = 0; i < quantidade; i += 1) {
-    const caixa = caixas.nth(i);
-    await caixa.scrollIntoViewIfNeeded();
-    await caixa.click();
-  }
+  // O acordeão só reage com o React ativo, e a lista de blocos muda junto com
+  // a modalidade: esperamos o sinal real de hidratação (nunca tempo fixo) e
+  // reavaliamos a lista a cada passo, até não restar bloco fechado nem aceite.
+  await page.locator('html[data-hydrated="1"]').waitFor({ state: "attached" });
+  const termos = page.getByTestId("os-termos");
+  await expect(termos.locator("button[data-state]").first()).toBeVisible();
+
+  await expect(async () => {
+    const fechados = termos.locator('button[data-state="closed"]');
+    const total = await fechados.count();
+    for (let i = 0; i < total; i += 1) await fechados.first().click();
+    await expect(termos.locator('button[data-state="closed"]')).toHaveCount(0, { timeout: 2000 });
+  }).toPass({ timeout: 20_000 });
+
+  await expect(async () => {
+    const pendentes = page.locator('[id^="aceite-"][data-state="unchecked"]');
+    const total = await pendentes.count();
+    for (let i = 0; i < total; i += 1) {
+      const caixa = pendentes.first();
+      await caixa.scrollIntoViewIfNeeded();
+      await caixa.click();
+    }
+    await expect(page.locator('[id^="aceite-"][data-state="unchecked"]')).toHaveCount(0, {
+      timeout: 2000,
+    });
+  }).toPass({ timeout: 20_000 });
 };
 
 test.beforeEach(async ({ page }) => {
   await page.goto("/ordem-de-servico");
-  await page.evaluate(() => window.localStorage.removeItem("os_draft_v1"));
+  await page.evaluate(() => {
+    window.localStorage.removeItem("os_draft_v1");
+    // O banner de consentimento cobre o rodapé no viewport mobile: registramos
+    // uma escolha prévia para testar a O.S., não o banner.
+    window.localStorage.setItem(
+      "lgpd_consent_v2",
+      JSON.stringify({ analytics: false, ads: false, version: "2026-08-08", at: Date.now() }),
+    );
+  });
   await page.reload();
 });
 
@@ -126,7 +139,6 @@ test("recarregar a página restaura o rascunho e o código já gerado", async ({
 });
 
 test("consulta por código rejeita formato inválido", async ({ page }) => {
-  await page.waitForTimeout(3000);
   await page.getByRole("tab", { name: /Consultar O.S/i }).click();
   await page.getByLabel("Código único da O.S").fill("1234");
   await page.getByRole("button", { name: /^Consultar$/ }).click();

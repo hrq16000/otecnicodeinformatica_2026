@@ -21,6 +21,7 @@ import {
 } from "@/lib/os/modalidadeOs";
 import { ConsultaOsPorCodigo } from "@/components/os/ConsultaOsPorCodigo";
 import { saveOsRecord } from "@/lib/osRegistry";
+import { abaPorDeepLink, consumirIntencaoOs } from "@/lib/os/osPrehydration";
 
 interface OsForm {
   nome: string;
@@ -47,6 +48,41 @@ const OrdemDeServico = () => {
   const [aceitos, setAceitos] = useState<Record<string, boolean>>({});
   const [codigo, setCodigo] = useState<string | null>(null);
   const [restaurado, setRestaurado] = useState(false);
+  const [aba, setAba] = useState<"abrir" | "consultar">("abrir");
+
+  // Pré-hidratação: o que foi digitado/clicado antes do React assumir o DOM
+  // é reaplicado assim que o componente monta — nada se perde na hidratação.
+  useEffect(() => {
+    const pre = consumirIntencaoOs();
+    const alvo = pre?.aba ?? abaPorDeepLink();
+    if (alvo) setAba(alvo);
+    if (!pre) return;
+
+    const mapa: Record<string, keyof OsForm> = {
+      "os-nome": "nome",
+      "os-local": "local",
+      "os-equip": "equipamento",
+      "os-modelo": "marcaModelo",
+      "os-acess": "acessorios",
+      "os-problema": "problema",
+    };
+    const temCampo = Object.keys(pre.campos).length > 0 || Boolean(pre.radios.liga);
+    if (temCampo) {
+      setForm((p) => {
+        const proximo = { ...p };
+        for (const [id, chave] of Object.entries(mapa)) {
+          const valor = pre.campos[id];
+          if (typeof valor === "string" && valor.trim()) {
+            (proximo as Record<string, string>)[chave] = valor;
+          }
+        }
+        if (pre.radios.liga) proximo.liga = pre.radios.liga;
+        return proximo;
+      });
+    }
+    if (Object.keys(pre.aceites).length) setAceitos((p) => ({ ...p, ...pre.aceites }));
+  }, []);
+
 
   // Rascunho local: recarregar a página não pode apagar o que já foi digitado.
   useEffect(() => {
@@ -193,10 +229,14 @@ const OrdemDeServico = () => {
           Abra uma nova OS com as condições já alinhadas ou consulte uma existente pelo código único.
         </p>
 
-        <Tabs defaultValue="abrir" className="mt-8">
+        <Tabs
+          value={aba}
+          onValueChange={(v) => setAba(v === "consultar" ? "consultar" : "abrir")}
+          className="mt-8"
+        >
           <TabsList className="grid w-full grid-cols-2 sm:w-auto sm:inline-grid">
-            <TabsTrigger value="abrir">Abrir O.S</TabsTrigger>
-            <TabsTrigger value="consultar">Consultar O.S</TabsTrigger>
+            <TabsTrigger value="abrir" data-os-tab="abrir">Abrir O.S</TabsTrigger>
+            <TabsTrigger value="consultar" data-os-tab="consultar">Consultar O.S</TabsTrigger>
           </TabsList>
 
           {/* ── ABRIR ─────────────────────────────────────────── */}
