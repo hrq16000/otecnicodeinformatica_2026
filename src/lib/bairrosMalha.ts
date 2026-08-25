@@ -220,15 +220,17 @@ export function bairrosIrmaos(bairro: BairroMalha): BairroMalha[] {
 }
 
 /** Serviços principais que cada página de bairro distribui em grade. */
+// Destinos precisam existir em `src/routes/**` — o gate `check:internal-links`
+// é fail-closed e bloqueia qualquer slug que não tenha rota real.
 export const SERVICOS_MALHA = [
   { slug: "formatacao", label: "Formatação com backup", to: "/servicos/formatacao" },
-  { slug: "manutencao-notebook", label: "Manutenção de notebook", to: "/servicos/manutencao-notebook" },
-  { slug: "recuperacao-dados", label: "Recuperação de dados", to: "/servicos/recuperacao-dados" },
+  { slug: "manutencao-de-notebook", label: "Manutenção de notebook", to: "/servicos/manutencao-de-notebook" },
+  { slug: "recuperacao-de-dados", label: "Recuperação de dados", to: "/servicos/recuperacao-de-dados" },
   { slug: "conserto-placa", label: "Conserto de placa", to: "/servicos/conserto-placa" },
-  { slug: "upgrade-ssd", label: "Upgrade de SSD e memória", to: "/servicos/upgrade-ssd" },
-  { slug: "remocao-virus", label: "Remoção de vírus", to: "/servicos/remocao-virus" },
-  { slug: "redes-wifi", label: "Redes e Wi-Fi", to: "/servicos/redes-wifi" },
-  { slug: "suporte-remoto", label: "Suporte remoto", to: "/servicos/suporte-remoto" },
+  { slug: "upgrade-ssd-ram", label: "Upgrade de SSD e memória", to: "/servicos/upgrade-ssd-ram" },
+  { slug: "remocao-de-virus", label: "Remoção de vírus", to: "/servicos/remocao-de-virus" },
+  { slug: "redes-e-wifi", label: "Redes e Wi-Fi", to: "/servicos/redes-e-wifi" },
+  { slug: "atendimento-remoto", label: "Suporte remoto", to: "/atendimento-remoto" },
 ] as const;
 
 /** Fila de enriquecimento: tudo que ainda está raso. */

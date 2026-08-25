@@ -63,6 +63,8 @@ jobs:
         run: npm run check:service-offerings
       - name: Orphan page components gate
         run: npm run check:orphan-pages
+      - name: Catraca anti-órfãs (URLs indexáveis sem link interno)
+        run: npm run check:orphan-ratchet
 
       - name: Cannibalization gate (P0)
         run: npm run check:cannibalization
