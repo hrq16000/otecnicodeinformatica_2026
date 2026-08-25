@@ -195,18 +195,22 @@ function RootComponent() {
           <GeoAutoDetect />
           <PageViewTracker path={pathname} />
           <JsonLdCollectorContext.Provider value={jsonLdCollector}>
-            {/* Institucional dentro do provider: seus slots precisam entrar no
-                coletor do SSR junto com os da rota. */}
+            {/* Institucional dentro do provider: seus slots entram no coletor
+                da requisição antes da rota. A EMISSÃO fica com o sink único,
+                renderizado como irmão da página dentro da fronteira de
+                Suspense do roteador (ver `comSinkDeJsonLd` em
+                src/legacyRouteElements.tsx): emitir aqui, fora dessa
+                fronteira, publicava o shell antes de a rota lazy registrar
+                seus slots — origem do P0 SSR_JSONLD_INTERMITENTE. */}
             <InstitutionalJsonLd />
             <RouteTransition routeKey={pathname}>
               <Suspense fallback={<RouteLoader />}>
                 <Outlet />
               </Suspense>
             </RouteTransition>
-            {/* Sink ÚNICO do site: emite no HTML servido todos os slots
-                registrados acima (institucionais + da rota). */}
-            <JsonLdSsrSink />
           </JsonLdCollectorContext.Provider>
+
+
           <WhatsAppFunnel />
           <WhatsAppFloat />
           <ConsentBanner />

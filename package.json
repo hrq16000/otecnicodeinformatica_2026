@@ -302,7 +302,8 @@
     "check:ssr-regression": "node scripts/diff-ssr-snapshot.mjs --strict",
     "ssr-diff:baseline": "node scripts/diff-ssr-snapshot.mjs --update",
     "monitor:rich-results": "node scripts/monitor-rich-results.mjs",
-    "monitor:rich-results:alert": "node scripts/monitor-rich-results.mjs --alert"
+    "monitor:rich-results:alert": "node scripts/monitor-rich-results.mjs --alert",
+    "check:jsonld-ssr": "node scripts/check-jsonld-ssr-determinismo.mjs"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.2",

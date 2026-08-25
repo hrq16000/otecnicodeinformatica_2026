@@ -144,6 +144,12 @@ jobs:
         run: npm run check:geo
       - name: Gate schema.org (LocalBusiness, Service, FAQPage, BreadcrumbList)
         run: npm run check:schema-standards
+      # Reexecuta o SSR em processos Node novos (isolate frio real): protege
+      # contra a regressão P0 em que o sink de JSON-LD era emitido antes de a
+      # rota lazy registrar seus slots, servindo só Organization + WebSite.
+      - name: Gate de determinismo do JSON-LD em SSR (isolate frio)
+        run: npm run check:jsonld-ssr
+
       - name: Gate robots.txt e X-Robots-Tag (rotas indexáveis)
         run: npm run check:robots
       - name: Gate de saúde de indexação (rotas + aliases)
