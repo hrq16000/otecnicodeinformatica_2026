@@ -23,21 +23,34 @@ import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 
 const ROOT = process.cwd();
-const BASELINE = join(ROOT, "reports", "orphan-baseline.json");
+/**
+ * Fonte da verdade versionada: `config/` (o diretório `reports/` é ignorado
+ * pelo git neste projeto, então um baseline lá divergiria entre ambientes).
+ * Um espelho é escrito em `reports/orphan-baseline.json` para consumo dos
+ * relatórios e do deploy, sempre derivado do arquivo versionado.
+ */
+const BASELINE = join(ROOT, "config", "orphan-trend-baseline.json");
+const ESPELHO = join(ROOT, "reports", "orphan-baseline.json");
 const UPDATE = process.argv.includes("--update");
 const REQUIRE_ONLY = process.argv.includes("--require");
 
 const AJUDA = `Gere e versione o baseline antes do build de produção:
 
-    npm run orphan:baseline        # atualiza reports/orphan-baseline.json
-    git add reports/orphan-baseline.json && git commit
+    npm run orphan:baseline        # atualiza config/orphan-trend-baseline.json
+    git add config/orphan-trend-baseline.json && git commit
 
 O arquivo precisa estar commitado para que staging e produção usem exatamente
 o mesmo contrato de páginas órfãs.`;
 
+/** Cópia idêntica em reports/, garantindo staging == produção. */
+function espelhar(dados) {
+  mkdirSync(dirname(ESPELHO), { recursive: true });
+  writeFileSync(ESPELHO, `${JSON.stringify(dados, null, 2)}\n`);
+}
+
 function exigirBaseline() {
   if (existsSync(BASELINE)) return JSON.parse(readFileSync(BASELINE, "utf8"));
-  console.error("✖ [FAIL_MISSING_ORPHAN_BASELINE] reports/orphan-baseline.json ausente.\n");
+  console.error("✖ [FAIL_MISSING_ORPHAN_BASELINE] config/orphan-trend-baseline.json ausente.\n");
   console.error(AJUDA);
   process.exit(1);
 }
@@ -49,7 +62,10 @@ if (REQUIRE_ONLY) {
     console.error(AJUDA);
     process.exit(1);
   }
-  console.log(`✓ Baseline de órfãs presente (${b.total} URL(s), gerado em ${b.generatedAt ?? "data não registrada"}).`);
+  espelhar(b);
+  console.log(
+    `✓ Baseline de órfãs presente e espelhado em reports/ (${b.total} URL(s), gerado em ${b.generatedAt ?? "data não registrada"}).`,
+  );
   process.exit(0);
 }
 
@@ -120,7 +136,10 @@ if (UPDATE) {
   }
   mkdirSync(dirname(BASELINE), { recursive: true });
   writeFileSync(BASELINE, `${JSON.stringify(atual, null, 2)}\n`);
-  console.log(`✓ reports/orphan-baseline.json atualizado: ${atual.total} URL(s). Commite o arquivo.`);
+  espelhar(atual);
+  console.log(
+    `✓ config/orphan-trend-baseline.json atualizado: ${atual.total} URL(s). Commite o arquivo (o espelho em reports/ é gerado).`,
+  );
   process.exit(0);
 }
 
