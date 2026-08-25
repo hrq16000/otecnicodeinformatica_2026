@@ -19,6 +19,7 @@ import { SCHEMA_SLOTS, SLOT_PRIORITY, useJsonLdSlot } from "@/lib/jsonLdSlots";
 import { absoluteUrl, whatsappLink } from "@/lib/siteConfig";
 import { trackPageView, trackCTAClick } from "@/lib/analytics";
 import { MessageCircle, Zap, Download, MapPinOff, ShieldCheck, ArrowRight, Lock } from "lucide-react";
+import { BlocosLocal4c } from "@/components/local/BlocosLocal4c";
 
 const PATH = "/atendimento-remoto";
 const TITLE = "Atendimento Remoto de Informática em Curitiba";
@@ -399,6 +400,7 @@ const AtendimentoRemoto = () => {
 
         <TrustSection />
         <CTASection />
+        <BlocosLocal4c path="/atendimento-remoto" />
       </main>
       <RealImageSection imageKey="suporteRemoto" caption="Suporte técnico remoto profissional" />
       <InterlinkingBlock />

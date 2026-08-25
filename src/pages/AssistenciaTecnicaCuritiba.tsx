@@ -8,6 +8,7 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 import { Button } from "@/components/ui/button";
 import { trackCTAClick, trackPageView } from "@/lib/analytics";
 import { WHATSAPP_NUMBER as WA_NUMBER, WHATSAPP_PHONE_E164 as WA_PHONE_E164, SITE_BASE_URL } from "@/lib/siteConfig";
+import { BlocosLocal4c } from "@/components/local/BlocosLocal4c";
 import {
   MessageCircle,
   Gamepad2,
@@ -643,6 +644,7 @@ export default function AssistenciaTecnicaCuritiba() {
             ))}
           </nav>
         </section>
+        <BlocosLocal4c path="/assistencia-tecnica-curitiba" />
       </main>
 
       <Footer />

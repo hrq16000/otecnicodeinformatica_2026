@@ -17,6 +17,7 @@ import { Footer } from "@/components/Footer";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import { siteConfig, whatsappLink, absoluteUrl } from "@/lib/siteConfig";
 import { trackPageView, trackCTAClick } from "@/lib/analytics";
+import { BlocosLocal4c } from "@/components/local/BlocosLocal4c";
 import {
   SERVICOS_CANONICOS,
   PROCESSO_ATENDIMENTO,
@@ -383,7 +384,11 @@ export const CidadeLandingLayout = ({ data }: { data: CidadeData }) => {
             </div>
           </div>
         </section>
+
+        {/* Rodada 4C — conteúdo local autoral; fail-closed por cidade. */}
+        <BlocosLocal4c path={path} />
       </main>
+
       <Footer />
     </div>
   );
