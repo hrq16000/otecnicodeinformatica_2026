@@ -99,15 +99,34 @@ const dataCurta = (iso?: string | null) => (iso ? new Date(iso).toLocaleString("
 
 const AdminIndexacao = () => {
   const [dados, setDados] = useState<StatusIndexacao | null>(null);
+  const [rich, setRich] = useState<MonitorRichResults | null>(null);
+  const [diff, setDiff] = useState<StatusSsrDiff | null>(null);
   const [erro, setErro] = useState<string | null>(null);
   const marcos = useMemo(() => (dados ? agenda(dados.geradoEm) : []), [dados]);
+  const richPorPath = useMemo(
+    () => new Map((rich?.rotas ?? []).map((r) => [r.path, r])),
+    [rich],
+  );
+  const diffPorPath = useMemo(
+    () => new Map((diff?.rotas ?? []).map((r) => [r.path, r])),
+    [diff],
+  );
 
   useEffect(() => {
     fetch("/index-status.json", { cache: "no-store" })
       .then((r) => (r.ok ? r.json() : Promise.reject(new Error(`HTTP ${r.status}`))))
       .then(setDados)
       .catch((e) => setErro(e.message));
+    fetch("/rich-results-monitor.json", { cache: "no-store" })
+      .then((r) => (r.ok ? r.json() : null))
+      .then(setRich)
+      .catch(() => setRich(null));
+    fetch("/ssr-diff-status.json", { cache: "no-store" })
+      .then((r) => (r.ok ? r.json() : null))
+      .then(setDiff)
+      .catch(() => setDiff(null));
   }, []);
+
 
   return (
     <main className="mx-auto max-w-6xl px-4 py-10">
