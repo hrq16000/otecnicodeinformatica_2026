@@ -349,6 +349,35 @@ export const EDITORIAL_WAVE = [
     apoioLabel: "O que é informática",
     cover: "/blog/como-aprender-informatica.jpg",
   },
+
+  // ── Rodada 9C — cluster "computador entra direto na BIOS".
+  {
+    slug: "computador-entra-direto-na-bios",
+    approvedAt: "2026-08-25",
+    pilar: "/servicos/manutencao-de-computador",
+    pilarLabel: "Manutenção e conserto de computador",
+    apoio: "/blog/erro-no-bootable-device-como-resolver",
+    apoioLabel: 'Erro "No Bootable Device": como resolver',
+    cover: "/blog/computador-entra-direto-na-bios.jpg",
+  },
+  {
+    slug: "erro-no-bootable-device-como-resolver",
+    approvedAt: "2026-08-25",
+    pilar: "/diagnostico-tecnico",
+    pilarLabel: "Diagnóstico técnico",
+    apoio: "/blog/computador-entra-direto-na-bios",
+    apoioLabel: "Computador entra direto na BIOS",
+    cover: "/blog/erro-no-bootable-device-como-resolver.jpg",
+  },
+  {
+    slug: "troquei-o-ssd-e-o-pc-so-abre-a-bios",
+    approvedAt: "2026-08-25",
+    pilar: "/servicos/upgrade-ssd-ram",
+    pilarLabel: "Upgrade de SSD e memória",
+    apoio: "/blog/computador-entra-direto-na-bios",
+    apoioLabel: "Computador entra direto na BIOS",
+    cover: "/blog/troquei-o-ssd-e-o-pc-so-abre-a-bios.jpg",
+  },
 ];
 
 export const EDITORIAL_WAVE_SLUGS = EDITORIAL_WAVE.map((a) => a.slug);

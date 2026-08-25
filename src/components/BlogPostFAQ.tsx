@@ -59,6 +59,73 @@ const CATEGORY_EXTRA: Record<string, FAQItem[]> = {
 // categoria (que contêm valores comerciais).
 // ─────────────────────────────────────────────────────────────
 const PILOT_FAQ: Record<string, FAQItem[]> = {
+  // ── Onda 9C — cluster BIOS (sem preço, sem prazo, sem promessa).
+  "computador-entra-direto-na-bios": [
+    {
+      q: "Por que o computador abre a BIOS em vez do Windows?",
+      a: "Porque o firmware não encontrou um carregador de inicialização válido em nenhum dispositivo da lista de prioridade. Em vez de travar com tela preta, ele abre o Setup. As causas mais comuns são disco não detectado, modo de boot trocado entre UEFI e Legacy/CSM, configurações perdidas por bateria CMOS descarregada e tecla presa no teclado.",
+    },
+    {
+      q: "Entrar direto na BIOS significa que o SSD queimou?",
+      a: "Não necessariamente. Se o modelo do disco aparece na aba de informações do Setup, o hardware está sendo reconhecido e o problema tende a ser de configuração ou do carregador de inicialização. Se o disco não aparece, ou aparece de forma intermitente, aí sim há suspeita de falha física ou de conexão.",
+    },
+    {
+      q: "Devo desligar o CSM ou deixar ligado?",
+      a: "Depende de como o disco foi preparado. Sistema instalado em disco GPT precisa de UEFI, com CSM desabilitado. Sistema instalado em disco MBR precisa de Legacy, com CSM habilitado. Anote o valor atual antes de alterar e teste o modo oposto se a entrada Windows Boot Manager não aparecer.",
+    },
+    {
+      q: "Trocar a bateria da placa-mãe resolve?",
+      a: "Resolve quando o sintoma inclui data e hora sempre erradas, mensagem de erro de checksum do CMOS ou configurações que voltam sozinhas ao padrão a cada partida. Depois da troca é necessário reconfigurar modo de boot e ordem de inicialização no Setup.",
+    },
+    {
+      q: "Mexer nas configurações da BIOS apaga meus arquivos?",
+      a: "Alterar modo de boot, ordem de prioridade ou carregar os padrões otimizados não apaga arquivos. O que apaga dados são operações feitas dentro do sistema ou de ferramentas de particionamento, como formatar, criar ou excluir partições.",
+    },
+  ],
+  "erro-no-bootable-device-como-resolver": [
+    {
+      q: "O que significa a mensagem No bootable device?",
+      a: "Significa que o firmware procurou um carregador de inicialização e não encontrou nenhum válido. As variações Boot device not found, Operating system not found e Reboot and select proper boot device indicam a mesma condição.",
+    },
+    {
+      q: "Preciso formatar para resolver esse erro?",
+      a: "Não na maioria dos casos. Quando o disco é reconhecido, o reparo do carregador com o ambiente de recuperação do Windows costuma resolver preservando os arquivos. Formatar só deve ser considerado depois de confirmada a cópia dos dados.",
+    },
+    {
+      q: "Por que o comando bootrec /fixboot devolve acesso negado?",
+      a: "Porque esse comando pertence ao modelo antigo de inicialização, baseado em MBR. Em discos GPT com UEFI, a ferramenta correta é o bcdboot, que recria os arquivos de inicialização dentro da partição de sistema EFI.",
+    },
+    {
+      q: "Como sei se meu disco é GPT ou MBR?",
+      a: "No prompt de comando do ambiente de recuperação, execute diskpart e depois list disk. Um asterisco na coluna GPT indica disco GPT. A presença de um volume pequeno em FAT32, de cerca de 100 MB, confirma a partição de sistema EFI.",
+    },
+    {
+      q: "O reparo funcionou e o erro voltou no dia seguinte. O que houve?",
+      a: "Reparo que se desfaz costuma indicar setores defeituosos na área de inicialização, disco em degradação ou divergência entre o modo usado no reparo e o modo configurado no Setup. Nesse cenário, o passo seguinte é avaliar a saúde do disco antes de repetir o procedimento.",
+    },
+  ],
+  "troquei-o-ssd-e-o-pc-so-abre-a-bios": [
+    {
+      q: "SSD novo já vem com Windows instalado?",
+      a: "Não. Um SSD de fábrica sai vazio, sem tabela de partições e sem sistema operacional. Por isso o computador para no Setup até que o sistema seja instalado ou clonado a partir do disco anterior.",
+    },
+    {
+      q: "Instalei um SSD M.2 e o HD antigo sumiu. Por quê?",
+      a: "Em muitas placas-mãe e notebooks, ativar determinado slot M.2 desabilita automaticamente portas SATA específicas, porque ambos compartilham as mesmas linhas do chipset. O manual da placa indica qual porta é desativada por qual slot.",
+    },
+    {
+      q: "Preciso formatar o SSD antes de instalar o Windows?",
+      a: "Não. O instalador do Windows inicializa, particiona e formata o disco durante a instalação. Basta selecionar o espaço não alocado do SSD novo na etapa de escolha do disco.",
+    },
+    {
+      q: "Devo deixar o disco antigo conectado durante a instalação?",
+      a: "O recomendado é manter apenas o disco novo conectado. Com dois discos presentes, o instalador pode gravar a partição de inicialização no disco antigo, e a máquina deixa de iniciar quando ele for removido.",
+    },
+    {
+      q: "É melhor clonar ou instalar do zero?",
+      a: "Instalar do zero é preferível quando o sistema anterior estava lento, instável ou infectado. Clonar faz sentido quando o sistema funciona bem e há muitos programas configurados, desde que a cópia inclua as partições de inicialização.",
+    },
+  ],
   // ── Rodada 9B — pilares nacionais (conteúdo educacional, sem preço,
   // sem localidade e sem promessa comercial).
   "o-que-e-informatica": [

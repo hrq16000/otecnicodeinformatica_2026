@@ -27,6 +27,11 @@ const MAX_POR_PAGINA = 3;
 const MAPA: Record<string, EditorialInboundLink[]> = {
   "/servicos/upgrade-ssd-ram": [
     {
+      slug: "troquei-o-ssd-e-o-pc-so-abre-a-bios",
+      label: "Troquei o SSD e o PC só abre a BIOS",
+      hint: "Por que disco novo para no Setup e como configurar o slot M.2.",
+    },
+    {
       slug: "como-fazer-upgrade-ssd-nvme",
       label: "Upgrade para SSD NVMe: quando compensa",
       hint: "Como verificar compatibilidade e o que muda de fato no uso diário.",
@@ -214,7 +219,24 @@ const MAPA: Record<string, EditorialInboundLink[]> = {
       hint: "O que cada teste prova, por que só a medição sob carga decide e quando trocar.",
     },
   ],
+  "/servicos/manutencao-de-computador": [
+    {
+      slug: "computador-entra-direto-na-bios",
+      label: "Computador entra direto na BIOS: por quê",
+      hint: "Triagem entre disco não detectado, modo de boot, bateria CMOS e Fast Boot.",
+    },
+    {
+      slug: "erro-no-bootable-device-como-resolver",
+      label: "Erro \"No Bootable Device\": como resolver",
+      hint: "O que fazer quando a BIOS vê o disco, mas o sistema não inicia.",
+    },
+  ],
   "/servicos/computador-nao-liga": [
+    {
+      slug: "computador-entra-direto-na-bios",
+      label: "Computador entra direto na BIOS: por quê",
+      hint: "Triagem entre disco não detectado, modo de boot, bateria CMOS e Fast Boot.",
+    },
     {
       slug: "como-testar-fonte-de-alimentacao-pc",
       label: "Testar a fonte do PC sem trocar peça boa",

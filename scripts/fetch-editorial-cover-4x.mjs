@@ -125,6 +125,19 @@ const CURADORIA = [
     slug: "quanto-custa-formatar-um-computador",
     commons: "File:Replacing hardware 160210-F-KR223-021.jpg",
   },
+  // Onda 9C — cluster "computador entra direto na BIOS".
+  {
+    slug: "computador-entra-direto-na-bios",
+    commons: "File:BIOS Setup First Time.jpg",
+  },
+  {
+    slug: "erro-no-bootable-device-como-resolver",
+    commons: "File:Serial ATA hard disk connected.jpg",
+  },
+  {
+    slug: "troquei-o-ssd-e-o-pc-so-abre-a-bios",
+    commons: "File:Samsung 960 EVO in M.2 slot 02.jpg",
+  },
 ];
 
 /** Metadados + URL de uma imagem do Wikimedia Commons (licença real, sem IA). */

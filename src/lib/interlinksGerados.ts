@@ -25,8 +25,8 @@ export const INTERLINKS_GERADOS: Record<string, InterlinkContextual[]> = {
       "contexto": "problema"
     },
     {
-      "href": "/problemas/computador-nao-da-imagem",
-      "anchor": "sintoma parecido: computador liga e não dá imagem",
+      "href": "/problemas/notebook-nao-carrega",
+      "anchor": "sintoma parecido: notebook não carrega",
       "contexto": "problema"
     },
     {
@@ -47,13 +47,13 @@ export const INTERLINKS_GERADOS: Record<string, InterlinkContextual[]> = {
       "contexto": "servico"
     },
     {
-      "href": "/problemas/tela-azul",
-      "anchor": "sintoma parecido: tela azul no Windows",
+      "href": "/problemas/notebook-nao-liga",
+      "anchor": "sintoma parecido: notebook Não Liga",
       "contexto": "problema"
     },
     {
-      "href": "/problemas/computador-nao-da-imagem",
-      "anchor": "compare com computador liga e não dá imagem",
+      "href": "/problemas/notebook-nao-carrega",
+      "anchor": "compare com notebook não carrega",
       "contexto": "problema"
     },
     {
@@ -64,13 +64,13 @@ export const INTERLINKS_GERADOS: Record<string, InterlinkContextual[]> = {
   ],
   "/problemas/wifi-instavel": [
     {
-      "href": "/servicos/suporte-tecnico-empresarial",
-      "anchor": "suporte Técnico para Empresas em Curitiba para quem tem wi-Fi caindo ou lento em parte da casa ou do escritório",
+      "href": "/servicos/suporte-home-office",
+      "anchor": "suporte Técnico para Home Office em Curitiba para quem tem wi-Fi caindo ou lento em parte da casa ou do escritório",
       "contexto": "servico"
     },
     {
-      "href": "/servicos/suporte-home-office",
-      "anchor": "suporte Técnico para Home Office em Curitiba para quem tem wi-Fi caindo ou lento em parte da casa ou do escritório",
+      "href": "/servicos/suporte-tecnico-empresarial",
+      "anchor": "suporte Técnico para Empresas em Curitiba para quem tem wi-Fi caindo ou lento em parte da casa ou do escritório",
       "contexto": "servico"
     },
     {
@@ -79,8 +79,8 @@ export const INTERLINKS_GERADOS: Record<string, InterlinkContextual[]> = {
       "contexto": "problema"
     },
     {
-      "href": "/problemas/impressora-nao-imprime",
-      "anchor": "sintoma parecido: impressora não imprime",
+      "href": "/problemas/notebook-nao-carrega",
+      "anchor": "sintoma parecido: notebook não carrega — 2",
       "contexto": "problema"
     },
     {
@@ -96,8 +96,8 @@ export const INTERLINKS_GERADOS: Record<string, InterlinkContextual[]> = {
       "contexto": "servico"
     },
     {
-      "href": "/servicos/suporte-tecnico-empresarial",
-      "anchor": "suporte Técnico para Empresas em Curitiba para quem tem tela azul no Windows",
+      "href": "/servicos/formatacao",
+      "anchor": "formatação de PC e Notebook em Curitiba para quem tem tela azul no Windows",
       "contexto": "servico"
     },
     {
@@ -107,7 +107,7 @@ export const INTERLINKS_GERADOS: Record<string, InterlinkContextual[]> = {
     },
     {
       "href": "/problemas/computador-nao-da-imagem",
-      "anchor": "sintoma parecido: computador liga e não dá imagem — 2",
+      "anchor": "sintoma parecido: computador liga e não dá imagem",
       "contexto": "problema"
     },
     {
@@ -118,8 +118,8 @@ export const INTERLINKS_GERADOS: Record<string, InterlinkContextual[]> = {
   ],
   "/problemas/arquivos-apagados": [
     {
-      "href": "/servicos/suporte-tecnico-empresarial",
-      "anchor": "suporte Técnico para Empresas em Curitiba para quem tem arquivos apagados ou disco que não abre",
+      "href": "/servicos/recuperacao-de-dados",
+      "anchor": "recuperação de Dados em Curitiba para quem tem arquivos apagados ou disco que não abre",
       "contexto": "servico"
     },
     {
@@ -133,8 +133,8 @@ export const INTERLINKS_GERADOS: Record<string, InterlinkContextual[]> = {
       "contexto": "problema"
     },
     {
-      "href": "/problemas/hd-fazendo-barulho",
-      "anchor": "sintoma parecido: hD fazendo barulho",
+      "href": "/problemas/notebook-molhado",
+      "anchor": "sintoma parecido: notebook molhado com água ou café",
       "contexto": "problema"
     },
     {
@@ -161,7 +161,7 @@ export const INTERLINKS_GERADOS: Record<string, InterlinkContextual[]> = {
     },
     {
       "href": "/problemas/notebook-nao-carrega",
-      "anchor": "sintoma parecido: notebook não carrega",
+      "anchor": "sintoma parecido: notebook não carrega — 3",
       "contexto": "problema"
     },
     {
@@ -187,8 +187,8 @@ export const INTERLINKS_GERADOS: Record<string, InterlinkContextual[]> = {
       "contexto": "problema"
     },
     {
-      "href": "/problemas/computador-nao-da-imagem",
-      "anchor": "sintoma parecido: computador liga e não dá imagem — 3",
+      "href": "/problemas/computador-lento",
+      "anchor": "sintoma parecido: computador Lento — 2",
       "contexto": "problema"
     },
     {
@@ -199,13 +199,13 @@ export const INTERLINKS_GERADOS: Record<string, InterlinkContextual[]> = {
   ],
   "/problemas/hd-fazendo-barulho": [
     {
-      "href": "/servicos/suporte-tecnico-empresarial",
-      "anchor": "suporte Técnico para Empresas em Curitiba para quem tem hD fazendo barulho",
+      "href": "/servicos/remocao-de-virus",
+      "anchor": "remoção de Vírus e Malware em Curitiba para quem tem hD fazendo barulho",
       "contexto": "servico"
     },
     {
-      "href": "/servicos/remocao-de-virus",
-      "anchor": "remoção de Vírus e Malware em Curitiba para quem tem hD fazendo barulho",
+      "href": "/servicos/recuperacao-de-dados",
+      "anchor": "recuperação de Dados em Curitiba para quem tem hD fazendo barulho",
       "contexto": "servico"
     },
     {
@@ -214,8 +214,8 @@ export const INTERLINKS_GERADOS: Record<string, InterlinkContextual[]> = {
       "contexto": "problema"
     },
     {
-      "href": "/problemas/arquivos-apagados",
-      "anchor": "sintoma parecido: arquivos apagados ou HD que não abre",
+      "href": "/problemas/computador-nao-da-imagem",
+      "anchor": "compare com computador liga e não dá imagem",
       "contexto": "problema"
     },
     {
@@ -258,18 +258,18 @@ export const INTERLINKS_GERADOS: Record<string, InterlinkContextual[]> = {
       "contexto": "servico"
     },
     {
-      "href": "/servicos/suporte-tecnico-empresarial",
-      "anchor": "suporte Técnico para Empresas em Curitiba para quem tem cheiro de queimado no computador, fonte ou carregador",
+      "href": "/servicos/formatacao",
+      "anchor": "formatação de PC e Notebook em Curitiba para quem tem cheiro de queimado no computador, fonte ou carregador",
       "contexto": "servico"
     },
     {
-      "href": "/problemas/hd-fazendo-barulho",
-      "anchor": "compare com hD fazendo barulho",
+      "href": "/problemas/computador-nao-da-imagem",
+      "anchor": "sintoma parecido: computador liga e não dá imagem — 2",
       "contexto": "problema"
     },
     {
-      "href": "/problemas/computador-nao-da-imagem",
-      "anchor": "sintoma parecido: computador liga e não dá imagem — 4",
+      "href": "/problemas/notebook-molhado",
+      "anchor": "compare com notebook molhado com água ou café",
       "contexto": "problema"
     },
     {
@@ -285,8 +285,8 @@ export const INTERLINKS_GERADOS: Record<string, InterlinkContextual[]> = {
       "contexto": "servico"
     },
     {
-      "href": "/servicos/suporte-tecnico-empresarial",
-      "anchor": "suporte Técnico para Empresas em Curitiba para quem tem notebook molhado",
+      "href": "/servicos/conserto-tv",
+      "anchor": "conserto de TV e Smart TV em Curitiba para quem tem notebook molhado",
       "contexto": "servico"
     },
     {
@@ -296,7 +296,7 @@ export const INTERLINKS_GERADOS: Record<string, InterlinkContextual[]> = {
     },
     {
       "href": "/problemas/notebook-nao-carrega",
-      "anchor": "compare com notebook não carrega",
+      "anchor": "sintoma parecido: notebook não carrega — 4",
       "contexto": "problema"
     },
     {
@@ -312,18 +312,18 @@ export const INTERLINKS_GERADOS: Record<string, InterlinkContextual[]> = {
       "contexto": "servico"
     },
     {
-      "href": "/servicos/suporte-tecnico-empresarial",
-      "anchor": "suporte Técnico para Empresas em Curitiba para quem tem windows não inicia",
+      "href": "/servicos/formatacao",
+      "anchor": "formatação de PC e Notebook em Curitiba para quem tem windows não inicia",
       "contexto": "servico"
     },
     {
       "href": "/problemas/tela-azul",
-      "anchor": "compare com tela azul no Windows",
+      "anchor": "sintoma parecido: tela azul no Windows",
       "contexto": "problema"
     },
     {
-      "href": "/problemas/wifi-instavel",
-      "anchor": "compare com wi-Fi caindo ou lento",
+      "href": "/problemas/notebook-nao-liga",
+      "anchor": "compare com notebook Não Liga",
       "contexto": "problema"
     },
     {
@@ -339,18 +339,18 @@ export const INTERLINKS_GERADOS: Record<string, InterlinkContextual[]> = {
       "contexto": "servico"
     },
     {
-      "href": "/servicos/suporte-tecnico-empresarial",
-      "anchor": "suporte Técnico para Empresas em Curitiba para quem tem computador ou notebook esquentando demais",
+      "href": "/servicos/formatacao",
+      "anchor": "formatação de PC e Notebook em Curitiba para quem tem computador ou notebook esquentando demais",
       "contexto": "servico"
     },
     {
-      "href": "/problemas/computador-nao-da-imagem",
-      "anchor": "sintoma parecido: computador liga e não dá imagem — 5",
+      "href": "/problemas/computador-lento",
+      "anchor": "sintoma parecido: computador Lento — 3",
       "contexto": "problema"
     },
     {
-      "href": "/problemas/computador-lento",
-      "anchor": "sintoma parecido: computador Lento — 2",
+      "href": "/problemas/computador-nao-da-imagem",
+      "anchor": "sintoma parecido: computador liga e não dá imagem — 3",
       "contexto": "problema"
     },
     {
@@ -361,18 +361,18 @@ export const INTERLINKS_GERADOS: Record<string, InterlinkContextual[]> = {
   ],
   "/problemas/impressora-nao-imprime": [
     {
-      "href": "/servicos/suporte-tecnico-empresarial",
-      "anchor": "suporte Técnico para Empresas em Curitiba para quem tem impressora não imprime mesmo aparecendo conectada",
+      "href": "/servicos/formatacao",
+      "anchor": "formatação de PC e Notebook em Curitiba para quem tem impressora não imprime mesmo aparecendo conectada",
       "contexto": "servico"
     },
     {
-      "href": "/servicos/redes-e-wifi",
-      "anchor": "configuração de Redes e Wi-Fi em Curitiba para quem tem impressora não imprime mesmo aparecendo conectada",
+      "href": "/servicos/manutencao-de-notebook",
+      "anchor": "assistência Técnica de Notebook em Curitiba para quem tem impressora não imprime mesmo aparecendo conectada",
       "contexto": "servico"
     },
     {
       "href": "/problemas/wifi-instavel",
-      "anchor": "sintoma parecido: wi-Fi caindo ou lento — 2",
+      "anchor": "compare com wi-Fi caindo ou lento",
       "contexto": "problema"
     },
     {
@@ -381,8 +381,8 @@ export const INTERLINKS_GERADOS: Record<string, InterlinkContextual[]> = {
       "contexto": "problema"
     },
     {
-      "href": "/bairros/cic",
-      "anchor": "atendimento em CIC (Curitiba) para impressora não imprime mesmo aparecendo conectada",
+      "href": "/bairros/xaxim",
+      "anchor": "atendimento em xaxim para impressora não imprime mesmo aparecendo conectada",
       "contexto": "bairro"
     }
   ],
@@ -393,23 +393,23 @@ export const INTERLINKS_GERADOS: Record<string, InterlinkContextual[]> = {
       "contexto": "servico"
     },
     {
-      "href": "/servicos/suporte-tecnico-empresarial",
-      "anchor": "suporte Técnico para Empresas em Curitiba para quem tem teclado do notebook não funciona ou falha algumas teclas",
+      "href": "/servicos/formatacao",
+      "anchor": "formatação de PC e Notebook em Curitiba para quem tem teclado do notebook não funciona ou falha algumas teclas",
       "contexto": "servico"
     },
     {
       "href": "/problemas/computador-nao-da-imagem",
-      "anchor": "sintoma parecido: computador liga e não dá imagem — 6",
+      "anchor": "sintoma parecido: computador liga e não dá imagem — 4",
       "contexto": "problema"
     },
     {
-      "href": "/problemas/impressora-nao-imprime",
-      "anchor": "compare com impressora não imprime",
+      "href": "/problemas/wifi-instavel",
+      "anchor": "sintoma parecido: wi-Fi caindo ou lento — 2",
       "contexto": "problema"
     },
     {
-      "href": "/bairros/batel",
-      "anchor": "atendimento em Batel (Curitiba) para teclado do notebook não funciona ou falha algumas teclas",
+      "href": "/bairros/sitio-cercado",
+      "anchor": "atendimento em sitio-cercado para teclado do notebook não funciona ou falha algumas teclas",
       "contexto": "bairro"
     }
   ]

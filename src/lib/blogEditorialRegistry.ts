@@ -570,6 +570,57 @@ const WAVE_9B: EditorialApproval[] = [
   },
 ];
 
+/**
+ * ── Onda 9C — cluster "computador entra direto na BIOS" (pilar + 2 satélites).
+ * Conteúdo diagnóstico nacional, sem cidade no slug. Capas são FOTOGRAFIAS
+ * REAIS licenciadas (Wikimedia Commons), sem IA.
+ * Limite total de artigos indexáveis: 38.
+ */
+const WAVE_9C: EditorialApproval[] = [
+  {
+    slug: "computador-entra-direto-na-bios",
+    status: "approved",
+    authorType: "organization",
+    authorId: INSTITUTIONAL_AUTHOR.id,
+    reviewedAt: "2026-08-25",
+    approvedAt: "2026-08-25",
+    imageOrigin: "licensed",
+    imageLicense: "CC BY 2.0",
+    imageAttribution:
+      "Foto: Paul Schultz (Wikimedia Commons), CC BY 2.0 — https://commons.wikimedia.org/wiki/File:BIOS_Setup_First_Time.jpg",
+    notes:
+      "Pilar diagnóstico escrito do zero na Onda 9C; fact-check registrado em blogEditorialSources.ts; capa é fotografia real licenciada, sem IA.",
+  },
+  {
+    slug: "erro-no-bootable-device-como-resolver",
+    status: "approved",
+    authorType: "organization",
+    authorId: INSTITUTIONAL_AUTHOR.id,
+    reviewedAt: "2026-08-25",
+    approvedAt: "2026-08-25",
+    imageOrigin: "licensed",
+    imageLicense: "CC BY-SA 2.5",
+    imageAttribution:
+      "Foto: Thomas Rosenau (Wikimedia Commons), CC BY-SA 2.5 — https://commons.wikimedia.org/wiki/File:Serial_ATA_hard_disk_connected.jpg",
+    notes:
+      "Satélite de erro específico escrito do zero na Onda 9C; fact-check registrado em blogEditorialSources.ts; capa é fotografia real licenciada, sem IA.",
+  },
+  {
+    slug: "troquei-o-ssd-e-o-pc-so-abre-a-bios",
+    status: "approved",
+    authorType: "organization",
+    authorId: INSTITUTIONAL_AUTHOR.id,
+    reviewedAt: "2026-08-25",
+    approvedAt: "2026-08-25",
+    imageOrigin: "licensed",
+    imageLicense: "CC BY-SA 4.0",
+    imageAttribution:
+      "Foto: Ilya Plekhanov (Wikimedia Commons), CC BY-SA 4.0 — https://commons.wikimedia.org/wiki/File:Samsung_960_EVO_in_M.2_slot_02.jpg",
+    notes:
+      "Satélite de cenário de upgrade escrito do zero na Onda 9C; fact-check registrado em blogEditorialSources.ts; capa é fotografia real licenciada, sem IA.",
+  },
+];
+
 export const APPROVED_EDITORIAL_CONTENT = new Map<string, EditorialApproval>([
 
   ...FIRST_WAVE_SLUGS.map((slug) => [
@@ -612,6 +663,7 @@ export const APPROVED_EDITORIAL_CONTENT = new Map<string, EditorialApproval>([
   ...WAVE_5I.map((a) => [a.slug, a] as [string, EditorialApproval]),
   ...WAVE_8E.map((a) => [a.slug, a] as [string, EditorialApproval]),
   ...WAVE_9B.map((a) => [a.slug, a] as [string, EditorialApproval]),
+  ...WAVE_9C.map((a) => [a.slug, a] as [string, EditorialApproval]),
 ]);
 
 

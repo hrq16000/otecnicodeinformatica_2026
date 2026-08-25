@@ -11969,4 +11969,300 @@ crontab -e
     ),
   },
 
+
+  // ── Onda 9C — cluster "computador entra direto na BIOS" (pilar + 2 satélites).
+  "computador-entra-direto-na-bios": {
+    title: "Meu computador entra direto na BIOS: guia de diagnóstico e solução",
+    excerpt:
+      "Por que o PC abre a tela de configuração em vez do Windows: disco não detectado, conflito UEFI/Legacy (CSM), bateria CMOS e Fast Boot. Diagnóstico em ordem.",
+    date: "2026-08-25",
+    readTime: "14 min",
+    category: "Procedimentos Técnicos",
+    content: (
+      <>
+        <p className="lead">Quando o computador liga e para na tela de configuração — o <strong>Setup</strong> da placa-mãe, chamado de BIOS ou UEFI — ele não está com defeito na BIOS. Ele está avisando que <strong>não encontrou um sistema para iniciar</strong>. A BIOS é o último lugar onde o equipamento consegue parar sem travar, então é ali que ele te deixa.</p>
+
+        <h2>Resposta curta</h2>
+        <p>Na esmagadora maioria dos casos existem quatro causas: o disco não é detectado, o modo de boot foi trocado (UEFI × Legacy/CSM), a bateria CMOS descarregou e apagou as configurações, ou uma tecla presa/atalho está forçando a entrada no Setup. Descobrir qual delas é leva menos de dez minutos, desde que a verificação siga uma ordem.</p>
+
+        <h2>O que acontece antes do Windows aparecer</h2>
+        <p>Ao ligar, a placa-mãe executa o <strong>POST</strong> (Power-On Self-Test): confere processador, memória, vídeo e dispositivos ligados às portas. Se o POST passa, o firmware consulta a lista de prioridade de inicialização e procura, em cada dispositivo, um carregador de inicialização válido.</p>
+        <p>Se nenhum dispositivo da lista responde com um carregador válido, o firmware não tem para onde ir. Em vez de mostrar uma tela preta, ele abre o Setup. É por isso que o sintoma é sempre o mesmo — "entra direto na BIOS" — para causas completamente diferentes.</p>
+        <p>Uma analogia ajuda: a BIOS/UEFI é o porteiro do prédio. Ela não guarda o seu sistema; ela só sabe em qual porta bater. Quando ninguém atende em nenhuma porta da lista, o porteiro volta para a portaria e fica te olhando.</p>
+
+        <h2>Diagnóstico rápido: o triângulo do boot</h2>
+        <p>Antes de mexer em qualquer configuração, responda três perguntas nesta ordem. Elas separam problema físico de problema de configuração e evitam que você mude opções sem necessidade.</p>
+        <ol>
+          <li><strong>O disco aparece?</strong> Entre no Setup e procure a aba de informações (normalmente <em>Main</em>, <em>Information</em> ou <em>Storage</em>). Se o SSD/HD não está listado ali, o problema é físico ou de conexão — não adianta mexer em ordem de boot.</li>
+          <li><strong>O disco aparece, mas não há entrada de inicialização?</strong> O disco está vivo e o carregador do sistema é que sumiu ou está no modo errado. É configuração ou reparo de inicialização.</li>
+          <li><strong>Tudo aparece e mesmo assim volta ao Setup?</strong> Suspeite de configuração perdida (bateria CMOS), Fast Boot mal resolvido ou tecla presa no teclado.</li>
+        </ol>
+        <aside className="rounded-lg border border-border bg-muted/40 p-4 not-prose my-6">
+          <p className="m-0 text-sm"><strong>Antes de tudo:</strong> desconecte pendrives, HDs externos, leitores de cartão e celulares em modo de transferência. Um pendrive antigo na porta USB é uma das causas mais banais — e mais frequentes — de o computador tentar iniciar pelo lugar errado.</p>
+        </aside>
+
+        <h2>Causa 1 — o disco não é detectado</h2>
+        <p>É a causa mais comum em máquinas com alguns anos de uso e a mais séria em termos de dados. Se o SSD ou HD não aparece na lista de dispositivos do Setup, o firmware sequer chega a procurar o sistema.</p>
+
+        <h3>Em desktop com disco SATA</h3>
+        <ul>
+          <li><strong>Cabo de dados:</strong> reencaixe as duas pontas do cabo SATA (disco e placa-mãe). Cabos com trava quebrada soltam com vibração e com o tempo.</li>
+          <li><strong>Cabo de energia:</strong> troque o conector vindo da fonte por outro do mesmo chicote. Um conector oxidado alimenta parcialmente e o disco nem gira.</li>
+          <li><strong>Porta da placa:</strong> mude o cabo para outra porta SATA. Portas individuais falham, principalmente após descarga elétrica.</li>
+          <li><strong>Ruído:</strong> em disco mecânico, cliques repetidos ou giro que para e recomeça indicam falha física. Nesse caso, pare.</li>
+        </ul>
+
+        <h3>Em notebook ou desktop com NVMe (M.2)</h3>
+        <ul>
+          <li><strong>Encaixe:</strong> o módulo M.2 entra em ângulo e só depois é preso pelo parafuso. Módulo mal assentado é detectado de forma intermitente.</li>
+          <li><strong>Slot compartilhado:</strong> em muitas placas, ativar o segundo slot M.2 desliga automaticamente portas SATA (ou vice-versa). Se o disco antigo sumiu depois de instalar um NVMe, é quase sempre isso.</li>
+          <li><strong>Compatibilidade do slot:</strong> existem slots M.2 que aceitam apenas SATA e outros apenas NVMe (PCIe). Um módulo NVMe em slot exclusivamente SATA simplesmente não aparece.</li>
+          <li><strong>Contatos:</strong> em módulos remanejados entre máquinas, limpe os contatos dourados com álcool isopropílico e pano que não solte fiapos.</li>
+        </ul>
+        <aside className="rounded-lg border border-destructive/40 bg-destructive/5 p-4 not-prose my-6">
+          <p className="m-0 text-sm"><strong>Atenção aos dados:</strong> se o disco desaparece e reaparece, some depois de esquentar ou faz barulho, cada nova tentativa de ligar reduz a chance de recuperação. Nesse cenário o caminho correto é preservar os dados antes de qualquer reinstalação — o procedimento está em <Link to="/blog/como-recuperar-dados-hd-com-defeito" className="text-accent">como recuperar dados de HD com defeito</Link>.</p>
+        </aside>
+
+        <h2>Causa 2 — conflito de modo de boot (UEFI × Legacy/CSM)</h2>
+        <p>Esta é a causa que mais confunde, porque o disco aparece normalmente e mesmo assim não existe entrada de inicialização. O motivo é que o firmware está procurando o sistema de um jeito e o disco foi preparado de outro.</p>
+
+        <h3>A diferença em uma frase</h3>
+        <p>No modo <strong>Legacy</strong> (compatibilidade, ativado pelo <strong>CSM</strong>), o firmware lê o primeiro setor do disco — o <strong>MBR</strong> — e executa o que estiver ali. No modo <strong>UEFI</strong>, ele ignora esse setor e procura uma <strong>partição de sistema EFI</strong>, formatada em FAT32, contendo um arquivo carregador. São dois idiomas: se o disco fala um e o firmware escuta o outro, ninguém se entende.</p>
+        <p>Como regra prática: disco particionado em <strong>GPT</strong> pede boot em UEFI; disco em <strong>MBR</strong> pede Legacy/CSM. Windows 11 exige UEFI com GPT.</p>
+
+        <h3>Como verificar e corrigir</h3>
+        <ol>
+          <li>No Setup, abra a aba <em>Boot</em> e localize <strong>CSM</strong> ou <strong>Boot Device Control</strong>. Anote o valor atual antes de mudar qualquer coisa.</li>
+          <li>Se a máquina veio com Windows 10 ou 11 de fábrica, o correto quase sempre é <strong>UEFI</strong> (CSM desabilitado). Ajuste, salve e reinicie.</li>
+          <li>Se depois disso surgir uma entrada chamada <em>Windows Boot Manager</em> na lista de prioridade, coloque-a em primeiro lugar. O nome da entrada é a confirmação de que o carregador foi encontrado.</li>
+          <li>Se nada surgir, volte o valor anterior e teste o modo oposto — em máquinas montadas ou reinstaladas por terceiros, o disco pode estar em MBR.</li>
+        </ol>
+        <p>Mudar de modo <em>não apaga</em> dados, mas um sistema instalado em MBR não inicia em UEFI puro (e vice-versa) sem conversão. Quando o disco aparece, o modo está certo e ainda assim falta o carregador, o problema é o setor de inicialização — tratado em <Link to="/blog/erro-no-bootable-device-como-resolver" className="text-accent">erro "No Bootable Device"</Link>.</p>
+
+        <h3>Secure Boot entra nessa conta</h3>
+        <p>O <strong>Secure Boot</strong> só funciona em UEFI e recusa carregadores sem assinatura reconhecida. Se você usa Linux em dual boot, mídia de recuperação antiga ou fez alterações no carregador, ele pode bloquear a inicialização silenciosamente e devolver você ao Setup. Desligar o Secure Boot é um teste válido de diagnóstico — e deve ser religado depois que o sistema voltar.</p>
+
+        <h2>Causa 3 — bateria CMOS e configurações perdidas</h2>
+        <p>A bateria de lítio da placa-mãe (modelo CR2032, do tamanho de uma moeda) mantém relógio e configurações enquanto o computador está desligado da tomada. Quando ela chega ao fim — normalmente entre cinco e dez anos —, o firmware volta ao padrão de fábrica a cada desligamento.</p>
+        <p>Sinais típicos: <strong>data e hora sempre erradas</strong>, mensagem de "CMOS checksum error", pedido para pressionar F1 a cada partida e ordem de boot que volta sozinha ao original.</p>
+        <ol>
+          <li>Confirme pela data: se ela volta para uma data antiga toda vez, a bateria é a suspeita principal.</li>
+          <li>Substitua a bateria com o equipamento desligado e sem energia (em notebook, isso exige abrir o equipamento e, em muitos modelos, desconectar a bateria interna).</li>
+          <li>Depois da troca, entre no Setup, carregue os padrões otimizados, reconfigure modo de boot e ordem de inicialização, salve e saia.</li>
+        </ol>
+        <p>Um <strong>reset das configurações</strong> (Load Optimized Defaults) também resolve casos em que alguém mexeu no Setup sem anotar o que mudou — inclusive perfis de overclock instáveis que impedem o POST de terminar.</p>
+
+        <h2>Causa 4 — Fast Boot e teclas emperradas</h2>
+        <p>O <strong>Fast Boot</strong> reduz o tempo de inicialização pulando parte da checagem de dispositivos. O efeito colateral é conhecido: discos que demoram alguns segundos a mais para responder ficam de fora da checagem e o firmware conclui que não há sistema. Em placas com esse recurso agressivo, desativá-lo resolve o caso na primeira tentativa.</p>
+        <p>Há ainda o <strong>Fast Startup</strong> do Windows, que é outra coisa: ele grava um estado de hibernação parcial. Depois de uma queda de energia, esse estado pode ficar inconsistente e provocar uma volta ao Setup. Desligar completamente (mantendo Shift ao clicar em Desligar) limpa esse estado.</p>
+        <p>Por último, o trivial que ninguém checa: <strong>tecla presa</strong>. Del, F2, F10 ou Esc emperradas — por sujeira, líquido derramado ou membrana danificada — colocam o computador no Setup a cada partida. Teste com outro teclado; em notebook, use um teclado USB e observe se o comportamento muda.</p>
+
+        <h2>Ordem de verificação recomendada</h2>
+        <ol>
+          <li>Remover todos os dispositivos USB e cartões de memória.</li>
+          <li>Verificar se o disco aparece na lista de dispositivos do Setup.</li>
+          <li>Conferir modo de boot (UEFI × Legacy/CSM) e a presença do Windows Boot Manager.</li>
+          <li>Checar data e hora — se estiverem erradas, tratar a bateria CMOS.</li>
+          <li>Desativar Fast Boot e testar com outro teclado.</li>
+          <li>Se o disco não aparece ou faz ruído, parar e priorizar os dados.</li>
+        </ol>
+
+        <h2>Quando o problema não é configuração</h2>
+        <p>Alguns sinais indicam falha de hardware e não de ajuste: o Setup abre mas trava, a máquina desliga sozinha durante o POST, a lista de dispositivos muda a cada partida, ou o equipamento só liga depois de várias tentativas. Nesses casos a investigação passa por fonte, memória e placa-mãe — o roteiro está em <Link to="/blog/como-testar-fonte-de-alimentacao-pc" className="text-accent">como testar a fonte de alimentação</Link> e em <Link to="/blog/como-diagnosticar-placa-mae-defeituosa" className="text-accent">como diagnosticar placa-mãe defeituosa</Link>.</p>
+        <p>Se o equipamento nem chega a mostrar imagem em alguns momentos, o ponto de partida é outro: <Link to="/blog/notebook-nao-liga-o-que-fazer" className="text-accent">notebook não liga</Link>.</p>
+
+        <h2>Conclusão e próximos passos</h2>
+        <p>"Entrar direto na BIOS" é um sintoma de comunicação interrompida entre firmware e disco — não um defeito da BIOS. Verificando detecção, modo de boot, bateria e Fast Boot nessa ordem, a causa aparece rápido e sem tentativa e erro.</p>
+        <p>Se o disco é reconhecido mas o sistema não inicia, siga para <Link to="/blog/erro-no-bootable-device-como-resolver" className="text-accent">erro "No Bootable Device"</Link>. Se o problema começou depois de trocar o armazenamento, o caso está em <Link to="/blog/troquei-o-ssd-e-o-pc-so-abre-a-bios" className="text-accent">troquei o SSD e o PC só abre a BIOS</Link>. Quando a conclusão for reinstalar, o passo a passo completo está em <Link to="/blog/como-instalar-windows-11-do-zero" className="text-accent">como instalar o Windows 11 do zero</Link>.</p>
+        <p>Prefere não abrir o equipamento? A avaliação com escopo definido está em <Link to="/diagnostico-tecnico" className="text-accent">diagnóstico técnico</Link>, e o serviço correspondente em <Link to="/servicos/manutencao-de-computador" className="text-accent">manutenção de computador</Link>.</p>
+
+        <aside className="rounded-lg border border-border bg-muted/40 p-4 not-prose my-6">
+          <h2 className="text-base font-semibold m-0">Leia também</h2>
+          <ul className="mt-2 mb-0 list-disc pl-5 text-sm">
+            <li><Link to="/blog/erro-no-bootable-device-como-resolver" className="text-accent">Erro "No Bootable Device"</Link> — quando a BIOS vê o disco, mas não acha o sistema.</li>
+            <li><Link to="/blog/troquei-o-ssd-e-o-pc-so-abre-a-bios" className="text-accent">Troquei o SSD e o PC só abre a BIOS</Link> — o cenário de disco novo e vazio.</li>
+            <li><Link to="/blog/como-clonar-hd-para-ssd" className="text-accent">Clonar HD para SSD</Link> — por que a cópia às vezes não inicializa.</li>
+            <li><Link to="/blog/como-fazer-upgrade-ssd-nvme" className="text-accent">Upgrade para SSD NVMe</Link> — compatibilidade de slot antes de comprar.</li>
+          </ul>
+        </aside>
+
+        <p className="text-sm text-muted-foreground">Conteúdo produzido e revisado pela equipe editorial de O Técnico de Informática. Revisado em 25 de agosto de 2026.</p>
+      </>
+    ),
+  },
+
+  "erro-no-bootable-device-como-resolver": {
+    title: 'Erro "No Bootable Device" ou "Boot Device Not Found": como resolver',
+    excerpt:
+      "A BIOS reconhece o disco, mas o sistema não inicia. Como conferir a ordem de prioridade, identificar partição EFI ausente e reparar o boot do Windows pelo CMD.",
+    date: "2026-08-25",
+    readTime: "12 min",
+    category: "Procedimentos Técnicos",
+    content: (
+      <>
+        <p className="lead">As mensagens <strong>"No bootable device"</strong>, <strong>"Boot device not found"</strong>, <strong>"Operating system not found"</strong> e <strong>"Reboot and select proper boot device"</strong> dizem a mesma coisa com palavras diferentes: o firmware procurou um carregador de inicialização e não encontrou nenhum válido.</p>
+
+        <h2>Resposta curta</h2>
+        <p>Se o disco aparece na lista de dispositivos do Setup, o hardware está vivo e o que falhou é o <strong>carregador de inicialização</strong>: ordem de prioridade errada, partição EFI ausente ou danificada, ou registro de inicialização (BCD) corrompido. Os três casos se resolvem sem formatar, com uma mídia de instalação do Windows.</p>
+
+        <h2>O que está quebrado, exatamente</h2>
+        <p>Um disco com Windows guarda dois conjuntos de coisas: os seus arquivos e as instruções de partida. Em máquinas modernas (UEFI + GPT), essas instruções ficam numa partição pequena formatada em FAT32, a <strong>partição de sistema EFI</strong> (ESP), com cerca de 100 MB. Em máquinas antigas (Legacy + MBR), ficam no primeiro setor do disco e numa partição reservada.</p>
+        <p>Essa área é apagada ou corrompida com mais frequência do que se imagina: instalação de um segundo sistema, gerenciador de partições interrompido, clonagem incompleta, queda de energia durante atualização, "limpeza" de partições que pareciam inúteis. Os seus arquivos continuam lá — falta o mapa de como começar.</p>
+        <aside className="rounded-lg border border-border bg-muted/40 p-4 not-prose my-6">
+          <p className="m-0 text-sm"><strong>Confirme primeiro:</strong> se o disco <em>não</em> aparece no Setup, este artigo não é o seu caso — vá para <Link to="/blog/computador-entra-direto-na-bios" className="text-accent">meu computador entra direto na BIOS</Link> e trate detecção antes de tentar reparo.</p>
+        </aside>
+
+        <h2>Passo 1 — conferir a ordem de prioridade de boot</h2>
+        <ol>
+          <li>Entre no Setup (Del, F2 ou F10, conforme o fabricante) e abra a aba <em>Boot</em>.</li>
+          <li>Procure a lista <strong>Boot Priority</strong> ou <strong>Boot Option #1</strong>.</li>
+          <li>Se existir uma entrada <strong>Windows Boot Manager</strong>, coloque-a em primeiro lugar. A presença dessa entrada indica que a partição EFI está íntegra — o problema era só a ordem.</li>
+          <li>Se só aparecer o nome do disco (por exemplo, "SATA: WDC WD10..."), o firmware vê o hardware mas não achou carregador. Siga para o passo 2.</li>
+          <li>Confira também se o <strong>CSM</strong> não foi ligado ou desligado recentemente: alternar esse modo esconde entradas que existem.</li>
+          <li>Salve com F10 e reinicie. Se voltar a falhar, não repita a tentativa — mude de etapa.</li>
+        </ol>
+
+        <h2>Passo 2 — inicializar pela mídia de instalação</h2>
+        <p>O reparo é feito a partir de um pendrive com o Windows. A criação da mídia e os requisitos estão descritos em <Link to="/blog/como-instalar-windows-11-do-zero" className="text-accent">como instalar o Windows 11 do zero</Link> — use a etapa de criação da mídia e <strong>não prossiga para a instalação</strong>.</p>
+        <ol>
+          <li>Ligue o computador com o pendrive conectado e escolha o menu de inicialização (normalmente F12, F11 ou F8).</li>
+          <li>Selecione o pendrive na variante compatível com o seu modo de boot — entradas com prefixo <em>UEFI:</em> para UEFI, sem prefixo para Legacy.</li>
+          <li>Na primeira tela, avance e clique em <strong>Reparar o computador</strong>, não em Instalar.</li>
+          <li>Siga por <em>Solução de problemas</em> → <em>Prompt de comando</em>.</li>
+        </ol>
+
+        <h2>Passo 3 — reparo automático antes do manual</h2>
+        <p>Antes de digitar comandos, tente <em>Solução de problemas</em> → <em>Reparo de Inicialização</em>. Em falhas simples de BCD ele resolve sozinho. Se falhar duas vezes seguidas, passe ao reparo manual — insistir não muda o resultado.</p>
+
+        <h2>Passo 4 — reparo manual pelo prompt de comando</h2>
+        <p>Comece identificando o cenário. No prompt, execute:</p>
+        <pre><code className="language-cmd">{`diskpart
+list disk
+select disk 0
+list volume`}</code></pre>
+        <p>Observe duas informações: se o disco está marcado com <strong>asterisco na coluna GPT</strong> (então é UEFI) e se existe um volume pequeno em <strong>FAT32</strong> com cerca de 100 MB (a partição EFI). Saia com <code>exit</code>.</p>
+
+        <h3>Cenário A — disco MBR (Legacy)</h3>
+        <pre><code className="language-cmd">{`bootrec /fixmbr
+bootrec /fixboot
+bootrec /scanos
+bootrec /rebuildbcd`}</code></pre>
+        <p>O <code>/scanos</code> deve encontrar a instalação do Windows. Se ele responde "Total de instalações identificadas: 0", o sistema não está mais legível no disco — o caminho passa a ser preservação de dados, não reparo.</p>
+
+        <h3>Cenário B — disco GPT (UEFI) com partição EFI presente</h3>
+        <p>Atribua uma letra à partição EFI e reconstrua os arquivos de inicialização:</p>
+        <pre><code className="language-cmd">{`diskpart
+list volume
+select volume 3
+assign letter=S
+exit
+bcdboot C:\\Windows /s S: /f UEFI`}</code></pre>
+        <p>Troque <code>volume 3</code> pelo número real do volume FAT32 e <code>C:</code> pela letra onde está a pasta Windows (no ambiente de recuperação a letra frequentemente muda — confirme com <code>dir C:\Windows</code>).</p>
+
+        <h3>Cenário C — partição EFI ausente</h3>
+        <p>Se não existe nenhum volume FAT32 pequeno, a partição foi apagada. É possível recriá-la em espaço não alocado do mesmo disco:</p>
+        <pre><code className="language-cmd">{`diskpart
+select disk 0
+create partition efi size=200
+format quick fs=fat32 label="SYSTEM"
+assign letter=S
+exit
+bcdboot C:\\Windows /s S: /f UEFI`}</code></pre>
+        <aside className="rounded-lg border border-destructive/40 bg-destructive/5 p-4 not-prose my-6">
+          <p className="m-0 text-sm"><strong>Risco real:</strong> <code>create partition</code> e <code>format</code> escrevem no disco. Um número de disco errado apaga dados definitivamente. Se os arquivos ainda não têm cópia, faça a cópia antes — conectando o disco a outra máquina ou por adaptador USB. O procedimento está em <Link to="/blog/como-recuperar-dados-hd-com-defeito" className="text-accent">recuperar dados de HD com defeito</Link>.</p>
+        </aside>
+
+        <h3>Cenário D — "Acesso negado" no bootrec /fixboot</h3>
+        <p>Em UEFI, esse erro é esperado: o comando é de mundo MBR. Use a sequência do cenário B com <code>bcdboot</code>, que é a ferramenta correta para recriar os arquivos de inicialização em disco GPT.</p>
+
+        <h2>Passo 5 — quando o reparo não pega</h2>
+        <p>Se após <code>bcdboot</code> a máquina volta ao mesmo erro, verifique nesta ordem:</p>
+        <ul>
+          <li><strong>Partição ativa:</strong> em MBR, a partição do sistema precisa estar marcada como ativa (<code>active</code> no diskpart).</li>
+          <li><strong>Modo de boot alternado:</strong> reparo feito em UEFI e Setup em Legacy (ou o inverso) não inicia. Os dois precisam combinar.</li>
+          <li><strong>Saúde do disco:</strong> setores defeituosos na área de inicialização fazem o reparo "funcionar" e falhar de novo no reinício seguinte.</li>
+          <li><strong>Clonagem incompleta:</strong> cópias feitas sem incluir as partições de sistema iniciam uma vez e param depois — o critério está em <Link to="/blog/como-clonar-hd-para-ssd" className="text-accent">clonar HD para SSD</Link>.</li>
+        </ul>
+        <p>Reinstalar o sistema resolve o sintoma, mas apaga o que estiver no disco. Só siga por esse caminho depois de confirmar a cópia dos arquivos — e sabendo o que a reinstalação envolve, como descrito em <Link to="/blog/como-formatar-pc-sem-perder-arquivos" className="text-accent">como formatar o PC sem perder arquivos</Link>.</p>
+
+        <h2>Conclusão</h2>
+        <p>"No bootable device" quase nunca significa disco morto. Significa carregador ausente. A sequência é sempre a mesma: confirmar detecção, conferir ordem e modo de boot, tentar o reparo automático e, se necessário, recriar os arquivos de inicialização com <code>bcdboot</code> — protegendo os dados antes de qualquer comando que escreva no disco.</p>
+        <p>Se o disco sequer aparece, volte ao guia principal: <Link to="/blog/computador-entra-direto-na-bios" className="text-accent">meu computador entra direto na BIOS</Link>. Prefere que alguém execute o reparo com os dados preservados? O escopo está em <Link to="/diagnostico-tecnico" className="text-accent">diagnóstico técnico</Link>.</p>
+
+        <p className="text-sm text-muted-foreground">Conteúdo produzido e revisado pela equipe editorial de O Técnico de Informática. Revisado em 25 de agosto de 2026.</p>
+      </>
+    ),
+  },
+
+  "troquei-o-ssd-e-o-pc-so-abre-a-bios": {
+    title: "Troquei o HD/SSD e o PC só abre a BIOS: o que fazer",
+    excerpt:
+      "Disco novo vem vazio: sem sistema instalado, o computador para no Setup. Como confirmar a detecção do M.2, resolver conflito de portas e instalar o Windows do zero.",
+    date: "2026-08-25",
+    readTime: "11 min",
+    category: "Procedimentos Técnicos",
+    content: (
+      <>
+        <p className="lead">Instalar um SSD novo e ver a máquina parar na tela de configuração não é sinal de defeito. É o comportamento esperado: <strong>disco novo sai de fábrica vazio</strong>, sem sistema operacional e sem carregador de inicialização. Não existe nada para o firmware iniciar.</p>
+
+        <h2>Resposta curta</h2>
+        <p>Confirme que o disco novo aparece na lista de dispositivos do Setup, verifique se o slot M.2 usado não desativou uma porta SATA, e instale o sistema a partir de um pendrive — ou, se a intenção era manter tudo como estava, faça a clonagem corretamente em vez de instalar do zero.</p>
+
+        <h2>Por que o disco novo não inicia sozinho</h2>
+        <p>Um SSD recém-comprado normalmente nem tem tabela de partições. Ele é um espaço bruto. Para virar um disco de sistema ele precisa ser <strong>inicializado</strong> (receber uma tabela GPT ou MBR), <strong>particionado</strong>, <strong>formatado</strong> e finalmente receber a instalação. O instalador do Windows faz as quatro etapas, então não é necessário preparar o disco antes.</p>
+        <p>Existe uma exceção que causa confusão: SSDs vendidos como "com Windows instalado" por lojas independentes. Nesses casos, a instalação costuma estar vinculada ao hardware de origem e falhar no primeiro boot.</p>
+
+        <h2>Passo 1 — o disco aparece no Setup?</h2>
+        <p>Entre no Setup e procure a aba de informações do sistema ou de armazenamento. O modelo do disco novo precisa estar listado. Se não estiver:</p>
+        <ul>
+          <li><strong>M.2 mal encaixado:</strong> o módulo entra inclinado, encosta no fim do conector e só então é preso pelo parafuso. Sem o parafuso, ele fica levantado e perde contato.</li>
+          <li><strong>Slot incompatível:</strong> há slots M.2 apenas SATA, apenas NVMe (PCIe) e híbridos. Confira no manual da placa ou do notebook qual é o do seu modelo. Chave B, M ou B+M no conector do módulo é o primeiro indício.</li>
+          <li><strong>Conflito de portas:</strong> ativar o segundo M.2 desabilita portas SATA específicas em muitas placas. É por isso que, ao instalar o SSD novo, o HD antigo às vezes "some".</li>
+          <li><strong>SATA em modo errado:</strong> o controlador precisa estar em <strong>AHCI</strong>. Modo RAID ou Intel RST esconde discos do instalador do Windows.</li>
+          <li><strong>Adaptador ou caddy:</strong> adaptadores baratos de baia ótica falham com frequência. Teste o disco direto na placa antes de culpar o disco.</li>
+        </ul>
+        <p>Detalhes de compatibilidade antes da compra estão em <Link to="/blog/como-fazer-upgrade-ssd-nvme" className="text-accent">upgrade para SSD NVMe</Link>, e o caso específico de notebooks com dois armazenamentos em <Link to="/blog/como-instalar-segundo-ssd-notebook" className="text-accent">como instalar um segundo SSD no notebook</Link>.</p>
+
+        <h2>Passo 2 — configurar o slot M.2 na BIOS</h2>
+        <p>Placas com vários slots M.2 costumam expor opções que precisam bater com o hardware instalado:</p>
+        <ul>
+          <li><strong>M.2 Mode / M.2 Configuration:</strong> alterna entre SATA e PCIe para o slot. Em <em>Auto</em> geralmente funciona; em modo fixo errado, o disco desaparece.</li>
+          <li><strong>Geração PCIe (Gen3 × Gen4):</strong> deixar em <em>Auto</em> é o recomendado. Forçar Gen4 em placa ou disco que não suportam produz instabilidade e detecção intermitente; forçar Gen3 num disco Gen4 apenas limita a velocidade, sem impedir o funcionamento.</li>
+          <li><strong>Divisão de linhas PCIe:</strong> em algumas placas, ocupar o segundo M.2 reduz as linhas da placa de vídeo. Não impede o boot, mas explica queda de desempenho depois do upgrade.</li>
+          <li><strong>Boot mode:</strong> para instalar Windows 11, mantenha <strong>UEFI</strong> com CSM desabilitado e Secure Boot ligado.</li>
+        </ul>
+
+        <h2>Passo 3 — instalar o Windows a partir do Setup</h2>
+        <ol>
+          <li>Crie a mídia de instalação em outro computador — a etapa está detalhada em <Link to="/blog/como-instalar-windows-11-do-zero" className="text-accent">como instalar o Windows 11 do zero</Link>.</li>
+          <li>Conecte o pendrive, ligue e abra o menu de inicialização (F12, F11 ou F8) ou coloque o pendrive em primeiro lugar na lista de prioridade.</li>
+          <li>Escolha a entrada com prefixo <strong>UEFI:</strong> para que a instalação use GPT.</li>
+          <li>Ao chegar na escolha do disco, selecione o <strong>espaço não alocado</strong> do SSD novo e avance. O instalador cria automaticamente a partição EFI, a reservada e a do sistema.</li>
+          <li>Se o instalador informar que não é possível instalar naquele disco, quase sempre é conflito de modo (MBR × GPT) ou controlador em RAID — ajuste no Setup e recomece.</li>
+          <li>Depois da instalação, entre no Setup e confirme que <strong>Windows Boot Manager</strong> ficou como primeira opção.</li>
+        </ol>
+        <aside className="rounded-lg border border-border bg-muted/40 p-4 not-prose my-6">
+          <p className="m-0 text-sm"><strong>Disco antigo conectado?</strong> Durante a instalação, deixe apenas o SSD novo ligado. Com dois discos presentes, o instalador pode gravar a partição de inicialização no disco errado — e a máquina deixa de iniciar quando o antigo for removido.</p>
+        </aside>
+
+        <h2>Passo 4 — recuperar os arquivos do disco antigo</h2>
+        <p>Depois que o sistema novo estiver funcionando, reconecte o disco antigo como secundário (interno ou por adaptador USB). Ele aparecerá como uma unidade comum e os documentos, fotos e downloads continuam acessíveis nas pastas de usuário.</p>
+        <p>Programas não migram dessa forma: precisam ser reinstalados. Contas de e-mail configuradas localmente exigem exportação prévia — se esse era o seu caso e o disco antigo já foi apagado, o caminho é o de <Link to="/blog/como-recuperar-dados-hd-com-defeito" className="text-accent">recuperação de dados</Link>.</p>
+
+        <h2>Instalar do zero ou clonar?</h2>
+        <ul>
+          <li><strong>Instalar do zero</strong> quando o sistema antigo estava lento, instável, infectado ou muito antigo. Você perde a configuração, mas ganha um ambiente limpo.</li>
+          <li><strong>Clonar</strong> quando o sistema funciona bem e há muitos programas configurados. O critério, os riscos e o motivo de uma cópia às vezes não inicializar estão em <Link to="/blog/como-clonar-hd-para-ssd" className="text-accent">clonar HD para SSD</Link>.</li>
+        </ul>
+        <p>Se você clonou e a máquina parou no Setup, o problema não é o disco novo: é o carregador que não veio junto — o reparo está em <Link to="/blog/erro-no-bootable-device-como-resolver" className="text-accent">erro "No Bootable Device"</Link>.</p>
+
+        <h2>Conclusão</h2>
+        <p>Disco novo sempre para na BIOS até receber um sistema. A sequência correta é confirmar a detecção, ajustar o slot e o modo de boot, instalar com apenas o disco novo conectado e só depois reconectar o antigo para copiar os arquivos.</p>
+        <p>Para o quadro completo de causas de parada no Setup, volte ao guia principal: <Link to="/blog/computador-entra-direto-na-bios" className="text-accent">meu computador entra direto na BIOS</Link>. Para executar o upgrade com dados preservados e teste de saúde do disco, veja <Link to="/servicos/upgrade-ssd-ram" className="text-accent">upgrade de SSD e memória</Link>.</p>
+
+        <p className="text-sm text-muted-foreground">Conteúdo produzido e revisado pela equipe editorial de O Técnico de Informática. Revisado em 25 de agosto de 2026.</p>
+      </>
+    ),
+  },
+
 };

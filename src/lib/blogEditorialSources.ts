@@ -550,7 +550,38 @@ export const ARTICLE_SOURCE_MANIFEST: Record<string, ArticleSourceManifest> = {
     notes:
       "Revisão concluída (Onda 8E): todos os valores citados vêm da fonte única src/lib/precosConfig.ts (visita avulsa a partir de R$ 99,99 a cada 30 minutos, pacote de 2 horas R$ 279,99 e mínimo pré-aprovado de R$ 299,99 com coleta e entrega). Peças e licenças declaradas como não inclusas. Nenhum valor estimado, nenhuma média de mercado inventada e nenhuma comparação com concorrente.",
   },
+  "computador-entra-direto-na-bios": {
+    slug: "computador-entra-direto-na-bios",
+    sources: [],
+    technicalReview: "reviewed",
+    factChecked: true,
+    factCheckedAt: "2026-08-25",
+    stableKnowledge: true,
+    notes:
+      "Revisão concluída (Onda 9C): papel do POST, ordem de verificação entre detecção do disco, modo de boot (UEFI/CSM), bateria CMOS e Fast Boot; comportamento de slots M.2 compartilhados com portas SATA; critério de parada quando há suspeita de falha física. Sem marca comercial, sem preço e sem promessa de resultado. Conhecimento técnico estável — sem fonte visível.",
+  },
+  "erro-no-bootable-device-como-resolver": {
+    slug: "erro-no-bootable-device-como-resolver",
+    sources: [],
+    technicalReview: "reviewed",
+    factChecked: true,
+    factCheckedAt: "2026-08-25",
+    stableKnowledge: true,
+    notes:
+      "Revisão concluída (Onda 9C): diferença entre carregador MBR e partição EFI, uso correto de bootrec em MBR e de bcdboot em GPT, motivo do 'acesso negado' em /fixboot sob UEFI, recriação de partição EFI e aviso de risco de escrita em disco antes de cópia dos dados. Conhecimento técnico estável — sem fonte visível.",
+  },
+  "troquei-o-ssd-e-o-pc-so-abre-a-bios": {
+    slug: "troquei-o-ssd-e-o-pc-so-abre-a-bios",
+    sources: [],
+    technicalReview: "reviewed",
+    factChecked: true,
+    factCheckedAt: "2026-08-25",
+    stableKnowledge: true,
+    notes:
+      "Revisão concluída (Onda 9C): disco novo sem tabela de partições, compatibilidade de chave/slot M.2 (SATA × NVMe), conflito de linhas PCIe e portas SATA, controlador em AHCI, instalação com apenas o disco novo conectado e critério entre instalar do zero e clonar. Conhecimento técnico estável — sem fonte visível.",
+  },
 };
+
 
 
 /** Retorna a fonte tipada por id (ou undefined). */
