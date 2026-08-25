@@ -21,6 +21,8 @@ export const ENRIQUECIMENTO_4A: Record<string, EnriquecimentoConteudo> = {
   /* CLUSTER A — notebook superaquecendo / desligando sozinho            */
   /* ------------------------------------------------------------------ */
   "/problemas/computador-esquentando": {
+    respostaRapida:
+      "Aquecer sob carga é normal; o que indica defeito é aquecer parado, perder desempenho sempre no mesmo ponto ou desligar sozinho. Antes de trocar peça, verifique em repouso o uso de CPU no Gerenciador de tarefas e o fluxo de ar na saída: uso alto em repouso aponta software, carcaça quente com fluxo fraco aponta radiador obstruído, e desligamento só quando quente aponta proteção térmica. Se o equipamento desliga sob carga, pare de usá-lo até o diagnóstico — desligamento abrupto corrompe arquivo aberto.",
     tabelaExtra: {
       titulo: "Aquecimento normal ou anormal: como diferenciar antes de trocar qualquer peça",
       colunas: { causa: "Hipótese", verificar: "Como diferenciar", acao: "Ação" },
