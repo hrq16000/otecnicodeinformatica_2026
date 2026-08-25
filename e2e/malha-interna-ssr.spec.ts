@@ -23,6 +23,20 @@ const PAGINAS_SEMENTE = [
 
 const IGNORAR = /^\/(admin|ads|api|lovable)\b/;
 
+/**
+ * Destinos noindex POR POLÍTICA (não são defeito):
+ *  · /bairros/*  — diretório de UX com bairros ainda SHALLOW;
+ *  · cidades fora da lista de 6 âncoras indexáveis;
+ *  · páginas utilitárias sem intenção de busca própria.
+ * Qualquer noindex fora desta lista quebra o teste.
+ */
+const NOINDEX_PERMITIDO = [
+  /^\/bairros\//,
+  /^\/tecnico-informatica-(fazenda-rio-grande|almirante-tamandare|piraquara|campo-magro|quatro-barras)$/,
+  /^\/atendimento$/,
+  /^\/problemas-reais-e-casos$/,
+];
+
 const ehInterno = (href: string) =>
   href.startsWith("/") && !href.startsWith("//") && !href.startsWith("/#") && !IGNORAR.test(href);
 
