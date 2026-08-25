@@ -175,7 +175,7 @@ export const BairroMalhaLayout = ({ bairro }: { bairro: BairroMalha }) => {
               caminho mais provável, a modalidade de atendimento e o custo antes de qualquer
               serviço.
             </p>
-            <div className="mt-8">
+            <div className="mt-8 flex flex-wrap gap-3">
               <a
                 href={waHref}
                 target="_blank"
@@ -190,6 +190,16 @@ export const BairroMalhaLayout = ({ bairro }: { bairro: BairroMalha }) => {
                 <MessageCircle className="h-5 w-5" />
                 Falar com um técnico agora
               </a>
+              {/* A triagem abre já com o bairro da rota preenchido. */}
+              <a
+                href="#triagem"
+                data-cta-location="bairro_malha_urgente"
+                data-neighborhood={bairro.nome}
+                className="inline-flex min-h-14 items-center justify-center gap-2 rounded-lg border border-accent/40 bg-card px-7 text-base font-bold text-foreground motion-surface hover:border-accent"
+                onClick={() => trackCTAClick("triagem", "bairro_malha_urgente")}
+              >
+                Preciso de ajuda urgente
+              </a>
             </div>
           </div>
         </section>
@@ -200,14 +210,30 @@ export const BairroMalhaLayout = ({ bairro }: { bairro: BairroMalha }) => {
           </h2>
           <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {SERVICOS_MALHA.map((servico) => (
-              <Link
+              <div
                 key={servico.slug}
-                to={servico.to}
                 className="group rounded-xl border border-border/60 bg-card p-5 motion-surface hover:border-accent/50"
               >
-                <span className="text-base font-semibold text-foreground">{servico.label}</span>
-                <ArrowRight className="mt-3 h-4 w-4 text-accent transition-transform group-hover:translate-x-1" />
-              </Link>
+                <Link to={servico.to} className="block">
+                  <span className="text-base font-semibold text-foreground">{servico.label}</span>
+                  <ArrowRight className="mt-3 h-4 w-4 text-accent transition-transform group-hover:translate-x-1" />
+                </Link>
+                {/* Deep link com serviço + bairro já no texto da mensagem. */}
+                <a
+                  href={whatsappLink(mensagemBairro(bairro, servico.label))}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  data-cta-location={`bairro_malha_servico_${servico.slug}`}
+                  data-wa-source="whatsapp_cta"
+                  data-city={bairro.cidade}
+                  data-neighborhood={bairro.nome}
+                  className="mt-3 inline-flex items-center gap-1.5 text-sm font-semibold text-accent underline-offset-4 hover:underline"
+                  onClick={() => trackCTAClick("whatsapp", `bairro_malha_servico_${servico.slug}`)}
+                >
+                  <MessageCircle className="h-4 w-4" />
+                  Pedir no WhatsApp
+                </a>
+              </div>
             ))}
           </div>
         </section>
