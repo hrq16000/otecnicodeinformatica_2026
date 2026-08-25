@@ -50,9 +50,17 @@ export const Route = createFileRoute("/blog_/$slug")({
     const heroImage = `${SITE_BASE_URL}/og-image.png`;
     const heroImageOg = withOgVersion(heroImage);
 
+    // Rodada 4F: título, description, OG e Twitter saem todos de metaSocial(),
+    // garantindo que og:title nunca divirja do <title> renderizado no SSR.
     const meta: Array<Record<string, string>> = [
-      { title: `${post.title} | Blog | O Técnico de Informática` },
-      { name: "description", content: post.excerpt },
+      ...metaSocial({
+        titulo: post.title,
+        descricao: post.excerpt,
+        url: canonicalUrl,
+        imagem: heroImageOg,
+        tipo: approved ? "article" : "website",
+        sufixoMarca: "Blog | O Técnico de Informática",
+      }),
       {
         name: "robots",
         content: approved
@@ -65,23 +73,8 @@ export const Route = createFileRoute("/blog_/$slug")({
           ? "index, follow, max-image-preview:large, max-snippet:-1"
           : "noindex, follow",
       },
-      { property: "og:type", content: approved ? "article" : "website" },
-      { property: "og:title", content: post.title },
-      { property: "og:description", content: post.excerpt },
-      { property: "og:url", content: canonicalUrl },
-      { property: "og:site_name", content: "O Técnico de Informática" },
-      { property: "og:locale", content: "pt_BR" },
-      { property: "og:image", content: heroImageOg },
-      { property: "og:image:secure_url", content: heroImageOg },
-      { property: "og:image:width", content: "1200" },
-      { property: "og:image:height", content: "630" },
-      { property: "og:image:alt", content: post.title },
-      { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: post.title },
-      { name: "twitter:description", content: post.excerpt },
-      { name: "twitter:image", content: heroImageOg },
-      { name: "twitter:image:alt", content: post.title },
     ];
+
 
     if (approved) {
       meta.push(
