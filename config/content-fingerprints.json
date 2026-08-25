@@ -1,7 +1,12 @@
 {
-  "geradoEm": "2026-08-25T00:33:51.526Z",
+  "geradoEm": "2026-08-25T00:34:34.448Z",
   "dist": "./dist",
   "rotas": {
+    "/": {
+      "hash": "cfdf7d0a70ad",
+      "lastmod": "2026-08-25",
+      "origem": "bootstrap"
+    },
     "/anuncie": {
       "hash": "d3c358cafa41",
       "lastmod": "2026-08-08",
@@ -22,9 +27,314 @@
       "lastmod": "2026-08-06",
       "origem": "bootstrap"
     },
+    "/bairros/afonso-pena": {
+      "hash": "d815744c353e",
+      "lastmod": "2026-08-25",
+      "origem": "bootstrap"
+    },
+    "/bairros/agua-verde": {
+      "hash": "dddbf41fb105",
+      "lastmod": "2026-08-25",
+      "origem": "bootstrap"
+    },
+    "/bairros/aviacao": {
+      "hash": "71b6e35d37d8",
+      "lastmod": "2026-08-25",
+      "origem": "bootstrap"
+    },
+    "/bairros/batel": {
+      "hash": "0da5aa411027",
+      "lastmod": "2026-08-25",
+      "origem": "bootstrap"
+    },
+    "/bairros/bigorrilho": {
+      "hash": "2a2dcb202051",
+      "lastmod": "2026-08-25",
+      "origem": "bootstrap"
+    },
+    "/bairros/boa-vista": {
+      "hash": "955f134a1af7",
+      "lastmod": "2026-08-25",
+      "origem": "bootstrap"
+    },
+    "/bairros/boqueirao": {
+      "hash": "6174bd75a881",
+      "lastmod": "2026-08-25",
+      "origem": "bootstrap"
+    },
+    "/bairros/cabral": {
+      "hash": "cd681271df90",
+      "lastmod": "2026-08-25",
+      "origem": "bootstrap"
+    },
+    "/bairros/cajuru": {
+      "hash": "9b088d942cd4",
+      "lastmod": "2026-08-25",
+      "origem": "bootstrap"
+    },
+    "/bairros/centro": {
+      "hash": "57483c1a0822",
+      "lastmod": "2026-08-25",
+      "origem": "bootstrap"
+    },
+    "/bairros/cic": {
+      "hash": "148df5415646",
+      "lastmod": "2026-08-25",
+      "origem": "bootstrap"
+    },
+    "/bairros/cidade-jardim-sjp": {
+      "hash": "ceddc47a87f8",
+      "lastmod": "2026-08-25",
+      "origem": "bootstrap"
+    },
+    "/bairros/costeira": {
+      "hash": "5f80b44994b4",
+      "lastmod": "2026-08-25",
+      "origem": "bootstrap"
+    },
+    "/bairros/cruzeiro": {
+      "hash": "d77419110364",
+      "lastmod": "2026-08-25",
+      "origem": "bootstrap"
+    },
+    "/bairros/guatupe": {
+      "hash": "7ac444c1fecb",
+      "lastmod": "2026-08-25",
+      "origem": "bootstrap"
+    },
+    "/bairros/ouro-fino-sjp": {
+      "hash": "0d9a57c6dead",
+      "lastmod": "2026-08-25",
+      "origem": "bootstrap"
+    },
+    "/bairros/pinheirinho": {
+      "hash": "bfad9f4c17ee",
+      "lastmod": "2026-08-25",
+      "origem": "bootstrap"
+    },
+    "/bairros/portao": {
+      "hash": "7fb3e20a5770",
+      "lastmod": "2026-08-25",
+      "origem": "bootstrap"
+    },
+    "/bairros/santa-felicidade": {
+      "hash": "a3fca980f162",
+      "lastmod": "2026-08-25",
+      "origem": "bootstrap"
+    },
+    "/bairros/sitio-cercado": {
+      "hash": "7a75ab6bb4ec",
+      "lastmod": "2026-08-25",
+      "origem": "bootstrap"
+    },
+    "/bairros/xaxim": {
+      "hash": "529dc02be972",
+      "lastmod": "2026-08-25",
+      "origem": "bootstrap"
+    },
+    "/blog": {
+      "hash": "deca0c2fa438",
+      "lastmod": "2026-08-25",
+      "origem": "bootstrap"
+    },
+    "/blog/backup-como-proteger-seus-arquivos": {
+      "hash": "090342fb7478",
+      "lastmod": "2026-08-25",
+      "origem": "bootstrap"
+    },
+    "/blog/backup-nuvem-empresas-qual-escolher": {
+      "hash": "a116c8897201",
+      "lastmod": "2026-08-25",
+      "origem": "bootstrap"
+    },
+    "/blog/como-aprender-informatica": {
+      "hash": "7b5a353b6000",
+      "lastmod": "2026-08-25",
+      "origem": "bootstrap"
+    },
+    "/blog/como-clonar-hd-para-ssd": {
+      "hash": "5fd083a8d2ba",
+      "lastmod": "2026-08-25",
+      "origem": "bootstrap"
+    },
+    "/blog/como-conectar-wifi-tv-nao-conecta": {
+      "hash": "538491ab429a",
+      "lastmod": "2026-08-25",
+      "origem": "bootstrap"
+    },
+    "/blog/como-configurar-roteador-wifi-iniciantes": {
+      "hash": "57df0b29a2c5",
+      "lastmod": "2026-08-25",
+      "origem": "bootstrap"
+    },
+    "/blog/como-diagnosticar-placa-mae-defeituosa": {
+      "hash": "d47d1cb9b0d9",
+      "lastmod": "2026-08-25",
+      "origem": "bootstrap"
+    },
+    "/blog/como-escolher-um-bom-antivirus": {
+      "hash": "2e708e9147c1",
+      "lastmod": "2026-08-25",
+      "origem": "bootstrap"
+    },
+    "/blog/como-escolher-uma-workstation": {
+      "hash": "e6fbb8d5ef4b",
+      "lastmod": "2026-08-25",
+      "origem": "bootstrap"
+    },
+    "/blog/como-fazer-upgrade-ssd-nvme": {
+      "hash": "74ece9c2852a",
+      "lastmod": "2026-08-25",
+      "origem": "bootstrap"
+    },
+    "/blog/como-formatar-pc-sem-perder-arquivos": {
+      "hash": "e53a5d9908a3",
+      "lastmod": "2026-08-25",
+      "origem": "bootstrap"
+    },
+    "/blog/como-instalar-impressora-windows-passo-a-passo": {
+      "hash": "aa9afe1dad52",
+      "lastmod": "2026-08-25",
+      "origem": "bootstrap"
+    },
+    "/blog/como-instalar-segundo-ssd-notebook": {
+      "hash": "a629cd925ea6",
+      "lastmod": "2026-08-25",
+      "origem": "bootstrap"
+    },
+    "/blog/como-instalar-windows-11-do-zero": {
+      "hash": "bd525b945cbd",
+      "lastmod": "2026-08-25",
+      "origem": "bootstrap"
+    },
+    "/blog/como-limpar-notebook-por-dentro": {
+      "hash": "5facca808b0d",
+      "lastmod": "2026-08-25",
+      "origem": "bootstrap"
+    },
+    "/blog/como-melhorar-sinal-wifi-em-casa": {
+      "hash": "c7f575ac6d6c",
+      "lastmod": "2026-08-25",
+      "origem": "bootstrap"
+    },
+    "/blog/como-proteger-computador-golpes-internet": {
+      "hash": "6fb016ec1c02",
+      "lastmod": "2026-08-25",
+      "origem": "bootstrap"
+    },
+    "/blog/como-recuperar-dados-hd-com-defeito": {
+      "hash": "2b1226533730",
+      "lastmod": "2026-08-25",
+      "origem": "bootstrap"
+    },
+    "/blog/como-remover-virus-windows-iniciantes": {
+      "hash": "a6bcda226bda",
+      "lastmod": "2026-08-25",
+      "origem": "bootstrap"
+    },
+    "/blog/como-resolver-tela-azul-windows": {
+      "hash": "86c30d251e03",
+      "lastmod": "2026-08-25",
+      "origem": "bootstrap"
+    },
+    "/blog/como-saber-quem-esta-usando-meu-wifi": {
+      "hash": "ca67fda5023e",
+      "lastmod": "2026-08-25",
+      "origem": "bootstrap"
+    },
+    "/blog/como-saber-se-pc-tem-virus-malware": {
+      "hash": "580115e6b0b1",
+      "lastmod": "2026-08-25",
+      "origem": "bootstrap"
+    },
+    "/blog/como-testar-fonte-de-alimentacao-pc": {
+      "hash": "d8ce9023e5d0",
+      "lastmod": "2026-08-25",
+      "origem": "bootstrap"
+    },
+    "/blog/como-trocar-pasta-termica-notebook": {
+      "hash": "146bd0c1a57e",
+      "lastmod": "2026-08-25",
+      "origem": "bootstrap"
+    },
+    "/blog/como-trocar-tela-notebook-passo-a-passo": {
+      "hash": "0e35044598bb",
+      "lastmod": "2026-08-25",
+      "origem": "bootstrap"
+    },
+    "/blog/computador-lento-causas-solucoes": {
+      "hash": "a6871fef723b",
+      "lastmod": "2026-08-25",
+      "origem": "bootstrap"
+    },
+    "/blog/informatica-basica": {
+      "hash": "7039850390b3",
+      "lastmod": "2026-08-25",
+      "origem": "bootstrap"
+    },
+    "/blog/notebook-nao-liga-o-que-fazer": {
+      "hash": "b3e9557f8fde",
+      "lastmod": "2026-08-25",
+      "origem": "bootstrap"
+    },
+    "/blog/notebook-superaquecendo-o-que-fazer": {
+      "hash": "0bbf9451243f",
+      "lastmod": "2026-08-25",
+      "origem": "bootstrap"
+    },
+    "/blog/o-que-e-informatica": {
+      "hash": "9fca41e9e47c",
+      "lastmod": "2026-08-25",
+      "origem": "bootstrap"
+    },
+    "/blog/organizacao-de-ti-para-pequenos-escritorios": {
+      "hash": "c212f6dfcb0b",
+      "lastmod": "2026-08-25",
+      "origem": "bootstrap"
+    },
+    "/blog/quando-trocar-hd-por-ssd": {
+      "hash": "a0331e03bd0d",
+      "lastmod": "2026-08-25",
+      "origem": "bootstrap"
+    },
+    "/blog/quanto-custa-formatar-um-computador": {
+      "hash": "0f36bd82953b",
+      "lastmod": "2026-08-25",
+      "origem": "bootstrap"
+    },
+    "/blog/ransomware-como-proteger-empresa": {
+      "hash": "21740edcc121",
+      "lastmod": "2026-08-25",
+      "origem": "bootstrap"
+    },
+    "/blog/windows-11-lento-como-resolver": {
+      "hash": "910ca48227b2",
+      "lastmod": "2026-08-25",
+      "origem": "bootstrap"
+    },
+    "/coleta-e-entrega": {
+      "hash": "5b9d61b112eb",
+      "lastmod": "2026-08-25",
+      "origem": "bootstrap"
+    },
     "/como-funciona": {
       "hash": "5e9af499715a",
       "lastmod": "2026-08-06",
+      "origem": "bootstrap"
+    },
+    "/contato": {
+      "hash": "4f726d332a65",
+      "lastmod": "2026-08-25",
+      "origem": "bootstrap"
+    },
+    "/diagnostico-tecnico": {
+      "hash": "49c115e5e287",
+      "lastmod": "2026-08-25",
+      "origem": "bootstrap"
+    },
+    "/empresa-de-ti-curitiba": {
+      "hash": "203d7a77ec92",
+      "lastmod": "2026-08-25",
       "origem": "bootstrap"
     },
     "/equipamentos": {
@@ -57,9 +367,19 @@
       "lastmod": "2026-08-12",
       "origem": "bootstrap"
     },
+    "/faq": {
+      "hash": "d7cb9b99facd",
+      "lastmod": "2026-08-25",
+      "origem": "bootstrap"
+    },
     "/guia-tecnico-informatica": {
       "hash": "51b0985754de",
       "lastmod": "2026-08-09",
+      "origem": "bootstrap"
+    },
+    "/politica-de-pecas-do-cliente": {
+      "hash": "d697fdb5b0ef",
+      "lastmod": "2026-08-25",
       "origem": "bootstrap"
     },
     "/precos-e-politicas": {
@@ -107,6 +427,11 @@
       "lastmod": "2026-08-25",
       "origem": "bootstrap"
     },
+    "/problemas/impressora-nao-imprime": {
+      "hash": "7b94e1631186",
+      "lastmod": "2026-08-25",
+      "origem": "bootstrap"
+    },
     "/problemas/notebook-molhado": {
       "hash": "d43d910b7d93",
       "lastmod": "2026-08-12",
@@ -122,6 +447,11 @@
       "lastmod": "2026-08-09",
       "origem": "bootstrap"
     },
+    "/problemas/teclado-notebook-nao-funciona": {
+      "hash": "ad15b28d0545",
+      "lastmod": "2026-08-25",
+      "origem": "bootstrap"
+    },
     "/problemas/tela-azul": {
       "hash": "1fc62aeeadb5",
       "lastmod": "2026-08-12",
@@ -132,13 +462,113 @@
       "lastmod": "2026-08-12",
       "origem": "bootstrap"
     },
+    "/problemas/windows-nao-inicia": {
+      "hash": "dd2d7cf79671",
+      "lastmod": "2026-08-25",
+      "origem": "bootstrap"
+    },
+    "/quando-nao-compensa": {
+      "hash": "53e9a8d94916",
+      "lastmod": "2026-08-25",
+      "origem": "bootstrap"
+    },
     "/seguranca-dos-dados": {
       "hash": "1b2bf2ca9e22",
       "lastmod": "2026-08-06",
       "origem": "bootstrap"
     },
+    "/servicos": {
+      "hash": "b446a8ee14ea",
+      "lastmod": "2026-08-25",
+      "origem": "bootstrap"
+    },
+    "/servicos/backup-para-empresas": {
+      "hash": "4cc35ef64577",
+      "lastmod": "2026-08-25",
+      "origem": "bootstrap"
+    },
+    "/servicos/backup-para-empresas/curitiba": {
+      "hash": "2d899e356e73",
+      "lastmod": "2026-08-25",
+      "origem": "bootstrap"
+    },
+    "/servicos/backup-recuperacao/curitiba": {
+      "hash": "f8a9af38ae58",
+      "lastmod": "2026-08-25",
+      "origem": "bootstrap"
+    },
+    "/servicos/backup-recuperacao/sao-jose-dos-pinhais": {
+      "hash": "ccbefbfbf647",
+      "lastmod": "2026-08-25",
+      "origem": "bootstrap"
+    },
+    "/servicos/conserto-monitor": {
+      "hash": "43c94667ea8d",
+      "lastmod": "2026-08-25",
+      "origem": "bootstrap"
+    },
+    "/servicos/conserto-notebook/curitiba": {
+      "hash": "dae53d68ea63",
+      "lastmod": "2026-08-25",
+      "origem": "bootstrap"
+    },
+    "/servicos/conserto-notebook/sao-jose-dos-pinhais": {
+      "hash": "fbd103d03de6",
+      "lastmod": "2026-08-25",
+      "origem": "bootstrap"
+    },
+    "/servicos/conserto-pc-notebook/agua-verde": {
+      "hash": "510a1b4e0aa2",
+      "lastmod": "2026-08-25",
+      "origem": "bootstrap"
+    },
+    "/servicos/conserto-pc-notebook/centro": {
+      "hash": "abf9893699c2",
+      "lastmod": "2026-08-25",
+      "origem": "bootstrap"
+    },
+    "/servicos/conserto-pc/curitiba": {
+      "hash": "416ba518e8de",
+      "lastmod": "2026-08-25",
+      "origem": "bootstrap"
+    },
+    "/servicos/conserto-pc/sao-jose-dos-pinhais": {
+      "hash": "bae9bedb2fc7",
+      "lastmod": "2026-08-25",
+      "origem": "bootstrap"
+    },
+    "/servicos/conserto-placa": {
+      "hash": "daeb68a47e41",
+      "lastmod": "2026-08-25",
+      "origem": "bootstrap"
+    },
+    "/servicos/conserto-tv": {
+      "hash": "94b5b8270151",
+      "lastmod": "2026-08-25",
+      "origem": "bootstrap"
+    },
     "/servicos/formatacao": {
       "hash": "b40b2a9be749",
+      "lastmod": "2026-08-25",
+      "origem": "bootstrap"
+    },
+    "/servicos/formatacao-computador/agua-verde": {
+      "hash": "23f17c71f3fd",
+      "lastmod": "2026-08-25",
+      "origem": "bootstrap"
+    },
+    "/servicos/formatacao-computador/batel": {
+      "hash": "2a56c81f144c",
+      "lastmod": "2026-08-25",
+      "origem": "bootstrap"
+    },
+    "/servicos/formatacao-computador/cic": {
+      "hash": "8d6317ee7dab",
+      "lastmod": "2026-08-25",
+      "origem": "bootstrap"
+    },
+    "/servicos/formatacao-computador/curitiba": {
+      "hash": "82448ab07d69",
       "lastmod": "2026-08-25",
       "origem": "bootstrap"
     },
@@ -152,14 +582,34 @@
       "lastmod": "2026-08-04",
       "origem": "bootstrap"
     },
+    "/servicos/manutencao-preventiva-empresas": {
+      "hash": "60ce202f9e8d",
+      "lastmod": "2026-08-25",
+      "origem": "bootstrap"
+    },
+    "/servicos/manutencao-preventiva-empresas/curitiba": {
+      "hash": "e05b10f32dc9",
+      "lastmod": "2026-08-25",
+      "origem": "bootstrap"
+    },
     "/servicos/montagem-de-pc": {
       "hash": "c1768c707feb",
       "lastmod": "2026-08-06",
       "origem": "bootstrap"
     },
+    "/servicos/montagem-de-pc/curitiba": {
+      "hash": "a264757bde93",
+      "lastmod": "2026-08-25",
+      "origem": "bootstrap"
+    },
     "/servicos/pc-gamer": {
       "hash": "861b7cecc9b7",
       "lastmod": "2026-08-11",
+      "origem": "bootstrap"
+    },
+    "/servicos/pc-gamer/curitiba": {
+      "hash": "dd48305d69a3",
+      "lastmod": "2026-08-25",
       "origem": "bootstrap"
     },
     "/servicos/recuperacao-de-dados": {
@@ -172,8 +622,33 @@
       "lastmod": "2026-08-06",
       "origem": "bootstrap"
     },
+    "/servicos/redes-wifi/curitiba": {
+      "hash": "e157e75178cc",
+      "lastmod": "2026-08-25",
+      "origem": "bootstrap"
+    },
+    "/servicos/redes-wifi/sao-jose-dos-pinhais": {
+      "hash": "3abf28dfe6d3",
+      "lastmod": "2026-08-25",
+      "origem": "bootstrap"
+    },
     "/servicos/remocao-de-virus": {
       "hash": "7520a6428bc0",
+      "lastmod": "2026-08-25",
+      "origem": "bootstrap"
+    },
+    "/servicos/remocao-virus/agua-verde": {
+      "hash": "871fc7645af5",
+      "lastmod": "2026-08-25",
+      "origem": "bootstrap"
+    },
+    "/servicos/remocao-virus/cic": {
+      "hash": "83c15e72a89c",
+      "lastmod": "2026-08-25",
+      "origem": "bootstrap"
+    },
+    "/servicos/remocao-virus/curitiba": {
+      "hash": "bb8be2b88d90",
       "lastmod": "2026-08-25",
       "origem": "bootstrap"
     },
@@ -182,8 +657,48 @@
       "lastmod": "2026-08-06",
       "origem": "bootstrap"
     },
+    "/servicos/suporte-home-office/curitiba": {
+      "hash": "7514877079b4",
+      "lastmod": "2026-08-25",
+      "origem": "bootstrap"
+    },
+    "/servicos/suporte-tecnico-empresarial": {
+      "hash": "a16390a334d6",
+      "lastmod": "2026-08-25",
+      "origem": "bootstrap"
+    },
+    "/servicos/suporte-tecnico-empresarial/curitiba": {
+      "hash": "82c642cb041c",
+      "lastmod": "2026-08-25",
+      "origem": "bootstrap"
+    },
+    "/servicos/upgrade-ssd-memoria/agua-verde": {
+      "hash": "14e921d3c5a4",
+      "lastmod": "2026-08-25",
+      "origem": "bootstrap"
+    },
+    "/servicos/upgrade-ssd-memoria/centro": {
+      "hash": "63d151647e1b",
+      "lastmod": "2026-08-25",
+      "origem": "bootstrap"
+    },
+    "/servicos/upgrade-ssd-memoria/cic": {
+      "hash": "41c13475b307",
+      "lastmod": "2026-08-25",
+      "origem": "bootstrap"
+    },
+    "/servicos/upgrade-ssd-memoria/portao": {
+      "hash": "df8ceb1d8fe0",
+      "lastmod": "2026-08-25",
+      "origem": "bootstrap"
+    },
     "/servicos/upgrade-ssd-ram": {
       "hash": "c881cffebd56",
+      "lastmod": "2026-08-25",
+      "origem": "bootstrap"
+    },
+    "/servicos/upgrade-ssd/curitiba": {
+      "hash": "b42bcd564724",
       "lastmod": "2026-08-25",
       "origem": "bootstrap"
     },
@@ -219,6 +734,36 @@
     },
     "/solucoes/ssd": {
       "hash": "c02ec74d4295",
+      "lastmod": "2026-08-25",
+      "origem": "bootstrap"
+    },
+    "/tecnico-informatica-araucaria": {
+      "hash": "6ef0b6bdd5d6",
+      "lastmod": "2026-08-25",
+      "origem": "bootstrap"
+    },
+    "/tecnico-informatica-campo-largo": {
+      "hash": "2c4344dbebf5",
+      "lastmod": "2026-08-25",
+      "origem": "bootstrap"
+    },
+    "/tecnico-informatica-colombo": {
+      "hash": "83eb061a4c19",
+      "lastmod": "2026-08-25",
+      "origem": "bootstrap"
+    },
+    "/tecnico-informatica-curitiba": {
+      "hash": "393ede591ec0",
+      "lastmod": "2026-08-25",
+      "origem": "bootstrap"
+    },
+    "/tecnico-informatica-pinhais": {
+      "hash": "6b3428c29653",
+      "lastmod": "2026-08-25",
+      "origem": "bootstrap"
+    },
+    "/tecnico-informatica-sao-jose-pinhais": {
+      "hash": "1e3888117371",
       "lastmod": "2026-08-25",
       "origem": "bootstrap"
     }

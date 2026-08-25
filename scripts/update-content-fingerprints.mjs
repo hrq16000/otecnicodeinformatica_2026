@@ -18,7 +18,7 @@
  * Assim é impossível "atualizar o sitemap inteiro a cada publicação": só a
  * página cujo conteúdo servido mudou recebe data nova.
  */
-import { existsSync, readFileSync, writeFileSync, mkdirSync } from "node:fs";
+import { existsSync, readFileSync, readdirSync, writeFileSync, mkdirSync } from "node:fs";
 import { dirname, resolve } from "node:path";
 import { fingerprintDaRota } from "./lib/content-fingerprint.mjs";
 import { LASTMOD } from "./lib/lastmod.mjs";
