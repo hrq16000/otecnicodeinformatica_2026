@@ -296,7 +296,35 @@ const PILOT_FAQ: Record<string, FAQItem[]> = {
       q: "Vale a pena investir num computador antigo?",
       a: "Depende do uso e do estado do equipamento. Às vezes um upgrade simples compensa; em outros casos, não.",
     },
+    {
+      q: "Limpar arquivos temporários deixa o computador mais rápido?",
+      a: "Só faz diferença perceptível quando o disco do sistema está quase cheio. Nesse caso o Windows perde espaço para memória virtual e atualização, e liberar espaço devolve desempenho.",
+    },
   ],
+
+  "como-resolver-tela-azul-windows": [
+    {
+      q: "A tela azul significa que o computador está com defeito de hardware?",
+      a: "Nem sempre. Driver incompatível, atualização mal aplicada e disco com falha causam tela azul tanto quanto memória ou fonte defeituosa. O código do erro e o arquivo de despejo indicam por onde começar.",
+    },
+    {
+      q: "O que fazer na primeira vez que a tela azul aparece?",
+      a: "Anote o código exibido, desfaça a última mudança (driver, atualização ou peça instalada) e observe se o erro se repete. Um episódio isolado após uma atualização costuma não voltar.",
+    },
+    {
+      q: "Telas azuis com códigos diferentes a cada travamento indicam o quê?",
+      a: "Códigos que mudam a cada ocorrência apontam com mais frequência para memória defeituosa, fonte instável ou superaquecimento, e não para um driver específico.",
+    },
+    {
+      q: "Preciso formatar para resolver a tela azul?",
+      a: "Raramente. A formatação só faz sentido quando o sistema está corrompido; se a causa for hardware, o erro volta no sistema novo.",
+    },
+    {
+      q: "Dá para recuperar os arquivos se o computador só entra em tela azul?",
+      a: "Na maioria dos casos sim, desde que o disco esteja íntegro. A cópia dos dados deve ser feita antes de qualquer tentativa de reinstalação.",
+    },
+  ],
+
   "como-instalar-windows-11-do-zero": [
     {
       q: "Qual a diferença entre atualizar e fazer instalação limpa?",

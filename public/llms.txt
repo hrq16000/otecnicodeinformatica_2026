@@ -129,6 +129,10 @@ cobramos execução que não tenha sido aprovada.
 - [Meu computador entra direto na BIOS: guia de diagnóstico e solução](https://otecnicodeinformatica.com.br/blog/computador-entra-direto-na-bios)
 - [erro-no-bootable-device-como-resolver](https://otecnicodeinformatica.com.br/blog/erro-no-bootable-device-como-resolver)
 - [Troquei o HD/SSD e o PC só abre a BIOS: o que fazer](https://otecnicodeinformatica.com.br/blog/troquei-o-ssd-e-o-pc-so-abre-a-bios)
+- [Como limpar arquivos temporários e liberar espaço no Windows](https://otecnicodeinformatica.com.br/blog/limpar-arquivos-temporarios-windows)
+- [Memória RAM insuficiente: sintomas, como confirmar e quando fazer upgrade](https://otecnicodeinformatica.com.br/blog/memoria-ram-insuficiente-sintomas)
+- [Códigos de erro da tela azul: como ler e o que cada um indica](https://otecnicodeinformatica.com.br/blog/codigos-de-erro-tela-azul-windows)
+- [Como testar a memória RAM com Memtest86+ (passo a passo)](https://otecnicodeinformatica.com.br/blog/testar-memoria-ram-memtest86)
 
 ## Páginas institucionais e de política
 
