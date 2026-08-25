@@ -1,0 +1,28 @@
+name: JSON-LD cold start (agendado)
+
+# Reexecuta periodicamente o gate de determinismo estrutural do JSON-LD em
+# isolates frios (subprocessos Node novos). Protege contra regressão do P0
+# SSR_JSONLD_INTERMITENTE: um sink de JSON-LD voltar a ser irmão de um ponto
+# de suspensão (React.lazy) em vez de ser composto dentro do módulo da página.
+
+on:
+  schedule:
+    - cron: "20 6 * * *"
+  workflow_dispatch:
+
+jobs:
+  coldstart:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      - run: npm ci
+      - run: npm run build
+      - name: Gate de determinismo em isolate frio
+        env:
+          N: "16"
+        run: npm run check:jsonld-ssr

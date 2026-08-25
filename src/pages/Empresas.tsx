@@ -7,6 +7,7 @@ import { LazyOnVisible } from "@/components/LazyOnVisible";
 import { SkeletonList } from "@/components/SkeletonSection";
 import { AnimatedSection } from "@/components/AnimatedSection";
 import { CalculadoraDeslocamento } from "@/components/CalculadoraDeslocamento";
+import { BlocosB2b4d } from "@/components/b2b/BlocosB2b4d";
 import { whatsappLink } from "@/lib/siteConfig";
 import { trackPageView } from "@/lib/analytics";
 import { AlertTriangle, Building2, Network, Printer, ShieldCheck } from "lucide-react";
@@ -267,6 +268,7 @@ const Empresas = () => {
             ))}
           </ul>
         </section>
+        <BlocosB2b4d path="/empresas" />
       </main>
 
       <Footer />

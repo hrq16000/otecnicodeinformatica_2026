@@ -3,6 +3,7 @@ import { Link } from "@/lib/router-compat";
 import { PageSEO } from "@/components/PageSEO";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { BlocosB2b4d } from "@/components/b2b/BlocosB2b4d";
 import { PilarEditorialLinks } from "@/components/editorial/PilarEditorialLinks";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import { SCHEMA_SLOTS, SLOT_PRIORITY, useJsonLdSlot } from "@/lib/jsonLdSlots";
@@ -549,6 +550,7 @@ const EmpresaDeTiCuritiba = () => {
           </div>
         </section>
         <PilarEditorialLinks pilar="/empresa-de-ti-curitiba" />
+        <BlocosB2b4d path="/empresa-de-ti-curitiba" />
       </main>
 
       <Footer />
