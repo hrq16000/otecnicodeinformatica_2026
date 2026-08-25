@@ -63,6 +63,7 @@ const AdminVitals = lazy(() => import("./pages/admin/AdminVitals"));
 const AdminAuditoriaLocal = lazy(() => import("./pages/admin/AdminAuditoriaLocal"));
 const AdminGatesLocais = lazy(() => import("./pages/admin/AdminGatesLocais"));
 const AdminInventarioBairros = lazy(() => import("./pages/admin/AdminInventarioBairros"));
+const AdminIndexacao = lazy(() => import("./pages/admin/AdminIndexacao"));
 const AdminUiPerformance = lazy(() => import("./pages/admin/AdminUiPerformance"));
 const AdminDashboard = lazy(() => import("./pages/admin/AdminDashboard"));
 const AdminCasos = lazy(() => import("./pages/admin/AdminCasos"));
