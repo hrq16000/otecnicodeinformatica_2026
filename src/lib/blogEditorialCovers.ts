@@ -239,6 +239,25 @@ export const EDITORIAL_COVERS: Record<string, EditorialCover> = {
     width: 1200,
     height: 630,
   },
+  // ── Onda 9C — cluster BIOS (fotografias reais licenciadas, Wikimedia Commons).
+  "computador-entra-direto-na-bios": {
+    src: "/blog/computador-entra-direto-na-bios.jpg",
+    alt: "Tela de configuração da BIOS de um computador exibida no monitor durante a inicialização",
+    width: 1200,
+    height: 630,
+  },
+  "erro-no-bootable-device-como-resolver": {
+    src: "/blog/erro-no-bootable-device-como-resolver.jpg",
+    alt: "Disco rígido conectado por cabo SATA de dados e cabo de alimentação",
+    width: 1200,
+    height: 630,
+  },
+  "troquei-o-ssd-e-o-pc-so-abre-a-bios": {
+    src: "/blog/troquei-o-ssd-e-o-pc-so-abre-a-bios.jpg",
+    alt: "Módulo SSD M.2 encaixado no slot da placa-mãe antes de ser parafusado",
+    width: 1200,
+    height: 630,
+  },
 };
 
 export function getEditorialCover(slug: string): EditorialCover | undefined {
