@@ -73,7 +73,17 @@ export const BlocosRedes4e = ({ path }: { path: string }) => {
       data-bloco-4e={path}
       aria-label="Conteúdo técnico de rede desta página"
     >
-      {conteudo.respostaRapida ? <RespostaRapida texto={conteudo.respostaRapida} /> : null}
+      {conteudo.respostaRapida ? (
+        // Rodada 4F: título e id próprios do bloco de rede. Três owners 4E
+        // (/atendimento-remoto, /equipamentos/roteador, /problemas/wifi-instavel)
+        // já traziam um bloco "Resposta rápida" anterior e passaram a repetir o
+        // mesmo H2 na mesma rota — regressão detectada pelo gate check:geo.
+        <RespostaRapida
+          texto={conteudo.respostaRapida}
+          titulo="Resposta rápida sobre rede e conexão"
+          id="resposta-rapida-rede"
+        />
+      ) : null}
 
       {conteudo.tabelaDiagnostica ? (
         <TabelaDiagnosticaBloco tabela={conteudo.tabelaDiagnostica} id="tabela-rede-4e" />
