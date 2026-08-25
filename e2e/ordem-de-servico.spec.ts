@@ -6,23 +6,26 @@ import { expect, test } from "@playwright/test";
  * WhatsApp e restauração do rascunho após recarregar.
  */
 
-const aguardarHidratacao = async (page: import("@playwright/test").Page) => {
-  // Inputs controlados só retêm valor depois da hidratação do React.
-  await page.waitForFunction(() => document.documentElement.dataset["n"] === "1", null, {
-    timeout: 30_000,
-  });
-  const campo = page.getByLabel("Seu nome");
+const preencherEstavel = async (
+  page: import("@playwright/test").Page,
+  equipamento: string,
+  defeito: string,
+) => {
+  // O bundle da rota chega depois do SSR e remonta a árvore: só damos o
+  // formulário por preenchido quando os valores sobrevivem à remontagem.
   await expect(async () => {
-    await campo.fill("Cliente Teste");
-    await expect(campo).toHaveValue("Cliente Teste", { timeout: 1000 });
-  }).toPass({ timeout: 20_000 });
+    await page.getByLabel("Seu nome").fill("Cliente Teste");
+    await page.getByLabel("Equipamento", { exact: true }).fill(equipamento);
+    await page.getByLabel("O que está acontecendo").fill(defeito);
+    await page.waitForTimeout(2500);
+    await expect(page.getByLabel("Equipamento", { exact: true })).toHaveValue(equipamento, {
+      timeout: 2000,
+    });
+    await expect(page.getByLabel("O que está acontecendo")).toHaveValue(defeito, { timeout: 2000 });
+  }).toPass({ timeout: 45_000 });
 };
 
-const preencher = async (page: import("@playwright/test").Page, equipamento: string, defeito: string) => {
-  await aguardarHidratacao(page);
-  await page.getByLabel("Equipamento", { exact: true }).fill(equipamento);
-  await page.getByLabel("O que está acontecendo").fill(defeito);
-};
+const preencher = preencherEstavel;
 
 const aceitarTudo = async (page: import("@playwright/test").Page) => {
   // Cada aceite vive dentro de um item do acordeão: abrir, ler, marcar.
@@ -43,9 +46,6 @@ const aceitarTudo = async (page: import("@playwright/test").Page) => {
 
 test.beforeEach(async ({ page }) => {
   await page.goto("/ordem-de-servico");
-  await page.waitForFunction(() => document.documentElement.dataset["n"] === "1", null, {
-    timeout: 30_000,
-  });
   await page.evaluate(() => window.localStorage.removeItem("os_draft_v1"));
   await page.reload();
 });
@@ -126,7 +126,7 @@ test("recarregar a página restaura o rascunho e o código já gerado", async ({
 });
 
 test("consulta por código rejeita formato inválido", async ({ page }) => {
-  await aguardarHidratacao(page);
+  await page.waitForTimeout(3000);
   await page.getByRole("tab", { name: /Consultar O.S/i }).click();
   await page.getByLabel("Código único da O.S").fill("1234");
   await page.getByRole("button", { name: /^Consultar$/ }).click();
