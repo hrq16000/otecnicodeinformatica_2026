@@ -64,3 +64,4 @@
 - [JSON-LD no SSR — sink único](mem://features/jsonld-ssr-sink-unico) — Slots + coletor, um sink no __root, @id único e universo de rotas dos gates.
 - [FAQPage exige FAQ visível](mem://features/faqpage-paridade-visivel) — Slot global de FAQ só na home; gates de schema/malha rodam no harness SSR, nunca em dist/.
 - [Rodada 4E — redes e suporte remoto](mem://features/rodada-4e-redes-remoto) — 5 owners de Wi-Fi/rede/remoto sem URLs novas, render fail-closed e separação internet lenta × Wi-Fi lento.
+- [Intenção conversacional + orphan-trend](mem://features/intencao-conversacional-e-orphan-trend) — Blocos o que/como/por que/onde nacionais em /problemas, FAQPage único por URL e baseline versionado de páginas órfãs.

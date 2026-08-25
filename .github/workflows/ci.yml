@@ -65,6 +65,12 @@ jobs:
         run: npm run check:orphan-pages
       - name: Catraca anti-órfãs (URLs indexáveis sem link interno)
         run: npm run check:orphan-ratchet
+      - name: Baseline de órfãs versionado (obrigatório antes do build)
+        run: npm run check:orphan-baseline
+      - name: Tendência de páginas órfãs (orphan-trend)
+        run: npm run check:orphan-trend
+      - name: Intenção conversacional (o que/como/por que/onde)
+        run: npm run check:conversational-intent
 
       - name: Cannibalization gate (P0)
         run: npm run check:cannibalization
