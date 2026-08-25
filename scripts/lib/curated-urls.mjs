@@ -50,7 +50,11 @@ export const HUBS = [
   { path: "/bairros", changefreq: "weekly", priority: "0.7" },
   // Pillar informacional do cluster de informática (apoio das páginas comerciais).
   { path: "/guia-tecnico-informatica", changefreq: "monthly", priority: "0.7" },
+  // Hub genérico de assistência técnica: rota indexável (index, follow) que
+  // estava fora do sitemap — incoerência entre robots e descoberta.
+  { path: "/assistencia-tecnica-curitiba", changefreq: "weekly", priority: "0.8" },
 ];
+
 
 /** Serviços essenciais — slugs canônicos (nunca variações com redirect). */
 export const SERVICOS = [
