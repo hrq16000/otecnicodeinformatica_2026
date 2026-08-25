@@ -25,10 +25,11 @@ const CIDADES = {
   Curitiba: [
     "/empresa-de-ti-curitiba",
     "/empresas",
-    "/servicos/suporte-empresarial",
-    "/servicos/backup-empresarial",
+    "/servicos/suporte-tecnico-empresarial",
+    "/servicos/backup-para-empresas",
+    "/servicos/manutencao-preventiva-empresas",
   ],
-  "São José dos Pinhais": ["/tecnico-informatica-sao-jose-dos-pinhais"],
+  "São José dos Pinhais": ["/tecnico-informatica-sao-jose-pinhais"],
 };
 
 const num = (v) => (typeof v === "number" ? Number(v.toFixed(3)) : null);
