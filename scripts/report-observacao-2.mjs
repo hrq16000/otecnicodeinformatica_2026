@@ -10,7 +10,7 @@
  *   · public/indexnow-status.json                        → IndexNow
  *   · config/content-fingerprints.json                   → lastmod / hash
  *   · public/sitemap-*.xml                               → sitemap curado
- *   · dist/**/index.html                                 → inbound links e depth
+ *   · HTML estático em dist/                             → inbound links e depth
  *
  * Invariante: ausência de dado é NO_DATA/UNKNOWN. Nunca vira zero.
  *
