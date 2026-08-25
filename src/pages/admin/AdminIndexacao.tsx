@@ -302,6 +302,117 @@ const AdminIndexacao = () => {
             </Card>
           )}
 
+          <Card className="mt-4 p-4 text-sm">
+            <div className="font-medium">
+              Rich results por URL{" "}
+              {rich ? (
+                <Badge tom={rich.rotas.some((r) => r.alerta === "PERDA") ? "bg-destructive/15 text-destructive" : CORES.INDEXED}>
+                  {rich.rotas.filter((r) => r.alerta === "PERDA").length} perda(s) ·{" "}
+                  {rich.rotas.filter((r) => r.alerta === "GANHO").length} ganho(s)
+                </Badge>
+              ) : (
+                <Badge>sem snapshot</Badge>
+              )}
+            </div>
+            {!rich ? (
+              <p className="mt-1 text-xs text-muted-foreground">
+                Rode <code>npm run monitor:rich-results</code> para gerar <code>/rich-results-monitor.json</code>.
+              </p>
+            ) : (
+              <>
+                <p className="mt-1 text-xs text-muted-foreground">
+                  Declarado no HTML SSR × detectado pelo Google ({rich.googleDisponivel ? "lido" : "UNKNOWN"}) · Bing{" "}
+                  {rich.bing} · snapshot {dataCurta(rich.geradoEm)} ({rich.historicoTamanho ?? 1} no histórico).
+                </p>
+                <ul className="mt-3 space-y-2 text-xs">
+                  {rich.rotas.map((r) => (
+                    <li key={r.path} className="border-b pb-2 last:border-0">
+                      <div className="flex flex-wrap items-center gap-2">
+                        <Badge
+                          tom={
+                            r.alerta === "PERDA"
+                              ? "bg-destructive/15 text-destructive"
+                              : r.alerta === "GANHO"
+                                ? CORES.INDEXED
+                                : CORES.NO_DATA
+                          }
+                        >
+                          {r.alerta}
+                        </Badge>
+                        <span className="font-medium">{r.path}</span>
+                        <span className="text-muted-foreground">verdict {r.googleVerdict}</span>
+                      </div>
+                      <div className="mt-1 text-muted-foreground">
+                        declarado: {r.declarados.join(", ") || "—"} · Google:{" "}
+                        {r.google ? r.google.join(", ") || "nenhum" : "UNKNOWN"} · Bing: {r.bing}
+                      </div>
+                      {r.perdas.length > 0 && (
+                        <div className="mt-1 text-destructive">perdeu: {r.perdas.join(", ")}</div>
+                      )}
+                      {r.ganhos.length > 0 && <div className="mt-1 text-emerald-500">ganhou: {r.ganhos.join(", ")}</div>}
+                      {r.mensagensValidacao.length > 0 && (
+                        <ul className="mt-1 list-disc pl-4 text-amber-500">
+                          {r.mensagensValidacao.map((m, i) => (
+                            <li key={`${r.path}-msg-${i}`}>
+                              {m.tipo} · {m.severidade}: {m.mensagem}
+                            </li>
+                          ))}
+                        </ul>
+                      )}
+                    </li>
+                  ))}
+                </ul>
+              </>
+            )}
+          </Card>
+
+          <Card className="mt-4 p-4 text-sm">
+            <div className="font-medium">
+              Diff SSR/JSON-LD entre deploys{" "}
+              {diff ? (
+                <Badge tom={diff.regressoes ? "bg-destructive/15 text-destructive" : CORES.INDEXED}>
+                  {diff.regressoes} regressão(ões) em {diff.total}
+                </Badge>
+              ) : (
+                <Badge>sem snapshot</Badge>
+              )}
+            </div>
+            {!diff ? (
+              <p className="mt-1 text-xs text-muted-foreground">
+                Rode <code>npm run report:ssr-diff</code> (baseline: <code>npm run ssr-diff:baseline</code>).
+              </p>
+            ) : (
+              <>
+                <p className="mt-1 text-xs text-muted-foreground">
+                  Origem {diff.origem} · {dataCurta(diff.geradoEm)}. Detecta perda de bloco, schema, canonical, robots,
+                  H1 ou texto mesmo quando o <code>lastmod</code> muda corretamente.
+                </p>
+                <ul className="mt-3 space-y-1 text-xs">
+                  {diff.rotas.map((r) => (
+                    <li key={r.path} className="flex flex-wrap items-center gap-2">
+                      <Badge
+                        tom={
+                          r.estado === "REGRESSION"
+                            ? "bg-destructive/15 text-destructive"
+                            : r.estado === "CHANGED_OK"
+                              ? "bg-amber-500/15 text-amber-500"
+                              : CORES.NO_DATA
+                        }
+                      >
+                        {r.estado}
+                      </Badge>
+                      <span>{r.path}</span>
+                      <span className="text-muted-foreground">
+                        {r.palavrasBaseline ?? "—"} → {r.palavrasAtual ?? "—"} palavras
+                      </span>
+                      {r.perdas.length > 0 && <span className="text-destructive">{r.perdas.join(" ; ")}</span>}
+                    </li>
+                  ))}
+                </ul>
+              </>
+            )}
+          </Card>
+
           <div className="mt-6 overflow-x-auto" id="relatorio-indexacao">
             <table className="w-full border-collapse text-sm">
               <thead>
@@ -314,6 +425,7 @@ const AdminIndexacao = () => {
                   <th className="py-2 pr-3">Impr. 28d</th>
                   <th className="py-2 pr-3">Cliques 28d</th>
                   <th className="py-2 pr-3">IndexNow</th>
+                  <th className="py-2 pr-3">Dossiê</th>
                 </tr>
               </thead>
               <tbody>
@@ -349,12 +461,91 @@ const AdminIndexacao = () => {
                             : "falha"
                         : "—"}
                     </td>
+                    <td className="py-2 pr-3">
+                      <Button
+                        variant="outline"
+                        size="sm"
+                        onClick={() => exportarPdf(`dossie-${slugId(r.path)}`, `Dossiê de indexação — ${r.path}`)}
+                      >
+                        PDF
+                      </Button>
+                    </td>
                   </tr>
                 ))}
               </tbody>
             </table>
           </div>
+
+          {/*
+            Dossiês por URL: ficam fora do fluxo visual (não são conteúdo da
+            página) e servem de fonte para o PDF de auditoria por URL.
+          */}
+          <div className="sr-only" aria-hidden="true">
+            {dados.rotas.map((r) => {
+              const rr = richPorPath.get(r.path);
+              const dd = diffPorPath.get(r.path);
+              return (
+                <section key={r.path} id={`dossie-${slugId(r.path)}`}>
+                  <h2>{r.url}</h2>
+                  <p>Cluster: {r.cluster ?? "—"}</p>
+                  <h3>Indexação (Google Search Console)</h3>
+                  <ul>
+                    <li>Status: {r.google.status}</li>
+                    <li>Verdict: {fmt(r.google.verdict)}</li>
+                    <li>coverageState: {fmt(r.google.coverageState)}</li>
+                    <li>robotsTxtState: {fmt(r.google.robotsTxtState)}</li>
+                    <li>Último crawl: {dataCurta(r.google.ultimoCrawl)}</li>
+                    <li>Canonical declarado: {fmt(r.google.canonicalDeclarado)}</li>
+                    <li>Canonical do Google: {fmt(r.google.canonicalGoogle)}</li>
+                    <li>Impressões 28d: {fmt(r.impressoes28d)}</li>
+                    <li>Cliques 28d: {fmt(r.cliques28d)}</li>
+                    <li>Posição 28d: {fmt(r.posicao28d)}</li>
+                  </ul>
+                  <h3>Schema e rich results</h3>
+                  <ul>
+                    <li>Declarado no SSR: {rr?.declarados.join(", ") || "—"}</li>
+                    <li>Detectado pelo Google: {rr?.google ? rr.google.join(", ") || "nenhum" : "UNKNOWN"}</li>
+                    <li>Verdict de rich results: {fmt(rr?.googleVerdict)}</li>
+                    <li>Ainda não reconhecidos: {rr?.naoReconhecidos.join(", ") || "—"}</li>
+                    <li>Bing: {fmt(rr?.bing)}</li>
+                    {(rr?.mensagensValidacao ?? []).map((m, i) => (
+                      <li key={`${r.path}-pdfmsg-${i}`}>
+                        Validação {m.tipo} · {m.severidade}: {m.mensagem}
+                      </li>
+                    ))}
+                  </ul>
+                  <h3>SSR (diff contra o deploy anterior)</h3>
+                  <ul>
+                    <li>Estado: {fmt(dd?.estado)}</li>
+                    <li>Hash baseline → atual: {fmt(dd?.hashBaseline)} → {fmt(dd?.hashAtual)}</li>
+                    <li>
+                      Palavras: {fmt(dd?.palavrasBaseline)} → {fmt(dd?.palavrasAtual)}
+                    </li>
+                    <li>Perdas: {dd?.perdas.join(" ; ") || "—"}</li>
+                    <li>Ganhos: {dd?.ganhos.join(" ; ") || "—"}</li>
+                    <li>Baseline capturada em: {dataCurta(dd?.baselineDe)}</li>
+                  </ul>
+                  <h3>IndexNow</h3>
+                  <ul>
+                    <li>
+                      Último envio:{" "}
+                      {dados.indexnow
+                        ? dados.indexnow.porUrl[r.url] === undefined
+                          ? "URL não enviada neste lote"
+                          : dados.indexnow.porUrl[r.url]
+                            ? "ACCEPTED (HTTP 2xx — recebimento da notificação, não indexação)"
+                            : "REJECTED/UNKNOWN"
+                        : "—"}
+                    </li>
+                    <li>Lote: {dados.indexnow ? `${dados.indexnow.modo} · ${dataCurta(dados.indexnow.geradoEm)}` : "—"}</li>
+                    <li>Key file: {dados.indexnow ? (dados.indexnow.keyFileOk ? "acessível" : "INACESSÍVEL") : "—"}</li>
+                  </ul>
+                </section>
+              );
+            })}
+          </div>
         </>
+
       )}
     </main>
   );
