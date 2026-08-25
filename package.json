@@ -229,6 +229,7 @@
     "check:interlinks": "node scripts/generate-interlinks.mjs --check",
     "check:observability-env": "node scripts/check-observability-env.mjs",
     "check:real-images": "node scripts/check-real-images.mjs",
+    "check:ai-images": "node scripts/check-ai-images.mjs",
     "report:publish-status": "node scripts/report-publish-status.mjs",
     "report:problemas-vitals": "node scripts/report-problemas-vitals.mjs",
     "report:vitals-4e": "node scripts/report-vitals-4e.mjs",

@@ -95,6 +95,8 @@ jobs:
         run: npm run check:image-alt
       - name: Gate de privacidade das fotos reais (EXIF/GPS)
         run: npm run check:photos
+      - name: Gate de imagens geradas por IA / placeholders (bloqueia deploy)
+        run: npm run check:ai-images
       - name: Gate de canal de contato único (sem CNPJ/e-mail/telefone)
         run: npm run check:contact-leak
       - name: Gate de LocalBusiness unificado no cluster de informática
