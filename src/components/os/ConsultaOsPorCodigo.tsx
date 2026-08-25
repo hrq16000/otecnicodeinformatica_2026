@@ -126,6 +126,12 @@ export const ConsultaOsPorCodigo = ({ autoFocus = false }: { autoFocus?: boolean
         </p>
       </div>
 
+      <div
+        ref={resultadoRef}
+        tabIndex={-1}
+        aria-live="polite"
+        className="space-y-5 outline-none"
+      >
       {resultado?.tipo === "formato" ? (
         <p className="rounded-lg border border-border bg-card p-4 text-sm" role="status">
           Código fora do formato esperado (OS-OTI-AAAAMMDD-0000). Confira e tente de novo.
