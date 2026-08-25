@@ -67,7 +67,9 @@ for (const path of [...universo].sort()) {
     continue;
   }
   if (!reg) {
-    rotas[path] = { hash, lastmod: LASTMOD[path] ?? HOJE, origem: "bootstrap" };
+    // Bootstrap NUNCA inventa data: sem lastmod declarado, a rota fica sem
+    // lastmod (o sitemap simplesmente omite o campo) até o conteúdo mudar.
+    rotas[path] = { hash, lastmod: LASTMOD[path] ?? null, origem: "bootstrap" };
     continue;
   }
   if (reg.hash === hash) {
