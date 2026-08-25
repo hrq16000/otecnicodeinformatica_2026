@@ -56,7 +56,9 @@ const OrdemDeServico = () => {
       if (!sugestao) return;
       setForm((p) => (p.local.trim() ? p : { ...p, local: sugestao }));
     });
-    return unsubscribe;
+    return () => {
+      unsubscribe();
+    };
   }, []);
 
   const set = (k: keyof OsForm) => (v: string) => setForm((p) => ({ ...p, [k]: v } as OsForm));
