@@ -1,3 +1,5 @@
+import { readFileSync } from "node:fs";
+import { resolve } from "node:path";
 /**
  * LASTMOD DECLARADO POR URL
  *
@@ -64,11 +66,27 @@ export const LASTMOD = {
 };
 
 /**
+ * FONTE PRIMÁRIA: fingerprint do conteúdo realmente servido (SSR).
+ * `config/content-fingerprints.json` guarda hash + lastmod por rota e só troca
+ * a data quando o hash muda (scripts/update-content-fingerprints.mjs).
+ * O mapa LASTMOD acima permanece como fallback declarativo para rotas ainda
+ * não fingerprintadas. Nunca usar data de build/deploy como padrão.
+ */
+const FINGERPRINTS = (() => {
+  try {
+    const raw = readFileSync(resolve(process.cwd(), "config/content-fingerprints.json"), "utf8");
+    return JSON.parse(raw).rotas ?? {};
+  } catch {
+    return {};
+  }
+})();
+
+/**
  * Nunca emitir data futura: lastmod à frente de hoje é sinal inválido para o
  * Google e pode fazer a URL ser reavaliada como não confiável. Clampa no dia.
  */
 export const lastmodFor = (path) => {
-  const declared = LASTMOD[path];
+  const declared = FINGERPRINTS[path]?.lastmod ?? LASTMOD[path];
   if (!declared) return null;
   const today = new Date().toISOString().slice(0, 10);
   return declared > today ? today : declared;

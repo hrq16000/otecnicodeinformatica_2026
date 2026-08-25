@@ -90,6 +90,7 @@ import { Route as AdminExperimentoWaRouteImport } from './routes/admin_.experime
 import { Route as AdminFotosRouteImport } from './routes/admin_.fotos'
 import { Route as AdminFunnelRouteImport } from './routes/admin_.funnel'
 import { Route as AdminGatesLocaisRouteImport } from './routes/admin_.gates-locais'
+import { Route as AdminIndexacaoRouteImport } from './routes/admin_.indexacao'
 import { Route as AdminInventarioBairrosRouteImport } from './routes/admin_.inventario-bairros'
 import { Route as AdminLinkBuilderRouteImport } from './routes/admin_.link-builder'
 import { Route as AdminLoginRouteImport } from './routes/admin_.login'
@@ -872,6 +873,11 @@ const AdminFunnelRoute = AdminFunnelRouteImport.update({
 const AdminGatesLocaisRoute = AdminGatesLocaisRouteImport.update({
   id: '/admin_/gates-locais',
   path: '/admin/gates-locais',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AdminIndexacaoRoute = AdminIndexacaoRouteImport.update({
+  id: '/admin_/indexacao',
+  path: '/admin/indexacao',
   getParentRoute: () => rootRouteImport,
 } as any)
 const AdminInventarioBairrosRoute = AdminInventarioBairrosRouteImport.update({
@@ -2901,6 +2907,7 @@ export interface FileRoutesByFullPath {
   '/admin/fotos': typeof AdminFotosRoute
   '/admin/funnel': typeof AdminFunnelRoute
   '/admin/gates-locais': typeof AdminGatesLocaisRoute
+  '/admin/indexacao': typeof AdminIndexacaoRoute
   '/admin/inventario-bairros': typeof AdminInventarioBairrosRoute
   '/admin/link-builder': typeof AdminLinkBuilderRoute
   '/admin/login': typeof AdminLoginRoute
@@ -3344,6 +3351,7 @@ export interface FileRoutesByTo {
   '/admin/fotos': typeof AdminFotosRoute
   '/admin/funnel': typeof AdminFunnelRoute
   '/admin/gates-locais': typeof AdminGatesLocaisRoute
+  '/admin/indexacao': typeof AdminIndexacaoRoute
   '/admin/inventario-bairros': typeof AdminInventarioBairrosRoute
   '/admin/link-builder': typeof AdminLinkBuilderRoute
   '/admin/login': typeof AdminLoginRoute
@@ -3788,6 +3796,7 @@ export interface FileRoutesById {
   '/admin_/fotos': typeof AdminFotosRoute
   '/admin_/funnel': typeof AdminFunnelRoute
   '/admin_/gates-locais': typeof AdminGatesLocaisRoute
+  '/admin_/indexacao': typeof AdminIndexacaoRoute
   '/admin_/inventario-bairros': typeof AdminInventarioBairrosRoute
   '/admin_/link-builder': typeof AdminLinkBuilderRoute
   '/admin_/login': typeof AdminLoginRoute
@@ -4233,6 +4242,7 @@ export interface FileRouteTypes {
     | '/admin/fotos'
     | '/admin/funnel'
     | '/admin/gates-locais'
+    | '/admin/indexacao'
     | '/admin/inventario-bairros'
     | '/admin/link-builder'
     | '/admin/login'
@@ -4676,6 +4686,7 @@ export interface FileRouteTypes {
     | '/admin/fotos'
     | '/admin/funnel'
     | '/admin/gates-locais'
+    | '/admin/indexacao'
     | '/admin/inventario-bairros'
     | '/admin/link-builder'
     | '/admin/login'
@@ -5119,6 +5130,7 @@ export interface FileRouteTypes {
     | '/admin_/fotos'
     | '/admin_/funnel'
     | '/admin_/gates-locais'
+    | '/admin_/indexacao'
     | '/admin_/inventario-bairros'
     | '/admin_/link-builder'
     | '/admin_/login'
@@ -5563,6 +5575,7 @@ export interface RootRouteChildren {
   AdminFotosRoute: typeof AdminFotosRoute
   AdminFunnelRoute: typeof AdminFunnelRoute
   AdminGatesLocaisRoute: typeof AdminGatesLocaisRoute
+  AdminIndexacaoRoute: typeof AdminIndexacaoRoute
   AdminInventarioBairrosRoute: typeof AdminInventarioBairrosRoute
   AdminLinkBuilderRoute: typeof AdminLinkBuilderRoute
   AdminLoginRoute: typeof AdminLoginRoute
@@ -6492,6 +6505,13 @@ declare module '@tanstack/react-router' {
       path: '/admin/gates-locais'
       fullPath: '/admin/gates-locais'
       preLoaderRoute: typeof AdminGatesLocaisRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/admin_/indexacao': {
+      id: '/admin_/indexacao'
+      path: '/admin/indexacao'
+      fullPath: '/admin/indexacao'
+      preLoaderRoute: typeof AdminIndexacaoRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/admin_/inventario-bairros': {
@@ -9102,6 +9122,7 @@ const rootRouteChildren: RootRouteChildren = {
   AdminFotosRoute: AdminFotosRoute,
   AdminFunnelRoute: AdminFunnelRoute,
   AdminGatesLocaisRoute: AdminGatesLocaisRoute,
+  AdminIndexacaoRoute: AdminIndexacaoRoute,
   AdminInventarioBairrosRoute: AdminInventarioBairrosRoute,
   AdminLinkBuilderRoute: AdminLinkBuilderRoute,
   AdminLoginRoute: AdminLoginRoute,

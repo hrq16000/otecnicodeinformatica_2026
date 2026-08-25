@@ -288,7 +288,12 @@
     "test:list": "node scripts/report-test-inventory.mjs",
     "test:node-scripts": "node --test scripts/lib/bulk-redirects.test.mjs",
     "test:all": "npm run test:unit && npm run test:integration && npm run test:e2e",
-    "test:node-scripts:postbuild": "node --test scripts/lib/edge-router.test.mjs"
+    "test:node-scripts:postbuild": "node --test scripts/lib/edge-router.test.mjs",
+    "lastmod:fingerprint": "node scripts/update-content-fingerprints.mjs",
+    "check:lastmod-fingerprint": "node scripts/update-content-fingerprints.mjs --check",
+    "smoke:4a": "node scripts/smoke-owners-4a.mjs",
+    "report:index-status": "node scripts/report-index-status.mjs",
+    "indexnow:changed": "node scripts/indexnow-ping.mjs --changed"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.2",

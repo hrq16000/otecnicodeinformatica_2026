@@ -1,0 +1,136 @@
+{
+  "geradoEm": "2026-08-25T00:38:10.289Z",
+  "modo": "seletivo",
+  "host": "otecnicodeinformatica.com.br",
+  "keyFile": {
+    "url": "https://otecnicodeinformatica.com.br/f783ab585dfa9e6b017cb058009cccae.txt",
+    "status": 200,
+    "ok": true
+  },
+  "totalUrls": 6,
+  "tentativas": [
+    {
+      "endpoint": "indexnow.org",
+      "url": "https://api.indexnow.org/IndexNow",
+      "status": 202,
+      "classe": "OK",
+      "corpo": "",
+      "duracaoMs": 1221,
+      "enviadoEm": "2026-08-25T00:38:10.068Z"
+    },
+    {
+      "endpoint": "bing",
+      "url": "https://www.bing.com/indexnow",
+      "status": 202,
+      "classe": "OK",
+      "corpo": "",
+      "duracaoMs": 219,
+      "enviadoEm": "2026-08-25T00:38:10.289Z"
+    }
+  ],
+  "urls": [
+    {
+      "url": "https://otecnicodeinformatica.com.br/problemas/computador-esquentando",
+      "enviadaEm": "2026-08-25T00:38:10.289Z",
+      "resultados": [
+        {
+          "endpoint": "indexnow.org",
+          "status": 202,
+          "classe": "OK"
+        },
+        {
+          "endpoint": "bing",
+          "status": 202,
+          "classe": "OK"
+        }
+      ],
+      "aceita": true
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/solucoes/ssd",
+      "enviadaEm": "2026-08-25T00:38:10.289Z",
+      "resultados": [
+        {
+          "endpoint": "indexnow.org",
+          "status": 202,
+          "classe": "OK"
+        },
+        {
+          "endpoint": "bing",
+          "status": 202,
+          "classe": "OK"
+        }
+      ],
+      "aceita": true
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/servicos/upgrade-ssd-ram",
+      "enviadaEm": "2026-08-25T00:38:10.289Z",
+      "resultados": [
+        {
+          "endpoint": "indexnow.org",
+          "status": 202,
+          "classe": "OK"
+        },
+        {
+          "endpoint": "bing",
+          "status": 202,
+          "classe": "OK"
+        }
+      ],
+      "aceita": true
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/problemas/hd-fazendo-barulho",
+      "enviadaEm": "2026-08-25T00:38:10.289Z",
+      "resultados": [
+        {
+          "endpoint": "indexnow.org",
+          "status": 202,
+          "classe": "OK"
+        },
+        {
+          "endpoint": "bing",
+          "status": 202,
+          "classe": "OK"
+        }
+      ],
+      "aceita": true
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/servicos/formatacao",
+      "enviadaEm": "2026-08-25T00:38:10.289Z",
+      "resultados": [
+        {
+          "endpoint": "indexnow.org",
+          "status": 202,
+          "classe": "OK"
+        },
+        {
+          "endpoint": "bing",
+          "status": 202,
+          "classe": "OK"
+        }
+      ],
+      "aceita": true
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/servicos/remocao-de-virus",
+      "enviadaEm": "2026-08-25T00:38:10.289Z",
+      "resultados": [
+        {
+          "endpoint": "indexnow.org",
+          "status": 202,
+          "classe": "OK"
+        },
+        {
+          "endpoint": "bing",
+          "status": 202,
+          "classe": "OK"
+        }
+      ],
+      "aceita": true
+    }
+  ],
+  "sucesso": true
+}

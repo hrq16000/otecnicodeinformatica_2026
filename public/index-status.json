@@ -1,0 +1,138 @@
+{
+  "geradoEm": "2026-08-25T00:37:57.275Z",
+  "site": "sc-domain:otecnicodeinformatica.com.br",
+  "disponivel": true,
+  "rotas": [
+    {
+      "path": "/problemas/computador-esquentando",
+      "url": "https://otecnicodeinformatica.com.br/problemas/computador-esquentando",
+      "cluster": "A — superaquecimento / desliga sozinho",
+      "impressoes28d": 0,
+      "cliques28d": 0,
+      "posicao28d": null,
+      "google": {
+        "status": "NO_DATA",
+        "verdict": "NEUTRAL",
+        "coverageState": "Detectada, mas não indexada no momento",
+        "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+        "indexingState": "INDEXING_STATE_UNSPECIFIED",
+        "ultimoCrawl": null,
+        "canonicalGoogle": null,
+        "canonicalDeclarado": null,
+        "richResults": [],
+        "richResultsVerdict": "NO_DATA"
+      }
+    },
+    {
+      "path": "/solucoes/ssd",
+      "url": "https://otecnicodeinformatica.com.br/solucoes/ssd",
+      "cluster": "B — SSD × HD",
+      "impressoes28d": 0,
+      "cliques28d": 0,
+      "posicao28d": null,
+      "google": {
+        "status": "NO_DATA",
+        "verdict": "NEUTRAL",
+        "coverageState": "O Google não reconhece o URL",
+        "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+        "indexingState": "INDEXING_STATE_UNSPECIFIED",
+        "ultimoCrawl": null,
+        "canonicalGoogle": null,
+        "canonicalDeclarado": null,
+        "richResults": [],
+        "richResultsVerdict": "NO_DATA"
+      }
+    },
+    {
+      "path": "/servicos/upgrade-ssd-ram",
+      "url": "https://otecnicodeinformatica.com.br/servicos/upgrade-ssd-ram",
+      "cluster": "C — RAM ou SSD",
+      "impressoes28d": 0,
+      "cliques28d": 0,
+      "posicao28d": null,
+      "google": {
+        "status": "INDEXED",
+        "verdict": "PASS",
+        "coverageState": "Enviada e indexada",
+        "robotsTxtState": "ALLOWED",
+        "indexingState": "INDEXING_ALLOWED",
+        "ultimoCrawl": "2026-08-17T00:50:47Z",
+        "canonicalGoogle": "https://otecnicodeinformatica.com.br/servicos/upgrade-ssd-ram",
+        "canonicalDeclarado": "https://otecnicodeinformatica.com.br/servicos/upgrade-ssd-ram",
+        "richResults": [
+          {
+            "tipo": "Indicadores de localização atual",
+            "itens": 1
+          }
+        ],
+        "richResultsVerdict": "PASS"
+      }
+    },
+    {
+      "path": "/problemas/hd-fazendo-barulho",
+      "url": "https://otecnicodeinformatica.com.br/problemas/hd-fazendo-barulho",
+      "cluster": "D — recuperar dados / HD com barulho",
+      "impressoes28d": 0,
+      "cliques28d": 0,
+      "posicao28d": null,
+      "google": {
+        "status": "NO_DATA",
+        "verdict": "NEUTRAL",
+        "coverageState": "Detectada, mas não indexada no momento",
+        "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+        "indexingState": "INDEXING_STATE_UNSPECIFIED",
+        "ultimoCrawl": null,
+        "canonicalGoogle": null,
+        "canonicalDeclarado": null,
+        "richResults": [],
+        "richResultsVerdict": "NO_DATA"
+      }
+    },
+    {
+      "path": "/servicos/formatacao",
+      "url": "https://otecnicodeinformatica.com.br/servicos/formatacao",
+      "cluster": "E — formatar PC / Windows",
+      "impressoes28d": 0,
+      "cliques28d": 0,
+      "posicao28d": null,
+      "google": {
+        "status": "NO_DATA",
+        "verdict": "NEUTRAL",
+        "coverageState": "O Google não reconhece o URL",
+        "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+        "indexingState": "INDEXING_STATE_UNSPECIFIED",
+        "ultimoCrawl": null,
+        "canonicalGoogle": null,
+        "canonicalDeclarado": null,
+        "richResults": [],
+        "richResultsVerdict": "NO_DATA"
+      }
+    },
+    {
+      "path": "/servicos/remocao-de-virus",
+      "url": "https://otecnicodeinformatica.com.br/servicos/remocao-de-virus",
+      "cluster": "F — vírus / malware",
+      "impressoes28d": 0,
+      "cliques28d": 0,
+      "posicao28d": null,
+      "google": {
+        "status": "NO_DATA",
+        "verdict": "NEUTRAL",
+        "coverageState": "Detectada, mas não indexada no momento",
+        "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+        "indexingState": "INDEXING_STATE_UNSPECIFIED",
+        "ultimoCrawl": null,
+        "canonicalGoogle": null,
+        "canonicalDeclarado": null,
+        "richResults": [],
+        "richResultsVerdict": "NO_DATA"
+      }
+    }
+  ],
+  "bing": {
+    "webmasterTools": "UNKNOWN",
+    "motivo": "sem credencial de Bing Webmaster Tools configurada",
+    "sitemapDeclaradoNoRobots": true
+  },
+  "indexnow": null
+}
