@@ -14,7 +14,7 @@
  */
 import { writeFileSync, readFileSync, existsSync } from "node:fs";
 import { resolve } from "node:path";
-import { OWNERS_4A } from "./smoke-owners-4a.mjs";
+import { OWNERS_4A } from "./lib/owners-4a.mjs";
 
 const GATEWAY = "https://connector-gateway.lovable.dev/google_search_console";
 const SITE = process.env.GSC_SITE_URL ?? "sc-domain:otecnicodeinformatica.com.br";

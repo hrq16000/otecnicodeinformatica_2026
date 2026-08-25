@@ -17,19 +17,11 @@ import { mkdirSync, writeFileSync } from "node:fs";
 import { resolve } from "node:path";
 import { BASE_URL } from "./lib/site-env.mjs";
 import { extrairTextoVisivel } from "./lib/content-fingerprint.mjs";
+import { OWNERS_4A } from "./lib/owners-4a.mjs";
 
 const argBase = process.argv.find((a) => a.startsWith("--base="));
 const BASE = (argBase ? argBase.slice(7) : process.env.SITE_BASE_URL || BASE_URL).replace(/\/$/, "");
 
-/** Fonte de verdade da rodada: cluster ATP → owner. */
-export const OWNERS_4A = [
-  { cluster: "A — superaquecimento / desliga sozinho", path: "/problemas/computador-esquentando" },
-  { cluster: "B — SSD × HD", path: "/solucoes/ssd" },
-  { cluster: "C — RAM ou SSD", path: "/servicos/upgrade-ssd-ram" },
-  { cluster: "D — recuperar dados / HD com barulho", path: "/problemas/hd-fazendo-barulho" },
-  { cluster: "E — formatar PC / Windows", path: "/servicos/formatacao" },
-  { cluster: "F — vírus / malware", path: "/servicos/remocao-de-virus" },
-];
 
 const OUT_DIR = resolve(process.cwd(), "reports/smoke-4a");
 mkdirSync(OUT_DIR, { recursive: true });
