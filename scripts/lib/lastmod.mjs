@@ -9,6 +9,9 @@
  *  - formato ISO (YYYY-MM-DD).
  */
 export const LASTMOD = {
+  // Rodada 4A (ATP) — enriquecimento material dos 6 owners de cluster
+  "/problemas/computador-esquentando": "2026-08-25",
+  "/servicos/remocao-de-virus": "2026-08-25",
   // Rodada 4K — nova página comercial de PC gamer (manutenção/upgrade)
   "/servicos/pc-gamer": "2026-08-11",
   // Pillar do cluster de informática (Rodada 4I-P.2)
@@ -21,14 +24,14 @@ export const LASTMOD = {
   "/problemas/arquivos-apagados": "2026-08-12",
   "/problemas/computador-desliga-sozinho": "2026-08-12",
   "/problemas/notebook-nao-carrega": "2026-08-12",
-  "/problemas/hd-fazendo-barulho": "2026-08-12",
+  "/problemas/hd-fazendo-barulho": "2026-08-25",
   "/problemas/computador-nao-da-imagem": "2026-08-13",
   "/problemas/cheiro-de-queimado": "2026-08-13",
   "/problemas/notebook-molhado": "2026-08-12",
   "/solucoes": "2026-08-12",
   "/solucoes/diagnostico": "2026-08-12",
   "/solucoes/formatacao": "2026-08-12",
-  "/solucoes/ssd": "2026-08-12",
+  "/solucoes/ssd": "2026-08-25",
   "/solucoes/backup": "2026-08-12",
   "/solucoes/recuperacao-de-dados": "2026-08-12",
   "/equipamentos": "2026-08-12",
@@ -49,14 +52,14 @@ export const LASTMOD = {
   "/servicos/suporte-home-office": "2026-08-06",
   "/seguranca-dos-dados": "2026-08-06",
   // Segunda onda editorial (Rodada 3C) + microgate 3C.1
-  "/servicos/upgrade-ssd-ram": "2026-08-06",
+  "/servicos/upgrade-ssd-ram": "2026-08-25",
   "/servicos/recuperacao-de-dados": "2026-08-06",
   "/precos-e-politicas": "2026-08-06",
   "/sobre": "2026-08-06",
   // Primeira onda editorial (Rodada 3B)
   "/servicos/manutencao-de-notebook": "2026-08-04",
   "/servicos/manutencao-de-computador": "2026-08-04",
-  "/servicos/formatacao": "2026-08-04",
+  "/servicos/formatacao": "2026-08-25",
   "/como-funciona": "2026-08-06",
 };
 
