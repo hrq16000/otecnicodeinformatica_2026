@@ -1,0 +1,247 @@
+{
+  "geradoEm": "2026-08-25T01:15:29.665Z",
+  "rodada": "todos",
+  "googleDisponivel": true,
+  "bing": "UNKNOWN",
+  "rotas": [
+    {
+      "path": "/problemas/computador-esquentando",
+      "url": "https://otecnicodeinformatica.com.br/problemas/computador-esquentando",
+      "cluster": "A — superaquecimento / desliga sozinho",
+      "declarados": [
+        "Organization"
+      ],
+      "google": [],
+      "googleVerdict": "NO_DATA",
+      "googleStatus": "NO_DATA",
+      "mensagensValidacao": [],
+      "bing": "UNKNOWN",
+      "naoReconhecidos": [
+        "Organization"
+      ],
+      "ganhos": [],
+      "perdas": [],
+      "alerta": "ESTAVEL",
+      "fonteComparacao": "google"
+    },
+    {
+      "path": "/solucoes/ssd",
+      "url": "https://otecnicodeinformatica.com.br/solucoes/ssd",
+      "cluster": "B — SSD × HD",
+      "declarados": [
+        "Organization"
+      ],
+      "google": [],
+      "googleVerdict": "NO_DATA",
+      "googleStatus": "NO_DATA",
+      "mensagensValidacao": [],
+      "bing": "UNKNOWN",
+      "naoReconhecidos": [
+        "Organization"
+      ],
+      "ganhos": [],
+      "perdas": [],
+      "alerta": "ESTAVEL",
+      "fonteComparacao": "google"
+    },
+    {
+      "path": "/servicos/upgrade-ssd-ram",
+      "url": "https://otecnicodeinformatica.com.br/servicos/upgrade-ssd-ram",
+      "cluster": "C — RAM ou SSD",
+      "declarados": [
+        "BreadcrumbList",
+        "FAQPage",
+        "ImageObject",
+        "LocalBusiness",
+        "Organization",
+        "Service"
+      ],
+      "google": [
+        "Indicadores de localização atual"
+      ],
+      "googleVerdict": "PASS",
+      "googleStatus": "INDEXED",
+      "mensagensValidacao": [],
+      "bing": "UNKNOWN",
+      "naoReconhecidos": [
+        "BreadcrumbList",
+        "FAQPage",
+        "ImageObject",
+        "LocalBusiness",
+        "Organization",
+        "Service"
+      ],
+      "ganhos": [],
+      "perdas": [],
+      "alerta": "ESTAVEL",
+      "fonteComparacao": "google"
+    },
+    {
+      "path": "/problemas/hd-fazendo-barulho",
+      "url": "https://otecnicodeinformatica.com.br/problemas/hd-fazendo-barulho",
+      "cluster": "D — recuperar dados / HD com barulho",
+      "declarados": [
+        "BreadcrumbList",
+        "FAQPage",
+        "LocalBusiness",
+        "Organization"
+      ],
+      "google": [],
+      "googleVerdict": "NO_DATA",
+      "googleStatus": "NO_DATA",
+      "mensagensValidacao": [],
+      "bing": "UNKNOWN",
+      "naoReconhecidos": [
+        "BreadcrumbList",
+        "FAQPage",
+        "LocalBusiness",
+        "Organization"
+      ],
+      "ganhos": [],
+      "perdas": [],
+      "alerta": "ESTAVEL",
+      "fonteComparacao": "google"
+    },
+    {
+      "path": "/servicos/formatacao",
+      "url": "https://otecnicodeinformatica.com.br/servicos/formatacao",
+      "cluster": "E — formatar PC / Windows",
+      "declarados": [
+        "Organization"
+      ],
+      "google": [],
+      "googleVerdict": "NO_DATA",
+      "googleStatus": "NO_DATA",
+      "mensagensValidacao": [],
+      "bing": "UNKNOWN",
+      "naoReconhecidos": [
+        "Organization"
+      ],
+      "ganhos": [],
+      "perdas": [],
+      "alerta": "ESTAVEL",
+      "fonteComparacao": "google"
+    },
+    {
+      "path": "/servicos/remocao-de-virus",
+      "url": "https://otecnicodeinformatica.com.br/servicos/remocao-de-virus",
+      "cluster": "F — vírus / malware",
+      "declarados": [
+        "BreadcrumbList",
+        "FAQPage",
+        "ImageObject",
+        "LocalBusiness",
+        "Organization",
+        "Service"
+      ],
+      "google": [],
+      "googleVerdict": "NO_DATA",
+      "googleStatus": "NO_DATA",
+      "mensagensValidacao": [],
+      "bing": "UNKNOWN",
+      "naoReconhecidos": [
+        "BreadcrumbList",
+        "FAQPage",
+        "ImageObject",
+        "LocalBusiness",
+        "Organization",
+        "Service"
+      ],
+      "ganhos": [],
+      "perdas": [],
+      "alerta": "ESTAVEL",
+      "fonteComparacao": "google"
+    },
+    {
+      "path": "/problemas/notebook-nao-liga",
+      "url": null,
+      "cluster": "A — notebook/PC não liga",
+      "declarados": [
+        "Organization"
+      ],
+      "google": null,
+      "googleVerdict": "UNKNOWN",
+      "googleStatus": "UNKNOWN",
+      "mensagensValidacao": [],
+      "bing": "UNKNOWN",
+      "naoReconhecidos": [],
+      "ganhos": [],
+      "perdas": [],
+      "alerta": "ESTAVEL",
+      "fonteComparacao": "declarado (Google UNKNOWN)"
+    },
+    {
+      "path": "/problemas/computador-nao-da-imagem",
+      "url": null,
+      "cluster": "B — liga mas não dá imagem",
+      "declarados": [
+        "Organization"
+      ],
+      "google": null,
+      "googleVerdict": "UNKNOWN",
+      "googleStatus": "UNKNOWN",
+      "mensagensValidacao": [],
+      "bing": "UNKNOWN",
+      "naoReconhecidos": [],
+      "ganhos": [],
+      "perdas": [],
+      "alerta": "ESTAVEL",
+      "fonteComparacao": "declarado (Google UNKNOWN)"
+    },
+    {
+      "path": "/problemas/computador-lento",
+      "url": null,
+      "cluster": "C — lento / travando",
+      "declarados": [
+        "Organization"
+      ],
+      "google": null,
+      "googleVerdict": "UNKNOWN",
+      "googleStatus": "UNKNOWN",
+      "mensagensValidacao": [],
+      "bing": "UNKNOWN",
+      "naoReconhecidos": [],
+      "ganhos": [],
+      "perdas": [],
+      "alerta": "ESTAVEL",
+      "fonteComparacao": "declarado (Google UNKNOWN)"
+    },
+    {
+      "path": "/solucoes/backup",
+      "url": null,
+      "cluster": "D — backup",
+      "declarados": [
+        "Organization"
+      ],
+      "google": null,
+      "googleVerdict": "UNKNOWN",
+      "googleStatus": "UNKNOWN",
+      "mensagensValidacao": [],
+      "bing": "UNKNOWN",
+      "naoReconhecidos": [],
+      "ganhos": [],
+      "perdas": [],
+      "alerta": "ESTAVEL",
+      "fonteComparacao": "declarado (Google UNKNOWN)"
+    },
+    {
+      "path": "/solucoes/formatacao",
+      "url": null,
+      "cluster": "E — Windows 10 × Windows 11 / formatar",
+      "declarados": [
+        "Organization"
+      ],
+      "google": null,
+      "googleVerdict": "UNKNOWN",
+      "googleStatus": "UNKNOWN",
+      "mensagensValidacao": [],
+      "bing": "UNKNOWN",
+      "naoReconhecidos": [],
+      "ganhos": [],
+      "perdas": [],
+      "alerta": "ESTAVEL",
+      "fonteComparacao": "declarado (Google UNKNOWN)"
+    }
+  ],
+  "historicoTamanho": 1
+}
