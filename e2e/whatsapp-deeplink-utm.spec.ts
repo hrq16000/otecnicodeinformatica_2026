@@ -1,5 +1,10 @@
 import { test, expect } from "@playwright/test";
-import { abrirTriagemPorAncora, avancarAteWhatsApp, instalarCapturaWa } from "./utils/triagem";
+import {
+  abrirTriagemPorAncora,
+  avancarAteWhatsApp,
+  instalarCapturaWa,
+  preencherTriagemPf,
+} from "./utils/triagem";
 
 /**
  * GATE E2E — DEEP LINK DO WHATSAPP COM ORIGEM DE CAMPANHA.
@@ -13,6 +18,11 @@ import { abrirTriagemPorAncora, avancarAteWhatsApp, instalarCapturaWa } from "./
 const ENTRADA =
   "/?utm_source=google&utm_medium=cpc&utm_campaign=formatacao_cwb&gclid=Cj0TESTE123#triagem";
 
+/**
+ * O nome informado na triagem faz parte da mensagem enviada ao técnico — é
+ * dado operacional, não vazamento. O que NÃO pode aparecer é dado sensível
+ * que o site nunca coleta: e-mail e CPF.
+ */
 const PII = [/[\w.+-]+@[\w-]+\.[\w.]{2,}/, /\b\d{3}\.?\d{3}\.?\d{3}-?\d{2}\b/];
 
 test.describe("deep link do WhatsApp — UTM e payload", () => {
@@ -22,7 +32,8 @@ test.describe("deep link do WhatsApp — UTM e payload", () => {
     await instalarCapturaWa(page);
     await abrirTriagemPorAncora(page, ENTRADA);
 
-    const href = await avancarAteWhatsApp(page, "Cliente Teste", "Batel");
+    await preencherTriagemPf(page, "Cliente Teste", "Batel");
+    const href = await avancarAteWhatsApp(page);
     test.skip(!href, "canal de WhatsApp desligado neste ambiente (fail-closed)");
 
     const url = new URL(href);
