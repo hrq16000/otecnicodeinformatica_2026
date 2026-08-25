@@ -47,7 +47,9 @@ function analisarJsonLd(html) {
     if (Array.isArray(n)) return n.forEach(visitar);
     if (!n || typeof n !== "object") return;
     if (n["@type"]) tipos.push(...[].concat(n["@type"]));
-    if (n["@id"]) ids.push(n["@id"]);
+    // Só é duplicata quando o mesmo @id DEFINE dois nós (com @type).
+    // Nós de referência (`{"@id": "..."}`) podem e devem repetir.
+    if (n["@id"] && n["@type"]) ids.push(n["@id"]);
     for (const v of Object.values(n)) visitar(v);
   };
   for (const [, raw] of blocos) {
