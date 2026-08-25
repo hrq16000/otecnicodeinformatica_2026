@@ -621,6 +621,65 @@ const WAVE_9C: EditorialApproval[] = [
   },
 ];
 
+const WAVE_10C: EditorialApproval[] = [
+  {
+    slug: "limpar-arquivos-temporarios-windows",
+    status: "approved",
+    authorType: "organization",
+    authorId: INSTITUTIONAL_AUTHOR.id,
+    reviewedAt: "2026-08-25",
+    approvedAt: "2026-08-25",
+    imageOrigin: "licensed",
+    imageLicense: "CC0",
+    imageAttribution:
+      "Foto: Bdortiz1076 (Wikimedia Commons), CC0 — https://commons.wikimedia.org/wiki/File:Hitachi_2.5%22_HDD_and_ADATA_XM13_20120402.jpg",
+    notes:
+      "Satélite escrito do zero na Onda 10C; fact-check registrado em blogEditorialSources.ts; capa é fotografia real licenciada, sem IA.",
+  },
+  {
+    slug: "memoria-ram-insuficiente-sintomas",
+    status: "approved",
+    authorType: "organization",
+    authorId: INSTITUTIONAL_AUTHOR.id,
+    reviewedAt: "2026-08-25",
+    approvedAt: "2026-08-25",
+    imageOrigin: "licensed",
+    imageLicense: "CC BY-SA 4.0",
+    imageAttribution:
+      "Foto: D-Kuru (Wikimedia Commons), CC BY-SA 4.0 — https://commons.wikimedia.org/wiki/File:DDR_4_SO-DIMM_RAM_slot_PNr%C2%B00837.jpg",
+    notes:
+      "Satélite escrito do zero na Onda 10C; fact-check registrado em blogEditorialSources.ts; capa é fotografia real licenciada, sem IA.",
+  },
+  {
+    slug: "codigos-de-erro-tela-azul-windows",
+    status: "approved",
+    authorType: "organization",
+    authorId: INSTITUTIONAL_AUTHOR.id,
+    reviewedAt: "2026-08-25",
+    approvedAt: "2026-08-25",
+    imageOrigin: "licensed",
+    imageLicense: "CC BY-SA 4.0",
+    imageAttribution:
+      "Foto: JIP (Wikimedia Commons), CC BY-SA 4.0 — https://commons.wikimedia.org/wiki/File:Blue_Screen_Of_Death_at_Urheilupuisto_metro_station.jpg",
+    notes:
+      "Satélite escrito do zero na Onda 10C; fact-check registrado em blogEditorialSources.ts; capa é fotografia real licenciada, sem IA.",
+  },
+  {
+    slug: "testar-memoria-ram-memtest86",
+    status: "approved",
+    authorType: "organization",
+    authorId: INSTITUTIONAL_AUTHOR.id,
+    reviewedAt: "2026-08-25",
+    approvedAt: "2026-08-25",
+    imageOrigin: "licensed",
+    imageLicense: "CC BY-SA 4.0",
+    imageAttribution:
+      "Foto: Fastily (Wikimedia Commons), CC BY-SA 4.0 — https://commons.wikimedia.org/wiki/File:Memtest86%2B_2019-08-09.jpg",
+    notes:
+      "Satélite escrito do zero na Onda 10C; fact-check registrado em blogEditorialSources.ts; capa é fotografia real licenciada, sem IA.",
+  },
+];
+
 export const APPROVED_EDITORIAL_CONTENT = new Map<string, EditorialApproval>([
 
   ...FIRST_WAVE_SLUGS.map((slug) => [
@@ -664,6 +723,7 @@ export const APPROVED_EDITORIAL_CONTENT = new Map<string, EditorialApproval>([
   ...WAVE_8E.map((a) => [a.slug, a] as [string, EditorialApproval]),
   ...WAVE_9B.map((a) => [a.slug, a] as [string, EditorialApproval]),
   ...WAVE_9C.map((a) => [a.slug, a] as [string, EditorialApproval]),
+  ...WAVE_10C.map((a) => [a.slug, a] as [string, EditorialApproval]),
 ]);
 
 

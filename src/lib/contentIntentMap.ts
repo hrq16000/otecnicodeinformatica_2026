@@ -170,6 +170,91 @@ export const CONTENT_INTENT_MAP: ContentNode[] = [
     justificativa:
       "Pilar nacional LEARNING/COURSE. Oferece roteiro prático para aprender informática do zero, mantendo separação entre conteúdo educacional nacional e comercial local.",
   },
+  // ── ONDA 10C — satélites de lentidão extrema e tela azul.
+  {
+    url: "/blog/limpar-arquivos-temporarios-windows",
+    intent: "informational",
+    topic: "limpeza de arquivos temporários e espaço livre no disco do sistema",
+    queries: [
+      "como limpar arquivos temporarios do windows",
+      "liberar espaco no disco c",
+      "sensor de armazenamento windows 11",
+    ],
+    serviceParent: "/servicos/manutencao-de-computador",
+    problemParent: "/blog/computador-lento-causas-solucoes",
+    bridgesTo: [
+      "/blog/computador-lento-causas-solucoes",
+      "/blog/quando-trocar-hd-por-ssd",
+      "/servicos/manutencao-de-computador",
+    ],
+    doNotDuplicate: ["/blog/computador-lento-causas-solucoes"],
+    novaNestaRodada: true,
+    justificativa:
+      "Satélite de execução: trata apenas espaço livre e limpeza segura. A triagem completa de lentidão permanece no pilar.",
+  },
+  {
+    url: "/blog/memoria-ram-insuficiente-sintomas",
+    intent: "diagnostic",
+    topic: "identificação de falta de memória RAM e critério de upgrade",
+    queries: [
+      "sintomas de memoria ram insuficiente",
+      "quanto de ram preciso windows 11",
+      "como saber se preciso aumentar a memoria",
+    ],
+    serviceParent: "/servicos/upgrade-ssd-ram",
+    problemParent: "/blog/computador-lento-causas-solucoes",
+    bridgesTo: [
+      "/blog/testar-memoria-ram-memtest86",
+      "/blog/quando-trocar-hd-por-ssd",
+      "/servicos/upgrade-ssd-ram",
+    ],
+    doNotDuplicate: ["/blog/testar-memoria-ram-memtest86"],
+    novaNestaRodada: true,
+    justificativa:
+      "Satélite diagnóstico: separa falta de memória de gargalo de disco e define compatibilidade. O teste de defeito fica no satélite do Memtest86+.",
+  },
+  {
+    url: "/blog/codigos-de-erro-tela-azul-windows",
+    intent: "diagnostic",
+    topic: "leitura e interpretação dos códigos de parada da tela azul",
+    queries: [
+      "codigos de erro tela azul windows",
+      "memory management tela azul",
+      "irql not less or equal o que significa",
+    ],
+    serviceParent: "/diagnostico-tecnico",
+    problemParent: "/blog/como-resolver-tela-azul-windows",
+    bridgesTo: [
+      "/blog/como-resolver-tela-azul-windows",
+      "/blog/testar-memoria-ram-memtest86",
+      "/diagnostico-tecnico",
+    ],
+    doNotDuplicate: ["/blog/como-resolver-tela-azul-windows"],
+    novaNestaRodada: true,
+    justificativa:
+      "Satélite de referência: catálogo dos códigos e do que cada um sugere. A sequência de eliminação permanece no pilar da tela azul.",
+  },
+  {
+    url: "/blog/testar-memoria-ram-memtest86",
+    intent: "informational",
+    topic: "teste de memória RAM fora do sistema operacional",
+    queries: [
+      "como testar memoria ram",
+      "memtest86 passo a passo",
+      "quantas passagens memtest",
+    ],
+    serviceParent: "/diagnostico-tecnico",
+    problemParent: "/blog/como-resolver-tela-azul-windows",
+    bridgesTo: [
+      "/blog/codigos-de-erro-tela-azul-windows",
+      "/blog/memoria-ram-insuficiente-sintomas",
+      "/servicos/upgrade-ssd-ram",
+    ],
+    doNotDuplicate: ["/blog/memoria-ram-insuficiente-sintomas"],
+    novaNestaRodada: true,
+    justificativa:
+      "Satélite de procedimento: apenas o teste e a leitura do resultado. O critério de quantidade de memória fica no satélite de sintomas.",
+  },
   // ── ONDA 9C — cluster "computador entra direto na BIOS".
   {
     url: "/blog/computador-entra-direto-na-bios",

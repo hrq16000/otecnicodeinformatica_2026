@@ -258,6 +258,31 @@ export const EDITORIAL_COVERS: Record<string, EditorialCover> = {
     width: 1200,
     height: 630,
   },
+  // ── Onda 10C — satélites de lentidão extrema e tela azul (fotografias reais licenciadas).
+  "limpar-arquivos-temporarios-windows": {
+    src: "/blog/limpar-arquivos-temporarios-windows.jpg",
+    alt: "Disco rígido de notebook e unidade de estado sólido lado a lado sobre a bancada",
+    width: 1200,
+    height: 630,
+  },
+  "memoria-ram-insuficiente-sintomas": {
+    src: "/blog/memoria-ram-insuficiente-sintomas.jpg",
+    alt: "Módulo de memória SO-DIMM DDR4 encaixado no slot da placa de um notebook",
+    width: 1200,
+    height: 630,
+  },
+  "codigos-de-erro-tela-azul-windows": {
+    src: "/blog/codigos-de-erro-tela-azul-windows.jpg",
+    alt: "Painel informativo público exibindo uma tela azul de erro do Windows",
+    width: 1200,
+    height: 630,
+  },
+  "testar-memoria-ram-memtest86": {
+    src: "/blog/testar-memoria-ram-memtest86.jpg",
+    alt: "Tela do Memtest86+ executando a varredura de memória durante a inicialização",
+    width: 1200,
+    height: 630,
+  },
 };
 
 export function getEditorialCover(slug: string): EditorialCover | undefined {
