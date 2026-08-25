@@ -348,17 +348,21 @@
     min-width: 0;
   }
 
+  /* `overflow-x: hidden` em html/body cria contexto de rolagem e quebra o
+     `position: fixed` do header em vários navegadores (topo sumindo no scroll).
+     `overflow-x: clip` corta o transbordo horizontal SEM criar esse contexto. */
   html {
     scroll-behavior: smooth;
-    overflow-x: hidden;
+    overflow-x: clip;
   }
 
   body {
     @apply bg-background text-foreground font-sans antialiased;
-    overflow-x: hidden;
+    overflow-x: clip;
     overflow-wrap: break-word;
     word-wrap: break-word;
   }
+
 
   h1, h2, h3, h4, h5, h6 {
     @apply font-heading font-bold;
@@ -1827,9 +1831,14 @@ html[data-reduced-motion="true"] .route-progress > span { animation: none; trans
   }
 
   /* Entrada/saída padrão de elementos condicionais. */
+  /* `backwards` (e não `both`): ao terminar, o elemento deixa de ter
+     `transform` aplicado. Com `both`, a matriz identidade persistia e o
+     wrapper de transição de rota virava containing block, fazendo o header
+     `position: fixed` rolar junto com a página. */
   .motion-enter {
-    animation: motionEnter var(--motion-duration-normal) var(--motion-ease-enter) both;
+    animation: motionEnter var(--motion-duration-normal) var(--motion-ease-enter) backwards;
   }
+
   .motion-exit {
     animation: motionExit var(--motion-duration-fast) var(--motion-ease-exit) both;
   }

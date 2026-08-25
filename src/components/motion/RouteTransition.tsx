@@ -18,6 +18,10 @@ interface RouteTransitionProps {
 export const RouteTransition = ({ routeKey, children, className = "" }: RouteTransitionProps) => {
   const first = useRef(true);
   const [key, setKey] = useState(routeKey);
+  // A classe de animação só existe enquanto a transição roda: um wrapper com
+  // `transform` (mesmo identidade) vira containing block e faria o header
+  // `position: fixed` rolar junto com a página.
+  const [animating, setAnimating] = useState(false);
 
   useEffect(() => {
     if (first.current) {
@@ -25,11 +29,17 @@ export const RouteTransition = ({ routeKey, children, className = "" }: RouteTra
       return;
     }
     setKey(routeKey);
+    setAnimating(true);
   }, [routeKey]);
 
   return (
-    <div key={key} className={`motion-enter ${className}`.trim()}>
+    <div
+      key={key}
+      className={`${animating ? "motion-enter " : ""}${className}`.trim()}
+      onAnimationEnd={() => setAnimating(false)}
+    >
       {children}
     </div>
   );
 };
+
