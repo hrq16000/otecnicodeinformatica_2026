@@ -939,6 +939,7 @@ export const legacyRouteElements: Record<string, () => React.ReactElement> = {
   "/admin/auditoria-local": () => <AdminAuditoriaLocal />,
   "/admin/gates-locais": () => <AdminGatesLocais />,
   "/admin/inventario-bairros": () => <AdminInventarioBairros />,
+  "/admin/indexacao": () => <AdminIndexacao />,
   "/admin/ui-performance": () => <AdminUiPerformance />,
   "/admin/dashboard": () => <AdminDashboard />,
   "/admin/casos": () => <AdminCasos />,
