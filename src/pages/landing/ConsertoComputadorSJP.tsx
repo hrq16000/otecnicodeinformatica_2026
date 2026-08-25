@@ -57,7 +57,7 @@ const Header = () => {
             alt={brandConfig.logoAlt}
             width="140"
             height="36"
-            className="h-8 w-auto"
+            className="h-8 w-auto brightness-0 invert"
             loading="eager"
             decoding="async"
           />
