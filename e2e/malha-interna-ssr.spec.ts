@@ -83,6 +83,11 @@ test.describe("malha interna no SSR", () => {
         quebrados.push(`${destino} (status ${status})`);
         continue;
       }
+      // Exceção governada: o diretório `/bairros` é uma superfície de UX e
+      // lista bairros ainda SHALLOW, que por política emitem noindex até serem
+      // promovidos a RICH (gate `check:sitemap-rich`). Fora desse diretório,
+      // link interno para noindex é defeito.
+      if (destino.startsWith("/bairros/")) continue;
       if (temNoindex(await resposta.text())) paraNoindex.push(destino);
     }
 
