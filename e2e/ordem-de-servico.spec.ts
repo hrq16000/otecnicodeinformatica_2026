@@ -8,6 +8,9 @@ import { expect, test } from "@playwright/test";
 
 const aguardarHidratacao = async (page: import("@playwright/test").Page) => {
   // Inputs controlados só retêm valor depois da hidratação do React.
+  await page.waitForFunction(() => document.documentElement.dataset["n"] === "1", null, {
+    timeout: 30_000,
+  });
   const campo = page.getByLabel("Seu nome");
   await expect(async () => {
     await campo.fill("Cliente Teste");
@@ -40,6 +43,9 @@ const aceitarTudo = async (page: import("@playwright/test").Page) => {
 
 test.beforeEach(async ({ page }) => {
   await page.goto("/ordem-de-servico");
+  await page.waitForFunction(() => document.documentElement.dataset["n"] === "1", null, {
+    timeout: 30_000,
+  });
   await page.evaluate(() => window.localStorage.removeItem("os_draft_v1"));
   await page.reload();
 });
@@ -120,6 +126,7 @@ test("recarregar a página restaura o rascunho e o código já gerado", async ({
 });
 
 test("consulta por código rejeita formato inválido", async ({ page }) => {
+  await aguardarHidratacao(page);
   await page.getByRole("tab", { name: /Consultar O.S/i }).click();
   await page.getByLabel("Código único da O.S").fill("1234");
   await page.getByRole("button", { name: /^Consultar$/ }).click();
