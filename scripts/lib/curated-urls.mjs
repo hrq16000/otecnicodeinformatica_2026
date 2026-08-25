@@ -46,6 +46,8 @@ export const MAIN = [
 /** Hubs de SEO temáticos (entram no sitemap-main). */
 export const HUBS = [
   { path: "/empresa-de-ti-curitiba", changefreq: "weekly", priority: "0.8" },
+  // Hub de cobertura territorial (malha de bairros por região).
+  { path: "/bairros", changefreq: "weekly", priority: "0.7" },
   // Pillar informacional do cluster de informática (apoio das páginas comerciais).
   { path: "/guia-tecnico-informatica", changefreq: "monthly", priority: "0.7" },
 ];

@@ -40,6 +40,7 @@ const columns: Array<{ title: string; links: Array<{ label: string; to: string }
     title: "Regiões",
     links: [
       { label: "Áreas atendidas", to: "/areas-atendidas" },
+      { label: "Bairros atendidos", to: "/bairros" },
       { label: "Curitiba", to: "/tecnico-informatica-curitiba" },
       { label: "São José dos Pinhais", to: "/tecnico-informatica-sao-jose-pinhais" },
       { label: "Pinhais", to: "/tecnico-informatica-pinhais" },
