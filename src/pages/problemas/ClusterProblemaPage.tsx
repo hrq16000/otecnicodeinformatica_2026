@@ -20,6 +20,7 @@ import {
   FontesPrimarias,
 } from "@/components/BlocosEnriquecimento";
 import { enriquecimentoDe } from "@/lib/enriquecimentoConteudo";
+import { BlocosRedes4e } from "@/components/redes/BlocosRedes4e";
 import { SCHEMA_SLOTS, SLOT_PRIORITY, useJsonLdSlot } from "@/lib/jsonLdSlots";
 import { clusterProblema } from "@/lib/clusterProblemas";
 import { absoluteUrl, siteConfig } from "@/lib/siteConfig";
@@ -391,6 +392,8 @@ const ClusterProblemaPage = () => {
         <PoliticaAtendimentoBloco variant="inline" />
 
         <BlocosTecnicos blocos={extra?.blocos} />
+
+        <BlocosRedes4e path={dados.path} />
 
         {extra?.tabelaExtra ? (
           <TabelaDiagnosticaBloco tabela={extra.tabelaExtra} id="tabela-decisao" />
