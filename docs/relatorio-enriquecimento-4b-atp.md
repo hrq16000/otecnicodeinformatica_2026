@@ -87,3 +87,34 @@ Smoke público após deploy: `npm run smoke:4b`
 - O smoke público da 4B só é conclusivo depois do próximo deploy.
 - Cluster F permanece congelado; qualquer reforço de formatação comercial exige
   nova rodada com o owner da 4A.
+
+---
+
+## 6. Fechamento pós-deploy — 2026-08-25 (`4B = CLOSED`)
+
+Publicado e verificado em produção. Detalhamento completo, com payloads e
+evidências, em `docs/relatorio-smoke-4b.md`.
+
+- **Deploy:** `2f850f62` (contém `7572d6d8`) · deployment `a9d58a38…8923f` ·
+  build 2026-08-25T01:27:50Z. A produção anterior (`235f44f`) não é mais servida.
+- **Smoke público 4B:** **5/5 PASS** — 200, `index, follow`, canonical self, 1 H1,
+  Resposta rápida + tabela 4B no HTML inicial, JSON-LD parseável, 35–40 links reais.
+- **Owner congelado `/servicos/formatacao`:** fingerprint `b40b2a9be749` inalterado,
+  canonical/robots/H1 corretos, sem lastmod novo, sem IndexNow.
+- **Sitemap real:** 5 owners nos sub-sitemaps corretos com `lastmod=2026-08-25`
+  de origem `hash-change`; nenhum bump artificial no histórico de fingerprints.
+- **IndexNow:** exatamente 5 URLs · indexnow.org HTTP 200 · Bing HTTP 200 ·
+  key file 200 · 5 aceitas / 0 rejeitadas · 2026-08-25T01:42:17Z.
+- **Rich results:** 0 perdas, 0 ganhos, alerta `ESTAVEL` nas 11 URLs monitoradas.
+- **Diff SSR/JSON-LD vs. produção:** 6 `UNCHANGED`, 4 `CHANGED_OK` esperados e
+  1 `REGRESSION` em `/servicos/upgrade-ssd-ram` — instabilidade **pré-existente**
+  do sink de JSON-LD em SSR frio (o HTML alterna entre 7 e 2 blocos `ld+json`,
+  com o conteúdo visível sempre íntegro). Não é defeito da 4B; fica registrado
+  como `P0_ABERTO = SSR_JSONLD_INTERMITENTE` para micro-rodada própria.
+- **GSC (leitura):** 2 `INDEXED` com crawl anterior ao deploy (`AWAITING_RECRAWL`),
+  3 `NO_DATA`; novo crawl pós-deploy 0/5; `CRAWLED_NOT_INDEXED` real = 0.
+  A ausência de crawl imediato não bloqueia a 4C.
+- **Dossiês:** `node scripts/gerar-dossie-4b.mjs` → 5 HTML + 5 PDF em
+  `reports/dossies-4b/`, com SSR, schema, rich results, lastmod, IndexNow e GSC por URL.
+
+**Decisão:** `4B = CLOSED` · `SEARCH = OBSERVE` · `NEXT_ALLOWED = 4C`.
