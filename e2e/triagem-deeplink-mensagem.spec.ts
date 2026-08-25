@@ -155,12 +155,15 @@ async function avancarAteWhatsApp(page: Page): Promise<string> {
       })
       .catch(() => undefined);
     for (const cb of await dialog.getByRole("checkbox").all()) {
-      await cb.check({ force: true }).catch(() => undefined);
+      if ((await cb.getAttribute("aria-checked")) !== "true") {
+        await cb.click({ force: true }).catch(() => undefined);
+        await page.waitForTimeout(200);
+      }
     }
     await page.waitForTimeout(400);
 
     const avancar = dialog
-      .getByRole("button", { name: /(Continuar|Revisar|Confirmar|Abrir o WhatsApp|WhatsApp)/i })
+      .getByRole("button", { name: /^(Continuar|Revisar|Confirmar|Agendar agora)$/i })
       .first();
     if (await avancar.count()) {
       await avancar.click({ force: true }).catch(() => undefined);
