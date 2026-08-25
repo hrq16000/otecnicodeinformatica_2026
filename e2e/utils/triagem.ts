@@ -93,25 +93,18 @@ export async function preencherTriagemPf(page: Page, nome = "Cliente Teste", bai
   return dialog;
 }
 
-export async function avancarAteWhatsApp(page: Page, nome = "Cliente Teste", bairro = "Batel"): Promise<string> {
+export async function avancarAteWhatsApp(page: Page): Promise<string> {
   const dialog = page.locator(TRIAGEM);
-  for (let i = 0; i < 24; i += 1) {
+  for (let i = 0; i < 14; i += 1) {
     const capturadas = await urlsWaCapturadas(page);
     if (capturadas.length) return capturadas[capturadas.length - 1];
 
-    const linkVisivel = dialog.locator('a[href*="wa.me"], a[href*="api.whatsapp.com"]').first();
+    const linkVisivel = dialog.locator('a[href*="wa.me"]').first();
     if (await linkVisivel.count()) return (await linkVisivel.getAttribute("href")) ?? "";
+
     if (!(await dialog.count())) break;
 
-    // Campos de texto obrigatórios ainda em branco.
-    for (const [rotulo, valor] of [[/Seu nome/i, nome], [/bairro/i, bairro]] as const) {
-      const campo = dialog.getByLabel(rotulo).first();
-      if ((await campo.count()) && !(await campo.inputValue().catch(() => "x"))) {
-        await campo.fill(valor).catch(() => undefined);
-      }
-    }
-
-    // Radios (nativos e ARIA) e checkboxes: escolhe a primeira opção livre.
+    // Marca radios obrigatórios ainda sem resposta e aceita todos os termos.
     await dialog
       .evaluate((root) => {
         const grupos = new Map<string, HTMLInputElement[]>();
@@ -128,44 +121,21 @@ export async function avancarAteWhatsApp(page: Page, nome = "Cliente Teste", bai
         });
       })
       .catch(() => undefined);
-
-    // Cada grupo de radios ARIA precisa da sua própria escolha: sem isso a
-    // etapa fica "completa pela metade" e o Continuar apenas foca o pendente.
-    const grupos = dialog.locator('[role="radiogroup"]');
-    const totalGrupos = await grupos.count();
-    if (totalGrupos > 0) {
-      for (let g = 0; g < totalGrupos; g += 1) {
-        const grupo = grupos.nth(g);
-        if (await grupo.locator('[role="radio"][aria-checked="true"]').count()) continue;
-        await grupo.locator('[role="radio"]').first().click({ force: true }).catch(() => undefined);
-        await page.waitForTimeout(150);
-      }
-    } else {
-      const radios = dialog.locator('[role="radio"][aria-checked="false"]');
-      if (await radios.count()) {
-        await radios.first().click({ force: true }).catch(() => undefined);
-        await page.waitForTimeout(200);
-      }
-    }
     for (const cb of await dialog.getByRole("checkbox").all()) {
       if ((await cb.getAttribute("aria-checked")) !== "true") {
         await cb.click({ force: true }).catch(() => undefined);
-        await page.waitForTimeout(120);
+        await page.waitForTimeout(200);
       }
     }
+    await page.waitForTimeout(400);
 
     const avancar = dialog
-      .getByRole("button", { name: /^(Continuar|Avançar|Revisar|Confirmar|Agendar agora|Abrir WhatsApp)$/i })
+      .getByRole("button", { name: /^(Continuar|Revisar|Confirmar|Agendar agora)$/i })
       .first();
-    if ((await avancar.count()) && (await avancar.isEnabled().catch(() => false))) {
+    if (await avancar.count()) {
       await avancar.click({ force: true }).catch(() => undefined);
-    } else {
-      // Etapas com cartões de escolha (ex.: "PC / Notebook") não usam radio:
-      // avança clicando no primeiro botão de opção disponível.
-      const opcoes = dialog.getByRole("button").filter({ hasNotText: /Fechar|Close|Voltar|Continuar/i });
-      if (await opcoes.count()) await opcoes.first().click({ force: true }).catch(() => undefined);
     }
-    await page.waitForTimeout(700);
+    await page.waitForTimeout(900);
   }
   const finais = await urlsWaCapturadas(page);
   return finais.length ? finais[finais.length - 1] : "";

@@ -1,8 +1,9 @@
 import { test } from "@playwright/test";
+import { abrirTriagemPorAncora, avancarAteWhatsApp, instalarCapturaWa, preencherTriagemPf } from "./utils/triagem";
 test("dbg", async ({ page }) => {
-  await page.goto("/servicos/formatacao?utm_source=google&utm_medium=cpc&utm_campaign=formatacao_cwb&gclid=Cj0TESTE123");
-  await page.waitForSelector('html[data-hydrated="1"]');
-  await page.waitForTimeout(1500);
-  const hrefs = await page.locator('a[href*="wa.me"], a[href*="api.whatsapp.com"]').evaluateAll((as) => as.map((a) => (a as HTMLAnchorElement).getAttribute("href")));
-  console.log("HREFS", JSON.stringify(hrefs.slice(0, 3), null, 1));
+  test.setTimeout(150000);
+  await instalarCapturaWa(page);
+  await abrirTriagemPorAncora(page, "/?utm_source=google&utm_medium=cpc&utm_campaign=formatacao_cwb&gclid=Cj0TESTE123#triagem");
+  await preencherTriagemPf(page);
+  console.log("HREF:", (await avancarAteWhatsApp(page)).slice(0, 500));
 });
