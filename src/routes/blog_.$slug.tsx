@@ -4,6 +4,7 @@ import { JsonLdSsrSink } from "@/lib/jsonLdSsr";
 import { SITE_BASE_URL } from "@/lib/siteConfig";
 import { isEditorialApproved } from "@/lib/blogEditorialRegistry";
 import { withOgVersion } from "@/lib/ogCacheBust";
+import { metaSocial } from "@/lib/socialMeta";
 
 /**
  * Única rota que não passa pelo mapa de `legacyRouteElements`, portanto compõe
