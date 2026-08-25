@@ -14,6 +14,8 @@ import {
   AlertDialogTitle,
 } from "@/components/ui/alert-dialog";
 import { toast } from "sonner";
+import { exportarCsv } from "@/lib/exportarRelatorio";
+
 import { registrarAuditoria } from "@/lib/adminAudit";
 import {
   BAIRROS_MALHA,
@@ -108,7 +110,28 @@ const AdminBairros = () => {
             {f}
           </Button>
         ))}
+        <Button
+          type="button"
+          variant="outline"
+          size="sm"
+          onClick={() =>
+            exportarCsv(
+              "malha-bairros",
+              linhas.map((b) => ({
+                nome: b.nome,
+                slug: b.slug,
+                cidade: b.cidade,
+                regiao: b.regiaoNome,
+                path: b.path,
+                contentStatus: b.contentStatus,
+              })),
+            )
+          }
+        >
+          Exportar CSV
+        </Button>
       </div>
+
 
       <Card className="mt-6 overflow-x-auto p-0">
         <table className="w-full text-left text-sm">
