@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { BlocosRedes4e } from "@/components/redes/BlocosRedes4e";
 import { Link } from "@/lib/router-compat";
 import { PageSEO } from "@/components/PageSEO";
 import { Header } from "@/components/Header";
@@ -401,6 +402,7 @@ const AtendimentoRemoto = () => {
         <TrustSection />
         <CTASection />
         <BlocosLocal4c path="/atendimento-remoto" />
+        <BlocosRedes4e path="/atendimento-remoto" />
       </main>
       <RealImageSection imageKey="suporteRemoto" caption="Suporte técnico remoto profissional" />
       <InterlinkingBlock />

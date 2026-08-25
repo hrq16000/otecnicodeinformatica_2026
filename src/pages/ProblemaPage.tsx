@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { BlocosRedes4e } from "@/components/redes/BlocosRedes4e";
 import { AnimatedSection } from "@/components/AnimatedSection";
 import { useParams } from "@/lib/router-compat";
 import { Link } from "@/lib/router-compat";
@@ -206,6 +207,10 @@ const ProblemaPage = () => {
           <div className="skel mt-8 h-12 w-64 rounded-xl" />
           <SkeletonSection height="480px" />
         </div>
+        {/* Rodada 4E — conteúdo autoral do owner precisa estar no HTML inicial;
+            esta página carrega os dados no cliente, então o bloco é renderizado
+            também durante o esqueleto (fail-closed fora dos owners). */}
+        <BlocosRedes4e path={`/problemas/${slug ?? ""}`} />
         <Footer />
       </div>
     );
@@ -644,6 +649,8 @@ const ProblemaPage = () => {
         </div>
       </section>
       </AnimatedSection>
+
+      <BlocosRedes4e path={`/problemas/${data.slug}`} />
 
       <ClusterLinks
         titulo="Serviços, modalidades e regiões relacionadas"
