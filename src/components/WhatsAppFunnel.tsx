@@ -277,6 +277,20 @@ export const WhatsAppFunnel = () => {
     }
   }, []);
 
+  // Guardas da etapa de termos que o validateStep não enxerga (estado local):
+  // ciência dos critérios da categoria e gate de coleta. Sem isso o botão
+  // "Continuar" avançava mesmo com os aceites obrigatórios pendentes.
+  const termsGuardMessage = useMemo(() => {
+    if (getStepName(step, answers) !== "terms") return null;
+    if (categoriaPorEquipamento(answers.equipment) && !criteriosOk) {
+      return "Confirme a ciência dos critérios de aceite da categoria para continuar.";
+    }
+    if (getPricingRules(answers).route === "coleta" && !coleta.ok) {
+      return "Complete as informações de coleta (faixa de distância, pré-requisitos e status).";
+    }
+    return null;
+  }, [step, answers, criteriosOk, coleta.ok]);
+
   const handleNext = useCallback(() => {
     clearTimers();
     if (isTransitioning.current) return;
@@ -286,8 +300,14 @@ export const WhatsAppFunnel = () => {
       focusFirstIncomplete(step, answers);
       return;
     }
+    if (termsGuardMessage) {
+      playErrorBeep();
+      setInvalidMessage(termsGuardMessage);
+      return;
+    }
+    setInvalidMessage(null);
     advance();
-  }, [step, answers, advance, focusFirstIncomplete, clearTimers]);
+  }, [step, answers, advance, focusFirstIncomplete, clearTimers, termsGuardMessage]);
 
   const back = useCallback(() => {
     clearTimers();
@@ -1175,7 +1195,7 @@ export const WhatsAppFunnel = () => {
                     <FunnelNav
                       onBack={back}
                       onNext={handleNext}
-                      blockedMessage={invalidMessage}
+                      blockedMessage={invalidMessage ?? termsGuardMessage}
                       canNext={
                         canAdvance &&
                         (criteriosOk || !categoriaPorEquipamento(answers.equipment)) &&
