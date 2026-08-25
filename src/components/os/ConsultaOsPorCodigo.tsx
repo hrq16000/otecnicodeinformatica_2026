@@ -229,6 +229,7 @@ export const ConsultaOsPorCodigo = ({ autoFocus = false }: { autoFocus?: boolean
           ) : null}
         </article>
       ) : null}
+      </div>
     </div>
   );
 };
