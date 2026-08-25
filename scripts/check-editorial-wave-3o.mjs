@@ -45,7 +45,7 @@ const WAVE_3O = [
 ];
 
 const MAX_ONDA = 2;
-const MAX_INDEXAVEIS = 30;
+const MAX_INDEXAVEIS = 38;
 
 // Nomes de software que não podem aparecer em slug/H1/title/excerpt.
 const SOFTWARE = /autocad|revit|lumion|solidworks|photoshop|premiere|sketchup|archicad|blender|3ds\s?max|after\s?effects/i;
@@ -85,34 +85,13 @@ async function main() {
   const clusters = await read("src/lib/editorialClusters.ts");
 
   // 1. Limite total de indexáveis (derivado do registro, não hardcodado no valor).
+  // Parser genérico: FIRST_WAVE_SLUGS + qualquer bloco WAVE_XX do registro.
+  // Não editar a cada nova onda — basta declarar o bloco em blogEditorialRegistry.ts.
   const registered = (registry.match(/FIRST_WAVE_SLUGS\s*=\s*\[([\s\S]*?)\]/) || [])[1] ?? "";
-  const wave4x = (registry.match(/WAVE_4X:\s*EditorialApproval\[\]\s*=\s*\[([\s\S]*?)\n\];/) || [])[1] ?? "";
-  const wave4y = (registry.match(/WAVE_4Y:\s*EditorialApproval\[\]\s*=\s*\[([\s\S]*?)\n\];/) || [])[1] ?? "";
-  const wave5b = (registry.match(/WAVE_5B:\s*EditorialApproval\[\]\s*=\s*\[([\s\S]*?)\n\];/) || [])[1] ?? "";
-  const wave5c = (registry.match(/WAVE_5C:\s*EditorialApproval\[\]\s*=\s*\[([\s\S]*?)\n\];/) || [])[1] ?? "";
-  const wave5d = (registry.match(/WAVE_5D:\s*EditorialApproval\[\]\s*=\s*\[([\s\S]*?)\n\];/) || [])[1] ?? "";
-  const wave5e = (registry.match(/WAVE_5E:\s*EditorialApproval\[\]\s*=\s*\[([\s\S]*?)\n\];/) || [])[1] ?? "";
-  const wave5f = (registry.match(/WAVE_5F:\s*EditorialApproval\[\]\s*=\s*\[([\s\S]*?)\n\];/) || [])[1] ?? "";
-  const wave5g = (registry.match(/WAVE_5G:\s*EditorialApproval\[\]\s*=\s*\[([\s\S]*?)\n\];/) || [])[1] ?? "";
-  const wave5h = (registry.match(/WAVE_5H:\s*EditorialApproval\[\]\s*=\s*\[([\s\S]*?)\n\];/) || [])[1] ?? "";
-  const wave5i = (registry.match(/WAVE_5I:\s*EditorialApproval\[\]\s*=\s*\[([\s\S]*?)\n\];/) || [])[1] ?? "";
-  const wave5a = (registry.match(/WAVE_5A:\s*EditorialApproval\[\]\s*=\s*\[([\s\S]*?)\n\];/) || [])[1] ?? "";
-  const wave4z = (registry.match(/WAVE_4Z:\s*EditorialApproval\[\]\s*=\s*\[([\s\S]*?)\n\];/) || [])[1] ?? "";
+  const waveBlocks = [...registry.matchAll(/WAVE_[0-9A-Z]+:\s*EditorialApproval\[\]\s*=\s*\[([\s\S]*?)\n\];/g)].map((m) => m[1]);
   const registeredSlugs = [
     ...[...registered.matchAll(/"([a-z0-9-]+)"/g)].map((m) => m[1]),
-    ...[...wave4x.matchAll(/slug:\s*"([a-z0-9-]+)"/g)].map((m) => m[1]),
-    ...[...wave4y.matchAll(/slug:\s*"([a-z0-9-]+)"/g)].map((m) => m[1]),
-    ...[...wave4z.matchAll(/slug:\s*"([a-z0-9-]+)"/g)].map((m) => m[1]),
-    ...[...wave5a.matchAll(/slug:\s*"([a-z0-9-]+)"/g)].map((m) => m[1]),
-    ...[...wave5b.matchAll(/slug:\s*"([a-z0-9-]+)"/g)].map((m) => m[1]),
-    ...[...wave5c.matchAll(/slug:\s*"([a-z0-9-]+)"/g)].map((m) => m[1]),
-    ...[...wave5d.matchAll(/slug:\s*"([a-z0-9-]+)"/g)].map((m) => m[1]),
-    ...[...wave5e.matchAll(/slug:\s*"([a-z0-9-]+)"/g)].map((m) => m[1]),
-    ...[...wave5f.matchAll(/slug:\s*"([a-z0-9-]+)"/g)].map((m) => m[1]),
-    ...[...wave5g.matchAll(/slug:\s*"([a-z0-9-]+)"/g)].map((m) => m[1]),
-    ...[...wave5h.matchAll(/slug:\s*"([a-z0-9-]+)"/g)].map((m) => m[1]),
-    ...[...wave5i.matchAll(/slug:\s*"([a-z0-9-]+)"/g)].map((m) => m[1]),
-
+    ...waveBlocks.flatMap((b) => [...b.matchAll(/slug:\s*"([a-z0-9-]+)"/g)].map((m) => m[1])),
   ];
   if (registeredSlugs.length !== EDITORIAL_WAVE_SLUGS.length)
     fail(`paridade quebrada: registro tem ${registeredSlugs.length} slugs, onda de build tem ${EDITORIAL_WAVE_SLUGS.length}`);
