@@ -12265,4 +12265,245 @@ bcdboot C:\\Windows /s S: /f UEFI`}</code></pre>
     ),
   },
 
+  // ── ONDA 10C — satélites do cluster "lentidão extrema".
+  "limpar-arquivos-temporarios-windows": {
+    title: "Como limpar arquivos temporários e liberar espaço no Windows",
+    excerpt:
+      "Onde o Windows guarda arquivos temporários, quanto isso realmente pesa no desempenho e como limpar com segurança — sem programas de faxina e sem apagar o que faz falta.",
+    date: "2026-08-26",
+    readTime: "11 min",
+    category: "Procedimentos Técnicos",
+    content: (
+      <>
+        <p className="lead">Limpar arquivos temporários não transforma um computador antigo em um computador rápido. Mas quando o disco do sistema está quase cheio, a limpeza deixa de ser cosmética: o Windows perde espaço para memória virtual, atualização e cache, e a máquina fica lenta de um jeito que nenhuma troca de peça resolve.</p>
+
+        <h2>Resposta curta</h2>
+        <p>Use o <strong>Sensor de Armazenamento</strong> e a <strong>Limpeza de Disco</strong> do próprio Windows. Eles apagam cache de atualização, miniaturas, relatórios de erro e a pasta <code>Temp</code> sem tocar nos seus arquivos. Programas de "otimização" que prometem ganho de velocidade não fazem nada além disso — e alguns mexem no registro sem necessidade.</p>
+
+        <h2>O que são arquivos temporários, de verdade</h2>
+        <p>Arquivo temporário é qualquer coisa que um programa grava para uso imediato e deveria apagar depois: um instalador descompactado, uma prévia de imagem, um pacote de atualização já aplicado, um despejo de memória de um travamento. O problema não é o arquivo — é o programa que fecha sem limpar o que criou.</p>
+        <p>Com o tempo, sobram três acúmulos principais:</p>
+        <ul>
+          <li><strong>Pasta Temp do usuário e do sistema:</strong> restos de instaladores e de sessões encerradas de forma anormal.</li>
+          <li><strong>Cache de atualização do Windows:</strong> pacotes já instalados que continuam guardados para permitir desinstalação.</li>
+          <li><strong>Pasta Windows.old:</strong> a cópia do sistema anterior após uma atualização grande — costuma ocupar dezenas de gigabytes.</li>
+        </ul>
+
+        <h2>Por que espaço livre afeta a velocidade</h2>
+        <p>O Windows usa o disco do sistema como extensão da memória (<strong>arquivo de paginação</strong>) e como área de trabalho para atualização, indexação e cache de aplicativos. Quando o espaço livre fica muito baixo, essas operações passam a competir por um punhado de blocos livres.</p>
+        <p>Em SSD, existe um agravante técnico: o controlador precisa de blocos livres para escrever e reorganizar dados. Um SSD praticamente cheio grava mais devagar do que o mesmo SSD com folga — o efeito aparece como travadinhas ao salvar arquivos e abrir programas. Como regra prática, mantenha pelo menos <strong>10% a 15% do disco livre</strong>.</p>
+        <aside className="rounded-lg border border-border bg-muted/40 p-4 not-prose my-6">
+          <p className="m-0 text-sm"><strong>Diagnóstico honesto:</strong> se o disco tem bastante espaço livre e a máquina continua lenta, o gargalo não é lixo digital. Volte à triagem completa em <Link to="/blog/computador-lento-causas-solucoes" className="text-accent">computador lento: causas e soluções</Link> antes de perder tempo com faxina.</p>
+        </aside>
+
+        <h2>Passo a passo: limpeza segura</h2>
+        <ol>
+          <li><strong>Veja para onde foi o espaço.</strong> Abra <em>Configurações → Sistema → Armazenamento</em>. O Windows mostra a divisão por categoria (aplicativos, arquivos temporários, documentos). Comece pela categoria maior, não pela mais fácil.</li>
+          <li><strong>Limpe os temporários pela própria tela.</strong> Em <em>Arquivos temporários</em>, marque cache de atualização, miniaturas, relatórios de erro e Lixeira. Confira o que está marcado antes de confirmar: "Downloads" aparece na lista e contém arquivos seus.</li>
+          <li><strong>Ative o Sensor de Armazenamento.</strong> Ele repete essa limpeza sozinho e esvazia a Lixeira depois de um período que você define. É a diferença entre limpar uma vez e não precisar mais pensar nisso.</li>
+          <li><strong>Remova a instalação anterior, se existir.</strong> A opção "Instalações anteriores do Windows" apaga a pasta <code>Windows.old</code>. Depois disso você não consegue mais reverter a atualização — só marque se o sistema atual está estável há semanas.</li>
+          <li><strong>Desinstale o que não é usado.</strong> Em <em>Aplicativos instalados</em>, ordene por tamanho. Programas grandes esquecidos costumam liberar mais espaço do que qualquer limpeza de cache.</li>
+          <li><strong>Reinicie e confira.</strong> Parte do espaço só é devolvida depois do reinício, quando arquivos em uso são finalmente liberados.</li>
+        </ol>
+
+        <h2>O que não fazer</h2>
+        <ul>
+          <li><strong>Apagar a pasta Temp na unha, com o sistema em uso:</strong> arquivos abertos por programas em execução vão dar erro e, em alguns casos, derrubar o aplicativo. Use a ferramenta do sistema.</li>
+          <li><strong>Limpadores de registro:</strong> o ganho de desempenho é imperceptível e o risco de remover uma chave usada por um driver é real.</li>
+          <li><strong>Desativar o arquivo de paginação para "ganhar espaço":</strong> em máquinas com pouca memória, isso troca lentidão por erro de memória insuficiente.</li>
+          <li><strong>Desfragmentar SSD:</strong> desnecessário e desgasta o disco. O Windows já executa TRIM automaticamente.</li>
+        </ul>
+
+        <h2>Quando a limpeza não é a resposta</h2>
+        <p>Se o disco enche de novo em poucos dias, existe uma causa ativa: sincronização de nuvem duplicando pastas, backup de imagens do celular, logs de um aplicativo com defeito ou uma pasta de despejo de travamentos que se recria a cada tela azul. Nesse último caso, o assunto não é espaço — é estabilidade, e o caminho está em <Link to="/blog/como-resolver-tela-azul-windows" className="text-accent">como resolver a tela azul do Windows</Link>.</p>
+        <p>E se a máquina ainda usa HD mecânico, nenhuma limpeza vai aproximar o desempenho do de um SSD. A comparação de ganho real e de quando compensa trocar está em <Link to="/blog/quando-trocar-hd-por-ssd" className="text-accent">quando trocar HD por SSD</Link>.</p>
+
+        <h2>Quando chamar um técnico</h2>
+        <p>Vale pedir ajuda quando o espaço some sem explicação depois da limpeza, quando o Windows recusa atualizar por falta de espaço mesmo com disco liberado, ou quando a lentidão vem acompanhada de barulho no disco, travamentos e reinícios. Nesses casos o desempenho é sintoma, não causa. O escopo de verificação está em <Link to="/diagnostico-tecnico" className="text-accent">diagnóstico técnico</Link>; a execução em bancada ou no seu endereço, em <Link to="/servicos/manutencao-de-computador" className="text-accent">manutenção de computador</Link>.</p>
+      </>
+    ),
+  },
+
+  "memoria-ram-insuficiente-sintomas": {
+    title: "Memória RAM insuficiente: sintomas, como confirmar e quando fazer upgrade",
+    excerpt:
+      "Como distinguir falta de memória de disco lento ou vírus, ler o Gerenciador de Tarefas sem se enganar e decidir se o upgrade de RAM resolve o seu caso.",
+    date: "2026-08-26",
+    readTime: "12 min",
+    category: "Procedimentos Técnicos",
+    content: (
+      <>
+        <p className="lead">Falta de memória tem uma assinatura própria: a máquina responde bem com dois ou três programas abertos e desmonta quando você abre o quarto. Não é uma lentidão constante — é uma lentidão que aparece quando você trabalha de verdade.</p>
+
+        <h2>Resposta curta</h2>
+        <p>Se o uso de memória fica próximo de 100% enquanto o processador está tranquilo, e o disco dispara junto, o computador está compensando falta de RAM com o arquivo de paginação. Nesse cenário, aumentar a memória é o upgrade que muda a experiência. Se a memória sobra e o disco vive em 100%, o gargalo é o disco — não a RAM.</p>
+
+        <h2>Sintomas típicos</h2>
+        <ul>
+          <li>Trocar de aba do navegador recarrega a página, como se ela tivesse sido descartada.</li>
+          <li>Alternar entre programas abertos demora, mesmo que cada um deles abra rápido isoladamente.</li>
+          <li>O mouse continua respondendo, mas as janelas demoram a redesenhar.</li>
+          <li>Mensagens de "memória insuficiente" ao abrir arquivos grandes ou várias imagens.</li>
+          <li>O desempenho piora ao longo do dia e volta ao normal depois de reiniciar.</li>
+        </ul>
+        <p>Esse último item é o mais revelador: reiniciar devolve memória, não devolve disco nem processador.</p>
+
+        <h2>Como confirmar sem chutar</h2>
+        <ol>
+          <li>Abra o <strong>Gerenciador de Tarefas</strong> (Ctrl+Shift+Esc) e vá em <em>Desempenho → Memória</em>.</li>
+          <li>Trabalhe normalmente por alguns minutos, com o que você costuma manter aberto.</li>
+          <li>Observe três números: <strong>Em uso</strong>, <strong>Confirmado</strong> e <strong>Em cache</strong>.</li>
+        </ol>
+        <p>O campo <strong>Confirmado</strong> aparece como "12,1/16,0 GB" e é o mais honesto: ele mostra quanta memória os programas pediram, somando RAM e paginação. Quando o primeiro número encosta no segundo com frequência, a máquina está no limite mesmo que o gráfico não marque 100%.</p>
+        <p>Um erro comum: assustar-se com memória "em cache". O Windows usa memória livre como cache de disco de propósito — memória parada não acelera nada. Cache alto não é problema.</p>
+        <aside className="rounded-lg border border-border bg-muted/40 p-4 not-prose my-6">
+          <p className="m-0 text-sm"><strong>Teste cruzado:</strong> na aba <em>Desempenho</em>, olhe o disco ao mesmo tempo. Memória no talo <em>com</em> disco no talo é paginação — falta RAM. Memória tranquila <em>com</em> disco no talo é gargalo de armazenamento, tratado em <Link to="/blog/quando-trocar-hd-por-ssd" className="text-accent">quando trocar HD por SSD</Link>.</p>
+        </aside>
+
+        <h2>Quanta memória é suficiente hoje</h2>
+        <ul>
+          <li><strong>4 GB:</strong> insuficiente para Windows 11 com navegador moderno. Qualquer uso além de uma aba trava.</li>
+          <li><strong>8 GB:</strong> funciona para navegação, pacote de escritório e videoconferência, desde que você não acumule dezenas de abas.</li>
+          <li><strong>16 GB:</strong> confortável para uso misto, muitas abas, planilhas grandes, edição leve e jogos.</li>
+          <li><strong>32 GB ou mais:</strong> faz diferença em edição de vídeo, máquinas virtuais, CAD e desenvolvimento pesado.</li>
+        </ul>
+        <p>Números maiores não deixam a máquina mais rápida se ela nunca chega perto do limite atual. Memória sobrando é memória parada.</p>
+
+        <h2>Antes de comprar: o que precisa bater</h2>
+        <ol>
+          <li><strong>Tipo:</strong> DDR3, DDR4 e DDR5 não são intercambiáveis — nem fisicamente. O tipo aparece no próprio Gerenciador de Tarefas, em <em>Desempenho → Memória</em>.</li>
+          <li><strong>Formato:</strong> desktop usa DIMM; notebook usa SO-DIMM, menor.</li>
+          <li><strong>Slots livres:</strong> a mesma tela mostra "Slots usados: 1 de 2". Sem slot livre, upgrade significa substituir o módulo existente.</li>
+          <li><strong>Limite da placa:</strong> cada modelo aceita um máximo por slot e no total. Consulte o manual do fabricante pelo modelo exato.</li>
+          <li><strong>Memória soldada:</strong> muitos notebooks finos têm parte ou toda a memória soldada à placa. Nesses, o upgrade pode ser parcial ou impossível.</li>
+        </ol>
+        <p>Quando possível, use dois módulos iguais: a maioria das placas trabalha em <strong>dual channel</strong> e ganha banda com o par. Módulos diferentes normalmente funcionam, mas alinhados pela velocidade do mais lento.</p>
+
+        <h2>Falta de memória ou defeito de memória?</h2>
+        <p>São coisas diferentes e o sintoma engana. Falta de memória causa lentidão previsível sob carga. <strong>Defeito</strong> de memória causa travamentos aleatórios, corrupção de arquivos e telas azuis sem padrão de uso. Se o seu caso tem tela azul no meio, o teste correto vem antes da compra: <Link to="/blog/testar-memoria-ram-memtest86" className="text-accent">como testar a memória RAM com Memtest86+</Link>.</p>
+
+        <h2>Quando chamar um técnico</h2>
+        <p>Chame quando o notebook tem memória soldada, quando a máquina não liga depois da troca, quando o Windows reconhece menos memória do que foi instalada, ou quando você prefere que alguém confirme compatibilidade antes da compra — módulo errado costuma custar mais caro que a mão de obra. O escopo do upgrade está em <Link to="/servicos/upgrade-ssd-ram" className="text-accent">upgrade de SSD e memória</Link>, e a triagem geral de lentidão em <Link to="/blog/computador-lento-causas-solucoes" className="text-accent">computador lento: causas e soluções</Link>.</p>
+      </>
+    ),
+  },
+
+  // ── ONDA 10C — satélites do cluster "tela azul".
+  "codigos-de-erro-tela-azul-windows": {
+    title: "Códigos de erro da tela azul: como ler e o que cada um indica",
+    excerpt:
+      "O que significam MEMORY_MANAGEMENT, IRQL_NOT_LESS_OR_EQUAL, CRITICAL_PROCESS_DIED e outros códigos — e como usá-los para separar defeito de driver, memória ou disco.",
+    date: "2026-08-26",
+    readTime: "13 min",
+    category: "Procedimentos Técnicos",
+    content: (
+      <>
+        <p className="lead">O código na tela azul não é decoração nem número de protocolo. Ele é a única pista que o Windows consegue deixar antes de desligar, e diz em que ponto do sistema a falha aconteceu. Ler esse código muda a investigação de "vou reinstalar tudo" para "vou testar isto primeiro".</p>
+
+        <h2>Resposta curta</h2>
+        <p>Anote o texto em maiúsculas (por exemplo, <code>MEMORY_MANAGEMENT</code>) e, quando aparecer, o nome do arquivo citado logo abaixo. O texto indica a <em>categoria</em> da falha; o arquivo indica o <em>culpado provável</em>. Códigos que repetem sempre iguais apontam para uma causa específica; códigos que mudam a cada travamento apontam para memória, energia ou superaquecimento.</p>
+
+        <h2>Onde encontrar o código depois que a tela some</h2>
+        <p>Se a máquina reinicia rápido demais para você ler, os registros ficam salvos. Abra o <strong>Visualizador de Eventos</strong> → <em>Logs do Windows → Sistema</em> e procure eventos de origem <em>BugCheck</em> com nível crítico, no horário do travamento. A descrição traz o código e os parâmetros.</p>
+        <p>Os despejos de memória ficam em <code>C:\Windows\Minidump</code>. Cada arquivo corresponde a um travamento e guarda o estado do sistema no instante da parada — é o que um técnico usa para identificar o driver responsável.</p>
+        <aside className="rounded-lg border border-border bg-muted/40 p-4 not-prose my-6">
+          <p className="m-0 text-sm"><strong>Antes de investigar:</strong> anote o que estava acontecendo. Travou jogando? Ao conectar um dispositivo? Ao sair da suspensão? O contexto vale tanto quanto o código — e evita testar às cegas.</p>
+        </aside>
+
+        <h2>Os códigos mais frequentes e o que cada um sugere</h2>
+
+        <h3>MEMORY_MANAGEMENT</h3>
+        <p>O gerenciador de memória encontrou uma inconsistência. Na prática, significa memória com defeito, memória instável por perfil de overclock (XMP/EXPO) ou driver escrevendo onde não devia. É o código que mais justifica um teste dedicado de memória antes de qualquer outra coisa.</p>
+
+        <h3>IRQL_NOT_LESS_OR_EQUAL</h3>
+        <p>Um componente em modo núcleo tentou acessar memória em um nível de prioridade indevido. É quase sempre <strong>driver</strong> — de rede, vídeo, áudio ou de algum periférico recém-instalado. Quando o nome de um arquivo <code>.sys</code> aparece na tela, ele é o ponto de partida.</p>
+
+        <h3>PAGE_FAULT_IN_NONPAGED_AREA</h3>
+        <p>O sistema pediu um dado que deveria estar sempre disponível na memória e não encontrou. Divide-se entre memória defeituosa e driver mal comportado, com peso maior para memória quando ocorre em momentos aleatórios.</p>
+
+        <h3>CRITICAL_PROCESS_DIED</h3>
+        <p>Um processo essencial do Windows encerrou. Costuma vir de arquivos de sistema corrompidos, atualização interrompida ou disco com setores defeituosos. Aqui a verificação de integridade do sistema e a saúde do disco vêm antes de suspeitar de hardware nobre.</p>
+
+        <h3>DPC_WATCHDOG_VIOLATION</h3>
+        <p>Um driver demorou demais para devolver o controle. Aparece com frequência em máquinas com driver de controladora de disco antigo (o genérico no lugar do correto) ou firmware de SSD desatualizado.</p>
+
+        <h3>SYSTEM_SERVICE_EXCEPTION e KMODE_EXCEPTION_NOT_HANDLED</h3>
+        <p>Exceção não tratada em código do núcleo. Categoria ampla: driver, antivírus de terceiros com filtro de sistema e, com menos frequência, memória. O arquivo citado na tela é o que estreita a busca.</p>
+
+        <h3>INACCESSIBLE_BOOT_DEVICE</h3>
+        <p>O Windows não conseguiu acessar o disco de inicialização. Aparece após clonagem, troca de modo da controladora no Setup ou atualização interrompida. Se a máquina sequer chega ao Windows, o caminho é outro: <Link to="/blog/erro-no-bootable-device-como-resolver" className="text-accent">erro "No Bootable Device"</Link>.</p>
+
+        <h3>WHEA_UNCORRECTABLE_ERROR</h3>
+        <p>Erro de hardware relatado pelo próprio processador. É o código mais "físico" da lista: instabilidade de energia, superaquecimento, overclock ou falha de componente. Se acompanha desligamentos e barulho de cooler, trate temperatura antes de tudo.</p>
+
+        <h2>Como usar o código na prática</h2>
+        <ol>
+          <li><strong>Registre o padrão:</strong> três travamentos com o mesmo código apontam causa única; três códigos diferentes apontam causa comum de baixo nível (memória, fonte, temperatura).</li>
+          <li><strong>Desfaça a última mudança:</strong> driver atualizado, periférico novo, programa com filtro de sistema. A ordem cronológica resolve boa parte dos casos.</li>
+          <li><strong>Teste a memória</strong> quando o código for de memória ou quando os códigos variarem — procedimento em <Link to="/blog/testar-memoria-ram-memtest86" className="text-accent">testar a RAM com Memtest86+</Link>.</li>
+          <li><strong>Verifique a saúde do disco</strong> quando houver corrupção de arquivos, travamento ao abrir programas ou <code>CRITICAL_PROCESS_DIED</code>.</li>
+          <li><strong>Volte ao guia geral</strong> para a sequência completa de eliminação: <Link to="/blog/como-resolver-tela-azul-windows" className="text-accent">como resolver a tela azul do Windows</Link>.</li>
+        </ol>
+
+        <h2>Quando chamar um técnico</h2>
+        <p>Quando os travamentos impedem o uso normal, quando o Windows não completa a inicialização para você investigar, quando há suspeita de disco em falha (o risco de perder dados cresce a cada tentativa) ou quando você prefere que alguém leia os despejos de memória em vez de trocar peças por tentativa. O escopo de verificação está em <Link to="/diagnostico-tecnico" className="text-accent">diagnóstico técnico</Link>.</p>
+      </>
+    ),
+  },
+
+  "testar-memoria-ram-memtest86": {
+    title: "Como testar a memória RAM com Memtest86+ (passo a passo)",
+    excerpt:
+      "Quando testar a memória, como criar a mídia de inicialização, quantas passagens fazer e como interpretar erros para saber qual módulo trocar.",
+    date: "2026-08-26",
+    readTime: "11 min",
+    category: "Procedimentos Técnicos",
+    content: (
+      <>
+        <p className="lead">Memória com defeito é uma das causas mais frustrantes de instabilidade: o computador funciona bem por horas e depois trava, corrompe um arquivo ou mostra uma tela azul diferente da anterior. Testar a memória custa tempo e não custa peça — por isso vem antes de comprar qualquer coisa.</p>
+
+        <h2>Resposta curta</h2>
+        <p>Crie um pendrive inicializável com o <strong>Memtest86+</strong>, inicie o computador por ele e deixe rodar pelo menos <strong>uma passagem completa</strong> — idealmente quatro, ou a noite inteira. <strong>Um único erro já é defeito.</strong> Não existe "erro tolerável" em memória.</p>
+
+        <h2>Quando vale testar</h2>
+        <ul>
+          <li>Telas azuis com códigos que mudam a cada travamento.</li>
+          <li><code>MEMORY_MANAGEMENT</code> ou <code>PAGE_FAULT_IN_NONPAGED_AREA</code> recorrentes.</li>
+          <li>Arquivos que corrompem sozinhos, instaladores que falham em pontos diferentes.</li>
+          <li>Travamentos aleatórios sem relação com o programa em uso.</li>
+          <li>Depois de instalar memória nova ou ativar perfil XMP/EXPO no Setup.</li>
+        </ul>
+        <p>Não vale testar quando o sintoma é lentidão constante sob carga: isso é <em>falta</em> de memória, não defeito — o critério está em <Link to="/blog/memoria-ram-insuficiente-sintomas" className="text-accent">memória RAM insuficiente: sintomas</Link>.</p>
+
+        <h2>Por que testar fora do Windows</h2>
+        <p>Ferramentas que rodam dentro do sistema só conseguem examinar a memória que o sistema não está usando. O Memtest86+ inicia antes do Windows e assume a máquina inteira, o que permite varrer praticamente toda a memória com padrões de escrita e leitura que provocam o erro em vez de esperar por ele.</p>
+
+        <h2>Passo a passo</h2>
+        <ol>
+          <li><strong>Baixe a imagem oficial</strong> do Memtest86+ no site do projeto, em um computador que funcione. Prefira a versão para UEFI se a máquina é atual.</li>
+          <li><strong>Grave em um pendrive</strong> com uma ferramenta de gravação de imagem. O processo apaga o pendrive — use um vazio.</li>
+          <li><strong>Inicie pelo pendrive:</strong> ligue a máquina pressionando a tecla de menu de inicialização (normalmente F12, F11, F9 ou Esc, conforme o fabricante) e escolha o dispositivo USB.</li>
+          <li><strong>Deixe rodar.</strong> O teste começa sozinho. Uma passagem pode levar de vinte minutos a algumas horas, conforme a quantidade de memória.</li>
+          <li><strong>Observe a linha de erros.</strong> Erros aparecem em vermelho, com o endereço em que ocorreram. Zero erro após quatro passagens é um bom sinal; qualquer erro encerra o teste com veredito.</li>
+          <li><strong>Isole o módulo culpado.</strong> Com erro confirmado e mais de um módulo instalado, teste um por vez, no mesmo slot. Se os dois passam sozinhos e falham juntos, suspeite de configuração (XMP/EXPO) ou do slot.</li>
+          <li><strong>Teste também o slot.</strong> Módulo bom em slot suspeito reproduz o erro — é assim que se separa defeito de memória de defeito de placa.</li>
+        </ol>
+        <aside className="rounded-lg border border-destructive/40 bg-destructive/5 p-4 not-prose my-6">
+          <p className="m-0 text-sm"><strong>Segurança:</strong> manipule módulos com o computador desligado e sem energia, segurando pelas bordas. Se houver perfil de overclock ativo, desligue-o antes de concluir que a memória está com defeito — memória boa também falha fora de especificação.</p>
+        </aside>
+
+        <h2>Como interpretar o resultado</h2>
+        <ul>
+          <li><strong>Zero erro, mas travamentos continuam:</strong> memória provavelmente está boa. Volte à leitura dos códigos em <Link to="/blog/codigos-de-erro-tela-azul-windows" className="text-accent">códigos de erro da tela azul</Link> e considere driver, disco, fonte ou temperatura.</li>
+          <li><strong>Erros em endereços concentrados:</strong> típico de um módulo defeituoso — a substituição resolve.</li>
+          <li><strong>Erros espalhados e em grande quantidade:</strong> pode ser módulo, slot, configuração de velocidade ou controladora do processador. É onde vale um diagnóstico presencial.</li>
+          <li><strong>Erros que só aparecem depois de uma hora:</strong> muitas vezes ligados a aquecimento. Teste com o gabinete aberto e observe se muda.</li>
+        </ul>
+
+        <h2>Quando chamar um técnico</h2>
+        <p>Quando a máquina não inicia pelo pendrive, quando você não tem módulo reserva para comparar, quando o notebook tem memória soldada ou quando o erro persiste depois da troca — nesse ponto a suspeita passa para placa-mãe e o teste correto é de bancada. A troca de módulos com verificação de compatibilidade está em <Link to="/servicos/upgrade-ssd-ram" className="text-accent">upgrade de SSD e memória</Link>; a triagem completa, em <Link to="/diagnostico-tecnico" className="text-accent">diagnóstico técnico</Link>.</p>
+      </>
+    ),
+  },
+
 };
