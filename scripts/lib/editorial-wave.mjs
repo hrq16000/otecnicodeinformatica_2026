@@ -378,6 +378,44 @@ export const EDITORIAL_WAVE = [
     apoioLabel: "Computador entra direto na BIOS",
     cover: "/blog/troquei-o-ssd-e-o-pc-so-abre-a-bios.jpg",
   },
+
+  // ── Onda 10C — satélites de lentidão extrema e tela azul.
+  {
+    slug: "limpar-arquivos-temporarios-windows",
+    approvedAt: "2026-08-26",
+    pilar: "/blog/computador-lento-causas-solucoes",
+    pilarLabel: "Computador lento: causas e soluções",
+    apoio: "/blog/memoria-ram-insuficiente-sintomas",
+    apoioLabel: "Memória RAM insuficiente: sintomas",
+    cover: "/blog/limpar-arquivos-temporarios-windows.jpg",
+  },
+  {
+    slug: "memoria-ram-insuficiente-sintomas",
+    approvedAt: "2026-08-26",
+    pilar: "/servicos/upgrade-ssd-ram",
+    pilarLabel: "Upgrade de SSD e memória",
+    apoio: "/blog/testar-memoria-ram-memtest86",
+    apoioLabel: "Testar a memória RAM com Memtest86+",
+    cover: "/blog/memoria-ram-insuficiente-sintomas.jpg",
+  },
+  {
+    slug: "codigos-de-erro-tela-azul-windows",
+    approvedAt: "2026-08-26",
+    pilar: "/blog/como-resolver-tela-azul-windows",
+    pilarLabel: "Como resolver a tela azul do Windows",
+    apoio: "/blog/testar-memoria-ram-memtest86",
+    apoioLabel: "Testar a memória RAM com Memtest86+",
+    cover: "/blog/codigos-de-erro-tela-azul-windows.jpg",
+  },
+  {
+    slug: "testar-memoria-ram-memtest86",
+    approvedAt: "2026-08-26",
+    pilar: "/diagnostico-tecnico",
+    pilarLabel: "Diagnóstico técnico",
+    apoio: "/blog/codigos-de-erro-tela-azul-windows",
+    apoioLabel: "Códigos de erro da tela azul",
+    cover: "/blog/testar-memoria-ram-memtest86.jpg",
+  },
 ];
 
 export const EDITORIAL_WAVE_SLUGS = EDITORIAL_WAVE.map((a) => a.slug);
