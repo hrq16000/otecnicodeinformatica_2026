@@ -57,6 +57,57 @@ interface StatusIndexacao {
   } | null;
 }
 
+/** Monitor contínuo de rich results (public/rich-results-monitor.json). */
+interface RotaRich {
+  path: string;
+  cluster?: string | null;
+  declarados: string[];
+  google: string[] | null;
+  googleVerdict: string;
+  googleStatus: string;
+  mensagensValidacao: Array<{ tipo: string; item?: string | null; severidade: string; mensagem: string }>;
+  bing: string;
+  naoReconhecidos: string[];
+  ganhos: string[];
+  perdas: string[];
+  alerta: "PERDA" | "GANHO" | "ESTAVEL";
+  fonteComparacao: string;
+}
+
+interface MonitorRichResults {
+  geradoEm: string;
+  rodada: string;
+  googleDisponivel: boolean;
+  bing: string;
+  rotas: RotaRich[];
+  historicoTamanho?: number;
+}
+
+/** Diff SSR/JSON-LD entre deploys (public/ssr-diff-status.json). */
+interface RotaDiff {
+  path: string;
+  estado: "UNCHANGED" | "CHANGED_OK" | "REGRESSION" | "NEW" | "MISSING";
+  perdas: string[];
+  ganhos: string[];
+  hashBaseline: string | null;
+  hashAtual: string | null;
+  jsonldBaseline: string[] | null;
+  jsonldAtual: string[] | null;
+  palavrasBaseline: number | null;
+  palavrasAtual: number | null;
+  baselineDe: string | null;
+}
+
+interface StatusSsrDiff {
+  geradoEm: string;
+  rodada: string;
+  origem: string;
+  total: number;
+  regressoes: number;
+  rotas: RotaDiff[];
+}
+
+
 /**
  * Reobservação agendada: marcos fixos contados a partir do snapshot atual.
  * Não dispara nada sozinho — sinaliza o que já venceu para o operador rodar
