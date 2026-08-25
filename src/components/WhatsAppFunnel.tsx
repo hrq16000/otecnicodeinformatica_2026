@@ -1195,7 +1195,7 @@ export const WhatsAppFunnel = () => {
                     <FunnelNav
                       onBack={back}
                       onNext={handleNext}
-                      blockedMessage={invalidMessage}
+                      blockedMessage={invalidMessage ?? termsGuardMessage}
                       canNext={
                         canAdvance &&
                         (criteriosOk || !categoriaPorEquipamento(answers.equipment)) &&
