@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-08-25T00:35:00.522Z",
+  "geradoEm": "2026-08-25T01:11:47.036Z",
   "dist": "./dist",
   "rotas": {
     "/": {
@@ -408,19 +408,19 @@
       "origem": "bootstrap"
     },
     "/problemas/computador-esquentando": {
-      "hash": "94ffe3cfbb41",
+      "hash": "0fbaa7402d6c",
       "lastmod": "2026-08-25",
-      "origem": "bootstrap"
+      "origem": "hash-change"
     },
     "/problemas/computador-lento": {
-      "hash": "17698e47c0b1",
-      "lastmod": "2026-08-09",
-      "origem": "bootstrap"
+      "hash": "ac51e0ca90bd",
+      "lastmod": "2026-08-25",
+      "origem": "hash-change"
     },
     "/problemas/computador-nao-da-imagem": {
-      "hash": "276ae1366ab0",
-      "lastmod": "2026-08-13",
-      "origem": "bootstrap"
+      "hash": "8431e670fa87",
+      "lastmod": "2026-08-25",
+      "origem": "hash-change"
     },
     "/problemas/hd-fazendo-barulho": {
       "hash": "f3519d349321",
@@ -443,9 +443,9 @@
       "origem": "bootstrap"
     },
     "/problemas/notebook-nao-liga": {
-      "hash": "0b92051eb488",
-      "lastmod": "2026-08-09",
-      "origem": "bootstrap"
+      "hash": "819911ee2d78",
+      "lastmod": "2026-08-25",
+      "origem": "hash-change"
     },
     "/problemas/teclado-notebook-nao-funciona": {
       "hash": "ad15b28d0545",
@@ -713,9 +713,9 @@
       "origem": "bootstrap"
     },
     "/solucoes/backup": {
-      "hash": "39def745040f",
-      "lastmod": "2026-08-12",
-      "origem": "bootstrap"
+      "hash": "ebd3e3d48fb7",
+      "lastmod": "2026-08-25",
+      "origem": "hash-change"
     },
     "/solucoes/diagnostico": {
       "hash": "04f9fd3e9df9",
@@ -723,9 +723,9 @@
       "origem": "bootstrap"
     },
     "/solucoes/formatacao": {
-      "hash": "9652b1fa06a8",
-      "lastmod": "2026-08-12",
-      "origem": "bootstrap"
+      "hash": "c271dc170e74",
+      "lastmod": "2026-08-25",
+      "origem": "hash-change"
     },
     "/solucoes/recuperacao-de-dados": {
       "hash": "1f8e2ed4b505",

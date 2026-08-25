@@ -117,7 +117,19 @@ for (const path of paths) {
           tipo: i.richResultType,
           itens: (i.items ?? []).length,
         })),
+        // Causas relatadas pelo Google quando um tipo perde elegibilidade.
+        richResultsMensagens: (r.richResultsResult?.detectedItems ?? []).flatMap((i) =>
+          (i.items ?? []).flatMap((item) =>
+            (item.issues ?? []).map((issue) => ({
+              tipo: i.richResultType,
+              item: item.name ?? null,
+              severidade: issue.severity ?? "UNKNOWN",
+              mensagem: issue.issueMessage ?? "UNKNOWN",
+            })),
+          ),
+        ),
         richResultsVerdict: r.richResultsResult?.verdict ?? "NO_DATA",
+
       },
     });
   } catch (e) {
