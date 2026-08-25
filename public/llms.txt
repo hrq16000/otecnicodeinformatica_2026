@@ -126,6 +126,9 @@ cobramos execução que não tenha sido aprovada.
 - [O que é informática? Definição completa em português](https://otecnicodeinformatica.com.br/blog/o-que-e-informatica)
 - [Informática Básica: O Que É, O Que Ensina e Por Onde Começar](https://otecnicodeinformatica.com.br/blog/informatica-basica)
 - [Como Aprender Informática do Zero: Guia Prático para Iniciantes](https://otecnicodeinformatica.com.br/blog/como-aprender-informatica)
+- [Meu computador entra direto na BIOS: guia de diagnóstico e solução](https://otecnicodeinformatica.com.br/blog/computador-entra-direto-na-bios)
+- [erro-no-bootable-device-como-resolver](https://otecnicodeinformatica.com.br/blog/erro-no-bootable-device-como-resolver)
+- [Troquei o HD/SSD e o PC só abre a BIOS: o que fazer](https://otecnicodeinformatica.com.br/blog/troquei-o-ssd-e-o-pc-so-abre-a-bios)
 
 ## Páginas institucionais e de política
 
