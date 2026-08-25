@@ -304,6 +304,7 @@ export const WhatsAppFunnel = () => {
   const setField = useCallback(
     (id: string, value: string) => {
       setInvalidField(null);
+      setInvalidMessage(null);
       if (value) trackTriageFieldFill(id);
       setAnswers((prev) => {
         const next = applyField(prev, id, value);
