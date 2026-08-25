@@ -106,6 +106,34 @@ export const BairroMalhaLayout = ({ bairro }: { bairro: BairroMalha }) => {
     SLOT_PRIORITY.page,
   );
 
+  // Service com areaServed exato — um único nó por página (slot deduplica).
+  useJsonLdSlot(
+    SCHEMA_SLOTS.service,
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "@id": `${absoluteUrl(path)}#service`,
+      name: `Assistência técnica de informática no ${bairro.nome}`,
+      serviceType: "Assistência técnica de informática",
+      description: descricao,
+      url: absoluteUrl(path),
+      provider: { "@id": `${absoluteUrl(path)}#localbusiness` },
+      areaServed: {
+        "@type": "Place",
+        name: `${bairro.nome}, ${bairro.cidade} - ${siteConfig.region}`,
+      },
+      hasOfferCatalog: {
+        "@type": "OfferCatalog",
+        name: `Serviços atendidos no ${bairro.nome}`,
+        itemListElement: SERVICOS_MALHA.map((s) => ({
+          "@type": "Offer",
+          itemOffered: { "@type": "Service", name: s.label, url: absoluteUrl(s.to) },
+        })),
+      },
+    },
+    SLOT_PRIORITY.page,
+  );
+
   return (
     <div className="min-h-screen bg-background">
       <PageSEO
@@ -116,6 +144,7 @@ export const BairroMalhaLayout = ({ bairro }: { bairro: BairroMalha }) => {
         breadcrumbs={[
           { name: "Início", path: "/" },
           { name: "Bairros atendidos", path: "/bairros" },
+          { name: bairro.regiaoNome, path: `/bairros#${bairro.regiao}` },
           { name: bairro.nome, path },
         ]}
       />
@@ -123,8 +152,13 @@ export const BairroMalhaLayout = ({ bairro }: { bairro: BairroMalha }) => {
       <FastHeader />
       <main className="pt-[var(--site-header-height)]">
         <Breadcrumbs
-          items={[{ label: "Bairros atendidos", href: "/bairros" }, { label: bairro.nome }]}
+          items={[
+            { label: "Bairros atendidos", href: "/bairros" },
+            { label: bairro.regiaoNome, href: `/bairros#${bairro.regiao}` },
+            { label: bairro.nome },
+          ]}
         />
+
 
         <section className="border-b border-border/60 bg-secondary/40">
           <div className="container mx-auto py-12 md:py-16">
