@@ -9,6 +9,8 @@ interface Props {
   field: Field;
   value: string;
   invalid?: boolean;
+  /** Mensagem de erro exibida abaixo do campo (role="alert"). */
+  error?: string;
   onChange: (value: string) => void;
   /** Disparado quando um valor é escolhido (para foco/auto-advance). */
   onSelect?: (value: string) => void;
@@ -20,8 +22,12 @@ interface Props {
  * O container recebe a ref para foco/scroll ao validar.
  */
 export const TriageField = forwardRef<HTMLDivElement, Props>(
-  ({ field, value, invalid, onChange, onSelect }, ref) => {
+  ({ field, value, invalid, error, onChange, onSelect }, ref) => {
     const describedById = `${field.id}-help`;
+    const errorId = `${field.id}-error`;
+    const describedBy = [field.helper ? describedById : null, invalid && error ? errorId : null]
+      .filter(Boolean)
+      .join(" ") || undefined;
     const errorRing = invalid
       ? "ring-2 ring-destructive/70 rounded-lg"
       : "";
@@ -164,7 +170,7 @@ export const TriageField = forwardRef<HTMLDivElement, Props>(
             id={field.id}
             value={value}
             placeholder={field.placeholder}
-            aria-describedby={field.helper ? describedById : undefined}
+            aria-describedby={describedBy}
             aria-invalid={invalid || undefined}
             onChange={(e) => onChange(e.target.value)}
           />
@@ -177,10 +183,16 @@ export const TriageField = forwardRef<HTMLDivElement, Props>(
             value={value}
             rows={4}
             placeholder={field.placeholder}
-            aria-describedby={field.helper ? describedById : undefined}
+            aria-describedby={describedBy}
             aria-invalid={invalid || undefined}
             onChange={(e) => onChange(e.target.value)}
           />
+        )}
+
+        {invalid && error && (
+          <p id={errorId} role="alert" className="text-xs font-medium text-destructive">
+            {error}
+          </p>
         )}
       </div>
     );
