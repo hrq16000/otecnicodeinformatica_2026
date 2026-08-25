@@ -1,0 +1,61 @@
+# CONFIGURAÇÃO DO SUPABASE LOCAL (Docker) — uso exclusivo em desenvolvimento.
+#
+# O arquivo `supabase/config.toml` é gerenciado pela plataforma e não deve ser
+# editado. Para subir a stack local, use este arquivo:
+#
+#   supabase start --config supabase/config.local.toml
+#
+# Ele levanta Postgres, Auth, Storage, Realtime e Edge Functions offline.
+
+project_id = "otecnicodeinformatica-local"
+
+[api]
+enabled = true
+port = 54321
+schemas = ["public", "graphql_public"]
+extra_search_path = ["public", "extensions"]
+max_rows = 1000
+
+[db]
+port = 54322
+shadow_port = 54320
+major_version = 15
+
+[db.seed]
+enabled = true
+sql_paths = ["./seed.sql"]
+
+[studio]
+enabled = true
+port = 54323
+
+# Captura de e-mails locais (Inbucket) — nenhum e-mail sai da máquina.
+[inbucket]
+enabled = true
+port = 54324
+
+[storage]
+enabled = true
+file_size_limit = "50MiB"
+
+[auth]
+enabled = true
+site_url = "http://localhost:8080"
+additional_redirect_urls = ["http://localhost:8080", "http://127.0.0.1:8080"]
+jwt_expiry = 3600
+enable_signup = true
+
+[auth.email]
+enable_signup = true
+enable_confirmations = false
+
+[realtime]
+enabled = true
+
+[edge_runtime]
+enabled = true
+policy = "oneshot"
+inspector_port = 8083
+
+[analytics]
+enabled = false
