@@ -27,6 +27,16 @@ const MAX_POR_PAGINA = 3;
 const MAPA: Record<string, EditorialInboundLink[]> = {
   "/servicos/upgrade-ssd-ram": [
     {
+      slug: "memoria-ram-insuficiente-sintomas",
+      label: "Memória RAM insuficiente: sintomas",
+      hint: "Como confirmar falta de memória no Gerenciador de Tarefas antes de comprar módulo.",
+    },
+    {
+      slug: "testar-memoria-ram-memtest86",
+      label: "Testar a memória RAM com Memtest86+",
+      hint: "Passo a passo do teste fora do Windows e como isolar módulo e slot.",
+    },
+    {
       slug: "troquei-o-ssd-e-o-pc-so-abre-a-bios",
       label: "Troquei o SSD e o PC só abre a BIOS",
       hint: "Por que disco novo para no Setup e como configurar o slot M.2.",
@@ -220,6 +230,16 @@ const MAPA: Record<string, EditorialInboundLink[]> = {
     },
   ],
   "/servicos/manutencao-de-computador": [
+    {
+      slug: "limpar-arquivos-temporarios-windows",
+      label: "Limpar arquivos temporários com segurança",
+      hint: "O que a limpeza do Windows realmente apaga e por que espaço livre afeta a velocidade.",
+    },
+    {
+      slug: "codigos-de-erro-tela-azul-windows",
+      label: "Códigos de erro da tela azul",
+      hint: "O que MEMORY_MANAGEMENT, IRQL e WHEA indicam e por onde começar.",
+    },
     {
       slug: "computador-entra-direto-na-bios",
       label: "Computador entra direto na BIOS: por quê",
