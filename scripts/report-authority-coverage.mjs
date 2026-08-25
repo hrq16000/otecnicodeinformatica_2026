@@ -70,7 +70,9 @@ function textoVisivel(html) {
 
 function avaliar(path) {
   const html = htmlDe(path);
-  if (!html) return { path, renderizado: false, score: 0, classificacao: "WEAK", sinais: {} };
+  // Sem snapshot = rota fora do universo indexável curado (ex.: /empresas é
+  // noindex por decisão anterior). Não é gap de autoridade: fica como N/A.
+  if (!html) return { path, renderizado: false, score: 0, classificacao: "N/A", sinais: {} };
 
   const texto = textoVisivel(html);
   const palavras = texto.split(" ").filter(Boolean).length;
@@ -124,8 +126,9 @@ for (const fonte of FONTES) {
 
 matriz.sort((a, b) => a.score - b.score || a.path.localeCompare(b.path));
 
-const porClasse = matriz.reduce((acc, l) => ({ ...acc, [l.classificacao]: (acc[l.classificacao] ?? 0) + 1 }), {});
-const gaps = matriz.filter((l) => l.classificacao === "WEAK" || l.classificacao === "PARTIAL").slice(0, 6);
+const indexaveis = matriz.filter((l) => l.renderizado);
+const porClasse = indexaveis.reduce((acc, l) => ({ ...acc, [l.classificacao]: (acc[l.classificacao] ?? 0) + 1 }), {});
+const gaps = indexaveis.filter((l) => l.classificacao === "WEAK" || l.classificacao === "PARTIAL").slice(0, 6);
 
 const relatorio = {
   gerado_em: new Date().toISOString(),
@@ -134,7 +137,8 @@ const relatorio = {
   total_owners: matriz.length,
   nao_renderizados: matriz.filter((l) => !l.renderizado).map((l) => l.path),
   distribuicao: porClasse,
-  score_medio: Number((matriz.reduce((s, l) => s + l.score, 0) / Math.max(matriz.length, 1)).toFixed(1)),
+  owners_indexaveis: indexaveis.length,
+  score_medio: Number((indexaveis.reduce((s, l) => s + l.score, 0) / Math.max(indexaveis.length, 1)).toFixed(1)),
   gaps_criticos: gaps.map((g) => ({ path: g.path, score: g.score, classificacao: g.classificacao, cluster: g.cluster })),
   matriz,
 };
