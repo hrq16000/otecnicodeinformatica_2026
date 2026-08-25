@@ -149,23 +149,23 @@ const REGIOES_RAW: RegiaoRaw[] = [
     cidadePadrao: "Região Metropolitana de Curitiba",
     vizinhas: ["norte", "oeste-cic", "leste"],
     bairros: [
-      { nome: "São José dos Pinhais", slug: "sao-jose-dos-pinhais", cidade: "São José dos Pinhais" },
-      { nome: "Pinhais", slug: "pinhais", cidade: "Pinhais" },
-      { nome: "Colombo", slug: "colombo", cidade: "Colombo" },
-      { nome: "Araucária", slug: "araucaria", cidade: "Araucária" },
-      { nome: "Campo Largo", slug: "campo-largo", cidade: "Campo Largo" },
-      { nome: "Almirante Tamandaré", slug: "almirante-tamandare", cidade: "Almirante Tamandaré" },
-      { nome: "Fazenda Rio Grande", slug: "fazenda-rio-grande", cidade: "Fazenda Rio Grande" },
-      { nome: "Piraquara", slug: "piraquara", cidade: "Piraquara" },
-      { nome: "Quatro Barras", slug: "quatro-barras", cidade: "Quatro Barras" },
+      { nome: "São José dos Pinhais", slug: "sao-jose-dos-pinhais", path: "/tecnico-informatica-sao-jose-pinhais", cidade: "São José dos Pinhais" },
+      { nome: "Pinhais", slug: "pinhais", path: "/tecnico-informatica-pinhais", cidade: "Pinhais" },
+      { nome: "Colombo", slug: "colombo", path: "/tecnico-informatica-colombo", cidade: "Colombo" },
+      { nome: "Araucária", slug: "araucaria", path: "/tecnico-informatica-araucaria", cidade: "Araucária" },
+      { nome: "Campo Largo", slug: "campo-largo", path: "/tecnico-informatica-campo-largo", cidade: "Campo Largo" },
+      { nome: "Almirante Tamandaré", slug: "almirante-tamandare", path: "/tecnico-informatica-almirante-tamandare", cidade: "Almirante Tamandaré" },
+      { nome: "Fazenda Rio Grande", slug: "fazenda-rio-grande", path: "/tecnico-informatica-fazenda-rio-grande", cidade: "Fazenda Rio Grande" },
+      { nome: "Piraquara", slug: "piraquara", path: "/tecnico-informatica-piraquara", cidade: "Piraquara" },
+      { nome: "Quatro Barras", slug: "quatro-barras", path: "/tecnico-informatica-quatro-barras", cidade: "Quatro Barras" },
     ],
   },
 ];
 
 /** RICH = a política central já declara a página como indexável. */
-function statusDe(slug: string): ContentStatus {
+function statusDe(slug: string, path: string): ContentStatus {
   if (BAIRROS_ANCORA_SLUGS.includes(slug)) return "RICH";
-  return resolveLocal(`/bairros/${slug}`).indexability === "index" ? "RICH" : "SHALLOW";
+  return resolveLocal(path).indexability === "index" ? "RICH" : "SHALLOW";
 }
 
 export interface RegiaoMalha {
@@ -179,15 +179,18 @@ export const REGIOES_MALHA: RegiaoMalha[] = REGIOES_RAW.map((regiao) => ({
   id: regiao.id,
   nome: regiao.nome,
   vizinhas: regiao.vizinhas,
-  bairros: regiao.bairros.map((b) => ({
-    slug: b.slug,
-    nome: b.nome,
-    cidade: b.cidade ?? regiao.cidadePadrao,
-    regiao: regiao.id,
-    regiaoNome: regiao.nome,
-    contentStatus: statusDe(b.slug),
-    path: `/bairros/${b.slug}`,
-  })),
+  bairros: regiao.bairros.map((b) => {
+    const path = b.path ?? `/bairros/${b.slug}`;
+    return {
+      slug: b.slug,
+      nome: b.nome,
+      cidade: b.cidade ?? regiao.cidadePadrao,
+      regiao: regiao.id,
+      regiaoNome: regiao.nome,
+      contentStatus: statusDe(b.slug, path),
+      path,
+    };
+  }),
 }));
 
 export const BAIRROS_MALHA: BairroMalha[] = REGIOES_MALHA.flatMap((r) => r.bairros);
