@@ -1,0 +1,67 @@
+{
+  "rodada": "5C",
+  "fonte": "docs/relatorio-rodada-5b-autoridade-externa.md",
+  "atualizadoEm": "2026-08-25",
+  "identidadeCanonica": {
+    "nome": "O Técnico de Informática",
+    "dominio": "https://otecnicodeinformatica.com.br",
+    "contato": "WhatsApp (número canônico via VITE_WHATSAPP_NUMBER — nunca em texto visível)",
+    "cidadesPresenciais": ["Curitiba", "São José dos Pinhais"],
+    "alcanceRemoto": "Suporte remoto para todo o Brasil; operação presencial apenas nas cidades acima.",
+    "descricao": "Assistência técnica de informática em Curitiba e São José dos Pinhais: diagnóstico, reparo, redes e suporte remoto para pessoas e empresas."
+  },
+  "perfis": [
+    {
+      "plataforma": "Google Business Profile",
+      "estado": "MANUAL_REQUIRED",
+      "evidencia5b": "Sem acesso administrativo comprovado no repositório.",
+      "prioridade": "P1",
+      "acao": "Revisar site, categoria, área de serviço, serviços, descrição e fotos reais. Não criar endereço nem filial."
+    },
+    {
+      "plataforma": "Bing Places",
+      "estado": "SETUP_CANDIDATE",
+      "evidencia5b": "Nenhum perfil identificado na auditoria off-page.",
+      "prioridade": "P2",
+      "acao": "Avaliar criação alinhada à identidade canônica. Não declarar VERIFIED sem evidência."
+    }
+  ],
+  "sameAs": {
+    "politica": "Somente perfis oficiais, públicos, controlados e estáveis. Diretórios não entram.",
+    "aprovados": [],
+    "avaliados": []
+  },
+  "mencoesSemLink": [],
+  "backlinks": {
+    "referringDomains": 108,
+    "backlinks": 187,
+    "authorityScore": 2,
+    "classificacao": "Perfil dominado por diretórios automáticos e agregadores — nenhum sinal editorial legítimo.",
+    "acao": "Não desautorizar em massa; buscar citações de entidade e menções editoriais reais."
+  },
+  "diretorios": [
+    {
+      "nome": "Agregadores automáticos já presentes no perfil",
+      "classificacao": "LOW_VALUE",
+      "acao": "Nenhuma. Não solicitar novos links dessa natureza."
+    }
+  ],
+  "parceiros": [],
+  "baselineBuscaDeMarca": [
+    "O Técnico de Informática",
+    "otecnicodeinformatica.com.br",
+    "O Técnico de Informática Curitiba",
+    "O Técnico de Informática São José dos Pinhais"
+  ],
+  "proibicoes": [
+    "compra de backlinks",
+    "PBN",
+    "guest posts em massa",
+    "troca automatizada de links",
+    "comentários e fóruns artificiais",
+    "perfis fake",
+    "press release spam",
+    "geração automática de citações",
+    "reviews fabricados"
+  ]
+}

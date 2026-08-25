@@ -637,7 +637,7 @@ export const ENRIQUECIMENTO_4E: Record<Owner4e, EnriquecimentoConteudo> = {
     fontes: [
       {
         titulo: "Microsoft — Solucionar problemas de conexão de rede no Windows",
-        url: "https://support.microsoft.com/pt-br/windows/solucionar-problemas-de-conex%C3%A3o-de-rede-no-windows-166e6a6d-4c86-4c9d-96ca-c33a4f3bd35b",
+        url: "https://support.microsoft.com/pt-br/windows/corrigir-problemas-de-conex%C3%A3o-wi-fi-no-windows-9424a1f7-6a3b-65a6-4d78-7f07eee84d2c",
       },
       {
         titulo: "CISA — Securing Network Infrastructure Devices",

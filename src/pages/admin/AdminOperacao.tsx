@@ -31,6 +31,7 @@ import {
   type CategoriaOperacional,
 } from "@/lib/operacaoCategorias";
 import { CONTRATOS_OPERACIONAIS } from "@/lib/contratosOperacionais";
+import { OrdensServicoPanel } from "@/components/admin/OrdensServicoPanel";
 
 import {
   CHECKLIST_COLETA,
@@ -240,7 +241,15 @@ export default function AdminOperacao() {
             <TabsTrigger value="scripts"><MessageSquare className="mr-1.5 h-4 w-4" aria-hidden="true" />Scripts</TabsTrigger>
             <TabsTrigger value="logistica"><Truck className="mr-1.5 h-4 w-4" aria-hidden="true" />Logística</TabsTrigger>
             <TabsTrigger value="contratos"><FileCheck2 className="mr-1.5 h-4 w-4" aria-hidden="true" />Contratos</TabsTrigger>
+            <TabsTrigger value="ordens"><FileCheck2 className="mr-1.5 h-4 w-4" aria-hidden="true" />Ordens de serviço</TabsTrigger>
           </TabsList>
+
+          {/* ---------------- ORDENS DE SERVIÇO ---------------- */}
+          <TabsContent value="ordens" className="mt-4">
+            <OrdensServicoPanel />
+          </TabsContent>
+
+
 
 
           {/* ---------------- LEADS + SLA ---------------- */}

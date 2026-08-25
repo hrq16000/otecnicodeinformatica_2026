@@ -19,7 +19,8 @@ import {
   montarMensagemOs,
   termosDaModalidade,
 } from "@/lib/os/modalidadeOs";
-import { findOsRecord, isValidOsNumero, normalizeOsNumero, saveOsRecord } from "@/lib/osRegistry";
+import { ConsultaOsPorCodigo } from "@/components/os/ConsultaOsPorCodigo";
+import { saveOsRecord } from "@/lib/osRegistry";
 
 interface OsForm {
   nome: string;
@@ -30,6 +31,8 @@ interface OsForm {
   problema: string;
   liga: "sim" | "nao";
 }
+
+const OS_DRAFT_KEY = "os_draft_v1";
 
 const OrdemDeServico = () => {
   const [form, setForm] = useState<OsForm>(() => ({
@@ -43,12 +46,52 @@ const OrdemDeServico = () => {
   }));
   const [aceitos, setAceitos] = useState<Record<string, boolean>>({});
   const [codigo, setCodigo] = useState<string | null>(null);
+  const [restaurado, setRestaurado] = useState(false);
 
-  // Consulta por código único
-  const [consulta, setConsulta] = useState("");
-  const [resultado, setResultado] = useState<
-    { estado: "invalido" | "nao-encontrado" } | { estado: "ok"; protocolo: string; criadoEm: number } | null
-  >(null);
+  // Rascunho local: recarregar a página não pode apagar o que já foi digitado.
+  useEffect(() => {
+    try {
+      const bruto = window.localStorage.getItem(OS_DRAFT_KEY);
+      if (bruto) {
+        const salvo = JSON.parse(bruto) as {
+          form?: Partial<OsForm>;
+          aceitos?: Record<string, boolean>;
+          codigo?: string | null;
+        };
+        // Restaura só o que ainda está vazio: quem já começou a digitar
+        // (inclusive antes da hidratação) nunca perde o que escreveu.
+        if (salvo.form) {
+          setForm((p) => {
+            const merged = { ...p };
+            const intacto = !p.nome.trim() && !p.equipamento.trim() && !p.problema.trim();
+            if (intacto && salvo.form?.liga) merged.liga = salvo.form.liga;
+            for (const [chave, valor] of Object.entries(salvo.form ?? {})) {
+              if (chave === "liga") continue;
+              const atual = merged[chave as keyof OsForm];
+              if (typeof valor === "string" && valor && !String(atual ?? "").trim()) {
+                (merged as Record<string, string>)[chave] = valor;
+              }
+            }
+            return merged;
+          });
+        }
+        if (salvo.aceitos) setAceitos((p) => (Object.keys(p).length ? p : salvo.aceitos!));
+        if (salvo.codigo) setCodigo((p) => p ?? salvo.codigo!);
+      }
+    } catch {
+      /* rascunho corrompido é descartado em silêncio */
+    }
+    setRestaurado(true);
+  }, []);
+
+  useEffect(() => {
+    if (!restaurado) return;
+    try {
+      window.localStorage.setItem(OS_DRAFT_KEY, JSON.stringify({ form, aceitos, codigo }));
+    } catch {
+      /* storage cheio ou bloqueado: o formulário segue funcionando */
+    }
+  }, [restaurado, form, aceitos, codigo]);
 
   useEffect(() => {
     const unsubscribe = subscribeGeo(() => {
@@ -133,17 +176,6 @@ const OrdemDeServico = () => {
     }
   };
 
-  const consultar = () => {
-    const alvo = normalizeOsNumero(consulta);
-    if (!isValidOsNumero(alvo)) {
-      setResultado({ estado: "invalido" });
-      return;
-    }
-    const found = findOsRecord(alvo);
-    setResultado(
-      found ? { estado: "ok", protocolo: found.protocolo, criadoEm: found.criadoEm } : { estado: "nao-encontrado" },
-    );
-  };
 
   return (
     <div className="min-h-screen bg-background">
@@ -333,53 +365,14 @@ const OrdemDeServico = () => {
 
           {/* ── CONSULTAR ─────────────────────────────────────── */}
           <TabsContent value="consultar" className="mt-8 space-y-5">
-            <div className="grid gap-2">
-              <Label htmlFor="os-consulta">Código único da O.S</Label>
-              <div className="flex flex-wrap gap-3">
-                <Input
-                  id="os-consulta"
-                  value={consulta}
-                  onChange={(e) => setConsulta(e.target.value)}
-                  placeholder="OS-OTI-20260825-1234"
-                  className="max-w-xs"
-                />
-                <Button onClick={consultar}>Consultar</Button>
-              </div>
-              <p className="text-sm text-muted-foreground">
-                O código aparece no resumo gerado na abertura da OS.
-              </p>
-            </div>
-
-            {resultado?.estado === "invalido" ? (
-              <p className="rounded-lg border border-border bg-card p-4 text-sm text-foreground/80" role="status">
-                Código fora do formato esperado (OS-OTI-AAAAMMDD-0000). Confira e tente de novo.
-              </p>
-            ) : null}
-            {resultado?.estado === "nao-encontrado" ? (
-              <p className="rounded-lg border border-border bg-card p-4 text-sm text-foreground/80" role="status">
-                Não encontramos esse código neste navegador. A consulta completa fica em{" "}
-                <Link to="/status-da-ordem-de-servico" className="underline">
-                  status da ordem de serviço
-                </Link>
-                , onde também é possível consultar pelo celular do cadastro.
-              </p>
-            ) : null}
-            {resultado?.estado === "ok" ? (
-              <div className="rounded-xl border border-border bg-card p-5" data-testid="os-consulta-ok">
-                <p className="font-heading text-lg font-semibold text-foreground">
-                  OS {resultado.protocolo} localizada
-                </p>
-                <p className="mt-1 text-sm text-muted-foreground">
-                  Aberta em {new Date(resultado.criadoEm).toLocaleString("pt-BR")}.
-                </p>
-                <Link
-                  to="/status-da-ordem-de-servico"
-                  className="mt-4 inline-flex text-sm font-medium text-accent underline"
-                >
-                  Ver linha do tempo completa
-                </Link>
-              </div>
-            ) : null}
+            <ConsultaOsPorCodigo />
+            <p className="text-sm text-muted-foreground">
+              Também é possível consultar pelo celular do cadastro em{" "}
+              <Link to="/status-da-ordem-de-servico" className="underline">
+                status da ordem de serviço
+              </Link>
+              .
+            </p>
           </TabsContent>
         </Tabs>
       </main>

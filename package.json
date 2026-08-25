@@ -25,7 +25,7 @@
     "check:policy-jsonld": "node scripts/check-policy-jsonld.mjs",
     "check:missing-exports": "node scripts/check-missing-exports.mjs",
     "check:telemetry-transparency": "node scripts/check-telemetry-transparency.mjs",
-    "prebuild": "node scripts/generate-build-version.mjs && node scripts/generate-sitemaps.mjs && node scripts/generate-robots.mjs && node scripts/generate-llms.mjs && node scripts/audit-seo-metadata.mjs && node scripts/check-national-authority-map.mjs",
+    "prebuild": "node scripts/generate-build-version.mjs && node scripts/generate-sitemaps.mjs && node scripts/generate-robots.mjs && node scripts/generate-llms.mjs && node scripts/audit-seo-metadata.mjs && node scripts/check-national-authority-map.mjs && node scripts/check-image-variants.mjs",
     "build": "vite build",
     "build:dev": "vite build --mode development",
     "check:seo": "bun scripts/check-seo-basics.ts index.html",
@@ -317,7 +317,10 @@
     "report:post-deploy-indexacao": "node scripts/report-post-deploy-indexacao.mjs",
     "report:post-deploy-indexacao:baseline": "node scripts/report-post-deploy-indexacao.mjs --baseline",
     "report:post-deploy-indexacao:strict": "node scripts/report-post-deploy-indexacao.mjs --strict",
-    "test:og-cards": "playwright test e2e/og-twitter-cards.spec.ts"
+    "test:og-cards": "playwright test e2e/og-twitter-cards.spec.ts",
+    "images:variants": "node scripts/optimize-photos.mjs src/assets --out src/assets",
+    "check:image-variants": "node scripts/check-image-variants.mjs",
+    "report:external-authority": "node scripts/report-external-authority.mjs"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.2",

@@ -2,6 +2,7 @@ import { useEffect, useMemo, useState } from "react";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { exportarCsv, exportarJson, exportarPdf } from "@/lib/exportarRelatorio";
+import { AutoridadeExternaCard } from "@/components/admin/AutoridadeExternaCard";
 
 /**
  * PAINEL DE INDEXAÇÃO POR URL — Google (GSC) · Bing · IndexNow.
@@ -628,6 +629,9 @@ const AdminIndexacao = () => {
                 </section>
               );
             })}
+          </div>
+          <div className="mt-6">
+            <AutoridadeExternaCard />
           </div>
         </>
 
