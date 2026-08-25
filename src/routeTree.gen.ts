@@ -83,6 +83,7 @@ import { Route as ValorizacaoDoTrabalhoTecnicoRouteImport } from './routes/valor
 import { Route as AdminAuditoriaAcessosRouteImport } from './routes/admin_.auditoria-acessos'
 import { Route as AdminAuditoriaLocalRouteImport } from './routes/admin_.auditoria-local'
 import { Route as AdminAuditoriaOsRouteImport } from './routes/admin_.auditoria-os'
+import { Route as AdminBairrosRouteImport } from './routes/admin_.bairros'
 import { Route as AdminCasosRouteImport } from './routes/admin_.casos'
 import { Route as AdminConversaoRouteImport } from './routes/admin_.conversao'
 import { Route as AdminDashboardRouteImport } from './routes/admin_.dashboard'
@@ -851,6 +852,11 @@ const AdminAuditoriaLocalRoute = AdminAuditoriaLocalRouteImport.update({
 const AdminAuditoriaOsRoute = AdminAuditoriaOsRouteImport.update({
   id: '/admin_/auditoria-os',
   path: '/admin/auditoria-os',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AdminBairrosRoute = AdminBairrosRouteImport.update({
+  id: '/admin_/bairros',
+  path: '/admin/bairros',
   getParentRoute: () => rootRouteImport,
 } as any)
 const AdminCasosRoute = AdminCasosRouteImport.update({
@@ -2979,6 +2985,7 @@ export interface FileRoutesByFullPath {
   '/admin/auditoria-acessos': typeof AdminAuditoriaAcessosRoute
   '/admin/auditoria-local': typeof AdminAuditoriaLocalRoute
   '/admin/auditoria-os': typeof AdminAuditoriaOsRoute
+  '/admin/bairros': typeof AdminBairrosRoute
   '/admin/casos': typeof AdminCasosRoute
   '/admin/conversao': typeof AdminConversaoRoute
   '/admin/dashboard': typeof AdminDashboardRoute
@@ -3436,6 +3443,7 @@ export interface FileRoutesByTo {
   '/admin/auditoria-acessos': typeof AdminAuditoriaAcessosRoute
   '/admin/auditoria-local': typeof AdminAuditoriaLocalRoute
   '/admin/auditoria-os': typeof AdminAuditoriaOsRoute
+  '/admin/bairros': typeof AdminBairrosRoute
   '/admin/casos': typeof AdminCasosRoute
   '/admin/conversao': typeof AdminConversaoRoute
   '/admin/dashboard': typeof AdminDashboardRoute
@@ -3894,6 +3902,7 @@ export interface FileRoutesById {
   '/admin_/auditoria-acessos': typeof AdminAuditoriaAcessosRoute
   '/admin_/auditoria-local': typeof AdminAuditoriaLocalRoute
   '/admin_/auditoria-os': typeof AdminAuditoriaOsRoute
+  '/admin_/bairros': typeof AdminBairrosRoute
   '/admin_/casos': typeof AdminCasosRoute
   '/admin_/conversao': typeof AdminConversaoRoute
   '/admin_/dashboard': typeof AdminDashboardRoute
@@ -4353,6 +4362,7 @@ export interface FileRouteTypes {
     | '/admin/auditoria-acessos'
     | '/admin/auditoria-local'
     | '/admin/auditoria-os'
+    | '/admin/bairros'
     | '/admin/casos'
     | '/admin/conversao'
     | '/admin/dashboard'
@@ -4810,6 +4820,7 @@ export interface FileRouteTypes {
     | '/admin/auditoria-acessos'
     | '/admin/auditoria-local'
     | '/admin/auditoria-os'
+    | '/admin/bairros'
     | '/admin/casos'
     | '/admin/conversao'
     | '/admin/dashboard'
@@ -5267,6 +5278,7 @@ export interface FileRouteTypes {
     | '/admin_/auditoria-acessos'
     | '/admin_/auditoria-local'
     | '/admin_/auditoria-os'
+    | '/admin_/bairros'
     | '/admin_/casos'
     | '/admin_/conversao'
     | '/admin_/dashboard'
@@ -5725,6 +5737,7 @@ export interface RootRouteChildren {
   AdminAuditoriaAcessosRoute: typeof AdminAuditoriaAcessosRoute
   AdminAuditoriaLocalRoute: typeof AdminAuditoriaLocalRoute
   AdminAuditoriaOsRoute: typeof AdminAuditoriaOsRoute
+  AdminBairrosRoute: typeof AdminBairrosRoute
   AdminCasosRoute: typeof AdminCasosRoute
   AdminConversaoRoute: typeof AdminConversaoRoute
   AdminDashboardRoute: typeof AdminDashboardRoute
@@ -6626,6 +6639,13 @@ declare module '@tanstack/react-router' {
       path: '/admin/auditoria-os'
       fullPath: '/admin/auditoria-os'
       preLoaderRoute: typeof AdminAuditoriaOsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/admin_/bairros': {
+      id: '/admin_/bairros'
+      path: '/admin/bairros'
+      fullPath: '/admin/bairros'
+      preLoaderRoute: typeof AdminBairrosRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/admin_/casos': {
@@ -9376,6 +9396,7 @@ const rootRouteChildren: RootRouteChildren = {
   AdminAuditoriaAcessosRoute: AdminAuditoriaAcessosRoute,
   AdminAuditoriaLocalRoute: AdminAuditoriaLocalRoute,
   AdminAuditoriaOsRoute: AdminAuditoriaOsRoute,
+  AdminBairrosRoute: AdminBairrosRoute,
   AdminCasosRoute: AdminCasosRoute,
   AdminConversaoRoute: AdminConversaoRoute,
   AdminDashboardRoute: AdminDashboardRoute,
