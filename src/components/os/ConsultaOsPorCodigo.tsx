@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useServerFn } from "@tanstack/react-start";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -34,18 +34,29 @@ export const ConsultaOsPorCodigo = ({ autoFocus = false }: { autoFocus?: boolean
   const [codigo, setCodigo] = useState("");
   const [carregando, setCarregando] = useState(false);
   const [resultado, setResultado] = useState<Resultado | null>(null);
+  // Sequência de requisições: respostas atrasadas de buscas antigas não podem
+  // sobrescrever o resultado da busca mais recente.
+  const requisicaoRef = useRef(0);
+  const resultadoRef = useRef<HTMLDivElement | null>(null);
 
   const buscar = async () => {
     const alvo = normalizeOsNumero(codigo);
+    const meu = ++requisicaoRef.current;
+    const aplicar = (r: Resultado) => {
+      if (requisicaoRef.current !== meu) return false;
+      setResultado(r);
+      return true;
+    };
+
     if (!isValidOsNumero(alvo)) {
-      setResultado({ tipo: "formato" });
+      aplicar({ tipo: "formato" });
       return;
     }
     setCarregando(true);
     try {
       const r = await consultar({ data: { protocolo: alvo } });
       if (r.encontrada) {
-        setResultado({
+        aplicar({
           tipo: "ok",
           origem: "servidor",
           protocolo: r.os.protocolo,
@@ -59,12 +70,12 @@ export const ConsultaOsPorCodigo = ({ autoFocus = false }: { autoFocus?: boolean
         return;
       }
       if (r.motivo === "indisponivel") {
-        setResultado({ tipo: "indisponivel" });
+        aplicar({ tipo: "indisponivel" });
         return;
       }
       // Fallback: OS aberta neste navegador e ainda não registrada na operação.
       const local = findOsRecord(alvo);
-      setResultado(
+      aplicar(
         local
           ? {
               tipo: "ok",
@@ -78,11 +89,17 @@ export const ConsultaOsPorCodigo = ({ autoFocus = false }: { autoFocus?: boolean
           : { tipo: "nao-encontrada" },
       );
     } catch {
-      setResultado({ tipo: "indisponivel" });
+      aplicar({ tipo: "indisponivel" });
     } finally {
-      setCarregando(false);
+      if (requisicaoRef.current === meu) setCarregando(false);
     }
   };
+
+  // Leitores de tela e teclado precisam ir direto ao resultado da consulta.
+  useEffect(() => {
+    if (resultado) resultadoRef.current?.focus();
+  }, [resultado]);
+
 
   return (
     <div className="space-y-5" data-testid="consulta-os-codigo">
@@ -109,6 +126,12 @@ export const ConsultaOsPorCodigo = ({ autoFocus = false }: { autoFocus?: boolean
         </p>
       </div>
 
+      <div
+        ref={resultadoRef}
+        tabIndex={-1}
+        aria-live="polite"
+        className="space-y-5 outline-none"
+      >
       {resultado?.tipo === "formato" ? (
         <p className="rounded-lg border border-border bg-card p-4 text-sm" role="status">
           Código fora do formato esperado (OS-OTI-AAAAMMDD-0000). Confira e tente de novo.
@@ -206,6 +229,7 @@ export const ConsultaOsPorCodigo = ({ autoFocus = false }: { autoFocus?: boolean
           ) : null}
         </article>
       ) : null}
+      </div>
     </div>
   );
 };

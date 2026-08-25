@@ -37,6 +37,7 @@ import {
 } from "@/lib/triagePreset";
 import { appendUtmsToUrl, captureUtmsFromUrl } from "@/lib/utmCapture";
 import { geoSuggestion } from "@/lib/geoContext";
+import { bairroPorPath } from "@/lib/bairrosMalha";
 import { getSessionId, recordSubmission } from "@/lib/funnelSubmission";
 import { TriageErrorBoundary } from "@/components/funnel/TriageErrorBoundary";
 import { TriageField } from "@/components/funnel/TriageField";
@@ -422,7 +423,10 @@ export const WhatsAppFunnel = () => {
     setOpen(true);
     // Sugestão de bairro/cidade detectada (IP ou localização precisa).
     // Só preenche quando o campo está vazio — o usuário pode editar.
-    const sugestao = geoSuggestion();
+    // A rota é a fonte mais confiável de bairro: se o usuário já está numa
+    // página de bairro, não faz sentido pedir que ele digite o mesmo dado.
+    const daRota = bairroPorPath(window.location.pathname)?.nome;
+    const sugestao = daRota ?? geoSuggestion();
     if (sugestao) {
       setAnswers((prev) =>
         prev.fields.bairro ? prev : { ...prev, fields: { ...prev.fields, bairro: sugestao } },

@@ -101,6 +101,7 @@ const AdminVitals = lazyPagina(() => import("./pages/admin/AdminVitals"));
 const AdminAuditoriaLocal = lazyPagina(() => import("./pages/admin/AdminAuditoriaLocal"));
 const AdminGatesLocais = lazyPagina(() => import("./pages/admin/AdminGatesLocais"));
 const AdminInventarioBairros = lazyPagina(() => import("./pages/admin/AdminInventarioBairros"));
+const AdminBairros = lazyPagina(() => import("./pages/admin/AdminBairros"));
 const AdminIndexacao = lazyPagina(() => import("./pages/admin/AdminIndexacao"));
 const AdminUiPerformance = lazyPagina(() => import("./pages/admin/AdminUiPerformance"));
 const AdminDashboard = lazyPagina(() => import("./pages/admin/AdminDashboard"));
@@ -1003,6 +1004,7 @@ export const legacyRouteElements: Record<string, () => React.ReactElement> = {
   "/admin/auditoria-local": () => <AdminAuditoriaLocal />,
   "/admin/gates-locais": () => <AdminGatesLocais />,
   "/admin/inventario-bairros": () => <AdminInventarioBairros />,
+  "/admin/bairros": () => <AdminBairros />,
   "/admin/indexacao": () => <AdminIndexacao />,
   "/admin/ui-performance": () => <AdminUiPerformance />,
   "/admin/dashboard": () => <AdminDashboard />,

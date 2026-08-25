@@ -12,6 +12,7 @@ import {
   SERVICOS_MALHA,
   bairrosIrmaos,
   descricaoBairro,
+  mensagemBairro,
   regioesVizinhas,
   tituloBairro,
   type BairroMalha,
@@ -52,9 +53,7 @@ export const BairroMalhaLayout = ({ bairro }: { bairro: BairroMalha }) => {
   const path = bairro.path;
   const titulo = tituloBairro(bairro);
   const descricao = descricaoBairro(bairro);
-  const waHref = whatsappLink(
-    `Olá! Preciso de assistência técnica de informática no ${bairro.nome} (${bairro.cidade}).`,
-  );
+  const waHref = whatsappLink(mensagemBairro(bairro));
 
   useEffect(() => {
     trackPageView(path, titulo);
@@ -106,6 +105,34 @@ export const BairroMalhaLayout = ({ bairro }: { bairro: BairroMalha }) => {
     SLOT_PRIORITY.page,
   );
 
+  // Service com areaServed exato — um único nó por página (slot deduplica).
+  useJsonLdSlot(
+    SCHEMA_SLOTS.service,
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "@id": `${absoluteUrl(path)}#service`,
+      name: `Assistência técnica de informática no ${bairro.nome}`,
+      serviceType: "Assistência técnica de informática",
+      description: descricao,
+      url: absoluteUrl(path),
+      provider: { "@id": `${absoluteUrl(path)}#localbusiness` },
+      areaServed: {
+        "@type": "Place",
+        name: `${bairro.nome}, ${bairro.cidade} - ${siteConfig.region}`,
+      },
+      hasOfferCatalog: {
+        "@type": "OfferCatalog",
+        name: `Serviços atendidos no ${bairro.nome}`,
+        itemListElement: SERVICOS_MALHA.map((s) => ({
+          "@type": "Offer",
+          itemOffered: { "@type": "Service", name: s.label, url: absoluteUrl(s.to) },
+        })),
+      },
+    },
+    SLOT_PRIORITY.page,
+  );
+
   return (
     <div className="min-h-screen bg-background">
       <PageSEO
@@ -116,6 +143,7 @@ export const BairroMalhaLayout = ({ bairro }: { bairro: BairroMalha }) => {
         breadcrumbs={[
           { name: "Início", path: "/" },
           { name: "Bairros atendidos", path: "/bairros" },
+          { name: bairro.regiaoNome, path: `/bairros#${bairro.regiao}` },
           { name: bairro.nome, path },
         ]}
       />
@@ -123,8 +151,13 @@ export const BairroMalhaLayout = ({ bairro }: { bairro: BairroMalha }) => {
       <FastHeader />
       <main className="pt-[var(--site-header-height)]">
         <Breadcrumbs
-          items={[{ label: "Bairros atendidos", href: "/bairros" }, { label: bairro.nome }]}
+          items={[
+            { label: "Bairros atendidos", href: "/bairros" },
+            { label: bairro.regiaoNome, href: `/bairros#${bairro.regiao}` },
+            { label: bairro.nome },
+          ]}
         />
+
 
         <section className="border-b border-border/60 bg-secondary/40">
           <div className="container mx-auto py-12 md:py-16">
@@ -141,7 +174,7 @@ export const BairroMalhaLayout = ({ bairro }: { bairro: BairroMalha }) => {
               caminho mais provável, a modalidade de atendimento e o custo antes de qualquer
               serviço.
             </p>
-            <div className="mt-8">
+            <div className="mt-8 flex flex-wrap gap-3">
               <a
                 href={waHref}
                 target="_blank"
@@ -156,6 +189,16 @@ export const BairroMalhaLayout = ({ bairro }: { bairro: BairroMalha }) => {
                 <MessageCircle className="h-5 w-5" />
                 Falar com um técnico agora
               </a>
+              {/* A triagem abre já com o bairro da rota preenchido. */}
+              <a
+                href="#triagem"
+                data-cta-location="bairro_malha_urgente"
+                data-neighborhood={bairro.nome}
+                className="inline-flex min-h-14 items-center justify-center gap-2 rounded-lg border border-accent/40 bg-card px-7 text-base font-bold text-foreground motion-surface hover:border-accent"
+                onClick={() => trackCTAClick("whatsapp", "bairro_malha_urgente")}
+              >
+                Preciso de ajuda urgente
+              </a>
             </div>
           </div>
         </section>
@@ -166,14 +209,30 @@ export const BairroMalhaLayout = ({ bairro }: { bairro: BairroMalha }) => {
           </h2>
           <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {SERVICOS_MALHA.map((servico) => (
-              <Link
+              <div
                 key={servico.slug}
-                to={servico.to}
                 className="group rounded-xl border border-border/60 bg-card p-5 motion-surface hover:border-accent/50"
               >
-                <span className="text-base font-semibold text-foreground">{servico.label}</span>
-                <ArrowRight className="mt-3 h-4 w-4 text-accent transition-transform group-hover:translate-x-1" />
-              </Link>
+                <Link to={servico.to} className="block">
+                  <span className="text-base font-semibold text-foreground">{servico.label}</span>
+                  <ArrowRight className="mt-3 h-4 w-4 text-accent transition-transform group-hover:translate-x-1" />
+                </Link>
+                {/* Deep link com serviço + bairro já no texto da mensagem. */}
+                <a
+                  href={whatsappLink(mensagemBairro(bairro, servico.label))}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  data-cta-location={`bairro_malha_servico_${servico.slug}`}
+                  data-wa-source="whatsapp_cta"
+                  data-city={bairro.cidade}
+                  data-neighborhood={bairro.nome}
+                  className="mt-3 inline-flex items-center gap-1.5 text-sm font-semibold text-accent underline-offset-4 hover:underline"
+                  onClick={() => trackCTAClick("whatsapp", `bairro_malha_servico_${servico.slug}`)}
+                >
+                  <MessageCircle className="h-4 w-4" />
+                  Pedir no WhatsApp
+                </a>
+              </div>
             ))}
           </div>
         </section>

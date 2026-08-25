@@ -164,13 +164,14 @@ const VALORES = [
   "Tempo de teste necessário para confirmar a causa",
 ];
 
-const REGIOES = [
-  "Centro e região central expandida",
-  "Batel, Água Verde e Portão",
-  "Boa Vista, Santa Felicidade e Ecoville",
-  "Cajuru, Boqueirão e Uberaba",
-  "CIC e região sul",
-  "Bairros ligados à região metropolitana atendida",
+/** Toda menção a região é navegável — nada de texto morto na malha local. */
+const REGIOES: { label: string; to: string }[] = [
+  { label: "Centro e região central expandida", to: "/bairros/centro" },
+  { label: "Batel, Água Verde e Portão", to: "/bairros/batel" },
+  { label: "Boa Vista, Santa Felicidade e Ecoville", to: "/bairros/santa-felicidade" },
+  { label: "Cajuru, Boqueirão e Uberaba", to: "/bairros/cajuru" },
+  { label: "CIC e região sul", to: "/bairros/cic" },
+  { label: "Bairros ligados à região metropolitana atendida", to: "/bairros" },
 ];
 
 const PERFIS = [
@@ -541,9 +542,11 @@ const TecnicoInformaticaCuritiba = () => {
             </h2>
             <ul className="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
               {REGIOES.map((r) => (
-                <li key={r} className="flex gap-3 text-sm text-muted-foreground">
+                <li key={r.to} className="flex gap-3 text-sm text-muted-foreground">
                   <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-accent" />
-                  <span>{r}</span>
+                  <Link to={r.to} className="underline-offset-4 hover:text-accent hover:underline">
+                    {r.label}
+                  </Link>
                 </li>
               ))}
             </ul>
