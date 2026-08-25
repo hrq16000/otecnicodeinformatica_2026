@@ -380,6 +380,7 @@ import { Route as ServicosBackupParaEmpresasRouteImport } from './routes/servico
 import { Route as ServicosComputadorLentoRouteImport } from './routes/servicos_.computador-lento'
 import { Route as ServicosComputadorNaoLigaRouteImport } from './routes/servicos_.computador-nao-liga'
 import { Route as ServicosConsertoCelularRouteImport } from './routes/servicos_.conserto-celular'
+import { Route as ServicosConsertoImpressora3dRouteImport } from './routes/servicos_.conserto-impressora-3d'
 import { Route as ServicosConsertoMonitorRouteImport } from './routes/servicos_.conserto-monitor'
 import { Route as ServicosConsertoPlacaRouteImport } from './routes/servicos_.conserto-placa'
 import { Route as ServicosConsertoTvRouteImport } from './routes/servicos_.conserto-tv'
@@ -2420,6 +2421,12 @@ const ServicosConsertoCelularRoute = ServicosConsertoCelularRouteImport.update({
   path: '/servicos/conserto-celular',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ServicosConsertoImpressora3dRoute =
+  ServicosConsertoImpressora3dRouteImport.update({
+    id: '/servicos_/conserto-impressora-3d',
+    path: '/servicos/conserto-impressora-3d',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const ServicosConsertoMonitorRoute = ServicosConsertoMonitorRouteImport.update({
   id: '/servicos_/conserto-monitor',
   path: '/servicos/conserto-monitor',
@@ -3282,6 +3289,7 @@ export interface FileRoutesByFullPath {
   '/servicos/computador-lento': typeof ServicosComputadorLentoRoute
   '/servicos/computador-nao-liga': typeof ServicosComputadorNaoLigaRoute
   '/servicos/conserto-celular': typeof ServicosConsertoCelularRoute
+  '/servicos/conserto-impressora-3d': typeof ServicosConsertoImpressora3dRoute
   '/servicos/conserto-monitor': typeof ServicosConsertoMonitorRoute
   '/servicos/conserto-placa': typeof ServicosConsertoPlacaRoute
   '/servicos/conserto-tv': typeof ServicosConsertoTvRoute
@@ -3740,6 +3748,7 @@ export interface FileRoutesByTo {
   '/servicos/computador-lento': typeof ServicosComputadorLentoRoute
   '/servicos/computador-nao-liga': typeof ServicosComputadorNaoLigaRoute
   '/servicos/conserto-celular': typeof ServicosConsertoCelularRoute
+  '/servicos/conserto-impressora-3d': typeof ServicosConsertoImpressora3dRoute
   '/servicos/conserto-monitor': typeof ServicosConsertoMonitorRoute
   '/servicos/conserto-placa': typeof ServicosConsertoPlacaRoute
   '/servicos/conserto-tv': typeof ServicosConsertoTvRoute
@@ -4199,6 +4208,7 @@ export interface FileRoutesById {
   '/servicos_/computador-lento': typeof ServicosComputadorLentoRoute
   '/servicos_/computador-nao-liga': typeof ServicosComputadorNaoLigaRoute
   '/servicos_/conserto-celular': typeof ServicosConsertoCelularRoute
+  '/servicos_/conserto-impressora-3d': typeof ServicosConsertoImpressora3dRoute
   '/servicos_/conserto-monitor': typeof ServicosConsertoMonitorRoute
   '/servicos_/conserto-placa': typeof ServicosConsertoPlacaRoute
   '/servicos_/conserto-tv': typeof ServicosConsertoTvRoute
@@ -4659,6 +4669,7 @@ export interface FileRouteTypes {
     | '/servicos/computador-lento'
     | '/servicos/computador-nao-liga'
     | '/servicos/conserto-celular'
+    | '/servicos/conserto-impressora-3d'
     | '/servicos/conserto-monitor'
     | '/servicos/conserto-placa'
     | '/servicos/conserto-tv'
@@ -5117,6 +5128,7 @@ export interface FileRouteTypes {
     | '/servicos/computador-lento'
     | '/servicos/computador-nao-liga'
     | '/servicos/conserto-celular'
+    | '/servicos/conserto-impressora-3d'
     | '/servicos/conserto-monitor'
     | '/servicos/conserto-placa'
     | '/servicos/conserto-tv'
@@ -5575,6 +5587,7 @@ export interface FileRouteTypes {
     | '/servicos_/computador-lento'
     | '/servicos_/computador-nao-liga'
     | '/servicos_/conserto-celular'
+    | '/servicos_/conserto-impressora-3d'
     | '/servicos_/conserto-monitor'
     | '/servicos_/conserto-placa'
     | '/servicos_/conserto-tv'
@@ -6034,6 +6047,7 @@ export interface RootRouteChildren {
   ServicosComputadorLentoRoute: typeof ServicosComputadorLentoRoute
   ServicosComputadorNaoLigaRoute: typeof ServicosComputadorNaoLigaRoute
   ServicosConsertoCelularRoute: typeof ServicosConsertoCelularRoute
+  ServicosConsertoImpressora3dRoute: typeof ServicosConsertoImpressora3dRoute
   ServicosConsertoMonitorRoute: typeof ServicosConsertoMonitorRoute
   ServicosConsertoPlacaRoute: typeof ServicosConsertoPlacaRoute
   ServicosConsertoTvRoute: typeof ServicosConsertoTvRoute
@@ -8720,6 +8734,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ServicosConsertoCelularRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/servicos_/conserto-impressora-3d': {
+      id: '/servicos_/conserto-impressora-3d'
+      path: '/servicos/conserto-impressora-3d'
+      fullPath: '/servicos/conserto-impressora-3d'
+      preLoaderRoute: typeof ServicosConsertoImpressora3dRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/servicos_/conserto-monitor': {
       id: '/servicos_/conserto-monitor'
       path: '/servicos/conserto-monitor'
@@ -9696,6 +9717,7 @@ const rootRouteChildren: RootRouteChildren = {
   ServicosComputadorLentoRoute: ServicosComputadorLentoRoute,
   ServicosComputadorNaoLigaRoute: ServicosComputadorNaoLigaRoute,
   ServicosConsertoCelularRoute: ServicosConsertoCelularRoute,
+  ServicosConsertoImpressora3dRoute: ServicosConsertoImpressora3dRoute,
   ServicosConsertoMonitorRoute: ServicosConsertoMonitorRoute,
   ServicosConsertoPlacaRoute: ServicosConsertoPlacaRoute,
   ServicosConsertoTvRoute: ServicosConsertoTvRoute,

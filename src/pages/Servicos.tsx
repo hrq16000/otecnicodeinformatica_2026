@@ -77,7 +77,10 @@ const CARDS = [
   { slug: "suporte-tecnico-empresarial", icon: Building2, blurb: "Estações, rede, impressoras e backups, pontual ou recorrente sob consulta." },
   { slug: "conserto-tv", icon: Tv, blurb: "TV LED, LCD e Smart TV: avaliação em bancada com coleta e entrega, sem visita." },
   { slug: "conserto-placa", icon: CircuitBoard, blurb: "Placa de notebook, PC e TV reparada em nível de componente quando é viável." },
+  { slug: "conserto-monitor", icon: Monitor, blurb: "Monitor sem imagem, piscando ou que não liga: fonte, backlight e placa em bancada." },
+  { slug: "conserto-impressora-3d", icon: Wrench, blurb: "FDM e resina: extrusão, eixos, placa e calibração, com impressão de teste antes da devolução." },
 ] as const;
+
 
 const TITLE = "Serviços de Informática em Curitiba | PC e Notebook";
 const DESCRIPTION =

@@ -11,7 +11,10 @@
  * pagamento e o canal seguem exclusivamente pelo atendimento no WhatsApp.
  */
 
-export type ModalidadeOsId = "visita" | "laboratorio";
+import { VALOR_IMPRESSORA_3D_MINIMO_LABEL } from "@/lib/precosConfig";
+
+export type ModalidadeOsId = "visita" | "laboratorio" | "impressora-3d";
+
 
 export interface ModalidadeOs {
   id: ModalidadeOsId;
@@ -55,7 +58,37 @@ export const MODALIDADE_LABORATORIO: ModalidadeOs = {
   ],
 };
 
-export const MODALIDADES_OS: ModalidadeOs[] = [MODALIDADE_VISITA, MODALIDADE_LABORATORIO];
+/**
+ * C) Impressora 3D — bancada com mínimo próprio.
+ * O serviço só termina depois de ciclos completos de impressão de teste, o que
+ * consome muito mais tempo de bancada que um reparo eletrônico comum.
+ */
+export const MODALIDADE_IMPRESSORA_3D: ModalidadeOs = {
+  id: "impressora-3d",
+  titulo: "Impressora 3D — coleta, bancada e calibração",
+  valorLabel: `Mínimo pré-aprovado ${VALOR_IMPRESSORA_3D_MINIMO_LABEL}`,
+  valorNota: "com garantia de 90 dias sobre a mão de obra do ponto reparado",
+  prazo:
+    "Coleta e entrega conforme fila; o prazo final só é confirmado depois do diagnóstico, porque cada ciclo de impressão de teste leva horas.",
+  escopo:
+    "Impressoras 3D FDM e de resina: extrusão, hotend, eixos, correias, sensores, fonte, placa controladora, conjunto óptico e calibração, com impressão de teste antes da devolução.",
+  itens: [
+    "Mínimo específico de impressora 3D, informado antes da coleta e nunca depois.",
+    "Diagnóstico, calibração e ciclos de impressão de teste inclusos no mínimo.",
+    "Peças, bicos, hotends, correias, filamento e resina não estão inclusos.",
+    "Não realizamos modelagem 3D nem assumimos falha de projeto do arquivo enviado.",
+    "Reparo executado somente após aprovação do orçamento final por escrito.",
+  ],
+};
+
+export const MODALIDADES_OS: ModalidadeOs[] = [
+  MODALIDADE_VISITA,
+  MODALIDADE_LABORATORIO,
+  MODALIDADE_IMPRESSORA_3D,
+];
+
+/** Impressoras 3D têm rota e mínimo próprios — avaliada antes de tudo. */
+const EQUIPAMENTO_IMPRESSORA_3D = /(impressora ?3 ?d|impress[ãa]o ?3 ?d|\b3d ?printer\b|ender|prusa|creality|bambu ?lab|anycubic|elegoo|artillery|voron|sovol|flashforge)/i;
 
 /** Equipamentos que sempre vão para bancada. */
 const EQUIPAMENTOS_LABORATORIO =
@@ -68,6 +101,7 @@ const SINTOMAS_LABORATORIO =
 /** Serviços tipicamente resolvidos em até 30 minutos no local. */
 const SINTOMAS_VISITA =
   /(upgrade|mem[óo]ria|ssd|hd\b|formata|instal|atualiza|configur|montagem|montar|rede|wi-?fi|roteador|internet|impressora|backup|lentid|lento|v[íi]rus|senha|windows)/i;
+
 
 export interface EntradaModalidade {
   equipamento: string;
@@ -94,7 +128,19 @@ export function decidirModalidadeOs(entrada: EntradaModalidade): DecisaoModalida
   const problema = entrada.problema.trim();
   const texto = `${equipamento} ${problema}`;
 
+  // Impressora 3D tem rota e mínimo próprios — precede inclusive a regra de
+  // "não liga", porque o encaminhamento é o mesmo e o valor mínimo é outro.
+  if (EQUIPAMENTO_IMPRESSORA_3D.test(texto)) {
+    return {
+      modalidade: MODALIDADE_IMPRESSORA_3D,
+      motivo:
+        "Impressora 3D é atendida em bancada, com calibração e ciclos de impressão de teste — por isso o valor mínimo é próprio e maior.",
+      travada: true,
+    };
+  }
+
   if (!entrada.liga) {
+
     return {
       modalidade: MODALIDADE_LABORATORIO,
       motivo: "O equipamento não está ligando ou não funciona — o diagnóstico precisa de bancada.",

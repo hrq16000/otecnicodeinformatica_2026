@@ -19,6 +19,8 @@ import {
   QUANDO_VISITA_COMPATIVEL,
   REGRA_CANCELAMENTO,
   VALOR_COLETA_MINIMO_LABEL,
+  VALOR_IMPRESSORA_3D_MINIMO_LABEL,
+
   VALOR_PACOTE_2H_LABEL,
   VALOR_VISITA_LABEL,
 } from "@/lib/precosConfig";
@@ -76,6 +78,21 @@ const COLETA: Pick<
   tempoEstimado:
     "Prazo confirmado por escrito depois do diagnóstico em bancada — sem promessa de prazo antes disso.",
 };
+
+/** Impressoras 3D: mínimo próprio, acima da coleta comum. */
+const COLETA_3D: Pick<
+  FichaComercial,
+  "rota" | "valorInicialLabel" | "valorInicialNota" | "tempoEstimado"
+> = {
+  rota: "coleta",
+  valorInicialLabel: `Mínimo pré-aprovado ${VALOR_IMPRESSORA_3D_MINIMO_LABEL}`,
+  valorInicialNota:
+    "Mínimo específico para impressora 3D, com coleta, entrega, calibração e ciclos de impressão de teste inclusos. Peças, bicos, correias e resina não inclusos.",
+  tempoEstimado:
+    "Prazo confirmado por escrito depois do diagnóstico em bancada — impressão de teste exige ciclos completos, então não há promessa de prazo antes disso.",
+};
+
+
 
 function ficha(
   base: typeof VISITA | typeof COLETA,
@@ -263,6 +280,25 @@ export const FICHAS_COMERCIAIS: Record<string, FichaComercial> = {
       "Garantia de 90 dias cobre a mão de obra do ponto reparado.",
     ],
   }),
+  "conserto-impressora-3d": ficha(COLETA_3D, {
+    incluso: [
+      "Diagnóstico em bancada da mecânica, da eletrônica e do conjunto de extrusão.",
+      "Calibração de mesa, eixos e fluxo, com registro dos valores aplicados.",
+      "Ciclos de impressão de teste antes da devolução.",
+      "Coleta e entrega dentro da área atendida.",
+    ],
+    naoIncluso: [
+      "Peças, bicos, hotends, correias, rolamentos e placas de reposição.",
+      "Filamento, resina e materiais de consumo.",
+      "Licenças de fatiador e assinaturas de nuvem do fabricante.",
+    ],
+    limitacoes: [
+      "Não desenvolvemos modelagem 3D nem assumimos falha de projeto do arquivo enviado.",
+      "Não prometemos qualidade de acabamento específica: a peça de teste demonstra o estado da máquina após o ajuste.",
+      "Garantia de 90 dias cobre a mão de obra do ponto reparado, não a máquina inteira.",
+    ],
+  }),
+
 };
 
 export function fichaComercialDoServico(slug: string): FichaComercial | undefined {

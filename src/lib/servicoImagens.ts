@@ -109,7 +109,14 @@ const MAPA: Record<string, ServicoImagens> = {
     caption: "Placa em análise para reparo em nível de componente.",
     secondaryCaption: "Ampliação óptica usada na microsoldagem.",
   },
+  "conserto-impressora-3d": {
+    primary: "bancadaTecnica",
+    secondary: "ferramentas",
+    caption: "Impressora 3D aberta em bancada para inspeção de eixos e extrusão.",
+    secondaryCaption: "Ferramental usado no ajuste mecânico e na calibração da máquina.",
+  },
 };
+
 
 export function imagensParaServico(trackingKey: string): ServicoImagens | undefined {
   return MAPA[trackingKey];

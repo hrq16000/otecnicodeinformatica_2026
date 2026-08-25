@@ -70,6 +70,8 @@ export const SERVICOS = [
   "/servicos/conserto-tv",
   "/servicos/conserto-placa",
   "/servicos/conserto-monitor",
+  "/servicos/conserto-impressora-3d",
+
 ].map((path) => ({ path, changefreq: "weekly", priority: "0.85" }));
 
 /** Hubs de cidade reais — derivados da política local (Rodada 5). */
