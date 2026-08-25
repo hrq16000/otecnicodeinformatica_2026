@@ -38,6 +38,7 @@ import {
   FontesPrimarias,
 } from "@/components/BlocosEnriquecimento";
 import { ENRIQUECIMENTO_SERVICOS } from "@/lib/enriquecimentoServicos";
+import { BlocosB2b4d } from "@/components/b2b/BlocosB2b4d";
 import { ENRIQUECIMENTO_4A, mesclarEnriquecimento } from "@/lib/enriquecimentoAtp4a";
 
 
@@ -523,6 +524,9 @@ export const ServicoLandingLayout = ({ data }: { data: ServicoLandingData }) => 
           </div>
         </section>
       )}
+
+      {/* Rodada 4D — bloco B2B autoral (fail-closed por rota) */}
+      <BlocosB2b4d path={`/servicos/${data.path}`} />
 
       <PoliticaAtendimentoBloco />
 
