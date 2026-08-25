@@ -170,6 +170,84 @@ export const CONTENT_INTENT_MAP: ContentNode[] = [
     justificativa:
       "Pilar nacional LEARNING/COURSE. Oferece roteiro prático para aprender informática do zero, mantendo separação entre conteúdo educacional nacional e comercial local.",
   },
+  // ── ONDA 9C — cluster "computador entra direto na BIOS".
+  {
+    url: "/blog/computador-entra-direto-na-bios",
+    intent: "diagnostic",
+    topic: "computador para na tela de configuração da BIOS",
+    queries: [
+      "computador entra direto na bios",
+      "pc volta para bios",
+      "pc abre a bios e nao inicia windows",
+    ],
+    serviceParent: "/servicos/manutencao-de-computador",
+    problemParent: "/diagnostico-tecnico",
+    bridgesTo: [
+      "/blog/erro-no-bootable-device-como-resolver",
+      "/blog/troquei-o-ssd-e-o-pc-so-abre-a-bios",
+      "/diagnostico-tecnico",
+      "/servicos/manutencao-de-computador",
+    ],
+    doNotDuplicate: [
+      "/blog/erro-no-bootable-device-como-resolver",
+      "/blog/troquei-o-ssd-e-o-pc-so-abre-a-bios",
+      "/blog/notebook-nao-liga-o-que-fazer",
+    ],
+    novaNestaRodada: true,
+    justificativa:
+      "Pilar diagnóstico do cluster: cobre a triagem entre as quatro causas (detecção, modo de boot, CMOS, Fast Boot) e distribui para os satélites. Não repete o reparo por comando nem o cenário de disco novo.",
+  },
+  {
+    url: "/blog/erro-no-bootable-device-como-resolver",
+    intent: "informational",
+    topic: "reparo do carregador de inicialização do Windows",
+    queries: [
+      "no bootable device",
+      "boot device not found como resolver",
+      "bootrec rebuildbcd",
+    ],
+    serviceParent: "/diagnostico-tecnico",
+    problemParent: "/blog/computador-entra-direto-na-bios",
+    bridgesTo: [
+      "/blog/computador-entra-direto-na-bios",
+      "/blog/como-instalar-windows-11-do-zero",
+      "/blog/como-clonar-hd-para-ssd",
+      "/diagnostico-tecnico",
+    ],
+    doNotDuplicate: [
+      "/blog/computador-entra-direto-na-bios",
+      "/blog/como-instalar-windows-11-do-zero",
+    ],
+    novaNestaRodada: true,
+    justificativa:
+      "Satélite de execução: só trata o cenário em que o disco é detectado e o carregador falhou. A triagem de causas fica no pilar; a criação da mídia fica no guia de instalação.",
+  },
+  {
+    url: "/blog/troquei-o-ssd-e-o-pc-so-abre-a-bios",
+    intent: "informational",
+    topic: "disco novo instalado sem sistema operacional",
+    queries: [
+      "troquei o ssd e o pc nao liga o windows",
+      "ssd novo so abre a bios",
+      "configurar m.2 na bios",
+    ],
+    serviceParent: "/servicos/upgrade-ssd-ram",
+    problemParent: "/blog/computador-entra-direto-na-bios",
+    bridgesTo: [
+      "/blog/computador-entra-direto-na-bios",
+      "/blog/como-fazer-upgrade-ssd-nvme",
+      "/blog/como-instalar-windows-11-do-zero",
+      "/servicos/upgrade-ssd-ram",
+    ],
+    doNotDuplicate: [
+      "/blog/computador-entra-direto-na-bios",
+      "/blog/erro-no-bootable-device-como-resolver",
+      "/blog/como-fazer-upgrade-ssd-nvme",
+    ],
+    novaNestaRodada: true,
+    justificativa:
+      "Satélite de cenário pós-upgrade: explica por que disco novo para no Setup e como configurar o slot M.2. Compatibilidade de compra permanece no guia de NVMe; reparo de carregador permanece no satélite de boot.",
+  },
 ];
 
 /** Nó do mapa por URL canônica (sem barra final). */
