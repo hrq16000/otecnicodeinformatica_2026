@@ -355,6 +355,7 @@ import { Route as ConsertoTvLocalRouteImport } from './routes/conserto-tv_.$loca
 import { Route as ConsertoVideogameLocalRouteImport } from './routes/conserto-videogame_.$local'
 import { Route as DebugTelemetriaRouteImport } from './routes/debug_.telemetria'
 import { Route as EquipamentosSlugRouteImport } from './routes/equipamentos_.$slug'
+import { Route as LandingConsertoComputadorSaoJoseDosPinhaisRouteImport } from './routes/landing.conserto-computador-sao-jose-dos-pinhais'
 import { Route as MarcasSlugRouteImport } from './routes/marcas_.$slug'
 import { Route as ProblemasSlugRouteImport } from './routes/problemas_.$slug'
 import { Route as ProblemasArquivosApagadosRouteImport } from './routes/problemas_.arquivos-apagados'
@@ -2281,6 +2282,12 @@ const EquipamentosSlugRoute = EquipamentosSlugRouteImport.update({
   path: '/equipamentos/$slug',
   getParentRoute: () => rootRouteImport,
 } as any)
+const LandingConsertoComputadorSaoJoseDosPinhaisRoute =
+  LandingConsertoComputadorSaoJoseDosPinhaisRouteImport.update({
+    id: '/landing/conserto-computador-sao-jose-dos-pinhais',
+    path: '/landing/conserto-computador-sao-jose-dos-pinhais',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const MarcasSlugRoute = MarcasSlugRouteImport.update({
   id: '/marcas_/$slug',
   path: '/marcas/$slug',
@@ -3264,6 +3271,7 @@ export interface FileRoutesByFullPath {
   '/conserto-videogame/$local': typeof ConsertoVideogameLocalRoute
   '/debug/telemetria': typeof DebugTelemetriaRoute
   '/equipamentos/$slug': typeof EquipamentosSlugRoute
+  '/landing/conserto-computador-sao-jose-dos-pinhais': typeof LandingConsertoComputadorSaoJoseDosPinhaisRoute
   '/marcas/$slug': typeof MarcasSlugRoute
   '/problemas/$slug': typeof ProblemasSlugRoute
   '/problemas/arquivos-apagados': typeof ProblemasArquivosApagadosRoute
@@ -3723,6 +3731,7 @@ export interface FileRoutesByTo {
   '/conserto-videogame/$local': typeof ConsertoVideogameLocalRoute
   '/debug/telemetria': typeof DebugTelemetriaRoute
   '/equipamentos/$slug': typeof EquipamentosSlugRoute
+  '/landing/conserto-computador-sao-jose-dos-pinhais': typeof LandingConsertoComputadorSaoJoseDosPinhaisRoute
   '/marcas/$slug': typeof MarcasSlugRoute
   '/problemas/$slug': typeof ProblemasSlugRoute
   '/problemas/arquivos-apagados': typeof ProblemasArquivosApagadosRoute
@@ -4183,6 +4192,7 @@ export interface FileRoutesById {
   '/conserto-videogame_/$local': typeof ConsertoVideogameLocalRoute
   '/debug_/telemetria': typeof DebugTelemetriaRoute
   '/equipamentos_/$slug': typeof EquipamentosSlugRoute
+  '/landing/conserto-computador-sao-jose-dos-pinhais': typeof LandingConsertoComputadorSaoJoseDosPinhaisRoute
   '/marcas_/$slug': typeof MarcasSlugRoute
   '/problemas_/$slug': typeof ProblemasSlugRoute
   '/problemas_/arquivos-apagados': typeof ProblemasArquivosApagadosRoute
@@ -4644,6 +4654,7 @@ export interface FileRouteTypes {
     | '/conserto-videogame/$local'
     | '/debug/telemetria'
     | '/equipamentos/$slug'
+    | '/landing/conserto-computador-sao-jose-dos-pinhais'
     | '/marcas/$slug'
     | '/problemas/$slug'
     | '/problemas/arquivos-apagados'
@@ -5103,6 +5114,7 @@ export interface FileRouteTypes {
     | '/conserto-videogame/$local'
     | '/debug/telemetria'
     | '/equipamentos/$slug'
+    | '/landing/conserto-computador-sao-jose-dos-pinhais'
     | '/marcas/$slug'
     | '/problemas/$slug'
     | '/problemas/arquivos-apagados'
@@ -5562,6 +5574,7 @@ export interface FileRouteTypes {
     | '/conserto-videogame_/$local'
     | '/debug_/telemetria'
     | '/equipamentos_/$slug'
+    | '/landing/conserto-computador-sao-jose-dos-pinhais'
     | '/marcas_/$slug'
     | '/problemas_/$slug'
     | '/problemas_/arquivos-apagados'
@@ -6022,6 +6035,7 @@ export interface RootRouteChildren {
   ConsertoVideogameLocalRoute: typeof ConsertoVideogameLocalRoute
   DebugTelemetriaRoute: typeof DebugTelemetriaRoute
   EquipamentosSlugRoute: typeof EquipamentosSlugRoute
+  LandingConsertoComputadorSaoJoseDosPinhaisRoute: typeof LandingConsertoComputadorSaoJoseDosPinhaisRoute
   MarcasSlugRoute: typeof MarcasSlugRoute
   ProblemasSlugRoute: typeof ProblemasSlugRoute
   ProblemasArquivosApagadosRoute: typeof ProblemasArquivosApagadosRoute
@@ -8559,6 +8573,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof EquipamentosSlugRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/landing/conserto-computador-sao-jose-dos-pinhais': {
+      id: '/landing/conserto-computador-sao-jose-dos-pinhais'
+      path: '/landing/conserto-computador-sao-jose-dos-pinhais'
+      fullPath: '/landing/conserto-computador-sao-jose-dos-pinhais'
+      preLoaderRoute: typeof LandingConsertoComputadorSaoJoseDosPinhaisRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/marcas_/$slug': {
       id: '/marcas_/$slug'
       path: '/marcas/$slug'
@@ -9690,6 +9711,8 @@ const rootRouteChildren: RootRouteChildren = {
   ConsertoVideogameLocalRoute: ConsertoVideogameLocalRoute,
   DebugTelemetriaRoute: DebugTelemetriaRoute,
   EquipamentosSlugRoute: EquipamentosSlugRoute,
+  LandingConsertoComputadorSaoJoseDosPinhaisRoute:
+    LandingConsertoComputadorSaoJoseDosPinhaisRoute,
   MarcasSlugRoute: MarcasSlugRoute,
   ProblemasSlugRoute: ProblemasSlugRoute,
   ProblemasArquivosApagadosRoute: ProblemasArquivosApagadosRoute,
