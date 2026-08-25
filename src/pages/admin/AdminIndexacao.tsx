@@ -147,6 +147,9 @@ const fmt = (v: unknown) =>
   v === null || v === undefined || v === "" ? "—" : typeof v === "string" ? v : String(v);
 
 const dataCurta = (iso?: string | null) => (iso ? new Date(iso).toLocaleString("pt-BR") : "—");
+/** id estável de dossiê por rota (usado como âncora do PDF por URL). */
+const slugId = (path: string) => path.replace(/[^a-z0-9]+/gi, "-").replace(/^-|-$/g, "") || "home";
+
 
 const AdminIndexacao = () => {
   const [dados, setDados] = useState<StatusIndexacao | null>(null);
