@@ -304,7 +304,11 @@
     "ssr-diff:baseline": "node scripts/diff-ssr-snapshot.mjs --update",
     "monitor:rich-results": "node scripts/monitor-rich-results.mjs",
     "monitor:rich-results:alert": "node scripts/monitor-rich-results.mjs --alert",
-    "check:jsonld-ssr": "node scripts/check-jsonld-ssr-determinismo.mjs"
+    "check:jsonld-ssr": "node scripts/check-jsonld-ssr-determinismo.mjs",
+    "dev:local": "vite --mode development --port 8080",
+    "functions:serve": "supabase functions serve --config supabase/config.local.toml --no-verify-jwt",
+    "check:contact-leak": "node scripts/check-contact-leak.mjs",
+    "report:vitals-b2b": "node scripts/report-vitals-b2b.mjs"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.2",
