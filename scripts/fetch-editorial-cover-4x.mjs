@@ -138,6 +138,23 @@ const CURADORIA = [
     slug: "troquei-o-ssd-e-o-pc-so-abre-a-bios",
     commons: "File:Samsung 960 EVO in M.2 slot 02.jpg",
   },
+  // Onda 10C — clusters de lentidão extrema e tela azul (satélites).
+  {
+    slug: "limpar-arquivos-temporarios-windows",
+    commons: "File:Hitachi 2.5\" HDD and ADATA XM13 20120402.jpg",
+  },
+  {
+    slug: "memoria-ram-insuficiente-sintomas",
+    commons: "File:DDR 4 SO-DIMM RAM slot PNr\u00b00837.jpg",
+  },
+  {
+    slug: "codigos-de-erro-tela-azul-windows",
+    commons: "File:Blue Screen Of Death at Urheilupuisto metro station.jpg",
+  },
+  {
+    slug: "testar-memoria-ram-memtest86",
+    commons: "File:Memtest86+ 2019-08-09.jpg",
+  },
 ];
 
 /** Metadados + URL de uma imagem do Wikimedia Commons (licença real, sem IA). */
