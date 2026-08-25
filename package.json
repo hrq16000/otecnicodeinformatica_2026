@@ -308,6 +308,9 @@
     "dev:local": "vite --mode development --port 8080",
     "functions:serve": "supabase functions serve --config supabase/config.local.toml --no-verify-jwt",
     "check:contact-leak": "node scripts/check-contact-leak.mjs",
+    "check:index-headers": "node scripts/check-index-headers.mjs dist",
+    "check:phone-visibility": "node scripts/check-phone-visibility.mjs dist",
+    "report:authority-coverage": "node scripts/report-authority-coverage.mjs",
     "report:vitals-b2b": "node scripts/report-vitals-b2b.mjs"
   },
   "dependencies": {
