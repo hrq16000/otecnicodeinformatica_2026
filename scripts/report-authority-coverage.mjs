@@ -45,7 +45,9 @@ function ownersDe({ arquivo, registro }) {
   const resto = src.slice(inicio + 10);
   const fim = resto.search(/\n(?:export )?const [A-Z]/);
   const bloco = fim === -1 ? resto : resto.slice(0, fim);
-  const chaves = [...bloco.matchAll(/(?:^|[\s,{[])"(\/[a-z0-9\-/]*)"\s*(?::|,|\]|\n)/gm)].map((m) => m[1]);
+  // Só chaves/itens de primeiro nível do registro (indentação de 2 espaços).
+  // Sem isso, links internos (`to: "/..."`) entram como owners falsos.
+  const chaves = [...bloco.matchAll(/^ {2}"(\/[a-z0-9\-/]*)"\s*[:,]/gm)].map((m) => m[1]);
   return [...new Set(chaves)];
 }
 
