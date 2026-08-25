@@ -1,0 +1,35 @@
+{
+  "//": "Budgets de performance por rota de serviço (Rodada 4F). LCP e CLS são medidos direto; INP não existe em laboratório, então o proxy bloqueante é o Total Blocking Time.",
+  "ci": {
+    "collect": {
+      "url": [
+        "http://localhost:4173/servicos/formatacao",
+        "http://localhost:4173/servicos/upgrade-ssd",
+        "http://localhost:4173/servicos/recuperacao-de-dados",
+        "http://localhost:4173/servicos/redes-e-wifi",
+        "http://localhost:4173/servicos/manutencao-preventiva-empresas",
+        "http://localhost:4173/servicos/backup-para-empresas",
+        "http://localhost:4173/servicos/suporte-tecnico-empresarial",
+        "http://localhost:4173/atendimento-remoto"
+      ],
+      "startServerCommand": "bun run preview -- --port 4173",
+      "startServerReadyPattern": "Local:",
+      "numberOfRuns": 3,
+      "settings": {
+        "preset": "desktop",
+        "chromeFlags": "--no-sandbox --disable-dev-shm-usage"
+      }
+    },
+    "assert": {
+      "assertions": {
+        "largest-contentful-paint": ["error", { "maxNumericValue": 2500 }],
+        "cumulative-layout-shift": ["error", { "maxNumericValue": 0.1 }],
+        "total-blocking-time": ["error", { "maxNumericValue": 200 }],
+        "first-contentful-paint": ["warn", { "maxNumericValue": 1800 }],
+        "categories:performance": ["warn", { "minScore": 0.85 }],
+        "categories:seo": ["error", { "minScore": 0.95 }]
+      }
+    },
+    "upload": { "target": "filesystem", "outputDir": "reports/lhci-servicos" }
+  }
+}
