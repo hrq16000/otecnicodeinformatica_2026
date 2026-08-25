@@ -334,7 +334,7 @@ export const ConsertoComputadorSJP = () => {
   useJsonLdSlot(SCHEMA_SLOTS.service, serviceSchema, SLOT_PRIORITY.page);
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="landing-dark min-h-screen bg-background">
       <PageSEO
         title={`Conserto de Computador e Notebook em ${CITY} | ${BRAND_NAME}`}
         description={`Reparo físico de computadores e notebooks em ${CITY}, ${UF}. Troca de peças, upgrade SSD, limpeza interna e diagnóstico em bancada.`}
