@@ -139,6 +139,19 @@ const ConsertoCelularLocalHub = lazyPagina(() => import("./pages/hubs/CategoryLo
 const EmpresaDeTiCuritiba = lazyPagina(() => import("./pages/EmpresaDeTiCuritiba"));
 
 // Bairros Curitiba
+const CentroCivicoMalha = lazyPagina(() => import("./pages/bairros/CentroCivico"));
+const AltoDaXvMalha = lazyPagina(() => import("./pages/bairros/AltoDaXv"));
+const PradoVelhoMalha = lazyPagina(() => import("./pages/bairros/PradoVelho"));
+const CampinaDoSiqueiraMalha = lazyPagina(() => import("./pages/bairros/CampinaDoSiqueira"));
+const BairroAltoMalha = lazyPagina(() => import("./pages/bairros/BairroAlto"));
+const AtubaMalha = lazyPagina(() => import("./pages/bairros/Atuba"));
+const GuabirotubaMalha = lazyPagina(() => import("./pages/bairros/Guabirotuba"));
+const FannyMalha = lazyPagina(() => import("./pages/bairros/Fanny"));
+const LindoiaMalha = lazyPagina(() => import("./pages/bairros/Lindoia"));
+const SantaQuiteriaMalha = lazyPagina(() => import("./pages/bairros/SantaQuiteria"));
+const VistaAlegreMalha = lazyPagina(() => import("./pages/bairros/VistaAlegre"));
+const ButiatuvinhaMalha = lazyPagina(() => import("./pages/bairros/Butiatuvinha"));
+const BairrosHub = lazyPagina(() => import("./pages/BairrosHub"));
 const Centro = lazyPagina(() => import("./pages/bairros/Centro"));
 const Batel = lazyPagina(() => import("./pages/bairros/Batel"));
 const Portao = lazyPagina(() => import("./pages/bairros/Portao"));
@@ -615,6 +628,19 @@ export const legacyRouteElements: Record<string, () => React.ReactElement> = {
   "/atendimento": () => <Atendimento />,
   "/empresas": () => <Empresas />,
   "/valorizacao-do-trabalho-tecnico": () => <ValorizacaoTrabalhoTecnico />,
+  "/bairros/centro-civico": () => <CentroCivicoMalha />,
+  "/bairros/alto-da-xv": () => <AltoDaXvMalha />,
+  "/bairros/prado-velho": () => <PradoVelhoMalha />,
+  "/bairros/campina-do-siqueira": () => <CampinaDoSiqueiraMalha />,
+  "/bairros/bairro-alto": () => <BairroAltoMalha />,
+  "/bairros/atuba": () => <AtubaMalha />,
+  "/bairros/guabirotuba": () => <GuabirotubaMalha />,
+  "/bairros/fanny": () => <FannyMalha />,
+  "/bairros/lindoia": () => <LindoiaMalha />,
+  "/bairros/santa-quiteria": () => <SantaQuiteriaMalha />,
+  "/bairros/vista-alegre": () => <VistaAlegreMalha />,
+  "/bairros/butiatuvinha": () => <ButiatuvinhaMalha />,
+  "/bairros": () => <BairrosHub />,
   "/bairros/centro": () => <Centro />,
   "/bairros/batel": () => <Batel />,
   "/bairros/portao": () => <Portao />,
