@@ -447,7 +447,7 @@ const ColetaFormulario = () => {
                         <Input value={form.cpf} onChange={(e) => updateField("cpf", e.target.value)} placeholder="000.000.000-00" />
                       </div>
                     </div>
-                    <div className="grid md:grid-cols-2 gap-4">
+                    <div className="grid gap-4">
                       <div>
                         <Label>Telefone / WhatsApp *</Label>
                         <Input value={form.phone} onChange={(e) => updateField("phone", e.target.value)} placeholder="(41) 99999-9999" />
