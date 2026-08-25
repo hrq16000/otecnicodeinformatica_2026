@@ -67,7 +67,6 @@ interface FormData {
   fullName: string;
   cpf: string;
   phone: string;
-  email: string;
 
   // Address
   cep: string;
@@ -99,7 +98,6 @@ const initialFormData: FormData = {
   fullName: "",
   cpf: "",
   phone: "",
-  email: "",
   cep: "",
   street: "",
   number: "",
@@ -217,7 +215,6 @@ const ColetaFormulario = () => {
       `• Nome: ${form.fullName}`,
       form.cpf ? `• CPF: ${form.cpf}` : "",
       `• Telefone: ${form.phone}`,
-      form.email ? `• E-mail: ${form.email}` : "",
       ``,
       `📍 *ENDEREÇO PARA COLETA*`,
       `• ${form.street}, nº ${form.number}${form.complement ? ` - ${form.complement}` : ""}`,
@@ -454,10 +451,6 @@ const ColetaFormulario = () => {
                       <div>
                         <Label>Telefone / WhatsApp *</Label>
                         <Input value={form.phone} onChange={(e) => updateField("phone", e.target.value)} placeholder="(41) 99999-9999" />
-                      </div>
-                      <div>
-                        <Label>E-mail (opcional)</Label>
-                        <Input type="email" value={form.email} onChange={(e) => updateField("email", e.target.value)} placeholder="seu@email.com" />
                       </div>
                     </div>
                   </div>
