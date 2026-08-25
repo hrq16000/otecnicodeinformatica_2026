@@ -406,10 +406,23 @@ function fieldComplete(a: TriageAnswers, f: Field): boolean {
   return true;
 }
 
+/** Mensagem acionável: diz o que falta, não só que falta algo. */
+export function fieldErrorMessage(a: TriageAnswers, f: Field): string {
+  const v = fieldValue(a, f).trim();
+  if (!v) {
+    const escolher = f.type === "single" || f.type === "chips" || f.type === "multi";
+    return escolher ? `Escolha uma opção em "${f.label}".` : `Preencha "${f.label}" para continuar.`;
+  }
+  if (f.minLength && v.length < f.minLength) {
+    return `Detalhe um pouco mais "${f.label}": faltam ${f.minLength - v.length} caractere(s).`;
+  }
+  return `Revise "${f.label}".`;
+}
+
 function validateFields(a: TriageAnswers, fields: Field[]): ValidationResult | null {
   for (const f of fields) {
     if (!fieldComplete(a, f)) {
-      return { ok: false, firstIncomplete: f.id, reason: `Preencha: ${f.label}` };
+      return { ok: false, firstIncomplete: f.id, reason: fieldErrorMessage(a, f) };
     }
   }
   return null;
