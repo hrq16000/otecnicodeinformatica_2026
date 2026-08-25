@@ -1,0 +1,32 @@
+{
+  "_doc": "Dívida herdada: imagens publicadas antes do gate check:ai-images com assinatura de IA (C2PA GPT-4o) ou tamanho de placeholder. Substituir por fotografia real licenciada. Qualquer arquivo novo fora desta lista bloqueia o build.",
+  "registradoEm": "2026-08-25",
+  "legado": [
+    "public/blog/backup-como-proteger-seus-arquivos.jpg",
+    "public/blog/como-escolher-uma-workstation.jpg",
+    "public/blog/como-melhorar-sinal-wifi-em-casa.jpg",
+    "public/blog/como-saber-se-pc-tem-virus-malware.jpg",
+    "public/blog/notebook-superaquecendo-o-que-fazer.jpg",
+    "public/blog/organizacao-de-ti-para-pequenos-escritorios.jpg",
+    "public/blog/quando-trocar-hd-por-ssd.jpg",
+    "public/lovable-uploads/1c69699b-770f-4ea3-bd50-34bb6823a3b5.png",
+    "public/lovable-uploads/22325e55-7640-4775-99b0-4d43b5cad21d.png",
+    "public/lovable-uploads/279c1746-6e5b-4d0e-93d4-976d837ecec0.png",
+    "public/lovable-uploads/53d9783d-317d-495e-86b6-22371a986744.png",
+    "public/lovable-uploads/727e8770-4368-4aa5-a5a5-e495f01d9124.png",
+    "public/lovable-uploads/7364f9af-20c4-4e14-8105-585235697ca1.png",
+    "public/lovable-uploads/77ec0b6a-9ce8-4e20-b893-7eff7ec03859.png",
+    "public/lovable-uploads/829c2c24-8525-4b99-8cad-42c8cfc83a91.png",
+    "public/lovable-uploads/97228481-0bbd-4d82-a9aa-bcc0212e1c7b.png",
+    "public/lovable-uploads/b2277aaf-f886-48c7-822a-6a5d1e266855.png",
+    "public/lovable-uploads/b702f033-fd78-4d1e-ae32-2ad60f672710.png",
+    "public/lovable-uploads/c858cf99-e05f-4d8f-a05a-c741ebfabfea.png",
+    "public/lovable-uploads/f6b6dc27-d68d-4f00-9c1f-c407ef986264.png",
+    "public/lovable-uploads/ff1b2738-e2a0-4b39-bdb7-47b8b71e33cb.png",
+    "src/assets/hero-jardim-botanico.jpg",
+    "src/assets/hero-opera-de-arame.jpg",
+    "src/assets/hero-oscar-niemeyer.jpg",
+    "src/assets/hero-parque-tangua.jpg",
+    "src/assets/logo.png"
+  ]
+}

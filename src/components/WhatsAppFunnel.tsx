@@ -133,6 +133,18 @@ function playErrorBeep() {
   }
 }
 
+/**
+ * Primeira etapa ainda incompleta para um conjunto de respostas.
+ * Usada na restauração (reload/deep link) para não jogar o usuário de volta
+ * à etapa 1 quando serviço, sintoma e localidade já estavam preenchidos.
+ */
+function primeiraEtapaIncompleta(a: TriageAnswers): number {
+  const total = getSteps(a).length;
+  let alvo = 0;
+  while (alvo < total - 1 && validateStep(alvo, a).ok) alvo += 1;
+  return alvo;
+}
+
 export const WhatsAppFunnel = () => {
   const [open, setOpen] = useState(false);
   const [step, setStep] = useState(0);
@@ -155,10 +167,23 @@ export const WhatsAppFunnel = () => {
   const openerRef = useRef<HTMLElement | null>(null);
   const sessionId = useMemo(() => getSessionId(), []);
 
+  // Espelho síncrono das respostas: o deep link abre o modal no mesmo tick da
+  // restauração, antes de qualquer re-render, e precisa da versão mais nova.
+  const answersRef = useRef<TriageAnswers>(EMPTY_ANSWERS);
+  useEffect(() => {
+    answersRef.current = answers;
+  }, [answers]);
+
   // Restaura estado persistido (com versionamento — descarta versões antigas).
+  // Além das respostas, devolve o usuário à primeira etapa ainda incompleta:
+  // reabrir sempre na etapa 1 fazia parecer que serviço, sintoma e localidade
+  // tinham sido perdidos no reload.
   useEffect(() => {
     const restored = loadPersisted(STORAGE_KEY);
-    if (restored) setAnswers(restored);
+    if (!restored) return;
+    answersRef.current = restored;
+    setAnswers(restored);
+    setStep(primeiraEtapaIncompleta(restored));
   }, []);
 
   const clearTimers = useCallback(() => {
@@ -393,7 +418,7 @@ export const WhatsAppFunnel = () => {
     setOriginLocation(loc);
     setPresetMessage(preset ?? null);
     setFallback(null);
-    setStep(0);
+    setStep(primeiraEtapaIncompleta(answersRef.current));
     setOpen(true);
     // Sugestão de bairro/cidade detectada (IP ou localização precisa).
     // Só preenche quando o campo está vazio — o usuário pode editar.
