@@ -231,6 +231,7 @@
     "check:real-images": "node scripts/check-real-images.mjs",
     "report:publish-status": "node scripts/report-publish-status.mjs",
     "report:problemas-vitals": "node scripts/report-problemas-vitals.mjs",
+    "report:vitals-4e": "node scripts/report-vitals-4e.mjs",
     "monitor:approved-indexing": "node scripts/monitor-approved-indexing.mjs",
     "sentry:sourcemaps": "node scripts/upload-sentry-sourcemaps.mjs dist",
     "check:schema-standards": "node scripts/check-schema-standards.mjs dist",

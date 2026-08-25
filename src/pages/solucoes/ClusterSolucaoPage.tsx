@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { BlocosRedes4e } from "@/components/redes/BlocosRedes4e";
 import { Link, useLocation, useParams } from "@/lib/router-compat";
 import { AlertTriangle, ArrowRight, CheckCircle2, MessageCircle, XCircle } from "lucide-react";
 import { PageSEO } from "@/components/PageSEO";
@@ -201,6 +202,8 @@ const ClusterSolucaoPage = () => {
         ) : null}
 
         <FontesPrimarias fontes={extra?.fontes} />
+
+        <BlocosRedes4e path={dados.path} />
 
         <section className="mt-12" aria-labelledby="faq">
           <h2 id="faq" className="mb-4 font-heading text-2xl font-bold text-foreground">

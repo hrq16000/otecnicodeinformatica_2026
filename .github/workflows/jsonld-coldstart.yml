@@ -26,3 +26,10 @@ jobs:
         env:
           N: "16"
         run: npm run check:jsonld-ssr
+
+      # Rodada 4E — vigilância contínua do fingerprint em PRODUÇÃO: se o
+      # conjunto de rich results de uma rota mudar sem deploy, isso indica
+      # perda de schema servido e o job falha.
+      - name: Monitorar rich results em produção
+        continue-on-error: false
+        run: npm run monitor:rich-results
