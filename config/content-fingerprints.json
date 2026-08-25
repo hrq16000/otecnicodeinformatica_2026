@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-08-25T01:11:47.036Z",
+  "geradoEm": "2026-08-25T03:17:16.136Z",
   "dist": "./dist",
   "rotas": {
     "/": {
@@ -8,134 +8,134 @@
       "origem": "bootstrap"
     },
     "/anuncie": {
-      "hash": "d3c358cafa41",
-      "lastmod": "2026-08-08",
-      "origem": "bootstrap"
+      "hash": "37b00296d530",
+      "lastmod": "2026-08-25",
+      "origem": "hash-change"
     },
     "/areas-atendidas": {
-      "hash": "0b00e9f7afe3",
-      "lastmod": "2026-08-08",
-      "origem": "bootstrap"
+      "hash": "19f53fae3005",
+      "lastmod": "2026-08-25",
+      "origem": "hash-change"
     },
     "/atendimento-domicilio": {
-      "hash": "b9c2793e37fc",
-      "lastmod": "2026-08-06",
-      "origem": "bootstrap"
+      "hash": "83a04d41edd9",
+      "lastmod": "2026-08-25",
+      "origem": "hash-change"
     },
     "/atendimento-remoto": {
-      "hash": "0fac581a50b4",
-      "lastmod": "2026-08-06",
-      "origem": "bootstrap"
+      "hash": "a54551d1975b",
+      "lastmod": "2026-08-25",
+      "origem": "hash-change"
     },
     "/bairros/afonso-pena": {
-      "hash": "d815744c353e",
-      "lastmod": null,
-      "origem": "bootstrap"
+      "hash": "3d96fca2a896",
+      "lastmod": "2026-08-25",
+      "origem": "hash-change"
     },
     "/bairros/agua-verde": {
-      "hash": "dddbf41fb105",
-      "lastmod": null,
-      "origem": "bootstrap"
+      "hash": "b29bfd7f94a4",
+      "lastmod": "2026-08-25",
+      "origem": "hash-change"
     },
     "/bairros/aviacao": {
-      "hash": "71b6e35d37d8",
-      "lastmod": null,
-      "origem": "bootstrap"
+      "hash": "08b95f47450f",
+      "lastmod": "2026-08-25",
+      "origem": "hash-change"
     },
     "/bairros/batel": {
-      "hash": "0da5aa411027",
-      "lastmod": null,
-      "origem": "bootstrap"
+      "hash": "520919934ac7",
+      "lastmod": "2026-08-25",
+      "origem": "hash-change"
     },
     "/bairros/bigorrilho": {
-      "hash": "2a2dcb202051",
-      "lastmod": null,
-      "origem": "bootstrap"
+      "hash": "bf6d0cfc2582",
+      "lastmod": "2026-08-25",
+      "origem": "hash-change"
     },
     "/bairros/boa-vista": {
-      "hash": "955f134a1af7",
-      "lastmod": null,
-      "origem": "bootstrap"
+      "hash": "76dc8258d854",
+      "lastmod": "2026-08-25",
+      "origem": "hash-change"
     },
     "/bairros/boqueirao": {
-      "hash": "6174bd75a881",
-      "lastmod": null,
-      "origem": "bootstrap"
+      "hash": "0d096a415dab",
+      "lastmod": "2026-08-25",
+      "origem": "hash-change"
     },
     "/bairros/cabral": {
-      "hash": "cd681271df90",
-      "lastmod": null,
-      "origem": "bootstrap"
+      "hash": "fd1e85e45c7e",
+      "lastmod": "2026-08-25",
+      "origem": "hash-change"
     },
     "/bairros/cajuru": {
-      "hash": "9b088d942cd4",
-      "lastmod": null,
-      "origem": "bootstrap"
+      "hash": "8de5b827fd88",
+      "lastmod": "2026-08-25",
+      "origem": "hash-change"
     },
     "/bairros/centro": {
-      "hash": "57483c1a0822",
-      "lastmod": null,
-      "origem": "bootstrap"
+      "hash": "6b758e9d9a2f",
+      "lastmod": "2026-08-25",
+      "origem": "hash-change"
     },
     "/bairros/cic": {
-      "hash": "148df5415646",
-      "lastmod": null,
-      "origem": "bootstrap"
+      "hash": "973ef374c954",
+      "lastmod": "2026-08-25",
+      "origem": "hash-change"
     },
     "/bairros/cidade-jardim-sjp": {
-      "hash": "ceddc47a87f8",
-      "lastmod": null,
-      "origem": "bootstrap"
+      "hash": "36afba3be81b",
+      "lastmod": "2026-08-25",
+      "origem": "hash-change"
     },
     "/bairros/costeira": {
-      "hash": "5f80b44994b4",
-      "lastmod": null,
-      "origem": "bootstrap"
+      "hash": "a64fe99cfa4a",
+      "lastmod": "2026-08-25",
+      "origem": "hash-change"
     },
     "/bairros/cruzeiro": {
-      "hash": "d77419110364",
-      "lastmod": null,
-      "origem": "bootstrap"
+      "hash": "f84152da26c6",
+      "lastmod": "2026-08-25",
+      "origem": "hash-change"
     },
     "/bairros/guatupe": {
-      "hash": "7ac444c1fecb",
-      "lastmod": null,
-      "origem": "bootstrap"
+      "hash": "d226ee7444bb",
+      "lastmod": "2026-08-25",
+      "origem": "hash-change"
     },
     "/bairros/ouro-fino-sjp": {
-      "hash": "0d9a57c6dead",
-      "lastmod": null,
-      "origem": "bootstrap"
+      "hash": "f2f2ad36bc00",
+      "lastmod": "2026-08-25",
+      "origem": "hash-change"
     },
     "/bairros/pinheirinho": {
-      "hash": "bfad9f4c17ee",
-      "lastmod": null,
-      "origem": "bootstrap"
+      "hash": "92d2e62a976c",
+      "lastmod": "2026-08-25",
+      "origem": "hash-change"
     },
     "/bairros/portao": {
-      "hash": "7fb3e20a5770",
-      "lastmod": null,
-      "origem": "bootstrap"
+      "hash": "6e13ebf7b713",
+      "lastmod": "2026-08-25",
+      "origem": "hash-change"
     },
     "/bairros/santa-felicidade": {
-      "hash": "a3fca980f162",
-      "lastmod": null,
-      "origem": "bootstrap"
+      "hash": "8c26ad59a708",
+      "lastmod": "2026-08-25",
+      "origem": "hash-change"
     },
     "/bairros/sitio-cercado": {
-      "hash": "7a75ab6bb4ec",
-      "lastmod": null,
-      "origem": "bootstrap"
+      "hash": "f26c8bb10501",
+      "lastmod": "2026-08-25",
+      "origem": "hash-change"
     },
     "/bairros/xaxim": {
-      "hash": "529dc02be972",
-      "lastmod": null,
-      "origem": "bootstrap"
+      "hash": "01784c7313b4",
+      "lastmod": "2026-08-25",
+      "origem": "hash-change"
     },
     "/blog": {
-      "hash": "deca0c2fa438",
-      "lastmod": null,
-      "origem": "bootstrap"
+      "hash": "bc0a4cef4e52",
+      "lastmod": "2026-08-25",
+      "origem": "hash-change"
     },
     "/blog/backup-como-proteger-seus-arquivos": {
       "hash": "090342fb7478",
@@ -313,112 +313,112 @@
       "origem": "bootstrap"
     },
     "/coleta-e-entrega": {
-      "hash": "5b9d61b112eb",
-      "lastmod": null,
-      "origem": "bootstrap"
+      "hash": "a83c3901b4b0",
+      "lastmod": "2026-08-25",
+      "origem": "hash-change"
     },
     "/como-funciona": {
-      "hash": "5e9af499715a",
-      "lastmod": "2026-08-06",
-      "origem": "bootstrap"
+      "hash": "c728c3d1637d",
+      "lastmod": "2026-08-25",
+      "origem": "hash-change"
     },
     "/contato": {
-      "hash": "4f726d332a65",
-      "lastmod": null,
-      "origem": "bootstrap"
+      "hash": "200c59e4bfc8",
+      "lastmod": "2026-08-25",
+      "origem": "hash-change"
     },
     "/diagnostico-tecnico": {
-      "hash": "49c115e5e287",
-      "lastmod": null,
-      "origem": "bootstrap"
+      "hash": "5ce6d42a2f2d",
+      "lastmod": "2026-08-25",
+      "origem": "hash-change"
     },
     "/empresa-de-ti-curitiba": {
-      "hash": "203d7a77ec92",
-      "lastmod": null,
-      "origem": "bootstrap"
+      "hash": "aff1b35115fc",
+      "lastmod": "2026-08-25",
+      "origem": "hash-change"
     },
     "/equipamentos": {
-      "hash": "b28c344a027c",
-      "lastmod": "2026-08-12",
-      "origem": "bootstrap"
+      "hash": "41b3f16d50be",
+      "lastmod": "2026-08-25",
+      "origem": "hash-change"
     },
     "/equipamentos-atendidos": {
-      "hash": "1dc1aead8a62",
-      "lastmod": "2026-08-06",
-      "origem": "bootstrap"
+      "hash": "2142448d9dba",
+      "lastmod": "2026-08-25",
+      "origem": "hash-change"
     },
     "/equipamentos/desktop": {
-      "hash": "cfe89988eeba",
-      "lastmod": "2026-08-12",
-      "origem": "bootstrap"
+      "hash": "e9f0edb546db",
+      "lastmod": "2026-08-25",
+      "origem": "hash-change"
     },
     "/equipamentos/impressora": {
-      "hash": "072bc51c0e1c",
-      "lastmod": "2026-08-12",
-      "origem": "bootstrap"
+      "hash": "9e72ba9b77b7",
+      "lastmod": "2026-08-25",
+      "origem": "hash-change"
     },
     "/equipamentos/notebook": {
-      "hash": "2e8f1841dff3",
-      "lastmod": "2026-08-12",
-      "origem": "bootstrap"
+      "hash": "e1803cbdde0c",
+      "lastmod": "2026-08-25",
+      "origem": "hash-change"
     },
     "/equipamentos/roteador": {
-      "hash": "2b37d3d476ce",
-      "lastmod": "2026-08-12",
-      "origem": "bootstrap"
+      "hash": "9308022b0000",
+      "lastmod": "2026-08-25",
+      "origem": "hash-change"
     },
     "/faq": {
-      "hash": "d7cb9b99facd",
-      "lastmod": null,
-      "origem": "bootstrap"
+      "hash": "126345537ca6",
+      "lastmod": "2026-08-25",
+      "origem": "hash-change"
     },
     "/guia-tecnico-informatica": {
-      "hash": "51b0985754de",
-      "lastmod": "2026-08-09",
-      "origem": "bootstrap"
+      "hash": "28389e04ad54",
+      "lastmod": "2026-08-25",
+      "origem": "hash-change"
     },
     "/politica-de-pecas-do-cliente": {
-      "hash": "d697fdb5b0ef",
-      "lastmod": null,
-      "origem": "bootstrap"
+      "hash": "d8c51c0b524c",
+      "lastmod": "2026-08-25",
+      "origem": "hash-change"
     },
     "/precos-e-politicas": {
-      "hash": "c8e9a594e391",
-      "lastmod": "2026-08-06",
-      "origem": "bootstrap"
+      "hash": "64a7cdd66871",
+      "lastmod": "2026-08-25",
+      "origem": "hash-change"
     },
     "/problemas": {
-      "hash": "acf048f6ff72",
-      "lastmod": "2026-08-12",
-      "origem": "bootstrap"
+      "hash": "6bca8628ac3d",
+      "lastmod": "2026-08-25",
+      "origem": "hash-change"
     },
     "/problemas/arquivos-apagados": {
-      "hash": "40118bde3d5a",
-      "lastmod": "2026-08-12",
-      "origem": "bootstrap"
+      "hash": "33ded01c9cc4",
+      "lastmod": "2026-08-25",
+      "origem": "hash-change"
     },
     "/problemas/cheiro-de-queimado": {
-      "hash": "1607ae659777",
-      "lastmod": "2026-08-13",
-      "origem": "bootstrap"
+      "hash": "b5ac766d7047",
+      "lastmod": "2026-08-25",
+      "origem": "hash-change"
     },
     "/problemas/computador-desliga-sozinho": {
-      "hash": "6e0ebba64560",
-      "lastmod": "2026-08-12",
-      "origem": "bootstrap"
+      "hash": "e0a6a6636601",
+      "lastmod": "2026-08-25",
+      "origem": "hash-change"
     },
     "/problemas/computador-esquentando": {
-      "hash": "0fbaa7402d6c",
+      "hash": "7cd96be17aca",
       "lastmod": "2026-08-25",
       "origem": "hash-change"
     },
     "/problemas/computador-lento": {
-      "hash": "ac51e0ca90bd",
+      "hash": "29168accabb9",
       "lastmod": "2026-08-25",
       "origem": "hash-change"
     },
     "/problemas/computador-nao-da-imagem": {
-      "hash": "8431e670fa87",
+      "hash": "3e44e533d862",
       "lastmod": "2026-08-25",
       "origem": "hash-change"
     },
@@ -443,7 +443,7 @@
       "origem": "bootstrap"
     },
     "/problemas/notebook-nao-liga": {
-      "hash": "819911ee2d78",
+      "hash": "3909c85e3d3d",
       "lastmod": "2026-08-25",
       "origem": "hash-change"
     },
@@ -458,9 +458,9 @@
       "origem": "bootstrap"
     },
     "/problemas/wifi-instavel": {
-      "hash": "5ba107e24a14",
-      "lastmod": "2026-08-12",
-      "origem": "bootstrap"
+      "hash": "e7f7b8d54396",
+      "lastmod": "2026-08-25",
+      "origem": "hash-change"
     },
     "/problemas/windows-nao-inicia": {
       "hash": "dd2d7cf79671",
@@ -468,104 +468,104 @@
       "origem": "bootstrap"
     },
     "/quando-nao-compensa": {
-      "hash": "53e9a8d94916",
-      "lastmod": null,
-      "origem": "bootstrap"
+      "hash": "997886104f81",
+      "lastmod": "2026-08-25",
+      "origem": "hash-change"
     },
     "/seguranca-dos-dados": {
-      "hash": "1b2bf2ca9e22",
-      "lastmod": "2026-08-06",
-      "origem": "bootstrap"
+      "hash": "4e818d4dfbf9",
+      "lastmod": "2026-08-25",
+      "origem": "hash-change"
     },
     "/servicos": {
-      "hash": "b446a8ee14ea",
-      "lastmod": null,
-      "origem": "bootstrap"
+      "hash": "f74314afff79",
+      "lastmod": "2026-08-25",
+      "origem": "hash-change"
     },
     "/servicos/backup-para-empresas": {
-      "hash": "4cc35ef64577",
-      "lastmod": null,
-      "origem": "bootstrap"
+      "hash": "2f5a9be93ed7",
+      "lastmod": "2026-08-25",
+      "origem": "hash-change"
     },
     "/servicos/backup-para-empresas/curitiba": {
-      "hash": "2d899e356e73",
-      "lastmod": null,
-      "origem": "bootstrap"
+      "hash": "254d21ba3d70",
+      "lastmod": "2026-08-25",
+      "origem": "hash-change"
     },
     "/servicos/backup-recuperacao/curitiba": {
-      "hash": "f8a9af38ae58",
-      "lastmod": null,
-      "origem": "bootstrap"
+      "hash": "65381ad57344",
+      "lastmod": "2026-08-25",
+      "origem": "hash-change"
     },
     "/servicos/backup-recuperacao/sao-jose-dos-pinhais": {
-      "hash": "ccbefbfbf647",
-      "lastmod": null,
-      "origem": "bootstrap"
+      "hash": "04ae241a8262",
+      "lastmod": "2026-08-25",
+      "origem": "hash-change"
     },
     "/servicos/conserto-monitor": {
-      "hash": "43c94667ea8d",
-      "lastmod": null,
-      "origem": "bootstrap"
+      "hash": "30cc472ea056",
+      "lastmod": "2026-08-25",
+      "origem": "hash-change"
     },
     "/servicos/conserto-notebook/curitiba": {
-      "hash": "dae53d68ea63",
-      "lastmod": null,
-      "origem": "bootstrap"
+      "hash": "aa1b097d096a",
+      "lastmod": "2026-08-25",
+      "origem": "hash-change"
     },
     "/servicos/conserto-notebook/sao-jose-dos-pinhais": {
-      "hash": "fbd103d03de6",
-      "lastmod": null,
-      "origem": "bootstrap"
+      "hash": "277c178cf9a0",
+      "lastmod": "2026-08-25",
+      "origem": "hash-change"
     },
     "/servicos/conserto-pc-notebook/agua-verde": {
-      "hash": "510a1b4e0aa2",
-      "lastmod": null,
-      "origem": "bootstrap"
+      "hash": "bcbd76ea1771",
+      "lastmod": "2026-08-25",
+      "origem": "hash-change"
     },
     "/servicos/conserto-pc-notebook/centro": {
-      "hash": "abf9893699c2",
-      "lastmod": null,
-      "origem": "bootstrap"
+      "hash": "345ca7cb1ab9",
+      "lastmod": "2026-08-25",
+      "origem": "hash-change"
     },
     "/servicos/conserto-pc/curitiba": {
-      "hash": "416ba518e8de",
-      "lastmod": null,
-      "origem": "bootstrap"
+      "hash": "6752c3903726",
+      "lastmod": "2026-08-25",
+      "origem": "hash-change"
     },
     "/servicos/conserto-pc/sao-jose-dos-pinhais": {
-      "hash": "bae9bedb2fc7",
-      "lastmod": null,
-      "origem": "bootstrap"
+      "hash": "8cb60b82c8f7",
+      "lastmod": "2026-08-25",
+      "origem": "hash-change"
     },
     "/servicos/conserto-placa": {
-      "hash": "daeb68a47e41",
-      "lastmod": null,
-      "origem": "bootstrap"
+      "hash": "b0f153568317",
+      "lastmod": "2026-08-25",
+      "origem": "hash-change"
     },
     "/servicos/conserto-tv": {
-      "hash": "94b5b8270151",
-      "lastmod": null,
-      "origem": "bootstrap"
+      "hash": "a71f487df82d",
+      "lastmod": "2026-08-25",
+      "origem": "hash-change"
     },
     "/servicos/formatacao": {
-      "hash": "b40b2a9be749",
+      "hash": "4b272cd1c48a",
       "lastmod": "2026-08-25",
-      "origem": "bootstrap"
+      "origem": "hash-change"
     },
     "/servicos/formatacao-computador/agua-verde": {
-      "hash": "23f17c71f3fd",
-      "lastmod": null,
-      "origem": "bootstrap"
+      "hash": "cf765d4db49a",
+      "lastmod": "2026-08-25",
+      "origem": "hash-change"
     },
     "/servicos/formatacao-computador/batel": {
-      "hash": "2a56c81f144c",
-      "lastmod": null,
-      "origem": "bootstrap"
+      "hash": "b626e20b2fed",
+      "lastmod": "2026-08-25",
+      "origem": "hash-change"
     },
     "/servicos/formatacao-computador/cic": {
-      "hash": "8d6317ee7dab",
-      "lastmod": null,
-      "origem": "bootstrap"
+      "hash": "2515cc573aa7",
+      "lastmod": "2026-08-25",
+      "origem": "hash-change"
     },
     "/servicos/formatacao-computador/curitiba": {
       "hash": "82448ab07d69",
@@ -573,19 +573,19 @@
       "origem": "bootstrap"
     },
     "/servicos/manutencao-de-computador": {
-      "hash": "a531bcb0693b",
-      "lastmod": "2026-08-04",
-      "origem": "bootstrap"
+      "hash": "0c4b587d4086",
+      "lastmod": "2026-08-25",
+      "origem": "hash-change"
     },
     "/servicos/manutencao-de-notebook": {
-      "hash": "240d5f5954ba",
-      "lastmod": "2026-08-04",
-      "origem": "bootstrap"
+      "hash": "2c8417f89e10",
+      "lastmod": "2026-08-25",
+      "origem": "hash-change"
     },
     "/servicos/manutencao-preventiva-empresas": {
-      "hash": "60ce202f9e8d",
-      "lastmod": null,
-      "origem": "bootstrap"
+      "hash": "5b4c4b75f2ea",
+      "lastmod": "2026-08-25",
+      "origem": "hash-change"
     },
     "/servicos/manutencao-preventiva-empresas/curitiba": {
       "hash": "e05b10f32dc9",
@@ -593,9 +593,9 @@
       "origem": "bootstrap"
     },
     "/servicos/montagem-de-pc": {
-      "hash": "c1768c707feb",
-      "lastmod": "2026-08-06",
-      "origem": "bootstrap"
+      "hash": "854a6a07950d",
+      "lastmod": "2026-08-25",
+      "origem": "hash-change"
     },
     "/servicos/montagem-de-pc/curitiba": {
       "hash": "a264757bde93",
@@ -603,9 +603,9 @@
       "origem": "bootstrap"
     },
     "/servicos/pc-gamer": {
-      "hash": "861b7cecc9b7",
-      "lastmod": "2026-08-11",
-      "origem": "bootstrap"
+      "hash": "da5a60ddb73d",
+      "lastmod": "2026-08-25",
+      "origem": "hash-change"
     },
     "/servicos/pc-gamer/curitiba": {
       "hash": "dd48305d69a3",
@@ -613,14 +613,14 @@
       "origem": "bootstrap"
     },
     "/servicos/recuperacao-de-dados": {
-      "hash": "663fc23982f6",
-      "lastmod": "2026-08-06",
-      "origem": "bootstrap"
+      "hash": "2be638c6633d",
+      "lastmod": "2026-08-25",
+      "origem": "hash-change"
     },
     "/servicos/redes-e-wifi": {
-      "hash": "573a7bcee159",
-      "lastmod": "2026-08-06",
-      "origem": "bootstrap"
+      "hash": "855b70770a5d",
+      "lastmod": "2026-08-25",
+      "origem": "hash-change"
     },
     "/servicos/redes-wifi/curitiba": {
       "hash": "e157e75178cc",
@@ -628,9 +628,9 @@
       "origem": "bootstrap"
     },
     "/servicos/redes-wifi/sao-jose-dos-pinhais": {
-      "hash": "3abf28dfe6d3",
-      "lastmod": null,
-      "origem": "bootstrap"
+      "hash": "e1669441863c",
+      "lastmod": "2026-08-25",
+      "origem": "hash-change"
     },
     "/servicos/remocao-de-virus": {
       "hash": "7520a6428bc0",
@@ -653,9 +653,9 @@
       "origem": "bootstrap"
     },
     "/servicos/suporte-home-office": {
-      "hash": "2a9b60d2c7e5",
-      "lastmod": "2026-08-06",
-      "origem": "bootstrap"
+      "hash": "c586b85ecf0b",
+      "lastmod": "2026-08-25",
+      "origem": "hash-change"
     },
     "/servicos/suporte-home-office/curitiba": {
       "hash": "7514877079b4",
@@ -663,9 +663,9 @@
       "origem": "bootstrap"
     },
     "/servicos/suporte-tecnico-empresarial": {
-      "hash": "a16390a334d6",
-      "lastmod": null,
-      "origem": "bootstrap"
+      "hash": "7c7b01804101",
+      "lastmod": "2026-08-25",
+      "origem": "hash-change"
     },
     "/servicos/suporte-tecnico-empresarial/curitiba": {
       "hash": "82c642cb041c",
@@ -703,69 +703,69 @@
       "origem": "bootstrap"
     },
     "/sobre": {
-      "hash": "4258b12c8f9d",
-      "lastmod": "2026-08-06",
-      "origem": "bootstrap"
+      "hash": "a59b89c857b8",
+      "lastmod": "2026-08-25",
+      "origem": "hash-change"
     },
     "/solucoes": {
-      "hash": "dd86e18814b8",
-      "lastmod": "2026-08-12",
-      "origem": "bootstrap"
+      "hash": "78f647587e3b",
+      "lastmod": "2026-08-25",
+      "origem": "hash-change"
     },
     "/solucoes/backup": {
-      "hash": "ebd3e3d48fb7",
+      "hash": "cb56c06f2ecd",
       "lastmod": "2026-08-25",
       "origem": "hash-change"
     },
     "/solucoes/diagnostico": {
-      "hash": "04f9fd3e9df9",
-      "lastmod": "2026-08-12",
-      "origem": "bootstrap"
+      "hash": "c8e4129fde04",
+      "lastmod": "2026-08-25",
+      "origem": "hash-change"
     },
     "/solucoes/formatacao": {
-      "hash": "c271dc170e74",
+      "hash": "be2df5598add",
       "lastmod": "2026-08-25",
       "origem": "hash-change"
     },
     "/solucoes/recuperacao-de-dados": {
-      "hash": "1f8e2ed4b505",
-      "lastmod": "2026-08-12",
-      "origem": "bootstrap"
+      "hash": "82e5ad5198c1",
+      "lastmod": "2026-08-25",
+      "origem": "hash-change"
     },
     "/solucoes/ssd": {
-      "hash": "c02ec74d4295",
+      "hash": "7fea8b7cde4a",
       "lastmod": "2026-08-25",
-      "origem": "bootstrap"
+      "origem": "hash-change"
     },
     "/tecnico-informatica-araucaria": {
-      "hash": "6ef0b6bdd5d6",
-      "lastmod": null,
-      "origem": "bootstrap"
+      "hash": "1c57658db60b",
+      "lastmod": "2026-08-25",
+      "origem": "hash-change"
     },
     "/tecnico-informatica-campo-largo": {
-      "hash": "2c4344dbebf5",
-      "lastmod": null,
-      "origem": "bootstrap"
+      "hash": "d2aace560359",
+      "lastmod": "2026-08-25",
+      "origem": "hash-change"
     },
     "/tecnico-informatica-colombo": {
-      "hash": "83eb061a4c19",
-      "lastmod": null,
-      "origem": "bootstrap"
+      "hash": "b0018bbedbe5",
+      "lastmod": "2026-08-25",
+      "origem": "hash-change"
     },
     "/tecnico-informatica-curitiba": {
-      "hash": "393ede591ec0",
-      "lastmod": null,
-      "origem": "bootstrap"
+      "hash": "f22cf3ddc25f",
+      "lastmod": "2026-08-25",
+      "origem": "hash-change"
     },
     "/tecnico-informatica-pinhais": {
-      "hash": "6b3428c29653",
-      "lastmod": null,
-      "origem": "bootstrap"
+      "hash": "aa1e6079d8ba",
+      "lastmod": "2026-08-25",
+      "origem": "hash-change"
     },
     "/tecnico-informatica-sao-jose-pinhais": {
-      "hash": "1e3888117371",
-      "lastmod": null,
-      "origem": "bootstrap"
+      "hash": "a1480e826056",
+      "lastmod": "2026-08-25",
+      "origem": "hash-change"
     }
   }
 }
