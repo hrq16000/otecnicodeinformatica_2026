@@ -37,6 +37,7 @@ import {
 } from "@/lib/triagePreset";
 import { appendUtmsToUrl, captureUtmsFromUrl } from "@/lib/utmCapture";
 import { geoSuggestion } from "@/lib/geoContext";
+import { bairroPorPath } from "@/lib/bairrosMalha";
 import { getSessionId, recordSubmission } from "@/lib/funnelSubmission";
 import { TriageErrorBoundary } from "@/components/funnel/TriageErrorBoundary";
 import { TriageField } from "@/components/funnel/TriageField";
