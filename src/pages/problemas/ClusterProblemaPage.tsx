@@ -62,13 +62,22 @@ const ClusterProblemaPage = () => {
     if (dados) trackPageView(dados.path, dados.titulo);
   }, [dados]);
 
+  // FAQPage único por URL: a FAQ da página e as perguntas conversacionais
+  // ("o que / como / por que / onde") entram no MESMO nó, deduplicadas.
+  const faqUnificada = useMemo(() => {
+    if (!dados) return [];
+    const itens = [...dados.faq, ...faqConversacional(dados.path)];
+    const vistos = new Set<string>();
+    return itens.filter((f) => (vistos.has(f.q) ? false : (vistos.add(f.q), true)));
+  }, [dados]);
+
   useJsonLdSlot(
     SCHEMA_SLOTS.faq,
     dados
       ? {
           "@context": "https://schema.org",
           "@type": "FAQPage",
-          mainEntity: dados.faq.map((f) => ({
+          mainEntity: faqUnificada.map((f) => ({
             "@type": "Question",
             name: f.q,
             acceptedAnswer: { "@type": "Answer", text: f.a },
