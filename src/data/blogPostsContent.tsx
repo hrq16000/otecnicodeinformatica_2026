@@ -1688,7 +1688,7 @@ docker run -d --name db --network minha-rede postgres
           <ul className="mb-0">
             <li><Link to="/servicos/manutencao-de-computador" className="text-accent">Manutenção de computador</Link></li>
             <li><Link to="/servicos/upgrade-ssd-ram" className="text-accent">Upgrade de SSD e memória</Link></li>
-            <li><Link to="/servicos/formatacao-de-computador" className="text-accent">Formatação e reinstalação do Windows</Link></li>
+            <li><Link to="/servicos/formatacao" className="text-accent">Formatação e reinstalação do Windows</Link></li>
             <li><Link to="/diagnostico-tecnico" className="text-accent">Como funciona o diagnóstico técnico</Link></li>
           </ul>
         </div>
@@ -6537,6 +6537,17 @@ Ideal: 1000VA / 600W (para crescimento)`}</code></pre>
           <li>Testes executados e resultados</li>
           <li>Garantia mínima de 90 dias para serviços e peças</li>
         </ul>
+
+        <h2>Guias detalhados deste cluster</h2>
+        <p>Cada etapa do diagnóstico da tela azul tem um guia próprio, com o passo a passo completo:</p>
+        <ul>
+          <li><Link to="/blog/codigos-de-erro-tela-azul-windows" className="text-accent">Códigos de erro da tela azul: o que cada um indica</Link> — tabela dos códigos mais comuns e a leitura correta do arquivo de despejo.</li>
+          <li><Link to="/blog/testar-memoria-ram-memtest86" className="text-accent">Testar a memória RAM com Memtest86+</Link> — o teste que confirma ou descarta a causa mais frequente.</li>
+          <li><Link to="/blog/memoria-ram-insuficiente-sintomas" className="text-accent">Memória RAM insuficiente: sintomas reais</Link> — como separar falta de memória de memória defeituosa.</li>
+        </ul>
+
+        <h2>Quando chamar um técnico</h2>
+        <p>Vale procurar ajuda profissional quando: a tela azul aparece antes mesmo do Windows carregar, o equipamento está na garantia, há dados importantes sem backup, o código muda a cada travamento (sinal típico de memória ou fonte) ou o problema volta depois de atualizar drivers e testar a memória.</p>
 
         <h2>Fazendo Resolver Tela Azul do Windows (BSOD) em Curitiba</h2>
         <p>Se você prefere deixar o serviço com quem faz isso todos os dias, a <strong>{BRAND_NAME}</strong> realiza resolver tela azul do windows (bsod) em Curitiba e região metropolitana. Atendimento a domicílio, laboratório próprio, garantia escrita e valor transparente antes da execução.</p>
