@@ -28,25 +28,27 @@ const aceitarTudo = async (page: import("@playwright/test").Page) => {
   const termos = page.getByTestId("os-termos");
   await expect(termos.locator("button[data-state]").first()).toBeVisible();
 
-  await expect(async () => {
-    const fechados = termos.locator('button[data-state="closed"]');
-    const total = await fechados.count();
-    for (let i = 0; i < total; i += 1) await fechados.first().click();
-    await expect(termos.locator('button[data-state="closed"]')).toHaveCount(0, { timeout: 2000 });
-  }).toPass({ timeout: 20_000 });
+  // Um alvo por vez: clicar em lote reativaria o mesmo elemento antes do
+  // data-state atualizar e o toggle voltaria atrás.
+  const resolverUmAUm = async (seletor: string, estadoFinal: string) => {
+    await expect(async () => {
+      const pendente = page.locator(seletor).first();
+      if (await pendente.count()) {
+        const id = await pendente.getAttribute("id");
+        await pendente.scrollIntoViewIfNeeded();
+        await pendente.click();
+        if (id) {
+          await expect(page.locator(`#${id}`)).toHaveAttribute("data-state", estadoFinal, {
+            timeout: 3000,
+          });
+        }
+      }
+      await expect(page.locator(seletor)).toHaveCount(0, { timeout: 1000 });
+    }).toPass({ timeout: 25_000 });
+  };
 
-  await expect(async () => {
-    const pendentes = page.locator('[id^="aceite-"][data-state="unchecked"]');
-    const total = await pendentes.count();
-    for (let i = 0; i < total; i += 1) {
-      const caixa = pendentes.first();
-      await caixa.scrollIntoViewIfNeeded();
-      await caixa.click();
-    }
-    await expect(page.locator('[id^="aceite-"][data-state="unchecked"]')).toHaveCount(0, {
-      timeout: 2000,
-    });
-  }).toPass({ timeout: 20_000 });
+  await resolverUmAUm('[data-testid="os-termos"] button[data-state="closed"]', "open");
+  await resolverUmAUm('[id^="aceite-"][data-state="unchecked"]', "checked");
 };
 
 test.beforeEach(async ({ page }) => {
