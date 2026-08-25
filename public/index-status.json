@@ -1,12 +1,12 @@
 {
-  "geradoEm": "2026-08-25T00:37:57.275Z",
+  "geradoEm": "2026-08-25T01:42:56.952Z",
   "site": "sc-domain:otecnicodeinformatica.com.br",
   "disponivel": true,
   "rotas": [
     {
-      "path": "/problemas/computador-esquentando",
-      "url": "https://otecnicodeinformatica.com.br/problemas/computador-esquentando",
-      "cluster": "A — superaquecimento / desliga sozinho",
+      "path": "/problemas/notebook-nao-liga",
+      "url": "https://otecnicodeinformatica.com.br/problemas/notebook-nao-liga",
+      "cluster": "A — notebook/PC não liga",
       "impressoes28d": 0,
       "cliques28d": 0,
       "posicao28d": null,
@@ -20,78 +20,77 @@
         "canonicalGoogle": null,
         "canonicalDeclarado": null,
         "richResults": [],
+        "richResultsMensagens": [],
         "richResultsVerdict": "NO_DATA"
       }
     },
     {
-      "path": "/solucoes/ssd",
-      "url": "https://otecnicodeinformatica.com.br/solucoes/ssd",
-      "cluster": "B — SSD × HD",
-      "impressoes28d": 0,
+      "path": "/problemas/computador-nao-da-imagem",
+      "url": "https://otecnicodeinformatica.com.br/problemas/computador-nao-da-imagem",
+      "cluster": "B — liga mas não dá imagem",
+      "impressoes28d": 1,
       "cliques28d": 0,
-      "posicao28d": null,
-      "google": {
-        "status": "NO_DATA",
-        "verdict": "NEUTRAL",
-        "coverageState": "O Google não reconhece o URL",
-        "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
-        "indexingState": "INDEXING_STATE_UNSPECIFIED",
-        "ultimoCrawl": null,
-        "canonicalGoogle": null,
-        "canonicalDeclarado": null,
-        "richResults": [],
-        "richResultsVerdict": "NO_DATA"
-      }
-    },
-    {
-      "path": "/servicos/upgrade-ssd-ram",
-      "url": "https://otecnicodeinformatica.com.br/servicos/upgrade-ssd-ram",
-      "cluster": "C — RAM ou SSD",
-      "impressoes28d": 0,
-      "cliques28d": 0,
-      "posicao28d": null,
+      "posicao28d": 10,
       "google": {
         "status": "INDEXED",
         "verdict": "PASS",
         "coverageState": "Enviada e indexada",
         "robotsTxtState": "ALLOWED",
         "indexingState": "INDEXING_ALLOWED",
-        "ultimoCrawl": "2026-08-17T00:50:47Z",
-        "canonicalGoogle": "https://otecnicodeinformatica.com.br/servicos/upgrade-ssd-ram",
-        "canonicalDeclarado": "https://otecnicodeinformatica.com.br/servicos/upgrade-ssd-ram",
+        "ultimoCrawl": "2026-08-13T12:07:17Z",
+        "canonicalGoogle": "https://otecnicodeinformatica.com.br/problemas/computador-nao-da-imagem",
+        "canonicalDeclarado": "https://otecnicodeinformatica.com.br/problemas/computador-nao-da-imagem",
+        "richResults": [
+          {
+            "tipo": "Indicadores de localização atual",
+            "itens": 1
+          },
+          {
+            "tipo": "Metadados de imagens",
+            "itens": 1
+          }
+        ],
+        "richResultsMensagens": [],
+        "richResultsVerdict": "PASS"
+      }
+    },
+    {
+      "path": "/problemas/computador-lento",
+      "url": "https://otecnicodeinformatica.com.br/problemas/computador-lento",
+      "cluster": "C — lento / travando",
+      "impressoes28d": 3,
+      "cliques28d": 0,
+      "posicao28d": 6.3,
+      "google": {
+        "status": "INDEXED",
+        "verdict": "PASS",
+        "coverageState": "Enviada e indexada",
+        "robotsTxtState": "ALLOWED",
+        "indexingState": "INDEXING_ALLOWED",
+        "ultimoCrawl": "2026-08-15T07:00:14Z",
+        "canonicalGoogle": "https://otecnicodeinformatica.com.br/problemas/computador-lento",
+        "canonicalDeclarado": "https://otecnicodeinformatica.com.br/problemas/computador-lento",
         "richResults": [
           {
             "tipo": "Indicadores de localização atual",
             "itens": 1
           }
         ],
-        "richResultsVerdict": "PASS"
+        "richResultsMensagens": [
+          {
+            "tipo": "Indicadores de localização atual",
+            "item": "Item sem nome",
+            "severidade": "ERROR",
+            "mensagem": "O campo \"item\" não foi encontrado"
+          }
+        ],
+        "richResultsVerdict": "FAIL"
       }
     },
     {
-      "path": "/problemas/hd-fazendo-barulho",
-      "url": "https://otecnicodeinformatica.com.br/problemas/hd-fazendo-barulho",
-      "cluster": "D — recuperar dados / HD com barulho",
-      "impressoes28d": 0,
-      "cliques28d": 0,
-      "posicao28d": null,
-      "google": {
-        "status": "NO_DATA",
-        "verdict": "NEUTRAL",
-        "coverageState": "Detectada, mas não indexada no momento",
-        "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
-        "indexingState": "INDEXING_STATE_UNSPECIFIED",
-        "ultimoCrawl": null,
-        "canonicalGoogle": null,
-        "canonicalDeclarado": null,
-        "richResults": [],
-        "richResultsVerdict": "NO_DATA"
-      }
-    },
-    {
-      "path": "/servicos/formatacao",
-      "url": "https://otecnicodeinformatica.com.br/servicos/formatacao",
-      "cluster": "E — formatar PC / Windows",
+      "path": "/solucoes/backup",
+      "url": "https://otecnicodeinformatica.com.br/solucoes/backup",
+      "cluster": "D — backup",
       "impressoes28d": 0,
       "cliques28d": 0,
       "posicao28d": null,
@@ -105,26 +104,28 @@
         "canonicalGoogle": null,
         "canonicalDeclarado": null,
         "richResults": [],
+        "richResultsMensagens": [],
         "richResultsVerdict": "NO_DATA"
       }
     },
     {
-      "path": "/servicos/remocao-de-virus",
-      "url": "https://otecnicodeinformatica.com.br/servicos/remocao-de-virus",
-      "cluster": "F — vírus / malware",
+      "path": "/solucoes/formatacao",
+      "url": "https://otecnicodeinformatica.com.br/solucoes/formatacao",
+      "cluster": "E — Windows 10 × Windows 11 / formatar",
       "impressoes28d": 0,
       "cliques28d": 0,
       "posicao28d": null,
       "google": {
         "status": "NO_DATA",
         "verdict": "NEUTRAL",
-        "coverageState": "Detectada, mas não indexada no momento",
+        "coverageState": "O Google não reconhece o URL",
         "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
         "indexingState": "INDEXING_STATE_UNSPECIFIED",
         "ultimoCrawl": null,
         "canonicalGoogle": null,
         "canonicalDeclarado": null,
         "richResults": [],
+        "richResultsMensagens": [],
         "richResultsVerdict": "NO_DATA"
       }
     }
@@ -134,5 +135,18 @@
     "motivo": "sem credencial de Bing Webmaster Tools configurada",
     "sitemapDeclaradoNoRobots": true
   },
-  "indexnow": null
+  "indexnow": {
+    "geradoEm": "2026-08-25T01:42:17.543Z",
+    "modo": "seletivo",
+    "sucesso": true,
+    "totalUrls": 5,
+    "keyFileOk": true,
+    "porUrl": {
+      "https://otecnicodeinformatica.com.br/problemas/notebook-nao-liga": true,
+      "https://otecnicodeinformatica.com.br/problemas/computador-nao-da-imagem": true,
+      "https://otecnicodeinformatica.com.br/problemas/computador-lento": true,
+      "https://otecnicodeinformatica.com.br/solucoes/backup": true,
+      "https://otecnicodeinformatica.com.br/solucoes/formatacao": true
+    }
+  }
 }
