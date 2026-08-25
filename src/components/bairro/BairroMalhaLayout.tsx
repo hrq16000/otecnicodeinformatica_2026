@@ -12,6 +12,7 @@ import {
   SERVICOS_MALHA,
   bairrosIrmaos,
   descricaoBairro,
+  mensagemBairro,
   regioesVizinhas,
   tituloBairro,
   type BairroMalha,
@@ -196,7 +197,7 @@ export const BairroMalhaLayout = ({ bairro }: { bairro: BairroMalha }) => {
                 data-cta-location="bairro_malha_urgente"
                 data-neighborhood={bairro.nome}
                 className="inline-flex min-h-14 items-center justify-center gap-2 rounded-lg border border-accent/40 bg-card px-7 text-base font-bold text-foreground motion-surface hover:border-accent"
-                onClick={() => trackCTAClick("triagem", "bairro_malha_urgente")}
+                onClick={() => trackCTAClick("whatsapp", "bairro_malha_urgente")}
               >
                 Preciso de ajuda urgente
               </a>
