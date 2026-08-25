@@ -32,6 +32,7 @@ import { SITE_BASE_URL, BRAND_NAME } from "@/lib/siteConfig";
 import { buildArticleToc, shouldRenderToc } from "@/lib/articleToc";
 import { ArticleToc } from "@/components/editorial/ArticleToc";
 import NotFound from "./NotFound";
+import { encurtar, tituloComMarca, DESCRIPTION_MAX } from "@/lib/socialMeta";
 
 type PostsMap = Record<string, BlogPostContent>;
 
@@ -57,10 +58,11 @@ const BlogPost = () => {
 
   useEffect(() => {
     if (post) {
-      document.title = `${post.title} | Blog | O Técnico de Informática`;
+      // Rodada 4F: mesmo título do SSR (metaSocial), sem divergir na hidratação.
+      document.title = tituloComMarca(post.title, "Blog | O Técnico de Informática");
       const metaDescription = document.querySelector('meta[name="description"]');
       if (metaDescription) {
-        metaDescription.setAttribute("content", post.excerpt);
+        metaDescription.setAttribute("content", encurtar(post.excerpt, DESCRIPTION_MAX));
       }
       trackPageView(`/blog/${slug}`, `Blog - ${post.title}`);
     }
@@ -209,12 +211,12 @@ const BlogPost = () => {
   return (
     <div className="min-h-screen bg-background">
       <Helmet>
-        <title>{post.title} | Blog | O Técnico de Informática</title>
-        <meta name="description" content={post.excerpt} />
+        <title>{tituloComMarca(post.title, "Blog | O Técnico de Informática")}</title>
+        <meta name="description" content={encurtar(post.excerpt, DESCRIPTION_MAX)} />
         {/* robots/googlebot são gerenciados via efeito (registro editorial) */}
         <meta property="og:type" content={approved ? "article" : "website"} />
-        <meta property="og:title" content={post.title} />
-        <meta property="og:description" content={post.excerpt} />
+        <meta property="og:title" content={tituloComMarca(post.title, "Blog | O Técnico de Informática")} />
+        <meta property="og:description" content={encurtar(post.excerpt, DESCRIPTION_MAX)} />
         <meta property="og:url" content={`${SITE_BASE_URL}/blog/${slug}`} />
         <meta property="og:site_name" content={BRAND_NAME} />
         <meta property="og:locale" content="pt_BR" />
