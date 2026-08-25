@@ -119,6 +119,7 @@
     "check:cannibalization": "node scripts/check-cannibalization.mjs",
     "check:cannibalization:all": "node scripts/check-cannibalization.mjs --all",
     "check:orphan-pages": "node scripts/check-orphan-pages.mjs",
+    "check:orphan-ratchet": "node scripts/check-orphan-ratchet.mjs",
     "report:problem-discovery": "node scripts/report-problem-discovery.mjs",
     "check:problem-discovery": "node scripts/check-problem-discovery.mjs",
     "check:rls-always-true": "node scripts/check-rls-always-true.mjs",
