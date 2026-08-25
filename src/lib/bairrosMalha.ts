@@ -245,3 +245,19 @@ export const tituloBairro = (b: BairroMalha) =>
 
 export const descricaoBairro = (b: BairroMalha) =>
   `Assistência técnica de informática no ${b.nome} (${b.cidade}): formatação com backup, manutenção de notebook, recuperação de dados, redes e suporte remoto. Diagnóstico antes de qualquer cobrança e atendimento pelo WhatsApp.`;
+
+/** Resolve o bairro da malha a partir do path atual (contexto de conversão). */
+export function bairroPorPath(path: string): BairroMalha | undefined {
+  const limpo = path.replace(/\/+$/, "") || "/";
+  return BAIRROS_MALHA.find((b) => b.path === limpo);
+}
+
+/**
+ * Mensagem de WhatsApp com o contexto já resolvido pela rota: o usuário não
+ * precisa digitar o bairro em que já está navegando.
+ */
+export function mensagemBairro(b: BairroMalha, servicoLabel?: string): string {
+  return servicoLabel
+    ? `Olá, preciso de ajuda com ${servicoLabel} no bairro ${b.nome} (${b.cidade}).`
+    : `Olá, preciso de assistência técnica de informática no bairro ${b.nome} (${b.cidade}).`;
+}
