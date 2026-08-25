@@ -410,6 +410,16 @@ const ClusterProblemaPage = () => {
           <TabelaDiagnosticaBloco tabela={extra.tabelaExtra} id="tabela-decisao" />
         ) : null}
 
+        <BlocosConversacionais
+          path={dados.path}
+          cta={
+            <CtaContextual
+              secao="conversacional"
+              mensagem={`Minha situação é: ${dados.titulo}.`}
+            />
+          }
+        />
+
         <FontesPrimarias fontes={extra?.fontes} />
 
         <section className="mt-12" aria-labelledby="faq">
