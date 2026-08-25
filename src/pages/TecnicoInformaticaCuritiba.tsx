@@ -542,9 +542,11 @@ const TecnicoInformaticaCuritiba = () => {
             </h2>
             <ul className="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
               {REGIOES.map((r) => (
-                <li key={r} className="flex gap-3 text-sm text-muted-foreground">
+                <li key={r.to} className="flex gap-3 text-sm text-muted-foreground">
                   <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-accent" />
-                  <span>{r}</span>
+                  <Link to={r.to} className="underline-offset-4 hover:text-accent hover:underline">
+                    {r.label}
+                  </Link>
                 </li>
               ))}
             </ul>
