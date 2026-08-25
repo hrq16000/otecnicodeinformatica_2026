@@ -235,8 +235,8 @@ const BlogPost = () => {
           </>
         )}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={post.title} />
-        <meta name="twitter:description" content={post.excerpt} />
+        <meta name="twitter:title" content={tituloComMarca(post.title, "Blog | O Técnico de Informática")} />
+        <meta name="twitter:description" content={encurtar(post.excerpt, DESCRIPTION_MAX)} />
         <meta name="twitter:image" content={heroImageOg} />
         <meta name="twitter:image:alt" content={post.title} />
         {/* Preload hero image for faster LCP */}
