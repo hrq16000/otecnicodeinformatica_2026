@@ -888,6 +888,8 @@ export const legacyRouteElements: Record<string, () => React.ReactElement> = {
   "/servicos/conserto-tv": () => <ServicoCore slug="conserto-tv" />,
   "/servicos/conserto-placa": () => <ServicoCore slug="conserto-placa" />,
   "/servicos/conserto-monitor": () => <ServicoCore slug="conserto-monitor" />,
+  "/servicos/conserto-impressora-3d": () => <ServicoCore slug="conserto-impressora-3d" />,
+
   "/servicos/montagem-pc": () => <MontagemPc />,
   "/servicos/computador-lento": () => <ComputadorLento />,
   "/servicos/computador-nao-liga": () => <ComputadorNaoLiga />,

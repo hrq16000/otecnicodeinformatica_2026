@@ -1949,7 +1949,121 @@ export const SERVICOS_CORE: Record<string, ServicoLandingData> = {
     ],
     dateModified: "2026-08-11",
   },
+
+  // 17 ─────────────────────────────────────────────────────────
+  "conserto-impressora-3d": {
+    path: "conserto-impressora-3d",
+    trackingKey: "conserto-impressora-3d",
+    metaTitle: "Conserto de Impressora 3D em Curitiba | FDM e Resina",
+    metaDescription:
+      "Conserto e calibração de impressora 3D em Curitiba: entupimento de bico, falha de extrusão, camada deslocada, mesa desnivelada e placa queimada.",
+    serviceName: "Conserto e calibração de impressora 3D",
+    serviceDescription:
+      "Diagnóstico, reparo e calibração de impressoras 3D FDM e de resina em Curitiba e região: extrusão, hotend, eixos, correias, sensores, fonte e placa, com trabalho em bancada, ciclos de impressão de teste e escopo declarado antes da execução.",
+    eyebrow: "Impressão 3D em Curitiba",
+    h1: "Conserto de impressora 3D em Curitiba",
+    h1Accent: "com calibração e impressão de teste antes da devolução",
+    intro:
+      "Bico entupido, extrusor patinando, camada deslocando no meio da peça, primeira camada que não gruda, ruído metálico nos eixos ou máquina que não liga depois de um surto de energia. Impressora 3D quebra por motivos mecânicos, elétricos e de parâmetro — e tratar tudo como se fosse configuração é o que faz o problema voltar. Aqui o equipamento entra em bancada, a causa é isolada e a máquina só volta depois de imprimir uma peça de teste. Envie modelo, tipo (FDM ou resina) e fotos da falha pela triagem no WhatsApp.",
+    whatsappMessage:
+      "Olá! Vim da página de conserto de impressora 3D e quero fazer a triagem. " +
+      "(1) marca e modelo da impressora: (2) é FDM (filamento) ou resina: " +
+      "(3) qual o sintoma exato (não liga, bico entupido, não extruda, camada deslocada, não gruda na mesa, ruído nos eixos): " +
+      "(4) há quanto tempo a máquina imprime e quando o problema começou: (5) qual fatiador e qual perfil você usa: " +
+      "(6) qual material (PLA, PETG, ABS, resina) e de qual marca: (7) já trocou bico, correia ou fez nivelamento: " +
+      "(8) houve queda de energia, atualização de firmware ou modificação antes do defeito: " +
+      "(9) consegue enviar fotos da peça que saiu errada: (10) bairro ou cidade para a coleta:",
+    incluso: [
+      { title: "Triagem com amostra da falha", desc: "Modelo, tipo de máquina, material, fatiador e fotos da peça malsucedida antes de qualquer coleta." },
+      { title: "Inspeção mecânica completa", desc: "Eixos, guias, rolamentos, tensão de correias, folga de fusos e alinhamento do pórtico avaliados um a um." },
+      { title: "Avaliação do conjunto de extrusão", desc: "Bico, hotend, garganta, dissipador, ventoinha, engrenagem tracionadora e sensor de filamento." },
+      { title: "Verificação elétrica", desc: "Fonte, placa controladora, drivers dos motores, resistência de aquecimento, termistores e fim de curso." },
+      { title: "Calibração aferida", desc: "Nivelamento de mesa, offset do eixo Z, passo do extrusor e fluxo ajustados com valores registrados por escrito." },
+      { title: "Revisão de perfil de fatiamento", desc: "Conferência de temperatura, velocidade, retração e refrigeração no perfil que você usa, quando o defeito é de parâmetro." },
+      { title: "Impressão de teste", desc: "Ciclos completos executados na bancada, com a peça de teste entregue junto com a máquina." },
+      { title: "Laudo por escrito", desc: "O que foi encontrado, o que foi ajustado, o que foi substituído e quais limitações permanecem." },
+    ],
+    sinais: [
+      "Bico entupido ou extrusão saindo intermitente",
+      "Engrenagem tracionadora patinando e comendo o filamento",
+      "Primeira camada que não adere ou solta no meio da impressão",
+      "Camadas deslocadas no eixo X ou Y durante a peça",
+      "Ruído metálico, trepidação ou eixo travando ao movimentar",
+      "Erro de termistor, aquecimento fora de controle ou desarme térmico",
+      "Impressora que não liga depois de queda de energia",
+      "Máquina de resina com peça descolando da plataforma ou falha de cura",
+    ],
+    processo: PROCESSOS["conserto-impressora-3d"],
+    fatoresValor: [
+      { title: "Tipo de máquina", desc: "FDM cartesiana, CoreXY, delta e resina têm mecânicas distintas e tempos de desmontagem muito diferentes." },
+      { title: "Natureza da falha", desc: "Limpeza de bico, troca de hotend, substituição de placa e retrabalho de eixo não têm o mesmo esforço de bancada." },
+      { title: "Ciclos de teste necessários", desc: "Confirmar um ajuste de extrusão exige impressões completas, e cada ciclo consome horas de máquina." },
+      { title: "Disponibilidade de peça", desc: "Bico, correia e ventoinha são de linha comum; placa controladora e conjunto óptico de resina podem depender de fornecimento." },
+      { title: "Modificações anteriores", desc: "Firmware alterado, upgrade não oficial e peça improvisada precisam ser normalizados antes de qualquer diagnóstico confiável." },
+      { title: "Estado de conservação", desc: "Máquina com resina curada nos eixos ou com acúmulo de material queimado exige limpeza antes da avaliação." },
+      { title: "Logística", desc: "Impressora 3D é volumosa e frágil: coleta e entrega seguem as faixas publicadas na página de coleta." },
+    ],
+    atendimento: {
+      residencial:
+        "Máquina de uso pessoal, hobby e projeto de estudo: avaliação honesta sobre reparar, atualizar peça ou parar de investir em um equipamento no fim da vida útil.",
+      empresarial:
+        "Impressora usada em prototipagem, escritório de engenharia, arquitetura, odontologia e produção de baixo volume: registro individual por equipamento e escopo compatível com parada de produção.",
+    },
+    faqs: [
+      { question: "Vocês atendem impressoras FDM e de resina?", answer: "Sim, as duas. Em FDM o trabalho concentra-se em extrusão, hotend, eixos, correias e eletrônica de controle. Em resina o foco muda para plataforma, FEP, conjunto óptico, tela LCD e parâmetros de cura. São mecânicas diferentes e a triagem pergunta o tipo logo no começo justamente porque o caminho do diagnóstico se separa aí." },
+      { question: "Meu bico vive entupindo. Isso tem solução definitiva?", answer: "Entupimento recorrente quase nunca é problema do bico. As causas mais comuns são temperatura abaixo do que o material pede, garganta com atrito por revestimento danificado, refrigeração do dissipador insuficiente causando amolecimento antes da hora, filamento úmido e retração exagerada no perfil. Limpar o bico resolve a impressão de hoje; identificar qual desses fatores está atuando é o que impede o problema de voltar na semana seguinte." },
+      { question: "A camada desloca no meio da peça. É a placa?", answer: "Raramente. Deslocamento de camada costuma ser mecânico: correia frouxa, polia com parafuso solto no eixo do motor, eixo com atrito, velocidade ou aceleração acima do que a estrutura suporta, ou corrente do driver do motor abaixo do necessário. A bancada testa esses pontos na ordem, movimentando os eixos manualmente e sob comando. Placa queimada dá outro tipo de sintoma, normalmente falha de eixo inteiro ou máquina que não inicializa." },
+      { question: "Vocês fazem modelagem 3D ou preparam meus arquivos?", answer: "Não. O escopo é a máquina: mecânica, eletrônica e calibração. Não desenvolvemos modelagem, não corrigimos malha e não assumimos responsabilidade por falha de projeto do arquivo. O que fazemos é revisar o perfil de fatiamento quando o defeito é claramente de parâmetro, e essa revisão vem por escrito para você aplicar nas próximas peças." },
+      { question: "Por que o mínimo da impressora 3D é maior que o dos outros equipamentos?", answer: "Porque o tempo de bancada é maior por natureza. Um conserto comum termina quando o aparelho liga e opera. Uma impressora 3D só pode ser considerada resolvida depois de imprimir: isso significa desmontar o conjunto de extrusão ou os eixos, remontar, calibrar mesa, offset, passo e fluxo, e então rodar ciclos completos de impressão de teste que levam horas cada um. O valor mínimo reflete esse tempo, e ele é informado antes da coleta, nunca depois." },
+      { question: "Impressora que não liga depois de queda de energia tem conserto?", answer: "Frequentemente sim. Nesses casos a falha costuma estar na fonte, no fusível, no estágio de alimentação da placa ou em um driver de motor queimado. São reparos viáveis em nível de componente. O que muda o cenário é dano extenso na placa controladora: aí comparamos o custo de reparo com o de uma placa nova compatível e dizemos qual dos dois faz sentido, sem empurrar o caminho mais caro." },
+      { question: "A garantia cobre a qualidade das minhas próximas impressões?", answer: "Não, e é importante ser claro nisso. A garantia de 90 dias cobre a mão de obra do ponto reparado e o funcionamento do que foi tratado. Qualidade de impressão depende também do material que você usa, do perfil de fatiamento, da umidade do filamento e do modelo que você fatia — variáveis que ficam do seu lado depois da entrega. A peça de teste impressa na bancada documenta o estado da máquina no momento da devolução." },
+      { question: "Preciso enviar o filamento ou a resina junto?", answer: "Ajuda bastante. Boa parte das falhas de extrusão e de cura é específica do material que você usa, e testar com o seu material reproduz o problema real em vez de um cenário ideal de bancada. Se não for possível, usamos material de referência para validar o funcionamento e o laudo registra que o teste foi feito com material diferente do seu." },
+      { question: "Atendem impressora 3D em domicílio?", answer: "Na maior parte dos casos não compensa. O trabalho exige desmontagem, ferramenta de bancada e ciclos longos de impressão de teste, e nada disso cabe em uma janela de 30 minutos no seu endereço. Ajustes simples de perfil e orientação de uso podem ser resolvidos na própria triagem, sem coleta e sem custo de visita." },
+      { question: "Vale a pena consertar uma impressora 3D antiga?", answer: "Depende de qual peça falhou e de quanto ela representa em relação a uma máquina nova equivalente. Reparo de eixo, extrusão, fonte e sensores costuma compensar com folga. Já uma máquina de entrada com placa e conjunto de extrusão comprometidos ao mesmo tempo pode chegar perto do valor de substituição — e nesse caso o parecer diz isso com o número na frente, para você decidir com informação em vez de com palpite." },
+    ],
+    relacionados: [
+      { label: "Reparo de placa eletrônica", to: "/servicos/conserto-placa" },
+      { label: "Montagem de PC", to: "/servicos/montagem-de-pc" },
+      { label: "Coleta e entrega", to: "/coleta-e-entrega" },
+      { label: "Equipamentos atendidos", to: "/equipamentos-atendidos" },
+      { label: "Preços e políticas", to: "/precos-e-politicas" },
+    ],
+    blocoLocal: [
+      {
+        titulo: "Falha mecânica, falha elétrica e falha de parâmetro não são a mesma coisa",
+        paragrafos: [
+          "A maior parte do tempo perdido com impressora 3D vem de tratar os três tipos de falha como se fossem um só. Quem ajusta parâmetro para compensar correia frouxa gasta semanas mudando velocidade e aceleração sem nunca chegar à causa. Quem troca peça sem revisar o perfil substitui um hotend perfeitamente bom porque o problema era temperatura abaixo do que o material pedia. A bancada existe justamente para separar isso antes de qualquer gasto.",
+          "A separação é feita por teste, não por opinião. Eixos são movimentados com a máquina desligada para sentir atrito e folga; correias são verificadas quanto a tensão e a parafuso de polia; extrusão é medida marcando o filamento e comparando o avanço solicitado com o real; aquecimento é acompanhado pela curva de temperatura, procurando oscilação que denuncie termistor mal fixado ou refrigeração agindo onde não deveria. Cada teste elimina um grupo inteiro de causas.",
+          "Só depois disso o perfil de fatiamento entra na conversa. E quando ele é de fato o problema, a devolutiva vem por escrito com os valores recomendados para o seu material e para a sua máquina, para você aplicar nas próximas peças sem precisar chamar alguém de novo.",
+        ],
+      },
+      {
+        titulo: "O que muda quando a impressora é ferramenta de trabalho",
+        paragrafos: [
+          "Em Curitiba a impressão 3D já saiu do hobby: escritórios de arquitetura imprimem maquete e estudo volumétrico, engenharias validam encaixe antes de mandar usinar, laboratórios de prótese e clínicas de odontologia trabalham com resina, e pequenas operações produzem peça de reposição em baixo volume. Nesses cenários a máquina parada é fila de entrega parada, e o atendimento precisa refletir isso.",
+          "Na prática, isso muda três coisas. Primeiro, o registro é individual por equipamento, o que importa quando há mais de uma máquina e é preciso saber qual já passou por qual intervenção. Segundo, o parecer separa o que devolve a máquina à operação agora do que pode ser programado para depois, em vez de entregar uma lista única de tudo que seria ideal fazer. Terceiro, a decisão entre reparar e substituir vem com o número na frente, porque para quem produz a conta é de disponibilidade, não só de custo de peça.",
+          "O que não muda é a política de valor: nada avança sem aprovação por escrito, peça não está inclusa no mínimo e a garantia cobre a mão de obra do ponto reparado. Uma impressora usada em produção volta com a peça de teste impressa e com os valores de calibração registrados, para servir de referência na próxima manutenção.",
+        ],
+      },
+      {
+        titulo: "Manutenção preventiva evita boa parte das coletas",
+        paragrafos: [
+          "Impressora 3D é equipamento de movimento contínuo e desgaste previsível. Guias que perdem lubrificação, correias que cedem com o uso, ventoinha de dissipador que acumula poeira e perde vazão, bico que se desgasta imprimindo material abrasivo com carga de fibra ou metal: nada disso é defeito, é vida útil. O problema é que quase sempre a falha só aparece no meio de uma peça longa, quando já custou horas de impressão.",
+          "A rotina que resolve a maior parte disso é simples e cabe ao usuário: manter as guias limpas e lubrificadas conforme o fabricante indica, conferir a tensão das correias periodicamente, limpar a refrigeração do dissipador, guardar filamento em recipiente fechado com material dessecante e trocar o bico quando o material usado for abrasivo. Em máquinas de resina, acrescente a inspeção do FEP e a limpeza cuidadosa da plataforma.",
+          "Quando o equipamento passa pela bancada, essa orientação vai junto do laudo, com a periodicidade adequada ao seu volume de uso. O objetivo declarado é que a próxima coleta demore a acontecer — e não que ela vire rotina.",
+        ],
+      },
+    ],
+    linksLocais: [
+      { label: "Atendimento técnico em Curitiba", to: "/tecnico-informatica-curitiba" },
+      { label: "Coleta e entrega do equipamento", to: "/coleta-e-entrega" },
+      { label: "Reparo de placa eletrônica", to: "/servicos/conserto-placa" },
+      { label: "Preços e políticas", to: "/precos-e-politicas" },
+    ],
+    dateModified: "2026-08-25",
+  },
 };
+
 
 
 /** Ordem canônica exibida no hub /servicos. */
@@ -1970,4 +2084,6 @@ export const SERVICOS_CORE_ORDER = [
   "conserto-tv",
   "conserto-placa",
   "conserto-monitor",
+  "conserto-impressora-3d",
+
 ] as const;

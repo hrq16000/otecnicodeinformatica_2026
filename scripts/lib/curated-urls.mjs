@@ -41,7 +41,10 @@ export const MAIN = [
   { path: "/quando-nao-compensa", changefreq: "monthly", priority: "0.5" },
   { path: "/seguranca-dos-dados", changefreq: "monthly", priority: "0.6" },
   { path: "/politica-de-pecas-do-cliente", changefreq: "monthly", priority: "0.6" },
+  // Página institucional indexável (index, follow) exigida pelo contrato de O.S.
+  { path: "/termos-e-condicoes", changefreq: "yearly", priority: "0.3" },
 ];
+
 
 /** Hubs de SEO temáticos (entram no sitemap-main). */
 export const HUBS = [
@@ -50,7 +53,11 @@ export const HUBS = [
   { path: "/bairros", changefreq: "weekly", priority: "0.7" },
   // Pillar informacional do cluster de informática (apoio das páginas comerciais).
   { path: "/guia-tecnico-informatica", changefreq: "monthly", priority: "0.7" },
+  // Hub genérico de assistência técnica: rota indexável (index, follow) que
+  // estava fora do sitemap — incoerência entre robots e descoberta.
+  { path: "/assistencia-tecnica-curitiba", changefreq: "weekly", priority: "0.8" },
 ];
+
 
 /** Serviços essenciais — slugs canônicos (nunca variações com redirect). */
 export const SERVICOS = [
@@ -70,6 +77,8 @@ export const SERVICOS = [
   "/servicos/conserto-tv",
   "/servicos/conserto-placa",
   "/servicos/conserto-monitor",
+  "/servicos/conserto-impressora-3d",
+
 ].map((path) => ({ path, changefreq: "weekly", priority: "0.85" }));
 
 /** Hubs de cidade reais — derivados da política local (Rodada 5). */

@@ -320,7 +320,8 @@
     "test:og-cards": "playwright test e2e/og-twitter-cards.spec.ts",
     "images:variants": "node scripts/optimize-photos.mjs src/assets --out src/assets",
     "check:image-variants": "node scripts/check-image-variants.mjs",
-    "report:external-authority": "node scripts/report-external-authority.mjs"
+    "report:external-authority": "node scripts/report-external-authority.mjs",
+    "check:sitemap-rich": "node scripts/check-sitemap-rich.mjs"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.2",

@@ -85,3 +85,11 @@ export const QUANDO_VISITA_COMPATIVEL =
 export const VALOR_VISITA_LABEL = "R$ 99,99";
 export const VALOR_PACOTE_2H_LABEL = "R$ 279,99";
 export const VALOR_COLETA_MINIMO_LABEL = "R$ 299,99";
+
+/**
+ * Impressoras 3D (FDM e resina) têm mínimo próprio: o atendimento envolve
+ * desmontagem do conjunto de extrusão/eixos, calibração e ciclos de impressão
+ * de teste, que consomem tempo de bancada muito acima de um reparo comum.
+ */
+export const VALOR_IMPRESSORA_3D_MINIMO_LABEL = "R$ 500,00";
+

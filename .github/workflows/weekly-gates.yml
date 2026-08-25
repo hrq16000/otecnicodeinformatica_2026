@@ -74,6 +74,9 @@ jobs:
         run: npm run check:multielectronics-3y
       - name: Ficha comercial padronizada (4C)
         run: npm run check:ficha-comercial
+      - name: Sitemap só com páginas RICH
+        run: npm run check:sitemap-rich
+
 
       # ── CTAs e copy
       - name: CTA funnel gate

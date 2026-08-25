@@ -134,5 +134,14 @@ export const PROCESSOS: Record<string, ProcessoEtapa[]> = {
     { step: "5", title: "Execução em bancada", desc: "Limpeza, troca de pasta e almofadas térmicas, revisão de fluxo de ar e instalação das peças aprovadas." },
     { step: "6", title: "Teste de estabilidade", desc: "Carga prolongada com acompanhamento de temperatura e estabilidade antes da devolução." },
   ],
+  "conserto-impressora-3d": [
+    { step: "1", title: "Histórico da máquina", desc: "Modelo, tipo (FDM ou resina), fatiador usado, há quanto tempo imprime e o que mudou antes do defeito." },
+    { step: "2", title: "Amostra da falha", desc: "Fotos da peça malsucedida e do arquivo fatiado separam falha mecânica de erro de parâmetro." },
+    { step: "3", title: "Inspeção mecânica e elétrica", desc: "Eixos, correias, rolamentos, extrusor, hotend, sensores, fonte e placa avaliados em bancada." },
+    { step: "4", title: "Escopo e aprovação", desc: "O que é ajuste, o que é troca de peça e o que não tem viabilidade — valor aprovado antes da execução." },
+    { step: "5", title: "Reparo e calibração", desc: "Serviço executado com nivelamento de mesa, tensão de correias, passo do extrusor e fluxo aferidos." },
+    { step: "6", title: "Impressão de teste", desc: "Ciclos completos de impressão antes da devolução, com a peça de teste entregue junto com a máquina." },
+  ],
 };
+
 
