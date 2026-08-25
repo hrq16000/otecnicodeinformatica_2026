@@ -20,6 +20,8 @@ import {
   FontesPrimarias,
 } from "@/components/BlocosEnriquecimento";
 import { enriquecimentoDe } from "@/lib/enriquecimentoConteudo";
+import { BlocosConversacionais } from "@/components/BlocosConversacionais";
+import { faqConversacional } from "@/lib/intencaoConversacional";
 import { BlocosRedes4e } from "@/components/redes/BlocosRedes4e";
 import { SCHEMA_SLOTS, SLOT_PRIORITY, useJsonLdSlot } from "@/lib/jsonLdSlots";
 import { clusterProblema } from "@/lib/clusterProblemas";
