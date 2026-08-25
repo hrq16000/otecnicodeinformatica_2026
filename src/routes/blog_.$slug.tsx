@@ -1,8 +1,25 @@
 import { createFileRoute } from "@tanstack/react-router";
-import BlogPost from "@/pages/BlogPost";
+import BlogPostPage from "@/pages/BlogPost";
+import { JsonLdSsrSink } from "@/lib/jsonLdSsr";
 import { SITE_BASE_URL } from "@/lib/siteConfig";
 import { isEditorialApproved } from "@/lib/blogEditorialRegistry";
 import { withOgVersion } from "@/lib/ogCacheBust";
+
+/**
+ * Única rota que não passa pelo mapa de `legacyRouteElements`, portanto compõe
+ * o sink de JSON-LD explicitamente. O sink precisa ser irmão da página DENTRO
+ * do componente da rota (nunca no `__root`): o subtree da rota pode suspender
+ * em isolate frio e o React emitiria o sink antes de os slots serem
+ * registrados. Ver a explicação completa em src/legacyRouteElements.tsx.
+ */
+function BlogPost() {
+  return (
+    <>
+      <BlogPostPage />
+      <JsonLdSsrSink />
+    </>
+  );
+}
 
 export const Route = createFileRoute("/blog_/$slug")({
   component: BlogPost,
