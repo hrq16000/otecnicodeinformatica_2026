@@ -149,7 +149,7 @@ const REGIOES_RAW: RegiaoRaw[] = [
     cidadePadrao: "Região Metropolitana de Curitiba",
     vizinhas: ["norte", "oeste-cic", "leste"],
     bairros: [
-      { nome: "São José dos Pinhais", slug: "sao-jose-dos-pinhais", path: "/tecnico-informatica-sao-jose-pinhais", cidade: "São José dos Pinhais" },
+      { nome: "São José dos Pinhais", slug: "sao-jose-dos-pinhais", cidade: "São José dos Pinhais" },
       { nome: "Pinhais", slug: "pinhais", path: "/tecnico-informatica-pinhais", cidade: "Pinhais" },
       { nome: "Colombo", slug: "colombo", path: "/tecnico-informatica-colombo", cidade: "Colombo" },
       { nome: "Araucária", slug: "araucaria", path: "/tecnico-informatica-araucaria", cidade: "Araucária" },
