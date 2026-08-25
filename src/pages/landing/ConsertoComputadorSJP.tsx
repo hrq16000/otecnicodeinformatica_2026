@@ -274,7 +274,7 @@ const Footer = () => {
               alt={brandConfig.logoAlt}
               width="160"
               height="40"
-              className="h-9 w-auto mb-4"
+              className="h-9 w-auto mb-4 brightness-0 invert"
               loading="lazy"
               decoding="async"
             />
