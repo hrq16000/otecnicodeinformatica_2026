@@ -10,6 +10,7 @@ import {
 } from "@tanstack/react-router";
 import { QueryClientProvider, type QueryClient } from "@tanstack/react-query";
 import appCss from "../styles.css?url";
+import { OS_PREHYDRATION_SCRIPT } from "@/lib/os/osPrehydration";
 
 import { AppErrorBoundary } from "@/components/AppErrorBoundary";
 import { MotionProvider } from "@/components/MotionProvider";
@@ -142,6 +143,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     scripts: [
       { children: CONSENT_MODE_SCRIPT },
       { children: WA_PREHYDRATION_SCRIPT },
+      { children: OS_PREHYDRATION_SCRIPT },
 
       {
         src: "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3762170279587706",

@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import {
   Accordion,
   AccordionContent,
@@ -17,10 +18,22 @@ interface Props {
  * Termos da OS: texto integral visível (accordions abertos por padrão),
  * tipografia legível e aceite explícito por bloco.
  */
-export const TermosOs = ({ blocos, aceitos, onToggle }: Props) => (
+export const TermosOs = ({ blocos, aceitos, onToggle }: Props) => {
+  // A modalidade pode mudar enquanto o formulário é preenchido e trocar os
+  // blocos: o acordeão é controlado e reabre os blocos vigentes, para o texto
+  // nunca sumir nem o aceite ficar inacessível.
+  const ids = blocos.map((b) => b.id);
+  const [abertos, setAbertos] = useState<string[]>(ids);
+  const chave = ids.join("|");
+  useEffect(() => {
+    setAbertos(chave ? chave.split("|") : []);
+  }, [chave]);
+
+  return (
   <Accordion
     type="multiple"
-    defaultValue={blocos.map((b) => b.id)}
+    value={abertos}
+    onValueChange={setAbertos}
     className="divide-y divide-border rounded-xl border border-border bg-card"
     data-testid="os-termos"
   >
@@ -57,6 +70,7 @@ export const TermosOs = ({ blocos, aceitos, onToggle }: Props) => (
       </AccordionItem>
     ))}
   </Accordion>
-);
+  );
+};
 
 export default TermosOs;
