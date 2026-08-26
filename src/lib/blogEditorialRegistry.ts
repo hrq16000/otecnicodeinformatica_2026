@@ -770,6 +770,93 @@ const WAVE_10E: EditorialApproval[] = [
   },
 ];
 
+const WAVE_10F: EditorialApproval[] = [
+  {
+    slug: "hd-nao-e-reconhecido-na-bios-o-que-fazer",
+    status: "approved",
+    authorType: "organization",
+    authorId: INSTITUTIONAL_AUTHOR.id,
+    reviewedAt: "2026-08-26",
+    approvedAt: "2026-08-26",
+    imageOrigin: "licensed",
+    imageLicense: "CC BY-SA 3.0",
+    imageAttribution:
+      "Foto: Dsimic (Wikimedia Commons), CC BY-SA 3.0 — https://commons.wikimedia.org/wiki/File:2.5-inch_SATA_drive_on_top_of_a_3.5-inch_SATA_drive,_close-up_of_data_and_power_connectors.jpg",
+    notes:
+      "Satélite escrito do zero na Onda 10C (Lote 3); fact-check registrado em blogEditorialSources.ts; capa é fotografia real licenciada, sem IA.",
+  },
+  {
+    slug: "ssd-nvme-nao-aparece-no-gerenciador-de-discos",
+    status: "approved",
+    authorType: "organization",
+    authorId: INSTITUTIONAL_AUTHOR.id,
+    reviewedAt: "2026-08-26",
+    approvedAt: "2026-08-26",
+    imageOrigin: "licensed",
+    imageLicense: "CC BY-SA 4.0",
+    imageAttribution:
+      "Foto: Ilya Plekhanov (Wikimedia Commons), CC BY-SA 4.0 — https://commons.wikimedia.org/wiki/File:Samsung_960_EVO_in_M.2_slot_01.jpg",
+    notes:
+      "Satélite escrito do zero na Onda 10C (Lote 3); fact-check registrado em blogEditorialSources.ts; capa é fotografia real licenciada, sem IA.",
+  },
+  {
+    slug: "disco-com-setores-defeituosos-smart-o-que-fazer",
+    status: "approved",
+    authorType: "organization",
+    authorId: INSTITUTIONAL_AUTHOR.id,
+    reviewedAt: "2026-08-26",
+    approvedAt: "2026-08-26",
+    imageOrigin: "licensed",
+    imageLicense: "CC BY-SA 3.0",
+    imageAttribution:
+      "Foto: Matthew Field (Wikimedia Commons), CC BY-SA 3.0 — https://commons.wikimedia.org/wiki/File:Hard_disk_head_on_platter.jpg",
+    notes:
+      "Satélite escrito do zero na Onda 10C (Lote 3); regra de segurança explícita contra CHKDSK em mídia suspeita de falha física; capa é fotografia real licenciada, sem IA.",
+  },
+  {
+    slug: "computador-sem-som-o-que-verificar",
+    status: "approved",
+    authorType: "organization",
+    authorId: INSTITUTIONAL_AUTHOR.id,
+    reviewedAt: "2026-08-26",
+    approvedAt: "2026-08-26",
+    imageOrigin: "licensed",
+    imageLicense: "Public Domain",
+    imageAttribution:
+      "Foto: Shaddack (Wikimedia Commons), domínio público — https://commons.wikimedia.org/wiki/File:Photo-audiojacks.jpg",
+    notes:
+      "Satélite escrito do zero na Onda 10C (Lote 3); fact-check registrado em blogEditorialSources.ts; capa é fotografia real em domínio público, sem IA.",
+  },
+  {
+    slug: "fone-de-ouvido-nao-e-reconhecido-no-pc",
+    status: "approved",
+    authorType: "organization",
+    authorId: INSTITUTIONAL_AUTHOR.id,
+    reviewedAt: "2026-08-26",
+    approvedAt: "2026-08-26",
+    imageOrigin: "licensed",
+    imageLicense: "CC0",
+    imageAttribution:
+      "Foto: Em3rgent0rdr (Wikimedia Commons), CC0 — https://commons.wikimedia.org/wiki/File:Phone-connectors-labeled.jpg",
+    notes:
+      "Satélite escrito do zero na Onda 10C (Lote 3); fact-check registrado em blogEditorialSources.ts; capa é fotografia real licenciada, sem IA.",
+  },
+  {
+    slug: "servico-de-audio-do-windows-nao-esta-em-execucao",
+    status: "approved",
+    authorType: "organization",
+    authorId: INSTITUTIONAL_AUTHOR.id,
+    reviewedAt: "2026-08-26",
+    approvedAt: "2026-08-26",
+    imageOrigin: "licensed",
+    imageLicense: "CC BY 2.0",
+    imageAttribution:
+      "Foto: bengt-re (Wikimedia Commons), CC BY 2.0 — https://commons.wikimedia.org/wiki/File:GIGABYTE_GS-GC330UD_(8357750354).jpg",
+    notes:
+      "Satélite escrito do zero na Onda 10C (Lote 3); fact-check registrado em blogEditorialSources.ts; capa é fotografia real licenciada, sem IA.",
+  },
+];
+
 export const APPROVED_EDITORIAL_CONTENT = new Map<string, EditorialApproval>([
 
   ...FIRST_WAVE_SLUGS.map((slug) => [
@@ -816,6 +903,8 @@ export const APPROVED_EDITORIAL_CONTENT = new Map<string, EditorialApproval>([
   ...WAVE_10C.map((a) => [a.slug, a] as [string, EditorialApproval]),
   ...WAVE_10D.map((a) => [a.slug, a] as [string, EditorialApproval]),
   ...WAVE_10E.map((a) => [a.slug, a] as [string, EditorialApproval]),
+
+  ...WAVE_10F.map((a) => [a.slug, a] as [string, EditorialApproval]),
 ]);
 
 
