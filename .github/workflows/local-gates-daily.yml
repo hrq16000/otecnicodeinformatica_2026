@@ -24,7 +24,8 @@ jobs:
       - name: Build (SSR + sitemaps)
         run: npm run build
         env:
-          VITE_SITE_DOMAIN: ${{ secrets.VITE_SITE_DOMAIN }}
+          VITE_SITE_DOMAIN: https://otecnicodeinformatica.com.br
+          VITE_SITE_INDEXING_ENABLED: "true"
           VITE_WHATSAPP_NUMBER: ${{ secrets.VITE_WHATSAPP_NUMBER }}
 
       - name: Auditoria de metadados
