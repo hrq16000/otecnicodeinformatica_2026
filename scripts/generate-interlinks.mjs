@@ -18,8 +18,24 @@ const CHECK = process.argv.includes("--check");
 const DEST = "src/lib/interlinksGerados.ts";
 
 const meta = new Map(CURATED_ROUTES.map((r) => [r.path, r]));
+
+/**
+ * Nomes de exibição dos bairros — extraídos de src/lib/bairrosDirectory.ts
+ * (fonte única de verdade). O arquivo é TS puro de dados, então lemos o
+ * texto e extraímos os pares slug/nome; assim o gerador (node .mjs) não
+ * precisa importar TS nem duplicar a lista.
+ */
+const NOMES_BAIRROS = new Map(
+  [...readFileSync("src/lib/bairrosDirectory.ts", "utf8").matchAll(/\{\s*slug:\s*"([^"]+)",\s*nome:\s*"([^"]+)"/g)].map(
+    (m) => [m[1], m[2]],
+  ),
+);
 const STOP = new Set(
-  "para com uma como qual quais quando onde essa esse isso mais menos sobre pelo pela seus suas nossa nosso curitiba técnico informática".split(
+  // Termos genéricos do domínio (reparo, bancada, conserto...) aparecem em
+  // quase todos os títulos de serviço e geravam matches falsos — ex.: a página
+  // de notebook molhado linkando conserto de TV só por compartilhar
+  // "reparo"/"bancada". Eles não carregam relevância semântica, então viram stopword.
+  "para com uma como qual quais quando onde essa esse isso mais menos sobre pelo pela seus suas nossa nosso curitiba tecnico informatica reparo reparos conserto bancada avaliacao coleta entrega componente nivel viavel diagnostico assistencia tecnica marcas limpeza manutencao".split(
     " ",
   ),
 );
@@ -77,10 +93,30 @@ const blocos = {};
 for (const origem of problemas) {
   const tk = tokens(`${meta.get(origem)?.title ?? ""} ${meta.get(origem)?.description ?? ""}`);
 
-  const servicosRel = servicos
+  // Score 0 = nenhuma relevância semântica; sem filtro, a ordenação estável
+  // escolhia serviços arbitrários (ex.: página de impressora linkando
+  // formatação). Fallback: serviços generalistas, nesta ordem.
+  const FALLBACK_SERVICOS = ["/servicos/manutencao-de-computador", "/servicos/manutencao-de-notebook"];
+  // Afinidades curadas: onde o scoring por tokens é cego ao motivo real da
+  // relação (líquido → dano de placa-mãe), a escolha é declarada aqui em vez
+  // de sair arbitrária pelo empate. Só entram serviços existentes no meta.
+  const PIN_SERVICOS = {
+    "/problemas/notebook-molhado": ["/servicos/conserto-placa", "/servicos/manutencao-de-notebook"],
+  };
+  const pin = (PIN_SERVICOS[origem] ?? []).filter((p) => meta.has(p));
+  const ranqueados = servicos
     .map((path) => ({ path, s: score(tk, tokens(`${meta.get(path).title} ${meta.get(path).description}`)) }))
-    .sort((a, b) => b.s - a.s)
-    .slice(0, 2);
+    .sort((a, b) => b.s - a.s);
+  const servicosRel = [
+    ...pin.map((path) => ({ path, s: Infinity })),
+    ...ranqueados.filter((r) => r.s > 0 && !pin.includes(r.path)),
+  ].slice(0, 2);
+  for (const fallback of FALLBACK_SERVICOS) {
+    if (servicosRel.length >= 2) break;
+    if (meta.has(fallback) && !servicosRel.some((r) => r.path === fallback)) {
+      servicosRel.push({ path: fallback, s: 0 });
+    }
+  }
 
   const problemasRel = problemas
     .filter((p) => p !== origem)
@@ -89,11 +125,17 @@ for (const origem of problemas) {
     .slice(0, 2);
 
   const bairro = bairros[problemas.indexOf(origem) % bairros.length];
-  const nomeBairro = (meta.get(bairro)?.title ?? bairro.split("/").pop())
-    .split("|")[0]
-    .split(":")[0]
-    .replace(/técnico de inform[áa]tica (em|no|na)\s*/i, "")
-    .trim();
+  const slugBairro = bairro.split("/").pop();
+  // Nome de exibição oficial (src/lib/bairrosDirectory.ts) tem prioridade;
+  // o slug nunca pode vazar para a âncora visível.
+  const nomeBairro = (
+    NOMES_BAIRROS.get(slugBairro) ??
+    (meta.get(bairro)?.title ?? slugBairro)
+      .split("|")[0]
+      .split(":")[0]
+      .replace(/técnico de inform[áa]tica (em|no|na)\s*/i, "")
+      .trim()
+  );
 
   const itens = [];
   for (const { path } of servicosRel) {
