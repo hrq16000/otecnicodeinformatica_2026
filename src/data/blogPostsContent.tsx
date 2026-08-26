@@ -12952,7 +12952,7 @@ bcdboot C:\\Windows /s S: /f UEFI`}</code></pre>
     title: "HD ou SSD não é reconhecido na BIOS: o que verificar antes de trocar",
     excerpt:
       "Quando o disco some do Setup, o problema quase nunca é o Windows. Sequência de verificação por energia, cabo, porta e detecção — e o que NÃO fazer quando há dados importantes.",
-    date: "2026-08-27",
+    date: "2026-08-26",
     readTime: "10 min",
     category: "Diagnóstico",
     content: (
@@ -13012,7 +13012,7 @@ bcdboot C:\\Windows /s S: /f UEFI`}</code></pre>
     title: "SSD aparece na BIOS mas não no Windows: como inicializar o disco",
     excerpt:
       "Disco novo chega sem inicialização, sem partição e sem letra. O que fazer no Gerenciamento de Disco, como escolher GPT ou MBR e o cuidado antes de mexer em disco com dados.",
-    date: "2026-08-27",
+    date: "2026-08-26",
     readTime: "9 min",
     category: "Procedimentos Técnicos",
     content: (
@@ -13073,7 +13073,7 @@ bcdboot C:\\Windows /s S: /f UEFI`}</code></pre>
     title: "Setores defeituosos e SMART com alerta: o que fazer (e o que não fazer)",
     excerpt:
       "Como ler os indicadores SMART, por que CHKDSK não é a resposta padrão para disco suspeito de falha física e qual é a ordem correta: copiar primeiro, investigar depois.",
-    date: "2026-08-27",
+    date: "2026-08-26",
     readTime: "10 min",
     category: "Diagnóstico",
     content: (
@@ -13136,7 +13136,7 @@ bcdboot C:\\Windows /s S: /f UEFI`}</code></pre>
     title: "Computador sem som: sequência de verificação do alto-falante ao driver",
     excerpt:
       "Do volume e do dispositivo de saída errado até driver e conector: como isolar a causa do silêncio no Windows sem reinstalar o sistema.",
-    date: "2026-08-27",
+    date: "2026-08-26",
     readTime: "9 min",
     category: "Diagnóstico",
     content: (
@@ -13194,7 +13194,7 @@ bcdboot C:\\Windows /s S: /f UEFI`}</code></pre>
     title: "Fone de ouvido não é reconhecido no PC: entrada frontal, detecção e microfone",
     excerpt:
       "Por que o fone toca na entrada de trás e não na da frente, o que é detecção de conector, a diferença entre P2 combo e duas entradas e como resolver o microfone mudo.",
-    date: "2026-08-27",
+    date: "2026-08-26",
     readTime: "8 min",
     category: "Procedimentos Técnicos",
     content: (
@@ -13246,7 +13246,7 @@ bcdboot C:\\Windows /s S: /f UEFI`}</code></pre>
     title: "Serviço de áudio do Windows não está em execução: como reativar",
     excerpt:
       "O que são os serviços Windows Audio e Audio Endpoint Builder, como reiniciá-los na ordem correta, quando reinstalar o driver e como distinguir falha de serviço de falha de hardware.",
-    date: "2026-08-27",
+    date: "2026-08-26",
     readTime: "8 min",
     category: "Procedimentos Técnicos",
     content: (
@@ -13303,7 +13303,7 @@ bcdboot C:\\Windows /s S: /f UEFI`}</code></pre>
     title: "Webcam não funciona: como separar privacidade, aplicativo, driver e hardware",
     excerpt:
       "Cinco perguntas isolam a causa quando a câmera não funciona: ela existe no sistema, o Windows libera, o aplicativo tem permissão, o driver está sadio ou o módulo falhou.",
-    date: "2026-08-27",
+    date: "2026-08-26",
     readTime: "10 min",
     category: "Diagnóstico",
     content: (
@@ -13387,7 +13387,7 @@ bcdboot C:\\Windows /s S: /f UEFI`}</code></pre>
     title: "Permissões de câmera no Windows: quando é o sistema que bloqueia e quando é o aplicativo",
     excerpt:
       "Acesso global, acesso por aplicativo, programas de área de trabalho e permissão de site no navegador são camadas diferentes. Entender qual está fechada resolve a maioria dos casos de câmera bloqueada.",
-    date: "2026-08-27",
+    date: "2026-08-26",
     readTime: "8 min",
     category: "Procedimentos Técnicos",
     content: (
@@ -13455,7 +13455,7 @@ bcdboot C:\\Windows /s S: /f UEFI`}</code></pre>
     title: "Webcam USB não é detectada: porta, cabo, alimentação e driver",
     excerpt:
       "Roteiro de eliminação para webcam externa que o Windows não enxerga: teste de porta, hub sem alimentação, cabo, dispositivo desconhecido no Gerenciador e teste cruzado em outro computador.",
-    date: "2026-08-27",
+    date: "2026-08-26",
     readTime: "8 min",
     category: "Procedimentos Técnicos",
     content: (
@@ -13513,7 +13513,7 @@ bcdboot C:\\Windows /s S: /f UEFI`}</code></pre>
     title: "Windows Update não funciona: como descobrir em qual estágio a atualização falha",
     excerpt:
       "Verificação, download, preparação, instalação e reinicialização são estágios distintos. Identificar onde a atualização para elimina metade dos procedimentos inúteis.",
-    date: "2026-08-27",
+    date: "2026-08-26",
     readTime: "11 min",
     category: "Diagnóstico",
     content: (
@@ -13604,7 +13604,7 @@ bcdboot C:\\Windows /s S: /f UEFI`}</code></pre>
     title: "Cache do Windows Update: o que é a SoftwareDistribution e como tratá-la sem risco",
     excerpt:
       "A pasta guarda downloads e histórico do Update. Renomear é reversível, apagar não é. Quando o procedimento ajuda, o que ele custa e por que não é solução universal.",
-    date: "2026-08-27",
+    date: "2026-08-26",
     readTime: "9 min",
     category: "Procedimentos Técnicos",
     content: (
@@ -13670,7 +13670,7 @@ bcdboot C:\\Windows /s S: /f UEFI`}</code></pre>
     title: "Atualização travada e \"desfazendo alterações\": o que é reversão e o que fazer",
     excerpt:
       "Como distinguir interface parada de processo realmente parado, por que o Windows reverte uma atualização e o que fazer antes de desligar a máquina no botão.",
-    date: "2026-08-27",
+    date: "2026-08-26",
     readTime: "9 min",
     category: "Diagnóstico",
     content: (
