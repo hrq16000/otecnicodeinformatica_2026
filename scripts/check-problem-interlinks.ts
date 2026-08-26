@@ -24,29 +24,34 @@ import { CURATED_PATHS } from "./lib/curated-urls.mjs";
 const TETO_SOBREPOSICAO = 0.45;
 const strict = process.argv.includes("--strict");
 
-/** Rotas declaradas no router — fonte de verdade de "a URL existe". */
+/**
+ * Rotas declaradas na árvore do TanStack Router — fonte de verdade de
+ * "a URL existe". (Antes lia src/LegacyApp.tsx, removido na migração.)
+ */
 function rotasDoRouter(): Set<string> {
-  const src = readFileSync("src/LegacyApp.tsx", "utf8");
+  const src = readFileSync("src/routeTree.gen.ts", "utf8");
+  const bloco = src.slice(src.indexOf("export interface FileRoutesByTo"));
+  const fim = bloco.indexOf("}");
   const rotas = new Set<string>();
   const dinamicas: RegExp[] = [];
-  for (const m of src.matchAll(/path="([^"]+)"/g)) {
+
+  for (const m of bloco.slice(0, fim).matchAll(/'([^']+)':/g)) {
     const path = m[1];
-    if (path.includes(":") || path.includes("*")) {
-      // rota paramétrica: guarda o padrão para validar URLs concretas do sitemap
-      if (path.includes(":")) {
-        dinamicas.push(new RegExp(`^${path.replace(/:[^/]+/g, "[^/]+")}$`));
-      }
+    if (path.includes("$")) {
+      dinamicas.push(new RegExp(`^${path.replace(/\$[^/]+/g, "[^/]+")}$`));
       continue;
     }
     rotas.add(path);
   }
-  // URLs concretas do sitemap curado que são servidas por rota paramétrica
+
+  // URLs concretas do sitemap curado servidas por rota paramétrica.
   for (const entry of CURATED_PATHS as (string | { path: string })[]) {
     const path = typeof entry === "string" ? entry : entry.path;
     if (dinamicas.some((re) => re.test(path))) rotas.add(path);
   }
   return rotas;
 }
+
 
 function sobreposicoes(): Map<string, number> {
   const mapa = new Map<string, number>();
