@@ -24,11 +24,17 @@ import { resolveSite, inspectUrl } from "./lib/gsc-client.mjs";
 // @ts-expect-error — utilitário JS compartilhado (sem tipos).
 import {
   calcularTransicoes,
-  despacharWebhook,
   lerAlertas,
   normalizarEstadoBusca,
   persistirAlertas,
 } from "./lib/editorial-alerts.mjs";
+// @ts-expect-error — utilitário JS compartilhado (sem tipos).
+import {
+  entregarAlertas,
+  lerAuditoria,
+  lerConfiguracao,
+  persistirAuditoria,
+} from "./lib/editorial-alert-delivery.mjs";
 import { EDITORIAL_WAVES, batchKey } from "../src/lib/editorialWavesRegistry";
 import { getEditorialStatus } from "../src/lib/blogEditorialRegistry";
 
