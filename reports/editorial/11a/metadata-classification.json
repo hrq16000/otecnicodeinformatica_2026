@@ -1,0 +1,12 @@
+{
+  "status": "BLOCKED_EXTERNAL",
+  "counts": {
+    "REAL_DEFECT": "UNKNOWN",
+    "EXPECTED_VARIATION": "UNKNOWN",
+    "FALSE_POSITIVE": "UNKNOWN",
+    "DUPLICATE_SIGNAL": "UNKNOWN",
+    "STALE_REPORT": "UNKNOWN",
+    "BLOCKED_EXTERNAL": 47
+  },
+  "note": "A classificacao individual requer execucao do checker no checkout autenticado."
+}

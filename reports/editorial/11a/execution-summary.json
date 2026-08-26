@@ -1,0 +1,18 @@
+{
+  "wave": "11A.1",
+  "status": "PARTIAL_BLOCKED",
+  "head": "61ab5d2ce8ef3d79d9cf4ab59ef3ed330bc334ef",
+  "gsc": "UNKNOWN / AUTH_REQUIRED",
+  "recommendation": "FIX",
+  "p1ValidationEligible": "NO",
+  "lote1Authorized": "NO",
+  "checks": {
+    "typecheck": "UNKNOWN",
+    "build": "UNKNOWN",
+    "metadata": "UNKNOWN",
+    "jsonldSSR": "UNKNOWN",
+    "indexHeaders": "UNKNOWN",
+    "cannibalization": "UNKNOWN"
+  },
+  "reason": "Checkout local nao disponivel por falha de credenciais Git; GSC autenticado ausente."
+}
