@@ -104,13 +104,12 @@ if (disponivel) {
   }
 }
 
-const normalizar = (verdict?: string, coverage?: string) => {
-  const c = String(coverage ?? "").toLowerCase();
-  if (verdict === "PASS") return "INDEXED";
-  if (c.includes("discovered")) return "DISCOVERED_NOT_INDEXED";
-  if (c.includes("crawled")) return "CRAWLED_NOT_INDEXED";
-  if (!verdict || verdict === "VERDICT_UNSPECIFIED") return "UNKNOWN";
-  return "NO_DATA";
+/** Estado INTERNO do pipeline (nunca apresentado como resposta do Google). */
+const estadoInterno = (slug: string): "DRAFT" | "APPROVED" | "PUBLISHED" => {
+  const s = getEditorialStatus(slug);
+  if (s === "approved") return "PUBLISHED";
+  if (s === "in_review") return "APPROVED";
+  return "DRAFT";
 };
 
 const rotas = [] as Array<Record<string, unknown>>;
@@ -126,6 +125,7 @@ for (const entrada of EDITORIAL_WAVES) {
     cluster: entrada.cluster,
     role: entrada.role,
     publishedAt: entrada.publishedAt,
+    internalState: estadoInterno(entrada.slug),
     contentHash: contentHash(entrada.slug),
     sitemapLastmod: lastmods.get(url) ?? null,
     indexNowSentAt: indexnow.porUrl.get(url) ? indexnow.geradoEm : null,
@@ -140,17 +140,22 @@ for (const entrada of EDITORIAL_WAVES) {
   }
   try {
     const r = await inspectUrl(site, url);
+    const bruto = {
+      verdict: r.verdict,
+      coverageState: r.coverageState,
+      robotsTxtState: r.robotsTxtState,
+      indexingState: r.indexingState,
+      ultimoCrawl: r.lastCrawlTime,
+      canonicalGoogle: r.googleCanonical,
+      canonicalDeclarado: r.userCanonical,
+    };
     rotas.push({
       ...comum,
       google: {
-        status: normalizar(r.verdict, r.coverageState),
-        verdict: r.verdict,
-        coverageState: r.coverageState,
-        robotsTxtState: r.robotsTxtState,
-        indexingState: r.indexingState,
-        ultimoCrawl: r.lastCrawlTime,
-        canonicalGoogle: r.googleCanonical,
-        canonicalDeclarado: r.userCanonical,
+        status: normalizarEstadoBusca({ ...bruto, status: "OK" }, {
+          emSitemap: Boolean(comum.sitemapLastmod),
+        }),
+        ...bruto,
       },
     });
   } catch (e) {
@@ -169,12 +174,38 @@ const lotes = [...new Set(EDITORIAL_WAVES.map(batchKey))].map((lote) => {
   };
 });
 
+const agora = new Date().toISOString();
+
+// ── Alertas edge-triggered com dedupe (Infra 2 · Parte A).
+const anterior = lerAlertas();
+const { alertasNovos, estado } = calcularTransicoes(
+  anterior,
+  rotas.map((r) => ({
+    url: r.url as string,
+    lote: r.lote as string,
+    ownerId: r.ownerId as string,
+    internalState: r.internalState as string,
+    searchState: (r.google as { status: string }).status,
+    contentHash: r.contentHash as string | null,
+  })),
+  agora,
+);
+
+const despacho = await despacharWebhook(alertasNovos);
+persistirAlertas({
+  geradoEm: agora,
+  webhook: despacho,
+  estado,
+  alertas: [...alertasNovos, ...anterior.alertas].slice(0, 500),
+});
+
 const saida = {
-  geradoEm: new Date().toISOString(),
+  geradoEm: agora,
   site: site ?? "UNKNOWN",
   disponivel: Boolean(site),
   lotes,
   rotas,
+  alertasNovos: alertasNovos.length,
 };
 
 writeFileSync(
@@ -183,8 +214,14 @@ writeFileSync(
 );
 
 console.log(
-  `[editorial-waves] ${rotas.length} URL(s) · ${site ? `propriedade ${site}` : "Google UNKNOWN (sem credencial)"}`,
+  `[editorial-waves] ${rotas.length} URL(s) · ${site ? `propriedade ${site}` : "Google UNKNOWN (sem credencial)"} · alertas novos: ${alertasNovos.length} (webhook: ${despacho.enviado ? "enviado" : despacho.motivo ?? "falhou"})`,
 );
 for (const r of rotas) {
-  console.log(`  · ${r.lote}  ${r.url} → ${(r.google as { status: string }).status}`);
+  console.log(
+    `  · ${r.lote}  ${r.url} → interno=${r.internalState} busca=${(r.google as { status: string }).status}`,
+  );
 }
+for (const a of alertasNovos) {
+  console.log(`  ! ${a.severity} ${a.source} ${a.url}: ${a.previousState ?? "∅"} → ${a.currentState}`);
+}
+
