@@ -2776,6 +2776,10 @@ docker run -d --name db --network minha-rede postgres
       <>
         <p className="lead">Todo computador esquenta — o problema é quando o calor deixa de ser normal e vira queda de desempenho, desligamento repentino ou risco para os componentes. Este guia ajuda a separar aquecimento esperado de superaquecimento real, mostra o que dá para observar em casa com segurança e indica o momento em que insistir no uso sai mais caro do que parar.</p>
 
+        <h2>O teste que separa carga normal de falha térmica</h2>
+        <p>Observe o equipamento em dois momentos: cinco minutos parado e depois durante a tarefa que provoca o sintoma. Se a temperatura e a ventoinha sobem apenas em jogo, renderização ou atualização, a carga explica parte do comportamento. Se já há calor excessivo, lentidão ou ventoinha anormal em repouso, procure primeiro processo travado, entrada de ar bloqueada e falha de refrigeração.</p>
+        <table><thead><tr><th>O que acontece</th><th>Hipótese inicial</th><th>Próximo passo seguro</th></tr></thead><tbody><tr><td>Esquenta só sob carga</td><td>Fluxo insuficiente ou limite térmico atingido</td><td>Reduzir carga e observar temperatura/ruído</td></tr><tr><td>Esquenta parado</td><td>Processo em segundo plano ou ventilação obstruída</td><td>Verificar uso de CPU e liberar grades</td></tr><tr><td>Desliga sem aviso</td><td>Proteção térmica ou energia instável</td><td>Parar testes e investigar antes de ligar novamente</td></tr></tbody></table>
+
         <h2>Resposta curta</h2>
         <p>Aquecimento com ventoinha acelerada durante tarefas pesadas é esperado. Preocupe-se quando o calor aparece em tarefas leves, quando o desempenho cai poucos minutos depois de ligar, quando o equipamento desliga sozinho ou quando surge cheiro, ruído estranho, bateria deformada ou calor que impede o toque. Nesses casos, o caminho é parar o uso e pedir avaliação — não é ajuste de configuração.</p>
 
@@ -3943,6 +3947,10 @@ docker run -d --name db --network minha-rede postgres
     content: (
       <>
         <p className="lead">A pasta térmica é uma camada muito fina de composto entre a superfície do processador e a base do dissipador. Ela não esfria nada sozinha: apenas preenche as imperfeições microscópicas das duas peças para que o calor atravesse por contato em vez de por ar. Quando resseca, esse contato piora e a temperatura sobe mesmo com a refrigeração limpa.</p>
+
+        <h2>Antes de trocar: confirme se o composto é o gargalo</h2>
+        <p>A troca faz sentido quando há evidência de transferência térmica ruim, mas não substitui limpeza, ventilação ou diagnóstico de software. Compare o momento em que o calor aparece, a força do ar na saída e o uso do processador. Saída de ar fraca aponta para obstrução; uso alto em repouso aponta para processo; desligamento instantâneo exige verificar cooler, alimentação e placa antes de aplicar qualquer composto.</p>
+        <p>Não abra o equipamento se a bateria estiver estufada, houver cheiro de queimado, líquido, parafuso danificado ou perda de garantia relevante. Desligue, retire o carregador e preserve fotos do estado original. A quantidade correta e o padrão de aperto dependem do conjunto: excesso pode escorrer, e pressão desigual cria contato pior.</p>
 
         <h2>O que a troca resolve — e o que não resolve</h2>
         <p>Trocar o composto recupera a transferência de calor no ponto de contato. É a resposta certa quando o conjunto está limpo, a ventoinha gira normalmente e ainda assim a máquina aquece rápido sob carga.</p>
@@ -6106,6 +6114,10 @@ Ideal: 1000VA / 600W (para crescimento)`}</code></pre>
     content: (
       <>
         <p className="lead">Quando um disco para de responder, a decisão tomada nos primeiros minutos costuma pesar mais do que qualquer ferramenta usada depois. Este guia explica como identificar o tipo de falha, o que evitar antes de procurar ajuda e como um serviço de recuperação é conduzido — sem promessa de resultado, porque recuperação de dados não tem garantia de sucesso.</p>
+
+        <h2>HD e SSD não devem ser tratados do mesmo jeito</h2>
+        <p>Em HD, clique, raspagem, motor que não parte ou desaparecimento intermitente indicam risco mecânico: desligue e não repita tentativas. Em SSD, não há cabeças ou pratos; o problema pode estar no controlador, na alimentação, na tabela ou no desgaste das células. Se o SSD ainda é reconhecido, copie os arquivos prioritários para outro destino sem instalar programas nele. Se ficou invisível, não inicialize nem formate para “testar”.</p>
+        <table><thead><tr><th>Sinal</th><th>Interpretação provável</th><th>Evite</th></tr></thead><tbody><tr><td>HD clica ou raspa</td><td>Falha mecânica</td><td>Ligar repetidamente</td></tr><tr><td>Disco reconhece e trava na cópia</td><td>Setores instáveis ou leitura degradada</td><td>Rodar reparo no original</td></tr><tr><td>SSD some sem ruído</td><td>Controlador, firmware ou alimentação</td><td>Inicializar, formatar ou atualizar firmware sem cópia</td></tr></tbody></table>
 
         <h2>Primeiro: pare de usar o disco</h2>
         <p>Cada tentativa de ligar um disco que já apresenta falha pode transformar um problema recuperável em perda definitiva. Se o disco faz ruído repetitivo, some do sistema durante o uso ou ficou lento a ponto de travar o computador inteiro, o passo correto é desligar e não repetir tentativas de boot.</p>
