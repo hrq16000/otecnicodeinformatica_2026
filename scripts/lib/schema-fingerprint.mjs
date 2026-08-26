@@ -112,13 +112,18 @@ const semTags = (s) =>
 
 /** Perguntas de FAQ VISÍVEIS no HTML (bloco <details><summary>). */
 export function faqVisivel(html) {
+  // Escopo: apenas a seção marcada com data-faq-visivel (o índice do artigo
+  // também usa <details>/<summary> e não é FAQ).
+  const secao = String(html).match(/<section[^>]*data-faq-visivel[^>]*>([\s\S]*?)<\/section>/i)?.[1];
+  const alvo = secao ?? "";
   const perguntas = [];
-  for (const m of String(html).matchAll(/<summary\b[^>]*>([\s\S]*?)<\/summary>/gi)) {
+  for (const m of alvo.matchAll(/<summary\b[^>]*>([\s\S]*?)<\/summary>/gi)) {
     const texto = semTags(m[1]).replace(/\s*\+$/, "").trim();
     if (texto) perguntas.push(texto);
   }
   return perguntas;
 }
+
 
 /** Perguntas declaradas no FAQPage do SSR. */
 export function faqSchema(grafo) {
