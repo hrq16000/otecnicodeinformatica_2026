@@ -12637,6 +12637,24 @@ bcdboot C:\\Windows /s S: /f UEFI`}</code></pre>
           <p className="m-0 text-sm"><strong>Segurança:</strong> desligue a chave da fonte e retire o cabo antes de qualquer manipulação. Não abra a fonte de alimentação. Não faça medições com o equipamento energizado se você não tem prática — a medição correta de curto é feita com o aparelho desligado, em modo de continuidade ou resistência, e conclusões erradas levam à troca de peças boas.</p>
         </aside>
 
+        <h2>Tabela diagnóstica: o que o comportamento indica</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Comportamento observado</th>
+              <th>Causa provável</th>
+              <th>O que verificar</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Ventoinhas giram meio segundo e tudo desliga, em ciclo</td><td>Proteção da fonte contra consumo excessivo</td><td>Bancada mínima fora do gabinete</td></tr>
+            <tr><td>Fora do gabinete liga, dentro não</td><td>Contato metálico indevido</td><td>Espaçadores, parafusos extras e chapa traseira</td></tr>
+            <tr><td>Só desliga quando um disco ou a placa de vídeo está conectada</td><td>Periférico em curto</td><td>Reintrodução um item por vez</td></tr>
+            <tr><td>Capacitor abaulado ou resíduo esbranquiçado visível</td><td>Componente degradado ou corrosão</td><td>Inspeção nas duas faces da placa</td></tr>
+            <tr><td>Não liga nem com outra fonte comprovadamente boa</td><td>Falha no circuito de regulagem da placa</td><td>Avaliação de bancada e decisão econômica</td></tr>
+          </tbody>
+        </table>
+
         <h2>Como resolver</h2>
         <ul>
           <li><strong>Curto por montagem:</strong> remontar com os espaçadores corretos resolve definitivamente e sem custo de peça.</li>
