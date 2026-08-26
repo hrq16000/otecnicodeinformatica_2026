@@ -1,8 +1,12 @@
 {
-  "source": "not_executed",
-  "status": "UNKNOWN",
+  "source": "reports/seo-audit-preview.json",
+  "status": "REPRODUCED",
   "originalCount": 47,
+  "currentCount": 44,
   "realDefect": 0,
-  "remainingRealDefect": "UNKNOWN",
-  "note": "Nao classificado sem reproducao local; nenhum warning foi marcado como resolvido."
+  "remainingRealDefect": 0,
+  "expectedVariation": 44,
+  "staleFromPreviousArtifact": 3,
+  "note": "Todos os avisos atuais sao limites ideais de title/description; nenhum excede o limite hard nem duplica metadata."
 }
+
