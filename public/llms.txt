@@ -145,6 +145,9 @@ cobramos execução que não tenha sido aprovada.
 - [Computador sem som: sequência de verificação do alto-falante ao driver](https://otecnicodeinformatica.com.br/blog/computador-sem-som-o-que-verificar)
 - [Fone de ouvido não é reconhecido no PC: entrada frontal, detecção e microfone](https://otecnicodeinformatica.com.br/blog/fone-de-ouvido-nao-e-reconhecido-no-pc)
 - [Serviço de áudio do Windows não está em execução: como reativar](https://otecnicodeinformatica.com.br/blog/servico-de-audio-do-windows-nao-esta-em-execucao)
+- [Webcam não funciona: como separar privacidade, aplicativo, driver e hardware](https://otecnicodeinformatica.com.br/blog/webcam-nao-funciona-o-que-verificar)
+- [Permissões de câmera no Windows: quando é o sistema que bloqueia e quando é o aplicativo](https://otecnicodeinformatica.com.br/blog/permissoes-de-camera-no-windows)
+- [Webcam USB não é detectada: porta, cabo, alimentação e driver](https://otecnicodeinformatica.com.br/blog/webcam-usb-nao-e-detectada)
 
 ## Páginas institucionais e de política
 
