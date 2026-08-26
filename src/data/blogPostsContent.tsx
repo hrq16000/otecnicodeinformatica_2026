@@ -12193,6 +12193,7 @@ crontab -e
 
         <h2>Resposta curta</h2>
         <p>Se o disco aparece na lista de dispositivos do Setup, o hardware está vivo e o que falhou é o <strong>carregador de inicialização</strong>: ordem de prioridade errada, partição EFI ausente ou danificada, ou registro de inicialização (BCD) corrompido. Os três casos se resolvem sem formatar, com uma mídia de instalação do Windows.</p>
+        <p>O ponto decisivo é separar detecção de inicialização: se o SSD não aparece na BIOS, o problema acontece antes do boot e merece o diagnóstico de <Link to="/blog/ssd-nvme-nao-aparece-no-gerenciador-de-discos" className="text-accent">SSD/NVMe não reconhecido</Link>. Se aparece, mas não há Windows Boot Manager, investigue EFI/BCD. Se o logo do Windows surge e depois falha, a causa já está em sistema, driver ou atualização — não no cabo de vídeo.</p>
 
         <h2>O que está quebrado, exatamente</h2>
         <p>Um disco com Windows guarda dois conjuntos de coisas: os seus arquivos e as instruções de partida. Em máquinas modernas (UEFI + GPT), essas instruções ficam numa partição pequena formatada em FAT32, a <strong>partição de sistema EFI</strong> (ESP), com cerca de 100 MB. Em máquinas antigas (Legacy + MBR), ficam no primeiro setor do disco e numa partição reservada.</p>
@@ -12911,6 +12912,7 @@ bcdboot C:\\Windows /s S: /f UEFI`}</code></pre>
 
         <h2>Resposta curta</h2>
         <p>O status offline significa que o Windows tentou falar com a impressora e não obteve resposta. Em rede, a causa mais comum é <strong>troca do endereço IP</strong> do aparelho; por cabo, é porta, cabo ou serviço de impressão parado. Verifique nessa ordem: aparelho aceso e sem erro no painel, endereço atual, e só depois o software.</p>
+        <p>Faça um teste que não dependa do computador: imprima a página de diagnóstico pelo painel da própria impressora. Se ela imprime, motor, tinta/toner e mecanismo básico ficam menos suspeitos; concentre-se em endereço, porta, driver e fila. Se nem a página interna sai, não comece pelo spooler: o problema está no aparelho, consumível ou mecanismo.</p>
 
         <h2>Por que o endereço se perde</h2>
         <p>O roteador entrega endereços por empréstimo e com prazo. Quando a impressora fica desligada além do prazo, ou quando falta energia, ela pode voltar com outro endereço. O Windows continua chamando o endereço antigo, não encontra ninguém e marca a fila como offline. É o mesmo motivo pelo qual a impressora "some" depois de um fim de semana.</p>
@@ -13218,6 +13220,7 @@ bcdboot C:\\Windows /s S: /f UEFI`}</code></pre>
 
         <h2>Resposta curta</h2>
         <p>Verifique nesta ordem: <strong>dispositivo de saída selecionado</strong>, <strong>volume por aplicativo</strong>, <strong>conector físico</strong>, <strong>serviço de áudio</strong> e, por último, <strong>driver</strong>. Pular direto para reinstalar driver é o erro mais comum — e o que menos resolve.</p>
+        <p>O dispositivo existir no Windows não prova que o alto-falante funciona: significa apenas que uma camada de identificação respondeu. Se o medidor de volume se move, o aplicativo e o mixer estão produzindo áudio; se um fone funciona e os alto-falantes não, a investigação passa para saída física, amplificação ou alto-falante. Se nem o medidor se move, volte para aplicativo, mixer, serviço e driver.</p>
 
         <h2>Sequência de verificação</h2>
         <ol>
