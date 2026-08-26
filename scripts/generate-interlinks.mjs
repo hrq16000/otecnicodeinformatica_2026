@@ -18,6 +18,18 @@ const CHECK = process.argv.includes("--check");
 const DEST = "src/lib/interlinksGerados.ts";
 
 const meta = new Map(CURATED_ROUTES.map((r) => [r.path, r]));
+
+/**
+ * Nomes de exibição dos bairros — extraídos de src/lib/bairrosDirectory.ts
+ * (fonte única de verdade). O arquivo é TS puro de dados, então lemos o
+ * texto e extraímos os pares slug/nome; assim o gerador (node .mjs) não
+ * precisa importar TS nem duplicar a lista.
+ */
+const NOMES_BAIRROS = new Map(
+  [...readFileSync("src/lib/bairrosDirectory.ts", "utf8").matchAll(/\{\s*slug:\s*"([^"]+)",\s*nome:\s*"([^"]+)"/g)].map(
+    (m) => [m[1], m[2]],
+  ),
+);
 const STOP = new Set(
   "para com uma como qual quais quando onde essa esse isso mais menos sobre pelo pela seus suas nossa nosso curitiba técnico informática".split(
     " ",
