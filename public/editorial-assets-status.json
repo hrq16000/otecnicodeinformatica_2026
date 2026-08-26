@@ -1,0 +1,403 @@
+{
+  "geradoEm": "2026-08-26T03:19:25.699Z",
+  "total": 10,
+  "pass": 0,
+  "warn": 10,
+  "fail": 0,
+  "semLicenca": 0,
+  "semAtribuicao": 0,
+  "unregistered": [],
+  "unused": [],
+  "assets": [
+    {
+      "owner": "temporarios-windows",
+      "wave": "10C",
+      "batch": "0",
+      "lote": "10C/0",
+      "slug": "limpar-arquivos-temporarios-windows",
+      "localPath": "/blog/limpar-arquivos-temporarios-windows.jpg",
+      "originalUrl": "https://commons.wikimedia.org/wiki/File:Hitachi_2.5%22_HDD_and_ADATA_XM13_20120402.jpg",
+      "platform": "Wikimedia Commons",
+      "title": "Disco rígido de notebook e unidade de estado sólido lado a lado sobre a bancada",
+      "author": "Bdortiz1076",
+      "license": "CC0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attributionRequired": false,
+      "attributionText": "Foto: Bdortiz1076 (Wikimedia Commons), CC0 — https://commons.wikimedia.org/wiki/File:Hitachi_2.5%22_HDD_and_ADATA_XM13_20120402.jpg",
+      "sourceType": "WIKIMEDIA",
+      "width": 1200,
+      "height": 630,
+      "fileHash": "sha256:d06e10eb4bd9aed6a2889c817d7ece91",
+      "formats": [
+        "/blog/limpar-arquivos-temporarios-windows.jpg"
+      ],
+      "checks": {
+        "fileExists": true,
+        "sourceKnown": true,
+        "licenseKnown": true,
+        "attributionComplete": true,
+        "originalUrl": true,
+        "webp": false,
+        "avif": false,
+        "antiAi": true
+      },
+      "falhas": [],
+      "avisos": [
+        "webp",
+        "avif"
+      ],
+      "resultado": "WARN"
+    },
+    {
+      "owner": "ram-insuficiente-sintomas",
+      "wave": "10C",
+      "batch": "0",
+      "lote": "10C/0",
+      "slug": "memoria-ram-insuficiente-sintomas",
+      "localPath": "/blog/memoria-ram-insuficiente-sintomas.jpg",
+      "originalUrl": "https://commons.wikimedia.org/wiki/File:DDR_4_SO-DIMM_RAM_slot_PNr%C2%B00837.jpg",
+      "platform": "Wikimedia Commons",
+      "title": "Módulo de memória SO-DIMM DDR4 encaixado no slot da placa de um notebook",
+      "author": "D-Kuru",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "attributionRequired": true,
+      "attributionText": "Foto: D-Kuru (Wikimedia Commons), CC BY-SA 4.0 — https://commons.wikimedia.org/wiki/File:DDR_4_SO-DIMM_RAM_slot_PNr%C2%B00837.jpg",
+      "sourceType": "WIKIMEDIA",
+      "width": 1200,
+      "height": 630,
+      "fileHash": "sha256:2595432e47018a9ec2a5639b340121a1",
+      "formats": [
+        "/blog/memoria-ram-insuficiente-sintomas.jpg"
+      ],
+      "checks": {
+        "fileExists": true,
+        "sourceKnown": true,
+        "licenseKnown": true,
+        "attributionComplete": true,
+        "originalUrl": true,
+        "webp": false,
+        "avif": false,
+        "antiAi": true
+      },
+      "falhas": [],
+      "avisos": [
+        "webp",
+        "avif"
+      ],
+      "resultado": "WARN"
+    },
+    {
+      "owner": "bsod-codigos-de-erro",
+      "wave": "10C",
+      "batch": "0",
+      "lote": "10C/0",
+      "slug": "codigos-de-erro-tela-azul-windows",
+      "localPath": "/blog/codigos-de-erro-tela-azul-windows.jpg",
+      "originalUrl": "https://commons.wikimedia.org/wiki/File:Blue_Screen_Of_Death_at_Urheilupuisto_metro_station.jpg",
+      "platform": "Wikimedia Commons",
+      "title": "Painel informativo público exibindo uma tela azul de erro do Windows",
+      "author": "JIP",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "attributionRequired": true,
+      "attributionText": "Foto: JIP (Wikimedia Commons), CC BY-SA 4.0 — https://commons.wikimedia.org/wiki/File:Blue_Screen_Of_Death_at_Urheilupuisto_metro_station.jpg",
+      "sourceType": "WIKIMEDIA",
+      "width": 1200,
+      "height": 630,
+      "fileHash": "sha256:f243c8f73752d63c4d309c3b46349163",
+      "formats": [
+        "/blog/codigos-de-erro-tela-azul-windows.jpg"
+      ],
+      "checks": {
+        "fileExists": true,
+        "sourceKnown": true,
+        "licenseKnown": true,
+        "attributionComplete": true,
+        "originalUrl": true,
+        "webp": false,
+        "avif": false,
+        "antiAi": true
+      },
+      "falhas": [],
+      "avisos": [
+        "webp",
+        "avif"
+      ],
+      "resultado": "WARN"
+    },
+    {
+      "owner": "memtest86-teste-de-ram",
+      "wave": "10C",
+      "batch": "0",
+      "lote": "10C/0",
+      "slug": "testar-memoria-ram-memtest86",
+      "localPath": "/blog/testar-memoria-ram-memtest86.jpg",
+      "originalUrl": "https://commons.wikimedia.org/wiki/File:Memtest86%2B_2019-08-09.jpg",
+      "platform": "Wikimedia Commons",
+      "title": "Tela do Memtest86+ executando a varredura de memória durante a inicialização",
+      "author": "Fastily",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "attributionRequired": true,
+      "attributionText": "Foto: Fastily (Wikimedia Commons), CC BY-SA 4.0 — https://commons.wikimedia.org/wiki/File:Memtest86%2B_2019-08-09.jpg",
+      "sourceType": "WIKIMEDIA",
+      "width": 1200,
+      "height": 630,
+      "fileHash": "sha256:5720267760ea8b00313325f210fcc9f2",
+      "formats": [
+        "/blog/testar-memoria-ram-memtest86.jpg"
+      ],
+      "checks": {
+        "fileExists": true,
+        "sourceKnown": true,
+        "licenseKnown": true,
+        "attributionComplete": true,
+        "originalUrl": true,
+        "webp": false,
+        "avif": false,
+        "antiAi": true
+      },
+      "falhas": [],
+      "avisos": [
+        "webp",
+        "avif"
+      ],
+      "resultado": "WARN"
+    },
+    {
+      "owner": "botao-power-jump-start",
+      "wave": "10D",
+      "batch": "1",
+      "lote": "10D/1",
+      "slug": "botao-power-nao-funciona-jump-start-placa-mae",
+      "localPath": "/blog/botao-power-nao-funciona-jump-start-placa-mae.jpg",
+      "originalUrl": "https://commons.wikimedia.org/wiki/File:JPANEL_MB_IMG_1121.JPG",
+      "platform": "Wikimedia Commons",
+      "title": "Conector do painel frontal de uma placa-mãe com os pinos de ligar e reiniciar",
+      "author": "Hans Haase",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "attributionRequired": true,
+      "attributionText": "Foto: Hans Haase (Wikimedia Commons), CC BY-SA 4.0 — https://commons.wikimedia.org/wiki/File:JPANEL_MB_IMG_1121.JPG",
+      "sourceType": "WIKIMEDIA",
+      "width": 1200,
+      "height": 630,
+      "fileHash": "sha256:a8294cd5bab5a66bb0d41cffb9722810",
+      "formats": [
+        "/blog/botao-power-nao-funciona-jump-start-placa-mae.jpg"
+      ],
+      "checks": {
+        "fileExists": true,
+        "sourceKnown": true,
+        "licenseKnown": true,
+        "attributionComplete": true,
+        "originalUrl": true,
+        "webp": false,
+        "avif": false,
+        "antiAi": true
+      },
+      "falhas": [],
+      "avisos": [
+        "webp",
+        "avif"
+      ],
+      "resultado": "WARN"
+    },
+    {
+      "owner": "curto-circuito-placa-mae",
+      "wave": "10D",
+      "batch": "1",
+      "lote": "10D/1",
+      "slug": "curto-circuito-placa-mae-como-identificar",
+      "localPath": "/blog/curto-circuito-placa-mae-como-identificar.jpg",
+      "originalUrl": "https://commons.wikimedia.org/wiki/File:Motherboard_defective_capacitors.jpg",
+      "platform": "Wikimedia Commons",
+      "title": "Placa-mãe com capacitores eletrolíticos estufados no topo",
+      "author": "Gms",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "attributionRequired": true,
+      "attributionText": "Foto: Gms (Wikimedia Commons), CC BY-SA 3.0 — https://commons.wikimedia.org/wiki/File:Motherboard_defective_capacitors.jpg",
+      "sourceType": "WIKIMEDIA",
+      "width": 1200,
+      "height": 630,
+      "fileHash": "sha256:540305af13ad377620d354503b130022",
+      "formats": [
+        "/blog/curto-circuito-placa-mae-como-identificar.jpg"
+      ],
+      "checks": {
+        "fileExists": true,
+        "sourceKnown": true,
+        "licenseKnown": true,
+        "attributionComplete": true,
+        "originalUrl": true,
+        "webp": false,
+        "avif": false,
+        "antiAi": true
+      },
+      "falhas": [],
+      "avisos": [
+        "webp",
+        "avif"
+      ],
+      "resultado": "WARN"
+    },
+    {
+      "owner": "bios-corrompida-reset-cmos",
+      "wave": "10D",
+      "batch": "1",
+      "lote": "10D/1",
+      "slug": "bios-corrompida-reset-cmos-atualizacao",
+      "localPath": "/blog/bios-corrompida-reset-cmos-atualizacao.jpg",
+      "originalUrl": "https://commons.wikimedia.org/wiki/File:CMOS_Battery,_Motherboard.jpg",
+      "platform": "Wikimedia Commons",
+      "title": "Bateria de lítio CR2032 encaixada no soquete de CMOS de uma placa-mãe",
+      "author": "Kent Madsen",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+      "attributionRequired": true,
+      "attributionText": "Foto: Kent Madsen (Wikimedia Commons), CC BY-SA 2.0 — https://commons.wikimedia.org/wiki/File:CMOS_Battery,_Motherboard.jpg",
+      "sourceType": "WIKIMEDIA",
+      "width": 1200,
+      "height": 630,
+      "fileHash": "sha256:a5c5bf56b63e7aeea0785522f947e72a",
+      "formats": [
+        "/blog/bios-corrompida-reset-cmos-atualizacao.jpg"
+      ],
+      "checks": {
+        "fileExists": true,
+        "sourceKnown": true,
+        "licenseKnown": true,
+        "attributionComplete": true,
+        "originalUrl": true,
+        "webp": false,
+        "avif": false,
+        "antiAi": true
+      },
+      "falhas": [],
+      "avisos": [
+        "webp",
+        "avif"
+      ],
+      "resultado": "WARN"
+    },
+    {
+      "owner": "internet-lenta-triagem-origem",
+      "wave": "10C",
+      "batch": "2",
+      "lote": "10C/2",
+      "slug": "internet-lenta-provedor-ou-roteador",
+      "localPath": "/blog/internet-lenta-provedor-ou-roteador.jpg",
+      "originalUrl": "https://commons.wikimedia.org/wiki/File:ARRIS_CM820B_DOCSIS_Cable_Modem.jpg",
+      "platform": "Wikimedia Commons",
+      "title": "Modem de banda larga doméstico com luzes de sinal acesas",
+      "author": "VulcanSphere",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "attributionRequired": true,
+      "attributionText": "Foto: VulcanSphere (Wikimedia Commons), CC BY 4.0 — https://commons.wikimedia.org/wiki/File:ARRIS_CM820B_DOCSIS_Cable_Modem.jpg",
+      "sourceType": "WIKIMEDIA",
+      "width": 1200,
+      "height": 630,
+      "fileHash": "sha256:c6470395b4dbe78fa87c0a1941939b0b",
+      "formats": [
+        "/blog/internet-lenta-provedor-ou-roteador.jpg"
+      ],
+      "checks": {
+        "fileExists": true,
+        "sourceKnown": true,
+        "licenseKnown": true,
+        "attributionComplete": true,
+        "originalUrl": true,
+        "webp": false,
+        "avif": false,
+        "antiAi": true
+      },
+      "falhas": [],
+      "avisos": [
+        "webp",
+        "avif"
+      ],
+      "resultado": "WARN"
+    },
+    {
+      "owner": "impressora-offline",
+      "wave": "10C",
+      "batch": "2",
+      "lote": "10C/2",
+      "slug": "impressora-offline-como-resolver",
+      "localPath": "/blog/impressora-offline-como-resolver.jpg",
+      "originalUrl": "https://commons.wikimedia.org/wiki/File:Dell_Color_Laser_Network_Printer_1320cn_ports.jpg",
+      "platform": "Wikimedia Commons",
+      "title": "Painel traseiro de impressora a laser com porta de rede e cabo conectado",
+      "author": "Cheon Fong Liew",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+      "attributionRequired": true,
+      "attributionText": "Foto: Cheon Fong Liew (Wikimedia Commons), CC BY-SA 2.0 — https://commons.wikimedia.org/wiki/File:Dell_Color_Laser_Network_Printer_1320cn_ports.jpg",
+      "sourceType": "WIKIMEDIA",
+      "width": 1200,
+      "height": 630,
+      "fileHash": "sha256:183d2c67ba0a10dc1bc6819ad554aadb",
+      "formats": [
+        "/blog/impressora-offline-como-resolver.jpg"
+      ],
+      "checks": {
+        "fileExists": true,
+        "sourceKnown": true,
+        "licenseKnown": true,
+        "attributionComplete": true,
+        "originalUrl": true,
+        "webp": false,
+        "avif": false,
+        "antiAi": true
+      },
+      "falhas": [],
+      "avisos": [
+        "webp",
+        "avif"
+      ],
+      "resultado": "WARN"
+    },
+    {
+      "owner": "fila-impressao-spooler",
+      "wave": "10C",
+      "batch": "2",
+      "lote": "10C/2",
+      "slug": "fila-de-impressao-travada-spooler-windows",
+      "localPath": "/blog/fila-de-impressao-travada-spooler-windows.jpg",
+      "originalUrl": "https://commons.wikimedia.org/wiki/File:Sharp_MX-M465_of_Aurora_Office_Equipment_20161029.jpg",
+      "platform": "Wikimedia Commons",
+      "title": "Multifuncional de escritório em uso, com bandeja de papel e painel frontal",
+      "author": "Solomon203",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "attributionRequired": true,
+      "attributionText": "Foto: Solomon203 (Wikimedia Commons), CC BY-SA 4.0 — https://commons.wikimedia.org/wiki/File:Sharp_MX-M465_of_Aurora_Office_Equipment_20161029.jpg",
+      "sourceType": "WIKIMEDIA",
+      "width": 1200,
+      "height": 630,
+      "fileHash": "sha256:2c9fbc7a78f6b60c8cc5ecdf4b98e8a4",
+      "formats": [
+        "/blog/fila-de-impressao-travada-spooler-windows.jpg"
+      ],
+      "checks": {
+        "fileExists": true,
+        "sourceKnown": true,
+        "licenseKnown": true,
+        "attributionComplete": true,
+        "originalUrl": true,
+        "webp": false,
+        "avif": false,
+        "antiAi": true
+      },
+      "falhas": [],
+      "avisos": [
+        "webp",
+        "avif"
+      ],
+      "resultado": "WARN"
+    }
+  ]
+}
