@@ -13592,6 +13592,9 @@ bcdboot C:\\Windows /s S: /f UEFI`}</code></pre>
     content: (
       <>
         <p className="lead">"Windows Update não funciona" descreve pelo menos seis falhas diferentes. Uma busca infinita por atualizações não tem nada a ver com download parado em 0%, que por sua vez não tem nada a ver com instalação que reverte na reinicialização. O primeiro passo é descobrir o estágio.</p>
+        <h2>O estágio da falha define o próximo teste</h2>
+        <p>Se não encontra atualização, investigue conexão, data/hora e serviços. Se encontra mas não baixa, observe espaço livre e cache. Se baixa e falha na instalação, a suspeita passa para componentes e integridade do armazenamento. Se instala e desfaz após reiniciar, preserve os arquivos e siga o diagnóstico de <Link to="/blog/windows-update-travado-desfazendo-alteracoes" className="text-accent">reversão do Windows Update</Link>.</p>
+        <table><thead><tr><th>Sintoma</th><th>Camada provável</th><th>Interpretação</th></tr></thead><tbody><tr><td>Não encontra</td><td>Serviço, conexão ou política</td><td>Ainda não houve instalação</td></tr><tr><td>Download em 0%</td><td>Rede, BITS ou cache</td><td>O pacote não chegou à validação</td></tr><tr><td>Desfaz após reiniciar</td><td>Servicing, driver ou espaço</td><td>O sistema fez rollback para se proteger</td></tr></tbody></table>
 
         <h2>O teste que separa causa de sintoma</h2>
         <p>Anote o código e o momento exato da falha: procurar, baixar, instalar ou reiniciar. Compare espaço livre, data e hora, conexão e se o erro ocorre em uma atualização específica ou em todas. Isso evita apagar o cache quando a causa real é falta de espaço, serviço parado ou corrupção de arquivos do sistema.</p>
