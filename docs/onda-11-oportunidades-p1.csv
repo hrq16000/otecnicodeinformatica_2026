@@ -1,0 +1,6 @@
+rank,cluster,intent,gap,demand,conversion,citation,cannibalization,score,decision,existing_owner,do_not_duplicate
+1,BIOS e UEFI,diagnóstico de boot e POST,alto,desconhecida,alta,alta,segura,82,P1 — NEXT,/blog/hd-nao-e-reconhecido-na-bios-o-que-fazer,"não duplicar SSD não detectado ou reset CMOS"
+2,Inicialização do Windows,reparo automático e boot loop,alto,desconhecida,alta,alta,segura,80,P1 — NEXT,/blog/windows-update-travado-desfazendo-alteracoes,"não duplicar tela azul ou Windows Update"
+3,RAM e MemTest,diagnóstico de memória e estabilidade,médio,desconhecida,média,alta,segura,76,P1 — NEXT,/blog/testar-memoria-ram-memtest86,"não duplicar sintomas de RAM insuficiente"
+4,USB e periféricos,dispositivo USB não reconhecido,médio,desconhecida,média,média,segura,72,P1 — NEXT,/blog/webcam-usb-nao-e-detectada,"não duplicar webcam USB"
+5,Segurança do Windows,malware phishing ransomware,alto,desconhecida,alta,alta,watch,70,P1 — NEXT,/blog/como-proteger-computador-golpes-internet,"não duplicar remoção de vírus ou ransomware empresarial"

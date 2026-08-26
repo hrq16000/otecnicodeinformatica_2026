@@ -1,0 +1,53 @@
+{
+  "wave": "11-candidates",
+  "createdAt": "2026-08-26",
+  "publishedUrls": 0,
+  "opportunities": [
+    {
+      "rank": 1,
+      "cluster": "BIOS e UEFI",
+      "intent": "diagnóstico de boot e POST",
+      "score": 82,
+      "decision": "P1 — NEXT",
+      "existingOwner": "/blog/hd-nao-e-reconhecido-na-bios-o-que-fazer",
+      "risk": "não duplicar SSD não detectado ou reset CMOS"
+    },
+    {
+      "rank": 2,
+      "cluster": "Inicialização do Windows",
+      "intent": "reparo automático e boot loop",
+      "score": 80,
+      "decision": "P1 — NEXT",
+      "existingOwner": "/blog/windows-update-travado-desfazendo-alteracoes",
+      "risk": "não duplicar tela azul ou Windows Update"
+    },
+    {
+      "rank": 3,
+      "cluster": "RAM e MemTest",
+      "intent": "diagnóstico de memória e estabilidade",
+      "score": 76,
+      "decision": "P1 — NEXT",
+      "existingOwner": "/blog/testar-memoria-ram-memtest86",
+      "risk": "não duplicar sintomas de RAM insuficiente"
+    },
+    {
+      "rank": 4,
+      "cluster": "USB e periféricos",
+      "intent": "dispositivo USB não reconhecido",
+      "score": 72,
+      "decision": "P1 — NEXT",
+      "existingOwner": "/blog/webcam-usb-nao-e-detectada",
+      "risk": "não duplicar webcam USB"
+    },
+    {
+      "rank": 5,
+      "cluster": "Segurança do Windows",
+      "intent": "malware phishing ransomware",
+      "score": 70,
+      "decision": "P1 — NEXT",
+      "existingOwner": "/blog/como-proteger-computador-golpes-internet",
+      "risk": "não duplicar remoção de vírus ou ransomware empresarial"
+    }
+  ],
+  "note": "Candidatos; não são autorização para criar URLs. Demand e indexação precisam de evidência."
+}
