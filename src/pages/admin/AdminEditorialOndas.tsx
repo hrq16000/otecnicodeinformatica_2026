@@ -203,6 +203,7 @@ export default function AdminEditorialOndas() {
           <nav className="mb-4 flex flex-wrap gap-2 border-b pb-2" aria-label="Abas do painel editorial">
             {([
               ["indexacao", "Indexação, alertas e assets"],
+              ["auditoria", "Auditoria (KPIs)"],
               ["indexnow", "IndexNow"],
               ["schema", "Schema Diff"],
             ] as const).map(([id, rotulo]) => (
@@ -216,6 +217,7 @@ export default function AdminEditorialOndas() {
               </Button>
             ))}
           </nav>
+
 
           {aba === "indexacao" && (
           <>
