@@ -13567,6 +13567,8 @@ bcdboot C:\\Windows /s S: /f UEFI`}</code></pre>
           <li>Verificar arquivos de sistema e a imagem de componentes.</li>
           <li>Reparo avançado com preservação de arquivos, quando nada acima resolveu.</li>
         </ol>
+        <p>Se a falha aparecer só depois da reinicialização, com a mensagem de reversão, o caminho é outro: veja <Link to="/blog/windows-update-travado-desfazendo-alteracoes" className="text-accent">atualização travada e desfazendo alterações</Link>.</p>
+
 
         <h2>Verificação de arquivos e de componentes</h2>
         <p>São duas ferramentas diferentes e a ordem importa. A verificação de arquivos do sistema examina e restaura arquivos protegidos usando a cópia local de componentes. A ferramenta de manutenção de imagem trabalha na própria loja de componentes do Windows, que é a fonte usada pela primeira. Quando a loja está danificada, a verificação de arquivos não tem de onde restaurar — por isso o reparo da imagem vem antes de uma nova passada de verificação. Ambas exigem prompt com privilégio administrativo, tempo e nenhuma interrupção. Siga sempre a documentação atual da Microsoft para a sintaxe exata da sua versão.</p>
