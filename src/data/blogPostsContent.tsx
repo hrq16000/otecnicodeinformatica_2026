@@ -1604,6 +1604,10 @@ docker run -d --name db --network minha-rede postgres
       <>
         <p className="lead">Um computador lento quase nunca tem uma causa única. Costuma ser uma soma de fatores — disco antigo, pouca memória, programas em segundo plano ou o sistema já desgastado pelo tempo. Antes de formatar ou gastar com peças, vale entender o que a lentidão pode indicar e o que você mesmo consegue verificar com segurança.</p>
 
+        <h2>Resposta rápida: observe o gargalo</h2>
+        <p>Abra o Gerenciador de Tarefas enquanto a lentidão acontece. CPU próxima do limite aponta para processamento; memória quase cheia com disco trabalhando muito aponta para paginação; disco em 100% desde o início pode indicar armazenamento lento ou degradado; temperatura alta com queda progressiva sugere redução térmica. Um SSD melhora inicialização e carregamento, mas não corrige RAM insuficiente, malware, superaquecimento ou processador saturado.</p>
+        <table><thead><tr><th>O que você observa</th><th>Hipótese mais forte</th><th>Próximo teste</th></tr></thead><tbody><tr><td>RAM cheia e disco ativo</td><td>Paginação</td><td>Fechar programas e comparar após reiniciar</td></tr><tr><td>Disco lento desde o boot</td><td>Armazenamento</td><td>Verificar saúde e espaço livre</td></tr><tr><td>Fica pior após alguns minutos</td><td>Temperatura</td><td>Observar ventilação e frequência</td></tr></tbody></table>
+
         <h2>O que a lentidão costuma indicar</h2>
         <p>Repare em <strong>quando</strong> a lentidão aparece, porque isso ajuda a separar as possibilidades:</p>
         <ul>
@@ -1842,6 +1846,10 @@ docker run -d --name db --network minha-rede postgres
     content: (
       <>
         <p className="lead">Você aperta o botão do notebook e não acontece nada — ou ele reage, mas não chega ao sistema. "Não liga" pode significar coisas bem diferentes, de um carregador com defeito a uma falha interna. Observar <strong>o comportamento exato</strong> ajuda a entender a situação e evita medidas que podem piorar o quadro.</p>
+
+        <h2>Árvore de decisão segura</h2>
+        <p>Comece pela tomada, carregador e conector, sem abrir a fonte ou fazer curto em pinos. Se não há LED nem ventoinha, investigue alimentação. Se o LED acende, mas não há imagem, o notebook pode estar ligando sem passar pelo POST. Se liga por segundos e desliga, temperatura, bateria, proteção elétrica ou placa entram na investigação. Se aparece logo ou BIOS, a alimentação já venceu a primeira etapa: o próximo foco é vídeo, armazenamento ou Windows.</p>
+        <p><strong>Pare</strong> se houver cheiro de queimado, líquido, aquecimento anormal ou dados importantes sem cópia.</p>
 
         <h2>Identifique o comportamento do notebook</h2>
         <ul>
@@ -6462,6 +6470,10 @@ Ideal: 1000VA / 600W (para crescimento)`}</code></pre>
     content: (
       <>
         <p className="lead">Realizar <strong>resolver tela azul do windows (bsod)</strong> exige procedimento técnico, ferramentas adequadas e atenção a detalhes que separam o trabalho amador do profissional. Neste guia, você vai aprender o passo a passo real usado em laboratórios de assistência técnica em Curitiba.</p>
+
+        <h2>O que o código realmente diz</h2>
+        <p>BSOD é uma interrupção deliberada: o Windows para para evitar continuar executando com estado inconsistente. O stop code é uma categoria da falha, não uma prova de que a peça citada morreu. Um erro isolado depois de uma atualização pode ser software; códigos diferentes que se repetem, arquivos corrompidos e travamentos sob carga aumentam a suspeita de RAM, armazenamento, energia ou temperatura. Registre o código, o driver citado, o horário e o que mudou antes do primeiro erro.</p>
+        <table><thead><tr><th>Padrão</th><th>Leitura inicial</th><th>Verificação</th></tr></thead><tbody><tr><td>Um código após atualização</td><td>Driver ou sistema</td><td>Modo de segurança e reversão controlada</td></tr><tr><td>Códigos variados</td><td>Memória, energia ou hardware</td><td>MemTest e estabilidade térmica</td></tr><tr><td>Erro sempre no mesmo arquivo</td><td>Componente/driver específico</td><td>Atualizar apenas pela fonte oficial</td></tr></tbody></table>
 
         <h2>Por Que o Procedimento Importa</h2>
         <p>Trabalhar em hardware sem método é a principal causa de dano permanente em equipamentos. Pequenos descuidos — descarga eletrostática, parafuso errado, conector mal encaixado — podem transformar um serviço simples em um problema irreversível. Por isso, todo técnico profissional segue um <strong>checklist documentado</strong> antes, durante e depois de cada intervenção.</p>
@@ -12527,6 +12539,10 @@ bcdboot C:\\Windows /s S: /f UEFI`}</code></pre>
       <>
         <p className="lead">Memória com defeito é uma das causas mais frustrantes de instabilidade: o computador funciona bem por horas e depois trava, corrompe um arquivo ou mostra uma tela azul diferente da anterior. Testar a memória custa tempo e não custa peça — por isso vem antes de comprar qualquer coisa.</p>
 
+        <h2>Falta de memória não é o mesmo que memória defeituosa</h2>
+        <p>RAM ocupada faz o Windows paginar dados no armazenamento, aumentando a latência e deixando o sistema lento. Isso não significa que o módulo esteja quebrado. Defeito de RAM costuma aparecer como travamentos aleatórios, arquivos corrompidos ou códigos variados de tela azul. Se o erro desaparece ao remover um módulo ou trocar o slot, a hipótese muda para módulo, encaixe ou placa.</p>
+        <p>Perfis XMP/EXPO, mistura de módulos e frequência agressiva também podem produzir instabilidade sem dano físico. Desative o perfil temporariamente e repita o teste antes de condenar a memória.</p>
+
         <h2>Resposta curta</h2>
         <p>Crie um pendrive inicializável com o <strong>Memtest86+</strong>, inicie o computador por ele e deixe rodar pelo menos <strong>uma passagem completa</strong> — idealmente quatro, ou a noite inteira. <strong>Um único erro já é defeito.</strong> Não existe "erro tolerável" em memória.</p>
 
@@ -13059,6 +13075,10 @@ bcdboot C:\\Windows /s S: /f UEFI`}</code></pre>
     content: (
       <>
         <p className="lead">Quando o disco é listado no Setup mas não aparece em "Este Computador", o hardware já está resolvido. Falta apenas o passo que o Windows não faz sozinho: inicializar, particionar e atribuir uma letra.</p>
+
+        <h2>Antes de inicializar: descubra se há dados</h2>
+        <p>Disco novo e vazio pode ser inicializado e particionado. Disco que já tinha arquivos não deve ser tratado como novo só porque não aparece no Explorador. Se estiver RAW, desconectando, com SMART ruim ou contendo dados importantes, pare: formatar, inicializar ou usar <code>diskpart clean</code> pode tornar a recuperação mais difícil. Primeiro reduza escritas, preserve a mídia e avalie imagem ou recuperação profissional.</p>
+        <table><thead><tr><th>Onde aparece</th><th>O que significa</th><th>Conduta</th></tr></thead><tbody><tr><td>Não aparece na BIOS</td><td>Camada física/interface</td><td>Testar conexão, slot e alimentação</td></tr><tr><td>Aparece na BIOS, não no Windows</td><td>Controlador/driver/gerenciamento</td><td>Verificar Gerenciamento de Disco</td></tr><tr><td>RAW ou SMART ruim</td><td>Risco lógico ou físico</td><td>Preservar dados antes de reparar</td></tr></tbody></table>
 
         <h2>Resposta curta</h2>
         <p>O Explorador de Arquivos só mostra volumes formatados e com letra. Disco de fábrica chega vazio, sem tabela de partição — por isso ele existe para a BIOS e para o Gerenciamento de Disco, mas não para a área de trabalho. O procedimento leva poucos minutos e não exige programa extra.</p>
