@@ -162,8 +162,7 @@
     "monitor:vitals": "node scripts/monitor-web-vitals.mjs",
     "monitor:vitals:alert": "node scripts/monitor-web-vitals.mjs --alert",
     "report:rank-tracking": "node scripts/report-rank-tracking.mjs",
-    "verify:prod-status": "node scripts/
-check-soft-404.mjs --base=$SITE_BASE_URL",
+    "verify:prod-status": "node scripts/check-soft-404.mjs --base=$SITE_BASE_URL",
     "monitor:indexing:alert": "node scripts/monitor-gsc-indexing.mjs --alert",
     "report:weekly-seo": "node scripts/report-weekly-seo.mjs",
     "report:seo-paginas": "node scripts/report-seo-por-pagina.mjs",
@@ -294,8 +293,7 @@ check-soft-404.mjs --base=$SITE_BASE_URL",
     "report:distribution": "node scripts/report-distribution-matrix.mjs",
     "format": "prettier --write .",
     "legacy:prebuild": "node scripts/check-brand-isolation.mjs && node scripts/check-observability-env.mjs && node scripts/generate-interlinks.mjs && node scripts/generate-robots.mjs && node scripts/generate-sitemaps.mjs && node scripts/generate-llms.mjs && bun scripts/check-seo-basics.ts index.html && node scripts/check-security-findings-baseline.mjs && node scripts/check-ads-txt.mjs && node scripts/check-policy-jsonld.mjs && node scripts/check-telemetry-transparency.mjs && node scripts/check-missing-exports.mjs && node scripts/check-media-assets.mjs && node scripts/report-build-gates.mjs && node scripts/report-publish-status.mjs && node scripts/report-photo-review.mjs && node scripts/check-content-intent.mjs",
-    "legacy:postbuild": "node scripts/check-motion-audit.mjs && node scripts/check-motion-loading.mjs && bun scripts/check-seo-basics.ts dist/index.html && bun scripts/check-seo-basics.ts --curated dist && node scripts/check-jsonld-references.mjs dist && bun scripts/dump-dynamic-slugs.ts dist/dynamic-slugs.json && node scripts/generate-route-manifest.mjs dist && node scripts/generate-noindex-shells.mjs dist && node scripts/check-soft-404.mjs && node scripts/check-http-route-semantics.mjs && node scripts/generate-image-sitemap.mjs dist && node scripts/check-image-sitemap.mjs dist && node scripts/check-analytics-tags.mjs dist && node scripts/check-image-integrity.mjs dist && node scripts/check-canonical-anchors.mjs dist && node scripts/check-imageobject-jsonld.mjs dist && node scripts/check-cross-cluster-similarity.mjs dist && node scripts/check-geo-conformance.mjs dist && node scripts/check-schema-standards.mjs dist && node scripts/check-robots.mjs dis
-t && node scripts/check-local-index-policy.mjs dist && node scripts/check-local-doorway.mjs dist && node scripts/check-local-service-intent.mjs && node scripts/check-local-neighborhood-intent.mjs dist && node scripts/generate-local-audit.mjs dist && node scripts/report-gates.mjs",
+    "legacy:postbuild": "node scripts/check-motion-audit.mjs && node scripts/check-motion-loading.mjs && bun scripts/check-seo-basics.ts dist/index.html && bun scripts/check-seo-basics.ts --curated dist && node scripts/check-jsonld-references.mjs dist && bun scripts/dump-dynamic-slugs.ts dist/dynamic-slugs.json && node scripts/generate-route-manifest.mjs dist && node scripts/generate-noindex-shells.mjs dist && node scripts/check-soft-404.mjs && node scripts/check-http-route-semantics.mjs && node scripts/generate-image-sitemap.mjs dist && node scripts/check-image-sitemap.mjs dist && node scripts/check-analytics-tags.mjs dist && node scripts/check-image-integrity.mjs dist && node scripts/check-canonical-anchors.mjs dist && node scripts/check-imageobject-jsonld.mjs dist && node scripts/check-cross-cluster-similarity.mjs dist && node scripts/check-geo-conformance.mjs dist && node scripts/check-schema-standards.mjs dist && node scripts/check-robots.mjs dist && node scripts/check-local-index-policy.mjs dist && node scripts/check-local-doorway.mjs dist && node scripts/check-local-service-intent.mjs && node scripts/check-local-neighborhood-intent.mjs dist && node scripts/generate-local-audit.mjs dist && node scripts/report-gates.mjs",
     "check:national-authority-map": "node scripts/check-national-authority-map.mjs",
     "check:national-foundation-pillars": "node scripts/check-national-foundation-pillars.mjs",
     "ssr:with-server": "node scripts/with-ssr-server.mjs",
@@ -433,14 +431,13 @@ t && node scripts/check-local-index-policy.mjs dist && node scripts/check-local-
     "@stryker-mutator/vitest-runner": "^9.6.1",
     "@tailwindcss/typography": "^0.5.16",
     "@testing-library/jest-dom": "^6.9.1",
-    "@testing-library/dom": "^10.4.0",
     "@testing-library/react": "^16.3.2",
     "@types/qrcode": "^1.5.6",
     "jsdom": "^29.1.1",
     "sharp": "^0.34.5",
     "vite-imagetools": "^10.0.1",
-    "vitest": "^4.1.9"
+    "vitest": "^4.1.9",
+    "@testing-library/dom": "^10.4.0"
   },
   "version": "0.0.0"
 }
-
