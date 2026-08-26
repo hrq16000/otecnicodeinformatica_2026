@@ -731,8 +731,8 @@ const WAVE_10E: EditorialApproval[] = [
     status: "approved",
     authorType: "organization",
     authorId: INSTITUTIONAL_AUTHOR.id,
-    reviewedAt: "2026-08-27",
-    approvedAt: "2026-08-27",
+    reviewedAt: "2026-08-26",
+    approvedAt: "2026-08-26",
     imageOrigin: "licensed",
     imageLicense: "CC BY 4.0",
     imageAttribution:
@@ -745,8 +745,8 @@ const WAVE_10E: EditorialApproval[] = [
     status: "approved",
     authorType: "organization",
     authorId: INSTITUTIONAL_AUTHOR.id,
-    reviewedAt: "2026-08-27",
-    approvedAt: "2026-08-27",
+    reviewedAt: "2026-08-26",
+    approvedAt: "2026-08-26",
     imageOrigin: "licensed",
     imageLicense: "CC BY-SA 2.0",
     imageAttribution:
@@ -759,8 +759,8 @@ const WAVE_10E: EditorialApproval[] = [
     status: "approved",
     authorType: "organization",
     authorId: INSTITUTIONAL_AUTHOR.id,
-    reviewedAt: "2026-08-27",
-    approvedAt: "2026-08-27",
+    reviewedAt: "2026-08-26",
+    approvedAt: "2026-08-26",
     imageOrigin: "licensed",
     imageLicense: "CC BY-SA 4.0",
     imageAttribution:

@@ -448,7 +448,7 @@ export const EDITORIAL_WAVE = [
   // Onda 10C — Lote 2: internet/Wi-Fi (triagem) e impressoras.
   {
     slug: "internet-lenta-provedor-ou-roteador",
-    approvedAt: "2026-08-27",
+    approvedAt: "2026-08-26",
     pilar: "/servicos/redes-e-wifi",
     pilarLabel: "Redes e Wi-Fi",
     apoio: "/blog/como-melhorar-sinal-wifi-em-casa",
@@ -457,7 +457,7 @@ export const EDITORIAL_WAVE = [
   },
   {
     slug: "impressora-offline-como-resolver",
-    approvedAt: "2026-08-27",
+    approvedAt: "2026-08-26",
     pilar: "/servicos/redes-e-wifi",
     pilarLabel: "Redes e Wi-Fi",
     apoio: "/blog/como-instalar-impressora-windows-passo-a-passo",
@@ -466,7 +466,7 @@ export const EDITORIAL_WAVE = [
   },
   {
     slug: "fila-de-impressao-travada-spooler-windows",
-    approvedAt: "2026-08-27",
+    approvedAt: "2026-08-26",
     pilar: "/diagnostico-tecnico",
     pilarLabel: "Diagnóstico técnico",
     apoio: "/blog/impressora-offline-como-resolver",

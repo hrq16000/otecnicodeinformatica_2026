@@ -183,7 +183,7 @@ const WAVE_10D_BATCH_1: EditorialWaveEntry[] = [
     ownerId: "internet-lenta-triagem-origem",
     cluster: "internet-wifi",
     role: "satelite",
-    publishedAt: "2026-08-27",
+    publishedAt: "2026-08-26",
     targetQueries: [
       "internet lenta e o provedor ou o roteador",
       "como saber se a internet lenta e do provedor",
@@ -203,7 +203,7 @@ const WAVE_10D_BATCH_1: EditorialWaveEntry[] = [
     ownerId: "impressora-offline",
     cluster: "impressoras",
     role: "satelite",
-    publishedAt: "2026-08-27",
+    publishedAt: "2026-08-26",
     targetQueries: [
       "impressora offline como resolver",
       "impressora aparece offline no windows",
@@ -222,7 +222,7 @@ const WAVE_10D_BATCH_1: EditorialWaveEntry[] = [
     ownerId: "fila-impressao-spooler",
     cluster: "impressoras",
     role: "satelite",
-    publishedAt: "2026-08-27",
+    publishedAt: "2026-08-26",
     targetQueries: [
       "fila de impressao travada",
       "limpar fila de impressao windows",

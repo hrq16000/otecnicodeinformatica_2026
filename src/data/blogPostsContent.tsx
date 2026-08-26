@@ -12767,7 +12767,7 @@ bcdboot C:\\Windows /s S: /f UEFI`}</code></pre>
     title: "Internet lenta: é o provedor ou o seu roteador?",
     excerpt:
       "Como separar, com dois testes objetivos, a lentidão que vem da operadora da lentidão que nasce dentro de casa — e o que fazer em cada caso.",
-    date: "2026-08-27",
+    date: "2026-08-26",
     readTime: "9 min",
     category: "Redes e Wi-Fi",
     content: (
@@ -12833,7 +12833,7 @@ bcdboot C:\\Windows /s S: /f UEFI`}</code></pre>
     title: "Impressora offline: por que aparece assim e como resolver",
     excerpt:
       "O que o status \"offline\" realmente significa no Windows, a diferença entre endereço perdido e fila travada e a sequência de verificação que resolve sem reinstalar nada.",
-    date: "2026-08-27",
+    date: "2026-08-26",
     readTime: "9 min",
     category: "Procedimentos Técnicos",
     content: (
@@ -12890,7 +12890,7 @@ bcdboot C:\\Windows /s S: /f UEFI`}</code></pre>
     title: "Fila de impressão travada: como destravar o spooler do Windows",
     excerpt:
       "O que é o serviço de spooler, por que a fila trava com documentos presos em \"excluindo\" e o procedimento correto para limpar sem reinstalar a impressora.",
-    date: "2026-08-27",
+    date: "2026-08-26",
     readTime: "8 min",
     category: "Procedimentos Técnicos",
     content: (

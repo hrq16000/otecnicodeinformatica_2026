@@ -656,7 +656,7 @@ export const ARTICLE_SOURCE_MANIFEST: Record<string, ArticleSourceManifest> = {
     sources: [],
     technicalReview: "reviewed",
     factChecked: true,
-    factCheckedAt: "2026-08-27",
+    factCheckedAt: "2026-08-26",
     stableKnowledge: true,
     notes:
       "Revisão concluída (Onda 10C, Lote 2): protocolo de triagem por cabo × Wi-Fi perto × Wi-Fi longe, leitura da combinação de resultados, critérios objetivos para abrir chamado com a operadora e limites do que troca de plano ou repetidor resolve. Sem estatística inventada e sem promessa de velocidade. Conhecimento técnico estável — sem fonte visível.",
@@ -666,7 +666,7 @@ export const ARTICLE_SOURCE_MANIFEST: Record<string, ArticleSourceManifest> = {
     sources: [],
     technicalReview: "reviewed",
     factChecked: true,
-    factCheckedAt: "2026-08-27",
+    factCheckedAt: "2026-08-26",
     stableKnowledge: true,
     notes:
       "Revisão concluída (Onda 10C, Lote 2): significado real do status offline, empréstimo de endereço com prazo, conferência entre página de configuração do aparelho e porta cadastrada, reserva no roteador, isolamento de clientes/rede de visitantes e distinção frente a falha mecânica. Sem marca comercial e sem promessa. Conhecimento técnico estável — sem fonte visível.",
@@ -676,7 +676,7 @@ export const ARTICLE_SOURCE_MANIFEST: Record<string, ArticleSourceManifest> = {
     sources: [],
     technicalReview: "reviewed",
     factChecked: true,
-    factCheckedAt: "2026-08-27",
+    factCheckedAt: "2026-08-26",
     stableKnowledge: true,
     notes:
       "Revisão concluída (Onda 10C, Lote 2): papel do serviço de spooler, causa dos trabalhos corrompidos, procedimento de parada do serviço e limpeza da pasta de trabalhos, ressalva de ambiente gerenciado e critério para suspeitar do driver. Sem marca comercial e sem promessa. Conhecimento técnico estável — sem fonte visível.",
