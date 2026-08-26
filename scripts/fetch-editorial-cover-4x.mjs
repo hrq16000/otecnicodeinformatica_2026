@@ -181,6 +181,31 @@ const CURADORIA = [
     slug: "fila-de-impressao-travada-spooler-windows",
     commons: "File:Sharp MX-M465 of Aurora Office Equipment 20161029.jpg",
   },
+  // Onda 10C — Lote 3: armazenamento não detectado e áudio sem som.
+  {
+    slug: "hd-nao-e-reconhecido-na-bios-o-que-fazer",
+    commons: "File:2.5-inch SATA drive on top of a 3.5-inch SATA drive, close-up of data and power connectors.jpg",
+  },
+  {
+    slug: "ssd-nvme-nao-aparece-no-gerenciador-de-discos",
+    commons: "File:Samsung 960 EVO in M.2 slot 01.jpg",
+  },
+  {
+    slug: "disco-com-setores-defeituosos-smart-o-que-fazer",
+    commons: "File:Hard disk head on platter.jpg",
+  },
+  {
+    slug: "computador-sem-som-o-que-verificar",
+    commons: "File:Photo-audiojacks.jpg",
+  },
+  {
+    slug: "fone-de-ouvido-nao-e-reconhecido-no-pc",
+    commons: "File:Phone-connectors-labeled.jpg",
+  },
+  {
+    slug: "servico-de-audio-do-windows-nao-esta-em-execucao",
+    commons: "File:GIGABYTE GS-GC330UD (8357750354).jpg",
+  },
 ];
 
 /** Metadados + URL de uma imagem do Wikimedia Commons (licença real, sem IA). */
