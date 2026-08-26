@@ -1,12 +1,25 @@
 {
-  "geradoEm": "2026-08-26T03:17:21.664Z",
+  "geradoEm": "2026-08-26T04:23:57.468Z",
+  "entregaCanais": {
+    "enviado": false,
+    "motivo": "DELIVERY_DISABLED",
+    "slack": "NOT_CONFIGURED",
+    "email": "NOT_CONFIGURED"
+  },
+  "entrega": {
+    "estado": "DELIVERY_DISABLED",
+    "slack": "NOT_CONFIGURED",
+    "email": "NOT_CONFIGURED",
+    "enviados": 0,
+    "ignorados": 6
+  },
   "estado": {
     "/blog/limpar-arquivos-temporarios-windows": {
       "url": "/blog/limpar-arquivos-temporarios-windows",
       "previousState": "NO_DATA",
       "currentState": "NO_DATA",
       "internalState": "PUBLISHED",
-      "observedAt": "2026-08-26T03:17:21.664Z",
+      "observedAt": "2026-08-26T04:23:57.468Z",
       "lastAlertedTransition": "EDITORIAL:∅→PUBLISHED",
       "contentHash": "cba47ddd4ab081a6"
     },
@@ -15,7 +28,7 @@
       "previousState": "NO_DATA",
       "currentState": "NO_DATA",
       "internalState": "PUBLISHED",
-      "observedAt": "2026-08-26T03:17:21.664Z",
+      "observedAt": "2026-08-26T04:23:57.468Z",
       "lastAlertedTransition": "EDITORIAL:∅→PUBLISHED",
       "contentHash": "8ec249313054318c"
     },
@@ -24,7 +37,7 @@
       "previousState": "NO_DATA",
       "currentState": "NO_DATA",
       "internalState": "PUBLISHED",
-      "observedAt": "2026-08-26T03:17:21.664Z",
+      "observedAt": "2026-08-26T04:23:57.468Z",
       "lastAlertedTransition": "EDITORIAL:∅→PUBLISHED",
       "contentHash": "3f80566c863cdfed"
     },
@@ -33,7 +46,7 @@
       "previousState": "NO_DATA",
       "currentState": "NO_DATA",
       "internalState": "PUBLISHED",
-      "observedAt": "2026-08-26T03:17:21.664Z",
+      "observedAt": "2026-08-26T04:23:57.468Z",
       "lastAlertedTransition": "EDITORIAL:∅→PUBLISHED",
       "contentHash": "9392f7964190fc61"
     },
@@ -42,7 +55,7 @@
       "previousState": "NO_DATA",
       "currentState": "NO_DATA",
       "internalState": "PUBLISHED",
-      "observedAt": "2026-08-26T03:17:21.664Z",
+      "observedAt": "2026-08-26T04:23:57.468Z",
       "lastAlertedTransition": "EDITORIAL:∅→PUBLISHED",
       "contentHash": "8815a2f22052efd9"
     },
@@ -51,7 +64,7 @@
       "previousState": "NO_DATA",
       "currentState": "NO_DATA",
       "internalState": "PUBLISHED",
-      "observedAt": "2026-08-26T03:17:21.664Z",
+      "observedAt": "2026-08-26T04:23:57.468Z",
       "lastAlertedTransition": "EDITORIAL:∅→PUBLISHED",
       "contentHash": "ed7de44f66517ceb"
     },
@@ -60,7 +73,7 @@
       "previousState": "NO_DATA",
       "currentState": "NO_DATA",
       "internalState": "PUBLISHED",
-      "observedAt": "2026-08-26T03:17:21.664Z",
+      "observedAt": "2026-08-26T04:23:57.468Z",
       "lastAlertedTransition": "EDITORIAL:∅→PUBLISHED",
       "contentHash": "b0a31cf6858dda7c"
     },
@@ -69,7 +82,7 @@
       "previousState": "NO_DATA",
       "currentState": "NO_DATA",
       "internalState": "PUBLISHED",
-      "observedAt": "2026-08-26T03:17:21.664Z",
+      "observedAt": "2026-08-26T04:23:57.468Z",
       "lastAlertedTransition": "EDITORIAL:∅→PUBLISHED",
       "contentHash": "ba7d864b73e0953e"
     },
@@ -78,7 +91,7 @@
       "previousState": "NO_DATA",
       "currentState": "NO_DATA",
       "internalState": "PUBLISHED",
-      "observedAt": "2026-08-26T03:17:21.664Z",
+      "observedAt": "2026-08-26T04:23:57.468Z",
       "lastAlertedTransition": "EDITORIAL:∅→PUBLISHED",
       "contentHash": "0f9c121902a02c16"
     },
@@ -87,12 +100,138 @@
       "previousState": "NO_DATA",
       "currentState": "NO_DATA",
       "internalState": "PUBLISHED",
-      "observedAt": "2026-08-26T03:17:21.664Z",
+      "observedAt": "2026-08-26T04:23:57.468Z",
       "lastAlertedTransition": "EDITORIAL:∅→PUBLISHED",
-      "contentHash": "6c79ed86dd7ffd42"
+      "contentHash": "8cc6dd5a67fa4804"
+    },
+    "/blog/hd-nao-e-reconhecido-na-bios-o-que-fazer": {
+      "url": "/blog/hd-nao-e-reconhecido-na-bios-o-que-fazer",
+      "previousState": null,
+      "currentState": "NO_DATA",
+      "internalState": "PUBLISHED",
+      "observedAt": "2026-08-26T04:23:57.468Z",
+      "lastAlertedTransition": "EDITORIAL:∅→PUBLISHED",
+      "contentHash": "9989d12414405fc4"
+    },
+    "/blog/ssd-nvme-nao-aparece-no-gerenciador-de-discos": {
+      "url": "/blog/ssd-nvme-nao-aparece-no-gerenciador-de-discos",
+      "previousState": null,
+      "currentState": "NO_DATA",
+      "internalState": "PUBLISHED",
+      "observedAt": "2026-08-26T04:23:57.468Z",
+      "lastAlertedTransition": "EDITORIAL:∅→PUBLISHED",
+      "contentHash": "fed9e3bbc680d5d1"
+    },
+    "/blog/disco-com-setores-defeituosos-smart-o-que-fazer": {
+      "url": "/blog/disco-com-setores-defeituosos-smart-o-que-fazer",
+      "previousState": null,
+      "currentState": "NO_DATA",
+      "internalState": "PUBLISHED",
+      "observedAt": "2026-08-26T04:23:57.468Z",
+      "lastAlertedTransition": "EDITORIAL:∅→PUBLISHED",
+      "contentHash": "3800b7f1b8f151ca"
+    },
+    "/blog/computador-sem-som-o-que-verificar": {
+      "url": "/blog/computador-sem-som-o-que-verificar",
+      "previousState": null,
+      "currentState": "NO_DATA",
+      "internalState": "PUBLISHED",
+      "observedAt": "2026-08-26T04:23:57.468Z",
+      "lastAlertedTransition": "EDITORIAL:∅→PUBLISHED",
+      "contentHash": "1d78d8dad7047213"
+    },
+    "/blog/fone-de-ouvido-nao-e-reconhecido-no-pc": {
+      "url": "/blog/fone-de-ouvido-nao-e-reconhecido-no-pc",
+      "previousState": null,
+      "currentState": "NO_DATA",
+      "internalState": "PUBLISHED",
+      "observedAt": "2026-08-26T04:23:57.468Z",
+      "lastAlertedTransition": "EDITORIAL:∅→PUBLISHED",
+      "contentHash": "552ed3c657e37e0f"
+    },
+    "/blog/servico-de-audio-do-windows-nao-esta-em-execucao": {
+      "url": "/blog/servico-de-audio-do-windows-nao-esta-em-execucao",
+      "previousState": null,
+      "currentState": "NO_DATA",
+      "internalState": "PUBLISHED",
+      "observedAt": "2026-08-26T04:23:57.468Z",
+      "lastAlertedTransition": "EDITORIAL:∅→PUBLISHED",
+      "contentHash": "10177fd033fd980a"
     }
   },
   "alertas": [
+    {
+      "url": "/blog/hd-nao-e-reconhecido-na-bios-o-que-fazer",
+      "lote": "10C/3",
+      "owner": "disco-nao-detectado-bios",
+      "source": "EDITORIAL",
+      "eventType": "EDITORIAL_EVENT",
+      "previousState": null,
+      "currentState": "PUBLISHED",
+      "severity": "INFO",
+      "observedAt": "2026-08-26T04:23:57.468Z",
+      "contentHash": "9989d12414405fc4"
+    },
+    {
+      "url": "/blog/ssd-nvme-nao-aparece-no-gerenciador-de-discos",
+      "lote": "10C/3",
+      "owner": "disco-sem-inicializacao-windows",
+      "source": "EDITORIAL",
+      "eventType": "EDITORIAL_EVENT",
+      "previousState": null,
+      "currentState": "PUBLISHED",
+      "severity": "INFO",
+      "observedAt": "2026-08-26T04:23:57.468Z",
+      "contentHash": "fed9e3bbc680d5d1"
+    },
+    {
+      "url": "/blog/disco-com-setores-defeituosos-smart-o-que-fazer",
+      "lote": "10C/3",
+      "owner": "smart-setores-defeituosos",
+      "source": "EDITORIAL",
+      "eventType": "EDITORIAL_EVENT",
+      "previousState": null,
+      "currentState": "PUBLISHED",
+      "severity": "INFO",
+      "observedAt": "2026-08-26T04:23:57.468Z",
+      "contentHash": "3800b7f1b8f151ca"
+    },
+    {
+      "url": "/blog/computador-sem-som-o-que-verificar",
+      "lote": "10C/3",
+      "owner": "computador-sem-som",
+      "source": "EDITORIAL",
+      "eventType": "EDITORIAL_EVENT",
+      "previousState": null,
+      "currentState": "PUBLISHED",
+      "severity": "INFO",
+      "observedAt": "2026-08-26T04:23:57.468Z",
+      "contentHash": "1d78d8dad7047213"
+    },
+    {
+      "url": "/blog/fone-de-ouvido-nao-e-reconhecido-no-pc",
+      "lote": "10C/3",
+      "owner": "fone-nao-reconhecido",
+      "source": "EDITORIAL",
+      "eventType": "EDITORIAL_EVENT",
+      "previousState": null,
+      "currentState": "PUBLISHED",
+      "severity": "INFO",
+      "observedAt": "2026-08-26T04:23:57.468Z",
+      "contentHash": "552ed3c657e37e0f"
+    },
+    {
+      "url": "/blog/servico-de-audio-do-windows-nao-esta-em-execucao",
+      "lote": "10C/3",
+      "owner": "servico-de-audio-windows",
+      "source": "EDITORIAL",
+      "eventType": "EDITORIAL_EVENT",
+      "previousState": null,
+      "currentState": "PUBLISHED",
+      "severity": "INFO",
+      "observedAt": "2026-08-26T04:23:57.468Z",
+      "contentHash": "10177fd033fd980a"
+    },
     {
       "url": "/blog/limpar-arquivos-temporarios-windows",
       "lote": "10C/0",
@@ -213,9 +352,5 @@
       "observedAt": "2026-08-26T03:16:10.586Z",
       "contentHash": "6c79ed86dd7ffd42"
     }
-  ],
-  "entregaCanais": {
-    "enviado": false,
-    "motivo": "sem webhook"
-  }
+  ]
 }

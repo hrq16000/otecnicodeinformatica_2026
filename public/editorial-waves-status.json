@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-08-26T03:17:21.664Z",
+  "geradoEm": "2026-08-26T04:23:57.468Z",
   "site": "sc-domain:otecnicodeinformatica.com.br",
   "disponivel": true,
   "lotes": [
@@ -18,6 +18,12 @@
     {
       "lote": "10C/2",
       "total": 3,
+      "indexadas": 0,
+      "cobertura": 0
+    },
+    {
+      "lote": "10C/3",
+      "total": 6,
       "indexadas": 0,
       "cobertura": 0
     }
@@ -259,7 +265,157 @@
       "role": "satelite",
       "publishedAt": "2026-08-26",
       "internalState": "PUBLISHED",
-      "contentHash": "6c79ed86dd7ffd42",
+      "contentHash": "8cc6dd5a67fa4804",
+      "sitemapLastmod": null,
+      "indexNowSentAt": null,
+      "google": {
+        "status": "NO_DATA",
+        "verdict": "NEUTRAL",
+        "coverageState": "URL is unknown to Google",
+        "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+        "indexingState": "INDEXING_STATE_UNSPECIFIED",
+        "ultimoCrawl": null,
+        "canonicalGoogle": null,
+        "canonicalDeclarado": null
+      }
+    },
+    {
+      "wave": "10C",
+      "batch": "3",
+      "lote": "10C/3",
+      "url": "/blog/hd-nao-e-reconhecido-na-bios-o-que-fazer",
+      "urlAbsoluta": "https://otecnicodeinformatica.com.br/blog/hd-nao-e-reconhecido-na-bios-o-que-fazer",
+      "ownerId": "disco-nao-detectado-bios",
+      "cluster": "armazenamento-nao-detectado",
+      "role": "pilar",
+      "publishedAt": "2026-08-26",
+      "internalState": "PUBLISHED",
+      "contentHash": "9989d12414405fc4",
+      "sitemapLastmod": null,
+      "indexNowSentAt": null,
+      "google": {
+        "status": "NO_DATA",
+        "verdict": "NEUTRAL",
+        "coverageState": "URL is unknown to Google",
+        "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+        "indexingState": "INDEXING_STATE_UNSPECIFIED",
+        "ultimoCrawl": null,
+        "canonicalGoogle": null,
+        "canonicalDeclarado": null
+      }
+    },
+    {
+      "wave": "10C",
+      "batch": "3",
+      "lote": "10C/3",
+      "url": "/blog/ssd-nvme-nao-aparece-no-gerenciador-de-discos",
+      "urlAbsoluta": "https://otecnicodeinformatica.com.br/blog/ssd-nvme-nao-aparece-no-gerenciador-de-discos",
+      "ownerId": "disco-sem-inicializacao-windows",
+      "cluster": "armazenamento-nao-detectado",
+      "role": "satelite",
+      "publishedAt": "2026-08-26",
+      "internalState": "PUBLISHED",
+      "contentHash": "fed9e3bbc680d5d1",
+      "sitemapLastmod": null,
+      "indexNowSentAt": null,
+      "google": {
+        "status": "NO_DATA",
+        "verdict": "NEUTRAL",
+        "coverageState": "URL is unknown to Google",
+        "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+        "indexingState": "INDEXING_STATE_UNSPECIFIED",
+        "ultimoCrawl": null,
+        "canonicalGoogle": null,
+        "canonicalDeclarado": null
+      }
+    },
+    {
+      "wave": "10C",
+      "batch": "3",
+      "lote": "10C/3",
+      "url": "/blog/disco-com-setores-defeituosos-smart-o-que-fazer",
+      "urlAbsoluta": "https://otecnicodeinformatica.com.br/blog/disco-com-setores-defeituosos-smart-o-que-fazer",
+      "ownerId": "smart-setores-defeituosos",
+      "cluster": "armazenamento-nao-detectado",
+      "role": "satelite",
+      "publishedAt": "2026-08-26",
+      "internalState": "PUBLISHED",
+      "contentHash": "3800b7f1b8f151ca",
+      "sitemapLastmod": null,
+      "indexNowSentAt": null,
+      "google": {
+        "status": "NO_DATA",
+        "verdict": "NEUTRAL",
+        "coverageState": "URL is unknown to Google",
+        "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+        "indexingState": "INDEXING_STATE_UNSPECIFIED",
+        "ultimoCrawl": null,
+        "canonicalGoogle": null,
+        "canonicalDeclarado": null
+      }
+    },
+    {
+      "wave": "10C",
+      "batch": "3",
+      "lote": "10C/3",
+      "url": "/blog/computador-sem-som-o-que-verificar",
+      "urlAbsoluta": "https://otecnicodeinformatica.com.br/blog/computador-sem-som-o-que-verificar",
+      "ownerId": "computador-sem-som",
+      "cluster": "audio",
+      "role": "pilar",
+      "publishedAt": "2026-08-26",
+      "internalState": "PUBLISHED",
+      "contentHash": "1d78d8dad7047213",
+      "sitemapLastmod": null,
+      "indexNowSentAt": null,
+      "google": {
+        "status": "NO_DATA",
+        "verdict": "NEUTRAL",
+        "coverageState": "URL is unknown to Google",
+        "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+        "indexingState": "INDEXING_STATE_UNSPECIFIED",
+        "ultimoCrawl": null,
+        "canonicalGoogle": null,
+        "canonicalDeclarado": null
+      }
+    },
+    {
+      "wave": "10C",
+      "batch": "3",
+      "lote": "10C/3",
+      "url": "/blog/fone-de-ouvido-nao-e-reconhecido-no-pc",
+      "urlAbsoluta": "https://otecnicodeinformatica.com.br/blog/fone-de-ouvido-nao-e-reconhecido-no-pc",
+      "ownerId": "fone-nao-reconhecido",
+      "cluster": "audio",
+      "role": "satelite",
+      "publishedAt": "2026-08-26",
+      "internalState": "PUBLISHED",
+      "contentHash": "552ed3c657e37e0f",
+      "sitemapLastmod": null,
+      "indexNowSentAt": null,
+      "google": {
+        "status": "NO_DATA",
+        "verdict": "NEUTRAL",
+        "coverageState": "URL is unknown to Google",
+        "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+        "indexingState": "INDEXING_STATE_UNSPECIFIED",
+        "ultimoCrawl": null,
+        "canonicalGoogle": null,
+        "canonicalDeclarado": null
+      }
+    },
+    {
+      "wave": "10C",
+      "batch": "3",
+      "lote": "10C/3",
+      "url": "/blog/servico-de-audio-do-windows-nao-esta-em-execucao",
+      "urlAbsoluta": "https://otecnicodeinformatica.com.br/blog/servico-de-audio-do-windows-nao-esta-em-execucao",
+      "ownerId": "servico-de-audio-windows",
+      "cluster": "audio",
+      "role": "satelite",
+      "publishedAt": "2026-08-26",
+      "internalState": "PUBLISHED",
+      "contentHash": "10177fd033fd980a",
       "sitemapLastmod": null,
       "indexNowSentAt": null,
       "google": {
@@ -274,5 +430,5 @@
       }
     }
   ],
-  "alertasNovos": 0
+  "alertasNovos": 6
 }
