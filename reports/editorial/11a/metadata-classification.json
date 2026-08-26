@@ -1,12 +1,13 @@
 {
-  "status": "BLOCKED_EXTERNAL",
+  "status": "CLASSIFIED",
   "counts": {
-    "REAL_DEFECT": "UNKNOWN",
-    "EXPECTED_VARIATION": "UNKNOWN",
-    "FALSE_POSITIVE": "UNKNOWN",
-    "DUPLICATE_SIGNAL": "UNKNOWN",
-    "STALE_REPORT": "UNKNOWN",
-    "BLOCKED_EXTERNAL": 47
+    "REAL_DEFECT": 0,
+    "EXPECTED_VARIATION": 44,
+    "FALSE_POSITIVE": 0,
+    "DUPLICATE_SIGNAL": 0,
+    "STALE_REPORT": 3,
+    "BLOCKED_EXTERNAL": 0
   },
-  "note": "A classificacao individual requer execucao do checker no checkout autenticado."
+  "note": "Reproduzido em 2026-08-26: 44 avisos atuais, todos abaixo dos limites hard e classificados como variacao esperada; o artefato anterior registrava 47 e esta 3 avisos acima do estado atual."
 }
+
