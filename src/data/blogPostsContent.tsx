@@ -10569,6 +10569,22 @@ crontab -e
         </ul>
         <p>Trocar o roteador nem sempre resolve: se a causa é a operadora, o cabeamento ou o posicionamento, o aparelho novo repete o mesmo problema. Por isso o diagnóstico vem antes da compra.</p>
 
+        <h2>Raciocínio diagnóstico: onde realmente está o problema?</h2>
+        <p>O diagnóstico fica mais confiável quando três variáveis são comparadas sem mudar todas ao mesmo tempo: <strong>caminho de entrada</strong> (teste por cabo), <strong>ambiente</strong> (Wi‑Fi perto e longe do roteador) e <strong>dispositivo</strong> (dois aparelhos diferentes). O objetivo não é encontrar um número perfeito, mas observar qual variável acompanha a falha.</p>
+        <table>
+          <thead><tr><th>Observação</th><th>Hipótese mais forte</th><th>O que ainda precisa ser excluído</th></tr></thead>
+          <tbody>
+            <tr><td>Cabo ruim e dois celulares ruins perto do roteador</td><td>Provedor, modem ou enlace</td><td>Horário, consumo simultâneo e sinal da operadora</td></tr>
+            <tr><td>Cabo bom e Wi‑Fi bom perto, ruim longe</td><td>Cobertura, obstáculos ou interferência</td><td>Posição, banda usada e ponto adicional</td></tr>
+            <tr><td>Um aparelho ruim e outros normais</td><td>Dispositivo cliente</td><td>Driver, economia de energia, antena e atualização</td></tr>
+            <tr><td>Todos caem e o roteador reinicia</td><td>Fonte, aquecimento ou roteador</td><td>Firmware e estabilidade elétrica</td></tr>
+            <tr><td>Conecta, mas chamadas travam</td><td>Latência, perda de pacotes ou saturação</td><td>Upload ocupado e qualidade do enlace</td></tr>
+          </tbody>
+        </table>
+
+        <h2>Velocidade, latência e estabilidade não são a mesma coisa</h2>
+        <p>Um teste pode mostrar muitos megabits e ainda assim uma videochamada congelar. Velocidade mede quanto cabe no caminho; latência mede quanto tempo cada pacote leva; perda e variação de latência explicam cortes, robôs em chamadas e jogos instáveis. Registre os três comportamentos separadamente e não aceite trocar o plano como resposta automática para qualquer sintoma.</p>
+
         <h2>Quando procurar atendimento técnico</h2>
         <p>Se as verificações não resolveram, ou se a casa é grande e tem pontos cegos, uma análise no local identifica onde o sinal se perde e o que realmente faz diferença — do posicionamento a um sistema mesh bem dimensionado. Casos mais simples podem até ser orientados remotamente.</p>
 
@@ -10688,6 +10704,18 @@ crontab -e
 
         <h2>Limites de segurança</h2>
         <p>Configuração correta reduz risco, mas não garante velocidade: a taxa contratada, a qualidade do cabeamento interno e a distância continuam mandando no resultado. Restaurar o padrão de fábrica apaga inclusive os dados de autenticação da operadora em equipamentos combinados — confirme antes como reconfigurá-los. E nenhum ajuste no painel corrige equipamento com fonte defeituosa ou porta danificada: quedas que acontecem sempre no mesmo horário, com reinício automático, apontam para hardware, não para configuração.</p>
+
+        <h2>Mesh: como saber se o segundo ponto está ajudando</h2>
+        <p>Um sistema mesh não deve ser avaliado apenas pelo número de barras. Compare o mesmo aparelho no mesmo cômodo antes e depois, verifique se o segundo ponto recebe sinal forte do principal e confirme se os pontos estão ligados por cabo quando a casa exige throughput alto. Se o satélite foi instalado em uma área onde o sinal já chega fraco, ele apenas retransmite uma conexão ruim. O resultado precisa ser medido no local de uso, durante uma chamada ou transferência real, não só ao lado do equipamento.</p>
+
+        <h2>Segurança básica da rede em quatro verificações</h2>
+        <ol>
+          <li>senha de administração diferente da senha do Wi‑Fi e sem credencial de fábrica;</li>
+          <li>WPA3 ou WPA2-AES, com WEP, TKIP e rede aberta desativados;</li>
+          <li>firmware atualizado a partir do painel oficial do fabricante;</li>
+          <li>rede de visitantes para pessoas e dispositivos que não precisam acessar computadores, impressoras ou armazenamento da casa.</li>
+        </ol>
+        <p>Esses ajustes reduzem exposição, mas não substituem backup. Um roteador protegido não impede que um arquivo seja apagado por engano, por falha de disco ou por malware em um computador autorizado.</p>
 
         <h2>Termos que aparecem no painel</h2>
         <ul>
@@ -12823,6 +12851,18 @@ bcdboot C:\\Windows /s S: /f UEFI`}</code></pre>
         <h2>O que não resolve</h2>
         <p>Trocar o plano por um mais rápido não corrige rede interna: se o Wi-Fi já não entrega o que existe hoje, ele não entregará o dobro amanhã. Repetidor mal posicionado costuma piorar, porque repete um sinal fraco. E "limpar cache" ou reinstalar o navegador não tem relação com a velocidade do enlace.</p>
 
+        <h2>Como provar provedor × rede local × dispositivo</h2>
+        <p>Faça um pequeno diário de diagnóstico em vez de guardar apenas a média do aplicativo de teste. Para cada medição, registre data, hora, conexão por cabo ou Wi‑Fi, cômodo, aparelho usado, velocidade de download e upload, latência e se havia alguém usando a rede. O padrão das linhas é mais útil que um resultado isolado.</p>
+        <ol>
+          <li><strong>Provedor:</strong> cabo direto no roteador, mais de um horário, sem consumo paralelo. Se cai assim, a rede sem fio não é a primeira suspeita.</li>
+          <li><strong>Rede local:</strong> cabo estável, Wi‑Fi perto estável e Wi‑Fi longe ruim. O problema nasce entre o roteador e o cômodo.</li>
+          <li><strong>Dispositivo:</strong> só um computador ou celular falha enquanto outro funciona no mesmo lugar. Compare banda, driver, economia de energia e adaptador.</li>
+          <li><strong>Congestionamento:</strong> a velocidade despenca ou a latência sobe apenas quando alguém faz upload, backup ou streaming. O enlace pode estar saudável, mas saturado.</li>
+        </ol>
+
+        <h2>Teste de estabilidade, não apenas de velocidade</h2>
+        <p>Durante uma queda, observe se o aparelho continua conectado ao nome da rede, se perde apenas a internet ou se desaparece da rede local. Se a conexão Wi‑Fi permanece e só a navegação falha, olhe para o roteador, DNS ou provedor. Se o aparelho desconecta do SSID, investigue rádio, interferência, driver ou cobertura. Essa distinção evita chamar a operadora para um problema que acontece antes do tráfego sair de casa.</p>
+
         <h2>Quando chamar um técnico</h2>
         <p>Faz sentido chamar quando os testes indicam rede interna e a casa exige cabeamento, ponto adicional ou substituição de equipamento — planejamento que evita comprar aparelho errado. O serviço está em <Link to="/servicos/redes-e-wifi" className="text-accent">redes e Wi-Fi</Link>, e o atendimento no endereço em <Link to="/atendimento-domicilio" className="text-accent">atendimento a domicílio</Link>. Se a instabilidade for permanente, comece pela leitura de <Link to="/problemas/wifi-instavel" className="text-accent">Wi-Fi instável</Link>.</p>
       </>
@@ -13377,6 +13417,14 @@ bcdboot C:\\Windows /s S: /f UEFI`}</code></pre>
         <h2>Quando parar</h2>
         <p>Pare diante de sinal de dano físico: queda recente, contato com líquido, moldura da tela deslocada, câmera que some ao mover a tampa. Cabo de câmera passa pela dobradiça e a substituição exige desmontagem da tela — procedimento que não vale improviso.</p>
 
+        <h2>Que evidência registrar antes do atendimento</h2>
+        <p>Anote o modelo do notebook ou da webcam, o aplicativo em que a falha apareceu, se o aplicativo Câmera do Windows funcionou e o que aparece no Gerenciador de Dispositivos. Se a falha for intermitente, registre quando ela acontece: ao abrir a tampa, depois de alguns minutos ou somente em uma reunião. Essa sequência vale mais para o diagnóstico do que a conclusão "a câmera queimou".</p>
+        <ul>
+          <li>fotografe a mensagem de erro sem expor documentos ou dados pessoais;</li>
+          <li>anote se houve atualização, queda, líquido ou desmontagem antes do problema;</li>
+          <li>não repita desmontagens ou instalações de drivers sem registrar o resultado de cada tentativa.</li>
+        </ul>
+
         <h2>Quando chamar um técnico</h2>
         <p>Chame quando a câmera não aparecer em nenhuma condição, quando sumir de forma intermitente ou quando o driver oficial não instalar. A avaliação começa em <Link to="/diagnostico-tecnico" className="text-accent">diagnóstico técnico</Link> e o reparo do módulo entra em <Link to="/servicos/manutencao-de-notebook" className="text-accent">manutenção de notebook</Link>.</p>
       </>
@@ -13445,6 +13493,9 @@ bcdboot C:\\Windows /s S: /f UEFI`}</code></pre>
           <li>Deixar o acesso global ligado achando que isso é obrigatório: cada permissão concedida é uma decisão de privacidade real, com impacto quando um site desconhecido pede a câmera.</li>
         </ul>
 
+        <h2>Como confirmar que a permissão foi corrigida</h2>
+        <p>Não basta ligar uma chave e encerrar o teste. Feche e reabra o aplicativo, confirme a câmera no painel de vídeo e faça uma chamada de teste sem transmitir conteúdo sensível. Depois, revise quais sites continuam autorizados. Se a configuração voltar ao estado anterior, registre o horário, o nome do aplicativo e se o computador é gerenciado por empresa: isso diferencia uma preferência local de uma política aplicada pelo ambiente.</p>
+
         <h2>Quando chamar um técnico</h2>
         <p>Chame quando as permissões voltarem sozinhas, quando a tela de privacidade estiver bloqueada por política em máquina pessoal ou quando o comportamento vier acompanhado de outras alterações não solicitadas — cenário que merece <Link to="/diagnostico-tecnico" className="text-accent">diagnóstico técnico</Link>.</p>
       </>
@@ -13502,6 +13553,9 @@ bcdboot C:\\Windows /s S: /f UEFI`}</code></pre>
           <li>Empilhar hub em hub para ganhar portas com periféricos de vídeo.</li>
           <li>Abrir a carcaça da câmera antes do teste cruzado em outro computador.</li>
         </ul>
+
+        <h2>Teste de controle para separar a máquina da webcam</h2>
+        <p>Depois de testar outra porta, faça apenas um teste cruzado por vez: mesma webcam em outro computador ou outra webcam conhecida na mesma máquina. Registre o resultado de cada combinação. Se duas webcams falham na mesma máquina, a investigação volta para USB, driver e permissões; se apenas uma falha em qualquer computador, o acessório ou o cabo passa a ser o principal suspeito. Esse registro evita comprar uma câmera nova para corrigir uma porta defeituosa.</p>
 
         <h2>Quando chamar um técnico</h2>
         <p>Chame quando o Gerenciador acusar erro de controlador USB, quando várias portas pararem de funcionar ao mesmo tempo ou quando o computador reiniciar ao conectar o periférico. Esses sinais apontam para a placa, não para a câmera — avaliação em <Link to="/diagnostico-tecnico" className="text-accent">diagnóstico técnico</Link> e reparo em <Link to="/servicos/manutencao-de-computador" className="text-accent">manutenção de computador</Link>.</p>
@@ -13593,6 +13647,9 @@ bcdboot C:\\Windows /s S: /f UEFI`}</code></pre>
           <li>Formatar como primeira solução.</li>
         </ul>
 
+        <h2>Registro mínimo do erro do Windows Update</h2>
+        <p>Antes de repetir comandos, anote a versão do Windows, o código exibido, a porcentagem em que parou, o estágio — procura, download, instalação ou reinicialização — e o horário da tentativa. Registre também espaço livre, atividade de disco e se a máquina voltou ao estado anterior. Dois computadores podem exibir o mesmo código em estágios diferentes, e o estágio é o dado que orienta a próxima ação.</p>
+
         <h2>Quando parar</h2>
         <p>Pare diante de reinícios em laço, falha de inicialização, pedido inesperado de chave de recuperação de criptografia de disco ou corrupção que retorna a cada tentativa. Antes de qualquer reparo profundo, garanta cópia dos arquivos importantes — veja <Link to="/servicos/backup-para-empresas" className="text-accent">backup de dados</Link>.</p>
 
@@ -13661,6 +13718,9 @@ bcdboot C:\\Windows /s S: /f UEFI`}</code></pre>
           <li>Desabilitar serviços do Update depois do procedimento "para não voltar a acontecer".</li>
           <li>Alterar permissões de pastas do sistema para conseguir apagar algo que está em uso.</li>
         </ul>
+
+        <h2>Como saber se o cache era realmente a causa</h2>
+        <p>Considere o procedimento bem-sucedido somente se a fila voltar a baixar ou instalar e o comportamento permanecer estável depois de uma nova reinicialização. Se o mesmo erro surgir no mesmo estágio, o cache não era a causa principal. Preserve o nome original da pasta antiga até confirmar o resultado e registre quais serviços foram parados e reiniciados; isso torna a intervenção reversível e facilita a continuidade do diagnóstico.</p>
 
         <h2>Quando chamar um técnico</h2>
         <p>Chame quando os serviços não pararem, quando o erro retornar idêntico depois da recriação do cache ou quando a máquina começar a apresentar lentidão e travamento junto com a falha — sinal de que o assunto é maior que o Update. Avaliação em <Link to="/diagnostico-tecnico" className="text-accent">diagnóstico técnico</Link>.</p>
@@ -13735,6 +13795,9 @@ bcdboot C:\\Windows /s S: /f UEFI`}</code></pre>
           <li>Rodar scripts desconhecidos de reparo enquanto a máquina está instável.</li>
           <li>Formatar antes de garantir cópia dos arquivos.</li>
         </ul>
+
+        <h2>O que registrar depois da reversão</h2>
+        <p>Quando o Windows voltar a iniciar, não tente imediatamente a mesma atualização. Anote o código do histórico, a atualização ou driver envolvido, o espaço livre e se havia periféricos conectados. Faça uma cópia dos arquivos importantes e observe se o sistema permanece estável em um reinício normal. Essa janela de observação ajuda a distinguir uma reversão isolada de uma falha que já está afetando a inicialização.</p>
 
         <h2>Quando parar</h2>
         <p>Pare quando a máquina entrar em laço de reinício, quando a inicialização falhar, quando surgir pedido de chave de recuperação de criptografia de disco ou quando existirem dados importantes sem cópia. A prioridade passa a ser preservar os arquivos — veja <Link to="/servicos/backup-para-empresas" className="text-accent">backup de dados</Link> e <Link to="/servicos/recuperacao-de-dados" className="text-accent">recuperação de dados</Link>.</p>

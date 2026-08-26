@@ -62,6 +62,51 @@ const CHECKLIST = [
   "Não instale otimizadores baixados por anúncio nem acumule dois antivírus ao mesmo tempo.",
 ];
 
+const FUNDAMENTOS_NACIONAIS = [
+  {
+    titulo: "Hardware e componentes",
+    desc: "Entenda o papel de processador, memória, armazenamento, fonte, placa-mãe e periféricos antes de comprar ou trocar qualquer peça.",
+    to: "/equipamentos",
+    link: "Explorar equipamentos",
+  },
+  {
+    titulo: "Windows, Linux e sistemas operacionais",
+    desc: "Aprenda a separar falhas de sistema, drivers, atualizações e aplicativos de problemas físicos do equipamento.",
+    to: "/blog",
+    link: "Ver artigos de sistema",
+  },
+  {
+    titulo: "Redes, Wi-Fi e internet",
+    desc: "Diagnostique cobertura, interferência, cabeamento e conexão sem confundir um problema de rede com defeito no computador.",
+    to: "/servicos/redes-e-wifi",
+    link: "Abrir pilar de redes",
+  },
+  {
+    titulo: "Segurança digital",
+    desc: "Boas práticas para contas, atualizações, malware, privacidade e uso seguro de computadores em casa ou no trabalho.",
+    to: "/seguranca-dos-dados",
+    link: "Abrir pilar de segurança",
+  },
+  {
+    titulo: "Backup e armazenamento",
+    desc: "Escolha onde guardar arquivos, verifique se o backup realmente pode ser restaurado e reconheça sinais de risco em um disco.",
+    to: "/servicos/recuperacao-de-dados",
+    link: "Ver dados e recuperação",
+  },
+  {
+    titulo: "Manutenção e diagnóstico",
+    desc: "Use sintomas, contexto e testes seguros para chegar à próxima decisão sem trocar peças por tentativa.",
+    to: PATH,
+    link: "Ler método de diagnóstico",
+  },
+  {
+    titulo: "Informática para trabalho, concursos e iniciantes",
+    desc: "Uma trilha prática para quem precisa usar melhor o computador, estudar, trabalhar e resolver dúvidas básicas com autonomia.",
+    to: "/blog/informatica-basica",
+    link: "Começar pelos fundamentos",
+  },
+];
+
 const UPGRADES = [
   {
     titulo: "SSD no lugar do HD mecânico",
@@ -229,6 +274,7 @@ const GuiaTecnicoInformatica = () => {
         <PageTableOfContents
           className="mb-12"
           items={[
+            { id: "fundamentos", label: "Fundamentos nacionais" },
             { id: "familias", label: "As seis famílias de falha" },
             { id: "checklist", label: "Checklist antes de chamar o técnico" },
             { id: "upgrades", label: "O que realmente melhora o desempenho" },
@@ -239,6 +285,43 @@ const GuiaTecnicoInformatica = () => {
             { id: "faq", label: "Perguntas frequentes" },
           ]}
         />
+
+        <section id="fundamentos" className="mb-14 scroll-mt-24">
+          <div className="mb-6 max-w-3xl">
+            <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-accent">
+              Base nacional · sem recorte de cidade
+            </p>
+            <h2 className="mb-3 text-2xl font-bold text-foreground sm:text-3xl">
+              Fundamentos de informática para aprender, trabalhar e decidir melhor
+            </h2>
+            <p className="text-muted-foreground">
+              Esta é a porta de entrada para os conteúdos nacionais do site. Cada pilar reúne um
+              guia principal, artigos de apoio, checklists, comparativos e ferramentas quando houver
+              base técnica para isso. O conteúdo explica o problema em qualquer lugar do Brasil;
+              páginas de atendimento local só aparecem quando existe operação e evidência própria.
+            </p>
+          </div>
+          <div className="grid gap-4 sm:grid-cols-2">
+            {FUNDAMENTOS_NACIONAIS.map((fundamento) => (
+              <article key={fundamento.titulo} className="flex h-full flex-col rounded-xl border border-border bg-card p-5">
+                <h3 className="mb-2 font-heading text-base font-bold text-foreground">{fundamento.titulo}</h3>
+                <p className="mb-4 text-sm leading-relaxed text-muted-foreground">{fundamento.desc}</p>
+                <Link
+                  to={fundamento.to}
+                  className="mt-auto inline-flex items-center gap-1.5 text-sm font-semibold text-accent hover:underline"
+                >
+                  {fundamento.link} <ArrowRight className="h-4 w-4" />
+                </Link>
+              </article>
+            ))}
+          </div>
+          <div className="mt-6 rounded-xl border border-accent/30 bg-accent/5 p-5 text-sm text-muted-foreground">
+            <strong className="text-foreground">Como os clusters vão crescer:</strong> primeiro o
+            pilar responde ao tema amplo; depois entram dúvidas específicas, comparativos, glossário
+            e checklists ligados por contexto. Nenhuma página nova deve existir apenas para repetir
+            texto ou trocar o nome de uma cidade.
+          </div>
+        </section>
 
         <section id="familias" className="mb-12 scroll-mt-24">
           <h2 className="mb-4 text-2xl font-bold text-foreground">As seis famílias de falha</h2>
