@@ -1,0 +1,7 @@
+{
+  "wave": "11A",
+  "inheritedRecommendation": "FIX+OBSERVE",
+  "decision": "DEFER",
+  "candidates": [],
+  "reason": "Auditoria 10C nao autorizou EXPAND; GSC sem evidencia suficiente de crawl/indexacao."
+}
