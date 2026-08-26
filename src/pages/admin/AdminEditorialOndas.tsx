@@ -239,7 +239,164 @@ export default function AdminEditorialOndas() {
               </tbody>
             </table>
           </div>
+
+          <section className="mt-8">
+            <h2 className="mb-2 text-lg font-semibold">Alertas recentes (mudança de estado)</h2>
+            <p className="mb-3 text-xs text-muted-foreground">
+              Disparados só na transição (edge-triggered) e deduplicados. Estado interno
+              (PUBLISHED) é do pipeline editorial; o Google não informa esse campo.
+            </p>
+            {alertasDoLote.length === 0 ? (
+              <Card className="p-4 text-sm text-muted-foreground">
+                Nenhuma mudança de estado registrada para este filtro.
+              </Card>
+            ) : (
+              <div className="overflow-x-auto rounded-lg border">
+                <table className="w-full text-sm">
+                  <thead className="bg-muted/50 text-left">
+                    <tr>
+                      <th className="p-3">Quando</th>
+                      <th className="p-3">URL</th>
+                      <th className="p-3">Fonte</th>
+                      <th className="p-3">Transição</th>
+                      <th className="p-3">Severidade</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {alertasDoLote.map((a) => (
+                      <tr key={`${a.url}-${a.observedAt}-${a.eventType}`} className="border-t">
+                        <td className="p-3 whitespace-nowrap">{fmt(a.observedAt)}</td>
+                        <td className="p-3">{a.url}</td>
+                        <td className="p-3 whitespace-nowrap">{a.source}</td>
+                        <td className="p-3 whitespace-nowrap">
+                          {(a.previousState ?? "∅") + " → " + a.currentState}
+                        </td>
+                        <td className="p-3">
+                          <Badge variant="outline" className={COR_SEV[a.severity] ?? COR_SEV.INFO}>
+                            {a.severity}
+                          </Badge>
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            )}
+          </section>
+
+          <section className="mt-8">
+            <h2 className="mb-2 text-lg font-semibold">Assets &amp; licenciamento</h2>
+            {!assets ? (
+              <Card className="p-4 text-sm text-muted-foreground">
+                Rode <code>npm run check:editorial-assets</code> para gerar o inventário.
+              </Card>
+            ) : (
+              <>
+                <div className="mb-3 grid gap-3 sm:grid-cols-4">
+                  {[
+                    ["Assets", assets.total],
+                    ["PASS", assets.pass],
+                    ["Sem licença", assets.semLicenca],
+                    ["Sem atribuição", assets.semAtribuicao],
+                  ].map(([rotulo, valor]) => (
+                    <Card key={String(rotulo)} className="p-4">
+                      <p className="text-xs uppercase text-muted-foreground">{rotulo}</p>
+                      <p className="mt-1 text-2xl font-semibold">{valor}</p>
+                    </Card>
+                  ))}
+                </div>
+                {assets.unregistered.length > 0 && (
+                  <Card className="mb-3 border-destructive/40 p-4 text-sm">
+                    Asset sem registro de proveniência: {assets.unregistered.join(", ")}
+                  </Card>
+                )}
+                <div className="overflow-x-auto rounded-lg border">
+                  <table className="w-full text-sm">
+                    <thead className="bg-muted/50 text-left">
+                      <tr>
+                        <th className="p-3">Arquivo</th>
+                        <th className="p-3">Origem</th>
+                        <th className="p-3">Licença</th>
+                        <th className="p-3">Autor / atribuição</th>
+                        <th className="p-3">Formatos</th>
+                        <th className="p-3">Hash</th>
+                        <th className="p-3">Gate</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {assets.assets.map((a) => (
+                        <tr key={a.localPath} className="border-t align-top">
+                          <td className="p-3">
+                            {a.localPath}
+                            <p className="text-xs text-muted-foreground">owner: {a.owner}</p>
+                          </td>
+                          <td className="p-3 whitespace-nowrap">
+                            {a.originalUrl ? (
+                              <a
+                                className="underline underline-offset-2"
+                                href={a.originalUrl}
+                                target="_blank"
+                                rel="noreferrer"
+                              >
+                                {a.sourceType}
+                              </a>
+                            ) : (
+                              a.sourceType
+                            )}
+                          </td>
+                          <td className="p-3 whitespace-nowrap">
+                            {a.licenseUrl ? (
+                              <a
+                                className="underline underline-offset-2"
+                                href={a.licenseUrl}
+                                target="_blank"
+                                rel="noreferrer"
+                              >
+                                {a.license}
+                              </a>
+                            ) : (
+                              a.license
+                            )}
+                          </td>
+                          <td className="p-3 text-xs">
+                            {a.author ?? "—"}
+                            {a.attributionRequired && (
+                              <p className="text-muted-foreground">{a.attributionText ?? "—"}</p>
+                            )}
+                          </td>
+                          <td className="p-3 text-xs">
+                            {a.formats.map((f) => f.split(".").pop()).join(" · ")}
+                          </td>
+                          <td className="p-3 font-mono text-xs">
+                            {a.fileHash?.replace("sha256:", "").slice(0, 12) ?? "—"}
+                          </td>
+                          <td className="p-3">
+                            <Badge
+                              variant="outline"
+                              className={
+                                a.resultado === "PASS"
+                                  ? "bg-emerald-500/15 text-emerald-400 border-emerald-500/30"
+                                  : a.resultado === "WARN"
+                                    ? COR_SEV.WARNING
+                                    : COR_SEV.CRITICAL
+                              }
+                            >
+                              {a.resultado}
+                            </Badge>
+                            {a.falhas.length > 0 && (
+                              <p className="mt-1 text-xs text-muted-foreground">{a.falhas.join(", ")}</p>
+                            )}
+                          </td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              </>
+            )}
+          </section>
         </>
+
       )}
     </main>
   );
