@@ -35,7 +35,7 @@ const STOP = new Set(
   // quase todos os títulos de serviço e geravam matches falsos — ex.: a página
   // de notebook molhado linkando conserto de TV só por compartilhar
   // "reparo"/"bancada". Eles não carregam relevância semântica, então viram stopword.
-  "para com uma como qual quais quando onde essa esse isso mais menos sobre pelo pela seus suas nossa nosso curitiba técnico informática reparo reparos conserto bancada avaliação coleta entrega componente nível viável diagnóstico assistência técnica marcas limpeza manutenção quando".split(
+  "para com uma como qual quais quando onde essa esse isso mais menos sobre pelo pela seus suas nossa nosso curitiba tecnico informatica reparo reparos conserto bancada avaliacao coleta entrega componente nivel viavel diagnostico assistencia tecnica marcas limpeza manutencao".split(
     " ",
   ),
 );
