@@ -280,8 +280,8 @@ export const INTERLINKS_GERADOS: Record<string, InterlinkContextual[]> = {
   ],
   "/problemas/notebook-molhado": [
     {
-      "href": "/servicos/formatacao",
-      "anchor": "formatação de PC e Notebook em Curitiba para quem tem notebook molhado",
+      "href": "/servicos/conserto-placa",
+      "anchor": "reparo de Placa Eletrônica em Curitiba para quem tem notebook molhado",
       "contexto": "servico"
     },
     {
