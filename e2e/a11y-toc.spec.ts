@@ -56,11 +56,13 @@ test.describe("TOC — acessibilidade", () => {
     await context.grantPermissions(["clipboard-read", "clipboard-write"]);
     await page.setViewportSize({ width: 430, height: 932 });
     await page.goto(ARTIGO);
+    const nav = page.getByRole("navigation", { name: "Índice do artigo" });
     await page.locator("details.article-toc > summary").click();
 
     const botao = page.locator(".article-toc__copy").first();
     await botao.click();
     await expect(botao).toBeFocused();
-    await expect(page.locator("[aria-live='polite']")).toContainText("copiado");
+    await expect(nav.locator("[aria-live='polite']")).toContainText("copiado");
   });
 });
+
