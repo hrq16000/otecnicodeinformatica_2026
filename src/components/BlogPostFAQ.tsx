@@ -2,6 +2,7 @@ import { useMemo } from "react";
 import { isEditorialApproved } from "@/lib/blogEditorialRegistry";
 import { SCHEMA_SLOTS, SLOT_PRIORITY, useJsonLdSlot } from "@/lib/jsonLdSlots";
 import { getArticleSources } from "@/lib/blogEditorialSources";
+import { SITE_BASE_URL } from "@/lib/siteConfig";
 
 
 type FAQItem = { q: string; a: string };
