@@ -24,7 +24,14 @@ import { EDITORIAL_WAVE } from "./lib/editorial-wave.mjs";
 
 const TETO_SIMILARIDADE = 0.4;
 
-type Alvo = { url: string; origem: string; queries: string[]; doNotDuplicate: string[] };
+type Alvo = {
+  url: string;
+  origem: string;
+  queries: string[];
+  doNotDuplicate: string[];
+  /** true quando as consultas são derivadas do slug (proxy, não declaração). */
+  derivado?: boolean;
+};
 
 const normalizar = (q: string) =>
   q
@@ -59,6 +66,7 @@ const ondaIndexavel: Alvo[] = (EDITORIAL_WAVE as Array<{ slug: string }>).map((a
   origem: "onda editorial indexável",
   queries: [a.slug.replace(/-/g, " ")],
   doNotDuplicate: [],
+  derivado: true,
 }));
 
 // ── Acervo declarado ────────────────────────────────────────────
@@ -137,7 +145,12 @@ for (let i = 0; i < universo.length; i += 1) {
       const linha = `${a.url} × ${b.url} → similaridade ${sim.toFixed(2)} (teto ${TETO_SIMILARIDADE})`;
       const declarado =
         a.doNotDuplicate.includes(b.url) || b.doNotDuplicate.includes(a.url);
+      // Pares derivados de slug entre URLs JÁ publicadas são proxy, não
+      // declaração: viram REVIEW. Bloqueia apenas o que envolve candidato
+      // ou consultas realmente declaradas no registry.
+      const proxyEntrePublicadas = a.derivado && b.derivado;
       if (declarado) avisos.push(`${linha} — proximidade já declarada em doNotDuplicate.`);
+      else if (proxyEntrePublicadas) avisos.push(`REVIEW ${linha} — similaridade estimada pelo slug entre URLs já publicadas.`);
       else erros.push(linha);
     }
   }
