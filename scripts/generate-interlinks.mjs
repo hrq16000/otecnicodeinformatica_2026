@@ -31,7 +31,11 @@ const NOMES_BAIRROS = new Map(
   ),
 );
 const STOP = new Set(
-  "para com uma como qual quais quando onde essa esse isso mais menos sobre pelo pela seus suas nossa nosso curitiba técnico informática".split(
+  // Termos genéricos do domínio (reparo, bancada, conserto...) aparecem em
+  // quase todos os títulos de serviço e geravam matches falsos — ex.: a página
+  // de notebook molhado linkando conserto de TV só por compartilhar
+  // "reparo"/"bancada". Eles não carregam relevância semântica, então viram stopword.
+  "para com uma como qual quais quando onde essa esse isso mais menos sobre pelo pela seus suas nossa nosso curitiba técnico informática reparo reparos conserto bancada avaliação coleta entrega componente nível viável diagnóstico assistência técnica marcas limpeza manutenção quando".split(
     " ",
   ),
 );
