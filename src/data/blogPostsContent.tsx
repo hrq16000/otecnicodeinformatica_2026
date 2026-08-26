@@ -12692,6 +12692,24 @@ bcdboot C:\\Windows /s S: /f UEFI`}</code></pre>
           <p className="m-0 text-sm"><strong>Atenção:</strong> o reset apaga senha de Setup, perfis de memória e ajustes personalizados — anote o que estiver configurado antes. Em máquinas corporativas com criptografia de disco ativa, alterar configurações de firmware pode exigir a chave de recuperação na próxima partida. Confirme que você tem essa chave antes de prosseguir.</p>
         </aside>
 
+        <h2>Tabela de decisão: sintoma, causa provável e próximo passo</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Sintoma na partida</th>
+              <th>Causa provável</th>
+              <th>Próximo passo</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Data e hora sempre erradas, aviso de checksum</td><td>Bateria de lítio no fim da vida</td><td>Trocar a CR2032 e reconfigurar o Setup</td></tr>
+            <tr><td>Setup abre, mas o sistema não é encontrado</td><td>Ordem de inicialização ou modo UEFI/Legacy incorreto</td><td>Ajustar no Setup, sem apagar nada</td></tr>
+            <tr><td>Reinicia em ciclo após ativar perfil de memória</td><td>XMP/EXPO acima do que o conjunto suporta</td><td>Reset de CMOS pelo jumper e partida em perfil padrão</td></tr>
+            <tr><td>Tela preta, ventoinhas girando, sem bipe útil</td><td>Firmware possivelmente corrompido</td><td>Recuperação pelo recurso do fabricante ou bancada</td></tr>
+            <tr><td>Tela preta mesmo após reset e com um só módulo de memória</td><td>Falha de hardware além do firmware</td><td>Diagnóstico com instrumentos, não regravar às cegas</td></tr>
+          </tbody>
+        </table>
+
         <h2>Quando o firmware corrompeu de verdade</h2>
         <p>Acontece principalmente quando uma atualização é interrompida por queda de energia ou quando o arquivo aplicado não corresponde exatamente ao modelo e à revisão da placa. Sintoma: sem imagem, sem Setup, sem bipes úteis. Os caminhos possíveis dependem do fabricante:</p>
         <ul>
