@@ -93,10 +93,20 @@ const blocos = {};
 for (const origem of problemas) {
   const tk = tokens(`${meta.get(origem)?.title ?? ""} ${meta.get(origem)?.description ?? ""}`);
 
-  const servicosRel = servicos
+  // Score 0 = nenhuma relevância semântica; sem filtro, a ordenação estável
+  // escolhia serviços arbitrários (ex.: página de impressora linkando
+  // formatação). Fallback: serviços generalistas, nesta ordem.
+  const FALLBACK_SERVICOS = ["/servicos/manutencao-de-computador", "/servicos/manutencao-de-notebook"];
+  const ranqueados = servicos
     .map((path) => ({ path, s: score(tk, tokens(`${meta.get(path).title} ${meta.get(path).description}`)) }))
-    .sort((a, b) => b.s - a.s)
-    .slice(0, 2);
+    .sort((a, b) => b.s - a.s);
+  const servicosRel = ranqueados.filter((r) => r.s > 0).slice(0, 2);
+  for (const fallback of FALLBACK_SERVICOS) {
+    if (servicosRel.length >= 2) break;
+    if (meta.has(fallback) && !servicosRel.some((r) => r.path === fallback)) {
+      servicosRel.push({ path: fallback, s: 0 });
+    }
+  }
 
   const problemasRel = problemas
     .filter((p) => p !== origem)
