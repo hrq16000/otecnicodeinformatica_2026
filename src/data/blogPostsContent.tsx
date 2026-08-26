@@ -1761,6 +1761,17 @@ docker run -d --name db --network minha-rede postgres
         <p>Em escritórios e pequenas empresas, tratar apenas a máquina que apresentou sintoma costuma ser insuficiente. Compartilhamentos de arquivos, pendrives que circulam entre estações e credenciais reutilizadas fazem com que uma infecção se espalhe silenciosamente. O sinal de alerta mais comum é a repetição: dois ou três computadores apresentando o mesmo comportamento estranho na mesma semana.</p>
         <p>Nesses casos, a prioridade muda de ordem. Antes de limpar, é importante isolar a estação suspeita da rede, verificar se há backup íntegro e recente e confirmar quem tem acesso administrativo. Arquivos que ficaram inacessíveis ou renomeados exigem cuidado redobrado: continuar usando o equipamento pode reduzir as chances de recuperação. Se o ambiente tem servidor, sistema de gestão ou dados de clientes, a avaliação deve considerar a rede inteira, e não apenas o computador que reclamou primeiro.</p>
 
+        <h2>Triagem sem destruir evidências</h2>
+        <p>Antes de instalar ferramentas ou apagar arquivos, registre o que mudou e quando. Essa sequência reduz o risco de confundir causa com efeito:</p>
+        <ol>
+          <li>Anote mensagens, extensões desconhecidas, nomes de arquivos alterados e horários.</li>
+          <li>Desconecte a máquina se houver criptografia de arquivos, conta invadida ou propagação.</li>
+          <li>Confirme se existe backup íntegro sem conectá-lo ao equipamento suspeito.</li>
+          <li>Troque senhas críticas usando outro dispositivo confiável.</li>
+          <li>Só então faça a varredura e avalie limpeza ou reinstalação.</li>
+        </ol>
+        <p>“Vírus” pode significar adware, extensão abusiva, conta comprometida ou ransomware. Cada cenário exige uma decisão diferente: remover uma extensão não corrige uma senha roubada, e formatar sem preservar evidências pode eliminar pistas importantes.</p>
+
         <div className="bg-accent/10 rounded-xl p-6 my-8">
           <h3 className="text-accent font-bold mb-2">Suspeita de vírus no computador?</h3>
           <p className="text-muted-foreground mb-3">Avaliamos o tipo de infecção e agimos priorizando a preservação dos seus arquivos.</p>
@@ -2647,6 +2658,17 @@ docker run -d --name db --network minha-rede postgres
 
         <h2>Teste de restauração</h2>
         <p>Backup que nunca foi testado pode não servir na hora da emergência. De tempos em tempos, abra um arquivo restaurado da cópia para confirmar que ela realmente funciona.</p>
+
+        <h2>Como transformar cópia em rotina confiável</h2>
+        <p>Defina primeiro quanto trabalho pode ser perdido e quanto tempo o negócio ou a família pode ficar sem o computador. Essa resposta orienta a frequência da cópia e se é preciso preservar apenas arquivos ou também configurações e um equipamento substituto.</p>
+        <ul>
+          <li><strong>Liste o insubstituível:</strong> documentos, fotos, projetos, bancos de dados e exportações.</li>
+          <li><strong>Automatize:</strong> uma rotina que depende da memória falha nos períodos mais corridos.</li>
+          <li><strong>Guarde versões:</strong> elas protegem contra exclusões e arquivos corrompidos sincronizados.</li>
+          <li><strong>Restaure de verdade:</strong> abra arquivos de formatos diferentes e registre a data do teste.</li>
+          <li><strong>Separe a mídia:</strong> desconecte o disco externo depois da cópia quando ele não estiver em uso.</li>
+        </ul>
+        <p>Duas pastas em locais diferentes não provam independência: se dependem do mesmo disco, conta ou sincronização, o mesmo erro pode atingir ambas.</p>
 
         <h2>Cuidados de segurança</h2>
         <ul>
@@ -10585,6 +10607,16 @@ crontab -e
         <h2>Repetidor, mesh ou cabo: como escolher sem gastar à toa</h2>
         <p>Cada solução resolve um tipo diferente de problema, e é comum comprar a errada. O repetidor amplia a área de cobertura reaproveitando o sinal existente — só ajuda se estiver em um ponto onde o sinal ainda chega bem, e normalmente reduz a velocidade disponível. O sistema mesh usa vários pontos que se comunicam entre si e mantêm o mesmo nome de rede, o que evita a troca manual entre redes ao andar pela casa. Já o cabo de rede continua sendo a opção mais estável para computador fixo, videogame, TV e escritório em cômodo distante.</p>
         <p>Uma combinação frequente e eficiente é levar cabo até o cômodo problemático e colocar ali o segundo ponto de acesso: o sinal chega íntegro e a cobertura nasce forte no destino, em vez de ser reciclada pela metade. Antes de comprar qualquer equipamento, vale confirmar se a velocidade contratada chega ao roteador por cabo — se o problema estiver na entrada ou no equipamento da operadora, nenhum repetidor resolve.</p>
+
+        <h2>Teste em três pontos: provedor, rede local ou dispositivo?</h2>
+        <p>Faça os testes na mesma janela de tempo e anote o resultado. O objetivo não é apenas medir megabits, mas descobrir em qual trecho a falha aparece:</p>
+        <ol>
+          <li><strong>Por cabo no roteador:</strong> se já falha ali, investigue modem, cabo de entrada e provedor.</li>
+          <li><strong>Perto do roteador no Wi-Fi:</strong> se funciona perto e falha longe, investigue cobertura, obstáculos e interferência.</li>
+          <li><strong>Em dois dispositivos:</strong> se apenas um falha, o suspeito é o adaptador, driver ou configuração desse aparelho.</li>
+          <li><strong>No mesmo horário:</strong> todos caindo juntos indicam infraestrutura; um cômodo indica cobertura; um equipamento indica dispositivo.</li>
+        </ol>
+        <p>Repita a comparação por cabo e por Wi-Fi em horários diferentes. Latência alta e perda de pacotes durante chamadas podem explicar uma experiência ruim mesmo quando a velocidade máxima parece normal.</p>
 
         <div className="bg-accent/10 rounded-xl p-6 my-8">
           <h3 className="text-accent font-bold mb-2">Wi-Fi caindo ou com pontos cegos?</h3>
