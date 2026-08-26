@@ -1,8 +1,8 @@
 {
-  "geradoEm": "2026-08-26T04:37:34.855Z",
+  "geradoEm": "2026-08-26T04:38:26.679Z",
   "total": 22,
-  "pass": 16,
-  "warn": 6,
+  "pass": 22,
+  "warn": 0,
   "fail": 0,
   "semLicenca": 0,
   "semAtribuicao": 0,
@@ -637,7 +637,9 @@
       "height": 630,
       "fileHash": "sha256:cca6880f07f2c17523c441a79d397ef8",
       "formats": [
-        "/blog/webcam-nao-funciona-o-que-verificar.jpg"
+        "/blog/webcam-nao-funciona-o-que-verificar.jpg",
+        "/blog/webcam-nao-funciona-o-que-verificar.webp",
+        "/blog/webcam-nao-funciona-o-que-verificar.avif"
       ],
       "checks": {
         "fileExists": true,
@@ -645,16 +647,13 @@
         "licenseKnown": true,
         "attributionComplete": true,
         "originalUrl": true,
-        "webp": false,
-        "avif": false,
+        "webp": true,
+        "avif": true,
         "antiAi": true
       },
       "falhas": [],
-      "avisos": [
-        "webp",
-        "avif"
-      ],
-      "resultado": "WARN"
+      "avisos": [],
+      "resultado": "PASS"
     },
     {
       "owner": "permissoes-camera-windows",
@@ -676,7 +675,9 @@
       "height": 630,
       "fileHash": "sha256:9db426a18c0d164d17bdbfadfd986dee",
       "formats": [
-        "/blog/permissoes-de-camera-no-windows.jpg"
+        "/blog/permissoes-de-camera-no-windows.jpg",
+        "/blog/permissoes-de-camera-no-windows.webp",
+        "/blog/permissoes-de-camera-no-windows.avif"
       ],
       "checks": {
         "fileExists": true,
@@ -684,16 +685,13 @@
         "licenseKnown": true,
         "attributionComplete": true,
         "originalUrl": true,
-        "webp": false,
-        "avif": false,
+        "webp": true,
+        "avif": true,
         "antiAi": true
       },
       "falhas": [],
-      "avisos": [
-        "webp",
-        "avif"
-      ],
-      "resultado": "WARN"
+      "avisos": [],
+      "resultado": "PASS"
     },
     {
       "owner": "webcam-usb-nao-detectada",
@@ -715,7 +713,9 @@
       "height": 630,
       "fileHash": "sha256:5340e52dc8d252af767798d5b41d3f1a",
       "formats": [
-        "/blog/webcam-usb-nao-e-detectada.jpg"
+        "/blog/webcam-usb-nao-e-detectada.jpg",
+        "/blog/webcam-usb-nao-e-detectada.webp",
+        "/blog/webcam-usb-nao-e-detectada.avif"
       ],
       "checks": {
         "fileExists": true,
@@ -723,16 +723,13 @@
         "licenseKnown": true,
         "attributionComplete": true,
         "originalUrl": true,
-        "webp": false,
-        "avif": false,
+        "webp": true,
+        "avif": true,
         "antiAi": true
       },
       "falhas": [],
-      "avisos": [
-        "webp",
-        "avif"
-      ],
-      "resultado": "WARN"
+      "avisos": [],
+      "resultado": "PASS"
     },
     {
       "owner": "windows-update-nao-funciona",
@@ -754,7 +751,9 @@
       "height": 630,
       "fileHash": "sha256:8c0e8c5d0d925ca8efeca7dd67b82d9d",
       "formats": [
-        "/blog/windows-update-nao-funciona-o-que-verificar.jpg"
+        "/blog/windows-update-nao-funciona-o-que-verificar.jpg",
+        "/blog/windows-update-nao-funciona-o-que-verificar.webp",
+        "/blog/windows-update-nao-funciona-o-que-verificar.avif"
       ],
       "checks": {
         "fileExists": true,
@@ -762,16 +761,13 @@
         "licenseKnown": true,
         "attributionComplete": true,
         "originalUrl": true,
-        "webp": false,
-        "avif": false,
+        "webp": true,
+        "avif": true,
         "antiAi": true
       },
       "falhas": [],
-      "avisos": [
-        "webp",
-        "avif"
-      ],
-      "resultado": "WARN"
+      "avisos": [],
+      "resultado": "PASS"
     },
     {
       "owner": "cache-windows-update",
@@ -793,7 +789,9 @@
       "height": 630,
       "fileHash": "sha256:c34ea3e689544de16083f4d9a961a874",
       "formats": [
-        "/blog/limpar-cache-do-windows-update-softwaredistribution.jpg"
+        "/blog/limpar-cache-do-windows-update-softwaredistribution.jpg",
+        "/blog/limpar-cache-do-windows-update-softwaredistribution.webp",
+        "/blog/limpar-cache-do-windows-update-softwaredistribution.avif"
       ],
       "checks": {
         "fileExists": true,
@@ -801,16 +799,13 @@
         "licenseKnown": true,
         "attributionComplete": true,
         "originalUrl": true,
-        "webp": false,
-        "avif": false,
+        "webp": true,
+        "avif": true,
         "antiAi": true
       },
       "falhas": [],
-      "avisos": [
-        "webp",
-        "avif"
-      ],
-      "resultado": "WARN"
+      "avisos": [],
+      "resultado": "PASS"
     },
     {
       "owner": "update-travado-reversao",
@@ -832,7 +827,9 @@
       "height": 630,
       "fileHash": "sha256:4427e562d5052c45f0034198dd28ea76",
       "formats": [
-        "/blog/windows-update-travado-desfazendo-alteracoes.jpg"
+        "/blog/windows-update-travado-desfazendo-alteracoes.jpg",
+        "/blog/windows-update-travado-desfazendo-alteracoes.webp",
+        "/blog/windows-update-travado-desfazendo-alteracoes.avif"
       ],
       "checks": {
         "fileExists": true,
@@ -840,16 +837,13 @@
         "licenseKnown": true,
         "attributionComplete": true,
         "originalUrl": true,
-        "webp": false,
-        "avif": false,
+        "webp": true,
+        "avif": true,
         "antiAi": true
       },
       "falhas": [],
-      "avisos": [
-        "webp",
-        "avif"
-      ],
-      "resultado": "WARN"
+      "avisos": [],
+      "resultado": "PASS"
     }
   ]
 }
