@@ -1,8 +1,8 @@
 {
-  "wave": "11A",
+  "wave": "11A.1",
   "generatedAt": "2026-08-26T00:00:00-03:00",
-  "buildSha": "8cc41f7b615512a455a6696a0b0549cb89f62a43",
+  "buildSha": "61ab5d2ce8ef3d79d9cf4ab59ef3ed330bc334ef",
+  "status": "PENDING_EXECUTION",
   "files": [],
-  "manifestStatus": "PENDING_EXECUTION",
-  "note": "SHA-256 e contagens finais dependem da execucao local dos exports; nenhum valor foi inventado."
+  "note": "SHA-256 real e row counts finais dependem de execucao local dos exports; nenhum valor foi inventado."
 }
