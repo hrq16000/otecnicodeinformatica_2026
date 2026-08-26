@@ -62,9 +62,18 @@ jobs:
         run: npm run check:editorial-assets
       - name: Schema determinístico por owner editorial (10C Infra 2)
         run: npm run check:schema-deterministic
+      - name: Snapshot e diff de schema entre builds (10C Infra 3)
+        run: |
+          npm run schema:snapshot-editorial
+          npm run schema:diff-editorial -- --strict
+      - name: Pacote de evidências da onda (10C Infra 3)
+        run: npm run report:editorial-wave -- --wave=10C
+      - name: Exportações sem segredos (10C Infra 3)
+        run: npm run check:editorial-export-secrets
 
       - name: Inventário editorial
         run: npm run report:editorial
+
 
       # ── Padrões visuais por família de página
       - name: Padrão visual de sintomas (3R)
