@@ -1,4 +1,6 @@
 #!/usr/bin/env bun
+// (Infra 3) Além de reports/indexnow/editorial-wave-status.json, publica uma
+// cópia SANITIZADA em public/editorial-indexnow-status.json para o painel.
 /**
  * INDEXNOW EDITORIAL — DIFF-BASED E IDEMPOTENTE (Onda 10C · Infra 2, Parte B).
  *
