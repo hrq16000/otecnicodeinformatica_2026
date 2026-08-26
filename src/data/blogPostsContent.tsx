@@ -12530,4 +12530,183 @@ bcdboot C:\\Windows /s S: /f UEFI`}</code></pre>
     ),
   },
 
+  // ── Onda 10D — satélites dos clusters "PC não liga" e "liga e desliga sozinho".
+  "botao-power-nao-funciona-jump-start-placa-mae": {
+    title: "Botão power não funciona: como ligar o PC pelo conector da placa-mãe",
+    excerpt:
+      "Como separar defeito do botão frontal de falha de fonte ou placa, e como acionar a partida pelo conector do painel frontal para confirmar o diagnóstico.",
+    date: "2026-08-26",
+    readTime: "9 min",
+    category: "Procedimentos Técnicos",
+    content: (
+      <>
+        <p className="lead">Você aperta o botão e nada acontece: sem luz, sem ventoinha, sem sinal no monitor. Antes de concluir que a placa-mãe morreu, vale saber que o botão frontal é uma das peças mais simples e mais frágeis do gabinete — e que existe um teste direto para tirá-lo da equação.</p>
+
+        <h2>Resposta curta</h2>
+        <p>O botão frontal apenas fecha um contato entre dois pinos da placa-mãe. Se, com a fonte ligada e o computador em repouso, você tocar rapidamente esses dois pinos com uma chave de fenda e a máquina partir, o defeito está no botão ou no cabo dele — não na placa nem na fonte.</p>
+
+        <h2>O que é o conector do painel frontal</h2>
+        <p>O bloco de pinos onde o gabinete se conecta chama-se painel frontal (impresso na placa como <code>F_PANEL</code>, <code>JFP1</code>, <code>PANEL1</code> ou nome equivalente). Dele saem quatro funções: ligar, reiniciar, LED de energia e LED de atividade do disco. O par de ligar costuma vir identificado como <code>PWR_SW</code>, <code>PWRBTN</code> ou <code>POWER SW</code>.</p>
+        <p>Esse par não tem polaridade e não carrega corrente de trabalho. Ele só sinaliza ao circuito de gerenciamento de energia que houve um pedido de partida — por isso um simples encosto metálico entre os dois pinos faz o mesmo papel do botão.</p>
+
+        <h2>Por que o botão falha</h2>
+        <ul>
+          <li><strong>Desgaste mecânico:</strong> o contato interno oxida ou perde pressão depois de milhares de acionamentos.</li>
+          <li><strong>Botão preso:</strong> haste emperrada mantém o contato fechado, o que impede a partida ou desliga a máquina em dois segundos.</li>
+          <li><strong>Cabo rompido:</strong> fios finos que passam por dobras do gabinete quebram por fadiga, sobretudo depois de manutenção.</li>
+          <li><strong>Conector no pino errado:</strong> muito comum após limpeza — o plugue volta deslocado uma posição no bloco.</li>
+        </ul>
+
+        <h2>Onde isso aparece</h2>
+        <p>Em desktops é um defeito frequente e barato. Em notebooks e all-in-one o botão faz parte de uma placa auxiliar com cabo flat, e o teste por encosto não se aplica: nesses casos a verificação é de bancada. Se o seu caso é notebook, o roteiro correto está em <Link to="/blog/notebook-nao-liga-o-que-fazer" className="text-accent">notebook não liga: o que fazer</Link>.</p>
+
+        <h2>O que fazer antes de abrir o gabinete</h2>
+        <ol>
+          <li><strong>Confirme a energia:</strong> tomada, cabo, chave traseira da fonte na posição I e, se houver, o filtro de linha ligado.</li>
+          <li><strong>Descarregue o circuito:</strong> desligue a chave da fonte, segure o botão de ligar por dez segundos e ligue a chave de novo. Isso resolve travas de proteção com frequência surpreendente.</li>
+          <li><strong>Observe qualquer sinal de vida:</strong> LED da placa aceso, ventoinha girando meio segundo, bipe. Sinal parcial muda o diagnóstico e aponta para fonte ou placa, não para o botão.</li>
+        </ol>
+
+        <h2>Como fazer a partida pelo conector</h2>
+        <p>Trabalhe com a máquina desligada na chave da fonte e o cabo de energia removido até o momento indicado.</p>
+        <ol>
+          <li><strong>Abra a lateral</strong> e localize o bloco do painel frontal, normalmente na borda inferior da placa, perto das portas SATA.</li>
+          <li><strong>Identifique o par de ligar</strong> pela serigrafia da placa ou pelo manual do modelo. Nunca chute: encostar no par errado pode acionar o reset ou tocar em uma alimentação.</li>
+          <li><strong>Retire o plugue do botão</strong> desse par para isolar o gabinete do teste.</li>
+          <li><strong>Reconecte a energia</strong> e ligue a chave traseira da fonte. A placa entra em repouso — muitas acendem um LED indicando energia de espera.</li>
+          <li><strong>Toque os dois pinos</strong> com a ponta de uma chave de fenda por menos de um segundo e afaste. Se a máquina partir, o problema é o botão.</li>
+          <li><strong>Repita com o botão reconectado.</strong> Se sem o botão liga e com o botão não liga, o veredito está fechado.</li>
+        </ol>
+        <aside className="rounded-lg border border-destructive/40 bg-destructive/5 p-4 not-prose my-6">
+          <p className="m-0 text-sm"><strong>Segurança:</strong> nunca abra a fonte de alimentação — ela retém carga mesmo desconectada. No teste acima, toque apenas os dois pinos do par de ligar, use uma chave com cabo isolado e evite encostar em outras trilhas. Se a máquina está na garantia, abrir o gabinete pode anulá-la.</p>
+        </aside>
+
+        <h2>Como resolver depois do diagnóstico</h2>
+        <ul>
+          <li><strong>Botão defeituoso:</strong> a peça é vendida como chave de partida com cabo e conector, e a troca é encaixe direto. Solução provisória aceitável: usar o par do botão de reiniciar no lugar do de ligar, já que eletricamente são chaves iguais.</li>
+          <li><strong>Conector deslocado:</strong> reencaixe seguindo a serigrafia; LEDs têm polaridade, as chaves não.</li>
+          <li><strong>Nem pelo conector liga:</strong> o botão está descartado. A investigação passa para a fonte, com o roteiro de <Link to="/blog/como-testar-fonte-de-alimentacao-pc" className="text-accent">como testar a fonte de alimentação</Link>, e depois para a placa, em <Link to="/blog/como-diagnosticar-placa-mae-defeituosa" className="text-accent">como diagnosticar placa-mãe defeituosa</Link>.</li>
+          <li><strong>Liga e desliga em seguida:</strong> não é botão. Esse padrão aponta para proteção da fonte, curto ou temperatura — veja <Link to="/blog/curto-circuito-placa-mae-como-identificar" className="text-accent">curto-circuito na placa-mãe: como identificar</Link>.</li>
+        </ul>
+
+        <h2>Quando chamar um técnico</h2>
+        <p>Chame quando o equipamento estiver na garantia, quando não conseguir identificar o par correto no manual, quando houver cheiro de queimado ou marca escura na placa, quando o gabinete for de notebook ou all-in-one, e quando a máquina não partir nem pelo conector. Nesse ponto o teste seguinte exige fonte de bancada e medição — atendimento em <Link to="/servicos/conserto-de-computador" className="text-accent">conserto de computador</Link> ou triagem em <Link to="/diagnostico-tecnico" className="text-accent">diagnóstico técnico</Link>.</p>
+      </>
+    ),
+  },
+
+  "curto-circuito-placa-mae-como-identificar": {
+    title: "Curto-circuito na placa-mãe: como identificar e isolar o problema",
+    excerpt:
+      "Como reconhecer um curto de alimentação, isolar componente por componente com o teste fora do gabinete e saber quando o reparo deixa de ser viável.",
+    date: "2026-08-26",
+    readTime: "10 min",
+    category: "Procedimentos Técnicos",
+    content: (
+      <>
+        <p className="lead">Existe uma diferença clara entre um computador que não liga e um computador que tenta ligar e desiste. O segundo caso quase sempre significa que a proteção da fonte encontrou consumo fora do esperado — o comportamento típico de um curto na alimentação da placa ou de algum componente ligado a ela.</p>
+
+        <h2>Resposta curta</h2>
+        <p>Se as ventoinhas giram por uma fração de segundo e tudo desliga, repetidamente, trate como suspeita de curto. O caminho é remover tudo o que não é essencial e testar a placa fora do gabinete com processador, um módulo de memória e fonte — o chamado teste de bancada mínima. O que reintroduzir e provocar o desligamento é o culpado.</p>
+
+        <h2>O que é um curto de alimentação</h2>
+        <p>A fonte entrega tensões fixas (12 V, 5 V, 3,3 V) e monitora quanto está sendo consumido. Quando um caminho de corrente indevido aparece — um componente rompido internamente, um parafuso solto encostando na placa, um cabo pinçado — o consumo dispara. Em vez de queimar, a fonte corta a saída em milissegundos. É por isso que o sintoma aparece como uma partida abortada, e não como fumaça.</p>
+
+        <h2>Por que acontece</h2>
+        <ul>
+          <li><strong>Capacitor eletrolítico degradado:</strong> topo abaulado, base suja ou eletrólito seco. Um dos motivos mais comuns em placas com mais de cinco anos.</li>
+          <li><strong>Montagem incorreta:</strong> espaçador metálico em furo sem furo correspondente na placa, parafuso extra, chapa do gabinete tocando a solda.</li>
+          <li><strong>Surto elétrico:</strong> descarga na rede que compromete o estágio de entrada da placa ou de um periférico.</li>
+          <li><strong>Líquido e corrosão:</strong> resíduo condutivo entre trilhas, frequente após limpeza malfeita ou umidade.</li>
+          <li><strong>Periférico com defeito:</strong> disco, placa de vídeo, cooler ou porta USB com curto derruba a alimentação inteira, e a placa leva a culpa injustamente.</li>
+        </ul>
+
+        <h2>Onde procurar</h2>
+        <p>Concentre a inspeção visual em quatro regiões: a área de regulagem em volta do soquete do processador, onde ficam bobinas e capacitores; o entorno dos conectores de energia de 24 e 8 pinos; a face traseira da placa, sob os pontos de fixação; e a região das portas USB, que sofre com conexões forçadas. Procure abaulamento, resíduo esbranquiçado, marca escura e cheiro característico.</p>
+
+        <h2>O que fazer: isolamento em etapas</h2>
+        <ol>
+          <li><strong>Registre o estado atual.</strong> Fotografe as conexões antes de desmontar — isso evita erro na remontagem.</li>
+          <li><strong>Desconecte tudo o que não é essencial:</strong> discos, placa de vídeo dedicada, leitores, cabos frontais de USB e áudio, ventoinhas extras. Deixe placa, processador com o cooler, um módulo de memória e a fonte.</li>
+          <li><strong>Teste fora do gabinete.</strong> Apoie a placa sobre a própria caixa de papelão dela, nunca sobre superfície metálica. Se assim ela liga, o curto era contato com o gabinete — quase sempre um espaçador fora de lugar.</li>
+          <li><strong>Reintroduza um item por vez</strong>, ligando e desligando a cada passo. O componente que reproduzir o desligamento imediato é o responsável.</li>
+          <li><strong>Troque a fonte por outra comprovadamente boa.</strong> Proteção disparando também é sintoma de fonte em degradação, e o roteiro de verificação está em <Link to="/blog/como-testar-fonte-de-alimentacao-pc" className="text-accent">como testar a fonte de alimentação</Link>.</li>
+          <li><strong>Observe o LED de diagnóstico</strong> ou o display de código, quando a placa tiver. Ele diferencia falha de alimentação de falha de memória ou de vídeo.</li>
+        </ol>
+        <aside className="rounded-lg border border-destructive/40 bg-destructive/5 p-4 not-prose my-6">
+          <p className="m-0 text-sm"><strong>Segurança:</strong> desligue a chave da fonte e retire o cabo antes de qualquer manipulação. Não abra a fonte de alimentação. Não faça medições com o equipamento energizado se você não tem prática — a medição correta de curto é feita com o aparelho desligado, em modo de continuidade ou resistência, e conclusões erradas levam à troca de peças boas.</p>
+        </aside>
+
+        <h2>Como resolver</h2>
+        <ul>
+          <li><strong>Curto por montagem:</strong> remontar com os espaçadores corretos resolve definitivamente e sem custo de peça.</li>
+          <li><strong>Periférico em curto:</strong> substituir o item identificado devolve a máquina ao normal; a placa estava íntegra.</li>
+          <li><strong>Capacitores degradados:</strong> a substituição é reparo em nível de componente, com ferro de solda adequado e peça de mesma especificação. Não é serviço para improviso.</li>
+          <li><strong>Curto no circuito de regulagem:</strong> exige instrumentação de bancada. Em placas comuns, o custo do reparo costuma se aproximar do valor de uma placa nova — a decisão passa a ser econômica.</li>
+        </ul>
+        <p>Depois que a máquina volta a ligar, confirme estabilidade sob carga e temperatura antes de fechar o caso: o padrão de ligar e desligar também aparece por aquecimento, com sintoma parecido mas causa diferente.</p>
+
+        <h2>Quando chamar um técnico</h2>
+        <p>Chame quando houver cheiro de queimado, marca de carbonização, líquido derramado ou capacitor estufado; quando o desligamento persistir com a bancada mínima e outra fonte; quando existirem dados importantes no disco; e sempre que o reparo envolver solda. O diagnóstico com instrumentos está em <Link to="/diagnostico-tecnico" className="text-accent">diagnóstico técnico</Link>, e o atendimento de bancada em <Link to="/servicos/conserto-de-computador" className="text-accent">conserto de computador</Link>. Se o próximo passo for eliminar dúvida sobre a placa, o roteiro complementar está em <Link to="/blog/como-diagnosticar-placa-mae-defeituosa" className="text-accent">como diagnosticar placa-mãe defeituosa</Link>.</p>
+      </>
+    ),
+  },
+
+  "bios-corrompida-reset-cmos-atualizacao": {
+    title: "BIOS corrompida: reset de CMOS e recuperação de firmware",
+    excerpt:
+      "Quando o reset de CMOS resolve, como fazer pelo jumper ou pela bateria e o que muda quando o firmware realmente corrompeu durante uma atualização.",
+    date: "2026-08-26",
+    readTime: "10 min",
+    category: "Procedimentos Técnicos",
+    content: (
+      <>
+        <p className="lead">"BIOS corrompida" é um diagnóstico dado com muito mais frequência do que acontece de verdade. Na maioria dos casos o firmware está íntegro e o que está errado são as configurações guardadas — e isso se resolve com um procedimento de dois minutos, sem gravar nada.</p>
+
+        <h2>Resposta curta</h2>
+        <p>Configuração perdida ou inválida se resolve com <strong>reset de CMOS</strong>: pelo jumper de limpeza, pela remoção da bateria ou pela opção de carregar padrões dentro do Setup. Firmware realmente corrompido não abre o Setup — a tela permanece preta, e a recuperação depende do recurso específico do fabricante.</p>
+
+        <h2>A diferença entre CMOS e firmware</h2>
+        <p>O firmware é o programa gravado em um chip de memória não volátil na placa; ele é o que desenha a tela do Setup e inicia o hardware. O CMOS é a pequena área de configuração — modo de inicialização, ordem de dispositivos, perfil de memória, relógio — mantida energizada pela bateria de lítio. Apagar o CMOS não apaga o firmware; é o equivalente a restaurar as configurações de fábrica, não a reinstalar o programa.</p>
+
+        <h2>Por que a configuração se perde</h2>
+        <ul>
+          <li><strong>Bateria descarregada:</strong> a de modelo CR2032 dura em média de três a sete anos. O sinal clássico é data e hora sempre erradas e aviso de erro de checksum a cada partida.</li>
+          <li><strong>Perfil de memória agressivo:</strong> XMP/EXPO fora do que o conjunto suporta impede a partida; muitas placas revertem sozinhas depois de tentativas seguidas.</li>
+          <li><strong>Queda de energia durante a gravação</strong> de uma alteração no Setup.</li>
+          <li><strong>Troca de processador ou memória</strong> que invalida parâmetros guardados.</li>
+        </ul>
+
+        <h2>Como identificar cada cenário</h2>
+        <p>Ligue a máquina e observe. Se o Setup abre, o firmware está bom — o caso é de configuração, e o roteiro de correção está em <Link to="/blog/computador-entra-direto-na-bios" className="text-accent">computador entra direto na BIOS</Link>. Se aparece a marca do fabricante e a máquina reinicia em ciclo, suspeite de memória ou perfil. Se a tela nunca acende, mas ventoinhas giram e o LED de diagnóstico acusa etapa inicial, aí a suspeita de firmware passa a ser legítima.</p>
+
+        <h2>Como fazer o reset de CMOS</h2>
+        <ol>
+          <li><strong>Desligue tudo:</strong> sistema encerrado, chave da fonte em O, cabo de energia removido. Em notebook, remova também a bateria quando for removível.</li>
+          <li><strong>Descarregue a placa</strong> segurando o botão de ligar por dez a quinze segundos com o cabo fora.</li>
+          <li><strong>Pelo jumper:</strong> localize os pinos marcados <code>CLR_CMOS</code>, <code>JBAT1</code> ou <code>CLRTC</code>. Mova a capa para a posição adjacente por dez segundos e devolva à posição original. Placas com botão traseiro de limpeza dispensam o jumper.</li>
+          <li><strong>Pela bateria:</strong> na ausência de jumper, solte a trava e retire a bateria de lítio por cerca de cinco minutos. Recoloque com o lado positivo para cima.</li>
+          <li><strong>Religue e entre no Setup</strong> imediatamente. Ajuste data e hora, modo de inicialização (UEFI ou Legacy, conforme o disco) e a ordem de dispositivos. Salve e saia.</li>
+        </ol>
+        <aside className="rounded-lg border border-destructive/40 bg-destructive/5 p-4 not-prose my-6">
+          <p className="m-0 text-sm"><strong>Atenção:</strong> o reset apaga senha de Setup, perfis de memória e ajustes personalizados — anote o que estiver configurado antes. Em máquinas corporativas com criptografia de disco ativa, alterar configurações de firmware pode exigir a chave de recuperação na próxima partida. Confirme que você tem essa chave antes de prosseguir.</p>
+        </aside>
+
+        <h2>Quando o firmware corrompeu de verdade</h2>
+        <p>Acontece principalmente quando uma atualização é interrompida por queda de energia ou quando o arquivo aplicado não corresponde exatamente ao modelo e à revisão da placa. Sintoma: sem imagem, sem Setup, sem bipes úteis. Os caminhos possíveis dependem do fabricante:</p>
+        <ul>
+          <li><strong>Recuperação por USB sem processador ou sem vídeo:</strong> recurso presente em muitas placas atuais, em que o arquivo é gravado em um pendrive com nome específico e um botão dedicado inicia a regravação.</li>
+          <li><strong>Chip duplo:</strong> placas com dois chips permitem alternar para a cópia íntegra e regravar a defeituosa.</li>
+          <li><strong>Regravação externa:</strong> quando não há recurso nativo, a gravação é feita com programador ligado ao chip — serviço de bancada, não doméstico.</li>
+        </ul>
+
+        <h2>Atualizar ou não atualizar</h2>
+        <p>Atualização de firmware não é manutenção de rotina e não deixa a máquina mais rápida. Faça apenas quando houver motivo declarado: suporte a um processador novo, correção de falha de segurança divulgada ou incompatibilidade documentada de memória. Baixe o arquivo somente na página do modelo exato no site do fabricante, confira a revisão da placa impressa nela, use a ferramenta nativa do próprio Setup e não desligue durante o processo. Onde houver risco de queda de energia, use um nobreak.</p>
+
+        <h2>Quando chamar um técnico</h2>
+        <p>Chame quando a tela continuar preta após o reset, quando a máquina for notebook e exigir desmontagem para alcançar a bateria de CMOS, quando houver criptografia de disco e você não tiver a chave, e sempre que a atualização tiver sido interrompida no meio. Regravação de chip é procedimento de bancada — a avaliação está em <Link to="/diagnostico-tecnico" className="text-accent">diagnóstico técnico</Link> e o atendimento em <Link to="/servicos/conserto-de-computador" className="text-accent">conserto de computador</Link>. Se o quadro incluir partidas abortadas, verifique antes <Link to="/blog/curto-circuito-placa-mae-como-identificar" className="text-accent">curto-circuito na placa-mãe</Link>.</p>
+      </>
+    ),
+  },
+
 };
