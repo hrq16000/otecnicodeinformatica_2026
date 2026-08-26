@@ -741,6 +741,66 @@ export const ARTICLE_SOURCE_MANIFEST: Record<string, ArticleSourceManifest> = {
     notes:
       "Revisão concluída (Onda 10C, Lote 3): cadeia Windows Audio e Construtor de Ponto de Extremidade, ordem de reinício, dependências de RPC e agendador multimídia, ressalva de máquina gerenciada por política e critério para reinstalar driver oficial. Sem marca comercial e sem promessa. Conhecimento técnico estável — sem fonte visível.",
   },
+  "webcam-nao-funciona-o-que-verificar": {
+    slug: "webcam-nao-funciona-o-que-verificar",
+    sources: [],
+    technicalReview: "reviewed",
+    factChecked: true,
+    factCheckedAt: "2026-08-26",
+    stableKnowledge: true,
+    notes:
+      "Revisão concluída (Onda 10C, Lote 4): cadeia sensor→conexão→driver→permissão→aplicativo, teste cruzado pelo aplicativo Câmera, ressalva de que obturador, tecla de função e opção de Setup não são universais e critério para suspeitar de cabo/módulo. Sem marca comercial e sem promessa. Conhecimento técnico estável — sem fonte visível.",
+  },
+  "permissoes-de-camera-no-windows": {
+    slug: "permissoes-de-camera-no-windows",
+    sources: [],
+    technicalReview: "reviewed",
+    factChecked: true,
+    factCheckedAt: "2026-08-26",
+    stableKnowledge: true,
+    notes:
+      "Revisão concluída (Onda 10C, Lote 4): quatro camadas independentes de permissão (dispositivo, aplicativos, aplicativo individual e aplicativos de área de trabalho), permissão por site no navegador, impacto de privacidade explicado e ressalva de máquina gerenciada por política. Sem marca comercial e sem promessa. Conhecimento técnico estável — sem fonte visível.",
+  },
+  "webcam-usb-nao-e-detectada": {
+    slug: "webcam-usb-nao-e-detectada",
+    sources: [],
+    technicalReview: "reviewed",
+    factChecked: true,
+    factCheckedAt: "2026-08-26",
+    stableKnowledge: true,
+    notes:
+      "Revisão concluída (Onda 10C, Lote 4): eliminação por porta/hub/cabo, consumo e banda em USB 2 e 3, leitura do Gerenciador de Dispositivos, teste cruzado em outro computador e recusa explícita de agregadores de driver. Sem marca comercial e sem promessa. Conhecimento técnico estável — sem fonte visível.",
+  },
+  "windows-update-nao-funciona-o-que-verificar": {
+    slug: "windows-update-nao-funciona-o-que-verificar",
+    sources: [],
+    technicalReview: "reviewed",
+    factChecked: true,
+    factCheckedAt: "2026-08-26",
+    stableKnowledge: true,
+    notes:
+      "Revisão concluída (Onda 10C, Lote 4): estágios de verificação, download, preparação, instalação e reversão; triagem antes de comandos; diferença entre verificação de arquivos do sistema e reparo da imagem de componentes; proibição de desabilitar serviços do Update. Sem marca comercial e sem promessa. Conhecimento técnico estável — sem fonte visível.",
+  },
+  "limpar-cache-do-windows-update-softwaredistribution": {
+    slug: "limpar-cache-do-windows-update-softwaredistribution",
+    sources: [],
+    technicalReview: "reviewed",
+    factChecked: true,
+    factCheckedAt: "2026-08-26",
+    stableKnowledge: true,
+    notes:
+      "Revisão concluída (Onda 10C, Lote 4): função da pasta, procedimento reversível por renomeação, custo real (histórico e novo download), casos em que o tratamento não ajuda e recusa de scripts de reset de terceiros. Sem marca comercial e sem promessa. Conhecimento técnico estável — sem fonte visível.",
+  },
+  "windows-update-travado-desfazendo-alteracoes": {
+    slug: "windows-update-travado-desfazendo-alteracoes",
+    sources: [],
+    technicalReview: "reviewed",
+    factChecked: true,
+    factCheckedAt: "2026-08-26",
+    stableKnowledge: true,
+    notes:
+      "Revisão concluída (Onda 10C, Lote 4): distinção entre interface parada e processo parado, reversão como mecanismo de proteção, causas comuns, códigos de erro sem causa única e critério de parada com criptografia de disco. Sem marca comercial e sem promessa. Conhecimento técnico estável — sem fonte visível.",
+  },
 };
 
 

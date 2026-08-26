@@ -357,6 +357,43 @@ export const EDITORIAL_COVERS: Record<string, EditorialCover> = {
     width: 1200,
     height: 630,
   },
+  // ── Onda 10C — Lote 4: webcam e Windows Update.
+  "webcam-nao-funciona-o-que-verificar": {
+    src: "/blog/webcam-nao-funciona-o-que-verificar.jpg",
+    alt: "Câmera integrada na moldura superior da tela de um notebook",
+    width: 1200,
+    height: 630,
+  },
+  "permissoes-de-camera-no-windows": {
+    src: "/blog/permissoes-de-camera-no-windows.jpg",
+    alt: "Webcam de notebook coberta por fita adesiva, exemplo de bloqueio físico da câmera",
+    width: 1200,
+    height: 630,
+  },
+  "webcam-usb-nao-e-detectada": {
+    src: "/blog/webcam-usb-nao-e-detectada.jpg",
+    alt: "Webcam USB externa apoiada sobre um monitor de computador",
+    width: 1200,
+    height: 630,
+  },
+  "windows-update-nao-funciona-o-que-verificar": {
+    src: "/blog/windows-update-nao-funciona-o-que-verificar.jpg",
+    alt: "Tela do Windows Update exibindo o progresso de uma atualização",
+    width: 1200,
+    height: 630,
+  },
+  "limpar-cache-do-windows-update-softwaredistribution": {
+    src: "/blog/limpar-cache-do-windows-update-softwaredistribution.jpg",
+    alt: "Aviso de atualização do Windows exibido na tela de um computador",
+    width: 1200,
+    height: 630,
+  },
+  "windows-update-travado-desfazendo-alteracoes": {
+    src: "/blog/windows-update-travado-desfazendo-alteracoes.jpg",
+    alt: "Tela de atualização do Windows 11 durante o processo de instalação",
+    width: 1200,
+    height: 630,
+  },
 };
 
 export function getEditorialCover(slug: string): EditorialCover | undefined {
