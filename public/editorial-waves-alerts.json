@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-08-26T04:44:53.719Z",
+  "geradoEm": "2026-08-26T05:33:48.129Z",
   "entregaCanais": {
     "enviado": false,
     "motivo": "DELIVERY_DISABLED",
@@ -11,7 +11,7 @@
     "slack": "NOT_CONFIGURED",
     "email": "NOT_CONFIGURED",
     "enviados": 0,
-    "ignorados": 6
+    "ignorados": 0
   },
   "estado": {
     "/blog/limpar-arquivos-temporarios-windows": {
@@ -19,7 +19,7 @@
       "previousState": "NO_DATA",
       "currentState": "NO_DATA",
       "internalState": "PUBLISHED",
-      "observedAt": "2026-08-26T04:44:53.719Z",
+      "observedAt": "2026-08-26T05:33:48.129Z",
       "lastAlertedTransition": "EDITORIAL:∅→PUBLISHED",
       "contentHash": "cba47ddd4ab081a6"
     },
@@ -28,7 +28,7 @@
       "previousState": "NO_DATA",
       "currentState": "NO_DATA",
       "internalState": "PUBLISHED",
-      "observedAt": "2026-08-26T04:44:53.719Z",
+      "observedAt": "2026-08-26T05:33:48.129Z",
       "lastAlertedTransition": "EDITORIAL:∅→PUBLISHED",
       "contentHash": "8ec249313054318c"
     },
@@ -37,7 +37,7 @@
       "previousState": "NO_DATA",
       "currentState": "NO_DATA",
       "internalState": "PUBLISHED",
-      "observedAt": "2026-08-26T04:44:53.719Z",
+      "observedAt": "2026-08-26T05:33:48.129Z",
       "lastAlertedTransition": "EDITORIAL:∅→PUBLISHED",
       "contentHash": "3f80566c863cdfed"
     },
@@ -46,7 +46,7 @@
       "previousState": "NO_DATA",
       "currentState": "NO_DATA",
       "internalState": "PUBLISHED",
-      "observedAt": "2026-08-26T04:44:53.719Z",
+      "observedAt": "2026-08-26T05:33:48.129Z",
       "lastAlertedTransition": "EDITORIAL:∅→PUBLISHED",
       "contentHash": "9392f7964190fc61"
     },
@@ -55,7 +55,7 @@
       "previousState": "NO_DATA",
       "currentState": "NO_DATA",
       "internalState": "PUBLISHED",
-      "observedAt": "2026-08-26T04:44:53.719Z",
+      "observedAt": "2026-08-26T05:33:48.129Z",
       "lastAlertedTransition": "EDITORIAL:∅→PUBLISHED",
       "contentHash": "8815a2f22052efd9"
     },
@@ -64,7 +64,7 @@
       "previousState": "NO_DATA",
       "currentState": "NO_DATA",
       "internalState": "PUBLISHED",
-      "observedAt": "2026-08-26T04:44:53.719Z",
+      "observedAt": "2026-08-26T05:33:48.129Z",
       "lastAlertedTransition": "EDITORIAL:∅→PUBLISHED",
       "contentHash": "ed7de44f66517ceb"
     },
@@ -73,7 +73,7 @@
       "previousState": "NO_DATA",
       "currentState": "NO_DATA",
       "internalState": "PUBLISHED",
-      "observedAt": "2026-08-26T04:44:53.719Z",
+      "observedAt": "2026-08-26T05:33:48.129Z",
       "lastAlertedTransition": "EDITORIAL:∅→PUBLISHED",
       "contentHash": "b0a31cf6858dda7c"
     },
@@ -82,7 +82,7 @@
       "previousState": "NO_DATA",
       "currentState": "NO_DATA",
       "internalState": "PUBLISHED",
-      "observedAt": "2026-08-26T04:44:53.719Z",
+      "observedAt": "2026-08-26T05:33:48.129Z",
       "lastAlertedTransition": "EDITORIAL:∅→PUBLISHED",
       "contentHash": "ba7d864b73e0953e"
     },
@@ -91,7 +91,7 @@
       "previousState": "NO_DATA",
       "currentState": "NO_DATA",
       "internalState": "PUBLISHED",
-      "observedAt": "2026-08-26T04:44:53.719Z",
+      "observedAt": "2026-08-26T05:33:48.129Z",
       "lastAlertedTransition": "EDITORIAL:∅→PUBLISHED",
       "contentHash": "0f9c121902a02c16"
     },
@@ -100,7 +100,7 @@
       "previousState": "NO_DATA",
       "currentState": "NO_DATA",
       "internalState": "PUBLISHED",
-      "observedAt": "2026-08-26T04:44:53.719Z",
+      "observedAt": "2026-08-26T05:33:48.129Z",
       "lastAlertedTransition": "EDITORIAL:∅→PUBLISHED",
       "contentHash": "8cc6dd5a67fa4804"
     },
@@ -109,7 +109,7 @@
       "previousState": "NO_DATA",
       "currentState": "NO_DATA",
       "internalState": "PUBLISHED",
-      "observedAt": "2026-08-26T04:44:53.719Z",
+      "observedAt": "2026-08-26T05:33:48.129Z",
       "lastAlertedTransition": "EDITORIAL:∅→PUBLISHED",
       "contentHash": "c6ac43157fa13296"
     },
@@ -118,7 +118,7 @@
       "previousState": "NO_DATA",
       "currentState": "NO_DATA",
       "internalState": "PUBLISHED",
-      "observedAt": "2026-08-26T04:44:53.719Z",
+      "observedAt": "2026-08-26T05:33:48.129Z",
       "lastAlertedTransition": "EDITORIAL:∅→PUBLISHED",
       "contentHash": "af001374a0c36d76"
     },
@@ -127,7 +127,7 @@
       "previousState": "NO_DATA",
       "currentState": "NO_DATA",
       "internalState": "PUBLISHED",
-      "observedAt": "2026-08-26T04:44:53.719Z",
+      "observedAt": "2026-08-26T05:33:48.129Z",
       "lastAlertedTransition": "EDITORIAL:∅→PUBLISHED",
       "contentHash": "02bdd4293fd98d12"
     },
@@ -136,7 +136,7 @@
       "previousState": "NO_DATA",
       "currentState": "NO_DATA",
       "internalState": "PUBLISHED",
-      "observedAt": "2026-08-26T04:44:53.719Z",
+      "observedAt": "2026-08-26T05:33:48.129Z",
       "lastAlertedTransition": "EDITORIAL:∅→PUBLISHED",
       "contentHash": "da3b4f48d0ebd9ad"
     },
@@ -145,7 +145,7 @@
       "previousState": "NO_DATA",
       "currentState": "NO_DATA",
       "internalState": "PUBLISHED",
-      "observedAt": "2026-08-26T04:44:53.719Z",
+      "observedAt": "2026-08-26T05:33:48.129Z",
       "lastAlertedTransition": "EDITORIAL:∅→PUBLISHED",
       "contentHash": "42c27b904b258a4b"
     },
@@ -154,61 +154,61 @@
       "previousState": "NO_DATA",
       "currentState": "NO_DATA",
       "internalState": "PUBLISHED",
-      "observedAt": "2026-08-26T04:44:53.719Z",
+      "observedAt": "2026-08-26T05:33:48.129Z",
       "lastAlertedTransition": "EDITORIAL:∅→PUBLISHED",
       "contentHash": "21df8cdfe71b2adc"
     },
     "/blog/webcam-nao-funciona-o-que-verificar": {
       "url": "/blog/webcam-nao-funciona-o-que-verificar",
-      "previousState": null,
+      "previousState": "NO_DATA",
       "currentState": "NO_DATA",
       "internalState": "PUBLISHED",
-      "observedAt": "2026-08-26T04:44:53.719Z",
+      "observedAt": "2026-08-26T05:33:48.129Z",
       "lastAlertedTransition": "EDITORIAL:∅→PUBLISHED",
       "contentHash": "a43f9d8b53e2c740"
     },
     "/blog/permissoes-de-camera-no-windows": {
       "url": "/blog/permissoes-de-camera-no-windows",
-      "previousState": null,
+      "previousState": "NO_DATA",
       "currentState": "NO_DATA",
       "internalState": "PUBLISHED",
-      "observedAt": "2026-08-26T04:44:53.719Z",
+      "observedAt": "2026-08-26T05:33:48.129Z",
       "lastAlertedTransition": "EDITORIAL:∅→PUBLISHED",
       "contentHash": "fd8395482ebfe7a3"
     },
     "/blog/webcam-usb-nao-e-detectada": {
       "url": "/blog/webcam-usb-nao-e-detectada",
-      "previousState": null,
+      "previousState": "NO_DATA",
       "currentState": "NO_DATA",
       "internalState": "PUBLISHED",
-      "observedAt": "2026-08-26T04:44:53.719Z",
+      "observedAt": "2026-08-26T05:33:48.129Z",
       "lastAlertedTransition": "EDITORIAL:∅→PUBLISHED",
       "contentHash": "bdd26f41eb38c457"
     },
     "/blog/windows-update-nao-funciona-o-que-verificar": {
       "url": "/blog/windows-update-nao-funciona-o-que-verificar",
-      "previousState": null,
+      "previousState": "NO_DATA",
       "currentState": "NO_DATA",
       "internalState": "PUBLISHED",
-      "observedAt": "2026-08-26T04:44:53.719Z",
+      "observedAt": "2026-08-26T05:33:48.129Z",
       "lastAlertedTransition": "EDITORIAL:∅→PUBLISHED",
       "contentHash": "83365c1748e7c146"
     },
     "/blog/limpar-cache-do-windows-update-softwaredistribution": {
       "url": "/blog/limpar-cache-do-windows-update-softwaredistribution",
-      "previousState": null,
+      "previousState": "NO_DATA",
       "currentState": "NO_DATA",
       "internalState": "PUBLISHED",
-      "observedAt": "2026-08-26T04:44:53.719Z",
+      "observedAt": "2026-08-26T05:33:48.129Z",
       "lastAlertedTransition": "EDITORIAL:∅→PUBLISHED",
       "contentHash": "d0e46137cd64a8f8"
     },
     "/blog/windows-update-travado-desfazendo-alteracoes": {
       "url": "/blog/windows-update-travado-desfazendo-alteracoes",
-      "previousState": null,
+      "previousState": "NO_DATA",
       "currentState": "NO_DATA",
       "internalState": "PUBLISHED",
-      "observedAt": "2026-08-26T04:44:53.719Z",
+      "observedAt": "2026-08-26T05:33:48.129Z",
       "lastAlertedTransition": "EDITORIAL:∅→PUBLISHED",
       "contentHash": "6b81d4a5cbe30481"
     }

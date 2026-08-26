@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-08-26T04:44:53.719Z",
+  "geradoEm": "2026-08-26T05:33:48.129Z",
   "site": "sc-domain:otecnicodeinformatica.com.br",
   "disponivel": true,
   "lotes": [
@@ -586,5 +586,5 @@
       }
     }
   ],
-  "alertasNovos": 6
+  "alertasNovos": 0
 }
