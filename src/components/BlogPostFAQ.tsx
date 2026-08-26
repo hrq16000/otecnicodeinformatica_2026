@@ -328,6 +328,147 @@ const PILOT_FAQ: Record<string, FAQItem[]> = {
       a: "Não recomendamos. Eles costumam instalar versões genéricas que recriam o problema. Prefira sempre o pacote específico do modelo, obtido no site do fabricante.",
     },
   ],
+  // ── Onda 10C — Lote 4: webcam e Windows Update.
+  "webcam-nao-funciona-o-que-verificar": [
+    {
+      q: "Por que a webcam funciona no Zoom e não no Teams?",
+      a: "Porque a permissão e a seleção de dispositivo são configuradas dentro de cada programa. Se um funciona, o hardware e o driver estão bem: verifique a permissão do outro programa e qual câmera ele tem selecionada nas configurações de vídeo.",
+    },
+    {
+      q: "Como saber se a câmera está bloqueada pelo Windows?",
+      a: "Abra o aplicativo Câmera do Windows. Se ele exibir aviso de acesso bloqueado, o bloqueio é do sistema. Se a imagem aparecer normalmente, o bloqueio está no programa que falha.",
+    },
+    {
+      q: "Por que a webcam não aparece no Gerenciador de Dispositivos?",
+      a: "Porque o Windows não conseguiu enumerar o dispositivo. Em câmera integrada isso aponta para driver, dispositivo desabilitado, cabo interno ou módulo. Em câmera USB, aponta primeiro para porta, hub ou cabo.",
+    },
+    {
+      q: "A imagem fica preta, mas a câmera é reconhecida. É defeito?",
+      a: "Não necessariamente. Verifique obturador ou adesivo sobre a lente, feche outros programas que possam estar usando a câmera e teste em ambiente iluminado antes de suspeitar do módulo.",
+    },
+    {
+      q: "Como saber se a câmera do notebook queimou?",
+      a: "Quando ela não aparece em nenhuma condição, mesmo após reinstalar o driver oficial do modelo, e o comportamento não muda em outro sistema. Queda, líquido ou desmontagem recente reforçam a suspeita de cabo ou módulo.",
+    },
+  ],
+  "permissoes-de-camera-no-windows": [
+    {
+      q: "Onde ficam as permissões de câmera no Windows?",
+      a: "Em Configurações → Privacidade e segurança → Câmera. Ali existem o acesso à câmera do dispositivo, o acesso de aplicativos, a lista de aplicativos individuais e um item separado para programas de área de trabalho.",
+    },
+    {
+      q: "Liberei tudo e o navegador continua sem imagem. Por quê?",
+      a: "Provavelmente falta a permissão do próprio navegador ou a permissão daquele site específico. São camadas independentes do Windows e cada site guarda a própria decisão.",
+    },
+    {
+      q: "Devo deixar o acesso à câmera sempre ligado?",
+      a: "Não é obrigatório. Cada permissão concedida é uma decisão de privacidade real. Autorize por aplicativo e por site, e revogue quando não usar mais.",
+    },
+    {
+      q: "As permissões voltam sozinhas depois que eu mudo. O que está acontecendo?",
+      a: "Em computador gerenciado por empresa, política de grupo ou software de segurança pode reverter a configuração. Nesse caso, quem administra o parque precisa liberar.",
+    },
+    {
+      q: "Preciso desinstalar o antivírus para a câmera funcionar?",
+      a: "Não. Se houver módulo de proteção de câmera, suspenda apenas esse recurso pelo tempo do teste e reative em seguida.",
+    },
+  ],
+  "webcam-usb-nao-e-detectada": [
+    {
+      q: "Webcam USB precisa de driver?",
+      a: "Na maioria dos casos não: o Windows usa um driver de classe genérico. Quando o modelo exige, o pacote correto vem do site do fabricante da câmera, nunca de agregadores de driver.",
+    },
+    {
+      q: "Por que a câmera funciona na porta de trás e não na da frente?",
+      a: "Porque as portas frontais dependem de um cabo interno ligado à placa, que pode estar solto ou mal conectado. A porta traseira é ligada diretamente ao controlador e serve como referência de teste.",
+    },
+    {
+      q: "Posso usar a webcam em um hub USB?",
+      a: "Pode, desde que o hub tenha fonte própria. Em hub passivo compartilhado com outros periféricos, a câmera costuma desconectar durante a transmissão.",
+    },
+    {
+      q: "Aparece dispositivo desconhecido ao conectar. O que significa?",
+      a: "Que o Windows detectou algo na porta, mas não conseguiu identificar o dispositivo. Teste outro cabo e outra porta; se persistir, instale o driver oficial do modelo.",
+    },
+    {
+      q: "Como sei se o problema é da câmera ou do computador?",
+      a: "Pelo teste cruzado: conecte a mesma câmera em outro computador. Se funcionar lá, o problema é da sua máquina; se não funcionar em lugar nenhum, é da câmera ou do cabo.",
+    },
+  ],
+  "windows-update-nao-funciona-o-que-verificar": [
+    {
+      q: "Por que o Windows Update fica em 0%?",
+      a: "Normalmente porque a fila de download ficou inconsistente, porque falta espaço em disco ou porque a conexão caiu durante uma transferência anterior. Verifique espaço e rede antes de mexer no cache.",
+    },
+    {
+      q: "DISM e SFC fazem a mesma coisa?",
+      a: "Não. A verificação de arquivos do sistema repara arquivos protegidos usando a cópia local de componentes. A ferramenta de manutenção de imagem repara essa própria loja de componentes. Quando a loja está danificada, o reparo da imagem precisa vir antes.",
+    },
+    {
+      q: "É seguro reiniciar o PC durante uma atualização?",
+      a: "Não durante a fase de instalação, enquanto houver atividade de disco. Reiniciar nesse momento pode deixar componentes pela metade e provocar reversão ou falha de inicialização.",
+    },
+    {
+      q: "Posso desativar o Windows Update para parar os erros?",
+      a: "Não recomendamos. Desativar remove correções de segurança e apenas esconde o sintoma. O mesmo vale para desabilitar o serviço de reparo do Update, que existe justamente para recolocar componentes no lugar.",
+    },
+    {
+      q: "Formatar resolve problema de Windows Update?",
+      a: "É o último recurso, não o primeiro. A maior parte dos casos se resolve com triagem, solução de problemas do sistema, tratamento reversível do cache e reparo de componentes.",
+    },
+    {
+      q: "Windows 10 e Windows 11 usam o mesmo procedimento?",
+      a: "Os estágios são os mesmos, mas telas e nomes de opções mudam. Confirme sua versão antes de seguir qualquer roteiro, porque instruções de uma versão citam telas que a outra não tem.",
+    },
+  ],
+  "limpar-cache-do-windows-update-softwaredistribution": [
+    {
+      q: "Posso limpar a SoftwareDistribution?",
+      a: "Pode, com cautela e na ordem certa: pare os serviços de atualização e de transferência em segundo plano, renomeie a pasta em vez de apagá-la e reinicie os serviços. O Windows recria a estrutura sozinho.",
+    },
+    {
+      q: "Por que renomear em vez de apagar?",
+      a: "Porque renomear é reversível. Se o comportamento piorar, basta restaurar o nome original. Apagar é definitivo, costuma esbarrar em arquivos em uso e deixa o estado pela metade quando feito com os serviços rodando.",
+    },
+    {
+      q: "O que eu perco ao recriar a pasta?",
+      a: "Os pacotes já baixados, que serão baixados novamente, e parte do histórico de atualizações. Nenhum arquivo pessoal é afetado.",
+    },
+    {
+      q: "Isso resolve qualquer erro do Windows Update?",
+      a: "Não. Ajuda principalmente em download travado e fila corrompida. Falha após 100%, reversão pós-reinício e componentes danificados exigem outro caminho.",
+    },
+    {
+      q: "Posso usar um script pronto de reset do Windows Update?",
+      a: "Evite scripts de origem desconhecida. Eles alteram serviços, permissões e registro de uma vez, sem deixar registro do que mudaram, e dificultam voltar atrás.",
+    },
+  ],
+  "windows-update-travado-desfazendo-alteracoes": [
+    {
+      q: "O que significa a mensagem de desfazendo alterações?",
+      a: "Significa que a instalação encontrou um obstáculo depois da reinicialização e o Windows restaurou o estado anterior. É mecanismo de proteção: você perde a atualização, não o sistema.",
+    },
+    {
+      q: "Como saber se a atualização travou de verdade?",
+      a: "Observe atividade de disco, variação de rotação das ventoinhas e tempo total. Porcentagem congelada com disco ativo indica etapa demorada, não travamento. Horas sem nenhuma atividade, com a máquina fria, sugerem processo parado.",
+    },
+    {
+      q: "Por que a atualização instala e depois volta atrás?",
+      a: "As causas mais comuns são driver incompatível, falta de espaço, componentes do sistema danificados, software de segurança bloqueando alterações profundas e periféricos conectados durante a instalação.",
+    },
+    {
+      q: "Posso desligar no botão quando parece travado?",
+      a: "É a última alternativa, e só depois de horas sem qualquer atividade. Interromper à força durante a aplicação aumenta a chance de deixar componentes incompletos.",
+    },
+    {
+      q: "O mesmo código de erro sempre indica a mesma causa?",
+      a: "Não. Códigos como os das famílias 0x80070000 e 0x80240000 aparecem em contextos diferentes; o significado depende do estágio em que surgiram. Anote o código e o momento exato.",
+    },
+    {
+      q: "Quando devo parar e pedir ajuda?",
+      a: "Diante de reinício em laço, falha de inicialização, pedido de chave de recuperação de criptografia de disco ou dados importantes sem cópia. A prioridade passa a ser preservar os arquivos.",
+    },
+  ],
   // ── Onda 9C — cluster BIOS (sem preço, sem prazo, sem promessa).
   "computador-entra-direto-na-bios": [
     {
