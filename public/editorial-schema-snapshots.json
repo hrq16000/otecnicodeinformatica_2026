@@ -1,0 +1,929 @@
+{
+  "geradoEm": "2026-08-26T03:55:36.678Z",
+  "builds": [
+    {
+      "buildSha": "f48c5ba",
+      "geradoEm": "2026-08-26T03:55:36.678Z",
+      "rotas": {
+        "/blog/limpar-arquivos-temporarios-windows": {
+          "buildSha": "f48c5ba",
+          "url": "/blog/limpar-arquivos-temporarios-windows",
+          "owner": "temporarios-windows",
+          "lote": "10C/0",
+          "fingerprint": "f2e2c2b2ae600f12",
+          "types": [
+            "Article",
+            "BlogPosting",
+            "BreadcrumbList",
+            "ComputerRepairService",
+            "FAQPage",
+            "ItemList",
+            "LocalBusiness",
+            "Organization",
+            "ProfessionalService",
+            "TechArticle",
+            "WebSite"
+          ],
+          "nodes": 8,
+          "faqQuestions": [
+            "Quanto custa o atendimento em Curitiba?",
+            "Em quanto tempo o técnico atende?",
+            "Atende em domicílio ou só na bancada?",
+            "Quais formas de pagamento são aceitas?"
+          ],
+          "faqVisibleQuestions": [
+            "Quanto custa o atendimento em Curitiba?",
+            "Em quanto tempo o técnico atende?",
+            "Atende em domicílio ou só na bancada?",
+            "Quais formas de pagamento são aceitas?"
+          ],
+          "faqAnswers": {
+            "quanto custa o atendimento em curitiba": "a visita tecnica em curitiba comeca em r 99 99 e o valor do atendimento do servico e apresentado antes da execucao voce so aprova se concordar",
+            "em quanto tempo o tecnico atende": "atendemos conforme a disponibilidade da agenda em curitiba e regiao metropolitana conforme disponibilidade da agenda confirme o horario pelo whatsapp",
+            "atende em domicilio ou so na bancada": "atendemos a domicilio em curitiba e regiao com opcao de coleta e entrega quando o servico exigir bancada",
+            "quais formas de pagamento sao aceitas": "aceitamos pix dinheiro e cartao pagamento somente apos o servico entregue e aprovado"
+          },
+          "breadcrumbItems": [
+            {
+              "name": "Início",
+              "item": "https://otecnicodeinformatica.com.br/"
+            },
+            {
+              "name": "Blog",
+              "item": "https://otecnicodeinformatica.com.br/blog"
+            },
+            {
+              "name": "Como limpar arquivos temporários e liberar espaço no Windows",
+              "item": "https://otecnicodeinformatica.com.br/blog/limpar-arquivos-temporarios-windows"
+            }
+          ],
+          "breadcrumbVisible": [],
+          "articleFields": {
+            "tipo": [
+              "Article",
+              "BlogPosting",
+              "TechArticle"
+            ],
+            "headline": "Como limpar arquivos temporários e liberar espaço no Windows",
+            "mainEntityOfPage": {
+              "@id": "https://otecnicodeinformatica.com.br/blog/limpar-arquivos-temporarios-windows",
+              "@type": "WebPage"
+            },
+            "publisher": "O Técnico de Informática",
+            "author": "O Técnico de Informática",
+            "dateModified": "2026-08-25T08:00:00-03:00",
+            "image": [
+              {
+                "@type": "ImageObject",
+                "height": 1200,
+                "url": "https://otecnicodeinformatica.com.br/blog/limpar-arquivos-temporarios-windows.jpg",
+                "width": 1200
+              },
+              {
+                "@type": "ImageObject",
+                "height": 675,
+                "url": "https://otecnicodeinformatica.com.br/blog/limpar-arquivos-temporarios-windows.jpg",
+                "width": 1200
+              },
+              {
+                "@type": "ImageObject",
+                "height": 900,
+                "url": "https://otecnicodeinformatica.com.br/blog/limpar-arquivos-temporarios-windows.jpg",
+                "width": 1600
+              }
+            ]
+          },
+          "parseError": false
+        },
+        "/blog/memoria-ram-insuficiente-sintomas": {
+          "buildSha": "f48c5ba",
+          "url": "/blog/memoria-ram-insuficiente-sintomas",
+          "owner": "ram-insuficiente-sintomas",
+          "lote": "10C/0",
+          "fingerprint": "60ca654664a101b7",
+          "types": [
+            "Article",
+            "BlogPosting",
+            "BreadcrumbList",
+            "ComputerRepairService",
+            "FAQPage",
+            "ItemList",
+            "LocalBusiness",
+            "Organization",
+            "ProfessionalService",
+            "TechArticle",
+            "WebSite"
+          ],
+          "nodes": 8,
+          "faqQuestions": [
+            "Quanto custa o atendimento em Curitiba?",
+            "Em quanto tempo o técnico atende?",
+            "Atende em domicílio ou só na bancada?",
+            "Quais formas de pagamento são aceitas?"
+          ],
+          "faqVisibleQuestions": [
+            "Quanto custa o atendimento em Curitiba?",
+            "Em quanto tempo o técnico atende?",
+            "Atende em domicílio ou só na bancada?",
+            "Quais formas de pagamento são aceitas?"
+          ],
+          "faqAnswers": {
+            "quanto custa o atendimento em curitiba": "a visita tecnica em curitiba comeca em r 99 99 e o valor do atendimento do servico e apresentado antes da execucao voce so aprova se concordar",
+            "em quanto tempo o tecnico atende": "atendemos conforme a disponibilidade da agenda em curitiba e regiao metropolitana conforme disponibilidade da agenda confirme o horario pelo whatsapp",
+            "atende em domicilio ou so na bancada": "atendemos a domicilio em curitiba e regiao com opcao de coleta e entrega quando o servico exigir bancada",
+            "quais formas de pagamento sao aceitas": "aceitamos pix dinheiro e cartao pagamento somente apos o servico entregue e aprovado"
+          },
+          "breadcrumbItems": [
+            {
+              "name": "Início",
+              "item": "https://otecnicodeinformatica.com.br/"
+            },
+            {
+              "name": "Blog",
+              "item": "https://otecnicodeinformatica.com.br/blog"
+            },
+            {
+              "name": "Memória RAM insuficiente: sintomas, como confirmar e quando fazer upgrade",
+              "item": "https://otecnicodeinformatica.com.br/blog/memoria-ram-insuficiente-sintomas"
+            }
+          ],
+          "breadcrumbVisible": [],
+          "articleFields": {
+            "tipo": [
+              "Article",
+              "BlogPosting",
+              "TechArticle"
+            ],
+            "headline": "Memória RAM insuficiente: sintomas, como confirmar e quando fazer upgrade",
+            "mainEntityOfPage": {
+              "@id": "https://otecnicodeinformatica.com.br/blog/memoria-ram-insuficiente-sintomas",
+              "@type": "WebPage"
+            },
+            "publisher": "O Técnico de Informática",
+            "author": "O Técnico de Informática",
+            "dateModified": "2026-08-25T08:00:00-03:00",
+            "image": [
+              {
+                "@type": "ImageObject",
+                "height": 1200,
+                "url": "https://otecnicodeinformatica.com.br/blog/memoria-ram-insuficiente-sintomas.jpg",
+                "width": 1200
+              },
+              {
+                "@type": "ImageObject",
+                "height": 675,
+                "url": "https://otecnicodeinformatica.com.br/blog/memoria-ram-insuficiente-sintomas.jpg",
+                "width": 1200
+              },
+              {
+                "@type": "ImageObject",
+                "height": 900,
+                "url": "https://otecnicodeinformatica.com.br/blog/memoria-ram-insuficiente-sintomas.jpg",
+                "width": 1600
+              }
+            ]
+          },
+          "parseError": false
+        },
+        "/blog/codigos-de-erro-tela-azul-windows": {
+          "buildSha": "f48c5ba",
+          "url": "/blog/codigos-de-erro-tela-azul-windows",
+          "owner": "bsod-codigos-de-erro",
+          "lote": "10C/0",
+          "fingerprint": "f188a0b68b0de4c8",
+          "types": [
+            "Article",
+            "BlogPosting",
+            "BreadcrumbList",
+            "ComputerRepairService",
+            "FAQPage",
+            "ItemList",
+            "LocalBusiness",
+            "Organization",
+            "ProfessionalService",
+            "TechArticle",
+            "WebSite"
+          ],
+          "nodes": 8,
+          "faqQuestions": [
+            "Quanto custa o atendimento em Curitiba?",
+            "Em quanto tempo o técnico atende?",
+            "Atende em domicílio ou só na bancada?",
+            "Quais formas de pagamento são aceitas?"
+          ],
+          "faqVisibleQuestions": [
+            "Quanto custa o atendimento em Curitiba?",
+            "Em quanto tempo o técnico atende?",
+            "Atende em domicílio ou só na bancada?",
+            "Quais formas de pagamento são aceitas?"
+          ],
+          "faqAnswers": {
+            "quanto custa o atendimento em curitiba": "a visita tecnica em curitiba comeca em r 99 99 e o valor do atendimento do servico e apresentado antes da execucao voce so aprova se concordar",
+            "em quanto tempo o tecnico atende": "atendemos conforme a disponibilidade da agenda em curitiba e regiao metropolitana conforme disponibilidade da agenda confirme o horario pelo whatsapp",
+            "atende em domicilio ou so na bancada": "atendemos a domicilio em curitiba e regiao com opcao de coleta e entrega quando o servico exigir bancada",
+            "quais formas de pagamento sao aceitas": "aceitamos pix dinheiro e cartao pagamento somente apos o servico entregue e aprovado"
+          },
+          "breadcrumbItems": [
+            {
+              "name": "Início",
+              "item": "https://otecnicodeinformatica.com.br/"
+            },
+            {
+              "name": "Blog",
+              "item": "https://otecnicodeinformatica.com.br/blog"
+            },
+            {
+              "name": "Códigos de erro da tela azul: como ler e o que cada um indica",
+              "item": "https://otecnicodeinformatica.com.br/blog/codigos-de-erro-tela-azul-windows"
+            }
+          ],
+          "breadcrumbVisible": [],
+          "articleFields": {
+            "tipo": [
+              "Article",
+              "BlogPosting",
+              "TechArticle"
+            ],
+            "headline": "Códigos de erro da tela azul: como ler e o que cada um indica",
+            "mainEntityOfPage": {
+              "@id": "https://otecnicodeinformatica.com.br/blog/codigos-de-erro-tela-azul-windows",
+              "@type": "WebPage"
+            },
+            "publisher": "O Técnico de Informática",
+            "author": "O Técnico de Informática",
+            "dateModified": "2026-08-25T08:00:00-03:00",
+            "image": [
+              {
+                "@type": "ImageObject",
+                "height": 1200,
+                "url": "https://otecnicodeinformatica.com.br/blog/codigos-de-erro-tela-azul-windows.jpg",
+                "width": 1200
+              },
+              {
+                "@type": "ImageObject",
+                "height": 675,
+                "url": "https://otecnicodeinformatica.com.br/blog/codigos-de-erro-tela-azul-windows.jpg",
+                "width": 1200
+              },
+              {
+                "@type": "ImageObject",
+                "height": 900,
+                "url": "https://otecnicodeinformatica.com.br/blog/codigos-de-erro-tela-azul-windows.jpg",
+                "width": 1600
+              }
+            ]
+          },
+          "parseError": false
+        },
+        "/blog/testar-memoria-ram-memtest86": {
+          "buildSha": "f48c5ba",
+          "url": "/blog/testar-memoria-ram-memtest86",
+          "owner": "memtest86-teste-de-ram",
+          "lote": "10C/0",
+          "fingerprint": "6b9aba683733764f",
+          "types": [
+            "Article",
+            "BlogPosting",
+            "BreadcrumbList",
+            "ComputerRepairService",
+            "FAQPage",
+            "ItemList",
+            "LocalBusiness",
+            "Organization",
+            "ProfessionalService",
+            "TechArticle",
+            "WebSite"
+          ],
+          "nodes": 8,
+          "faqQuestions": [
+            "Quanto custa o atendimento em Curitiba?",
+            "Em quanto tempo o técnico atende?",
+            "Atende em domicílio ou só na bancada?",
+            "Quais formas de pagamento são aceitas?"
+          ],
+          "faqVisibleQuestions": [
+            "Quanto custa o atendimento em Curitiba?",
+            "Em quanto tempo o técnico atende?",
+            "Atende em domicílio ou só na bancada?",
+            "Quais formas de pagamento são aceitas?"
+          ],
+          "faqAnswers": {
+            "quanto custa o atendimento em curitiba": "a visita tecnica em curitiba comeca em r 99 99 e o valor do atendimento do servico e apresentado antes da execucao voce so aprova se concordar",
+            "em quanto tempo o tecnico atende": "atendemos conforme a disponibilidade da agenda em curitiba e regiao metropolitana conforme disponibilidade da agenda confirme o horario pelo whatsapp",
+            "atende em domicilio ou so na bancada": "atendemos a domicilio em curitiba e regiao com opcao de coleta e entrega quando o servico exigir bancada",
+            "quais formas de pagamento sao aceitas": "aceitamos pix dinheiro e cartao pagamento somente apos o servico entregue e aprovado"
+          },
+          "breadcrumbItems": [
+            {
+              "name": "Início",
+              "item": "https://otecnicodeinformatica.com.br/"
+            },
+            {
+              "name": "Blog",
+              "item": "https://otecnicodeinformatica.com.br/blog"
+            },
+            {
+              "name": "Como testar a memória RAM com Memtest86+ (passo a passo)",
+              "item": "https://otecnicodeinformatica.com.br/blog/testar-memoria-ram-memtest86"
+            }
+          ],
+          "breadcrumbVisible": [],
+          "articleFields": {
+            "tipo": [
+              "Article",
+              "BlogPosting",
+              "TechArticle"
+            ],
+            "headline": "Como testar a memória RAM com Memtest86+ (passo a passo)",
+            "mainEntityOfPage": {
+              "@id": "https://otecnicodeinformatica.com.br/blog/testar-memoria-ram-memtest86",
+              "@type": "WebPage"
+            },
+            "publisher": "O Técnico de Informática",
+            "author": "O Técnico de Informática",
+            "dateModified": "2026-08-25T08:00:00-03:00",
+            "image": [
+              {
+                "@type": "ImageObject",
+                "height": 1200,
+                "url": "https://otecnicodeinformatica.com.br/blog/testar-memoria-ram-memtest86.jpg",
+                "width": 1200
+              },
+              {
+                "@type": "ImageObject",
+                "height": 675,
+                "url": "https://otecnicodeinformatica.com.br/blog/testar-memoria-ram-memtest86.jpg",
+                "width": 1200
+              },
+              {
+                "@type": "ImageObject",
+                "height": 900,
+                "url": "https://otecnicodeinformatica.com.br/blog/testar-memoria-ram-memtest86.jpg",
+                "width": 1600
+              }
+            ]
+          },
+          "parseError": false
+        },
+        "/blog/botao-power-nao-funciona-jump-start-placa-mae": {
+          "buildSha": "f48c5ba",
+          "url": "/blog/botao-power-nao-funciona-jump-start-placa-mae",
+          "owner": "botao-power-jump-start",
+          "lote": "10D/1",
+          "fingerprint": "138d6b5cd26dc578",
+          "types": [
+            "Article",
+            "BlogPosting",
+            "BreadcrumbList",
+            "ComputerRepairService",
+            "FAQPage",
+            "ItemList",
+            "LocalBusiness",
+            "Organization",
+            "ProfessionalService",
+            "TechArticle",
+            "WebSite"
+          ],
+          "nodes": 8,
+          "faqQuestions": [
+            "Como saber se o problema é o botão de ligar e não a fonte?",
+            "Encostar a chave nos pinos pode danificar a placa?",
+            "Dá para usar o botão de reiniciar no lugar do de ligar?",
+            "Esse teste vale para notebook?",
+            "Se nem pelos pinos liga, qual é o próximo passo?"
+          ],
+          "faqVisibleQuestions": [
+            "Como saber se o problema é o botão de ligar e não a fonte?",
+            "Encostar a chave nos pinos pode danificar a placa?",
+            "Dá para usar o botão de reiniciar no lugar do de ligar?",
+            "Esse teste vale para notebook?",
+            "Se nem pelos pinos liga, qual é o próximo passo?"
+          ],
+          "faqAnswers": {
+            "como saber se o problema e o botao de ligar e nao a fonte": "desconecte o plugue do par pwr sw do painel frontal e com a fonte ligada encoste rapidamente uma chave de fenda nos dois pinos se a maquina partir sem o botao e nao partir com ele o defeito esta no botao ou no cabo dele",
+            "encostar a chave nos pinos pode danificar a placa": "o par de partida nao tem polaridade e trabalha com sinal nao com corrente de carga o risco esta em tocar o par errado ou trilhas vizinhas confirme a identificacao pela serigrafia ou pelo manual do modelo use chave com cabo isolado e mantenha o contato por menos de um segundo",
+            "da para usar o botao de reiniciar no lugar do de ligar": "sim como solucao provisoria eletricamente as duas sao chaves momentaneas iguais basta mover o conector do reset para o par de partida o botao frontal correto continua sendo a substituicao adequada",
+            "esse teste vale para notebook": "nao em notebooks e all in one o botao fica em uma placa auxiliar ligada por cabo flat sem par de pinos acessivel a verificacao exige desmontagem e medicao de bancada",
+            "se nem pelos pinos liga qual e o proximo passo": "o botao esta descartado a sequencia passa a ser verificar a fonte de alimentacao e persistindo o quadro avaliar a placa mae com teste de bancada minima fora do gabinete"
+          },
+          "breadcrumbItems": [
+            {
+              "name": "Início",
+              "item": "https://otecnicodeinformatica.com.br/"
+            },
+            {
+              "name": "Blog",
+              "item": "https://otecnicodeinformatica.com.br/blog"
+            },
+            {
+              "name": "Botão power não funciona: como ligar o PC pelo conector da placa-mãe",
+              "item": "https://otecnicodeinformatica.com.br/blog/botao-power-nao-funciona-jump-start-placa-mae"
+            }
+          ],
+          "breadcrumbVisible": [],
+          "articleFields": {
+            "tipo": [
+              "Article",
+              "BlogPosting",
+              "TechArticle"
+            ],
+            "headline": "Botão power não funciona: como ligar o PC pelo conector da placa-mãe",
+            "mainEntityOfPage": {
+              "@id": "https://otecnicodeinformatica.com.br/blog/botao-power-nao-funciona-jump-start-placa-mae",
+              "@type": "WebPage"
+            },
+            "publisher": "O Técnico de Informática",
+            "author": "O Técnico de Informática",
+            "dateModified": "2026-08-26T08:00:00-03:00",
+            "image": [
+              {
+                "@type": "ImageObject",
+                "height": 1200,
+                "url": "https://otecnicodeinformatica.com.br/blog/botao-power-nao-funciona-jump-start-placa-mae.jpg",
+                "width": 1200
+              },
+              {
+                "@type": "ImageObject",
+                "height": 675,
+                "url": "https://otecnicodeinformatica.com.br/blog/botao-power-nao-funciona-jump-start-placa-mae.jpg",
+                "width": 1200
+              },
+              {
+                "@type": "ImageObject",
+                "height": 900,
+                "url": "https://otecnicodeinformatica.com.br/blog/botao-power-nao-funciona-jump-start-placa-mae.jpg",
+                "width": 1600
+              }
+            ]
+          },
+          "parseError": false
+        },
+        "/blog/curto-circuito-placa-mae-como-identificar": {
+          "buildSha": "f48c5ba",
+          "url": "/blog/curto-circuito-placa-mae-como-identificar",
+          "owner": "curto-circuito-placa-mae",
+          "lote": "10D/1",
+          "fingerprint": "c350da0fd61c4cc1",
+          "types": [
+            "Article",
+            "BlogPosting",
+            "BreadcrumbList",
+            "ComputerRepairService",
+            "FAQPage",
+            "ItemList",
+            "LocalBusiness",
+            "Organization",
+            "ProfessionalService",
+            "TechArticle",
+            "WebSite"
+          ],
+          "nodes": 8,
+          "faqQuestions": [
+            "Ventoinha gira meio segundo e desliga: é curto?",
+            "O que é o teste de bancada mínima?",
+            "Capacitor estufado significa placa perdida?",
+            "Parafuso solto pode causar isso?",
+            "Posso medir com multímetro em casa?"
+          ],
+          "faqVisibleQuestions": [
+            "Ventoinha gira meio segundo e desliga: é curto?",
+            "O que é o teste de bancada mínima?",
+            "Capacitor estufado significa placa perdida?",
+            "Parafuso solto pode causar isso?",
+            "Posso medir com multímetro em casa?"
+          ],
+          "faqAnswers": {
+            "ventoinha gira meio segundo e desliga e curto": "e o padrao tipico de protecao da fonte disparando por consumo fora do esperado o que inclui curto na placa ou em algum componente ligado a ela tambem pode ocorrer por fonte em degradacao por isso o teste com outra fonte comprovadamente boa faz parte do roteiro",
+            "o que e o teste de bancada minima": "e ligar a placa fora do gabinete apoiada sobre material nao condutivo apenas com processador cooler um modulo de memoria e a fonte se assim ela liga o curto vinha do contato com o gabinete ou de um periferico que devem ser reintroduzidos um por vez",
+            "capacitor estufado significa placa perdida": "nao necessariamente a substituicao e possivel em nivel de componente com peca de mesma especificacao e ferro de solda adequado a decisao costuma ser economica em placas comuns o custo do reparo pode se aproximar do de uma placa nova",
+            "parafuso solto pode causar isso": "pode e e uma das causas mais frequentes espacador metalico em posicao sem furo correspondente parafuso extra ou chapa tocando a solda criam caminho de corrente indevido e derrubam a alimentacao na partida",
+            "posso medir com multimetro em casa": "medicao de continuidade so e valida com o equipamento desligado e o cabo removido sem pratica de leitura o resultado leva a troca de pecas boas havendo cheiro de queimado marca escura ou liquido derramado interrompa e leve para avaliacao de bancada"
+          },
+          "breadcrumbItems": [
+            {
+              "name": "Início",
+              "item": "https://otecnicodeinformatica.com.br/"
+            },
+            {
+              "name": "Blog",
+              "item": "https://otecnicodeinformatica.com.br/blog"
+            },
+            {
+              "name": "Curto-circuito na placa-mãe: como identificar e isolar o problema",
+              "item": "https://otecnicodeinformatica.com.br/blog/curto-circuito-placa-mae-como-identificar"
+            }
+          ],
+          "breadcrumbVisible": [],
+          "articleFields": {
+            "tipo": [
+              "Article",
+              "BlogPosting",
+              "TechArticle"
+            ],
+            "headline": "Curto-circuito na placa-mãe: como identificar e isolar o problema",
+            "mainEntityOfPage": {
+              "@id": "https://otecnicodeinformatica.com.br/blog/curto-circuito-placa-mae-como-identificar",
+              "@type": "WebPage"
+            },
+            "publisher": "O Técnico de Informática",
+            "author": "O Técnico de Informática",
+            "dateModified": "2026-08-26T08:00:00-03:00",
+            "image": [
+              {
+                "@type": "ImageObject",
+                "height": 1200,
+                "url": "https://otecnicodeinformatica.com.br/blog/curto-circuito-placa-mae-como-identificar.jpg",
+                "width": 1200
+              },
+              {
+                "@type": "ImageObject",
+                "height": 675,
+                "url": "https://otecnicodeinformatica.com.br/blog/curto-circuito-placa-mae-como-identificar.jpg",
+                "width": 1200
+              },
+              {
+                "@type": "ImageObject",
+                "height": 900,
+                "url": "https://otecnicodeinformatica.com.br/blog/curto-circuito-placa-mae-como-identificar.jpg",
+                "width": 1600
+              }
+            ]
+          },
+          "parseError": false
+        },
+        "/blog/bios-corrompida-reset-cmos-atualizacao": {
+          "buildSha": "f48c5ba",
+          "url": "/blog/bios-corrompida-reset-cmos-atualizacao",
+          "owner": "bios-corrompida-reset-cmos",
+          "lote": "10D/1",
+          "fingerprint": "ded76c0d4e7f31be",
+          "types": [
+            "Article",
+            "BlogPosting",
+            "BreadcrumbList",
+            "ComputerRepairService",
+            "FAQPage",
+            "ItemList",
+            "LocalBusiness",
+            "Organization",
+            "ProfessionalService",
+            "TechArticle",
+            "WebSite"
+          ],
+          "nodes": 8,
+          "faqQuestions": [
+            "Qual a diferença entre limpar o CMOS e regravar a BIOS?",
+            "Como faço o reset de CMOS corretamente?",
+            "Como sei que o firmware corrompeu de verdade?",
+            "O reset apaga alguma coisa importante?",
+            "Vale a pena atualizar a BIOS por precaução?"
+          ],
+          "faqVisibleQuestions": [
+            "Qual a diferença entre limpar o CMOS e regravar a BIOS?",
+            "Como faço o reset de CMOS corretamente?",
+            "Como sei que o firmware corrompeu de verdade?",
+            "O reset apaga alguma coisa importante?",
+            "Vale a pena atualizar a BIOS por precaução?"
+          ],
+          "faqAnswers": {
+            "qual a diferenca entre limpar o cmos e regravar a bios": "limpar o cmos apaga apenas as configuracoes guardadas alimentadas pela bateria de litio regravar a bios substitui o firmware gravado no chip da placa o primeiro e procedimento de dois minutos o segundo so e necessario quando o firmware corrompeu de fato",
+            "como faco o reset de cmos corretamente": "com a maquina desligada chave da fonte em o e cabo removido segure o botao de ligar por dez segundos para descarregar depois mova o jumper clr cmos para a posicao adjacente por dez segundos e devolva ou retire a bateria de litio por cerca de cinco minutos",
+            "como sei que o firmware corrompeu de verdade": "quando o setup nao abre em nenhuma condicao tela permanece preta sem imagem ainda que ventoinhas girem se o setup abre o firmware esta integro e o caso e de configuracao",
+            "o reset apaga alguma coisa importante": "apaga senha de setup perfis de memoria xmp expo e ajustes personalizados em maquinas com criptografia de disco ativa a alteracao pode exigir a chave de recuperacao na proxima partida confirme que voce tem essa chave antes",
+            "vale a pena atualizar a bios por precaucao": "nao atualizacao de firmware nao e manutencao de rotina e nao melhora desempenho faca apenas com motivo declarado como suporte a um processador novo correcao de seguranca divulgada ou incompatibilidade documentada sempre com o arquivo do modelo e revisao exatos"
+          },
+          "breadcrumbItems": [
+            {
+              "name": "Início",
+              "item": "https://otecnicodeinformatica.com.br/"
+            },
+            {
+              "name": "Blog",
+              "item": "https://otecnicodeinformatica.com.br/blog"
+            },
+            {
+              "name": "BIOS corrompida: reset de CMOS e recuperação de firmware",
+              "item": "https://otecnicodeinformatica.com.br/blog/bios-corrompida-reset-cmos-atualizacao"
+            }
+          ],
+          "breadcrumbVisible": [],
+          "articleFields": {
+            "tipo": [
+              "Article",
+              "BlogPosting",
+              "TechArticle"
+            ],
+            "headline": "BIOS corrompida: reset de CMOS e recuperação de firmware",
+            "mainEntityOfPage": {
+              "@id": "https://otecnicodeinformatica.com.br/blog/bios-corrompida-reset-cmos-atualizacao",
+              "@type": "WebPage"
+            },
+            "publisher": "O Técnico de Informática",
+            "author": "O Técnico de Informática",
+            "dateModified": "2026-08-26T08:00:00-03:00",
+            "image": [
+              {
+                "@type": "ImageObject",
+                "height": 1200,
+                "url": "https://otecnicodeinformatica.com.br/blog/bios-corrompida-reset-cmos-atualizacao.jpg",
+                "width": 1200
+              },
+              {
+                "@type": "ImageObject",
+                "height": 675,
+                "url": "https://otecnicodeinformatica.com.br/blog/bios-corrompida-reset-cmos-atualizacao.jpg",
+                "width": 1200
+              },
+              {
+                "@type": "ImageObject",
+                "height": 900,
+                "url": "https://otecnicodeinformatica.com.br/blog/bios-corrompida-reset-cmos-atualizacao.jpg",
+                "width": 1600
+              }
+            ]
+          },
+          "parseError": false
+        },
+        "/blog/internet-lenta-provedor-ou-roteador": {
+          "buildSha": "f48c5ba",
+          "url": "/blog/internet-lenta-provedor-ou-roteador",
+          "owner": "internet-lenta-triagem-origem",
+          "lote": "10C/2",
+          "fingerprint": "cda1cb4f287c6579",
+          "types": [
+            "Article",
+            "BlogPosting",
+            "BreadcrumbList",
+            "ComputerRepairService",
+            "FAQPage",
+            "ItemList",
+            "LocalBusiness",
+            "Organization",
+            "ProfessionalService",
+            "TechArticle",
+            "WebSite"
+          ],
+          "nodes": 8,
+          "faqQuestions": [
+            "Como saber se a internet lenta é culpa do provedor?",
+            "Por que o Wi-Fi é mais lento que o cabo?",
+            "Trocar por um plano mais rápido resolve?",
+            "Repetidor de sinal melhora a velocidade?",
+            "O que registrar antes de abrir chamado com a operadora?"
+          ],
+          "faqVisibleQuestions": [
+            "Como saber se a internet lenta é culpa do provedor?",
+            "Por que o Wi-Fi é mais lento que o cabo?",
+            "Trocar por um plano mais rápido resolve?",
+            "Repetidor de sinal melhora a velocidade?",
+            "O que registrar antes de abrir chamado com a operadora?"
+          ],
+          "faqAnswers": {
+            "como saber se a internet lenta e culpa do provedor": "meca a velocidade com o computador ligado por cabo direto no roteador tres vezes em horarios diferentes se o resultado por cabo ficar muito abaixo do contratado em todas as medicoes a suspeita e da entrega da operadora se o cabo entrega bem o gargalo esta dentro de casa",
+            "por que o wi fi e mais lento que o cabo": "o sinal sem fio perde intensidade com distancia paredes laje e concorrencia de redes vizinhas uma diferenca existe sempre o que indica problema e o wi fi entregar muito pouco mesmo a um ou dois metros do roteador",
+            "trocar por um plano mais rapido resolve": "nao quando o limite e a rede interna se o wi fi ja nao entrega a velocidade atual ele nao entregara o dobro vale contratar mais velocidade so depois de confirmar por cabo que a entrega atual esta sendo consumida por inteiro",
+            "repetidor de sinal melhora a velocidade": "so quando instalado em um ponto que ainda recebe sinal bom colocado onde o sinal ja esta fraco ele repete um sinal ruim e costuma piorar a experiencia",
+            "o que registrar antes de abrir chamado com a operadora": "data hora e resultado das medicoes feitas por cabo com os demais aparelhos parados esse historico sustenta o pedido de verificacao do enlace em vez de apenas um reinicio remoto"
+          },
+          "breadcrumbItems": [
+            {
+              "name": "Início",
+              "item": "https://otecnicodeinformatica.com.br/"
+            },
+            {
+              "name": "Blog",
+              "item": "https://otecnicodeinformatica.com.br/blog"
+            },
+            {
+              "name": "Internet lenta: é o provedor ou o seu roteador?",
+              "item": "https://otecnicodeinformatica.com.br/blog/internet-lenta-provedor-ou-roteador"
+            }
+          ],
+          "breadcrumbVisible": [],
+          "articleFields": {
+            "tipo": [
+              "Article",
+              "BlogPosting",
+              "TechArticle"
+            ],
+            "headline": "Internet lenta: é o provedor ou o seu roteador?",
+            "mainEntityOfPage": {
+              "@id": "https://otecnicodeinformatica.com.br/blog/internet-lenta-provedor-ou-roteador",
+              "@type": "WebPage"
+            },
+            "publisher": "O Técnico de Informática",
+            "author": "O Técnico de Informática",
+            "dateModified": "2026-08-26T08:00:00-03:00",
+            "image": [
+              {
+                "@type": "ImageObject",
+                "height": 1200,
+                "url": "https://otecnicodeinformatica.com.br/blog/internet-lenta-provedor-ou-roteador.jpg",
+                "width": 1200
+              },
+              {
+                "@type": "ImageObject",
+                "height": 675,
+                "url": "https://otecnicodeinformatica.com.br/blog/internet-lenta-provedor-ou-roteador.jpg",
+                "width": 1200
+              },
+              {
+                "@type": "ImageObject",
+                "height": 900,
+                "url": "https://otecnicodeinformatica.com.br/blog/internet-lenta-provedor-ou-roteador.jpg",
+                "width": 1600
+              }
+            ]
+          },
+          "parseError": false
+        },
+        "/blog/impressora-offline-como-resolver": {
+          "buildSha": "f48c5ba",
+          "url": "/blog/impressora-offline-como-resolver",
+          "owner": "impressora-offline",
+          "lote": "10C/2",
+          "fingerprint": "f1926e0e361d5eaa",
+          "types": [
+            "Article",
+            "BlogPosting",
+            "BreadcrumbList",
+            "ComputerRepairService",
+            "FAQPage",
+            "ItemList",
+            "LocalBusiness",
+            "Organization",
+            "ProfessionalService",
+            "TechArticle",
+            "WebSite"
+          ],
+          "nodes": 8,
+          "faqQuestions": [
+            "O que significa a impressora aparecer offline?",
+            "Por que a impressora some depois de ficar desligada alguns dias?",
+            "Como descubro o endereço atual da impressora?",
+            "Preciso reinstalar a impressora para resolver?",
+            "A impressora está offline só em um computador. O que muda?"
+          ],
+          "faqVisibleQuestions": [
+            "O que significa a impressora aparecer offline?",
+            "Por que a impressora some depois de ficar desligada alguns dias?",
+            "Como descubro o endereço atual da impressora?",
+            "Preciso reinstalar a impressora para resolver?",
+            "A impressora está offline só em um computador. O que muda?"
+          ],
+          "faqAnswers": {
+            "o que significa a impressora aparecer offline": "significa que o windows tentou falar com a impressora e nao obteve resposta em rede a causa mais comum e o aparelho ter voltado com outro endereco ip por cabo costuma ser porta cabo ou servico de impressao parado",
+            "por que a impressora some depois de ficar desligada alguns dias": "o roteador entrega enderecos por emprestimo e com prazo passado o prazo a impressora pode voltar com um endereco diferente enquanto o computador continua chamando o antigo criar uma reserva de endereco no roteador evita a repeticao",
+            "como descubro o endereco atual da impressora": "pelo menu do proprio aparelho imprimindo a pagina de configuracao de rede ela mostra o endereco em uso e se o wi fi esta realmente conectado",
+            "preciso reinstalar a impressora para resolver": "na maioria dos casos nao corrigir a porta cadastrada para o endereco atual e desmarcar as opcoes de pausa e de uso offline resolve sem remover nada",
+            "a impressora esta offline so em um computador o que muda": "indica configuracao local desse computador normalmente porta antiga cadastrada se estivesse offline em todos a suspeita passaria para a conexao de rede do proprio aparelho"
+          },
+          "breadcrumbItems": [
+            {
+              "name": "Início",
+              "item": "https://otecnicodeinformatica.com.br/"
+            },
+            {
+              "name": "Blog",
+              "item": "https://otecnicodeinformatica.com.br/blog"
+            },
+            {
+              "name": "Impressora offline: por que aparece assim e como resolver",
+              "item": "https://otecnicodeinformatica.com.br/blog/impressora-offline-como-resolver"
+            }
+          ],
+          "breadcrumbVisible": [],
+          "articleFields": {
+            "tipo": [
+              "Article",
+              "BlogPosting",
+              "TechArticle"
+            ],
+            "headline": "Impressora offline: por que aparece assim e como resolver",
+            "mainEntityOfPage": {
+              "@id": "https://otecnicodeinformatica.com.br/blog/impressora-offline-como-resolver",
+              "@type": "WebPage"
+            },
+            "publisher": "O Técnico de Informática",
+            "author": "O Técnico de Informática",
+            "dateModified": "2026-08-26T08:00:00-03:00",
+            "image": [
+              {
+                "@type": "ImageObject",
+                "height": 1200,
+                "url": "https://otecnicodeinformatica.com.br/blog/impressora-offline-como-resolver.jpg",
+                "width": 1200
+              },
+              {
+                "@type": "ImageObject",
+                "height": 675,
+                "url": "https://otecnicodeinformatica.com.br/blog/impressora-offline-como-resolver.jpg",
+                "width": 1200
+              },
+              {
+                "@type": "ImageObject",
+                "height": 900,
+                "url": "https://otecnicodeinformatica.com.br/blog/impressora-offline-como-resolver.jpg",
+                "width": 1600
+              }
+            ]
+          },
+          "parseError": false
+        },
+        "/blog/fila-de-impressao-travada-spooler-windows": {
+          "buildSha": "f48c5ba",
+          "url": "/blog/fila-de-impressao-travada-spooler-windows",
+          "owner": "fila-impressao-spooler",
+          "lote": "10C/2",
+          "fingerprint": "11ae5cacbd39905b",
+          "types": [
+            "Article",
+            "BlogPosting",
+            "BreadcrumbList",
+            "ComputerRepairService",
+            "FAQPage",
+            "ItemList",
+            "LocalBusiness",
+            "Organization",
+            "ProfessionalService",
+            "TechArticle",
+            "WebSite"
+          ],
+          "nodes": 8,
+          "faqQuestions": [
+            "O que é o spooler de impressão?",
+            "Como limpar a fila de impressão travada?",
+            "Apagar os arquivos dessa pasta remove minhas impressoras?",
+            "Por que o documento fica preso em \"excluindo\"?",
+            "O spooler cai toda hora. É driver?"
+          ],
+          "faqVisibleQuestions": [
+            "O que é o spooler de impressão?",
+            "Como limpar a fila de impressão travada?",
+            "Apagar os arquivos dessa pasta remove minhas impressoras?",
+            "Por que o documento fica preso em \"excluindo\"?",
+            "O spooler cai toda hora. É driver?"
+          ],
+          "faqAnswers": {
+            "o que e o spooler de impressao": "e o servico do windows que grava o documento em um arquivo temporario e cuida do envio para a impressora quando esse arquivo corrompe o servico trava e a fila congela",
+            "como limpar a fila de impressao travada": "pare o servico spooler de impressao em services msc apague todo o conteudo da pasta c windows system32 spool printers e inicie o servico novamente depois reenvie um documento de uma pagina para confirmar",
+            "apagar os arquivos dessa pasta remove minhas impressoras": "nao aqueles arquivos sao apenas trabalhos pendentes as impressoras cadastradas e os drivers permanecem instalados",
+            "por que o documento fica preso em excluindo": "porque o servico nao consegue concluir nem descartar o trabalho corrompido enquanto estiver em execucao por isso o procedimento exige parar o servico antes de limpar a pasta",
+            "o spooler cai toda hora e driver": "provavelmente sim quando o servico para logo apos cada envio remova a impressora reinicie e instale o pacote oficial do modelo exato baixado do fabricante em vez de um driver generico"
+          },
+          "breadcrumbItems": [
+            {
+              "name": "Início",
+              "item": "https://otecnicodeinformatica.com.br/"
+            },
+            {
+              "name": "Blog",
+              "item": "https://otecnicodeinformatica.com.br/blog"
+            },
+            {
+              "name": "Fila de impressão travada: como destravar o spooler do Windows",
+              "item": "https://otecnicodeinformatica.com.br/blog/fila-de-impressao-travada-spooler-windows"
+            }
+          ],
+          "breadcrumbVisible": [],
+          "articleFields": {
+            "tipo": [
+              "Article",
+              "BlogPosting",
+              "TechArticle"
+            ],
+            "headline": "Fila de impressão travada: como destravar o spooler do Windows",
+            "mainEntityOfPage": {
+              "@id": "https://otecnicodeinformatica.com.br/blog/fila-de-impressao-travada-spooler-windows",
+              "@type": "WebPage"
+            },
+            "publisher": "O Técnico de Informática",
+            "author": "O Técnico de Informática",
+            "dateModified": "2026-08-26T08:00:00-03:00",
+            "image": [
+              {
+                "@type": "ImageObject",
+                "height": 1200,
+                "url": "https://otecnicodeinformatica.com.br/blog/fila-de-impressao-travada-spooler-windows.jpg",
+                "width": 1200
+              },
+              {
+                "@type": "ImageObject",
+                "height": 675,
+                "url": "https://otecnicodeinformatica.com.br/blog/fila-de-impressao-travada-spooler-windows.jpg",
+                "width": 1200
+              },
+              {
+                "@type": "ImageObject",
+                "height": 900,
+                "url": "https://otecnicodeinformatica.com.br/blog/fila-de-impressao-travada-spooler-windows.jpg",
+                "width": 1600
+              }
+            ]
+          },
+          "parseError": false
+        }
+      }
+    }
+  ]
+}

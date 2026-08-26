@@ -4,6 +4,8 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Skeleton } from "@/components/ui/skeleton";
 import { exportarCsv, exportarJson } from "@/lib/exportarRelatorio";
+import EditorialIndexNowPanel from "@/components/admin/EditorialIndexNowPanel";
+import EditorialSchemaDiffPanel from "@/components/admin/EditorialSchemaDiffPanel";
 
 /**
  * PAINEL EDITORIAL CONSOLIDADO POR ONDA/LOTE — Onda 10C · Infra 1.
@@ -112,6 +114,7 @@ export default function AdminEditorialOndas() {
   const [assets, setAssets] = useState<StatusAssets | null>(null);
   const [erro, setErro] = useState<string | null>(null);
   const [lote, setLote] = useState<string>("todos");
+  const [aba, setAba] = useState<"indexacao" | "indexnow" | "schema">("indexacao");
 
   useEffect(() => {
     fetch("/editorial-waves-status.json", { cache: "no-store" })
@@ -197,6 +200,25 @@ export default function AdminEditorialOndas() {
             </Button>
           </div>
 
+          <nav className="mb-4 flex flex-wrap gap-2 border-b pb-2" aria-label="Abas do painel editorial">
+            {([
+              ["indexacao", "Indexação, alertas e assets"],
+              ["indexnow", "IndexNow"],
+              ["schema", "Schema Diff"],
+            ] as const).map(([id, rotulo]) => (
+              <Button
+                key={id}
+                size="sm"
+                variant={aba === id ? "default" : "ghost"}
+                onClick={() => setAba(id)}
+              >
+                {rotulo}
+              </Button>
+            ))}
+          </nav>
+
+          {aba === "indexacao" && (
+          <>
           <div className="overflow-x-auto rounded-lg border">
             <table className="w-full text-sm">
               <thead className="bg-muted/50 text-left">
@@ -395,6 +417,10 @@ export default function AdminEditorialOndas() {
               </>
             )}
           </section>
+          </>
+          )}
+          {aba === "indexnow" && <EditorialIndexNowPanel lote={lote} />}
+          {aba === "schema" && <EditorialSchemaDiffPanel lote={lote} />}
         </>
 
       )}

@@ -24,11 +24,17 @@ import { resolveSite, inspectUrl } from "./lib/gsc-client.mjs";
 // @ts-expect-error — utilitário JS compartilhado (sem tipos).
 import {
   calcularTransicoes,
-  despacharWebhook,
   lerAlertas,
   normalizarEstadoBusca,
   persistirAlertas,
 } from "./lib/editorial-alerts.mjs";
+// @ts-expect-error — utilitário JS compartilhado (sem tipos).
+import {
+  entregarAlertas,
+  lerAuditoria,
+  lerConfiguracao,
+  persistirAuditoria,
+} from "./lib/editorial-alert-delivery.mjs";
 import { EDITORIAL_WAVES, batchKey } from "../src/lib/editorialWavesRegistry";
 import { getEditorialStatus } from "../src/lib/blogEditorialRegistry";
 
@@ -191,10 +197,33 @@ const { alertasNovos, estado } = calcularTransicoes(
   agora,
 );
 
-const despacho = await despacharWebhook(alertasNovos);
+// Entrega via camada única (Infra 3): Slack e e-mail independentes, com
+// idempotência por (eventId, channel). Canal externo indisponível nunca
+// derruba o monitor.
+const config = lerConfiguracao();
+const auditoria = lerAuditoria();
+const entrega = await entregarAlertas(alertasNovos, { config, auditoria });
+persistirAuditoria({
+  geradoEm: agora,
+  canais: { slack: config.slack.status, email: config.email.status },
+  entregas: entrega.entregas,
+  historico: [
+    ...entrega.resultados.map((r: Record<string, unknown>) => ({ ...r, em: agora })),
+    ...auditoria.historico,
+  ].slice(0, 500),
+});
+// Nome neutro: o arquivo é público e o gate check:editorial-export-secrets
+// proíbe qualquer chave de aparência sensível (webhook/key/token).
+const despacho = {
+  enviado: entrega.resumo.enviados > 0,
+  motivo: entrega.resumo.estado,
+  slack: entrega.resumo.slack,
+  email: entrega.resumo.email,
+};
 persistirAlertas({
   geradoEm: agora,
-  webhook: despacho,
+  entregaCanais: despacho,
+  entrega: entrega.resumo,
   estado,
   alertas: [...alertasNovos, ...anterior.alertas].slice(0, 500),
 });

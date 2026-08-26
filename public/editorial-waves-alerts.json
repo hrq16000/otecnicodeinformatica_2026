@@ -1,9 +1,5 @@
 {
   "geradoEm": "2026-08-26T03:17:21.664Z",
-  "webhook": {
-    "enviado": false,
-    "motivo": "sem webhook"
-  },
   "estado": {
     "/blog/limpar-arquivos-temporarios-windows": {
       "url": "/blog/limpar-arquivos-temporarios-windows",
@@ -217,5 +213,9 @@
       "observedAt": "2026-08-26T03:16:10.586Z",
       "contentHash": "6c79ed86dd7ffd42"
     }
-  ]
+  ],
+  "entregaCanais": {
+    "enviado": false,
+    "motivo": "sem webhook"
+  }
 }

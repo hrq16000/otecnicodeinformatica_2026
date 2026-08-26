@@ -1,4 +1,6 @@
 #!/usr/bin/env bun
+// (Infra 3) Além de reports/indexnow/editorial-wave-status.json, publica uma
+// cópia SANITIZADA em public/editorial-indexnow-status.json para o painel.
 /**
  * INDEXNOW EDITORIAL — DIFF-BASED E IDEMPOTENTE (Onda 10C · Infra 2, Parte B).
  *
@@ -217,5 +219,37 @@ if (!DRY) {
   writeFileSync(
     ARQUIVO,
     `${JSON.stringify({ geradoEm: new Date().toISOString(), host: HOST, rotas }, null, 2)}\n`,
+  );
+}
+
+// ── Cópia pública sanitizada (painel /admin/editorial-ondas · Infra 3).
+// Escrita também em dry-run: o painel precisa enxergar a fila (READY /
+// PENDING_DEPLOY) antes de qualquer envio real. Chave/keyLocation nunca saem.
+{
+  const rotas = { ...anterior.rotas } as Record<string, Registro>;
+  for (const l of linhas) rotas[l.url] = l;
+  const porUrl = new Map(EDITORIAL_WAVES.map((e) => [e.url, e]));
+  const publico = Object.values(rotas).map((r) => {
+    const e = porUrl.get(r.url);
+    return {
+      url: r.url,
+      wave: e?.wave ?? null,
+      batch: e?.batch ?? null,
+      lote: e ? batchKey(e) : null,
+      owner: e?.ownerId ?? null,
+      currentContentHash: r.currentContentHash,
+      lastSubmittedHash: r.lastSubmittedHash,
+      deploymentConfirmed: Boolean(r.deploySha && r.deploySha === r.currentContentHash),
+      deploySha: r.deploySha,
+      submissionState: r.submissionState,
+      http: r.lastResponse,
+      lastSubmittedAt: r.lastSubmittedAt,
+      motivo: r.motivo ?? null,
+      endpoint: "api.indexnow.org", // chave/keyLocation nunca são expostas
+    };
+  });
+  writeFileSync(
+    resolve(process.cwd(), "public/editorial-indexnow-status.json"),
+    `${JSON.stringify({ geradoEm: new Date().toISOString(), host: HOST, rotas: publico }, null, 2)}\n`,
   );
 }
