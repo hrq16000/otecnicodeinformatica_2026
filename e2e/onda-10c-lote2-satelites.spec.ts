@@ -33,6 +33,11 @@ const html = async (request: APIRequestContext, path: string) => {
   return res.text();
 };
 
+const tipos = (n: Record<string, unknown>): string[] => {
+  const t = n["@type"];
+  return Array.isArray(t) ? (t as string[]) : typeof t === "string" ? [t] : [];
+};
+
 const jsonLd = (page: string) =>
   [...page.matchAll(/<script[^>]*application\/ld\+json[^>]*>([\s\S]*?)<\/script>/gi)]
     .map((m) => {
@@ -71,13 +76,13 @@ for (const { path, h1 } of SATELITES) {
       const page = await html(request, path);
       const nos = jsonLd(page);
 
-      const faqs = nos.filter((n) => n["@type"] === "FAQPage");
+      const faqs = nos.filter((n) => tipos(n).includes("FAQPage"));
       expect(faqs.length, `FAQPage ausente ou duplicado em ${path}`).toBe(1);
       const perguntas = (faqs[0].mainEntity as Array<Record<string, unknown>>) ?? [];
       expect(perguntas.length).toBeGreaterThanOrEqual(3);
 
       expect(
-        nos.some((n) => n["@type"] === "TechArticle" || n["@type"] === "Article"),
+        nos.some((n) => tipos(n).includes("TechArticle") || tipos(n).includes("Article")),
         `sem Article/TechArticle em ${path}`,
       ).toBe(true);
     });
