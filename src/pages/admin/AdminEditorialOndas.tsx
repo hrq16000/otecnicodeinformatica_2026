@@ -417,6 +417,7 @@ export default function AdminEditorialOndas() {
               </>
             )}
           </section>
+          </>
           )}
           {aba === "indexnow" && <EditorialIndexNowPanel lote={lote} />}
           {aba === "schema" && <EditorialSchemaDiffPanel lote={lote} />}
