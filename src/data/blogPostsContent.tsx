@@ -1809,6 +1809,18 @@ docker run -d --name db --network minha-rede postgres
         <h2>Limites de segurança</h2>
         <p>Nenhuma verificação garante ausência de infecção: ameaças recentes podem não ser reconhecidas na hora, e a limpeza depende do tipo de ameaça encontrada. Também não é honesto prometer remoção sem risco algum — dependendo do caso, há chance de perda de dados, e isso precisa ser avaliado antes, não depois. Em ambiente empresarial, mexer no equipamento antes de preservar evidências pode inviabilizar a investigação e o acionamento de seguro. Ransomware, especificamente, não tem solução universal: sem backup íntegro, muitas vezes não há caminho técnico de recuperação.</p>
 
+        <h2>Raciocínio diagnóstico: infecção, configuração ou falha física?</h2>
+        <p>Não transforme todo computador lento ou toda propaganda em malware. Compare o sintoma com o contexto: começou depois de instalar um programa, aparece apenas no navegador, retorna após reiniciar, afeta outras contas ou ocorre em várias máquinas da mesma rede? A combinação de persistência, alteração não autorizada e alcance em mais de um dispositivo aumenta a suspeita; um processo legítimo de atualização ou um disco degradado pode produzir lentidão parecida.</p>
+        <table>
+          <thead><tr><th>Evidência</th><th>Direção da investigação</th><th>Primeira proteção</th></tr></thead>
+          <tbody>
+            <tr><td>Pop-ups só no navegador</td><td>Extensão, notificação de site ou adware</td><td>Não clicar; revisar extensões e permissões</td></tr>
+            <tr><td>Arquivos criptografados ou pedido de resgate</td><td>Ransomware</td><td>Desconectar rede e preservar o estado</td></tr>
+            <tr><td>Senha alterada ou login estranho</td><td>Conta comprometida</td><td>Trocar credenciais em outro dispositivo e ativar MFA</td></tr>
+            <tr><td>Uso alto sem alteração e disco lento</td><td>Processo legítimo ou falha de hardware</td><td>Identificar processo e verificar armazenamento antes de limpar</td></tr>
+          </tbody>
+        </table>
+
         <h2>Termos que aparecem no diagnóstico</h2>
         <ul>
           <li><strong>Adware:</strong> programa que exibe propaganda e costuma vir embutido em instaladores.</li>
@@ -1897,6 +1909,18 @@ docker run -d --name db --network minha-rede postgres
           <li>Se existem dados importantes sem backup — isso muda a ordem das etapas do serviço.</li>
         </ul>
         <p>Vale também combinar antes como o equipamento será transportado. Levar o carregador original junto é essencial: sem ele, parte dos testes de energia fica inconclusiva e o diagnóstico pode precisar de uma segunda etapa.</p>
+
+        <h2>Raciocínio diagnóstico: bateria, carregador ou placa?</h2>
+        <p>O teste mais útil é comparar comportamentos, não apenas observar o ícone de carregamento. Se o notebook funciona estável com o carregador original, mas desliga ao removê-lo, a bateria é a principal suspeita. Se nem conectado ele liga, entram carregador, conector, circuito de entrada e placa. Se o LED do carregador apaga quando é conectado ao notebook, pode existir proteção contra curto — não insista em ligar repetidamente.</p>
+        <table>
+          <thead><tr><th>Comportamento</th><th>Hipótese mais forte</th><th>Evite concluir sem testar</th></tr></thead>
+          <tbody>
+            <tr><td>LED do carregador acende fora, apaga ao conectar</td><td>Curto ou proteção no circuito de entrada</td><td>Não é prova de que apenas a bateria morreu</td></tr>
+            <tr><td>Funciona na tomada e desliga ao retirar</td><td>Bateria degradada ou desconectada</td><td>Autonomia exibida pelo Windows pode estar errada</td></tr>
+            <tr><td>Não acende LED nem na tomada</td><td>Tomada, carregador, cabo ou conector</td><td>Não use carregador parecido sem confirmar especificações</td></tr>
+            <tr><td>Desliga sob carga e aquece muito</td><td>Calor ou alimentação insuficiente</td><td>Não atribua automaticamente à bateria</td></tr>
+          </tbody>
+        </table>
 
         <div className="bg-accent/10 rounded-xl p-6 my-8">
           <h3 className="text-accent font-bold mb-2">Notebook que não liga?</h3>
@@ -2795,6 +2819,18 @@ docker run -d --name db --network minha-rede postgres
 
         <h2>Limites deste guia</h2>
         <p>Não existe temperatura única de risco válida para todos os modelos, e leitura de sensor isolada não fecha diagnóstico: dois equipamentos com o mesmo número na tela podem ter estados internos completamente diferentes. Só a avaliação presencial mostra o estado do radiador, da ventoinha e da interface térmica, e só ela indica se o problema é térmico, de alimentação ou de placa. Este conteúdo orienta a observação — ele não substitui o diagnóstico do equipamento.</p>
+
+        <h2>Raciocínio diagnóstico: calor ou outra falha?</h2>
+        <p>Superaquecimento costuma seguir um padrão: o equipamento começa funcionando, perde desempenho conforme aquece e depois reduz carga ou desliga para se proteger. Se ele desliga imediatamente ainda frio, falha apenas na bateria ou apresenta cheiro de queimado, a hipótese térmica perde força e energia, bateria ou placa passam à frente.</p>
+        <table>
+          <thead><tr><th>Padrão observado</th><th>Hipótese principal</th><th>Próxima evidência</th></tr></thead>
+          <tbody>
+            <tr><td>Piora após alguns minutos de uso</td><td>Refrigeração saturada</td><td>Comparar temperatura, rotação da ventoinha e carga</td></tr>
+            <tr><td>Desliga ao abrir um programa pesado</td><td>Calor ou alimentação sob carga</td><td>Testar com carregador/fonte adequada e observar o tempo até a falha</td></tr>
+            <tr><td>Desliga frio e não liga logo depois</td><td>Energia, proteção ou placa</td><td>Registrar LEDs, ruídos e comportamento na tomada</td></tr>
+            <tr><td>Base deformada ou teclado levantado</td><td>Bateria estufada</td><td>Parar o uso e não pressionar a carcaça</td></tr>
+          </tbody>
+        </table>
 
         <h2>Quando procurar atendimento técnico</h2>
         <p>Se o cuidado com ventilação e o encerramento de programas pesados não mudaram nada, se há desligamento por calor ou se a queda de desempenho já atrapalha o trabalho, é hora de avaliação. Adiar costuma sair mais caro: calor constante castiga bateria, armazenamento e solda, e transforma uma limpeza simples em troca de peça. Se o equipamento guarda arquivos sem cópia, mantenha o backup em dia antes de qualquer intervenção.</p>
@@ -6203,6 +6239,17 @@ Ideal: 1000VA / 600W (para crescimento)`}</code></pre>
           <li><strong>Teste de disco</strong> — CrystalDiskInfo (saúde) e CrystalDiskMark (performance)</li>
           <li><strong>Teste de carga prolongada</strong> — uso real por algumas horas antes de devolver ao cliente</li>
         </ul>
+
+        <h2>Raciocínio diagnóstico para tela azul</h2>
+        <p>Uma tela azul é o registro de que o Windows interrompeu a execução para proteger o sistema; ela não identifica sozinha a peça culpada. O diagnóstico começa pelo momento da falha: logo após instalar um driver, durante jogos, ao sair da suspensão, depois de trocar RAM/SSD ou sem padrão aparente. O código e o arquivo citado são pistas, não autorização para trocar a peça associada ao nome.</p>
+        <ol>
+          <li>fotografe o código e anote o horário, o programa aberto e a última alteração feita;</li>
+          <li>verifique se a falha se repete no mesmo cenário ou em repouso;</li>
+          <li>desfaça uma alteração recente por vez, começando por driver ou periférico;</li>
+          <li>se ocorrer também no modo de segurança, considere memória, armazenamento, sistema ou hardware antes de reinstalar drivers;</li>
+          <li>preserve minidumps e arquivos importantes antes de reparos profundos.</li>
+        </ol>
+        <p>Quando a tela azul começou depois de uma atualização, isso é uma relação temporal, não prova de causalidade. O mesmo sintoma pode aparecer por RAM instável, disco com erro, temperatura ou corrupção de arquivos.</p>
 
         <h2>Quando Chamar um Profissional</h2>
         <p>Há situações em que tentar resolver sozinho não compensa. O custo do erro é maior que o do serviço técnico.</p>
@@ -11212,6 +11259,19 @@ crontab -e
 
         <h2>Quando faz sentido chamar alguém</h2>
         <p>Não porque o procedimento é secreto — ele está inteiro aí em cima. Faz sentido quando o custo de errar é alto: arquivo de trabalho sem cópia, e-mail de anos, sistema de gestão instalado localmente, disco com sinais de falha ou máquina que precisa voltar a funcionar no mesmo dia.</p>
+
+        <h2>Raciocínio diagnóstico: formatar ou preservar?</h2>
+        <p>Formatação é uma decisão de recuperação do sistema, não um teste diagnóstico. Antes dela, responda quatro perguntas: o hardware foi descartado, os arquivos importantes têm cópia verificada, a criptografia tem chave disponível e a causa realmente está no Windows? Se qualquer resposta for não, a formatação pode apagar evidências, bloquear acesso aos dados ou apenas devolver a mesma lentidão quando o problema for disco, RAM ou calor.</p>
+        <table>
+          <thead><tr><th>Situação</th><th>Decisão mais segura</th><th>Por quê</th></tr></thead>
+          <tbody>
+            <tr><td>Sistema corrompido, arquivos preservados e hardware estável</td><td>Considerar reinstalação</td><td>Ataca a camada de software</td></tr>
+            <tr><td>Disco com ruído, travamentos de leitura ou arquivos ausentes</td><td>Parar e preservar dados</td><td>A instalação grava no mesmo disco e pode piorar a recuperação</td></tr>
+            <tr><td>Infecção localizada sem dano estrutural</td><td>Remoção orientada</td><td>Evita apagar dados e evidências desnecessariamente</td></tr>
+            <tr><td>Lentidão com HD antigo, pouca RAM ou aquecimento</td><td>Diagnosticar hardware primeiro</td><td>A formatação não muda o gargalo físico</td></tr>
+            <tr><td>BitLocker ativo sem chave de recuperação</td><td>Não iniciar a formatação</td><td>O acesso aos dados pode ser perdido</td></tr>
+          </tbody>
+        </table>
         <p>Se você não tem certeza de que formatar é o caminho, o passo anterior é o <Link to="/diagnostico-tecnico">diagnóstico técnico</Link>. E se já decidiu, o escopo, as condições e o que está incluso estão em <Link to="/servicos/formatacao">formatação e instalação do sistema</Link> — o custo dessa e das demais modalidades está detalhado em <Link to="/blog/quanto-custa-formatar-um-computador">quanto custa formatar um computador</Link>.</p>
       </>
     ),
