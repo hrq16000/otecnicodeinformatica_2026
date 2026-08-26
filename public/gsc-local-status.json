@@ -1,51 +1,35 @@
 {
-  "geradoEm": "2026-08-24T23:58:14.820Z",
+  "geradoEm": "2026-08-26T07:01:38.548Z",
   "site": "sc-domain:otecnicodeinformatica.com.br",
-  "disponivel": true,
+  "disponivel": false,
   "rotas": [
     {
       "slug": "boqueirao",
       "path": "/bairros/boqueirao",
       "url": "https://otecnicodeinformatica.com.br/bairros/boqueirao",
-      "status": "INDEXED",
-      "coverageState": "Enviada e indexada",
-      "ultimoCrawl": "2026-08-18T15:40:07Z",
-      "canonicalGoogle": "https://otecnicodeinformatica.com.br/bairros/boqueirao",
-      "canonicalDeclarado": "https://otecnicodeinformatica.com.br/bairros/boqueirao",
-      "robots": "ALLOWED"
+      "status": "UNKNOWN",
+      "motivo": "credenciais do Search Console ausentes"
     },
     {
       "slug": "cajuru",
       "path": "/bairros/cajuru",
       "url": "https://otecnicodeinformatica.com.br/bairros/cajuru",
-      "status": "NO_DATA",
-      "coverageState": "Detectada, mas não indexada no momento",
-      "ultimoCrawl": null,
-      "canonicalGoogle": null,
-      "canonicalDeclarado": null,
-      "robots": "ROBOTS_TXT_STATE_UNSPECIFIED"
+      "status": "UNKNOWN",
+      "motivo": "credenciais do Search Console ausentes"
     },
     {
       "slug": "pinheirinho",
       "path": "/bairros/pinheirinho",
       "url": "https://otecnicodeinformatica.com.br/bairros/pinheirinho",
-      "status": "INDEXED",
-      "coverageState": "Enviada e indexada",
-      "ultimoCrawl": "2026-08-18T15:37:46Z",
-      "canonicalGoogle": "https://otecnicodeinformatica.com.br/bairros/pinheirinho",
-      "canonicalDeclarado": "https://otecnicodeinformatica.com.br/bairros/pinheirinho",
-      "robots": "ALLOWED"
+      "status": "UNKNOWN",
+      "motivo": "credenciais do Search Console ausentes"
     },
     {
       "slug": "cidade-jardim-sjp",
       "path": "/bairros/cidade-jardim-sjp",
       "url": "https://otecnicodeinformatica.com.br/bairros/cidade-jardim-sjp",
-      "status": "NO_DATA",
-      "coverageState": "Detectada, mas não indexada no momento",
-      "ultimoCrawl": null,
-      "canonicalGoogle": null,
-      "canonicalDeclarado": null,
-      "robots": "ROBOTS_TXT_STATE_UNSPECIFIED"
+      "status": "UNKNOWN",
+      "motivo": "credenciais do Search Console ausentes"
     }
   ]
 }
