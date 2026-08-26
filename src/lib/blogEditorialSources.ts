@@ -681,6 +681,66 @@ export const ARTICLE_SOURCE_MANIFEST: Record<string, ArticleSourceManifest> = {
     notes:
       "Revisão concluída (Onda 10C, Lote 2): papel do serviço de spooler, causa dos trabalhos corrompidos, procedimento de parada do serviço e limpeza da pasta de trabalhos, ressalva de ambiente gerenciado e critério para suspeitar do driver. Sem marca comercial e sem promessa. Conhecimento técnico estável — sem fonte visível.",
   },
+  "hd-nao-e-reconhecido-na-bios-o-que-fazer": {
+    slug: "hd-nao-e-reconhecido-na-bios-o-que-fazer",
+    sources: [],
+    technicalReview: "reviewed",
+    factChecked: true,
+    factCheckedAt: "2026-08-26",
+    stableKnowledge: true,
+    notes:
+      "Revisão concluída (Onda 10C, Lote 3): separação entre alimentação, enlace de dados e defeito da mídia; reassentamento, troca de cabo e porta, compartilhamento de faixas entre M.2 e SATA e ressalva explícita de não escrever em disco com ruído ou dados sem cópia. Sem marca comercial e sem promessa. Conhecimento técnico estável — sem fonte visível.",
+  },
+  "ssd-nvme-nao-aparece-no-gerenciador-de-discos": {
+    slug: "ssd-nvme-nao-aparece-no-gerenciador-de-discos",
+    sources: [],
+    technicalReview: "reviewed",
+    factChecked: true,
+    factCheckedAt: "2026-08-26",
+    stableKnowledge: true,
+    notes:
+      "Revisão concluída (Onda 10C, Lote 3): estados reais do Gerenciamento de Disco (não inicializado, não alocado, sem letra, RAW, off-line), escolha entre GPT e MBR, modos do slot M.2 e alerta de que formatar destrói dados recuperáveis. Sem marca comercial e sem promessa. Conhecimento técnico estável — sem fonte visível.",
+  },
+  "disco-com-setores-defeituosos-smart-o-que-fazer": {
+    slug: "disco-com-setores-defeituosos-smart-o-que-fazer",
+    sources: [],
+    technicalReview: "reviewed",
+    factChecked: true,
+    factCheckedAt: "2026-08-26",
+    stableKnowledge: true,
+    notes:
+      "Revisão concluída (Onda 10C, Lote 3): leitura de contadores SMART por tendência, ordem copiar → investigar → substituir, imagem bit a bit e regra explícita de que CHKDSK não é recomendação padrão em mídia com ruído, SMART crítico, desconexões ou dados importantes. Sem marca comercial e sem promessa. Conhecimento técnico estável — sem fonte visível.",
+  },
+  "computador-sem-som-o-que-verificar": {
+    slug: "computador-sem-som-o-que-verificar",
+    sources: [],
+    technicalReview: "reviewed",
+    factChecked: true,
+    factCheckedAt: "2026-08-26",
+    stableKnowledge: true,
+    notes:
+      "Revisão concluída (Onda 10C, Lote 3): ordem de verificação de saída padrão, mixer por aplicativo, conector físico, serviço de áudio e driver; distinção entre falha de software e hardware. Sem marca comercial e sem promessa. Conhecimento técnico estável — sem fonte visível.",
+  },
+  "fone-de-ouvido-nao-e-reconhecido-no-pc": {
+    slug: "fone-de-ouvido-nao-e-reconhecido-no-pc",
+    sources: [],
+    technicalReview: "reviewed",
+    factChecked: true,
+    factCheckedAt: "2026-08-26",
+    stableKnowledge: true,
+    notes:
+      "Revisão concluída (Onda 10C, Lote 3): detecção de conector, cabo interno do painel frontal, diferença entre plugue combinado e entradas separadas, perfis Bluetooth estéreo e de comunicação e permissões de microfone. Sem marca comercial e sem promessa. Conhecimento técnico estável — sem fonte visível.",
+  },
+  "servico-de-audio-do-windows-nao-esta-em-execucao": {
+    slug: "servico-de-audio-do-windows-nao-esta-em-execucao",
+    sources: [],
+    technicalReview: "reviewed",
+    factChecked: true,
+    factCheckedAt: "2026-08-26",
+    stableKnowledge: true,
+    notes:
+      "Revisão concluída (Onda 10C, Lote 3): cadeia Windows Audio e Construtor de Ponto de Extremidade, ordem de reinício, dependências de RPC e agendador multimídia, ressalva de máquina gerenciada por política e critério para reinstalar driver oficial. Sem marca comercial e sem promessa. Conhecimento técnico estável — sem fonte visível.",
+  },
 };
 
 

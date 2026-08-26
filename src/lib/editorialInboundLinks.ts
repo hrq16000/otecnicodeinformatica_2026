@@ -27,6 +27,11 @@ const MAX_POR_PAGINA = 3;
 const MAPA: Record<string, EditorialInboundLink[]> = {
   "/servicos/upgrade-ssd-ram": [
     {
+      slug: "ssd-nvme-nao-aparece-no-gerenciador-de-discos",
+      label: "SSD aparece na BIOS mas não no Windows",
+      hint: "Como inicializar, particionar e atribuir letra ao disco novo.",
+    },
+    {
       slug: "memoria-ram-insuficiente-sintomas",
       label: "Memória RAM insuficiente: sintomas",
       hint: "Como confirmar falta de memória no Gerenciador de Tarefas antes de comprar módulo.",
@@ -90,6 +95,16 @@ const MAPA: Record<string, EditorialInboundLink[]> = {
     },
   ],
   "/servicos/recuperacao-de-dados": [
+    {
+      slug: "hd-nao-e-reconhecido-na-bios-o-que-fazer",
+      label: "Disco não reconhecido na BIOS: o que verificar",
+      hint: "Sequência por energia, cabo e porta antes de falar em recuperação ou troca.",
+    },
+    {
+      slug: "disco-com-setores-defeituosos-smart-o-que-fazer",
+      label: "Setores defeituosos e SMART com alerta",
+      hint: "Por que copiar vem antes de corrigir e quando o CHKDSK fica fora de questão.",
+    },
     {
       slug: "como-recuperar-dados-hd-com-defeito",
       label: "Recuperação de dados de HD com defeito",
@@ -240,6 +255,11 @@ const MAPA: Record<string, EditorialInboundLink[]> = {
     },
   ],
   "/servicos/manutencao-de-computador": [
+    {
+      slug: "computador-sem-som-o-que-verificar",
+      label: "Computador sem som: sequência de verificação",
+      hint: "Da saída padrão ao driver, sem reinstalar o sistema por causa de áudio.",
+    },
     {
       slug: "botao-power-nao-funciona-jump-start-placa-mae",
       label: "Botão power não funciona: teste pelo conector",

@@ -12947,4 +12947,354 @@ bcdboot C:\\Windows /s S: /f UEFI`}</code></pre>
     ),
   },
 
+  // ── Onda 10C — Lote 3: armazenamento não detectado (cluster 7).
+  "hd-nao-e-reconhecido-na-bios-o-que-fazer": {
+    title: "HD ou SSD não é reconhecido na BIOS: o que verificar antes de trocar",
+    excerpt:
+      "Quando o disco some do Setup, o problema quase nunca é o Windows. Sequência de verificação por energia, cabo, porta e detecção — e o que NÃO fazer quando há dados importantes.",
+    date: "2026-08-27",
+    readTime: "10 min",
+    category: "Diagnóstico",
+    content: (
+      <>
+        <p className="lead">Se o disco não aparece na lista de dispositivos da BIOS, o Windows nem chega a ter a chance de enxergá-lo. Antes de comprar outro disco ou falar em recuperação, vale percorrer uma sequência curta que separa falha de conexão de falha do próprio disco.</p>
+
+        <h2>Resposta curta</h2>
+        <p>A BIOS mostra o que o controlador de armazenamento consegue enumerar. Se o disco não aparece ali, existem três famílias de causa: <strong>alimentação</strong> (o disco não recebe energia), <strong>enlace de dados</strong> (cabo, porta ou slot com mau contato ou desabilitado) e <strong>o próprio disco</strong> (eletrônica ou mecânica com defeito). O objetivo do teste é descobrir qual delas é, sem escrever nada na mídia.</p>
+
+        <aside className="rounded-lg border border-border bg-muted/40 p-4 not-prose my-6">
+          <p className="m-0 text-sm"><strong>Antes de qualquer coisa:</strong> se o disco faz ruído repetitivo (clique, arranhado, estalo), se já apresentou desconexões durante o uso ou se contém arquivos que você não tem em outro lugar, pare. Não rode utilitários de correção, não formate e não reinstale o sistema. Cada nova tentativa de leitura em mídia doente reduz a chance de recuperação. O caminho nesse caso é <Link to="/servicos/recuperacao-de-dados" className="text-accent">recuperação de dados</Link>, não reparo.</p>
+        </aside>
+
+        <h2>Sequência de verificação</h2>
+        <ol>
+          <li><strong>Confirme onde o disco deveria aparecer.</strong> No Setup, procure a página de armazenamento (SATA Configuration, Storage, NVMe Configuration). Alguns firmwares listam discos M.2 em uma tela separada dos SATA.</li>
+          <li><strong>Desligue de verdade.</strong> Chave da fonte em O, cabo de força removido, botão de ligar pressionado por dez segundos para descarregar. Em notebook, remova a bateria quando for removível.</li>
+          <li><strong>Reassente o disco.</strong> Em SATA, recoloque o cabo de dados nas duas pontas e troque o conector de energia por outro que saia da fonte. Em M.2, solte o parafuso, retire e recoloque a placa firmemente até o encaixe.</li>
+          <li><strong>Troque a porta.</strong> Use outra porta SATA da placa e um cabo diferente. Cabo SATA é o componente mais barato do conjunto e um dos que mais falham por dobra e mau contato.</li>
+          <li><strong>Elimine concorrência de slot.</strong> Em muitas placas, ocupar um slot M.2 desabilita portas SATA específicas — o manual da placa traz a tabela. Se o SSD novo derrubou o HD antigo, é isso.</li>
+          <li><strong>Teste isolado.</strong> Deixe apenas o disco suspeito conectado. Se ele aparece sozinho e some acompanhado, a suspeita passa para alimentação insuficiente ou conflito de porta.</li>
+          <li><strong>Teste em outra máquina</strong> (ou por adaptador USB, quando não houver dados críticos envolvidos). Disco que não é enumerado em nenhum computador tem defeito próprio.</li>
+        </ol>
+
+        <h2>Tabela de decisão</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Sinal observado</th>
+              <th>Causa provável</th>
+              <th>Próximo passo</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Disco não gira e não esquenta (HD mecânico)</td><td>Sem alimentação ou eletrônica com defeito</td><td>Trocar o conector de energia da fonte; persistindo, é falha do disco</td></tr>
+            <tr><td>Gira normalmente e mesmo assim não aparece</td><td>Cabo, porta ou enlace de dados</td><td>Trocar cabo e porta SATA antes de qualquer outra hipótese</td></tr>
+            <tr><td>Aparece e some entre reinícios</td><td>Mau contato ou alimentação instável</td><td>Reassentar, testar outra porta e observar; não instalar sistema nesse estado</td></tr>
+            <tr><td>SSD M.2 novo não aparece e o HD sumiu junto</td><td>Compartilhamento de faixas entre M.2 e SATA</td><td>Consultar a tabela de slots no manual da placa</td></tr>
+            <tr><td>Ruído repetitivo, estalo ou arranhado</td><td>Falha mecânica</td><td>Desligar imediatamente e tratar como caso de recuperação</td></tr>
+            <tr><td>Aparece na BIOS, mas o sistema não inicia</td><td>Ordem de boot ou partição de inicialização</td><td>Ver <Link to="/blog/erro-no-bootable-device-como-resolver" className="text-accent">no bootable device</Link></td></tr>
+          </tbody>
+        </table>
+
+        <h2>Quando o disco aparece na BIOS, mas não no Windows</h2>
+        <p>Aí o quadro é outro e bem mais simples: o disco foi enumerado, só não recebeu tratamento do sistema. Disco novo costuma chegar sem inicialização, sem partição e sem letra. Esse cenário está detalhado em <Link to="/blog/ssd-nvme-nao-aparece-no-gerenciador-de-discos" className="text-accent">SSD não aparece no Gerenciador de Discos</Link>.</p>
+
+        <h2>Quando o Setup abre no lugar do sistema</h2>
+        <p>Se a máquina entra direto na tela de configuração sempre que liga, o disco pode até estar íntegro — o firmware é que não encontrou um alvo de partida válido. O caminho está em <Link to="/blog/computador-entra-direto-na-bios" className="text-accent">computador entra direto na BIOS</Link> e, em caso de troca recente, em <Link to="/blog/troquei-o-ssd-e-o-pc-so-abre-a-bios" className="text-accent">troquei o SSD e o PC só abre a BIOS</Link>.</p>
+
+        <h2>Quando chamar um técnico</h2>
+        <p>Chame quando houver dados sem cópia, quando o disco emitir ruído, quando a máquina desligar sozinha durante o teste ou quando o disco sumir de forma intermitente com o sistema já instalado. O procedimento correto nesses casos começa por imagem bit a bit, não por conserto: veja <Link to="/blog/como-recuperar-dados-hd-com-defeito" className="text-accent">como recuperar dados de HD com defeito</Link> e, se preferir avaliação presencial, <Link to="/diagnostico-tecnico" className="text-accent">diagnóstico técnico</Link>.</p>
+      </>
+    ),
+  },
+
+  "ssd-nvme-nao-aparece-no-gerenciador-de-discos": {
+    title: "SSD aparece na BIOS mas não no Windows: como inicializar o disco",
+    excerpt:
+      "Disco novo chega sem inicialização, sem partição e sem letra. O que fazer no Gerenciamento de Disco, como escolher GPT ou MBR e o cuidado antes de mexer em disco com dados.",
+    date: "2026-08-27",
+    readTime: "9 min",
+    category: "Procedimentos Técnicos",
+    content: (
+      <>
+        <p className="lead">Quando o disco é listado no Setup mas não aparece em "Este Computador", o hardware já está resolvido. Falta apenas o passo que o Windows não faz sozinho: inicializar, particionar e atribuir uma letra.</p>
+
+        <h2>Resposta curta</h2>
+        <p>O Explorador de Arquivos só mostra volumes formatados e com letra. Disco de fábrica chega vazio, sem tabela de partição — por isso ele existe para a BIOS e para o Gerenciamento de Disco, mas não para a área de trabalho. O procedimento leva poucos minutos e não exige programa extra.</p>
+
+        <aside className="rounded-lg border border-border bg-muted/40 p-4 not-prose my-6">
+          <p className="m-0 text-sm"><strong>Cuidado que muda tudo:</strong> inicializar, particionar e formatar são operações de escrita. Em disco novo, sem conteúdo, não há risco. Em disco usado que "sumiu" com arquivos dentro, essas mesmas operações destroem o que ainda podia ser recuperado. Se há dados importantes, não aceite a sugestão de formatar: trate como <Link to="/servicos/recuperacao-de-dados" className="text-accent">recuperação de dados</Link>.</p>
+        </aside>
+
+        <h2>Passo a passo no Gerenciamento de Disco</h2>
+        <ol>
+          <li><strong>Abra</strong> com Windows + X → Gerenciamento de Disco (ou tecla Windows + R e <code>diskmgmt.msc</code>).</li>
+          <li><strong>Localize o disco</strong> na lista inferior. Confira o tamanho para não confundir com a unidade do sistema.</li>
+          <li><strong>Se aparecer "Não inicializado"</strong>, clique com o botão direito no nome do disco → Inicializar Disco. Escolha <strong>GPT</strong> em máquinas modernas com UEFI; MBR só faz sentido em equipamentos antigos ou compatibilidade específica.</li>
+          <li><strong>Se aparecer "Não alocado"</strong>, clique com o botão direito na faixa → Novo Volume Simples. Aceite o tamanho total, escolha uma letra e formate em NTFS com alocação padrão. Use rótulo descritivo ("Dados", "Backup").</li>
+          <li><strong>Se o volume existe mas está sem letra</strong>, use Alterar Letra da Unidade e Caminhos → Adicionar.</li>
+          <li><strong>Confirme</strong> abrindo o Explorador e copiando um arquivo pequeno.</li>
+        </ol>
+
+        <h2>Tabela de estados no Gerenciamento de Disco</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Estado mostrado</th>
+              <th>Significado</th>
+              <th>Próximo passo</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Não inicializado</td><td>Sem tabela de partição</td><td>Inicializar em GPT (disco novo)</td></tr>
+            <tr><td>Não alocado</td><td>Inicializado, sem volume</td><td>Criar Novo Volume Simples e formatar</td></tr>
+            <tr><td>Íntegro, sem letra</td><td>Volume existe, não montado</td><td>Atribuir letra de unidade</td></tr>
+            <tr><td>RAW</td><td>Sistema de arquivos ilegível</td><td>Não formatar se houver dados: avaliar recuperação</td></tr>
+            <tr><td>Offline</td><td>Disco marcado como off-line</td><td>Botão direito → Online; se voltar a cair, suspeitar do enlace</td></tr>
+            <tr><td>Não aparece na lista</td><td>Não foi enumerado</td><td>Ver <Link to="/blog/hd-nao-e-reconhecido-na-bios-o-que-fazer" className="text-accent">disco não reconhecido na BIOS</Link></td></tr>
+          </tbody>
+        </table>
+
+        <h2>Casos específicos de SSD M.2</h2>
+        <ul>
+          <li><strong>Modo do slot:</strong> slots M.2 podem aceitar NVMe, SATA ou ambos. Uma placa SATA M.2 em slot exclusivamente NVMe não é enumerada — o manual da placa traz a compatibilidade por slot.</li>
+          <li><strong>Firmware antigo:</strong> placas de gerações anteriores podem precisar de atualização para reconhecer modelos recentes. Atualização de firmware não é rotina; só com motivo declarado.</li>
+          <li><strong>Disco clonado:</strong> após clonagem, é comum haver dois volumes com a mesma assinatura. Mantenha um deles desconectado no primeiro boot.</li>
+        </ul>
+        <p>Critérios de compatibilidade e ganho real da troca continuam em <Link to="/blog/como-fazer-upgrade-ssd-nvme" className="text-accent">upgrade para SSD NVMe</Link> e o serviço correspondente em <Link to="/servicos/upgrade-ssd-ram" className="text-accent">upgrade de SSD e memória</Link>.</p>
+
+        <h2>Quando chamar um técnico</h2>
+        <p>Chame quando o disco alternar entre íntegro e off-line, quando o volume ficar RAW com arquivos dentro, ou quando o sistema travar durante a formatação — comportamento que costuma indicar mídia com defeito, e não configuração. Avaliação em <Link to="/diagnostico-tecnico" className="text-accent">diagnóstico técnico</Link>.</p>
+      </>
+    ),
+  },
+
+  "disco-com-setores-defeituosos-smart-o-que-fazer": {
+    title: "Setores defeituosos e SMART com alerta: o que fazer (e o que não fazer)",
+    excerpt:
+      "Como ler os indicadores SMART, por que CHKDSK não é a resposta padrão para disco suspeito de falha física e qual é a ordem correta: copiar primeiro, investigar depois.",
+    date: "2026-08-27",
+    readTime: "10 min",
+    category: "Diagnóstico",
+    content: (
+      <>
+        <p className="lead">Alerta de SMART, lentidão em rajadas, travamentos ao abrir pastas grandes e arquivos que somem: o padrão sugere mídia degradando. A decisão mais importante nesse momento não é qual ferramenta rodar — é a ordem das ações.</p>
+
+        <h2>Resposta curta</h2>
+        <p>Em disco suspeito de falha física, a prioridade é <strong>preservar os dados</strong>, nessa ordem: copiar o que importa (ou fazer imagem bit a bit), só então investigar a mídia e, por último, decidir entre substituir ou descartar. Rodar utilitário de correção antes da cópia inverte a prioridade e pode custar os arquivos.</p>
+
+        <aside className="rounded-lg border border-border bg-muted/40 p-4 not-prose my-6">
+          <p className="m-0 text-sm"><strong>Por que CHKDSK não é receita padrão:</strong> o CHKDSK corrige estruturas do sistema de arquivos e, com a opção de reparo de setores, força leituras repetidas e escritas em áreas já frágeis. Em mídia com ruído mecânico, SMART crítico, desconexões ou arquivos insubstituíveis, isso pode transformar um disco parcialmente legível em disco irrecuperável. Nesses casos, não rode. Ele faz sentido em disco saudável cujo problema é corrupção lógica após queda de energia ou desligamento forçado — não em disco morrendo.</p>
+        </aside>
+
+        <h2>Como ler o SMART sem se enganar</h2>
+        <p>O SMART é um conjunto de contadores mantidos pelo próprio disco. Vale mais observar a <strong>tendência</strong> dos contadores em duas leituras separadas por alguns dias do que o veredito de "OK" que muitos programas exibem — disco em falha frequentemente ainda reporta status geral aprovado.</p>
+        <table>
+          <thead>
+            <tr>
+              <th>Indicador</th>
+              <th>O que representa</th>
+              <th>Leitura prática</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Reallocated Sectors (HD)</td><td>Setores realocados pela reserva interna</td><td>Qualquer valor acima de zero pede backup imediato; valor que cresce indica degradação ativa</td></tr>
+            <tr><td>Current Pending Sector</td><td>Setores instáveis aguardando decisão</td><td>Sinal forte de mídia em falha; não rodar correção antes de copiar</td></tr>
+            <tr><td>Uncorrectable Sector Count</td><td>Leituras que falharam definitivamente</td><td>Dados nessas áreas já podem estar perdidos</td></tr>
+            <tr><td>UltraDMA CRC Error</td><td>Erros no enlace de dados</td><td>Normalmente cabo ou porta, não a mídia: trocar cabo e reavaliar</td></tr>
+            <tr><td>Percentage Used / Media Wearout (SSD)</td><td>Desgaste das células</td><td>Acima de 90% planeje substituição, mesmo sem sintoma</td></tr>
+            <tr><td>Available Spare (SSD)</td><td>Reserva de blocos livre</td><td>Queda abaixo do limiar do fabricante é aviso de fim de vida</td></tr>
+          </tbody>
+        </table>
+
+        <h2>Ordem correta de trabalho</h2>
+        <ol>
+          <li><strong>Pare de usar o disco</strong> para tarefas comuns. Cada hora ligada em mídia degradando consome chance de leitura.</li>
+          <li><strong>Copie o essencial primeiro</strong> — documentos, fotos e projetos —, do menor para o maior, para um destino diferente. Nunca copie para o próprio disco suspeito.</li>
+          <li><strong>Se o volume de dados for grande ou a leitura falhar</strong>, o passo certo é imagem bit a bit em uma unidade sadia, e trabalhar sobre a cópia.</li>
+          <li><strong>Só depois</strong> avalie a mídia: leitura de SMART, teste de superfície somente leitura, teste estendido do fabricante.</li>
+          <li><strong>Decida a substituição</strong> com o dado em mãos. Disco com setores pendentes ou realocados crescendo não volta a ser confiável — mesmo que o sistema pareça normal.</li>
+        </ol>
+
+        <h2>Quando o CHKDSK cabe</h2>
+        <p>Cabe quando o disco está saudável no SMART, sem ruído, sem desconexões, e o sintoma é claramente lógico: pastas com nomes truncados após queda de energia, volume marcado como sujo, erro de sistema de arquivos em unidade secundária sem dados críticos. Mesmo aí, faça backup antes. Se qualquer sinal físico estiver presente, ele fica de fora.</p>
+
+        <h2>Ruído mecânico é caso à parte</h2>
+        <p>Clique repetitivo, estalo cadenciado ou arranhado indicam problema mecânico. Nesses casos, ligar o disco de novo para "tentar mais uma vez" é o comportamento mais caro possível. O detalhamento está em <Link to="/problemas/hd-fazendo-barulho" className="text-accent">HD fazendo barulho</Link> e o procedimento seguro em <Link to="/blog/como-recuperar-dados-hd-com-defeito" className="text-accent">como recuperar dados de HD com defeito</Link>.</p>
+
+        <h2>Depois da troca</h2>
+        <p>Substituído o disco, o passo que evita a repetição do episódio é a rotina de cópia — descrita em <Link to="/blog/backup-como-proteger-seus-arquivos" className="text-accent">backup: como proteger seus arquivos</Link>. Sobre quando a troca compensa em relação ao equipamento, veja <Link to="/blog/quando-trocar-hd-por-ssd" className="text-accent">quando trocar o HD por SSD</Link>.</p>
+
+        <h2>Quando chamar um técnico</h2>
+        <p>Chame antes de rodar qualquer utilitário se os arquivos não existirem em outro lugar. Serviço correspondente em <Link to="/servicos/recuperacao-de-dados" className="text-accent">recuperação de dados</Link>; avaliação do conjunto em <Link to="/diagnostico-tecnico" className="text-accent">diagnóstico técnico</Link>.</p>
+      </>
+    ),
+  },
+
+  // ── Onda 10C — Lote 3: áudio sem funcionar (cluster 8).
+  "computador-sem-som-o-que-verificar": {
+    title: "Computador sem som: sequência de verificação do alto-falante ao driver",
+    excerpt:
+      "Do volume e do dispositivo de saída errado até driver e conector: como isolar a causa do silêncio no Windows sem reinstalar o sistema.",
+    date: "2026-08-27",
+    readTime: "9 min",
+    category: "Diagnóstico",
+    content: (
+      <>
+        <p className="lead">Som que sumiu raramente é defeito de hardware. Na maioria dos casos, o Windows está entregando o áudio para uma saída diferente daquela que você está ouvindo — e a correção leva menos de um minuto quando a verificação segue a ordem certa.</p>
+
+        <h2>Resposta curta</h2>
+        <p>Verifique nesta ordem: <strong>dispositivo de saída selecionado</strong>, <strong>volume por aplicativo</strong>, <strong>conector físico</strong>, <strong>serviço de áudio</strong> e, por último, <strong>driver</strong>. Pular direto para reinstalar driver é o erro mais comum — e o que menos resolve.</p>
+
+        <h2>Sequência de verificação</h2>
+        <ol>
+          <li><strong>Dispositivo de saída:</strong> clique no ícone de som na barra de tarefas e confira qual saída está ativa. Monitor por HDMI, headset Bluetooth ainda pareado e placas de captura costumam roubar a saída padrão sem aviso.</li>
+          <li><strong>Volume por aplicativo:</strong> em Configurações → Sistema → Som → Mixer de volume, um programa pode estar mudo sozinho enquanto o sistema toca normalmente.</li>
+          <li><strong>Teste cruzado:</strong> reproduza um vídeo local e um site. Se um toca e o outro não, o problema é do aplicativo ou do navegador, não do computador.</li>
+          <li><strong>Conector físico:</strong> em desktop, a saída de alto-falantes é a verde do painel traseiro. Entradas frontais dependem de cabo interno ligado à placa e frequentemente não funcionam sem ele.</li>
+          <li><strong>Serviço de áudio:</strong> se nenhum aplicativo emite som e o ícone mostra "x" vermelho, o serviço pode ter parado — caso descrito em <Link to="/blog/servico-de-audio-do-windows-nao-esta-em-execucao" className="text-accent">serviço de áudio do Windows não está em execução</Link>.</li>
+          <li><strong>Driver:</strong> por último, no Gerenciador de Dispositivos, confira se há aviso na seção de controladores de som. Prefira o pacote do fabricante do notebook ou da placa-mãe ao driver genérico.</li>
+        </ol>
+
+        <h2>Tabela de decisão</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Sintoma</th>
+              <th>Causa provável</th>
+              <th>Próximo passo</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Ícone de som normal, nada toca</td><td>Saída padrão apontando para outro dispositivo</td><td>Selecionar a saída correta na lista</td></tr>
+            <tr><td>"Nenhum dispositivo de saída de áudio encontrado"</td><td>Driver ausente ou controlador desabilitado</td><td>Reinstalar o driver do fabricante do modelo</td></tr>
+            <tr><td>Som só no navegador ou só em um programa</td><td>Mixer de volume ou saída por aplicativo</td><td>Ajustar no Mixer de volume</td></tr>
+            <tr><td>Som sai pelo monitor, não pela caixa</td><td>HDMI assumiu a saída padrão</td><td>Definir alto-falantes como padrão</td></tr>
+            <tr><td>Chiado, estouro ou som cortado</td><td>Conector, cabo ou aterramento</td><td>Testar outro cabo e outra saída antes de mexer em software</td></tr>
+            <tr><td>Fone toca, caixa não (ou o inverso)</td><td>Detecção de conector</td><td>Ver <Link to="/blog/fone-de-ouvido-nao-e-reconhecido-no-pc" className="text-accent">fone não reconhecido</Link></td></tr>
+          </tbody>
+        </table>
+
+        <h2>Notebook: dois detalhes que enganam</h2>
+        <ul>
+          <li><strong>Tecla de mudo por hardware:</strong> muitos modelos têm atalho na fileira de função com indicador luminoso; o Windows continua mostrando volume normal.</li>
+          <li><strong>Bluetooth pareado:</strong> caixa ou headset ligado em outro cômodo continua sendo saída válida. Desative o Bluetooth para eliminar a hipótese em dois segundos.</li>
+        </ul>
+
+        <h2>Quando é hardware de fato</h2>
+        <p>Suspeite de hardware quando o som falha também fora do Windows (por exemplo, no aviso sonoro de partida em placas que o emitem), quando um único canal toca de forma consistente com cabos diferentes, ou quando houve queda, líquido ou desmontagem recente. Reparo de conector e de placa entra em <Link to="/servicos/manutencao-de-notebook" className="text-accent">manutenção de notebook</Link> ou <Link to="/servicos/manutencao-de-computador" className="text-accent">manutenção de computador</Link>.</p>
+
+        <h2>Quando chamar um técnico</h2>
+        <p>Chame quando o driver não instalar, quando o dispositivo sumir do Gerenciador de Dispositivos de forma intermitente ou quando o silêncio começar junto com outros sintomas de sistema. Avaliação em <Link to="/diagnostico-tecnico" className="text-accent">diagnóstico técnico</Link>.</p>
+      </>
+    ),
+  },
+
+  "fone-de-ouvido-nao-e-reconhecido-no-pc": {
+    title: "Fone de ouvido não é reconhecido no PC: entrada frontal, detecção e microfone",
+    excerpt:
+      "Por que o fone toca na entrada de trás e não na da frente, o que é detecção de conector, a diferença entre P2 combo e duas entradas e como resolver o microfone mudo.",
+    date: "2026-08-27",
+    readTime: "8 min",
+    category: "Procedimentos Técnicos",
+    content: (
+      <>
+        <p className="lead">Fone funcionando em um conector e ignorado em outro é sintoma de detecção, não de defeito. Entender como o computador percebe que algo foi plugado resolve a maior parte desses casos.</p>
+
+        <h2>Resposta curta</h2>
+        <p>O conector de áudio informa ao controlador que um plugue foi inserido. Quando essa detecção não chega — cabo interno do painel frontal solto, configuração errada de painel, plugue incompatível ou conector sujo —, o sistema simplesmente segue tocando na saída anterior, como se nada tivesse sido conectado.</p>
+
+        <h2>Verificação em ordem</h2>
+        <ol>
+          <li><strong>Teste na saída traseira</strong> (verde) do desktop. Funcionando ali, o problema é do painel frontal, não do fone.</li>
+          <li><strong>Confira o tipo de plugue.</strong> Headset de celular usa plugue combinado, com áudio e microfone no mesmo conector. Em placas com duas entradas separadas, ele toca som mas não capta voz sem adaptador em Y.</li>
+          <li><strong>Verifique a lista de dispositivos:</strong> Configurações → Sistema → Som. Se o fone não aparece ao plugar, a detecção não está chegando ao sistema.</li>
+          <li><strong>No utilitário do fabricante do áudio</strong>, quando existir, confira a configuração do painel frontal e a associação do conector.</li>
+          <li><strong>Limpe o conector.</strong> Poeira compactada impede o contato do plugue; ar comprimido em jatos curtos, com a máquina desligada, costuma bastar.</li>
+          <li><strong>Para microfone,</strong> confira Privacidade → Microfone e o dispositivo de entrada padrão. Aplicativo de reunião pode manter uma entrada diferente da do sistema.</li>
+        </ol>
+
+        <h2>Tabela de decisão</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Sintoma</th>
+              <th>Causa provável</th>
+              <th>Próximo passo</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Toca atrás, não toca na frente</td><td>Cabo do painel frontal desconectado da placa</td><td>Reconectar o cabo interno de áudio frontal</td></tr>
+            <tr><td>Fone não aparece na lista ao plugar</td><td>Detecção de conector inativa</td><td>Conferir configuração do painel e o driver do áudio</td></tr>
+            <tr><td>Som sai, microfone não capta</td><td>Plugue combinado em entradas separadas</td><td>Usar adaptador em Y ou porta USB</td></tr>
+            <tr><td>Ruído ao encostar no cabo</td><td>Plugue ou cabo do fone com mau contato</td><td>Testar o fone em outro aparelho</td></tr>
+            <tr><td>Só um lado toca</td><td>Plugue mal inserido ou cabo rompido</td><td>Empurrar até o fim e testar outro fone</td></tr>
+            <tr><td>Nada funciona, em nenhuma entrada</td><td>Driver ou serviço de áudio</td><td>Ver <Link to="/blog/computador-sem-som-o-que-verificar" className="text-accent">computador sem som</Link></td></tr>
+          </tbody>
+        </table>
+
+        <h2>Headset USB e Bluetooth</h2>
+        <p>Headsets USB trazem a própria placa de som e aparecem como um dispositivo separado — se não forem selecionados como saída padrão, o som continua na caixa. Em Bluetooth, é comum haver dois perfis: um estéreo, de melhor qualidade e sem microfone, e outro de comunicação, com microfone e áudio mais pobre. Aplicativos de chamada alternam entre eles, e essa troca explica a queda de qualidade durante reuniões.</p>
+
+        <h2>Quando chamar um técnico</h2>
+        <p>Chame quando o conector estiver folgado ou afundado no gabinete, quando houver contato intermitente ao movimentar o plugue, ou quando o painel frontal tiver parado depois de uma montagem ou limpeza. Reparo de conector e recolocação de cabo interno entram em <Link to="/servicos/manutencao-de-computador" className="text-accent">manutenção de computador</Link>; em portáteis, <Link to="/servicos/manutencao-de-notebook" className="text-accent">manutenção de notebook</Link>.</p>
+      </>
+    ),
+  },
+
+  "servico-de-audio-do-windows-nao-esta-em-execucao": {
+    title: "Serviço de áudio do Windows não está em execução: como reativar",
+    excerpt:
+      "O que são os serviços Windows Audio e Audio Endpoint Builder, como reiniciá-los na ordem correta, quando reinstalar o driver e como distinguir falha de serviço de falha de hardware.",
+    date: "2026-08-27",
+    readTime: "8 min",
+    category: "Procedimentos Técnicos",
+    content: (
+      <>
+        <p className="lead">A mensagem "o serviço de áudio não está em execução" e o ícone de som com um "x" vermelho apontam para um componente parado do próprio Windows. O procedimento é curto, reversível e não exige formatar.</p>
+
+        <h2>Resposta curta</h2>
+        <p>O áudio do Windows depende de dois serviços em cadeia: <strong>Windows Audio</strong> e <strong>Construtor de Ponto de Extremidade de Áudio do Windows</strong>. O segundo enumera as saídas; o primeiro entrega o som. Se o construtor não estiver ativo, reiniciar apenas o Windows Audio não resolve — a ordem importa.</p>
+
+        <h2>Procedimento</h2>
+        <ol>
+          <li><strong>Abra os Serviços</strong> (tecla Windows + R, <code>services.msc</code>).</li>
+          <li><strong>Localize "Construtor de Ponto de Extremidade de Áudio do Windows"</strong>. Tipo de inicialização deve ser Automático e o estado, Em execução. Ajuste e inicie se necessário.</li>
+          <li><strong>Localize "Windows Audio"</strong>. Mesmo ajuste: Automático e Em execução. Se já estiver rodando, use Reiniciar.</li>
+          <li><strong>Confira as dependências</strong> na aba Dependências do Windows Audio: Chamada de Procedimento Remoto (RPC) e o agendador multimídia precisam estar ativos.</li>
+          <li><strong>Reinicie o computador</strong> e teste com um vídeo local.</li>
+          <li><strong>Se o serviço parar de novo sozinho</strong>, a suspeita passa para o driver de áudio ou para um aplicativo que assume o dispositivo em modo exclusivo.</li>
+        </ol>
+        <aside className="rounded-lg border border-border bg-muted/40 p-4 not-prose my-6">
+          <p className="m-0 text-sm"><strong>Computador de empresa:</strong> em máquinas gerenciadas, serviços podem ser controlados por política e voltar ao estado anterior a cada login. Trate com quem administra a rede em vez de insistir na alteração local.</p>
+        </aside>
+
+        <h2>Tabela de decisão</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Situação</th>
+              <th>Causa provável</th>
+              <th>Próximo passo</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Serviço parado, inicia e funciona</td><td>Falha pontual após atualização ou desligamento forçado</td><td>Deixar em Automático e observar</td></tr>
+            <tr><td>Serviço para toda vez que o PC liga</td><td>Driver incompatível</td><td>Reinstalar o driver do fabricante do modelo</td></tr>
+            <tr><td>Erro ao tentar iniciar o serviço</td><td>Dependência parada</td><td>Iniciar RPC e o agendador multimídia antes</td></tr>
+            <tr><td>Serviço em execução e mesmo assim sem som</td><td>Saída padrão ou mixer</td><td>Ver <Link to="/blog/computador-sem-som-o-que-verificar" className="text-accent">computador sem som</Link></td></tr>
+            <tr><td>Dispositivo some do Gerenciador de Dispositivos</td><td>Controlador integrado com falha</td><td>Avaliação técnica presencial</td></tr>
+            <tr><td>Voltou depois de uma atualização do Windows</td><td>Driver substituído pelo genérico</td><td>Reinstalar o pacote oficial do modelo</td></tr>
+          </tbody>
+        </table>
+
+        <h2>Reinstalação de driver sem drama</h2>
+        <p>No Gerenciador de Dispositivos, desinstale o dispositivo em Controladores de som, vídeo e jogos marcando a remoção do driver quando a opção existir, reinicie e instale o pacote baixado do site do fabricante do notebook ou da placa-mãe, específico para o modelo. Evite programas que prometem atualizar drivers automaticamente: eles instalam versões genéricas e recriam o problema. Se o Windows já estiver instável em outras frentes, a reinstalação limpa pode ser mais rápida — veja <Link to="/servicos/formatacao" className="text-accent">formatação e instalação do sistema</Link>.</p>
+
+        <h2>Quando chamar um técnico</h2>
+        <p>Chame quando o serviço não iniciar mesmo com dependências ativas, quando o controlador desaparecer do sistema ou quando o problema vier acompanhado de travamentos e reinícios. Avaliação em <Link to="/diagnostico-tecnico" className="text-accent">diagnóstico técnico</Link> e execução em <Link to="/servicos/manutencao-de-computador" className="text-accent">manutenção de computador</Link>.</p>
+      </>
+    ),
+  },
+
 };

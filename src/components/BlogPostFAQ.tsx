@@ -195,6 +195,139 @@ const PILOT_FAQ: Record<string, FAQItem[]> = {
       a: "Não. Atualização de firmware não é manutenção de rotina e não melhora desempenho. Faça apenas com motivo declarado, como suporte a um processador novo, correção de segurança divulgada ou incompatibilidade documentada, sempre com o arquivo do modelo e revisão exatos.",
     },
   ],
+  // ── Onda 10C — Lote 3: armazenamento não detectado e áudio.
+  "hd-nao-e-reconhecido-na-bios-o-que-fazer": [
+    {
+      q: "O que fazer quando o HD não aparece na BIOS?",
+      a: "Desligue pela chave da fonte, reassente o disco, troque o cabo de dados e a porta SATA e teste o disco sozinho. Se ele continuar sem ser listado em outra porta e em outra máquina, a falha é do próprio disco.",
+    },
+    {
+      q: "Por que o HD antigo sumiu depois que instalei um SSD M.2?",
+      a: "Em muitas placas-mãe, ocupar um slot M.2 desabilita portas SATA específicas por compartilhamento de faixas. A tabela de compatibilidade está no manual da placa.",
+    },
+    {
+      q: "Disco que faz clique pode ser testado?",
+      a: "Não. Ruído repetitivo indica falha mecânica e cada nova tentativa de leitura reduz a chance de recuperação. Desligue e trate o caso como recuperação de dados, não como reparo.",
+    },
+    {
+      q: "O disco aparece na BIOS, mas não no Windows. É o mesmo problema?",
+      a: "Não. Se a BIOS lista o disco, o hardware foi reconhecido e falta apenas inicializar, particionar e atribuir letra no Gerenciamento de Disco.",
+    },
+    {
+      q: "Trocar o cabo SATA faz diferença?",
+      a: "Faz. Cabo dobrado ou com mau contato é uma das causas mais comuns de disco intermitente e de erros de CRC no SMART, e é o componente mais barato de substituir.",
+    },
+  ],
+  "ssd-nvme-nao-aparece-no-gerenciador-de-discos": [
+    {
+      q: "Como fazer o SSD novo aparecer no Windows?",
+      a: "Abra o Gerenciamento de Disco, inicialize o disco em GPT, crie um Novo Volume Simples com o tamanho total, formate em NTFS e atribua uma letra. Depois disso ele aparece no Explorador.",
+    },
+    {
+      q: "Devo escolher GPT ou MBR?",
+      a: "GPT em qualquer máquina moderna com UEFI. MBR só faz sentido em equipamentos antigos ou em compatibilidade específica declarada.",
+    },
+    {
+      q: "O disco aparece como RAW. Posso formatar?",
+      a: "Só se não houver dados que você precise. RAW significa sistema de arquivos ilegível: formatar resolve o sintoma e destrói o conteúdo. Com arquivos importantes, o caminho é recuperação de dados.",
+    },
+    {
+      q: "Meu SSD M.2 não aparece nem no Gerenciamento de Disco. O que houve?",
+      a: "Ele não foi enumerado. Verifique se o slot aceita o tipo da placa (NVMe ou SATA M.2), se o encaixe está firme e se o slot não está desabilitado pela configuração do firmware.",
+    },
+    {
+      q: "Depois de clonar, o Windows mostra dois discos iguais. É problema?",
+      a: "É esperado logo após a clonagem. Mantenha um deles desconectado no primeiro boot para evitar confusão de assinatura e de ordem de partida.",
+    },
+  ],
+  "disco-com-setores-defeituosos-smart-o-que-fazer": [
+    {
+      q: "Devo rodar CHKDSK quando o SMART acusa problema?",
+      a: "Não como primeira ação. Em disco com ruído, SMART crítico, desconexões ou dados sem cópia, o CHKDSK força leituras e escritas em áreas frágeis e pode inviabilizar a recuperação. Copie os arquivos primeiro; o CHKDSK só cabe em disco saudável com corrupção lógica.",
+    },
+    {
+      q: "O que significa setor realocado?",
+      a: "É um setor que o disco marcou como ruim e substituiu por outro da reserva interna. Qualquer valor acima de zero pede backup imediato, e um contador que cresce indica degradação em curso.",
+    },
+    {
+      q: "O SMART diz OK. Posso confiar?",
+      a: "Nem sempre. O veredito geral costuma continuar aprovado mesmo com contadores críticos subindo. Observe a tendência dos indicadores em duas leituras separadas por alguns dias.",
+    },
+    {
+      q: "Qual é a ordem correta de trabalho?",
+      a: "Parar de usar o disco, copiar primeiro o que é essencial para outra unidade, fazer imagem bit a bit quando a leitura falhar, e só então investigar a mídia e decidir a substituição.",
+    },
+    {
+      q: "Erro de CRC no SMART significa disco ruim?",
+      a: "Normalmente não. Esse contador aponta erros no enlace de dados, quase sempre cabo ou porta. Troque o cabo, zere a observação e reavalie.",
+    },
+  ],
+  "computador-sem-som-o-que-verificar": [
+    {
+      q: "Por que meu computador ficou sem som de repente?",
+      a: "Na maioria das vezes o Windows passou a entregar o áudio para outra saída — monitor por HDMI, headset Bluetooth ou placa de captura. Confira o dispositivo de saída ativo antes de mexer em driver.",
+    },
+    {
+      q: "O que significa \"nenhum dispositivo de saída de áudio encontrado\"?",
+      a: "Que o sistema não enxerga nenhum controlador de som utilizável, normalmente por driver ausente ou dispositivo desabilitado no Gerenciador de Dispositivos.",
+    },
+    {
+      q: "O som some só em um programa. É defeito?",
+      a: "Não. É o Mixer de volume: um aplicativo pode ficar mudo isoladamente enquanto o restante do sistema toca normalmente.",
+    },
+    {
+      q: "Preciso formatar para recuperar o áudio?",
+      a: "Raramente. Formatação só entra quando o sistema já apresenta instabilidade em várias frentes; para o áudio isolado, a correção está na saída padrão, no serviço ou no driver.",
+    },
+    {
+      q: "Como sei que o problema é hardware?",
+      a: "Quando um canal falha de forma consistente com cabos e fones diferentes, quando houve queda ou líquido, ou quando o conector está folgado. Nesses casos a avaliação é presencial.",
+    },
+  ],
+  "fone-de-ouvido-nao-e-reconhecido-no-pc": [
+    {
+      q: "Por que o fone funciona atrás e não na entrada da frente?",
+      a: "Porque o painel frontal depende de um cabo interno ligado à placa-mãe. Quando esse cabo está solto ou não foi conectado na montagem, a entrada frontal não recebe sinal nem detecção.",
+    },
+    {
+      q: "Meu headset toca som, mas o microfone não capta. O que é?",
+      a: "Provavelmente plugue combinado em computador com entradas separadas de fone e microfone. Um adaptador em Y ou um headset USB resolve.",
+    },
+    {
+      q: "O fone não aparece na lista de dispositivos ao plugar. O que verifico?",
+      a: "A detecção de conector: confira a configuração do painel frontal no utilitário do áudio, o driver instalado e a limpeza do conector, que acumula poeira compactada.",
+    },
+    {
+      q: "Por que o áudio do headset Bluetooth piora nas reuniões?",
+      a: "Porque o sistema troca o perfil estéreo pelo perfil de comunicação, que habilita o microfone e reduz a qualidade do som. É comportamento normal do Bluetooth.",
+    },
+    {
+      q: "Só um lado do fone toca. É o computador?",
+      a: "Quase sempre é o plugue mal inserido ou o cabo do fone rompido. Teste o mesmo fone em outro aparelho antes de suspeitar da placa.",
+    },
+  ],
+  "servico-de-audio-do-windows-nao-esta-em-execucao": [
+    {
+      q: "Como reativar o serviço de áudio do Windows?",
+      a: "Em services.msc, deixe o Construtor de Ponto de Extremidade de Áudio do Windows em Automático e em execução e, depois, faça o mesmo com o Windows Audio. A ordem importa: o construtor enumera as saídas que o outro serviço usa.",
+    },
+    {
+      q: "O serviço para toda vez que ligo o computador. O que fazer?",
+      a: "Isso aponta para driver incompatível. Desinstale o dispositivo em Controladores de som, reinicie e instale o pacote oficial do modelo, baixado do fabricante do notebook ou da placa-mãe.",
+    },
+    {
+      q: "Aparece erro ao tentar iniciar o serviço. Por quê?",
+      a: "Porque alguma dependência está parada, normalmente a Chamada de Procedimento Remoto (RPC) ou o agendador multimídia. Inicie as dependências primeiro.",
+    },
+    {
+      q: "O serviço está rodando e mesmo assim não há som. E agora?",
+      a: "O problema passa a ser de saída padrão, mixer por aplicativo ou conector. A sequência completa está no artigo sobre computador sem som.",
+    },
+    {
+      q: "Programas que atualizam drivers automaticamente ajudam?",
+      a: "Não recomendamos. Eles costumam instalar versões genéricas que recriam o problema. Prefira sempre o pacote específico do modelo, obtido no site do fabricante.",
+    },
+  ],
   // ── Onda 9C — cluster BIOS (sem preço, sem prazo, sem promessa).
   "computador-entra-direto-na-bios": [
     {

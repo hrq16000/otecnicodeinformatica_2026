@@ -473,7 +473,63 @@ export const EDITORIAL_WAVE = [
     apoioLabel: "Impressora offline: como resolver",
     cover: "/blog/fila-de-impressao-travada-spooler-windows.jpg",
   },
+  // Onda 10C — Lote 3: armazenamento não detectado e áudio sem som.
+  {
+    slug: "hd-nao-e-reconhecido-na-bios-o-que-fazer",
+    approvedAt: "2026-08-26",
+    pilar: "/servicos/recuperacao-de-dados",
+    pilarLabel: "Recuperação de dados",
+    apoio: "/blog/ssd-nvme-nao-aparece-no-gerenciador-de-discos",
+    apoioLabel: "SSD não aparece no Gerenciador de Discos",
+    cover: "/blog/hd-nao-e-reconhecido-na-bios-o-que-fazer.jpg",
+  },
+  {
+    slug: "ssd-nvme-nao-aparece-no-gerenciador-de-discos",
+    approvedAt: "2026-08-26",
+    pilar: "/servicos/upgrade-ssd-ram",
+    pilarLabel: "Upgrade de SSD e memória",
+    apoio: "/blog/hd-nao-e-reconhecido-na-bios-o-que-fazer",
+    apoioLabel: "Disco não reconhecido na BIOS",
+    cover: "/blog/ssd-nvme-nao-aparece-no-gerenciador-de-discos.jpg",
+  },
+  {
+    slug: "disco-com-setores-defeituosos-smart-o-que-fazer",
+    approvedAt: "2026-08-26",
+    pilar: "/servicos/recuperacao-de-dados",
+    pilarLabel: "Recuperação de dados",
+    apoio: "/blog/como-recuperar-dados-hd-com-defeito",
+    apoioLabel: "Como recuperar dados de HD com defeito",
+    cover: "/blog/disco-com-setores-defeituosos-smart-o-que-fazer.jpg",
+  },
+  {
+    slug: "computador-sem-som-o-que-verificar",
+    approvedAt: "2026-08-26",
+    pilar: "/servicos/manutencao-de-computador",
+    pilarLabel: "Manutenção de computador",
+    apoio: "/blog/servico-de-audio-do-windows-nao-esta-em-execucao",
+    apoioLabel: "Serviço de áudio do Windows parado",
+    cover: "/blog/computador-sem-som-o-que-verificar.jpg",
+  },
+  {
+    slug: "fone-de-ouvido-nao-e-reconhecido-no-pc",
+    approvedAt: "2026-08-26",
+    pilar: "/servicos/manutencao-de-computador",
+    pilarLabel: "Manutenção de computador",
+    apoio: "/blog/computador-sem-som-o-que-verificar",
+    apoioLabel: "Computador sem som: o que verificar",
+    cover: "/blog/fone-de-ouvido-nao-e-reconhecido-no-pc.jpg",
+  },
+  {
+    slug: "servico-de-audio-do-windows-nao-esta-em-execucao",
+    approvedAt: "2026-08-26",
+    pilar: "/diagnostico-tecnico",
+    pilarLabel: "Diagnóstico técnico",
+    apoio: "/blog/computador-sem-som-o-que-verificar",
+    apoioLabel: "Computador sem som: o que verificar",
+    cover: "/blog/servico-de-audio-do-windows-nao-esta-em-execucao.jpg",
+  },
 ];
+
 
 export const EDITORIAL_WAVE_SLUGS = EDITORIAL_WAVE.map((a) => a.slug);
 
