@@ -89,10 +89,13 @@ for (const { path, h1 } of SATELITES) {
     test("links internos respondem e não há WhatsApp direto no editorial", async ({ request }) => {
       const page = await html(request, path);
 
-      const main = page.match(/<main[\s\S]*?<\/main>/i)?.[0] ?? page;
-      expect(main, `link direto de WhatsApp no editorial de ${path}`).not.toMatch(/wa\.me\//);
+      // O corpo editorial não pode conter link direto de WhatsApp: a conversa
+      // sempre passa pelo funil. CTAs globais de layout ficam fora do <article>.
+      const artigo = page.match(/<article[\s\S]*?<\/article>/i)?.[0] ?? "";
+      expect(artigo.length, `<article> não encontrado em ${path}`).toBeGreaterThan(0);
+      expect(artigo, `link direto de WhatsApp no editorial de ${path}`).not.toMatch(/wa\.me\//);
 
-      const hrefs = [...main.matchAll(/href="(\/[^"#?]*)"/g)]
+      const hrefs = [...artigo.matchAll(/href="(\/[^"#?]*)"/g)]
         .map((m) => m[1])
         .filter((h) => !h.startsWith("/api"));
       const quebradas: string[] = [];
