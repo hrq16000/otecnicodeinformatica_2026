@@ -31,7 +31,7 @@ export const INTERLINKS_GERADOS: Record<string, InterlinkContextual[]> = {
     },
     {
       "href": "/bairros/cic",
-      "anchor": "atendimento em CIC (Curitiba) para notebook não liga",
+      "anchor": "atendimento em CIC (Cidade Industrial) para notebook não liga",
       "contexto": "bairro"
     }
   ],
@@ -58,7 +58,7 @@ export const INTERLINKS_GERADOS: Record<string, InterlinkContextual[]> = {
     },
     {
       "href": "/bairros/batel",
-      "anchor": "atendimento em Batel (Curitiba) para computador lento",
+      "anchor": "atendimento em Batel para computador lento",
       "contexto": "bairro"
     }
   ],
@@ -112,7 +112,7 @@ export const INTERLINKS_GERADOS: Record<string, InterlinkContextual[]> = {
     },
     {
       "href": "/bairros/centro",
-      "anchor": "atendimento em Centro de Curitiba para tela azul no Windows",
+      "anchor": "atendimento em Centro para tela azul no Windows",
       "contexto": "bairro"
     }
   ],
@@ -139,7 +139,7 @@ export const INTERLINKS_GERADOS: Record<string, InterlinkContextual[]> = {
     },
     {
       "href": "/bairros/portao",
-      "anchor": "atendimento em Portão (Curitiba) para arquivos apagados ou disco que não abre",
+      "anchor": "atendimento em Portão para arquivos apagados ou disco que não abre",
       "contexto": "bairro"
     }
   ],
@@ -382,7 +382,7 @@ export const INTERLINKS_GERADOS: Record<string, InterlinkContextual[]> = {
     },
     {
       "href": "/bairros/xaxim",
-      "anchor": "atendimento em xaxim para impressora não imprime mesmo aparecendo conectada",
+      "anchor": "atendimento em Xaxim para impressora não imprime mesmo aparecendo conectada",
       "contexto": "bairro"
     }
   ],
@@ -409,7 +409,7 @@ export const INTERLINKS_GERADOS: Record<string, InterlinkContextual[]> = {
     },
     {
       "href": "/bairros/sitio-cercado",
-      "anchor": "atendimento em sitio-cercado para teclado do notebook não funciona ou falha algumas teclas",
+      "anchor": "atendimento em Sítio Cercado para teclado do notebook não funciona ou falha algumas teclas",
       "contexto": "bairro"
     }
   ]
