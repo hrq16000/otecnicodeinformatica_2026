@@ -69,14 +69,6 @@ cobramos execução que não tenha sido aprovada.
 - [Técnico de Informática no Água Verde | Notebook e PC](https://otecnicodeinformatica.com.br/bairros/agua-verde)
 - [Técnico de Informática no Centro de Curitiba | Notebook e PC](https://otecnicodeinformatica.com.br/bairros/centro)
 - [Técnico de Informática no Portão (Curitiba) | Notebook e PC](https://otecnicodeinformatica.com.br/bairros/portao)
-- [Técnico de Informática em Santa Felicidade | Curitiba](https://otecnicodeinformatica.com.br/bairros/santa-felicidade)
-- [Técnico de Informática na Boa Vista | Curitiba](https://otecnicodeinformatica.com.br/bairros/boa-vista)
-- [Técnico de Informática no Bigorrilho | Curitiba](https://otecnicodeinformatica.com.br/bairros/bigorrilho)
-- [Técnico de Informática no Cabral | Curitiba](https://otecnicodeinformatica.com.br/bairros/cabral)
-- [Técnico de Informática no Afonso Pena | São José dos Pinhais](https://otecnicodeinformatica.com.br/bairros/afonso-pena)
-- [Técnico de Informática no Cruzeiro | São José dos Pinhais](https://otecnicodeinformatica.com.br/bairros/cruzeiro)
-- [Técnico de Informática na Costeira | São José dos Pinhais](https://otecnicodeinformatica.com.br/bairros/costeira)
-- [Técnico de Informática no Guatupê | São José dos Pinhais](https://otecnicodeinformatica.com.br/bairros/guatupe)
 
 ## Problemas comuns
 
@@ -139,7 +131,6 @@ cobramos execução que não tenha sido aprovada.
 - [Internet lenta: é o provedor ou o seu roteador?](https://otecnicodeinformatica.com.br/blog/internet-lenta-provedor-ou-roteador)
 - [Impressora offline: por que aparece assim e como resolver](https://otecnicodeinformatica.com.br/blog/impressora-offline-como-resolver)
 - [Fila de impressão travada: como destravar o spooler do Windows](https://otecnicodeinformatica.com.br/blog/fila-de-impressao-travada-spooler-windows)
-- [HD ou SSD não é reconhecido na BIOS: o que verificar antes de trocar](https://otecnicodeinformatica.com.br/blog/hd-nao-e-reconhecido-na-bios-o-que-fazer)
 - [SSD aparece na BIOS mas não no Windows: como inicializar o disco](https://otecnicodeinformatica.com.br/blog/ssd-nvme-nao-aparece-no-gerenciador-de-discos)
 - [Setores defeituosos e SMART com alerta: o que fazer (e o que não fazer)](https://otecnicodeinformatica.com.br/blog/disco-com-setores-defeituosos-smart-o-que-fazer)
 - [Computador sem som: sequência de verificação do alto-falante ao driver](https://otecnicodeinformatica.com.br/blog/computador-sem-som-o-que-verificar)
@@ -199,3 +190,4 @@ telefonia celular e eletrodomésticos de linha branca.
 - [Índice de sitemaps](https://otecnicodeinformatica.com.br/sitemap-index.xml)
 - [Hub de problemas comuns](https://otecnicodeinformatica.com.br/problemas)
 - [Versão completa para LLMs](https://otecnicodeinformatica.com.br/llms-full.txt)
+
