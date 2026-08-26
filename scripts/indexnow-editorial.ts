@@ -221,3 +221,33 @@ if (!DRY) {
     `${JSON.stringify({ geradoEm: new Date().toISOString(), host: HOST, rotas }, null, 2)}\n`,
   );
 }
+
+// ── Cópia pública sanitizada (painel /admin/editorial-ondas · Infra 3).
+{
+  const rotas = { ...anterior.rotas } as Record<string, Registro>;
+  for (const l of linhas) rotas[l.url] = l;
+  const porUrl = new Map(EDITORIAL_WAVES.map((e) => [e.url, e]));
+  const publico = Object.values(rotas).map((r) => {
+    const e = porUrl.get(r.url);
+    return {
+      url: r.url,
+      wave: e?.wave ?? null,
+      batch: e?.batch ?? null,
+      lote: e ? batchKey(e) : null,
+      owner: e?.ownerId ?? null,
+      currentContentHash: r.currentContentHash,
+      lastSubmittedHash: r.lastSubmittedHash,
+      deploymentConfirmed: Boolean(r.deploySha && r.deploySha === r.currentContentHash),
+      deploySha: r.deploySha,
+      submissionState: r.submissionState,
+      http: r.lastResponse,
+      lastSubmittedAt: r.lastSubmittedAt,
+      motivo: r.motivo ?? null,
+      endpoint: "api.indexnow.org", // chave/keyLocation nunca são expostas
+    };
+  });
+  writeFileSync(
+    resolve(process.cwd(), "public/editorial-indexnow-status.json"),
+    `${JSON.stringify({ geradoEm: new Date().toISOString(), host: HOST, rotas: publico }, null, 2)}\n`,
+  );
+}
