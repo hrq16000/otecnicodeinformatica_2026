@@ -1,0 +1,221 @@
+{
+  "geradoEm": "2026-08-26T03:17:21.664Z",
+  "webhook": {
+    "enviado": false,
+    "motivo": "sem webhook"
+  },
+  "estado": {
+    "/blog/limpar-arquivos-temporarios-windows": {
+      "url": "/blog/limpar-arquivos-temporarios-windows",
+      "previousState": "NO_DATA",
+      "currentState": "NO_DATA",
+      "internalState": "PUBLISHED",
+      "observedAt": "2026-08-26T03:17:21.664Z",
+      "lastAlertedTransition": "EDITORIAL:∅→PUBLISHED",
+      "contentHash": "cba47ddd4ab081a6"
+    },
+    "/blog/memoria-ram-insuficiente-sintomas": {
+      "url": "/blog/memoria-ram-insuficiente-sintomas",
+      "previousState": "NO_DATA",
+      "currentState": "NO_DATA",
+      "internalState": "PUBLISHED",
+      "observedAt": "2026-08-26T03:17:21.664Z",
+      "lastAlertedTransition": "EDITORIAL:∅→PUBLISHED",
+      "contentHash": "8ec249313054318c"
+    },
+    "/blog/codigos-de-erro-tela-azul-windows": {
+      "url": "/blog/codigos-de-erro-tela-azul-windows",
+      "previousState": "NO_DATA",
+      "currentState": "NO_DATA",
+      "internalState": "PUBLISHED",
+      "observedAt": "2026-08-26T03:17:21.664Z",
+      "lastAlertedTransition": "EDITORIAL:∅→PUBLISHED",
+      "contentHash": "3f80566c863cdfed"
+    },
+    "/blog/testar-memoria-ram-memtest86": {
+      "url": "/blog/testar-memoria-ram-memtest86",
+      "previousState": "NO_DATA",
+      "currentState": "NO_DATA",
+      "internalState": "PUBLISHED",
+      "observedAt": "2026-08-26T03:17:21.664Z",
+      "lastAlertedTransition": "EDITORIAL:∅→PUBLISHED",
+      "contentHash": "9392f7964190fc61"
+    },
+    "/blog/botao-power-nao-funciona-jump-start-placa-mae": {
+      "url": "/blog/botao-power-nao-funciona-jump-start-placa-mae",
+      "previousState": "NO_DATA",
+      "currentState": "NO_DATA",
+      "internalState": "PUBLISHED",
+      "observedAt": "2026-08-26T03:17:21.664Z",
+      "lastAlertedTransition": "EDITORIAL:∅→PUBLISHED",
+      "contentHash": "8815a2f22052efd9"
+    },
+    "/blog/curto-circuito-placa-mae-como-identificar": {
+      "url": "/blog/curto-circuito-placa-mae-como-identificar",
+      "previousState": "NO_DATA",
+      "currentState": "NO_DATA",
+      "internalState": "PUBLISHED",
+      "observedAt": "2026-08-26T03:17:21.664Z",
+      "lastAlertedTransition": "EDITORIAL:∅→PUBLISHED",
+      "contentHash": "ed7de44f66517ceb"
+    },
+    "/blog/bios-corrompida-reset-cmos-atualizacao": {
+      "url": "/blog/bios-corrompida-reset-cmos-atualizacao",
+      "previousState": "NO_DATA",
+      "currentState": "NO_DATA",
+      "internalState": "PUBLISHED",
+      "observedAt": "2026-08-26T03:17:21.664Z",
+      "lastAlertedTransition": "EDITORIAL:∅→PUBLISHED",
+      "contentHash": "b0a31cf6858dda7c"
+    },
+    "/blog/internet-lenta-provedor-ou-roteador": {
+      "url": "/blog/internet-lenta-provedor-ou-roteador",
+      "previousState": "NO_DATA",
+      "currentState": "NO_DATA",
+      "internalState": "PUBLISHED",
+      "observedAt": "2026-08-26T03:17:21.664Z",
+      "lastAlertedTransition": "EDITORIAL:∅→PUBLISHED",
+      "contentHash": "ba7d864b73e0953e"
+    },
+    "/blog/impressora-offline-como-resolver": {
+      "url": "/blog/impressora-offline-como-resolver",
+      "previousState": "NO_DATA",
+      "currentState": "NO_DATA",
+      "internalState": "PUBLISHED",
+      "observedAt": "2026-08-26T03:17:21.664Z",
+      "lastAlertedTransition": "EDITORIAL:∅→PUBLISHED",
+      "contentHash": "0f9c121902a02c16"
+    },
+    "/blog/fila-de-impressao-travada-spooler-windows": {
+      "url": "/blog/fila-de-impressao-travada-spooler-windows",
+      "previousState": "NO_DATA",
+      "currentState": "NO_DATA",
+      "internalState": "PUBLISHED",
+      "observedAt": "2026-08-26T03:17:21.664Z",
+      "lastAlertedTransition": "EDITORIAL:∅→PUBLISHED",
+      "contentHash": "6c79ed86dd7ffd42"
+    }
+  },
+  "alertas": [
+    {
+      "url": "/blog/limpar-arquivos-temporarios-windows",
+      "lote": "10C/0",
+      "owner": "temporarios-windows",
+      "source": "EDITORIAL",
+      "eventType": "EDITORIAL_EVENT",
+      "previousState": null,
+      "currentState": "PUBLISHED",
+      "severity": "INFO",
+      "observedAt": "2026-08-26T03:16:10.586Z",
+      "contentHash": "cba47ddd4ab081a6"
+    },
+    {
+      "url": "/blog/memoria-ram-insuficiente-sintomas",
+      "lote": "10C/0",
+      "owner": "ram-insuficiente-sintomas",
+      "source": "EDITORIAL",
+      "eventType": "EDITORIAL_EVENT",
+      "previousState": null,
+      "currentState": "PUBLISHED",
+      "severity": "INFO",
+      "observedAt": "2026-08-26T03:16:10.586Z",
+      "contentHash": "8ec249313054318c"
+    },
+    {
+      "url": "/blog/codigos-de-erro-tela-azul-windows",
+      "lote": "10C/0",
+      "owner": "bsod-codigos-de-erro",
+      "source": "EDITORIAL",
+      "eventType": "EDITORIAL_EVENT",
+      "previousState": null,
+      "currentState": "PUBLISHED",
+      "severity": "INFO",
+      "observedAt": "2026-08-26T03:16:10.586Z",
+      "contentHash": "3f80566c863cdfed"
+    },
+    {
+      "url": "/blog/testar-memoria-ram-memtest86",
+      "lote": "10C/0",
+      "owner": "memtest86-teste-de-ram",
+      "source": "EDITORIAL",
+      "eventType": "EDITORIAL_EVENT",
+      "previousState": null,
+      "currentState": "PUBLISHED",
+      "severity": "INFO",
+      "observedAt": "2026-08-26T03:16:10.586Z",
+      "contentHash": "9392f7964190fc61"
+    },
+    {
+      "url": "/blog/botao-power-nao-funciona-jump-start-placa-mae",
+      "lote": "10D/1",
+      "owner": "botao-power-jump-start",
+      "source": "EDITORIAL",
+      "eventType": "EDITORIAL_EVENT",
+      "previousState": null,
+      "currentState": "PUBLISHED",
+      "severity": "INFO",
+      "observedAt": "2026-08-26T03:16:10.586Z",
+      "contentHash": "8815a2f22052efd9"
+    },
+    {
+      "url": "/blog/curto-circuito-placa-mae-como-identificar",
+      "lote": "10D/1",
+      "owner": "curto-circuito-placa-mae",
+      "source": "EDITORIAL",
+      "eventType": "EDITORIAL_EVENT",
+      "previousState": null,
+      "currentState": "PUBLISHED",
+      "severity": "INFO",
+      "observedAt": "2026-08-26T03:16:10.586Z",
+      "contentHash": "ed7de44f66517ceb"
+    },
+    {
+      "url": "/blog/bios-corrompida-reset-cmos-atualizacao",
+      "lote": "10D/1",
+      "owner": "bios-corrompida-reset-cmos",
+      "source": "EDITORIAL",
+      "eventType": "EDITORIAL_EVENT",
+      "previousState": null,
+      "currentState": "PUBLISHED",
+      "severity": "INFO",
+      "observedAt": "2026-08-26T03:16:10.586Z",
+      "contentHash": "b0a31cf6858dda7c"
+    },
+    {
+      "url": "/blog/internet-lenta-provedor-ou-roteador",
+      "lote": "10C/2",
+      "owner": "internet-lenta-triagem-origem",
+      "source": "EDITORIAL",
+      "eventType": "EDITORIAL_EVENT",
+      "previousState": null,
+      "currentState": "PUBLISHED",
+      "severity": "INFO",
+      "observedAt": "2026-08-26T03:16:10.586Z",
+      "contentHash": "ba7d864b73e0953e"
+    },
+    {
+      "url": "/blog/impressora-offline-como-resolver",
+      "lote": "10C/2",
+      "owner": "impressora-offline",
+      "source": "EDITORIAL",
+      "eventType": "EDITORIAL_EVENT",
+      "previousState": null,
+      "currentState": "PUBLISHED",
+      "severity": "INFO",
+      "observedAt": "2026-08-26T03:16:10.586Z",
+      "contentHash": "0f9c121902a02c16"
+    },
+    {
+      "url": "/blog/fila-de-impressao-travada-spooler-windows",
+      "lote": "10C/2",
+      "owner": "fila-impressao-spooler",
+      "source": "EDITORIAL",
+      "eventType": "EDITORIAL_EVENT",
+      "previousState": null,
+      "currentState": "PUBLISHED",
+      "severity": "INFO",
+      "observedAt": "2026-08-26T03:16:10.586Z",
+      "contentHash": "6c79ed86dd7ffd42"
+    }
+  ]
+}
