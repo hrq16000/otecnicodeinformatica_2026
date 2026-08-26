@@ -1,0 +1,76 @@
+name: Auditoria editorial 10C (periódica)
+
+# Roda a auditoria consolidada, gera o delta contra a execução anterior e
+# dispara alertas de regressão. Só escreve em reports/ e docs/ — nunca cria
+# URL, nunca publica conteúdo, nunca altera src/ ou public/.
+on:
+  schedule:
+    - cron: "20 6 * * 1" # segunda-feira, 06:20 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: editorial-audit-10c
+  cancel-in-progress: true
+
+jobs:
+  auditoria:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: latest
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: npm ci --ignore-scripts
+
+      # Monitor GSC: sem credencial o próprio script grava UNKNOWN (fail-closed).
+      - name: Monitor Search Console
+        continue-on-error: true
+        env:
+          GSC_SITE_URL: ${{ secrets.GSC_SITE_URL }}
+          GSC_SERVICE_ACCOUNT_JSON: ${{ secrets.GSC_SERVICE_ACCOUNT_JSON }}
+        run: npm run monitor:editorial-waves
+
+      - name: Auditoria consolidada
+        run: npm run audit:editorial-10c
+
+      - name: Delta contra a execução anterior
+        run: npm run report:editorial-delta
+
+      - name: Mapa de prioridades da Onda 11
+        run: npm run report:onda-11
+
+      - name: Alertas de regressão (schema/FAQ/breadcrumb)
+        continue-on-error: true
+        env:
+          EDITORIAL_ALERT_SLACK_WEBHOOK: ${{ secrets.EDITORIAL_ALERT_SLACK_WEBHOOK }}
+          EDITORIAL_ALERT_EMAIL_TO: ${{ secrets.EDITORIAL_ALERT_EMAIL_TO }}
+          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+        run: npm run alerts:editorial-regression
+
+      - name: Commit dos artefatos (somente reports/ e docs/)
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add reports docs
+          if git diff --cached --quiet; then
+            echo "Sem variação nos relatórios."
+          else
+            git commit -m "chore(editorial): auditoria 10C periódica [skip ci]"
+            git push
+          fi
+
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: auditoria-editorial-10c
+          path: |
+            reports/editorial/10c/
+            docs/relatorio-onda-10c-auditoria-kpis.md
+            docs/relatorio-onda-10c-delta.md
+            docs/onda-11-prioridades.md
