@@ -1,8 +1,8 @@
 {
-  "geradoEm": "2026-08-26T03:19:25.699Z",
+  "geradoEm": "2026-08-26T03:21:42.573Z",
   "total": 10,
-  "pass": 0,
-  "warn": 10,
+  "pass": 10,
+  "warn": 0,
   "fail": 0,
   "semLicenca": 0,
   "semAtribuicao": 0,
@@ -29,7 +29,9 @@
       "height": 630,
       "fileHash": "sha256:d06e10eb4bd9aed6a2889c817d7ece91",
       "formats": [
-        "/blog/limpar-arquivos-temporarios-windows.jpg"
+        "/blog/limpar-arquivos-temporarios-windows.jpg",
+        "/blog/limpar-arquivos-temporarios-windows.webp",
+        "/blog/limpar-arquivos-temporarios-windows.avif"
       ],
       "checks": {
         "fileExists": true,
@@ -37,16 +39,13 @@
         "licenseKnown": true,
         "attributionComplete": true,
         "originalUrl": true,
-        "webp": false,
-        "avif": false,
+        "webp": true,
+        "avif": true,
         "antiAi": true
       },
       "falhas": [],
-      "avisos": [
-        "webp",
-        "avif"
-      ],
-      "resultado": "WARN"
+      "avisos": [],
+      "resultado": "PASS"
     },
     {
       "owner": "ram-insuficiente-sintomas",
@@ -68,7 +67,9 @@
       "height": 630,
       "fileHash": "sha256:2595432e47018a9ec2a5639b340121a1",
       "formats": [
-        "/blog/memoria-ram-insuficiente-sintomas.jpg"
+        "/blog/memoria-ram-insuficiente-sintomas.jpg",
+        "/blog/memoria-ram-insuficiente-sintomas.webp",
+        "/blog/memoria-ram-insuficiente-sintomas.avif"
       ],
       "checks": {
         "fileExists": true,
@@ -76,16 +77,13 @@
         "licenseKnown": true,
         "attributionComplete": true,
         "originalUrl": true,
-        "webp": false,
-        "avif": false,
+        "webp": true,
+        "avif": true,
         "antiAi": true
       },
       "falhas": [],
-      "avisos": [
-        "webp",
-        "avif"
-      ],
-      "resultado": "WARN"
+      "avisos": [],
+      "resultado": "PASS"
     },
     {
       "owner": "bsod-codigos-de-erro",
@@ -107,7 +105,9 @@
       "height": 630,
       "fileHash": "sha256:f243c8f73752d63c4d309c3b46349163",
       "formats": [
-        "/blog/codigos-de-erro-tela-azul-windows.jpg"
+        "/blog/codigos-de-erro-tela-azul-windows.jpg",
+        "/blog/codigos-de-erro-tela-azul-windows.webp",
+        "/blog/codigos-de-erro-tela-azul-windows.avif"
       ],
       "checks": {
         "fileExists": true,
@@ -115,16 +115,13 @@
         "licenseKnown": true,
         "attributionComplete": true,
         "originalUrl": true,
-        "webp": false,
-        "avif": false,
+        "webp": true,
+        "avif": true,
         "antiAi": true
       },
       "falhas": [],
-      "avisos": [
-        "webp",
-        "avif"
-      ],
-      "resultado": "WARN"
+      "avisos": [],
+      "resultado": "PASS"
     },
     {
       "owner": "memtest86-teste-de-ram",
@@ -146,7 +143,9 @@
       "height": 630,
       "fileHash": "sha256:5720267760ea8b00313325f210fcc9f2",
       "formats": [
-        "/blog/testar-memoria-ram-memtest86.jpg"
+        "/blog/testar-memoria-ram-memtest86.jpg",
+        "/blog/testar-memoria-ram-memtest86.webp",
+        "/blog/testar-memoria-ram-memtest86.avif"
       ],
       "checks": {
         "fileExists": true,
@@ -154,16 +153,13 @@
         "licenseKnown": true,
         "attributionComplete": true,
         "originalUrl": true,
-        "webp": false,
-        "avif": false,
+        "webp": true,
+        "avif": true,
         "antiAi": true
       },
       "falhas": [],
-      "avisos": [
-        "webp",
-        "avif"
-      ],
-      "resultado": "WARN"
+      "avisos": [],
+      "resultado": "PASS"
     },
     {
       "owner": "botao-power-jump-start",
@@ -185,7 +181,9 @@
       "height": 630,
       "fileHash": "sha256:a8294cd5bab5a66bb0d41cffb9722810",
       "formats": [
-        "/blog/botao-power-nao-funciona-jump-start-placa-mae.jpg"
+        "/blog/botao-power-nao-funciona-jump-start-placa-mae.jpg",
+        "/blog/botao-power-nao-funciona-jump-start-placa-mae.webp",
+        "/blog/botao-power-nao-funciona-jump-start-placa-mae.avif"
       ],
       "checks": {
         "fileExists": true,
@@ -193,16 +191,13 @@
         "licenseKnown": true,
         "attributionComplete": true,
         "originalUrl": true,
-        "webp": false,
-        "avif": false,
+        "webp": true,
+        "avif": true,
         "antiAi": true
       },
       "falhas": [],
-      "avisos": [
-        "webp",
-        "avif"
-      ],
-      "resultado": "WARN"
+      "avisos": [],
+      "resultado": "PASS"
     },
     {
       "owner": "curto-circuito-placa-mae",
@@ -224,7 +219,9 @@
       "height": 630,
       "fileHash": "sha256:540305af13ad377620d354503b130022",
       "formats": [
-        "/blog/curto-circuito-placa-mae-como-identificar.jpg"
+        "/blog/curto-circuito-placa-mae-como-identificar.jpg",
+        "/blog/curto-circuito-placa-mae-como-identificar.webp",
+        "/blog/curto-circuito-placa-mae-como-identificar.avif"
       ],
       "checks": {
         "fileExists": true,
@@ -232,16 +229,13 @@
         "licenseKnown": true,
         "attributionComplete": true,
         "originalUrl": true,
-        "webp": false,
-        "avif": false,
+        "webp": true,
+        "avif": true,
         "antiAi": true
       },
       "falhas": [],
-      "avisos": [
-        "webp",
-        "avif"
-      ],
-      "resultado": "WARN"
+      "avisos": [],
+      "resultado": "PASS"
     },
     {
       "owner": "bios-corrompida-reset-cmos",
@@ -263,7 +257,9 @@
       "height": 630,
       "fileHash": "sha256:a5c5bf56b63e7aeea0785522f947e72a",
       "formats": [
-        "/blog/bios-corrompida-reset-cmos-atualizacao.jpg"
+        "/blog/bios-corrompida-reset-cmos-atualizacao.jpg",
+        "/blog/bios-corrompida-reset-cmos-atualizacao.webp",
+        "/blog/bios-corrompida-reset-cmos-atualizacao.avif"
       ],
       "checks": {
         "fileExists": true,
@@ -271,16 +267,13 @@
         "licenseKnown": true,
         "attributionComplete": true,
         "originalUrl": true,
-        "webp": false,
-        "avif": false,
+        "webp": true,
+        "avif": true,
         "antiAi": true
       },
       "falhas": [],
-      "avisos": [
-        "webp",
-        "avif"
-      ],
-      "resultado": "WARN"
+      "avisos": [],
+      "resultado": "PASS"
     },
     {
       "owner": "internet-lenta-triagem-origem",
@@ -302,7 +295,9 @@
       "height": 630,
       "fileHash": "sha256:c6470395b4dbe78fa87c0a1941939b0b",
       "formats": [
-        "/blog/internet-lenta-provedor-ou-roteador.jpg"
+        "/blog/internet-lenta-provedor-ou-roteador.jpg",
+        "/blog/internet-lenta-provedor-ou-roteador.webp",
+        "/blog/internet-lenta-provedor-ou-roteador.avif"
       ],
       "checks": {
         "fileExists": true,
@@ -310,16 +305,13 @@
         "licenseKnown": true,
         "attributionComplete": true,
         "originalUrl": true,
-        "webp": false,
-        "avif": false,
+        "webp": true,
+        "avif": true,
         "antiAi": true
       },
       "falhas": [],
-      "avisos": [
-        "webp",
-        "avif"
-      ],
-      "resultado": "WARN"
+      "avisos": [],
+      "resultado": "PASS"
     },
     {
       "owner": "impressora-offline",
@@ -341,7 +333,9 @@
       "height": 630,
       "fileHash": "sha256:183d2c67ba0a10dc1bc6819ad554aadb",
       "formats": [
-        "/blog/impressora-offline-como-resolver.jpg"
+        "/blog/impressora-offline-como-resolver.jpg",
+        "/blog/impressora-offline-como-resolver.webp",
+        "/blog/impressora-offline-como-resolver.avif"
       ],
       "checks": {
         "fileExists": true,
@@ -349,16 +343,13 @@
         "licenseKnown": true,
         "attributionComplete": true,
         "originalUrl": true,
-        "webp": false,
-        "avif": false,
+        "webp": true,
+        "avif": true,
         "antiAi": true
       },
       "falhas": [],
-      "avisos": [
-        "webp",
-        "avif"
-      ],
-      "resultado": "WARN"
+      "avisos": [],
+      "resultado": "PASS"
     },
     {
       "owner": "fila-impressao-spooler",
@@ -380,7 +371,9 @@
       "height": 630,
       "fileHash": "sha256:2c9fbc7a78f6b60c8cc5ecdf4b98e8a4",
       "formats": [
-        "/blog/fila-de-impressao-travada-spooler-windows.jpg"
+        "/blog/fila-de-impressao-travada-spooler-windows.jpg",
+        "/blog/fila-de-impressao-travada-spooler-windows.webp",
+        "/blog/fila-de-impressao-travada-spooler-windows.avif"
       ],
       "checks": {
         "fileExists": true,
@@ -388,16 +381,13 @@
         "licenseKnown": true,
         "attributionComplete": true,
         "originalUrl": true,
-        "webp": false,
-        "avif": false,
+        "webp": true,
+        "avif": true,
         "antiAi": true
       },
       "falhas": [],
-      "avisos": [
-        "webp",
-        "avif"
-      ],
-      "resultado": "WARN"
+      "avisos": [],
+      "resultado": "PASS"
     }
   ]
 }
