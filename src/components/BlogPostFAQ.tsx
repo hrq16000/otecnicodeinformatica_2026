@@ -104,6 +104,73 @@ const PILOT_FAQ: Record<string, FAQItem[]> = {
       a: "Medição de continuidade só é válida com o equipamento desligado e o cabo removido. Sem prática de leitura, o resultado leva a troca de peças boas. Havendo cheiro de queimado, marca escura ou líquido derramado, interrompa e leve para avaliação de bancada.",
     },
   ],
+  // ── Onda 10C / Lote 2 — internet/Wi-Fi (triagem) e impressoras.
+  "internet-lenta-provedor-ou-roteador": [
+    {
+      q: "Como saber se a internet lenta é culpa do provedor?",
+      a: "Meça a velocidade com o computador ligado por cabo direto no roteador, três vezes, em horários diferentes. Se o resultado por cabo ficar muito abaixo do contratado em todas as medições, a suspeita é da entrega da operadora. Se o cabo entrega bem, o gargalo está dentro de casa.",
+    },
+    {
+      q: "Por que o Wi-Fi é mais lento que o cabo?",
+      a: "O sinal sem fio perde intensidade com distância, paredes, laje e concorrência de redes vizinhas. Uma diferença existe sempre; o que indica problema é o Wi-Fi entregar muito pouco mesmo a um ou dois metros do roteador.",
+    },
+    {
+      q: "Trocar por um plano mais rápido resolve?",
+      a: "Não, quando o limite é a rede interna. Se o Wi-Fi já não entrega a velocidade atual, ele não entregará o dobro. Vale contratar mais velocidade só depois de confirmar, por cabo, que a entrega atual está sendo consumida por inteiro.",
+    },
+    {
+      q: "Repetidor de sinal melhora a velocidade?",
+      a: "Só quando instalado em um ponto que ainda recebe sinal bom. Colocado onde o sinal já está fraco, ele repete um sinal ruim e costuma piorar a experiência.",
+    },
+    {
+      q: "O que registrar antes de abrir chamado com a operadora?",
+      a: "Data, hora e resultado das medições feitas por cabo, com os demais aparelhos parados. Esse histórico sustenta o pedido de verificação do enlace, em vez de apenas um reinício remoto.",
+    },
+  ],
+  "impressora-offline-como-resolver": [
+    {
+      q: "O que significa a impressora aparecer offline?",
+      a: "Significa que o Windows tentou falar com a impressora e não obteve resposta. Em rede, a causa mais comum é o aparelho ter voltado com outro endereço IP; por cabo, costuma ser porta, cabo ou serviço de impressão parado.",
+    },
+    {
+      q: "Por que a impressora some depois de ficar desligada alguns dias?",
+      a: "O roteador entrega endereços por empréstimo e com prazo. Passado o prazo, a impressora pode voltar com um endereço diferente enquanto o computador continua chamando o antigo. Criar uma reserva de endereço no roteador evita a repetição.",
+    },
+    {
+      q: "Como descubro o endereço atual da impressora?",
+      a: "Pelo menu do próprio aparelho, imprimindo a página de configuração de rede. Ela mostra o endereço em uso e se o Wi-Fi está realmente conectado.",
+    },
+    {
+      q: "Preciso reinstalar a impressora para resolver?",
+      a: "Na maioria dos casos não. Corrigir a porta cadastrada para o endereço atual e desmarcar as opções de pausa e de uso offline resolve sem remover nada.",
+    },
+    {
+      q: "A impressora está offline só em um computador. O que muda?",
+      a: "Indica configuração local desse computador, normalmente porta antiga cadastrada. Se estivesse offline em todos, a suspeita passaria para a conexão de rede do próprio aparelho.",
+    },
+  ],
+  "fila-de-impressao-travada-spooler-windows": [
+    {
+      q: "O que é o spooler de impressão?",
+      a: "É o serviço do Windows que grava o documento em um arquivo temporário e cuida do envio para a impressora. Quando esse arquivo corrompe, o serviço trava e a fila congela.",
+    },
+    {
+      q: "Como limpar a fila de impressão travada?",
+      a: "Pare o serviço Spooler de Impressão em services.msc, apague todo o conteúdo da pasta C:\\Windows\\System32\\spool\\PRINTERS e inicie o serviço novamente. Depois reenvie um documento de uma página para confirmar.",
+    },
+    {
+      q: "Apagar os arquivos dessa pasta remove minhas impressoras?",
+      a: "Não. Aqueles arquivos são apenas trabalhos pendentes. As impressoras cadastradas e os drivers permanecem instalados.",
+    },
+    {
+      q: "Por que o documento fica preso em \"excluindo\"?",
+      a: "Porque o serviço não consegue concluir nem descartar o trabalho corrompido enquanto estiver em execução. Por isso o procedimento exige parar o serviço antes de limpar a pasta.",
+    },
+    {
+      q: "O spooler cai toda hora. É driver?",
+      a: "Provavelmente sim, quando o serviço para logo após cada envio. Remova a impressora, reinicie e instale o pacote oficial do modelo exato baixado do fabricante, em vez de um driver genérico.",
+    },
+  ],
   "bios-corrompida-reset-cmos-atualizacao": [
     {
       q: "Qual a diferença entre limpar o CMOS e regravar a BIOS?",
