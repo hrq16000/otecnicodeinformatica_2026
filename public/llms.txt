@@ -136,6 +136,9 @@ cobramos execução que não tenha sido aprovada.
 - [Botão power não funciona: como ligar o PC pelo conector da placa-mãe](https://otecnicodeinformatica.com.br/blog/botao-power-nao-funciona-jump-start-placa-mae)
 - [Curto-circuito na placa-mãe: como identificar e isolar o problema](https://otecnicodeinformatica.com.br/blog/curto-circuito-placa-mae-como-identificar)
 - [BIOS corrompida: reset de CMOS e recuperação de firmware](https://otecnicodeinformatica.com.br/blog/bios-corrompida-reset-cmos-atualizacao)
+- [Internet lenta: é o provedor ou o seu roteador?](https://otecnicodeinformatica.com.br/blog/internet-lenta-provedor-ou-roteador)
+- [Impressora offline: por que aparece assim e como resolver](https://otecnicodeinformatica.com.br/blog/impressora-offline-como-resolver)
+- [Fila de impressão travada: como destravar o spooler do Windows](https://otecnicodeinformatica.com.br/blog/fila-de-impressao-travada-spooler-windows)
 
 ## Páginas institucionais e de política
 
