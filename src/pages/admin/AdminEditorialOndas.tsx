@@ -14,7 +14,7 @@ import { exportarCsv, exportarJson } from "@/lib/exportarRelatorio";
  * número: campo sem fonte aparece como "—" ou UNKNOWN, nunca como zero.
  */
 
-interface RotaOnda {
+interface RotaOnda extends Record<string, unknown> {
   wave: string;
   batch: string;
   lote: string;
