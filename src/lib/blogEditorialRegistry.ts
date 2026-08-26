@@ -680,6 +680,51 @@ const WAVE_10C: EditorialApproval[] = [
   },
 ];
 
+const WAVE_10D: EditorialApproval[] = [
+  {
+    slug: "botao-power-nao-funciona-jump-start-placa-mae",
+    status: "approved",
+    authorType: "organization",
+    authorId: INSTITUTIONAL_AUTHOR.id,
+    reviewedAt: "2026-08-26",
+    approvedAt: "2026-08-26",
+    imageOrigin: "licensed",
+    imageLicense: "CC BY-SA 4.0",
+    imageAttribution:
+      "Foto: Hans Haase (Wikimedia Commons), CC BY-SA 4.0 — https://commons.wikimedia.org/wiki/File:JPANEL_MB_IMG_1121.JPG",
+    notes:
+      "Satélite escrito do zero na Onda 10D; fact-check registrado em blogEditorialSources.ts; capa é fotografia real licenciada, sem IA.",
+  },
+  {
+    slug: "curto-circuito-placa-mae-como-identificar",
+    status: "approved",
+    authorType: "organization",
+    authorId: INSTITUTIONAL_AUTHOR.id,
+    reviewedAt: "2026-08-26",
+    approvedAt: "2026-08-26",
+    imageOrigin: "licensed",
+    imageLicense: "CC BY-SA 3.0",
+    imageAttribution:
+      "Foto: Gms (Wikimedia Commons), CC BY-SA 3.0 — https://commons.wikimedia.org/wiki/File:Motherboard_defective_capacitors.jpg",
+    notes:
+      "Satélite escrito do zero na Onda 10D; fact-check registrado em blogEditorialSources.ts; capa é fotografia real licenciada, sem IA.",
+  },
+  {
+    slug: "bios-corrompida-reset-cmos-atualizacao",
+    status: "approved",
+    authorType: "organization",
+    authorId: INSTITUTIONAL_AUTHOR.id,
+    reviewedAt: "2026-08-26",
+    approvedAt: "2026-08-26",
+    imageOrigin: "licensed",
+    imageLicense: "CC BY-SA 2.0",
+    imageAttribution:
+      "Foto: Kent Madsen (Wikimedia Commons), CC BY-SA 2.0 — https://commons.wikimedia.org/wiki/File:CMOS_Battery,_Motherboard.jpg",
+    notes:
+      "Satélite escrito do zero na Onda 10D; fact-check registrado em blogEditorialSources.ts; capa é fotografia real licenciada, sem IA.",
+  },
+];
+
 export const APPROVED_EDITORIAL_CONTENT = new Map<string, EditorialApproval>([
 
   ...FIRST_WAVE_SLUGS.map((slug) => [
@@ -724,6 +769,7 @@ export const APPROVED_EDITORIAL_CONTENT = new Map<string, EditorialApproval>([
   ...WAVE_9B.map((a) => [a.slug, a] as [string, EditorialApproval]),
   ...WAVE_9C.map((a) => [a.slug, a] as [string, EditorialApproval]),
   ...WAVE_10C.map((a) => [a.slug, a] as [string, EditorialApproval]),
+  ...WAVE_10D.map((a) => [a.slug, a] as [string, EditorialApproval]),
 ]);
 
 

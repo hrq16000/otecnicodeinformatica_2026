@@ -283,6 +283,24 @@ export const EDITORIAL_COVERS: Record<string, EditorialCover> = {
     width: 1200,
     height: 630,
   },
+  "botao-power-nao-funciona-jump-start-placa-mae": {
+    src: "/blog/botao-power-nao-funciona-jump-start-placa-mae.jpg",
+    alt: "Conector do painel frontal de uma placa-mãe com os pinos de ligar e reiniciar",
+    width: 1200,
+    height: 630,
+  },
+  "curto-circuito-placa-mae-como-identificar": {
+    src: "/blog/curto-circuito-placa-mae-como-identificar.jpg",
+    alt: "Placa-mãe com capacitores eletrolíticos estufados no topo",
+    width: 1200,
+    height: 630,
+  },
+  "bios-corrompida-reset-cmos-atualizacao": {
+    src: "/blog/bios-corrompida-reset-cmos-atualizacao.jpg",
+    alt: "Bateria de lítio CR2032 encaixada no soquete de CMOS de uma placa-mãe",
+    width: 1200,
+    height: 630,
+  },
 };
 
 export function getEditorialCover(slug: string): EditorialCover | undefined {

@@ -620,6 +620,36 @@ export const ARTICLE_SOURCE_MANIFEST: Record<string, ArticleSourceManifest> = {
     notes:
       "Revisão concluída (Onda 10C): motivo de testar fora do sistema operacional, criação da mídia inicializável, número de passagens, critério de que um único erro já caracteriza defeito, isolamento entre módulo e slot e influência de perfis XMP/EXPO. Conhecimento técnico estável — sem fonte visível.",
   },
+  "botao-power-nao-funciona-jump-start-placa-mae": {
+    slug: "botao-power-nao-funciona-jump-start-placa-mae",
+    sources: [],
+    technicalReview: "reviewed",
+    factChecked: true,
+    factCheckedAt: "2026-08-26",
+    stableKnowledge: true,
+    notes:
+      "Revisão concluída (Onda 10D): função do bloco F_PANEL/JFP1, ausência de polaridade no par PWR_SW, procedimento de encosto momentâneo entre os pinos, uso do par de reset como contorno e limites do teste em notebooks e all-in-one. Alertas de segurança sobre não abrir a fonte e sobre garantia. Conhecimento técnico estável — sem fonte visível.",
+  },
+  "curto-circuito-placa-mae-como-identificar": {
+    slug: "curto-circuito-placa-mae-como-identificar",
+    sources: [],
+    technicalReview: "reviewed",
+    factChecked: true,
+    factCheckedAt: "2026-08-26",
+    stableKnowledge: true,
+    notes:
+      "Revisão concluída (Onda 10D): atuação da proteção OCP/SCP da fonte no padrão de partida abortada, teste de bancada mínima fora do gabinete, isolamento incremental de periféricos, espaçadores metálicos como causa frequente e inviabilidade econômica do reparo em nível de componente. Conhecimento técnico estável — sem fonte visível.",
+  },
+  "bios-corrompida-reset-cmos-atualizacao": {
+    slug: "bios-corrompida-reset-cmos-atualizacao",
+    sources: [],
+    technicalReview: "reviewed",
+    factChecked: true,
+    factCheckedAt: "2026-08-26",
+    stableKnowledge: true,
+    notes:
+      "Revisão concluída (Onda 10D): distinção entre memória CMOS e firmware gravado em chip, vida útil típica da bateria CR2032, procedimento por jumper CLR_CMOS e por remoção de bateria, recursos de recuperação por USB e chip duplo e risco de chave de recuperação em disco criptografado. Conhecimento técnico estável — sem fonte visível.",
+  },
 };
 
 
