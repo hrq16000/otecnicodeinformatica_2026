@@ -235,9 +235,124 @@ const WAVE_10D_BATCH_1: EditorialWaveEntry[] = [
   },
 ];
 
+/** Onda 10C — Lote 3: armazenamento não detectado (7) e áudio sem som (8). */
+const WAVE_10C_BATCH_3: EditorialWaveEntry[] = [
+  {
+    wave: "10C",
+    batch: "3",
+    url: "/blog/hd-nao-e-reconhecido-na-bios-o-que-fazer",
+    slug: "hd-nao-e-reconhecido-na-bios-o-que-fazer",
+    ownerId: "disco-nao-detectado-bios",
+    cluster: "armazenamento-nao-detectado",
+    role: "pilar",
+    publishedAt: "2026-08-26",
+    targetQueries: [
+      "hd nao e reconhecido na bios",
+      "disco nao aparece no setup",
+      "pc nao detecta hd sata",
+    ],
+    doNotDuplicate: [
+      "/blog/ssd-nvme-nao-aparece-no-gerenciador-de-discos",
+      "/blog/troquei-o-ssd-e-o-pc-so-abre-a-bios",
+      "/blog/erro-no-bootable-device-como-resolver",
+    ],
+  },
+  {
+    wave: "10C",
+    batch: "3",
+    url: "/blog/ssd-nvme-nao-aparece-no-gerenciador-de-discos",
+    slug: "ssd-nvme-nao-aparece-no-gerenciador-de-discos",
+    ownerId: "disco-sem-inicializacao-windows",
+    cluster: "armazenamento-nao-detectado",
+    role: "satelite",
+    publishedAt: "2026-08-26",
+    targetQueries: [
+      "ssd nao aparece no windows",
+      "disco novo nao aparece no explorador",
+      "inicializar disco gerenciamento de disco",
+    ],
+    doNotDuplicate: [
+      "/blog/hd-nao-e-reconhecido-na-bios-o-que-fazer",
+      "/blog/como-fazer-upgrade-ssd-nvme",
+    ],
+  },
+  {
+    wave: "10C",
+    batch: "3",
+    url: "/blog/disco-com-setores-defeituosos-smart-o-que-fazer",
+    slug: "disco-com-setores-defeituosos-smart-o-que-fazer",
+    ownerId: "smart-setores-defeituosos",
+    cluster: "armazenamento-nao-detectado",
+    role: "satelite",
+    publishedAt: "2026-08-26",
+    targetQueries: [
+      "setores defeituosos no hd",
+      "smart com erro o que significa",
+      "disco com falha iminente",
+    ],
+    doNotDuplicate: [
+      "/blog/como-recuperar-dados-hd-com-defeito",
+      "/problemas/hd-fazendo-barulho",
+      "/blog/quando-trocar-hd-por-ssd",
+    ],
+  },
+  {
+    wave: "10C",
+    batch: "3",
+    url: "/blog/computador-sem-som-o-que-verificar",
+    slug: "computador-sem-som-o-que-verificar",
+    ownerId: "computador-sem-som",
+    cluster: "audio",
+    role: "pilar",
+    publishedAt: "2026-08-26",
+    targetQueries: [
+      "computador sem som",
+      "pc nao emite som",
+      "nenhum dispositivo de saida de audio",
+    ],
+    doNotDuplicate: [
+      "/blog/fone-de-ouvido-nao-e-reconhecido-no-pc",
+      "/blog/servico-de-audio-do-windows-nao-esta-em-execucao",
+    ],
+  },
+  {
+    wave: "10C",
+    batch: "3",
+    url: "/blog/fone-de-ouvido-nao-e-reconhecido-no-pc",
+    slug: "fone-de-ouvido-nao-e-reconhecido-no-pc",
+    ownerId: "fone-nao-reconhecido",
+    cluster: "audio",
+    role: "satelite",
+    publishedAt: "2026-08-26",
+    targetQueries: [
+      "fone de ouvido nao e reconhecido",
+      "pc nao detecta fone na entrada frontal",
+      "microfone do headset nao funciona",
+    ],
+    doNotDuplicate: ["/blog/computador-sem-som-o-que-verificar"],
+  },
+  {
+    wave: "10C",
+    batch: "3",
+    url: "/blog/servico-de-audio-do-windows-nao-esta-em-execucao",
+    slug: "servico-de-audio-do-windows-nao-esta-em-execucao",
+    ownerId: "servico-de-audio-windows",
+    cluster: "audio",
+    role: "satelite",
+    publishedAt: "2026-08-26",
+    targetQueries: [
+      "servico de audio do windows nao esta em execucao",
+      "reiniciar servico de audio",
+      "driver de audio realtek nao instala",
+    ],
+    doNotDuplicate: ["/blog/computador-sem-som-o-que-verificar"],
+  },
+];
+
 export const EDITORIAL_WAVES: EditorialWaveEntry[] = [
   ...WAVE_10C_BATCH_0,
   ...WAVE_10D_BATCH_1,
+  ...WAVE_10C_BATCH_3,
 ];
 
 /** URLs monitoradas (ordem estável, sem duplicatas). */
