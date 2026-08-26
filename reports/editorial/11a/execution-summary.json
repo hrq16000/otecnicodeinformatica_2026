@@ -16,3 +16,4 @@
   },
   "reason": "Execucao recuperada: prebuild, Bun anti-canibalizacao e export-secrets passam; build/SSR permanecem bloqueados pelo binding nativo do Rolldown no Windows e GSC confirmou credenciais ausentes."
 }
+

@@ -156,3 +156,4 @@ if (errors.length) {
   process.exit(1);
 }
 console.log("✔ nenhum símbolo de rota ausente e nenhum import nomeado quebrado.");
+

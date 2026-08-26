@@ -44,3 +44,4 @@ if (faltando.length > 0) {
 }
 
 console.log(`[route-tree] OK — árvore gerada cobre ${walk("src/routes").length} arquivo(s) de rota.`);
+

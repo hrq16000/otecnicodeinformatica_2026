@@ -10,3 +10,4 @@
   ],
   "note": "Exports reais gerados/verificados localmente; build final permanece bloqueado pelo binding nativo do Rolldown no ambiente Windows."
 }
+

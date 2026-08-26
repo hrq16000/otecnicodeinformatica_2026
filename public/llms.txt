@@ -190,3 +190,4 @@ telefonia celular e eletrodomésticos de linha branca.
 - [Índice de sitemaps](https://otecnicodeinformatica.com.br/sitemap-index.xml)
 - [Hub de problemas comuns](https://otecnicodeinformatica.com.br/problemas)
 - [Versão completa para LLMs](https://otecnicodeinformatica.com.br/llms-full.txt)
+
