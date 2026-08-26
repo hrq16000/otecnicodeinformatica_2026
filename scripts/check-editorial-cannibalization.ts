@@ -19,6 +19,8 @@
  */
 import { EDITORIAL_WAVES } from "../src/lib/editorialWavesRegistry";
 import { CONTENT_INTENT_MAP } from "../src/lib/contentIntentMap";
+// @ts-expect-error — fonte .mjs compartilhada com os gates de build.
+import { EDITORIAL_WAVE } from "./lib/editorial-wave.mjs";
 
 const TETO_SIMILARIDADE = 0.4;
 
@@ -47,8 +49,21 @@ const jaccard = (a: Set<string>, b: Set<string>) => {
   return inter / (a.size + b.size - inter);
 };
 
+/**
+ * Acervo indexável real (onda editorial aprovada). As consultas são derivadas
+ * do slug — proxy honesto de intenção em português, suficiente para detectar
+ * que um candidato repete um owner já publicado.
+ */
+const ondaIndexavel: Alvo[] = (EDITORIAL_WAVE as Array<{ slug: string }>).map((a) => ({
+  url: `/blog/${a.slug}`,
+  origem: "onda editorial indexável",
+  queries: [a.slug.replace(/-/g, " ")],
+  doNotDuplicate: [],
+}));
+
 // ── Acervo declarado ────────────────────────────────────────────
 const acervo: Alvo[] = [
+  ...ondaIndexavel,
   ...EDITORIAL_WAVES.map((e) => ({
     url: e.url,
     origem: `onda ${e.wave}/${e.batch}`,
@@ -87,7 +102,12 @@ for (const c of candidatos) {
   }
 }
 
-const universo = [...acervo, ...candidatos];
+const vistos = new Set<string>();
+const universo = [...acervo, ...candidatos].filter((a) => {
+  if (vistos.has(a.url)) return false;
+  vistos.add(a.url);
+  return true;
+});
 
 // 1 · consulta idêntica em duas URLs
 const porQuery = new Map<string, string[]>();
