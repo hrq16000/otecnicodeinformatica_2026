@@ -320,6 +320,43 @@ export const EDITORIAL_COVERS: Record<string, EditorialCover> = {
     width: 1200,
     height: 630,
   },
+  // ── Onda 10C — Lote 3: armazenamento não detectado e áudio sem som.
+  "hd-nao-e-reconhecido-na-bios-o-que-fazer": {
+    src: "/blog/hd-nao-e-reconhecido-na-bios-o-que-fazer.jpg",
+    alt: "Disco SATA de 2,5 polegadas sobre um disco de 3,5 polegadas, em close dos conectores de dados e energia",
+    width: 1200,
+    height: 630,
+  },
+  "ssd-nvme-nao-aparece-no-gerenciador-de-discos": {
+    src: "/blog/ssd-nvme-nao-aparece-no-gerenciador-de-discos.jpg",
+    alt: "SSD NVMe no formato M.2 encaixado no slot da placa-mãe",
+    width: 1200,
+    height: 630,
+  },
+  "disco-com-setores-defeituosos-smart-o-que-fazer": {
+    src: "/blog/disco-com-setores-defeituosos-smart-o-que-fazer.jpg",
+    alt: "Cabeça de leitura de disco rígido posicionada sobre o prato magnético",
+    width: 1200,
+    height: 630,
+  },
+  "computador-sem-som-o-que-verificar": {
+    src: "/blog/computador-sem-som-o-que-verificar.jpg",
+    alt: "Conectores de áudio coloridos no painel de um computador",
+    width: 1200,
+    height: 630,
+  },
+  "fone-de-ouvido-nao-e-reconhecido-no-pc": {
+    src: "/blog/fone-de-ouvido-nao-e-reconhecido-no-pc.jpg",
+    alt: "Plugues de áudio de 3,5 mm identificados lado a lado",
+    width: 1200,
+    height: 630,
+  },
+  "servico-de-audio-do-windows-nao-esta-em-execucao": {
+    src: "/blog/servico-de-audio-do-windows-nao-esta-em-execucao.jpg",
+    alt: "Placa-mãe de computador com o chip de áudio integrado e conectores do painel",
+    width: 1200,
+    height: 630,
+  },
 };
 
 export function getEditorialCover(slug: string): EditorialCover | undefined {
