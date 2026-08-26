@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-08-26T01:57:48.961Z",
+  "geradoEm": "2026-08-26T03:17:21.664Z",
   "site": "sc-domain:otecnicodeinformatica.com.br",
   "disponivel": true,
   "lotes": [
@@ -11,6 +11,12 @@
     },
     {
       "lote": "10D/1",
+      "total": 3,
+      "indexadas": 0,
+      "cobertura": 0
+    },
+    {
+      "lote": "10C/2",
       "total": 3,
       "indexadas": 0,
       "cobertura": 0
@@ -27,6 +33,7 @@
       "cluster": "pc-lento",
       "role": "satelite",
       "publishedAt": "2026-08-25",
+      "internalState": "PUBLISHED",
       "contentHash": "cba47ddd4ab081a6",
       "sitemapLastmod": null,
       "indexNowSentAt": null,
@@ -51,6 +58,7 @@
       "cluster": "pc-lento",
       "role": "satelite",
       "publishedAt": "2026-08-25",
+      "internalState": "PUBLISHED",
       "contentHash": "8ec249313054318c",
       "sitemapLastmod": null,
       "indexNowSentAt": null,
@@ -75,6 +83,7 @@
       "cluster": "tela-azul",
       "role": "satelite",
       "publishedAt": "2026-08-25",
+      "internalState": "PUBLISHED",
       "contentHash": "3f80566c863cdfed",
       "sitemapLastmod": null,
       "indexNowSentAt": null,
@@ -99,6 +108,7 @@
       "cluster": "tela-azul",
       "role": "satelite",
       "publishedAt": "2026-08-25",
+      "internalState": "PUBLISHED",
       "contentHash": "9392f7964190fc61",
       "sitemapLastmod": null,
       "indexNowSentAt": null,
@@ -123,7 +133,8 @@
       "cluster": "pc-nao-liga",
       "role": "satelite",
       "publishedAt": "2026-08-26",
-      "contentHash": "678c575b53ede34c",
+      "internalState": "PUBLISHED",
+      "contentHash": "8815a2f22052efd9",
       "sitemapLastmod": null,
       "indexNowSentAt": null,
       "google": {
@@ -147,7 +158,8 @@
       "cluster": "liga-e-desliga",
       "role": "satelite",
       "publishedAt": "2026-08-26",
-      "contentHash": "846428a7e4c08bd7",
+      "internalState": "PUBLISHED",
+      "contentHash": "ed7de44f66517ceb",
       "sitemapLastmod": null,
       "indexNowSentAt": null,
       "google": {
@@ -171,7 +183,83 @@
       "cluster": "liga-e-desliga",
       "role": "satelite",
       "publishedAt": "2026-08-26",
-      "contentHash": "300aace8f5f3de98",
+      "internalState": "PUBLISHED",
+      "contentHash": "b0a31cf6858dda7c",
+      "sitemapLastmod": null,
+      "indexNowSentAt": null,
+      "google": {
+        "status": "NO_DATA",
+        "verdict": "NEUTRAL",
+        "coverageState": "URL is unknown to Google",
+        "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+        "indexingState": "INDEXING_STATE_UNSPECIFIED",
+        "ultimoCrawl": null,
+        "canonicalGoogle": null,
+        "canonicalDeclarado": null
+      }
+    },
+    {
+      "wave": "10C",
+      "batch": "2",
+      "lote": "10C/2",
+      "url": "/blog/internet-lenta-provedor-ou-roteador",
+      "urlAbsoluta": "https://otecnicodeinformatica.com.br/blog/internet-lenta-provedor-ou-roteador",
+      "ownerId": "internet-lenta-triagem-origem",
+      "cluster": "internet-wifi",
+      "role": "satelite",
+      "publishedAt": "2026-08-26",
+      "internalState": "PUBLISHED",
+      "contentHash": "ba7d864b73e0953e",
+      "sitemapLastmod": null,
+      "indexNowSentAt": null,
+      "google": {
+        "status": "NO_DATA",
+        "verdict": "NEUTRAL",
+        "coverageState": "URL is unknown to Google",
+        "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+        "indexingState": "INDEXING_STATE_UNSPECIFIED",
+        "ultimoCrawl": null,
+        "canonicalGoogle": null,
+        "canonicalDeclarado": null
+      }
+    },
+    {
+      "wave": "10C",
+      "batch": "2",
+      "lote": "10C/2",
+      "url": "/blog/impressora-offline-como-resolver",
+      "urlAbsoluta": "https://otecnicodeinformatica.com.br/blog/impressora-offline-como-resolver",
+      "ownerId": "impressora-offline",
+      "cluster": "impressoras",
+      "role": "satelite",
+      "publishedAt": "2026-08-26",
+      "internalState": "PUBLISHED",
+      "contentHash": "0f9c121902a02c16",
+      "sitemapLastmod": null,
+      "indexNowSentAt": null,
+      "google": {
+        "status": "NO_DATA",
+        "verdict": "NEUTRAL",
+        "coverageState": "URL is unknown to Google",
+        "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+        "indexingState": "INDEXING_STATE_UNSPECIFIED",
+        "ultimoCrawl": null,
+        "canonicalGoogle": null,
+        "canonicalDeclarado": null
+      }
+    },
+    {
+      "wave": "10C",
+      "batch": "2",
+      "lote": "10C/2",
+      "url": "/blog/fila-de-impressao-travada-spooler-windows",
+      "urlAbsoluta": "https://otecnicodeinformatica.com.br/blog/fila-de-impressao-travada-spooler-windows",
+      "ownerId": "fila-impressao-spooler",
+      "cluster": "impressoras",
+      "role": "satelite",
+      "publishedAt": "2026-08-26",
+      "internalState": "PUBLISHED",
+      "contentHash": "6c79ed86dd7ffd42",
       "sitemapLastmod": null,
       "indexNowSentAt": null,
       "google": {
@@ -185,5 +273,6 @@
         "canonicalDeclarado": null
       }
     }
-  ]
+  ],
+  "alertasNovos": 0
 }

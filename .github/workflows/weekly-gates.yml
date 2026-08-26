@@ -58,6 +58,11 @@ jobs:
         run: npm run check:editorial-cluster
       - name: Onda editorial empresarial (3O)
         run: npm run check:editorial-wave-3o
+      - name: Proveniência e licenciamento dos assets editoriais (10C Infra 2)
+        run: npm run check:editorial-assets
+      - name: Schema determinístico por owner editorial (10C Infra 2)
+        run: npm run check:schema-deterministic
+
       - name: Inventário editorial
         run: npm run report:editorial
 

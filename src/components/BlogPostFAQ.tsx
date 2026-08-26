@@ -675,7 +675,8 @@ export const BlogPostFAQ = ({ category, slug }: { category: string; slug: string
   useJsonLdSlot(SCHEMA_SLOTS.faq, faqSchema, SLOT_PRIORITY.page);
 
   return (
-    <section className="not-prose mt-12">
+    <section className="not-prose mt-12" data-faq-visivel>
+
       <h2 className="font-heading font-bold text-primary text-xl md:text-2xl mb-4">
         Perguntas frequentes
       </h2>
