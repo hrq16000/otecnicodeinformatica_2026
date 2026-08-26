@@ -36,6 +36,9 @@ jobs:
 
       - name: Todos os gates locais (SSR real, bloqueante)
         run: npm run gates:local
+        env:
+          VITE_SITE_DOMAIN: https://otecnicodeinformatica.com.br
+          VITE_SITE_INDEXING_ENABLED: "true"
 
       - name: Diff de SEO local (evidência)
         if: always()
