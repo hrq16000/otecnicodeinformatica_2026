@@ -107,7 +107,10 @@ for (const origem of problemas) {
   const ranqueados = servicos
     .map((path) => ({ path, s: score(tk, tokens(`${meta.get(path).title} ${meta.get(path).description}`)) }))
     .sort((a, b) => b.s - a.s);
-  const servicosRel = ranqueados.filter((r) => r.s > 0).slice(0, 2);
+  const servicosRel = [
+    ...pin.map((path) => ({ path, s: Infinity })),
+    ...ranqueados.filter((r) => r.s > 0 && !pin.includes(r.path)),
+  ].slice(0, 2);
   for (const fallback of FALLBACK_SERVICOS) {
     if (servicosRel.length >= 2) break;
     if (meta.has(fallback) && !servicosRel.some((r) => r.path === fallback)) {
