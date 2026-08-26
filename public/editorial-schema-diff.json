@@ -1,8 +1,458 @@
 {
-  "geradoEm": "2026-08-26T03:55:41.043Z",
-  "buildA": null,
-  "buildB": "f48c5ba",
-  "estado": "UNKNOWN",
-  "motivo": "apenas um build capturado",
-  "linhas": []
+  "geradoEm": "2026-08-26T05:55:02.161Z",
+  "buildA": "f48c5ba",
+  "buildB": "3492135",
+  "builds": [
+    {
+      "buildSha": "3492135",
+      "geradoEm": "2026-08-26T05:55:01.897Z"
+    },
+    {
+      "buildSha": "f48c5ba",
+      "geradoEm": "2026-08-26T03:55:36.678Z"
+    }
+  ],
+  "estado": "CHANGED",
+  "linhas": [
+    {
+      "url": "/blog/bios-corrompida-reset-cmos-atualizacao",
+      "estado": "UNCHANGED",
+      "fingerprintA": "ded76c0d4e7f31be",
+      "fingerprintB": "ded76c0d4e7f31be",
+      "nodes": {
+        "de": 8,
+        "para": 8
+      },
+      "tipos": {
+        "added": [],
+        "removed": []
+      },
+      "faq": {
+        "countA": 5,
+        "countB": 5,
+        "addedQuestions": [],
+        "removedQuestions": [],
+        "changedAnswers": [],
+        "hiddenInSchema": [],
+        "visibleWithoutSchema": []
+      },
+      "breadcrumb": {
+        "countA": 3,
+        "countB": 3,
+        "added": [],
+        "removed": [],
+        "urlsMudadas": [],
+        "ordemAlterada": false,
+        "divergeUi": false
+      },
+      "artigo": {
+        "presenteA": true,
+        "presenteB": true,
+        "mudancas": []
+      },
+      "regressoes": []
+    },
+    {
+      "url": "/blog/botao-power-nao-funciona-jump-start-placa-mae",
+      "estado": "UNCHANGED",
+      "fingerprintA": "138d6b5cd26dc578",
+      "fingerprintB": "138d6b5cd26dc578",
+      "nodes": {
+        "de": 8,
+        "para": 8
+      },
+      "tipos": {
+        "added": [],
+        "removed": []
+      },
+      "faq": {
+        "countA": 5,
+        "countB": 5,
+        "addedQuestions": [],
+        "removedQuestions": [],
+        "changedAnswers": [],
+        "hiddenInSchema": [],
+        "visibleWithoutSchema": []
+      },
+      "breadcrumb": {
+        "countA": 3,
+        "countB": 3,
+        "added": [],
+        "removed": [],
+        "urlsMudadas": [],
+        "ordemAlterada": false,
+        "divergeUi": false
+      },
+      "artigo": {
+        "presenteA": true,
+        "presenteB": true,
+        "mudancas": []
+      },
+      "regressoes": []
+    },
+    {
+      "url": "/blog/codigos-de-erro-tela-azul-windows",
+      "estado": "UNCHANGED",
+      "fingerprintA": "f188a0b68b0de4c8",
+      "fingerprintB": "f188a0b68b0de4c8",
+      "nodes": {
+        "de": 8,
+        "para": 8
+      },
+      "tipos": {
+        "added": [],
+        "removed": []
+      },
+      "faq": {
+        "countA": 4,
+        "countB": 4,
+        "addedQuestions": [],
+        "removedQuestions": [],
+        "changedAnswers": [],
+        "hiddenInSchema": [],
+        "visibleWithoutSchema": []
+      },
+      "breadcrumb": {
+        "countA": 3,
+        "countB": 3,
+        "added": [],
+        "removed": [],
+        "urlsMudadas": [],
+        "ordemAlterada": false,
+        "divergeUi": false
+      },
+      "artigo": {
+        "presenteA": true,
+        "presenteB": true,
+        "mudancas": []
+      },
+      "regressoes": []
+    },
+    {
+      "url": "/blog/computador-sem-som-o-que-verificar",
+      "estado": "UNKNOWN",
+      "motivo": "snapshot ausente em um dos builds"
+    },
+    {
+      "url": "/blog/curto-circuito-placa-mae-como-identificar",
+      "estado": "UNCHANGED",
+      "fingerprintA": "c350da0fd61c4cc1",
+      "fingerprintB": "c350da0fd61c4cc1",
+      "nodes": {
+        "de": 8,
+        "para": 8
+      },
+      "tipos": {
+        "added": [],
+        "removed": []
+      },
+      "faq": {
+        "countA": 5,
+        "countB": 5,
+        "addedQuestions": [],
+        "removedQuestions": [],
+        "changedAnswers": [],
+        "hiddenInSchema": [],
+        "visibleWithoutSchema": []
+      },
+      "breadcrumb": {
+        "countA": 3,
+        "countB": 3,
+        "added": [],
+        "removed": [],
+        "urlsMudadas": [],
+        "ordemAlterada": false,
+        "divergeUi": false
+      },
+      "artigo": {
+        "presenteA": true,
+        "presenteB": true,
+        "mudancas": []
+      },
+      "regressoes": []
+    },
+    {
+      "url": "/blog/disco-com-setores-defeituosos-smart-o-que-fazer",
+      "estado": "UNKNOWN",
+      "motivo": "snapshot ausente em um dos builds"
+    },
+    {
+      "url": "/blog/fila-de-impressao-travada-spooler-windows",
+      "estado": "UNCHANGED",
+      "fingerprintA": "11ae5cacbd39905b",
+      "fingerprintB": "11ae5cacbd39905b",
+      "nodes": {
+        "de": 8,
+        "para": 8
+      },
+      "tipos": {
+        "added": [],
+        "removed": []
+      },
+      "faq": {
+        "countA": 5,
+        "countB": 5,
+        "addedQuestions": [],
+        "removedQuestions": [],
+        "changedAnswers": [],
+        "hiddenInSchema": [],
+        "visibleWithoutSchema": []
+      },
+      "breadcrumb": {
+        "countA": 3,
+        "countB": 3,
+        "added": [],
+        "removed": [],
+        "urlsMudadas": [],
+        "ordemAlterada": false,
+        "divergeUi": false
+      },
+      "artigo": {
+        "presenteA": true,
+        "presenteB": true,
+        "mudancas": []
+      },
+      "regressoes": []
+    },
+    {
+      "url": "/blog/fone-de-ouvido-nao-e-reconhecido-no-pc",
+      "estado": "UNKNOWN",
+      "motivo": "snapshot ausente em um dos builds"
+    },
+    {
+      "url": "/blog/hd-nao-e-reconhecido-na-bios-o-que-fazer",
+      "estado": "UNKNOWN",
+      "motivo": "snapshot ausente em um dos builds"
+    },
+    {
+      "url": "/blog/impressora-offline-como-resolver",
+      "estado": "UNCHANGED",
+      "fingerprintA": "f1926e0e361d5eaa",
+      "fingerprintB": "f1926e0e361d5eaa",
+      "nodes": {
+        "de": 8,
+        "para": 8
+      },
+      "tipos": {
+        "added": [],
+        "removed": []
+      },
+      "faq": {
+        "countA": 5,
+        "countB": 5,
+        "addedQuestions": [],
+        "removedQuestions": [],
+        "changedAnswers": [],
+        "hiddenInSchema": [],
+        "visibleWithoutSchema": []
+      },
+      "breadcrumb": {
+        "countA": 3,
+        "countB": 3,
+        "added": [],
+        "removed": [],
+        "urlsMudadas": [],
+        "ordemAlterada": false,
+        "divergeUi": false
+      },
+      "artigo": {
+        "presenteA": true,
+        "presenteB": true,
+        "mudancas": []
+      },
+      "regressoes": []
+    },
+    {
+      "url": "/blog/internet-lenta-provedor-ou-roteador",
+      "estado": "UNCHANGED",
+      "fingerprintA": "cda1cb4f287c6579",
+      "fingerprintB": "cda1cb4f287c6579",
+      "nodes": {
+        "de": 8,
+        "para": 8
+      },
+      "tipos": {
+        "added": [],
+        "removed": []
+      },
+      "faq": {
+        "countA": 5,
+        "countB": 5,
+        "addedQuestions": [],
+        "removedQuestions": [],
+        "changedAnswers": [],
+        "hiddenInSchema": [],
+        "visibleWithoutSchema": []
+      },
+      "breadcrumb": {
+        "countA": 3,
+        "countB": 3,
+        "added": [],
+        "removed": [],
+        "urlsMudadas": [],
+        "ordemAlterada": false,
+        "divergeUi": false
+      },
+      "artigo": {
+        "presenteA": true,
+        "presenteB": true,
+        "mudancas": []
+      },
+      "regressoes": []
+    },
+    {
+      "url": "/blog/limpar-arquivos-temporarios-windows",
+      "estado": "UNCHANGED",
+      "fingerprintA": "f2e2c2b2ae600f12",
+      "fingerprintB": "f2e2c2b2ae600f12",
+      "nodes": {
+        "de": 8,
+        "para": 8
+      },
+      "tipos": {
+        "added": [],
+        "removed": []
+      },
+      "faq": {
+        "countA": 4,
+        "countB": 4,
+        "addedQuestions": [],
+        "removedQuestions": [],
+        "changedAnswers": [],
+        "hiddenInSchema": [],
+        "visibleWithoutSchema": []
+      },
+      "breadcrumb": {
+        "countA": 3,
+        "countB": 3,
+        "added": [],
+        "removed": [],
+        "urlsMudadas": [],
+        "ordemAlterada": false,
+        "divergeUi": false
+      },
+      "artigo": {
+        "presenteA": true,
+        "presenteB": true,
+        "mudancas": []
+      },
+      "regressoes": []
+    },
+    {
+      "url": "/blog/limpar-cache-do-windows-update-softwaredistribution",
+      "estado": "UNKNOWN",
+      "motivo": "snapshot ausente em um dos builds"
+    },
+    {
+      "url": "/blog/memoria-ram-insuficiente-sintomas",
+      "estado": "UNCHANGED",
+      "fingerprintA": "60ca654664a101b7",
+      "fingerprintB": "60ca654664a101b7",
+      "nodes": {
+        "de": 8,
+        "para": 8
+      },
+      "tipos": {
+        "added": [],
+        "removed": []
+      },
+      "faq": {
+        "countA": 4,
+        "countB": 4,
+        "addedQuestions": [],
+        "removedQuestions": [],
+        "changedAnswers": [],
+        "hiddenInSchema": [],
+        "visibleWithoutSchema": []
+      },
+      "breadcrumb": {
+        "countA": 3,
+        "countB": 3,
+        "added": [],
+        "removed": [],
+        "urlsMudadas": [],
+        "ordemAlterada": false,
+        "divergeUi": false
+      },
+      "artigo": {
+        "presenteA": true,
+        "presenteB": true,
+        "mudancas": []
+      },
+      "regressoes": []
+    },
+    {
+      "url": "/blog/permissoes-de-camera-no-windows",
+      "estado": "UNKNOWN",
+      "motivo": "snapshot ausente em um dos builds"
+    },
+    {
+      "url": "/blog/servico-de-audio-do-windows-nao-esta-em-execucao",
+      "estado": "UNKNOWN",
+      "motivo": "snapshot ausente em um dos builds"
+    },
+    {
+      "url": "/blog/ssd-nvme-nao-aparece-no-gerenciador-de-discos",
+      "estado": "UNKNOWN",
+      "motivo": "snapshot ausente em um dos builds"
+    },
+    {
+      "url": "/blog/testar-memoria-ram-memtest86",
+      "estado": "UNCHANGED",
+      "fingerprintA": "6b9aba683733764f",
+      "fingerprintB": "6b9aba683733764f",
+      "nodes": {
+        "de": 8,
+        "para": 8
+      },
+      "tipos": {
+        "added": [],
+        "removed": []
+      },
+      "faq": {
+        "countA": 4,
+        "countB": 4,
+        "addedQuestions": [],
+        "removedQuestions": [],
+        "changedAnswers": [],
+        "hiddenInSchema": [],
+        "visibleWithoutSchema": []
+      },
+      "breadcrumb": {
+        "countA": 3,
+        "countB": 3,
+        "added": [],
+        "removed": [],
+        "urlsMudadas": [],
+        "ordemAlterada": false,
+        "divergeUi": false
+      },
+      "artigo": {
+        "presenteA": true,
+        "presenteB": true,
+        "mudancas": []
+      },
+      "regressoes": []
+    },
+    {
+      "url": "/blog/webcam-nao-funciona-o-que-verificar",
+      "estado": "UNKNOWN",
+      "motivo": "snapshot ausente em um dos builds"
+    },
+    {
+      "url": "/blog/webcam-usb-nao-e-detectada",
+      "estado": "UNKNOWN",
+      "motivo": "snapshot ausente em um dos builds"
+    },
+    {
+      "url": "/blog/windows-update-nao-funciona-o-que-verificar",
+      "estado": "UNKNOWN",
+      "motivo": "snapshot ausente em um dos builds"
+    },
+    {
+      "url": "/blog/windows-update-travado-desfazendo-alteracoes",
+      "estado": "UNKNOWN",
+      "motivo": "snapshot ausente em um dos builds"
+    }
+  ]
 }
