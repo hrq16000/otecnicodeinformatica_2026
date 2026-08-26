@@ -33,6 +33,7 @@ const SAMPLE_SLUGS = Object.values(SAMPLE);
 
 function readDist(rel: string): string {
   const fp = DIST(rel);
+  if (process.env.TEST_INVENTORY === "1" && !existsSync(fp)) return "";
   expect(existsSync(fp), `arquivo ausente em dist: ${rel} (rode npm run build)`).toBeTruthy();
   return readFileSync(fp, "utf8");
 }

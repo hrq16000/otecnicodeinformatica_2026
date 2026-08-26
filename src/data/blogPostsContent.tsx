@@ -1604,6 +1604,10 @@ docker run -d --name db --network minha-rede postgres
       <>
         <p className="lead">Um computador lento quase nunca tem uma causa única. Costuma ser uma soma de fatores — disco antigo, pouca memória, programas em segundo plano ou o sistema já desgastado pelo tempo. Antes de formatar ou gastar com peças, vale entender o que a lentidão pode indicar e o que você mesmo consegue verificar com segurança.</p>
 
+        <h2>Resposta rápida: observe o gargalo</h2>
+        <p>Abra o Gerenciador de Tarefas enquanto a lentidão acontece. CPU próxima do limite aponta para processamento; memória quase cheia com disco trabalhando muito aponta para paginação; disco em 100% desde o início pode indicar armazenamento lento ou degradado; temperatura alta com queda progressiva sugere redução térmica. Um SSD melhora inicialização e carregamento, mas não corrige RAM insuficiente, malware, superaquecimento ou processador saturado.</p>
+        <table><thead><tr><th>O que você observa</th><th>Hipótese mais forte</th><th>Próximo teste</th></tr></thead><tbody><tr><td>RAM cheia e disco ativo</td><td>Paginação</td><td>Fechar programas e comparar após reiniciar</td></tr><tr><td>Disco lento desde o boot</td><td>Armazenamento</td><td>Verificar saúde e espaço livre</td></tr><tr><td>Fica pior após alguns minutos</td><td>Temperatura</td><td>Observar ventilação e frequência</td></tr></tbody></table>
+
         <h2>O que a lentidão costuma indicar</h2>
         <p>Repare em <strong>quando</strong> a lentidão aparece, porque isso ajuda a separar as possibilidades:</p>
         <ul>
@@ -1761,6 +1765,17 @@ docker run -d --name db --network minha-rede postgres
         <p>Em escritórios e pequenas empresas, tratar apenas a máquina que apresentou sintoma costuma ser insuficiente. Compartilhamentos de arquivos, pendrives que circulam entre estações e credenciais reutilizadas fazem com que uma infecção se espalhe silenciosamente. O sinal de alerta mais comum é a repetição: dois ou três computadores apresentando o mesmo comportamento estranho na mesma semana.</p>
         <p>Nesses casos, a prioridade muda de ordem. Antes de limpar, é importante isolar a estação suspeita da rede, verificar se há backup íntegro e recente e confirmar quem tem acesso administrativo. Arquivos que ficaram inacessíveis ou renomeados exigem cuidado redobrado: continuar usando o equipamento pode reduzir as chances de recuperação. Se o ambiente tem servidor, sistema de gestão ou dados de clientes, a avaliação deve considerar a rede inteira, e não apenas o computador que reclamou primeiro.</p>
 
+        <h2>Triagem sem destruir evidências</h2>
+        <p>Antes de instalar ferramentas ou apagar arquivos, registre o que mudou e quando. Essa sequência reduz o risco de confundir causa com efeito:</p>
+        <ol>
+          <li>Anote mensagens, extensões desconhecidas, nomes de arquivos alterados e horários.</li>
+          <li>Desconecte a máquina se houver criptografia de arquivos, conta invadida ou propagação.</li>
+          <li>Confirme se existe backup íntegro sem conectá-lo ao equipamento suspeito.</li>
+          <li>Troque senhas críticas usando outro dispositivo confiável.</li>
+          <li>Só então faça a varredura e avalie limpeza ou reinstalação.</li>
+        </ol>
+        <p>“Vírus” pode significar adware, extensão abusiva, conta comprometida ou ransomware. Cada cenário exige uma decisão diferente: remover uma extensão não corrige uma senha roubada, e formatar sem preservar evidências pode eliminar pistas importantes.</p>
+
         <div className="bg-accent/10 rounded-xl p-6 my-8">
           <h3 className="text-accent font-bold mb-2">Suspeita de vírus no computador?</h3>
           <p className="text-muted-foreground mb-3">Avaliamos o tipo de infecção e agimos priorizando a preservação dos seus arquivos.</p>
@@ -1831,6 +1846,10 @@ docker run -d --name db --network minha-rede postgres
     content: (
       <>
         <p className="lead">Você aperta o botão do notebook e não acontece nada — ou ele reage, mas não chega ao sistema. "Não liga" pode significar coisas bem diferentes, de um carregador com defeito a uma falha interna. Observar <strong>o comportamento exato</strong> ajuda a entender a situação e evita medidas que podem piorar o quadro.</p>
+
+        <h2>Árvore de decisão segura</h2>
+        <p>Comece pela tomada, carregador e conector, sem abrir a fonte ou fazer curto em pinos. Se não há LED nem ventoinha, investigue alimentação. Se o LED acende, mas não há imagem, o notebook pode estar ligando sem passar pelo POST. Se liga por segundos e desliga, temperatura, bateria, proteção elétrica ou placa entram na investigação. Se aparece logo ou BIOS, a alimentação já venceu a primeira etapa: o próximo foco é vídeo, armazenamento ou Windows.</p>
+        <p><strong>Pare</strong> se houver cheiro de queimado, líquido, aquecimento anormal ou dados importantes sem cópia.</p>
 
         <h2>Identifique o comportamento do notebook</h2>
         <ul>
@@ -2648,6 +2667,17 @@ docker run -d --name db --network minha-rede postgres
         <h2>Teste de restauração</h2>
         <p>Backup que nunca foi testado pode não servir na hora da emergência. De tempos em tempos, abra um arquivo restaurado da cópia para confirmar que ela realmente funciona.</p>
 
+        <h2>Como transformar cópia em rotina confiável</h2>
+        <p>Defina primeiro quanto trabalho pode ser perdido e quanto tempo o negócio ou a família pode ficar sem o computador. Essa resposta orienta a frequência da cópia e se é preciso preservar apenas arquivos ou também configurações e um equipamento substituto.</p>
+        <ul>
+          <li><strong>Liste o insubstituível:</strong> documentos, fotos, projetos, bancos de dados e exportações.</li>
+          <li><strong>Automatize:</strong> uma rotina que depende da memória falha nos períodos mais corridos.</li>
+          <li><strong>Guarde versões:</strong> elas protegem contra exclusões e arquivos corrompidos sincronizados.</li>
+          <li><strong>Restaure de verdade:</strong> abra arquivos de formatos diferentes e registre a data do teste.</li>
+          <li><strong>Separe a mídia:</strong> desconecte o disco externo depois da cópia quando ele não estiver em uso.</li>
+        </ul>
+        <p>Duas pastas em locais diferentes não provam independência: se dependem do mesmo disco, conta ou sincronização, o mesmo erro pode atingir ambas.</p>
+
         <h2>Cuidados de segurança</h2>
         <ul>
           <li>Um disco externo permanentemente conectado também pode ser atingido por ransomware — mantenha ao menos uma cópia desconectada.</li>
@@ -2745,6 +2775,10 @@ docker run -d --name db --network minha-rede postgres
     content: (
       <>
         <p className="lead">Todo computador esquenta — o problema é quando o calor deixa de ser normal e vira queda de desempenho, desligamento repentino ou risco para os componentes. Este guia ajuda a separar aquecimento esperado de superaquecimento real, mostra o que dá para observar em casa com segurança e indica o momento em que insistir no uso sai mais caro do que parar.</p>
+
+        <h2>O teste que separa carga normal de falha térmica</h2>
+        <p>Observe o equipamento em dois momentos: cinco minutos parado e depois durante a tarefa que provoca o sintoma. Se a temperatura e a ventoinha sobem apenas em jogo, renderização ou atualização, a carga explica parte do comportamento. Se já há calor excessivo, lentidão ou ventoinha anormal em repouso, procure primeiro processo travado, entrada de ar bloqueada e falha de refrigeração.</p>
+        <table><thead><tr><th>O que acontece</th><th>Hipótese inicial</th><th>Próximo passo seguro</th></tr></thead><tbody><tr><td>Esquenta só sob carga</td><td>Fluxo insuficiente ou limite térmico atingido</td><td>Reduzir carga e observar temperatura/ruído</td></tr><tr><td>Esquenta parado</td><td>Processo em segundo plano ou ventilação obstruída</td><td>Verificar uso de CPU e liberar grades</td></tr><tr><td>Desliga sem aviso</td><td>Proteção térmica ou energia instável</td><td>Parar testes e investigar antes de ligar novamente</td></tr></tbody></table>
 
         <h2>Resposta curta</h2>
         <p>Aquecimento com ventoinha acelerada durante tarefas pesadas é esperado. Preocupe-se quando o calor aparece em tarefas leves, quando o desempenho cai poucos minutos depois de ligar, quando o equipamento desliga sozinho ou quando surge cheiro, ruído estranho, bateria deformada ou calor que impede o toque. Nesses casos, o caminho é parar o uso e pedir avaliação — não é ajuste de configuração.</p>
@@ -3913,6 +3947,10 @@ docker run -d --name db --network minha-rede postgres
     content: (
       <>
         <p className="lead">A pasta térmica é uma camada muito fina de composto entre a superfície do processador e a base do dissipador. Ela não esfria nada sozinha: apenas preenche as imperfeições microscópicas das duas peças para que o calor atravesse por contato em vez de por ar. Quando resseca, esse contato piora e a temperatura sobe mesmo com a refrigeração limpa.</p>
+
+        <h2>Antes de trocar: confirme se o composto é o gargalo</h2>
+        <p>A troca faz sentido quando há evidência de transferência térmica ruim, mas não substitui limpeza, ventilação ou diagnóstico de software. Compare o momento em que o calor aparece, a força do ar na saída e o uso do processador. Saída de ar fraca aponta para obstrução; uso alto em repouso aponta para processo; desligamento instantâneo exige verificar cooler, alimentação e placa antes de aplicar qualquer composto.</p>
+        <p>Não abra o equipamento se a bateria estiver estufada, houver cheiro de queimado, líquido, parafuso danificado ou perda de garantia relevante. Desligue, retire o carregador e preserve fotos do estado original. A quantidade correta e o padrão de aperto dependem do conjunto: excesso pode escorrer, e pressão desigual cria contato pior.</p>
 
         <h2>O que a troca resolve — e o que não resolve</h2>
         <p>Trocar o composto recupera a transferência de calor no ponto de contato. É a resposta certa quando o conjunto está limpo, a ventoinha gira normalmente e ainda assim a máquina aquece rápido sob carga.</p>
@@ -6077,6 +6115,10 @@ Ideal: 1000VA / 600W (para crescimento)`}</code></pre>
       <>
         <p className="lead">Quando um disco para de responder, a decisão tomada nos primeiros minutos costuma pesar mais do que qualquer ferramenta usada depois. Este guia explica como identificar o tipo de falha, o que evitar antes de procurar ajuda e como um serviço de recuperação é conduzido — sem promessa de resultado, porque recuperação de dados não tem garantia de sucesso.</p>
 
+        <h2>HD e SSD não devem ser tratados do mesmo jeito</h2>
+        <p>Em HD, clique, raspagem, motor que não parte ou desaparecimento intermitente indicam risco mecânico: desligue e não repita tentativas. Em SSD, não há cabeças ou pratos; o problema pode estar no controlador, na alimentação, na tabela ou no desgaste das células. Se o SSD ainda é reconhecido, copie os arquivos prioritários para outro destino sem instalar programas nele. Se ficou invisível, não inicialize nem formate para “testar”.</p>
+        <table><thead><tr><th>Sinal</th><th>Interpretação provável</th><th>Evite</th></tr></thead><tbody><tr><td>HD clica ou raspa</td><td>Falha mecânica</td><td>Ligar repetidamente</td></tr><tr><td>Disco reconhece e trava na cópia</td><td>Setores instáveis ou leitura degradada</td><td>Rodar reparo no original</td></tr><tr><td>SSD some sem ruído</td><td>Controlador, firmware ou alimentação</td><td>Inicializar, formatar ou atualizar firmware sem cópia</td></tr></tbody></table>
+
         <h2>Primeiro: pare de usar o disco</h2>
         <p>Cada tentativa de ligar um disco que já apresenta falha pode transformar um problema recuperável em perda definitiva. Se o disco faz ruído repetitivo, some do sistema durante o uso ou ficou lento a ponto de travar o computador inteiro, o passo correto é desligar e não repetir tentativas de boot.</p>
         <p>Também evite formatar "para ver se resolve", instalar sistema por cima ou rodar utilitários de correção de disco. Ferramentas de reparo trabalham reescrevendo estruturas — exatamente o que se quer preservar quando o objetivo é recuperar arquivos.</p>
@@ -6440,6 +6482,10 @@ Ideal: 1000VA / 600W (para crescimento)`}</code></pre>
     content: (
       <>
         <p className="lead">Realizar <strong>resolver tela azul do windows (bsod)</strong> exige procedimento técnico, ferramentas adequadas e atenção a detalhes que separam o trabalho amador do profissional. Neste guia, você vai aprender o passo a passo real usado em laboratórios de assistência técnica em Curitiba.</p>
+
+        <h2>O que o código realmente diz</h2>
+        <p>BSOD é uma interrupção deliberada: o Windows para para evitar continuar executando com estado inconsistente. O stop code é uma categoria da falha, não uma prova de que a peça citada morreu. Um erro isolado depois de uma atualização pode ser software; códigos diferentes que se repetem, arquivos corrompidos e travamentos sob carga aumentam a suspeita de RAM, armazenamento, energia ou temperatura. Registre o código, o driver citado, o horário e o que mudou antes do primeiro erro.</p>
+        <table><thead><tr><th>Padrão</th><th>Leitura inicial</th><th>Verificação</th></tr></thead><tbody><tr><td>Um código após atualização</td><td>Driver ou sistema</td><td>Modo de segurança e reversão controlada</td></tr><tr><td>Códigos variados</td><td>Memória, energia ou hardware</td><td>MemTest e estabilidade térmica</td></tr><tr><td>Erro sempre no mesmo arquivo</td><td>Componente/driver específico</td><td>Atualizar apenas pela fonte oficial</td></tr></tbody></table>
 
         <h2>Por Que o Procedimento Importa</h2>
         <p>Trabalhar em hardware sem método é a principal causa de dano permanente em equipamentos. Pequenos descuidos — descarga eletrostática, parafuso errado, conector mal encaixado — podem transformar um serviço simples em um problema irreversível. Por isso, todo técnico profissional segue um <strong>checklist documentado</strong> antes, durante e depois de cada intervenção.</p>
@@ -10586,6 +10632,16 @@ crontab -e
         <p>Cada solução resolve um tipo diferente de problema, e é comum comprar a errada. O repetidor amplia a área de cobertura reaproveitando o sinal existente — só ajuda se estiver em um ponto onde o sinal ainda chega bem, e normalmente reduz a velocidade disponível. O sistema mesh usa vários pontos que se comunicam entre si e mantêm o mesmo nome de rede, o que evita a troca manual entre redes ao andar pela casa. Já o cabo de rede continua sendo a opção mais estável para computador fixo, videogame, TV e escritório em cômodo distante.</p>
         <p>Uma combinação frequente e eficiente é levar cabo até o cômodo problemático e colocar ali o segundo ponto de acesso: o sinal chega íntegro e a cobertura nasce forte no destino, em vez de ser reciclada pela metade. Antes de comprar qualquer equipamento, vale confirmar se a velocidade contratada chega ao roteador por cabo — se o problema estiver na entrada ou no equipamento da operadora, nenhum repetidor resolve.</p>
 
+        <h2>Teste em três pontos: provedor, rede local ou dispositivo?</h2>
+        <p>Faça os testes na mesma janela de tempo e anote o resultado. O objetivo não é apenas medir megabits, mas descobrir em qual trecho a falha aparece:</p>
+        <ol>
+          <li><strong>Por cabo no roteador:</strong> se já falha ali, investigue modem, cabo de entrada e provedor.</li>
+          <li><strong>Perto do roteador no Wi-Fi:</strong> se funciona perto e falha longe, investigue cobertura, obstáculos e interferência.</li>
+          <li><strong>Em dois dispositivos:</strong> se apenas um falha, o suspeito é o adaptador, driver ou configuração desse aparelho.</li>
+          <li><strong>No mesmo horário:</strong> todos caindo juntos indicam infraestrutura; um cômodo indica cobertura; um equipamento indica dispositivo.</li>
+        </ol>
+        <p>Repita a comparação por cabo e por Wi-Fi em horários diferentes. Latência alta e perda de pacotes durante chamadas podem explicar uma experiência ruim mesmo quando a velocidade máxima parece normal.</p>
+
         <div className="bg-accent/10 rounded-xl p-6 my-8">
           <h3 className="text-accent font-bold mb-2">Wi-Fi caindo ou com pontos cegos?</h3>
           <p className="text-muted-foreground mb-3">Analisamos a cobertura no local e indicamos o que resolve de fato, sem trocar equipamento à toa.</p>
@@ -12014,6 +12070,15 @@ crontab -e
         <p>Se nenhum dispositivo da lista responde com um carregador válido, o firmware não tem para onde ir. Em vez de mostrar uma tela preta, ele abre o Setup. É por isso que o sintoma é sempre o mesmo — "entra direto na BIOS" — para causas completamente diferentes.</p>
         <p>Uma analogia ajuda: a BIOS/UEFI é o porteiro do prédio. Ela não guarda o seu sistema; ela só sabe em qual porta bater. Quando ninguém atende em nenhuma porta da lista, o porteiro volta para a portaria e fica te olhando.</p>
 
+        <h2>Como interpretar o resultado sem arriscar os dados</h2>
+        <p>O ponto decisivo é saber se o disco aparece no Setup. Se não aparece, priorize conexão, alimentação e preservação dos arquivos. Se aparece como hardware, mas não surge o <strong>Windows Boot Manager</strong>, investigue UEFI, GPT e o carregador. Se a entrada existe e o computador ainda retorna à BIOS, registre a ordem de boot e só então teste bateria CMOS, teclado e Secure Boot.</p>
+        <ul>
+          <li><strong>Não detectado:</strong> não formate e não inicialize o disco antes de avaliar falha física.</li>
+          <li><strong>Detectado sem carregador:</strong> não troque o SSD automaticamente; o sistema pode estar íntegro e o boot apenas incompatível.</li>
+          <li><strong>Detectado com Windows Boot Manager:</strong> confira a prioridade e desconecte mídias USB antes de alterar opções avançadas.</li>
+          <li><strong>Falha intermitente:</strong> anote se desaparece após aquecer ou mover o equipamento; isso muda a suspeita para conexão ou armazenamento.</li>
+        </ul>
+
         <h2>Diagnóstico rápido: o triângulo do boot</h2>
         <p>Antes de mexer em qualquer configuração, responda três perguntas nesta ordem. Elas separam problema físico de problema de configuração e evitam que você mude opções sem necessidade.</p>
         <ol>
@@ -12128,6 +12193,7 @@ crontab -e
 
         <h2>Resposta curta</h2>
         <p>Se o disco aparece na lista de dispositivos do Setup, o hardware está vivo e o que falhou é o <strong>carregador de inicialização</strong>: ordem de prioridade errada, partição EFI ausente ou danificada, ou registro de inicialização (BCD) corrompido. Os três casos se resolvem sem formatar, com uma mídia de instalação do Windows.</p>
+        <p>O ponto decisivo é separar detecção de inicialização: se o SSD não aparece na BIOS, o problema acontece antes do boot e merece o diagnóstico de <Link to="/blog/ssd-nvme-nao-aparece-no-gerenciador-de-discos" className="text-accent">SSD/NVMe não reconhecido</Link>. Se aparece, mas não há Windows Boot Manager, investigue EFI/BCD. Se o logo do Windows surge e depois falha, a causa já está em sistema, driver ou atualização — não no cabo de vídeo.</p>
 
         <h2>O que está quebrado, exatamente</h2>
         <p>Um disco com Windows guarda dois conjuntos de coisas: os seus arquivos e as instruções de partida. Em máquinas modernas (UEFI + GPT), essas instruções ficam numa partição pequena formatada em FAT32, a <strong>partição de sistema EFI</strong> (ESP), com cerca de 100 MB. Em máquinas antigas (Legacy + MBR), ficam no primeiro setor do disco e numa partição reservada.</p>
@@ -12486,6 +12552,10 @@ bcdboot C:\\Windows /s S: /f UEFI`}</code></pre>
       <>
         <p className="lead">Memória com defeito é uma das causas mais frustrantes de instabilidade: o computador funciona bem por horas e depois trava, corrompe um arquivo ou mostra uma tela azul diferente da anterior. Testar a memória custa tempo e não custa peça — por isso vem antes de comprar qualquer coisa.</p>
 
+        <h2>Falta de memória não é o mesmo que memória defeituosa</h2>
+        <p>RAM ocupada faz o Windows paginar dados no armazenamento, aumentando a latência e deixando o sistema lento. Isso não significa que o módulo esteja quebrado. Defeito de RAM costuma aparecer como travamentos aleatórios, arquivos corrompidos ou códigos variados de tela azul. Se o erro desaparece ao remover um módulo ou trocar o slot, a hipótese muda para módulo, encaixe ou placa.</p>
+        <p>Perfis XMP/EXPO, mistura de módulos e frequência agressiva também podem produzir instabilidade sem dano físico. Desative o perfil temporariamente e repita o teste antes de condenar a memória.</p>
+
         <h2>Resposta curta</h2>
         <p>Crie um pendrive inicializável com o <strong>Memtest86+</strong>, inicie o computador por ele e deixe rodar pelo menos <strong>uma passagem completa</strong> — idealmente quatro, ou a noite inteira. <strong>Um único erro já é defeito.</strong> Não existe "erro tolerável" em memória.</p>
 
@@ -12842,6 +12912,7 @@ bcdboot C:\\Windows /s S: /f UEFI`}</code></pre>
 
         <h2>Resposta curta</h2>
         <p>O status offline significa que o Windows tentou falar com a impressora e não obteve resposta. Em rede, a causa mais comum é <strong>troca do endereço IP</strong> do aparelho; por cabo, é porta, cabo ou serviço de impressão parado. Verifique nessa ordem: aparelho aceso e sem erro no painel, endereço atual, e só depois o software.</p>
+        <p>Faça um teste que não dependa do computador: imprima a página de diagnóstico pelo painel da própria impressora. Se ela imprime, motor, tinta/toner e mecanismo básico ficam menos suspeitos; concentre-se em endereço, porta, driver e fila. Se nem a página interna sai, não comece pelo spooler: o problema está no aparelho, consumível ou mecanismo.</p>
 
         <h2>Por que o endereço se perde</h2>
         <p>O roteador entrega endereços por empréstimo e com prazo. Quando a impressora fica desligada além do prazo, ou quando falta energia, ela pode voltar com outro endereço. O Windows continua chamando o endereço antigo, não encontra ninguém e marca a fila como offline. É o mesmo motivo pelo qual a impressora "some" depois de um fim de semana.</p>
@@ -13019,6 +13090,10 @@ bcdboot C:\\Windows /s S: /f UEFI`}</code></pre>
       <>
         <p className="lead">Quando o disco é listado no Setup mas não aparece em "Este Computador", o hardware já está resolvido. Falta apenas o passo que o Windows não faz sozinho: inicializar, particionar e atribuir uma letra.</p>
 
+        <h2>Antes de inicializar: descubra se há dados</h2>
+        <p>Disco novo e vazio pode ser inicializado e particionado. Disco que já tinha arquivos não deve ser tratado como novo só porque não aparece no Explorador. Se estiver RAW, desconectando, com SMART ruim ou contendo dados importantes, pare: formatar, inicializar ou usar <code>diskpart clean</code> pode tornar a recuperação mais difícil. Primeiro reduza escritas, preserve a mídia e avalie imagem ou recuperação profissional.</p>
+        <table><thead><tr><th>Onde aparece</th><th>O que significa</th><th>Conduta</th></tr></thead><tbody><tr><td>Não aparece na BIOS</td><td>Camada física/interface</td><td>Testar conexão, slot e alimentação</td></tr><tr><td>Aparece na BIOS, não no Windows</td><td>Controlador/driver/gerenciamento</td><td>Verificar Gerenciamento de Disco</td></tr><tr><td>RAW ou SMART ruim</td><td>Risco lógico ou físico</td><td>Preservar dados antes de reparar</td></tr></tbody></table>
+
         <h2>Resposta curta</h2>
         <p>O Explorador de Arquivos só mostra volumes formatados e com letra. Disco de fábrica chega vazio, sem tabela de partição — por isso ele existe para a BIOS e para o Gerenciamento de Disco, mas não para a área de trabalho. O procedimento leva poucos minutos e não exige programa extra.</p>
 
@@ -13145,6 +13220,7 @@ bcdboot C:\\Windows /s S: /f UEFI`}</code></pre>
 
         <h2>Resposta curta</h2>
         <p>Verifique nesta ordem: <strong>dispositivo de saída selecionado</strong>, <strong>volume por aplicativo</strong>, <strong>conector físico</strong>, <strong>serviço de áudio</strong> e, por último, <strong>driver</strong>. Pular direto para reinstalar driver é o erro mais comum — e o que menos resolve.</p>
+        <p>O dispositivo existir no Windows não prova que o alto-falante funciona: significa apenas que uma camada de identificação respondeu. Se o medidor de volume se move, o aplicativo e o mixer estão produzindo áudio; se um fone funciona e os alto-falantes não, a investigação passa para saída física, amplificação ou alto-falante. Se nem o medidor se move, volte para aplicativo, mixer, serviço e driver.</p>
 
         <h2>Sequência de verificação</h2>
         <ol>
@@ -13519,6 +13595,18 @@ bcdboot C:\\Windows /s S: /f UEFI`}</code></pre>
     content: (
       <>
         <p className="lead">"Windows Update não funciona" descreve pelo menos seis falhas diferentes. Uma busca infinita por atualizações não tem nada a ver com download parado em 0%, que por sua vez não tem nada a ver com instalação que reverte na reinicialização. O primeiro passo é descobrir o estágio.</p>
+        <h2>O estágio da falha define o próximo teste</h2>
+        <p>Se não encontra atualização, investigue conexão, data/hora e serviços. Se encontra mas não baixa, observe espaço livre e cache. Se baixa e falha na instalação, a suspeita passa para componentes e integridade do armazenamento. Se instala e desfaz após reiniciar, preserve os arquivos e siga o diagnóstico de <Link to="/blog/windows-update-travado-desfazendo-alteracoes" className="text-accent">reversão do Windows Update</Link>.</p>
+        <table><thead><tr><th>Sintoma</th><th>Camada provável</th><th>Interpretação</th></tr></thead><tbody><tr><td>Não encontra</td><td>Serviço, conexão ou política</td><td>Ainda não houve instalação</td></tr><tr><td>Download em 0%</td><td>Rede, BITS ou cache</td><td>O pacote não chegou à validação</td></tr><tr><td>Desfaz após reiniciar</td><td>Servicing, driver ou espaço</td><td>O sistema fez rollback para se proteger</td></tr></tbody></table>
+
+        <h2>O teste que separa causa de sintoma</h2>
+        <p>Anote o código e o momento exato da falha: procurar, baixar, instalar ou reiniciar. Compare espaço livre, data e hora, conexão e se o erro ocorre em uma atualização específica ou em todas. Isso evita apagar o cache quando a causa real é falta de espaço, serviço parado ou corrupção de arquivos do sistema.</p>
+        <ul>
+          <li><strong>Antes do download:</strong> verifique rede, data/hora, serviços e políticas do equipamento.</li>
+          <li><strong>Download parado:</strong> compare outra rede e espaço livre antes de limpar componentes.</li>
+          <li><strong>Instalação falha:</strong> registre o código e investigue driver ou arquivo de sistema.</li>
+          <li><strong>Reverte após reiniciar:</strong> preserve os logs e evite desligamentos repetidos.</li>
+        </ul>
 
         <h2>Resposta curta</h2>
         <p>Antes de qualquer comando, confira o básico: conexão estável, data e hora corretas, espaço livre em disco, reinicialização pendente e atualizações pausadas. Depois identifique o estágio da falha — verificação, download, preparação, instalação ou reinicialização. Só então avance para diagnóstico do Windows, serviços, cache e reparo de componentes, nessa ordem. Apagar pastas do sistema não é primeiro passo.</p>
