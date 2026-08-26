@@ -223,7 +223,9 @@ if (!DRY) {
 }
 
 // ── Cópia pública sanitizada (painel /admin/editorial-ondas · Infra 3).
-if (!DRY) {
+// Escrita também em dry-run: o painel precisa enxergar a fila (READY /
+// PENDING_DEPLOY) antes de qualquer envio real. Chave/keyLocation nunca saem.
+{
   const rotas = { ...anterior.rotas } as Record<string, Registro>;
   for (const l of linhas) rotas[l.url] = l;
   const porUrl = new Map(EDITORIAL_WAVES.map((e) => [e.url, e]));
