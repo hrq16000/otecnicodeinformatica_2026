@@ -133,6 +133,9 @@ cobramos execução que não tenha sido aprovada.
 - [Memória RAM insuficiente: sintomas, como confirmar e quando fazer upgrade](https://otecnicodeinformatica.com.br/blog/memoria-ram-insuficiente-sintomas)
 - [Códigos de erro da tela azul: como ler e o que cada um indica](https://otecnicodeinformatica.com.br/blog/codigos-de-erro-tela-azul-windows)
 - [Como testar a memória RAM com Memtest86+ (passo a passo)](https://otecnicodeinformatica.com.br/blog/testar-memoria-ram-memtest86)
+- [Botão power não funciona: como ligar o PC pelo conector da placa-mãe](https://otecnicodeinformatica.com.br/blog/botao-power-nao-funciona-jump-start-placa-mae)
+- [Curto-circuito na placa-mãe: como identificar e isolar o problema](https://otecnicodeinformatica.com.br/blog/curto-circuito-placa-mae-como-identificar)
+- [BIOS corrompida: reset de CMOS e recuperação de firmware](https://otecnicodeinformatica.com.br/blog/bios-corrompida-reset-cmos-atualizacao)
 
 ## Páginas institucionais e de política
 
