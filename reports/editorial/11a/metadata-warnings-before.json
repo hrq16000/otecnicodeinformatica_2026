@@ -1,0 +1,7 @@
+{
+  "source": "public/seo-audit.json",
+  "originalCount": 47,
+  "status": "BLOCKED_EXTERNAL",
+  "note": "Contagem observada no artefato publicado; reproducao do script exige checkout executavel.",
+  "items": []
+}
