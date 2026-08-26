@@ -1,8 +1,8 @@
 {
-  "geradoEm": "2026-08-26T04:13:02.190Z",
-  "total": 16,
+  "geradoEm": "2026-08-26T04:37:34.855Z",
+  "total": 22,
   "pass": 16,
-  "warn": 0,
+  "warn": 6,
   "fail": 0,
   "semLicenca": 0,
   "semAtribuicao": 0,
@@ -616,6 +616,240 @@
       "falhas": [],
       "avisos": [],
       "resultado": "PASS"
+    },
+    {
+      "owner": "webcam-nao-funciona",
+      "wave": "10C",
+      "batch": "4",
+      "lote": "10C/4",
+      "slug": "webcam-nao-funciona-o-que-verificar",
+      "localPath": "/blog/webcam-nao-funciona-o-que-verificar.jpg",
+      "originalUrl": "https://commons.wikimedia.org/wiki/File:Webcam_On_Laptop.JPG",
+      "platform": "Wikimedia Commons",
+      "title": "Câmera integrada na moldura superior da tela de um notebook",
+      "author": "Sushiflinger",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "attributionRequired": true,
+      "attributionText": "Foto: Sushiflinger (Wikimedia Commons), CC BY-SA 3.0 — https://commons.wikimedia.org/wiki/File:Webcam_On_Laptop.JPG",
+      "sourceType": "WIKIMEDIA",
+      "width": 1200,
+      "height": 630,
+      "fileHash": "sha256:cca6880f07f2c17523c441a79d397ef8",
+      "formats": [
+        "/blog/webcam-nao-funciona-o-que-verificar.jpg"
+      ],
+      "checks": {
+        "fileExists": true,
+        "sourceKnown": true,
+        "licenseKnown": true,
+        "attributionComplete": true,
+        "originalUrl": true,
+        "webp": false,
+        "avif": false,
+        "antiAi": true
+      },
+      "falhas": [],
+      "avisos": [
+        "webp",
+        "avif"
+      ],
+      "resultado": "WARN"
+    },
+    {
+      "owner": "permissoes-camera-windows",
+      "wave": "10C",
+      "batch": "4",
+      "lote": "10C/4",
+      "slug": "permissoes-de-camera-no-windows",
+      "localPath": "/blog/permissoes-de-camera-no-windows.jpg",
+      "originalUrl": "https://commons.wikimedia.org/wiki/File:Tape_over_laptop_webcam.jpg",
+      "platform": "Wikimedia Commons",
+      "title": "Webcam de notebook coberta por fita adesiva, exemplo de bloqueio físico da câmera",
+      "author": "Santeri Viinamäki",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "attributionRequired": true,
+      "attributionText": "Foto: Santeri Viinamäki (Wikimedia Commons), CC BY-SA 4.0 — https://commons.wikimedia.org/wiki/File:Tape_over_laptop_webcam.jpg",
+      "sourceType": "WIKIMEDIA",
+      "width": 1200,
+      "height": 630,
+      "fileHash": "sha256:9db426a18c0d164d17bdbfadfd986dee",
+      "formats": [
+        "/blog/permissoes-de-camera-no-windows.jpg"
+      ],
+      "checks": {
+        "fileExists": true,
+        "sourceKnown": true,
+        "licenseKnown": true,
+        "attributionComplete": true,
+        "originalUrl": true,
+        "webp": false,
+        "avif": false,
+        "antiAi": true
+      },
+      "falhas": [],
+      "avisos": [
+        "webp",
+        "avif"
+      ],
+      "resultado": "WARN"
+    },
+    {
+      "owner": "webcam-usb-nao-detectada",
+      "wave": "10C",
+      "batch": "4",
+      "lote": "10C/4",
+      "slug": "webcam-usb-nao-e-detectada",
+      "localPath": "/blog/webcam-usb-nao-e-detectada.jpg",
+      "originalUrl": "https://commons.wikimedia.org/wiki/File:USB_webcam_for_PC.jpg",
+      "platform": "Wikimedia Commons",
+      "title": "Webcam USB externa apoiada sobre um monitor de computador",
+      "author": "WrS.tm.pl",
+      "license": "CC0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attributionRequired": false,
+      "attributionText": "Foto: WrS.tm.pl (Wikimedia Commons), CC0 — https://commons.wikimedia.org/wiki/File:USB_webcam_for_PC.jpg",
+      "sourceType": "WIKIMEDIA",
+      "width": 1200,
+      "height": 630,
+      "fileHash": "sha256:5340e52dc8d252af767798d5b41d3f1a",
+      "formats": [
+        "/blog/webcam-usb-nao-e-detectada.jpg"
+      ],
+      "checks": {
+        "fileExists": true,
+        "sourceKnown": true,
+        "licenseKnown": true,
+        "attributionComplete": true,
+        "originalUrl": true,
+        "webp": false,
+        "avif": false,
+        "antiAi": true
+      },
+      "falhas": [],
+      "avisos": [
+        "webp",
+        "avif"
+      ],
+      "resultado": "WARN"
+    },
+    {
+      "owner": "windows-update-nao-funciona",
+      "wave": "10C",
+      "batch": "4",
+      "lote": "10C/4",
+      "slug": "windows-update-nao-funciona-o-que-verificar",
+      "localPath": "/blog/windows-update-nao-funciona-o-que-verificar.jpg",
+      "originalUrl": "https://commons.wikimedia.org/wiki/File:Cc0-windows-update_dion_dresschers.png",
+      "platform": "Wikimedia Commons",
+      "title": "Tela do Windows Update exibindo o progresso de uma atualização",
+      "author": "Dion Dresschers",
+      "license": "Public Domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "attributionRequired": false,
+      "attributionText": "Foto: Dion Dresschers (Wikimedia Commons), domínio público — https://commons.wikimedia.org/wiki/File:Cc0-windows-update_dion_dresschers.png",
+      "sourceType": "WIKIMEDIA",
+      "width": 1200,
+      "height": 630,
+      "fileHash": "sha256:8c0e8c5d0d925ca8efeca7dd67b82d9d",
+      "formats": [
+        "/blog/windows-update-nao-funciona-o-que-verificar.jpg"
+      ],
+      "checks": {
+        "fileExists": true,
+        "sourceKnown": true,
+        "licenseKnown": true,
+        "attributionComplete": true,
+        "originalUrl": true,
+        "webp": false,
+        "avif": false,
+        "antiAi": true
+      },
+      "falhas": [],
+      "avisos": [
+        "webp",
+        "avif"
+      ],
+      "resultado": "WARN"
+    },
+    {
+      "owner": "cache-windows-update",
+      "wave": "10C",
+      "batch": "4",
+      "lote": "10C/4",
+      "slug": "limpar-cache-do-windows-update-softwaredistribution",
+      "localPath": "/blog/limpar-cache-do-windows-update-softwaredistribution.jpg",
+      "originalUrl": "https://commons.wikimedia.org/wiki/File:Windows_10-11_update_screen_notice.png",
+      "platform": "Wikimedia Commons",
+      "title": "Aviso de atualização do Windows exibido na tela de um computador",
+      "author": "Wikipedian5122024",
+      "license": "Public Domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "attributionRequired": false,
+      "attributionText": "Foto: Wikipedian5122024 (Wikimedia Commons), domínio público — https://commons.wikimedia.org/wiki/File:Windows_10-11_update_screen_notice.png",
+      "sourceType": "WIKIMEDIA",
+      "width": 1200,
+      "height": 630,
+      "fileHash": "sha256:c34ea3e689544de16083f4d9a961a874",
+      "formats": [
+        "/blog/limpar-cache-do-windows-update-softwaredistribution.jpg"
+      ],
+      "checks": {
+        "fileExists": true,
+        "sourceKnown": true,
+        "licenseKnown": true,
+        "attributionComplete": true,
+        "originalUrl": true,
+        "webp": false,
+        "avif": false,
+        "antiAi": true
+      },
+      "falhas": [],
+      "avisos": [
+        "webp",
+        "avif"
+      ],
+      "resultado": "WARN"
+    },
+    {
+      "owner": "update-travado-reversao",
+      "wave": "10C",
+      "batch": "4",
+      "lote": "10C/4",
+      "slug": "windows-update-travado-desfazendo-alteracoes",
+      "localPath": "/blog/windows-update-travado-desfazendo-alteracoes.jpg",
+      "originalUrl": "https://commons.wikimedia.org/wiki/File:Windows_Update_%E2%80%93_VirtualBox_Windows_11_24H2_(Version_10.0.26100.1742)_04_02_2025_18_22_13crop.png",
+      "platform": "Wikimedia Commons",
+      "title": "Tela de atualização do Windows 11 durante o processo de instalação",
+      "author": "PantheraLeo1359531",
+      "license": "Public Domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "attributionRequired": false,
+      "attributionText": "Foto: PantheraLeo1359531 (Wikimedia Commons), domínio público — https://commons.wikimedia.org/wiki/File:Windows_Update_%E2%80%93_VirtualBox_Windows_11_24H2_(Version_10.0.26100.1742)_04_02_2025_18_22_13crop.png",
+      "sourceType": "WIKIMEDIA",
+      "width": 1200,
+      "height": 630,
+      "fileHash": "sha256:4427e562d5052c45f0034198dd28ea76",
+      "formats": [
+        "/blog/windows-update-travado-desfazendo-alteracoes.jpg"
+      ],
+      "checks": {
+        "fileExists": true,
+        "sourceKnown": true,
+        "licenseKnown": true,
+        "attributionComplete": true,
+        "originalUrl": true,
+        "webp": false,
+        "avif": false,
+        "antiAi": true
+      },
+      "falhas": [],
+      "avisos": [
+        "webp",
+        "avif"
+      ],
+      "resultado": "WARN"
     }
   ]
 }
