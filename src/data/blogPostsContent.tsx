@@ -12046,6 +12046,15 @@ crontab -e
         <p>Se nenhum dispositivo da lista responde com um carregador válido, o firmware não tem para onde ir. Em vez de mostrar uma tela preta, ele abre o Setup. É por isso que o sintoma é sempre o mesmo — "entra direto na BIOS" — para causas completamente diferentes.</p>
         <p>Uma analogia ajuda: a BIOS/UEFI é o porteiro do prédio. Ela não guarda o seu sistema; ela só sabe em qual porta bater. Quando ninguém atende em nenhuma porta da lista, o porteiro volta para a portaria e fica te olhando.</p>
 
+        <h2>Como interpretar o resultado sem arriscar os dados</h2>
+        <p>O ponto decisivo é saber se o disco aparece no Setup. Se não aparece, priorize conexão, alimentação e preservação dos arquivos. Se aparece como hardware, mas não surge o <strong>Windows Boot Manager</strong>, investigue UEFI, GPT e o carregador. Se a entrada existe e o computador ainda retorna à BIOS, registre a ordem de boot e só então teste bateria CMOS, teclado e Secure Boot.</p>
+        <ul>
+          <li><strong>Não detectado:</strong> não formate e não inicialize o disco antes de avaliar falha física.</li>
+          <li><strong>Detectado sem carregador:</strong> não troque o SSD automaticamente; o sistema pode estar íntegro e o boot apenas incompatível.</li>
+          <li><strong>Detectado com Windows Boot Manager:</strong> confira a prioridade e desconecte mídias USB antes de alterar opções avançadas.</li>
+          <li><strong>Falha intermitente:</strong> anote se desaparece após aquecer ou mover o equipamento; isso muda a suspeita para conexão ou armazenamento.</li>
+        </ul>
+
         <h2>Diagnóstico rápido: o triângulo do boot</h2>
         <p>Antes de mexer em qualquer configuração, responda três perguntas nesta ordem. Elas separam problema físico de problema de configuração e evitam que você mude opções sem necessidade.</p>
         <ol>
@@ -13551,6 +13560,15 @@ bcdboot C:\\Windows /s S: /f UEFI`}</code></pre>
     content: (
       <>
         <p className="lead">"Windows Update não funciona" descreve pelo menos seis falhas diferentes. Uma busca infinita por atualizações não tem nada a ver com download parado em 0%, que por sua vez não tem nada a ver com instalação que reverte na reinicialização. O primeiro passo é descobrir o estágio.</p>
+
+        <h2>O teste que separa causa de sintoma</h2>
+        <p>Anote o código e o momento exato da falha: procurar, baixar, instalar ou reiniciar. Compare espaço livre, data e hora, conexão e se o erro ocorre em uma atualização específica ou em todas. Isso evita apagar o cache quando a causa real é falta de espaço, serviço parado ou corrupção de arquivos do sistema.</p>
+        <ul>
+          <li><strong>Antes do download:</strong> verifique rede, data/hora, serviços e políticas do equipamento.</li>
+          <li><strong>Download parado:</strong> compare outra rede e espaço livre antes de limpar componentes.</li>
+          <li><strong>Instalação falha:</strong> registre o código e investigue driver ou arquivo de sistema.</li>
+          <li><strong>Reverte após reiniciar:</strong> preserve os logs e evite desligamentos repetidos.</li>
+        </ul>
 
         <h2>Resposta curta</h2>
         <p>Antes de qualquer comando, confira o básico: conexão estável, data e hora corretas, espaço livre em disco, reinicialização pendente e atualizações pausadas. Depois identifique o estágio da falha — verificação, download, preparação, instalação ou reinicialização. Só então avance para diagnóstico do Windows, serviços, cache e reparo de componentes, nessa ordem. Apagar pastas do sistema não é primeiro passo.</p>
