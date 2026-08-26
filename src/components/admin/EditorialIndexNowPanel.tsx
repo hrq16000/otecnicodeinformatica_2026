@@ -14,7 +14,7 @@ import { exportarCsv, exportarJson } from "@/lib/exportarRelatorio";
  * criada e a chave do IndexNow nunca é exposta.
  */
 
-export interface LinhaIndexNow {
+export interface LinhaIndexNow extends Record<string, unknown> {
   url: string;
   wave: string | null;
   batch: string | null;
