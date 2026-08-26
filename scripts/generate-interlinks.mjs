@@ -97,6 +97,13 @@ for (const origem of problemas) {
   // escolhia serviços arbitrários (ex.: página de impressora linkando
   // formatação). Fallback: serviços generalistas, nesta ordem.
   const FALLBACK_SERVICOS = ["/servicos/manutencao-de-computador", "/servicos/manutencao-de-notebook"];
+  // Afinidades curadas: onde o scoring por tokens é cego ao motivo real da
+  // relação (líquido → dano de placa-mãe), a escolha é declarada aqui em vez
+  // de sair arbitrária pelo empate. Só entram serviços existentes no meta.
+  const PIN_SERVICOS = {
+    "/problemas/notebook-molhado": ["/servicos/conserto-placa", "/servicos/manutencao-de-notebook"],
+  };
+  const pin = (PIN_SERVICOS[origem] ?? []).filter((p) => meta.has(p));
   const ranqueados = servicos
     .map((path) => ({ path, s: score(tk, tokens(`${meta.get(path).title} ${meta.get(path).description}`)) }))
     .sort((a, b) => b.s - a.s);
