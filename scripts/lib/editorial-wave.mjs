@@ -421,7 +421,7 @@ export const EDITORIAL_WAVE = [
   {
     slug: "botao-power-nao-funciona-jump-start-placa-mae",
     approvedAt: "2026-08-26",
-    pilar: "/servicos/conserto-de-computador",
+    pilar: "/servicos/manutencao-de-computador",
     pilarLabel: "Conserto de computador",
     apoio: "/blog/como-testar-fonte-de-alimentacao-pc",
     apoioLabel: "Como testar a fonte de alimentação",

@@ -25,7 +25,7 @@ const MAX_POR_PAGINA = 3;
 
 /** Página comercial → artigos aprovados semanticamente relacionados. */
 const MAPA: Record<string, EditorialInboundLink[]> = {
-  "/servicos/conserto-de-computador": [
+  "/servicos/manutencao-de-computador": [
     {
       slug: "botao-power-nao-funciona-jump-start-placa-mae",
       label: "Botão power não funciona: teste pelo conector",

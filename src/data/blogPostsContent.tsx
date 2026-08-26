@@ -12608,7 +12608,7 @@ bcdboot C:\\Windows /s S: /f UEFI`}</code></pre>
         </ul>
 
         <h2>Quando chamar um técnico</h2>
-        <p>Chame quando o equipamento estiver na garantia, quando não conseguir identificar o par correto no manual, quando houver cheiro de queimado ou marca escura na placa, quando o gabinete for de notebook ou all-in-one, e quando a máquina não partir nem pelo conector. Nesse ponto o teste seguinte exige fonte de bancada e medição — atendimento em <Link to="/servicos/conserto-de-computador" className="text-accent">conserto de computador</Link> ou triagem em <Link to="/diagnostico-tecnico" className="text-accent">diagnóstico técnico</Link>.</p>
+        <p>Chame quando o equipamento estiver na garantia, quando não conseguir identificar o par correto no manual, quando houver cheiro de queimado ou marca escura na placa, quando o gabinete for de notebook ou all-in-one, e quando a máquina não partir nem pelo conector. Nesse ponto o teste seguinte exige fonte de bancada e medição — atendimento em <Link to="/servicos/manutencao-de-computador" className="text-accent">manutenção de computador</Link> ou triagem em <Link to="/diagnostico-tecnico" className="text-accent">diagnóstico técnico</Link>.</p>
       </>
     ),
   },
@@ -12683,7 +12683,7 @@ bcdboot C:\\Windows /s S: /f UEFI`}</code></pre>
         <p>Depois que a máquina volta a ligar, confirme estabilidade sob carga e temperatura antes de fechar o caso: o padrão de ligar e desligar também aparece por aquecimento, com sintoma parecido mas causa diferente.</p>
 
         <h2>Quando chamar um técnico</h2>
-        <p>Chame quando houver cheiro de queimado, marca de carbonização, líquido derramado ou capacitor estufado; quando o desligamento persistir com a bancada mínima e outra fonte; quando existirem dados importantes no disco; e sempre que o reparo envolver solda. O diagnóstico com instrumentos está em <Link to="/diagnostico-tecnico" className="text-accent">diagnóstico técnico</Link>, e o atendimento de bancada em <Link to="/servicos/conserto-de-computador" className="text-accent">conserto de computador</Link>. Se o próximo passo for eliminar dúvida sobre a placa, o roteiro complementar está em <Link to="/blog/como-diagnosticar-placa-mae-defeituosa" className="text-accent">como diagnosticar placa-mãe defeituosa</Link>.</p>
+        <p>Chame quando houver cheiro de queimado, marca de carbonização, líquido derramado ou capacitor estufado; quando o desligamento persistir com a bancada mínima e outra fonte; quando existirem dados importantes no disco; e sempre que o reparo envolver solda. O diagnóstico com instrumentos está em <Link to="/diagnostico-tecnico" className="text-accent">diagnóstico técnico</Link>, e o atendimento de bancada em <Link to="/servicos/manutencao-de-computador" className="text-accent">manutenção de computador</Link>. Se o próximo passo for eliminar dúvida sobre a placa, o roteiro complementar está em <Link to="/blog/como-diagnosticar-placa-mae-defeituosa" className="text-accent">como diagnosticar placa-mãe defeituosa</Link>.</p>
       </>
     ),
   },
@@ -12758,7 +12758,7 @@ bcdboot C:\\Windows /s S: /f UEFI`}</code></pre>
         <p>Atualização de firmware não é manutenção de rotina e não deixa a máquina mais rápida. Faça apenas quando houver motivo declarado: suporte a um processador novo, correção de falha de segurança divulgada ou incompatibilidade documentada de memória. Baixe o arquivo somente na página do modelo exato no site do fabricante, confira a revisão da placa impressa nela, use a ferramenta nativa do próprio Setup e não desligue durante o processo. Onde houver risco de queda de energia, use um nobreak.</p>
 
         <h2>Quando chamar um técnico</h2>
-        <p>Chame quando a tela continuar preta após o reset, quando a máquina for notebook e exigir desmontagem para alcançar a bateria de CMOS, quando houver criptografia de disco e você não tiver a chave, e sempre que a atualização tiver sido interrompida no meio. Regravação de chip é procedimento de bancada — a avaliação está em <Link to="/diagnostico-tecnico" className="text-accent">diagnóstico técnico</Link> e o atendimento em <Link to="/servicos/conserto-de-computador" className="text-accent">conserto de computador</Link>. Se o quadro incluir partidas abortadas, verifique antes <Link to="/blog/curto-circuito-placa-mae-como-identificar" className="text-accent">curto-circuito na placa-mãe</Link>.</p>
+        <p>Chame quando a tela continuar preta após o reset, quando a máquina for notebook e exigir desmontagem para alcançar a bateria de CMOS, quando houver criptografia de disco e você não tiver a chave, e sempre que a atualização tiver sido interrompida no meio. Regravação de chip é procedimento de bancada — a avaliação está em <Link to="/diagnostico-tecnico" className="text-accent">diagnóstico técnico</Link> e o atendimento em <Link to="/servicos/manutencao-de-computador" className="text-accent">manutenção de computador</Link>. Se o quadro incluir partidas abortadas, verifique antes <Link to="/blog/curto-circuito-placa-mae-como-identificar" className="text-accent">curto-circuito na placa-mãe</Link>.</p>
       </>
     ),
   },
