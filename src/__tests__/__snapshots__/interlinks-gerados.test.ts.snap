@@ -1,0 +1,56 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`interlinks de bairro > mantém o snapshot das âncoras locais publicadas 1`] = `
+[
+  "/problemas/arquivos-apagados → /bairros/portao :: atendimento em Portão para arquivos apagados ou disco que não abre",
+  "/problemas/cheiro-de-queimado → /bairros/afonso-pena :: atendimento em Afonso Pena para cheiro de queimado no computador, fonte ou carregador",
+  "/problemas/computador-desliga-sozinho → /bairros/santa-felicidade :: atendimento em Santa Felicidade para computador desligando sozinho ou reiniciando do nada",
+  "/problemas/computador-esquentando → /bairros/guatupe :: atendimento em Guatupê para computador ou notebook esquentando demais",
+  "/problemas/computador-lento → /bairros/batel :: atendimento em Batel para computador lento",
+  "/problemas/computador-nao-da-imagem → /bairros/cabral :: atendimento em Cabral para computador liga mas não aparece imagem no monitor",
+  "/problemas/hd-fazendo-barulho → /bairros/bigorrilho :: atendimento em Bigorrilho para hD fazendo barulho",
+  "/problemas/impressora-nao-imprime → /bairros/xaxim :: atendimento em Xaxim para impressora não imprime mesmo aparecendo conectada",
+  "/problemas/notebook-molhado → /bairros/cruzeiro :: atendimento em Cruzeiro para notebook molhado",
+  "/problemas/notebook-nao-carrega → /bairros/boa-vista :: atendimento em Boa Vista para notebook conectado na tomada e a bateria não carrega",
+  "/problemas/notebook-nao-liga → /bairros/cic :: atendimento em CIC (Cidade Industrial) para notebook não liga",
+  "/problemas/teclado-notebook-nao-funciona → /bairros/sitio-cercado :: atendimento em Sítio Cercado para teclado do notebook não funciona ou falha algumas teclas",
+  "/problemas/tela-azul → /bairros/centro :: atendimento em Centro para tela azul no Windows",
+  "/problemas/wifi-instavel → /bairros/agua-verde :: atendimento em Água Verde para wi-Fi caindo ou lento em parte da casa ou do escritório",
+  "/problemas/windows-nao-inicia → /bairros/costeira :: atendimento em Costeira para windows não inicia",
+]
+`;
+
+exports[`roteamento dos links de serviço > mantém o snapshot das âncoras de serviço 1`] = `
+[
+  "/problemas/arquivos-apagados → /servicos/recuperacao-de-dados :: recuperação de Dados em Curitiba para quem tem arquivos apagados ou disco que não abre",
+  "/problemas/arquivos-apagados → /servicos/backup-para-empresas :: backup para Empresas em Curitiba para quem tem arquivos apagados ou disco que não abre",
+  "/problemas/cheiro-de-queimado → /servicos/manutencao-de-computador :: assistência Técnica de Computador em Curitiba para quem tem cheiro de queimado no computador, fonte ou carregador",
+  "/problemas/cheiro-de-queimado → /servicos/suporte-home-office :: suporte Técnico para Home Office em Curitiba para quem tem cheiro de queimado no computador, fonte ou carregador",
+  "/problemas/computador-desliga-sozinho → /servicos/pc-gamer :: manutenção de PC Gamer em Curitiba para quem tem computador desligando sozinho ou reiniciando do nada",
+  "/problemas/computador-desliga-sozinho → /servicos/manutencao-de-computador :: assistência Técnica de Computador em Curitiba para quem tem computador desligando sozinho ou reiniciando do nada",
+  "/problemas/computador-esquentando → /servicos/pc-gamer :: manutenção de PC Gamer em Curitiba para quem tem computador ou notebook esquentando demais",
+  "/problemas/computador-esquentando → /servicos/formatacao :: formatação de PC e Notebook em Curitiba para quem tem computador ou notebook esquentando demais",
+  "/problemas/computador-lento → /servicos/formatacao :: formatação de PC e Notebook em Curitiba para quem tem computador lento",
+  "/problemas/computador-lento → /servicos/manutencao-de-computador :: assistência Técnica de Computador em Curitiba para quem tem computador lento",
+  "/problemas/computador-nao-da-imagem → /servicos/manutencao-de-computador :: assistência Técnica de Computador em Curitiba para quem tem computador liga mas não aparece imagem no monitor",
+  "/problemas/computador-nao-da-imagem → /servicos/conserto-monitor :: conserto de Monitor em Curitiba para quem tem computador liga mas não aparece imagem no monitor",
+  "/problemas/hd-fazendo-barulho → /servicos/remocao-de-virus :: remoção de Vírus e Malware em Curitiba para quem tem hD fazendo barulho",
+  "/problemas/hd-fazendo-barulho → /servicos/recuperacao-de-dados :: recuperação de Dados em Curitiba para quem tem hD fazendo barulho",
+  "/problemas/impressora-nao-imprime → /servicos/manutencao-de-computador :: assistência Técnica de Computador em Curitiba para quem tem impressora não imprime mesmo aparecendo conectada",
+  "/problemas/impressora-nao-imprime → /servicos/manutencao-de-notebook :: assistência Técnica de Notebook em Curitiba para quem tem impressora não imprime mesmo aparecendo conectada",
+  "/problemas/notebook-molhado → /servicos/conserto-placa :: reparo de Placa Eletrônica em Curitiba para quem tem notebook molhado",
+  "/problemas/notebook-molhado → /servicos/manutencao-de-notebook :: assistência Técnica de Notebook em Curitiba para quem tem notebook molhado",
+  "/problemas/notebook-nao-carrega → /servicos/manutencao-de-notebook :: assistência Técnica de Notebook em Curitiba para quem tem notebook conectado na tomada e a bateria não carrega",
+  "/problemas/notebook-nao-carrega → /servicos/manutencao-de-computador :: assistência Técnica de Computador em Curitiba para quem tem notebook conectado na tomada e a bateria não carrega",
+  "/problemas/notebook-nao-liga → /servicos/formatacao :: formatação de PC e Notebook em Curitiba para quem tem notebook não liga",
+  "/problemas/notebook-nao-liga → /servicos/manutencao-de-notebook :: assistência Técnica de Notebook em Curitiba para quem tem notebook não liga",
+  "/problemas/teclado-notebook-nao-funciona → /servicos/manutencao-de-notebook :: assistência Técnica de Notebook em Curitiba para quem tem teclado do notebook não funciona ou falha algumas teclas",
+  "/problemas/teclado-notebook-nao-funciona → /servicos/formatacao :: formatação de PC e Notebook em Curitiba para quem tem teclado do notebook não funciona ou falha algumas teclas",
+  "/problemas/tela-azul → /servicos/manutencao-de-computador :: assistência Técnica de Computador em Curitiba para quem tem tela azul no Windows",
+  "/problemas/tela-azul → /servicos/formatacao :: formatação de PC e Notebook em Curitiba para quem tem tela azul no Windows",
+  "/problemas/wifi-instavel → /servicos/suporte-home-office :: suporte Técnico para Home Office em Curitiba para quem tem wi-Fi caindo ou lento em parte da casa ou do escritório",
+  "/problemas/wifi-instavel → /servicos/pc-gamer :: manutenção de PC Gamer em Curitiba para quem tem wi-Fi caindo ou lento em parte da casa ou do escritório",
+  "/problemas/windows-nao-inicia → /servicos/recuperacao-de-dados :: recuperação de Dados em Curitiba para quem tem windows não inicia",
+  "/problemas/windows-nao-inicia → /servicos/formatacao :: formatação de PC e Notebook em Curitiba para quem tem windows não inicia",
+]
+`;
