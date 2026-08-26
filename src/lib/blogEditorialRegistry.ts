@@ -725,7 +725,7 @@ const WAVE_10D: EditorialApproval[] = [
   },
 ];
 
-export const WAVE_10E: EditorialApproval[] = [
+const WAVE_10E: EditorialApproval[] = [
   {
     slug: "internet-lenta-provedor-ou-roteador",
     status: "approved",
@@ -770,7 +770,7 @@ export const WAVE_10E: EditorialApproval[] = [
   },
 ];
 
-const APPROVED_EDITORIAL_CONTENT = new Map<string, EditorialApproval>([
+export const APPROVED_EDITORIAL_CONTENT = new Map<string, EditorialApproval>([
 
   ...FIRST_WAVE_SLUGS.map((slug) => [
     slug,
