@@ -132,6 +132,16 @@ const MAPA: Record<string, EditorialInboundLink[]> = {
   ],
   "/servicos/redes-e-wifi": [
     {
+      slug: "internet-lenta-provedor-ou-roteador",
+      label: "Internet lenta: é o provedor ou o roteador?",
+      hint: "Três medições que separam a entrega da operadora da limitação interna.",
+    },
+    {
+      slug: "impressora-offline-como-resolver",
+      label: "Impressora offline: como resolver",
+      hint: "Por que o endereço da impressora se perde e como corrigir a porta cadastrada.",
+    },
+    {
       slug: "como-configurar-roteador-wifi-iniciantes",
       label: "Como configurar um roteador Wi-Fi do zero",
       hint: "Ordem correta das etapas, faixas 2,4/5 GHz e os ajustes de segurança que importam.",

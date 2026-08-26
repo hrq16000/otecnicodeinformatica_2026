@@ -650,6 +650,37 @@ export const ARTICLE_SOURCE_MANIFEST: Record<string, ArticleSourceManifest> = {
     notes:
       "Revisão concluída (Onda 10D): distinção entre memória CMOS e firmware gravado em chip, vida útil típica da bateria CR2032, procedimento por jumper CLR_CMOS e por remoção de bateria, recursos de recuperação por USB e chip duplo e risco de chave de recuperação em disco criptografado. Conhecimento técnico estável — sem fonte visível.",
   },
+  // ── Onda 10C — Lote 2 (internet/Wi-Fi e impressoras).
+  "internet-lenta-provedor-ou-roteador": {
+    slug: "internet-lenta-provedor-ou-roteador",
+    sources: [],
+    technicalReview: "reviewed",
+    factChecked: true,
+    factCheckedAt: "2026-08-27",
+    stableKnowledge: true,
+    notes:
+      "Revisão concluída (Onda 10C, Lote 2): protocolo de triagem por cabo × Wi-Fi perto × Wi-Fi longe, leitura da combinação de resultados, critérios objetivos para abrir chamado com a operadora e limites do que troca de plano ou repetidor resolve. Sem estatística inventada e sem promessa de velocidade. Conhecimento técnico estável — sem fonte visível.",
+  },
+  "impressora-offline-como-resolver": {
+    slug: "impressora-offline-como-resolver",
+    sources: [],
+    technicalReview: "reviewed",
+    factChecked: true,
+    factCheckedAt: "2026-08-27",
+    stableKnowledge: true,
+    notes:
+      "Revisão concluída (Onda 10C, Lote 2): significado real do status offline, empréstimo de endereço com prazo, conferência entre página de configuração do aparelho e porta cadastrada, reserva no roteador, isolamento de clientes/rede de visitantes e distinção frente a falha mecânica. Sem marca comercial e sem promessa. Conhecimento técnico estável — sem fonte visível.",
+  },
+  "fila-de-impressao-travada-spooler-windows": {
+    slug: "fila-de-impressao-travada-spooler-windows",
+    sources: [],
+    technicalReview: "reviewed",
+    factChecked: true,
+    factCheckedAt: "2026-08-27",
+    stableKnowledge: true,
+    notes:
+      "Revisão concluída (Onda 10C, Lote 2): papel do serviço de spooler, causa dos trabalhos corrompidos, procedimento de parada do serviço e limpeza da pasta de trabalhos, ressalva de ambiente gerenciado e critério para suspeitar do driver. Sem marca comercial e sem promessa. Conhecimento técnico estável — sem fonte visível.",
+  },
 };
 
 
