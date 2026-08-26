@@ -1,8 +1,8 @@
 {
-  "geradoEm": "2026-08-26T04:53:03.001Z",
+  "geradoEm": "2026-08-26T07:17:59.722Z",
   "baseUrl": "https://otecnicodeinformatica.com.br",
   "indexacaoLiberada": true,
-  "rotasAuditadas": 109,
+  "rotasAuditadas": 101,
   "erros": [],
   "avisos": [
     {
@@ -43,18 +43,6 @@
     },
     {
       "rota": "/quando-nao-compensa",
-      "msg": "description com 163 chars (ideal ≤ 160)"
-    },
-    {
-      "rota": "/bairros/bigorrilho",
-      "msg": "description com 167 chars (ideal ≤ 160)"
-    },
-    {
-      "rota": "/bairros/cruzeiro",
-      "msg": "description com 168 chars (ideal ≤ 160)"
-    },
-    {
-      "rota": "/bairros/costeira",
       "msg": "description com 163 chars (ideal ≤ 160)"
     },
     {
@@ -195,3 +183,4 @@
     }
   ]
 }
+
