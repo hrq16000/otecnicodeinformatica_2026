@@ -1,18 +1,19 @@
 {
   "wave": "11A.1",
   "status": "PARTIAL_BLOCKED",
-  "head": "61ab5d2ce8ef3d79d9cf4ab59ef3ed330bc334ef",
+  "head": "LOCAL_EXECUTION",
   "gsc": "UNKNOWN / AUTH_REQUIRED",
-  "recommendation": "FIX",
+  "recommendation": "FIX+OBSERVE",
   "p1ValidationEligible": "NO",
   "lote1Authorized": "NO",
   "checks": {
-    "typecheck": "UNKNOWN",
-    "build": "UNKNOWN",
-    "metadata": "UNKNOWN",
-    "jsonldSSR": "UNKNOWN",
-    "indexHeaders": "UNKNOWN",
-    "cannibalization": "UNKNOWN"
+    "typecheck": "NOT_CONFIGURED",
+    "build": "BLOCKED_NATIVE_ROLLDOWN",
+    "metadata": "PASS_WITH_44_WARNINGS",
+    "jsonldSSR": "BLOCKED_NO_DIST",
+    "indexHeaders": "BLOCKED_NO_DIST",
+    "cannibalization": "PASS_WITH_4_REVIEW_WARNINGS"
   },
-  "reason": "Checkout local nao disponivel por falha de credenciais Git; GSC autenticado ausente."
+  "reason": "Execucao recuperada: prebuild, Bun anti-canibalizacao e export-secrets passam; build/SSR permanecem bloqueados pelo binding nativo do Rolldown no Windows e GSC confirmou credenciais ausentes."
 }
+
