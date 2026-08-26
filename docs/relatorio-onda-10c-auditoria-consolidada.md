@@ -1,48 +1,55 @@
-# Onda 10C — Auditoria consolidada (prévia)
+# Onda 10C — Auditoria consolidada
 
 **Data:** 2026-08-26  
-**Escopo:** auditoria sem criação de novas URLs  
+**Escopo:** consolidação sem criação de novas URLs  
 **Branch:** `codex/auditoria-10c-consolidada`
 
-## Veredito atual
+## Veredito
 
-A Onda 10C/Lote 4 está publicada e tecnicamente validada, mas ainda não pode ser considerada consolidada em termos de busca e retorno comercial. A recomendação é **OBSERVE + FIX**, aguardando evidência de crawl/indexação e corrigindo avisos SEO de baixo risco.
+A Onda 10C/Lote 4 está publicada e tecnicamente validada. A consolidação de SEO ainda está **incompleta** porque o Search Console real não foi disponibilizado ao executor e o pacote final de exports ainda não existia. A decisão operacional é **FIX + OBSERVE** antes de publicar a próxima onda.
 
-## Evidências já disponíveis
+## Evidências
 
-- Lote 4 fechado com 6 URLs novas nos clusters Webcam e Windows Update.
-- `check:editorial-cannibalization`: aprovado para os candidatos do lote.
-- `check:editorial-assets`: 22 assets, PASS 22, FAIL 0.
-- `check:editorial-governance`: paridade aprovada, sitemap com 182 URLs.
-- `check:editorial-technical-review`: aprovado.
-- `check:editorial-no-direct-wa`: 0 violações.
-- `check:editorial-export-secrets`: 7 artefatos sem segredo.
+- 6 URLs novas nos clusters Webcam e Windows Update.
+- Cannibalization pré-publicação: aprovado.
+- Assets: 22 PASS, 0 FAIL.
+- Governance: aprovado; sitemap com 182 URLs.
+- Technical review: aprovado.
+- No-direct-WA: 0 violações.
+- Export-secrets: 7 artefatos sem segredo.
 - TypeScript: sem erros.
 - E2E do lote: 44/44.
 - E2E de infraestrutura: 88/88.
-- Auditoria SEO: 109 rotas auditadas, 0 erros e 47 avisos.
+- Auditoria SEO: 109 rotas, 0 erros e 47 avisos.
 
-## Indexação
+## O que foi consolidado nesta branch
 
-As seis URLs do Lote 4 aparecem como publicadas no monitor editorial, porém ainda em `NO_DATA`. Isso não prova desindexação: falta crawl posterior à mudança material e dados suficientes do Search Console.
+- Relatório consolidado da Onda 10C.
+- Status explícito de indexação do Lote 4.
+- Limite de cinco oportunidades P1 para a próxima expansão.
+- Separação entre fatos verificados, pendências de GSC e decisões futuras.
 
-Estados devem ser promovidos somente com evidência de:
+## GSC e crawl
 
-1. crawl posterior à publicação;
+As seis URLs do Lote 4 aparecem como publicadas, mas em `NO_DATA`. Isso não significa “não indexado”. Não é permitido declarar `INDEXED` ou `CRAWLED_NOT_INDEXED` sem:
+
+1. crawl posterior à mudança material;
 2. canonical correto;
 3. index/follow permitido;
 4. sitemap atualizado;
 5. SSR verificável;
 6. persistência do estado por tempo suficiente.
 
-## Pendências
+A medição real de crawl, impressões, cliques e canonical do Google requer uma execução autenticada do monitor no ambiente que possui acesso ao Search Console.
 
-- Gerar o pacote final `reports/editorial/10c/final/`.
-- Gerar `owners`, `coverage`, `maturity`, `indexation`, `indexnow`, `schema`, `assets`, `cannibalization`, `internal-links`, `next-opportunities` e respectivos JSON/CSV.
-- Produzir manifest SHA-256 dos exports.
-- Cruzar conversão sem inventar dados quando a amostra for insuficiente.
-- Reavaliar os 47 avisos de title/meta description por prioridade e não por limiar cego.
+## Avisos SEO
+
+Existem 47 avisos de title/meta description. Eles devem ser corrigidos na fonte central de metadados, agrupando rotas e preservando intenção e CTR. Não foi feita alteração automática nesta branch, pois o checkout local não pôde ser baixado por falha de credenciais do Git e alterar somente o artefato gerado seria incorreto.
+
+## Próximas oportunidades P1
+
+As oportunidades estão registradas em `docs/onda-11-oportunidades-p1.csv` e `docs/onda-11-oportunidades-p1.json`. Nenhuma URL foi criada ou publicada.
 
 ## Decisão
 
-Não iniciar Lote 5 nem criar URLs nesta auditoria. Após a próxima coleta real do GSC, escolher entre `EXPAND`, `ENRICH`, `FIX` ou `OBSERVE`.
+Não iniciar Lote 5 nesta auditoria. Primeiro executar GSC real, corrigir os avisos de metadata na fonte, gerar exports finais com SHA-256 e revisar canibalização. Só então escolher entre `EXPAND`, `ENRICH`, `FIX` ou `OBSERVE`.
