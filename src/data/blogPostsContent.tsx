@@ -13592,7 +13592,7 @@ bcdboot C:\\Windows /s S: /f UEFI`}</code></pre>
         </ul>
 
         <h2>Quando parar</h2>
-        <p>Pare diante de reinícios em laço, falha de inicialização, pedido inesperado de chave de recuperação de criptografia de disco ou corrupção que retorna a cada tentativa. Antes de qualquer reparo profundo, garanta cópia dos arquivos importantes — veja <Link to="/servicos/backup-de-dados" className="text-accent">backup de dados</Link>.</p>
+        <p>Pare diante de reinícios em laço, falha de inicialização, pedido inesperado de chave de recuperação de criptografia de disco ou corrupção que retorna a cada tentativa. Antes de qualquer reparo profundo, garanta cópia dos arquivos importantes — veja <Link to="/servicos/backup-para-empresas" className="text-accent">backup de dados</Link>.</p>
 
         <h2>Quando chamar um técnico</h2>
         <p>Chame quando o mesmo erro persistir depois da progressão completa, quando a máquina não concluir a inicialização ou quando houver dados sem cópia. Avaliação em <Link to="/diagnostico-tecnico" className="text-accent">diagnóstico técnico</Link>; reinstalação, apenas como último passo, em <Link to="/servicos/formatacao" className="text-accent">formatação e instalação do sistema</Link>.</p>
@@ -13735,7 +13735,7 @@ bcdboot C:\\Windows /s S: /f UEFI`}</code></pre>
         </ul>
 
         <h2>Quando parar</h2>
-        <p>Pare quando a máquina entrar em laço de reinício, quando a inicialização falhar, quando surgir pedido de chave de recuperação de criptografia de disco ou quando existirem dados importantes sem cópia. A prioridade passa a ser preservar os arquivos — veja <Link to="/servicos/backup-de-dados" className="text-accent">backup de dados</Link> e <Link to="/servicos/recuperacao-de-dados" className="text-accent">recuperação de dados</Link>.</p>
+        <p>Pare quando a máquina entrar em laço de reinício, quando a inicialização falhar, quando surgir pedido de chave de recuperação de criptografia de disco ou quando existirem dados importantes sem cópia. A prioridade passa a ser preservar os arquivos — veja <Link to="/servicos/backup-para-empresas" className="text-accent">backup de dados</Link> e <Link to="/servicos/recuperacao-de-dados" className="text-accent">recuperação de dados</Link>.</p>
 
         <h2>Quando chamar um técnico</h2>
         <p>Chame quando a reversão se repetir depois das correções acima, quando o sistema não iniciar ou quando você não tiver a chave de recuperação em mãos. Avaliação em <Link to="/diagnostico-tecnico" className="text-accent">diagnóstico técnico</Link>.</p>
