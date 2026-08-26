@@ -12952,7 +12952,7 @@ bcdboot C:\\Windows /s S: /f UEFI`}</code></pre>
     title: "HD ou SSD não é reconhecido na BIOS: o que verificar antes de trocar",
     excerpt:
       "Quando o disco some do Setup, o problema quase nunca é o Windows. Sequência de verificação por energia, cabo, porta e detecção — e o que NÃO fazer quando há dados importantes.",
-    date: "2026-08-27",
+    date: "2026-08-26",
     readTime: "10 min",
     category: "Diagnóstico",
     content: (
@@ -13012,7 +13012,7 @@ bcdboot C:\\Windows /s S: /f UEFI`}</code></pre>
     title: "SSD aparece na BIOS mas não no Windows: como inicializar o disco",
     excerpt:
       "Disco novo chega sem inicialização, sem partição e sem letra. O que fazer no Gerenciamento de Disco, como escolher GPT ou MBR e o cuidado antes de mexer em disco com dados.",
-    date: "2026-08-27",
+    date: "2026-08-26",
     readTime: "9 min",
     category: "Procedimentos Técnicos",
     content: (
@@ -13073,7 +13073,7 @@ bcdboot C:\\Windows /s S: /f UEFI`}</code></pre>
     title: "Setores defeituosos e SMART com alerta: o que fazer (e o que não fazer)",
     excerpt:
       "Como ler os indicadores SMART, por que CHKDSK não é a resposta padrão para disco suspeito de falha física e qual é a ordem correta: copiar primeiro, investigar depois.",
-    date: "2026-08-27",
+    date: "2026-08-26",
     readTime: "10 min",
     category: "Diagnóstico",
     content: (
@@ -13136,7 +13136,7 @@ bcdboot C:\\Windows /s S: /f UEFI`}</code></pre>
     title: "Computador sem som: sequência de verificação do alto-falante ao driver",
     excerpt:
       "Do volume e do dispositivo de saída errado até driver e conector: como isolar a causa do silêncio no Windows sem reinstalar o sistema.",
-    date: "2026-08-27",
+    date: "2026-08-26",
     readTime: "9 min",
     category: "Diagnóstico",
     content: (
@@ -13194,7 +13194,7 @@ bcdboot C:\\Windows /s S: /f UEFI`}</code></pre>
     title: "Fone de ouvido não é reconhecido no PC: entrada frontal, detecção e microfone",
     excerpt:
       "Por que o fone toca na entrada de trás e não na da frente, o que é detecção de conector, a diferença entre P2 combo e duas entradas e como resolver o microfone mudo.",
-    date: "2026-08-27",
+    date: "2026-08-26",
     readTime: "8 min",
     category: "Procedimentos Técnicos",
     content: (
@@ -13246,7 +13246,7 @@ bcdboot C:\\Windows /s S: /f UEFI`}</code></pre>
     title: "Serviço de áudio do Windows não está em execução: como reativar",
     excerpt:
       "O que são os serviços Windows Audio e Audio Endpoint Builder, como reiniciá-los na ordem correta, quando reinstalar o driver e como distinguir falha de serviço de falha de hardware.",
-    date: "2026-08-27",
+    date: "2026-08-26",
     readTime: "8 min",
     category: "Procedimentos Técnicos",
     content: (
@@ -13293,6 +13293,454 @@ bcdboot C:\\Windows /s S: /f UEFI`}</code></pre>
 
         <h2>Quando chamar um técnico</h2>
         <p>Chame quando o serviço não iniciar mesmo com dependências ativas, quando o controlador desaparecer do sistema ou quando o problema vier acompanhado de travamentos e reinícios. Avaliação em <Link to="/diagnostico-tecnico" className="text-accent">diagnóstico técnico</Link> e execução em <Link to="/servicos/manutencao-de-computador" className="text-accent">manutenção de computador</Link>.</p>
+      </>
+    ),
+  },
+
+
+  // ── Onda 10C — Lote 4: webcam (cluster 9) e Windows Update (cluster 10).
+  "webcam-nao-funciona-o-que-verificar": {
+    title: "Webcam não funciona: como separar privacidade, aplicativo, driver e hardware",
+    excerpt:
+      "Cinco perguntas isolam a causa quando a câmera não funciona: ela existe no sistema, o Windows libera, o aplicativo tem permissão, o driver está sadio ou o módulo falhou.",
+    date: "2026-08-26",
+    readTime: "10 min",
+    category: "Diagnóstico",
+    content: (
+      <>
+        <p className="lead">Câmera que não funciona quase nunca é câmera queimada. Na maior parte dos atendimentos, o módulo está intacto e a imagem para em uma das camadas entre o sensor e o aplicativo — tampa física, permissão do Windows, permissão do programa, driver ou conexão interna. A ordem em que você testa decide se o problema leva dois minutos ou uma tarde.</p>
+
+        <h2>Resposta curta</h2>
+        <p>Abra o aplicativo Câmera do Windows. Se a imagem aparece ali e falha só em um programa, o problema é de permissão ou de configuração daquele programa. Se o aplicativo Câmera também falha, verifique o acesso à câmera nas configurações de privacidade e a presença do dispositivo no Gerenciador de Dispositivos. Câmera ausente do Gerenciador aponta para driver, conexão interna ou hardware — nessa ordem.</p>
+
+        <h2>O que é uma webcam que "não funciona"</h2>
+        <h3>Em termos simples</h3>
+        <p>Existem cinco falhas diferentes escondidas na mesma frase: a câmera não existe no sistema; ela existe mas o Windows bloqueia; ela existe e o Windows libera mas o aplicativo não pede ou não recebe permissão; a imagem abre preta; ou o dispositivo aparece e some sozinho. Cada uma tem causa e solução distintas.</p>
+        <h3>O que acontece tecnicamente</h3>
+        <p>A imagem percorre uma cadeia: sensor → conexão interna ou cabo USB → firmware do módulo → enumeração pelo Windows → driver → permissão do sistema → permissão do aplicativo → aplicativo ou navegador → vídeo na tela. Interromper qualquer elo produz sintoma parecido para quem olha a tela, mas o ponto de parada muda completamente o diagnóstico.</p>
+        <h3>Como o usuário percebe</h3>
+        <p>Tela preta na reunião, mensagem de câmera não encontrada, lista de dispositivos vazia dentro do programa, ou aviso de que outro aplicativo está usando a câmera.</p>
+
+        <h2>Por que acontece?</h2>
+        <table>
+          <thead>
+            <tr><th>Causa</th><th>Sintoma típico</th><th>Como diferenciar</th><th>Risco de mexer</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Tampa física ou obturador fechado</td><td>Imagem preta, câmera funciona no sistema</td><td>Aplicativo Câmera abre, mas só mostra preto</td><td>Nenhum</td></tr>
+            <tr><td>Acesso à câmera desligado no Windows</td><td>Todos os programas falham</td><td>Aviso de acesso bloqueado nas configurações de privacidade</td><td>Baixo — mudança reversível</td></tr>
+            <tr><td>Permissão do aplicativo</td><td>Funciona em um programa e falha em outro</td><td>Teste cruzado entre app Câmera e o programa problemático</td><td>Baixo</td></tr>
+            <tr><td>Câmera ocupada por outro processo</td><td>Erro de dispositivo em uso</td><td>Fechar o outro programa devolve a imagem</td><td>Nenhum</td></tr>
+            <tr><td>Driver ausente, corrompido ou desabilitado</td><td>Dispositivo com aviso no Gerenciador</td><td>Ícone de alerta ou "dispositivo desconhecido"</td><td>Médio — prefira driver oficial</td></tr>
+            <tr><td>Cabo interno ou conector solto</td><td>Câmera some e volta, some após abrir a tampa</td><td>Costuma vir depois de queda ou desmontagem</td><td>Alto — exige desmontagem</td></tr>
+            <tr><td>Módulo com defeito</td><td>Ausente do sistema em todas as condições</td><td>Persiste após reinstalar driver e testar outro sistema</td><td>Alto</td></tr>
+          </tbody>
+        </table>
+
+        <h2>Árvore de decisão</h2>
+        <ol>
+          <li><strong>O aplicativo Câmera abre imagem?</strong> Sim → vá para o passo 4. Não → passo 2.</li>
+          <li><strong>A câmera aparece no Gerenciador de Dispositivos?</strong> Sim → é permissão do sistema ou driver: veja <Link to="/blog/permissoes-de-camera-no-windows" className="text-accent">permissões de câmera no Windows</Link>. Não → passo 3.</li>
+          <li><strong>É webcam USB?</strong> Sim → siga o roteiro de <Link to="/blog/webcam-usb-nao-e-detectada" className="text-accent">webcam USB não detectada</Link>. Não (câmera integrada) → passo 5.</li>
+          <li><strong>Falha só em um programa?</strong> Sim → permissão ou seleção de dispositivo dentro dele. Não → volte ao passo 2.</li>
+          <li><strong>Houve queda, líquido ou desmontagem recente?</strong> Sim → suspeita de cabo ou módulo; pare aqui. Não → reinstale o driver oficial do modelo e reavalie.</li>
+        </ol>
+
+        <h2>Câmera integrada de notebook</h2>
+        <p>Em notebook, o módulo fica na moldura superior da tela e se conecta à placa por um cabo fino que passa pela dobradiça. Alguns fabricantes oferecem obturador deslizante, botão físico de privacidade, atalho na fileira de teclas de função ou opção de desabilitar a câmera no Setup — mas nenhum desses recursos é universal. Antes de procurar a tecla mágica, confirme no manual do seu modelo se ela existe. Software próprio do fabricante também pode manter a câmera bloqueada por política de privacidade, mesmo com o Windows liberado.</p>
+
+        <h2>Imagem preta com câmera reconhecida</h2>
+        <p>Quando o dispositivo aparece, o aplicativo abre e a imagem continua preta, as hipóteses mudam: obturador fechado, adesivo esquecido sobre a lente, outro programa segurando o dispositivo em segundo plano, exposição automática em ambiente muito escuro, driver com defeito após atualização ou, por último, falha do módulo. Feche os programas de reunião, reinicie e teste novamente antes de concluir qualquer coisa sobre hardware.</p>
+
+        <h2>Tabela de decisão rápida</h2>
+        <table>
+          <thead>
+            <tr><th>Situação</th><th>Camada provável</th><th>Primeira ação</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Nenhum programa vê a câmera</td><td>Sistema ou driver</td><td>Conferir privacidade e Gerenciador de Dispositivos</td></tr>
+            <tr><td>App Câmera funciona, reunião não</td><td>Aplicativo ou navegador</td><td>Revisar permissão e dispositivo selecionado no programa</td></tr>
+            <tr><td>Imagem preta em tudo</td><td>Obturador, exposição ou driver</td><td>Verificar tampa física e reiniciar sem outros programas abertos</td></tr>
+            <tr><td>Câmera some e volta</td><td>Conexão física ou porta</td><td>Testar outra porta ou outro computador</td></tr>
+            <tr><td>Dispositivo desconhecido no Gerenciador</td><td>Driver</td><td>Instalar pacote oficial do fabricante do modelo</td></tr>
+          </tbody>
+        </table>
+
+        <h2>O que NÃO fazer</h2>
+        <ul>
+          <li>Baixar driver de site agregador desconhecido: é a origem mais comum de programa indesejado nessas máquinas.</li>
+          <li>Desmontar a tela para "verificar o cabo" antes de esgotar os testes de software.</li>
+          <li>Liberar câmera para todos os sites do navegador de forma permanente só para destravar uma reunião.</li>
+          <li>Concluir que o módulo queimou sem teste cruzado em outro aplicativo e, se possível, em outro sistema.</li>
+        </ul>
+
+        <h2>Quando parar</h2>
+        <p>Pare diante de sinal de dano físico: queda recente, contato com líquido, moldura da tela deslocada, câmera que some ao mover a tampa. Cabo de câmera passa pela dobradiça e a substituição exige desmontagem da tela — procedimento que não vale improviso.</p>
+
+        <h2>Quando chamar um técnico</h2>
+        <p>Chame quando a câmera não aparecer em nenhuma condição, quando sumir de forma intermitente ou quando o driver oficial não instalar. A avaliação começa em <Link to="/diagnostico-tecnico" className="text-accent">diagnóstico técnico</Link> e o reparo do módulo entra em <Link to="/servicos/manutencao-de-notebook" className="text-accent">manutenção de notebook</Link>.</p>
+      </>
+    ),
+  },
+
+  "permissoes-de-camera-no-windows": {
+    title: "Permissões de câmera no Windows: quando é o sistema que bloqueia e quando é o aplicativo",
+    excerpt:
+      "Acesso global, acesso por aplicativo, programas de área de trabalho e permissão de site no navegador são camadas diferentes. Entender qual está fechada resolve a maioria dos casos de câmera bloqueada.",
+    date: "2026-08-26",
+    readTime: "8 min",
+    category: "Procedimentos Técnicos",
+    content: (
+      <>
+        <p className="lead">Quando a câmera funciona em um programa e falha em outro, o hardware está fora de suspeita. O que muda entre os dois é permissão — e o Windows tem mais de uma, empilhada, cada uma capaz de bloquear sozinha.</p>
+
+        <h2>Resposta curta</h2>
+        <p>Em Configurações → Privacidade e segurança → Câmera existem três chaves independentes: o acesso à câmera do dispositivo, o acesso de aplicativos à câmera e a permissão individual de cada aplicativo. Programas de área de trabalho, como navegadores e clientes de reunião, entram por uma quarta chave à parte. Se a de cima estiver desligada, ligar as de baixo não adianta.</p>
+
+        <h2>O que é a permissão de câmera</h2>
+        <h3>Em termos simples</h3>
+        <p>É um conjunto de interruptores em série. O sistema decide se a câmera pode ser usada por qualquer coisa; depois decide se aplicativos podem; depois decide quais aplicativos podem; e o navegador ainda decide quais sites podem.</p>
+        <h3>O que acontece tecnicamente</h3>
+        <p>O Windows intermedeia o acesso ao dispositivo de captura. O programa pede a câmera ao sistema, e o sistema consulta a política vigente antes de entregar o fluxo de vídeo. Quando a política nega, o programa recebe um erro genérico — normalmente traduzido como "câmera não encontrada" ou "não foi possível iniciar o vídeo", o que confunde o usuário e faz parecer defeito.</p>
+        <h3>Como o usuário percebe</h3>
+        <p>Câmera perfeita em um aplicativo, inexistente em outro. Ou funcionamento normal até uma atualização de sistema ou uma política do trabalho reverter a configuração.</p>
+
+        <h2>As quatro camadas, na ordem em que devem ser verificadas</h2>
+        <table>
+          <thead>
+            <tr><th>Camada</th><th>Onde fica</th><th>Efeito quando desligada</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Acesso à câmera (dispositivo)</td><td>Privacidade e segurança → Câmera</td><td>Nada no computador acessa a câmera</td></tr>
+            <tr><td>Acesso de aplicativos</td><td>Mesma tela, chave logo abaixo</td><td>Aplicativos da loja perdem acesso</td></tr>
+            <tr><td>Permissão individual</td><td>Lista de aplicativos da mesma tela</td><td>Só o programa listado é bloqueado</td></tr>
+            <tr><td>Aplicativos de área de trabalho</td><td>Item separado no fim da lista</td><td>Navegadores e clientes instalados fora da loja param</td></tr>
+            <tr><td>Permissão de site</td><td>Configurações do navegador</td><td>Só aquele site fica sem imagem</td></tr>
+          </tbody>
+        </table>
+
+        <h2>Windows bloqueia ou o aplicativo bloqueia?</h2>
+        <p>O teste é simples e não custa nada: abra o aplicativo Câmera do Windows. Se a imagem aparece, o sistema está liberando o dispositivo e a investigação se desloca para o programa — permissão dele, dispositivo selecionado nas configurações de vídeo, ou versão desatualizada. Se o próprio aplicativo Câmera falha com aviso de acesso bloqueado, o problema é de política do sistema.</p>
+
+        <h2>Navegador: três permissões somadas</h2>
+        <p>Uma reunião pelo navegador só funciona quando as três respostas são sim: o Windows libera aplicativos de área de trabalho, o navegador tem permissão de câmera e o site específico foi autorizado. Por isso é comum que uma plataforma de reunião funcione e outra não, no mesmo navegador, no mesmo minuto. Cada site guarda a própria decisão, e um "bloquear" clicado por engano permanece salvo.</p>
+
+        <h2>Árvore de decisão</h2>
+        <ol>
+          <li>App Câmera abre imagem? Não → verifique o acesso à câmera do dispositivo e o acesso de aplicativos.</li>
+          <li>Abre, mas o programa da loja falha? → permissão individual daquele aplicativo.</li>
+          <li>Abre, mas o navegador falha em todos os sites? → chave de aplicativos de área de trabalho e permissão de câmera do navegador.</li>
+          <li>Abre, o navegador funciona em um site e falha em outro? → permissão daquele site.</li>
+          <li>Todas liberadas e ainda falha? → volte ao diagnóstico de <Link to="/blog/webcam-nao-funciona-o-que-verificar" className="text-accent">webcam não funciona</Link>, ramo de driver e hardware.</li>
+        </ol>
+
+        <h2>Máquina do trabalho</h2>
+        <p>Em computador gerenciado pela empresa, essas chaves podem estar controladas por política e voltar sozinhas ao estado anterior depois de qualquer alteração. Se as configurações aparecem esmaecidas ou revertem após reiniciar, não insista: quem administra o parque precisa liberar. O mesmo vale para software de segurança corporativa com controle próprio de câmera.</p>
+
+        <h2>O que NÃO fazer</h2>
+        <ul>
+          <li>Liberar câmera para todos os sites de uma vez. Autorize por site, e revogue quando não usar mais.</li>
+          <li>Desinstalar o antivírus para "testar". Suspenda o módulo específico, se existir, e reative em seguida.</li>
+          <li>Editar o registro do Windows para forçar permissão sem entender qual camada está negando.</li>
+          <li>Deixar o acesso global ligado achando que isso é obrigatório: cada permissão concedida é uma decisão de privacidade real, com impacto quando um site desconhecido pede a câmera.</li>
+        </ul>
+
+        <h2>Quando chamar um técnico</h2>
+        <p>Chame quando as permissões voltarem sozinhas, quando a tela de privacidade estiver bloqueada por política em máquina pessoal ou quando o comportamento vier acompanhado de outras alterações não solicitadas — cenário que merece <Link to="/diagnostico-tecnico" className="text-accent">diagnóstico técnico</Link>.</p>
+      </>
+    ),
+  },
+
+  "webcam-usb-nao-e-detectada": {
+    title: "Webcam USB não é detectada: porta, cabo, alimentação e driver",
+    excerpt:
+      "Roteiro de eliminação para webcam externa que o Windows não enxerga: teste de porta, hub sem alimentação, cabo, dispositivo desconhecido no Gerenciador e teste cruzado em outro computador.",
+    date: "2026-08-26",
+    readTime: "8 min",
+    category: "Procedimentos Técnicos",
+    content: (
+      <>
+        <p className="lead">Webcam USB que não aparece é, na maioria das vezes, um problema de porta, cabo ou alimentação — não da câmera. O caminho mais curto é eliminar essas três variáveis antes de tocar em driver.</p>
+
+        <h2>Resposta curta</h2>
+        <p>Conecte a câmera direto em uma porta traseira do computador, sem hub e sem extensão. Se o Windows emitir o som de conexão e o dispositivo surgir no Gerenciador de Dispositivos, o problema estava no caminho anterior. Se nada acontece em nenhuma porta, teste o mesmo cabo e a mesma câmera em outro computador antes de concluir qualquer coisa.</p>
+
+        <h2>Por que acontece?</h2>
+        <table>
+          <thead>
+            <tr><th>Causa</th><th>Sintoma</th><th>Como diferenciar</th><th>Risco</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Hub sem fonte própria</td><td>Câmera não liga ou desconecta ao gravar</td><td>Funciona ligada direto na máquina</td><td>Nenhum</td></tr>
+            <tr><td>Porta frontal com cabo interno frouxo</td><td>Falha só nas portas da frente</td><td>Porta traseira funciona normalmente</td><td>Baixo</td></tr>
+            <tr><td>Cabo rompido ou extensão longa demais</td><td>Conexão intermitente ao mover o cabo</td><td>Outro cabo resolve</td><td>Nenhum</td></tr>
+            <tr><td>Driver não instalado</td><td>Dispositivo desconhecido no Gerenciador</td><td>Aparece com alerta amarelo</td><td>Médio</td></tr>
+            <tr><td>Conflito com outra câmera</td><td>Programa escolhe o dispositivo errado</td><td>Duas câmeras listadas no programa</td><td>Nenhum</td></tr>
+            <tr><td>Câmera com defeito</td><td>Nada em nenhuma porta e em outro computador</td><td>Teste cruzado negativo</td><td>—</td></tr>
+          </tbody>
+        </table>
+
+        <h2>Árvore de eliminação</h2>
+        <ol>
+          <li><strong>É detectada?</strong> Ao conectar, o Windows emite som e mostra notificação? Não → troque de porta, de preferência traseira, e remova hub e extensão.</li>
+          <li><strong>Aparece no Gerenciador de Dispositivos?</strong> Procure em Câmeras, em Dispositivos de imagem e também em Controladores USB. Um item "Dispositivo desconhecido" já é resposta: falta driver ou o dispositivo não está se identificando.</li>
+          <li><strong>O aplicativo Câmera abre imagem?</strong> Sim → hardware e driver estão bem; o resto é permissão ou seleção de dispositivo.</li>
+          <li><strong>Outros programas acessam?</strong> Se só um falha, o assunto é <Link to="/blog/permissoes-de-camera-no-windows" className="text-accent">permissão de câmera</Link>.</li>
+          <li><strong>Funciona em outro computador?</strong> Sim → o problema é da máquina. Não → é da câmera ou do cabo.</li>
+        </ol>
+
+        <h2>USB 2, USB 3 e alimentação</h2>
+        <p>Câmeras de resolução mais alta consomem banda e energia. Ligadas em hub passivo compartilhado com teclado, mouse, disco externo e outros periféricos, elas simplesmente somem ou travam durante a transmissão. Portas traseiras costumam ser ligadas diretamente aos controladores da placa e são a referência de teste. Se a câmera exige USB 3 e a porta é USB 2, a imagem pode abrir em resolução reduzida ou nem abrir.</p>
+
+        <h2>Driver: quando e de onde</h2>
+        <p>A maioria das webcams atuais usa o driver de classe genérico do próprio Windows e não exige instalação. Quando exige, o pacote correto vem do site do fabricante da câmera, para o modelo exato. Vale também deixar o Windows Update procurar drivers opcionais antes de qualquer coisa. Programas que prometem "atualizar todos os drivers" e sites agregadores de driver são desnecessários e frequentemente instalam algo pior do que o problema original.</p>
+
+        <h2>O que NÃO fazer</h2>
+        <ul>
+          <li>Instalar utilitário de driver de origem desconhecida para resolver uma webcam de baixo custo.</li>
+          <li>Testar apenas nas portas frontais e concluir que a câmera morreu.</li>
+          <li>Empilhar hub em hub para ganhar portas com periféricos de vídeo.</li>
+          <li>Abrir a carcaça da câmera antes do teste cruzado em outro computador.</li>
+        </ul>
+
+        <h2>Quando chamar um técnico</h2>
+        <p>Chame quando o Gerenciador acusar erro de controlador USB, quando várias portas pararem de funcionar ao mesmo tempo ou quando o computador reiniciar ao conectar o periférico. Esses sinais apontam para a placa, não para a câmera — avaliação em <Link to="/diagnostico-tecnico" className="text-accent">diagnóstico técnico</Link> e reparo em <Link to="/servicos/manutencao-de-computador" className="text-accent">manutenção de computador</Link>.</p>
+      </>
+    ),
+  },
+
+  "windows-update-nao-funciona-o-que-verificar": {
+    title: "Windows Update não funciona: como descobrir em qual estágio a atualização falha",
+    excerpt:
+      "Verificação, download, preparação, instalação e reinicialização são estágios distintos. Identificar onde a atualização para elimina metade dos procedimentos inúteis.",
+    date: "2026-08-26",
+    readTime: "11 min",
+    category: "Diagnóstico",
+    content: (
+      <>
+        <p className="lead">"Windows Update não funciona" descreve pelo menos seis falhas diferentes. Uma busca infinita por atualizações não tem nada a ver com download parado em 0%, que por sua vez não tem nada a ver com instalação que reverte na reinicialização. O primeiro passo é descobrir o estágio.</p>
+
+        <h2>Resposta curta</h2>
+        <p>Antes de qualquer comando, confira o básico: conexão estável, data e hora corretas, espaço livre em disco, reinicialização pendente e atualizações pausadas. Depois identifique o estágio da falha — verificação, download, preparação, instalação ou reinicialização. Só então avance para diagnóstico do Windows, serviços, cache e reparo de componentes, nessa ordem. Apagar pastas do sistema não é primeiro passo.</p>
+
+        <h2>O que é o Windows Update</h2>
+        <h3>Em termos simples</h3>
+        <p>É o serviço que consulta o catálogo da Microsoft, descobre o que falta na sua máquina, baixa os pacotes, prepara a instalação e conclui o processo em uma reinicialização controlada.</p>
+        <h3>O que acontece tecnicamente</h3>
+        <p>O fluxo tem etapas claras: verificação e comparação de metadados → download dos pacotes → preparação (staging) → instalação → reinicialização → aplicação final pelo mecanismo de manutenção de componentes → conclusão ou reversão. Cada etapa depende de serviços, espaço e integridade dos componentes do sistema.</p>
+        <h3>Como o usuário percebe</h3>
+        <p>Barra que não anda, porcentagem congelada, código de erro, ou aquela mensagem de "desfazendo alterações" depois de esperar meia hora.</p>
+
+        <h2>Tabela por estágio</h2>
+        <table>
+          <thead>
+            <tr><th>Sintoma</th><th>Estágio provável</th><th>Primeira verificação</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>"Procurando atualizações" sem fim</td><td>Verificação</td><td>Conexão, data/hora e serviço em execução</td></tr>
+            <tr><td>Download parado em 0%</td><td>Download</td><td>Espaço livre, rede e fila de cache</td></tr>
+            <tr><td>Download em 100% que não instala</td><td>Preparação</td><td>Reinicialização pendente e integridade dos componentes</td></tr>
+            <tr><td>Instalação travada em porcentagem fixa</td><td>Instalação</td><td>Atividade real de disco e CPU antes de intervir</td></tr>
+            <tr><td>"Desfazendo alterações"</td><td>Reversão pós-reinício</td><td>Driver recente, espaço e componentes</td></tr>
+            <tr><td>Código de erro específico</td><td>Depende do estágio</td><td>Anotar código e momento exato em que apareceu</td></tr>
+            <tr><td>Atualização reaparece toda semana</td><td>Conclusão parcial</td><td>Histórico de atualizações e reparo de componentes</td></tr>
+          </tbody>
+        </table>
+
+        <h2>Triagem inicial — antes dos comandos</h2>
+        <ul>
+          <li><strong>Conexão:</strong> rede instável ou limitada interrompe download de pacotes grandes.</li>
+          <li><strong>Data e hora:</strong> relógio muito fora de sincronia quebra a validação de certificados e derruba a verificação.</li>
+          <li><strong>Espaço livre:</strong> atualizações de recurso precisam de vários gigabytes livres, além do que já está ocupado. Espaço curto produz erro em qualquer estágio.</li>
+          <li><strong>Reinicialização pendente:</strong> uma atualização anterior aguardando reinício bloqueia a próxima.</li>
+          <li><strong>Pausa ativa:</strong> a própria tela do Windows Update pode estar com atualizações pausadas ou com horário ativo restringindo o reinício.</li>
+          <li><strong>Versão e compatibilidade:</strong> algumas atualizações não são oferecidas a determinados equipamentos, e isso não é defeito.</li>
+        </ul>
+
+        <h2>Progressão de reparo</h2>
+        <ol>
+          <li>Ajustar a configuração básica da triagem acima.</li>
+          <li>Reiniciar a máquina de forma completa e tentar de novo.</li>
+          <li>Executar a solução de problemas do Windows Update, disponível nas configurações do sistema.</li>
+          <li>Conferir os serviços envolvidos — sem desabilitar nada.</li>
+          <li>Só então tratar o cache, de forma reversível: veja <Link to="/blog/limpar-cache-do-windows-update-softwaredistribution" className="text-accent">cache do Windows Update</Link>.</li>
+          <li>Verificar arquivos de sistema e a imagem de componentes.</li>
+          <li>Reparo avançado com preservação de arquivos, quando nada acima resolveu.</li>
+        </ol>
+        <p>Se a falha aparecer só depois da reinicialização, com a mensagem de reversão, o caminho é outro: veja <Link to="/blog/windows-update-travado-desfazendo-alteracoes" className="text-accent">atualização travada e desfazendo alterações</Link>.</p>
+
+
+        <h2>Verificação de arquivos e de componentes</h2>
+        <p>São duas ferramentas diferentes e a ordem importa. A verificação de arquivos do sistema examina e restaura arquivos protegidos usando a cópia local de componentes. A ferramenta de manutenção de imagem trabalha na própria loja de componentes do Windows, que é a fonte usada pela primeira. Quando a loja está danificada, a verificação de arquivos não tem de onde restaurar — por isso o reparo da imagem vem antes de uma nova passada de verificação. Ambas exigem prompt com privilégio administrativo, tempo e nenhuma interrupção. Siga sempre a documentação atual da Microsoft para a sintaxe exata da sua versão.</p>
+
+        <h2>Serviços envolvidos</h2>
+        <p>O ecossistema inclui o serviço do Windows Update, o serviço de transferência inteligente em segundo plano, os serviços criptográficos, o orquestrador de atualizações e o serviço de reparo do próprio Update. Vale confirmar que estão em execução. Não vale desabilitar nenhum deles: o serviço de reparo, em especial, existe justamente para recolocar componentes quebrados no lugar, e desligá-lo remove uma proteção sem resolver a causa.</p>
+
+        <h2>Windows 10 e Windows 11</h2>
+        <p>Os estágios são os mesmos, mas os caminhos das telas e o nome de algumas opções mudam entre as versões. Confirme sua versão antes de seguir qualquer roteiro encontrado na internet — instruções escritas para uma versão frequentemente citam telas que a outra não tem.</p>
+
+        <h2>Atualização e drivers</h2>
+        <p>Parte das atualizações entrega drivers. Uma reversão logo após a reinicialização costuma apontar para driver recente incompatível, e não para o Windows em si. Quando o problema começou junto com uma atualização de vídeo, rede ou armazenamento, avalie o driver antes de partir para reparo pesado — e considere o histórico de <Link to="/blog/codigos-de-erro-tela-azul-windows" className="text-accent">códigos de erro de tela azul</Link> se houver travamento associado.</p>
+
+        <h2>O que NÃO fazer</h2>
+        <ul>
+          <li>Apagar pastas do Windows por conta própria como primeira tentativa.</li>
+          <li>Executar scripts de terceiros que prometem "resetar tudo" sem que você saiba o que eles alteram.</li>
+          <li>Desativar o Windows Update permanentemente para calar o sintoma.</li>
+          <li>Desabilitar o serviço de reparo do Update ou alterar permissões dele por instrução de fórum.</li>
+          <li>Mexer no registro sem diagnóstico e sem ponto de retorno.</li>
+          <li>Desligar a máquina no botão durante uma instalação que ainda mostra atividade de disco.</li>
+          <li>Formatar como primeira solução.</li>
+        </ul>
+
+        <h2>Quando parar</h2>
+        <p>Pare diante de reinícios em laço, falha de inicialização, pedido inesperado de chave de recuperação de criptografia de disco ou corrupção que retorna a cada tentativa. Antes de qualquer reparo profundo, garanta cópia dos arquivos importantes — veja <Link to="/servicos/backup-para-empresas" className="text-accent">backup de dados</Link>.</p>
+
+        <h2>Quando chamar um técnico</h2>
+        <p>Chame quando o mesmo erro persistir depois da progressão completa, quando a máquina não concluir a inicialização ou quando houver dados sem cópia. Avaliação em <Link to="/diagnostico-tecnico" className="text-accent">diagnóstico técnico</Link>; reinstalação, apenas como último passo, em <Link to="/servicos/formatacao" className="text-accent">formatação e instalação do sistema</Link>.</p>
+      </>
+    ),
+  },
+
+  "limpar-cache-do-windows-update-softwaredistribution": {
+    title: "Cache do Windows Update: o que é a SoftwareDistribution e como tratá-la sem risco",
+    excerpt:
+      "A pasta guarda downloads e histórico do Update. Renomear é reversível, apagar não é. Quando o procedimento ajuda, o que ele custa e por que não é solução universal.",
+    date: "2026-08-26",
+    readTime: "9 min",
+    category: "Procedimentos Técnicos",
+    content: (
+      <>
+        <p className="lead">A instrução "apague a SoftwareDistribution" circula em todo fórum de suporte. Ela às vezes funciona, muitas vezes não muda nada e, feita fora de ordem, cria um segundo problema. Vale entender o que a pasta faz antes de mexer nela.</p>
+
+        <h2>Resposta curta</h2>
+        <p>A SoftwareDistribution é a área de trabalho do Windows Update: guarda os pacotes baixados e os dados da fila. Tratá-la só faz sentido quando o sintoma é de download travado ou de fila corrompida. O procedimento correto é parar os serviços, <strong>renomear</strong> a pasta em vez de apagá-la e reiniciar os serviços — assim o Windows recria a estrutura e você mantém um caminho de volta. Isso não conserta erro de instalação nem componente danificado.</p>
+
+        <h2>O que a pasta faz</h2>
+        <h3>Em termos simples</h3>
+        <p>É o depósito temporário do Update: o que foi baixado, o que está na fila e parte do registro do que já passou por ali.</p>
+        <h3>O que acontece tecnicamente</h3>
+        <p>Os serviços de atualização e de transferência em segundo plano escrevem ali os pacotes e o estado da fila. Se um download é interrompido de forma suja, o estado pode ficar inconsistente e o Windows insiste em retomar algo que não existe mais — daí o download eterno em 0%.</p>
+        <h3>O que você perde ao recriar</h3>
+        <p>Os downloads já feitos, que serão baixados de novo, e parte do histórico de atualizações exibido nas configurações. Nenhum arquivo pessoal é afetado, mas a próxima verificação será mais demorada.</p>
+
+        <h2>Quando o procedimento ajuda — e quando não ajuda</h2>
+        <table>
+          <thead>
+            <tr><th>Sintoma</th><th>Tratar o cache ajuda?</th><th>Motivo</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Download parado em 0% por horas</td><td>Provavelmente sim</td><td>Fila inconsistente</td></tr>
+            <tr><td>Erro repetido sempre no mesmo pacote</td><td>Talvez</td><td>Pacote corrompido no cache</td></tr>
+            <tr><td>Instalação que falha após 100%</td><td>Pouco provável</td><td>Problema é de componentes, não de download</td></tr>
+            <tr><td>"Desfazendo alterações" após reiniciar</td><td>Não</td><td>Reversão ocorre depois do download</td></tr>
+            <tr><td>Verificação infinita</td><td>Às vezes</td><td>Pode ser rede, hora do sistema ou serviço parado</td></tr>
+            <tr><td>Falta de espaço em disco</td><td>Alívio temporário</td><td>Libera espaço, mas a causa continua</td></tr>
+          </tbody>
+        </table>
+
+        <h2>Procedimento reversível, na ordem</h2>
+        <ol>
+          <li>Faça a triagem descrita em <Link to="/blog/windows-update-nao-funciona-o-que-verificar" className="text-accent">Windows Update não funciona</Link> e execute antes a solução de problemas do próprio sistema.</li>
+          <li>Abra o prompt de comando como administrador.</li>
+          <li>Pare os serviços de atualização e de transferência em segundo plano. Se algum recusar parar, reinicie a máquina e tente de novo — não force.</li>
+          <li>Renomeie a pasta C:\Windows\SoftwareDistribution para SoftwareDistribution.old. Renomear preserva tudo; apagar elimina a possibilidade de recuperar o histórico.</li>
+          <li>Inicie novamente os serviços parados.</li>
+          <li>Verifique atualizações. O Windows recria a pasta automaticamente.</li>
+          <li>Se o problema não mudou, restaure o nome original e siga para o reparo de componentes. Se resolveu e a máquina passou dias estável, você pode remover a pasta antiga para liberar espaço.</li>
+        </ol>
+
+        <h2>Renomear × apagar</h2>
+        <p>Renomear devolve o controle: se o comportamento piorar, basta restaurar o nome. Apagar é definitivo, costuma esbarrar em arquivos em uso e, quando feito com os serviços rodando, deixa o estado pela metade. Também existe a pasta de cache dos serviços criptográficos, frequentemente citada em conjunto — o mesmo princípio se aplica: renomeie, não apague, e só se o sintoma justificar.</p>
+
+        <h2>O que NÃO fazer</h2>
+        <ul>
+          <li>Apagar a pasta com os serviços em execução.</li>
+          <li>Tratar o cache como manutenção preventiva de rotina. Não é.</li>
+          <li>Rodar scripts prontos de "reset completo do Windows Update" baixados de sites desconhecidos: eles alteram serviços, permissões e registro de uma vez, sem registro do que mudaram.</li>
+          <li>Desabilitar serviços do Update depois do procedimento "para não voltar a acontecer".</li>
+          <li>Alterar permissões de pastas do sistema para conseguir apagar algo que está em uso.</li>
+        </ul>
+
+        <h2>Quando chamar um técnico</h2>
+        <p>Chame quando os serviços não pararem, quando o erro retornar idêntico depois da recriação do cache ou quando a máquina começar a apresentar lentidão e travamento junto com a falha — sinal de que o assunto é maior que o Update. Avaliação em <Link to="/diagnostico-tecnico" className="text-accent">diagnóstico técnico</Link>.</p>
+      </>
+    ),
+  },
+
+  "windows-update-travado-desfazendo-alteracoes": {
+    title: "Atualização travada e \"desfazendo alterações\": o que é reversão e o que fazer",
+    excerpt:
+      "Como distinguir interface parada de processo realmente parado, por que o Windows reverte uma atualização e o que fazer antes de desligar a máquina no botão.",
+    date: "2026-08-26",
+    readTime: "9 min",
+    category: "Diagnóstico",
+    content: (
+      <>
+        <p className="lead">Tela azul-escura com "não desligue o computador" parada na mesma porcentagem por uma hora é o momento em que mais gente estraga a própria máquina. Antes de segurar o botão de energia, é preciso saber se o processo está realmente parado.</p>
+
+        <h2>Resposta curta</h2>
+        <p>Porcentagem congelada não significa processo parado. Observe o indicador de atividade do disco, o ruído do equipamento e o tempo total: atualizações de recurso podem levar bastante tempo, especialmente em disco mecânico. A mensagem "desfazendo alterações" indica reversão automática — um mecanismo de proteção que devolve o sistema ao estado anterior, e não sinal de que o Windows corrompeu.</p>
+
+        <h2>O que é a reversão</h2>
+        <h3>Em termos simples</h3>
+        <p>Quando a instalação encontra um obstáculo depois da reinicialização, o Windows desfaz o que aplicou e volta ao estado que funcionava. Você perde a atualização, não o sistema.</p>
+        <h3>O que acontece tecnicamente</h3>
+        <p>A aplicação final acontece fora da sessão do usuário, com o sistema em modo de manutenção. Se um componente não pode ser substituído, um driver recusa carregar ou falta espaço, o mecanismo interrompe e restaura os arquivos anteriores. Por isso a mensagem aparece depois — e não durante — o download.</p>
+        <h3>Como o usuário percebe</h3>
+        <p>Máquina que reinicia, mostra progresso, volta atrás e retorna à área de trabalho com a mesma versão de antes. Às vezes com um código de erro no histórico, às vezes sem nenhum.</p>
+
+        <h2>Interface parada × processo parado</h2>
+        <table>
+          <thead>
+            <tr><th>Observação</th><th>Interpretação</th><th>Ação</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Luz de atividade do disco piscando</td><td>Processo ativo</td><td>Aguardar</td></tr>
+            <tr><td>Ventoinha variando de rotação</td><td>Carga real de processamento</td><td>Aguardar</td></tr>
+            <tr><td>Porcentagem parada há 20 minutos com disco ativo</td><td>Etapa demorada normal</td><td>Aguardar</td></tr>
+            <tr><td>Nenhuma atividade por várias horas, máquina fria</td><td>Provável travamento</td><td>Considerar intervenção com cautela</td></tr>
+            <tr><td>Tela preta com cursor após reiniciar</td><td>Sessão sem interface</td><td>Aguardar antes de forçar</td></tr>
+            <tr><td>Reinício em laço repetindo a mesma etapa</td><td>Falha persistente</td><td>Parar e avaliar recuperação</td></tr>
+          </tbody>
+        </table>
+
+        <h2>Árvore de decisão</h2>
+        <ol>
+          <li>Há atividade de disco ou variação de ventoinha? Sim → espere; atualizações grandes em disco mecânico demoram muito.</li>
+          <li>Sem atividade por horas? → desligamento pelo botão passa a ser a última alternativa, ciente do risco de deixar a instalação pela metade.</li>
+          <li>A máquina reverteu e voltou ao normal? → investigue a causa antes de tentar de novo: espaço, driver recente, periférico conectado, programa de segurança.</li>
+          <li>Reverte sempre no mesmo ponto? → é falha reprodutível; siga a progressão de reparo em <Link to="/blog/windows-update-nao-funciona-o-que-verificar" className="text-accent">Windows Update não funciona</Link>.</li>
+          <li>Não conclui a inicialização ou pede chave de recuperação? → pare e trate como recuperação, não como atualização.</li>
+        </ol>
+
+        <h2>Causas comuns da reversão</h2>
+        <ul>
+          <li><strong>Driver incompatível:</strong> vídeo, rede e armazenamento lideram a lista. Um driver muito antigo — ou muito novo — pode barrar a atualização.</li>
+          <li><strong>Espaço insuficiente:</strong> falta de espaço no meio da aplicação final derruba tudo.</li>
+          <li><strong>Componentes danificados:</strong> quando a loja de componentes está inconsistente, a substituição de arquivos falha.</li>
+          <li><strong>Programa de segurança de terceiros:</strong> alguns bloqueiam alterações profundas do sistema.</li>
+          <li><strong>Periféricos:</strong> discos externos, leitores e adaptadores podem interferir; desconecte o que não for essencial antes de repetir.</li>
+        </ul>
+
+        <h2>Depois de reverter, antes de tentar de novo</h2>
+        <p>Libere espaço, atualize o driver de vídeo pelo site do fabricante, desconecte periféricos, reinicie e tente uma única vez. Repetir a mesma tentativa sem mudar nada só reproduz a mesma reversão. Se o histórico mostra código de erro, anote-o com o horário: ele orienta o próximo passo. Códigos como os das famílias 0x80070000 e 0x80240000 aparecem em contextos diferentes e não têm solução única — o mesmo número pode indicar parâmetro inválido, falta de espaço ou falha de comunicação com o serviço, dependendo do estágio em que surgiu.</p>
+
+        <h2>O que NÃO fazer</h2>
+        <ul>
+          <li>Desligar no botão enquanto houver atividade de disco.</li>
+          <li>Interromper repetidamente a mesma instalação: cada corte aumenta a chance de deixar componentes pela metade.</li>
+          <li>Desativar o Windows Update para "parar de tentar".</li>
+          <li>Desabilitar o serviço de reparo do Update — ele existe para recolocar componentes no lugar.</li>
+          <li>Rodar scripts desconhecidos de reparo enquanto a máquina está instável.</li>
+          <li>Formatar antes de garantir cópia dos arquivos.</li>
+        </ul>
+
+        <h2>Quando parar</h2>
+        <p>Pare quando a máquina entrar em laço de reinício, quando a inicialização falhar, quando surgir pedido de chave de recuperação de criptografia de disco ou quando existirem dados importantes sem cópia. A prioridade passa a ser preservar os arquivos — veja <Link to="/servicos/backup-para-empresas" className="text-accent">backup de dados</Link> e <Link to="/servicos/recuperacao-de-dados" className="text-accent">recuperação de dados</Link>.</p>
+
+        <h2>Quando chamar um técnico</h2>
+        <p>Chame quando a reversão se repetir depois das correções acima, quando o sistema não iniciar ou quando você não tiver a chave de recuperação em mãos. Avaliação em <Link to="/diagnostico-tecnico" className="text-accent">diagnóstico técnico</Link>.</p>
       </>
     ),
   },

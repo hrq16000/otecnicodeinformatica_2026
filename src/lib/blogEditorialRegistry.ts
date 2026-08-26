@@ -857,6 +857,93 @@ const WAVE_10F: EditorialApproval[] = [
   },
 ];
 
+const WAVE_10G: EditorialApproval[] = [
+  {
+    slug: "webcam-nao-funciona-o-que-verificar",
+    status: "approved",
+    authorType: "organization",
+    authorId: INSTITUTIONAL_AUTHOR.id,
+    reviewedAt: "2026-08-26",
+    approvedAt: "2026-08-26",
+    imageOrigin: "licensed",
+    imageLicense: "CC BY-SA 3.0",
+    imageAttribution:
+      "Foto: Sushiflinger (Wikimedia Commons), CC BY-SA 3.0 — https://commons.wikimedia.org/wiki/File:Webcam_On_Laptop.JPG",
+    notes:
+      "Pilar do cluster de webcam, escrito do zero na Onda 10C (Lote 4); fact-check registrado em blogEditorialSources.ts; capa é imagem real licenciada, sem IA.",
+  },
+  {
+    slug: "permissoes-de-camera-no-windows",
+    status: "approved",
+    authorType: "organization",
+    authorId: INSTITUTIONAL_AUTHOR.id,
+    reviewedAt: "2026-08-26",
+    approvedAt: "2026-08-26",
+    imageOrigin: "licensed",
+    imageLicense: "CC BY-SA 4.0",
+    imageAttribution:
+      "Foto: Santeri Viinamäki (Wikimedia Commons), CC BY-SA 4.0 — https://commons.wikimedia.org/wiki/File:Tape_over_laptop_webcam.jpg",
+    notes:
+      "Satélite de permissões, escrito do zero na Onda 10C (Lote 4); fact-check registrado em blogEditorialSources.ts; capa é imagem real licenciada, sem IA.",
+  },
+  {
+    slug: "webcam-usb-nao-e-detectada",
+    status: "approved",
+    authorType: "organization",
+    authorId: INSTITUTIONAL_AUTHOR.id,
+    reviewedAt: "2026-08-26",
+    approvedAt: "2026-08-26",
+    imageOrigin: "licensed",
+    imageLicense: "CC0",
+    imageAttribution:
+      "Foto: WrS.tm.pl (Wikimedia Commons), CC0 — https://commons.wikimedia.org/wiki/File:USB_webcam_for_PC.jpg",
+    notes:
+      "Satélite de webcam USB, escrito do zero na Onda 10C (Lote 4); fact-check registrado em blogEditorialSources.ts; capa é imagem real licenciada, sem IA.",
+  },
+  {
+    slug: "windows-update-nao-funciona-o-que-verificar",
+    status: "approved",
+    authorType: "organization",
+    authorId: INSTITUTIONAL_AUTHOR.id,
+    reviewedAt: "2026-08-26",
+    approvedAt: "2026-08-26",
+    imageOrigin: "licensed",
+    imageLicense: "Public Domain",
+    imageAttribution:
+      "Foto: Dion Dresschers (Wikimedia Commons), domínio público — https://commons.wikimedia.org/wiki/File:Cc0-windows-update_dion_dresschers.png",
+    notes:
+      "Pilar do cluster de Windows Update, escrito do zero na Onda 10C (Lote 4); nenhum procedimento de desativação de serviço é recomendado; fact-check registrado em blogEditorialSources.ts; capa é imagem real licenciada, sem IA.",
+  },
+  {
+    slug: "limpar-cache-do-windows-update-softwaredistribution",
+    status: "approved",
+    authorType: "organization",
+    authorId: INSTITUTIONAL_AUTHOR.id,
+    reviewedAt: "2026-08-26",
+    approvedAt: "2026-08-26",
+    imageOrigin: "licensed",
+    imageLicense: "Public Domain",
+    imageAttribution:
+      "Foto: Wikipedian5122024 (Wikimedia Commons), domínio público — https://commons.wikimedia.org/wiki/File:Windows_10-11_update_screen_notice.png",
+    notes:
+      "Satélite de cache do Update, escrito do zero na Onda 10C (Lote 4); procedimento publicado é reversível (renomear, nunca apagar como primeiro passo); fact-check registrado em blogEditorialSources.ts; capa é imagem real licenciada, sem IA.",
+  },
+  {
+    slug: "windows-update-travado-desfazendo-alteracoes",
+    status: "approved",
+    authorType: "organization",
+    authorId: INSTITUTIONAL_AUTHOR.id,
+    reviewedAt: "2026-08-26",
+    approvedAt: "2026-08-26",
+    imageOrigin: "licensed",
+    imageLicense: "Public Domain",
+    imageAttribution:
+      "Foto: PantheraLeo1359531 (Wikimedia Commons), domínio público — https://commons.wikimedia.org/wiki/File:Windows_Update_%E2%80%93_VirtualBox_Windows_11_24H2_(Version_10.0.26100.1742)_04_02_2025_18_22_13crop.png",
+    notes:
+      "Satélite de reversão de atualização, escrito do zero na Onda 10C (Lote 4); desligamento forçado tratado com ressalva explícita; fact-check registrado em blogEditorialSources.ts; capa é imagem real licenciada, sem IA.",
+  },
+];
+
 export const APPROVED_EDITORIAL_CONTENT = new Map<string, EditorialApproval>([
 
   ...FIRST_WAVE_SLUGS.map((slug) => [
@@ -905,6 +992,7 @@ export const APPROVED_EDITORIAL_CONTENT = new Map<string, EditorialApproval>([
   ...WAVE_10E.map((a) => [a.slug, a] as [string, EditorialApproval]),
 
   ...WAVE_10F.map((a) => [a.slug, a] as [string, EditorialApproval]),
+  ...WAVE_10G.map((a) => [a.slug, a] as [string, EditorialApproval]),
 ]);
 
 

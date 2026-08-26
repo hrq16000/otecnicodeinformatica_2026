@@ -206,6 +206,31 @@ const CURADORIA = [
     slug: "servico-de-audio-do-windows-nao-esta-em-execucao",
     commons: "File:GIGABYTE GS-GC330UD (8357750354).jpg",
   },
+  // ── Onda 10C — Lote 4: webcam e Windows Update.
+  {
+    slug: "webcam-nao-funciona-o-que-verificar",
+    commons: "File:Webcam On Laptop.JPG",
+  },
+  {
+    slug: "permissoes-de-camera-no-windows",
+    commons: "File:Tape over laptop webcam.jpg",
+  },
+  {
+    slug: "webcam-usb-nao-e-detectada",
+    commons: "File:USB webcam for PC.jpg",
+  },
+  {
+    slug: "windows-update-nao-funciona-o-que-verificar",
+    commons: "File:Cc0-windows-update dion dresschers.png",
+  },
+  {
+    slug: "limpar-cache-do-windows-update-softwaredistribution",
+    commons: "File:Windows 10-11 update screen notice.png",
+  },
+  {
+    slug: "windows-update-travado-desfazendo-alteracoes",
+    commons: "File:Windows Update \u2013 VirtualBox Windows 11 24H2 (Version 10.0.26100.1742) 04 02 2025 18 22 13crop.png",
+  },
 ];
 
 /** Metadados + URL de uma imagem do Wikimedia Commons (licença real, sem IA). */
