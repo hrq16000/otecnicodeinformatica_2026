@@ -3,7 +3,7 @@
   "status": "PARTIAL_BLOCKED",
   "head": "LOCAL_EXECUTION",
   "gsc": "UNKNOWN / AUTH_REQUIRED",
-  "recommendation": "FIX",
+  "recommendation": "FIX+OBSERVE",
   "p1ValidationEligible": "NO",
   "lote1Authorized": "NO",
   "checks": {
@@ -12,7 +12,7 @@
     "metadata": "PASS_WITH_44_WARNINGS",
     "jsonldSSR": "BLOCKED_NO_DIST",
     "indexHeaders": "BLOCKED_NO_DIST",
-    "cannibalization": "BLOCKED_BUN_MISSING"
+    "cannibalization": "PASS_WITH_4_REVIEW_WARNINGS"
   },
-  "reason": "Execucao local concluida ate o limite do ambiente: prebuild passa, build bloqueado por binding nativo; GSC tentou integracao e confirmou credenciais ausentes."
+  "reason": "Execucao recuperada: prebuild, Bun anti-canibalizacao e export-secrets passam; build/SSR permanecem bloqueados pelo binding nativo do Rolldown no Windows e GSC confirmou credenciais ausentes."
 }
