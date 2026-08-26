@@ -66,3 +66,4 @@
 - [Rodada 4E — redes e suporte remoto](mem://features/rodada-4e-redes-remoto) — 5 owners de Wi-Fi/rede/remoto sem URLs novas, render fail-closed e separação internet lenta × Wi-Fi lento.
 - [Intenção conversacional + orphan-trend](mem://features/intencao-conversacional-e-orphan-trend) — Blocos o que/como/por que/onde nacionais em /problemas, FAQPage único por URL e baseline versionado de páginas órfãs.
 - [Infra de ondas editoriais](mem://features/infra-ondas-editoriais) — Registry por onda/lote, monitor GSC, gate anti-canibalização, painel /admin/editorial-ondas e E2E ampliado.
+- [Onda 10C — Lote 3](mem://features/onda-10c-lote3-armazenamento-audio) — 6 satélites de disco não detectado e áudio; CHKDSK proibido como recomendação padrão em disco com suspeita de falha física.
