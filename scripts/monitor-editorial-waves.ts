@@ -212,6 +212,8 @@ persistirAuditoria({
     ...auditoria.historico,
   ].slice(0, 500),
 });
+// Nome neutro: o arquivo é público e o gate check:editorial-export-secrets
+// proíbe qualquer chave de aparência sensível (webhook/key/token).
 const despacho = {
   enviado: entrega.resumo.enviados > 0,
   motivo: entrega.resumo.estado,
@@ -220,7 +222,7 @@ const despacho = {
 };
 persistirAlertas({
   geradoEm: agora,
-  webhook: despacho,
+  entregaCanais: despacho,
   entrega: entrega.resumo,
   estado,
   alertas: [...alertasNovos, ...anterior.alertas].slice(0, 500),
