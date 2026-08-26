@@ -168,6 +168,19 @@ const CURADORIA = [
     slug: "bios-corrompida-reset-cmos-atualizacao",
     commons: "File:CMOS Battery, Motherboard.jpg",
   },
+  // Onda 10C — Lote 2: internet/Wi-Fi e impressoras (satélites).
+  {
+    slug: "internet-lenta-provedor-ou-roteador",
+    commons: "File:ARRIS CM820B DOCSIS Cable Modem.jpg",
+  },
+  {
+    slug: "impressora-offline-como-resolver",
+    commons: "File:Dell Color Laser Network Printer 1320cn ports.jpg",
+  },
+  {
+    slug: "fila-de-impressao-travada-spooler-windows",
+    commons: "File:Sharp MX-M465 of Aurora Office Equipment 20161029.jpg",
+  },
 ];
 
 /** Metadados + URL de uma imagem do Wikimedia Commons (licença real, sem IA). */

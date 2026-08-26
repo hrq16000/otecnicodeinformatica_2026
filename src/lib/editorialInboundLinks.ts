@@ -25,23 +25,6 @@ const MAX_POR_PAGINA = 3;
 
 /** Página comercial → artigos aprovados semanticamente relacionados. */
 const MAPA: Record<string, EditorialInboundLink[]> = {
-  "/servicos/conserto-de-computador": [
-    {
-      slug: "botao-power-nao-funciona-jump-start-placa-mae",
-      label: "Botão power não funciona: teste pelo conector",
-      hint: "Como isolar o botão frontal antes de suspeitar da fonte ou da placa.",
-    },
-    {
-      slug: "curto-circuito-placa-mae-como-identificar",
-      label: "Curto-circuito na placa-mãe: como identificar",
-      hint: "O que significa a partida abortada e como isolar o componente responsável.",
-    },
-    {
-      slug: "bios-corrompida-reset-cmos-atualizacao",
-      label: "BIOS corrompida: reset de CMOS e recuperação",
-      hint: "Diferença entre perda de configuração e firmware corrompido, com o procedimento de cada caso.",
-    },
-  ],
   "/servicos/upgrade-ssd-ram": [
     {
       slug: "memoria-ram-insuficiente-sintomas",
@@ -131,6 +114,16 @@ const MAPA: Record<string, EditorialInboundLink[]> = {
     },
   ],
   "/servicos/redes-e-wifi": [
+    {
+      slug: "internet-lenta-provedor-ou-roteador",
+      label: "Internet lenta: é o provedor ou o roteador?",
+      hint: "Três medições que separam a entrega da operadora da limitação interna.",
+    },
+    {
+      slug: "impressora-offline-como-resolver",
+      label: "Impressora offline: como resolver",
+      hint: "Por que o endereço da impressora se perde e como corrigir a porta cadastrada.",
+    },
     {
       slug: "como-configurar-roteador-wifi-iniciantes",
       label: "Como configurar um roteador Wi-Fi do zero",
@@ -247,6 +240,21 @@ const MAPA: Record<string, EditorialInboundLink[]> = {
     },
   ],
   "/servicos/manutencao-de-computador": [
+    {
+      slug: "botao-power-nao-funciona-jump-start-placa-mae",
+      label: "Botão power não funciona: teste pelo conector",
+      hint: "Como isolar o botão frontal antes de suspeitar da fonte ou da placa.",
+    },
+    {
+      slug: "curto-circuito-placa-mae-como-identificar",
+      label: "Curto-circuito na placa-mãe: como identificar",
+      hint: "O que significa a partida abortada e como isolar o componente responsável.",
+    },
+    {
+      slug: "bios-corrompida-reset-cmos-atualizacao",
+      label: "BIOS corrompida: reset de CMOS e recuperação",
+      hint: "Diferença entre perda de configuração e firmware corrompido, com o procedimento de cada caso.",
+    },
     {
       slug: "limpar-arquivos-temporarios-windows",
       label: "Limpar arquivos temporários com segurança",

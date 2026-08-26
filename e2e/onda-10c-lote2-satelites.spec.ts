@@ -1,28 +1,29 @@
 import { test, expect, type APIRequestContext } from "@playwright/test";
 
 /**
- * GATE E2E — Onda 10C / Lote 1 (clusters 3 e 4).
+ * GATE E2E — Onda 10C / Lote 2 (clusters 5 e 6: internet/Wi-Fi e impressoras).
  *
- * Valida no HTML SSR (sem JavaScript) os três satélites publicados:
+ * Valida no HTML SSR (sem JavaScript) os satélites publicados:
  *  1. rota responde 200 e é indexável;
  *  2. H1 único e conteúdo editorial presente no HTML bruto;
  *  3. tabela diagnóstica e seção "Quando chamar um técnico";
  *  4. FAQPage único + Article/TechArticle com parse válido;
- *  5. links internos declarados existem (sem 404) e sem link direto de WhatsApp.
+ *  5. links internos declarados existem (sem 404) e sem link direto de WhatsApp;
+ *  6. interlinking do cluster de impressoras entre offline ↔ spooler.
  */
 
 const SATELITES = [
   {
-    path: "/blog/botao-power-nao-funciona-jump-start-placa-mae",
-    h1: "Botão power não funciona",
+    path: "/blog/internet-lenta-provedor-ou-roteador",
+    h1: "Internet lenta",
   },
   {
-    path: "/blog/curto-circuito-placa-mae-como-identificar",
-    h1: "Curto-circuito na placa-mãe",
+    path: "/blog/impressora-offline-como-resolver",
+    h1: "Impressora offline",
   },
   {
-    path: "/blog/bios-corrompida-reset-cmos-atualizacao",
-    h1: "BIOS corrompida",
+    path: "/blog/fila-de-impressao-travada-spooler-windows",
+    h1: "Fila de impressão travada",
   },
 ];
 
@@ -50,7 +51,7 @@ const jsonLd = (page: string) =>
     .flatMap((n) => (Array.isArray(n) ? n : [n])) as Array<Record<string, unknown>>;
 
 for (const { path, h1 } of SATELITES) {
-  test.describe(`satélite 10C — ${path}`, () => {
+  test.describe(`satélite 10C/L2 — ${path}`, () => {
     test("SSR indexável, H1 único e conteúdo citável", async ({ request }) => {
       const page = await html(request, path);
 
@@ -107,3 +108,20 @@ for (const { path, h1 } of SATELITES) {
     });
   });
 }
+
+test("cluster de impressoras interliga offline ↔ fila travada", async ({ request }) => {
+  const offline = await html(request, "/blog/impressora-offline-como-resolver");
+  expect(offline).toContain("/blog/fila-de-impressao-travada-spooler-windows");
+
+  const fila = await html(request, "/blog/fila-de-impressao-travada-spooler-windows");
+  expect(fila).toContain("/blog/impressora-offline-como-resolver");
+});
+
+test("triagem de internet aponta para o owner de cobertura sem duplicá-lo", async ({ request }) => {
+  const page = await html(request, "/blog/internet-lenta-provedor-ou-roteador");
+  expect(page).toContain("/blog/como-melhorar-sinal-wifi-em-casa");
+
+  const texto = page.replace(/<[^>]+>/g, " ").replace(/\s+/g, " ");
+  // A página é de TRIAGEM de origem, não de melhoria de cobertura.
+  expect(texto).toContain("por cabo");
+});

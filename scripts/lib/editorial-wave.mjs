@@ -421,7 +421,7 @@ export const EDITORIAL_WAVE = [
   {
     slug: "botao-power-nao-funciona-jump-start-placa-mae",
     approvedAt: "2026-08-26",
-    pilar: "/servicos/conserto-de-computador",
+    pilar: "/servicos/manutencao-de-computador",
     pilarLabel: "Conserto de computador",
     apoio: "/blog/como-testar-fonte-de-alimentacao-pc",
     apoioLabel: "Como testar a fonte de alimentação",
@@ -444,6 +444,34 @@ export const EDITORIAL_WAVE = [
     apoio: "/blog/curto-circuito-placa-mae-como-identificar",
     apoioLabel: "Curto-circuito na placa-mãe",
     cover: "/blog/bios-corrompida-reset-cmos-atualizacao.jpg",
+  },
+  // Onda 10C — Lote 2: internet/Wi-Fi (triagem) e impressoras.
+  {
+    slug: "internet-lenta-provedor-ou-roteador",
+    approvedAt: "2026-08-26",
+    pilar: "/servicos/redes-e-wifi",
+    pilarLabel: "Redes e Wi-Fi",
+    apoio: "/blog/como-melhorar-sinal-wifi-em-casa",
+    apoioLabel: "Como melhorar o sinal de Wi-Fi em casa",
+    cover: "/blog/internet-lenta-provedor-ou-roteador.jpg",
+  },
+  {
+    slug: "impressora-offline-como-resolver",
+    approvedAt: "2026-08-26",
+    pilar: "/servicos/redes-e-wifi",
+    pilarLabel: "Redes e Wi-Fi",
+    apoio: "/blog/como-instalar-impressora-windows-passo-a-passo",
+    apoioLabel: "Como instalar impressora no Windows",
+    cover: "/blog/impressora-offline-como-resolver.jpg",
+  },
+  {
+    slug: "fila-de-impressao-travada-spooler-windows",
+    approvedAt: "2026-08-26",
+    pilar: "/diagnostico-tecnico",
+    pilarLabel: "Diagnóstico técnico",
+    apoio: "/blog/impressora-offline-como-resolver",
+    apoioLabel: "Impressora offline: como resolver",
+    cover: "/blog/fila-de-impressao-travada-spooler-windows.jpg",
   },
 ];
 

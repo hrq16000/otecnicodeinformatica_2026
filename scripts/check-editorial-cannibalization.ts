@@ -19,10 +19,19 @@
  */
 import { EDITORIAL_WAVES } from "../src/lib/editorialWavesRegistry";
 import { CONTENT_INTENT_MAP } from "../src/lib/contentIntentMap";
+// @ts-expect-error — fonte .mjs compartilhada com os gates de build.
+import { EDITORIAL_WAVE } from "./lib/editorial-wave.mjs";
 
 const TETO_SIMILARIDADE = 0.4;
 
-type Alvo = { url: string; origem: string; queries: string[]; doNotDuplicate: string[] };
+type Alvo = {
+  url: string;
+  origem: string;
+  queries: string[];
+  doNotDuplicate: string[];
+  /** true quando as consultas são derivadas do slug (proxy, não declaração). */
+  derivado?: boolean;
+};
 
 const normalizar = (q: string) =>
   q
@@ -47,8 +56,22 @@ const jaccard = (a: Set<string>, b: Set<string>) => {
   return inter / (a.size + b.size - inter);
 };
 
+/**
+ * Acervo indexável real (onda editorial aprovada). As consultas são derivadas
+ * do slug — proxy honesto de intenção em português, suficiente para detectar
+ * que um candidato repete um owner já publicado.
+ */
+const ondaIndexavel: Alvo[] = (EDITORIAL_WAVE as Array<{ slug: string }>).map((a) => ({
+  url: `/blog/${a.slug}`,
+  origem: "onda editorial indexável",
+  queries: [a.slug.replace(/-/g, " ")],
+  doNotDuplicate: [],
+  derivado: true,
+}));
+
 // ── Acervo declarado ────────────────────────────────────────────
 const acervo: Alvo[] = [
+  ...ondaIndexavel,
   ...EDITORIAL_WAVES.map((e) => ({
     url: e.url,
     origem: `onda ${e.wave}/${e.batch}`,
@@ -87,7 +110,12 @@ for (const c of candidatos) {
   }
 }
 
-const universo = [...acervo, ...candidatos];
+const vistos = new Set<string>();
+const universo = [...acervo, ...candidatos].filter((a) => {
+  if (vistos.has(a.url)) return false;
+  vistos.add(a.url);
+  return true;
+});
 
 // 1 · consulta idêntica em duas URLs
 const porQuery = new Map<string, string[]>();
@@ -117,7 +145,12 @@ for (let i = 0; i < universo.length; i += 1) {
       const linha = `${a.url} × ${b.url} → similaridade ${sim.toFixed(2)} (teto ${TETO_SIMILARIDADE})`;
       const declarado =
         a.doNotDuplicate.includes(b.url) || b.doNotDuplicate.includes(a.url);
+      // Pares derivados de slug entre URLs JÁ publicadas são proxy, não
+      // declaração: viram REVIEW. Bloqueia apenas o que envolve candidato
+      // ou consultas realmente declaradas no registry.
+      const proxyEntrePublicadas = a.derivado && b.derivado;
       if (declarado) avisos.push(`${linha} — proximidade já declarada em doNotDuplicate.`);
+      else if (proxyEntrePublicadas) avisos.push(`REVIEW ${linha} — similaridade estimada pelo slug entre URLs já publicadas.`);
       else erros.push(linha);
     }
   }

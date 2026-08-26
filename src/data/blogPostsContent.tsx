@@ -12608,7 +12608,7 @@ bcdboot C:\\Windows /s S: /f UEFI`}</code></pre>
         </ul>
 
         <h2>Quando chamar um técnico</h2>
-        <p>Chame quando o equipamento estiver na garantia, quando não conseguir identificar o par correto no manual, quando houver cheiro de queimado ou marca escura na placa, quando o gabinete for de notebook ou all-in-one, e quando a máquina não partir nem pelo conector. Nesse ponto o teste seguinte exige fonte de bancada e medição — atendimento em <Link to="/servicos/conserto-de-computador" className="text-accent">conserto de computador</Link> ou triagem em <Link to="/diagnostico-tecnico" className="text-accent">diagnóstico técnico</Link>.</p>
+        <p>Chame quando o equipamento estiver na garantia, quando não conseguir identificar o par correto no manual, quando houver cheiro de queimado ou marca escura na placa, quando o gabinete for de notebook ou all-in-one, e quando a máquina não partir nem pelo conector. Nesse ponto o teste seguinte exige fonte de bancada e medição — atendimento em <Link to="/servicos/manutencao-de-computador" className="text-accent">manutenção de computador</Link> ou triagem em <Link to="/diagnostico-tecnico" className="text-accent">diagnóstico técnico</Link>.</p>
       </>
     ),
   },
@@ -12683,7 +12683,7 @@ bcdboot C:\\Windows /s S: /f UEFI`}</code></pre>
         <p>Depois que a máquina volta a ligar, confirme estabilidade sob carga e temperatura antes de fechar o caso: o padrão de ligar e desligar também aparece por aquecimento, com sintoma parecido mas causa diferente.</p>
 
         <h2>Quando chamar um técnico</h2>
-        <p>Chame quando houver cheiro de queimado, marca de carbonização, líquido derramado ou capacitor estufado; quando o desligamento persistir com a bancada mínima e outra fonte; quando existirem dados importantes no disco; e sempre que o reparo envolver solda. O diagnóstico com instrumentos está em <Link to="/diagnostico-tecnico" className="text-accent">diagnóstico técnico</Link>, e o atendimento de bancada em <Link to="/servicos/conserto-de-computador" className="text-accent">conserto de computador</Link>. Se o próximo passo for eliminar dúvida sobre a placa, o roteiro complementar está em <Link to="/blog/como-diagnosticar-placa-mae-defeituosa" className="text-accent">como diagnosticar placa-mãe defeituosa</Link>.</p>
+        <p>Chame quando houver cheiro de queimado, marca de carbonização, líquido derramado ou capacitor estufado; quando o desligamento persistir com a bancada mínima e outra fonte; quando existirem dados importantes no disco; e sempre que o reparo envolver solda. O diagnóstico com instrumentos está em <Link to="/diagnostico-tecnico" className="text-accent">diagnóstico técnico</Link>, e o atendimento de bancada em <Link to="/servicos/manutencao-de-computador" className="text-accent">manutenção de computador</Link>. Se o próximo passo for eliminar dúvida sobre a placa, o roteiro complementar está em <Link to="/blog/como-diagnosticar-placa-mae-defeituosa" className="text-accent">como diagnosticar placa-mãe defeituosa</Link>.</p>
       </>
     ),
   },
@@ -12758,7 +12758,191 @@ bcdboot C:\\Windows /s S: /f UEFI`}</code></pre>
         <p>Atualização de firmware não é manutenção de rotina e não deixa a máquina mais rápida. Faça apenas quando houver motivo declarado: suporte a um processador novo, correção de falha de segurança divulgada ou incompatibilidade documentada de memória. Baixe o arquivo somente na página do modelo exato no site do fabricante, confira a revisão da placa impressa nela, use a ferramenta nativa do próprio Setup e não desligue durante o processo. Onde houver risco de queda de energia, use um nobreak.</p>
 
         <h2>Quando chamar um técnico</h2>
-        <p>Chame quando a tela continuar preta após o reset, quando a máquina for notebook e exigir desmontagem para alcançar a bateria de CMOS, quando houver criptografia de disco e você não tiver a chave, e sempre que a atualização tiver sido interrompida no meio. Regravação de chip é procedimento de bancada — a avaliação está em <Link to="/diagnostico-tecnico" className="text-accent">diagnóstico técnico</Link> e o atendimento em <Link to="/servicos/conserto-de-computador" className="text-accent">conserto de computador</Link>. Se o quadro incluir partidas abortadas, verifique antes <Link to="/blog/curto-circuito-placa-mae-como-identificar" className="text-accent">curto-circuito na placa-mãe</Link>.</p>
+        <p>Chame quando a tela continuar preta após o reset, quando a máquina for notebook e exigir desmontagem para alcançar a bateria de CMOS, quando houver criptografia de disco e você não tiver a chave, e sempre que a atualização tiver sido interrompida no meio. Regravação de chip é procedimento de bancada — a avaliação está em <Link to="/diagnostico-tecnico" className="text-accent">diagnóstico técnico</Link> e o atendimento em <Link to="/servicos/manutencao-de-computador" className="text-accent">manutenção de computador</Link>. Se o quadro incluir partidas abortadas, verifique antes <Link to="/blog/curto-circuito-placa-mae-como-identificar" className="text-accent">curto-circuito na placa-mãe</Link>.</p>
+      </>
+    ),
+  },
+
+  "internet-lenta-provedor-ou-roteador": {
+    title: "Internet lenta: é o provedor ou o seu roteador?",
+    excerpt:
+      "Como separar, com dois testes objetivos, a lentidão que vem da operadora da lentidão que nasce dentro de casa — e o que fazer em cada caso.",
+    date: "2026-08-26",
+    readTime: "9 min",
+    category: "Redes e Wi-Fi",
+    content: (
+      <>
+        <p className="lead">Antes de trocar de plano ou comprar um roteador novo, vale gastar dez minutos separando duas coisas diferentes: a velocidade que chega até a sua casa e a velocidade que sobra depois de passar pela rede interna. Elas quase nunca são iguais.</p>
+
+        <h2>Resposta curta</h2>
+        <p>Faça o teste de velocidade com o computador ligado por <strong>cabo</strong> direto no roteador. Se o resultado ficar próximo do contratado, a entrega do provedor está boa e o problema é interno (Wi-Fi, distância, canal, aparelho antigo). Se o resultado por cabo também estiver muito abaixo, a suspeita passa a ser da operadora ou do enlace até ela.</p>
+
+        <h2>Os dois testes que separam a origem</h2>
+        <ol>
+          <li><strong>Teste por cabo:</strong> conecte um notebook ou desktop a uma porta LAN do roteador com cabo de rede, feche downloads e streaming em outros aparelhos e rode a medição três vezes em horários diferentes. Anote o pior e o melhor resultado.</li>
+          <li><strong>Teste sem fio, no mesmo cômodo do roteador:</strong> repita a medição a um ou dois metros do aparelho. Depois repita no cômodo onde a lentidão incomoda.</li>
+        </ol>
+        <p>Com esses três números — cabo, Wi-Fi perto e Wi-Fi longe — a conversa deixa de ser opinião. Se o cabo entrega e o Wi-Fi perto também entrega, o que falta é cobertura, e o caminho está em <Link to="/blog/como-melhorar-sinal-wifi-em-casa" className="text-accent">como melhorar o sinal de Wi-Fi em casa</Link>.</p>
+
+        <h2>Tabela de decisão: o que cada combinação significa</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Cabo</th>
+              <th>Wi-Fi perto do roteador</th>
+              <th>Interpretação</th>
+              <th>Próximo passo</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Próximo do contratado</td><td>Próximo do contratado</td><td>Entrega e roteador estão bem</td><td>Problema é de cobertura ou do aparelho cliente</td></tr>
+            <tr><td>Próximo do contratado</td><td>Muito abaixo</td><td>Rede sem fio limitando</td><td>Canal, banda de 5 GHz, posicionamento, roteador antigo</td></tr>
+            <tr><td>Muito abaixo</td><td>Muito abaixo</td><td>Entrega ou enlace comprometido</td><td>Abrir chamado com a operadora com os números anotados</td></tr>
+            <tr><td>Oscila muito entre medições</td><td>Oscila junto</td><td>Instabilidade no enlace ou saturação</td><td>Registrar horários e reclamar com histórico</td></tr>
+            <tr><td>Bom, mas com latência alta em jogos e chamadas</td><td>Igual</td><td>Congestionamento, não falta de velocidade</td><td>Verificar quem consome a banda e priorizar</td></tr>
+          </tbody>
+        </table>
+
+        <h2>Sinais de que o problema é do provedor</h2>
+        <ul>
+          <li>Velocidade por cabo consistentemente muito abaixo do contratado em vários horários.</li>
+          <li>Quedas curtas e repetidas mesmo com todos os aparelhos desligados.</li>
+          <li>Vizinhos no mesmo prédio ou rua relatando o mesmo comportamento no mesmo período.</li>
+          <li>Luz de sinal do modem alternando de estado sem intervenção.</li>
+        </ul>
+        <p>Nesses casos, o registro dos testes por cabo, com data e hora, é o que sustenta o chamado. Peça número de protocolo e verificação do enlace, não apenas reinício remoto.</p>
+
+        <h2>Sinais de que o problema é interno</h2>
+        <ul>
+          <li>Cabo entrega bem, Wi-Fi não — clássico de cobertura ou de roteador com poucos anos de projeto.</li>
+          <li>Lentidão só em um cômodo, atrás de parede grossa, laje ou caixa d'água.</li>
+          <li>Um único aparelho lento enquanto os demais navegam normalmente: o gargalo é do aparelho.</li>
+          <li>Lentidão que começa sempre no mesmo horário — alguém baixando, atualizando ou fazendo backup.</li>
+        </ul>
+
+        <h2>O que não resolve</h2>
+        <p>Trocar o plano por um mais rápido não corrige rede interna: se o Wi-Fi já não entrega o que existe hoje, ele não entregará o dobro amanhã. Repetidor mal posicionado costuma piorar, porque repete um sinal fraco. E "limpar cache" ou reinstalar o navegador não tem relação com a velocidade do enlace.</p>
+
+        <h2>Quando chamar um técnico</h2>
+        <p>Faz sentido chamar quando os testes indicam rede interna e a casa exige cabeamento, ponto adicional ou substituição de equipamento — planejamento que evita comprar aparelho errado. O serviço está em <Link to="/servicos/redes-e-wifi" className="text-accent">redes e Wi-Fi</Link>, e o atendimento no endereço em <Link to="/atendimento-domicilio" className="text-accent">atendimento a domicílio</Link>. Se a instabilidade for permanente, comece pela leitura de <Link to="/problemas/wifi-instavel" className="text-accent">Wi-Fi instável</Link>.</p>
+      </>
+    ),
+  },
+
+  "impressora-offline-como-resolver": {
+    title: "Impressora offline: por que aparece assim e como resolver",
+    excerpt:
+      "O que o status \"offline\" realmente significa no Windows, a diferença entre endereço perdido e fila travada e a sequência de verificação que resolve sem reinstalar nada.",
+    date: "2026-08-26",
+    readTime: "9 min",
+    category: "Procedimentos Técnicos",
+    content: (
+      <>
+        <p className="lead">"Impressora offline" quase nunca quer dizer que a impressora está desligada. Na maioria das vezes ela está ligada, acesa e conectada — o que se perdeu foi o caminho até ela.</p>
+
+        <h2>Resposta curta</h2>
+        <p>O status offline significa que o Windows tentou falar com a impressora e não obteve resposta. Em rede, a causa mais comum é <strong>troca do endereço IP</strong> do aparelho; por cabo, é porta, cabo ou serviço de impressão parado. Verifique nessa ordem: aparelho aceso e sem erro no painel, endereço atual, e só depois o software.</p>
+
+        <h2>Por que o endereço se perde</h2>
+        <p>O roteador entrega endereços por empréstimo e com prazo. Quando a impressora fica desligada além do prazo, ou quando falta energia, ela pode voltar com outro endereço. O Windows continua chamando o endereço antigo, não encontra ninguém e marca a fila como offline. É o mesmo motivo pelo qual a impressora "some" depois de um fim de semana.</p>
+
+        <h2>Sequência de verificação</h2>
+        <ol>
+          <li><strong>No painel da impressora:</strong> confirme que não há aviso de papel, tampa aberta, cartucho ou toner. Aparelho em erro não responde à rede.</li>
+          <li><strong>Imprima a página de configuração de rede</strong> pelo menu do próprio aparelho. Ela mostra o endereço atual e se o Wi-Fi está mesmo conectado.</li>
+          <li><strong>Compare com a porta cadastrada no Windows</strong> em Configurações → Bluetooth e dispositivos → Impressoras e scanners → propriedades da impressora → Portas. Endereços diferentes explicam tudo.</li>
+          <li><strong>Corrija a porta</strong> apontando para o endereço atual, ou recadastre pela opção de adicionar por endereço TCP/IP.</li>
+          <li><strong>Desmarque o modo offline:</strong> abra a fila e confirme que "Usar impressora offline" e "Pausar impressão" estão desmarcados.</li>
+          <li><strong>Fixe o endereço no roteador</strong> (reserva por endereço físico) para o problema não voltar.</li>
+        </ol>
+        <aside className="rounded-lg border border-border bg-muted/40 p-4 not-prose my-6">
+          <p className="m-0 text-sm"><strong>Rede de visitantes e isolamento:</strong> muitos roteadores impedem que aparelhos conversem entre si na rede de visitantes. Impressora nessa rede aparece offline mesmo funcionando. Coloque computador e impressora na mesma rede principal.</p>
+        </aside>
+
+        <h2>Tabela de decisão: sintoma, causa provável e próximo passo</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Sintoma</th>
+              <th>Causa provável</th>
+              <th>Próximo passo</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Offline após dias desligada</td><td>Endereço emprestado expirou</td><td>Conferir endereço atual e criar reserva no roteador</td></tr>
+            <tr><td>Offline só em um computador</td><td>Porta antiga cadastrada nesse computador</td><td>Corrigir a porta apenas nele</td></tr>
+            <tr><td>Offline em todos, aparelho aceso</td><td>Impressora caiu do Wi-Fi</td><td>Reconectar pelo painel e conferir a rede escolhida</td></tr>
+            <tr><td>Trabalhos entram e não saem</td><td>Fila ou serviço de impressão travado</td><td>Ver <Link to="/blog/fila-de-impressao-travada-spooler-windows" className="text-accent">fila travada e spooler</Link></td></tr>
+            <tr><td>Offline por cabo USB</td><td>Cabo, porta ou energia</td><td>Trocar porta e cabo, testar em outro computador</td></tr>
+          </tbody>
+        </table>
+
+        <h2>Casos em que o software não é o culpado</h2>
+        <p>Impressora com cabeça de impressão entupida, engrenagem quebrada, sensor de papel sujo ou fonte com defeito também deixa de responder — mas, aí, o painel costuma mostrar erro físico e o aparelho faz barulho anormal ou nem inicializa. Reinstalar driver nesse cenário só consome tempo.</p>
+
+        <h2>Quando chamar um técnico</h2>
+        <p>Chame quando o endereço estiver correto e o aparelho continuar mudo, quando houver várias máquinas imprimindo em um servidor de impressão, quando a rede tiver segmentação entre setores, ou quando o painel indicar falha mecânica. Configuração inicial e cadastro correto estão descritos em <Link to="/blog/como-instalar-impressora-windows-passo-a-passo" className="text-accent">como instalar impressora no Windows</Link>; o atendimento fica em <Link to="/servicos/redes-e-wifi" className="text-accent">redes e Wi-Fi</Link> e a avaliação em <Link to="/diagnostico-tecnico" className="text-accent">diagnóstico técnico</Link>.</p>
+      </>
+    ),
+  },
+
+  "fila-de-impressao-travada-spooler-windows": {
+    title: "Fila de impressão travada: como destravar o spooler do Windows",
+    excerpt:
+      "O que é o serviço de spooler, por que a fila trava com documentos presos em \"excluindo\" e o procedimento correto para limpar sem reinstalar a impressora.",
+    date: "2026-08-26",
+    readTime: "8 min",
+    category: "Procedimentos Técnicos",
+    content: (
+      <>
+        <p className="lead">Documento parado na fila, botão de cancelar sem efeito e a mensagem "excluindo" que nunca termina: esse é o comportamento clássico de spooler travado. O procedimento para resolver é curto — e não passa por reinstalar a impressora.</p>
+
+        <h2>Resposta curta</h2>
+        <p>O Windows não envia o documento direto ao aparelho: ele grava um arquivo temporário e um serviço chamado <strong>spooler de impressão</strong> cuida do envio. Quando esse arquivo corrompe, o serviço trava e a fila congela. A correção é parar o serviço, apagar os arquivos temporários de impressão e iniciar o serviço de novo.</p>
+
+        <h2>Por que a fila trava</h2>
+        <ul>
+          <li><strong>Trabalho corrompido:</strong> documento pesado, impressão interrompida no meio ou desligamento durante o envio.</li>
+          <li><strong>Impressora inalcançável:</strong> o trabalho fica preso esperando um aparelho que mudou de endereço — nesse caso o quadro é o de <Link to="/blog/impressora-offline-como-resolver" className="text-accent">impressora offline</Link>.</li>
+          <li><strong>Driver incompatível</strong> após atualização do sistema.</li>
+          <li><strong>Falta de espaço em disco</strong> na unidade do sistema, onde os arquivos temporários são gravados.</li>
+        </ul>
+
+        <h2>Procedimento de limpeza</h2>
+        <ol>
+          <li><strong>Abra os Serviços</strong> (tecla Windows + R, digite <code>services.msc</code>). Localize <strong>Spooler de Impressão</strong> e clique em Parar.</li>
+          <li><strong>Com o serviço parado</strong>, abra <code>C:\Windows\System32\spool\PRINTERS</code> e apague todo o conteúdo da pasta. Apagar esses arquivos não remove impressoras nem drivers — são apenas trabalhos pendentes.</li>
+          <li><strong>Volte aos Serviços</strong> e clique em Iniciar no Spooler de Impressão.</li>
+          <li><strong>Reenvie um documento simples</strong>, de uma página, para confirmar.</li>
+          <li><strong>Se travar de novo no mesmo documento</strong>, o arquivo é a causa: exporte para PDF e imprima a partir do PDF.</li>
+        </ol>
+        <aside className="rounded-lg border border-border bg-muted/40 p-4 not-prose my-6">
+          <p className="m-0 text-sm"><strong>Ambiente corporativo:</strong> em computadores gerenciados, parar serviços e apagar pastas do sistema pode exigir permissão administrativa e contrariar política interna. Trate com quem administra a rede antes.</p>
+        </aside>
+
+        <h2>Tabela de decisão: sintoma, causa provável e próximo passo</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Sintoma</th>
+              <th>Causa provável</th>
+              <th>Próximo passo</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Documento preso em "excluindo"</td><td>Arquivo de trabalho corrompido</td><td>Parar o spooler, limpar a pasta e iniciar de novo</td></tr>
+            <tr><td>Fila enche e nada sai, impressora acesa</td><td>Aparelho inalcançável na rede</td><td>Conferir endereço e porta antes de mexer no spooler</td></tr>
+            <tr><td>Trava sempre no mesmo arquivo</td><td>Documento problemático</td><td>Exportar para PDF e imprimir a partir dele</td></tr>
+            <tr><td>Spooler para sozinho toda hora</td><td>Driver incompatível após atualização</td><td>Reinstalar o driver oficial do modelo</td></tr>
+            <tr><td>Erro ao gravar trabalho</td><td>Disco do sistema sem espaço</td><td>Liberar espaço e repetir a impressão</td></tr>
+          </tbody>
+        </table>
+
+        <h2>Quando o driver é o problema</h2>
+        <p>Se o spooler cair repetidamente logo após cada envio, a suspeita passa para o driver. Remova a impressora, reinicie e instale o pacote oficial do modelo exato, baixado do fabricante — pacotes genéricos costumam imprimir, mas falham em recursos de duplex, bandeja e acabamento. A sequência completa de cadastro está em <Link to="/blog/como-instalar-impressora-windows-passo-a-passo" className="text-accent">como instalar impressora no Windows</Link>.</p>
+
+        <h2>Quando chamar um técnico</h2>
+        <p>Chame quando o spooler travar em vários computadores ao mesmo tempo (indício de servidor de impressão ou driver compartilhado com defeito), quando o computador for gerenciado por uma empresa, ou quando a impressão parar junto com outros sintomas de sistema. O suporte a estações e rede está em <Link to="/servicos/redes-e-wifi" className="text-accent">redes e Wi-Fi</Link>, e a avaliação em <Link to="/diagnostico-tecnico" className="text-accent">diagnóstico técnico</Link>.</p>
       </>
     ),
   },

@@ -174,6 +174,65 @@ const WAVE_10D_BATCH_1: EditorialWaveEntry[] = [
       "/blog/troquei-o-ssd-e-o-pc-so-abre-a-bios",
     ],
   },
+  // ── Onda 10C — Lote 2: internet/Wi-Fi (triagem) e impressoras.
+  {
+    wave: "10C",
+    batch: "2",
+    url: "/blog/internet-lenta-provedor-ou-roteador",
+    slug: "internet-lenta-provedor-ou-roteador",
+    ownerId: "internet-lenta-triagem-origem",
+    cluster: "internet-wifi",
+    role: "satelite",
+    publishedAt: "2026-08-26",
+    targetQueries: [
+      "internet lenta e o provedor ou o roteador",
+      "como saber se a internet lenta e do provedor",
+      "teste de internet lenta por cabo",
+    ],
+    doNotDuplicate: [
+      "/blog/como-melhorar-sinal-wifi-em-casa",
+      "/blog/wifi-lento-como-melhorar",
+      "/problemas/wifi-instavel",
+    ],
+  },
+  {
+    wave: "10C",
+    batch: "2",
+    url: "/blog/impressora-offline-como-resolver",
+    slug: "impressora-offline-como-resolver",
+    ownerId: "impressora-offline",
+    cluster: "impressoras",
+    role: "satelite",
+    publishedAt: "2026-08-26",
+    targetQueries: [
+      "impressora offline como resolver",
+      "impressora aparece offline no windows",
+      "impressora nao responde na rede",
+    ],
+    doNotDuplicate: [
+      "/blog/como-instalar-impressora-windows-passo-a-passo",
+      "/blog/fila-de-impressao-travada-spooler-windows",
+    ],
+  },
+  {
+    wave: "10C",
+    batch: "2",
+    url: "/blog/fila-de-impressao-travada-spooler-windows",
+    slug: "fila-de-impressao-travada-spooler-windows",
+    ownerId: "fila-impressao-spooler",
+    cluster: "impressoras",
+    role: "satelite",
+    publishedAt: "2026-08-26",
+    targetQueries: [
+      "fila de impressao travada",
+      "limpar fila de impressao windows",
+      "reiniciar spooler de impressao",
+    ],
+    doNotDuplicate: [
+      "/blog/impressora-offline-como-resolver",
+      "/blog/como-instalar-impressora-windows-passo-a-passo",
+    ],
+  },
 ];
 
 export const EDITORIAL_WAVES: EditorialWaveEntry[] = [

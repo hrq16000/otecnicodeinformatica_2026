@@ -342,12 +342,12 @@ export const CONTENT_INTENT_MAP: ContentNode[] = [
       "ligar pc pela placa mae sem botao",
       "pino power sw placa mae",
     ],
-    serviceParent: "/servicos/conserto-de-computador",
+    serviceParent: "/servicos/manutencao-de-computador",
     problemParent: "/blog/notebook-nao-liga-o-que-fazer",
     bridgesTo: [
       "/blog/como-testar-fonte-de-alimentacao-pc",
       "/blog/como-diagnosticar-placa-mae-defeituosa",
-      "/servicos/conserto-de-computador",
+      "/servicos/manutencao-de-computador",
     ],
     doNotDuplicate: ["/blog/como-diagnosticar-placa-mae-defeituosa"],
     novaNestaRodada: true,
@@ -384,7 +384,7 @@ export const CONTENT_INTENT_MAP: ContentNode[] = [
       "bios corrompida o que fazer",
       "tirar bateria da placa mae reset",
     ],
-    serviceParent: "/servicos/conserto-de-computador",
+    serviceParent: "/servicos/manutencao-de-computador",
     problemParent: "/blog/computador-entra-direto-na-bios",
     bridgesTo: [
       "/blog/computador-entra-direto-na-bios",

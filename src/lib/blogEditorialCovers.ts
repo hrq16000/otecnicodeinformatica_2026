@@ -301,6 +301,25 @@ export const EDITORIAL_COVERS: Record<string, EditorialCover> = {
     width: 1200,
     height: 630,
   },
+  // ── Onda 10C — Lote 2: internet/Wi-Fi e impressoras.
+  "internet-lenta-provedor-ou-roteador": {
+    src: "/blog/internet-lenta-provedor-ou-roteador.jpg",
+    alt: "Modem de banda larga doméstico com luzes de sinal acesas",
+    width: 1200,
+    height: 630,
+  },
+  "impressora-offline-como-resolver": {
+    src: "/blog/impressora-offline-como-resolver.jpg",
+    alt: "Painel traseiro de impressora a laser com porta de rede e cabo conectado",
+    width: 1200,
+    height: 630,
+  },
+  "fila-de-impressao-travada-spooler-windows": {
+    src: "/blog/fila-de-impressao-travada-spooler-windows.jpg",
+    alt: "Multifuncional de escritório em uso, com bandeja de papel e painel frontal",
+    width: 1200,
+    height: 630,
+  },
 };
 
 export function getEditorialCover(slug: string): EditorialCover | undefined {
