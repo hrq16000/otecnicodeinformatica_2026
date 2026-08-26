@@ -18,6 +18,8 @@ jobs:
           node-version: "22.12.0"
       - name: Install deps
         run: npm ci --no-audit --no-fund
+      - name: Install test DOM peer for inventory
+        run: npm install --no-save --no-package-lock --no-audit --no-fund @testing-library/dom@^10.4.0
       - name: Inventário de testes (isolamento de runners, fail-closed)
         run: npm run test:list
       - name: Testes unitários (Vitest — projetos unit + scripts)
@@ -35,6 +37,7 @@ jobs:
           if-no-files-found: warn
 
   build:
+    needs: unit
     runs-on: ubuntu-latest
     timeout-minutes: 15
 
@@ -268,8 +271,7 @@ jobs:
         run: npx playwright install --with-deps ${{ matrix.browser }}
       - name: Build (uma única vez por job)
         run: npm run build
-      - name: S
-tart preview
+      - name: Start preview
         run: npx vite preview --port 8080 &
       - name: Wait for server (healthcheck HTTP)
         run: npx wait-on http-get://localhost:8080/ --timeout 90000
@@ -333,31 +335,14 @@ tart preview
           pattern: playwright-blob-*
           merge-multiple: true
           path: all-blob-reports
-          if-no-files-found: ignore
       - name: Merge into HTML
-        run: |
-          if find all-blob-reports -type f -print -quit | grep -q .; then
-            npx playwright merge-reports --reporter html ./all-blob-reports
-          else
-            echo "NOT_RUN: nenhum blob report disponível (falha upstream ou shards não executados)." >> "$GITHUB_STEP_SUMMARY"
-          fi
+        run: npx playwright merge-reports --reporter html ./all-blob-reports
         env:
           PLAYWRIGHT_HTML_OUTPUT_DIR: merged-report/html
       - name: Merge into JSON
-        run: |
-          mkdir -p merged-report
-          if find all-blob-reports -type f -print -quit | grep -q .; then
-            npx playwright merge-reports --reporter json ./all-blob-reports > merged-report/results.json
-          else
-            printf '{"status":"NOT_RUN","reason":"no-blob-reports"}\n' > merged-report/results.json
-          fi
+        run: mkdir -p merged-report && npx playwright merge-reports --reporter json ./all-blob-reports > merged-report/results.json
       - name: Consolidar, deduplicar e classificar falhas
-        run: |
-          if grep -q '"status":"NOT_RUN"' merged-report/results.json; then
-            printf '# E2E matriz\n\nStatus: NOT_RUN / SKIPPED_UPSTREAM\n\nNenhum blob foi produzido pelos shards.\n' > merged-report/inventario-falhas.md
-          else
-            node scripts/consolidate-e2e-failures.mjs merged-report/results.json --out merged-report/inventario-falhas.md
-          fi
+        run: node scripts/consolidate-e2e-failures.mjs merged-report/results.json --out merged-report/inventario-falhas.md
       - name: Resumo por navegador
         if: always()
         run: cat merged-report/inventario-falhas.md >> "$GITHUB_STEP_SUMMARY"
