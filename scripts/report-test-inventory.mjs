@@ -21,12 +21,20 @@ const ROOT = process.cwd();
 const rel = (p) => relative(ROOT, p).replaceAll("\\", "/");
 
 function run(cmd, args) {
-  return execFileSync(cmd, args, { cwd: ROOT, encoding: "utf8", maxBuffer: 64 * 1024 * 1024 });
+  return execFileSync(cmd, args, {
+    cwd: ROOT,
+    encoding: "utf8",
+    maxBuffer: 64 * 1024 * 1024,
+    env: { ...process.env, TEST_INVENTORY: "1" },
+  });
 }
+
+const vitestCli = resolve(ROOT, "node_modules", "vitest", "vitest.mjs");
+const playwrightCli = resolve(ROOT, "node_modules", "playwright", "cli.js");
 
 // ── Vitest ────────────────────────────────────────────────────────────────
 function vitestInventory() {
-  const out = run("npx", ["vitest", "list", "--json"]);
+  const out = run(process.execPath, [vitestCli, "list", "--json"]);
   const json = JSON.parse(out.slice(out.indexOf("[")));
   const porProjeto = new Map();
   const arquivos = new Set();
@@ -50,7 +58,7 @@ function vitestInventory() {
 
 // ── Playwright ────────────────────────────────────────────────────────────
 function playwrightInventory() {
-  const out = run("npx", ["playwright", "test", "--list", "--reporter=json"]);
+  const out = run(process.execPath, [playwrightCli, "test", "--list", "--reporter=json"]);
   const json = JSON.parse(out.slice(out.indexOf("{")));
   const arquivos = new Set();
   let testes = 0;
