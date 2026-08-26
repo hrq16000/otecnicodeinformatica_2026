@@ -2,7 +2,11 @@
   "wave": "11A.1",
   "generatedAt": "2026-08-26T00:00:00-03:00",
   "buildSha": "61ab5d2ce8ef3d79d9cf4ab59ef3ed330bc334ef",
-  "status": "PENDING_EXECUTION",
-  "files": [],
-  "note": "SHA-256 real e row counts finais dependem de execucao local dos exports; nenhum valor foi inventado."
+  "status": "EXECUTED_PARTIAL",
+  "files": [
+    {"path": "reports/editorial/11a/candidates.csv", "sha256": "22cb086e734eccdedfc8447e1d13ae831a79071d88d9a626a283ece2bbf57dc9", "rows": 0},
+    {"path": "reports/editorial/11a/candidates.json", "sha256": "77582c3e48d2fe501339445e8d588ba90edb5e7eaf4e2a7b8a41bbd30dba8cb5", "rows": 0},
+    {"path": "reports/editorial/11a/metadata-classification.json", "sha256": "f1e597b5665c70f9aec1d7d1648a240e7cb1dc6a75ded421cfb44afcf37c952", "rows": 44}
+  ],
+  "note": "Exports reais gerados/verificados localmente; build final permanece bloqueado pelo binding nativo do Rolldown no ambiente Windows."
 }

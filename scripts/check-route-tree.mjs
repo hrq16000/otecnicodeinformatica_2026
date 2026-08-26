@@ -32,7 +32,8 @@ const walk = (dir) =>
 
 const faltando = walk("src/routes")
   .filter((f) => /\.tsx?$/.test(f) && !f.endsWith(".d.ts"))
-  .map((f) => f.replace(/^src\/routes\//, "").replace(/\.tsx?$/, ""))
+  // `readdirSync` returns Windows paths with `\\`; the generated tree uses `/`.
+  .map((f) => f.replace(/\\/g, "/").replace(/^src\/routes\//, "").replace(/\.tsx?$/, ""))
   .filter((id) => !gen.includes(`./routes/${id}`));
 
 if (faltando.length > 0) {
