@@ -1,5 +1,6 @@
-import { useEffect } from "react";
+import { useMemo } from "react";
 import { isEditorialApproved } from "@/lib/blogEditorialRegistry";
+import { SCHEMA_SLOTS, SLOT_PRIORITY, useJsonLdSlot } from "@/lib/jsonLdSlots";
 import { getArticleSources } from "@/lib/blogEditorialSources";
 
 
@@ -653,33 +654,24 @@ export const BlogPostFAQ = ({ category, slug }: { category: string; slug: string
   const extras = CATEGORY_EXTRA[category] ?? [];
   const items = override ?? [...extras, ...BASE_FAQ].slice(0, 5);
 
-  useEffect(() => {
-    const id = `faq-jsonld-${slug}`;
-    document.getElementById(id)?.remove();
-    // Fail-closed: FAQPage (rich result) apenas para conteúdo aprovado.
-    // Conteúdo em revisão/rascunho mantém a FAQ visível, mas sem schema.
-    if (!isEditorialApproved(slug)) {
-      return () => {
-        document.getElementById(id)?.remove();
-      };
-    }
-    const script = document.createElement("script");
-    script.type = "application/ld+json";
-    script.id = id;
-    script.text = JSON.stringify({
+  // O schema da FAQ é construído DURANTE O RENDER e registrado no slot, para
+  // aparecer no HTML servido. A versão anterior injetava <script> no document
+  // dentro de um useEffect — invisível para o SSR e para os crawlers.
+  // Fail-closed: FAQPage (rich result) apenas para conteúdo aprovado.
+  const faqSchema = useMemo(() => {
+    if (!slug || !isEditorialApproved(slug)) return null;
+    return {
       "@context": "https://schema.org",
       "@type": "FAQPage",
+      "@id": `${SITE_BASE_URL}/blog/${slug}#faq`,
       mainEntity: items.map((it) => ({
         "@type": "Question",
         name: it.q,
         acceptedAnswer: { "@type": "Answer", text: it.a },
       })),
-    });
-    document.head.appendChild(script);
-    return () => {
-      document.getElementById(id)?.remove();
     };
   }, [slug, items]);
+  useJsonLdSlot(SCHEMA_SLOTS.faq, faqSchema, SLOT_PRIORITY.page);
 
   return (
     <section className="not-prose mt-12">
