@@ -256,6 +256,16 @@ const MAPA: Record<string, EditorialInboundLink[]> = {
   ],
   "/servicos/manutencao-de-computador": [
     {
+      slug: "windows-update-travado-desfazendo-alteracoes",
+      label: "Atualização travada e reversão: como agir",
+      hint: "Como diferenciar interface parada de processo parado antes de forçar o desligamento.",
+    },
+    {
+      slug: "webcam-usb-nao-e-detectada",
+      label: "Webcam USB não é detectada",
+      hint: "Porta, cabo, hub e driver: eliminação em ordem para câmeras externas.",
+    },
+    {
       slug: "computador-sem-som-o-que-verificar",
       label: "Computador sem som: sequência de verificação",
       hint: "Da saída padrão ao driver, sem reinstalar o sistema por causa de áudio.",
@@ -340,6 +350,18 @@ const MAPA: Record<string, EditorialInboundLink[]> = {
       slug: "como-trocar-pasta-termica-notebook",
       label: "Troca de pasta térmica: quando faz sentido",
       hint: "Como separar interface térmica de obstrução antes de abrir o equipamento.",
+    },
+  ],
+  "/diagnostico-tecnico": [
+    {
+      slug: "webcam-nao-funciona-o-que-verificar",
+      label: "Webcam não funciona: o que verificar",
+      hint: "Ordem de checagem do sensor ao aplicativo, sem trocar peça no escuro.",
+    },
+    {
+      slug: "windows-update-nao-funciona-o-que-verificar",
+      label: "Windows Update não funciona: por onde começar",
+      hint: "Triagem por estágio antes de qualquer comando, sem desativar serviços.",
     },
   ],
 };
