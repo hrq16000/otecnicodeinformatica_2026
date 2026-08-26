@@ -21,7 +21,17 @@ import { existsSync, readFileSync, readdirSync, writeFileSync } from "node:fs";
 import { resolve } from "node:path";
 // @ts-expect-error — utilitário JS compartilhado (sem tipos).
 import { resolveSite, inspectUrl } from "./lib/gsc-client.mjs";
+// @ts-expect-error — utilitário JS compartilhado (sem tipos).
+import {
+  calcularTransicoes,
+  despacharWebhook,
+  lerAlertas,
+  normalizarEstadoBusca,
+  persistirAlertas,
+} from "./lib/editorial-alerts.mjs";
 import { EDITORIAL_WAVES, batchKey } from "../src/lib/editorialWavesRegistry";
+import { getEditorialStatus } from "../src/lib/blogEditorialRegistry";
+
 
 const BASE = (process.env.VITE_SITE_DOMAIN ?? "https://otecnicodeinformatica.com.br")
   .replace(/^https?:\/\//, "https://")
