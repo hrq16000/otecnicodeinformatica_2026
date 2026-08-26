@@ -12581,6 +12581,24 @@ bcdboot C:\\Windows /s S: /f UEFI`}</code></pre>
           <p className="m-0 text-sm"><strong>Segurança:</strong> nunca abra a fonte de alimentação — ela retém carga mesmo desconectada. No teste acima, toque apenas os dois pinos do par de ligar, use uma chave com cabo isolado e evite encostar em outras trilhas. Se a máquina está na garantia, abrir o gabinete pode anulá-la.</p>
         </aside>
 
+        <h2>Tabela diagnóstica: o que cada resposta significa</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Resposta ao apertar o botão</th>
+              <th>Causa provável</th>
+              <th>O que verificar</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Nada acontece, nem LED de espera na placa</td><td>Falta de energia ou fonte inativa</td><td>Chave traseira, cabo, tomada e teste da fonte</td></tr>
+            <tr><td>LED de espera aceso, mas nada ao apertar</td><td>Botão frontal, cabo ou conector deslocado</td><td>Partida direta pelo par de ligar</td></tr>
+            <tr><td>Liga pelo conector e não liga pelo botão</td><td>Chave de partida com defeito</td><td>Troca do botão ou uso provisório do par de reiniciar</td></tr>
+            <tr><td>Liga e desliga em um ou dois segundos</td><td>Botão preso, curto ou proteção da fonte</td><td>Haste do botão e teste de bancada mínima</td></tr>
+            <tr><td>Não liga nem pelo conector</td><td>Fonte ou placa</td><td>Sequência fonte → placa, nessa ordem</td></tr>
+          </tbody>
+        </table>
+
         <h2>Como resolver depois do diagnóstico</h2>
         <ul>
           <li><strong>Botão defeituoso:</strong> a peça é vendida como chave de partida com cabo e conector, e a troca é encaixe direto. Solução provisória aceitável: usar o par do botão de reiniciar no lugar do de ligar, já que eletricamente são chaves iguais.</li>
@@ -12637,6 +12655,24 @@ bcdboot C:\\Windows /s S: /f UEFI`}</code></pre>
           <p className="m-0 text-sm"><strong>Segurança:</strong> desligue a chave da fonte e retire o cabo antes de qualquer manipulação. Não abra a fonte de alimentação. Não faça medições com o equipamento energizado se você não tem prática — a medição correta de curto é feita com o aparelho desligado, em modo de continuidade ou resistência, e conclusões erradas levam à troca de peças boas.</p>
         </aside>
 
+        <h2>Tabela diagnóstica: o que o comportamento indica</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Comportamento observado</th>
+              <th>Causa provável</th>
+              <th>O que verificar</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Ventoinhas giram meio segundo e tudo desliga, em ciclo</td><td>Proteção da fonte contra consumo excessivo</td><td>Bancada mínima fora do gabinete</td></tr>
+            <tr><td>Fora do gabinete liga, dentro não</td><td>Contato metálico indevido</td><td>Espaçadores, parafusos extras e chapa traseira</td></tr>
+            <tr><td>Só desliga quando um disco ou a placa de vídeo está conectada</td><td>Periférico em curto</td><td>Reintrodução um item por vez</td></tr>
+            <tr><td>Capacitor abaulado ou resíduo esbranquiçado visível</td><td>Componente degradado ou corrosão</td><td>Inspeção nas duas faces da placa</td></tr>
+            <tr><td>Não liga nem com outra fonte comprovadamente boa</td><td>Falha no circuito de regulagem da placa</td><td>Avaliação de bancada e decisão econômica</td></tr>
+          </tbody>
+        </table>
+
         <h2>Como resolver</h2>
         <ul>
           <li><strong>Curto por montagem:</strong> remontar com os espaçadores corretos resolve definitivamente e sem custo de peça.</li>
@@ -12691,6 +12727,24 @@ bcdboot C:\\Windows /s S: /f UEFI`}</code></pre>
         <aside className="rounded-lg border border-destructive/40 bg-destructive/5 p-4 not-prose my-6">
           <p className="m-0 text-sm"><strong>Atenção:</strong> o reset apaga senha de Setup, perfis de memória e ajustes personalizados — anote o que estiver configurado antes. Em máquinas corporativas com criptografia de disco ativa, alterar configurações de firmware pode exigir a chave de recuperação na próxima partida. Confirme que você tem essa chave antes de prosseguir.</p>
         </aside>
+
+        <h2>Tabela de decisão: sintoma, causa provável e próximo passo</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Sintoma na partida</th>
+              <th>Causa provável</th>
+              <th>Próximo passo</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Data e hora sempre erradas, aviso de checksum</td><td>Bateria de lítio no fim da vida</td><td>Trocar a CR2032 e reconfigurar o Setup</td></tr>
+            <tr><td>Setup abre, mas o sistema não é encontrado</td><td>Ordem de inicialização ou modo UEFI/Legacy incorreto</td><td>Ajustar no Setup, sem apagar nada</td></tr>
+            <tr><td>Reinicia em ciclo após ativar perfil de memória</td><td>XMP/EXPO acima do que o conjunto suporta</td><td>Reset de CMOS pelo jumper e partida em perfil padrão</td></tr>
+            <tr><td>Tela preta, ventoinhas girando, sem bipe útil</td><td>Firmware possivelmente corrompido</td><td>Recuperação pelo recurso do fabricante ou bancada</td></tr>
+            <tr><td>Tela preta mesmo após reset e com um só módulo de memória</td><td>Falha de hardware além do firmware</td><td>Diagnóstico com instrumentos, não regravar às cegas</td></tr>
+          </tbody>
+        </table>
 
         <h2>Quando o firmware corrompeu de verdade</h2>
         <p>Acontece principalmente quando uma atualização é interrompida por queda de energia ou quando o arquivo aplicado não corresponde exatamente ao modelo e à revisão da placa. Sintoma: sem imagem, sem Setup, sem bipes úteis. Os caminhos possíveis dependem do fabricante:</p>
