@@ -53,7 +53,9 @@ test.describe("TOC — acessibilidade", () => {
   });
 
   test("copiar link mantém foco no botão e anuncia via aria-live", async ({ page, context }) => {
-    await context.grantPermissions(["clipboard-read", "clipboard-write"]);
+    await context.grantPermissions(["clipboard-read", "clipboard-write"], {
+      origin: "http://localhost:8080",
+    });
     await page.setViewportSize({ width: 430, height: 932 });
     await page.goto(ARTIGO);
     const nav = page.getByRole("navigation", { name: "Índice do artigo" });
