@@ -333,6 +333,69 @@ export const CONTENT_INTENT_MAP: ContentNode[] = [
     justificativa:
       "Satélite de cenário pós-upgrade: explica por que disco novo para no Setup e como configurar o slot M.2. Compatibilidade de compra permanece no guia de NVMe; reparo de carregador permanece no satélite de boot.",
   },
+  {
+    url: "/blog/botao-power-nao-funciona-jump-start-placa-mae",
+    intent: "diagnostic",
+    topic: "isolamento do botão de partida frontal pelo conector da placa-mãe",
+    queries: [
+      "botao power do pc nao funciona",
+      "ligar pc pela placa mae sem botao",
+      "pino power sw placa mae",
+    ],
+    serviceParent: "/servicos/conserto-de-computador",
+    problemParent: "/blog/notebook-nao-liga-o-que-fazer",
+    bridgesTo: [
+      "/blog/como-testar-fonte-de-alimentacao-pc",
+      "/blog/como-diagnosticar-placa-mae-defeituosa",
+      "/servicos/conserto-de-computador",
+    ],
+    doNotDuplicate: ["/blog/como-diagnosticar-placa-mae-defeituosa"],
+    novaNestaRodada: true,
+    justificativa:
+      "Satélite diagnóstico restrito ao acionamento de partida: elimina o botão frontal antes de investigar fonte ou placa, que permanecem nos artigos próprios.",
+  },
+  {
+    url: "/blog/curto-circuito-placa-mae-como-identificar",
+    intent: "diagnostic",
+    topic: "identificação de curto de alimentação e isolamento por bancada mínima",
+    queries: [
+      "pc liga e desliga na hora",
+      "curto circuito placa mae sintomas",
+      "capacitor estufado placa mae",
+    ],
+    serviceParent: "/diagnostico-tecnico",
+    problemParent: "/blog/como-diagnosticar-placa-mae-defeituosa",
+    bridgesTo: [
+      "/blog/como-testar-fonte-de-alimentacao-pc",
+      "/blog/como-diagnosticar-placa-mae-defeituosa",
+      "/diagnostico-tecnico",
+    ],
+    doNotDuplicate: ["/blog/como-diagnosticar-placa-mae-defeituosa"],
+    novaNestaRodada: true,
+    justificativa:
+      "Satélite do padrão liga-e-desliga imediato: método de isolamento por remoção, sem repetir o diagnóstico geral de placa-mãe.",
+  },
+  {
+    url: "/blog/bios-corrompida-reset-cmos-atualizacao",
+    intent: "informational",
+    topic: "reset de CMOS e recuperação de firmware da placa-mãe",
+    queries: [
+      "como resetar a bios",
+      "bios corrompida o que fazer",
+      "tirar bateria da placa mae reset",
+    ],
+    serviceParent: "/servicos/conserto-de-computador",
+    problemParent: "/blog/computador-entra-direto-na-bios",
+    bridgesTo: [
+      "/blog/computador-entra-direto-na-bios",
+      "/blog/curto-circuito-placa-mae-como-identificar",
+      "/diagnostico-tecnico",
+    ],
+    doNotDuplicate: ["/blog/computador-entra-direto-na-bios"],
+    novaNestaRodada: true,
+    justificativa:
+      "Satélite de procedimento: separa perda de configuração (CMOS) de firmware corrompido. A configuração de boot permanece no pilar da BIOS.",
+  },
 ];
 
 /** Nó do mapa por URL canônica (sem barra final). */

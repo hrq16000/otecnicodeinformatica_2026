@@ -59,6 +59,73 @@ const CATEGORY_EXTRA: Record<string, FAQItem[]> = {
 // categoria (que contêm valores comerciais).
 // ─────────────────────────────────────────────────────────────
 const PILOT_FAQ: Record<string, FAQItem[]> = {
+  // ── Onda 10D — satélites de partida, curto e BIOS (sem preço, sem prazo).
+  "botao-power-nao-funciona-jump-start-placa-mae": [
+    {
+      q: "Como saber se o problema é o botão de ligar e não a fonte?",
+      a: "Desconecte o plugue do par PWR_SW do painel frontal e, com a fonte ligada, encoste rapidamente uma chave de fenda nos dois pinos. Se a máquina partir sem o botão e não partir com ele, o defeito está no botão ou no cabo dele.",
+    },
+    {
+      q: "Encostar a chave nos pinos pode danificar a placa?",
+      a: "O par de partida não tem polaridade e trabalha com sinal, não com corrente de carga. O risco está em tocar o par errado ou trilhas vizinhas. Confirme a identificação pela serigrafia ou pelo manual do modelo, use chave com cabo isolado e mantenha o contato por menos de um segundo.",
+    },
+    {
+      q: "Dá para usar o botão de reiniciar no lugar do de ligar?",
+      a: "Sim, como solução provisória. Eletricamente as duas são chaves momentâneas iguais: basta mover o conector do reset para o par de partida. O botão frontal correto continua sendo a substituição adequada.",
+    },
+    {
+      q: "Esse teste vale para notebook?",
+      a: "Não. Em notebooks e all-in-one o botão fica em uma placa auxiliar ligada por cabo flat, sem par de pinos acessível. A verificação exige desmontagem e medição de bancada.",
+    },
+    {
+      q: "Se nem pelos pinos liga, qual é o próximo passo?",
+      a: "O botão está descartado. A sequência passa a ser verificar a fonte de alimentação e, persistindo o quadro, avaliar a placa-mãe com teste de bancada mínima, fora do gabinete.",
+    },
+  ],
+  "curto-circuito-placa-mae-como-identificar": [
+    {
+      q: "Ventoinha gira meio segundo e desliga: é curto?",
+      a: "É o padrão típico de proteção da fonte disparando por consumo fora do esperado, o que inclui curto na placa ou em algum componente ligado a ela. Também pode ocorrer por fonte em degradação, por isso o teste com outra fonte comprovadamente boa faz parte do roteiro.",
+    },
+    {
+      q: "O que é o teste de bancada mínima?",
+      a: "É ligar a placa fora do gabinete, apoiada sobre material não condutivo, apenas com processador, cooler, um módulo de memória e a fonte. Se assim ela liga, o curto vinha do contato com o gabinete ou de um periférico, que devem ser reintroduzidos um por vez.",
+    },
+    {
+      q: "Capacitor estufado significa placa perdida?",
+      a: "Não necessariamente. A substituição é possível em nível de componente, com peça de mesma especificação e ferro de solda adequado. A decisão costuma ser econômica: em placas comuns o custo do reparo pode se aproximar do de uma placa nova.",
+    },
+    {
+      q: "Parafuso solto pode causar isso?",
+      a: "Pode, e é uma das causas mais frequentes. Espaçador metálico em posição sem furo correspondente, parafuso extra ou chapa tocando a solda criam caminho de corrente indevido e derrubam a alimentação na partida.",
+    },
+    {
+      q: "Posso medir com multímetro em casa?",
+      a: "Medição de continuidade só é válida com o equipamento desligado e o cabo removido. Sem prática de leitura, o resultado leva a troca de peças boas. Havendo cheiro de queimado, marca escura ou líquido derramado, interrompa e leve para avaliação de bancada.",
+    },
+  ],
+  "bios-corrompida-reset-cmos-atualizacao": [
+    {
+      q: "Qual a diferença entre limpar o CMOS e regravar a BIOS?",
+      a: "Limpar o CMOS apaga apenas as configurações guardadas, alimentadas pela bateria de lítio. Regravar a BIOS substitui o firmware gravado no chip da placa. O primeiro é procedimento de dois minutos; o segundo só é necessário quando o firmware corrompeu de fato.",
+    },
+    {
+      q: "Como faço o reset de CMOS corretamente?",
+      a: "Com a máquina desligada, chave da fonte em O e cabo removido, segure o botão de ligar por dez segundos para descarregar. Depois mova o jumper CLR_CMOS para a posição adjacente por dez segundos e devolva, ou retire a bateria de lítio por cerca de cinco minutos.",
+    },
+    {
+      q: "Como sei que o firmware corrompeu de verdade?",
+      a: "Quando o Setup não abre em nenhuma condição: tela permanece preta, sem imagem, ainda que ventoinhas girem. Se o Setup abre, o firmware está íntegro e o caso é de configuração.",
+    },
+    {
+      q: "O reset apaga alguma coisa importante?",
+      a: "Apaga senha de Setup, perfis de memória XMP/EXPO e ajustes personalizados. Em máquinas com criptografia de disco ativa, a alteração pode exigir a chave de recuperação na próxima partida — confirme que você tem essa chave antes.",
+    },
+    {
+      q: "Vale a pena atualizar a BIOS por precaução?",
+      a: "Não. Atualização de firmware não é manutenção de rotina e não melhora desempenho. Faça apenas com motivo declarado, como suporte a um processador novo, correção de segurança divulgada ou incompatibilidade documentada, sempre com o arquivo do modelo e revisão exatos.",
+    },
+  ],
   // ── Onda 9C — cluster BIOS (sem preço, sem prazo, sem promessa).
   "computador-entra-direto-na-bios": [
     {

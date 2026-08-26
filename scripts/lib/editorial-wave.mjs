@@ -416,6 +416,35 @@ export const EDITORIAL_WAVE = [
     apoioLabel: "Códigos de erro da tela azul",
     cover: "/blog/testar-memoria-ram-memtest86.jpg",
   },
+
+  // ── Onda 10D — satélites de "PC não liga" e "liga e desliga sozinho".
+  {
+    slug: "botao-power-nao-funciona-jump-start-placa-mae",
+    approvedAt: "2026-08-26",
+    pilar: "/servicos/conserto-de-computador",
+    pilarLabel: "Conserto de computador",
+    apoio: "/blog/como-testar-fonte-de-alimentacao-pc",
+    apoioLabel: "Como testar a fonte de alimentação",
+    cover: "/blog/botao-power-nao-funciona-jump-start-placa-mae.jpg",
+  },
+  {
+    slug: "curto-circuito-placa-mae-como-identificar",
+    approvedAt: "2026-08-26",
+    pilar: "/diagnostico-tecnico",
+    pilarLabel: "Diagnóstico técnico",
+    apoio: "/blog/como-diagnosticar-placa-mae-defeituosa",
+    apoioLabel: "Como diagnosticar placa-mãe defeituosa",
+    cover: "/blog/curto-circuito-placa-mae-como-identificar.jpg",
+  },
+  {
+    slug: "bios-corrompida-reset-cmos-atualizacao",
+    approvedAt: "2026-08-26",
+    pilar: "/blog/computador-entra-direto-na-bios",
+    pilarLabel: "Computador entra direto na BIOS",
+    apoio: "/blog/curto-circuito-placa-mae-como-identificar",
+    apoioLabel: "Curto-circuito na placa-mãe",
+    cover: "/blog/bios-corrompida-reset-cmos-atualizacao.jpg",
+  },
 ];
 
 export const EDITORIAL_WAVE_SLUGS = EDITORIAL_WAVE.map((a) => a.slug);

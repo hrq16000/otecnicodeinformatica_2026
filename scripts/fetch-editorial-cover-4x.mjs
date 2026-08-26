@@ -155,6 +155,19 @@ const CURADORIA = [
     slug: "testar-memoria-ram-memtest86",
     commons: "File:Memtest86+ 2019-08-09.jpg",
   },
+  // Onda 10D — clusters "PC não liga" e "liga e desliga sozinho" (satélites).
+  {
+    slug: "botao-power-nao-funciona-jump-start-placa-mae",
+    commons: "File:JPANEL MB IMG 1121.JPG",
+  },
+  {
+    slug: "curto-circuito-placa-mae-como-identificar",
+    commons: "File:Motherboard defective capacitors.jpg",
+  },
+  {
+    slug: "bios-corrompida-reset-cmos-atualizacao",
+    commons: "File:CMOS Battery, Motherboard.jpg",
+  },
 ];
 
 /** Metadados + URL de uma imagem do Wikimedia Commons (licença real, sem IA). */
