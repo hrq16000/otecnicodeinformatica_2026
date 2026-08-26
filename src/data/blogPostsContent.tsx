@@ -12581,6 +12581,24 @@ bcdboot C:\\Windows /s S: /f UEFI`}</code></pre>
           <p className="m-0 text-sm"><strong>Segurança:</strong> nunca abra a fonte de alimentação — ela retém carga mesmo desconectada. No teste acima, toque apenas os dois pinos do par de ligar, use uma chave com cabo isolado e evite encostar em outras trilhas. Se a máquina está na garantia, abrir o gabinete pode anulá-la.</p>
         </aside>
 
+        <h2>Tabela diagnóstica: o que cada resposta significa</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Resposta ao apertar o botão</th>
+              <th>Causa provável</th>
+              <th>O que verificar</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Nada acontece, nem LED de espera na placa</td><td>Falta de energia ou fonte inativa</td><td>Chave traseira, cabo, tomada e teste da fonte</td></tr>
+            <tr><td>LED de espera aceso, mas nada ao apertar</td><td>Botão frontal, cabo ou conector deslocado</td><td>Partida direta pelo par de ligar</td></tr>
+            <tr><td>Liga pelo conector e não liga pelo botão</td><td>Chave de partida com defeito</td><td>Troca do botão ou uso provisório do par de reiniciar</td></tr>
+            <tr><td>Liga e desliga em um ou dois segundos</td><td>Botão preso, curto ou proteção da fonte</td><td>Haste do botão e teste de bancada mínima</td></tr>
+            <tr><td>Não liga nem pelo conector</td><td>Fonte ou placa</td><td>Sequência fonte → placa, nessa ordem</td></tr>
+          </tbody>
+        </table>
+
         <h2>Como resolver depois do diagnóstico</h2>
         <ul>
           <li><strong>Botão defeituoso:</strong> a peça é vendida como chave de partida com cabo e conector, e a troca é encaixe direto. Solução provisória aceitável: usar o par do botão de reiniciar no lugar do de ligar, já que eletricamente são chaves iguais.</li>
