@@ -223,7 +223,7 @@ if (!DRY) {
 }
 
 // ── Cópia pública sanitizada (painel /admin/editorial-ondas · Infra 3).
-{
+if (!DRY) {
   const rotas = { ...anterior.rotas } as Record<string, Registro>;
   for (const l of linhas) rotas[l.url] = l;
   const porUrl = new Map(EDITORIAL_WAVES.map((e) => [e.url, e]));
