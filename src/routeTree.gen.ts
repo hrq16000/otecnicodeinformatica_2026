@@ -88,6 +88,7 @@ import { Route as AdminCasosRouteImport } from './routes/admin_.casos'
 import { Route as AdminConversaoRouteImport } from './routes/admin_.conversao'
 import { Route as AdminDashboardRouteImport } from './routes/admin_.dashboard'
 import { Route as AdminEditorLocalRouteImport } from './routes/admin_.editor-local'
+import { Route as AdminEditorialOndasRouteImport } from './routes/admin_.editorial-ondas'
 import { Route as AdminExperimentoWaRouteImport } from './routes/admin_.experimento-wa'
 import { Route as AdminFotosRouteImport } from './routes/admin_.fotos'
 import { Route as AdminFunnelRouteImport } from './routes/admin_.funnel'
@@ -879,6 +880,11 @@ const AdminDashboardRoute = AdminDashboardRouteImport.update({
 const AdminEditorLocalRoute = AdminEditorLocalRouteImport.update({
   id: '/admin_/editor-local',
   path: '/admin/editor-local',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AdminEditorialOndasRoute = AdminEditorialOndasRouteImport.update({
+  id: '/admin_/editorial-ondas',
+  path: '/admin/editorial-ondas',
   getParentRoute: () => rootRouteImport,
 } as any)
 const AdminExperimentoWaRoute = AdminExperimentoWaRouteImport.update({
@@ -3004,6 +3010,7 @@ export interface FileRoutesByFullPath {
   '/admin/conversao': typeof AdminConversaoRoute
   '/admin/dashboard': typeof AdminDashboardRoute
   '/admin/editor-local': typeof AdminEditorLocalRoute
+  '/admin/editorial-ondas': typeof AdminEditorialOndasRoute
   '/admin/experimento-wa': typeof AdminExperimentoWaRoute
   '/admin/fotos': typeof AdminFotosRoute
   '/admin/funnel': typeof AdminFunnelRoute
@@ -3464,6 +3471,7 @@ export interface FileRoutesByTo {
   '/admin/conversao': typeof AdminConversaoRoute
   '/admin/dashboard': typeof AdminDashboardRoute
   '/admin/editor-local': typeof AdminEditorLocalRoute
+  '/admin/editorial-ondas': typeof AdminEditorialOndasRoute
   '/admin/experimento-wa': typeof AdminExperimentoWaRoute
   '/admin/fotos': typeof AdminFotosRoute
   '/admin/funnel': typeof AdminFunnelRoute
@@ -3925,6 +3933,7 @@ export interface FileRoutesById {
   '/admin_/conversao': typeof AdminConversaoRoute
   '/admin_/dashboard': typeof AdminDashboardRoute
   '/admin_/editor-local': typeof AdminEditorLocalRoute
+  '/admin_/editorial-ondas': typeof AdminEditorialOndasRoute
   '/admin_/experimento-wa': typeof AdminExperimentoWaRoute
   '/admin_/fotos': typeof AdminFotosRoute
   '/admin_/funnel': typeof AdminFunnelRoute
@@ -4387,6 +4396,7 @@ export interface FileRouteTypes {
     | '/admin/conversao'
     | '/admin/dashboard'
     | '/admin/editor-local'
+    | '/admin/editorial-ondas'
     | '/admin/experimento-wa'
     | '/admin/fotos'
     | '/admin/funnel'
@@ -4847,6 +4857,7 @@ export interface FileRouteTypes {
     | '/admin/conversao'
     | '/admin/dashboard'
     | '/admin/editor-local'
+    | '/admin/editorial-ondas'
     | '/admin/experimento-wa'
     | '/admin/fotos'
     | '/admin/funnel'
@@ -5307,6 +5318,7 @@ export interface FileRouteTypes {
     | '/admin_/conversao'
     | '/admin_/dashboard'
     | '/admin_/editor-local'
+    | '/admin_/editorial-ondas'
     | '/admin_/experimento-wa'
     | '/admin_/fotos'
     | '/admin_/funnel'
@@ -5768,6 +5780,7 @@ export interface RootRouteChildren {
   AdminConversaoRoute: typeof AdminConversaoRoute
   AdminDashboardRoute: typeof AdminDashboardRoute
   AdminEditorLocalRoute: typeof AdminEditorLocalRoute
+  AdminEditorialOndasRoute: typeof AdminEditorialOndasRoute
   AdminExperimentoWaRoute: typeof AdminExperimentoWaRoute
   AdminFotosRoute: typeof AdminFotosRoute
   AdminFunnelRoute: typeof AdminFunnelRoute
@@ -6702,6 +6715,13 @@ declare module '@tanstack/react-router' {
       path: '/admin/editor-local'
       fullPath: '/admin/editor-local'
       preLoaderRoute: typeof AdminEditorLocalRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/admin_/editorial-ondas': {
+      id: '/admin_/editorial-ondas'
+      path: '/admin/editorial-ondas'
+      fullPath: '/admin/editorial-ondas'
+      preLoaderRoute: typeof AdminEditorialOndasRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/admin_/experimento-wa': {
@@ -9443,6 +9463,7 @@ const rootRouteChildren: RootRouteChildren = {
   AdminConversaoRoute: AdminConversaoRoute,
   AdminDashboardRoute: AdminDashboardRoute,
   AdminEditorLocalRoute: AdminEditorLocalRoute,
+  AdminEditorialOndasRoute: AdminEditorialOndasRoute,
   AdminExperimentoWaRoute: AdminExperimentoWaRoute,
   AdminFotosRoute: AdminFotosRoute,
   AdminFunnelRoute: AdminFunnelRoute,

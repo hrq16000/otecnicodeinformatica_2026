@@ -54,6 +54,8 @@
     "indexnow:ping": "node scripts/indexnow-ping.mjs",
     "check:intent-collisions": "node scripts/check-intent-collisions.mjs dist",
     "check:cta-funnel": "bun scripts/check-cta-funnel.ts",
+    "monitor:editorial-waves": "bun scripts/monitor-editorial-waves.ts",
+    "check:editorial-cannibalization": "bun scripts/check-editorial-cannibalization.ts",
     "check:editorial-governance": "node scripts/check-editorial-governance.mjs",
     "check:editorial-pilot": "node scripts/check-editorial-pilot.mjs",
     "check:editorial-technical-review": "node scripts/check-editorial-technical-review.mjs",

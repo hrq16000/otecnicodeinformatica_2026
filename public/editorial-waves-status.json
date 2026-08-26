@@ -1,0 +1,189 @@
+{
+  "geradoEm": "2026-08-26T01:57:48.961Z",
+  "site": "sc-domain:otecnicodeinformatica.com.br",
+  "disponivel": true,
+  "lotes": [
+    {
+      "lote": "10C/0",
+      "total": 4,
+      "indexadas": 0,
+      "cobertura": 0
+    },
+    {
+      "lote": "10D/1",
+      "total": 3,
+      "indexadas": 0,
+      "cobertura": 0
+    }
+  ],
+  "rotas": [
+    {
+      "wave": "10C",
+      "batch": "0",
+      "lote": "10C/0",
+      "url": "/blog/limpar-arquivos-temporarios-windows",
+      "urlAbsoluta": "https://otecnicodeinformatica.com.br/blog/limpar-arquivos-temporarios-windows",
+      "ownerId": "temporarios-windows",
+      "cluster": "pc-lento",
+      "role": "satelite",
+      "publishedAt": "2026-08-25",
+      "contentHash": "cba47ddd4ab081a6",
+      "sitemapLastmod": null,
+      "indexNowSentAt": null,
+      "google": {
+        "status": "NO_DATA",
+        "verdict": "NEUTRAL",
+        "coverageState": "URL is unknown to Google",
+        "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+        "indexingState": "INDEXING_STATE_UNSPECIFIED",
+        "ultimoCrawl": null,
+        "canonicalGoogle": null,
+        "canonicalDeclarado": null
+      }
+    },
+    {
+      "wave": "10C",
+      "batch": "0",
+      "lote": "10C/0",
+      "url": "/blog/memoria-ram-insuficiente-sintomas",
+      "urlAbsoluta": "https://otecnicodeinformatica.com.br/blog/memoria-ram-insuficiente-sintomas",
+      "ownerId": "ram-insuficiente-sintomas",
+      "cluster": "pc-lento",
+      "role": "satelite",
+      "publishedAt": "2026-08-25",
+      "contentHash": "8ec249313054318c",
+      "sitemapLastmod": null,
+      "indexNowSentAt": null,
+      "google": {
+        "status": "NO_DATA",
+        "verdict": "NEUTRAL",
+        "coverageState": "URL is unknown to Google",
+        "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+        "indexingState": "INDEXING_STATE_UNSPECIFIED",
+        "ultimoCrawl": null,
+        "canonicalGoogle": null,
+        "canonicalDeclarado": null
+      }
+    },
+    {
+      "wave": "10C",
+      "batch": "0",
+      "lote": "10C/0",
+      "url": "/blog/codigos-de-erro-tela-azul-windows",
+      "urlAbsoluta": "https://otecnicodeinformatica.com.br/blog/codigos-de-erro-tela-azul-windows",
+      "ownerId": "bsod-codigos-de-erro",
+      "cluster": "tela-azul",
+      "role": "satelite",
+      "publishedAt": "2026-08-25",
+      "contentHash": "3f80566c863cdfed",
+      "sitemapLastmod": null,
+      "indexNowSentAt": null,
+      "google": {
+        "status": "NO_DATA",
+        "verdict": "NEUTRAL",
+        "coverageState": "URL is unknown to Google",
+        "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+        "indexingState": "INDEXING_STATE_UNSPECIFIED",
+        "ultimoCrawl": null,
+        "canonicalGoogle": null,
+        "canonicalDeclarado": null
+      }
+    },
+    {
+      "wave": "10C",
+      "batch": "0",
+      "lote": "10C/0",
+      "url": "/blog/testar-memoria-ram-memtest86",
+      "urlAbsoluta": "https://otecnicodeinformatica.com.br/blog/testar-memoria-ram-memtest86",
+      "ownerId": "memtest86-teste-de-ram",
+      "cluster": "tela-azul",
+      "role": "satelite",
+      "publishedAt": "2026-08-25",
+      "contentHash": "9392f7964190fc61",
+      "sitemapLastmod": null,
+      "indexNowSentAt": null,
+      "google": {
+        "status": "NO_DATA",
+        "verdict": "NEUTRAL",
+        "coverageState": "URL is unknown to Google",
+        "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+        "indexingState": "INDEXING_STATE_UNSPECIFIED",
+        "ultimoCrawl": null,
+        "canonicalGoogle": null,
+        "canonicalDeclarado": null
+      }
+    },
+    {
+      "wave": "10D",
+      "batch": "1",
+      "lote": "10D/1",
+      "url": "/blog/botao-power-nao-funciona-jump-start-placa-mae",
+      "urlAbsoluta": "https://otecnicodeinformatica.com.br/blog/botao-power-nao-funciona-jump-start-placa-mae",
+      "ownerId": "botao-power-jump-start",
+      "cluster": "pc-nao-liga",
+      "role": "satelite",
+      "publishedAt": "2026-08-26",
+      "contentHash": "678c575b53ede34c",
+      "sitemapLastmod": null,
+      "indexNowSentAt": null,
+      "google": {
+        "status": "NO_DATA",
+        "verdict": "NEUTRAL",
+        "coverageState": "URL is unknown to Google",
+        "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+        "indexingState": "INDEXING_STATE_UNSPECIFIED",
+        "ultimoCrawl": null,
+        "canonicalGoogle": null,
+        "canonicalDeclarado": null
+      }
+    },
+    {
+      "wave": "10D",
+      "batch": "1",
+      "lote": "10D/1",
+      "url": "/blog/curto-circuito-placa-mae-como-identificar",
+      "urlAbsoluta": "https://otecnicodeinformatica.com.br/blog/curto-circuito-placa-mae-como-identificar",
+      "ownerId": "curto-circuito-placa-mae",
+      "cluster": "liga-e-desliga",
+      "role": "satelite",
+      "publishedAt": "2026-08-26",
+      "contentHash": "846428a7e4c08bd7",
+      "sitemapLastmod": null,
+      "indexNowSentAt": null,
+      "google": {
+        "status": "NO_DATA",
+        "verdict": "NEUTRAL",
+        "coverageState": "URL is unknown to Google",
+        "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+        "indexingState": "INDEXING_STATE_UNSPECIFIED",
+        "ultimoCrawl": null,
+        "canonicalGoogle": null,
+        "canonicalDeclarado": null
+      }
+    },
+    {
+      "wave": "10D",
+      "batch": "1",
+      "lote": "10D/1",
+      "url": "/blog/bios-corrompida-reset-cmos-atualizacao",
+      "urlAbsoluta": "https://otecnicodeinformatica.com.br/blog/bios-corrompida-reset-cmos-atualizacao",
+      "ownerId": "bios-corrompida-reset-cmos",
+      "cluster": "liga-e-desliga",
+      "role": "satelite",
+      "publishedAt": "2026-08-26",
+      "contentHash": "300aace8f5f3de98",
+      "sitemapLastmod": null,
+      "indexNowSentAt": null,
+      "google": {
+        "status": "NO_DATA",
+        "verdict": "NEUTRAL",
+        "coverageState": "URL is unknown to Google",
+        "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+        "indexingState": "INDEXING_STATE_UNSPECIFIED",
+        "ultimoCrawl": null,
+        "canonicalGoogle": null,
+        "canonicalDeclarado": null
+      }
+    }
+  ]
+}

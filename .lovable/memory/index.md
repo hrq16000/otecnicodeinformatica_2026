@@ -65,3 +65,4 @@
 - [FAQPage exige FAQ visível](mem://features/faqpage-paridade-visivel) — Slot global de FAQ só na home; gates de schema/malha rodam no harness SSR, nunca em dist/.
 - [Rodada 4E — redes e suporte remoto](mem://features/rodada-4e-redes-remoto) — 5 owners de Wi-Fi/rede/remoto sem URLs novas, render fail-closed e separação internet lenta × Wi-Fi lento.
 - [Intenção conversacional + orphan-trend](mem://features/intencao-conversacional-e-orphan-trend) — Blocos o que/como/por que/onde nacionais em /problemas, FAQPage único por URL e baseline versionado de páginas órfãs.
+- [Infra de ondas editoriais](mem://features/infra-ondas-editoriais) — Registry por onda/lote, monitor GSC, gate anti-canibalização, painel /admin/editorial-ondas e E2E ampliado.
