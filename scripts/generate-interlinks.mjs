@@ -89,11 +89,17 @@ for (const origem of problemas) {
     .slice(0, 2);
 
   const bairro = bairros[problemas.indexOf(origem) % bairros.length];
-  const nomeBairro = (meta.get(bairro)?.title ?? bairro.split("/").pop())
-    .split("|")[0]
-    .split(":")[0]
-    .replace(/técnico de inform[áa]tica (em|no|na)\s*/i, "")
-    .trim();
+  const slugBairro = bairro.split("/").pop();
+  // Nome de exibição oficial (src/lib/bairrosDirectory.ts) tem prioridade;
+  // o slug nunca pode vazar para a âncora visível.
+  const nomeBairro = (
+    NOMES_BAIRROS.get(slugBairro) ??
+    (meta.get(bairro)?.title ?? slugBairro)
+      .split("|")[0]
+      .split(":")[0]
+      .replace(/técnico de inform[áa]tica (em|no|na)\s*/i, "")
+      .trim()
+  );
 
   const itens = [];
   for (const { path } of servicosRel) {
