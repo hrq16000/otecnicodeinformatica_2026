@@ -57,8 +57,59 @@ const COR: Record<string, string> = {
 
 const fmt = (v?: string | null) => (v ? new Date(v).toLocaleString("pt-BR") : "—");
 
+interface Alerta {
+  url: string;
+  lote: string;
+  owner: string;
+  source: string;
+  eventType: string;
+  previousState: string | null;
+  currentState: string;
+  severity: string;
+  observedAt: string;
+}
+
+interface AssetLinha {
+  owner: string;
+  slug: string;
+  localPath: string;
+  originalUrl: string | null;
+  author: string | null;
+  license: string;
+  licenseUrl: string | null;
+  attributionRequired: boolean;
+  attributionText: string | null;
+  sourceType: string;
+  fileHash: string | null;
+  formats: string[];
+  resultado: string;
+  falhas: string[];
+  avisos: string[];
+}
+
+interface StatusAssets {
+  geradoEm: string;
+  total: number;
+  pass: number;
+  warn: number;
+  fail: number;
+  semLicenca: number;
+  semAtribuicao: number;
+  unregistered: string[];
+  unused: string[];
+  assets: AssetLinha[];
+}
+
+const COR_SEV: Record<string, string> = {
+  CRITICAL: "bg-destructive/15 text-destructive border-destructive/30",
+  WARNING: "bg-amber-500/15 text-amber-400 border-amber-500/30",
+  INFO: "bg-sky-500/15 text-sky-400 border-sky-500/30",
+};
+
 export default function AdminEditorialOndas() {
   const [status, setStatus] = useState<StatusOndas | null>(null);
+  const [alertas, setAlertas] = useState<Alerta[]>([]);
+  const [assets, setAssets] = useState<StatusAssets | null>(null);
   const [erro, setErro] = useState<string | null>(null);
   const [lote, setLote] = useState<string>("todos");
 
@@ -67,6 +118,14 @@ export default function AdminEditorialOndas() {
       .then((r) => (r.ok ? r.json() : Promise.reject(new Error(`HTTP ${r.status}`))))
       .then(setStatus)
       .catch((e: Error) => setErro(e.message));
+    fetch("/editorial-waves-alerts.json", { cache: "no-store" })
+      .then((r) => (r.ok ? r.json() : null))
+      .then((d) => setAlertas(d?.alertas ?? []))
+      .catch(() => setAlertas([]));
+    fetch("/editorial-assets-status.json", { cache: "no-store" })
+      .then((r) => (r.ok ? r.json() : null))
+      .then(setAssets)
+      .catch(() => setAssets(null));
   }, []);
 
   const lotes = useMemo(
@@ -77,6 +136,11 @@ export default function AdminEditorialOndas() {
     () => (status?.rotas ?? []).filter((r) => lote === "todos" || r.lote === lote),
     [status, lote],
   );
+  const alertasDoLote = useMemo(
+    () => alertas.filter((a) => lote === "todos" || a.lote === lote).slice(0, 30),
+    [alertas, lote],
+  );
+
 
   return (
     <main className="container mx-auto max-w-6xl px-4 py-10">
