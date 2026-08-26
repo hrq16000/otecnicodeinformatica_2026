@@ -725,7 +725,52 @@ const WAVE_10D: EditorialApproval[] = [
   },
 ];
 
-export const APPROVED_EDITORIAL_CONTENT = new Map<string, EditorialApproval>([
+export const WAVE_10E: EditorialApproval[] = [
+  {
+    slug: "internet-lenta-provedor-ou-roteador",
+    status: "approved",
+    authorType: "organization",
+    authorId: INSTITUTIONAL_AUTHOR.id,
+    reviewedAt: "2026-08-27",
+    approvedAt: "2026-08-27",
+    imageOrigin: "licensed",
+    imageLicense: "CC BY 4.0",
+    imageAttribution:
+      "Foto: VulcanSphere (Wikimedia Commons), CC BY 4.0 — https://commons.wikimedia.org/wiki/File:ARRIS_CM820B_DOCSIS_Cable_Modem.jpg",
+    notes:
+      "Satélite escrito do zero na Onda 10C (Lote 2); fact-check registrado em blogEditorialSources.ts; capa é fotografia real licenciada, sem IA.",
+  },
+  {
+    slug: "impressora-offline-como-resolver",
+    status: "approved",
+    authorType: "organization",
+    authorId: INSTITUTIONAL_AUTHOR.id,
+    reviewedAt: "2026-08-27",
+    approvedAt: "2026-08-27",
+    imageOrigin: "licensed",
+    imageLicense: "CC BY-SA 2.0",
+    imageAttribution:
+      "Foto: Cheon Fong Liew (Wikimedia Commons), CC BY-SA 2.0 — https://commons.wikimedia.org/wiki/File:Dell_Color_Laser_Network_Printer_1320cn_ports.jpg",
+    notes:
+      "Satélite escrito do zero na Onda 10C (Lote 2); fact-check registrado em blogEditorialSources.ts; capa é fotografia real licenciada, sem IA.",
+  },
+  {
+    slug: "fila-de-impressao-travada-spooler-windows",
+    status: "approved",
+    authorType: "organization",
+    authorId: INSTITUTIONAL_AUTHOR.id,
+    reviewedAt: "2026-08-27",
+    approvedAt: "2026-08-27",
+    imageOrigin: "licensed",
+    imageLicense: "CC BY-SA 4.0",
+    imageAttribution:
+      "Foto: Solomon203 (Wikimedia Commons), CC BY-SA 4.0 — https://commons.wikimedia.org/wiki/File:Sharp_MX-M465_of_Aurora_Office_Equipment_20161029.jpg",
+    notes:
+      "Satélite escrito do zero na Onda 10C (Lote 2); fact-check registrado em blogEditorialSources.ts; capa é fotografia real licenciada, sem IA.",
+  },
+];
+
+const APPROVED_EDITORIAL_CONTENT = new Map<string, EditorialApproval>([
 
   ...FIRST_WAVE_SLUGS.map((slug) => [
     slug,
@@ -770,6 +815,7 @@ export const APPROVED_EDITORIAL_CONTENT = new Map<string, EditorialApproval>([
   ...WAVE_9C.map((a) => [a.slug, a] as [string, EditorialApproval]),
   ...WAVE_10C.map((a) => [a.slug, a] as [string, EditorialApproval]),
   ...WAVE_10D.map((a) => [a.slug, a] as [string, EditorialApproval]),
+  ...WAVE_10E.map((a) => [a.slug, a] as [string, EditorialApproval]),
 ]);
 
 
