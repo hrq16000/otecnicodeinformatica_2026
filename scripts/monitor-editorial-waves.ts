@@ -191,10 +191,31 @@ const { alertasNovos, estado } = calcularTransicoes(
   agora,
 );
 
-const despacho = await despacharWebhook(alertasNovos);
+// Entrega via camada única (Infra 3): Slack e e-mail independentes, com
+// idempotência por (eventId, channel). Canal externo indisponível nunca
+// derruba o monitor.
+const config = lerConfiguracao();
+const auditoria = lerAuditoria();
+const entrega = await entregarAlertas(alertasNovos, { config, auditoria });
+persistirAuditoria({
+  geradoEm: agora,
+  canais: { slack: config.slack.status, email: config.email.status },
+  entregas: entrega.entregas,
+  historico: [
+    ...entrega.resultados.map((r: Record<string, unknown>) => ({ ...r, em: agora })),
+    ...auditoria.historico,
+  ].slice(0, 500),
+});
+const despacho = {
+  enviado: entrega.resumo.enviados > 0,
+  motivo: entrega.resumo.estado,
+  slack: entrega.resumo.slack,
+  email: entrega.resumo.email,
+};
 persistirAlertas({
   geradoEm: agora,
   webhook: despacho,
+  entrega: entrega.resumo,
   estado,
   alertas: [...alertasNovos, ...anterior.alertas].slice(0, 500),
 });
