@@ -101,18 +101,86 @@ for (const r of delta?.regressoes ?? []) {
   );
 }
 
+/* ── Deduplicação + rate-limit ────────────────────────────────────────────
+ * Duas travas independentes contra spam:
+ *  1. DEDUPE por impressão digital do diff (id + tipo + mensagem): o mesmo
+ *     diff exato só volta a alertar após EDITORIAL_ALERT_DEDUPE_HOURS (12h).
+ *  2. RATE-LIMIT por execução: no máximo EDITORIAL_ALERT_MAX_PER_RUN (20)
+ *     eventos entregues; o excedente fica registrado como RATE_LIMITED e é
+ *     reavaliado na execução seguinte (nada é perdido silenciosamente).
+ */
+const ESTADO_PATH = resolve(ROOT, "reports/editorial/10c/alert-dedupe-state.json");
+const JANELA_H = Number(process.env.EDITORIAL_ALERT_DEDUPE_HOURS ?? 12);
+const MAX_POR_RUN = Number(process.env.EDITORIAL_ALERT_MAX_PER_RUN ?? 20);
+const agora = Date.now();
+
+const estado = ler("reports/editorial/10c/alert-dedupe-state.json") ?? { enviados: {} };
+const impressao = (e) =>
+  createHash("sha256").update(`${e.id}|${e.type}|${e.message}`).digest("hex").slice(0, 16);
+
+const candidatos = [];
+const suprimidos = [];
+for (const e of eventos) {
+  const fp = impressao(e);
+  const ultimo = estado.enviados[fp]?.lastSentAt;
+  const idadeH = ultimo ? (agora - new Date(ultimo).getTime()) / 3_600_000 : Infinity;
+  if (idadeH < JANELA_H) {
+    suprimidos.push({ ...e, fingerprint: fp, motivo: "DEDUPE", ultimoEnvio: ultimo });
+    continue;
+  }
+  if (candidatos.length >= MAX_POR_RUN) {
+    suprimidos.push({ ...e, fingerprint: fp, motivo: "RATE_LIMITED", ultimoEnvio: ultimo ?? null });
+    continue;
+  }
+  candidatos.push({ ...e, fingerprint: fp });
+}
+
 let entrega = { resumo: { estado: "SEM_EVENTOS", enviados: 0, ignorados: 0 }, resultados: [] };
-if (eventos.length > 0) {
-  entrega = await entregarAlertas(eventos, { dryRun });
+if (candidatos.length > 0) {
+  entrega = await entregarAlertas(candidatos, { dryRun });
+}
+
+// Só marca como enviado o que realmente saiu (dry-run não consome a janela).
+if (!dryRun) {
+  const entreguesIds = new Set(
+    (entrega.resultados ?? [])
+      .filter((r) => r.state === "DELIVERED" || r.state === "ALREADY_DELIVERED")
+      .map((r) => r.eventId),
+  );
+  for (const e of candidatos) {
+    if (!entreguesIds.has(e.id)) continue;
+    estado.enviados[e.fingerprint] = {
+      eventId: e.id,
+      url: e.url,
+      type: e.type,
+      lastSentAt: new Date(agora).toISOString(),
+    };
+  }
+  // Retenção: descarta impressões fora da janela (evita crescer sem limite).
+  for (const [fp, reg] of Object.entries(estado.enviados)) {
+    if ((agora - new Date(reg.lastSentAt).getTime()) / 3_600_000 > JANELA_H * 4)
+      delete estado.enviados[fp];
+  }
+  mkdirSync(resolve(ROOT, "reports/editorial/10c"), { recursive: true });
+  writeFileSync(ESTADO_PATH, `${JSON.stringify({ geradoEm: new Date(agora).toISOString(), ...estado }, null, 2)}\n`);
 }
 
 const saida = {
-  geradoEm: new Date().toISOString(),
+  geradoEm: new Date(agora).toISOString(),
   dryRun,
   total: eventos.length,
   criticos: eventos.filter((e) => e.severity === "CRITICAL").length,
+  entregues: candidatos.length,
+  suprimidos: {
+    total: suprimidos.length,
+    dedupe: suprimidos.filter((s) => s.motivo === "DEDUPE").length,
+    rateLimited: suprimidos.filter((s) => s.motivo === "RATE_LIMITED").length,
+    janelaHoras: JANELA_H,
+    maxPorExecucao: MAX_POR_RUN,
+  },
   entrega: entrega.resumo,
   eventos: eventos.map(({ id, url, severity, type, message }) => ({ id, url, severity, type, message })),
+  ignorados: suprimidos.map(({ id, url, motivo, ultimoEnvio }) => ({ id, url, motivo, ultimoEnvio })),
 };
 
 mkdirSync(resolve(ROOT, "reports/editorial/10c"), { recursive: true });
@@ -122,6 +190,9 @@ writeFileSync(
 );
 
 console.log(
-  `[alerts:editorial-regression] ${saida.total} evento(s) · ${saida.criticos} crítico(s) · entrega ${saida.entrega.estado}`,
+  `[alerts:editorial-regression] ${saida.total} evento(s) · ${saida.criticos} crítico(s) · ` +
+    `${saida.entregues} candidato(s) · ${saida.suprimidos.dedupe} dedupe · ` +
+    `${saida.suprimidos.rateLimited} rate-limit · entrega ${saida.entrega.estado}`,
 );
 for (const e of saida.eventos) console.log(`  · [${e.severity}] ${e.url} — ${e.type}`);
+
