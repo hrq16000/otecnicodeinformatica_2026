@@ -35,21 +35,24 @@ const mask = (tel: string) => `(${tel.slice(0, 2)}) *****-${tel.slice(-4)}`;
 /** O hash usa o id da linha como sal, não o telefone. */
 const hashCode = (id: string, codigo: string) => sha256(`code:${id}:${codigo}`);
 
-async function requireAdmin(req: Request) {
+/** Devolve o admin autenticado (id/e-mail) ou null. */
+async function requireAdmin(req: Request): Promise<{ id: string; email: string | null } | null> {
   const authorization = req.headers.get("Authorization") ?? "";
-  if (!authorization.toLowerCase().startsWith("bearer ")) return false;
+  if (!authorization.toLowerCase().startsWith("bearer ")) return null;
   const client = createClient(SUPABASE_URL, ANON_KEY, {
     auth: { persistSession: false },
     global: { headers: { Authorization: authorization } },
   });
   const { data: userData, error } = await client.auth.getUser();
-  if (error || !userData?.user) return false;
+  if (error || !userData?.user) return null;
   const { data: isAdmin } = await client.rpc("has_role", {
     _user_id: userData.user.id,
     _role: "admin",
   });
-  return isAdmin === true;
+  if (isAdmin !== true) return null;
+  return { id: userData.user.id, email: userData.user.email ?? null };
 }
+
 
 
 Deno.serve(async (req) => {
