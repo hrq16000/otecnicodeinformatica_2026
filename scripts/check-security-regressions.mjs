@@ -26,6 +26,15 @@ const PERMITIDOS = new Set([
   "src/__tests__/security-definer-privileges.integration.test.ts",
 ]);
 
+// Migração que aplicou as correções: histórico anterior a ela é imutável e
+// legitimamente cita os termos (DROP COLUMN / REVOKE). Só migrações POSTERIORES
+// podem reintroduzir a regressão.
+const MIGRACAO_CORRECAO = "20260827034541";
+const eMigracaoAntiga = (rel) => {
+  const m = rel.match(/^supabase\/migrations\/(\d{14})_/);
+  return Boolean(m && m[1] <= MIGRACAO_CORRECAO);
+};
+
 const arquivos = [];
 const andar = (dir) => {
   for (const nome of readdirSync(dir)) {
@@ -42,7 +51,7 @@ const FUNCOES_DEFINER_ADMIN = ["admin_link_os_lead"];
 const violacoes = [];
 for (const caminho of arquivos) {
   const rel = relative(ROOT, caminho).replace(/\\/g, "/");
-  if (PERMITIDOS.has(rel)) continue;
+  if (PERMITIDOS.has(rel) || eMigracaoAntiga(rel)) continue;
   const texto = readFileSync(caminho, "utf8");
 
   // 1) Código de verificação em texto puro.
