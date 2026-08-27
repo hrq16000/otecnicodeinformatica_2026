@@ -67,8 +67,19 @@ export default function EditorialAuditoriaPanel({ lote }: { lote: string }) {
   const [executadoEm, setExecutadoEm] = useState<string | null>(null);
   const [delta, setDelta] = useState<DeltaArtefato | null>(null);
   const [veredito, setVeredito] = useState<string>("UNKNOWN");
+  const [bloqueio, setBloqueio] = useState<string | null>(null);
 
-  const carregar = useCallback(async () => {
+  const carregar = useCallback(async (sobDemanda = false) => {
+    if (sobDemanda) {
+      // Rate-limit + dedupe por rota E payload: variar o filtro de lote não
+      // burla o teto de execuções da rota.
+      const veredicto = permitirExecucao("/admin/editorial-ondas#auditoria", { lote });
+      if (!veredicto.permitido) {
+        setBloqueio(veredicto.mensagem);
+        return;
+      }
+      setBloqueio(null);
+    }
     setExecutando(true);
     const [indexacao, indexnow, schema, assets, alertas, auditoria, deltaArt] = await Promise.all([
       buscar<Record<string, any>>("/editorial-waves-status.json"),
