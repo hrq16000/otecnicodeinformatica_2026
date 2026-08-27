@@ -88,7 +88,6 @@
     "check:public-data-exposure": "node scripts/check-public-data-exposure.mjs",
     "check:security-regressions": "node scripts/check-security-regressions.mjs",
     "security:doc": "node scripts/copy-security-doc.mjs",
-    "check:breadcrumb-parity": "node scripts/check-breadcrumb-parity.mjs dist",
     "check:security-findings": "node scripts/check-security-findings-baseline.mjs",
     "check:security-headers": "node scripts/check-security-headers.mjs",
     "check:security-headers:file": "bun scripts/check-security-headers.ts",
