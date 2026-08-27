@@ -63,11 +63,47 @@ Deno.serve(async (req) => {
     return json({ error: "invalid_json" }, 400);
   }
 
+  const action =
+    payload.action === "verify" ? "verify" : payload.action === "issue" ? "issue" : "request";
+  const supabase = createClient(SUPABASE_URL, SERVICE_ROLE, { auth: { persistSession: false } });
+
+  // Emissão do código: só administradores autenticados, e o valor é devolvido
+  // apenas nesta resposta (nunca gravado em texto puro).
+  if (action === "issue") {
+    if (!(await requireAdmin(req))) return json({ error: "unauthorized" }, 401);
+    const id = typeof payload.id === "string" ? payload.id : "";
+    if (!/^[0-9a-f-]{36}$/i.test(id)) return json({ error: "invalid_id" }, 400);
+
+    const codigo = String(Math.floor(100000 + Math.random() * 900000));
+    const { data, error } = await supabase
+      .from("os_verification_codes")
+      .update({
+        code_hash: await hashCode(id, codigo),
+        attempts: 0,
+        expires_at: new Date(Date.now() + CODE_TTL_MIN * 60_000).toISOString(),
+      })
+      .eq("id", id)
+      .is("consumed_at", null)
+      .select("id, telefone_masked, expires_at")
+      .maybeSingle();
+
+    if (error) {
+      console.error("os-codigo issue falhou:", error.message);
+      return json({ error: "issue_failed" }, 500);
+    }
+    if (!data) return json({ error: "code_not_found" }, 404);
+
+    return json({
+      ok: true,
+      codigo,
+      telefoneMascarado: data.telefone_masked,
+      expiraEm: data.expires_at,
+    });
+  }
+
   const telefone = normalizePhone(payload.telefone);
   if (!telefone) return json({ error: "invalid_phone" }, 400);
 
-  const action = payload.action === "verify" ? "verify" : "request";
-  const supabase = createClient(SUPABASE_URL, SERVICE_ROLE, { auth: { persistSession: false } });
 
   const ip =
     req.headers.get("x-forwarded-for")?.split(",")[0]?.trim() ||
