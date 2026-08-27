@@ -56,6 +56,8 @@
     "check:cta-funnel": "bun scripts/check-cta-funnel.ts",
     "audit:editorial-10c": "node scripts/audit-editorial-10c.mjs",
     "report:editorial-delta": "node scripts/report-editorial-audit-delta.mjs",
+    "report:editorial-history": "node scripts/report-editorial-audit-history.mjs",
+    "notify:pipeline-failure": "node scripts/notify-pipeline-failure.mjs",
     "alerts:editorial-regression": "node scripts/alert-editorial-regression.mjs",
     "report:onda-11": "node scripts/report-onda-11-priorities.mjs",
     "check:interlinks-quality": "node scripts/check-interlinks-quality.mjs",
