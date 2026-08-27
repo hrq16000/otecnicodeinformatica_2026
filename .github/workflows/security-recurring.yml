@@ -1,0 +1,62 @@
+name: Security recurring scan
+
+# Reexecuta a varredura de segurança a cada merge em main (e semanalmente).
+# Falha o build se qualquer internal_id já corrigido reaparecer ou se o código
+# de verificação voltar a ser tratado em texto puro. Ver SECURITY.md.
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  schedule:
+    - cron: "40 5 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: security-recurring-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  regressao:
+    name: Regressão dos achados corrigidos
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: latest
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: bun install --frozen-lockfile
+
+      # 1) Varredura estática dos internal_id corrigidos (fail-fast).
+      - name: Gate de regressão de segurança
+        run: node scripts/check-security-regressions.mjs
+
+      # 2) Testes automatizados do fluxo de código de verificação (hash-only).
+      - name: Testes de segurança (unit)
+        run: bunx vitest run --project unit src/__tests__/security-os-codigo.test.ts
+
+      # 3) Teste de integração: função definer administrativa inacessível ao usuário.
+      - name: Teste de privilégio (integração)
+        env:
+          VITE_SUPABASE_URL: ${{ secrets.VITE_SUPABASE_URL }}
+          VITE_SUPABASE_PUBLISHABLE_KEY: ${{ secrets.VITE_SUPABASE_PUBLISHABLE_KEY }}
+        run: bunx vitest run --project integration src/__tests__/security-definer-privileges.integration.test.ts
+
+      # 4) Baseline de findings persistidos (reviews, og_validation_status etc.).
+      - name: Baseline de findings
+        env:
+          VITE_SUPABASE_URL: ${{ secrets.VITE_SUPABASE_URL }}
+          VITE_SUPABASE_PUBLISHABLE_KEY: ${{ secrets.VITE_SUPABASE_PUBLISHABLE_KEY }}
+        run: node scripts/check-security-findings-baseline.mjs
+
+      # 5) Segredos/credenciais vazados no diff.
+      - name: Gitleaks
+        uses: gitleaks/gitleaks-action@v2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
