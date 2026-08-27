@@ -1,0 +1,27 @@
+{
+  "geradoEm": "2026-08-27T04:34:36.653Z",
+  "total": 1,
+  "motivo": null,
+  "execucoes": [
+    {
+      "arquivo": "2026-08-27T04-34-36-342Z.json",
+      "artefato": "/editorial/10c/history/2026-08-27T04-34-36-342Z.json",
+      "wave": "10C",
+      "geradoEm": "2026-08-27T04:34:36.342Z",
+      "veredito": "SAUDAVEL",
+      "responsavel": "root",
+      "origem": "manual",
+      "commit": null,
+      "jobUrl": null,
+      "estados": {
+        "indexacao": "OK",
+        "indexnow": "OK",
+        "schema": "UNKNOWN",
+        "assets": "OK",
+        "canibalizacao": "OK",
+        "orphans": "OK",
+        "alertas": "OK"
+      }
+    }
+  ]
+}

@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Skeleton } from "@/components/ui/skeleton";
 import { exportarCsv, exportarJson } from "@/lib/exportarRelatorio";
+import { permitirExecucao } from "@/lib/rateLimitSobDemanda";
 
 
 /**
@@ -66,8 +67,19 @@ export default function EditorialAuditoriaPanel({ lote }: { lote: string }) {
   const [executadoEm, setExecutadoEm] = useState<string | null>(null);
   const [delta, setDelta] = useState<DeltaArtefato | null>(null);
   const [veredito, setVeredito] = useState<string>("UNKNOWN");
+  const [bloqueio, setBloqueio] = useState<string | null>(null);
 
-  const carregar = useCallback(async () => {
+  const carregar = useCallback(async (sobDemanda = false) => {
+    if (sobDemanda) {
+      // Rate-limit + dedupe por rota E payload: variar o filtro de lote não
+      // burla o teto de execuções da rota.
+      const veredicto = permitirExecucao("/admin/editorial-ondas#auditoria", { lote });
+      if (!veredicto.permitido) {
+        setBloqueio(veredicto.mensagem);
+        return;
+      }
+      setBloqueio(null);
+    }
     setExecutando(true);
     const [indexacao, indexnow, schema, assets, alertas, auditoria, deltaArt] = await Promise.all([
       buscar<Record<string, any>>("/editorial-waves-status.json"),
@@ -220,7 +232,12 @@ export default function EditorialAuditoriaPanel({ lote }: { lote: string }) {
             </span>
           </p>
         </div>
-        <Button size="sm" onClick={() => void carregar()} disabled={executando}>
+        <Button
+          size="sm"
+          data-testid="auditoria-sob-demanda"
+          onClick={() => void carregar(true)}
+          disabled={executando}
+        >
           {executando ? "Executando…" : "Executar auditoria agora"}
         </Button>
         <Button size="sm" variant="outline" onClick={() => exportarKpis("csv")}>
@@ -236,6 +253,16 @@ export default function EditorialAuditoriaPanel({ lote }: { lote: string }) {
           Delta JSON
         </Button>
       </div>
+
+      {bloqueio && (
+        <Card
+          className="mb-4 border-amber-500/40 p-3 text-sm"
+          role="status"
+          data-testid="auditoria-bloqueio"
+        >
+          {bloqueio}
+        </Card>
+      )}
 
       <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
         {kpis.map((k) => (

@@ -153,9 +153,27 @@ function kpiAlertas() {
   };
 }
 
+// Responsável e origem da execução: CI (ator do GitHub) ou execução manual.
+// Sem dado disponível → UNKNOWN, nunca um nome inventado.
+const execucao = {
+  responsavel:
+    process.env.GITHUB_ACTOR ??
+    process.env.EDITORIAL_AUDIT_ACTOR ??
+    process.env.USER ??
+    "UNKNOWN",
+  origem: process.env.GITHUB_ACTIONS === "true" ? "ci" : "manual",
+  workflow: process.env.GITHUB_WORKFLOW ?? null,
+  commit: process.env.GITHUB_SHA ?? null,
+  jobUrl:
+    process.env.GITHUB_SERVER_URL && process.env.GITHUB_REPOSITORY && process.env.GITHUB_RUN_ID
+      ? `${process.env.GITHUB_SERVER_URL}/${process.env.GITHUB_REPOSITORY}/actions/runs/${process.env.GITHUB_RUN_ID}`
+      : null,
+};
+
 const auditoria = {
   wave: WAVE,
   geradoEm: new Date().toISOString(),
+  execucao,
   kpis: {
     indexacao: kpiIndexacao(),
     indexnow: kpiIndexNow(),

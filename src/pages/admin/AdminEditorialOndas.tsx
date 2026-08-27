@@ -6,6 +6,7 @@ import { Skeleton } from "@/components/ui/skeleton";
 import { exportarCsv, exportarJson } from "@/lib/exportarRelatorio";
 import EditorialAuditoriaPanel from "@/components/admin/EditorialAuditoriaPanel";
 import EditorialDiffsPanel from "@/components/admin/EditorialDiffsPanel";
+import EditorialHistoricoPanel from "@/components/admin/EditorialHistoricoPanel";
 import EditorialIndexNowPanel from "@/components/admin/EditorialIndexNowPanel";
 import EditorialSchemaDiffPanel from "@/components/admin/EditorialSchemaDiffPanel";
 
@@ -117,7 +118,7 @@ export default function AdminEditorialOndas() {
   const [assets, setAssets] = useState<StatusAssets | null>(null);
   const [erro, setErro] = useState<string | null>(null);
   const [lote, setLote] = useState<string>("todos");
-  const [aba, setAba] = useState<"indexacao" | "auditoria" | "diffs" | "indexnow" | "schema">("indexacao");
+  const [aba, setAba] = useState<"indexacao" | "auditoria" | "historico" | "diffs" | "indexnow" | "schema">("indexacao");
 
   useEffect(() => {
     fetch("/editorial-waves-status.json", { cache: "no-store" })
@@ -207,6 +208,7 @@ export default function AdminEditorialOndas() {
             {([
               ["indexacao", "Indexação, alertas e assets"],
               ["auditoria", "Auditoria (KPIs)"],
+              ["historico", "Histórico de execuções"],
               ["diffs", "Diffs (schema/FAQ/breadcrumb/assets)"],
               ["indexnow", "IndexNow"],
               ["schema", "Schema Diff"],
@@ -426,6 +428,7 @@ export default function AdminEditorialOndas() {
           </>
           )}
           {aba === "auditoria" && <EditorialAuditoriaPanel lote={lote} />}
+          {aba === "historico" && <EditorialHistoricoPanel />}
           {aba === "diffs" && <EditorialDiffsPanel />}
           {aba === "indexnow" && <EditorialIndexNowPanel lote={lote} />}
 
