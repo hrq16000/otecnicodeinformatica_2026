@@ -137,12 +137,10 @@ Deno.serve(async (req) => {
       );
     }
 
-    const codigo = String(Math.floor(100000 + Math.random() * 900000));
     const { error } = await supabase.from("os_verification_codes").insert({
       telefone_hash: telHash,
       ip_hash: ipHash,
-      code_hash: await sha256(`code:${telefone}:${codigo}`),
-      code_plain: codigo,
+      code_hash: null,
       telefone_masked: mask(telefone),
       expires_at: new Date(Date.now() + CODE_TTL_MIN * 60_000).toISOString(),
     });
@@ -159,6 +157,7 @@ Deno.serve(async (req) => {
       entrega: "whatsapp_manual",
     });
   }
+
 
   // action === "verify"
   const codigo = typeof payload.codigo === "string" ? payload.codigo.replace(/\D/g, "") : "";
