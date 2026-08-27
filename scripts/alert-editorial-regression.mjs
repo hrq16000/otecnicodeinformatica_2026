@@ -9,6 +9,7 @@
  *
  * Uso: node scripts/alert-editorial-regression.mjs [--dry-run]
  */
+import { createHash } from "node:crypto";
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { resolve } from "node:path";
 import { entregarAlertas } from "./lib/editorial-alert-delivery.mjs";
