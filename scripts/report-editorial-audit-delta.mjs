@@ -99,6 +99,12 @@ const delta = {
 
 mkdirSync(DIR, { recursive: true });
 writeFileSync(join(DIR, "delta-latest.json"), `${JSON.stringify(delta, null, 2)}\n`);
+// Espelho público consumido pelo painel /admin/editorial-ondas (abas Auditoria/Diffs).
+mkdirSync(resolve(ROOT, "public"), { recursive: true });
+writeFileSync(
+  resolve(ROOT, "public/editorial-audit-delta.json"),
+  `${JSON.stringify(delta, null, 2)}\n`,
+);
 
 const md = `# Onda 10C — delta entre auditorias
 

@@ -177,6 +177,12 @@ auditoria.veredito = (() => {
 
 mkdirSync(HIST, { recursive: true });
 writeFileSync(join(DIR, "audit-latest.json"), `${JSON.stringify(auditoria, null, 2)}\n`);
+// Espelho público consumido pelo painel /admin/editorial-ondas (aba Auditoria).
+mkdirSync(resolve(ROOT, "public"), { recursive: true });
+writeFileSync(
+  resolve(ROOT, "public/editorial-audit-10c.json"),
+  `${JSON.stringify(auditoria, null, 2)}\n`,
+);
 writeFileSync(
   join(HIST, `${auditoria.geradoEm.replace(/[:.]/g, "-")}.json`),
   `${JSON.stringify(auditoria, null, 2)}\n`,
