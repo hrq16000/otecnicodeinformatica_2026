@@ -73,11 +73,13 @@ Deno.serve(async (req) => {
   // Emissão do código: só administradores autenticados, e o valor é devolvido
   // apenas nesta resposta (nunca gravado em texto puro).
   if (action === "issue") {
-    if (!(await requireAdmin(req))) return json({ error: "unauthorized" }, 401);
+    const admin = await requireAdmin(req);
+    if (!admin) return json({ error: "unauthorized" }, 401);
     const id = typeof payload.id === "string" ? payload.id : "";
     if (!/^[0-9a-f-]{36}$/i.test(id)) return json({ error: "invalid_id" }, 400);
 
     const codigo = String(Math.floor(100000 + Math.random() * 900000));
+    const emitidoEm = new Date().toISOString();
     const { data, error } = await supabase
       .from("os_verification_codes")
       .update({
@@ -96,13 +98,32 @@ Deno.serve(async (req) => {
     }
     if (!data) return json({ error: "code_not_found" }, 404);
 
+    // Auditoria administrativa: quem emitiu, para qual registro e quando.
+    // O código em texto puro NUNCA entra no log.
+    const { error: auditError } = await supabase.from("admin_audit_log").insert({
+      actor_id: admin.id,
+      actor_email: admin.email,
+      area: "os_verification",
+      action: "issue_code",
+      target: data.id,
+      details: {
+        issuedAt: emitidoEm,
+        telefoneMascarado: data.telefone_masked,
+        expiresAt: data.expires_at,
+        codeStorage: "sha256_hash_only",
+      },
+    });
+    if (auditError) console.error("os-codigo auditoria falhou:", auditError.message);
+
     return json({
       ok: true,
       codigo,
       telefoneMascarado: data.telefone_masked,
       expiraEm: data.expires_at,
+      registradoEm: emitidoEm,
     });
   }
+
 
   const telefone = normalizePhone(payload.telefone);
   if (!telefone) return json({ error: "invalid_phone" }, 400);
