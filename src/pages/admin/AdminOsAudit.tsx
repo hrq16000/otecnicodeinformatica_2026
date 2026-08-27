@@ -275,15 +275,15 @@ export default function AdminOsAudit() {
             Códigos de confirmação pendentes
           </h2>
           <p className="mt-1 text-xs text-muted-foreground">
-            Envie o código pelo WhatsApp para o número correspondente. Ele expira sozinho e é apagado
-            assim que o cliente confirma.
+            O código só existe no momento em que você o gera: ele aparece uma única vez nesta tela
+            para ser enviado pelo WhatsApp. No banco fica apenas a versão criptografada.
           </p>
           <div className="mt-3 space-y-2">
             {codigos.map((c) => (
               <div key={c.id} className="flex flex-wrap items-center justify-between gap-2 rounded-lg border border-border p-3">
                 <div>
                   <p className="font-mono text-lg font-bold tracking-widest text-foreground">
-                    {c.code_plain ?? "••••••"}
+                    {revelados[c.id] ?? (c.code_hash ? "•••••• (já gerado)" : "—")}
                   </p>
                   <p className="text-xs text-muted-foreground">
                     {c.telefone_masked ?? "—"} · pedido em {fmt(c.created_at)}
@@ -292,9 +292,24 @@ export default function AdminOsAudit() {
                 <div className="flex items-center gap-2">
                   <Badge variant="outline">expira {fmt(c.expires_at)}</Badge>
                   {c.attempts > 0 ? <Badge variant="destructive">{c.attempts} tentativa(s)</Badge> : null}
+                  <Button
+                    size="sm"
+                    variant="outline"
+                    disabled={emitindo === c.id}
+                    onClick={() => void gerarCodigo(c.id)}
+                  >
+                    {emitindo === c.id ? (
+                      <Loader2 className="h-4 w-4 animate-spin" aria-hidden />
+                    ) : c.code_hash ? (
+                      "Gerar novo"
+                    ) : (
+                      "Gerar código"
+                    )}
+                  </Button>
                 </div>
               </div>
             ))}
+
             {!codigos.length ? (
               <p className="text-sm text-muted-foreground">Nenhum código pendente.</p>
             ) : null}
