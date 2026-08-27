@@ -232,7 +232,12 @@ export default function EditorialAuditoriaPanel({ lote }: { lote: string }) {
             </span>
           </p>
         </div>
-        <Button size="sm" onClick={() => void carregar()} disabled={executando}>
+        <Button
+          size="sm"
+          data-testid="auditoria-sob-demanda"
+          onClick={() => void carregar(true)}
+          disabled={executando}
+        >
           {executando ? "Executando…" : "Executar auditoria agora"}
         </Button>
         <Button size="sm" variant="outline" onClick={() => exportarKpis("csv")}>
