@@ -42,9 +42,10 @@ type PendingCode = {
   created_at: string;
   expires_at: string;
   attempts: number;
-  code_plain: string | null;
+  code_hash: string | null;
   telefone_masked: string | null;
 };
+
 
 const JANELAS = [
   { value: "24", label: "Últimas 24 horas" },
