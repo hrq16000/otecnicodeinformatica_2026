@@ -47,20 +47,38 @@ const desconhecido = (id: string, titulo: string, fonte: string): Kpi => ({
   fonte,
 });
 
+interface DeltaArtefato {
+  geradoEm?: string;
+  estado?: string;
+  auditoriaAtual?: string;
+  auditoriaAnterior?: string | null;
+  vereditoAtual?: string;
+  linhas?: Array<Record<string, unknown>>;
+  regressoes?: Array<Record<string, unknown>>;
+}
+
 export default function EditorialAuditoriaPanel({ lote }: { lote: string }) {
   const [kpis, setKpis] = useState<Kpi[] | null>(null);
+  const [executando, setExecutando] = useState(false);
+  const [executadoEm, setExecutadoEm] = useState<string | null>(null);
+  const [delta, setDelta] = useState<DeltaArtefato | null>(null);
+  const [veredito, setVeredito] = useState<string>("UNKNOWN");
 
-  useEffect(() => {
-    let vivo = true;
-    (async () => {
-      const [indexacao, indexnow, schema, assets, alertas] = await Promise.all([
-        buscar<Record<string, any>>("/editorial-waves-status.json"),
-        buscar<Record<string, any>>("/editorial-indexnow-status.json"),
-        buscar<Record<string, any>>("/editorial-schema-diff.json"),
-        buscar<Record<string, any>>("/editorial-assets-status.json"),
-        buscar<Record<string, any>>("/editorial-waves-alerts.json"),
-      ]);
-      if (!vivo) return;
+  const carregar = useCallback(async () => {
+    setExecutando(true);
+    const [indexacao, indexnow, schema, assets, alertas, auditoria, deltaArt] = await Promise.all([
+      buscar<Record<string, any>>("/editorial-waves-status.json"),
+      buscar<Record<string, any>>("/editorial-indexnow-status.json"),
+      buscar<Record<string, any>>("/editorial-schema-diff.json"),
+      buscar<Record<string, any>>("/editorial-assets-status.json"),
+      buscar<Record<string, any>>("/editorial-waves-alerts.json"),
+      buscar<Record<string, any>>("/editorial-audit-10c.json"),
+      buscar<DeltaArtefato>("/editorial-audit-delta.json"),
+    ]);
+    setDelta(deltaArt);
+    setVeredito(String(auditoria?.veredito ?? "UNKNOWN"));
+    {
+
 
       const filtrar = <T extends { lote?: string }>(itens: T[] | undefined) =>
         (itens ?? []).filter((i) => lote === "todos" || i.lote === lote);
