@@ -178,6 +178,12 @@ Deno.serve(async (req) => {
   }
 
   if (!registro) return json({ error: "code_not_found", message: "Peça um novo código." }, 400);
+  if (!registro.code_hash) {
+    return json(
+      { error: "code_not_issued", message: "Seu código ainda será enviado pelo WhatsApp." },
+      400,
+    );
+  }
   if (new Date(registro.expires_at).getTime() < Date.now()) {
     return json({ error: "code_expired", message: "Código expirado. Peça um novo." }, 400);
   }
@@ -185,7 +191,7 @@ Deno.serve(async (req) => {
     return json({ error: "too_many_attempts", message: "Muitas tentativas. Peça um novo código." }, 429);
   }
 
-  const esperado = await sha256(`code:${telefone}:${codigo}`);
+  const esperado = await hashCode(registro.id, codigo);
   if (esperado !== registro.code_hash) {
     await supabase
       .from("os_verification_codes")
@@ -199,8 +205,9 @@ Deno.serve(async (req) => {
 
   await supabase
     .from("os_verification_codes")
-    .update({ consumed_at: new Date().toISOString(), code_plain: null })
+    .update({ consumed_at: new Date().toISOString(), code_hash: null })
     .eq("id", registro.id);
+
 
   return json({
     ok: true,
