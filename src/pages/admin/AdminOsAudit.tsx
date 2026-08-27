@@ -83,7 +83,7 @@ export default function AdminOsAudit() {
         .limit(1000),
       supabase
         .from("os_verification_codes")
-        .select("id, created_at, expires_at, attempts, code_plain, telefone_masked")
+        .select("id, created_at, expires_at, attempts, code_hash, telefone_masked")
         .is("consumed_at", null)
         .gte("expires_at", new Date().toISOString())
         .order("created_at", { ascending: false })
