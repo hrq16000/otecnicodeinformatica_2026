@@ -1,7 +1,10 @@
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Skeleton } from "@/components/ui/skeleton";
+import { exportarCsv, exportarJson } from "@/lib/exportarRelatorio";
+
 
 /**
  * ABA "AUDITORIA" — KPIs consolidados da Onda 10C.
