@@ -5,15 +5,18 @@ import { normalizePhone, sha256, signOsToken } from "../_shared/osToken.ts";
 /**
  * Confirmação por código para liberar fotos da triagem e descrição dos sintomas.
  *
- * action=request  -> gera código de 6 dígitos, válido por 10 minutos.
+ * action=request  -> registra o pedido (sem código ainda), válido por 10 minutos.
+ * action=issue    -> exclusivo de administradores autenticados: gera o código de
+ *                    6 dígitos, guarda somente o hash e devolve o valor uma única
+ *                    vez para o técnico repassar no WhatsApp.
  * action=verify   -> valida o código e devolve uma sessão assinada de 30 minutos.
  *
- * O código é entregue pelo técnico no WhatsApp (não há API oficial conectada),
- * por isso ele fica visível apenas no painel administrativo.
+ * O código em texto puro nunca é persistido no banco.
  */
 
 const SUPABASE_URL = Deno.env.get("SUPABASE_URL")!;
 const SERVICE_ROLE = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!;
+const ANON_KEY = Deno.env.get("SUPABASE_ANON_KEY")!;
 
 const CODE_TTL_MIN = 10;
 const MAX_CODES_PER_HOUR = 3;
@@ -28,6 +31,26 @@ function json(body: unknown, status = 200) {
 }
 
 const mask = (tel: string) => `(${tel.slice(0, 2)}) *****-${tel.slice(-4)}`;
+
+/** O hash usa o id da linha como sal, não o telefone. */
+const hashCode = (id: string, codigo: string) => sha256(`code:${id}:${codigo}`);
+
+async function requireAdmin(req: Request) {
+  const authorization = req.headers.get("Authorization") ?? "";
+  if (!authorization.toLowerCase().startsWith("bearer ")) return false;
+  const client = createClient(SUPABASE_URL, ANON_KEY, {
+    auth: { persistSession: false },
+    global: { headers: { Authorization: authorization } },
+  });
+  const { data: userData, error } = await client.auth.getUser();
+  if (error || !userData?.user) return false;
+  const { data: isAdmin } = await client.rpc("has_role", {
+    _user_id: userData.user.id,
+    _role: "admin",
+  });
+  return isAdmin === true;
+}
+
 
 Deno.serve(async (req) => {
   if (req.method === "OPTIONS") return new Response("ok", { headers: corsHeaders });
