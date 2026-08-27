@@ -6,6 +6,7 @@ import { Skeleton } from "@/components/ui/skeleton";
 import { exportarCsv, exportarJson } from "@/lib/exportarRelatorio";
 import EditorialAuditoriaPanel from "@/components/admin/EditorialAuditoriaPanel";
 import EditorialDiffsPanel from "@/components/admin/EditorialDiffsPanel";
+import EditorialHistoricoPanel from "@/components/admin/EditorialHistoricoPanel";
 import EditorialIndexNowPanel from "@/components/admin/EditorialIndexNowPanel";
 import EditorialSchemaDiffPanel from "@/components/admin/EditorialSchemaDiffPanel";
 
