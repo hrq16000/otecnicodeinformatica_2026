@@ -299,8 +299,19 @@ export default function AdminOsAudit() {
           </h2>
           <p className="mt-1 text-xs text-muted-foreground">
             O código só existe no momento em que você o gera: ele aparece uma única vez nesta tela
-            para ser enviado pelo WhatsApp. No banco fica apenas a versão criptografada.
+            para ser enviado pelo WhatsApp. No banco fica apenas a versão criptografada, e cada
+            emissão é registrada no log de auditoria com data/hora e o administrador responsável.{" "}
+            <a
+              href="https://github.com/otecnicodeinformatica/site/blob/main/SECURITY.md"
+              className="underline underline-offset-2 hover:text-primary"
+              target="_blank"
+              rel="noreferrer noopener"
+            >
+              Ver decisões de segurança (SECURITY.md)
+            </a>
+            .
           </p>
+
           <div className="mt-3 space-y-2">
             {codigos.map((c) => (
               <div key={c.id} className="flex flex-wrap items-center justify-between gap-2 rounded-lg border border-border p-3">
