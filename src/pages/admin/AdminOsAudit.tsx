@@ -302,11 +302,12 @@ export default function AdminOsAudit() {
             para ser enviado pelo WhatsApp. No banco fica apenas a versão criptografada, e cada
             emissão é registrada no log de auditoria com data/hora e o administrador responsável.{" "}
             <a
-              href="https://github.com/otecnicodeinformatica/site/blob/main/SECURITY.md"
+              href="/SECURITY.md"
               className="underline underline-offset-2 hover:text-primary"
               target="_blank"
               rel="noreferrer noopener"
             >
+
               Ver decisões de segurança (SECURITY.md)
             </a>
             .
