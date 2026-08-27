@@ -484,8 +484,7 @@ export type Database = {
       os_verification_codes: {
         Row: {
           attempts: number
-          code_hash: string
-          code_plain: string | null
+          code_hash: string | null
           consumed_at: string | null
           created_at: string
           expires_at: string
@@ -496,8 +495,7 @@ export type Database = {
         }
         Insert: {
           attempts?: number
-          code_hash: string
-          code_plain?: string | null
+          code_hash?: string | null
           consumed_at?: string | null
           created_at?: string
           expires_at: string
@@ -508,8 +506,7 @@ export type Database = {
         }
         Update: {
           attempts?: number
-          code_hash?: string
-          code_plain?: string | null
+          code_hash?: string | null
           consumed_at?: string | null
           created_at?: string
           expires_at?: string
