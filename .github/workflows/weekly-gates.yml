@@ -113,6 +113,9 @@ jobs:
         run: npm run check:jsonld-parity
       - name: BreadcrumbList serviço × cidade
         run: npm run check:breadcrumb-schema
+
+      - name: Gate — paridade BreadcrumbList (JSON-LD x trilha visivel)
+        run: npm run check:breadcrumb-parity
       - name: Markup de preço (Offer/PriceSpecification)
         run: npm run check:price-schema
       - name: Paridade 1:1 FAQPage × FAQ visível

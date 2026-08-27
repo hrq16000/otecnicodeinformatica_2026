@@ -1,7 +1,10 @@
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Skeleton } from "@/components/ui/skeleton";
+import { exportarCsv, exportarJson } from "@/lib/exportarRelatorio";
+
 
 /**
  * ABA "AUDITORIA" — KPIs consolidados da Onda 10C.
@@ -47,20 +50,38 @@ const desconhecido = (id: string, titulo: string, fonte: string): Kpi => ({
   fonte,
 });
 
+interface DeltaArtefato {
+  geradoEm?: string;
+  estado?: string;
+  auditoriaAtual?: string;
+  auditoriaAnterior?: string | null;
+  vereditoAtual?: string;
+  linhas?: Array<Record<string, unknown>>;
+  regressoes?: Array<Record<string, unknown>>;
+}
+
 export default function EditorialAuditoriaPanel({ lote }: { lote: string }) {
   const [kpis, setKpis] = useState<Kpi[] | null>(null);
+  const [executando, setExecutando] = useState(false);
+  const [executadoEm, setExecutadoEm] = useState<string | null>(null);
+  const [delta, setDelta] = useState<DeltaArtefato | null>(null);
+  const [veredito, setVeredito] = useState<string>("UNKNOWN");
 
-  useEffect(() => {
-    let vivo = true;
-    (async () => {
-      const [indexacao, indexnow, schema, assets, alertas] = await Promise.all([
-        buscar<Record<string, any>>("/editorial-waves-status.json"),
-        buscar<Record<string, any>>("/editorial-indexnow-status.json"),
-        buscar<Record<string, any>>("/editorial-schema-diff.json"),
-        buscar<Record<string, any>>("/editorial-assets-status.json"),
-        buscar<Record<string, any>>("/editorial-waves-alerts.json"),
-      ]);
-      if (!vivo) return;
+  const carregar = useCallback(async () => {
+    setExecutando(true);
+    const [indexacao, indexnow, schema, assets, alertas, auditoria, deltaArt] = await Promise.all([
+      buscar<Record<string, any>>("/editorial-waves-status.json"),
+      buscar<Record<string, any>>("/editorial-indexnow-status.json"),
+      buscar<Record<string, any>>("/editorial-schema-diff.json"),
+      buscar<Record<string, any>>("/editorial-assets-status.json"),
+      buscar<Record<string, any>>("/editorial-waves-alerts.json"),
+      buscar<Record<string, any>>("/editorial-audit-10c.json"),
+      buscar<DeltaArtefato>("/editorial-audit-delta.json"),
+    ]);
+    setDelta(deltaArt);
+    setVeredito(String(auditoria?.veredito ?? "UNKNOWN"));
+    {
+
 
       const filtrar = <T extends { lote?: string }>(itens: T[] | undefined) =>
         (itens ?? []).filter((i) => lote === "todos" || i.lote === lote);
@@ -154,16 +175,68 @@ export default function EditorialAuditoriaPanel({ lote }: { lote: string }) {
       } else lista.push(desconhecido("alertas", "Alertas", "alerts:editorial"));
 
       setKpis(lista);
-    })();
-    return () => {
-      vivo = false;
-    };
+    }
+    setExecutadoEm(new Date().toISOString());
+    setExecutando(false);
   }, [lote]);
+
+  useEffect(() => {
+    void carregar();
+  }, [carregar]);
+
+  const exportarKpis = (formato: "csv" | "json") => {
+    const linhas = (kpis ?? []).map((k) => ({
+      kpi: k.titulo,
+      estado: k.estado,
+      valor: k.valor,
+      detalhe: k.detalhe,
+      fonte: k.fonte,
+      lote,
+      veredito,
+      geradoEm: executadoEm ?? "",
+    }));
+    if (formato === "csv") exportarCsv("auditoria-10c-kpis", linhas);
+    else exportarJson("auditoria-10c-kpis", { lote, veredito, geradoEm: executadoEm, kpis: linhas });
+  };
+
+  const exportarDelta = (formato: "csv" | "json") => {
+    if (!delta) return;
+    const linhas = (delta.linhas ?? []) as Array<Record<string, unknown>>;
+    if (formato === "csv") exportarCsv("auditoria-10c-delta", linhas);
+    else exportarJson("auditoria-10c-delta", delta);
+  };
 
   if (!kpis) return <Skeleton className="h-56 w-full" />;
 
   return (
     <section aria-label="KPIs da auditoria editorial">
+      <div className="mb-4 flex flex-wrap items-center gap-2 rounded-lg border p-3">
+        <div className="mr-auto">
+          <p className="text-xs uppercase text-muted-foreground">Veredito da auditoria</p>
+          <p className="text-lg font-semibold">
+            {veredito}{" "}
+            <span className="text-xs font-normal text-muted-foreground">
+              {executadoEm ? `· recalculado em ${new Date(executadoEm).toLocaleString("pt-BR")}` : ""}
+            </span>
+          </p>
+        </div>
+        <Button size="sm" onClick={() => void carregar()} disabled={executando}>
+          {executando ? "Executando…" : "Executar auditoria agora"}
+        </Button>
+        <Button size="sm" variant="outline" onClick={() => exportarKpis("csv")}>
+          KPIs CSV
+        </Button>
+        <Button size="sm" variant="outline" onClick={() => exportarKpis("json")}>
+          KPIs JSON
+        </Button>
+        <Button size="sm" variant="outline" onClick={() => exportarDelta("csv")} disabled={!delta}>
+          Delta CSV
+        </Button>
+        <Button size="sm" variant="outline" onClick={() => exportarDelta("json")} disabled={!delta}>
+          Delta JSON
+        </Button>
+      </div>
+
       <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
         {kpis.map((k) => (
           <Card key={k.id} className="p-4">
@@ -181,11 +254,30 @@ export default function EditorialAuditoriaPanel({ lote }: { lote: string }) {
           </Card>
         ))}
       </div>
+
+      {delta && (
+        <Card className="mt-4 p-4">
+          <p className="text-xs uppercase text-muted-foreground">
+            Delta contra a execução anterior — {delta.estado ?? "UNKNOWN"}
+          </p>
+          <p className="mt-1 text-xs text-muted-foreground">
+            {delta.auditoriaAnterior
+              ? `Comparando ${delta.auditoriaAnterior} → ${delta.auditoriaAtual}.`
+              : "Primeira execução registrada: sem base de comparação."}{" "}
+            {(delta.regressoes?.length ?? 0) > 0
+              ? `${delta.regressoes?.length} regressão(ões) detectada(s).`
+              : "Sem regressões."}
+          </p>
+        </Card>
+      )}
+
       <p className="mt-4 text-xs text-muted-foreground">
-        Relatório humano completo em <code>docs/relatorio-onda-10c-auditoria-kpis.md</code> e comparativo entre
-        execuções em <code>docs/relatorio-onda-10c-delta.md</code> (gerados por{" "}
-        <code>npm run audit:editorial-10c</code> e <code>npm run report:editorial-delta</code>).
+        A execução sob demanda recalcula os KPIs a partir dos artefatos publicados. Relatório humano completo em{" "}
+        <code>docs/relatorio-onda-10c-auditoria-kpis.md</code> e comparativo entre execuções em{" "}
+        <code>docs/relatorio-onda-10c-delta.md</code> (gerados por <code>npm run audit:editorial-10c</code> e{" "}
+        <code>npm run report:editorial-delta</code>).
       </p>
+
     </section>
   );
 }
