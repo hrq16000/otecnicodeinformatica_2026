@@ -254,6 +254,16 @@ export default function EditorialAuditoriaPanel({ lote }: { lote: string }) {
         </Button>
       </div>
 
+      {bloqueio && (
+        <Card
+          className="mb-4 border-amber-500/40 p-3 text-sm"
+          role="status"
+          data-testid="auditoria-bloqueio"
+        >
+          {bloqueio}
+        </Card>
+      )}
+
       <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
         {kpis.map((k) => (
           <Card key={k.id} className="p-4">
