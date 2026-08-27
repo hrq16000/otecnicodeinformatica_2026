@@ -1,0 +1,115 @@
+{
+  "wave": "10C",
+  "geradoEm": "2026-08-27T04:34:36.342Z",
+  "execucao": {
+    "responsavel": "root",
+    "origem": "manual",
+    "workflow": null,
+    "commit": null,
+    "jobUrl": null
+  },
+  "kpis": {
+    "indexacao": {
+      "estado": "OK",
+      "motivo": null,
+      "geradoEm": "2026-08-26T04:44:53.719Z",
+      "total": 19,
+      "indexadas": 0,
+      "cobertura": 0,
+      "porEstado": {
+        "NO_DATA": 19
+      },
+      "lotes": [
+        {
+          "lote": "10C/0",
+          "total": 4,
+          "indexadas": 0,
+          "cobertura": 0
+        },
+        {
+          "lote": "10D/1",
+          "total": 3,
+          "indexadas": 0,
+          "cobertura": 0
+        },
+        {
+          "lote": "10C/2",
+          "total": 3,
+          "indexadas": 0,
+          "cobertura": 0
+        },
+        {
+          "lote": "10C/3",
+          "total": 6,
+          "indexadas": 0,
+          "cobertura": 0
+        },
+        {
+          "lote": "10C/4",
+          "total": 6,
+          "indexadas": 0,
+          "cobertura": 0
+        }
+      ]
+    },
+    "indexnow": {
+      "estado": "OK",
+      "geradoEm": "2026-08-26T03:55:26.395Z",
+      "total": 7,
+      "porEstado": {
+        "PENDING_DEPLOY": 7
+      }
+    },
+    "schema": {
+      "estado": "UNKNOWN",
+      "motivo": "apenas um build capturado",
+      "geradoEm": "2026-08-26T03:55:41.043Z",
+      "buildA": null,
+      "buildB": "f48c5ba",
+      "determinismo": "UNKNOWN",
+      "owners": null,
+      "regressoes": []
+    },
+    "assets": {
+      "estado": "OK",
+      "geradoEm": "2026-08-26T04:38:26.679Z",
+      "total": 22,
+      "pass": 22,
+      "warn": 0,
+      "fail": 0,
+      "semLicenca": 0,
+      "semAtribuicao": 0,
+      "unregistered": [],
+      "unused": []
+    },
+    "canibalizacao": {
+      "estado": "OK",
+      "geradoEm": null,
+      "teto": 0.4,
+      "pares": 0,
+      "acimaDoTeto": 0,
+      "exemplos": []
+    },
+    "orphans": {
+      "estado": "OK",
+      "geradoEm": null,
+      "orfas": 0
+    },
+    "alertas": {
+      "estado": "OK",
+      "geradoEm": "2026-08-26T04:44:53.719Z",
+      "total": 22,
+      "porSeveridade": {
+        "INFO": 22
+      },
+      "entrega": {
+        "estado": "DELIVERY_DISABLED",
+        "slack": "NOT_CONFIGURED",
+        "email": "NOT_CONFIGURED",
+        "enviados": 0,
+        "ignorados": 6
+      }
+    }
+  },
+  "veredito": "SAUDAVEL"
+}

@@ -1,6 +1,6 @@
 # Onda 10C — auditoria consolidada (KPIs)
 
-Gerado automaticamente por `npm run audit:editorial-10c` em 2026-08-26T23:19:42.648Z.
+Gerado automaticamente por `npm run audit:editorial-10c` em 2026-08-27T04:34:36.342Z.
 Somente artefatos já existentes no repositório são lidos — nada é inferido nem
 estimado. Campo sem fonte aparece como `UNKNOWN`.
 
