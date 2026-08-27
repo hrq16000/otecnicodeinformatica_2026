@@ -5,15 +5,18 @@ import { normalizePhone, sha256, signOsToken } from "../_shared/osToken.ts";
 /**
  * Confirmação por código para liberar fotos da triagem e descrição dos sintomas.
  *
- * action=request  -> gera código de 6 dígitos, válido por 10 minutos.
+ * action=request  -> registra o pedido (sem código ainda), válido por 10 minutos.
+ * action=issue    -> exclusivo de administradores autenticados: gera o código de
+ *                    6 dígitos, guarda somente o hash e devolve o valor uma única
+ *                    vez para o técnico repassar no WhatsApp.
  * action=verify   -> valida o código e devolve uma sessão assinada de 30 minutos.
  *
- * O código é entregue pelo técnico no WhatsApp (não há API oficial conectada),
- * por isso ele fica visível apenas no painel administrativo.
+ * O código em texto puro nunca é persistido no banco.
  */
 
 const SUPABASE_URL = Deno.env.get("SUPABASE_URL")!;
 const SERVICE_ROLE = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!;
+const ANON_KEY = Deno.env.get("SUPABASE_ANON_KEY")!;
 
 const CODE_TTL_MIN = 10;
 const MAX_CODES_PER_HOUR = 3;
@@ -29,6 +32,26 @@ function json(body: unknown, status = 200) {
 
 const mask = (tel: string) => `(${tel.slice(0, 2)}) *****-${tel.slice(-4)}`;
 
+/** O hash usa o id da linha como sal, não o telefone. */
+const hashCode = (id: string, codigo: string) => sha256(`code:${id}:${codigo}`);
+
+async function requireAdmin(req: Request) {
+  const authorization = req.headers.get("Authorization") ?? "";
+  if (!authorization.toLowerCase().startsWith("bearer ")) return false;
+  const client = createClient(SUPABASE_URL, ANON_KEY, {
+    auth: { persistSession: false },
+    global: { headers: { Authorization: authorization } },
+  });
+  const { data: userData, error } = await client.auth.getUser();
+  if (error || !userData?.user) return false;
+  const { data: isAdmin } = await client.rpc("has_role", {
+    _user_id: userData.user.id,
+    _role: "admin",
+  });
+  return isAdmin === true;
+}
+
+
 Deno.serve(async (req) => {
   if (req.method === "OPTIONS") return new Response("ok", { headers: corsHeaders });
   if (req.method !== "POST") return json({ error: "method_not_allowed" }, 405);
@@ -40,11 +63,47 @@ Deno.serve(async (req) => {
     return json({ error: "invalid_json" }, 400);
   }
 
+  const action =
+    payload.action === "verify" ? "verify" : payload.action === "issue" ? "issue" : "request";
+  const supabase = createClient(SUPABASE_URL, SERVICE_ROLE, { auth: { persistSession: false } });
+
+  // Emissão do código: só administradores autenticados, e o valor é devolvido
+  // apenas nesta resposta (nunca gravado em texto puro).
+  if (action === "issue") {
+    if (!(await requireAdmin(req))) return json({ error: "unauthorized" }, 401);
+    const id = typeof payload.id === "string" ? payload.id : "";
+    if (!/^[0-9a-f-]{36}$/i.test(id)) return json({ error: "invalid_id" }, 400);
+
+    const codigo = String(Math.floor(100000 + Math.random() * 900000));
+    const { data, error } = await supabase
+      .from("os_verification_codes")
+      .update({
+        code_hash: await hashCode(id, codigo),
+        attempts: 0,
+        expires_at: new Date(Date.now() + CODE_TTL_MIN * 60_000).toISOString(),
+      })
+      .eq("id", id)
+      .is("consumed_at", null)
+      .select("id, telefone_masked, expires_at")
+      .maybeSingle();
+
+    if (error) {
+      console.error("os-codigo issue falhou:", error.message);
+      return json({ error: "issue_failed" }, 500);
+    }
+    if (!data) return json({ error: "code_not_found" }, 404);
+
+    return json({
+      ok: true,
+      codigo,
+      telefoneMascarado: data.telefone_masked,
+      expiraEm: data.expires_at,
+    });
+  }
+
   const telefone = normalizePhone(payload.telefone);
   if (!telefone) return json({ error: "invalid_phone" }, 400);
 
-  const action = payload.action === "verify" ? "verify" : "request";
-  const supabase = createClient(SUPABASE_URL, SERVICE_ROLE, { auth: { persistSession: false } });
 
   const ip =
     req.headers.get("x-forwarded-for")?.split(",")[0]?.trim() ||
@@ -78,12 +137,10 @@ Deno.serve(async (req) => {
       );
     }
 
-    const codigo = String(Math.floor(100000 + Math.random() * 900000));
     const { error } = await supabase.from("os_verification_codes").insert({
       telefone_hash: telHash,
       ip_hash: ipHash,
-      code_hash: await sha256(`code:${telefone}:${codigo}`),
-      code_plain: codigo,
+      code_hash: null,
       telefone_masked: mask(telefone),
       expires_at: new Date(Date.now() + CODE_TTL_MIN * 60_000).toISOString(),
     });
@@ -100,6 +157,7 @@ Deno.serve(async (req) => {
       entrega: "whatsapp_manual",
     });
   }
+
 
   // action === "verify"
   const codigo = typeof payload.codigo === "string" ? payload.codigo.replace(/\D/g, "") : "";
@@ -120,6 +178,12 @@ Deno.serve(async (req) => {
   }
 
   if (!registro) return json({ error: "code_not_found", message: "Peça um novo código." }, 400);
+  if (!registro.code_hash) {
+    return json(
+      { error: "code_not_issued", message: "Seu código ainda será enviado pelo WhatsApp." },
+      400,
+    );
+  }
   if (new Date(registro.expires_at).getTime() < Date.now()) {
     return json({ error: "code_expired", message: "Código expirado. Peça um novo." }, 400);
   }
@@ -127,7 +191,7 @@ Deno.serve(async (req) => {
     return json({ error: "too_many_attempts", message: "Muitas tentativas. Peça um novo código." }, 429);
   }
 
-  const esperado = await sha256(`code:${telefone}:${codigo}`);
+  const esperado = await hashCode(registro.id, codigo);
   if (esperado !== registro.code_hash) {
     await supabase
       .from("os_verification_codes")
@@ -141,8 +205,9 @@ Deno.serve(async (req) => {
 
   await supabase
     .from("os_verification_codes")
-    .update({ consumed_at: new Date().toISOString(), code_plain: null })
+    .update({ consumed_at: new Date().toISOString(), code_hash: null })
     .eq("id", registro.id);
+
 
   return json({
     ok: true,

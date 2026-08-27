@@ -42,9 +42,10 @@ type PendingCode = {
   created_at: string;
   expires_at: string;
   attempts: number;
-  code_plain: string | null;
+  code_hash: string | null;
   telefone_masked: string | null;
 };
+
 
 const JANELAS = [
   { value: "24", label: "Últimas 24 horas" },
@@ -69,6 +70,29 @@ export default function AdminOsAudit() {
   const [carregando, setCarregando] = useState(true);
   const [attempts, setAttempts] = useState<Attempt[]>([]);
   const [codigos, setCodigos] = useState<PendingCode[]>([]);
+  // Código em texto puro só vive na memória desta sessão do painel.
+  const [revelados, setRevelados] = useState<Record<string, string>>({});
+  const [emitindo, setEmitindo] = useState<string | null>(null);
+
+  const gerarCodigo = useCallback(async (id: string) => {
+    setEmitindo(id);
+    try {
+      const { data, error } = await supabase.functions.invoke("os-codigo", {
+        body: { action: "issue", id },
+      });
+      if (error || !data?.codigo) throw error ?? new Error("sem_codigo");
+      setRevelados((prev) => ({ ...prev, [id]: data.codigo as string }));
+      setCodigos((prev) =>
+        prev.map((c) => (c.id === id ? { ...c, code_hash: "emitido", attempts: 0 } : c)),
+      );
+    } catch {
+      setRevelados((prev) => ({ ...prev, [id]: "erro ao gerar" }));
+    } finally {
+      setEmitindo(null);
+    }
+  }, []);
+
+
 
   const carregar = useCallback(async () => {
     setCarregando(true);
@@ -82,7 +106,7 @@ export default function AdminOsAudit() {
         .limit(1000),
       supabase
         .from("os_verification_codes")
-        .select("id, created_at, expires_at, attempts, code_plain, telefone_masked")
+        .select("id, created_at, expires_at, attempts, code_hash, telefone_masked")
         .is("consumed_at", null)
         .gte("expires_at", new Date().toISOString())
         .order("created_at", { ascending: false })
@@ -274,15 +298,15 @@ export default function AdminOsAudit() {
             Códigos de confirmação pendentes
           </h2>
           <p className="mt-1 text-xs text-muted-foreground">
-            Envie o código pelo WhatsApp para o número correspondente. Ele expira sozinho e é apagado
-            assim que o cliente confirma.
+            O código só existe no momento em que você o gera: ele aparece uma única vez nesta tela
+            para ser enviado pelo WhatsApp. No banco fica apenas a versão criptografada.
           </p>
           <div className="mt-3 space-y-2">
             {codigos.map((c) => (
               <div key={c.id} className="flex flex-wrap items-center justify-between gap-2 rounded-lg border border-border p-3">
                 <div>
                   <p className="font-mono text-lg font-bold tracking-widest text-foreground">
-                    {c.code_plain ?? "••••••"}
+                    {revelados[c.id] ?? (c.code_hash ? "•••••• (já gerado)" : "—")}
                   </p>
                   <p className="text-xs text-muted-foreground">
                     {c.telefone_masked ?? "—"} · pedido em {fmt(c.created_at)}
@@ -291,9 +315,24 @@ export default function AdminOsAudit() {
                 <div className="flex items-center gap-2">
                   <Badge variant="outline">expira {fmt(c.expires_at)}</Badge>
                   {c.attempts > 0 ? <Badge variant="destructive">{c.attempts} tentativa(s)</Badge> : null}
+                  <Button
+                    size="sm"
+                    variant="outline"
+                    disabled={emitindo === c.id}
+                    onClick={() => void gerarCodigo(c.id)}
+                  >
+                    {emitindo === c.id ? (
+                      <Loader2 className="h-4 w-4 animate-spin" aria-hidden />
+                    ) : c.code_hash ? (
+                      "Gerar novo"
+                    ) : (
+                      "Gerar código"
+                    )}
+                  </Button>
                 </div>
               </div>
             ))}
+
             {!codigos.length ? (
               <p className="text-sm text-muted-foreground">Nenhum código pendente.</p>
             ) : null}
