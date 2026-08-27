@@ -121,3 +121,13 @@ jobs:
           VITE_SUPABASE_PUBLISHABLE_KEY: ${{ secrets.VITE_SUPABASE_PUBLISHABLE_KEY || 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imhpc2VwYWF5dXd4anJudW1icWVxIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODM2MTU3NzcsImV4cCI6MjA5OTE5MTc3N30.d3ygLv0kgEFiT4hXlp6opB9mvOPLQSwSEKXuLIle164' }}
         run: node scripts/check-security-findings-baseline.mjs
 
+
+      # 9) Notificação (Slack/e-mail) em qualquer falha do job de segurança.
+      - name: Notificar falha do pipeline de segurança
+        if: failure()
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+          PIPELINE_ALERT_EMAIL_TO: ${{ secrets.PIPELINE_ALERT_EMAIL_TO }}
+          PIPELINE_ALERT_EMAIL_FROM: ${{ secrets.PIPELINE_ALERT_EMAIL_FROM }}
+          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+        run: node scripts/notify-pipeline-failure.mjs --contexto "Security (audit + gates)"

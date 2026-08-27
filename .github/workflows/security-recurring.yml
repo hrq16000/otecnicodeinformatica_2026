@@ -60,3 +60,13 @@ jobs:
         uses: gitleaks/gitleaks-action@v2
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      # 6) Notificação (Slack/e-mail) quando qualquer etapa acima falhar.
+      - name: Notificar falha do pipeline de segurança
+        if: failure()
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+          PIPELINE_ALERT_EMAIL_TO: ${{ secrets.PIPELINE_ALERT_EMAIL_TO }}
+          PIPELINE_ALERT_EMAIL_FROM: ${{ secrets.PIPELINE_ALERT_EMAIL_FROM }}
+          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+        run: node scripts/notify-pipeline-failure.mjs --contexto "Regressão de segurança"
