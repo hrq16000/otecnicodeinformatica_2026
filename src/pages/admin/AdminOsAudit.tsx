@@ -70,6 +70,29 @@ export default function AdminOsAudit() {
   const [carregando, setCarregando] = useState(true);
   const [attempts, setAttempts] = useState<Attempt[]>([]);
   const [codigos, setCodigos] = useState<PendingCode[]>([]);
+  // Código em texto puro só vive na memória desta sessão do painel.
+  const [revelados, setRevelados] = useState<Record<string, string>>({});
+  const [emitindo, setEmitindo] = useState<string | null>(null);
+
+  const gerarCodigo = useCallback(async (id: string) => {
+    setEmitindo(id);
+    try {
+      const { data, error } = await supabase.functions.invoke("os-codigo", {
+        body: { action: "issue", id },
+      });
+      if (error || !data?.codigo) throw error ?? new Error("sem_codigo");
+      setRevelados((prev) => ({ ...prev, [id]: data.codigo as string }));
+      setCodigos((prev) =>
+        prev.map((c) => (c.id === id ? { ...c, code_hash: "emitido", attempts: 0 } : c)),
+      );
+    } catch {
+      setRevelados((prev) => ({ ...prev, [id]: "erro ao gerar" }));
+    } finally {
+      setEmitindo(null);
+    }
+  }, []);
+
+
 
   const carregar = useCallback(async () => {
     setCarregando(true);
