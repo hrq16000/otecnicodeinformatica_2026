@@ -1,6 +1,12 @@
 import { useState, useEffect, useRef, useMemo } from "react";
 import { Search, X, MapPin, Wrench, FileText, ArrowRight } from "lucide-react";
 import { useNavigate } from "@/lib/router-compat";
+import {
+  type CodigoErro,
+  correlatoParaCodigo,
+  extrairCodigoDaConsulta,
+  sugerirCodigos,
+} from "@/lib/buscaCodigosErro";
 
 interface SearchItem {
   title: string;
