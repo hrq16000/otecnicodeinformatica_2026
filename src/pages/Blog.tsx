@@ -68,7 +68,7 @@ const TECHNICAL_VERDICTS = [
     slug: "limpar-arquivos-temporarios-windows",
     verdict: "Limpador de registro não é manutenção e não substitui diagnóstico.",
     context: "Espaço livre e arquivos temporários são verificações válidas; programas de " +
-      "faxina" não são uma resposta para toda lentidão.",
+      "“faxina” não são uma resposta para toda lentidão.",
   },
   {
     slug: "limpar-cache-do-windows-update-softwaredistribution",
