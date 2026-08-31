@@ -210,21 +210,24 @@ Deno.serve(async (req) => {
   const codigo = typeof payload.codigo === "string" ? payload.codigo.replace(/\D/g, "") : "";
   if (codigo.length !== 6) return json({ error: "invalid_code_format" }, 400);
 
-  const { data: registro, error: readError } = await supabase
+  const { data: abertos, error: readError } = await supabase
     .from("os_verification_codes")
     .select("id, code_hash, expires_at, attempts, consumed_at")
     .eq("telefone_hash", telHash)
     .is("consumed_at", null)
     .order("created_at", { ascending: false })
-    .limit(1)
-    .maybeSingle();
+    .limit(5);
 
   if (readError) {
     console.error("os-codigo verify falhou:", readError.message);
     return json({ error: "verify_failed" }, 500);
   }
 
+  // Um código já emitido tem prioridade sobre um pedido posterior sem hash.
+  const registro = (abertos ?? []).find((r) => r.code_hash) ?? (abertos ?? [])[0];
+
   if (!registro) return json({ error: "code_not_found", message: "Peça um novo código." }, 400);
+
   if (!registro.code_hash) {
     return json(
       { error: "code_not_issued", message: "Seu código ainda será enviado pelo WhatsApp." },
