@@ -558,3 +558,17 @@ export async function historicoOsAdmin(protocoloBruto: string) {
     eventos,
   };
 }
+
+/** Confirma o papel `admin` do usuário autenticado antes de qualquer ação. */
+export async function garantirAdmin(
+  client: { from: (t: "user_roles") => any },
+  userId: string,
+): Promise<void> {
+  const { data, error } = await client
+    .from("user_roles")
+    .select("role")
+    .eq("user_id", userId)
+    .eq("role", "admin")
+    .maybeSingle();
+  if (error || !data) throw new ChatOsErro("sem_permissao", "Acesso restrito a administradores.");
+}
