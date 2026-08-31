@@ -102,7 +102,24 @@ export default function EditorialAuditoriaPanel({ lote }: { lote: string }) {
       buscar<Record<string, any>>("/editorial-waves-alerts.json"),
       buscar<Record<string, any>>("/editorial-audit-10c.json"),
       buscar<DeltaArtefato>("/editorial-audit-delta.json"),
-    ]);
+      ]),
+    ).catch((e: unknown) => {
+      setBloqueio(
+        e instanceof TimeoutSobDemanda
+          ? `${e.message} Tente novamente ou rode npm run audit:editorial-10c.`
+          : "Falha ao ler os artefatos da auditoria.",
+      );
+      return null;
+    });
+
+    if (!coleta) {
+      setExecutando(false);
+      setExecucoesSessao((h) =>
+        [{ em: new Date().toISOString(), payload: JSON.stringify(payload), estado: "FALHA" }, ...h].slice(0, 10),
+      );
+      return;
+    }
+    const [indexacao, indexnow, schema, assets, alertas, auditoria, deltaArt] = coleta;
     setDelta(deltaArt);
     setVeredito(String(auditoria?.veredito ?? "UNKNOWN"));
     {
