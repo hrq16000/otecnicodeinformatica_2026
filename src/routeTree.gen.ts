@@ -84,6 +84,7 @@ import { Route as ValorizacaoDoTrabalhoTecnicoRouteImport } from './routes/valor
 import { Route as AdminAuditoriaAcessosRouteImport } from './routes/admin_.auditoria-acessos'
 import { Route as AdminAuditoriaLocalRouteImport } from './routes/admin_.auditoria-local'
 import { Route as AdminAuditoriaOsRouteImport } from './routes/admin_.auditoria-os'
+import { Route as AdminAutoridadeSeoRouteImport } from './routes/admin_.autoridade-seo'
 import { Route as AdminBairrosRouteImport } from './routes/admin_.bairros'
 import { Route as AdminCasosRouteImport } from './routes/admin_.casos'
 import { Route as AdminChatOsRouteImport } from './routes/admin_.chat-os'
@@ -865,6 +866,11 @@ const AdminAuditoriaLocalRoute = AdminAuditoriaLocalRouteImport.update({
 const AdminAuditoriaOsRoute = AdminAuditoriaOsRouteImport.update({
   id: '/admin_/auditoria-os',
   path: '/admin/auditoria-os',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AdminAutoridadeSeoRoute = AdminAutoridadeSeoRouteImport.update({
+  id: '/admin_/autoridade-seo',
+  path: '/admin/autoridade-seo',
   getParentRoute: () => rootRouteImport,
 } as any)
 const AdminBairrosRoute = AdminBairrosRouteImport.update({
@@ -3037,6 +3043,7 @@ export interface FileRoutesByFullPath {
   '/admin/auditoria-acessos': typeof AdminAuditoriaAcessosRoute
   '/admin/auditoria-local': typeof AdminAuditoriaLocalRoute
   '/admin/auditoria-os': typeof AdminAuditoriaOsRoute
+  '/admin/autoridade-seo': typeof AdminAutoridadeSeoRoute
   '/admin/bairros': typeof AdminBairrosRoute
   '/admin/casos': typeof AdminCasosRoute
   '/admin/chat-os': typeof AdminChatOsRoute
@@ -3503,6 +3510,7 @@ export interface FileRoutesByTo {
   '/admin/auditoria-acessos': typeof AdminAuditoriaAcessosRoute
   '/admin/auditoria-local': typeof AdminAuditoriaLocalRoute
   '/admin/auditoria-os': typeof AdminAuditoriaOsRoute
+  '/admin/autoridade-seo': typeof AdminAutoridadeSeoRoute
   '/admin/bairros': typeof AdminBairrosRoute
   '/admin/casos': typeof AdminCasosRoute
   '/admin/chat-os': typeof AdminChatOsRoute
@@ -3970,6 +3978,7 @@ export interface FileRoutesById {
   '/admin_/auditoria-acessos': typeof AdminAuditoriaAcessosRoute
   '/admin_/auditoria-local': typeof AdminAuditoriaLocalRoute
   '/admin_/auditoria-os': typeof AdminAuditoriaOsRoute
+  '/admin_/autoridade-seo': typeof AdminAutoridadeSeoRoute
   '/admin_/bairros': typeof AdminBairrosRoute
   '/admin_/casos': typeof AdminCasosRoute
   '/admin_/chat-os': typeof AdminChatOsRoute
@@ -4438,6 +4447,7 @@ export interface FileRouteTypes {
     | '/admin/auditoria-acessos'
     | '/admin/auditoria-local'
     | '/admin/auditoria-os'
+    | '/admin/autoridade-seo'
     | '/admin/bairros'
     | '/admin/casos'
     | '/admin/chat-os'
@@ -4904,6 +4914,7 @@ export interface FileRouteTypes {
     | '/admin/auditoria-acessos'
     | '/admin/auditoria-local'
     | '/admin/auditoria-os'
+    | '/admin/autoridade-seo'
     | '/admin/bairros'
     | '/admin/casos'
     | '/admin/chat-os'
@@ -5370,6 +5381,7 @@ export interface FileRouteTypes {
     | '/admin_/auditoria-acessos'
     | '/admin_/auditoria-local'
     | '/admin_/auditoria-os'
+    | '/admin_/autoridade-seo'
     | '/admin_/bairros'
     | '/admin_/casos'
     | '/admin_/chat-os'
@@ -5837,6 +5849,7 @@ export interface RootRouteChildren {
   AdminAuditoriaAcessosRoute: typeof AdminAuditoriaAcessosRoute
   AdminAuditoriaLocalRoute: typeof AdminAuditoriaLocalRoute
   AdminAuditoriaOsRoute: typeof AdminAuditoriaOsRoute
+  AdminAutoridadeSeoRoute: typeof AdminAutoridadeSeoRoute
   AdminBairrosRoute: typeof AdminBairrosRoute
   AdminCasosRoute: typeof AdminCasosRoute
   AdminChatOsRoute: typeof AdminChatOsRoute
@@ -6753,6 +6766,13 @@ declare module '@tanstack/react-router' {
       path: '/admin/auditoria-os'
       fullPath: '/admin/auditoria-os'
       preLoaderRoute: typeof AdminAuditoriaOsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/admin_/autoridade-seo': {
+      id: '/admin_/autoridade-seo'
+      path: '/admin/autoridade-seo'
+      fullPath: '/admin/autoridade-seo'
+      preLoaderRoute: typeof AdminAutoridadeSeoRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/admin_/bairros': {
@@ -9560,6 +9580,7 @@ const rootRouteChildren: RootRouteChildren = {
   AdminAuditoriaAcessosRoute: AdminAuditoriaAcessosRoute,
   AdminAuditoriaLocalRoute: AdminAuditoriaLocalRoute,
   AdminAuditoriaOsRoute: AdminAuditoriaOsRoute,
+  AdminAutoridadeSeoRoute: AdminAutoridadeSeoRoute,
   AdminBairrosRoute: AdminBairrosRoute,
   AdminCasosRoute: AdminCasosRoute,
   AdminChatOsRoute: AdminChatOsRoute,
