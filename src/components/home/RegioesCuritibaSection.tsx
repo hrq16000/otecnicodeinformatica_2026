@@ -1,10 +1,10 @@
 const REGIONAIS: { nome: string; bairros: string[] }[] = [
-  { nome: "Centro e região central", bairros: ["Centro", "Centro Cívico", "São Francisco", "Alto da Glória", "Alto da XV", "Rebouças", "Prado Velho"] },
-  { nome: "Matriz / Batel", bairros: ["Batel", "Água Verde", "Bigorrilho", "Mercês", "Campina do Siqueira", "Vila Izabel", "Seminário"] },
-  { nome: "Norte", bairros: ["Juvevê", "Cabral", "Hugo Lange", "Jardim Social", "Bacacheri", "Bairro Alto", "Tingui", "Atuba", "Boa Vista"] },
-  { nome: "Leste", bairros: ["Cristo Rei", "Jardim das Américas", "Cajuru", "Capão da Imbuia", "Uberaba", "Guabirotuba"] },
-  { nome: "Sul", bairros: ["Portão", "Novo Mundo", "Fanny", "Lindóia", "Pinheirinho", "Xaxim", "Boqueirão", "Hauer", "Sítio Cercado"] },
-  { nome: "Oeste e CIC", bairros: ["Campo Comprido", "Cidade Industrial (CIC)", "Fazendinha", "Santa Quitéria", "Vista Alegre", "Santa Felicidade", "Butiatuvinha"] },
+  { nome: "Centro e região central", bairros: ["Centro"] },
+  { nome: "Matriz / Batel", bairros: ["Batel", "Água Verde", "Bigorrilho"] },
+  { nome: "Norte", bairros: ["Cabral", "Boa Vista"] },
+  { nome: "Leste", bairros: ["Cajuru"] },
+  { nome: "Sul", bairros: ["Portão", "Pinheirinho", "Xaxim", "Boqueirão", "Sítio Cercado"] },
+  { nome: "Oeste e CIC", bairros: ["Cidade Industrial (CIC)", "Santa Felicidade"] },
 ];
 
 const COM_PAGINA: Record<string, string> = {
@@ -13,6 +13,15 @@ const COM_PAGINA: Record<string, string> = {
   "Água Verde": "/bairros/agua-verde",
   Portão: "/bairros/portao",
   "Cidade Industrial (CIC)": "/bairros/cic",
+  "Santa Felicidade": "/bairros/santa-felicidade",
+  "Boa Vista": "/bairros/boa-vista",
+  Bigorrilho: "/bairros/bigorrilho",
+  Cabral: "/bairros/cabral",
+  Cajuru: "/bairros/cajuru",
+  Boqueirão: "/bairros/boqueirao",
+  Pinheirinho: "/bairros/pinheirinho",
+  Xaxim: "/bairros/xaxim",
+  "Sítio Cercado": "/bairros/sitio-cercado",
 };
 
 const REGIAO = [
@@ -37,11 +46,11 @@ export const RegioesCuritibaSection = () => (
       <div className="mx-auto mb-10 max-w-2xl text-center">
         <span className="text-xs font-bold uppercase tracking-wider text-accent">Cobertura</span>
         <h2 id="regioes-title" className="mt-2 font-heading text-2xl font-bold tracking-tight text-foreground md:text-3xl">
-          Regiões e bairros atendidos em Curitiba
+          Bairros de Curitiba com guia local próprio
         </h2>
         <p className="mt-3 text-base text-muted-foreground">
-          Atendimento por agendamento em toda Curitiba e na Região Metropolitana — no seu endereço, remoto ou com
-          coleta e entrega para reparo em bancada.
+          Cada bairro listado abaixo possui página própria, com contexto de atendimento e links de continuidade.
+          A cobertura nas demais regiões é confirmada pela triagem.
         </p>
       </div>
 
@@ -54,18 +63,12 @@ export const RegioesCuritibaSection = () => (
                 const href = COM_PAGINA[b];
                 return (
                   <li key={b}>
-                    {href ? (
-                      <a
-                        href={href}
-                        className="inline-block rounded-full border border-accent/40 bg-background px-3 py-1 text-xs font-semibold text-foreground transition-colors hover:border-accent hover:text-accent"
-                      >
-                        {b}
-                      </a>
-                    ) : (
-                      <span className="inline-block rounded-full border border-border bg-background px-3 py-1 text-xs font-medium text-muted-foreground">
-                        {b}
-                      </span>
-                    )}
+                    <a
+                      href={href}
+                      className="inline-block rounded-full border border-accent/40 bg-background px-3 py-1 text-xs font-semibold text-foreground transition-colors hover:border-accent hover:text-accent"
+                    >
+                      {b}
+                    </a>
                   </li>
                 );
               })}

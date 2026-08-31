@@ -26,6 +26,7 @@ import { RouteTransition } from "@/components/motion/RouteTransition";
 import { RouteLoader } from "@/components/RouteLoader";
 import { WhatsAppFunnel } from "@/components/WhatsAppFunnel";
 import { WhatsAppFloat } from "@/components/WhatsAppFloat";
+import { GlobalSmartSearch } from "@/components/GlobalSmartSearch";
 import { ScrollToTop } from "@/components/ScrollToTop";
 import ConsentBanner from "@/components/ConsentBanner";
 import {
@@ -214,6 +215,7 @@ function RootComponent() {
 
 
           <WhatsAppFunnel />
+          <GlobalSmartSearch />
           <WhatsAppFloat />
           <ConsentBanner />
           <IdleEnhancements />

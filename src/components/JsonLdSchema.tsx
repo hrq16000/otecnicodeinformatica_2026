@@ -41,11 +41,6 @@ export const JsonLdSchema = () => {
     "url": SITE,
     "inLanguage": "pt-BR",
     "publisher": { "@id": `${SITE}/#organization` },
-    "potentialAction": {
-      "@type": "SearchAction",
-      "target": `${SITE}/servicos?q={search_term_string}`,
-      "query-input": "required name=search_term_string"
-    }
   }), []);
 
   const organizationSchema = useMemo(() => buildOrganizationSchema(), []);

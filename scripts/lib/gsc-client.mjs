@@ -90,6 +90,11 @@ export async function searchAnalytics(siteUrl, body) {
   return data.rows ?? [];
 }
 
+/** Submete um sitemap ao Search Console; não solicita indexação individual. */
+export async function submitSitemap(siteUrl, sitemapUrl) {
+  return gsc(`/webmasters/v3/sites/${encodeURIComponent(siteUrl)}/sitemaps/${encodeURIComponent(sitemapUrl)}`, { method: "PUT" });
+}
+
 /** YYYY-MM-DD com deslocamento em dias a partir de hoje (UTC). */
 export function dayOffset(days) {
   const d = new Date();

@@ -56,6 +56,7 @@ const ALLOWED_SOURCE_HOSTS = new Set([
   "www.microsoft.com",
   "learn.microsoft.com",
   "support.microsoft.com",
+  "support.google.com",
   "cisa.gov",
   "www.cisa.gov",
   "cert.br",

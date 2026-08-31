@@ -71,6 +71,7 @@ export const ALLOWED_SOURCE_HOSTS = [
   "csrc.nist.gov",
   "wi-fi.org",
   "www.wi-fi.org",
+  "support.google.com",
 ] as const;
 
 // ─────────────────────────────────────────────────────────────
@@ -210,6 +211,39 @@ export const EDITORIAL_SOURCES: Record<string, EditorialSource> = {
       "Redes residenciais com múltiplos pontos (EasyMesh) para melhorar cobertura em ambientes maiores.",
     ],
   },
+  "android-acelerar-dispositivo": {
+    id: "android-acelerar-dispositivo",
+    title: "Acelerar um dispositivo Android lento",
+    publisher: "Ajuda do Android",
+    url: "https://support.google.com/android/answer/7667018?hl=pt-BR",
+    accessedAt: "2026-08-31",
+    sourceType: "official",
+    supports: [
+      "Pouco espaço de armazenamento pode afetar o funcionamento do dispositivo; atualização e identificação de aplicativo problemático são etapas de diagnóstico.",
+    ],
+  },
+  "android-arquivar-apps": {
+    id: "android-arquivar-apps",
+    title: "Arquive apps não usadas no Android",
+    publisher: "Ajuda do Android",
+    url: "https://support.google.com/android/answer/15523443?hl=pt",
+    accessedAt: "2026-08-31",
+    sourceType: "official",
+    supports: [
+      "Arquivar aplicativos não usados libera espaço sem apagar os dados pessoais mantidos no dispositivo, quando o recurso está disponível.",
+    ],
+  },
+  "android-cache-google-app": {
+    id: "android-cache-google-app",
+    title: "O Google app não exibe os resultados da pesquisa",
+    publisher: "Ajuda da Pesquisa Google",
+    url: "https://support.google.com/websearch/answer/6385818?co=GENIE.Platform%3DAndroid&hl=pt-br",
+    accessedAt: "2026-08-31",
+    sourceType: "official",
+    supports: [
+      "Limpar cache remove dados temporários; limpar dados remove configurações e dados do aplicativo.",
+    ],
+  },
 };
 
 // ─────────────────────────────────────────────────────────────
@@ -230,6 +264,15 @@ export const EDITORIAL_SOURCES: Record<string, EditorialSource> = {
 //     (vazio) em blogEditorialRegistry.ts.
 // ─────────────────────────────────────────────────────────────
 export const ARTICLE_SOURCE_MANIFEST: Record<string, ArticleSourceManifest> = {
+  "como-deixar-celular-android-mais-rapido": {
+    slug: "como-deixar-celular-android-mais-rapido",
+    sources: ["android-acelerar-dispositivo", "android-arquivar-apps", "android-cache-google-app"],
+    technicalReview: "reviewed",
+    factChecked: true,
+    factCheckedAt: "2026-08-31",
+    notes:
+      "Revisão do Ciclo 2: removidas promessas de aceleração, frequência fixa de reinício e alteração de opções de desenvolvedor. O texto diferencia cache de dados, armazenamento de memória RAM e limita procedimentos potencialmente destrutivos.",
+  },
   "como-escolher-um-bom-antivirus": {
     slug: "como-escolher-um-bom-antivirus",
     sources: [],

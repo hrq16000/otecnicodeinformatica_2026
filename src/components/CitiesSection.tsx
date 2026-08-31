@@ -1,12 +1,12 @@
 import { Link } from "@/lib/router-compat";
 import { MapPin, ArrowRight, Building2, Home, Sparkles, ShieldCheck, Clock, MessageCircle } from "lucide-react";
 import { WHATSAPP_NUMBER as WA_NUMBER } from "@/lib/siteConfig";
+import { BAIRROS_DIRECTORY, bairroHref } from "@/lib/bairrosDirectory";
 
 
 interface CityData {
   name: string;
   slug: string;
-  neighborhoods: string[];
   hasPage: boolean;
 }
 
@@ -14,31 +14,26 @@ const cities: CityData[] = [
   {
     name: "Curitiba",
     slug: "curitiba",
-    neighborhoods: ["Centro", "Batel", "Portão", "CIC", "Santa Felicidade", "Campo Comprido"],
     hasPage: true
   },
   {
     name: "São José dos Pinhais",
     slug: "sao-jose-dos-pinhais",
-    neighborhoods: ["Centro", "Afonso Pena", "Aviação", "Costeira", "São Cristóvão", "Del Rey"],
     hasPage: true
   },
   {
     name: "Araucária",
     slug: "araucaria",
-    neighborhoods: ["Centro", "Chapada", "Costeira", "Iguaçu", "Thomaz Coelho"],
     hasPage: true
   },
   {
     name: "Campo Largo",
     slug: "campo-largo",
-    neighborhoods: ["Centro", "Jardim Guilhermina", "Jardim América", "Ferraria"],
     hasPage: true
   },
   {
     name: "Pinhais",
     slug: "pinhais",
-    neighborhoods: ["Centro", "Emiliano Perneta", "Maria Antonieta", "Weissópolis"],
     hasPage: true
   }
 ];
@@ -107,20 +102,24 @@ export const CitiesSection = () => {
               <div className="mb-4">
                 <p className="text-xs text-muted-foreground uppercase tracking-wider mb-2 flex items-center gap-1">
                   <Home className="h-3 w-3" />
-                  Bairros atendidos:
+                  Bairros com guia local:
                 </p>
                 <div className="flex flex-wrap gap-1.5">
-                  {city.neighborhoods.map((neighborhood) => (
-                    <span 
-                      key={neighborhood}
-                      className="bg-muted text-muted-foreground text-xs px-2.5 py-1 rounded-full border border-border/50 group-hover:border-accent/20 group-hover:bg-accent/5 transition-all duration-300"
+                  {BAIRROS_DIRECTORY.filter((bairro) => bairro.cidade === city.name).map((bairro) => (
+                    <Link
+                      key={bairro.slug}
+                      to={bairroHref(bairro.slug)}
+                      className="bg-muted text-muted-foreground text-xs px-2.5 py-1 rounded-full border border-border/50 hover:border-accent hover:bg-accent/5 hover:text-accent transition-all duration-300"
                     >
-                      {neighborhood}
-                    </span>
+                      {bairro.nome}
+                    </Link>
                   ))}
+                  {BAIRROS_DIRECTORY.every((bairro) => bairro.cidade !== city.name) && (
+                    <span className="text-xs text-muted-foreground">Guia de bairro em preparação editorial.</span>
+                  )}
                   <span className="text-xs text-accent font-medium flex items-center gap-0.5">
                     <Sparkles className="h-3 w-3" />
-                    + outros
+                    cobertura confirmada na triagem
                   </span>
                 </div>
               </div>

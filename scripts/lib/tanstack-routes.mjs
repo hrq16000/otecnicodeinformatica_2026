@@ -29,7 +29,7 @@ export const PRIVATE_PREFIXES = ["/admin", "/ads", "/api"];
 export const ASSET_PREFIXES = ["/assets/", "/lovable-uploads/", "/images/", "/fonts/", "/css/", "/icons/"];
 
 /** Extensões de arquivo estático referenciado no código (validado em public/ ou dist/). */
-export const STATIC_FILE_RE = /\.(xml|txt|json|pdf|webmanifest|png|jpe?g|svg|webp|avif|ico|css|js|mp4|woff2?)$/i;
+export const STATIC_FILE_RE = /\.(xml|txt|json|md|pdf|webmanifest|png|jpe?g|svg|webp|avif|ico|css|js|mp4|woff2?)$/i;
 
 export const REASONS = {
   OK: "OK",

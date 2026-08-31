@@ -1,0 +1,43 @@
+{
+  "geradoEm": "2026-08-31T18:29:19.274Z",
+  "historico": [
+    {
+      "geradoEm": "2026-08-31T17:57:03.969Z",
+      "contagem": {
+        "PENDING": 3,
+        "PUBLISHED": 19
+      },
+      "total": 22,
+      "consolidada": false
+    },
+    {
+      "geradoEm": "2026-08-31T18:27:57.264Z",
+      "contagem": {
+        "PENDING": 3,
+        "PUBLISHED": 19
+      },
+      "total": 22,
+      "consolidada": false
+    },
+    {
+      "geradoEm": "2026-08-31T18:29:03.969Z",
+      "contagem": {
+        "PENDING": 3,
+        "PUBLISHED": 19,
+        "UNKNOWN": 1
+      },
+      "total": 23,
+      "consolidada": false
+    },
+    {
+      "geradoEm": "2026-08-31T18:29:19.274Z",
+      "contagem": {
+        "PENDING": 3,
+        "PUBLISHED": 19,
+        "UNKNOWN": 1
+      },
+      "total": 23,
+      "consolidada": false
+    }
+  ]
+}

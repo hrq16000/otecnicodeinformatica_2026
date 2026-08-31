@@ -1,0 +1,12 @@
+{
+  "geradoEm": "2026-08-31T18:24:29.274Z",
+  "estado": "BASELINE",
+  "auditoriaAtual": "2026-08-31T18:24:29.135Z",
+  "auditoriaAnterior": null,
+  "vereditoAtual": "SAUDAVEL",
+  "vereditoAnterior": null,
+  "linhas": [],
+  "mudancasDeEstado": [],
+  "regressoes": [],
+  "proximoLote": "Sem regressão: novo lote pode ser avaliado com evidência de demanda (GSC)."
+}

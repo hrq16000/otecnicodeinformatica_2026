@@ -1,8 +1,8 @@
 {
   "wave": "10C",
-  "geradoEm": "2026-08-27T04:34:36.342Z",
+  "geradoEm": "2026-08-31T18:24:29.135Z",
   "execucao": {
-    "responsavel": "root",
+    "responsavel": "UNKNOWN",
     "origem": "manual",
     "workflow": null,
     "commit": null,
@@ -12,43 +12,44 @@
     "indexacao": {
       "estado": "OK",
       "motivo": null,
-      "geradoEm": "2026-08-26T04:44:53.719Z",
+      "geradoEm": "2026-08-31T17:57:03.528Z",
       "total": 19,
-      "indexadas": 0,
-      "cobertura": 0,
+      "indexadas": 17,
+      "cobertura": 89.5,
       "porEstado": {
-        "NO_DATA": 19
+        "DISCOVERED": 2,
+        "INDEXED": 17
       },
       "lotes": [
         {
           "lote": "10C/0",
           "total": 4,
-          "indexadas": 0,
-          "cobertura": 0
+          "indexadas": 3,
+          "cobertura": 75
         },
         {
           "lote": "10D/1",
           "total": 3,
-          "indexadas": 0,
-          "cobertura": 0
+          "indexadas": 2,
+          "cobertura": 66.7
         },
         {
           "lote": "10C/2",
           "total": 3,
-          "indexadas": 0,
-          "cobertura": 0
+          "indexadas": 3,
+          "cobertura": 100
         },
         {
           "lote": "10C/3",
           "total": 6,
-          "indexadas": 0,
-          "cobertura": 0
+          "indexadas": 6,
+          "cobertura": 100
         },
         {
           "lote": "10C/4",
           "total": 6,
-          "indexadas": 0,
-          "cobertura": 0
+          "indexadas": 5,
+          "cobertura": 83.3
         }
       ]
     },
@@ -97,17 +98,18 @@
     },
     "alertas": {
       "estado": "OK",
-      "geradoEm": "2026-08-26T04:44:53.719Z",
-      "total": 22,
+      "geradoEm": "2026-08-31T17:57:03.528Z",
+      "total": 44,
       "porSeveridade": {
-        "INFO": 22
+        "INFO": 25,
+        "SUCCESS": 19
       },
       "entrega": {
         "estado": "DELIVERY_DISABLED",
         "slack": "NOT_CONFIGURED",
         "email": "NOT_CONFIGURED",
         "enviados": 0,
-        "ignorados": 6
+        "ignorados": 22
       }
     }
   },

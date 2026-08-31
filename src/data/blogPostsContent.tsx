@@ -10090,49 +10090,53 @@ crontab -e
     ),
   },
   "como-deixar-celular-android-mais-rapido": {
-    title: "Como Deixar o Celular Android Mais Rápido em 2026: 8 Ajustes Que Funcionam",
-    excerpt: "Celular Android travando ou lento? Aprenda como acelerar seu celular com 8 dicas práticas, sem instalar app limpador. Suporte em Curitiba.",
-    date: "2026-04-29",
-    readTime: "7 min",
-    category: "Tutoriais Domésticos",
+    title: "Celular Android lento: o que realmente testar antes de instalar um app de limpeza",
+    excerpt: "Apps de limpeza não consertam todo tipo de lentidão. Veja como separar falta de espaço, aplicativo com falha, atualização pendente e limite do aparelho sem apagar dados por impulso.",
+    date: "2026-08-31",
+    readTime: "10 min",
+    category: "Celular e aplicativos",
     content: (
       <>
-        <p className="lead">Celular Android lento, fechando aplicativos sozinho ou descarregando rápido? Antes de pensar em comprar outro, faça essas limpezas.</p>
+        <p className="lead">Celular lento não é sinônimo de “celular sujo”. Muitas vezes o problema é pouco espaço, um único aplicativo com falha, atualização pendente, bateria desgastada ou simplesmente o limite do hardware. Um limpador genérico não diagnostica essas causas — e pode pedir permissões desnecessárias. Comece pelo sintoma e por ajustes reversíveis.</p>
 
-        <h2>1. Reinicie o Celular</h2>
-        <p>Sim, parece bobo, mas a maioria das pessoas nunca reinicia. Segure o botão de ligar → escolha <strong>Reiniciar</strong>. Faça isso 1 vez por semana.</p>
+        <h2>Veredito técnico: app de limpeza não cria desempenho</h2>
+        <p>Limpar arquivos temporários pode resolver um aplicativo que abriu dados corrompidos ou liberar algum espaço. Isso não amplia a memória RAM, não repara bateria, não melhora sinal de internet e não substitui atualização do sistema. Evite apps que prometem “turbo”, limpeza de RAM contínua, economia milagrosa ou que exigem acesso amplo a arquivos e acessibilidade sem explicar por quê.</p>
 
-        <h2>2. Apague Apps Que Você Não Usa</h2>
+        <h2>Primeiro, descubra qual lentidão está acontecendo</h2>
+        <div className="not-prose my-8 overflow-x-auto rounded-xl border border-border">
+          <table className="w-full min-w-[620px] text-left text-sm">
+            <thead className="bg-muted/60"><tr><th className="p-3">Sintoma</th><th className="p-3">Teste seguro</th><th className="p-3">Próximo passo</th></tr></thead>
+            <tbody className="divide-y divide-border text-muted-foreground">
+              <tr><td className="p-3">Tudo demora e o armazenamento está quase cheio</td><td className="p-3">Veja o uso por fotos, vídeos, downloads e apps</td><td className="p-3">Libere espaço de itens conferidos; não apague por lote.</td></tr>
+              <tr><td className="p-3">Só um app trava ou fecha</td><td className="p-3">Atualize o app e teste novamente</td><td className="p-3">Limpe apenas o cache dele; se persistir, procure suporte do desenvolvedor.</td></tr>
+              <tr><td className="p-3">O aparelho aquece e fica lento em vários apps</td><td className="p-3">Pare o uso pesado, retire da carga e deixe resfriar</td><td className="p-3">Investigue bateria, carregador e aplicativos em segundo plano; não force uso aquecido.</td></tr>
+              <tr><td className="p-3">Ficou lento depois de instalar um app</td><td className="p-3">Desinstale o app recente e observe por um dia</td><td className="p-3">Reinstale apenas se ele for confiável e o problema não voltar.</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h2>O que libera espaço sem recorrer a limpador</h2>
         <ol>
-          <li>Vá em <strong>Configurações → Aplicativos</strong></li>
-          <li>Veja a lista — quantos você usa de verdade?</li>
-          <li>Toque nos que não usa há mais de 1 mês e clique <strong>Desinstalar</strong></li>
+          <li><strong>Revise Downloads e mídia repetida.</strong> Abra os arquivos antes de excluir e confirme se fotos importantes já possuem uma cópia acessível.</li>
+          <li><strong>Desinstale o que não usa.</strong> Pela Play Store ou pelas configurações, remova apps que não têm função atual. Quando disponível, arquivar app pouco usado reduz espaço ocupado sem tratar isso como backup.</li>
+          <li><strong>Verifique o armazenamento de apps grandes.</strong> Mensageiros, navegadores e serviços de vídeo acumulam arquivos baixados. Prefira as ferramentas internas do próprio app para identificar mídia e downloads.</li>
+          <li><strong>Atualize sistema e aplicativos.</strong> Correções podem resolver falhas de um aplicativo específico; atualize com bateria suficiente e conexão confiável.</li>
         </ol>
 
-        <h2>3. Limpe Espaço</h2>
-        <p>Celular cheio = celular lento. Vá em <strong>Configurações → Armazenamento</strong> e veja onde está o espaço. Geralmente: WhatsApp, fotos e vídeos. Apague o que não precisa, mande as fotos para Google Fotos.</p>
+        <h2>Cache e dados: não são o mesmo botão</h2>
+        <p>Cache é conteúdo temporário usado para abrir partes de um app mais rápido. Limpar cache pode ajudar em uma falha pontual e normalmente não equivale a apagar sua conta. Já “limpar dados” ou “limpar armazenamento” pode remover configurações, sessões e arquivos mantidos pelo aplicativo. Antes de tocar nesse segundo botão, confirme que você sabe entrar novamente e que os dados importantes estão sincronizados ou copiados.</p>
 
-        <h2>4. Limpe o Cache do WhatsApp</h2>
-        <ol>
-          <li>Abra o <strong>WhatsApp</strong></li>
-          <li>Toque nos 3 pontos → <strong>Configurações → Armazenamento e dados → Gerenciar armazenamento</strong></li>
-          <li>Apague vídeos antigos e conversas pesadas</li>
-        </ol>
+        <aside className="not-prose my-8 rounded-xl border border-amber-500/30 bg-amber-500/10 p-5 text-sm text-foreground">
+          <strong>Parada segura:</strong> não restaure o celular de fábrica para “testar se melhora” sem backup verificado. A restauração apaga dados locais e só deve entrar depois de identificar o problema, confirmar contas/chaves de acesso e testar alternativas reversíveis.
+        </aside>
 
-        <h2>5. Atualize o Sistema</h2>
-        <p><strong>Configurações → Sistema → Atualização do sistema</strong>. Se tiver atualização disponível, instale (com o celular na tomada e Wi-Fi).</p>
+        <h2>Quando o aplicativo não é a causa</h2>
+        <p>Se o aparelho perde carga rapidamente, desliga, aquece sem uso pesado, apresenta tela com defeito ou continua travando após espaço livre e atualização, a origem pode ser física. Não existe aplicativo capaz de recuperar capacidade de bateria, corrigir conector de carga ou compensar um componente em falha. Nesses casos, a decisão correta é preservar os dados e buscar uma avaliação do aparelho, em vez de instalar mais “otimizadores”.</p>
 
-        <h2>6. Atualize os Apps</h2>
-        <p>Abra a <strong>Play Store</strong> → toque na sua foto → <strong>Gerenciar apps e dispositivo</strong> → <strong>Atualizar tudo</strong>.</p>
+        <h2>Resumo para decidir</h2>
+        <p>Comece observando espaço, atualizações e se o problema pertence a um app ou ao sistema inteiro. Limpe cache apenas quando houver motivo; não confunda com limpar dados. Remova apps sem uso, revise mídia com cuidado e mantenha uma cópia dos dados importantes. Se houver aquecimento, desligamentos ou falhas físicas, pare de tentar acelerar por software.</p>
 
-        <h2>7. Desligue Animações</h2>
-        <p>Em <strong>Configurações → Acessibilidade</strong> ou <strong>Sobre o telefone → Opções do desenvolvedor</strong>, reduza animações. Celular fica mais ágil.</p>
-
-        <h2>8. Última Opção: Restaurar de Fábrica</h2>
-        <p>Faça backup primeiro! Depois <strong>Configurações → Sistema → Opções de redefinição → Apagar todos os dados</strong>. Volta como novo.</p>
-
-        <h2>Não Resolveu?</h2>
-        <p>Pode ser bateria velha ou problema mais sério. A O Técnico de Informática avalia celulares em Curitiba e indica o que vale a pena consertar — chame pelo WhatsApp.</p>
+        <EditorialReferences slug="como-deixar-celular-android-mais-rapido" />
 
       </>
     ),
@@ -10985,6 +10989,32 @@ crontab -e
           <li><strong>Testar por cabo de rede.</strong> É o teste decisivo: se por cabo funciona perfeitamente e por Wi-Fi nunca funciona, o módulo sem fio do aparelho é o suspeito principal.</li>
         </ol>
         <p>Reset de fábrica só faz sentido depois desses passos. Ele apaga contas, aplicativos e preferências e raramente resolve o que os itens anteriores não resolveram.</p>
+
+        <aside className="not-prose my-8 rounded-2xl border border-accent/25 bg-accent/[0.04] p-5 md:p-6" aria-labelledby="matriz-tv-wifi">
+          <span className="text-xs font-semibold uppercase tracking-[0.14em] text-accent">Matriz de diagnóstico</span>
+          <h2 id="matriz-tv-wifi" className="mt-2 text-xl font-heading font-bold text-foreground">Sintoma, teste e próximo passo</h2>
+          <div className="mt-5 overflow-x-auto rounded-xl border border-border bg-background">
+            <table className="w-full min-w-[620px] text-left text-sm">
+              <thead className="bg-muted/60 text-foreground">
+                <tr>
+                  <th className="p-3 font-semibold">O que aparece</th>
+                  <th className="p-3 font-semibold">Teste seguro</th>
+                  <th className="p-3 font-semibold">Decisão</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-border text-muted-foreground">
+                <tr><td className="p-3">Celular e TV falham no mesmo ponto</td><td className="p-3">Compare perto do roteador e no local da TV</td><td className="p-3">Trate cobertura antes de mexer na TV.</td></tr>
+                <tr><td className="p-3">TV não encontra a rede, mas o celular encontra</td><td className="p-3">Confira a faixa disponível e separe o nome de 2,4 GHz</td><td className="p-3">Ajuste a rede; não compre adaptador por palpite.</td></tr>
+                <tr><td className="p-3">TV navega, mas não aparece para o celular</td><td className="p-3">Verifique rede de visitantes e isolamento de clientes</td><td className="p-3">Mantenha os dois na mesma rede doméstica.</td></tr>
+                <tr><td className="p-3">Cabo funciona e Wi‑Fi falha sempre</td><td className="p-3">Atualize o sistema e repita o teste após reconectar a rede</td><td className="p-3">Só então avalie o módulo Wi‑Fi ou uma solução cabeada.</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </aside>
+
+        <aside className="not-prose my-8 rounded-xl border border-amber-500/30 bg-amber-500/10 p-5 text-sm text-foreground" aria-label="Antes de restaurar a Smart TV">
+          <strong>Não comece pelo reset de fábrica.</strong> Ele remove contas, aplicativos e preferências, mas não corrige falta de cobertura, instabilidade da operadora ou isolamento configurado no roteador. Faça os testes acima e registre o resultado antes de apagar qualquer configuração.
+        </aside>
 
         <h2>Quando é defeito da TV — e o que isso significa na prática</h2>
         <p>Quando a TV não lista nenhuma rede, conecta por cabo sem falha e o problema persiste após atualização e reset, o cenário aponta para o módulo Wi-Fi do aparelho. Nesse ponto entra uma conversa honesta de custo: em boa parte dos televisores de linha de entrada, o reparo dessa parte custa mais do que resolver o uso com conexão cabeada ou com um aparelho externo de streaming ligado à porta HDMI.</p>

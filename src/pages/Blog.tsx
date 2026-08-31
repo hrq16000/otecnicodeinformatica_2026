@@ -39,6 +39,13 @@ const EDITORIAL_POLICY = [
   "Avaliações e resultados não serão inventados.",
 ];
 
+const AUTHORITY_COMMITMENTS = [
+  "A pauta nasce de uma dúvida real; texto de terceiros não é copiado nem reescrito.",
+  "Afirmações que dependem de sistema, versão ou fabricante exigem fonte primária atual.",
+  "Todo procedimento informa o limite: o que testar, o que evitar e quando parar.",
+  "Uma página só é publicada quando acrescenta uma resposta própria, não outra URL para a mesma intenção.",
+];
+
 const INSTITUTIONAL_LINKS = [
   { to: "/servicos", label: "Serviços de informática", icon: Wrench, desc: "Formatação, manutenção, SSD, vírus, redes e mais." },
   { to: "/diagnostico-tecnico", label: "Diagnóstico técnico", icon: FileSearch, desc: "Entenda o problema antes de decidir o reparo." },
@@ -52,6 +59,38 @@ const FUNDAMENTOS = [
   { slug: "informatica-basica", label: "Informática básica", desc: "O que se aprende no primeiro nível e por onde começar." },
   { slug: "como-aprender-informatica", label: "Como aprender informática", desc: "Roteiro de estudo em quatro fases, com cronograma." },
 ];
+
+// Vereditos que já estão sustentados por guias aprovados. Não são uma lista
+// de "dicas rápidas": cada card leva ao contexto, aos limites do teste e ao
+// momento de parar. Se um guia perder aprovação, ele sai daqui também.
+const TECHNICAL_VERDICTS = [
+  {
+    slug: "limpar-arquivos-temporarios-windows",
+    verdict: "Limpador de registro não é manutenção e não substitui diagnóstico.",
+    context: "Espaço livre e arquivos temporários são verificações válidas; programas de " +
+      "faxina" não são uma resposta para toda lentidão.",
+  },
+  {
+    slug: "limpar-cache-do-windows-update-softwaredistribution",
+    verdict: "Limpar cache do Update só ajuda em cenários específicos.",
+    context: "Quando o erro está na instalação ou em um driver, apagar arquivos de download não corrige a causa.",
+  },
+  {
+    slug: "disco-com-setores-defeituosos-smart-o-que-fazer",
+    verdict: "CHKDSK não é a resposta padrão para disco com sinais de falha.",
+    context: "Com dados importantes, a prioridade é copiar e preservar antes de escrever ou reparar a unidade.",
+  },
+  {
+    slug: "backup-nuvem-empresas-qual-escolher",
+    verdict: "Pasta sincronizada não é backup por si só.",
+    context: "A proteção real depende de versões recuperáveis, cópia independente e teste de restauração.",
+  },
+  {
+    slug: "como-escolher-um-bom-antivirus",
+    verdict: "Comprar antivírus não compensa hábitos e sistema desatualizados.",
+    context: "A decisão começa pela proteção já disponível, atualizações e pelo risco que a máquina enfrenta.",
+  },
+] as const;
 
 /**
  * Portas de entrada editoriais. A ideia vem da boa navegação por temas de
@@ -125,6 +164,7 @@ const Blog = () => {
   const visibleSlugs = approvedSlugs.filter((slug) =>
     activeCategory === "Todos" || summaries[slug]?.category === activeCategory,
   );
+  const visibleVerdicts = TECHNICAL_VERDICTS.filter(({ slug }) => approvedSlugs.includes(slug));
 
 
   return (
@@ -259,6 +299,56 @@ const Blog = () => {
                       </li>
                     ))}
                   </ul>
+
+                  <section className="mt-10 rounded-2xl border border-accent/25 bg-accent/[0.04] p-6 md:p-8" aria-labelledby="compromisso-autoridade">
+                    <span className="text-sm font-semibold uppercase tracking-[0.16em] text-accent">Autoridade que se pode conferir</span>
+                    <h2 id="compromisso-autoridade" className="mt-2 text-xl font-heading font-bold text-foreground md:text-2xl">
+                      Antes de publicar, a resposta precisa ser útil e segura
+                    </h2>
+                    <ul className="mt-5 grid gap-3 md:grid-cols-2">
+                      {AUTHORITY_COMMITMENTS.map((commitment) => (
+                        <li key={commitment} className="flex gap-3 rounded-xl border border-border bg-background p-4 text-sm leading-relaxed text-foreground/90">
+                          <CheckCircle2 className="mt-0.5 h-5 w-5 flex-shrink-0 text-accent" aria-hidden="true" />
+                          {commitment}
+                        </li>
+                      ))}
+                    </ul>
+                  </section>
+
+                  {visibleVerdicts.length > 0 && (
+                    <section className="my-12 rounded-2xl border border-accent/25 bg-accent/[0.04] p-6 md:p-8" aria-labelledby="vereditos-tecnicos">
+                      <div className="max-w-3xl">
+                        <span className="text-sm font-semibold uppercase tracking-[0.16em] text-accent">Vereditos técnicos</span>
+                        <h2 id="vereditos-tecnicos" className="mt-2 text-xl md:text-2xl font-heading font-bold text-foreground">
+                          Nem toda dica de internet merece ser seguida
+                        </h2>
+                        <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                          Aqui, o procedimento vem com condição, limite e risco. Abra o guia antes de alterar o sistema ou o equipamento.
+                        </p>
+                      </div>
+                      <ul className="mt-6 grid gap-3 md:grid-cols-2">
+                        {visibleVerdicts.map(({ slug, verdict, context }) => {
+                          const summary = summaries[slug];
+                          if (!summary) return null;
+
+                          return (
+                            <li key={slug}>
+                              <Link
+                                to={`/blog/${slug}`}
+                                className="group block h-full rounded-xl border border-border bg-background p-5 transition-colors hover:border-accent/45"
+                              >
+                                <span className="text-sm font-semibold text-foreground group-hover:text-accent">{verdict}</span>
+                                <span className="mt-2 block text-sm leading-relaxed text-muted-foreground">{context}</span>
+                                <span className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-accent">
+                                  Ler a análise: {summary.title} <ArrowRight className="h-4 w-4" aria-hidden="true" />
+                                </span>
+                              </Link>
+                            </li>
+                          );
+                        })}
+                      </ul>
+                    </section>
+                  )}
 
                   {/* Fundamentos: porta de entrada dos três pilares nacionais (9B). */}
                   {FUNDAMENTOS.some((f) => approvedSlugs.includes(f.slug)) && (

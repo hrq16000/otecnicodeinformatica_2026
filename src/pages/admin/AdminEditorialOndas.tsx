@@ -9,6 +9,7 @@ import EditorialDiffsPanel from "@/components/admin/EditorialDiffsPanel";
 import EditorialHistoricoPanel from "@/components/admin/EditorialHistoricoPanel";
 import EditorialIndexNowPanel from "@/components/admin/EditorialIndexNowPanel";
 import EditorialSchemaDiffPanel from "@/components/admin/EditorialSchemaDiffPanel";
+import EditorialVerdictsPanel from "@/components/admin/EditorialVerdictsPanel";
 
 
 /**
@@ -118,7 +119,7 @@ export default function AdminEditorialOndas() {
   const [assets, setAssets] = useState<StatusAssets | null>(null);
   const [erro, setErro] = useState<string | null>(null);
   const [lote, setLote] = useState<string>("todos");
-  const [aba, setAba] = useState<"indexacao" | "auditoria" | "historico" | "diffs" | "indexnow" | "schema">("indexacao");
+  const [aba, setAba] = useState<"indexacao" | "auditoria" | "historico" | "diffs" | "indexnow" | "schema" | "vereditos">("indexacao");
 
   useEffect(() => {
     fetch("/editorial-waves-status.json", { cache: "no-store" })
@@ -212,6 +213,7 @@ export default function AdminEditorialOndas() {
               ["diffs", "Diffs (schema/FAQ/breadcrumb/assets)"],
               ["indexnow", "IndexNow"],
               ["schema", "Schema Diff"],
+              ["vereditos", "Vereditos"],
             ] as const).map(([id, rotulo]) => (
               <Button
                 key={id}
@@ -433,6 +435,7 @@ export default function AdminEditorialOndas() {
           {aba === "indexnow" && <EditorialIndexNowPanel lote={lote} />}
 
           {aba === "schema" && <EditorialSchemaDiffPanel lote={lote} />}
+          {aba === "vereditos" && <EditorialVerdictsPanel />}
         </>
 
       )}

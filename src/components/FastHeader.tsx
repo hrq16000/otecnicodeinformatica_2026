@@ -13,6 +13,7 @@ import {
   Info,
   Users,
   BookOpen,
+  Search,
   type LucideIcon,
 } from "lucide-react";
 import { whatsappLink } from "@/lib/siteConfig";
@@ -67,6 +68,7 @@ const megaGrupos: MegaGrupo[] = [
         links: [
           { label: "Informática básica", href: "/blog/informatica-basica" },
           { label: "Wi-Fi e rede em casa", href: "/blog/como-melhorar-sinal-wifi-em-casa" },
+          { label: "Vereditos técnicos", href: "/blog#vereditos-tecnicos", hint: "O que não fazer por boato" },
           { label: "Ver todos os guias", href: "/blog" },
         ],
       },
@@ -313,6 +315,14 @@ export const FastHeader = () => {
 
 
         <div className="flex items-center gap-2">
+          <button
+            type="button"
+            onClick={() => window.dispatchEvent(new CustomEvent("openSmartSearch"))}
+            aria-label="Buscar no portal"
+            className="inline-flex h-11 w-11 items-center justify-center rounded-md border border-border bg-background text-foreground transition-colors hover:bg-accent/10 hover:text-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+          >
+            <Search className="h-5 w-5" strokeWidth={2.2} aria-hidden="true" />
+          </button>
           <a
             href={WA_SCHEDULE}
             target="_blank"

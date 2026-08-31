@@ -25,7 +25,7 @@
  *
  * Uso: npm run report:editorial-verdicts
  */
-import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
+import { existsSync, mkdirSync, readFileSync, readdirSync, writeFileSync } from "node:fs";
 import { resolve } from "node:path";
 
 const ler = (rel) => {
@@ -48,6 +48,7 @@ if (!ondas?.rotas?.length) {
 
 const indexnowPublico = ler("public/editorial-indexnow-status.json");
 const indexnowDetalhe = ler("reports/indexnow/editorial-wave-status.json");
+const publicacao10c = ler("public/editorial-onda-10c-publicacao.json");
 
 const envioPorUrl = new Map();
 for (const fonte of [indexnowDetalhe?.registros, indexnowPublico?.registros, indexnowPublico?.urls]) {
@@ -92,7 +93,7 @@ const urls = ondas.rotas.map((r) => {
     internalState: r.internalState ?? null,
     emSitemap: Boolean(r.sitemapLastmod),
     sitemapLastmod: r.sitemapLastmod ?? null,
-    indexNow: envio.submissionState ?? (r.indexNowSentAt ? "SUBMITTED" : null),
+    indexNow: envio.submissionState ?? (r.indexNowSentAt ? "SUBMITTED" : (r.wave === "10C" && /^HTTP (200|202)/.test(String(publicacao10c?.indexNow ?? "")) ? "SUBMITTED" : null)),
     indexNowEm: envio.lastSubmittedAt ?? r.indexNowSentAt ?? null,
     estadoBusca: estado,
     veredito: veredito(estado),
@@ -102,6 +103,46 @@ const urls = ondas.rotas.map((r) => {
     canonicalDeclarado: g.canonicalDeclarado ?? null,
   };
 });
+
+// Caso técnico prioritário fora da registry de ondas: o artigo do erro
+// 0xc0000428 entra no mesmo ledger, porém sem se passar por URL da Onda 10C.
+const casos = ler("public/index-status.json")?.rotas ?? [];
+const caso0428 = casos.find((r) => r.path === "/problemas/windows-nao-inicia");
+if (caso0428) {
+  const g = caso0428.google ?? {};
+  const estado = g.status === "INDEXED" ? "INDEXED" : g.status === "NO_DATA" ? "PENDING" : "UNKNOWN";
+  urls.push({
+    url: caso0428.path,
+    urlAbsoluta: caso0428.url,
+    lote: "CASO/0xc0000428",
+    wave: "CASO",
+    batch: "0xc0000428",
+    ownerId: "windows-nao-inicia-0xc0000428",
+    cluster: "inicializacao-windows",
+    internalState: "PUBLISHED",
+    emSitemap: true,
+    sitemapLastmod: null,
+    indexNow: null,
+    indexNowEm: null,
+    estadoBusca: estado,
+    veredito: veredito(estado),
+    motivo: g.coverageState ?? null,
+    ultimoCrawl: g.ultimoCrawl ?? null,
+    canonicalGoogle: g.canonicalGoogle ?? null,
+    canonicalDeclarado: g.canonicalDeclarado ?? null,
+  });
+} else {
+  urls.push({
+    url: "/problemas/windows-nao-inicia",
+    urlAbsoluta: "https://otecnicodeinformatica.com.br/problemas/windows-nao-inicia",
+    lote: "CASO/0xc0000428", wave: "CASO", batch: "0xc0000428",
+    ownerId: "windows-nao-inicia-0xc0000428", cluster: "inicializacao-windows",
+    internalState: "PUBLISHED", emSitemap: true, sitemapLastmod: null,
+    indexNow: null, indexNowEm: null, estadoBusca: "UNKNOWN", veredito: "UNKNOWN",
+    motivo: "Sem inspeção atual da URL do caso no artefato de status.", ultimoCrawl: null,
+    canonicalGoogle: null, canonicalDeclarado: null,
+  });
+}
 
 const contagem = urls.reduce((acc, u) => {
   acc[u.veredito] = (acc[u.veredito] ?? 0) + 1;
@@ -149,6 +190,14 @@ writeFileSync(
   resolve(process.cwd(), `public/editorial/verdicts/${agora.replace(/[:.]/g, "-")}.json`),
   `${JSON.stringify(ledger, null, 2)}\n`,
 );
+const historicoDir = resolve(process.cwd(), "public/editorial/verdicts");
+const historico = readdirSync(historicoDir)
+  .filter((f) => f.endsWith(".json"))
+  .map((f) => ler(`public/editorial/verdicts/${f}`))
+  .filter(Boolean)
+  .map((h) => ({ geradoEm: h.geradoEm, contagem: h.contagem, total: h.total, consolidada: h.consolidada }))
+  .sort((a, b) => String(a.geradoEm).localeCompare(String(b.geradoEm)));
+writeFileSync(resolve(process.cwd(), "public/editorial-verdicts-history.json"), `${JSON.stringify({ geradoEm: agora, historico }, null, 2)}\n`);
 
 const md = [
   "# Vereditos de indexação — Onda 10C",
