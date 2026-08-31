@@ -197,7 +197,25 @@ export const SmartSearch = ({ isOpen, onClose }: SmartSearchProps) => {
     const q = normalize(query);
     const words = q.split(/\s+/).filter(Boolean);
 
-    return searchData
+    // Código de erro é entidade exata: entra no topo, com aliases e variações
+    // (`0xc0000428`, `c0000428`, `erro C0000428`, busca parcial).
+    const codigo = extrairCodigoDaConsulta(query) ?? correlatoParaCodigo(query);
+    const sugestoesCodigo = sugerirCodigos(query);
+    const doCodigo: (SearchItem & { score: number })[] = [];
+    const vistos = new Set<string>();
+    for (const c of [codigo, ...sugestoesCodigo].filter(Boolean) as CodigoErro[]) {
+      if (vistos.has(c.href)) continue;
+      vistos.add(c.href);
+      doCodigo.push({
+        title: c.label,
+        path: c.href,
+        category: "pagina",
+        keywords: [c.codigo, ...c.correlatos],
+        score: 1000 - doCodigo.length,
+      });
+    }
+
+    const demais = searchData
       .map((item) => {
         const titleNorm = normalize(item.title);
         const keywordsNorm = item.keywords.map(normalize);
@@ -213,10 +231,12 @@ export const SmartSearch = ({ isOpen, onClose }: SmartSearchProps) => {
         }
         return { ...item, score };
       })
-      .filter((item) => item.score > 0)
-      .sort((a, b) => b.score - a.score)
-      .slice(0, 8);
+      .filter((item) => item.score > 0 && !vistos.has(item.path))
+      .sort((a, b) => b.score - a.score);
+
+    return [...doCodigo, ...demais].slice(0, 8);
   }, [query]);
+
 
   useEffect(() => {
     if (isOpen) {
