@@ -582,6 +582,33 @@ export const EDITORIAL_WAVE = [
     apoioLabel: "Windows Update não funciona",
     cover: "/blog/windows-update-travado-desfazendo-alteracoes.jpg",
   },
+  {
+    slug: "boot-uefi-ou-legacy-como-identificar",
+    approvedAt: "2026-08-31",
+    pilar: "/diagnostico-tecnico",
+    pilarLabel: "Diagnóstico técnico",
+    apoio: "/blog/ordem-de-boot-na-bios-como-configurar",
+    apoioLabel: "Ordem de boot na BIOS",
+    cover: "/blog/boot-uefi-ou-legacy-como-identificar.jpg",
+  },
+  {
+    slug: "ordem-de-boot-na-bios-como-configurar",
+    approvedAt: "2026-08-31",
+    pilar: "/diagnostico-tecnico",
+    pilarLabel: "Diagnóstico técnico",
+    apoio: "/blog/boot-uefi-ou-legacy-como-identificar",
+    apoioLabel: "UEFI ou Legacy: como identificar",
+    cover: "/blog/ordem-de-boot-na-bios-como-configurar.jpg",
+  },
+  {
+    slug: "windows-reparo-automatico-em-loop",
+    approvedAt: "2026-08-31",
+    pilar: "/servicos/manutencao-de-computador",
+    pilarLabel: "Manutenção de computador",
+    apoio: "/blog/boot-uefi-ou-legacy-como-identificar",
+    apoioLabel: "UEFI ou Legacy: como identificar",
+    cover: "/blog/windows-reparo-automatico-em-loop.jpg",
+  },
 ];
 
 

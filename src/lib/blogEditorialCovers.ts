@@ -394,6 +394,25 @@ export const EDITORIAL_COVERS: Record<string, EditorialCover> = {
     width: 1200,
     height: 630,
   },
+  // ── Onda 11A — Lote 4: BIOS, UEFI e inicialização do Windows.
+  "boot-uefi-ou-legacy-como-identificar": {
+    src: "/blog/boot-uefi-ou-legacy-como-identificar.jpg",
+    alt: "Tela de configuração UEFI de um notebook com o menu de inicialização aberto",
+    width: 1200,
+    height: 630,
+  },
+  "ordem-de-boot-na-bios-como-configurar": {
+    src: "/blog/ordem-de-boot-na-bios-como-configurar.jpg",
+    alt: "Tela de Setup da BIOS exibida durante a inicialização de um computador",
+    width: 1200,
+    height: 630,
+  },
+  "windows-reparo-automatico-em-loop": {
+    src: "/blog/windows-reparo-automatico-em-loop.jpg",
+    alt: "Tela do Ambiente de Recuperação do Windows com as opções de reparo",
+    width: 1200,
+    height: 630,
+  },
 };
 
 export function getEditorialCover(slug: string): EditorialCover | undefined {

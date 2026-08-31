@@ -944,6 +944,57 @@ const WAVE_10G: EditorialApproval[] = [
   },
 ];
 
+// ─────────────────────────────────────────────────────────────
+// Onda 11A — Lote 4: BIOS, UEFI e inicialização do Windows.
+// Aprovação manual autorizada pelo responsável em 2026-08-31
+// (config/onda-11-liberacao.json). Capas são fotografias/capturas reais
+// licenciadas no Wikimedia Commons — nenhuma imagem de IA.
+// ─────────────────────────────────────────────────────────────
+const WAVE_11A: EditorialApproval[] = [
+  {
+    slug: "boot-uefi-ou-legacy-como-identificar",
+    status: "approved",
+    authorType: "organization",
+    authorId: INSTITUTIONAL_AUTHOR.id,
+    reviewedAt: "2026-08-31",
+    approvedAt: "2026-08-31",
+    imageOrigin: "licensed",
+    imageLicense: "CC BY-SA 4.0",
+    imageAttribution:
+      "Captura: Paowee (Wikimedia Commons), CC BY-SA 4.0 — https://commons.wikimedia.org/wiki/File:Lenovo_ThinkPad_T470_UEFI_BIOS_1.75_setup_-_boot_menu_selection.JPG",
+    notes:
+      "Pilar do cluster de BIOS/UEFI, escrito do zero na Onda 11A (Lote 4); fact-check registrado em blogEditorialSources.ts; capa é imagem real licenciada, sem IA.",
+  },
+  {
+    slug: "ordem-de-boot-na-bios-como-configurar",
+    status: "approved",
+    authorType: "organization",
+    authorId: INSTITUTIONAL_AUTHOR.id,
+    reviewedAt: "2026-08-31",
+    approvedAt: "2026-08-31",
+    imageOrigin: "licensed",
+    imageLicense: "CC BY 2.0",
+    imageAttribution:
+      "Foto: Paul Schultz (Wikimedia Commons), CC BY 2.0 — https://commons.wikimedia.org/wiki/File:BIOS_Setup_First_Time.jpg",
+    notes:
+      "Satélite de configuração de prioridade de inicialização, escrito do zero na Onda 11A (Lote 4); orientação de anotar a configuração original antes de alterar; capa é imagem real licenciada, sem IA.",
+  },
+  {
+    slug: "windows-reparo-automatico-em-loop",
+    status: "approved",
+    authorType: "organization",
+    authorId: INSTITUTIONAL_AUTHOR.id,
+    reviewedAt: "2026-08-31",
+    approvedAt: "2026-08-31",
+    imageOrigin: "licensed",
+    imageLicense: "CC BY-SA 4.0",
+    imageAttribution:
+      "Captura: Armchair (Wikimedia Commons), CC BY-SA 4.0 — https://commons.wikimedia.org/wiki/File:Windows_Recovery_Environment.png",
+    notes:
+      "Satélite de laço de reparo automático, escrito do zero na Onda 11A (Lote 4); backup priorizado antes de qualquer reparo destrutivo; capa é imagem real licenciada, sem IA.",
+  },
+];
+
 export const APPROVED_EDITORIAL_CONTENT = new Map<string, EditorialApproval>([
 
   ...FIRST_WAVE_SLUGS.map((slug) => [
@@ -993,6 +1044,7 @@ export const APPROVED_EDITORIAL_CONTENT = new Map<string, EditorialApproval>([
 
   ...WAVE_10F.map((a) => [a.slug, a] as [string, EditorialApproval]),
   ...WAVE_10G.map((a) => [a.slug, a] as [string, EditorialApproval]),
+  ...WAVE_11A.map((a) => [a.slug, a] as [string, EditorialApproval]),
 ]);
 
 

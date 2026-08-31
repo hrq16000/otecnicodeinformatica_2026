@@ -844,6 +844,36 @@ export const ARTICLE_SOURCE_MANIFEST: Record<string, ArticleSourceManifest> = {
     notes:
       "Revisão concluída (Onda 10C, Lote 4): distinção entre interface parada e processo parado, reversão como mecanismo de proteção, causas comuns, códigos de erro sem causa única e critério de parada com criptografia de disco. Sem marca comercial e sem promessa. Conhecimento técnico estável — sem fonte visível.",
   },
+  "boot-uefi-ou-legacy-como-identificar": {
+    slug: "boot-uefi-ou-legacy-como-identificar",
+    sources: [],
+    technicalReview: "reviewed",
+    factChecked: true,
+    factCheckedAt: "2026-08-31",
+    stableKnowledge: true,
+    notes:
+      "Revisão concluída (Onda 11A, Lote 4): identificação do modo de inicialização por msinfo32, diskpart e Gerenciamento de Disco; relação entre GPT/UEFI e MBR/Legacy; ressalva de que trocar o modo sem converter a partição impede o boot. Sem marca comercial e sem promessa. Conhecimento técnico estável — sem fonte visível.",
+  },
+  "ordem-de-boot-na-bios-como-configurar": {
+    slug: "ordem-de-boot-na-bios-como-configurar",
+    sources: [],
+    technicalReview: "reviewed",
+    factChecked: true,
+    factCheckedAt: "2026-08-31",
+    stableKnowledge: true,
+    notes:
+      "Revisão concluída (Onda 11A, Lote 4): diferença entre menu temporário de boot e alteração permanente da prioridade, efeito de Secure Boot e CSM, e recomendação explícita de anotar a configuração original antes de alterar. Sem marca comercial e sem promessa. Conhecimento técnico estável — sem fonte visível.",
+  },
+  "windows-reparo-automatico-em-loop": {
+    slug: "windows-reparo-automatico-em-loop",
+    sources: [],
+    technicalReview: "reviewed",
+    factChecked: true,
+    factCheckedAt: "2026-08-31",
+    stableKnowledge: true,
+    notes:
+      "Revisão concluída (Onda 11A, Lote 4): árvore de decisão do laço de reparo automático, prioridade de backup antes de qualquer reparo destrutivo, uso de bootrec/bcdedit com ressalvas e critério para suspeitar de disco em falha física. Sem marca comercial e sem promessa. Conhecimento técnico estável — sem fonte visível.",
+  },
 };
 
 
