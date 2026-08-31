@@ -1,0 +1,83 @@
+name: Ledger de vereditos (diário)
+
+# Atualiza diariamente o ledger de vereditos do Search Console usado pela aba
+# /admin/editorial-ondas → Vereditos. Somente leitura do GSC + submissão
+# IndexNow/sitemap; nunca publica conteúdo nem cria URL.
+on:
+  schedule:
+    - cron: "10 7 * * *" # todo dia, 07:10 UTC
+  workflow_dispatch:
+    inputs:
+      force:
+        description: "Reenviar IndexNow ignorando a janela de 12h"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: editorial-verdicts-daily
+  cancel-in-progress: true
+
+jobs:
+  vereditos:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: latest
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: npm ci --ignore-scripts
+
+      # Submissão em lote (sitemap + IndexNow) — fail-closed sem credencial.
+      - name: Submissão em lote da Onda 10C
+        continue-on-error: true
+        env:
+          LOVABLE_API_KEY: ${{ secrets.LOVABLE_API_KEY }}
+          GOOGLE_SEARCH_CONSOLE_API_KEY: ${{ secrets.GOOGLE_SEARCH_CONSOLE_API_KEY }}
+          GSC_SITE_URL: ${{ secrets.GSC_SITE_URL }}
+          INDEXNOW_KEY: ${{ secrets.INDEXNOW_KEY }}
+        run: npm run submit:onda-10c ${{ inputs.force && '-- --force' || '' }}
+
+      # Leitura do estado do índice (URL Inspection).
+      - name: Monitor Search Console
+        continue-on-error: true
+        env:
+          LOVABLE_API_KEY: ${{ secrets.LOVABLE_API_KEY }}
+          GOOGLE_SEARCH_CONSOLE_API_KEY: ${{ secrets.GOOGLE_SEARCH_CONSOLE_API_KEY }}
+          GSC_SITE_URL: ${{ secrets.GSC_SITE_URL }}
+        run: npm run monitor:editorial-waves
+
+      - name: Ledger de vereditos
+        run: npm run report:editorial-verdicts
+
+      - name: Gate da Onda 11 (informativo)
+        continue-on-error: true
+        run: npm run check:onda-11-gate
+
+      - name: Commit dos artefatos do ledger
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add public/editorial-verdicts.json public/editorial-verdicts-history.json \
+                  public/editorial-submissions.json public/editorial/verdicts public/editorial/submissions \
+                  public/editorial-waves-status.json docs/relatorio-vereditos-indexacao.md
+          if git diff --cached --quiet; then
+            echo "Sem variação no ledger."
+          else
+            git commit -m "chore(editorial): ledger diário de vereditos [skip ci]"
+            git push
+          fi
+
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: editorial-vereditos-diario
+          path: |
+            public/editorial-verdicts.json
+            public/editorial-submissions.json
+            docs/relatorio-vereditos-indexacao.md
