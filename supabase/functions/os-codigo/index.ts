@@ -19,6 +19,8 @@ const SERVICE_ROLE = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!;
 const ANON_KEY = Deno.env.get("SUPABASE_ANON_KEY")!;
 
 const CODE_TTL_MIN = 10;
+/** O pedido aguardando emissão vive bem mais que o código, senão some do painel. */
+const REQUEST_TTL_MIN = 180;
 const MAX_CODES_PER_HOUR = 3;
 const MAX_CODES_PER_IP_HOUR = 8;
 const MAX_ATTEMPTS = 5;
