@@ -127,12 +127,13 @@ try {
 const casos = ler("public/index-status.json")?.rotas ?? [];
 
 const caso0428 = casos.find((r) => r.path === "/problemas/windows-nao-inicia");
-if (caso0428) {
-  const g = caso0428.google ?? {};
-  const estado = g.status === "INDEXED" ? "INDEXED" : g.status === "NO_DATA" ? "PENDING" : "UNKNOWN";
+{
+  const g = caso0428?.google ?? {};
+  const estadoArtefato = g.status === "INDEXED" ? "INDEXED" : g.status === "NO_DATA" ? "PENDING" : "UNKNOWN";
+  const estado = caso0428Live?.estado ?? estadoArtefato;
   urls.push({
-    url: caso0428.path,
-    urlAbsoluta: caso0428.url,
+    url: "/problemas/windows-nao-inicia",
+    urlAbsoluta: caso0428?.url ?? "https://otecnicodeinformatica.com.br/problemas/windows-nao-inicia",
     lote: "CASO/0xc0000428",
     wave: "CASO",
     batch: "0xc0000428",
@@ -145,23 +146,14 @@ if (caso0428) {
     indexNowEm: null,
     estadoBusca: estado,
     veredito: veredito(estado),
-    motivo: g.coverageState ?? null,
-    ultimoCrawl: g.ultimoCrawl ?? null,
-    canonicalGoogle: g.canonicalGoogle ?? null,
-    canonicalDeclarado: g.canonicalDeclarado ?? null,
-  });
-} else {
-  urls.push({
-    url: "/problemas/windows-nao-inicia",
-    urlAbsoluta: "https://otecnicodeinformatica.com.br/problemas/windows-nao-inicia",
-    lote: "CASO/0xc0000428", wave: "CASO", batch: "0xc0000428",
-    ownerId: "windows-nao-inicia-0xc0000428", cluster: "inicializacao-windows",
-    internalState: "PUBLISHED", emSitemap: true, sitemapLastmod: null,
-    indexNow: null, indexNowEm: null, estadoBusca: "UNKNOWN", veredito: "UNKNOWN",
-    motivo: "Sem inspeção atual da URL do caso no artefato de status.", ultimoCrawl: null,
-    canonicalGoogle: null, canonicalDeclarado: null,
+    motivo: caso0428Live?.motivo ?? g.coverageState ?? "Sem inspeção atual da URL do caso.",
+    ultimoCrawl: caso0428Live?.ultimoCrawl ?? g.ultimoCrawl ?? null,
+    canonicalGoogle: caso0428Live?.canonicalGoogle ?? g.canonicalGoogle ?? null,
+    canonicalDeclarado: caso0428Live?.canonicalDeclarado ?? g.canonicalDeclarado ?? null,
+    fonteInspecao: caso0428Live ? "gsc-live" : "artefato",
   });
 }
+
 
 // Cruzamento com o ledger de submissões (sitemap + IndexNow): cada URL passa a
 // carregar a prova operacional do envio e o veredito observado é escrito de
