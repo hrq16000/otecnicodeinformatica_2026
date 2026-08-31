@@ -18,7 +18,7 @@
 // artefatos reais (código-fonte, sitemap e registro do IndexNow).
 // ─────────────────────────────────────────────────────────────
 
-export type EditorialWaveId = "10C" | "10D";
+export type EditorialWaveId = "10C" | "10D" | "11A";
 
 export interface EditorialWaveEntry {
   /** Onda editorial (ex.: "10C"). */
@@ -455,11 +455,79 @@ const WAVE_10C_BATCH_4: EditorialWaveEntry[] = [
   },
 ];
 
+/**
+ * Onda 11A — Lote 4: BIOS, UEFI e inicialização do Windows.
+ *
+ * RASCUNHO GOVERNADO: as três URLs abaixo só entram no ar (indexáveis, no
+ * sitemap e na listagem) quando `npm run check:onda-11-gate` aprovar — ou
+ * seja, quando toda a Onda 10C tiver veredito PUBLISHED no ledger. Sem
+ * aprovação em `blogEditorialRegistry.ts` elas permanecem noindex,
+ * follow e fora de todos os sitemaps (fail-closed).
+ */
+const WAVE_11A_BATCH_4: EditorialWaveEntry[] = [
+  {
+    wave: "11A",
+    batch: "4",
+    url: "/blog/boot-uefi-ou-legacy-como-identificar",
+    slug: "boot-uefi-ou-legacy-como-identificar",
+    ownerId: "modo-boot-uefi-legacy",
+    cluster: "bios-uefi",
+    role: "pilar",
+    publishedAt: "2026-08-31",
+    targetQueries: [
+      "uefi ou legacy como saber",
+      "modo de inicializacao do windows",
+      "gpt ou mbr qual usar",
+    ],
+    doNotDuplicate: [
+      "/blog/bios-corrompida-reset-cmos-atualizacao",
+      "/blog/troquei-o-ssd-e-o-pc-so-abre-a-bios",
+      "/blog/ordem-de-boot-na-bios-como-configurar",
+    ],
+  },
+  {
+    wave: "11A",
+    batch: "4",
+    url: "/blog/ordem-de-boot-na-bios-como-configurar",
+    slug: "ordem-de-boot-na-bios-como-configurar",
+    ownerId: "ordem-de-boot",
+    cluster: "bios-uefi",
+    role: "satelite",
+    publishedAt: "2026-08-31",
+    targetQueries: [
+      "ordem de boot na bios",
+      "pendrive nao aparece no boot",
+      "menu de boot tecla",
+    ],
+    doNotDuplicate: ["/blog/boot-uefi-ou-legacy-como-identificar"],
+  },
+  {
+    wave: "11A",
+    batch: "4",
+    url: "/blog/windows-reparo-automatico-em-loop",
+    slug: "windows-reparo-automatico-em-loop",
+    ownerId: "reparo-automatico-loop",
+    cluster: "inicializacao-windows",
+    role: "satelite",
+    publishedAt: "2026-08-31",
+    targetQueries: [
+      "reparo automatico em loop",
+      "preparando reparo automatico nao sai",
+      "o pc nao iniciou corretamente",
+    ],
+    doNotDuplicate: [
+      "/problemas/windows-nao-inicia",
+      "/blog/windows-update-travado-desfazendo-alteracoes",
+    ],
+  },
+];
+
 export const EDITORIAL_WAVES: EditorialWaveEntry[] = [
   ...WAVE_10C_BATCH_0,
   ...WAVE_10D_BATCH_1,
   ...WAVE_10C_BATCH_3,
   ...WAVE_10C_BATCH_4,
+  ...WAVE_11A_BATCH_4,
 ];
 
 /** URLs monitoradas (ordem estável, sem duplicatas). */
