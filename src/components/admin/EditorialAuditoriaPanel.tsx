@@ -272,6 +272,16 @@ export default function EditorialAuditoriaPanel({ lote }: { lote: string }) {
         >
           {executando ? "Executando…" : "Executar auditoria agora"}
         </Button>
+        <Button
+          size="sm"
+          variant="secondary"
+          data-testid="auditoria-reexecutar"
+          disabled={executando || !ultimoPayload}
+          onClick={() => void carregar(ultimoPayload ?? { lote })}
+          title="Repete a última execução com o mesmo payload (falha de job)"
+        >
+          Reexecutar última
+        </Button>
         <Button size="sm" variant="outline" onClick={() => exportarKpis("csv")}>
           KPIs CSV
         </Button>
