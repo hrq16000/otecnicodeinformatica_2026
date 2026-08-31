@@ -53,8 +53,9 @@ const KEY = process.env.INDEXNOW_KEY ?? "f783ab585dfa9e6b017cb058009cccae";
 const status = ler("public/editorial-waves-status.json");
 const alvo = [];
 for (const r of status?.rotas ?? []) {
-  if (r.wave !== "10C" && r.wave !== "10D") continue;
-  alvo.push({ url: r.url, escopo: `${r.wave}/${r.batch}`, tipo: "onda-10c" });
+  // Todas as ondas monitoradas entram na submissão; a verificação real da
+  // página (HTTP + metadata) exclui automaticamente o que ainda é rascunho.
+  alvo.push({ url: r.url, escopo: `${r.wave}/${r.batch}`, tipo: "onda-editorial" });
 }
 alvo.push({ url: "/problemas/windows-nao-inicia", escopo: "CASO/0xc0000428", tipo: "artigo" });
 
