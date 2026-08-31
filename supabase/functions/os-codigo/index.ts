@@ -163,18 +163,39 @@ Deno.serve(async (req) => {
       );
     }
 
-    const { error } = await supabase.from("os_verification_codes").insert({
-      telefone_hash: telHash,
-      ip_hash: ipHash,
-      code_hash: null,
-      telefone_masked: mask(telefone),
-      expires_at: new Date(Date.now() + CODE_TTL_MIN * 60_000).toISOString(),
-    });
+    // Reaproveita o pedido em aberto do mesmo telefone: um novo insert criaria
+    // uma linha mais nova sem hash e invalidaria um código já enviado.
+    const { data: aberto } = await supabase
+      .from("os_verification_codes")
+      .select("id, code_hash")
+      .eq("telefone_hash", telHash)
+      .is("consumed_at", null)
+      .order("created_at", { ascending: false })
+      .limit(1)
+      .maybeSingle();
+
+    const novoPrazo = new Date(
+      Date.now() + (aberto?.code_hash ? CODE_TTL_MIN : REQUEST_TTL_MIN) * 60_000,
+    ).toISOString();
+
+    const { error } = aberto
+      ? await supabase
+          .from("os_verification_codes")
+          .update({ expires_at: novoPrazo, telefone_masked: mask(telefone), ip_hash: ipHash })
+          .eq("id", aberto.id)
+      : await supabase.from("os_verification_codes").insert({
+          telefone_hash: telHash,
+          ip_hash: ipHash,
+          code_hash: null,
+          telefone_masked: mask(telefone),
+          expires_at: novoPrazo,
+        });
 
     if (error) {
       console.error("os-codigo request falhou:", error.message);
       return json({ error: "request_failed" }, 500);
     }
+
 
     return json({
       ok: true,
