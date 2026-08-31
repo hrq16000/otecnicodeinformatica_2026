@@ -70,7 +70,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add reports docs public/editorial-audit-history.json public/editorial/10c/history
+          git add reports docs public/editorial-audit-history.json public/editorial/10c/history public/editorial-verdicts.json public/editorial/verdicts
           if git diff --cached --quiet; then
             echo "Sem variação nos relatórios."
           else
