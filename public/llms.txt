@@ -148,6 +148,9 @@ cobramos execução que não tenha sido aprovada.
 - [Webcam não funciona: como separar privacidade, aplicativo, driver e hardware](https://otecnicodeinformatica.com.br/blog/webcam-nao-funciona-o-que-verificar)
 - [Permissões de câmera no Windows: quando é o sistema que bloqueia e quando é o aplicativo](https://otecnicodeinformatica.com.br/blog/permissoes-de-camera-no-windows)
 - [Webcam USB não é detectada: porta, cabo, alimentação e driver](https://otecnicodeinformatica.com.br/blog/webcam-usb-nao-e-detectada)
+- [UEFI ou Legacy: como identificar o modo de inicialização do seu PC](https://otecnicodeinformatica.com.br/blog/boot-uefi-ou-legacy-como-identificar)
+- [Ordem de boot na BIOS: como configurar sem quebrar a inicialização](https://otecnicodeinformatica.com.br/blog/ordem-de-boot-na-bios-como-configurar)
+- [Reparo automático em laço: o que fazer quando o Windows não sai dessa tela](https://otecnicodeinformatica.com.br/blog/windows-reparo-automatico-em-loop)
 
 ## Páginas institucionais e de política
 

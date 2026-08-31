@@ -491,6 +491,30 @@ const rows: Array<EditorialHubSummary & { slug: string }> = [
     "date": "2026-08-26",
     "readTime": "9 min",
     "category": "Diagnóstico"
+  },
+  {
+    "slug": "boot-uefi-ou-legacy-como-identificar",
+    "title": "UEFI ou Legacy: como identificar o modo de inicialização do seu PC",
+    "excerpt": "Como descobrir em qual modo o Windows foi instalado, por que GPT e MBR importam e o que muda ao alternar entre UEFI e Legacy sem preparar o disco.",
+    "date": "2026-08-31",
+    "readTime": "9 min",
+    "category": "Diagnóstico"
+  },
+  {
+    "slug": "ordem-de-boot-na-bios-como-configurar",
+    "title": "Ordem de boot na BIOS: como configurar sem quebrar a inicialização",
+    "excerpt": "Para que serve a prioridade de inicialização, quando usar o menu temporário em vez de alterar a configuração e o que anotar antes de mexer.",
+    "date": "2026-08-31",
+    "readTime": "8 min",
+    "category": "Diagnóstico"
+  },
+  {
+    "slug": "windows-reparo-automatico-em-loop",
+    "title": "Reparo automático em laço: o que fazer quando o Windows não sai dessa tela",
+    "excerpt": "Por que o Windows entra em reparo automático repetido, o que tentar em ordem e quando o problema deixa de ser software e passa a ser disco.",
+    "date": "2026-08-31",
+    "readTime": "10 min",
+    "category": "Diagnóstico"
   }
 ];
 

@@ -100,6 +100,7 @@ import { Route as AdminIndexacaoRouteImport } from './routes/admin_.indexacao'
 import { Route as AdminInventarioBairrosRouteImport } from './routes/admin_.inventario-bairros'
 import { Route as AdminLinkBuilderRouteImport } from './routes/admin_.link-builder'
 import { Route as AdminLoginRouteImport } from './routes/admin_.login'
+import { Route as AdminOndasRouteImport } from './routes/admin_.ondas'
 import { Route as AdminOperacaoRouteImport } from './routes/admin_.operacao'
 import { Route as AdminPerformanceLocalRouteImport } from './routes/admin_.performance-local'
 import { Route as AdminProvasMonitorRouteImport } from './routes/admin_.provas-monitor'
@@ -943,6 +944,11 @@ const AdminLinkBuilderRoute = AdminLinkBuilderRouteImport.update({
 const AdminLoginRoute = AdminLoginRouteImport.update({
   id: '/admin_/login',
   path: '/admin/login',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AdminOndasRoute = AdminOndasRouteImport.update({
+  id: '/admin_/ondas',
+  path: '/admin/ondas',
   getParentRoute: () => rootRouteImport,
 } as any)
 const AdminOperacaoRoute = AdminOperacaoRouteImport.update({
@@ -3040,6 +3046,7 @@ export interface FileRoutesByFullPath {
   '/admin/inventario-bairros': typeof AdminInventarioBairrosRoute
   '/admin/link-builder': typeof AdminLinkBuilderRoute
   '/admin/login': typeof AdminLoginRoute
+  '/admin/ondas': typeof AdminOndasRoute
   '/admin/operacao': typeof AdminOperacaoRoute
   '/admin/performance-local': typeof AdminPerformanceLocalRoute
   '/admin/provas-monitor': typeof AdminProvasMonitorRoute
@@ -3504,6 +3511,7 @@ export interface FileRoutesByTo {
   '/admin/inventario-bairros': typeof AdminInventarioBairrosRoute
   '/admin/link-builder': typeof AdminLinkBuilderRoute
   '/admin/login': typeof AdminLoginRoute
+  '/admin/ondas': typeof AdminOndasRoute
   '/admin/operacao': typeof AdminOperacaoRoute
   '/admin/performance-local': typeof AdminPerformanceLocalRoute
   '/admin/provas-monitor': typeof AdminProvasMonitorRoute
@@ -3969,6 +3977,7 @@ export interface FileRoutesById {
   '/admin_/inventario-bairros': typeof AdminInventarioBairrosRoute
   '/admin_/link-builder': typeof AdminLinkBuilderRoute
   '/admin_/login': typeof AdminLoginRoute
+  '/admin_/ondas': typeof AdminOndasRoute
   '/admin_/operacao': typeof AdminOperacaoRoute
   '/admin_/performance-local': typeof AdminPerformanceLocalRoute
   '/admin_/provas-monitor': typeof AdminProvasMonitorRoute
@@ -4435,6 +4444,7 @@ export interface FileRouteTypes {
     | '/admin/inventario-bairros'
     | '/admin/link-builder'
     | '/admin/login'
+    | '/admin/ondas'
     | '/admin/operacao'
     | '/admin/performance-local'
     | '/admin/provas-monitor'
@@ -4899,6 +4909,7 @@ export interface FileRouteTypes {
     | '/admin/inventario-bairros'
     | '/admin/link-builder'
     | '/admin/login'
+    | '/admin/ondas'
     | '/admin/operacao'
     | '/admin/performance-local'
     | '/admin/provas-monitor'
@@ -5363,6 +5374,7 @@ export interface FileRouteTypes {
     | '/admin_/inventario-bairros'
     | '/admin_/link-builder'
     | '/admin_/login'
+    | '/admin_/ondas'
     | '/admin_/operacao'
     | '/admin_/performance-local'
     | '/admin_/provas-monitor'
@@ -5828,6 +5840,7 @@ export interface RootRouteChildren {
   AdminInventarioBairrosRoute: typeof AdminInventarioBairrosRoute
   AdminLinkBuilderRoute: typeof AdminLinkBuilderRoute
   AdminLoginRoute: typeof AdminLoginRoute
+  AdminOndasRoute: typeof AdminOndasRoute
   AdminOperacaoRoute: typeof AdminOperacaoRoute
   AdminPerformanceLocalRoute: typeof AdminPerformanceLocalRoute
   AdminProvasMonitorRoute: typeof AdminProvasMonitorRoute
@@ -6838,6 +6851,13 @@ declare module '@tanstack/react-router' {
       path: '/admin/login'
       fullPath: '/admin/login'
       preLoaderRoute: typeof AdminLoginRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/admin_/ondas': {
+      id: '/admin_/ondas'
+      path: '/admin/ondas'
+      fullPath: '/admin/ondas'
+      preLoaderRoute: typeof AdminOndasRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/admin_/operacao': {
@@ -9535,6 +9555,7 @@ const rootRouteChildren: RootRouteChildren = {
   AdminInventarioBairrosRoute: AdminInventarioBairrosRoute,
   AdminLinkBuilderRoute: AdminLinkBuilderRoute,
   AdminLoginRoute: AdminLoginRoute,
+  AdminOndasRoute: AdminOndasRoute,
   AdminOperacaoRoute: AdminOperacaoRoute,
   AdminPerformanceLocalRoute: AdminPerformanceLocalRoute,
   AdminProvasMonitorRoute: AdminProvasMonitorRoute,

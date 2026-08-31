@@ -61,4 +61,7 @@
   <url><loc>https://otecnicodeinformatica.com.br/blog/windows-update-nao-funciona-o-que-verificar</loc><changefreq>monthly</changefreq><priority>0.55</priority></url>
   <url><loc>https://otecnicodeinformatica.com.br/blog/limpar-cache-do-windows-update-softwaredistribution</loc><changefreq>monthly</changefreq><priority>0.55</priority></url>
   <url><loc>https://otecnicodeinformatica.com.br/blog/windows-update-travado-desfazendo-alteracoes</loc><changefreq>monthly</changefreq><priority>0.55</priority></url>
+  <url><loc>https://otecnicodeinformatica.com.br/blog/boot-uefi-ou-legacy-como-identificar</loc><changefreq>monthly</changefreq><priority>0.55</priority></url>
+  <url><loc>https://otecnicodeinformatica.com.br/blog/ordem-de-boot-na-bios-como-configurar</loc><changefreq>monthly</changefreq><priority>0.55</priority></url>
+  <url><loc>https://otecnicodeinformatica.com.br/blog/windows-reparo-automatico-em-loop</loc><changefreq>monthly</changefreq><priority>0.55</priority></url>
 </urlset>
