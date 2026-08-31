@@ -13775,4 +13775,189 @@ bcdboot C:\\Windows /s S: /f UEFI`}</code></pre>
     ),
   },
 
+  // ── Onda 11A / Lote 4 — BIOS, UEFI e inicialização do Windows.
+  // Rascunhos: sem aprovação editorial enquanto o gate da Onda 10C não consolidar
+  // (noindex, fora do sitemap e fora da listagem pública — fail-closed).
+
+  "boot-uefi-ou-legacy-como-identificar": {
+    title: "UEFI ou Legacy: como identificar o modo de inicialização do seu PC",
+    excerpt:
+      "Como descobrir em qual modo o Windows foi instalado, por que GPT e MBR importam e o que muda ao alternar entre UEFI e Legacy sem preparar o disco.",
+    date: "2026-08-31",
+    readTime: "9 min",
+    category: "Diagnóstico",
+    content: (
+      <>
+        <p className="lead">Trocar o modo de inicialização às cegas é uma das formas mais rápidas de transformar uma máquina que ligava em uma máquina que só abre a tela de configuração. Antes de mexer, vale saber em que modo o sistema foi instalado.</p>
+
+        <h2>Resposta curta</h2>
+        <p>O modo de inicialização precisa combinar com o formato da tabela de partições do disco em que o Windows foi instalado: UEFI trabalha com GPT, Legacy/CSM trabalha com MBR. Se você alternar o modo sem converter o disco, o firmware deixa de encontrar o carregador do sistema e a máquina para na configuração ou exibe mensagem de dispositivo de inicialização ausente.</p>
+
+        <h2>Como identificar sem abrir a máquina</h2>
+        <h3>Pelo próprio Windows</h3>
+        <p>Nas informações do sistema, o campo de modo de BIOS mostra "UEFI" ou "Legacy". No gerenciador de discos, as propriedades do disco indicam se o estilo de partição é GPT ou MBR. Os dois precisam ser coerentes entre si.</p>
+        <h3>Pelo firmware</h3>
+        <p>Na tela de configuração, a lista de dispositivos de inicialização entrega a resposta: entradas com o prefixo "UEFI" antes do nome do disco indicam modo UEFI; entradas apenas com o nome do disco costumam indicar Legacy. A presença de opções como CSM, Secure Boot e "Windows UEFI mode" também sinaliza o modo ativo.</p>
+        <h3>Pelo comportamento</h3>
+        <p>Instalações UEFI normalmente iniciam mais rápido, exibem o logotipo do fabricante e usam uma partição de sistema separada. Instalações Legacy tendem a mostrar mais texto durante o POST.</p>
+
+        <h2>Tabela de combinações</h2>
+        <table>
+          <thead>
+            <tr><th>Modo do firmware</th><th>Partição do disco</th><th>Resultado</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>UEFI</td><td>GPT</td><td>Inicializa normalmente</td></tr>
+            <tr><td>UEFI</td><td>MBR</td><td>Disco não aparece como opção de boot</td></tr>
+            <tr><td>Legacy/CSM</td><td>MBR</td><td>Inicializa normalmente</td></tr>
+            <tr><td>Legacy/CSM</td><td>GPT</td><td>Firmware ignora o carregador</td></tr>
+            <tr><td>UEFI com Secure Boot</td><td>GPT, mídia não assinada</td><td>Pendrive de instalação recusado</td></tr>
+          </tbody>
+        </table>
+
+        <h2>Quando isso aparece na prática</h2>
+        <ul>
+          <li><strong>Depois de limpar o CMOS:</strong> o firmware volta ao padrão de fábrica e pode reativar CSM ou desligar UEFI.</li>
+          <li><strong>Depois de trocar o disco:</strong> o novo disco pode estar em outro estilo de partição. O cenário completo está em <Link to="/blog/troquei-o-ssd-e-o-pc-so-abre-a-bios" className="text-accent">troquei o SSD e o PC só abre a BIOS</Link>.</li>
+          <li><strong>Na instalação do Windows:</strong> a mídia criada em MBR não inicia em modo UEFI puro.</li>
+          <li><strong>Depois de atualizar o firmware:</strong> a configuração pode ser redefinida — veja <Link to="/blog/bios-corrompida-reset-cmos-atualizacao" className="text-accent">BIOS corrompida, reset de CMOS e atualização</Link>.</li>
+        </ul>
+
+        <h2>O que NÃO fazer</h2>
+        <ul>
+          <li>Alternar UEFI ↔ Legacy "para testar" sem saber o estilo de partição do disco.</li>
+          <li>Converter o disco de MBR para GPT sem cópia dos arquivos.</li>
+          <li>Desativar Secure Boot permanentemente sem necessidade.</li>
+          <li>Reinstalar o sistema antes de confirmar que o problema é só de modo de inicialização.</li>
+        </ul>
+
+        <h2>Quando parar</h2>
+        <p>Pare quando o disco não aparecer em nenhum dos modos: aí o assunto deixa de ser configuração e passa a ser detecção de hardware — o caminho é <Link to="/blog/hd-nao-e-reconhecido-na-bios-o-que-fazer" className="text-accent">HD não reconhecido na BIOS</Link>. Se houver arquivos importantes sem cópia, priorize <Link to="/servicos/recuperacao-de-dados" className="text-accent">recuperação de dados</Link>.</p>
+
+        <h2>Quando chamar um técnico</h2>
+        <p>Chame quando a máquina só iniciar em um modo específico depois de uma troca de peça, quando houver criptografia de disco ativa ou quando a conversão de partição envolver dados sem backup. Avaliação em <Link to="/diagnostico-tecnico" className="text-accent">diagnóstico técnico</Link>.</p>
+      </>
+    ),
+  },
+
+  "ordem-de-boot-na-bios-como-configurar": {
+    title: "Ordem de boot na BIOS: como configurar sem quebrar a inicialização",
+    excerpt:
+      "Para que serve a prioridade de inicialização, quando usar o menu de boot temporário e por que Fast Boot e portas USB atrapalham o reconhecimento do pendrive.",
+    date: "2026-08-31",
+    readTime: "8 min",
+    category: "Diagnóstico",
+    content: (
+      <>
+        <p className="lead">Muita gente entra na configuração do firmware para "arrumar o boot" e sai de lá com uma máquina pior. A ordem de inicialização resolve poucos problemas — e é exatamente por isso que precisa ser mexida com critério.</p>
+
+        <h2>Resposta curta</h2>
+        <p>A ordem de boot só define em que sequência o firmware procura um sistema. Ela resolve casos de pendrive ignorado ou disco antigo assumindo a inicialização. Ela não conserta disco não detectado, sistema corrompido nem carregador ausente.</p>
+
+        <h2>Menu temporário × ordem permanente</h2>
+        <h3>Menu de boot</h3>
+        <p>Quase todos os equipamentos oferecem um menu acionado por uma tecla no POST que permite escolher o dispositivo apenas para aquela inicialização. É o caminho correto para instalar sistema ou usar mídia de diagnóstico, porque não altera nada de forma permanente.</p>
+        <h3>Ordem permanente</h3>
+        <p>Só faça alteração permanente quando o equipamento realmente precise iniciar sempre por outro dispositivo. Anote a configuração original antes de mudar.</p>
+
+        <h2>Passo a passo seguro</h2>
+        <ol>
+          <li>Anote (ou fotografe) a tela de prioridade atual antes de qualquer mudança.</li>
+          <li>Prefira o menu temporário quando a necessidade for pontual.</li>
+          <li>Se o pendrive não aparecer, desligue Fast Boot e teste uma porta USB traseira, ligada diretamente à placa.</li>
+          <li>Confira se a entrada aparece com prefixo UEFI ou sem ele — o modo precisa combinar com a mídia.</li>
+          <li>Salve, reinicie e verifique o resultado antes de mudar mais alguma coisa.</li>
+          <li>Se nada mudar, volte a configuração anterior em vez de acumular alterações.</li>
+        </ol>
+
+        <h2>Por que o pendrive não aparece</h2>
+        <ul>
+          <li><strong>Fast Boot ativo:</strong> o firmware pula a varredura de dispositivos USB para ganhar tempo.</li>
+          <li><strong>Porta do gabinete frontal:</strong> extensões internas às vezes não são inicializadas a tempo.</li>
+          <li><strong>Mídia gravada no esquema errado:</strong> MBR em modo UEFI puro, ou o inverso.</li>
+          <li><strong>Secure Boot:</strong> mídias não assinadas são recusadas.</li>
+          <li><strong>Pendrive com defeito:</strong> teste em outro computador antes de culpar a placa.</li>
+        </ul>
+
+        <h2>O que NÃO fazer</h2>
+        <ul>
+          <li>Mudar várias opções na mesma visita e perder a referência do que causou o quê.</li>
+          <li>Ativar ou desativar CSM sem saber o modo de instalação — veja <Link to="/blog/boot-uefi-ou-legacy-como-identificar" className="text-accent">UEFI ou Legacy</Link>.</li>
+          <li>Restaurar padrões de fábrica sem anotar a configuração atual.</li>
+          <li>Alterar tensões, frequências ou perfis de memória enquanto investiga boot.</li>
+        </ul>
+
+        <h2>Quando parar</h2>
+        <p>Pare quando o disco do sistema não aparecer na lista de dispositivos: nesse caso não há ordem que resolva. O caminho passa a ser detecção — <Link to="/blog/hd-nao-e-reconhecido-na-bios-o-que-fazer" className="text-accent">HD não reconhecido na BIOS</Link> — ou reparo de inicialização, em <Link to="/blog/windows-reparo-automatico-em-loop" className="text-accent">reparo automático em laço</Link>.</p>
+
+        <h2>Quando chamar um técnico</h2>
+        <p>Chame quando a configuração não for salva entre reinicializações, quando a máquina voltar sempre ao mesmo estado ou quando houver senha de firmware desconhecida. Avaliação em <Link to="/diagnostico-tecnico" className="text-accent">diagnóstico técnico</Link>.</p>
+      </>
+    ),
+  },
+
+  "windows-reparo-automatico-em-loop": {
+    title: "Reparo automático em laço: o que fazer quando o Windows não sai dessa tela",
+    excerpt:
+      "Por que o Windows entra em reparo automático repetido, o que observar antes de tentar qualquer comando e em que ponto a prioridade passa a ser salvar os arquivos.",
+    date: "2026-08-31",
+    readTime: "10 min",
+    category: "Diagnóstico",
+    content: (
+      <>
+        <p className="lead">"Preparando reparo automático" seguido de "o PC não iniciou corretamente" e outro reinício é um laço — e o laço quase sempre tem uma causa objetiva por trás: desligamento abrupto, disco em falha, driver recente ou carregador inconsistente.</p>
+
+        <h2>Resposta curta</h2>
+        <p>O reparo automático é acionado quando o Windows detecta falhas repetidas na inicialização. Ele não é a doença, é o sintoma. Antes de rodar comandos, observe o que mudou desde a última inicialização bem-sucedida e verifique se o disco continua sendo detectado pelo firmware.</p>
+
+        <h2>Antes de tentar qualquer reparo</h2>
+        <ol>
+          <li>Confirme se o disco aparece na configuração do firmware. Se não aparecer, o problema não é do Windows.</li>
+          <li>Desconecte periféricos não essenciais: pendrives, HDs externos, adaptadores e leitores.</li>
+          <li>Anote o código de erro exibido na tela de opções avançadas, se houver.</li>
+          <li>Verifique se há criptografia de disco ativa e se você tem a chave de recuperação.</li>
+          <li>Pense nos arquivos: se não há backup, essa é a hora de tratar cópia como prioridade.</li>
+        </ol>
+
+        <h2>Causas mais comuns</h2>
+        <table>
+          <thead>
+            <tr><th>Causa</th><th>Pista típica</th><th>Risco de piorar</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Desligamento abrupto durante atualização</td><td>Ocorreu logo após instalar atualizações</td><td>Baixo</td></tr>
+            <tr><td>Disco com setores defeituosos</td><td>Lentidão e travamentos prévios</td><td>Alto</td></tr>
+            <tr><td>Driver recém-instalado</td><td>Começou após instalar driver ou periférico</td><td>Médio</td></tr>
+            <tr><td>Carregador ou partição de sistema alterada</td><td>Ocorreu após particionar ou clonar</td><td>Alto</td></tr>
+            <tr><td>Memória instável</td><td>Erros aleatórios e telas azuis anteriores</td><td>Médio</td></tr>
+          </tbody>
+        </table>
+        <p>Quando a suspeita for disco, o caminho é <Link to="/blog/disco-com-setores-defeituosos-smart-o-que-fazer" className="text-accent">setores defeituosos e SMART</Link>. Quando for memória, <Link to="/blog/testar-memoria-ram-memtest86" className="text-accent">teste de memória</Link>.</p>
+
+        <h2>O que costuma resolver</h2>
+        <ul>
+          <li>Desconectar periféricos e tentar uma inicialização limpa.</li>
+          <li>Usar a opção de desinstalar a atualização de qualidade mais recente, quando o laço começou logo depois dela.</li>
+          <li>Iniciar em modo de segurança para remover um driver problemático.</li>
+          <li>Restaurar um ponto de restauração anterior, quando existir.</li>
+        </ul>
+        <p>Se o laço começou depois de uma atualização revertida, veja também <Link to="/blog/windows-update-travado-desfazendo-alteracoes" className="text-accent">atualização travada e desfazendo alterações</Link>.</p>
+
+        <h2>O que NÃO fazer</h2>
+        <ul>
+          <li>Executar comandos de reconstrução de carregador copiados de fórum sem entender o que fazem — em disco com dados sem cópia, isso pode inviabilizar a recuperação.</li>
+          <li>Formatar ou "resetar este PC" antes de salvar os arquivos.</li>
+          <li>Reinstalar o sistema por cima com o disco apresentando ruído ou lentidão extrema.</li>
+          <li>Insistir em dezenas de reinicializações seguidas: cada tentativa em disco em falha reduz a chance de recuperar dados.</li>
+        </ul>
+
+        <h2>Quando parar</h2>
+        <p>Pare imediatamente se o disco fizer ruído incomum, se sumir e reaparecer entre reinicializações ou se houver arquivos insubstituíveis sem cópia. A prioridade passa a ser <Link to="/servicos/recuperacao-de-dados" className="text-accent">recuperação de dados</Link>, e não reparo do sistema.</p>
+
+        <h2>Quando chamar um técnico</h2>
+        <p>Chame quando o laço persistir após remover periféricos e desfazer alterações recentes, quando o sistema pedir chave de recuperação de criptografia ou quando o disco já tiver dado sinais de falha. Contexto completo do sintoma em <Link to="/problemas/windows-nao-inicia" className="text-accent">Windows não inicia</Link> e avaliação em <Link to="/diagnostico-tecnico" className="text-accent">diagnóstico técnico</Link>.</p>
+      </>
+    ),
+  },
+
 };
