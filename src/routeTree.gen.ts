@@ -86,6 +86,7 @@ import { Route as AdminAuditoriaLocalRouteImport } from './routes/admin_.auditor
 import { Route as AdminAuditoriaOsRouteImport } from './routes/admin_.auditoria-os'
 import { Route as AdminBairrosRouteImport } from './routes/admin_.bairros'
 import { Route as AdminCasosRouteImport } from './routes/admin_.casos'
+import { Route as AdminChatOsRouteImport } from './routes/admin_.chat-os'
 import { Route as AdminConversaoRouteImport } from './routes/admin_.conversao'
 import { Route as AdminConversasRouteImport } from './routes/admin_.conversas'
 import { Route as AdminDashboardRouteImport } from './routes/admin_.dashboard'
@@ -872,6 +873,11 @@ const AdminBairrosRoute = AdminBairrosRouteImport.update({
 const AdminCasosRoute = AdminCasosRouteImport.update({
   id: '/admin_/casos',
   path: '/admin/casos',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AdminChatOsRoute = AdminChatOsRouteImport.update({
+  id: '/admin_/chat-os',
+  path: '/admin/chat-os',
   getParentRoute: () => rootRouteImport,
 } as any)
 const AdminConversaoRoute = AdminConversaoRouteImport.update({
@@ -3020,6 +3026,7 @@ export interface FileRoutesByFullPath {
   '/admin/auditoria-os': typeof AdminAuditoriaOsRoute
   '/admin/bairros': typeof AdminBairrosRoute
   '/admin/casos': typeof AdminCasosRoute
+  '/admin/chat-os': typeof AdminChatOsRoute
   '/admin/conversao': typeof AdminConversaoRoute
   '/admin/conversas': typeof AdminConversasRoute
   '/admin/dashboard': typeof AdminDashboardRoute
@@ -3483,6 +3490,7 @@ export interface FileRoutesByTo {
   '/admin/auditoria-os': typeof AdminAuditoriaOsRoute
   '/admin/bairros': typeof AdminBairrosRoute
   '/admin/casos': typeof AdminCasosRoute
+  '/admin/chat-os': typeof AdminChatOsRoute
   '/admin/conversao': typeof AdminConversaoRoute
   '/admin/conversas': typeof AdminConversasRoute
   '/admin/dashboard': typeof AdminDashboardRoute
@@ -3947,6 +3955,7 @@ export interface FileRoutesById {
   '/admin_/auditoria-os': typeof AdminAuditoriaOsRoute
   '/admin_/bairros': typeof AdminBairrosRoute
   '/admin_/casos': typeof AdminCasosRoute
+  '/admin_/chat-os': typeof AdminChatOsRoute
   '/admin_/conversao': typeof AdminConversaoRoute
   '/admin_/conversas': typeof AdminConversasRoute
   '/admin_/dashboard': typeof AdminDashboardRoute
@@ -4412,6 +4421,7 @@ export interface FileRouteTypes {
     | '/admin/auditoria-os'
     | '/admin/bairros'
     | '/admin/casos'
+    | '/admin/chat-os'
     | '/admin/conversao'
     | '/admin/conversas'
     | '/admin/dashboard'
@@ -4875,6 +4885,7 @@ export interface FileRouteTypes {
     | '/admin/auditoria-os'
     | '/admin/bairros'
     | '/admin/casos'
+    | '/admin/chat-os'
     | '/admin/conversao'
     | '/admin/conversas'
     | '/admin/dashboard'
@@ -5338,6 +5349,7 @@ export interface FileRouteTypes {
     | '/admin_/auditoria-os'
     | '/admin_/bairros'
     | '/admin_/casos'
+    | '/admin_/chat-os'
     | '/admin_/conversao'
     | '/admin_/conversas'
     | '/admin_/dashboard'
@@ -5802,6 +5814,7 @@ export interface RootRouteChildren {
   AdminAuditoriaOsRoute: typeof AdminAuditoriaOsRoute
   AdminBairrosRoute: typeof AdminBairrosRoute
   AdminCasosRoute: typeof AdminCasosRoute
+  AdminChatOsRoute: typeof AdminChatOsRoute
   AdminConversaoRoute: typeof AdminConversaoRoute
   AdminConversasRoute: typeof AdminConversasRoute
   AdminDashboardRoute: typeof AdminDashboardRoute
@@ -6727,6 +6740,13 @@ declare module '@tanstack/react-router' {
       path: '/admin/casos'
       fullPath: '/admin/casos'
       preLoaderRoute: typeof AdminCasosRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/admin_/chat-os': {
+      id: '/admin_/chat-os'
+      path: '/admin/chat-os'
+      fullPath: '/admin/chat-os'
+      preLoaderRoute: typeof AdminChatOsRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/admin_/conversao': {
@@ -9501,6 +9521,7 @@ const rootRouteChildren: RootRouteChildren = {
   AdminAuditoriaOsRoute: AdminAuditoriaOsRoute,
   AdminBairrosRoute: AdminBairrosRoute,
   AdminCasosRoute: AdminCasosRoute,
+  AdminChatOsRoute: AdminChatOsRoute,
   AdminConversaoRoute: AdminConversaoRoute,
   AdminConversasRoute: AdminConversasRoute,
   AdminDashboardRoute: AdminDashboardRoute,
