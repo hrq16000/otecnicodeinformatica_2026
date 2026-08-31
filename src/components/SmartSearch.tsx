@@ -7,11 +7,13 @@ import {
   extrairCodigoDaConsulta,
   sugerirCodigos,
 } from "@/lib/buscaCodigosErro";
+import { EDITORIAL_HUB_SUMMARIES } from "@/lib/editorialHubSummaries";
+import { getApprovedSlugs } from "@/lib/blogEditorialRegistry";
 
 interface SearchItem {
   title: string;
   path: string;
-  category: "servico" | "cidade" | "bairro" | "pagina";
+  category: "servico" | "cidade" | "bairro" | "pagina" | "guia";
   keywords: string[];
 }
 
@@ -169,6 +171,23 @@ const searchData: SearchItem[] = [
   { title: "Equipamentos Atendidos", path: "/equipamentos-atendidos", category: "pagina", keywords: ["equipamento", "marca", "modelo", "notebook", "desktop"] },
 ];
 
+// O acervo não é uma lista manual de palavras-chave: só guias aprovados no
+// registro editorial entram na busca. Assim, rascunhos e conteúdos em revisão
+// nunca são sugeridos como resposta técnica para o usuário.
+const editorialGuideSearchData: SearchItem[] = getApprovedSlugs().flatMap((slug) => {
+  const guide = EDITORIAL_HUB_SUMMARIES[slug];
+  if (!guide) return [];
+
+  return [{
+    title: guide.title,
+    path: `/blog/${slug}`,
+    category: "guia" as const,
+    keywords: [guide.category, guide.excerpt, ...guide.title.split(/\s+/)],
+  }];
+});
+
+const searchableItems = [...editorialGuideSearchData, ...searchData];
+
 const normalize = (str: string) =>
   str.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
 
@@ -177,6 +196,7 @@ const categoryIcon = {
   cidade: MapPin,
   bairro: MapPin,
   pagina: FileText,
+  guia: FileText,
 };
 
 const categoryLabel = {
@@ -184,6 +204,7 @@ const categoryLabel = {
   cidade: "Cidade",
   bairro: "Bairro",
   pagina: "Página",
+  guia: "Guia técnico revisado",
 };
 
 interface SmartSearchProps {
@@ -221,7 +242,7 @@ export const SmartSearch = ({ isOpen, onClose }: SmartSearchProps) => {
       });
     }
 
-    const demais = searchData
+    const demais = searchableItems
       .map((item) => {
         const titleNorm = normalize(item.title);
         const keywordsNorm = item.keywords.map(normalize);
@@ -301,7 +322,7 @@ export const SmartSearch = ({ isOpen, onClose }: SmartSearchProps) => {
             type="text"
             value={query}
             onChange={(e) => setQuery(e.target.value)}
-            placeholder="Buscar serviço, bairro ou cidade..."
+            placeholder="Descreva o problema ou busque um guia..."
             className="flex-1 bg-transparent text-foreground text-base outline-none placeholder:text-muted-foreground"
             autoComplete="off"
           />
@@ -318,7 +339,7 @@ export const SmartSearch = ({ isOpen, onClose }: SmartSearchProps) => {
           {query.trim() && results.length === 0 && (
             <div className="px-5 py-10 text-center text-muted-foreground">
               <p className="text-sm">Nenhum resultado para "<strong className="text-foreground">{query}</strong>"</p>
-              <p className="text-xs mt-1">Tente buscar por "formatação", "batel" ou "conserto de tv"</p>
+              <p className="text-xs mt-1">Tente buscar por "atualização", "Wi-Fi", "SSD" ou "tela azul"</p>
             </div>
           )}
 
@@ -353,7 +374,7 @@ export const SmartSearch = ({ isOpen, onClose }: SmartSearchProps) => {
             <div className="px-5 py-6">
               <p className="text-xs text-muted-foreground uppercase tracking-wider mb-3 font-semibold">Buscas populares</p>
               <div className="flex flex-wrap gap-2">
-                {["Formatação", "Conserto de TV", "Vírus", "Batel", "SSD", "Wi-Fi", "Notebook", "Celular"].map((tag) => (
+                {["Atualização", "Tela azul", "Vírus", "Wi-Fi", "SSD", "Notebook", "Impressora", "Backup"].map((tag) => (
                   <button
                     key={tag}
                     onClick={() => setQuery(tag)}
