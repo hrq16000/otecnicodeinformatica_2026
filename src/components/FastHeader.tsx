@@ -12,6 +12,7 @@ import {
   MonitorSmartphone,
   Info,
   Users,
+  BookOpen,
   type LucideIcon,
 } from "lucide-react";
 import { whatsappLink } from "@/lib/siteConfig";
@@ -28,6 +29,7 @@ type NavItem = { label: string; href: string; icon: LucideIcon };
 
 // Navegação enxuta — foco em informática/PC/notebook/empresarial.
 const primaryNav: NavItem[] = [
+  { label: "Guias", href: "/blog", icon: BookOpen },
   { label: "Serviços", href: "/servicos", icon: Wrench },
   { label: "Empresas", href: "/servicos/suporte-tecnico-empresarial", icon: Building2 },
   { label: "Como funciona", href: "/como-funciona", icon: Route },
@@ -47,6 +49,35 @@ const mobileExtra: NavItem[] = [
 
 // Mega-menu contextual: entra pelo problema, pelo equipamento ou pelo perfil.
 const megaGrupos: MegaGrupo[] = [
+  {
+    id: "guias",
+    label: "Guias",
+    icon: BookOpen,
+    colunas: [
+      {
+        titulo: "Comece por assunto",
+        links: [
+          { label: "Windows e desempenho", href: "/problemas/windows-nao-inicia", hint: "Inicialização, lentidão e atualização" },
+          { label: "Segurança e arquivos", href: "/blog/backup-como-proteger-seus-arquivos", hint: "Backup, vírus e privacidade" },
+          { label: "Notebook e hardware", href: "/blog/notebook-superaquecendo-o-que-fazer", hint: "Aquecimento, SSD e memória" },
+        ],
+      },
+      {
+        titulo: "Aprenda no seu ritmo",
+        links: [
+          { label: "Informática básica", href: "/blog/informatica-basica" },
+          { label: "Wi-Fi e rede em casa", href: "/blog/como-melhorar-sinal-wifi-em-casa" },
+          { label: "Ver todos os guias", href: "/blog" },
+        ],
+      },
+    ],
+    destaque: {
+      titulo: "Primeiro, a explicação",
+      texto: "Os guias mostram o que é seguro testar, o que evitar e quando vale parar para proteger dados ou equipamento.",
+      cta: "Explorar o acervo",
+      href: "/blog",
+    },
+  },
   {
     id: "problemas",
     label: "Meu problema",
