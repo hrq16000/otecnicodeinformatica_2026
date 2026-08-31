@@ -218,7 +218,9 @@ export default function EditorialAuditoriaPanel({ lote }: { lote: string }) {
 
       setKpis(lista);
     }
-    setExecutadoEm(new Date().toISOString());
+    const em = new Date().toISOString();
+    setExecutadoEm(em);
+    setExecucoesSessao((h) => [{ em, payload: JSON.stringify(payload), estado: "OK" }, ...h].slice(0, 10));
     setExecutando(false);
   }, [lote]);
 
