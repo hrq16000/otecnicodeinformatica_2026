@@ -1,8 +1,8 @@
 # Vereditos de indexação — Onda 10C
 
-- Gerado em: 2026-08-31T18:29:19.274Z
+- Gerado em: 2026-08-31T19:47:52.120Z
 - Propriedade: `sc-domain:otecnicodeinformatica.com.br` (Search Console disponível)
-- Total: **23** · PUBLISHED 19 · PENDING 3 · PROBLEM 0 · UNKNOWN 1
+- Total: **23** · PUBLISHED 20 · PENDING 3 · PROBLEM 0 · UNKNOWN 0
 - Onda consolidada: **NÃO**
 
 | Lote | URL | Interno | Sitemap | IndexNow | Estado busca | Veredito |
@@ -29,6 +29,6 @@
 | 10C/4 | /blog/windows-update-nao-funciona-o-que-verificar | PUBLISHED | não | SUBMITTED | INDEXED | PUBLISHED |
 | 10C/4 | /blog/limpar-cache-do-windows-update-softwaredistribution | PUBLISHED | não | SUBMITTED | INDEXED | PUBLISHED |
 | 10C/4 | /blog/windows-update-travado-desfazendo-alteracoes | PUBLISHED | não | SUBMITTED | INDEXED | PUBLISHED |
-| CASO/0xc0000428 | /problemas/windows-nao-inicia | PUBLISHED | sim | — | UNKNOWN | UNKNOWN |
+| CASO/0xc0000428 | /problemas/windows-nao-inicia | PUBLISHED | sim | — | INDEXED | PUBLISHED |
 
 > A API do Search Console é somente leitura: ela informa o estado do índice, não solicita indexação. A submissão real ocorre por sitemap + IndexNow.

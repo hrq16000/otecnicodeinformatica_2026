@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-08-31T18:29:19.274Z",
+  "geradoEm": "2026-08-31T19:47:52.120Z",
   "historico": [
     {
       "geradoEm": "2026-08-31T17:57:03.969Z",
@@ -35,6 +35,25 @@
         "PENDING": 3,
         "PUBLISHED": 19,
         "UNKNOWN": 1
+      },
+      "total": 23,
+      "consolidada": false
+    },
+    {
+      "geradoEm": "2026-08-31T19:47:03.680Z",
+      "contagem": {
+        "PENDING": 3,
+        "PUBLISHED": 19,
+        "UNKNOWN": 1
+      },
+      "total": 23,
+      "consolidada": false
+    },
+    {
+      "geradoEm": "2026-08-31T19:47:52.120Z",
+      "contagem": {
+        "PENDING": 3,
+        "PUBLISHED": 20
       },
       "total": 23,
       "consolidada": false

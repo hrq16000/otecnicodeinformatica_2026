@@ -1,6 +1,6 @@
 # Onda 11 — mapa de prioridades (P1–P3)
 
-Gerado em 2026-08-31T18:27:23.243Z. Este documento **não autoriza criar URLs**: é a fila
+Gerado em 2026-08-31T19:47:04.414Z. Este documento **não autoriza criar URLs**: é a fila
 priorizada a partir dos dados disponíveis no repositório e nas integrações já
 existentes. Candidato sem evidência é rebaixado, nunca promovido.
 

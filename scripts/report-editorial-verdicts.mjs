@@ -106,14 +106,34 @@ const urls = ondas.rotas.map((r) => {
 
 // Caso técnico prioritário fora da registry de ondas: o artigo do erro
 // 0xc0000428 entra no mesmo ledger, porém sem se passar por URL da Onda 10C.
+// Inspeção AO VIVO do caso técnico (o artefato estático pode estar velho).
+// Sem credencial, permanece null e o fluxo cai no fallback UNKNOWN.
+let caso0428Live = null;
+try {
+  const { resolveSite, inspectUrl } = await import("./lib/gsc-client.mjs");
+  const site = await resolveSite("https://otecnicodeinformatica.com.br/");
+  const insp = await inspectUrl(site, "https://otecnicodeinformatica.com.br/problemas/windows-nao-inicia");
+  caso0428Live = {
+    estado: insp.verdict === "PASS" ? "INDEXED" : insp.verdict === "FAIL" ? "BLOCKED" : "PENDING",
+    motivo: insp.coverageState,
+    ultimoCrawl: insp.lastCrawlTime,
+    canonicalGoogle: insp.googleCanonical,
+    canonicalDeclarado: insp.userCanonical,
+  };
+} catch (e) {
+  console.warn(`[vereditos] inspeção ao vivo do caso 0xc0000428 indisponível: ${String(e).slice(0, 120)}`);
+}
+
 const casos = ler("public/index-status.json")?.rotas ?? [];
+
 const caso0428 = casos.find((r) => r.path === "/problemas/windows-nao-inicia");
-if (caso0428) {
-  const g = caso0428.google ?? {};
-  const estado = g.status === "INDEXED" ? "INDEXED" : g.status === "NO_DATA" ? "PENDING" : "UNKNOWN";
+{
+  const g = caso0428?.google ?? {};
+  const estadoArtefato = g.status === "INDEXED" ? "INDEXED" : g.status === "NO_DATA" ? "PENDING" : "UNKNOWN";
+  const estado = caso0428Live?.estado ?? estadoArtefato;
   urls.push({
-    url: caso0428.path,
-    urlAbsoluta: caso0428.url,
+    url: "/problemas/windows-nao-inicia",
+    urlAbsoluta: caso0428?.url ?? "https://otecnicodeinformatica.com.br/problemas/windows-nao-inicia",
     lote: "CASO/0xc0000428",
     wave: "CASO",
     batch: "0xc0000428",
@@ -126,25 +146,46 @@ if (caso0428) {
     indexNowEm: null,
     estadoBusca: estado,
     veredito: veredito(estado),
-    motivo: g.coverageState ?? null,
-    ultimoCrawl: g.ultimoCrawl ?? null,
-    canonicalGoogle: g.canonicalGoogle ?? null,
-    canonicalDeclarado: g.canonicalDeclarado ?? null,
-  });
-} else {
-  urls.push({
-    url: "/problemas/windows-nao-inicia",
-    urlAbsoluta: "https://otecnicodeinformatica.com.br/problemas/windows-nao-inicia",
-    lote: "CASO/0xc0000428", wave: "CASO", batch: "0xc0000428",
-    ownerId: "windows-nao-inicia-0xc0000428", cluster: "inicializacao-windows",
-    internalState: "PUBLISHED", emSitemap: true, sitemapLastmod: null,
-    indexNow: null, indexNowEm: null, estadoBusca: "UNKNOWN", veredito: "UNKNOWN",
-    motivo: "Sem inspeção atual da URL do caso no artefato de status.", ultimoCrawl: null,
-    canonicalGoogle: null, canonicalDeclarado: null,
+    motivo: caso0428Live?.motivo ?? g.coverageState ?? "Sem inspeção atual da URL do caso.",
+    ultimoCrawl: caso0428Live?.ultimoCrawl ?? g.ultimoCrawl ?? null,
+    canonicalGoogle: caso0428Live?.canonicalGoogle ?? g.canonicalGoogle ?? null,
+    canonicalDeclarado: caso0428Live?.canonicalDeclarado ?? g.canonicalDeclarado ?? null,
+    fonteInspecao: caso0428Live ? "gsc-live" : "artefato",
   });
 }
 
+
+// Cruzamento com o ledger de submissões (sitemap + IndexNow): cada URL passa a
+// carregar a prova operacional do envio e o veredito observado é escrito de
+// volta, fechando a trilha de auditoria "publicado → submetido → veredito".
+const submissoes = ler("public/editorial-submissions.json");
+if (submissoes?.urls?.length) {
+  const porUrl = new Map(submissoes.urls.map((s) => [s.url, s]));
+  for (const u of urls) {
+    const s = porUrl.get(u.url);
+    if (!s) continue;
+    u.submittedViaSitemap = Boolean(s.submitted_via_sitemap);
+    u.submittedViaIndexNow = Boolean(s.submitted_via_indexnow);
+    u.lastSubmissionAt = s.last_submission_at ?? null;
+    u.publicadoNoSite = Boolean(s.publicado);
+    u.canonicalValidado = Boolean(s.canonical_valido);
+    u.schemaValidado = Boolean(s.schema_valido);
+    u.errosPublicacao = s.erros ?? [];
+    if (s.last_verdict !== u.veredito) {
+      s.historico = [...(s.historico ?? []), { at: agora, action: "verdict_change", de: s.last_verdict ?? null, para: u.veredito }].slice(-40);
+    }
+    s.last_verdict = u.veredito;
+    s.last_verdict_checked_at = agora;
+  }
+  submissoes.verdictsAtualizadoEm = agora;
+  writeFileSync(
+    resolve(process.cwd(), "public/editorial-submissions.json"),
+    `${JSON.stringify(submissoes, null, 2)}\n`,
+  );
+}
+
 const contagem = urls.reduce((acc, u) => {
+
   acc[u.veredito] = (acc[u.veredito] ?? 0) + 1;
   return acc;
 }, {});

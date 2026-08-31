@@ -1,0 +1,2005 @@
+{
+  "geradoEm": "2026-08-31T19:46:58.070Z",
+  "dryRun": false,
+  "host": "otecnicodeinformatica.com.br",
+  "sitemap": {
+    "url": "https://otecnicodeinformatica.com.br/sitemap.xml",
+    "googleSearchConsole": "SUBMITTED"
+  },
+  "indexNow": "HTTP 200",
+  "total": 23,
+  "publicadas": 23,
+  "comErro": 0,
+  "urls": [
+    {
+      "url": "/blog/limpar-arquivos-temporarios-windows",
+      "url_absoluta": "https://otecnicodeinformatica.com.br/blog/limpar-arquivos-temporarios-windows",
+      "scope": "10C/0",
+      "tipo": "onda-10c",
+      "publicado": true,
+      "http_status": 200,
+      "title": "Como limpar arquivos temporários e liberar espaço no Windows",
+      "description": "Onde o Windows guarda arquivos temporários, quanto isso realmente pesa no desempenho e como limpar com segurança — sem programas de faxina e sem apagar o que faz…",
+      "canonical": "https://otecnicodeinformatica.com.br/blog/limpar-arquivos-temporarios-windows",
+      "canonical_valido": true,
+      "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+      "schemas": [
+        "Organization",
+        "WebSite",
+        "BreadcrumbList",
+        "BlogPosting",
+        "Article",
+        "TechArticle",
+        "LocalBusiness",
+        "ProfessionalService",
+        "ComputerRepairService",
+        "ItemList",
+        "FAQPage"
+      ],
+      "schema_valido": true,
+      "erros": [],
+      "submitted_via_sitemap": true,
+      "submitted_via_indexnow": true,
+      "last_submission_at": "2026-08-31T19:46:58.070Z",
+      "last_verdict": "PENDING",
+      "last_verdict_checked_at": "2026-08-31T19:47:52.120Z",
+      "historico": [
+        {
+          "at": "2026-08-31T19:46:58.070Z",
+          "action": "indexnow",
+          "status": "HTTP 200"
+        },
+        {
+          "at": "2026-08-31T19:47:03.680Z",
+          "action": "verdict_change",
+          "de": "UNKNOWN",
+          "para": "PENDING"
+        }
+      ]
+    },
+    {
+      "url": "/blog/memoria-ram-insuficiente-sintomas",
+      "url_absoluta": "https://otecnicodeinformatica.com.br/blog/memoria-ram-insuficiente-sintomas",
+      "scope": "10C/0",
+      "tipo": "onda-10c",
+      "publicado": true,
+      "http_status": 200,
+      "title": "Memória RAM insuficiente: sintomas, como confirmar e quando fazer…",
+      "description": "Como distinguir falta de memória de disco lento ou vírus, ler o Gerenciador de Tarefas sem se enganar e decidir se o upgrade de RAM resolve o seu caso.",
+      "canonical": "https://otecnicodeinformatica.com.br/blog/memoria-ram-insuficiente-sintomas",
+      "canonical_valido": true,
+      "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+      "schemas": [
+        "Organization",
+        "WebSite",
+        "BreadcrumbList",
+        "BlogPosting",
+        "Article",
+        "TechArticle",
+        "LocalBusiness",
+        "ProfessionalService",
+        "ComputerRepairService",
+        "ItemList",
+        "FAQPage"
+      ],
+      "schema_valido": true,
+      "erros": [],
+      "submitted_via_sitemap": true,
+      "submitted_via_indexnow": true,
+      "last_submission_at": "2026-08-31T19:46:58.070Z",
+      "last_verdict": "PUBLISHED",
+      "last_verdict_checked_at": "2026-08-31T19:47:52.120Z",
+      "historico": [
+        {
+          "at": "2026-08-31T19:46:58.070Z",
+          "action": "indexnow",
+          "status": "HTTP 200"
+        },
+        {
+          "at": "2026-08-31T19:47:03.680Z",
+          "action": "verdict_change",
+          "de": "UNKNOWN",
+          "para": "PUBLISHED"
+        }
+      ]
+    },
+    {
+      "url": "/blog/codigos-de-erro-tela-azul-windows",
+      "url_absoluta": "https://otecnicodeinformatica.com.br/blog/codigos-de-erro-tela-azul-windows",
+      "scope": "10C/0",
+      "tipo": "onda-10c",
+      "publicado": true,
+      "http_status": 200,
+      "title": "Códigos de erro da tela azul: como ler e o que cada um indica",
+      "description": "O que significam MEMORY_MANAGEMENT, IRQL_NOT_LESS_OR_EQUAL, CRITICAL_PROCESS_DIED e outros códigos — e como usá-los para separar defeito de driver, memória ou disco.",
+      "canonical": "https://otecnicodeinformatica.com.br/blog/codigos-de-erro-tela-azul-windows",
+      "canonical_valido": true,
+      "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+      "schemas": [
+        "Organization",
+        "WebSite",
+        "BreadcrumbList",
+        "BlogPosting",
+        "Article",
+        "TechArticle",
+        "LocalBusiness",
+        "ProfessionalService",
+        "ComputerRepairService",
+        "ItemList",
+        "FAQPage"
+      ],
+      "schema_valido": true,
+      "erros": [],
+      "submitted_via_sitemap": true,
+      "submitted_via_indexnow": true,
+      "last_submission_at": "2026-08-31T19:46:58.070Z",
+      "last_verdict": "PUBLISHED",
+      "last_verdict_checked_at": "2026-08-31T19:47:52.120Z",
+      "historico": [
+        {
+          "at": "2026-08-31T19:46:58.070Z",
+          "action": "indexnow",
+          "status": "HTTP 200"
+        },
+        {
+          "at": "2026-08-31T19:47:03.680Z",
+          "action": "verdict_change",
+          "de": "UNKNOWN",
+          "para": "PUBLISHED"
+        }
+      ]
+    },
+    {
+      "url": "/blog/testar-memoria-ram-memtest86",
+      "url_absoluta": "https://otecnicodeinformatica.com.br/blog/testar-memoria-ram-memtest86",
+      "scope": "10C/0",
+      "tipo": "onda-10c",
+      "publicado": true,
+      "http_status": 200,
+      "title": "Como testar a memória RAM com Memtest86+ (passo a passo)",
+      "description": "Quando testar a memória, como criar a mídia de inicialização, quantas passagens fazer e como interpretar erros para saber qual módulo trocar.",
+      "canonical": "https://otecnicodeinformatica.com.br/blog/testar-memoria-ram-memtest86",
+      "canonical_valido": true,
+      "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+      "schemas": [
+        "Organization",
+        "WebSite",
+        "BreadcrumbList",
+        "BlogPosting",
+        "Article",
+        "TechArticle",
+        "LocalBusiness",
+        "ProfessionalService",
+        "ComputerRepairService",
+        "ItemList",
+        "FAQPage"
+      ],
+      "schema_valido": true,
+      "erros": [],
+      "submitted_via_sitemap": true,
+      "submitted_via_indexnow": true,
+      "last_submission_at": "2026-08-31T19:46:58.070Z",
+      "last_verdict": "PUBLISHED",
+      "last_verdict_checked_at": "2026-08-31T19:47:52.120Z",
+      "historico": [
+        {
+          "at": "2026-08-31T19:46:58.070Z",
+          "action": "indexnow",
+          "status": "HTTP 200"
+        },
+        {
+          "at": "2026-08-31T19:47:03.680Z",
+          "action": "verdict_change",
+          "de": "UNKNOWN",
+          "para": "PUBLISHED"
+        }
+      ]
+    },
+    {
+      "url": "/blog/botao-power-nao-funciona-jump-start-placa-mae",
+      "url_absoluta": "https://otecnicodeinformatica.com.br/blog/botao-power-nao-funciona-jump-start-placa-mae",
+      "scope": "10D/1",
+      "tipo": "onda-10c",
+      "publicado": true,
+      "http_status": 200,
+      "title": "Botão power não funciona: como ligar o PC pelo conector da placa-mãe",
+      "description": "Como separar defeito do botão frontal de falha de fonte ou placa, e como acionar a partida pelo conector do painel frontal para confirmar o diagnóstico.",
+      "canonical": "https://otecnicodeinformatica.com.br/blog/botao-power-nao-funciona-jump-start-placa-mae",
+      "canonical_valido": true,
+      "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+      "schemas": [
+        "Organization",
+        "WebSite",
+        "BreadcrumbList",
+        "BlogPosting",
+        "Article",
+        "TechArticle",
+        "LocalBusiness",
+        "ProfessionalService",
+        "ComputerRepairService",
+        "ItemList",
+        "FAQPage"
+      ],
+      "schema_valido": true,
+      "erros": [],
+      "submitted_via_sitemap": true,
+      "submitted_via_indexnow": true,
+      "last_submission_at": "2026-08-31T19:46:58.070Z",
+      "last_verdict": "PUBLISHED",
+      "last_verdict_checked_at": "2026-08-31T19:47:52.120Z",
+      "historico": [
+        {
+          "at": "2026-08-31T19:46:58.070Z",
+          "action": "indexnow",
+          "status": "HTTP 200"
+        },
+        {
+          "at": "2026-08-31T19:47:03.680Z",
+          "action": "verdict_change",
+          "de": "UNKNOWN",
+          "para": "PUBLISHED"
+        }
+      ]
+    },
+    {
+      "url": "/blog/curto-circuito-placa-mae-como-identificar",
+      "url_absoluta": "https://otecnicodeinformatica.com.br/blog/curto-circuito-placa-mae-como-identificar",
+      "scope": "10D/1",
+      "tipo": "onda-10c",
+      "publicado": true,
+      "http_status": 200,
+      "title": "Curto-circuito na placa-mãe: como identificar e isolar o problema",
+      "description": "Como reconhecer um curto de alimentação, isolar componente por componente com o teste fora do gabinete e saber quando o reparo deixa de ser viável.",
+      "canonical": "https://otecnicodeinformatica.com.br/blog/curto-circuito-placa-mae-como-identificar",
+      "canonical_valido": true,
+      "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+      "schemas": [
+        "Organization",
+        "WebSite",
+        "BreadcrumbList",
+        "BlogPosting",
+        "Article",
+        "TechArticle",
+        "LocalBusiness",
+        "ProfessionalService",
+        "ComputerRepairService",
+        "ItemList",
+        "FAQPage"
+      ],
+      "schema_valido": true,
+      "erros": [],
+      "submitted_via_sitemap": true,
+      "submitted_via_indexnow": true,
+      "last_submission_at": "2026-08-31T19:46:58.070Z",
+      "last_verdict": "PENDING",
+      "last_verdict_checked_at": "2026-08-31T19:47:52.120Z",
+      "historico": [
+        {
+          "at": "2026-08-31T19:46:58.070Z",
+          "action": "indexnow",
+          "status": "HTTP 200"
+        },
+        {
+          "at": "2026-08-31T19:47:03.680Z",
+          "action": "verdict_change",
+          "de": "UNKNOWN",
+          "para": "PENDING"
+        }
+      ]
+    },
+    {
+      "url": "/blog/bios-corrompida-reset-cmos-atualizacao",
+      "url_absoluta": "https://otecnicodeinformatica.com.br/blog/bios-corrompida-reset-cmos-atualizacao",
+      "scope": "10D/1",
+      "tipo": "onda-10c",
+      "publicado": true,
+      "http_status": 200,
+      "title": "BIOS corrompida: reset de CMOS e recuperação de firmware",
+      "description": "Quando o reset de CMOS resolve, como fazer pelo jumper ou pela bateria e o que muda quando o firmware realmente corrompeu durante uma atualização.",
+      "canonical": "https://otecnicodeinformatica.com.br/blog/bios-corrompida-reset-cmos-atualizacao",
+      "canonical_valido": true,
+      "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+      "schemas": [
+        "Organization",
+        "WebSite",
+        "BreadcrumbList",
+        "BlogPosting",
+        "Article",
+        "TechArticle",
+        "LocalBusiness",
+        "ProfessionalService",
+        "ComputerRepairService",
+        "ItemList",
+        "FAQPage"
+      ],
+      "schema_valido": true,
+      "erros": [],
+      "submitted_via_sitemap": true,
+      "submitted_via_indexnow": true,
+      "last_submission_at": "2026-08-31T19:46:58.070Z",
+      "last_verdict": "PUBLISHED",
+      "last_verdict_checked_at": "2026-08-31T19:47:52.120Z",
+      "historico": [
+        {
+          "at": "2026-08-31T19:46:58.070Z",
+          "action": "indexnow",
+          "status": "HTTP 200"
+        },
+        {
+          "at": "2026-08-31T19:47:03.680Z",
+          "action": "verdict_change",
+          "de": "UNKNOWN",
+          "para": "PUBLISHED"
+        }
+      ]
+    },
+    {
+      "url": "/blog/internet-lenta-provedor-ou-roteador",
+      "url_absoluta": "https://otecnicodeinformatica.com.br/blog/internet-lenta-provedor-ou-roteador",
+      "scope": "10C/2",
+      "tipo": "onda-10c",
+      "publicado": true,
+      "http_status": 200,
+      "title": "Internet lenta: é o provedor ou o seu roteador?",
+      "description": "Como separar, com dois testes objetivos, a lentidão que vem da operadora da lentidão que nasce dentro de casa — e o que fazer em cada caso.",
+      "canonical": "https://otecnicodeinformatica.com.br/blog/internet-lenta-provedor-ou-roteador",
+      "canonical_valido": true,
+      "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+      "schemas": [
+        "Organization",
+        "WebSite",
+        "BreadcrumbList",
+        "BlogPosting",
+        "Article",
+        "TechArticle",
+        "LocalBusiness",
+        "ProfessionalService",
+        "ComputerRepairService",
+        "ItemList",
+        "FAQPage"
+      ],
+      "schema_valido": true,
+      "erros": [],
+      "submitted_via_sitemap": true,
+      "submitted_via_indexnow": true,
+      "last_submission_at": "2026-08-31T19:46:58.070Z",
+      "last_verdict": "PUBLISHED",
+      "last_verdict_checked_at": "2026-08-31T19:47:52.120Z",
+      "historico": [
+        {
+          "at": "2026-08-31T19:46:58.070Z",
+          "action": "indexnow",
+          "status": "HTTP 200"
+        },
+        {
+          "at": "2026-08-31T19:47:03.680Z",
+          "action": "verdict_change",
+          "de": "UNKNOWN",
+          "para": "PUBLISHED"
+        }
+      ]
+    },
+    {
+      "url": "/blog/impressora-offline-como-resolver",
+      "url_absoluta": "https://otecnicodeinformatica.com.br/blog/impressora-offline-como-resolver",
+      "scope": "10C/2",
+      "tipo": "onda-10c",
+      "publicado": true,
+      "http_status": 200,
+      "title": "Impressora offline: por que aparece assim e como resolver",
+      "description": "O que o status &quot;offline&quot; realmente significa no Windows, a diferença entre endereço perdido e fila travada e a sequência de verificação que resolve sem reinstalar…",
+      "canonical": "https://otecnicodeinformatica.com.br/blog/impressora-offline-como-resolver",
+      "canonical_valido": true,
+      "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+      "schemas": [
+        "Organization",
+        "WebSite",
+        "BreadcrumbList",
+        "BlogPosting",
+        "Article",
+        "TechArticle",
+        "LocalBusiness",
+        "ProfessionalService",
+        "ComputerRepairService",
+        "ItemList",
+        "FAQPage"
+      ],
+      "schema_valido": true,
+      "erros": [],
+      "submitted_via_sitemap": true,
+      "submitted_via_indexnow": true,
+      "last_submission_at": "2026-08-31T19:46:58.070Z",
+      "last_verdict": "PUBLISHED",
+      "last_verdict_checked_at": "2026-08-31T19:47:52.120Z",
+      "historico": [
+        {
+          "at": "2026-08-31T19:46:58.070Z",
+          "action": "indexnow",
+          "status": "HTTP 200"
+        },
+        {
+          "at": "2026-08-31T19:47:03.680Z",
+          "action": "verdict_change",
+          "de": "UNKNOWN",
+          "para": "PUBLISHED"
+        }
+      ]
+    },
+    {
+      "url": "/blog/fila-de-impressao-travada-spooler-windows",
+      "url_absoluta": "https://otecnicodeinformatica.com.br/blog/fila-de-impressao-travada-spooler-windows",
+      "scope": "10C/2",
+      "tipo": "onda-10c",
+      "publicado": true,
+      "http_status": 200,
+      "title": "Fila de impressão travada: como destravar o spooler do Windows",
+      "description": "O que é o serviço de spooler, por que a fila trava com documentos presos em &quot;excluindo&quot; e o procedimento correto para limpar sem reinstalar a impressora.",
+      "canonical": "https://otecnicodeinformatica.com.br/blog/fila-de-impressao-travada-spooler-windows",
+      "canonical_valido": true,
+      "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+      "schemas": [
+        "Organization",
+        "WebSite",
+        "BreadcrumbList",
+        "BlogPosting",
+        "Article",
+        "TechArticle",
+        "LocalBusiness",
+        "ProfessionalService",
+        "ComputerRepairService",
+        "ItemList",
+        "FAQPage"
+      ],
+      "schema_valido": true,
+      "erros": [],
+      "submitted_via_sitemap": true,
+      "submitted_via_indexnow": true,
+      "last_submission_at": "2026-08-31T19:46:58.070Z",
+      "last_verdict": "PUBLISHED",
+      "last_verdict_checked_at": "2026-08-31T19:47:52.120Z",
+      "historico": [
+        {
+          "at": "2026-08-31T19:46:58.070Z",
+          "action": "indexnow",
+          "status": "HTTP 200"
+        },
+        {
+          "at": "2026-08-31T19:47:03.680Z",
+          "action": "verdict_change",
+          "de": "UNKNOWN",
+          "para": "PUBLISHED"
+        }
+      ]
+    },
+    {
+      "url": "/blog/hd-nao-e-reconhecido-na-bios-o-que-fazer",
+      "url_absoluta": "https://otecnicodeinformatica.com.br/blog/hd-nao-e-reconhecido-na-bios-o-que-fazer",
+      "scope": "10C/3",
+      "tipo": "onda-10c",
+      "publicado": true,
+      "http_status": 200,
+      "title": "HD ou SSD não é reconhecido na BIOS: o que verificar antes de trocar",
+      "description": "Quando o disco some do Setup, o problema quase nunca é o Windows. Sequência de verificação por energia, cabo, porta e detecção — e o que NÃO fazer quando há dados…",
+      "canonical": "https://otecnicodeinformatica.com.br/blog/hd-nao-e-reconhecido-na-bios-o-que-fazer",
+      "canonical_valido": true,
+      "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+      "schemas": [
+        "Organization",
+        "WebSite",
+        "BreadcrumbList",
+        "BlogPosting",
+        "Article",
+        "TechArticle",
+        "LocalBusiness",
+        "ProfessionalService",
+        "ComputerRepairService",
+        "ItemList",
+        "FAQPage"
+      ],
+      "schema_valido": true,
+      "erros": [],
+      "submitted_via_sitemap": true,
+      "submitted_via_indexnow": true,
+      "last_submission_at": "2026-08-31T19:46:58.070Z",
+      "last_verdict": "PUBLISHED",
+      "last_verdict_checked_at": "2026-08-31T19:47:52.120Z",
+      "historico": [
+        {
+          "at": "2026-08-31T19:46:58.070Z",
+          "action": "indexnow",
+          "status": "HTTP 200"
+        },
+        {
+          "at": "2026-08-31T19:47:03.680Z",
+          "action": "verdict_change",
+          "de": "UNKNOWN",
+          "para": "PUBLISHED"
+        }
+      ]
+    },
+    {
+      "url": "/blog/ssd-nvme-nao-aparece-no-gerenciador-de-discos",
+      "url_absoluta": "https://otecnicodeinformatica.com.br/blog/ssd-nvme-nao-aparece-no-gerenciador-de-discos",
+      "scope": "10C/3",
+      "tipo": "onda-10c",
+      "publicado": true,
+      "http_status": 200,
+      "title": "SSD aparece na BIOS mas não no Windows: como inicializar o disco",
+      "description": "Disco novo chega sem inicialização, sem partição e sem letra. O que fazer no Gerenciamento de Disco, como escolher GPT ou MBR e o cuidado antes de mexer em disco…",
+      "canonical": "https://otecnicodeinformatica.com.br/blog/ssd-nvme-nao-aparece-no-gerenciador-de-discos",
+      "canonical_valido": true,
+      "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+      "schemas": [
+        "Organization",
+        "WebSite",
+        "BreadcrumbList",
+        "BlogPosting",
+        "Article",
+        "TechArticle",
+        "LocalBusiness",
+        "ProfessionalService",
+        "ComputerRepairService",
+        "ItemList",
+        "FAQPage"
+      ],
+      "schema_valido": true,
+      "erros": [],
+      "submitted_via_sitemap": true,
+      "submitted_via_indexnow": true,
+      "last_submission_at": "2026-08-31T19:46:58.070Z",
+      "last_verdict": "PUBLISHED",
+      "last_verdict_checked_at": "2026-08-31T19:47:52.120Z",
+      "historico": [
+        {
+          "at": "2026-08-31T19:46:58.070Z",
+          "action": "indexnow",
+          "status": "HTTP 200"
+        },
+        {
+          "at": "2026-08-31T19:47:03.680Z",
+          "action": "verdict_change",
+          "de": "UNKNOWN",
+          "para": "PUBLISHED"
+        }
+      ]
+    },
+    {
+      "url": "/blog/disco-com-setores-defeituosos-smart-o-que-fazer",
+      "url_absoluta": "https://otecnicodeinformatica.com.br/blog/disco-com-setores-defeituosos-smart-o-que-fazer",
+      "scope": "10C/3",
+      "tipo": "onda-10c",
+      "publicado": true,
+      "http_status": 200,
+      "title": "Setores defeituosos e SMART com alerta: o que fazer (e o que não…",
+      "description": "Como ler os indicadores SMART, por que CHKDSK não é a resposta padrão para disco suspeito de falha física e qual é a ordem correta: copiar primeiro, investigar…",
+      "canonical": "https://otecnicodeinformatica.com.br/blog/disco-com-setores-defeituosos-smart-o-que-fazer",
+      "canonical_valido": true,
+      "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+      "schemas": [
+        "Organization",
+        "WebSite",
+        "BreadcrumbList",
+        "BlogPosting",
+        "Article",
+        "TechArticle",
+        "LocalBusiness",
+        "ProfessionalService",
+        "ComputerRepairService",
+        "ItemList",
+        "FAQPage"
+      ],
+      "schema_valido": true,
+      "erros": [],
+      "submitted_via_sitemap": true,
+      "submitted_via_indexnow": true,
+      "last_submission_at": "2026-08-31T19:46:58.070Z",
+      "last_verdict": "PUBLISHED",
+      "last_verdict_checked_at": "2026-08-31T19:47:52.120Z",
+      "historico": [
+        {
+          "at": "2026-08-31T19:46:58.070Z",
+          "action": "indexnow",
+          "status": "HTTP 200"
+        },
+        {
+          "at": "2026-08-31T19:47:03.680Z",
+          "action": "verdict_change",
+          "de": "UNKNOWN",
+          "para": "PUBLISHED"
+        }
+      ]
+    },
+    {
+      "url": "/blog/computador-sem-som-o-que-verificar",
+      "url_absoluta": "https://otecnicodeinformatica.com.br/blog/computador-sem-som-o-que-verificar",
+      "scope": "10C/3",
+      "tipo": "onda-10c",
+      "publicado": true,
+      "http_status": 200,
+      "title": "Computador sem som: sequência de verificação do alto-falante ao driver",
+      "description": "Do volume e do dispositivo de saída errado até driver e conector: como isolar a causa do silêncio no Windows sem reinstalar o sistema.",
+      "canonical": "https://otecnicodeinformatica.com.br/blog/computador-sem-som-o-que-verificar",
+      "canonical_valido": true,
+      "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+      "schemas": [
+        "Organization",
+        "WebSite",
+        "BreadcrumbList",
+        "BlogPosting",
+        "Article",
+        "TechArticle",
+        "LocalBusiness",
+        "ProfessionalService",
+        "ComputerRepairService",
+        "ItemList",
+        "FAQPage"
+      ],
+      "schema_valido": true,
+      "erros": [],
+      "submitted_via_sitemap": true,
+      "submitted_via_indexnow": true,
+      "last_submission_at": "2026-08-31T19:46:58.070Z",
+      "last_verdict": "PUBLISHED",
+      "last_verdict_checked_at": "2026-08-31T19:47:52.120Z",
+      "historico": [
+        {
+          "at": "2026-08-31T19:46:58.070Z",
+          "action": "indexnow",
+          "status": "HTTP 200"
+        },
+        {
+          "at": "2026-08-31T19:47:03.680Z",
+          "action": "verdict_change",
+          "de": "UNKNOWN",
+          "para": "PUBLISHED"
+        }
+      ]
+    },
+    {
+      "url": "/blog/fone-de-ouvido-nao-e-reconhecido-no-pc",
+      "url_absoluta": "https://otecnicodeinformatica.com.br/blog/fone-de-ouvido-nao-e-reconhecido-no-pc",
+      "scope": "10C/3",
+      "tipo": "onda-10c",
+      "publicado": true,
+      "http_status": 200,
+      "title": "Fone de ouvido não é reconhecido no PC: entrada frontal, detecção e…",
+      "description": "Por que o fone toca na entrada de trás e não na da frente, o que é detecção de conector, a diferença entre P2 combo e duas entradas e como resolver o microfone mudo.",
+      "canonical": "https://otecnicodeinformatica.com.br/blog/fone-de-ouvido-nao-e-reconhecido-no-pc",
+      "canonical_valido": true,
+      "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+      "schemas": [
+        "Organization",
+        "WebSite",
+        "BreadcrumbList",
+        "BlogPosting",
+        "Article",
+        "TechArticle",
+        "LocalBusiness",
+        "ProfessionalService",
+        "ComputerRepairService",
+        "ItemList",
+        "FAQPage"
+      ],
+      "schema_valido": true,
+      "erros": [],
+      "submitted_via_sitemap": true,
+      "submitted_via_indexnow": true,
+      "last_submission_at": "2026-08-31T19:46:58.070Z",
+      "last_verdict": "PUBLISHED",
+      "last_verdict_checked_at": "2026-08-31T19:47:52.120Z",
+      "historico": [
+        {
+          "at": "2026-08-31T19:46:58.070Z",
+          "action": "indexnow",
+          "status": "HTTP 200"
+        },
+        {
+          "at": "2026-08-31T19:47:03.680Z",
+          "action": "verdict_change",
+          "de": "UNKNOWN",
+          "para": "PUBLISHED"
+        }
+      ]
+    },
+    {
+      "url": "/blog/servico-de-audio-do-windows-nao-esta-em-execucao",
+      "url_absoluta": "https://otecnicodeinformatica.com.br/blog/servico-de-audio-do-windows-nao-esta-em-execucao",
+      "scope": "10C/3",
+      "tipo": "onda-10c",
+      "publicado": true,
+      "http_status": 200,
+      "title": "Serviço de áudio do Windows não está em execução: como reativar",
+      "description": "O que são os serviços Windows Audio e Audio Endpoint Builder, como reiniciá-los na ordem correta, quando reinstalar o driver e como distinguir falha de serviço de…",
+      "canonical": "https://otecnicodeinformatica.com.br/blog/servico-de-audio-do-windows-nao-esta-em-execucao",
+      "canonical_valido": true,
+      "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+      "schemas": [
+        "Organization",
+        "WebSite",
+        "BreadcrumbList",
+        "BlogPosting",
+        "Article",
+        "TechArticle",
+        "LocalBusiness",
+        "ProfessionalService",
+        "ComputerRepairService",
+        "ItemList",
+        "FAQPage"
+      ],
+      "schema_valido": true,
+      "erros": [],
+      "submitted_via_sitemap": true,
+      "submitted_via_indexnow": true,
+      "last_submission_at": "2026-08-31T19:46:58.070Z",
+      "last_verdict": "PUBLISHED",
+      "last_verdict_checked_at": "2026-08-31T19:47:52.120Z",
+      "historico": [
+        {
+          "at": "2026-08-31T19:46:58.070Z",
+          "action": "indexnow",
+          "status": "HTTP 200"
+        },
+        {
+          "at": "2026-08-31T19:47:03.680Z",
+          "action": "verdict_change",
+          "de": "UNKNOWN",
+          "para": "PUBLISHED"
+        }
+      ]
+    },
+    {
+      "url": "/blog/webcam-nao-funciona-o-que-verificar",
+      "url_absoluta": "https://otecnicodeinformatica.com.br/blog/webcam-nao-funciona-o-que-verificar",
+      "scope": "10C/4",
+      "tipo": "onda-10c",
+      "publicado": true,
+      "http_status": 200,
+      "title": "Webcam não funciona: como separar privacidade, aplicativo, driver e…",
+      "description": "Cinco perguntas isolam a causa quando a câmera não funciona: ela existe no sistema, o Windows libera, o aplicativo tem permissão, o driver está sadio ou o módulo…",
+      "canonical": "https://otecnicodeinformatica.com.br/blog/webcam-nao-funciona-o-que-verificar",
+      "canonical_valido": true,
+      "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+      "schemas": [
+        "Organization",
+        "WebSite",
+        "BreadcrumbList",
+        "BlogPosting",
+        "Article",
+        "TechArticle",
+        "LocalBusiness",
+        "ProfessionalService",
+        "ComputerRepairService",
+        "ItemList",
+        "FAQPage"
+      ],
+      "schema_valido": true,
+      "erros": [],
+      "submitted_via_sitemap": true,
+      "submitted_via_indexnow": true,
+      "last_submission_at": "2026-08-31T19:46:58.070Z",
+      "last_verdict": "PENDING",
+      "last_verdict_checked_at": "2026-08-31T19:47:52.120Z",
+      "historico": [
+        {
+          "at": "2026-08-31T19:46:58.070Z",
+          "action": "indexnow",
+          "status": "HTTP 200"
+        },
+        {
+          "at": "2026-08-31T19:47:03.680Z",
+          "action": "verdict_change",
+          "de": "UNKNOWN",
+          "para": "PENDING"
+        }
+      ]
+    },
+    {
+      "url": "/blog/permissoes-de-camera-no-windows",
+      "url_absoluta": "https://otecnicodeinformatica.com.br/blog/permissoes-de-camera-no-windows",
+      "scope": "10C/4",
+      "tipo": "onda-10c",
+      "publicado": true,
+      "http_status": 200,
+      "title": "Permissões de câmera no Windows: quando é o sistema que bloqueia e…",
+      "description": "Acesso global, acesso por aplicativo, programas de área de trabalho e permissão de site no navegador são camadas diferentes. Entender qual está fechada resolve a…",
+      "canonical": "https://otecnicodeinformatica.com.br/blog/permissoes-de-camera-no-windows",
+      "canonical_valido": true,
+      "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+      "schemas": [
+        "Organization",
+        "WebSite",
+        "BreadcrumbList",
+        "BlogPosting",
+        "Article",
+        "TechArticle",
+        "LocalBusiness",
+        "ProfessionalService",
+        "ComputerRepairService",
+        "ItemList",
+        "FAQPage"
+      ],
+      "schema_valido": true,
+      "erros": [],
+      "submitted_via_sitemap": true,
+      "submitted_via_indexnow": true,
+      "last_submission_at": "2026-08-31T19:46:58.070Z",
+      "last_verdict": "PUBLISHED",
+      "last_verdict_checked_at": "2026-08-31T19:47:52.120Z",
+      "historico": [
+        {
+          "at": "2026-08-31T19:46:58.070Z",
+          "action": "indexnow",
+          "status": "HTTP 200"
+        },
+        {
+          "at": "2026-08-31T19:47:03.680Z",
+          "action": "verdict_change",
+          "de": "UNKNOWN",
+          "para": "PUBLISHED"
+        }
+      ]
+    },
+    {
+      "url": "/blog/webcam-usb-nao-e-detectada",
+      "url_absoluta": "https://otecnicodeinformatica.com.br/blog/webcam-usb-nao-e-detectada",
+      "scope": "10C/4",
+      "tipo": "onda-10c",
+      "publicado": true,
+      "http_status": 200,
+      "title": "Webcam USB não é detectada: porta, cabo, alimentação e driver",
+      "description": "Roteiro de eliminação para webcam externa que o Windows não enxerga: teste de porta, hub sem alimentação, cabo, dispositivo desconhecido no Gerenciador e teste…",
+      "canonical": "https://otecnicodeinformatica.com.br/blog/webcam-usb-nao-e-detectada",
+      "canonical_valido": true,
+      "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+      "schemas": [
+        "Organization",
+        "WebSite",
+        "BreadcrumbList",
+        "BlogPosting",
+        "Article",
+        "TechArticle",
+        "LocalBusiness",
+        "ProfessionalService",
+        "ComputerRepairService",
+        "ItemList",
+        "FAQPage"
+      ],
+      "schema_valido": true,
+      "erros": [],
+      "submitted_via_sitemap": true,
+      "submitted_via_indexnow": true,
+      "last_submission_at": "2026-08-31T19:46:58.070Z",
+      "last_verdict": "PUBLISHED",
+      "last_verdict_checked_at": "2026-08-31T19:47:52.120Z",
+      "historico": [
+        {
+          "at": "2026-08-31T19:46:58.070Z",
+          "action": "indexnow",
+          "status": "HTTP 200"
+        },
+        {
+          "at": "2026-08-31T19:47:03.680Z",
+          "action": "verdict_change",
+          "de": "UNKNOWN",
+          "para": "PUBLISHED"
+        }
+      ]
+    },
+    {
+      "url": "/blog/windows-update-nao-funciona-o-que-verificar",
+      "url_absoluta": "https://otecnicodeinformatica.com.br/blog/windows-update-nao-funciona-o-que-verificar",
+      "scope": "10C/4",
+      "tipo": "onda-10c",
+      "publicado": true,
+      "http_status": 200,
+      "title": "Windows Update não funciona: como descobrir em qual estágio a…",
+      "description": "Verificação, download, preparação, instalação e reinicialização são estágios distintos. Identificar onde a atualização para elimina metade dos procedimentos inúteis.",
+      "canonical": "https://otecnicodeinformatica.com.br/blog/windows-update-nao-funciona-o-que-verificar",
+      "canonical_valido": true,
+      "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+      "schemas": [
+        "Organization",
+        "WebSite",
+        "BreadcrumbList",
+        "BlogPosting",
+        "Article",
+        "TechArticle",
+        "LocalBusiness",
+        "ProfessionalService",
+        "ComputerRepairService",
+        "ItemList",
+        "FAQPage"
+      ],
+      "schema_valido": true,
+      "erros": [],
+      "submitted_via_sitemap": true,
+      "submitted_via_indexnow": true,
+      "last_submission_at": "2026-08-31T19:46:58.070Z",
+      "last_verdict": "PUBLISHED",
+      "last_verdict_checked_at": "2026-08-31T19:47:52.120Z",
+      "historico": [
+        {
+          "at": "2026-08-31T19:46:58.070Z",
+          "action": "indexnow",
+          "status": "HTTP 200"
+        },
+        {
+          "at": "2026-08-31T19:47:03.680Z",
+          "action": "verdict_change",
+          "de": "UNKNOWN",
+          "para": "PUBLISHED"
+        }
+      ]
+    },
+    {
+      "url": "/blog/limpar-cache-do-windows-update-softwaredistribution",
+      "url_absoluta": "https://otecnicodeinformatica.com.br/blog/limpar-cache-do-windows-update-softwaredistribution",
+      "scope": "10C/4",
+      "tipo": "onda-10c",
+      "publicado": true,
+      "http_status": 200,
+      "title": "Cache do Windows Update: o que é a SoftwareDistribution e como…",
+      "description": "A pasta guarda downloads e histórico do Update. Renomear é reversível, apagar não é. Quando o procedimento ajuda, o que ele custa e por que não é solução universal.",
+      "canonical": "https://otecnicodeinformatica.com.br/blog/limpar-cache-do-windows-update-softwaredistribution",
+      "canonical_valido": true,
+      "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+      "schemas": [
+        "Organization",
+        "WebSite",
+        "BreadcrumbList",
+        "BlogPosting",
+        "Article",
+        "TechArticle",
+        "LocalBusiness",
+        "ProfessionalService",
+        "ComputerRepairService",
+        "ItemList",
+        "FAQPage"
+      ],
+      "schema_valido": true,
+      "erros": [],
+      "submitted_via_sitemap": true,
+      "submitted_via_indexnow": true,
+      "last_submission_at": "2026-08-31T19:46:58.070Z",
+      "last_verdict": "PUBLISHED",
+      "last_verdict_checked_at": "2026-08-31T19:47:52.120Z",
+      "historico": [
+        {
+          "at": "2026-08-31T19:46:58.070Z",
+          "action": "indexnow",
+          "status": "HTTP 200"
+        },
+        {
+          "at": "2026-08-31T19:47:03.680Z",
+          "action": "verdict_change",
+          "de": "UNKNOWN",
+          "para": "PUBLISHED"
+        }
+      ]
+    },
+    {
+      "url": "/blog/windows-update-travado-desfazendo-alteracoes",
+      "url_absoluta": "https://otecnicodeinformatica.com.br/blog/windows-update-travado-desfazendo-alteracoes",
+      "scope": "10C/4",
+      "tipo": "onda-10c",
+      "publicado": true,
+      "http_status": 200,
+      "title": "Atualização travada e &quot;desfazendo alterações&quot;: o que é reversão e o…",
+      "description": "Como distinguir interface parada de processo realmente parado, por que o Windows reverte uma atualização e o que fazer antes de desligar a máquina no botão.",
+      "canonical": "https://otecnicodeinformatica.com.br/blog/windows-update-travado-desfazendo-alteracoes",
+      "canonical_valido": true,
+      "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+      "schemas": [
+        "Organization",
+        "WebSite",
+        "BreadcrumbList",
+        "BlogPosting",
+        "Article",
+        "TechArticle",
+        "LocalBusiness",
+        "ProfessionalService",
+        "ComputerRepairService",
+        "ItemList",
+        "FAQPage"
+      ],
+      "schema_valido": true,
+      "erros": [],
+      "submitted_via_sitemap": true,
+      "submitted_via_indexnow": true,
+      "last_submission_at": "2026-08-31T19:46:58.070Z",
+      "last_verdict": "PUBLISHED",
+      "last_verdict_checked_at": "2026-08-31T19:47:52.120Z",
+      "historico": [
+        {
+          "at": "2026-08-31T19:46:58.070Z",
+          "action": "indexnow",
+          "status": "HTTP 200"
+        },
+        {
+          "at": "2026-08-31T19:47:03.680Z",
+          "action": "verdict_change",
+          "de": "UNKNOWN",
+          "para": "PUBLISHED"
+        }
+      ]
+    },
+    {
+      "url": "/problemas/windows-nao-inicia",
+      "url_absoluta": "https://otecnicodeinformatica.com.br/problemas/windows-nao-inicia",
+      "scope": "CASO/0xc0000428",
+      "tipo": "artigo",
+      "publicado": true,
+      "http_status": 200,
+      "title": "Erro 0xc0000428: Windows não inicia | Técnico de Informática",
+      "description": "PC liga, mas o Windows exibe 0xc0000428, reparo automático ou loop? Entenda assinatura digital, WinRE, BitLocker e a ordem segura sem formatar.",
+      "canonical": "https://otecnicodeinformatica.com.br/problemas/windows-nao-inicia",
+      "canonical_valido": true,
+      "robots": "index, follow",
+      "schemas": [
+        "Organization",
+        "WebSite",
+        "FAQPage",
+        "TechArticle",
+        "WebPage",
+        "BreadcrumbList",
+        "LocalBusiness",
+        "ProfessionalService",
+        "ComputerRepairService"
+      ],
+      "schema_valido": true,
+      "erros": [],
+      "submitted_via_sitemap": true,
+      "submitted_via_indexnow": true,
+      "last_submission_at": "2026-08-31T19:46:58.070Z",
+      "last_verdict": "PUBLISHED",
+      "last_verdict_checked_at": "2026-08-31T19:47:52.120Z",
+      "historico": [
+        {
+          "at": "2026-08-31T19:46:58.070Z",
+          "action": "indexnow",
+          "status": "HTTP 200"
+        },
+        {
+          "at": "2026-08-31T19:47:52.120Z",
+          "action": "verdict_change",
+          "de": "UNKNOWN",
+          "para": "PUBLISHED"
+        }
+      ]
+    }
+  ],
+  "eventos": [
+    {
+      "id": "7948d6a6-e207-4f29-8f35-21675bb3f57d",
+      "url": "/blog/limpar-arquivos-temporarios-windows",
+      "scope": "10C/0",
+      "action": "verify_published",
+      "status": "OK",
+      "source": "cli",
+      "timestamp": "2026-08-31T19:47:00.229Z",
+      "details": {
+        "httpStatus": 200,
+        "schemas": [
+          "Organization",
+          "WebSite",
+          "BreadcrumbList",
+          "BlogPosting",
+          "Article",
+          "TechArticle",
+          "LocalBusiness",
+          "ProfessionalService",
+          "ComputerRepairService",
+          "ItemList",
+          "FAQPage"
+        ],
+        "canonical": "https://otecnicodeinformatica.com.br/blog/limpar-arquivos-temporarios-windows"
+      },
+      "error": null
+    },
+    {
+      "id": "cabb2b5e-85d3-4bd4-9db0-e8701b0c1408",
+      "url": "/blog/memoria-ram-insuficiente-sintomas",
+      "scope": "10C/0",
+      "action": "verify_published",
+      "status": "OK",
+      "source": "cli",
+      "timestamp": "2026-08-31T19:47:00.344Z",
+      "details": {
+        "httpStatus": 200,
+        "schemas": [
+          "Organization",
+          "WebSite",
+          "BreadcrumbList",
+          "BlogPosting",
+          "Article",
+          "TechArticle",
+          "LocalBusiness",
+          "ProfessionalService",
+          "ComputerRepairService",
+          "ItemList",
+          "FAQPage"
+        ],
+        "canonical": "https://otecnicodeinformatica.com.br/blog/memoria-ram-insuficiente-sintomas"
+      },
+      "error": null
+    },
+    {
+      "id": "24f5486a-f3f7-4bb2-ac1a-49cf379edd5e",
+      "url": "/blog/codigos-de-erro-tela-azul-windows",
+      "scope": "10C/0",
+      "action": "verify_published",
+      "status": "OK",
+      "source": "cli",
+      "timestamp": "2026-08-31T19:47:00.455Z",
+      "details": {
+        "httpStatus": 200,
+        "schemas": [
+          "Organization",
+          "WebSite",
+          "BreadcrumbList",
+          "BlogPosting",
+          "Article",
+          "TechArticle",
+          "LocalBusiness",
+          "ProfessionalService",
+          "ComputerRepairService",
+          "ItemList",
+          "FAQPage"
+        ],
+        "canonical": "https://otecnicodeinformatica.com.br/blog/codigos-de-erro-tela-azul-windows"
+      },
+      "error": null
+    },
+    {
+      "id": "50a79195-962d-4c56-b5d8-0874088333fa",
+      "url": "/blog/testar-memoria-ram-memtest86",
+      "scope": "10C/0",
+      "action": "verify_published",
+      "status": "OK",
+      "source": "cli",
+      "timestamp": "2026-08-31T19:47:00.664Z",
+      "details": {
+        "httpStatus": 200,
+        "schemas": [
+          "Organization",
+          "WebSite",
+          "BreadcrumbList",
+          "BlogPosting",
+          "Article",
+          "TechArticle",
+          "LocalBusiness",
+          "ProfessionalService",
+          "ComputerRepairService",
+          "ItemList",
+          "FAQPage"
+        ],
+        "canonical": "https://otecnicodeinformatica.com.br/blog/testar-memoria-ram-memtest86"
+      },
+      "error": null
+    },
+    {
+      "id": "34db05a9-d41c-439d-a784-03d7b874f55b",
+      "url": "/blog/botao-power-nao-funciona-jump-start-placa-mae",
+      "scope": "10D/1",
+      "action": "verify_published",
+      "status": "OK",
+      "source": "cli",
+      "timestamp": "2026-08-31T19:47:00.798Z",
+      "details": {
+        "httpStatus": 200,
+        "schemas": [
+          "Organization",
+          "WebSite",
+          "BreadcrumbList",
+          "BlogPosting",
+          "Article",
+          "TechArticle",
+          "LocalBusiness",
+          "ProfessionalService",
+          "ComputerRepairService",
+          "ItemList",
+          "FAQPage"
+        ],
+        "canonical": "https://otecnicodeinformatica.com.br/blog/botao-power-nao-funciona-jump-start-placa-mae"
+      },
+      "error": null
+    },
+    {
+      "id": "017f3fae-ab79-4ab2-8d7d-ce07e5765241",
+      "url": "/blog/curto-circuito-placa-mae-como-identificar",
+      "scope": "10D/1",
+      "action": "verify_published",
+      "status": "OK",
+      "source": "cli",
+      "timestamp": "2026-08-31T19:47:00.880Z",
+      "details": {
+        "httpStatus": 200,
+        "schemas": [
+          "Organization",
+          "WebSite",
+          "BreadcrumbList",
+          "BlogPosting",
+          "Article",
+          "TechArticle",
+          "LocalBusiness",
+          "ProfessionalService",
+          "ComputerRepairService",
+          "ItemList",
+          "FAQPage"
+        ],
+        "canonical": "https://otecnicodeinformatica.com.br/blog/curto-circuito-placa-mae-como-identificar"
+      },
+      "error": null
+    },
+    {
+      "id": "1b23596c-5997-489f-a406-db86c7a475ea",
+      "url": "/blog/bios-corrompida-reset-cmos-atualizacao",
+      "scope": "10D/1",
+      "action": "verify_published",
+      "status": "OK",
+      "source": "cli",
+      "timestamp": "2026-08-31T19:47:00.990Z",
+      "details": {
+        "httpStatus": 200,
+        "schemas": [
+          "Organization",
+          "WebSite",
+          "BreadcrumbList",
+          "BlogPosting",
+          "Article",
+          "TechArticle",
+          "LocalBusiness",
+          "ProfessionalService",
+          "ComputerRepairService",
+          "ItemList",
+          "FAQPage"
+        ],
+        "canonical": "https://otecnicodeinformatica.com.br/blog/bios-corrompida-reset-cmos-atualizacao"
+      },
+      "error": null
+    },
+    {
+      "id": "e0759973-858c-4d68-bad8-c327dc690df7",
+      "url": "/blog/internet-lenta-provedor-ou-roteador",
+      "scope": "10C/2",
+      "action": "verify_published",
+      "status": "OK",
+      "source": "cli",
+      "timestamp": "2026-08-31T19:47:01.087Z",
+      "details": {
+        "httpStatus": 200,
+        "schemas": [
+          "Organization",
+          "WebSite",
+          "BreadcrumbList",
+          "BlogPosting",
+          "Article",
+          "TechArticle",
+          "LocalBusiness",
+          "ProfessionalService",
+          "ComputerRepairService",
+          "ItemList",
+          "FAQPage"
+        ],
+        "canonical": "https://otecnicodeinformatica.com.br/blog/internet-lenta-provedor-ou-roteador"
+      },
+      "error": null
+    },
+    {
+      "id": "ff2fb042-19bc-4147-bc98-a55deefb0a64",
+      "url": "/blog/impressora-offline-como-resolver",
+      "scope": "10C/2",
+      "action": "verify_published",
+      "status": "OK",
+      "source": "cli",
+      "timestamp": "2026-08-31T19:47:01.255Z",
+      "details": {
+        "httpStatus": 200,
+        "schemas": [
+          "Organization",
+          "WebSite",
+          "BreadcrumbList",
+          "BlogPosting",
+          "Article",
+          "TechArticle",
+          "LocalBusiness",
+          "ProfessionalService",
+          "ComputerRepairService",
+          "ItemList",
+          "FAQPage"
+        ],
+        "canonical": "https://otecnicodeinformatica.com.br/blog/impressora-offline-como-resolver"
+      },
+      "error": null
+    },
+    {
+      "id": "ee662031-10d4-453f-bd8f-6b874e032b0d",
+      "url": "/blog/fila-de-impressao-travada-spooler-windows",
+      "scope": "10C/2",
+      "action": "verify_published",
+      "status": "OK",
+      "source": "cli",
+      "timestamp": "2026-08-31T19:47:01.398Z",
+      "details": {
+        "httpStatus": 200,
+        "schemas": [
+          "Organization",
+          "WebSite",
+          "BreadcrumbList",
+          "BlogPosting",
+          "Article",
+          "TechArticle",
+          "LocalBusiness",
+          "ProfessionalService",
+          "ComputerRepairService",
+          "ItemList",
+          "FAQPage"
+        ],
+        "canonical": "https://otecnicodeinformatica.com.br/blog/fila-de-impressao-travada-spooler-windows"
+      },
+      "error": null
+    },
+    {
+      "id": "60295c3b-b2a5-45b8-b2ab-d086fc59f73f",
+      "url": "/blog/hd-nao-e-reconhecido-na-bios-o-que-fazer",
+      "scope": "10C/3",
+      "action": "verify_published",
+      "status": "OK",
+      "source": "cli",
+      "timestamp": "2026-08-31T19:47:01.477Z",
+      "details": {
+        "httpStatus": 200,
+        "schemas": [
+          "Organization",
+          "WebSite",
+          "BreadcrumbList",
+          "BlogPosting",
+          "Article",
+          "TechArticle",
+          "LocalBusiness",
+          "ProfessionalService",
+          "ComputerRepairService",
+          "ItemList",
+          "FAQPage"
+        ],
+        "canonical": "https://otecnicodeinformatica.com.br/blog/hd-nao-e-reconhecido-na-bios-o-que-fazer"
+      },
+      "error": null
+    },
+    {
+      "id": "1135d0d6-99a9-4177-808a-628322c0bb38",
+      "url": "/blog/ssd-nvme-nao-aparece-no-gerenciador-de-discos",
+      "scope": "10C/3",
+      "action": "verify_published",
+      "status": "OK",
+      "source": "cli",
+      "timestamp": "2026-08-31T19:47:01.561Z",
+      "details": {
+        "httpStatus": 200,
+        "schemas": [
+          "Organization",
+          "WebSite",
+          "BreadcrumbList",
+          "BlogPosting",
+          "Article",
+          "TechArticle",
+          "LocalBusiness",
+          "ProfessionalService",
+          "ComputerRepairService",
+          "ItemList",
+          "FAQPage"
+        ],
+        "canonical": "https://otecnicodeinformatica.com.br/blog/ssd-nvme-nao-aparece-no-gerenciador-de-discos"
+      },
+      "error": null
+    },
+    {
+      "id": "fe2d3a63-3a22-4353-8cfc-07c1742d3c52",
+      "url": "/blog/disco-com-setores-defeituosos-smart-o-que-fazer",
+      "scope": "10C/3",
+      "action": "verify_published",
+      "status": "OK",
+      "source": "cli",
+      "timestamp": "2026-08-31T19:47:01.649Z",
+      "details": {
+        "httpStatus": 200,
+        "schemas": [
+          "Organization",
+          "WebSite",
+          "BreadcrumbList",
+          "BlogPosting",
+          "Article",
+          "TechArticle",
+          "LocalBusiness",
+          "ProfessionalService",
+          "ComputerRepairService",
+          "ItemList",
+          "FAQPage"
+        ],
+        "canonical": "https://otecnicodeinformatica.com.br/blog/disco-com-setores-defeituosos-smart-o-que-fazer"
+      },
+      "error": null
+    },
+    {
+      "id": "1b2383ce-8165-45ca-a88b-69b8ec4a0ce2",
+      "url": "/blog/computador-sem-som-o-que-verificar",
+      "scope": "10C/3",
+      "action": "verify_published",
+      "status": "OK",
+      "source": "cli",
+      "timestamp": "2026-08-31T19:47:01.732Z",
+      "details": {
+        "httpStatus": 200,
+        "schemas": [
+          "Organization",
+          "WebSite",
+          "BreadcrumbList",
+          "BlogPosting",
+          "Article",
+          "TechArticle",
+          "LocalBusiness",
+          "ProfessionalService",
+          "ComputerRepairService",
+          "ItemList",
+          "FAQPage"
+        ],
+        "canonical": "https://otecnicodeinformatica.com.br/blog/computador-sem-som-o-que-verificar"
+      },
+      "error": null
+    },
+    {
+      "id": "5ace79bb-341f-45ee-844c-0f86f76b0930",
+      "url": "/blog/fone-de-ouvido-nao-e-reconhecido-no-pc",
+      "scope": "10C/3",
+      "action": "verify_published",
+      "status": "OK",
+      "source": "cli",
+      "timestamp": "2026-08-31T19:47:01.847Z",
+      "details": {
+        "httpStatus": 200,
+        "schemas": [
+          "Organization",
+          "WebSite",
+          "BreadcrumbList",
+          "BlogPosting",
+          "Article",
+          "TechArticle",
+          "LocalBusiness",
+          "ProfessionalService",
+          "ComputerRepairService",
+          "ItemList",
+          "FAQPage"
+        ],
+        "canonical": "https://otecnicodeinformatica.com.br/blog/fone-de-ouvido-nao-e-reconhecido-no-pc"
+      },
+      "error": null
+    },
+    {
+      "id": "72ab94b5-2767-419d-a6f1-4cc03ed15739",
+      "url": "/blog/servico-de-audio-do-windows-nao-esta-em-execucao",
+      "scope": "10C/3",
+      "action": "verify_published",
+      "status": "OK",
+      "source": "cli",
+      "timestamp": "2026-08-31T19:47:01.930Z",
+      "details": {
+        "httpStatus": 200,
+        "schemas": [
+          "Organization",
+          "WebSite",
+          "BreadcrumbList",
+          "BlogPosting",
+          "Article",
+          "TechArticle",
+          "LocalBusiness",
+          "ProfessionalService",
+          "ComputerRepairService",
+          "ItemList",
+          "FAQPage"
+        ],
+        "canonical": "https://otecnicodeinformatica.com.br/blog/servico-de-audio-do-windows-nao-esta-em-execucao"
+      },
+      "error": null
+    },
+    {
+      "id": "e762825d-68b3-4e62-b0a1-e99c6550ab56",
+      "url": "/blog/webcam-nao-funciona-o-que-verificar",
+      "scope": "10C/4",
+      "action": "verify_published",
+      "status": "OK",
+      "source": "cli",
+      "timestamp": "2026-08-31T19:47:02.030Z",
+      "details": {
+        "httpStatus": 200,
+        "schemas": [
+          "Organization",
+          "WebSite",
+          "BreadcrumbList",
+          "BlogPosting",
+          "Article",
+          "TechArticle",
+          "LocalBusiness",
+          "ProfessionalService",
+          "ComputerRepairService",
+          "ItemList",
+          "FAQPage"
+        ],
+        "canonical": "https://otecnicodeinformatica.com.br/blog/webcam-nao-funciona-o-que-verificar"
+      },
+      "error": null
+    },
+    {
+      "id": "8aa2c272-e2b0-4ac8-a0ca-6c3d818f7e87",
+      "url": "/blog/permissoes-de-camera-no-windows",
+      "scope": "10C/4",
+      "action": "verify_published",
+      "status": "OK",
+      "source": "cli",
+      "timestamp": "2026-08-31T19:47:02.120Z",
+      "details": {
+        "httpStatus": 200,
+        "schemas": [
+          "Organization",
+          "WebSite",
+          "BreadcrumbList",
+          "BlogPosting",
+          "Article",
+          "TechArticle",
+          "LocalBusiness",
+          "ProfessionalService",
+          "ComputerRepairService",
+          "ItemList",
+          "FAQPage"
+        ],
+        "canonical": "https://otecnicodeinformatica.com.br/blog/permissoes-de-camera-no-windows"
+      },
+      "error": null
+    },
+    {
+      "id": "3837af6e-7daf-4064-a91e-596283567000",
+      "url": "/blog/webcam-usb-nao-e-detectada",
+      "scope": "10C/4",
+      "action": "verify_published",
+      "status": "OK",
+      "source": "cli",
+      "timestamp": "2026-08-31T19:47:02.184Z",
+      "details": {
+        "httpStatus": 200,
+        "schemas": [
+          "Organization",
+          "WebSite",
+          "BreadcrumbList",
+          "BlogPosting",
+          "Article",
+          "TechArticle",
+          "LocalBusiness",
+          "ProfessionalService",
+          "ComputerRepairService",
+          "ItemList",
+          "FAQPage"
+        ],
+        "canonical": "https://otecnicodeinformatica.com.br/blog/webcam-usb-nao-e-detectada"
+      },
+      "error": null
+    },
+    {
+      "id": "c9e79468-a22a-472a-adaf-9ad72920032b",
+      "url": "/blog/windows-update-nao-funciona-o-que-verificar",
+      "scope": "10C/4",
+      "action": "verify_published",
+      "status": "OK",
+      "source": "cli",
+      "timestamp": "2026-08-31T19:47:02.246Z",
+      "details": {
+        "httpStatus": 200,
+        "schemas": [
+          "Organization",
+          "WebSite",
+          "BreadcrumbList",
+          "BlogPosting",
+          "Article",
+          "TechArticle",
+          "LocalBusiness",
+          "ProfessionalService",
+          "ComputerRepairService",
+          "ItemList",
+          "FAQPage"
+        ],
+        "canonical": "https://otecnicodeinformatica.com.br/blog/windows-update-nao-funciona-o-que-verificar"
+      },
+      "error": null
+    },
+    {
+      "id": "0a82981f-8c35-4b5c-9de0-21cfaa738acd",
+      "url": "/blog/limpar-cache-do-windows-update-softwaredistribution",
+      "scope": "10C/4",
+      "action": "verify_published",
+      "status": "OK",
+      "source": "cli",
+      "timestamp": "2026-08-31T19:47:02.355Z",
+      "details": {
+        "httpStatus": 200,
+        "schemas": [
+          "Organization",
+          "WebSite",
+          "BreadcrumbList",
+          "BlogPosting",
+          "Article",
+          "TechArticle",
+          "LocalBusiness",
+          "ProfessionalService",
+          "ComputerRepairService",
+          "ItemList",
+          "FAQPage"
+        ],
+        "canonical": "https://otecnicodeinformatica.com.br/blog/limpar-cache-do-windows-update-softwaredistribution"
+      },
+      "error": null
+    },
+    {
+      "id": "8fdedf14-a800-4b66-96b4-0f0b877c3785",
+      "url": "/blog/windows-update-travado-desfazendo-alteracoes",
+      "scope": "10C/4",
+      "action": "verify_published",
+      "status": "OK",
+      "source": "cli",
+      "timestamp": "2026-08-31T19:47:02.460Z",
+      "details": {
+        "httpStatus": 200,
+        "schemas": [
+          "Organization",
+          "WebSite",
+          "BreadcrumbList",
+          "BlogPosting",
+          "Article",
+          "TechArticle",
+          "LocalBusiness",
+          "ProfessionalService",
+          "ComputerRepairService",
+          "ItemList",
+          "FAQPage"
+        ],
+        "canonical": "https://otecnicodeinformatica.com.br/blog/windows-update-travado-desfazendo-alteracoes"
+      },
+      "error": null
+    },
+    {
+      "id": "05aac804-a315-4fec-97b6-cb935f2dc973",
+      "url": "/problemas/windows-nao-inicia",
+      "scope": "CASO/0xc0000428",
+      "action": "verify_published",
+      "status": "OK",
+      "source": "cli",
+      "timestamp": "2026-08-31T19:47:02.566Z",
+      "details": {
+        "httpStatus": 200,
+        "schemas": [
+          "Organization",
+          "WebSite",
+          "FAQPage",
+          "TechArticle",
+          "WebPage",
+          "BreadcrumbList",
+          "LocalBusiness",
+          "ProfessionalService",
+          "ComputerRepairService"
+        ],
+        "canonical": "https://otecnicodeinformatica.com.br/problemas/windows-nao-inicia"
+      },
+      "error": null
+    },
+    {
+      "id": "d2043f45-238e-4efd-a710-9c4a66c2dd32",
+      "url": "https://otecnicodeinformatica.com.br/sitemap.xml",
+      "scope": "ONDA-10C",
+      "action": "submit_sitemap",
+      "status": "SUBMITTED",
+      "source": "cli",
+      "timestamp": "2026-08-31T19:47:02.890Z",
+      "details": {
+        "site": "sc-domain:otecnicodeinformatica.com.br"
+      },
+      "error": null
+    },
+    {
+      "id": "85ab0071-4c29-4fb4-82e1-f8f4e511ab71",
+      "url": "/blog/limpar-arquivos-temporarios-windows",
+      "scope": "10C/0",
+      "action": "submit_indexnow",
+      "status": "SUBMITTED",
+      "source": "cli",
+      "timestamp": "2026-08-31T19:47:03.353Z",
+      "details": {
+        "httpStatus": 200
+      },
+      "error": null
+    },
+    {
+      "id": "49ea7c09-de95-4b4b-af7e-2bf9202c0fed",
+      "url": "/blog/memoria-ram-insuficiente-sintomas",
+      "scope": "10C/0",
+      "action": "submit_indexnow",
+      "status": "SUBMITTED",
+      "source": "cli",
+      "timestamp": "2026-08-31T19:47:03.353Z",
+      "details": {
+        "httpStatus": 200
+      },
+      "error": null
+    },
+    {
+      "id": "b58f35ea-8a98-44a2-9377-19365787f51d",
+      "url": "/blog/codigos-de-erro-tela-azul-windows",
+      "scope": "10C/0",
+      "action": "submit_indexnow",
+      "status": "SUBMITTED",
+      "source": "cli",
+      "timestamp": "2026-08-31T19:47:03.353Z",
+      "details": {
+        "httpStatus": 200
+      },
+      "error": null
+    },
+    {
+      "id": "e9787f6b-f665-4f90-87d0-5702d7baa410",
+      "url": "/blog/testar-memoria-ram-memtest86",
+      "scope": "10C/0",
+      "action": "submit_indexnow",
+      "status": "SUBMITTED",
+      "source": "cli",
+      "timestamp": "2026-08-31T19:47:03.353Z",
+      "details": {
+        "httpStatus": 200
+      },
+      "error": null
+    },
+    {
+      "id": "703b8459-b1e7-4e36-8101-6e8359f0a80b",
+      "url": "/blog/botao-power-nao-funciona-jump-start-placa-mae",
+      "scope": "10D/1",
+      "action": "submit_indexnow",
+      "status": "SUBMITTED",
+      "source": "cli",
+      "timestamp": "2026-08-31T19:47:03.353Z",
+      "details": {
+        "httpStatus": 200
+      },
+      "error": null
+    },
+    {
+      "id": "2b585425-7fc5-4b8a-8750-12393cd18d5d",
+      "url": "/blog/curto-circuito-placa-mae-como-identificar",
+      "scope": "10D/1",
+      "action": "submit_indexnow",
+      "status": "SUBMITTED",
+      "source": "cli",
+      "timestamp": "2026-08-31T19:47:03.353Z",
+      "details": {
+        "httpStatus": 200
+      },
+      "error": null
+    },
+    {
+      "id": "0371de40-a34c-4bd9-ba97-29d0431bec24",
+      "url": "/blog/bios-corrompida-reset-cmos-atualizacao",
+      "scope": "10D/1",
+      "action": "submit_indexnow",
+      "status": "SUBMITTED",
+      "source": "cli",
+      "timestamp": "2026-08-31T19:47:03.353Z",
+      "details": {
+        "httpStatus": 200
+      },
+      "error": null
+    },
+    {
+      "id": "85c5c421-5fbb-4149-89ef-14d0311ec711",
+      "url": "/blog/internet-lenta-provedor-ou-roteador",
+      "scope": "10C/2",
+      "action": "submit_indexnow",
+      "status": "SUBMITTED",
+      "source": "cli",
+      "timestamp": "2026-08-31T19:47:03.353Z",
+      "details": {
+        "httpStatus": 200
+      },
+      "error": null
+    },
+    {
+      "id": "f4955d3f-d814-4fbb-8468-a5d2454186fa",
+      "url": "/blog/impressora-offline-como-resolver",
+      "scope": "10C/2",
+      "action": "submit_indexnow",
+      "status": "SUBMITTED",
+      "source": "cli",
+      "timestamp": "2026-08-31T19:47:03.353Z",
+      "details": {
+        "httpStatus": 200
+      },
+      "error": null
+    },
+    {
+      "id": "8f3dd3e5-f770-46f5-bdd7-372ec5722a44",
+      "url": "/blog/fila-de-impressao-travada-spooler-windows",
+      "scope": "10C/2",
+      "action": "submit_indexnow",
+      "status": "SUBMITTED",
+      "source": "cli",
+      "timestamp": "2026-08-31T19:47:03.353Z",
+      "details": {
+        "httpStatus": 200
+      },
+      "error": null
+    },
+    {
+      "id": "0014f131-0135-4fb3-8009-80de955e6be7",
+      "url": "/blog/hd-nao-e-reconhecido-na-bios-o-que-fazer",
+      "scope": "10C/3",
+      "action": "submit_indexnow",
+      "status": "SUBMITTED",
+      "source": "cli",
+      "timestamp": "2026-08-31T19:47:03.353Z",
+      "details": {
+        "httpStatus": 200
+      },
+      "error": null
+    },
+    {
+      "id": "5886b6da-b89d-4a42-820d-303b9c35b8e7",
+      "url": "/blog/ssd-nvme-nao-aparece-no-gerenciador-de-discos",
+      "scope": "10C/3",
+      "action": "submit_indexnow",
+      "status": "SUBMITTED",
+      "source": "cli",
+      "timestamp": "2026-08-31T19:47:03.353Z",
+      "details": {
+        "httpStatus": 200
+      },
+      "error": null
+    },
+    {
+      "id": "a8ab01cc-bd4f-41f4-ba22-f8ee47b25624",
+      "url": "/blog/disco-com-setores-defeituosos-smart-o-que-fazer",
+      "scope": "10C/3",
+      "action": "submit_indexnow",
+      "status": "SUBMITTED",
+      "source": "cli",
+      "timestamp": "2026-08-31T19:47:03.353Z",
+      "details": {
+        "httpStatus": 200
+      },
+      "error": null
+    },
+    {
+      "id": "c081127e-b681-4141-9ac2-89dcb5e1fa2b",
+      "url": "/blog/computador-sem-som-o-que-verificar",
+      "scope": "10C/3",
+      "action": "submit_indexnow",
+      "status": "SUBMITTED",
+      "source": "cli",
+      "timestamp": "2026-08-31T19:47:03.353Z",
+      "details": {
+        "httpStatus": 200
+      },
+      "error": null
+    },
+    {
+      "id": "75dadfd2-75b0-4177-9bfb-7ac018f06a4c",
+      "url": "/blog/fone-de-ouvido-nao-e-reconhecido-no-pc",
+      "scope": "10C/3",
+      "action": "submit_indexnow",
+      "status": "SUBMITTED",
+      "source": "cli",
+      "timestamp": "2026-08-31T19:47:03.353Z",
+      "details": {
+        "httpStatus": 200
+      },
+      "error": null
+    },
+    {
+      "id": "e11cc99e-e1fb-4a0b-b055-d6c9f9ac5372",
+      "url": "/blog/servico-de-audio-do-windows-nao-esta-em-execucao",
+      "scope": "10C/3",
+      "action": "submit_indexnow",
+      "status": "SUBMITTED",
+      "source": "cli",
+      "timestamp": "2026-08-31T19:47:03.353Z",
+      "details": {
+        "httpStatus": 200
+      },
+      "error": null
+    },
+    {
+      "id": "514163c4-3507-4fe4-aa75-d08d09f49f50",
+      "url": "/blog/webcam-nao-funciona-o-que-verificar",
+      "scope": "10C/4",
+      "action": "submit_indexnow",
+      "status": "SUBMITTED",
+      "source": "cli",
+      "timestamp": "2026-08-31T19:47:03.353Z",
+      "details": {
+        "httpStatus": 200
+      },
+      "error": null
+    },
+    {
+      "id": "c8e68be1-cbad-4a70-8f25-f21afcdbc128",
+      "url": "/blog/permissoes-de-camera-no-windows",
+      "scope": "10C/4",
+      "action": "submit_indexnow",
+      "status": "SUBMITTED",
+      "source": "cli",
+      "timestamp": "2026-08-31T19:47:03.353Z",
+      "details": {
+        "httpStatus": 200
+      },
+      "error": null
+    },
+    {
+      "id": "3aab7a7b-4420-436f-a126-e4ceb3043023",
+      "url": "/blog/webcam-usb-nao-e-detectada",
+      "scope": "10C/4",
+      "action": "submit_indexnow",
+      "status": "SUBMITTED",
+      "source": "cli",
+      "timestamp": "2026-08-31T19:47:03.353Z",
+      "details": {
+        "httpStatus": 200
+      },
+      "error": null
+    },
+    {
+      "id": "e7a049d3-aea7-4438-b2d2-1b148bc52cbf",
+      "url": "/blog/windows-update-nao-funciona-o-que-verificar",
+      "scope": "10C/4",
+      "action": "submit_indexnow",
+      "status": "SUBMITTED",
+      "source": "cli",
+      "timestamp": "2026-08-31T19:47:03.353Z",
+      "details": {
+        "httpStatus": 200
+      },
+      "error": null
+    },
+    {
+      "id": "7938303b-8a66-4540-acea-e057d7d2224d",
+      "url": "/blog/limpar-cache-do-windows-update-softwaredistribution",
+      "scope": "10C/4",
+      "action": "submit_indexnow",
+      "status": "SUBMITTED",
+      "source": "cli",
+      "timestamp": "2026-08-31T19:47:03.353Z",
+      "details": {
+        "httpStatus": 200
+      },
+      "error": null
+    },
+    {
+      "id": "94f688d6-64e6-4d37-a89f-2d5712ffe7b2",
+      "url": "/blog/windows-update-travado-desfazendo-alteracoes",
+      "scope": "10C/4",
+      "action": "submit_indexnow",
+      "status": "SUBMITTED",
+      "source": "cli",
+      "timestamp": "2026-08-31T19:47:03.353Z",
+      "details": {
+        "httpStatus": 200
+      },
+      "error": null
+    },
+    {
+      "id": "9c162fac-22dc-4117-afdc-f80dd9d8315c",
+      "url": "/problemas/windows-nao-inicia",
+      "scope": "CASO/0xc0000428",
+      "action": "submit_indexnow",
+      "status": "SUBMITTED",
+      "source": "cli",
+      "timestamp": "2026-08-31T19:47:03.353Z",
+      "details": {
+        "httpStatus": 200
+      },
+      "error": null
+    }
+  ],
+  "verdictsAtualizadoEm": "2026-08-31T19:47:52.120Z"
+}
