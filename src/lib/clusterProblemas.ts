@@ -10,6 +10,8 @@ export type ClusterFaq = { q: string; a: string };
 
 export type ClusterSchemaEntity = {
   "@type": string;
+  /** Variações reais do mesmo termo/código (aliases de busca). */
+  alternateName?: string[];
   name: string;
   description?: string;
   sameAs?: string;
