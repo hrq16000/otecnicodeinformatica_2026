@@ -306,6 +306,19 @@ export default function EditorialAuditoriaPanel({ lote }: { lote: string }) {
         </Card>
       )}
 
+      {execucoesSessao.length > 0 && (
+        <Card className="mb-4 p-3 text-xs" data-testid="auditoria-execucoes-sessao">
+          <p className="mb-1 uppercase text-muted-foreground">Execuções desta sessão</p>
+          <ul className="space-y-1">
+            {execucoesSessao.map((e) => (
+              <li key={`${e.em}-${e.payload}`} className="text-muted-foreground">
+                {new Date(e.em).toLocaleString("pt-BR")} · {e.estado} · <code>{e.payload}</code>
+              </li>
+            ))}
+          </ul>
+        </Card>
+      )}
+
       <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
         {kpis.map((k) => (
           <Card key={k.id} className="p-4">
