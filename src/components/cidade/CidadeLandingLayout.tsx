@@ -20,6 +20,7 @@ import { trackPageView, trackCTAClick } from "@/lib/analytics";
 import { BlocosLocal4c } from "@/components/local/BlocosLocal4c";
 import {
   SERVICOS_CANONICOS,
+  CIDADES,
   PROCESSO_ATENDIMENTO,
   MODALIDADES_ATENDIMENTO,
   CURITIBA_BAIRROS,
@@ -265,6 +266,37 @@ export const CidadeLandingLayout = ({ data }: { data: CidadeData }) => {
             </div>
           </section>
         )}
+
+        {/* Malha cidade ↔ cidade: toda landing local aponta para as demais
+            cidades reais, sem criar combinações programáticas rasas. */}
+        <section className="border-b border-border/60 bg-background py-12 md:py-16">
+          <div className="container mx-auto">
+            <h2 className="text-2xl font-heading font-bold text-foreground md:text-3xl">
+              Outras cidades atendidas na região
+            </h2>
+            <p className="mt-2 max-w-2xl text-muted-foreground">
+              Compare a cobertura e encontre a página local correspondente à sua cidade. Cada uma
+              mantém informações próprias sobre logística, sintomas e formas de atendimento.
+            </p>
+            <div className="mt-7 flex flex-wrap gap-2">
+              {Object.values(CIDADES)
+                .filter((cidade) => cidade.slug !== data.slug)
+                .map((cidade) => (
+                  <Link
+                    key={cidade.slug}
+                    to={`/tecnico-informatica-${cidade.slug}`}
+                    className="inline-flex items-center gap-1.5 rounded-full border border-border px-3.5 py-2 text-sm font-medium text-muted-foreground transition-colors hover:border-accent/45 hover:text-accent"
+                  >
+                    <MapPin className="h-3.5 w-3.5 text-accent" aria-hidden="true" />
+                    {cidade.cidade}
+                  </Link>
+                ))}
+            </div>
+            <Link to="/bairros" className="mt-5 inline-flex items-center gap-1 text-sm font-semibold text-accent hover:underline">
+              Ver bairros atendidos <ArrowRight className="h-4 w-4" />
+            </Link>
+          </div>
+        </section>
 
 
         {/* Quando chamar um técnico */}
