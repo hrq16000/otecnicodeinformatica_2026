@@ -1119,6 +1119,20 @@ export function jsonLdFor(route) {
   const url = `${SITE}${path === "/" ? "/" : path}`;
   const fam = familyOf(path);
   const out = [organization(), website()];
+  const articleImage = route.article?.image
+    ? {
+        "@type": "ImageObject",
+        "@id": `${url}#evidence-image`,
+        url: `${SITE}${route.article.image.src}`,
+        contentUrl: `${SITE}${route.article.image.src}`,
+        width: route.article.image.width,
+        height: route.article.image.height,
+        caption: route.article.image.caption,
+        description: route.article.image.alt,
+        creditText: route.article.image.creditText,
+        representativeOfPage: true,
+      }
+    : null;
 
   if (fam === "home") {
     out.push(localBusiness("/", { description: route.description }));
@@ -1150,6 +1164,28 @@ export function jsonLdFor(route) {
     EXTRA_SERVICE_PATHS.has(path)
   ) {
     out.push(serviceNode(route));
+  }
+
+  if (route.article) {
+    out.push({
+      "@context": "https://schema.org",
+      "@type": "TechArticle",
+      "@id": `${url}#article`,
+      headline: h1For(route),
+      description: route.description,
+      url,
+      inLanguage: "pt-BR",
+      datePublished: route.article.datePublished,
+      dateModified: route.article.dateModified,
+      keywords: route.article.keywords.join(", "),
+      author: { "@id": `${SITE}/#organization` },
+      publisher: { "@id": `${SITE}/#organization` },
+      mainEntityOfPage: { "@id": `${url}#webpage` },
+      about: route.article.about,
+      mentions: route.article.mentions,
+      citation: route.article.citation,
+      image: articleImage ?? `${SITE}${SITE_CONFIG.ogImage}`,
+    });
   }
 
   const hasService = out.some((n) => n["@type"] === "Service");
@@ -1204,6 +1240,14 @@ export function jsonLdFor(route) {
       inLanguage: "pt-BR",
       isPartOf: { "@id": `${SITE}/#website` },
       publisher: { "@id": `${SITE}/#organization` },
+      ...(route.article
+        ? {
+            about: route.article.about,
+            mentions: route.article.mentions,
+            mainEntity: { "@id": `${url}#article` },
+            ...(articleImage ? { primaryImageOfPage: { "@id": `${url}#evidence-image` } } : {}),
+          }
+        : {}),
     });
   }
 
@@ -1264,6 +1308,7 @@ export function slotFor(schema) {
   if (types.some((t) => /LocalBusiness|ComputerRepairService|ProfessionalService/.test(t))) return "local-business";
   if (types.includes("Service")) return "service";
   if (types.includes("FAQPage")) return "faq";
+  if (types.some((t) => ["Article", "TechArticle", "BlogPosting"].includes(t))) return "article";
   if (types.includes("AboutPage")) return "about-page";
   if (types.includes("ContactPage")) return "contact-page";
   if (types.includes("ImageObject")) return "image";

@@ -8,6 +8,26 @@
 
 export type ClusterFaq = { q: string; a: string };
 
+export type ClusterSchemaEntity = {
+  "@type": string;
+  name: string;
+  description?: string;
+  sameAs?: string;
+  termCode?: string;
+  inDefinedTermSet?: string;
+  applicationCategory?: string;
+  operatingSystem?: string;
+};
+
+export type ClusterEvidencia = {
+  src: string;
+  alt: string;
+  width: number;
+  height: number;
+  caption: string;
+  creditText: string;
+};
+
 export type ClusterProblema = {
   slug: string;
   path: string;
@@ -30,6 +50,16 @@ export type ClusterProblema = {
    */
   ponteEditorial?: { antes: string; to: string; anchor: string; depois: string };
   foto?: string;           // slug em fotosLicenciadas
+  /** Evidência própria ou fornecida para análise, sem atribuição de licença externa. */
+  evidencia?: ClusterEvidencia;
+  /** Entidades verificáveis que ancoram o TechArticle no grafo semântico. */
+  schema?: {
+    datePublished: string;
+    dateModified: string;
+    keywords: string[];
+    about: ClusterSchemaEntity[];
+    mentions: ClusterSchemaEntity[];
+  };
 };
 
 export const CLUSTER_PROBLEMAS: ClusterProblema[] = [
@@ -1019,105 +1049,107 @@ export const CLUSTER_PROBLEMAS: ClusterProblema[] = [
   {
     slug: "windows-nao-inicia",
     path: "/problemas/windows-nao-inicia",
-    titulo: "Windows não inicia: para em logotipo, reinicia em loop ou pede reparo",
-    metaTitle: "Windows não inicia: causas, o que anotar e como resolver | O Técnico de Informática",
+    titulo: "Windows não inicia: erro 0xc0000428, reparo automático e loop de boot",
+    metaTitle: "Erro 0xc0000428: Windows não inicia | Técnico de Informática",
     metaDescription:
-      "Windows que trava no logotipo, entra em reparo automático ou reinicia em loop tem causas separáveis: inicialização, disco, sistema de arquivos ou atualização. Veja o que checar.",
+      "PC liga, mas o Windows exibe 0xc0000428, reparo automático ou loop? Entenda assinatura digital, WinRE, BitLocker e a ordem segura sem formatar.",
     resumo:
-      "Quando o equipamento liga, mostra a marca do fabricante e o sistema não chega à área de trabalho, o hardware normalmente está vivo — o que falhou está entre a partida do disco e o carregamento do Windows. Separar essas camadas é o que evita a formatação apressada que apaga arquivos ainda perfeitamente recuperáveis.",
+      "Se a máquina acende e chega à tela de Recuperação, ela não é um “PC que não liga”: o firmware e parte da inicialização funcionaram, mas isso não prova que SSD, memória ou outros componentes estejam saudáveis. No código 0xc0000428, o Windows informa que não conseguiu validar o hash ou a assinatura de uma imagem de inicialização. O arquivo citado na tela e a mudança que antecedeu o erro determinam o próximo teste.",
     waMessage:
       "Olá! Vim da página sobre Windows que não inicia. Meu sistema não abre e preciso de diagnóstico sem perder arquivos.",
     sintomas: [
       {
-        titulo: "Trava no logotipo com o círculo girando",
-        desc: "A partida encontrou o disco, mas algum serviço ou driver não conclui a carga. Costuma ser resolvido em modo de segurança, sem tocar nos arquivos do usuário.",
+        titulo: "Recuperação com o código 0xc0000428",
+        desc: "Esse código corresponde a STATUS_INVALID_IMAGE_HASH: o Windows não encontrou nos catálogos o hash necessário para validar uma imagem carregada na partida. Corrupção, catálogo incoerente ou driver crítico incompatível são hipóteses; o código sozinho não prova vírus nem disco defeituoso.",
       },
       {
-        titulo: "Tela azul de 'Reparo Automático' repetindo",
-        desc: "O Windows tentou se consertar e não conseguiu. É sinal de estrutura de arquivos danificada, quase sempre depois de desligamento abrupto ou queda de energia.",
+        titulo: "Reparo Automático volta para a mesma tela",
+        desc: "O Ambiente de Recuperação foi acionado, mas a correção automática não resolveu. Arquivos de sistema, configuração de inicialização, atualização pendente, driver ou leitura da unidade precisam ser separados antes de repetir reparos.",
       },
       {
         titulo: "Mensagem de dispositivo de inicialização não encontrado",
-        desc: "A placa-mãe não enxerga a unidade. Antes de concluir que o disco morreu, verifica-se ordem de boot, cabo, conector M.2 e reconhecimento na configuração da própria placa.",
+        desc: "O firmware não encontrou uma entrada inicializável. A unidade pode não estar reconhecida, a ordem de boot pode ter mudado ou a partição EFI pode estar danificada; a mensagem não autoriza concluir, sozinha, que o SSD morreu.",
       },
       {
         titulo: "Reinicia sozinho antes de chegar à senha",
-        desc: "Ciclo de reinício precoce mistura duas famílias de causa: atualização mal aplicada e memória instável. O teste de memória separa uma da outra em poucos minutos.",
+        desc: "O ciclo pode começar após atualização, driver, alteração de firmware ou falha de leitura. O momento exato do reinício, os logs e os testes da unidade e da memória é que diferenciam software de hardware.",
       },
       {
         titulo: "Abre em tela preta com o cursor",
-        desc: "O sistema carregou, mas a interface não subiu. Perfil de usuário corrompido e driver de vídeo são os suspeitos mais frequentes nesse cenário.",
+        desc: "O carregamento avançou além do firmware, mas a interface não apareceu. Driver de vídeo, shell do Windows, atualização e perfil do usuário entram na investigação; é um estágio diferente do erro de assinatura na partida.",
       },
     ],
     causas: [
       {
-        titulo: "Atualização interrompida",
-        desc: "Desligar a máquina durante uma atualização deixa arquivos do sistema pela metade. O caminho é reverter a alteração pendente, não reinstalar tudo.",
+        titulo: "Arquivo crítico ou catálogo de assinatura incoerente",
+        desc: "Uma atualização interrompida, corrupção de dados ou substituição incompleta pode deixar o arquivo de boot diferente do hash registrado. O nome do arquivo exibido ajuda a localizar a camada afetada.",
       },
       {
-        titulo: "Sistema de arquivos danificado",
-        desc: "Queda de energia e desligamento pelo botão corrompem a tabela de arquivos. Ferramentas de verificação a partir da mídia de recuperação costumam devolver a partida.",
+        titulo: "Driver de partida incompatível ou sem assinatura válida",
+        desc: "Drivers de armazenamento, segurança e outros componentes carregados antes do login podem bloquear a partida quando são inadequados para aquela versão do Windows ou não passam na política de assinatura.",
       },
       {
-        titulo: "Disco no fim da vida útil",
-        desc: "Setores realocados e leituras que demoram segundos travam a inicialização antes de qualquer erro visível. A leitura dos indicadores de saúde da unidade responde isso objetivamente.",
+        titulo: "BCD ou partição de sistema EFI danificados",
+        desc: "A configuração BCD indica onde o Windows está e como deve iniciar; a partição EFI guarda os arquivos de boot em máquinas UEFI. Corrigir uma delas exige identificar as partições reais no ambiente de recuperação.",
       },
       {
-        titulo: "Driver incompatível recém-instalado",
-        desc: "Driver de vídeo, armazenamento ou periférico instalado fora do canal do fabricante quebra a carga. Em modo de segurança dá para remover o item exato pela data.",
+        titulo: "Falha de leitura ou sistema de arquivos corrompido",
+        desc: "SSD ou HD pode estar presente no firmware e ainda falhar ao ler setores críticos. Lentidão anormal, desaparecimento intermitente ou alertas SMART mudam a prioridade para cópia ou clonagem dos dados.",
       },
       {
-        titulo: "Configuração de partida alterada",
-        desc: "Troca de disco, mudança de modo de armazenamento na placa ou boot seguro reativado após limpeza da configuração fazem o sistema sumir sem ter defeito nenhum.",
+        titulo: "Mudança de firmware ou da política de segurança",
+        desc: "Alterar modo UEFI/Legacy, controlador de armazenamento, chaves do Secure Boot ou ordem de boot pode tornar uma instalação antes válida inacessível. A configuração anterior deve ser documentada antes de qualquer mudança.",
       },
     ],
     antesDeChamar: [
-      "Anote a mensagem exata que aparece na tela, inclusive o código com zero e x — ele reduz muito o tempo de diagnóstico.",
-      "Lembre o que mudou antes: atualização, driver novo, queda de energia, programa instalado ou troca de peça.",
-      "Retire pendrives, HD externo e cartão de memória e ligue de novo: mídia externa na ordem de partida provoca exatamente essa falha.",
-      "Tente iniciar em modo de segurança. Se o Windows abre nesse modo, o problema é de software e seus arquivos estão íntegros.",
-      "Se houver ruído no disco ou demora anormal para a tela mudar, pare os testes e trate a cópia dos arquivos como primeira etapa.",
+      "Fotografe a tela inteira, incluindo o código e o caminho do arquivo, se ele aparecer. Não resuma a mensagem: uma letra diferente muda o diagnóstico.",
+      "Registre a última alteração conhecida: atualização, driver, queda de energia, troca de SSD, clonagem, ajuste de BIOS/UEFI ou restauração de backup.",
+      "Remova pendrives, discos externos e cartões. No firmware, apenas confirme se a unidade interna aparece; não altere modo UEFI/Legacy ou SATA por tentativa.",
+      "Localize a chave de recuperação do BitLocker antes de usar ferramentas que possam solicitá-la. Sem a chave, não avance em ações que dependam do volume desbloqueado.",
+      "No Ambiente de Recuperação, comece pelo Reparo de Inicialização. Se o erro começou logo após uma atualização, Desinstalar Atualizações ou Restauração do Sistema são opções mais direcionadas.",
+      "Se a unidade some, faz ruído, responde muito devagar ou já emitia alerta de saúde, interrompa os testes: preservar ou clonar os dados vem antes do reparo lógico.",
     ],
     naoFaca: [
-      "Não aceite formatar como primeira sugestão: a maior parte desses casos é resolvida com os arquivos preservados.",
-      "Não repita reinícios forçados em sequência — cada desligamento abrupto aumenta o dano na estrutura de arquivos.",
-      "Não rode utilitário de reparo baixado de site desconhecido; parte deles reescreve a área de partida e piora o quadro.",
-      "Não reinstale o sistema por cima quando existir suspeita de disco defeituoso: a gravação nova ocupa justamente o espaço dos dados a recuperar.",
+      "Não desative permanentemente o Secure Boot nem a verificação de assinatura para “fazer iniciar”. A opção temporária do Windows serve para diagnóstico, não para manter um driver não confiável.",
+      "Não copie comandos de BCDBoot, BCDedit, DiskPart ou Bootrec assumindo que o Windows é C:. No WinRE, as letras podem mudar e o alvo errado pode sobrescrever a partição de boot.",
+      "Não use DiskPart clean, format, testsigning ou ferramentas de driver de origem desconhecida. Esses atalhos removem evidência, reduzem a segurança ou apagam a estrutura necessária para recuperar dados.",
+      "Não rode uma varredura pesada como CHKDSK /r em unidade com sinais de falha antes de copiar ou clonar os dados; a leitura intensiva pode piorar uma mídia instável.",
+      "Não reinstale o Windows antes de conferir backup, chave do BitLocker e saúde da unidade. Reinstalação não corrige defeito físico e pode sobrescrever arquivos recuperáveis.",
     ],
     modalidades: [
       {
-        titulo: "Suporte remoto quando o modo de segurança abre",
-        desc: "Com o sistema acessível em modo de segurança, reversão de atualização, remoção de driver e verificação de integridade são feitas por acesso remoto, sem deslocamento.",
+        titulo: "Orientação guiada no Ambiente de Recuperação",
+        desc: "Quando o WinRE abre e a unidade não mostra sinais de falha, a pessoa pode ser orientada a registrar o erro, conferir BitLocker e usar as opções oficiais na ordem segura. Acesso remoto só é possível se algum modo do Windows iniciar.",
       },
       {
-        titulo: "Atendimento no endereço",
-        desc: "Indicado quando a máquina não abre de jeito nenhum e o equipamento é fixo. Levamos mídia de recuperação e ferramenta de leitura de saúde do disco.",
+        titulo: "Diagnóstico presencial de boot",
+        desc: "Indicado quando o sistema não abre, o arquivo citado precisa ser identificado ou é necessário conferir firmware, partições, BCD, memória e estado da unidade sem aplicar comandos genéricos.",
       },
       {
-        titulo: "Bancada com cópia dos dados primeiro",
-        desc: "Quando o disco dá sinal de falha, a unidade é retirada, clonada e só então tratada. A ordem importa: copiar antes de reparar é o que preserva o que é insubstituível.",
+        titulo: "Bancada com prioridade para os dados",
+        desc: "Se a unidade está lenta, desaparece ou registra falhas, ela é avaliada separadamente e, quando tecnicamente viável, clonada antes do reparo. Não há promessa de recuperação antes da leitura do dispositivo.",
       },
     ],
     faq: [
       {
-        q: "Windows que não inicia significa formatar e perder tudo?",
-        a: "Na maioria dos atendimentos, não. Reversão de atualização, correção da estrutura de arquivos e remoção de driver resolvem com os documentos intactos. A formatação só entra quando o sistema está irrecuperável — e, mesmo assim, os arquivos são copiados antes.",
+        q: "O erro 0xc0000428 apaga meus arquivos?",
+        a: "Não por si só. O código informa uma falha de validação na inicialização, não uma exclusão de dados. Os arquivos podem continuar no volume, mas a condição do SSD ou HD e o BitLocker precisam ser verificados antes de afirmar que estão acessíveis.",
       },
       {
-        q: "Como sei se é o disco ou o sistema?",
-        a: "Pela leitura dos indicadores de saúde da unidade e pelo tempo de resposta na leitura. Disco saudável com sistema quebrado repara rápido; disco com setores realocados repete a falha em poucos dias mesmo depois de reinstalar.",
+        q: "Devo apertar F1 e entrar no Ambiente de Recuperação?",
+        a: "Sim, se a tela oferece essa opção e não há sinal de falha física. No WinRE, comece por Reparo de Inicialização. Antes de desinstalar atualizações, restaurar ou usar comandos, confirme que você tem a chave do BitLocker caso o volume esteja protegido.",
       },
       {
-        q: "Modo de segurança abre. Isso é bom sinal?",
-        a: "É ótimo sinal. Significa que o hardware está funcional, os arquivos estão acessíveis e a falha está em algum componente de software que pode ser identificado pela data de instalação.",
+        q: "É seguro desativar a imposição de assinatura de driver?",
+        a: "A opção temporária nas Configurações de Inicialização vale apenas para uma sessão e pode ajudar a confirmar que um driver bloqueia o boot. Ela não corrige a causa. Desativar a proteção permanentemente ou manter driver sem origem confiável reduz a segurança.",
       },
       {
-        q: "Perdi a senha de administrador. Muda alguma coisa?",
-        a: "Muda o caminho, não o resultado. A recuperação dos arquivos é feita com a unidade acessada em bancada. Não fazemos remoção de bloqueio em equipamento sem comprovação de propriedade.",
+        q: "Como diferenciar arquivo de boot corrompido de SSD com defeito?",
+        a: "O código não faz essa separação sozinho. Reconhecimento estável no firmware, tempo de leitura, indicadores SMART, erros de entrada e saída e repetição em outros arquivos ajudam a avaliar a unidade; logs e a resposta ao Reparo de Inicialização avaliam a camada do Windows.",
       },
       {
-        q: "Vale reinstalar o Windows num computador antigo?",
-        a: "Depende do conjunto. Em máquina com disco mecânico, reinstalar sozinho entrega pouco: o ganho real vem de trocar por SSD e, se couber, ampliar a memória. Informamos essa diferença antes, com peça e mão de obra separadas.",
+        q: "Por que a recuperação pede a chave do BitLocker?",
+        a: "O BitLocker cifra o volume para impedir leitura sem autorização. Algumas ferramentas do WinRE precisam desbloqueá-lo para acessar arquivos ou reparar o sistema. A chave pode estar na conta Microsoft, em conta corporativa, impressa ou salva pela pessoa que ativou a proteção.",
       },
     ],
     relacionados: [
@@ -1126,6 +1158,58 @@ export const CLUSTER_PROBLEMAS: ClusterProblema[] = [
       { to: "/problemas/computador-lento", titulo: "Computador lento", desc: "Partida demorada que ainda conclui pede outra investigação." },
       { to: "/problemas", titulo: "Outros sintomas", desc: "Volte ao hub e escolha o problema mais parecido com o seu." },
     ],
+    evidencia: {
+      src: "/casos-reais/windows-erro-0xc0000428.jpg",
+      alt: "Tela de Recuperação do Windows informando falha de assinatura digital e código 0xc0000428",
+      width: 1152,
+      height: 1536,
+      caption: "Exemplo real do erro 0xc0000428: o Windows chega ao Ambiente de Recuperação, mas bloqueia uma imagem cuja assinatura ou hash não pôde ser validado.",
+      creditText: "Registro técnico fornecido para análise; metadados removidos antes da publicação.",
+    },
+    schema: {
+      datePublished: "2026-08-13",
+      dateModified: "2026-08-31",
+      keywords: [
+        "Windows não inicia",
+        "erro 0xc0000428",
+        "STATUS_INVALID_IMAGE_HASH",
+        "assinatura digital do Windows",
+        "Ambiente de Recuperação do Windows",
+        "Reparo de Inicialização",
+        "BitLocker",
+        "Secure Boot",
+        "BCD",
+      ],
+      about: [
+        {
+          "@type": "SoftwareApplication",
+          name: "Microsoft Windows",
+          applicationCategory: "OperatingSystem",
+          operatingSystem: "Windows",
+          sameAs: "https://www.microsoft.com/windows",
+        },
+        {
+          "@type": "DefinedTerm",
+          name: "STATUS_INVALID_IMAGE_HASH",
+          termCode: "0xC0000428",
+          description: "Status do Windows para uma imagem cujo hash não foi encontrado nos catálogos do sistema.",
+          inDefinedTermSet: "https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-erref/596a1078-e883-4972-9bbc-49e60bebca55",
+        },
+      ],
+      mentions: [
+        {
+          "@type": "SoftwareApplication",
+          name: "Windows Recovery Environment",
+          applicationCategory: "SystemApplication",
+          operatingSystem: "Windows",
+          sameAs: "https://support.microsoft.com/en-us/windows/experience/backup-recovery/windows-recovery-environment",
+        },
+        { "@type": "Thing", name: "Startup Repair", sameAs: "https://support.microsoft.com/en-us/windows/experience/startup-boot/startup-repair" },
+        { "@type": "Thing", name: "BitLocker", sameAs: "https://support.microsoft.com/en-us/windows/security/encryption/bitlocker-overview" },
+        { "@type": "Thing", name: "Secure Boot", sameAs: "https://support.microsoft.com/en-us/windows/security/devicesecurity/windows-11-and-secure-boot" },
+        { "@type": "Thing", name: "Boot Configuration Data", sameAs: "https://learn.microsoft.com/en-us/windows-hardware/manufacture/desktop/bcdboot-command-line-options-techref-di" },
+      ],
+    },
   },
   {
     slug: "computador-esquentando",
