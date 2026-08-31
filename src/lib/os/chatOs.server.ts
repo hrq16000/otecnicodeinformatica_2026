@@ -460,7 +460,7 @@ export async function lerConversaAdmin(threadId: string) {
 
   await db.from("os_threads").update({ unread_admin: 0 }).eq("id", threadId);
 
-  let os: Record<string, unknown> | null = null;
+  let os: (OsResumo & { telefone: string | null }) | null = null;
   if (thread.os_id) {
     const { data } = await db
       .from("ordens_servico")
@@ -469,8 +469,24 @@ export async function lerConversaAdmin(threadId: string) {
       )
       .eq("id", thread.os_id)
       .maybeSingle();
-    os = data as Record<string, unknown> | null;
+    os = data
+      ? {
+          protocolo: data.protocolo,
+          status: data.status,
+          modalidade: data.modalidade,
+          equipamento: data.equipamento,
+          marcaModelo: data.marca_modelo,
+          clienteNome: data.cliente_nome,
+          telefone: data.telefone,
+          previsaoConclusao: data.previsao_conclusao,
+          observacoesPublicas: data.observacoes_publicas,
+          criadaEm: data.created_at,
+          atualizadaEm: data.updated_at,
+          etapas: normalizarEtapas(data.etapas),
+        }
+      : null;
   }
+
 
   return { thread, os, mensagens: await montarMensagens(threadId) };
 }
