@@ -144,7 +144,37 @@ if (caso0428) {
   });
 }
 
+// Cruzamento com o ledger de submissões (sitemap + IndexNow): cada URL passa a
+// carregar a prova operacional do envio e o veredito observado é escrito de
+// volta, fechando a trilha de auditoria "publicado → submetido → veredito".
+const submissoes = ler("public/editorial-submissions.json");
+if (submissoes?.urls?.length) {
+  const porUrl = new Map(submissoes.urls.map((s) => [s.url, s]));
+  for (const u of urls) {
+    const s = porUrl.get(u.url);
+    if (!s) continue;
+    u.submittedViaSitemap = Boolean(s.submitted_via_sitemap);
+    u.submittedViaIndexNow = Boolean(s.submitted_via_indexnow);
+    u.lastSubmissionAt = s.last_submission_at ?? null;
+    u.publicadoNoSite = Boolean(s.publicado);
+    u.canonicalValidado = Boolean(s.canonical_valido);
+    u.schemaValidado = Boolean(s.schema_valido);
+    u.errosPublicacao = s.erros ?? [];
+    if (s.last_verdict !== u.veredito) {
+      s.historico = [...(s.historico ?? []), { at: agora, action: "verdict_change", de: s.last_verdict ?? null, para: u.veredito }].slice(-40);
+    }
+    s.last_verdict = u.veredito;
+    s.last_verdict_checked_at = agora;
+  }
+  submissoes.verdictsAtualizadoEm = agora;
+  writeFileSync(
+    resolve(process.cwd(), "public/editorial-submissions.json"),
+    `${JSON.stringify(submissoes, null, 2)}\n`,
+  );
+}
+
 const contagem = urls.reduce((acc, u) => {
+
   acc[u.veredito] = (acc[u.veredito] ?? 0) + 1;
   return acc;
 }, {});
