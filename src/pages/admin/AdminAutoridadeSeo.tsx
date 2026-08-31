@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from "react";
+import { Fragment, useEffect, useMemo, useState } from "react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
@@ -215,8 +215,8 @@ export default function AdminAutoridadeSeo() {
               </thead>
               <tbody>
                 {linhas.map((u) => (
-                  <>
-                    <tr key={u.url} className="border-t align-top">
+                  <Fragment key={u.url}>
+                    <tr className="border-t align-top">
                       <td className="p-3">
                         <a className="underline" href={u.url} target="_blank" rel="noreferrer">
                           {u.url}
@@ -264,7 +264,7 @@ export default function AdminAutoridadeSeo() {
                       </td>
                     </tr>
                     {aberta === u.url && !u.erro && (
-                      <tr key={`${u.url}-detalhe`} className="border-t bg-muted/30">
+                      <tr className="border-t bg-muted/30">
                         <td colSpan={8} className="p-4">
                           <div className="grid gap-4 md:grid-cols-3">
                             <div>
@@ -336,7 +336,7 @@ export default function AdminAutoridadeSeo() {
                         </td>
                       </tr>
                     )}
-                  </>
+                  </Fragment>
                 ))}
               </tbody>
             </table>
