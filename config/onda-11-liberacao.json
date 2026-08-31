@@ -1,0 +1,14 @@
+{
+  "$comment": "Liberação manual e explícita do gate da Onda 11 / Lote 4. Sem este arquivo (ou com liberado=false) o gate volta a exigir a consolidação integral da Onda 10C no Search Console. Nunca gerar automaticamente.",
+  "onda": "11A",
+  "lote": "4",
+  "liberado": true,
+  "autorizadoPor": "Henrique Rodrigues (responsável editorial)",
+  "autorizadoEm": "2026-08-31T21:23:00Z",
+  "motivo": "Publicação manual autorizada: conteúdo revisado, capas reais licenciadas e fact-check registrados. A Onda 10C segue em observação (20/23 PUBLISHED), mas o Lote 4 não disputa intenção com as 3 URLs pendentes.",
+  "slugs": [
+    "boot-uefi-ou-legacy-como-identificar",
+    "ordem-de-boot-na-bios-como-configurar",
+    "windows-reparo-automatico-em-loop"
+  ]
+}
