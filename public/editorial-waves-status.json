@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-08-31T17:57:03.528Z",
+  "geradoEm": "2026-08-31T21:55:48.950Z",
   "site": "sc-domain:otecnicodeinformatica.com.br",
   "disponivel": true,
   "lotes": [
@@ -32,6 +32,12 @@
       "total": 6,
       "indexadas": 5,
       "cobertura": 83.3
+    },
+    {
+      "lote": "11A/4",
+      "total": 3,
+      "indexadas": 0,
+      "cobertura": 0
     }
   ],
   "rotas": [
@@ -50,9 +56,9 @@
       "sitemapLastmod": null,
       "indexNowSentAt": null,
       "google": {
-        "status": "DISCOVERED",
+        "status": "NO_DATA",
         "verdict": "NEUTRAL",
-        "coverageState": "Discovered - currently not indexed",
+        "coverageState": "URL is unknown to Google",
         "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
         "indexingState": "INDEXING_STATE_UNSPECIFIED",
         "ultimoCrawl": null,
@@ -175,9 +181,9 @@
       "sitemapLastmod": null,
       "indexNowSentAt": null,
       "google": {
-        "status": "DISCOVERED",
+        "status": "NO_DATA",
         "verdict": "NEUTRAL",
-        "coverageState": "Discovered - currently not indexed",
+        "coverageState": "URL is unknown to Google",
         "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
         "indexingState": "INDEXING_STATE_UNSPECIFIED",
         "ultimoCrawl": null,
@@ -571,7 +577,7 @@
       "role": "satelite",
       "publishedAt": "2026-08-26",
       "internalState": "PUBLISHED",
-      "contentHash": "6b81d4a5cbe30481",
+      "contentHash": "b81c2bd88e8987d7",
       "sitemapLastmod": null,
       "indexNowSentAt": null,
       "google": {
@@ -584,7 +590,82 @@
         "canonicalGoogle": "https://otecnicodeinformatica.com.br/blog/windows-update-travado-desfazendo-alteracoes",
         "canonicalDeclarado": "https://otecnicodeinformatica.com.br/blog/windows-update-travado-desfazendo-alteracoes"
       }
+    },
+    {
+      "wave": "11A",
+      "batch": "4",
+      "lote": "11A/4",
+      "url": "/blog/boot-uefi-ou-legacy-como-identificar",
+      "urlAbsoluta": "https://otecnicodeinformatica.com.br/blog/boot-uefi-ou-legacy-como-identificar",
+      "ownerId": "modo-boot-uefi-legacy",
+      "cluster": "bios-uefi",
+      "role": "pilar",
+      "publishedAt": "2026-08-31",
+      "internalState": "PUBLISHED",
+      "contentHash": "bc469f3e44b8b03a",
+      "sitemapLastmod": null,
+      "indexNowSentAt": null,
+      "google": {
+        "status": "NO_DATA",
+        "verdict": "NEUTRAL",
+        "coverageState": "URL is unknown to Google",
+        "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+        "indexingState": "INDEXING_STATE_UNSPECIFIED",
+        "ultimoCrawl": null,
+        "canonicalGoogle": null,
+        "canonicalDeclarado": null
+      }
+    },
+    {
+      "wave": "11A",
+      "batch": "4",
+      "lote": "11A/4",
+      "url": "/blog/ordem-de-boot-na-bios-como-configurar",
+      "urlAbsoluta": "https://otecnicodeinformatica.com.br/blog/ordem-de-boot-na-bios-como-configurar",
+      "ownerId": "ordem-de-boot",
+      "cluster": "bios-uefi",
+      "role": "satelite",
+      "publishedAt": "2026-08-31",
+      "internalState": "PUBLISHED",
+      "contentHash": "cfa3a7f8a392f89f",
+      "sitemapLastmod": null,
+      "indexNowSentAt": null,
+      "google": {
+        "status": "NO_DATA",
+        "verdict": "NEUTRAL",
+        "coverageState": "URL is unknown to Google",
+        "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+        "indexingState": "INDEXING_STATE_UNSPECIFIED",
+        "ultimoCrawl": null,
+        "canonicalGoogle": null,
+        "canonicalDeclarado": null
+      }
+    },
+    {
+      "wave": "11A",
+      "batch": "4",
+      "lote": "11A/4",
+      "url": "/blog/windows-reparo-automatico-em-loop",
+      "urlAbsoluta": "https://otecnicodeinformatica.com.br/blog/windows-reparo-automatico-em-loop",
+      "ownerId": "reparo-automatico-loop",
+      "cluster": "inicializacao-windows",
+      "role": "satelite",
+      "publishedAt": "2026-08-31",
+      "internalState": "PUBLISHED",
+      "contentHash": "fcac1a3eca318119",
+      "sitemapLastmod": null,
+      "indexNowSentAt": null,
+      "google": {
+        "status": "NO_DATA",
+        "verdict": "NEUTRAL",
+        "coverageState": "URL is unknown to Google",
+        "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+        "indexingState": "INDEXING_STATE_UNSPECIFIED",
+        "ultimoCrawl": null,
+        "canonicalGoogle": null,
+        "canonicalDeclarado": null
+      }
     }
   ],
-  "alertasNovos": 22
+  "alertasNovos": 5
 }

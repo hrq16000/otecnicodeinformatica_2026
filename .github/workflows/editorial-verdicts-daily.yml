@@ -52,8 +52,22 @@ jobs:
           GSC_SITE_URL: ${{ secrets.GSC_SITE_URL }}
         run: npm run monitor:editorial-waves
 
+      # IndexNow (Bing/Yandex) das URLs editoriais aprovadas — fail-closed sem chave.
+      - name: IndexNow editorial
+        continue-on-error: true
+        env:
+          INDEXNOW_KEY: ${{ secrets.INDEXNOW_KEY }}
+        run: npm run indexnow:editorial
+
       - name: Ledger de vereditos
         run: npm run report:editorial-verdicts
+
+      - name: Consolidação de ondas e lotes
+        run: npm run report:editorial-lotes
+
+      - name: Validação técnica do Lote 4
+        continue-on-error: true
+        run: npm run validar:lote4
 
       - name: Gate da Onda 11 (informativo)
         continue-on-error: true
@@ -65,7 +79,9 @@ jobs:
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add public/editorial-verdicts.json public/editorial-verdicts-history.json \
                   public/editorial-submissions.json public/editorial/verdicts public/editorial/submissions \
-                  public/editorial-waves-status.json docs/relatorio-vereditos-indexacao.md
+                  public/editorial-waves-status.json public/editorial-lotes.json public/editorial/lotes \
+                  public/editorial-lote4-validacao.json docs/relatorio-vereditos-indexacao.md \
+                  docs/relatorio-lote4-validacao.md
           if git diff --cached --quiet; then
             echo "Sem variação no ledger."
           else

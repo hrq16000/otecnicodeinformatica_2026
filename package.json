@@ -354,7 +354,8 @@
     "report:external-authority": "node scripts/report-external-authority.mjs",
     "check:sitemap-rich": "node scripts/check-sitemap-rich.mjs",
     "submit:onda-10c": "node scripts/submit-onda-10c.mjs",
-    "report:editorial-lotes": "node scripts/report-editorial-lotes.mjs"
+    "report:editorial-lotes": "node scripts/report-editorial-lotes.mjs",
+    "validar:lote4": "node scripts/report-lote4-validacao.mjs"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.2",

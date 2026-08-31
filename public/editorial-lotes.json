@@ -1,9 +1,9 @@
 {
-  "geradoEm": "2026-08-31T21:31:42.643Z",
+  "geradoEm": "2026-08-31T21:56:07.842Z",
   "fonte": {
     "gscDisponivel": true,
-    "verdictsEm": "2026-08-31T21:04:32.441Z",
-    "submissionsEm": "2026-08-31T19:46:58.070Z",
+    "verdictsEm": "2026-08-31T21:56:00.608Z",
+    "submissionsEm": "2026-08-31T21:55:55.947Z",
     "sitemapDinamico": "sitemap-editorial.xml"
   },
   "liberacaoManual": {
@@ -96,8 +96,8 @@
       "batch": "4",
       "total": 3,
       "publicadas": 0,
-      "pendentes": 3,
-      "erros": 0,
+      "pendentes": 0,
+      "erros": 3,
       "rascunhos": 0,
       "aprovadas": 3,
       "noSitemap": 3,
@@ -121,7 +121,7 @@
       "noSitemap": true,
       "status": "PENDENTE",
       "veredito": "PENDING",
-      "estadoBusca": "DISCOVERED",
+      "estadoBusca": "NO_DATA",
       "ultimoCrawl": null,
       "submetidoSitemap": true,
       "submetidoIndexNow": true,
@@ -241,7 +241,7 @@
       "noSitemap": true,
       "status": "PENDENTE",
       "veredito": "PENDING",
-      "estadoBusca": "DISCOVERED",
+      "estadoBusca": "NO_DATA",
       "ultimoCrawl": null,
       "submetidoSitemap": true,
       "submetidoIndexNow": true,
@@ -647,17 +647,19 @@
       "lote": "11A/4",
       "aprovado": true,
       "noSitemap": true,
-      "status": "PENDENTE",
-      "veredito": "UNKNOWN",
-      "estadoBusca": "UNKNOWN",
+      "status": "ERRO",
+      "veredito": "PENDING",
+      "estadoBusca": "NO_DATA",
       "ultimoCrawl": null,
-      "submetidoSitemap": false,
+      "submetidoSitemap": true,
       "submetidoIndexNow": false,
       "ultimaAtualizacao": null,
-      "httpStatus": null,
-      "canonicalValido": null,
-      "schemaValido": null,
-      "erros": []
+      "httpStatus": 200,
+      "canonicalValido": true,
+      "schemaValido": true,
+      "erros": [
+        "robots noindex"
+      ]
     },
     {
       "wave": "11A",
@@ -671,17 +673,19 @@
       "lote": "11A/4",
       "aprovado": true,
       "noSitemap": true,
-      "status": "PENDENTE",
-      "veredito": "UNKNOWN",
-      "estadoBusca": "UNKNOWN",
+      "status": "ERRO",
+      "veredito": "PENDING",
+      "estadoBusca": "NO_DATA",
       "ultimoCrawl": null,
-      "submetidoSitemap": false,
+      "submetidoSitemap": true,
       "submetidoIndexNow": false,
       "ultimaAtualizacao": null,
-      "httpStatus": null,
-      "canonicalValido": null,
-      "schemaValido": null,
-      "erros": []
+      "httpStatus": 200,
+      "canonicalValido": true,
+      "schemaValido": true,
+      "erros": [
+        "robots noindex"
+      ]
     },
     {
       "wave": "11A",
@@ -695,17 +699,19 @@
       "lote": "11A/4",
       "aprovado": true,
       "noSitemap": true,
-      "status": "PENDENTE",
-      "veredito": "UNKNOWN",
-      "estadoBusca": "UNKNOWN",
+      "status": "ERRO",
+      "veredito": "PENDING",
+      "estadoBusca": "NO_DATA",
       "ultimoCrawl": null,
-      "submetidoSitemap": false,
+      "submetidoSitemap": true,
       "submetidoIndexNow": false,
       "ultimaAtualizacao": null,
-      "httpStatus": null,
-      "canonicalValido": null,
-      "schemaValido": null,
-      "erros": []
+      "httpStatus": 200,
+      "canonicalValido": true,
+      "schemaValido": true,
+      "erros": [
+        "robots noindex"
+      ]
     }
   ]
 }
