@@ -69,20 +69,32 @@ export default function EditorialAuditoriaPanel({ lote }: { lote: string }) {
   const [delta, setDelta] = useState<DeltaArtefato | null>(null);
   const [veredito, setVeredito] = useState<string>("UNKNOWN");
   const [bloqueio, setBloqueio] = useState<string | null>(null);
+  const [ultimoPayload, setUltimoPayload] = useState<Record<string, unknown> | null>(null);
+  const [execucoesSessao, setExecucoesSessao] = useState<Array<{ em: string; payload: string; estado: string }>>([]);
 
-  const carregar = useCallback(async (sobDemanda = false) => {
+  const carregar = useCallback(async (sobDemanda: boolean | Record<string, unknown> = false) => {
+    // `sobDemanda` como objeto = reexecução rápida com o payload anterior.
+    const reexecucao = typeof sobDemanda === "object" && sobDemanda !== null;
+    const payload = reexecucao ? (sobDemanda as Record<string, unknown>) : { lote };
     if (sobDemanda) {
       // Rate-limit + dedupe por rota E payload: variar o filtro de lote não
-      // burla o teto de execuções da rota.
-      const veredicto = permitirExecucao("/admin/editorial-ondas#auditoria", { lote });
+      // burla o teto de execuções da rota. A reexecução pula o dedupe (é o
+      // caso de falha de job) mas continua submetida ao teto da rota.
+      const veredicto = permitirExecucao(
+        "/admin/editorial-ondas#auditoria",
+        reexecucao ? { ...payload, reexecucao: Date.now() } : payload,
+      );
       if (!veredicto.permitido) {
         setBloqueio(veredicto.mensagem);
         return;
       }
       setBloqueio(null);
+      setUltimoPayload(payload);
     }
     setExecutando(true);
-    const [indexacao, indexnow, schema, assets, alertas, auditoria, deltaArt] = await Promise.all([
+    const chave = `auditoria-10c:${JSON.stringify(payload)}`;
+    const coleta = await enfileirar(chave, () =>
+      Promise.all([
       buscar<Record<string, any>>("/editorial-waves-status.json"),
       buscar<Record<string, any>>("/editorial-indexnow-status.json"),
       buscar<Record<string, any>>("/editorial-schema-diff.json"),
