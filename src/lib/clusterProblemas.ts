@@ -1192,6 +1192,16 @@ export const CLUSTER_PROBLEMAS: ClusterProblema[] = [
           "@type": "DefinedTerm",
           name: "STATUS_INVALID_IMAGE_HASH",
           termCode: "0xC0000428",
+          // Aliases reais do mesmo código, como aparecem na tela, em logs e nas
+          // buscas dos visitantes — ancoram a página para todas as variações.
+          alternateName: [
+            "0xc0000428",
+            "0xC0000428",
+            "c0000428",
+            "erro 0xc0000428",
+            "código de erro 0xc0000428",
+            "0x0000428",
+          ],
           description: "Status do Windows para uma imagem cujo hash não foi encontrado nos catálogos do sistema.",
           inDefinedTermSet: "https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-erref/596a1078-e883-4972-9bbc-49e60bebca55",
         },
