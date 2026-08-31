@@ -186,6 +186,139 @@ export const ENRIQUECIMENTO_1: Record<string, EnriquecimentoConteudo> = {
   },
 
   /* ------------------------------------------------------------------ */
+  /* PROBLEMA — Windows não inicia / 0xc0000428                          */
+  /* ------------------------------------------------------------------ */
+  "/problemas/windows-nao-inicia": {
+    respostaRapida:
+      "Na foto, o computador liga e chega ao Ambiente de Recuperação: portanto, o sintoma correto é “Windows não inicia”, não “PC não liga”. O código 0xc0000428 significa que o Windows não conseguiu validar o hash ou a assinatura de uma imagem carregada no boot; isso direciona a investigação para arquivo crítico, catálogo, driver, BCD/EFI e integridade da unidade, sem justificar formatação imediata.",
+    tabelaDiagnostica: {
+      titulo: "O que cada tela de inicialização realmente informa",
+      colunas: { sintoma: "Mensagem ou estágio", causa: "O que já é possível concluir", verificar: "Próxima verificação segura", acao: "Quando interromper" },
+      linhas: [
+        {
+          sintoma: "0xc0000428 — assinatura digital não pôde ser verificada",
+          causa: "O gerenciador de boot rejeitou uma imagem cujo hash não foi localizado nos catálogos; arquivo corrompido, catálogo incoerente ou driver crítico incompatível são hipóteses, não conclusões",
+          verificar: "Fotografar o caminho do arquivo citado, registrar a alteração anterior e abrir o WinRE pelo F1",
+          acao: "Não manter a verificação de assinatura desativada; se a unidade está instável, preservar dados primeiro",
+        },
+        {
+          sintoma: "Preparando Reparo Automático em ciclo",
+          causa: "O Windows detectou falha de partida e o reparo automático não eliminou a causa",
+          verificar: "Reparo de Inicialização uma vez; depois correlacionar com atualização, restauração e logs, em vez de repetir o ciclo",
+          acao: "Parar se cada tentativa demora mais, se a unidade desaparece ou se há ruído anormal",
+        },
+        {
+          sintoma: "No bootable device / dispositivo de inicialização ausente",
+          causa: "O firmware não encontrou uma entrada inicializável; pode ser reconhecimento da unidade, ordem de boot ou partição EFI",
+          verificar: "Confirmar no UEFI se o SSD/HD e o Windows Boot Manager aparecem, sem mudar modos por tentativa",
+          acao: "Se a unidade some entre reinícios, não insistir nem reinstalar",
+        },
+        {
+          sintoma: "Tela preta com cursor",
+          causa: "A inicialização avançou além do firmware; shell, perfil, atualização e vídeo passam a ser mais relevantes que a assinatura do boot",
+          verificar: "Configurações de Inicialização, Modo de Segurança e log de boot, quando disponíveis",
+          acao: "Se surgirem erros de leitura ou travamentos, mudar a prioridade para a unidade e os dados",
+        },
+        {
+          sintoma: "WinRE pede chave de recuperação",
+          causa: "O volume está protegido pelo BitLocker e a ferramenta precisa desbloqueá-lo; isso não indica defeito",
+          verificar: "Conta Microsoft, conta corporativa, impressão ou arquivo onde a chave foi salva; conferir o identificador exibido",
+          acao: "Não apagar TPM, não formatar e não prosseguir sem a chave correspondente",
+        },
+        {
+          sintoma: "Reinício antes da tela de login",
+          causa: "Atualização, driver, memória e leitura da unidade continuam possíveis; o ciclo sozinho não separa software de hardware",
+          verificar: "Momento do reinício, alteração recente, teste de memória e saúde/leitura da unidade",
+          acao: "Interromper reinícios forçados repetidos e qualquer teste destrutivo",
+        },
+      ],
+    },
+    blocos: [
+      {
+        id: "significado-0xc0000428",
+        titulo: "O significado técnico de 0xc0000428, sem alarmismo",
+        intro: "A referência de códigos da Microsoft associa 0xC0000428 a STATUS_INVALID_IMAGE_HASH. É uma informação sobre validação no carregamento, não um diagnóstico completo do equipamento.",
+        itens: [
+          { titulo: "“Imagem” não quer dizer foto", desc: "No vocabulário do Windows, imagem é um arquivo executável carregado pelo sistema, como o gerenciador de boot, um componente do Windows ou um driver. O arquivo citado na tela é uma evidência mais específica que o texto genérico do erro." },
+          { titulo: "Hash e assinatura cumprem papéis relacionados", desc: "O hash identifica o conteúdo exato do arquivo; a assinatura e os catálogos permitem verificar origem e integridade. Se o arquivo mudou, foi corrompido ou não corresponde ao catálogo esperado, a validação pode falhar." },
+          { titulo: "Não é prova automática de malware", desc: "Adulteração é uma possibilidade prevista pelo status, mas atualização incompleta, corrupção e driver inadequado também produzem incompatibilidade. A conclusão depende do arquivo, da linha do tempo e da integridade do disco." },
+          { titulo: "Também não condena o SSD", desc: "Uma unidade defeituosa pode corromper ou deixar de ler o arquivo, porém o código não contém um teste de saúde do armazenamento. Reconhecimento, SMART e comportamento de leitura precisam ser avaliados separadamente." },
+        ],
+      },
+      {
+        id: "camadas-inicializacao-windows",
+        titulo: "Mapa das entidades envolvidas na partida do Windows",
+        intro: "Localizar a camada que falhou impede que ferramentas corretas sejam aplicadas no alvo errado.",
+        itens: [
+          { titulo: "Firmware UEFI e Secure Boot", desc: "O UEFI reconhece os dispositivos e escolhe uma entrada de boot. O Secure Boot verifica componentes assinados no início da cadeia. Se a unidade nem aparece no firmware, ainda não é um problema de arquivo do Windows." },
+          { titulo: "Partição EFI e Windows Boot Manager", desc: "Em instalações UEFI, uma partição pequena e separada guarda os arquivos de inicialização. O Windows Boot Manager lê a configuração BCD e encaminha a carga para a instalação correta." },
+          { titulo: "BCD — Boot Configuration Data", desc: "O BCD descreve instalações, carregadores e parâmetros de partida. Entrada ausente ou apontando para volume errado pode impedir o boot mesmo quando os arquivos pessoais continuam intactos." },
+          { titulo: "Kernel e drivers críticos de boot", desc: "Depois do gerenciador, o Windows carrega o kernel e drivers essenciais, inclusive os de armazenamento. Um componente inválido nessa fase pode gerar 0xc0000428 antes de existir tela de login ou acesso remoto." },
+        ],
+      },
+      {
+        id: "ordem-recuperacao-sem-formatar",
+        titulo: "Ordem de recuperação que reduz risco e retrabalho",
+        intro: "A sequência abaixo usa primeiro as opções reversíveis do Ambiente de Recuperação e preserva as ações avançadas para quando o diagnóstico já identificou o alvo.",
+        itens: [
+          { titulo: "1. Registrar a evidência e retirar mídia externa", desc: "Guarde foto do código e do arquivo citado, anote a última alteração e remova pendrives, cartões e HDs externos. Confirme apenas se a unidade interna aparece no UEFI e se a entrada Windows Boot Manager existe." },
+          { titulo: "2. Preparar acesso ao BitLocker", desc: "Localize a chave antes de depender do volume. Ela pode estar na conta Microsoft, na organização que administra o aparelho, impressa ou em arquivo. O identificador da tela precisa corresponder à chave recuperada." },
+          { titulo: "3. Usar Reparo de Inicialização", desc: "A ferramenta oficial procura problemas como arquivos de sistema danificados e BCD corrompido. Execute-a uma vez e registre o resultado; repetir sem mudança não acrescenta diagnóstico." },
+          { titulo: "4. Reverter a mudança relacionada", desc: "Se o erro nasceu após atualização, use Desinstalar Atualizações. Se existe ponto anterior, a Restauração do Sistema devolve arquivos e configurações do sistema sem tratar documentos pessoais como alvo." },
+          { titulo: "5. Isolar driver sem tornar o PC inseguro", desc: "Modo de Segurança, log de boot e a opção temporária para desabilitar imposição de assinatura ajudam a confirmar um driver. Se o sistema abrir, remova ou substitua o componente por uma versão oficial; não transforme o bypass em configuração permanente." },
+          { titulo: "6. Só então reparar offline", desc: "Verificação offline dos arquivos do Windows e reconstrução do boot entram depois de identificar a instalação e a partição de sistema. Se o armazenamento está falhando, essa etapa espera pela cópia ou clonagem." },
+        ],
+      },
+      {
+        id: "ferramentas-avancadas-winre",
+        titulo: "Por que comandos de internet podem piorar o boot",
+        intro: "SFC e BCDBoot são ferramentas legítimas da Microsoft, mas dependem de contexto. O risco não está no nome do comando; está em aplicá-lo a letras e partições presumidas.",
+        itens: [
+          { titulo: "As letras mudam dentro do WinRE", desc: "A instalação que aparece como C: no uso normal pode receber outra letra na recuperação. Antes de SFC offline ou cópia de arquivos de boot, é necessário localizar a pasta Windows real e validar o volume." },
+          { titulo: "BCDBoot precisa de origem e destino corretos", desc: "A ferramenta copia arquivos de inicialização de uma instalação do Windows para a partição de sistema e cria ou repara a loja BCD. Escolher o destino errado pode criar uma segunda entrada ou tornar outro sistema inacessível." },
+          { titulo: "Bootrec não é receita universal para UEFI", desc: "Tutoriais antigos focam MBR/BIOS e misturam procedimentos com instalações UEFI/GPT. O esquema de partições e o modo de firmware precisam ser identificados antes de decidir qual ferramenta faz sentido." },
+          { titulo: "DiskPart é inventário antes de ser alteração", desc: "Listar discos e volumes ajuda a mapear o cenário; clean, format e mudanças de partição são destrutivos. Nenhuma correção de 0xc0000428 começa apagando a estrutura que ainda contém o sistema e os dados." },
+        ],
+      },
+      {
+        id: "dados-bitlocker-e-disco",
+        titulo: "Dados, BitLocker e saúde do armazenamento vêm antes do reparo",
+        itens: [
+          { titulo: "BitLocker protege contra acesso não autorizado", desc: "A criptografia é uma barreira deliberada, não uma falha do Windows. Sem a chave correta, um volume saudável pode continuar ilegível fora da instalação original; limpar TPM ou reinstalar não recria essa chave." },
+          { titulo: "SMART ajuda, mas não encerra o diagnóstico", desc: "Indicadores do SSD ou HD, falhas de entrada e saída e tempo de resposta formam um conjunto. Um painel sem alerta não garante leitura perfeita, e um alerta não autoriza submeter a unidade a varredura intensa antes de preservar os arquivos." },
+          { titulo: "Clonar e reparar têm objetivos diferentes", desc: "Clonagem tenta preservar o máximo legível em outra mídia; reparo altera estruturas para voltar a iniciar. Quando há risco físico, a cópia vem primeiro porque uma tentativa de correção pode consumir as últimas leituras úteis." },
+          { titulo: "Formatação é uma decisão posterior", desc: "Reinstalar pode ser adequado quando a unidade está saudável, os dados estão conferidos e os reparos não são viáveis. Não é ferramenta diagnóstica e não corrige memória, firmware, cabo ou armazenamento defeituoso." },
+        ],
+        fecho: { antes: "Se o objetivo principal é preservar os arquivos antes de mexer no sistema, veja também ", to: "/problemas/arquivos-apagados", anchor: "como a prioridade muda quando existe risco para os dados", depois: "." },
+      },
+      {
+        id: "secure-boot-2026-windows-10",
+        titulo: "Contexto de 2026: certificados do Secure Boot e fim do Windows 10",
+        intro: "Duas mudanças atuais merecem contexto, mas nenhuma deve ser usada como explicação automática para o 0xc0000428 da foto.",
+        itens: [
+          { titulo: "Certificados de 2011 começaram a expirar em 2026", desc: "A Microsoft está distribuindo certificados atualizados do Secure Boot. Segundo a orientação oficial, um dispositivo que ainda não recebeu as novas chaves continua iniciando e recebendo atualizações comuns; a expiração, sozinha, não prova a causa deste erro." },
+          { titulo: "Desativar Secure Boot não é a correção padrão", desc: "A proteção reduz o risco de componentes não confiáveis antes do Windows. Alterá-la pode mudar o sintoma, mas também diminui a segurança e apaga uma pista do diagnóstico. A configuração original deve ser registrada e preservada." },
+          { titulo: "Suporte comum ao Windows 10 terminou em 14/10/2025", desc: "Depois de recuperar a inicialização, uma máquina com Windows 10 precisa de decisão separada sobre Windows 11, ESU ou substituição. O fim de suporte afeta atualizações de segurança; não transforma automaticamente todo erro de boot em problema de versão." },
+          { titulo: "Recuperar primeiro, atualizar com o sistema estável", desc: "Troca de versão, firmware e chaves de segurança não devem ser misturados a uma recuperação de dados em curso. Primeiro estabiliza-se o boot e confirma-se o backup; depois se planeja a atualização compatível com o hardware." },
+        ],
+      },
+    ],
+    fontes: [
+      { titulo: "Microsoft — códigos NTSTATUS (0xC0000428 / STATUS_INVALID_IMAGE_HASH)", url: "https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-erref/596a1078-e883-4972-9bbc-49e60bebca55", nota: "Definição oficial do código exibido na tela." },
+      { titulo: "Microsoft Support — Windows Recovery Environment", url: "https://support.microsoft.com/en-us/windows/experience/backup-recovery/windows-recovery-environment", nota: "Ferramentas disponíveis no WinRE e observação sobre BitLocker." },
+      { titulo: "Microsoft Support — Startup Repair", url: "https://support.microsoft.com/en-us/windows/experience/startup-boot/startup-repair", nota: "Escopo e acesso ao Reparo de Inicialização." },
+      { titulo: "Microsoft Support — Windows Startup Settings", url: "https://support.microsoft.com/en-us/windows/experience/startup-boot/windows-startup-settings", nota: "Modo de Segurança, log de boot e desativação temporária da imposição de assinatura." },
+      { titulo: "Microsoft Support — System Restore", url: "https://support.microsoft.com/en-us/windows/experience/backup-recovery/system-restore", nota: "Restauração de arquivos e configurações do sistema para um ponto anterior." },
+      { titulo: "Microsoft Support — localizar a chave de recuperação do BitLocker", url: "https://support.microsoft.com/en-us/windows/security/encryption/find-your-bitlocker-recovery-key", nota: "Locais oficiais em que a chave pode estar armazenada." },
+      { titulo: "Microsoft Learn — BCDBoot Command-Line Options", url: "https://learn.microsoft.com/en-us/windows-hardware/manufacture/desktop/bcdboot-command-line-options-techref-di", nota: "Finalidade da ferramenta de criação e reparo dos arquivos de boot." },
+      { titulo: "Microsoft Learn — System File Checker (SFC)", url: "https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/sfc", nota: "Referência oficial da verificação de arquivos protegidos do sistema." },
+      { titulo: "Microsoft Learn — solução avançada de problemas de inicialização", url: "https://learn.microsoft.com/en-us/troubleshoot/windows-client/performance/windows-boot-issues-troubleshooting", nota: "Fluxo técnico por fases do processo de boot." },
+      { titulo: "Microsoft Support — expiração e atualização de certificados do Secure Boot", url: "https://support.microsoft.com/en-us/servicing/os/secure-boot/2026/02/when-secure-boot-certificates-expire-on-windows-devices", nota: "Contexto oficial para dispositivos em 2026." },
+      { titulo: "Microsoft Support — fim do suporte ao Windows 10", url: "https://support.microsoft.com/en-us/windows/deployment/updates-lifecycle/windows-10-support-has-ended-on-october-14-2025", nota: "Ciclo de suporte após a recuperação do equipamento." },
+    ],
+  },
+
+  /* ------------------------------------------------------------------ */
   /* SOLUÇÃO — backup                                                    */
   /* ------------------------------------------------------------------ */
   "/solucoes/backup": {

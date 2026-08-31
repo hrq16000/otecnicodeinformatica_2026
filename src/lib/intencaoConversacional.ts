@@ -206,6 +206,72 @@ const BLOCOS: BlocoConversacional[] = [
     ],
   },
   {
+    path: "/problemas/windows-nao-inicia",
+    titulo: "Windows não inicia: respostas diretas sobre 0xc0000428 e recuperação",
+    intro:
+      "Diagnóstico técnico válido em qualquer lugar do Brasil. O código orienta a investigação, mas não substitui a identificação do arquivo citado, do estado da unidade e da mudança que aconteceu antes da falha.",
+    perguntas: [
+      {
+        tipo: "o-que",
+        pergunta: "O que significa o erro 0xc0000428 no Windows?",
+        resposta:
+          "O erro 0xc0000428 corresponde a STATUS_INVALID_IMAGE_HASH: durante a partida, o Windows não encontrou nos catálogos do sistema o hash necessário para validar uma imagem executável. Arquivo corrompido, catálogo incoerente e driver crítico incompatível são causas possíveis; o código não prova sozinho vírus ou SSD defeituoso.",
+        detalhes: {
+          titulo: "As três evidências que tornam o código útil",
+          itens: [
+            "O caminho completo do arquivo mostrado na tela, quando houver.",
+            "A alteração anterior ao erro: atualização, driver, queda de energia, clonagem ou ajuste de UEFI.",
+            "O comportamento da unidade: reconhecida de modo estável, lenta, intermitente ou com alerta de saúde.",
+          ],
+        },
+      },
+      {
+        tipo: "como",
+        pergunta: "Como corrigir o Windows que não inicia sem formatar?",
+        resposta:
+          "Comece pelas opções reversíveis do Ambiente de Recuperação: guarde a mensagem exata, localize a chave do BitLocker, execute o Reparo de Inicialização uma vez e, se houver relação temporal, desinstale a atualização recente ou use um ponto de restauração. Comandos offline só entram depois de identificar a instalação, a partição EFI e a saúde do disco.",
+        detalhes: {
+          titulo: "Ordem segura antes de qualquer reinstalação",
+          itens: [
+            "Remova mídias externas e apenas confirme no UEFI se a unidade interna aparece.",
+            "Use Reparo de Inicialização e registre o resultado, sem repetir o mesmo ciclo indefinidamente.",
+            "Use Modo de Segurança ou log de boot para isolar driver, se essas opções abrirem.",
+            "Se houver falha de leitura, preserve ou clone os dados antes de reparar estruturas.",
+          ],
+        },
+      },
+      {
+        tipo: "por-que",
+        pergunta: "Por que o Windows diz que não foi possível verificar a assinatura digital?",
+        resposta:
+          "Porque o conteúdo carregado no boot não correspondeu à evidência de integridade e confiança esperada pelo Windows. Isso pode acontecer quando uma atualização deixa arquivo e catálogo fora de sincronia, quando o arquivo se corrompe, quando um driver crítico é inadequado ou quando a leitura da unidade devolve dados inconsistentes.",
+      },
+      {
+        tipo: "onde",
+        pergunta: "Onde levar um PC que liga, mas não entra no Windows?",
+        resposta:
+          "Procure uma assistência que registre o código e o arquivo citado, confira BitLocker e saúde da unidade antes de escrever no disco e diferencie reparo de boot de recuperação de dados. Na nossa área de atendimento fazemos a triagem nessa ordem; fora dela, use esses critérios para avaliar o procedimento proposto pelo técnico local.",
+      },
+    ],
+    alertas: [
+      {
+        nivel: "critico",
+        titulo: "Unidade lenta, ausente ou com ruído muda a prioridade",
+        texto: "Pare os reinícios e não execute varredura pesada. Se o SSD ou HD está instável, a prioridade é preservar ou clonar o que ainda pode ser lido; reparar o boot antes disso pode consumir as últimas leituras úteis.",
+      },
+      {
+        nivel: "atencao",
+        titulo: "A chave do BitLocker vem antes das alterações",
+        texto: "Algumas ferramentas do WinRE precisam desbloquear o volume. Sem a chave correspondente, não limpe TPM, não formate e não presuma que uma reinstalação permitirá acessar os dados cifrados.",
+      },
+      {
+        nivel: "atencao",
+        titulo: "Bypass de assinatura é teste, não conserto",
+        texto: "A opção temporária das Configurações de Inicialização pode confirmar a participação de um driver. Manter Secure Boot ou imposição de assinatura desligados reduz a segurança e deixa a causa original sem correção.",
+      },
+    ],
+  },
+  {
     path: "/problemas/wifi-instavel",
     titulo: "Wi-Fi caindo: respostas diretas antes de trocar de operadora",
     intro:

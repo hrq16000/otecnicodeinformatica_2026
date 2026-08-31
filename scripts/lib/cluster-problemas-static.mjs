@@ -328,32 +328,90 @@ export const CLUSTER_PROBLEMAS_ROUTES = [
   },
   {
     path: "/problemas/windows-nao-inicia",
-    title: "Windows não inicia: causas, o que anotar e como resolver",
+    title: "Erro 0xc0000428: Windows não inicia e como reparar",
     description:
-      "Windows que trava no logotipo, entra em reparo automático ou reinicia em loop tem causas separáveis: inicialização, disco, sistema de arquivos ou atualização.",
-    h1: "Windows não inicia: para em logotipo, reinicia em loop ou pede reparo",
+      "PC liga, mas o Windows exibe 0xc0000428, reparo automático ou loop? Entenda assinatura digital, WinRE, BitLocker e a ordem segura sem formatar.",
+    h1: "Windows não inicia: erro 0xc0000428, reparo automático e loop de boot",
     subtitulo:
-      "O hardware costuma estar vivo: o que falhou está entre a partida do disco e a carga do sistema.",
+      "Se o PC chega à tela de Recuperação, existe energia e parte do boot funcionou — mas ainda é preciso separar arquivo, driver, BCD/EFI, BitLocker e saúde da unidade.",
+    article: {
+      datePublished: "2026-08-13",
+      dateModified: "2026-08-31",
+      keywords: ["Windows não inicia", "erro 0xc0000428", "STATUS_INVALID_IMAGE_HASH", "assinatura digital do Windows", "Windows Recovery Environment", "Startup Repair", "BitLocker", "Secure Boot", "BCD"],
+      about: [
+        { "@type": "SoftwareApplication", name: "Microsoft Windows", applicationCategory: "OperatingSystem", operatingSystem: "Windows", sameAs: "https://www.microsoft.com/windows" },
+        { "@type": "DefinedTerm", name: "STATUS_INVALID_IMAGE_HASH", termCode: "0xC0000428", description: "Status do Windows para uma imagem cujo hash não foi encontrado nos catálogos do sistema.", inDefinedTermSet: "https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-erref/596a1078-e883-4972-9bbc-49e60bebca55" },
+      ],
+      mentions: [
+        { "@type": "SoftwareApplication", name: "Windows Recovery Environment", applicationCategory: "SystemApplication", operatingSystem: "Windows", sameAs: "https://support.microsoft.com/en-us/windows/experience/backup-recovery/windows-recovery-environment" },
+        { "@type": "Thing", name: "Startup Repair", sameAs: "https://support.microsoft.com/en-us/windows/experience/startup-boot/startup-repair" },
+        { "@type": "Thing", name: "BitLocker", sameAs: "https://support.microsoft.com/en-us/windows/security/encryption/bitlocker-overview" },
+        { "@type": "Thing", name: "Secure Boot", sameAs: "https://support.microsoft.com/en-us/windows/security/devicesecurity/windows-11-and-secure-boot" },
+        { "@type": "Thing", name: "Boot Configuration Data", sameAs: "https://learn.microsoft.com/en-us/windows-hardware/manufacture/desktop/bcdboot-command-line-options-techref-di" },
+      ],
+      citation: [
+        "https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-erref/596a1078-e883-4972-9bbc-49e60bebca55",
+        "https://support.microsoft.com/en-us/windows/experience/backup-recovery/windows-recovery-environment",
+        "https://support.microsoft.com/en-us/windows/experience/startup-boot/startup-repair",
+        "https://support.microsoft.com/en-us/windows/experience/startup-boot/windows-startup-settings",
+        "https://support.microsoft.com/en-us/windows/experience/backup-recovery/system-restore",
+        "https://support.microsoft.com/en-us/windows/security/encryption/find-your-bitlocker-recovery-key",
+        "https://learn.microsoft.com/en-us/windows-hardware/manufacture/desktop/bcdboot-command-line-options-techref-di",
+        "https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/sfc",
+        "https://learn.microsoft.com/en-us/troubleshoot/windows-client/performance/windows-boot-issues-troubleshooting",
+        "https://support.microsoft.com/en-us/servicing/os/secure-boot/2026/02/when-secure-boot-certificates-expire-on-windows-devices",
+        "https://support.microsoft.com/en-us/windows/deployment/updates-lifecycle/windows-10-support-has-ended-on-october-14-2025",
+      ],
+      image: {
+        src: "/casos-reais/windows-erro-0xc0000428.jpg",
+        alt: "Tela de Recuperação do Windows informando falha de assinatura digital e código 0xc0000428",
+        width: 1152,
+        height: 1536,
+        caption: "Exemplo real do erro 0xc0000428: o Windows bloqueou uma imagem cuja assinatura ou hash não pôde ser validado.",
+        creditText: "Registro técnico fornecido para análise; metadados removidos antes da publicação.",
+      },
+    },
     blocos: [
       {
-        titulo: "Onde exatamente a partida quebra",
+        titulo: "O que o código 0xc0000428 significa — e o que ele não prova",
         paragrafos: [
-          "Travar no logotipo com o círculo girando indica serviço ou driver que não conclui a carga — quase sempre tratável em modo de segurança, sem tocar nos arquivos. Reparo automático repetindo aponta estrutura de arquivos danificada, típica de desligamento abrupto. Mensagem de dispositivo de inicialização não encontrado significa que a placa não enxerga a unidade, o que pode ser ordem de boot, cabo ou conector, e não necessariamente disco morto.",
-          "Reinício antes da tela de senha mistura atualização mal aplicada com memória instável, e o teste de memória separa as duas em minutos. Tela preta com cursor mostra sistema carregado e interface que não subiu: perfil de usuário corrompido ou driver de vídeo.",
+          "A referência oficial da Microsoft associa 0xC0000428 a STATUS_INVALID_IMAGE_HASH: durante a partida, o Windows não encontrou nos catálogos o hash necessário para validar uma imagem executável. “Imagem” aqui é um arquivo carregado pelo sistema, como o gerenciador de boot ou um driver — não uma fotografia.",
+          "O código é compatível com arquivo corrompido, catálogo incoerente, driver crítico inadequado e leitura inconsistente da unidade. Ele não prova sozinho malware, não condena o SSD e não informa que os documentos foram apagados. O caminho do arquivo citado, a mudança anterior e o estado do armazenamento completam o diagnóstico.",
         ],
       },
       {
-        titulo: "O que checar antes de aceitar formatação",
+        titulo: "A cadeia de entidades que precisa ser separada",
         paragrafos: [
-          "Anote a mensagem exata da tela, inclusive o código iniciado por zero e x. Lembre o que mudou antes: atualização, driver, queda de energia ou troca de peça. Retire pendrive, HD externo e cartão de memória, porque mídia externa na ordem de partida provoca exatamente essa falha. Tente o modo de segurança: se abre, seus arquivos estão íntegros e o problema é de software.",
-          "Evite repetir reinícios forçados, utilitários de reparo baixados de sites desconhecidos e reinstalação por cima quando existir suspeita de disco defeituoso — a gravação nova ocupa justamente o espaço dos dados a recuperar.",
+          "O firmware UEFI reconhece os dispositivos e escolhe a entrada de boot; o Secure Boot valida componentes no início da cadeia. A partição EFI guarda arquivos de inicialização, o Windows Boot Manager consulta o BCD e só então o kernel e os drivers críticos começam a carregar. Falhar em cada camada produz pistas diferentes.",
+          "Se a unidade nem aparece no UEFI, ainda não é uma falha de arquivo do Windows. Se Windows Boot Manager sumiu, a entrada ou a partição EFI ganha prioridade. Se 0xc0000428 cita um arquivo, a validação desse componente passa à frente — sem deixar de conferir se o disco lê os dados de forma estável.",
         ],
       },
       {
-        titulo: "Como o atendimento é conduzido",
+        titulo: "Ordem segura de recuperação sem formatar",
         paragrafos: [
-          "Com o modo de segurança acessível, reversão de atualização, remoção de driver e verificação de integridade acontecem por acesso remoto. Quando a máquina não abre de forma alguma, o atendimento no endereço leva mídia de recuperação e leitura de saúde do disco.",
-          "Havendo sinal de falha na unidade, o disco é retirado, clonado e só então tratado: copiar antes de reparar é o que preserva o que é insubstituível. Diagnóstico, mão de obra e peça são informados separadamente antes de qualquer execução.",
+          "Primeiro fotografe o código e o arquivo citado, anote a última mudança e remova mídias externas. Confirme no UEFI apenas se a unidade interna e o Windows Boot Manager aparecem, sem alternar UEFI/Legacy ou o controlador de armazenamento por tentativa. Localize a chave do BitLocker antes de depender do volume.",
+          "No WinRE, use o Reparo de Inicialização uma vez. Se o início do erro coincide com atualização, Desinstalar Atualizações ou Restauração do Sistema são opções direcionadas. Modo de Segurança, log de boot e a desativação temporária da imposição de assinatura servem para isolar driver; não devem virar bypass permanente.",
+        ],
+      },
+      {
+        titulo: "Ferramentas avançadas exigem o mapa real das partições",
+        paragrafos: [
+          "SFC offline e BCDBoot são ferramentas oficiais, mas precisam da instalação e do destino corretos. No Ambiente de Recuperação, a pasta Windows pode não estar em C:, e a partição EFI é separada. Presumir letras a partir de um tutorial pode reparar o volume errado, criar entradas duplicadas ou deixar outro sistema inacessível.",
+          "Bootrec não é uma receita universal para UEFI/GPT. DiskPart é útil para inventariar discos e volumes, porém clean e format são destrutivos. Nenhum diagnóstico do 0xc0000428 começa apagando a estrutura que contém o sistema, o BCD e os dados pessoais.",
+        ],
+      },
+      {
+        titulo: "BitLocker e armazenamento mudam a prioridade",
+        paragrafos: [
+          "A solicitação da chave do BitLocker não indica defeito: o volume está cifrado e a ferramenta precisa de autorização para lê-lo. Sem a chave correspondente, não limpe TPM, não formate e não presuma que reinstalar permitirá abrir os arquivos protegidos.",
+          "Se o SSD ou HD some, responde muito devagar, faz ruído ou registra falhas de entrada e saída, a prioridade passa a ser cópia ou clonagem. Reparar altera estruturas; clonar tenta preservar o que ainda é legível. Em mídia instável, essa ordem pode definir o que será recuperável.",
+        ],
+      },
+      {
+        titulo: "Contexto de 2026 sem falsa causalidade",
+        paragrafos: [
+          "Certificados de Secure Boot emitidos em 2011 começaram a expirar em 2026, e a Microsoft distribui novas chaves. A orientação oficial diz que um dispositivo ainda sem os novos certificados continua iniciando e recebendo atualizações comuns; a expiração isolada não explica automaticamente o 0xc0000428 desta tela.",
+          "O suporte comum ao Windows 10 terminou em 14 de outubro de 2025. Depois de recuperar a partida, vale planejar Windows 11, ESU ou substituição conforme o hardware. Ciclo de suporte e erro de boot são decisões distintas: primeiro estabilize o sistema e confirme o backup, depois atualize.",
         ],
       },
     ],
@@ -523,11 +581,15 @@ const FAQ_POR_ROTA = {
     { pergunta: "Vale a pena consertar um equipamento que queimou?", resposta: "Depende de qual componente foi atingido. Fonte, carregador e cabo têm custo baixo e troca direta. Placa-mãe com dano elétrico em máquina antiga costuma não compensar, e dizemos isso com clareza — diagnóstico, mão de obra e peça são informados separadamente antes de qualquer execução." },
   ],
   "/problemas/windows-nao-inicia": [
-    { pergunta: "Windows que não inicia significa formatar e perder tudo?", resposta: "Na maioria dos atendimentos, não. Reversão de atualização, correção da estrutura de arquivos e remoção de driver resolvem com os documentos intactos. A formatação só entra quando o sistema está irrecuperável — e, mesmo assim, os arquivos são copiados antes." },
-    { pergunta: "Como sei se é o disco ou o sistema?", resposta: "Pela leitura dos indicadores de saúde da unidade e pelo tempo de resposta na leitura. Disco saudável com sistema quebrado repara rápido; disco com setores realocados repete a falha em poucos dias mesmo depois de reinstalar." },
-    { pergunta: "Modo de segurança abre. Isso é bom sinal?", resposta: "É ótimo sinal. Significa que o hardware está funcional, os arquivos estão acessíveis e a falha está em algum componente de software que pode ser identificado pela data de instalação." },
-    { pergunta: "Perdi a senha de administrador. Muda alguma coisa?", resposta: "Muda o caminho, não o resultado. A recuperação dos arquivos é feita com a unidade acessada em bancada. Não fazemos remoção de bloqueio em equipamento sem comprovação de propriedade." },
-    { pergunta: "Vale reinstalar o Windows num computador antigo?", resposta: "Depende do conjunto. Em máquina com disco mecânico, reinstalar sozinho entrega pouco: o ganho real vem de trocar por SSD e, se couber, ampliar a memória. Informamos essa diferença antes, com peça e mão de obra separadas." },
+    { pergunta: "O erro 0xc0000428 apaga meus arquivos?", resposta: "Não por si só. O código informa uma falha de validação na inicialização, não uma exclusão de dados. Os arquivos podem continuar no volume, mas a condição do SSD ou HD e o BitLocker precisam ser verificados antes de afirmar que estão acessíveis." },
+    { pergunta: "Devo apertar F1 e entrar no Ambiente de Recuperação?", resposta: "Sim, se a tela oferece essa opção e não há sinal de falha física. No WinRE, comece por Reparo de Inicialização. Antes de desinstalar atualizações, restaurar ou usar comandos, confirme que você tem a chave do BitLocker caso o volume esteja protegido." },
+    { pergunta: "É seguro desativar a imposição de assinatura de driver?", resposta: "A opção temporária nas Configurações de Inicialização vale apenas para uma sessão e pode ajudar a confirmar que um driver bloqueia o boot. Ela não corrige a causa. Desativar a proteção permanentemente ou manter driver sem origem confiável reduz a segurança." },
+    { pergunta: "Como diferenciar arquivo de boot corrompido de SSD com defeito?", resposta: "O código não faz essa separação sozinho. Reconhecimento estável no firmware, tempo de leitura, indicadores SMART, erros de entrada e saída e repetição em outros arquivos ajudam a avaliar a unidade; logs e a resposta ao Reparo de Inicialização avaliam a camada do Windows." },
+    { pergunta: "Por que a recuperação pede a chave do BitLocker?", resposta: "O BitLocker cifra o volume para impedir leitura sem autorização. Algumas ferramentas do WinRE precisam desbloqueá-lo para acessar arquivos ou reparar o sistema. A chave pode estar na conta Microsoft, em conta corporativa, impressa ou salva pela pessoa que ativou a proteção." },
+    { pergunta: "O que significa o erro 0xc0000428 no Windows?", resposta: "O erro 0xc0000428 corresponde a STATUS_INVALID_IMAGE_HASH: durante a partida, o Windows não encontrou nos catálogos do sistema o hash necessário para validar uma imagem executável. Arquivo corrompido, catálogo incoerente e driver crítico incompatível são causas possíveis; o código não prova sozinho vírus ou SSD defeituoso." },
+    { pergunta: "Como corrigir o Windows que não inicia sem formatar?", resposta: "Comece pelas opções reversíveis do Ambiente de Recuperação: guarde a mensagem exata, localize a chave do BitLocker, execute o Reparo de Inicialização uma vez e, se houver relação temporal, desinstale a atualização recente ou use um ponto de restauração. Comandos offline só entram depois de identificar a instalação, a partição EFI e a saúde do disco." },
+    { pergunta: "Por que o Windows diz que não foi possível verificar a assinatura digital?", resposta: "Porque o conteúdo carregado no boot não correspondeu à evidência de integridade e confiança esperada pelo Windows. Isso pode acontecer quando uma atualização deixa arquivo e catálogo fora de sincronia, quando o arquivo se corrompe, quando um driver crítico é inadequado ou quando a leitura da unidade devolve dados inconsistentes." },
+    { pergunta: "Onde levar um PC que liga, mas não entra no Windows?", resposta: "Procure uma assistência que registre o código e o arquivo citado, confira BitLocker e saúde da unidade antes de escrever no disco e diferencie reparo de boot de recuperação de dados. Na nossa área de atendimento fazemos a triagem nessa ordem; fora dela, use esses critérios para avaliar o procedimento proposto pelo técnico local." },
   ],
   "/problemas/computador-esquentando": [
     { pergunta: "Qual temperatura é considerada alta?", resposta: "Depende do modelo, mas a referência prática é o comportamento: se o equipamento reduz a velocidade sozinho ou desliga por proteção, passou do limite dele. Por isso medimos antes e depois da manutenção, em vez de trabalhar com números genéricos." },

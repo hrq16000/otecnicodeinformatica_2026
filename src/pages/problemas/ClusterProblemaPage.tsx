@@ -8,6 +8,7 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 import { PoliticaAtendimentoBloco } from "@/components/PoliticaAtendimentoBloco";
 import { Button } from "@/components/ui/button";
 import { FotoLicenciadaImg } from "@/components/FotoLicenciadaImg";
+import { SmartImage } from "@/components/SmartImage";
 import { ServicosCorrelatos } from "@/components/informatica/ServicosCorrelatos";
 import { ProximosPassos } from "@/components/informatica/ProximosPassos";
 import InterlinksContextuais from "@/components/problemas/InterlinksContextuais";
@@ -57,6 +58,22 @@ const ClusterProblemaPage = () => {
   // Rotas literais (/problemas/tela-azul) não têm :slug — cai no pathname.
   const slug = params.slug ?? pathname.replace(/^\/problemas\//, "").replace(/\/$/, "");
   const dados = clusterProblema(slug);
+  const extra = dados ? enriquecimentoDe(dados.path) : undefined;
+  const paginaUrl = dados ? absoluteUrl(dados.path) : "";
+  const imagemPrincipal = dados?.evidencia
+    ? {
+        "@type": "ImageObject",
+        "@id": `${paginaUrl}#evidence-image`,
+        url: absoluteUrl(dados.evidencia.src),
+        contentUrl: absoluteUrl(dados.evidencia.src),
+        width: dados.evidencia.width,
+        height: dados.evidencia.height,
+        caption: dados.evidencia.caption,
+        description: dados.evidencia.alt,
+        creditText: dados.evidencia.creditText,
+        representativeOfPage: true,
+      }
+    : undefined;
 
   useEffect(() => {
     if (dados) trackPageView(dados.path, dados.titulo);
@@ -93,10 +110,25 @@ const ClusterProblemaPage = () => {
       ? {
           "@context": "https://schema.org",
           "@type": "TechArticle",
+          "@id": `${paginaUrl}#article`,
           headline: dados.titulo,
           description: dados.metaDescription,
-          url: absoluteUrl(dados.path),
+          url: paginaUrl,
           inLanguage: "pt-BR",
+          mainEntityOfPage: { "@id": `${paginaUrl}#webpage` },
+          author: { "@id": `${siteConfig.baseUrl}/#organization` },
+          publisher: { "@id": `${siteConfig.baseUrl}/#organization` },
+          ...(dados.schema
+            ? {
+                datePublished: dados.schema.datePublished,
+                dateModified: dados.schema.dateModified,
+                keywords: dados.schema.keywords.join(", "),
+                about: dados.schema.about,
+                mentions: dados.schema.mentions,
+              }
+            : {}),
+          ...(imagemPrincipal ? { image: imagemPrincipal } : { image: siteConfig.defaultOgImage }),
+          ...(extra?.fontes?.length ? { citation: extra.fontes.map((fonte) => fonte.url) } : {}),
         }
       : null,
     SLOT_PRIORITY.page,
@@ -112,13 +144,17 @@ const ClusterProblemaPage = () => {
       ? {
           "@context": "https://schema.org",
           "@type": "WebPage",
+          "@id": `${paginaUrl}#webpage`,
           name: dados.metaTitle,
           headline: dados.titulo,
           description: dados.metaDescription,
-          url: absoluteUrl(dados.path),
+          url: paginaUrl,
           inLanguage: "pt-BR",
           isPartOf: { "@id": `${siteConfig.baseUrl}/#website` },
-          about: { "@type": "Thing", name: dados.titulo },
+          about: dados.schema?.about ?? { "@type": "Thing", name: dados.titulo },
+          ...(dados.schema?.mentions ? { mentions: dados.schema.mentions } : {}),
+          mainEntity: { "@id": `${paginaUrl}#article` },
+          ...(imagemPrincipal ? { primaryImageOfPage: { "@id": `${paginaUrl}#evidence-image` } } : {}),
           publisher: { "@id": `${siteConfig.baseUrl}/#organization` },
         }
       : null,
@@ -174,9 +210,6 @@ const ClusterProblemaPage = () => {
   });
 
   if (!dados) return <NotFound />;
-
-  // Micro-Rodada Enriquecimento 1 — blocos opcionais por página (sem URL nova).
-  const extra = enriquecimentoDe(dados.path);
 
   /**
    * CTA contextual por seção: mensagem pré-preenchida (sintoma + equipamento +
@@ -308,6 +341,23 @@ const ClusterProblemaPage = () => {
         {dados.foto && (
           <FotoLicenciadaImg slug={dados.foto} className="mt-8" />
         )}
+
+        {dados.evidencia ? (
+          <figure className="mt-8 overflow-hidden rounded-xl border border-border bg-card">
+            <SmartImage
+              src={dados.evidencia.src}
+              alt={dados.evidencia.alt}
+              width={dados.evidencia.width}
+              height={dados.evidencia.height}
+              wrapperClassName="mx-auto max-w-2xl bg-secondary/30"
+              className="h-auto w-full object-contain"
+            />
+            <figcaption className="border-t border-border p-4">
+              <p className="text-sm leading-relaxed text-foreground">{dados.evidencia.caption}</p>
+              <p className="mt-1 text-xs leading-relaxed text-muted-foreground">{dados.evidencia.creditText}</p>
+            </figcaption>
+          </figure>
+        ) : null}
 
 
         {extra?.respostaRapida ? <RespostaRapida texto={extra.respostaRapida} /> : null}
