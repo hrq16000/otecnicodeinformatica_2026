@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { Link } from "@/lib/router-compat";
-import { MapPin, MessageCircle } from "lucide-react";
+import { MapPin, MessageCircle, ArrowRight, Wrench } from "lucide-react";
 import { PageSEO } from "@/components/PageSEO";
 import { FastHeader } from "@/components/FastHeader";
 import { Footer } from "@/components/Footer";
@@ -9,6 +9,7 @@ import { siteConfig, whatsappLink, absoluteUrl } from "@/lib/siteConfig";
 import { trackPageView, trackCTAClick } from "@/lib/analytics";
 import { SCHEMA_SLOTS, SLOT_PRIORITY, useJsonLdSlot } from "@/lib/jsonLdSlots";
 import { REGIOES_MALHA, RESUMO_MALHA } from "@/lib/bairrosMalha";
+import { CIDADES, SERVICOS_CANONICOS } from "@/lib/cidadesData";
 
 const PATH = "/bairros";
 const TITULO = "Bairros atendidos em Curitiba e Região Metropolitana";
@@ -109,6 +110,56 @@ const BairrosHub = () => {
                 </ul>
               </article>
             ))}
+          </div>
+        </section>
+
+        <section className="border-t border-border/60 bg-muted/25 py-12 md:py-16">
+          <div className="container mx-auto">
+            <div className="mx-auto max-w-5xl">
+              <div className="max-w-3xl">
+                <span className="text-sm font-semibold uppercase tracking-[0.16em] text-accent">Malha de descoberta</span>
+                <h2 className="mt-2 text-2xl font-heading font-bold text-foreground md:text-3xl">
+                  Encontre a cidade e o serviço certos
+                </h2>
+                <p className="mt-3 leading-relaxed text-muted-foreground">
+                  A página do seu bairro explica a cobertura local. Para entender o atendimento completo,
+                  conectamos cada região às páginas próprias de cidade e aos serviços que realmente resolvem
+                  os problemas mais comuns — sem criar páginas vazias só para ocupar espaço no mapa.
+                </p>
+              </div>
+              <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+                {Object.values(CIDADES).map((cidade) => (
+                  <Link
+                    key={cidade.slug}
+                    to={`/tecnico-informatica-${cidade.slug}`}
+                    className="group rounded-2xl border border-border bg-background p-5 transition-all hover:-translate-y-0.5 hover:border-accent/45 hover:shadow-md"
+                  >
+                    <span className="flex items-center justify-between gap-3">
+                      <span className="font-semibold text-foreground group-hover:text-accent">{cidade.cidade}</span>
+                      <ArrowRight className="h-4 w-4 text-accent" aria-hidden="true" />
+                    </span>
+                    <span className="mt-2 block text-sm leading-relaxed text-muted-foreground">{cidade.subtitulo}</span>
+                  </Link>
+                ))}
+              </div>
+              <div className="mt-8 rounded-2xl border border-border bg-background p-5 md:p-6">
+                <h3 className="flex items-center gap-2 font-heading text-lg font-bold text-foreground">
+                  <Wrench className="h-5 w-5 text-accent" aria-hidden="true" />
+                  Serviços disponíveis em todas as regiões
+                </h3>
+                <div className="mt-4 flex flex-wrap gap-2">
+                  {SERVICOS_CANONICOS.map((servico) => (
+                    <Link
+                      key={servico.to}
+                      to={servico.to}
+                      className="rounded-full border border-border px-3 py-2 text-sm font-medium text-muted-foreground transition-colors hover:border-accent/45 hover:text-accent"
+                    >
+                      {servico.label}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            </div>
           </div>
         </section>
       </main>
