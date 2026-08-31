@@ -108,6 +108,8 @@ const AdminUiPerformance = lazyPagina(() => import("./pages/admin/AdminUiPerform
 const AdminDashboard = lazyPagina(() => import("./pages/admin/AdminDashboard"));
 const AdminCasos = lazyPagina(() => import("./pages/admin/AdminCasos"));
 const AdminOsAudit = lazyPagina(() => import("./pages/admin/AdminOsAudit"));
+const AdminConversasOs = lazyPagina(() => import("./pages/admin/AdminConversasOs"));
+const PedidoChat = lazyPagina(() => import("./pages/os/PedidoChat"));
 const AdminOperacao = lazyPagina(() => import("./pages/admin/AdminOperacao"));
 const AdminProvasMonitor = lazyPagina(() => import("./pages/admin/AdminProvasMonitor"));
 const AdminProvasVerticais = lazyPagina(() => import("./pages/admin/AdminProvasVerticais"));
@@ -1014,6 +1016,8 @@ export const legacyRouteElements: Record<string, () => React.ReactElement> = {
   "/admin/dashboard": () => <AdminDashboard />,
   "/admin/casos": () => <AdminCasos />,
   "/admin/auditoria-os": () => <AdminOsAudit />,
+  "/admin/conversas": () => <AdminConversasOs />,
+  "/pedido": () => <PedidoChat />,
   "/admin/operacao": () => <AdminOperacao />,
   "/admin/provas-monitor": () => <AdminProvasMonitor />,
   "/admin/provas-verticais": () => <AdminProvasVerticais />,

@@ -87,6 +87,7 @@ import { Route as AdminAuditoriaOsRouteImport } from './routes/admin_.auditoria-
 import { Route as AdminBairrosRouteImport } from './routes/admin_.bairros'
 import { Route as AdminCasosRouteImport } from './routes/admin_.casos'
 import { Route as AdminConversaoRouteImport } from './routes/admin_.conversao'
+import { Route as AdminConversasRouteImport } from './routes/admin_.conversas'
 import { Route as AdminDashboardRouteImport } from './routes/admin_.dashboard'
 import { Route as AdminEditorLocalRouteImport } from './routes/admin_.editor-local'
 import { Route as AdminEditorialOndasRouteImport } from './routes/admin_.editorial-ondas'
@@ -876,6 +877,11 @@ const AdminCasosRoute = AdminCasosRouteImport.update({
 const AdminConversaoRoute = AdminConversaoRouteImport.update({
   id: '/admin_/conversao',
   path: '/admin/conversao',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AdminConversasRoute = AdminConversasRouteImport.update({
+  id: '/admin_/conversas',
+  path: '/admin/conversas',
   getParentRoute: () => rootRouteImport,
 } as any)
 const AdminDashboardRoute = AdminDashboardRouteImport.update({
@@ -3015,6 +3021,7 @@ export interface FileRoutesByFullPath {
   '/admin/bairros': typeof AdminBairrosRoute
   '/admin/casos': typeof AdminCasosRoute
   '/admin/conversao': typeof AdminConversaoRoute
+  '/admin/conversas': typeof AdminConversasRoute
   '/admin/dashboard': typeof AdminDashboardRoute
   '/admin/editor-local': typeof AdminEditorLocalRoute
   '/admin/editorial-ondas': typeof AdminEditorialOndasRoute
@@ -3477,6 +3484,7 @@ export interface FileRoutesByTo {
   '/admin/bairros': typeof AdminBairrosRoute
   '/admin/casos': typeof AdminCasosRoute
   '/admin/conversao': typeof AdminConversaoRoute
+  '/admin/conversas': typeof AdminConversasRoute
   '/admin/dashboard': typeof AdminDashboardRoute
   '/admin/editor-local': typeof AdminEditorLocalRoute
   '/admin/editorial-ondas': typeof AdminEditorialOndasRoute
@@ -3940,6 +3948,7 @@ export interface FileRoutesById {
   '/admin_/bairros': typeof AdminBairrosRoute
   '/admin_/casos': typeof AdminCasosRoute
   '/admin_/conversao': typeof AdminConversaoRoute
+  '/admin_/conversas': typeof AdminConversasRoute
   '/admin_/dashboard': typeof AdminDashboardRoute
   '/admin_/editor-local': typeof AdminEditorLocalRoute
   '/admin_/editorial-ondas': typeof AdminEditorialOndasRoute
@@ -4404,6 +4413,7 @@ export interface FileRouteTypes {
     | '/admin/bairros'
     | '/admin/casos'
     | '/admin/conversao'
+    | '/admin/conversas'
     | '/admin/dashboard'
     | '/admin/editor-local'
     | '/admin/editorial-ondas'
@@ -4866,6 +4876,7 @@ export interface FileRouteTypes {
     | '/admin/bairros'
     | '/admin/casos'
     | '/admin/conversao'
+    | '/admin/conversas'
     | '/admin/dashboard'
     | '/admin/editor-local'
     | '/admin/editorial-ondas'
@@ -5328,6 +5339,7 @@ export interface FileRouteTypes {
     | '/admin_/bairros'
     | '/admin_/casos'
     | '/admin_/conversao'
+    | '/admin_/conversas'
     | '/admin_/dashboard'
     | '/admin_/editor-local'
     | '/admin_/editorial-ondas'
@@ -5791,6 +5803,7 @@ export interface RootRouteChildren {
   AdminBairrosRoute: typeof AdminBairrosRoute
   AdminCasosRoute: typeof AdminCasosRoute
   AdminConversaoRoute: typeof AdminConversaoRoute
+  AdminConversasRoute: typeof AdminConversasRoute
   AdminDashboardRoute: typeof AdminDashboardRoute
   AdminEditorLocalRoute: typeof AdminEditorLocalRoute
   AdminEditorialOndasRoute: typeof AdminEditorialOndasRoute
@@ -6721,6 +6734,13 @@ declare module '@tanstack/react-router' {
       path: '/admin/conversao'
       fullPath: '/admin/conversao'
       preLoaderRoute: typeof AdminConversaoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/admin_/conversas': {
+      id: '/admin_/conversas'
+      path: '/admin/conversas'
+      fullPath: '/admin/conversas'
+      preLoaderRoute: typeof AdminConversasRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/admin_/dashboard': {
@@ -9482,6 +9502,7 @@ const rootRouteChildren: RootRouteChildren = {
   AdminBairrosRoute: AdminBairrosRoute,
   AdminCasosRoute: AdminCasosRoute,
   AdminConversaoRoute: AdminConversaoRoute,
+  AdminConversasRoute: AdminConversasRoute,
   AdminDashboardRoute: AdminDashboardRoute,
   AdminEditorLocalRoute: AdminEditorLocalRoute,
   AdminEditorialOndasRoute: AdminEditorialOndasRoute,
