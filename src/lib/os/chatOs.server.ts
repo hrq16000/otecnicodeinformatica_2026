@@ -86,6 +86,36 @@ export class ChatOsErro extends Error {
 
 const asRecord = (v: unknown) => (v && typeof v === "object" ? (v as Record<string, unknown>) : {});
 
+export type EtapaOs = { titulo: string; em: string | null; detalhe: string | null };
+
+export type OsResumo = {
+  protocolo: string;
+  status: string;
+  modalidade: string | null;
+  equipamento: string | null;
+  marcaModelo?: string | null;
+  clienteNome?: string | null;
+  previsaoConclusao: string | null;
+  observacoesPublicas: string | null;
+  atualizadaEm: string;
+  criadaEm?: string;
+  etapas: EtapaOs[];
+};
+
+/** Converte o JSON de etapas da OS em uma lista tipada e serializável. */
+export function normalizarEtapas(valor: unknown): EtapaOs[] {
+  if (!Array.isArray(valor)) return [];
+  return valor.map((bruta) => {
+    const e = asRecord(bruta);
+    const em = typeof e.em === "string" ? e.em : typeof e.data === "string" ? e.data : null;
+    return {
+      titulo: String(e.titulo ?? e.status ?? "Etapa"),
+      em,
+      detalhe: typeof e.detalhe === "string" ? e.detalhe : null,
+    };
+  });
+}
+
 /* ------------------------------------------------------------------ */
 /* Abertura / resolução de conversa                                     */
 /* ------------------------------------------------------------------ */
