@@ -19,6 +19,8 @@ const SERVICE_ROLE = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!;
 const ANON_KEY = Deno.env.get("SUPABASE_ANON_KEY")!;
 
 const CODE_TTL_MIN = 10;
+/** O pedido aguardando emissão vive bem mais que o código, senão some do painel. */
+const REQUEST_TTL_MIN = 180;
 const MAX_CODES_PER_HOUR = 3;
 const MAX_CODES_PER_IP_HOUR = 8;
 const MAX_ATTEMPTS = 5;
@@ -161,18 +163,39 @@ Deno.serve(async (req) => {
       );
     }
 
-    const { error } = await supabase.from("os_verification_codes").insert({
-      telefone_hash: telHash,
-      ip_hash: ipHash,
-      code_hash: null,
-      telefone_masked: mask(telefone),
-      expires_at: new Date(Date.now() + CODE_TTL_MIN * 60_000).toISOString(),
-    });
+    // Reaproveita o pedido em aberto do mesmo telefone: um novo insert criaria
+    // uma linha mais nova sem hash e invalidaria um código já enviado.
+    const { data: aberto } = await supabase
+      .from("os_verification_codes")
+      .select("id, code_hash")
+      .eq("telefone_hash", telHash)
+      .is("consumed_at", null)
+      .order("created_at", { ascending: false })
+      .limit(1)
+      .maybeSingle();
+
+    const novoPrazo = new Date(
+      Date.now() + (aberto?.code_hash ? CODE_TTL_MIN : REQUEST_TTL_MIN) * 60_000,
+    ).toISOString();
+
+    const { error } = aberto
+      ? await supabase
+          .from("os_verification_codes")
+          .update({ expires_at: novoPrazo, telefone_masked: mask(telefone), ip_hash: ipHash })
+          .eq("id", aberto.id)
+      : await supabase.from("os_verification_codes").insert({
+          telefone_hash: telHash,
+          ip_hash: ipHash,
+          code_hash: null,
+          telefone_masked: mask(telefone),
+          expires_at: novoPrazo,
+        });
 
     if (error) {
       console.error("os-codigo request falhou:", error.message);
       return json({ error: "request_failed" }, 500);
     }
+
 
     return json({
       ok: true,
@@ -187,21 +210,24 @@ Deno.serve(async (req) => {
   const codigo = typeof payload.codigo === "string" ? payload.codigo.replace(/\D/g, "") : "";
   if (codigo.length !== 6) return json({ error: "invalid_code_format" }, 400);
 
-  const { data: registro, error: readError } = await supabase
+  const { data: abertos, error: readError } = await supabase
     .from("os_verification_codes")
     .select("id, code_hash, expires_at, attempts, consumed_at")
     .eq("telefone_hash", telHash)
     .is("consumed_at", null)
     .order("created_at", { ascending: false })
-    .limit(1)
-    .maybeSingle();
+    .limit(5);
 
   if (readError) {
     console.error("os-codigo verify falhou:", readError.message);
     return json({ error: "verify_failed" }, 500);
   }
 
+  // Um código já emitido tem prioridade sobre um pedido posterior sem hash.
+  const registro = (abertos ?? []).find((r) => r.code_hash) ?? (abertos ?? [])[0];
+
   if (!registro) return json({ error: "code_not_found", message: "Peça um novo código." }, 400);
+
   if (!registro.code_hash) {
     return json(
       { error: "code_not_issued", message: "Seu código ainda será enviado pelo WhatsApp." },
