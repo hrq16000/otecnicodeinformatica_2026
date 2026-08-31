@@ -106,6 +106,7 @@ import { Route as AdminPerformanceLocalRouteImport } from './routes/admin_.perfo
 import { Route as AdminProvasMonitorRouteImport } from './routes/admin_.provas-monitor'
 import { Route as AdminProvasVerticaisRouteImport } from './routes/admin_.provas-verticais'
 import { Route as AdminPublicacaoRouteImport } from './routes/admin_.publicacao'
+import { Route as AdminPublicacoesPendentesRouteImport } from './routes/admin_.publicacoes-pendentes'
 import { Route as AdminQaTrafegoRouteImport } from './routes/admin_.qa-trafego'
 import { Route as AdminReviewsRouteImport } from './routes/admin_.reviews'
 import { Route as AdminUiPerformanceRouteImport } from './routes/admin_.ui-performance'
@@ -976,6 +977,12 @@ const AdminPublicacaoRoute = AdminPublicacaoRouteImport.update({
   path: '/admin/publicacao',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AdminPublicacoesPendentesRoute =
+  AdminPublicacoesPendentesRouteImport.update({
+    id: '/admin_/publicacoes-pendentes',
+    path: '/admin/publicacoes-pendentes',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const AdminQaTrafegoRoute = AdminQaTrafegoRouteImport.update({
   id: '/admin_/qa-trafego',
   path: '/admin/qa-trafego',
@@ -3052,6 +3059,7 @@ export interface FileRoutesByFullPath {
   '/admin/provas-monitor': typeof AdminProvasMonitorRoute
   '/admin/provas-verticais': typeof AdminProvasVerticaisRoute
   '/admin/publicacao': typeof AdminPublicacaoRoute
+  '/admin/publicacoes-pendentes': typeof AdminPublicacoesPendentesRoute
   '/admin/qa-trafego': typeof AdminQaTrafegoRoute
   '/admin/reviews': typeof AdminReviewsRoute
   '/admin/ui-performance': typeof AdminUiPerformanceRoute
@@ -3517,6 +3525,7 @@ export interface FileRoutesByTo {
   '/admin/provas-monitor': typeof AdminProvasMonitorRoute
   '/admin/provas-verticais': typeof AdminProvasVerticaisRoute
   '/admin/publicacao': typeof AdminPublicacaoRoute
+  '/admin/publicacoes-pendentes': typeof AdminPublicacoesPendentesRoute
   '/admin/qa-trafego': typeof AdminQaTrafegoRoute
   '/admin/reviews': typeof AdminReviewsRoute
   '/admin/ui-performance': typeof AdminUiPerformanceRoute
@@ -3983,6 +3992,7 @@ export interface FileRoutesById {
   '/admin_/provas-monitor': typeof AdminProvasMonitorRoute
   '/admin_/provas-verticais': typeof AdminProvasVerticaisRoute
   '/admin_/publicacao': typeof AdminPublicacaoRoute
+  '/admin_/publicacoes-pendentes': typeof AdminPublicacoesPendentesRoute
   '/admin_/qa-trafego': typeof AdminQaTrafegoRoute
   '/admin_/reviews': typeof AdminReviewsRoute
   '/admin_/ui-performance': typeof AdminUiPerformanceRoute
@@ -4450,6 +4460,7 @@ export interface FileRouteTypes {
     | '/admin/provas-monitor'
     | '/admin/provas-verticais'
     | '/admin/publicacao'
+    | '/admin/publicacoes-pendentes'
     | '/admin/qa-trafego'
     | '/admin/reviews'
     | '/admin/ui-performance'
@@ -4915,6 +4926,7 @@ export interface FileRouteTypes {
     | '/admin/provas-monitor'
     | '/admin/provas-verticais'
     | '/admin/publicacao'
+    | '/admin/publicacoes-pendentes'
     | '/admin/qa-trafego'
     | '/admin/reviews'
     | '/admin/ui-performance'
@@ -5380,6 +5392,7 @@ export interface FileRouteTypes {
     | '/admin_/provas-monitor'
     | '/admin_/provas-verticais'
     | '/admin_/publicacao'
+    | '/admin_/publicacoes-pendentes'
     | '/admin_/qa-trafego'
     | '/admin_/reviews'
     | '/admin_/ui-performance'
@@ -5846,6 +5859,7 @@ export interface RootRouteChildren {
   AdminProvasMonitorRoute: typeof AdminProvasMonitorRoute
   AdminProvasVerticaisRoute: typeof AdminProvasVerticaisRoute
   AdminPublicacaoRoute: typeof AdminPublicacaoRoute
+  AdminPublicacoesPendentesRoute: typeof AdminPublicacoesPendentesRoute
   AdminQaTrafegoRoute: typeof AdminQaTrafegoRoute
   AdminReviewsRoute: typeof AdminReviewsRoute
   AdminUiPerformanceRoute: typeof AdminUiPerformanceRoute
@@ -6893,6 +6907,13 @@ declare module '@tanstack/react-router' {
       path: '/admin/publicacao'
       fullPath: '/admin/publicacao'
       preLoaderRoute: typeof AdminPublicacaoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/admin_/publicacoes-pendentes': {
+      id: '/admin_/publicacoes-pendentes'
+      path: '/admin/publicacoes-pendentes'
+      fullPath: '/admin/publicacoes-pendentes'
+      preLoaderRoute: typeof AdminPublicacoesPendentesRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/admin_/qa-trafego': {
@@ -9561,6 +9582,7 @@ const rootRouteChildren: RootRouteChildren = {
   AdminProvasMonitorRoute: AdminProvasMonitorRoute,
   AdminProvasVerticaisRoute: AdminProvasVerticaisRoute,
   AdminPublicacaoRoute: AdminPublicacaoRoute,
+  AdminPublicacoesPendentesRoute: AdminPublicacoesPendentesRoute,
   AdminQaTrafegoRoute: AdminQaTrafegoRoute,
   AdminReviewsRoute: AdminReviewsRoute,
   AdminUiPerformanceRoute: AdminUiPerformanceRoute,
