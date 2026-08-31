@@ -36,6 +36,16 @@ jobs:
           GSC_SERVICE_ACCOUNT_JSON: ${{ secrets.GSC_SERVICE_ACCOUNT_JSON }}
         run: npm run monitor:editorial-waves
 
+      # Ledger de vereditos (PUBLISHED/PENDING/PROBLEM/UNKNOWN) por URL da onda.
+      - name: Ledger de vereditos de indexação
+        continue-on-error: true
+        run: npm run report:editorial-verdicts
+
+      # Informativo: bloqueia o Lote 4 enquanto a Onda 10C não consolidar.
+      - name: Gate da Onda 11 (Lote 4)
+        continue-on-error: true
+        run: npm run check:onda-11-gate
+
       - name: Auditoria consolidada
         run: npm run audit:editorial-10c
 
@@ -60,7 +70,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add reports docs public/editorial-audit-history.json public/editorial/10c/history
+          git add reports docs public/editorial-audit-history.json public/editorial/10c/history public/editorial-verdicts.json public/editorial/verdicts
           if git diff --cached --quiet; then
             echo "Sem variação nos relatórios."
           else
