@@ -106,7 +106,26 @@ const urls = ondas.rotas.map((r) => {
 
 // Caso técnico prioritário fora da registry de ondas: o artigo do erro
 // 0xc0000428 entra no mesmo ledger, porém sem se passar por URL da Onda 10C.
+// Inspeção AO VIVO do caso técnico (o artefato estático pode estar velho).
+// Sem credencial, permanece null e o fluxo cai no fallback UNKNOWN.
+let caso0428Live = null;
+try {
+  const { resolveSite, inspectUrl } = await import("./lib/gsc-client.mjs");
+  const site = await resolveSite("https://otecnicodeinformatica.com.br/");
+  const insp = await inspectUrl(site, "https://otecnicodeinformatica.com.br/problemas/windows-nao-inicia");
+  caso0428Live = {
+    estado: insp.verdict === "PASS" ? "INDEXED" : insp.verdict === "FAIL" ? "BLOCKED" : "PENDING",
+    motivo: insp.coverageState,
+    ultimoCrawl: insp.lastCrawlTime,
+    canonicalGoogle: insp.googleCanonical,
+    canonicalDeclarado: insp.userCanonical,
+  };
+} catch (e) {
+  console.warn(`[vereditos] inspeção ao vivo do caso 0xc0000428 indisponível: ${String(e).slice(0, 120)}`);
+}
+
 const casos = ler("public/index-status.json")?.rotas ?? [];
+
 const caso0428 = casos.find((r) => r.path === "/problemas/windows-nao-inicia");
 if (caso0428) {
   const g = caso0428.google ?? {};
