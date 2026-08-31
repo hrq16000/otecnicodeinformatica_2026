@@ -48,6 +48,7 @@ import { Route as GuiaTecnicoInformaticaRouteImport } from './routes/guia-tecnic
 import { Route as MarcasRouteImport } from './routes/marcas'
 import { Route as ObrigadoRouteImport } from './routes/obrigado'
 import { Route as OrdemDeServicoRouteImport } from './routes/ordem-de-servico'
+import { Route as PedidoRouteImport } from './routes/pedido'
 import { Route as PoliticaDeCookiesEAnunciosRouteImport } from './routes/politica-de-cookies-e-anuncios'
 import { Route as PoliticaDePecasDoClienteRouteImport } from './routes/politica-de-pecas-do-cliente'
 import { Route as PoliticaDePrivacidadeRouteImport } from './routes/politica-de-privacidade'
@@ -666,6 +667,11 @@ const ObrigadoRoute = ObrigadoRouteImport.update({
 const OrdemDeServicoRoute = OrdemDeServicoRouteImport.update({
   id: '/ordem-de-servico',
   path: '/ordem-de-servico',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PedidoRoute = PedidoRouteImport.update({
+  id: '/pedido',
+  path: '/pedido',
   getParentRoute: () => rootRouteImport,
 } as any)
 const PoliticaDeCookiesEAnunciosRoute =
@@ -2970,6 +2976,7 @@ export interface FileRoutesByFullPath {
   '/marcas': typeof MarcasRoute
   '/obrigado': typeof ObrigadoRoute
   '/ordem-de-servico': typeof OrdemDeServicoRoute
+  '/pedido': typeof PedidoRoute
   '/politica-de-cookies-e-anuncios': typeof PoliticaDeCookiesEAnunciosRoute
   '/politica-de-pecas-do-cliente': typeof PoliticaDePecasDoClienteRoute
   '/politica-de-privacidade': typeof PoliticaDePrivacidadeRoute
@@ -3431,6 +3438,7 @@ export interface FileRoutesByTo {
   '/marcas': typeof MarcasRoute
   '/obrigado': typeof ObrigadoRoute
   '/ordem-de-servico': typeof OrdemDeServicoRoute
+  '/pedido': typeof PedidoRoute
   '/politica-de-cookies-e-anuncios': typeof PoliticaDeCookiesEAnunciosRoute
   '/politica-de-pecas-do-cliente': typeof PoliticaDePecasDoClienteRoute
   '/politica-de-privacidade': typeof PoliticaDePrivacidadeRoute
@@ -3893,6 +3901,7 @@ export interface FileRoutesById {
   '/marcas': typeof MarcasRoute
   '/obrigado': typeof ObrigadoRoute
   '/ordem-de-servico': typeof OrdemDeServicoRoute
+  '/pedido': typeof PedidoRoute
   '/politica-de-cookies-e-anuncios': typeof PoliticaDeCookiesEAnunciosRoute
   '/politica-de-pecas-do-cliente': typeof PoliticaDePecasDoClienteRoute
   '/politica-de-privacidade': typeof PoliticaDePrivacidadeRoute
@@ -4356,6 +4365,7 @@ export interface FileRouteTypes {
     | '/marcas'
     | '/obrigado'
     | '/ordem-de-servico'
+    | '/pedido'
     | '/politica-de-cookies-e-anuncios'
     | '/politica-de-pecas-do-cliente'
     | '/politica-de-privacidade'
@@ -4817,6 +4827,7 @@ export interface FileRouteTypes {
     | '/marcas'
     | '/obrigado'
     | '/ordem-de-servico'
+    | '/pedido'
     | '/politica-de-cookies-e-anuncios'
     | '/politica-de-pecas-do-cliente'
     | '/politica-de-privacidade'
@@ -5278,6 +5289,7 @@ export interface FileRouteTypes {
     | '/marcas'
     | '/obrigado'
     | '/ordem-de-servico'
+    | '/pedido'
     | '/politica-de-cookies-e-anuncios'
     | '/politica-de-pecas-do-cliente'
     | '/politica-de-privacidade'
@@ -5740,6 +5752,7 @@ export interface RootRouteChildren {
   MarcasRoute: typeof MarcasRoute
   ObrigadoRoute: typeof ObrigadoRoute
   OrdemDeServicoRoute: typeof OrdemDeServicoRoute
+  PedidoRoute: typeof PedidoRoute
   PoliticaDeCookiesEAnunciosRoute: typeof PoliticaDeCookiesEAnunciosRoute
   PoliticaDePecasDoClienteRoute: typeof PoliticaDePecasDoClienteRoute
   PoliticaDePrivacidadeRoute: typeof PoliticaDePrivacidadeRoute
@@ -6435,6 +6448,13 @@ declare module '@tanstack/react-router' {
       path: '/ordem-de-servico'
       fullPath: '/ordem-de-servico'
       preLoaderRoute: typeof OrdemDeServicoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/pedido': {
+      id: '/pedido'
+      path: '/pedido'
+      fullPath: '/pedido'
+      preLoaderRoute: typeof PedidoRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/politica-de-cookies-e-anuncios': {
@@ -9421,6 +9441,7 @@ const rootRouteChildren: RootRouteChildren = {
   MarcasRoute: MarcasRoute,
   ObrigadoRoute: ObrigadoRoute,
   OrdemDeServicoRoute: OrdemDeServicoRoute,
+  PedidoRoute: PedidoRoute,
   PoliticaDeCookiesEAnunciosRoute: PoliticaDeCookiesEAnunciosRoute,
   PoliticaDePecasDoClienteRoute: PoliticaDePecasDoClienteRoute,
   PoliticaDePrivacidadeRoute: PoliticaDePrivacidadeRoute,
