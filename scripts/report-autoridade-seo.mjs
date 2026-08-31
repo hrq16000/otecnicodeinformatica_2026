@@ -15,8 +15,15 @@
  */
 import { mkdirSync, writeFileSync } from "node:fs";
 import { resolve } from "node:path";
+import { existsSync, readFileSync } from "node:fs";
 import { prepararSsr, htmlDaRota, abortarSeBloqueado } from "./lib/ssr-harness.mjs";
 import { EDITORIAL_WAVE } from "./lib/editorial-wave.mjs";
+
+/** Lote/onda de cada slug vem do consolidado já existente (nunca inferido). */
+const lotes = existsSync(resolve("public/editorial-lotes.json"))
+  ? JSON.parse(readFileSync(resolve("public/editorial-lotes.json"), "utf8"))
+  : null;
+const loteDoSlug = new Map((lotes?.urls ?? []).map((u) => [u.slug, u.lote]));
 
 const dist = process.argv.find((a) => !a.startsWith("--") && a.endsWith("dist")) || "dist";
 
@@ -77,7 +84,7 @@ function tiposDeSchema(html) {
   ];
 }
 
-const aprovados = EDITORIAL_WAVE.filter((a) => a.aprovado !== false);
+const aprovados = EDITORIAL_WAVE;
 const rotas = aprovados.map((a) => `/blog/${a.slug}`);
 
 await prepararSsr(rotas, { dist });
@@ -88,7 +95,7 @@ for (const artigo of aprovados) {
   const url = `/blog/${artigo.slug}`;
   const html = htmlDaRota(url, dist);
   if (!html) {
-    analises.push({ url, slug: artigo.slug, onda: artigo.wave ?? null, erro: "HTML não renderizado" });
+    analises.push({ url, slug: artigo.slug, lote: loteDoSlug.get(artigo.slug) ?? null, aprovadoEm: artigo.approvedAt ?? null, erro: "HTML não renderizado" });
     continue;
   }
 
@@ -122,7 +129,8 @@ for (const artigo of aprovados) {
   analises.push({
     url,
     slug: artigo.slug,
-    onda: artigo.wave ?? null,
+    lote: loteDoSlug.get(artigo.slug) ?? null,
+    aprovadoEm: artigo.approvedAt ?? null,
     titulo: html.match(/<title[^>]*>([^<]*)<\/title>/i)?.[1]?.trim() ?? null,
     palavras: palavras.length,
     termosUteis: uteis.length,
