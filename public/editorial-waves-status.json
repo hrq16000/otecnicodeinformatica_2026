@@ -1,37 +1,37 @@
 {
-  "geradoEm": "2026-08-26T04:44:53.719Z",
+  "geradoEm": "2026-08-31T17:57:03.528Z",
   "site": "sc-domain:otecnicodeinformatica.com.br",
   "disponivel": true,
   "lotes": [
     {
       "lote": "10C/0",
       "total": 4,
-      "indexadas": 0,
-      "cobertura": 0
+      "indexadas": 3,
+      "cobertura": 75
     },
     {
       "lote": "10D/1",
       "total": 3,
-      "indexadas": 0,
-      "cobertura": 0
+      "indexadas": 2,
+      "cobertura": 66.7
     },
     {
       "lote": "10C/2",
       "total": 3,
-      "indexadas": 0,
-      "cobertura": 0
+      "indexadas": 3,
+      "cobertura": 100
     },
     {
       "lote": "10C/3",
       "total": 6,
-      "indexadas": 0,
-      "cobertura": 0
+      "indexadas": 6,
+      "cobertura": 100
     },
     {
       "lote": "10C/4",
       "total": 6,
-      "indexadas": 0,
-      "cobertura": 0
+      "indexadas": 5,
+      "cobertura": 83.3
     }
   ],
   "rotas": [
@@ -50,9 +50,9 @@
       "sitemapLastmod": null,
       "indexNowSentAt": null,
       "google": {
-        "status": "NO_DATA",
+        "status": "DISCOVERED",
         "verdict": "NEUTRAL",
-        "coverageState": "URL is unknown to Google",
+        "coverageState": "Discovered - currently not indexed",
         "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
         "indexingState": "INDEXING_STATE_UNSPECIFIED",
         "ultimoCrawl": null,
@@ -75,14 +75,14 @@
       "sitemapLastmod": null,
       "indexNowSentAt": null,
       "google": {
-        "status": "NO_DATA",
-        "verdict": "NEUTRAL",
-        "coverageState": "URL is unknown to Google",
-        "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
-        "indexingState": "INDEXING_STATE_UNSPECIFIED",
-        "ultimoCrawl": null,
-        "canonicalGoogle": null,
-        "canonicalDeclarado": null
+        "status": "INDEXED",
+        "verdict": "PASS",
+        "coverageState": "Submitted and indexed",
+        "robotsTxtState": "ALLOWED",
+        "indexingState": "INDEXING_ALLOWED",
+        "ultimoCrawl": "2026-08-26T17:11:00Z",
+        "canonicalGoogle": "https://otecnicodeinformatica.com.br/blog/memoria-ram-insuficiente-sintomas",
+        "canonicalDeclarado": "https://otecnicodeinformatica.com.br/blog/memoria-ram-insuficiente-sintomas"
       }
     },
     {
@@ -100,14 +100,14 @@
       "sitemapLastmod": null,
       "indexNowSentAt": null,
       "google": {
-        "status": "NO_DATA",
-        "verdict": "NEUTRAL",
-        "coverageState": "URL is unknown to Google",
-        "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
-        "indexingState": "INDEXING_STATE_UNSPECIFIED",
-        "ultimoCrawl": null,
-        "canonicalGoogle": null,
-        "canonicalDeclarado": null
+        "status": "INDEXED",
+        "verdict": "PASS",
+        "coverageState": "Submitted and indexed",
+        "robotsTxtState": "ALLOWED",
+        "indexingState": "INDEXING_ALLOWED",
+        "ultimoCrawl": "2026-08-26T19:18:40Z",
+        "canonicalGoogle": "https://otecnicodeinformatica.com.br/blog/codigos-de-erro-tela-azul-windows",
+        "canonicalDeclarado": "https://otecnicodeinformatica.com.br/blog/codigos-de-erro-tela-azul-windows"
       }
     },
     {
@@ -125,14 +125,14 @@
       "sitemapLastmod": null,
       "indexNowSentAt": null,
       "google": {
-        "status": "NO_DATA",
-        "verdict": "NEUTRAL",
-        "coverageState": "URL is unknown to Google",
-        "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
-        "indexingState": "INDEXING_STATE_UNSPECIFIED",
-        "ultimoCrawl": null,
-        "canonicalGoogle": null,
-        "canonicalDeclarado": null
+        "status": "INDEXED",
+        "verdict": "PASS",
+        "coverageState": "Submitted and indexed",
+        "robotsTxtState": "ALLOWED",
+        "indexingState": "INDEXING_ALLOWED",
+        "ultimoCrawl": "2026-08-26T21:36:35Z",
+        "canonicalGoogle": "https://otecnicodeinformatica.com.br/blog/testar-memoria-ram-memtest86",
+        "canonicalDeclarado": "https://otecnicodeinformatica.com.br/blog/testar-memoria-ram-memtest86"
       }
     },
     {
@@ -150,14 +150,14 @@
       "sitemapLastmod": null,
       "indexNowSentAt": null,
       "google": {
-        "status": "NO_DATA",
-        "verdict": "NEUTRAL",
-        "coverageState": "URL is unknown to Google",
-        "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
-        "indexingState": "INDEXING_STATE_UNSPECIFIED",
-        "ultimoCrawl": null,
-        "canonicalGoogle": null,
-        "canonicalDeclarado": null
+        "status": "INDEXED",
+        "verdict": "PASS",
+        "coverageState": "Submitted and indexed",
+        "robotsTxtState": "ALLOWED",
+        "indexingState": "INDEXING_ALLOWED",
+        "ultimoCrawl": "2026-08-26T21:19:15Z",
+        "canonicalGoogle": "https://otecnicodeinformatica.com.br/blog/botao-power-nao-funciona-jump-start-placa-mae",
+        "canonicalDeclarado": "https://otecnicodeinformatica.com.br/blog/botao-power-nao-funciona-jump-start-placa-mae"
       }
     },
     {
@@ -175,9 +175,9 @@
       "sitemapLastmod": null,
       "indexNowSentAt": null,
       "google": {
-        "status": "NO_DATA",
+        "status": "DISCOVERED",
         "verdict": "NEUTRAL",
-        "coverageState": "URL is unknown to Google",
+        "coverageState": "Discovered - currently not indexed",
         "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
         "indexingState": "INDEXING_STATE_UNSPECIFIED",
         "ultimoCrawl": null,
@@ -200,14 +200,14 @@
       "sitemapLastmod": null,
       "indexNowSentAt": null,
       "google": {
-        "status": "NO_DATA",
-        "verdict": "NEUTRAL",
-        "coverageState": "URL is unknown to Google",
-        "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
-        "indexingState": "INDEXING_STATE_UNSPECIFIED",
-        "ultimoCrawl": null,
-        "canonicalGoogle": null,
-        "canonicalDeclarado": null
+        "status": "INDEXED",
+        "verdict": "PASS",
+        "coverageState": "Submitted and indexed",
+        "robotsTxtState": "ALLOWED",
+        "indexingState": "INDEXING_ALLOWED",
+        "ultimoCrawl": "2026-08-26T17:07:33Z",
+        "canonicalGoogle": "https://otecnicodeinformatica.com.br/blog/bios-corrompida-reset-cmos-atualizacao",
+        "canonicalDeclarado": "https://otecnicodeinformatica.com.br/blog/bios-corrompida-reset-cmos-atualizacao"
       }
     },
     {
@@ -225,14 +225,14 @@
       "sitemapLastmod": null,
       "indexNowSentAt": null,
       "google": {
-        "status": "NO_DATA",
-        "verdict": "NEUTRAL",
-        "coverageState": "URL is unknown to Google",
-        "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
-        "indexingState": "INDEXING_STATE_UNSPECIFIED",
-        "ultimoCrawl": null,
-        "canonicalGoogle": null,
-        "canonicalDeclarado": null
+        "status": "INDEXED",
+        "verdict": "PASS",
+        "coverageState": "Submitted and indexed",
+        "robotsTxtState": "ALLOWED",
+        "indexingState": "INDEXING_ALLOWED",
+        "ultimoCrawl": "2026-08-26T15:24:14Z",
+        "canonicalGoogle": "https://otecnicodeinformatica.com.br/blog/internet-lenta-provedor-ou-roteador",
+        "canonicalDeclarado": "https://otecnicodeinformatica.com.br/blog/internet-lenta-provedor-ou-roteador"
       }
     },
     {
@@ -250,14 +250,14 @@
       "sitemapLastmod": null,
       "indexNowSentAt": null,
       "google": {
-        "status": "NO_DATA",
-        "verdict": "NEUTRAL",
-        "coverageState": "URL is unknown to Google",
-        "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
-        "indexingState": "INDEXING_STATE_UNSPECIFIED",
-        "ultimoCrawl": null,
-        "canonicalGoogle": null,
-        "canonicalDeclarado": null
+        "status": "INDEXED",
+        "verdict": "PASS",
+        "coverageState": "Submitted and indexed",
+        "robotsTxtState": "ALLOWED",
+        "indexingState": "INDEXING_ALLOWED",
+        "ultimoCrawl": "2026-08-26T17:10:22Z",
+        "canonicalGoogle": "https://otecnicodeinformatica.com.br/blog/impressora-offline-como-resolver",
+        "canonicalDeclarado": "https://otecnicodeinformatica.com.br/blog/impressora-offline-como-resolver"
       }
     },
     {
@@ -275,14 +275,14 @@
       "sitemapLastmod": null,
       "indexNowSentAt": null,
       "google": {
-        "status": "NO_DATA",
-        "verdict": "NEUTRAL",
-        "coverageState": "URL is unknown to Google",
-        "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
-        "indexingState": "INDEXING_STATE_UNSPECIFIED",
-        "ultimoCrawl": null,
-        "canonicalGoogle": null,
-        "canonicalDeclarado": null
+        "status": "INDEXED",
+        "verdict": "PASS",
+        "coverageState": "Submitted and indexed",
+        "robotsTxtState": "ALLOWED",
+        "indexingState": "INDEXING_ALLOWED",
+        "ultimoCrawl": "2026-08-27T04:57:31Z",
+        "canonicalGoogle": "https://otecnicodeinformatica.com.br/blog/fila-de-impressao-travada-spooler-windows",
+        "canonicalDeclarado": "https://otecnicodeinformatica.com.br/blog/fila-de-impressao-travada-spooler-windows"
       }
     },
     {
@@ -300,14 +300,14 @@
       "sitemapLastmod": null,
       "indexNowSentAt": null,
       "google": {
-        "status": "NO_DATA",
-        "verdict": "NEUTRAL",
-        "coverageState": "URL is unknown to Google",
-        "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
-        "indexingState": "INDEXING_STATE_UNSPECIFIED",
-        "ultimoCrawl": null,
-        "canonicalGoogle": null,
-        "canonicalDeclarado": null
+        "status": "INDEXED",
+        "verdict": "PASS",
+        "coverageState": "Submitted and indexed",
+        "robotsTxtState": "ALLOWED",
+        "indexingState": "INDEXING_ALLOWED",
+        "ultimoCrawl": "2026-08-26T19:18:50Z",
+        "canonicalGoogle": "https://otecnicodeinformatica.com.br/blog/hd-nao-e-reconhecido-na-bios-o-que-fazer",
+        "canonicalDeclarado": "https://otecnicodeinformatica.com.br/blog/hd-nao-e-reconhecido-na-bios-o-que-fazer"
       }
     },
     {
@@ -325,14 +325,14 @@
       "sitemapLastmod": null,
       "indexNowSentAt": null,
       "google": {
-        "status": "NO_DATA",
-        "verdict": "NEUTRAL",
-        "coverageState": "URL is unknown to Google",
-        "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
-        "indexingState": "INDEXING_STATE_UNSPECIFIED",
-        "ultimoCrawl": null,
-        "canonicalGoogle": null,
-        "canonicalDeclarado": null
+        "status": "INDEXED",
+        "verdict": "PASS",
+        "coverageState": "Submitted and indexed",
+        "robotsTxtState": "ALLOWED",
+        "indexingState": "INDEXING_ALLOWED",
+        "ultimoCrawl": "2026-08-26T17:06:49Z",
+        "canonicalGoogle": "https://otecnicodeinformatica.com.br/blog/ssd-nvme-nao-aparece-no-gerenciador-de-discos",
+        "canonicalDeclarado": "https://otecnicodeinformatica.com.br/blog/ssd-nvme-nao-aparece-no-gerenciador-de-discos"
       }
     },
     {
@@ -350,14 +350,14 @@
       "sitemapLastmod": null,
       "indexNowSentAt": null,
       "google": {
-        "status": "NO_DATA",
-        "verdict": "NEUTRAL",
-        "coverageState": "URL is unknown to Google",
-        "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
-        "indexingState": "INDEXING_STATE_UNSPECIFIED",
-        "ultimoCrawl": null,
-        "canonicalGoogle": null,
-        "canonicalDeclarado": null
+        "status": "INDEXED",
+        "verdict": "PASS",
+        "coverageState": "Submitted and indexed",
+        "robotsTxtState": "ALLOWED",
+        "indexingState": "INDEXING_ALLOWED",
+        "ultimoCrawl": "2026-08-26T17:08:59Z",
+        "canonicalGoogle": "https://otecnicodeinformatica.com.br/blog/disco-com-setores-defeituosos-smart-o-que-fazer",
+        "canonicalDeclarado": "https://otecnicodeinformatica.com.br/blog/disco-com-setores-defeituosos-smart-o-que-fazer"
       }
     },
     {
@@ -375,14 +375,14 @@
       "sitemapLastmod": null,
       "indexNowSentAt": null,
       "google": {
-        "status": "NO_DATA",
-        "verdict": "NEUTRAL",
-        "coverageState": "URL is unknown to Google",
-        "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
-        "indexingState": "INDEXING_STATE_UNSPECIFIED",
-        "ultimoCrawl": null,
-        "canonicalGoogle": null,
-        "canonicalDeclarado": null
+        "status": "INDEXED",
+        "verdict": "PASS",
+        "coverageState": "Submitted and indexed",
+        "robotsTxtState": "ALLOWED",
+        "indexingState": "INDEXING_ALLOWED",
+        "ultimoCrawl": "2026-08-26T17:14:07Z",
+        "canonicalGoogle": "https://otecnicodeinformatica.com.br/blog/computador-sem-som-o-que-verificar",
+        "canonicalDeclarado": "https://otecnicodeinformatica.com.br/blog/computador-sem-som-o-que-verificar"
       }
     },
     {
@@ -400,14 +400,14 @@
       "sitemapLastmod": null,
       "indexNowSentAt": null,
       "google": {
-        "status": "NO_DATA",
-        "verdict": "NEUTRAL",
-        "coverageState": "URL is unknown to Google",
-        "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
-        "indexingState": "INDEXING_STATE_UNSPECIFIED",
-        "ultimoCrawl": null,
-        "canonicalGoogle": null,
-        "canonicalDeclarado": null
+        "status": "INDEXED",
+        "verdict": "PASS",
+        "coverageState": "Submitted and indexed",
+        "robotsTxtState": "ALLOWED",
+        "indexingState": "INDEXING_ALLOWED",
+        "ultimoCrawl": "2026-08-26T17:06:09Z",
+        "canonicalGoogle": "https://otecnicodeinformatica.com.br/blog/fone-de-ouvido-nao-e-reconhecido-no-pc",
+        "canonicalDeclarado": "https://otecnicodeinformatica.com.br/blog/fone-de-ouvido-nao-e-reconhecido-no-pc"
       }
     },
     {
@@ -425,14 +425,14 @@
       "sitemapLastmod": null,
       "indexNowSentAt": null,
       "google": {
-        "status": "NO_DATA",
-        "verdict": "NEUTRAL",
-        "coverageState": "URL is unknown to Google",
-        "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
-        "indexingState": "INDEXING_STATE_UNSPECIFIED",
-        "ultimoCrawl": null,
-        "canonicalGoogle": null,
-        "canonicalDeclarado": null
+        "status": "INDEXED",
+        "verdict": "PASS",
+        "coverageState": "Submitted and indexed",
+        "robotsTxtState": "ALLOWED",
+        "indexingState": "INDEXING_ALLOWED",
+        "ultimoCrawl": "2026-08-26T19:18:36Z",
+        "canonicalGoogle": "https://otecnicodeinformatica.com.br/blog/servico-de-audio-do-windows-nao-esta-em-execucao",
+        "canonicalDeclarado": "https://otecnicodeinformatica.com.br/blog/servico-de-audio-do-windows-nao-esta-em-execucao"
       }
     },
     {
@@ -450,9 +450,9 @@
       "sitemapLastmod": null,
       "indexNowSentAt": null,
       "google": {
-        "status": "NO_DATA",
+        "status": "DISCOVERED",
         "verdict": "NEUTRAL",
-        "coverageState": "URL is unknown to Google",
+        "coverageState": "Discovered - currently not indexed",
         "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
         "indexingState": "INDEXING_STATE_UNSPECIFIED",
         "ultimoCrawl": null,
@@ -475,14 +475,14 @@
       "sitemapLastmod": null,
       "indexNowSentAt": null,
       "google": {
-        "status": "NO_DATA",
-        "verdict": "NEUTRAL",
-        "coverageState": "URL is unknown to Google",
-        "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
-        "indexingState": "INDEXING_STATE_UNSPECIFIED",
-        "ultimoCrawl": null,
-        "canonicalGoogle": null,
-        "canonicalDeclarado": null
+        "status": "INDEXED",
+        "verdict": "PASS",
+        "coverageState": "Submitted and indexed",
+        "robotsTxtState": "ALLOWED",
+        "indexingState": "INDEXING_ALLOWED",
+        "ultimoCrawl": "2026-08-26T19:18:47Z",
+        "canonicalGoogle": "https://otecnicodeinformatica.com.br/blog/permissoes-de-camera-no-windows",
+        "canonicalDeclarado": "https://otecnicodeinformatica.com.br/blog/permissoes-de-camera-no-windows"
       }
     },
     {
@@ -500,14 +500,14 @@
       "sitemapLastmod": null,
       "indexNowSentAt": null,
       "google": {
-        "status": "NO_DATA",
-        "verdict": "NEUTRAL",
-        "coverageState": "URL is unknown to Google",
-        "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
-        "indexingState": "INDEXING_STATE_UNSPECIFIED",
-        "ultimoCrawl": null,
-        "canonicalGoogle": null,
-        "canonicalDeclarado": null
+        "status": "INDEXED",
+        "verdict": "PASS",
+        "coverageState": "Submitted and indexed",
+        "robotsTxtState": "ALLOWED",
+        "indexingState": "INDEXING_ALLOWED",
+        "ultimoCrawl": "2026-08-26T17:07:49Z",
+        "canonicalGoogle": "https://otecnicodeinformatica.com.br/blog/webcam-usb-nao-e-detectada",
+        "canonicalDeclarado": "https://otecnicodeinformatica.com.br/blog/webcam-usb-nao-e-detectada"
       }
     },
     {
@@ -525,14 +525,14 @@
       "sitemapLastmod": null,
       "indexNowSentAt": null,
       "google": {
-        "status": "NO_DATA",
-        "verdict": "NEUTRAL",
-        "coverageState": "URL is unknown to Google",
-        "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
-        "indexingState": "INDEXING_STATE_UNSPECIFIED",
-        "ultimoCrawl": null,
-        "canonicalGoogle": null,
-        "canonicalDeclarado": null
+        "status": "INDEXED",
+        "verdict": "PASS",
+        "coverageState": "Submitted and indexed",
+        "robotsTxtState": "ALLOWED",
+        "indexingState": "INDEXING_ALLOWED",
+        "ultimoCrawl": "2026-08-26T17:04:44Z",
+        "canonicalGoogle": "https://otecnicodeinformatica.com.br/blog/windows-update-nao-funciona-o-que-verificar",
+        "canonicalDeclarado": "https://otecnicodeinformatica.com.br/blog/windows-update-nao-funciona-o-que-verificar"
       }
     },
     {
@@ -550,14 +550,14 @@
       "sitemapLastmod": null,
       "indexNowSentAt": null,
       "google": {
-        "status": "NO_DATA",
-        "verdict": "NEUTRAL",
-        "coverageState": "URL is unknown to Google",
-        "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
-        "indexingState": "INDEXING_STATE_UNSPECIFIED",
-        "ultimoCrawl": null,
-        "canonicalGoogle": null,
-        "canonicalDeclarado": null
+        "status": "INDEXED",
+        "verdict": "PASS",
+        "coverageState": "Submitted and indexed",
+        "robotsTxtState": "ALLOWED",
+        "indexingState": "INDEXING_ALLOWED",
+        "ultimoCrawl": "2026-08-26T17:13:11Z",
+        "canonicalGoogle": "https://otecnicodeinformatica.com.br/blog/limpar-cache-do-windows-update-softwaredistribution",
+        "canonicalDeclarado": "https://otecnicodeinformatica.com.br/blog/limpar-cache-do-windows-update-softwaredistribution"
       }
     },
     {
@@ -575,16 +575,16 @@
       "sitemapLastmod": null,
       "indexNowSentAt": null,
       "google": {
-        "status": "NO_DATA",
-        "verdict": "NEUTRAL",
-        "coverageState": "URL is unknown to Google",
-        "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
-        "indexingState": "INDEXING_STATE_UNSPECIFIED",
-        "ultimoCrawl": null,
-        "canonicalGoogle": null,
-        "canonicalDeclarado": null
+        "status": "INDEXED",
+        "verdict": "PASS",
+        "coverageState": "Submitted and indexed",
+        "robotsTxtState": "ALLOWED",
+        "indexingState": "INDEXING_ALLOWED",
+        "ultimoCrawl": "2026-08-26T17:06:27Z",
+        "canonicalGoogle": "https://otecnicodeinformatica.com.br/blog/windows-update-travado-desfazendo-alteracoes",
+        "canonicalDeclarado": "https://otecnicodeinformatica.com.br/blog/windows-update-travado-desfazendo-alteracoes"
       }
     }
   ],
-  "alertasNovos": 6
+  "alertasNovos": 22
 }
