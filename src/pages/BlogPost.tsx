@@ -31,6 +31,7 @@ import {
 import { SITE_BASE_URL, BRAND_NAME } from "@/lib/siteConfig";
 import { buildArticleToc, shouldRenderToc } from "@/lib/articleToc";
 import { ArticleToc } from "@/components/editorial/ArticleToc";
+import { getArticleSources, getTechnicalReviewStatus } from "@/lib/blogEditorialSources";
 import NotFound from "./NotFound";
 import { encurtar, tituloComMarca, DESCRIPTION_MAX } from "@/lib/socialMeta";
 
@@ -207,6 +208,9 @@ const BlogPost = () => {
 
 
   const approved = slug ? isEditorialApproved(slug) : false;
+  const sourceCount = slug ? getArticleSources(slug).length : 0;
+  const technicalReview = slug ? getTechnicalReviewStatus(slug) : "pending";
+  const reviewedDate = approval?.reviewedAt ?? null;
 
   return (
     <div className="min-h-screen bg-background">
@@ -325,6 +329,32 @@ const BlogPost = () => {
                 />
               </AspectRatio>
             </div>
+            {approved && approval && (
+              <aside
+                aria-label="Informações de revisão editorial"
+                className="max-w-3xl mx-auto mb-8 rounded-2xl border border-accent/20 bg-accent/[0.045] p-5 md:p-6"
+              >
+                <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
+                  <div>
+                    <p className="text-sm font-semibold text-foreground">Guia técnico revisado</p>
+                    <p className="mt-1 text-sm leading-relaxed text-muted-foreground">
+                      Publicado pela equipe editorial de {INSTITUTIONAL_AUTHOR.name}. A orientação
+                      prioriza procedimentos reversíveis e indica quando é mais seguro parar.
+                    </p>
+                  </div>
+                  {reviewedDate && (
+                    <p className="shrink-0 text-sm font-medium text-muted-foreground">
+                      Revisado em {new Date(`${reviewedDate}T12:00:00`).toLocaleDateString("pt-BR")}
+                    </p>
+                  )}
+                </div>
+                <div className="mt-4 flex flex-wrap gap-x-5 gap-y-2 text-xs text-muted-foreground">
+                  <span>Revisão técnica: {technicalReview === "reviewed" ? "concluída" : "em registro"}</span>
+                  <span>{sourceCount > 0 ? `${sourceCount} fonte${sourceCount === 1 ? "" : "s"} consultada${sourceCount === 1 ? "" : "s"}` : "Conhecimento técnico estável, revisado editorialmente"}</span>
+                  <Link to="/contato" className="font-semibold text-accent hover:underline">Sugerir correção</Link>
+                </div>
+              </aside>
+            )}
             <article className="max-w-3xl mx-auto prose prose-lg prose-headings:text-primary prose-headings:font-heading prose-p:text-muted-foreground prose-li:text-muted-foreground prose-strong:text-foreground prose-a:text-accent">
               {toc.render && <ArticleToc headings={toc.headings} />}
               {toc.content}
