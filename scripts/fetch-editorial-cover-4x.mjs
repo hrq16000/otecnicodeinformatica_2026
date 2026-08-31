@@ -231,6 +231,19 @@ const CURADORIA = [
     slug: "windows-update-travado-desfazendo-alteracoes",
     commons: "File:Windows Update \u2013 VirtualBox Windows 11 24H2 (Version 10.0.26100.1742) 04 02 2025 18 22 13crop.png",
   },
+  // ── Onda 11A — Lote 4: BIOS, UEFI e inicialização do Windows.
+  {
+    slug: "boot-uefi-ou-legacy-como-identificar",
+    commons: "File:Lenovo ThinkPad T470 UEFI BIOS 1.75 setup - boot menu selection.JPG",
+  },
+  {
+    slug: "ordem-de-boot-na-bios-como-configurar",
+    commons: "File:BIOS Setup First Time.jpg",
+  },
+  {
+    slug: "windows-reparo-automatico-em-loop",
+    commons: "File:Windows Recovery Environment.png",
+  },
 ];
 
 /** Metadados + URL de uma imagem do Wikimedia Commons (licença real, sem IA). */
