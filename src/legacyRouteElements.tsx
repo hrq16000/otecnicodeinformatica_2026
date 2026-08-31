@@ -1015,6 +1015,7 @@ export const legacyRouteElements: Record<string, () => React.ReactElement> = {
   "/admin/indexacao": () => <AdminIndexacao />,
   "/admin/editorial-ondas": () => <AdminEditorialOndas />,
   "/admin/ondas": () => <AdminOndas />,
+  "/admin/publicacoes-pendentes": () => <AdminPublicacoesPendentes />,
   "/admin/ui-performance": () => <AdminUiPerformance />,
   "/admin/dashboard": () => <AdminDashboard />,
   "/admin/casos": () => <AdminCasos />,
