@@ -9,10 +9,12 @@ import { FloatingParticles } from "@/components/FloatingParticles";
 import { trackPageView } from "@/lib/analytics";
 import { getApprovedSlugs } from "@/lib/blogEditorialRegistry";
 import { getEditorialCover } from "@/lib/blogEditorialCovers";
+import { EDITORIAL_HUB_SUMMARIES } from "@/lib/editorialHubSummaries";
 
 import {
   BookOpen, ShieldCheck, FileSearch, Wrench, MessageCircle,
-  ArrowRight, CheckCircle2, Clock,
+  ArrowRight, CheckCircle2, Clock, Laptop, Wifi, HardDrive,
+  ShieldAlert, MonitorCog, GraduationCap, ArrowUpRight,
 } from "lucide-react";
 
 // ─────────────────────────────────────────────────────────────
@@ -51,39 +53,78 @@ const FUNDAMENTOS = [
   { slug: "como-aprender-informatica", label: "Como aprender informática", desc: "Roteiro de estudo em quatro fases, com cronograma." },
 ];
 
+/**
+ * Portas de entrada editoriais. A ideia vem da boa navegação por temas de
+ * portais de dicas, mas cada rota aponta para material técnico próprio,
+ * revisado e mantido no domínio do portal.
+ */
+const EDITORIAL_STARTS = [
+  {
+    title: "Windows e desempenho",
+    description: "Inicialização, atualizações, lentidão e decisões antes de formatar.",
+    to: "/problemas/windows-nao-inicia",
+    label: "Resolver um problema no Windows",
+    icon: MonitorCog,
+  },
+  {
+    title: "Segurança e arquivos",
+    description: "Backup, vírus, privacidade e o que fazer antes de perder dados.",
+    to: "/blog/backup-como-proteger-seus-arquivos",
+    label: "Proteger meus arquivos",
+    icon: ShieldAlert,
+  },
+  {
+    title: "Notebook e hardware",
+    description: "Aquecimento, SSD, memória, tela e sinais que merecem atenção.",
+    to: "/blog/notebook-superaquecendo-o-que-fazer",
+    label: "Cuidar do notebook",
+    icon: Laptop,
+  },
+  {
+    title: "Wi-Fi e rede em casa",
+    description: "Cobertura, quedas de sinal e ajustes que fazem sentido testar.",
+    to: "/blog/como-melhorar-sinal-wifi-em-casa",
+    label: "Melhorar o Wi-Fi",
+    icon: Wifi,
+  },
+  {
+    title: "Dados e recuperação",
+    description: "Como agir quando o disco falha, um arquivo some ou o equipamento dá sinais.",
+    to: "/blog/como-recuperar-dados-hd-com-defeito",
+    label: "Entender recuperação de dados",
+    icon: HardDrive,
+  },
+  {
+    title: "Aprender informática",
+    description: "Fundamentos para usar computador, programas e internet com mais autonomia.",
+    to: "/blog/informatica-basica",
+    label: "Começar do básico",
+    icon: GraduationCap,
+  },
+] as const;
+
 const Blog = () => {
   const approvedSlugs = getApprovedSlugs();
   const hasApproved = approvedSlugs.length > 0;
   // Fail-closed: hub permanece noindex enquanto não houver massa editorial aprovada.
   const noindex = approvedSlugs.length < MIN_APPROVED_TO_INDEX;
 
-  // Títulos/resumos reais dos artigos, carregados sob demanda (chunk pesado).
-  const [summaries, setSummaries] = useState<
-    Record<string, { title: string; excerpt: string }>
-  >({});
+  const [activeCategory, setActiveCategory] = useState("Todos");
+  // Metadados leves e estáveis: aparecem já no SSR, sem importar o corpo
+  // React completo de cada artigo no hub.
+  const summaries = EDITORIAL_HUB_SUMMARIES;
 
   useEffect(() => {
     trackPageView("/blog", "Blog - Hub editorial");
   }, []);
 
-  useEffect(() => {
-    if (!hasApproved) return;
-    let active = true;
-    import("@/data/blogPostsContent").then((mod) => {
-      if (!active) return;
-      const next: Record<string, { title: string; excerpt: string }> = {};
-      for (const slug of approvedSlugs) {
-        const post = mod.blogPostsContentBase[slug];
-        if (post) next[slug] = { title: post.title, excerpt: post.excerpt };
-
-      }
-      setSummaries(next);
-    });
-    return () => {
-      active = false;
-    };
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [hasApproved]);
+  const categories = [
+    "Todos",
+    ...Array.from(new Set(approvedSlugs.map((slug) => summaries[slug]?.category).filter(Boolean))).sort(),
+  ];
+  const visibleSlugs = approvedSlugs.filter((slug) =>
+    activeCategory === "Todos" || summaries[slug]?.category === activeCategory,
+  );
 
 
   return (
@@ -118,13 +159,27 @@ const Blog = () => {
                   <span>Guias técnicos</span>
                 </div>
                 <h1 className="text-3xl sm:text-4xl md:text-5xl font-heading font-bold text-white leading-tight mb-5">
-                  Guias de Informática
+                  Central de conhecimento em informática
                 </h1>
                 <p className="text-lg md:text-xl text-white/70 max-w-2xl mx-auto leading-relaxed">
-                  Guias sobre manutenção, segurança, computadores, notebooks, redes e
-                  cuidados com dados — publicados após revisão editorial.
+                  Explicações práticas para entender, prevenir e resolver problemas de computador,
+                  notebook, Windows, Wi-Fi e dados — sem transformar toda dúvida em venda.
                 </p>
                 <div className="glow-separator max-w-[200px] mx-auto mt-6" />
+                <div className="mt-7 grid grid-cols-3 gap-3 text-left text-white/80 sm:max-w-xl sm:mx-auto">
+                  <span className="rounded-xl border border-white/15 bg-white/5 px-3 py-3 text-xs leading-relaxed">
+                    <strong className="block text-base text-white">{approvedSlugs.length}+</strong>
+                    guias revisados
+                  </span>
+                  <span className="rounded-xl border border-white/15 bg-white/5 px-3 py-3 text-xs leading-relaxed">
+                    <strong className="block text-base text-white">6</strong>
+                    caminhos para começar
+                  </span>
+                  <span className="rounded-xl border border-white/15 bg-white/5 px-3 py-3 text-xs leading-relaxed">
+                    <strong className="block text-base text-white">1º</strong>
+                    orientação, depois serviço
+                  </span>
+                </div>
               </div>
             </AnimatedSection>
           </div>
@@ -135,7 +190,7 @@ const Blog = () => {
           </div>
         </section>
 
-        {/* ═══════════ ESTADO EDITORIAL ═══════════ */}
+        {/* ═══════════ PORTAS DE ENTRADA EDITORIAIS ═══════════ */}
         <section className="py-16 md:py-20 bg-background">
           <div className="container mx-auto px-4">
             {!hasApproved ? (
@@ -173,10 +228,41 @@ const Blog = () => {
               </AnimatedSection>
             ) : (
               <AnimatedSection>
-                <div className="max-w-4xl mx-auto">
+                <div className="max-w-6xl mx-auto">
+                  <div className="max-w-3xl mb-9">
+                    <span className="text-sm font-semibold uppercase tracking-[0.16em] text-accent">Por onde começar</span>
+                    <h2 className="mt-2 text-2xl md:text-3xl font-heading font-bold text-foreground">
+                      Escolha o assunto, não o serviço
+                    </h2>
+                    <p className="mt-3 text-muted-foreground leading-relaxed">
+                      O portal foi organizado para você encontrar uma explicação útil primeiro. Se a
+                      situação exigir diagnóstico presencial, o próximo passo aparece com clareza no próprio guia.
+                    </p>
+                  </div>
+
+                  <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+                    {EDITORIAL_STARTS.map(({ title, description, to, label, icon: Icon }) => (
+                      <li key={to}>
+                        <Link
+                          to={to}
+                          className="group flex h-full flex-col rounded-2xl border border-border bg-card p-5 transition-all hover:-translate-y-0.5 hover:border-accent/45 hover:shadow-md"
+                        >
+                          <span className="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-accent/10 text-accent">
+                            <Icon className="h-5 w-5" aria-hidden="true" />
+                          </span>
+                          <span className="mt-5 text-lg font-semibold text-foreground group-hover:text-accent">{title}</span>
+                          <span className="mt-2 text-sm leading-relaxed text-muted-foreground">{description}</span>
+                          <span className="mt-5 inline-flex items-center gap-1 text-sm font-semibold text-accent">
+                            {label} <ArrowUpRight className="h-4 w-4" aria-hidden="true" />
+                          </span>
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+
                   {/* Fundamentos: porta de entrada dos três pilares nacionais (9B). */}
                   {FUNDAMENTOS.some((f) => approvedSlugs.includes(f.slug)) && (
-                    <div className="mb-12 rounded-2xl border border-border bg-card p-6 md:p-8">
+                    <div className="my-12 rounded-2xl border border-border bg-muted/30 p-6 md:p-8">
                       <h2 className="text-xl md:text-2xl font-heading font-bold text-foreground">
                         Fundamentos de informática
                       </h2>
@@ -199,11 +285,39 @@ const Blog = () => {
                     </div>
                   )}
 
-                  <h2 className="text-2xl md:text-3xl font-heading font-bold text-foreground mb-8 text-center">
-                    Guias publicados
-                  </h2>
+                  <div className="mb-7 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+                    <div>
+                      <span className="text-sm font-semibold uppercase tracking-[0.16em] text-accent">Acervo revisado</span>
+                      <h2 className="mt-2 text-2xl md:text-3xl font-heading font-bold text-foreground">
+                        Guias publicados
+                      </h2>
+                      <p className="mt-2 text-sm text-muted-foreground">
+                        Filtre por tema para encontrar respostas sem percorrer o portal inteiro.
+                      </p>
+                    </div>
+                    <p className="text-sm font-medium text-muted-foreground">
+                      {visibleSlugs.length} {visibleSlugs.length === 1 ? "guia" : "guias"}
+                    </p>
+                  </div>
+                  <div className="mb-7 flex flex-wrap gap-2" role="group" aria-label="Filtrar guias por assunto">
+                    {categories.map((category) => (
+                      <button
+                        key={category}
+                        type="button"
+                        onClick={() => setActiveCategory(category)}
+                        aria-pressed={activeCategory === category}
+                        className={`rounded-full border px-3 py-2 text-sm font-semibold transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent ${
+                          activeCategory === category
+                            ? "border-accent bg-accent text-accent-foreground"
+                            : "border-border bg-background text-foreground hover:border-accent/45 hover:text-accent"
+                        }`}
+                      >
+                        {category}
+                      </button>
+                    ))}
+                  </div>
                   <ul className="grid sm:grid-cols-2 gap-4">
-                    {approvedSlugs.map((slug) => {
+                    {visibleSlugs.map((slug) => {
                       const meta = summaries[slug];
                       const cover = getEditorialCover(slug);
                       return (
@@ -224,6 +338,11 @@ const Blog = () => {
                               />
                             )}
                             <span className="block p-5">
+                              {meta?.category && (
+                                <span className="mb-3 inline-flex rounded-full bg-accent/10 px-2.5 py-1 text-xs font-semibold text-accent">
+                                  {meta.category}
+                                </span>
+                              )}
                               <span className="block text-foreground font-semibold">
                                 {meta?.title ?? slug}
                               </span>
@@ -232,16 +351,52 @@ const Blog = () => {
                                   {meta.excerpt}
                                 </span>
                               )}
+                              {meta?.readTime && (
+                                <span className="mt-3 block text-xs font-medium text-muted-foreground">
+                                  {meta.readTime} de leitura
+                                </span>
+                              )}
                             </span>
                           </Link>
                         </li>
                       );
                     })}
                   </ul>
+                  {visibleSlugs.length === 0 && (
+                    <p className="rounded-xl border border-dashed border-border p-6 text-center text-sm text-muted-foreground">
+                      Os resumos deste tema ainda estão carregando. Selecione “Todos” para ver o acervo completo.
+                    </p>
+                  )}
                 </div>
               </AnimatedSection>
             )}
 
+          </div>
+        </section>
+
+        <section className="border-y border-border bg-accent/[0.04] py-14">
+          <div className="container mx-auto px-4">
+            <AnimatedSection>
+              <div className="mx-auto grid max-w-5xl gap-6 rounded-2xl border border-accent/20 bg-background p-6 md:grid-cols-[1.4fr_0.8fr] md:p-8">
+                <div>
+                  <span className="text-sm font-semibold uppercase tracking-[0.16em] text-accent">Orientação antes do orçamento</span>
+                  <h2 className="mt-2 text-2xl font-heading font-bold text-foreground">Quando a leitura do guia não é suficiente</h2>
+                  <p className="mt-3 leading-relaxed text-muted-foreground">
+                    Ruído no disco, cheiro de queimado, tela com falhas físicas, BitLocker sem chave ou
+                    dados importantes em risco pedem parada segura. Nesses casos, a triagem ajuda a decidir
+                    o que não fazer antes de qualquer reparo.
+                  </p>
+                </div>
+                <div className="flex items-center md:justify-end">
+                  <Link
+                    to="/diagnostico-tecnico"
+                    className="inline-flex min-h-11 w-full items-center justify-center gap-2 rounded-xl bg-accent px-5 py-3 text-center font-semibold text-accent-foreground transition-opacity hover:opacity-90 md:w-auto"
+                  >
+                    Fazer triagem técnica <ArrowRight className="h-4 w-4" />
+                  </Link>
+                </div>
+              </div>
+            </AnimatedSection>
           </div>
         </section>
 
