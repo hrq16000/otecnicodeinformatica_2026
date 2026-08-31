@@ -1,18 +1,18 @@
 # Vereditos de indexação — Onda 10C
 
-- Gerado em: 2026-08-31T21:04:32.441Z
+- Gerado em: 2026-08-31T21:56:00.608Z
 - Propriedade: `sc-domain:otecnicodeinformatica.com.br` (Search Console disponível)
-- Total: **23** · PUBLISHED 20 · PENDING 3 · PROBLEM 0 · UNKNOWN 0
+- Total: **26** · PUBLISHED 20 · PENDING 6 · PROBLEM 0 · UNKNOWN 0
 - Onda consolidada: **NÃO**
 
 | Lote | URL | Interno | Sitemap | IndexNow | Estado busca | Veredito |
 | --- | --- | --- | --- | --- | --- | --- |
-| 10C/0 | /blog/limpar-arquivos-temporarios-windows | PUBLISHED | não | SUBMITTED | DISCOVERED | PENDING |
+| 10C/0 | /blog/limpar-arquivos-temporarios-windows | PUBLISHED | não | SUBMITTED | NO_DATA | PENDING |
 | 10C/0 | /blog/memoria-ram-insuficiente-sintomas | PUBLISHED | não | SUBMITTED | INDEXED | PUBLISHED |
 | 10C/0 | /blog/codigos-de-erro-tela-azul-windows | PUBLISHED | não | SUBMITTED | INDEXED | PUBLISHED |
 | 10C/0 | /blog/testar-memoria-ram-memtest86 | PUBLISHED | não | SUBMITTED | INDEXED | PUBLISHED |
 | 10D/1 | /blog/botao-power-nao-funciona-jump-start-placa-mae | PUBLISHED | não | — | INDEXED | PUBLISHED |
-| 10D/1 | /blog/curto-circuito-placa-mae-como-identificar | PUBLISHED | não | — | DISCOVERED | PENDING |
+| 10D/1 | /blog/curto-circuito-placa-mae-como-identificar | PUBLISHED | não | — | NO_DATA | PENDING |
 | 10D/1 | /blog/bios-corrompida-reset-cmos-atualizacao | PUBLISHED | não | — | INDEXED | PUBLISHED |
 | 10C/2 | /blog/internet-lenta-provedor-ou-roteador | PUBLISHED | não | SUBMITTED | INDEXED | PUBLISHED |
 | 10C/2 | /blog/impressora-offline-como-resolver | PUBLISHED | não | SUBMITTED | INDEXED | PUBLISHED |
@@ -29,6 +29,9 @@
 | 10C/4 | /blog/windows-update-nao-funciona-o-que-verificar | PUBLISHED | não | SUBMITTED | INDEXED | PUBLISHED |
 | 10C/4 | /blog/limpar-cache-do-windows-update-softwaredistribution | PUBLISHED | não | SUBMITTED | INDEXED | PUBLISHED |
 | 10C/4 | /blog/windows-update-travado-desfazendo-alteracoes | PUBLISHED | não | SUBMITTED | INDEXED | PUBLISHED |
+| 11A/4 | /blog/boot-uefi-ou-legacy-como-identificar | PUBLISHED | não | — | NO_DATA | PENDING |
+| 11A/4 | /blog/ordem-de-boot-na-bios-como-configurar | PUBLISHED | não | — | NO_DATA | PENDING |
+| 11A/4 | /blog/windows-reparo-automatico-em-loop | PUBLISHED | não | — | NO_DATA | PENDING |
 | CASO/0xc0000428 | /problemas/windows-nao-inicia | PUBLISHED | sim | — | INDEXED | PUBLISHED |
 
 > A API do Search Console é somente leitura: ela informa o estado do índice, não solicita indexação. A submissão real ocorre por sitemap + IndexNow.
