@@ -5,6 +5,7 @@ import { Card } from "@/components/ui/card";
 import { Skeleton } from "@/components/ui/skeleton";
 import { exportarCsv, exportarJson } from "@/lib/exportarRelatorio";
 import { permitirExecucao } from "@/lib/rateLimitSobDemanda";
+import { enfileirar, TimeoutSobDemanda } from "@/lib/filaSobDemanda";
 
 
 /**
@@ -68,20 +69,32 @@ export default function EditorialAuditoriaPanel({ lote }: { lote: string }) {
   const [delta, setDelta] = useState<DeltaArtefato | null>(null);
   const [veredito, setVeredito] = useState<string>("UNKNOWN");
   const [bloqueio, setBloqueio] = useState<string | null>(null);
+  const [ultimoPayload, setUltimoPayload] = useState<Record<string, unknown> | null>(null);
+  const [execucoesSessao, setExecucoesSessao] = useState<Array<{ em: string; payload: string; estado: string }>>([]);
 
-  const carregar = useCallback(async (sobDemanda = false) => {
+  const carregar = useCallback(async (sobDemanda: boolean | Record<string, unknown> = false) => {
+    // `sobDemanda` como objeto = reexecução rápida com o payload anterior.
+    const reexecucao = typeof sobDemanda === "object" && sobDemanda !== null;
+    const payload = reexecucao ? (sobDemanda as Record<string, unknown>) : { lote };
     if (sobDemanda) {
       // Rate-limit + dedupe por rota E payload: variar o filtro de lote não
-      // burla o teto de execuções da rota.
-      const veredicto = permitirExecucao("/admin/editorial-ondas#auditoria", { lote });
+      // burla o teto de execuções da rota. A reexecução pula o dedupe (é o
+      // caso de falha de job) mas continua submetida ao teto da rota.
+      const veredicto = permitirExecucao(
+        "/admin/editorial-ondas#auditoria",
+        reexecucao ? { ...payload, reexecucao: Date.now() } : payload,
+      );
       if (!veredicto.permitido) {
         setBloqueio(veredicto.mensagem);
         return;
       }
       setBloqueio(null);
+      setUltimoPayload(payload);
     }
     setExecutando(true);
-    const [indexacao, indexnow, schema, assets, alertas, auditoria, deltaArt] = await Promise.all([
+    const chave = `auditoria-10c:${JSON.stringify(payload)}`;
+    const coleta = await enfileirar(chave, () =>
+      Promise.all([
       buscar<Record<string, any>>("/editorial-waves-status.json"),
       buscar<Record<string, any>>("/editorial-indexnow-status.json"),
       buscar<Record<string, any>>("/editorial-schema-diff.json"),
@@ -89,7 +102,24 @@ export default function EditorialAuditoriaPanel({ lote }: { lote: string }) {
       buscar<Record<string, any>>("/editorial-waves-alerts.json"),
       buscar<Record<string, any>>("/editorial-audit-10c.json"),
       buscar<DeltaArtefato>("/editorial-audit-delta.json"),
-    ]);
+      ]),
+    ).catch((e: unknown) => {
+      setBloqueio(
+        e instanceof TimeoutSobDemanda
+          ? `${e.message} Tente novamente ou rode npm run audit:editorial-10c.`
+          : "Falha ao ler os artefatos da auditoria.",
+      );
+      return null;
+    });
+
+    if (!coleta) {
+      setExecutando(false);
+      setExecucoesSessao((h) =>
+        [{ em: new Date().toISOString(), payload: JSON.stringify(payload), estado: "FALHA" }, ...h].slice(0, 10),
+      );
+      return;
+    }
+    const [indexacao, indexnow, schema, assets, alertas, auditoria, deltaArt] = coleta;
     setDelta(deltaArt);
     setVeredito(String(auditoria?.veredito ?? "UNKNOWN"));
     {
@@ -188,7 +218,9 @@ export default function EditorialAuditoriaPanel({ lote }: { lote: string }) {
 
       setKpis(lista);
     }
-    setExecutadoEm(new Date().toISOString());
+    const em = new Date().toISOString();
+    setExecutadoEm(em);
+    setExecucoesSessao((h) => [{ em, payload: JSON.stringify(payload), estado: "OK" }, ...h].slice(0, 10));
     setExecutando(false);
   }, [lote]);
 
@@ -240,6 +272,16 @@ export default function EditorialAuditoriaPanel({ lote }: { lote: string }) {
         >
           {executando ? "Executando…" : "Executar auditoria agora"}
         </Button>
+        <Button
+          size="sm"
+          variant="secondary"
+          data-testid="auditoria-reexecutar"
+          disabled={executando || !ultimoPayload}
+          onClick={() => void carregar(ultimoPayload ?? { lote })}
+          title="Repete a última execução com o mesmo payload (falha de job)"
+        >
+          Reexecutar última
+        </Button>
         <Button size="sm" variant="outline" onClick={() => exportarKpis("csv")}>
           KPIs CSV
         </Button>
@@ -261,6 +303,19 @@ export default function EditorialAuditoriaPanel({ lote }: { lote: string }) {
           data-testid="auditoria-bloqueio"
         >
           {bloqueio}
+        </Card>
+      )}
+
+      {execucoesSessao.length > 0 && (
+        <Card className="mb-4 p-3 text-xs" data-testid="auditoria-execucoes-sessao">
+          <p className="mb-1 uppercase text-muted-foreground">Execuções desta sessão</p>
+          <ul className="space-y-1">
+            {execucoesSessao.map((e) => (
+              <li key={`${e.em}-${e.payload}`} className="text-muted-foreground">
+                {new Date(e.em).toLocaleString("pt-BR")} · {e.estado} · <code>{e.payload}</code>
+              </li>
+            ))}
+          </ul>
         </Card>
       )}
 
