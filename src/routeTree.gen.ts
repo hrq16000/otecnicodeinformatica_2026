@@ -48,6 +48,7 @@ import { Route as GuiaTecnicoInformaticaRouteImport } from './routes/guia-tecnic
 import { Route as MarcasRouteImport } from './routes/marcas'
 import { Route as ObrigadoRouteImport } from './routes/obrigado'
 import { Route as OrdemDeServicoRouteImport } from './routes/ordem-de-servico'
+import { Route as PedidoRouteImport } from './routes/pedido'
 import { Route as PoliticaDeCookiesEAnunciosRouteImport } from './routes/politica-de-cookies-e-anuncios'
 import { Route as PoliticaDePecasDoClienteRouteImport } from './routes/politica-de-pecas-do-cliente'
 import { Route as PoliticaDePrivacidadeRouteImport } from './routes/politica-de-privacidade'
@@ -86,6 +87,7 @@ import { Route as AdminAuditoriaOsRouteImport } from './routes/admin_.auditoria-
 import { Route as AdminBairrosRouteImport } from './routes/admin_.bairros'
 import { Route as AdminCasosRouteImport } from './routes/admin_.casos'
 import { Route as AdminConversaoRouteImport } from './routes/admin_.conversao'
+import { Route as AdminConversasRouteImport } from './routes/admin_.conversas'
 import { Route as AdminDashboardRouteImport } from './routes/admin_.dashboard'
 import { Route as AdminEditorLocalRouteImport } from './routes/admin_.editor-local'
 import { Route as AdminEditorialOndasRouteImport } from './routes/admin_.editorial-ondas'
@@ -668,6 +670,11 @@ const OrdemDeServicoRoute = OrdemDeServicoRouteImport.update({
   path: '/ordem-de-servico',
   getParentRoute: () => rootRouteImport,
 } as any)
+const PedidoRoute = PedidoRouteImport.update({
+  id: '/pedido',
+  path: '/pedido',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const PoliticaDeCookiesEAnunciosRoute =
   PoliticaDeCookiesEAnunciosRouteImport.update({
     id: '/politica-de-cookies-e-anuncios',
@@ -870,6 +877,11 @@ const AdminCasosRoute = AdminCasosRouteImport.update({
 const AdminConversaoRoute = AdminConversaoRouteImport.update({
   id: '/admin_/conversao',
   path: '/admin/conversao',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AdminConversasRoute = AdminConversasRouteImport.update({
+  id: '/admin_/conversas',
+  path: '/admin/conversas',
   getParentRoute: () => rootRouteImport,
 } as any)
 const AdminDashboardRoute = AdminDashboardRouteImport.update({
@@ -2970,6 +2982,7 @@ export interface FileRoutesByFullPath {
   '/marcas': typeof MarcasRoute
   '/obrigado': typeof ObrigadoRoute
   '/ordem-de-servico': typeof OrdemDeServicoRoute
+  '/pedido': typeof PedidoRoute
   '/politica-de-cookies-e-anuncios': typeof PoliticaDeCookiesEAnunciosRoute
   '/politica-de-pecas-do-cliente': typeof PoliticaDePecasDoClienteRoute
   '/politica-de-privacidade': typeof PoliticaDePrivacidadeRoute
@@ -3008,6 +3021,7 @@ export interface FileRoutesByFullPath {
   '/admin/bairros': typeof AdminBairrosRoute
   '/admin/casos': typeof AdminCasosRoute
   '/admin/conversao': typeof AdminConversaoRoute
+  '/admin/conversas': typeof AdminConversasRoute
   '/admin/dashboard': typeof AdminDashboardRoute
   '/admin/editor-local': typeof AdminEditorLocalRoute
   '/admin/editorial-ondas': typeof AdminEditorialOndasRoute
@@ -3431,6 +3445,7 @@ export interface FileRoutesByTo {
   '/marcas': typeof MarcasRoute
   '/obrigado': typeof ObrigadoRoute
   '/ordem-de-servico': typeof OrdemDeServicoRoute
+  '/pedido': typeof PedidoRoute
   '/politica-de-cookies-e-anuncios': typeof PoliticaDeCookiesEAnunciosRoute
   '/politica-de-pecas-do-cliente': typeof PoliticaDePecasDoClienteRoute
   '/politica-de-privacidade': typeof PoliticaDePrivacidadeRoute
@@ -3469,6 +3484,7 @@ export interface FileRoutesByTo {
   '/admin/bairros': typeof AdminBairrosRoute
   '/admin/casos': typeof AdminCasosRoute
   '/admin/conversao': typeof AdminConversaoRoute
+  '/admin/conversas': typeof AdminConversasRoute
   '/admin/dashboard': typeof AdminDashboardRoute
   '/admin/editor-local': typeof AdminEditorLocalRoute
   '/admin/editorial-ondas': typeof AdminEditorialOndasRoute
@@ -3893,6 +3909,7 @@ export interface FileRoutesById {
   '/marcas': typeof MarcasRoute
   '/obrigado': typeof ObrigadoRoute
   '/ordem-de-servico': typeof OrdemDeServicoRoute
+  '/pedido': typeof PedidoRoute
   '/politica-de-cookies-e-anuncios': typeof PoliticaDeCookiesEAnunciosRoute
   '/politica-de-pecas-do-cliente': typeof PoliticaDePecasDoClienteRoute
   '/politica-de-privacidade': typeof PoliticaDePrivacidadeRoute
@@ -3931,6 +3948,7 @@ export interface FileRoutesById {
   '/admin_/bairros': typeof AdminBairrosRoute
   '/admin_/casos': typeof AdminCasosRoute
   '/admin_/conversao': typeof AdminConversaoRoute
+  '/admin_/conversas': typeof AdminConversasRoute
   '/admin_/dashboard': typeof AdminDashboardRoute
   '/admin_/editor-local': typeof AdminEditorLocalRoute
   '/admin_/editorial-ondas': typeof AdminEditorialOndasRoute
@@ -4356,6 +4374,7 @@ export interface FileRouteTypes {
     | '/marcas'
     | '/obrigado'
     | '/ordem-de-servico'
+    | '/pedido'
     | '/politica-de-cookies-e-anuncios'
     | '/politica-de-pecas-do-cliente'
     | '/politica-de-privacidade'
@@ -4394,6 +4413,7 @@ export interface FileRouteTypes {
     | '/admin/bairros'
     | '/admin/casos'
     | '/admin/conversao'
+    | '/admin/conversas'
     | '/admin/dashboard'
     | '/admin/editor-local'
     | '/admin/editorial-ondas'
@@ -4817,6 +4837,7 @@ export interface FileRouteTypes {
     | '/marcas'
     | '/obrigado'
     | '/ordem-de-servico'
+    | '/pedido'
     | '/politica-de-cookies-e-anuncios'
     | '/politica-de-pecas-do-cliente'
     | '/politica-de-privacidade'
@@ -4855,6 +4876,7 @@ export interface FileRouteTypes {
     | '/admin/bairros'
     | '/admin/casos'
     | '/admin/conversao'
+    | '/admin/conversas'
     | '/admin/dashboard'
     | '/admin/editor-local'
     | '/admin/editorial-ondas'
@@ -5278,6 +5300,7 @@ export interface FileRouteTypes {
     | '/marcas'
     | '/obrigado'
     | '/ordem-de-servico'
+    | '/pedido'
     | '/politica-de-cookies-e-anuncios'
     | '/politica-de-pecas-do-cliente'
     | '/politica-de-privacidade'
@@ -5316,6 +5339,7 @@ export interface FileRouteTypes {
     | '/admin_/bairros'
     | '/admin_/casos'
     | '/admin_/conversao'
+    | '/admin_/conversas'
     | '/admin_/dashboard'
     | '/admin_/editor-local'
     | '/admin_/editorial-ondas'
@@ -5740,6 +5764,7 @@ export interface RootRouteChildren {
   MarcasRoute: typeof MarcasRoute
   ObrigadoRoute: typeof ObrigadoRoute
   OrdemDeServicoRoute: typeof OrdemDeServicoRoute
+  PedidoRoute: typeof PedidoRoute
   PoliticaDeCookiesEAnunciosRoute: typeof PoliticaDeCookiesEAnunciosRoute
   PoliticaDePecasDoClienteRoute: typeof PoliticaDePecasDoClienteRoute
   PoliticaDePrivacidadeRoute: typeof PoliticaDePrivacidadeRoute
@@ -5778,6 +5803,7 @@ export interface RootRouteChildren {
   AdminBairrosRoute: typeof AdminBairrosRoute
   AdminCasosRoute: typeof AdminCasosRoute
   AdminConversaoRoute: typeof AdminConversaoRoute
+  AdminConversasRoute: typeof AdminConversasRoute
   AdminDashboardRoute: typeof AdminDashboardRoute
   AdminEditorLocalRoute: typeof AdminEditorLocalRoute
   AdminEditorialOndasRoute: typeof AdminEditorialOndasRoute
@@ -6437,6 +6463,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof OrdemDeServicoRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/pedido': {
+      id: '/pedido'
+      path: '/pedido'
+      fullPath: '/pedido'
+      preLoaderRoute: typeof PedidoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/politica-de-cookies-e-anuncios': {
       id: '/politica-de-cookies-e-anuncios'
       path: '/politica-de-cookies-e-anuncios'
@@ -6701,6 +6734,13 @@ declare module '@tanstack/react-router' {
       path: '/admin/conversao'
       fullPath: '/admin/conversao'
       preLoaderRoute: typeof AdminConversaoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/admin_/conversas': {
+      id: '/admin_/conversas'
+      path: '/admin/conversas'
+      fullPath: '/admin/conversas'
+      preLoaderRoute: typeof AdminConversasRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/admin_/dashboard': {
@@ -9421,6 +9461,7 @@ const rootRouteChildren: RootRouteChildren = {
   MarcasRoute: MarcasRoute,
   ObrigadoRoute: ObrigadoRoute,
   OrdemDeServicoRoute: OrdemDeServicoRoute,
+  PedidoRoute: PedidoRoute,
   PoliticaDeCookiesEAnunciosRoute: PoliticaDeCookiesEAnunciosRoute,
   PoliticaDePecasDoClienteRoute: PoliticaDePecasDoClienteRoute,
   PoliticaDePrivacidadeRoute: PoliticaDePrivacidadeRoute,
@@ -9461,6 +9502,7 @@ const rootRouteChildren: RootRouteChildren = {
   AdminBairrosRoute: AdminBairrosRoute,
   AdminCasosRoute: AdminCasosRoute,
   AdminConversaoRoute: AdminConversaoRoute,
+  AdminConversasRoute: AdminConversasRoute,
   AdminDashboardRoute: AdminDashboardRoute,
   AdminEditorLocalRoute: AdminEditorLocalRoute,
   AdminEditorialOndasRoute: AdminEditorialOndasRoute,

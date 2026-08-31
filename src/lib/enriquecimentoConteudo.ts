@@ -302,7 +302,123 @@ export const ENRIQUECIMENTO_1: Record<string, EnriquecimentoConteudo> = {
           { titulo: "Recuperar primeiro, atualizar com o sistema estável", desc: "Troca de versão, firmware e chaves de segurança não devem ser misturados a uma recuperação de dados em curso. Primeiro estabiliza-se o boot e confirma-se o backup; depois se planeja a atualização compatível com o hardware." },
         ],
       },
+      {
+        id: "cenarios-0xc0000428",
+        titulo: "Os cenários em que o 0xc0000428 aparece — e o que cada um sugere",
+        intro:
+          "O código é o mesmo, mas o histórico das últimas horas muda completamente a hipótese mais provável. Antes de qualquer comando, vale reconstruir o que aconteceu imediatamente antes da primeira falha de inicialização.",
+        itens: [
+          {
+            titulo: "Logo após uma atualização do Windows",
+            desc: "Atualização interrompida por queda de energia, desligamento forçado ou disco cheio pode deixar um componente meio gravado. A imagem existe, mas o conteúdo não corresponde mais ao catálogo esperado. É o cenário com melhor prognóstico: Restauração do Sistema para um ponto anterior e desinstalação da atualização problemática pelo WinRE costumam resolver sem tocar nos dados.",
+          },
+          {
+            titulo: "Depois de clonar o disco para um SSD novo",
+            desc: "Clonagens feitas com a partição EFI incompleta, com alinhamento diferente ou com o disco de destino menor produzem um boot que aponta para arquivos que não estão exatamente onde o BCD indica. Aqui a correção é reconstruir os arquivos de inicialização na partição EFI correta — não reinstalar o Windows nem apagar o disco de origem, que ainda é a cópia de segurança.",
+          },
+          {
+            titulo: "Depois de trocar HD por SSD ou mexer no UEFI",
+            desc: "Mudança de modo do controlador (AHCI/RAID/Intel RST), alternância entre UEFI e Legacy/CSM ou reset das configurações de fábrica podem deixar o firmware carregando um caminho de boot antigo. A verificação começa no próprio UEFI, conferindo se o Windows Boot Manager aparece na lista, antes de qualquer comando dentro do WinRE.",
+          },
+          {
+            titulo: "Depois de instalar driver, antivírus ou 'otimizador'",
+            desc: "Drivers não assinados, ferramentas que alteram o boot e programas de ajuste agressivo podem inserir uma imagem que o Windows recusa a carregar. O caminho do arquivo exibido na tela normalmente aponta para o culpado; a remoção é feita pelo Modo de Segurança ou pelo prompt do WinRE, não desligando permanentemente a verificação de assinatura.",
+          },
+          {
+            titulo: "Sem nenhuma alteração recente",
+            desc: "Quando ninguém mexeu em nada, corrupção espontânea é rara e o armazenamento passa a ser o principal suspeito. Setores que deixaram de ser lidos corretamente entregam um arquivo diferente do original — mesmo código na tela, causa física. Nesse cenário a ordem se inverte: copiar os dados primeiro, reparar depois.",
+          },
+        ],
+      },
+      {
+        id: "desktop-notebook-e-escalonamento",
+        titulo: "Desktop, notebook e o momento de parar de tentar",
+        itens: [
+          {
+            titulo: "No desktop, a variável extra é conexão",
+            desc: "Cabo SATA solto, porta M.2 mal encaixada, fonte entregando tensão instável e bateria da placa descarregada fazem o firmware perder a entrada de boot entre um reinício e outro. Um sintoma que muda a cada partida aponta mais para contato elétrico do que para arquivo corrompido.",
+          },
+          {
+            titulo: "No notebook, a variável extra é o próprio SSD",
+            desc: "Modelos com SSD soldado, criptografia ativa de fábrica e firmware travado pelo fabricante limitam o que pode ser feito sem bancada. Insistir em comandos de reparo com um NVMe que já apresenta falhas de leitura reduz a chance de recuperar arquivos depois.",
+          },
+          {
+            titulo: "Sinais de que o caso deixou de ser software",
+            desc: "A unidade desaparece do UEFI de forma intermitente, o WinRE congela ao listar volumes, cada tentativa demora mais que a anterior, há cheiro de queimado ou ruído anormal. Qualquer um desses sinais interrompe o roteiro de comandos e transforma o caso em preservação de dados.",
+          },
+          {
+            titulo: "Quando faz sentido chamar a assistência",
+            desc: "Arquivos sem backup, volume com BitLocker sem chave em mãos, equipamento de trabalho que não pode ficar parado por tentativa e erro, ou duas tentativas de reparo já feitas sem mudança no sintoma. Levar o histórico do que já foi tentado encurta o diagnóstico e evita repetir passos de risco.",
+          },
+        ],
+        fecho: {
+          antes: "Se o quadro evoluiu para tela azul recorrente depois de voltar a iniciar, vale acompanhar também ",
+          to: "/problemas/tela-azul",
+          anchor: "o que os códigos de parada indicam quando o sistema já carrega",
+          depois: ".",
+        },
+      },
     ],
+    tabelaExtra: {
+      titulo: "Ferramentas de reparo do boot: o que cada uma faz e qual é o risco",
+      colunas: {
+        sintoma: "Ferramenta",
+        causa: "Para que serve de verdade",
+        verificar: "Pré-requisito antes de usar",
+        acao: "Risco e limite",
+      },
+      linhas: [
+        {
+          sintoma: "Reparo de Inicialização (WinRE)",
+          causa: "Tentativa automática de corrigir os problemas mais comuns de partida, sem intervenção manual",
+          verificar: "Executar uma única vez e ler o relatório gerado antes de repetir",
+          acao: "Baixo risco; repetir em ciclo apenas mascara a causa e atrasa a preservação dos dados",
+        },
+        {
+          sintoma: "Restauração do Sistema / desinstalar atualização",
+          causa: "Voltar arquivos de sistema e configurações a um estado anterior à alteração que quebrou o boot",
+          verificar: "Existir ponto de restauração ou atualização recente listada; documentos pessoais não são afetados",
+          acao: "Baixo risco; programas instalados depois do ponto escolhido podem precisar de reinstalação",
+        },
+        {
+          sintoma: "sfc /scannow (com /offbootdir e /offwindir no WinRE)",
+          causa: "Verificar e substituir arquivos protegidos do Windows que estejam corrompidos",
+          verificar: "Identificar corretamente a letra do volume do Windows dentro do WinRE, que muda em relação ao sistema em uso",
+          acao: "Baixo risco de dados; sem efeito quando a origem é falha de leitura do disco",
+        },
+        {
+          sintoma: "DISM /RestoreHealth",
+          causa: "Reparar a imagem de componentes que abastece o SFC quando os próprios arquivos de origem estão danificados",
+          verificar: "Executar depois do SFC e apontar para uma origem íntegra quando o sistema não a encontra",
+          acao: "Demorado; em disco instável, a leitura intensa pode agravar uma falha física em curso",
+        },
+        {
+          sintoma: "bootrec /scanos, /rebuildbcd e bcdboot",
+          causa: "Reconstruir as entradas de inicialização e recriar os arquivos de boot na partição EFI",
+          verificar: "Confirmar antes que o volume do Windows é legível e que a partição de sistema correta foi identificada",
+          acao: "Altera a estrutura de boot: com a partição errada, o sistema pode deixar de aparecer — anotar o estado atual antes",
+        },
+        {
+          sintoma: "bcdedit (nointegritychecks / testsigning)",
+          causa: "Suspender temporariamente a exigência de assinatura para isolar qual componente está sendo recusado",
+          verificar: "Usar apenas como teste de diagnóstico, com data e comando registrados",
+          acao: "Reduz uma proteção real; manter desativado é decisão de segurança, não correção — reverter assim que o componente for identificado",
+        },
+        {
+          sintoma: "chkdsk /f /r",
+          causa: "Corrigir estruturas do sistema de arquivos e remapear setores com problema de leitura",
+          verificar: "Só depois de confirmar que existe cópia dos arquivos importantes",
+          acao: "Alto risco em disco doente: a varredura intensa pode inviabilizar leituras que ainda funcionavam",
+        },
+        {
+          sintoma: "DiskPart clean / format / reinstalação",
+          causa: "Recriar a estrutura do disco e instalar o sistema do zero",
+          verificar: "Backup conferido, arquivo por arquivo, e diagnóstico já concluído",
+          acao: "Destrutivo e irreversível; nunca é passo de diagnóstico para 0xc0000428",
+        },
+      ],
+    },
+
     fontes: [
       { titulo: "Microsoft — códigos NTSTATUS (0xC0000428 / STATUS_INVALID_IMAGE_HASH)", url: "https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-erref/596a1078-e883-4972-9bbc-49e60bebca55", nota: "Definição oficial do código exibido na tela." },
       { titulo: "Microsoft Support — Windows Recovery Environment", url: "https://support.microsoft.com/en-us/windows/experience/backup-recovery/windows-recovery-environment", nota: "Ferramentas disponíveis no WinRE e observação sobre BitLocker." },

@@ -448,6 +448,57 @@ export type Database = {
           },
         ]
       }
+      os_attachments: {
+        Row: {
+          created_at: string
+          id: string
+          message_id: string | null
+          mime_type: string
+          nome_original: string | null
+          size_bytes: number
+          storage_path: string
+          thread_id: string
+          uploaded_by: string
+        }
+        Insert: {
+          created_at?: string
+          id?: string
+          message_id?: string | null
+          mime_type: string
+          nome_original?: string | null
+          size_bytes: number
+          storage_path: string
+          thread_id: string
+          uploaded_by?: string
+        }
+        Update: {
+          created_at?: string
+          id?: string
+          message_id?: string | null
+          mime_type?: string
+          nome_original?: string | null
+          size_bytes?: number
+          storage_path?: string
+          thread_id?: string
+          uploaded_by?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "os_attachments_message_id_fkey"
+            columns: ["message_id"]
+            isOneToOne: false
+            referencedRelation: "os_messages"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "os_attachments_thread_id_fkey"
+            columns: ["thread_id"]
+            isOneToOne: false
+            referencedRelation: "os_threads"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
       os_lookup_attempts: {
         Row: {
           created_at: string
@@ -480,6 +531,100 @@ export type Database = {
           telefone_hash?: string
         }
         Relationships: []
+      }
+      os_messages: {
+        Row: {
+          author_id: string | null
+          author_label: string | null
+          author_type: string
+          body: string
+          created_at: string
+          id: string
+          read_at: string | null
+          thread_id: string
+        }
+        Insert: {
+          author_id?: string | null
+          author_label?: string | null
+          author_type: string
+          body?: string
+          created_at?: string
+          id?: string
+          read_at?: string | null
+          thread_id: string
+        }
+        Update: {
+          author_id?: string | null
+          author_label?: string | null
+          author_type?: string
+          body?: string
+          created_at?: string
+          id?: string
+          read_at?: string | null
+          thread_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "os_messages_thread_id_fkey"
+            columns: ["thread_id"]
+            isOneToOne: false
+            referencedRelation: "os_threads"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      os_threads: {
+        Row: {
+          access_token_hash: string
+          assunto: string | null
+          created_at: string
+          id: string
+          last_message_at: string | null
+          os_id: string | null
+          protocolo: string | null
+          status: string
+          telefone_hash: string
+          unread_admin: number
+          unread_client: number
+          updated_at: string
+        }
+        Insert: {
+          access_token_hash: string
+          assunto?: string | null
+          created_at?: string
+          id?: string
+          last_message_at?: string | null
+          os_id?: string | null
+          protocolo?: string | null
+          status?: string
+          telefone_hash: string
+          unread_admin?: number
+          unread_client?: number
+          updated_at?: string
+        }
+        Update: {
+          access_token_hash?: string
+          assunto?: string | null
+          created_at?: string
+          id?: string
+          last_message_at?: string | null
+          os_id?: string | null
+          protocolo?: string | null
+          status?: string
+          telefone_hash?: string
+          unread_admin?: number
+          unread_client?: number
+          updated_at?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "os_threads_os_id_fkey"
+            columns: ["os_id"]
+            isOneToOne: false
+            referencedRelation: "ordens_servico"
+            referencedColumns: ["id"]
+          },
+        ]
       }
       os_verification_codes: {
         Row: {

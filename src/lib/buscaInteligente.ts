@@ -16,6 +16,8 @@
  * Nenhuma rota nova é inventada aqui: todos os destinos já existem.
  */
 
+import { correlatoParaCodigo, extrairCodigoDaConsulta } from "./buscaCodigosErro";
+
 export type IntencaoBusca = {
   id: string;
   /** Rótulo em linguagem de cliente (usado nos chips da Home). */
@@ -311,6 +313,10 @@ export function pontuar(consulta: string): ResultadoBusca[] {
   if (!q) return [];
   const tokens = q.split(" ").filter((t) => t.length > 1 && !STOPWORDS.has(t));
 
+  // Código de erro é entidade exata: quando aparece, a página que trata o
+  // código domina o ranking em vez de disputar com fuzzy match de palavras.
+  const codigo = extrairCodigoDaConsulta(consulta) ?? correlatoParaCodigo(consulta);
+
   const resultados = INTENCOES.map((intencao) => {
     let score = 0;
     const alvos = [normalizar(intencao.label), ...intencao.termos.map(normalizar)];
@@ -329,6 +335,7 @@ export function pontuar(consulta: string): ResultadoBusca[] {
       }
     }
 
+    if (codigo && intencao.href === codigo.href) score += 40;
     if (score > 0) score += intencao.peso / 10;
     return { intencao, score };
   });
@@ -356,6 +363,11 @@ export type Resolucao = {
  * Sem confiança mínima, cai na triagem geral — nunca em rota inexistente.
  */
 export function resolverBusca(consulta: string): Resolucao {
+  const codigo = extrairCodigoDaConsulta(consulta) ?? correlatoParaCodigo(consulta);
+  if (codigo) {
+    const intencao = INTENCOES.find((i) => i.href === codigo.href);
+    return { href: codigo.href, intencaoId: intencao?.id ?? null, confianca: "alta" };
+  }
   const [melhor] = pontuar(consulta);
   if (!melhor || melhor.score < 4) {
     return { href: ROTA_FALLBACK, intencaoId: null, confianca: "nenhuma" };
@@ -445,6 +457,13 @@ function opcoesValidas(opcoes: OpcaoClarificacao[]): OpcaoClarificacao[] {
  * de `resolverBusca` (nunca uma rota inventada).
  */
 export function resolverComAmbiguidade(consulta: string): ResolucaoAmbigua {
+  // Código de erro nunca é ambíguo: resolve direto na página do código.
+  const codigoDireto = extrairCodigoDaConsulta(consulta);
+  if (codigoDireto) {
+    const intencao = INTENCOES.find((i) => i.href === codigoDireto.href);
+    return { tipo: "destino", href: codigoDireto.href, intencaoId: intencao?.id ?? null, confianca: "alta" };
+  }
+
   const q = expandirConsulta(consulta);
   if (q) {
     for (const regra of AMBIGUIDADES) {
