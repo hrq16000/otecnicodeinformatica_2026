@@ -5,6 +5,7 @@ import { Card } from "@/components/ui/card";
 import { Skeleton } from "@/components/ui/skeleton";
 import { exportarCsv, exportarJson } from "@/lib/exportarRelatorio";
 import { permitirExecucao } from "@/lib/rateLimitSobDemanda";
+import { enfileirar, fingerprintChave, TimeoutSobDemanda } from "@/lib/filaSobDemanda";
 
 
 /**
