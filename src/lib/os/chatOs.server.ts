@@ -242,15 +242,27 @@ export async function lerConversaCliente(token: string) {
   const db = await admin();
   await db.from("os_threads").update({ unread_client: 0 }).eq("id", thread.id);
 
-  let os: Record<string, unknown> | null = null;
+  let os: OsResumo | null = null;
   if (thread.os_id) {
     const { data } = await db
       .from("ordens_servico")
       .select("protocolo, status, modalidade, equipamento, previsao_conclusao, observacoes_publicas, etapas, updated_at")
       .eq("id", thread.os_id)
       .maybeSingle();
-    os = data as Record<string, unknown> | null;
+    os = data
+      ? {
+          protocolo: data.protocolo,
+          status: data.status,
+          modalidade: data.modalidade,
+          equipamento: data.equipamento,
+          previsaoConclusao: data.previsao_conclusao,
+          observacoesPublicas: data.observacoes_publicas,
+          atualizadaEm: data.updated_at,
+          etapas: normalizarEtapas(data.etapas),
+        }
+      : null;
   }
+
 
   return {
     thread: {
