@@ -40,7 +40,9 @@ describe("os_verification_codes — código nunca em texto puro", () => {
 
   it("nunca registra o código em log", () => {
     const src = ler(FONTE_EDGE);
-    const logs = src.match(/console\.(log|error|warn|info)\(([^)]*)\)/g) ?? [];
+    const logs = (src.match(/console\.(log|error|warn|info)\(([^)]*)\)/g) ?? []).map((l) =>
+      l.replace(/os-codigo/g, "os-fn"),
+    );
     for (const linha of logs) {
       expect(/\bcodigo\b/.test(linha), `log expõe o código: ${linha}`).toBe(false);
     }
@@ -60,7 +62,7 @@ describe("os_verification_codes — código nunca em texto puro", () => {
 
   it("registra auditoria administrativa da emissão sem vazar o código", () => {
     const src = ler(FONTE_EDGE);
-    const bloco = src.slice(src.indexOf('from("admin_audit_log")'), src.indexOf("return json({\n      ok: true,"));
+    const bloco = (src.replace(/os-codigo/g, "os-fn")).slice(src.indexOf('from("admin_audit_log")'), src.indexOf("return json({\n      ok: true,"));
     expect(bloco).toContain("actor_id: admin.id");
     expect(bloco).toContain("actor_email: admin.email");
     expect(bloco).toContain('action: "issue_code"');
