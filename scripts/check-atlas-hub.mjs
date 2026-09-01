@@ -53,6 +53,39 @@ if (links.size < 40) {
   erros.push(`Malha do Atlas suspeita de vazia: apenas ${links.size} links declarados.`);
 }
 
+// ── 1b. Fase 2: vereditos, guias de decisão, fontes e riscos ─
+const vereditos = [...modulo.matchAll(/veredito:\s*\n\s*"([^"]+)"/g)].map((m) => m[1]);
+if (vereditos.length !== 9) {
+  erros.push(`Esperados 9 vereditos de tema (Fase 2); encontrados ${vereditos.length}.`);
+}
+if (new Set(vereditos).size !== vereditos.length) {
+  erros.push("Veredito de tema repetido — cada tema exige posição própria.");
+}
+
+const guias = [...modulo.matchAll(/id:\s*"([a-z0-9-]+)",\s*\n\s*pergunta:\s*"([^"]+)"/g)].map(
+  (m) => ({ id: m[1], pergunta: m[2] }),
+);
+if (guias.length < 6) {
+  erros.push(`Esperados pelo menos 6 guias de decisão; encontrados ${guias.length}.`);
+}
+
+const fontesUrls = new Set([...modulo.matchAll(/url:\s*"(https:\/\/[^"]+)"/g)].map((m) => m[1]));
+if (fontesUrls.size < 5) {
+  erros.push(`Fontes primárias suspeitas de vazias: apenas ${fontesUrls.size} URLs https.`);
+}
+
+const RISCOS_CANONICOS = new Set([
+  "Seguro de fazer sozinho",
+  "Exige atenção",
+  "Parada obrigatória",
+]);
+const riscos = [...modulo.matchAll(/risco:\s*"([^"]+)"/g)].map((m) => m[1]);
+for (const r of riscos) {
+  if (!RISCOS_CANONICOS.has(r)) {
+    erros.push(`Nível de risco fora do vocabulário canônico: "${r}".`);
+  }
+}
+
 // ── 2. HTML do build ─────────────────────────────────────────
 if (!existsSync(DIST)) {
   console.error(`BLOQUEADO: dist ausente em ${DIST}. Rode o build antes de check:atlas-hub.`);
