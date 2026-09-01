@@ -90,7 +90,22 @@ export const FERRAMENTAS_SLUGS = [
   "ssd-ou-ram",
 ];
 
+export const DECISOES_SLUGS = [
+  "formatar-ou-reparar",
+  "ssd-ou-memoria-ram",
+  "consertar-ou-substituir",
+  "remoto-ou-presencial",
+  "hd-com-ruido",
+  "backup-antes-da-manutencao",
+];
+
 export const BIBLIOTECA = [
+  { path: "/decisoes", changefreq: "monthly", priority: "0.8" },
+  ...DECISOES_SLUGS.map((slug) => ({
+    path: `/decisoes/${slug}`,
+    changefreq: "monthly",
+    priority: "0.7",
+  })),
   { path: "/glossario", changefreq: "monthly", priority: "0.7" },
   ...GLOSSARIO_SLUGS.map((slug) => ({
     path: `/glossario/${slug}`,
