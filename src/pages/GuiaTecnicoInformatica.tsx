@@ -540,6 +540,10 @@ const GuiaTecnicoInformatica = () => {
           </div>
         </section>
 
+        <div className="mb-12">
+          <ComoProduzimosConteudo revisadoEm={ATLAS_REVISADO_EM} />
+        </div>
+
         <ServicosCorrelatos
           titulo="Serviços que resolvem cada família de falha"
           intro="Cada página explica o escopo do serviço, o processo de atendimento e o que influencia o valor final."
