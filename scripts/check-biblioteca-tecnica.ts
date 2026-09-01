@@ -18,6 +18,7 @@
 import { readFileSync } from "node:fs";
 import { TERMOS_GLOSSARIO, CATEGORIAS_GLOSSARIO } from "../src/lib/glossarioTecnico";
 import { FERRAMENTAS_TECNICAS } from "../src/lib/ferramentasTecnicas";
+import { GUIAS_DECISAO, cardAtlasDoGuia } from "../src/lib/guiasDecisao";
 import { BIBLIOTECA_PONTES } from "../src/lib/bibliotecaPontes";
 
 const erros: string[] = [];
