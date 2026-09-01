@@ -74,10 +74,36 @@ function extract(html) {
     textoVisivel.add(digits(m[0]));
   }
 
+  // Nome da entidade: SEMPRE do nó LocalBusiness/Organization do JSON-LD —
+  // o primeiro "name" cru do HTML pode ser uma pergunta de FAQPage.
+  let entityName = "";
+  for (const m of html.matchAll(/<script[^>]+application\/ld\+json[^>]*>([\s\S]*?)<\/script>/gi)) {
+    try {
+      const raiz = JSON.parse(m[1]);
+      const nos = [];
+      const empilhar = (n) => {
+        if (Array.isArray(n)) n.forEach(empilhar);
+        else if (n && typeof n === "object") {
+          nos.push(n);
+          if (Array.isArray(n["@graph"])) n["@graph"].forEach(empilhar);
+        }
+      };
+      empilhar(raiz);
+      const negocio = nos.find((n) => {
+        const t = Array.isArray(n["@type"]) ? n["@type"].join(",") : String(n["@type"] ?? "");
+        return /LocalBusiness|Organization|ComputerRepairService|ProfessionalService/.test(t) && n.name;
+      });
+      if (negocio) {
+        entityName = negocio.name;
+        break;
+      }
+    } catch {
+      /* bloco inválido é coberto por outros gates */
+    }
+  }
   const name =
-    html.match(/"name"\s*:\s*"([^"]+)"/)?.[1] ??
-    html.match(/<meta[^>]+property="og:site_name"[^>]+content="([^"]+)"/i)?.[1] ??
-    "";
+    entityName ||
+    (html.match(/<meta[^>]+property="og:site_name"[^>]+content="([^"]+)"/i)?.[1] ?? "");
 
   return {
     name,
