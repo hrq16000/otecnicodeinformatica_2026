@@ -90,6 +90,7 @@ import { Route as AdminAuditoriaOsRouteImport } from './routes/admin_.auditoria-
 import { Route as AdminAutoridadeAtlasRouteImport } from './routes/admin_.autoridade-atlas'
 import { Route as AdminAutoridadeSeoRouteImport } from './routes/admin_.autoridade-seo'
 import { Route as AdminBairrosRouteImport } from './routes/admin_.bairros'
+import { Route as AdminBibliotecaRouteImport } from './routes/admin_.biblioteca'
 import { Route as AdminCapasPendentesRouteImport } from './routes/admin_.capas-pendentes'
 import { Route as AdminCasosRouteImport } from './routes/admin_.casos'
 import { Route as AdminChatOsRouteImport } from './routes/admin_.chat-os'
@@ -904,6 +905,11 @@ const AdminAutoridadeSeoRoute = AdminAutoridadeSeoRouteImport.update({
 const AdminBairrosRoute = AdminBairrosRouteImport.update({
   id: '/admin_/bairros',
   path: '/admin/bairros',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AdminBibliotecaRoute = AdminBibliotecaRouteImport.update({
+  id: '/admin_/biblioteca',
+  path: '/admin/biblioteca',
   getParentRoute: () => rootRouteImport,
 } as any)
 const AdminCapasPendentesRoute = AdminCapasPendentesRouteImport.update({
@@ -3097,6 +3103,7 @@ export interface FileRoutesByFullPath {
   '/admin/autoridade-atlas': typeof AdminAutoridadeAtlasRoute
   '/admin/autoridade-seo': typeof AdminAutoridadeSeoRoute
   '/admin/bairros': typeof AdminBairrosRoute
+  '/admin/biblioteca': typeof AdminBibliotecaRoute
   '/admin/capas-pendentes': typeof AdminCapasPendentesRoute
   '/admin/casos': typeof AdminCasosRoute
   '/admin/chat-os': typeof AdminChatOsRoute
@@ -3572,6 +3579,7 @@ export interface FileRoutesByTo {
   '/admin/autoridade-atlas': typeof AdminAutoridadeAtlasRoute
   '/admin/autoridade-seo': typeof AdminAutoridadeSeoRoute
   '/admin/bairros': typeof AdminBairrosRoute
+  '/admin/biblioteca': typeof AdminBibliotecaRoute
   '/admin/capas-pendentes': typeof AdminCapasPendentesRoute
   '/admin/casos': typeof AdminCasosRoute
   '/admin/chat-os': typeof AdminChatOsRoute
@@ -4048,6 +4056,7 @@ export interface FileRoutesById {
   '/admin_/autoridade-atlas': typeof AdminAutoridadeAtlasRoute
   '/admin_/autoridade-seo': typeof AdminAutoridadeSeoRoute
   '/admin_/bairros': typeof AdminBairrosRoute
+  '/admin_/biblioteca': typeof AdminBibliotecaRoute
   '/admin_/capas-pendentes': typeof AdminCapasPendentesRoute
   '/admin_/casos': typeof AdminCasosRoute
   '/admin_/chat-os': typeof AdminChatOsRoute
@@ -4525,6 +4534,7 @@ export interface FileRouteTypes {
     | '/admin/autoridade-atlas'
     | '/admin/autoridade-seo'
     | '/admin/bairros'
+    | '/admin/biblioteca'
     | '/admin/capas-pendentes'
     | '/admin/casos'
     | '/admin/chat-os'
@@ -5000,6 +5010,7 @@ export interface FileRouteTypes {
     | '/admin/autoridade-atlas'
     | '/admin/autoridade-seo'
     | '/admin/bairros'
+    | '/admin/biblioteca'
     | '/admin/capas-pendentes'
     | '/admin/casos'
     | '/admin/chat-os'
@@ -5475,6 +5486,7 @@ export interface FileRouteTypes {
     | '/admin_/autoridade-atlas'
     | '/admin_/autoridade-seo'
     | '/admin_/bairros'
+    | '/admin_/biblioteca'
     | '/admin_/capas-pendentes'
     | '/admin_/casos'
     | '/admin_/chat-os'
@@ -5951,6 +5963,7 @@ export interface RootRouteChildren {
   AdminAutoridadeAtlasRoute: typeof AdminAutoridadeAtlasRoute
   AdminAutoridadeSeoRoute: typeof AdminAutoridadeSeoRoute
   AdminBairrosRoute: typeof AdminBairrosRoute
+  AdminBibliotecaRoute: typeof AdminBibliotecaRoute
   AdminCapasPendentesRoute: typeof AdminCapasPendentesRoute
   AdminCasosRoute: typeof AdminCasosRoute
   AdminChatOsRoute: typeof AdminChatOsRoute
@@ -6912,6 +6925,13 @@ declare module '@tanstack/react-router' {
       path: '/admin/bairros'
       fullPath: '/admin/bairros'
       preLoaderRoute: typeof AdminBairrosRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/admin_/biblioteca': {
+      id: '/admin_/biblioteca'
+      path: '/admin/biblioteca'
+      fullPath: '/admin/biblioteca'
+      preLoaderRoute: typeof AdminBibliotecaRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/admin_/capas-pendentes': {
@@ -9746,6 +9766,7 @@ const rootRouteChildren: RootRouteChildren = {
   AdminAutoridadeAtlasRoute: AdminAutoridadeAtlasRoute,
   AdminAutoridadeSeoRoute: AdminAutoridadeSeoRoute,
   AdminBairrosRoute: AdminBairrosRoute,
+  AdminBibliotecaRoute: AdminBibliotecaRoute,
   AdminCapasPendentesRoute: AdminCapasPendentesRoute,
   AdminCasosRoute: AdminCasosRoute,
   AdminChatOsRoute: AdminChatOsRoute,
