@@ -5,13 +5,13 @@
  * exatamente o que PageSEO emite em runtime (mesma função de truncamento).
  *
  * GERADO a partir do TS; ao mudar o conteúdo lá, regenere aqui
- * (scripts/check-biblioteca-tecnica.mjs valida a paridade).
+ * (scripts/check-biblioteca-tecnica.ts valida a paridade).
  */
 export const BIBLIOTECA_ROUTES = [
   {
     "path": "/glossario",
     "title": "Glossário Técnico de Informática | O Técnico de Informática",
-    "description": "15 termos técnicos explicados sem jargão: BSOD, SMART, TPM, BitLocker, UEFI, DNS, NVMe e mais — com o que é seguro verificar e o que não fazer em cada um.",
+    "description": "18 termos técnicos explicados sem jargão: BSOD, SMART, TPM, BitLocker, UEFI, DNS, NVMe e mais — com o que é seguro verificar e o que não fazer em cada um.",
     "h1": "Glossário técnico de informática"
   },
   {
@@ -105,6 +105,24 @@ export const BIBLIOTECA_ROUTES = [
     "h1": "Thermal throttling"
   },
   {
+    "path": "/glossario/secure-boot",
+    "title": "O que é Secure Boot? | Glossário Técnico",
+    "description": "Recurso do firmware UEFI que só permite iniciar componentes assinados digitalmente. Bloqueia código malicioso que tentaria carregar antes do sistema…",
+    "h1": "Secure Boot"
+  },
+  {
+    "path": "/glossario/driver",
+    "title": "O que é Driver? | Glossário Técnico",
+    "description": "Software que traduz as ordens do sistema operacional para uma peça específica de hardware. Driver com defeito é uma das causas mais comuns de tela azul e…",
+    "h1": "Driver"
+  },
+  {
+    "path": "/glossario/particao",
+    "title": "O que é Partição? | Glossário Técnico",
+    "description": "Divisão lógica de um disco físico em áreas independentes. Entender as partições evita apagar a área de recuperação ou o carregador de inicialização por…",
+    "h1": "Partição"
+  },
+  {
     "path": "/ferramentas",
     "title": "Checklists e Ferramentas Técnicas | O Técnico de Informática",
     "description": "5 roteiros seguros e gratuitos: computador lento, antes de formatar, falha de inicialização, verificação de backup e SSD ou RAM. Sem cadastro, direto ao ponto.",
@@ -139,5 +157,11 @@ export const BIBLIOTECA_ROUTES = [
     "title": "SSD ou RAM: orientação inicial | Ferramenta gratuita",
     "description": "Roteiro de observação em 5 passos para identificar qual upgrade o SEU uso realmente pede — antes de gastar com o componente errado.",
     "h1": "SSD ou RAM: orientação inicial"
+  },
+  {
+    "path": "/ferramentas/roteiro-wifi-instavel",
+    "title": "Wi-Fi instável: roteiro de observação | Ferramenta gratuita",
+    "description": "Roteiro em 6 passos para separar o que é do provedor, do roteador e do seu computador — antes de trocar aparelho ou contratar plano maior.",
+    "h1": "Wi-Fi instável: roteiro de observação"
   }
 ];
