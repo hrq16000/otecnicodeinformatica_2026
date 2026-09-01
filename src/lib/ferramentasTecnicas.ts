@@ -628,7 +628,127 @@ export const FERRAMENTAS_TECNICAS: FerramentaTecnica[] = [
       },
     ],
   },
+  // ── ONDA 11B ──────────────────────────────────────────────────────────────
+  {
+    slug: "roteiro-wifi-instavel",
+    nome: "Wi-Fi instável: roteiro de observação",
+    nomeCurto: "Wi-Fi instável",
+    resumo:
+      "Roteiro em 6 passos para separar o que é do provedor, do roteador e do seu computador — antes de trocar aparelho ou contratar plano maior.",
+    objetivo:
+      "Organizar observações simples, feitas sem instalar nada, que localizam em qual trecho da conexão a instabilidade acontece: link do provedor, roteador e ambiente, ou o dispositivo específico.",
+    limites:
+      "Roteiro orientativo, não medição de rede profissional. Ele indica o trecho provável; problemas intermitentes de cabeamento, interferência industrial e configuração de provedor exigem verificação presencial com equipamento adequado.",
+    avisoSeguranca:
+      "Todos os passos são de observação e de reinício de equipamento. Nenhum exige alterar a senha da rede, redefinir o roteador para padrão de fábrica ou mexer em configuração do provedor — redefinição apaga a configuração e costuma deixar a casa sem internet.",
+    risco: "Seguro de fazer sozinho",
+    passos: [
+      {
+        id: "quem-cai",
+        titulo: "Descubra se cai para todos ou só para um aparelho",
+        descricao:
+          "Com a instabilidade acontecendo, teste em outro dispositivo conectado à mesma rede: celular, TV, segundo computador. Se só um aparelho perde conexão, a investigação vira para o adaptador e o driver dele; se todos caem juntos, o trecho é roteador ou provedor.",
+      },
+      {
+        id: "cabo-vs-sem-fio",
+        titulo: "Compare cabo e sem fio",
+        descricao:
+          "Se houver possibilidade de ligar um cabo de rede direto no roteador, observe se a queda continua. Estabilidade no cabo e instabilidade no sem fio isola o problema na propagação do sinal, não no link contratado.",
+      },
+      {
+        id: "distancia-obstaculo",
+        titulo: "Observe distância e obstáculos",
+        descricao:
+          "Fique perto do roteador, na mesma sala, e repita o uso que falhava. Se a queda desaparece, o problema é alcance: parede de concreto, caixa de metal, roteador dentro de armário ou no chão são as causas comuns.",
+      },
+      {
+        id: "faixa",
+        titulo: "Verifique em qual faixa você está conectado",
+        descricao:
+          "Redes de 5 GHz entregam mais velocidade e alcançam menos; as de 2,4 GHz alcançam mais e sofrem mais interferência. Se as duas aparecem com nomes diferentes, teste a mesma tarefa em cada uma e anote o comportamento.",
+        alerta: "Queda que só acontece quando o micro-ondas ou o telefone sem fio está em uso é interferência clássica na faixa de 2,4 GHz.",
+      },
+      {
+        id: "horario",
+        titulo: "Anote horário e padrão de uso",
+        descricao:
+          "Registre por dois ou três dias quando a queda acontece: sempre no mesmo horário, sempre em chamada de vídeo, sempre quando alguém liga a TV. Padrão repetido é a informação mais valiosa para quem for atender — inclusive para o suporte do provedor.",
+      },
+      {
+        id: "reiniciar",
+        titulo: "Reinicie na ordem correta e reobserve",
+        descricao:
+          "Desligue o modem/roteador da tomada, aguarde os equipamentos apagarem por completo, religue e espere a sincronização terminar antes de reconectar os aparelhos. Reinício resolve estados travados; se o padrão voltar no mesmo dia, o problema é estrutural.",
+      },
+    ],
+    interpretacoes: [
+      {
+        cenario: "Só um computador cai; os demais aparelhos permanecem conectados",
+        leitura:
+          "Aponta para o adaptador de rede desse computador ou para o driver dele — não para o roteador nem para o provedor.",
+        proximoPasso: "Verifique o driver do adaptador pelos caminhos oficiais antes de qualquer troca de equipamento.",
+        to: "/glossario/driver",
+      },
+      {
+        cenario: "Todos os aparelhos caem juntos, e o cabo também",
+        leitura:
+          "Aponta para o link do provedor ou para o próprio roteador. O registro de horários feito no passo 5 é o que sustenta a abertura de chamado.",
+        proximoPasso: "Reúna as anotações de horário e acione o provedor com evidência de padrão.",
+      },
+      {
+        cenario: "Cabo estável, sem fio instável, e melhora perto do roteador",
+        leitura: "Propagação de sinal: posição do roteador, obstáculos ou cobertura insuficiente para a área usada.",
+        proximoPasso: "Avalie reposicionamento e cobertura antes de contratar plano maior — velocidade contratada não atravessa parede.",
+        to: "/servicos/redes-e-wifi",
+      },
+      {
+        cenario: "Queda em horários fixos, coincidindo com aparelhos ligados",
+        leitura: "Interferência ou congestionamento de canal, típico da faixa de 2,4 GHz em prédios e regiões densas.",
+        proximoPasso: "Registre o padrão e trate como ajuste de canal e faixa, não como defeito do computador.",
+        to: "/problemas/wifi-instavel",
+      },
+    ],
+    quandoParar: [
+      "Cheiro de queimado, aquecimento anormal ou deformação na fonte do roteador — desligue da tomada e não religue.",
+      "Cabo de rede ou conector visivelmente danificado: pare de forçar o encaixe.",
+      "Equipamento do provedor lacrado: não abra e não redefina; a intervenção é do prestador.",
+      "Rede de empresa com servidor, firewall ou sistema de gestão envolvido — a observação doméstica não cobre esse cenário.",
+    ],
+    conclusao:
+      "Ao final você terá três informações objetivas: quem cai, em que trecho e com qual padrão de horário. Com isso, a conversa deixa de ser 'a internet está ruim' e passa a ser um chamado com evidência — seja para o provedor, seja para o atendimento técnico.",
+    links: [
+      {
+        rotulo: "Wi-Fi instável: diagnóstico do sintoma",
+        to: "/problemas/wifi-instavel",
+        contexto: "Página diagnóstica com as causas mais comuns e o que cada uma exige.",
+      },
+      {
+        rotulo: "Redes e Wi-Fi",
+        to: "/servicos/redes-e-wifi",
+        contexto: "Quando a cobertura ou o cabeamento precisam de intervenção presencial.",
+      },
+      {
+        rotulo: "DNS no glossário",
+        to: "/glossario/dns",
+        contexto: "Por que 'a internet caiu' às vezes é só a tradução de nomes falhando.",
+      },
+    ],
+    termos: ["dns", "nat", "driver"],
+    fontes: [
+      {
+        titulo: "Anatel — Qualidade da banda larga fixa",
+        url: "https://www.gov.br/anatel/pt-br/assuntos/noticias",
+        nota: "referência oficial sobre direitos e qualidade do serviço contratado",
+      },
+      {
+        titulo: "CERT.br — Cartilha de Segurança para Internet",
+        url: "https://cartilha.cert.br/",
+        nota: "boas práticas de configuração segura de rede doméstica",
+      },
+    ],
+  },
 ];
+
 
 export const ferramentaPorSlug = (slug: string): FerramentaTecnica | undefined =>
   FERRAMENTAS_TECNICAS.find((f) => f.slug === slug);
