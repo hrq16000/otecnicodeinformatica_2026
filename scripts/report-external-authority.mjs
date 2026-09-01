@@ -26,7 +26,12 @@ function arquivos(dir, acc = []) {
     if (nome === "node_modules" || nome.startsWith(".")) continue;
     const caminho = join(dir, nome);
     const info = statSync(caminho);
-    if (info.isDirectory()) arquivos(caminho, acc);
+    if (info.isDirectory()) {
+      // Fixtures e testes usam números/URLs fictícios — nunca entram no
+      // relatório público de autoridade externa.
+      if (nome === "__tests__" || nome === "test") continue;
+      arquivos(caminho, acc);
+    } else if (/\.(test|spec)\.(ts|tsx)$/.test(nome)) continue;
     else if (/\.(ts|tsx|json|md)$/.test(nome)) acc.push(caminho);
   }
   return acc;
