@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-08-25T01:42:17.543Z",
+  "geradoEm": "2026-09-01T01:31:29.253Z",
   "modo": "seletivo",
   "host": "otecnicodeinformatica.com.br",
   "keyFile": {
@@ -15,8 +15,8 @@
       "status": 200,
       "classe": "OK",
       "corpo": "",
-      "duracaoMs": 840,
-      "enviadoEm": "2026-08-25T01:42:16.992Z"
+      "duracaoMs": 566,
+      "enviadoEm": "2026-09-01T01:31:28.547Z"
     },
     {
       "endpoint": "bing",
@@ -24,14 +24,14 @@
       "status": 200,
       "classe": "OK",
       "corpo": "",
-      "duracaoMs": 550,
-      "enviadoEm": "2026-08-25T01:42:17.543Z"
+      "duracaoMs": 704,
+      "enviadoEm": "2026-09-01T01:31:29.252Z"
     }
   ],
   "urls": [
     {
-      "url": "https://otecnicodeinformatica.com.br/problemas/notebook-nao-liga",
-      "enviadaEm": "2026-08-25T01:42:17.543Z",
+      "url": "https://otecnicodeinformatica.com.br/guia-tecnico-informatica",
+      "enviadaEm": "2026-09-01T01:31:29.253Z",
       "resultados": [
         {
           "endpoint": "indexnow.org",
@@ -47,8 +47,8 @@
       "aceita": true
     },
     {
-      "url": "https://otecnicodeinformatica.com.br/problemas/computador-nao-da-imagem",
-      "enviadaEm": "2026-08-25T01:42:17.543Z",
+      "url": "https://otecnicodeinformatica.com.br/blog/boot-uefi-ou-legacy-como-identificar",
+      "enviadaEm": "2026-09-01T01:31:29.253Z",
       "resultados": [
         {
           "endpoint": "indexnow.org",
@@ -64,8 +64,8 @@
       "aceita": true
     },
     {
-      "url": "https://otecnicodeinformatica.com.br/problemas/computador-lento",
-      "enviadaEm": "2026-08-25T01:42:17.543Z",
+      "url": "https://otecnicodeinformatica.com.br/blog/ordem-de-boot-na-bios-como-configurar",
+      "enviadaEm": "2026-09-01T01:31:29.253Z",
       "resultados": [
         {
           "endpoint": "indexnow.org",
@@ -81,8 +81,8 @@
       "aceita": true
     },
     {
-      "url": "https://otecnicodeinformatica.com.br/solucoes/backup",
-      "enviadaEm": "2026-08-25T01:42:17.543Z",
+      "url": "https://otecnicodeinformatica.com.br/blog/windows-reparo-automatico-em-loop",
+      "enviadaEm": "2026-09-01T01:31:29.253Z",
       "resultados": [
         {
           "endpoint": "indexnow.org",
@@ -98,8 +98,8 @@
       "aceita": true
     },
     {
-      "url": "https://otecnicodeinformatica.com.br/solucoes/formatacao",
-      "enviadaEm": "2026-08-25T01:42:17.543Z",
+      "url": "https://otecnicodeinformatica.com.br/problemas",
+      "enviadaEm": "2026-09-01T01:31:29.253Z",
       "resultados": [
         {
           "endpoint": "indexnow.org",
