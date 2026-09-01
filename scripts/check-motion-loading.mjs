@@ -23,10 +23,11 @@ function ler(p) {
   return readFileSync(p, "utf8");
 }
 
-const css = ler("src/index.css");
+// Pós-migração TanStack: o CSS global vive em src/styles.css.
+const css = ler("src/styles.css");
 for (const token of [".skel", ".skel-line", ".img-fade", ".route-progress", "@keyframes skelShimmer", "@keyframes routeProgress"]) {
   if (css.includes(token)) ok.push(`css ${token}`);
-  else erros.push(`token de motion ausente em src/index.css: ${token}`);
+  else erros.push(`token de motion ausente em src/styles.css: ${token}`);
 }
 
 const reduced = css.split("@media (prefers-reduced-motion: reduce)").slice(1).join("\n");
@@ -45,8 +46,11 @@ if (!skeleton.includes("SkeletonBand")) erros.push("SkeletonSection perdeu Skele
 const home = ler("src/components/HomeDeferredSections.tsx");
 if (!home.includes("SkeletonSection")) erros.push("HomeDeferredSections voltou a usar fallback em branco");
 
-const app = ler("src/App.tsx");
-if (!app.includes("route-progress")) erros.push("App.tsx sem barra de progresso de navegação");
+// Pós-migração TanStack: a barra vive em RouteProgress.tsx, montada no __root.
+const progress = ler("src/components/RouteProgress.tsx");
+if (!progress.includes("route-progress")) erros.push("RouteProgress.tsx sem a classe .route-progress");
+const root = ler("src/routes/__root.tsx");
+if (!root.includes("RouteProgress")) erros.push("__root.tsx sem barra de progresso de navegação (RouteProgress)");
 
 const foto = ler("src/components/FotoLicenciadaImg.tsx");
 if (!foto.includes("SmartImage")) erros.push("FotoLicenciadaImg não usa SmartImage");
