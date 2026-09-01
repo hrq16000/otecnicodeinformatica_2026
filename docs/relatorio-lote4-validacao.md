@@ -1,7 +1,7 @@
 # Validação técnica — Lote 4 (Onda 11A)
 
-Base consultada: http://localhost:8080
-Gerado em: 2026-08-31T23:44:40.014Z
+Base consultada: https://otecnicodeinformatica.com.br
+Gerado em: 2026-09-01T00:00:53.068Z
 Resultado: 3/3 URLs aprovadas
 
 | URL | HTTP | Title | Description | Canonical | Robots | Schemas | Erros |
