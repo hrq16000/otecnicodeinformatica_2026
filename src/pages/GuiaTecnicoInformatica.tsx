@@ -18,6 +18,7 @@ import { trackPageView, trackCTAClick } from "@/lib/analytics";
 import { AtlasTrilhas } from "@/components/informatica/AtlasTrilhas";
 import { ComoProduzimosConteudo } from "@/components/editorial/ComoProduzimosConteudo";
 import { ATLAS_GUIAS_DECISAO, ATLAS_REVISADO_EM, ATLAS_TEMAS } from "@/lib/atlasInformatica";
+import { temPaginaDeDecisao } from "@/lib/guiasDecisao";
 
 const PATH = "/guia-tecnico-informatica";
 const TITLE = "Atlas de Informática: guia técnico de PC e notebook";
