@@ -1,6 +1,6 @@
 # Vereditos de indexação — Onda 10C
 
-- Gerado em: 2026-09-01T01:31:45.884Z
+- Gerado em: 2026-09-01T02:16:33.307Z
 - Propriedade: `sc-domain:otecnicodeinformatica.com.br` (Search Console disponível)
 - Total: **26** · PUBLISHED 20 · PENDING 6 · PROBLEM 0 · UNKNOWN 0
 - Onda consolidada: **NÃO**
@@ -23,15 +23,15 @@
 | 10C/3 | /blog/computador-sem-som-o-que-verificar | PUBLISHED | não | SUBMITTED | INDEXED | PUBLISHED |
 | 10C/3 | /blog/fone-de-ouvido-nao-e-reconhecido-no-pc | PUBLISHED | não | SUBMITTED | INDEXED | PUBLISHED |
 | 10C/3 | /blog/servico-de-audio-do-windows-nao-esta-em-execucao | PUBLISHED | não | SUBMITTED | INDEXED | PUBLISHED |
-| 10C/4 | /blog/webcam-nao-funciona-o-que-verificar | PUBLISHED | não | SUBMITTED | DISCOVERED | PENDING |
+| 10C/4 | /blog/webcam-nao-funciona-o-que-verificar | PUBLISHED | não | SUBMITTED | NO_DATA | PENDING |
 | 10C/4 | /blog/permissoes-de-camera-no-windows | PUBLISHED | não | SUBMITTED | INDEXED | PUBLISHED |
 | 10C/4 | /blog/webcam-usb-nao-e-detectada | PUBLISHED | não | SUBMITTED | INDEXED | PUBLISHED |
 | 10C/4 | /blog/windows-update-nao-funciona-o-que-verificar | PUBLISHED | não | SUBMITTED | INDEXED | PUBLISHED |
 | 10C/4 | /blog/limpar-cache-do-windows-update-softwaredistribution | PUBLISHED | não | SUBMITTED | INDEXED | PUBLISHED |
 | 10C/4 | /blog/windows-update-travado-desfazendo-alteracoes | PUBLISHED | não | SUBMITTED | INDEXED | PUBLISHED |
-| 11A/4 | /blog/boot-uefi-ou-legacy-como-identificar | PUBLISHED | não | — | NO_DATA | PENDING |
-| 11A/4 | /blog/ordem-de-boot-na-bios-como-configurar | PUBLISHED | não | — | NO_DATA | PENDING |
-| 11A/4 | /blog/windows-reparo-automatico-em-loop | PUBLISHED | não | — | NO_DATA | PENDING |
+| 11A/4 | /blog/boot-uefi-ou-legacy-como-identificar | PUBLISHED | não | SUBMITTED | NO_DATA | PENDING |
+| 11A/4 | /blog/ordem-de-boot-na-bios-como-configurar | PUBLISHED | não | SUBMITTED | NO_DATA | PENDING |
+| 11A/4 | /blog/windows-reparo-automatico-em-loop | PUBLISHED | não | SUBMITTED | NO_DATA | PENDING |
 | CASO/0xc0000428 | /problemas/windows-nao-inicia | PUBLISHED | sim | — | INDEXED | PUBLISHED |
 
 > A API do Search Console é somente leitura: ela informa o estado do índice, não solicita indexação. A submissão real ocorre por sitemap + IndexNow.

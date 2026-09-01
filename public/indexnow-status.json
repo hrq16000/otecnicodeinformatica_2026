@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-09-01T01:31:29.253Z",
+  "geradoEm": "2026-09-01T02:16:54.209Z",
   "modo": "seletivo",
   "host": "otecnicodeinformatica.com.br",
   "keyFile": {
@@ -7,7 +7,7 @@
     "status": 200,
     "ok": true
   },
-  "totalUrls": 5,
+  "totalUrls": 4,
   "tentativas": [
     {
       "endpoint": "indexnow.org",
@@ -15,8 +15,8 @@
       "status": 200,
       "classe": "OK",
       "corpo": "",
-      "duracaoMs": 566,
-      "enviadoEm": "2026-09-01T01:31:28.547Z"
+      "duracaoMs": 755,
+      "enviadoEm": "2026-09-01T02:16:53.746Z"
     },
     {
       "endpoint": "bing",
@@ -24,14 +24,14 @@
       "status": 200,
       "classe": "OK",
       "corpo": "",
-      "duracaoMs": 704,
-      "enviadoEm": "2026-09-01T01:31:29.252Z"
+      "duracaoMs": 463,
+      "enviadoEm": "2026-09-01T02:16:54.209Z"
     }
   ],
   "urls": [
     {
       "url": "https://otecnicodeinformatica.com.br/guia-tecnico-informatica",
-      "enviadaEm": "2026-09-01T01:31:29.253Z",
+      "enviadaEm": "2026-09-01T02:16:54.209Z",
       "resultados": [
         {
           "endpoint": "indexnow.org",
@@ -48,7 +48,7 @@
     },
     {
       "url": "https://otecnicodeinformatica.com.br/blog/boot-uefi-ou-legacy-como-identificar",
-      "enviadaEm": "2026-09-01T01:31:29.253Z",
+      "enviadaEm": "2026-09-01T02:16:54.209Z",
       "resultados": [
         {
           "endpoint": "indexnow.org",
@@ -65,7 +65,7 @@
     },
     {
       "url": "https://otecnicodeinformatica.com.br/blog/ordem-de-boot-na-bios-como-configurar",
-      "enviadaEm": "2026-09-01T01:31:29.253Z",
+      "enviadaEm": "2026-09-01T02:16:54.209Z",
       "resultados": [
         {
           "endpoint": "indexnow.org",
@@ -82,24 +82,7 @@
     },
     {
       "url": "https://otecnicodeinformatica.com.br/blog/windows-reparo-automatico-em-loop",
-      "enviadaEm": "2026-09-01T01:31:29.253Z",
-      "resultados": [
-        {
-          "endpoint": "indexnow.org",
-          "status": 200,
-          "classe": "OK"
-        },
-        {
-          "endpoint": "bing",
-          "status": 200,
-          "classe": "OK"
-        }
-      ],
-      "aceita": true
-    },
-    {
-      "url": "https://otecnicodeinformatica.com.br/problemas",
-      "enviadaEm": "2026-09-01T01:31:29.253Z",
+      "enviadaEm": "2026-09-01T02:16:54.209Z",
       "resultados": [
         {
           "endpoint": "indexnow.org",
