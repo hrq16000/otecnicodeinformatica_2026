@@ -838,11 +838,18 @@ const BASE_ROUTES = [
   },
   {
     "path": "/guia-tecnico-informatica",
-    "title": "Guia Técnico: Manutenção de PC e Notebook Passo a Passo",
-    "description": "Guia completo de manutenção de computador e notebook: como identificar a família da falha, o que verificar antes de chamar o técnico.",
-    "h1": "Guia técnico de informática: manutenção de PC e notebook",
-    "subtitulo": "Como separar as famílias de falha de um computador ou notebook, o que verificar antes do atendimento, quando o upgrade muda o desempenho e quando o reparo deixa de compensar.",
+    "title": "Atlas de Informática: guia técnico de PC e notebook",
+    "description": "Atlas de Informática: trilhas de fundamentos, Windows, hardware, redes, segurança, backup e decisões de compra e reparo, com verificações seguras por tema.",
+    "h1": "Atlas de Informática: aprenda, identifique e decida",
+    "subtitulo": "Nove temas com a mesma trilha editorial: aprender o fundamento, identificar o sintoma, executar verificações seguras, saber quando parar e escolher a solução adequada.",
     "blocos": [
+      {
+        "titulo": "Trilhas por tema",
+        "paragrafos": [
+          "O Atlas organiza o conhecimento técnico do portal em nove temas: fundamentos de informática, Windows e inicialização, hardware e upgrades, redes e Wi-Fi, segurança e privacidade, dados e backup, manutenção preventiva, informática para empresas e decisões de compra e reparo.",
+          "Cada trilha segue a mesma ordem — aprender, identificar, verificar, parar, resolver — e liga guias aprovados, páginas de sintoma e o serviço adequado. O atendimento aparece por último, de propósito: entender vem antes de contratar."
+        ]
+      },
       {
         "titulo": "As seis famílias de falha",
         "paragrafos": [
