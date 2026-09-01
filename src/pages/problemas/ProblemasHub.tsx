@@ -9,6 +9,8 @@ import { CLUSTER_PROBLEMAS } from "@/lib/clusterProblemas";
 import { TriagemRapidaHub } from "@/components/problemas/TriagemRapidaHub";
 import { trackPageView } from "@/lib/analytics";
 import { AnimatedSection } from "@/components/AnimatedSection";
+import { ComoProduzimosConteudo } from "@/components/editorial/ComoProduzimosConteudo";
+import { ATLAS_REVISADO_EM } from "@/lib/atlasInformatica";
 
 const PATH = "/problemas";
 const TITLE = "Problemas comuns de computador, rede e dados | O Técnico de Informática";
@@ -128,6 +130,27 @@ const ProblemasHub = () => {
             uma visita técnica com janela de até 30 minutos para inspeção, diagnóstico e tentativa de
             reparo rápido compatível, sem compromisso e sem peças inclusas.
           </p>
+        </section>
+
+        <section className="mt-10 max-w-3xl" aria-labelledby="aprender-antes-titulo">
+          <h2 id="aprender-antes-titulo" className="font-heading text-2xl font-bold text-foreground">
+            Prefere entender antes de chamar alguém?
+          </h2>
+          <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+            Cada sintoma desta página tem fundamento explicado no{" "}
+            <Link to="/guia-tecnico-informatica" className="font-semibold text-accent hover:underline">
+              Atlas de Informática
+            </Link>
+            : trilhas por tema que ensinam o que verificar com segurança, quando parar e como
+            decidir entre reparo, upgrade e substituição. Os guias completos ficam no{" "}
+            <Link to="/blog" className="font-semibold text-accent hover:underline">
+              hub de guias técnicos
+            </Link>
+            .
+          </p>
+          <div className="mt-5">
+            <ComoProduzimosConteudo revisadoEm={ATLAS_REVISADO_EM} variant="compacto" />
+          </div>
         </section>
       </main>
       <Footer />
