@@ -1,13 +1,13 @@
 {
-  "geradoEm": "2026-09-01T02:16:54.209Z",
-  "modo": "seletivo",
+  "geradoEm": "2026-09-01T06:48:35.101Z",
+  "modo": "all",
   "host": "otecnicodeinformatica.com.br",
   "keyFile": {
     "url": "https://otecnicodeinformatica.com.br/f783ab585dfa9e6b017cb058009cccae.txt",
     "status": 200,
     "ok": true
   },
-  "totalUrls": 4,
+  "totalUrls": 221,
   "tentativas": [
     {
       "endpoint": "indexnow.org",
@@ -15,8 +15,8 @@
       "status": 200,
       "classe": "OK",
       "corpo": "",
-      "duracaoMs": 755,
-      "enviadoEm": "2026-09-01T02:16:53.746Z"
+      "duracaoMs": 714,
+      "enviadoEm": "2026-09-01T06:48:34.243Z"
     },
     {
       "endpoint": "bing",
@@ -24,14 +24,1391 @@
       "status": 200,
       "classe": "OK",
       "corpo": "",
-      "duracaoMs": 463,
-      "enviadoEm": "2026-09-01T02:16:54.209Z"
+      "duracaoMs": 854,
+      "enviadoEm": "2026-09-01T06:48:35.097Z"
     }
   ],
   "urls": [
     {
-      "url": "https://otecnicodeinformatica.com.br/guia-tecnico-informatica",
-      "enviadaEm": "2026-09-01T02:16:54.209Z",
+      "url": "https://otecnicodeinformatica.com.br/bairros/cic",
+      "enviadaEm": "2026-09-01T06:48:35.100Z",
+      "resultados": [
+        {
+          "endpoint": "indexnow.org",
+          "status": 200,
+          "classe": "OK"
+        },
+        {
+          "endpoint": "bing",
+          "status": 200,
+          "classe": "OK"
+        }
+      ],
+      "aceita": true
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/bairros/batel",
+      "enviadaEm": "2026-09-01T06:48:35.100Z",
+      "resultados": [
+        {
+          "endpoint": "indexnow.org",
+          "status": 200,
+          "classe": "OK"
+        },
+        {
+          "endpoint": "bing",
+          "status": 200,
+          "classe": "OK"
+        }
+      ],
+      "aceita": true
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/bairros/agua-verde",
+      "enviadaEm": "2026-09-01T06:48:35.100Z",
+      "resultados": [
+        {
+          "endpoint": "indexnow.org",
+          "status": 200,
+          "classe": "OK"
+        },
+        {
+          "endpoint": "bing",
+          "status": 200,
+          "classe": "OK"
+        }
+      ],
+      "aceita": true
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/bairros/centro",
+      "enviadaEm": "2026-09-01T06:48:35.100Z",
+      "resultados": [
+        {
+          "endpoint": "indexnow.org",
+          "status": 200,
+          "classe": "OK"
+        },
+        {
+          "endpoint": "bing",
+          "status": 200,
+          "classe": "OK"
+        }
+      ],
+      "aceita": true
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/bairros/portao",
+      "enviadaEm": "2026-09-01T06:48:35.100Z",
+      "resultados": [
+        {
+          "endpoint": "indexnow.org",
+          "status": 200,
+          "classe": "OK"
+        },
+        {
+          "endpoint": "bing",
+          "status": 200,
+          "classe": "OK"
+        }
+      ],
+      "aceita": true
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/bairros/santa-felicidade",
+      "enviadaEm": "2026-09-01T06:48:35.101Z",
+      "resultados": [
+        {
+          "endpoint": "indexnow.org",
+          "status": 200,
+          "classe": "OK"
+        },
+        {
+          "endpoint": "bing",
+          "status": 200,
+          "classe": "OK"
+        }
+      ],
+      "aceita": true
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/bairros/boa-vista",
+      "enviadaEm": "2026-09-01T06:48:35.101Z",
+      "resultados": [
+        {
+          "endpoint": "indexnow.org",
+          "status": 200,
+          "classe": "OK"
+        },
+        {
+          "endpoint": "bing",
+          "status": 200,
+          "classe": "OK"
+        }
+      ],
+      "aceita": true
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/bairros/bigorrilho",
+      "enviadaEm": "2026-09-01T06:48:35.101Z",
+      "resultados": [
+        {
+          "endpoint": "indexnow.org",
+          "status": 200,
+          "classe": "OK"
+        },
+        {
+          "endpoint": "bing",
+          "status": 200,
+          "classe": "OK"
+        }
+      ],
+      "aceita": true
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/bairros/cabral",
+      "enviadaEm": "2026-09-01T06:48:35.101Z",
+      "resultados": [
+        {
+          "endpoint": "indexnow.org",
+          "status": 200,
+          "classe": "OK"
+        },
+        {
+          "endpoint": "bing",
+          "status": 200,
+          "classe": "OK"
+        }
+      ],
+      "aceita": true
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/bairros/afonso-pena",
+      "enviadaEm": "2026-09-01T06:48:35.101Z",
+      "resultados": [
+        {
+          "endpoint": "indexnow.org",
+          "status": 200,
+          "classe": "OK"
+        },
+        {
+          "endpoint": "bing",
+          "status": 200,
+          "classe": "OK"
+        }
+      ],
+      "aceita": true
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/bairros/cruzeiro",
+      "enviadaEm": "2026-09-01T06:48:35.101Z",
+      "resultados": [
+        {
+          "endpoint": "indexnow.org",
+          "status": 200,
+          "classe": "OK"
+        },
+        {
+          "endpoint": "bing",
+          "status": 200,
+          "classe": "OK"
+        }
+      ],
+      "aceita": true
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/bairros/costeira",
+      "enviadaEm": "2026-09-01T06:48:35.101Z",
+      "resultados": [
+        {
+          "endpoint": "indexnow.org",
+          "status": 200,
+          "classe": "OK"
+        },
+        {
+          "endpoint": "bing",
+          "status": 200,
+          "classe": "OK"
+        }
+      ],
+      "aceita": true
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/bairros/guatupe",
+      "enviadaEm": "2026-09-01T06:48:35.101Z",
+      "resultados": [
+        {
+          "endpoint": "indexnow.org",
+          "status": 200,
+          "classe": "OK"
+        },
+        {
+          "endpoint": "bing",
+          "status": 200,
+          "classe": "OK"
+        }
+      ],
+      "aceita": true
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/bairros/xaxim",
+      "enviadaEm": "2026-09-01T06:48:35.101Z",
+      "resultados": [
+        {
+          "endpoint": "indexnow.org",
+          "status": 200,
+          "classe": "OK"
+        },
+        {
+          "endpoint": "bing",
+          "status": 200,
+          "classe": "OK"
+        }
+      ],
+      "aceita": true
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/bairros/sitio-cercado",
+      "enviadaEm": "2026-09-01T06:48:35.101Z",
+      "resultados": [
+        {
+          "endpoint": "indexnow.org",
+          "status": 200,
+          "classe": "OK"
+        },
+        {
+          "endpoint": "bing",
+          "status": 200,
+          "classe": "OK"
+        }
+      ],
+      "aceita": true
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/bairros/aviacao",
+      "enviadaEm": "2026-09-01T06:48:35.101Z",
+      "resultados": [
+        {
+          "endpoint": "indexnow.org",
+          "status": 200,
+          "classe": "OK"
+        },
+        {
+          "endpoint": "bing",
+          "status": 200,
+          "classe": "OK"
+        }
+      ],
+      "aceita": true
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/bairros/ouro-fino-sjp",
+      "enviadaEm": "2026-09-01T06:48:35.101Z",
+      "resultados": [
+        {
+          "endpoint": "indexnow.org",
+          "status": 200,
+          "classe": "OK"
+        },
+        {
+          "endpoint": "bing",
+          "status": 200,
+          "classe": "OK"
+        }
+      ],
+      "aceita": true
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/bairros/boqueirao",
+      "enviadaEm": "2026-09-01T06:48:35.101Z",
+      "resultados": [
+        {
+          "endpoint": "indexnow.org",
+          "status": 200,
+          "classe": "OK"
+        },
+        {
+          "endpoint": "bing",
+          "status": 200,
+          "classe": "OK"
+        }
+      ],
+      "aceita": true
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/bairros/cajuru",
+      "enviadaEm": "2026-09-01T06:48:35.101Z",
+      "resultados": [
+        {
+          "endpoint": "indexnow.org",
+          "status": 200,
+          "classe": "OK"
+        },
+        {
+          "endpoint": "bing",
+          "status": 200,
+          "classe": "OK"
+        }
+      ],
+      "aceita": true
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/bairros/pinheirinho",
+      "enviadaEm": "2026-09-01T06:48:35.101Z",
+      "resultados": [
+        {
+          "endpoint": "indexnow.org",
+          "status": 200,
+          "classe": "OK"
+        },
+        {
+          "endpoint": "bing",
+          "status": 200,
+          "classe": "OK"
+        }
+      ],
+      "aceita": true
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/bairros/cidade-jardim-sjp",
+      "enviadaEm": "2026-09-01T06:48:35.101Z",
+      "resultados": [
+        {
+          "endpoint": "indexnow.org",
+          "status": 200,
+          "classe": "OK"
+        },
+        {
+          "endpoint": "bing",
+          "status": 200,
+          "classe": "OK"
+        }
+      ],
+      "aceita": true
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/blog",
+      "enviadaEm": "2026-09-01T06:48:35.101Z",
+      "resultados": [
+        {
+          "endpoint": "indexnow.org",
+          "status": 200,
+          "classe": "OK"
+        },
+        {
+          "endpoint": "bing",
+          "status": 200,
+          "classe": "OK"
+        }
+      ],
+      "aceita": true
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/blog/quando-trocar-hd-por-ssd",
+      "enviadaEm": "2026-09-01T06:48:35.101Z",
+      "resultados": [
+        {
+          "endpoint": "indexnow.org",
+          "status": 200,
+          "classe": "OK"
+        },
+        {
+          "endpoint": "bing",
+          "status": 200,
+          "classe": "OK"
+        }
+      ],
+      "aceita": true
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/blog/como-saber-se-pc-tem-virus-malware",
+      "enviadaEm": "2026-09-01T06:48:35.101Z",
+      "resultados": [
+        {
+          "endpoint": "indexnow.org",
+          "status": 200,
+          "classe": "OK"
+        },
+        {
+          "endpoint": "bing",
+          "status": 200,
+          "classe": "OK"
+        }
+      ],
+      "aceita": true
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/blog/backup-como-proteger-seus-arquivos",
+      "enviadaEm": "2026-09-01T06:48:35.101Z",
+      "resultados": [
+        {
+          "endpoint": "indexnow.org",
+          "status": 200,
+          "classe": "OK"
+        },
+        {
+          "endpoint": "bing",
+          "status": 200,
+          "classe": "OK"
+        }
+      ],
+      "aceita": true
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/blog/como-melhorar-sinal-wifi-em-casa",
+      "enviadaEm": "2026-09-01T06:48:35.101Z",
+      "resultados": [
+        {
+          "endpoint": "indexnow.org",
+          "status": 200,
+          "classe": "OK"
+        },
+        {
+          "endpoint": "bing",
+          "status": 200,
+          "classe": "OK"
+        }
+      ],
+      "aceita": true
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/blog/notebook-superaquecendo-o-que-fazer",
+      "enviadaEm": "2026-09-01T06:48:35.101Z",
+      "resultados": [
+        {
+          "endpoint": "indexnow.org",
+          "status": 200,
+          "classe": "OK"
+        },
+        {
+          "endpoint": "bing",
+          "status": 200,
+          "classe": "OK"
+        }
+      ],
+      "aceita": true
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/blog/organizacao-de-ti-para-pequenos-escritorios",
+      "enviadaEm": "2026-09-01T06:48:35.101Z",
+      "resultados": [
+        {
+          "endpoint": "indexnow.org",
+          "status": 200,
+          "classe": "OK"
+        },
+        {
+          "endpoint": "bing",
+          "status": 200,
+          "classe": "OK"
+        }
+      ],
+      "aceita": true
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/blog/como-escolher-uma-workstation",
+      "enviadaEm": "2026-09-01T06:48:35.101Z",
+      "resultados": [
+        {
+          "endpoint": "indexnow.org",
+          "status": 200,
+          "classe": "OK"
+        },
+        {
+          "endpoint": "bing",
+          "status": 200,
+          "classe": "OK"
+        }
+      ],
+      "aceita": true
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/blog/como-instalar-windows-11-do-zero",
+      "enviadaEm": "2026-09-01T06:48:35.101Z",
+      "resultados": [
+        {
+          "endpoint": "indexnow.org",
+          "status": 200,
+          "classe": "OK"
+        },
+        {
+          "endpoint": "bing",
+          "status": 200,
+          "classe": "OK"
+        }
+      ],
+      "aceita": true
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/blog/como-resolver-tela-azul-windows",
+      "enviadaEm": "2026-09-01T06:48:35.101Z",
+      "resultados": [
+        {
+          "endpoint": "indexnow.org",
+          "status": 200,
+          "classe": "OK"
+        },
+        {
+          "endpoint": "bing",
+          "status": 200,
+          "classe": "OK"
+        }
+      ],
+      "aceita": true
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/blog/como-trocar-tela-notebook-passo-a-passo",
+      "enviadaEm": "2026-09-01T06:48:35.101Z",
+      "resultados": [
+        {
+          "endpoint": "indexnow.org",
+          "status": 200,
+          "classe": "OK"
+        },
+        {
+          "endpoint": "bing",
+          "status": 200,
+          "classe": "OK"
+        }
+      ],
+      "aceita": true
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/blog/notebook-nao-liga-o-que-fazer",
+      "enviadaEm": "2026-09-01T06:48:35.101Z",
+      "resultados": [
+        {
+          "endpoint": "indexnow.org",
+          "status": 200,
+          "classe": "OK"
+        },
+        {
+          "endpoint": "bing",
+          "status": 200,
+          "classe": "OK"
+        }
+      ],
+      "aceita": true
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/blog/computador-lento-causas-solucoes",
+      "enviadaEm": "2026-09-01T06:48:35.101Z",
+      "resultados": [
+        {
+          "endpoint": "indexnow.org",
+          "status": 200,
+          "classe": "OK"
+        },
+        {
+          "endpoint": "bing",
+          "status": 200,
+          "classe": "OK"
+        }
+      ],
+      "aceita": true
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/blog/como-recuperar-dados-hd-com-defeito",
+      "enviadaEm": "2026-09-01T06:48:35.101Z",
+      "resultados": [
+        {
+          "endpoint": "indexnow.org",
+          "status": 200,
+          "classe": "OK"
+        },
+        {
+          "endpoint": "bing",
+          "status": 200,
+          "classe": "OK"
+        }
+      ],
+      "aceita": true
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/blog/como-fazer-upgrade-ssd-nvme",
+      "enviadaEm": "2026-09-01T06:48:35.101Z",
+      "resultados": [
+        {
+          "endpoint": "indexnow.org",
+          "status": 200,
+          "classe": "OK"
+        },
+        {
+          "endpoint": "bing",
+          "status": 200,
+          "classe": "OK"
+        }
+      ],
+      "aceita": true
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/blog/como-configurar-roteador-wifi-iniciantes",
+      "enviadaEm": "2026-09-01T06:48:35.101Z",
+      "resultados": [
+        {
+          "endpoint": "indexnow.org",
+          "status": 200,
+          "classe": "OK"
+        },
+        {
+          "endpoint": "bing",
+          "status": 200,
+          "classe": "OK"
+        }
+      ],
+      "aceita": true
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/blog/como-saber-quem-esta-usando-meu-wifi",
+      "enviadaEm": "2026-09-01T06:48:35.101Z",
+      "resultados": [
+        {
+          "endpoint": "indexnow.org",
+          "status": 200,
+          "classe": "OK"
+        },
+        {
+          "endpoint": "bing",
+          "status": 200,
+          "classe": "OK"
+        }
+      ],
+      "aceita": true
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/blog/como-escolher-um-bom-antivirus",
+      "enviadaEm": "2026-09-01T06:48:35.101Z",
+      "resultados": [
+        {
+          "endpoint": "indexnow.org",
+          "status": 200,
+          "classe": "OK"
+        },
+        {
+          "endpoint": "bing",
+          "status": 200,
+          "classe": "OK"
+        }
+      ],
+      "aceita": true
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/blog/como-proteger-computador-golpes-internet",
+      "enviadaEm": "2026-09-01T06:48:35.101Z",
+      "resultados": [
+        {
+          "endpoint": "indexnow.org",
+          "status": 200,
+          "classe": "OK"
+        },
+        {
+          "endpoint": "bing",
+          "status": 200,
+          "classe": "OK"
+        }
+      ],
+      "aceita": true
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/blog/como-limpar-notebook-por-dentro",
+      "enviadaEm": "2026-09-01T06:48:35.101Z",
+      "resultados": [
+        {
+          "endpoint": "indexnow.org",
+          "status": 200,
+          "classe": "OK"
+        },
+        {
+          "endpoint": "bing",
+          "status": 200,
+          "classe": "OK"
+        }
+      ],
+      "aceita": true
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/blog/como-trocar-pasta-termica-notebook",
+      "enviadaEm": "2026-09-01T06:48:35.101Z",
+      "resultados": [
+        {
+          "endpoint": "indexnow.org",
+          "status": 200,
+          "classe": "OK"
+        },
+        {
+          "endpoint": "bing",
+          "status": 200,
+          "classe": "OK"
+        }
+      ],
+      "aceita": true
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/blog/como-clonar-hd-para-ssd",
+      "enviadaEm": "2026-09-01T06:48:35.101Z",
+      "resultados": [
+        {
+          "endpoint": "indexnow.org",
+          "status": 200,
+          "classe": "OK"
+        },
+        {
+          "endpoint": "bing",
+          "status": 200,
+          "classe": "OK"
+        }
+      ],
+      "aceita": true
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/blog/como-instalar-segundo-ssd-notebook",
+      "enviadaEm": "2026-09-01T06:48:35.101Z",
+      "resultados": [
+        {
+          "endpoint": "indexnow.org",
+          "status": 200,
+          "classe": "OK"
+        },
+        {
+          "endpoint": "bing",
+          "status": 200,
+          "classe": "OK"
+        }
+      ],
+      "aceita": true
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/blog/ransomware-como-proteger-empresa",
+      "enviadaEm": "2026-09-01T06:48:35.101Z",
+      "resultados": [
+        {
+          "endpoint": "indexnow.org",
+          "status": 200,
+          "classe": "OK"
+        },
+        {
+          "endpoint": "bing",
+          "status": 200,
+          "classe": "OK"
+        }
+      ],
+      "aceita": true
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/blog/backup-nuvem-empresas-qual-escolher",
+      "enviadaEm": "2026-09-01T06:48:35.101Z",
+      "resultados": [
+        {
+          "endpoint": "indexnow.org",
+          "status": 200,
+          "classe": "OK"
+        },
+        {
+          "endpoint": "bing",
+          "status": 200,
+          "classe": "OK"
+        }
+      ],
+      "aceita": true
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/blog/como-instalar-impressora-windows-passo-a-passo",
+      "enviadaEm": "2026-09-01T06:48:35.101Z",
+      "resultados": [
+        {
+          "endpoint": "indexnow.org",
+          "status": 200,
+          "classe": "OK"
+        },
+        {
+          "endpoint": "bing",
+          "status": 200,
+          "classe": "OK"
+        }
+      ],
+      "aceita": true
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/blog/como-conectar-wifi-tv-nao-conecta",
+      "enviadaEm": "2026-09-01T06:48:35.101Z",
+      "resultados": [
+        {
+          "endpoint": "indexnow.org",
+          "status": 200,
+          "classe": "OK"
+        },
+        {
+          "endpoint": "bing",
+          "status": 200,
+          "classe": "OK"
+        }
+      ],
+      "aceita": true
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/blog/como-testar-fonte-de-alimentacao-pc",
+      "enviadaEm": "2026-09-01T06:48:35.101Z",
+      "resultados": [
+        {
+          "endpoint": "indexnow.org",
+          "status": 200,
+          "classe": "OK"
+        },
+        {
+          "endpoint": "bing",
+          "status": 200,
+          "classe": "OK"
+        }
+      ],
+      "aceita": true
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/blog/como-diagnosticar-placa-mae-defeituosa",
+      "enviadaEm": "2026-09-01T06:48:35.101Z",
+      "resultados": [
+        {
+          "endpoint": "indexnow.org",
+          "status": 200,
+          "classe": "OK"
+        },
+        {
+          "endpoint": "bing",
+          "status": 200,
+          "classe": "OK"
+        }
+      ],
+      "aceita": true
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/blog/windows-11-lento-como-resolver",
+      "enviadaEm": "2026-09-01T06:48:35.101Z",
+      "resultados": [
+        {
+          "endpoint": "indexnow.org",
+          "status": 200,
+          "classe": "OK"
+        },
+        {
+          "endpoint": "bing",
+          "status": 200,
+          "classe": "OK"
+        }
+      ],
+      "aceita": true
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/blog/como-remover-virus-windows-iniciantes",
+      "enviadaEm": "2026-09-01T06:48:35.101Z",
+      "resultados": [
+        {
+          "endpoint": "indexnow.org",
+          "status": 200,
+          "classe": "OK"
+        },
+        {
+          "endpoint": "bing",
+          "status": 200,
+          "classe": "OK"
+        }
+      ],
+      "aceita": true
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/blog/como-formatar-pc-sem-perder-arquivos",
+      "enviadaEm": "2026-09-01T06:48:35.101Z",
+      "resultados": [
+        {
+          "endpoint": "indexnow.org",
+          "status": 200,
+          "classe": "OK"
+        },
+        {
+          "endpoint": "bing",
+          "status": 200,
+          "classe": "OK"
+        }
+      ],
+      "aceita": true
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/blog/quanto-custa-formatar-um-computador",
+      "enviadaEm": "2026-09-01T06:48:35.101Z",
+      "resultados": [
+        {
+          "endpoint": "indexnow.org",
+          "status": 200,
+          "classe": "OK"
+        },
+        {
+          "endpoint": "bing",
+          "status": 200,
+          "classe": "OK"
+        }
+      ],
+      "aceita": true
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/blog/o-que-e-informatica",
+      "enviadaEm": "2026-09-01T06:48:35.101Z",
+      "resultados": [
+        {
+          "endpoint": "indexnow.org",
+          "status": 200,
+          "classe": "OK"
+        },
+        {
+          "endpoint": "bing",
+          "status": 200,
+          "classe": "OK"
+        }
+      ],
+      "aceita": true
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/blog/informatica-basica",
+      "enviadaEm": "2026-09-01T06:48:35.101Z",
+      "resultados": [
+        {
+          "endpoint": "indexnow.org",
+          "status": 200,
+          "classe": "OK"
+        },
+        {
+          "endpoint": "bing",
+          "status": 200,
+          "classe": "OK"
+        }
+      ],
+      "aceita": true
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/blog/como-aprender-informatica",
+      "enviadaEm": "2026-09-01T06:48:35.101Z",
+      "resultados": [
+        {
+          "endpoint": "indexnow.org",
+          "status": 200,
+          "classe": "OK"
+        },
+        {
+          "endpoint": "bing",
+          "status": 200,
+          "classe": "OK"
+        }
+      ],
+      "aceita": true
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/blog/computador-entra-direto-na-bios",
+      "enviadaEm": "2026-09-01T06:48:35.101Z",
+      "resultados": [
+        {
+          "endpoint": "indexnow.org",
+          "status": 200,
+          "classe": "OK"
+        },
+        {
+          "endpoint": "bing",
+          "status": 200,
+          "classe": "OK"
+        }
+      ],
+      "aceita": true
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/blog/erro-no-bootable-device-como-resolver",
+      "enviadaEm": "2026-09-01T06:48:35.101Z",
+      "resultados": [
+        {
+          "endpoint": "indexnow.org",
+          "status": 200,
+          "classe": "OK"
+        },
+        {
+          "endpoint": "bing",
+          "status": 200,
+          "classe": "OK"
+        }
+      ],
+      "aceita": true
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/blog/troquei-o-ssd-e-o-pc-so-abre-a-bios",
+      "enviadaEm": "2026-09-01T06:48:35.101Z",
+      "resultados": [
+        {
+          "endpoint": "indexnow.org",
+          "status": 200,
+          "classe": "OK"
+        },
+        {
+          "endpoint": "bing",
+          "status": 200,
+          "classe": "OK"
+        }
+      ],
+      "aceita": true
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/blog/limpar-arquivos-temporarios-windows",
+      "enviadaEm": "2026-09-01T06:48:35.101Z",
+      "resultados": [
+        {
+          "endpoint": "indexnow.org",
+          "status": 200,
+          "classe": "OK"
+        },
+        {
+          "endpoint": "bing",
+          "status": 200,
+          "classe": "OK"
+        }
+      ],
+      "aceita": true
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/blog/memoria-ram-insuficiente-sintomas",
+      "enviadaEm": "2026-09-01T06:48:35.101Z",
+      "resultados": [
+        {
+          "endpoint": "indexnow.org",
+          "status": 200,
+          "classe": "OK"
+        },
+        {
+          "endpoint": "bing",
+          "status": 200,
+          "classe": "OK"
+        }
+      ],
+      "aceita": true
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/blog/codigos-de-erro-tela-azul-windows",
+      "enviadaEm": "2026-09-01T06:48:35.101Z",
+      "resultados": [
+        {
+          "endpoint": "indexnow.org",
+          "status": 200,
+          "classe": "OK"
+        },
+        {
+          "endpoint": "bing",
+          "status": 200,
+          "classe": "OK"
+        }
+      ],
+      "aceita": true
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/blog/testar-memoria-ram-memtest86",
+      "enviadaEm": "2026-09-01T06:48:35.101Z",
+      "resultados": [
+        {
+          "endpoint": "indexnow.org",
+          "status": 200,
+          "classe": "OK"
+        },
+        {
+          "endpoint": "bing",
+          "status": 200,
+          "classe": "OK"
+        }
+      ],
+      "aceita": true
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/blog/botao-power-nao-funciona-jump-start-placa-mae",
+      "enviadaEm": "2026-09-01T06:48:35.101Z",
+      "resultados": [
+        {
+          "endpoint": "indexnow.org",
+          "status": 200,
+          "classe": "OK"
+        },
+        {
+          "endpoint": "bing",
+          "status": 200,
+          "classe": "OK"
+        }
+      ],
+      "aceita": true
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/blog/curto-circuito-placa-mae-como-identificar",
+      "enviadaEm": "2026-09-01T06:48:35.101Z",
+      "resultados": [
+        {
+          "endpoint": "indexnow.org",
+          "status": 200,
+          "classe": "OK"
+        },
+        {
+          "endpoint": "bing",
+          "status": 200,
+          "classe": "OK"
+        }
+      ],
+      "aceita": true
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/blog/bios-corrompida-reset-cmos-atualizacao",
+      "enviadaEm": "2026-09-01T06:48:35.101Z",
+      "resultados": [
+        {
+          "endpoint": "indexnow.org",
+          "status": 200,
+          "classe": "OK"
+        },
+        {
+          "endpoint": "bing",
+          "status": 200,
+          "classe": "OK"
+        }
+      ],
+      "aceita": true
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/blog/internet-lenta-provedor-ou-roteador",
+      "enviadaEm": "2026-09-01T06:48:35.101Z",
+      "resultados": [
+        {
+          "endpoint": "indexnow.org",
+          "status": 200,
+          "classe": "OK"
+        },
+        {
+          "endpoint": "bing",
+          "status": 200,
+          "classe": "OK"
+        }
+      ],
+      "aceita": true
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/blog/impressora-offline-como-resolver",
+      "enviadaEm": "2026-09-01T06:48:35.101Z",
+      "resultados": [
+        {
+          "endpoint": "indexnow.org",
+          "status": 200,
+          "classe": "OK"
+        },
+        {
+          "endpoint": "bing",
+          "status": 200,
+          "classe": "OK"
+        }
+      ],
+      "aceita": true
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/blog/fila-de-impressao-travada-spooler-windows",
+      "enviadaEm": "2026-09-01T06:48:35.101Z",
+      "resultados": [
+        {
+          "endpoint": "indexnow.org",
+          "status": 200,
+          "classe": "OK"
+        },
+        {
+          "endpoint": "bing",
+          "status": 200,
+          "classe": "OK"
+        }
+      ],
+      "aceita": true
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/blog/hd-nao-e-reconhecido-na-bios-o-que-fazer",
+      "enviadaEm": "2026-09-01T06:48:35.101Z",
+      "resultados": [
+        {
+          "endpoint": "indexnow.org",
+          "status": 200,
+          "classe": "OK"
+        },
+        {
+          "endpoint": "bing",
+          "status": 200,
+          "classe": "OK"
+        }
+      ],
+      "aceita": true
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/blog/ssd-nvme-nao-aparece-no-gerenciador-de-discos",
+      "enviadaEm": "2026-09-01T06:48:35.101Z",
+      "resultados": [
+        {
+          "endpoint": "indexnow.org",
+          "status": 200,
+          "classe": "OK"
+        },
+        {
+          "endpoint": "bing",
+          "status": 200,
+          "classe": "OK"
+        }
+      ],
+      "aceita": true
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/blog/disco-com-setores-defeituosos-smart-o-que-fazer",
+      "enviadaEm": "2026-09-01T06:48:35.101Z",
+      "resultados": [
+        {
+          "endpoint": "indexnow.org",
+          "status": 200,
+          "classe": "OK"
+        },
+        {
+          "endpoint": "bing",
+          "status": 200,
+          "classe": "OK"
+        }
+      ],
+      "aceita": true
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/blog/computador-sem-som-o-que-verificar",
+      "enviadaEm": "2026-09-01T06:48:35.101Z",
+      "resultados": [
+        {
+          "endpoint": "indexnow.org",
+          "status": 200,
+          "classe": "OK"
+        },
+        {
+          "endpoint": "bing",
+          "status": 200,
+          "classe": "OK"
+        }
+      ],
+      "aceita": true
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/blog/fone-de-ouvido-nao-e-reconhecido-no-pc",
+      "enviadaEm": "2026-09-01T06:48:35.101Z",
+      "resultados": [
+        {
+          "endpoint": "indexnow.org",
+          "status": 200,
+          "classe": "OK"
+        },
+        {
+          "endpoint": "bing",
+          "status": 200,
+          "classe": "OK"
+        }
+      ],
+      "aceita": true
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/blog/servico-de-audio-do-windows-nao-esta-em-execucao",
+      "enviadaEm": "2026-09-01T06:48:35.101Z",
+      "resultados": [
+        {
+          "endpoint": "indexnow.org",
+          "status": 200,
+          "classe": "OK"
+        },
+        {
+          "endpoint": "bing",
+          "status": 200,
+          "classe": "OK"
+        }
+      ],
+      "aceita": true
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/blog/webcam-nao-funciona-o-que-verificar",
+      "enviadaEm": "2026-09-01T06:48:35.101Z",
+      "resultados": [
+        {
+          "endpoint": "indexnow.org",
+          "status": 200,
+          "classe": "OK"
+        },
+        {
+          "endpoint": "bing",
+          "status": 200,
+          "classe": "OK"
+        }
+      ],
+      "aceita": true
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/blog/permissoes-de-camera-no-windows",
+      "enviadaEm": "2026-09-01T06:48:35.101Z",
+      "resultados": [
+        {
+          "endpoint": "indexnow.org",
+          "status": 200,
+          "classe": "OK"
+        },
+        {
+          "endpoint": "bing",
+          "status": 200,
+          "classe": "OK"
+        }
+      ],
+      "aceita": true
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/blog/webcam-usb-nao-e-detectada",
+      "enviadaEm": "2026-09-01T06:48:35.101Z",
+      "resultados": [
+        {
+          "endpoint": "indexnow.org",
+          "status": 200,
+          "classe": "OK"
+        },
+        {
+          "endpoint": "bing",
+          "status": 200,
+          "classe": "OK"
+        }
+      ],
+      "aceita": true
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/blog/windows-update-nao-funciona-o-que-verificar",
+      "enviadaEm": "2026-09-01T06:48:35.101Z",
+      "resultados": [
+        {
+          "endpoint": "indexnow.org",
+          "status": 200,
+          "classe": "OK"
+        },
+        {
+          "endpoint": "bing",
+          "status": 200,
+          "classe": "OK"
+        }
+      ],
+      "aceita": true
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/blog/limpar-cache-do-windows-update-softwaredistribution",
+      "enviadaEm": "2026-09-01T06:48:35.101Z",
+      "resultados": [
+        {
+          "endpoint": "indexnow.org",
+          "status": 200,
+          "classe": "OK"
+        },
+        {
+          "endpoint": "bing",
+          "status": 200,
+          "classe": "OK"
+        }
+      ],
+      "aceita": true
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/blog/windows-update-travado-desfazendo-alteracoes",
+      "enviadaEm": "2026-09-01T06:48:35.101Z",
       "resultados": [
         {
           "endpoint": "indexnow.org",
@@ -48,7 +1425,7 @@
     },
     {
       "url": "https://otecnicodeinformatica.com.br/blog/boot-uefi-ou-legacy-como-identificar",
-      "enviadaEm": "2026-09-01T02:16:54.209Z",
+      "enviadaEm": "2026-09-01T06:48:35.101Z",
       "resultados": [
         {
           "endpoint": "indexnow.org",
@@ -65,7 +1442,7 @@
     },
     {
       "url": "https://otecnicodeinformatica.com.br/blog/ordem-de-boot-na-bios-como-configurar",
-      "enviadaEm": "2026-09-01T02:16:54.209Z",
+      "enviadaEm": "2026-09-01T06:48:35.101Z",
       "resultados": [
         {
           "endpoint": "indexnow.org",
@@ -82,7 +1459,2319 @@
     },
     {
       "url": "https://otecnicodeinformatica.com.br/blog/windows-reparo-automatico-em-loop",
-      "enviadaEm": "2026-09-01T02:16:54.209Z",
+      "enviadaEm": "2026-09-01T06:48:35.101Z",
+      "resultados": [
+        {
+          "endpoint": "indexnow.org",
+          "status": 200,
+          "classe": "OK"
+        },
+        {
+          "endpoint": "bing",
+          "status": 200,
+          "classe": "OK"
+        }
+      ],
+      "aceita": true
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/equipamentos",
+      "enviadaEm": "2026-09-01T06:48:35.101Z",
+      "resultados": [
+        {
+          "endpoint": "indexnow.org",
+          "status": 200,
+          "classe": "OK"
+        },
+        {
+          "endpoint": "bing",
+          "status": 200,
+          "classe": "OK"
+        }
+      ],
+      "aceita": true
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/equipamentos/notebook",
+      "enviadaEm": "2026-09-01T06:48:35.101Z",
+      "resultados": [
+        {
+          "endpoint": "indexnow.org",
+          "status": 200,
+          "classe": "OK"
+        },
+        {
+          "endpoint": "bing",
+          "status": 200,
+          "classe": "OK"
+        }
+      ],
+      "aceita": true
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/equipamentos/desktop",
+      "enviadaEm": "2026-09-01T06:48:35.101Z",
+      "resultados": [
+        {
+          "endpoint": "indexnow.org",
+          "status": 200,
+          "classe": "OK"
+        },
+        {
+          "endpoint": "bing",
+          "status": 200,
+          "classe": "OK"
+        }
+      ],
+      "aceita": true
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/equipamentos/impressora",
+      "enviadaEm": "2026-09-01T06:48:35.101Z",
+      "resultados": [
+        {
+          "endpoint": "indexnow.org",
+          "status": 200,
+          "classe": "OK"
+        },
+        {
+          "endpoint": "bing",
+          "status": 200,
+          "classe": "OK"
+        }
+      ],
+      "aceita": true
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/equipamentos/roteador",
+      "enviadaEm": "2026-09-01T06:48:35.101Z",
+      "resultados": [
+        {
+          "endpoint": "indexnow.org",
+          "status": 200,
+          "classe": "OK"
+        },
+        {
+          "endpoint": "bing",
+          "status": 200,
+          "classe": "OK"
+        }
+      ],
+      "aceita": true
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/",
+      "enviadaEm": "2026-09-01T06:48:35.101Z",
+      "resultados": [
+        {
+          "endpoint": "indexnow.org",
+          "status": 200,
+          "classe": "OK"
+        },
+        {
+          "endpoint": "bing",
+          "status": 200,
+          "classe": "OK"
+        }
+      ],
+      "aceita": true
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/servicos",
+      "enviadaEm": "2026-09-01T06:48:35.101Z",
+      "resultados": [
+        {
+          "endpoint": "indexnow.org",
+          "status": 200,
+          "classe": "OK"
+        },
+        {
+          "endpoint": "bing",
+          "status": 200,
+          "classe": "OK"
+        }
+      ],
+      "aceita": true
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/como-funciona",
+      "enviadaEm": "2026-09-01T06:48:35.101Z",
+      "resultados": [
+        {
+          "endpoint": "indexnow.org",
+          "status": 200,
+          "classe": "OK"
+        },
+        {
+          "endpoint": "bing",
+          "status": 200,
+          "classe": "OK"
+        }
+      ],
+      "aceita": true
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/precos-e-politicas",
+      "enviadaEm": "2026-09-01T06:48:35.101Z",
+      "resultados": [
+        {
+          "endpoint": "indexnow.org",
+          "status": 200,
+          "classe": "OK"
+        },
+        {
+          "endpoint": "bing",
+          "status": 200,
+          "classe": "OK"
+        }
+      ],
+      "aceita": true
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/sobre",
+      "enviadaEm": "2026-09-01T06:48:35.101Z",
+      "resultados": [
+        {
+          "endpoint": "indexnow.org",
+          "status": 200,
+          "classe": "OK"
+        },
+        {
+          "endpoint": "bing",
+          "status": 200,
+          "classe": "OK"
+        }
+      ],
+      "aceita": true
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/contato",
+      "enviadaEm": "2026-09-01T06:48:35.101Z",
+      "resultados": [
+        {
+          "endpoint": "indexnow.org",
+          "status": 200,
+          "classe": "OK"
+        },
+        {
+          "endpoint": "bing",
+          "status": 200,
+          "classe": "OK"
+        }
+      ],
+      "aceita": true
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/faq",
+      "enviadaEm": "2026-09-01T06:48:35.101Z",
+      "resultados": [
+        {
+          "endpoint": "indexnow.org",
+          "status": 200,
+          "classe": "OK"
+        },
+        {
+          "endpoint": "bing",
+          "status": 200,
+          "classe": "OK"
+        }
+      ],
+      "aceita": true
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/anuncie",
+      "enviadaEm": "2026-09-01T06:48:35.101Z",
+      "resultados": [
+        {
+          "endpoint": "indexnow.org",
+          "status": 200,
+          "classe": "OK"
+        },
+        {
+          "endpoint": "bing",
+          "status": 200,
+          "classe": "OK"
+        }
+      ],
+      "aceita": true
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/atendimento-domicilio",
+      "enviadaEm": "2026-09-01T06:48:35.101Z",
+      "resultados": [
+        {
+          "endpoint": "indexnow.org",
+          "status": 200,
+          "classe": "OK"
+        },
+        {
+          "endpoint": "bing",
+          "status": 200,
+          "classe": "OK"
+        }
+      ],
+      "aceita": true
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/atendimento-remoto",
+      "enviadaEm": "2026-09-01T06:48:35.101Z",
+      "resultados": [
+        {
+          "endpoint": "indexnow.org",
+          "status": 200,
+          "classe": "OK"
+        },
+        {
+          "endpoint": "bing",
+          "status": 200,
+          "classe": "OK"
+        }
+      ],
+      "aceita": true
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/equipamentos-atendidos",
+      "enviadaEm": "2026-09-01T06:48:35.101Z",
+      "resultados": [
+        {
+          "endpoint": "indexnow.org",
+          "status": 200,
+          "classe": "OK"
+        },
+        {
+          "endpoint": "bing",
+          "status": 200,
+          "classe": "OK"
+        }
+      ],
+      "aceita": true
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/areas-atendidas",
+      "enviadaEm": "2026-09-01T06:48:35.101Z",
+      "resultados": [
+        {
+          "endpoint": "indexnow.org",
+          "status": 200,
+          "classe": "OK"
+        },
+        {
+          "endpoint": "bing",
+          "status": 200,
+          "classe": "OK"
+        }
+      ],
+      "aceita": true
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/diagnostico-tecnico",
+      "enviadaEm": "2026-09-01T06:48:35.101Z",
+      "resultados": [
+        {
+          "endpoint": "indexnow.org",
+          "status": 200,
+          "classe": "OK"
+        },
+        {
+          "endpoint": "bing",
+          "status": 200,
+          "classe": "OK"
+        }
+      ],
+      "aceita": true
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/coleta-e-entrega",
+      "enviadaEm": "2026-09-01T06:48:35.101Z",
+      "resultados": [
+        {
+          "endpoint": "indexnow.org",
+          "status": 200,
+          "classe": "OK"
+        },
+        {
+          "endpoint": "bing",
+          "status": 200,
+          "classe": "OK"
+        }
+      ],
+      "aceita": true
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/quando-nao-compensa",
+      "enviadaEm": "2026-09-01T06:48:35.101Z",
+      "resultados": [
+        {
+          "endpoint": "indexnow.org",
+          "status": 200,
+          "classe": "OK"
+        },
+        {
+          "endpoint": "bing",
+          "status": 200,
+          "classe": "OK"
+        }
+      ],
+      "aceita": true
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/seguranca-dos-dados",
+      "enviadaEm": "2026-09-01T06:48:35.101Z",
+      "resultados": [
+        {
+          "endpoint": "indexnow.org",
+          "status": 200,
+          "classe": "OK"
+        },
+        {
+          "endpoint": "bing",
+          "status": 200,
+          "classe": "OK"
+        }
+      ],
+      "aceita": true
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/politica-de-pecas-do-cliente",
+      "enviadaEm": "2026-09-01T06:48:35.101Z",
+      "resultados": [
+        {
+          "endpoint": "indexnow.org",
+          "status": 200,
+          "classe": "OK"
+        },
+        {
+          "endpoint": "bing",
+          "status": 200,
+          "classe": "OK"
+        }
+      ],
+      "aceita": true
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/termos-e-condicoes",
+      "enviadaEm": "2026-09-01T06:48:35.101Z",
+      "resultados": [
+        {
+          "endpoint": "indexnow.org",
+          "status": 200,
+          "classe": "OK"
+        },
+        {
+          "endpoint": "bing",
+          "status": 200,
+          "classe": "OK"
+        }
+      ],
+      "aceita": true
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/empresa-de-ti-curitiba",
+      "enviadaEm": "2026-09-01T06:48:35.101Z",
+      "resultados": [
+        {
+          "endpoint": "indexnow.org",
+          "status": 200,
+          "classe": "OK"
+        },
+        {
+          "endpoint": "bing",
+          "status": 200,
+          "classe": "OK"
+        }
+      ],
+      "aceita": true
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/bairros",
+      "enviadaEm": "2026-09-01T06:48:35.101Z",
+      "resultados": [
+        {
+          "endpoint": "indexnow.org",
+          "status": 200,
+          "classe": "OK"
+        },
+        {
+          "endpoint": "bing",
+          "status": 200,
+          "classe": "OK"
+        }
+      ],
+      "aceita": true
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/guia-tecnico-informatica",
+      "enviadaEm": "2026-09-01T06:48:35.101Z",
+      "resultados": [
+        {
+          "endpoint": "indexnow.org",
+          "status": 200,
+          "classe": "OK"
+        },
+        {
+          "endpoint": "bing",
+          "status": 200,
+          "classe": "OK"
+        }
+      ],
+      "aceita": true
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/assistencia-tecnica-curitiba",
+      "enviadaEm": "2026-09-01T06:48:35.101Z",
+      "resultados": [
+        {
+          "endpoint": "indexnow.org",
+          "status": 200,
+          "classe": "OK"
+        },
+        {
+          "endpoint": "bing",
+          "status": 200,
+          "classe": "OK"
+        }
+      ],
+      "aceita": true
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/decisoes",
+      "enviadaEm": "2026-09-01T06:48:35.101Z",
+      "resultados": [
+        {
+          "endpoint": "indexnow.org",
+          "status": 200,
+          "classe": "OK"
+        },
+        {
+          "endpoint": "bing",
+          "status": 200,
+          "classe": "OK"
+        }
+      ],
+      "aceita": true
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/decisoes/formatar-ou-reparar",
+      "enviadaEm": "2026-09-01T06:48:35.101Z",
+      "resultados": [
+        {
+          "endpoint": "indexnow.org",
+          "status": 200,
+          "classe": "OK"
+        },
+        {
+          "endpoint": "bing",
+          "status": 200,
+          "classe": "OK"
+        }
+      ],
+      "aceita": true
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/decisoes/ssd-ou-memoria-ram",
+      "enviadaEm": "2026-09-01T06:48:35.101Z",
+      "resultados": [
+        {
+          "endpoint": "indexnow.org",
+          "status": 200,
+          "classe": "OK"
+        },
+        {
+          "endpoint": "bing",
+          "status": 200,
+          "classe": "OK"
+        }
+      ],
+      "aceita": true
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/decisoes/consertar-ou-substituir",
+      "enviadaEm": "2026-09-01T06:48:35.101Z",
+      "resultados": [
+        {
+          "endpoint": "indexnow.org",
+          "status": 200,
+          "classe": "OK"
+        },
+        {
+          "endpoint": "bing",
+          "status": 200,
+          "classe": "OK"
+        }
+      ],
+      "aceita": true
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/decisoes/remoto-ou-presencial",
+      "enviadaEm": "2026-09-01T06:48:35.101Z",
+      "resultados": [
+        {
+          "endpoint": "indexnow.org",
+          "status": 200,
+          "classe": "OK"
+        },
+        {
+          "endpoint": "bing",
+          "status": 200,
+          "classe": "OK"
+        }
+      ],
+      "aceita": true
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/decisoes/hd-com-ruido",
+      "enviadaEm": "2026-09-01T06:48:35.101Z",
+      "resultados": [
+        {
+          "endpoint": "indexnow.org",
+          "status": 200,
+          "classe": "OK"
+        },
+        {
+          "endpoint": "bing",
+          "status": 200,
+          "classe": "OK"
+        }
+      ],
+      "aceita": true
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/decisoes/backup-antes-da-manutencao",
+      "enviadaEm": "2026-09-01T06:48:35.101Z",
+      "resultados": [
+        {
+          "endpoint": "indexnow.org",
+          "status": 200,
+          "classe": "OK"
+        },
+        {
+          "endpoint": "bing",
+          "status": 200,
+          "classe": "OK"
+        }
+      ],
+      "aceita": true
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/decisoes/atualizar-para-windows-11",
+      "enviadaEm": "2026-09-01T06:48:35.101Z",
+      "resultados": [
+        {
+          "endpoint": "indexnow.org",
+          "status": 200,
+          "classe": "OK"
+        },
+        {
+          "endpoint": "bing",
+          "status": 200,
+          "classe": "OK"
+        }
+      ],
+      "aceita": true
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/decisoes/nuvem-ou-hd-externo",
+      "enviadaEm": "2026-09-01T06:48:35.101Z",
+      "resultados": [
+        {
+          "endpoint": "indexnow.org",
+          "status": 200,
+          "classe": "OK"
+        },
+        {
+          "endpoint": "bing",
+          "status": 200,
+          "classe": "OK"
+        }
+      ],
+      "aceita": true
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/decisoes/montar-ou-comprar-pronto",
+      "enviadaEm": "2026-09-01T06:48:35.101Z",
+      "resultados": [
+        {
+          "endpoint": "indexnow.org",
+          "status": 200,
+          "classe": "OK"
+        },
+        {
+          "endpoint": "bing",
+          "status": 200,
+          "classe": "OK"
+        }
+      ],
+      "aceita": true
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/glossario",
+      "enviadaEm": "2026-09-01T06:48:35.101Z",
+      "resultados": [
+        {
+          "endpoint": "indexnow.org",
+          "status": 200,
+          "classe": "OK"
+        },
+        {
+          "endpoint": "bing",
+          "status": 200,
+          "classe": "OK"
+        }
+      ],
+      "aceita": true
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/glossario/bsod",
+      "enviadaEm": "2026-09-01T06:48:35.101Z",
+      "resultados": [
+        {
+          "endpoint": "indexnow.org",
+          "status": 200,
+          "classe": "OK"
+        },
+        {
+          "endpoint": "bing",
+          "status": 200,
+          "classe": "OK"
+        }
+      ],
+      "aceita": true
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/glossario/uefi",
+      "enviadaEm": "2026-09-01T06:48:35.101Z",
+      "resultados": [
+        {
+          "endpoint": "indexnow.org",
+          "status": 200,
+          "classe": "OK"
+        },
+        {
+          "endpoint": "bing",
+          "status": 200,
+          "classe": "OK"
+        }
+      ],
+      "aceita": true
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/glossario/bios",
+      "enviadaEm": "2026-09-01T06:48:35.101Z",
+      "resultados": [
+        {
+          "endpoint": "indexnow.org",
+          "status": 200,
+          "classe": "OK"
+        },
+        {
+          "endpoint": "bing",
+          "status": 200,
+          "classe": "OK"
+        }
+      ],
+      "aceita": true
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/glossario/imagem-do-sistema",
+      "enviadaEm": "2026-09-01T06:48:35.101Z",
+      "resultados": [
+        {
+          "endpoint": "indexnow.org",
+          "status": 200,
+          "classe": "OK"
+        },
+        {
+          "endpoint": "bing",
+          "status": 200,
+          "classe": "OK"
+        }
+      ],
+      "aceita": true
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/glossario/smart",
+      "enviadaEm": "2026-09-01T06:48:35.101Z",
+      "resultados": [
+        {
+          "endpoint": "indexnow.org",
+          "status": 200,
+          "classe": "OK"
+        },
+        {
+          "endpoint": "bing",
+          "status": 200,
+          "classe": "OK"
+        }
+      ],
+      "aceita": true
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/glossario/ssd",
+      "enviadaEm": "2026-09-01T06:48:35.101Z",
+      "resultados": [
+        {
+          "endpoint": "indexnow.org",
+          "status": 200,
+          "classe": "OK"
+        },
+        {
+          "endpoint": "bing",
+          "status": 200,
+          "classe": "OK"
+        }
+      ],
+      "aceita": true
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/glossario/nvme",
+      "enviadaEm": "2026-09-01T06:48:35.101Z",
+      "resultados": [
+        {
+          "endpoint": "indexnow.org",
+          "status": 200,
+          "classe": "OK"
+        },
+        {
+          "endpoint": "bing",
+          "status": 200,
+          "classe": "OK"
+        }
+      ],
+      "aceita": true
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/glossario/backup-incremental",
+      "enviadaEm": "2026-09-01T06:48:35.101Z",
+      "resultados": [
+        {
+          "endpoint": "indexnow.org",
+          "status": 200,
+          "classe": "OK"
+        },
+        {
+          "endpoint": "bing",
+          "status": 200,
+          "classe": "OK"
+        }
+      ],
+      "aceita": true
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/glossario/recuperacao-de-dados",
+      "enviadaEm": "2026-09-01T06:48:35.101Z",
+      "resultados": [
+        {
+          "endpoint": "indexnow.org",
+          "status": 200,
+          "classe": "OK"
+        },
+        {
+          "endpoint": "bing",
+          "status": 200,
+          "classe": "OK"
+        }
+      ],
+      "aceita": true
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/glossario/tpm",
+      "enviadaEm": "2026-09-01T06:48:35.101Z",
+      "resultados": [
+        {
+          "endpoint": "indexnow.org",
+          "status": 200,
+          "classe": "OK"
+        },
+        {
+          "endpoint": "bing",
+          "status": 200,
+          "classe": "OK"
+        }
+      ],
+      "aceita": true
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/glossario/bitlocker",
+      "enviadaEm": "2026-09-01T06:48:35.101Z",
+      "resultados": [
+        {
+          "endpoint": "indexnow.org",
+          "status": 200,
+          "classe": "OK"
+        },
+        {
+          "endpoint": "bing",
+          "status": 200,
+          "classe": "OK"
+        }
+      ],
+      "aceita": true
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/glossario/dns",
+      "enviadaEm": "2026-09-01T06:48:35.101Z",
+      "resultados": [
+        {
+          "endpoint": "indexnow.org",
+          "status": 200,
+          "classe": "OK"
+        },
+        {
+          "endpoint": "bing",
+          "status": 200,
+          "classe": "OK"
+        }
+      ],
+      "aceita": true
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/glossario/nat",
+      "enviadaEm": "2026-09-01T06:48:35.101Z",
+      "resultados": [
+        {
+          "endpoint": "indexnow.org",
+          "status": 200,
+          "classe": "OK"
+        },
+        {
+          "endpoint": "bing",
+          "status": 200,
+          "classe": "OK"
+        }
+      ],
+      "aceita": true
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/glossario/memoria-ram",
+      "enviadaEm": "2026-09-01T06:48:35.101Z",
+      "resultados": [
+        {
+          "endpoint": "indexnow.org",
+          "status": 200,
+          "classe": "OK"
+        },
+        {
+          "endpoint": "bing",
+          "status": 200,
+          "classe": "OK"
+        }
+      ],
+      "aceita": true
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/glossario/thermal-throttling",
+      "enviadaEm": "2026-09-01T06:48:35.101Z",
+      "resultados": [
+        {
+          "endpoint": "indexnow.org",
+          "status": 200,
+          "classe": "OK"
+        },
+        {
+          "endpoint": "bing",
+          "status": 200,
+          "classe": "OK"
+        }
+      ],
+      "aceita": true
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/glossario/secure-boot",
+      "enviadaEm": "2026-09-01T06:48:35.101Z",
+      "resultados": [
+        {
+          "endpoint": "indexnow.org",
+          "status": 200,
+          "classe": "OK"
+        },
+        {
+          "endpoint": "bing",
+          "status": 200,
+          "classe": "OK"
+        }
+      ],
+      "aceita": true
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/glossario/driver",
+      "enviadaEm": "2026-09-01T06:48:35.101Z",
+      "resultados": [
+        {
+          "endpoint": "indexnow.org",
+          "status": 200,
+          "classe": "OK"
+        },
+        {
+          "endpoint": "bing",
+          "status": 200,
+          "classe": "OK"
+        }
+      ],
+      "aceita": true
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/glossario/particao",
+      "enviadaEm": "2026-09-01T06:48:35.101Z",
+      "resultados": [
+        {
+          "endpoint": "indexnow.org",
+          "status": 200,
+          "classe": "OK"
+        },
+        {
+          "endpoint": "bing",
+          "status": 200,
+          "classe": "OK"
+        }
+      ],
+      "aceita": true
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/ferramentas",
+      "enviadaEm": "2026-09-01T06:48:35.101Z",
+      "resultados": [
+        {
+          "endpoint": "indexnow.org",
+          "status": 200,
+          "classe": "OK"
+        },
+        {
+          "endpoint": "bing",
+          "status": 200,
+          "classe": "OK"
+        }
+      ],
+      "aceita": true
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/ferramentas/checklist-computador-lento",
+      "enviadaEm": "2026-09-01T06:48:35.101Z",
+      "resultados": [
+        {
+          "endpoint": "indexnow.org",
+          "status": 200,
+          "classe": "OK"
+        },
+        {
+          "endpoint": "bing",
+          "status": 200,
+          "classe": "OK"
+        }
+      ],
+      "aceita": true
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/ferramentas/checklist-antes-de-formatar",
+      "enviadaEm": "2026-09-01T06:48:35.101Z",
+      "resultados": [
+        {
+          "endpoint": "indexnow.org",
+          "status": 200,
+          "classe": "OK"
+        },
+        {
+          "endpoint": "bing",
+          "status": 200,
+          "classe": "OK"
+        }
+      ],
+      "aceita": true
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/ferramentas/roteiro-falha-de-inicializacao",
+      "enviadaEm": "2026-09-01T06:48:35.101Z",
+      "resultados": [
+        {
+          "endpoint": "indexnow.org",
+          "status": 200,
+          "classe": "OK"
+        },
+        {
+          "endpoint": "bing",
+          "status": 200,
+          "classe": "OK"
+        }
+      ],
+      "aceita": true
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/ferramentas/verificador-de-backup",
+      "enviadaEm": "2026-09-01T06:48:35.101Z",
+      "resultados": [
+        {
+          "endpoint": "indexnow.org",
+          "status": 200,
+          "classe": "OK"
+        },
+        {
+          "endpoint": "bing",
+          "status": 200,
+          "classe": "OK"
+        }
+      ],
+      "aceita": true
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/ferramentas/ssd-ou-ram",
+      "enviadaEm": "2026-09-01T06:48:35.101Z",
+      "resultados": [
+        {
+          "endpoint": "indexnow.org",
+          "status": 200,
+          "classe": "OK"
+        },
+        {
+          "endpoint": "bing",
+          "status": 200,
+          "classe": "OK"
+        }
+      ],
+      "aceita": true
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/ferramentas/roteiro-wifi-instavel",
+      "enviadaEm": "2026-09-01T06:48:35.101Z",
+      "resultados": [
+        {
+          "endpoint": "indexnow.org",
+          "status": 200,
+          "classe": "OK"
+        },
+        {
+          "endpoint": "bing",
+          "status": 200,
+          "classe": "OK"
+        }
+      ],
+      "aceita": true
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/problemas/notebook-nao-liga",
+      "enviadaEm": "2026-09-01T06:48:35.101Z",
+      "resultados": [
+        {
+          "endpoint": "indexnow.org",
+          "status": 200,
+          "classe": "OK"
+        },
+        {
+          "endpoint": "bing",
+          "status": 200,
+          "classe": "OK"
+        }
+      ],
+      "aceita": true
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/problemas/computador-lento",
+      "enviadaEm": "2026-09-01T06:48:35.101Z",
+      "resultados": [
+        {
+          "endpoint": "indexnow.org",
+          "status": 200,
+          "classe": "OK"
+        },
+        {
+          "endpoint": "bing",
+          "status": 200,
+          "classe": "OK"
+        }
+      ],
+      "aceita": true
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/problemas",
+      "enviadaEm": "2026-09-01T06:48:35.101Z",
+      "resultados": [
+        {
+          "endpoint": "indexnow.org",
+          "status": 200,
+          "classe": "OK"
+        },
+        {
+          "endpoint": "bing",
+          "status": 200,
+          "classe": "OK"
+        }
+      ],
+      "aceita": true
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/problemas/wifi-instavel",
+      "enviadaEm": "2026-09-01T06:48:35.101Z",
+      "resultados": [
+        {
+          "endpoint": "indexnow.org",
+          "status": 200,
+          "classe": "OK"
+        },
+        {
+          "endpoint": "bing",
+          "status": 200,
+          "classe": "OK"
+        }
+      ],
+      "aceita": true
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/problemas/tela-azul",
+      "enviadaEm": "2026-09-01T06:48:35.101Z",
+      "resultados": [
+        {
+          "endpoint": "indexnow.org",
+          "status": 200,
+          "classe": "OK"
+        },
+        {
+          "endpoint": "bing",
+          "status": 200,
+          "classe": "OK"
+        }
+      ],
+      "aceita": true
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/problemas/arquivos-apagados",
+      "enviadaEm": "2026-09-01T06:48:35.101Z",
+      "resultados": [
+        {
+          "endpoint": "indexnow.org",
+          "status": 200,
+          "classe": "OK"
+        },
+        {
+          "endpoint": "bing",
+          "status": 200,
+          "classe": "OK"
+        }
+      ],
+      "aceita": true
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/problemas/computador-desliga-sozinho",
+      "enviadaEm": "2026-09-01T06:48:35.101Z",
+      "resultados": [
+        {
+          "endpoint": "indexnow.org",
+          "status": 200,
+          "classe": "OK"
+        },
+        {
+          "endpoint": "bing",
+          "status": 200,
+          "classe": "OK"
+        }
+      ],
+      "aceita": true
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/problemas/notebook-nao-carrega",
+      "enviadaEm": "2026-09-01T06:48:35.101Z",
+      "resultados": [
+        {
+          "endpoint": "indexnow.org",
+          "status": 200,
+          "classe": "OK"
+        },
+        {
+          "endpoint": "bing",
+          "status": 200,
+          "classe": "OK"
+        }
+      ],
+      "aceita": true
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/problemas/hd-fazendo-barulho",
+      "enviadaEm": "2026-09-01T06:48:35.101Z",
+      "resultados": [
+        {
+          "endpoint": "indexnow.org",
+          "status": 200,
+          "classe": "OK"
+        },
+        {
+          "endpoint": "bing",
+          "status": 200,
+          "classe": "OK"
+        }
+      ],
+      "aceita": true
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/problemas/computador-nao-da-imagem",
+      "enviadaEm": "2026-09-01T06:48:35.101Z",
+      "resultados": [
+        {
+          "endpoint": "indexnow.org",
+          "status": 200,
+          "classe": "OK"
+        },
+        {
+          "endpoint": "bing",
+          "status": 200,
+          "classe": "OK"
+        }
+      ],
+      "aceita": true
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/problemas/cheiro-de-queimado",
+      "enviadaEm": "2026-09-01T06:48:35.101Z",
+      "resultados": [
+        {
+          "endpoint": "indexnow.org",
+          "status": 200,
+          "classe": "OK"
+        },
+        {
+          "endpoint": "bing",
+          "status": 200,
+          "classe": "OK"
+        }
+      ],
+      "aceita": true
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/problemas/notebook-molhado",
+      "enviadaEm": "2026-09-01T06:48:35.101Z",
+      "resultados": [
+        {
+          "endpoint": "indexnow.org",
+          "status": 200,
+          "classe": "OK"
+        },
+        {
+          "endpoint": "bing",
+          "status": 200,
+          "classe": "OK"
+        }
+      ],
+      "aceita": true
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/problemas/windows-nao-inicia",
+      "enviadaEm": "2026-09-01T06:48:35.101Z",
+      "resultados": [
+        {
+          "endpoint": "indexnow.org",
+          "status": 200,
+          "classe": "OK"
+        },
+        {
+          "endpoint": "bing",
+          "status": 200,
+          "classe": "OK"
+        }
+      ],
+      "aceita": true
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/problemas/computador-esquentando",
+      "enviadaEm": "2026-09-01T06:48:35.101Z",
+      "resultados": [
+        {
+          "endpoint": "indexnow.org",
+          "status": 200,
+          "classe": "OK"
+        },
+        {
+          "endpoint": "bing",
+          "status": 200,
+          "classe": "OK"
+        }
+      ],
+      "aceita": true
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/problemas/impressora-nao-imprime",
+      "enviadaEm": "2026-09-01T06:48:35.101Z",
+      "resultados": [
+        {
+          "endpoint": "indexnow.org",
+          "status": 200,
+          "classe": "OK"
+        },
+        {
+          "endpoint": "bing",
+          "status": 200,
+          "classe": "OK"
+        }
+      ],
+      "aceita": true
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/problemas/teclado-notebook-nao-funciona",
+      "enviadaEm": "2026-09-01T06:48:35.101Z",
+      "resultados": [
+        {
+          "endpoint": "indexnow.org",
+          "status": 200,
+          "classe": "OK"
+        },
+        {
+          "endpoint": "bing",
+          "status": 200,
+          "classe": "OK"
+        }
+      ],
+      "aceita": true
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/tecnico-informatica-curitiba",
+      "enviadaEm": "2026-09-01T06:48:35.101Z",
+      "resultados": [
+        {
+          "endpoint": "indexnow.org",
+          "status": 200,
+          "classe": "OK"
+        },
+        {
+          "endpoint": "bing",
+          "status": 200,
+          "classe": "OK"
+        }
+      ],
+      "aceita": true
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/tecnico-informatica-sao-jose-pinhais",
+      "enviadaEm": "2026-09-01T06:48:35.101Z",
+      "resultados": [
+        {
+          "endpoint": "indexnow.org",
+          "status": 200,
+          "classe": "OK"
+        },
+        {
+          "endpoint": "bing",
+          "status": 200,
+          "classe": "OK"
+        }
+      ],
+      "aceita": true
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/tecnico-informatica-pinhais",
+      "enviadaEm": "2026-09-01T06:48:35.101Z",
+      "resultados": [
+        {
+          "endpoint": "indexnow.org",
+          "status": 200,
+          "classe": "OK"
+        },
+        {
+          "endpoint": "bing",
+          "status": 200,
+          "classe": "OK"
+        }
+      ],
+      "aceita": true
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/tecnico-informatica-colombo",
+      "enviadaEm": "2026-09-01T06:48:35.101Z",
+      "resultados": [
+        {
+          "endpoint": "indexnow.org",
+          "status": 200,
+          "classe": "OK"
+        },
+        {
+          "endpoint": "bing",
+          "status": 200,
+          "classe": "OK"
+        }
+      ],
+      "aceita": true
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/tecnico-informatica-araucaria",
+      "enviadaEm": "2026-09-01T06:48:35.101Z",
+      "resultados": [
+        {
+          "endpoint": "indexnow.org",
+          "status": 200,
+          "classe": "OK"
+        },
+        {
+          "endpoint": "bing",
+          "status": 200,
+          "classe": "OK"
+        }
+      ],
+      "aceita": true
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/tecnico-informatica-campo-largo",
+      "enviadaEm": "2026-09-01T06:48:35.101Z",
+      "resultados": [
+        {
+          "endpoint": "indexnow.org",
+          "status": 200,
+          "classe": "OK"
+        },
+        {
+          "endpoint": "bing",
+          "status": 200,
+          "classe": "OK"
+        }
+      ],
+      "aceita": true
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/servicos/formatacao",
+      "enviadaEm": "2026-09-01T06:48:35.101Z",
+      "resultados": [
+        {
+          "endpoint": "indexnow.org",
+          "status": 200,
+          "classe": "OK"
+        },
+        {
+          "endpoint": "bing",
+          "status": 200,
+          "classe": "OK"
+        }
+      ],
+      "aceita": true
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/servicos/manutencao-de-notebook",
+      "enviadaEm": "2026-09-01T06:48:35.101Z",
+      "resultados": [
+        {
+          "endpoint": "indexnow.org",
+          "status": 200,
+          "classe": "OK"
+        },
+        {
+          "endpoint": "bing",
+          "status": 200,
+          "classe": "OK"
+        }
+      ],
+      "aceita": true
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/servicos/manutencao-de-computador",
+      "enviadaEm": "2026-09-01T06:48:35.101Z",
+      "resultados": [
+        {
+          "endpoint": "indexnow.org",
+          "status": 200,
+          "classe": "OK"
+        },
+        {
+          "endpoint": "bing",
+          "status": 200,
+          "classe": "OK"
+        }
+      ],
+      "aceita": true
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/servicos/upgrade-ssd-ram",
+      "enviadaEm": "2026-09-01T06:48:35.101Z",
+      "resultados": [
+        {
+          "endpoint": "indexnow.org",
+          "status": 200,
+          "classe": "OK"
+        },
+        {
+          "endpoint": "bing",
+          "status": 200,
+          "classe": "OK"
+        }
+      ],
+      "aceita": true
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/servicos/remocao-de-virus",
+      "enviadaEm": "2026-09-01T06:48:35.101Z",
+      "resultados": [
+        {
+          "endpoint": "indexnow.org",
+          "status": 200,
+          "classe": "OK"
+        },
+        {
+          "endpoint": "bing",
+          "status": 200,
+          "classe": "OK"
+        }
+      ],
+      "aceita": true
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/servicos/recuperacao-de-dados",
+      "enviadaEm": "2026-09-01T06:48:35.101Z",
+      "resultados": [
+        {
+          "endpoint": "indexnow.org",
+          "status": 200,
+          "classe": "OK"
+        },
+        {
+          "endpoint": "bing",
+          "status": 200,
+          "classe": "OK"
+        }
+      ],
+      "aceita": true
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/servicos/redes-e-wifi",
+      "enviadaEm": "2026-09-01T06:48:35.101Z",
+      "resultados": [
+        {
+          "endpoint": "indexnow.org",
+          "status": 200,
+          "classe": "OK"
+        },
+        {
+          "endpoint": "bing",
+          "status": 200,
+          "classe": "OK"
+        }
+      ],
+      "aceita": true
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/servicos/suporte-tecnico-empresarial",
+      "enviadaEm": "2026-09-01T06:48:35.101Z",
+      "resultados": [
+        {
+          "endpoint": "indexnow.org",
+          "status": 200,
+          "classe": "OK"
+        },
+        {
+          "endpoint": "bing",
+          "status": 200,
+          "classe": "OK"
+        }
+      ],
+      "aceita": true
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/servicos/manutencao-preventiva-empresas",
+      "enviadaEm": "2026-09-01T06:48:35.101Z",
+      "resultados": [
+        {
+          "endpoint": "indexnow.org",
+          "status": 200,
+          "classe": "OK"
+        },
+        {
+          "endpoint": "bing",
+          "status": 200,
+          "classe": "OK"
+        }
+      ],
+      "aceita": true
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/servicos/backup-para-empresas",
+      "enviadaEm": "2026-09-01T06:48:35.101Z",
+      "resultados": [
+        {
+          "endpoint": "indexnow.org",
+          "status": 200,
+          "classe": "OK"
+        },
+        {
+          "endpoint": "bing",
+          "status": 200,
+          "classe": "OK"
+        }
+      ],
+      "aceita": true
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/servicos/suporte-home-office",
+      "enviadaEm": "2026-09-01T06:48:35.101Z",
+      "resultados": [
+        {
+          "endpoint": "indexnow.org",
+          "status": 200,
+          "classe": "OK"
+        },
+        {
+          "endpoint": "bing",
+          "status": 200,
+          "classe": "OK"
+        }
+      ],
+      "aceita": true
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/servicos/montagem-de-pc",
+      "enviadaEm": "2026-09-01T06:48:35.101Z",
+      "resultados": [
+        {
+          "endpoint": "indexnow.org",
+          "status": 200,
+          "classe": "OK"
+        },
+        {
+          "endpoint": "bing",
+          "status": 200,
+          "classe": "OK"
+        }
+      ],
+      "aceita": true
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/servicos/pc-gamer",
+      "enviadaEm": "2026-09-01T06:48:35.101Z",
+      "resultados": [
+        {
+          "endpoint": "indexnow.org",
+          "status": 200,
+          "classe": "OK"
+        },
+        {
+          "endpoint": "bing",
+          "status": 200,
+          "classe": "OK"
+        }
+      ],
+      "aceita": true
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/servicos/conserto-tv",
+      "enviadaEm": "2026-09-01T06:48:35.101Z",
+      "resultados": [
+        {
+          "endpoint": "indexnow.org",
+          "status": 200,
+          "classe": "OK"
+        },
+        {
+          "endpoint": "bing",
+          "status": 200,
+          "classe": "OK"
+        }
+      ],
+      "aceita": true
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/servicos/conserto-placa",
+      "enviadaEm": "2026-09-01T06:48:35.101Z",
+      "resultados": [
+        {
+          "endpoint": "indexnow.org",
+          "status": 200,
+          "classe": "OK"
+        },
+        {
+          "endpoint": "bing",
+          "status": 200,
+          "classe": "OK"
+        }
+      ],
+      "aceita": true
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/servicos/conserto-monitor",
+      "enviadaEm": "2026-09-01T06:48:35.101Z",
+      "resultados": [
+        {
+          "endpoint": "indexnow.org",
+          "status": 200,
+          "classe": "OK"
+        },
+        {
+          "endpoint": "bing",
+          "status": 200,
+          "classe": "OK"
+        }
+      ],
+      "aceita": true
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/servicos/conserto-impressora-3d",
+      "enviadaEm": "2026-09-01T06:48:35.101Z",
+      "resultados": [
+        {
+          "endpoint": "indexnow.org",
+          "status": 200,
+          "classe": "OK"
+        },
+        {
+          "endpoint": "bing",
+          "status": 200,
+          "classe": "OK"
+        }
+      ],
+      "aceita": true
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/servicos/formatacao-computador/cic",
+      "enviadaEm": "2026-09-01T06:48:35.101Z",
+      "resultados": [
+        {
+          "endpoint": "indexnow.org",
+          "status": 200,
+          "classe": "OK"
+        },
+        {
+          "endpoint": "bing",
+          "status": 200,
+          "classe": "OK"
+        }
+      ],
+      "aceita": true
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/servicos/formatacao-computador/batel",
+      "enviadaEm": "2026-09-01T06:48:35.101Z",
+      "resultados": [
+        {
+          "endpoint": "indexnow.org",
+          "status": 200,
+          "classe": "OK"
+        },
+        {
+          "endpoint": "bing",
+          "status": 200,
+          "classe": "OK"
+        }
+      ],
+      "aceita": true
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/servicos/formatacao-computador/agua-verde",
+      "enviadaEm": "2026-09-01T06:48:35.101Z",
+      "resultados": [
+        {
+          "endpoint": "indexnow.org",
+          "status": 200,
+          "classe": "OK"
+        },
+        {
+          "endpoint": "bing",
+          "status": 200,
+          "classe": "OK"
+        }
+      ],
+      "aceita": true
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/servicos/remocao-virus/cic",
+      "enviadaEm": "2026-09-01T06:48:35.101Z",
+      "resultados": [
+        {
+          "endpoint": "indexnow.org",
+          "status": 200,
+          "classe": "OK"
+        },
+        {
+          "endpoint": "bing",
+          "status": 200,
+          "classe": "OK"
+        }
+      ],
+      "aceita": true
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/servicos/remocao-virus/agua-verde",
+      "enviadaEm": "2026-09-01T06:48:35.101Z",
+      "resultados": [
+        {
+          "endpoint": "indexnow.org",
+          "status": 200,
+          "classe": "OK"
+        },
+        {
+          "endpoint": "bing",
+          "status": 200,
+          "classe": "OK"
+        }
+      ],
+      "aceita": true
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/servicos/conserto-pc-notebook/centro",
+      "enviadaEm": "2026-09-01T06:48:35.101Z",
+      "resultados": [
+        {
+          "endpoint": "indexnow.org",
+          "status": 200,
+          "classe": "OK"
+        },
+        {
+          "endpoint": "bing",
+          "status": 200,
+          "classe": "OK"
+        }
+      ],
+      "aceita": true
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/servicos/conserto-pc-notebook/agua-verde",
+      "enviadaEm": "2026-09-01T06:48:35.101Z",
+      "resultados": [
+        {
+          "endpoint": "indexnow.org",
+          "status": 200,
+          "classe": "OK"
+        },
+        {
+          "endpoint": "bing",
+          "status": 200,
+          "classe": "OK"
+        }
+      ],
+      "aceita": true
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/servicos/upgrade-ssd-memoria/cic",
+      "enviadaEm": "2026-09-01T06:48:35.101Z",
+      "resultados": [
+        {
+          "endpoint": "indexnow.org",
+          "status": 200,
+          "classe": "OK"
+        },
+        {
+          "endpoint": "bing",
+          "status": 200,
+          "classe": "OK"
+        }
+      ],
+      "aceita": true
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/servicos/upgrade-ssd-memoria/centro",
+      "enviadaEm": "2026-09-01T06:48:35.101Z",
+      "resultados": [
+        {
+          "endpoint": "indexnow.org",
+          "status": 200,
+          "classe": "OK"
+        },
+        {
+          "endpoint": "bing",
+          "status": 200,
+          "classe": "OK"
+        }
+      ],
+      "aceita": true
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/servicos/upgrade-ssd-memoria/agua-verde",
+      "enviadaEm": "2026-09-01T06:48:35.101Z",
+      "resultados": [
+        {
+          "endpoint": "indexnow.org",
+          "status": 200,
+          "classe": "OK"
+        },
+        {
+          "endpoint": "bing",
+          "status": 200,
+          "classe": "OK"
+        }
+      ],
+      "aceita": true
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/servicos/upgrade-ssd-memoria/portao",
+      "enviadaEm": "2026-09-01T06:48:35.101Z",
+      "resultados": [
+        {
+          "endpoint": "indexnow.org",
+          "status": 200,
+          "classe": "OK"
+        },
+        {
+          "endpoint": "bing",
+          "status": 200,
+          "classe": "OK"
+        }
+      ],
+      "aceita": true
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/servicos/formatacao-computador/curitiba",
+      "enviadaEm": "2026-09-01T06:48:35.101Z",
+      "resultados": [
+        {
+          "endpoint": "indexnow.org",
+          "status": 200,
+          "classe": "OK"
+        },
+        {
+          "endpoint": "bing",
+          "status": 200,
+          "classe": "OK"
+        }
+      ],
+      "aceita": true
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/servicos/remocao-virus/curitiba",
+      "enviadaEm": "2026-09-01T06:48:35.101Z",
+      "resultados": [
+        {
+          "endpoint": "indexnow.org",
+          "status": 200,
+          "classe": "OK"
+        },
+        {
+          "endpoint": "bing",
+          "status": 200,
+          "classe": "OK"
+        }
+      ],
+      "aceita": true
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/servicos/upgrade-ssd/curitiba",
+      "enviadaEm": "2026-09-01T06:48:35.101Z",
+      "resultados": [
+        {
+          "endpoint": "indexnow.org",
+          "status": 200,
+          "classe": "OK"
+        },
+        {
+          "endpoint": "bing",
+          "status": 200,
+          "classe": "OK"
+        }
+      ],
+      "aceita": true
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/servicos/conserto-notebook/curitiba",
+      "enviadaEm": "2026-09-01T06:48:35.101Z",
+      "resultados": [
+        {
+          "endpoint": "indexnow.org",
+          "status": 200,
+          "classe": "OK"
+        },
+        {
+          "endpoint": "bing",
+          "status": 200,
+          "classe": "OK"
+        }
+      ],
+      "aceita": true
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/servicos/conserto-pc/curitiba",
+      "enviadaEm": "2026-09-01T06:48:35.101Z",
+      "resultados": [
+        {
+          "endpoint": "indexnow.org",
+          "status": 200,
+          "classe": "OK"
+        },
+        {
+          "endpoint": "bing",
+          "status": 200,
+          "classe": "OK"
+        }
+      ],
+      "aceita": true
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/servicos/redes-wifi/curitiba",
+      "enviadaEm": "2026-09-01T06:48:35.101Z",
+      "resultados": [
+        {
+          "endpoint": "indexnow.org",
+          "status": 200,
+          "classe": "OK"
+        },
+        {
+          "endpoint": "bing",
+          "status": 200,
+          "classe": "OK"
+        }
+      ],
+      "aceita": true
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/servicos/backup-recuperacao/curitiba",
+      "enviadaEm": "2026-09-01T06:48:35.101Z",
+      "resultados": [
+        {
+          "endpoint": "indexnow.org",
+          "status": 200,
+          "classe": "OK"
+        },
+        {
+          "endpoint": "bing",
+          "status": 200,
+          "classe": "OK"
+        }
+      ],
+      "aceita": true
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/servicos/suporte-tecnico-empresarial/curitiba",
+      "enviadaEm": "2026-09-01T06:48:35.101Z",
+      "resultados": [
+        {
+          "endpoint": "indexnow.org",
+          "status": 200,
+          "classe": "OK"
+        },
+        {
+          "endpoint": "bing",
+          "status": 200,
+          "classe": "OK"
+        }
+      ],
+      "aceita": true
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/servicos/manutencao-preventiva-empresas/curitiba",
+      "enviadaEm": "2026-09-01T06:48:35.101Z",
+      "resultados": [
+        {
+          "endpoint": "indexnow.org",
+          "status": 200,
+          "classe": "OK"
+        },
+        {
+          "endpoint": "bing",
+          "status": 200,
+          "classe": "OK"
+        }
+      ],
+      "aceita": true
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/servicos/backup-para-empresas/curitiba",
+      "enviadaEm": "2026-09-01T06:48:35.101Z",
+      "resultados": [
+        {
+          "endpoint": "indexnow.org",
+          "status": 200,
+          "classe": "OK"
+        },
+        {
+          "endpoint": "bing",
+          "status": 200,
+          "classe": "OK"
+        }
+      ],
+      "aceita": true
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/servicos/montagem-de-pc/curitiba",
+      "enviadaEm": "2026-09-01T06:48:35.101Z",
+      "resultados": [
+        {
+          "endpoint": "indexnow.org",
+          "status": 200,
+          "classe": "OK"
+        },
+        {
+          "endpoint": "bing",
+          "status": 200,
+          "classe": "OK"
+        }
+      ],
+      "aceita": true
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/servicos/suporte-home-office/curitiba",
+      "enviadaEm": "2026-09-01T06:48:35.101Z",
+      "resultados": [
+        {
+          "endpoint": "indexnow.org",
+          "status": 200,
+          "classe": "OK"
+        },
+        {
+          "endpoint": "bing",
+          "status": 200,
+          "classe": "OK"
+        }
+      ],
+      "aceita": true
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/servicos/pc-gamer/curitiba",
+      "enviadaEm": "2026-09-01T06:48:35.101Z",
+      "resultados": [
+        {
+          "endpoint": "indexnow.org",
+          "status": 200,
+          "classe": "OK"
+        },
+        {
+          "endpoint": "bing",
+          "status": 200,
+          "classe": "OK"
+        }
+      ],
+      "aceita": true
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/servicos/conserto-notebook/sao-jose-dos-pinhais",
+      "enviadaEm": "2026-09-01T06:48:35.101Z",
+      "resultados": [
+        {
+          "endpoint": "indexnow.org",
+          "status": 200,
+          "classe": "OK"
+        },
+        {
+          "endpoint": "bing",
+          "status": 200,
+          "classe": "OK"
+        }
+      ],
+      "aceita": true
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/servicos/conserto-pc/sao-jose-dos-pinhais",
+      "enviadaEm": "2026-09-01T06:48:35.101Z",
+      "resultados": [
+        {
+          "endpoint": "indexnow.org",
+          "status": 200,
+          "classe": "OK"
+        },
+        {
+          "endpoint": "bing",
+          "status": 200,
+          "classe": "OK"
+        }
+      ],
+      "aceita": true
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/servicos/redes-wifi/sao-jose-dos-pinhais",
+      "enviadaEm": "2026-09-01T06:48:35.101Z",
+      "resultados": [
+        {
+          "endpoint": "indexnow.org",
+          "status": 200,
+          "classe": "OK"
+        },
+        {
+          "endpoint": "bing",
+          "status": 200,
+          "classe": "OK"
+        }
+      ],
+      "aceita": true
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/servicos/backup-recuperacao/sao-jose-dos-pinhais",
+      "enviadaEm": "2026-09-01T06:48:35.101Z",
+      "resultados": [
+        {
+          "endpoint": "indexnow.org",
+          "status": 200,
+          "classe": "OK"
+        },
+        {
+          "endpoint": "bing",
+          "status": 200,
+          "classe": "OK"
+        }
+      ],
+      "aceita": true
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/solucoes",
+      "enviadaEm": "2026-09-01T06:48:35.101Z",
+      "resultados": [
+        {
+          "endpoint": "indexnow.org",
+          "status": 200,
+          "classe": "OK"
+        },
+        {
+          "endpoint": "bing",
+          "status": 200,
+          "classe": "OK"
+        }
+      ],
+      "aceita": true
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/solucoes/diagnostico",
+      "enviadaEm": "2026-09-01T06:48:35.101Z",
+      "resultados": [
+        {
+          "endpoint": "indexnow.org",
+          "status": 200,
+          "classe": "OK"
+        },
+        {
+          "endpoint": "bing",
+          "status": 200,
+          "classe": "OK"
+        }
+      ],
+      "aceita": true
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/solucoes/formatacao",
+      "enviadaEm": "2026-09-01T06:48:35.101Z",
+      "resultados": [
+        {
+          "endpoint": "indexnow.org",
+          "status": 200,
+          "classe": "OK"
+        },
+        {
+          "endpoint": "bing",
+          "status": 200,
+          "classe": "OK"
+        }
+      ],
+      "aceita": true
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/solucoes/ssd",
+      "enviadaEm": "2026-09-01T06:48:35.101Z",
+      "resultados": [
+        {
+          "endpoint": "indexnow.org",
+          "status": 200,
+          "classe": "OK"
+        },
+        {
+          "endpoint": "bing",
+          "status": 200,
+          "classe": "OK"
+        }
+      ],
+      "aceita": true
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/solucoes/backup",
+      "enviadaEm": "2026-09-01T06:48:35.101Z",
+      "resultados": [
+        {
+          "endpoint": "indexnow.org",
+          "status": 200,
+          "classe": "OK"
+        },
+        {
+          "endpoint": "bing",
+          "status": 200,
+          "classe": "OK"
+        }
+      ],
+      "aceita": true
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/solucoes/recuperacao-de-dados",
+      "enviadaEm": "2026-09-01T06:48:35.101Z",
       "resultados": [
         {
           "endpoint": "indexnow.org",
