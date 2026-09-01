@@ -632,61 +632,221 @@ export const ATLAS_TEMAS: AtlasTema[] = [
   },
 ];
 
-/** Guias de decisão — cada card responde UMA pergunta com critério explícito. */
+/**
+ * Guias de decisão independentes (Fase 2) — cada guia responde UMA pergunta,
+ * tem âncora própria no hub (#decisao-<id>) e apresenta os sinais observáveis
+ * dos DOIS lados da decisão. O nível de risco só aparece quando o guia
+ * envolve procedimento com risco real (fail-closed: sem risco declarado,
+ * nada é exibido).
+ */
+export interface AtlasLadoDecisao {
+  rotulo: string;
+  pontos: string[];
+}
+
+export type AtlasNivelRisco =
+  | "Seguro de fazer sozinho"
+  | "Exige atenção"
+  | "Parada obrigatória";
+
 export interface AtlasGuiaDecisao {
+  /** Âncora própria no hub: #decisao-<id>. */
+  id: string;
   pergunta: string;
   criterio: string;
+  /** Os dois lados da decisão, com sinais observáveis de cada um. */
+  sinais: [AtlasLadoDecisao, AtlasLadoDecisao];
+  /** Nível canônico de risco — SOMENTE quando sustentado pelo procedimento. */
+  risco?: AtlasNivelRisco;
   to: string;
   linkLabel: string;
 }
 
 export const ATLAS_GUIAS_DECISAO: AtlasGuiaDecisao[] = [
   {
+    id: "formatar-ou-reparar",
     pergunta: "Formatar ou reparar?",
     criterio:
       "Formatação resolve o que é software. Se o gargalo é disco mecânico, memória ou temperatura, a máquina volta a ficar lenta — o diagnóstico vem antes do procedimento.",
+    sinais: [
+      {
+        rotulo: "Aponta para formatar",
+        pontos: [
+          "Lentidão e erros que surgiram depois de instalação, atualização interrompida ou infecção",
+          "O sistema carrega, mas programas falham, travam ou abrem sozinhos",
+          "Disco e memória já testados, sem defeito físico encontrado",
+        ],
+      },
+      {
+        rotulo: "Aponta para diagnosticar antes",
+        pontos: [
+          "Ruído de disco, travamento de leitura ou alerta SMART",
+          "A falha aparece antes de o Windows terminar de carregar",
+          "A máquina volta a ficar lenta pouco depois de cada formatação",
+        ],
+      },
+    ],
+    risco: "Exige atenção",
     to: "/solucoes/formatacao",
     linkLabel: "Ver critérios de formatação",
   },
   {
+    id: "ssd-ou-memoria-ram",
     pergunta: "SSD ou mais memória RAM?",
     criterio:
       "Lentidão geral desde a inicialização aponta para o disco; travamento só com muitos programas abertos aponta para a memória. São gargalos diferentes e upgrades diferentes.",
+    sinais: [
+      {
+        rotulo: "Aponta para SSD",
+        pontos: [
+          "Demora grande para ligar e para abrir qualquer programa",
+          "Ruído constante de leitura em disco mecânico",
+          "Disco em 100% de uso mesmo com poucos programas abertos",
+        ],
+      },
+      {
+        rotulo: "Aponta para memória RAM",
+        pontos: [
+          "Responde bem com um programa e trava com vários abertos",
+          "Abas do navegador recarregam sozinhas com frequência",
+          "Uso de memória perto do limite durante o trabalho real",
+        ],
+      },
+    ],
+    risco: "Seguro de fazer sozinho",
     to: "/solucoes/ssd",
     linkLabel: "Comparar os dois upgrades",
   },
   {
+    id: "consertar-ou-substituir",
     pergunta: "Consertar ou substituir?",
     criterio:
       "Quando a soma das peças se aproxima do valor de um equipamento equivalente — ou a placa limita memória e processador — o reparo deixa de compensar e nós dizemos isso.",
+    sinais: [
+      {
+        rotulo: "Aponta para consertar",
+        pontos: [
+          "Custo do reparo bem abaixo do valor de um equipamento equivalente",
+          "A placa ainda aceita memória e processador para o uso pretendido",
+          "Defeito isolado em peça substituível, sem falhas em série",
+        ],
+      },
+      {
+        rotulo: "Aponta para substituir",
+        pontos: [
+          "Soma das peças se aproximando do valor de um equipamento novo equivalente",
+          "Limite de upgrade da placa já atingido para o uso real",
+          "Falhas seguidas em componentes diferentes do mesmo equipamento",
+        ],
+      },
+    ],
     to: "/quando-nao-compensa",
     linkLabel: "Quando não compensa",
   },
   {
+    id: "remoto-ou-presencial",
     pergunta: "Atendimento remoto ou presencial?",
     criterio:
       "Sistema, configuração e programas resolvem por acesso remoto. Rede e verificação inicial funcionam em domicílio. Falha física e dados pedem bancada.",
+    sinais: [
+      {
+        rotulo: "Resolve por atendimento remoto",
+        pontos: [
+          "Sistema, configuração, programas e limpeza de software",
+          "O equipamento liga e mantém conexão com a internet",
+          "Você acompanha a tela durante toda a sessão",
+        ],
+      },
+      {
+        rotulo: "Pede presença ou bancada",
+        pontos: [
+          "Falha física, troca de peça e microssoldagem",
+          "Rede, cabeamento e cobertura Wi-Fi no ambiente",
+          "Recuperação de dados e suspeita de disco em falha",
+        ],
+      },
+    ],
     to: "/atendimento-remoto",
     linkLabel: "Como decide a triagem",
   },
   {
+    id: "hd-com-ruido",
     pergunta: "HD fazendo ruído: continuar usando?",
     criterio:
       "Não. Ruído metálico ou clique repetido indica falha mecânica em curso: cada nova inicialização pode sobrescrever a área que ainda seria recuperável.",
+    sinais: [
+      {
+        rotulo: "Sinais de falha mecânica em curso",
+        pontos: [
+          "Clique repetido ou ruído metálico ao ligar",
+          "Travamentos longos ao abrir pastas e arquivos",
+          "Arquivos que somem ou partição que deixa de aparecer",
+        ],
+      },
+      {
+        rotulo: "O que fazer em vez de insistir",
+        pontos: [
+          "Desligar e não reiniciar para testar de novo",
+          "Priorizar a cópia do que ainda é legível",
+          "Avaliação controlada do disco antes de qualquer reparo",
+        ],
+      },
+    ],
+    risco: "Parada obrigatória",
     to: "/problemas/hd-fazendo-barulho",
     linkLabel: "O que fazer com o disco",
   },
   {
+    id: "backup-antes-da-manutencao",
     pergunta: "Backup antes da manutenção?",
     criterio:
       "Sempre que houver dado que não pode ser perdido. Em formatação o backup é etapa obrigatória do serviço; em suspeita de disco em falha, é a primeira etapa.",
+    sinais: [
+      {
+        rotulo: "Backup é obrigatório antes",
+        pontos: [
+          "Formatação e reinstalação do sistema",
+          "Qualquer suspeita de disco em degradação",
+          "Dado único que não existe em nenhum outro lugar",
+        ],
+      },
+      {
+        rotulo: "Como validar a cópia",
+        pontos: [
+          "Restaurar um arquivo de teste em outro equipamento",
+          "Conferir se o que importa está mesmo dentro da cópia",
+          "Manter uma cópia fora do equipamento que vai para a bancada",
+        ],
+      },
+    ],
+    risco: "Exige atenção",
     to: "/blog/backup-como-proteger-seus-arquivos",
     linkLabel: "Como fazer backup de verdade",
   },
   {
+    id: "limpeza-ou-pasta-termica",
     pergunta: "Limpeza interna resolve ou precisa trocar a pasta térmica?",
     criterio:
       "Dissipador entupido responde à limpeza. Quando a temperatura sobe rápido mesmo com o cooler limpo, o problema é a interface térmica ressecada — e limpar sem trocar a pasta melhora por poucos dias.",
+    sinais: [
+      {
+        rotulo: "Aponta para limpeza interna",
+        pontos: [
+          "Ventoinha alta constante e pouco fluxo na saída de ar",
+          "Poeira visível nas grades de ventilação",
+          "Aquecimento que melhora com o equipamento elevado da mesa",
+        ],
+      },
+      {
+        rotulo: "Aponta para troca da pasta térmica",
+        pontos: [
+          "Temperatura sobe rápido mesmo com o cooler limpo",
+          "Desligamento sob carga poucos minutos depois de ligar",
+          "Anos de uso sem nenhuma manutenção interna registrada",
+        ],
+      },
+    ],
+    risco: "Exige atenção",
     to: "/problemas/computador-esquentando",
     linkLabel: "Como medir antes de decidir",
   },
