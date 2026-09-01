@@ -1,5 +1,5 @@
 import { Link } from "@/lib/router-compat";
-import { ArrowRight, BookOpen, ListChecks, Stethoscope, Wrench } from "lucide-react";
+import { ArrowRight, BookOpen, ExternalLink, ListChecks, Scale, Stethoscope, Wrench } from "lucide-react";
 import {
   ATLAS_ETAPA_LABEL,
   ATLAS_TEMAS,
@@ -8,9 +8,11 @@ import {
 } from "@/lib/atlasInformatica";
 
 /**
- * Trilhas do Atlas de Informática (Fase 1).
+ * Trilhas do Atlas de Informática (Fases 1–2).
  * Cada tema segue a mesma progressão editorial:
  * aprender → identificar → verificar → parar → resolver.
+ * Fase 2 adiciona o veredito técnico da bancada e as fontes primárias
+ * visíveis — SOMENTE nos temas que declaram fontes (fail-closed).
  * Todo link aponta para conteúdo já existente e aprovado (fail-closed).
  */
 
@@ -32,6 +34,21 @@ const TemaCard = ({ tema }: { tema: AtlasTema }) => {
       <p className="mt-2 max-w-3xl text-sm leading-relaxed text-muted-foreground md:text-base">
         {tema.resumo}
       </p>
+
+      <aside
+        aria-label={`Veredito técnico do tema ${tema.titulo}`}
+        className="mt-4 flex items-start gap-3 rounded-xl border-l-4 border-accent bg-secondary/40 p-4"
+      >
+        <Scale className="mt-0.5 h-4 w-4 flex-shrink-0 text-accent" aria-hidden="true" />
+        <div>
+          <p className="text-[0.65rem] font-bold uppercase tracking-wide text-accent">
+            Veredito da bancada
+          </p>
+          <p className="mt-1 max-w-3xl text-sm leading-relaxed text-muted-foreground">
+            {tema.veredito}
+          </p>
+        </div>
+      </aside>
 
       <ol className="mt-5 grid gap-3 md:grid-cols-5" aria-label={`Trilha do tema ${tema.titulo}`}>
         {tema.trilha.map((passo, i) => (
@@ -118,6 +135,30 @@ const TemaCard = ({ tema }: { tema: AtlasTema }) => {
           </ul>
         </div>
       </div>
+
+      {tema.fontes && tema.fontes.length > 0 && (
+        <footer className="mt-6 border-t border-border pt-4">
+          <p className="text-[0.65rem] font-bold uppercase tracking-wide text-muted-foreground">
+            Fontes primárias deste tema
+          </p>
+          <ul className="mt-2 space-y-1">
+            {tema.fontes.map((f) => (
+              <li key={f.url} className="text-xs leading-relaxed text-muted-foreground">
+                <a
+                  href={f.url}
+                  target="_blank"
+                  rel="noopener nofollow"
+                  className="inline-flex items-center gap-1 font-semibold text-foreground underline-offset-2 hover:text-accent hover:underline"
+                >
+                  {f.titulo}
+                  <ExternalLink className="h-3 w-3" aria-hidden="true" />
+                </a>{" "}
+                — {f.nota}
+              </li>
+            ))}
+          </ul>
+        </footer>
+      )}
     </article>
   );
 };
