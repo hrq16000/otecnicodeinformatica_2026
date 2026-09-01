@@ -359,7 +359,7 @@ export const GUIAS_DECISAO: GuiaDecisaoPagina[] = [
     links: [
       {
         rotulo: "Suporte remoto",
-        to: "/servicos/suporte-remoto",
+        to: "/atendimento-remoto",
         contexto: "Escopo do que é resolvido à distância e como a sessão é conduzida.",
       },
       {
