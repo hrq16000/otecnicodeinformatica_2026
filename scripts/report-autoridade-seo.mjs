@@ -16,7 +16,7 @@
 import { mkdirSync, writeFileSync } from "node:fs";
 import { resolve } from "node:path";
 import { existsSync, readFileSync } from "node:fs";
-import { prepararSsr, htmlDaRota, abortarSeBloqueado } from "./lib/ssr-harness.mjs";
+import { prepararSsr, htmlDaRota, abortarSeBloqueado, ssrBloqueado, resumo } from "./lib/ssr-harness.mjs";
 import { EDITORIAL_WAVE } from "./lib/editorial-wave.mjs";
 
 /** Lote/onda de cada slug vem do consolidado já existente (nunca inferido). */
