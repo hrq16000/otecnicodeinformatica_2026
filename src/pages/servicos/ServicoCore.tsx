@@ -9,6 +9,7 @@ import { Blocos4A } from "@/components/servico/Blocos4A";
 import { ClarezaVariacao } from "@/components/servico/ClarezaVariacao";
 import { Blocos3T } from "@/components/servico/Blocos3T";
 import { FichaComercialServico } from "@/components/servico/FichaComercialServico";
+import { AtlasPonteServico } from "@/components/informatica/AtlasPonteServico";
 
 import { MontagemWizard } from "@/components/servico/MontagemWizard";
 import { ProvasVisuaisMonitor } from "@/components/servico/ProvasVisuaisMonitor";
@@ -159,7 +160,14 @@ const ServicoCore = ({ slug }: { slug: keyof typeof SERVICOS_CORE }) => {
 
   // Rodada 4C — ficha comercial padronizada (mesmos campos obrigatórios em
   // todas as páginas de serviço). Aditiva: entra depois dos blocos da rodada.
-  const ficha = <FichaComercialServico slug={slug as string} nome={base.serviceName} />;
+  // Fase 2 do Atlas — ponte serviço → trilha do tema (fail-closed: só slugs
+  // com ponte curada em atlasPonteServicos.ts renderizam o bloco).
+  const ficha = (
+    <>
+      <FichaComercialServico slug={slug as string} nome={base.serviceName} />
+      <AtlasPonteServico slug={slug as string} />
+    </>
+  );
 
   const extraFinal = cfgBlocos ? (
     <>

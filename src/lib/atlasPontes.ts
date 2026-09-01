@@ -85,6 +85,17 @@ export const ATLAS_PONTES: Record<string, AtlasPonte> = {
     porQue:
       "Teclado que falha pode ser flat solto, membrana danificada ou controlador na placa. A trilha de hardware separa o que é peça substituível do que exige bancada.",
   },
+  // Fase 2 do Atlas — pilares dedicados (páginas próprias, fora do cluster).
+  "computador-lento": {
+    temaId: "hardware-upgrades",
+    porQue:
+      "Lentidão persistente quase sempre é gargalo físico — disco mecânico no limite, memória saturada, temperatura alta — e não sujeira de sistema. A trilha de hardware mostra como confirmar qual componente limita a máquina antes de pagar por upgrade ou formatação que não resolve.",
+  },
+  "notebook-nao-liga": {
+    temaId: "hardware-upgrades",
+    porQue:
+      "Não ligar é sintoma da cadeia de energia: fonte, conector, bateria e circuito da placa falham de formas diferentes. A trilha de hardware ensina a observar LEDs e o comportamento dos primeiros segundos — e em que ponto insistir em ligar começa a causar dano.",
+  },
 };
 
 export interface AtlasPonteResolvida {

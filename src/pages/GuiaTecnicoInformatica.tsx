@@ -27,6 +27,13 @@ const DESCRIPTION =
 const WA_MESSAGE =
   "Olá! Vim do guia técnico de informática. Quero descrever meu problema para a triagem.";
 
+/** Badge do nível de risco dos guias de decisão — tokens semânticos apenas. */
+const RISCO_BADGE: Record<string, string> = {
+  "Seguro de fazer sozinho": "border-border bg-secondary/60 text-muted-foreground",
+  "Exige atenção": "border-accent/40 bg-accent/10 text-accent",
+  "Parada obrigatória": "border-destructive/40 bg-destructive/10 text-destructive",
+};
+
 const FAMILIAS = [
   {
     titulo: "Energia",
@@ -285,22 +292,66 @@ const GuiaTecnicoInformatica = () => {
             Guias de decisão
           </h2>
           <p className="mb-6 max-w-3xl text-muted-foreground">
-            Perguntas que decidem orçamento. Cada cartão resume o critério técnico usado na prática
-            e leva ao conteúdo que aprofunda a resposta — inclusive quando a resposta é não
-            contratar serviço nenhum.
+            Perguntas que decidem orçamento. Cada guia é independente: tem critério técnico
+            explícito, os sinais que puxam a decisão para cada lado e — quando o procedimento
+            envolve risco real — o nível de risco declarado. O destino aprofunda a resposta,
+            inclusive quando ela é não contratar serviço nenhum.
           </p>
-          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="grid gap-4 lg:grid-cols-2">
             {ATLAS_GUIAS_DECISAO.map((g) => (
-              <div key={g.pergunta} className="flex h-full flex-col rounded-xl border border-border bg-card p-5">
-                <h3 className="font-heading text-base font-bold text-foreground">{g.pergunta}</h3>
-                <p className="mt-2 flex-1 text-sm leading-relaxed text-muted-foreground">{g.criterio}</p>
+              <article
+                key={g.id}
+                id={`decisao-${g.id}`}
+                aria-labelledby={`decisao-${g.id}-titulo`}
+                className="flex h-full scroll-mt-24 flex-col rounded-xl border border-border bg-card p-5 md:p-6"
+              >
+                <div className="flex flex-wrap items-start justify-between gap-2">
+                  <h3
+                    id={`decisao-${g.id}-titulo`}
+                    className="font-heading text-base font-bold text-foreground md:text-lg"
+                  >
+                    {g.pergunta}
+                  </h3>
+                  {g.risco && (
+                    <span
+                      className={`inline-flex items-center gap-1 rounded-full border px-2.5 py-0.5 text-[0.65rem] font-bold uppercase tracking-wide ${RISCO_BADGE[g.risco]}`}
+                    >
+                      <ShieldCheck className="h-3 w-3" aria-hidden="true" />
+                      {g.risco}
+                    </span>
+                  )}
+                </div>
+                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{g.criterio}</p>
+                <div className="mt-4 grid flex-1 gap-3 sm:grid-cols-2">
+                  {g.sinais.map((lado) => (
+                    <div key={lado.rotulo} className="rounded-lg border border-border bg-background p-4">
+                      <p className="text-[0.65rem] font-bold uppercase tracking-wide text-accent">
+                        {lado.rotulo}
+                      </p>
+                      <ul className="mt-2 space-y-1.5">
+                        {lado.pontos.map((ponto) => (
+                          <li
+                            key={ponto}
+                            className="flex items-start gap-2 text-xs leading-relaxed text-muted-foreground"
+                          >
+                            <CheckCircle2
+                              className="mt-0.5 h-3.5 w-3.5 flex-shrink-0 text-accent"
+                              aria-hidden="true"
+                            />
+                            {ponto}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  ))}
+                </div>
                 <Link
                   to={g.to}
                   className="mt-4 inline-flex items-center gap-1.5 font-heading text-sm font-bold text-accent hover:underline"
                 >
                   {g.linkLabel} <ArrowRight className="h-4 w-4" aria-hidden="true" />
                 </Link>
-              </div>
+              </article>
             ))}
           </div>
         </section>

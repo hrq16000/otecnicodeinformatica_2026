@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 /**
- * GATE — ATLAS DE INFORMÁTICA (Fase 1)
- * ------------------------------------
+ * GATE — ATLAS DE INFORMÁTICA (Fases 1–2)
+ * ---------------------------------------
  * Valida o HTML servido (dist) de /guia-tecnico-informatica sem depender
  * de JavaScript no cliente:
  *
@@ -13,6 +13,9 @@
  *   4. JSON-LD CollectionPage com ItemList espelhando exatamente os temas
  *      renderizados (coerência schema ↔ HTML).
  *   5. FAQPage continua presente (a paridade item a item tem gate próprio).
+ *   6. Fase 2: os 9 vereditos de tema renderizados no SSR; toda âncora de
+ *      guia de decisão (#decisao-<id>) presente; toda fonte primária https
+ *      renderizada como href; nível de risco só com rótulo canônico.
  *
  * Fail-closed: sem dist ou sem HTML da rota, o gate falha.
  */
@@ -50,6 +53,39 @@ if (links.size < 40) {
   erros.push(`Malha do Atlas suspeita de vazia: apenas ${links.size} links declarados.`);
 }
 
+// ── 1b. Fase 2: vereditos, guias de decisão, fontes e riscos ─
+const vereditos = [...modulo.matchAll(/veredito:\s*\n\s*"([^"]+)"/g)].map((m) => m[1]);
+if (vereditos.length !== 9) {
+  erros.push(`Esperados 9 vereditos de tema (Fase 2); encontrados ${vereditos.length}.`);
+}
+if (new Set(vereditos).size !== vereditos.length) {
+  erros.push("Veredito de tema repetido — cada tema exige posição própria.");
+}
+
+const guias = [...modulo.matchAll(/id:\s*"([a-z0-9-]+)",\s*\n\s*pergunta:\s*"([^"]+)"/g)].map(
+  (m) => ({ id: m[1], pergunta: m[2] }),
+);
+if (guias.length < 6) {
+  erros.push(`Esperados pelo menos 6 guias de decisão; encontrados ${guias.length}.`);
+}
+
+const fontesUrls = new Set([...modulo.matchAll(/url:\s*"(https:\/\/[^"]+)"/g)].map((m) => m[1]));
+if (fontesUrls.size < 5) {
+  erros.push(`Fontes primárias suspeitas de vazias: apenas ${fontesUrls.size} URLs https.`);
+}
+
+const RISCOS_CANONICOS = new Set([
+  "Seguro de fazer sozinho",
+  "Exige atenção",
+  "Parada obrigatória",
+]);
+const riscos = [...modulo.matchAll(/risco:\s*"([^"]+)"/g)].map((m) => m[1]);
+for (const r of riscos) {
+  if (!RISCOS_CANONICOS.has(r)) {
+    erros.push(`Nível de risco fora do vocabulário canônico: "${r}".`);
+  }
+}
+
 // ── 2. HTML do build ─────────────────────────────────────────
 if (!existsSync(DIST)) {
   console.error(`BLOQUEADO: dist ausente em ${DIST}. Rode o build antes de check:atlas-hub.`);
@@ -75,6 +111,31 @@ for (const tema of temas) {
   }
   if (!html.includes(`id="tema-${tema.id}"`)) {
     erros.push(`Âncora #tema-${tema.id} ausente do HTML servido.`);
+  }
+}
+
+// ── 3b. Fase 2 no SSR: vereditos, âncoras de guia, fontes e riscos ──
+for (const v of vereditos) {
+  if (!html.includes(v)) {
+    erros.push(`Veredito de tema ausente do HTML servido: "${v.slice(0, 60)}…"`);
+  }
+}
+for (const g of guias) {
+  if (!html.includes(`id="decisao-${g.id}"`)) {
+    erros.push(`Âncora #decisao-${g.id} ausente do HTML servido.`);
+  }
+  if (!html.includes(g.pergunta)) {
+    erros.push(`Pergunta do guia "${g.pergunta}" não aparece no HTML servido.`);
+  }
+}
+for (const url of fontesUrls) {
+  if (!html.includes(`href="${url}"`)) {
+    erros.push(`Fonte primária declarada mas não renderizada no HTML: ${url}`);
+  }
+}
+for (const r of new Set(riscos)) {
+  if (!html.includes(r)) {
+    erros.push(`Nível de risco "${r}" declarado mas ausente do HTML servido.`);
   }
 }
 
@@ -143,7 +204,9 @@ if (tipos.has("AggregateRating")) {
 
 // ── Veredito ─────────────────────────────────────────────────
 console.log("── check:atlas-hub ──");
-console.log(`  temas: ${temas.length} · links declarados: ${links.size}`);
+console.log(
+  `  temas: ${temas.length} · links declarados: ${links.size} · vereditos: ${vereditos.length} · guias: ${guias.length} · fontes: ${fontesUrls.size}`,
+);
 for (const a of avisos) console.log(`  aviso: ${a}`);
 
 if (erros.length) {
