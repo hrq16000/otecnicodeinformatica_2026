@@ -1,10 +1,19 @@
 /**
  * ============================================================================
- * ATLAS DE INFORMÁTICA — FASE 1 (fonte única do hub /guia-tecnico-informatica)
+ * ATLAS DE INFORMÁTICA — FASES 1–2 (fonte única do hub /guia-tecnico-informatica)
  * ============================================================================
  * Nove temas nacionais, cada um com uma trilha editorial fixa de cinco etapas:
  *
  *   aprender → identificar → verificar → parar → resolver
+ *
+ * Fase 2 (2026-09-01) acrescenta, sem criar URL nova e sem alterar canonical:
+ *  - veredito técnico da bancada por tema (posição honesta, sem número inventado);
+ *  - fontes primárias visíveis SOMENTE nos temas cujo conteúdo depende de
+ *    comportamento ou política externa (Microsoft, CISA, CERT.br, NIST,
+ *    Wi-Fi Alliance) — temas de conhecimento estável ficam sem fonte, com o
+ *    limite declarado no bloco institucional;
+ *  - guias de decisão independentes: âncora própria (#decisao-<id>) e sinais
+ *    observáveis dos dois lados da decisão.
  *
  * Regras não negociáveis:
  *  - TODO link aponta para URL que já existe (rota estática, /problemas/*,
@@ -14,14 +23,16 @@
  *  - Nada aqui cria URL nova, promete prazo, inventa avaliação ou estatística.
  *  - Este módulo NÃO decide indexação de nada: é só malha de descoberta.
  *
- * Gates que dependem deste arquivo (parse por regex — manter literais simples):
+ * Gates que dependem deste arquivo (parse por regex — manter literais simples;
+ * veredito e fontes SEM aspas duplas internas; id de tema adjacente a titulo;
+ * id de guia adjacente a pergunta):
  *  - scripts/check-atlas-hub.mjs        (SSR do hub: links, temas, JSON-LD)
  *  - src/__tests__/atlas-informatica.test.ts (integridade de dados e rotas)
  */
 import { isEditorialApproved } from "@/lib/blogEditorialRegistry";
 import { EDITORIAL_HUB_SUMMARIES } from "@/lib/editorialHubSummaries";
 
-/** Data da última revisão material desta curadoria (Fase 1 do Atlas). */
+/** Data da última revisão material desta curadoria (Fase 2 do Atlas). */
 export const ATLAS_REVISADO_EM = "2026-09-01";
 
 export type AtlasEtapaId = "aprender" | "identificar" | "verificar" | "parar" | "resolver";
@@ -55,16 +66,27 @@ export interface AtlasLinkRef {
   label: string;
 }
 
+/** Fonte primária citada de forma visível no tema (Fase 2). */
+export interface AtlasFonte {
+  titulo: string;
+  url: string;
+  nota: string;
+}
+
 export interface AtlasTema {
   /** Também usado como âncora `#tema-<id>` e no ItemList do JSON-LD. */
   id: string;
   titulo: string;
   resumo: string;
+  /** Veredito técnico da bancada (Fase 2) — posição honesta, sem número inventado. */
+  veredito: string;
   trilha: AtlasEtapa[];
   /** Slugs de /blog aprovados — refiltrados por isEditorialApproved(). */
   artigos: string[];
   problemas: AtlasLinkRef[];
   servicos: AtlasLinkRef[];
+  /** Fontes primárias SOMENTE quando o tema depende de comportamento/política externa. */
+  fontes?: AtlasFonte[];
 }
 
 export const ATLAS_TEMAS: AtlasTema[] = [
@@ -73,6 +95,8 @@ export const ATLAS_TEMAS: AtlasTema[] = [
     titulo: "Fundamentos de informática",
     resumo:
       "O que é informática, o que um iniciante precisa dominar primeiro e como o hardware, o sistema e a internet se relacionam. É a base para entender qualquer outro tema do Atlas.",
+    veredito:
+      "Boa parte dos chamados que chegam como defeito grave começa em fundamento ausente: espaço em disco esgotado, atualização interrompida, cabo intermitente. Dominar o básico não substitui o técnico — reduz o número de vezes em que ele é necessário.",
     trilha: [
       {
         etapa: "aprender",
@@ -117,6 +141,8 @@ export const ATLAS_TEMAS: AtlasTema[] = [
     titulo: "Windows e inicialização",
     resumo:
       "Boot, BIOS/UEFI, tela azul, reparo automático em laço e atualização que não conclui. O tema separa o que é software recuperável do que é sinal de falha física.",
+    veredito:
+      "O erro mais caro deste tema é formatar cedo demais. Quando a partida falha por disco em degradação, a reinstalação escreve por cima do que ainda podia ser lido: primeiro se prova em que estágio o boot trava — formatar é conclusão, nunca teste inicial.",
     trilha: [
       {
         etapa: "aprender",
@@ -165,12 +191,26 @@ export const ATLAS_TEMAS: AtlasTema[] = [
       { to: "/servicos/formatacao", label: "Formatação com backup" },
       { to: "/servicos/manutencao-de-computador", label: "Manutenção de computador" },
     ],
+    fontes: [
+      {
+        titulo: "Microsoft Learn — solução avançada de problemas de boot",
+        url: "https://learn.microsoft.com/en-us/troubleshoot/windows-client/performance/windows-boot-issues-troubleshooting",
+        nota: "Fases oficiais do processo de inicialização usadas na trilha.",
+      },
+      {
+        titulo: "Microsoft Support — Windows Recovery Environment",
+        url: "https://support.microsoft.com/en-us/windows/experience/backup-recovery/windows-recovery-environment",
+        nota: "Ferramentas oficiais de recuperação citadas nas verificações seguras.",
+      },
+    ],
   },
   {
     id: "hardware-upgrades",
     titulo: "Hardware e upgrades",
     resumo:
       "SSD, memória RAM, fonte e placa-mãe: qual intervenção resolve qual limitação, como confirmar antes de comprar peça e quando o upgrade não é a resposta.",
+    veredito:
+      "Peça nova não é diagnóstico. O upgrade certo nasce de gargalo confirmado — disco mecânico medido, memória saturada em uso real, temperatura registrada — e de compatibilidade conferida antes da compra. Trocar por tentativa é pagar duas vezes.",
     trilha: [
       {
         etapa: "aprender",
@@ -227,6 +267,8 @@ export const ATLAS_TEMAS: AtlasTema[] = [
     titulo: "Redes e Wi-Fi",
     resumo:
       "Cobertura, quedas de sinal, internet lenta e dispositivos que somem da rede. O tema ensina a separar problema do provedor, do roteador e do ambiente físico.",
+    veredito:
+      "Boa parte dos problemas de rede não está no computador nem no provedor, e sim no caminho entre os dois: posição do roteador, canal congestionado, obstáculo físico. Medir com método antes de trocar equipamento evita gasto que não muda o sintoma.",
     trilha: [
       {
         etapa: "aprender",
@@ -274,12 +316,26 @@ export const ATLAS_TEMAS: AtlasTema[] = [
       { to: "/servicos/redes-e-wifi", label: "Redes e Wi-Fi" },
       { to: "/servicos/suporte-home-office", label: "Suporte para home office" },
     ],
+    fontes: [
+      {
+        titulo: "Wi-Fi Alliance — segurança de redes Wi-Fi",
+        url: "https://www.wi-fi.org/discover-wi-fi/security",
+        nota: "Padrões oficiais de proteção de rede sem fio (WPA2 e WPA3).",
+      },
+      {
+        titulo: "CERT.br — Cartilha de Segurança para Internet",
+        url: "https://cartilha.cert.br/",
+        nota: "Boas práticas brasileiras para redes domésticas e senhas.",
+      },
+    ],
   },
   {
     id: "seguranca-privacidade",
     titulo: "Segurança e privacidade",
     resumo:
       "Golpes, vírus, adware e sequestro de navegador: como reconhecer os sinais, o que a proteção já instalada cobre e o que fazer quando a máquina foi comprometida.",
+    veredito:
+      "Antivírus não compensa clique apressado. Os incidentes que chegam à bancada costumam começar em página falsa, anexo de cobrança ou instalador baixado por anúncio — e nenhum guia deste portal orienta a desativar proteções de forma permanente.",
     trilha: [
       {
         etapa: "aprender",
@@ -324,12 +380,26 @@ export const ATLAS_TEMAS: AtlasTema[] = [
       { to: "/servicos/remocao-de-virus", label: "Remoção de vírus" },
       { to: "/seguranca-dos-dados", label: "Segurança dos dados" },
     ],
+    fontes: [
+      {
+        titulo: "CISA — guia oficial de resposta a ransomware",
+        url: "https://www.cisa.gov/stopransomware/ransomware-guide",
+        nota: "Sustenta o passo de parada obrigatória da trilha.",
+      },
+      {
+        titulo: "Microsoft Support — golpes de falso suporte técnico",
+        url: "https://support.microsoft.com/en-us/office/protect-yourself-from-tech-support-scams",
+        nota: "Orientação do fabricante para reconhecer suporte falso.",
+      },
+    ],
   },
   {
     id: "dados-backup",
     titulo: "Dados e backup",
     resumo:
       "Os dados valem mais que o equipamento. O tema cobre backup que realmente restaura, sinais de disco em falha e a ordem certa de agir quando um arquivo some.",
+    veredito:
+      "Equipamento se substitui, dado não. Na dúvida entre salvar a máquina e salvar o arquivo, a bancada escolhe o arquivo: disco suspeito sai de operação primeiro e é lido de forma controlada depois. Backup nunca testado em restauração ainda é promessa, não cópia.",
     trilha: [
       {
         etapa: "aprender",
@@ -377,12 +447,26 @@ export const ATLAS_TEMAS: AtlasTema[] = [
       { to: "/servicos/recuperacao-de-dados", label: "Recuperação de dados" },
       { to: "/solucoes/backup", label: "Solução de backup" },
     ],
+    fontes: [
+      {
+        titulo: "CERT.br — fascículos da Cartilha (Backup)",
+        url: "https://cartilha.cert.br/fasciculos/",
+        nota: "Fundamentos de cópia de segurança pessoal e teste de restauração.",
+      },
+      {
+        titulo: "CISA — backup de dados para pequenos negócios",
+        url: "https://www.cisa.gov/audiences/small-and-medium-businesses/secure-your-business/back-up-business-data",
+        nota: "Rotina e verificação de cópias recomendadas oficialmente.",
+      },
+    ],
   },
   {
     id: "manutencao-preventiva",
     titulo: "Manutenção preventiva",
     resumo:
       "Temperatura, poeira, pasta térmica e espaço em disco: o que envelhece um equipamento em silêncio e quais rotinas evitam a falha antes de ela interromper o uso.",
+    veredito:
+      "Quase todo desligamento térmico avisou antes: ventoinha mais alta, calor no teclado, lentidão em tarefa pesada. A limpeza com troca de pasta térmica custa uma fração do reparo de placa que se torna necessário quando o aviso é ignorado.",
     trilha: [
       {
         etapa: "aprender",
@@ -436,6 +520,8 @@ export const ATLAS_TEMAS: AtlasTema[] = [
     titulo: "Informática para empresas",
     resumo:
       "Escritórios, consultórios e comércios não têm \"um computador com defeito\": têm operação parada. O tema trata de organização, backup verificado e suporte com prioridade.",
+    veredito:
+      "Na empresa o custo real não é o conserto, é a hora parada. Inventário do que existe, backup restaurável e prioridade para o que trava a operação resolvem mais que máquina nova — e são o ponto de partida de qualquer suporte recorrente.",
     trilha: [
       {
         etapa: "aprender",
@@ -479,12 +565,26 @@ export const ATLAS_TEMAS: AtlasTema[] = [
       { to: "/empresa-de-ti-curitiba", label: "Empresa de TI em Curitiba" },
       { to: "/servicos/suporte-tecnico-empresarial", label: "Suporte técnico empresarial" },
     ],
+    fontes: [
+      {
+        titulo: "NIST SP 800-34 — planejamento de contingência",
+        url: "https://csrc.nist.gov/pubs/sp/800/34/r1/upd1/final",
+        nota: "Referência de continuidade para ambientes com vários equipamentos.",
+      },
+      {
+        titulo: "CISA — backup de dados corporativos",
+        url: "https://www.cisa.gov/audiences/small-and-medium-businesses/secure-your-business/back-up-business-data",
+        nota: "Base do critério de backup verificado antes do incidente.",
+      },
+    ],
   },
   {
     id: "decisoes-compra-reparo",
     titulo: "Decisões de compra e reparo",
     resumo:
       "Consertar, atualizar ou substituir? O tema reúne os critérios usados na bancada para decidir com número na mesa — incluindo quando a conclusão é não contratar serviço nenhum.",
+    veredito:
+      "A decisão honesta usa dois números: o custo total do reparo e o valor de um equipamento equivalente. Quando o primeiro se aproxima do segundo, isso é dito antes de executar — inclusive quando a conclusão é não contratar serviço nenhum.",
     trilha: [
       {
         etapa: "aprender",
