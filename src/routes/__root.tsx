@@ -24,6 +24,7 @@ import {
 import { PageViewTracker } from "@/components/PageViewTracker";
 import { RouteTransition } from "@/components/motion/RouteTransition";
 import { RouteLoader } from "@/components/RouteLoader";
+import { RouteProgress } from "@/components/RouteProgress";
 import { WhatsAppFunnel } from "@/components/WhatsAppFunnel";
 import { WhatsAppFloat } from "@/components/WhatsAppFloat";
 import { GlobalSmartSearch } from "@/components/GlobalSmartSearch";
@@ -194,6 +195,7 @@ function RootComponent() {
     <QueryClientProvider client={queryClient}>
       <AppErrorBoundary>
         <MotionProvider>
+          <RouteProgress />
           <ScrollToTop />
           <GeoAutoDetect />
           <PageViewTracker path={pathname} />
