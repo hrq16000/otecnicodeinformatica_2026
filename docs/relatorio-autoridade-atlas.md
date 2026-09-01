@@ -1,6 +1,6 @@
 # Autoridade do Atlas — densidade semântica e mapa de conexões
 
-Gerado em: 2026-09-01T01:31:10.603Z
+Gerado em: 2026-09-01T02:17:05.773Z
 Nós analisados: 77/77 · sem link de entrada: 0
 
 | Tema | Destinos | Renderizados | Densidade média |
