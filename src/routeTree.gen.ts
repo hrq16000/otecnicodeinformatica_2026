@@ -116,6 +116,7 @@ import { Route as AdminPublicacaoRouteImport } from './routes/admin_.publicacao'
 import { Route as AdminPublicacoesPendentesRouteImport } from './routes/admin_.publicacoes-pendentes'
 import { Route as AdminQaTrafegoRouteImport } from './routes/admin_.qa-trafego'
 import { Route as AdminReviewsRouteImport } from './routes/admin_.reviews'
+import { Route as AdminSeoRouteImport } from './routes/admin_.seo'
 import { Route as AdminUiPerformanceRouteImport } from './routes/admin_.ui-performance'
 import { Route as AdminVitalsRouteImport } from './routes/admin_.vitals'
 import { Route as AdsTecnicoInformaticaCuritibaRouteImport } from './routes/ads_.tecnico-informatica-curitiba'
@@ -1036,6 +1037,11 @@ const AdminQaTrafegoRoute = AdminQaTrafegoRouteImport.update({
 const AdminReviewsRoute = AdminReviewsRouteImport.update({
   id: '/admin_/reviews',
   path: '/admin/reviews',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AdminSeoRoute = AdminSeoRouteImport.update({
+  id: '/admin_/seo',
+  path: '/admin/seo',
   getParentRoute: () => rootRouteImport,
 } as any)
 const AdminUiPerformanceRoute = AdminUiPerformanceRouteImport.update({
@@ -3129,6 +3135,7 @@ export interface FileRoutesByFullPath {
   '/admin/publicacoes-pendentes': typeof AdminPublicacoesPendentesRoute
   '/admin/qa-trafego': typeof AdminQaTrafegoRoute
   '/admin/reviews': typeof AdminReviewsRoute
+  '/admin/seo': typeof AdminSeoRoute
   '/admin/ui-performance': typeof AdminUiPerformanceRoute
   '/admin/vitals': typeof AdminVitalsRoute
   '/ads/tecnico-informatica-curitiba': typeof AdsTecnicoInformaticaCuritibaRoute
@@ -3605,6 +3612,7 @@ export interface FileRoutesByTo {
   '/admin/publicacoes-pendentes': typeof AdminPublicacoesPendentesRoute
   '/admin/qa-trafego': typeof AdminQaTrafegoRoute
   '/admin/reviews': typeof AdminReviewsRoute
+  '/admin/seo': typeof AdminSeoRoute
   '/admin/ui-performance': typeof AdminUiPerformanceRoute
   '/admin/vitals': typeof AdminVitalsRoute
   '/ads/tecnico-informatica-curitiba': typeof AdsTecnicoInformaticaCuritibaRoute
@@ -4082,6 +4090,7 @@ export interface FileRoutesById {
   '/admin_/publicacoes-pendentes': typeof AdminPublicacoesPendentesRoute
   '/admin_/qa-trafego': typeof AdminQaTrafegoRoute
   '/admin_/reviews': typeof AdminReviewsRoute
+  '/admin_/seo': typeof AdminSeoRoute
   '/admin_/ui-performance': typeof AdminUiPerformanceRoute
   '/admin_/vitals': typeof AdminVitalsRoute
   '/ads_/tecnico-informatica-curitiba': typeof AdsTecnicoInformaticaCuritibaRoute
@@ -4560,6 +4569,7 @@ export interface FileRouteTypes {
     | '/admin/publicacoes-pendentes'
     | '/admin/qa-trafego'
     | '/admin/reviews'
+    | '/admin/seo'
     | '/admin/ui-performance'
     | '/admin/vitals'
     | '/ads/tecnico-informatica-curitiba'
@@ -5036,6 +5046,7 @@ export interface FileRouteTypes {
     | '/admin/publicacoes-pendentes'
     | '/admin/qa-trafego'
     | '/admin/reviews'
+    | '/admin/seo'
     | '/admin/ui-performance'
     | '/admin/vitals'
     | '/ads/tecnico-informatica-curitiba'
@@ -5512,6 +5523,7 @@ export interface FileRouteTypes {
     | '/admin_/publicacoes-pendentes'
     | '/admin_/qa-trafego'
     | '/admin_/reviews'
+    | '/admin_/seo'
     | '/admin_/ui-performance'
     | '/admin_/vitals'
     | '/ads_/tecnico-informatica-curitiba'
@@ -5989,6 +6001,7 @@ export interface RootRouteChildren {
   AdminPublicacoesPendentesRoute: typeof AdminPublicacoesPendentesRoute
   AdminQaTrafegoRoute: typeof AdminQaTrafegoRoute
   AdminReviewsRoute: typeof AdminReviewsRoute
+  AdminSeoRoute: typeof AdminSeoRoute
   AdminUiPerformanceRoute: typeof AdminUiPerformanceRoute
   AdminVitalsRoute: typeof AdminVitalsRoute
   AdsTecnicoInformaticaCuritibaRoute: typeof AdsTecnicoInformaticaCuritibaRoute
@@ -7107,6 +7120,13 @@ declare module '@tanstack/react-router' {
       path: '/admin/reviews'
       fullPath: '/admin/reviews'
       preLoaderRoute: typeof AdminReviewsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/admin_/seo': {
+      id: '/admin_/seo'
+      path: '/admin/seo'
+      fullPath: '/admin/seo'
+      preLoaderRoute: typeof AdminSeoRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/admin_/ui-performance': {
@@ -9792,6 +9812,7 @@ const rootRouteChildren: RootRouteChildren = {
   AdminPublicacoesPendentesRoute: AdminPublicacoesPendentesRoute,
   AdminQaTrafegoRoute: AdminQaTrafegoRoute,
   AdminReviewsRoute: AdminReviewsRoute,
+  AdminSeoRoute: AdminSeoRoute,
   AdminUiPerformanceRoute: AdminUiPerformanceRoute,
   AdminVitalsRoute: AdminVitalsRoute,
   AdsTecnicoInformaticaCuritibaRoute: AdsTecnicoInformaticaCuritibaRoute,
