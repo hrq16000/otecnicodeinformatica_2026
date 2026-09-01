@@ -114,7 +114,7 @@ for (const token of [
   ".motion-progress-indeterminate",
 ]) {
   if (css.includes(token)) ok.push(`motion ${token}`);
-  else erros.push(`token do motion system ausente em src/index.css: ${token}`);
+  else erros.push(`token do motion system ausente em src/styles.css: ${token}`);
 }
 for (const token of [".motion-enter", ".motion-collapse", ".motion-progress-indeterminate"]) {
   if (reduced.includes(token)) ok.push(`reduced-motion ${token}`);
