@@ -106,8 +106,8 @@ export const INTERLINKS_GERADOS: Record<string, InterlinkContextual[]> = {
       "contexto": "problema"
     },
     {
-      "href": "/problemas/windows-nao-inicia",
-      "anchor": "sintoma parecido: windows não inicia",
+      "href": "/problemas/computador-lento",
+      "anchor": "compare com computador Lento",
       "contexto": "problema"
     },
     {
@@ -129,7 +129,7 @@ export const INTERLINKS_GERADOS: Record<string, InterlinkContextual[]> = {
     },
     {
       "href": "/problemas/computador-lento",
-      "anchor": "compare com computador Lento",
+      "anchor": "sintoma parecido: computador Lento — 2",
       "contexto": "problema"
     },
     {
@@ -307,23 +307,23 @@ export const INTERLINKS_GERADOS: Record<string, InterlinkContextual[]> = {
   ],
   "/problemas/windows-nao-inicia": [
     {
-      "href": "/servicos/recuperacao-de-dados",
-      "anchor": "recuperação de Dados em Curitiba para quem tem windows não inicia",
-      "contexto": "servico"
-    },
-    {
       "href": "/servicos/formatacao",
       "anchor": "formatação de PC e Notebook em Curitiba para quem tem windows não inicia",
       "contexto": "servico"
     },
     {
-      "href": "/problemas/tela-azul",
-      "anchor": "compare com tela azul no Windows",
-      "contexto": "problema"
+      "href": "/servicos/remocao-de-virus",
+      "anchor": "remoção de Vírus e Malware em Curitiba para quem tem windows não inicia",
+      "contexto": "servico"
     },
     {
       "href": "/problemas/notebook-nao-liga",
       "anchor": "sintoma parecido: notebook Não Liga",
+      "contexto": "problema"
+    },
+    {
+      "href": "/problemas/tela-azul",
+      "anchor": "compare com tela azul no Windows",
       "contexto": "problema"
     },
     {
@@ -345,7 +345,7 @@ export const INTERLINKS_GERADOS: Record<string, InterlinkContextual[]> = {
     },
     {
       "href": "/problemas/computador-lento",
-      "anchor": "sintoma parecido: computador Lento — 2",
+      "anchor": "sintoma parecido: computador Lento — 3",
       "contexto": "problema"
     },
     {
