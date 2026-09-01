@@ -22,6 +22,13 @@
   <url><loc>https://otecnicodeinformatica.com.br/bairros</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
   <url><loc>https://otecnicodeinformatica.com.br/guia-tecnico-informatica</loc><lastmod>2026-09-01</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://otecnicodeinformatica.com.br/assistencia-tecnica-curitiba</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://otecnicodeinformatica.com.br/decisoes</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://otecnicodeinformatica.com.br/decisoes/formatar-ou-reparar</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://otecnicodeinformatica.com.br/decisoes/ssd-ou-memoria-ram</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://otecnicodeinformatica.com.br/decisoes/consertar-ou-substituir</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://otecnicodeinformatica.com.br/decisoes/remoto-ou-presencial</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://otecnicodeinformatica.com.br/decisoes/hd-com-ruido</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://otecnicodeinformatica.com.br/decisoes/backup-antes-da-manutencao</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://otecnicodeinformatica.com.br/glossario</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://otecnicodeinformatica.com.br/glossario/bsod</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://otecnicodeinformatica.com.br/glossario/uefi</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
