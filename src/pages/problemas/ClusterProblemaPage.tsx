@@ -10,6 +10,7 @@ import { Button } from "@/components/ui/button";
 import { FotoLicenciadaImg } from "@/components/FotoLicenciadaImg";
 import { SmartImage } from "@/components/SmartImage";
 import { ServicosCorrelatos } from "@/components/informatica/ServicosCorrelatos";
+import { AtlasPonteProblema } from "@/components/informatica/AtlasPonteProblema";
 import { ProximosPassos } from "@/components/informatica/ProximosPassos";
 import InterlinksContextuais from "@/components/problemas/InterlinksContextuais";
 import { TriagemContexto } from "@/components/problemas/TriagemContexto";
@@ -529,6 +530,8 @@ const ClusterProblemaPage = () => {
           </div>
           <CtaContextual secao="faq" mensagem="Minha dúvida é:" />
         </section>
+
+        <AtlasPonteProblema sintomaSlug={sintomaSlug} />
 
         <InterlinksContextuais path={`/problemas/${sintomaSlug}`} />
 

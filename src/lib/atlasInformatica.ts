@@ -583,6 +583,13 @@ export const ATLAS_GUIAS_DECISAO: AtlasGuiaDecisao[] = [
     to: "/blog/backup-como-proteger-seus-arquivos",
     linkLabel: "Como fazer backup de verdade",
   },
+  {
+    pergunta: "Limpeza interna resolve ou precisa trocar a pasta térmica?",
+    criterio:
+      "Dissipador entupido responde à limpeza. Quando a temperatura sobe rápido mesmo com o cooler limpo, o problema é a interface térmica ressecada — e limpar sem trocar a pasta melhora por poucos dias.",
+    to: "/problemas/computador-esquentando",
+    linkLabel: "Como medir antes de decidir",
+  },
 ];
 
 /** Artigos do tema com aprovação editorial válida (fail-closed em dobro). */
