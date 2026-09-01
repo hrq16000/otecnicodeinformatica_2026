@@ -114,6 +114,31 @@ for (const tema of temas) {
   }
 }
 
+// ── 3b. Fase 2 no SSR: vereditos, âncoras de guia, fontes e riscos ──
+for (const v of vereditos) {
+  if (!html.includes(v)) {
+    erros.push(`Veredito de tema ausente do HTML servido: "${v.slice(0, 60)}…"`);
+  }
+}
+for (const g of guias) {
+  if (!html.includes(`id="decisao-${g.id}"`)) {
+    erros.push(`Âncora #decisao-${g.id} ausente do HTML servido.`);
+  }
+  if (!html.includes(g.pergunta)) {
+    erros.push(`Pergunta do guia "${g.pergunta}" não aparece no HTML servido.`);
+  }
+}
+for (const url of fontesUrls) {
+  if (!html.includes(`href="${url}"`)) {
+    erros.push(`Fonte primária declarada mas não renderizada no HTML: ${url}`);
+  }
+}
+for (const r of new Set(riscos)) {
+  if (!html.includes(r)) {
+    erros.push(`Nível de risco "${r}" declarado mas ausente do HTML servido.`);
+  }
+}
+
 // ── 4. Links reais, sem órfão ────────────────────────────────
 const universo = readRouteUniverse(ROOT);
 if (!universo.ok) {
