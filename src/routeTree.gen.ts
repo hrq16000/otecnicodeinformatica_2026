@@ -33,6 +33,7 @@ import { Route as ConsertoTvCuritibaRouteImport } from './routes/conserto-tv-cur
 import { Route as ConsertoVideogameCuritibaRouteImport } from './routes/conserto-videogame-curitiba'
 import { Route as ContatoRouteImport } from './routes/contato'
 import { Route as CreditosDeImagensRouteImport } from './routes/creditos-de-imagens'
+import { Route as DecisoesRouteImport } from './routes/decisoes'
 import { Route as DepoimentosRouteImport } from './routes/depoimentos'
 import { Route as Diagnostico60sRouteImport } from './routes/diagnostico-60s'
 import { Route as DiagnosticoTecnicoRouteImport } from './routes/diagnostico-tecnico'
@@ -365,6 +366,7 @@ import { Route as ConsertoSomLocalRouteImport } from './routes/conserto-som_.$lo
 import { Route as ConsertoTvLocalRouteImport } from './routes/conserto-tv_.$local'
 import { Route as ConsertoVideogameLocalRouteImport } from './routes/conserto-videogame_.$local'
 import { Route as DebugTelemetriaRouteImport } from './routes/debug_.telemetria'
+import { Route as DecisoesSlugRouteImport } from './routes/decisoes_.$slug'
 import { Route as EquipamentosSlugRouteImport } from './routes/equipamentos_.$slug'
 import { Route as FerramentasSlugRouteImport } from './routes/ferramentas_.$slug'
 import { Route as GlossarioTermoRouteImport } from './routes/glossario_.$termo'
@@ -603,6 +605,11 @@ const ContatoRoute = ContatoRouteImport.update({
 const CreditosDeImagensRoute = CreditosDeImagensRouteImport.update({
   id: '/creditos-de-imagens',
   path: '/creditos-de-imagens',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DecisoesRoute = DecisoesRouteImport.update({
+  id: '/decisoes',
+  path: '/decisoes',
   getParentRoute: () => rootRouteImport,
 } as any)
 const DepoimentosRoute = DepoimentosRouteImport.update({
@@ -2346,6 +2353,11 @@ const DebugTelemetriaRoute = DebugTelemetriaRouteImport.update({
   path: '/debug/telemetria',
   getParentRoute: () => rootRouteImport,
 } as any)
+const DecisoesSlugRoute = DecisoesSlugRouteImport.update({
+  id: '/decisoes_/$slug',
+  path: '/decisoes/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const EquipamentosSlugRoute = EquipamentosSlugRouteImport.update({
   id: '/equipamentos_/$slug',
   path: '/equipamentos/$slug',
@@ -3028,6 +3040,7 @@ export interface FileRoutesByFullPath {
   '/conserto-videogame-curitiba': typeof ConsertoVideogameCuritibaRoute
   '/contato': typeof ContatoRoute
   '/creditos-de-imagens': typeof CreditosDeImagensRoute
+  '/decisoes': typeof DecisoesRoute
   '/depoimentos': typeof DepoimentosRoute
   '/diagnostico-60s': typeof Diagnostico60sRoute
   '/diagnostico-tecnico': typeof DiagnosticoTecnicoRoute
@@ -3360,6 +3373,7 @@ export interface FileRoutesByFullPath {
   '/conserto-tv/$local': typeof ConsertoTvLocalRoute
   '/conserto-videogame/$local': typeof ConsertoVideogameLocalRoute
   '/debug/telemetria': typeof DebugTelemetriaRoute
+  '/decisoes/$slug': typeof DecisoesSlugRoute
   '/equipamentos/$slug': typeof EquipamentosSlugRoute
   '/ferramentas/$slug': typeof FerramentasSlugRoute
   '/glossario/$termo': typeof GlossarioTermoRoute
@@ -3501,6 +3515,7 @@ export interface FileRoutesByTo {
   '/conserto-videogame-curitiba': typeof ConsertoVideogameCuritibaRoute
   '/contato': typeof ContatoRoute
   '/creditos-de-imagens': typeof CreditosDeImagensRoute
+  '/decisoes': typeof DecisoesRoute
   '/depoimentos': typeof DepoimentosRoute
   '/diagnostico-60s': typeof Diagnostico60sRoute
   '/diagnostico-tecnico': typeof DiagnosticoTecnicoRoute
@@ -3833,6 +3848,7 @@ export interface FileRoutesByTo {
   '/conserto-tv/$local': typeof ConsertoTvLocalRoute
   '/conserto-videogame/$local': typeof ConsertoVideogameLocalRoute
   '/debug/telemetria': typeof DebugTelemetriaRoute
+  '/decisoes/$slug': typeof DecisoesSlugRoute
   '/equipamentos/$slug': typeof EquipamentosSlugRoute
   '/ferramentas/$slug': typeof FerramentasSlugRoute
   '/glossario/$termo': typeof GlossarioTermoRoute
@@ -3975,6 +3991,7 @@ export interface FileRoutesById {
   '/conserto-videogame-curitiba': typeof ConsertoVideogameCuritibaRoute
   '/contato': typeof ContatoRoute
   '/creditos-de-imagens': typeof CreditosDeImagensRoute
+  '/decisoes': typeof DecisoesRoute
   '/depoimentos': typeof DepoimentosRoute
   '/diagnostico-60s': typeof Diagnostico60sRoute
   '/diagnostico-tecnico': typeof DiagnosticoTecnicoRoute
@@ -4307,6 +4324,7 @@ export interface FileRoutesById {
   '/conserto-tv_/$local': typeof ConsertoTvLocalRoute
   '/conserto-videogame_/$local': typeof ConsertoVideogameLocalRoute
   '/debug_/telemetria': typeof DebugTelemetriaRoute
+  '/decisoes_/$slug': typeof DecisoesSlugRoute
   '/equipamentos_/$slug': typeof EquipamentosSlugRoute
   '/ferramentas_/$slug': typeof FerramentasSlugRoute
   '/glossario_/$termo': typeof GlossarioTermoRoute
@@ -4450,6 +4468,7 @@ export interface FileRouteTypes {
     | '/conserto-videogame-curitiba'
     | '/contato'
     | '/creditos-de-imagens'
+    | '/decisoes'
     | '/depoimentos'
     | '/diagnostico-60s'
     | '/diagnostico-tecnico'
@@ -4782,6 +4801,7 @@ export interface FileRouteTypes {
     | '/conserto-tv/$local'
     | '/conserto-videogame/$local'
     | '/debug/telemetria'
+    | '/decisoes/$slug'
     | '/equipamentos/$slug'
     | '/ferramentas/$slug'
     | '/glossario/$termo'
@@ -4923,6 +4943,7 @@ export interface FileRouteTypes {
     | '/conserto-videogame-curitiba'
     | '/contato'
     | '/creditos-de-imagens'
+    | '/decisoes'
     | '/depoimentos'
     | '/diagnostico-60s'
     | '/diagnostico-tecnico'
@@ -5255,6 +5276,7 @@ export interface FileRouteTypes {
     | '/conserto-tv/$local'
     | '/conserto-videogame/$local'
     | '/debug/telemetria'
+    | '/decisoes/$slug'
     | '/equipamentos/$slug'
     | '/ferramentas/$slug'
     | '/glossario/$termo'
@@ -5396,6 +5418,7 @@ export interface FileRouteTypes {
     | '/conserto-videogame-curitiba'
     | '/contato'
     | '/creditos-de-imagens'
+    | '/decisoes'
     | '/depoimentos'
     | '/diagnostico-60s'
     | '/diagnostico-tecnico'
@@ -5728,6 +5751,7 @@ export interface FileRouteTypes {
     | '/conserto-tv_/$local'
     | '/conserto-videogame_/$local'
     | '/debug_/telemetria'
+    | '/decisoes_/$slug'
     | '/equipamentos_/$slug'
     | '/ferramentas_/$slug'
     | '/glossario_/$termo'
@@ -5870,6 +5894,7 @@ export interface RootRouteChildren {
   ConsertoVideogameCuritibaRoute: typeof ConsertoVideogameCuritibaRoute
   ContatoRoute: typeof ContatoRoute
   CreditosDeImagensRoute: typeof CreditosDeImagensRoute
+  DecisoesRoute: typeof DecisoesRoute
   DepoimentosRoute: typeof DepoimentosRoute
   Diagnostico60sRoute: typeof Diagnostico60sRoute
   DiagnosticoTecnicoRoute: typeof DiagnosticoTecnicoRoute
@@ -6202,6 +6227,7 @@ export interface RootRouteChildren {
   ConsertoTvLocalRoute: typeof ConsertoTvLocalRoute
   ConsertoVideogameLocalRoute: typeof ConsertoVideogameLocalRoute
   DebugTelemetriaRoute: typeof DebugTelemetriaRoute
+  DecisoesSlugRoute: typeof DecisoesSlugRoute
   EquipamentosSlugRoute: typeof EquipamentosSlugRoute
   FerramentasSlugRoute: typeof FerramentasSlugRoute
   GlossarioTermoRoute: typeof GlossarioTermoRoute
@@ -6487,6 +6513,13 @@ declare module '@tanstack/react-router' {
       path: '/creditos-de-imagens'
       fullPath: '/creditos-de-imagens'
       preLoaderRoute: typeof CreditosDeImagensRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/decisoes': {
+      id: '/decisoes'
+      path: '/decisoes'
+      fullPath: '/decisoes'
+      preLoaderRoute: typeof DecisoesRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/depoimentos': {
@@ -8813,6 +8846,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof DebugTelemetriaRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/decisoes_/$slug': {
+      id: '/decisoes_/$slug'
+      path: '/decisoes/$slug'
+      fullPath: '/decisoes/$slug'
+      preLoaderRoute: typeof DecisoesSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/equipamentos_/$slug': {
       id: '/equipamentos_/$slug'
       path: '/equipamentos/$slug'
@@ -9647,6 +9687,7 @@ const rootRouteChildren: RootRouteChildren = {
   ConsertoVideogameCuritibaRoute: ConsertoVideogameCuritibaRoute,
   ContatoRoute: ContatoRoute,
   CreditosDeImagensRoute: CreditosDeImagensRoute,
+  DecisoesRoute: DecisoesRoute,
   DepoimentosRoute: DepoimentosRoute,
   Diagnostico60sRoute: Diagnostico60sRoute,
   DiagnosticoTecnicoRoute: DiagnosticoTecnicoRoute,
@@ -9982,6 +10023,7 @@ const rootRouteChildren: RootRouteChildren = {
   ConsertoTvLocalRoute: ConsertoTvLocalRoute,
   ConsertoVideogameLocalRoute: ConsertoVideogameLocalRoute,
   DebugTelemetriaRoute: DebugTelemetriaRoute,
+  DecisoesSlugRoute: DecisoesSlugRoute,
   EquipamentosSlugRoute: EquipamentosSlugRoute,
   FerramentasSlugRoute: FerramentasSlugRoute,
   GlossarioTermoRoute: GlossarioTermoRoute,
