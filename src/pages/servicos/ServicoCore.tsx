@@ -10,6 +10,7 @@ import { ClarezaVariacao } from "@/components/servico/ClarezaVariacao";
 import { Blocos3T } from "@/components/servico/Blocos3T";
 import { FichaComercialServico } from "@/components/servico/FichaComercialServico";
 import { AtlasPonteServico } from "@/components/informatica/AtlasPonteServico";
+import { BibliotecaPonte } from "@/components/informatica/BibliotecaPonte";
 
 import { MontagemWizard } from "@/components/servico/MontagemWizard";
 import { ProvasVisuaisMonitor } from "@/components/servico/ProvasVisuaisMonitor";
@@ -166,6 +167,7 @@ const ServicoCore = ({ slug }: { slug: keyof typeof SERVICOS_CORE }) => {
     <>
       <FichaComercialServico slug={slug as string} nome={base.serviceName} />
       <AtlasPonteServico slug={slug as string} />
+      <BibliotecaPonte chave={slug as string} />
     </>
   );
 

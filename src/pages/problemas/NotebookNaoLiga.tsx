@@ -22,6 +22,7 @@ import { enriquecimentoDe } from "@/lib/enriquecimentoConteudo";
 import { ServicosCorrelatos } from "@/components/informatica/ServicosCorrelatos";
 import { ProximosPassos } from "@/components/informatica/ProximosPassos";
 import { AtlasPonteProblema } from "@/components/informatica/AtlasPonteProblema";
+import { BibliotecaPonte } from "@/components/informatica/BibliotecaPonte";
 import { SCHEMA_SLOTS, SLOT_PRIORITY, useJsonLdSlot } from "@/lib/jsonLdSlots";
 import { whatsappLink, absoluteUrl } from "@/lib/siteConfig";
 import { trackPageView, trackCTAClick } from "@/lib/analytics";
@@ -485,6 +486,8 @@ const NotebookNaoLiga = () => {
         </section>
 
         <AtlasPonteProblema sintomaSlug="notebook-nao-liga" />
+
+        <BibliotecaPonte chave="problema:notebook-nao-liga" />
 
         <ProximosPassos waHref={waHref} onCta={cta("proximos-passos")} ctaLocation="problema_proximos_passos" />
 

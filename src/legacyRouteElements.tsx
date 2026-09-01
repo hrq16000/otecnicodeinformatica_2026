@@ -522,6 +522,12 @@ const ClusterSolucaoPage = lazyPagina(() => import("./pages/solucoes/ClusterSolu
 // Pillar do cluster de informática
 const GuiaTecnicoInformatica = lazyPagina(() => import("./pages/GuiaTecnicoInformatica"));
 
+// Fase 3 — Biblioteca Técnica (glossário + ferramentas orientativas)
+const GlossarioHub = lazyPagina(() => import("./pages/biblioteca/GlossarioHub"));
+const GlossarioTermo = lazyPagina(() => import("./pages/biblioteca/GlossarioTermo"));
+const FerramentasHub = lazyPagina(() => import("./pages/biblioteca/FerramentasHub"));
+const FerramentaChecklist = lazyPagina(() => import("./pages/biblioteca/FerramentaChecklist"));
+
 // Procedimentos Técnicos hub
 const ProcedimentosPlaca = lazyPagina(() => import("./pages/ProcedimentosPlaca"));
 
@@ -993,6 +999,10 @@ export const legacyRouteElements: Record<string, () => React.ReactElement> = {
   "/solucoes": () => <SolucoesHub />,
   "/solucoes/:slug": () => <ClusterSolucaoPage />,
   "/guia-tecnico-informatica": () => <GuiaTecnicoInformatica />,
+  "/glossario": () => <GlossarioHub />,
+  "/glossario/:termo": () => <GlossarioTermo />,
+  "/ferramentas": () => <FerramentasHub />,
+  "/ferramentas/:slug": () => <FerramentaChecklist />,
   "/problemas/:slug": () => <ProblemaPage />,
   "/assistencia-tecnica-curitiba": () => <AssistenciaTecnicaCuritiba />,
   "/termos-e-condicoes": () => <TermosCondicoes />,

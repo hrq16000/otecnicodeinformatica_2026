@@ -42,8 +42,10 @@ import { Route as EquipamentosRouteImport } from './routes/equipamentos'
 import { Route as EquipamentosAtendidosRouteImport } from './routes/equipamentos-atendidos'
 import { Route as ExcluirMeusDadosRouteImport } from './routes/excluir-meus-dados'
 import { Route as FaqRouteImport } from './routes/faq'
+import { Route as FerramentasRouteImport } from './routes/ferramentas'
 import { Route as FunilIndisponivelRouteImport } from './routes/funil-indisponivel'
 import { Route as GestorResponsavelRouteImport } from './routes/gestor-responsavel'
+import { Route as GlossarioRouteImport } from './routes/glossario'
 import { Route as GuiaTecnicoInformaticaRouteImport } from './routes/guia-tecnico-informatica'
 import { Route as MarcasRouteImport } from './routes/marcas'
 import { Route as ObrigadoRouteImport } from './routes/obrigado'
@@ -364,6 +366,8 @@ import { Route as ConsertoTvLocalRouteImport } from './routes/conserto-tv_.$loca
 import { Route as ConsertoVideogameLocalRouteImport } from './routes/conserto-videogame_.$local'
 import { Route as DebugTelemetriaRouteImport } from './routes/debug_.telemetria'
 import { Route as EquipamentosSlugRouteImport } from './routes/equipamentos_.$slug'
+import { Route as FerramentasSlugRouteImport } from './routes/ferramentas_.$slug'
+import { Route as GlossarioTermoRouteImport } from './routes/glossario_.$termo'
 import { Route as LandingConsertoComputadorSaoJoseDosPinhaisRouteImport } from './routes/landing.conserto-computador-sao-jose-dos-pinhais'
 import { Route as MarcasSlugRouteImport } from './routes/marcas_.$slug'
 import { Route as ProblemasSlugRouteImport } from './routes/problemas_.$slug'
@@ -646,6 +650,11 @@ const FaqRoute = FaqRouteImport.update({
   path: '/faq',
   getParentRoute: () => rootRouteImport,
 } as any)
+const FerramentasRoute = FerramentasRouteImport.update({
+  id: '/ferramentas',
+  path: '/ferramentas',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const FunilIndisponivelRoute = FunilIndisponivelRouteImport.update({
   id: '/funil-indisponivel',
   path: '/funil-indisponivel',
@@ -654,6 +663,11 @@ const FunilIndisponivelRoute = FunilIndisponivelRouteImport.update({
 const GestorResponsavelRoute = GestorResponsavelRouteImport.update({
   id: '/gestor-responsavel',
   path: '/gestor-responsavel',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const GlossarioRoute = GlossarioRouteImport.update({
+  id: '/glossario',
+  path: '/glossario',
   getParentRoute: () => rootRouteImport,
 } as any)
 const GuiaTecnicoInformaticaRoute = GuiaTecnicoInformaticaRouteImport.update({
@@ -2337,6 +2351,16 @@ const EquipamentosSlugRoute = EquipamentosSlugRouteImport.update({
   path: '/equipamentos/$slug',
   getParentRoute: () => rootRouteImport,
 } as any)
+const FerramentasSlugRoute = FerramentasSlugRouteImport.update({
+  id: '/ferramentas_/$slug',
+  path: '/ferramentas/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const GlossarioTermoRoute = GlossarioTermoRouteImport.update({
+  id: '/glossario_/$termo',
+  path: '/glossario/$termo',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const LandingConsertoComputadorSaoJoseDosPinhaisRoute =
   LandingConsertoComputadorSaoJoseDosPinhaisRouteImport.update({
     id: '/landing/conserto-computador-sao-jose-dos-pinhais',
@@ -3013,8 +3037,10 @@ export interface FileRoutesByFullPath {
   '/equipamentos-atendidos': typeof EquipamentosAtendidosRoute
   '/excluir-meus-dados': typeof ExcluirMeusDadosRoute
   '/faq': typeof FaqRoute
+  '/ferramentas': typeof FerramentasRoute
   '/funil-indisponivel': typeof FunilIndisponivelRoute
   '/gestor-responsavel': typeof GestorResponsavelRoute
+  '/glossario': typeof GlossarioRoute
   '/guia-tecnico-informatica': typeof GuiaTecnicoInformaticaRoute
   '/marcas': typeof MarcasRoute
   '/obrigado': typeof ObrigadoRoute
@@ -3335,6 +3361,8 @@ export interface FileRoutesByFullPath {
   '/conserto-videogame/$local': typeof ConsertoVideogameLocalRoute
   '/debug/telemetria': typeof DebugTelemetriaRoute
   '/equipamentos/$slug': typeof EquipamentosSlugRoute
+  '/ferramentas/$slug': typeof FerramentasSlugRoute
+  '/glossario/$termo': typeof GlossarioTermoRoute
   '/landing/conserto-computador-sao-jose-dos-pinhais': typeof LandingConsertoComputadorSaoJoseDosPinhaisRoute
   '/marcas/$slug': typeof MarcasSlugRoute
   '/problemas/$slug': typeof ProblemasSlugRoute
@@ -3482,8 +3510,10 @@ export interface FileRoutesByTo {
   '/equipamentos-atendidos': typeof EquipamentosAtendidosRoute
   '/excluir-meus-dados': typeof ExcluirMeusDadosRoute
   '/faq': typeof FaqRoute
+  '/ferramentas': typeof FerramentasRoute
   '/funil-indisponivel': typeof FunilIndisponivelRoute
   '/gestor-responsavel': typeof GestorResponsavelRoute
+  '/glossario': typeof GlossarioRoute
   '/guia-tecnico-informatica': typeof GuiaTecnicoInformaticaRoute
   '/marcas': typeof MarcasRoute
   '/obrigado': typeof ObrigadoRoute
@@ -3804,6 +3834,8 @@ export interface FileRoutesByTo {
   '/conserto-videogame/$local': typeof ConsertoVideogameLocalRoute
   '/debug/telemetria': typeof DebugTelemetriaRoute
   '/equipamentos/$slug': typeof EquipamentosSlugRoute
+  '/ferramentas/$slug': typeof FerramentasSlugRoute
+  '/glossario/$termo': typeof GlossarioTermoRoute
   '/landing/conserto-computador-sao-jose-dos-pinhais': typeof LandingConsertoComputadorSaoJoseDosPinhaisRoute
   '/marcas/$slug': typeof MarcasSlugRoute
   '/problemas/$slug': typeof ProblemasSlugRoute
@@ -3952,8 +3984,10 @@ export interface FileRoutesById {
   '/equipamentos-atendidos': typeof EquipamentosAtendidosRoute
   '/excluir-meus-dados': typeof ExcluirMeusDadosRoute
   '/faq': typeof FaqRoute
+  '/ferramentas': typeof FerramentasRoute
   '/funil-indisponivel': typeof FunilIndisponivelRoute
   '/gestor-responsavel': typeof GestorResponsavelRoute
+  '/glossario': typeof GlossarioRoute
   '/guia-tecnico-informatica': typeof GuiaTecnicoInformaticaRoute
   '/marcas': typeof MarcasRoute
   '/obrigado': typeof ObrigadoRoute
@@ -4274,6 +4308,8 @@ export interface FileRoutesById {
   '/conserto-videogame_/$local': typeof ConsertoVideogameLocalRoute
   '/debug_/telemetria': typeof DebugTelemetriaRoute
   '/equipamentos_/$slug': typeof EquipamentosSlugRoute
+  '/ferramentas_/$slug': typeof FerramentasSlugRoute
+  '/glossario_/$termo': typeof GlossarioTermoRoute
   '/landing/conserto-computador-sao-jose-dos-pinhais': typeof LandingConsertoComputadorSaoJoseDosPinhaisRoute
   '/marcas_/$slug': typeof MarcasSlugRoute
   '/problemas_/$slug': typeof ProblemasSlugRoute
@@ -4423,8 +4459,10 @@ export interface FileRouteTypes {
     | '/equipamentos-atendidos'
     | '/excluir-meus-dados'
     | '/faq'
+    | '/ferramentas'
     | '/funil-indisponivel'
     | '/gestor-responsavel'
+    | '/glossario'
     | '/guia-tecnico-informatica'
     | '/marcas'
     | '/obrigado'
@@ -4745,6 +4783,8 @@ export interface FileRouteTypes {
     | '/conserto-videogame/$local'
     | '/debug/telemetria'
     | '/equipamentos/$slug'
+    | '/ferramentas/$slug'
+    | '/glossario/$termo'
     | '/landing/conserto-computador-sao-jose-dos-pinhais'
     | '/marcas/$slug'
     | '/problemas/$slug'
@@ -4892,8 +4932,10 @@ export interface FileRouteTypes {
     | '/equipamentos-atendidos'
     | '/excluir-meus-dados'
     | '/faq'
+    | '/ferramentas'
     | '/funil-indisponivel'
     | '/gestor-responsavel'
+    | '/glossario'
     | '/guia-tecnico-informatica'
     | '/marcas'
     | '/obrigado'
@@ -5214,6 +5256,8 @@ export interface FileRouteTypes {
     | '/conserto-videogame/$local'
     | '/debug/telemetria'
     | '/equipamentos/$slug'
+    | '/ferramentas/$slug'
+    | '/glossario/$termo'
     | '/landing/conserto-computador-sao-jose-dos-pinhais'
     | '/marcas/$slug'
     | '/problemas/$slug'
@@ -5361,8 +5405,10 @@ export interface FileRouteTypes {
     | '/equipamentos-atendidos'
     | '/excluir-meus-dados'
     | '/faq'
+    | '/ferramentas'
     | '/funil-indisponivel'
     | '/gestor-responsavel'
+    | '/glossario'
     | '/guia-tecnico-informatica'
     | '/marcas'
     | '/obrigado'
@@ -5683,6 +5729,8 @@ export interface FileRouteTypes {
     | '/conserto-videogame_/$local'
     | '/debug_/telemetria'
     | '/equipamentos_/$slug'
+    | '/ferramentas_/$slug'
+    | '/glossario_/$termo'
     | '/landing/conserto-computador-sao-jose-dos-pinhais'
     | '/marcas_/$slug'
     | '/problemas_/$slug'
@@ -5831,8 +5879,10 @@ export interface RootRouteChildren {
   EquipamentosAtendidosRoute: typeof EquipamentosAtendidosRoute
   ExcluirMeusDadosRoute: typeof ExcluirMeusDadosRoute
   FaqRoute: typeof FaqRoute
+  FerramentasRoute: typeof FerramentasRoute
   FunilIndisponivelRoute: typeof FunilIndisponivelRoute
   GestorResponsavelRoute: typeof GestorResponsavelRoute
+  GlossarioRoute: typeof GlossarioRoute
   GuiaTecnicoInformaticaRoute: typeof GuiaTecnicoInformaticaRoute
   MarcasRoute: typeof MarcasRoute
   ObrigadoRoute: typeof ObrigadoRoute
@@ -6153,6 +6203,8 @@ export interface RootRouteChildren {
   ConsertoVideogameLocalRoute: typeof ConsertoVideogameLocalRoute
   DebugTelemetriaRoute: typeof DebugTelemetriaRoute
   EquipamentosSlugRoute: typeof EquipamentosSlugRoute
+  FerramentasSlugRoute: typeof FerramentasSlugRoute
+  GlossarioTermoRoute: typeof GlossarioTermoRoute
   LandingConsertoComputadorSaoJoseDosPinhaisRoute: typeof LandingConsertoComputadorSaoJoseDosPinhaisRoute
   MarcasSlugRoute: typeof MarcasSlugRoute
   ProblemasSlugRoute: typeof ProblemasSlugRoute
@@ -6500,6 +6552,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof FaqRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/ferramentas': {
+      id: '/ferramentas'
+      path: '/ferramentas'
+      fullPath: '/ferramentas'
+      preLoaderRoute: typeof FerramentasRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/funil-indisponivel': {
       id: '/funil-indisponivel'
       path: '/funil-indisponivel'
@@ -6512,6 +6571,13 @@ declare module '@tanstack/react-router' {
       path: '/gestor-responsavel'
       fullPath: '/gestor-responsavel'
       preLoaderRoute: typeof GestorResponsavelRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/glossario': {
+      id: '/glossario'
+      path: '/glossario'
+      fullPath: '/glossario'
+      preLoaderRoute: typeof GlossarioRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/guia-tecnico-informatica': {
@@ -8754,6 +8820,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof EquipamentosSlugRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/ferramentas_/$slug': {
+      id: '/ferramentas_/$slug'
+      path: '/ferramentas/$slug'
+      fullPath: '/ferramentas/$slug'
+      preLoaderRoute: typeof FerramentasSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/glossario_/$termo': {
+      id: '/glossario_/$termo'
+      path: '/glossario/$termo'
+      fullPath: '/glossario/$termo'
+      preLoaderRoute: typeof GlossarioTermoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/landing/conserto-computador-sao-jose-dos-pinhais': {
       id: '/landing/conserto-computador-sao-jose-dos-pinhais'
       path: '/landing/conserto-computador-sao-jose-dos-pinhais'
@@ -9576,8 +9656,10 @@ const rootRouteChildren: RootRouteChildren = {
   EquipamentosAtendidosRoute: EquipamentosAtendidosRoute,
   ExcluirMeusDadosRoute: ExcluirMeusDadosRoute,
   FaqRoute: FaqRoute,
+  FerramentasRoute: FerramentasRoute,
   FunilIndisponivelRoute: FunilIndisponivelRoute,
   GestorResponsavelRoute: GestorResponsavelRoute,
+  GlossarioRoute: GlossarioRoute,
   GuiaTecnicoInformaticaRoute: GuiaTecnicoInformaticaRoute,
   MarcasRoute: MarcasRoute,
   ObrigadoRoute: ObrigadoRoute,
@@ -9901,6 +9983,8 @@ const rootRouteChildren: RootRouteChildren = {
   ConsertoVideogameLocalRoute: ConsertoVideogameLocalRoute,
   DebugTelemetriaRoute: DebugTelemetriaRoute,
   EquipamentosSlugRoute: EquipamentosSlugRoute,
+  FerramentasSlugRoute: FerramentasSlugRoute,
+  GlossarioTermoRoute: GlossarioTermoRoute,
   LandingConsertoComputadorSaoJoseDosPinhaisRoute:
     LandingConsertoComputadorSaoJoseDosPinhaisRoute,
   MarcasSlugRoute: MarcasSlugRoute,

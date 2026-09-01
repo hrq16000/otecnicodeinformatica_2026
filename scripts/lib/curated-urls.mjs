@@ -58,6 +58,53 @@ export const HUBS = [
   { path: "/assistencia-tecnica-curitiba", changefreq: "weekly", priority: "0.8" },
 ];
 
+/**
+ * FASE 3 — Biblioteca Técnica (glossário + ferramentas orientativas).
+ * Fontes únicas de conteúdo: src/lib/glossarioTecnico.ts e
+ * src/lib/ferramentasTecnicas.ts. Os slugs abaixo DEVEM espelhar esses
+ * módulos — o gate check:biblioteca valida a paridade e o SSR de cada rota.
+ */
+export const GLOSSARIO_SLUGS = [
+  "bsod",
+  "uefi",
+  "bios",
+  "imagem-do-sistema",
+  "smart",
+  "ssd",
+  "nvme",
+  "backup-incremental",
+  "recuperacao-de-dados",
+  "tpm",
+  "bitlocker",
+  "dns",
+  "nat",
+  "memoria-ram",
+  "thermal-throttling",
+];
+
+export const FERRAMENTAS_SLUGS = [
+  "checklist-computador-lento",
+  "checklist-antes-de-formatar",
+  "roteiro-falha-de-inicializacao",
+  "verificador-de-backup",
+  "ssd-ou-ram",
+];
+
+export const BIBLIOTECA = [
+  { path: "/glossario", changefreq: "monthly", priority: "0.7" },
+  ...GLOSSARIO_SLUGS.map((slug) => ({
+    path: `/glossario/${slug}`,
+    changefreq: "monthly",
+    priority: "0.6",
+  })),
+  { path: "/ferramentas", changefreq: "monthly", priority: "0.7" },
+  ...FERRAMENTAS_SLUGS.map((slug) => ({
+    path: `/ferramentas/${slug}`,
+    changefreq: "monthly",
+    priority: "0.6",
+  })),
+];
+
 
 /** Serviços essenciais — slugs canônicos (nunca variações com redirect). */
 export const SERVICOS = [
@@ -189,7 +236,7 @@ export const EDITORIAL = [
 
 /** Sub-sitemaps ativos, na ordem em que aparecem no índice. */
 export const ACTIVE_SITEMAPS = [
-  ["sitemap-main.xml", [...MAIN, ...HUBS]],
+  ["sitemap-main.xml", [...MAIN, ...HUBS, ...BIBLIOTECA]],
   ["sitemap-servicos.xml", [...SERVICOS, ...SERVICO_BAIRRO, ...SERVICO_CIDADE]],
   ["sitemap-regioes.xml", REGIOES],
   ["sitemap-bairros.xml", BAIRROS],

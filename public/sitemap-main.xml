@@ -22,4 +22,26 @@
   <url><loc>https://otecnicodeinformatica.com.br/bairros</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
   <url><loc>https://otecnicodeinformatica.com.br/guia-tecnico-informatica</loc><lastmod>2026-09-01</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://otecnicodeinformatica.com.br/assistencia-tecnica-curitiba</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://otecnicodeinformatica.com.br/glossario</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://otecnicodeinformatica.com.br/glossario/bsod</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://otecnicodeinformatica.com.br/glossario/uefi</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://otecnicodeinformatica.com.br/glossario/bios</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://otecnicodeinformatica.com.br/glossario/imagem-do-sistema</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://otecnicodeinformatica.com.br/glossario/smart</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://otecnicodeinformatica.com.br/glossario/ssd</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://otecnicodeinformatica.com.br/glossario/nvme</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://otecnicodeinformatica.com.br/glossario/backup-incremental</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://otecnicodeinformatica.com.br/glossario/recuperacao-de-dados</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://otecnicodeinformatica.com.br/glossario/tpm</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://otecnicodeinformatica.com.br/glossario/bitlocker</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://otecnicodeinformatica.com.br/glossario/dns</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://otecnicodeinformatica.com.br/glossario/nat</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://otecnicodeinformatica.com.br/glossario/memoria-ram</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://otecnicodeinformatica.com.br/glossario/thermal-throttling</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://otecnicodeinformatica.com.br/ferramentas</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://otecnicodeinformatica.com.br/ferramentas/checklist-computador-lento</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://otecnicodeinformatica.com.br/ferramentas/checklist-antes-de-formatar</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://otecnicodeinformatica.com.br/ferramentas/roteiro-falha-de-inicializacao</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://otecnicodeinformatica.com.br/ferramentas/verificador-de-backup</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://otecnicodeinformatica.com.br/ferramentas/ssd-ou-ram</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
 </urlset>

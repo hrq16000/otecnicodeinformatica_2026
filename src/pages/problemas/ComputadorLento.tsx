@@ -21,6 +21,7 @@ import { enriquecimentoDe } from "@/lib/enriquecimentoConteudo";
 import { ServicosCorrelatos } from "@/components/informatica/ServicosCorrelatos";
 import { ProximosPassos } from "@/components/informatica/ProximosPassos";
 import { AtlasPonteProblema } from "@/components/informatica/AtlasPonteProblema";
+import { BibliotecaPonte } from "@/components/informatica/BibliotecaPonte";
 
 import { Button } from "@/components/ui/button";
 import { SCHEMA_SLOTS, SLOT_PRIORITY, useJsonLdSlot } from "@/lib/jsonLdSlots";
@@ -552,6 +553,8 @@ const ComputadorLento = () => {
         </section>
 
         <AtlasPonteProblema sintomaSlug="computador-lento" />
+
+        <BibliotecaPonte chave="problema:computador-lento" />
 
         <ProximosPassos waHref={waHref} onCta={cta("proximos-passos")} ctaLocation="problema_proximos_passos" />
 
