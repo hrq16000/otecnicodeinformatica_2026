@@ -358,6 +358,8 @@
     "report:editorial-lotes": "node scripts/report-editorial-lotes.mjs",
     "validar:lote4": "node scripts/report-lote4-validacao.mjs",
     "report:autoridade-seo": "node scripts/report-autoridade-seo.mjs",
+    "report:autoridade-atlas": "node scripts/report-autoridade-atlas.mjs",
+    "report:capas-pendentes": "node scripts/report-capas-pendentes.mjs",
     "sync:editorial-sitemap": "node scripts/sync-editorial-sitemap.mjs",
     "check:editorial-sitemap": "node scripts/sync-editorial-sitemap.mjs --check"
   },
