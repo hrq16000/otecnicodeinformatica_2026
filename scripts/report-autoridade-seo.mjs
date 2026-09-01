@@ -88,6 +88,16 @@ const aprovados = EDITORIAL_WAVE;
 const rotas = aprovados.map((a) => `/blog/${a.slug}`);
 
 await prepararSsr(rotas, { dist });
+// Este script é RELATÓRIO, não gate. No build de produção não existe servidor
+// SSR de pé: sem HTML renderizado ele apenas avisa e mantém o último relatório.
+// Com --require (uso local/CI dedicado) volta a bloquear.
+const exigirSsr = process.argv.includes("--require");
+if (ssrBloqueado() && !exigirSsr) {
+  console.warn(
+    `[autoridade-seo] SKIP — SSR indisponível (${resumo()?.reason ?? "UNKNOWN"}). Relatório anterior preservado.`,
+  );
+  process.exit(0);
+}
 abortarSeBloqueado("report-autoridade-seo");
 
 const analises = [];
