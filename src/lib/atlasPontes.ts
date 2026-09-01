@@ -155,6 +155,11 @@ export const DECISAO_POR_SINTOMA: Record<string, { slug: string; porQue: string 
     porQue:
       "Falha de energia em notebook vai de conector barato a placa cara. O guia dá o critério de quando o reparo ainda vale frente ao valor atual do equipamento.",
   },
+  "arquivos-apagados": {
+    slug: "nuvem-ou-hd-externo",
+    porQue:
+      "Depois de recuperar (ou perder) um arquivo, a pergunta seguinte é onde a próxima cópia deve morar. O guia compara nuvem e mídia externa pelo risco que cada uma cobre.",
+  },
   "computador-esquentando": {
     slug: "consertar-ou-substituir",
     porQue:

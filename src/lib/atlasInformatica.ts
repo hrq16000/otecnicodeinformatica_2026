@@ -850,7 +850,89 @@ export const ATLAS_GUIAS_DECISAO: AtlasGuiaDecisao[] = [
     to: "/problemas/computador-esquentando",
     linkLabel: "Como medir antes de decidir",
   },
+  // ── ONDA 11B ──────────────────────────────────────────────────────────────
+  {
+    id: "atualizar-para-windows-11",
+    pergunta: "Atualizar para o Windows 11 ou permanecer no atual?",
+    criterio:
+      "A decisão depende de dois fatos verificáveis: se a máquina atende aos requisitos oficiais (incluindo TPM e Secure Boot) e se os programas de que você depende já rodam na versão nova. Sem esses dois, atualizar cria trabalho em vez de resolver.",
+    sinais: [
+      {
+        rotulo: "Aponta para atualizar",
+        pontos: [
+          "A verificação oficial de requisitos passa sem alerta de hardware",
+          "Os programas essenciais do seu dia a dia já têm versão suportada",
+          "Backup completo conferido antes de iniciar a migração",
+        ],
+      },
+      {
+        rotulo: "Aponta para permanecer (e planejar)",
+        pontos: [
+          "Requisito de firmware ou de processador não atendido",
+          "Sistema ou periférico crítico sem driver publicado pelo fabricante",
+          "Disco já no limite ou com alerta de saúde — migrar em cima disso é risco",
+        ],
+      },
+    ],
+    risco: "Exige atenção",
+    to: "/solucoes/formatacao",
+    linkLabel: "Ver critérios de reinstalação",
+  },
+  {
+    id: "nuvem-ou-hd-externo",
+    pergunta: "Backup na nuvem ou em HD externo?",
+    criterio:
+      "Não é escolha entre duas tecnologias: é escolha entre riscos diferentes. Nuvem protege do que acontece no local; mídia externa protege do que acontece na conta. Quem só tem um dos dois está descoberto de um lado.",
+    sinais: [
+      {
+        rotulo: "Aponta para nuvem",
+        pontos: [
+          "Arquivos que mudam todos os dias e precisam de cópia automática",
+          "Risco maior de furto, incêndio ou perda física do equipamento",
+          "Mais de um dispositivo com os mesmos arquivos",
+        ],
+      },
+      {
+        rotulo: "Aponta para mídia externa",
+        pontos: [
+          "Volume grande de arquivos estáticos (fotos, vídeos, acervos)",
+          "Necessidade de cópia desconectada, fora do alcance de ransomware",
+          "Conexão limitada ou instável para subir tudo",
+        ],
+      },
+    ],
+    risco: "Seguro de fazer sozinho",
+    to: "/seguranca-dos-dados",
+    linkLabel: "Como tratamos seus dados",
+  },
+  {
+    id: "montar-ou-comprar-pronto",
+    pergunta: "Montar o PC ou comprar pronto?",
+    criterio:
+      "Montar compensa quando existe requisito específico — placa de vídeo, silêncio, memória expansível, fonte dimensionada. Para uso genérico de escritório, comprar pronto costuma sair na frente em garantia única e prazo.",
+    sinais: [
+      {
+        rotulo: "Aponta para montar",
+        pontos: [
+          "Uso com exigência definida: edição, CAD, jogos, virtualização",
+          "Intenção de expandir memória e armazenamento nos próximos anos",
+          "Necessidade de escolher fonte, refrigeração e nível de ruído",
+        ],
+      },
+      {
+        rotulo: "Aponta para comprar pronto",
+        pontos: [
+          "Uso de escritório, navegador e pacote de produtividade",
+          "Preferência por garantia única do fabricante em vez de peça a peça",
+          "Compra por conta de empresa que exige nota e suporte do fornecedor",
+        ],
+      },
+    ],
+    to: "/servicos/montagem-de-pc",
+    linkLabel: "Montagem sob medida",
+  },
 ];
+
 
 /** Artigos do tema com aprovação editorial válida (fail-closed em dobro). */
 export function atlasArtigosAprovados(tema: AtlasTema) {

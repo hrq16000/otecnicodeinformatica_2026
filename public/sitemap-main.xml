@@ -29,6 +29,9 @@
   <url><loc>https://otecnicodeinformatica.com.br/decisoes/remoto-ou-presencial</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://otecnicodeinformatica.com.br/decisoes/hd-com-ruido</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://otecnicodeinformatica.com.br/decisoes/backup-antes-da-manutencao</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://otecnicodeinformatica.com.br/decisoes/atualizar-para-windows-11</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://otecnicodeinformatica.com.br/decisoes/nuvem-ou-hd-externo</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://otecnicodeinformatica.com.br/decisoes/montar-ou-comprar-pronto</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://otecnicodeinformatica.com.br/glossario</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://otecnicodeinformatica.com.br/glossario/bsod</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://otecnicodeinformatica.com.br/glossario/uefi</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
@@ -45,10 +48,14 @@
   <url><loc>https://otecnicodeinformatica.com.br/glossario/nat</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://otecnicodeinformatica.com.br/glossario/memoria-ram</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://otecnicodeinformatica.com.br/glossario/thermal-throttling</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://otecnicodeinformatica.com.br/glossario/secure-boot</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://otecnicodeinformatica.com.br/glossario/driver</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://otecnicodeinformatica.com.br/glossario/particao</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://otecnicodeinformatica.com.br/ferramentas</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://otecnicodeinformatica.com.br/ferramentas/checklist-computador-lento</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://otecnicodeinformatica.com.br/ferramentas/checklist-antes-de-formatar</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://otecnicodeinformatica.com.br/ferramentas/roteiro-falha-de-inicializacao</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://otecnicodeinformatica.com.br/ferramentas/verificador-de-backup</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://otecnicodeinformatica.com.br/ferramentas/ssd-ou-ram</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://otecnicodeinformatica.com.br/ferramentas/roteiro-wifi-instavel</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
 </urlset>

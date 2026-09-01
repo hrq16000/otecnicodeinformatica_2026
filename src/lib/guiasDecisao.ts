@@ -584,7 +584,294 @@ export const GUIAS_DECISAO: GuiaDecisaoPagina[] = [
       },
     ],
   },
+  // ── ONDA 11B ──────────────────────────────────────────────────────────────
+  {
+    slug: "atualizar-para-windows-11",
+    h1: "Atualizar para o Windows 11 ou permanecer no sistema atual?",
+    nomeCurto: "Atualizar para o Windows 11",
+    resumo:
+      "A migração depende de dois fatos verificáveis — requisitos oficiais atendidos e programas essenciais suportados — e de um backup conferido. Este guia mostra como checar os três antes de iniciar.",
+    respostaDireta:
+      "Atualize quando a verificação oficial de requisitos passa sem alerta, os programas de que você depende têm versão suportada e existe backup testado; permaneça (e planeje a substituição do equipamento) quando o firmware, o processador ou um driver crítico não atendem — forçar a instalação em máquina fora de requisito troca um incômodo por um sistema sem atualização de segurança garantida.",
+    contexto: [
+      "A pergunta chega quase sempre pelo lado errado: 'o Windows 11 é melhor?'. Do ponto de vista de quem usa o computador para trabalhar, a pergunta útil é outra — o que muda no meu dia a dia e o que pode parar de funcionar. Sistema operacional não é upgrade de desempenho: é base sobre a qual seus programas rodam.",
+      "Os requisitos do Windows 11 incluem recursos de firmware que muitos computadores anteriores a 2018 simplesmente não têm habilitados ou não possuem. Em parte dos casos, o recurso existe e está desligado na configuração do firmware; em outra parte, o processador está fora da lista suportada pela Microsoft. São situações diferentes, com desfechos diferentes.",
+      "Há ainda o fator que ninguém verifica antes e todo mundo descobre depois: periférico antigo sem driver publicado e sistema de gestão homologado só para a versão anterior. Em ambiente de empresa, esse é o item que decide o cronograma — não o sistema em si.",
+    ],
+    comoDecidir: [
+      {
+        titulo: "1. Rode a verificação oficial de requisitos",
+        texto:
+          "A Microsoft publica a verificação de compatibilidade e a lista de processadores suportados. Ela responde de forma objetiva se o bloqueio é de firmware (recurso desligado, que às vezes se resolve na configuração) ou de processador — que não se resolve por software.",
+      },
+      {
+        titulo: "2. Liste os programas dos quais você não pode abrir mão",
+        texto:
+          "Sistema da empresa, emissor fiscal, software de máquina, plugin de áudio, scanner antigo. Para cada um, confirme na página do próprio fabricante se há versão suportada. Um item sem resposta clara já é motivo para adiar a migração daquela máquina.",
+      },
+      {
+        titulo: "3. Confira a saúde do disco antes de qualquer migração",
+        texto:
+          "Atualização de sistema é uma operação intensa de leitura e escrita. Em disco com contadores S.M.A.R.T. deteriorando, é justamente durante esse processo que a falha aparece — com o sistema no meio do caminho.",
+      },
+      {
+        titulo: "4. Faça o backup e teste a restauração antes de iniciar",
+        texto:
+          "Copiar não basta: abra alguns arquivos na cópia e confirme que estão íntegros. A migração costuma correr bem; o backup existe para o caso em que não corre, e nesse caso ele precisa funcionar de primeira.",
+      },
+    ],
+    custo:
+      "A atualização em si não tem custo de licença para quem já tem o sistema anterior ativado. O custo real aparece em três lugares: tempo de indisponibilidade da máquina, eventual substituição de periférico sem driver e, quando o equipamento está fora de requisito, a decisão de trocar de máquina. Valores de serviço ficam sempre visíveis na página de preços e políticas.",
+    ondeParar: [
+      "Disco com alerta S.M.A.R.T. ou ruído mecânico — resolva o armazenamento antes de pensar em migrar.",
+      "Programa essencial sem versão suportada confirmada pelo fabricante.",
+      "Máquina de produção sem janela de indisponibilidade combinada — migração no meio do expediente vira prejuízo.",
+      "Contornos que desabilitam verificação de requisitos em máquina de trabalho: o sistema fica em condição não suportada, sem garantia de receber atualização.",
+    ],
+    perguntas: [
+      {
+        pergunta: "Meu computador não atende aos requisitos. Posso instalar mesmo assim?",
+        resposta:
+          "Existem contornos divulgados, e a própria Microsoft avisa que máquinas fora de requisito podem não receber atualizações. Para uso de trabalho, isso é um risco de segurança que não compensa: a alternativa correta é manter o sistema suportado enquanto planeja a substituição do equipamento.",
+      },
+      {
+        pergunta: "A atualização apaga meus arquivos?",
+        resposta:
+          "A atualização preserva arquivos e programas no fluxo normal. Isso não substitui backup: qualquer interrupção de energia, falha de disco ou incompatibilidade no meio do processo pode exigir reinstalação limpa.",
+      },
+      {
+        pergunta: "O Windows 11 deixa o computador mais rápido?",
+        resposta:
+          "Não é um upgrade de desempenho. Máquina lenta por disco mecânico ou memória insuficiente continua lenta — o ganho perceptível vem do hardware, não da versão do sistema.",
+      },
+    ],
+    links: [
+      {
+        rotulo: "Checklist antes de formatar",
+        to: "/ferramentas/checklist-antes-de-formatar",
+        contexto: "A mesma preparação vale para migração de sistema: inventário, cópia e teste.",
+      },
+      {
+        rotulo: "TPM no glossário",
+        to: "/glossario/tpm",
+        contexto: "O requisito de firmware que mais bloqueia migração em máquinas anteriores.",
+      },
+      {
+        rotulo: "Secure Boot no glossário",
+        to: "/glossario/secure-boot",
+        contexto: "O outro item de firmware exigido — e por que desligá-lo não é solução.",
+      },
+      {
+        rotulo: "Formatação e reinstalação",
+        to: "/solucoes/formatacao",
+        contexto: "Quando a migração limpa é preferível à atualização por cima.",
+      },
+    ],
+    fontes: [
+      {
+        titulo: "Microsoft — Requisitos de sistema do Windows 11",
+        url: "https://www.microsoft.com/pt-br/windows/windows-11-specifications",
+        nota: "Requisitos oficiais, incluindo TPM 2.0 e inicialização segura.",
+      },
+      {
+        titulo: "Microsoft Learn — Windows 11 processor requirements",
+        url: "https://learn.microsoft.com/en-us/windows-hardware/design/minimum/supported/windows-11-supported-intel-processors",
+        nota: "Lista oficial de processadores suportados.",
+      },
+    ],
+  },
+  {
+    slug: "nuvem-ou-hd-externo",
+    h1: "Backup na nuvem ou em HD externo: qual protege o que você tem?",
+    nomeCurto: "Nuvem ou HD externo",
+    resumo:
+      "Nuvem e mídia externa protegem de riscos diferentes: uma cobre o que acontece no local, a outra cobre o que acontece na conta. Este guia mostra como combinar as duas sem gastar demais.",
+    respostaDireta:
+      "Use nuvem para o que muda todo dia e precisa de cópia automática; use mídia externa desconectada para o acervo grande e para ter uma cópia fora do alcance de qualquer invasão de conta. Quem só tem um dos dois está descoberto de um lado — e a escolha entre eles só é excludente quando o orçamento não permite os dois.",
+    contexto: [
+      "A discussão costuma ser apresentada como disputa de tecnologia, e não é. Backup se avalia por cenário de perda: incêndio, furto, falha do disco, apagamento acidental, ransomware, erro de sincronização. Cada meio cobre bem alguns desses cenários e mal os outros.",
+      "Sincronização automática de arquivos, sozinha, não é backup. Se um arquivo é apagado ou criptografado no computador, a alteração se propaga para a cópia sincronizada. O que salva nesse caso é versionamento com histórico ou uma cópia que estava desconectada no momento do incidente.",
+      "A prática recomendada há décadas por órgãos de segurança é ter mais de uma cópia, em mais de um tipo de mídia, com pelo menos uma fora do local. Nuvem e HD externo, juntos, atendem isso com custo baixo para uso doméstico e para escritórios pequenos.",
+    ],
+    comoDecidir: [
+      {
+        titulo: "1. Separe o que muda todo dia do que nunca muda",
+        texto:
+          "Documentos de trabalho, planilhas e projetos em andamento mudam diariamente e pedem cópia automática — terreno da nuvem. Fotos antigas, vídeos e acervos fechados não mudam mais: ocupam muito espaço e cabem melhor em mídia externa.",
+      },
+      {
+        titulo: "2. Estime o volume e a sua conexão",
+        texto:
+          "Subir centenas de gigabytes em conexão doméstica com upload limitado leva um tempo que inviabiliza a primeira carga. Nesse caso, a cópia inicial vai para mídia externa e a nuvem cobre apenas a pasta de trabalho ativa.",
+      },
+      {
+        titulo: "3. Verifique se existe histórico de versões",
+        texto:
+          "Pergunte do serviço que você já usa: ele guarda versões anteriores e por quanto tempo? Sem histórico, um apagamento ou uma criptografia por ransomware se propaga para a cópia — e a nuvem deixa de ser proteção.",
+      },
+      {
+        titulo: "4. Garanta uma cópia desconectada",
+        texto:
+          "Um disco externo que fica permanentemente ligado ao computador está exposto ao mesmo incidente que o computador. Conectar, copiar e desconectar é o que transforma essa mídia em rede de segurança real.",
+      },
+      {
+        titulo: "5. Teste a restauração, não só a cópia",
+        texto:
+          "Escolha três arquivos que importam de verdade, restaure-os a partir de cada meio e abra. Backup só existe quando a restauração foi comprovada pelo menos uma vez.",
+      },
+    ],
+    custo:
+      "O custo da nuvem é recorrente e cresce com o volume; o da mídia externa é único, mas inclui a substituição periódica do disco, que também se desgasta. Comparar apenas o preço mensal engana: a conta honesta considera quantos anos de assinatura equivalem a um disco novo e quanto vale poder restaurar de dois lugares diferentes.",
+    ondeParar: [
+      "Suspeita de ransomware em andamento: não conecte o disco de backup ao computador afetado.",
+      "Disco externo com ruído mecânico ou que some do sistema — trate-o como mídia comprometida e não confie mais nele.",
+      "Cópia única em um só lugar, sem histórico de versões: essa configuração não protege contra apagamento e criptografia.",
+      "Arquivos críticos de empresa sem responsável definido pela rotina: backup sem dono não é executado.",
+    ],
+    perguntas: [
+      {
+        pergunta: "Sincronizar meus arquivos na nuvem já é backup?",
+        resposta:
+          "Só se o serviço mantiver histórico de versões e lixeira com prazo. Sincronização pura replica o que acontece no computador, inclusive o apagamento e a criptografia por ransomware.",
+      },
+      {
+        pergunta: "Quantas cópias eu realmente preciso ter?",
+        resposta:
+          "A referência prática usada por órgãos de segurança é mais de uma cópia, em tipos de mídia diferentes, com uma delas fora do local. Para uso doméstico, nuvem para a pasta ativa e disco externo desconectado para o acervo já atendem.",
+      },
+      {
+        pergunta: "Pendrive serve como backup?",
+        resposta:
+          "Serve como transporte, não como cópia de segurança de longo prazo. São mídias pequenas, fáceis de perder e com desgaste imprevisível — a chance de o pendrive falhar junto com a necessidade é alta.",
+      },
+    ],
+    links: [
+      {
+        rotulo: "Verificador de backup",
+        to: "/ferramentas/verificador-de-backup",
+        contexto: "Cinco perguntas que revelam se a rotina atual protege de verdade.",
+      },
+      {
+        rotulo: "Backup incremental no glossário",
+        to: "/glossario/backup-incremental",
+        contexto: "Como o tipo de cópia muda o tempo e o espaço necessários.",
+      },
+      {
+        rotulo: "Segurança dos dados",
+        to: "/seguranca-dos-dados",
+        contexto: "O que fazemos com os seus arquivos durante um atendimento.",
+      },
+      {
+        rotulo: "Backup para empresas",
+        to: "/servicos/backup-para-empresas",
+        contexto: "Rotina com retenção definida e responsabilidade por escrito.",
+      },
+    ],
+    fontes: [
+      {
+        titulo: "CISA — Data Backup Options",
+        url: "https://www.cisa.gov/sites/default/files/publications/data_backup_options.pdf",
+        nota: "Documento oficial sobre tipos de mídia, cópia fora do local e teste de restauração.",
+      },
+      {
+        titulo: "CERT.br — Cartilha de Segurança para Internet",
+        url: "https://cartilha.cert.br/",
+        nota: "Referência brasileira sobre cópias de segurança e boas práticas domésticas.",
+      },
+    ],
+  },
+  {
+    slug: "montar-ou-comprar-pronto",
+    h1: "Montar o PC ou comprar pronto: quando cada caminho compensa",
+    nomeCurto: "Montar ou comprar pronto",
+    resumo:
+      "Montar compensa quando há requisito específico de desempenho, silêncio ou expansão. Para uso de escritório, comprar pronto costuma vencer em garantia única e simplicidade.",
+    respostaDireta:
+      "Monte quando existe um requisito nomeável — placa de vídeo, memória expansível, fonte dimensionada, refrigeração silenciosa — e você quer escolher cada peça; compre pronto quando o uso é genérico de produtividade, quando a compra é por empresa que precisa de nota e suporte único, ou quando ninguém vai acompanhar garantia peça a peça.",
+    contexto: [
+      "A conta de 'sai mais barato montar' nem sempre fecha. Máquinas prontas de entrada usam volume de compra para preços que a montagem avulsa não alcança. A vantagem da montagem aparece do meio para cima, quando o pronto embute componentes que você trocaria de qualquer forma.",
+      "O ponto que quase ninguém coloca na planilha é a garantia. No pronto, existe um responsável só; na montagem, cada peça tem prazo e canal próprios — o que é excelente para quem quer trocar só o que falhou, e ruim para quem não quer administrar isso.",
+      "Há também o item invisível: fonte de alimentação. É a peça mais sacrificada em máquina pronta de entrada e a que mais causa dano quando falha mal. Em montagem, é justamente onde vale gastar bem.",
+    ],
+    comoDecidir: [
+      {
+        titulo: "1. Nomeie o requisito real do uso",
+        texto:
+          "Edição de vídeo, CAD, jogos, virtualização e captura de áudio têm exigências específicas de processador, memória e placa de vídeo. Se o uso é navegador, planilha e reunião, não existe requisito que justifique montagem — e o pronto resolve.",
+      },
+      {
+        titulo: "2. Pense em expansão dos próximos anos",
+        texto:
+          "Placa com slots livres de memória e espaço para mais um disco prolonga a vida útil da máquina. Muitos prontos compactos vêm com memória soldada ou um único slot — o que fecha a porta de qualquer upgrade futuro.",
+      },
+      {
+        titulo: "3. Decida quem vai administrar a garantia",
+        texto:
+          "Se a resposta for 'ninguém quer se preocupar com isso', o pronto tem vantagem objetiva: um contato, um prazo. Em empresa, considere também exigência de nota fiscal única e contrato de suporte.",
+      },
+      {
+        titulo: "4. Some tudo, inclusive o que não é peça",
+        texto:
+          "Comparação honesta inclui fonte de qualidade, sistema operacional licenciado, gabinete com fluxo de ar adequado e o tempo de quem vai montar e testar. Sem esses itens, a planilha da montagem fica artificialmente baixa.",
+      },
+    ],
+    custo:
+      "Não existe valor fixo: depende inteiramente das peças escolhidas e do momento do mercado. O que sustentamos é o critério — dimensionar para o uso real em vez de vender potência que não será usada, e nunca economizar na fonte. Os valores dos serviços de montagem e configuração ficam visíveis na página de preços e políticas.",
+    ondeParar: [
+      "Orçamento de montagem que não discrimina modelo de fonte e de placa-mãe: sem isso não há comparação possível.",
+      "Máquina pronta com memória soldada quando o plano é expandir depois.",
+      "Compra pressionada por promoção sem que o requisito de uso tenha sido definido.",
+      "Reaproveitamento de fonte antiga em configuração mais exigente — é a origem clássica de desligamento sob carga.",
+    ],
+    perguntas: [
+      {
+        pergunta: "Montar é sempre mais barato?",
+        resposta:
+          "Não. Na faixa de entrada, o volume de compra do fabricante costuma ganhar. A montagem tende a compensar quando existe requisito específico e quando você aproveitaria peças que já tem.",
+      },
+      {
+        pergunta: "Dá para aproveitar peças do computador antigo?",
+        resposta:
+          "Disco, gabinete e às vezes memória sim, dependendo da geração. Fonte antiga é o item que menos vale reaproveitar em configuração mais exigente — o risco recai sobre as peças novas.",
+      },
+      {
+        pergunta: "E a garantia de uma máquina montada?",
+        resposta:
+          "Cada componente mantém a garantia do próprio fabricante, e a montagem/configuração tem a garantia do serviço. É mais granular: troca-se apenas a peça que falhou, mas alguém precisa acompanhar prazos e canais.",
+      },
+    ],
+    links: [
+      {
+        rotulo: "Montagem de PC sob medida",
+        to: "/servicos/montagem-de-pc",
+        contexto: "Como dimensionamos a configuração a partir do uso declarado.",
+      },
+      {
+        rotulo: "PC gamer",
+        to: "/servicos/pc-gamer",
+        contexto: "Quando o requisito é placa de vídeo, refrigeração e fonte dimensionada.",
+      },
+      {
+        rotulo: "Consertar ou substituir",
+        to: "/decisoes/consertar-ou-substituir",
+        contexto: "Antes de montar, verifique se o equipamento atual ainda compensa.",
+      },
+      {
+        rotulo: "Memória RAM no glossário",
+        to: "/glossario/memoria-ram",
+        contexto: "Capacidade, canais e por que o slot livre importa na escolha da placa.",
+      },
+    ],
+    fontes: [
+      {
+        titulo: "Intel — Guia de temperatura e refrigeração de processadores",
+        url: "https://www.intel.com/content/www/us/en/gaming/resources/cpu-temperature.html",
+        nota: "Orientação do fabricante sobre dissipação e limites térmicos na escolha da refrigeração.",
+      },
+    ],
+  },
 ];
+
 
 export const guiaDecisaoPorSlug = (slug: string): GuiaDecisaoPagina | undefined =>
   GUIAS_DECISAO.find((g) => g.slug === slug);

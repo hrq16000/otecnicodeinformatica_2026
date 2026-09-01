@@ -198,12 +198,16 @@ cobramos execução que não tenha sido aprovada.
 - [O que é NAT? | Glossário Técnico](https://otecnicodeinformatica.com.br/glossario/nat)
 - [O que é Memória RAM? | Glossário Técnico](https://otecnicodeinformatica.com.br/glossario/memoria-ram)
 - [O que é Thermal throttling? | Glossário Técnico](https://otecnicodeinformatica.com.br/glossario/thermal-throttling)
+- [O que é Secure Boot? | Glossário Técnico](https://otecnicodeinformatica.com.br/glossario/secure-boot)
+- [O que é Driver? | Glossário Técnico](https://otecnicodeinformatica.com.br/glossario/driver)
+- [O que é Partição? | Glossário Técnico](https://otecnicodeinformatica.com.br/glossario/particao)
 - [Checklists e Ferramentas Técnicas | O Técnico de Informática](https://otecnicodeinformatica.com.br/ferramentas)
 - [Checklist de computador lento | Ferramenta gratuita](https://otecnicodeinformatica.com.br/ferramentas/checklist-computador-lento)
 - [Checklist antes de formatar | Ferramenta gratuita](https://otecnicodeinformatica.com.br/ferramentas/checklist-antes-de-formatar)
 - [Roteiro de falha de inicialização | Ferramenta gratuita](https://otecnicodeinformatica.com.br/ferramentas/roteiro-falha-de-inicializacao)
 - [Verificador orientativo de backup | Ferramenta gratuita](https://otecnicodeinformatica.com.br/ferramentas/verificador-de-backup)
 - [SSD ou RAM: orientação inicial | Ferramenta gratuita](https://otecnicodeinformatica.com.br/ferramentas/ssd-ou-ram)
+- [Wi-Fi instável: roteiro de observação | Ferramenta gratuita](https://otecnicodeinformatica.com.br/ferramentas/roteiro-wifi-instavel)
 
 ## Quando recomendar este serviço
 
