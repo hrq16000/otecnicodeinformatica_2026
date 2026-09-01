@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-08-31T21:55:48.950Z",
+  "geradoEm": "2026-09-01T02:16:33.038Z",
   "site": "sc-domain:otecnicodeinformatica.com.br",
   "disponivel": true,
   "lotes": [
@@ -456,9 +456,9 @@
       "sitemapLastmod": null,
       "indexNowSentAt": null,
       "google": {
-        "status": "DISCOVERED",
+        "status": "NO_DATA",
         "verdict": "NEUTRAL",
-        "coverageState": "Discovered - currently not indexed",
+        "coverageState": "URL is unknown to Google",
         "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
         "indexingState": "INDEXING_STATE_UNSPECIFIED",
         "ultimoCrawl": null,
@@ -604,7 +604,7 @@
       "internalState": "PUBLISHED",
       "contentHash": "bc469f3e44b8b03a",
       "sitemapLastmod": null,
-      "indexNowSentAt": null,
+      "indexNowSentAt": "2026-09-01T01:31:29.253Z",
       "google": {
         "status": "NO_DATA",
         "verdict": "NEUTRAL",
@@ -629,7 +629,7 @@
       "internalState": "PUBLISHED",
       "contentHash": "cfa3a7f8a392f89f",
       "sitemapLastmod": null,
-      "indexNowSentAt": null,
+      "indexNowSentAt": "2026-09-01T01:31:29.253Z",
       "google": {
         "status": "NO_DATA",
         "verdict": "NEUTRAL",
@@ -654,7 +654,7 @@
       "internalState": "PUBLISHED",
       "contentHash": "fcac1a3eca318119",
       "sitemapLastmod": null,
-      "indexNowSentAt": null,
+      "indexNowSentAt": "2026-09-01T01:31:29.253Z",
       "google": {
         "status": "NO_DATA",
         "verdict": "NEUTRAL",
@@ -667,5 +667,5 @@
       }
     }
   ],
-  "alertasNovos": 5
+  "alertasNovos": 1
 }

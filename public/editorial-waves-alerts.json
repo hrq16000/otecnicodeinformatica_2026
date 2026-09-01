@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-08-31T21:55:48.950Z",
+  "geradoEm": "2026-09-01T02:16:33.038Z",
   "entregaCanais": {
     "enviado": false,
     "motivo": "DELIVERY_DISABLED",
@@ -11,15 +11,15 @@
     "slack": "NOT_CONFIGURED",
     "email": "NOT_CONFIGURED",
     "enviados": 0,
-    "ignorados": 5
+    "ignorados": 1
   },
   "estado": {
     "/blog/limpar-arquivos-temporarios-windows": {
       "url": "/blog/limpar-arquivos-temporarios-windows",
-      "previousState": "DISCOVERED",
+      "previousState": "NO_DATA",
       "currentState": "NO_DATA",
       "internalState": "PUBLISHED",
-      "observedAt": "2026-08-31T21:55:48.950Z",
+      "observedAt": "2026-09-01T02:16:33.038Z",
       "lastAlertedTransition": "GSC:DISCOVERED→NO_DATA",
       "contentHash": "cba47ddd4ab081a6"
     },
@@ -28,7 +28,7 @@
       "previousState": "INDEXED",
       "currentState": "INDEXED",
       "internalState": "PUBLISHED",
-      "observedAt": "2026-08-31T21:55:48.950Z",
+      "observedAt": "2026-09-01T02:16:33.038Z",
       "lastAlertedTransition": "GSC:NO_DATA→INDEXED",
       "contentHash": "8ec249313054318c"
     },
@@ -37,7 +37,7 @@
       "previousState": "INDEXED",
       "currentState": "INDEXED",
       "internalState": "PUBLISHED",
-      "observedAt": "2026-08-31T21:55:48.950Z",
+      "observedAt": "2026-09-01T02:16:33.038Z",
       "lastAlertedTransition": "GSC:NO_DATA→INDEXED",
       "contentHash": "3f80566c863cdfed"
     },
@@ -46,7 +46,7 @@
       "previousState": "INDEXED",
       "currentState": "INDEXED",
       "internalState": "PUBLISHED",
-      "observedAt": "2026-08-31T21:55:48.950Z",
+      "observedAt": "2026-09-01T02:16:33.038Z",
       "lastAlertedTransition": "GSC:NO_DATA→INDEXED",
       "contentHash": "9392f7964190fc61"
     },
@@ -55,16 +55,16 @@
       "previousState": "INDEXED",
       "currentState": "INDEXED",
       "internalState": "PUBLISHED",
-      "observedAt": "2026-08-31T21:55:48.950Z",
+      "observedAt": "2026-09-01T02:16:33.038Z",
       "lastAlertedTransition": "GSC:NO_DATA→INDEXED",
       "contentHash": "8815a2f22052efd9"
     },
     "/blog/curto-circuito-placa-mae-como-identificar": {
       "url": "/blog/curto-circuito-placa-mae-como-identificar",
-      "previousState": "DISCOVERED",
+      "previousState": "NO_DATA",
       "currentState": "NO_DATA",
       "internalState": "PUBLISHED",
-      "observedAt": "2026-08-31T21:55:48.950Z",
+      "observedAt": "2026-09-01T02:16:33.038Z",
       "lastAlertedTransition": "GSC:DISCOVERED→NO_DATA",
       "contentHash": "ed7de44f66517ceb"
     },
@@ -73,7 +73,7 @@
       "previousState": "INDEXED",
       "currentState": "INDEXED",
       "internalState": "PUBLISHED",
-      "observedAt": "2026-08-31T21:55:48.950Z",
+      "observedAt": "2026-09-01T02:16:33.038Z",
       "lastAlertedTransition": "GSC:NO_DATA→INDEXED",
       "contentHash": "b0a31cf6858dda7c"
     },
@@ -82,7 +82,7 @@
       "previousState": "INDEXED",
       "currentState": "INDEXED",
       "internalState": "PUBLISHED",
-      "observedAt": "2026-08-31T21:55:48.950Z",
+      "observedAt": "2026-09-01T02:16:33.038Z",
       "lastAlertedTransition": "GSC:NO_DATA→INDEXED",
       "contentHash": "ba7d864b73e0953e"
     },
@@ -91,7 +91,7 @@
       "previousState": "INDEXED",
       "currentState": "INDEXED",
       "internalState": "PUBLISHED",
-      "observedAt": "2026-08-31T21:55:48.950Z",
+      "observedAt": "2026-09-01T02:16:33.038Z",
       "lastAlertedTransition": "GSC:NO_DATA→INDEXED",
       "contentHash": "0f9c121902a02c16"
     },
@@ -100,7 +100,7 @@
       "previousState": "INDEXED",
       "currentState": "INDEXED",
       "internalState": "PUBLISHED",
-      "observedAt": "2026-08-31T21:55:48.950Z",
+      "observedAt": "2026-09-01T02:16:33.038Z",
       "lastAlertedTransition": "GSC:NO_DATA→INDEXED",
       "contentHash": "8cc6dd5a67fa4804"
     },
@@ -109,7 +109,7 @@
       "previousState": "INDEXED",
       "currentState": "INDEXED",
       "internalState": "PUBLISHED",
-      "observedAt": "2026-08-31T21:55:48.950Z",
+      "observedAt": "2026-09-01T02:16:33.038Z",
       "lastAlertedTransition": "GSC:NO_DATA→INDEXED",
       "contentHash": "c6ac43157fa13296"
     },
@@ -118,7 +118,7 @@
       "previousState": "INDEXED",
       "currentState": "INDEXED",
       "internalState": "PUBLISHED",
-      "observedAt": "2026-08-31T21:55:48.950Z",
+      "observedAt": "2026-09-01T02:16:33.038Z",
       "lastAlertedTransition": "GSC:NO_DATA→INDEXED",
       "contentHash": "af001374a0c36d76"
     },
@@ -127,7 +127,7 @@
       "previousState": "INDEXED",
       "currentState": "INDEXED",
       "internalState": "PUBLISHED",
-      "observedAt": "2026-08-31T21:55:48.950Z",
+      "observedAt": "2026-09-01T02:16:33.038Z",
       "lastAlertedTransition": "GSC:NO_DATA→INDEXED",
       "contentHash": "02bdd4293fd98d12"
     },
@@ -136,7 +136,7 @@
       "previousState": "INDEXED",
       "currentState": "INDEXED",
       "internalState": "PUBLISHED",
-      "observedAt": "2026-08-31T21:55:48.950Z",
+      "observedAt": "2026-09-01T02:16:33.038Z",
       "lastAlertedTransition": "GSC:NO_DATA→INDEXED",
       "contentHash": "da3b4f48d0ebd9ad"
     },
@@ -145,7 +145,7 @@
       "previousState": "INDEXED",
       "currentState": "INDEXED",
       "internalState": "PUBLISHED",
-      "observedAt": "2026-08-31T21:55:48.950Z",
+      "observedAt": "2026-09-01T02:16:33.038Z",
       "lastAlertedTransition": "GSC:NO_DATA→INDEXED",
       "contentHash": "42c27b904b258a4b"
     },
@@ -154,17 +154,17 @@
       "previousState": "INDEXED",
       "currentState": "INDEXED",
       "internalState": "PUBLISHED",
-      "observedAt": "2026-08-31T21:55:48.950Z",
+      "observedAt": "2026-09-01T02:16:33.038Z",
       "lastAlertedTransition": "GSC:NO_DATA→INDEXED",
       "contentHash": "21df8cdfe71b2adc"
     },
     "/blog/webcam-nao-funciona-o-que-verificar": {
       "url": "/blog/webcam-nao-funciona-o-que-verificar",
       "previousState": "DISCOVERED",
-      "currentState": "DISCOVERED",
+      "currentState": "NO_DATA",
       "internalState": "PUBLISHED",
-      "observedAt": "2026-08-31T21:55:48.950Z",
-      "lastAlertedTransition": "GSC:NO_DATA→DISCOVERED",
+      "observedAt": "2026-09-01T02:16:33.038Z",
+      "lastAlertedTransition": "GSC:DISCOVERED→NO_DATA",
       "contentHash": "a43f9d8b53e2c740"
     },
     "/blog/permissoes-de-camera-no-windows": {
@@ -172,7 +172,7 @@
       "previousState": "INDEXED",
       "currentState": "INDEXED",
       "internalState": "PUBLISHED",
-      "observedAt": "2026-08-31T21:55:48.950Z",
+      "observedAt": "2026-09-01T02:16:33.038Z",
       "lastAlertedTransition": "GSC:NO_DATA→INDEXED",
       "contentHash": "fd8395482ebfe7a3"
     },
@@ -181,7 +181,7 @@
       "previousState": "INDEXED",
       "currentState": "INDEXED",
       "internalState": "PUBLISHED",
-      "observedAt": "2026-08-31T21:55:48.950Z",
+      "observedAt": "2026-09-01T02:16:33.038Z",
       "lastAlertedTransition": "GSC:NO_DATA→INDEXED",
       "contentHash": "bdd26f41eb38c457"
     },
@@ -190,7 +190,7 @@
       "previousState": "INDEXED",
       "currentState": "INDEXED",
       "internalState": "PUBLISHED",
-      "observedAt": "2026-08-31T21:55:48.950Z",
+      "observedAt": "2026-09-01T02:16:33.038Z",
       "lastAlertedTransition": "GSC:NO_DATA→INDEXED",
       "contentHash": "83365c1748e7c146"
     },
@@ -199,7 +199,7 @@
       "previousState": "INDEXED",
       "currentState": "INDEXED",
       "internalState": "PUBLISHED",
-      "observedAt": "2026-08-31T21:55:48.950Z",
+      "observedAt": "2026-09-01T02:16:33.038Z",
       "lastAlertedTransition": "GSC:NO_DATA→INDEXED",
       "contentHash": "d0e46137cd64a8f8"
     },
@@ -208,39 +208,51 @@
       "previousState": "INDEXED",
       "currentState": "INDEXED",
       "internalState": "PUBLISHED",
-      "observedAt": "2026-08-31T21:55:48.950Z",
+      "observedAt": "2026-09-01T02:16:33.038Z",
       "lastAlertedTransition": "GSC:NO_DATA→INDEXED",
       "contentHash": "b81c2bd88e8987d7"
     },
     "/blog/boot-uefi-ou-legacy-como-identificar": {
       "url": "/blog/boot-uefi-ou-legacy-como-identificar",
-      "previousState": null,
+      "previousState": "NO_DATA",
       "currentState": "NO_DATA",
       "internalState": "PUBLISHED",
-      "observedAt": "2026-08-31T21:55:48.950Z",
+      "observedAt": "2026-09-01T02:16:33.038Z",
       "lastAlertedTransition": "EDITORIAL:∅→PUBLISHED",
       "contentHash": "bc469f3e44b8b03a"
     },
     "/blog/ordem-de-boot-na-bios-como-configurar": {
       "url": "/blog/ordem-de-boot-na-bios-como-configurar",
-      "previousState": null,
+      "previousState": "NO_DATA",
       "currentState": "NO_DATA",
       "internalState": "PUBLISHED",
-      "observedAt": "2026-08-31T21:55:48.950Z",
+      "observedAt": "2026-09-01T02:16:33.038Z",
       "lastAlertedTransition": "EDITORIAL:∅→PUBLISHED",
       "contentHash": "cfa3a7f8a392f89f"
     },
     "/blog/windows-reparo-automatico-em-loop": {
       "url": "/blog/windows-reparo-automatico-em-loop",
-      "previousState": null,
+      "previousState": "NO_DATA",
       "currentState": "NO_DATA",
       "internalState": "PUBLISHED",
-      "observedAt": "2026-08-31T21:55:48.950Z",
+      "observedAt": "2026-09-01T02:16:33.038Z",
       "lastAlertedTransition": "EDITORIAL:∅→PUBLISHED",
       "contentHash": "fcac1a3eca318119"
     }
   },
   "alertas": [
+    {
+      "url": "/blog/webcam-nao-funciona-o-que-verificar",
+      "lote": "10C/4",
+      "owner": "webcam-nao-funciona",
+      "source": "GSC",
+      "eventType": "GSC_EVENT",
+      "previousState": "DISCOVERED",
+      "currentState": "NO_DATA",
+      "severity": "INFO",
+      "observedAt": "2026-09-01T02:16:33.038Z",
+      "contentHash": "a43f9d8b53e2c740"
+    },
     {
       "url": "/blog/limpar-arquivos-temporarios-windows",
       "lote": "10C/0",
