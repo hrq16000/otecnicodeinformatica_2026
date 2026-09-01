@@ -159,10 +159,41 @@ for (const dup of introsPonte.filter((i, n) => introsPonte.indexOf(i) !== n)) {
   err(`pontes: texto de introdução repetido entre páginas — "${dup.slice(0, 60)}…"`);
 }
 
+// ── 6. guias de decisão independentes (Fase 4) ─────────────────────────────
+const { DECISOES_SLUGS } = await import("./lib/curated-urls.mjs");
+const tsDecisoes = GUIAS_DECISAO.map((g) => g.slug);
+for (const s of DECISOES_SLUGS as string[]) {
+  if (!tsDecisoes.includes(s)) err(`decisões: slug curado "${s}" sem guia em guiasDecisao.ts`);
+}
+for (const s of tsDecisoes) {
+  if (!(DECISOES_SLUGS as string[]).includes(s)) err(`decisões: guia "${s}" fora do sitemap curado`);
+}
+const PRAZO = /\b(em até \d+\s*(h|horas|minutos)|no mesmo dia|garantimos o prazo)\b/i;
+for (const g of GUIAS_DECISAO) {
+  if (!cardAtlasDoGuia(g.slug)) err(`decisão/${g.slug}: sem card correspondente no Atlas`);
+  if (!g.respostaDireta?.trim()) err(`decisão/${g.slug}: sem resposta direta`);
+  if (g.comoDecidir.length < 3) err(`decisão/${g.slug}: menos de 3 critérios de decisão`);
+  if (g.ondeParar.length === 0) err(`decisão/${g.slug}: sem condições de parada`);
+  if (g.perguntas.length < 2) err(`decisão/${g.slug}: menos de 2 perguntas frequentes`);
+  if ((g.fontes ?? []).length === 0) err(`decisão/${g.slug}: sem fonte primária`);
+  for (const f of g.fontes ?? []) {
+    if (!/^https:\/\//.test(f.url)) err(`decisão/${g.slug}: fonte sem https — ${f.url}`);
+  }
+  validarLinks(`decisão/${g.slug}`, g.links);
+  const texto = JSON.stringify(g);
+  if (PROIBIDO.test(texto)) err(`decisão/${g.slug}: viola o contrato de segurança`);
+  if (PRAZO.test(texto)) err(`decisão/${g.slug}: promessa de prazo no texto`);
+}
+const respostas = GUIAS_DECISAO.map((g) => g.respostaDireta);
+for (const dup of respostas.filter((r, n) => respostas.indexOf(r) !== n)) {
+  err(`decisões: resposta direta repetida entre guias — "${dup.slice(0, 60)}…"`);
+}
+
 // ── resultado ──────────────────────────────────────────────────────────────
 console.log(
-  `Biblioteca técnica: ${TERMOS_GLOSSARIO.length} termo(s) · ${FERRAMENTAS_TECNICAS.length} ferramenta(s) · ${Object.keys(BIBLIOTECA_PONTES).length} ponte(s) · ${estatico.size} rota(s) no espelho estático.`,
+  `Biblioteca técnica: ${TERMOS_GLOSSARIO.length} termo(s) · ${FERRAMENTAS_TECNICAS.length} ferramenta(s) · ${GUIAS_DECISAO.length} guia(s) de decisão · ${Object.keys(BIBLIOTECA_PONTES).length} ponte(s) · ${estatico.size} rota(s) no espelho estático.`,
 );
+
 if (erros.length) {
   console.error(`\n✖ BLOQUEADO: ${erros.length} problema(s) na biblioteca técnica:`);
   for (const e of erros.slice(0, 50)) console.error(`  - ${e}`);
