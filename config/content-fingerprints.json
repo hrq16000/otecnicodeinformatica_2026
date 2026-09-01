@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-09-01T00:40:21.363Z",
+  "geradoEm": "2026-09-01T02:53:38.574Z",
   "dist": "./dist",
   "rotas": {
     "/": {
@@ -523,7 +523,7 @@
       "origem": "hash-change"
     },
     "/guia-tecnico-informatica": {
-      "hash": "72617f5035ab",
+      "hash": "5bfcd689b555",
       "lastmod": "2026-09-01",
       "origem": "hash-change"
     },
@@ -563,7 +563,7 @@
       "origem": "hash-change"
     },
     "/problemas/computador-lento": {
-      "hash": "fd0f39e296a3",
+      "hash": "2711fb2db9a4",
       "lastmod": "2026-09-01",
       "origem": "hash-change"
     },
@@ -593,7 +593,7 @@
       "origem": "hash-change"
     },
     "/problemas/notebook-nao-liga": {
-      "hash": "364c308c27dc",
+      "hash": "8e8c90a28033",
       "lastmod": "2026-09-01",
       "origem": "hash-change"
     },
@@ -633,7 +633,7 @@
       "origem": "hash-change"
     },
     "/servicos/backup-para-empresas": {
-      "hash": "24a18ba743b3",
+      "hash": "a5f865be4293",
       "lastmod": "2026-09-01",
       "origem": "hash-change"
     },
@@ -703,7 +703,7 @@
       "origem": "hash-change"
     },
     "/servicos/formatacao": {
-      "hash": "2e6788034c5c",
+      "hash": "5e8adee34b44",
       "lastmod": "2026-09-01",
       "origem": "hash-change"
     },
@@ -768,12 +768,12 @@
       "origem": "hash-change"
     },
     "/servicos/recuperacao-de-dados": {
-      "hash": "c26a6730fcfb",
+      "hash": "137d74b16892",
       "lastmod": "2026-09-01",
       "origem": "hash-change"
     },
     "/servicos/redes-e-wifi": {
-      "hash": "3ca4b39c9e24",
+      "hash": "276291dedb02",
       "lastmod": "2026-09-01",
       "origem": "hash-change"
     },
@@ -788,7 +788,7 @@
       "origem": "hash-change"
     },
     "/servicos/remocao-de-virus": {
-      "hash": "fe5ebb870be1",
+      "hash": "3405395c3f98",
       "lastmod": "2026-09-01",
       "origem": "hash-change"
     },
@@ -848,7 +848,7 @@
       "origem": "hash-change"
     },
     "/servicos/upgrade-ssd-ram": {
-      "hash": "dc9fca07eaf3",
+      "hash": "b746d26f8d36",
       "lastmod": "2026-09-01",
       "origem": "hash-change"
     },
