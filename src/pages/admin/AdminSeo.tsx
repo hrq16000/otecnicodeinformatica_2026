@@ -284,7 +284,7 @@ export default function AdminSeo() {
                 <div className="font-mono text-xs text-muted-foreground">{rascunho.path}</div>
                 <a
                   className="text-xs underline"
-                  href={`${siteConfig.url}${rascunho.path}`}
+                  href={`${siteConfig.baseUrl}${rascunho.path}`}
                   target="_blank"
                   rel="noreferrer"
                 >
@@ -324,7 +324,7 @@ export default function AdminSeo() {
                 Canonical
                 <Input value={rascunho.canonical ?? ""} onChange={(e) => setRascunho({ ...rascunho, canonical: e.target.value })} />
               </label>
-              {rascunho.canonical && !rascunho.canonical.startsWith(siteConfig.url) && (
+              {rascunho.canonical && !rascunho.canonical.startsWith(siteConfig.baseUrl) && (
                 <p className="text-xs text-destructive">Canonical fora do domínio canônico — conflita com o sitemap.</p>
               )}
 
@@ -356,7 +356,7 @@ export default function AdminSeo() {
               <div className="rounded-md border border-border p-3">
                 <div className="text-xs uppercase text-muted-foreground">Prévia de snippet</div>
                 <div className="mt-1 text-sm text-primary">{(rascunho.title ?? "").slice(0, 60) || "—"}</div>
-                <div className="text-xs text-muted-foreground">{siteConfig.url}{rascunho.path}</div>
+                <div className="text-xs text-muted-foreground">{siteConfig.baseUrl}{rascunho.path}</div>
                 <div className="text-xs">{(rascunho.description ?? "").slice(0, 160) || "—"}</div>
               </div>
 
