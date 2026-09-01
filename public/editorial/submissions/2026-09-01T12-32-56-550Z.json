@@ -41,8 +41,8 @@
       "submitted_via_sitemap": true,
       "submitted_via_indexnow": false,
       "last_submission_at": "2026-09-01T12:32:56.550Z",
-      "last_verdict": "UNKNOWN",
-      "last_verdict_checked_at": "2026-09-01T12:33:02.468Z",
+      "last_verdict": "PENDING",
+      "last_verdict_checked_at": "2026-09-01T02:16:33.307Z",
       "historico": [
         {
           "at": "2026-08-31T19:46:58.070Z",
@@ -59,12 +59,6 @@
           "at": "2026-09-01T12:32:56.550Z",
           "action": "indexnow",
           "status": "HTTP 400"
-        },
-        {
-          "at": "2026-09-01T12:33:02.468Z",
-          "action": "verdict_change",
-          "de": "PENDING",
-          "para": "UNKNOWN"
         }
       ]
     },
@@ -98,8 +92,8 @@
       "submitted_via_sitemap": true,
       "submitted_via_indexnow": false,
       "last_submission_at": "2026-09-01T12:32:56.550Z",
-      "last_verdict": "UNKNOWN",
-      "last_verdict_checked_at": "2026-09-01T12:33:02.468Z",
+      "last_verdict": "PUBLISHED",
+      "last_verdict_checked_at": "2026-09-01T02:16:33.307Z",
       "historico": [
         {
           "at": "2026-08-31T19:46:58.070Z",
@@ -116,12 +110,6 @@
           "at": "2026-09-01T12:32:56.550Z",
           "action": "indexnow",
           "status": "HTTP 400"
-        },
-        {
-          "at": "2026-09-01T12:33:02.468Z",
-          "action": "verdict_change",
-          "de": "PUBLISHED",
-          "para": "UNKNOWN"
         }
       ]
     },
@@ -155,8 +143,8 @@
       "submitted_via_sitemap": true,
       "submitted_via_indexnow": false,
       "last_submission_at": "2026-09-01T12:32:56.550Z",
-      "last_verdict": "UNKNOWN",
-      "last_verdict_checked_at": "2026-09-01T12:33:02.468Z",
+      "last_verdict": "PUBLISHED",
+      "last_verdict_checked_at": "2026-09-01T02:16:33.307Z",
       "historico": [
         {
           "at": "2026-08-31T19:46:58.070Z",
@@ -173,12 +161,6 @@
           "at": "2026-09-01T12:32:56.550Z",
           "action": "indexnow",
           "status": "HTTP 400"
-        },
-        {
-          "at": "2026-09-01T12:33:02.468Z",
-          "action": "verdict_change",
-          "de": "PUBLISHED",
-          "para": "UNKNOWN"
         }
       ]
     },
@@ -212,8 +194,8 @@
       "submitted_via_sitemap": true,
       "submitted_via_indexnow": false,
       "last_submission_at": "2026-09-01T12:32:56.550Z",
-      "last_verdict": "UNKNOWN",
-      "last_verdict_checked_at": "2026-09-01T12:33:02.468Z",
+      "last_verdict": "PUBLISHED",
+      "last_verdict_checked_at": "2026-09-01T02:16:33.307Z",
       "historico": [
         {
           "at": "2026-08-31T19:46:58.070Z",
@@ -230,12 +212,6 @@
           "at": "2026-09-01T12:32:56.550Z",
           "action": "indexnow",
           "status": "HTTP 400"
-        },
-        {
-          "at": "2026-09-01T12:33:02.468Z",
-          "action": "verdict_change",
-          "de": "PUBLISHED",
-          "para": "UNKNOWN"
         }
       ]
     },
@@ -269,8 +245,8 @@
       "submitted_via_sitemap": true,
       "submitted_via_indexnow": false,
       "last_submission_at": "2026-09-01T12:32:56.550Z",
-      "last_verdict": "UNKNOWN",
-      "last_verdict_checked_at": "2026-09-01T12:33:02.468Z",
+      "last_verdict": "PUBLISHED",
+      "last_verdict_checked_at": "2026-09-01T02:16:33.307Z",
       "historico": [
         {
           "at": "2026-08-31T19:46:58.070Z",
@@ -287,12 +263,6 @@
           "at": "2026-09-01T12:32:56.550Z",
           "action": "indexnow",
           "status": "HTTP 400"
-        },
-        {
-          "at": "2026-09-01T12:33:02.468Z",
-          "action": "verdict_change",
-          "de": "PUBLISHED",
-          "para": "UNKNOWN"
         }
       ]
     },
@@ -326,8 +296,8 @@
       "submitted_via_sitemap": true,
       "submitted_via_indexnow": false,
       "last_submission_at": "2026-09-01T12:32:56.550Z",
-      "last_verdict": "UNKNOWN",
-      "last_verdict_checked_at": "2026-09-01T12:33:02.468Z",
+      "last_verdict": "PENDING",
+      "last_verdict_checked_at": "2026-09-01T02:16:33.307Z",
       "historico": [
         {
           "at": "2026-08-31T19:46:58.070Z",
@@ -344,12 +314,6 @@
           "at": "2026-09-01T12:32:56.550Z",
           "action": "indexnow",
           "status": "HTTP 400"
-        },
-        {
-          "at": "2026-09-01T12:33:02.468Z",
-          "action": "verdict_change",
-          "de": "PENDING",
-          "para": "UNKNOWN"
         }
       ]
     },
@@ -383,8 +347,8 @@
       "submitted_via_sitemap": true,
       "submitted_via_indexnow": false,
       "last_submission_at": "2026-09-01T12:32:56.550Z",
-      "last_verdict": "UNKNOWN",
-      "last_verdict_checked_at": "2026-09-01T12:33:02.468Z",
+      "last_verdict": "PUBLISHED",
+      "last_verdict_checked_at": "2026-09-01T02:16:33.307Z",
       "historico": [
         {
           "at": "2026-08-31T19:46:58.070Z",
@@ -401,12 +365,6 @@
           "at": "2026-09-01T12:32:56.550Z",
           "action": "indexnow",
           "status": "HTTP 400"
-        },
-        {
-          "at": "2026-09-01T12:33:02.468Z",
-          "action": "verdict_change",
-          "de": "PUBLISHED",
-          "para": "UNKNOWN"
         }
       ]
     },
@@ -440,8 +398,8 @@
       "submitted_via_sitemap": true,
       "submitted_via_indexnow": false,
       "last_submission_at": "2026-09-01T12:32:56.550Z",
-      "last_verdict": "UNKNOWN",
-      "last_verdict_checked_at": "2026-09-01T12:33:02.468Z",
+      "last_verdict": "PUBLISHED",
+      "last_verdict_checked_at": "2026-09-01T02:16:33.307Z",
       "historico": [
         {
           "at": "2026-08-31T19:46:58.070Z",
@@ -458,12 +416,6 @@
           "at": "2026-09-01T12:32:56.550Z",
           "action": "indexnow",
           "status": "HTTP 400"
-        },
-        {
-          "at": "2026-09-01T12:33:02.468Z",
-          "action": "verdict_change",
-          "de": "PUBLISHED",
-          "para": "UNKNOWN"
         }
       ]
     },
@@ -497,8 +449,8 @@
       "submitted_via_sitemap": true,
       "submitted_via_indexnow": false,
       "last_submission_at": "2026-09-01T12:32:56.550Z",
-      "last_verdict": "UNKNOWN",
-      "last_verdict_checked_at": "2026-09-01T12:33:02.468Z",
+      "last_verdict": "PUBLISHED",
+      "last_verdict_checked_at": "2026-09-01T02:16:33.307Z",
       "historico": [
         {
           "at": "2026-08-31T19:46:58.070Z",
@@ -515,12 +467,6 @@
           "at": "2026-09-01T12:32:56.550Z",
           "action": "indexnow",
           "status": "HTTP 400"
-        },
-        {
-          "at": "2026-09-01T12:33:02.468Z",
-          "action": "verdict_change",
-          "de": "PUBLISHED",
-          "para": "UNKNOWN"
         }
       ]
     },
@@ -554,8 +500,8 @@
       "submitted_via_sitemap": true,
       "submitted_via_indexnow": false,
       "last_submission_at": "2026-09-01T12:32:56.550Z",
-      "last_verdict": "UNKNOWN",
-      "last_verdict_checked_at": "2026-09-01T12:33:02.468Z",
+      "last_verdict": "PUBLISHED",
+      "last_verdict_checked_at": "2026-09-01T02:16:33.307Z",
       "historico": [
         {
           "at": "2026-08-31T19:46:58.070Z",
@@ -572,12 +518,6 @@
           "at": "2026-09-01T12:32:56.550Z",
           "action": "indexnow",
           "status": "HTTP 400"
-        },
-        {
-          "at": "2026-09-01T12:33:02.468Z",
-          "action": "verdict_change",
-          "de": "PUBLISHED",
-          "para": "UNKNOWN"
         }
       ]
     },
@@ -611,8 +551,8 @@
       "submitted_via_sitemap": true,
       "submitted_via_indexnow": false,
       "last_submission_at": "2026-09-01T12:32:56.550Z",
-      "last_verdict": "UNKNOWN",
-      "last_verdict_checked_at": "2026-09-01T12:33:02.468Z",
+      "last_verdict": "PUBLISHED",
+      "last_verdict_checked_at": "2026-09-01T02:16:33.307Z",
       "historico": [
         {
           "at": "2026-08-31T19:46:58.070Z",
@@ -629,12 +569,6 @@
           "at": "2026-09-01T12:32:56.550Z",
           "action": "indexnow",
           "status": "HTTP 400"
-        },
-        {
-          "at": "2026-09-01T12:33:02.468Z",
-          "action": "verdict_change",
-          "de": "PUBLISHED",
-          "para": "UNKNOWN"
         }
       ]
     },
@@ -668,8 +602,8 @@
       "submitted_via_sitemap": true,
       "submitted_via_indexnow": false,
       "last_submission_at": "2026-09-01T12:32:56.550Z",
-      "last_verdict": "UNKNOWN",
-      "last_verdict_checked_at": "2026-09-01T12:33:02.468Z",
+      "last_verdict": "PUBLISHED",
+      "last_verdict_checked_at": "2026-09-01T02:16:33.307Z",
       "historico": [
         {
           "at": "2026-08-31T19:46:58.070Z",
@@ -686,12 +620,6 @@
           "at": "2026-09-01T12:32:56.550Z",
           "action": "indexnow",
           "status": "HTTP 400"
-        },
-        {
-          "at": "2026-09-01T12:33:02.468Z",
-          "action": "verdict_change",
-          "de": "PUBLISHED",
-          "para": "UNKNOWN"
         }
       ]
     },
@@ -725,8 +653,8 @@
       "submitted_via_sitemap": true,
       "submitted_via_indexnow": false,
       "last_submission_at": "2026-09-01T12:32:56.550Z",
-      "last_verdict": "UNKNOWN",
-      "last_verdict_checked_at": "2026-09-01T12:33:02.468Z",
+      "last_verdict": "PUBLISHED",
+      "last_verdict_checked_at": "2026-09-01T02:16:33.307Z",
       "historico": [
         {
           "at": "2026-08-31T19:46:58.070Z",
@@ -743,12 +671,6 @@
           "at": "2026-09-01T12:32:56.550Z",
           "action": "indexnow",
           "status": "HTTP 400"
-        },
-        {
-          "at": "2026-09-01T12:33:02.468Z",
-          "action": "verdict_change",
-          "de": "PUBLISHED",
-          "para": "UNKNOWN"
         }
       ]
     },
@@ -782,8 +704,8 @@
       "submitted_via_sitemap": true,
       "submitted_via_indexnow": false,
       "last_submission_at": "2026-09-01T12:32:56.550Z",
-      "last_verdict": "UNKNOWN",
-      "last_verdict_checked_at": "2026-09-01T12:33:02.468Z",
+      "last_verdict": "PUBLISHED",
+      "last_verdict_checked_at": "2026-09-01T02:16:33.307Z",
       "historico": [
         {
           "at": "2026-08-31T19:46:58.070Z",
@@ -800,12 +722,6 @@
           "at": "2026-09-01T12:32:56.550Z",
           "action": "indexnow",
           "status": "HTTP 400"
-        },
-        {
-          "at": "2026-09-01T12:33:02.468Z",
-          "action": "verdict_change",
-          "de": "PUBLISHED",
-          "para": "UNKNOWN"
         }
       ]
     },
@@ -839,8 +755,8 @@
       "submitted_via_sitemap": true,
       "submitted_via_indexnow": false,
       "last_submission_at": "2026-09-01T12:32:56.550Z",
-      "last_verdict": "UNKNOWN",
-      "last_verdict_checked_at": "2026-09-01T12:33:02.468Z",
+      "last_verdict": "PUBLISHED",
+      "last_verdict_checked_at": "2026-09-01T02:16:33.307Z",
       "historico": [
         {
           "at": "2026-08-31T19:46:58.070Z",
@@ -857,12 +773,6 @@
           "at": "2026-09-01T12:32:56.550Z",
           "action": "indexnow",
           "status": "HTTP 400"
-        },
-        {
-          "at": "2026-09-01T12:33:02.468Z",
-          "action": "verdict_change",
-          "de": "PUBLISHED",
-          "para": "UNKNOWN"
         }
       ]
     },
@@ -896,8 +806,8 @@
       "submitted_via_sitemap": true,
       "submitted_via_indexnow": false,
       "last_submission_at": "2026-09-01T12:32:56.550Z",
-      "last_verdict": "UNKNOWN",
-      "last_verdict_checked_at": "2026-09-01T12:33:02.468Z",
+      "last_verdict": "PUBLISHED",
+      "last_verdict_checked_at": "2026-09-01T02:16:33.307Z",
       "historico": [
         {
           "at": "2026-08-31T19:46:58.070Z",
@@ -914,12 +824,6 @@
           "at": "2026-09-01T12:32:56.550Z",
           "action": "indexnow",
           "status": "HTTP 400"
-        },
-        {
-          "at": "2026-09-01T12:33:02.468Z",
-          "action": "verdict_change",
-          "de": "PUBLISHED",
-          "para": "UNKNOWN"
         }
       ]
     },
@@ -953,8 +857,8 @@
       "submitted_via_sitemap": true,
       "submitted_via_indexnow": false,
       "last_submission_at": "2026-09-01T12:32:56.550Z",
-      "last_verdict": "UNKNOWN",
-      "last_verdict_checked_at": "2026-09-01T12:33:02.468Z",
+      "last_verdict": "PENDING",
+      "last_verdict_checked_at": "2026-09-01T02:16:33.307Z",
       "historico": [
         {
           "at": "2026-08-31T19:46:58.070Z",
@@ -971,12 +875,6 @@
           "at": "2026-09-01T12:32:56.550Z",
           "action": "indexnow",
           "status": "HTTP 400"
-        },
-        {
-          "at": "2026-09-01T12:33:02.468Z",
-          "action": "verdict_change",
-          "de": "PENDING",
-          "para": "UNKNOWN"
         }
       ]
     },
@@ -1010,8 +908,8 @@
       "submitted_via_sitemap": true,
       "submitted_via_indexnow": false,
       "last_submission_at": "2026-09-01T12:32:56.550Z",
-      "last_verdict": "UNKNOWN",
-      "last_verdict_checked_at": "2026-09-01T12:33:02.468Z",
+      "last_verdict": "PUBLISHED",
+      "last_verdict_checked_at": "2026-09-01T02:16:33.307Z",
       "historico": [
         {
           "at": "2026-08-31T19:46:58.070Z",
@@ -1028,12 +926,6 @@
           "at": "2026-09-01T12:32:56.550Z",
           "action": "indexnow",
           "status": "HTTP 400"
-        },
-        {
-          "at": "2026-09-01T12:33:02.468Z",
-          "action": "verdict_change",
-          "de": "PUBLISHED",
-          "para": "UNKNOWN"
         }
       ]
     },
@@ -1067,8 +959,8 @@
       "submitted_via_sitemap": true,
       "submitted_via_indexnow": false,
       "last_submission_at": "2026-09-01T12:32:56.550Z",
-      "last_verdict": "UNKNOWN",
-      "last_verdict_checked_at": "2026-09-01T12:33:02.468Z",
+      "last_verdict": "PUBLISHED",
+      "last_verdict_checked_at": "2026-09-01T02:16:33.307Z",
       "historico": [
         {
           "at": "2026-08-31T19:46:58.070Z",
@@ -1085,12 +977,6 @@
           "at": "2026-09-01T12:32:56.550Z",
           "action": "indexnow",
           "status": "HTTP 400"
-        },
-        {
-          "at": "2026-09-01T12:33:02.468Z",
-          "action": "verdict_change",
-          "de": "PUBLISHED",
-          "para": "UNKNOWN"
         }
       ]
     },
@@ -1124,8 +1010,8 @@
       "submitted_via_sitemap": true,
       "submitted_via_indexnow": false,
       "last_submission_at": "2026-09-01T12:32:56.550Z",
-      "last_verdict": "UNKNOWN",
-      "last_verdict_checked_at": "2026-09-01T12:33:02.468Z",
+      "last_verdict": "PUBLISHED",
+      "last_verdict_checked_at": "2026-09-01T02:16:33.307Z",
       "historico": [
         {
           "at": "2026-08-31T19:46:58.070Z",
@@ -1142,12 +1028,6 @@
           "at": "2026-09-01T12:32:56.550Z",
           "action": "indexnow",
           "status": "HTTP 400"
-        },
-        {
-          "at": "2026-09-01T12:33:02.468Z",
-          "action": "verdict_change",
-          "de": "PUBLISHED",
-          "para": "UNKNOWN"
         }
       ]
     },
@@ -1181,8 +1061,8 @@
       "submitted_via_sitemap": true,
       "submitted_via_indexnow": false,
       "last_submission_at": "2026-09-01T12:32:56.550Z",
-      "last_verdict": "UNKNOWN",
-      "last_verdict_checked_at": "2026-09-01T12:33:02.468Z",
+      "last_verdict": "PUBLISHED",
+      "last_verdict_checked_at": "2026-09-01T02:16:33.307Z",
       "historico": [
         {
           "at": "2026-08-31T19:46:58.070Z",
@@ -1199,12 +1079,6 @@
           "at": "2026-09-01T12:32:56.550Z",
           "action": "indexnow",
           "status": "HTTP 400"
-        },
-        {
-          "at": "2026-09-01T12:33:02.468Z",
-          "action": "verdict_change",
-          "de": "PUBLISHED",
-          "para": "UNKNOWN"
         }
       ]
     },
@@ -1238,8 +1112,8 @@
       "submitted_via_sitemap": true,
       "submitted_via_indexnow": false,
       "last_submission_at": "2026-09-01T12:32:56.550Z",
-      "last_verdict": "UNKNOWN",
-      "last_verdict_checked_at": "2026-09-01T12:33:02.468Z",
+      "last_verdict": "PUBLISHED",
+      "last_verdict_checked_at": "2026-09-01T02:16:33.307Z",
       "historico": [
         {
           "at": "2026-08-31T19:46:58.070Z",
@@ -1256,12 +1130,6 @@
           "at": "2026-09-01T12:32:56.550Z",
           "action": "indexnow",
           "status": "HTTP 400"
-        },
-        {
-          "at": "2026-09-01T12:33:02.468Z",
-          "action": "verdict_change",
-          "de": "PUBLISHED",
-          "para": "UNKNOWN"
         }
       ]
     },
@@ -1295,8 +1163,8 @@
       "submitted_via_sitemap": true,
       "submitted_via_indexnow": true,
       "last_submission_at": "2026-09-01T01:31:35.905Z",
-      "last_verdict": "UNKNOWN",
-      "last_verdict_checked_at": "2026-09-01T12:33:02.468Z",
+      "last_verdict": "PENDING",
+      "last_verdict_checked_at": "2026-09-01T02:16:33.307Z",
       "historico": [
         {
           "at": "2026-08-31T21:56:00.608Z",
@@ -1308,12 +1176,6 @@
           "at": "2026-09-01T01:31:35.905Z",
           "action": "indexnow",
           "status": "HTTP 200"
-        },
-        {
-          "at": "2026-09-01T12:33:02.468Z",
-          "action": "verdict_change",
-          "de": "PENDING",
-          "para": "UNKNOWN"
         }
       ]
     },
@@ -1347,8 +1209,8 @@
       "submitted_via_sitemap": true,
       "submitted_via_indexnow": true,
       "last_submission_at": "2026-09-01T01:31:35.905Z",
-      "last_verdict": "UNKNOWN",
-      "last_verdict_checked_at": "2026-09-01T12:33:02.468Z",
+      "last_verdict": "PENDING",
+      "last_verdict_checked_at": "2026-09-01T02:16:33.307Z",
       "historico": [
         {
           "at": "2026-08-31T21:56:00.608Z",
@@ -1360,12 +1222,6 @@
           "at": "2026-09-01T01:31:35.905Z",
           "action": "indexnow",
           "status": "HTTP 200"
-        },
-        {
-          "at": "2026-09-01T12:33:02.468Z",
-          "action": "verdict_change",
-          "de": "PENDING",
-          "para": "UNKNOWN"
         }
       ]
     },
@@ -1399,8 +1255,8 @@
       "submitted_via_sitemap": true,
       "submitted_via_indexnow": true,
       "last_submission_at": "2026-09-01T01:31:35.905Z",
-      "last_verdict": "UNKNOWN",
-      "last_verdict_checked_at": "2026-09-01T12:33:02.468Z",
+      "last_verdict": "PENDING",
+      "last_verdict_checked_at": "2026-09-01T02:16:33.307Z",
       "historico": [
         {
           "at": "2026-08-31T21:56:00.608Z",
@@ -1412,12 +1268,6 @@
           "at": "2026-09-01T01:31:35.905Z",
           "action": "indexnow",
           "status": "HTTP 200"
-        },
-        {
-          "at": "2026-09-01T12:33:02.468Z",
-          "action": "verdict_change",
-          "de": "PENDING",
-          "para": "UNKNOWN"
         }
       ]
     },
@@ -1449,8 +1299,8 @@
       "submitted_via_sitemap": true,
       "submitted_via_indexnow": false,
       "last_submission_at": "2026-09-01T12:32:56.550Z",
-      "last_verdict": "UNKNOWN",
-      "last_verdict_checked_at": "2026-09-01T12:33:02.468Z",
+      "last_verdict": "PUBLISHED",
+      "last_verdict_checked_at": "2026-09-01T02:16:33.307Z",
       "historico": [
         {
           "at": "2026-08-31T19:46:58.070Z",
@@ -1467,12 +1317,6 @@
           "at": "2026-09-01T12:32:56.550Z",
           "action": "indexnow",
           "status": "HTTP 400"
-        },
-        {
-          "at": "2026-09-01T12:33:02.468Z",
-          "action": "verdict_change",
-          "de": "PUBLISHED",
-          "para": "UNKNOWN"
         }
       ]
     }
@@ -6220,6 +6064,5 @@
       },
       "error": null
     }
-  ],
-  "verdictsAtualizadoEm": "2026-09-01T12:33:02.468Z"
+  ]
 }

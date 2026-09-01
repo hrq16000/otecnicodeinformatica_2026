@@ -1,43 +1,43 @@
 {
-  "geradoEm": "2026-09-01T02:16:33.038Z",
-  "site": "sc-domain:otecnicodeinformatica.com.br",
-  "disponivel": true,
+  "geradoEm": "2026-09-01T12:33:02.153Z",
+  "site": "UNKNOWN",
+  "disponivel": false,
   "lotes": [
     {
       "lote": "10C/0",
       "total": 4,
-      "indexadas": 3,
-      "cobertura": 75
+      "indexadas": "UNKNOWN",
+      "cobertura": "UNKNOWN"
     },
     {
       "lote": "10D/1",
       "total": 3,
-      "indexadas": 2,
-      "cobertura": 66.7
+      "indexadas": "UNKNOWN",
+      "cobertura": "UNKNOWN"
     },
     {
       "lote": "10C/2",
       "total": 3,
-      "indexadas": 3,
-      "cobertura": 100
+      "indexadas": "UNKNOWN",
+      "cobertura": "UNKNOWN"
     },
     {
       "lote": "10C/3",
       "total": 6,
-      "indexadas": 6,
-      "cobertura": 100
+      "indexadas": "UNKNOWN",
+      "cobertura": "UNKNOWN"
     },
     {
       "lote": "10C/4",
       "total": 6,
-      "indexadas": 5,
-      "cobertura": 83.3
+      "indexadas": "UNKNOWN",
+      "cobertura": "UNKNOWN"
     },
     {
       "lote": "11A/4",
       "total": 3,
-      "indexadas": 0,
-      "cobertura": 0
+      "indexadas": "UNKNOWN",
+      "cobertura": "UNKNOWN"
     }
   ],
   "rotas": [
@@ -54,16 +54,10 @@
       "internalState": "PUBLISHED",
       "contentHash": "cba47ddd4ab081a6",
       "sitemapLastmod": null,
-      "indexNowSentAt": null,
+      "indexNowSentAt": "2026-09-01T06:48:35.101Z",
       "google": {
-        "status": "NO_DATA",
-        "verdict": "NEUTRAL",
-        "coverageState": "URL is unknown to Google",
-        "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
-        "indexingState": "INDEXING_STATE_UNSPECIFIED",
-        "ultimoCrawl": null,
-        "canonicalGoogle": null,
-        "canonicalDeclarado": null
+        "status": "UNKNOWN",
+        "motivo": "credenciais do Search Console ausentes"
       }
     },
     {
@@ -79,16 +73,10 @@
       "internalState": "PUBLISHED",
       "contentHash": "8ec249313054318c",
       "sitemapLastmod": null,
-      "indexNowSentAt": null,
+      "indexNowSentAt": "2026-09-01T06:48:35.101Z",
       "google": {
-        "status": "INDEXED",
-        "verdict": "PASS",
-        "coverageState": "Submitted and indexed",
-        "robotsTxtState": "ALLOWED",
-        "indexingState": "INDEXING_ALLOWED",
-        "ultimoCrawl": "2026-08-26T17:11:00Z",
-        "canonicalGoogle": "https://otecnicodeinformatica.com.br/blog/memoria-ram-insuficiente-sintomas",
-        "canonicalDeclarado": "https://otecnicodeinformatica.com.br/blog/memoria-ram-insuficiente-sintomas"
+        "status": "UNKNOWN",
+        "motivo": "credenciais do Search Console ausentes"
       }
     },
     {
@@ -104,16 +92,10 @@
       "internalState": "PUBLISHED",
       "contentHash": "3f80566c863cdfed",
       "sitemapLastmod": null,
-      "indexNowSentAt": null,
+      "indexNowSentAt": "2026-09-01T06:48:35.101Z",
       "google": {
-        "status": "INDEXED",
-        "verdict": "PASS",
-        "coverageState": "Submitted and indexed",
-        "robotsTxtState": "ALLOWED",
-        "indexingState": "INDEXING_ALLOWED",
-        "ultimoCrawl": "2026-08-26T19:18:40Z",
-        "canonicalGoogle": "https://otecnicodeinformatica.com.br/blog/codigos-de-erro-tela-azul-windows",
-        "canonicalDeclarado": "https://otecnicodeinformatica.com.br/blog/codigos-de-erro-tela-azul-windows"
+        "status": "UNKNOWN",
+        "motivo": "credenciais do Search Console ausentes"
       }
     },
     {
@@ -129,16 +111,10 @@
       "internalState": "PUBLISHED",
       "contentHash": "9392f7964190fc61",
       "sitemapLastmod": null,
-      "indexNowSentAt": null,
+      "indexNowSentAt": "2026-09-01T06:48:35.101Z",
       "google": {
-        "status": "INDEXED",
-        "verdict": "PASS",
-        "coverageState": "Submitted and indexed",
-        "robotsTxtState": "ALLOWED",
-        "indexingState": "INDEXING_ALLOWED",
-        "ultimoCrawl": "2026-08-26T21:36:35Z",
-        "canonicalGoogle": "https://otecnicodeinformatica.com.br/blog/testar-memoria-ram-memtest86",
-        "canonicalDeclarado": "https://otecnicodeinformatica.com.br/blog/testar-memoria-ram-memtest86"
+        "status": "UNKNOWN",
+        "motivo": "credenciais do Search Console ausentes"
       }
     },
     {
@@ -154,16 +130,10 @@
       "internalState": "PUBLISHED",
       "contentHash": "8815a2f22052efd9",
       "sitemapLastmod": null,
-      "indexNowSentAt": null,
+      "indexNowSentAt": "2026-09-01T06:48:35.101Z",
       "google": {
-        "status": "INDEXED",
-        "verdict": "PASS",
-        "coverageState": "Submitted and indexed",
-        "robotsTxtState": "ALLOWED",
-        "indexingState": "INDEXING_ALLOWED",
-        "ultimoCrawl": "2026-08-26T21:19:15Z",
-        "canonicalGoogle": "https://otecnicodeinformatica.com.br/blog/botao-power-nao-funciona-jump-start-placa-mae",
-        "canonicalDeclarado": "https://otecnicodeinformatica.com.br/blog/botao-power-nao-funciona-jump-start-placa-mae"
+        "status": "UNKNOWN",
+        "motivo": "credenciais do Search Console ausentes"
       }
     },
     {
@@ -179,16 +149,10 @@
       "internalState": "PUBLISHED",
       "contentHash": "ed7de44f66517ceb",
       "sitemapLastmod": null,
-      "indexNowSentAt": null,
+      "indexNowSentAt": "2026-09-01T06:48:35.101Z",
       "google": {
-        "status": "NO_DATA",
-        "verdict": "NEUTRAL",
-        "coverageState": "URL is unknown to Google",
-        "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
-        "indexingState": "INDEXING_STATE_UNSPECIFIED",
-        "ultimoCrawl": null,
-        "canonicalGoogle": null,
-        "canonicalDeclarado": null
+        "status": "UNKNOWN",
+        "motivo": "credenciais do Search Console ausentes"
       }
     },
     {
@@ -204,16 +168,10 @@
       "internalState": "PUBLISHED",
       "contentHash": "b0a31cf6858dda7c",
       "sitemapLastmod": null,
-      "indexNowSentAt": null,
+      "indexNowSentAt": "2026-09-01T06:48:35.101Z",
       "google": {
-        "status": "INDEXED",
-        "verdict": "PASS",
-        "coverageState": "Submitted and indexed",
-        "robotsTxtState": "ALLOWED",
-        "indexingState": "INDEXING_ALLOWED",
-        "ultimoCrawl": "2026-08-26T17:07:33Z",
-        "canonicalGoogle": "https://otecnicodeinformatica.com.br/blog/bios-corrompida-reset-cmos-atualizacao",
-        "canonicalDeclarado": "https://otecnicodeinformatica.com.br/blog/bios-corrompida-reset-cmos-atualizacao"
+        "status": "UNKNOWN",
+        "motivo": "credenciais do Search Console ausentes"
       }
     },
     {
@@ -229,16 +187,10 @@
       "internalState": "PUBLISHED",
       "contentHash": "ba7d864b73e0953e",
       "sitemapLastmod": null,
-      "indexNowSentAt": null,
+      "indexNowSentAt": "2026-09-01T06:48:35.101Z",
       "google": {
-        "status": "INDEXED",
-        "verdict": "PASS",
-        "coverageState": "Submitted and indexed",
-        "robotsTxtState": "ALLOWED",
-        "indexingState": "INDEXING_ALLOWED",
-        "ultimoCrawl": "2026-08-26T15:24:14Z",
-        "canonicalGoogle": "https://otecnicodeinformatica.com.br/blog/internet-lenta-provedor-ou-roteador",
-        "canonicalDeclarado": "https://otecnicodeinformatica.com.br/blog/internet-lenta-provedor-ou-roteador"
+        "status": "UNKNOWN",
+        "motivo": "credenciais do Search Console ausentes"
       }
     },
     {
@@ -254,16 +206,10 @@
       "internalState": "PUBLISHED",
       "contentHash": "0f9c121902a02c16",
       "sitemapLastmod": null,
-      "indexNowSentAt": null,
+      "indexNowSentAt": "2026-09-01T06:48:35.101Z",
       "google": {
-        "status": "INDEXED",
-        "verdict": "PASS",
-        "coverageState": "Submitted and indexed",
-        "robotsTxtState": "ALLOWED",
-        "indexingState": "INDEXING_ALLOWED",
-        "ultimoCrawl": "2026-08-26T17:10:22Z",
-        "canonicalGoogle": "https://otecnicodeinformatica.com.br/blog/impressora-offline-como-resolver",
-        "canonicalDeclarado": "https://otecnicodeinformatica.com.br/blog/impressora-offline-como-resolver"
+        "status": "UNKNOWN",
+        "motivo": "credenciais do Search Console ausentes"
       }
     },
     {
@@ -279,16 +225,10 @@
       "internalState": "PUBLISHED",
       "contentHash": "8cc6dd5a67fa4804",
       "sitemapLastmod": null,
-      "indexNowSentAt": null,
+      "indexNowSentAt": "2026-09-01T06:48:35.101Z",
       "google": {
-        "status": "INDEXED",
-        "verdict": "PASS",
-        "coverageState": "Submitted and indexed",
-        "robotsTxtState": "ALLOWED",
-        "indexingState": "INDEXING_ALLOWED",
-        "ultimoCrawl": "2026-08-27T04:57:31Z",
-        "canonicalGoogle": "https://otecnicodeinformatica.com.br/blog/fila-de-impressao-travada-spooler-windows",
-        "canonicalDeclarado": "https://otecnicodeinformatica.com.br/blog/fila-de-impressao-travada-spooler-windows"
+        "status": "UNKNOWN",
+        "motivo": "credenciais do Search Console ausentes"
       }
     },
     {
@@ -304,16 +244,10 @@
       "internalState": "PUBLISHED",
       "contentHash": "c6ac43157fa13296",
       "sitemapLastmod": null,
-      "indexNowSentAt": null,
+      "indexNowSentAt": "2026-09-01T06:48:35.101Z",
       "google": {
-        "status": "INDEXED",
-        "verdict": "PASS",
-        "coverageState": "Submitted and indexed",
-        "robotsTxtState": "ALLOWED",
-        "indexingState": "INDEXING_ALLOWED",
-        "ultimoCrawl": "2026-08-26T19:18:50Z",
-        "canonicalGoogle": "https://otecnicodeinformatica.com.br/blog/hd-nao-e-reconhecido-na-bios-o-que-fazer",
-        "canonicalDeclarado": "https://otecnicodeinformatica.com.br/blog/hd-nao-e-reconhecido-na-bios-o-que-fazer"
+        "status": "UNKNOWN",
+        "motivo": "credenciais do Search Console ausentes"
       }
     },
     {
@@ -329,16 +263,10 @@
       "internalState": "PUBLISHED",
       "contentHash": "af001374a0c36d76",
       "sitemapLastmod": null,
-      "indexNowSentAt": null,
+      "indexNowSentAt": "2026-09-01T06:48:35.101Z",
       "google": {
-        "status": "INDEXED",
-        "verdict": "PASS",
-        "coverageState": "Submitted and indexed",
-        "robotsTxtState": "ALLOWED",
-        "indexingState": "INDEXING_ALLOWED",
-        "ultimoCrawl": "2026-08-26T17:06:49Z",
-        "canonicalGoogle": "https://otecnicodeinformatica.com.br/blog/ssd-nvme-nao-aparece-no-gerenciador-de-discos",
-        "canonicalDeclarado": "https://otecnicodeinformatica.com.br/blog/ssd-nvme-nao-aparece-no-gerenciador-de-discos"
+        "status": "UNKNOWN",
+        "motivo": "credenciais do Search Console ausentes"
       }
     },
     {
@@ -354,16 +282,10 @@
       "internalState": "PUBLISHED",
       "contentHash": "02bdd4293fd98d12",
       "sitemapLastmod": null,
-      "indexNowSentAt": null,
+      "indexNowSentAt": "2026-09-01T06:48:35.101Z",
       "google": {
-        "status": "INDEXED",
-        "verdict": "PASS",
-        "coverageState": "Submitted and indexed",
-        "robotsTxtState": "ALLOWED",
-        "indexingState": "INDEXING_ALLOWED",
-        "ultimoCrawl": "2026-08-26T17:08:59Z",
-        "canonicalGoogle": "https://otecnicodeinformatica.com.br/blog/disco-com-setores-defeituosos-smart-o-que-fazer",
-        "canonicalDeclarado": "https://otecnicodeinformatica.com.br/blog/disco-com-setores-defeituosos-smart-o-que-fazer"
+        "status": "UNKNOWN",
+        "motivo": "credenciais do Search Console ausentes"
       }
     },
     {
@@ -379,16 +301,10 @@
       "internalState": "PUBLISHED",
       "contentHash": "da3b4f48d0ebd9ad",
       "sitemapLastmod": null,
-      "indexNowSentAt": null,
+      "indexNowSentAt": "2026-09-01T06:48:35.101Z",
       "google": {
-        "status": "INDEXED",
-        "verdict": "PASS",
-        "coverageState": "Submitted and indexed",
-        "robotsTxtState": "ALLOWED",
-        "indexingState": "INDEXING_ALLOWED",
-        "ultimoCrawl": "2026-08-26T17:14:07Z",
-        "canonicalGoogle": "https://otecnicodeinformatica.com.br/blog/computador-sem-som-o-que-verificar",
-        "canonicalDeclarado": "https://otecnicodeinformatica.com.br/blog/computador-sem-som-o-que-verificar"
+        "status": "UNKNOWN",
+        "motivo": "credenciais do Search Console ausentes"
       }
     },
     {
@@ -404,16 +320,10 @@
       "internalState": "PUBLISHED",
       "contentHash": "42c27b904b258a4b",
       "sitemapLastmod": null,
-      "indexNowSentAt": null,
+      "indexNowSentAt": "2026-09-01T06:48:35.101Z",
       "google": {
-        "status": "INDEXED",
-        "verdict": "PASS",
-        "coverageState": "Submitted and indexed",
-        "robotsTxtState": "ALLOWED",
-        "indexingState": "INDEXING_ALLOWED",
-        "ultimoCrawl": "2026-08-26T17:06:09Z",
-        "canonicalGoogle": "https://otecnicodeinformatica.com.br/blog/fone-de-ouvido-nao-e-reconhecido-no-pc",
-        "canonicalDeclarado": "https://otecnicodeinformatica.com.br/blog/fone-de-ouvido-nao-e-reconhecido-no-pc"
+        "status": "UNKNOWN",
+        "motivo": "credenciais do Search Console ausentes"
       }
     },
     {
@@ -429,16 +339,10 @@
       "internalState": "PUBLISHED",
       "contentHash": "21df8cdfe71b2adc",
       "sitemapLastmod": null,
-      "indexNowSentAt": null,
+      "indexNowSentAt": "2026-09-01T06:48:35.101Z",
       "google": {
-        "status": "INDEXED",
-        "verdict": "PASS",
-        "coverageState": "Submitted and indexed",
-        "robotsTxtState": "ALLOWED",
-        "indexingState": "INDEXING_ALLOWED",
-        "ultimoCrawl": "2026-08-26T19:18:36Z",
-        "canonicalGoogle": "https://otecnicodeinformatica.com.br/blog/servico-de-audio-do-windows-nao-esta-em-execucao",
-        "canonicalDeclarado": "https://otecnicodeinformatica.com.br/blog/servico-de-audio-do-windows-nao-esta-em-execucao"
+        "status": "UNKNOWN",
+        "motivo": "credenciais do Search Console ausentes"
       }
     },
     {
@@ -454,16 +358,10 @@
       "internalState": "PUBLISHED",
       "contentHash": "a43f9d8b53e2c740",
       "sitemapLastmod": null,
-      "indexNowSentAt": null,
+      "indexNowSentAt": "2026-09-01T06:48:35.101Z",
       "google": {
-        "status": "NO_DATA",
-        "verdict": "NEUTRAL",
-        "coverageState": "URL is unknown to Google",
-        "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
-        "indexingState": "INDEXING_STATE_UNSPECIFIED",
-        "ultimoCrawl": null,
-        "canonicalGoogle": null,
-        "canonicalDeclarado": null
+        "status": "UNKNOWN",
+        "motivo": "credenciais do Search Console ausentes"
       }
     },
     {
@@ -479,16 +377,10 @@
       "internalState": "PUBLISHED",
       "contentHash": "fd8395482ebfe7a3",
       "sitemapLastmod": null,
-      "indexNowSentAt": null,
+      "indexNowSentAt": "2026-09-01T06:48:35.101Z",
       "google": {
-        "status": "INDEXED",
-        "verdict": "PASS",
-        "coverageState": "Submitted and indexed",
-        "robotsTxtState": "ALLOWED",
-        "indexingState": "INDEXING_ALLOWED",
-        "ultimoCrawl": "2026-08-26T19:18:47Z",
-        "canonicalGoogle": "https://otecnicodeinformatica.com.br/blog/permissoes-de-camera-no-windows",
-        "canonicalDeclarado": "https://otecnicodeinformatica.com.br/blog/permissoes-de-camera-no-windows"
+        "status": "UNKNOWN",
+        "motivo": "credenciais do Search Console ausentes"
       }
     },
     {
@@ -504,16 +396,10 @@
       "internalState": "PUBLISHED",
       "contentHash": "bdd26f41eb38c457",
       "sitemapLastmod": null,
-      "indexNowSentAt": null,
+      "indexNowSentAt": "2026-09-01T06:48:35.101Z",
       "google": {
-        "status": "INDEXED",
-        "verdict": "PASS",
-        "coverageState": "Submitted and indexed",
-        "robotsTxtState": "ALLOWED",
-        "indexingState": "INDEXING_ALLOWED",
-        "ultimoCrawl": "2026-08-26T17:07:49Z",
-        "canonicalGoogle": "https://otecnicodeinformatica.com.br/blog/webcam-usb-nao-e-detectada",
-        "canonicalDeclarado": "https://otecnicodeinformatica.com.br/blog/webcam-usb-nao-e-detectada"
+        "status": "UNKNOWN",
+        "motivo": "credenciais do Search Console ausentes"
       }
     },
     {
@@ -529,16 +415,10 @@
       "internalState": "PUBLISHED",
       "contentHash": "83365c1748e7c146",
       "sitemapLastmod": null,
-      "indexNowSentAt": null,
+      "indexNowSentAt": "2026-09-01T06:48:35.101Z",
       "google": {
-        "status": "INDEXED",
-        "verdict": "PASS",
-        "coverageState": "Submitted and indexed",
-        "robotsTxtState": "ALLOWED",
-        "indexingState": "INDEXING_ALLOWED",
-        "ultimoCrawl": "2026-08-26T17:04:44Z",
-        "canonicalGoogle": "https://otecnicodeinformatica.com.br/blog/windows-update-nao-funciona-o-que-verificar",
-        "canonicalDeclarado": "https://otecnicodeinformatica.com.br/blog/windows-update-nao-funciona-o-que-verificar"
+        "status": "UNKNOWN",
+        "motivo": "credenciais do Search Console ausentes"
       }
     },
     {
@@ -554,16 +434,10 @@
       "internalState": "PUBLISHED",
       "contentHash": "d0e46137cd64a8f8",
       "sitemapLastmod": null,
-      "indexNowSentAt": null,
+      "indexNowSentAt": "2026-09-01T06:48:35.101Z",
       "google": {
-        "status": "INDEXED",
-        "verdict": "PASS",
-        "coverageState": "Submitted and indexed",
-        "robotsTxtState": "ALLOWED",
-        "indexingState": "INDEXING_ALLOWED",
-        "ultimoCrawl": "2026-08-26T17:13:11Z",
-        "canonicalGoogle": "https://otecnicodeinformatica.com.br/blog/limpar-cache-do-windows-update-softwaredistribution",
-        "canonicalDeclarado": "https://otecnicodeinformatica.com.br/blog/limpar-cache-do-windows-update-softwaredistribution"
+        "status": "UNKNOWN",
+        "motivo": "credenciais do Search Console ausentes"
       }
     },
     {
@@ -579,16 +453,10 @@
       "internalState": "PUBLISHED",
       "contentHash": "b81c2bd88e8987d7",
       "sitemapLastmod": null,
-      "indexNowSentAt": null,
+      "indexNowSentAt": "2026-09-01T06:48:35.101Z",
       "google": {
-        "status": "INDEXED",
-        "verdict": "PASS",
-        "coverageState": "Submitted and indexed",
-        "robotsTxtState": "ALLOWED",
-        "indexingState": "INDEXING_ALLOWED",
-        "ultimoCrawl": "2026-08-26T17:06:27Z",
-        "canonicalGoogle": "https://otecnicodeinformatica.com.br/blog/windows-update-travado-desfazendo-alteracoes",
-        "canonicalDeclarado": "https://otecnicodeinformatica.com.br/blog/windows-update-travado-desfazendo-alteracoes"
+        "status": "UNKNOWN",
+        "motivo": "credenciais do Search Console ausentes"
       }
     },
     {
@@ -604,16 +472,10 @@
       "internalState": "PUBLISHED",
       "contentHash": "bc469f3e44b8b03a",
       "sitemapLastmod": null,
-      "indexNowSentAt": "2026-09-01T01:31:29.253Z",
+      "indexNowSentAt": "2026-09-01T06:48:35.101Z",
       "google": {
-        "status": "NO_DATA",
-        "verdict": "NEUTRAL",
-        "coverageState": "URL is unknown to Google",
-        "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
-        "indexingState": "INDEXING_STATE_UNSPECIFIED",
-        "ultimoCrawl": null,
-        "canonicalGoogle": null,
-        "canonicalDeclarado": null
+        "status": "UNKNOWN",
+        "motivo": "credenciais do Search Console ausentes"
       }
     },
     {
@@ -629,16 +491,10 @@
       "internalState": "PUBLISHED",
       "contentHash": "cfa3a7f8a392f89f",
       "sitemapLastmod": null,
-      "indexNowSentAt": "2026-09-01T01:31:29.253Z",
+      "indexNowSentAt": "2026-09-01T06:48:35.101Z",
       "google": {
-        "status": "NO_DATA",
-        "verdict": "NEUTRAL",
-        "coverageState": "URL is unknown to Google",
-        "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
-        "indexingState": "INDEXING_STATE_UNSPECIFIED",
-        "ultimoCrawl": null,
-        "canonicalGoogle": null,
-        "canonicalDeclarado": null
+        "status": "UNKNOWN",
+        "motivo": "credenciais do Search Console ausentes"
       }
     },
     {
@@ -654,18 +510,12 @@
       "internalState": "PUBLISHED",
       "contentHash": "fcac1a3eca318119",
       "sitemapLastmod": null,
-      "indexNowSentAt": "2026-09-01T01:31:29.253Z",
+      "indexNowSentAt": "2026-09-01T06:48:35.101Z",
       "google": {
-        "status": "NO_DATA",
-        "verdict": "NEUTRAL",
-        "coverageState": "URL is unknown to Google",
-        "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
-        "indexingState": "INDEXING_STATE_UNSPECIFIED",
-        "ultimoCrawl": null,
-        "canonicalGoogle": null,
-        "canonicalDeclarado": null
+        "status": "UNKNOWN",
+        "motivo": "credenciais do Search Console ausentes"
       }
     }
   ],
-  "alertasNovos": 1
+  "alertasNovos": 0
 }
