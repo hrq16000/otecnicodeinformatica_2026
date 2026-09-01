@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 /**
- * GATE — ATLAS DE INFORMÁTICA (Fase 1)
- * ------------------------------------
+ * GATE — ATLAS DE INFORMÁTICA (Fases 1–2)
+ * ---------------------------------------
  * Valida o HTML servido (dist) de /guia-tecnico-informatica sem depender
  * de JavaScript no cliente:
  *
@@ -13,6 +13,9 @@
  *   4. JSON-LD CollectionPage com ItemList espelhando exatamente os temas
  *      renderizados (coerência schema ↔ HTML).
  *   5. FAQPage continua presente (a paridade item a item tem gate próprio).
+ *   6. Fase 2: os 9 vereditos de tema renderizados no SSR; toda âncora de
+ *      guia de decisão (#decisao-<id>) presente; toda fonte primária https
+ *      renderizada como href; nível de risco só com rótulo canônico.
  *
  * Fail-closed: sem dist ou sem HTML da rota, o gate falha.
  */
