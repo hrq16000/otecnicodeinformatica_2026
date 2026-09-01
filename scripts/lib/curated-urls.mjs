@@ -80,6 +80,10 @@ export const GLOSSARIO_SLUGS = [
   "nat",
   "memoria-ram",
   "thermal-throttling",
+  // Onda 11B
+  "secure-boot",
+  "driver",
+  "particao",
 ];
 
 export const FERRAMENTAS_SLUGS = [
@@ -88,6 +92,8 @@ export const FERRAMENTAS_SLUGS = [
   "roteiro-falha-de-inicializacao",
   "verificador-de-backup",
   "ssd-ou-ram",
+  // Onda 11B
+  "roteiro-wifi-instavel",
 ];
 
 export const DECISOES_SLUGS = [
@@ -97,6 +103,10 @@ export const DECISOES_SLUGS = [
   "remoto-ou-presencial",
   "hd-com-ruido",
   "backup-antes-da-manutencao",
+  // Onda 11B
+  "atualizar-para-windows-11",
+  "nuvem-ou-hd-externo",
+  "montar-ou-comprar-pronto",
 ];
 
 export const BIBLIOTECA = [

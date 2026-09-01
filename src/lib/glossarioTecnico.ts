@@ -114,7 +114,7 @@ export const TERMOS_GLOSSARIO: TermoGlossario[] = [
         contexto: "Trilha de fundamentos do sistema no Atlas de Informática.",
       },
     ],
-    relacionados: ["memoria-ram", "smart", "uefi"],
+    relacionados: ["memoria-ram", "smart", "driver"],
     fontes: [
       {
         titulo: "Microsoft Learn — Bug Check Code Reference",
