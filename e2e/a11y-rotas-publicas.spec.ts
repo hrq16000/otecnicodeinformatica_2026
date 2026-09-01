@@ -16,8 +16,8 @@ const ROTAS_PUBLICAS = [
   "/servicos",
   "/como-funciona",
   // Fase 3 — biblioteca técnica (glossário + ferramentas)
-  "/glossario-tecnico",
-  "/glossario-tecnico/bsod",
+  "/glossario",
+  "/glossario/bsod",
   "/ferramentas",
   "/ferramentas/checklist-pc-nao-liga",
 ] as const;
