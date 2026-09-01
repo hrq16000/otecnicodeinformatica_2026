@@ -50,7 +50,7 @@ exports[`roteamento dos links de serviço > mantém o snapshot das âncoras de s
   "/problemas/tela-azul → /servicos/formatacao :: formatação de PC e Notebook em Curitiba para quem tem tela azul no Windows",
   "/problemas/wifi-instavel → /servicos/suporte-home-office :: suporte Técnico para Home Office em Curitiba para quem tem wi-Fi caindo ou lento em parte da casa ou do escritório",
   "/problemas/wifi-instavel → /servicos/pc-gamer :: manutenção de PC Gamer em Curitiba para quem tem wi-Fi caindo ou lento em parte da casa ou do escritório",
-  "/problemas/windows-nao-inicia → /servicos/recuperacao-de-dados :: recuperação de Dados em Curitiba para quem tem windows não inicia",
   "/problemas/windows-nao-inicia → /servicos/formatacao :: formatação de PC e Notebook em Curitiba para quem tem windows não inicia",
+  "/problemas/windows-nao-inicia → /servicos/remocao-de-virus :: remoção de Vírus e Malware em Curitiba para quem tem windows não inicia",
 ]
 `;
