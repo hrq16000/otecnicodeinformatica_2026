@@ -957,7 +957,188 @@ export const TERMOS_GLOSSARIO: TermoGlossario[] = [
       },
     ],
   },
+  // ── ONDA 11B ──────────────────────────────────────────────────────────────
+  {
+    slug: "secure-boot",
+    termo: "Secure Boot",
+    expansao: "Inicialização Segura — verificação de assinatura no firmware UEFI",
+    categoria: "Segurança",
+    resumo:
+      "Recurso do firmware UEFI que só permite iniciar componentes assinados digitalmente. Bloqueia código malicioso que tentaria carregar antes do sistema operacional.",
+    definicao: [
+      "Secure Boot é uma verificação feita pelo firmware UEFI no instante em que o computador liga: antes de entregar o controle ao sistema operacional, ele confere se o gerenciador de inicialização e os drivers de baixo nível têm assinatura digital reconhecida. Sem assinatura válida, a inicialização é interrompida.",
+      "A proteção existe porque código carregado antes do Windows roda com privilégio máximo e ficaria invisível para o antivírus, que só começa a trabalhar depois. É a camada que fecha essa janela — e é também por isso que o Windows 11 a lista entre os requisitos oficiais.",
+      "Na prática do dia a dia, o Secure Boot aparece em três situações: ao tentar iniciar por um pendrive de instalação não assinado, ao instalar outro sistema operacional junto com o Windows e ao migrar de versão de sistema, quando o requisito precisa estar habilitado.",
+    ],
+    porQueImporta:
+      "Desligar o Secure Boot é a 'solução' mais recomendada em fóruns e uma das mais perigosas quando vira permanente: a máquina passa a aceitar qualquer componente de inicialização, inclusive um comprometido. Além disso, em disco com BitLocker, mudar essa configuração pode disparar o pedido de chave de recuperação.",
+    sintomas: [
+      "Pendrive de instalação não aparece na ordem de inicialização.",
+      "Mensagem de violação de segurança de inicialização (security violation) ao ligar.",
+      "Verificação de requisitos do Windows 11 acusa inicialização segura desabilitada.",
+      "Pedido inesperado de chave de recuperação do BitLocker depois de mexer no firmware.",
+    ],
+    verificacoesSeguras: [
+      "Consultar o estado atual em Informações do Sistema do Windows, no item 'Estado da Inicialização Segura' — é leitura, não alteração.",
+      "Anotar a configuração atual do firmware antes de qualquer mudança, incluindo o modo de inicialização (UEFI ou legado).",
+      "Verificar se o disco está criptografado e ter a chave de recuperação em mãos ANTES de alterar qualquer opção de firmware.",
+      "Preferir mídia de instalação oficial, que já é assinada e dispensa desativar a verificação.",
+    ],
+    naoFazer: [
+      "Não deixar o Secure Boot desligado depois de uma instalação: reative assim que o procedimento terminar.",
+      "Não alterar opções de firmware com disco criptografado e sem a chave de recuperação salva em outro lugar.",
+      "Não seguir tutoriais que mandam limpar as chaves de segurança do firmware para 'resolver mais rápido' — isso pode impedir a máquina de iniciar.",
+    ],
+    risco: "Exige atenção",
+    riscoNota:
+      "Consultar o estado é seguro. Alterar a configuração mexe na cadeia de inicialização e, em disco criptografado, pode bloquear o acesso aos dados sem a chave de recuperação.",
+    links: [
+      {
+        rotulo: "Atualizar para o Windows 11",
+        to: "/decisoes/atualizar-para-windows-11",
+        contexto: "Onde este requisito de firmware decide se a migração é possível.",
+      },
+      {
+        rotulo: "Roteiro de falha de inicialização",
+        to: "/ferramentas/roteiro-falha-de-inicializacao",
+        contexto: "Checklist para quando a máquina para antes do Windows carregar.",
+      },
+      {
+        rotulo: "Windows não inicia",
+        to: "/problemas/windows-nao-inicia",
+        contexto: "Diagnóstico do sintoma quando a interrupção acontece na partida.",
+      },
+    ],
+    relacionados: ["uefi", "tpm", "bitlocker"],
+    fontes: [
+      {
+        titulo: "Microsoft Learn — Secure Boot",
+        url: "https://learn.microsoft.com/en-us/windows-hardware/design/device-experiences/oem-secure-boot",
+        nota: "documentação oficial do funcionamento da inicialização segura",
+      },
+    ],
+  },
+  {
+    slug: "driver",
+    termo: "Driver",
+    expansao: "Controlador de dispositivo",
+    categoria: "Sistema e inicialização",
+    resumo:
+      "Software que traduz as ordens do sistema operacional para uma peça específica de hardware. Driver com defeito é uma das causas mais comuns de tela azul e travamento.",
+    definicao: [
+      "Driver é o programa que ensina o sistema operacional a conversar com uma peça: placa de vídeo, chipset, rede sem fio, impressora, controladora de disco. Sem ele, o Windows reconhece que existe um dispositivo, mas não sabe usar os recursos dele.",
+      "Diferente de um programa comum, boa parte dos drivers roda em modo privilegiado — no mesmo nível do núcleo do sistema. É por isso que um driver instável não fecha 'só ele': derruba o sistema inteiro em tela azul, com um código de parada que muitas vezes aponta o arquivo responsável.",
+      "Drivers chegam por três caminhos: junto com o Windows, pelo Windows Update e pelo site do fabricante do equipamento. Esses são os três caminhos legítimos — e são os únicos que recomendamos.",
+    ],
+    porQueImporta:
+      "A maior parte dos 'atualizadores de driver' distribuídos em anúncios instala versões genéricas, desatualizadas ou adware. O prejuízo típico é uma máquina que funcionava razoavelmente passar a apresentar tela azul depois de uma 'otimização' — e o cliente pagar por um problema que foi criado.",
+    sintomas: [
+      "Tela azul que cita um arquivo .sys no código de parada.",
+      "Placa de vídeo com artefatos, piscadas ou reinício do driver durante jogos.",
+      "Wi-Fi que cai só neste computador, enquanto os outros aparelhos seguem conectados.",
+      "Periférico que funcionava e parou depois de uma atualização de sistema.",
+    ],
+    verificacoesSeguras: [
+      "Abrir o Gerenciador de Dispositivos e procurar itens com aviso — a marcação indica dispositivo sem driver adequado.",
+      "Verificar atualizações pelo Windows Update, que entrega versões validadas pela Microsoft.",
+      "Baixar drivers apenas no site do fabricante do equipamento, usando o modelo exato.",
+      "Anotar a data e a versão do driver antes de atualizar, para saber a qual estado voltar.",
+    ],
+    naoFazer: [
+      "Não instalar 'atualizadores automáticos de driver' baixados de anúncios ou agregadores.",
+      "Não instalar driver de modelo diferente 'porque é parecido' — a incompatibilidade pode impedir a inicialização.",
+      "Não atualizar vários drivers de uma vez: se surgir instabilidade, não haverá como saber qual causou.",
+    ],
+    risco: "Exige atenção",
+    riscoNota:
+      "Consultar o Gerenciador de Dispositivos e usar o Windows Update é seguro. Instalar driver de origem duvidosa em modo privilegiado é uma das formas mais rápidas de tornar um sistema instável.",
+    links: [
+      {
+        rotulo: "Tela azul: diagnóstico do sintoma",
+        to: "/problemas/tela-azul",
+        contexto: "Como ler o código de parada que aponta o driver envolvido.",
+      },
+      {
+        rotulo: "BSOD no glossário",
+        to: "/glossario/bsod",
+        contexto: "O mecanismo de proteção que interrompe o sistema quando o driver falha.",
+      },
+      {
+        rotulo: "Formatar ou reparar",
+        to: "/decisoes/formatar-ou-reparar",
+        contexto: "Quando o problema de driver justifica reinstalar e quando não justifica.",
+      },
+    ],
+    relacionados: ["bsod", "secure-boot", "memoria-ram"],
+    fontes: [
+      {
+        titulo: "Microsoft Learn — What is a driver?",
+        url: "https://learn.microsoft.com/en-us/windows-hardware/drivers/gettingstarted/what-is-a-driver-",
+        nota: "definição oficial de driver e do nível de privilégio em que executa",
+      },
+    ],
+  },
+  {
+    slug: "particao",
+    termo: "Partição",
+    categoria: "Armazenamento e dados",
+    resumo:
+      "Divisão lógica de um disco físico em áreas independentes. Entender as partições evita apagar a área de recuperação ou o carregador de inicialização por engano.",
+    definicao: [
+      "Partição é uma divisão lógica do disco: o hardware é um só, mas o sistema enxerga áreas separadas, cada uma com sistema de arquivos e finalidade próprios. Em um disco de Windows moderno convivem, no mínimo, a partição do sistema, uma partição de inicialização exigida pelo UEFI e uma área reservada.",
+      "É comum ver um disco com 'C:' e 'D:' e concluir que existem dois discos. Muitas vezes é o mesmo disco físico particionado — o que significa que uma falha de hardware leva as duas letras junto. Guardar o backup em outra partição do mesmo disco não protege de nada.",
+      "O esquema de particionamento (GPT ou MBR) também importa: ele precisa ser compatível com o modo de inicialização do firmware. Disco MBR em máquina configurada para UEFI puro não inicia — e esse é um dos motivos silenciosos de falha de partida depois de uma troca de disco.",
+    ],
+    porQueImporta:
+      "Boa parte das perdas de dados evitáveis acontece durante um redimensionamento ou uma reinstalação: alguém apaga a partição errada, remove a área de recuperação do fabricante ou o carregador de inicialização. Saber o que cada área faz é o que separa uma operação rotineira de um prejuízo.",
+    sintomas: [
+      "O disco tem menos espaço disponível do que a capacidade anunciada, com áreas 'reservadas' visíveis.",
+      "Aparecem partições sem letra no Gerenciamento de Disco.",
+      "Depois de trocar de disco, a máquina não inicia mesmo com o sistema copiado.",
+      "Pedido de chave de recuperação após alteração da estrutura do disco.",
+    ],
+    verificacoesSeguras: [
+      "Abrir o Gerenciamento de Disco do Windows apenas para visualizar o mapa das partições — sem alterar nada.",
+      "Anotar tamanhos, letras e rótulos antes de qualquer operação de disco.",
+      "Confirmar se o backup está em outro disco físico, e não em outra partição do mesmo disco.",
+      "Verificar se há criptografia ativa e ter a chave de recuperação salva fora da máquina.",
+    ],
+    naoFazer: [
+      "Não apagar partições sem letra: normalmente são inicialização, recuperação ou área do fabricante.",
+      "Não redimensionar partições de disco com alerta S.M.A.R.T. ou ruído — a operação exige leitura e escrita intensas.",
+      "Não converter o esquema de particionamento sem backup conferido: a conversão mal executada torna o disco não inicializável.",
+    ],
+    risco: "Exige atenção",
+    riscoNota:
+      "Visualizar o mapa de partições é seguro. Qualquer alteração de estrutura mexe diretamente na área que contém os dados e deve ser feita com backup conferido.",
+    links: [
+      {
+        rotulo: "Checklist antes de formatar",
+        to: "/ferramentas/checklist-antes-de-formatar",
+        contexto: "O que mapear no disco antes de reinstalar o sistema.",
+      },
+      {
+        rotulo: "Imagem do sistema no glossário",
+        to: "/glossario/imagem-do-sistema",
+        contexto: "A cópia que preserva a estrutura inteira do disco, e não só arquivos.",
+      },
+      {
+        rotulo: "Recuperação de dados",
+        to: "/servicos/recuperacao-de-dados",
+        contexto: "Quando a partição some ou deixa de ser reconhecida pelo sistema.",
+      },
+    ],
+    relacionados: ["uefi", "imagem-do-sistema", "recuperacao-de-dados"],
+    fontes: [
+      {
+        titulo: "Microsoft Learn — UEFI/GPT-based hard drive partitions",
+        url: "https://learn.microsoft.com/en-us/windows-hardware/manufacture/desktop/configure-uefigpt-based-hard-drive-partitions",
+        nota: "layout oficial de partições exigido por instalações UEFI",
+      },
+    ],
+  },
 ];
+
 
 /** Ordem fixa das categorias no hub. */
 export const CATEGORIAS_GLOSSARIO: CategoriaGlossario[] = [
