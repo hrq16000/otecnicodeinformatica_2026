@@ -106,7 +106,7 @@ export const BlocosB2b4d = ({ path }: { path: string }) => {
                     aria-pressed={cidade === c}
                     className={`rounded-lg border px-3 py-2 text-sm font-medium transition-colors ${
                       cidade === c
-                        ? "border-accent bg-accent/15 text-accent"
+                        ? "border-accent bg-accent text-accent-foreground"
                         : "border-border bg-card text-muted-foreground hover:text-foreground"
                     }`}
                   >

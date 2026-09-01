@@ -57,7 +57,12 @@ export const TabelaDiagnosticaBloco = ({
       <h2 id={id} className="mb-4 font-heading text-2xl font-bold text-foreground">
         {tabela.titulo}
       </h2>
-      <div className="overflow-x-auto rounded-xl border border-border">
+      <div
+        role="region"
+        aria-label={tabela.titulo}
+        tabIndex={0}
+        className="overflow-x-auto rounded-xl border border-border focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+      >
         <table className="w-full min-w-[36rem] border-collapse text-left text-sm">
           <thead className="bg-secondary/50">
             <tr>
