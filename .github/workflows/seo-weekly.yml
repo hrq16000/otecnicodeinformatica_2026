@@ -25,6 +25,9 @@ jobs:
       - name: Guard de URLs prioritárias (sitemap + noindex + canonical)
         run: npm run check:priority-urls:dist
 
+      - name: Atlas de Informática (SSR, malha e JSON-LD do hub)
+        run: npm run check:atlas-hub
+
       - name: Relatório pós-deploy (rich results + NAP)
         run: npm run report:post-deploy
 

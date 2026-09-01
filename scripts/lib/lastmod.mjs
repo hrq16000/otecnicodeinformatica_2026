@@ -17,10 +17,10 @@ export const LASTMOD = {
   // Rodada 4K — nova página comercial de PC gamer (manutenção/upgrade)
   "/servicos/pc-gamer": "2026-08-11",
   // Pillar do cluster de informática (Rodada 4I-P.2)
-  "/guia-tecnico-informatica": "2026-08-09",
+  "/guia-tecnico-informatica": "2026-09-01", // Fase 1 do Atlas de Informática (hub por temas)
   "/problemas/notebook-nao-liga": "2026-08-09",
   "/problemas/computador-lento": "2026-08-09",
-  "/problemas": "2026-08-12",
+  "/problemas": "2026-09-01",
   "/problemas/wifi-instavel": "2026-08-12",
   "/problemas/tela-azul": "2026-08-12",
   "/problemas/arquivos-apagados": "2026-08-12",

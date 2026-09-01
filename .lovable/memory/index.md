@@ -69,3 +69,4 @@
 - [Infra de ondas editoriais](mem://features/infra-ondas-editoriais) — Registry por onda/lote, monitor GSC, gate anti-canibalização, painel /admin/editorial-ondas e E2E ampliado.
 - [Onda 10C — Lote 3](mem://features/onda-10c-lote3-armazenamento-audio) — 6 satélites de disco não detectado e áudio; CHKDSK proibido como recomendação padrão em disco com suspeita de falha física.
 - [Auditoria editorial automatizada](mem://features/auditoria-editorial-automatizada) — Auditoria 10C periódica (KPIs, delta, alertas de regressão), mapa da Onda 11 e gates fail-fast de interlinks.
+- [Atlas de Informática Fase 1](mem://features/atlas-informatica-fase-1) — Hub /guia-tecnico-informatica com 9 temas, trilhas fail-closed, guias de decisão, CollectionPage e gate check:atlas-hub.

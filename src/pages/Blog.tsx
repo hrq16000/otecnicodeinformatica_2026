@@ -47,6 +47,7 @@ const AUTHORITY_COMMITMENTS = [
 ];
 
 const INSTITUTIONAL_LINKS = [
+  { to: "/guia-tecnico-informatica", label: "Atlas de Informática", icon: BookOpen, desc: "Trilhas por tema: aprenda o fundamento, identifique o sintoma e decida com segurança." },
   { to: "/servicos", label: "Serviços de informática", icon: Wrench, desc: "Formatação, manutenção, SSD, vírus, redes e mais." },
   { to: "/diagnostico-tecnico", label: "Diagnóstico técnico", icon: FileSearch, desc: "Entenda o problema antes de decidir o reparo." },
   { to: "/sobre", label: "Sobre", icon: ShieldCheck, desc: "Quem somos e como trabalhamos em Curitiba." },
@@ -581,6 +582,16 @@ const Blog = () => {
                   causa, apresentar o custo, obter aprovação e só então executar. Quando o conserto
                   não compensa, a orientação também aparece — inclusive quando a conclusão é não
                   contratar serviço nenhum.
+                </p>
+                <p>
+                  A autoria é institucional e identificada, a data de revisão só muda com alteração
+                  material e afirmações dependentes de versão ou fabricante citam fonte primária —
+                  Microsoft, CISA, CERT.br e documentação oficial. Os critérios completos, os níveis
+                  de risco e as trilhas por tema estão no{" "}
+                  <Link to="/guia-tecnico-informatica" className="text-accent font-medium hover:underline">
+                    Atlas de Informática
+                  </Link>
+                  .
                 </p>
               </div>
             </div>

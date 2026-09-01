@@ -301,6 +301,7 @@
     "report:content-performance": "node scripts/report-content-performance.mjs",
     "report:content-cohort": "node scripts/report-content-cohort.mjs",
     "check:content-discovery": "node scripts/check-content-discovery.mjs",
+    "check:atlas-hub": "node scripts/check-atlas-hub.mjs",
     "smoke:edge-404": "node scripts/smoke-edge-404.mjs",
     "report:rodada-8f": "npm run report:content-discovery && npm run report:content-query-intent && npm run report:content-distribution && npm run report:content-performance",
     "report:rodada-8g": "npm run report:rodada-8f && npm run report:content-cohort",
