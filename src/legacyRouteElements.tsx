@@ -109,6 +109,7 @@ const AdminPublicacoesPendentes = lazyPagina(() => import("./pages/admin/AdminPu
 const AdminAutoridadeSeo = lazyPagina(() => import("./pages/admin/AdminAutoridadeSeo"));
 const AdminAutoridadeAtlas = lazyPagina(() => import("./pages/admin/AdminAutoridadeAtlas"));
 const AdminBiblioteca = lazyPagina(() => import("./pages/admin/AdminBiblioteca"));
+const AdminSeo = lazyPagina(() => import("./pages/admin/AdminSeo"));
 const AdminCapasPendentes = lazyPagina(() => import("./pages/admin/AdminCapasPendentes"));
 const AdminUiPerformance = lazyPagina(() => import("./pages/admin/AdminUiPerformance"));
 const AdminDashboard = lazyPagina(() => import("./pages/admin/AdminDashboard"));
@@ -1040,6 +1041,7 @@ export const legacyRouteElements: Record<string, () => React.ReactElement> = {
   "/admin/autoridade-atlas": () => <AdminAutoridadeAtlas />,
   "/admin/capas-pendentes": () => <AdminCapasPendentes />,
   "/admin/biblioteca": () => <AdminBiblioteca />,
+  "/admin/seo": () => <AdminSeo />,
   "/admin/ui-performance": () => <AdminUiPerformance />,
   "/admin/dashboard": () => <AdminDashboard />,
   "/admin/casos": () => <AdminCasos />,
