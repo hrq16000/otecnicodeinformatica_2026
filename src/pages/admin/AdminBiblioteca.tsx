@@ -6,7 +6,7 @@ import { Input } from "@/components/ui/input";
 import { exportarCsv } from "@/lib/exportarRelatorio";
 import { pingIndexNow } from "@/lib/indexNow";
 import { siteConfig } from "@/lib/siteConfig";
-import { GLOSSARIO_TERMOS } from "@/lib/glossarioTecnico";
+import { TERMOS_GLOSSARIO } from "@/lib/glossarioTecnico";
 import { FERRAMENTAS_TECNICAS } from "@/lib/ferramentasTecnicas";
 import { GUIAS_DECISAO, DECISOES_REVISADO_EM, cardAtlasDoGuia } from "@/lib/guiasDecisao";
 
@@ -57,7 +57,7 @@ export default function AdminBiblioteca() {
   const [feedback, setFeedback] = useState<Record<string, string>>({});
 
   const itens = useMemo<Item[]>(() => {
-    const glossario: Item[] = GLOSSARIO_TERMOS.map((t) => ({
+    const glossario: Item[] = TERMOS_GLOSSARIO.map((t) => ({
       grupo: "glossario",
       slug: t.slug,
       url: `/glossario/${t.slug}`,
