@@ -73,6 +73,62 @@ const CHECKLIST = [
   "Não instale otimizadores baixados por anúncio nem acumule dois antivírus ao mesmo tempo.",
 ];
 
+/** Portas de estudo por pilar: cada uma começa em um fundamento e termina
+ * em uma verificação ou decisão. São atalhos editoriais, não novas intenções
+ * nem novas URLs. */
+const PILARES_ESTUDO = [
+  {
+    id: "windows",
+    titulo: "Windows e inicialização",
+    resumo: "Entenda o caminho entre firmware, boot, atualização e reparo do sistema.",
+    links: [
+      ["Informática básica", "/blog/informatica-basica"],
+      ["Windows não inicia", "/problemas/windows-nao-inicia"],
+      ["Roteiro de falha de inicialização", "/ferramentas/roteiro-falha-de-inicializacao"],
+    ],
+  },
+  {
+    id: "seguranca",
+    titulo: "Segurança e dados",
+    resumo: "Proteja contas e arquivos antes de investigar vírus, golpes ou falhas de disco.",
+    links: [
+      ["Guia de backup", "/blog/backup-como-proteger-seus-arquivos"],
+      ["Sinais de vírus e malware", "/blog/como-saber-se-pc-tem-virus-malware"],
+      ["Recuperação de dados", "/blog/como-recuperar-dados-hd-com-defeito"],
+    ],
+  },
+  {
+    id: "hardware",
+    titulo: "Hardware e desempenho",
+    resumo: "Separe lentidão, memória, armazenamento e temperatura antes de comprar peças.",
+    links: [
+      ["Computador lento", "/blog/computador-lento-causas-solucoes"],
+      ["SSD ou RAM", "/ferramentas/ssd-ou-ram"],
+      ["Upgrade para SSD NVMe", "/blog/como-fazer-upgrade-ssd-nvme"],
+    ],
+  },
+  {
+    id: "redes",
+    titulo: "Redes e Wi-Fi",
+    resumo: "Compare equipamento, ambiente e provedor antes de trocar plano ou roteador.",
+    links: [
+      ["Como melhorar o Wi-Fi", "/blog/como-melhorar-sinal-wifi-em-casa"],
+      ["Internet lenta: provedor ou roteador?", "/blog/internet-lenta-provedor-ou-roteador"],
+      ["Configurar roteador", "/blog/como-configurar-roteador-wifi-iniciantes"],
+    ],
+  },
+  {
+    id: "produtividade",
+    titulo: "Produtividade e rotina",
+    resumo: "Organize a máquina e o ambiente de trabalho para reduzir falhas repetidas.",
+    links: [
+      ["Organização de TI para escritórios", "/blog/organizacao-de-ti-para-pequenos-escritorios"],
+      ["Checklist de computador lento", "/ferramentas/checklist-computador-lento"],
+      ["Escolha de workstation", "/blog/como-escolher-uma-workstation"],
+    ],
+  },
+] as const;
+
 const UPGRADES = [
   {
     titulo: "SSD no lugar do HD mecânico",
@@ -271,6 +327,7 @@ const GuiaTecnicoInformatica = () => {
           className="mb-12"
           items={[
             { id: "atlas", label: "Trilhas por tema" },
+            { id: "pilares", label: "Pilares de estudo" },
             { id: "guias-decisao", label: "Guias de decisão" },
             { id: "familias", label: "As seis famílias de falha" },
             { id: "checklist", label: "Checklist antes de chamar o técnico" },
@@ -288,6 +345,35 @@ const GuiaTecnicoInformatica = () => {
         <div className="mb-12">
           <AtlasTrilhas />
         </div>
+
+        <section id="pilares" className="mb-12 scroll-mt-24" aria-labelledby="pilares-titulo">
+          <h2 id="pilares-titulo" className="mb-3 text-2xl font-bold text-foreground">
+            Pilares de estudo: por onde continuar
+          </h2>
+          <p className="mb-6 max-w-3xl text-muted-foreground">
+            Se você não sabe qual página abrir primeiro, escolha o pilar que melhor descreve a
+            dúvida. A sequência começa pelo fundamento, passa pelo sintoma e termina em uma
+            verificação ou decisão — sem transformar conteúdo educativo em anúncio.
+          </p>
+          <div className="grid gap-4 md:grid-cols-2">
+            {PILARES_ESTUDO.map((pilar) => (
+              <article key={pilar.id} className="rounded-xl border border-border bg-card p-5">
+                <h3 className="font-heading text-base font-bold text-foreground">{pilar.titulo}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{pilar.resumo}</p>
+                <ol className="mt-4 space-y-2">
+                  {pilar.links.map(([label, to], index) => (
+                    <li key={to} className="flex items-start gap-2 text-sm">
+                      <span className="mt-0.5 min-w-5 text-xs font-bold text-accent">{index + 1}.</span>
+                      <Link to={to} className="font-semibold text-accent hover:underline">
+                        {label}
+                      </Link>
+                    </li>
+                  ))}
+                </ol>
+              </article>
+            ))}
+          </div>
+        </section>
 
         <section id="guias-decisao" className="mb-12 scroll-mt-24" aria-labelledby="guias-decisao-titulo">
           <h2 id="guias-decisao-titulo" className="mb-3 text-2xl font-bold text-foreground">
