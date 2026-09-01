@@ -204,7 +204,9 @@ if (tipos.has("AggregateRating")) {
 
 // ── Veredito ─────────────────────────────────────────────────
 console.log("── check:atlas-hub ──");
-console.log(`  temas: ${temas.length} · links declarados: ${links.size}`);
+console.log(
+  `  temas: ${temas.length} · links declarados: ${links.size} · vereditos: ${vereditos.length} · guias: ${guias.length} · fontes: ${fontesUrls.size}`,
+);
 for (const a of avisos) console.log(`  aviso: ${a}`);
 
 if (erros.length) {
