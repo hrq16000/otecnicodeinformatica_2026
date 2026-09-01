@@ -98,7 +98,7 @@
   --animate-slide-out-right: slide-out-right var(--anim-medium, 300ms) var(--anim-ease-out, ease-out);
   --animate-enter: fade-in var(--anim-medium, 300ms) ease-out, scale-in var(--anim-fast, 150ms) ease-out;
   --animate-exit: fade-out var(--anim-medium, 300ms) ease-out, scale-out var(--anim-fast, 150ms) ease-out;
-  --animate-pulse-soft: pulse-soft 2s ease-in-out infinite;
+  
   --animate-bounce-subtle: bounce-subtle 3s ease-in-out infinite;
   --animate-wa-bounce: wa-bounce 2.5s ease-in-out infinite;
   --animate-wa-pulse: wa-pulse 2s ease-in-out infinite;
@@ -136,10 +136,6 @@
   @keyframes slide-out-right {
     0% { transform: translateX(0); }
     100% { transform: translateX(100%); }
-  }
-  @keyframes pulse-soft {
-    0%, 100% { transform: scale(1); }
-    50% { transform: scale(1.02); }
   }
   @keyframes bounce-subtle {
     0%, 100% { transform: translateY(0); }

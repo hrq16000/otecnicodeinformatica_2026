@@ -100,6 +100,41 @@
       "file": "src/pages/equipamentos/EquipamentosHub.tsx",
       "rule": "assistencia-autorizada",
       "why": "Texto encaminha o cliente à assistência autorizada do fabricante quando o reparo é recusado; não reivindica autorização própria."
+    },
+    {
+      "file": "src/lib/bairrosLote2.ts",
+      "rule": "mesmo-dia",
+      "why": "Pergunta do cliente na FAQ ('Dá para resolver no mesmo dia?') — não é promessa do portal; a resposta condiciona à triagem."
+    },
+    {
+      "file": "src/lib/bairrosLote4.ts",
+      "rule": "mesmo-dia",
+      "why": "Descreve a triagem que PERGUNTA se existe prazo no mesmo dia e separa modalidades — condicional, sem promessa universal."
+    },
+    {
+      "file": "src/lib/enriquecimento4cLocal.ts",
+      "rule": "mesmo-dia",
+      "why": "Sempre condicionado ('quando houver janela', 'facilidade de encaixe') — nunca garantia universal."
+    },
+    {
+      "file": "src/lib/enriquecimento4cLocal.ts",
+      "rule": "garantia-total",
+      "why": "Tabela ensina o cliente a DESCONFIAR de quem diz 'garantia total' sem escopo — cita o termo para criticá-lo."
+    },
+    {
+      "file": "src/lib/enriquecimento4dB2b.ts",
+      "rule": "mesmo-dia",
+      "why": "Logística B2B condicional (duas unidades pedirem visita no mesmo dia; lotes por setor) — não é promessa de SLA."
+    },
+    {
+      "file": "src/lib/enriquecimento4dB2b.ts",
+      "rule": "filial",
+      "why": "Refere-se à filial da EMPRESA CLIENTE (sede em Curitiba, operação em SJP) — não afirma unidade física do portal."
+    },
+    {
+      "file": "src/lib/enriquecimento4eRedes.ts",
+      "rule": "mesmo-dia",
+      "why": "Hedge explícito ('quase sempre', 'se o computador liga') sobre diagnóstico remoto — condicional real, sem garantia."
     }
   ],
   "_scope": "Conteúdo editorial (blog, páginas de problema, marcas) descreve terceiros e legislação — fora do escopo do gate de claims institucionais."

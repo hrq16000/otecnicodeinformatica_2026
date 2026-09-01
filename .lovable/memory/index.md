@@ -71,3 +71,4 @@
 - [Onda 10C — Lote 3](mem://features/onda-10c-lote3-armazenamento-audio) — 6 satélites de disco não detectado e áudio; CHKDSK proibido como recomendação padrão em disco com suspeita de falha física.
 - [Auditoria editorial automatizada](mem://features/auditoria-editorial-automatizada) — Auditoria 10C periódica (KPIs, delta, alertas de regressão), mapa da Onda 11 e gates fail-fast de interlinks.
 - [Atlas de Informática Fase 1](mem://features/atlas-informatica-fase-1) — Hub /guia-tecnico-informatica com 9 temas, trilhas fail-closed, guias de decisão, CollectionPage e gate check:atlas-hub.
+- [Fase 3 — biblioteca técnica](mem://features/biblioteca-tecnica-fase3) — /glossario (15 DefinedTerm) + /ferramentas (5 checklists), 22 rotas, pontes bidirecionais, gate check:biblioteca e contratos de a11y.

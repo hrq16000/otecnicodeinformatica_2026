@@ -273,6 +273,7 @@ const GuiaTecnicoInformatica = () => {
             { id: "guias-decisao", label: "Guias de decisão" },
             { id: "familias", label: "As seis famílias de falha" },
             { id: "checklist", label: "Checklist antes de chamar o técnico" },
+            { id: "biblioteca", label: "Biblioteca técnica: glossário e ferramentas" },
             { id: "upgrades", label: "O que realmente melhora o desempenho" },
             { id: "dados", label: "Dados, backup e recuperação" },
             { id: "rede", label: "Quando o problema é a rede" },
@@ -420,6 +421,65 @@ const GuiaTecnicoInformatica = () => {
               caminho mais barato é descrever o sintoma antes de intervir.
             </p>
           </div>
+        </section>
+
+        <section id="biblioteca" className="mb-12 scroll-mt-24" aria-labelledby="biblioteca-titulo">
+          <h2 id="biblioteca-titulo" className="mb-4 text-2xl font-bold text-foreground">
+            Biblioteca técnica: glossário e ferramentas
+          </h2>
+          <p className="mb-6 max-w-3xl text-muted-foreground">
+            As trilhas ensinam a decidir; a biblioteca dá o vocabulário e os roteiros de observação.
+            O glossário explica os quinze termos que aparecem em toda conversa técnica — sempre com o
+            que é seguro verificar e onde parar. As ferramentas transformam sintomas vagos em
+            anotações objetivas, sem cadastro e sem promessa de diagnóstico.
+          </p>
+          <div className="grid gap-4 md:grid-cols-2">
+            <Link
+              to="/glossario"
+              className="group rounded-xl border border-border bg-card p-5 transition-colors hover:border-accent/50"
+            >
+              <h3 className="font-heading text-base font-bold text-foreground group-hover:text-accent">
+                Glossário técnico de informática
+              </h3>
+              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                BSOD, SMART, TPM, BitLocker, UEFI, DNS, NVMe e mais dez termos, cada um com definição,
+                sintomas relacionados, verificações seguras e o que não fazer.
+              </p>
+              <span className="mt-3 inline-flex items-center gap-1.5 font-heading text-sm font-bold text-accent">
+                Abrir o glossário <ArrowRight className="h-4 w-4" aria-hidden="true" />
+              </span>
+            </Link>
+            <Link
+              to="/ferramentas"
+              className="group rounded-xl border border-border bg-card p-5 transition-colors hover:border-accent/50"
+            >
+              <h3 className="font-heading text-base font-bold text-foreground group-hover:text-accent">
+                Ferramentas e checklists orientativos
+              </h3>
+              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                Computador lento, antes de formatar, falha de inicialização, verificação de backup e
+                SSD ou RAM — roteiros seguros com condições claras de parada.
+              </p>
+              <span className="mt-3 inline-flex items-center gap-1.5 font-heading text-sm font-bold text-accent">
+                Ver as ferramentas <ArrowRight className="h-4 w-4" aria-hidden="true" />
+              </span>
+            </Link>
+          </div>
+          <p className="mt-5 text-sm text-muted-foreground">
+            Três entradas diretas:{" "}
+            <Link to="/ferramentas/checklist-antes-de-formatar" className="font-semibold text-accent hover:underline">
+              checklist antes de formatar
+            </Link>
+            ,{" "}
+            <Link to="/glossario/smart" className="font-semibold text-accent hover:underline">
+              o que é S.M.A.R.T.
+            </Link>{" "}
+            e{" "}
+            <Link to="/ferramentas/ssd-ou-ram" className="font-semibold text-accent hover:underline">
+              SSD ou RAM
+            </Link>
+            .
+          </p>
         </section>
 
         <RealImageSection

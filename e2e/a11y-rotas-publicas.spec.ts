@@ -15,6 +15,11 @@ const ROTAS_PUBLICAS = [
   "/empresas",
   "/servicos",
   "/como-funciona",
+  // Fase 3 — biblioteca técnica (glossário + ferramentas)
+  "/glossario",
+  "/glossario/bsod",
+  "/ferramentas",
+  "/ferramentas/checklist-computador-lento",
 ] as const;
 
 test.describe("Acessibilidade — rotas públicas", () => {

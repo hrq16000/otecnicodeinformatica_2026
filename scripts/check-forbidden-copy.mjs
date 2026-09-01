@@ -49,6 +49,12 @@ const ALLOW = [
   // Formulário do programa de parceiros: campo de documento (CPF/CNPJ) é
   // dado do parceiro, não identificação jurídica do portal.
   { file: "src/pages/profissionais/CadastroParceiro.tsx", id: "cnpj-palavra" },
+  // Copy B2B (Rodada 4D): "CNPJ" refere-se à empresa CLIENTE (faturar para o
+  // CNPJ, contratar pelo CNPJ) — não à identidade jurídica do portal.
+  { file: "src/lib/enriquecimento4dB2b.ts", id: "cnpj-palavra" },
+  { file: "src/components/b2b/BlocosB2b4d.tsx", id: "cnpj-palavra" },
+  // Comentário de código que documenta justamente a ausência de CNPJ público.
+  { file: "src/lib/os/modalidadeOs.ts", id: "cnpj-palavra" },
   // rotas legadas/canônicas que não podem ser removidas (SEO evolutivo)
 ];
 
