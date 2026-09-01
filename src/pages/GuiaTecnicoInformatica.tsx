@@ -223,21 +223,22 @@ const GuiaTecnicoInformatica = () => {
       <PageSEO title={TITLE} description={DESCRIPTION} path={PATH} />
       <LocalBusinessJsonLd path={PATH} description={DESCRIPTION} />
       <Header />
-      <Breadcrumbs items={[{ label: "Guia técnico de informática" }]} />
+      <Breadcrumbs items={[{ label: "Atlas de Informática" }]} />
 
       <section className="bg-[hsl(var(--hero-bg))] text-white">
         <div className="container mx-auto max-w-4xl px-4 py-8 sm:py-12 md:py-14">
           <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-accent-on-dark sm:mb-3 sm:text-sm">
-            Guia completo · Curitiba e região
+            Atlas de Informática · aprender antes de contratar
           </p>
           <h1 className="mb-3 text-[1.7rem] font-bold leading-[1.12] sm:mb-4 sm:text-3xl md:text-4xl">
-            Guia técnico de informática: manutenção de PC e notebook
+            Atlas de Informática: aprenda, identifique e decida
           </h1>
           <p className="mb-4 text-[0.95rem] leading-relaxed opacity-95 sm:mb-6 sm:text-base">
-            Este guia reúne, em um só lugar, como separar as famílias de falha de um computador ou
-            notebook, o que dá para verificar com segurança antes de qualquer atendimento, quando um
-            upgrade realmente muda o desempenho, quando formatar resolve e em que momento o reparo
-            deixa de compensar. É o material de apoio das páginas de serviço e de sintoma do site.
+            Este hub organiza o conhecimento técnico do portal em nove temas — de fundamentos a
+            decisões de compra e reparo. Cada tema segue a mesma trilha: aprender o fundamento,
+            identificar o sintoma, executar só verificações seguras, saber quando parar e escolher a
+            solução adequada. O atendimento aparece por último, de propósito: entender vem antes de
+            contratar.
           </p>
           <Button asChild size="lg" className="min-h-14">
             <a href={waHref} onClick={cta("hero")} data-cta-location="guia_hero">
@@ -261,6 +262,8 @@ const GuiaTecnicoInformatica = () => {
         <PageTableOfContents
           className="mb-12"
           items={[
+            { id: "atlas", label: "Trilhas por tema" },
+            { id: "guias-decisao", label: "Guias de decisão" },
             { id: "familias", label: "As seis famílias de falha" },
             { id: "checklist", label: "Checklist antes de chamar o técnico" },
             { id: "upgrades", label: "O que realmente melhora o desempenho" },
@@ -268,9 +271,39 @@ const GuiaTecnicoInformatica = () => {
             { id: "rede", label: "Quando o problema é a rede" },
             { id: "empresas", label: "Ambientes com vários equipamentos" },
             { id: "diagnostico", label: "Como funciona o diagnóstico" },
+            { id: "como-produzimos", label: "Como produzimos o conteúdo" },
             { id: "faq", label: "Perguntas frequentes" },
           ]}
         />
+
+        <div className="mb-12">
+          <AtlasTrilhas />
+        </div>
+
+        <section id="guias-decisao" className="mb-12 scroll-mt-24" aria-labelledby="guias-decisao-titulo">
+          <h2 id="guias-decisao-titulo" className="mb-3 text-2xl font-bold text-foreground">
+            Guias de decisão
+          </h2>
+          <p className="mb-6 max-w-3xl text-muted-foreground">
+            Perguntas que decidem orçamento. Cada cartão resume o critério técnico usado na prática
+            e leva ao conteúdo que aprofunda a resposta — inclusive quando a resposta é não
+            contratar serviço nenhum.
+          </p>
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {ATLAS_GUIAS_DECISAO.map((g) => (
+              <div key={g.pergunta} className="flex h-full flex-col rounded-xl border border-border bg-card p-5">
+                <h3 className="font-heading text-base font-bold text-foreground">{g.pergunta}</h3>
+                <p className="mt-2 flex-1 text-sm leading-relaxed text-muted-foreground">{g.criterio}</p>
+                <Link
+                  to={g.to}
+                  className="mt-4 inline-flex items-center gap-1.5 font-heading text-sm font-bold text-accent hover:underline"
+                >
+                  {g.linkLabel} <ArrowRight className="h-4 w-4" aria-hidden="true" />
+                </Link>
+              </div>
+            ))}
+          </div>
+        </section>
 
         <section id="familias" className="mb-12 scroll-mt-24">
           <h2 className="mb-4 text-2xl font-bold text-foreground">As seis famílias de falha</h2>
