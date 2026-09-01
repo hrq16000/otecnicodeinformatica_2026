@@ -33,6 +33,7 @@ import { Route as ConsertoTvCuritibaRouteImport } from './routes/conserto-tv-cur
 import { Route as ConsertoVideogameCuritibaRouteImport } from './routes/conserto-videogame-curitiba'
 import { Route as ContatoRouteImport } from './routes/contato'
 import { Route as CreditosDeImagensRouteImport } from './routes/creditos-de-imagens'
+import { Route as DecisoesRouteImport } from './routes/decisoes'
 import { Route as DepoimentosRouteImport } from './routes/depoimentos'
 import { Route as Diagnostico60sRouteImport } from './routes/diagnostico-60s'
 import { Route as DiagnosticoTecnicoRouteImport } from './routes/diagnostico-tecnico'
@@ -89,6 +90,7 @@ import { Route as AdminAuditoriaOsRouteImport } from './routes/admin_.auditoria-
 import { Route as AdminAutoridadeAtlasRouteImport } from './routes/admin_.autoridade-atlas'
 import { Route as AdminAutoridadeSeoRouteImport } from './routes/admin_.autoridade-seo'
 import { Route as AdminBairrosRouteImport } from './routes/admin_.bairros'
+import { Route as AdminBibliotecaRouteImport } from './routes/admin_.biblioteca'
 import { Route as AdminCapasPendentesRouteImport } from './routes/admin_.capas-pendentes'
 import { Route as AdminCasosRouteImport } from './routes/admin_.casos'
 import { Route as AdminChatOsRouteImport } from './routes/admin_.chat-os'
@@ -365,6 +367,7 @@ import { Route as ConsertoSomLocalRouteImport } from './routes/conserto-som_.$lo
 import { Route as ConsertoTvLocalRouteImport } from './routes/conserto-tv_.$local'
 import { Route as ConsertoVideogameLocalRouteImport } from './routes/conserto-videogame_.$local'
 import { Route as DebugTelemetriaRouteImport } from './routes/debug_.telemetria'
+import { Route as DecisoesSlugRouteImport } from './routes/decisoes_.$slug'
 import { Route as EquipamentosSlugRouteImport } from './routes/equipamentos_.$slug'
 import { Route as FerramentasSlugRouteImport } from './routes/ferramentas_.$slug'
 import { Route as GlossarioTermoRouteImport } from './routes/glossario_.$termo'
@@ -603,6 +606,11 @@ const ContatoRoute = ContatoRouteImport.update({
 const CreditosDeImagensRoute = CreditosDeImagensRouteImport.update({
   id: '/creditos-de-imagens',
   path: '/creditos-de-imagens',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DecisoesRoute = DecisoesRouteImport.update({
+  id: '/decisoes',
+  path: '/decisoes',
   getParentRoute: () => rootRouteImport,
 } as any)
 const DepoimentosRoute = DepoimentosRouteImport.update({
@@ -897,6 +905,11 @@ const AdminAutoridadeSeoRoute = AdminAutoridadeSeoRouteImport.update({
 const AdminBairrosRoute = AdminBairrosRouteImport.update({
   id: '/admin_/bairros',
   path: '/admin/bairros',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AdminBibliotecaRoute = AdminBibliotecaRouteImport.update({
+  id: '/admin_/biblioteca',
+  path: '/admin/biblioteca',
   getParentRoute: () => rootRouteImport,
 } as any)
 const AdminCapasPendentesRoute = AdminCapasPendentesRouteImport.update({
@@ -2346,6 +2359,11 @@ const DebugTelemetriaRoute = DebugTelemetriaRouteImport.update({
   path: '/debug/telemetria',
   getParentRoute: () => rootRouteImport,
 } as any)
+const DecisoesSlugRoute = DecisoesSlugRouteImport.update({
+  id: '/decisoes_/$slug',
+  path: '/decisoes/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const EquipamentosSlugRoute = EquipamentosSlugRouteImport.update({
   id: '/equipamentos_/$slug',
   path: '/equipamentos/$slug',
@@ -3028,6 +3046,7 @@ export interface FileRoutesByFullPath {
   '/conserto-videogame-curitiba': typeof ConsertoVideogameCuritibaRoute
   '/contato': typeof ContatoRoute
   '/creditos-de-imagens': typeof CreditosDeImagensRoute
+  '/decisoes': typeof DecisoesRoute
   '/depoimentos': typeof DepoimentosRoute
   '/diagnostico-60s': typeof Diagnostico60sRoute
   '/diagnostico-tecnico': typeof DiagnosticoTecnicoRoute
@@ -3084,6 +3103,7 @@ export interface FileRoutesByFullPath {
   '/admin/autoridade-atlas': typeof AdminAutoridadeAtlasRoute
   '/admin/autoridade-seo': typeof AdminAutoridadeSeoRoute
   '/admin/bairros': typeof AdminBairrosRoute
+  '/admin/biblioteca': typeof AdminBibliotecaRoute
   '/admin/capas-pendentes': typeof AdminCapasPendentesRoute
   '/admin/casos': typeof AdminCasosRoute
   '/admin/chat-os': typeof AdminChatOsRoute
@@ -3360,6 +3380,7 @@ export interface FileRoutesByFullPath {
   '/conserto-tv/$local': typeof ConsertoTvLocalRoute
   '/conserto-videogame/$local': typeof ConsertoVideogameLocalRoute
   '/debug/telemetria': typeof DebugTelemetriaRoute
+  '/decisoes/$slug': typeof DecisoesSlugRoute
   '/equipamentos/$slug': typeof EquipamentosSlugRoute
   '/ferramentas/$slug': typeof FerramentasSlugRoute
   '/glossario/$termo': typeof GlossarioTermoRoute
@@ -3501,6 +3522,7 @@ export interface FileRoutesByTo {
   '/conserto-videogame-curitiba': typeof ConsertoVideogameCuritibaRoute
   '/contato': typeof ContatoRoute
   '/creditos-de-imagens': typeof CreditosDeImagensRoute
+  '/decisoes': typeof DecisoesRoute
   '/depoimentos': typeof DepoimentosRoute
   '/diagnostico-60s': typeof Diagnostico60sRoute
   '/diagnostico-tecnico': typeof DiagnosticoTecnicoRoute
@@ -3557,6 +3579,7 @@ export interface FileRoutesByTo {
   '/admin/autoridade-atlas': typeof AdminAutoridadeAtlasRoute
   '/admin/autoridade-seo': typeof AdminAutoridadeSeoRoute
   '/admin/bairros': typeof AdminBairrosRoute
+  '/admin/biblioteca': typeof AdminBibliotecaRoute
   '/admin/capas-pendentes': typeof AdminCapasPendentesRoute
   '/admin/casos': typeof AdminCasosRoute
   '/admin/chat-os': typeof AdminChatOsRoute
@@ -3833,6 +3856,7 @@ export interface FileRoutesByTo {
   '/conserto-tv/$local': typeof ConsertoTvLocalRoute
   '/conserto-videogame/$local': typeof ConsertoVideogameLocalRoute
   '/debug/telemetria': typeof DebugTelemetriaRoute
+  '/decisoes/$slug': typeof DecisoesSlugRoute
   '/equipamentos/$slug': typeof EquipamentosSlugRoute
   '/ferramentas/$slug': typeof FerramentasSlugRoute
   '/glossario/$termo': typeof GlossarioTermoRoute
@@ -3975,6 +3999,7 @@ export interface FileRoutesById {
   '/conserto-videogame-curitiba': typeof ConsertoVideogameCuritibaRoute
   '/contato': typeof ContatoRoute
   '/creditos-de-imagens': typeof CreditosDeImagensRoute
+  '/decisoes': typeof DecisoesRoute
   '/depoimentos': typeof DepoimentosRoute
   '/diagnostico-60s': typeof Diagnostico60sRoute
   '/diagnostico-tecnico': typeof DiagnosticoTecnicoRoute
@@ -4031,6 +4056,7 @@ export interface FileRoutesById {
   '/admin_/autoridade-atlas': typeof AdminAutoridadeAtlasRoute
   '/admin_/autoridade-seo': typeof AdminAutoridadeSeoRoute
   '/admin_/bairros': typeof AdminBairrosRoute
+  '/admin_/biblioteca': typeof AdminBibliotecaRoute
   '/admin_/capas-pendentes': typeof AdminCapasPendentesRoute
   '/admin_/casos': typeof AdminCasosRoute
   '/admin_/chat-os': typeof AdminChatOsRoute
@@ -4307,6 +4333,7 @@ export interface FileRoutesById {
   '/conserto-tv_/$local': typeof ConsertoTvLocalRoute
   '/conserto-videogame_/$local': typeof ConsertoVideogameLocalRoute
   '/debug_/telemetria': typeof DebugTelemetriaRoute
+  '/decisoes_/$slug': typeof DecisoesSlugRoute
   '/equipamentos_/$slug': typeof EquipamentosSlugRoute
   '/ferramentas_/$slug': typeof FerramentasSlugRoute
   '/glossario_/$termo': typeof GlossarioTermoRoute
@@ -4450,6 +4477,7 @@ export interface FileRouteTypes {
     | '/conserto-videogame-curitiba'
     | '/contato'
     | '/creditos-de-imagens'
+    | '/decisoes'
     | '/depoimentos'
     | '/diagnostico-60s'
     | '/diagnostico-tecnico'
@@ -4506,6 +4534,7 @@ export interface FileRouteTypes {
     | '/admin/autoridade-atlas'
     | '/admin/autoridade-seo'
     | '/admin/bairros'
+    | '/admin/biblioteca'
     | '/admin/capas-pendentes'
     | '/admin/casos'
     | '/admin/chat-os'
@@ -4782,6 +4811,7 @@ export interface FileRouteTypes {
     | '/conserto-tv/$local'
     | '/conserto-videogame/$local'
     | '/debug/telemetria'
+    | '/decisoes/$slug'
     | '/equipamentos/$slug'
     | '/ferramentas/$slug'
     | '/glossario/$termo'
@@ -4923,6 +4953,7 @@ export interface FileRouteTypes {
     | '/conserto-videogame-curitiba'
     | '/contato'
     | '/creditos-de-imagens'
+    | '/decisoes'
     | '/depoimentos'
     | '/diagnostico-60s'
     | '/diagnostico-tecnico'
@@ -4979,6 +5010,7 @@ export interface FileRouteTypes {
     | '/admin/autoridade-atlas'
     | '/admin/autoridade-seo'
     | '/admin/bairros'
+    | '/admin/biblioteca'
     | '/admin/capas-pendentes'
     | '/admin/casos'
     | '/admin/chat-os'
@@ -5255,6 +5287,7 @@ export interface FileRouteTypes {
     | '/conserto-tv/$local'
     | '/conserto-videogame/$local'
     | '/debug/telemetria'
+    | '/decisoes/$slug'
     | '/equipamentos/$slug'
     | '/ferramentas/$slug'
     | '/glossario/$termo'
@@ -5396,6 +5429,7 @@ export interface FileRouteTypes {
     | '/conserto-videogame-curitiba'
     | '/contato'
     | '/creditos-de-imagens'
+    | '/decisoes'
     | '/depoimentos'
     | '/diagnostico-60s'
     | '/diagnostico-tecnico'
@@ -5452,6 +5486,7 @@ export interface FileRouteTypes {
     | '/admin_/autoridade-atlas'
     | '/admin_/autoridade-seo'
     | '/admin_/bairros'
+    | '/admin_/biblioteca'
     | '/admin_/capas-pendentes'
     | '/admin_/casos'
     | '/admin_/chat-os'
@@ -5728,6 +5763,7 @@ export interface FileRouteTypes {
     | '/conserto-tv_/$local'
     | '/conserto-videogame_/$local'
     | '/debug_/telemetria'
+    | '/decisoes_/$slug'
     | '/equipamentos_/$slug'
     | '/ferramentas_/$slug'
     | '/glossario_/$termo'
@@ -5870,6 +5906,7 @@ export interface RootRouteChildren {
   ConsertoVideogameCuritibaRoute: typeof ConsertoVideogameCuritibaRoute
   ContatoRoute: typeof ContatoRoute
   CreditosDeImagensRoute: typeof CreditosDeImagensRoute
+  DecisoesRoute: typeof DecisoesRoute
   DepoimentosRoute: typeof DepoimentosRoute
   Diagnostico60sRoute: typeof Diagnostico60sRoute
   DiagnosticoTecnicoRoute: typeof DiagnosticoTecnicoRoute
@@ -5926,6 +5963,7 @@ export interface RootRouteChildren {
   AdminAutoridadeAtlasRoute: typeof AdminAutoridadeAtlasRoute
   AdminAutoridadeSeoRoute: typeof AdminAutoridadeSeoRoute
   AdminBairrosRoute: typeof AdminBairrosRoute
+  AdminBibliotecaRoute: typeof AdminBibliotecaRoute
   AdminCapasPendentesRoute: typeof AdminCapasPendentesRoute
   AdminCasosRoute: typeof AdminCasosRoute
   AdminChatOsRoute: typeof AdminChatOsRoute
@@ -6202,6 +6240,7 @@ export interface RootRouteChildren {
   ConsertoTvLocalRoute: typeof ConsertoTvLocalRoute
   ConsertoVideogameLocalRoute: typeof ConsertoVideogameLocalRoute
   DebugTelemetriaRoute: typeof DebugTelemetriaRoute
+  DecisoesSlugRoute: typeof DecisoesSlugRoute
   EquipamentosSlugRoute: typeof EquipamentosSlugRoute
   FerramentasSlugRoute: typeof FerramentasSlugRoute
   GlossarioTermoRoute: typeof GlossarioTermoRoute
@@ -6487,6 +6526,13 @@ declare module '@tanstack/react-router' {
       path: '/creditos-de-imagens'
       fullPath: '/creditos-de-imagens'
       preLoaderRoute: typeof CreditosDeImagensRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/decisoes': {
+      id: '/decisoes'
+      path: '/decisoes'
+      fullPath: '/decisoes'
+      preLoaderRoute: typeof DecisoesRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/depoimentos': {
@@ -6879,6 +6925,13 @@ declare module '@tanstack/react-router' {
       path: '/admin/bairros'
       fullPath: '/admin/bairros'
       preLoaderRoute: typeof AdminBairrosRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/admin_/biblioteca': {
+      id: '/admin_/biblioteca'
+      path: '/admin/biblioteca'
+      fullPath: '/admin/biblioteca'
+      preLoaderRoute: typeof AdminBibliotecaRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/admin_/capas-pendentes': {
@@ -8813,6 +8866,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof DebugTelemetriaRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/decisoes_/$slug': {
+      id: '/decisoes_/$slug'
+      path: '/decisoes/$slug'
+      fullPath: '/decisoes/$slug'
+      preLoaderRoute: typeof DecisoesSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/equipamentos_/$slug': {
       id: '/equipamentos_/$slug'
       path: '/equipamentos/$slug'
@@ -9647,6 +9707,7 @@ const rootRouteChildren: RootRouteChildren = {
   ConsertoVideogameCuritibaRoute: ConsertoVideogameCuritibaRoute,
   ContatoRoute: ContatoRoute,
   CreditosDeImagensRoute: CreditosDeImagensRoute,
+  DecisoesRoute: DecisoesRoute,
   DepoimentosRoute: DepoimentosRoute,
   Diagnostico60sRoute: Diagnostico60sRoute,
   DiagnosticoTecnicoRoute: DiagnosticoTecnicoRoute,
@@ -9705,6 +9766,7 @@ const rootRouteChildren: RootRouteChildren = {
   AdminAutoridadeAtlasRoute: AdminAutoridadeAtlasRoute,
   AdminAutoridadeSeoRoute: AdminAutoridadeSeoRoute,
   AdminBairrosRoute: AdminBairrosRoute,
+  AdminBibliotecaRoute: AdminBibliotecaRoute,
   AdminCapasPendentesRoute: AdminCapasPendentesRoute,
   AdminCasosRoute: AdminCasosRoute,
   AdminChatOsRoute: AdminChatOsRoute,
@@ -9982,6 +10044,7 @@ const rootRouteChildren: RootRouteChildren = {
   ConsertoTvLocalRoute: ConsertoTvLocalRoute,
   ConsertoVideogameLocalRoute: ConsertoVideogameLocalRoute,
   DebugTelemetriaRoute: DebugTelemetriaRoute,
+  DecisoesSlugRoute: DecisoesSlugRoute,
   EquipamentosSlugRoute: EquipamentosSlugRoute,
   FerramentasSlugRoute: FerramentasSlugRoute,
   GlossarioTermoRoute: GlossarioTermoRoute,

@@ -18,6 +18,7 @@ import { trackPageView, trackCTAClick } from "@/lib/analytics";
 import { AtlasTrilhas } from "@/components/informatica/AtlasTrilhas";
 import { ComoProduzimosConteudo } from "@/components/editorial/ComoProduzimosConteudo";
 import { ATLAS_GUIAS_DECISAO, ATLAS_REVISADO_EM, ATLAS_TEMAS } from "@/lib/atlasInformatica";
+import { temPaginaDeDecisao } from "@/lib/guiasDecisao";
 
 const PATH = "/guia-tecnico-informatica";
 const TITLE = "Atlas de Informática: guia técnico de PC e notebook";
@@ -346,12 +347,23 @@ const GuiaTecnicoInformatica = () => {
                     </div>
                   ))}
                 </div>
-                <Link
-                  to={g.to}
-                  className="mt-4 inline-flex items-center gap-1.5 font-heading text-sm font-bold text-accent hover:underline"
-                >
-                  {g.linkLabel} <ArrowRight className="h-4 w-4" aria-hidden="true" />
-                </Link>
+                <div className="mt-4 flex flex-wrap items-center gap-x-5 gap-y-2">
+                  {temPaginaDeDecisao(g.id) && (
+                    <Link
+                      to={`/decisoes/${g.id}`}
+                      className="inline-flex items-center gap-1.5 font-heading text-sm font-bold text-accent hover:underline"
+                    >
+                      Guia completo desta decisão <ArrowRight className="h-4 w-4" aria-hidden="true" />
+                    </Link>
+                  )}
+                  <Link
+                    to={g.to}
+                    className="inline-flex items-center gap-1.5 font-heading text-sm font-bold text-foreground hover:text-accent hover:underline"
+                  >
+                    {g.linkLabel} <ArrowRight className="h-4 w-4" aria-hidden="true" />
+                  </Link>
+                </div>
+
               </article>
             ))}
           </div>

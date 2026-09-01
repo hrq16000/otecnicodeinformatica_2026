@@ -108,6 +108,7 @@ const AdminOndas = lazyPagina(() => import("./pages/admin/AdminOndas"));
 const AdminPublicacoesPendentes = lazyPagina(() => import("./pages/admin/AdminPublicacoesPendentes"));
 const AdminAutoridadeSeo = lazyPagina(() => import("./pages/admin/AdminAutoridadeSeo"));
 const AdminAutoridadeAtlas = lazyPagina(() => import("./pages/admin/AdminAutoridadeAtlas"));
+const AdminBiblioteca = lazyPagina(() => import("./pages/admin/AdminBiblioteca"));
 const AdminCapasPendentes = lazyPagina(() => import("./pages/admin/AdminCapasPendentes"));
 const AdminUiPerformance = lazyPagina(() => import("./pages/admin/AdminUiPerformance"));
 const AdminDashboard = lazyPagina(() => import("./pages/admin/AdminDashboard"));
@@ -527,6 +528,10 @@ const GlossarioHub = lazyPagina(() => import("./pages/biblioteca/GlossarioHub"))
 const GlossarioTermo = lazyPagina(() => import("./pages/biblioteca/GlossarioTermo"));
 const FerramentasHub = lazyPagina(() => import("./pages/biblioteca/FerramentasHub"));
 const FerramentaChecklist = lazyPagina(() => import("./pages/biblioteca/FerramentaChecklist"));
+
+// Fase 4 — Guias de decisão independentes (/decisoes)
+const DecisoesHub = lazyPagina(() => import("./pages/decisoes/DecisoesHub"));
+const DecisaoGuia = lazyPagina(() => import("./pages/decisoes/DecisaoGuia"));
 
 // Procedimentos Técnicos hub
 const ProcedimentosPlaca = lazyPagina(() => import("./pages/ProcedimentosPlaca"));
@@ -1003,6 +1008,8 @@ export const legacyRouteElements: Record<string, () => React.ReactElement> = {
   "/glossario/:termo": () => <GlossarioTermo />,
   "/ferramentas": () => <FerramentasHub />,
   "/ferramentas/:slug": () => <FerramentaChecklist />,
+  "/decisoes": () => <DecisoesHub />,
+  "/decisoes/:slug": () => <DecisaoGuia />,
   "/problemas/:slug": () => <ProblemaPage />,
   "/assistencia-tecnica-curitiba": () => <AssistenciaTecnicaCuritiba />,
   "/termos-e-condicoes": () => <TermosCondicoes />,
@@ -1032,6 +1039,7 @@ export const legacyRouteElements: Record<string, () => React.ReactElement> = {
   "/admin/autoridade-seo": () => <AdminAutoridadeSeo />,
   "/admin/autoridade-atlas": () => <AdminAutoridadeAtlas />,
   "/admin/capas-pendentes": () => <AdminCapasPendentes />,
+  "/admin/biblioteca": () => <AdminBiblioteca />,
   "/admin/ui-performance": () => <AdminUiPerformance />,
   "/admin/dashboard": () => <AdminDashboard />,
   "/admin/casos": () => <AdminCasos />,
