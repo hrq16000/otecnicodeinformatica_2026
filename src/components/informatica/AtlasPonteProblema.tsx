@@ -1,6 +1,7 @@
 import { Link } from "@/lib/router-compat";
 import { ArrowRight, Compass } from "lucide-react";
-import { atlasPonteDoSintoma } from "@/lib/atlasPontes";
+import { atlasPonteDoSintoma, decisaoDoSintoma } from "@/lib/atlasPontes";
+import { guiaDecisaoPorSlug } from "@/lib/guiasDecisao";
 
 /**
  * Ponte sintoma → trilha do Atlas → serviço.
@@ -9,6 +10,8 @@ import { atlasPonteDoSintoma } from "@/lib/atlasPontes";
  */
 export const AtlasPonteProblema = ({ sintomaSlug }: { sintomaSlug: string }) => {
   const ponte = atlasPonteDoSintoma(sintomaSlug);
+  const decisao = decisaoDoSintoma(sintomaSlug);
+  const guiaDecisao = decisao ? guiaDecisaoPorSlug(decisao.slug) : undefined;
   if (!ponte) return null;
 
   return (
@@ -77,6 +80,22 @@ export const AtlasPonteProblema = ({ sintomaSlug }: { sintomaSlug: string }) => 
           </Link>
         )}
       </div>
+
+      {decisao && guiaDecisao && (
+        <div className="mt-5 rounded-xl border border-accent/40 bg-accent/5 p-4 md:p-5">
+          <p className="text-[0.65rem] font-bold uppercase tracking-wide text-accent">
+            Decisão que costuma vir a seguir
+          </p>
+          <p className="mt-1.5 text-sm leading-relaxed text-muted-foreground">{decisao.porQue}</p>
+          <Link
+            to={`/decisoes/${guiaDecisao.slug}`}
+            className="mt-3 inline-flex items-center gap-1.5 font-heading text-sm font-bold text-accent hover:underline"
+          >
+            {guiaDecisao.nomeCurto}: ler o guia de decisão
+            <ArrowRight className="h-4 w-4" aria-hidden="true" />
+          </Link>
+        </div>
+      )}
     </section>
   );
 };

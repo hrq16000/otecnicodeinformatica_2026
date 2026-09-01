@@ -122,3 +122,47 @@ export function atlasPonteDoSintoma(slug: string): AtlasPonteResolvida | null {
     hubHref: `/guia-tecnico-informatica#tema-${tema.id}`,
   };
 }
+
+/**
+ * FASE 4 — ponte sintoma → guia de decisão independente (/decisoes/<slug>).
+ *
+ * Fail-closed e curada: só entra o par em que a decisão realmente aparece no
+ * atendimento daquele sintoma. Texto próprio por sintoma — nunca template.
+ */
+export const DECISAO_POR_SINTOMA: Record<string, { slug: string; porQue: string }> = {
+  "computador-lento": {
+    slug: "ssd-ou-memoria-ram",
+    porQue:
+      "Na lentidão, o dinheiro se decide entre disco e memória. O guia cruza os sinais observáveis para indicar qual dos dois limita a sua máquina — e quando nenhum upgrade resolve.",
+  },
+  "windows-nao-inicia": {
+    slug: "formatar-ou-reparar",
+    porQue:
+      "Quando o sistema não sobe, a pergunta imediata é se vale reparar a instalação atual ou reinstalar do zero. O guia mostra o que cada caminho preserva e o que apaga.",
+  },
+  "tela-azul": {
+    slug: "formatar-ou-reparar",
+    porQue:
+      "Tela azul recorrente pode ser software ou hardware. O guia separa os casos em que formatar resolve dos casos em que formatar só reinicia a contagem até o próximo travamento.",
+  },
+  "hd-fazendo-barulho": {
+    slug: "hd-com-ruido",
+    porQue:
+      "Ruído mecânico muda a ordem das prioridades: copiar antes, diagnosticar depois. O guia explica por que cada nova tentativa de ligar reduz a chance de recuperar os dados.",
+  },
+  "notebook-nao-liga": {
+    slug: "consertar-ou-substituir",
+    porQue:
+      "Falha de energia em notebook vai de conector barato a placa cara. O guia dá o critério de quando o reparo ainda vale frente ao valor atual do equipamento.",
+  },
+  "computador-esquentando": {
+    slug: "consertar-ou-substituir",
+    porQue:
+      "Superaquecimento crônico às vezes é limite de projeto, não sujeira. O guia ajuda a decidir entre insistir na manutenção e trocar de equipamento.",
+  },
+};
+
+/** Resolve a ponte de decisão de um sintoma; sem par curado, retorna null. */
+export function decisaoDoSintoma(slug: string): { slug: string; porQue: string } | null {
+  return DECISAO_POR_SINTOMA[slug] ?? null;
+}
