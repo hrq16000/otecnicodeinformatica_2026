@@ -27,7 +27,7 @@
     "check:telemetry-transparency": "node scripts/check-telemetry-transparency.mjs",
     "routes:generate": "tsr generate",
     "check:route-tree": "node scripts/check-route-tree.mjs",
-    "prebuild": "node scripts/copy-security-doc.mjs && node scripts/check-security-regressions.mjs && node scripts/check-route-tree.mjs && node scripts/check-interlinks-quality.mjs && node scripts/report-interlinks-qa.mjs && node scripts/check-orphan-trend.mjs --require && node scripts/generate-build-version.mjs && node scripts/sync-editorial-sitemap.mjs --check && node scripts/generate-sitemaps.mjs && node scripts/report-editorial-lotes.mjs && node scripts/report-autoridade-seo.mjs && node scripts/generate-robots.mjs && node scripts/generate-llms.mjs && node scripts/audit-seo-metadata.mjs && bun scripts/check-biblioteca-tecnica.ts && node scripts/check-national-authority-map.mjs && node scripts/check-image-variants.mjs",
+    "prebuild": "node scripts/copy-security-doc.mjs && node scripts/check-security-regressions.mjs && node scripts/check-route-tree.mjs && node scripts/check-interlinks-quality.mjs && node scripts/report-interlinks-qa.mjs && node scripts/check-orphan-trend.mjs --require && node scripts/generate-build-version.mjs && node scripts/sitemap-dynamic.mjs && node scripts/report-editorial-lotes.mjs && node scripts/report-autoridade-seo.mjs && node scripts/generate-robots.mjs && node scripts/generate-llms.mjs && node scripts/audit-seo-metadata.mjs && bun scripts/check-biblioteca-tecnica.ts && node scripts/check-national-authority-map.mjs && node scripts/check-image-variants.mjs",
     "build": "vite build",
     "build:dev": "vite build --mode development",
     "check:seo": "bun scripts/check-seo-basics.ts index.html",
@@ -362,7 +362,13 @@
     "report:capas-pendentes": "node scripts/report-capas-pendentes.mjs",
     "sync:editorial-sitemap": "node scripts/sync-editorial-sitemap.mjs",
     "check:editorial-sitemap": "node scripts/sync-editorial-sitemap.mjs --check",
-    "check:biblioteca": "bun scripts/check-biblioteca-tecnica.ts"
+    "check:biblioteca": "bun scripts/check-biblioteca-tecnica.ts",
+    "seo:inventory": "node scripts/report-seo-inventory.mjs",
+    "check:seo-inventory": "node scripts/report-seo-inventory.mjs --check",
+    "sitemap:dynamic": "node scripts/sitemap-dynamic.mjs",
+    "sitemap:dynamic:check": "node scripts/sitemap-dynamic.mjs --check",
+    "sitemap:dynamic:submit": "node scripts/sitemap-dynamic.mjs --submit",
+    "postbuild": "node scripts/report-seo-inventory.mjs"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.2",
