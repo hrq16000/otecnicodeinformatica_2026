@@ -1,6 +1,6 @@
 {
-  "geradoEm": "2026-08-31T23:44:40.014Z",
-  "base": "http://localhost:8080",
+  "geradoEm": "2026-09-01T00:00:53.068Z",
+  "base": "https://otecnicodeinformatica.com.br",
   "lote": "11A/4",
   "schemasExigidos": [
     "TechArticle",
@@ -13,7 +13,7 @@
   "urls": [
     {
       "url": "/blog/boot-uefi-ou-legacy-como-identificar",
-      "alvo": "http://localhost:8080/blog/boot-uefi-ou-legacy-como-identificar",
+      "alvo": "https://otecnicodeinformatica.com.br/blog/boot-uefi-ou-legacy-como-identificar",
       "httpStatus": 200,
       "title": "UEFI ou Legacy: como identificar o modo de inicialização do seu PC",
       "description": "Como descobrir em qual modo o Windows foi instalado, por que GPT e MBR importam e o que muda ao alternar entre UEFI e Legacy sem preparar o disco.",
@@ -37,7 +37,7 @@
     },
     {
       "url": "/blog/ordem-de-boot-na-bios-como-configurar",
-      "alvo": "http://localhost:8080/blog/ordem-de-boot-na-bios-como-configurar",
+      "alvo": "https://otecnicodeinformatica.com.br/blog/ordem-de-boot-na-bios-como-configurar",
       "httpStatus": 200,
       "title": "Ordem de boot na BIOS: como configurar sem quebrar a inicialização",
       "description": "Para que serve a prioridade de inicialização, quando usar o menu de boot temporário e por que Fast Boot e portas USB atrapalham o reconhecimento do pendrive.",
@@ -61,7 +61,7 @@
     },
     {
       "url": "/blog/windows-reparo-automatico-em-loop",
-      "alvo": "http://localhost:8080/blog/windows-reparo-automatico-em-loop",
+      "alvo": "https://otecnicodeinformatica.com.br/blog/windows-reparo-automatico-em-loop",
       "httpStatus": 200,
       "title": "Reparo automático em laço: o que fazer quando o Windows não sai…",
       "description": "Por que o Windows entra em reparo automático repetido, o que observar antes de tentar qualquer comando e em que ponto a prioridade passa a ser salvar os arquivos.",
