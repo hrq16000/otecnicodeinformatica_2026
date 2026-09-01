@@ -19,7 +19,7 @@ const ROTAS_PUBLICAS = [
   "/glossario",
   "/glossario/bsod",
   "/ferramentas",
-  "/ferramentas/checklist-pc-nao-liga",
+  "/ferramentas/checklist-computador-lento",
 ] as const;
 
 test.describe("Acessibilidade — rotas públicas", () => {
