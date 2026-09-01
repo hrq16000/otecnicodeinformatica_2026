@@ -1,5 +1,5 @@
 {
-  "gerado_em": "2026-08-25T06:09:05.096Z",
+  "gerado_em": "2026-09-01T04:07:06.200Z",
   "modo": "online",
   "identidade": {
     "nome": "O Técnico de Informática",
@@ -57,20 +57,6 @@
   ],
   "fontes_citadas": [
     {
-      "source_url": "https://exemplo.com",
-      "target_url": null,
-      "publisher": "exemplo.com",
-      "type": "referencia_editorial",
-      "status": null,
-      "estado": "FALHA",
-      "redirecionado": false,
-      "final_url": null,
-      "origens": [
-        "src/__tests__/utm-link-builder.test.ts"
-      ],
-      "last_seen": "2026-08-25T06:09:05.096Z"
-    },
-    {
       "source_url": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d115063.98825866027!2d-49.35951754843749!3d-25.494912899999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94dce35351c67f2f%3A0xf9e5a1e1d08a0c6a!2sCuritiba%2C%20PR!5e0!3m2!1spt-BR!2sbr!4v1705000000000!5m2!1spt-BR!2sbr",
       "target_url": null,
       "publisher": "google.com",
@@ -82,7 +68,7 @@
       "origens": [
         "src/components/CoverageMapSection.tsx"
       ],
-      "last_seen": "2026-08-25T06:09:05.096Z"
+      "last_seen": "2026-09-01T04:07:06.200Z"
     },
     {
       "source_url": "https://analytics.google.com/",
@@ -96,21 +82,21 @@
       "origens": [
         "src/components/GA4ChecklistPanel.tsx"
       ],
-      "last_seen": "2026-08-25T06:09:05.096Z"
+      "last_seen": "2026-09-01T04:07:06.200Z"
     },
     {
       "source_url": "https://ads.google.com/",
       "target_url": null,
       "publisher": "ads.google.com",
       "type": "referencia_editorial",
-      "status": 200,
-      "estado": "OK",
-      "redirecionado": true,
-      "final_url": "https://business.google.com/nl/google-ads/?ucbcb=1",
+      "status": 429,
+      "estado": "ATENCAO",
+      "redirecionado": false,
+      "final_url": "https://ads.google.com/",
       "origens": [
         "src/components/GA4ChecklistPanel.tsx"
       ],
-      "last_seen": "2026-08-25T06:09:05.096Z"
+      "last_seen": "2026-09-01T04:07:06.200Z"
     },
     {
       "source_url": "https://developers.facebook.com/tools/debug/",
@@ -124,7 +110,7 @@
       "origens": [
         "src/components/GA4ChecklistPanel.tsx"
       ],
-      "last_seen": "2026-08-25T06:09:05.096Z"
+      "last_seen": "2026-09-01T04:07:06.200Z"
     },
     {
       "source_url": "https://cards-dev.twitter.com/validator",
@@ -138,7 +124,7 @@
       "origens": [
         "src/components/GA4ChecklistPanel.tsx"
       ],
-      "last_seen": "2026-08-25T06:09:05.096Z"
+      "last_seen": "2026-09-01T04:07:06.200Z"
     },
     {
       "source_url": "https://www.linkedin.com/post-inspector/",
@@ -152,7 +138,7 @@
       "origens": [
         "src/components/GA4ChecklistPanel.tsx"
       ],
-      "last_seen": "2026-08-25T06:09:05.096Z"
+      "last_seen": "2026-09-01T04:07:06.200Z"
     },
     {
       "source_url": "https://www.google.com/maps/search/?api=1&query=T%C3%A9cnico+em+Curitiba",
@@ -166,7 +152,7 @@
       "origens": [
         "src/components/JsonLdSchema.tsx"
       ],
-      "last_seen": "2026-08-25T06:09:05.096Z"
+      "last_seen": "2026-09-01T04:07:06.200Z"
     },
     {
       "source_url": "https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb",
@@ -180,7 +166,7 @@
       "origens": [
         "src/data/blogPostsContent.tsx"
       ],
-      "last_seen": "2026-08-25T06:09:05.096Z"
+      "last_seen": "2026-09-01T04:07:06.200Z"
     },
     {
       "source_url": "https://flathub.org/repo/flathub.flatpakrepo",
@@ -194,7 +180,7 @@
       "origens": [
         "src/data/blogPostsContent.tsx"
       ],
-      "last_seen": "2026-08-25T06:09:05.096Z"
+      "last_seen": "2026-09-01T04:07:06.200Z"
     },
     {
       "source_url": "http://IP-DO-SERVIDOR",
@@ -208,7 +194,7 @@
       "origens": [
         "src/data/blogPostsContent.tsx"
       ],
-      "last_seen": "2026-08-25T06:09:05.096Z"
+      "last_seen": "2026-09-01T04:07:06.200Z"
     },
     {
       "source_url": "http://repo.exemplo.com/ubuntu",
@@ -222,7 +208,7 @@
       "origens": [
         "src/data/blogPostsContent.tsx"
       ],
-      "last_seen": "2026-08-25T06:09:05.096Z"
+      "last_seen": "2026-09-01T04:07:06.200Z"
     },
     {
       "source_url": "https://repo.exemplo.com/key.gpg",
@@ -236,7 +222,7 @@
       "origens": [
         "src/data/blogPostsContent.tsx"
       ],
-      "last_seen": "2026-08-25T06:09:05.096Z"
+      "last_seen": "2026-09-01T04:07:06.200Z"
     },
     {
       "source_url": "https://download.docker.com/linux/ubuntu/gpg",
@@ -250,7 +236,7 @@
       "origens": [
         "src/data/blogPostsContent.tsx"
       ],
-      "last_seen": "2026-08-25T06:09:05.096Z"
+      "last_seen": "2026-09-01T04:07:06.200Z"
     },
     {
       "source_url": "https://download.docker.com/linux/ubuntu",
@@ -264,7 +250,7 @@
       "origens": [
         "src/data/blogPostsContent.tsx"
       ],
-      "last_seen": "2026-08-25T06:09:05.096Z"
+      "last_seen": "2026-09-01T04:07:06.200Z"
     },
     {
       "source_url": "https://download.docker.com/linux/fedora/docker-ce.repo",
@@ -278,7 +264,7 @@
       "origens": [
         "src/data/blogPostsContent.tsx"
       ],
-      "last_seen": "2026-08-25T06:09:05.096Z"
+      "last_seen": "2026-09-01T04:07:06.200Z"
     },
     {
       "source_url": "https://precisodeum.com.br",
@@ -293,7 +279,7 @@
         "src/data/blogPostsContent.tsx",
         "src/pages/SejaParceiro.tsx"
       ],
-      "last_seen": "2026-08-25T06:09:05.096Z"
+      "last_seen": "2026-09-01T04:07:06.200Z"
     },
     {
       "source_url": "https://precisodeum.com.br/cadastro",
@@ -307,7 +293,7 @@
       "origens": [
         "src/data/blogPostsContent.tsx"
       ],
-      "last_seen": "2026-08-25T06:09:05.096Z"
+      "last_seen": "2026-09-01T04:07:06.200Z"
     },
     {
       "source_url": "https://precisodeum.com.br/dashboard/vagas",
@@ -321,7 +307,7 @@
       "origens": [
         "src/data/blogPostsContent.tsx"
       ],
-      "last_seen": "2026-08-25T06:09:05.096Z"
+      "last_seen": "2026-09-01T04:07:06.200Z"
     },
     {
       "source_url": "https://precisodeum.com.br/vagas",
@@ -335,7 +321,7 @@
       "origens": [
         "src/data/blogPostsContent.tsx"
       ],
-      "last_seen": "2026-08-25T06:09:05.096Z"
+      "last_seen": "2026-09-01T04:07:06.200Z"
     },
     {
       "source_url": "https://raw.githubusercontent.com/angristan/openvpn-install/master/openvpn-install.sh",
@@ -349,7 +335,7 @@
       "origens": [
         "src/data/blogPostsContent.tsx"
       ],
-      "last_seen": "2026-08-25T06:09:05.096Z"
+      "last_seen": "2026-09-01T04:07:06.200Z"
     },
     {
       "source_url": "https://192.168.1.1",
@@ -363,7 +349,7 @@
       "origens": [
         "src/data/blogPostsContent.tsx"
       ],
-      "last_seen": "2026-08-25T06:09:05.096Z"
+      "last_seen": "2026-09-01T04:07:06.200Z"
     },
     {
       "source_url": "https://learn.microsoft.com/pt-br/",
@@ -377,7 +363,7 @@
       "origens": [
         "src/data/blogPostsContent.tsx"
       ],
-      "last_seen": "2026-08-25T06:09:05.096Z"
+      "last_seen": "2026-09-01T04:07:06.200Z"
     },
     {
       "source_url": "https://www.computer.org/",
@@ -391,7 +377,7 @@
       "origens": [
         "src/data/blogPostsContent.tsx"
       ],
-      "last_seen": "2026-08-25T06:09:05.096Z"
+      "last_seen": "2026-09-01T04:07:06.200Z"
     },
     {
       "source_url": "https://cartilha.cert.br/",
@@ -404,9 +390,12 @@
       "final_url": "https://cartilha.cert.br/",
       "origens": [
         "src/data/blogPostsContent.tsx",
-        "src/lib/blogEditorialSources.ts"
+        "src/lib/atlasInformatica.ts",
+        "src/lib/blogEditorialSources.ts",
+        "src/lib/ferramentasTecnicas.ts",
+        "src/lib/glossarioTecnico.ts"
       ],
-      "last_seen": "2026-08-25T06:09:05.096Z"
+      "last_seen": "2026-09-01T04:07:06.200Z"
     },
     {
       "source_url": "https://www.gov.br/mec/pt-br",
@@ -420,7 +409,7 @@
       "origens": [
         "src/data/blogPostsContent.tsx"
       ],
-      "last_seen": "2026-08-25T06:09:05.096Z"
+      "last_seen": "2026-09-01T04:07:06.200Z"
     },
     {
       "source_url": "https://exemplo.com.br/contato",
@@ -434,7 +423,7 @@
       "origens": [
         "src/data/blogPostsContent.tsx"
       ],
-      "last_seen": "2026-08-25T06:09:05.096Z"
+      "last_seen": "2026-09-01T04:07:06.200Z"
     },
     {
       "source_url": "https://learn.microsoft.com/pt-br/windows/",
@@ -448,7 +437,7 @@
       "origens": [
         "src/data/blogPostsContent.tsx"
       ],
-      "last_seen": "2026-08-25T06:09:05.096Z"
+      "last_seen": "2026-09-01T04:07:06.200Z"
     },
     {
       "source_url": "https://documentation.libreoffice.org/pt-br/",
@@ -462,7 +451,7 @@
       "origens": [
         "src/data/blogPostsContent.tsx"
       ],
-      "last_seen": "2026-08-25T06:09:05.096Z"
+      "last_seen": "2026-09-01T04:07:06.200Z"
     },
     {
       "source_url": "https://learn.microsoft.com/pt-br/training/",
@@ -476,7 +465,7 @@
       "origens": [
         "src/data/blogPostsContent.tsx"
       ],
-      "last_seen": "2026-08-25T06:09:05.096Z"
+      "last_seen": "2026-09-01T04:07:06.200Z"
     },
     {
       "source_url": "https://www.fundacaobradesco.org.br/",
@@ -490,7 +479,7 @@
       "origens": [
         "src/data/blogPostsContent.tsx"
       ],
-      "last_seen": "2026-08-25T06:09:05.096Z"
+      "last_seen": "2026-09-01T04:07:06.200Z"
     },
     {
       "source_url": "https://pt.khanacademy.org/computing",
@@ -504,7 +493,7 @@
       "origens": [
         "src/data/blogPostsContent.tsx"
       ],
-      "last_seen": "2026-08-25T06:09:05.096Z"
+      "last_seen": "2026-09-01T04:07:06.200Z"
     },
     {
       "source_url": "https://code.org/",
@@ -518,7 +507,7 @@
       "origens": [
         "src/data/blogPostsContent.tsx"
       ],
-      "last_seen": "2026-08-25T06:09:05.096Z"
+      "last_seen": "2026-09-01T04:07:06.200Z"
     },
     {
       "source_url": "https://lovable.dev",
@@ -532,21 +521,128 @@
       "origens": [
         "src/integrations/supabase/previewAuthStorage.ts"
       ],
-      "last_seen": "2026-08-25T06:09:05.096Z"
+      "last_seen": "2026-09-01T04:07:06.200Z"
     },
     {
-      "source_url": "https://exemplo.com/servicos/manutencao",
+      "source_url": "https://learn.microsoft.com/en-us/troubleshoot/windows-client/performance/windows-boot-issues-troubleshooting",
       "target_url": null,
-      "publisher": "exemplo.com",
+      "publisher": "learn.microsoft.com",
       "type": "referencia_editorial",
-      "status": null,
-      "estado": "FALHA",
+      "status": 200,
+      "estado": "OK",
       "redirecionado": false,
-      "final_url": null,
+      "final_url": "https://learn.microsoft.com/en-us/troubleshoot/windows-client/performance/windows-boot-issues-troubleshooting",
       "origens": [
-        "src/lib/__tests__/problemIntentPolicy.test.ts"
+        "src/lib/atlasInformatica.ts",
+        "src/lib/enriquecimentoConteudo.ts"
       ],
-      "last_seen": "2026-08-25T06:09:05.096Z"
+      "last_seen": "2026-09-01T04:07:06.200Z"
+    },
+    {
+      "source_url": "https://support.microsoft.com/en-us/windows/experience/backup-recovery/windows-recovery-environment",
+      "target_url": null,
+      "publisher": "support.microsoft.com",
+      "type": "referencia_editorial",
+      "status": 200,
+      "estado": "OK",
+      "redirecionado": false,
+      "final_url": "https://support.microsoft.com/en-us/windows/experience/backup-recovery/windows-recovery-environment",
+      "origens": [
+        "src/lib/atlasInformatica.ts",
+        "src/lib/clusterProblemas.ts",
+        "src/lib/enriquecimentoConteudo.ts"
+      ],
+      "last_seen": "2026-09-01T04:07:06.200Z"
+    },
+    {
+      "source_url": "https://www.wi-fi.org/discover-wi-fi/security",
+      "target_url": null,
+      "publisher": "wi-fi.org",
+      "type": "referencia_editorial",
+      "status": 200,
+      "estado": "OK",
+      "redirecionado": true,
+      "final_url": "https://www.wi-fi.org/security",
+      "origens": [
+        "src/lib/atlasInformatica.ts",
+        "src/lib/blogEditorialSources.ts",
+        "src/lib/enriquecimento4eRedes.ts"
+      ],
+      "last_seen": "2026-09-01T04:07:06.200Z"
+    },
+    {
+      "source_url": "https://www.cisa.gov/stopransomware/ransomware-guide",
+      "target_url": null,
+      "publisher": "cisa.gov",
+      "type": "referencia_editorial",
+      "status": 200,
+      "estado": "OK",
+      "redirecionado": false,
+      "final_url": "https://www.cisa.gov/stopransomware/ransomware-guide",
+      "origens": [
+        "src/lib/atlasInformatica.ts",
+        "src/lib/blogEditorialSources.ts"
+      ],
+      "last_seen": "2026-09-01T04:07:06.200Z"
+    },
+    {
+      "source_url": "https://support.microsoft.com/en-us/office/protect-yourself-from-tech-support-scams",
+      "target_url": null,
+      "publisher": "support.microsoft.com",
+      "type": "referencia_editorial",
+      "status": 200,
+      "estado": "OK",
+      "redirecionado": false,
+      "final_url": "https://support.microsoft.com/en-us/office/protect-yourself-from-tech-support-scams",
+      "origens": [
+        "src/lib/atlasInformatica.ts",
+        "src/lib/blogEditorialSources.ts"
+      ],
+      "last_seen": "2026-09-01T04:07:06.200Z"
+    },
+    {
+      "source_url": "https://cartilha.cert.br/fasciculos/",
+      "target_url": null,
+      "publisher": "cartilha.cert.br",
+      "type": "referencia_editorial",
+      "status": 200,
+      "estado": "OK",
+      "redirecionado": false,
+      "final_url": "https://cartilha.cert.br/fasciculos/",
+      "origens": [
+        "src/lib/atlasInformatica.ts"
+      ],
+      "last_seen": "2026-09-01T04:07:06.200Z"
+    },
+    {
+      "source_url": "https://www.cisa.gov/audiences/small-and-medium-businesses/secure-your-business/back-up-business-data",
+      "target_url": null,
+      "publisher": "cisa.gov",
+      "type": "referencia_editorial",
+      "status": 200,
+      "estado": "OK",
+      "redirecionado": false,
+      "final_url": "https://www.cisa.gov/audiences/small-and-medium-businesses/secure-your-business/back-up-business-data",
+      "origens": [
+        "src/lib/atlasInformatica.ts",
+        "src/lib/blogEditorialSources.ts"
+      ],
+      "last_seen": "2026-09-01T04:07:06.200Z"
+    },
+    {
+      "source_url": "https://csrc.nist.gov/pubs/sp/800/34/r1/upd1/final",
+      "target_url": null,
+      "publisher": "csrc.nist.gov",
+      "type": "referencia_editorial",
+      "status": 200,
+      "estado": "OK",
+      "redirecionado": false,
+      "final_url": "https://csrc.nist.gov/pubs/sp/800/34/r1/upd1/final",
+      "origens": [
+        "src/lib/atlasInformatica.ts",
+        "src/lib/blogEditorialSources.ts"
+      ],
+      "last_seen": "2026-09-01T04:07:06.200Z"
     },
     {
       "source_url": "https://commons.wikimedia.org/w/index.php?curid=194512723",
@@ -560,7 +656,7 @@
       "origens": [
         "src/lib/blogEditorialRegistry.ts"
       ],
-      "last_seen": "2026-08-25T06:09:05.096Z"
+      "last_seen": "2026-09-01T04:07:06.200Z"
     },
     {
       "source_url": "https://commons.wikimedia.org/w/index.php?curid=130534314",
@@ -574,7 +670,7 @@
       "origens": [
         "src/lib/blogEditorialRegistry.ts"
       ],
-      "last_seen": "2026-08-25T06:09:05.096Z"
+      "last_seen": "2026-09-01T04:07:06.200Z"
     },
     {
       "source_url": "https://commons.wikimedia.org/w/index.php?curid=113932150",
@@ -588,7 +684,7 @@
       "origens": [
         "src/lib/blogEditorialRegistry.ts"
       ],
-      "last_seen": "2026-08-25T06:09:05.096Z"
+      "last_seen": "2026-09-01T04:07:06.200Z"
     },
     {
       "source_url": "https://commons.wikimedia.org/wiki/File:Laptop_hardware.jpg",
@@ -602,7 +698,7 @@
       "origens": [
         "src/lib/blogEditorialRegistry.ts"
       ],
-      "last_seen": "2026-08-25T06:09:05.096Z"
+      "last_seen": "2026-09-01T04:07:06.200Z"
     },
     {
       "source_url": "https://commons.wikimedia.org/wiki/File:Actuator_arm_assembly_of_a_hard_disk_drive.jpg",
@@ -616,7 +712,7 @@
       "origens": [
         "src/lib/blogEditorialRegistry.ts"
       ],
-      "last_seen": "2026-08-25T06:09:05.096Z"
+      "last_seen": "2026-09-01T04:07:06.200Z"
     },
     {
       "source_url": "https://commons.wikimedia.org/wiki/File:Toshiba_Laptop_Hard_Drive.jpg",
@@ -630,7 +726,7 @@
       "origens": [
         "src/lib/blogEditorialRegistry.ts"
       ],
-      "last_seen": "2026-08-25T06:09:05.096Z"
+      "last_seen": "2026-09-01T04:07:06.200Z"
     },
     {
       "source_url": "https://commons.wikimedia.org/wiki/File:256GB_2230_NVME_SSD_%2B_256GB_NGFF_SSD.jpg",
@@ -644,7 +740,7 @@
       "origens": [
         "src/lib/blogEditorialRegistry.ts"
       ],
-      "last_seen": "2026-08-25T06:09:05.096Z"
+      "last_seen": "2026-09-01T04:07:06.200Z"
     },
     {
       "source_url": "https://commons.wikimedia.org/wiki/File:TP-Link_TL-WR740N_router_HS5.jpg",
@@ -658,7 +754,7 @@
       "origens": [
         "src/lib/blogEditorialRegistry.ts"
       ],
-      "last_seen": "2026-08-25T06:09:05.096Z"
+      "last_seen": "2026-09-01T04:07:06.200Z"
     },
     {
       "source_url": "https://commons.wikimedia.org/wiki/File:Home_wifi.jpg",
@@ -672,7 +768,7 @@
       "origens": [
         "src/lib/blogEditorialRegistry.ts"
       ],
-      "last_seen": "2026-08-25T06:09:05.096Z"
+      "last_seen": "2026-09-01T04:07:06.200Z"
     },
     {
       "source_url": "https://commons.wikimedia.org/wiki/File:MEMZ_Trojan_running_on_Samsung_N130,_13_December_2019.jpg",
@@ -686,7 +782,7 @@
       "origens": [
         "src/lib/blogEditorialRegistry.ts"
       ],
-      "last_seen": "2026-08-25T06:09:05.096Z"
+      "last_seen": "2026-09-01T04:07:06.200Z"
     },
     {
       "source_url": "https://commons.wikimedia.org/wiki/File:Computer_virus_scam.jpg",
@@ -700,7 +796,7 @@
       "origens": [
         "src/lib/blogEditorialRegistry.ts"
       ],
-      "last_seen": "2026-08-25T06:09:05.096Z"
+      "last_seen": "2026-09-01T04:07:06.200Z"
     },
     {
       "source_url": "https://commons.wikimedia.org/wiki/File:Laptop_overheating_due_to_dust-clogged_internal_heatsinks_in_2.5_year_old_laptop.jpg",
@@ -714,7 +810,7 @@
       "origens": [
         "src/lib/blogEditorialRegistry.ts"
       ],
-      "last_seen": "2026-08-25T06:09:05.096Z"
+      "last_seen": "2026-09-01T04:07:06.200Z"
     },
     {
       "source_url": "https://commons.wikimedia.org/wiki/File:Thermal_compound_Applied.JPG",
@@ -728,7 +824,7 @@
       "origens": [
         "src/lib/blogEditorialRegistry.ts"
       ],
-      "last_seen": "2026-08-25T06:09:05.096Z"
+      "last_seen": "2026-09-01T04:07:06.200Z"
     },
     {
       "source_url": "https://commons.wikimedia.org/wiki/File:Maxtor_HDD_and_Intel_SSD_20100117.jpg",
@@ -742,7 +838,7 @@
       "origens": [
         "src/lib/blogEditorialRegistry.ts"
       ],
-      "last_seen": "2026-08-25T06:09:05.096Z"
+      "last_seen": "2026-09-01T04:07:06.200Z"
     },
     {
       "source_url": "https://commons.wikimedia.org/wiki/File:WesterDigital-Black-NVMe-SSD.jpg",
@@ -756,7 +852,7 @@
       "origens": [
         "src/lib/blogEditorialRegistry.ts"
       ],
-      "last_seen": "2026-08-25T06:09:05.096Z"
+      "last_seen": "2026-09-01T04:07:06.200Z"
     },
     {
       "source_url": "https://commons.wikimedia.org/wiki/File:2017_Petya_cyberattack_screenshot.jpg",
@@ -770,7 +866,7 @@
       "origens": [
         "src/lib/blogEditorialRegistry.ts"
       ],
-      "last_seen": "2026-08-25T06:09:05.096Z"
+      "last_seen": "2026-09-01T04:07:06.200Z"
     },
     {
       "source_url": "https://commons.wikimedia.org/wiki/File:BalticServers_data_center.jpg",
@@ -784,7 +880,7 @@
       "origens": [
         "src/lib/blogEditorialRegistry.ts"
       ],
-      "last_seen": "2026-08-25T06:09:05.096Z"
+      "last_seen": "2026-09-01T04:07:06.200Z"
     },
     {
       "source_url": "https://commons.wikimedia.org/wiki/File:Epson-inkjet-printer.jpg",
@@ -798,7 +894,7 @@
       "origens": [
         "src/lib/blogEditorialRegistry.ts"
       ],
-      "last_seen": "2026-08-25T06:09:05.096Z"
+      "last_seen": "2026-09-01T04:07:06.200Z"
     },
     {
       "source_url": "https://commons.wikimedia.org/wiki/File:LG_Smart_TV_WIFI_%2B_IR_Remote_04.jpg",
@@ -812,7 +908,7 @@
       "origens": [
         "src/lib/blogEditorialRegistry.ts"
       ],
-      "last_seen": "2026-08-25T06:09:05.096Z"
+      "last_seen": "2026-09-01T04:07:06.200Z"
     },
     {
       "source_url": "https://commons.wikimedia.org/wiki/File:ATX_power_supply_interior.jpg",
@@ -826,7 +922,7 @@
       "origens": [
         "src/lib/blogEditorialRegistry.ts"
       ],
-      "last_seen": "2026-08-25T06:09:05.096Z"
+      "last_seen": "2026-09-01T04:07:06.200Z"
     },
     {
       "source_url": "https://commons.wikimedia.org/wiki/File:ASRock_K7VT4A_Pro_Mainboard.jpg",
@@ -840,7 +936,7 @@
       "origens": [
         "src/lib/blogEditorialRegistry.ts"
       ],
-      "last_seen": "2026-08-25T06:09:05.096Z"
+      "last_seen": "2026-09-01T04:07:06.200Z"
     },
     {
       "source_url": "https://commons.wikimedia.org/wiki/File:Working_on_my_laptop.jpg",
@@ -854,7 +950,7 @@
       "origens": [
         "src/lib/blogEditorialRegistry.ts"
       ],
-      "last_seen": "2026-08-25T06:09:05.096Z"
+      "last_seen": "2026-09-01T04:07:06.200Z"
     },
     {
       "source_url": "https://commons.wikimedia.org/wiki/File:VAIO_TZ_laptop_hard_disk.jpg",
@@ -868,7 +964,7 @@
       "origens": [
         "src/lib/blogEditorialRegistry.ts"
       ],
-      "last_seen": "2026-08-25T06:09:05.096Z"
+      "last_seen": "2026-09-01T04:07:06.200Z"
     },
     {
       "source_url": "https://commons.wikimedia.org/wiki/File:Replacing_hardware_160210-F-KR223-021.jpg",
@@ -882,7 +978,7 @@
       "origens": [
         "src/lib/blogEditorialRegistry.ts"
       ],
-      "last_seen": "2026-08-25T06:09:05.096Z"
+      "last_seen": "2026-09-01T04:07:06.200Z"
     },
     {
       "source_url": "https://commons.wikimedia.org/wiki/File:Acer_desktop_computers_in_computer_classroom_of_Baozhong_Junior_High_School_20121009.jpg",
@@ -896,7 +992,7 @@
       "origens": [
         "src/lib/blogEditorialRegistry.ts"
       ],
-      "last_seen": "2026-08-25T06:09:05.096Z"
+      "last_seen": "2026-09-01T04:07:06.200Z"
     },
     {
       "source_url": "https://commons.wikimedia.org/wiki/File:Student_on_computer.jpg",
@@ -910,7 +1006,7 @@
       "origens": [
         "src/lib/blogEditorialRegistry.ts"
       ],
-      "last_seen": "2026-08-25T06:09:05.096Z"
+      "last_seen": "2026-09-01T04:07:06.200Z"
     },
     {
       "source_url": "https://commons.wikimedia.org/wiki/File:Students_working_on_class_assignment_in_computer_lab.jpg",
@@ -924,7 +1020,385 @@
       "origens": [
         "src/lib/blogEditorialRegistry.ts"
       ],
-      "last_seen": "2026-08-25T06:09:05.096Z"
+      "last_seen": "2026-09-01T04:07:06.200Z"
+    },
+    {
+      "source_url": "https://commons.wikimedia.org/wiki/File:BIOS_Setup_First_Time.jpg",
+      "target_url": null,
+      "publisher": "commons.wikimedia.org",
+      "type": "referencia_editorial",
+      "status": 200,
+      "estado": "OK",
+      "redirecionado": false,
+      "final_url": "https://commons.wikimedia.org/wiki/File:BIOS_Setup_First_Time.jpg",
+      "origens": [
+        "src/lib/blogEditorialRegistry.ts"
+      ],
+      "last_seen": "2026-09-01T04:07:06.200Z"
+    },
+    {
+      "source_url": "https://commons.wikimedia.org/wiki/File:Serial_ATA_hard_disk_connected.jpg",
+      "target_url": null,
+      "publisher": "commons.wikimedia.org",
+      "type": "referencia_editorial",
+      "status": 200,
+      "estado": "OK",
+      "redirecionado": false,
+      "final_url": "https://commons.wikimedia.org/wiki/File:Serial_ATA_hard_disk_connected.jpg",
+      "origens": [
+        "src/lib/blogEditorialRegistry.ts"
+      ],
+      "last_seen": "2026-09-01T04:07:06.200Z"
+    },
+    {
+      "source_url": "https://commons.wikimedia.org/wiki/File:Samsung_960_EVO_in_M.2_slot_02.jpg",
+      "target_url": null,
+      "publisher": "commons.wikimedia.org",
+      "type": "referencia_editorial",
+      "status": 200,
+      "estado": "OK",
+      "redirecionado": false,
+      "final_url": "https://commons.wikimedia.org/wiki/File:Samsung_960_EVO_in_M.2_slot_02.jpg",
+      "origens": [
+        "src/lib/blogEditorialRegistry.ts"
+      ],
+      "last_seen": "2026-09-01T04:07:06.200Z"
+    },
+    {
+      "source_url": "https://commons.wikimedia.org/wiki/File:Hitachi_2.5%22_HDD_and_ADATA_XM13_20120402.jpg",
+      "target_url": null,
+      "publisher": "commons.wikimedia.org",
+      "type": "referencia_editorial",
+      "status": 200,
+      "estado": "OK",
+      "redirecionado": false,
+      "final_url": "https://commons.wikimedia.org/wiki/File:Hitachi_2.5%22_HDD_and_ADATA_XM13_20120402.jpg",
+      "origens": [
+        "src/lib/blogEditorialRegistry.ts"
+      ],
+      "last_seen": "2026-09-01T04:07:06.200Z"
+    },
+    {
+      "source_url": "https://commons.wikimedia.org/wiki/File:DDR_4_SO-DIMM_RAM_slot_PNr%C2%B00837.jpg",
+      "target_url": null,
+      "publisher": "commons.wikimedia.org",
+      "type": "referencia_editorial",
+      "status": 200,
+      "estado": "OK",
+      "redirecionado": false,
+      "final_url": "https://commons.wikimedia.org/wiki/File:DDR_4_SO-DIMM_RAM_slot_PNr%C2%B00837.jpg",
+      "origens": [
+        "src/lib/blogEditorialRegistry.ts"
+      ],
+      "last_seen": "2026-09-01T04:07:06.200Z"
+    },
+    {
+      "source_url": "https://commons.wikimedia.org/wiki/File:Blue_Screen_Of_Death_at_Urheilupuisto_metro_station.jpg",
+      "target_url": null,
+      "publisher": "commons.wikimedia.org",
+      "type": "referencia_editorial",
+      "status": 200,
+      "estado": "OK",
+      "redirecionado": false,
+      "final_url": "https://commons.wikimedia.org/wiki/File:Blue_Screen_Of_Death_at_Urheilupuisto_metro_station.jpg",
+      "origens": [
+        "src/lib/blogEditorialRegistry.ts"
+      ],
+      "last_seen": "2026-09-01T04:07:06.200Z"
+    },
+    {
+      "source_url": "https://commons.wikimedia.org/wiki/File:Memtest86%2B_2019-08-09.jpg",
+      "target_url": null,
+      "publisher": "commons.wikimedia.org",
+      "type": "referencia_editorial",
+      "status": 200,
+      "estado": "OK",
+      "redirecionado": false,
+      "final_url": "https://commons.wikimedia.org/wiki/File:Memtest86%2B_2019-08-09.jpg",
+      "origens": [
+        "src/lib/blogEditorialRegistry.ts"
+      ],
+      "last_seen": "2026-09-01T04:07:06.200Z"
+    },
+    {
+      "source_url": "https://commons.wikimedia.org/wiki/File:JPANEL_MB_IMG_1121.JPG",
+      "target_url": null,
+      "publisher": "commons.wikimedia.org",
+      "type": "referencia_editorial",
+      "status": 200,
+      "estado": "OK",
+      "redirecionado": false,
+      "final_url": "https://commons.wikimedia.org/wiki/File:JPANEL_MB_IMG_1121.JPG",
+      "origens": [
+        "src/lib/blogEditorialRegistry.ts"
+      ],
+      "last_seen": "2026-09-01T04:07:06.200Z"
+    },
+    {
+      "source_url": "https://commons.wikimedia.org/wiki/File:Motherboard_defective_capacitors.jpg",
+      "target_url": null,
+      "publisher": "commons.wikimedia.org",
+      "type": "referencia_editorial",
+      "status": 200,
+      "estado": "OK",
+      "redirecionado": false,
+      "final_url": "https://commons.wikimedia.org/wiki/File:Motherboard_defective_capacitors.jpg",
+      "origens": [
+        "src/lib/blogEditorialRegistry.ts"
+      ],
+      "last_seen": "2026-09-01T04:07:06.200Z"
+    },
+    {
+      "source_url": "https://commons.wikimedia.org/wiki/File:CMOS_Battery,_Motherboard.jpg",
+      "target_url": null,
+      "publisher": "commons.wikimedia.org",
+      "type": "referencia_editorial",
+      "status": 200,
+      "estado": "OK",
+      "redirecionado": false,
+      "final_url": "https://commons.wikimedia.org/wiki/File:CMOS_Battery,_Motherboard.jpg",
+      "origens": [
+        "src/lib/blogEditorialRegistry.ts"
+      ],
+      "last_seen": "2026-09-01T04:07:06.200Z"
+    },
+    {
+      "source_url": "https://commons.wikimedia.org/wiki/File:ARRIS_CM820B_DOCSIS_Cable_Modem.jpg",
+      "target_url": null,
+      "publisher": "commons.wikimedia.org",
+      "type": "referencia_editorial",
+      "status": 200,
+      "estado": "OK",
+      "redirecionado": false,
+      "final_url": "https://commons.wikimedia.org/wiki/File:ARRIS_CM820B_DOCSIS_Cable_Modem.jpg",
+      "origens": [
+        "src/lib/blogEditorialRegistry.ts"
+      ],
+      "last_seen": "2026-09-01T04:07:06.200Z"
+    },
+    {
+      "source_url": "https://commons.wikimedia.org/wiki/File:Dell_Color_Laser_Network_Printer_1320cn_ports.jpg",
+      "target_url": null,
+      "publisher": "commons.wikimedia.org",
+      "type": "referencia_editorial",
+      "status": 200,
+      "estado": "OK",
+      "redirecionado": false,
+      "final_url": "https://commons.wikimedia.org/wiki/File:Dell_Color_Laser_Network_Printer_1320cn_ports.jpg",
+      "origens": [
+        "src/lib/blogEditorialRegistry.ts"
+      ],
+      "last_seen": "2026-09-01T04:07:06.200Z"
+    },
+    {
+      "source_url": "https://commons.wikimedia.org/wiki/File:Sharp_MX-M465_of_Aurora_Office_Equipment_20161029.jpg",
+      "target_url": null,
+      "publisher": "commons.wikimedia.org",
+      "type": "referencia_editorial",
+      "status": 200,
+      "estado": "OK",
+      "redirecionado": false,
+      "final_url": "https://commons.wikimedia.org/wiki/File:Sharp_MX-M465_of_Aurora_Office_Equipment_20161029.jpg",
+      "origens": [
+        "src/lib/blogEditorialRegistry.ts"
+      ],
+      "last_seen": "2026-09-01T04:07:06.200Z"
+    },
+    {
+      "source_url": "https://commons.wikimedia.org/wiki/File:2.5-inch_SATA_drive_on_top_of_a_3.5-inch_SATA_drive,_close-up_of_data_and_power_connectors.jpg",
+      "target_url": null,
+      "publisher": "commons.wikimedia.org",
+      "type": "referencia_editorial",
+      "status": 200,
+      "estado": "OK",
+      "redirecionado": false,
+      "final_url": "https://commons.wikimedia.org/wiki/File:2.5-inch_SATA_drive_on_top_of_a_3.5-inch_SATA_drive,_close-up_of_data_and_power_connectors.jpg",
+      "origens": [
+        "src/lib/blogEditorialRegistry.ts"
+      ],
+      "last_seen": "2026-09-01T04:07:06.200Z"
+    },
+    {
+      "source_url": "https://commons.wikimedia.org/wiki/File:Samsung_960_EVO_in_M.2_slot_01.jpg",
+      "target_url": null,
+      "publisher": "commons.wikimedia.org",
+      "type": "referencia_editorial",
+      "status": 200,
+      "estado": "OK",
+      "redirecionado": false,
+      "final_url": "https://commons.wikimedia.org/wiki/File:Samsung_960_EVO_in_M.2_slot_01.jpg",
+      "origens": [
+        "src/lib/blogEditorialRegistry.ts"
+      ],
+      "last_seen": "2026-09-01T04:07:06.200Z"
+    },
+    {
+      "source_url": "https://commons.wikimedia.org/wiki/File:Hard_disk_head_on_platter.jpg",
+      "target_url": null,
+      "publisher": "commons.wikimedia.org",
+      "type": "referencia_editorial",
+      "status": 200,
+      "estado": "OK",
+      "redirecionado": false,
+      "final_url": "https://commons.wikimedia.org/wiki/File:Hard_disk_head_on_platter.jpg",
+      "origens": [
+        "src/lib/blogEditorialRegistry.ts"
+      ],
+      "last_seen": "2026-09-01T04:07:06.200Z"
+    },
+    {
+      "source_url": "https://commons.wikimedia.org/wiki/File:Photo-audiojacks.jpg",
+      "target_url": null,
+      "publisher": "commons.wikimedia.org",
+      "type": "referencia_editorial",
+      "status": 200,
+      "estado": "OK",
+      "redirecionado": false,
+      "final_url": "https://commons.wikimedia.org/wiki/File:Photo-audiojacks.jpg",
+      "origens": [
+        "src/lib/blogEditorialRegistry.ts"
+      ],
+      "last_seen": "2026-09-01T04:07:06.200Z"
+    },
+    {
+      "source_url": "https://commons.wikimedia.org/wiki/File:Phone-connectors-labeled.jpg",
+      "target_url": null,
+      "publisher": "commons.wikimedia.org",
+      "type": "referencia_editorial",
+      "status": 200,
+      "estado": "OK",
+      "redirecionado": false,
+      "final_url": "https://commons.wikimedia.org/wiki/File:Phone-connectors-labeled.jpg",
+      "origens": [
+        "src/lib/blogEditorialRegistry.ts"
+      ],
+      "last_seen": "2026-09-01T04:07:06.200Z"
+    },
+    {
+      "source_url": "https://commons.wikimedia.org/wiki/File:GIGABYTE_GS-GC330UD_(8357750354",
+      "target_url": null,
+      "publisher": "commons.wikimedia.org",
+      "type": "referencia_editorial",
+      "status": 404,
+      "estado": "QUEBRADO",
+      "redirecionado": false,
+      "final_url": "https://commons.wikimedia.org/wiki/File:GIGABYTE_GS-GC330UD_(8357750354",
+      "origens": [
+        "src/lib/blogEditorialRegistry.ts"
+      ],
+      "last_seen": "2026-09-01T04:07:06.200Z"
+    },
+    {
+      "source_url": "https://commons.wikimedia.org/wiki/File:Webcam_On_Laptop.JPG",
+      "target_url": null,
+      "publisher": "commons.wikimedia.org",
+      "type": "referencia_editorial",
+      "status": 200,
+      "estado": "OK",
+      "redirecionado": false,
+      "final_url": "https://commons.wikimedia.org/wiki/File:Webcam_On_Laptop.JPG",
+      "origens": [
+        "src/lib/blogEditorialRegistry.ts"
+      ],
+      "last_seen": "2026-09-01T04:07:06.200Z"
+    },
+    {
+      "source_url": "https://commons.wikimedia.org/wiki/File:Tape_over_laptop_webcam.jpg",
+      "target_url": null,
+      "publisher": "commons.wikimedia.org",
+      "type": "referencia_editorial",
+      "status": 200,
+      "estado": "OK",
+      "redirecionado": false,
+      "final_url": "https://commons.wikimedia.org/wiki/File:Tape_over_laptop_webcam.jpg",
+      "origens": [
+        "src/lib/blogEditorialRegistry.ts"
+      ],
+      "last_seen": "2026-09-01T04:07:06.200Z"
+    },
+    {
+      "source_url": "https://commons.wikimedia.org/wiki/File:USB_webcam_for_PC.jpg",
+      "target_url": null,
+      "publisher": "commons.wikimedia.org",
+      "type": "referencia_editorial",
+      "status": 200,
+      "estado": "OK",
+      "redirecionado": false,
+      "final_url": "https://commons.wikimedia.org/wiki/File:USB_webcam_for_PC.jpg",
+      "origens": [
+        "src/lib/blogEditorialRegistry.ts"
+      ],
+      "last_seen": "2026-09-01T04:07:06.200Z"
+    },
+    {
+      "source_url": "https://commons.wikimedia.org/wiki/File:Cc0-windows-update_dion_dresschers.png",
+      "target_url": null,
+      "publisher": "commons.wikimedia.org",
+      "type": "referencia_editorial",
+      "status": 200,
+      "estado": "OK",
+      "redirecionado": false,
+      "final_url": "https://commons.wikimedia.org/wiki/File:Cc0-windows-update_dion_dresschers.png",
+      "origens": [
+        "src/lib/blogEditorialRegistry.ts"
+      ],
+      "last_seen": "2026-09-01T04:07:06.200Z"
+    },
+    {
+      "source_url": "https://commons.wikimedia.org/wiki/File:Windows_10-11_update_screen_notice.png",
+      "target_url": null,
+      "publisher": "commons.wikimedia.org",
+      "type": "referencia_editorial",
+      "status": 200,
+      "estado": "OK",
+      "redirecionado": false,
+      "final_url": "https://commons.wikimedia.org/wiki/File:Windows_10-11_update_screen_notice.png",
+      "origens": [
+        "src/lib/blogEditorialRegistry.ts"
+      ],
+      "last_seen": "2026-09-01T04:07:06.200Z"
+    },
+    {
+      "source_url": "https://commons.wikimedia.org/wiki/File:Windows_Update_%E2%80%93_VirtualBox_Windows_11_24H2_(Version_10.0.26100.1742",
+      "target_url": null,
+      "publisher": "commons.wikimedia.org",
+      "type": "referencia_editorial",
+      "status": 404,
+      "estado": "QUEBRADO",
+      "redirecionado": false,
+      "final_url": "https://commons.wikimedia.org/wiki/File:Windows_Update_%E2%80%93_VirtualBox_Windows_11_24H2_(Version_10.0.26100.1742",
+      "origens": [
+        "src/lib/blogEditorialRegistry.ts"
+      ],
+      "last_seen": "2026-09-01T04:07:06.200Z"
+    },
+    {
+      "source_url": "https://commons.wikimedia.org/wiki/File:Lenovo_ThinkPad_T470_UEFI_BIOS_1.75_setup_-_boot_menu_selection.JPG",
+      "target_url": null,
+      "publisher": "commons.wikimedia.org",
+      "type": "referencia_editorial",
+      "status": 200,
+      "estado": "OK",
+      "redirecionado": false,
+      "final_url": "https://commons.wikimedia.org/wiki/File:Lenovo_ThinkPad_T470_UEFI_BIOS_1.75_setup_-_boot_menu_selection.JPG",
+      "origens": [
+        "src/lib/blogEditorialRegistry.ts"
+      ],
+      "last_seen": "2026-09-01T04:07:06.200Z"
+    },
+    {
+      "source_url": "https://commons.wikimedia.org/wiki/File:Windows_Recovery_Environment.png",
+      "target_url": null,
+      "publisher": "commons.wikimedia.org",
+      "type": "referencia_editorial",
+      "status": 200,
+      "estado": "OK",
+      "redirecionado": false,
+      "final_url": "https://commons.wikimedia.org/wiki/File:Windows_Recovery_Environment.png",
+      "origens": [
+        "src/lib/blogEditorialRegistry.ts"
+      ],
+      "last_seen": "2026-09-01T04:07:06.200Z"
     },
     {
       "source_url": "https://learn.microsoft.com/en-us/windows/whats-new/windows-11-requirements",
@@ -938,7 +1412,7 @@
       "origens": [
         "src/lib/blogEditorialSources.ts"
       ],
-      "last_seen": "2026-08-25T06:09:05.096Z"
+      "last_seen": "2026-09-01T04:07:06.200Z"
     },
     {
       "source_url": "https://support.microsoft.com/en-us/windows/create-installation-media-for-windows-99a58364-8c02-206f-aa6f-40c3b507420d",
@@ -952,7 +1426,7 @@
       "origens": [
         "src/lib/blogEditorialSources.ts"
       ],
-      "last_seen": "2026-08-25T06:09:05.096Z"
+      "last_seen": "2026-09-01T04:07:06.200Z"
     },
     {
       "source_url": "https://support.microsoft.com/en-us/windows/activate-windows-c39005d4-95ee-b91e-b399-2820fda32227",
@@ -966,7 +1440,7 @@
       "origens": [
         "src/lib/blogEditorialSources.ts"
       ],
-      "last_seen": "2026-08-25T06:09:05.096Z"
+      "last_seen": "2026-09-01T04:07:06.200Z"
     },
     {
       "source_url": "https://support.microsoft.com/en-us/windows/finding-your-bitlocker-recovery-key-in-windows-6b71ad27-0b89-ea08-f143-056f5ab347d6",
@@ -980,78 +1454,7 @@
       "origens": [
         "src/lib/blogEditorialSources.ts"
       ],
-      "last_seen": "2026-08-25T06:09:05.096Z"
-    },
-    {
-      "source_url": "https://support.microsoft.com/en-us/office/protect-yourself-from-tech-support-scams",
-      "target_url": null,
-      "publisher": "support.microsoft.com",
-      "type": "referencia_editorial",
-      "status": 200,
-      "estado": "OK",
-      "redirecionado": false,
-      "final_url": "https://support.microsoft.com/en-us/office/protect-yourself-from-tech-support-scams",
-      "origens": [
-        "src/lib/blogEditorialSources.ts"
-      ],
-      "last_seen": "2026-08-25T06:09:05.096Z"
-    },
-    {
-      "source_url": "https://www.cisa.gov/stopransomware/ransomware-guide",
-      "target_url": null,
-      "publisher": "cisa.gov",
-      "type": "referencia_editorial",
-      "status": 200,
-      "estado": "OK",
-      "redirecionado": false,
-      "final_url": "https://www.cisa.gov/stopransomware/ransomware-guide",
-      "origens": [
-        "src/lib/blogEditorialSources.ts"
-      ],
-      "last_seen": "2026-08-25T06:09:05.096Z"
-    },
-    {
-      "source_url": "https://www.cisa.gov/audiences/small-and-medium-businesses/secure-your-business/back-up-business-data",
-      "target_url": null,
-      "publisher": "cisa.gov",
-      "type": "referencia_editorial",
-      "status": 200,
-      "estado": "OK",
-      "redirecionado": false,
-      "final_url": "https://www.cisa.gov/audiences/small-and-medium-businesses/secure-your-business/back-up-business-data",
-      "origens": [
-        "src/lib/blogEditorialSources.ts"
-      ],
-      "last_seen": "2026-08-25T06:09:05.096Z"
-    },
-    {
-      "source_url": "https://csrc.nist.gov/pubs/sp/800/34/r1/upd1/final",
-      "target_url": null,
-      "publisher": "csrc.nist.gov",
-      "type": "referencia_editorial",
-      "status": 404,
-      "estado": "QUEBRADO",
-      "redirecionado": false,
-      "final_url": "https://csrc.nist.gov/pubs/sp/800/34/r1/upd1/final",
-      "origens": [
-        "src/lib/blogEditorialSources.ts"
-      ],
-      "last_seen": "2026-08-25T06:09:05.096Z"
-    },
-    {
-      "source_url": "https://www.wi-fi.org/discover-wi-fi/security",
-      "target_url": null,
-      "publisher": "wi-fi.org",
-      "type": "referencia_editorial",
-      "status": 200,
-      "estado": "OK",
-      "redirecionado": true,
-      "final_url": "https://www.wi-fi.org/security",
-      "origens": [
-        "src/lib/blogEditorialSources.ts",
-        "src/lib/enriquecimento4eRedes.ts"
-      ],
-      "last_seen": "2026-08-25T06:09:05.096Z"
+      "last_seen": "2026-09-01T04:07:06.200Z"
     },
     {
       "source_url": "https://support.microsoft.com/pt-br/windows/desfragmentar-o-computador-com-windows-10-048aefac-7f1f-4632-d48a-9700c4ec702a",
@@ -1065,7 +1468,7 @@
       "origens": [
         "src/lib/blogEditorialSources.ts"
       ],
-      "last_seen": "2026-08-25T06:09:05.096Z"
+      "last_seen": "2026-09-01T04:07:06.200Z"
     },
     {
       "source_url": "https://www.wi-fi.org/news-events/newsroom/wi-fi-alliance-connects-and-expands-home-wi-fi",
@@ -1079,7 +1482,49 @@
       "origens": [
         "src/lib/blogEditorialSources.ts"
       ],
-      "last_seen": "2026-08-25T06:09:05.096Z"
+      "last_seen": "2026-09-01T04:07:06.200Z"
+    },
+    {
+      "source_url": "https://support.google.com/android/answer/7667018?hl=pt-BR",
+      "target_url": null,
+      "publisher": "support.google.com",
+      "type": "referencia_editorial",
+      "status": 404,
+      "estado": "QUEBRADO",
+      "redirecionado": false,
+      "final_url": "https://support.google.com/android/answer/7667018?hl=pt-BR",
+      "origens": [
+        "src/lib/blogEditorialSources.ts"
+      ],
+      "last_seen": "2026-09-01T04:07:06.200Z"
+    },
+    {
+      "source_url": "https://support.google.com/android/answer/15523443?hl=pt",
+      "target_url": null,
+      "publisher": "support.google.com",
+      "type": "referencia_editorial",
+      "status": 404,
+      "estado": "QUEBRADO",
+      "redirecionado": false,
+      "final_url": "https://support.google.com/android/answer/15523443?hl=pt",
+      "origens": [
+        "src/lib/blogEditorialSources.ts"
+      ],
+      "last_seen": "2026-09-01T04:07:06.200Z"
+    },
+    {
+      "source_url": "https://support.google.com/websearch/answer/6385818?co=GENIE.Platform%3DAndroid&hl=pt-br",
+      "target_url": null,
+      "publisher": "support.google.com",
+      "type": "referencia_editorial",
+      "status": 404,
+      "estado": "QUEBRADO",
+      "redirecionado": false,
+      "final_url": "https://support.google.com/websearch/answer/6385818?co=GENIE.Platform%3DAndroid&hl=pt-br",
+      "origens": [
+        "src/lib/blogEditorialSources.ts"
+      ],
+      "last_seen": "2026-09-01T04:07:06.200Z"
     },
     {
       "source_url": "https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?auto=format&fit=crop&w=1200&q=70",
@@ -1093,7 +1538,7 @@
       "origens": [
         "src/lib/categoryLocalGeo.ts"
       ],
-      "last_seen": "2026-08-25T06:09:05.096Z"
+      "last_seen": "2026-09-01T04:07:06.200Z"
     },
     {
       "source_url": "https://images.unsplash.com/photo-1601944177325-f8867652837f?auto=format&fit=crop&w=1200&q=70",
@@ -1107,7 +1552,7 @@
       "origens": [
         "src/lib/categoryLocalGeo.ts"
       ],
-      "last_seen": "2026-08-25T06:09:05.096Z"
+      "last_seen": "2026-09-01T04:07:06.200Z"
     },
     {
       "source_url": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=70",
@@ -1121,7 +1566,7 @@
       "origens": [
         "src/lib/categoryLocalGeo.ts"
       ],
-      "last_seen": "2026-08-25T06:09:05.096Z"
+      "last_seen": "2026-09-01T04:07:06.200Z"
     },
     {
       "source_url": "https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=1200&q=70",
@@ -1135,7 +1580,237 @@
       "origens": [
         "src/lib/categoryLocalGeo.ts"
       ],
-      "last_seen": "2026-08-25T06:09:05.096Z"
+      "last_seen": "2026-09-01T04:07:06.200Z"
+    },
+    {
+      "source_url": "https://www.microsoft.com/windows",
+      "target_url": null,
+      "publisher": "microsoft.com",
+      "type": "referencia_editorial",
+      "status": 200,
+      "estado": "OK",
+      "redirecionado": true,
+      "final_url": "https://www.microsoft.com/en-us/windows/",
+      "origens": [
+        "src/lib/clusterProblemas.ts"
+      ],
+      "last_seen": "2026-09-01T04:07:06.200Z"
+    },
+    {
+      "source_url": "https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-erref/596a1078-e883-4972-9bbc-49e60bebca55",
+      "target_url": null,
+      "publisher": "learn.microsoft.com",
+      "type": "referencia_editorial",
+      "status": 200,
+      "estado": "OK",
+      "redirecionado": false,
+      "final_url": "https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-erref/596a1078-e883-4972-9bbc-49e60bebca55",
+      "origens": [
+        "src/lib/clusterProblemas.ts",
+        "src/lib/enriquecimentoConteudo.ts"
+      ],
+      "last_seen": "2026-09-01T04:07:06.200Z"
+    },
+    {
+      "source_url": "https://support.microsoft.com/en-us/windows/experience/startup-boot/startup-repair",
+      "target_url": null,
+      "publisher": "support.microsoft.com",
+      "type": "referencia_editorial",
+      "status": 200,
+      "estado": "OK",
+      "redirecionado": false,
+      "final_url": "https://support.microsoft.com/en-us/windows/experience/startup-boot/startup-repair",
+      "origens": [
+        "src/lib/clusterProblemas.ts",
+        "src/lib/enriquecimentoConteudo.ts"
+      ],
+      "last_seen": "2026-09-01T04:07:06.200Z"
+    },
+    {
+      "source_url": "https://support.microsoft.com/en-us/windows/security/encryption/bitlocker-overview",
+      "target_url": null,
+      "publisher": "support.microsoft.com",
+      "type": "referencia_editorial",
+      "status": 200,
+      "estado": "OK",
+      "redirecionado": false,
+      "final_url": "https://support.microsoft.com/en-us/windows/security/encryption/bitlocker-overview",
+      "origens": [
+        "src/lib/clusterProblemas.ts"
+      ],
+      "last_seen": "2026-09-01T04:07:06.200Z"
+    },
+    {
+      "source_url": "https://support.microsoft.com/en-us/windows/security/devicesecurity/windows-11-and-secure-boot",
+      "target_url": null,
+      "publisher": "support.microsoft.com",
+      "type": "referencia_editorial",
+      "status": 200,
+      "estado": "OK",
+      "redirecionado": false,
+      "final_url": "https://support.microsoft.com/en-us/windows/security/devicesecurity/windows-11-and-secure-boot",
+      "origens": [
+        "src/lib/clusterProblemas.ts"
+      ],
+      "last_seen": "2026-09-01T04:07:06.200Z"
+    },
+    {
+      "source_url": "https://learn.microsoft.com/en-us/windows-hardware/manufacture/desktop/bcdboot-command-line-options-techref-di",
+      "target_url": null,
+      "publisher": "learn.microsoft.com",
+      "type": "referencia_editorial",
+      "status": 200,
+      "estado": "OK",
+      "redirecionado": false,
+      "final_url": "https://learn.microsoft.com/en-us/windows-hardware/manufacture/desktop/bcdboot-command-line-options-techref-di",
+      "origens": [
+        "src/lib/clusterProblemas.ts",
+        "src/lib/enriquecimentoConteudo.ts"
+      ],
+      "last_seen": "2026-09-01T04:07:06.200Z"
+    },
+    {
+      "source_url": "https://creativecommons.org/licenses/by/2.0/",
+      "target_url": null,
+      "publisher": "creativecommons.org",
+      "type": "referencia_editorial",
+      "status": 200,
+      "estado": "OK",
+      "redirecionado": false,
+      "final_url": "https://creativecommons.org/licenses/by/2.0/",
+      "origens": [
+        "src/lib/editorialAssetsRegistry.ts",
+        "src/lib/fotosLicenciadas.ts"
+      ],
+      "last_seen": "2026-09-01T04:07:06.200Z"
+    },
+    {
+      "source_url": "https://creativecommons.org/licenses/by/3.0/",
+      "target_url": null,
+      "publisher": "creativecommons.org",
+      "type": "referencia_editorial",
+      "status": 200,
+      "estado": "OK",
+      "redirecionado": false,
+      "final_url": "https://creativecommons.org/licenses/by/3.0/",
+      "origens": [
+        "src/lib/editorialAssetsRegistry.ts"
+      ],
+      "last_seen": "2026-09-01T04:07:06.200Z"
+    },
+    {
+      "source_url": "https://creativecommons.org/licenses/by/4.0/",
+      "target_url": null,
+      "publisher": "creativecommons.org",
+      "type": "referencia_editorial",
+      "status": 200,
+      "estado": "OK",
+      "redirecionado": false,
+      "final_url": "https://creativecommons.org/licenses/by/4.0/",
+      "origens": [
+        "src/lib/editorialAssetsRegistry.ts"
+      ],
+      "last_seen": "2026-09-01T04:07:06.200Z"
+    },
+    {
+      "source_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+      "target_url": null,
+      "publisher": "creativecommons.org",
+      "type": "referencia_editorial",
+      "status": 200,
+      "estado": "OK",
+      "redirecionado": false,
+      "final_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+      "origens": [
+        "src/lib/editorialAssetsRegistry.ts"
+      ],
+      "last_seen": "2026-09-01T04:07:06.200Z"
+    },
+    {
+      "source_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "target_url": null,
+      "publisher": "creativecommons.org",
+      "type": "referencia_editorial",
+      "status": 200,
+      "estado": "OK",
+      "redirecionado": false,
+      "final_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "origens": [
+        "src/lib/editorialAssetsRegistry.ts"
+      ],
+      "last_seen": "2026-09-01T04:07:06.200Z"
+    },
+    {
+      "source_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "target_url": null,
+      "publisher": "creativecommons.org",
+      "type": "referencia_editorial",
+      "status": 200,
+      "estado": "OK",
+      "redirecionado": false,
+      "final_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "origens": [
+        "src/lib/editorialAssetsRegistry.ts"
+      ],
+      "last_seen": "2026-09-01T04:07:06.200Z"
+    },
+    {
+      "source_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "target_url": null,
+      "publisher": "creativecommons.org",
+      "type": "referencia_editorial",
+      "status": 200,
+      "estado": "OK",
+      "redirecionado": false,
+      "final_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "origens": [
+        "src/lib/editorialAssetsRegistry.ts"
+      ],
+      "last_seen": "2026-09-01T04:07:06.200Z"
+    },
+    {
+      "source_url": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "target_url": null,
+      "publisher": "creativecommons.org",
+      "type": "referencia_editorial",
+      "status": 200,
+      "estado": "OK",
+      "redirecionado": false,
+      "final_url": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "origens": [
+        "src/lib/editorialAssetsRegistry.ts"
+      ],
+      "last_seen": "2026-09-01T04:07:06.200Z"
+    },
+    {
+      "source_url": "https://unsplash.com/license",
+      "target_url": null,
+      "publisher": "unsplash.com",
+      "type": "referencia_editorial",
+      "status": 401,
+      "estado": "ATENCAO",
+      "redirecionado": true,
+      "final_url": "https://unsplash.com/.within.website?redir=%2Flicense",
+      "origens": [
+        "src/lib/editorialAssetsRegistry.ts",
+        "src/lib/imageCredits.ts"
+      ],
+      "last_seen": "2026-09-01T04:07:06.200Z"
+    },
+    {
+      "source_url": "https://www.pexels.com/license/",
+      "target_url": null,
+      "publisher": "pexels.com",
+      "type": "referencia_editorial",
+      "status": 403,
+      "estado": "ATENCAO",
+      "redirecionado": false,
+      "final_url": "https://www.pexels.com/license/",
+      "origens": [
+        "src/lib/editorialAssetsRegistry.ts",
+        "src/lib/imageCredits.ts"
+      ],
+      "last_seen": "2026-09-01T04:07:06.200Z"
     },
     {
       "source_url": "https://support.microsoft.com/pt-br/windows/corrigir-problemas-de-conex%C3%A3o-wi-fi-no-windows-9424a1f7-6a3b-65a6-4d78-7f07eee84d2c",
@@ -1149,7 +1824,7 @@
       "origens": [
         "src/lib/enriquecimento4eRedes.ts"
       ],
-      "last_seen": "2026-08-25T06:09:05.096Z"
+      "last_seen": "2026-09-01T04:07:06.200Z"
     },
     {
       "source_url": "https://www.wi-fi.org/discover-wi-fi",
@@ -1163,7 +1838,7 @@
       "origens": [
         "src/lib/enriquecimento4eRedes.ts"
       ],
-      "last_seen": "2026-08-25T06:09:05.096Z"
+      "last_seen": "2026-09-01T04:07:06.200Z"
     },
     {
       "source_url": "https://www.gov.br/anatel/pt-br",
@@ -1177,7 +1852,7 @@
       "origens": [
         "src/lib/enriquecimento4eRedes.ts"
       ],
-      "last_seen": "2026-08-25T06:09:05.096Z"
+      "last_seen": "2026-09-01T04:07:06.200Z"
     },
     {
       "source_url": "https://www.cisa.gov/news-events/news/home-network-security",
@@ -1191,7 +1866,7 @@
       "origens": [
         "src/lib/enriquecimento4eRedes.ts"
       ],
-      "last_seen": "2026-08-25T06:09:05.096Z"
+      "last_seen": "2026-09-01T04:07:06.200Z"
     },
     {
       "source_url": "https://www.cisa.gov/news-events/news/securing-network-infrastructure-devices",
@@ -1205,7 +1880,7 @@
       "origens": [
         "src/lib/enriquecimento4eRedes.ts"
       ],
-      "last_seen": "2026-08-25T06:09:05.096Z"
+      "last_seen": "2026-09-01T04:07:06.200Z"
     },
     {
       "source_url": "https://www.cisa.gov/news-events/news/avoiding-social-engineering-and-phishing-attacks",
@@ -1219,7 +1894,7 @@
       "origens": [
         "src/lib/enriquecimento4eRedes.ts"
       ],
-      "last_seen": "2026-08-25T06:09:05.096Z"
+      "last_seen": "2026-09-01T04:07:06.200Z"
     },
     {
       "source_url": "https://support.microsoft.com/pt-br/windows/proteja-se-contra-golpes-de-suporte-t%C3%A9cnico-2ebf91bd-f94c-2a8a-e541-f5c800d18435",
@@ -1233,7 +1908,7 @@
       "origens": [
         "src/lib/enriquecimento4eRedes.ts"
       ],
-      "last_seen": "2026-08-25T06:09:05.096Z"
+      "last_seen": "2026-09-01T04:07:06.200Z"
     },
     {
       "source_url": "https://www.intel.com.br/content/www/br/pt/support/articles/000005597/processors.html",
@@ -1247,7 +1922,7 @@
       "origens": [
         "src/lib/enriquecimentoAtp4a.ts"
       ],
-      "last_seen": "2026-08-25T06:09:05.096Z"
+      "last_seen": "2026-09-01T04:07:06.200Z"
     },
     {
       "source_url": "https://www.amd.com/en/support",
@@ -1261,7 +1936,7 @@
       "origens": [
         "src/lib/enriquecimentoAtp4a.ts"
       ],
-      "last_seen": "2026-08-25T06:09:05.096Z"
+      "last_seen": "2026-09-01T04:07:06.200Z"
     },
     {
       "source_url": "https://nvmexpress.org/about/",
@@ -1275,7 +1950,7 @@
       "origens": [
         "src/lib/enriquecimentoAtp4a.ts"
       ],
-      "last_seen": "2026-08-25T06:09:05.096Z"
+      "last_seen": "2026-09-01T04:07:06.200Z"
     },
     {
       "source_url": "https://learn.microsoft.com/pt-br/windows/security/operating-system-security/data-protection/bitlocker/",
@@ -1287,9 +1962,10 @@
       "redirecionado": false,
       "final_url": "https://learn.microsoft.com/pt-br/windows/security/operating-system-security/data-protection/bitlocker/",
       "origens": [
-        "src/lib/enriquecimentoAtp4a.ts"
+        "src/lib/enriquecimentoAtp4a.ts",
+        "src/lib/glossarioTecnico.ts"
       ],
-      "last_seen": "2026-08-25T06:09:05.096Z"
+      "last_seen": "2026-09-01T04:07:06.200Z"
     },
     {
       "source_url": "https://learn.microsoft.com/pt-br/troubleshoot/windows-client/performance/introduction-to-the-page-file",
@@ -1303,7 +1979,7 @@
       "origens": [
         "src/lib/enriquecimentoAtp4a.ts"
       ],
-      "last_seen": "2026-08-25T06:09:05.096Z"
+      "last_seen": "2026-09-01T04:07:06.200Z"
     },
     {
       "source_url": "https://www.backblaze.com/cloud-storage/resources/hard-drive-test-data",
@@ -1317,7 +1993,7 @@
       "origens": [
         "src/lib/enriquecimentoAtp4a.ts"
       ],
-      "last_seen": "2026-08-25T06:09:05.096Z"
+      "last_seen": "2026-09-01T04:07:06.200Z"
     },
     {
       "source_url": "https://learn.microsoft.com/pt-br/windows-server/administration/windows-commands/chkdsk",
@@ -1331,7 +2007,7 @@
       "origens": [
         "src/lib/enriquecimentoAtp4a.ts"
       ],
-      "last_seen": "2026-08-25T06:09:05.096Z"
+      "last_seen": "2026-09-01T04:07:06.200Z"
     },
     {
       "source_url": "https://learn.microsoft.com/pt-br/lifecycle/products/",
@@ -1345,7 +2021,7 @@
       "origens": [
         "src/lib/enriquecimentoAtp4a.ts"
       ],
-      "last_seen": "2026-08-25T06:09:05.096Z"
+      "last_seen": "2026-09-01T04:07:06.200Z"
     },
     {
       "source_url": "https://www.cisa.gov/stopransomware",
@@ -1360,7 +2036,7 @@
         "src/lib/enriquecimentoAtp4a.ts",
         "src/lib/enriquecimentoAtp4b.ts"
       ],
-      "last_seen": "2026-08-25T06:09:05.096Z"
+      "last_seen": "2026-09-01T04:07:06.200Z"
     },
     {
       "source_url": "https://learn.microsoft.com/pt-br/defender-endpoint/microsoft-defender-offline",
@@ -1374,7 +2050,7 @@
       "origens": [
         "src/lib/enriquecimentoAtp4a.ts"
       ],
-      "last_seen": "2026-08-25T06:09:05.096Z"
+      "last_seen": "2026-09-01T04:07:06.200Z"
     },
     {
       "source_url": "https://support.microsoft.com/pt-br/windows/op%C3%A7%C3%B5es-de-inicializa%C3%A7%C3%A3o-avan%C3%A7adas-incluindo-modo-de-seguran%C3%A7a-b90e7808-80b5-a291-d4b8-1a1af602b617",
@@ -1388,7 +2064,7 @@
       "origens": [
         "src/lib/enriquecimentoAtp4b.ts"
       ],
-      "last_seen": "2026-08-25T06:09:05.096Z"
+      "last_seen": "2026-09-01T04:07:06.200Z"
     },
     {
       "source_url": "https://support.microsoft.com/pt-br/windows/dicas-para-melhorar-o-desempenho-do-pc-no-windows-b3b3ef5b-5953-fb6a-2528-4bbed82fba96",
@@ -1402,7 +2078,7 @@
       "origens": [
         "src/lib/enriquecimentoAtp4b.ts"
       ],
-      "last_seen": "2026-08-25T06:09:05.096Z"
+      "last_seen": "2026-09-01T04:07:06.200Z"
     },
     {
       "source_url": "https://www.microsoft.com/pt-br/windows/windows-11-specifications",
@@ -1416,7 +2092,151 @@
       "origens": [
         "src/lib/enriquecimentoAtp4b.ts"
       ],
-      "last_seen": "2026-08-25T06:09:05.096Z"
+      "last_seen": "2026-09-01T04:07:06.200Z"
+    },
+    {
+      "source_url": "https://support.microsoft.com/en-us/windows/experience/startup-boot/windows-startup-settings",
+      "target_url": null,
+      "publisher": "support.microsoft.com",
+      "type": "referencia_editorial",
+      "status": 200,
+      "estado": "OK",
+      "redirecionado": false,
+      "final_url": "https://support.microsoft.com/en-us/windows/experience/startup-boot/windows-startup-settings",
+      "origens": [
+        "src/lib/enriquecimentoConteudo.ts"
+      ],
+      "last_seen": "2026-09-01T04:07:06.200Z"
+    },
+    {
+      "source_url": "https://support.microsoft.com/en-us/windows/experience/backup-recovery/system-restore",
+      "target_url": null,
+      "publisher": "support.microsoft.com",
+      "type": "referencia_editorial",
+      "status": 200,
+      "estado": "OK",
+      "redirecionado": false,
+      "final_url": "https://support.microsoft.com/en-us/windows/experience/backup-recovery/system-restore",
+      "origens": [
+        "src/lib/enriquecimentoConteudo.ts"
+      ],
+      "last_seen": "2026-09-01T04:07:06.200Z"
+    },
+    {
+      "source_url": "https://support.microsoft.com/en-us/windows/security/encryption/find-your-bitlocker-recovery-key",
+      "target_url": null,
+      "publisher": "support.microsoft.com",
+      "type": "referencia_editorial",
+      "status": 200,
+      "estado": "OK",
+      "redirecionado": false,
+      "final_url": "https://support.microsoft.com/en-us/windows/security/encryption/find-your-bitlocker-recovery-key",
+      "origens": [
+        "src/lib/enriquecimentoConteudo.ts"
+      ],
+      "last_seen": "2026-09-01T04:07:06.200Z"
+    },
+    {
+      "source_url": "https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/sfc",
+      "target_url": null,
+      "publisher": "learn.microsoft.com",
+      "type": "referencia_editorial",
+      "status": 200,
+      "estado": "OK",
+      "redirecionado": false,
+      "final_url": "https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/sfc",
+      "origens": [
+        "src/lib/enriquecimentoConteudo.ts"
+      ],
+      "last_seen": "2026-09-01T04:07:06.200Z"
+    },
+    {
+      "source_url": "https://support.microsoft.com/en-us/servicing/os/secure-boot/2026/02/when-secure-boot-certificates-expire-on-windows-devices",
+      "target_url": null,
+      "publisher": "support.microsoft.com",
+      "type": "referencia_editorial",
+      "status": 200,
+      "estado": "OK",
+      "redirecionado": false,
+      "final_url": "https://support.microsoft.com/en-us/servicing/os/secure-boot/2026/02/when-secure-boot-certificates-expire-on-windows-devices",
+      "origens": [
+        "src/lib/enriquecimentoConteudo.ts"
+      ],
+      "last_seen": "2026-09-01T04:07:06.200Z"
+    },
+    {
+      "source_url": "https://support.microsoft.com/en-us/windows/deployment/updates-lifecycle/windows-10-support-has-ended-on-october-14-2025",
+      "target_url": null,
+      "publisher": "support.microsoft.com",
+      "type": "referencia_editorial",
+      "status": 200,
+      "estado": "OK",
+      "redirecionado": false,
+      "final_url": "https://support.microsoft.com/en-us/windows/deployment/updates-lifecycle/windows-10-support-has-ended-on-october-14-2025",
+      "origens": [
+        "src/lib/enriquecimentoConteudo.ts"
+      ],
+      "last_seen": "2026-09-01T04:07:06.200Z"
+    },
+    {
+      "source_url": "https://support.microsoft.com/pt-br/windows",
+      "target_url": null,
+      "publisher": "support.microsoft.com",
+      "type": "referencia_editorial",
+      "status": 200,
+      "estado": "OK",
+      "redirecionado": true,
+      "final_url": "https://support.microsoft.com/pt-br/windows/",
+      "origens": [
+        "src/lib/ferramentasTecnicas.ts",
+        "src/lib/glossarioTecnico.ts"
+      ],
+      "last_seen": "2026-09-01T04:07:06.200Z"
+    },
+    {
+      "source_url": "https://learn.microsoft.com/en-us/windows-hardware/drivers/debugger/bug-check-code-reference2",
+      "target_url": null,
+      "publisher": "learn.microsoft.com",
+      "type": "referencia_editorial",
+      "status": 200,
+      "estado": "OK",
+      "redirecionado": false,
+      "final_url": "https://learn.microsoft.com/en-us/windows-hardware/drivers/debugger/bug-check-code-reference2",
+      "origens": [
+        "src/lib/ferramentasTecnicas.ts",
+        "src/lib/glossarioTecnico.ts"
+      ],
+      "last_seen": "2026-09-01T04:07:06.200Z"
+    },
+    {
+      "source_url": "https://www.stopransomware.gov/",
+      "target_url": null,
+      "publisher": "stopransomware.gov",
+      "type": "referencia_editorial",
+      "status": 200,
+      "estado": "OK",
+      "redirecionado": true,
+      "final_url": "https://www.cisa.gov/stopransomware",
+      "origens": [
+        "src/lib/ferramentasTecnicas.ts",
+        "src/lib/glossarioTecnico.ts"
+      ],
+      "last_seen": "2026-09-01T04:07:06.200Z"
+    },
+    {
+      "source_url": "https://www.smartmontools.org/",
+      "target_url": null,
+      "publisher": "smartmontools.org",
+      "type": "referencia_editorial",
+      "status": 200,
+      "estado": "OK",
+      "redirecionado": false,
+      "final_url": "https://www.smartmontools.org/",
+      "origens": [
+        "src/lib/ferramentasTecnicas.ts",
+        "src/lib/glossarioTecnico.ts"
+      ],
+      "last_seen": "2026-09-01T04:07:06.200Z"
     },
     {
       "source_url": "https://www.flickr.com/photos/10154402@N03",
@@ -1430,7 +2250,7 @@
       "origens": [
         "src/lib/fotosLicenciadas.ts"
       ],
-      "last_seen": "2026-08-25T06:09:05.096Z"
+      "last_seen": "2026-09-01T04:07:06.200Z"
     },
     {
       "source_url": "https://www.flickr.com/photos/10154402@N03/5325490543",
@@ -1444,21 +2264,7 @@
       "origens": [
         "src/lib/fotosLicenciadas.ts"
       ],
-      "last_seen": "2026-08-25T06:09:05.096Z"
-    },
-    {
-      "source_url": "https://creativecommons.org/licenses/by/2.0/",
-      "target_url": null,
-      "publisher": "creativecommons.org",
-      "type": "referencia_editorial",
-      "status": 200,
-      "estado": "OK",
-      "redirecionado": false,
-      "final_url": "https://creativecommons.org/licenses/by/2.0/",
-      "origens": [
-        "src/lib/fotosLicenciadas.ts"
-      ],
-      "last_seen": "2026-08-25T06:09:05.096Z"
+      "last_seen": "2026-09-01T04:07:06.200Z"
     },
     {
       "source_url": "https://www.flickr.com/photos/36006949@N00",
@@ -1472,7 +2278,7 @@
       "origens": [
         "src/lib/fotosLicenciadas.ts"
       ],
-      "last_seen": "2026-08-25T06:09:05.096Z"
+      "last_seen": "2026-09-01T04:07:06.200Z"
     },
     {
       "source_url": "https://www.flickr.com/photos/36006949@N00/5465427706",
@@ -1486,7 +2292,7 @@
       "origens": [
         "src/lib/fotosLicenciadas.ts"
       ],
-      "last_seen": "2026-08-25T06:09:05.096Z"
+      "last_seen": "2026-09-01T04:07:06.200Z"
     },
     {
       "source_url": "https://www.flickr.com/photos/36006949@N00/2508871570",
@@ -1500,7 +2306,7 @@
       "origens": [
         "src/lib/fotosLicenciadas.ts"
       ],
-      "last_seen": "2026-08-25T06:09:05.096Z"
+      "last_seen": "2026-09-01T04:07:06.200Z"
     },
     {
       "source_url": "https://www.flickr.com/photos/68503235@N00",
@@ -1514,7 +2320,7 @@
       "origens": [
         "src/lib/fotosLicenciadas.ts"
       ],
-      "last_seen": "2026-08-25T06:09:05.096Z"
+      "last_seen": "2026-09-01T04:07:06.200Z"
     },
     {
       "source_url": "https://www.flickr.com/photos/68503235@N00/5081408605",
@@ -1528,7 +2334,7 @@
       "origens": [
         "src/lib/fotosLicenciadas.ts"
       ],
-      "last_seen": "2026-08-25T06:09:05.096Z"
+      "last_seen": "2026-09-01T04:07:06.200Z"
     },
     {
       "source_url": "https://www.flickr.com/photos/115225894@N07",
@@ -1542,7 +2348,7 @@
       "origens": [
         "src/lib/fotosLicenciadas.ts"
       ],
-      "last_seen": "2026-08-25T06:09:05.096Z"
+      "last_seen": "2026-09-01T04:07:06.200Z"
     },
     {
       "source_url": "https://www.flickr.com/photos/115225894@N07/54385668345",
@@ -1556,7 +2362,7 @@
       "origens": [
         "src/lib/fotosLicenciadas.ts"
       ],
-      "last_seen": "2026-08-25T06:09:05.096Z"
+      "last_seen": "2026-09-01T04:07:06.200Z"
     },
     {
       "source_url": "https://www.flickr.com/photos/14529257@N03",
@@ -1570,7 +2376,7 @@
       "origens": [
         "src/lib/fotosLicenciadas.ts"
       ],
-      "last_seen": "2026-08-25T06:09:05.096Z"
+      "last_seen": "2026-09-01T04:07:06.200Z"
     },
     {
       "source_url": "https://www.flickr.com/photos/14529257@N03/4778137965",
@@ -1584,21 +2390,7 @@
       "origens": [
         "src/lib/fotosLicenciadas.ts"
       ],
-      "last_seen": "2026-08-25T06:09:05.096Z"
-    },
-    {
-      "source_url": "https://wa.me/5541999999999",
-      "target_url": null,
-      "publisher": "wa.me",
-      "type": "referencia_editorial",
-      "status": 200,
-      "estado": "OK",
-      "redirecionado": true,
-      "final_url": "https://api.whatsapp.com/send/?phone=5541999999999&text&type=phone_number&app_absent=0",
-      "origens": [
-        "src/lib/funnel/triageMigration.test.ts"
-      ],
-      "last_seen": "2026-08-25T06:09:05.096Z"
+      "last_seen": "2026-09-01T04:07:06.200Z"
     },
     {
       "source_url": "https://ipwho.is/?fields=city,region,success",
@@ -1612,7 +2404,133 @@
       "origens": [
         "src/lib/geoContext.ts"
       ],
-      "last_seen": "2026-08-25T06:09:05.096Z"
+      "last_seen": "2026-09-01T04:07:06.200Z"
+    },
+    {
+      "source_url": "https://uefi.org/specifications",
+      "target_url": null,
+      "publisher": "uefi.org",
+      "type": "referencia_editorial",
+      "status": 403,
+      "estado": "ATENCAO",
+      "redirecionado": false,
+      "final_url": "https://uefi.org/specifications",
+      "origens": [
+        "src/lib/glossarioTecnico.ts"
+      ],
+      "last_seen": "2026-09-01T04:07:06.200Z"
+    },
+    {
+      "source_url": "https://nvmexpress.org/",
+      "target_url": null,
+      "publisher": "nvmexpress.org",
+      "type": "referencia_editorial",
+      "status": 200,
+      "estado": "OK",
+      "redirecionado": false,
+      "final_url": "https://nvmexpress.org/",
+      "origens": [
+        "src/lib/glossarioTecnico.ts"
+      ],
+      "last_seen": "2026-09-01T04:07:06.200Z"
+    },
+    {
+      "source_url": "https://nvmexpress.org/specifications/",
+      "target_url": null,
+      "publisher": "nvmexpress.org",
+      "type": "referencia_editorial",
+      "status": 200,
+      "estado": "OK",
+      "redirecionado": false,
+      "final_url": "https://nvmexpress.org/specifications/",
+      "origens": [
+        "src/lib/glossarioTecnico.ts"
+      ],
+      "last_seen": "2026-09-01T04:07:06.200Z"
+    },
+    {
+      "source_url": "https://learn.microsoft.com/pt-br/windows/security/hardware-security/tpm/trusted-platform-module-overview",
+      "target_url": null,
+      "publisher": "learn.microsoft.com",
+      "type": "referencia_editorial",
+      "status": 200,
+      "estado": "OK",
+      "redirecionado": false,
+      "final_url": "https://learn.microsoft.com/pt-br/windows/security/hardware-security/tpm/trusted-platform-module-overview",
+      "origens": [
+        "src/lib/glossarioTecnico.ts"
+      ],
+      "last_seen": "2026-09-01T04:07:06.200Z"
+    },
+    {
+      "source_url": "https://trustedcomputinggroup.org/resource/tpm-library-specification/",
+      "target_url": null,
+      "publisher": "trustedcomputinggroup.org",
+      "type": "referencia_editorial",
+      "status": 403,
+      "estado": "ATENCAO",
+      "redirecionado": false,
+      "final_url": "https://trustedcomputinggroup.org/resource/tpm-library-specification/",
+      "origens": [
+        "src/lib/glossarioTecnico.ts"
+      ],
+      "last_seen": "2026-09-01T04:07:06.200Z"
+    },
+    {
+      "source_url": "https://www.icann.org/",
+      "target_url": null,
+      "publisher": "icann.org",
+      "type": "referencia_editorial",
+      "status": 403,
+      "estado": "ATENCAO",
+      "redirecionado": false,
+      "final_url": "https://www.icann.org/",
+      "origens": [
+        "src/lib/glossarioTecnico.ts"
+      ],
+      "last_seen": "2026-09-01T04:07:06.200Z"
+    },
+    {
+      "source_url": "https://www.rfc-editor.org/rfc/rfc2663",
+      "target_url": null,
+      "publisher": "rfc-editor.org",
+      "type": "referencia_editorial",
+      "status": 200,
+      "estado": "OK",
+      "redirecionado": true,
+      "final_url": "https://www.rfc-editor.org/info/rfc2663/",
+      "origens": [
+        "src/lib/glossarioTecnico.ts"
+      ],
+      "last_seen": "2026-09-01T04:07:06.200Z"
+    },
+    {
+      "source_url": "https://www.memtest86.com/",
+      "target_url": null,
+      "publisher": "memtest86.com",
+      "type": "referencia_editorial",
+      "status": 200,
+      "estado": "OK",
+      "redirecionado": false,
+      "final_url": "https://www.memtest86.com/",
+      "origens": [
+        "src/lib/glossarioTecnico.ts"
+      ],
+      "last_seen": "2026-09-01T04:07:06.200Z"
+    },
+    {
+      "source_url": "https://www.intel.com/content/www/us/en/gaming/resources/cpu-temperature.html",
+      "target_url": null,
+      "publisher": "intel.com",
+      "type": "referencia_editorial",
+      "status": 200,
+      "estado": "OK",
+      "redirecionado": true,
+      "final_url": "https://www.intel.de/content/www/de/de/gaming/serious-gaming.html",
+      "origens": [
+        "src/lib/glossarioTecnico.ts"
+      ],
+      "last_seen": "2026-09-01T04:07:06.200Z"
     },
     {
       "source_url": "https://connector-gateway.lovable.dev/google_search_console",
@@ -1627,35 +2545,7 @@
         "src/lib/gsc.functions.ts",
         "src/lib/gsc.server.ts"
       ],
-      "last_seen": "2026-08-25T06:09:05.096Z"
-    },
-    {
-      "source_url": "https://unsplash.com/license",
-      "target_url": null,
-      "publisher": "unsplash.com",
-      "type": "referencia_editorial",
-      "status": 401,
-      "estado": "ATENCAO",
-      "redirecionado": true,
-      "final_url": "https://unsplash.com/.within.website?redir=%2Flicense",
-      "origens": [
-        "src/lib/imageCredits.ts"
-      ],
-      "last_seen": "2026-08-25T06:09:05.096Z"
-    },
-    {
-      "source_url": "https://www.pexels.com/license/",
-      "target_url": null,
-      "publisher": "pexels.com",
-      "type": "referencia_editorial",
-      "status": 403,
-      "estado": "ATENCAO",
-      "redirecionado": false,
-      "final_url": "https://www.pexels.com/license/",
-      "origens": [
-        "src/lib/imageCredits.ts"
-      ],
-      "last_seen": "2026-08-25T06:09:05.096Z"
+      "last_seen": "2026-09-01T04:07:06.200Z"
     },
     {
       "source_url": "https://unsplash.com",
@@ -1669,7 +2559,7 @@
       "origens": [
         "src/lib/imageCredits.ts"
       ],
-      "last_seen": "2026-08-25T06:09:05.096Z"
+      "last_seen": "2026-09-01T04:07:06.200Z"
     },
     {
       "source_url": "https://www.pexels.com",
@@ -1683,7 +2573,7 @@
       "origens": [
         "src/lib/imageCredits.ts"
       ],
-      "last_seen": "2026-08-25T06:09:05.096Z"
+      "last_seen": "2026-09-01T04:07:06.200Z"
     },
     {
       "source_url": "https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=600&q=70",
@@ -1697,7 +2587,7 @@
       "origens": [
         "src/lib/images.ts"
       ],
-      "last_seen": "2026-08-25T06:09:05.096Z"
+      "last_seen": "2026-09-01T04:07:06.200Z"
     },
     {
       "source_url": "https://images.unsplash.com/photo-1597872200969-2b65d56bd16b?auto=format&fit=crop&w=600&q=70",
@@ -1711,7 +2601,7 @@
       "origens": [
         "src/lib/images.ts"
       ],
-      "last_seen": "2026-08-25T06:09:05.096Z"
+      "last_seen": "2026-09-01T04:07:06.200Z"
     },
     {
       "source_url": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=600&q=70",
@@ -1726,7 +2616,7 @@
         "src/lib/images.ts",
         "src/pages/servicos/ManutencaoTV.tsx"
       ],
-      "last_seen": "2026-08-25T06:09:05.096Z"
+      "last_seen": "2026-09-01T04:07:06.200Z"
     },
     {
       "source_url": "https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=600&q=70",
@@ -1740,7 +2630,7 @@
       "origens": [
         "src/lib/images.ts"
       ],
-      "last_seen": "2026-08-25T06:09:05.096Z"
+      "last_seen": "2026-09-01T04:07:06.200Z"
     },
     {
       "source_url": "https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=600&q=70",
@@ -1755,7 +2645,7 @@
         "src/lib/images.ts",
         "src/pages/servicos/ManutencaoTV.tsx"
       ],
-      "last_seen": "2026-08-25T06:09:05.096Z"
+      "last_seen": "2026-09-01T04:07:06.200Z"
     },
     {
       "source_url": "https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=600&q=70",
@@ -1769,7 +2659,7 @@
       "origens": [
         "src/lib/images.ts"
       ],
-      "last_seen": "2026-08-25T06:09:05.096Z"
+      "last_seen": "2026-09-01T04:07:06.200Z"
     },
     {
       "source_url": "https://images.unsplash.com/photo-1531492746076-161ca9bcad58?auto=format&fit=crop&w=600&q=70",
@@ -1783,7 +2673,7 @@
       "origens": [
         "src/lib/images.ts"
       ],
-      "last_seen": "2026-08-25T06:09:05.096Z"
+      "last_seen": "2026-09-01T04:07:06.200Z"
     },
     {
       "source_url": "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=600&q=70",
@@ -1797,7 +2687,7 @@
       "origens": [
         "src/lib/images.ts"
       ],
-      "last_seen": "2026-08-25T06:09:05.096Z"
+      "last_seen": "2026-09-01T04:07:06.200Z"
     },
     {
       "source_url": "https://images.unsplash.com/photo-1557597774-9d273605dfa9?auto=format&fit=crop&w=600&q=70",
@@ -1811,7 +2701,7 @@
       "origens": [
         "src/lib/images.ts"
       ],
-      "last_seen": "2026-08-25T06:09:05.096Z"
+      "last_seen": "2026-09-01T04:07:06.200Z"
     },
     {
       "source_url": "https://images.unsplash.com/photo-1588508065123-287b28e013da?auto=format&fit=crop&w=600&q=70",
@@ -1825,7 +2715,7 @@
       "origens": [
         "src/lib/images.ts"
       ],
-      "last_seen": "2026-08-25T06:09:05.096Z"
+      "last_seen": "2026-09-01T04:07:06.200Z"
     },
     {
       "source_url": "https://images.unsplash.com/photo-1587202372775-e229f172b9d7?auto=format&fit=crop&w=600&q=70",
@@ -1839,7 +2729,7 @@
       "origens": [
         "src/lib/images.ts"
       ],
-      "last_seen": "2026-08-25T06:09:05.096Z"
+      "last_seen": "2026-09-01T04:07:06.200Z"
     },
     {
       "source_url": "https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?auto=format&fit=crop&w=600&q=70",
@@ -1854,7 +2744,7 @@
         "src/lib/images.ts",
         "src/pages/servicos/ManutencaoTV.tsx"
       ],
-      "last_seen": "2026-08-25T06:09:05.096Z"
+      "last_seen": "2026-09-01T04:07:06.200Z"
     },
     {
       "source_url": "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=600&q=70",
@@ -1868,7 +2758,7 @@
       "origens": [
         "src/lib/images.ts"
       ],
-      "last_seen": "2026-08-25T06:09:05.096Z"
+      "last_seen": "2026-09-01T04:07:06.200Z"
     },
     {
       "source_url": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=600&q=70",
@@ -1882,7 +2772,7 @@
       "origens": [
         "src/lib/images.ts"
       ],
-      "last_seen": "2026-08-25T06:09:05.096Z"
+      "last_seen": "2026-09-01T04:07:06.200Z"
     },
     {
       "source_url": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=600&q=70",
@@ -1896,7 +2786,7 @@
       "origens": [
         "src/lib/images.ts"
       ],
-      "last_seen": "2026-08-25T06:09:05.096Z"
+      "last_seen": "2026-09-01T04:07:06.200Z"
     },
     {
       "source_url": "https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?auto=format&fit=crop&w=600&q=70",
@@ -1910,7 +2800,7 @@
       "origens": [
         "src/lib/images.ts"
       ],
-      "last_seen": "2026-08-25T06:09:05.096Z"
+      "last_seen": "2026-09-01T04:07:06.200Z"
     },
     {
       "source_url": "https://images.unsplash.com/photo-1531545514256-b1400bc00f31?auto=format&fit=crop&w=600&q=70",
@@ -1924,7 +2814,7 @@
       "origens": [
         "src/lib/images.ts"
       ],
-      "last_seen": "2026-08-25T06:09:05.096Z"
+      "last_seen": "2026-09-01T04:07:06.200Z"
     },
     {
       "source_url": "https://images.unsplash.com/photo-1601944177325-f8867652837f?auto=format&fit=crop&w=600&q=70",
@@ -1938,7 +2828,7 @@
       "origens": [
         "src/lib/images.ts"
       ],
-      "last_seen": "2026-08-25T06:09:05.096Z"
+      "last_seen": "2026-09-01T04:07:06.200Z"
     },
     {
       "source_url": "https://api.whatsapp.com/send",
@@ -1950,10 +2840,9 @@
       "redirecionado": false,
       "final_url": "https://api.whatsapp.com/send",
       "origens": [
-        "src/lib/problemasWaTemplates.test.ts",
         "src/lib/problemasWaTemplates.ts"
       ],
-      "last_seen": "2026-08-25T06:09:05.096Z"
+      "last_seen": "2026-09-01T04:07:06.200Z"
     },
     {
       "source_url": "https://developers.google.com/maps/documentation/places/web-service/place-id",
@@ -1967,7 +2856,7 @@
       "origens": [
         "src/lib/reviewRequest.ts"
       ],
-      "last_seen": "2026-08-25T06:09:05.096Z"
+      "last_seen": "2026-09-01T04:07:06.200Z"
     },
     {
       "source_url": "https://g.page/r/CQ_TECNICO_CURITIBA_PLACE_ID/review",
@@ -1981,7 +2870,7 @@
       "origens": [
         "src/lib/reviewRequest.ts"
       ],
-      "last_seen": "2026-08-25T06:09:05.096Z"
+      "last_seen": "2026-09-01T04:07:06.200Z"
     },
     {
       "source_url": "https://sentry.io",
@@ -1995,35 +2884,7 @@
       "origens": [
         "src/lib/sentryDrilldown.ts"
       ],
-      "last_seen": "2026-08-25T06:09:05.096Z"
-    },
-    {
-      "source_url": "https://wa.me/5541997086380?text=oi",
-      "target_url": null,
-      "publisher": "wa.me",
-      "type": "referencia_editorial",
-      "status": 200,
-      "estado": "OK",
-      "redirecionado": true,
-      "final_url": "https://api.whatsapp.com/send/?phone=5541997086380&text=oi&type=phone_number&app_absent=0",
-      "origens": [
-        "src/lib/whatsappUtm.test.ts"
-      ],
-      "last_seen": "2026-08-25T06:09:05.096Z"
-    },
-    {
-      "source_url": "https://wa.me/5541997086380?text=oi&utm_source=site&utm_medium=cta&utm_campaign=home&click_location=hero",
-      "target_url": null,
-      "publisher": "wa.me",
-      "type": "referencia_editorial",
-      "status": 200,
-      "estado": "OK",
-      "redirecionado": true,
-      "final_url": "https://api.whatsapp.com/send/?phone=5541997086380&text=oi&type=phone_number&app_absent=0&utm_campaign=home&utm_source=site",
-      "origens": [
-        "src/lib/whatsappUtm.test.ts"
-      ],
-      "last_seen": "2026-08-25T06:09:05.096Z"
+      "last_seen": "2026-09-01T04:07:06.200Z"
     },
     {
       "source_url": "https://x",
@@ -2037,7 +2898,7 @@
       "origens": [
         "src/lib/whatsappUtm.ts"
       ],
-      "last_seen": "2026-08-25T06:09:05.096Z"
+      "last_seen": "2026-09-01T04:07:06.200Z"
     },
     {
       "source_url": "https://www.google.com/settings/ads",
@@ -2052,7 +2913,7 @@
         "src/pages/PoliticaCookiesAnuncios.tsx",
         "src/pages/PoliticaPrivacidade.tsx"
       ],
-      "last_seen": "2026-08-25T06:09:05.096Z"
+      "last_seen": "2026-09-01T04:07:06.200Z"
     },
     {
       "source_url": "https://www.aboutads.info/choices/",
@@ -2067,7 +2928,7 @@
         "src/pages/PoliticaCookiesAnuncios.tsx",
         "src/pages/PoliticaPrivacidade.tsx"
       ],
-      "last_seen": "2026-08-25T06:09:05.096Z"
+      "last_seen": "2026-09-01T04:07:06.200Z"
     },
     {
       "source_url": "https://pt.wikipedia.org/wiki/Almirante_Tamandar%C3%A9",
@@ -2081,7 +2942,7 @@
       "origens": [
         "src/pages/TecnicoInformaticaAlmiranteTamandare.tsx"
       ],
-      "last_seen": "2026-08-25T06:09:05.096Z"
+      "last_seen": "2026-09-01T04:07:06.200Z"
     },
     {
       "source_url": "https://pt.wikipedia.org/wiki/Campo_Magro",
@@ -2095,7 +2956,7 @@
       "origens": [
         "src/pages/TecnicoInformaticaCampoMagro.tsx"
       ],
-      "last_seen": "2026-08-25T06:09:05.096Z"
+      "last_seen": "2026-09-01T04:07:06.200Z"
     },
     {
       "source_url": "https://pt.wikipedia.org/wiki/Fazenda_Rio_Grande",
@@ -2109,7 +2970,7 @@
       "origens": [
         "src/pages/TecnicoInformaticaFazendaRioGrande.tsx"
       ],
-      "last_seen": "2026-08-25T06:09:05.096Z"
+      "last_seen": "2026-09-01T04:07:06.200Z"
     },
     {
       "source_url": "https://pt.wikipedia.org/wiki/Piraquara",
@@ -2123,7 +2984,7 @@
       "origens": [
         "src/pages/TecnicoInformaticaPiraquara.tsx"
       ],
-      "last_seen": "2026-08-25T06:09:05.096Z"
+      "last_seen": "2026-09-01T04:07:06.200Z"
     },
     {
       "source_url": "https://pt.wikipedia.org/wiki/Quatro_Barras",
@@ -2137,7 +2998,7 @@
       "origens": [
         "src/pages/TecnicoInformaticaQuatroBarras.tsx"
       ],
-      "last_seen": "2026-08-25T06:09:05.096Z"
+      "last_seen": "2026-09-01T04:07:06.200Z"
     },
     {
       "source_url": "https://…",
@@ -2151,7 +3012,7 @@
       "origens": [
         "src/pages/admin/AdminCasos.tsx"
       ],
-      "last_seen": "2026-08-25T06:09:05.096Z"
+      "last_seen": "2026-09-01T04:07:06.200Z"
     },
     {
       "source_url": "https://images.unsplash.com/photo-1580982327559-c1202864eb05?auto=format&fit=crop&w=600&q=70",
@@ -2165,7 +3026,7 @@
       "origens": [
         "src/pages/servicos/ManutencaoTV.tsx"
       ],
-      "last_seen": "2026-08-25T06:09:05.096Z"
+      "last_seen": "2026-09-01T04:07:06.200Z"
     },
     {
       "source_url": "https://images.unsplash.com/photo-1552975084-6e027cd345c2?auto=format&fit=crop&w=600&q=70",
@@ -2179,7 +3040,7 @@
       "origens": [
         "src/pages/servicos/ManutencaoTV.tsx"
       ],
-      "last_seen": "2026-08-25T06:09:05.096Z"
+      "last_seen": "2026-09-01T04:07:06.200Z"
     },
     {
       "source_url": "https://images.unsplash.com/photo-1461151304267-38535e780c79?auto=format&fit=crop&w=600&q=70",
@@ -2193,7 +3054,7 @@
       "origens": [
         "src/pages/servicos/ManutencaoTV.tsx"
       ],
-      "last_seen": "2026-08-25T06:09:05.096Z"
+      "last_seen": "2026-09-01T04:07:06.200Z"
     },
     {
       "source_url": "https://www.googletagmanager.com",
@@ -2207,7 +3068,7 @@
       "origens": [
         "src/routes/__root.tsx"
       ],
-      "last_seen": "2026-08-25T06:09:05.096Z"
+      "last_seen": "2026-09-01T04:07:06.200Z"
     },
     {
       "source_url": "https://www.google-analytics.com",
@@ -2221,7 +3082,7 @@
       "origens": [
         "src/routes/__root.tsx"
       ],
-      "last_seen": "2026-08-25T06:09:05.096Z"
+      "last_seen": "2026-09-01T04:07:06.200Z"
     },
     {
       "source_url": "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3762170279587706",
@@ -2235,18 +3096,28 @@
       "origens": [
         "src/routes/__root.tsx"
       ],
-      "last_seen": "2026-08-25T06:09:05.096Z"
+      "last_seen": "2026-09-01T04:07:06.200Z"
     }
   ],
   "dominios": [
     {
       "referring_domain": "commons.wikimedia.org",
-      "links": 27,
-      "quebrados": 0
+      "links": 54,
+      "quebrados": 2
     },
     {
       "referring_domain": "images.unsplash.com",
       "links": 25,
+      "quebrados": 0
+    },
+    {
+      "referring_domain": "support.microsoft.com",
+      "links": 19,
+      "quebrados": 0
+    },
+    {
+      "referring_domain": "learn.microsoft.com",
+      "links": 15,
       "quebrados": 0
     },
     {
@@ -2255,13 +3126,8 @@
       "quebrados": 0
     },
     {
-      "referring_domain": "learn.microsoft.com",
-      "links": 9,
-      "quebrados": 0
-    },
-    {
-      "referring_domain": "support.microsoft.com",
-      "links": 9,
+      "referring_domain": "creativecommons.org",
+      "links": 8,
       "quebrados": 0
     },
     {
@@ -2295,13 +3161,13 @@
       "quebrados": 0
     },
     {
-      "referring_domain": "wa.me",
+      "referring_domain": "support.google.com",
       "links": 3,
-      "quebrados": 0
+      "quebrados": 3
     },
     {
-      "referring_domain": "exemplo.com",
-      "links": 2,
+      "referring_domain": "nvmexpress.org",
+      "links": 3,
       "quebrados": 0
     },
     {
@@ -2310,7 +3176,17 @@
       "quebrados": 0
     },
     {
+      "referring_domain": "cartilha.cert.br",
+      "links": 2,
+      "quebrados": 0
+    },
+    {
       "referring_domain": "gov.br",
+      "links": 2,
+      "quebrados": 0
+    },
+    {
+      "referring_domain": "microsoft.com",
       "links": 2,
       "quebrados": 0
     },
@@ -2380,11 +3256,6 @@
       "quebrados": 0
     },
     {
-      "referring_domain": "cartilha.cert.br",
-      "links": 1,
-      "quebrados": 0
-    },
-    {
       "referring_domain": "exemplo.com.br",
       "links": 1,
       "quebrados": 0
@@ -2417,7 +3288,7 @@
     {
       "referring_domain": "csrc.nist.gov",
       "links": 1,
-      "quebrados": 1
+      "quebrados": 0
     },
     {
       "referring_domain": "intel.com.br",
@@ -2430,27 +3301,52 @@
       "quebrados": 0
     },
     {
-      "referring_domain": "nvmexpress.org",
-      "links": 1,
-      "quebrados": 0
-    },
-    {
       "referring_domain": "backblaze.com",
       "links": 1,
       "quebrados": 0
     },
     {
-      "referring_domain": "microsoft.com",
+      "referring_domain": "stopransomware.gov",
       "links": 1,
       "quebrados": 0
     },
     {
-      "referring_domain": "creativecommons.org",
+      "referring_domain": "smartmontools.org",
       "links": 1,
       "quebrados": 0
     },
     {
       "referring_domain": "ipwho.is",
+      "links": 1,
+      "quebrados": 0
+    },
+    {
+      "referring_domain": "uefi.org",
+      "links": 1,
+      "quebrados": 0
+    },
+    {
+      "referring_domain": "trustedcomputinggroup.org",
+      "links": 1,
+      "quebrados": 0
+    },
+    {
+      "referring_domain": "icann.org",
+      "links": 1,
+      "quebrados": 0
+    },
+    {
+      "referring_domain": "rfc-editor.org",
+      "links": 1,
+      "quebrados": 0
+    },
+    {
+      "referring_domain": "memtest86.com",
+      "links": 1,
+      "quebrados": 0
+    },
+    {
+      "referring_domain": "intel.com",
       "links": 1,
       "quebrados": 0
     },
@@ -2506,11 +3402,11 @@
     }
   ],
   "resumo": {
-    "links_verificados": 155,
-    "ok": 132,
-    "atencao": 9,
-    "quebrados": 4,
-    "timeout": 10,
+    "links_verificados": 215,
+    "ok": 186,
+    "atencao": 13,
+    "quebrados": 8,
+    "timeout": 8,
     "perfis_manual_required": 1,
     "p1_pendentes": 1,
     "mencoes_sem_link": 0,
