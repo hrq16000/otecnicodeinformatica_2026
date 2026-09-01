@@ -965,6 +965,75 @@ export type Database = {
         }
         Relationships: []
       }
+      seo_overrides: {
+        Row: {
+          canonical: string | null
+          created_at: string
+          description: string | null
+          id: string
+          jsonld: Json | null
+          noindex: boolean
+          path: string
+          title: string | null
+          updated_at: string
+          updated_by: string | null
+        }
+        Insert: {
+          canonical?: string | null
+          created_at?: string
+          description?: string | null
+          id?: string
+          jsonld?: Json | null
+          noindex?: boolean
+          path: string
+          title?: string | null
+          updated_at?: string
+          updated_by?: string | null
+        }
+        Update: {
+          canonical?: string | null
+          created_at?: string
+          description?: string | null
+          id?: string
+          jsonld?: Json | null
+          noindex?: boolean
+          path?: string
+          title?: string | null
+          updated_at?: string
+          updated_by?: string | null
+        }
+        Relationships: []
+      }
+      seo_overrides_audit: {
+        Row: {
+          campo: string
+          changed_at: string
+          changed_by: string | null
+          id: string
+          path: string
+          valor_anterior: string | null
+          valor_novo: string | null
+        }
+        Insert: {
+          campo: string
+          changed_at?: string
+          changed_by?: string | null
+          id?: string
+          path: string
+          valor_anterior?: string | null
+          valor_novo?: string | null
+        }
+        Update: {
+          campo?: string
+          changed_at?: string
+          changed_by?: string | null
+          id?: string
+          path?: string
+          valor_anterior?: string | null
+          valor_novo?: string | null
+        }
+        Relationships: []
+      }
       telemetry_retention_runs: {
         Row: {
           created_at: string
