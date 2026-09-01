@@ -16,7 +16,7 @@
 import { mkdirSync, writeFileSync } from "node:fs";
 import { resolve } from "node:path";
 import { existsSync, readFileSync } from "node:fs";
-import { prepararSsr, htmlDaRota, abortarSeBloqueado } from "./lib/ssr-harness.mjs";
+import { prepararSsr, htmlDaRota, abortarSeBloqueado, ssrBloqueado, resumo } from "./lib/ssr-harness.mjs";
 import { EDITORIAL_WAVE } from "./lib/editorial-wave.mjs";
 
 /** Lote/onda de cada slug vem do consolidado já existente (nunca inferido). */
@@ -88,6 +88,16 @@ const aprovados = EDITORIAL_WAVE;
 const rotas = aprovados.map((a) => `/blog/${a.slug}`);
 
 await prepararSsr(rotas, { dist });
+// Este script é RELATÓRIO, não gate. No build de produção não existe servidor
+// SSR de pé: sem HTML renderizado ele apenas avisa e mantém o último relatório.
+// Com --require (uso local/CI dedicado) volta a bloquear.
+const exigirSsr = process.argv.includes("--require");
+if (ssrBloqueado() && !exigirSsr) {
+  console.warn(
+    `[autoridade-seo] SKIP — SSR indisponível (${resumo()?.reason ?? "UNKNOWN"}). Relatório anterior preservado.`,
+  );
+  process.exit(0);
+}
 abortarSeBloqueado("report-autoridade-seo");
 
 const analises = [];
