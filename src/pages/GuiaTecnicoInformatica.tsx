@@ -13,13 +13,16 @@ import { ProximosPassos } from "@/components/informatica/ProximosPassos";
 import { Button } from "@/components/ui/button";
 import { SCHEMA_SLOTS, SLOT_PRIORITY, useJsonLdSlot } from "@/lib/jsonLdSlots";
 import { LocalBusinessJsonLd } from "@/components/LocalBusinessJsonLd";
-import { whatsappLink } from "@/lib/siteConfig";
+import { SITE_BASE_URL, whatsappLink } from "@/lib/siteConfig";
 import { trackPageView, trackCTAClick } from "@/lib/analytics";
+import { AtlasTrilhas } from "@/components/informatica/AtlasTrilhas";
+import { ComoProduzimosConteudo } from "@/components/editorial/ComoProduzimosConteudo";
+import { ATLAS_GUIAS_DECISAO, ATLAS_REVISADO_EM, ATLAS_TEMAS } from "@/lib/atlasInformatica";
 
 const PATH = "/guia-tecnico-informatica";
-const TITLE = "Guia Técnico: Manutenção de PC e Notebook Passo a Passo";
+const TITLE = "Atlas de Informática: guia técnico de PC e notebook";
 const DESCRIPTION =
-  "Guia completo de manutenção de computador e notebook: como identificar a família da falha, o que verificar antes de chamar o técnico.";
+  "Atlas de Informática: trilhas de fundamentos, Windows, hardware, redes, segurança, backup e decisões de compra e reparo, com verificações seguras por tema.";
 
 const WA_MESSAGE =
   "Olá! Vim do guia técnico de informática. Quero descrever meu problema para a triagem.";
@@ -180,6 +183,35 @@ const GuiaTecnicoInformatica = () => {
         name: f.question,
         acceptedAnswer: { "@type": "Answer", text: f.answer },
       })),
+    },
+    SLOT_PRIORITY.page,
+  );
+
+  // CollectionPage do Atlas: substitui o WebPage padrão (mesmo slot, mesma
+  // @id — prioridade de página vence a de componente, sem duplicar entidade).
+  const atlasUrl = `${SITE_BASE_URL}${PATH}`;
+  useJsonLdSlot(
+    SCHEMA_SLOTS.webPage,
+    {
+      "@context": "https://schema.org",
+      "@type": "CollectionPage",
+      "@id": `${atlasUrl}#webpage`,
+      url: atlasUrl,
+      name: TITLE,
+      description: DESCRIPTION,
+      inLanguage: "pt-BR",
+      isPartOf: { "@id": `${SITE_BASE_URL}/#website` },
+      mainEntity: {
+        "@type": "ItemList",
+        name: "Temas do Atlas de Informática",
+        numberOfItems: ATLAS_TEMAS.length,
+        itemListElement: ATLAS_TEMAS.map((t, i) => ({
+          "@type": "ListItem",
+          position: i + 1,
+          name: t.titulo,
+          url: `${atlasUrl}#tema-${t.id}`,
+        })),
+      },
     },
     SLOT_PRIORITY.page,
   );
