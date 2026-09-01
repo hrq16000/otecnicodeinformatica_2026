@@ -110,3 +110,19 @@ describe("Atlas de Informática — guias de decisão", () => {
     }
   });
 });
+
+describe("Atlas de Informática — pontes sintoma → tema", () => {
+  it("cobre todos os clusters de /problemas com texto próprio e tema real", async () => {
+    const { CLUSTER_PROBLEMAS } = await import("@/lib/clusterProblemas");
+    const { ATLAS_PONTES, atlasPonteDoSintoma } = await import("@/lib/atlasPontes");
+    for (const cluster of CLUSTER_PROBLEMAS) {
+      const ponte = atlasPonteDoSintoma(cluster.slug);
+      expect(ponte, `sintoma sem ponte no Atlas: ${cluster.slug}`).not.toBeNull();
+      expect(ponte!.porQue.length).toBeGreaterThan(120);
+      expect(ponte!.verificar, `tema sem etapa verificar: ${ponte!.tema.id}`).toBeDefined();
+      expect(ponte!.parar, `tema sem etapa parar: ${ponte!.tema.id}`).toBeDefined();
+    }
+    const textos = Object.values(ATLAS_PONTES).map((p) => p.porQue);
+    expect(new Set(textos).size, "texto de ponte repetido entre sintomas").toBe(textos.length);
+  });
+});
