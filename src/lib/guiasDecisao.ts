@@ -219,6 +219,18 @@ export const GUIAS_DECISAO: GuiaDecisaoPagina[] = [
         contexto: "Diferença entre SSD comum e NVMe e o que a sua placa aceita.",
       },
     ],
+    fontes: [
+      {
+        titulo: "Microsoft Learn — requisitos de memória e desempenho do Windows",
+        url: "https://learn.microsoft.com/pt-br/windows/client-management/troubleshoot-windows-performance",
+        nota: "Documentação oficial sobre medição de uso de memória e gargalos de desempenho.",
+      },
+      {
+        titulo: "Intel — SSD versus HDD: diferenças de desempenho",
+        url: "https://www.intel.com.br/content/www/br/pt/products/docs/memory-storage/solid-state-drives/ssd-vs-hdd.html",
+        nota: "Material do fabricante sobre o impacto do armazenamento no tempo de resposta.",
+      },
+    ],
   },
   {
     slug: "consertar-ou-substituir",
@@ -294,6 +306,13 @@ export const GUIAS_DECISAO: GuiaDecisaoPagina[] = [
         rotulo: "Montagem de PC sob medida",
         to: "/servicos/montagem-de-pc",
         contexto: "Quando substituir é o caminho, dimensionar para o uso real evita gasto inútil.",
+      },
+    ],
+    fontes: [
+      {
+        titulo: "Microsoft Learn — ciclo de vida e fim de suporte do Windows",
+        url: "https://learn.microsoft.com/pt-br/lifecycle/faq/windows",
+        nota: "Referência oficial para avaliar se o equipamento ainda recebe atualizações de segurança.",
       },
     ],
   },
@@ -461,6 +480,18 @@ export const GUIAS_DECISAO: GuiaDecisaoPagina[] = [
         rotulo: "S.M.A.R.T. no glossário",
         to: "/glossario/smart",
         contexto: "O que os contadores mostram e o que eles não conseguem prever.",
+      },
+    ],
+    fontes: [
+      {
+        titulo: "Documentação S.M.A.R.T. — monitoramento de falhas em discos (Microsoft Learn)",
+        url: "https://learn.microsoft.com/pt-br/windows-hardware/drivers/storage/storage-device-management",
+        nota: "Referência técnica sobre leitura de estado de saúde de dispositivos de armazenamento.",
+      },
+      {
+        titulo: "CISA — Data Backup Options",
+        url: "https://www.cisa.gov/sites/default/files/publications/data_backup_options.pdf",
+        nota: "Orientação oficial sobre priorizar a cópia dos dados diante de falha iminente.",
       },
     ],
   },
