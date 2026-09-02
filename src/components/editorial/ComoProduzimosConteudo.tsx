@@ -147,6 +147,14 @@ export const ComoProduzimosConteudo = ({ revisadoEm, variant = "completo" }: Pro
           <Link to="/contato" className="font-semibold text-accent underline-offset-2 hover:underline">
             página de contato
           </Link>
+          . O método completo, os clusters técnicos e as fontes primárias de cada tema estão
+          reunidos na{" "}
+          <Link
+            to="/autoridade-tecnica"
+            className="font-semibold text-accent underline-offset-2 hover:underline"
+          >
+            página de autoridade técnica
+          </Link>
           .
         </p>
       </div>
