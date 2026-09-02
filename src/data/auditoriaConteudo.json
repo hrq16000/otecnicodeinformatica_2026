@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-09-02T04:34:19.409Z",
+  "geradoEm": "2026-09-02T04:35:12.908Z",
   "fonte": "sitemap curado (scripts/lib/curated-urls.mjs) + SSR real",
   "ssr": {
     "base": "http://localhost:8080",
@@ -6758,10 +6758,12 @@
       "description": "Backup para empresas em Curitiba: implantação da rotina no local, cópia fora do escritório e teste de restauração periódico para você saber que o backup funciona.",
       "canonical": "https://otecnicodeinformatica.com.br/servicos/backup-para-empresas/curitiba",
       "jsonLd": [
+        "BreadcrumbList",
         "FAQPage",
         "LocalBusiness",
         "Organization",
         "Service",
+        "WebPage",
         "WebSite"
       ],
       "palavras": 1498,
