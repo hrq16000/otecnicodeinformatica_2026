@@ -152,6 +152,14 @@ export default function AdminAfirmacoes() {
 
   const urlsSemAfirmacao = dados.urls.filter((u) => u.curada && u.total === 0).length;
 
+  const conteudoFiltrado = useMemo(() => {
+    const termo = busca.trim().toLowerCase();
+    return conteudo.urls.filter((u) => {
+      if (!termo) return true;
+      return u.path.toLowerCase().includes(termo) || (u.title ?? "").toLowerCase().includes(termo);
+    });
+  }, [busca]);
+
   return (
     <main className="container mx-auto px-4 py-10">
       <header className="mb-6">
