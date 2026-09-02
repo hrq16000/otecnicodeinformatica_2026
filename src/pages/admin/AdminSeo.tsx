@@ -8,6 +8,7 @@ import { supabase } from "@/integrations/supabase/client";
 import { siteConfig } from "@/lib/siteConfig";
 import { SitemapLedgerPanel } from "@/components/admin/SitemapLedgerPanel";
 import { IndexacaoLedgerPanel } from "@/components/admin/IndexacaoLedgerPanel";
+import auditoriaAfirmacoes from "@/data/trustClaimsAudit.json";
 
 
 /**
@@ -202,6 +203,23 @@ export default function AdminSeo() {
   }
 
   const atual = inv?.urls.find((u) => u.path === selecionada) ?? null;
+
+  /** Resumo E-E-A-T restrito às URLs presentes no sitemap curado. */
+  const afirmacoes = auditoriaAfirmacoes as unknown as {
+    geradoEm: string;
+    urlsCuradas: number;
+    urls: { curada: boolean; total: number; porClasse: Record<string, number> }[];
+  };
+  const afirmacoesCuradas = afirmacoes.urls
+    .filter((u) => u.curada)
+    .reduce(
+      (acc, u) => ({
+        total: acc.total + u.total,
+        condicional: acc.condicional + (u.porClasse.CONDICIONAL ?? 0),
+        pendente: acc.pendente + (u.porClasse.PENDENTE ?? 0),
+      }),
+      { total: 0, condicional: 0, pendente: 0 },
+    );
 
   return (
     <main className="container mx-auto max-w-7xl px-4 py-8">
