@@ -1,76 +1,66 @@
-# Welcome to your Lovable project
+# O Técnico de Informática
 
-## Project info
+Portal técnico de informática. Domínio canônico:
+**https://otecnicodeinformatica.com.br**
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+- Marca oficial: **O Técnico de Informática**
+- Branch principal: **main**
+- Contrato operacional do repositório: [`AGENTS.md`](./AGENTS.md)
+- Runbook de publicação: [`docs/runbook-deploy.md`](./docs/runbook-deploy.md)
 
-## How can I edit this code?
+## Como o código chega ao ar
 
-There are several ways of editing your application.
+1. O código é mantido no **GitHub** (`main` é a referência).
+2. O Lovable **pode refletir** alterações do repositório no ambiente de preview.
+3. A **publicação pública precisa ser confirmada no ambiente de deploy**
+   (Publish → Update, mais o workflow de borda quando houver mudança de rota).
+4. **Build verde não é deploy público.** Um build/gates em verde só indica que a
+   rodada está apta a ser publicada.
+5. **Indexação pelo Google não pode ser garantida.** Submissão de sitemap e
+   IndexNow são pedidos de rastreamento, não promessa de indexação.
 
-**Use Lovable**
+Não existe deploy automático a partir de push: nenhum merge em `main` publica o
+site sozinho.
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
-
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
+## Desenvolvimento local
 
 ```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
 npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+Requisitos: Node.js e npm ([instalar com nvm](https://github.com/nvm-sh/nvm#installing-and-updating)).
+Variáveis de ambiente: copie `.env.example` para `.env`. Sem env configurada o
+recurso correspondente fica **desligado** (fail-closed), nunca com fallback.
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## Validação obrigatória antes de publicar
 
-**Use GitHub Codespaces**
+```sh
+npm run build
+npm test
+npm run check:route-tree
+npm run check:editorial-governance
+npm run check:internal-links
+npm run check:interlinks-quality
+npm run check:national-authority-map
+npm run validate:jsonld
+npm run check:trust-claims
+```
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+Qualquer falha bloqueia a publicação. Regras de conteúdo, indexação, autoria e
+proibições estão em [`AGENTS.md`](./AGENTS.md).
 
-## What technologies are used for this project?
+## Stack
 
-This project is built with:
+Vite · TypeScript · React · TanStack Start/Router · shadcn-ui · Tailwind CSS ·
+backend gerenciado (Postgres + auth + storage).
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+## Domínio
 
-## How can I deploy this project?
+Configuração de domínio no ambiente de deploy (Project → Settings → Domains).
+Domínios de outras marcas do ecossistema não podem aparecer em código ou
+conteúdo — gate `npm run check:brand-isolation`.
 
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
 
 ## Security regression gates
 

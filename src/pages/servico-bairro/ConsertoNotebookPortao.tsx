@@ -2,7 +2,7 @@ import { ServicoBairroTemplate, ServicoBairroData } from "./ServicoBairroTemplat
 
 const data: ServicoBairroData = {
   metaTitle: "Conserto de Notebook no Portão Curitiba | Reparo Rápido | O Técnico de Informática",
-  metaDescription: "Conserto de notebook no Portão, Curitiba. Tela, teclado, placa-mãe, bateria e dobradiça. Diagnóstico gratuito e atendimento a domicílio. A partir de R$ 89,99.",
+  metaDescription: "Conserto de notebook no Portão, Curitiba. Tela, teclado, placa-mãe, bateria e dobradiça. Diagnóstico com valor informado antes e atendimento a domicílio. A partir de R$ 89,99.",
   
   servico: "Conserto de Notebook",
   servicoSlug: "conserto-pc-notebook",
@@ -11,16 +11,16 @@ const data: ServicoBairroData = {
   cidade: "Curitiba",
   
   h1: "Conserto de Notebook no Portão",
-  subtitulo: "Reparo profissional de notebooks de todas as marcas. Diagnóstico gratuito e atendimento rápido no Portão.",
+  subtitulo: "Reparo profissional de notebooks de todas as marcas. Diagnóstico com valor informado antes e atendimento conforme disponibilidade no Portão.",
   
   precoBase: "R$ 89,99",
-  precoDescricao: "Diagnóstico gratuito. Valor do reparo varia conforme o problema.",
+  precoDescricao: "Diagnóstico com valor informado antes. Valor do reparo varia conforme o problema.",
   
   descricaoLonga: `Notebook com problemas no Portão? Tela quebrada, teclado com defeito, superaquecimento ou não 
     liga? Nossa equipe realiza consertos profissionais de notebooks de todas as marcas: Dell, HP, 
     Lenovo, Acer, Asus, Samsung e Apple. Atendemos a domicílio em toda região do Portão, incluindo 
     proximidades do Shopping Palladium, Av. República Argentina e Terminal do Portão. Oferecemos 
-    diagnóstico gratuito para que você saiba exatamente o problema antes de aprovar o reparo.`,
+    diagnóstico com valor informado antes, para que você saiba exatamente o problema antes de aprovar o reparo.`,
   
   beneficios: [
     "Troca de tela LCD/LED para todas as marcas",
@@ -29,13 +29,13 @@ const data: ServicoBairroData = {
     "Troca de bateria e carregador",
     "Reparo de dobradiça e carcaça",
     "Limpeza interna e troca de pasta térmica",
-    "Diagnóstico gratuito e sem compromisso",
+    "Diagnóstico com valor informado antes de qualquer execução",
     "Garantia de 90 dias em peças e serviço",
   ],
   
   processoPasso: [
     { titulo: "Contato", descricao: "Descreva o problema pelo WhatsApp" },
-    { titulo: "Diagnóstico", descricao: "Avaliação gratuita do notebook" },
+    { titulo: "Diagnóstico", descricao: "Avaliação técnica com valor informado antes" },
     { titulo: "Valor do atendimento", descricao: "Valor aprovado antes de iniciar o reparo" },
     { titulo: "Reparo", descricao: "Conserto profissional com peças de qualidade" },
   ],
@@ -51,7 +51,7 @@ const data: ServicoBairroData = {
     },
     { 
       pergunta: "Meu notebook não liga, tem conserto?", 
-      resposta: "Na maioria dos casos sim! Pode ser problema de fonte, bateria, placa-mãe ou software. O diagnóstico gratuito identifica a causa." 
+      resposta: "Na maioria dos casos sim! Pode ser problema de fonte, bateria, placa-mãe ou software. O diagnóstico identifica a causa; o valor é informado antes." 
     },
     { 
       pergunta: "Vocês buscam o notebook no Portão?", 

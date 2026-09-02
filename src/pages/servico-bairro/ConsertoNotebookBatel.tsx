@@ -45,7 +45,7 @@ const data: ServicoBairroData = {
   faq: [
     { 
       pergunta: "Vocês consertam MacBooks no Batel?", 
-      resposta: "Sim! Atendemos MacBooks e notebooks Apple com peças originais e compatíveis. Diagnóstico gratuito para moradores do Batel." 
+      resposta: "Sim! Atendemos MacBooks e notebooks Apple com peças originais e compatíveis. Diagnóstico com valor informado antes de qualquer execução." 
     },
     { 
       pergunta: "Quanto tempo leva o conserto?", 

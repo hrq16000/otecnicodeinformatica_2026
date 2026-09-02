@@ -135,6 +135,16 @@
       "file": "src/lib/enriquecimento4eRedes.ts",
       "rule": "mesmo-dia",
       "why": "Hedge explícito ('quase sempre', 'se o computador liga') sobre diagnóstico remoto — condicional real, sem garantia."
+    },
+    {
+      "file": "src/lib/ferramentasTecnicas.ts",
+      "rule": "mesmo-dia",
+      "why": "Texto de diagnóstico de Wi-Fi: 'se o padrão voltar no mesmo dia' descreve reincidência do sintoma, não promessa de atendimento."
+    },
+    {
+      "file": "src/lib/glossarioTecnico.ts",
+      "rule": "superlativo",
+      "why": "'solução mais recomendada em fóruns' é alerta contra prática insegura (desligar Secure Boot), não claim de mercado."
     }
   ],
   "_scope": "Conteúdo editorial (blog, páginas de problema, marcas) descreve terceiros e legislação — fora do escopo do gate de claims institucionais."

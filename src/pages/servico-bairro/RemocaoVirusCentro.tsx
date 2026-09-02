@@ -11,7 +11,7 @@ const data: ServicoBairroData = {
   cidade: "Curitiba",
   
   h1: "Remoção de Vírus no Centro de Curitiba",
-  subtitulo: "Limpeza completa de vírus, malware, ransomware e spyware. Proteção profissional com antivírus atualizado e atendimento rápido no Centro.",
+  subtitulo: "Limpeza completa de vírus, malware, ransomware e spyware. Proteção profissional com antivírus atualizado e atendimento conforme disponibilidade no Centro.",
   
   precoBase: "R$ 79,99",
   precoDescricao: "Inclui remoção completa, instalação de antivírus e orientação de segurança.",

@@ -12,7 +12,7 @@ const data = {
     com forte presença industrial, comercial e residencial. Nossa equipe de técnicos de informática 
     oferece cobertura completa em São José dos Pinhais, atendendo desde o Centro até bairros como 
     Afonso Pena, Cruzeiro, Aristocrata, Braga e região do Aeroporto. Conhecemos bem a cidade e 
-    entendemos a necessidade de atendimento rápido para empresas e residências. Oferecemos os 
+    entendemos a necessidade de atendimento conforme disponibilidade para empresas e residências. Oferecemos os 
     mesmos serviços de qualidade disponíveis em Curitiba, com preços justos e transparentes. 
     Se você está em SJP e precisa de um técnico de informática confiável, conte conosco!`,
   pontosReferencia: [
