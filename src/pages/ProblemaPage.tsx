@@ -7,6 +7,8 @@ import { Button } from "@/components/ui/button";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { InterlinkingBlock } from "@/components/InterlinkingBlock";
+import { FontesPrimarias } from "@/components/BlocosEnriquecimento";
+import { getFontesProblema } from "@/lib/fontesProblemas";
 import { ClusterLinks } from "@/components/ClusterLinks";
 import { BlocoInteligencia } from "@/components/BlocoInteligencia";
 import Breadcrumbs from "@/components/Breadcrumbs";
@@ -650,6 +652,10 @@ const ProblemaPage = () => {
         categoria={data.categoria}
         contexto={data.h1}
       />
+      <div className="container mx-auto max-w-4xl px-4">
+        <FontesPrimarias fontes={getFontesProblema(data.slug)} />
+      </div>
+
       <BlocoInteligencia />
       <InterlinkingBlock />
       <Footer />
