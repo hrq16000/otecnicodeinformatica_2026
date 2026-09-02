@@ -1,4 +1,21 @@
 import { IMAGES } from "@/lib/images";
+import { creditFor } from "@/lib/imageCredits";
+
+/** Crédito e link de licença visíveis dentro do <figcaption> (gate check:image-credits). */
+const Credito = ({ src }: { src: string }) => {
+  const c = creditFor(src);
+  return (
+    <>
+      {" "}
+      <span>
+        {c.creditText} —{" "}
+        <a href={c.licenseUrl} rel="nofollow noopener" target="_blank" className="underline">
+          {c.license}
+        </a>
+      </span>
+    </>
+  );
+};
 
 export type ImageKey = "tecnicoTrabalhando" | "notebookReparo" | "placaMae" | "bancadaTecnica" | "ferramentas" | "atendimentoDomiciliar" | "componentesSsd" | "redesWifi" | "cameraSeguranca" | "diagnostico" | "desktopMontado" | "smartTv" | "suporteRemoto" | "servidores" | "segurancaDigital" | "coletaEntrega" | "clienteSatisfeito" | "microsoldagem" | "estacaoSolda" | "microscopio" | "amplificadorSom";
 
@@ -37,9 +54,10 @@ export const RealImageSection = ({
                 height={400}
                 className="rounded-xl w-full h-64 md:h-72 object-cover shadow-md"
               />
-              {caption && (
-                <figcaption className="text-xs text-muted-foreground mt-2 text-center italic">{caption}</figcaption>
-              )}
+              <figcaption className="text-xs text-muted-foreground mt-2 text-center italic">
+                {caption}
+                <Credito src={src} />
+              </figcaption>
             </figure>
             <figure>
               <img
@@ -51,9 +69,10 @@ export const RealImageSection = ({
                 height={400}
                 className="rounded-xl w-full h-64 md:h-72 object-cover shadow-md"
               />
-              {secondaryCaption && (
-                <figcaption className="text-xs text-muted-foreground mt-2 text-center italic">{secondaryCaption}</figcaption>
-              )}
+              <figcaption className="text-xs text-muted-foreground mt-2 text-center italic">
+                {secondaryCaption}
+                <Credito src={src2} />
+              </figcaption>
             </figure>
           </div>
         </div>
@@ -75,9 +94,10 @@ export const RealImageSection = ({
               height={400}
               className="rounded-xl w-full h-64 md:h-80 object-cover shadow-md"
             />
-            {caption && (
-              <figcaption className="text-xs text-muted-foreground mt-2 text-center italic">{caption}</figcaption>
-            )}
+            <figcaption className="text-xs text-muted-foreground mt-2 text-center italic">
+              {caption}
+              <Credito src={src} />
+            </figcaption>
           </figure>
         </div>
       </div>
