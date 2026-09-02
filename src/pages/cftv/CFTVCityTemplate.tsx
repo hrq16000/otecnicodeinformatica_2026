@@ -129,19 +129,7 @@ const CFTVCityTemplate = ({ city, slug, metaTitle, metaDescription, neighborhood
           </div>
         </section>
 
-        {/* Testimonial */}
-        <section className="py-8 md:py-10 bg-muted/50">
-          <div className="container mx-auto max-w-2xl">
-            <div className="bg-background rounded-xl p-8 border border-primary/5 text-center">
-              <div className="flex justify-center gap-0.5 mb-4">
-                {[...Array(5)].map((_, i) => <Star key={i} className="h-5 w-5 fill-accent text-accent" />)}
-              </div>
-              <p className="text-foreground/80 italic mb-4 leading-relaxed">"{testimonial.text}"</p>
-              <p className="font-semibold text-foreground">{testimonial.name}</p>
-              <p className="text-xs text-muted-foreground">{testimonial.location}</p>
-            </div>
-          </div>
-        </section>
+        {/* Escopo do serviço — sem depoimento: só publicamos avaliação verificável */}
 
         {/* Authority */}
         <section className="py-8 md:py-10 bg-background">
@@ -151,15 +139,17 @@ const CFTVCityTemplate = ({ city, slug, metaTitle, metaDescription, neighborhood
                 <Award className="h-8 w-8 text-primary" />
               </div>
               <div>
-                <h3 className="font-heading font-bold text-primary text-lg mb-2">Mestre dos Serviços — Desde 1998</h3>
+                <h3 className="font-heading font-bold text-primary text-lg mb-2">O que está incluído em {city}</h3>
                 <p className="text-muted-foreground text-sm">
-                  Mais de 25 anos protegendo patrimônios em {city} e região. Equipe especializada d’O Técnico de Informática 
-                  com instalação profissional, garantia real e suporte contínuo.
+                  Instalação executada por técnico identificado, com o valor e o escopo informados antes de começar.
+                  Garantia conforme o serviço executado e o equipamento instalado, sempre registrada por escrito.
+                  Não trabalhamos com mensalidade nem com fidelidade.
                 </p>
               </div>
             </div>
           </div>
         </section>
+
 
         {/* Artigos Relacionados */}
         <section className="py-8 md:py-10 bg-muted/50">
