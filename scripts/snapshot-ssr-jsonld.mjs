@@ -22,7 +22,9 @@ import { CURATED_PATHS } from "./lib/curated-urls.mjs";
 const argv = process.argv.slice(2);
 const exigir = argv.includes("--require");
 const distIdx = argv.indexOf("--dist");
-const dist = distIdx >= 0 ? argv[distIdx + 1] : "dist";
+// Diretório PRÓPRIO: escrever em dist/ faria outros gates (editorial, por ex.)
+// interpretarem o snapshot como build estático e mudarem de modo.
+const dist = distIdx >= 0 ? argv[distIdx + 1] : "dist-jsonld";
 
 const rotas = [...new Set(["/", ...CURATED_PATHS])];
 
