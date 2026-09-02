@@ -71,16 +71,8 @@ const ServicoCidadePage = () => {
   const jsonLd = {
     "@context": "https://schema.org",
     "@graph": [
-      {
-        "@type": "LocalBusiness",
-        "name": `Técnico de Informática em ${cidade.nome}`,
-        "url": SITE_BASE_URL,
-        // Contato canônico apenas no schema (nunca em texto visível).
-        "telephone": `+${WHATSAPP_NUMBER}`,
-        "areaServed": cidade.nome,
-        "priceRange": "$$",
-        "address": { "@type": "PostalAddress", addressLocality: cidade.nome, addressRegion: "PR", addressCountry: "BR" }
-      },
+      // O LocalBusiness canônico (#localbusiness) já é emitido pelo slot global;
+      // aqui apenas o referenciamos para não duplicar o nó na mesma página.
       // RODADA 5C: só páginas com intenção local própria declaram Service local.
       ...(local
         ? [{
