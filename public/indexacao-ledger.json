@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-09-02T03:43:01.334Z",
+  "geradoEm": "2026-09-02T03:46:13.918Z",
   "base": "https://otecnicodeinformatica.com.br",
   "janela": {
     "atual": {
@@ -26,10 +26,10 @@
   },
   "cobertura": {
     "urlsCuradas": 233,
-    "inspecionadas": 0,
-    "indexadas": 0,
-    "percentualInspecionado": 0,
-    "percentualIndexadoEntreInspecionadas": null,
+    "inspecionadas": 25,
+    "indexadas": 14,
+    "percentualInspecionado": 10.7,
+    "percentualIndexadoEntreInspecionadas": 56,
     "comImpressao": 91,
     "rastreadasNaoIndexadas": []
   },
@@ -99,8 +99,8 @@
       "cliques": 0,
       "deltaImpressoes": 121,
       "comImpressao": 19,
-      "indexadas": 0,
-      "inspecionadas": 0,
+      "indexadas": 1,
+      "inspecionadas": 1,
       "consultas": [
         {
           "consulta": "assistencia tecnica notebook curitiba",
@@ -203,8 +203,8 @@
       "cliques": 0,
       "deltaImpressoes": 63,
       "comImpressao": 8,
-      "indexadas": 0,
-      "inspecionadas": 0,
+      "indexadas": 12,
+      "inspecionadas": 20,
       "consultas": [
         {
           "consulta": "assistência técnica são josé dos pinhais",
@@ -255,8 +255,8 @@
       "cliques": 0,
       "deltaImpressoes": 32,
       "comImpressao": 12,
-      "indexadas": 0,
-      "inspecionadas": 0,
+      "indexadas": 1,
+      "inspecionadas": 1,
       "consultas": [
         {
           "consulta": "informatica cic",
@@ -311,7 +311,7 @@
       "deltaImpressoes": 1,
       "comImpressao": 1,
       "indexadas": 0,
-      "inspecionadas": 0,
+      "inspecionadas": 1,
       "consultas": [
         {
           "consulta": "roteador caindo sinal",
@@ -327,7 +327,7 @@
       "deltaImpressoes": 0,
       "comImpressao": 0,
       "indexadas": 0,
-      "inspecionadas": 0,
+      "inspecionadas": 2,
       "consultas": []
     },
     {
@@ -669,10 +669,10 @@
         "posicao": 11.4,
         "deltaImpressoes": 26,
         "deltaCliques": 0,
-        "cobertura": "UNKNOWN",
-        "verdict": "UNKNOWN",
-        "ultimoRastreio": null,
-        "canonicalGoogle": null
+        "cobertura": "Submitted and indexed",
+        "verdict": "PASS",
+        "ultimoRastreio": "2026-08-28T15:01:26Z",
+        "canonicalGoogle": "https://otecnicodeinformatica.com.br/"
       },
       "bing": {
         "disponivel": false,
@@ -748,10 +748,10 @@
         "posicao": 5,
         "deltaImpressoes": 3,
         "deltaCliques": 0,
-        "cobertura": "UNKNOWN",
-        "verdict": "UNKNOWN",
-        "ultimoRastreio": null,
-        "canonicalGoogle": null
+        "cobertura": "Submitted and indexed",
+        "verdict": "PASS",
+        "ultimoRastreio": "2026-08-14T17:17:47Z",
+        "canonicalGoogle": "https://otecnicodeinformatica.com.br/servicos"
       },
       "bing": {
         "disponivel": false,
@@ -772,10 +772,10 @@
         "posicao": null,
         "deltaImpressoes": 0,
         "deltaCliques": 0,
-        "cobertura": "UNKNOWN",
-        "verdict": "UNKNOWN",
-        "ultimoRastreio": null,
-        "canonicalGoogle": null
+        "cobertura": "Submitted and indexed",
+        "verdict": "PASS",
+        "ultimoRastreio": "2026-08-14T20:10:50Z",
+        "canonicalGoogle": "https://otecnicodeinformatica.com.br/como-funciona"
       },
       "bing": {
         "disponivel": false,
@@ -796,10 +796,10 @@
         "posicao": 8.1,
         "deltaImpressoes": 16,
         "deltaCliques": 0,
-        "cobertura": "UNKNOWN",
-        "verdict": "UNKNOWN",
-        "ultimoRastreio": null,
-        "canonicalGoogle": null
+        "cobertura": "Submitted and indexed",
+        "verdict": "PASS",
+        "ultimoRastreio": "2026-08-15T06:55:21Z",
+        "canonicalGoogle": "https://otecnicodeinformatica.com.br/precos-e-politicas"
       },
       "bing": {
         "disponivel": false,
@@ -820,10 +820,10 @@
         "posicao": null,
         "deltaImpressoes": 0,
         "deltaCliques": 0,
-        "cobertura": "UNKNOWN",
-        "verdict": "UNKNOWN",
-        "ultimoRastreio": null,
-        "canonicalGoogle": null
+        "cobertura": "Submitted and indexed",
+        "verdict": "PASS",
+        "ultimoRastreio": "2026-08-15T06:57:35Z",
+        "canonicalGoogle": "https://otecnicodeinformatica.com.br/sobre"
       },
       "bing": {
         "disponivel": false,
@@ -844,10 +844,10 @@
         "posicao": 3.4,
         "deltaImpressoes": 7,
         "deltaCliques": 0,
-        "cobertura": "UNKNOWN",
-        "verdict": "UNKNOWN",
-        "ultimoRastreio": null,
-        "canonicalGoogle": null
+        "cobertura": "Submitted and indexed",
+        "verdict": "PASS",
+        "ultimoRastreio": "2026-08-13T18:53:05Z",
+        "canonicalGoogle": "https://otecnicodeinformatica.com.br/contato"
       },
       "bing": {
         "disponivel": false,
@@ -868,10 +868,10 @@
         "posicao": 5.8,
         "deltaImpressoes": 4,
         "deltaCliques": 0,
-        "cobertura": "UNKNOWN",
-        "verdict": "UNKNOWN",
-        "ultimoRastreio": null,
-        "canonicalGoogle": null
+        "cobertura": "Submitted and indexed",
+        "verdict": "PASS",
+        "ultimoRastreio": "2026-08-31T04:14:59Z",
+        "canonicalGoogle": "https://otecnicodeinformatica.com.br/faq"
       },
       "bing": {
         "disponivel": false,
@@ -892,10 +892,10 @@
         "posicao": null,
         "deltaImpressoes": 0,
         "deltaCliques": 0,
-        "cobertura": "UNKNOWN",
-        "verdict": "UNKNOWN",
-        "ultimoRastreio": null,
-        "canonicalGoogle": null
+        "cobertura": "Submitted and indexed",
+        "verdict": "PASS",
+        "ultimoRastreio": "2026-08-14T11:44:37Z",
+        "canonicalGoogle": "https://otecnicodeinformatica.com.br/anuncie"
       },
       "bing": {
         "disponivel": false,
@@ -916,10 +916,10 @@
         "posicao": 7,
         "deltaImpressoes": 2,
         "deltaCliques": 0,
-        "cobertura": "UNKNOWN",
-        "verdict": "UNKNOWN",
-        "ultimoRastreio": null,
-        "canonicalGoogle": null
+        "cobertura": "Submitted and indexed",
+        "verdict": "PASS",
+        "ultimoRastreio": "2026-08-12T08:25:41Z",
+        "canonicalGoogle": "https://otecnicodeinformatica.com.br/atendimento-domicilio"
       },
       "bing": {
         "disponivel": false,
@@ -940,10 +940,10 @@
         "posicao": null,
         "deltaImpressoes": 0,
         "deltaCliques": 0,
-        "cobertura": "UNKNOWN",
-        "verdict": "UNKNOWN",
-        "ultimoRastreio": null,
-        "canonicalGoogle": null
+        "cobertura": "Submitted and indexed",
+        "verdict": "PASS",
+        "ultimoRastreio": "2026-08-14T12:09:18Z",
+        "canonicalGoogle": "https://otecnicodeinformatica.com.br/atendimento-remoto"
       },
       "bing": {
         "disponivel": false,
@@ -964,8 +964,8 @@
         "posicao": null,
         "deltaImpressoes": 0,
         "deltaCliques": 0,
-        "cobertura": "UNKNOWN",
-        "verdict": "UNKNOWN",
+        "cobertura": "URL is unknown to Google",
+        "verdict": "NEUTRAL",
         "ultimoRastreio": null,
         "canonicalGoogle": null
       },
@@ -988,8 +988,8 @@
         "posicao": null,
         "deltaImpressoes": 0,
         "deltaCliques": 0,
-        "cobertura": "UNKNOWN",
-        "verdict": "UNKNOWN",
+        "cobertura": "URL is unknown to Google",
+        "verdict": "NEUTRAL",
         "ultimoRastreio": null,
         "canonicalGoogle": null
       },
@@ -1012,8 +1012,8 @@
         "posicao": null,
         "deltaImpressoes": 0,
         "deltaCliques": 0,
-        "cobertura": "UNKNOWN",
-        "verdict": "UNKNOWN",
+        "cobertura": "URL is unknown to Google",
+        "verdict": "NEUTRAL",
         "ultimoRastreio": null,
         "canonicalGoogle": null
       },
@@ -1036,8 +1036,8 @@
         "posicao": null,
         "deltaImpressoes": 0,
         "deltaCliques": 0,
-        "cobertura": "UNKNOWN",
-        "verdict": "UNKNOWN",
+        "cobertura": "URL is unknown to Google",
+        "verdict": "NEUTRAL",
         "ultimoRastreio": null,
         "canonicalGoogle": null
       },
@@ -1060,8 +1060,8 @@
         "posicao": null,
         "deltaImpressoes": 0,
         "deltaCliques": 0,
-        "cobertura": "UNKNOWN",
-        "verdict": "UNKNOWN",
+        "cobertura": "URL is unknown to Google",
+        "verdict": "NEUTRAL",
         "ultimoRastreio": null,
         "canonicalGoogle": null
       },
@@ -1084,10 +1084,10 @@
         "posicao": 3,
         "deltaImpressoes": 3,
         "deltaCliques": 0,
-        "cobertura": "UNKNOWN",
-        "verdict": "UNKNOWN",
-        "ultimoRastreio": null,
-        "canonicalGoogle": null
+        "cobertura": "Submitted and indexed",
+        "verdict": "PASS",
+        "ultimoRastreio": "2026-08-14T12:02:12Z",
+        "canonicalGoogle": "https://otecnicodeinformatica.com.br/seguranca-dos-dados"
       },
       "bing": {
         "disponivel": false,
@@ -1108,8 +1108,8 @@
         "posicao": null,
         "deltaImpressoes": 0,
         "deltaCliques": 0,
-        "cobertura": "UNKNOWN",
-        "verdict": "UNKNOWN",
+        "cobertura": "URL is unknown to Google",
+        "verdict": "NEUTRAL",
         "ultimoRastreio": null,
         "canonicalGoogle": null
       },
@@ -1132,8 +1132,8 @@
         "posicao": null,
         "deltaImpressoes": 0,
         "deltaCliques": 0,
-        "cobertura": "UNKNOWN",
-        "verdict": "UNKNOWN",
+        "cobertura": "URL is unknown to Google",
+        "verdict": "NEUTRAL",
         "ultimoRastreio": null,
         "canonicalGoogle": null
       },
@@ -1156,10 +1156,10 @@
         "posicao": 81,
         "deltaImpressoes": 4,
         "deltaCliques": 0,
-        "cobertura": "UNKNOWN",
-        "verdict": "UNKNOWN",
-        "ultimoRastreio": null,
-        "canonicalGoogle": null
+        "cobertura": "Submitted and indexed",
+        "verdict": "PASS",
+        "ultimoRastreio": "2026-08-25T14:17:54Z",
+        "canonicalGoogle": "https://otecnicodeinformatica.com.br/empresa-de-ti-curitiba"
       },
       "bing": {
         "disponivel": false,
@@ -1199,10 +1199,10 @@
         "posicao": 17,
         "deltaImpressoes": 1,
         "deltaCliques": 0,
-        "cobertura": "UNKNOWN",
-        "verdict": "UNKNOWN",
-        "ultimoRastreio": null,
-        "canonicalGoogle": null
+        "cobertura": "Submitted and indexed",
+        "verdict": "PASS",
+        "ultimoRastreio": "2026-08-25T13:36:07Z",
+        "canonicalGoogle": "https://otecnicodeinformatica.com.br/bairros"
       },
       "bing": {
         "disponivel": false,
@@ -1223,10 +1223,10 @@
         "posicao": 7,
         "deltaImpressoes": 1,
         "deltaCliques": 0,
-        "cobertura": "UNKNOWN",
-        "verdict": "UNKNOWN",
-        "ultimoRastreio": null,
-        "canonicalGoogle": null
+        "cobertura": "Submitted and indexed",
+        "verdict": "PASS",
+        "ultimoRastreio": "2026-08-13T18:35:22Z",
+        "canonicalGoogle": "https://otecnicodeinformatica.com.br/guia-tecnico-informatica"
       },
       "bing": {
         "disponivel": false,
@@ -1247,8 +1247,8 @@
         "posicao": null,
         "deltaImpressoes": 0,
         "deltaCliques": 0,
-        "cobertura": "UNKNOWN",
-        "verdict": "UNKNOWN",
+        "cobertura": "URL is unknown to Google",
+        "verdict": "NEUTRAL",
         "ultimoRastreio": null,
         "canonicalGoogle": null
       },
@@ -1271,8 +1271,8 @@
         "posicao": null,
         "deltaImpressoes": 0,
         "deltaCliques": 0,
-        "cobertura": "UNKNOWN",
-        "verdict": "UNKNOWN",
+        "cobertura": "URL is unknown to Google",
+        "verdict": "NEUTRAL",
         "ultimoRastreio": null,
         "canonicalGoogle": null
       },
@@ -1295,8 +1295,8 @@
         "posicao": null,
         "deltaImpressoes": 0,
         "deltaCliques": 0,
-        "cobertura": "UNKNOWN",
-        "verdict": "UNKNOWN",
+        "cobertura": "URL is unknown to Google",
+        "verdict": "NEUTRAL",
         "ultimoRastreio": null,
         "canonicalGoogle": null
       },
@@ -1319,8 +1319,8 @@
         "posicao": null,
         "deltaImpressoes": 0,
         "deltaCliques": 0,
-        "cobertura": "UNKNOWN",
-        "verdict": "UNKNOWN",
+        "cobertura": "URL is unknown to Google",
+        "verdict": "NEUTRAL",
         "ultimoRastreio": null,
         "canonicalGoogle": null
       },
