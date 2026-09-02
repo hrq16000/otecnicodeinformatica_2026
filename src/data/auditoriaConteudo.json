@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-09-02T04:32:24.677Z",
+  "geradoEm": "2026-09-02T04:34:00.040Z",
   "fonte": "sitemap curado (scripts/lib/curated-urls.mjs) + SSR real",
   "ssr": {
     "base": "http://localhost:8080",
@@ -12,9 +12,9 @@
   },
   "total": 233,
   "porStatus": {
-    "OK": 164,
+    "OK": 192,
     "ALERTA_TECNICO": 29,
-    "ALERTA_EDITORIAL": 40
+    "ALERTA_EDITORIAL": 12
   },
   "familias": [
     {
@@ -73,13 +73,13 @@
       "id": "glossario",
       "titulo": "Glossário",
       "urls": 19,
-      "ok": 1,
+      "ok": 15,
       "alertaTecnico": 0,
-      "alertaEditorial": 18,
+      "alertaEditorial": 4,
       "pendenteRevisao": 0,
       "pendenteSsr": 0,
       "semFonte": 4,
-      "semLimite": 18,
+      "semLimite": 1,
       "condicionais": 0
     },
     {
@@ -99,26 +99,26 @@
       "id": "decisao",
       "titulo": "Guia de decisão",
       "urls": 10,
-      "ok": 0,
+      "ok": 8,
       "alertaTecnico": 0,
-      "alertaEditorial": 10,
+      "alertaEditorial": 2,
       "pendenteRevisao": 0,
       "pendenteSsr": 0,
       "semFonte": 0,
-      "semLimite": 10,
+      "semLimite": 0,
       "condicionais": 0
     },
     {
       "id": "entidade",
       "titulo": "Entidade",
       "urls": 10,
-      "ok": 1,
+      "ok": 7,
       "alertaTecnico": 0,
-      "alertaEditorial": 9,
+      "alertaEditorial": 3,
       "pendenteRevisao": 0,
       "pendenteSsr": 0,
       "semFonte": 3,
-      "semLimite": 9,
+      "semLimite": 1,
       "condicionais": 0
     },
     {
@@ -3838,9 +3838,9 @@
         "WebPage",
         "WebSite"
       ],
-      "palavras": 1128,
+      "palavras": 1134,
       "fontesPrimarias": true,
-      "limiteSeguranca": false,
+      "limiteSeguranca": true,
       "ligacoes": {
         "ferramenta": true,
         "decisao": false,
@@ -3849,9 +3849,7 @@
         "problema": false
       },
       "alertasTecnicos": [],
-      "alertasEditoriais": [
-        "sem bloco de limite/quando parar"
-      ],
+      "alertasEditoriais": [],
       "ssr": "OK",
       "claims": {
         "COMPROVADA": 0,
@@ -3860,7 +3858,7 @@
         "REMOVIDA": 0,
         "PENDENTE": 0
       },
-      "status": "ALERTA_EDITORIAL"
+      "status": "OK"
     },
     {
       "path": "/decisoes/backup-antes-da-manutencao",
@@ -3876,9 +3874,9 @@
         "WebPage",
         "WebSite"
       ],
-      "palavras": 858,
+      "palavras": 864,
       "fontesPrimarias": true,
-      "limiteSeguranca": false,
+      "limiteSeguranca": true,
       "ligacoes": {
         "ferramenta": true,
         "decisao": false,
@@ -3887,9 +3885,7 @@
         "problema": false
       },
       "alertasTecnicos": [],
-      "alertasEditoriais": [
-        "sem bloco de limite/quando parar"
-      ],
+      "alertasEditoriais": [],
       "ssr": "OK",
       "claims": {
         "COMPROVADA": 0,
@@ -3898,7 +3894,7 @@
         "REMOVIDA": 0,
         "PENDENTE": 0
       },
-      "status": "ALERTA_EDITORIAL"
+      "status": "OK"
     },
     {
       "path": "/decisoes/consertar-ou-substituir",
@@ -3914,9 +3910,9 @@
         "WebPage",
         "WebSite"
       ],
-      "palavras": 901,
+      "palavras": 907,
       "fontesPrimarias": true,
-      "limiteSeguranca": false,
+      "limiteSeguranca": true,
       "ligacoes": {
         "ferramenta": false,
         "decisao": false,
@@ -3926,7 +3922,6 @@
       },
       "alertasTecnicos": [],
       "alertasEditoriais": [
-        "sem bloco de limite/quando parar",
         "ligação semântica insuficiente (<2 destinos)"
       ],
       "ssr": "OK",
@@ -3953,9 +3948,9 @@
         "WebPage",
         "WebSite"
       ],
-      "palavras": 1004,
+      "palavras": 1010,
       "fontesPrimarias": true,
-      "limiteSeguranca": false,
+      "limiteSeguranca": true,
       "ligacoes": {
         "ferramenta": true,
         "decisao": false,
@@ -3964,9 +3959,7 @@
         "problema": true
       },
       "alertasTecnicos": [],
-      "alertasEditoriais": [
-        "sem bloco de limite/quando parar"
-      ],
+      "alertasEditoriais": [],
       "ssr": "OK",
       "claims": {
         "COMPROVADA": 0,
@@ -3975,7 +3968,7 @@
         "REMOVIDA": 0,
         "PENDENTE": 0
       },
-      "status": "ALERTA_EDITORIAL"
+      "status": "OK"
     },
     {
       "path": "/decisoes/hd-com-ruido",
@@ -3991,9 +3984,9 @@
         "WebPage",
         "WebSite"
       ],
-      "palavras": 895,
+      "palavras": 901,
       "fontesPrimarias": true,
-      "limiteSeguranca": false,
+      "limiteSeguranca": true,
       "ligacoes": {
         "ferramenta": false,
         "decisao": false,
@@ -4002,9 +3995,7 @@
         "problema": true
       },
       "alertasTecnicos": [],
-      "alertasEditoriais": [
-        "sem bloco de limite/quando parar"
-      ],
+      "alertasEditoriais": [],
       "ssr": "OK",
       "claims": {
         "COMPROVADA": 0,
@@ -4013,7 +4004,7 @@
         "REMOVIDA": 0,
         "PENDENTE": 0
       },
-      "status": "ALERTA_EDITORIAL"
+      "status": "OK"
     },
     {
       "path": "/decisoes/montar-ou-comprar-pronto",
@@ -4029,9 +4020,9 @@
         "WebPage",
         "WebSite"
       ],
-      "palavras": 1015,
+      "palavras": 1021,
       "fontesPrimarias": true,
-      "limiteSeguranca": false,
+      "limiteSeguranca": true,
       "ligacoes": {
         "ferramenta": false,
         "decisao": true,
@@ -4040,9 +4031,7 @@
         "problema": false
       },
       "alertasTecnicos": [],
-      "alertasEditoriais": [
-        "sem bloco de limite/quando parar"
-      ],
+      "alertasEditoriais": [],
       "ssr": "OK",
       "claims": {
         "COMPROVADA": 0,
@@ -4051,7 +4040,7 @@
         "REMOVIDA": 0,
         "PENDENTE": 0
       },
-      "status": "ALERTA_EDITORIAL"
+      "status": "OK"
     },
     {
       "path": "/decisoes/nuvem-ou-hd-externo",
@@ -4067,9 +4056,9 @@
         "WebPage",
         "WebSite"
       ],
-      "palavras": 1098,
+      "palavras": 1104,
       "fontesPrimarias": true,
-      "limiteSeguranca": false,
+      "limiteSeguranca": true,
       "ligacoes": {
         "ferramenta": true,
         "decisao": false,
@@ -4078,9 +4067,7 @@
         "problema": false
       },
       "alertasTecnicos": [],
-      "alertasEditoriais": [
-        "sem bloco de limite/quando parar"
-      ],
+      "alertasEditoriais": [],
       "ssr": "OK",
       "claims": {
         "COMPROVADA": 0,
@@ -4089,7 +4076,7 @@
         "REMOVIDA": 0,
         "PENDENTE": 0
       },
-      "status": "ALERTA_EDITORIAL"
+      "status": "OK"
     },
     {
       "path": "/decisoes/remoto-ou-presencial",
@@ -4105,9 +4092,9 @@
         "WebPage",
         "WebSite"
       ],
-      "palavras": 859,
+      "palavras": 865,
       "fontesPrimarias": true,
-      "limiteSeguranca": false,
+      "limiteSeguranca": true,
       "ligacoes": {
         "ferramenta": false,
         "decisao": false,
@@ -4117,7 +4104,6 @@
       },
       "alertasTecnicos": [],
       "alertasEditoriais": [
-        "sem bloco de limite/quando parar",
         "ligação semântica insuficiente (<2 destinos)"
       ],
       "ssr": "OK",
@@ -4144,9 +4130,9 @@
         "WebPage",
         "WebSite"
       ],
-      "palavras": 922,
+      "palavras": 928,
       "fontesPrimarias": true,
-      "limiteSeguranca": false,
+      "limiteSeguranca": true,
       "ligacoes": {
         "ferramenta": true,
         "decisao": false,
@@ -4155,9 +4141,7 @@
         "problema": true
       },
       "alertasTecnicos": [],
-      "alertasEditoriais": [
-        "sem bloco de limite/quando parar"
-      ],
+      "alertasEditoriais": [],
       "ssr": "OK",
       "claims": {
         "COMPROVADA": 0,
@@ -4166,7 +4150,7 @@
         "REMOVIDA": 0,
         "PENDENTE": 0
       },
-      "status": "ALERTA_EDITORIAL"
+      "status": "OK"
     },
     {
       "path": "/decisoes/trocar-componente-ou-reparar",
@@ -4182,9 +4166,9 @@
         "WebPage",
         "WebSite"
       ],
-      "palavras": 1269,
+      "palavras": 1275,
       "fontesPrimarias": true,
-      "limiteSeguranca": false,
+      "limiteSeguranca": true,
       "ligacoes": {
         "ferramenta": false,
         "decisao": true,
@@ -4193,9 +4177,7 @@
         "problema": true
       },
       "alertasTecnicos": [],
-      "alertasEditoriais": [
-        "sem bloco de limite/quando parar"
-      ],
+      "alertasEditoriais": [],
       "ssr": "OK",
       "claims": {
         "COMPROVADA": 0,
@@ -4204,7 +4186,7 @@
         "REMOVIDA": 0,
         "PENDENTE": 0
       },
-      "status": "ALERTA_EDITORIAL"
+      "status": "OK"
     },
     {
       "path": "/diagnostico-tecnico",
@@ -4335,9 +4317,9 @@
         "WebPage",
         "WebSite"
       ],
-      "palavras": 642,
+      "palavras": 714,
       "fontesPrimarias": true,
-      "limiteSeguranca": false,
+      "limiteSeguranca": true,
       "ligacoes": {
         "ferramenta": true,
         "decisao": true,
@@ -4346,9 +4328,7 @@
         "problema": true
       },
       "alertasTecnicos": [],
-      "alertasEditoriais": [
-        "sem bloco de limite/quando parar"
-      ],
+      "alertasEditoriais": [],
       "ssr": "OK",
       "claims": {
         "COMPROVADA": 0,
@@ -4357,7 +4337,7 @@
         "REMOVIDA": 0,
         "PENDENTE": 0
       },
-      "status": "ALERTA_EDITORIAL"
+      "status": "OK"
     },
     {
       "path": "/entidades/cidade",
@@ -4373,9 +4353,9 @@
         "WebPage",
         "WebSite"
       ],
-      "palavras": 535,
+      "palavras": 594,
       "fontesPrimarias": false,
-      "limiteSeguranca": false,
+      "limiteSeguranca": true,
       "ligacoes": {
         "ferramenta": true,
         "decisao": true,
@@ -4385,8 +4365,7 @@
       },
       "alertasTecnicos": [],
       "alertasEditoriais": [
-        "sem fonte primária citada",
-        "sem bloco de limite/quando parar"
+        "sem fonte primária citada"
       ],
       "ssr": "OK",
       "claims": {
@@ -4412,9 +4391,9 @@
         "WebPage",
         "WebSite"
       ],
-      "palavras": 621,
+      "palavras": 682,
       "fontesPrimarias": true,
-      "limiteSeguranca": false,
+      "limiteSeguranca": true,
       "ligacoes": {
         "ferramenta": true,
         "decisao": true,
@@ -4423,9 +4402,7 @@
         "problema": true
       },
       "alertasTecnicos": [],
-      "alertasEditoriais": [
-        "sem bloco de limite/quando parar"
-      ],
+      "alertasEditoriais": [],
       "ssr": "OK",
       "claims": {
         "COMPROVADA": 0,
@@ -4434,7 +4411,7 @@
         "REMOVIDA": 0,
         "PENDENTE": 0
       },
-      "status": "ALERTA_EDITORIAL"
+      "status": "OK"
     },
     {
       "path": "/entidades/erro-0xc0000428",
@@ -4450,7 +4427,7 @@
         "WebPage",
         "WebSite"
       ],
-      "palavras": 631,
+      "palavras": 704,
       "fontesPrimarias": true,
       "limiteSeguranca": true,
       "ligacoes": {
@@ -4486,9 +4463,9 @@
         "WebPage",
         "WebSite"
       ],
-      "palavras": 593,
+      "palavras": 660,
       "fontesPrimarias": true,
-      "limiteSeguranca": false,
+      "limiteSeguranca": true,
       "ligacoes": {
         "ferramenta": true,
         "decisao": true,
@@ -4497,9 +4474,7 @@
         "problema": true
       },
       "alertasTecnicos": [],
-      "alertasEditoriais": [
-        "sem bloco de limite/quando parar"
-      ],
+      "alertasEditoriais": [],
       "ssr": "OK",
       "claims": {
         "COMPROVADA": 0,
@@ -4508,7 +4483,7 @@
         "REMOVIDA": 0,
         "PENDENTE": 0
       },
-      "status": "ALERTA_EDITORIAL"
+      "status": "OK"
     },
     {
       "path": "/entidades/servico",
@@ -4524,9 +4499,9 @@
         "WebPage",
         "WebSite"
       ],
-      "palavras": 591,
+      "palavras": 645,
       "fontesPrimarias": false,
-      "limiteSeguranca": false,
+      "limiteSeguranca": true,
       "ligacoes": {
         "ferramenta": true,
         "decisao": true,
@@ -4536,8 +4511,7 @@
       },
       "alertasTecnicos": [],
       "alertasEditoriais": [
-        "sem fonte primária citada",
-        "sem bloco de limite/quando parar"
+        "sem fonte primária citada"
       ],
       "ssr": "OK",
       "claims": {
@@ -4563,9 +4537,9 @@
         "WebPage",
         "WebSite"
       ],
-      "palavras": 646,
+      "palavras": 719,
       "fontesPrimarias": true,
-      "limiteSeguranca": false,
+      "limiteSeguranca": true,
       "ligacoes": {
         "ferramenta": true,
         "decisao": true,
@@ -4574,9 +4548,7 @@
         "problema": true
       },
       "alertasTecnicos": [],
-      "alertasEditoriais": [
-        "sem bloco de limite/quando parar"
-      ],
+      "alertasEditoriais": [],
       "ssr": "OK",
       "claims": {
         "COMPROVADA": 0,
@@ -4585,7 +4557,7 @@
         "REMOVIDA": 0,
         "PENDENTE": 0
       },
-      "status": "ALERTA_EDITORIAL"
+      "status": "OK"
     },
     {
       "path": "/entidades/wifi",
@@ -4601,9 +4573,9 @@
         "WebPage",
         "WebSite"
       ],
-      "palavras": 574,
+      "palavras": 635,
       "fontesPrimarias": true,
-      "limiteSeguranca": false,
+      "limiteSeguranca": true,
       "ligacoes": {
         "ferramenta": true,
         "decisao": true,
@@ -4612,9 +4584,7 @@
         "problema": true
       },
       "alertasTecnicos": [],
-      "alertasEditoriais": [
-        "sem bloco de limite/quando parar"
-      ],
+      "alertasEditoriais": [],
       "ssr": "OK",
       "claims": {
         "COMPROVADA": 0,
@@ -4623,7 +4593,7 @@
         "REMOVIDA": 0,
         "PENDENTE": 0
       },
-      "status": "ALERTA_EDITORIAL"
+      "status": "OK"
     },
     {
       "path": "/entidades/windows",
@@ -4639,9 +4609,9 @@
         "WebPage",
         "WebSite"
       ],
-      "palavras": 676,
+      "palavras": 748,
       "fontesPrimarias": true,
-      "limiteSeguranca": false,
+      "limiteSeguranca": true,
       "ligacoes": {
         "ferramenta": true,
         "decisao": true,
@@ -4650,9 +4620,7 @@
         "problema": true
       },
       "alertasTecnicos": [],
-      "alertasEditoriais": [
-        "sem bloco de limite/quando parar"
-      ],
+      "alertasEditoriais": [],
       "ssr": "OK",
       "claims": {
         "COMPROVADA": 0,
@@ -4661,7 +4629,7 @@
         "REMOVIDA": 0,
         "PENDENTE": 0
       },
-      "status": "ALERTA_EDITORIAL"
+      "status": "OK"
     },
     {
       "path": "/equipamentos",
@@ -5240,9 +5208,9 @@
         "WebPage",
         "WebSite"
       ],
-      "palavras": 643,
+      "palavras": 647,
       "fontesPrimarias": true,
-      "limiteSeguranca": false,
+      "limiteSeguranca": true,
       "ligacoes": {
         "ferramenta": true,
         "decisao": false,
@@ -5251,9 +5219,7 @@
         "problema": false
       },
       "alertasTecnicos": [],
-      "alertasEditoriais": [
-        "sem bloco de limite/quando parar"
-      ],
+      "alertasEditoriais": [],
       "ssr": "OK",
       "claims": {
         "COMPROVADA": 0,
@@ -5262,7 +5228,7 @@
         "REMOVIDA": 0,
         "PENDENTE": 0
       },
-      "status": "ALERTA_EDITORIAL"
+      "status": "OK"
     },
     {
       "path": "/glossario/bios",
@@ -5278,9 +5244,9 @@
         "WebPage",
         "WebSite"
       ],
-      "palavras": 654,
+      "palavras": 658,
       "fontesPrimarias": true,
-      "limiteSeguranca": false,
+      "limiteSeguranca": true,
       "ligacoes": {
         "ferramenta": true,
         "decisao": false,
@@ -5289,9 +5255,7 @@
         "problema": true
       },
       "alertasTecnicos": [],
-      "alertasEditoriais": [
-        "sem bloco de limite/quando parar"
-      ],
+      "alertasEditoriais": [],
       "ssr": "OK",
       "claims": {
         "COMPROVADA": 0,
@@ -5300,7 +5264,7 @@
         "REMOVIDA": 0,
         "PENDENTE": 0
       },
-      "status": "ALERTA_EDITORIAL"
+      "status": "OK"
     },
     {
       "path": "/glossario/bitlocker",
@@ -5316,9 +5280,9 @@
         "WebPage",
         "WebSite"
       ],
-      "palavras": 696,
+      "palavras": 700,
       "fontesPrimarias": true,
-      "limiteSeguranca": false,
+      "limiteSeguranca": true,
       "ligacoes": {
         "ferramenta": true,
         "decisao": false,
@@ -5327,9 +5291,7 @@
         "problema": true
       },
       "alertasTecnicos": [],
-      "alertasEditoriais": [
-        "sem bloco de limite/quando parar"
-      ],
+      "alertasEditoriais": [],
       "ssr": "OK",
       "claims": {
         "COMPROVADA": 0,
@@ -5338,7 +5300,7 @@
         "REMOVIDA": 0,
         "PENDENTE": 0
       },
-      "status": "ALERTA_EDITORIAL"
+      "status": "OK"
     },
     {
       "path": "/glossario/bsod",
@@ -5354,7 +5316,7 @@
         "WebPage",
         "WebSite"
       ],
-      "palavras": 708,
+      "palavras": 712,
       "fontesPrimarias": true,
       "limiteSeguranca": true,
       "ligacoes": {
@@ -5390,9 +5352,9 @@
         "WebPage",
         "WebSite"
       ],
-      "palavras": 710,
+      "palavras": 714,
       "fontesPrimarias": true,
-      "limiteSeguranca": false,
+      "limiteSeguranca": true,
       "ligacoes": {
         "ferramenta": true,
         "decisao": false,
@@ -5401,9 +5363,7 @@
         "problema": true
       },
       "alertasTecnicos": [],
-      "alertasEditoriais": [
-        "sem bloco de limite/quando parar"
-      ],
+      "alertasEditoriais": [],
       "ssr": "OK",
       "claims": {
         "COMPROVADA": 0,
@@ -5412,7 +5372,7 @@
         "REMOVIDA": 0,
         "PENDENTE": 0
       },
-      "status": "ALERTA_EDITORIAL"
+      "status": "OK"
     },
     {
       "path": "/glossario/driver",
@@ -5428,9 +5388,9 @@
         "WebPage",
         "WebSite"
       ],
-      "palavras": 705,
+      "palavras": 709,
       "fontesPrimarias": true,
-      "limiteSeguranca": false,
+      "limiteSeguranca": true,
       "ligacoes": {
         "ferramenta": true,
         "decisao": true,
@@ -5439,9 +5399,7 @@
         "problema": true
       },
       "alertasTecnicos": [],
-      "alertasEditoriais": [
-        "sem bloco de limite/quando parar"
-      ],
+      "alertasEditoriais": [],
       "ssr": "OK",
       "claims": {
         "COMPROVADA": 0,
@@ -5450,7 +5408,7 @@
         "REMOVIDA": 0,
         "PENDENTE": 0
       },
-      "status": "ALERTA_EDITORIAL"
+      "status": "OK"
     },
     {
       "path": "/glossario/imagem-do-sistema",
@@ -5466,9 +5424,9 @@
         "WebPage",
         "WebSite"
       ],
-      "palavras": 639,
+      "palavras": 643,
       "fontesPrimarias": true,
-      "limiteSeguranca": false,
+      "limiteSeguranca": true,
       "ligacoes": {
         "ferramenta": true,
         "decisao": false,
@@ -5477,9 +5435,7 @@
         "problema": false
       },
       "alertasTecnicos": [],
-      "alertasEditoriais": [
-        "sem bloco de limite/quando parar"
-      ],
+      "alertasEditoriais": [],
       "ssr": "OK",
       "claims": {
         "COMPROVADA": 0,
@@ -5488,7 +5444,7 @@
         "REMOVIDA": 0,
         "PENDENTE": 0
       },
-      "status": "ALERTA_EDITORIAL"
+      "status": "OK"
     },
     {
       "path": "/glossario/memoria-ram",
@@ -5504,9 +5460,9 @@
         "WebPage",
         "WebSite"
       ],
-      "palavras": 675,
+      "palavras": 679,
       "fontesPrimarias": false,
-      "limiteSeguranca": false,
+      "limiteSeguranca": true,
       "ligacoes": {
         "ferramenta": true,
         "decisao": false,
@@ -5516,8 +5472,7 @@
       },
       "alertasTecnicos": [],
       "alertasEditoriais": [
-        "sem fonte primária citada",
-        "sem bloco de limite/quando parar"
+        "sem fonte primária citada"
       ],
       "ssr": "OK",
       "claims": {
@@ -5543,9 +5498,9 @@
         "WebPage",
         "WebSite"
       ],
-      "palavras": 694,
+      "palavras": 698,
       "fontesPrimarias": true,
-      "limiteSeguranca": false,
+      "limiteSeguranca": true,
       "ligacoes": {
         "ferramenta": true,
         "decisao": false,
@@ -5554,9 +5509,7 @@
         "problema": true
       },
       "alertasTecnicos": [],
-      "alertasEditoriais": [
-        "sem bloco de limite/quando parar"
-      ],
+      "alertasEditoriais": [],
       "ssr": "OK",
       "claims": {
         "COMPROVADA": 0,
@@ -5565,7 +5518,7 @@
         "REMOVIDA": 0,
         "PENDENTE": 0
       },
-      "status": "ALERTA_EDITORIAL"
+      "status": "OK"
     },
     {
       "path": "/glossario/nvme",
@@ -5581,9 +5534,9 @@
         "WebPage",
         "WebSite"
       ],
-      "palavras": 633,
+      "palavras": 637,
       "fontesPrimarias": true,
-      "limiteSeguranca": false,
+      "limiteSeguranca": true,
       "ligacoes": {
         "ferramenta": true,
         "decisao": false,
@@ -5592,9 +5545,7 @@
         "problema": false
       },
       "alertasTecnicos": [],
-      "alertasEditoriais": [
-        "sem bloco de limite/quando parar"
-      ],
+      "alertasEditoriais": [],
       "ssr": "OK",
       "claims": {
         "COMPROVADA": 0,
@@ -5603,7 +5554,7 @@
         "REMOVIDA": 0,
         "PENDENTE": 0
       },
-      "status": "ALERTA_EDITORIAL"
+      "status": "OK"
     },
     {
       "path": "/glossario/particao",
@@ -5619,9 +5570,9 @@
         "WebPage",
         "WebSite"
       ],
-      "palavras": 728,
+      "palavras": 732,
       "fontesPrimarias": true,
-      "limiteSeguranca": false,
+      "limiteSeguranca": true,
       "ligacoes": {
         "ferramenta": true,
         "decisao": false,
@@ -5630,9 +5581,7 @@
         "problema": false
       },
       "alertasTecnicos": [],
-      "alertasEditoriais": [
-        "sem bloco de limite/quando parar"
-      ],
+      "alertasEditoriais": [],
       "ssr": "OK",
       "claims": {
         "COMPROVADA": 0,
@@ -5641,7 +5590,7 @@
         "REMOVIDA": 0,
         "PENDENTE": 0
       },
-      "status": "ALERTA_EDITORIAL"
+      "status": "OK"
     },
     {
       "path": "/glossario/recuperacao-de-dados",
@@ -5657,9 +5606,9 @@
         "WebPage",
         "WebSite"
       ],
-      "palavras": 693,
+      "palavras": 697,
       "fontesPrimarias": false,
-      "limiteSeguranca": false,
+      "limiteSeguranca": true,
       "ligacoes": {
         "ferramenta": true,
         "decisao": false,
@@ -5669,8 +5618,7 @@
       },
       "alertasTecnicos": [],
       "alertasEditoriais": [
-        "sem fonte primária citada",
-        "sem bloco de limite/quando parar"
+        "sem fonte primária citada"
       ],
       "ssr": "OK",
       "claims": {
@@ -5696,9 +5644,9 @@
         "WebPage",
         "WebSite"
       ],
-      "palavras": 737,
+      "palavras": 741,
       "fontesPrimarias": true,
-      "limiteSeguranca": false,
+      "limiteSeguranca": true,
       "ligacoes": {
         "ferramenta": true,
         "decisao": true,
@@ -5707,9 +5655,7 @@
         "problema": true
       },
       "alertasTecnicos": [],
-      "alertasEditoriais": [
-        "sem bloco de limite/quando parar"
-      ],
+      "alertasEditoriais": [],
       "ssr": "OK",
       "claims": {
         "COMPROVADA": 0,
@@ -5718,7 +5664,7 @@
         "REMOVIDA": 0,
         "PENDENTE": 0
       },
-      "status": "ALERTA_EDITORIAL"
+      "status": "OK"
     },
     {
       "path": "/glossario/smart",
@@ -5734,9 +5680,9 @@
         "WebPage",
         "WebSite"
       ],
-      "palavras": 646,
+      "palavras": 650,
       "fontesPrimarias": false,
-      "limiteSeguranca": false,
+      "limiteSeguranca": true,
       "ligacoes": {
         "ferramenta": true,
         "decisao": false,
@@ -5746,8 +5692,7 @@
       },
       "alertasTecnicos": [],
       "alertasEditoriais": [
-        "sem fonte primária citada",
-        "sem bloco de limite/quando parar"
+        "sem fonte primária citada"
       ],
       "ssr": "OK",
       "claims": {
@@ -5773,9 +5718,9 @@
         "WebPage",
         "WebSite"
       ],
-      "palavras": 668,
+      "palavras": 672,
       "fontesPrimarias": true,
-      "limiteSeguranca": false,
+      "limiteSeguranca": true,
       "ligacoes": {
         "ferramenta": true,
         "decisao": false,
@@ -5784,9 +5729,7 @@
         "problema": true
       },
       "alertasTecnicos": [],
-      "alertasEditoriais": [
-        "sem bloco de limite/quando parar"
-      ],
+      "alertasEditoriais": [],
       "ssr": "OK",
       "claims": {
         "COMPROVADA": 0,
@@ -5795,7 +5738,7 @@
         "REMOVIDA": 0,
         "PENDENTE": 0
       },
-      "status": "ALERTA_EDITORIAL"
+      "status": "OK"
     },
     {
       "path": "/glossario/thermal-throttling",
@@ -5811,9 +5754,9 @@
         "WebPage",
         "WebSite"
       ],
-      "palavras": 680,
+      "palavras": 684,
       "fontesPrimarias": true,
-      "limiteSeguranca": false,
+      "limiteSeguranca": true,
       "ligacoes": {
         "ferramenta": true,
         "decisao": false,
@@ -5822,9 +5765,7 @@
         "problema": true
       },
       "alertasTecnicos": [],
-      "alertasEditoriais": [
-        "sem bloco de limite/quando parar"
-      ],
+      "alertasEditoriais": [],
       "ssr": "OK",
       "claims": {
         "COMPROVADA": 0,
@@ -5833,7 +5774,7 @@
         "REMOVIDA": 0,
         "PENDENTE": 0
       },
-      "status": "ALERTA_EDITORIAL"
+      "status": "OK"
     },
     {
       "path": "/glossario/tpm",
@@ -5849,9 +5790,9 @@
         "WebPage",
         "WebSite"
       ],
-      "palavras": 646,
+      "palavras": 650,
       "fontesPrimarias": true,
-      "limiteSeguranca": false,
+      "limiteSeguranca": true,
       "ligacoes": {
         "ferramenta": true,
         "decisao": false,
@@ -5860,9 +5801,7 @@
         "problema": false
       },
       "alertasTecnicos": [],
-      "alertasEditoriais": [
-        "sem bloco de limite/quando parar"
-      ],
+      "alertasEditoriais": [],
       "ssr": "OK",
       "claims": {
         "COMPROVADA": 0,
@@ -5871,7 +5810,7 @@
         "REMOVIDA": 0,
         "PENDENTE": 0
       },
-      "status": "ALERTA_EDITORIAL"
+      "status": "OK"
     },
     {
       "path": "/glossario/uefi",
@@ -5887,9 +5826,9 @@
         "WebPage",
         "WebSite"
       ],
-      "palavras": 677,
+      "palavras": 681,
       "fontesPrimarias": true,
-      "limiteSeguranca": false,
+      "limiteSeguranca": true,
       "ligacoes": {
         "ferramenta": true,
         "decisao": false,
@@ -5898,9 +5837,7 @@
         "problema": true
       },
       "alertasTecnicos": [],
-      "alertasEditoriais": [
-        "sem bloco de limite/quando parar"
-      ],
+      "alertasEditoriais": [],
       "ssr": "OK",
       "claims": {
         "COMPROVADA": 0,
@@ -5909,7 +5846,7 @@
         "REMOVIDA": 0,
         "PENDENTE": 0
       },
-      "status": "ALERTA_EDITORIAL"
+      "status": "OK"
     },
     {
       "path": "/guia-tecnico-informatica",
@@ -6839,12 +6776,10 @@
       "description": "Backup para empresas em Curitiba: implantação da rotina no local, cópia fora do escritório e teste de restauração periódico para você saber que o backup funciona.",
       "canonical": "https://otecnicodeinformatica.com.br/servicos/backup-para-empresas/curitiba",
       "jsonLd": [
-        "BreadcrumbList",
         "FAQPage",
         "LocalBusiness",
         "Organization",
         "Service",
-        "WebPage",
         "WebSite"
       ],
       "palavras": 1498,
