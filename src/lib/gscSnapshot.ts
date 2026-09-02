@@ -52,7 +52,12 @@ export interface GscSnapshot {
   geradoEm: string | null;
   propriedade: { siteUrl: string; dominio: string } | null;
   periodo: { inicio: string; fim: string } | null;
-  totais: { cliques: number; impressoes: number; ctr: number; posicao: number | null } | null;
+  totais: {
+    cliques: number;
+    impressoes: number;
+    ctr: number;
+    posicao: number | null;
+  } | null;
   paginas: GscPagina[];
   inspecoes: GscInspecao[];
   sitemaps: GscSitemap[];
@@ -61,11 +66,14 @@ export interface GscSnapshot {
 
 export const gscSnapshot = snapshotJson as unknown as GscSnapshot;
 
-export const gscDisponivel = gscSnapshot.status === "ok" && gscSnapshot.paginas.length > 0;
+export const gscDisponivel =
+  gscSnapshot.status === "ok" && gscSnapshot.paginas.length > 0;
 
 function normalizar(caminho: string): string {
   if (!caminho) return "/";
-  const semDominio = caminho.startsWith("http") ? new URL(caminho).pathname : caminho;
+  const semDominio = caminho.startsWith("http")
+    ? new URL(caminho).pathname
+    : caminho;
   const limpo = semDominio.split("?")[0].split("#")[0];
   return limpo.length > 1 ? limpo.replace(/\/+$/, "") : "/";
 }
@@ -74,7 +82,8 @@ const porCaminho = new Map<string, GscPagina>();
 for (const p of gscSnapshot.paginas) porCaminho.set(normalizar(p.caminho), p);
 
 const inspecaoPorCaminho = new Map<string, GscInspecao>();
-for (const i of gscSnapshot.inspecoes) inspecaoPorCaminho.set(normalizar(i.caminho), i);
+for (const i of gscSnapshot.inspecoes)
+  inspecaoPorCaminho.set(normalizar(i.caminho), i);
 
 /** Desempenho real (28 dias) de uma URL, ou null quando o Google não reportou linhas. */
 export function desempenhoDaUrl(caminho: string): GscPagina | null {
@@ -86,7 +95,8 @@ export function inspecaoDaUrl(caminho: string): GscInspecao | null {
   return inspecaoPorCaminho.get(normalizar(caminho)) ?? null;
 }
 
-export type StatusIndexacao = "indexada" | "desconhecida" | "com-impressoes" | "sem-dados";
+export type StatusIndexacao =
+  "indexada" | "desconhecida" | "com-impressoes" | "sem-dados";
 
 /**
  * Classificação conservadora:
@@ -98,7 +108,8 @@ export type StatusIndexacao = "indexada" | "desconhecida" | "com-impressoes" | "
 export function statusIndexacao(caminho: string): StatusIndexacao {
   const insp = inspecaoDaUrl(caminho);
   if (insp?.veredito === "PASS") return "indexada";
-  if (insp && insp.cobertura?.toLowerCase().includes("unknown")) return "desconhecida";
+  if (insp && insp.cobertura?.toLowerCase().includes("unknown"))
+    return "desconhecida";
   const perf = desempenhoDaUrl(caminho);
   if (perf && perf.impressoes > 0) return "com-impressoes";
   return "sem-dados";
