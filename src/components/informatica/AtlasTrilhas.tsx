@@ -6,6 +6,8 @@ import {
   atlasArtigosAprovados,
   type AtlasTema,
 } from "@/lib/atlasInformatica";
+import { AtlasAprofundamentoBloco } from "@/components/informatica/AtlasAprofundamentoBloco";
+
 
 /**
  * Trilhas do Atlas de Informática (Fases 1–2).
@@ -135,6 +137,10 @@ const TemaCard = ({ tema }: { tema: AtlasTema }) => {
           </ul>
         </div>
       </div>
+
+      <AtlasAprofundamentoBloco temaId={tema.id} temaTitulo={tema.titulo} />
+
+
 
       {tema.fontes && tema.fontes.length > 0 && (
         <footer className="mt-6 border-t border-border pt-4">

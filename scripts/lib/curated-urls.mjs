@@ -107,6 +107,8 @@ export const DECISOES_SLUGS = [
   "atualizar-para-windows-11",
   "nuvem-ou-hd-externo",
   "montar-ou-comprar-pronto",
+  // Fase 5
+  "trocar-componente-ou-reparar",
 ];
 
 export const BIBLIOTECA = [

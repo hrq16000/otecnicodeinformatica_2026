@@ -160,6 +160,11 @@ export const DECISAO_POR_SINTOMA: Record<string, { slug: string; porQue: string 
     porQue:
       "Depois de recuperar (ou perder) um arquivo, a pergunta seguinte é onde a próxima cópia deve morar. O guia compara nuvem e mídia externa pelo risco que cada uma cobre.",
   },
+  "computador-desliga-sozinho": {
+    slug: "trocar-componente-ou-reparar",
+    porQue:
+      "Desligamento sob carga costuma apontar para fonte, ventoinha ou pasta térmica — peças de desgaste. O guia mostra quando substituir sai na frente de insistir no reparo.",
+  },
   "computador-esquentando": {
     slug: "consertar-ou-substituir",
     porQue:

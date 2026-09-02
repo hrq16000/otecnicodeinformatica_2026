@@ -6,6 +6,8 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { supabase } from "@/integrations/supabase/client";
 import { siteConfig } from "@/lib/siteConfig";
+import { SitemapLedgerPanel } from "@/components/admin/SitemapLedgerPanel";
+
 
 /**
  * PAINEL SEO POR URL — /admin/seo.
@@ -216,6 +218,10 @@ export default function AdminSeo() {
         <Kpi label="Com aviso" valor={String(inv?.comAviso ?? 0)} hint="metadata incompleta" />
         <Kpi label="Overrides" valor={String(Object.keys(overrides).length)} hint="ajustes salvos no backend" />
       </div>
+
+      <SitemapLedgerPanel />
+
+
 
       <div className="mt-6 flex flex-wrap items-center gap-2">
         <Input className="max-w-xs" placeholder="Buscar por slug ou título" value={busca} onChange={(e) => setBusca(e.target.value)} />
