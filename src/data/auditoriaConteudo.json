@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-09-02T04:14:48.454Z",
+  "geradoEm": "2026-09-02T04:28:23.879Z",
   "fonte": "sitemap curado (scripts/lib/curated-urls.mjs) + SSR real",
   "ssr": {
     "base": "http://localhost:8080",
@@ -12,22 +12,22 @@
   },
   "total": 233,
   "porStatus": {
-    "OK": 104,
+    "OK": 164,
     "ALERTA_TECNICO": 29,
-    "ALERTA_EDITORIAL": 100
+    "ALERTA_EDITORIAL": 40
   },
   "familias": [
     {
       "id": "pilar",
       "titulo": "Pilar editorial",
       "urls": 64,
-      "ok": 0,
+      "ok": 60,
       "alertaTecnico": 3,
-      "alertaEditorial": 61,
+      "alertaEditorial": 1,
       "pendenteRevisao": 0,
       "pendenteSsr": 0,
-      "semFonte": 56,
-      "semLimite": 48,
+      "semFonte": 1,
+      "semLimite": 0,
       "condicionais": 0
     },
     {
@@ -1290,21 +1290,18 @@
         "Organization",
         "WebSite"
       ],
-      "palavras": 1865,
+      "palavras": 2148,
       "fontesPrimarias": true,
-      "limiteSeguranca": false,
+      "limiteSeguranca": true,
       "ligacoes": {
-        "ferramenta": false,
-        "decisao": false,
+        "ferramenta": true,
+        "decisao": true,
         "servico": true,
-        "entidade": false,
+        "entidade": true,
         "problema": false
       },
       "alertasTecnicos": [],
-      "alertasEditoriais": [
-        "sem bloco de limite/quando parar",
-        "ligação semântica insuficiente (<2 destinos)"
-      ],
+      "alertasEditoriais": [],
       "ssr": "OK",
       "claims": {
         "COMPROVADA": 0,
@@ -1313,7 +1310,7 @@
         "REMOVIDA": 0,
         "PENDENTE": 0
       },
-      "status": "ALERTA_EDITORIAL"
+      "status": "OK"
     },
     {
       "path": "/blog/backup-nuvem-empresas-qual-escolher",
@@ -1331,21 +1328,18 @@
         "Organization",
         "WebSite"
       ],
-      "palavras": 1777,
+      "palavras": 2060,
       "fontesPrimarias": true,
-      "limiteSeguranca": false,
+      "limiteSeguranca": true,
       "ligacoes": {
-        "ferramenta": false,
-        "decisao": false,
+        "ferramenta": true,
+        "decisao": true,
         "servico": true,
-        "entidade": false,
+        "entidade": true,
         "problema": false
       },
       "alertasTecnicos": [],
-      "alertasEditoriais": [
-        "sem bloco de limite/quando parar",
-        "ligação semântica insuficiente (<2 destinos)"
-      ],
+      "alertasEditoriais": [],
       "ssr": "OK",
       "claims": {
         "COMPROVADA": 0,
@@ -1354,7 +1348,7 @@
         "REMOVIDA": 0,
         "PENDENTE": 0
       },
-      "status": "ALERTA_EDITORIAL"
+      "status": "OK"
     },
     {
       "path": "/blog/bios-corrompida-reset-cmos-atualizacao",
@@ -1372,22 +1366,18 @@
         "Organization",
         "WebSite"
       ],
-      "palavras": 1460,
-      "fontesPrimarias": false,
-      "limiteSeguranca": false,
+      "palavras": 1766,
+      "fontesPrimarias": true,
+      "limiteSeguranca": true,
       "ligacoes": {
-        "ferramenta": false,
-        "decisao": false,
+        "ferramenta": true,
+        "decisao": true,
         "servico": true,
         "entidade": false,
-        "problema": false
+        "problema": true
       },
       "alertasTecnicos": [],
-      "alertasEditoriais": [
-        "sem fonte primária citada",
-        "sem bloco de limite/quando parar",
-        "ligação semântica insuficiente (<2 destinos)"
-      ],
+      "alertasEditoriais": [],
       "ssr": "OK",
       "claims": {
         "COMPROVADA": 0,
@@ -1396,7 +1386,7 @@
         "REMOVIDA": 0,
         "PENDENTE": 0
       },
-      "status": "ALERTA_EDITORIAL"
+      "status": "OK"
     },
     {
       "path": "/blog/boot-uefi-ou-legacy-como-identificar",
@@ -1414,21 +1404,18 @@
         "Organization",
         "WebSite"
       ],
-      "palavras": 895,
-      "fontesPrimarias": false,
+      "palavras": 1201,
+      "fontesPrimarias": true,
       "limiteSeguranca": true,
       "ligacoes": {
-        "ferramenta": false,
-        "decisao": false,
+        "ferramenta": true,
+        "decisao": true,
         "servico": true,
         "entidade": false,
-        "problema": false
+        "problema": true
       },
       "alertasTecnicos": [],
-      "alertasEditoriais": [
-        "sem fonte primária citada",
-        "ligação semântica insuficiente (<2 destinos)"
-      ],
+      "alertasEditoriais": [],
       "ssr": "OK",
       "claims": {
         "COMPROVADA": 0,
@@ -1437,7 +1424,7 @@
         "REMOVIDA": 0,
         "PENDENTE": 0
       },
-      "status": "ALERTA_EDITORIAL"
+      "status": "OK"
     },
     {
       "path": "/blog/botao-power-nao-funciona-jump-start-placa-mae",
@@ -1455,22 +1442,18 @@
         "Organization",
         "WebSite"
       ],
-      "palavras": 1479,
-      "fontesPrimarias": false,
-      "limiteSeguranca": false,
+      "palavras": 1721,
+      "fontesPrimarias": true,
+      "limiteSeguranca": true,
       "ligacoes": {
         "ferramenta": false,
-        "decisao": false,
+        "decisao": true,
         "servico": true,
         "entidade": false,
-        "problema": false
+        "problema": true
       },
       "alertasTecnicos": [],
-      "alertasEditoriais": [
-        "sem fonte primária citada",
-        "sem bloco de limite/quando parar",
-        "ligação semântica insuficiente (<2 destinos)"
-      ],
+      "alertasEditoriais": [],
       "ssr": "OK",
       "claims": {
         "COMPROVADA": 0,
@@ -1479,7 +1462,7 @@
         "REMOVIDA": 0,
         "PENDENTE": 0
       },
-      "status": "ALERTA_EDITORIAL"
+      "status": "OK"
     },
     {
       "path": "/blog/codigos-de-erro-tela-azul-windows",
@@ -1497,22 +1480,18 @@
         "Organization",
         "WebSite"
       ],
-      "palavras": 1065,
-      "fontesPrimarias": false,
-      "limiteSeguranca": false,
+      "palavras": 1370,
+      "fontesPrimarias": true,
+      "limiteSeguranca": true,
       "ligacoes": {
         "ferramenta": false,
-        "decisao": false,
+        "decisao": true,
         "servico": true,
-        "entidade": false,
-        "problema": false
+        "entidade": true,
+        "problema": true
       },
       "alertasTecnicos": [],
-      "alertasEditoriais": [
-        "sem fonte primária citada",
-        "sem bloco de limite/quando parar",
-        "ligação semântica insuficiente (<2 destinos)"
-      ],
+      "alertasEditoriais": [],
       "ssr": "OK",
       "claims": {
         "COMPROVADA": 0,
@@ -1521,7 +1500,7 @@
         "REMOVIDA": 0,
         "PENDENTE": 0
       },
-      "status": "ALERTA_EDITORIAL"
+      "status": "OK"
     },
     {
       "path": "/blog/como-aprender-informatica",
@@ -1539,21 +1518,18 @@
         "Organization",
         "WebSite"
       ],
-      "palavras": 2748,
+      "palavras": 2968,
       "fontesPrimarias": true,
-      "limiteSeguranca": false,
+      "limiteSeguranca": true,
       "ligacoes": {
-        "ferramenta": false,
+        "ferramenta": true,
         "decisao": false,
         "servico": true,
-        "entidade": false,
-        "problema": false
+        "entidade": true,
+        "problema": true
       },
       "alertasTecnicos": [],
-      "alertasEditoriais": [
-        "sem bloco de limite/quando parar",
-        "ligação semântica insuficiente (<2 destinos)"
-      ],
+      "alertasEditoriais": [],
       "ssr": "OK",
       "claims": {
         "COMPROVADA": 0,
@@ -1562,7 +1538,7 @@
         "REMOVIDA": 0,
         "PENDENTE": 0
       },
-      "status": "ALERTA_EDITORIAL"
+      "status": "OK"
     },
     {
       "path": "/blog/como-clonar-hd-para-ssd",
@@ -1580,22 +1556,18 @@
         "Organization",
         "WebSite"
       ],
-      "palavras": 1223,
-      "fontesPrimarias": false,
-      "limiteSeguranca": false,
+      "palavras": 1507,
+      "fontesPrimarias": true,
+      "limiteSeguranca": true,
       "ligacoes": {
-        "ferramenta": false,
-        "decisao": false,
+        "ferramenta": true,
+        "decisao": true,
         "servico": true,
         "entidade": false,
-        "problema": false
+        "problema": true
       },
       "alertasTecnicos": [],
-      "alertasEditoriais": [
-        "sem fonte primária citada",
-        "sem bloco de limite/quando parar",
-        "ligação semântica insuficiente (<2 destinos)"
-      ],
+      "alertasEditoriais": [],
       "ssr": "OK",
       "claims": {
         "COMPROVADA": 0,
@@ -1604,7 +1576,7 @@
         "REMOVIDA": 0,
         "PENDENTE": 0
       },
-      "status": "ALERTA_EDITORIAL"
+      "status": "OK"
     },
     {
       "path": "/blog/como-conectar-wifi-tv-nao-conecta",
@@ -1622,22 +1594,18 @@
         "Organization",
         "WebSite"
       ],
-      "palavras": 1495,
-      "fontesPrimarias": false,
-      "limiteSeguranca": false,
+      "palavras": 1757,
+      "fontesPrimarias": true,
+      "limiteSeguranca": true,
       "ligacoes": {
-        "ferramenta": false,
+        "ferramenta": true,
         "decisao": false,
         "servico": true,
-        "entidade": false,
-        "problema": false
+        "entidade": true,
+        "problema": true
       },
       "alertasTecnicos": [],
-      "alertasEditoriais": [
-        "sem fonte primária citada",
-        "sem bloco de limite/quando parar",
-        "ligação semântica insuficiente (<2 destinos)"
-      ],
+      "alertasEditoriais": [],
       "ssr": "OK",
       "claims": {
         "COMPROVADA": 0,
@@ -1646,7 +1614,7 @@
         "REMOVIDA": 0,
         "PENDENTE": 0
       },
-      "status": "ALERTA_EDITORIAL"
+      "status": "OK"
     },
     {
       "path": "/blog/como-configurar-roteador-wifi-iniciantes",
@@ -1664,22 +1632,18 @@
         "Organization",
         "WebSite"
       ],
-      "palavras": 1882,
-      "fontesPrimarias": false,
-      "limiteSeguranca": false,
+      "palavras": 2144,
+      "fontesPrimarias": true,
+      "limiteSeguranca": true,
       "ligacoes": {
-        "ferramenta": false,
+        "ferramenta": true,
         "decisao": false,
         "servico": true,
-        "entidade": false,
-        "problema": false
+        "entidade": true,
+        "problema": true
       },
       "alertasTecnicos": [],
-      "alertasEditoriais": [
-        "sem fonte primária citada",
-        "sem bloco de limite/quando parar",
-        "ligação semântica insuficiente (<2 destinos)"
-      ],
+      "alertasEditoriais": [],
       "ssr": "OK",
       "claims": {
         "COMPROVADA": 0,
@@ -1688,7 +1652,7 @@
         "REMOVIDA": 0,
         "PENDENTE": 0
       },
-      "status": "ALERTA_EDITORIAL"
+      "status": "OK"
     },
     {
       "path": "/blog/como-diagnosticar-placa-mae-defeituosa",
@@ -1706,22 +1670,18 @@
         "Organization",
         "WebSite"
       ],
-      "palavras": 1262,
-      "fontesPrimarias": false,
-      "limiteSeguranca": false,
+      "palavras": 1504,
+      "fontesPrimarias": true,
+      "limiteSeguranca": true,
       "ligacoes": {
         "ferramenta": false,
-        "decisao": false,
+        "decisao": true,
         "servico": true,
         "entidade": false,
-        "problema": false
+        "problema": true
       },
       "alertasTecnicos": [],
-      "alertasEditoriais": [
-        "sem fonte primária citada",
-        "sem bloco de limite/quando parar",
-        "ligação semântica insuficiente (<2 destinos)"
-      ],
+      "alertasEditoriais": [],
       "ssr": "OK",
       "claims": {
         "COMPROVADA": 0,
@@ -1730,7 +1690,7 @@
         "REMOVIDA": 0,
         "PENDENTE": 0
       },
-      "status": "ALERTA_EDITORIAL"
+      "status": "OK"
     },
     {
       "path": "/blog/como-escolher-um-bom-antivirus",
@@ -1748,22 +1708,18 @@
         "Organization",
         "WebSite"
       ],
-      "palavras": 1504,
-      "fontesPrimarias": false,
-      "limiteSeguranca": false,
+      "palavras": 1787,
+      "fontesPrimarias": true,
+      "limiteSeguranca": true,
       "ligacoes": {
-        "ferramenta": false,
-        "decisao": false,
+        "ferramenta": true,
+        "decisao": true,
         "servico": true,
-        "entidade": false,
+        "entidade": true,
         "problema": false
       },
       "alertasTecnicos": [],
-      "alertasEditoriais": [
-        "sem fonte primária citada",
-        "sem bloco de limite/quando parar",
-        "ligação semântica insuficiente (<2 destinos)"
-      ],
+      "alertasEditoriais": [],
       "ssr": "OK",
       "claims": {
         "COMPROVADA": 0,
@@ -1772,7 +1728,7 @@
         "REMOVIDA": 0,
         "PENDENTE": 0
       },
-      "status": "ALERTA_EDITORIAL"
+      "status": "OK"
     },
     {
       "path": "/blog/como-escolher-uma-workstation",
@@ -1790,22 +1746,18 @@
         "Organization",
         "WebSite"
       ],
-      "palavras": 1665,
-      "fontesPrimarias": false,
-      "limiteSeguranca": false,
+      "palavras": 1907,
+      "fontesPrimarias": true,
+      "limiteSeguranca": true,
       "ligacoes": {
         "ferramenta": false,
-        "decisao": false,
+        "decisao": true,
         "servico": true,
         "entidade": false,
-        "problema": false
+        "problema": true
       },
       "alertasTecnicos": [],
-      "alertasEditoriais": [
-        "sem fonte primária citada",
-        "sem bloco de limite/quando parar",
-        "ligação semântica insuficiente (<2 destinos)"
-      ],
+      "alertasEditoriais": [],
       "ssr": "OK",
       "claims": {
         "COMPROVADA": 0,
@@ -1814,7 +1766,7 @@
         "REMOVIDA": 0,
         "PENDENTE": 0
       },
-      "status": "ALERTA_EDITORIAL"
+      "status": "OK"
     },
     {
       "path": "/blog/como-fazer-upgrade-ssd-nvme",
@@ -1832,22 +1784,18 @@
         "Organization",
         "WebSite"
       ],
-      "palavras": 1445,
-      "fontesPrimarias": false,
-      "limiteSeguranca": false,
+      "palavras": 1729,
+      "fontesPrimarias": true,
+      "limiteSeguranca": true,
       "ligacoes": {
-        "ferramenta": false,
-        "decisao": false,
+        "ferramenta": true,
+        "decisao": true,
         "servico": true,
         "entidade": false,
-        "problema": false
+        "problema": true
       },
       "alertasTecnicos": [],
-      "alertasEditoriais": [
-        "sem fonte primária citada",
-        "sem bloco de limite/quando parar",
-        "ligação semântica insuficiente (<2 destinos)"
-      ],
+      "alertasEditoriais": [],
       "ssr": "OK",
       "claims": {
         "COMPROVADA": 0,
@@ -1856,7 +1804,7 @@
         "REMOVIDA": 0,
         "PENDENTE": 0
       },
-      "status": "ALERTA_EDITORIAL"
+      "status": "OK"
     },
     {
       "path": "/blog/como-formatar-pc-sem-perder-arquivos",
@@ -1874,21 +1822,18 @@
         "Organization",
         "WebSite"
       ],
-      "palavras": 1283,
-      "fontesPrimarias": false,
-      "limiteSeguranca": false,
+      "palavras": 1565,
+      "fontesPrimarias": true,
+      "limiteSeguranca": true,
       "ligacoes": {
-        "ferramenta": false,
-        "decisao": false,
+        "ferramenta": true,
+        "decisao": true,
         "servico": true,
-        "entidade": false,
+        "entidade": true,
         "problema": true
       },
       "alertasTecnicos": [],
-      "alertasEditoriais": [
-        "sem fonte primária citada",
-        "sem bloco de limite/quando parar"
-      ],
+      "alertasEditoriais": [],
       "ssr": "OK",
       "claims": {
         "COMPROVADA": 0,
@@ -1897,7 +1842,7 @@
         "REMOVIDA": 0,
         "PENDENTE": 0
       },
-      "status": "ALERTA_EDITORIAL"
+      "status": "OK"
     },
     {
       "path": "/blog/como-instalar-impressora-windows-passo-a-passo",
@@ -1915,22 +1860,18 @@
         "Organization",
         "WebSite"
       ],
-      "palavras": 1413,
-      "fontesPrimarias": false,
-      "limiteSeguranca": false,
+      "palavras": 1656,
+      "fontesPrimarias": true,
+      "limiteSeguranca": true,
       "ligacoes": {
         "ferramenta": false,
         "decisao": false,
         "servico": true,
-        "entidade": false,
-        "problema": false
+        "entidade": true,
+        "problema": true
       },
       "alertasTecnicos": [],
-      "alertasEditoriais": [
-        "sem fonte primária citada",
-        "sem bloco de limite/quando parar",
-        "ligação semântica insuficiente (<2 destinos)"
-      ],
+      "alertasEditoriais": [],
       "ssr": "OK",
       "claims": {
         "COMPROVADA": 0,
@@ -1939,7 +1880,7 @@
         "REMOVIDA": 0,
         "PENDENTE": 0
       },
-      "status": "ALERTA_EDITORIAL"
+      "status": "OK"
     },
     {
       "path": "/blog/como-instalar-segundo-ssd-notebook",
@@ -1957,22 +1898,18 @@
         "Organization",
         "WebSite"
       ],
-      "palavras": 1256,
-      "fontesPrimarias": false,
-      "limiteSeguranca": false,
+      "palavras": 1540,
+      "fontesPrimarias": true,
+      "limiteSeguranca": true,
       "ligacoes": {
-        "ferramenta": false,
-        "decisao": false,
+        "ferramenta": true,
+        "decisao": true,
         "servico": true,
         "entidade": false,
-        "problema": false
+        "problema": true
       },
       "alertasTecnicos": [],
-      "alertasEditoriais": [
-        "sem fonte primária citada",
-        "sem bloco de limite/quando parar",
-        "ligação semântica insuficiente (<2 destinos)"
-      ],
+      "alertasEditoriais": [],
       "ssr": "OK",
       "claims": {
         "COMPROVADA": 0,
@@ -1981,7 +1918,7 @@
         "REMOVIDA": 0,
         "PENDENTE": 0
       },
-      "status": "ALERTA_EDITORIAL"
+      "status": "OK"
     },
     {
       "path": "/blog/como-instalar-windows-11-do-zero",
@@ -1999,20 +1936,18 @@
         "Organization",
         "WebSite"
       ],
-      "palavras": 1335,
+      "palavras": 1617,
       "fontesPrimarias": true,
       "limiteSeguranca": true,
       "ligacoes": {
-        "ferramenta": false,
-        "decisao": false,
+        "ferramenta": true,
+        "decisao": true,
         "servico": true,
-        "entidade": false,
-        "problema": false
+        "entidade": true,
+        "problema": true
       },
       "alertasTecnicos": [],
-      "alertasEditoriais": [
-        "ligação semântica insuficiente (<2 destinos)"
-      ],
+      "alertasEditoriais": [],
       "ssr": "OK",
       "claims": {
         "COMPROVADA": 0,
@@ -2021,7 +1956,7 @@
         "REMOVIDA": 0,
         "PENDENTE": 0
       },
-      "status": "ALERTA_EDITORIAL"
+      "status": "OK"
     },
     {
       "path": "/blog/como-limpar-notebook-por-dentro",
@@ -2039,22 +1974,18 @@
         "Organization",
         "WebSite"
       ],
-      "palavras": 1638,
-      "fontesPrimarias": false,
-      "limiteSeguranca": false,
+      "palavras": 1880,
+      "fontesPrimarias": true,
+      "limiteSeguranca": true,
       "ligacoes": {
         "ferramenta": false,
-        "decisao": false,
+        "decisao": true,
         "servico": true,
         "entidade": false,
-        "problema": false
+        "problema": true
       },
       "alertasTecnicos": [],
-      "alertasEditoriais": [
-        "sem fonte primária citada",
-        "sem bloco de limite/quando parar",
-        "ligação semântica insuficiente (<2 destinos)"
-      ],
+      "alertasEditoriais": [],
       "ssr": "OK",
       "claims": {
         "COMPROVADA": 0,
@@ -2063,7 +1994,7 @@
         "REMOVIDA": 0,
         "PENDENTE": 0
       },
-      "status": "ALERTA_EDITORIAL"
+      "status": "OK"
     },
     {
       "path": "/blog/como-melhorar-sinal-wifi-em-casa",
@@ -2081,21 +2012,18 @@
         "Organization",
         "WebSite"
       ],
-      "palavras": 1322,
-      "fontesPrimarias": false,
+      "palavras": 1584,
+      "fontesPrimarias": true,
       "limiteSeguranca": true,
       "ligacoes": {
-        "ferramenta": false,
+        "ferramenta": true,
         "decisao": false,
         "servico": true,
-        "entidade": false,
-        "problema": false
+        "entidade": true,
+        "problema": true
       },
       "alertasTecnicos": [],
-      "alertasEditoriais": [
-        "sem fonte primária citada",
-        "ligação semântica insuficiente (<2 destinos)"
-      ],
+      "alertasEditoriais": [],
       "ssr": "OK",
       "claims": {
         "COMPROVADA": 0,
@@ -2104,7 +2032,7 @@
         "REMOVIDA": 0,
         "PENDENTE": 0
       },
-      "status": "ALERTA_EDITORIAL"
+      "status": "OK"
     },
     {
       "path": "/blog/como-proteger-computador-golpes-internet",
@@ -2122,22 +2050,18 @@
         "Organization",
         "WebSite"
       ],
-      "palavras": 1315,
-      "fontesPrimarias": false,
-      "limiteSeguranca": false,
+      "palavras": 1598,
+      "fontesPrimarias": true,
+      "limiteSeguranca": true,
       "ligacoes": {
-        "ferramenta": false,
-        "decisao": false,
+        "ferramenta": true,
+        "decisao": true,
         "servico": true,
-        "entidade": false,
+        "entidade": true,
         "problema": false
       },
       "alertasTecnicos": [],
-      "alertasEditoriais": [
-        "sem fonte primária citada",
-        "sem bloco de limite/quando parar",
-        "ligação semântica insuficiente (<2 destinos)"
-      ],
+      "alertasEditoriais": [],
       "ssr": "OK",
       "claims": {
         "COMPROVADA": 0,
@@ -2146,7 +2070,7 @@
         "REMOVIDA": 0,
         "PENDENTE": 0
       },
-      "status": "ALERTA_EDITORIAL"
+      "status": "OK"
     },
     {
       "path": "/blog/como-recuperar-dados-hd-com-defeito",
@@ -2164,22 +2088,18 @@
         "Organization",
         "WebSite"
       ],
-      "palavras": 1252,
-      "fontesPrimarias": false,
-      "limiteSeguranca": false,
+      "palavras": 1536,
+      "fontesPrimarias": true,
+      "limiteSeguranca": true,
       "ligacoes": {
-        "ferramenta": false,
-        "decisao": false,
+        "ferramenta": true,
+        "decisao": true,
         "servico": true,
         "entidade": false,
-        "problema": false
+        "problema": true
       },
       "alertasTecnicos": [],
-      "alertasEditoriais": [
-        "sem fonte primária citada",
-        "sem bloco de limite/quando parar",
-        "ligação semântica insuficiente (<2 destinos)"
-      ],
+      "alertasEditoriais": [],
       "ssr": "OK",
       "claims": {
         "COMPROVADA": 0,
@@ -2188,7 +2108,7 @@
         "REMOVIDA": 0,
         "PENDENTE": 0
       },
-      "status": "ALERTA_EDITORIAL"
+      "status": "OK"
     },
     {
       "path": "/blog/como-remover-virus-windows-iniciantes",
@@ -2206,22 +2126,18 @@
         "Organization",
         "WebSite"
       ],
-      "palavras": 1201,
-      "fontesPrimarias": false,
-      "limiteSeguranca": false,
+      "palavras": 1484,
+      "fontesPrimarias": true,
+      "limiteSeguranca": true,
       "ligacoes": {
-        "ferramenta": false,
-        "decisao": false,
+        "ferramenta": true,
+        "decisao": true,
         "servico": true,
-        "entidade": false,
+        "entidade": true,
         "problema": false
       },
       "alertasTecnicos": [],
-      "alertasEditoriais": [
-        "sem fonte primária citada",
-        "sem bloco de limite/quando parar",
-        "ligação semântica insuficiente (<2 destinos)"
-      ],
+      "alertasEditoriais": [],
       "ssr": "OK",
       "claims": {
         "COMPROVADA": 0,
@@ -2230,7 +2146,7 @@
         "REMOVIDA": 0,
         "PENDENTE": 0
       },
-      "status": "ALERTA_EDITORIAL"
+      "status": "OK"
     },
     {
       "path": "/blog/como-resolver-tela-azul-windows",
@@ -2248,22 +2164,18 @@
         "Organization",
         "WebSite"
       ],
-      "palavras": 1744,
-      "fontesPrimarias": false,
-      "limiteSeguranca": false,
+      "palavras": 2049,
+      "fontesPrimarias": true,
+      "limiteSeguranca": true,
       "ligacoes": {
         "ferramenta": false,
-        "decisao": false,
+        "decisao": true,
         "servico": true,
-        "entidade": false,
-        "problema": false
+        "entidade": true,
+        "problema": true
       },
       "alertasTecnicos": [],
-      "alertasEditoriais": [
-        "sem fonte primária citada",
-        "sem bloco de limite/quando parar",
-        "ligação semântica insuficiente (<2 destinos)"
-      ],
+      "alertasEditoriais": [],
       "ssr": "OK",
       "claims": {
         "COMPROVADA": 0,
@@ -2272,7 +2184,7 @@
         "REMOVIDA": 0,
         "PENDENTE": 0
       },
-      "status": "ALERTA_EDITORIAL"
+      "status": "OK"
     },
     {
       "path": "/blog/como-saber-quem-esta-usando-meu-wifi",
@@ -2290,22 +2202,18 @@
         "Organization",
         "WebSite"
       ],
-      "palavras": 1868,
-      "fontesPrimarias": false,
-      "limiteSeguranca": false,
+      "palavras": 2130,
+      "fontesPrimarias": true,
+      "limiteSeguranca": true,
       "ligacoes": {
-        "ferramenta": false,
+        "ferramenta": true,
         "decisao": false,
         "servico": true,
-        "entidade": false,
-        "problema": false
+        "entidade": true,
+        "problema": true
       },
       "alertasTecnicos": [],
-      "alertasEditoriais": [
-        "sem fonte primária citada",
-        "sem bloco de limite/quando parar",
-        "ligação semântica insuficiente (<2 destinos)"
-      ],
+      "alertasEditoriais": [],
       "ssr": "OK",
       "claims": {
         "COMPROVADA": 0,
@@ -2314,7 +2222,7 @@
         "REMOVIDA": 0,
         "PENDENTE": 0
       },
-      "status": "ALERTA_EDITORIAL"
+      "status": "OK"
     },
     {
       "path": "/blog/como-saber-se-pc-tem-virus-malware",
@@ -2332,20 +2240,18 @@
         "Organization",
         "WebSite"
       ],
-      "palavras": 1832,
+      "palavras": 2115,
       "fontesPrimarias": true,
       "limiteSeguranca": true,
       "ligacoes": {
-        "ferramenta": false,
-        "decisao": false,
+        "ferramenta": true,
+        "decisao": true,
         "servico": true,
-        "entidade": false,
+        "entidade": true,
         "problema": false
       },
       "alertasTecnicos": [],
-      "alertasEditoriais": [
-        "ligação semântica insuficiente (<2 destinos)"
-      ],
+      "alertasEditoriais": [],
       "ssr": "OK",
       "claims": {
         "COMPROVADA": 0,
@@ -2354,7 +2260,7 @@
         "REMOVIDA": 0,
         "PENDENTE": 0
       },
-      "status": "ALERTA_EDITORIAL"
+      "status": "OK"
     },
     {
       "path": "/blog/como-testar-fonte-de-alimentacao-pc",
@@ -2372,22 +2278,18 @@
         "Organization",
         "WebSite"
       ],
-      "palavras": 1403,
-      "fontesPrimarias": false,
-      "limiteSeguranca": false,
+      "palavras": 1645,
+      "fontesPrimarias": true,
+      "limiteSeguranca": true,
       "ligacoes": {
         "ferramenta": false,
-        "decisao": false,
+        "decisao": true,
         "servico": true,
         "entidade": false,
-        "problema": false
+        "problema": true
       },
       "alertasTecnicos": [],
-      "alertasEditoriais": [
-        "sem fonte primária citada",
-        "sem bloco de limite/quando parar",
-        "ligação semântica insuficiente (<2 destinos)"
-      ],
+      "alertasEditoriais": [],
       "ssr": "OK",
       "claims": {
         "COMPROVADA": 0,
@@ -2396,7 +2298,7 @@
         "REMOVIDA": 0,
         "PENDENTE": 0
       },
-      "status": "ALERTA_EDITORIAL"
+      "status": "OK"
     },
     {
       "path": "/blog/como-trocar-pasta-termica-notebook",
@@ -2414,22 +2316,18 @@
         "Organization",
         "WebSite"
       ],
-      "palavras": 1521,
-      "fontesPrimarias": false,
-      "limiteSeguranca": false,
+      "palavras": 1763,
+      "fontesPrimarias": true,
+      "limiteSeguranca": true,
       "ligacoes": {
         "ferramenta": false,
-        "decisao": false,
+        "decisao": true,
         "servico": true,
         "entidade": false,
-        "problema": false
+        "problema": true
       },
       "alertasTecnicos": [],
-      "alertasEditoriais": [
-        "sem fonte primária citada",
-        "sem bloco de limite/quando parar",
-        "ligação semântica insuficiente (<2 destinos)"
-      ],
+      "alertasEditoriais": [],
       "ssr": "OK",
       "claims": {
         "COMPROVADA": 0,
@@ -2438,7 +2336,7 @@
         "REMOVIDA": 0,
         "PENDENTE": 0
       },
-      "status": "ALERTA_EDITORIAL"
+      "status": "OK"
     },
     {
       "path": "/blog/como-trocar-tela-notebook-passo-a-passo",
@@ -2456,22 +2354,18 @@
         "Organization",
         "WebSite"
       ],
-      "palavras": 1519,
-      "fontesPrimarias": false,
-      "limiteSeguranca": false,
+      "palavras": 1761,
+      "fontesPrimarias": true,
+      "limiteSeguranca": true,
       "ligacoes": {
         "ferramenta": false,
-        "decisao": false,
+        "decisao": true,
         "servico": true,
         "entidade": false,
-        "problema": false
+        "problema": true
       },
       "alertasTecnicos": [],
-      "alertasEditoriais": [
-        "sem fonte primária citada",
-        "sem bloco de limite/quando parar",
-        "ligação semântica insuficiente (<2 destinos)"
-      ],
+      "alertasEditoriais": [],
       "ssr": "OK",
       "claims": {
         "COMPROVADA": 0,
@@ -2480,7 +2374,7 @@
         "REMOVIDA": 0,
         "PENDENTE": 0
       },
-      "status": "ALERTA_EDITORIAL"
+      "status": "OK"
     },
     {
       "path": "/blog/computador-entra-direto-na-bios",
@@ -2498,22 +2392,18 @@
         "Organization",
         "WebSite"
       ],
-      "palavras": 2410,
-      "fontesPrimarias": false,
-      "limiteSeguranca": false,
+      "palavras": 2716,
+      "fontesPrimarias": true,
+      "limiteSeguranca": true,
       "ligacoes": {
-        "ferramenta": false,
-        "decisao": false,
+        "ferramenta": true,
+        "decisao": true,
         "servico": true,
         "entidade": false,
-        "problema": false
+        "problema": true
       },
       "alertasTecnicos": [],
-      "alertasEditoriais": [
-        "sem fonte primária citada",
-        "sem bloco de limite/quando parar",
-        "ligação semântica insuficiente (<2 destinos)"
-      ],
+      "alertasEditoriais": [],
       "ssr": "OK",
       "claims": {
         "COMPROVADA": 0,
@@ -2522,7 +2412,7 @@
         "REMOVIDA": 0,
         "PENDENTE": 0
       },
-      "status": "ALERTA_EDITORIAL"
+      "status": "OK"
     },
     {
       "path": "/blog/computador-lento-causas-solucoes",
@@ -2540,21 +2430,18 @@
         "Organization",
         "WebSite"
       ],
-      "palavras": 1728,
-      "fontesPrimarias": false,
+      "palavras": 1984,
+      "fontesPrimarias": true,
       "limiteSeguranca": true,
       "ligacoes": {
-        "ferramenta": false,
-        "decisao": false,
+        "ferramenta": true,
+        "decisao": true,
         "servico": true,
-        "entidade": false,
-        "problema": false
+        "entidade": true,
+        "problema": true
       },
       "alertasTecnicos": [],
-      "alertasEditoriais": [
-        "sem fonte primária citada",
-        "ligação semântica insuficiente (<2 destinos)"
-      ],
+      "alertasEditoriais": [],
       "ssr": "OK",
       "claims": {
         "COMPROVADA": 0,
@@ -2563,7 +2450,7 @@
         "REMOVIDA": 0,
         "PENDENTE": 0
       },
-      "status": "ALERTA_EDITORIAL"
+      "status": "OK"
     },
     {
       "path": "/blog/computador-sem-som-o-que-verificar",
@@ -2581,22 +2468,18 @@
         "Organization",
         "WebSite"
       ],
-      "palavras": 974,
-      "fontesPrimarias": false,
-      "limiteSeguranca": false,
+      "palavras": 1217,
+      "fontesPrimarias": true,
+      "limiteSeguranca": true,
       "ligacoes": {
         "ferramenta": false,
         "decisao": false,
         "servico": true,
-        "entidade": false,
-        "problema": false
+        "entidade": true,
+        "problema": true
       },
       "alertasTecnicos": [],
-      "alertasEditoriais": [
-        "sem fonte primária citada",
-        "sem bloco de limite/quando parar",
-        "ligação semântica insuficiente (<2 destinos)"
-      ],
+      "alertasEditoriais": [],
       "ssr": "OK",
       "claims": {
         "COMPROVADA": 0,
@@ -2605,7 +2488,7 @@
         "REMOVIDA": 0,
         "PENDENTE": 0
       },
-      "status": "ALERTA_EDITORIAL"
+      "status": "OK"
     },
     {
       "path": "/blog/curto-circuito-placa-mae-como-identificar",
@@ -2623,21 +2506,18 @@
         "Organization",
         "WebSite"
       ],
-      "palavras": 1412,
-      "fontesPrimarias": false,
+      "palavras": 1654,
+      "fontesPrimarias": true,
       "limiteSeguranca": true,
       "ligacoes": {
         "ferramenta": false,
-        "decisao": false,
+        "decisao": true,
         "servico": true,
         "entidade": false,
-        "problema": false
+        "problema": true
       },
       "alertasTecnicos": [],
-      "alertasEditoriais": [
-        "sem fonte primária citada",
-        "ligação semântica insuficiente (<2 destinos)"
-      ],
+      "alertasEditoriais": [],
       "ssr": "OK",
       "claims": {
         "COMPROVADA": 0,
@@ -2646,7 +2526,7 @@
         "REMOVIDA": 0,
         "PENDENTE": 0
       },
-      "status": "ALERTA_EDITORIAL"
+      "status": "OK"
     },
     {
       "path": "/blog/disco-com-setores-defeituosos-smart-o-que-fazer",
@@ -2664,21 +2544,18 @@
         "Organization",
         "WebSite"
       ],
-      "palavras": 1126,
-      "fontesPrimarias": false,
-      "limiteSeguranca": false,
+      "palavras": 1410,
+      "fontesPrimarias": true,
+      "limiteSeguranca": true,
       "ligacoes": {
-        "ferramenta": false,
-        "decisao": false,
+        "ferramenta": true,
+        "decisao": true,
         "servico": true,
         "entidade": false,
         "problema": true
       },
       "alertasTecnicos": [],
-      "alertasEditoriais": [
-        "sem fonte primária citada",
-        "sem bloco de limite/quando parar"
-      ],
+      "alertasEditoriais": [],
       "ssr": "OK",
       "claims": {
         "COMPROVADA": 0,
@@ -2687,7 +2564,7 @@
         "REMOVIDA": 0,
         "PENDENTE": 0
       },
-      "status": "ALERTA_EDITORIAL"
+      "status": "OK"
     },
     {
       "path": "/blog/erro-no-bootable-device-como-resolver",
@@ -2705,23 +2582,20 @@
         "Organization",
         "WebSite"
       ],
-      "palavras": 1668,
-      "fontesPrimarias": false,
+      "palavras": 1974,
+      "fontesPrimarias": true,
       "limiteSeguranca": true,
       "ligacoes": {
-        "ferramenta": false,
-        "decisao": false,
+        "ferramenta": true,
+        "decisao": true,
         "servico": true,
         "entidade": false,
-        "problema": false
+        "problema": true
       },
       "alertasTecnicos": [
         "title com 87 caracteres"
       ],
-      "alertasEditoriais": [
-        "sem fonte primária citada",
-        "ligação semântica insuficiente (<2 destinos)"
-      ],
+      "alertasEditoriais": [],
       "ssr": "OK",
       "claims": {
         "COMPROVADA": 0,
@@ -2748,22 +2622,18 @@
         "Organization",
         "WebSite"
       ],
-      "palavras": 945,
-      "fontesPrimarias": false,
-      "limiteSeguranca": false,
+      "palavras": 1188,
+      "fontesPrimarias": true,
+      "limiteSeguranca": true,
       "ligacoes": {
         "ferramenta": false,
         "decisao": false,
         "servico": true,
-        "entidade": false,
-        "problema": false
+        "entidade": true,
+        "problema": true
       },
       "alertasTecnicos": [],
-      "alertasEditoriais": [
-        "sem fonte primária citada",
-        "sem bloco de limite/quando parar",
-        "ligação semântica insuficiente (<2 destinos)"
-      ],
+      "alertasEditoriais": [],
       "ssr": "OK",
       "claims": {
         "COMPROVADA": 0,
@@ -2772,7 +2642,7 @@
         "REMOVIDA": 0,
         "PENDENTE": 0
       },
-      "status": "ALERTA_EDITORIAL"
+      "status": "OK"
     },
     {
       "path": "/blog/fone-de-ouvido-nao-e-reconhecido-no-pc",
@@ -2790,22 +2660,18 @@
         "Organization",
         "WebSite"
       ],
-      "palavras": 898,
-      "fontesPrimarias": false,
-      "limiteSeguranca": false,
+      "palavras": 1141,
+      "fontesPrimarias": true,
+      "limiteSeguranca": true,
       "ligacoes": {
         "ferramenta": false,
         "decisao": false,
         "servico": true,
-        "entidade": false,
-        "problema": false
+        "entidade": true,
+        "problema": true
       },
       "alertasTecnicos": [],
-      "alertasEditoriais": [
-        "sem fonte primária citada",
-        "sem bloco de limite/quando parar",
-        "ligação semântica insuficiente (<2 destinos)"
-      ],
+      "alertasEditoriais": [],
       "ssr": "OK",
       "claims": {
         "COMPROVADA": 0,
@@ -2814,7 +2680,7 @@
         "REMOVIDA": 0,
         "PENDENTE": 0
       },
-      "status": "ALERTA_EDITORIAL"
+      "status": "OK"
     },
     {
       "path": "/blog/hd-nao-e-reconhecido-na-bios-o-que-fazer",
@@ -2832,22 +2698,18 @@
         "Organization",
         "WebSite"
       ],
-      "palavras": 1198,
-      "fontesPrimarias": false,
-      "limiteSeguranca": false,
+      "palavras": 1504,
+      "fontesPrimarias": true,
+      "limiteSeguranca": true,
       "ligacoes": {
-        "ferramenta": false,
-        "decisao": false,
+        "ferramenta": true,
+        "decisao": true,
         "servico": true,
         "entidade": false,
-        "problema": false
+        "problema": true
       },
       "alertasTecnicos": [],
-      "alertasEditoriais": [
-        "sem fonte primária citada",
-        "sem bloco de limite/quando parar",
-        "ligação semântica insuficiente (<2 destinos)"
-      ],
+      "alertasEditoriais": [],
       "ssr": "OK",
       "claims": {
         "COMPROVADA": 0,
@@ -2856,7 +2718,7 @@
         "REMOVIDA": 0,
         "PENDENTE": 0
       },
-      "status": "ALERTA_EDITORIAL"
+      "status": "OK"
     },
     {
       "path": "/blog/impressora-offline-como-resolver",
@@ -2874,24 +2736,20 @@
         "Organization",
         "WebSite"
       ],
-      "palavras": 999,
-      "fontesPrimarias": false,
-      "limiteSeguranca": false,
+      "palavras": 1242,
+      "fontesPrimarias": true,
+      "limiteSeguranca": true,
       "ligacoes": {
         "ferramenta": false,
         "decisao": false,
         "servico": true,
-        "entidade": false,
-        "problema": false
+        "entidade": true,
+        "problema": true
       },
       "alertasTecnicos": [
         "description com 173 caracteres"
       ],
-      "alertasEditoriais": [
-        "sem fonte primária citada",
-        "sem bloco de limite/quando parar",
-        "ligação semântica insuficiente (<2 destinos)"
-      ],
+      "alertasEditoriais": [],
       "ssr": "OK",
       "claims": {
         "COMPROVADA": 0,
@@ -2918,21 +2776,18 @@
         "Organization",
         "WebSite"
       ],
-      "palavras": 3028,
+      "palavras": 3248,
       "fontesPrimarias": true,
-      "limiteSeguranca": false,
+      "limiteSeguranca": true,
       "ligacoes": {
-        "ferramenta": false,
+        "ferramenta": true,
         "decisao": false,
         "servico": true,
-        "entidade": false,
-        "problema": false
+        "entidade": true,
+        "problema": true
       },
       "alertasTecnicos": [],
-      "alertasEditoriais": [
-        "sem bloco de limite/quando parar",
-        "ligação semântica insuficiente (<2 destinos)"
-      ],
+      "alertasEditoriais": [],
       "ssr": "OK",
       "claims": {
         "COMPROVADA": 0,
@@ -2941,7 +2796,7 @@
         "REMOVIDA": 0,
         "PENDENTE": 0
       },
-      "status": "ALERTA_EDITORIAL"
+      "status": "OK"
     },
     {
       "path": "/blog/internet-lenta-provedor-ou-roteador",
@@ -2959,21 +2814,18 @@
         "Organization",
         "WebSite"
       ],
-      "palavras": 1110,
-      "fontesPrimarias": false,
-      "limiteSeguranca": false,
+      "palavras": 1372,
+      "fontesPrimarias": true,
+      "limiteSeguranca": true,
       "ligacoes": {
-        "ferramenta": false,
+        "ferramenta": true,
         "decisao": false,
         "servico": true,
-        "entidade": false,
+        "entidade": true,
         "problema": true
       },
       "alertasTecnicos": [],
-      "alertasEditoriais": [
-        "sem fonte primária citada",
-        "sem bloco de limite/quando parar"
-      ],
+      "alertasEditoriais": [],
       "ssr": "OK",
       "claims": {
         "COMPROVADA": 0,
@@ -2982,7 +2834,7 @@
         "REMOVIDA": 0,
         "PENDENTE": 0
       },
-      "status": "ALERTA_EDITORIAL"
+      "status": "OK"
     },
     {
       "path": "/blog/limpar-arquivos-temporarios-windows",
@@ -3000,22 +2852,18 @@
         "Organization",
         "WebSite"
       ],
-      "palavras": 1211,
-      "fontesPrimarias": false,
-      "limiteSeguranca": false,
+      "palavras": 1467,
+      "fontesPrimarias": true,
+      "limiteSeguranca": true,
       "ligacoes": {
-        "ferramenta": false,
-        "decisao": false,
+        "ferramenta": true,
+        "decisao": true,
         "servico": true,
-        "entidade": false,
-        "problema": false
+        "entidade": true,
+        "problema": true
       },
       "alertasTecnicos": [],
-      "alertasEditoriais": [
-        "sem fonte primária citada",
-        "sem bloco de limite/quando parar",
-        "ligação semântica insuficiente (<2 destinos)"
-      ],
+      "alertasEditoriais": [],
       "ssr": "OK",
       "claims": {
         "COMPROVADA": 0,
@@ -3024,7 +2872,7 @@
         "REMOVIDA": 0,
         "PENDENTE": 0
       },
-      "status": "ALERTA_EDITORIAL"
+      "status": "OK"
     },
     {
       "path": "/blog/limpar-cache-do-windows-update-softwaredistribution",
@@ -3042,22 +2890,18 @@
         "Organization",
         "WebSite"
       ],
-      "palavras": 1098,
-      "fontesPrimarias": false,
-      "limiteSeguranca": false,
+      "palavras": 1380,
+      "fontesPrimarias": true,
+      "limiteSeguranca": true,
       "ligacoes": {
-        "ferramenta": false,
-        "decisao": false,
+        "ferramenta": true,
+        "decisao": true,
         "servico": true,
-        "entidade": false,
-        "problema": false
+        "entidade": true,
+        "problema": true
       },
       "alertasTecnicos": [],
-      "alertasEditoriais": [
-        "sem fonte primária citada",
-        "sem bloco de limite/quando parar",
-        "ligação semântica insuficiente (<2 destinos)"
-      ],
+      "alertasEditoriais": [],
       "ssr": "OK",
       "claims": {
         "COMPROVADA": 0,
@@ -3066,7 +2910,7 @@
         "REMOVIDA": 0,
         "PENDENTE": 0
       },
-      "status": "ALERTA_EDITORIAL"
+      "status": "OK"
     },
     {
       "path": "/blog/memoria-ram-insuficiente-sintomas",
@@ -3084,22 +2928,18 @@
         "Organization",
         "WebSite"
       ],
-      "palavras": 1080,
-      "fontesPrimarias": false,
-      "limiteSeguranca": false,
+      "palavras": 1336,
+      "fontesPrimarias": true,
+      "limiteSeguranca": true,
       "ligacoes": {
-        "ferramenta": false,
-        "decisao": false,
+        "ferramenta": true,
+        "decisao": true,
         "servico": true,
-        "entidade": false,
-        "problema": false
+        "entidade": true,
+        "problema": true
       },
       "alertasTecnicos": [],
-      "alertasEditoriais": [
-        "sem fonte primária citada",
-        "sem bloco de limite/quando parar",
-        "ligação semântica insuficiente (<2 destinos)"
-      ],
+      "alertasEditoriais": [],
       "ssr": "OK",
       "claims": {
         "COMPROVADA": 0,
@@ -3108,7 +2948,7 @@
         "REMOVIDA": 0,
         "PENDENTE": 0
       },
-      "status": "ALERTA_EDITORIAL"
+      "status": "OK"
     },
     {
       "path": "/blog/notebook-nao-liga-o-que-fazer",
@@ -3126,21 +2966,18 @@
         "Organization",
         "WebSite"
       ],
-      "palavras": 1391,
-      "fontesPrimarias": false,
+      "palavras": 1633,
+      "fontesPrimarias": true,
       "limiteSeguranca": true,
       "ligacoes": {
         "ferramenta": false,
-        "decisao": false,
+        "decisao": true,
         "servico": true,
         "entidade": false,
-        "problema": false
+        "problema": true
       },
       "alertasTecnicos": [],
-      "alertasEditoriais": [
-        "sem fonte primária citada",
-        "ligação semântica insuficiente (<2 destinos)"
-      ],
+      "alertasEditoriais": [],
       "ssr": "OK",
       "claims": {
         "COMPROVADA": 0,
@@ -3149,7 +2986,7 @@
         "REMOVIDA": 0,
         "PENDENTE": 0
       },
-      "status": "ALERTA_EDITORIAL"
+      "status": "OK"
     },
     {
       "path": "/blog/notebook-superaquecendo-o-que-fazer",
@@ -3167,20 +3004,18 @@
         "Organization",
         "WebSite"
       ],
-      "palavras": 1478,
-      "fontesPrimarias": false,
+      "palavras": 1720,
+      "fontesPrimarias": true,
       "limiteSeguranca": true,
       "ligacoes": {
         "ferramenta": false,
-        "decisao": false,
+        "decisao": true,
         "servico": true,
         "entidade": false,
         "problema": true
       },
       "alertasTecnicos": [],
-      "alertasEditoriais": [
-        "sem fonte primária citada"
-      ],
+      "alertasEditoriais": [],
       "ssr": "OK",
       "claims": {
         "COMPROVADA": 0,
@@ -3189,7 +3024,7 @@
         "REMOVIDA": 0,
         "PENDENTE": 0
       },
-      "status": "ALERTA_EDITORIAL"
+      "status": "OK"
     },
     {
       "path": "/blog/o-que-e-informatica",
@@ -3207,21 +3042,18 @@
         "Organization",
         "WebSite"
       ],
-      "palavras": 2432,
+      "palavras": 2652,
       "fontesPrimarias": true,
-      "limiteSeguranca": false,
+      "limiteSeguranca": true,
       "ligacoes": {
-        "ferramenta": false,
+        "ferramenta": true,
         "decisao": false,
         "servico": true,
-        "entidade": false,
-        "problema": false
+        "entidade": true,
+        "problema": true
       },
       "alertasTecnicos": [],
-      "alertasEditoriais": [
-        "sem bloco de limite/quando parar",
-        "ligação semântica insuficiente (<2 destinos)"
-      ],
+      "alertasEditoriais": [],
       "ssr": "OK",
       "claims": {
         "COMPROVADA": 0,
@@ -3230,7 +3062,7 @@
         "REMOVIDA": 0,
         "PENDENTE": 0
       },
-      "status": "ALERTA_EDITORIAL"
+      "status": "OK"
     },
     {
       "path": "/blog/ordem-de-boot-na-bios-como-configurar",
@@ -3248,21 +3080,18 @@
         "Organization",
         "WebSite"
       ],
-      "palavras": 813,
-      "fontesPrimarias": false,
+      "palavras": 1119,
+      "fontesPrimarias": true,
       "limiteSeguranca": true,
       "ligacoes": {
-        "ferramenta": false,
-        "decisao": false,
+        "ferramenta": true,
+        "decisao": true,
         "servico": true,
         "entidade": false,
-        "problema": false
+        "problema": true
       },
       "alertasTecnicos": [],
-      "alertasEditoriais": [
-        "sem fonte primária citada",
-        "ligação semântica insuficiente (<2 destinos)"
-      ],
+      "alertasEditoriais": [],
       "ssr": "OK",
       "claims": {
         "COMPROVADA": 0,
@@ -3271,7 +3100,7 @@
         "REMOVIDA": 0,
         "PENDENTE": 0
       },
-      "status": "ALERTA_EDITORIAL"
+      "status": "OK"
     },
     {
       "path": "/blog/organizacao-de-ti-para-pequenos-escritorios",
@@ -3289,22 +3118,18 @@
         "Organization",
         "WebSite"
       ],
-      "palavras": 1738,
-      "fontesPrimarias": false,
-      "limiteSeguranca": false,
+      "palavras": 2021,
+      "fontesPrimarias": true,
+      "limiteSeguranca": true,
       "ligacoes": {
-        "ferramenta": false,
-        "decisao": false,
+        "ferramenta": true,
+        "decisao": true,
         "servico": true,
-        "entidade": false,
+        "entidade": true,
         "problema": false
       },
       "alertasTecnicos": [],
-      "alertasEditoriais": [
-        "sem fonte primária citada",
-        "sem bloco de limite/quando parar",
-        "ligação semântica insuficiente (<2 destinos)"
-      ],
+      "alertasEditoriais": [],
       "ssr": "OK",
       "claims": {
         "COMPROVADA": 0,
@@ -3313,7 +3138,7 @@
         "REMOVIDA": 0,
         "PENDENTE": 0
       },
-      "status": "ALERTA_EDITORIAL"
+      "status": "OK"
     },
     {
       "path": "/blog/permissoes-de-camera-no-windows",
@@ -3331,22 +3156,18 @@
         "Organization",
         "WebSite"
       ],
-      "palavras": 1219,
-      "fontesPrimarias": false,
-      "limiteSeguranca": false,
+      "palavras": 1462,
+      "fontesPrimarias": true,
+      "limiteSeguranca": true,
       "ligacoes": {
         "ferramenta": false,
         "decisao": false,
         "servico": true,
-        "entidade": false,
-        "problema": false
+        "entidade": true,
+        "problema": true
       },
       "alertasTecnicos": [],
-      "alertasEditoriais": [
-        "sem fonte primária citada",
-        "sem bloco de limite/quando parar",
-        "ligação semântica insuficiente (<2 destinos)"
-      ],
+      "alertasEditoriais": [],
       "ssr": "OK",
       "claims": {
         "COMPROVADA": 0,
@@ -3355,7 +3176,7 @@
         "REMOVIDA": 0,
         "PENDENTE": 0
       },
-      "status": "ALERTA_EDITORIAL"
+      "status": "OK"
     },
     {
       "path": "/blog/quando-trocar-hd-por-ssd",
@@ -3373,21 +3194,18 @@
         "Organization",
         "WebSite"
       ],
-      "palavras": 1894,
+      "palavras": 2178,
       "fontesPrimarias": true,
-      "limiteSeguranca": false,
+      "limiteSeguranca": true,
       "ligacoes": {
-        "ferramenta": false,
-        "decisao": false,
+        "ferramenta": true,
+        "decisao": true,
         "servico": true,
         "entidade": false,
-        "problema": false
+        "problema": true
       },
       "alertasTecnicos": [],
-      "alertasEditoriais": [
-        "sem bloco de limite/quando parar",
-        "ligação semântica insuficiente (<2 destinos)"
-      ],
+      "alertasEditoriais": [],
       "ssr": "OK",
       "claims": {
         "COMPROVADA": 0,
@@ -3396,7 +3214,7 @@
         "REMOVIDA": 0,
         "PENDENTE": 0
       },
-      "status": "ALERTA_EDITORIAL"
+      "status": "OK"
     },
     {
       "path": "/blog/quanto-custa-formatar-um-computador",
@@ -3414,22 +3232,18 @@
         "Organization",
         "WebSite"
       ],
-      "palavras": 869,
-      "fontesPrimarias": false,
-      "limiteSeguranca": false,
+      "palavras": 1151,
+      "fontesPrimarias": true,
+      "limiteSeguranca": true,
       "ligacoes": {
-        "ferramenta": false,
-        "decisao": false,
+        "ferramenta": true,
+        "decisao": true,
         "servico": true,
-        "entidade": false,
-        "problema": false
+        "entidade": true,
+        "problema": true
       },
       "alertasTecnicos": [],
-      "alertasEditoriais": [
-        "sem fonte primária citada",
-        "sem bloco de limite/quando parar",
-        "ligação semântica insuficiente (<2 destinos)"
-      ],
+      "alertasEditoriais": [],
       "ssr": "OK",
       "claims": {
         "COMPROVADA": 0,
@@ -3438,7 +3252,7 @@
         "REMOVIDA": 0,
         "PENDENTE": 0
       },
-      "status": "ALERTA_EDITORIAL"
+      "status": "OK"
     },
     {
       "path": "/blog/ransomware-como-proteger-empresa",
@@ -3456,22 +3270,18 @@
         "Organization",
         "WebSite"
       ],
-      "palavras": 1237,
-      "fontesPrimarias": false,
-      "limiteSeguranca": false,
+      "palavras": 1520,
+      "fontesPrimarias": true,
+      "limiteSeguranca": true,
       "ligacoes": {
-        "ferramenta": false,
-        "decisao": false,
+        "ferramenta": true,
+        "decisao": true,
         "servico": true,
-        "entidade": false,
+        "entidade": true,
         "problema": false
       },
       "alertasTecnicos": [],
-      "alertasEditoriais": [
-        "sem fonte primária citada",
-        "sem bloco de limite/quando parar",
-        "ligação semântica insuficiente (<2 destinos)"
-      ],
+      "alertasEditoriais": [],
       "ssr": "OK",
       "claims": {
         "COMPROVADA": 0,
@@ -3480,7 +3290,7 @@
         "REMOVIDA": 0,
         "PENDENTE": 0
       },
-      "status": "ALERTA_EDITORIAL"
+      "status": "OK"
     },
     {
       "path": "/blog/servico-de-audio-do-windows-nao-esta-em-execucao",
@@ -3498,21 +3308,18 @@
         "Organization",
         "WebSite"
       ],
-      "palavras": 884,
-      "fontesPrimarias": false,
+      "palavras": 1127,
+      "fontesPrimarias": true,
       "limiteSeguranca": true,
       "ligacoes": {
         "ferramenta": false,
         "decisao": false,
         "servico": true,
-        "entidade": false,
-        "problema": false
+        "entidade": true,
+        "problema": true
       },
       "alertasTecnicos": [],
-      "alertasEditoriais": [
-        "sem fonte primária citada",
-        "ligação semântica insuficiente (<2 destinos)"
-      ],
+      "alertasEditoriais": [],
       "ssr": "OK",
       "claims": {
         "COMPROVADA": 0,
@@ -3521,7 +3328,7 @@
         "REMOVIDA": 0,
         "PENDENTE": 0
       },
-      "status": "ALERTA_EDITORIAL"
+      "status": "OK"
     },
     {
       "path": "/blog/ssd-nvme-nao-aparece-no-gerenciador-de-discos",
@@ -3539,22 +3346,18 @@
         "Organization",
         "WebSite"
       ],
-      "palavras": 941,
-      "fontesPrimarias": false,
-      "limiteSeguranca": false,
+      "palavras": 1225,
+      "fontesPrimarias": true,
+      "limiteSeguranca": true,
       "ligacoes": {
-        "ferramenta": false,
-        "decisao": false,
+        "ferramenta": true,
+        "decisao": true,
         "servico": true,
         "entidade": false,
-        "problema": false
+        "problema": true
       },
       "alertasTecnicos": [],
-      "alertasEditoriais": [
-        "sem fonte primária citada",
-        "sem bloco de limite/quando parar",
-        "ligação semântica insuficiente (<2 destinos)"
-      ],
+      "alertasEditoriais": [],
       "ssr": "OK",
       "claims": {
         "COMPROVADA": 0,
@@ -3563,7 +3366,7 @@
         "REMOVIDA": 0,
         "PENDENTE": 0
       },
-      "status": "ALERTA_EDITORIAL"
+      "status": "OK"
     },
     {
       "path": "/blog/testar-memoria-ram-memtest86",
@@ -3581,22 +3384,18 @@
         "Organization",
         "WebSite"
       ],
-      "palavras": 979,
-      "fontesPrimarias": false,
-      "limiteSeguranca": false,
+      "palavras": 1284,
+      "fontesPrimarias": true,
+      "limiteSeguranca": true,
       "ligacoes": {
         "ferramenta": false,
-        "decisao": false,
+        "decisao": true,
         "servico": true,
-        "entidade": false,
-        "problema": false
+        "entidade": true,
+        "problema": true
       },
       "alertasTecnicos": [],
-      "alertasEditoriais": [
-        "sem fonte primária citada",
-        "sem bloco de limite/quando parar",
-        "ligação semântica insuficiente (<2 destinos)"
-      ],
+      "alertasEditoriais": [],
       "ssr": "OK",
       "claims": {
         "COMPROVADA": 0,
@@ -3605,7 +3404,7 @@
         "REMOVIDA": 0,
         "PENDENTE": 0
       },
-      "status": "ALERTA_EDITORIAL"
+      "status": "OK"
     },
     {
       "path": "/blog/troquei-o-ssd-e-o-pc-so-abre-a-bios",
@@ -3623,22 +3422,18 @@
         "Organization",
         "WebSite"
       ],
-      "palavras": 1506,
-      "fontesPrimarias": false,
-      "limiteSeguranca": false,
+      "palavras": 1812,
+      "fontesPrimarias": true,
+      "limiteSeguranca": true,
       "ligacoes": {
-        "ferramenta": false,
-        "decisao": false,
+        "ferramenta": true,
+        "decisao": true,
         "servico": true,
         "entidade": false,
-        "problema": false
+        "problema": true
       },
       "alertasTecnicos": [],
-      "alertasEditoriais": [
-        "sem fonte primária citada",
-        "sem bloco de limite/quando parar",
-        "ligação semântica insuficiente (<2 destinos)"
-      ],
+      "alertasEditoriais": [],
       "ssr": "OK",
       "claims": {
         "COMPROVADA": 0,
@@ -3647,7 +3442,7 @@
         "REMOVIDA": 0,
         "PENDENTE": 0
       },
-      "status": "ALERTA_EDITORIAL"
+      "status": "OK"
     },
     {
       "path": "/blog/webcam-nao-funciona-o-que-verificar",
@@ -3665,21 +3460,18 @@
         "Organization",
         "WebSite"
       ],
-      "palavras": 1453,
-      "fontesPrimarias": false,
+      "palavras": 1696,
+      "fontesPrimarias": true,
       "limiteSeguranca": true,
       "ligacoes": {
         "ferramenta": false,
         "decisao": false,
         "servico": true,
-        "entidade": false,
-        "problema": false
+        "entidade": true,
+        "problema": true
       },
       "alertasTecnicos": [],
-      "alertasEditoriais": [
-        "sem fonte primária citada",
-        "ligação semântica insuficiente (<2 destinos)"
-      ],
+      "alertasEditoriais": [],
       "ssr": "OK",
       "claims": {
         "COMPROVADA": 0,
@@ -3688,7 +3480,7 @@
         "REMOVIDA": 0,
         "PENDENTE": 0
       },
-      "status": "ALERTA_EDITORIAL"
+      "status": "OK"
     },
     {
       "path": "/blog/webcam-usb-nao-e-detectada",
@@ -3706,22 +3498,18 @@
         "Organization",
         "WebSite"
       ],
-      "palavras": 1030,
-      "fontesPrimarias": false,
-      "limiteSeguranca": false,
+      "palavras": 1273,
+      "fontesPrimarias": true,
+      "limiteSeguranca": true,
       "ligacoes": {
         "ferramenta": false,
         "decisao": false,
         "servico": true,
-        "entidade": false,
-        "problema": false
+        "entidade": true,
+        "problema": true
       },
       "alertasTecnicos": [],
-      "alertasEditoriais": [
-        "sem fonte primária citada",
-        "sem bloco de limite/quando parar",
-        "ligação semântica insuficiente (<2 destinos)"
-      ],
+      "alertasEditoriais": [],
       "ssr": "OK",
       "claims": {
         "COMPROVADA": 0,
@@ -3730,7 +3518,7 @@
         "REMOVIDA": 0,
         "PENDENTE": 0
       },
-      "status": "ALERTA_EDITORIAL"
+      "status": "OK"
     },
     {
       "path": "/blog/windows-11-lento-como-resolver",
@@ -3748,22 +3536,18 @@
         "Organization",
         "WebSite"
       ],
-      "palavras": 1363,
-      "fontesPrimarias": false,
-      "limiteSeguranca": false,
+      "palavras": 1619,
+      "fontesPrimarias": true,
+      "limiteSeguranca": true,
       "ligacoes": {
-        "ferramenta": false,
-        "decisao": false,
+        "ferramenta": true,
+        "decisao": true,
         "servico": true,
-        "entidade": false,
-        "problema": false
+        "entidade": true,
+        "problema": true
       },
       "alertasTecnicos": [],
-      "alertasEditoriais": [
-        "sem fonte primária citada",
-        "sem bloco de limite/quando parar",
-        "ligação semântica insuficiente (<2 destinos)"
-      ],
+      "alertasEditoriais": [],
       "ssr": "OK",
       "claims": {
         "COMPROVADA": 0,
@@ -3772,7 +3556,7 @@
         "REMOVIDA": 0,
         "PENDENTE": 0
       },
-      "status": "ALERTA_EDITORIAL"
+      "status": "OK"
     },
     {
       "path": "/blog/windows-reparo-automatico-em-loop",
@@ -3790,20 +3574,18 @@
         "Organization",
         "WebSite"
       ],
-      "palavras": 838,
-      "fontesPrimarias": false,
+      "palavras": 1144,
+      "fontesPrimarias": true,
       "limiteSeguranca": true,
       "ligacoes": {
-        "ferramenta": false,
-        "decisao": false,
+        "ferramenta": true,
+        "decisao": true,
         "servico": true,
         "entidade": false,
         "problema": true
       },
       "alertasTecnicos": [],
-      "alertasEditoriais": [
-        "sem fonte primária citada"
-      ],
+      "alertasEditoriais": [],
       "ssr": "OK",
       "claims": {
         "COMPROVADA": 0,
@@ -3812,7 +3594,7 @@
         "REMOVIDA": 0,
         "PENDENTE": 0
       },
-      "status": "ALERTA_EDITORIAL"
+      "status": "OK"
     },
     {
       "path": "/blog/windows-update-nao-funciona-o-que-verificar",
@@ -3830,21 +3612,18 @@
         "Organization",
         "WebSite"
       ],
-      "palavras": 1516,
-      "fontesPrimarias": false,
+      "palavras": 1798,
+      "fontesPrimarias": true,
       "limiteSeguranca": true,
       "ligacoes": {
-        "ferramenta": false,
-        "decisao": false,
+        "ferramenta": true,
+        "decisao": true,
         "servico": true,
-        "entidade": false,
-        "problema": false
+        "entidade": true,
+        "problema": true
       },
       "alertasTecnicos": [],
-      "alertasEditoriais": [
-        "sem fonte primária citada",
-        "ligação semântica insuficiente (<2 destinos)"
-      ],
+      "alertasEditoriais": [],
       "ssr": "OK",
       "claims": {
         "COMPROVADA": 0,
@@ -3853,7 +3632,7 @@
         "REMOVIDA": 0,
         "PENDENTE": 0
       },
-      "status": "ALERTA_EDITORIAL"
+      "status": "OK"
     },
     {
       "path": "/blog/windows-update-travado-desfazendo-alteracoes",
@@ -3871,23 +3650,20 @@
         "Organization",
         "WebSite"
       ],
-      "palavras": 1259,
-      "fontesPrimarias": false,
+      "palavras": 1541,
+      "fontesPrimarias": true,
       "limiteSeguranca": true,
       "ligacoes": {
-        "ferramenta": false,
-        "decisao": false,
+        "ferramenta": true,
+        "decisao": true,
         "servico": true,
-        "entidade": false,
-        "problema": false
+        "entidade": true,
+        "problema": true
       },
       "alertasTecnicos": [
         "title com 78 caracteres"
       ],
-      "alertasEditoriais": [
-        "sem fonte primária citada",
-        "ligação semântica insuficiente (<2 destinos)"
-      ],
+      "alertasEditoriais": [],
       "ssr": "OK",
       "claims": {
         "COMPROVADA": 0,
@@ -7104,10 +6880,12 @@
       "description": "Backup e recuperação de dados em Curitiba com coleta do equipamento, registro do que foi recebido e devolução combinada. Fale pelo WhatsApp.",
       "canonical": "https://otecnicodeinformatica.com.br/servicos/backup-recuperacao/curitiba",
       "jsonLd": [
+        "BreadcrumbList",
         "FAQPage",
         "LocalBusiness",
         "Organization",
         "Service",
+        "WebPage",
         "WebSite"
       ],
       "palavras": 1640,
@@ -7140,10 +6918,12 @@
       "description": "Backup e recuperação de dados em São José dos Pinhais: coleta cuidadosa da mídia, avaliação em bancada e prazo informado antes de qualquer tentativa.",
       "canonical": "https://otecnicodeinformatica.com.br/servicos/backup-recuperacao/sao-jose-dos-pinhais",
       "jsonLd": [
+        "BreadcrumbList",
         "FAQPage",
         "LocalBusiness",
         "Organization",
         "Service",
+        "WebPage",
         "WebSite"
       ],
       "palavras": 1742,
