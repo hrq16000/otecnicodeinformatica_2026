@@ -314,7 +314,7 @@ export default function AssistenciaTecnicaCuritiba() {
       />
       <LocalBusinessJsonLd
         path="/assistencia-tecnica-curitiba"
-        name="Preciso de um Técnico — Assistência Técnica Especializada"
+        name="O Técnico de Informática — Assistência Técnica Especializada"
         description="Assistência técnica especializada em Curitiba: consoles, placas de vídeo, computadores, notebooks e smartphones."
       />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
@@ -485,7 +485,7 @@ export default function AssistenciaTecnicaCuritiba() {
                 Resolvemos os Principais Defeitos do Seu Aparelho
               </h2>
               <p className="mt-3 text-muted-foreground">
-                Mais de 5 anos de experiência com os principais consoles e placas do mercado em Curitiba.
+                Diagnóstico e reparo de consoles e placas com bancada própria, orçamento informado antes da execução e garantia conforme o serviço executado.
               </p>
             </div>
 

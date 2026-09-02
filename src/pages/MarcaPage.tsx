@@ -243,7 +243,7 @@ const MarcaPage = () => {
                   Precisa de Assistência {brand.name}?
                 </h2>
                 <p className="text-white/85 mb-8 text-lg">
-                  Técnico especializado com mais de 20 anos de experiência. Atendimento a domicílio em Curitiba e região.
+                  Técnico especializado no diagnóstico e reparo dessa marca. Atendimento a domicílio em Curitiba e região, conforme disponibilidade.
                 </p>
                 <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
                   <Button className="gap-2 bg-[hsl(var(--whatsapp))] hover:bg-[hsl(var(--whatsapp-hover))] text-white rounded-full px-10 py-6 text-lg shadow-lg">

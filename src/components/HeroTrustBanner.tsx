@@ -33,14 +33,14 @@ const TRUST_SLIDES: Slide[] = [
   {
     kind: "trust",
     icon: ShieldCheck,
-    title: "Garantia em todos os serviços",
-    desc: "Todo reparo acompanha garantia. Confiança em cada etapa do atendimento.",
+    title: "Garantia conforme o serviço executado",
+    desc: "A garantia é registrada por escrito, com prazo e escopo do que foi reparado.",
   },
   {
     kind: "trust",
     icon: Clock,
     title: "Atendimento conforme a agenda",
-    desc: "Resposta em até 5 minutos pelo WhatsApp, sem compromisso.",
+    desc: "Resposta pelo WhatsApp em horário comercial, sem compromisso.",
   },
   {
     kind: "trust",

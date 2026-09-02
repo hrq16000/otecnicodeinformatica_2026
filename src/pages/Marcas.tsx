@@ -111,7 +111,7 @@ const Marcas = () => {
                 </h1>
 
                 <p className="text-white/55 text-lg max-w-2xl mx-auto mb-8 leading-relaxed">
-                  Mais de 20 anos de experiência com as principais marcas do mercado. Cada marca tem suas particularidades — e nós conhecemos todas.
+                  Cada fabricante tem suas particularidades de peça, parafusaria e desmontagem. O diagnóstico considera o modelo específico antes de qualquer orçamento.
                 </p>
 
                 <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">

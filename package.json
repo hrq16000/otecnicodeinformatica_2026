@@ -160,6 +160,7 @@
     "check:jsonld-p0": "node scripts/check-jsonld-p0.mjs",
     "check:eeat": "node scripts/check-eeat-coverage.mjs",
     "check:trust-claims": "node scripts/check-trust-claims.mjs",
+    "audit:trust-claims": "node scripts/audit-trust-claims.mjs --markdown docs/auditoria-trust-claims.md --require",
     "check:forbidden-copy": "node scripts/check-forbidden-copy.mjs",
     "check:wa-number-dom": "node scripts/check-wa-number-dom.mjs dist",
     "check:copy": "npm run check:forbidden-copy && npm run check:trust-claims",

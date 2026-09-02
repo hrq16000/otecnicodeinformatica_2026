@@ -48,7 +48,7 @@ const data: ServicoBairroData = {
     },
     { 
       pergunta: "Vocês atendem empresas com múltiplos computadores em SJP?", 
-      resposta: "Sim! Atendemos empresas de todos os portes. Para múltiplos computadores, oferecemos desconto progressivo e contratos de manutenção preventiva." 
+      resposta: "Sim. Atendemos empresas com mais de um computador. Para vários equipamentos, o valor é fechado sob consulta depois de avaliar quantas estações estão comprometidas; a manutenção preventiva recorrente também é combinada caso a caso." 
     },
     { 
       pergunta: "É possível recuperar arquivos após vírus ransomware?", 

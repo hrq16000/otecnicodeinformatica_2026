@@ -384,7 +384,7 @@ const SejaParceiro = () => {
                   Junte-se à Nossa Rede
                 </h2>
                 <p className="text-white/85 mb-8 text-lg">
-                  Mais de 20 anos de experiência compartilhada. Cresça com quem entende do mercado.
+                  Rede de profissionais técnicos independentes. Perfil público no portal, sem promessa de volume de clientes.
                 </p>
                 <a href="#formulario">
                   <Button className="gap-2 bg-accent text-accent-foreground rounded-full px-10 py-6 text-lg shadow-lg motion-surface hover:shadow-lg">

@@ -1,0 +1,102 @@
+{
+  "$schema": "interno",
+  "descricao": "Classificação curada das afirmações de confiança (E-E-A-T) detectadas por scripts/audit-trust-claims.mjs. A primeira entrada cujo `familia` e prefixo de `arquivos` casam com a ocorrência é a que vale — por isso escopos específicos vêm antes dos gerais.",
+  "classificacoes": {
+    "COMPROVADA": "Há evidência clara e verificável (fonte oficial do projeto ou documento auditável).",
+    "INSTITUCIONAL": "Afirmação genérica sobre postura do negócio, sem promessa específica mensurável.",
+    "CONDICIONAL": "Válida apenas sob condição, que precisa estar explícita no próprio texto.",
+    "REMOVIDA": "Retirada do conteúdo até existir evidência."
+  },
+  "entradas": [
+    {
+      "id": "garantia-politica-central",
+      "familia": "garantia",
+      "classificacao": "COMPROVADA",
+      "criterio": "Prazo e escopo vêm da fonte comercial única",
+      "evidencia": "src/lib/config/commercial.ts + src/lib/politicaComercial.ts (90 dias de mão de obra no ponto reparado; peças conforme fabricante)",
+      "acao": "Manter sempre escopado: nunca 'garantia em todos os serviços' sem qualificar o que é coberto.",
+      "arquivos": ["src/"]
+    },
+    {
+      "id": "prazo-deslocamento-estimado",
+      "familia": "prazo-prometido",
+      "classificacao": "CONDICIONAL",
+      "criterio": "Tempos de deslocamento e janelas de atendimento são estimativas dependentes de agenda, trânsito e disponibilidade de peça",
+      "evidencia": "Não existe SLA contratado; o texto precisa manter o qualificador ('conforme disponibilidade', 'estimado', 'quando há peça em estoque')",
+      "acao": "Proibido prazo absoluto sem condicionante. 'Atendimento imediato' e 'resposta em até 5 minutos' foram removidos nesta rodada.",
+      "arquivos": ["src/"]
+    },
+    {
+      "id": "identificacao-tecnico",
+      "familia": "identificacao-tecnico",
+      "classificacao": "INSTITUCIONAL",
+      "criterio": "Compromisso operacional do negócio, não métrica",
+      "evidencia": "Responsabilidade técnica declarada em src/lib/gestorResponsavel.ts",
+      "acao": "Manter. Não evoluir para 'técnico certificado' sem certificação documentada.",
+      "arquivos": ["src/"]
+    },
+    {
+      "id": "cobertura-marcas",
+      "familia": "todos-os-portes",
+      "classificacao": "CONDICIONAL",
+      "criterio": "Atendimento a qualquer marca vale para diagnóstico e serviços de software/hardware comum; depende de disponibilidade de peça e de o modelo permitir reparo",
+      "evidencia": "Política de recusa documentada (ex.: painel de monitor/TV) em src/lib/politicaComercial.ts",
+      "acao": "Manter a ressalva de peça/viabilidade no mesmo bloco. 'Empresas de todos os portes' foi retirado.",
+      "arquivos": ["src/"]
+    },
+    {
+      "id": "experiencia-cftv-1998",
+      "familia": "experiencia-tempo",
+      "classificacao": "CONDICIONAL",
+      "criterio": "Data de início da atuação técnica vem da configuração única do site, não de certificação externa",
+      "evidencia": "src/lib/siteConfig.ts (foundingDate 1998)",
+      "acao": "Só usar a data da fonte única. 'Mais de 20 anos de experiência' foi removido do copy de home por ser reivindicação solta.",
+      "arquivos": ["src/"]
+    },
+    {
+      "id": "aggregate-rating-gate",
+      "familia": "depoimento",
+      "classificacao": "CONDICIONAL",
+      "criterio": "Schema de avaliação só é emitido quando existem avaliações reais acima do mínimo",
+      "evidencia": "src/lib/schemaValidation.ts (MIN_REVIEWS_FOR_AGGREGATE) e src/hooks/useAggregateRating.ts — fail-closed sem dados",
+      "acao": "Nunca declarar ratingValue estático. Depoimentos fabricados nas páginas de CFTV foram removidos.",
+      "arquivos": ["src/"]
+    },
+    {
+      "id": "estatistica-tecnica-referenciada",
+      "familia": "estatistica",
+      "classificacao": "CONDICIONAL",
+      "criterio": "Percentuais só permanecem quando descrevem faixa técnica de mercado ou custo, nunca desempenho próprio",
+      "evidencia": "Percentuais de atendimento próprio ('80% dos casos que atendemos', '90% dos chamados') foram removidos nesta rodada",
+      "acao": "Percentual novo exige fonte primária citada no mesmo bloco.",
+      "arquivos": ["src/"]
+    },
+    {
+      "id": "manutencao-preventiva-sob-consulta",
+      "familia": "contrato-recorrente",
+      "classificacao": "CONDICIONAL",
+      "criterio": "Manutenção preventiva existe como serviço avaliado caso a caso, não como plano padronizado",
+      "evidencia": "Não há tabela de mensalidade publicada; escopo e valor são informados após avaliação",
+      "acao": "Nunca prometer mensalidade, fidelidade ou desconto progressivo.",
+      "arquivos": ["src/"]
+    },
+    {
+      "id": "superlativo-contexto-tecnico",
+      "familia": "superlativo-mercado",
+      "classificacao": "INSTITUCIONAL",
+      "criterio": "Superlativos remanescentes descrevem terceiros ou conceitos técnicos, não o portal",
+      "evidencia": "Ocorrências em conteúdo educativo sobre fabricantes/distribuições",
+      "acao": "Proibido superlativo do portal sobre si mesmo ('melhor de Curitiba', 'nº 1').",
+      "arquivos": ["src/"]
+    },
+    {
+      "id": "volume-atendimentos",
+      "familia": "volume-atendimentos",
+      "classificacao": "REMOVIDA",
+      "criterio": "Volume de clientes/atendimentos não tem registro auditável publicável",
+      "evidencia": "Sem base: 'atendemos centenas de casos por mês', 'atendemos várias empresas' e 'centenas de imóveis' foram retirados",
+      "acao": "Só reintroduzir com relatório operacional verificável e período declarado.",
+      "arquivos": ["src/"]
+    }
+  ]
+}

@@ -48,7 +48,7 @@ const data: ServicoBairroData = {
     },
     { 
       pergunta: "Atendem empresas no distrito industrial?", 
-      resposta: "Sim! Atendemos empresas de todos os portes no distrito industrial de Araucária com contratos de manutenção mensal." 
+      resposta: "Sim. Atendemos escritórios, comércios e empresas do distrito industrial de Araucária. A manutenção pode ser pontual ou recorrente, com escopo e valor definidos sob consulta, depois de avaliar quantas estações precisam de suporte." 
     },
     { 
       pergunta: "Qual o prazo de atendimento em Araucária?", 

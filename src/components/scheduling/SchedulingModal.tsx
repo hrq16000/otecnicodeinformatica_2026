@@ -99,7 +99,7 @@ export const SchedulingModal = ({ isOpen, onClose, initialService }: SchedulingM
     const regionLabel = regions.find((r) => r.value === formData.region)?.label || formData.region;
     const dateFormatted = formData.date ? format(formData.date, "dd/MM/yyyy", { locale: ptBR }) : "";
 
-    const message = `🗓️ *AGENDAMENTO ONLINE - TÉCNICO CURITIBA*
+    const message = `🗓️ *AGENDAMENTO ONLINE - O TÉCNICO DE INFORMÁTICA*
 
 👤 *Nome:* ${formData.name}
 📱 *Telefone:* ${formData.phone}
