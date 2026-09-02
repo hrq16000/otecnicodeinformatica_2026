@@ -28,13 +28,14 @@ export const ATLAS_PONTES_ARTIGOS: Record<string, AtlasPonteArtigo> = {
     proximoPasso: {
       rotulo: "SSD ou memória RAM: por onde começar",
       to: "/decisoes/ssd-ou-memoria-ram",
-      contexto: "Guia de decisão independente, com o critério para cada cenário de uso.",
+      contexto:
+        "Guia de decisão independente, com o critério para cada cenário de uso.",
     },
   },
   "notebook-nao-liga-o-que-fazer": {
     temaId: "windows-inicializacao",
     porQue:
-      "\"Não liga\" descreve estados muito diferentes: sem reação nenhuma, liga e apaga, liga sem imagem. A trilha de Windows e inicialização mostra como identificar o estágio exato em que a partida para — o dado que muda o diagnóstico inteiro.",
+      '"Não liga" descreve estados muito diferentes: sem reação nenhuma, liga e apaga, liga sem imagem. A trilha de Windows e inicialização mostra como identificar o estágio exato em que a partida para — o dado que muda o diagnóstico inteiro.',
     proximoPasso: {
       rotulo: "Roteiro de falha de inicialização",
       to: "/ferramentas/roteiro-falha-de-inicializacao",
@@ -48,7 +49,8 @@ export const ATLAS_PONTES_ARTIGOS: Record<string, AtlasPonteArtigo> = {
     proximoPasso: {
       rotulo: "Tela azul: entrada pelo sintoma",
       to: "/problemas/tela-azul",
-      contexto: "Verificações seguras e o ponto em que insistir agrava o quadro.",
+      contexto:
+        "Verificações seguras e o ponto em que insistir agrava o quadro.",
     },
   },
   "como-recuperar-dados-hd-com-defeito": {
@@ -68,7 +70,8 @@ export const ATLAS_PONTES_ARTIGOS: Record<string, AtlasPonteArtigo> = {
     proximoPasso: {
       rotulo: "Backup antes da manutenção",
       to: "/decisoes/backup-antes-da-manutencao",
-      contexto: "O que copiar antes de entregar o equipamento para qualquer serviço.",
+      contexto:
+        "O que copiar antes de entregar o equipamento para qualquer serviço.",
     },
   },
   "como-melhorar-sinal-wifi-em-casa": {
@@ -78,7 +81,8 @@ export const ATLAS_PONTES_ARTIGOS: Record<string, AtlasPonteArtigo> = {
     proximoPasso: {
       rotulo: "Roteiro de Wi-Fi instável",
       to: "/ferramentas/roteiro-wifi-instavel",
-      contexto: "Sequência de testes que isola a camada responsável pela queda.",
+      contexto:
+        "Sequência de testes que isola a camada responsável pela queda.",
     },
   },
   "como-saber-se-pc-tem-virus-malware": {
@@ -98,7 +102,8 @@ export const ATLAS_PONTES_ARTIGOS: Record<string, AtlasPonteArtigo> = {
     proximoPasso: {
       rotulo: "Computador esquentando",
       to: "/problemas/computador-esquentando",
-      contexto: "Verificações seguras e o limite a partir do qual desligar é o correto.",
+      contexto:
+        "Verificações seguras e o limite a partir do qual desligar é o correto.",
     },
   },
   "organizacao-de-ti-para-pequenos-escritorios": {
@@ -108,7 +113,8 @@ export const ATLAS_PONTES_ARTIGOS: Record<string, AtlasPonteArtigo> = {
     proximoPasso: {
       rotulo: "Empresa de TI em Curitiba",
       to: "/empresa-de-ti-curitiba",
-      contexto: "Escopo, modalidades e o que fica definido antes de qualquer execução.",
+      contexto:
+        "Escopo, modalidades e o que fica definido antes de qualquer execução.",
     },
   },
   "quando-trocar-hd-por-ssd": {
@@ -118,7 +124,8 @@ export const ATLAS_PONTES_ARTIGOS: Record<string, AtlasPonteArtigo> = {
     proximoPasso: {
       rotulo: "Consertar ou substituir",
       to: "/decisoes/consertar-ou-substituir",
-      contexto: "Critério de decisão por idade, uso e custo real do equipamento.",
+      contexto:
+        "Critério de decisão por idade, uso e custo real do equipamento.",
     },
   },
 };
@@ -129,10 +136,16 @@ export interface AtlasPonteArtigoResolvida extends AtlasPonteArtigo {
 }
 
 /** Resolve a ponte de um artigo. Sem ponte declarada, retorna null (fail-closed). */
-export function atlasPonteDoArtigo(slug: string): AtlasPonteArtigoResolvida | null {
+export function atlasPonteDoArtigo(
+  slug: string,
+): AtlasPonteArtigoResolvida | null {
   const ponte = ATLAS_PONTES_ARTIGOS[slug];
   if (!ponte) return null;
   const tema = ATLAS_TEMAS.find((t) => t.id === ponte.temaId);
   if (!tema) return null;
-  return { ...ponte, tema, hubHref: `/guia-tecnico-informatica#tema-${tema.id}` };
+  return {
+    ...ponte,
+    tema,
+    hubHref: `/guia-tecnico-informatica#tema-${tema.id}`,
+  };
 }

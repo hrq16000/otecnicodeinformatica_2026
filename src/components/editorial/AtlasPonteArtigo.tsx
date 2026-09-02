@@ -32,7 +32,9 @@ export const AtlasPonteArtigo = ({ slug }: { slug: string }) => {
           to={ponte.hubHref}
           className="rounded-xl border border-border bg-background p-4 transition-colors hover:border-accent"
         >
-          <span className="text-[0.65rem] font-bold uppercase tracking-wide text-accent">Tema</span>
+          <span className="text-[0.65rem] font-bold uppercase tracking-wide text-accent">
+            Tema
+          </span>
           <span className="mt-1 block font-heading text-sm font-bold text-foreground">
             {ponte.tema.titulo}
           </span>

@@ -52,7 +52,7 @@ export const ATLAS_APROFUNDAMENTO: AtlasAprofundamento[] = [
     chamada:
       "Quase todo chamado começa com uma pergunta de fundamento mal respondida: onde o problema mora — no equipamento, no sistema ou no ambiente.",
     contexto: [
-      "Um computador é uma pilha de camadas que dependem umas das outras: alimentação elétrica, hardware, firmware, sistema operacional, programas e rede. Quando algo falha, o sintoma aparece na camada de cima — a tela — mesmo que a causa esteja três níveis abaixo. É por isso que a mesma queixa (\"está travando\") pode terminar em limpeza de inicialização ou em troca de fonte.",
+      'Um computador é uma pilha de camadas que dependem umas das outras: alimentação elétrica, hardware, firmware, sistema operacional, programas e rede. Quando algo falha, o sintoma aparece na camada de cima — a tela — mesmo que a causa esteja três níveis abaixo. É por isso que a mesma queixa ("está travando") pode terminar em limpeza de inicialização ou em troca de fonte.',
       "Dominar o fundamento não transforma ninguém em técnico; muda a qualidade da informação. Quem sabe descrever em que camada o comportamento aparece encurta o diagnóstico, evita procedimento desnecessário e consegue avaliar se a proposta que recebeu faz sentido.",
     ],
     sinais: [
@@ -69,7 +69,7 @@ export const ATLAS_APROFUNDAMENTO: AtlasAprofundamento[] = [
       "Verifique se a falha é do equipamento ou do ambiente testando outro aparelho na mesma rede ou na mesma tomada.",
     ],
     naoFazer: [
-      "Instalar otimizadores ou \"limpadores\" baixados por anúncio: eles adicionam variáveis em vez de remover.",
+      'Instalar otimizadores ou "limpadores" baixados por anúncio: eles adicionam variáveis em vez de remover.',
       "Manter dois antivírus ativos ao mesmo tempo — um passa a enxergar o outro como ameaça.",
       "Aplicar tutorial de linha de comando sem entender o que cada instrução faz no seu caso.",
       "Trocar peça por suposição antes de ter identificado a camada em que a falha aparece.",
@@ -100,12 +100,14 @@ export const ATLAS_APROFUNDAMENTO: AtlasAprofundamento[] = [
       {
         rotulo: "Entrar pelo sintoma",
         to: "/problemas",
-        contexto: "Descrição em linguagem comum, sem precisar do nome técnico da falha.",
+        contexto:
+          "Descrição em linguagem comum, sem precisar do nome técnico da falha.",
       },
       {
         rotulo: "Glossário técnico",
         to: "/glossario",
-        contexto: "Os termos que aparecem em orçamento e em mensagem de erro, explicados.",
+        contexto:
+          "Os termos que aparecem em orçamento e em mensagem de erro, explicados.",
       },
       {
         rotulo: "Como funciona o atendimento",
@@ -115,17 +117,20 @@ export const ATLAS_APROFUNDAMENTO: AtlasAprofundamento[] = [
       {
         rotulo: "O que é informática, na prática",
         to: "/blog/o-que-e-informatica",
-        contexto: "Guia introdutório que sustenta o vocabulário usado em todo o Atlas.",
+        contexto:
+          "Guia introdutório que sustenta o vocabulário usado em todo o Atlas.",
       },
       {
         rotulo: "Computador lento: o sintoma mais comum",
         to: "/problemas/computador-lento",
-        contexto: "Ponto de entrada típico de quem ainda não sabe em que camada a falha está.",
+        contexto:
+          "Ponto de entrada típico de quem ainda não sabe em que camada a falha está.",
       },
       {
         rotulo: "Manutenção de computador",
         to: "/servicos/manutencao-de-computador",
-        contexto: "Serviço canônico quando a investigação exige bancada e ferramenta.",
+        contexto:
+          "Serviço canônico quando a investigação exige bancada e ferramenta.",
       },
     ],
   },
@@ -181,7 +186,8 @@ export const ATLAS_APROFUNDAMENTO: AtlasAprofundamento[] = [
       {
         rotulo: "Windows não inicia",
         to: "/problemas/windows-nao-inicia",
-        contexto: "O pilar do tema, com a leitura estágio a estágio da partida.",
+        contexto:
+          "O pilar do tema, com a leitura estágio a estágio da partida.",
       },
       {
         rotulo: "Roteiro de falha de inicialização",
@@ -191,7 +197,8 @@ export const ATLAS_APROFUNDAMENTO: AtlasAprofundamento[] = [
       {
         rotulo: "Formatar ou reparar",
         to: "/decisoes/formatar-ou-reparar",
-        contexto: "O critério que separa o caso de software do caso de hardware.",
+        contexto:
+          "O critério que separa o caso de software do caso de hardware.",
       },
       {
         rotulo: "UEFI no glossário",
@@ -206,7 +213,8 @@ export const ATLAS_APROFUNDAMENTO: AtlasAprofundamento[] = [
       {
         rotulo: "Formatação com preservação de dados",
         to: "/servicos/formatacao",
-        contexto: "Quando a reinstalação é mesmo o caminho, com cópia conferida antes.",
+        contexto:
+          "Quando a reinstalação é mesmo o caminho, com cópia conferida antes.",
       },
     ],
   },
@@ -262,17 +270,20 @@ export const ATLAS_APROFUNDAMENTO: AtlasAprofundamento[] = [
       {
         rotulo: "Computador lento",
         to: "/problemas/computador-lento",
-        contexto: "Como separar disco, memória e temperatura pelo padrão do sintoma.",
+        contexto:
+          "Como separar disco, memória e temperatura pelo padrão do sintoma.",
       },
       {
         rotulo: "SSD ou mais memória",
         to: "/decisoes/ssd-ou-memoria-ram",
-        contexto: "O critério que decide qual upgrade entrega ganho no seu caso.",
+        contexto:
+          "O critério que decide qual upgrade entrega ganho no seu caso.",
       },
       {
         rotulo: "Trocar o componente ou reparar",
         to: "/decisoes/trocar-componente-ou-reparar",
-        contexto: "Quando insistir no reparo passa a custar mais que substituir a peça.",
+        contexto:
+          "Quando insistir no reparo passa a custar mais que substituir a peça.",
       },
       {
         rotulo: "Upgrade de SSD e memória",
@@ -282,7 +293,8 @@ export const ATLAS_APROFUNDAMENTO: AtlasAprofundamento[] = [
       {
         rotulo: "Como fazer upgrade para SSD NVMe",
         to: "/blog/como-fazer-upgrade-ssd-nvme",
-        contexto: "Compatibilidade, clonagem e o que muda de verdade no uso diário.",
+        contexto:
+          "Compatibilidade, clonagem e o que muda de verdade no uso diário.",
       },
       {
         rotulo: "Upgrade de SSD e memória em Curitiba",
@@ -296,7 +308,7 @@ export const ATLAS_APROFUNDAMENTO: AtlasAprofundamento[] = [
     chamada:
       "Rede é o único tema do Atlas em que o problema quase nunca está dentro do computador — está entre ele e o resto do mundo.",
     contexto: [
-      "Uma conexão doméstica tem pelo menos quatro trechos: o enlace do provedor, o roteador, o meio (cabo ou Wi-Fi) e o dispositivo. Wi-Fi é rádio: paredes, espelhos, caixas metálicas, distância e concorrência de canal degradam o sinal sem que nada tenha \"quebrado\". Por isso a mesma casa pode ter internet excelente na sala e inutilizável no quarto dos fundos.",
+      'Uma conexão doméstica tem pelo menos quatro trechos: o enlace do provedor, o roteador, o meio (cabo ou Wi-Fi) e o dispositivo. Wi-Fi é rádio: paredes, espelhos, caixas metálicas, distância e concorrência de canal degradam o sinal sem que nada tenha "quebrado". Por isso a mesma casa pode ter internet excelente na sala e inutilizável no quarto dos fundos.',
       "Trocar de plano é a reação mais comum e a que menos resolve, porque o gargalo raramente está na velocidade contratada — está na propagação e na quantidade de dispositivos disputando o mesmo rádio.",
     ],
     sinais: [
@@ -314,7 +326,7 @@ export const ATLAS_APROFUNDAMENTO: AtlasAprofundamento[] = [
       "Reinicie o roteador uma vez e anote se a melhora dura minutos, horas ou dias — a duração indica a causa.",
     ],
     naoFazer: [
-      "Abrir a rede ou remover a senha para \"testar\" — isso não diagnostica nada e expõe todos os dispositivos.",
+      'Abrir a rede ou remover a senha para "testar" — isso não diagnostica nada e expõe todos os dispositivos.',
       "Instalar repetidor antes de corrigir a posição do roteador: repetidor amplifica também o problema.",
       "Trocar de plano sem antes medir por cabo.",
       "Alterar em massa parâmetros avançados do roteador sem registrar a configuração anterior.",
@@ -345,7 +357,8 @@ export const ATLAS_APROFUNDAMENTO: AtlasAprofundamento[] = [
       {
         rotulo: "Wi-Fi instável",
         to: "/problemas/wifi-instavel",
-        contexto: "O pilar do tema, com a separação entre provedor, roteador e ambiente.",
+        contexto:
+          "O pilar do tema, com a separação entre provedor, roteador e ambiente.",
       },
       {
         rotulo: "Roteiro de Wi-Fi instável",
@@ -360,12 +373,14 @@ export const ATLAS_APROFUNDAMENTO: AtlasAprofundamento[] = [
       {
         rotulo: "DNS no glossário",
         to: "/glossario/dns",
-        contexto: "Por que \"a internet caiu\" às vezes é só a tradução de nomes falhando.",
+        contexto:
+          'Por que "a internet caiu" às vezes é só a tradução de nomes falhando.',
       },
       {
         rotulo: "Como melhorar o sinal de Wi-Fi em casa",
         to: "/blog/como-melhorar-sinal-wifi-em-casa",
-        contexto: "Posicionamento, canal e interferência antes de trocar equipamento.",
+        contexto:
+          "Posicionamento, canal e interferência antes de trocar equipamento.",
       },
       {
         rotulo: "Redes e Wi-Fi",
@@ -398,7 +413,7 @@ export const ATLAS_APROFUNDAMENTO: AtlasAprofundamento[] = [
     ],
     naoFazer: [
       "Desativar antivírus, firewall ou proteções do sistema em caráter permanente para instalar um programa.",
-      "Instalar dois antivírus, ou trocar o do sistema por um \"otimizador\" oferecido em anúncio.",
+      'Instalar dois antivírus, ou trocar o do sistema por um "otimizador" oferecido em anúncio.',
       "Fornecer código recebido por SMS ou aplicativo a quem ligou — nenhuma instituição legítima pede isso.",
       "Conceder acesso remoto a contato não solicitado.",
       "Pagar resgate em caso de ransomware: pagamento não garante devolução e financia a próxima campanha.",
@@ -439,7 +454,8 @@ export const ATLAS_APROFUNDAMENTO: AtlasAprofundamento[] = [
       {
         rotulo: "BitLocker no glossário",
         to: "/glossario/bitlocker",
-        contexto: "Criptografia de disco e a chave de recuperação que ninguém guarda.",
+        contexto:
+          "Criptografia de disco e a chave de recuperação que ninguém guarda.",
       },
       {
         rotulo: "Backup antes da manutenção",
@@ -449,7 +465,8 @@ export const ATLAS_APROFUNDAMENTO: AtlasAprofundamento[] = [
       {
         rotulo: "Como saber se o PC tem vírus ou malware",
         to: "/blog/como-saber-se-pc-tem-virus-malware",
-        contexto: "Sinais verificáveis, sem depender de propaganda de otimizador.",
+        contexto:
+          "Sinais verificáveis, sem depender de propaganda de otimizador.",
       },
       {
         rotulo: "Arquivos apagados: o que fazer primeiro",
@@ -486,7 +503,7 @@ export const ATLAS_APROFUNDAMENTO: AtlasAprofundamento[] = [
       "Instalar programas de recuperação no mesmo disco de onde os arquivos serão recuperados.",
     ],
     pausar: [
-      "Qualquer ruído mecânico: desligue e não religue para \"conferir\".",
+      'Qualquer ruído mecânico: desligue e não religue para "conferir".',
       "Disco que aparece e some da lista de unidades.",
       "Arquivos críticos sem cópia — nesse ponto, nenhuma tentativa caseira compensa o risco.",
     ],
@@ -511,17 +528,20 @@ export const ATLAS_APROFUNDAMENTO: AtlasAprofundamento[] = [
       {
         rotulo: "HD fazendo barulho",
         to: "/problemas/hd-fazendo-barulho",
-        contexto: "O sintoma que muda a prioridade de conserto para preservação.",
+        contexto:
+          "O sintoma que muda a prioridade de conserto para preservação.",
       },
       {
         rotulo: "Verificador de backup",
         to: "/ferramentas/verificador-de-backup",
-        contexto: "Como confirmar que a cópia realmente abre antes de confiar nela.",
+        contexto:
+          "Como confirmar que a cópia realmente abre antes de confiar nela.",
       },
       {
         rotulo: "HD com ruído: o que fazer",
         to: "/decisoes/hd-com-ruido",
-        contexto: "A ordem correta das decisões quando o disco já está falhando.",
+        contexto:
+          "A ordem correta das decisões quando o disco já está falhando.",
       },
       {
         rotulo: "Recuperação de dados",
@@ -531,7 +551,8 @@ export const ATLAS_APROFUNDAMENTO: AtlasAprofundamento[] = [
       {
         rotulo: "Backup: como proteger seus arquivos",
         to: "/blog/backup-como-proteger-seus-arquivos",
-        contexto: "Regra 3-2-1 aplicada a uso doméstico e a escritório pequeno.",
+        contexto:
+          "Regra 3-2-1 aplicada a uso doméstico e a escritório pequeno.",
       },
     ],
   },
@@ -541,7 +562,7 @@ export const ATLAS_APROFUNDAMENTO: AtlasAprofundamento[] = [
       "Manutenção preventiva não é limpeza estética: é a diferença entre trocar pasta térmica e trocar placa.",
     contexto: [
       "Componentes eletrônicos envelhecem por temperatura e por variação elétrica. Poeira acumulada reduz a troca de calor; pasta térmica ressecada deixa de conduzir; fonte degradada entrega tensão instável. Nada disso quebra de uma vez — degrada, e a degradação aparece primeiro como perda de desempenho, depois como desligamento e só no fim como dano permanente.",
-      "É o único tema em que agir antes do sintoma custa menos que agir depois. A janela em que o equipamento \"ainda funciona, mas esquenta\" é exatamente a janela em que a intervenção é barata.",
+      'É o único tema em que agir antes do sintoma custa menos que agir depois. A janela em que o equipamento "ainda funciona, mas esquenta" é exatamente a janela em que a intervenção é barata.',
     ],
     sinais: [
       "Ventoinha em rotação alta constante, mesmo com o equipamento ocioso.",
@@ -560,7 +581,7 @@ export const ATLAS_APROFUNDAMENTO: AtlasAprofundamento[] = [
       "Usar ar comprimido de alta pressão travando a ventoinha: pode danificar o rolamento.",
       "Aplicar pasta térmica em excesso ou reaproveitar a antiga.",
       "Aspirar o interior com aspirador doméstico — a eletricidade estática é risco real.",
-      "Adiar a limpeza porque \"ainda está funcionando\": esse é justamente o momento em que ela é barata.",
+      'Adiar a limpeza porque "ainda está funcionando": esse é justamente o momento em que ela é barata.',
       "Religar um equipamento que exalou cheiro de queimado.",
     ],
     pausar: [
@@ -589,17 +610,20 @@ export const ATLAS_APROFUNDAMENTO: AtlasAprofundamento[] = [
       {
         rotulo: "Computador esquentando",
         to: "/problemas/computador-esquentando",
-        contexto: "Como medir, o que a limpeza resolve e o que é limite de projeto.",
+        contexto:
+          "Como medir, o que a limpeza resolve e o que é limite de projeto.",
       },
       {
         rotulo: "Computador desliga sozinho",
         to: "/problemas/computador-desliga-sozinho",
-        contexto: "Proteção térmica e fonte degradada se manifestam de formas diferentes.",
+        contexto:
+          "Proteção térmica e fonte degradada se manifestam de formas diferentes.",
       },
       {
         rotulo: "Manutenção de computador",
         to: "/servicos/manutencao-de-computador",
-        contexto: "Escopo da revisão preventiva e o que fica registrado no orçamento.",
+        contexto:
+          "Escopo da revisão preventiva e o que fica registrado no orçamento.",
       },
       {
         rotulo: "Thermal throttling no glossário",
@@ -666,7 +690,8 @@ export const ATLAS_APROFUNDAMENTO: AtlasAprofundamento[] = [
       {
         rotulo: "Empresa de TI em Curitiba",
         to: "/empresa-de-ti-curitiba",
-        contexto: "Como o atendimento a ambientes com vários equipamentos é organizado.",
+        contexto:
+          "Como o atendimento a ambientes com vários equipamentos é organizado.",
       },
       {
         rotulo: "Todos os serviços",
@@ -681,12 +706,14 @@ export const ATLAS_APROFUNDAMENTO: AtlasAprofundamento[] = [
       {
         rotulo: "Organização de TI para pequenos escritórios",
         to: "/blog/organizacao-de-ti-para-pequenos-escritorios",
-        contexto: "Inventário, backup e padronização antes de contratar suporte.",
+        contexto:
+          "Inventário, backup e padronização antes de contratar suporte.",
       },
       {
         rotulo: "Impressora não imprime na rede",
         to: "/problemas/impressora-nao-imprime",
-        contexto: "Sintoma recorrente em escritório com fila e spooler compartilhados.",
+        contexto:
+          "Sintoma recorrente em escritório com fila e spooler compartilhados.",
       },
       {
         rotulo: "Suporte técnico empresarial",
@@ -698,7 +725,7 @@ export const ATLAS_APROFUNDAMENTO: AtlasAprofundamento[] = [
   {
     temaId: "decisoes-compra-reparo",
     chamada:
-      "A pergunta útil não é \"vale a pena consertar?\", e sim \"o que este reparo compra em tempo de uso e em risco evitado?\".",
+      'A pergunta útil não é "vale a pena consertar?", e sim "o que este reparo compra em tempo de uso e em risco evitado?".',
     contexto: [
       "Toda decisão entre reparar, trocar peça e trocar equipamento envolve quatro variáveis observáveis: o custo do reparo, o valor de um equipamento equivalente, o tempo de uso adicional esperado e o risco de reincidência. Quando as três primeiras são conhecidas, a decisão deixa de ser palpite.",
       "Existe ainda um custo invisível que costuma decidir o caso: o custo de repetir. Duas intervenções sucessivas no mesmo sintoma custam mais do que um diagnóstico feito uma vez, e cada tentativa adicional em equipamento com falha física aumenta o risco de perder dados.",
@@ -719,7 +746,7 @@ export const ATLAS_APROFUNDAMENTO: AtlasAprofundamento[] = [
     ],
     naoFazer: [
       "Autorizar reparo por etapas sem escopo, descobrindo o custo total só no fim.",
-      "Decidir por \"é antigo\" ou \"é novo\": idade sozinha não é critério técnico.",
+      'Decidir por "é antigo" ou "é novo": idade sozinha não é critério técnico.',
       "Trocar de equipamento antes de garantir a migração dos dados.",
       "Comprar peça usada de origem desconhecida para componente crítico de energia.",
     ],
@@ -754,41 +781,53 @@ export const ATLAS_APROFUNDAMENTO: AtlasAprofundamento[] = [
       {
         rotulo: "Consertar ou substituir o equipamento",
         to: "/decisoes/consertar-ou-substituir",
-        contexto: "Quando a conversa deixa de ser sobre a peça e passa a ser sobre a máquina.",
+        contexto:
+          "Quando a conversa deixa de ser sobre a peça e passa a ser sobre a máquina.",
       },
       {
         rotulo: "Quando não compensa",
         to: "/quando-nao-compensa",
-        contexto: "Os casos em que a resposta honesta é não contratar o serviço.",
+        contexto:
+          "Os casos em que a resposta honesta é não contratar o serviço.",
       },
       {
         rotulo: "Preços e políticas",
         to: "/precos-e-politicas",
-        contexto: "Valores de referência e regras de aprovação, sempre visíveis.",
+        contexto:
+          "Valores de referência e regras de aprovação, sempre visíveis.",
       },
       {
         rotulo: "Quando trocar o HD por um SSD",
         to: "/blog/quando-trocar-hd-por-ssd",
-        contexto: "O upgrade que mais muda percepção de velocidade — e seus limites.",
+        contexto:
+          "O upgrade que mais muda percepção de velocidade — e seus limites.",
       },
       {
         rotulo: "Notebook não liga",
         to: "/problemas/notebook-nao-liga",
-        contexto: "Sintoma em que a conta entre reparo e substituição costuma apertar.",
+        contexto:
+          "Sintoma em que a conta entre reparo e substituição costuma apertar.",
       },
       {
         rotulo: "Montagem de PC sob medida",
         to: "/servicos/montagem-de-pc",
-        contexto: "Quando substituir é o caminho, dimensionar evita gasto inútil.",
+        contexto:
+          "Quando substituir é o caminho, dimensionar evita gasto inútil.",
       },
     ],
   },
 ];
 
-export const aprofundamentoDoTema = (temaId: string): AtlasAprofundamento | undefined =>
+export const aprofundamentoDoTema = (
+  temaId: string,
+): AtlasAprofundamento | undefined =>
   ATLAS_APROFUNDAMENTO.find((a) => a.temaId === temaId);
 
 /** Todos os destinos internos declarados no aprofundamento (gates e testes). */
 export function aprofundamentoTodosOsLinks(): string[] {
-  return [...new Set(ATLAS_APROFUNDAMENTO.flatMap((a) => a.proximosPassos.map((p) => p.to)))];
+  return [
+    ...new Set(
+      ATLAS_APROFUNDAMENTO.flatMap((a) => a.proximosPassos.map((p) => p.to)),
+    ),
+  ];
 }
