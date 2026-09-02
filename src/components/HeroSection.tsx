@@ -11,7 +11,7 @@ const WHATSAPP_MESSAGE = "Olá! Preciso de suporte técnico.";
 
 const trustSignals = [
   { icon: Clock, text: "Atendimento conforme a agenda" },
-  { icon: Shield, text: "Garantia em todos os serviços" },
+  { icon: Shield, text: "Garantia conforme o serviço executado" },
   { icon: MapPin, text: "A domicílio ou remoto" },
 ];
 
@@ -106,7 +106,7 @@ export const HeroSection = () => {
 
             <div className="flex items-center justify-center lg:justify-start gap-2 mt-3 text-white/80 text-sm opacity-0 animate-[heroFadeIn_0.5s_ease-out_0.8s_forwards] drop-shadow-[0_1px_1px_rgba(0,0,0,0.3)]">
               <CheckCircle className="h-3.5 w-3.5 text-trust" />
-              <span>Resposta em até 5 minutos • atendimento sem compromisso</span>
+              <span>Resposta pelo WhatsApp em horário comercial • sem compromisso</span>
             </div>
           </div>
           
@@ -129,7 +129,7 @@ export const HeroSection = () => {
                 sizes="(max-width: 640px) 256px, (max-width: 768px) 320px, (max-width: 1024px) 384px, 448px"
               />
               <div className="absolute -bottom-3 -right-3 bg-accent text-white px-4 py-2 rounded-lg font-bold text-sm shadow-lg animate-bounce-subtle">
-                ✓ Atendimento Imediato
+                ✓ Atendimento local
               </div>
               <div className="absolute -top-3 -left-3 bg-card text-foreground px-3 py-2 rounded-lg shadow-lg flex items-center gap-1">
                 <Star className="h-4 w-4 text-accent fill-accent" />

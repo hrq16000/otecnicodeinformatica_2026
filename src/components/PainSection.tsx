@@ -8,10 +8,10 @@ import { WHATSAPP_NUMBER as WA_NUMBER } from "@/lib/siteConfig";
 const WHATSAPP_NUMBER = WA_NUMBER;
 
 const benefits = [
-  { icon: Clock, text: "Mais de 20 anos de experiência", description: "Profissional experiente no mercado" },
+  { icon: Clock, text: "Diagnóstico técnico antes do orçamento", description: "Você sabe a causa e o valor antes de autorizar" },
   { icon: Shield, text: "Técnico identificado e de confiança", description: "Segurança para sua residência" },
   { icon: ThumbsUp, text: "Venda de serviços, não de peças", description: "Foco na sua real necessidade" },
-  { icon: Zap, text: "Atendimento rápido e sem enrolação", description: "Resolução no primeiro contato" },
+  { icon: Zap, text: "Atendimento direto, sem enrolação", description: "Triagem no primeiro contato pelo WhatsApp" },
 ];
 
 const headlines: { text: string; path: string }[] = [
@@ -109,7 +109,7 @@ export const PainSection = () => {
 
           <p className="text-sm text-muted-foreground mt-4 flex items-center justify-center gap-2">
             <CheckCircle className="h-4 w-4 text-trust" />
-            Atendimento em até 5 minutos • Sem compromisso
+            Resposta pelo WhatsApp em horário comercial • Sem compromisso
           </p>
         </div>
       </div>

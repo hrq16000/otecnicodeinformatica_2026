@@ -73,7 +73,7 @@ export const bairroFAQs: Record<string, GeoFAQ[]> = {
   "cic": [
     {
       question: "Vocês atendem empresas na CIC?",
-      answer: "Sim! Atendemos várias empresas e indústrias na CIC (Cidade Industrial de Curitiba). Oferecemos suporte técnico pontual e contratos mensais para empresas de todos os portes."
+      answer: "Sim. A CIC (Cidade Industrial de Curitiba) está na área de atendimento. O suporte é pontual, por chamado, com escopo e valor informados antes de começar; manutenção recorrente é avaliada caso a caso."
     },
     {
       question: "Fazem manutenção em computadores industriais na CIC?",
@@ -129,7 +129,7 @@ export const bairroFAQs: Record<string, GeoFAQ[]> = {
     },
     {
       question: "Atendem indústrias em Araucária?",
-      answer: "Sim. Araucária tem forte polo industrial e atendemos várias empresas da região. Oferecemos suporte técnico para escritórios administrativos das indústrias."
+      answer: "Sim. Araucária está na área de atendimento, incluindo escritórios administrativos de indústrias. O atendimento é por chamado, conforme a disponibilidade da agenda."
     }
   ],
 
