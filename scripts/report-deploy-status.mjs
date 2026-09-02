@@ -72,7 +72,16 @@ async function main() {
   const ssrOk = home.ok && /<h1[\s>]/i.test(home.corpo) && home.corpo.includes("application/ld+json");
   const checks = [
     { nome: "home (SSR)", url: home.url, status: home.status, ok: ssrOk, detalhe: home.erro ?? (ssrOk ? "HTML com h1 e JSON-LD" : "HTML sem h1 ou sem JSON-LD") },
-    { nome: "sitemap.xml", url: sitemap.url, status: sitemap.status, ok: sitemap.ok && sitemap.corpo.includes("<urlset"), detalhe: sitemap.erro ?? `${sitemap.corpo.match(/<loc>/g)?.length ?? 0} URLs` },
+    {
+      nome: "sitemap.xml",
+      url: sitemap.url,
+      status: sitemap.status,
+      ok: sitemap.ok && /<(urlset|sitemapindex)/.test(sitemap.corpo),
+      // Índice de sitemaps aponta para sub-sitemaps; urlset aponta para páginas.
+      detalhe:
+        sitemap.erro ??
+        `${sitemap.corpo.match(/<loc>/g)?.length ?? 0} ${sitemap.corpo.includes("<sitemapindex") ? "sub-sitemaps" : "URLs"}`,
+    },
     { nome: "robots.txt", url: robots.url, status: robots.status, ok: robots.ok && /user-agent/i.test(robots.corpo), detalhe: robots.erro ?? "diretivas presentes" },
     { nome: "build-version.json", url: versao.url, status: versao.status, ok: Boolean(versao.json?.version), detalhe: versao.erro ?? (versao.json?.version ?? "ausente") },
   ];
