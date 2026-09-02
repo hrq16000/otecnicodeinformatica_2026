@@ -93,7 +93,7 @@ export const CidadeLandingLayout = ({ data }: { data: CidadeData }) => {
 
       <FastHeader />
       <main className="pt-[var(--site-header-height)]">
-        <Breadcrumbs items={[{ label: data.cidade }]} />
+        <Breadcrumbs items={[{ label: "Serviços", href: "/servicos" }, { label: data.cidade }]} />
 
         {/* Hero local */}
         <section className="relative overflow-hidden border-b border-border/60 bg-secondary/40">

@@ -17,17 +17,24 @@ import { BASE_URL, INDEXING_ENABLED } from "./lib/site-env.mjs";
 import { CURATED_PATHS } from "./lib/curated-urls.mjs";
 import { buildRobots, ROTAS_PRIVADAS } from "./generate-robots.mjs";
 
-const DIST = path.resolve(process.argv[2] || "dist");
+const DIST_RAIZ = path.resolve(process.argv[2] || "dist");
 const errors = [];
 
-if (!existsSync(DIST)) {
-  console.error(`BLOQUEADO: ${DIST} não existe — rode "npm run build" antes.`);
+if (!existsSync(DIST_RAIZ)) {
+  console.error(`BLOQUEADO: ${DIST_RAIZ} não existe — rode "npm run build" antes.`);
   process.exit(1);
 }
 
+// Build TanStack/Nitro publica os estáticos em dist/client.
+const DIST =
+  !existsSync(path.join(DIST_RAIZ, "robots.txt")) &&
+  existsSync(path.join(DIST_RAIZ, "client", "robots.txt"))
+    ? path.join(DIST_RAIZ, "client")
+    : DIST_RAIZ;
+
 const robotsFile = path.join(DIST, "robots.txt");
 if (!existsSync(robotsFile)) {
-  console.error("BLOQUEADO: dist/robots.txt ausente.");
+  console.error(`BLOQUEADO: ${path.relative(process.cwd(), robotsFile)} ausente.`);
   process.exit(1);
 }
 const robots = readFileSync(robotsFile, "utf8");

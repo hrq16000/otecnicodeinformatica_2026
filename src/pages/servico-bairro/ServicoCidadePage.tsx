@@ -71,23 +71,18 @@ const ServicoCidadePage = () => {
   const jsonLd = {
     "@context": "https://schema.org",
     "@graph": [
-      {
-        "@type": "LocalBusiness",
-        "name": `Técnico de Informática em ${cidade.nome}`,
-        "url": SITE_BASE_URL,
-        "areaServed": cidade.nome,
-        "priceRange": "$$",
-        "address": { "@type": "PostalAddress", addressLocality: cidade.nome, addressRegion: "PR", addressCountry: "BR" }
-      },
+      // O LocalBusiness canônico (#localbusiness) já é emitido pelo slot global;
+      // aqui apenas o referenciamos para não duplicar o nó na mesma página.
       // RODADA 5C: só páginas com intenção local própria declaram Service local.
       ...(local
         ? [{
             "@type": "Service",
             "name": `${local.nome} em ${cidade.nome}`,
             "serviceType": local.nome,
+            "description": seoDescription,
             "url": `${SITE_BASE_URL}${local.path}`,
             "areaServed": { "@type": "City", name: cidade.nome, addressRegion: "PR", addressCountry: "BR" },
-            "provider": { "@type": "LocalBusiness", name: `Técnico de Informática em ${cidade.nome}`, url: SITE_BASE_URL },
+            "provider": { "@id": `${SITE_BASE_URL}/#localbusiness` },
             "isRelatedTo": { "@type": "Service", url: `${SITE_BASE_URL}${local.parent}` }
           }]
         : []),
@@ -122,10 +117,17 @@ const ServicoCidadePage = () => {
         description={seoDescription}
         path={decisao.canonical}
         noindex={decisao.indexability !== "index"}
+        // Paridade obrigatória com a trilha visível renderizada abaixo.
         breadcrumbs={[
           { name: "Início", path: "/" },
           { name: "Serviços", path: "/servicos" },
-          { name: `${servico.nome} em ${cidade.nome}`, path: `/servicos/${servico.slug}/${cidade.slug}` },
+          {
+            name: servico.nome,
+            path: servico.servicoSlugExistente
+              ? `/servicos/${servico.servicoSlugExistente}`
+              : "/servicos",
+          },
+          { name: cidade.nome, path: `/servicos/${servico.slug}/${cidade.slug}` },
         ]}
       />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />

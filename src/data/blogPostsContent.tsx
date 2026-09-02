@@ -9810,7 +9810,7 @@ crontab -e
 
         <h2>Limpeza em camadas — a ordem importa</h2>
         <ol>
-          <li><strong>Programas instalados:</strong> revise a lista de aplicativos por data de instalação. Adware quase sempre aparece ali, com nome genérico, instalado no mesmo dia em que o problema começou.</li>
+          <li><strong>Programas instalados:</strong> revise a lista de aplicativos por data de instalação. Adware quase sempre aparece ali, com nome genérico, instalado na mesma data em que o problema começou.</li>
           <li><strong>Extensões do navegador:</strong> remova o que não reconhece e verifique também os atalhos do navegador — o sequestro costuma acrescentar um endereço ao final do atalho.</li>
           <li><strong>Inicialização e tarefas agendadas:</strong> é o que faz o problema voltar. Enquanto existir uma entrada reinstalando o componente, cada limpeza dura até o próximo reinício.</li>
           <li><strong>Varredura completa com a proteção nativa do Windows:</strong> atualizada, com o sistema ocioso, sem interromper no meio.</li>
@@ -11213,7 +11213,7 @@ crontab -e
         </ul>
 
         <h2>Quando faz sentido chamar alguém</h2>
-        <p>Não porque o procedimento é secreto — ele está inteiro aí em cima. Faz sentido quando o custo de errar é alto: arquivo de trabalho sem cópia, e-mail de anos, sistema de gestão instalado localmente, disco com sinais de falha ou máquina que precisa voltar a funcionar no mesmo dia.</p>
+        <p>Não porque o procedimento é secreto — ele está inteiro aí em cima. Faz sentido quando o custo de errar é alto: arquivo de trabalho sem cópia, e-mail de anos, sistema de gestão instalado localmente, disco com sinais de falha ou máquina que precisa voltar a funcionar com urgência.</p>
         <p>Se você não tem certeza de que formatar é o caminho, o passo anterior é o <Link to="/diagnostico-tecnico">diagnóstico técnico</Link>. E se já decidiu, o escopo, as condições e o que está incluso estão em <Link to="/servicos/formatacao">formatação e instalação do sistema</Link> — o custo dessa e das demais modalidades está detalhado em <Link to="/blog/quanto-custa-formatar-um-computador">quanto custa formatar um computador</Link>.</p>
       </>
     ),
@@ -11236,7 +11236,7 @@ crontab -e
         <p>Reinstalar o sistema é a parte curta. O que consome tempo técnico é o entorno:</p>
         <ul>
           <li><strong>Conferência do backup:</strong> copiar e verificar arquivos, e-mails locais, favoritos e chaves de criptografia.</li>
-          <li><strong>Verificação do disco:</strong> reinstalar sobre disco em falha é retrabalho garantido.</li>
+          <li><strong>Verificação do disco:</strong> reinstalar sobre disco em falha tende a virar retrabalho.</li>
           <li><strong>Instalação e drivers:</strong> chipset, vídeo, rede, áudio e periféricos, na ordem correta.</li>
           <li><strong>Restauração:</strong> devolver arquivos, contas, impressora e programas essenciais ao estado de trabalho.</li>
           <li><strong>Ativação e licenças:</strong> confirmar sistema ativado e programas pagos válidos.</li>

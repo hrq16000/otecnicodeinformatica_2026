@@ -32,6 +32,10 @@ export const CREDIT_PREFIX = "Foto:";
 export const ALLOWED_REMOTE_HOSTS = [
   LICENSE_SOURCES.unsplash.host,
   LICENSE_SOURCES.pexels.host,
+  // Acervo próprio servido no domínio canônico (URL absoluta no SSR do
+  // TanStack Start). Não é foto remota de terceiro — segue as mesmas regras
+  // editoriais de capa real e crédito quando a licença exigir.
+  new URL(BASE_URL).host,
 ];
 
 export function unsplashPhotoId(url) {

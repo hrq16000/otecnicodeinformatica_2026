@@ -103,7 +103,14 @@ for (const file of todos) {
     continue;
   }
   const ehFoto = !NAO_E_FOTO.test(file) && !DERIVADA_RESPONSIVA.test(file);
-  if (ehFoto && size < MIN_BYTES) {
+  // .webp/.avif gerados a partir de um original .jpg/.png presente são
+  // derivadas de compressão: o tamanho pequeno é esperado e não indica
+  // placeholder. A verificação de tamanho fica no arquivo original.
+  const baseSemExt = file.slice(0, -ext.length);
+  const ehDerivadaComprimida =
+    (ext === ".webp" || ext === ".avif") &&
+    [".jpg", ".jpeg", ".png"].some((o) => porBase.has(baseSemExt + o));
+  if (ehFoto && !ehDerivadaComprimida && size < MIN_BYTES) {
     registrar(`${size} bytes: pequeno demais para fotografia real (mín. ${MIN_BYTES})`);
     continue;
   }

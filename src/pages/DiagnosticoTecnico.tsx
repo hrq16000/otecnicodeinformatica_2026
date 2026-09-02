@@ -1,4 +1,5 @@
 import { SmartImage } from "@/components/SmartImage";
+import { FotoCredito } from "@/components/FotoCredito";
 import { useEffect } from "react";
 import { PageSEO } from "@/components/PageSEO";
 import { IMAGES } from "@/lib/images";
@@ -171,7 +172,10 @@ const DiagnosticoTecnico = () => {
           <div className="container mx-auto">
             <div className="max-w-4xl mx-auto -mt-8 relative z-20">
               <div className="rounded-xl overflow-hidden shadow-2xl">
+                <figure>
                 <SmartImage wrapperClassName="w-full" priority src={IMAGES.diagnostico} alt={IMAGES.diagnosticoAlt} className="w-full h-48 md:h-64 object-cover"  width="800" height="400" />
+                  <FotoCredito src={IMAGES.diagnostico} />
+                </figure>
               </div>
             </div>
           </div>

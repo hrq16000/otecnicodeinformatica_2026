@@ -12,7 +12,12 @@
  */
 import { existsSync, readFileSync, readdirSync, statSync } from "node:fs";
 import path from "node:path";
-import { ALLOWED_REMOTE_HOSTS, CREDIT_PREFIX, creditFor } from "./lib/image-credits.mjs";
+import { ALLOWED_REMOTE_HOSTS, CREDIT_PREFIX, creditFor, LICENSE_SOURCES } from "./lib/image-credits.mjs";
+import { BASE_URL } from "./lib/site-env.mjs";
+
+// Acervo próprio servido no domínio canônico: não é foto licenciada de
+// terceiro, portanto não exige crédito de terceiro em <figcaption>.
+const OWN_HOST = (() => { try { return new URL(BASE_URL).host; } catch { return ""; } })();
 
 const DIST = path.resolve(process.argv[2] || "dist");
 if (!existsSync(DIST)) {
@@ -57,6 +62,7 @@ for (const file of files.sort()) {
       errors.push(`${route}: host de imagem não licenciado — ${host}`);
       continue;
     }
+    if (host === OWN_HOST) continue;
     const credit = creditFor(src);
     if (!hasCredit) {
       errors.push(`${route}: foto de ${host} sem crédito visível ("${CREDIT_PREFIX} ...")`);

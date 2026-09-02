@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import Breadcrumbs from "@/components/Breadcrumbs";
 import { PageSEO } from "@/components/PageSEO";
 import { Link } from "@/lib/router-compat";
 import { Header } from "@/components/Header";
@@ -138,6 +139,7 @@ const PrecosEPoliticas = ({ path = "/precos-e-politicas" }: PrecosEPoliticasProp
       <PrecosServiceSchema path="/precos-e-politicas" />
 
       <Header />
+      <Breadcrumbs items={[{ label: "Termos, Condições, Valores e Prazos" }]} />
       <main>
         {/* Hero */}
         <section className="hero-gradient pt-10 pb-10 md:pt-12 md:pb-12 relative overflow-hidden">

@@ -262,6 +262,16 @@ const BlogPost = () => {
           <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: `radial-gradient(circle at 1px 1px, white 1px, transparent 0)`, backgroundSize: '32px 32px' }} />
           <div className="container mx-auto relative z-10 pt-14 pb-20 md:pt-20 md:pb-24">
             <div className="max-w-3xl mx-auto">
+              {/* Trilha visível em paridade com o BreadcrumbList do JSON-LD. */}
+              <nav aria-label="breadcrumb" data-breadcrumb className="mb-4 text-sm text-white/75">
+                <ol className="flex flex-wrap items-center gap-2">
+                  <li><Link to="/" className="hover:text-white transition-colors">Início</Link></li>
+                  <li aria-hidden="true">/</li>
+                  <li><Link to="/blog" className="hover:text-white transition-colors">Blog</Link></li>
+                  <li aria-hidden="true">/</li>
+                  <li aria-current="page" className="text-white/90">{post.title}</li>
+                </ol>
+              </nav>
               <Link
                 to="/blog"
                 className="inline-flex items-center gap-2 text-white/85 hover:text-white mb-6 transition-colors group"

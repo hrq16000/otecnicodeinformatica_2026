@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import Breadcrumbs from "@/components/Breadcrumbs";
 import { Link } from "@/lib/router-compat";
 import { PageSEO } from "@/components/PageSEO";
 import { Header } from "@/components/Header";
@@ -232,6 +233,7 @@ const AtendimentoDomicilio = () => {
       <PageSEO title="Técnico de Informática em Domicílio em Curitiba | Atendimento" description="Atendimento técnico de informática em domicílio em Curitiba para computadores, redes e situações que possam ser avaliadas no local." path="/atendimento-domicilio" breadcrumbs={[{ name: "Início", path: "/" }, { name: "Serviços", path: "/servicos" }, { name: "Atendimento a Domicílio", path: "/atendimento-domicilio" }]} />
       <JsonLdSchema />
       <Header />
+      <Breadcrumbs items={[{ label: "Serviços", href: "/servicos" }, { label: "Atendimento a Domicílio" }]} />
       <main>
         <PageHero
           title="Atendimento técnico de informática em domicílio em Curitiba"

@@ -20,7 +20,7 @@ import { readFileSync, existsSync, readdirSync } from "node:fs";
 import { join } from "node:path";
 import { BASE_URL as SITE_BASE_URL } from "./lib/site-env.mjs";
 
-const ROUTER = "src/LegacyApp.tsx";
+const ROUTER = "src/legacyRouteElements.tsx";
 const SITEMAPS = ["public/sitemap-bairros.xml", "public/sitemap-regioes.xml", "public/sitemap-main.xml"];
 const MOTHER = "/tecnico-informatica-curitiba";
 const BASE = SITE_BASE_URL;
@@ -30,13 +30,15 @@ const warnings = [];
 const notes = [];
 
 // ── 1. Rotas do router: canônicas x redirects ────────────────────────────
+// Pós-migração TanStack: as rotas vivem em `legacyRouteElements` (mapa
+// caminho → componente) e os redirects em `legacyNavigateRedirects`.
 const router = readFileSync(ROUTER, "utf8");
 const canonicalRoutes = new Set();
 const redirectRoutes = new Set();
-for (const m of router.matchAll(/<Route\s+path="([^"]+)"\s+element=\{([^}]*)\}/g)) {
-  const [, path, element] = m;
-  if (/<Navigate\b/.test(element)) redirectRoutes.add(path);
-  else canonicalRoutes.add(path);
+const redirectsBlock = (router.match(/legacyNavigateRedirects[^{]*\{([\s\S]*?)\n\};/) || [])[1] ?? "";
+for (const m of redirectsBlock.matchAll(/"([^"]+)":\s*"/g)) redirectRoutes.add(m[1]);
+for (const m of router.matchAll(/^\s{2}"(\/[^"]*)":\s*\(\)\s*=>/gm)) {
+  if (!redirectRoutes.has(m[1])) canonicalRoutes.add(m[1]);
 }
 notes.push(`rotas canônicas: ${canonicalRoutes.size} · redirects: ${redirectRoutes.size}`);
 

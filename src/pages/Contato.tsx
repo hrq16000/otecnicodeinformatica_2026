@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import Breadcrumbs from "@/components/Breadcrumbs";
 import { PageSEO } from "@/components/PageSEO";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
@@ -44,6 +45,7 @@ const Contato = () => {
       <PageSEO title="Contato | Fale com o Técnico de Informática em Curitiba" description="Descreva o problema do seu notebook, computador ou rede pelo WhatsApp e receba a modalidade indicada, o prazo e o valor antes da execução." path="/contato" breadcrumbs={[{ name: "Início", path: "/" }, { name: "Contato", path: "/contato" }]} />
       <JsonLdSchema />
       <Header />
+      <Breadcrumbs items={[{ label: "Contato" }]} />
       <main>
         {/* Hero */}
         <section className="relative overflow-hidden">

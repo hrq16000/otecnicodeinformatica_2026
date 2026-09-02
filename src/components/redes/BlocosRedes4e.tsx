@@ -28,7 +28,12 @@ import { trackWaClick } from "@/lib/funnelAnalytics";
  * A FAQ é VISÍVEL e não entra em JSON-LD FAQPage: o schema das páginas
  * continua sendo emitido exclusivamente pelos layouts.
  */
-export const BlocosRedes4e = ({ path }: { path: string }) => {
+export const BlocosRedes4e = ({
+  path,
+  // Rodada 4F/GEO: quando a página hospedeira já renderiza "Fontes técnicas
+  // consultadas" (mesclando as fontes deste bloco), o bloco não repete o H2.
+  comFontes = true,
+}: { path: string; comFontes?: boolean }) => {
   const conteudo = enriquecimento4e(path);
   const faqs = faq4e(path);
   const [cidade, setCidade] = useState<Cidade4e>("Curitiba");
@@ -95,7 +100,7 @@ export const BlocosRedes4e = ({ path }: { path: string }) => {
         <TabelaDiagnosticaBloco tabela={conteudo.tabelaExtra} id="tabela-rede-4e-extra" />
       ) : null}
 
-      <FontesPrimarias fontes={conteudo.fontes} />
+      {comFontes ? <FontesPrimarias fontes={conteudo.fontes} /> : null}
 
       {faqs?.length ? (
         <div className="mt-10">

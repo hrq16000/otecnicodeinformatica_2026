@@ -1,4 +1,5 @@
 import { SmartImage } from "@/components/SmartImage";
+import { FotoCredito } from "@/components/FotoCredito";
 import { useEffect } from "react";
 import { PageSEO } from "@/components/PageSEO";
 import { IMAGES } from "@/lib/images";
@@ -84,12 +85,12 @@ const ColetaEntrega = () => {
         offers: {
           "@type": "Offer",
           priceCurrency: "BRL",
-          price: "300.00",
+          price: "299.99",
           url: `${SITE_BASE_URL}/coleta-e-entrega`,
           availability: "https://schema.org/InStock",
           priceSpecification: [
-            { "@type": "PriceSpecification", name: "Reparo mínimo com coleta", price: "300.00", priceCurrency: "BRL", description: "Faixa pré-aprovada R$ 300–R$ 500. Acima disso, autorização do cliente." },
-            { "@type": "PriceSpecification", name: "Diagnóstico em bancada (se desistir)", price: "90.00", priceCurrency: "BRL" },
+            { "@type": "PriceSpecification", name: "Reparo mínimo com coleta", price: "299.99", priceCurrency: "BRL", description: "Taxa mínima pré-aprovada. Acima disso, autorização do cliente." },
+            { "@type": "PriceSpecification", name: "Diagnóstico em bancada (se desistir)", price: "99.99", priceCurrency: "BRL" },
           ],
         },
       })}} />
@@ -103,7 +104,7 @@ const ColetaEntrega = () => {
       })}} />
       <JsonLdSchema />
       <Header />
-      <Breadcrumbs items={[{ label: "Coleta e Entrega" }]} />
+      <Breadcrumbs items={[{ label: "Serviços", href: "/servicos" }, { label: "Coleta e Entrega" }]} />
 
       <main>
         {/* HERO */}
@@ -145,7 +146,10 @@ const ColetaEntrega = () => {
           <div className="container mx-auto">
             <div className="max-w-4xl mx-auto -mt-8 relative z-20">
               <div className="rounded-xl overflow-hidden shadow-2xl">
+                <figure>
                 <SmartImage wrapperClassName="w-full" priority src={IMAGES.coletaEntrega} alt={IMAGES.coletaEntregaAlt} className="w-full h-48 md:h-64 object-cover"  width="800" height="400" />
+                  <FotoCredito src={IMAGES.coletaEntrega} />
+                </figure>
               </div>
             </div>
           </div>

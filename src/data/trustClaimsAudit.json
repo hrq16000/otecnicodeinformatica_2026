@@ -1,25 +1,25 @@
 {
   "geradoEm": "2026-09-02",
-  "total": 306,
+  "total": 304,
   "porClasse": {
-    "COMPROVADA": 113,
+    "COMPROVADA": 114,
     "INSTITUCIONAL": 21,
-    "CONDICIONAL": 172,
+    "CONDICIONAL": 169,
     "REMOVIDA": 0,
     "PENDENTE": 0
   },
   "urlsCuradas": 233,
   "familias": [
     {
-      "id": "prazo-prometido",
-      "titulo": "Prazo de atendimento prometido",
-      "risco": "Prazo fixo sem controle de agenda, trânsito e peça.",
-      "total": 115
-    },
-    {
       "id": "garantia",
       "titulo": "Garantia",
       "risco": "Prazo ou abrangência divergente da política comercial central.",
+      "total": 114
+    },
+    {
+      "id": "prazo-prometido",
+      "titulo": "Prazo de atendimento prometido",
+      "risco": "Prazo fixo sem controle de agenda, trânsito e peça.",
       "total": 113
     },
     {
@@ -38,7 +38,7 @@
       "id": "experiencia-tempo",
       "titulo": "Tempo de experiência / atuação",
       "risco": "Anos de mercado divergentes entre páginas e sem fonte única.",
-      "total": 12
+      "total": 11
     },
     {
       "id": "depoimento",
@@ -4233,16 +4233,16 @@
       "urls": []
     },
     {
-      "familia": "experiencia-tempo",
-      "familiaTitulo": "Tempo de experiência / atuação",
-      "risco": "Anos de mercado divergentes entre páginas e sem fonte única.",
+      "familia": "garantia",
+      "familiaTitulo": "Garantia",
+      "risco": "Prazo ou abrangência divergente da política comercial central.",
       "arquivo": "src/data/blogPostsContent.tsx",
       "linha": 2012,
       "trecho": "<p className=\"text-muted-foreground mb-0\">O Técnico de Informática instala câmeras Intelbras em <strong>Itapoá, Guaratuba e todo o litoral do PR</strong>. Kit completo com 4 câmera",
-      "classificacao": "CONDICIONAL",
-      "criterio": "Data de início da atuação técnica vem da configuração única do site, não de certificação externa",
-      "evidencia": "src/lib/siteConfig.ts (foundingDate 1998)",
-      "acao": "Só usar a data da fonte única. 'Mais de 20 anos de experiência' foi removido do copy de home por ser reivindicação solta.",
+      "classificacao": "COMPROVADA",
+      "criterio": "Prazo e escopo vêm da fonte comercial única",
+      "evidencia": "src/lib/config/commercial.ts + src/lib/politicaComercial.ts (90 dias de mão de obra no ponto reparado; peças conforme fabricante)",
+      "acao": "Manter sempre escopado: nunca 'garantia em todos os serviços' sem qualificar o que é coberto.",
       "urls": []
     },
     {
@@ -4575,34 +4575,8 @@
       "familiaTitulo": "Prazo de atendimento prometido",
       "risco": "Prazo fixo sem controle de agenda, trânsito e peça.",
       "arquivo": "src/data/blogPostsContent.tsx",
-      "linha": 9813,
-      "trecho": "<li><strong>Programas instalados:</strong> revise a lista de aplicativos por data de instalação. Adware quase sempre aparece ali, com nome genérico, instalado no mesmo dia em que o",
-      "classificacao": "CONDICIONAL",
-      "criterio": "Tempos de deslocamento e janelas de atendimento são estimativas dependentes de agenda, trânsito e disponibilidade de peça",
-      "evidencia": "Não existe SLA contratado; o texto precisa manter o qualificador ('conforme disponibilidade', 'estimado', 'quando há peça em estoque')",
-      "acao": "Proibido prazo absoluto sem condicionante. 'Atendimento imediato' e 'resposta em até 5 minutos' foram removidos nesta rodada.",
-      "urls": []
-    },
-    {
-      "familia": "prazo-prometido",
-      "familiaTitulo": "Prazo de atendimento prometido",
-      "risco": "Prazo fixo sem controle de agenda, trânsito e peça.",
-      "arquivo": "src/data/blogPostsContent.tsx",
       "linha": 10818,
       "trecho": "<li>Em até 2 minutos, aperte o botão <strong>WPS</strong> do repetidor</li>",
-      "classificacao": "CONDICIONAL",
-      "criterio": "Tempos de deslocamento e janelas de atendimento são estimativas dependentes de agenda, trânsito e disponibilidade de peça",
-      "evidencia": "Não existe SLA contratado; o texto precisa manter o qualificador ('conforme disponibilidade', 'estimado', 'quando há peça em estoque')",
-      "acao": "Proibido prazo absoluto sem condicionante. 'Atendimento imediato' e 'resposta em até 5 minutos' foram removidos nesta rodada.",
-      "urls": []
-    },
-    {
-      "familia": "prazo-prometido",
-      "familiaTitulo": "Prazo de atendimento prometido",
-      "risco": "Prazo fixo sem controle de agenda, trânsito e peça.",
-      "arquivo": "src/data/blogPostsContent.tsx",
-      "linha": 11216,
-      "trecho": "<p>Não porque o procedimento é secreto — ele está inteiro aí em cima. Faz sentido quando o custo de errar é alto: arquivo de trabalho sem cópia, e-mail de anos, sistema de gestão i",
       "classificacao": "CONDICIONAL",
       "criterio": "Tempos de deslocamento e janelas de atendimento são estimativas dependentes de agenda, trânsito e disponibilidade de peça",
       "evidencia": "Não existe SLA contratado; o texto precisa manter o qualificador ('conforme disponibilidade', 'estimado', 'quando há peça em estoque')",
@@ -4926,7 +4900,7 @@
       "familiaTitulo": "Garantia",
       "risco": "Prazo ou abrangência divergente da política comercial central.",
       "arquivo": "src/lib/guiasDecisao.ts",
-      "linha": 840,
+      "linha": 860,
       "trecho": "\"Cada componente mantém a garantia do próprio fabricante, e a montagem/configuração tem a garantia do serviço. É mais granular: troca-se apenas a peça que falhou, mas alguém precis",
       "classificacao": "COMPROVADA",
       "criterio": "Prazo e escopo vêm da fonte comercial única",
