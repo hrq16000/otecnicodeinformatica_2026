@@ -227,6 +227,104 @@ export type Database = {
         }
         Relationships: []
       }
+      depoimentos: {
+        Row: {
+          aprovado_em: string | null
+          aprovado_por: string | null
+          cidade: string | null
+          cliente: string
+          consentimento: boolean
+          consentimento_origem: string | null
+          created_at: string
+          criado_por: string | null
+          data_atendimento: string | null
+          id: string
+          motivo_rejeicao: string | null
+          prova_url: string | null
+          servico: string | null
+          status: string
+          texto: string
+          updated_at: string
+        }
+        Insert: {
+          aprovado_em?: string | null
+          aprovado_por?: string | null
+          cidade?: string | null
+          cliente: string
+          consentimento?: boolean
+          consentimento_origem?: string | null
+          created_at?: string
+          criado_por?: string | null
+          data_atendimento?: string | null
+          id?: string
+          motivo_rejeicao?: string | null
+          prova_url?: string | null
+          servico?: string | null
+          status?: string
+          texto: string
+          updated_at?: string
+        }
+        Update: {
+          aprovado_em?: string | null
+          aprovado_por?: string | null
+          cidade?: string | null
+          cliente?: string
+          consentimento?: boolean
+          consentimento_origem?: string | null
+          created_at?: string
+          criado_por?: string | null
+          data_atendimento?: string | null
+          id?: string
+          motivo_rejeicao?: string | null
+          prova_url?: string | null
+          servico?: string | null
+          status?: string
+          texto?: string
+          updated_at?: string
+        }
+        Relationships: []
+      }
+      depoimentos_audit: {
+        Row: {
+          acao: string
+          actor_id: string | null
+          created_at: string
+          de_status: string | null
+          depoimento_id: string
+          id: string
+          motivo: string | null
+          para_status: string | null
+        }
+        Insert: {
+          acao: string
+          actor_id?: string | null
+          created_at?: string
+          de_status?: string | null
+          depoimento_id: string
+          id?: string
+          motivo?: string | null
+          para_status?: string | null
+        }
+        Update: {
+          acao?: string
+          actor_id?: string | null
+          created_at?: string
+          de_status?: string | null
+          depoimento_id?: string
+          id?: string
+          motivo?: string | null
+          para_status?: string | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "depoimentos_audit_depoimento_id_fkey"
+            columns: ["depoimento_id"]
+            isOneToOne: false
+            referencedRelation: "depoimentos"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
       funnel_submissions: {
         Row: {
           atendido_em: string | null
@@ -1076,6 +1174,54 @@ export type Database = {
           rows_suppressed?: number
           rows_written?: number
           run_type?: string
+        }
+        Relationships: []
+      }
+      trust_claim_reviews: {
+        Row: {
+          arquivo: string
+          claim_key: string
+          classificacao: string | null
+          created_at: string
+          evidencia: string | null
+          familia: string | null
+          id: string
+          linha: number | null
+          observacao: string | null
+          revisado_em: string | null
+          revisado_por: string | null
+          status_revisao: string
+          updated_at: string
+        }
+        Insert: {
+          arquivo: string
+          claim_key: string
+          classificacao?: string | null
+          created_at?: string
+          evidencia?: string | null
+          familia?: string | null
+          id?: string
+          linha?: number | null
+          observacao?: string | null
+          revisado_em?: string | null
+          revisado_por?: string | null
+          status_revisao?: string
+          updated_at?: string
+        }
+        Update: {
+          arquivo?: string
+          claim_key?: string
+          classificacao?: string | null
+          created_at?: string
+          evidencia?: string | null
+          familia?: string | null
+          id?: string
+          linha?: number | null
+          observacao?: string | null
+          revisado_em?: string | null
+          revisado_por?: string | null
+          status_revisao?: string
+          updated_at?: string
         }
         Relationships: []
       }

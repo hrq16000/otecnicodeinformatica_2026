@@ -1,10 +1,13 @@
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { exportarCsv } from "@/lib/exportarRelatorio";
+import { supabase } from "@/integrations/supabase/client";
+import { RevisaoAfirmacao, type RevisaoRegistro } from "@/components/admin/RevisaoAfirmacao";
 import auditoria from "@/data/trustClaimsAudit.json";
+import auditoriaConteudo from "@/data/auditoriaConteudo.json";
 
 /**
  * AFIRMAÇÕES DE CONFIANÇA — /admin/afirmacoes.
@@ -79,8 +82,45 @@ function Kpi({ label, valor, hint }: { label: string; valor: string; hint?: stri
   );
 }
 
+interface ConteudoUrl {
+  path: string;
+  familiaTitulo: string;
+  title: string;
+  palavras: number;
+  fontesPrimarias: boolean;
+  limiteSeguranca: boolean;
+  jsonLd: string[];
+  ligacoes: Record<string, boolean>;
+  alertasTecnicos: string[];
+  alertasEditoriais: string[];
+  ssr: string;
+  status: string;
+}
+
+const conteudo = auditoriaConteudo as unknown as {
+  geradoEm: string;
+  total: number;
+  porStatus: Record<string, number>;
+  urls: ConteudoUrl[];
+};
+
 export default function AdminAfirmacoes() {
-  const [aba, setAba] = useState<"afirmacoes" | "urls">("afirmacoes");
+  const [aba, setAba] = useState<"afirmacoes" | "urls" | "conteudo">("afirmacoes");
+  const [revisoes, setRevisoes] = useState<Record<string, RevisaoRegistro>>({});
+
+  useEffect(() => {
+    let ativo = true;
+    void supabase
+      .from("trust_claim_reviews")
+      .select("claim_key,status_revisao,observacao,evidencia,revisado_em")
+      .then(({ data }) => {
+        if (!ativo || !data) return;
+        setRevisoes(Object.fromEntries((data as RevisaoRegistro[]).map((r) => [r.claim_key, r])));
+      });
+    return () => {
+      ativo = false;
+    };
+  }, []);
   const [busca, setBusca] = useState("");
   const [classe, setClasse] = useState<Classe | "todas">("todas");
   const [familia, setFamilia] = useState<string | "todas">("todas");
@@ -112,6 +152,14 @@ export default function AdminAfirmacoes() {
 
   const urlsSemAfirmacao = dados.urls.filter((u) => u.curada && u.total === 0).length;
 
+  const conteudoFiltrado = useMemo(() => {
+    const termo = busca.trim().toLowerCase();
+    return conteudo.urls.filter((u) => {
+      if (!termo) return true;
+      return u.path.toLowerCase().includes(termo) || (u.title ?? "").toLowerCase().includes(termo);
+    });
+  }, [busca]);
+
   return (
     <main className="container mx-auto px-4 py-10">
       <header className="mb-6">
@@ -138,6 +186,9 @@ export default function AdminAfirmacoes() {
         </Button>
         <Button variant={aba === "urls" ? "default" : "outline"} size="sm" onClick={() => setAba("urls")}>
           URLs do sitemap ({dados.urlsCuradas})
+        </Button>
+        <Button variant={aba === "conteudo" ? "default" : "outline"} size="sm" onClick={() => setAba("conteudo")}>
+          Conteúdo E-E-A-T ({conteudo.total})
         </Button>
         <Input
           className="w-full max-w-xs"
@@ -187,7 +238,9 @@ export default function AdminAfirmacoes() {
         <p className="text-sm text-muted-foreground">
           {aba === "afirmacoes"
             ? `${ocorrencias.length} afirmações exibidas`
-            : `${urls.length} URLs exibidas · ${urlsSemAfirmacao} URLs curadas sem afirmação mapeada`}
+            : aba === "urls"
+              ? `${urls.length} URLs exibidas · ${urlsSemAfirmacao} URLs curadas sem afirmação mapeada`
+              : `${conteudoFiltrado.length} URLs auditadas · ${conteudo.porStatus["ALERTA_EDITORIAL"] ?? 0} com alerta editorial · ${conteudo.porStatus["ALERTA_TECNICO"] ?? 0} com alerta técnico`}
         </p>
         <Button
           variant="outline"
@@ -261,6 +314,15 @@ export default function AdminAfirmacoes() {
                     )}
                   </p>
                 )}
+                <RevisaoAfirmacao
+                  claimKey={`${o.arquivo}:${o.linha}:${o.familia}`}
+                  arquivo={o.arquivo}
+                  linha={o.linha}
+                  familia={o.familia}
+                  classificacao={o.classificacao}
+                  registro={revisoes[`${o.arquivo}:${o.linha}:${o.familia}`]}
+                  onSalvo={(r) => setRevisoes((atual) => ({ ...atual, [r.claim_key]: r }))}
+                />
               </Card>
             </li>
           ))}
@@ -268,7 +330,7 @@ export default function AdminAfirmacoes() {
             <li className="text-sm text-muted-foreground">Nenhuma afirmação para este filtro.</li>
           )}
         </ul>
-      ) : (
+      ) : aba === "urls" ? (
         <div className="mt-4 overflow-x-auto">
           <table className="w-full text-sm">
             <thead>
@@ -308,6 +370,50 @@ export default function AdminAfirmacoes() {
             <p className="mt-4 text-sm text-muted-foreground">Nenhuma URL para este filtro.</p>
           )}
         </div>
+      ) : (
+        <ul className="mt-4 space-y-3">
+          {conteudoFiltrado.map((u) => (
+            <li key={u.path}>
+              <Card className="p-4">
+                <div className="flex flex-wrap items-center gap-2">
+                  <Badge variant={u.status === "OK" ? "default" : "destructive"}>{u.status}</Badge>
+                  <Badge variant={u.ssr === "OK" ? "secondary" : "destructive"}>SSR {u.ssr}</Badge>
+                  <a href={u.path} className="text-sm font-medium underline underline-offset-2">
+                    {u.path}
+                  </a>
+                  <span className="text-xs text-muted-foreground">{u.familiaTitulo}</span>
+                </div>
+                <p className="mt-1 text-xs text-muted-foreground">{u.title}</p>
+                <p className="mt-2 flex flex-wrap gap-2 text-xs text-muted-foreground">
+                  <span>{u.palavras} palavras</span>
+                  <span>{u.fontesPrimarias ? "fontes primárias" : "sem fonte primária"}</span>
+                  <span>{u.limiteSeguranca ? "limite de segurança" : "sem limite declarado"}</span>
+                  <span>JSON-LD: {u.jsonLd.join(", ") || "nenhum"}</span>
+                  <span>
+                    ligações:{" "}
+                    {Object.entries(u.ligacoes)
+                      .filter(([, v]) => v)
+                      .map(([k]) => k)
+                      .join(", ") || "nenhuma"}
+                  </span>
+                </p>
+                {[...u.alertasTecnicos, ...u.alertasEditoriais].length > 0 && (
+                  <ul className="mt-2 list-disc space-y-1 pl-5 text-xs text-muted-foreground">
+                    {u.alertasTecnicos.map((a) => (
+                      <li key={`t-${a}`}>técnico: {a}</li>
+                    ))}
+                    {u.alertasEditoriais.map((a) => (
+                      <li key={`e-${a}`}>editorial: {a}</li>
+                    ))}
+                  </ul>
+                )}
+              </Card>
+            </li>
+          ))}
+          {conteudoFiltrado.length === 0 && (
+            <li className="text-sm text-muted-foreground">Nenhuma URL auditada para este filtro.</li>
+          )}
+        </ul>
       )}
     </main>
   );

@@ -100,6 +100,7 @@ import { Route as AdminChatOsRouteImport } from './routes/admin_.chat-os'
 import { Route as AdminConversaoRouteImport } from './routes/admin_.conversao'
 import { Route as AdminConversasRouteImport } from './routes/admin_.conversas'
 import { Route as AdminDashboardRouteImport } from './routes/admin_.dashboard'
+import { Route as AdminDepoimentosRouteImport } from './routes/admin_.depoimentos'
 import { Route as AdminEditorLocalRouteImport } from './routes/admin_.editor-local'
 import { Route as AdminEditorialOndasRouteImport } from './routes/admin_.editorial-ondas'
 import { Route as AdminExperimentoWaRouteImport } from './routes/admin_.experimento-wa'
@@ -960,6 +961,11 @@ const AdminConversasRoute = AdminConversasRouteImport.update({
 const AdminDashboardRoute = AdminDashboardRouteImport.update({
   id: '/admin_/dashboard',
   path: '/admin/dashboard',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AdminDepoimentosRoute = AdminDepoimentosRouteImport.update({
+  id: '/admin_/depoimentos',
+  path: '/admin/depoimentos',
   getParentRoute: () => rootRouteImport,
 } as any)
 const AdminEditorLocalRoute = AdminEditorLocalRouteImport.update({
@@ -3143,6 +3149,7 @@ export interface FileRoutesByFullPath {
   '/admin/conversao': typeof AdminConversaoRoute
   '/admin/conversas': typeof AdminConversasRoute
   '/admin/dashboard': typeof AdminDashboardRoute
+  '/admin/depoimentos': typeof AdminDepoimentosRoute
   '/admin/editor-local': typeof AdminEditorLocalRoute
   '/admin/editorial-ondas': typeof AdminEditorialOndasRoute
   '/admin/experimento-wa': typeof AdminExperimentoWaRoute
@@ -3624,6 +3631,7 @@ export interface FileRoutesByTo {
   '/admin/conversao': typeof AdminConversaoRoute
   '/admin/conversas': typeof AdminConversasRoute
   '/admin/dashboard': typeof AdminDashboardRoute
+  '/admin/depoimentos': typeof AdminDepoimentosRoute
   '/admin/editor-local': typeof AdminEditorLocalRoute
   '/admin/editorial-ondas': typeof AdminEditorialOndasRoute
   '/admin/experimento-wa': typeof AdminExperimentoWaRoute
@@ -4106,6 +4114,7 @@ export interface FileRoutesById {
   '/admin_/conversao': typeof AdminConversaoRoute
   '/admin_/conversas': typeof AdminConversasRoute
   '/admin_/dashboard': typeof AdminDashboardRoute
+  '/admin_/depoimentos': typeof AdminDepoimentosRoute
   '/admin_/editor-local': typeof AdminEditorLocalRoute
   '/admin_/editorial-ondas': typeof AdminEditorialOndasRoute
   '/admin_/experimento-wa': typeof AdminExperimentoWaRoute
@@ -4589,6 +4598,7 @@ export interface FileRouteTypes {
     | '/admin/conversao'
     | '/admin/conversas'
     | '/admin/dashboard'
+    | '/admin/depoimentos'
     | '/admin/editor-local'
     | '/admin/editorial-ondas'
     | '/admin/experimento-wa'
@@ -5070,6 +5080,7 @@ export interface FileRouteTypes {
     | '/admin/conversao'
     | '/admin/conversas'
     | '/admin/dashboard'
+    | '/admin/depoimentos'
     | '/admin/editor-local'
     | '/admin/editorial-ondas'
     | '/admin/experimento-wa'
@@ -5551,6 +5562,7 @@ export interface FileRouteTypes {
     | '/admin_/conversao'
     | '/admin_/conversas'
     | '/admin_/dashboard'
+    | '/admin_/depoimentos'
     | '/admin_/editor-local'
     | '/admin_/editorial-ondas'
     | '/admin_/experimento-wa'
@@ -6033,6 +6045,7 @@ export interface RootRouteChildren {
   AdminConversaoRoute: typeof AdminConversaoRoute
   AdminConversasRoute: typeof AdminConversasRoute
   AdminDashboardRoute: typeof AdminDashboardRoute
+  AdminDepoimentosRoute: typeof AdminDepoimentosRoute
   AdminEditorLocalRoute: typeof AdminEditorLocalRoute
   AdminEditorialOndasRoute: typeof AdminEditorialOndasRoute
   AdminExperimentoWaRoute: typeof AdminExperimentoWaRoute
@@ -7060,6 +7073,13 @@ declare module '@tanstack/react-router' {
       path: '/admin/dashboard'
       fullPath: '/admin/dashboard'
       preLoaderRoute: typeof AdminDashboardRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/admin_/depoimentos': {
+      id: '/admin_/depoimentos'
+      path: '/admin/depoimentos'
+      fullPath: '/admin/depoimentos'
+      preLoaderRoute: typeof AdminDepoimentosRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/admin_/editor-local': {
@@ -9876,6 +9896,7 @@ const rootRouteChildren: RootRouteChildren = {
   AdminConversaoRoute: AdminConversaoRoute,
   AdminConversasRoute: AdminConversasRoute,
   AdminDashboardRoute: AdminDashboardRoute,
+  AdminDepoimentosRoute: AdminDepoimentosRoute,
   AdminEditorLocalRoute: AdminEditorLocalRoute,
   AdminEditorialOndasRoute: AdminEditorialOndasRoute,
   AdminExperimentoWaRoute: AdminExperimentoWaRoute,

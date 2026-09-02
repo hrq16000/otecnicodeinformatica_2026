@@ -8,6 +8,7 @@ import { supabase } from "@/integrations/supabase/client";
 import { siteConfig } from "@/lib/siteConfig";
 import { SitemapLedgerPanel } from "@/components/admin/SitemapLedgerPanel";
 import { IndexacaoLedgerPanel } from "@/components/admin/IndexacaoLedgerPanel";
+import { DeployStatusPanel } from "@/components/admin/DeployStatusPanel";
 import auditoriaAfirmacoes from "@/data/trustClaimsAudit.json";
 
 
@@ -230,6 +231,10 @@ export default function AdminSeo() {
       </p>
 
       {erroInv && <Card className="mt-4 border-destructive/40 p-4 text-sm text-destructive">{erroInv}</Card>}
+
+      <div className="mt-6">
+        <DeployStatusPanel />
+      </div>
 
       <div className="mt-6 grid gap-3 sm:grid-cols-4">
         <Kpi label="URLs" valor={String(inv?.total ?? 0)} hint={inv ? `gerado em ${new Date(inv.geradoEm).toLocaleString("pt-BR")}` : "—"} />
