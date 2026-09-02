@@ -12,6 +12,15 @@
  */
 import { readFileSync, existsSync, mkdirSync, writeFileSync, copyFileSync, readdirSync } from "node:fs";
 import { join, dirname } from "node:path";
+import { CATEGORIES, LOCAIS } from "./lib/category-local.mjs";
+
+// Rotas serviço × cidade/bairro: mesmo quando noindex (fora do sitemap),
+// os gates de breadcrumb/intenção precisam do HTML renderizado.
+function rotasCategoriaLocal() {
+  const out = [];
+  for (const cat of CATEGORIES) for (const local of LOCAIS) out.push(`/${cat.slug}/${local.slug}`);
+  return out;
+}
 
 const dist = process.argv[2] || "dist";
 const base = (process.argv[3] || process.env.SNAPSHOT_BASE_URL || "http://localhost:8080").replace(/\/$/, "");
@@ -63,7 +72,7 @@ async function baixar(rota) {
 }
 
 async function main() {
-  const rotas = [...new Set([...rotasDosSitemaps(), ...rotasDaPolitica()])].sort();
+  const rotas = [...new Set([...rotasDosSitemaps(), ...rotasDaPolitica(), ...rotasCategoriaLocal()])].sort();
   console.log(`snapshot-ssr: ${rotas.length} rota(s) a partir de ${base}`);
 
   let ok = 0;
