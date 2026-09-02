@@ -238,7 +238,9 @@ export default function AdminAfirmacoes() {
         <p className="text-sm text-muted-foreground">
           {aba === "afirmacoes"
             ? `${ocorrencias.length} afirmações exibidas`
-            : `${urls.length} URLs exibidas · ${urlsSemAfirmacao} URLs curadas sem afirmação mapeada`}
+            : aba === "urls"
+              ? `${urls.length} URLs exibidas · ${urlsSemAfirmacao} URLs curadas sem afirmação mapeada`
+              : `${conteudoFiltrado.length} URLs auditadas · ${conteudo.porStatus["ALERTA_EDITORIAL"] ?? 0} com alerta editorial · ${conteudo.porStatus["ALERTA_TECNICO"] ?? 0} com alerta técnico`}
         </p>
         <Button
           variant="outline"
