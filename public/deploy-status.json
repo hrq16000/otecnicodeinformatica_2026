@@ -1,8 +1,8 @@
 {
-  "geradoEm": "2026-09-02T04:16:28.049Z",
+  "geradoEm": "2026-09-02T04:21:16.634Z",
   "dominioEsperado": "https://otecnicodeinformatica.com.br",
-  "status": "FALHA_SMOKE",
-  "motivo": "Checks com falha: sitemap.xml",
+  "status": "PUBLICADO_DESATUALIZADO",
+  "motivo": "Domínio no ar, mas local 587f098 ≠ publicado dev",
   "checks": [
     {
       "nome": "home (SSR)",
@@ -15,8 +15,8 @@
       "nome": "sitemap.xml",
       "url": "https://otecnicodeinformatica.com.br/sitemap.xml",
       "status": 200,
-      "ok": false,
-      "detalhe": "8 URLs"
+      "ok": true,
+      "detalhe": "8 sub-sitemaps"
     },
     {
       "nome": "robots.txt",
