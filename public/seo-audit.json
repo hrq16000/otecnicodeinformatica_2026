@@ -1,8 +1,8 @@
 {
-  "geradoEm": "2026-09-02T03:24:21.012Z",
+  "geradoEm": "2026-09-02T03:34:08.856Z",
   "baseUrl": "https://otecnicodeinformatica.com.br",
   "indexacaoLiberada": true,
-  "rotasAuditadas": 135,
+  "rotasAuditadas": 145,
   "erros": [],
   "avisos": [
     {
@@ -192,6 +192,10 @@
     {
       "rota": "/servicos/suporte-home-office/curitiba",
       "msg": "description com 163 chars (ideal ≤ 160)"
+    },
+    {
+      "rota": "/entidades",
+      "msg": "description com 162 chars (ideal ≤ 160)"
     }
   ]
 }

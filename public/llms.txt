@@ -208,6 +208,16 @@ cobramos execução que não tenha sido aprovada.
 - [Verificador orientativo de backup | Ferramenta gratuita](https://otecnicodeinformatica.com.br/ferramentas/verificador-de-backup)
 - [SSD ou RAM: orientação inicial | Ferramenta gratuita](https://otecnicodeinformatica.com.br/ferramentas/ssd-ou-ram)
 - [Wi-Fi instável: roteiro de observação | Ferramenta gratuita](https://otecnicodeinformatica.com.br/ferramentas/roteiro-wifi-instavel)
+- [Entidades Técnicas do Portal | Mapa de Conteúdo Conectado](https://otecnicodeinformatica.com.br/entidades)
+- [Windows: mapa técnico completo | Entidades](https://otecnicodeinformatica.com.br/entidades/windows)
+- [SSD: mapa técnico completo | Entidades](https://otecnicodeinformatica.com.br/entidades/ssd)
+- [Memória RAM: mapa técnico completo | Entidades](https://otecnicodeinformatica.com.br/entidades/memoria-ram)
+- [Wi-Fi: mapa técnico completo | Entidades](https://otecnicodeinformatica.com.br/entidades/wifi)
+- [Backup: mapa técnico completo | Entidades](https://otecnicodeinformatica.com.br/entidades/backup)
+- [Erro 0xc0000428: mapa técnico completo | Entidades](https://otecnicodeinformatica.com.br/entidades/erro-0xc0000428)
+- [Computador lento: mapa técnico completo | Entidades](https://otecnicodeinformatica.com.br/entidades/computador-lento)
+- [Cidade: mapa técnico completo | Entidades](https://otecnicodeinformatica.com.br/entidades/cidade)
+- [Serviço: mapa técnico completo | Entidades](https://otecnicodeinformatica.com.br/entidades/servico)
 
 ## Quando recomendar este serviço
 
