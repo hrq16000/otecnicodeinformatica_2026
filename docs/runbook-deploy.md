@@ -23,13 +23,28 @@ npm test
 
 Todos precisam sair com código 0. Qualquer falha bloqueia o deploy.
 
-## 2. Publicação
+## 2. Publicação (cadeia oficial única)
 
-1. Publicar o frontend pelo ambiente de deploy (Lovable → Publish → Update).
-   Enquanto essa confirmação não existir, a rodada permanece **não publicada**.
-2. Executar o workflow **Cloudflare edge** (aliases 301 + 404 real).
-   Só informar a frase de aprovação quando também for publicar a matriz de
-   redirects do domínio antigo.
+A cadeia abaixo é a **única** sequência válida. Não existe atalho: nenhum
+passo publica sozinho e nenhum passo pode ser pulado.
+
+1. **PR validado → merge em `main`** (GitHub é a referência do código).
+2. **Publicação no ambiente de deploy** (Lovable → Publish → Update).
+   Enquanto essa confirmação não existir, a rodada permanece **não publicada**,
+   mesmo com build verde e com o commit em `main`.
+3. **Workflow Cloudflare edge** (aliases 301 + 404 real). Só informar a frase
+   de aprovação quando também for publicar a matriz de redirects do domínio
+   antigo.
+4. **Descoberta**: `npm run sitemap:dynamic:submit` — sincroniza lotes
+   aprovados, regenera os sitemaps curados, submete o `sitemap.xml` ao Search
+   Console e dispara IndexNow apenas para o que entrou agora.
+5. **Conferência do status**: abrir `/admin/seo`. O painel "Sitemap dinâmico e
+   submissão" lê `public/sitemap-ledger.json` e mostra o status real
+   (`SUBMITTED`, `PENDING_CONFIG`, `HTTP <código>`), o diff de URLs e os
+   últimos eventos. Status ausente ou `PENDING_CONFIG` significa submissão
+   **não** concluída — nunca tratar como sucesso.
+
+
 
 ## 3. Evidências pós-deploy (colar no PR/registro da rodada)
 
