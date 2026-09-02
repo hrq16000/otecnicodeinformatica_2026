@@ -86,20 +86,17 @@ for (const r of riscos) {
   }
 }
 
-// ── 2. HTML do build ─────────────────────────────────────────
-if (!existsSync(DIST)) {
-  console.error(`BLOQUEADO: dist ausente em ${DIST}. Rode o build antes de check:atlas-hub.`);
+// ── 2. HTML SSR real (harness — stack TanStack Start) ────────
+// Após a migração para SSR, `dist/` não guarda HTML estático por rota: o
+// harness renderiza a rota contra o servidor e grava o snapshot.
+await prepararSsr([ROTA], { dist: DIST });
+abortarSeBloqueado("check:atlas-hub");
+const html = htmlDaRota(ROTA, DIST);
+if (!html) {
+  console.error(`BLOQUEADO: HTML de ${ROTA} não obtido no SSR.`);
   process.exit(1);
 }
-const htmlPath = [
-  path.join(DIST, ROTA.slice(1), "index.html"),
-  path.join(DIST, `${ROTA.slice(1)}.html`),
-].find(existsSync);
-if (!htmlPath) {
-  console.error(`BLOQUEADO: HTML de ${ROTA} não encontrado no build.`);
-  process.exit(1);
-}
-const html = readFileSync(htmlPath, "utf8");
+
 
 // ── 3. H1 e temas no SSR ─────────────────────────────────────
 if (!/<h1[^>]*>[^<]*Atlas de Informática/i.test(html)) {
