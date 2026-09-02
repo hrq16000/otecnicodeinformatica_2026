@@ -22,6 +22,7 @@ import {
   FontesPrimarias,
 } from "@/components/BlocosEnriquecimento";
 import { enriquecimentoDe } from "@/lib/enriquecimentoConteudo";
+import { getFontesProblema } from "@/lib/fontesProblemas";
 import { BlocosConversacionais } from "@/components/BlocosConversacionais";
 import { faqConversacional } from "@/lib/intencaoConversacional";
 import { BlocosRedes4e } from "@/components/redes/BlocosRedes4e";
@@ -471,7 +472,14 @@ const ClusterProblemaPage = () => {
           }
         />
 
-        <FontesPrimarias fontes={extra?.fontes} />
+        <FontesPrimarias
+          fontes={[
+            ...(extra?.fontes ?? []),
+            ...getFontesProblema(slug).filter(
+              (f) => !(extra?.fontes ?? []).some((e) => e.url === f.url),
+            ),
+          ]}
+        />
 
         <section className="mt-12" aria-labelledby="faq">
           <h2 id="faq" className="mb-4 font-heading text-2xl font-bold text-foreground">
