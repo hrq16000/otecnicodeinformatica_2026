@@ -8,6 +8,13 @@ import { supabase } from "@/integrations/supabase/client";
 import { RevisaoAfirmacao, type RevisaoRegistro } from "@/components/admin/RevisaoAfirmacao";
 import auditoria from "@/data/trustClaimsAudit.json";
 import auditoriaConteudo from "@/data/auditoriaConteudo.json";
+import {
+  desempenhoDaUrl,
+  statusIndexacao,
+  gscDisponivel,
+  ROTULO_INDEXACAO,
+  type GscConsulta,
+} from "@/lib/gscSnapshot";
 
 /**
  * AFIRMAÇÕES DE CONFIANÇA — /admin/afirmacoes.
