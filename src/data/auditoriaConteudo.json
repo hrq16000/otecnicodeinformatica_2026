@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-09-02T04:34:00.040Z",
+  "geradoEm": "2026-09-02T04:34:19.409Z",
   "fonte": "sitemap curado (scripts/lib/curated-urls.mjs) + SSR real",
   "ssr": {
     "base": "http://localhost:8080",
@@ -91,7 +91,7 @@
       "alertaEditorial": 0,
       "pendenteRevisao": 0,
       "pendenteSsr": 0,
-      "semFonte": 10,
+      "semFonte": 1,
       "semLimite": 0,
       "condicionais": 0
     },
@@ -6018,8 +6018,8 @@
         "WebPage",
         "WebSite"
       ],
-      "palavras": 2397,
-      "fontesPrimarias": false,
+      "palavras": 2451,
+      "fontesPrimarias": true,
       "limiteSeguranca": true,
       "ligacoes": {
         "ferramenta": false,
@@ -6032,9 +6032,7 @@
         "title com 81 caracteres",
         "description com 171 caracteres"
       ],
-      "alertasEditoriais": [
-        "sem fonte primária citada"
-      ],
+      "alertasEditoriais": [],
       "ssr": "OK",
       "claims": {
         "COMPROVADA": 0,
@@ -6061,8 +6059,8 @@
         "WebPage",
         "WebSite"
       ],
-      "palavras": 1960,
-      "fontesPrimarias": false,
+      "palavras": 1974,
+      "fontesPrimarias": true,
       "limiteSeguranca": true,
       "ligacoes": {
         "ferramenta": false,
@@ -6075,9 +6073,7 @@
         "title com 86 caracteres",
         "description com 170 caracteres"
       ],
-      "alertasEditoriais": [
-        "sem fonte primária citada"
-      ],
+      "alertasEditoriais": [],
       "ssr": "OK",
       "claims": {
         "COMPROVADA": 0,
@@ -6104,8 +6100,8 @@
         "WebPage",
         "WebSite"
       ],
-      "palavras": 2144,
-      "fontesPrimarias": false,
+      "palavras": 2175,
+      "fontesPrimarias": true,
       "limiteSeguranca": true,
       "ligacoes": {
         "ferramenta": false,
@@ -6117,9 +6113,7 @@
       "alertasTecnicos": [
         "title com 76 caracteres"
       ],
-      "alertasEditoriais": [
-        "sem fonte primária citada"
-      ],
+      "alertasEditoriais": [],
       "ssr": "OK",
       "claims": {
         "COMPROVADA": 0,
@@ -6146,7 +6140,7 @@
         "WebPage",
         "WebSite"
       ],
-      "palavras": 3120,
+      "palavras": 3134,
       "fontesPrimarias": true,
       "limiteSeguranca": true,
       "ligacoes": {
@@ -6224,8 +6218,8 @@
         "WebPage",
         "WebSite"
       ],
-      "palavras": 2735,
-      "fontesPrimarias": false,
+      "palavras": 2763,
+      "fontesPrimarias": true,
       "limiteSeguranca": true,
       "ligacoes": {
         "ferramenta": false,
@@ -6238,9 +6232,7 @@
         "title com 81 caracteres",
         "description com 166 caracteres"
       ],
-      "alertasEditoriais": [
-        "sem fonte primária citada"
-      ],
+      "alertasEditoriais": [],
       "ssr": "OK",
       "claims": {
         "COMPROVADA": 0,
@@ -6267,7 +6259,7 @@
         "WebPage",
         "WebSite"
       ],
-      "palavras": 2714,
+      "palavras": 2747,
       "fontesPrimarias": true,
       "limiteSeguranca": true,
       "ligacoes": {
@@ -6308,8 +6300,8 @@
         "WebPage",
         "WebSite"
       ],
-      "palavras": 1882,
-      "fontesPrimarias": false,
+      "palavras": 1910,
+      "fontesPrimarias": true,
       "limiteSeguranca": true,
       "ligacoes": {
         "ferramenta": false,
@@ -6322,9 +6314,7 @@
         "title com 72 caracteres",
         "description com 181 caracteres"
       ],
-      "alertasEditoriais": [
-        "sem fonte primária citada"
-      ],
+      "alertasEditoriais": [],
       "ssr": "OK",
       "claims": {
         "COMPROVADA": 0,
@@ -6351,8 +6341,8 @@
         "WebPage",
         "WebSite"
       ],
-      "palavras": 1760,
-      "fontesPrimarias": false,
+      "palavras": 1774,
+      "fontesPrimarias": true,
       "limiteSeguranca": true,
       "ligacoes": {
         "ferramenta": false,
@@ -6364,9 +6354,7 @@
       "alertasTecnicos": [
         "title com 79 caracteres"
       ],
-      "alertasEditoriais": [
-        "sem fonte primária citada"
-      ],
+      "alertasEditoriais": [],
       "ssr": "OK",
       "claims": {
         "COMPROVADA": 0,
@@ -6393,8 +6381,8 @@
         "WebPage",
         "WebSite"
       ],
-      "palavras": 1782,
-      "fontesPrimarias": false,
+      "palavras": 1810,
+      "fontesPrimarias": true,
       "limiteSeguranca": true,
       "ligacoes": {
         "ferramenta": false,
@@ -6406,9 +6394,7 @@
       "alertasTecnicos": [
         "description com 167 caracteres"
       ],
-      "alertasEditoriais": [
-        "sem fonte primária citada"
-      ],
+      "alertasEditoriais": [],
       "ssr": "OK",
       "claims": {
         "COMPROVADA": 0,
@@ -6472,8 +6458,8 @@
         "WebPage",
         "WebSite"
       ],
-      "palavras": 1833,
-      "fontesPrimarias": false,
+      "palavras": 1861,
+      "fontesPrimarias": true,
       "limiteSeguranca": true,
       "ligacoes": {
         "ferramenta": false,
@@ -6485,9 +6471,7 @@
       "alertasTecnicos": [
         "title com 82 caracteres"
       ],
-      "alertasEditoriais": [
-        "sem fonte primária citada"
-      ],
+      "alertasEditoriais": [],
       "ssr": "OK",
       "claims": {
         "COMPROVADA": 0,
@@ -6514,8 +6498,8 @@
         "WebPage",
         "WebSite"
       ],
-      "palavras": 2260,
-      "fontesPrimarias": false,
+      "palavras": 2306,
+      "fontesPrimarias": true,
       "limiteSeguranca": true,
       "ligacoes": {
         "ferramenta": false,
@@ -6528,9 +6512,7 @@
         "title com 85 caracteres",
         "description com 166 caracteres"
       ],
-      "alertasEditoriais": [
-        "sem fonte primária citada"
-      ],
+      "alertasEditoriais": [],
       "ssr": "OK",
       "claims": {
         "COMPROVADA": 0,
@@ -6557,7 +6539,7 @@
         "WebPage",
         "WebSite"
       ],
-      "palavras": 3603,
+      "palavras": 3621,
       "fontesPrimarias": true,
       "limiteSeguranca": true,
       "ligacoes": {
@@ -6597,7 +6579,7 @@
         "WebPage",
         "WebSite"
       ],
-      "palavras": 5627,
+      "palavras": 5655,
       "fontesPrimarias": true,
       "limiteSeguranca": true,
       "ligacoes": {
