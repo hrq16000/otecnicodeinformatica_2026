@@ -22,6 +22,7 @@ import { blogPostsContentBase } from "@/data/blogPostsContent";
 import type { BlogPostContent } from "@/data/blogPostsContent";
 import { BlogPostFAQ } from "@/components/BlogPostFAQ";
 import { EnriquecimentoFase2 } from "@/components/editorial/EnriquecimentoFase2";
+import { AtlasPonteArtigo } from "@/components/editorial/AtlasPonteArtigo";
 import { EditorialCta, EditorialRelatedLinks } from "@/components/editorial/EditorialCta";
 import {
   isEditorialApproved,
@@ -384,6 +385,9 @@ const BlogPost = () => {
 
               {/* Fase 2: limite técnico, fontes primárias e ligação semântica */}
               <EnriquecimentoFase2 slug={slug ?? ""} />
+
+              {/* Ponte bidirecional artigo-pilar → trilha do Atlas (fail-closed) */}
+              <AtlasPonteArtigo slug={slug ?? ""} />
 
               {/* Cluster editorial (Rodada 4F): conteúdos relacionados + CTA de triagem */}
               <EditorialRelatedLinks
