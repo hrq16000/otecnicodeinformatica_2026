@@ -371,7 +371,9 @@
     "sitemap:dynamic": "node scripts/sitemap-dynamic.mjs",
     "sitemap:dynamic:check": "node scripts/sitemap-dynamic.mjs --check",
     "sitemap:dynamic:submit": "node scripts/sitemap-dynamic.mjs --submit",
-    "postbuild": "node scripts/report-seo-inventory.mjs"
+    "postbuild": "node scripts/report-seo-inventory.mjs",
+    "check:entidades": "bun scripts/check-entidades.ts",
+    "generate:entidades-static": "bun scripts/generate-entidades-static.ts"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.2",
