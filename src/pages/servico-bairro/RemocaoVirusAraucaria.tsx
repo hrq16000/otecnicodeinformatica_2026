@@ -47,7 +47,7 @@ const data: ServicoBairroData = {
     },
     { 
       pergunta: "Atendem empresas do polo industrial?", 
-      resposta: "Sim! Atendemos empresas de todos os portes no distrito industrial com soluções corporativas de segurança." 
+      resposta: "Sim. Atendemos empresas do distrito industrial: remoção de malware, revisão de contas comprometidas e rotina de backup, com escopo definido após avaliação." 
     },
     { 
       pergunta: "Meus dados ficam seguros durante a remoção?", 

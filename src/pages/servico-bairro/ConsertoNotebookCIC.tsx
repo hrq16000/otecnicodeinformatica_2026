@@ -45,7 +45,7 @@ const data: ServicoBairroData = {
   faq: [
     { 
       pergunta: "Vocês atendem empresas na CIC?", 
-      resposta: "Sim! Atendemos indústrias, escritórios e comércios em toda a CIC. Emitimos nota fiscal e oferecemos contratos de manutenção mensal." 
+      resposta: "Sim. Atendemos indústrias, escritórios e comércios em toda a CIC, com nota fiscal. A manutenção recorrente é combinada sob consulta, com escopo e valor definidos após avaliação." 
     },
     { 
       pergunta: "Qual o prazo de conserto para empresas?", 

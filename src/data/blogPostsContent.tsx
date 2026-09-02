@@ -2131,11 +2131,11 @@ docker run -d --name db --network minha-rede postgres
         </ul>
 
         <h2>Por que o Técnico de Informática no Litoral?</h2>
-        <p>A equipe do <strong>Mestre dos Serviços (Henrique da Cruz)</strong> atua desde 1999 e conhece as particularidades do litoral paranaense. Já instalamos câmeras em centenas de imóveis em <strong>Itapoá, Guaratuba, Matinhos e Pontal do Paraná</strong>.</p>
+        <p>O atendimento no litoral considera as condições locais: maresia, oscilação de energia, imóveis fechados por longos períodos e internet instável fora da temporada. Cada um desses fatores muda a escolha de equipamento, o ponto de instalação e a forma de acesso remoto — e é avaliado antes da proposta.</p>
 
         <div className="bg-accent/10 rounded-xl p-6 my-8">
           <h3 className="text-accent font-bold mb-2">Instalação Profissional no Litoral do PR</h3>
-          <p className="text-muted-foreground mb-0">Kit 4 câmeras Intelbras com instalação especializada por <strong>R$ 1.350</strong>. Atendemos todo o litoral do Paraná com equipe própria. Garantia de 1 ano.</p>
+          <p className="text-muted-foreground mb-0">Kit 4 câmeras Intelbras com instalação especializada por <strong>R$ 1.350</strong>. Atendimento no litoral do Paraná conforme disponibilidade de agenda. Garantia conforme o serviço executado e o equipamento instalado.</p>
         </div>
       </>
     ),

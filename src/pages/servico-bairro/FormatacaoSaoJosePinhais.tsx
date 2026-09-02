@@ -53,7 +53,7 @@ const data: ServicoBairroData = {
     },
     { 
       pergunta: "Vocês atendem empresas em SJP?", 
-      resposta: "Sim! Atendemos desde pequenos escritórios até empresas industriais na região. Oferecemos contratos de manutenção mensal." 
+      resposta: "Sim. Atendemos de pequenos escritórios a empresas industriais da região. A manutenção recorrente é combinada sob consulta, com escopo e valor definidos após avaliação." 
     },
     { 
       pergunta: "Qual o tempo de atendimento em SJP?", 

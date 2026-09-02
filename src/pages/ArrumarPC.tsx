@@ -51,7 +51,7 @@ const beneficios = [
     icon: Wrench,
     title: "Técnico de verdade",
     description:
-      "+20 anos de experiência com Windows, Mac e Linux. Sem robô, sem call center — você fala direto com o técnico.",
+      "Atendimento com Windows, Mac e Linux. Sem robô, sem call center — você fala direto com o técnico.",
   },
 ];
 
