@@ -870,7 +870,120 @@ export const GUIAS_DECISAO: GuiaDecisaoPagina[] = [
       },
     ],
   },
+  // ── FASE 5 ──────────────────────────────────────────────────────────────
+  {
+    slug: "trocar-componente-ou-reparar",
+    h1: "Trocar o componente inteiro ou tentar reparar: como decidir peça a peça",
+    nomeCurto: "Trocar componente ou reparar",
+    resumo:
+      "Nem toda peça vale reparo, e nem todo defeito exige troca. Este guia separa peça de desgaste de falha isolada e mostra o que observar antes de autorizar qualquer intervenção.",
+    respostaDireta:
+      "Troque o componente quando ele for peça de desgaste (bateria, ventoinha, pasta térmica, disco com setores realocados), quando o mesmo sintoma já voltou depois de um reparo ou quando a peça de reposição confiável custa menos que a tentativa. Repare quando a falha é a primeira, tem causa identificada na avaliação e o componente ainda atende ao uso pretendido.",
+    contexto: [
+      "Dentro de um computador convivem duas famílias de componentes com expectativas de vida muito diferentes. Peças de desgaste — bateria, ventoinha, pasta térmica, disco mecânico — degradam por uso e por tempo; elas são projetadas para serem substituídas, e reparo nelas costuma comprar semanas, não anos. Componentes duráveis — placa-mãe, processador, memória, gabinete — não têm desgaste previsível: quando falham, há um evento por trás (surto elétrico, calor acumulado, líquido, choque mecânico).",
+      "Essa distinção resolve boa parte da dúvida antes mesmo de abrir o equipamento. A pergunta útil deixa de ser \"dá para consertar?\" — quase sempre dá — e passa a ser \"quanto tempo de uso confiável este reparo compra, e a que risco?\".",
+      "Há ainda o custo de repetir. Duas intervenções sucessivas no mesmo componente custam mais que a substituição feita de uma vez, e cada nova tentativa em equipamento com falha física aumenta o risco de perder dados. Quando o mesmo sintoma reaparece, o dado relevante não é o preço da peça: é o histórico.",
+    ],
+    comoDecidir: [
+      {
+        titulo: "1. Classifique a peça: desgaste ou durável",
+        texto:
+          "Bateria, ventoinha, pasta térmica, disco mecânico e cabo flat são consumíveis com vida útil. Placa-mãe, processador, memória e fonte são duráveis: quando falham, existe uma causa a investigar antes de simplesmente substituir — senão a peça nova encontra o mesmo ambiente que matou a anterior.",
+      },
+      {
+        titulo: "2. Verifique se é a primeira ocorrência",
+        texto:
+          "Primeira falha, com causa identificada e escopo fechado, favorece reparo. Reincidência no mesmo componente indica causa não resolvida: nesse caso, trocar a peça sem tratar a causa apenas adia o próximo chamado.",
+      },
+      {
+        titulo: "3. Confirme disponibilidade e procedência da peça",
+        texto:
+          "Peça sem procedência clara em função crítica de energia — fonte, carregador, bateria — é risco para o resto do equipamento. Se a alternativa disponível é essa, a decisão muda de figura mesmo quando o reparo seria tecnicamente possível.",
+      },
+      {
+        titulo: "4. Some o conjunto, não a peça isolada",
+        texto:
+          "Se o mesmo equipamento acumula tela, bateria, teclado e armazenamento comprometidos, a soma das trocas deixa de ser decisão de componente e vira decisão de equipamento. Nesse ponto, o guia correto é o de consertar ou substituir a máquina.",
+      },
+      {
+        titulo: "5. Garanta o backup antes de autorizar",
+        texto:
+          "Qualquer intervenção que envolva armazenamento — reparo ou troca — começa pela cópia dos dados conferida em outra mídia. Essa etapa não é opcional e não depende de qual caminho for escolhido.",
+      },
+    ],
+    custo:
+      "O que costuma pesar na conta não é a peça: é a mão de obra repetida e o tempo com o equipamento parado. Reparo em componente de desgaste tende a exigir retorno; substituição bem indicada resolve uma vez. Os valores de referência de cada serviço e a regra de aprovação antes da execução ficam sempre visíveis na página de preços e políticas — peça e mão de obra são discriminadas separadamente no orçamento.",
+    ondeParar: [
+      "Cheiro de queimado, marca de arco elétrico ou componente visivelmente estufado: não religue e não substitua a peça sem avaliar a causa.",
+      "Bateria inchada deformando a carcaça — manuseio inadequado é risco de incêndio.",
+      "Disco com ruído mecânico: preserve os dados antes de qualquer decisão sobre a peça.",
+      "Equipamento em garantia do fabricante: abrir pode encerrar a cobertura.",
+      "Orçamento que não separa o que é peça e o que é mão de obra.",
+    ],
+    perguntas: [
+      {
+        pergunta: "Trocar a peça é sempre mais caro que reparar?",
+        resposta:
+          "Não. Em peças de desgaste a substituição costuma sair mais barata no total, porque o reparo exige retorno em pouco tempo. O preço da peça isolada engana: o que conta é o custo por tempo de uso confiável obtido.",
+      },
+      {
+        pergunta: "Posso trocar só a peça defeituosa e manter o resto?",
+        resposta:
+          "Na maior parte dos casos sim, desde que a peça nova seja compatível com a plataforma e a causa da falha tenha sido tratada. Em falha de origem elétrica, substituir apenas o componente queimado sem verificar a alimentação costuma repetir o problema.",
+      },
+      {
+        pergunta: "Como sei se a placa-mãe ainda vale investimento?",
+        resposta:
+          "Pelo que ela permite daqui para frente: quanto de memória aceita, que tipo de armazenamento suporta e se o processador atende ao uso pretendido. Placa que já está no teto da própria plataforma limita qualquer upgrade futuro.",
+      },
+      {
+        pergunta: "Peça usada resolve?",
+        resposta:
+          "Pode resolver em componentes não críticos e com procedência verificável. Em fonte, carregador e bateria a recomendação é outra: o risco recai sobre o equipamento inteiro e sobre a segurança de quem usa.",
+      },
+    ],
+    links: [
+      {
+        rotulo: "Consertar ou substituir o equipamento",
+        to: "/decisoes/consertar-ou-substituir",
+        contexto: "Quando a soma das peças deixa de compensar e a decisão passa a ser da máquina.",
+      },
+      {
+        rotulo: "SSD ou mais memória RAM",
+        to: "/decisoes/ssd-ou-memoria-ram",
+        contexto: "Se a motivação é desempenho e não defeito, comece pelo gargalo real.",
+      },
+      {
+        rotulo: "Backup antes da manutenção",
+        to: "/decisoes/backup-antes-da-manutencao",
+        contexto: "O que copiar e conferir antes de autorizar reparo ou troca.",
+      },
+      {
+        rotulo: "Computador esquentando",
+        to: "/problemas/computador-esquentando",
+        contexto: "O sintoma que mais gera troca desnecessária de componente durável.",
+      },
+      {
+        rotulo: "Quando não compensa",
+        to: "/quando-nao-compensa",
+        contexto: "Os casos em que a resposta honesta é não executar o serviço.",
+      },
+      {
+        rotulo: "Atlas de informática",
+        to: "/guia-tecnico-informatica",
+        contexto: "Trilha completa de decisões de compra e reparo, do fundamento à execução.",
+      },
+    ],
+    fontes: [
+      {
+        titulo: "NIST SP 800-88 — sanitização de mídia",
+        url: "https://csrc.nist.gov/pubs/sp/800/88/r1/final",
+        nota: "Referência oficial sobre descarte e reaproveitamento seguro de mídias substituídas.",
+      },
+    ],
+  },
 ];
+
 
 
 export const guiaDecisaoPorSlug = (slug: string): GuiaDecisaoPagina | undefined =>
