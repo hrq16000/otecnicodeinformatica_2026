@@ -187,6 +187,9 @@ export default function AdminAfirmacoes() {
         <Button variant={aba === "urls" ? "default" : "outline"} size="sm" onClick={() => setAba("urls")}>
           URLs do sitemap ({dados.urlsCuradas})
         </Button>
+        <Button variant={aba === "conteudo" ? "default" : "outline"} size="sm" onClick={() => setAba("conteudo")}>
+          Conteúdo E-E-A-T ({conteudo.total})
+        </Button>
         <Input
           className="w-full max-w-xs"
           placeholder="Buscar trecho, arquivo ou URL"
