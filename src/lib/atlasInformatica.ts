@@ -273,6 +273,23 @@ export const ATLAS_TEMAS: AtlasTema[] = [
       { to: "/servicos/manutencao-de-computador", label: "Manutenção de computador" },
       { to: "/servicos/montagem-de-pc", label: "Montagem de PC sob medida" },
     ],
+    fontes: [
+      {
+        titulo: "NVM Express — especificação e visão geral do NVMe",
+        url: "https://nvmexpress.org/specifications/",
+        nota: "Referência oficial do protocolo usado ao comparar SSD SATA e NVMe.",
+      },
+      {
+        titulo: "JEDEC — padrões de memória DDR",
+        url: "https://www.jedec.org/standards-documents/technology-focus-areas/main-memory-ddr3-ddr4-sdram",
+        nota: "Padrão que define compatibilidade e nomenclatura das memórias citadas.",
+      },
+      {
+        titulo: "Microsoft Learn — diagnóstico de desempenho no Windows",
+        url: "https://learn.microsoft.com/en-us/troubleshoot/windows-client/performance/windows-based-computers-freeze-or-restart-unexpectedly",
+        nota: "Base oficial para confirmar gargalo antes de trocar peça.",
+      },
+    ],
   },
   {
     id: "redes-wifi",
