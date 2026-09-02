@@ -20,6 +20,7 @@ import { CLUSTER_PROBLEMAS_ROUTES } from "./lib/cluster-problemas-static.mjs";
 import { CLUSTER_EQUIPAMENTOS_ROUTES } from "./lib/cluster-equipamentos-static.mjs";
 import { CLUSTER_SOLUCOES_ROUTES } from "./lib/cluster-solucoes-static.mjs";
 import { BIBLIOTECA_ROUTES } from "./lib/biblioteca-static.mjs";
+import { ENTIDADES_ROUTES } from "./lib/entidades-static.mjs";
 
 const BASE_ROUTES = [
   {
@@ -1046,5 +1047,6 @@ export const CURATED_ROUTES = [
   ...SERVICO_BAIRRO_ROUTES,
   ...SERVICO_CURITIBA_ROUTES,
   ...BIBLIOTECA_ROUTES,
+  ...ENTIDADES_ROUTES,
 ].map(withBlocos4q);
 
