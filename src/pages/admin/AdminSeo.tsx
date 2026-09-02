@@ -6,6 +6,8 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { supabase } from "@/integrations/supabase/client";
 import { siteConfig } from "@/lib/siteConfig";
+import { SitemapLedgerPanel } from "@/components/admin/SitemapLedgerPanel";
+
 
 /**
  * PAINEL SEO POR URL — /admin/seo.
