@@ -931,7 +931,36 @@ export const ATLAS_GUIAS_DECISAO: AtlasGuiaDecisao[] = [
     to: "/servicos/montagem-de-pc",
     linkLabel: "Montagem sob medida",
   },
+  // ── FASE 5 ────────────────────────────────────────────────────────────────
+  {
+    id: "trocar-componente-ou-reparar",
+    pergunta: "Trocar o componente inteiro ou tentar reparar?",
+    criterio:
+      "Peça de desgaste (bateria, ventoinha, pasta térmica, disco mecânico) é feita para ser substituída — insistir no reparo compra pouco tempo. Falha isolada em componente durável, com peça disponível e sem reincidência, ainda compensa reparar.",
+    sinais: [
+      {
+        rotulo: "Aponta para trocar o componente",
+        pontos: [
+          "O mesmo sintoma voltou depois de uma intervenção recente no mesmo componente",
+          "É peça de desgaste: bateria que não sustenta carga, ventoinha com rolamento gasto, disco com setores realocados crescendo",
+          "O reparo depende de peça sem procedência clara para função crítica de energia",
+        ],
+      },
+      {
+        rotulo: "Aponta para reparar",
+        pontos: [
+          "Falha única, primeira ocorrência, com causa identificada na avaliação",
+          "Componente durável e compatível com o uso pretendido nos próximos anos",
+          "Peça original disponível e reparo com escopo fechado antes da execução",
+        ],
+      },
+    ],
+    risco: "Exige atenção",
+    to: "/decisoes/trocar-componente-ou-reparar",
+    linkLabel: "Ver a matriz de decisão",
+  },
 ];
+
 
 
 /** Artigos do tema com aprovação editorial válida (fail-closed em dobro). */
