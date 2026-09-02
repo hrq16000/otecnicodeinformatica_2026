@@ -1052,6 +1052,7 @@ export const legacyRouteElements: Record<string, () => React.ReactElement> = {
   "/admin/capas-pendentes": () => <AdminCapasPendentes />,
   "/admin/biblioteca": () => <AdminBiblioteca />,
   "/admin/afirmacoes": () => <AdminAfirmacoes />,
+  "/admin/depoimentos": () => <AdminDepoimentos />,
   "/admin/seo": () => <AdminSeo />,
   "/admin/ui-performance": () => <AdminUiPerformance />,
   "/admin/dashboard": () => <AdminDashboard />,
