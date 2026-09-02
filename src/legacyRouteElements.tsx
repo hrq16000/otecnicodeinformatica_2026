@@ -523,6 +523,7 @@ const ClusterSolucaoPage = lazyPagina(() => import("./pages/solucoes/ClusterSolu
 
 // Pillar do cluster de informática
 const GuiaTecnicoInformatica = lazyPagina(() => import("./pages/GuiaTecnicoInformatica"));
+const AutoridadeTecnica = lazyPagina(() => import("./pages/AutoridadeTecnica"));
 
 // Fase 3 — Biblioteca Técnica (glossário + ferramentas orientativas)
 const GlossarioHub = lazyPagina(() => import("./pages/biblioteca/GlossarioHub"));
@@ -1005,6 +1006,7 @@ export const legacyRouteElements: Record<string, () => React.ReactElement> = {
   "/solucoes": () => <SolucoesHub />,
   "/solucoes/:slug": () => <ClusterSolucaoPage />,
   "/guia-tecnico-informatica": () => <GuiaTecnicoInformatica />,
+  "/autoridade-tecnica": () => <AutoridadeTecnica />,
   "/glossario": () => <GlossarioHub />,
   "/glossario/:termo": () => <GlossarioTermo />,
   "/ferramentas": () => <FerramentasHub />,

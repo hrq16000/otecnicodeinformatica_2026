@@ -28,3 +28,4 @@ dist-ssr
 reports/
 redirects/rollback/
 .stryker-tmp/
+dist-jsonld/

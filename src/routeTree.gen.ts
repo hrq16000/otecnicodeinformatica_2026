@@ -18,6 +18,7 @@ import { Route as AssistenciaTecnicaCuritibaRouteImport } from './routes/assiste
 import { Route as AtendimentoRouteImport } from './routes/atendimento'
 import { Route as AtendimentoDomicilioRouteImport } from './routes/atendimento-domicilio'
 import { Route as AtendimentoRemotoRouteImport } from './routes/atendimento-remoto'
+import { Route as AutoridadeTecnicaRouteImport } from './routes/autoridade-tecnica'
 import { Route as AvaliarRouteImport } from './routes/avaliar'
 import { Route as BairrosRouteImport } from './routes/bairros'
 import { Route as BlogRouteImport } from './routes/blog'
@@ -530,6 +531,11 @@ const AtendimentoDomicilioRoute = AtendimentoDomicilioRouteImport.update({
 const AtendimentoRemotoRoute = AtendimentoRemotoRouteImport.update({
   id: '/atendimento-remoto',
   path: '/atendimento-remoto',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AutoridadeTecnicaRoute = AutoridadeTecnicaRouteImport.update({
+  id: '/autoridade-tecnica',
+  path: '/autoridade-tecnica',
   getParentRoute: () => rootRouteImport,
 } as any)
 const AvaliarRoute = AvaliarRouteImport.update({
@@ -3037,6 +3043,7 @@ export interface FileRoutesByFullPath {
   '/atendimento': typeof AtendimentoRoute
   '/atendimento-domicilio': typeof AtendimentoDomicilioRoute
   '/atendimento-remoto': typeof AtendimentoRemotoRoute
+  '/autoridade-tecnica': typeof AutoridadeTecnicaRoute
   '/avaliar': typeof AvaliarRoute
   '/bairros': typeof BairrosRoute
   '/blog': typeof BlogRoute
@@ -3514,6 +3521,7 @@ export interface FileRoutesByTo {
   '/atendimento': typeof AtendimentoRoute
   '/atendimento-domicilio': typeof AtendimentoDomicilioRoute
   '/atendimento-remoto': typeof AtendimentoRemotoRoute
+  '/autoridade-tecnica': typeof AutoridadeTecnicaRoute
   '/avaliar': typeof AvaliarRoute
   '/bairros': typeof BairrosRoute
   '/blog': typeof BlogRoute
@@ -3992,6 +4000,7 @@ export interface FileRoutesById {
   '/atendimento': typeof AtendimentoRoute
   '/atendimento-domicilio': typeof AtendimentoDomicilioRoute
   '/atendimento-remoto': typeof AtendimentoRemotoRoute
+  '/autoridade-tecnica': typeof AutoridadeTecnicaRoute
   '/avaliar': typeof AvaliarRoute
   '/bairros': typeof BairrosRoute
   '/blog': typeof BlogRoute
@@ -4471,6 +4480,7 @@ export interface FileRouteTypes {
     | '/atendimento'
     | '/atendimento-domicilio'
     | '/atendimento-remoto'
+    | '/autoridade-tecnica'
     | '/avaliar'
     | '/bairros'
     | '/blog'
@@ -4948,6 +4958,7 @@ export interface FileRouteTypes {
     | '/atendimento'
     | '/atendimento-domicilio'
     | '/atendimento-remoto'
+    | '/autoridade-tecnica'
     | '/avaliar'
     | '/bairros'
     | '/blog'
@@ -5425,6 +5436,7 @@ export interface FileRouteTypes {
     | '/atendimento'
     | '/atendimento-domicilio'
     | '/atendimento-remoto'
+    | '/autoridade-tecnica'
     | '/avaliar'
     | '/bairros'
     | '/blog'
@@ -5903,6 +5915,7 @@ export interface RootRouteChildren {
   AtendimentoRoute: typeof AtendimentoRoute
   AtendimentoDomicilioRoute: typeof AtendimentoDomicilioRoute
   AtendimentoRemotoRoute: typeof AtendimentoRemotoRoute
+  AutoridadeTecnicaRoute: typeof AutoridadeTecnicaRoute
   AvaliarRoute: typeof AvaliarRoute
   BairrosRoute: typeof BairrosRoute
   BlogRoute: typeof BlogRoute
@@ -6434,6 +6447,13 @@ declare module '@tanstack/react-router' {
       path: '/atendimento-remoto'
       fullPath: '/atendimento-remoto'
       preLoaderRoute: typeof AtendimentoRemotoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/autoridade-tecnica': {
+      id: '/autoridade-tecnica'
+      path: '/autoridade-tecnica'
+      fullPath: '/autoridade-tecnica'
+      preLoaderRoute: typeof AutoridadeTecnicaRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/avaliar': {
@@ -9712,6 +9732,7 @@ const rootRouteChildren: RootRouteChildren = {
   AtendimentoRoute: AtendimentoRoute,
   AtendimentoDomicilioRoute: AtendimentoDomicilioRoute,
   AtendimentoRemotoRoute: AtendimentoRemotoRoute,
+  AutoridadeTecnicaRoute: AutoridadeTecnicaRoute,
   AvaliarRoute: AvaliarRoute,
   BairrosRoute: BairrosRoute,
   BlogRoute: BlogRoute,

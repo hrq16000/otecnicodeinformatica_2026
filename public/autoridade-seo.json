@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-09-02T02:59:32.639Z",
+  "geradoEm": "2026-09-02T03:24:20.449Z",
   "fonte": {
     "html": "SSR harness",
     "dist": "dist"
@@ -8,8 +8,8 @@
   "analisadas": 63,
   "falhas": 0,
   "medias": {
-    "palavras": 1251.05,
-    "densidadeSemantica": 57.89,
+    "palavras": 1255.05,
+    "densidadeSemantica": 57.99,
     "densidadeKeywordPrincipal": 0.4,
     "linksInternosSaida": 7.29,
     "linksInternosEntrada": 2.63
@@ -29,10 +29,10 @@
       "lote": null,
       "aprovadoEm": "2026-08-06",
       "titulo": "Vale a pena trocar o HD por SSD? Como avaliar o upgrade",
-      "palavras": 1742,
-      "termosUteis": 970,
-      "densidadeSemantica": 50,
-      "vocabulario": 485,
+      "palavras": 1746,
+      "termosUteis": 972,
+      "densidadeSemantica": 50.1,
+      "vocabulario": 487,
       "keywordPrincipal": {
         "termo": "quando trocar hd por ssd",
         "ocorrencias": 4,
@@ -42,7 +42,7 @@
         {
           "termo": "ssd",
           "ocorrencias": 32,
-          "densidade": 3.3
+          "densidade": 3.29
         },
         {
           "termo": "disco",
@@ -52,12 +52,12 @@
         {
           "termo": "sistema",
           "ocorrencias": 19,
-          "densidade": 1.96
+          "densidade": 1.95
         },
         {
           "termo": "nvme",
           "ocorrencias": 15,
-          "densidade": 1.55
+          "densidade": 1.54
         },
         {
           "termo": "atual",
@@ -104,12 +104,12 @@
         {
           "termo": "disco atual",
           "ocorrencias": 8,
-          "densidade": 0.83
+          "densidade": 0.82
         },
         {
           "termo": "sata nvme",
           "ocorrencias": 8,
-          "densidade": 0.83
+          "densidade": 0.82
         },
         {
           "termo": "instalacao limpa",
@@ -119,7 +119,7 @@
         {
           "termo": "sistema corrompido",
           "ocorrencias": 5,
-          "densidade": 0.52
+          "densidade": 0.51
         },
         {
           "termo": "espaco fisico",
@@ -199,10 +199,10 @@
       "lote": null,
       "aprovadoEm": "2026-08-06",
       "titulo": "Como saber se o computador está com vírus ou malware",
-      "palavras": 1667,
-      "termosUteis": 1006,
-      "densidadeSemantica": 54.37,
-      "vocabulario": 547,
+      "palavras": 1671,
+      "termosUteis": 1008,
+      "densidadeSemantica": 54.56,
+      "vocabulario": 550,
       "keywordPrincipal": {
         "termo": "como saber se pc tem virus malware",
         "ocorrencias": 2,
@@ -242,32 +242,32 @@
         {
           "termo": "dados",
           "ocorrencias": 8,
-          "densidade": 0.8
+          "densidade": 0.79
         },
         {
           "termo": "equipamento",
           "ocorrencias": 8,
-          "densidade": 0.8
+          "densidade": 0.79
         },
         {
           "termo": "seguranca",
           "ocorrencias": 8,
-          "densidade": 0.8
+          "densidade": 0.79
         },
         {
           "termo": "verificacao",
           "ocorrencias": 8,
-          "densidade": 0.8
+          "densidade": 0.79
         },
         {
           "termo": "infeccao",
           "ocorrencias": 7,
-          "densidade": 0.7
+          "densidade": 0.69
         },
         {
           "termo": "ransomware",
           "ocorrencias": 7,
-          "densidade": 0.7
+          "densidade": 0.69
         }
       ],
       "topBigramas": [
@@ -362,9 +362,9 @@
       "lote": null,
       "aprovadoEm": "2026-08-06",
       "titulo": "Como evitar perder arquivos: guia de backup preventivo",
-      "palavras": 1695,
-      "termosUteis": 961,
-      "densidadeSemantica": 51.3,
+      "palavras": 1699,
+      "termosUteis": 963,
+      "densidadeSemantica": 51.19,
       "vocabulario": 493,
       "keywordPrincipal": {
         "termo": "backup como proteger seus arquivos",
@@ -375,12 +375,12 @@
         {
           "termo": "backup",
           "ocorrencias": 34,
-          "densidade": 3.54
+          "densidade": 3.53
         },
         {
           "termo": "copia",
           "ocorrencias": 31,
-          "densidade": 3.23
+          "densidade": 3.22
         },
         {
           "termo": "disco",
@@ -419,18 +419,18 @@
         },
         {
           "termo": "local",
-          "ocorrencias": 9,
-          "densidade": 0.94
+          "ocorrencias": 10,
+          "densidade": 1.04
         },
         {
           "termo": "recuperacao",
           "ocorrencias": 9,
-          "densidade": 0.94
+          "densidade": 0.93
         },
         {
           "termo": "rotina",
           "ocorrencias": 9,
-          "densidade": 0.94
+          "densidade": 0.93
         }
       ],
       "topBigramas": [
@@ -442,12 +442,12 @@
         {
           "termo": "backup preventivo",
           "ocorrencias": 6,
-          "densidade": 0.63
+          "densidade": 0.62
         },
         {
           "termo": "recuperacao dados",
           "ocorrencias": 6,
-          "densidade": 0.63
+          "densidade": 0.62
         },
         {
           "termo": "copia fora",
@@ -527,10 +527,10 @@
       "lote": null,
       "aprovadoEm": "2026-08-06",
       "titulo": "Wi-Fi caindo ou com sinal fraco: como diagnosticar",
-      "palavras": 1164,
-      "termosUteis": 657,
-      "densidadeSemantica": 57.38,
-      "vocabulario": 377,
+      "palavras": 1168,
+      "termosUteis": 659,
+      "densidadeSemantica": 57.36,
+      "vocabulario": 378,
       "keywordPrincipal": {
         "termo": "como melhorar sinal wifi em casa",
         "ocorrencias": 0,
@@ -540,22 +540,22 @@
         {
           "termo": "roteador",
           "ocorrencias": 19,
-          "densidade": 2.89
+          "densidade": 2.88
         },
         {
           "termo": "problema",
           "ocorrencias": 13,
-          "densidade": 1.98
+          "densidade": 1.97
         },
         {
           "termo": "operadora",
           "ocorrencias": 12,
-          "densidade": 1.83
+          "densidade": 1.82
         },
         {
           "termo": "wi-fi",
           "ocorrencias": 12,
-          "densidade": 1.83
+          "densidade": 1.82
         },
         {
           "termo": "sinal",
@@ -563,39 +563,39 @@
           "densidade": 1.52
         },
         {
-          "termo": "equipamento",
-          "ocorrencias": 8,
-          "densidade": 1.22
+          "termo": "local",
+          "ocorrencias": 9,
+          "densidade": 1.37
         },
         {
-          "termo": "local",
+          "termo": "equipamento",
           "ocorrencias": 8,
-          "densidade": 1.22
+          "densidade": 1.21
         },
         {
           "termo": "mesmo",
           "ocorrencias": 8,
-          "densidade": 1.22
+          "densidade": 1.21
         },
         {
           "termo": "rede",
           "ocorrencias": 8,
-          "densidade": 1.22
+          "densidade": 1.21
         },
         {
           "termo": "alcance",
           "ocorrencias": 7,
-          "densidade": 1.07
+          "densidade": 1.06
         },
         {
           "termo": "mesh",
           "ocorrencias": 7,
-          "densidade": 1.07
+          "densidade": 1.06
         },
         {
           "termo": "repetidor",
           "ocorrencias": 7,
-          "densidade": 1.07
+          "densidade": 1.06
         }
       ],
       "topBigramas": [
@@ -685,10 +685,10 @@
       "lote": null,
       "aprovadoEm": "2026-08-06",
       "titulo": "Notebook superaquecendo: sinais, prevenção e o que fazer",
-      "palavras": 1316,
-      "termosUteis": 782,
-      "densidadeSemantica": 61.13,
-      "vocabulario": 478,
+      "palavras": 1320,
+      "termosUteis": 784,
+      "densidadeSemantica": 61.35,
+      "vocabulario": 481,
       "keywordPrincipal": {
         "termo": "notebook superaquecendo o que fazer",
         "ocorrencias": 1,
@@ -698,7 +698,7 @@
         {
           "termo": "equipamento",
           "ocorrencias": 15,
-          "densidade": 1.92
+          "densidade": 1.91
         },
         {
           "termo": "calor",
@@ -728,17 +728,17 @@
         {
           "termo": "avaliacao",
           "ocorrencias": 7,
-          "densidade": 0.9
+          "densidade": 0.89
         },
         {
           "termo": "bateria",
           "ocorrencias": 7,
-          "densidade": 0.9
+          "densidade": 0.89
         },
         {
           "termo": "ventoinha",
           "ocorrencias": 7,
-          "densidade": 0.9
+          "densidade": 0.89
         },
         {
           "termo": "atendimento",
@@ -842,10 +842,10 @@
       "lote": null,
       "aprovadoEm": "2026-08-06",
       "titulo": "Organização de TI para pequenos escritórios: o guia prático",
-      "palavras": 1566,
-      "termosUteis": 919,
-      "densidadeSemantica": 55.28,
-      "vocabulario": 508,
+      "palavras": 1570,
+      "termosUteis": 921,
+      "densidadeSemantica": 55.27,
+      "vocabulario": 509,
       "keywordPrincipal": {
         "termo": "organizacao de ti para pequenos escritorios",
         "ocorrencias": 2,
@@ -855,22 +855,22 @@
         {
           "termo": "copia",
           "ocorrencias": 11,
-          "densidade": 1.2
+          "densidade": 1.19
         },
         {
           "termo": "inventario",
           "ocorrencias": 11,
-          "densidade": 1.2
+          "densidade": 1.19
         },
         {
           "termo": "quem",
           "ocorrencias": 11,
-          "densidade": 1.2
+          "densidade": 1.19
         },
         {
           "termo": "suporte",
           "ocorrencias": 11,
-          "densidade": 1.2
+          "densidade": 1.19
         },
         {
           "termo": "senhas",
@@ -922,12 +922,12 @@
         {
           "termo": "quem autoriza",
           "ocorrencias": 4,
-          "densidade": 0.44
+          "densidade": 0.43
         },
         {
           "termo": "sistema contratado",
           "ocorrencias": 4,
-          "densidade": 0.44
+          "densidade": 0.43
         },
         {
           "termo": "arquivos trabalho",
@@ -998,10 +998,10 @@
       "lote": null,
       "aprovadoEm": "2026-08-06",
       "titulo": "Como escolher uma workstation: checklist de requisitos",
-      "palavras": 1492,
-      "termosUteis": 861,
-      "densidadeSemantica": 54.24,
-      "vocabulario": 467,
+      "palavras": 1496,
+      "termosUteis": 863,
+      "densidadeSemantica": 54.46,
+      "vocabulario": 470,
       "keywordPrincipal": {
         "termo": "como escolher uma workstation",
         "ocorrencias": 4,
@@ -1036,7 +1036,7 @@
         {
           "termo": "arquivos",
           "ocorrencias": 9,
-          "densidade": 1.05
+          "densidade": 1.04
         },
         {
           "termo": "componente",
@@ -1078,17 +1078,17 @@
         {
           "termo": "aplicacao usa",
           "ocorrencias": 4,
-          "densidade": 0.47
+          "densidade": 0.46
         },
         {
           "termo": "placa video",
           "ocorrencias": 4,
-          "densidade": 0.47
+          "densidade": 0.46
         },
         {
           "termo": "rotina copia",
           "ocorrencias": 4,
-          "densidade": 0.47
+          "densidade": 0.46
         },
         {
           "termo": "abertas mesmo",
@@ -1155,10 +1155,10 @@
       "lote": null,
       "aprovadoEm": "2026-08-12",
       "titulo": "Como preparar uma instalação limpa do Windows 11",
-      "palavras": 1173,
-      "termosUteis": 683,
-      "densidadeSemantica": 53.73,
-      "vocabulario": 367,
+      "palavras": 1177,
+      "termosUteis": 685,
+      "densidadeSemantica": 54.01,
+      "vocabulario": 370,
       "keywordPrincipal": {
         "termo": "como instalar windows 11 do zero",
         "ocorrencias": 2,
@@ -1168,32 +1168,32 @@
         {
           "termo": "instalacao",
           "ocorrencias": 29,
-          "densidade": 4.25
+          "densidade": 4.23
         },
         {
           "termo": "limpa",
           "ocorrencias": 20,
-          "densidade": 2.93
+          "densidade": 2.92
         },
         {
           "termo": "sistema",
           "ocorrencias": 18,
-          "densidade": 2.64
+          "densidade": 2.63
         },
         {
           "termo": "windows",
           "ocorrencias": 18,
-          "densidade": 2.64
+          "densidade": 2.63
         },
         {
           "termo": "disco",
           "ocorrencias": 15,
-          "densidade": 2.2
+          "densidade": 2.19
         },
         {
           "termo": "arquivos",
           "ocorrencias": 14,
-          "densidade": 2.05
+          "densidade": 2.04
         },
         {
           "termo": "backup",
@@ -1230,7 +1230,7 @@
         {
           "termo": "instalacao limpa",
           "ocorrencias": 20,
-          "densidade": 2.93
+          "densidade": 2.92
         },
         {
           "termo": "disco sistema",
@@ -1245,7 +1245,7 @@
         {
           "termo": "limpa windows",
           "ocorrencias": 4,
-          "densidade": 0.59
+          "densidade": 0.58
         },
         {
           "termo": "apaga disco",
@@ -1314,9 +1314,9 @@
       "lote": null,
       "aprovadoEm": "2026-08-12",
       "titulo": "Como Resolver Tela Azul do Windows (BSOD): Diagnóstico e Solução",
-      "palavras": 1550,
-      "termosUteis": 977,
-      "densidadeSemantica": 61.21,
+      "palavras": 1554,
+      "termosUteis": 979,
+      "densidadeSemantica": 61.08,
       "vocabulario": 598,
       "keywordPrincipal": {
         "termo": "como resolver tela azul windows",
@@ -1365,6 +1365,11 @@
           "densidade": 0.92
         },
         {
+          "termo": "curitiba",
+          "ocorrencias": 8,
+          "densidade": 0.82
+        },
+        {
           "termo": "diagnostico",
           "ocorrencias": 8,
           "densidade": 0.82
@@ -1376,11 +1381,6 @@
         },
         {
           "termo": "passo",
-          "ocorrencias": 8,
-          "densidade": 0.82
-        },
-        {
-          "termo": "resolver",
           "ocorrencias": 8,
           "densidade": 0.82
         }
@@ -1465,14 +1465,14 @@
       "lote": null,
       "aprovadoEm": "2026-08-12",
       "titulo": "Como Trocar a Tela do Notebook: Passo a Passo Profissional",
-      "palavras": 1330,
-      "termosUteis": 840,
-      "densidadeSemantica": 64.64,
+      "palavras": 1334,
+      "termosUteis": 842,
+      "densidadeSemantica": 64.49,
       "vocabulario": 543,
       "keywordPrincipal": {
         "termo": "como trocar tela notebook passo a passo",
         "ocorrencias": 5,
-        "densidade": 0.6
+        "densidade": 0.59
       },
       "topKeywords": [
         {
@@ -1482,8 +1482,8 @@
         },
         {
           "termo": "curitiba",
-          "ocorrencias": 11,
-          "densidade": 1.31
+          "ocorrencias": 12,
+          "densidade": 1.43
         },
         {
           "termo": "tecnico",
@@ -1533,19 +1533,24 @@
         {
           "termo": "atendimento",
           "ocorrencias": 5,
-          "densidade": 0.6
+          "densidade": 0.59
         }
       ],
       "topBigramas": [
         {
           "termo": "tela notebook",
           "ocorrencias": 5,
-          "densidade": 0.6
+          "densidade": 0.59
         },
         {
           "termo": "trocar tela",
           "ocorrencias": 5,
-          "densidade": 0.6
+          "densidade": 0.59
+        },
+        {
+          "termo": "curitiba regiao",
+          "ocorrencias": 4,
+          "densidade": 0.48
         },
         {
           "termo": "passo passo",
@@ -1554,11 +1559,6 @@
         },
         {
           "termo": "conectores flat",
-          "ocorrencias": 3,
-          "densidade": 0.36
-        },
-        {
-          "termo": "curitiba regiao",
           "ocorrencias": 3,
           "densidade": 0.36
         },
@@ -1610,10 +1610,10 @@
       "lote": null,
       "aprovadoEm": "2026-08-12",
       "titulo": "Notebook não liga: o que verificar antes da assistência",
-      "palavras": 1229,
-      "termosUteis": 700,
-      "densidadeSemantica": 57.29,
-      "vocabulario": 401,
+      "palavras": 1233,
+      "termosUteis": 702,
+      "densidadeSemantica": 57.55,
+      "vocabulario": 404,
       "keywordPrincipal": {
         "termo": "notebook nao liga o que fazer",
         "ocorrencias": 3,
@@ -1623,32 +1623,32 @@
         {
           "termo": "notebook",
           "ocorrencias": 23,
-          "densidade": 3.29
+          "densidade": 3.28
         },
         {
           "termo": "carregador",
           "ocorrencias": 18,
-          "densidade": 2.57
+          "densidade": 2.56
         },
         {
           "termo": "diagnostico",
           "ocorrencias": 10,
-          "densidade": 1.43
+          "densidade": 1.42
         },
         {
           "termo": "liga",
           "ocorrencias": 10,
-          "densidade": 1.43
+          "densidade": 1.42
         },
         {
           "termo": "ligar",
           "ocorrencias": 9,
-          "densidade": 1.29
+          "densidade": 1.28
         },
         {
           "termo": "tecnico",
           "ocorrencias": 9,
-          "densidade": 1.29
+          "densidade": 1.28
         },
         {
           "termo": "bateria",
@@ -1673,19 +1673,19 @@
         {
           "termo": "abrir",
           "ocorrencias": 6,
-          "densidade": 0.86
+          "densidade": 0.85
         },
         {
           "termo": "atendimento",
           "ocorrencias": 6,
-          "densidade": 0.86
+          "densidade": 0.85
         }
       ],
       "topBigramas": [
         {
           "termo": "notebook liga",
           "ocorrencias": 5,
-          "densidade": 0.72
+          "densidade": 0.71
         },
         {
           "termo": "abrir notebook",
@@ -1766,10 +1766,10 @@
       "lote": null,
       "aprovadoEm": "2026-08-12",
       "titulo": "Computador lento: causas possíveis e como decidir o próximo passo",
-      "palavras": 1557,
-      "termosUteis": 935,
-      "densidadeSemantica": 53.8,
-      "vocabulario": 503,
+      "palavras": 1561,
+      "termosUteis": 937,
+      "densidadeSemantica": 54,
+      "vocabulario": 506,
       "keywordPrincipal": {
         "termo": "computador lento causas solucoes",
         "ocorrencias": 0,
@@ -1779,12 +1779,12 @@
         {
           "termo": "lentidao",
           "ocorrencias": 24,
-          "densidade": 2.57
+          "densidade": 2.56
         },
         {
           "termo": "memoria",
           "ocorrencias": 18,
-          "densidade": 1.93
+          "densidade": 1.92
         },
         {
           "termo": "disco",
@@ -1799,12 +1799,12 @@
         {
           "termo": "computador",
           "ocorrencias": 11,
-          "densidade": 1.18
+          "densidade": 1.17
         },
         {
           "termo": "programas",
           "ocorrencias": 11,
-          "densidade": 1.18
+          "densidade": 1.17
         },
         {
           "termo": "tecnico",
@@ -1819,12 +1819,12 @@
         {
           "termo": "upgrade",
           "ocorrencias": 8,
-          "densidade": 0.86
+          "densidade": 0.85
         },
         {
           "termo": "uso",
           "ocorrencias": 8,
-          "densidade": 0.86
+          "densidade": 0.85
         },
         {
           "termo": "arquivos",
@@ -1932,10 +1932,10 @@
       "lote": null,
       "aprovadoEm": "2026-08-12",
       "titulo": "Recuperação de dados de HD com defeito: o que é possível",
-      "palavras": 1090,
-      "termosUteis": 610,
-      "densidadeSemantica": 65.74,
-      "vocabulario": 401,
+      "palavras": 1094,
+      "termosUteis": 612,
+      "densidadeSemantica": 65.69,
+      "vocabulario": 402,
       "keywordPrincipal": {
         "termo": "como recuperar dados hd com defeito",
         "ocorrencias": 1,
@@ -1945,27 +1945,27 @@
         {
           "termo": "disco",
           "ocorrencias": 16,
-          "densidade": 2.62
+          "densidade": 2.61
         },
         {
           "termo": "falha",
           "ocorrencias": 10,
-          "densidade": 1.64
+          "densidade": 1.63
         },
         {
           "termo": "arquivos",
           "ocorrencias": 9,
-          "densidade": 1.48
+          "densidade": 1.47
         },
         {
           "termo": "recuperacao",
           "ocorrencias": 9,
-          "densidade": 1.48
+          "densidade": 1.47
         },
         {
           "termo": "leitura",
           "ocorrencias": 7,
-          "densidade": 1.15
+          "densidade": 1.14
         },
         {
           "termo": "atendimento",
@@ -1988,6 +1988,11 @@
           "densidade": 0.82
         },
         {
+          "termo": "curitiba",
+          "ocorrencias": 5,
+          "densidade": 0.82
+        },
+        {
           "termo": "imagem",
           "ocorrencias": 5,
           "densidade": 0.82
@@ -1996,18 +2001,18 @@
           "termo": "logica",
           "ocorrencias": 5,
           "densidade": 0.82
-        },
-        {
-          "termo": "servico",
-          "ocorrencias": 5,
-          "densidade": 0.82
         }
       ],
       "topBigramas": [
         {
           "termo": "recuperacao dados",
           "ocorrencias": 4,
-          "densidade": 0.66
+          "densidade": 0.65
+        },
+        {
+          "termo": "curitiba regiao",
+          "ocorrencias": 3,
+          "densidade": 0.49
         },
         {
           "termo": "falha fisica",
@@ -2036,11 +2041,6 @@
         },
         {
           "termo": "chamamos falha",
-          "ocorrencias": 2,
-          "densidade": 0.33
-        },
-        {
-          "termo": "classificar abrir",
           "ocorrencias": 2,
           "densidade": 0.33
         }
@@ -2088,10 +2088,10 @@
       "lote": null,
       "aprovadoEm": "2026-08-12",
       "titulo": "Upgrade para SSD NVMe: quando compensa e como é feito",
-      "palavras": 1290,
-      "termosUteis": 689,
-      "densidadeSemantica": 64.3,
-      "vocabulario": 443,
+      "palavras": 1294,
+      "termosUteis": 691,
+      "densidadeSemantica": 64.25,
+      "vocabulario": 444,
       "keywordPrincipal": {
         "termo": "como fazer upgrade ssd nvme",
         "ocorrencias": 0,
@@ -2101,7 +2101,7 @@
         {
           "termo": "disco",
           "ocorrencias": 22,
-          "densidade": 3.19
+          "densidade": 3.18
         },
         {
           "termo": "ssd",
@@ -2111,12 +2111,12 @@
         {
           "termo": "nvme",
           "ocorrencias": 13,
-          "densidade": 1.89
+          "densidade": 1.88
         },
         {
           "termo": "sistema",
           "ocorrencias": 9,
-          "densidade": 1.31
+          "densidade": 1.3
         },
         {
           "termo": "servico",
@@ -2131,7 +2131,7 @@
         {
           "termo": "atendimento",
           "ocorrencias": 7,
-          "densidade": 1.02
+          "densidade": 1.01
         },
         {
           "termo": "instalacao",
@@ -2156,7 +2156,7 @@
         {
           "termo": "bancada",
           "ocorrencias": 5,
-          "densidade": 0.73
+          "densidade": 0.72
         }
       ],
       "topBigramas": [
@@ -2168,37 +2168,37 @@
         {
           "termo": "aceita nvme",
           "ocorrencias": 3,
-          "densidade": 0.44
+          "densidade": 0.43
+        },
+        {
+          "termo": "curitiba regiao",
+          "ocorrencias": 3,
+          "densidade": 0.43
         },
         {
           "termo": "disco novo",
           "ocorrencias": 3,
-          "densidade": 0.44
+          "densidade": 0.43
         },
         {
           "termo": "executado bancada",
           "ocorrencias": 3,
-          "densidade": 0.44
+          "densidade": 0.43
         },
         {
           "termo": "maquina aceita",
           "ocorrencias": 3,
-          "densidade": 0.44
+          "densidade": 0.43
         },
         {
           "termo": "saude disco",
           "ocorrencias": 3,
-          "densidade": 0.44
+          "densidade": 0.43
         },
         {
           "termo": "servico executado",
           "ocorrencias": 3,
-          "densidade": 0.44
-        },
-        {
-          "termo": "ssd nvme",
-          "ocorrencias": 3,
-          "densidade": 0.44
+          "densidade": 0.43
         }
       ],
       "headings": {
@@ -2241,9 +2241,9 @@
       "lote": null,
       "aprovadoEm": "2026-08-12",
       "titulo": "Como configurar um roteador Wi-Fi do zero, sem complicação",
-      "palavras": 1722,
-      "termosUteis": 966,
-      "densidadeSemantica": 55.9,
+      "palavras": 1726,
+      "termosUteis": 968,
+      "densidadeSemantica": 55.79,
       "vocabulario": 540,
       "keywordPrincipal": {
         "termo": "como configurar roteador wifi iniciantes",
@@ -2259,7 +2259,7 @@
         {
           "termo": "rede",
           "ocorrencias": 19,
-          "densidade": 1.97
+          "densidade": 1.96
         },
         {
           "termo": "wi-fi",
@@ -2269,12 +2269,12 @@
         {
           "termo": "ghz",
           "ocorrencias": 16,
-          "densidade": 1.66
+          "densidade": 1.65
         },
         {
           "termo": "painel",
           "ocorrencias": 13,
-          "densidade": 1.35
+          "densidade": 1.34
         },
         {
           "termo": "configuracao",
@@ -2334,6 +2334,11 @@
           "densidade": 0.41
         },
         {
+          "termo": "curitiba regiao",
+          "ocorrencias": 3,
+          "densidade": 0.31
+        },
+        {
           "termo": "duplo nat",
           "ocorrencias": 3,
           "densidade": 0.31
@@ -2345,11 +2350,6 @@
         },
         {
           "termo": "modem roteador",
-          "ocorrencias": 3,
-          "densidade": 0.31
-        },
-        {
-          "termo": "rede convidados",
           "ocorrencias": 3,
           "densidade": 0.31
         }
@@ -2393,10 +2393,10 @@
       "lote": null,
       "aprovadoEm": "2026-08-12",
       "titulo": "Como saber quem está usando o seu Wi-Fi (e o que fazer)",
-      "palavras": 1696,
-      "termosUteis": 954,
+      "palavras": 1700,
+      "termosUteis": 956,
       "densidadeSemantica": 52.41,
-      "vocabulario": 500,
+      "vocabulario": 501,
       "keywordPrincipal": {
         "termo": "como saber quem esta usando meu wifi",
         "ocorrencias": 0,
@@ -2411,17 +2411,17 @@
         {
           "termo": "roteador",
           "ocorrencias": 18,
-          "densidade": 1.89
+          "densidade": 1.88
         },
         {
           "termo": "senha",
           "ocorrencias": 18,
-          "densidade": 1.89
+          "densidade": 1.88
         },
         {
           "termo": "wi-fi",
           "ocorrencias": 18,
-          "densidade": 1.89
+          "densidade": 1.88
         },
         {
           "termo": "endereco",
@@ -2496,12 +2496,12 @@
           "densidade": 0.42
         },
         {
-          "termo": "aleatorio rede",
-          "ocorrencias": 3,
-          "densidade": 0.31
+          "termo": "curitiba regiao",
+          "ocorrencias": 4,
+          "densidade": 0.42
         },
         {
-          "termo": "atualize firmware",
+          "termo": "aleatorio rede",
           "ocorrencias": 3,
           "densidade": 0.31
         }
@@ -2543,10 +2543,10 @@
       "lote": null,
       "aprovadoEm": "2026-08-12",
       "titulo": "Como escolher um antivírus: o que muda de verdade na proteção",
-      "palavras": 1338,
-      "termosUteis": 758,
-      "densidadeSemantica": 67.81,
-      "vocabulario": 514,
+      "palavras": 1342,
+      "termosUteis": 760,
+      "densidadeSemantica": 67.76,
+      "vocabulario": 515,
       "keywordPrincipal": {
         "termo": "como escolher um bom antivirus",
         "ocorrencias": 1,
@@ -2566,7 +2566,7 @@
         {
           "termo": "antivirus",
           "ocorrencias": 8,
-          "densidade": 1.06
+          "densidade": 1.05
         },
         {
           "termo": "navegador",
@@ -2594,6 +2594,11 @@
           "densidade": 0.66
         },
         {
+          "termo": "curitiba",
+          "ocorrencias": 5,
+          "densidade": 0.66
+        },
+        {
           "termo": "mesmo",
           "ocorrencias": 5,
           "densidade": 0.66
@@ -2607,14 +2612,14 @@
           "termo": "verificacao",
           "ocorrencias": 5,
           "densidade": 0.66
-        },
-        {
-          "termo": "atendimento",
-          "ocorrencias": 4,
-          "densidade": 0.53
         }
       ],
       "topBigramas": [
+        {
+          "termo": "curitiba regiao",
+          "ocorrencias": 3,
+          "densidade": 0.4
+        },
         {
           "termo": "comportamento assinatura",
           "ocorrencias": 2,
@@ -2637,11 +2642,6 @@
         },
         {
           "termo": "criterios realmente",
-          "ocorrencias": 2,
-          "densidade": 0.26
-        },
-        {
-          "termo": "curitiba regiao",
           "ocorrencias": 2,
           "densidade": 0.26
         },
@@ -2695,10 +2695,10 @@
       "lote": null,
       "aprovadoEm": "2026-08-12",
       "titulo": "Como se proteger de golpes na internet: o que checar antes de clicar",
-      "palavras": 1153,
-      "termosUteis": 667,
-      "densidadeSemantica": 66.42,
-      "vocabulario": 443,
+      "palavras": 1157,
+      "termosUteis": 669,
+      "densidadeSemantica": 66.37,
+      "vocabulario": 444,
       "keywordPrincipal": {
         "termo": "como proteger computador golpes internet",
         "ocorrencias": 1,
@@ -2708,7 +2708,7 @@
         {
           "termo": "senha",
           "ocorrencias": 10,
-          "densidade": 1.5
+          "densidade": 1.49
         },
         {
           "termo": "tecnico",
@@ -2751,17 +2751,17 @@
           "densidade": 0.75
         },
         {
+          "termo": "curitiba",
+          "ocorrencias": 5,
+          "densidade": 0.75
+        },
+        {
           "termo": "mensagem",
           "ocorrencias": 5,
           "densidade": 0.75
         },
         {
           "termo": "programa",
-          "ocorrencias": 5,
-          "densidade": 0.75
-        },
-        {
-          "termo": "site",
           "ocorrencias": 5,
           "densidade": 0.75
         }
@@ -2771,6 +2771,11 @@
           "termo": "acesso remoto",
           "ocorrencias": 4,
           "densidade": 0.6
+        },
+        {
+          "termo": "curitiba regiao",
+          "ocorrencias": 3,
+          "densidade": 0.45
         },
         {
           "termo": "ajuda tecnica",
@@ -2799,11 +2804,6 @@
         },
         {
           "termo": "caiu golpe",
-          "ocorrencias": 2,
-          "densidade": 0.3
-        },
-        {
-          "termo": "clonado anuncio",
           "ocorrencias": 2,
           "densidade": 0.3
         }
@@ -2847,9 +2847,9 @@
       "lote": null,
       "aprovadoEm": "2026-08-12",
       "titulo": "Limpeza interna de notebook: o que muda de verdade e onde estão os…",
-      "palavras": 1470,
-      "termosUteis": 807,
-      "densidadeSemantica": 63.94,
+      "palavras": 1474,
+      "termosUteis": 809,
+      "densidadeSemantica": 63.78,
       "vocabulario": 516,
       "keywordPrincipal": {
         "termo": "como limpar notebook por dentro",
@@ -2865,7 +2865,7 @@
         {
           "termo": "limpeza",
           "ocorrencias": 12,
-          "densidade": 1.49
+          "densidade": 1.48
         },
         {
           "termo": "abrir",
@@ -2920,6 +2920,11 @@
       ],
       "topBigramas": [
         {
+          "termo": "curitiba regiao",
+          "ocorrencias": 3,
+          "densidade": 0.37
+        },
+        {
           "termo": "limpeza interna",
           "ocorrencias": 3,
           "densidade": 0.37
@@ -2951,11 +2956,6 @@
         },
         {
           "termo": "compactada aletas",
-          "ocorrencias": 2,
-          "densidade": 0.25
-        },
-        {
-          "termo": "composto termico",
           "ocorrencias": 2,
           "densidade": 0.25
         }
@@ -3001,10 +3001,10 @@
       "lote": null,
       "aprovadoEm": "2026-08-12",
       "titulo": "Troca de pasta térmica no notebook: quando faz sentido e como não…",
-      "palavras": 1348,
-      "termosUteis": 755,
-      "densidadeSemantica": 62.91,
-      "vocabulario": 475,
+      "palavras": 1352,
+      "termosUteis": 757,
+      "densidadeSemantica": 62.88,
+      "vocabulario": 476,
       "keywordPrincipal": {
         "termo": "como trocar pasta termica notebook",
         "ocorrencias": 2,
@@ -3014,7 +3014,7 @@
         {
           "termo": "dissipador",
           "ocorrencias": 11,
-          "densidade": 1.46
+          "densidade": 1.45
         },
         {
           "termo": "composto",
@@ -3029,7 +3029,7 @@
         {
           "termo": "ventoinha",
           "ocorrencias": 7,
-          "densidade": 0.93
+          "densidade": 0.92
         },
         {
           "termo": "contato",
@@ -3074,6 +3074,11 @@
       ],
       "topBigramas": [
         {
+          "termo": "curitiba regiao",
+          "ocorrencias": 3,
+          "densidade": 0.4
+        },
+        {
           "termo": "refrigeracao limpa",
           "ocorrencias": 3,
           "densidade": 0.4
@@ -3081,37 +3086,32 @@
         {
           "termo": "aplicacao composto",
           "ocorrencias": 2,
-          "densidade": 0.27
+          "densidade": 0.26
         },
         {
           "termo": "apontam interface",
           "ocorrencias": 2,
-          "densidade": 0.27
+          "densidade": 0.26
         },
         {
           "termo": "base dissipador",
           "ocorrencias": 2,
-          "densidade": 0.27
+          "densidade": 0.26
         },
         {
           "termo": "bateria interna",
           "ocorrencias": 2,
-          "densidade": 0.27
+          "densidade": 0.26
         },
         {
           "termo": "camada fina",
           "ocorrencias": 2,
-          "densidade": 0.27
+          "densidade": 0.26
         },
         {
           "termo": "conforme disponibilidade",
           "ocorrencias": 2,
-          "densidade": 0.27
-        },
-        {
-          "termo": "curitiba regiao",
-          "ocorrencias": 2,
-          "densidade": 0.27
+          "densidade": 0.26
         }
       ],
       "headings": {
@@ -3153,10 +3153,10 @@
       "lote": null,
       "aprovadoEm": "2026-08-12",
       "titulo": "Clonar HD para SSD: quando clonar, quando reinstalar e onde o…",
-      "palavras": 1057,
-      "termosUteis": 601,
-      "densidadeSemantica": 62.06,
-      "vocabulario": 373,
+      "palavras": 1061,
+      "termosUteis": 603,
+      "densidadeSemantica": 62.02,
+      "vocabulario": 374,
       "keywordPrincipal": {
         "termo": "como clonar hd para ssd",
         "ocorrencias": 5,
@@ -3166,12 +3166,12 @@
         {
           "termo": "disco",
           "ocorrencias": 24,
-          "densidade": 3.99
+          "densidade": 3.98
         },
         {
           "termo": "sistema",
           "ocorrencias": 11,
-          "densidade": 1.83
+          "densidade": 1.82
         },
         {
           "termo": "clonagem",
@@ -3214,12 +3214,12 @@
           "densidade": 0.83
         },
         {
-          "termo": "maquina",
+          "termo": "curitiba",
           "ocorrencias": 5,
           "densidade": 0.83
         },
         {
-          "termo": "novo",
+          "termo": "maquina",
           "ocorrencias": 5,
           "densidade": 0.83
         }
@@ -3228,20 +3228,25 @@
         {
           "termo": "disco antigo",
           "ocorrencias": 4,
-          "densidade": 0.67
+          "densidade": 0.66
         },
         {
           "termo": "disco novo",
           "ocorrencias": 4,
-          "densidade": 0.67
+          "densidade": 0.66
         },
         {
           "termo": "faz sentido",
           "ocorrencias": 4,
-          "densidade": 0.67
+          "densidade": 0.66
         },
         {
           "termo": "clonar reinstalar",
+          "ocorrencias": 3,
+          "densidade": 0.5
+        },
+        {
+          "termo": "curitiba regiao",
           "ocorrencias": 3,
           "densidade": 0.5
         },
@@ -3257,11 +3262,6 @@
         },
         {
           "termo": "arquivos pessoais",
-          "ocorrencias": 2,
-          "densidade": 0.33
-        },
-        {
-          "termo": "clonagem disco",
           "ocorrencias": 2,
           "densidade": 0.33
         }
@@ -3309,10 +3309,10 @@
       "lote": null,
       "aprovadoEm": "2026-08-12",
       "titulo": "Segundo SSD no notebook: quando cabe, quando não cabe e o que muda",
-      "palavras": 1096,
-      "termosUteis": 595,
-      "densidadeSemantica": 61.51,
-      "vocabulario": 366,
+      "palavras": 1100,
+      "termosUteis": 597,
+      "densidadeSemantica": 61.47,
+      "vocabulario": 367,
       "keywordPrincipal": {
         "termo": "como instalar segundo ssd notebook",
         "ocorrencias": 2,
@@ -3322,12 +3322,12 @@
         {
           "termo": "disco",
           "ocorrencias": 16,
-          "densidade": 2.69
+          "densidade": 2.68
         },
         {
           "termo": "slot",
           "ocorrencias": 12,
-          "densidade": 2.02
+          "densidade": 2.01
         },
         {
           "termo": "caddy",
@@ -3347,12 +3347,12 @@
         {
           "termo": "caminho",
           "ocorrencias": 7,
-          "densidade": 1.18
+          "densidade": 1.17
         },
         {
           "termo": "ssd",
           "ocorrencias": 7,
-          "densidade": 1.18
+          "densidade": 1.17
         },
         {
           "termo": "tecnico",
@@ -3365,17 +3365,17 @@
           "densidade": 0.84
         },
         {
+          "termo": "curitiba",
+          "ocorrencias": 5,
+          "densidade": 0.84
+        },
+        {
           "termo": "livre",
           "ocorrencias": 5,
           "densidade": 0.84
         },
         {
           "termo": "nvme",
-          "ocorrencias": 5,
-          "densidade": 0.84
-        },
-        {
-          "termo": "optico",
           "ocorrencias": 5,
           "densidade": 0.84
         }
@@ -3394,30 +3394,30 @@
         {
           "termo": "caddy lugar",
           "ocorrencias": 3,
-          "densidade": 0.51
+          "densidade": 0.5
         },
         {
           "termo": "caminho caddy",
           "ocorrencias": 3,
-          "densidade": 0.51
+          "densidade": 0.5
+        },
+        {
+          "termo": "curitiba regiao",
+          "ocorrencias": 3,
+          "densidade": 0.5
         },
         {
           "termo": "disco novo",
           "ocorrencias": 3,
-          "densidade": 0.51
+          "densidade": 0.5
         },
         {
           "termo": "lugar leitor",
           "ocorrencias": 3,
-          "densidade": 0.51
+          "densidade": 0.5
         },
         {
           "termo": "aceita dois",
-          "ocorrencias": 2,
-          "densidade": 0.34
-        },
-        {
-          "termo": "aparece sozinho",
           "ocorrencias": 2,
           "densidade": 0.34
         }
@@ -3461,10 +3461,10 @@
       "lote": null,
       "aprovadoEm": "2026-08-12",
       "titulo": "Ransomware em pequenas empresas: como o ataque entra e o que…",
-      "palavras": 1068,
-      "termosUteis": 619,
-      "densidadeSemantica": 68.5,
-      "vocabulario": 424,
+      "palavras": 1072,
+      "termosUteis": 621,
+      "densidadeSemantica": 68.44,
+      "vocabulario": 425,
       "keywordPrincipal": {
         "termo": "ransomware como proteger empresa",
         "ocorrencias": 0,
@@ -3474,7 +3474,7 @@
         {
           "termo": "backup",
           "ocorrencias": 10,
-          "densidade": 1.62
+          "densidade": 1.61
         },
         {
           "termo": "ataque",
@@ -3517,6 +3517,11 @@
           "densidade": 0.97
         },
         {
+          "termo": "curitiba",
+          "ocorrencias": 5,
+          "densidade": 0.81
+        },
+        {
           "termo": "e-mail",
           "ocorrencias": 5,
           "densidade": 0.81
@@ -3525,33 +3530,33 @@
           "termo": "parte",
           "ocorrencias": 5,
           "densidade": 0.81
-        },
-        {
-          "termo": "ransomware",
-          "ocorrencias": 5,
-          "densidade": 0.81
         }
       ],
       "topBigramas": [
         {
           "termo": "acesso remoto",
           "ocorrencias": 3,
-          "densidade": 0.49
+          "densidade": 0.48
         },
         {
           "termo": "ataque entra",
           "ocorrencias": 3,
-          "densidade": 0.49
+          "densidade": 0.48
+        },
+        {
+          "termo": "curitiba regiao",
+          "ocorrencias": 3,
+          "densidade": 0.48
         },
         {
           "termo": "empresa pequena",
           "ocorrencias": 3,
-          "densidade": 0.49
+          "densidade": 0.48
         },
         {
           "termo": "remoto exposto",
           "ocorrencias": 3,
-          "densidade": 0.49
+          "densidade": 0.48
         },
         {
           "termo": "acessivel partir",
@@ -3565,11 +3570,6 @@
         },
         {
           "termo": "backup normalmente",
-          "ocorrencias": 2,
-          "densidade": 0.32
-        },
-        {
-          "termo": "caro tratar",
           "ocorrencias": 2,
           "densidade": 0.32
         }
@@ -3614,9 +3614,9 @@
       "lote": null,
       "aprovadoEm": "2026-08-12",
       "titulo": "Backup em nuvem para empresas: o que diferencia sincronização de…",
-      "palavras": 1607,
-      "termosUteis": 934,
-      "densidadeSemantica": 56.96,
+      "palavras": 1611,
+      "termosUteis": 936,
+      "densidadeSemantica": 56.84,
       "vocabulario": 532,
       "keywordPrincipal": {
         "termo": "backup nuvem empresas qual escolher",
@@ -3627,12 +3627,12 @@
         {
           "termo": "copia",
           "ocorrencias": 18,
-          "densidade": 1.93
+          "densidade": 1.92
         },
         {
           "termo": "backup",
           "ocorrencias": 15,
-          "densidade": 1.61
+          "densidade": 1.6
         },
         {
           "termo": "restauracao",
@@ -3662,12 +3662,12 @@
         {
           "termo": "escopo",
           "ocorrencias": 8,
-          "densidade": 0.86
+          "densidade": 0.85
         },
         {
           "termo": "teste",
           "ocorrencias": 8,
-          "densidade": 0.86
+          "densidade": 0.85
         },
         {
           "termo": "dados",
@@ -3693,8 +3693,8 @@
         },
         {
           "termo": "curitiba regiao",
-          "ocorrencias": 3,
-          "densidade": 0.32
+          "ocorrencias": 4,
+          "densidade": 0.43
         },
         {
           "termo": "tempo restauracao",
@@ -3763,10 +3763,10 @@
       "lote": null,
       "aprovadoEm": "2026-08-12",
       "titulo": "Instalar impressora no Windows: por que ela some da rede e como…",
-      "palavras": 1240,
-      "termosUteis": 695,
-      "densidadeSemantica": 57.27,
-      "vocabulario": 398,
+      "palavras": 1244,
+      "termosUteis": 697,
+      "densidadeSemantica": 57.25,
+      "vocabulario": 399,
       "keywordPrincipal": {
         "termo": "como instalar impressora windows passo a passo",
         "ocorrencias": 1,
@@ -3776,7 +3776,7 @@
         {
           "termo": "rede",
           "ocorrencias": 22,
-          "densidade": 3.17
+          "densidade": 3.16
         },
         {
           "termo": "endereco",
@@ -3791,7 +3791,7 @@
         {
           "termo": "computador",
           "ocorrencias": 15,
-          "densidade": 2.16
+          "densidade": 2.15
         },
         {
           "termo": "aparelho",
@@ -3811,12 +3811,12 @@
         {
           "termo": "instalacao",
           "ocorrencias": 7,
-          "densidade": 1.01
+          "densidade": 1
         },
         {
           "termo": "tecnico",
           "ocorrencias": 7,
-          "densidade": 1.01
+          "densidade": 1
         },
         {
           "termo": "atendimento",
@@ -3839,6 +3839,11 @@
           "termo": "rede visitantes",
           "ocorrencias": 5,
           "densidade": 0.72
+        },
+        {
+          "termo": "curitiba regiao",
+          "ocorrencias": 3,
+          "densidade": 0.43
         },
         {
           "termo": "driver oficial",
@@ -3867,11 +3872,6 @@
         },
         {
           "termo": "aparece jeito",
-          "ocorrencias": 2,
-          "densidade": 0.29
-        },
-        {
-          "termo": "aparelho rede",
           "ocorrencias": 2,
           "densidade": 0.29
         }
@@ -3914,9 +3914,9 @@
       "lote": null,
       "aprovadoEm": "2026-08-12",
       "titulo": "Smart TV não conecta no Wi-Fi: como separar problema de rede de…",
-      "palavras": 1332,
-      "termosUteis": 710,
-      "densidadeSemantica": 57.61,
+      "palavras": 1336,
+      "termosUteis": 712,
+      "densidadeSemantica": 57.44,
       "vocabulario": 409,
       "keywordPrincipal": {
         "termo": "como conectar wifi tv nao conecta",
@@ -3927,74 +3927,74 @@
         {
           "termo": "rede",
           "ocorrencias": 27,
-          "densidade": 3.8
+          "densidade": 3.79
         },
         {
           "termo": "roteador",
           "ocorrencias": 11,
-          "densidade": 1.55
+          "densidade": 1.54
         },
         {
           "termo": "celular",
           "ocorrencias": 10,
-          "densidade": 1.41
+          "densidade": 1.4
         },
         {
           "termo": "wi-fi",
           "ocorrencias": 10,
-          "densidade": 1.41
+          "densidade": 1.4
         },
         {
           "termo": "aparelho",
           "ocorrencias": 9,
-          "densidade": 1.27
+          "densidade": 1.26
         },
         {
           "termo": "ghz",
           "ocorrencias": 8,
-          "densidade": 1.13
+          "densidade": 1.12
         },
         {
           "termo": "teste",
           "ocorrencias": 8,
-          "densidade": 1.13
+          "densidade": 1.12
         },
         {
           "termo": "aparece",
           "ocorrencias": 7,
-          "densidade": 0.99
+          "densidade": 0.98
         },
         {
           "termo": "cabo",
           "ocorrencias": 7,
-          "densidade": 0.99
+          "densidade": 0.98
         },
         {
           "termo": "faixa",
           "ocorrencias": 7,
-          "densidade": 0.99
+          "densidade": 0.98
         },
         {
           "termo": "isolamento",
           "ocorrencias": 7,
-          "densidade": 0.99
+          "densidade": 0.98
         },
         {
           "termo": "modulo",
           "ocorrencias": 7,
-          "densidade": 0.99
+          "densidade": 0.98
         }
       ],
       "topBigramas": [
         {
           "termo": "rede visitantes",
           "ocorrencias": 7,
-          "densidade": 0.99
+          "densidade": 0.98
         },
         {
           "termo": "faixa ghz",
           "ocorrencias": 5,
-          "densidade": 0.71
+          "densidade": 0.7
         },
         {
           "termo": "isolamento clientes",
@@ -4022,7 +4022,7 @@
           "densidade": 0.42
         },
         {
-          "termo": "proximo passo",
+          "termo": "curitiba regiao",
           "ocorrencias": 3,
           "densidade": 0.42
         }
@@ -4065,10 +4065,10 @@
       "lote": null,
       "aprovadoEm": "2026-08-12",
       "titulo": "Testar a fonte do PC: o que o teste prova, o que ele não prova e…",
-      "palavras": 1229,
-      "termosUteis": 673,
-      "densidadeSemantica": 58.84,
-      "vocabulario": 396,
+      "palavras": 1233,
+      "termosUteis": 675,
+      "densidadeSemantica": 58.81,
+      "vocabulario": 397,
       "keywordPrincipal": {
         "termo": "como testar fonte de alimentacao pc",
         "ocorrencias": 0,
@@ -4078,12 +4078,12 @@
         {
           "termo": "fonte",
           "ocorrencias": 30,
-          "densidade": 4.46
+          "densidade": 4.44
         },
         {
           "termo": "teste",
           "ocorrencias": 23,
-          "densidade": 3.42
+          "densidade": 3.41
         },
         {
           "termo": "maquina",
@@ -4121,6 +4121,11 @@
           "densidade": 0.74
         },
         {
+          "termo": "curitiba",
+          "ocorrencias": 5,
+          "densidade": 0.74
+        },
+        {
           "termo": "diagnostico",
           "ocorrencias": 5,
           "densidade": 0.74
@@ -4129,18 +4134,18 @@
           "termo": "faixa",
           "ocorrencias": 5,
           "densidade": 0.74
-        },
-        {
-          "termo": "leitura",
-          "ocorrencias": 5,
-          "densidade": 0.74
         }
       ],
       "topBigramas": [
         {
           "termo": "fonte reage",
           "ocorrencias": 4,
-          "densidade": 0.6
+          "densidade": 0.59
+        },
+        {
+          "termo": "curitiba regiao",
+          "ocorrencias": 3,
+          "densidade": 0.45
         },
         {
           "termo": "entregar tensao",
@@ -4169,11 +4174,6 @@
         },
         {
           "termo": "combinam fonte",
-          "ocorrencias": 2,
-          "densidade": 0.3
-        },
-        {
-          "termo": "computador liga",
           "ocorrencias": 2,
           "densidade": 0.3
         }
@@ -4219,10 +4219,10 @@
       "lote": null,
       "aprovadoEm": "2026-08-12",
       "titulo": "Placa-mãe defeituosa: como confirmar antes de trocar a peça errada",
-      "palavras": 1099,
-      "termosUteis": 646,
-      "densidadeSemantica": 62.23,
-      "vocabulario": 402,
+      "palavras": 1103,
+      "termosUteis": 648,
+      "densidadeSemantica": 62.19,
+      "vocabulario": 403,
       "keywordPrincipal": {
         "termo": "como diagnosticar placa mae defeituosa",
         "ocorrencias": 0,
@@ -4232,12 +4232,12 @@
         {
           "termo": "placa",
           "ocorrencias": 28,
-          "densidade": 4.33
+          "densidade": 4.32
         },
         {
           "termo": "memoria",
           "ocorrencias": 12,
-          "densidade": 1.86
+          "densidade": 1.85
         },
         {
           "termo": "fonte",
@@ -4247,7 +4247,7 @@
         {
           "termo": "slot",
           "ocorrencias": 8,
-          "densidade": 1.24
+          "densidade": 1.23
         },
         {
           "termo": "modulo",
@@ -4275,6 +4275,11 @@
           "densidade": 0.93
         },
         {
+          "termo": "curitiba",
+          "ocorrencias": 5,
+          "densidade": 0.77
+        },
+        {
           "termo": "falha",
           "ocorrencias": 5,
           "densidade": 0.77
@@ -4283,33 +4288,33 @@
           "termo": "maquina",
           "ocorrencias": 5,
           "densidade": 0.77
-        },
-        {
-          "termo": "peca",
-          "ocorrencias": 5,
-          "densidade": 0.77
         }
       ],
       "topBigramas": [
         {
+          "termo": "curitiba regiao",
+          "ocorrencias": 3,
+          "densidade": 0.46
+        },
+        {
           "termo": "processador memoria",
           "ocorrencias": 3,
-          "densidade": 0.47
+          "densidade": 0.46
         },
         {
           "termo": "propria placa",
           "ocorrencias": 3,
-          "densidade": 0.47
+          "densidade": 0.46
         },
         {
           "termo": "reparar substituir",
           "ocorrencias": 3,
-          "densidade": 0.47
+          "densidade": 0.46
         },
         {
           "termo": "trilha rompida",
           "ocorrencias": 3,
-          "densidade": 0.47
+          "densidade": 0.46
         },
         {
           "termo": "acusar placa",
@@ -4323,11 +4328,6 @@
         },
         {
           "termo": "comeca valor",
-          "ocorrencias": 2,
-          "densidade": 0.31
-        },
-        {
-          "termo": "conforme disponibilidade",
           "ocorrencias": 2,
           "densidade": 0.31
         }
@@ -4373,10 +4373,10 @@
       "lote": null,
       "aprovadoEm": "2026-08-12",
       "titulo": "Windows 11 lento: como descobrir a causa antes de sair otimizando",
-      "palavras": 1197,
-      "termosUteis": 692,
-      "densidadeSemantica": 62.28,
-      "vocabulario": 431,
+      "palavras": 1201,
+      "termosUteis": 694,
+      "densidadeSemantica": 62.25,
+      "vocabulario": 432,
       "keywordPrincipal": {
         "termo": "windows 11 lento como resolver",
         "ocorrencias": 1,
@@ -4386,7 +4386,7 @@
         {
           "termo": "disco",
           "ocorrencias": 15,
-          "densidade": 2.17
+          "densidade": 2.16
         },
         {
           "termo": "memoria",
@@ -4406,7 +4406,7 @@
         {
           "termo": "software",
           "ocorrencias": 8,
-          "densidade": 1.16
+          "densidade": 1.15
         },
         {
           "termo": "lentidao",
@@ -4421,25 +4421,25 @@
         {
           "termo": "ajuste",
           "ocorrencias": 6,
-          "densidade": 0.87
+          "densidade": 0.86
+        },
+        {
+          "termo": "curitiba",
+          "ocorrencias": 6,
+          "densidade": 0.86
         },
         {
           "termo": "tecnico",
           "ocorrencias": 6,
-          "densidade": 0.87
+          "densidade": 0.86
         },
         {
           "termo": "windows",
           "ocorrencias": 6,
-          "densidade": 0.87
+          "densidade": 0.86
         },
         {
           "termo": "atendimento",
-          "ocorrencias": 5,
-          "densidade": 0.72
-        },
-        {
-          "termo": "curitiba",
           "ocorrencias": 5,
           "densidade": 0.72
         }
@@ -4449,6 +4449,11 @@
           "termo": "gerenciador tarefas",
           "ocorrencias": 4,
           "densidade": 0.58
+        },
+        {
+          "termo": "curitiba regiao",
+          "ocorrencias": 3,
+          "densidade": 0.43
         },
         {
           "termo": "disco mecanico",
@@ -4477,11 +4482,6 @@
         },
         {
           "termo": "antivirus duplicado",
-          "ocorrencias": 2,
-          "densidade": 0.29
-        },
-        {
-          "termo": "area trabalho",
           "ocorrencias": 2,
           "densidade": 0.29
         }
@@ -4525,10 +4525,10 @@
       "lote": null,
       "aprovadoEm": "2026-08-12",
       "titulo": "Remover vírus e adware do Windows: o que funciona, o que só disfarça",
-      "palavras": 1034,
-      "termosUteis": 594,
-      "densidadeSemantica": 69.19,
-      "vocabulario": 411,
+      "palavras": 1038,
+      "termosUteis": 596,
+      "densidadeSemantica": 69.13,
+      "vocabulario": 412,
       "keywordPrincipal": {
         "termo": "como remover virus windows iniciantes",
         "ocorrencias": 0,
@@ -4538,17 +4538,22 @@
         {
           "termo": "sistema",
           "ocorrencias": 9,
-          "densidade": 1.52
+          "densidade": 1.51
         },
         {
           "termo": "limpeza",
           "ocorrencias": 7,
-          "densidade": 1.18
+          "densidade": 1.17
         },
         {
           "termo": "navegador",
           "ocorrencias": 7,
-          "densidade": 1.18
+          "densidade": 1.17
+        },
+        {
+          "termo": "curitiba",
+          "ocorrencias": 6,
+          "densidade": 1.01
         },
         {
           "termo": "protecao",
@@ -4562,11 +4567,6 @@
         },
         {
           "termo": "adware",
-          "ocorrencias": 5,
-          "densidade": 0.84
-        },
-        {
-          "termo": "curitiba",
           "ocorrencias": 5,
           "densidade": 0.84
         },
@@ -4600,7 +4600,12 @@
         {
           "termo": "camadas ordem",
           "ocorrencias": 3,
-          "densidade": 0.51
+          "densidade": 0.5
+        },
+        {
+          "termo": "curitiba regiao",
+          "ocorrencias": 3,
+          "densidade": 0.5
         },
         {
           "termo": "backup verificado",
@@ -4614,11 +4619,6 @@
         },
         {
           "termo": "conter limpar",
-          "ocorrencias": 2,
-          "densidade": 0.34
-        },
-        {
-          "termo": "curitiba regiao",
           "ocorrencias": 2,
           "densidade": 0.34
         },
@@ -4677,25 +4677,25 @@
       "lote": null,
       "aprovadoEm": "2026-08-14",
       "titulo": "Como formatar o PC ou notebook sem perder arquivos",
-      "palavras": 1119,
-      "termosUteis": 628,
-      "densidadeSemantica": 60.67,
-      "vocabulario": 381,
+      "palavras": 1123,
+      "termosUteis": 630,
+      "densidadeSemantica": 60.79,
+      "vocabulario": 383,
       "keywordPrincipal": {
         "termo": "como formatar pc sem perder arquivos",
         "ocorrencias": 4,
-        "densidade": 0.64
+        "densidade": 0.63
       },
       "topKeywords": [
         {
           "termo": "disco",
           "ocorrencias": 12,
-          "densidade": 1.91
+          "densidade": 1.9
         },
         {
           "termo": "sistema",
           "ocorrencias": 12,
-          "densidade": 1.91
+          "densidade": 1.9
         },
         {
           "termo": "formatar",
@@ -4725,27 +4725,27 @@
         {
           "termo": "arquivo",
           "ocorrencias": 6,
-          "densidade": 0.96
+          "densidade": 0.95
         },
         {
           "termo": "maquina",
           "ocorrencias": 6,
-          "densidade": 0.96
+          "densidade": 0.95
         },
         {
           "termo": "contas",
           "ocorrencias": 5,
-          "densidade": 0.8
+          "densidade": 0.79
         },
         {
           "termo": "copia",
           "ocorrencias": 5,
-          "densidade": 0.8
+          "densidade": 0.79
         },
         {
           "termo": "drivers",
           "ocorrencias": 5,
-          "densidade": 0.8
+          "densidade": 0.79
         }
       ],
       "topBigramas": [
@@ -4833,10 +4833,10 @@
       "lote": null,
       "aprovadoEm": "2026-08-14",
       "titulo": "Quanto custa formatar um computador? | Blog | O Técnico de Informática",
-      "palavras": 708,
-      "termosUteis": 384,
-      "densidadeSemantica": 70.05,
-      "vocabulario": 269,
+      "palavras": 712,
+      "termosUteis": 386,
+      "densidadeSemantica": 70.21,
+      "vocabulario": 271,
       "keywordPrincipal": {
         "termo": "quanto custa formatar um computador",
         "ocorrencias": 1,
@@ -4846,32 +4846,32 @@
         {
           "termo": "formatacao",
           "ocorrencias": 9,
-          "densidade": 2.34
+          "densidade": 2.33
         },
         {
           "termo": "tecnico",
           "ocorrencias": 9,
-          "densidade": 2.34
+          "densidade": 2.33
         },
         {
           "termo": "atendimento",
           "ocorrencias": 7,
-          "densidade": 1.82
+          "densidade": 1.81
         },
         {
           "termo": "disco",
           "ocorrencias": 7,
-          "densidade": 1.82
+          "densidade": 1.81
         },
         {
           "termo": "dados",
           "ocorrencias": 6,
-          "densidade": 1.56
+          "densidade": 1.55
         },
         {
           "termo": "valor",
           "ocorrencias": 6,
-          "densidade": 1.56
+          "densidade": 1.55
         },
         {
           "termo": "tempo",
@@ -4986,20 +4986,20 @@
       "lote": null,
       "aprovadoEm": "2026-08-15",
       "titulo": "O que é informática? Definição completa em português",
-      "palavras": 2255,
-      "termosUteis": 1380,
-      "densidadeSemantica": 50.58,
-      "vocabulario": 698,
+      "palavras": 2259,
+      "termosUteis": 1382,
+      "densidadeSemantica": 50.72,
+      "vocabulario": 701,
       "keywordPrincipal": {
         "termo": "o que e informatica",
         "ocorrencias": 68,
-        "densidade": 4.93
+        "densidade": 4.92
       },
       "topKeywords": [
         {
           "termo": "informatica",
           "ocorrencias": 68,
-          "densidade": 4.93
+          "densidade": 4.92
         },
         {
           "termo": "dados",
@@ -5019,7 +5019,7 @@
         {
           "termo": "seguranca",
           "ocorrencias": 19,
-          "densidade": 1.38
+          "densidade": 1.37
         },
         {
           "termo": "informacao",
@@ -5061,17 +5061,17 @@
         {
           "termo": "hardware software",
           "ocorrencias": 10,
-          "densidade": 0.73
+          "densidade": 0.72
         },
         {
           "termo": "automatico informacao",
           "ocorrencias": 6,
-          "densidade": 0.44
+          "densidade": 0.43
         },
         {
           "termo": "inteligencia artificial",
           "ocorrencias": 6,
-          "densidade": 0.44
+          "densidade": 0.43
         },
         {
           "termo": "sistema operacional",
@@ -5140,10 +5140,10 @@
       "lote": null,
       "aprovadoEm": "2026-08-15",
       "titulo": "Informática Básica: O Que É, O Que Ensina e Por Onde Começar",
-      "palavras": 2857,
-      "termosUteis": 1798,
-      "densidadeSemantica": 48.22,
-      "vocabulario": 867,
+      "palavras": 2861,
+      "termosUteis": 1800,
+      "densidadeSemantica": 48.28,
+      "vocabulario": 869,
       "keywordPrincipal": {
         "termo": "informatica basica",
         "ocorrencias": 41,
@@ -5220,7 +5220,7 @@
         {
           "termo": "aprender informatica",
           "ocorrencias": 8,
-          "densidade": 0.45
+          "densidade": 0.44
         },
         {
           "termo": "sistema operacional",
@@ -5296,10 +5296,10 @@
       "lote": null,
       "aprovadoEm": "2026-08-15",
       "titulo": "Como Aprender Informática do Zero: Guia Prático para Iniciantes",
-      "palavras": 2566,
-      "termosUteis": 1598,
-      "densidadeSemantica": 49.25,
-      "vocabulario": 787,
+      "palavras": 2570,
+      "termosUteis": 1600,
+      "densidadeSemantica": 49.38,
+      "vocabulario": 790,
       "keywordPrincipal": {
         "termo": "como aprender informatica",
         "ocorrencias": 18,
@@ -5453,10 +5453,10 @@
       "lote": null,
       "aprovadoEm": "2026-08-25",
       "titulo": "Meu computador entra direto na BIOS: guia de diagnóstico e solução",
-      "palavras": 2213,
-      "termosUteis": 1236,
-      "densidadeSemantica": 48.38,
-      "vocabulario": 598,
+      "palavras": 2217,
+      "termosUteis": 1238,
+      "densidadeSemantica": 48.55,
+      "vocabulario": 601,
       "keywordPrincipal": {
         "termo": "computador entra direto na bios",
         "ocorrencias": 5,
@@ -5471,17 +5471,17 @@
         {
           "termo": "boot",
           "ocorrencias": 30,
-          "densidade": 2.43
+          "densidade": 2.42
         },
         {
           "termo": "modo",
           "ocorrencias": 17,
-          "densidade": 1.38
+          "densidade": 1.37
         },
         {
           "termo": "setup",
           "ocorrencias": 17,
-          "densidade": 1.38
+          "densidade": 1.37
         },
         {
           "termo": "bios",
@@ -5614,10 +5614,10 @@
       "lote": null,
       "aprovadoEm": "2026-08-25",
       "titulo": "Erro &quot;No Bootable Device&quot; ou &quot;Boot Device Not Found&quot;: como resolver",
-      "palavras": 1466,
-      "termosUteis": 862,
-      "densidadeSemantica": 48.49,
-      "vocabulario": 418,
+      "palavras": 1470,
+      "termosUteis": 864,
+      "densidadeSemantica": 48.73,
+      "vocabulario": 421,
       "keywordPrincipal": {
         "termo": "erro no bootable device como resolver",
         "ocorrencias": 4,
@@ -5627,7 +5627,7 @@
         {
           "termo": "disco",
           "ocorrencias": 26,
-          "densidade": 3.02
+          "densidade": 3.01
         },
         {
           "termo": "reparo",
@@ -5637,7 +5637,7 @@
         {
           "termo": "particao",
           "ocorrencias": 16,
-          "densidade": 1.86
+          "densidade": 1.85
         },
         {
           "termo": "boot",
@@ -5647,7 +5647,7 @@
         {
           "termo": "inicializacao",
           "ocorrencias": 13,
-          "densidade": 1.51
+          "densidade": 1.5
         },
         {
           "termo": "efi",
@@ -5662,17 +5662,17 @@
         {
           "termo": "cenario",
           "ocorrencias": 11,
-          "densidade": 1.28
+          "densidade": 1.27
         },
         {
           "termo": "uefi",
           "ocorrencias": 11,
-          "densidade": 1.28
+          "densidade": 1.27
         },
         {
           "termo": "windows",
           "ocorrencias": 11,
-          "densidade": 1.28
+          "densidade": 1.27
         },
         {
           "termo": "arquivos",
@@ -5770,10 +5770,10 @@
       "lote": null,
       "aprovadoEm": "2026-08-25",
       "titulo": "Troquei o HD/SSD e o PC só abre a BIOS: o que fazer",
-      "palavras": 1334,
-      "termosUteis": 751,
-      "densidadeSemantica": 53.66,
-      "vocabulario": 403,
+      "palavras": 1338,
+      "termosUteis": 753,
+      "densidadeSemantica": 53.92,
+      "vocabulario": 406,
       "keywordPrincipal": {
         "termo": "troquei o ssd e o pc so abre a bios",
         "ocorrencias": 1,
@@ -5783,22 +5783,22 @@
         {
           "termo": "disco",
           "ocorrencias": 32,
-          "densidade": 4.26
+          "densidade": 4.25
         },
         {
           "termo": "instalar",
           "ocorrencias": 16,
-          "densidade": 2.13
+          "densidade": 2.12
         },
         {
           "termo": "novo",
           "ocorrencias": 16,
-          "densidade": 2.13
+          "densidade": 2.12
         },
         {
           "termo": "ssd",
           "ocorrencias": 15,
-          "densidade": 2
+          "densidade": 1.99
         },
         {
           "termo": "antigo",
@@ -5823,17 +5823,17 @@
         {
           "termo": "instalacao",
           "ocorrencias": 8,
-          "densidade": 1.07
+          "densidade": 1.06
         },
         {
           "termo": "passo",
           "ocorrencias": 8,
-          "densidade": 1.07
+          "densidade": 1.06
         },
         {
           "termo": "slot",
           "ocorrencias": 8,
-          "densidade": 1.07
+          "densidade": 1.06
         },
         {
           "termo": "instalador",
@@ -5865,7 +5865,7 @@
         {
           "termo": "instalar windows",
           "ocorrencias": 5,
-          "densidade": 0.67
+          "densidade": 0.66
         },
         {
           "termo": "durante instalacao",
@@ -5927,10 +5927,10 @@
       "lote": "10C/0",
       "aprovadoEm": "2026-08-25",
       "titulo": "Como limpar arquivos temporários e liberar espaço no Windows",
-      "palavras": 1042,
-      "termosUteis": 590,
-      "densidadeSemantica": 62.03,
-      "vocabulario": 366,
+      "palavras": 1046,
+      "termosUteis": 592,
+      "densidadeSemantica": 61.99,
+      "vocabulario": 367,
       "keywordPrincipal": {
         "termo": "limpar arquivos temporarios windows",
         "ocorrencias": 4,
@@ -5960,42 +5960,42 @@
         {
           "termo": "disco",
           "ocorrencias": 9,
-          "densidade": 1.53
+          "densidade": 1.52
         },
         {
           "termo": "tecnico",
           "ocorrencias": 9,
-          "densidade": 1.53
+          "densidade": 1.52
         },
         {
           "termo": "atualizacao",
           "ocorrencias": 8,
-          "densidade": 1.36
+          "densidade": 1.35
         },
         {
           "termo": "sistema",
           "ocorrencias": 8,
-          "densidade": 1.36
+          "densidade": 1.35
         },
         {
           "termo": "temporarios",
           "ocorrencias": 7,
-          "densidade": 1.19
+          "densidade": 1.18
         },
         {
           "termo": "cache",
           "ocorrencias": 6,
-          "densidade": 1.02
+          "densidade": 1.01
         },
         {
           "termo": "pasta",
           "ocorrencias": 6,
-          "densidade": 1.02
+          "densidade": 1.01
         },
         {
           "termo": "ssd",
           "ocorrencias": 6,
-          "densidade": 1.02
+          "densidade": 1.01
         }
       ],
       "topBigramas": [
@@ -6011,6 +6011,11 @@
         },
         {
           "termo": "cache atualizacao",
+          "ocorrencias": 3,
+          "densidade": 0.51
+        },
+        {
+          "termo": "curitiba regiao",
           "ocorrencias": 3,
           "densidade": 0.51
         },
@@ -6031,11 +6036,6 @@
         },
         {
           "termo": "atualizacao miniaturas",
-          "ocorrencias": 2,
-          "densidade": 0.34
-        },
-        {
-          "termo": "blocos livres",
           "ocorrencias": 2,
           "densidade": 0.34
         }
@@ -6079,10 +6079,10 @@
       "lote": "10C/0",
       "aprovadoEm": "2026-08-25",
       "titulo": "Memória RAM insuficiente: sintomas, como confirmar e quando fazer…",
-      "palavras": 916,
-      "termosUteis": 538,
-      "densidadeSemantica": 65.43,
-      "vocabulario": 352,
+      "palavras": 920,
+      "termosUteis": 540,
+      "densidadeSemantica": 65.37,
+      "vocabulario": 353,
       "keywordPrincipal": {
         "termo": "memoria ram insuficiente sintomas",
         "ocorrencias": 3,
@@ -6092,12 +6092,12 @@
         {
           "termo": "memoria",
           "ocorrencias": 31,
-          "densidade": 5.76
+          "densidade": 5.74
         },
         {
           "termo": "disco",
           "ocorrencias": 8,
-          "densidade": 1.49
+          "densidade": 1.48
         },
         {
           "termo": "tecnico",
@@ -6107,17 +6107,22 @@
         {
           "termo": "falta",
           "ocorrencias": 6,
-          "densidade": 1.12
+          "densidade": 1.11
         },
         {
           "termo": "ram",
           "ocorrencias": 6,
-          "densidade": 1.12
+          "densidade": 1.11
         },
         {
           "termo": "upgrade",
           "ocorrencias": 6,
-          "densidade": 1.12
+          "densidade": 1.11
+        },
+        {
+          "termo": "curitiba",
+          "ocorrencias": 5,
+          "densidade": 0.93
         },
         {
           "termo": "uso",
@@ -6131,11 +6136,6 @@
         },
         {
           "termo": "cache",
-          "ocorrencias": 4,
-          "densidade": 0.74
-        },
-        {
-          "termo": "curitiba",
           "ocorrencias": 4,
           "densidade": 0.74
         },
@@ -6155,6 +6155,11 @@
           "termo": "falta memoria",
           "ocorrencias": 4,
           "densidade": 0.74
+        },
+        {
+          "termo": "curitiba regiao",
+          "ocorrencias": 3,
+          "densidade": 0.56
         },
         {
           "termo": "defeito memoria",
@@ -6183,11 +6188,6 @@
         },
         {
           "termo": "confirmar chutar",
-          "ocorrencias": 2,
-          "densidade": 0.37
-        },
-        {
-          "termo": "conforme disponibilidade",
           "ocorrencias": 2,
           "densidade": 0.37
         }
@@ -6232,10 +6232,10 @@
       "lote": "10C/0",
       "aprovadoEm": "2026-08-25",
       "titulo": "Códigos de erro da tela azul: como ler e o que cada um indica",
-      "palavras": 922,
-      "termosUteis": 541,
-      "densidadeSemantica": 67.28,
-      "vocabulario": 364,
+      "palavras": 926,
+      "termosUteis": 543,
+      "densidadeSemantica": 67.22,
+      "vocabulario": 365,
       "keywordPrincipal": {
         "termo": "codigos de erro tela azul windows",
         "ocorrencias": 3,
@@ -6245,7 +6245,7 @@
         {
           "termo": "memoria",
           "ocorrencias": 15,
-          "densidade": 2.77
+          "densidade": 2.76
         },
         {
           "termo": "codigo",
@@ -6255,37 +6255,37 @@
         {
           "termo": "driver",
           "ocorrencias": 8,
-          "densidade": 1.48
+          "densidade": 1.47
         },
         {
           "termo": "sistema",
           "ocorrencias": 8,
-          "densidade": 1.48
+          "densidade": 1.47
         },
         {
           "termo": "tecnico",
           "ocorrencias": 8,
-          "densidade": 1.48
+          "densidade": 1.47
         },
         {
           "termo": "windows",
           "ocorrencias": 8,
-          "densidade": 1.48
+          "densidade": 1.47
         },
         {
           "termo": "codigos",
           "ocorrencias": 6,
-          "densidade": 1.11
+          "densidade": 1.1
         },
         {
           "termo": "disco",
           "ocorrencias": 6,
-          "densidade": 1.11
+          "densidade": 1.1
         },
         {
           "termo": "tela",
           "ocorrencias": 6,
-          "densidade": 1.11
+          "densidade": 1.1
         },
         {
           "termo": "arquivo",
@@ -6293,12 +6293,12 @@
           "densidade": 0.92
         },
         {
-          "termo": "apontam",
-          "ocorrencias": 4,
-          "densidade": 0.74
+          "termo": "curitiba",
+          "ocorrencias": 5,
+          "densidade": 0.92
         },
         {
-          "termo": "atendimento",
+          "termo": "apontam",
           "ocorrencias": 4,
           "densidade": 0.74
         }
@@ -6307,12 +6307,17 @@
         {
           "termo": "apontam causa",
           "ocorrencias": 3,
-          "densidade": 0.56
+          "densidade": 0.55
+        },
+        {
+          "termo": "curitiba regiao",
+          "ocorrencias": 3,
+          "densidade": 0.55
         },
         {
           "termo": "tela azul",
           "ocorrencias": 3,
-          "densidade": 0.56
+          "densidade": 0.55
         },
         {
           "termo": "arquivo citado",
@@ -6336,11 +6341,6 @@
         },
         {
           "termo": "critical process",
-          "ocorrencias": 2,
-          "densidade": 0.37
-        },
-        {
-          "termo": "curitiba regiao",
           "ocorrencias": 2,
           "densidade": 0.37
         }
@@ -6385,30 +6385,30 @@
       "lote": "10C/0",
       "aprovadoEm": "2026-08-25",
       "titulo": "Como testar a memória RAM com Memtest86+ (passo a passo)",
-      "palavras": 821,
-      "termosUteis": 469,
-      "densidadeSemantica": 66.31,
-      "vocabulario": 311,
+      "palavras": 825,
+      "termosUteis": 471,
+      "densidadeSemantica": 66.24,
+      "vocabulario": 312,
       "keywordPrincipal": {
         "termo": "testar memoria ram memtest86",
         "ocorrencias": 2,
-        "densidade": 0.43
+        "densidade": 0.42
       },
       "topKeywords": [
         {
           "termo": "memoria",
           "ocorrencias": 16,
-          "densidade": 3.41
+          "densidade": 3.4
         },
         {
           "termo": "erro",
           "ocorrencias": 10,
-          "densidade": 2.13
+          "densidade": 2.12
         },
         {
           "termo": "tecnico",
           "ocorrencias": 8,
-          "densidade": 1.71
+          "densidade": 1.7
         },
         {
           "termo": "testar",
@@ -6418,42 +6418,42 @@
         {
           "termo": "defeito",
           "ocorrencias": 6,
-          "densidade": 1.28
+          "densidade": 1.27
         },
         {
           "termo": "modulo",
           "ocorrencias": 6,
-          "densidade": 1.28
+          "densidade": 1.27
         },
         {
           "termo": "passo",
           "ocorrencias": 6,
-          "densidade": 1.28
+          "densidade": 1.27
         },
         {
           "termo": "teste",
           "ocorrencias": 6,
-          "densidade": 1.28
+          "densidade": 1.27
+        },
+        {
+          "termo": "curitiba",
+          "ocorrencias": 5,
+          "densidade": 1.06
         },
         {
           "termo": "erros",
           "ocorrencias": 5,
-          "densidade": 1.07
+          "densidade": 1.06
         },
         {
           "termo": "pendrive",
           "ocorrencias": 5,
-          "densidade": 1.07
+          "densidade": 1.06
         },
         {
           "termo": "slot",
           "ocorrencias": 5,
-          "densidade": 1.07
-        },
-        {
-          "termo": "atendimento",
-          "ocorrencias": 4,
-          "densidade": 0.85
+          "densidade": 1.06
         }
       ],
       "topBigramas": [
@@ -6461,6 +6461,11 @@
           "termo": "memoria defeito",
           "ocorrencias": 4,
           "densidade": 0.85
+        },
+        {
+          "termo": "curitiba regiao",
+          "ocorrencias": 3,
+          "densidade": 0.64
         },
         {
           "termo": "passo passo",
@@ -6479,11 +6484,6 @@
         },
         {
           "termo": "conforme disponibilidade",
-          "ocorrencias": 2,
-          "densidade": 0.43
-        },
-        {
-          "termo": "curitiba regiao",
           "ocorrencias": 2,
           "densidade": 0.43
         },
@@ -6540,10 +6540,10 @@
       "lote": "10D/1",
       "aprovadoEm": "2026-08-26",
       "titulo": "Botão power não funciona: como ligar o PC pelo conector da placa-mãe",
-      "palavras": 1307,
-      "termosUteis": 731,
-      "densidadeSemantica": 48.15,
-      "vocabulario": 352,
+      "palavras": 1311,
+      "termosUteis": 733,
+      "densidadeSemantica": 48.43,
+      "vocabulario": 355,
       "keywordPrincipal": {
         "termo": "botao power nao funciona jump start placa mae",
         "ocorrencias": 0,
@@ -6553,12 +6553,12 @@
         {
           "termo": "botao",
           "ocorrencias": 34,
-          "densidade": 4.65
+          "densidade": 4.64
         },
         {
           "termo": "fonte",
           "ocorrencias": 20,
-          "densidade": 2.74
+          "densidade": 2.73
         },
         {
           "termo": "par",
@@ -6573,12 +6573,12 @@
         {
           "termo": "chave",
           "ocorrencias": 14,
-          "densidade": 1.92
+          "densidade": 1.91
         },
         {
           "termo": "conector",
           "ocorrencias": 14,
-          "densidade": 1.92
+          "densidade": 1.91
         },
         {
           "termo": "cabo",
@@ -6588,17 +6588,17 @@
         {
           "termo": "liga",
           "ocorrencias": 10,
-          "densidade": 1.37
+          "densidade": 1.36
         },
         {
           "termo": "ligar",
           "ocorrencias": 10,
-          "densidade": 1.37
+          "densidade": 1.36
         },
         {
           "termo": "pinos",
           "ocorrencias": 10,
-          "densidade": 1.37
+          "densidade": 1.36
         },
         {
           "termo": "frontal",
@@ -6691,10 +6691,10 @@
       "lote": "10D/1",
       "aprovadoEm": "2026-08-26",
       "titulo": "Curto-circuito na placa-mãe: como identificar e isolar o problema",
-      "palavras": 1246,
-      "termosUteis": 702,
-      "densidadeSemantica": 57.12,
-      "vocabulario": 401,
+      "palavras": 1250,
+      "termosUteis": 704,
+      "densidadeSemantica": 57.24,
+      "vocabulario": 403,
       "keywordPrincipal": {
         "termo": "curto circuito placa mae como identificar",
         "ocorrencias": 0,
@@ -6709,7 +6709,7 @@
         {
           "termo": "fonte",
           "ocorrencias": 17,
-          "densidade": 2.42
+          "densidade": 2.41
         },
         {
           "termo": "curto",
@@ -6739,12 +6739,12 @@
         {
           "termo": "componente",
           "ocorrencias": 7,
-          "densidade": 1
+          "densidade": 0.99
         },
         {
           "termo": "tecnico",
           "ocorrencias": 7,
-          "densidade": 1
+          "densidade": 0.99
         },
         {
           "termo": "liga",
@@ -6843,10 +6843,10 @@
       "lote": "10D/1",
       "aprovadoEm": "2026-08-26",
       "titulo": "BIOS corrompida: reset de CMOS e recuperação de firmware",
-      "palavras": 1297,
-      "termosUteis": 749,
-      "densidadeSemantica": 51.94,
-      "vocabulario": 389,
+      "palavras": 1301,
+      "termosUteis": 751,
+      "densidadeSemantica": 52.2,
+      "vocabulario": 392,
       "keywordPrincipal": {
         "termo": "bios corrompida reset cmos atualizacao",
         "ocorrencias": 2,
@@ -6856,7 +6856,7 @@
         {
           "termo": "firmware",
           "ocorrencias": 20,
-          "densidade": 2.67
+          "densidade": 2.66
         },
         {
           "termo": "cmos",
@@ -6871,17 +6871,17 @@
         {
           "termo": "bateria",
           "ocorrencias": 10,
-          "densidade": 1.34
+          "densidade": 1.33
         },
         {
           "termo": "memoria",
           "ocorrencias": 10,
-          "densidade": 1.34
+          "densidade": 1.33
         },
         {
           "termo": "reset",
           "ocorrencias": 10,
-          "densidade": 1.34
+          "densidade": 1.33
         },
         {
           "termo": "chave",
@@ -6994,25 +6994,25 @@
       "lote": "10C/2",
       "aprovadoEm": "2026-08-26",
       "titulo": "Internet lenta: é o provedor ou o seu roteador?",
-      "palavras": 948,
-      "termosUteis": 533,
-      "densidadeSemantica": 54.97,
-      "vocabulario": 293,
+      "palavras": 952,
+      "termosUteis": 535,
+      "densidadeSemantica": 55.33,
+      "vocabulario": 296,
       "keywordPrincipal": {
         "termo": "internet lenta provedor ou roteador",
         "ocorrencias": 2,
-        "densidade": 0.38
+        "densidade": 0.37
       },
       "topKeywords": [
         {
           "termo": "cabo",
           "ocorrencias": 16,
-          "densidade": 3
+          "densidade": 2.99
         },
         {
           "termo": "wi-fi",
           "ocorrencias": 14,
-          "densidade": 2.63
+          "densidade": 2.62
         },
         {
           "termo": "entrega",
@@ -7027,7 +7027,7 @@
         {
           "termo": "velocidade",
           "ocorrencias": 10,
-          "densidade": 1.88
+          "densidade": 1.87
         },
         {
           "termo": "sinal",
@@ -7047,22 +7047,22 @@
         {
           "termo": "abaixo",
           "ocorrencias": 6,
-          "densidade": 1.13
+          "densidade": 1.12
         },
         {
           "termo": "aparelho",
           "ocorrencias": 6,
-          "densidade": 1.13
+          "densidade": 1.12
         },
         {
           "termo": "contratado",
           "ocorrencias": 6,
-          "densidade": 1.13
+          "densidade": 1.12
         },
         {
           "termo": "enlace",
           "ocorrencias": 6,
-          "densidade": 1.13
+          "densidade": 1.12
         }
       ],
       "topBigramas": [
@@ -7104,7 +7104,7 @@
         {
           "termo": "abaixo contratado",
           "ocorrencias": 2,
-          "densidade": 0.38
+          "densidade": 0.37
         }
       ],
       "headings": {
@@ -7143,10 +7143,10 @@
       "lote": "10C/2",
       "aprovadoEm": "2026-08-26",
       "titulo": "Impressora offline: por que aparece assim e como resolver",
-      "palavras": 838,
-      "termosUteis": 502,
-      "densidadeSemantica": 53.39,
-      "vocabulario": 268,
+      "palavras": 842,
+      "termosUteis": 504,
+      "densidadeSemantica": 53.57,
+      "vocabulario": 270,
       "keywordPrincipal": {
         "termo": "impressora offline como resolver",
         "ocorrencias": 3,
@@ -7156,32 +7156,32 @@
         {
           "termo": "impressora",
           "ocorrencias": 21,
-          "densidade": 4.18
+          "densidade": 4.17
         },
         {
           "termo": "endereco",
           "ocorrencias": 20,
-          "densidade": 3.98
+          "densidade": 3.97
         },
         {
           "termo": "offline",
           "ocorrencias": 15,
-          "densidade": 2.99
+          "densidade": 2.98
         },
         {
           "termo": "rede",
           "ocorrencias": 12,
-          "densidade": 2.39
+          "densidade": 2.38
         },
         {
           "termo": "aparelho",
           "ocorrencias": 10,
-          "densidade": 1.99
+          "densidade": 1.98
         },
         {
           "termo": "porta",
           "ocorrencias": 10,
-          "densidade": 1.99
+          "densidade": 1.98
         },
         {
           "termo": "cabo",
@@ -7201,24 +7201,24 @@
         {
           "termo": "atual",
           "ocorrencias": 6,
-          "densidade": 1.2
+          "densidade": 1.19
         },
         {
           "termo": "impressao",
           "ocorrencias": 6,
-          "densidade": 1.2
+          "densidade": 1.19
         },
         {
           "termo": "causa",
           "ocorrencias": 5,
-          "densidade": 1
+          "densidade": 0.99
         }
       ],
       "topBigramas": [
         {
           "termo": "endereco atual",
           "ocorrencias": 6,
-          "densidade": 1.2
+          "densidade": 1.19
         },
         {
           "termo": "impressora offline",
@@ -7294,10 +7294,10 @@
       "lote": "10C/2",
       "aprovadoEm": "2026-08-26",
       "titulo": "Fila de impressão travada: como destravar o spooler do Windows",
-      "palavras": 787,
-      "termosUteis": 476,
-      "densidadeSemantica": 52.73,
-      "vocabulario": 251,
+      "palavras": 791,
+      "termosUteis": 478,
+      "densidadeSemantica": 53.14,
+      "vocabulario": 254,
       "keywordPrincipal": {
         "termo": "fila de impressao travada spooler windows",
         "ocorrencias": 2,
@@ -7307,57 +7307,57 @@
         {
           "termo": "spooler",
           "ocorrencias": 13,
-          "densidade": 2.73
+          "densidade": 2.72
         },
         {
           "termo": "impressao",
           "ocorrencias": 12,
-          "densidade": 2.52
+          "densidade": 2.51
         },
         {
           "termo": "servico",
           "ocorrencias": 12,
-          "densidade": 2.52
+          "densidade": 2.51
         },
         {
           "termo": "documento",
           "ocorrencias": 10,
-          "densidade": 2.1
+          "densidade": 2.09
         },
         {
           "termo": "driver",
           "ocorrencias": 9,
-          "densidade": 1.89
+          "densidade": 1.88
         },
         {
           "termo": "fila",
           "ocorrencias": 8,
-          "densidade": 1.68
+          "densidade": 1.67
         },
         {
           "termo": "impressora",
           "ocorrencias": 8,
-          "densidade": 1.68
+          "densidade": 1.67
         },
         {
           "termo": "arquivo",
           "ocorrencias": 7,
-          "densidade": 1.47
+          "densidade": 1.46
         },
         {
           "termo": "parar",
           "ocorrencias": 7,
-          "densidade": 1.47
+          "densidade": 1.46
         },
         {
           "termo": "tecnico",
           "ocorrencias": 7,
-          "densidade": 1.47
+          "densidade": 1.46
         },
         {
           "termo": "windows",
           "ocorrencias": 7,
-          "densidade": 1.47
+          "densidade": 1.46
         },
         {
           "termo": "arquivos",
@@ -7445,10 +7445,10 @@
       "lote": "10C/3",
       "aprovadoEm": "2026-08-26",
       "titulo": "HD ou SSD não é reconhecido na BIOS: o que verificar antes de trocar",
-      "palavras": 1040,
-      "termosUteis": 576,
-      "densidadeSemantica": 55.9,
-      "vocabulario": 322,
+      "palavras": 1044,
+      "termosUteis": 578,
+      "densidadeSemantica": 56.23,
+      "vocabulario": 325,
       "keywordPrincipal": {
         "termo": "hd nao e reconhecido na bios o que fazer",
         "ocorrencias": 1,
@@ -7458,7 +7458,7 @@
         {
           "termo": "disco",
           "ocorrencias": 28,
-          "densidade": 4.86
+          "densidade": 4.84
         },
         {
           "termo": "aparece",
@@ -7468,17 +7468,17 @@
         {
           "termo": "bios",
           "ocorrencias": 11,
-          "densidade": 1.91
+          "densidade": 1.9
         },
         {
           "termo": "sata",
           "ocorrencias": 11,
-          "densidade": 1.91
+          "densidade": 1.9
         },
         {
           "termo": "cabo",
           "ocorrencias": 10,
-          "densidade": 1.74
+          "densidade": 1.73
         },
         {
           "termo": "dados",
@@ -7493,12 +7493,12 @@
         {
           "termo": "sistema",
           "ocorrencias": 7,
-          "densidade": 1.22
+          "densidade": 1.21
         },
         {
           "termo": "tecnico",
           "ocorrencias": 7,
-          "densidade": 1.22
+          "densidade": 1.21
         },
         {
           "termo": "falha",
@@ -7530,12 +7530,12 @@
         {
           "termo": "bios windows",
           "ocorrencias": 4,
-          "densidade": 0.7
+          "densidade": 0.69
         },
         {
           "termo": "mau contato",
           "ocorrencias": 4,
-          "densidade": 0.7
+          "densidade": 0.69
         },
         {
           "termo": "cabo porta",
@@ -7601,10 +7601,10 @@
       "lote": "10C/3",
       "aprovadoEm": "2026-08-26",
       "titulo": "SSD aparece na BIOS mas não no Windows: como inicializar o disco",
-      "palavras": 773,
-      "termosUteis": 464,
-      "densidadeSemantica": 59.48,
-      "vocabulario": 276,
+      "palavras": 777,
+      "termosUteis": 466,
+      "densidadeSemantica": 59.87,
+      "vocabulario": 279,
       "keywordPrincipal": {
         "termo": "ssd nvme nao aparece no gerenciador de discos",
         "ocorrencias": 0,
@@ -7614,7 +7614,7 @@
         {
           "termo": "disco",
           "ocorrencias": 21,
-          "densidade": 4.53
+          "densidade": 4.51
         },
         {
           "termo": "letra",
@@ -7624,7 +7624,7 @@
         {
           "termo": "volume",
           "ocorrencias": 7,
-          "densidade": 1.51
+          "densidade": 1.5
         },
         {
           "termo": "aparece",
@@ -7676,7 +7676,7 @@
         {
           "termo": "gerenciamento disco",
           "ocorrencias": 6,
-          "densidade": 1.3
+          "densidade": 1.29
         },
         {
           "termo": "botao direito",
@@ -7753,10 +7753,10 @@
       "lote": "10C/3",
       "aprovadoEm": "2026-08-26",
       "titulo": "Setores defeituosos e SMART com alerta: o que fazer (e o que não…",
-      "palavras": 953,
-      "termosUteis": 581,
-      "densidadeSemantica": 59.04,
-      "vocabulario": 343,
+      "palavras": 957,
+      "termosUteis": 583,
+      "densidadeSemantica": 59.35,
+      "vocabulario": 346,
       "keywordPrincipal": {
         "termo": "disco com setores defeituosos smart o que fazer",
         "ocorrencias": 1,
@@ -7766,27 +7766,27 @@
         {
           "termo": "disco",
           "ocorrencias": 18,
-          "densidade": 3.1
+          "densidade": 3.09
         },
         {
           "termo": "smart",
           "ocorrencias": 12,
-          "densidade": 2.07
+          "densidade": 2.06
         },
         {
           "termo": "dados",
           "ocorrencias": 9,
-          "densidade": 1.55
+          "densidade": 1.54
         },
         {
           "termo": "arquivos",
           "ocorrencias": 8,
-          "densidade": 1.38
+          "densidade": 1.37
         },
         {
           "termo": "midia",
           "ocorrencias": 8,
-          "densidade": 1.38
+          "densidade": 1.37
         },
         {
           "termo": "chkdsk",
@@ -7906,10 +7906,10 @@
       "lote": "10C/3",
       "aprovadoEm": "2026-08-26",
       "titulo": "Computador sem som: sequência de verificação do alto-falante ao driver",
-      "palavras": 805,
-      "termosUteis": 472,
-      "densidadeSemantica": 56.14,
-      "vocabulario": 265,
+      "palavras": 809,
+      "termosUteis": 474,
+      "densidadeSemantica": 56.33,
+      "vocabulario": 267,
       "keywordPrincipal": {
         "termo": "computador sem som o que verificar",
         "ocorrencias": 0,
@@ -7919,22 +7919,22 @@
         {
           "termo": "saida",
           "ocorrencias": 17,
-          "densidade": 3.6
+          "densidade": 3.59
         },
         {
           "termo": "som",
           "ocorrencias": 14,
-          "densidade": 2.97
+          "densidade": 2.95
         },
         {
           "termo": "driver",
           "ocorrencias": 11,
-          "densidade": 2.33
+          "densidade": 2.32
         },
         {
           "termo": "audio",
           "ocorrencias": 9,
-          "densidade": 1.91
+          "densidade": 1.9
         },
         {
           "termo": "dispositivo",
@@ -7996,22 +7996,22 @@
         {
           "termo": "gerenciador dispositivos",
           "ocorrencias": 3,
-          "densidade": 0.64
+          "densidade": 0.63
         },
         {
           "termo": "sequencia verificacao",
           "ocorrencias": 3,
-          "densidade": 0.64
+          "densidade": 0.63
         },
         {
           "termo": "servico audio",
           "ocorrencias": 3,
-          "densidade": 0.64
+          "densidade": 0.63
         },
         {
           "termo": "volume aplicativo",
           "ocorrencias": 3,
-          "densidade": 0.64
+          "densidade": 0.63
         },
         {
           "termo": "audio encontrado",
@@ -8059,10 +8059,10 @@
       "lote": "10C/3",
       "aprovadoEm": "2026-08-26",
       "titulo": "Fone de ouvido não é reconhecido no PC: entrada frontal, detecção e…",
-      "palavras": 732,
-      "termosUteis": 431,
-      "densidadeSemantica": 55.22,
-      "vocabulario": 238,
+      "palavras": 736,
+      "termosUteis": 433,
+      "densidadeSemantica": 55.66,
+      "vocabulario": 241,
       "keywordPrincipal": {
         "termo": "fone de ouvido nao e reconhecido no pc",
         "ocorrencias": 1,
@@ -8072,47 +8072,47 @@
         {
           "termo": "fone",
           "ocorrencias": 14,
-          "densidade": 3.25
+          "densidade": 3.23
         },
         {
           "termo": "conector",
           "ocorrencias": 11,
-          "densidade": 2.55
+          "densidade": 2.54
         },
         {
           "termo": "plugue",
           "ocorrencias": 11,
-          "densidade": 2.55
+          "densidade": 2.54
         },
         {
           "termo": "cabo",
           "ocorrencias": 10,
-          "densidade": 2.32
+          "densidade": 2.31
         },
         {
           "termo": "frontal",
           "ocorrencias": 10,
-          "densidade": 2.32
+          "densidade": 2.31
         },
         {
           "termo": "microfone",
           "ocorrencias": 10,
-          "densidade": 2.32
+          "densidade": 2.31
         },
         {
           "termo": "audio",
           "ocorrencias": 9,
-          "densidade": 2.09
+          "densidade": 2.08
         },
         {
           "termo": "painel",
           "ocorrencias": 9,
-          "densidade": 2.09
+          "densidade": 2.08
         },
         {
           "termo": "som",
           "ocorrencias": 8,
-          "densidade": 1.86
+          "densidade": 1.85
         },
         {
           "termo": "deteccao",
@@ -8134,7 +8134,7 @@
         {
           "termo": "painel frontal",
           "ocorrencias": 7,
-          "densidade": 1.63
+          "densidade": 1.62
         },
         {
           "termo": "cabo interno",
@@ -8144,32 +8144,32 @@
         {
           "termo": "configuracao painel",
           "ocorrencias": 3,
-          "densidade": 0.7
+          "densidade": 0.69
         },
         {
           "termo": "entradas separadas",
           "ocorrencias": 3,
-          "densidade": 0.7
+          "densidade": 0.69
         },
         {
           "termo": "fone aparece",
           "ocorrencias": 3,
-          "densidade": 0.7
+          "densidade": 0.69
         },
         {
           "termo": "plugue combinado",
           "ocorrencias": 3,
-          "densidade": 0.7
+          "densidade": 0.69
         },
         {
           "termo": "plugue inserido",
           "ocorrencias": 3,
-          "densidade": 0.7
+          "densidade": 0.69
         },
         {
           "termo": "aparece lista",
           "ocorrencias": 2,
-          "densidade": 0.47
+          "densidade": 0.46
         }
       ],
       "headings": {
@@ -8209,70 +8209,70 @@
       "lote": "10C/3",
       "aprovadoEm": "2026-08-26",
       "titulo": "Serviço de áudio do Windows não está em execução: como reativar",
-      "palavras": 720,
-      "termosUteis": 424,
-      "densidadeSemantica": 56.84,
-      "vocabulario": 241,
+      "palavras": 724,
+      "termosUteis": 426,
+      "densidadeSemantica": 57.04,
+      "vocabulario": 243,
       "keywordPrincipal": {
         "termo": "servico de audio do windows nao esta em execucao",
         "ocorrencias": 7,
-        "densidade": 1.65
+        "densidade": 1.64
       },
       "topKeywords": [
         {
           "termo": "windows",
           "ocorrencias": 15,
-          "densidade": 3.54
+          "densidade": 3.52
         },
         {
           "termo": "audio",
           "ocorrencias": 13,
-          "densidade": 3.07
+          "densidade": 3.05
         },
         {
           "termo": "servico",
           "ocorrencias": 13,
-          "densidade": 3.07
+          "densidade": 3.05
         },
         {
           "termo": "som",
           "ocorrencias": 8,
-          "densidade": 1.89
+          "densidade": 1.88
         },
         {
           "termo": "driver",
           "ocorrencias": 7,
-          "densidade": 1.65
+          "densidade": 1.64
         },
         {
           "termo": "execucao",
           "ocorrencias": 7,
-          "densidade": 1.65
+          "densidade": 1.64
         },
         {
           "termo": "computador",
           "ocorrencias": 6,
-          "densidade": 1.42
+          "densidade": 1.41
         },
         {
           "termo": "tecnico",
           "ocorrencias": 6,
-          "densidade": 1.42
+          "densidade": 1.41
         },
         {
           "termo": "construtor",
           "ocorrencias": 5,
-          "densidade": 1.18
+          "densidade": 1.17
         },
         {
           "termo": "mesmo",
           "ocorrencias": 5,
-          "densidade": 1.18
+          "densidade": 1.17
         },
         {
           "termo": "modelo",
           "ocorrencias": 5,
-          "densidade": 1.18
+          "densidade": 1.17
         },
         {
           "termo": "automatico",
@@ -8284,7 +8284,7 @@
         {
           "termo": "audio windows",
           "ocorrencias": 6,
-          "densidade": 1.42
+          "densidade": 1.41
         },
         {
           "termo": "windows audio",
@@ -8360,10 +8360,10 @@
       "lote": "10C/4",
       "aprovadoEm": "2026-08-26",
       "titulo": "Webcam não funciona: como separar privacidade, aplicativo, driver e…",
-      "palavras": 1271,
-      "termosUteis": 744,
-      "densidadeSemantica": 47.85,
-      "vocabulario": 356,
+      "palavras": 1275,
+      "termosUteis": 746,
+      "densidadeSemantica": 48.12,
+      "vocabulario": 359,
       "keywordPrincipal": {
         "termo": "webcam nao funciona o que verificar",
         "ocorrencias": 2,
@@ -8373,32 +8373,32 @@
         {
           "termo": "camera",
           "ocorrencias": 40,
-          "densidade": 5.38
+          "densidade": 5.36
         },
         {
           "termo": "driver",
           "ocorrencias": 18,
-          "densidade": 2.42
+          "densidade": 2.41
         },
         {
           "termo": "aplicativo",
           "ocorrencias": 15,
-          "densidade": 2.02
+          "densidade": 2.01
         },
         {
           "termo": "programa",
           "ocorrencias": 15,
-          "densidade": 2.02
+          "densidade": 2.01
         },
         {
           "termo": "dispositivo",
           "ocorrencias": 13,
-          "densidade": 1.75
+          "densidade": 1.74
         },
         {
           "termo": "imagem",
           "ocorrencias": 13,
-          "densidade": 1.75
+          "densidade": 1.74
         },
         {
           "termo": "permissao",
@@ -8408,12 +8408,12 @@
         {
           "termo": "modulo",
           "ocorrencias": 11,
-          "densidade": 1.48
+          "densidade": 1.47
         },
         {
           "termo": "windows",
           "ocorrencias": 11,
-          "densidade": 1.48
+          "densidade": 1.47
         },
         {
           "termo": "sistema",
@@ -8511,10 +8511,10 @@
       "lote": "10C/4",
       "aprovadoEm": "2026-08-26",
       "titulo": "Permissões de câmera no Windows: quando é o sistema que bloqueia e…",
-      "palavras": 1046,
-      "termosUteis": 587,
-      "densidadeSemantica": 48.55,
-      "vocabulario": 285,
+      "palavras": 1050,
+      "termosUteis": 589,
+      "densidadeSemantica": 48.9,
+      "vocabulario": 288,
       "keywordPrincipal": {
         "termo": "permissoes de camera no windows",
         "ocorrencias": 6,
@@ -8524,12 +8524,12 @@
         {
           "termo": "camera",
           "ocorrencias": 29,
-          "densidade": 4.94
+          "densidade": 4.92
         },
         {
           "termo": "permissao",
           "ocorrencias": 16,
-          "densidade": 2.73
+          "densidade": 2.72
         },
         {
           "termo": "acesso",
@@ -8661,10 +8661,10 @@
       "lote": "10C/4",
       "aprovadoEm": "2026-08-26",
       "titulo": "Webcam USB não é detectada: porta, cabo, alimentação e driver",
-      "palavras": 866,
-      "termosUteis": 496,
-      "densidadeSemantica": 53.43,
-      "vocabulario": 265,
+      "palavras": 870,
+      "termosUteis": 498,
+      "densidadeSemantica": 53.82,
+      "vocabulario": 268,
       "keywordPrincipal": {
         "termo": "webcam usb nao e detectada",
         "ocorrencias": 2,
@@ -8674,27 +8674,27 @@
         {
           "termo": "camera",
           "ocorrencias": 20,
-          "densidade": 4.03
+          "densidade": 4.02
         },
         {
           "termo": "driver",
           "ocorrencias": 14,
-          "densidade": 2.82
+          "densidade": 2.81
         },
         {
           "termo": "porta",
           "ocorrencias": 13,
-          "densidade": 2.62
+          "densidade": 2.61
         },
         {
           "termo": "usb",
           "ocorrencias": 12,
-          "densidade": 2.42
+          "densidade": 2.41
         },
         {
           "termo": "cabo",
           "ocorrencias": 11,
-          "densidade": 2.22
+          "densidade": 2.21
         },
         {
           "termo": "computador",
@@ -8724,39 +8724,39 @@
         {
           "termo": "portas",
           "ocorrencias": 6,
-          "densidade": 1.21
+          "densidade": 1.2
         },
         {
           "termo": "problema",
           "ocorrencias": 6,
-          "densidade": 1.21
+          "densidade": 1.2
         }
       ],
       "topBigramas": [
         {
           "termo": "camera computador",
           "ocorrencias": 3,
-          "densidade": 0.61
+          "densidade": 0.6
         },
         {
           "termo": "dispositivo desconhecido",
           "ocorrencias": 3,
-          "densidade": 0.61
+          "densidade": 0.6
         },
         {
           "termo": "porta traseira",
           "ocorrencias": 3,
-          "densidade": 0.61
+          "densidade": 0.6
         },
         {
           "termo": "teste cruzado",
           "ocorrencias": 3,
-          "densidade": 0.61
+          "densidade": 0.6
         },
         {
           "termo": "webcam usb",
           "ocorrencias": 3,
-          "densidade": 0.61
+          "densidade": 0.6
         },
         {
           "termo": "agregadores driver",
@@ -8811,10 +8811,10 @@
       "lote": "10C/4",
       "aprovadoEm": "2026-08-26",
       "titulo": "Windows Update não funciona: como descobrir em qual estágio a…",
-      "palavras": 1342,
-      "termosUteis": 785,
-      "densidadeSemantica": 52.99,
-      "vocabulario": 416,
+      "palavras": 1346,
+      "termosUteis": 787,
+      "densidadeSemantica": 53.11,
+      "vocabulario": 418,
       "keywordPrincipal": {
         "termo": "windows update nao funciona o que verificar",
         "ocorrencias": 1,
@@ -8829,7 +8829,7 @@
         {
           "termo": "componentes",
           "ocorrencias": 17,
-          "densidade": 2.17
+          "densidade": 2.16
         },
         {
           "termo": "update",
@@ -8854,17 +8854,17 @@
         {
           "termo": "atualizacoes",
           "ocorrencias": 9,
-          "densidade": 1.15
+          "densidade": 1.14
         },
         {
           "termo": "instalacao",
           "ocorrencias": 9,
-          "densidade": 1.15
+          "densidade": 1.14
         },
         {
           "termo": "reinicializacao",
           "ocorrencias": 9,
-          "densidade": 1.15
+          "densidade": 1.14
         },
         {
           "termo": "atualizacao",
@@ -8965,10 +8965,10 @@
       "lote": "10C/4",
       "aprovadoEm": "2026-08-26",
       "titulo": "Cache do Windows Update: o que é a SoftwareDistribution e como…",
-      "palavras": 935,
-      "termosUteis": 521,
-      "densidadeSemantica": 56.43,
-      "vocabulario": 294,
+      "palavras": 939,
+      "termosUteis": 523,
+      "densidadeSemantica": 56.79,
+      "vocabulario": 297,
       "keywordPrincipal": {
         "termo": "limpar cache do windows update softwaredistribution",
         "ocorrencias": 1,
@@ -8978,27 +8978,27 @@
         {
           "termo": "servicos",
           "ocorrencias": 15,
-          "densidade": 2.88
+          "densidade": 2.87
         },
         {
           "termo": "pasta",
           "ocorrencias": 11,
-          "densidade": 2.11
+          "densidade": 2.1
         },
         {
           "termo": "windows",
           "ocorrencias": 11,
-          "densidade": 2.11
+          "densidade": 2.1
         },
         {
           "termo": "update",
           "ocorrencias": 9,
-          "densidade": 1.73
+          "densidade": 1.72
         },
         {
           "termo": "apagar",
           "ocorrencias": 8,
-          "densidade": 1.54
+          "densidade": 1.53
         },
         {
           "termo": "download",
@@ -9045,37 +9045,37 @@
         {
           "termo": "atualizacao transferencia",
           "ocorrencias": 3,
-          "densidade": 0.58
+          "densidade": 0.57
         },
         {
           "termo": "pasta faz",
           "ocorrencias": 3,
-          "densidade": 0.58
+          "densidade": 0.57
         },
         {
           "termo": "renomear apagar",
           "ocorrencias": 3,
-          "densidade": 0.58
+          "densidade": 0.57
         },
         {
           "termo": "segundo plano",
           "ocorrencias": 3,
-          "densidade": 0.58
+          "densidade": 0.57
         },
         {
           "termo": "servicos atualizacao",
           "ocorrencias": 3,
-          "densidade": 0.58
+          "densidade": 0.57
         },
         {
           "termo": "transferencia segundo",
           "ocorrencias": 3,
-          "densidade": 0.58
+          "densidade": 0.57
         },
         {
           "termo": "windows recria",
           "ocorrencias": 3,
-          "densidade": 0.58
+          "densidade": 0.57
         }
       ],
       "headings": {
@@ -9114,10 +9114,10 @@
       "lote": "10C/4",
       "aprovadoEm": "2026-08-26",
       "titulo": "Atualização travada e &quot;desfazendo alterações&quot;: o que é reversão e o…",
-      "palavras": 1084,
-      "termosUteis": 641,
-      "densidadeSemantica": 55.69,
-      "vocabulario": 357,
+      "palavras": 1088,
+      "termosUteis": 643,
+      "densidadeSemantica": 55.99,
+      "vocabulario": 360,
       "keywordPrincipal": {
         "termo": "windows update travado desfazendo alteracoes",
         "ocorrencias": 1,
@@ -9127,7 +9127,7 @@
         {
           "termo": "disco",
           "ocorrencias": 11,
-          "densidade": 1.72
+          "densidade": 1.71
         },
         {
           "termo": "atividade",
@@ -9137,7 +9137,7 @@
         {
           "termo": "reversao",
           "ocorrencias": 8,
-          "densidade": 1.25
+          "densidade": 1.24
         },
         {
           "termo": "atualizacao",
@@ -9177,12 +9177,12 @@
         {
           "termo": "componentes",
           "ocorrencias": 6,
-          "densidade": 0.94
+          "densidade": 0.93
         },
         {
           "termo": "driver",
           "ocorrencias": 6,
-          "densidade": 0.94
+          "densidade": 0.93
         }
       ],
       "topBigramas": [
@@ -9194,17 +9194,17 @@
         {
           "termo": "chave recuperacao",
           "ocorrencias": 4,
-          "densidade": 0.63
+          "densidade": 0.62
         },
         {
           "termo": "falta espaco",
           "ocorrencias": 4,
-          "densidade": 0.63
+          "densidade": 0.62
         },
         {
           "termo": "processo parado",
           "ocorrencias": 4,
-          "densidade": 0.63
+          "densidade": 0.62
         },
         {
           "termo": "causas comuns",
@@ -9266,40 +9266,40 @@
       "lote": "11A/4",
       "aprovadoEm": "2026-08-31",
       "titulo": "UEFI ou Legacy: como identificar o modo de inicialização do seu PC",
-      "palavras": 735,
-      "termosUteis": 413,
-      "densidadeSemantica": 56.66,
-      "vocabulario": 234,
+      "palavras": 739,
+      "termosUteis": 415,
+      "densidadeSemantica": 56.63,
+      "vocabulario": 235,
       "keywordPrincipal": {
         "termo": "boot uefi ou legacy como identificar",
         "ocorrencias": 3,
-        "densidade": 0.73
+        "densidade": 0.72
       },
       "topKeywords": [
         {
           "termo": "disco",
           "ocorrencias": 13,
-          "densidade": 3.15
+          "densidade": 3.13
         },
         {
           "termo": "uefi",
           "ocorrencias": 13,
-          "densidade": 3.15
+          "densidade": 3.13
         },
         {
           "termo": "modo",
           "ocorrencias": 12,
-          "densidade": 2.91
+          "densidade": 2.89
         },
         {
           "termo": "legacy",
           "ocorrencias": 8,
-          "densidade": 1.94
+          "densidade": 1.93
         },
         {
           "termo": "tecnico",
           "ocorrencias": 8,
-          "densidade": 1.94
+          "densidade": 1.93
         },
         {
           "termo": "firmware",
@@ -9334,7 +9334,7 @@
         {
           "termo": "configuracao",
           "ocorrencias": 5,
-          "densidade": 1.21
+          "densidade": 1.2
         }
       ],
       "topBigramas": [
@@ -9344,39 +9344,39 @@
           "densidade": 0.97
         },
         {
+          "termo": "curitiba regiao",
+          "ocorrencias": 3,
+          "densidade": 0.72
+        },
+        {
           "termo": "estilo particao",
           "ocorrencias": 3,
-          "densidade": 0.73
+          "densidade": 0.72
         },
         {
           "termo": "legacy csm",
           "ocorrencias": 3,
-          "densidade": 0.73
+          "densidade": 0.72
         },
         {
           "termo": "secure boot",
           "ocorrencias": 3,
-          "densidade": 0.73
+          "densidade": 0.72
         },
         {
           "termo": "uefi legacy",
           "ocorrencias": 3,
-          "densidade": 0.73
+          "densidade": 0.72
         },
         {
           "termo": "abrir maquina",
           "ocorrencias": 2,
-          "densidade": 0.49
+          "densidade": 0.48
         },
         {
           "termo": "aparece pratica",
           "ocorrencias": 2,
-          "densidade": 0.49
-        },
-        {
-          "termo": "chamar tecnico",
-          "ocorrencias": 2,
-          "densidade": 0.49
+          "densidade": 0.48
         }
       ],
       "headings": {
@@ -9418,10 +9418,10 @@
       "lote": "11A/4",
       "aprovadoEm": "2026-08-31",
       "titulo": "Ordem de boot na BIOS: como configurar sem quebrar a inicialização",
-      "palavras": 649,
-      "termosUteis": 381,
-      "densidadeSemantica": 66.93,
-      "vocabulario": 255,
+      "palavras": 653,
+      "termosUteis": 383,
+      "densidadeSemantica": 66.84,
+      "vocabulario": 256,
       "keywordPrincipal": {
         "termo": "ordem de boot na bios como configurar",
         "ocorrencias": 1,
@@ -9431,17 +9431,17 @@
         {
           "termo": "boot",
           "ocorrencias": 9,
-          "densidade": 2.36
+          "densidade": 2.35
         },
         {
           "termo": "ordem",
           "ocorrencias": 8,
-          "densidade": 2.1
+          "densidade": 2.09
         },
         {
           "termo": "tecnico",
           "ocorrencias": 8,
-          "densidade": 2.1
+          "densidade": 2.09
         },
         {
           "termo": "menu",
@@ -9459,6 +9459,11 @@
           "densidade": 1.31
         },
         {
+          "termo": "curitiba",
+          "ocorrencias": 5,
+          "densidade": 1.31
+        },
+        {
           "termo": "inicializacao",
           "ocorrencias": 5,
           "densidade": 1.31
@@ -9471,22 +9476,17 @@
         {
           "termo": "atendimento",
           "ocorrencias": 4,
-          "densidade": 1.05
-        },
-        {
-          "termo": "curitiba",
-          "ocorrencias": 4,
-          "densidade": 1.05
+          "densidade": 1.04
         },
         {
           "termo": "firmware",
           "ocorrencias": 4,
-          "densidade": 1.05
+          "densidade": 1.04
         },
         {
           "termo": "mudar",
           "ocorrencias": 4,
-          "densidade": 1.05
+          "densidade": 1.04
         }
       ],
       "topBigramas": [
@@ -9496,6 +9496,11 @@
           "densidade": 1.05
         },
         {
+          "termo": "curitiba regiao",
+          "ocorrencias": 3,
+          "densidade": 0.79
+        },
+        {
           "termo": "menu temporario",
           "ocorrencias": 3,
           "densidade": 0.79
@@ -9503,32 +9508,27 @@
         {
           "termo": "chamar tecnico",
           "ocorrencias": 2,
-          "densidade": 0.53
+          "densidade": 0.52
         },
         {
           "termo": "conforme disponibilidade",
           "ocorrencias": 2,
-          "densidade": 0.53
-        },
-        {
-          "termo": "curitiba regiao",
-          "ocorrencias": 2,
-          "densidade": 0.53
+          "densidade": 0.52
         },
         {
           "termo": "disponibilidade agenda",
           "ocorrencias": 2,
-          "densidade": 0.53
+          "densidade": 0.52
         },
         {
           "termo": "fast boot",
           "ocorrencias": 2,
-          "densidade": 0.53
+          "densidade": 0.52
         },
         {
           "termo": "indice artigo",
           "ocorrencias": 2,
-          "densidade": 0.53
+          "densidade": 0.52
         }
       ],
       "headings": {
@@ -9567,10 +9567,10 @@
       "lote": "11A/4",
       "aprovadoEm": "2026-08-31",
       "titulo": "Reparo automático em laço: o que fazer quando o Windows não sai…",
-      "palavras": 676,
-      "termosUteis": 396,
-      "densidadeSemantica": 67.17,
-      "vocabulario": 266,
+      "palavras": 680,
+      "termosUteis": 398,
+      "densidadeSemantica": 67.09,
+      "vocabulario": 267,
       "keywordPrincipal": {
         "termo": "windows reparo automatico em loop",
         "ocorrencias": 0,
@@ -9580,22 +9580,27 @@
         {
           "termo": "disco",
           "ocorrencias": 11,
-          "densidade": 2.78
+          "densidade": 2.76
         },
         {
           "termo": "tecnico",
           "ocorrencias": 8,
-          "densidade": 2.02
+          "densidade": 2.01
         },
         {
           "termo": "laco",
           "ocorrencias": 6,
-          "densidade": 1.52
+          "densidade": 1.51
         },
         {
           "termo": "reparo",
           "ocorrencias": 6,
-          "densidade": 1.52
+          "densidade": 1.51
+        },
+        {
+          "termo": "curitiba",
+          "ocorrencias": 5,
+          "densidade": 1.26
         },
         {
           "termo": "atendimento",
@@ -9604,11 +9609,6 @@
         },
         {
           "termo": "atualizacao",
-          "ocorrencias": 4,
-          "densidade": 1.01
-        },
-        {
-          "termo": "curitiba",
           "ocorrencias": 4,
           "densidade": 1.01
         },
@@ -9635,10 +9635,15 @@
         {
           "termo": "arquivos",
           "ocorrencias": 3,
-          "densidade": 0.76
+          "densidade": 0.75
         }
       ],
       "topBigramas": [
+        {
+          "termo": "curitiba regiao",
+          "ocorrencias": 3,
+          "densidade": 0.76
+        },
         {
           "termo": "reparo automatico",
           "ocorrencias": 3,
@@ -9647,37 +9652,32 @@
         {
           "termo": "causas comuns",
           "ocorrencias": 2,
-          "densidade": 0.51
+          "densidade": 0.5
         },
         {
           "termo": "chamar tecnico",
           "ocorrencias": 2,
-          "densidade": 0.51
+          "densidade": 0.5
         },
         {
           "termo": "chave recuperacao",
           "ocorrencias": 2,
-          "densidade": 0.51
+          "densidade": 0.5
         },
         {
           "termo": "conforme disponibilidade",
           "ocorrencias": 2,
-          "densidade": 0.51
+          "densidade": 0.5
         },
         {
           "termo": "copia prioridade",
           "ocorrencias": 2,
-          "densidade": 0.51
+          "densidade": 0.5
         },
         {
           "termo": "costuma resolver",
           "ocorrencias": 2,
-          "densidade": 0.51
-        },
-        {
-          "termo": "criptografia disco",
-          "ocorrencias": 2,
-          "densidade": 0.51
+          "densidade": 0.5
         }
       ],
       "headings": {
