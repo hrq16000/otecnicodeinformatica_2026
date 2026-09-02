@@ -1,4 +1,5 @@
 import { SmartImage } from "@/components/SmartImage";
+import { FotoCredito } from "@/components/FotoCredito";
 import { useEffect } from "react";
 import { PageSEO } from "@/components/PageSEO";
 import { resolveLocal } from "@/lib/localIndexPolicy";
@@ -270,7 +271,7 @@ export const ServicoBairroTemplate = ({ data }: { data: ServicoBairroData }) => 
                     <p>{data.descricaoLonga}</p>
                   </div>
                 </div>
-                <div className="rounded-xl overflow-hidden shadow-lg group">
+                <figure className="rounded-xl overflow-hidden shadow-lg group">
                   <SmartImage wrapperClassName="w-full" 
                     src={data.servicoSlug.includes("conserto") ? IMAGES.notebookReparo 
                       : data.servicoSlug.includes("formatacao") ? IMAGES.tecnicoTrabalhando
@@ -286,7 +287,17 @@ export const ServicoBairroTemplate = ({ data }: { data: ServicoBairroData }) => 
                     width="800"
                     height="400"
                   />
-                </div>
+                  <FotoCredito
+                    src={data.servicoSlug.includes("conserto") ? IMAGES.notebookReparo
+                      : data.servicoSlug.includes("formatacao") ? IMAGES.tecnicoTrabalhando
+                      : data.servicoSlug.includes("virus") ? IMAGES.segurancaDigital
+                      : data.servicoSlug.includes("upgrade") ? IMAGES.componentesSsd
+                      : data.servicoSlug.includes("redes") ? IMAGES.redesWifi
+                      : data.servicoSlug.includes("backup") ? IMAGES.diagnostico
+                      : data.servicoSlug.includes("montagem") ? IMAGES.desktopMontado
+                      : IMAGES.tecnicoTrabalhando}
+                  />
+                </figure>
               </div>
               
               {/* Location tags with stagger */}
