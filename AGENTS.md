@@ -79,23 +79,20 @@ Uma página = uma intenção principal. Não misturar.
 
 ## 6. Validação antes de publicar
 
-Obrigatório e bloqueante:
+Obrigatório e bloqueante — três comandos oficiais, nesta ordem:
 
 ```sh
-npm run build
-npm test
-npm run check:route-tree
-npm run check:editorial-governance
-npm run check:internal-links
-npm run check:interlinks-quality
-npm run check:national-authority-map
-npm run validate:jsonld
-npm run check:trust-claims
-npm run test:a11y        # quando o ambiente de browser estiver disponível
+npm run verify        # lint, testes, rotas, links, órfãs, marca, E-E-A-T, segurança
+npm run build         # prebuild + vite build (SSR) + postbuild
+npm run deploy:check  # robots, GEO, schema.org, JSON-LD, imagens, indexação
+npm run test:a11y     # quando o ambiente de browser estiver disponível
 ```
 
-Também: SSR sem JavaScript, JSON-LD determinístico (`check:jsonld-ssr`),
-ausência de órfãs (`check:orphan-ratchet`) e acessibilidade.
+Detalhes, flags e lista de passos: `docs/comandos-oficiais.md`.
+Os passos ficam em `scripts/pipelines.config.mjs` (fonte única). Todos os
+scripts individuais (`check:*`, `report:*`) continuam disponíveis para
+diagnóstico pontual.
+
 
 ## 7. Publicação
 
