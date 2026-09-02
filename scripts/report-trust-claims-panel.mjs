@@ -15,7 +15,8 @@
  *   --check  não escreve; falha se o arquivo estiver desatualizado/ausente.
  */
 import { execFileSync } from "node:child_process";
-import { readFileSync, writeFileSync, existsSync, mkdirSync } from "node:fs";
+import { readFileSync, writeFileSync, existsSync, mkdirSync, openSync, closeSync, rmSync } from "node:fs";
+import { tmpdir } from "node:os";
 import { join, dirname } from "node:path";
 import { CURATED_PATHS } from "./lib/curated-urls.mjs";
 
