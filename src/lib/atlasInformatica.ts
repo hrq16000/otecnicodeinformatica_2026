@@ -135,6 +135,18 @@ export const ATLAS_TEMAS: AtlasTema[] = [
       { to: "/como-funciona", label: "Como funciona o atendimento" },
       { to: "/servicos", label: "Todos os serviços" },
     ],
+    fontes: [
+      {
+        titulo: "Microsoft Support — noções básicas de Windows e manutenção do PC",
+        url: "https://support.microsoft.com/pt-br/windows",
+        nota: "Documentação oficial usada como base dos conceitos de sistema citados na trilha.",
+      },
+      {
+        titulo: "CERT.br — Cartilha de Segurança para Internet",
+        url: "https://cartilha.cert.br/",
+        nota: "Referência brasileira para os fundamentos de uso seguro citados no tema.",
+      },
+    ],
   },
   {
     id: "windows-inicializacao",
