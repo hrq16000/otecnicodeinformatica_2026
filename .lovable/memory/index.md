@@ -74,4 +74,5 @@
 - [Fase 3 — biblioteca técnica](mem://features/biblioteca-tecnica-fase3) — /glossario (15 DefinedTerm) + /ferramentas (5 checklists), 22 rotas, pontes bidirecionais, gate check:biblioteca e contratos de a11y.
 - [Fase 4 — guias de decisão](mem://features/fase4-guias-decisao) — /decisoes (6 guias independentes), ponte pilar→decisão, painel /admin/biblioteca e gate check:biblioteca ampliado.
 - [Sitemap dinâmico e /admin/seo](mem://features/sitemap-dinamico-e-admin-seo) — Orquestrador de sitemap por lotes aprovados, ledger/IndexNow e edição auditável de metadata por URL.
+- [Medição de indexação real](mem://features/medicao-indexacao-gsc-bing) — Ledger GSC+Bing, painel /admin/seo, fail-closed e proibição de prometer indexação.
 - [Taxonomia de entidades](mem://features/taxonomia-entidades) — /entidades + 9 entidades conectadas (definição, problemas, ferramentas, decisões, artigos, fontes, serviços, cidades), DefinedTermSet e gate check:entidades.

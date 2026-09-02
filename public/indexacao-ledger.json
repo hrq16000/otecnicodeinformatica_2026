@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-09-02T03:46:13.918Z",
+  "geradoEm": "2026-09-02T03:57:20.583Z",
   "base": "https://otecnicodeinformatica.com.br",
   "janela": {
     "atual": {
@@ -18,10 +18,21 @@
       "motivo": null
     },
     "bing": {
-      "disponivel": false,
-      "motivo": "BING_WEBMASTER_API_KEY ausente — métricas do Bing ficam UNKNOWN.",
-      "crawl": null,
-      "totais": null
+      "disponivel": true,
+      "motivo": null,
+      "crawl": {
+        "dias": 17,
+        "rastreadas": 9,
+        "naIndexacao": 0,
+        "bloqueadasRobots": 0,
+        "erros": 3,
+        "codigos4xx": 3,
+        "codigos5xx": 0
+      },
+      "totais": {
+        "cliques": 0,
+        "impressoes": 0
+      }
     }
   },
   "cobertura": {
@@ -648,10 +659,6 @@
   "paginasTopBing": [],
   "alertas": [
     {
-      "nivel": "config",
-      "mensagem": "BING_WEBMASTER_API_KEY ausente — métricas do Bing ficam UNKNOWN."
-    },
-    {
       "nivel": "atencao",
       "mensagem": "142 URL(s) curadas sem nenhuma impressão em 28 dias."
     }
@@ -675,9 +682,9 @@
         "canonicalGoogle": "https://otecnicodeinformatica.com.br/"
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": [
         {
@@ -754,9 +761,9 @@
         "canonicalGoogle": "https://otecnicodeinformatica.com.br/servicos"
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": []
     },
@@ -778,9 +785,9 @@
         "canonicalGoogle": "https://otecnicodeinformatica.com.br/como-funciona"
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": []
     },
@@ -802,9 +809,9 @@
         "canonicalGoogle": "https://otecnicodeinformatica.com.br/precos-e-politicas"
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": []
     },
@@ -826,9 +833,9 @@
         "canonicalGoogle": "https://otecnicodeinformatica.com.br/sobre"
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": []
     },
@@ -850,9 +857,9 @@
         "canonicalGoogle": "https://otecnicodeinformatica.com.br/contato"
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": []
     },
@@ -874,9 +881,9 @@
         "canonicalGoogle": "https://otecnicodeinformatica.com.br/faq"
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": []
     },
@@ -898,9 +905,9 @@
         "canonicalGoogle": "https://otecnicodeinformatica.com.br/anuncie"
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": []
     },
@@ -922,9 +929,9 @@
         "canonicalGoogle": "https://otecnicodeinformatica.com.br/atendimento-domicilio"
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": []
     },
@@ -946,9 +953,9 @@
         "canonicalGoogle": "https://otecnicodeinformatica.com.br/atendimento-remoto"
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": []
     },
@@ -970,9 +977,9 @@
         "canonicalGoogle": null
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": []
     },
@@ -994,9 +1001,9 @@
         "canonicalGoogle": null
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": []
     },
@@ -1018,9 +1025,9 @@
         "canonicalGoogle": null
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": []
     },
@@ -1042,9 +1049,9 @@
         "canonicalGoogle": null
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": []
     },
@@ -1066,9 +1073,9 @@
         "canonicalGoogle": null
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": []
     },
@@ -1090,9 +1097,9 @@
         "canonicalGoogle": "https://otecnicodeinformatica.com.br/seguranca-dos-dados"
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": []
     },
@@ -1114,9 +1121,9 @@
         "canonicalGoogle": null
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": []
     },
@@ -1138,9 +1145,9 @@
         "canonicalGoogle": null
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": []
     },
@@ -1162,9 +1169,9 @@
         "canonicalGoogle": "https://otecnicodeinformatica.com.br/empresa-de-ti-curitiba"
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": [
         {
@@ -1205,9 +1212,9 @@
         "canonicalGoogle": "https://otecnicodeinformatica.com.br/bairros"
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": []
     },
@@ -1229,9 +1236,9 @@
         "canonicalGoogle": "https://otecnicodeinformatica.com.br/guia-tecnico-informatica"
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": []
     },
@@ -1253,9 +1260,9 @@
         "canonicalGoogle": null
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": []
     },
@@ -1277,9 +1284,9 @@
         "canonicalGoogle": null
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": []
     },
@@ -1301,9 +1308,9 @@
         "canonicalGoogle": null
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": []
     },
@@ -1325,9 +1332,9 @@
         "canonicalGoogle": null
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": []
     },
@@ -1349,9 +1356,9 @@
         "canonicalGoogle": null
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": []
     },
@@ -1373,9 +1380,9 @@
         "canonicalGoogle": null
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": []
     },
@@ -1397,9 +1404,9 @@
         "canonicalGoogle": null
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": []
     },
@@ -1421,9 +1428,9 @@
         "canonicalGoogle": null
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": []
     },
@@ -1445,9 +1452,9 @@
         "canonicalGoogle": null
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": []
     },
@@ -1469,9 +1476,9 @@
         "canonicalGoogle": null
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": []
     },
@@ -1493,9 +1500,9 @@
         "canonicalGoogle": null
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": []
     },
@@ -1517,9 +1524,9 @@
         "canonicalGoogle": null
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": []
     },
@@ -1541,9 +1548,9 @@
         "canonicalGoogle": null
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": []
     },
@@ -1565,9 +1572,9 @@
         "canonicalGoogle": null
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": []
     },
@@ -1589,9 +1596,9 @@
         "canonicalGoogle": null
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": []
     },
@@ -1613,9 +1620,9 @@
         "canonicalGoogle": null
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": []
     },
@@ -1637,9 +1644,9 @@
         "canonicalGoogle": null
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": []
     },
@@ -1661,9 +1668,9 @@
         "canonicalGoogle": null
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": []
     },
@@ -1685,9 +1692,9 @@
         "canonicalGoogle": null
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": []
     },
@@ -1709,9 +1716,9 @@
         "canonicalGoogle": null
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": []
     },
@@ -1733,9 +1740,9 @@
         "canonicalGoogle": null
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": []
     },
@@ -1757,9 +1764,9 @@
         "canonicalGoogle": null
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": []
     },
@@ -1781,9 +1788,9 @@
         "canonicalGoogle": null
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": []
     },
@@ -1805,9 +1812,9 @@
         "canonicalGoogle": null
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": []
     },
@@ -1829,9 +1836,9 @@
         "canonicalGoogle": null
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": []
     },
@@ -1853,9 +1860,9 @@
         "canonicalGoogle": null
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": []
     },
@@ -1877,9 +1884,9 @@
         "canonicalGoogle": null
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": []
     },
@@ -1901,9 +1908,9 @@
         "canonicalGoogle": null
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": []
     },
@@ -1925,9 +1932,9 @@
         "canonicalGoogle": null
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": []
     },
@@ -1949,9 +1956,9 @@
         "canonicalGoogle": null
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": []
     },
@@ -1973,9 +1980,9 @@
         "canonicalGoogle": null
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": []
     },
@@ -1997,9 +2004,9 @@
         "canonicalGoogle": null
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": []
     },
@@ -2021,9 +2028,9 @@
         "canonicalGoogle": null
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": []
     },
@@ -2045,9 +2052,9 @@
         "canonicalGoogle": null
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": []
     },
@@ -2069,9 +2076,9 @@
         "canonicalGoogle": null
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": []
     },
@@ -2093,9 +2100,9 @@
         "canonicalGoogle": null
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": []
     },
@@ -2117,9 +2124,9 @@
         "canonicalGoogle": null
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": []
     },
@@ -2141,9 +2148,9 @@
         "canonicalGoogle": null
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": []
     },
@@ -2165,9 +2172,9 @@
         "canonicalGoogle": null
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": []
     },
@@ -2189,9 +2196,9 @@
         "canonicalGoogle": null
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": []
     },
@@ -2213,9 +2220,9 @@
         "canonicalGoogle": null
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": []
     },
@@ -2237,9 +2244,9 @@
         "canonicalGoogle": null
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": []
     },
@@ -2261,9 +2268,9 @@
         "canonicalGoogle": null
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": []
     },
@@ -2285,9 +2292,9 @@
         "canonicalGoogle": null
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": []
     },
@@ -2309,9 +2316,9 @@
         "canonicalGoogle": null
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": []
     },
@@ -2333,9 +2340,9 @@
         "canonicalGoogle": null
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": []
     },
@@ -2357,9 +2364,9 @@
         "canonicalGoogle": null
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": []
     },
@@ -2381,9 +2388,9 @@
         "canonicalGoogle": null
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": []
     },
@@ -2405,9 +2412,9 @@
         "canonicalGoogle": null
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": []
     },
@@ -2429,9 +2436,9 @@
         "canonicalGoogle": null
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": []
     },
@@ -2453,9 +2460,9 @@
         "canonicalGoogle": null
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": [
         {
@@ -2508,9 +2515,9 @@
         "canonicalGoogle": null
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": []
     },
@@ -2532,9 +2539,9 @@
         "canonicalGoogle": null
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": []
     },
@@ -2556,9 +2563,9 @@
         "canonicalGoogle": null
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": []
     },
@@ -2580,9 +2587,9 @@
         "canonicalGoogle": null
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": [
         {
@@ -2611,9 +2618,9 @@
         "canonicalGoogle": null
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": []
     },
@@ -2635,9 +2642,9 @@
         "canonicalGoogle": null
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": [
         {
@@ -2714,9 +2721,9 @@
         "canonicalGoogle": null
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": [
         {
@@ -2745,9 +2752,9 @@
         "canonicalGoogle": null
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": []
     },
@@ -2769,9 +2776,9 @@
         "canonicalGoogle": null
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": []
     },
@@ -2793,9 +2800,9 @@
         "canonicalGoogle": null
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": []
     },
@@ -2817,9 +2824,9 @@
         "canonicalGoogle": null
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": []
     },
@@ -2841,9 +2848,9 @@
         "canonicalGoogle": null
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": [
         {
@@ -2926,9 +2933,9 @@
         "canonicalGoogle": null
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": [
         {
@@ -2957,9 +2964,9 @@
         "canonicalGoogle": null
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": [
         {
@@ -3006,9 +3013,9 @@
         "canonicalGoogle": null
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": []
     },
@@ -3030,9 +3037,9 @@
         "canonicalGoogle": null
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": []
     },
@@ -3054,9 +3061,9 @@
         "canonicalGoogle": null
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": []
     },
@@ -3078,9 +3085,9 @@
         "canonicalGoogle": null
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": []
     },
@@ -3102,9 +3109,9 @@
         "canonicalGoogle": null
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": []
     },
@@ -3126,9 +3133,9 @@
         "canonicalGoogle": null
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": []
     },
@@ -3150,9 +3157,9 @@
         "canonicalGoogle": null
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": [
         {
@@ -3199,9 +3206,9 @@
         "canonicalGoogle": null
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": []
     },
@@ -3223,9 +3230,9 @@
         "canonicalGoogle": null
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": []
     },
@@ -3247,9 +3254,9 @@
         "canonicalGoogle": null
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": []
     },
@@ -3271,9 +3278,9 @@
         "canonicalGoogle": null
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": []
     },
@@ -3295,9 +3302,9 @@
         "canonicalGoogle": null
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": []
     },
@@ -3319,9 +3326,9 @@
         "canonicalGoogle": null
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": [
         {
@@ -3350,9 +3357,9 @@
         "canonicalGoogle": null
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": []
     },
@@ -3374,9 +3381,9 @@
         "canonicalGoogle": null
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": []
     },
@@ -3398,9 +3405,9 @@
         "canonicalGoogle": null
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": [
         {
@@ -3435,9 +3442,9 @@
         "canonicalGoogle": null
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": [
         {
@@ -3472,9 +3479,9 @@
         "canonicalGoogle": null
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": []
     },
@@ -3496,9 +3503,9 @@
         "canonicalGoogle": null
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": []
     },
@@ -3520,9 +3527,9 @@
         "canonicalGoogle": null
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": [
         {
@@ -3581,9 +3588,9 @@
         "canonicalGoogle": null
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": []
     },
@@ -3605,9 +3612,9 @@
         "canonicalGoogle": null
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": []
     },
@@ -3629,9 +3636,9 @@
         "canonicalGoogle": null
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": []
     },
@@ -3653,9 +3660,9 @@
         "canonicalGoogle": null
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": []
     },
@@ -3677,9 +3684,9 @@
         "canonicalGoogle": null
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": []
     },
@@ -3701,9 +3708,9 @@
         "canonicalGoogle": null
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": []
     },
@@ -3725,9 +3732,9 @@
         "canonicalGoogle": null
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": []
     },
@@ -3749,9 +3756,9 @@
         "canonicalGoogle": null
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": []
     },
@@ -3773,9 +3780,9 @@
         "canonicalGoogle": null
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": []
     },
@@ -3797,9 +3804,9 @@
         "canonicalGoogle": null
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": []
     },
@@ -3821,9 +3828,9 @@
         "canonicalGoogle": null
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": []
     },
@@ -3845,9 +3852,9 @@
         "canonicalGoogle": null
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": []
     },
@@ -3869,9 +3876,9 @@
         "canonicalGoogle": null
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": []
     },
@@ -3893,9 +3900,9 @@
         "canonicalGoogle": null
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": []
     },
@@ -3917,9 +3924,9 @@
         "canonicalGoogle": null
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": []
     },
@@ -3941,9 +3948,9 @@
         "canonicalGoogle": null
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": [
         {
@@ -3972,9 +3979,9 @@
         "canonicalGoogle": null
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": []
     },
@@ -3996,9 +4003,9 @@
         "canonicalGoogle": null
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": []
     },
@@ -4020,9 +4027,9 @@
         "canonicalGoogle": null
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": []
     },
@@ -4044,9 +4051,9 @@
         "canonicalGoogle": null
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": []
     },
@@ -4068,9 +4075,9 @@
         "canonicalGoogle": null
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": []
     },
@@ -4092,9 +4099,9 @@
         "canonicalGoogle": null
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": []
     },
@@ -4116,9 +4123,9 @@
         "canonicalGoogle": null
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": []
     },
@@ -4140,9 +4147,9 @@
         "canonicalGoogle": null
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": []
     },
@@ -4164,9 +4171,9 @@
         "canonicalGoogle": null
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": []
     },
@@ -4188,9 +4195,9 @@
         "canonicalGoogle": null
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": []
     },
@@ -4212,9 +4219,9 @@
         "canonicalGoogle": null
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": []
     },
@@ -4236,9 +4243,9 @@
         "canonicalGoogle": null
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": []
     },
@@ -4260,9 +4267,9 @@
         "canonicalGoogle": null
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": []
     },
@@ -4284,9 +4291,9 @@
         "canonicalGoogle": null
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": []
     },
@@ -4308,9 +4315,9 @@
         "canonicalGoogle": null
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": []
     },
@@ -4332,9 +4339,9 @@
         "canonicalGoogle": null
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": []
     },
@@ -4356,9 +4363,9 @@
         "canonicalGoogle": null
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": []
     },
@@ -4380,9 +4387,9 @@
         "canonicalGoogle": null
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": []
     },
@@ -4404,9 +4411,9 @@
         "canonicalGoogle": null
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": []
     },
@@ -4428,9 +4435,9 @@
         "canonicalGoogle": null
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": []
     },
@@ -4452,9 +4459,9 @@
         "canonicalGoogle": null
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": []
     },
@@ -4476,9 +4483,9 @@
         "canonicalGoogle": null
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": []
     },
@@ -4500,9 +4507,9 @@
         "canonicalGoogle": null
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": []
     },
@@ -4524,9 +4531,9 @@
         "canonicalGoogle": null
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": []
     },
@@ -4548,9 +4555,9 @@
         "canonicalGoogle": null
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": []
     },
@@ -4572,9 +4579,9 @@
         "canonicalGoogle": null
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": []
     },
@@ -4596,9 +4603,9 @@
         "canonicalGoogle": null
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": [
         {
@@ -4681,9 +4688,9 @@
         "canonicalGoogle": null
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": [
         {
@@ -4718,9 +4725,9 @@
         "canonicalGoogle": null
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": []
     },
@@ -4742,9 +4749,9 @@
         "canonicalGoogle": null
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": []
     },
@@ -4766,9 +4773,9 @@
         "canonicalGoogle": null
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": [
         {
@@ -4797,9 +4804,9 @@
         "canonicalGoogle": null
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": []
     },
@@ -4821,9 +4828,9 @@
         "canonicalGoogle": null
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": []
     },
@@ -4845,9 +4852,9 @@
         "canonicalGoogle": null
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": []
     },
@@ -4869,9 +4876,9 @@
         "canonicalGoogle": null
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": []
     },
@@ -4893,9 +4900,9 @@
         "canonicalGoogle": null
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": [
         {
@@ -4930,9 +4937,9 @@
         "canonicalGoogle": null
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": []
     },
@@ -4954,9 +4961,9 @@
         "canonicalGoogle": null
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": []
     },
@@ -4978,9 +4985,9 @@
         "canonicalGoogle": null
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": []
     },
@@ -5002,9 +5009,9 @@
         "canonicalGoogle": null
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": []
     },
@@ -5026,9 +5033,9 @@
         "canonicalGoogle": null
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": [
         {
@@ -5057,9 +5064,9 @@
         "canonicalGoogle": null
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": []
     },
@@ -5081,9 +5088,9 @@
         "canonicalGoogle": null
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": []
     },
@@ -5105,9 +5112,9 @@
         "canonicalGoogle": null
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": []
     },
@@ -5129,9 +5136,9 @@
         "canonicalGoogle": null
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": []
     },
@@ -5153,9 +5160,9 @@
         "canonicalGoogle": null
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": [
         {
@@ -5184,9 +5191,9 @@
         "canonicalGoogle": null
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": [
         {
@@ -5227,9 +5234,9 @@
         "canonicalGoogle": null
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": []
     },
@@ -5251,9 +5258,9 @@
         "canonicalGoogle": null
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": []
     },
@@ -5275,9 +5282,9 @@
         "canonicalGoogle": null
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": [
         {
@@ -5306,9 +5313,9 @@
         "canonicalGoogle": null
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": []
     },
@@ -5330,9 +5337,9 @@
         "canonicalGoogle": null
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": []
     },
@@ -5354,9 +5361,9 @@
         "canonicalGoogle": null
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": [
         {
@@ -5385,9 +5392,9 @@
         "canonicalGoogle": null
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": []
     },
@@ -5409,9 +5416,9 @@
         "canonicalGoogle": null
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": [
         {
@@ -5440,9 +5447,9 @@
         "canonicalGoogle": null
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": []
     },
@@ -5464,9 +5471,9 @@
         "canonicalGoogle": null
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": [
         {
@@ -5495,9 +5502,9 @@
         "canonicalGoogle": null
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": [
         {
@@ -5562,9 +5569,9 @@
         "canonicalGoogle": null
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": []
     },
@@ -5586,9 +5593,9 @@
         "canonicalGoogle": null
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": []
     },
@@ -5610,9 +5617,9 @@
         "canonicalGoogle": null
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": [
         {
@@ -5641,9 +5648,9 @@
         "canonicalGoogle": null
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": []
     },
@@ -5665,9 +5672,9 @@
         "canonicalGoogle": null
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": [
         {
@@ -5732,9 +5739,9 @@
         "canonicalGoogle": null
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": [
         {
@@ -5769,9 +5776,9 @@
         "canonicalGoogle": null
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": []
     },
@@ -5793,9 +5800,9 @@
         "canonicalGoogle": null
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": []
     },
@@ -5817,9 +5824,9 @@
         "canonicalGoogle": null
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": []
     },
@@ -5841,9 +5848,9 @@
         "canonicalGoogle": null
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": [
         {
@@ -5902,9 +5909,9 @@
         "canonicalGoogle": null
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": []
     },
@@ -5926,9 +5933,9 @@
         "canonicalGoogle": null
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": []
     },
@@ -5950,9 +5957,9 @@
         "canonicalGoogle": null
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": []
     },
@@ -5974,9 +5981,9 @@
         "canonicalGoogle": null
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": []
     },
@@ -5998,9 +6005,9 @@
         "canonicalGoogle": null
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": []
     },
@@ -6022,9 +6029,9 @@
         "canonicalGoogle": null
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": []
     },
@@ -6046,9 +6053,9 @@
         "canonicalGoogle": null
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": []
     },
@@ -6070,9 +6077,9 @@
         "canonicalGoogle": null
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": []
     },
@@ -6094,9 +6101,9 @@
         "canonicalGoogle": null
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": []
     },
@@ -6118,9 +6125,9 @@
         "canonicalGoogle": null
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": []
     },
@@ -6142,9 +6149,9 @@
         "canonicalGoogle": null
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": []
     },
@@ -6166,9 +6173,9 @@
         "canonicalGoogle": null
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": []
     },
@@ -6190,9 +6197,9 @@
         "canonicalGoogle": null
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": [
         {
@@ -6275,9 +6282,9 @@
         "canonicalGoogle": null
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": [
         {
@@ -6360,9 +6367,9 @@
         "canonicalGoogle": null
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": [
         {
@@ -6409,9 +6416,9 @@
         "canonicalGoogle": null
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": [
         {
@@ -6440,9 +6447,9 @@
         "canonicalGoogle": null
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": [
         {
@@ -6483,9 +6490,9 @@
         "canonicalGoogle": null
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": []
     },
@@ -6507,9 +6514,9 @@
         "canonicalGoogle": null
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": []
     },
@@ -6531,9 +6538,9 @@
         "canonicalGoogle": null
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": []
     },
@@ -6555,9 +6562,9 @@
         "canonicalGoogle": null
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": []
     },
@@ -6579,9 +6586,9 @@
         "canonicalGoogle": null
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": []
     },
@@ -6603,9 +6610,9 @@
         "canonicalGoogle": null
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": []
     },
@@ -6627,9 +6634,9 @@
         "canonicalGoogle": null
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": []
     },
@@ -6651,9 +6658,9 @@
         "canonicalGoogle": null
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": [
         {
@@ -6682,9 +6689,9 @@
         "canonicalGoogle": null
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": []
     },
@@ -6706,9 +6713,9 @@
         "canonicalGoogle": null
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": [
         {
@@ -6743,9 +6750,9 @@
         "canonicalGoogle": null
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": [
         {
@@ -6792,9 +6799,9 @@
         "canonicalGoogle": null
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": [
         {
@@ -6835,9 +6842,9 @@
         "canonicalGoogle": null
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": []
     },
@@ -6859,9 +6866,9 @@
         "canonicalGoogle": null
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": []
     },
@@ -6883,9 +6890,9 @@
         "canonicalGoogle": null
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": [
         {
@@ -6920,9 +6927,9 @@
         "canonicalGoogle": null
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": [
         {
@@ -6951,9 +6958,9 @@
         "canonicalGoogle": null
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": [
         {
@@ -6982,9 +6989,9 @@
         "canonicalGoogle": null
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": []
     },
@@ -7006,9 +7013,9 @@
         "canonicalGoogle": null
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": []
     },
@@ -7030,9 +7037,9 @@
         "canonicalGoogle": null
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": []
     },
@@ -7054,9 +7061,9 @@
         "canonicalGoogle": null
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": [
         {
@@ -7085,9 +7092,9 @@
         "canonicalGoogle": null
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": []
     },
@@ -7109,9 +7116,9 @@
         "canonicalGoogle": null
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": [
         {
@@ -7140,9 +7147,9 @@
         "canonicalGoogle": null
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": []
     },
@@ -7164,9 +7171,9 @@
         "canonicalGoogle": null
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": []
     },
@@ -7188,9 +7195,9 @@
         "canonicalGoogle": null
       },
       "bing": {
-        "disponivel": false,
-        "impressoes": null,
-        "cliques": null
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0
       },
       "consultas": []
     }
