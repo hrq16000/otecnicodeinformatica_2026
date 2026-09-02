@@ -112,6 +112,21 @@ export const ATLAS_APROFUNDAMENTO: AtlasAprofundamento[] = [
         to: "/como-funciona",
         contexto: "Triagem, modalidade, aprovação e execução — nessa ordem.",
       },
+      {
+        rotulo: "O que é informática, na prática",
+        to: "/blog/o-que-e-informatica",
+        contexto: "Guia introdutório que sustenta o vocabulário usado em todo o Atlas.",
+      },
+      {
+        rotulo: "Computador lento: o sintoma mais comum",
+        to: "/problemas/computador-lento",
+        contexto: "Ponto de entrada típico de quem ainda não sabe em que camada a falha está.",
+      },
+      {
+        rotulo: "Manutenção de computador",
+        to: "/servicos/manutencao-de-computador",
+        contexto: "Serviço canônico quando a investigação exige bancada e ferramenta.",
+      },
     ],
   },
   {
@@ -183,6 +198,16 @@ export const ATLAS_APROFUNDAMENTO: AtlasAprofundamento[] = [
         to: "/glossario/uefi",
         contexto: "O que o firmware faz antes de o sistema existir.",
       },
+      {
+        rotulo: "Windows em reparo automático em loop",
+        to: "/blog/windows-reparo-automatico-em-loop",
+        contexto: "Guia com a leitura estágio a estágio da partida.",
+      },
+      {
+        rotulo: "Formatação com preservação de dados",
+        to: "/servicos/formatacao",
+        contexto: "Quando a reinstalação é mesmo o caminho, com cópia conferida antes.",
+      },
     ],
   },
   {
@@ -253,6 +278,16 @@ export const ATLAS_APROFUNDAMENTO: AtlasAprofundamento[] = [
         rotulo: "Upgrade de SSD e memória",
         to: "/servicos/upgrade-ssd-ram",
         contexto: "Avaliação de compatibilidade e migração do sistema.",
+      },
+      {
+        rotulo: "Como fazer upgrade para SSD NVMe",
+        to: "/blog/como-fazer-upgrade-ssd-nvme",
+        contexto: "Compatibilidade, clonagem e o que muda de verdade no uso diário.",
+      },
+      {
+        rotulo: "Upgrade de SSD e memória em Curitiba",
+        to: "/servicos/upgrade-ssd/curitiba",
+        contexto: "Atendimento local para quem está na capital.",
       },
     ],
   },
@@ -326,6 +361,16 @@ export const ATLAS_APROFUNDAMENTO: AtlasAprofundamento[] = [
         rotulo: "DNS no glossário",
         to: "/glossario/dns",
         contexto: "Por que \"a internet caiu\" às vezes é só a tradução de nomes falhando.",
+      },
+      {
+        rotulo: "Como melhorar o sinal de Wi-Fi em casa",
+        to: "/blog/como-melhorar-sinal-wifi-em-casa",
+        contexto: "Posicionamento, canal e interferência antes de trocar equipamento.",
+      },
+      {
+        rotulo: "Redes e Wi-Fi",
+        to: "/servicos/redes-e-wifi",
+        contexto: "Serviço canônico para cabeamento, roteador e cobertura.",
       },
     ],
   },
@@ -401,6 +446,16 @@ export const ATLAS_APROFUNDAMENTO: AtlasAprofundamento[] = [
         to: "/decisoes/backup-antes-da-manutencao",
         contexto: "O que copiar antes de autorizar qualquer procedimento.",
       },
+      {
+        rotulo: "Como saber se o PC tem vírus ou malware",
+        to: "/blog/como-saber-se-pc-tem-virus-malware",
+        contexto: "Sinais verificáveis, sem depender de propaganda de otimizador.",
+      },
+      {
+        rotulo: "Arquivos apagados: o que fazer primeiro",
+        to: "/problemas/arquivos-apagados",
+        contexto: "A primeira hora define o que ainda é recuperável.",
+      },
     ],
   },
   {
@@ -472,6 +527,11 @@ export const ATLAS_APROFUNDAMENTO: AtlasAprofundamento[] = [
         rotulo: "Recuperação de dados",
         to: "/servicos/recuperacao-de-dados",
         contexto: "Avaliação em etapas, priorizando o que ainda pode ser lido.",
+      },
+      {
+        rotulo: "Backup: como proteger seus arquivos",
+        to: "/blog/backup-como-proteger-seus-arquivos",
+        contexto: "Regra 3-2-1 aplicada a uso doméstico e a escritório pequeno.",
       },
     ],
   },
@@ -546,6 +606,11 @@ export const ATLAS_APROFUNDAMENTO: AtlasAprofundamento[] = [
         to: "/glossario/thermal-throttling",
         contexto: "Por que a máquina fica lenta em vez de desligar.",
       },
+      {
+        rotulo: "Como trocar a pasta térmica do notebook",
+        to: "/blog/como-trocar-pasta-termica-notebook",
+        contexto: "Procedimento, risco real e quando não vale abrir sozinho.",
+      },
     ],
   },
   {
@@ -612,6 +677,21 @@ export const ATLAS_APROFUNDAMENTO: AtlasAprofundamento[] = [
         rotulo: "Atendimento remoto",
         to: "/atendimento-remoto",
         contexto: "O que dá para resolver sem deslocamento e o que não dá.",
+      },
+      {
+        rotulo: "Organização de TI para pequenos escritórios",
+        to: "/blog/organizacao-de-ti-para-pequenos-escritorios",
+        contexto: "Inventário, backup e padronização antes de contratar suporte.",
+      },
+      {
+        rotulo: "Impressora não imprime na rede",
+        to: "/problemas/impressora-nao-imprime",
+        contexto: "Sintoma recorrente em escritório com fila e spooler compartilhados.",
+      },
+      {
+        rotulo: "Suporte técnico empresarial",
+        to: "/servicos/suporte-tecnico-empresarial",
+        contexto: "Serviço canônico para PJ, com escopo definido em contrato.",
       },
     ],
   },
@@ -685,6 +765,21 @@ export const ATLAS_APROFUNDAMENTO: AtlasAprofundamento[] = [
         rotulo: "Preços e políticas",
         to: "/precos-e-politicas",
         contexto: "Valores de referência e regras de aprovação, sempre visíveis.",
+      },
+      {
+        rotulo: "Quando trocar o HD por um SSD",
+        to: "/blog/quando-trocar-hd-por-ssd",
+        contexto: "O upgrade que mais muda percepção de velocidade — e seus limites.",
+      },
+      {
+        rotulo: "Notebook não liga",
+        to: "/problemas/notebook-nao-liga",
+        contexto: "Sintoma em que a conta entre reparo e substituição costuma apertar.",
+      },
+      {
+        rotulo: "Montagem de PC sob medida",
+        to: "/servicos/montagem-de-pc",
+        contexto: "Quando substituir é o caminho, dimensionar evita gasto inútil.",
       },
     ],
   },
