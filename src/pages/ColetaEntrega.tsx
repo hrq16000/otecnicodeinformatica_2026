@@ -85,12 +85,12 @@ const ColetaEntrega = () => {
         offers: {
           "@type": "Offer",
           priceCurrency: "BRL",
-          price: "300.00",
+          price: "299.99",
           url: `${SITE_BASE_URL}/coleta-e-entrega`,
           availability: "https://schema.org/InStock",
           priceSpecification: [
-            { "@type": "PriceSpecification", name: "Reparo mínimo com coleta", price: "300.00", priceCurrency: "BRL", description: "Faixa pré-aprovada R$ 300–R$ 500. Acima disso, autorização do cliente." },
-            { "@type": "PriceSpecification", name: "Diagnóstico em bancada (se desistir)", price: "90.00", priceCurrency: "BRL" },
+            { "@type": "PriceSpecification", name: "Reparo mínimo com coleta", price: "299.99", priceCurrency: "BRL", description: "Taxa mínima pré-aprovada. Acima disso, autorização do cliente." },
+            { "@type": "PriceSpecification", name: "Diagnóstico em bancada (se desistir)", price: "99.99", priceCurrency: "BRL" },
           ],
         },
       })}} />
