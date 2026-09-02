@@ -32,12 +32,14 @@ const LEDGER_PATH = join(ROOT, "config", "trust-claims-ledger.json");
 export const FAMILIAS = [
   {
     id: "volume-atendimentos",
+    exigePrimeiraPessoa: true,
     titulo: "Volume de clientes, empresas ou atendimentos",
     risco: "Prova comercial sem registro verificável.",
     re: /(atendemos|j[áa]\s+(atendemos|instalamos|realizamos))[^.<»"'`]{0,40}\b(v[áa]rias?|dezenas|centenas|milhares|milhões)\b|\b(centenas|milhares)\s+de\s+(clientes|empresas|im[óo]veis|atendimentos)/i,
   },
   {
     id: "todos-os-portes",
+    exigePrimeiraPessoa: true,
     titulo: "Cobertura empresarial irrestrita",
     risco: "“Todos os portes / todas as marcas / todos os modelos” não é sustentável.",
     re: /\b(de\s+todos\s+os\s+portes|todas\s+as\s+marcas|todos\s+os\s+modelos|qualquer\s+(marca|modelo|defeito|problema))\b/i,
@@ -62,6 +64,7 @@ export const FAMILIAS = [
   },
   {
     id: "superlativo-mercado",
+    exigePrimeiraPessoa: true,
     titulo: "Superlativo ou liderança de mercado",
     risco: "Comparação de mercado não auditável.",
     re: /(melhor\s+(de|em|da)\s|mais\s+recomendad|l[íi]der\s+(em|no|de)\s|n[ºo]\s*1\b|refer[êe]ncia\s+(nacional|em\s+curitiba)|incompar[áa]vel)/i,
@@ -74,12 +77,14 @@ export const FAMILIAS = [
   },
   {
     id: "estatistica",
+    exigePrimeiraPessoa: true,
     titulo: "Estatística ou percentual atribuído",
     risco: "Percentual sem fonte primária citável.",
     re: /\b\d{1,3}\s?%\s+(a\s+menos|menos|das?|dos?|de\s+redu|de\s+satisfa|de\s+sucesso|menor)/i,
   },
   {
     id: "contrato-recorrente",
+    exigePrimeiraPessoa: true,
     titulo: "Contrato, mensalidade ou desconto recorrente",
     risco: "Oferta comercial que o negócio não pratica de forma padronizada.",
     re: /(contratos?\s+de\s+manuten[çc][ãa]o\s+(mensa|preventiva)|mensalidade|desconto\s+progressivo|plano\s+mensal)/i,
@@ -91,6 +96,10 @@ export const FAMILIAS = [
     re: /\b(em\s+at[ée]\s+\d{1,2}\s*(h|horas|min|minutos)\b|no\s+mesmo\s+dia\b|atendimento\s+imediato|ainda\s+hoje)\b/i,
   },
 ];
+
+/** Marcadores de 1ª pessoa: só auditamos o que o portal afirma sobre si. */
+const PRIMEIRA_PESSOA =
+  /\b(n[óo]s|nosso|nossa|nossos|nossas|atendemos|oferecemos|trabalhamos|fazemos|garantimos|entregamos|realizamos|instalamos|somos|temos|cobramos|nosso\s+time|nossa\s+equipe|o\s+t[ée]cnico\s+de\s+inform[áa]tica)\b/i;
 
 const args = process.argv.slice(2);
 const flag = (n) => args.includes(n);
@@ -136,6 +145,7 @@ for (const file of walk(SRC)) {
     for (const fam of FAMILIAS) {
       const m = linha.match(fam.re);
       if (!m) continue;
+      if (fam.exigePrimeiraPessoa && !PRIMEIRA_PESSOA.test(linha)) continue;
       const entrada = classificar(fam.id, rel);
       ocorrencias.push({
         familia: fam.id,
