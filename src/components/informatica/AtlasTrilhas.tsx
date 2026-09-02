@@ -6,6 +6,8 @@ import {
   atlasArtigosAprovados,
   type AtlasTema,
 } from "@/lib/atlasInformatica";
+import { AtlasAprofundamentoBloco } from "@/components/informatica/AtlasAprofundamentoBloco";
+
 
 /**
  * Trilhas do Atlas de Informática (Fases 1–2).
