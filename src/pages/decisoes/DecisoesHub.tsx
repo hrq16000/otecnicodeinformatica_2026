@@ -147,6 +147,10 @@ const DecisoesHub = () => {
             <Link to="/glossario" className="font-bold text-accent underline-offset-4 hover:underline">
               glossário técnico
             </Link>
+            . Para ver tudo o que o portal publica sobre um mesmo assunto, abra o{" "}
+            <Link to="/entidades" className="font-bold text-accent underline-offset-4 hover:underline">
+              mapa de entidades técnicas
+            </Link>
             .
           </p>
         </section>
