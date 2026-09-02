@@ -86,6 +86,7 @@ import { Route as TecnicoInformaticaSaoJosePinhaisRouteImport } from './routes/t
 import { Route as TermosECondicoesRouteImport } from './routes/termos-e-condicoes'
 import { Route as ValoresRouteImport } from './routes/valores'
 import { Route as ValorizacaoDoTrabalhoTecnicoRouteImport } from './routes/valorizacao-do-trabalho-tecnico'
+import { Route as AdminAfirmacoesRouteImport } from './routes/admin_.afirmacoes'
 import { Route as AdminAuditoriaAcessosRouteImport } from './routes/admin_.auditoria-acessos'
 import { Route as AdminAuditoriaLocalRouteImport } from './routes/admin_.auditoria-local'
 import { Route as AdminAuditoriaOsRouteImport } from './routes/admin_.auditoria-os'
@@ -891,6 +892,11 @@ const ValorizacaoDoTrabalhoTecnicoRoute =
     path: '/valorizacao-do-trabalho-tecnico',
     getParentRoute: () => rootRouteImport,
   } as any)
+const AdminAfirmacoesRoute = AdminAfirmacoesRouteImport.update({
+  id: '/admin_/afirmacoes',
+  path: '/admin/afirmacoes',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const AdminAuditoriaAcessosRoute = AdminAuditoriaAcessosRouteImport.update({
   id: '/admin_/auditoria-acessos',
   path: '/admin/auditoria-acessos',
@@ -3123,6 +3129,7 @@ export interface FileRoutesByFullPath {
   '/termos-e-condicoes': typeof TermosECondicoesRoute
   '/valores': typeof ValoresRoute
   '/valorizacao-do-trabalho-tecnico': typeof ValorizacaoDoTrabalhoTecnicoRoute
+  '/admin/afirmacoes': typeof AdminAfirmacoesRoute
   '/admin/auditoria-acessos': typeof AdminAuditoriaAcessosRoute
   '/admin/auditoria-local': typeof AdminAuditoriaLocalRoute
   '/admin/auditoria-os': typeof AdminAuditoriaOsRoute
@@ -3603,6 +3610,7 @@ export interface FileRoutesByTo {
   '/termos-e-condicoes': typeof TermosECondicoesRoute
   '/valores': typeof ValoresRoute
   '/valorizacao-do-trabalho-tecnico': typeof ValorizacaoDoTrabalhoTecnicoRoute
+  '/admin/afirmacoes': typeof AdminAfirmacoesRoute
   '/admin/auditoria-acessos': typeof AdminAuditoriaAcessosRoute
   '/admin/auditoria-local': typeof AdminAuditoriaLocalRoute
   '/admin/auditoria-os': typeof AdminAuditoriaOsRoute
@@ -4084,6 +4092,7 @@ export interface FileRoutesById {
   '/termos-e-condicoes': typeof TermosECondicoesRoute
   '/valores': typeof ValoresRoute
   '/valorizacao-do-trabalho-tecnico': typeof ValorizacaoDoTrabalhoTecnicoRoute
+  '/admin_/afirmacoes': typeof AdminAfirmacoesRoute
   '/admin_/auditoria-acessos': typeof AdminAuditoriaAcessosRoute
   '/admin_/auditoria-local': typeof AdminAuditoriaLocalRoute
   '/admin_/auditoria-os': typeof AdminAuditoriaOsRoute
@@ -4566,6 +4575,7 @@ export interface FileRouteTypes {
     | '/termos-e-condicoes'
     | '/valores'
     | '/valorizacao-do-trabalho-tecnico'
+    | '/admin/afirmacoes'
     | '/admin/auditoria-acessos'
     | '/admin/auditoria-local'
     | '/admin/auditoria-os'
@@ -5046,6 +5056,7 @@ export interface FileRouteTypes {
     | '/termos-e-condicoes'
     | '/valores'
     | '/valorizacao-do-trabalho-tecnico'
+    | '/admin/afirmacoes'
     | '/admin/auditoria-acessos'
     | '/admin/auditoria-local'
     | '/admin/auditoria-os'
@@ -5526,6 +5537,7 @@ export interface FileRouteTypes {
     | '/termos-e-condicoes'
     | '/valores'
     | '/valorizacao-do-trabalho-tecnico'
+    | '/admin_/afirmacoes'
     | '/admin_/auditoria-acessos'
     | '/admin_/auditoria-local'
     | '/admin_/auditoria-os'
@@ -6007,6 +6019,7 @@ export interface RootRouteChildren {
   TermosECondicoesRoute: typeof TermosECondicoesRoute
   ValoresRoute: typeof ValoresRoute
   ValorizacaoDoTrabalhoTecnicoRoute: typeof ValorizacaoDoTrabalhoTecnicoRoute
+  AdminAfirmacoesRoute: typeof AdminAfirmacoesRoute
   AdminAuditoriaAcessosRoute: typeof AdminAuditoriaAcessosRoute
   AdminAuditoriaLocalRoute: typeof AdminAuditoriaLocalRoute
   AdminAuditoriaOsRoute: typeof AdminAuditoriaOsRoute
@@ -6949,6 +6962,13 @@ declare module '@tanstack/react-router' {
       path: '/valorizacao-do-trabalho-tecnico'
       fullPath: '/valorizacao-do-trabalho-tecnico'
       preLoaderRoute: typeof ValorizacaoDoTrabalhoTecnicoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/admin_/afirmacoes': {
+      id: '/admin_/afirmacoes'
+      path: '/admin/afirmacoes'
+      fullPath: '/admin/afirmacoes'
+      preLoaderRoute: typeof AdminAfirmacoesRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/admin_/auditoria-acessos': {
@@ -9842,6 +9862,7 @@ const rootRouteChildren: RootRouteChildren = {
   TermosECondicoesRoute: TermosECondicoesRoute,
   ValoresRoute: ValoresRoute,
   ValorizacaoDoTrabalhoTecnicoRoute: ValorizacaoDoTrabalhoTecnicoRoute,
+  AdminAfirmacoesRoute: AdminAfirmacoesRoute,
   AdminAuditoriaAcessosRoute: AdminAuditoriaAcessosRoute,
   AdminAuditoriaLocalRoute: AdminAuditoriaLocalRoute,
   AdminAuditoriaOsRoute: AdminAuditoriaOsRoute,
