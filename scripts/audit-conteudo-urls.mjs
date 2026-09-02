@@ -41,6 +41,14 @@ const FONTES_PRIMARIAS = [
   "iso.org",
   "intel.com",
   "amd.com",
+  "uefi.org",
+  "nvmexpress.org",
+  "trustedcomputinggroup.org",
+  "rfc-editor.org",
+  "icann.org",
+  "stopransomware.gov",
+  "wi-fi.org",
+  "jedec.org",
 ];
 
 const MARCADORES_LIMITE = [

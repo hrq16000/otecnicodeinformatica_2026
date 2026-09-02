@@ -180,7 +180,7 @@ const DecisaoGuia = () => {
 
         <section className="mt-8 rounded-xl border border-destructive/30 bg-destructive/5 p-5" aria-labelledby="parar">
           <h2 id="parar" className="flex items-center gap-2 font-heading text-lg font-bold text-foreground">
-            <OctagonX className="h-5 w-5 text-destructive" aria-hidden="true" /> Onde parar
+            <OctagonX className="h-5 w-5 text-destructive" aria-hidden="true" /> Onde parar — e quando procurar apoio técnico
           </h2>
           <ul className="mt-3 space-y-2">
             {guia.ondeParar.map((p) => (
