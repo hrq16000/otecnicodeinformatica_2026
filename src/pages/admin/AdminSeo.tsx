@@ -8,6 +8,7 @@ import { supabase } from "@/integrations/supabase/client";
 import { siteConfig } from "@/lib/siteConfig";
 import { SitemapLedgerPanel } from "@/components/admin/SitemapLedgerPanel";
 import { IndexacaoLedgerPanel } from "@/components/admin/IndexacaoLedgerPanel";
+import { DeployStatusPanel } from "@/components/admin/DeployStatusPanel";
 import auditoriaAfirmacoes from "@/data/trustClaimsAudit.json";
 
 
