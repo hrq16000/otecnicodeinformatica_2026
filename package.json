@@ -383,7 +383,8 @@
     "verify:list": "node scripts/run-pipeline.mjs verify --list",
     "deploy:check": "node scripts/run-pipeline.mjs deploy:check",
     "deploy:check:list": "node scripts/run-pipeline.mjs deploy:check --list",
-    "deploy:check:strict": "node scripts/run-pipeline.mjs deploy:check --with-optional"
+    "deploy:check:strict": "node scripts/run-pipeline.mjs deploy:check --with-optional",
+    "report:gsc-snapshot": "node scripts/report-gsc-snapshot.mjs"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.2",
