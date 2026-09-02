@@ -33,7 +33,10 @@ const FORBIDDEN_CLAIMS = [
   /\bcertificad[oa]s? pel[ao]\b/i,
   /atendimento no mesmo dia/i,
   /\bSLA\b/i,
-  /\b24\s*h(oras)?\b/i,
+  // Disponibilidade 24h é claim proibido; prazo contratual ("24 horas corridas
+  // após a coleta", "em até 24 horas") é fato operacional publicado nos termos.
+  /\b24\s*h(oras)?\b(?=[^.]{0,40}\b(por dia|todos os dias|ininterrupt|plantão|dispon[íi]vel|atendimento)\b)/i,
+  /\batendimento[^.]{0,20}\b24\s*h(oras)?\b/i,
   /\bgarantia vital[íi]cia\b/i,
 ];
 const MONTHLY = [/\bmensal\b/i, /por m[êe]s/i, /\/m[êe]s/i, /billingDuration/i, /\bMON\b/, /\bmonthly\b/i];
