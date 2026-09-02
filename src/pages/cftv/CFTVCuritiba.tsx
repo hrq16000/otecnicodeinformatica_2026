@@ -9,7 +9,6 @@ const CFTVCuritiba = () => (
     neighborhoods={["Centro", "Batel", "Água Verde", "Portão", "Santa Felicidade", "CIC", "Campo Comprido", "Boqueirão", "Cajuru", "Boa Vista", "Pinheirinho", "Uberaba", "Xaxim", "Hauer", "Bacacheri"]}
     cityDescription="Curitiba é uma das capitais mais seguras do Brasil, mas mesmo assim registra milhares de ocorrências de furtos e invasões residenciais por ano. A instalação de câmeras de segurança é a medida mais eficaz para proteger residências, comércios e condomínios na capital paranaense."
     localStats="Segundo dados da Secretaria de Segurança Pública do Paraná, bairros sem monitoramento eletrônico concentram até 70% das ocorrências de furtos a residências em Curitiba. O investimento em CFTV reduz drasticamente esse risco e ainda valoriza o imóvel."
-    testimonial={{ name: "Marcos R.", location: "Boqueirão, Curitiba", text: "Instalaram as 4 câmeras em menos de 3 horas. Agora vejo tudo pelo celular, mesmo quando estou no trabalho. Sensação de segurança incomparável!" }}
   />
 );
 

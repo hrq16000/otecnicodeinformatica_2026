@@ -12,7 +12,7 @@ import cftvHero from "@/assets/cftv-hero.jpg";
 import { WHATSAPP_NUMBER as WA_NUMBER } from "@/lib/siteConfig";
 import {
   MessageCircle, Shield, Camera, Smartphone, Moon, HardDrive,
-  CheckCircle2, Star, MapPin, Award, ArrowRight,
+  CheckCircle2, MapPin, Award, ArrowRight,
 } from "lucide-react";
 
 const WHATSAPP_NUMBER = WA_NUMBER;
@@ -25,10 +25,9 @@ interface CFTVCityPageProps {
   neighborhoods: string[];
   cityDescription: string;
   localStats: string;
-  testimonial: { name: string; location: string; text: string };
 }
 
-const CFTVCityTemplate = ({ city, slug, metaTitle, metaDescription, neighborhoods, cityDescription, localStats, testimonial }: CFTVCityPageProps) => {
+const CFTVCityTemplate = ({ city, slug, metaTitle, metaDescription, neighborhoods, cityDescription, localStats }: CFTVCityPageProps) => {
   const whatsappMessage = `Olá! Tenho interesse no Kit 4 Câmeras Intelbras com instalação em ${city}. Gostaria de mais informações.`;
   const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(whatsappMessage)}`;
 
