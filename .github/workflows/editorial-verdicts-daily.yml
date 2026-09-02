@@ -59,6 +59,18 @@ jobs:
           INDEXNOW_KEY: ${{ secrets.INDEXNOW_KEY }}
         run: npm run indexnow:editorial
 
+      # Ledger de indexação e desempenho (GSC + Bing) — fail-closed sem credencial.
+      - name: Ledger de indexação real
+        continue-on-error: true
+        env:
+          LOVABLE_API_KEY: ${{ secrets.LOVABLE_API_KEY }}
+          GOOGLE_SEARCH_CONSOLE_API_KEY: ${{ secrets.GOOGLE_SEARCH_CONSOLE_API_KEY }}
+          GSC_SITE_URL: ${{ secrets.GSC_SITE_URL }}
+          BING_WEBMASTER_API_KEY: ${{ secrets.BING_WEBMASTER_API_KEY }}
+          BING_SITE_URL: ${{ secrets.BING_SITE_URL }}
+          VITE_SITE_DOMAIN: ${{ secrets.VITE_SITE_DOMAIN }}
+        run: npm run report:indexacao-ledger -- --inspecionar=25
+
       - name: Ledger de vereditos
         run: npm run report:editorial-verdicts
 
@@ -80,7 +92,8 @@ jobs:
           git add public/editorial-verdicts.json public/editorial-verdicts-history.json \
                   public/editorial-submissions.json public/editorial/verdicts public/editorial/submissions \
                   public/editorial-waves-status.json public/editorial-lotes.json public/editorial/lotes \
-                  public/editorial-lote4-validacao.json docs/relatorio-vereditos-indexacao.md \
+                  public/editorial-lote4-validacao.json public/indexacao-ledger.json \
+                  reports/indexacao-historico.json reports/indexacao-ledger.md docs/relatorio-vereditos-indexacao.md \
                   docs/relatorio-lote4-validacao.md
           if git diff --cached --quiet; then
             echo "Sem variação no ledger."
