@@ -1,12 +1,12 @@
 {
-  "geradoEm": "2026-09-02T03:02:30.296Z",
+  "geradoEm": "2026-09-02T03:23:55.261Z",
   "host": "otecnicodeinformatica.com.br",
-  "modo": "submit",
+  "modo": "generate",
   "sitemap": {
     "url": "https://otecnicodeinformatica.com.br/sitemap.xml",
-    "totalUrls": 222,
-    "googleSearchConsole": "SUBMITTED",
-    "indexNow": "SKIPPED_SEM_NOVIDADE"
+    "totalUrls": 223,
+    "googleSearchConsole": "NOT_REQUESTED",
+    "indexNow": "NOT_REQUESTED"
   },
   "lotes": {
     "total": 63,
@@ -563,6 +563,42 @@
       "timestamp": "2026-09-02T03:02:30.968Z",
       "details": {
         "total": 0
+      },
+      "error": null
+    },
+    {
+      "id": "df04ddf2-d93a-48ea-8948-aacd47fec93f",
+      "action": "sync_approved",
+      "status": "OK",
+      "source": "cli",
+      "timestamp": "2026-09-02T03:23:55.388Z",
+      "details": {
+        "modo": "write",
+        "saida": "sitemap editorial: em dia (63 artigos indexáveis)"
+      },
+      "error": null
+    },
+    {
+      "id": "87811343-497a-488c-90d0-66a240eb9a8f",
+      "action": "generate_sitemaps",
+      "status": "OK",
+      "source": "cli",
+      "timestamp": "2026-09-02T03:23:55.512Z",
+      "details": {
+        "saida": "sitemap curado: index + 8 sub-sitemaps (223 urls)"
+      },
+      "error": null
+    },
+    {
+      "id": "0d6cc075-7ccb-445f-accd-55567e81c5fd",
+      "action": "diff_no_regression",
+      "status": "OK",
+      "source": "cli",
+      "timestamp": "2026-09-02T03:23:55.532Z",
+      "details": {
+        "adicionadas": [],
+        "removidas": [],
+        "total": 223
       },
       "error": null
     }
