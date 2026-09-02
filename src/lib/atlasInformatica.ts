@@ -543,6 +543,18 @@ export const ATLAS_TEMAS: AtlasTema[] = [
       { to: "/servicos/manutencao-de-computador", label: "Manutenção de computador" },
       { to: "/servicos/manutencao-de-notebook", label: "Manutenção de notebook" },
     ],
+    fontes: [
+      {
+        titulo: "Microsoft Learn — travamentos e reinícios inesperados",
+        url: "https://learn.microsoft.com/en-us/troubleshoot/windows-client/performance/windows-based-computers-freeze-or-restart-unexpectedly",
+        nota: "Base oficial para separar causa térmica de causa de software.",
+      },
+      {
+        titulo: "NIST SP 800-88 Rev. 1 — sanitização de mídia",
+        url: "https://csrc.nist.gov/pubs/sp/800/88/r1/final",
+        nota: "Referência usada quando a manutenção envolve descarte ou troca de disco.",
+      },
+    ],
   },
   {
     id: "informatica-empresas",
