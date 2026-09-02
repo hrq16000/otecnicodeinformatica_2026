@@ -1,0 +1,47 @@
+{
+  "geradoEm": "2026-09-02T04:16:28.049Z",
+  "dominioEsperado": "https://otecnicodeinformatica.com.br",
+  "status": "FALHA_SMOKE",
+  "motivo": "Checks com falha: sitemap.xml",
+  "checks": [
+    {
+      "nome": "home (SSR)",
+      "url": "https://otecnicodeinformatica.com.br/",
+      "status": 200,
+      "ok": true,
+      "detalhe": "HTML com h1 e JSON-LD"
+    },
+    {
+      "nome": "sitemap.xml",
+      "url": "https://otecnicodeinformatica.com.br/sitemap.xml",
+      "status": 200,
+      "ok": false,
+      "detalhe": "8 URLs"
+    },
+    {
+      "nome": "robots.txt",
+      "url": "https://otecnicodeinformatica.com.br/robots.txt",
+      "status": 200,
+      "ok": true,
+      "detalhe": "diretivas presentes"
+    },
+    {
+      "nome": "build-version.json",
+      "url": "https://otecnicodeinformatica.com.br/build-version.json",
+      "status": 200,
+      "ok": true,
+      "detalhe": "dev"
+    }
+  ],
+  "build": {
+    "local": {
+      "version": "587f098",
+      "buildTime": "2026-09-02T03:57:28.514Z"
+    },
+    "publicado": {
+      "version": "dev",
+      "buildTime": "2026-09-02T03:26:26.953Z"
+    },
+    "divergencia": "local 587f098 ≠ publicado dev"
+  }
+}
