@@ -137,6 +137,18 @@ const AdminReviews = () => {
     });
   }, [reviews, filter, bairroFilter, servicoFilter, search]);
 
+  /** Depoimentos realmente no ar em /depoimentos (vitrine `reviews_public`). */
+  const publicados = useMemo(
+    () =>
+      reviews.filter(
+        (r) =>
+          r.published &&
+          r.verified &&
+          (r.source !== "site" || r.authorized_publication === true),
+      ),
+    [reviews],
+  );
+
   const bairroOptions = useMemo(
     () => [...new Set(reviews.map((r) => r.neighborhood ?? "—"))].sort(),
     [reviews],
