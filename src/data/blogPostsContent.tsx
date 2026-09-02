@@ -2009,7 +2009,7 @@ docker run -d --name db --network minha-rede postgres
 
         <div className="bg-accent/10 rounded-xl p-6 my-8">
           <h3 className="text-accent font-bold mb-2">Proteja Sua Casa de Praia</h3>
-          <p className="text-muted-foreground mb-0">O Técnico de Informática instala câmeras Intelbras em <strong>Itapoá, Guaratuba e todo o litoral do PR</strong>. Kit completo com 4 câmeras, DVR e acesso remoto por R$ 1.350. Equipe especializada desde 1999.</p>
+          <p className="text-muted-foreground mb-0">O Técnico de Informática instala câmeras Intelbras em <strong>Itapoá, Guaratuba e todo o litoral do PR</strong>. Kit completo com 4 câmeras, DVR e acesso remoto por R$ 1.350. Instalação executada por técnico próprio, com garantia conforme o serviço executado.</p>
         </div>
       </>
     ),

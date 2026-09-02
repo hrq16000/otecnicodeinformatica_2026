@@ -1,23 +1,23 @@
 # Autoridade SEO — densidade semântica, keywords e links internos
 
-Gerado em: 2026-09-02T04:37:18.432Z
+Gerado em: 2026-09-02T05:01:36.693Z
 URLs analisadas: 63/63 · órfãs: 6
 
 | URL | Palavras | Dens. semântica | Keyword principal | Dens. KW | Links saída | Links entrada |
 | --- | --- | --- | --- | --- | --- | --- |
-| /blog/quando-trocar-hd-por-ssd | 2020 | 49.56% | quando trocar hd por ssd | 0.35% | 15 | 16 |
-| /blog/como-saber-se-pc-tem-virus-malware | 1934 | 52.87% | como saber se pc tem virus malware | 0.17% | 14 | 9 |
-| /blog/backup-como-proteger-seus-arquivos | 1962 | 50.18% | backup como proteger seus arquivos | 0% | 13 | 12 |
-| /blog/como-melhorar-sinal-wifi-em-casa | 1415 | 56.93% | como melhorar sinal wifi em casa | 0% | 13 | 5 |
-| /blog/notebook-superaquecendo-o-que-fazer | 1548 | 59.63% | notebook superaquecendo o que fazer | 0.11% | 14 | 3 |
-| /blog/organizacao-de-ti-para-pequenos-escritorios | 1833 | 55.73% | organizacao de ti para pequenos escritorios | 0.18% | 16 | 1 |
+| /blog/quando-trocar-hd-por-ssd | 2092 | 49.45% | quando trocar hd por ssd | 0.34% | 16 | 16 |
+| /blog/como-saber-se-pc-tem-virus-malware | 2001 | 52.39% | como saber se pc tem virus malware | 0.17% | 15 | 9 |
+| /blog/backup-como-proteger-seus-arquivos | 2029 | 49.66% | backup como proteger seus arquivos | 0% | 13 | 12 |
+| /blog/como-melhorar-sinal-wifi-em-casa | 1484 | 55.41% | como melhorar sinal wifi em casa | 0% | 13 | 5 |
+| /blog/notebook-superaquecendo-o-que-fazer | 1612 | 58.99% | notebook superaquecendo o que fazer | 0.1% | 14 | 3 |
+| /blog/organizacao-de-ti-para-pequenos-escritorios | 1898 | 54.94% | organizacao de ti para pequenos escritorios | 0.18% | 16 | 1 |
 | /blog/como-escolher-uma-workstation | 1724 | 56.15% | como escolher uma workstation | 0.4% | 17 | 1 |
 | /blog/como-instalar-windows-11-do-zero | 1442 | 53.07% | como instalar windows 11 do zero | 0.24% | 14 | 5 |
-| /blog/como-resolver-tela-azul-windows | 1841 | 58.81% | como resolver tela azul windows | 0.7% | 10 | 2 |
+| /blog/como-resolver-tela-azul-windows | 1918 | 58.19% | como resolver tela azul windows | 0.75% | 10 | 2 |
 | /blog/como-trocar-tela-notebook-passo-a-passo | 1562 | 63.12% | como trocar tela notebook passo a passo | 0.51% | 7 | 0 |
-| /blog/notebook-nao-liga-o-que-fazer | 1461 | 54.9% | notebook nao liga o que fazer | 0.35% | 13 | 3 |
-| /blog/computador-lento-causas-solucoes | 1801 | 51.89% | computador lento causas solucoes | 0% | 17 | 9 |
-| /blog/como-recuperar-dados-hd-com-defeito | 1368 | 63.73% | como recuperar dados hd com defeito | 0.13% | 10 | 6 |
+| /blog/notebook-nao-liga-o-que-fazer | 1534 | 53.98% | notebook nao liga o que fazer | 0.34% | 14 | 3 |
+| /blog/computador-lento-causas-solucoes | 1875 | 51.1% | computador lento causas solucoes | 0% | 17 | 9 |
+| /blog/como-recuperar-dados-hd-com-defeito | 1438 | 62.58% | como recuperar dados hd com defeito | 0.12% | 10 | 6 |
 | /blog/como-fazer-upgrade-ssd-nvme | 1568 | 62.98% | como fazer upgrade ssd nvme | 0.12% | 10 | 4 |
 | /blog/como-configurar-roteador-wifi-iniciantes | 1973 | 54.07% | como configurar roteador wifi iniciantes | 0% | 9 | 3 |
 | /blog/como-saber-quem-esta-usando-meu-wifi | 1947 | 52.13% | como saber quem esta usando meu wifi | 0% | 9 | 1 |

@@ -8,6 +8,13 @@ import { supabase } from "@/integrations/supabase/client";
 import { RevisaoAfirmacao, type RevisaoRegistro } from "@/components/admin/RevisaoAfirmacao";
 import auditoria from "@/data/trustClaimsAudit.json";
 import auditoriaConteudo from "@/data/auditoriaConteudo.json";
+import {
+  desempenhoDaUrl,
+  statusIndexacao,
+  gscDisponivel,
+  ROTULO_INDEXACAO,
+  type GscConsulta,
+} from "@/lib/gscSnapshot";
 
 /**
  * AFIRMAÇÕES DE CONFIANÇA — /admin/afirmacoes.
@@ -337,6 +344,10 @@ export default function AdminAfirmacoes() {
               <tr className="border-b text-left text-xs uppercase text-muted-foreground">
                 <th className="py-2 pr-4">URL</th>
                 <th className="py-2 pr-4">Sitemap</th>
+                <th className="py-2 pr-4">Google</th>
+                <th className="py-2 pr-4">Impr.</th>
+                <th className="py-2 pr-4">Cliques</th>
+                <th className="py-2 pr-4">Consultas reais</th>
                 <th className="py-2 pr-4">Total</th>
                 {CLASSES.map((c) => (
                   <th key={c} className="py-2 pr-4">
@@ -346,24 +357,56 @@ export default function AdminAfirmacoes() {
               </tr>
             </thead>
             <tbody>
-              {urls.map((u) => (
-                <tr key={u.path} className="border-b last:border-0">
-                  <td className="py-2 pr-4">
-                    <a href={u.path} className="underline underline-offset-2">
-                      {u.path}
-                    </a>
-                  </td>
-                  <td className="py-2 pr-4">
-                    <Badge variant={u.curada ? "default" : "outline"}>{u.curada ? "curada" : "fora"}</Badge>
-                  </td>
-                  <td className="py-2 pr-4">{u.total}</td>
-                  {CLASSES.map((c) => (
-                    <td key={c} className="py-2 pr-4">
-                      {u.porClasse[c] ?? 0}
+              {urls.map((u) => {
+                const perf = desempenhoDaUrl(u.path);
+                const status = statusIndexacao(u.path);
+                return (
+                  <tr key={u.path} className="border-b last:border-0">
+                    <td className="py-2 pr-4">
+                      <a href={u.path} className="underline underline-offset-2">
+                        {u.path}
+                      </a>
                     </td>
-                  ))}
-                </tr>
-              ))}
+                    <td className="py-2 pr-4">
+                      <Badge variant={u.curada ? "default" : "outline"}>{u.curada ? "curada" : "fora"}</Badge>
+                    </td>
+                    <td className="py-2 pr-4">
+                      <Badge
+                        variant={
+                          status === "indexada" || status === "com-impressoes"
+                            ? "default"
+                            : status === "desconhecida"
+                              ? "destructive"
+                              : "outline"
+                        }
+                        title={
+                          gscDisponivel
+                            ? ROTULO_INDEXACAO[status]
+                            : "Snapshot do Search Console indisponível"
+                        }
+                      >
+                        {gscDisponivel ? ROTULO_INDEXACAO[status] : "sem snapshot"}
+                      </Badge>
+                    </td>
+                    <td className="py-2 pr-4">{perf?.impressoes ?? "—"}</td>
+                    <td className="py-2 pr-4">{perf?.cliques ?? "—"}</td>
+                    <td className="max-w-xs py-2 pr-4 text-xs text-muted-foreground">
+                      {perf
+                        ? perf.consultas
+                            .slice(0, 3)
+                            .map((c: GscConsulta) => `${c.termo} (pos. ${c.posicao})`)
+                            .join(" · ")
+                        : "—"}
+                    </td>
+                    <td className="py-2 pr-4">{u.total}</td>
+                    {CLASSES.map((c) => (
+                      <td key={c} className="py-2 pr-4">
+                        {u.porClasse[c] ?? 0}
+                      </td>
+                    ))}
+                  </tr>
+                );
+              })}
             </tbody>
           </table>
           {urls.length === 0 && (

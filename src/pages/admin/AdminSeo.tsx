@@ -9,6 +9,7 @@ import { siteConfig } from "@/lib/siteConfig";
 import { SitemapLedgerPanel } from "@/components/admin/SitemapLedgerPanel";
 import { IndexacaoLedgerPanel } from "@/components/admin/IndexacaoLedgerPanel";
 import { DeployStatusPanel } from "@/components/admin/DeployStatusPanel";
+import { GscSnapshotPanel } from "@/components/admin/GscSnapshotPanel";
 import auditoriaAfirmacoes from "@/data/trustClaimsAudit.json";
 
 
@@ -275,6 +276,10 @@ export default function AdminSeo() {
       <SitemapLedgerPanel />
 
       <IndexacaoLedgerPanel />
+
+      <div className="mt-6">
+        <GscSnapshotPanel />
+      </div>
 
 
 

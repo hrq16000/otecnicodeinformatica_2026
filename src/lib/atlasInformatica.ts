@@ -135,6 +135,18 @@ export const ATLAS_TEMAS: AtlasTema[] = [
       { to: "/como-funciona", label: "Como funciona o atendimento" },
       { to: "/servicos", label: "Todos os serviços" },
     ],
+    fontes: [
+      {
+        titulo: "Microsoft Support — noções básicas de Windows e manutenção do PC",
+        url: "https://support.microsoft.com/pt-br/windows",
+        nota: "Documentação oficial usada como base dos conceitos de sistema citados na trilha.",
+      },
+      {
+        titulo: "CERT.br — Cartilha de Segurança para Internet",
+        url: "https://cartilha.cert.br/",
+        nota: "Referência brasileira para os fundamentos de uso seguro citados no tema.",
+      },
+    ],
   },
   {
     id: "windows-inicializacao",
@@ -260,6 +272,23 @@ export const ATLAS_TEMAS: AtlasTema[] = [
       { to: "/servicos/upgrade-ssd-ram", label: "Upgrade de SSD e memória" },
       { to: "/servicos/manutencao-de-computador", label: "Manutenção de computador" },
       { to: "/servicos/montagem-de-pc", label: "Montagem de PC sob medida" },
+    ],
+    fontes: [
+      {
+        titulo: "NVM Express — especificação e visão geral do NVMe",
+        url: "https://nvmexpress.org/specifications/",
+        nota: "Referência oficial do protocolo usado ao comparar SSD SATA e NVMe.",
+      },
+      {
+        titulo: "JEDEC — padrões de memória DDR",
+        url: "https://www.jedec.org/standards-documents/technology-focus-areas/main-memory-ddr3-ddr4-sdram",
+        nota: "Padrão que define compatibilidade e nomenclatura das memórias citadas.",
+      },
+      {
+        titulo: "Microsoft Learn — diagnóstico de desempenho no Windows",
+        url: "https://learn.microsoft.com/en-us/troubleshoot/windows-client/performance/windows-based-computers-freeze-or-restart-unexpectedly",
+        nota: "Base oficial para confirmar gargalo antes de trocar peça.",
+      },
     ],
   },
   {
@@ -513,6 +542,18 @@ export const ATLAS_TEMAS: AtlasTema[] = [
     servicos: [
       { to: "/servicos/manutencao-de-computador", label: "Manutenção de computador" },
       { to: "/servicos/manutencao-de-notebook", label: "Manutenção de notebook" },
+    ],
+    fontes: [
+      {
+        titulo: "Microsoft Learn — travamentos e reinícios inesperados",
+        url: "https://learn.microsoft.com/en-us/troubleshoot/windows-client/performance/windows-based-computers-freeze-or-restart-unexpectedly",
+        nota: "Base oficial para separar causa térmica de causa de software.",
+      },
+      {
+        titulo: "NIST SP 800-88 Rev. 1 — sanitização de mídia",
+        url: "https://csrc.nist.gov/pubs/sp/800/88/r1/final",
+        nota: "Referência usada quando a manutenção envolve descarte ou troca de disco.",
+      },
     ],
   },
   {
