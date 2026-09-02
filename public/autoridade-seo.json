@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-09-02T04:37:18.432Z",
+  "geradoEm": "2026-09-02T05:01:36.693Z",
   "fonte": {
     "html": "SSR harness",
     "dist": "dist"
@@ -8,10 +8,10 @@
   "analisadas": 63,
   "falhas": 0,
   "medias": {
-    "palavras": 1507.94,
-    "densidadeSemantica": 57.03,
+    "palavras": 1519.02,
+    "densidadeSemantica": 56.91,
     "densidadeKeywordPrincipal": 0.36,
-    "linksInternosSaida": 11.83,
+    "linksInternosSaida": 11.87,
     "linksInternosEntrada": 2.63
   },
   "orfas": [
@@ -29,121 +29,121 @@
       "lote": null,
       "aprovadoEm": "2026-08-06",
       "titulo": "Vale a pena trocar o HD por SSD? Como avaliar o upgrade",
-      "palavras": 2020,
-      "termosUteis": 1132,
-      "densidadeSemantica": 49.56,
-      "vocabulario": 561,
+      "palavras": 2092,
+      "termosUteis": 1175,
+      "densidadeSemantica": 49.45,
+      "vocabulario": 581,
       "keywordPrincipal": {
         "termo": "quando trocar hd por ssd",
         "ocorrencias": 4,
-        "densidade": 0.35
+        "densidade": 0.34
       },
       "topKeywords": [
         {
           "termo": "disco",
-          "ocorrencias": 33,
-          "densidade": 2.92
+          "ocorrencias": 34,
+          "densidade": 2.89
         },
         {
           "termo": "ssd",
           "ocorrencias": 33,
-          "densidade": 2.92
+          "densidade": 2.81
         },
         {
           "termo": "sistema",
           "ocorrencias": 19,
-          "densidade": 1.68
+          "densidade": 1.62
         },
         {
           "termo": "nvme",
           "ocorrencias": 15,
-          "densidade": 1.33
+          "densidade": 1.28
         },
         {
           "termo": "atual",
           "ocorrencias": 14,
-          "densidade": 1.24
+          "densidade": 1.19
         },
         {
           "termo": "sata",
           "ocorrencias": 14,
-          "densidade": 1.24
+          "densidade": 1.19
         },
         {
           "termo": "memoria",
           "ocorrencias": 11,
-          "densidade": 0.97
+          "densidade": 0.94
         },
         {
           "termo": "clonar",
           "ocorrencias": 10,
-          "densidade": 0.88
+          "densidade": 0.85
+        },
+        {
+          "termo": "equipamento",
+          "ocorrencias": 10,
+          "densidade": 0.85
         },
         {
           "termo": "upgrade",
           "ocorrencias": 10,
-          "densidade": 0.88
+          "densidade": 0.85
         },
         {
           "termo": "arquivos",
           "ocorrencias": 9,
-          "densidade": 0.8
+          "densidade": 0.77
         },
         {
           "termo": "backup",
           "ocorrencias": 9,
-          "densidade": 0.8
-        },
-        {
-          "termo": "computador",
-          "ocorrencias": 9,
-          "densidade": 0.8
+          "densidade": 0.77
         }
       ],
       "topBigramas": [
         {
           "termo": "disco atual",
           "ocorrencias": 8,
-          "densidade": 0.71
+          "densidade": 0.68
         },
         {
           "termo": "sata nvme",
           "ocorrencias": 8,
-          "densidade": 0.71
+          "densidade": 0.68
         },
         {
           "termo": "instalacao limpa",
           "ocorrencias": 6,
-          "densidade": 0.53
+          "densidade": 0.51
         },
         {
           "termo": "sistema corrompido",
           "ocorrencias": 5,
-          "densidade": 0.44
+          "densidade": 0.43
         },
         {
           "termo": "espaco fisico",
           "ocorrencias": 4,
-          "densidade": 0.35
+          "densidade": 0.34
         },
         {
           "termo": "ssd memoria",
           "ocorrencias": 4,
-          "densidade": 0.35
+          "densidade": 0.34
         },
         {
           "termo": "ajuda decidir",
           "ocorrencias": 3,
-          "densidade": 0.27
+          "densidade": 0.26
         },
         {
           "termo": "avaliar upgrade",
           "ocorrencias": 3,
-          "densidade": 0.27
+          "densidade": 0.26
         }
       ],
       "headings": {
-        "h2": 17,
+        "h2": 18,
         "h3": 7
       },
       "schemas": [
@@ -159,7 +159,7 @@
         "ItemList",
         "FAQPage"
       ],
-      "linksInternosSaida": 15,
+      "linksInternosSaida": 16,
       "linksSaida": [
         "/blog",
         "/contato",
@@ -172,6 +172,7 @@
         "/ferramentas/verificador-de-backup",
         "/glossario/smart",
         "/servicos/recuperacao-de-dados",
+        "/decisoes/consertar-ou-substituir",
         "/blog/computador-lento-causas-solucoes",
         "/blog/como-saber-se-pc-tem-virus-malware",
         "/blog/backup-como-proteger-seus-arquivos",
@@ -204,10 +205,10 @@
       "lote": null,
       "aprovadoEm": "2026-08-06",
       "titulo": "Como saber se o computador está com vírus ou malware",
-      "palavras": 1934,
-      "termosUteis": 1169,
-      "densidadeSemantica": 52.87,
-      "vocabulario": 618,
+      "palavras": 2001,
+      "termosUteis": 1212,
+      "densidadeSemantica": 52.39,
+      "vocabulario": 635,
       "keywordPrincipal": {
         "termo": "como saber se pc tem virus malware",
         "ocorrencias": 2,
@@ -217,108 +218,108 @@
         {
           "termo": "arquivos",
           "ocorrencias": 13,
-          "densidade": 1.11
+          "densidade": 1.07
         },
         {
           "termo": "backup",
           "ocorrencias": 13,
-          "densidade": 1.11
+          "densidade": 1.07
+        },
+        {
+          "termo": "seguranca",
+          "ocorrencias": 13,
+          "densidade": 1.07
         },
         {
           "termo": "rede",
           "ocorrencias": 12,
-          "densidade": 1.03
+          "densidade": 0.99
         },
         {
           "termo": "virus",
           "ocorrencias": 12,
-          "densidade": 1.03
+          "densidade": 0.99
         },
         {
           "termo": "computador",
           "ocorrencias": 10,
-          "densidade": 0.86
+          "densidade": 0.83
+        },
+        {
+          "termo": "dados",
+          "ocorrencias": 10,
+          "densidade": 0.83
         },
         {
           "termo": "equipamento",
           "ocorrencias": 10,
-          "densidade": 0.86
+          "densidade": 0.83
         },
         {
           "termo": "navegador",
           "ocorrencias": 10,
-          "densidade": 0.86
-        },
-        {
-          "termo": "seguranca",
-          "ocorrencias": 10,
-          "densidade": 0.86
+          "densidade": 0.83
         },
         {
           "termo": "ameaca",
           "ocorrencias": 9,
-          "densidade": 0.77
+          "densidade": 0.74
+        },
+        {
+          "termo": "infeccao",
+          "ocorrencias": 9,
+          "densidade": 0.74
         },
         {
           "termo": "ransomware",
           "ocorrencias": 9,
-          "densidade": 0.77
-        },
-        {
-          "termo": "verificacao",
-          "ocorrencias": 9,
-          "densidade": 0.77
-        },
-        {
-          "termo": "dados",
-          "ocorrencias": 8,
-          "densidade": 0.68
+          "densidade": 0.74
         }
       ],
       "topBigramas": [
         {
           "termo": "duas etapas",
           "ocorrencias": 4,
-          "densidade": 0.34
+          "densidade": 0.33
         },
         {
           "termo": "falso suporte",
           "ocorrencias": 4,
-          "densidade": 0.34
+          "densidade": 0.33
         },
         {
           "termo": "golpe falso",
           "ocorrencias": 4,
-          "densidade": 0.34
+          "densidade": 0.33
         },
         {
           "termo": "verificacao duas",
           "ocorrencias": 4,
-          "densidade": 0.34
+          "densidade": 0.33
         },
         {
           "termo": "antivirus desativado",
           "ocorrencias": 3,
-          "densidade": 0.26
+          "densidade": 0.25
         },
         {
           "termo": "arquivos renomeados",
           "ocorrencias": 3,
-          "densidade": 0.26
+          "densidade": 0.25
+        },
+        {
+          "termo": "atendimento tecnico",
+          "ocorrencias": 3,
+          "densidade": 0.25
         },
         {
           "termo": "causa provavel",
           "ocorrencias": 3,
-          "densidade": 0.26
-        },
-        {
-          "termo": "desativado sozinho",
-          "ocorrencias": 3,
-          "densidade": 0.26
+          "densidade": 0.25
         }
       ],
       "headings": {
-        "h2": 17,
+        "h2": 18,
         "h3": 7
       },
       "schemas": [
@@ -334,7 +335,7 @@
         "ItemList",
         "FAQPage"
       ],
-      "linksInternosSaida": 14,
+      "linksInternosSaida": 15,
       "linksSaida": [
         "/blog",
         "/contato",
@@ -347,6 +348,7 @@
         "/decisoes/nuvem-ou-hd-externo",
         "/ferramentas/verificador-de-backup",
         "/entidades/backup",
+        "/seguranca-dos-dados",
         "/blog/como-instalar-windows-11-do-zero",
         "/blog/quando-trocar-hd-por-ssd",
         "/servicos/formatacao"
@@ -371,10 +373,10 @@
       "lote": null,
       "aprovadoEm": "2026-08-06",
       "titulo": "Como evitar perder arquivos: guia de backup preventivo",
-      "palavras": 1962,
-      "termosUteis": 1124,
-      "densidadeSemantica": 50.18,
-      "vocabulario": 564,
+      "palavras": 2029,
+      "termosUteis": 1162,
+      "densidadeSemantica": 49.66,
+      "vocabulario": 577,
       "keywordPrincipal": {
         "termo": "backup como proteger seus arquivos",
         "ocorrencias": 0,
@@ -383,109 +385,109 @@
       "topKeywords": [
         {
           "termo": "backup",
-          "ocorrencias": 41,
-          "densidade": 3.65
+          "ocorrencias": 45,
+          "densidade": 3.87
         },
         {
           "termo": "copia",
           "ocorrencias": 33,
-          "densidade": 2.94
+          "densidade": 2.84
+        },
+        {
+          "termo": "dados",
+          "ocorrencias": 18,
+          "densidade": 1.55
         },
         {
           "termo": "disco",
           "ocorrencias": 17,
-          "densidade": 1.51
-        },
-        {
-          "termo": "dados",
-          "ocorrencias": 16,
-          "densidade": 1.42
+          "densidade": 1.46
         },
         {
           "termo": "copias",
           "ocorrencias": 13,
-          "densidade": 1.16
+          "densidade": 1.12
         },
         {
           "termo": "fora",
           "ocorrencias": 12,
-          "densidade": 1.07
+          "densidade": 1.03
         },
         {
           "termo": "original",
           "ocorrencias": 12,
-          "densidade": 1.07
+          "densidade": 1.03
         },
         {
           "termo": "computador",
           "ocorrencias": 11,
-          "densidade": 0.98
+          "densidade": 0.95
         },
         {
           "termo": "arquivos",
           "ocorrencias": 10,
-          "densidade": 0.89
+          "densidade": 0.86
         },
         {
           "termo": "local",
           "ocorrencias": 10,
-          "densidade": 0.89
+          "densidade": 0.86
+        },
+        {
+          "termo": "rotina",
+          "ocorrencias": 10,
+          "densidade": 0.86
         },
         {
           "termo": "nuvem",
           "ocorrencias": 9,
-          "densidade": 0.8
-        },
-        {
-          "termo": "recuperacao",
-          "ocorrencias": 9,
-          "densidade": 0.8
+          "densidade": 0.77
         }
       ],
       "topBigramas": [
         {
           "termo": "fora local",
           "ocorrencias": 7,
-          "densidade": 0.62
+          "densidade": 0.6
         },
         {
           "termo": "backup preventivo",
           "ocorrencias": 6,
-          "densidade": 0.53
+          "densidade": 0.52
         },
         {
           "termo": "copia fora",
           "ocorrencias": 6,
-          "densidade": 0.53
+          "densidade": 0.52
         },
         {
           "termo": "recuperacao dados",
           "ocorrencias": 6,
-          "densidade": 0.53
+          "densidade": 0.52
         },
         {
           "termo": "teste restauracao",
           "ocorrencias": 5,
-          "densidade": 0.45
+          "densidade": 0.43
         },
         {
           "termo": "disco externo",
           "ocorrencias": 4,
-          "densidade": 0.36
+          "densidade": 0.34
         },
         {
           "termo": "existe copia",
           "ocorrencias": 4,
-          "densidade": 0.36
+          "densidade": 0.34
         },
         {
           "termo": "furto incendio",
           "ocorrencias": 4,
-          "densidade": 0.36
+          "densidade": 0.34
         }
       ],
       "headings": {
-        "h2": 18,
+        "h2": 19,
         "h3": 7
       },
       "schemas": [
@@ -540,10 +542,10 @@
       "lote": null,
       "aprovadoEm": "2026-08-06",
       "titulo": "Wi-Fi caindo ou com sinal fraco: como diagnosticar",
-      "palavras": 1415,
-      "termosUteis": 808,
-      "densidadeSemantica": 56.93,
-      "vocabulario": 460,
+      "palavras": 1484,
+      "termosUteis": 850,
+      "densidadeSemantica": 55.41,
+      "vocabulario": 471,
       "keywordPrincipal": {
         "termo": "como melhorar sinal wifi em casa",
         "ocorrencias": 0,
@@ -552,109 +554,109 @@
       "topKeywords": [
         {
           "termo": "wi-fi",
-          "ocorrencias": 22,
-          "densidade": 2.72
+          "ocorrencias": 25,
+          "densidade": 2.94
         },
         {
           "termo": "roteador",
-          "ocorrencias": 21,
-          "densidade": 2.6
+          "ocorrencias": 22,
+          "densidade": 2.59
         },
         {
           "termo": "problema",
           "ocorrencias": 14,
-          "densidade": 1.73
+          "densidade": 1.65
         },
         {
           "termo": "rede",
           "ocorrencias": 14,
-          "densidade": 1.73
+          "densidade": 1.65
         },
         {
           "termo": "operadora",
           "ocorrencias": 12,
-          "densidade": 1.49
+          "densidade": 1.41
+        },
+        {
+          "termo": "sinal",
+          "ocorrencias": 11,
+          "densidade": 1.29
+        },
+        {
+          "termo": "equipamento",
+          "ocorrencias": 10,
+          "densidade": 1.18
         },
         {
           "termo": "local",
           "ocorrencias": 10,
-          "densidade": 1.24
-        },
-        {
-          "termo": "sinal",
-          "ocorrencias": 10,
-          "densidade": 1.24
-        },
-        {
-          "termo": "equipamento",
-          "ocorrencias": 9,
-          "densidade": 1.11
+          "densidade": 1.18
         },
         {
           "termo": "internet",
           "ocorrencias": 9,
-          "densidade": 1.11
+          "densidade": 1.06
         },
         {
           "termo": "mesmo",
           "ocorrencias": 9,
-          "densidade": 1.11
+          "densidade": 1.06
+        },
+        {
+          "termo": "redes",
+          "ocorrencias": 9,
+          "densidade": 1.06
         },
         {
           "termo": "alcance",
           "ocorrencias": 7,
-          "densidade": 0.87
-        },
-        {
-          "termo": "cabo",
-          "ocorrencias": 7,
-          "densidade": 0.87
+          "densidade": 0.82
         }
       ],
       "topBigramas": [
         {
+          "termo": "redes wi-fi",
+          "ocorrencias": 6,
+          "densidade": 0.71
+        },
+        {
           "termo": "rede local",
           "ocorrencias": 5,
-          "densidade": 0.62
+          "densidade": 0.59
         },
         {
           "termo": "pontos cegos",
           "ocorrencias": 4,
-          "densidade": 0.5
+          "densidade": 0.47
         },
         {
-          "termo": "redes wi-fi",
+          "termo": "trocar equipamento",
           "ocorrencias": 4,
-          "densidade": 0.5
+          "densidade": 0.47
+        },
+        {
+          "termo": "wi-fi instavel",
+          "ocorrencias": 4,
+          "densidade": 0.47
         },
         {
           "termo": "perto roteador",
           "ocorrencias": 3,
-          "densidade": 0.37
+          "densidade": 0.35
         },
         {
           "termo": "sinal chega",
           "ocorrencias": 3,
-          "densidade": 0.37
+          "densidade": 0.35
         },
         {
           "termo": "sistema mesh",
           "ocorrencias": 3,
-          "densidade": 0.37
-        },
-        {
-          "termo": "trocar equipamento",
-          "ocorrencias": 3,
-          "densidade": 0.37
-        },
-        {
-          "termo": "wi-fi alliance",
-          "ocorrencias": 3,
-          "densidade": 0.37
+          "densidade": 0.35
         }
       ],
       "headings": {
-        "h2": 11,
+        "h2": 12,
         "h3": 7
       },
       "schemas": [
@@ -702,121 +704,121 @@
       "lote": null,
       "aprovadoEm": "2026-08-06",
       "titulo": "Notebook superaquecendo: sinais, prevenção e o que fazer",
-      "palavras": 1548,
-      "termosUteis": 929,
-      "densidadeSemantica": 59.63,
-      "vocabulario": 554,
+      "palavras": 1612,
+      "termosUteis": 968,
+      "densidadeSemantica": 58.99,
+      "vocabulario": 571,
       "keywordPrincipal": {
         "termo": "notebook superaquecendo o que fazer",
         "ocorrencias": 1,
-        "densidade": 0.11
+        "densidade": 0.1
       },
       "topKeywords": [
         {
           "termo": "equipamento",
           "ocorrencias": 17,
-          "densidade": 1.83
+          "densidade": 1.76
         },
         {
           "termo": "calor",
           "ocorrencias": 15,
-          "densidade": 1.61
+          "densidade": 1.55
         },
         {
           "termo": "notebook",
           "ocorrencias": 11,
-          "densidade": 1.18
+          "densidade": 1.14
+        },
+        {
+          "termo": "manutencao",
+          "ocorrencias": 9,
+          "densidade": 0.93
         },
         {
           "termo": "uso",
           "ocorrencias": 9,
-          "densidade": 0.97
+          "densidade": 0.93
         },
         {
           "termo": "limpeza",
           "ocorrencias": 8,
-          "densidade": 0.86
+          "densidade": 0.83
         },
         {
           "termo": "tecnico",
           "ocorrencias": 8,
-          "densidade": 0.86
+          "densidade": 0.83
         },
         {
           "termo": "termica",
           "ocorrencias": 8,
-          "densidade": 0.86
+          "densidade": 0.83
         },
         {
           "termo": "ventoinha",
           "ocorrencias": 8,
-          "densidade": 0.86
+          "densidade": 0.83
         },
         {
           "termo": "avaliacao",
           "ocorrencias": 7,
-          "densidade": 0.75
+          "densidade": 0.72
         },
         {
           "termo": "bateria",
           "ocorrencias": 7,
-          "densidade": 0.75
+          "densidade": 0.72
         },
         {
-          "termo": "manutencao",
+          "termo": "computador",
           "ocorrencias": 7,
-          "densidade": 0.75
-        },
-        {
-          "termo": "atendimento",
-          "ocorrencias": 6,
-          "densidade": 0.65
+          "densidade": 0.72
         }
       ],
       "topBigramas": [
         {
           "termo": "interface termica",
           "ocorrencias": 4,
-          "densidade": 0.43
+          "densidade": 0.41
         },
         {
           "termo": "limpeza interna",
           "ocorrencias": 4,
-          "densidade": 0.43
+          "densidade": 0.41
         },
         {
           "termo": "queda desempenho",
           "ocorrencias": 4,
-          "densidade": 0.43
+          "densidade": 0.41
         },
         {
           "termo": "atendimento tecnico",
           "ocorrencias": 3,
-          "densidade": 0.32
+          "densidade": 0.31
         },
         {
           "termo": "avaliacao tecnica",
           "ocorrencias": 3,
-          "densidade": 0.32
+          "densidade": 0.31
         },
         {
           "termo": "bateria estufada",
           "ocorrencias": 3,
-          "densidade": 0.32
+          "densidade": 0.31
         },
         {
           "termo": "manutencao notebook",
           "ocorrencias": 3,
-          "densidade": 0.32
+          "densidade": 0.31
         },
         {
           "termo": "nesses casos",
           "ocorrencias": 3,
-          "densidade": 0.32
+          "densidade": 0.31
         }
       ],
       "headings": {
-        "h2": 11,
+        "h2": 12,
         "h3": 8
       },
       "schemas": [
@@ -863,10 +865,10 @@
       "lote": null,
       "aprovadoEm": "2026-08-06",
       "titulo": "Organização de TI para pequenos escritórios: o guia prático",
-      "palavras": 1833,
-      "termosUteis": 1082,
-      "densidadeSemantica": 55.73,
-      "vocabulario": 603,
+      "palavras": 1898,
+      "termosUteis": 1123,
+      "densidadeSemantica": 54.94,
+      "vocabulario": 617,
       "keywordPrincipal": {
         "termo": "organizacao de ti para pequenos escritorios",
         "ocorrencias": 2,
@@ -876,108 +878,108 @@
         {
           "termo": "copia",
           "ocorrencias": 13,
-          "densidade": 1.2
+          "densidade": 1.16
         },
         {
           "termo": "inventario",
+          "ocorrencias": 12,
+          "densidade": 1.07
+        },
+        {
+          "termo": "suporte",
+          "ocorrencias": 12,
+          "densidade": 1.07
+        },
+        {
+          "termo": "backup",
           "ocorrencias": 11,
-          "densidade": 1.02
+          "densidade": 0.98
         },
         {
           "termo": "quem",
           "ocorrencias": 11,
-          "densidade": 1.02
-        },
-        {
-          "termo": "suporte",
-          "ocorrencias": 11,
-          "densidade": 1.02
-        },
-        {
-          "termo": "backup",
-          "ocorrencias": 10,
-          "densidade": 0.92
+          "densidade": 0.98
         },
         {
           "termo": "seguranca",
           "ocorrencias": 10,
-          "densidade": 0.92
+          "densidade": 0.89
         },
         {
           "termo": "senhas",
           "ocorrencias": 10,
-          "densidade": 0.92
+          "densidade": 0.89
         },
         {
           "termo": "rede",
           "ocorrencias": 9,
-          "densidade": 0.83
+          "densidade": 0.8
         },
         {
           "termo": "sistema",
           "ocorrencias": 9,
-          "densidade": 0.83
+          "densidade": 0.8
         },
         {
           "termo": "arquivos",
           "ocorrencias": 8,
-          "densidade": 0.74
+          "densidade": 0.71
+        },
+        {
+          "termo": "empresas",
+          "ocorrencias": 8,
+          "densidade": 0.71
         },
         {
           "termo": "equipamento",
           "ocorrencias": 8,
-          "densidade": 0.74
-        },
-        {
-          "termo": "manutencao",
-          "ocorrencias": 7,
-          "densidade": 0.65
+          "densidade": 0.71
         }
       ],
       "topBigramas": [
         {
           "termo": "copia seguranca",
           "ocorrencias": 7,
-          "densidade": 0.65
+          "densidade": 0.62
         },
         {
           "termo": "quem autoriza",
           "ocorrencias": 4,
-          "densidade": 0.37
+          "densidade": 0.36
         },
         {
           "termo": "sistema contratado",
           "ocorrencias": 4,
-          "densidade": 0.37
+          "densidade": 0.36
         },
         {
           "termo": "teste restauracao",
           "ocorrencias": 4,
-          "densidade": 0.37
+          "densidade": 0.36
         },
         {
           "termo": "arquivos trabalho",
           "ocorrencias": 3,
-          "densidade": 0.28
+          "densidade": 0.27
         },
         {
           "termo": "codigos autenticacao",
           "ocorrencias": 3,
-          "densidade": 0.28
+          "densidade": 0.27
+        },
+        {
+          "termo": "escritorio pequeno",
+          "ocorrencias": 3,
+          "densidade": 0.27
         },
         {
           "termo": "gerenciador senhas",
           "ocorrencias": 3,
-          "densidade": 0.28
-        },
-        {
-          "termo": "pedir suporte",
-          "ocorrencias": 3,
-          "densidade": 0.28
+          "densidade": 0.27
         }
       ],
       "headings": {
-        "h2": 14,
+        "h2": 15,
         "h3": 6
       },
       "schemas": [
@@ -1349,121 +1351,121 @@
       "lote": null,
       "aprovadoEm": "2026-08-12",
       "titulo": "Como Resolver Tela Azul do Windows (BSOD): Diagnóstico e Solução",
-      "palavras": 1841,
-      "termosUteis": 1146,
-      "densidadeSemantica": 58.81,
-      "vocabulario": 674,
+      "palavras": 1918,
+      "termosUteis": 1196,
+      "densidadeSemantica": 58.19,
+      "vocabulario": 696,
       "keywordPrincipal": {
         "termo": "como resolver tela azul windows",
-        "ocorrencias": 8,
-        "densidade": 0.7
+        "ocorrencias": 9,
+        "densidade": 0.75
       },
       "topKeywords": [
         {
           "termo": "azul",
-          "ocorrencias": 19,
-          "densidade": 1.66
+          "ocorrencias": 21,
+          "densidade": 1.76
         },
         {
           "termo": "tela",
-          "ocorrencias": 19,
-          "densidade": 1.66
+          "ocorrencias": 21,
+          "densidade": 1.76
         },
         {
           "termo": "servico",
           "ocorrencias": 14,
-          "densidade": 1.22
+          "densidade": 1.17
         },
         {
           "termo": "memoria",
-          "ocorrencias": 12,
-          "densidade": 1.05
+          "ocorrencias": 13,
+          "densidade": 1.09
         },
         {
           "termo": "tecnico",
           "ocorrencias": 12,
-          "densidade": 1.05
+          "densidade": 1
         },
         {
           "termo": "diagnostico",
           "ocorrencias": 11,
-          "densidade": 0.96
+          "densidade": 0.92
         },
         {
           "termo": "procedimento",
           "ocorrencias": 11,
-          "densidade": 0.96
+          "densidade": 0.92
         },
         {
           "termo": "equipamento",
           "ocorrencias": 10,
-          "densidade": 0.87
+          "densidade": 0.84
         },
         {
           "termo": "passo",
-          "ocorrencias": 9,
-          "densidade": 0.79
+          "ocorrencias": 10,
+          "densidade": 0.84
+        },
+        {
+          "termo": "windows",
+          "ocorrencias": 10,
+          "densidade": 0.84
         },
         {
           "termo": "profissional",
           "ocorrencias": 9,
-          "densidade": 0.79
+          "densidade": 0.75
         },
         {
-          "termo": "windows",
+          "termo": "resolver",
           "ocorrencias": 9,
-          "densidade": 0.79
-        },
-        {
-          "termo": "curitiba",
-          "ocorrencias": 8,
-          "densidade": 0.7
+          "densidade": 0.75
         }
       ],
       "topBigramas": [
         {
           "termo": "tela azul",
-          "ocorrencias": 19,
-          "densidade": 1.66
+          "ocorrencias": 21,
+          "densidade": 1.76
         },
         {
           "termo": "resolver tela",
           "ocorrencias": 6,
-          "densidade": 0.52
+          "densidade": 0.5
         },
         {
           "termo": "azul windows",
           "ocorrencias": 5,
-          "densidade": 0.44
+          "densidade": 0.42
         },
         {
           "termo": "windows bsod",
           "ocorrencias": 5,
-          "densidade": 0.44
+          "densidade": 0.42
         },
         {
           "termo": "passo passo",
           "ocorrencias": 4,
-          "densidade": 0.35
+          "densidade": 0.33
         },
         {
           "termo": "bsod curitiba",
           "ocorrencias": 3,
-          "densidade": 0.26
+          "densidade": 0.25
         },
         {
           "termo": "conectores flat",
           "ocorrencias": 3,
-          "densidade": 0.26
+          "densidade": 0.25
         },
         {
           "termo": "diagnostico inicial",
           "ocorrencias": 3,
-          "densidade": 0.26
+          "densidade": 0.25
         }
       ],
       "headings": {
-        "h2": 15,
+        "h2": 16,
         "h3": 4
       },
       "schemas": [
@@ -1655,121 +1657,121 @@
       "lote": null,
       "aprovadoEm": "2026-08-12",
       "titulo": "Notebook não liga: o que verificar antes da assistência",
-      "palavras": 1461,
-      "termosUteis": 847,
-      "densidadeSemantica": 54.9,
-      "vocabulario": 465,
+      "palavras": 1534,
+      "termosUteis": 893,
+      "densidadeSemantica": 53.98,
+      "vocabulario": 482,
       "keywordPrincipal": {
         "termo": "notebook nao liga o que fazer",
         "ocorrencias": 3,
-        "densidade": 0.35
+        "densidade": 0.34
       },
       "topKeywords": [
         {
           "termo": "notebook",
           "ocorrencias": 25,
-          "densidade": 2.95
+          "densidade": 2.8
         },
         {
           "termo": "carregador",
           "ocorrencias": 18,
-          "densidade": 2.13
+          "densidade": 2.02
         },
         {
           "termo": "liga",
-          "ocorrencias": 12,
-          "densidade": 1.42
+          "ocorrencias": 15,
+          "densidade": 1.68
         },
         {
           "termo": "diagnostico",
-          "ocorrencias": 11,
-          "densidade": 1.3
+          "ocorrencias": 12,
+          "densidade": 1.34
         },
         {
           "termo": "ligar",
           "ocorrencias": 10,
-          "densidade": 1.18
+          "densidade": 1.12
         },
         {
           "termo": "tecnico",
           "ocorrencias": 9,
-          "densidade": 1.06
+          "densidade": 1.01
+        },
+        {
+          "termo": "abrir",
+          "ocorrencias": 8,
+          "densidade": 0.9
         },
         {
           "termo": "bateria",
           "ocorrencias": 8,
-          "densidade": 0.94
+          "densidade": 0.9
         },
         {
           "termo": "energia",
           "ocorrencias": 8,
-          "densidade": 0.94
+          "densidade": 0.9
+        },
+        {
+          "termo": "equipamento",
+          "ocorrencias": 8,
+          "densidade": 0.9
         },
         {
           "termo": "tela",
           "ocorrencias": 8,
-          "densidade": 0.94
-        },
-        {
-          "termo": "abrir",
-          "ocorrencias": 7,
-          "densidade": 0.83
-        },
-        {
-          "termo": "equipamento",
-          "ocorrencias": 7,
-          "densidade": 0.83
+          "densidade": 0.9
         },
         {
           "termo": "placa",
           "ocorrencias": 7,
-          "densidade": 0.83
+          "densidade": 0.78
         }
       ],
       "topBigramas": [
         {
           "termo": "notebook liga",
           "ocorrencias": 6,
-          "densidade": 0.71
+          "densidade": 0.67
         },
         {
           "termo": "abrir notebook",
           "ocorrencias": 4,
-          "densidade": 0.47
+          "densidade": 0.45
         },
         {
           "termo": "carregador bateria",
           "ocorrencias": 3,
-          "densidade": 0.35
+          "densidade": 0.34
         },
         {
           "termo": "cheiro queimado",
           "ocorrencias": 3,
-          "densidade": 0.35
+          "densidade": 0.34
+        },
+        {
+          "termo": "liga imagem",
+          "ocorrencias": 3,
+          "densidade": 0.34
         },
         {
           "termo": "manutencao notebook",
           "ocorrencias": 3,
-          "densidade": 0.35
+          "densidade": 0.34
+        },
+        {
+          "termo": "proximo passo",
+          "ocorrencias": 3,
+          "densidade": 0.34
         },
         {
           "termo": "seguras abrir",
           "ocorrencias": 3,
-          "densidade": 0.35
-        },
-        {
-          "termo": "tentar ligar",
-          "ocorrencias": 3,
-          "densidade": 0.35
-        },
-        {
-          "termo": "tente ligar",
-          "ocorrencias": 3,
-          "densidade": 0.35
+          "densidade": 0.34
         }
       ],
       "headings": {
-        "h2": 11,
+        "h2": 12,
         "h3": 7
       },
       "schemas": [
@@ -1785,7 +1787,7 @@
         "ItemList",
         "FAQPage"
       ],
-      "linksInternosSaida": 13,
+      "linksInternosSaida": 14,
       "linksSaida": [
         "/blog",
         "/contato",
@@ -1796,6 +1798,7 @@
         "/problemas/computador-esquentando",
         "/decisoes/consertar-ou-substituir",
         "/glossario/thermal-throttling",
+        "/ferramentas/roteiro-falha-de-inicializacao",
         "/blog/notebook-superaquecendo-o-que-fazer",
         "/blog/quando-trocar-hd-por-ssd",
         "/blog/como-saber-se-pc-tem-virus-malware",
@@ -1815,10 +1818,10 @@
       "lote": null,
       "aprovadoEm": "2026-08-12",
       "titulo": "Computador lento: causas possíveis e como decidir o próximo passo",
-      "palavras": 1801,
-      "termosUteis": 1087,
-      "densidadeSemantica": 51.89,
-      "vocabulario": 564,
+      "palavras": 1875,
+      "termosUteis": 1133,
+      "densidadeSemantica": 51.1,
+      "vocabulario": 579,
       "keywordPrincipal": {
         "termo": "computador lento causas solucoes",
         "ocorrencias": 0,
@@ -1827,109 +1830,109 @@
       "topKeywords": [
         {
           "termo": "lentidao",
-          "ocorrencias": 28,
-          "densidade": 2.58
+          "ocorrencias": 29,
+          "densidade": 2.56
         },
         {
           "termo": "memoria",
-          "ocorrencias": 23,
-          "densidade": 2.12
+          "ocorrencias": 25,
+          "densidade": 2.21
         },
         {
           "termo": "disco",
-          "ocorrencias": 18,
-          "densidade": 1.66
+          "ocorrencias": 19,
+          "densidade": 1.68
         },
         {
           "termo": "sistema",
           "ocorrencias": 18,
-          "densidade": 1.66
+          "densidade": 1.59
         },
         {
           "termo": "computador",
           "ocorrencias": 14,
-          "densidade": 1.29
+          "densidade": 1.24
+        },
+        {
+          "termo": "causa",
+          "ocorrencias": 12,
+          "densidade": 1.06
         },
         {
           "termo": "programas",
           "ocorrencias": 12,
-          "densidade": 1.1
-        },
-        {
-          "termo": "causa",
-          "ocorrencias": 11,
-          "densidade": 1.01
+          "densidade": 1.06
         },
         {
           "termo": "uso",
-          "ocorrencias": 11,
-          "densidade": 1.01
+          "ocorrencias": 12,
+          "densidade": 1.06
+        },
+        {
+          "termo": "hardware",
+          "ocorrencias": 10,
+          "densidade": 0.88
         },
         {
           "termo": "tecnico",
           "ocorrencias": 10,
-          "densidade": 0.92
+          "densidade": 0.88
         },
         {
           "termo": "upgrade",
           "ocorrencias": 10,
-          "densidade": 0.92
+          "densidade": 0.88
         },
         {
           "termo": "desempenho",
           "ocorrencias": 8,
-          "densidade": 0.74
-        },
-        {
-          "termo": "diagnostico",
-          "ocorrencias": 8,
-          "densidade": 0.74
+          "densidade": 0.71
         }
       ],
       "topBigramas": [
         {
+          "termo": "memoria ram",
+          "ocorrencias": 6,
+          "densidade": 0.53
+        },
+        {
           "termo": "computador lento",
           "ocorrencias": 5,
-          "densidade": 0.46
+          "densidade": 0.44
         },
         {
           "termo": "disco memoria",
           "ocorrencias": 5,
-          "densidade": 0.46
-        },
-        {
-          "termo": "memoria ram",
-          "ocorrencias": 5,
-          "densidade": 0.46
+          "densidade": 0.44
         },
         {
           "termo": "junto sistema",
           "ocorrencias": 4,
-          "densidade": 0.37
+          "densidade": 0.35
         },
         {
           "termo": "pouca memoria",
           "ocorrencias": 4,
-          "densidade": 0.37
+          "densidade": 0.35
         },
         {
           "termo": "resolve lentidao",
           "ocorrencias": 4,
-          "densidade": 0.37
+          "densidade": 0.35
+        },
+        {
+          "termo": "ssd memoria",
+          "ocorrencias": 4,
+          "densidade": 0.35
         },
         {
           "termo": "avaliacao tecnica",
           "ocorrencias": 3,
-          "densidade": 0.28
-        },
-        {
-          "termo": "causa real",
-          "ocorrencias": 3,
-          "densidade": 0.28
+          "densidade": 0.27
         }
       ],
       "headings": {
-        "h2": 13,
+        "h2": 14,
         "h3": 14
       },
       "schemas": [
@@ -1985,121 +1988,121 @@
       "lote": null,
       "aprovadoEm": "2026-08-12",
       "titulo": "Recuperação de dados de HD com defeito: o que é possível",
-      "palavras": 1368,
-      "termosUteis": 772,
-      "densidadeSemantica": 63.73,
-      "vocabulario": 492,
+      "palavras": 1438,
+      "termosUteis": 815,
+      "densidadeSemantica": 62.58,
+      "vocabulario": 510,
       "keywordPrincipal": {
         "termo": "como recuperar dados hd com defeito",
         "ocorrencias": 1,
-        "densidade": 0.13
+        "densidade": 0.12
       },
       "topKeywords": [
         {
           "termo": "disco",
-          "ocorrencias": 26,
-          "densidade": 3.37
+          "ocorrencias": 27,
+          "densidade": 3.31
         },
         {
           "termo": "recuperacao",
-          "ocorrencias": 14,
-          "densidade": 1.81
+          "ocorrencias": 15,
+          "densidade": 1.84
         },
         {
           "termo": "falha",
           "ocorrencias": 12,
-          "densidade": 1.55
+          "densidade": 1.47
+        },
+        {
+          "termo": "dados",
+          "ocorrencias": 11,
+          "densidade": 1.35
         },
         {
           "termo": "arquivos",
           "ocorrencias": 10,
-          "densidade": 1.3
+          "densidade": 1.23
         },
         {
-          "termo": "dados",
-          "ocorrencias": 8,
-          "densidade": 1.04
+          "termo": "copia",
+          "ocorrencias": 7,
+          "densidade": 0.86
         },
         {
           "termo": "leitura",
           "ocorrencias": 7,
-          "densidade": 0.91
+          "densidade": 0.86
         },
         {
           "termo": "atendimento",
           "ocorrencias": 6,
-          "densidade": 0.78
-        },
-        {
-          "termo": "copia",
-          "ocorrencias": 6,
-          "densidade": 0.78
+          "densidade": 0.74
         },
         {
           "termo": "midia",
           "ocorrencias": 6,
-          "densidade": 0.78
+          "densidade": 0.74
         },
         {
           "termo": "tecnico",
           "ocorrencias": 6,
-          "densidade": 0.78
+          "densidade": 0.74
+        },
+        {
+          "termo": "backup",
+          "ocorrencias": 5,
+          "densidade": 0.61
         },
         {
           "termo": "bancada",
           "ocorrencias": 5,
-          "densidade": 0.65
-        },
-        {
-          "termo": "curitiba",
-          "ocorrencias": 5,
-          "densidade": 0.65
+          "densidade": 0.61
         }
       ],
       "topBigramas": [
         {
           "termo": "recuperacao dados",
-          "ocorrencias": 5,
-          "densidade": 0.65
+          "ocorrencias": 6,
+          "densidade": 0.74
         },
         {
           "termo": "curitiba regiao",
           "ocorrencias": 3,
-          "densidade": 0.39
+          "densidade": 0.37
         },
         {
           "termo": "falha fisica",
           "ocorrencias": 3,
-          "densidade": 0.39
+          "densidade": 0.37
         },
         {
           "termo": "falha logica",
           "ocorrencias": 3,
-          "densidade": 0.39
+          "densidade": 0.37
         },
         {
           "termo": "perda definitiva",
           "ocorrencias": 3,
-          "densidade": 0.39
+          "densidade": 0.37
+        },
+        {
+          "termo": "proximo passo",
+          "ocorrencias": 3,
+          "densidade": 0.37
+        },
+        {
+          "termo": "reduz chance",
+          "ocorrencias": 3,
+          "densidade": 0.37
         },
         {
           "termo": "abrir disco",
           "ocorrencias": 2,
-          "densidade": 0.26
-        },
-        {
-          "termo": "ajudam classificar",
-          "ocorrencias": 2,
-          "densidade": 0.26
-        },
-        {
-          "termo": "apresenta falha",
-          "ocorrencias": 2,
-          "densidade": 0.26
+          "densidade": 0.25
         }
       ],
       "headings": {
-        "h2": 10,
+        "h2": 11,
         "h3": 9
       },
       "schemas": [
