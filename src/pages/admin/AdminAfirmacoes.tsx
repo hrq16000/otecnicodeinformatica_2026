@@ -394,7 +394,7 @@ export default function AdminAfirmacoes() {
                       {perf
                         ? perf.consultas
                             .slice(0, 3)
-                            .map((c) => `${c.termo} (pos. ${c.posicao})`)
+                            .map((c: GscConsulta) => `${c.termo} (pos. ${c.posicao})`)
                             .join(" · ")
                         : "—"}
                     </td>
