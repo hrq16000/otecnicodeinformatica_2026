@@ -64,7 +64,7 @@ const TecnicoInformaticaQuatroBarras = () => {
       <CityServiceSchema city={"Quatro Barras"} citySameAs={"https://pt.wikipedia.org/wiki/Quatro_Barras"} path={"/tecnico-informatica-quatro-barras"} />
       <JsonLdSchema />
       <Header />
-      <Breadcrumbs items={[{ label: "Técnico em Quatro Barras" }]} />
+      <Breadcrumbs items={[{ label: "Técnico de Informática", href: "/servicos" }, { label: "Quatro Barras" }]} />
       <main>
         <PageHero title="Técnico de Informática em Quatro Barras" subtitle="Assistência técnica profissional em Quatro Barras. Atendimento a domicílio com diagnóstico transparente e garantia." ctaText="Falar com Técnico" />
         <BenefitsGrid benefits={benefits} title="Suporte Técnico em Quatro Barras" subtitle="Atendimento profissional para toda a cidade" />

@@ -67,7 +67,11 @@ for (const file of files.sort()) {
     .map((m) => { try { return JSON.parse(m[1]); } catch { return null; } })
     .filter(Boolean);
   const nodes = blocks.flatMap(flatten);
-  const found = nodes.filter((n) => typesOf(n).includes("Offer"));
+  // Itens de OfferCatalog (Offer com itemOffered e sem preço declarado) são
+  // apenas entradas de catálogo: não exigem price nem url próprios.
+  const isCatalogItem = (n) =>
+    n.itemOffered !== undefined && n.price === undefined && n.priceSpecification === undefined;
+  const found = nodes.filter((n) => typesOf(n).includes("Offer") && !isCatalogItem(n));
   if (!found.length) continue;
   pages++;
   const text = visible(html);

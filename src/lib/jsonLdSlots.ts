@@ -35,6 +35,7 @@ export const SCHEMA_SLOTS = {
   itemListServices: "item-list-services",
   siteNavigation: "site-navigation",
   article: "article",
+  imageObject: "image-object",
 } as const;
 
 export type SchemaSlot = (typeof SCHEMA_SLOTS)[keyof typeof SCHEMA_SLOTS];

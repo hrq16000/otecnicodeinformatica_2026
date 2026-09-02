@@ -87,7 +87,9 @@ for (const file of htmlFiles.sort()) {
   const imagens = [];
   for (const src of srcs) {
     if (!src.startsWith("/") || !RASTER.test(src)) continue;
-    const abs = path.join(DIST, src.split("?")[0]);
+    const rel = src.split("?")[0];
+    // dist/ (snapshots SSR) e dist/client/ (assets do build TanStack Start).
+    const abs = [path.join(DIST, rel), path.join(DIST, "client", rel)].find((p) => existsSync(p)) ?? path.join(DIST, rel);
     if (!existsSync(abs)) {
       errors.push(`${route}: imagem ausente no build → ${src}`);
       continue;

@@ -58,7 +58,9 @@ for (const [rota, slug] of FOTO_POR_ROTA) {
   if (!node.creditText) errors.push(`${rota}: ImageObject sem creditText`);
   if (!node.license) errors.push(`${rota}: ImageObject sem license`);
   if (!node.caption) errors.push(`${rota}: ImageObject sem caption`);
-  if (!existsSync(path.join(DIST, foto.src.replace(/^\//, ""))))
+  // dist/ (snapshots SSR) e dist/client/ (assets do build TanStack Start).
+  const rel = foto.src.replace(/^\//, "");
+  if (![path.join(DIST, rel), path.join(DIST, "client", rel)].some((p) => existsSync(p)))
     errors.push(`${rota}: arquivo da foto ausente no build (${foto.src})`);
 }
 

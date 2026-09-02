@@ -1,10 +1,10 @@
 import { useEffect } from "react";
-import { Helmet } from "react-helmet";
 import { Link, useParams, Navigate } from "@/lib/router-compat";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { PageHero } from "@/components/PageHero";
 import { PageSEO } from "@/components/PageSEO";
+import Breadcrumbs from "@/components/Breadcrumbs";
 import { BenefitsGrid } from "@/components/BenefitsGrid";
 import { CTASection } from "@/components/CTASection";
 import { trackPageView } from "@/lib/analytics";
@@ -27,7 +27,6 @@ import {
   coverCaption,
   coverCredit,
   coberturaLista,
-  localBusinessNode,
   coverImageNode,
 } from "@/lib/categoryLocalGeo";
 import {
@@ -88,7 +87,6 @@ export const CategoryLocalTemplate = ({ categoryId, localSlug }: Props) => {
     offers: offerFor(category, local, SITE_BASE_URL),
   };
 
-  const localBusinessSchema = { "@context": "https://schema.org", ...localBusinessNode(category, local) };
   const imageSchema = { "@context": "https://schema.org", ...coverImageNode(category, local) };
   const cover = coverDe(category);
   const credit = coverCredit(category);
@@ -121,16 +119,22 @@ export const CategoryLocalTemplate = ({ categoryId, localSlug }: Props) => {
           { name: cityLabel, path },
         ]}
       />
-      <Helmet>
-        <script type="application/ld+json">{JSON.stringify(serviceSchema)}</script>
-        <script type="application/ld+json">{JSON.stringify(localBusinessSchema)}</script>
-        <script type="application/ld+json">{JSON.stringify(imageSchema)}</script>
-        <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
-      </Helmet>
+      
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(imageSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
       <Header />
 
       <main>
+        <div className="container mx-auto px-4 pt-24">
+          <Breadcrumbs
+            items={[
+              { label: category.titlePrefix, href: `/${category.slug}-curitiba` },
+              { label: cityLabel },
+            ]}
+          />
+        </div>
         <PageHero
           title={`${category.titlePrefix} em ${cityLabel}`}
           subtitle={`${category.emoji} Coleta e entrega no seu endereço · diagnóstico incluso · garantia de 90 dias. Atendimento por WhatsApp em até 30 min.`}
@@ -365,9 +369,8 @@ export const CategoryHub = ({ categoryId }: { categoryId: CategoryId }) => {
           { name: `${category.titlePrefix} em Curitiba`, path },
         ]}
       />
-      <Helmet>
-        <script type="application/ld+json">{JSON.stringify(hubSchema)}</script>
-      </Helmet>
+      
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(hubSchema) }} />
       <Header />
       <main>
         <PageHero

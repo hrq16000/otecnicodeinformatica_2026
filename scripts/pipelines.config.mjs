@@ -56,6 +56,8 @@ export const verifySteps = [
 
 /** @type {PipelineStep[]} */
 export const deployCheckSteps = [
+  // O TanStack Start não emite um HTML por rota: os gates leem os snapshots SSR.
+  { name: 'Snapshots SSR em dist/', script: 'snapshot:dist' },
   { name: 'Env de observabilidade', script: 'check:observability-env' },
   { name: 'Sitemap editorial sincronizado', script: 'check:editorial-sitemap' },
   { name: 'Sitemap dinâmico (curado, fail-closed)', script: 'sitemap:dynamic:check' },

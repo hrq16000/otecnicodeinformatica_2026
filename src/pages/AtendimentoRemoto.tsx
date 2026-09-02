@@ -172,6 +172,10 @@ const AtendimentoRemoto = () => {
             <h1 className="mb-3 text-[1.6rem] font-bold leading-tight md:mb-4 md:text-4xl">
               Atendimento remoto de informática em Curitiba
             </h1>
+            <p className="mb-3 text-sm font-semibold opacity-95 md:text-base">
+              A partir de R$ 99,99 (diagnóstico incluso). O valor final pode variar conforme o
+              equipamento, a complexidade e a condição real do problema.
+            </p>
             <p className="mb-5 text-sm leading-relaxed opacity-95 md:text-base">
               Modalidade indicada quando o equipamento liga, o sistema carrega e há internet: configurações,
               sistema, programas, e-mail, impressora já conectada e orientação — com a sua autorização e o seu

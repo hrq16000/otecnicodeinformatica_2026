@@ -41,8 +41,9 @@ export const MAIN = [
   { path: "/quando-nao-compensa", changefreq: "monthly", priority: "0.5" },
   { path: "/seguranca-dos-dados", changefreq: "monthly", priority: "0.6" },
   { path: "/politica-de-pecas-do-cliente", changefreq: "monthly", priority: "0.6" },
-  // Página institucional indexável (index, follow) exigida pelo contrato de O.S.
-  { path: "/termos-e-condicoes", changefreq: "yearly", priority: "0.3" },
+  // /termos-e-condicoes continua público (exigido pelo contrato de O.S.), mas
+  // é alias com canonical para /precos-e-politicas — por isso fica fora do
+  // sitemap curado (nada de URL canonicalizada para outra no sitemap).
 ];
 
 

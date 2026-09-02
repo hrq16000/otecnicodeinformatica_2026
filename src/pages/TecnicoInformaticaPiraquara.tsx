@@ -69,7 +69,7 @@ const TecnicoInformaticaPiraquara = () => {
       <CityServiceSchema city={"Piraquara"} citySameAs={"https://pt.wikipedia.org/wiki/Piraquara"} path={"/tecnico-informatica-piraquara"} />
       <JsonLdSchema />
       <Header />
-      <Breadcrumbs items={[{ label: "Técnico em Piraquara" }]} />
+      <Breadcrumbs items={[{ label: "Técnico de Informática", href: "/servicos" }, { label: "Piraquara" }]} />
       <main>
         <PageHero title="Técnico de Informática em Piraquara" subtitle="Assistência técnica profissional em Piraquara. Atendimento a domicílio com diagnóstico transparente e garantia." ctaText="Falar com Técnico" />
         <BenefitsGrid benefits={benefits} title="Suporte Técnico em Piraquara" subtitle="Atendimento profissional para toda a cidade" />

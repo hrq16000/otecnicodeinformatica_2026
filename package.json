@@ -39,6 +39,7 @@
     "test:e2e": "playwright test",
     "test:smoke": "playwright test e2e/smoke-buttons.spec.ts",
     "snapshot:ssr": "node scripts/snapshot-ssr-jsonld.mjs",
+    "snapshot:dist": "node scripts/snapshot-ssr.mjs dist",
     "validate:jsonld": "node scripts/snapshot-ssr-jsonld.mjs && node scripts/validate-jsonld-static.mjs dist-jsonld",
     "validate:jsonld:require": "node scripts/snapshot-ssr-jsonld.mjs --require && node scripts/validate-jsonld-static.mjs dist-jsonld",
     "check:rich-results": "node scripts/check-rich-results.mjs dist",

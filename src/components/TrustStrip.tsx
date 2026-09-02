@@ -82,6 +82,15 @@ export const TrustStrip = ({
             </li>
           ))}
         </ul>
+        {variant === "full" ? (
+          <p className="mt-4 text-xs text-muted-foreground">
+            Quem responde tecnicamente por estes compromissos:{" "}
+            <a href="/gestor-responsavel" className="underline underline-offset-2 hover:text-foreground">
+              responsabilidade técnica do atendimento
+            </a>
+            .
+          </p>
+        ) : null}
       </div>
     </section>
   );

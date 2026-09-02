@@ -221,9 +221,17 @@ async function checkStaticHtml(posts) {
     if (/"@type":\s*"Person"/.test(h)) fail(`/blog/${post.slug}: Person no HTML`);
     if (/"author":/.test(h) && !/"author":\s*\{[^}]*"@type":\s*"Organization"/.test(h))
       fail(`/blog/${post.slug}: autor deve ser a organização, nunca uma pessoa`);
-    const publisher = h.match(/"publisher":\s*\{[^}]*\}/)?.[0];
-    if (publisher && !(publisher.includes('"Organization"') && publisher.includes("O Técnico de Informática")))
-      fail(`/blog/${post.slug}: publisher divergente no schema`);
+    // Aceita tanto o nó completo quanto a referência {"@id": ".../#organization"},
+    // que aponta para a Organization declarada no grafo global do site.
+    const publishers = [...h.matchAll(/"publisher":\s*\{[^}]*\}/g)].map((m) => m[0]);
+    const publisherOk =
+      publishers.length === 0 ||
+      publishers.every(
+        (p) =>
+          (p.includes('"Organization"') && p.includes("O Técnico de Informática")) ||
+          /"@id":\s*"[^"]*#organization"/.test(p),
+      );
+    if (!publisherOk) fail(`/blog/${post.slug}: publisher divergente no schema`);
 
 
     checked++;

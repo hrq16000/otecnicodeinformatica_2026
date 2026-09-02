@@ -181,6 +181,7 @@ const megaGrupos: MegaGrupo[] = [
         titulo: "Transparência",
         links: [
           { label: "Preços e políticas", href: "/precos-e-politicas" },
+          { label: "Responsabilidade técnica", href: "/gestor-responsavel" },
           { label: "Quando não compensa consertar", href: "/quando-nao-compensa" },
           { label: "Como funciona o atendimento", href: "/como-funciona" },
         ],

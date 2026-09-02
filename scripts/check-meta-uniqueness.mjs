@@ -46,6 +46,8 @@ const files = [];
 
 const decode = (s) =>
   String(s ?? "")
+    .replace(/&#x([0-9a-f]+);/gi, (_, h) => String.fromCodePoint(parseInt(h, 16)))
+    .replace(/&#(\d+);/g, (_, d) => String.fromCodePoint(Number(d)))
     .replace(/&amp;/g, "&")
     .replace(/&quot;/g, '"')
     .replace(/&#39;/g, "'")
@@ -67,7 +69,7 @@ for (const file of files.sort()) {
   if (!FAMILIES.some((re) => re.test(route))) continue;
   checked++;
   const html = readFileSync(file, "utf8");
-  const title = decode(html.match(/<title>([\s\S]*?)<\/title>/i)?.[1]);
+  const title = decode(html.match(/<title[^>]*>([\s\S]*?)<\/title>/i)?.[1]);
   const desc = decode(html.match(/<meta name="description" content="([^"]*)"/i)?.[1]);
 
   if (!title) { errors.push(`${route}: <title> ausente`); continue; }

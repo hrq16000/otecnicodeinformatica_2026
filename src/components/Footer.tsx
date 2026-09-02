@@ -53,6 +53,7 @@ const columns: Array<{ title: string; links: Array<{ label: string; to: string }
     title: "Institucional",
     links: [
       { label: "Sobre", to: "/sobre" },
+      { label: "Responsabilidade técnica", to: "/gestor-responsavel" },
       { label: "Contato", to: "/contato" },
       { label: "Status da ordem de serviço", to: "/status-da-ordem-de-servico" },
       { label: "Depoimentos", to: "/depoimentos" },
