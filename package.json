@@ -9,6 +9,8 @@
     "audit:seo": "node scripts/audit-seo-metadata.mjs",
     "report:photo-review": "node scripts/report-photo-review.mjs",
     "report:gates": "node scripts/report-gates.mjs",
+    "report:afirmacoes": "node scripts/report-trust-claims-panel.mjs",
+    "check:afirmacoes": "node scripts/report-trust-claims-panel.mjs --check",
     "report:daily-ui": "node scripts/report-daily-ui-performance.mjs",
     "report:problem-intent": "bun scripts/report-problem-intent-map.ts",
     "report:problem-interlinks": "bun scripts/report-problem-interlinks.ts",
