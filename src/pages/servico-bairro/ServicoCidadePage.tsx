@@ -82,7 +82,7 @@ const ServicoCidadePage = () => {
             "description": seoDescription,
             "url": `${SITE_BASE_URL}${local.path}`,
             "areaServed": { "@type": "City", name: cidade.nome, addressRegion: "PR", addressCountry: "BR" },
-            "provider": { "@type": "LocalBusiness", name: `Técnico de Informática em ${cidade.nome}`, url: SITE_BASE_URL },
+            "provider": { "@id": `${SITE_BASE_URL}/#localbusiness` },
             "isRelatedTo": { "@type": "Service", url: `${SITE_BASE_URL}${local.parent}` }
           }]
         : []),
