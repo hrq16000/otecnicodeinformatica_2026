@@ -276,6 +276,10 @@ export default function AdminSeo() {
 
       <IndexacaoLedgerPanel />
 
+      <div className="mt-6">
+        <GscSnapshotPanel />
+      </div>
+
 
 
       <div className="mt-6 flex flex-wrap items-center gap-2">
