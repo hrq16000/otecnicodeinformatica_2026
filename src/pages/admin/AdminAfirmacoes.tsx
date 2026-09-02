@@ -1,10 +1,13 @@
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { exportarCsv } from "@/lib/exportarRelatorio";
+import { supabase } from "@/integrations/supabase/client";
+import { RevisaoAfirmacao, type RevisaoRegistro } from "@/components/admin/RevisaoAfirmacao";
 import auditoria from "@/data/trustClaimsAudit.json";
+import auditoriaConteudo from "@/data/auditoriaConteudo.json";
 
 /**
  * AFIRMAÇÕES DE CONFIANÇA — /admin/afirmacoes.
