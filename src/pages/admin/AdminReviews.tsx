@@ -368,6 +368,65 @@ const AdminReviews = () => {
             </div>
           </header>
 
+          {/* Depoimentos que estão realmente no ar, com link público direto. */}
+          <section className="mb-6 rounded-lg border bg-card p-4">
+            <div className="flex flex-wrap items-center justify-between gap-2">
+              <h2 className="text-sm font-semibold">
+                Publicados no site ({publicados.length})
+              </h2>
+              <Button variant="outline" size="sm" asChild>
+                <a href="/depoimentos" target="_blank" rel="noreferrer">
+                  Abrir /depoimentos
+                </a>
+              </Button>
+            </div>
+            {publicados.length === 0 ? (
+              <p className="mt-2 text-sm text-muted-foreground">
+                Nenhum depoimento no ar. Só entram avaliações verificadas, publicadas e — quando vindas do
+                site — autorizadas pelo cliente.
+              </p>
+            ) : (
+              <ul className="mt-3 grid gap-2 md:grid-cols-2">
+                {publicados.map((r) => (
+                  <li
+                    key={r.id}
+                    className="flex flex-wrap items-center justify-between gap-2 rounded-md border border-border/60 p-2 text-sm"
+                  >
+                    <span className="min-w-0">
+                      <strong>{r.author_name}</strong>
+                      {r.neighborhood ? ` · ${r.neighborhood}` : ""}
+                      {r.service_slug ? ` · ${r.service_slug}` : ""}
+                    </span>
+                    <span className="flex gap-2 text-xs">
+                      <a
+                        className="underline underline-offset-2"
+                        href={`/depoimentos#depoimento-${r.id}`}
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        ver no site
+                      </a>
+                      {r.service_slug && (
+                        <a
+                          className="underline underline-offset-2"
+                          href={
+                            r.service_slug.startsWith("/")
+                              ? r.service_slug
+                              : `/servicos/${r.service_slug}`
+                          }
+                          target="_blank"
+                          rel="noreferrer"
+                        >
+                          página do serviço
+                        </a>
+                      )}
+                    </span>
+                  </li>
+                ))}
+              </ul>
+            )}
+          </section>
+
           <div className="grid grid-cols-2 md:grid-cols-5 gap-3 mb-6">
             {[
               { k: "Total", v: stats.total },
