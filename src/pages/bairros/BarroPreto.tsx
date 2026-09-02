@@ -8,7 +8,7 @@ const BarroPreto = () => {
     metaTitle: "Técnico de Informática no Barro Preto SJP | O Técnico de Informática",
     metaDescription: "Técnico de informática no Barro Preto, São José dos Pinhais. Conserto de PC e notebook, formatação. Visita técnica domiciliar. a partir de R$ 99,99.",
     h1: "Técnico de Informática no Barro Preto – São José dos Pinhais",
-    subtitulo: "Serviços de informática profissionais no Barro Preto. Técnico especializado com atendimento rápido.",
+    subtitulo: "Serviços de informática profissionais no Barro Preto. Técnico especializado com atendimento conforme disponibilidade.",
     descricaoLonga: `O bairro Barro Preto em São José dos Pinhais é uma região com características mistas, combinando áreas residenciais e industriais. Nossa equipe de técnicos de informática atende toda a região do Barro Preto, oferecendo serviços completos para residências e empresas.
 
     Temos experiência em atender tanto clientes residenciais quanto corporativos, adaptando nossos serviços às necessidades específicas de cada um. Do computador pessoal ao servidor da empresa, temos a solução técnica adequada.`,

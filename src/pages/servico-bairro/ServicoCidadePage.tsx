@@ -110,9 +110,9 @@ const ServicoCidadePage = () => {
     { icon: Star, titulo: "Atendimento Humanizado", descricao: "Explicamos o problema com clareza, sem jargão técnico" },
   ] : [
     { icon: MapPin, titulo: `Atendimento Local em ${cidade.nome}`, descricao: "Técnico vai até seu endereço com todas as ferramentas" },
-    { icon: Clock, titulo: "Atendimento conforme a agenda", descricao: "Agende pelo WhatsApp e receba o técnico ainda hoje" },
-    { icon: Shield, titulo: "Garantia em Todos os Serviços", descricao: "Serviço garantido. Se precisar, voltamos sem custo" },
-    { icon: Star, titulo: "Valor do atendimento Grátis", descricao: "Avaliação sem compromisso. Você só paga se aprovar" },
+    { icon: Clock, titulo: "Atendimento conforme a agenda", descricao: "Agende pelo WhatsApp; o horário depende da disponibilidade da agenda" },
+    { icon: Shield, titulo: "Garantia conforme o serviço executado", descricao: "Garantia sobre a mão de obra do reparo executado, registrada no orçamento" },
+    { icon: Star, titulo: "Valor informado antes", descricao: "Você aprova o valor antes de qualquer execução" },
   ];
 
   return (

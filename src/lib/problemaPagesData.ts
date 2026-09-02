@@ -3207,7 +3207,7 @@ O pior erro que você pode cometer é desligar o computador à força durante um
   {
     slug: "notebook-com-tela-quebrada-curitiba",
     title: "Notebook com Tela Quebrada em Curitiba — Troca de Tela e Reparo",
-    metaDescription: "Tela do notebook quebrada, trincada ou com manchas em Curitiba? Troca de tela LCD/LED com peças compatíveis. valor do atendimento rápido e sem compromisso.",
+    metaDescription: "Tela do notebook quebrada, trincada ou com manchas em Curitiba? Troca de tela LCD/LED com peças compatíveis. valor do atendimento conforme disponibilidade e sem compromisso.",
     h1: "Notebook com Tela Quebrada — Troca e Reparo em Curitiba",
     categoria: "Hardware — Tela",
     intro: `Notebook caiu, levou uma pancada ou a tela simplesmente começou a apresentar manchas e linhas? A tela é um dos componentes mais frágeis do notebook — e um dos mais caros de substituir se não souber onde procurar.
@@ -5296,7 +5296,7 @@ Abre um relatório HTML com capacidade original vs atual e histórico de carga.`
   {
     slug: "notebook-sem-webcam-curitiba",
     title: "Notebook Sem Webcam Funcionando em Curitiba | Câmera Não Detectada",
-    metaDescription: "Webcam do notebook não funciona em Curitiba? Diagnóstico de driver, cabo flat e módulo da câmera. Técnico especialista com atendimento rápido.",
+    metaDescription: "Webcam do notebook não funciona em Curitiba? Diagnóstico de driver, cabo flat e módulo da câmera. Técnico especialista com atendimento conforme disponibilidade.",
     h1: "Notebook Sem Webcam Funcionando em Curitiba — Câmera Não Detectada",
     categoria: "Problemas de Notebook",
     intro: `A webcam integrada do notebook parou de funcionar ou não é detectada pelo sistema. O problema pode aparecer como "câmera não encontrada", tela preta em aplicativos de vídeo, LED da câmera não acende, ou a webcam simplesmente desapareceu do Gerenciador de Dispositivos.\n\nEm Curitiba, com o aumento do trabalho remoto e reuniões online, esse problema impacta diretamente a produtividade. As causas variam desde configurações de privacidade do Windows até falha física do módulo da câmera.`,
@@ -5390,7 +5390,7 @@ Abre um relatório HTML com capacidade original vs atual e histórico de carga.`
   {
     slug: "pc-com-tela-congelada-curitiba",
     title: "PC com Tela Congelada em Curitiba | Computador Trava e Não Responde",
-    metaDescription: "Computador congela e trava em Curitiba? Diagnóstico de superaquecimento, RAM, disco e drivers. Técnico especialista resolve com atendimento rápido.",
+    metaDescription: "Computador congela e trava em Curitiba? Diagnóstico de superaquecimento, RAM, disco e drivers. Técnico especialista resolve com atendimento conforme disponibilidade.",
     h1: "PC com Tela Congelada em Curitiba — Computador Trava e Não Responde",
     categoria: "Problemas de Computador",
     intro: `O computador congela completamente — o mouse para, o teclado não responde e a única saída é favaliar o valor o desligamento pelo botão de energia. Esse problema pode ser aleatório ou ocorrer em situações específicas como ao abrir programas pesados, jogar ou após um tempo de uso.\n\nEm Curitiba, diagnosticamos centenas de casos de tela congelada. As causas mais comuns são superaquecimento (especialmente em dias quentes ou notebooks com ventilação obstruída), memória RAM defeituosa, disco rígido com setores defeituosos e drivers de vídeo incompatíveis.`,
@@ -5438,7 +5438,7 @@ Abre um relatório HTML com capacidade original vs atual e histórico de carga.`
   {
     slug: "computador-muito-barulhento-curitiba",
     title: "Computador Muito Barulhento em Curitiba | Ventoinhas e Ruídos Anormais",
-    metaDescription: "Computador fazendo barulho em Curitiba? Diagnóstico de cooler, HD, ventoinha e vibração. Técnico especialista com atendimento rápido e solução definitiva.",
+    metaDescription: "Computador fazendo barulho em Curitiba? Diagnóstico de cooler, HD, ventoinha e vibração. Técnico especialista com atendimento conforme disponibilidade e solução definitiva.",
     h1: "Computador Muito Barulhento em Curitiba — Ventoinhas e Ruídos Anormais",
     categoria: "Problemas de Computador",
     intro: `O computador começou a fazer barulho excessivo — ventoinhas girando em alta rotação, sons de clique, zumbido constante ou vibração. Esse problema vai além do incômodo: ruídos anormais frequentemente indicam que algum componente está falhando ou que o sistema está superaquecendo.\n\nEm Curitiba, diagnosticamos que a maioria dos computadores barulhentos sofre de acúmulo de poeira nos coolers (que força rotações mais altas para compensar), rolamentos desgastados em ventoinhas, ou HD mecânico com falha iminente emitindo sons de clique.`,
@@ -5686,7 +5686,7 @@ Abre um relatório HTML com capacidade original vs atual e histórico de carga.`
   {
     slug: "notebook-esquentando-muito-curitiba",
     title: "Notebook Esquentando Muito em Curitiba | Superaquecimento — Técnico Especializado",
-    metaDescription: "Notebook esquentando demais em Curitiba? Limpeza interna, troca de pasta térmica e reparo de cooler. Diagnóstico profissional com atendimento rápido.",
+    metaDescription: "Notebook esquentando demais em Curitiba? Limpeza interna, troca de pasta térmica e reparo de cooler. Diagnóstico profissional com atendimento conforme disponibilidade.",
     h1: "Notebook Esquentando Muito — Diagnóstico e Reparo em Curitiba",
     categoria: "Hardware",
     intro: "Quando o notebook esquenta além do normal, o desempenho cai drasticamente e há risco real de dano permanente aos componentes internos. Processadores modernos possuem proteção térmica (thermal throttling) que reduz a velocidade para evitar queima, mas isso transforma seu notebook em uma máquina lenta e instável.\n\nO superaquecimento é um dos problemas mais comuns e mais negligenciados. Poeira acumulada nos dutos de ventilação, pasta térmica ressecada e ventoinhas com rolamento desgastado são as causas mais frequentes. Em Curitiba, apesar do clima mais ameno, ambientes com carpete, cama e superfícies que bloqueiam a ventilação aceleram o problema.\n\nIgnorar o superaquecimento pode levar à queima do processador, da GPU ou até da placa-mãe — reparos que custam muito mais do que a manutenção preventiva. Nosso diagnóstico térmico identifica exatamente a causa e aplica a solução correta.",
@@ -6320,7 +6320,7 @@ Abre um relatório HTML com capacidade original vs atual e histórico de carga.`
   {
     slug: "pc-nao-conecta-bluetooth-curitiba",
     title: "PC Não Conecta Bluetooth Curitiba — Diagnóstico e Solução",
-    metaDescription: "PC ou notebook não conecta Bluetooth em Curitiba? Técnico resolve problemas de driver, adaptador e pareamento. Diagnóstico profissional com atendimento rápido.",
+    metaDescription: "PC ou notebook não conecta Bluetooth em Curitiba? Técnico resolve problemas de driver, adaptador e pareamento. Diagnóstico profissional com atendimento conforme disponibilidade.",
     h1: "PC Não Conecta Bluetooth — Diagnóstico e Solução em Curitiba",
     categoria: "Hardware / Conectividade",
     intro: `Problemas de Bluetooth são extremamente comuns e podem impedir o uso de fones de ouvido, teclados, mouses, caixas de som e até transferência de arquivos. Quando o Bluetooth não funciona, o ícone pode desaparecer da bandeja, o dispositivo pode não parear, ou a conexão pode cair constantemente.\n\nAs causas variam entre driver desatualizado, adaptador Bluetooth desativado no BIOS, conflito de software, interferência de sinal, ou falha física do módulo Bluetooth (que em notebooks geralmente é integrado à placa Wi-Fi).\n\nAntes de assumir que o hardware está com defeito, é importante verificar configurações de software, pois a grande maioria dos problemas de Bluetooth é resolvida sem troca de peças.`,

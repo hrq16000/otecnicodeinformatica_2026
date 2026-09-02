@@ -11,7 +11,7 @@ const data: ServicoBairroData = {
   cidade: "Curitiba",
   
   h1: "Formatação de Computador no Portão",
-  subtitulo: "Reinstalação completa do Windows com backup seguro. Técnico no Portão com atendimento rápido a domicílio.",
+  subtitulo: "Reinstalação completa do Windows com backup seguro. Técnico no Portão com atendimento conforme disponibilidade a domicílio.",
   
   precoBase: "R$ 99,99",
   precoDescricao: "Inclui Windows, drivers e programas essenciais. Atendimento a domicílio.",

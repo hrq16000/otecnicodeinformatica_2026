@@ -59,7 +59,7 @@ export const SchedulingSection = () => {
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto reveal-text" data-reveal-delay="100">
               Assistência técnica em informática a domicílio. Técnico de computador e notebook 
-              com atendimento rápido em Curitiba e região metropolitana.
+              com atendimento conforme disponibilidade em Curitiba e região metropolitana.
             </p>
             <div className="glow-separator max-w-xs mx-auto mt-5" />
           </div>

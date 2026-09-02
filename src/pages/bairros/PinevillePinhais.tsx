@@ -10,7 +10,7 @@ const PinevillePinhais = () => {
       "Técnico de informática no Pineville, Pinhais. Formatação, conserto, vírus, upgrade e configuração de internet/Wi‑Fi. Atendimento a domicílio rápido. a partir de R$ 99,99.",
     h1: "Técnico de Informática no Pineville – Pinhais",
     subtitulo:
-      "Assistência técnica no Pineville com atendimento rápido, diagnóstico preciso e soluções que funcionam.",
+      "Assistência técnica no Pineville com atendimento conforme disponibilidade, diagnóstico preciso e soluções que funcionam.",
     descricaoLonga: `O Pineville é um bairro com perfil residencial e fácil acesso a Curitiba, o que facilita atendimentos rápidos.
 
 Se você precisa de um técnico de informática no Pineville, atendemos com serviços completos para PC e notebook: formatação, remoção de vírus, upgrades (SSD/RAM), consertos e configuração de rede. Trabalhamos com transparência e garantia, com foco em desempenho e segurança.`,

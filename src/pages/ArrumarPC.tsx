@@ -76,7 +76,7 @@ const comoFunciona = [
   },
   {
     n: "2",
-    titulo: "Diagnóstico gratuito",
+    titulo: "Diagnóstico com valor informado antes",
     desc: "O técnico avalia o problema e te passa o valor antes de qualquer cobrança.",
   },
   {

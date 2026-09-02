@@ -8,7 +8,7 @@ const CentroFRG = () => {
     metaTitle: "Técnico de Informática no Centro de Fazenda Rio Grande | O Técnico de Informática",
     metaDescription: "Técnico de informática no Centro de Fazenda Rio Grande. Formatação, conserto, vírus, upgrade SSD. Atendimento a domicílio. a partir de R$ 99,99.",
     h1: "Técnico de Informática no Centro de Fazenda Rio Grande",
-    subtitulo: "Assistência técnica profissional no Centro de Fazenda Rio Grande com atendimento rápido e garantia.",
+    subtitulo: "Assistência técnica profissional no Centro de Fazenda Rio Grande com atendimento conforme disponibilidade e garantia.",
     descricaoLonga: `O Centro de Fazenda Rio Grande concentra o comércio e os serviços da cidade. Com fácil acesso pela Contorno Sul e BR-116, nosso técnico chega com agilidade para atender residências e empresas.
 
 Resolvemos problemas comuns como computador lento, notebook que trava, Wi-Fi instável, vírus e necessidade de upgrade. Diagnóstico transparente, valor antes da execução e garantia em todo serviço realizado.`,
