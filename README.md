@@ -35,17 +35,24 @@ recurso correspondente fica **desligado** (fail-closed), nunca com fallback.
 
 ## Validação obrigatória antes de publicar
 
+Três comandos oficiais, nesta ordem (eles orquestram todos os gates):
+
 ```sh
-npm run build
-npm test
-npm run check:route-tree
-npm run check:editorial-governance
-npm run check:internal-links
-npm run check:interlinks-quality
-npm run check:national-authority-map
-npm run validate:jsonld
-npm run check:trust-claims
+npm run verify        # lint, testes, rotas, links, órfãs, marca, E-E-A-T, segurança
+npm run build         # prebuild + vite build (SSR) + postbuild
+npm run deploy:check  # robots, GEO, schema.org, JSON-LD, imagens, indexação
+npm run test:a11y     # quando houver ambiente de browser
 ```
+
+Listar/filtrar passos: `npm run verify:list`, `npm run verify -- --only <script>`,
+`npm run deploy:check -- --with-optional`. Detalhes em
+[`docs/comandos-oficiais.md`](./docs/comandos-oficiais.md). Os scripts
+individuais (`check:*`, `report:*`) seguem disponíveis para diagnóstico.
+
+Preços, garantias e promessas têm fonte única em `src/lib/config/commercial.ts`
+(resumidos em [`AGENTS.md`](./AGENTS.md#8-preços-garantia-e-promessas-fonte-única)).
+As afirmações de confiança são inventariadas por `npm run report:afirmacoes` e
+acompanhadas em `/admin/afirmacoes`.
 
 Qualquer falha bloqueia a publicação. Regras de conteúdo, indexação, autoria e
 proibições estão em [`AGENTS.md`](./AGENTS.md).
