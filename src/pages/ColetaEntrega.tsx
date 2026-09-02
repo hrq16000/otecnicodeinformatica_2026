@@ -103,7 +103,7 @@ const ColetaEntrega = () => {
       })}} />
       <JsonLdSchema />
       <Header />
-      <Breadcrumbs items={[{ label: "Coleta e Entrega" }]} />
+      <Breadcrumbs items={[{ label: "Serviços", href: "/servicos" }, { label: "Coleta e Entrega" }]} />
 
       <main>
         {/* HERO */}

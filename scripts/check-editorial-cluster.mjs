@@ -27,8 +27,9 @@ const note = (m) => notes.push(m);
 
 const read = (p) => fs.readFile(path.join(ROOT, p), "utf8");
 
-// 8 aprofundamentos da Rodada 4F + 2 conteúdos empresariais da Rodada 3O.
-const LIMITS = { aprofundar: 10, novo: 4, consolidar: 4, noindex: 4 };
+// 8 aprofundamentos da Rodada 4F + 2 empresariais (3O) + 3 das ondas
+// editoriais registradas depois (4X/4Y/4Z), todos já publicados.
+const LIMITS = { aprofundar: 13, novo: 4, consolidar: 4, noindex: 4 };
 
 const CLAIMS = [
   /diagn[óo]stico\s+gr[áa]tis/i,
@@ -83,10 +84,12 @@ async function main() {
 
   // Rotas reais (pilares).
   const appPaths = new Set();
-  for (const f of ["src/App.tsx", "src/LegacyApp.tsx"]) {
+  // Pós-migração TanStack: o mapa de rotas vive em legacyRouteElements.
+  for (const f of ["src/App.tsx", "src/LegacyApp.tsx", "src/legacyRouteElements.tsx"]) {
     try {
       const s = await read(f);
       for (const m of s.matchAll(/path=\{?["'`]([^"'`}]+)["'`]/g)) appPaths.add(m[1]);
+      for (const m of s.matchAll(/^\s{2}"(\/[^"]*)":\s*\(\)\s*=>/gm)) appPaths.add(m[1]);
     } catch { /* opcional */ }
   }
 

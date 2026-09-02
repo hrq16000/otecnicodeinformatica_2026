@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import Breadcrumbs from "@/components/Breadcrumbs";
 import { BlocosRedes4e } from "@/components/redes/BlocosRedes4e";
 import { Link } from "@/lib/router-compat";
 import { PageSEO } from "@/components/PageSEO";
@@ -159,6 +160,7 @@ const AtendimentoRemoto = () => {
       />
       <JsonLdSchema />
       <Header />
+      <Breadcrumbs items={[{ label: "Serviços", href: "/servicos" }, { label: "Atendimento Remoto" }]} />
       <main>
         {/* Rodada 3U — hero de modalidade: eyebrow, H1, resumo curto e CTA
             dentro da primeira dobra em 360, 390 e 430 px. */}

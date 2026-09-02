@@ -23,9 +23,11 @@ describe("rotas — smoke de importação", () => {
   });
 
   for (const [path, load] of Object.entries(allModules)) {
+    // 30s: a primeira importação paga o custo de transform a frio (Vite),
+    // que em máquina lenta estoura o timeout padrão de 5s sem indicar bug.
     it(`carrega ${path} sem ReferenceError`, async () => {
       const mod = await load();
       expect(mod).toBeTruthy();
-    });
+    }, 30_000);
   }
 });

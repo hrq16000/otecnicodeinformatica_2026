@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import Breadcrumbs from "@/components/Breadcrumbs";
 import { PageSEO } from "@/components/PageSEO";
 import { Link } from "@/lib/router-compat";
 import { Header } from "@/components/Header";
@@ -180,6 +181,7 @@ const Blog = () => {
 
       <JsonLdSchema />
       <Header />
+      <Breadcrumbs items={[{ label: "Guias" }]} />
 
       <main>
         {/* ═══════════ HERO ═══════════ */}

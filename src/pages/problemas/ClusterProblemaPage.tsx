@@ -26,6 +26,7 @@ import { getFontesProblema } from "@/lib/fontesProblemas";
 import { BlocosConversacionais } from "@/components/BlocosConversacionais";
 import { faqConversacional } from "@/lib/intencaoConversacional";
 import { BlocosRedes4e } from "@/components/redes/BlocosRedes4e";
+import { enriquecimento4e } from "@/lib/enriquecimento4eRedes";
 import { SCHEMA_SLOTS, SLOT_PRIORITY, useJsonLdSlot } from "@/lib/jsonLdSlots";
 import { clusterProblema } from "@/lib/clusterProblemas";
 import { absoluteUrl, siteConfig } from "@/lib/siteConfig";
@@ -456,7 +457,7 @@ const ClusterProblemaPage = () => {
 
         <BlocosTecnicos blocos={extra?.blocos} />
 
-        <BlocosRedes4e path={dados.path} />
+        <BlocosRedes4e path={dados.path} comFontes={false} />
 
         {extra?.tabelaExtra ? (
           <TabelaDiagnosticaBloco tabela={extra.tabelaExtra} id="tabela-decisao" />
@@ -475,10 +476,9 @@ const ClusterProblemaPage = () => {
         <FontesPrimarias
           fontes={[
             ...(extra?.fontes ?? []),
-            ...getFontesProblema(slug).filter(
-              (f) => !(extra?.fontes ?? []).some((e) => e.url === f.url),
-            ),
-          ]}
+            ...(enriquecimento4e(dados.path)?.fontes ?? []),
+            ...getFontesProblema(slug),
+          ].filter((f, i, arr) => arr.findIndex((o) => o.url === f.url) === i)}
         />
 
         <section className="mt-12" aria-labelledby="faq">

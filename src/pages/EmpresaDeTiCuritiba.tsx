@@ -195,6 +195,8 @@ const EmpresaDeTiCuritiba = () => {
           "@type": "Service",
           "name": "Soluções de TI para empresas em Curitiba",
           "serviceType": "Soluções e infraestrutura de informática para empresas",
+          "description":
+            "Suporte, manutenção preventiva, redes e infraestrutura de informática para empresas em Curitiba, com escopo e prazos definidos após avaliação técnica.",
           "provider": {
             "@type": "LocalBusiness",
             "name": siteConfig.brandName,

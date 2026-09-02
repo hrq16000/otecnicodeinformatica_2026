@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import Breadcrumbs from "@/components/Breadcrumbs";
 import { PageSEO } from "@/components/PageSEO";
 import { Header } from "@/components/Header";
 import { CTASection } from "@/components/CTASection";
@@ -150,6 +151,7 @@ const FAQ = () => {
       <PageSEO title="Perguntas Frequentes | Atendimento, Valores e Limites Técnicos" description="Respostas diretas sobre como funciona a triagem, quando o atendimento é remoto, visita ou bancada, valores a partir de R$ 99,99, garantias e limites técnicos." path="/faq" breadcrumbs={[{ name: "Início", path: "/" }, { name: "FAQ", path: "/faq" }]} />
       <JsonLdSchema />
       <Header />
+      <Breadcrumbs items={[{ label: "FAQ" }]} />
       <main>
         {/* Hero */}
         <section className="relative overflow-hidden">
