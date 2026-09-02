@@ -22,6 +22,8 @@
 import { existsSync, readFileSync } from "node:fs";
 import path from "node:path";
 import { readRouteUniverse } from "./lib/tanstack-routes.mjs";
+import { prepararSsr, htmlDaRota, abortarSeBloqueado } from "./lib/ssr-harness.mjs";
+
 
 const ROOT = process.cwd();
 const DIST = path.resolve(process.argv[2] || "dist");
