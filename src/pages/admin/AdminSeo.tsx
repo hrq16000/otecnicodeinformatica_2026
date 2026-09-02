@@ -217,6 +217,10 @@ export default function AdminSeo() {
         <Kpi label="Overrides" valor={String(Object.keys(overrides).length)} hint="ajustes salvos no backend" />
       </div>
 
+      <SitemapLedgerPanel />
+
+
+
       <div className="mt-6 flex flex-wrap items-center gap-2">
         <Input className="max-w-xs" placeholder="Buscar por slug ou título" value={busca} onChange={(e) => setBusca(e.target.value)} />
         {TIPOS.map((t) => (
