@@ -330,7 +330,7 @@ export default function AdminAfirmacoes() {
             <li className="text-sm text-muted-foreground">Nenhuma afirmação para este filtro.</li>
           )}
         </ul>
-      ) : (
+      ) : aba === "urls" ? (
         <div className="mt-4 overflow-x-auto">
           <table className="w-full text-sm">
             <thead>
