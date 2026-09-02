@@ -25,11 +25,19 @@ const ROUTES_FILE = join(ROOT, "src", "legacyRouteElements.tsx");
 const TRECHO_MAX = 180;
 
 function auditoria() {
-  const raw = execFileSync(process.execPath, ["scripts/audit-trust-claims.mjs", "--json"], {
-    cwd: ROOT,
-    maxBuffer: 64 * 1024 * 1024,
-    encoding: "utf8",
-  });
+  // stdout de processo filho pode truncar payloads grandes: usa arquivo temporário.
+  const tmp = join(tmpdir(), `trust-claims-${process.pid}.json`);
+  const fd = openSync(tmp, "w");
+  try {
+    execFileSync(process.execPath, ["scripts/audit-trust-claims.mjs", "--json"], {
+      cwd: ROOT,
+      stdio: ["ignore", fd, "inherit"],
+    });
+  } finally {
+    closeSync(fd);
+  }
+  const raw = readFileSync(tmp, "utf8");
+  rmSync(tmp, { force: true });
   return JSON.parse(raw);
 }
 
