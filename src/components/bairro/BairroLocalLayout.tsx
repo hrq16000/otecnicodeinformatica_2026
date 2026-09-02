@@ -8,6 +8,7 @@ import {
   Home,
   Truck,
   ShieldCheck,
+  BookOpen,
 } from "lucide-react";
 import { PageSEO } from "@/components/PageSEO";
 import { bairroAncora, isNoindex } from "@/lib/localIndexPolicy";
@@ -275,6 +276,39 @@ export const BairroLocalLayout = ({ data }: { data: BairroLocalData }) => {
                 ))}
               </ul>
             </aside>
+          </div>
+        </section>
+
+        {/* Ponte editorial: conteúdo útil antes do bloco comercial local. */}
+        <section className="border-b border-border/60 bg-background py-12 md:py-16" aria-labelledby="leituras-bairro">
+          <div className="container mx-auto">
+            <div className="max-w-3xl">
+              <span className="inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.14em] text-accent">
+                <BookOpen className="h-4 w-4" aria-hidden="true" /> Biblioteca do portal
+              </span>
+              <h2 id="leituras-bairro" className="mt-2 text-2xl font-heading font-bold text-foreground md:text-3xl">
+                Orientação técnica para quem está em {data.nome}
+              </h2>
+              <p className="mt-3 leading-relaxed text-muted-foreground">
+                O bairro define a cobertura local, mas não define a causa do defeito. Consulte os
+                guias abaixo para registrar sinais e evitar tentativas que podem piorar o problema.
+              </p>
+            </div>
+            <div className="mt-7 grid gap-4 md:grid-cols-3">
+              {[
+                ["Atlas de Informática", "/guia-tecnico-informatica", "Aprenda o fundamento e encontre o caminho correto de diagnóstico."],
+                ["Windows não inicia", "/problemas/windows-nao-inicia", "Diferencie falta de energia, falha de imagem e Windows que não consegue carregar."],
+                ["Backup antes de formatar", "/ferramentas/checklist-antes-de-formatar", "Checklist para conferir arquivos, contas e chaves antes de qualquer reinstalação."],
+              ].map(([label, to, desc]) => (
+                <Link key={to} to={to} className="group rounded-xl border border-border bg-card p-5 transition-colors hover:border-accent/50">
+                  <h3 className="font-semibold text-foreground group-hover:text-accent">{label}</h3>
+                  <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{desc}</p>
+                  <span className="mt-3 inline-flex items-center gap-1 text-sm font-semibold text-accent">
+                    Ler orientação <ArrowRight className="h-4 w-4" aria-hidden="true" />
+                  </span>
+                </Link>
+              ))}
+            </div>
           </div>
         </section>
 
