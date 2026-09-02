@@ -1,7 +1,7 @@
 {
-  "geradoEm": "2026-09-02T05:55:26.601Z",
+  "geradoEm": "2026-09-02T07:10:04.228Z",
   "dist": "./dist",
-  "total": 233,
+  "total": 232,
   "comHtml": 0,
   "comAviso": 0,
   "urls": [
@@ -251,21 +251,6 @@
       "tipo": "pilar",
       "priority": "0.6",
       "changefreq": "monthly",
-      "semHtml": true,
-      "title": null,
-      "description": null,
-      "canonical": null,
-      "robots": null,
-      "schemas": [],
-      "avisos": [],
-      "completude": null
-    },
-    {
-      "path": "/termos-e-condicoes",
-      "sitemap": "sitemap-main.xml",
-      "tipo": "pilar",
-      "priority": "0.3",
-      "changefreq": "yearly",
       "semHtml": true,
       "title": null,
       "description": null,

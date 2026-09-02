@@ -68,8 +68,10 @@ for (const block of blocks) {
     if (seenImgs.has(url)) errors.push(`${loc}: imagem duplicada ${url}`);
     seenImgs.add(url);
     if (!url.startsWith(SITE)) { errors.push(`${loc}: imagem fora do domínio — ${url}`); continue; }
-    const assetPath = path.join(DIST, url.slice(SITE.length).split("?")[0]);
-    if (!existsSync(assetPath)) { errors.push(`${loc}: asset inexistente — ${url}`); continue; }
+    const rel = url.slice(SITE.length).split("?")[0];
+    // dist/ (snapshots SSR) e dist/client/ (assets do build TanStack Start).
+    const assetPath = [path.join(DIST, rel), path.join(DIST, "client", rel)].find((p) => existsSync(p));
+    if (!assetPath) { errors.push(`${loc}: asset inexistente — ${url}`); continue; }
     newest = Math.max(newest, statSync(assetPath).mtime.getTime());
   }
   if (lastmod && newest) {

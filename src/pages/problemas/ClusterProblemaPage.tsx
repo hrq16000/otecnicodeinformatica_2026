@@ -8,6 +8,7 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 import { PoliticaAtendimentoBloco } from "@/components/PoliticaAtendimentoBloco";
 import { Button } from "@/components/ui/button";
 import { FotoLicenciadaImg } from "@/components/FotoLicenciadaImg";
+import { foto } from "@/lib/fotosLicenciadas";
 import { SmartImage } from "@/components/SmartImage";
 import { ServicosCorrelatos } from "@/components/informatica/ServicosCorrelatos";
 import { AtlasPonteProblema } from "@/components/informatica/AtlasPonteProblema";
@@ -63,6 +64,9 @@ const ClusterProblemaPage = () => {
   const dados = clusterProblema(slug);
   const extra = dados ? enriquecimentoDe(dados.path) : undefined;
   const paginaUrl = dados ? absoluteUrl(dados.path) : "";
+  // Foto real licenciada da rota (fail-closed: sem slug no manifesto, nenhum
+  // ImageObject é emitido — nunca imagem genérica no lugar da evidência).
+  const fotoReal = dados?.foto ? foto(dados.foto) : undefined;
   const imagemPrincipal = dados?.evidencia
     ? {
         "@type": "ImageObject",
@@ -76,7 +80,29 @@ const ClusterProblemaPage = () => {
         creditText: dados.evidencia.creditText,
         representativeOfPage: true,
       }
-    : undefined;
+    : fotoReal
+      ? {
+          "@type": "ImageObject",
+          "@id": `${paginaUrl}#evidence-image`,
+          url: absoluteUrl(fotoReal.src),
+          contentUrl: absoluteUrl(fotoReal.src),
+          caption: fotoReal.alt,
+          description: fotoReal.alt,
+          creditText: `${fotoReal.autor} (${fotoReal.origem})`,
+          license: fotoReal.licencaUrl,
+          acquireLicensePage: fotoReal.fonte,
+          representativeOfPage: true,
+        }
+      : undefined;
+
+
+  // Nó próprio (top-level) da imagem: Rich Results e o gate de ImageObject
+  // esperam encontrá-lo fora do TechArticle.
+  useJsonLdSlot(
+    SCHEMA_SLOTS.imageObject,
+    imagemPrincipal ? { "@context": "https://schema.org", ...imagemPrincipal } : null,
+    SLOT_PRIORITY.page,
+  );
 
   useEffect(() => {
     if (dados) trackPageView(dados.path, dados.titulo);

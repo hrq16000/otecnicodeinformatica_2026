@@ -112,6 +112,15 @@ export function buildLocalBusinessSchema(opts: LocalBusinessOptions = {}) {
       itemListElement: opts.services.map((s, i) => ({
         "@type": "Offer",
         position: i + 1,
+        url: absoluteUrl(s.url ?? path),
+        priceCurrency: "BRL",
+        // Valor mínimo oficial (diagnóstico/reparo mínimo), exibido na página.
+        priceSpecification: {
+          "@type": "PriceSpecification",
+          priceCurrency: "BRL",
+          minPrice: 99.99,
+          valueAddedTaxIncluded: true,
+        },
         itemOffered: {
           "@type": "Service",
           name: s.name,

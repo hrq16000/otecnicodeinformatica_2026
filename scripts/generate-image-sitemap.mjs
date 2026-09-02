@@ -43,8 +43,13 @@ const isIndexable = (html) => {
 const distPathOf = (url) => {
   if (!url.startsWith("/")) return undefined;
   const clean = url.split("?")[0].split("#")[0];
-  const full = path.join(DIST, clean);
-  return existsSync(full) && statSync(full).isFile() ? full : undefined;
+  // TanStack Start emite os assets em dist/client; os snapshots SSR ficam na
+  // raiz do dist. Procuramos nos dois lugares.
+  for (const raiz of [DIST, path.join(DIST, "client")]) {
+    const full = path.join(raiz, clean);
+    if (existsSync(full) && statSync(full).isFile()) return full;
+  }
+  return undefined;
 };
 
 const entries = new Map(); // pageUrl -> { lastmod, images:Map(url->{caption}) }

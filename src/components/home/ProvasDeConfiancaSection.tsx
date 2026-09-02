@@ -115,6 +115,10 @@ export const ProvasDeConfiancaSection = ({ className = "" }: { className?: strin
             Condições completas em{" "}
             <a href="/precos-e-politicas" className="underline underline-offset-2 hover:text-foreground">
               termos, condições, valores e prazos
+            </a>{" "}
+            e{" "}
+            <a href="/gestor-responsavel" className="underline underline-offset-2 hover:text-foreground">
+              responsabilidade técnica do atendimento
             </a>
             .
           </p>

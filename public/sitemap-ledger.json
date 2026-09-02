@@ -1,10 +1,10 @@
 {
-  "geradoEm": "2026-09-02T05:55:01.738Z",
+  "geradoEm": "2026-09-02T07:09:24.915Z",
   "host": "otecnicodeinformatica.com.br",
   "modo": "generate",
   "sitemap": {
     "url": "https://otecnicodeinformatica.com.br/sitemap.xml",
-    "totalUrls": 233,
+    "totalUrls": 232,
     "googleSearchConsole": "NOT_REQUESTED",
     "indexNow": "NOT_REQUESTED"
   },
@@ -1211,6 +1211,78 @@
         "adicionadas": [],
         "removidas": [],
         "total": 233
+      },
+      "error": null
+    },
+    {
+      "id": "b4d00958-8a2a-48db-bc2d-3329401f61b2",
+      "action": "sync_approved",
+      "status": "OK",
+      "source": "cli",
+      "timestamp": "2026-09-02T05:59:08.479Z",
+      "details": {
+        "modo": "write",
+        "saida": "sitemap editorial: em dia (63 artigos indexáveis)"
+      },
+      "error": null
+    },
+    {
+      "id": "e7829610-b00b-4e1e-89f5-42d3a4471335",
+      "action": "generate_sitemaps",
+      "status": "OK",
+      "source": "cli",
+      "timestamp": "2026-09-02T05:59:08.609Z",
+      "details": {
+        "saida": "sitemap curado: index + 8 sub-sitemaps (233 urls)"
+      },
+      "error": null
+    },
+    {
+      "id": "9959f015-66b0-467e-a0dd-24395e95b707",
+      "action": "diff_no_regression",
+      "status": "OK",
+      "source": "cli",
+      "timestamp": "2026-09-02T05:59:08.627Z",
+      "details": {
+        "adicionadas": [],
+        "removidas": [],
+        "total": 233
+      },
+      "error": null
+    },
+    {
+      "id": "49cb907c-e5d7-472b-a823-79d6f67ce512",
+      "action": "sync_approved",
+      "status": "OK",
+      "source": "cli",
+      "timestamp": "2026-09-02T07:09:25.050Z",
+      "details": {
+        "modo": "write",
+        "saida": "sitemap editorial: em dia (63 artigos indexáveis)"
+      },
+      "error": null
+    },
+    {
+      "id": "07a9d46f-4141-4b06-a0a7-521aec34bb67",
+      "action": "generate_sitemaps",
+      "status": "OK",
+      "source": "cli",
+      "timestamp": "2026-09-02T07:09:25.151Z",
+      "details": {
+        "saida": "sitemap curado: index + 8 sub-sitemaps (232 urls)"
+      },
+      "error": null
+    },
+    {
+      "id": "5bb09a5a-2d54-4006-8817-33c928324138",
+      "action": "diff_no_regression",
+      "status": "OK",
+      "source": "cli",
+      "timestamp": "2026-09-02T07:09:25.165Z",
+      "details": {
+        "adicionadas": [],
+        "removidas": [],
+        "total": 232
       },
       "error": null
     }

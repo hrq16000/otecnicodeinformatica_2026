@@ -64,7 +64,7 @@ const TecnicoInformaticaCampoMagro = () => {
       <CityServiceSchema city={"Campo Magro"} citySameAs={"https://pt.wikipedia.org/wiki/Campo_Magro"} path={"/tecnico-informatica-campo-magro"} />
       <JsonLdSchema />
       <Header />
-      <Breadcrumbs items={[{ label: "Técnico em Campo Magro" }]} />
+      <Breadcrumbs items={[{ label: "Técnico de Informática", href: "/servicos" }, { label: "Campo Magro" }]} />
       <main>
         <PageHero title="Técnico de Informática em Campo Magro" subtitle="Assistência técnica profissional em Campo Magro e região. Atendimento a domicílio com garantia." ctaText="Falar com Técnico" />
         <BenefitsGrid benefits={benefits} title="Suporte Técnico em Campo Magro" subtitle="Atendimento para toda a cidade" />

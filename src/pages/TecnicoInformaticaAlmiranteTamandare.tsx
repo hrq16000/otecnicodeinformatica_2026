@@ -106,7 +106,7 @@ const TecnicoInformaticaAlmiranteTamandare = () => {
       <CityServiceSchema city={"Almirante Tamandaré"} citySameAs={"https://pt.wikipedia.org/wiki/Almirante_Tamandar%C3%A9"} path={"/tecnico-informatica-almirante-tamandare"} />
       <JsonLdSchema />
       <Header />
-      <Breadcrumbs items={[{ label: "Técnico em Almirante Tamandaré" }]} />
+      <Breadcrumbs items={[{ label: "Técnico de Informática", href: "/servicos" }, { label: "Almirante Tamandaré" }]} />
       <main>
         <PageHero
           title="Técnico de Informática em Almirante Tamandaré"
