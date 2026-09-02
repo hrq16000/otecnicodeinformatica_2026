@@ -82,8 +82,45 @@ function Kpi({ label, valor, hint }: { label: string; valor: string; hint?: stri
   );
 }
 
+interface ConteudoUrl {
+  path: string;
+  familiaTitulo: string;
+  title: string;
+  palavras: number;
+  fontesPrimarias: boolean;
+  limiteSeguranca: boolean;
+  jsonLd: string[];
+  ligacoes: Record<string, boolean>;
+  alertasTecnicos: string[];
+  alertasEditoriais: string[];
+  ssr: string;
+  status: string;
+}
+
+const conteudo = auditoriaConteudo as unknown as {
+  geradoEm: string;
+  total: number;
+  porStatus: Record<string, number>;
+  urls: ConteudoUrl[];
+};
+
 export default function AdminAfirmacoes() {
-  const [aba, setAba] = useState<"afirmacoes" | "urls">("afirmacoes");
+  const [aba, setAba] = useState<"afirmacoes" | "urls" | "conteudo">("afirmacoes");
+  const [revisoes, setRevisoes] = useState<Record<string, RevisaoRegistro>>({});
+
+  useEffect(() => {
+    let ativo = true;
+    void supabase
+      .from("trust_claim_reviews")
+      .select("claim_key,status_revisao,observacao,evidencia,revisado_em")
+      .then(({ data }) => {
+        if (!ativo || !data) return;
+        setRevisoes(Object.fromEntries((data as RevisaoRegistro[]).map((r) => [r.claim_key, r])));
+      });
+    return () => {
+      ativo = false;
+    };
+  }, []);
   const [busca, setBusca] = useState("");
   const [classe, setClasse] = useState<Classe | "todas">("todas");
   const [familia, setFamilia] = useState<string | "todas">("todas");
