@@ -1,0 +1,7199 @@
+{
+  "geradoEm": "2026-09-02T03:46:13.918Z",
+  "base": "https://otecnicodeinformatica.com.br",
+  "janela": {
+    "atual": {
+      "inicio": "2026-08-03",
+      "fim": "2026-08-30"
+    },
+    "anterior": {
+      "inicio": "2026-07-06",
+      "fim": "2026-08-02"
+    }
+  },
+  "fontes": {
+    "google": {
+      "disponivel": true,
+      "propriedade": "sc-domain:otecnicodeinformatica.com.br",
+      "motivo": null
+    },
+    "bing": {
+      "disponivel": false,
+      "motivo": "BING_WEBMASTER_API_KEY ausente — métricas do Bing ficam UNKNOWN.",
+      "crawl": null,
+      "totais": null
+    }
+  },
+  "cobertura": {
+    "urlsCuradas": 233,
+    "inspecionadas": 25,
+    "indexadas": 14,
+    "percentualInspecionado": 10.7,
+    "percentualIndexadoEntreInspecionadas": 56,
+    "comImpressao": 91,
+    "rastreadasNaoIndexadas": []
+  },
+  "totaisGoogle": {
+    "impressoes": 741,
+    "cliques": 0,
+    "deltaImpressoes": 741,
+    "deltaCliques": 0
+  },
+  "segmentos": [
+    {
+      "nome": "artigo",
+      "urls": 64,
+      "impressoes": 430,
+      "cliques": 0,
+      "deltaImpressoes": 430,
+      "comImpressao": 37,
+      "indexadas": 0,
+      "inspecionadas": 0,
+      "consultas": [
+        {
+          "consulta": "informática",
+          "impressoes": 24
+        },
+        {
+          "consulta": "informatica",
+          "impressoes": 16
+        },
+        {
+          "consulta": "conhecimento basico informatica",
+          "impressoes": 9
+        },
+        {
+          "consulta": "notebook superaquecendo",
+          "impressoes": 4
+        },
+        {
+          "consulta": "informatica basica",
+          "impressoes": 4
+        },
+        {
+          "consulta": "informatica basica conteudo",
+          "impressoes": 4
+        },
+        {
+          "consulta": "computador nao reconhece hd",
+          "impressoes": 4
+        },
+        {
+          "consulta": "pc não reconhece hd",
+          "impressoes": 4
+        },
+        {
+          "consulta": "como trocar pasta termica",
+          "impressoes": 3
+        },
+        {
+          "consulta": "o que significa a palavra informatica",
+          "impressoes": 3
+        }
+      ]
+    },
+    {
+      "nome": "servico",
+      "urls": 46,
+      "impressoes": 121,
+      "cliques": 0,
+      "deltaImpressoes": 121,
+      "comImpressao": 19,
+      "indexadas": 1,
+      "inspecionadas": 1,
+      "consultas": [
+        {
+          "consulta": "assistencia tecnica notebook curitiba",
+          "impressoes": 6
+        },
+        {
+          "consulta": "suporte técnico empresarial curitiba",
+          "impressoes": 6
+        },
+        {
+          "consulta": "suporte técnico para empresas curitiba",
+          "impressoes": 6
+        },
+        {
+          "consulta": "conserto de notebook curitiba",
+          "impressoes": 5
+        },
+        {
+          "consulta": "suporte ti empresarial curitiba",
+          "impressoes": 5
+        },
+        {
+          "consulta": "help desk terceirizado curitiba",
+          "impressoes": 4
+        },
+        {
+          "consulta": "conserto de tvs",
+          "impressoes": 4
+        },
+        {
+          "consulta": "manutenção de computadores empresa curitiba",
+          "impressoes": 3
+        },
+        {
+          "consulta": "conserto de televisores",
+          "impressoes": 3
+        },
+        {
+          "consulta": "conserto tv lcd",
+          "impressoes": 3
+        }
+      ]
+    },
+    {
+      "nome": "problema",
+      "urls": 16,
+      "impressoes": 76,
+      "cliques": 0,
+      "deltaImpressoes": 76,
+      "comImpressao": 9,
+      "indexadas": 0,
+      "inspecionadas": 0,
+      "consultas": [
+        {
+          "consulta": "computador desligando sozinho",
+          "impressoes": 6
+        },
+        {
+          "consulta": "pc desligando sozinho",
+          "impressoes": 4
+        },
+        {
+          "consulta": "computador desliga sozinho",
+          "impressoes": 3
+        },
+        {
+          "consulta": "computador desligou sozinho",
+          "impressoes": 2
+        },
+        {
+          "consulta": "meu pc desliga sozinho",
+          "impressoes": 2
+        },
+        {
+          "consulta": "pc desliga sozinho",
+          "impressoes": 2
+        },
+        {
+          "consulta": "pc desligando sozinho não é temperatura",
+          "impressoes": 2
+        },
+        {
+          "consulta": "computador desligando",
+          "impressoes": 1
+        },
+        {
+          "consulta": "computador desligando sozinho o que pode ser",
+          "impressoes": 1
+        },
+        {
+          "consulta": "meu pc esta desligando sozinho",
+          "impressoes": 1
+        }
+      ]
+    },
+    {
+      "nome": "pilar",
+      "urls": 20,
+      "impressoes": 63,
+      "cliques": 0,
+      "deltaImpressoes": 63,
+      "comImpressao": 8,
+      "indexadas": 12,
+      "inspecionadas": 20,
+      "consultas": [
+        {
+          "consulta": "assistência técnica são josé dos pinhais",
+          "impressoes": 4
+        },
+        {
+          "consulta": "suporte ti empresarial curitiba",
+          "impressoes": 2
+        },
+        {
+          "consulta": "assistencia técnica",
+          "impressoes": 1
+        },
+        {
+          "consulta": "assistência técnica centro",
+          "impressoes": 1
+        },
+        {
+          "consulta": "o",
+          "impressoes": 1
+        },
+        {
+          "consulta": "técnico",
+          "impressoes": 1
+        },
+        {
+          "consulta": "técnico de informática",
+          "impressoes": 1
+        },
+        {
+          "consulta": "técnico ti",
+          "impressoes": 1
+        },
+        {
+          "consulta": "informatica avançada",
+          "impressoes": 1
+        },
+        {
+          "consulta": "diagnóstico de ti empresa curitiba",
+          "impressoes": 1
+        }
+      ]
+    },
+    {
+      "nome": "bairro",
+      "urls": 22,
+      "impressoes": 32,
+      "cliques": 0,
+      "deltaImpressoes": 32,
+      "comImpressao": 12,
+      "indexadas": 1,
+      "inspecionadas": 1,
+      "consultas": [
+        {
+          "consulta": "informatica cic",
+          "impressoes": 1
+        }
+      ]
+    },
+    {
+      "nome": "cidade",
+      "urls": 6,
+      "impressoes": 9,
+      "cliques": 0,
+      "deltaImpressoes": 9,
+      "comImpressao": 3,
+      "indexadas": 0,
+      "inspecionadas": 0,
+      "consultas": []
+    },
+    {
+      "nome": "solucao",
+      "urls": 6,
+      "impressoes": 9,
+      "cliques": 0,
+      "deltaImpressoes": 9,
+      "comImpressao": 2,
+      "indexadas": 0,
+      "inspecionadas": 0,
+      "consultas": [
+        {
+          "consulta": "recuperação de hd",
+          "impressoes": 4
+        },
+        {
+          "consulta": "recuperação de dados hd",
+          "impressoes": 3
+        },
+        {
+          "consulta": "backup computadores",
+          "impressoes": 1
+        },
+        {
+          "consulta": "recuperacao de dados",
+          "impressoes": 1
+        }
+      ]
+    },
+    {
+      "nome": "equipamento",
+      "urls": 6,
+      "impressoes": 1,
+      "cliques": 0,
+      "deltaImpressoes": 1,
+      "comImpressao": 1,
+      "indexadas": 0,
+      "inspecionadas": 1,
+      "consultas": [
+        {
+          "consulta": "roteador caindo sinal",
+          "impressoes": 1
+        }
+      ]
+    },
+    {
+      "nome": "guia",
+      "urls": 11,
+      "impressoes": 0,
+      "cliques": 0,
+      "deltaImpressoes": 0,
+      "comImpressao": 0,
+      "indexadas": 0,
+      "inspecionadas": 2,
+      "consultas": []
+    },
+    {
+      "nome": "biblioteca",
+      "urls": 36,
+      "impressoes": 0,
+      "cliques": 0,
+      "deltaImpressoes": 0,
+      "comImpressao": 0,
+      "indexadas": 0,
+      "inspecionadas": 0,
+      "consultas": []
+    }
+  ],
+  "consultasTopGoogle": [
+    {
+      "consulta": "area de informatica",
+      "impressoes": 1,
+      "cliques": 0,
+      "posicao": 60
+    },
+    {
+      "consulta": "arrumar tv",
+      "impressoes": 1,
+      "cliques": 0,
+      "posicao": 73
+    },
+    {
+      "consulta": "assistencia tecnica hp curitiba",
+      "impressoes": 2,
+      "cliques": 0,
+      "posicao": 77.5
+    },
+    {
+      "consulta": "assistencia tecnica notebook curitiba",
+      "impressoes": 6,
+      "cliques": 0,
+      "posicao": 87.3
+    },
+    {
+      "consulta": "assistencia técnica",
+      "impressoes": 1,
+      "cliques": 0,
+      "posicao": 103
+    },
+    {
+      "consulta": "assistência impressora",
+      "impressoes": 1,
+      "cliques": 0,
+      "posicao": 100
+    },
+    {
+      "consulta": "assistência técnica centro",
+      "impressoes": 1,
+      "cliques": 0,
+      "posicao": 13
+    },
+    {
+      "consulta": "assistência técnica de informática para empresas",
+      "impressoes": 1,
+      "cliques": 0,
+      "posicao": 78
+    },
+    {
+      "consulta": "assistência técnica de ti",
+      "impressoes": 1,
+      "cliques": 0,
+      "posicao": 85
+    },
+    {
+      "consulta": "assistência técnica domiciliar",
+      "impressoes": 2,
+      "cliques": 0,
+      "posicao": 87.5
+    },
+    {
+      "consulta": "assistência técnica impressora",
+      "impressoes": 2,
+      "cliques": 0,
+      "posicao": 99
+    },
+    {
+      "consulta": "assistência técnica robo aspirador perto de mim",
+      "impressoes": 1,
+      "cliques": 0,
+      "posicao": 9
+    },
+    {
+      "consulta": "assistência técnica são josé dos pinhais",
+      "impressoes": 4,
+      "cliques": 0,
+      "posicao": 19.3
+    },
+    {
+      "consulta": "audio.exe",
+      "impressoes": 1,
+      "cliques": 0,
+      "posicao": 38
+    },
+    {
+      "consulta": "backup computadores",
+      "impressoes": 1,
+      "cliques": 0,
+      "posicao": 71
+    },
+    {
+      "consulta": "bios corrompida",
+      "impressoes": 1,
+      "cliques": 0,
+      "posicao": 46
+    },
+    {
+      "consulta": "como aprender informática do zero",
+      "impressoes": 1,
+      "cliques": 0,
+      "posicao": 42
+    },
+    {
+      "consulta": "como configurar o wi fi",
+      "impressoes": 1,
+      "cliques": 0,
+      "posicao": 45
+    },
+    {
+      "consulta": "como entrar na bios com o pc ligado",
+      "impressoes": 1,
+      "cliques": 0,
+      "posicao": 52
+    },
+    {
+      "consulta": "como saber se o notebook esta com virus",
+      "impressoes": 1,
+      "cliques": 0,
+      "posicao": 40
+    },
+    {
+      "consulta": "como tirar impressora do offline",
+      "impressoes": 1,
+      "cliques": 0,
+      "posicao": 64
+    },
+    {
+      "consulta": "como trocar a pasta termica do notebook",
+      "impressoes": 2,
+      "cliques": 0,
+      "posicao": 21.5
+    },
+    {
+      "consulta": "como trocar a tela do notebook",
+      "impressoes": 1,
+      "cliques": 0,
+      "posicao": 34
+    },
+    {
+      "consulta": "como trocar pasta termica",
+      "impressoes": 3,
+      "cliques": 0,
+      "posicao": 21.3
+    },
+    {
+      "consulta": "como trocar tela de notebook",
+      "impressoes": 1,
+      "cliques": 0,
+      "posicao": 37
+    },
+    {
+      "consulta": "como usar o roteador",
+      "impressoes": 1,
+      "cliques": 0,
+      "posicao": 48
+    },
+    {
+      "consulta": "como usar roteador",
+      "impressoes": 1,
+      "cliques": 0,
+      "posicao": 44
+    },
+    {
+      "consulta": "como usar um roteador",
+      "impressoes": 1,
+      "cliques": 0,
+      "posicao": 47
+    },
+    {
+      "consulta": "como ver quantas pessoas estão conectadas no wifi",
+      "impressoes": 1,
+      "cliques": 0,
+      "posicao": 67
+    },
+    {
+      "consulta": "como ver quem está usando meu wifi",
+      "impressoes": 1,
+      "cliques": 0,
+      "posicao": 68
+    },
+    {
+      "consulta": "computador desliga sozinho",
+      "impressoes": 3,
+      "cliques": 0,
+      "posicao": 25.3
+    },
+    {
+      "consulta": "computador desligando",
+      "impressoes": 1,
+      "cliques": 0,
+      "posicao": 33
+    },
+    {
+      "consulta": "computador desligando sozinho",
+      "impressoes": 6,
+      "cliques": 0,
+      "posicao": 24.3
+    },
+    {
+      "consulta": "computador desligando sozinho o que pode ser",
+      "impressoes": 1,
+      "cliques": 0,
+      "posicao": 37
+    },
+    {
+      "consulta": "computador desligou sozinho",
+      "impressoes": 2,
+      "cliques": 0,
+      "posicao": 29
+    },
+    {
+      "consulta": "computador nao reconhece hd",
+      "impressoes": 4,
+      "cliques": 0,
+      "posicao": 30
+    },
+    {
+      "consulta": "concerto de impressoras",
+      "impressoes": 1,
+      "cliques": 0,
+      "posicao": 78
+    },
+    {
+      "consulta": "configuração de wi-fi",
+      "impressoes": 1,
+      "cliques": 0,
+      "posicao": 49
+    },
+    {
+      "consulta": "configuração do modem",
+      "impressoes": 1,
+      "cliques": 0,
+      "posicao": 67
+    },
+    {
+      "consulta": "conhecimento basico de informatica",
+      "impressoes": 1,
+      "cliques": 0,
+      "posicao": 53
+    },
+    {
+      "consulta": "conhecimento basico em informatica",
+      "impressoes": 1,
+      "cliques": 0,
+      "posicao": 40
+    },
+    {
+      "consulta": "conhecimento basico informatica",
+      "impressoes": 9,
+      "cliques": 0,
+      "posicao": 50.3
+    },
+    {
+      "consulta": "conhecimentos basicos de informatica",
+      "impressoes": 3,
+      "cliques": 0,
+      "posicao": 50.3
+    },
+    {
+      "consulta": "conserta-se televisores",
+      "impressoes": 1,
+      "cliques": 0,
+      "posicao": 72
+    },
+    {
+      "consulta": "conserto de hd",
+      "impressoes": 1,
+      "cliques": 0,
+      "posicao": 49
+    },
+    {
+      "consulta": "conserto de impressora",
+      "impressoes": 4,
+      "cliques": 0,
+      "posicao": 98.3
+    },
+    {
+      "consulta": "conserto de monitor lcd",
+      "impressoes": 1,
+      "cliques": 0,
+      "posicao": 74
+    },
+    {
+      "consulta": "conserto de notebook",
+      "impressoes": 1,
+      "cliques": 0,
+      "posicao": 88
+    },
+    {
+      "consulta": "conserto de notebook curitiba",
+      "impressoes": 5,
+      "cliques": 0,
+      "posicao": 77.4
+    },
+    {
+      "consulta": "conserto de smart tv",
+      "impressoes": 1,
+      "cliques": 0,
+      "posicao": 73
+    }
+  ],
+  "consultasTopBing": [],
+  "paginasTopBing": [],
+  "alertas": [
+    {
+      "nivel": "config",
+      "mensagem": "BING_WEBMASTER_API_KEY ausente — métricas do Bing ficam UNKNOWN."
+    },
+    {
+      "nivel": "atencao",
+      "mensagem": "142 URL(s) curadas sem nenhuma impressão em 28 dias."
+    }
+  ],
+  "urls": [
+    {
+      "path": "/",
+      "sitemap": "sitemap-main.xml",
+      "segmento": "pilar",
+      "google": {
+        "disponivel": true,
+        "impressoes": 26,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": 11.4,
+        "deltaImpressoes": 26,
+        "deltaCliques": 0,
+        "cobertura": "Submitted and indexed",
+        "verdict": "PASS",
+        "ultimoRastreio": "2026-08-28T15:01:26Z",
+        "canonicalGoogle": "https://otecnicodeinformatica.com.br/"
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": [
+        {
+          "consulta": "assistência técnica são josé dos pinhais",
+          "impressoes": 3,
+          "cliques": 0,
+          "posicao": 20
+        },
+        {
+          "consulta": "assistencia técnica",
+          "impressoes": 1,
+          "cliques": 0,
+          "posicao": 103
+        },
+        {
+          "consulta": "assistência técnica centro",
+          "impressoes": 1,
+          "cliques": 0,
+          "posicao": 13
+        },
+        {
+          "consulta": "o",
+          "impressoes": 1,
+          "cliques": 0,
+          "posicao": 3
+        },
+        {
+          "consulta": "técnico",
+          "impressoes": 1,
+          "cliques": 0,
+          "posicao": 5
+        },
+        {
+          "consulta": "técnico de informática",
+          "impressoes": 1,
+          "cliques": 0,
+          "posicao": 10
+        },
+        {
+          "consulta": "técnico ti",
+          "impressoes": 1,
+          "cliques": 0,
+          "posicao": 6
+        },
+        {
+          "consulta": "assistência técnica são josé dos pinhais",
+          "impressoes": 1,
+          "cliques": 0,
+          "posicao": 17
+        },
+        {
+          "consulta": "informatica avançada",
+          "impressoes": 1,
+          "cliques": 0,
+          "posicao": 6
+        }
+      ]
+    },
+    {
+      "path": "/servicos",
+      "sitemap": "sitemap-main.xml",
+      "segmento": "servico",
+      "google": {
+        "disponivel": true,
+        "impressoes": 3,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": 5,
+        "deltaImpressoes": 3,
+        "deltaCliques": 0,
+        "cobertura": "Submitted and indexed",
+        "verdict": "PASS",
+        "ultimoRastreio": "2026-08-14T17:17:47Z",
+        "canonicalGoogle": "https://otecnicodeinformatica.com.br/servicos"
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": []
+    },
+    {
+      "path": "/como-funciona",
+      "sitemap": "sitemap-main.xml",
+      "segmento": "pilar",
+      "google": {
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": null,
+        "deltaImpressoes": 0,
+        "deltaCliques": 0,
+        "cobertura": "Submitted and indexed",
+        "verdict": "PASS",
+        "ultimoRastreio": "2026-08-14T20:10:50Z",
+        "canonicalGoogle": "https://otecnicodeinformatica.com.br/como-funciona"
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": []
+    },
+    {
+      "path": "/precos-e-politicas",
+      "sitemap": "sitemap-main.xml",
+      "segmento": "pilar",
+      "google": {
+        "disponivel": true,
+        "impressoes": 16,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": 8.1,
+        "deltaImpressoes": 16,
+        "deltaCliques": 0,
+        "cobertura": "Submitted and indexed",
+        "verdict": "PASS",
+        "ultimoRastreio": "2026-08-15T06:55:21Z",
+        "canonicalGoogle": "https://otecnicodeinformatica.com.br/precos-e-politicas"
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": []
+    },
+    {
+      "path": "/sobre",
+      "sitemap": "sitemap-main.xml",
+      "segmento": "pilar",
+      "google": {
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": null,
+        "deltaImpressoes": 0,
+        "deltaCliques": 0,
+        "cobertura": "Submitted and indexed",
+        "verdict": "PASS",
+        "ultimoRastreio": "2026-08-15T06:57:35Z",
+        "canonicalGoogle": "https://otecnicodeinformatica.com.br/sobre"
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": []
+    },
+    {
+      "path": "/contato",
+      "sitemap": "sitemap-main.xml",
+      "segmento": "pilar",
+      "google": {
+        "disponivel": true,
+        "impressoes": 7,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": 3.4,
+        "deltaImpressoes": 7,
+        "deltaCliques": 0,
+        "cobertura": "Submitted and indexed",
+        "verdict": "PASS",
+        "ultimoRastreio": "2026-08-13T18:53:05Z",
+        "canonicalGoogle": "https://otecnicodeinformatica.com.br/contato"
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": []
+    },
+    {
+      "path": "/faq",
+      "sitemap": "sitemap-main.xml",
+      "segmento": "pilar",
+      "google": {
+        "disponivel": true,
+        "impressoes": 4,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": 5.8,
+        "deltaImpressoes": 4,
+        "deltaCliques": 0,
+        "cobertura": "Submitted and indexed",
+        "verdict": "PASS",
+        "ultimoRastreio": "2026-08-31T04:14:59Z",
+        "canonicalGoogle": "https://otecnicodeinformatica.com.br/faq"
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": []
+    },
+    {
+      "path": "/anuncie",
+      "sitemap": "sitemap-main.xml",
+      "segmento": "pilar",
+      "google": {
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": null,
+        "deltaImpressoes": 0,
+        "deltaCliques": 0,
+        "cobertura": "Submitted and indexed",
+        "verdict": "PASS",
+        "ultimoRastreio": "2026-08-14T11:44:37Z",
+        "canonicalGoogle": "https://otecnicodeinformatica.com.br/anuncie"
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": []
+    },
+    {
+      "path": "/atendimento-domicilio",
+      "sitemap": "sitemap-main.xml",
+      "segmento": "pilar",
+      "google": {
+        "disponivel": true,
+        "impressoes": 2,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": 7,
+        "deltaImpressoes": 2,
+        "deltaCliques": 0,
+        "cobertura": "Submitted and indexed",
+        "verdict": "PASS",
+        "ultimoRastreio": "2026-08-12T08:25:41Z",
+        "canonicalGoogle": "https://otecnicodeinformatica.com.br/atendimento-domicilio"
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": []
+    },
+    {
+      "path": "/atendimento-remoto",
+      "sitemap": "sitemap-main.xml",
+      "segmento": "pilar",
+      "google": {
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": null,
+        "deltaImpressoes": 0,
+        "deltaCliques": 0,
+        "cobertura": "Submitted and indexed",
+        "verdict": "PASS",
+        "ultimoRastreio": "2026-08-14T12:09:18Z",
+        "canonicalGoogle": "https://otecnicodeinformatica.com.br/atendimento-remoto"
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": []
+    },
+    {
+      "path": "/equipamentos-atendidos",
+      "sitemap": "sitemap-main.xml",
+      "segmento": "equipamento",
+      "google": {
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": null,
+        "deltaImpressoes": 0,
+        "deltaCliques": 0,
+        "cobertura": "URL is unknown to Google",
+        "verdict": "NEUTRAL",
+        "ultimoRastreio": null,
+        "canonicalGoogle": null
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": []
+    },
+    {
+      "path": "/areas-atendidas",
+      "sitemap": "sitemap-main.xml",
+      "segmento": "pilar",
+      "google": {
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": null,
+        "deltaImpressoes": 0,
+        "deltaCliques": 0,
+        "cobertura": "URL is unknown to Google",
+        "verdict": "NEUTRAL",
+        "ultimoRastreio": null,
+        "canonicalGoogle": null
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": []
+    },
+    {
+      "path": "/diagnostico-tecnico",
+      "sitemap": "sitemap-main.xml",
+      "segmento": "pilar",
+      "google": {
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": null,
+        "deltaImpressoes": 0,
+        "deltaCliques": 0,
+        "cobertura": "URL is unknown to Google",
+        "verdict": "NEUTRAL",
+        "ultimoRastreio": null,
+        "canonicalGoogle": null
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": []
+    },
+    {
+      "path": "/coleta-e-entrega",
+      "sitemap": "sitemap-main.xml",
+      "segmento": "pilar",
+      "google": {
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": null,
+        "deltaImpressoes": 0,
+        "deltaCliques": 0,
+        "cobertura": "URL is unknown to Google",
+        "verdict": "NEUTRAL",
+        "ultimoRastreio": null,
+        "canonicalGoogle": null
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": []
+    },
+    {
+      "path": "/quando-nao-compensa",
+      "sitemap": "sitemap-main.xml",
+      "segmento": "pilar",
+      "google": {
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": null,
+        "deltaImpressoes": 0,
+        "deltaCliques": 0,
+        "cobertura": "URL is unknown to Google",
+        "verdict": "NEUTRAL",
+        "ultimoRastreio": null,
+        "canonicalGoogle": null
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": []
+    },
+    {
+      "path": "/seguranca-dos-dados",
+      "sitemap": "sitemap-main.xml",
+      "segmento": "pilar",
+      "google": {
+        "disponivel": true,
+        "impressoes": 3,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": 3,
+        "deltaImpressoes": 3,
+        "deltaCliques": 0,
+        "cobertura": "Submitted and indexed",
+        "verdict": "PASS",
+        "ultimoRastreio": "2026-08-14T12:02:12Z",
+        "canonicalGoogle": "https://otecnicodeinformatica.com.br/seguranca-dos-dados"
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": []
+    },
+    {
+      "path": "/politica-de-pecas-do-cliente",
+      "sitemap": "sitemap-main.xml",
+      "segmento": "pilar",
+      "google": {
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": null,
+        "deltaImpressoes": 0,
+        "deltaCliques": 0,
+        "cobertura": "URL is unknown to Google",
+        "verdict": "NEUTRAL",
+        "ultimoRastreio": null,
+        "canonicalGoogle": null
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": []
+    },
+    {
+      "path": "/termos-e-condicoes",
+      "sitemap": "sitemap-main.xml",
+      "segmento": "pilar",
+      "google": {
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": null,
+        "deltaImpressoes": 0,
+        "deltaCliques": 0,
+        "cobertura": "URL is unknown to Google",
+        "verdict": "NEUTRAL",
+        "ultimoRastreio": null,
+        "canonicalGoogle": null
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": []
+    },
+    {
+      "path": "/empresa-de-ti-curitiba",
+      "sitemap": "sitemap-main.xml",
+      "segmento": "pilar",
+      "google": {
+        "disponivel": true,
+        "impressoes": 4,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": 81,
+        "deltaImpressoes": 4,
+        "deltaCliques": 0,
+        "cobertura": "Submitted and indexed",
+        "verdict": "PASS",
+        "ultimoRastreio": "2026-08-25T14:17:54Z",
+        "canonicalGoogle": "https://otecnicodeinformatica.com.br/empresa-de-ti-curitiba"
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": [
+        {
+          "consulta": "suporte ti empresarial curitiba",
+          "impressoes": 2,
+          "cliques": 0,
+          "posicao": 81
+        },
+        {
+          "consulta": "diagnóstico de ti empresa curitiba",
+          "impressoes": 1,
+          "cliques": 0,
+          "posicao": 80
+        },
+        {
+          "consulta": "manutenção informatica empresa curitiba",
+          "impressoes": 1,
+          "cliques": 0,
+          "posicao": 82
+        }
+      ]
+    },
+    {
+      "path": "/bairros",
+      "sitemap": "sitemap-main.xml",
+      "segmento": "bairro",
+      "google": {
+        "disponivel": true,
+        "impressoes": 1,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": 17,
+        "deltaImpressoes": 1,
+        "deltaCliques": 0,
+        "cobertura": "Submitted and indexed",
+        "verdict": "PASS",
+        "ultimoRastreio": "2026-08-25T13:36:07Z",
+        "canonicalGoogle": "https://otecnicodeinformatica.com.br/bairros"
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": []
+    },
+    {
+      "path": "/guia-tecnico-informatica",
+      "sitemap": "sitemap-main.xml",
+      "segmento": "pilar",
+      "google": {
+        "disponivel": true,
+        "impressoes": 1,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": 7,
+        "deltaImpressoes": 1,
+        "deltaCliques": 0,
+        "cobertura": "Submitted and indexed",
+        "verdict": "PASS",
+        "ultimoRastreio": "2026-08-13T18:35:22Z",
+        "canonicalGoogle": "https://otecnicodeinformatica.com.br/guia-tecnico-informatica"
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": []
+    },
+    {
+      "path": "/autoridade-tecnica",
+      "sitemap": "sitemap-main.xml",
+      "segmento": "pilar",
+      "google": {
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": null,
+        "deltaImpressoes": 0,
+        "deltaCliques": 0,
+        "cobertura": "URL is unknown to Google",
+        "verdict": "NEUTRAL",
+        "ultimoRastreio": null,
+        "canonicalGoogle": null
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": []
+    },
+    {
+      "path": "/assistencia-tecnica-curitiba",
+      "sitemap": "sitemap-main.xml",
+      "segmento": "pilar",
+      "google": {
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": null,
+        "deltaImpressoes": 0,
+        "deltaCliques": 0,
+        "cobertura": "URL is unknown to Google",
+        "verdict": "NEUTRAL",
+        "ultimoRastreio": null,
+        "canonicalGoogle": null
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": []
+    },
+    {
+      "path": "/decisoes",
+      "sitemap": "sitemap-main.xml",
+      "segmento": "guia",
+      "google": {
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": null,
+        "deltaImpressoes": 0,
+        "deltaCliques": 0,
+        "cobertura": "URL is unknown to Google",
+        "verdict": "NEUTRAL",
+        "ultimoRastreio": null,
+        "canonicalGoogle": null
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": []
+    },
+    {
+      "path": "/decisoes/formatar-ou-reparar",
+      "sitemap": "sitemap-main.xml",
+      "segmento": "guia",
+      "google": {
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": null,
+        "deltaImpressoes": 0,
+        "deltaCliques": 0,
+        "cobertura": "URL is unknown to Google",
+        "verdict": "NEUTRAL",
+        "ultimoRastreio": null,
+        "canonicalGoogle": null
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": []
+    },
+    {
+      "path": "/decisoes/ssd-ou-memoria-ram",
+      "sitemap": "sitemap-main.xml",
+      "segmento": "guia",
+      "google": {
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": null,
+        "deltaImpressoes": 0,
+        "deltaCliques": 0,
+        "cobertura": "UNKNOWN",
+        "verdict": "UNKNOWN",
+        "ultimoRastreio": null,
+        "canonicalGoogle": null
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": []
+    },
+    {
+      "path": "/decisoes/consertar-ou-substituir",
+      "sitemap": "sitemap-main.xml",
+      "segmento": "guia",
+      "google": {
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": null,
+        "deltaImpressoes": 0,
+        "deltaCliques": 0,
+        "cobertura": "UNKNOWN",
+        "verdict": "UNKNOWN",
+        "ultimoRastreio": null,
+        "canonicalGoogle": null
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": []
+    },
+    {
+      "path": "/decisoes/remoto-ou-presencial",
+      "sitemap": "sitemap-main.xml",
+      "segmento": "guia",
+      "google": {
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": null,
+        "deltaImpressoes": 0,
+        "deltaCliques": 0,
+        "cobertura": "UNKNOWN",
+        "verdict": "UNKNOWN",
+        "ultimoRastreio": null,
+        "canonicalGoogle": null
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": []
+    },
+    {
+      "path": "/decisoes/hd-com-ruido",
+      "sitemap": "sitemap-main.xml",
+      "segmento": "guia",
+      "google": {
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": null,
+        "deltaImpressoes": 0,
+        "deltaCliques": 0,
+        "cobertura": "UNKNOWN",
+        "verdict": "UNKNOWN",
+        "ultimoRastreio": null,
+        "canonicalGoogle": null
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": []
+    },
+    {
+      "path": "/decisoes/backup-antes-da-manutencao",
+      "sitemap": "sitemap-main.xml",
+      "segmento": "guia",
+      "google": {
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": null,
+        "deltaImpressoes": 0,
+        "deltaCliques": 0,
+        "cobertura": "UNKNOWN",
+        "verdict": "UNKNOWN",
+        "ultimoRastreio": null,
+        "canonicalGoogle": null
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": []
+    },
+    {
+      "path": "/decisoes/atualizar-para-windows-11",
+      "sitemap": "sitemap-main.xml",
+      "segmento": "guia",
+      "google": {
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": null,
+        "deltaImpressoes": 0,
+        "deltaCliques": 0,
+        "cobertura": "UNKNOWN",
+        "verdict": "UNKNOWN",
+        "ultimoRastreio": null,
+        "canonicalGoogle": null
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": []
+    },
+    {
+      "path": "/decisoes/nuvem-ou-hd-externo",
+      "sitemap": "sitemap-main.xml",
+      "segmento": "guia",
+      "google": {
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": null,
+        "deltaImpressoes": 0,
+        "deltaCliques": 0,
+        "cobertura": "UNKNOWN",
+        "verdict": "UNKNOWN",
+        "ultimoRastreio": null,
+        "canonicalGoogle": null
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": []
+    },
+    {
+      "path": "/decisoes/montar-ou-comprar-pronto",
+      "sitemap": "sitemap-main.xml",
+      "segmento": "guia",
+      "google": {
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": null,
+        "deltaImpressoes": 0,
+        "deltaCliques": 0,
+        "cobertura": "UNKNOWN",
+        "verdict": "UNKNOWN",
+        "ultimoRastreio": null,
+        "canonicalGoogle": null
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": []
+    },
+    {
+      "path": "/decisoes/trocar-componente-ou-reparar",
+      "sitemap": "sitemap-main.xml",
+      "segmento": "guia",
+      "google": {
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": null,
+        "deltaImpressoes": 0,
+        "deltaCliques": 0,
+        "cobertura": "UNKNOWN",
+        "verdict": "UNKNOWN",
+        "ultimoRastreio": null,
+        "canonicalGoogle": null
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": []
+    },
+    {
+      "path": "/glossario",
+      "sitemap": "sitemap-main.xml",
+      "segmento": "biblioteca",
+      "google": {
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": null,
+        "deltaImpressoes": 0,
+        "deltaCliques": 0,
+        "cobertura": "UNKNOWN",
+        "verdict": "UNKNOWN",
+        "ultimoRastreio": null,
+        "canonicalGoogle": null
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": []
+    },
+    {
+      "path": "/glossario/bsod",
+      "sitemap": "sitemap-main.xml",
+      "segmento": "biblioteca",
+      "google": {
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": null,
+        "deltaImpressoes": 0,
+        "deltaCliques": 0,
+        "cobertura": "UNKNOWN",
+        "verdict": "UNKNOWN",
+        "ultimoRastreio": null,
+        "canonicalGoogle": null
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": []
+    },
+    {
+      "path": "/glossario/uefi",
+      "sitemap": "sitemap-main.xml",
+      "segmento": "biblioteca",
+      "google": {
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": null,
+        "deltaImpressoes": 0,
+        "deltaCliques": 0,
+        "cobertura": "UNKNOWN",
+        "verdict": "UNKNOWN",
+        "ultimoRastreio": null,
+        "canonicalGoogle": null
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": []
+    },
+    {
+      "path": "/glossario/bios",
+      "sitemap": "sitemap-main.xml",
+      "segmento": "biblioteca",
+      "google": {
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": null,
+        "deltaImpressoes": 0,
+        "deltaCliques": 0,
+        "cobertura": "UNKNOWN",
+        "verdict": "UNKNOWN",
+        "ultimoRastreio": null,
+        "canonicalGoogle": null
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": []
+    },
+    {
+      "path": "/glossario/imagem-do-sistema",
+      "sitemap": "sitemap-main.xml",
+      "segmento": "biblioteca",
+      "google": {
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": null,
+        "deltaImpressoes": 0,
+        "deltaCliques": 0,
+        "cobertura": "UNKNOWN",
+        "verdict": "UNKNOWN",
+        "ultimoRastreio": null,
+        "canonicalGoogle": null
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": []
+    },
+    {
+      "path": "/glossario/smart",
+      "sitemap": "sitemap-main.xml",
+      "segmento": "biblioteca",
+      "google": {
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": null,
+        "deltaImpressoes": 0,
+        "deltaCliques": 0,
+        "cobertura": "UNKNOWN",
+        "verdict": "UNKNOWN",
+        "ultimoRastreio": null,
+        "canonicalGoogle": null
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": []
+    },
+    {
+      "path": "/glossario/ssd",
+      "sitemap": "sitemap-main.xml",
+      "segmento": "biblioteca",
+      "google": {
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": null,
+        "deltaImpressoes": 0,
+        "deltaCliques": 0,
+        "cobertura": "UNKNOWN",
+        "verdict": "UNKNOWN",
+        "ultimoRastreio": null,
+        "canonicalGoogle": null
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": []
+    },
+    {
+      "path": "/glossario/nvme",
+      "sitemap": "sitemap-main.xml",
+      "segmento": "biblioteca",
+      "google": {
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": null,
+        "deltaImpressoes": 0,
+        "deltaCliques": 0,
+        "cobertura": "UNKNOWN",
+        "verdict": "UNKNOWN",
+        "ultimoRastreio": null,
+        "canonicalGoogle": null
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": []
+    },
+    {
+      "path": "/glossario/backup-incremental",
+      "sitemap": "sitemap-main.xml",
+      "segmento": "biblioteca",
+      "google": {
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": null,
+        "deltaImpressoes": 0,
+        "deltaCliques": 0,
+        "cobertura": "UNKNOWN",
+        "verdict": "UNKNOWN",
+        "ultimoRastreio": null,
+        "canonicalGoogle": null
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": []
+    },
+    {
+      "path": "/glossario/recuperacao-de-dados",
+      "sitemap": "sitemap-main.xml",
+      "segmento": "biblioteca",
+      "google": {
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": null,
+        "deltaImpressoes": 0,
+        "deltaCliques": 0,
+        "cobertura": "UNKNOWN",
+        "verdict": "UNKNOWN",
+        "ultimoRastreio": null,
+        "canonicalGoogle": null
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": []
+    },
+    {
+      "path": "/glossario/tpm",
+      "sitemap": "sitemap-main.xml",
+      "segmento": "biblioteca",
+      "google": {
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": null,
+        "deltaImpressoes": 0,
+        "deltaCliques": 0,
+        "cobertura": "UNKNOWN",
+        "verdict": "UNKNOWN",
+        "ultimoRastreio": null,
+        "canonicalGoogle": null
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": []
+    },
+    {
+      "path": "/glossario/bitlocker",
+      "sitemap": "sitemap-main.xml",
+      "segmento": "biblioteca",
+      "google": {
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": null,
+        "deltaImpressoes": 0,
+        "deltaCliques": 0,
+        "cobertura": "UNKNOWN",
+        "verdict": "UNKNOWN",
+        "ultimoRastreio": null,
+        "canonicalGoogle": null
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": []
+    },
+    {
+      "path": "/glossario/dns",
+      "sitemap": "sitemap-main.xml",
+      "segmento": "biblioteca",
+      "google": {
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": null,
+        "deltaImpressoes": 0,
+        "deltaCliques": 0,
+        "cobertura": "UNKNOWN",
+        "verdict": "UNKNOWN",
+        "ultimoRastreio": null,
+        "canonicalGoogle": null
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": []
+    },
+    {
+      "path": "/glossario/nat",
+      "sitemap": "sitemap-main.xml",
+      "segmento": "biblioteca",
+      "google": {
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": null,
+        "deltaImpressoes": 0,
+        "deltaCliques": 0,
+        "cobertura": "UNKNOWN",
+        "verdict": "UNKNOWN",
+        "ultimoRastreio": null,
+        "canonicalGoogle": null
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": []
+    },
+    {
+      "path": "/glossario/memoria-ram",
+      "sitemap": "sitemap-main.xml",
+      "segmento": "biblioteca",
+      "google": {
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": null,
+        "deltaImpressoes": 0,
+        "deltaCliques": 0,
+        "cobertura": "UNKNOWN",
+        "verdict": "UNKNOWN",
+        "ultimoRastreio": null,
+        "canonicalGoogle": null
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": []
+    },
+    {
+      "path": "/glossario/thermal-throttling",
+      "sitemap": "sitemap-main.xml",
+      "segmento": "biblioteca",
+      "google": {
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": null,
+        "deltaImpressoes": 0,
+        "deltaCliques": 0,
+        "cobertura": "UNKNOWN",
+        "verdict": "UNKNOWN",
+        "ultimoRastreio": null,
+        "canonicalGoogle": null
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": []
+    },
+    {
+      "path": "/glossario/secure-boot",
+      "sitemap": "sitemap-main.xml",
+      "segmento": "biblioteca",
+      "google": {
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": null,
+        "deltaImpressoes": 0,
+        "deltaCliques": 0,
+        "cobertura": "UNKNOWN",
+        "verdict": "UNKNOWN",
+        "ultimoRastreio": null,
+        "canonicalGoogle": null
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": []
+    },
+    {
+      "path": "/glossario/driver",
+      "sitemap": "sitemap-main.xml",
+      "segmento": "biblioteca",
+      "google": {
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": null,
+        "deltaImpressoes": 0,
+        "deltaCliques": 0,
+        "cobertura": "UNKNOWN",
+        "verdict": "UNKNOWN",
+        "ultimoRastreio": null,
+        "canonicalGoogle": null
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": []
+    },
+    {
+      "path": "/glossario/particao",
+      "sitemap": "sitemap-main.xml",
+      "segmento": "biblioteca",
+      "google": {
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": null,
+        "deltaImpressoes": 0,
+        "deltaCliques": 0,
+        "cobertura": "UNKNOWN",
+        "verdict": "UNKNOWN",
+        "ultimoRastreio": null,
+        "canonicalGoogle": null
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": []
+    },
+    {
+      "path": "/entidades",
+      "sitemap": "sitemap-main.xml",
+      "segmento": "biblioteca",
+      "google": {
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": null,
+        "deltaImpressoes": 0,
+        "deltaCliques": 0,
+        "cobertura": "UNKNOWN",
+        "verdict": "UNKNOWN",
+        "ultimoRastreio": null,
+        "canonicalGoogle": null
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": []
+    },
+    {
+      "path": "/entidades/windows",
+      "sitemap": "sitemap-main.xml",
+      "segmento": "biblioteca",
+      "google": {
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": null,
+        "deltaImpressoes": 0,
+        "deltaCliques": 0,
+        "cobertura": "UNKNOWN",
+        "verdict": "UNKNOWN",
+        "ultimoRastreio": null,
+        "canonicalGoogle": null
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": []
+    },
+    {
+      "path": "/entidades/ssd",
+      "sitemap": "sitemap-main.xml",
+      "segmento": "biblioteca",
+      "google": {
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": null,
+        "deltaImpressoes": 0,
+        "deltaCliques": 0,
+        "cobertura": "UNKNOWN",
+        "verdict": "UNKNOWN",
+        "ultimoRastreio": null,
+        "canonicalGoogle": null
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": []
+    },
+    {
+      "path": "/entidades/memoria-ram",
+      "sitemap": "sitemap-main.xml",
+      "segmento": "biblioteca",
+      "google": {
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": null,
+        "deltaImpressoes": 0,
+        "deltaCliques": 0,
+        "cobertura": "UNKNOWN",
+        "verdict": "UNKNOWN",
+        "ultimoRastreio": null,
+        "canonicalGoogle": null
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": []
+    },
+    {
+      "path": "/entidades/wifi",
+      "sitemap": "sitemap-main.xml",
+      "segmento": "biblioteca",
+      "google": {
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": null,
+        "deltaImpressoes": 0,
+        "deltaCliques": 0,
+        "cobertura": "UNKNOWN",
+        "verdict": "UNKNOWN",
+        "ultimoRastreio": null,
+        "canonicalGoogle": null
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": []
+    },
+    {
+      "path": "/entidades/backup",
+      "sitemap": "sitemap-main.xml",
+      "segmento": "biblioteca",
+      "google": {
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": null,
+        "deltaImpressoes": 0,
+        "deltaCliques": 0,
+        "cobertura": "UNKNOWN",
+        "verdict": "UNKNOWN",
+        "ultimoRastreio": null,
+        "canonicalGoogle": null
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": []
+    },
+    {
+      "path": "/entidades/erro-0xc0000428",
+      "sitemap": "sitemap-main.xml",
+      "segmento": "biblioteca",
+      "google": {
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": null,
+        "deltaImpressoes": 0,
+        "deltaCliques": 0,
+        "cobertura": "UNKNOWN",
+        "verdict": "UNKNOWN",
+        "ultimoRastreio": null,
+        "canonicalGoogle": null
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": []
+    },
+    {
+      "path": "/entidades/computador-lento",
+      "sitemap": "sitemap-main.xml",
+      "segmento": "biblioteca",
+      "google": {
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": null,
+        "deltaImpressoes": 0,
+        "deltaCliques": 0,
+        "cobertura": "UNKNOWN",
+        "verdict": "UNKNOWN",
+        "ultimoRastreio": null,
+        "canonicalGoogle": null
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": []
+    },
+    {
+      "path": "/entidades/cidade",
+      "sitemap": "sitemap-main.xml",
+      "segmento": "biblioteca",
+      "google": {
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": null,
+        "deltaImpressoes": 0,
+        "deltaCliques": 0,
+        "cobertura": "UNKNOWN",
+        "verdict": "UNKNOWN",
+        "ultimoRastreio": null,
+        "canonicalGoogle": null
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": []
+    },
+    {
+      "path": "/entidades/servico",
+      "sitemap": "sitemap-main.xml",
+      "segmento": "biblioteca",
+      "google": {
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": null,
+        "deltaImpressoes": 0,
+        "deltaCliques": 0,
+        "cobertura": "UNKNOWN",
+        "verdict": "UNKNOWN",
+        "ultimoRastreio": null,
+        "canonicalGoogle": null
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": []
+    },
+    {
+      "path": "/ferramentas",
+      "sitemap": "sitemap-main.xml",
+      "segmento": "biblioteca",
+      "google": {
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": null,
+        "deltaImpressoes": 0,
+        "deltaCliques": 0,
+        "cobertura": "UNKNOWN",
+        "verdict": "UNKNOWN",
+        "ultimoRastreio": null,
+        "canonicalGoogle": null
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": []
+    },
+    {
+      "path": "/ferramentas/checklist-computador-lento",
+      "sitemap": "sitemap-main.xml",
+      "segmento": "biblioteca",
+      "google": {
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": null,
+        "deltaImpressoes": 0,
+        "deltaCliques": 0,
+        "cobertura": "UNKNOWN",
+        "verdict": "UNKNOWN",
+        "ultimoRastreio": null,
+        "canonicalGoogle": null
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": []
+    },
+    {
+      "path": "/ferramentas/checklist-antes-de-formatar",
+      "sitemap": "sitemap-main.xml",
+      "segmento": "biblioteca",
+      "google": {
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": null,
+        "deltaImpressoes": 0,
+        "deltaCliques": 0,
+        "cobertura": "UNKNOWN",
+        "verdict": "UNKNOWN",
+        "ultimoRastreio": null,
+        "canonicalGoogle": null
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": []
+    },
+    {
+      "path": "/ferramentas/roteiro-falha-de-inicializacao",
+      "sitemap": "sitemap-main.xml",
+      "segmento": "biblioteca",
+      "google": {
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": null,
+        "deltaImpressoes": 0,
+        "deltaCliques": 0,
+        "cobertura": "UNKNOWN",
+        "verdict": "UNKNOWN",
+        "ultimoRastreio": null,
+        "canonicalGoogle": null
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": []
+    },
+    {
+      "path": "/ferramentas/verificador-de-backup",
+      "sitemap": "sitemap-main.xml",
+      "segmento": "biblioteca",
+      "google": {
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": null,
+        "deltaImpressoes": 0,
+        "deltaCliques": 0,
+        "cobertura": "UNKNOWN",
+        "verdict": "UNKNOWN",
+        "ultimoRastreio": null,
+        "canonicalGoogle": null
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": []
+    },
+    {
+      "path": "/ferramentas/ssd-ou-ram",
+      "sitemap": "sitemap-main.xml",
+      "segmento": "biblioteca",
+      "google": {
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": null,
+        "deltaImpressoes": 0,
+        "deltaCliques": 0,
+        "cobertura": "UNKNOWN",
+        "verdict": "UNKNOWN",
+        "ultimoRastreio": null,
+        "canonicalGoogle": null
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": []
+    },
+    {
+      "path": "/ferramentas/roteiro-wifi-instavel",
+      "sitemap": "sitemap-main.xml",
+      "segmento": "biblioteca",
+      "google": {
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": null,
+        "deltaImpressoes": 0,
+        "deltaCliques": 0,
+        "cobertura": "UNKNOWN",
+        "verdict": "UNKNOWN",
+        "ultimoRastreio": null,
+        "canonicalGoogle": null
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": []
+    },
+    {
+      "path": "/servicos/formatacao",
+      "sitemap": "sitemap-servicos.xml",
+      "segmento": "servico",
+      "google": {
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": null,
+        "deltaImpressoes": 0,
+        "deltaCliques": 0,
+        "cobertura": "UNKNOWN",
+        "verdict": "UNKNOWN",
+        "ultimoRastreio": null,
+        "canonicalGoogle": null
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": []
+    },
+    {
+      "path": "/servicos/manutencao-de-notebook",
+      "sitemap": "sitemap-servicos.xml",
+      "segmento": "servico",
+      "google": {
+        "disponivel": true,
+        "impressoes": 9,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": 80.2,
+        "deltaImpressoes": 9,
+        "deltaCliques": 0,
+        "cobertura": "UNKNOWN",
+        "verdict": "UNKNOWN",
+        "ultimoRastreio": null,
+        "canonicalGoogle": null
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": [
+        {
+          "consulta": "assistencia tecnica notebook curitiba",
+          "impressoes": 3,
+          "cliques": 0,
+          "posicao": 86.3
+        },
+        {
+          "consulta": "conserto de notebook curitiba",
+          "impressoes": 2,
+          "cliques": 0,
+          "posicao": 96.5
+        },
+        {
+          "consulta": "manutenção notebook",
+          "impressoes": 2,
+          "cliques": 0,
+          "posicao": 73.5
+        },
+        {
+          "consulta": "manutencao de notebook",
+          "impressoes": 1,
+          "cliques": 0,
+          "posicao": 42
+        },
+        {
+          "consulta": "manutuenção notebook",
+          "impressoes": 1,
+          "cliques": 0,
+          "posicao": 81
+        }
+      ]
+    },
+    {
+      "path": "/servicos/manutencao-de-computador",
+      "sitemap": "sitemap-servicos.xml",
+      "segmento": "servico",
+      "google": {
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": null,
+        "deltaImpressoes": 0,
+        "deltaCliques": 0,
+        "cobertura": "UNKNOWN",
+        "verdict": "UNKNOWN",
+        "ultimoRastreio": null,
+        "canonicalGoogle": null
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": []
+    },
+    {
+      "path": "/servicos/upgrade-ssd-ram",
+      "sitemap": "sitemap-servicos.xml",
+      "segmento": "servico",
+      "google": {
+        "disponivel": true,
+        "impressoes": 4,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": 7.5,
+        "deltaImpressoes": 4,
+        "deltaCliques": 0,
+        "cobertura": "UNKNOWN",
+        "verdict": "UNKNOWN",
+        "ultimoRastreio": null,
+        "canonicalGoogle": null
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": []
+    },
+    {
+      "path": "/servicos/remocao-de-virus",
+      "sitemap": "sitemap-servicos.xml",
+      "segmento": "servico",
+      "google": {
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": null,
+        "deltaImpressoes": 0,
+        "deltaCliques": 0,
+        "cobertura": "UNKNOWN",
+        "verdict": "UNKNOWN",
+        "ultimoRastreio": null,
+        "canonicalGoogle": null
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": []
+    },
+    {
+      "path": "/servicos/recuperacao-de-dados",
+      "sitemap": "sitemap-servicos.xml",
+      "segmento": "servico",
+      "google": {
+        "disponivel": true,
+        "impressoes": 1,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": 53,
+        "deltaImpressoes": 1,
+        "deltaCliques": 0,
+        "cobertura": "UNKNOWN",
+        "verdict": "UNKNOWN",
+        "ultimoRastreio": null,
+        "canonicalGoogle": null
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": [
+        {
+          "consulta": "data recovery curitiba",
+          "impressoes": 1,
+          "cliques": 0,
+          "posicao": 53
+        }
+      ]
+    },
+    {
+      "path": "/servicos/redes-e-wifi",
+      "sitemap": "sitemap-servicos.xml",
+      "segmento": "servico",
+      "google": {
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": null,
+        "deltaImpressoes": 0,
+        "deltaCliques": 0,
+        "cobertura": "UNKNOWN",
+        "verdict": "UNKNOWN",
+        "ultimoRastreio": null,
+        "canonicalGoogle": null
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": []
+    },
+    {
+      "path": "/servicos/suporte-tecnico-empresarial",
+      "sitemap": "sitemap-servicos.xml",
+      "segmento": "servico",
+      "google": {
+        "disponivel": true,
+        "impressoes": 23,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": 68.7,
+        "deltaImpressoes": 23,
+        "deltaCliques": 0,
+        "cobertura": "UNKNOWN",
+        "verdict": "UNKNOWN",
+        "ultimoRastreio": null,
+        "canonicalGoogle": null
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": [
+        {
+          "consulta": "help desk terceirizado curitiba",
+          "impressoes": 4,
+          "cliques": 0,
+          "posicao": 76.3
+        },
+        {
+          "consulta": "suporte técnico empresarial curitiba",
+          "impressoes": 4,
+          "cliques": 0,
+          "posicao": 73.8
+        },
+        {
+          "consulta": "suporte técnico para empresas curitiba",
+          "impressoes": 4,
+          "cliques": 0,
+          "posicao": 74.5
+        },
+        {
+          "consulta": "suporte ti empresarial curitiba",
+          "impressoes": 3,
+          "cliques": 0,
+          "posicao": 86.3
+        },
+        {
+          "consulta": "assistência técnica de informática para empresas",
+          "impressoes": 1,
+          "cliques": 0,
+          "posicao": 78
+        },
+        {
+          "consulta": "assistência técnica de ti",
+          "impressoes": 1,
+          "cliques": 0,
+          "posicao": 85
+        },
+        {
+          "consulta": "empresa suporte informatica curitiba pme",
+          "impressoes": 1,
+          "cliques": 0,
+          "posicao": 89
+        },
+        {
+          "consulta": "suporte técnico 24 horas",
+          "impressoes": 1,
+          "cliques": 0,
+          "posicao": 54
+        },
+        {
+          "consulta": "suporte técnico para empresa",
+          "impressoes": 1,
+          "cliques": 0,
+          "posicao": 97
+        }
+      ]
+    },
+    {
+      "path": "/servicos/manutencao-preventiva-empresas",
+      "sitemap": "sitemap-servicos.xml",
+      "segmento": "servico",
+      "google": {
+        "disponivel": true,
+        "impressoes": 2,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": 94.5,
+        "deltaImpressoes": 2,
+        "deltaCliques": 0,
+        "cobertura": "UNKNOWN",
+        "verdict": "UNKNOWN",
+        "ultimoRastreio": null,
+        "canonicalGoogle": null
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": [
+        {
+          "consulta": "manutenção de computadores empresa curitiba",
+          "impressoes": 2,
+          "cliques": 0,
+          "posicao": 94.5
+        }
+      ]
+    },
+    {
+      "path": "/servicos/backup-para-empresas",
+      "sitemap": "sitemap-servicos.xml",
+      "segmento": "servico",
+      "google": {
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": null,
+        "deltaImpressoes": 0,
+        "deltaCliques": 0,
+        "cobertura": "UNKNOWN",
+        "verdict": "UNKNOWN",
+        "ultimoRastreio": null,
+        "canonicalGoogle": null
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": []
+    },
+    {
+      "path": "/servicos/suporte-home-office",
+      "sitemap": "sitemap-servicos.xml",
+      "segmento": "servico",
+      "google": {
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": null,
+        "deltaImpressoes": 0,
+        "deltaCliques": 0,
+        "cobertura": "UNKNOWN",
+        "verdict": "UNKNOWN",
+        "ultimoRastreio": null,
+        "canonicalGoogle": null
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": []
+    },
+    {
+      "path": "/servicos/montagem-de-pc",
+      "sitemap": "sitemap-servicos.xml",
+      "segmento": "servico",
+      "google": {
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": null,
+        "deltaImpressoes": 0,
+        "deltaCliques": 0,
+        "cobertura": "UNKNOWN",
+        "verdict": "UNKNOWN",
+        "ultimoRastreio": null,
+        "canonicalGoogle": null
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": []
+    },
+    {
+      "path": "/servicos/pc-gamer",
+      "sitemap": "sitemap-servicos.xml",
+      "segmento": "servico",
+      "google": {
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": null,
+        "deltaImpressoes": 0,
+        "deltaCliques": 0,
+        "cobertura": "UNKNOWN",
+        "verdict": "UNKNOWN",
+        "ultimoRastreio": null,
+        "canonicalGoogle": null
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": []
+    },
+    {
+      "path": "/servicos/conserto-tv",
+      "sitemap": "sitemap-servicos.xml",
+      "segmento": "servico",
+      "google": {
+        "disponivel": true,
+        "impressoes": 34,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": 78.3,
+        "deltaImpressoes": 34,
+        "deltaCliques": 0,
+        "cobertura": "UNKNOWN",
+        "verdict": "UNKNOWN",
+        "ultimoRastreio": null,
+        "canonicalGoogle": null
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": [
+        {
+          "consulta": "conserto de tvs",
+          "impressoes": 4,
+          "cliques": 0,
+          "posicao": 71.3
+        },
+        {
+          "consulta": "conserto de televisores",
+          "impressoes": 3,
+          "cliques": 0,
+          "posicao": 81
+        },
+        {
+          "consulta": "conserto tv lcd",
+          "impressoes": 3,
+          "cliques": 0,
+          "posicao": 82.3
+        },
+        {
+          "consulta": "conserto de tv",
+          "impressoes": 2,
+          "cliques": 0,
+          "posicao": 90.5
+        },
+        {
+          "consulta": "conserto de tv em curitiba",
+          "impressoes": 2,
+          "cliques": 0,
+          "posicao": 78.5
+        },
+        {
+          "consulta": "técnico de tv que atende a domicílio",
+          "impressoes": 2,
+          "cliques": 0,
+          "posicao": 75.5
+        },
+        {
+          "consulta": "arrumar tv",
+          "impressoes": 1,
+          "cliques": 0,
+          "posicao": 73
+        },
+        {
+          "consulta": "conserta-se televisores",
+          "impressoes": 1,
+          "cliques": 0,
+          "posicao": 72
+        },
+        {
+          "consulta": "conserto de smart tv",
+          "impressoes": 1,
+          "cliques": 0,
+          "posicao": 73
+        },
+        {
+          "consulta": "conserto de tv em domicilio",
+          "impressoes": 1,
+          "cliques": 0,
+          "posicao": 93
+        }
+      ]
+    },
+    {
+      "path": "/servicos/conserto-placa",
+      "sitemap": "sitemap-servicos.xml",
+      "segmento": "servico",
+      "google": {
+        "disponivel": true,
+        "impressoes": 1,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": 71,
+        "deltaImpressoes": 1,
+        "deltaCliques": 0,
+        "cobertura": "UNKNOWN",
+        "verdict": "UNKNOWN",
+        "ultimoRastreio": null,
+        "canonicalGoogle": null
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": [
+        {
+          "consulta": "conserto placa de video curitiba",
+          "impressoes": 1,
+          "cliques": 0,
+          "posicao": 71
+        }
+      ]
+    },
+    {
+      "path": "/servicos/conserto-monitor",
+      "sitemap": "sitemap-servicos.xml",
+      "segmento": "servico",
+      "google": {
+        "disponivel": true,
+        "impressoes": 7,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": 65.7,
+        "deltaImpressoes": 7,
+        "deltaCliques": 0,
+        "cobertura": "UNKNOWN",
+        "verdict": "UNKNOWN",
+        "ultimoRastreio": null,
+        "canonicalGoogle": null
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": [
+        {
+          "consulta": "manutenção monitor",
+          "impressoes": 2,
+          "cliques": 0,
+          "posicao": 89
+        },
+        {
+          "consulta": "conserto de monitor lcd",
+          "impressoes": 1,
+          "cliques": 0,
+          "posicao": 74
+        },
+        {
+          "consulta": "conserto monitor",
+          "impressoes": 1,
+          "cliques": 0,
+          "posicao": 80
+        },
+        {
+          "consulta": "manutenção de monitor",
+          "impressoes": 1,
+          "cliques": 0,
+          "posicao": 71
+        }
+      ]
+    },
+    {
+      "path": "/servicos/conserto-impressora-3d",
+      "sitemap": "sitemap-servicos.xml",
+      "segmento": "servico",
+      "google": {
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": null,
+        "deltaImpressoes": 0,
+        "deltaCliques": 0,
+        "cobertura": "UNKNOWN",
+        "verdict": "UNKNOWN",
+        "ultimoRastreio": null,
+        "canonicalGoogle": null
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": []
+    },
+    {
+      "path": "/servicos/formatacao-computador/cic",
+      "sitemap": "sitemap-servicos.xml",
+      "segmento": "servico",
+      "google": {
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": null,
+        "deltaImpressoes": 0,
+        "deltaCliques": 0,
+        "cobertura": "UNKNOWN",
+        "verdict": "UNKNOWN",
+        "ultimoRastreio": null,
+        "canonicalGoogle": null
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": []
+    },
+    {
+      "path": "/servicos/formatacao-computador/batel",
+      "sitemap": "sitemap-servicos.xml",
+      "segmento": "servico",
+      "google": {
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": null,
+        "deltaImpressoes": 0,
+        "deltaCliques": 0,
+        "cobertura": "UNKNOWN",
+        "verdict": "UNKNOWN",
+        "ultimoRastreio": null,
+        "canonicalGoogle": null
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": []
+    },
+    {
+      "path": "/servicos/formatacao-computador/agua-verde",
+      "sitemap": "sitemap-servicos.xml",
+      "segmento": "servico",
+      "google": {
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": null,
+        "deltaImpressoes": 0,
+        "deltaCliques": 0,
+        "cobertura": "UNKNOWN",
+        "verdict": "UNKNOWN",
+        "ultimoRastreio": null,
+        "canonicalGoogle": null
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": []
+    },
+    {
+      "path": "/servicos/remocao-virus/cic",
+      "sitemap": "sitemap-servicos.xml",
+      "segmento": "servico",
+      "google": {
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": null,
+        "deltaImpressoes": 0,
+        "deltaCliques": 0,
+        "cobertura": "UNKNOWN",
+        "verdict": "UNKNOWN",
+        "ultimoRastreio": null,
+        "canonicalGoogle": null
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": []
+    },
+    {
+      "path": "/servicos/remocao-virus/agua-verde",
+      "sitemap": "sitemap-servicos.xml",
+      "segmento": "servico",
+      "google": {
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": null,
+        "deltaImpressoes": 0,
+        "deltaCliques": 0,
+        "cobertura": "UNKNOWN",
+        "verdict": "UNKNOWN",
+        "ultimoRastreio": null,
+        "canonicalGoogle": null
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": []
+    },
+    {
+      "path": "/servicos/conserto-pc-notebook/centro",
+      "sitemap": "sitemap-servicos.xml",
+      "segmento": "servico",
+      "google": {
+        "disponivel": true,
+        "impressoes": 6,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": 76.5,
+        "deltaImpressoes": 6,
+        "deltaCliques": 0,
+        "cobertura": "UNKNOWN",
+        "verdict": "UNKNOWN",
+        "ultimoRastreio": null,
+        "canonicalGoogle": null
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": [
+        {
+          "consulta": "assistencia tecnica notebook curitiba",
+          "impressoes": 2,
+          "cliques": 0,
+          "posicao": 93.5
+        },
+        {
+          "consulta": "conserto de notebook curitiba",
+          "impressoes": 2,
+          "cliques": 0,
+          "posicao": 63
+        },
+        {
+          "consulta": "conserto notebook curitiba",
+          "impressoes": 1,
+          "cliques": 0,
+          "posicao": 50
+        },
+        {
+          "consulta": "formatacao de notebook curitiba",
+          "impressoes": 1,
+          "cliques": 0,
+          "posicao": 96
+        }
+      ]
+    },
+    {
+      "path": "/servicos/conserto-pc-notebook/agua-verde",
+      "sitemap": "sitemap-servicos.xml",
+      "segmento": "servico",
+      "google": {
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": null,
+        "deltaImpressoes": 0,
+        "deltaCliques": 0,
+        "cobertura": "UNKNOWN",
+        "verdict": "UNKNOWN",
+        "ultimoRastreio": null,
+        "canonicalGoogle": null
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": []
+    },
+    {
+      "path": "/servicos/upgrade-ssd-memoria/cic",
+      "sitemap": "sitemap-servicos.xml",
+      "segmento": "servico",
+      "google": {
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": null,
+        "deltaImpressoes": 0,
+        "deltaCliques": 0,
+        "cobertura": "UNKNOWN",
+        "verdict": "UNKNOWN",
+        "ultimoRastreio": null,
+        "canonicalGoogle": null
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": []
+    },
+    {
+      "path": "/servicos/upgrade-ssd-memoria/centro",
+      "sitemap": "sitemap-servicos.xml",
+      "segmento": "servico",
+      "google": {
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": null,
+        "deltaImpressoes": 0,
+        "deltaCliques": 0,
+        "cobertura": "UNKNOWN",
+        "verdict": "UNKNOWN",
+        "ultimoRastreio": null,
+        "canonicalGoogle": null
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": []
+    },
+    {
+      "path": "/servicos/upgrade-ssd-memoria/agua-verde",
+      "sitemap": "sitemap-servicos.xml",
+      "segmento": "servico",
+      "google": {
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": null,
+        "deltaImpressoes": 0,
+        "deltaCliques": 0,
+        "cobertura": "UNKNOWN",
+        "verdict": "UNKNOWN",
+        "ultimoRastreio": null,
+        "canonicalGoogle": null
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": []
+    },
+    {
+      "path": "/servicos/upgrade-ssd-memoria/portao",
+      "sitemap": "sitemap-servicos.xml",
+      "segmento": "servico",
+      "google": {
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": null,
+        "deltaImpressoes": 0,
+        "deltaCliques": 0,
+        "cobertura": "UNKNOWN",
+        "verdict": "UNKNOWN",
+        "ultimoRastreio": null,
+        "canonicalGoogle": null
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": []
+    },
+    {
+      "path": "/servicos/formatacao-computador/curitiba",
+      "sitemap": "sitemap-servicos.xml",
+      "segmento": "servico",
+      "google": {
+        "disponivel": true,
+        "impressoes": 3,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": 27.7,
+        "deltaImpressoes": 3,
+        "deltaCliques": 0,
+        "cobertura": "UNKNOWN",
+        "verdict": "UNKNOWN",
+        "ultimoRastreio": null,
+        "canonicalGoogle": null
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": [
+        {
+          "consulta": "formatacao de notebook curitiba",
+          "impressoes": 1,
+          "cliques": 0,
+          "posicao": 61
+        }
+      ]
+    },
+    {
+      "path": "/servicos/remocao-virus/curitiba",
+      "sitemap": "sitemap-servicos.xml",
+      "segmento": "servico",
+      "google": {
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": null,
+        "deltaImpressoes": 0,
+        "deltaCliques": 0,
+        "cobertura": "UNKNOWN",
+        "verdict": "UNKNOWN",
+        "ultimoRastreio": null,
+        "canonicalGoogle": null
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": []
+    },
+    {
+      "path": "/servicos/upgrade-ssd/curitiba",
+      "sitemap": "sitemap-servicos.xml",
+      "segmento": "servico",
+      "google": {
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": null,
+        "deltaImpressoes": 0,
+        "deltaCliques": 0,
+        "cobertura": "UNKNOWN",
+        "verdict": "UNKNOWN",
+        "ultimoRastreio": null,
+        "canonicalGoogle": null
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": []
+    },
+    {
+      "path": "/servicos/conserto-notebook/curitiba",
+      "sitemap": "sitemap-servicos.xml",
+      "segmento": "servico",
+      "google": {
+        "disponivel": true,
+        "impressoes": 2,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": 87.5,
+        "deltaImpressoes": 2,
+        "deltaCliques": 0,
+        "cobertura": "UNKNOWN",
+        "verdict": "UNKNOWN",
+        "ultimoRastreio": null,
+        "canonicalGoogle": null
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": [
+        {
+          "consulta": "conserto de notebook",
+          "impressoes": 1,
+          "cliques": 0,
+          "posicao": 88
+        },
+        {
+          "consulta": "formatacao de notebook curitiba",
+          "impressoes": 1,
+          "cliques": 0,
+          "posicao": 87
+        }
+      ]
+    },
+    {
+      "path": "/servicos/conserto-pc/curitiba",
+      "sitemap": "sitemap-servicos.xml",
+      "segmento": "servico",
+      "google": {
+        "disponivel": true,
+        "impressoes": 2,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": 73,
+        "deltaImpressoes": 2,
+        "deltaCliques": 0,
+        "cobertura": "UNKNOWN",
+        "verdict": "UNKNOWN",
+        "ultimoRastreio": null,
+        "canonicalGoogle": null
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": [
+        {
+          "consulta": "assistencia tecnica notebook curitiba",
+          "impressoes": 1,
+          "cliques": 0,
+          "posicao": 78
+        },
+        {
+          "consulta": "conserto de notebook curitiba",
+          "impressoes": 1,
+          "cliques": 0,
+          "posicao": 68
+        }
+      ]
+    },
+    {
+      "path": "/servicos/redes-wifi/curitiba",
+      "sitemap": "sitemap-servicos.xml",
+      "segmento": "servico",
+      "google": {
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": null,
+        "deltaImpressoes": 0,
+        "deltaCliques": 0,
+        "cobertura": "UNKNOWN",
+        "verdict": "UNKNOWN",
+        "ultimoRastreio": null,
+        "canonicalGoogle": null
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": []
+    },
+    {
+      "path": "/servicos/backup-recuperacao/curitiba",
+      "sitemap": "sitemap-servicos.xml",
+      "segmento": "servico",
+      "google": {
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": null,
+        "deltaImpressoes": 0,
+        "deltaCliques": 0,
+        "cobertura": "UNKNOWN",
+        "verdict": "UNKNOWN",
+        "ultimoRastreio": null,
+        "canonicalGoogle": null
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": []
+    },
+    {
+      "path": "/servicos/suporte-tecnico-empresarial/curitiba",
+      "sitemap": "sitemap-servicos.xml",
+      "segmento": "servico",
+      "google": {
+        "disponivel": true,
+        "impressoes": 10,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": 80.9,
+        "deltaImpressoes": 10,
+        "deltaCliques": 0,
+        "cobertura": "UNKNOWN",
+        "verdict": "UNKNOWN",
+        "ultimoRastreio": null,
+        "canonicalGoogle": null
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": [
+        {
+          "consulta": "manutenção computador empresa curitiba rápido",
+          "impressoes": 2,
+          "cliques": 0,
+          "posicao": 74.5
+        },
+        {
+          "consulta": "suporte ti empresarial curitiba",
+          "impressoes": 2,
+          "cliques": 0,
+          "posicao": 90.5
+        },
+        {
+          "consulta": "suporte técnico empresarial curitiba",
+          "impressoes": 2,
+          "cliques": 0,
+          "posicao": 70.5
+        },
+        {
+          "consulta": "suporte técnico para empresas curitiba",
+          "impressoes": 2,
+          "cliques": 0,
+          "posicao": 84
+        },
+        {
+          "consulta": "manutenção de computadores empresa curitiba",
+          "impressoes": 1,
+          "cliques": 0,
+          "posicao": 85
+        },
+        {
+          "consulta": "manutenção servidor empresa curitiba",
+          "impressoes": 1,
+          "cliques": 0,
+          "posicao": 85
+        }
+      ]
+    },
+    {
+      "path": "/servicos/manutencao-preventiva-empresas/curitiba",
+      "sitemap": "sitemap-servicos.xml",
+      "segmento": "servico",
+      "google": {
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": null,
+        "deltaImpressoes": 0,
+        "deltaCliques": 0,
+        "cobertura": "UNKNOWN",
+        "verdict": "UNKNOWN",
+        "ultimoRastreio": null,
+        "canonicalGoogle": null
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": []
+    },
+    {
+      "path": "/servicos/backup-para-empresas/curitiba",
+      "sitemap": "sitemap-servicos.xml",
+      "segmento": "servico",
+      "google": {
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": null,
+        "deltaImpressoes": 0,
+        "deltaCliques": 0,
+        "cobertura": "UNKNOWN",
+        "verdict": "UNKNOWN",
+        "ultimoRastreio": null,
+        "canonicalGoogle": null
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": []
+    },
+    {
+      "path": "/servicos/montagem-de-pc/curitiba",
+      "sitemap": "sitemap-servicos.xml",
+      "segmento": "servico",
+      "google": {
+        "disponivel": true,
+        "impressoes": 1,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": 9,
+        "deltaImpressoes": 1,
+        "deltaCliques": 0,
+        "cobertura": "UNKNOWN",
+        "verdict": "UNKNOWN",
+        "ultimoRastreio": null,
+        "canonicalGoogle": null
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": []
+    },
+    {
+      "path": "/servicos/suporte-home-office/curitiba",
+      "sitemap": "sitemap-servicos.xml",
+      "segmento": "servico",
+      "google": {
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": null,
+        "deltaImpressoes": 0,
+        "deltaCliques": 0,
+        "cobertura": "UNKNOWN",
+        "verdict": "UNKNOWN",
+        "ultimoRastreio": null,
+        "canonicalGoogle": null
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": []
+    },
+    {
+      "path": "/servicos/pc-gamer/curitiba",
+      "sitemap": "sitemap-servicos.xml",
+      "segmento": "servico",
+      "google": {
+        "disponivel": true,
+        "impressoes": 3,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": 10.3,
+        "deltaImpressoes": 3,
+        "deltaCliques": 0,
+        "cobertura": "UNKNOWN",
+        "verdict": "UNKNOWN",
+        "ultimoRastreio": null,
+        "canonicalGoogle": null
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": []
+    },
+    {
+      "path": "/servicos/conserto-notebook/sao-jose-dos-pinhais",
+      "sitemap": "sitemap-servicos.xml",
+      "segmento": "servico",
+      "google": {
+        "disponivel": true,
+        "impressoes": 3,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": 9.7,
+        "deltaImpressoes": 3,
+        "deltaCliques": 0,
+        "cobertura": "UNKNOWN",
+        "verdict": "UNKNOWN",
+        "ultimoRastreio": null,
+        "canonicalGoogle": null
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": []
+    },
+    {
+      "path": "/servicos/conserto-pc/sao-jose-dos-pinhais",
+      "sitemap": "sitemap-servicos.xml",
+      "segmento": "servico",
+      "google": {
+        "disponivel": true,
+        "impressoes": 6,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": 9.3,
+        "deltaImpressoes": 6,
+        "deltaCliques": 0,
+        "cobertura": "UNKNOWN",
+        "verdict": "UNKNOWN",
+        "ultimoRastreio": null,
+        "canonicalGoogle": null
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": []
+    },
+    {
+      "path": "/servicos/redes-wifi/sao-jose-dos-pinhais",
+      "sitemap": "sitemap-servicos.xml",
+      "segmento": "servico",
+      "google": {
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": null,
+        "deltaImpressoes": 0,
+        "deltaCliques": 0,
+        "cobertura": "UNKNOWN",
+        "verdict": "UNKNOWN",
+        "ultimoRastreio": null,
+        "canonicalGoogle": null
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": []
+    },
+    {
+      "path": "/servicos/backup-recuperacao/sao-jose-dos-pinhais",
+      "sitemap": "sitemap-servicos.xml",
+      "segmento": "servico",
+      "google": {
+        "disponivel": true,
+        "impressoes": 1,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": 13,
+        "deltaImpressoes": 1,
+        "deltaCliques": 0,
+        "cobertura": "UNKNOWN",
+        "verdict": "UNKNOWN",
+        "ultimoRastreio": null,
+        "canonicalGoogle": null
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": []
+    },
+    {
+      "path": "/tecnico-informatica-curitiba",
+      "sitemap": "sitemap-regioes.xml",
+      "segmento": "cidade",
+      "google": {
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": null,
+        "deltaImpressoes": 0,
+        "deltaCliques": 0,
+        "cobertura": "UNKNOWN",
+        "verdict": "UNKNOWN",
+        "ultimoRastreio": null,
+        "canonicalGoogle": null
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": []
+    },
+    {
+      "path": "/tecnico-informatica-sao-jose-pinhais",
+      "sitemap": "sitemap-regioes.xml",
+      "segmento": "cidade",
+      "google": {
+        "disponivel": true,
+        "impressoes": 1,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": 10,
+        "deltaImpressoes": 1,
+        "deltaCliques": 0,
+        "cobertura": "UNKNOWN",
+        "verdict": "UNKNOWN",
+        "ultimoRastreio": null,
+        "canonicalGoogle": null
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": []
+    },
+    {
+      "path": "/tecnico-informatica-pinhais",
+      "sitemap": "sitemap-regioes.xml",
+      "segmento": "cidade",
+      "google": {
+        "disponivel": true,
+        "impressoes": 4,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": 5,
+        "deltaImpressoes": 4,
+        "deltaCliques": 0,
+        "cobertura": "UNKNOWN",
+        "verdict": "UNKNOWN",
+        "ultimoRastreio": null,
+        "canonicalGoogle": null
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": []
+    },
+    {
+      "path": "/tecnico-informatica-colombo",
+      "sitemap": "sitemap-regioes.xml",
+      "segmento": "cidade",
+      "google": {
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": null,
+        "deltaImpressoes": 0,
+        "deltaCliques": 0,
+        "cobertura": "UNKNOWN",
+        "verdict": "UNKNOWN",
+        "ultimoRastreio": null,
+        "canonicalGoogle": null
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": []
+    },
+    {
+      "path": "/tecnico-informatica-araucaria",
+      "sitemap": "sitemap-regioes.xml",
+      "segmento": "cidade",
+      "google": {
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": null,
+        "deltaImpressoes": 0,
+        "deltaCliques": 0,
+        "cobertura": "UNKNOWN",
+        "verdict": "UNKNOWN",
+        "ultimoRastreio": null,
+        "canonicalGoogle": null
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": []
+    },
+    {
+      "path": "/tecnico-informatica-campo-largo",
+      "sitemap": "sitemap-regioes.xml",
+      "segmento": "cidade",
+      "google": {
+        "disponivel": true,
+        "impressoes": 4,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": 11,
+        "deltaImpressoes": 4,
+        "deltaCliques": 0,
+        "cobertura": "UNKNOWN",
+        "verdict": "UNKNOWN",
+        "ultimoRastreio": null,
+        "canonicalGoogle": null
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": []
+    },
+    {
+      "path": "/bairros/cic",
+      "sitemap": "sitemap-bairros.xml",
+      "segmento": "bairro",
+      "google": {
+        "disponivel": true,
+        "impressoes": 4,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": 7,
+        "deltaImpressoes": 4,
+        "deltaCliques": 0,
+        "cobertura": "UNKNOWN",
+        "verdict": "UNKNOWN",
+        "ultimoRastreio": null,
+        "canonicalGoogle": null
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": [
+        {
+          "consulta": "informatica cic",
+          "impressoes": 1,
+          "cliques": 0,
+          "posicao": 7
+        }
+      ]
+    },
+    {
+      "path": "/bairros/batel",
+      "sitemap": "sitemap-bairros.xml",
+      "segmento": "bairro",
+      "google": {
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": null,
+        "deltaImpressoes": 0,
+        "deltaCliques": 0,
+        "cobertura": "UNKNOWN",
+        "verdict": "UNKNOWN",
+        "ultimoRastreio": null,
+        "canonicalGoogle": null
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": []
+    },
+    {
+      "path": "/bairros/agua-verde",
+      "sitemap": "sitemap-bairros.xml",
+      "segmento": "bairro",
+      "google": {
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": null,
+        "deltaImpressoes": 0,
+        "deltaCliques": 0,
+        "cobertura": "UNKNOWN",
+        "verdict": "UNKNOWN",
+        "ultimoRastreio": null,
+        "canonicalGoogle": null
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": []
+    },
+    {
+      "path": "/bairros/centro",
+      "sitemap": "sitemap-bairros.xml",
+      "segmento": "bairro",
+      "google": {
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": null,
+        "deltaImpressoes": 0,
+        "deltaCliques": 0,
+        "cobertura": "UNKNOWN",
+        "verdict": "UNKNOWN",
+        "ultimoRastreio": null,
+        "canonicalGoogle": null
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": []
+    },
+    {
+      "path": "/bairros/portao",
+      "sitemap": "sitemap-bairros.xml",
+      "segmento": "bairro",
+      "google": {
+        "disponivel": true,
+        "impressoes": 1,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": 8,
+        "deltaImpressoes": 1,
+        "deltaCliques": 0,
+        "cobertura": "UNKNOWN",
+        "verdict": "UNKNOWN",
+        "ultimoRastreio": null,
+        "canonicalGoogle": null
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": []
+    },
+    {
+      "path": "/bairros/santa-felicidade",
+      "sitemap": "sitemap-bairros.xml",
+      "segmento": "bairro",
+      "google": {
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": null,
+        "deltaImpressoes": 0,
+        "deltaCliques": 0,
+        "cobertura": "UNKNOWN",
+        "verdict": "UNKNOWN",
+        "ultimoRastreio": null,
+        "canonicalGoogle": null
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": []
+    },
+    {
+      "path": "/bairros/boa-vista",
+      "sitemap": "sitemap-bairros.xml",
+      "segmento": "bairro",
+      "google": {
+        "disponivel": true,
+        "impressoes": 3,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": 7.7,
+        "deltaImpressoes": 3,
+        "deltaCliques": 0,
+        "cobertura": "UNKNOWN",
+        "verdict": "UNKNOWN",
+        "ultimoRastreio": null,
+        "canonicalGoogle": null
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": []
+    },
+    {
+      "path": "/bairros/bigorrilho",
+      "sitemap": "sitemap-bairros.xml",
+      "segmento": "bairro",
+      "google": {
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": null,
+        "deltaImpressoes": 0,
+        "deltaCliques": 0,
+        "cobertura": "UNKNOWN",
+        "verdict": "UNKNOWN",
+        "ultimoRastreio": null,
+        "canonicalGoogle": null
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": []
+    },
+    {
+      "path": "/bairros/cabral",
+      "sitemap": "sitemap-bairros.xml",
+      "segmento": "bairro",
+      "google": {
+        "disponivel": true,
+        "impressoes": 1,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": 11,
+        "deltaImpressoes": 1,
+        "deltaCliques": 0,
+        "cobertura": "UNKNOWN",
+        "verdict": "UNKNOWN",
+        "ultimoRastreio": null,
+        "canonicalGoogle": null
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": []
+    },
+    {
+      "path": "/bairros/afonso-pena",
+      "sitemap": "sitemap-bairros.xml",
+      "segmento": "bairro",
+      "google": {
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": null,
+        "deltaImpressoes": 0,
+        "deltaCliques": 0,
+        "cobertura": "UNKNOWN",
+        "verdict": "UNKNOWN",
+        "ultimoRastreio": null,
+        "canonicalGoogle": null
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": []
+    },
+    {
+      "path": "/bairros/cruzeiro",
+      "sitemap": "sitemap-bairros.xml",
+      "segmento": "bairro",
+      "google": {
+        "disponivel": true,
+        "impressoes": 1,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": 7,
+        "deltaImpressoes": 1,
+        "deltaCliques": 0,
+        "cobertura": "UNKNOWN",
+        "verdict": "UNKNOWN",
+        "ultimoRastreio": null,
+        "canonicalGoogle": null
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": []
+    },
+    {
+      "path": "/bairros/costeira",
+      "sitemap": "sitemap-bairros.xml",
+      "segmento": "bairro",
+      "google": {
+        "disponivel": true,
+        "impressoes": 1,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": 3,
+        "deltaImpressoes": 1,
+        "deltaCliques": 0,
+        "cobertura": "UNKNOWN",
+        "verdict": "UNKNOWN",
+        "ultimoRastreio": null,
+        "canonicalGoogle": null
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": []
+    },
+    {
+      "path": "/bairros/guatupe",
+      "sitemap": "sitemap-bairros.xml",
+      "segmento": "bairro",
+      "google": {
+        "disponivel": true,
+        "impressoes": 1,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": 8,
+        "deltaImpressoes": 1,
+        "deltaCliques": 0,
+        "cobertura": "UNKNOWN",
+        "verdict": "UNKNOWN",
+        "ultimoRastreio": null,
+        "canonicalGoogle": null
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": []
+    },
+    {
+      "path": "/bairros/xaxim",
+      "sitemap": "sitemap-bairros.xml",
+      "segmento": "bairro",
+      "google": {
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": null,
+        "deltaImpressoes": 0,
+        "deltaCliques": 0,
+        "cobertura": "UNKNOWN",
+        "verdict": "UNKNOWN",
+        "ultimoRastreio": null,
+        "canonicalGoogle": null
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": []
+    },
+    {
+      "path": "/bairros/sitio-cercado",
+      "sitemap": "sitemap-bairros.xml",
+      "segmento": "bairro",
+      "google": {
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": null,
+        "deltaImpressoes": 0,
+        "deltaCliques": 0,
+        "cobertura": "UNKNOWN",
+        "verdict": "UNKNOWN",
+        "ultimoRastreio": null,
+        "canonicalGoogle": null
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": []
+    },
+    {
+      "path": "/bairros/aviacao",
+      "sitemap": "sitemap-bairros.xml",
+      "segmento": "bairro",
+      "google": {
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": null,
+        "deltaImpressoes": 0,
+        "deltaCliques": 0,
+        "cobertura": "UNKNOWN",
+        "verdict": "UNKNOWN",
+        "ultimoRastreio": null,
+        "canonicalGoogle": null
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": []
+    },
+    {
+      "path": "/bairros/ouro-fino-sjp",
+      "sitemap": "sitemap-bairros.xml",
+      "segmento": "bairro",
+      "google": {
+        "disponivel": true,
+        "impressoes": 1,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": 20,
+        "deltaImpressoes": 1,
+        "deltaCliques": 0,
+        "cobertura": "UNKNOWN",
+        "verdict": "UNKNOWN",
+        "ultimoRastreio": null,
+        "canonicalGoogle": null
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": []
+    },
+    {
+      "path": "/bairros/boqueirao",
+      "sitemap": "sitemap-bairros.xml",
+      "segmento": "bairro",
+      "google": {
+        "disponivel": true,
+        "impressoes": 10,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": 9.6,
+        "deltaImpressoes": 10,
+        "deltaCliques": 0,
+        "cobertura": "UNKNOWN",
+        "verdict": "UNKNOWN",
+        "ultimoRastreio": null,
+        "canonicalGoogle": null
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": []
+    },
+    {
+      "path": "/bairros/cajuru",
+      "sitemap": "sitemap-bairros.xml",
+      "segmento": "bairro",
+      "google": {
+        "disponivel": true,
+        "impressoes": 1,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": 18,
+        "deltaImpressoes": 1,
+        "deltaCliques": 0,
+        "cobertura": "UNKNOWN",
+        "verdict": "UNKNOWN",
+        "ultimoRastreio": null,
+        "canonicalGoogle": null
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": []
+    },
+    {
+      "path": "/bairros/pinheirinho",
+      "sitemap": "sitemap-bairros.xml",
+      "segmento": "bairro",
+      "google": {
+        "disponivel": true,
+        "impressoes": 7,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": 9.7,
+        "deltaImpressoes": 7,
+        "deltaCliques": 0,
+        "cobertura": "UNKNOWN",
+        "verdict": "UNKNOWN",
+        "ultimoRastreio": null,
+        "canonicalGoogle": null
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": []
+    },
+    {
+      "path": "/bairros/cidade-jardim-sjp",
+      "sitemap": "sitemap-bairros.xml",
+      "segmento": "bairro",
+      "google": {
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": null,
+        "deltaImpressoes": 0,
+        "deltaCliques": 0,
+        "cobertura": "UNKNOWN",
+        "verdict": "UNKNOWN",
+        "ultimoRastreio": null,
+        "canonicalGoogle": null
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": []
+    },
+    {
+      "path": "/problemas/notebook-nao-liga",
+      "sitemap": "sitemap-problemas.xml",
+      "segmento": "problema",
+      "google": {
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": null,
+        "deltaImpressoes": 0,
+        "deltaCliques": 0,
+        "cobertura": "UNKNOWN",
+        "verdict": "UNKNOWN",
+        "ultimoRastreio": null,
+        "canonicalGoogle": null
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": []
+    },
+    {
+      "path": "/problemas/computador-lento",
+      "sitemap": "sitemap-problemas.xml",
+      "segmento": "problema",
+      "google": {
+        "disponivel": true,
+        "impressoes": 7,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": 8.9,
+        "deltaImpressoes": 7,
+        "deltaCliques": 0,
+        "cobertura": "UNKNOWN",
+        "verdict": "UNKNOWN",
+        "ultimoRastreio": null,
+        "canonicalGoogle": null
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": []
+    },
+    {
+      "path": "/problemas",
+      "sitemap": "sitemap-problemas.xml",
+      "segmento": "problema",
+      "google": {
+        "disponivel": true,
+        "impressoes": 1,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": 8,
+        "deltaImpressoes": 1,
+        "deltaCliques": 0,
+        "cobertura": "UNKNOWN",
+        "verdict": "UNKNOWN",
+        "ultimoRastreio": null,
+        "canonicalGoogle": null
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": []
+    },
+    {
+      "path": "/problemas/wifi-instavel",
+      "sitemap": "sitemap-problemas.xml",
+      "segmento": "problema",
+      "google": {
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": null,
+        "deltaImpressoes": 0,
+        "deltaCliques": 0,
+        "cobertura": "UNKNOWN",
+        "verdict": "UNKNOWN",
+        "ultimoRastreio": null,
+        "canonicalGoogle": null
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": []
+    },
+    {
+      "path": "/problemas/tela-azul",
+      "sitemap": "sitemap-problemas.xml",
+      "segmento": "problema",
+      "google": {
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": null,
+        "deltaImpressoes": 0,
+        "deltaCliques": 0,
+        "cobertura": "UNKNOWN",
+        "verdict": "UNKNOWN",
+        "ultimoRastreio": null,
+        "canonicalGoogle": null
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": []
+    },
+    {
+      "path": "/problemas/arquivos-apagados",
+      "sitemap": "sitemap-problemas.xml",
+      "segmento": "problema",
+      "google": {
+        "disponivel": true,
+        "impressoes": 1,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": 10,
+        "deltaImpressoes": 1,
+        "deltaCliques": 0,
+        "cobertura": "UNKNOWN",
+        "verdict": "UNKNOWN",
+        "ultimoRastreio": null,
+        "canonicalGoogle": null
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": []
+    },
+    {
+      "path": "/problemas/computador-desliga-sozinho",
+      "sitemap": "sitemap-problemas.xml",
+      "segmento": "problema",
+      "google": {
+        "disponivel": true,
+        "impressoes": 36,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": 26.4,
+        "deltaImpressoes": 36,
+        "deltaCliques": 0,
+        "cobertura": "UNKNOWN",
+        "verdict": "UNKNOWN",
+        "ultimoRastreio": null,
+        "canonicalGoogle": null
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": [
+        {
+          "consulta": "computador desligando sozinho",
+          "impressoes": 6,
+          "cliques": 0,
+          "posicao": 24.3
+        },
+        {
+          "consulta": "pc desligando sozinho",
+          "impressoes": 4,
+          "cliques": 0,
+          "posicao": 36.5
+        },
+        {
+          "consulta": "computador desliga sozinho",
+          "impressoes": 3,
+          "cliques": 0,
+          "posicao": 25.3
+        },
+        {
+          "consulta": "computador desligou sozinho",
+          "impressoes": 2,
+          "cliques": 0,
+          "posicao": 29
+        },
+        {
+          "consulta": "meu pc desliga sozinho",
+          "impressoes": 2,
+          "cliques": 0,
+          "posicao": 27.5
+        },
+        {
+          "consulta": "pc desliga sozinho",
+          "impressoes": 2,
+          "cliques": 0,
+          "posicao": 31
+        },
+        {
+          "consulta": "pc desligando sozinho não é temperatura",
+          "impressoes": 2,
+          "cliques": 0,
+          "posicao": 27.5
+        },
+        {
+          "consulta": "computador desligando",
+          "impressoes": 1,
+          "cliques": 0,
+          "posicao": 33
+        },
+        {
+          "consulta": "computador desligando sozinho o que pode ser",
+          "impressoes": 1,
+          "cliques": 0,
+          "posicao": 37
+        },
+        {
+          "consulta": "meu pc esta desligando sozinho",
+          "impressoes": 1,
+          "cliques": 0,
+          "posicao": 31
+        }
+      ]
+    },
+    {
+      "path": "/problemas/notebook-nao-carrega",
+      "sitemap": "sitemap-problemas.xml",
+      "segmento": "problema",
+      "google": {
+        "disponivel": true,
+        "impressoes": 2,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": 50.5,
+        "deltaImpressoes": 2,
+        "deltaCliques": 0,
+        "cobertura": "UNKNOWN",
+        "verdict": "UNKNOWN",
+        "ultimoRastreio": null,
+        "canonicalGoogle": null
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": [
+        {
+          "consulta": "meu notebook não carrega",
+          "impressoes": 1,
+          "cliques": 0,
+          "posicao": 50
+        },
+        {
+          "consulta": "notebook não carrega",
+          "impressoes": 1,
+          "cliques": 0,
+          "posicao": 51
+        }
+      ]
+    },
+    {
+      "path": "/problemas/hd-fazendo-barulho",
+      "sitemap": "sitemap-problemas.xml",
+      "segmento": "problema",
+      "google": {
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": null,
+        "deltaImpressoes": 0,
+        "deltaCliques": 0,
+        "cobertura": "UNKNOWN",
+        "verdict": "UNKNOWN",
+        "ultimoRastreio": null,
+        "canonicalGoogle": null
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": []
+    },
+    {
+      "path": "/problemas/computador-nao-da-imagem",
+      "sitemap": "sitemap-problemas.xml",
+      "segmento": "problema",
+      "google": {
+        "disponivel": true,
+        "impressoes": 19,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": 9.6,
+        "deltaImpressoes": 19,
+        "deltaCliques": 0,
+        "cobertura": "UNKNOWN",
+        "verdict": "UNKNOWN",
+        "ultimoRastreio": null,
+        "canonicalGoogle": null
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": []
+    },
+    {
+      "path": "/problemas/cheiro-de-queimado",
+      "sitemap": "sitemap-problemas.xml",
+      "segmento": "problema",
+      "google": {
+        "disponivel": true,
+        "impressoes": 3,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": 22.3,
+        "deltaImpressoes": 3,
+        "deltaCliques": 0,
+        "cobertura": "UNKNOWN",
+        "verdict": "UNKNOWN",
+        "ultimoRastreio": null,
+        "canonicalGoogle": null
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": [
+        {
+          "consulta": "fonte com cheiro de queimado mas funcionando",
+          "impressoes": 1,
+          "cliques": 0,
+          "posicao": 23
+        }
+      ]
+    },
+    {
+      "path": "/problemas/notebook-molhado",
+      "sitemap": "sitemap-problemas.xml",
+      "segmento": "problema",
+      "google": {
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": null,
+        "deltaImpressoes": 0,
+        "deltaCliques": 0,
+        "cobertura": "UNKNOWN",
+        "verdict": "UNKNOWN",
+        "ultimoRastreio": null,
+        "canonicalGoogle": null
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": []
+    },
+    {
+      "path": "/problemas/windows-nao-inicia",
+      "sitemap": "sitemap-problemas.xml",
+      "segmento": "problema",
+      "google": {
+        "disponivel": true,
+        "impressoes": 4,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": 7,
+        "deltaImpressoes": 4,
+        "deltaCliques": 0,
+        "cobertura": "UNKNOWN",
+        "verdict": "UNKNOWN",
+        "ultimoRastreio": null,
+        "canonicalGoogle": null
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": []
+    },
+    {
+      "path": "/problemas/computador-esquentando",
+      "sitemap": "sitemap-problemas.xml",
+      "segmento": "problema",
+      "google": {
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": null,
+        "deltaImpressoes": 0,
+        "deltaCliques": 0,
+        "cobertura": "UNKNOWN",
+        "verdict": "UNKNOWN",
+        "ultimoRastreio": null,
+        "canonicalGoogle": null
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": []
+    },
+    {
+      "path": "/problemas/impressora-nao-imprime",
+      "sitemap": "sitemap-problemas.xml",
+      "segmento": "problema",
+      "google": {
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": null,
+        "deltaImpressoes": 0,
+        "deltaCliques": 0,
+        "cobertura": "UNKNOWN",
+        "verdict": "UNKNOWN",
+        "ultimoRastreio": null,
+        "canonicalGoogle": null
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": []
+    },
+    {
+      "path": "/problemas/teclado-notebook-nao-funciona",
+      "sitemap": "sitemap-problemas.xml",
+      "segmento": "problema",
+      "google": {
+        "disponivel": true,
+        "impressoes": 3,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": 24,
+        "deltaImpressoes": 3,
+        "deltaCliques": 0,
+        "cobertura": "UNKNOWN",
+        "verdict": "UNKNOWN",
+        "ultimoRastreio": null,
+        "canonicalGoogle": null
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": [
+        {
+          "consulta": "porque o teclado do notebook não funciona",
+          "impressoes": 1,
+          "cliques": 0,
+          "posicao": 24
+        },
+        {
+          "consulta": "teclado notebook não funciona",
+          "impressoes": 1,
+          "cliques": 0,
+          "posicao": 23
+        }
+      ]
+    },
+    {
+      "path": "/equipamentos",
+      "sitemap": "sitemap-equipamentos.xml",
+      "segmento": "equipamento",
+      "google": {
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": null,
+        "deltaImpressoes": 0,
+        "deltaCliques": 0,
+        "cobertura": "UNKNOWN",
+        "verdict": "UNKNOWN",
+        "ultimoRastreio": null,
+        "canonicalGoogle": null
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": []
+    },
+    {
+      "path": "/equipamentos/notebook",
+      "sitemap": "sitemap-equipamentos.xml",
+      "segmento": "equipamento",
+      "google": {
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": null,
+        "deltaImpressoes": 0,
+        "deltaCliques": 0,
+        "cobertura": "UNKNOWN",
+        "verdict": "UNKNOWN",
+        "ultimoRastreio": null,
+        "canonicalGoogle": null
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": []
+    },
+    {
+      "path": "/equipamentos/desktop",
+      "sitemap": "sitemap-equipamentos.xml",
+      "segmento": "equipamento",
+      "google": {
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": null,
+        "deltaImpressoes": 0,
+        "deltaCliques": 0,
+        "cobertura": "UNKNOWN",
+        "verdict": "UNKNOWN",
+        "ultimoRastreio": null,
+        "canonicalGoogle": null
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": []
+    },
+    {
+      "path": "/equipamentos/impressora",
+      "sitemap": "sitemap-equipamentos.xml",
+      "segmento": "equipamento",
+      "google": {
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": null,
+        "deltaImpressoes": 0,
+        "deltaCliques": 0,
+        "cobertura": "UNKNOWN",
+        "verdict": "UNKNOWN",
+        "ultimoRastreio": null,
+        "canonicalGoogle": null
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": []
+    },
+    {
+      "path": "/equipamentos/roteador",
+      "sitemap": "sitemap-equipamentos.xml",
+      "segmento": "equipamento",
+      "google": {
+        "disponivel": true,
+        "impressoes": 1,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": 81,
+        "deltaImpressoes": 1,
+        "deltaCliques": 0,
+        "cobertura": "UNKNOWN",
+        "verdict": "UNKNOWN",
+        "ultimoRastreio": null,
+        "canonicalGoogle": null
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": [
+        {
+          "consulta": "roteador caindo sinal",
+          "impressoes": 1,
+          "cliques": 0,
+          "posicao": 81
+        }
+      ]
+    },
+    {
+      "path": "/solucoes",
+      "sitemap": "sitemap-solucoes.xml",
+      "segmento": "solucao",
+      "google": {
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": null,
+        "deltaImpressoes": 0,
+        "deltaCliques": 0,
+        "cobertura": "UNKNOWN",
+        "verdict": "UNKNOWN",
+        "ultimoRastreio": null,
+        "canonicalGoogle": null
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": []
+    },
+    {
+      "path": "/solucoes/diagnostico",
+      "sitemap": "sitemap-solucoes.xml",
+      "segmento": "solucao",
+      "google": {
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": null,
+        "deltaImpressoes": 0,
+        "deltaCliques": 0,
+        "cobertura": "UNKNOWN",
+        "verdict": "UNKNOWN",
+        "ultimoRastreio": null,
+        "canonicalGoogle": null
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": []
+    },
+    {
+      "path": "/solucoes/formatacao",
+      "sitemap": "sitemap-solucoes.xml",
+      "segmento": "solucao",
+      "google": {
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": null,
+        "deltaImpressoes": 0,
+        "deltaCliques": 0,
+        "cobertura": "UNKNOWN",
+        "verdict": "UNKNOWN",
+        "ultimoRastreio": null,
+        "canonicalGoogle": null
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": []
+    },
+    {
+      "path": "/solucoes/ssd",
+      "sitemap": "sitemap-solucoes.xml",
+      "segmento": "solucao",
+      "google": {
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": null,
+        "deltaImpressoes": 0,
+        "deltaCliques": 0,
+        "cobertura": "UNKNOWN",
+        "verdict": "UNKNOWN",
+        "ultimoRastreio": null,
+        "canonicalGoogle": null
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": []
+    },
+    {
+      "path": "/solucoes/backup",
+      "sitemap": "sitemap-solucoes.xml",
+      "segmento": "solucao",
+      "google": {
+        "disponivel": true,
+        "impressoes": 1,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": 71,
+        "deltaImpressoes": 1,
+        "deltaCliques": 0,
+        "cobertura": "UNKNOWN",
+        "verdict": "UNKNOWN",
+        "ultimoRastreio": null,
+        "canonicalGoogle": null
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": [
+        {
+          "consulta": "backup computadores",
+          "impressoes": 1,
+          "cliques": 0,
+          "posicao": 71
+        }
+      ]
+    },
+    {
+      "path": "/solucoes/recuperacao-de-dados",
+      "sitemap": "sitemap-solucoes.xml",
+      "segmento": "solucao",
+      "google": {
+        "disponivel": true,
+        "impressoes": 8,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": 82.8,
+        "deltaImpressoes": 8,
+        "deltaCliques": 0,
+        "cobertura": "UNKNOWN",
+        "verdict": "UNKNOWN",
+        "ultimoRastreio": null,
+        "canonicalGoogle": null
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": [
+        {
+          "consulta": "recuperação de hd",
+          "impressoes": 4,
+          "cliques": 0,
+          "posicao": 81.3
+        },
+        {
+          "consulta": "recuperação de dados hd",
+          "impressoes": 3,
+          "cliques": 0,
+          "posicao": 81.7
+        },
+        {
+          "consulta": "recuperacao de dados",
+          "impressoes": 1,
+          "cliques": 0,
+          "posicao": 92
+        }
+      ]
+    },
+    {
+      "path": "/blog",
+      "sitemap": "sitemap-editorial.xml",
+      "segmento": "artigo",
+      "google": {
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": null,
+        "deltaImpressoes": 0,
+        "deltaCliques": 0,
+        "cobertura": "UNKNOWN",
+        "verdict": "UNKNOWN",
+        "ultimoRastreio": null,
+        "canonicalGoogle": null
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": []
+    },
+    {
+      "path": "/blog/quando-trocar-hd-por-ssd",
+      "sitemap": "sitemap-editorial.xml",
+      "segmento": "artigo",
+      "google": {
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": null,
+        "deltaImpressoes": 0,
+        "deltaCliques": 0,
+        "cobertura": "UNKNOWN",
+        "verdict": "UNKNOWN",
+        "ultimoRastreio": null,
+        "canonicalGoogle": null
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": []
+    },
+    {
+      "path": "/blog/como-saber-se-pc-tem-virus-malware",
+      "sitemap": "sitemap-editorial.xml",
+      "segmento": "artigo",
+      "google": {
+        "disponivel": true,
+        "impressoes": 7,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": 24.4,
+        "deltaImpressoes": 7,
+        "deltaCliques": 0,
+        "cobertura": "UNKNOWN",
+        "verdict": "UNKNOWN",
+        "ultimoRastreio": null,
+        "canonicalGoogle": null
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": [
+        {
+          "consulta": "como saber se o notebook esta com virus",
+          "impressoes": 1,
+          "cliques": 0,
+          "posicao": 40
+        }
+      ]
+    },
+    {
+      "path": "/blog/backup-como-proteger-seus-arquivos",
+      "sitemap": "sitemap-editorial.xml",
+      "segmento": "artigo",
+      "google": {
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": null,
+        "deltaImpressoes": 0,
+        "deltaCliques": 0,
+        "cobertura": "UNKNOWN",
+        "verdict": "UNKNOWN",
+        "ultimoRastreio": null,
+        "canonicalGoogle": null
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": []
+    },
+    {
+      "path": "/blog/como-melhorar-sinal-wifi-em-casa",
+      "sitemap": "sitemap-editorial.xml",
+      "segmento": "artigo",
+      "google": {
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": null,
+        "deltaImpressoes": 0,
+        "deltaCliques": 0,
+        "cobertura": "UNKNOWN",
+        "verdict": "UNKNOWN",
+        "ultimoRastreio": null,
+        "canonicalGoogle": null
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": []
+    },
+    {
+      "path": "/blog/notebook-superaquecendo-o-que-fazer",
+      "sitemap": "sitemap-editorial.xml",
+      "segmento": "artigo",
+      "google": {
+        "disponivel": true,
+        "impressoes": 4,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": 50.8,
+        "deltaImpressoes": 4,
+        "deltaCliques": 0,
+        "cobertura": "UNKNOWN",
+        "verdict": "UNKNOWN",
+        "ultimoRastreio": null,
+        "canonicalGoogle": null
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": [
+        {
+          "consulta": "notebook superaquecendo",
+          "impressoes": 4,
+          "cliques": 0,
+          "posicao": 50.8
+        }
+      ]
+    },
+    {
+      "path": "/blog/organizacao-de-ti-para-pequenos-escritorios",
+      "sitemap": "sitemap-editorial.xml",
+      "segmento": "artigo",
+      "google": {
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": null,
+        "deltaImpressoes": 0,
+        "deltaCliques": 0,
+        "cobertura": "UNKNOWN",
+        "verdict": "UNKNOWN",
+        "ultimoRastreio": null,
+        "canonicalGoogle": null
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": []
+    },
+    {
+      "path": "/blog/como-escolher-uma-workstation",
+      "sitemap": "sitemap-editorial.xml",
+      "segmento": "artigo",
+      "google": {
+        "disponivel": true,
+        "impressoes": 1,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": 57,
+        "deltaImpressoes": 1,
+        "deltaCliques": 0,
+        "cobertura": "UNKNOWN",
+        "verdict": "UNKNOWN",
+        "ultimoRastreio": null,
+        "canonicalGoogle": null
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": [
+        {
+          "consulta": "o que é workstation",
+          "impressoes": 1,
+          "cliques": 0,
+          "posicao": 57
+        }
+      ]
+    },
+    {
+      "path": "/blog/como-instalar-windows-11-do-zero",
+      "sitemap": "sitemap-editorial.xml",
+      "segmento": "artigo",
+      "google": {
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": null,
+        "deltaImpressoes": 0,
+        "deltaCliques": 0,
+        "cobertura": "UNKNOWN",
+        "verdict": "UNKNOWN",
+        "ultimoRastreio": null,
+        "canonicalGoogle": null
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": []
+    },
+    {
+      "path": "/blog/como-resolver-tela-azul-windows",
+      "sitemap": "sitemap-editorial.xml",
+      "segmento": "artigo",
+      "google": {
+        "disponivel": true,
+        "impressoes": 1,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": 63,
+        "deltaImpressoes": 1,
+        "deltaCliques": 0,
+        "cobertura": "UNKNOWN",
+        "verdict": "UNKNOWN",
+        "ultimoRastreio": null,
+        "canonicalGoogle": null
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": [
+        {
+          "consulta": "tela azul",
+          "impressoes": 1,
+          "cliques": 0,
+          "posicao": 63
+        }
+      ]
+    },
+    {
+      "path": "/blog/como-trocar-tela-notebook-passo-a-passo",
+      "sitemap": "sitemap-editorial.xml",
+      "segmento": "artigo",
+      "google": {
+        "disponivel": true,
+        "impressoes": 12,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": 39.8,
+        "deltaImpressoes": 12,
+        "deltaCliques": 0,
+        "cobertura": "UNKNOWN",
+        "verdict": "UNKNOWN",
+        "ultimoRastreio": null,
+        "canonicalGoogle": null
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": [
+        {
+          "consulta": "troca de tela de notebook",
+          "impressoes": 2,
+          "cliques": 0,
+          "posicao": 66
+        },
+        {
+          "consulta": "troca tela notebook",
+          "impressoes": 2,
+          "cliques": 0,
+          "posicao": 34
+        },
+        {
+          "consulta": "trocar tela do notebook",
+          "impressoes": 2,
+          "cliques": 0,
+          "posicao": 35.5
+        },
+        {
+          "consulta": "trocar tela notebook",
+          "impressoes": 2,
+          "cliques": 0,
+          "posicao": 38.5
+        },
+        {
+          "consulta": "como trocar a tela do notebook",
+          "impressoes": 1,
+          "cliques": 0,
+          "posicao": 34
+        },
+        {
+          "consulta": "como trocar tela de notebook",
+          "impressoes": 1,
+          "cliques": 0,
+          "posicao": 37
+        },
+        {
+          "consulta": "troca de tela notebook",
+          "impressoes": 1,
+          "cliques": 0,
+          "posicao": 52
+        }
+      ]
+    },
+    {
+      "path": "/blog/notebook-nao-liga-o-que-fazer",
+      "sitemap": "sitemap-editorial.xml",
+      "segmento": "artigo",
+      "google": {
+        "disponivel": true,
+        "impressoes": 4,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": 14.8,
+        "deltaImpressoes": 4,
+        "deltaCliques": 0,
+        "cobertura": "UNKNOWN",
+        "verdict": "UNKNOWN",
+        "ultimoRastreio": null,
+        "canonicalGoogle": null
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": []
+    },
+    {
+      "path": "/blog/computador-lento-causas-solucoes",
+      "sitemap": "sitemap-editorial.xml",
+      "segmento": "artigo",
+      "google": {
+        "disponivel": true,
+        "impressoes": 1,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": 9,
+        "deltaImpressoes": 1,
+        "deltaCliques": 0,
+        "cobertura": "UNKNOWN",
+        "verdict": "UNKNOWN",
+        "ultimoRastreio": null,
+        "canonicalGoogle": null
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": []
+    },
+    {
+      "path": "/blog/como-recuperar-dados-hd-com-defeito",
+      "sitemap": "sitemap-editorial.xml",
+      "segmento": "artigo",
+      "google": {
+        "disponivel": true,
+        "impressoes": 1,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": 49,
+        "deltaImpressoes": 1,
+        "deltaCliques": 0,
+        "cobertura": "UNKNOWN",
+        "verdict": "UNKNOWN",
+        "ultimoRastreio": null,
+        "canonicalGoogle": null
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": [
+        {
+          "consulta": "conserto de hd",
+          "impressoes": 1,
+          "cliques": 0,
+          "posicao": 49
+        }
+      ]
+    },
+    {
+      "path": "/blog/como-fazer-upgrade-ssd-nvme",
+      "sitemap": "sitemap-editorial.xml",
+      "segmento": "artigo",
+      "google": {
+        "disponivel": true,
+        "impressoes": 8,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": 9.1,
+        "deltaImpressoes": 8,
+        "deltaCliques": 0,
+        "cobertura": "UNKNOWN",
+        "verdict": "UNKNOWN",
+        "ultimoRastreio": null,
+        "canonicalGoogle": null
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": []
+    },
+    {
+      "path": "/blog/como-configurar-roteador-wifi-iniciantes",
+      "sitemap": "sitemap-editorial.xml",
+      "segmento": "artigo",
+      "google": {
+        "disponivel": true,
+        "impressoes": 7,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": 52.3,
+        "deltaImpressoes": 7,
+        "deltaCliques": 0,
+        "cobertura": "UNKNOWN",
+        "verdict": "UNKNOWN",
+        "ultimoRastreio": null,
+        "canonicalGoogle": null
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": [
+        {
+          "consulta": "como configurar o wi fi",
+          "impressoes": 1,
+          "cliques": 0,
+          "posicao": 45
+        },
+        {
+          "consulta": "como usar o roteador",
+          "impressoes": 1,
+          "cliques": 0,
+          "posicao": 48
+        },
+        {
+          "consulta": "como usar roteador",
+          "impressoes": 1,
+          "cliques": 0,
+          "posicao": 44
+        },
+        {
+          "consulta": "como usar um roteador",
+          "impressoes": 1,
+          "cliques": 0,
+          "posicao": 47
+        },
+        {
+          "consulta": "configuração de wi-fi",
+          "impressoes": 1,
+          "cliques": 0,
+          "posicao": 49
+        },
+        {
+          "consulta": "configuração do modem",
+          "impressoes": 1,
+          "cliques": 0,
+          "posicao": 67
+        },
+        {
+          "consulta": "roteador wifi como configurar",
+          "impressoes": 1,
+          "cliques": 0,
+          "posicao": 66
+        }
+      ]
+    },
+    {
+      "path": "/blog/como-saber-quem-esta-usando-meu-wifi",
+      "sitemap": "sitemap-editorial.xml",
+      "segmento": "artigo",
+      "google": {
+        "disponivel": true,
+        "impressoes": 18,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": 17.2,
+        "deltaImpressoes": 18,
+        "deltaCliques": 0,
+        "cobertura": "UNKNOWN",
+        "verdict": "UNKNOWN",
+        "ultimoRastreio": null,
+        "canonicalGoogle": null
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": [
+        {
+          "consulta": "como ver quantas pessoas estão conectadas no wifi",
+          "impressoes": 1,
+          "cliques": 0,
+          "posicao": 67
+        },
+        {
+          "consulta": "como ver quem está usando meu wifi",
+          "impressoes": 1,
+          "cliques": 0,
+          "posicao": 68
+        }
+      ]
+    },
+    {
+      "path": "/blog/como-escolher-um-bom-antivirus",
+      "sitemap": "sitemap-editorial.xml",
+      "segmento": "artigo",
+      "google": {
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": null,
+        "deltaImpressoes": 0,
+        "deltaCliques": 0,
+        "cobertura": "UNKNOWN",
+        "verdict": "UNKNOWN",
+        "ultimoRastreio": null,
+        "canonicalGoogle": null
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": []
+    },
+    {
+      "path": "/blog/como-proteger-computador-golpes-internet",
+      "sitemap": "sitemap-editorial.xml",
+      "segmento": "artigo",
+      "google": {
+        "disponivel": true,
+        "impressoes": 2,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": 5.5,
+        "deltaImpressoes": 2,
+        "deltaCliques": 0,
+        "cobertura": "UNKNOWN",
+        "verdict": "UNKNOWN",
+        "ultimoRastreio": null,
+        "canonicalGoogle": null
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": []
+    },
+    {
+      "path": "/blog/como-limpar-notebook-por-dentro",
+      "sitemap": "sitemap-editorial.xml",
+      "segmento": "artigo",
+      "google": {
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": null,
+        "deltaImpressoes": 0,
+        "deltaCliques": 0,
+        "cobertura": "UNKNOWN",
+        "verdict": "UNKNOWN",
+        "ultimoRastreio": null,
+        "canonicalGoogle": null
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": []
+    },
+    {
+      "path": "/blog/como-trocar-pasta-termica-notebook",
+      "sitemap": "sitemap-editorial.xml",
+      "segmento": "artigo",
+      "google": {
+        "disponivel": true,
+        "impressoes": 23,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": 17.7,
+        "deltaImpressoes": 23,
+        "deltaCliques": 0,
+        "cobertura": "UNKNOWN",
+        "verdict": "UNKNOWN",
+        "ultimoRastreio": null,
+        "canonicalGoogle": null
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": [
+        {
+          "consulta": "como trocar pasta termica",
+          "impressoes": 3,
+          "cliques": 0,
+          "posicao": 21.3
+        },
+        {
+          "consulta": "como trocar a pasta termica do notebook",
+          "impressoes": 2,
+          "cliques": 0,
+          "posicao": 21.5
+        },
+        {
+          "consulta": "troca da pasta termica",
+          "impressoes": 1,
+          "cliques": 0,
+          "posicao": 27
+        },
+        {
+          "consulta": "troca de pasta térmica",
+          "impressoes": 1,
+          "cliques": 0,
+          "posicao": 23
+        },
+        {
+          "consulta": "trocar pasta termica",
+          "impressoes": 1,
+          "cliques": 0,
+          "posicao": 32
+        },
+        {
+          "consulta": "trocar pasta termica notebook",
+          "impressoes": 1,
+          "cliques": 0,
+          "posicao": 28
+        }
+      ]
+    },
+    {
+      "path": "/blog/como-clonar-hd-para-ssd",
+      "sitemap": "sitemap-editorial.xml",
+      "segmento": "artigo",
+      "google": {
+        "disponivel": true,
+        "impressoes": 5,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": 8,
+        "deltaImpressoes": 5,
+        "deltaCliques": 0,
+        "cobertura": "UNKNOWN",
+        "verdict": "UNKNOWN",
+        "ultimoRastreio": null,
+        "canonicalGoogle": null
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": []
+    },
+    {
+      "path": "/blog/como-instalar-segundo-ssd-notebook",
+      "sitemap": "sitemap-editorial.xml",
+      "segmento": "artigo",
+      "google": {
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": null,
+        "deltaImpressoes": 0,
+        "deltaCliques": 0,
+        "cobertura": "UNKNOWN",
+        "verdict": "UNKNOWN",
+        "ultimoRastreio": null,
+        "canonicalGoogle": null
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": []
+    },
+    {
+      "path": "/blog/ransomware-como-proteger-empresa",
+      "sitemap": "sitemap-editorial.xml",
+      "segmento": "artigo",
+      "google": {
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": null,
+        "deltaImpressoes": 0,
+        "deltaCliques": 0,
+        "cobertura": "UNKNOWN",
+        "verdict": "UNKNOWN",
+        "ultimoRastreio": null,
+        "canonicalGoogle": null
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": []
+    },
+    {
+      "path": "/blog/backup-nuvem-empresas-qual-escolher",
+      "sitemap": "sitemap-editorial.xml",
+      "segmento": "artigo",
+      "google": {
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": null,
+        "deltaImpressoes": 0,
+        "deltaCliques": 0,
+        "cobertura": "UNKNOWN",
+        "verdict": "UNKNOWN",
+        "ultimoRastreio": null,
+        "canonicalGoogle": null
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": []
+    },
+    {
+      "path": "/blog/como-instalar-impressora-windows-passo-a-passo",
+      "sitemap": "sitemap-editorial.xml",
+      "segmento": "artigo",
+      "google": {
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": null,
+        "deltaImpressoes": 0,
+        "deltaCliques": 0,
+        "cobertura": "UNKNOWN",
+        "verdict": "UNKNOWN",
+        "ultimoRastreio": null,
+        "canonicalGoogle": null
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": []
+    },
+    {
+      "path": "/blog/como-conectar-wifi-tv-nao-conecta",
+      "sitemap": "sitemap-editorial.xml",
+      "segmento": "artigo",
+      "google": {
+        "disponivel": true,
+        "impressoes": 155,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": 9.1,
+        "deltaImpressoes": 155,
+        "deltaCliques": 0,
+        "cobertura": "UNKNOWN",
+        "verdict": "UNKNOWN",
+        "ultimoRastreio": null,
+        "canonicalGoogle": null
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": []
+    },
+    {
+      "path": "/blog/como-testar-fonte-de-alimentacao-pc",
+      "sitemap": "sitemap-editorial.xml",
+      "segmento": "artigo",
+      "google": {
+        "disponivel": true,
+        "impressoes": 3,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": 9.7,
+        "deltaImpressoes": 3,
+        "deltaCliques": 0,
+        "cobertura": "UNKNOWN",
+        "verdict": "UNKNOWN",
+        "ultimoRastreio": null,
+        "canonicalGoogle": null
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": []
+    },
+    {
+      "path": "/blog/como-diagnosticar-placa-mae-defeituosa",
+      "sitemap": "sitemap-editorial.xml",
+      "segmento": "artigo",
+      "google": {
+        "disponivel": true,
+        "impressoes": 13,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": 12.7,
+        "deltaImpressoes": 13,
+        "deltaCliques": 0,
+        "cobertura": "UNKNOWN",
+        "verdict": "UNKNOWN",
+        "ultimoRastreio": null,
+        "canonicalGoogle": null
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": []
+    },
+    {
+      "path": "/blog/windows-11-lento-como-resolver",
+      "sitemap": "sitemap-editorial.xml",
+      "segmento": "artigo",
+      "google": {
+        "disponivel": true,
+        "impressoes": 3,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": 5.3,
+        "deltaImpressoes": 3,
+        "deltaCliques": 0,
+        "cobertura": "UNKNOWN",
+        "verdict": "UNKNOWN",
+        "ultimoRastreio": null,
+        "canonicalGoogle": null
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": []
+    },
+    {
+      "path": "/blog/como-remover-virus-windows-iniciantes",
+      "sitemap": "sitemap-editorial.xml",
+      "segmento": "artigo",
+      "google": {
+        "disponivel": true,
+        "impressoes": 2,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": 28,
+        "deltaImpressoes": 2,
+        "deltaCliques": 0,
+        "cobertura": "UNKNOWN",
+        "verdict": "UNKNOWN",
+        "ultimoRastreio": null,
+        "canonicalGoogle": null
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": []
+    },
+    {
+      "path": "/blog/como-formatar-pc-sem-perder-arquivos",
+      "sitemap": "sitemap-editorial.xml",
+      "segmento": "artigo",
+      "google": {
+        "disponivel": true,
+        "impressoes": 21,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": 9.6,
+        "deltaImpressoes": 21,
+        "deltaCliques": 0,
+        "cobertura": "UNKNOWN",
+        "verdict": "UNKNOWN",
+        "ultimoRastreio": null,
+        "canonicalGoogle": null
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": []
+    },
+    {
+      "path": "/blog/quanto-custa-formatar-um-computador",
+      "sitemap": "sitemap-editorial.xml",
+      "segmento": "artigo",
+      "google": {
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": null,
+        "deltaImpressoes": 0,
+        "deltaCliques": 0,
+        "cobertura": "UNKNOWN",
+        "verdict": "UNKNOWN",
+        "ultimoRastreio": null,
+        "canonicalGoogle": null
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": []
+    },
+    {
+      "path": "/blog/o-que-e-informatica",
+      "sitemap": "sitemap-editorial.xml",
+      "segmento": "artigo",
+      "google": {
+        "disponivel": true,
+        "impressoes": 53,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": 67.2,
+        "deltaImpressoes": 53,
+        "deltaCliques": 0,
+        "cobertura": "UNKNOWN",
+        "verdict": "UNKNOWN",
+        "ultimoRastreio": null,
+        "canonicalGoogle": null
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": [
+        {
+          "consulta": "informática",
+          "impressoes": 24,
+          "cliques": 0,
+          "posicao": 68.6
+        },
+        {
+          "consulta": "informatica",
+          "impressoes": 16,
+          "cliques": 0,
+          "posicao": 74.2
+        },
+        {
+          "consulta": "o que significa a palavra informatica",
+          "impressoes": 3,
+          "cliques": 0,
+          "posicao": 53
+        },
+        {
+          "consulta": "o que significa informatica",
+          "impressoes": 3,
+          "cliques": 0,
+          "posicao": 55.3
+        },
+        {
+          "consulta": "area de informatica",
+          "impressoes": 1,
+          "cliques": 0,
+          "posicao": 60
+        },
+        {
+          "consulta": "informaica",
+          "impressoes": 1,
+          "cliques": 0,
+          "posicao": 51
+        },
+        {
+          "consulta": "informaticamente",
+          "impressoes": 1,
+          "cliques": 0,
+          "posicao": 64
+        },
+        {
+          "consulta": "infromatica",
+          "impressoes": 1,
+          "cliques": 0,
+          "posicao": 51
+        },
+        {
+          "consulta": "o q é informatica",
+          "impressoes": 1,
+          "cliques": 0,
+          "posicao": 48
+        },
+        {
+          "consulta": "o que significa informática",
+          "impressoes": 1,
+          "cliques": 0,
+          "posicao": 53
+        }
+      ]
+    },
+    {
+      "path": "/blog/informatica-basica",
+      "sitemap": "sitemap-editorial.xml",
+      "segmento": "artigo",
+      "google": {
+        "disponivel": true,
+        "impressoes": 37,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": 50,
+        "deltaImpressoes": 37,
+        "deltaCliques": 0,
+        "cobertura": "UNKNOWN",
+        "verdict": "UNKNOWN",
+        "ultimoRastreio": null,
+        "canonicalGoogle": null
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": [
+        {
+          "consulta": "conhecimento basico informatica",
+          "impressoes": 9,
+          "cliques": 0,
+          "posicao": 50.3
+        },
+        {
+          "consulta": "informatica basica",
+          "impressoes": 4,
+          "cliques": 0,
+          "posicao": 43.3
+        },
+        {
+          "consulta": "informatica basica conteudo",
+          "impressoes": 4,
+          "cliques": 0,
+          "posicao": 57.5
+        },
+        {
+          "consulta": "conhecimentos basicos de informatica",
+          "impressoes": 3,
+          "cliques": 0,
+          "posicao": 50.3
+        },
+        {
+          "consulta": "informatica basica resumo",
+          "impressoes": 3,
+          "cliques": 0,
+          "posicao": 33.3
+        },
+        {
+          "consulta": "noções básicas de informática",
+          "impressoes": 3,
+          "cliques": 0,
+          "posicao": 57
+        },
+        {
+          "consulta": "tudo sobre informatica basica",
+          "impressoes": 3,
+          "cliques": 0,
+          "posicao": 64
+        },
+        {
+          "consulta": "informática basica",
+          "impressoes": 2,
+          "cliques": 0,
+          "posicao": 54
+        },
+        {
+          "consulta": "conhecimento basico de informatica",
+          "impressoes": 1,
+          "cliques": 0,
+          "posicao": 53
+        },
+        {
+          "consulta": "conhecimento basico em informatica",
+          "impressoes": 1,
+          "cliques": 0,
+          "posicao": 40
+        }
+      ]
+    },
+    {
+      "path": "/blog/como-aprender-informatica",
+      "sitemap": "sitemap-editorial.xml",
+      "segmento": "artigo",
+      "google": {
+        "disponivel": true,
+        "impressoes": 6,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": 48.3,
+        "deltaImpressoes": 6,
+        "deltaCliques": 0,
+        "cobertura": "UNKNOWN",
+        "verdict": "UNKNOWN",
+        "ultimoRastreio": null,
+        "canonicalGoogle": null
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": [
+        {
+          "consulta": "dicas de informática básica",
+          "impressoes": 2,
+          "cliques": 0,
+          "posicao": 62.5
+        },
+        {
+          "consulta": "informática para iniciantes",
+          "impressoes": 2,
+          "cliques": 0,
+          "posicao": 33.5
+        },
+        {
+          "consulta": "como aprender informática do zero",
+          "impressoes": 1,
+          "cliques": 0,
+          "posicao": 42
+        },
+        {
+          "consulta": "dicas de informática",
+          "impressoes": 1,
+          "cliques": 0,
+          "posicao": 56
+        }
+      ]
+    },
+    {
+      "path": "/blog/computador-entra-direto-na-bios",
+      "sitemap": "sitemap-editorial.xml",
+      "segmento": "artigo",
+      "google": {
+        "disponivel": true,
+        "impressoes": 1,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": 52,
+        "deltaImpressoes": 1,
+        "deltaCliques": 0,
+        "cobertura": "UNKNOWN",
+        "verdict": "UNKNOWN",
+        "ultimoRastreio": null,
+        "canonicalGoogle": null
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": [
+        {
+          "consulta": "como entrar na bios com o pc ligado",
+          "impressoes": 1,
+          "cliques": 0,
+          "posicao": 52
+        }
+      ]
+    },
+    {
+      "path": "/blog/erro-no-bootable-device-como-resolver",
+      "sitemap": "sitemap-editorial.xml",
+      "segmento": "artigo",
+      "google": {
+        "disponivel": true,
+        "impressoes": 3,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": 42.7,
+        "deltaImpressoes": 3,
+        "deltaCliques": 0,
+        "cobertura": "UNKNOWN",
+        "verdict": "UNKNOWN",
+        "ultimoRastreio": null,
+        "canonicalGoogle": null
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": [
+        {
+          "consulta": "no boot device found",
+          "impressoes": 1,
+          "cliques": 0,
+          "posicao": 42
+        },
+        {
+          "consulta": "no bootable device como resolver",
+          "impressoes": 1,
+          "cliques": 0,
+          "posicao": 39
+        },
+        {
+          "consulta": "no bootable device found",
+          "impressoes": 1,
+          "cliques": 0,
+          "posicao": 47
+        }
+      ]
+    },
+    {
+      "path": "/blog/troquei-o-ssd-e-o-pc-so-abre-a-bios",
+      "sitemap": "sitemap-editorial.xml",
+      "segmento": "artigo",
+      "google": {
+        "disponivel": true,
+        "impressoes": 6,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": 15.3,
+        "deltaImpressoes": 6,
+        "deltaCliques": 0,
+        "cobertura": "UNKNOWN",
+        "verdict": "UNKNOWN",
+        "ultimoRastreio": null,
+        "canonicalGoogle": null
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": []
+    },
+    {
+      "path": "/blog/limpar-arquivos-temporarios-windows",
+      "sitemap": "sitemap-editorial.xml",
+      "segmento": "artigo",
+      "google": {
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": null,
+        "deltaImpressoes": 0,
+        "deltaCliques": 0,
+        "cobertura": "UNKNOWN",
+        "verdict": "UNKNOWN",
+        "ultimoRastreio": null,
+        "canonicalGoogle": null
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": []
+    },
+    {
+      "path": "/blog/memoria-ram-insuficiente-sintomas",
+      "sitemap": "sitemap-editorial.xml",
+      "segmento": "artigo",
+      "google": {
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": null,
+        "deltaImpressoes": 0,
+        "deltaCliques": 0,
+        "cobertura": "UNKNOWN",
+        "verdict": "UNKNOWN",
+        "ultimoRastreio": null,
+        "canonicalGoogle": null
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": []
+    },
+    {
+      "path": "/blog/codigos-de-erro-tela-azul-windows",
+      "sitemap": "sitemap-editorial.xml",
+      "segmento": "artigo",
+      "google": {
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": null,
+        "deltaImpressoes": 0,
+        "deltaCliques": 0,
+        "cobertura": "UNKNOWN",
+        "verdict": "UNKNOWN",
+        "ultimoRastreio": null,
+        "canonicalGoogle": null
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": []
+    },
+    {
+      "path": "/blog/testar-memoria-ram-memtest86",
+      "sitemap": "sitemap-editorial.xml",
+      "segmento": "artigo",
+      "google": {
+        "disponivel": true,
+        "impressoes": 1,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": 9,
+        "deltaImpressoes": 1,
+        "deltaCliques": 0,
+        "cobertura": "UNKNOWN",
+        "verdict": "UNKNOWN",
+        "ultimoRastreio": null,
+        "canonicalGoogle": null
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": []
+    },
+    {
+      "path": "/blog/botao-power-nao-funciona-jump-start-placa-mae",
+      "sitemap": "sitemap-editorial.xml",
+      "segmento": "artigo",
+      "google": {
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": null,
+        "deltaImpressoes": 0,
+        "deltaCliques": 0,
+        "cobertura": "UNKNOWN",
+        "verdict": "UNKNOWN",
+        "ultimoRastreio": null,
+        "canonicalGoogle": null
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": []
+    },
+    {
+      "path": "/blog/curto-circuito-placa-mae-como-identificar",
+      "sitemap": "sitemap-editorial.xml",
+      "segmento": "artigo",
+      "google": {
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": null,
+        "deltaImpressoes": 0,
+        "deltaCliques": 0,
+        "cobertura": "UNKNOWN",
+        "verdict": "UNKNOWN",
+        "ultimoRastreio": null,
+        "canonicalGoogle": null
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": []
+    },
+    {
+      "path": "/blog/bios-corrompida-reset-cmos-atualizacao",
+      "sitemap": "sitemap-editorial.xml",
+      "segmento": "artigo",
+      "google": {
+        "disponivel": true,
+        "impressoes": 1,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": 46,
+        "deltaImpressoes": 1,
+        "deltaCliques": 0,
+        "cobertura": "UNKNOWN",
+        "verdict": "UNKNOWN",
+        "ultimoRastreio": null,
+        "canonicalGoogle": null
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": [
+        {
+          "consulta": "bios corrompida",
+          "impressoes": 1,
+          "cliques": 0,
+          "posicao": 46
+        }
+      ]
+    },
+    {
+      "path": "/blog/internet-lenta-provedor-ou-roteador",
+      "sitemap": "sitemap-editorial.xml",
+      "segmento": "artigo",
+      "google": {
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": null,
+        "deltaImpressoes": 0,
+        "deltaCliques": 0,
+        "cobertura": "UNKNOWN",
+        "verdict": "UNKNOWN",
+        "ultimoRastreio": null,
+        "canonicalGoogle": null
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": []
+    },
+    {
+      "path": "/blog/impressora-offline-como-resolver",
+      "sitemap": "sitemap-editorial.xml",
+      "segmento": "artigo",
+      "google": {
+        "disponivel": true,
+        "impressoes": 4,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": 57.3,
+        "deltaImpressoes": 4,
+        "deltaCliques": 0,
+        "cobertura": "UNKNOWN",
+        "verdict": "UNKNOWN",
+        "ultimoRastreio": null,
+        "canonicalGoogle": null
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": [
+        {
+          "consulta": "como tirar impressora do offline",
+          "impressoes": 1,
+          "cliques": 0,
+          "posicao": 64
+        },
+        {
+          "consulta": "porque a impressora fica offline",
+          "impressoes": 1,
+          "cliques": 0,
+          "posicao": 52
+        }
+      ]
+    },
+    {
+      "path": "/blog/fila-de-impressao-travada-spooler-windows",
+      "sitemap": "sitemap-editorial.xml",
+      "segmento": "artigo",
+      "google": {
+        "disponivel": true,
+        "impressoes": 4,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": 53,
+        "deltaImpressoes": 4,
+        "deltaCliques": 0,
+        "cobertura": "UNKNOWN",
+        "verdict": "UNKNOWN",
+        "ultimoRastreio": null,
+        "canonicalGoogle": null
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": [
+        {
+          "consulta": "reiniciar spooler de impressão",
+          "impressoes": 1,
+          "cliques": 0,
+          "posicao": 52
+        },
+        {
+          "consulta": "reiniciar spooler de impressão cmd",
+          "impressoes": 1,
+          "cliques": 0,
+          "posicao": 50
+        },
+        {
+          "consulta": "spool impressora",
+          "impressoes": 1,
+          "cliques": 0,
+          "posicao": 58
+        },
+        {
+          "consulta": "spooler impressora",
+          "impressoes": 1,
+          "cliques": 0,
+          "posicao": 52
+        }
+      ]
+    },
+    {
+      "path": "/blog/hd-nao-e-reconhecido-na-bios-o-que-fazer",
+      "sitemap": "sitemap-editorial.xml",
+      "segmento": "artigo",
+      "google": {
+        "disponivel": true,
+        "impressoes": 10,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": 29.3,
+        "deltaImpressoes": 10,
+        "deltaCliques": 0,
+        "cobertura": "UNKNOWN",
+        "verdict": "UNKNOWN",
+        "ultimoRastreio": null,
+        "canonicalGoogle": null
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": [
+        {
+          "consulta": "computador nao reconhece hd",
+          "impressoes": 4,
+          "cliques": 0,
+          "posicao": 30
+        },
+        {
+          "consulta": "pc não reconhece hd",
+          "impressoes": 4,
+          "cliques": 0,
+          "posicao": 27
+        },
+        {
+          "consulta": "ssd nao reconhecido",
+          "impressoes": 1,
+          "cliques": 0,
+          "posicao": 39
+        }
+      ]
+    },
+    {
+      "path": "/blog/ssd-nvme-nao-aparece-no-gerenciador-de-discos",
+      "sitemap": "sitemap-editorial.xml",
+      "segmento": "artigo",
+      "google": {
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": null,
+        "deltaImpressoes": 0,
+        "deltaCliques": 0,
+        "cobertura": "UNKNOWN",
+        "verdict": "UNKNOWN",
+        "ultimoRastreio": null,
+        "canonicalGoogle": null
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": []
+    },
+    {
+      "path": "/blog/disco-com-setores-defeituosos-smart-o-que-fazer",
+      "sitemap": "sitemap-editorial.xml",
+      "segmento": "artigo",
+      "google": {
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": null,
+        "deltaImpressoes": 0,
+        "deltaCliques": 0,
+        "cobertura": "UNKNOWN",
+        "verdict": "UNKNOWN",
+        "ultimoRastreio": null,
+        "canonicalGoogle": null
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": []
+    },
+    {
+      "path": "/blog/computador-sem-som-o-que-verificar",
+      "sitemap": "sitemap-editorial.xml",
+      "segmento": "artigo",
+      "google": {
+        "disponivel": true,
+        "impressoes": 3,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": 50.3,
+        "deltaImpressoes": 3,
+        "deltaCliques": 0,
+        "cobertura": "UNKNOWN",
+        "verdict": "UNKNOWN",
+        "ultimoRastreio": null,
+        "canonicalGoogle": null
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": [
+        {
+          "consulta": "sem som",
+          "impressoes": 2,
+          "cliques": 0,
+          "posicao": 44
+        },
+        {
+          "consulta": "testar som pc",
+          "impressoes": 1,
+          "cliques": 0,
+          "posicao": 63
+        }
+      ]
+    },
+    {
+      "path": "/blog/fone-de-ouvido-nao-e-reconhecido-no-pc",
+      "sitemap": "sitemap-editorial.xml",
+      "segmento": "artigo",
+      "google": {
+        "disponivel": true,
+        "impressoes": 2,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": 28,
+        "deltaImpressoes": 2,
+        "deltaCliques": 0,
+        "cobertura": "UNKNOWN",
+        "verdict": "UNKNOWN",
+        "ultimoRastreio": null,
+        "canonicalGoogle": null
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": [
+        {
+          "consulta": "pc não reconhece fone de ouvido",
+          "impressoes": 1,
+          "cliques": 0,
+          "posicao": 29
+        }
+      ]
+    },
+    {
+      "path": "/blog/servico-de-audio-do-windows-nao-esta-em-execucao",
+      "sitemap": "sitemap-editorial.xml",
+      "segmento": "artigo",
+      "google": {
+        "disponivel": true,
+        "impressoes": 1,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": 38,
+        "deltaImpressoes": 1,
+        "deltaCliques": 0,
+        "cobertura": "UNKNOWN",
+        "verdict": "UNKNOWN",
+        "ultimoRastreio": null,
+        "canonicalGoogle": null
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": [
+        {
+          "consulta": "audio.exe",
+          "impressoes": 1,
+          "cliques": 0,
+          "posicao": 38
+        }
+      ]
+    },
+    {
+      "path": "/blog/webcam-nao-funciona-o-que-verificar",
+      "sitemap": "sitemap-editorial.xml",
+      "segmento": "artigo",
+      "google": {
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": null,
+        "deltaImpressoes": 0,
+        "deltaCliques": 0,
+        "cobertura": "UNKNOWN",
+        "verdict": "UNKNOWN",
+        "ultimoRastreio": null,
+        "canonicalGoogle": null
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": []
+    },
+    {
+      "path": "/blog/permissoes-de-camera-no-windows",
+      "sitemap": "sitemap-editorial.xml",
+      "segmento": "artigo",
+      "google": {
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": null,
+        "deltaImpressoes": 0,
+        "deltaCliques": 0,
+        "cobertura": "UNKNOWN",
+        "verdict": "UNKNOWN",
+        "ultimoRastreio": null,
+        "canonicalGoogle": null
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": []
+    },
+    {
+      "path": "/blog/webcam-usb-nao-e-detectada",
+      "sitemap": "sitemap-editorial.xml",
+      "segmento": "artigo",
+      "google": {
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": null,
+        "deltaImpressoes": 0,
+        "deltaCliques": 0,
+        "cobertura": "UNKNOWN",
+        "verdict": "UNKNOWN",
+        "ultimoRastreio": null,
+        "canonicalGoogle": null
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": []
+    },
+    {
+      "path": "/blog/windows-update-nao-funciona-o-que-verificar",
+      "sitemap": "sitemap-editorial.xml",
+      "segmento": "artigo",
+      "google": {
+        "disponivel": true,
+        "impressoes": 1,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": 51,
+        "deltaImpressoes": 1,
+        "deltaCliques": 0,
+        "cobertura": "UNKNOWN",
+        "verdict": "UNKNOWN",
+        "ultimoRastreio": null,
+        "canonicalGoogle": null
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": [
+        {
+          "consulta": "estagio da correção c",
+          "impressoes": 1,
+          "cliques": 0,
+          "posicao": 51
+        }
+      ]
+    },
+    {
+      "path": "/blog/limpar-cache-do-windows-update-softwaredistribution",
+      "sitemap": "sitemap-editorial.xml",
+      "segmento": "artigo",
+      "google": {
+        "disponivel": true,
+        "impressoes": 4,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": 68,
+        "deltaImpressoes": 4,
+        "deltaCliques": 0,
+        "cobertura": "UNKNOWN",
+        "verdict": "UNKNOWN",
+        "ultimoRastreio": null,
+        "canonicalGoogle": null
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": []
+    },
+    {
+      "path": "/blog/windows-update-travado-desfazendo-alteracoes",
+      "sitemap": "sitemap-editorial.xml",
+      "segmento": "artigo",
+      "google": {
+        "disponivel": true,
+        "impressoes": 2,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": 16,
+        "deltaImpressoes": 2,
+        "deltaCliques": 0,
+        "cobertura": "UNKNOWN",
+        "verdict": "UNKNOWN",
+        "ultimoRastreio": null,
+        "canonicalGoogle": null
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": [
+        {
+          "consulta": "desfazendo alterações feitas no computador",
+          "impressoes": 1,
+          "cliques": 0,
+          "posicao": 22
+        }
+      ]
+    },
+    {
+      "path": "/blog/boot-uefi-ou-legacy-como-identificar",
+      "sitemap": "sitemap-editorial.xml",
+      "segmento": "artigo",
+      "google": {
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": null,
+        "deltaImpressoes": 0,
+        "deltaCliques": 0,
+        "cobertura": "UNKNOWN",
+        "verdict": "UNKNOWN",
+        "ultimoRastreio": null,
+        "canonicalGoogle": null
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": []
+    },
+    {
+      "path": "/blog/ordem-de-boot-na-bios-como-configurar",
+      "sitemap": "sitemap-editorial.xml",
+      "segmento": "artigo",
+      "google": {
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": null,
+        "deltaImpressoes": 0,
+        "deltaCliques": 0,
+        "cobertura": "UNKNOWN",
+        "verdict": "UNKNOWN",
+        "ultimoRastreio": null,
+        "canonicalGoogle": null
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": []
+    },
+    {
+      "path": "/blog/windows-reparo-automatico-em-loop",
+      "sitemap": "sitemap-editorial.xml",
+      "segmento": "artigo",
+      "google": {
+        "disponivel": true,
+        "impressoes": 0,
+        "cliques": 0,
+        "ctr": 0,
+        "posicao": null,
+        "deltaImpressoes": 0,
+        "deltaCliques": 0,
+        "cobertura": "UNKNOWN",
+        "verdict": "UNKNOWN",
+        "ultimoRastreio": null,
+        "canonicalGoogle": null
+      },
+      "bing": {
+        "disponivel": false,
+        "impressoes": null,
+        "cliques": null
+      },
+      "consultas": []
+    }
+  ],
+  "limitacoes": "Indexação real depende do Google e do Bing. Este ledger mede cobertura técnica curada, estado lido via URL Inspection (somente leitura) e desempenho observado — nunca garante 100% de indexação."
+}

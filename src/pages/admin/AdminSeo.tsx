@@ -7,6 +7,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { supabase } from "@/integrations/supabase/client";
 import { siteConfig } from "@/lib/siteConfig";
 import { SitemapLedgerPanel } from "@/components/admin/SitemapLedgerPanel";
+import { IndexacaoLedgerPanel } from "@/components/admin/IndexacaoLedgerPanel";
 
 
 /**
@@ -220,6 +221,8 @@ export default function AdminSeo() {
       </div>
 
       <SitemapLedgerPanel />
+
+      <IndexacaoLedgerPanel />
 
 
 
