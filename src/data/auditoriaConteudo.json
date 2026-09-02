@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-09-02T04:35:12.908Z",
+  "geradoEm": "2026-09-02T04:35:35.481Z",
   "fonte": "sitemap curado (scripts/lib/curated-urls.mjs) + SSR real",
   "ssr": {
     "base": "http://localhost:8080",
@@ -12,9 +12,9 @@
   },
   "total": 233,
   "porStatus": {
-    "OK": 192,
+    "OK": 197,
     "ALERTA_TECNICO": 29,
-    "ALERTA_EDITORIAL": 12
+    "ALERTA_EDITORIAL": 7
   },
   "familias": [
     {
@@ -73,12 +73,12 @@
       "id": "glossario",
       "titulo": "Glossário",
       "urls": 19,
-      "ok": 15,
+      "ok": 18,
       "alertaTecnico": 0,
-      "alertaEditorial": 4,
+      "alertaEditorial": 1,
       "pendenteRevisao": 0,
       "pendenteSsr": 0,
-      "semFonte": 4,
+      "semFonte": 1,
       "semLimite": 1,
       "condicionais": 0
     },
@@ -99,9 +99,9 @@
       "id": "decisao",
       "titulo": "Guia de decisão",
       "urls": 10,
-      "ok": 8,
+      "ok": 10,
       "alertaTecnico": 0,
-      "alertaEditorial": 2,
+      "alertaEditorial": 0,
       "pendenteRevisao": 0,
       "pendenteSsr": 0,
       "semFonte": 0,
@@ -3910,20 +3910,18 @@
         "WebPage",
         "WebSite"
       ],
-      "palavras": 907,
+      "palavras": 943,
       "fontesPrimarias": true,
       "limiteSeguranca": true,
       "ligacoes": {
-        "ferramenta": false,
+        "ferramenta": true,
         "decisao": false,
         "servico": true,
         "entidade": false,
-        "problema": false
+        "problema": true
       },
       "alertasTecnicos": [],
-      "alertasEditoriais": [
-        "ligação semântica insuficiente (<2 destinos)"
-      ],
+      "alertasEditoriais": [],
       "ssr": "OK",
       "claims": {
         "COMPROVADA": 0,
@@ -3932,7 +3930,7 @@
         "REMOVIDA": 0,
         "PENDENTE": 0
       },
-      "status": "ALERTA_EDITORIAL"
+      "status": "OK"
     },
     {
       "path": "/decisoes/formatar-ou-reparar",
@@ -4092,20 +4090,18 @@
         "WebPage",
         "WebSite"
       ],
-      "palavras": 865,
+      "palavras": 902,
       "fontesPrimarias": true,
       "limiteSeguranca": true,
       "ligacoes": {
-        "ferramenta": false,
+        "ferramenta": true,
         "decisao": false,
         "servico": true,
         "entidade": false,
-        "problema": false
+        "problema": true
       },
       "alertasTecnicos": [],
-      "alertasEditoriais": [
-        "ligação semântica insuficiente (<2 destinos)"
-      ],
+      "alertasEditoriais": [],
       "ssr": "OK",
       "claims": {
         "COMPROVADA": 0,
@@ -4114,7 +4110,7 @@
         "REMOVIDA": 0,
         "PENDENTE": 0
       },
-      "status": "ALERTA_EDITORIAL"
+      "status": "OK"
     },
     {
       "path": "/decisoes/ssd-ou-memoria-ram",
@@ -5460,8 +5456,8 @@
         "WebPage",
         "WebSite"
       ],
-      "palavras": 679,
-      "fontesPrimarias": false,
+      "palavras": 695,
+      "fontesPrimarias": true,
       "limiteSeguranca": true,
       "ligacoes": {
         "ferramenta": true,
@@ -5471,9 +5467,7 @@
         "problema": true
       },
       "alertasTecnicos": [],
-      "alertasEditoriais": [
-        "sem fonte primária citada"
-      ],
+      "alertasEditoriais": [],
       "ssr": "OK",
       "claims": {
         "COMPROVADA": 0,
@@ -5482,7 +5476,7 @@
         "REMOVIDA": 0,
         "PENDENTE": 0
       },
-      "status": "ALERTA_EDITORIAL"
+      "status": "OK"
     },
     {
       "path": "/glossario/nat",
@@ -5606,8 +5600,8 @@
         "WebPage",
         "WebSite"
       ],
-      "palavras": 697,
-      "fontesPrimarias": false,
+      "palavras": 721,
+      "fontesPrimarias": true,
       "limiteSeguranca": true,
       "ligacoes": {
         "ferramenta": true,
@@ -5617,9 +5611,7 @@
         "problema": true
       },
       "alertasTecnicos": [],
-      "alertasEditoriais": [
-        "sem fonte primária citada"
-      ],
+      "alertasEditoriais": [],
       "ssr": "OK",
       "claims": {
         "COMPROVADA": 0,
@@ -5628,7 +5620,7 @@
         "REMOVIDA": 0,
         "PENDENTE": 0
       },
-      "status": "ALERTA_EDITORIAL"
+      "status": "OK"
     },
     {
       "path": "/glossario/secure-boot",
@@ -5680,8 +5672,8 @@
         "WebPage",
         "WebSite"
       ],
-      "palavras": 650,
-      "fontesPrimarias": false,
+      "palavras": 666,
+      "fontesPrimarias": true,
       "limiteSeguranca": true,
       "ligacoes": {
         "ferramenta": true,
@@ -5691,9 +5683,7 @@
         "problema": true
       },
       "alertasTecnicos": [],
-      "alertasEditoriais": [
-        "sem fonte primária citada"
-      ],
+      "alertasEditoriais": [],
       "ssr": "OK",
       "claims": {
         "COMPROVADA": 0,
@@ -5702,7 +5692,7 @@
         "REMOVIDA": 0,
         "PENDENTE": 0
       },
-      "status": "ALERTA_EDITORIAL"
+      "status": "OK"
     },
     {
       "path": "/glossario/ssd",
@@ -6758,12 +6748,10 @@
       "description": "Backup para empresas em Curitiba: implantação da rotina no local, cópia fora do escritório e teste de restauração periódico para você saber que o backup funciona.",
       "canonical": "https://otecnicodeinformatica.com.br/servicos/backup-para-empresas/curitiba",
       "jsonLd": [
-        "BreadcrumbList",
         "FAQPage",
         "LocalBusiness",
         "Organization",
         "Service",
-        "WebPage",
         "WebSite"
       ],
       "palavras": 1498,
