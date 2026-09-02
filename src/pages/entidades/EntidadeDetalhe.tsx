@@ -8,6 +8,7 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 import { Button } from "@/components/ui/button";
 import NotFound from "@/pages/NotFound";
 import { FontesPrimarias } from "@/components/BlocosEnriquecimento";
+import { LIMITES_ENTIDADE } from "@/lib/entidades";
 import { SCHEMA_SLOTS, SLOT_PRIORITY, useJsonLdSlot } from "@/lib/jsonLdSlots";
 import { SITE_BASE_URL, whatsappLink } from "@/lib/siteConfig";
 import { trackPageView, trackCTAClick } from "@/lib/analytics";
@@ -243,6 +244,24 @@ const EntidadeDetalhe = () => {
                   >
                     {r.nome}
                   </Link>
+                </li>
+              ))}
+            </ul>
+          </section>
+        ) : null}
+
+        {LIMITES_ENTIDADE[entidade.slug] ? (
+          <section
+            className="mt-12 rounded-xl border border-destructive/30 bg-destructive/5 p-6"
+            aria-labelledby="limite-entidade"
+          >
+            <h2 id="limite-entidade" className="font-heading text-lg font-bold text-foreground">
+              Até onde ir sozinho — e quando parar
+            </h2>
+            <ul className="mt-3 space-y-2">
+              {LIMITES_ENTIDADE[entidade.slug].map((item) => (
+                <li key={item} className="text-sm leading-relaxed text-muted-foreground">
+                  {item}
                 </li>
               ))}
             </ul>
