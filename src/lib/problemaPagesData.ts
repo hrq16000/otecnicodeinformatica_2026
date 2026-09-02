@@ -241,7 +241,7 @@ Computador lento é um dos motivos de chamado mais frequentes em Curitiba e regi
     ],
     diagnostico: `O diagnóstico de computador lento analisa: velocidade real do disco (leitura/escrita), uso de memória RAM, temperatura do processador, presença de malware, integridade do Windows e saúde do HD/SSD.
 
-Em 80% dos casos que atendemos, a causa principal é HD mecânico antigo + pouca RAM. A solução mais eficiente é upgrade para SSD + 8GB de RAM, combinado com instalação limpa do Windows.`,
+Na maioria dos casos, a causa principal é HD mecânico antigo somado a pouca RAM. A solução mais eficiente é upgrade para SSD + 8GB de RAM, combinado com instalação limpa do Windows.`,
     solucao: `A solução depende do diagnóstico. Para a maioria dos computadores lentos: upgrade de SSD (melhoria de 5-10x na velocidade) + limpeza de software resolve. Para casos com hardware defasado, recomendamos a troca com transparência total sobre custos.
 
 Sempre apresentamos as opções e deixamos o cliente decidir. Não forçamos upgrade desnecessário nem prometemos milagre.`,
@@ -662,7 +662,7 @@ Mas nem sempre é só o disco. Pouca RAM, superaquecimento, malware e até bater
       { titulo: "Lento mesmo após formatação", desc: "Formatou e continua lento. Problema é hardware (HD antigo ou RAM insuficiente).", gravidade: "Simples" },
     ],
     causas: [
-      { titulo: "HD mecânico antigo", desc: "90% dos notebooks lentos que atendemos têm HD mecânico. A troca por SSD é a melhoria mais impactante.", tipo: "hardware" },
+      { titulo: "HD mecânico antigo", desc: "Boa parte dos notebooks lentos ainda usa HD mecânico. A troca por SSD é a melhoria mais impactante.", tipo: "hardware" },
       { titulo: "RAM insuficiente (4GB)", desc: "Windows 11 + Chrome com 3 abas já esgota 4GB. 8GB é o mínimo para uso fluido.", tipo: "hardware" },
       { titulo: "Pasta térmica seca + poeira", desc: "Notebook esquenta, processador reduz velocidade (throttling). Limpeza resolve.", tipo: "desgaste" },
       { titulo: "Malware e bloatware", desc: "Programas pré-instalados e vírus consomem recursos em segundo plano.", tipo: "software" },
