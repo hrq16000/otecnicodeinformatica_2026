@@ -136,7 +136,7 @@ for (const file of files) {
       if (orig === "default") continue;
       const patterns = [
         new RegExp(`export\\s+(?:async\\s+)?(?:const|let|var|function|class|type|interface|enum)\\s+${orig}\\b`),
-        new RegExp(`export\\s*\\{[^}]*\\b${orig}\\b[^}]*\\}`),
+        new RegExp(`export\\s+(?:type\\s+)?\\{[^}]*\\b${orig}\\b[^}]*\\}`),
         new RegExp(`export\\s+default\\s+.*\\b${orig}\\b`),
       ];
       if (!patterns.some((p) => p.test(targetCode))) {

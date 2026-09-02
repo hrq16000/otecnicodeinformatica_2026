@@ -51,130 +51,19 @@ jobs:
         run: npm ci --no-audit --no-fund
       - name: Lint (non-blocking warnings)
         run: npm run lint --silent || echo "::warning::lint reported issues"
-      - name: Biome lint gate (correctness/suspicious)
-        run: npm run lint:biome
-      - name: Motion System gate (classes de animação legadas)
-        run: npm run lint:motion
-      - name: CTA funnel gate
-        run: npm run check:cta-funnel
-      - name: Internal links + sitemap gate
-        run: npm run check:internal-links
-      - name: JSON-LD sem verticais recusadas (Service[])
-        run: npm run check:service-offerings
-      - name: Orphan page components gate
-        run: npm run check:orphan-pages
-      - name: Catraca anti-órfãs (URLs indexáveis sem link interno)
-        run: npm run check:orphan-ratchet
-      - name: Baseline de órfãs versionado (obrigatório antes do build)
-        run: npm run check:orphan-baseline
-      - name: Tendência de páginas órfãs (orphan-trend)
-        run: npm run check:orphan-trend
-      - name: Intenção conversacional (o que/como/por que/onde)
-        run: npm run check:conversational-intent
-
-      - name: Cannibalization gate (P0)
-        run: npm run check:cannibalization
-      - name: Entradas duplicadas em /problemas (P0)
-        run: npm run check:problem-duplicates
-      - name: Intenção invertida em /problemas (sufixo -curitiba)
-        run: npm run check:problem-intent
-      - name: Interlinks do Lote 1 (/problemas)
-        run: npm run check:problem-interlinks
-      - name: Decisões da Rodada 4C (nenhuma página em "reavaliar")
-        run: npm run check:problem-decisions
-      - name: Payload de realtime sem PII (telemetria 4E.4)
-        run: npm run check:realtime-payload
-      - name: Local hierarchy gate (bairros/cidades)
-        run: npm run check:local-hierarchy
-      - name: Gate de copy proibido (CNPJ, razão social, e-mail, telefone, "orçamento")
-        run: npm run check:forbidden-copy
-      - name: Gate de claims de confiança
-        run: npm run check:trust-claims
-      - name: Gate de cluster editorial e interlinking (Rodada 4F)
-        run: npm run check:editorial-cluster
-      - name: Inventário editorial
-        run: npm run report:editorial
-
+      # Comando oficial: gates essenciais de código e conteúdo.
+      # Os testes já rodam no job `unit`, por isso ficam de fora aqui.
+      - name: verify (gates essenciais — comando oficial)
+        run: npm run verify -- --skip=test
       - name: Build
         run: npm run build
-      - name: Gate de WhatsApp oculto no HTML renderizado
-        run: npm run check:wa-number-dom
-      - name: Gate de alt text das imagens (sem alt genérico/placeholder)
-        run: npm run check:image-alt
-      - name: Gate de privacidade das fotos reais (EXIF/GPS)
-        run: npm run check:photos
-      - name: Gate de imagens geradas por IA / placeholders (bloqueia deploy)
-        run: npm run check:ai-images
-      - name: Gate de canal de contato único (sem CNPJ/e-mail/telefone)
-        run: npm run check:contact-leak
-      - name: Gate de LocalBusiness unificado no cluster de informática
-        run: npm run check:localbusiness-cluster
-      - name: JSON-LD validation
-        run: npm run validate:jsonld
-      - name: JSON-LD gate das 4 páginas P0
-        run: npm run check:jsonld-p0
-      - name: Gate de rich results (LocalBusiness/Service/FAQPage)
-        run: npm run check:rich-results:strict
-      - name: Paridade JSON-LD × conteúdo visível (FAQPage/Offer/LocalBusiness)
-        run: npm run check:jsonld-parity
-      - name: BreadcrumbList serviço × cidade
-        run: npm run check:breadcrumb-schema
-
-      - name: Gate — paridade BreadcrumbList (JSON-LD x trilha visivel)
-        run: npm run check:breadcrumb-parity
-      - name: Markup de preço (Offer/PriceSpecification)
-        run: npm run check:price-schema
-      - name: Paridade 1:1 FAQPage × FAQ visível
-        run: npm run check:faq-parity
-      - name: Unicidade de title/description (serviço × cidade e blog)
-        run: npm run check:meta-uniqueness
-      - name: Image sitemap (geração + integridade)
-        run: npm run sitemap:images && npm run check:image-sitemap
-      - name: Licenças e créditos das fotos públicas
-        run: npm run check:image-credits
-      - name: Relatório público de paridade de FAQ (CSV/MD)
-        run: npm run report:faq-parity
-
-
-      - name: Atribuição /problemas (GA4 x Ads x UTM)
-        run: npm run report:problemas-attribution
-      - name: Contrato de eventos de analytics (divergência de nomes/parâmetros)
-        run: npm run check:analytics-event-contract
-      - name: PII em analytics (Rodada 6B)
-        run: npm run check:analytics-pii
-      - name: Contexto local em analytics (sem fallback geográfico)
-        run: npm run check:analytics-local-context
-      - name: Integridade da jornada (TTL, dedupe, first/last touch)
-        run: npm run check:analytics-journey-integrity
-      - name: Paridade de analytics (GA4 x click_events x relatorio)
-        run: npm run check:analytics-parity
+      # Comando oficial: gates essenciais de publicação (exigem dist/).
+      # Os passos opcionais (GSC/rede) não bloqueiam o CI.
+      - name: deploy:check (gates de publicação — comando oficial)
+        run: npm run deploy:check
+      # Gates que dependem de servidor local e por isso ficam fora do orquestrador.
       - name: Interlinking local gate (mãe ⇄ bairros/cidades)
         run: node scripts/with-ssr-server.mjs npm run check:local-interlinking
-      - name: E-E-A-T coverage gate
-        run: npm run check:eeat
-      # Gate de indexação: serve o build e valida status, content-type,
-      # canonical self-referente, robots e JSON-LD de cada rota do sitemap,
-      # além de garantir que nenhum alias 301 tenha canonical próprio.
-      - name: Gate de conformidade GEO (meta, H1/H2, canonical, OG/Twitter, JSON-LD)
-        run: npm run check:geo
-      - name: Gate schema.org (LocalBusiness, Service, FAQPage, BreadcrumbList)
-        run: npm run check:schema-standards
-      # Reexecuta o SSR em processos Node novos (isolate frio real): protege
-      # contra a regressão P0 em que o sink de JSON-LD era emitido antes de a
-      # rota lazy registrar seus slots, servindo só Organization + WebSite.
-      - name: Gate de determinismo do JSON-LD em SSR (isolate frio)
-        run: npm run check:jsonld-ssr
-
-      - name: Gate robots.txt e X-Robots-Tag (rotas indexáveis)
-        run: npm run check:robots
-      # Rodada 4F: compatibilidade de indexação (robots.txt, sitemaps declarados
-      # e cabeçalhos HTTP) e ausência de telefone em texto legível na interface.
-      - name: Gate robots/sitemap/cabeçalhos de indexação
-        run: npm run check:index-headers
-      - name: Gate telefone oculto (nenhum número legível na UI)
-        run: npm run check:phone-visibility
-      - name: Matriz de cobertura e autoridade (4F)
-        run: npm run report:authority-coverage
       - name: Gate de saúde de indexação (rotas + aliases)
         run: |
           npx vite preview --port 4321 --strictPort &
@@ -182,6 +71,15 @@ jobs:
           node scripts/check-index-health.mjs --base=http://localhost:4321 --strict
       - name: Relatório HTML de auditoria local
         run: npm run report:local-audit
+
+      - name: Upload relatórios dos comandos oficiais
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: pipeline-reports
+          path: reports/pipeline-*.json
+          if-no-files-found: warn
+
 
       - name: Upload relatório de auditoria local
         if: always()
