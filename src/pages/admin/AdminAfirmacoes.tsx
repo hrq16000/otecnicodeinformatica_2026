@@ -370,6 +370,50 @@ export default function AdminAfirmacoes() {
             <p className="mt-4 text-sm text-muted-foreground">Nenhuma URL para este filtro.</p>
           )}
         </div>
+      ) : (
+        <ul className="mt-4 space-y-3">
+          {conteudoFiltrado.map((u) => (
+            <li key={u.path}>
+              <Card className="p-4">
+                <div className="flex flex-wrap items-center gap-2">
+                  <Badge variant={u.status === "OK" ? "default" : "destructive"}>{u.status}</Badge>
+                  <Badge variant={u.ssr === "OK" ? "secondary" : "destructive"}>SSR {u.ssr}</Badge>
+                  <a href={u.path} className="text-sm font-medium underline underline-offset-2">
+                    {u.path}
+                  </a>
+                  <span className="text-xs text-muted-foreground">{u.familiaTitulo}</span>
+                </div>
+                <p className="mt-1 text-xs text-muted-foreground">{u.title}</p>
+                <p className="mt-2 flex flex-wrap gap-2 text-xs text-muted-foreground">
+                  <span>{u.palavras} palavras</span>
+                  <span>{u.fontesPrimarias ? "fontes primárias" : "sem fonte primária"}</span>
+                  <span>{u.limiteSeguranca ? "limite de segurança" : "sem limite declarado"}</span>
+                  <span>JSON-LD: {u.jsonLd.join(", ") || "nenhum"}</span>
+                  <span>
+                    ligações:{" "}
+                    {Object.entries(u.ligacoes)
+                      .filter(([, v]) => v)
+                      .map(([k]) => k)
+                      .join(", ") || "nenhuma"}
+                  </span>
+                </p>
+                {[...u.alertasTecnicos, ...u.alertasEditoriais].length > 0 && (
+                  <ul className="mt-2 list-disc space-y-1 pl-5 text-xs text-muted-foreground">
+                    {u.alertasTecnicos.map((a) => (
+                      <li key={`t-${a}`}>técnico: {a}</li>
+                    ))}
+                    {u.alertasEditoriais.map((a) => (
+                      <li key={`e-${a}`}>editorial: {a}</li>
+                    ))}
+                  </ul>
+                )}
+              </Card>
+            </li>
+          ))}
+          {conteudoFiltrado.length === 0 && (
+            <li className="text-sm text-muted-foreground">Nenhuma URL auditada para este filtro.</li>
+          )}
+        </ul>
       )}
     </main>
   );
