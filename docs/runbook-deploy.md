@@ -1,4 +1,10 @@
-# Runbook de deploy — tecnico.curitiba.br
+# Runbook de deploy — otecnicodeinformatica.com.br
+
+> Domínio canônico: **https://otecnicodeinformatica.com.br**.
+> O código vive no GitHub (branch `main`). O Lovable pode refletir o
+> repositório, mas **build verde não é deploy público**: a publicação só existe
+> depois de confirmada no ambiente de deploy. Indexação pelo Google não é
+> garantida — IndexNow e Search Console são pedidos, não promessas.
 
 Documento curto e operacional. Usar em toda rodada de publicação.
 
@@ -19,7 +25,8 @@ Todos precisam sair com código 0. Qualquer falha bloqueia o deploy.
 
 ## 2. Publicação
 
-1. Publicar o frontend pelo Lovable (Publish → Update).
+1. Publicar o frontend pelo ambiente de deploy (Lovable → Publish → Update).
+   Enquanto essa confirmação não existir, a rodada permanece **não publicada**.
 2. Executar o workflow **Cloudflare edge** (aliases 301 + 404 real).
    Só informar a frase de aprovação quando também for publicar a matriz de
    redirects do domínio antigo.
@@ -29,8 +36,8 @@ Todos precisam sair com código 0. Qualquer falha bloqueia o deploy.
 | Evidência | Comando / origem |
 | --- | --- |
 | Status HTTP 200/301/404 | `npm run verify:prod-status` |
-| Headers das P0 | `curl -sSI https://tecnico.curitiba.br/` |
-| Assets carregando | `curl -sSI https://tecnico.curitiba.br/assets/<hash>.js` |
+| Headers das P0 | `curl -sSI https://otecnicodeinformatica.com.br/` |
+| Assets carregando | `curl -sSI https://otecnicodeinformatica.com.br/assets/<hash>.js` |
 | Console do navegador limpo | abrir home + 1 rota profunda |
 | Triagem WhatsApp funcional | abrir modal, avançar PF e PJ |
 | Rich results | `npm run report:post-deploy` |
@@ -88,9 +95,7 @@ Pré-voo obrigatório antes de publicar o worker (somente leitura, roda no CI):
 npm run check:cf-zone -- --enforce
 ```
 
-Ele falha se `tecnico.curitiba.br`/`www` não estiverem em uma zona Cloudflare
-ativa da nossa conta **e** com o registro proxied. Como `curitiba.br` é domínio
-de registro, a zona correta é a **zona de subdomínio** `tecnico.curitiba.br`
-(Cloudflare → Add site → delegar NS no painel do registro `.br`).
+Ele falha se `otecnicodeinformatica.com.br`/`www` não estiverem em uma zona
+Cloudflare ativa da nossa conta **e** com o registro proxied.
 
 Todo alerta enviado inclui o link dos artefatos do run e o link deste runbook.
