@@ -21,6 +21,7 @@ import { programmaticPosts } from "@/data/blogProgrammaticPosts";
 import { blogPostsContentBase } from "@/data/blogPostsContent";
 import type { BlogPostContent } from "@/data/blogPostsContent";
 import { BlogPostFAQ } from "@/components/BlogPostFAQ";
+import { EnriquecimentoFase2 } from "@/components/editorial/EnriquecimentoFase2";
 import { EditorialCta, EditorialRelatedLinks } from "@/components/editorial/EditorialCta";
 import {
   isEditorialApproved,
@@ -380,6 +381,9 @@ const BlogPost = () => {
                   </div>
                 </div>
               )}
+
+              {/* Fase 2: limite técnico, fontes primárias e ligação semântica */}
+              <EnriquecimentoFase2 slug={slug ?? ""} />
 
               {/* Cluster editorial (Rodada 4F): conteúdos relacionados + CTA de triagem */}
               <EditorialRelatedLinks
