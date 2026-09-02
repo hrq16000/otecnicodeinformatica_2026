@@ -136,6 +136,10 @@ const TemaCard = ({ tema }: { tema: AtlasTema }) => {
         </div>
       </div>
 
+      <AtlasAprofundamentoBloco temaId={tema.id} temaTitulo={tema.titulo} />
+
+
+
       {tema.fontes && tema.fontes.length > 0 && (
         <footer className="mt-6 border-t border-border pt-4">
           <p className="text-[0.65rem] font-bold uppercase tracking-wide text-muted-foreground">
