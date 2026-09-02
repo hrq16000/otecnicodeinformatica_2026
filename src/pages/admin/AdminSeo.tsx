@@ -220,6 +220,35 @@ export default function AdminSeo() {
         <Kpi label="Overrides" valor={String(Object.keys(overrides).length)} hint="ajustes salvos no backend" />
       </div>
 
+      <Card className="mt-6 p-4">
+        <div className="flex flex-wrap items-center justify-between gap-2">
+          <div>
+            <h2 className="text-sm font-semibold">Conformidade de afirmações (sitemap curado)</h2>
+            <p className="mt-1 text-xs text-muted-foreground">
+              Auditoria E-E-A-T das URLs do sitemap dinâmico, gerada em {afirmacoes.geradoEm} por{" "}
+              <code>npm run report:afirmacoes</code>.
+            </p>
+          </div>
+          <Button size="sm" variant="outline" asChild>
+            <a href="/admin/afirmacoes">Abrir painel de afirmações</a>
+          </Button>
+        </div>
+        <div className="mt-3 grid gap-3 sm:grid-cols-4">
+          <Kpi label="URLs curadas" valor={String(afirmacoes.urlsCuradas)} hint="no sitemap dinâmico" />
+          <Kpi label="Afirmações" valor={String(afirmacoesCuradas.total)} hint="nas URLs do sitemap" />
+          <Kpi
+            label="Condicionais"
+            valor={String(afirmacoesCuradas.condicional)}
+            hint="exigem qualificador explícito"
+          />
+          <Kpi
+            label="Pendentes"
+            valor={String(afirmacoesCuradas.pendente)}
+            hint="sem evidência no ledger"
+          />
+        </div>
+      </Card>
+
       <SitemapLedgerPanel />
 
       <IndexacaoLedgerPanel />
