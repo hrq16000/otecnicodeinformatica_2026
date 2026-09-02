@@ -1,7 +1,7 @@
 {
-  "geradoEm": "2026-09-02T03:00:04.876Z",
+  "geradoEm": "2026-09-02T03:24:56.932Z",
   "dist": "./dist",
-  "total": 222,
+  "total": 223,
   "comHtml": 0,
   "comAviso": 0,
   "urls": [
@@ -307,6 +307,21 @@
     },
     {
       "path": "/guia-tecnico-informatica",
+      "sitemap": "sitemap-main.xml",
+      "tipo": "pilar",
+      "priority": "0.7",
+      "changefreq": "monthly",
+      "semHtml": true,
+      "title": null,
+      "description": null,
+      "canonical": null,
+      "robots": null,
+      "schemas": [],
+      "avisos": [],
+      "completude": null
+    },
+    {
+      "path": "/autoridade-tecnica",
       "sitemap": "sitemap-main.xml",
       "tipo": "pilar",
       "priority": "0.7",
