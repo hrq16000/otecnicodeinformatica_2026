@@ -533,6 +533,22 @@ const GuiaTecnicoInformatica = () => {
           </p>
           <div className="grid gap-4 md:grid-cols-2">
             <Link
+              to="/entidades"
+              className="group rounded-xl border border-border bg-card p-5 transition-colors hover:border-accent/50"
+            >
+              <h3 className="font-heading text-base font-bold text-foreground group-hover:text-accent">
+                Entidades técnicas do portal
+              </h3>
+              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                Windows, SSD, memória RAM, Wi-Fi, backup, erro 0xc0000428 e computador lento: cada
+                assunto reúne definição, problemas, ferramentas, decisões, artigos, fontes e onde
+                existe atendimento presencial.
+              </p>
+              <span className="mt-3 inline-flex items-center gap-1.5 font-heading text-sm font-bold text-accent">
+                Abrir o mapa de entidades <ArrowRight className="h-4 w-4" aria-hidden="true" />
+              </span>
+            </Link>
+            <Link
               to="/glossario"
               className="group rounded-xl border border-border bg-card p-5 transition-colors hover:border-accent/50"
             >

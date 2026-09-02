@@ -113,6 +113,19 @@ export const DECISOES_SLUGS = [
   "trocar-componente-ou-reparar",
 ];
 
+/** Taxonomia de entidades (fonte: src/lib/entidades.ts). */
+export const ENTIDADES_SLUGS = [
+  "windows",
+  "ssd",
+  "memoria-ram",
+  "wifi",
+  "backup",
+  "erro-0xc0000428",
+  "computador-lento",
+  "cidade",
+  "servico",
+];
+
 export const BIBLIOTECA = [
   { path: "/decisoes", changefreq: "monthly", priority: "0.8" },
   ...DECISOES_SLUGS.map((slug) => ({
@@ -125,6 +138,12 @@ export const BIBLIOTECA = [
     path: `/glossario/${slug}`,
     changefreq: "monthly",
     priority: "0.6",
+  })),
+  { path: "/entidades", changefreq: "monthly", priority: "0.8" },
+  ...ENTIDADES_SLUGS.map((slug) => ({
+    path: `/entidades/${slug}`,
+    changefreq: "monthly",
+    priority: "0.7",
   })),
   { path: "/ferramentas", changefreq: "monthly", priority: "0.7" },
   ...FERRAMENTAS_SLUGS.map((slug) => ({

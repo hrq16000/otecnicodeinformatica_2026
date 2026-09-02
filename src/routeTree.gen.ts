@@ -40,6 +40,7 @@ import { Route as Diagnostico60sRouteImport } from './routes/diagnostico-60s'
 import { Route as DiagnosticoTecnicoRouteImport } from './routes/diagnostico-tecnico'
 import { Route as EmpresaDeTiCuritibaRouteImport } from './routes/empresa-de-ti-curitiba'
 import { Route as EmpresasRouteImport } from './routes/empresas'
+import { Route as EntidadesRouteImport } from './routes/entidades'
 import { Route as EquipamentosRouteImport } from './routes/equipamentos'
 import { Route as EquipamentosAtendidosRouteImport } from './routes/equipamentos-atendidos'
 import { Route as ExcluirMeusDadosRouteImport } from './routes/excluir-meus-dados'
@@ -370,6 +371,7 @@ import { Route as ConsertoTvLocalRouteImport } from './routes/conserto-tv_.$loca
 import { Route as ConsertoVideogameLocalRouteImport } from './routes/conserto-videogame_.$local'
 import { Route as DebugTelemetriaRouteImport } from './routes/debug_.telemetria'
 import { Route as DecisoesSlugRouteImport } from './routes/decisoes_.$slug'
+import { Route as EntidadesSlugRouteImport } from './routes/entidades_.$slug'
 import { Route as EquipamentosSlugRouteImport } from './routes/equipamentos_.$slug'
 import { Route as FerramentasSlugRouteImport } from './routes/ferramentas_.$slug'
 import { Route as GlossarioTermoRouteImport } from './routes/glossario_.$termo'
@@ -643,6 +645,11 @@ const EmpresaDeTiCuritibaRoute = EmpresaDeTiCuritibaRouteImport.update({
 const EmpresasRoute = EmpresasRouteImport.update({
   id: '/empresas',
   path: '/empresas',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const EntidadesRoute = EntidadesRouteImport.update({
+  id: '/entidades',
+  path: '/entidades',
   getParentRoute: () => rootRouteImport,
 } as any)
 const EquipamentosRoute = EquipamentosRouteImport.update({
@@ -2376,6 +2383,11 @@ const DecisoesSlugRoute = DecisoesSlugRouteImport.update({
   path: '/decisoes/$slug',
   getParentRoute: () => rootRouteImport,
 } as any)
+const EntidadesSlugRoute = EntidadesSlugRouteImport.update({
+  id: '/entidades_/$slug',
+  path: '/entidades/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const EquipamentosSlugRoute = EquipamentosSlugRouteImport.update({
   id: '/equipamentos_/$slug',
   path: '/equipamentos/$slug',
@@ -3065,6 +3077,7 @@ export interface FileRoutesByFullPath {
   '/diagnostico-tecnico': typeof DiagnosticoTecnicoRoute
   '/empresa-de-ti-curitiba': typeof EmpresaDeTiCuritibaRoute
   '/empresas': typeof EmpresasRoute
+  '/entidades': typeof EntidadesRoute
   '/equipamentos': typeof EquipamentosRoute
   '/equipamentos-atendidos': typeof EquipamentosAtendidosRoute
   '/excluir-meus-dados': typeof ExcluirMeusDadosRoute
@@ -3395,6 +3408,7 @@ export interface FileRoutesByFullPath {
   '/conserto-videogame/$local': typeof ConsertoVideogameLocalRoute
   '/debug/telemetria': typeof DebugTelemetriaRoute
   '/decisoes/$slug': typeof DecisoesSlugRoute
+  '/entidades/$slug': typeof EntidadesSlugRoute
   '/equipamentos/$slug': typeof EquipamentosSlugRoute
   '/ferramentas/$slug': typeof FerramentasSlugRoute
   '/glossario/$termo': typeof GlossarioTermoRoute
@@ -3543,6 +3557,7 @@ export interface FileRoutesByTo {
   '/diagnostico-tecnico': typeof DiagnosticoTecnicoRoute
   '/empresa-de-ti-curitiba': typeof EmpresaDeTiCuritibaRoute
   '/empresas': typeof EmpresasRoute
+  '/entidades': typeof EntidadesRoute
   '/equipamentos': typeof EquipamentosRoute
   '/equipamentos-atendidos': typeof EquipamentosAtendidosRoute
   '/excluir-meus-dados': typeof ExcluirMeusDadosRoute
@@ -3873,6 +3888,7 @@ export interface FileRoutesByTo {
   '/conserto-videogame/$local': typeof ConsertoVideogameLocalRoute
   '/debug/telemetria': typeof DebugTelemetriaRoute
   '/decisoes/$slug': typeof DecisoesSlugRoute
+  '/entidades/$slug': typeof EntidadesSlugRoute
   '/equipamentos/$slug': typeof EquipamentosSlugRoute
   '/ferramentas/$slug': typeof FerramentasSlugRoute
   '/glossario/$termo': typeof GlossarioTermoRoute
@@ -4022,6 +4038,7 @@ export interface FileRoutesById {
   '/diagnostico-tecnico': typeof DiagnosticoTecnicoRoute
   '/empresa-de-ti-curitiba': typeof EmpresaDeTiCuritibaRoute
   '/empresas': typeof EmpresasRoute
+  '/entidades': typeof EntidadesRoute
   '/equipamentos': typeof EquipamentosRoute
   '/equipamentos-atendidos': typeof EquipamentosAtendidosRoute
   '/excluir-meus-dados': typeof ExcluirMeusDadosRoute
@@ -4352,6 +4369,7 @@ export interface FileRoutesById {
   '/conserto-videogame_/$local': typeof ConsertoVideogameLocalRoute
   '/debug_/telemetria': typeof DebugTelemetriaRoute
   '/decisoes_/$slug': typeof DecisoesSlugRoute
+  '/entidades_/$slug': typeof EntidadesSlugRoute
   '/equipamentos_/$slug': typeof EquipamentosSlugRoute
   '/ferramentas_/$slug': typeof FerramentasSlugRoute
   '/glossario_/$termo': typeof GlossarioTermoRoute
@@ -4502,6 +4520,7 @@ export interface FileRouteTypes {
     | '/diagnostico-tecnico'
     | '/empresa-de-ti-curitiba'
     | '/empresas'
+    | '/entidades'
     | '/equipamentos'
     | '/equipamentos-atendidos'
     | '/excluir-meus-dados'
@@ -4832,6 +4851,7 @@ export interface FileRouteTypes {
     | '/conserto-videogame/$local'
     | '/debug/telemetria'
     | '/decisoes/$slug'
+    | '/entidades/$slug'
     | '/equipamentos/$slug'
     | '/ferramentas/$slug'
     | '/glossario/$termo'
@@ -4980,6 +5000,7 @@ export interface FileRouteTypes {
     | '/diagnostico-tecnico'
     | '/empresa-de-ti-curitiba'
     | '/empresas'
+    | '/entidades'
     | '/equipamentos'
     | '/equipamentos-atendidos'
     | '/excluir-meus-dados'
@@ -5310,6 +5331,7 @@ export interface FileRouteTypes {
     | '/conserto-videogame/$local'
     | '/debug/telemetria'
     | '/decisoes/$slug'
+    | '/entidades/$slug'
     | '/equipamentos/$slug'
     | '/ferramentas/$slug'
     | '/glossario/$termo'
@@ -5458,6 +5480,7 @@ export interface FileRouteTypes {
     | '/diagnostico-tecnico'
     | '/empresa-de-ti-curitiba'
     | '/empresas'
+    | '/entidades'
     | '/equipamentos'
     | '/equipamentos-atendidos'
     | '/excluir-meus-dados'
@@ -5788,6 +5811,7 @@ export interface FileRouteTypes {
     | '/conserto-videogame_/$local'
     | '/debug_/telemetria'
     | '/decisoes_/$slug'
+    | '/entidades_/$slug'
     | '/equipamentos_/$slug'
     | '/ferramentas_/$slug'
     | '/glossario_/$termo'
@@ -5937,6 +5961,7 @@ export interface RootRouteChildren {
   DiagnosticoTecnicoRoute: typeof DiagnosticoTecnicoRoute
   EmpresaDeTiCuritibaRoute: typeof EmpresaDeTiCuritibaRoute
   EmpresasRoute: typeof EmpresasRoute
+  EntidadesRoute: typeof EntidadesRoute
   EquipamentosRoute: typeof EquipamentosRoute
   EquipamentosAtendidosRoute: typeof EquipamentosAtendidosRoute
   ExcluirMeusDadosRoute: typeof ExcluirMeusDadosRoute
@@ -6267,6 +6292,7 @@ export interface RootRouteChildren {
   ConsertoVideogameLocalRoute: typeof ConsertoVideogameLocalRoute
   DebugTelemetriaRoute: typeof DebugTelemetriaRoute
   DecisoesSlugRoute: typeof DecisoesSlugRoute
+  EntidadesSlugRoute: typeof EntidadesSlugRoute
   EquipamentosSlugRoute: typeof EquipamentosSlugRoute
   FerramentasSlugRoute: typeof FerramentasSlugRoute
   GlossarioTermoRoute: typeof GlossarioTermoRoute
@@ -6601,6 +6627,13 @@ declare module '@tanstack/react-router' {
       path: '/empresas'
       fullPath: '/empresas'
       preLoaderRoute: typeof EmpresasRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/entidades': {
+      id: '/entidades'
+      path: '/entidades'
+      fullPath: '/entidades'
+      preLoaderRoute: typeof EntidadesRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/equipamentos': {
@@ -8913,6 +8946,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof DecisoesSlugRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/entidades_/$slug': {
+      id: '/entidades_/$slug'
+      path: '/entidades/$slug'
+      fullPath: '/entidades/$slug'
+      preLoaderRoute: typeof EntidadesSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/equipamentos_/$slug': {
       id: '/equipamentos_/$slug'
       path: '/equipamentos/$slug'
@@ -9754,6 +9794,7 @@ const rootRouteChildren: RootRouteChildren = {
   DiagnosticoTecnicoRoute: DiagnosticoTecnicoRoute,
   EmpresaDeTiCuritibaRoute: EmpresaDeTiCuritibaRoute,
   EmpresasRoute: EmpresasRoute,
+  EntidadesRoute: EntidadesRoute,
   EquipamentosRoute: EquipamentosRoute,
   EquipamentosAtendidosRoute: EquipamentosAtendidosRoute,
   ExcluirMeusDadosRoute: ExcluirMeusDadosRoute,
@@ -10087,6 +10128,7 @@ const rootRouteChildren: RootRouteChildren = {
   ConsertoVideogameLocalRoute: ConsertoVideogameLocalRoute,
   DebugTelemetriaRoute: DebugTelemetriaRoute,
   DecisoesSlugRoute: DecisoesSlugRoute,
+  EntidadesSlugRoute: EntidadesSlugRoute,
   EquipamentosSlugRoute: EquipamentosSlugRoute,
   FerramentasSlugRoute: FerramentasSlugRoute,
   GlossarioTermoRoute: GlossarioTermoRoute,

@@ -53,6 +53,16 @@
   <url><loc>https://otecnicodeinformatica.com.br/glossario/secure-boot</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://otecnicodeinformatica.com.br/glossario/driver</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://otecnicodeinformatica.com.br/glossario/particao</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://otecnicodeinformatica.com.br/entidades</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://otecnicodeinformatica.com.br/entidades/windows</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://otecnicodeinformatica.com.br/entidades/ssd</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://otecnicodeinformatica.com.br/entidades/memoria-ram</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://otecnicodeinformatica.com.br/entidades/wifi</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://otecnicodeinformatica.com.br/entidades/backup</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://otecnicodeinformatica.com.br/entidades/erro-0xc0000428</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://otecnicodeinformatica.com.br/entidades/computador-lento</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://otecnicodeinformatica.com.br/entidades/cidade</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://otecnicodeinformatica.com.br/entidades/servico</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://otecnicodeinformatica.com.br/ferramentas</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://otecnicodeinformatica.com.br/ferramentas/checklist-computador-lento</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://otecnicodeinformatica.com.br/ferramentas/checklist-antes-de-formatar</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>

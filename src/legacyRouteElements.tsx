@@ -535,6 +535,10 @@ const FerramentaChecklist = lazyPagina(() => import("./pages/biblioteca/Ferramen
 const DecisoesHub = lazyPagina(() => import("./pages/decisoes/DecisoesHub"));
 const DecisaoGuia = lazyPagina(() => import("./pages/decisoes/DecisaoGuia"));
 
+// Taxonomia de entidades (/entidades)
+const EntidadesHub = lazyPagina(() => import("./pages/entidades/EntidadesHub"));
+const EntidadeDetalhe = lazyPagina(() => import("./pages/entidades/EntidadeDetalhe"));
+
 // Procedimentos Técnicos hub
 const ProcedimentosPlaca = lazyPagina(() => import("./pages/ProcedimentosPlaca"));
 
@@ -1013,6 +1017,8 @@ export const legacyRouteElements: Record<string, () => React.ReactElement> = {
   "/ferramentas/:slug": () => <FerramentaChecklist />,
   "/decisoes": () => <DecisoesHub />,
   "/decisoes/:slug": () => <DecisaoGuia />,
+  "/entidades": () => <EntidadesHub />,
+  "/entidades/:slug": () => <EntidadeDetalhe />,
   "/problemas/:slug": () => <ProblemaPage />,
   "/assistencia-tecnica-curitiba": () => <AssistenciaTecnicaCuritiba />,
   "/termos-e-condicoes": () => <TermosCondicoes />,
