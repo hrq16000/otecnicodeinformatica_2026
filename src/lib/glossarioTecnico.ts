@@ -353,6 +353,11 @@ export const TERMOS_GLOSSARIO: TermoGlossario[] = [
         url: "https://www.smartmontools.org/",
         nota: "ferramenta de referência para leitura de atributos S.M.A.R.T.",
       },
+      {
+        titulo: "Armazenamento e integridade de disco (Microsoft Learn)",
+        url: "https://learn.microsoft.com/pt-br/windows-server/storage/storage-spaces/overview",
+        nota: "documentação oficial sobre saúde e resiliência de unidades",
+      },
     ],
   },
   {
@@ -585,6 +590,11 @@ export const TERMOS_GLOSSARIO: TermoGlossario[] = [
         titulo: "smartmontools — documentação oficial",
         url: "https://www.smartmontools.org/",
         nota: "leitura de saúde do disco antes de decidir o caminho de recuperação",
+      },
+      {
+        titulo: "NIST SP 800-88 Rev. 1 — Guidelines for Media Sanitization",
+        url: "https://csrc.nist.gov/pubs/sp/800/88/r1/final",
+        nota: "define o que realmente apaga dados — e o que ainda é recuperável",
       },
     ],
   },
@@ -895,6 +905,11 @@ export const TERMOS_GLOSSARIO: TermoGlossario[] = [
         titulo: "MemTest86 — documentação oficial",
         url: "https://www.memtest86.com/",
         nota: "ferramenta de referência para teste aprofundado de memória",
+      },
+      {
+        titulo: "Solução de problemas do Windows (Microsoft Learn)",
+        url: "https://learn.microsoft.com/pt-br/troubleshoot/windows-client/",
+        nota: "procedimento oficial para travamento e erro de memória",
       },
     ],
   },
