@@ -314,6 +314,15 @@ export default function AdminAfirmacoes() {
                     )}
                   </p>
                 )}
+                <RevisaoAfirmacao
+                  claimKey={`${o.arquivo}:${o.linha}:${o.familia}`}
+                  arquivo={o.arquivo}
+                  linha={o.linha}
+                  familia={o.familia}
+                  classificacao={o.classificacao}
+                  registro={revisoes[`${o.arquivo}:${o.linha}:${o.familia}`]}
+                  onSalvo={(r) => setRevisoes((atual) => ({ ...atual, [r.claim_key]: r }))}
+                />
               </Card>
             </li>
           ))}
