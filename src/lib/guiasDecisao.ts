@@ -307,6 +307,16 @@ export const GUIAS_DECISAO: GuiaDecisaoPagina[] = [
         to: "/servicos/montagem-de-pc",
         contexto: "Quando substituir é o caminho, dimensionar para o uso real evita gasto inútil.",
       },
+      {
+        rotulo: "Notebook não liga: diagnóstico do sintoma",
+        to: "/problemas/notebook-nao-liga",
+        contexto: "Antes de decidir entre consertar e trocar, é preciso saber o que falhou.",
+      },
+      {
+        rotulo: "Checklist de computador lento",
+        to: "/ferramentas/checklist-computador-lento",
+        contexto: "Quando o motivo da troca é desempenho, este roteiro separa causa de sintoma.",
+      },
     ],
     fontes: [
       {
@@ -390,6 +400,16 @@ export const GUIAS_DECISAO: GuiaDecisaoPagina[] = [
         rotulo: "Remoção de vírus",
         to: "/servicos/remocao-de-virus",
         contexto: "Quando a infecção ainda permite atendimento remoto e quando não permite.",
+      },
+      {
+        rotulo: "Computador lento: sintoma e causas",
+        to: "/problemas/computador-lento",
+        contexto: "Boa parte dos casos de lentidão é resolvível à distância — este é o ponto de partida.",
+      },
+      {
+        rotulo: "Roteiro de Wi-Fi instável",
+        to: "/ferramentas/roteiro-wifi-instavel",
+        contexto: "Problema de rede define sozinho se o atendimento precisa ser presencial.",
       },
     ],
     fontes: [

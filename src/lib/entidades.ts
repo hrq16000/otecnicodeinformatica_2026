@@ -881,3 +881,56 @@ export const linksDaEntidade = (e: Entidade): string[] => [
   ...e.servicos,
   ...e.cidades,
 ].map((l) => l.to);
+
+/**
+ * FASE 2 — limite operacional por entidade. Texto autoral, específico e
+ * conservador: define até onde a verificação do próprio usuário é segura e
+ * em que ponto continuar aumenta o risco de perda de dados ou de dano.
+ */
+export const LIMITES_ENTIDADE: Record<string, string[]> = {
+  windows: [
+    "Verificação segura: observar mensagens de erro, código exibido e o que mudou antes da falha.",
+    "Quando parar: se a falha impede o sistema de carregar, não repita reinícios nem reparo automático em sequência — cada tentativa mexe em arquivos de sistema e reduz a chance de recuperação simples.",
+    "Não recomendamos desativar proteção de sistema, Secure Boot ou antivírus de forma permanente para contornar erro.",
+  ],
+  ssd: [
+    "Verificação segura: consultar o estado S.M.A.R.T. e conferir se a unidade é reconhecida pelo firmware e pelo sistema.",
+    "Quando parar: unidade que some durante o uso, trava o sistema ou apresenta erro de leitura pede cópia imediata dos dados — não prossiga com teste de superfície nem reparticionamento.",
+    "Interrompa qualquer clonagem se ela falhar duas vezes no mesmo ponto: há risco de perda de dados.",
+  ],
+  "memoria-ram": [
+    "Verificação segura: observar o consumo real de memória no uso do dia a dia e registrar quando o travamento acontece.",
+    "Quando parar: se o computador reinicia sozinho ou exibe tela azul durante o teste de memória, interrompa o teste e trate como falha de hardware.",
+    "Não recomendamos alterar tensão ou perfil de memória no firmware para 'estabilizar' o sistema.",
+  ],
+  wifi: [
+    "Verificação segura: comparar cabo e Wi-Fi no mesmo momento, conferir faixa de conexão e listar dispositivos conectados.",
+    "Quando parar: se aparecerem dispositivos desconhecidos na rede, pare de investigar desempenho e trate o caso como incidente de segurança.",
+    "Não recomendamos remover a senha da rede ou voltar para criptografia antiga para melhorar a conexão.",
+  ],
+  backup: [
+    "Verificação segura: confirmar o que está sendo copiado, com que frequência e se a restauração realmente funciona.",
+    "Quando parar: não prossiga com formatação, upgrade ou reparo enquanto a restauração de teste não tiver sido feita — é o cenário mais comum de perda irreversível.",
+    "Se o disco de origem já apresenta falha, pare de rodar backup completo repetido e priorize copiar os arquivos insubstituíveis.",
+  ],
+  "erro-0xc0000428": [
+    "Verificação segura: anotar o arquivo citado na tela e se a falha começou após atualização, troca de disco ou clonagem.",
+    "Quando parar: não prossiga desativando verificação de assinatura de driver como solução definitiva — é redução permanente de proteção.",
+    "Se o disco de sistema estiver criptografado e a chave de recuperação não estiver acessível, interrompa: mover ou reparar a unidade pode tornar os dados inacessíveis.",
+  ],
+  "computador-lento": [
+    "Verificação segura: identificar quando a lentidão aparece e observar disco, memória e temperatura sob a carga real de uso.",
+    "Quando parar: se o equipamento também desliga sozinho, esquenta demais ou faz ruído, pare de tratar como lentidão de software.",
+    "Não recomendamos programas 'otimizadores' que prometem ganho automático — costumam remover componentes do sistema.",
+  ],
+  cidade: [
+    "Verificação segura: confirmar a modalidade de atendimento aplicável ao caso e ao endereço antes de agendar.",
+    "Quando parar: em caso de cheiro de queimado, contato com líquido ou fumaça, pare imediatamente de ligar o equipamento e trate como urgência.",
+    "Atendimento presencial depende de disponibilidade real — não prometemos horário sem confirmação.",
+  ],
+  servico: [
+    "Verificação segura: exigir orçamento com escopo escrito antes da execução, separando peça de mão de obra.",
+    "Quando parar: não autorize procedimento em equipamento com dados críticos antes de ter backup verificado.",
+    "Se o diagnóstico ainda não foi concluído, não recomendamos autorizar troca de peça 'por tentativa'.",
+  ],
+};

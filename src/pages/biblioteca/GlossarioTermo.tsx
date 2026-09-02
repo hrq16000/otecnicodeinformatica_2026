@@ -165,7 +165,7 @@ const GlossarioTermo = () => {
           </section>
           <section className="rounded-xl border border-destructive/30 bg-destructive/5 p-5" aria-labelledby="nao-fazer">
             <h2 id="nao-fazer" className="flex items-center gap-2 font-heading text-lg font-bold text-foreground">
-              <XCircle className="h-5 w-5 text-destructive" aria-hidden="true" /> O que não fazer
+              <XCircle className="h-5 w-5 text-destructive" aria-hidden="true" /> O que não fazer — e quando parar
             </h2>
             <ul className="mt-3 space-y-2.5">
               {termo.naoFazer.map((n) => (
