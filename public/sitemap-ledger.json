@@ -1,10 +1,10 @@
 {
-  "geradoEm": "2026-09-02T02:44:41.335Z",
+  "geradoEm": "2026-09-02T02:59:29.724Z",
   "host": "otecnicodeinformatica.com.br",
   "modo": "generate",
   "sitemap": {
     "url": "https://otecnicodeinformatica.com.br/sitemap.xml",
-    "totalUrls": 221,
+    "totalUrls": 222,
     "googleSearchConsole": "NOT_REQUESTED",
     "indexNow": "NOT_REQUESTED"
   },
@@ -392,7 +392,9 @@
     ]
   },
   "diff": {
-    "adicionadas": [],
+    "adicionadas": [
+      "/decisoes/trocar-componente-ou-reparar"
+    ],
     "removidas": [],
     "regressoes": []
   },
@@ -466,6 +468,44 @@
         "adicionadas": [],
         "removidas": [],
         "total": 221
+      },
+      "error": null
+    },
+    {
+      "id": "cc9b4838-259e-415a-8223-51048a1636bf",
+      "action": "sync_approved",
+      "status": "OK",
+      "source": "cli",
+      "timestamp": "2026-09-02T02:59:29.822Z",
+      "details": {
+        "modo": "write",
+        "saida": "sitemap editorial: em dia (63 artigos indexáveis)"
+      },
+      "error": null
+    },
+    {
+      "id": "0b212aa5-7e7a-49f6-aa33-2ce770236ebb",
+      "action": "generate_sitemaps",
+      "status": "OK",
+      "source": "cli",
+      "timestamp": "2026-09-02T02:59:29.936Z",
+      "details": {
+        "saida": "sitemap curado: index + 8 sub-sitemaps (222 urls)"
+      },
+      "error": null
+    },
+    {
+      "id": "2954e8ce-fd53-4569-9c1f-2e570d3167e4",
+      "action": "diff_no_regression",
+      "status": "OK",
+      "source": "cli",
+      "timestamp": "2026-09-02T02:59:29.951Z",
+      "details": {
+        "adicionadas": [
+          "/decisoes/trocar-componente-ou-reparar"
+        ],
+        "removidas": [],
+        "total": 222
       },
       "error": null
     }

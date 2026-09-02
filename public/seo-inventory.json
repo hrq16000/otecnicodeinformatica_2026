@@ -1,7 +1,7 @@
 {
-  "geradoEm": "2026-09-02T02:45:17.107Z",
+  "geradoEm": "2026-09-02T03:00:04.876Z",
   "dist": "./dist",
-  "total": 221,
+  "total": 222,
   "comHtml": 0,
   "comAviso": 0,
   "urls": [
@@ -472,6 +472,21 @@
     },
     {
       "path": "/decisoes/montar-ou-comprar-pronto",
+      "sitemap": "sitemap-main.xml",
+      "tipo": "guia",
+      "priority": "0.7",
+      "changefreq": "monthly",
+      "semHtml": true,
+      "title": null,
+      "description": null,
+      "canonical": null,
+      "robots": null,
+      "schemas": [],
+      "avisos": [],
+      "completude": null
+    },
+    {
+      "path": "/decisoes/trocar-componente-ou-reparar",
       "sitemap": "sitemap-main.xml",
       "tipo": "guia",
       "priority": "0.7",
