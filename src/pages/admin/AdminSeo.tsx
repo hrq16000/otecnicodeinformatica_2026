@@ -8,6 +8,7 @@ import { supabase } from "@/integrations/supabase/client";
 import { siteConfig } from "@/lib/siteConfig";
 import { SitemapLedgerPanel } from "@/components/admin/SitemapLedgerPanel";
 import { IndexacaoLedgerPanel } from "@/components/admin/IndexacaoLedgerPanel";
+import auditoriaAfirmacoes from "@/data/trustClaimsAudit.json";
 
 
 /**
@@ -203,6 +204,23 @@ export default function AdminSeo() {
 
   const atual = inv?.urls.find((u) => u.path === selecionada) ?? null;
 
+  /** Resumo E-E-A-T restrito às URLs presentes no sitemap curado. */
+  const afirmacoes = auditoriaAfirmacoes as unknown as {
+    geradoEm: string;
+    urlsCuradas: number;
+    urls: { curada: boolean; total: number; porClasse: Record<string, number> }[];
+  };
+  const afirmacoesCuradas = afirmacoes.urls
+    .filter((u) => u.curada)
+    .reduce(
+      (acc, u) => ({
+        total: acc.total + u.total,
+        condicional: acc.condicional + (u.porClasse.CONDICIONAL ?? 0),
+        pendente: acc.pendente + (u.porClasse.PENDENTE ?? 0),
+      }),
+      { total: 0, condicional: 0, pendente: 0 },
+    );
+
   return (
     <main className="container mx-auto max-w-7xl px-4 py-8">
       <h1 className="text-2xl font-semibold">SEO por URL</h1>
@@ -219,6 +237,35 @@ export default function AdminSeo() {
         <Kpi label="Com aviso" valor={String(inv?.comAviso ?? 0)} hint="metadata incompleta" />
         <Kpi label="Overrides" valor={String(Object.keys(overrides).length)} hint="ajustes salvos no backend" />
       </div>
+
+      <Card className="mt-6 p-4">
+        <div className="flex flex-wrap items-center justify-between gap-2">
+          <div>
+            <h2 className="text-sm font-semibold">Conformidade de afirmações (sitemap curado)</h2>
+            <p className="mt-1 text-xs text-muted-foreground">
+              Auditoria E-E-A-T das URLs do sitemap dinâmico, gerada em {afirmacoes.geradoEm} por{" "}
+              <code>npm run report:afirmacoes</code>.
+            </p>
+          </div>
+          <Button size="sm" variant="outline" asChild>
+            <a href="/admin/afirmacoes">Abrir painel de afirmações</a>
+          </Button>
+        </div>
+        <div className="mt-3 grid gap-3 sm:grid-cols-4">
+          <Kpi label="URLs curadas" valor={String(afirmacoes.urlsCuradas)} hint="no sitemap dinâmico" />
+          <Kpi label="Afirmações" valor={String(afirmacoesCuradas.total)} hint="nas URLs do sitemap" />
+          <Kpi
+            label="Condicionais"
+            valor={String(afirmacoesCuradas.condicional)}
+            hint="exigem qualificador explícito"
+          />
+          <Kpi
+            label="Pendentes"
+            valor={String(afirmacoesCuradas.pendente)}
+            hint="sem evidência no ledger"
+          />
+        </div>
+      </Card>
 
       <SitemapLedgerPanel />
 

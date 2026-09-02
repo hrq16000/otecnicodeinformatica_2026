@@ -12,14 +12,17 @@ Documento curto e operacional. Usar em toda rodada de publicação.
 
 ```bash
 rm -rf dist
+npm run verify
 npm run build
-npm run check:soft404
-npm run check:sitemap-source
-npm run check:internal-links
-npm run check:jsonld-parity
-npm run check:priority-urls:dist
-npm test
+npm run deploy:check
 ```
+
+Os três comandos oficiais substituem a lista antiga de gates avulsos
+(`check:soft404`, `check:sitemap-source`, `check:internal-links`,
+`check:jsonld-parity`, `check:priority-urls:dist`, `npm test` etc.), que hoje
+são passos internos de `verify`/`deploy:check` — ver `docs/comandos-oficiais.md`.
+Inclui o inventário de afirmações (`check:afirmacoes`): se falhar, rode
+`npm run report:afirmacoes` e commite o JSON gerado.
 
 Todos precisam sair com código 0. Qualquer falha bloqueia o deploy.
 

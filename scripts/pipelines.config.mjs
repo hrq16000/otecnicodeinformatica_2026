@@ -25,6 +25,7 @@ export const verifySteps = [
   { name: 'Isolamento de marca', script: 'check:brand-isolation' },
   { name: 'Contato canônico (WhatsApp único)', script: 'check:canonical-contact' },
   { name: 'Claims de confiança (E-E-A-T)', script: 'check:trust-claims' },
+  { name: 'Inventário de afirmações em dia', script: 'check:afirmacoes' },
   { name: 'Governança editorial', script: 'check:editorial-governance' },
   { name: 'Links internos', script: 'check:internal-links' },
   { name: 'Qualidade dos interlinks', script: 'check:interlinks-quality' },

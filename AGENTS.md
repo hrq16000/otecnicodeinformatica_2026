@@ -101,3 +101,57 @@ diagnóstico pontual.
 - A publicação pública exige confirmação no ambiente de deploy (Publish/Cloudflare).
 - **Build verde ≠ site publicado.**
 - Indexação pelo Google **não pode ser garantida**: IndexNow e submissão ao Search Console são pedidos, não promessas.
+
+## 8. Preços, garantia e promessas (fonte única)
+
+Fonte oficial: `src/lib/config/commercial.ts` (+ `src/lib/politicaComercial.ts`).
+Nenhum valor, prazo ou condição pode ser redigitado em página, PDF ou schema.
+
+| Item | Valor oficial |
+| --- | --- |
+| Valor mínimo / diagnóstico | R$ 99,99 |
+| Diária profissional (rede) | não incentivar abaixo de R$ 200 (não é preço de serviço pontual) |
+| Anuidade de parceiro | R$ 49,99/ano (configurável) |
+| Garantia | mão de obra do serviço executado, registrada no orçamento aprovado; peças seguem a garantia do fornecedor |
+| Prazos | informados no diagnóstico, conforme peça e complexidade |
+| Pagamentos | PIX, crédito, débito, dinheiro |
+| Deslocamento | até 15 km conforme modalidade; R$ 2,00 por km excedente, informado antes |
+
+Ressalva obrigatória em qualquer preço exibido: o valor final varia conforme
+equipamento, urgência, deslocamento, complexidade, peças e condição real.
+
+**Proibido**: avaliação, estrela, `aggregateRating`, depoimento, número de
+clientes, percentual de sucesso, certificação ou parceria sem evidência
+verificável. Gate: `npm run check:trust-claims`.
+
+## 9. Governança de afirmações (E-E-A-T)
+
+- Ledger: `config/trust-claims-ledger.json` — fonte única da classificação
+  (COMPROVADA · INSTITUCIONAL · CONDICIONAL · REMOVIDA · PENDENTE).
+- Inventário: `npm run report:afirmacoes` → `src/data/trustClaimsAudit.json`,
+  com o cruzamento afirmação × URL do sitemap curado.
+- Painel: `/admin/afirmacoes` (leitura/acompanhamento; classifica-se no ledger).
+- Gates: `check:trust-claims` (bloqueia claim proibido) e `check:afirmacoes`
+  (bloqueia inventário desatualizado). Ambos rodam em `npm run verify`.
+- Depoimentos reais entram apenas por `/admin/reviews`, com autorização do
+  cliente e aprovação editorial antes de qualquer publicação.
+
+## 10. Critérios de publicação editorial
+
+Uma página só é publicada como `index` quando cumpre **todos** os itens:
+
+1. Intenção única e declarada; não canibaliza URL existente.
+2. Conteúdo próprio e verificável, na estrutura
+   fundamento → problema → verificação segura → limite → decisão → ferramenta → serviço.
+3. Fontes primárias citadas (Microsoft Learn/Support, CISA, CERT.br, NIST,
+   fabricante) — referenciadas, nunca copiadas.
+4. Autoria/revisão coerentes com `src/lib/gestorResponsavel.ts`.
+5. Capa real licenciada (sem IA) com crédito quando exigido.
+6. Interlinks bidirecionais com entidade, problema, ferramenta, serviço e cidade
+   correspondentes; zero órfãs.
+7. JSON-LD válido no HTML SSR e URL entrando pelo sitemap curado (fail-closed).
+8. `npm run verify` + `npm run build` + `npm run deploy:check` em verde.
+
+Página local (bairro/cidade) só existe com conteúdo próprio e demanda real
+comprovada no Search Console. Variação superficial permanece `noindex` e fora
+do sitemap.
