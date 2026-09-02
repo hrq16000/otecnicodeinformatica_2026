@@ -373,7 +373,10 @@
     "sitemap:dynamic:submit": "node scripts/sitemap-dynamic.mjs --submit",
     "postbuild": "node scripts/report-seo-inventory.mjs",
     "check:entidades": "bun scripts/check-entidades.ts",
-    "generate:entidades-static": "bun scripts/generate-entidades-static.ts"
+    "generate:entidades-static": "bun scripts/generate-entidades-static.ts",
+    "report:indexacao-ledger": "node scripts/report-indexacao-ledger.mjs",
+    "report:indexacao-ledger:inspecionar": "node scripts/report-indexacao-ledger.mjs --inspecionar=40",
+    "report:indexacao-ledger:alert": "node scripts/report-indexacao-ledger.mjs --alert"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.2",
