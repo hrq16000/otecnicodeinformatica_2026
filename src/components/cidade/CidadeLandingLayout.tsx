@@ -8,6 +8,7 @@ import {
   Home,
   Building2,
   ShieldCheck,
+  BookOpen,
 } from "lucide-react";
 import { PageSEO } from "@/components/PageSEO";
 import { isNoindex } from "@/lib/localIndexPolicy";
@@ -174,6 +175,40 @@ export const CidadeLandingLayout = ({ data }: { data: CidadeData }) => {
                 ))}
               </ul>
             </aside>
+          </div>
+        </section>
+
+        {/* Ponte editorial: a página local também orienta antes de converter. */}
+        <section className="border-b border-border/60 bg-background py-12 md:py-16" aria-labelledby="leituras-cidade">
+          <div className="container mx-auto">
+            <div className="max-w-3xl">
+              <span className="inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.14em] text-accent">
+                <BookOpen className="h-4 w-4" aria-hidden="true" /> Conteúdo técnico
+              </span>
+              <h2 id="leituras-cidade" className="mt-2 text-2xl font-heading font-bold text-foreground md:text-3xl">
+                Entenda o problema antes de solicitar atendimento
+              </h2>
+              <p className="mt-3 leading-relaxed text-muted-foreground">
+                A cidade informa onde atendemos; estes guias ajudam a entender o que observar no
+                computador, notebook ou rede. Se a orientação já resolver a dúvida, não há motivo
+                para contratar um serviço.
+              </p>
+            </div>
+            <div className="mt-7 grid gap-4 md:grid-cols-3">
+              {[
+                ["Atlas de Informática", "/guia-tecnico-informatica", "Trilhas de fundamentos, sintomas, verificações seguras e decisões."],
+                ["Computador lento", "/problemas/computador-lento", "Separe memória, armazenamento, temperatura e software antes de trocar peças."],
+                ["Como proteger seus arquivos", "/blog/backup-como-proteger-seus-arquivos", "Backup é cópia recuperável e testada — não apenas outra pasta no mesmo disco."],
+              ].map(([label, to, desc]) => (
+                <Link key={to} to={to} className="group rounded-xl border border-border bg-card p-5 transition-colors hover:border-accent/50">
+                  <h3 className="font-semibold text-foreground group-hover:text-accent">{label}</h3>
+                  <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{desc}</p>
+                  <span className="mt-3 inline-flex items-center gap-1 text-sm font-semibold text-accent">
+                    Ler guia <ArrowRight className="h-4 w-4" aria-hidden="true" />
+                  </span>
+                </Link>
+              ))}
+            </div>
           </div>
         </section>
 
