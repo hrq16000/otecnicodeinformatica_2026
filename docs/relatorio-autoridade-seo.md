@@ -1,6 +1,6 @@
 # Autoridade SEO — densidade semântica, keywords e links internos
 
-Gerado em: 2026-09-03T17:32:23.407Z
+Gerado em: 2026-09-03T18:07:12.489Z
 URLs analisadas: 75/75 · órfãs: 9
 
 | URL | Palavras | Dens. semântica | Keyword principal | Dens. KW | Links saída | Links entrada |
@@ -77,7 +77,7 @@ URLs analisadas: 75/75 · órfãs: 9
 | /blog/monitor-sem-sinal-o-que-verificar | 1040 | 56.63% | monitor sem sinal o que verificar | 0.52% | 10 | 0 |
 | /blog/bateria-de-notebook-nao-carrega-o-que-verificar | 1012 | 64.74% | bateria de notebook nao carrega o que verificar | 0.7% | 8 | 0 |
 | /blog/como-migrar-arquivos-para-um-computador-novo | 1039 | 61.82% | como migrar arquivos para um computador novo | 0.34% | 10 | 0 |
-| /blog/teclado-de-notebook-nao-funciona-o-que-verificar | 1001 | 59.73% | teclado de notebook nao funciona o que verificar | 0.85% | 8 | 0 |
-| /blog/computador-desliga-sozinho-o-que-verificar | 1011 | 60.74% | computador desliga sozinho o que verificar | 0.67% | 12 | 0 |
-| /blog/computador-nao-conecta-na-internet-por-cabo | 987 | 56.89% | computador nao conecta na internet por cabo | 0.36% | 9 | 0 |
+| /blog/teclado-de-notebook-nao-funciona-o-que-verificar | 1136 | 53.82% | teclado de notebook nao funciona o que verificar | 0.75% | 8 | 0 |
+| /blog/computador-desliga-sozinho-o-que-verificar | 1119 | 56.74% | computador desliga sozinho o que verificar | 0.75% | 12 | 0 |
+| /blog/computador-nao-conecta-na-internet-por-cabo | 1114 | 51.44% | computador nao conecta na internet por cabo | 0.48% | 9 | 0 |
 

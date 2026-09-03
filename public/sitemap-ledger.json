@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-09-03T17:32:13.753Z",
+  "geradoEm": "2026-09-03T18:07:07.649Z",
   "host": "otecnicodeinformatica.com.br",
   "modo": "generate",
   "sitemap": {
@@ -1615,6 +1615,114 @@
       "status": "OK",
       "source": "cli",
       "timestamp": "2026-09-03T17:32:13.973Z",
+      "details": {
+        "adicionadas": [],
+        "removidas": [],
+        "total": 244
+      },
+      "error": null
+    },
+    {
+      "id": "94ef14a8-f8d7-44cc-9ce2-69e4ad0ebe3a",
+      "action": "sync_approved",
+      "status": "OK",
+      "source": "cli",
+      "timestamp": "2026-09-03T17:43:59.336Z",
+      "details": {
+        "modo": "write",
+        "saida": "sitemap editorial: em dia (75 artigos indexáveis)"
+      },
+      "error": null
+    },
+    {
+      "id": "2c97a333-8345-4f83-84b8-ea97559f835d",
+      "action": "generate_sitemaps",
+      "status": "OK",
+      "source": "cli",
+      "timestamp": "2026-09-03T17:43:59.441Z",
+      "details": {
+        "saida": "sitemap curado: index + 8 sub-sitemaps (244 urls)"
+      },
+      "error": null
+    },
+    {
+      "id": "63162d08-e133-424d-b6d3-d518dc639ddf",
+      "action": "diff_no_regression",
+      "status": "OK",
+      "source": "cli",
+      "timestamp": "2026-09-03T17:43:59.454Z",
+      "details": {
+        "adicionadas": [],
+        "removidas": [],
+        "total": 244
+      },
+      "error": null
+    },
+    {
+      "id": "38ecdc97-e1c5-4eef-86ce-8b3cee4835db",
+      "action": "sync_approved",
+      "status": "OK",
+      "source": "cli",
+      "timestamp": "2026-09-03T17:53:17.038Z",
+      "details": {
+        "modo": "write",
+        "saida": "sitemap editorial: em dia (75 artigos indexáveis)"
+      },
+      "error": null
+    },
+    {
+      "id": "6dcb12ef-3808-48f1-837f-788c164e4277",
+      "action": "generate_sitemaps",
+      "status": "OK",
+      "source": "cli",
+      "timestamp": "2026-09-03T17:53:17.145Z",
+      "details": {
+        "saida": "sitemap curado: index + 8 sub-sitemaps (244 urls)"
+      },
+      "error": null
+    },
+    {
+      "id": "9e9ba537-9e1c-4acf-8163-723832934b1f",
+      "action": "diff_no_regression",
+      "status": "OK",
+      "source": "cli",
+      "timestamp": "2026-09-03T17:53:17.156Z",
+      "details": {
+        "adicionadas": [],
+        "removidas": [],
+        "total": 244
+      },
+      "error": null
+    },
+    {
+      "id": "2e4e00d9-68ca-470a-95be-14550dbf47c5",
+      "action": "sync_approved",
+      "status": "OK",
+      "source": "cli",
+      "timestamp": "2026-09-03T18:07:07.748Z",
+      "details": {
+        "modo": "write",
+        "saida": "sitemap editorial: em dia (75 artigos indexáveis)"
+      },
+      "error": null
+    },
+    {
+      "id": "7f69c1fe-1869-4301-96f5-37a46792fb41",
+      "action": "generate_sitemaps",
+      "status": "OK",
+      "source": "cli",
+      "timestamp": "2026-09-03T18:07:07.857Z",
+      "details": {
+        "saida": "sitemap curado: index + 8 sub-sitemaps (244 urls)"
+      },
+      "error": null
+    },
+    {
+      "id": "d9f7b5bc-6c3b-4d39-892f-2094dcd86a5b",
+      "action": "diff_no_regression",
+      "status": "OK",
+      "source": "cli",
+      "timestamp": "2026-09-03T18:07:07.871Z",
       "details": {
         "adicionadas": [],
         "removidas": [],

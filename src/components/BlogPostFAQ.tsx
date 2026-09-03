@@ -922,7 +922,75 @@ const PILOT_FAQ: Record<string, FAQItem[]> = {
       a: "Não de forma responsável. Sem saber o que roda, o tamanho dos arquivos e o uso diário, qualquer número é chute. O levantamento vem antes.",
     },
   ],
+  // ── Onda 11F — teclado de notebook, desligamento espontâneo e link cabeado.
+  "teclado-de-notebook-nao-funciona-o-que-verificar": [
+    {
+      q: "Como saber se o problema é do teclado ou do sistema?",
+      a: "Conecte um teclado USB externo. Se ele digita normalmente, o sistema e o campo de digitação estão íntegros e a suspeita fica no teclado interno ou no cabo flat dele. Se nem o externo digita, o caminho passa a ser sistema, perfil de usuário ou driver.",
+    },
+    {
+      q: "Só algumas teclas falham. Isso muda o diagnóstico?",
+      a: "Muda. Falha em teclas isoladas e vizinhas costuma indicar sujeira, resíduo de líquido ou trilha rompida na membrana. Falha em bloco inteiro, especialmente uma linha ou uma coluna completa, aponta para a matriz do teclado ou para o contato do cabo flat.",
+    },
+    {
+      q: "O teclado numérico parou. É defeito?",
+      a: "Nem sempre. Em muitos notebooks o bloco numérico depende da tecla Num Lock ou da combinação com Fn. Vale confirmar esse estado antes de considerar defeito físico.",
+    },
+    {
+      q: "Caiu líquido no teclado. O que fazer primeiro?",
+      a: "Desligue imediatamente pelo botão de ligar, desconecte a fonte e não tente ligar de novo para testar. Manter a máquina energizada com líquido dentro é o que costuma transformar um teclado danificado em placa danificada.",
+    },
+    {
+      q: "Trocar o teclado interno resolve sempre?",
+      a: "Não. A troca resolve quando o defeito está na peça. Quando o problema é o conector do cabo flat na placa ou o controlador, o teclado novo apresenta o mesmo comportamento — por isso o teste com teclado externo e a inspeção do encaixe vêm antes da compra da peça.",
+    },
+  ],
+  "computador-desliga-sozinho-o-que-verificar": [
+    {
+      q: "Desligar sozinho é sempre superaquecimento?",
+      a: "Não. Superaquecimento é uma das causas mais comuns, mas fonte em degradação, memória instável, mau contato de alimentação e falha na rede elétrica produzem o mesmo sintoma. A diferenciação vem do padrão: desligamento sob carga sugere temperatura ou fonte; desligamento aleatório mesmo em repouso amplia a suspeita.",
+    },
+    {
+      q: "Como verificar se é temperatura sem abrir a máquina?",
+      a: "Acompanhe a temperatura do processador em repouso e sob uso com um monitor de hardware. Desligamento que acontece sempre depois de alguns minutos de esforço, com temperatura subindo até o corte, é comportamento de proteção térmica.",
+    },
+    {
+      q: "Reiniciar sozinho é o mesmo problema que desligar sozinho?",
+      a: "São sintomas próximos, mas não iguais. Reinício costuma acompanhar erro de sistema ou de memória e deixa registro no Visualizador de Eventos. Corte seco, sem aviso e sem registro, é mais compatível com alimentação ou proteção de hardware.",
+    },
+    {
+      q: "Limpar o computador resolve?",
+      a: "Resolve quando a causa é acúmulo de poeira obstruindo dissipador e ventoinha. Limpeza e reaplicação de pasta térmica são procedimentos legítimos de manutenção, mas não corrigem fonte degradada nem memória instável.",
+    },
+    {
+      q: "Posso continuar usando enquanto investigo?",
+      a: "Desligamentos abruptos repetidos aumentam o risco de corromper arquivos e o sistema. Antes de qualquer teste mais longo, priorize a cópia dos arquivos importantes para outro destino.",
+    },
+  ],
+  "computador-nao-conecta-na-internet-por-cabo": [
+    {
+      q: "A luz do conector de rede apagada indica o quê?",
+      a: "Indica que não há enlace físico entre a placa de rede e o equipamento do outro lado. Nesse estado o problema está no cabo, no conector, na porta do roteador ou na própria placa — configuração de rede ainda nem entra na conta.",
+    },
+    {
+      q: "Como testar o cabo sem equipamento próprio?",
+      a: "Por substituição e por troca de ponta. Use outro cabo comprovadamente bom no mesmo par de portas e, depois, o cabo original em outra porta do roteador. Se o enlace aparece com o outro cabo, o cabo original é o suspeito.",
+    },
+    {
+      q: "O cabo conecta mas aparece 'sem acesso à internet'. O que muda?",
+      a: "Muda a camada do problema. Com enlace ativo, a falha passa a ser de endereçamento ou de saída: endereço não recebido do roteador, DNS não respondendo ou o próprio enlace do provedor fora do ar.",
+    },
+    {
+      q: "Wi-Fi funciona e o cabo não. Isso descarta o provedor?",
+      a: "Descarta, sim. Se o Wi-Fi do mesmo roteador navega, a saída para a internet está ativa e o problema fica restrito ao caminho cabeado: porta, cabo, placa ou configuração da conexão cabeada.",
+    },
+    {
+      q: "Vale trocar a placa de rede?",
+      a: "Só depois de esgotar cabo, porta e configuração. Quando a placa integrada realmente falha, uma placa de rede adicional em slot PCIe ou um adaptador USB de rede restabelece a conexão sem substituir a placa-mãe.",
+    },
+  ],
 };
+
 
 export const BlogPostFAQ = ({ category, slug }: { category: string; slug: string }) => {
   const override = PILOT_FAQ[slug];

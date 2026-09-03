@@ -5,6 +5,8 @@
 //     React/TanStack dedupe, error logger plugins, and sandbox detection (port/host/strictPort).
 import { defineConfig } from "@lovable.dev/vite-tanstack-config";
 import { execSync } from "node:child_process";
+import { readFileSync } from "node:fs";
+
 import { imagetools } from "vite-imagetools";
 
 // Força modo produção para builds fora do sandbox Lovable, garantindo que o
@@ -16,6 +18,16 @@ const resolveAppVersion = () => {
   if (process.env['APP_VERSION']) return process.env['APP_VERSION'];
   if (process.env['VERCEL_GIT_COMMIT_SHA']) return process.env['VERCEL_GIT_COMMIT_SHA'].slice(0, 7);
   if (process.env['COMMIT_REF']) return process.env['COMMIT_REF'].slice(0, 7);
+  // Fonte única com o manifesto servido em /build-version.json (gerado no
+  // prebuild). Sem isso, ambientes sem git divergem: manifesto "dev" e bundle
+  // com carimbo de tempo — o smoke pós-deploy acusa FAIL_VERSION_MISMATCH.
+  try {
+    const raw = readFileSync(new URL("./public/build-version.json", import.meta.url), "utf8");
+    const parsed = JSON.parse(raw) as { version?: string };
+    if (parsed.version) return parsed.version;
+  } catch {
+    /* manifesto ainda não gerado: cai para o git ou para o carimbo de tempo */
+  }
   try {
     return execSync("git rev-parse --short HEAD", { stdio: ["ignore", "pipe", "ignore"] })
       .toString()
@@ -24,6 +36,7 @@ const resolveAppVersion = () => {
     return `b${Date.now().toString(36)}`;
   }
 };
+
 
 export default defineConfig({
   tanstackStart: {
