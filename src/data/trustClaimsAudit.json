@@ -8,7 +8,7 @@
     "REMOVIDA": 0,
     "PENDENTE": 0
   },
-  "urlsCuradas": 241,
+  "urlsCuradas": 244,
   "familias": [
     {
       "id": "garantia",
@@ -1963,6 +1963,18 @@
       }
     },
     {
+      "path": "/blog/computador-desliga-sozinho-o-que-verificar",
+      "curada": true,
+      "total": 0,
+      "porClasse": {
+        "COMPROVADA": 0,
+        "INSTITUCIONAL": 0,
+        "CONDICIONAL": 0,
+        "REMOVIDA": 0,
+        "PENDENTE": 0
+      }
+    },
+    {
       "path": "/blog/computador-entra-direto-na-bios",
       "curada": true,
       "total": 0,
@@ -1976,6 +1988,18 @@
     },
     {
       "path": "/blog/computador-lento-causas-solucoes",
+      "curada": true,
+      "total": 0,
+      "porClasse": {
+        "COMPROVADA": 0,
+        "INSTITUCIONAL": 0,
+        "CONDICIONAL": 0,
+        "REMOVIDA": 0,
+        "PENDENTE": 0
+      }
+    },
+    {
+      "path": "/blog/computador-nao-conecta-na-internet-por-cabo",
       "curada": true,
       "total": 0,
       "porClasse": {
@@ -2324,6 +2348,18 @@
     },
     {
       "path": "/blog/ssd-nvme-nao-aparece-no-gerenciador-de-discos",
+      "curada": true,
+      "total": 0,
+      "porClasse": {
+        "COMPROVADA": 0,
+        "INSTITUCIONAL": 0,
+        "CONDICIONAL": 0,
+        "REMOVIDA": 0,
+        "PENDENTE": 0
+      }
+    },
+    {
+      "path": "/blog/teclado-de-notebook-nao-funciona-o-que-verificar",
       "curada": true,
       "total": 0,
       "porClasse": {
