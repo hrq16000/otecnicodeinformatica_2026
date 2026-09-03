@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-09-02",
+  "geradoEm": "2026-09-03",
   "total": 304,
   "porClasse": {
     "COMPROVADA": 114,
@@ -8,7 +8,7 @@
     "REMOVIDA": 0,
     "PENDENTE": 0
   },
-  "urlsCuradas": 233,
+  "urlsCuradas": 238,
   "familias": [
     {
       "id": "garantia",
@@ -1807,6 +1807,18 @@
       }
     },
     {
+      "path": "/blog/como-monitorar-temperatura-do-computador",
+      "curada": true,
+      "total": 0,
+      "porClasse": {
+        "COMPROVADA": 0,
+        "INSTITUCIONAL": 0,
+        "CONDICIONAL": 0,
+        "REMOVIDA": 0,
+        "PENDENTE": 0
+      }
+    },
+    {
       "path": "/blog/como-proteger-computador-golpes-internet",
       "curada": true,
       "total": 0,
@@ -1880,6 +1892,18 @@
     },
     {
       "path": "/blog/como-testar-fonte-de-alimentacao-pc",
+      "curada": true,
+      "total": 0,
+      "porClasse": {
+        "COMPROVADA": 0,
+        "INSTITUCIONAL": 0,
+        "CONDICIONAL": 0,
+        "REMOVIDA": 0,
+        "PENDENTE": 0
+      }
+    },
+    {
+      "path": "/blog/como-testar-restauracao-de-backup",
       "curada": true,
       "total": 0,
       "porClasse": {
@@ -1975,6 +1999,18 @@
       }
     },
     {
+      "path": "/blog/dispositivo-usb-nao-reconhecido-o-que-fazer",
+      "curada": true,
+      "total": 0,
+      "porClasse": {
+        "COMPROVADA": 0,
+        "INSTITUCIONAL": 0,
+        "CONDICIONAL": 0,
+        "REMOVIDA": 0,
+        "PENDENTE": 0
+      }
+    },
+    {
       "path": "/blog/erro-no-bootable-device-como-resolver",
       "curada": true,
       "total": 0,
@@ -2012,6 +2048,18 @@
     },
     {
       "path": "/blog/hd-nao-e-reconhecido-na-bios-o-que-fazer",
+      "curada": true,
+      "total": 0,
+      "porClasse": {
+        "COMPROVADA": 0,
+        "INSTITUCIONAL": 0,
+        "CONDICIONAL": 0,
+        "REMOVIDA": 0,
+        "PENDENTE": 0
+      }
+    },
+    {
+      "path": "/blog/historico-de-arquivos-windows-como-configurar",
       "curada": true,
       "total": 0,
       "porClasse": {
@@ -2072,6 +2120,18 @@
     },
     {
       "path": "/blog/limpar-cache-do-windows-update-softwaredistribution",
+      "curada": true,
+      "total": 0,
+      "porClasse": {
+        "COMPROVADA": 0,
+        "INSTITUCIONAL": 0,
+        "CONDICIONAL": 0,
+        "REMOVIDA": 0,
+        "PENDENTE": 0
+      }
+    },
+    {
+      "path": "/blog/manutencao-preventiva-de-computador-guia-completo",
       "curada": true,
       "total": 0,
       "porClasse": {
@@ -2144,6 +2204,18 @@
     },
     {
       "path": "/blog/organizacao-de-ti-para-pequenos-escritorios",
+      "curada": true,
+      "total": 0,
+      "porClasse": {
+        "COMPROVADA": 0,
+        "INSTITUCIONAL": 0,
+        "CONDICIONAL": 0,
+        "REMOVIDA": 0,
+        "PENDENTE": 0
+      }
+    },
+    {
+      "path": "/blog/pendrive-somente-leitura-protegido-contra-gravacao",
       "curada": true,
       "total": 0,
       "porClasse": {
@@ -3896,18 +3968,6 @@
     },
     {
       "path": "/tecnico-informatica-sao-jose-pinhais",
-      "curada": true,
-      "total": 0,
-      "porClasse": {
-        "COMPROVADA": 0,
-        "INSTITUCIONAL": 0,
-        "CONDICIONAL": 0,
-        "REMOVIDA": 0,
-        "PENDENTE": 0
-      }
-    },
-    {
-      "path": "/termos-e-condicoes",
       "curada": true,
       "total": 0,
       "porClasse": {
@@ -6023,7 +6083,7 @@
       "familiaTitulo": "Identificação do técnico",
       "risco": "Compromisso operacional; precisa ser cumprido em todo atendimento.",
       "arquivo": "src/pages/AtendimentoDomicilio.tsx",
-      "linha": 41,
+      "linha": 42,
       "trecho": "title: \"Técnico Identificado\",",
       "classificacao": "INSTITUCIONAL",
       "criterio": "Compromisso operacional do negócio, não métrica",
@@ -6158,7 +6218,7 @@
       "familiaTitulo": "Garantia",
       "risco": "Prazo ou abrangência divergente da política comercial central.",
       "arquivo": "src/pages/ColetaEntrega.tsx",
-      "linha": 197,
+      "linha": 201,
       "trecho": "{ icon: Package, title: \"4. Entrega com Garantia\", desc: \"Equipamento reparado, testado e devolvido no seu endereço. Garantia por escrito de todo o serviço realizado.\" },",
       "classificacao": "COMPROVADA",
       "criterio": "Prazo e escopo vêm da fonte comercial única",
@@ -6173,7 +6233,7 @@
       "familiaTitulo": "Garantia",
       "risco": "Prazo ou abrangência divergente da política comercial central.",
       "arquivo": "src/pages/ComoFunciona.tsx",
-      "linha": 778,
+      "linha": 782,
       "trecho": "{ icon: Shield, title: \"Garantia do Serviço\", text: \"Todo serviço inclui garantia por escrito de 90 dias em mão de obra sobre o ponto reparado\" },",
       "classificacao": "COMPROVADA",
       "criterio": "Prazo e escopo vêm da fonte comercial única",
@@ -6188,7 +6248,7 @@
       "familiaTitulo": "Garantia",
       "risco": "Prazo ou abrangência divergente da política comercial central.",
       "arquivo": "src/pages/ComoFunciona.tsx",
-      "linha": 838,
+      "linha": 842,
       "trecho": "\"Garantia por escrito de 90 dias em mão de obra sobre o serviço executado\",",
       "classificacao": "COMPROVADA",
       "criterio": "Prazo e escopo vêm da fonte comercial única",
@@ -6203,7 +6263,7 @@
       "familiaTitulo": "Garantia",
       "risco": "Prazo ou abrangência divergente da política comercial central.",
       "arquivo": "src/pages/ComoFunciona.tsx",
-      "linha": 884,
+      "linha": 888,
       "trecho": "{ icon: Shield, title: \"Garantia por Escrito em Todo Serviço\", desc: \"Todos os serviços possuem garantia de 90 dias em mão de obra sobre o ponto reparado. Se algo der errado dentro",
       "classificacao": "COMPROVADA",
       "criterio": "Prazo e escopo vêm da fonte comercial única",
@@ -6218,7 +6278,7 @@
       "familiaTitulo": "Garantia",
       "risco": "Prazo ou abrangência divergente da política comercial central.",
       "arquivo": "src/pages/ComoFunciona.tsx",
-      "linha": 896,
+      "linha": 900,
       "trecho": "{ question: \"O serviço tem garantia?\", answer: \"Sim. Todos os serviços possuem garantia por escrito de 90 dias em mão de obra sobre o ponto reparado ou o serviço executado. Peças p",
       "classificacao": "COMPROVADA",
       "criterio": "Prazo e escopo vêm da fonte comercial única",
@@ -6233,7 +6293,7 @@
       "familiaTitulo": "Cobertura empresarial irrestrita",
       "risco": "“Todos os portes / todas as marcas / todos os modelos” não é sustentável.",
       "arquivo": "src/pages/ComoFunciona.tsx",
-      "linha": 898,
+      "linha": 902,
       "trecho": "{ question: \"Atende empresas?\", answer: \"Sim. Temos planos específicos para empresas de todos os portes. Oferecemos suporte contínuo, manutenção preventiva, gestão de TI e atendime",
       "classificacao": "CONDICIONAL",
       "criterio": "Atendimento a qualquer marca vale para diagnóstico e serviços de software/hardware comum; depende de disponibilidade de peça e de o modelo permitir reparo",
@@ -6323,7 +6383,7 @@
       "familiaTitulo": "Prazo de atendimento prometido",
       "risco": "Prazo fixo sem controle de agenda, trânsito e peça.",
       "arquivo": "src/pages/FAQ.tsx",
-      "linha": 107,
+      "linha": 108,
       "trecho": "answer: \"Na modalidade de diagnóstico com coleta, o cancelamento pode ser feito em até 24 horas corridas após a coleta, conforme as condições publicadas na página de termos, condiç",
       "classificacao": "CONDICIONAL",
       "criterio": "Tempos de deslocamento e janelas de atendimento são estimativas dependentes de agenda, trânsito e disponibilidade de peça",
@@ -6368,7 +6428,7 @@
       "familiaTitulo": "Estatística ou percentual atribuído",
       "risco": "Percentual sem fonte primária citável.",
       "arquivo": "src/pages/QuandoNaoCompensa.tsx",
-      "linha": 44,
+      "linha": 45,
       "trecho": "alternativa: \"Se o problema for nos LEDs de retroiluminação ou na fonte, o reparo compensa e geralmente custa 10-25% do valor da TV. Só o diagnóstico diferencia.\",",
       "classificacao": "CONDICIONAL",
       "criterio": "Percentuais só permanecem quando descrevem faixa técnica de mercado ou custo, nunca desempenho próprio",
@@ -7271,7 +7331,7 @@
       "familiaTitulo": "Garantia",
       "risco": "Prazo ou abrangência divergente da política comercial central.",
       "arquivo": "src/pages/hubs/CategoryLocalTemplate.tsx",
-      "linha": 136,
+      "linha": 140,
       "trecho": "subtitle={`${category.emoji} Coleta e entrega no seu endereço · diagnóstico incluso · garantia de 90 dias. Atendimento por WhatsApp em até 30 min.`}",
       "classificacao": "COMPROVADA",
       "criterio": "Prazo e escopo vêm da fonte comercial única",
@@ -7293,7 +7353,7 @@
       "familiaTitulo": "Prazo de atendimento prometido",
       "risco": "Prazo fixo sem controle de agenda, trânsito e peça.",
       "arquivo": "src/pages/hubs/CategoryLocalTemplate.tsx",
-      "linha": 136,
+      "linha": 140,
       "trecho": "subtitle={`${category.emoji} Coleta e entrega no seu endereço · diagnóstico incluso · garantia de 90 dias. Atendimento por WhatsApp em até 30 min.`}",
       "classificacao": "CONDICIONAL",
       "criterio": "Tempos de deslocamento e janelas de atendimento são estimativas dependentes de agenda, trânsito e disponibilidade de peça",
@@ -7315,7 +7375,7 @@
       "familiaTitulo": "Garantia",
       "risco": "Prazo ou abrangência divergente da política comercial central.",
       "arquivo": "src/pages/hubs/CategoryLocalTemplate.tsx",
-      "linha": 255,
+      "linha": 259,
       "trecho": "{ n: \"4\", t: \"Reparo + entrega\", d: `${category.prazoEntrega} · garantia de 90 dias.` },",
       "classificacao": "COMPROVADA",
       "criterio": "Prazo e escopo vêm da fonte comercial única",
@@ -7337,7 +7397,7 @@
       "familiaTitulo": "Garantia",
       "risco": "Prazo ou abrangência divergente da política comercial central.",
       "arquivo": "src/pages/hubs/CategoryLocalTemplate.tsx",
-      "linha": 404,
+      "linha": 407,
       "trecho": "Triagem rápida pelo WhatsApp (com fotos/vídeo) → coleta agendada → diagnóstico em bancada → valor por escrito → reparo + entrega com garantia de 90 dias.",
       "classificacao": "COMPROVADA",
       "criterio": "Prazo e escopo vêm da fonte comercial única",
@@ -7996,7 +8056,7 @@
       "familiaTitulo": "Garantia",
       "risco": "Prazo ou abrangência divergente da política comercial central.",
       "arquivo": "src/pages/servico-bairro/ServicoCidadePage.tsx",
-      "linha": 114,
+      "linha": 109,
       "trecho": "{ icon: Shield, titulo: \"Garantia conforme o serviço executado\", descricao: \"Garantia sobre a mão de obra do reparo executado, registrada no orçamento\" },",
       "classificacao": "COMPROVADA",
       "criterio": "Prazo e escopo vêm da fonte comercial única",
@@ -8009,7 +8069,7 @@
       "familiaTitulo": "Prazo de atendimento prometido",
       "risco": "Prazo fixo sem controle de agenda, trânsito e peça.",
       "arquivo": "src/pages/servico-bairro/ServicoCidadePage.tsx",
-      "linha": 167,
+      "linha": 169,
       "trecho": ": `Atendemos no seu endereço em ${cidade.nome} ainda hoje`",
       "classificacao": "CONDICIONAL",
       "criterio": "Tempos de deslocamento e janelas de atendimento são estimativas dependentes de agenda, trânsito e disponibilidade de peça",
@@ -8022,7 +8082,7 @@
       "familiaTitulo": "Prazo de atendimento prometido",
       "risco": "Prazo fixo sem controle de agenda, trânsito e peça.",
       "arquivo": "src/pages/servico-bairro/ServicoCidadePage.tsx",
-      "linha": 334,
+      "linha": 336,
       "trecho": "Entre em contato agora e agende seu atendimento a domicílio. Respondemos em até 15 minutos.",
       "classificacao": "CONDICIONAL",
       "criterio": "Tempos de deslocamento e janelas de atendimento são estimativas dependentes de agenda, trânsito e disponibilidade de peça",
