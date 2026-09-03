@@ -21,6 +21,39 @@ export interface AtlasPonteArtigo {
 }
 
 export const ATLAS_PONTES_ARTIGOS: Record<string, AtlasPonteArtigo> = {
+  "manutencao-preventiva-de-computador-guia-completo": {
+    temaId: "manutencao-preventiva",
+    porQue:
+      "Prevenção só funciona como rotina com frequência definida: o que é mensal, o que é anual e o que nunca deveria ser feito por reflexo. A trilha de manutenção preventiva organiza essa cadência e evita a intervenção sem sintoma, que introduz risco em vez de eliminar causa.",
+    proximoPasso: {
+      rotulo: "Backup antes da manutenção",
+      to: "/decisoes/backup-antes-da-manutencao",
+      contexto:
+        "Critério para decidir o que copiar antes de abrir ou reinstalar o equipamento.",
+    },
+  },
+  "dispositivo-usb-nao-reconhecido-o-que-fazer": {
+    temaId: "fundamentos",
+    porQue:
+      "A falha de reconhecimento acontece antes de qualquer driver entrar em cena: o aparelho precisa se apresentar ao sistema e informar o consumo de energia. A trilha de fundamentos mostra por que porta, cabo e alimentação vêm antes de software na ordem de investigação.",
+    proximoPasso: {
+      rotulo: "Diagnóstico técnico",
+      to: "/diagnostico-tecnico",
+      contexto:
+        "Quando os testes de isolamento não fecham a causa e a avaliação precisa ser presencial.",
+    },
+  },
+  "como-testar-restauracao-de-backup": {
+    temaId: "dados-backup",
+    porQue:
+      "Ter cópia e conseguir restaurar são coisas diferentes: mídia falha em silêncio, rotina para sem aviso e sincronização propaga o estado ruim. A trilha de dados e backup trata a verificação periódica como parte da própria estratégia de cópia.",
+    proximoPasso: {
+      rotulo: "Nuvem ou HD externo",
+      to: "/decisoes/nuvem-ou-hd-externo",
+      contexto:
+        "Onde guardar cada cópia, com o critério de risco de cada destino.",
+    },
+  },
   "computador-lento-causas-solucoes": {
     temaId: "hardware-upgrades",
     porQue:

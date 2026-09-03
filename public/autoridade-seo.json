@@ -1,26 +1,27 @@
 {
-  "geradoEm": "2026-09-03T15:10:18.098Z",
+  "geradoEm": "2026-09-03T15:53:56.386Z",
   "fonte": {
     "html": "SSR harness",
     "dist": "dist"
   },
-  "total": 63,
-  "analisadas": 63,
+  "total": 66,
+  "analisadas": 66,
   "falhas": 0,
   "medias": {
-    "palavras": 1532.21,
-    "densidadeSemantica": 56.49,
+    "palavras": 1516.71,
+    "densidadeSemantica": 56.62,
     "densidadeKeywordPrincipal": 0.42,
-    "linksInternosSaida": 11.87,
-    "linksInternosEntrada": 2.63
+    "linksInternosSaida": 11.83,
+    "linksInternosEntrada": 2.7
   },
   "orfas": [
     "/blog/como-trocar-tela-notebook-passo-a-passo",
-    "/blog/backup-nuvem-empresas-qual-escolher",
     "/blog/como-conectar-wifi-tv-nao-conecta",
     "/blog/botao-power-nao-funciona-jump-start-placa-mae",
     "/blog/internet-lenta-provedor-ou-roteador",
-    "/blog/ordem-de-boot-na-bios-como-configurar"
+    "/blog/ordem-de-boot-na-bios-como-configurar",
+    "/blog/manutencao-preventiva-de-computador-guia-completo",
+    "/blog/dispositivo-usb-nao-reconhecido-o-que-fazer"
   ],
   "urls": [
     {
@@ -2131,14 +2132,15 @@
         "/ferramentas/verificador-de-backup",
         "/glossario/smart"
       ],
-      "linksInternosEntrada": 6,
+      "linksInternosEntrada": 7,
       "origensEntrada": [
         "/blog/como-clonar-hd-para-ssd",
         "/blog/computador-entra-direto-na-bios",
         "/blog/erro-no-bootable-device-como-resolver",
         "/blog/troquei-o-ssd-e-o-pc-so-abre-a-bios",
         "/blog/hd-nao-e-reconhecido-na-bios-o-que-fazer",
-        "/blog/disco-com-setores-defeituosos-smart-o-que-fazer"
+        "/blog/disco-com-setores-defeituosos-smart-o-que-fazer",
+        "/blog/como-testar-restauracao-de-backup"
       ],
       "erro": null
     },
@@ -3073,10 +3075,11 @@
         "/decisoes/consertar-ou-substituir",
         "/glossario/thermal-throttling"
       ],
-      "linksInternosEntrada": 2,
+      "linksInternosEntrada": 3,
       "origensEntrada": [
         "/blog/como-trocar-pasta-termica-notebook",
-        "/blog/windows-11-lento-como-resolver"
+        "/blog/windows-11-lento-como-resolver",
+        "/blog/manutencao-preventiva-de-computador-guia-completo"
       ],
       "erro": null
     },
@@ -3230,9 +3233,10 @@
         "/decisoes/consertar-ou-substituir",
         "/glossario/thermal-throttling"
       ],
-      "linksInternosEntrada": 1,
+      "linksInternosEntrada": 2,
       "origensEntrada": [
-        "/blog/como-limpar-notebook-por-dentro"
+        "/blog/como-limpar-notebook-por-dentro",
+        "/blog/manutencao-preventiva-de-computador-guia-completo"
       ],
       "erro": null
     },
@@ -3705,10 +3709,11 @@
         "/entidades/backup",
         "/servicos/remocao-de-virus"
       ],
-      "linksInternosEntrada": 2,
+      "linksInternosEntrada": 3,
       "origensEntrada": [
         "/blog/backup-nuvem-empresas-qual-escolher",
-        "/blog/como-remover-virus-windows-iniciantes"
+        "/blog/como-remover-virus-windows-iniciantes",
+        "/blog/como-testar-restauracao-de-backup"
       ],
       "erro": null
     },
@@ -3862,8 +3867,10 @@
         "/entidades/backup",
         "/servicos/remocao-de-virus"
       ],
-      "linksInternosEntrada": 0,
-      "origensEntrada": [],
+      "linksInternosEntrada": 1,
+      "origensEntrada": [
+        "/blog/como-testar-restauracao-de-backup"
+      ],
       "erro": null
     },
     {
@@ -4327,12 +4334,13 @@
         "/glossario/thermal-throttling",
         "/servicos/manutencao-de-notebook"
       ],
-      "linksInternosEntrada": 4,
+      "linksInternosEntrada": 5,
       "origensEntrada": [
         "/blog/como-diagnosticar-placa-mae-defeituosa",
         "/blog/computador-entra-direto-na-bios",
         "/blog/botao-power-nao-funciona-jump-start-placa-mae",
-        "/blog/curto-circuito-placa-mae-como-identificar"
+        "/blog/curto-circuito-placa-mae-como-identificar",
+        "/blog/dispositivo-usb-nao-reconhecido-o-que-fazer"
       ],
       "erro": null
     },
@@ -4486,12 +4494,13 @@
         "/glossario/thermal-throttling",
         "/servicos/manutencao-de-notebook"
       ],
-      "linksInternosEntrada": 4,
+      "linksInternosEntrada": 5,
       "origensEntrada": [
         "/blog/como-testar-fonte-de-alimentacao-pc",
         "/blog/computador-entra-direto-na-bios",
         "/blog/botao-power-nao-funciona-jump-start-placa-mae",
-        "/blog/curto-circuito-placa-mae-como-identificar"
+        "/blog/curto-circuito-placa-mae-como-identificar",
+        "/blog/dispositivo-usb-nao-reconhecido-o-que-fazer"
       ],
       "erro": null
     },
@@ -6248,9 +6257,10 @@
         "/entidades/computador-lento",
         "/servicos/upgrade-ssd-ram"
       ],
-      "linksInternosEntrada": 1,
+      "linksInternosEntrada": 2,
       "origensEntrada": [
-        "/blog/computador-lento-causas-solucoes"
+        "/blog/computador-lento-causas-solucoes",
+        "/blog/manutencao-preventiva-de-computador-guia-completo"
       ],
       "erro": null
     },
@@ -8129,9 +8139,10 @@
         "/ferramentas/verificador-de-backup",
         "/glossario/smart"
       ],
-      "linksInternosEntrada": 1,
+      "linksInternosEntrada": 2,
       "origensEntrada": [
-        "/blog/windows-reparo-automatico-em-loop"
+        "/blog/windows-reparo-automatico-em-loop",
+        "/blog/manutencao-preventiva-de-computador-guia-completo"
       ],
       "erro": null
     },
@@ -8905,10 +8916,11 @@
         "/entidades/windows",
         "/servicos/manutencao-de-computador"
       ],
-      "linksInternosEntrada": 2,
+      "linksInternosEntrada": 3,
       "origensEntrada": [
         "/blog/webcam-nao-funciona-o-que-verificar",
-        "/blog/webcam-usb-nao-e-detectada"
+        "/blog/webcam-usb-nao-e-detectada",
+        "/blog/dispositivo-usb-nao-reconhecido-o-que-fazer"
       ],
       "erro": null
     },
@@ -9060,9 +9072,10 @@
         "/glossario/driver",
         "/entidades/windows"
       ],
-      "linksInternosEntrada": 1,
+      "linksInternosEntrada": 2,
       "origensEntrada": [
-        "/blog/webcam-nao-funciona-o-que-verificar"
+        "/blog/webcam-nao-funciona-o-que-verificar",
+        "/blog/dispositivo-usb-nao-reconhecido-o-que-fazer"
       ],
       "erro": null
     },
@@ -10000,6 +10013,470 @@
       "linksInternosEntrada": 1,
       "origensEntrada": [
         "/blog/ordem-de-boot-na-bios-como-configurar"
+      ],
+      "erro": null
+    },
+    {
+      "url": "/blog/manutencao-preventiva-de-computador-guia-completo",
+      "slug": "manutencao-preventiva-de-computador-guia-completo",
+      "lote": "11A/5",
+      "aprovadoEm": "2026-09-03",
+      "titulo": "Manutenção preventiva de computador: o guia completo",
+      "palavras": 1355,
+      "termosUteis": 765,
+      "densidadeSemantica": 60.52,
+      "vocabulario": 463,
+      "keywordPrincipal": {
+        "termo": "manutencao preventiva de computador guia completo",
+        "ocorrencias": 2,
+        "densidade": 0.26
+      },
+      "topKeywords": [
+        {
+          "termo": "manutencao",
+          "ocorrencias": 13,
+          "densidade": 1.7
+        },
+        {
+          "termo": "preventiva",
+          "ocorrencias": 10,
+          "densidade": 1.31
+        },
+        {
+          "termo": "sistema",
+          "ocorrencias": 9,
+          "densidade": 1.18
+        },
+        {
+          "termo": "disco",
+          "ocorrencias": 8,
+          "densidade": 1.05
+        },
+        {
+          "termo": "tecnico",
+          "ocorrencias": 8,
+          "densidade": 1.05
+        },
+        {
+          "termo": "backup",
+          "ocorrencias": 7,
+          "densidade": 0.92
+        },
+        {
+          "termo": "espaco",
+          "ocorrencias": 7,
+          "densidade": 0.92
+        },
+        {
+          "termo": "armazenamento",
+          "ocorrencias": 6,
+          "densidade": 0.78
+        },
+        {
+          "termo": "limpeza",
+          "ocorrencias": 6,
+          "densidade": 0.78
+        },
+        {
+          "termo": "parar",
+          "ocorrencias": 6,
+          "densidade": 0.78
+        },
+        {
+          "termo": "poeira",
+          "ocorrencias": 6,
+          "densidade": 0.78
+        },
+        {
+          "termo": "rotina",
+          "ocorrencias": 6,
+          "densidade": 0.78
+        }
+      ],
+      "topBigramas": [
+        {
+          "termo": "manutencao preventiva",
+          "ocorrencias": 7,
+          "densidade": 0.92
+        },
+        {
+          "termo": "espaco livre",
+          "ocorrencias": 5,
+          "densidade": 0.65
+        },
+        {
+          "termo": "copia seguranca",
+          "ocorrencias": 4,
+          "densidade": 0.52
+        },
+        {
+          "termo": "pasta termica",
+          "ocorrencias": 4,
+          "densidade": 0.52
+        },
+        {
+          "termo": "backup manutencao",
+          "ocorrencias": 3,
+          "densidade": 0.39
+        },
+        {
+          "termo": "computador guia",
+          "ocorrencias": 3,
+          "densidade": 0.39
+        },
+        {
+          "termo": "curitiba regiao",
+          "ocorrencias": 3,
+          "densidade": 0.39
+        },
+        {
+          "termo": "estado armazenamento",
+          "ocorrencias": 3,
+          "densidade": 0.39
+        }
+      ],
+      "headings": {
+        "h2": 14,
+        "h3": 0
+      },
+      "schemas": [
+        "Organization",
+        "WebSite",
+        "BreadcrumbList",
+        "BlogPosting",
+        "Article",
+        "TechArticle",
+        "LocalBusiness",
+        "ProfessionalService",
+        "ComputerRepairService",
+        "ItemList",
+        "FAQPage"
+      ],
+      "linksInternosSaida": 14,
+      "linksSaida": [
+        "/blog",
+        "/contato",
+        "/blog/como-limpar-notebook-por-dentro",
+        "/blog/como-trocar-pasta-termica-notebook",
+        "/blog/disco-com-setores-defeituosos-smart-o-que-fazer",
+        "/blog/limpar-arquivos-temporarios-windows",
+        "/problemas/computador-lento",
+        "/blog/como-testar-restauracao-de-backup",
+        "/decisoes/nuvem-ou-hd-externo",
+        "/servicos/manutencao-preventiva-empresas",
+        "/servicos/recuperacao-de-dados",
+        "/decisoes/backup-antes-da-manutencao",
+        "/diagnostico-tecnico",
+        "/servicos/manutencao-de-computador"
+      ],
+      "linksInternosEntrada": 0,
+      "origensEntrada": [],
+      "erro": null
+    },
+    {
+      "url": "/blog/dispositivo-usb-nao-reconhecido-o-que-fazer",
+      "slug": "dispositivo-usb-nao-reconhecido-o-que-fazer",
+      "lote": "11A/5",
+      "aprovadoEm": "2026-09-03",
+      "titulo": "Dispositivo USB não reconhecido: como descobrir a causa",
+      "palavras": 1121,
+      "termosUteis": 638,
+      "densidadeSemantica": 57.37,
+      "vocabulario": 366,
+      "keywordPrincipal": {
+        "termo": "dispositivo usb nao reconhecido o que fazer",
+        "ocorrencias": 3,
+        "densidade": 0.47
+      },
+      "topKeywords": [
+        {
+          "termo": "porta",
+          "ocorrencias": 20,
+          "densidade": 3.13
+        },
+        {
+          "termo": "dispositivo",
+          "ocorrencias": 16,
+          "densidade": 2.51
+        },
+        {
+          "termo": "cabo",
+          "ocorrencias": 13,
+          "densidade": 2.04
+        },
+        {
+          "termo": "driver",
+          "ocorrencias": 10,
+          "densidade": 1.57
+        },
+        {
+          "termo": "tecnico",
+          "ocorrencias": 9,
+          "densidade": 1.41
+        },
+        {
+          "termo": "alimentacao",
+          "ocorrencias": 7,
+          "densidade": 1.1
+        },
+        {
+          "termo": "aparelho",
+          "ocorrencias": 7,
+          "densidade": 1.1
+        },
+        {
+          "termo": "causa",
+          "ocorrencias": 7,
+          "densidade": 1.1
+        },
+        {
+          "termo": "energia",
+          "ocorrencias": 7,
+          "densidade": 1.1
+        },
+        {
+          "termo": "computador",
+          "ocorrencias": 6,
+          "densidade": 0.94
+        },
+        {
+          "termo": "sistema",
+          "ocorrencias": 6,
+          "densidade": 0.94
+        },
+        {
+          "termo": "testes",
+          "ocorrencias": 6,
+          "densidade": 0.94
+        }
+      ],
+      "topBigramas": [
+        {
+          "termo": "curitiba regiao",
+          "ocorrencias": 3,
+          "densidade": 0.47
+        },
+        {
+          "termo": "dispositivo usb",
+          "ocorrencias": 3,
+          "densidade": 0.47
+        },
+        {
+          "termo": "mesmo dispositivo",
+          "ocorrencias": 3,
+          "densidade": 0.47
+        },
+        {
+          "termo": "porta controlador",
+          "ocorrencias": 3,
+          "densidade": 0.47
+        },
+        {
+          "termo": "segue investigacao",
+          "ocorrencias": 3,
+          "densidade": 0.47
+        },
+        {
+          "termo": "usb reconhecido",
+          "ocorrencias": 3,
+          "densidade": 0.47
+        },
+        {
+          "termo": "alimentacao falta",
+          "ocorrencias": 2,
+          "densidade": 0.31
+        },
+        {
+          "termo": "alimentacao propria",
+          "ocorrencias": 2,
+          "densidade": 0.31
+        }
+      ],
+      "headings": {
+        "h2": 13,
+        "h3": 0
+      },
+      "schemas": [
+        "Organization",
+        "WebSite",
+        "BreadcrumbList",
+        "BlogPosting",
+        "Article",
+        "TechArticle",
+        "LocalBusiness",
+        "ProfessionalService",
+        "ComputerRepairService",
+        "ItemList",
+        "FAQPage"
+      ],
+      "linksInternosSaida": 9,
+      "linksSaida": [
+        "/blog",
+        "/contato",
+        "/blog/como-testar-fonte-de-alimentacao-pc",
+        "/blog/como-diagnosticar-placa-mae-defeituosa",
+        "/blog/permissoes-de-camera-no-windows",
+        "/blog/webcam-usb-nao-e-detectada",
+        "/servicos/recuperacao-de-dados",
+        "/diagnostico-tecnico",
+        "/servicos/manutencao-de-computador"
+      ],
+      "linksInternosEntrada": 0,
+      "origensEntrada": [],
+      "erro": null
+    },
+    {
+      "url": "/blog/como-testar-restauracao-de-backup",
+      "slug": "como-testar-restauracao-de-backup",
+      "lote": "11A/5",
+      "aprovadoEm": "2026-09-03",
+      "titulo": "Como testar se o backup realmente funciona",
+      "palavras": 1098,
+      "termosUteis": 611,
+      "densidadeSemantica": 60.23,
+      "vocabulario": 368,
+      "keywordPrincipal": {
+        "termo": "como testar restauracao de backup",
+        "ocorrencias": 4,
+        "densidade": 0.65
+      },
+      "topKeywords": [
+        {
+          "termo": "backup",
+          "ocorrencias": 14,
+          "densidade": 2.29
+        },
+        {
+          "termo": "copia",
+          "ocorrencias": 13,
+          "densidade": 2.13
+        },
+        {
+          "termo": "arquivo",
+          "ocorrencias": 12,
+          "densidade": 1.96
+        },
+        {
+          "termo": "midia",
+          "ocorrencias": 9,
+          "densidade": 1.47
+        },
+        {
+          "termo": "teste",
+          "ocorrencias": 9,
+          "densidade": 1.47
+        },
+        {
+          "termo": "tecnico",
+          "ocorrencias": 8,
+          "densidade": 1.31
+        },
+        {
+          "termo": "disco",
+          "ocorrencias": 7,
+          "densidade": 1.15
+        },
+        {
+          "termo": "restauracao",
+          "ocorrencias": 7,
+          "densidade": 1.15
+        },
+        {
+          "termo": "rotina",
+          "ocorrencias": 7,
+          "densidade": 1.15
+        },
+        {
+          "termo": "copias",
+          "ocorrencias": 6,
+          "densidade": 0.98
+        },
+        {
+          "termo": "dados",
+          "ocorrencias": 6,
+          "densidade": 0.98
+        },
+        {
+          "termo": "nuvem",
+          "ocorrencias": 6,
+          "densidade": 0.98
+        }
+      ],
+      "topBigramas": [
+        {
+          "termo": "curitiba regiao",
+          "ocorrencias": 3,
+          "densidade": 0.49
+        },
+        {
+          "termo": "dois tipos",
+          "ocorrencias": 3,
+          "densidade": 0.49
+        },
+        {
+          "termo": "teste restauracao",
+          "ocorrencias": 3,
+          "densidade": 0.49
+        },
+        {
+          "termo": "tres copias",
+          "ocorrencias": 3,
+          "densidade": 0.49
+        },
+        {
+          "termo": "abrir arquivo",
+          "ocorrencias": 2,
+          "densidade": 0.33
+        },
+        {
+          "termo": "arquivo real",
+          "ocorrencias": 2,
+          "densidade": 0.33
+        },
+        {
+          "termo": "backup realmente",
+          "ocorrencias": 2,
+          "densidade": 0.33
+        },
+        {
+          "termo": "chamar tecnico",
+          "ocorrencias": 2,
+          "densidade": 0.33
+        }
+      ],
+      "headings": {
+        "h2": 12,
+        "h3": 0
+      },
+      "schemas": [
+        "Organization",
+        "WebSite",
+        "BreadcrumbList",
+        "BlogPosting",
+        "Article",
+        "TechArticle",
+        "LocalBusiness",
+        "ProfessionalService",
+        "ComputerRepairService",
+        "ItemList",
+        "FAQPage"
+      ],
+      "linksInternosSaida": 10,
+      "linksSaida": [
+        "/blog",
+        "/contato",
+        "/blog/backup-nuvem-empresas-qual-escolher",
+        "/servicos/backup-para-empresas",
+        "/decisoes/nuvem-ou-hd-externo",
+        "/blog/ransomware-como-proteger-empresa",
+        "/decisoes/backup-antes-da-manutencao",
+        "/blog/como-recuperar-dados-hd-com-defeito",
+        "/servicos/recuperacao-de-dados",
+        "/diagnostico-tecnico"
+      ],
+      "linksInternosEntrada": 1,
+      "origensEntrada": [
+        "/blog/manutencao-preventiva-de-computador-guia-completo"
       ],
       "erro": null
     }

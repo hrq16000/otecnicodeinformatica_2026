@@ -1,15 +1,15 @@
 {
-  "geradoEm": "2026-09-03T15:10:11.744Z",
+  "geradoEm": "2026-09-03T15:53:49.226Z",
   "host": "otecnicodeinformatica.com.br",
   "modo": "generate",
   "sitemap": {
     "url": "https://otecnicodeinformatica.com.br/sitemap.xml",
-    "totalUrls": 232,
+    "totalUrls": 235,
     "googleSearchConsole": "NOT_REQUESTED",
     "indexNow": "NOT_REQUESTED"
   },
   "lotes": {
-    "total": 63,
+    "total": 66,
     "itens": [
       {
         "slug": "quando-trocar-hd-por-ssd",
@@ -387,6 +387,24 @@
         "slug": "windows-reparo-automatico-em-loop",
         "url": "/blog/windows-reparo-automatico-em-loop",
         "approvedAt": "2026-08-31",
+        "includeInSitemap": true
+      },
+      {
+        "slug": "manutencao-preventiva-de-computador-guia-completo",
+        "url": "/blog/manutencao-preventiva-de-computador-guia-completo",
+        "approvedAt": "2026-09-03",
+        "includeInSitemap": true
+      },
+      {
+        "slug": "dispositivo-usb-nao-reconhecido-o-que-fazer",
+        "url": "/blog/dispositivo-usb-nao-reconhecido-o-que-fazer",
+        "approvedAt": "2026-09-03",
+        "includeInSitemap": true
+      },
+      {
+        "slug": "como-testar-restauracao-de-backup",
+        "url": "/blog/como-testar-restauracao-de-backup",
+        "approvedAt": "2026-09-03",
         "includeInSitemap": true
       }
     ]
@@ -1319,6 +1337,42 @@
         "adicionadas": [],
         "removidas": [],
         "total": 232
+      },
+      "error": null
+    },
+    {
+      "id": "0bf0bcb5-968d-45b2-ba62-121a8c39588a",
+      "action": "sync_approved",
+      "status": "OK",
+      "source": "cli",
+      "timestamp": "2026-09-03T15:53:49.333Z",
+      "details": {
+        "modo": "write",
+        "saida": "sitemap editorial: em dia (66 artigos indexáveis)"
+      },
+      "error": null
+    },
+    {
+      "id": "1fed2586-11e3-4b1c-a3dd-92775eee1171",
+      "action": "generate_sitemaps",
+      "status": "OK",
+      "source": "cli",
+      "timestamp": "2026-09-03T15:53:49.473Z",
+      "details": {
+        "saida": "sitemap curado: index + 8 sub-sitemaps (235 urls)"
+      },
+      "error": null
+    },
+    {
+      "id": "01815de7-88cf-498b-948b-a05bae180844",
+      "action": "diff_no_regression",
+      "status": "OK",
+      "source": "cli",
+      "timestamp": "2026-09-03T15:53:49.500Z",
+      "details": {
+        "adicionadas": [],
+        "removidas": [],
+        "total": 235
       },
       "error": null
     }

@@ -515,6 +515,30 @@ const rows: Array<EditorialHubSummary & { slug: string }> = [
     "date": "2026-08-31",
     "readTime": "10 min",
     "category": "Diagnóstico"
+  },
+  {
+    "slug": "manutencao-preventiva-de-computador-guia-completo",
+    "title": "Manutenção preventiva de computador: o guia completo",
+    "excerpt": "O que realmente precisa ser verificado, com que frequência e em que ordem — do calor e da poeira ao estado do armazenamento — sem trocar peça por precaução.",
+    "date": "2026-09-03",
+    "readTime": "12 min",
+    "category": "Manutenção"
+  },
+  {
+    "slug": "dispositivo-usb-nao-reconhecido-o-que-fazer",
+    "title": "Dispositivo USB não reconhecido: como descobrir a causa",
+    "excerpt": "Como separar defeito do aparelho, da porta, do cabo, da alimentação e do driver — em uma sequência de testes que não exige abrir o computador.",
+    "date": "2026-09-03",
+    "readTime": "11 min",
+    "category": "Diagnóstico"
+  },
+  {
+    "slug": "como-testar-restauracao-de-backup",
+    "title": "Como testar se o backup realmente funciona",
+    "excerpt": "Cópia nunca restaurada é suposição. O roteiro de teste de restauração, o que registrar e os erros que só aparecem no dia em que o arquivo faz falta.",
+    "date": "2026-09-03",
+    "readTime": "11 min",
+    "category": "Procedimentos Técnicos"
   }
 ];
 

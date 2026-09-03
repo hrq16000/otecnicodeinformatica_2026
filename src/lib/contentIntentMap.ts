@@ -396,6 +396,74 @@ export const CONTENT_INTENT_MAP: ContentNode[] = [
     justificativa:
       "Satélite de procedimento: separa perda de configuração (CMOS) de firmware corrompido. A configuração de boot permanece no pilar da BIOS.",
   },
+  // ── Onda 11C — guias técnicos profundos (manutenção, periféricos e backup).
+  {
+    url: "/blog/manutencao-preventiva-de-computador-guia-completo",
+    intent: "informational",
+    topic: "rotina de manutenção preventiva por frequência",
+    queries: [
+      "manutencao preventiva de computador",
+      "com que frequencia fazer manutencao no pc",
+      "checklist de manutencao de computador",
+    ],
+    serviceParent: "/servicos/manutencao-de-computador",
+    problemParent: "/problemas/computador-lento",
+    bridgesTo: [
+      "/blog/como-limpar-notebook-por-dentro",
+      "/blog/como-testar-restauracao-de-backup",
+      "/servicos/manutencao-de-computador",
+    ],
+    doNotDuplicate: [
+      "/blog/como-limpar-notebook-por-dentro",
+      "/blog/como-trocar-pasta-termica-notebook",
+    ],
+    novaNestaRodada: true,
+    justificativa:
+      "Pilar de cadência: define o que verificar e quando. Os procedimentos manuais (limpeza e pasta térmica) permanecem nos artigos próprios.",
+  },
+  {
+    url: "/blog/dispositivo-usb-nao-reconhecido-o-que-fazer",
+    intent: "diagnostic",
+    topic: "isolamento de falha em periférico USB",
+    queries: [
+      "dispositivo usb nao reconhecido",
+      "porta usb nao funciona",
+      "pendrive nao aparece no computador",
+    ],
+    serviceParent: "/servicos/manutencao-de-computador",
+    bridgesTo: [
+      "/blog/webcam-usb-nao-e-detectada",
+      "/blog/como-testar-fonte-de-alimentacao-pc",
+      "/diagnostico-tecnico",
+    ],
+    doNotDuplicate: ["/blog/webcam-usb-nao-e-detectada"],
+    novaNestaRodada: true,
+    justificativa:
+      "Diagnóstico genérico de conexão USB (porta, cabo, alimentação). O caso específico de webcam continua com página própria e não é repetido aqui.",
+  },
+  {
+    url: "/blog/como-testar-restauracao-de-backup",
+    intent: "informational",
+    topic: "verificação e teste de restauração de cópias",
+    queries: [
+      "como testar backup",
+      "teste de restauracao de backup",
+      "meu backup funciona mesmo",
+    ],
+    serviceParent: "/servicos/backup-para-empresas",
+    bridgesTo: [
+      "/decisoes/nuvem-ou-hd-externo",
+      "/decisoes/backup-antes-da-manutencao",
+      "/servicos/backup-para-empresas",
+    ],
+    doNotDuplicate: [
+      "/blog/backup-nuvem-empresas-qual-escolher",
+      "/decisoes/nuvem-ou-hd-externo",
+    ],
+    novaNestaRodada: true,
+    justificativa:
+      "Tema não coberto: a escolha de destino já existe em outra URL; aqui o objeto é a prova de que a cópia restaura.",
+  },
 ];
 
 /** Nó do mapa por URL canônica (sem barra final). */
