@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-09-03T17:32:23.407Z",
+  "geradoEm": "2026-09-03T18:07:12.489Z",
   "fonte": {
     "html": "SSR harness",
     "dist": "dist"
@@ -8,8 +8,8 @@
   "analisadas": 75,
   "falhas": 0,
   "medias": {
-    "palavras": 1456.55,
-    "densidadeSemantica": 57.14,
+    "palavras": 1461.48,
+    "densidadeSemantica": 56.93,
     "densidadeKeywordPrincipal": 0.43,
     "linksInternosSaida": 11.6,
     "linksInternosEntrada": 2.97
@@ -11458,117 +11458,117 @@
       "lote": "11A/8",
       "aprovadoEm": "2026-09-03",
       "titulo": "Teclado de notebook não funciona: o que verificar antes de trocar",
-      "palavras": 1001,
-      "termosUteis": 586,
-      "densidadeSemantica": 59.73,
-      "vocabulario": 350,
+      "palavras": 1136,
+      "termosUteis": 667,
+      "densidadeSemantica": 53.82,
+      "vocabulario": 359,
       "keywordPrincipal": {
         "termo": "teclado de notebook nao funciona o que verificar",
         "ocorrencias": 5,
-        "densidade": 0.85
+        "densidade": 0.75
       },
       "topKeywords": [
         {
           "termo": "teclado",
-          "ocorrencias": 30,
-          "densidade": 5.12
+          "ocorrencias": 40,
+          "densidade": 6
         },
         {
           "termo": "liquido",
-          "ocorrencias": 9,
-          "densidade": 1.54
-        },
-        {
-          "termo": "tecnico",
-          "ocorrencias": 9,
-          "densidade": 1.54
+          "ocorrencias": 12,
+          "densidade": 1.8
         },
         {
           "termo": "sistema",
-          "ocorrencias": 8,
-          "densidade": 1.37
+          "ocorrencias": 11,
+          "densidade": 1.65
         },
         {
           "termo": "externo",
+          "ocorrencias": 10,
+          "densidade": 1.5
+        },
+        {
+          "termo": "teclas",
+          "ocorrencias": 9,
+          "densidade": 1.35
+        },
+        {
+          "termo": "tecnico",
+          "ocorrencias": 8,
+          "densidade": 1.2
+        },
+        {
+          "termo": "cabo",
           "ocorrencias": 7,
-          "densidade": 1.19
+          "densidade": 1.05
         },
         {
           "termo": "funciona",
           "ocorrencias": 7,
-          "densidade": 1.19
+          "densidade": 1.05
+        },
+        {
+          "termo": "interno",
+          "ocorrencias": 7,
+          "densidade": 1.05
         },
         {
           "termo": "quatro",
           "ocorrencias": 7,
-          "densidade": 1.19
+          "densidade": 1.05
         },
         {
-          "termo": "teclas",
-          "ocorrencias": 7,
-          "densidade": 1.19
-        },
-        {
-          "termo": "responde",
+          "termo": "falha",
           "ocorrencias": 6,
-          "densidade": 1.02
+          "densidade": 0.9
         },
         {
-          "termo": "curitiba",
-          "ocorrencias": 5,
-          "densidade": 0.85
-        },
-        {
-          "termo": "equipamento",
-          "ocorrencias": 5,
-          "densidade": 0.85
-        },
-        {
-          "termo": "interno",
-          "ocorrencias": 5,
-          "densidade": 0.85
+          "termo": "flat",
+          "ocorrencias": 6,
+          "densidade": 0.9
         }
       ],
       "topBigramas": [
         {
-          "termo": "curitiba regiao",
-          "ocorrencias": 3,
-          "densidade": 0.51
+          "termo": "cabo flat",
+          "ocorrencias": 5,
+          "densidade": 0.75
+        },
+        {
+          "termo": "teclado interno",
+          "ocorrencias": 5,
+          "densidade": 0.75
+        },
+        {
+          "termo": "teclado externo",
+          "ocorrencias": 4,
+          "densidade": 0.6
+        },
+        {
+          "termo": "teclado usb",
+          "ocorrencias": 4,
+          "densidade": 0.6
         },
         {
           "termo": "externo funciona",
           "ocorrencias": 3,
-          "densidade": 0.51
+          "densidade": 0.45
         },
         {
           "termo": "externo responde",
           "ocorrencias": 3,
-          "densidade": 0.51
+          "densidade": 0.45
+        },
+        {
+          "termo": "interno cabo",
+          "ocorrencias": 3,
+          "densidade": 0.45
         },
         {
           "termo": "quatro sintomas",
           "ocorrencias": 3,
-          "densidade": 0.51
-        },
-        {
-          "termo": "teclado externo",
-          "ocorrencias": 3,
-          "densidade": 0.51
-        },
-        {
-          "termo": "teclado interno",
-          "ocorrencias": 3,
-          "densidade": 0.51
-        },
-        {
-          "termo": "teclado usb",
-          "ocorrencias": 3,
-          "densidade": 0.51
-        },
-        {
-          "termo": "cabo flat",
-          "ocorrencias": 2,
-          "densidade": 0.34
+          "densidade": 0.45
         }
       ],
       "headings": {
@@ -11609,117 +11609,117 @@
       "lote": "11A/8",
       "aprovadoEm": "2026-09-03",
       "titulo": "Computador desliga sozinho: o que verificar antes de trocar peça",
-      "palavras": 1011,
-      "termosUteis": 596,
-      "densidadeSemantica": 60.74,
-      "vocabulario": 362,
+      "palavras": 1119,
+      "termosUteis": 668,
+      "densidadeSemantica": 56.74,
+      "vocabulario": 379,
       "keywordPrincipal": {
         "termo": "computador desliga sozinho o que verificar",
-        "ocorrencias": 4,
-        "densidade": 0.67
+        "ocorrencias": 5,
+        "densidade": 0.75
       },
       "topKeywords": [
         {
           "termo": "desligamento",
-          "ocorrencias": 10,
-          "densidade": 1.68
+          "ocorrencias": 13,
+          "densidade": 1.95
         },
         {
           "termo": "fonte",
+          "ocorrencias": 13,
+          "densidade": 1.95
+        },
+        {
+          "termo": "temperatura",
+          "ocorrencias": 11,
+          "densidade": 1.65
+        },
+        {
+          "termo": "sistema",
           "ocorrencias": 10,
-          "densidade": 1.68
+          "densidade": 1.5
         },
         {
           "termo": "desliga",
           "ocorrencias": 9,
-          "densidade": 1.51
+          "densidade": 1.35
         },
         {
           "termo": "eletrica",
-          "ocorrencias": 8,
-          "densidade": 1.34
-        },
-        {
-          "termo": "sistema",
-          "ocorrencias": 8,
-          "densidade": 1.34
-        },
-        {
-          "termo": "tecnico",
-          "ocorrencias": 8,
-          "densidade": 1.34
-        },
-        {
-          "termo": "computador",
-          "ocorrencias": 7,
-          "densidade": 1.17
-        },
-        {
-          "termo": "temperatura",
-          "ocorrencias": 7,
-          "densidade": 1.17
+          "ocorrencias": 9,
+          "densidade": 1.35
         },
         {
           "termo": "termica",
-          "ocorrencias": 7,
-          "densidade": 1.17
+          "ocorrencias": 9,
+          "densidade": 1.35
         },
         {
-          "termo": "energia",
-          "ocorrencias": 6,
-          "densidade": 1.01
+          "termo": "computador",
+          "ocorrencias": 8,
+          "densidade": 1.2
         },
         {
           "termo": "protecao",
-          "ocorrencias": 6,
-          "densidade": 1.01
+          "ocorrencias": 8,
+          "densidade": 1.2
         },
         {
-          "termo": "curitiba",
-          "ocorrencias": 5,
-          "densidade": 0.84
+          "termo": "memoria",
+          "ocorrencias": 7,
+          "densidade": 1.05
+        },
+        {
+          "termo": "sozinho",
+          "ocorrencias": 7,
+          "densidade": 1.05
+        },
+        {
+          "termo": "tecnico",
+          "ocorrencias": 7,
+          "densidade": 1.05
         }
       ],
       "topBigramas": [
         {
           "termo": "protecao termica",
-          "ocorrencias": 4,
-          "densidade": 0.67
+          "ocorrencias": 5,
+          "densidade": 0.75
         },
         {
           "termo": "computador desliga",
           "ocorrencias": 3,
-          "densidade": 0.5
-        },
-        {
-          "termo": "curitiba regiao",
-          "ocorrencias": 3,
-          "densidade": 0.5
+          "densidade": 0.45
         },
         {
           "termo": "desliga sozinho",
           "ocorrencias": 3,
-          "densidade": 0.5
+          "densidade": 0.45
+        },
+        {
+          "termo": "desligamento acontece",
+          "ocorrencias": 3,
+          "densidade": 0.45
+        },
+        {
+          "termo": "pasta termica",
+          "ocorrencias": 3,
+          "densidade": 0.45
+        },
+        {
+          "termo": "rede eletrica",
+          "ocorrencias": 3,
+          "densidade": 0.45
         },
         {
           "termo": "registro sistema",
           "ocorrencias": 3,
-          "densidade": 0.5
+          "densidade": 0.45
         },
         {
           "termo": "trocar peca",
           "ocorrencias": 3,
-          "densidade": 0.5
-        },
-        {
-          "termo": "alto consumo",
-          "ocorrencias": 2,
-          "densidade": 0.34
-        },
-        {
-          "termo": "backup manutencao",
-          "ocorrencias": 2,
-          "densidade": 0.34
+          "densidade": 0.45
         }
       ],
       "headings": {
@@ -11764,117 +11764,117 @@
       "lote": "11A/8",
       "aprovadoEm": "2026-09-03",
       "titulo": "Computador não conecta na internet por cabo: o que verificar",
-      "palavras": 987,
-      "termosUteis": 559,
-      "densidadeSemantica": 56.89,
-      "vocabulario": 318,
+      "palavras": 1114,
+      "termosUteis": 626,
+      "densidadeSemantica": 51.44,
+      "vocabulario": 322,
       "keywordPrincipal": {
         "termo": "computador nao conecta na internet por cabo",
-        "ocorrencias": 2,
-        "densidade": 0.36
+        "ocorrencias": 3,
+        "densidade": 0.48
       },
       "topKeywords": [
         {
           "termo": "cabo",
-          "ocorrencias": 19,
-          "densidade": 3.4
+          "ocorrencias": 29,
+          "densidade": 4.63
         },
         {
           "termo": "rede",
-          "ocorrencias": 15,
-          "densidade": 2.68
+          "ocorrencias": 21,
+          "densidade": 3.35
         },
         {
           "termo": "roteador",
-          "ocorrencias": 14,
-          "densidade": 2.5
+          "ocorrencias": 18,
+          "densidade": 2.88
+        },
+        {
+          "termo": "placa",
+          "ocorrencias": 12,
+          "densidade": 1.92
+        },
+        {
+          "termo": "porta",
+          "ocorrencias": 12,
+          "densidade": 1.92
+        },
+        {
+          "termo": "enlace",
+          "ocorrencias": 10,
+          "densidade": 1.6
+        },
+        {
+          "termo": "internet",
+          "ocorrencias": 10,
+          "densidade": 1.6
+        },
+        {
+          "termo": "provedor",
+          "ocorrencias": 10,
+          "densidade": 1.6
         },
         {
           "termo": "computador",
           "ocorrencias": 9,
-          "densidade": 1.61
+          "densidade": 1.44
         },
         {
-          "termo": "tecnico",
+          "termo": "problema",
           "ocorrencias": 9,
-          "densidade": 1.61
-        },
-        {
-          "termo": "internet",
-          "ocorrencias": 8,
-          "densidade": 1.43
-        },
-        {
-          "termo": "porta",
-          "ocorrencias": 8,
-          "densidade": 1.43
-        },
-        {
-          "termo": "provedor",
-          "ocorrencias": 8,
-          "densidade": 1.43
+          "densidade": 1.44
         },
         {
           "termo": "wi-fi",
-          "ocorrencias": 7,
-          "densidade": 1.25
+          "ocorrencias": 9,
+          "densidade": 1.44
         },
         {
           "termo": "conector",
-          "ocorrencias": 6,
-          "densidade": 1.07
-        },
-        {
-          "termo": "enlace",
-          "ocorrencias": 6,
-          "densidade": 1.07
-        },
-        {
-          "termo": "placa",
-          "ocorrencias": 6,
-          "densidade": 1.07
+          "ocorrencias": 8,
+          "densidade": 1.28
         }
       ],
       "topBigramas": [
         {
           "termo": "placa rede",
-          "ocorrencias": 4,
-          "densidade": 0.72
+          "ocorrencias": 7,
+          "densidade": 1.12
         },
         {
-          "termo": "curitiba regiao",
+          "termo": "porta roteador",
+          "ocorrencias": 4,
+          "densidade": 0.64
+        },
+        {
+          "termo": "cabo porta",
           "ocorrencias": 3,
-          "densidade": 0.54
+          "densidade": 0.48
+        },
+        {
+          "termo": "enlace fisico",
+          "ocorrencias": 3,
+          "densidade": 0.48
         },
         {
           "termo": "falha provedor",
           "ocorrencias": 3,
-          "densidade": 0.54
+          "densidade": 0.48
+        },
+        {
+          "termo": "mesmo roteador",
+          "ocorrencias": 3,
+          "densidade": 0.48
         },
         {
           "termo": "rede computador",
           "ocorrencias": 3,
-          "densidade": 0.54
+          "densidade": 0.48
         },
         {
           "termo": "redes wi-fi",
           "ocorrencias": 3,
-          "densidade": 0.54
-        },
-        {
-          "termo": "cabo culpado",
-          "ocorrencias": 2,
-          "densidade": 0.36
-        },
-        {
-          "termo": "cabo porta",
-          "ocorrencias": 2,
-          "densidade": 0.36
-        },
-        {
-          "termo": "cabo rede",
-          "ocorrencias": 2,
-          "densidade": 0.36
+          "densidade": 0.48
         }
       ],
       "headings": {

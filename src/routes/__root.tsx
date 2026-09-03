@@ -143,9 +143,15 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { rel: "manifest", href: "/manifest.json", crossOrigin: "use-credentials" },
     ],
     scripts: [
+      // Versão do build no HTML servido: permite ao smoke pós-deploy e ao
+      // DeployVersionCheck confirmarem qual build está no ar.
+      {
+        children: `window.__APP_VERSION__="${__APP_VERSION__}";window.__APP_BUILD_TIME__="${__APP_BUILD_TIME__}";`,
+      },
       { children: CONSENT_MODE_SCRIPT },
       { children: WA_PREHYDRATION_SCRIPT },
       { children: OS_PREHYDRATION_SCRIPT },
+
 
       {
         src: "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3762170279587706",
