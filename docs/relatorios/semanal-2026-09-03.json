@@ -6,7 +6,7 @@
       "label": "Canibalização de intenção",
       "cmd": "npm run check:cannibalization",
       "status": "ok",
-      "ms": 578,
+      "ms": 558,
       "detalhe": ""
     },
     {
@@ -14,7 +14,7 @@
       "label": "Links internos (strict)",
       "cmd": "npm run check:internal-links:strict",
       "status": "ok",
-      "ms": 629,
+      "ms": 572,
       "detalhe": ""
     },
     {
@@ -22,7 +22,7 @@
       "label": "Interlinking local mãe ⇄ filhas",
       "cmd": "npm run check:local-interlinking",
       "status": "ok",
-      "ms": 8273,
+      "ms": 8051,
       "detalhe": ""
     },
     {
@@ -30,7 +30,7 @@
       "label": "Interlinking artigo ⇄ pilar",
       "cmd": "npm run check:editorial-cluster",
       "status": "ok",
-      "ms": 515,
+      "ms": 353,
       "detalhe": ""
     },
     {
@@ -38,7 +38,7 @@
       "label": "JSON-LD (validação geral)",
       "cmd": "npm run validate:jsonld",
       "status": "ok",
-      "ms": 24575,
+      "ms": 24577,
       "detalhe": ""
     },
     {
@@ -46,7 +46,7 @@
       "label": "Paridade JSON-LD × conteúdo visível",
       "cmd": "npm run check:jsonld-parity",
       "status": "ok",
-      "ms": 1243,
+      "ms": 1263,
       "detalhe": ""
     },
     {
@@ -54,7 +54,7 @@
       "label": "Rich results (strict)",
       "cmd": "npm run check:rich-results:strict",
       "status": "ok",
-      "ms": 25421,
+      "ms": 27179,
       "detalhe": ""
     },
     {
@@ -62,7 +62,7 @@
       "label": "Claims de confiança e copy proibida",
       "cmd": "npm run check:copy",
       "status": "ok",
-      "ms": 3889,
+      "ms": 4221,
       "detalhe": ""
     },
     {
@@ -70,7 +70,7 @@
       "label": "NAP / WhatsApp oficial",
       "cmd": "npm run check:nap",
       "status": "falha",
-      "ms": 394,
+      "ms": 357,
       "detalhe": "> vite_react_shadcn_ts@0.0.0 check:nap | > node scripts/check-nap-whatsapp.mjs |  | BLOQUEADO: confirme o número oficial com --confirm=<numero> antes de rodar o verificador."
     },
     {
@@ -78,7 +78,7 @@
       "label": "Manifesto × sitemap",
       "cmd": "npm run check:sitemap-source",
       "status": "ok",
-      "ms": 475,
+      "ms": 503,
       "detalhe": ""
     },
     {
@@ -86,7 +86,7 @@
       "label": "Integridade dos experimentos de CRO",
       "cmd": "npm run check:cro-experiment",
       "status": "ok",
-      "ms": 583,
+      "ms": 331,
       "detalhe": ""
     },
     {
@@ -94,7 +94,7 @@
       "label": "Política de prontidão de experimento",
       "cmd": "npm run check:experiment-readiness",
       "status": "ok",
-      "ms": 402,
+      "ms": 388,
       "detalhe": ""
     },
     {
@@ -102,7 +102,7 @@
       "label": "Ativação auditável de experimento",
       "cmd": "npm run check:experiment-activation",
       "status": "ok",
-      "ms": 390,
+      "ms": 351,
       "detalhe": ""
     }
   ]
