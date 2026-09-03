@@ -1,15 +1,15 @@
 {
-  "geradoEm": "2026-09-03T16:35:32.750Z",
+  "geradoEm": "2026-09-03T16:57:26.289Z",
   "host": "otecnicodeinformatica.com.br",
   "modo": "generate",
   "sitemap": {
     "url": "https://otecnicodeinformatica.com.br/sitemap.xml",
-    "totalUrls": 238,
+    "totalUrls": 241,
     "googleSearchConsole": "NOT_REQUESTED",
     "indexNow": "NOT_REQUESTED"
   },
   "lotes": {
-    "total": 69,
+    "total": 72,
     "itens": [
       {
         "slug": "quando-trocar-hd-por-ssd",
@@ -424,15 +424,29 @@
         "url": "/blog/historico-de-arquivos-windows-como-configurar",
         "approvedAt": "2026-09-03",
         "includeInSitemap": true
+      },
+      {
+        "slug": "monitor-sem-sinal-o-que-verificar",
+        "url": "/blog/monitor-sem-sinal-o-que-verificar",
+        "approvedAt": "2026-09-03",
+        "includeInSitemap": true
+      },
+      {
+        "slug": "bateria-de-notebook-nao-carrega-o-que-verificar",
+        "url": "/blog/bateria-de-notebook-nao-carrega-o-que-verificar",
+        "approvedAt": "2026-09-03",
+        "includeInSitemap": true
+      },
+      {
+        "slug": "como-migrar-arquivos-para-um-computador-novo",
+        "url": "/blog/como-migrar-arquivos-para-um-computador-novo",
+        "approvedAt": "2026-09-03",
+        "includeInSitemap": true
       }
     ]
   },
   "diff": {
-    "adicionadas": [
-      "/blog/como-monitorar-temperatura-do-computador",
-      "/blog/historico-de-arquivos-windows-como-configurar",
-      "/blog/pendrive-somente-leitura-protegido-contra-gravacao"
-    ],
+    "adicionadas": [],
     "removidas": [],
     "regressoes": []
   },
@@ -1435,6 +1449,82 @@
         ],
         "removidas": [],
         "total": 238
+      },
+      "error": null
+    },
+    {
+      "id": "6087e814-24d1-406e-925e-f34bd72a2f5f",
+      "action": "sync_approved",
+      "status": "OK",
+      "source": "cli",
+      "timestamp": "2026-09-03T16:52:31.391Z",
+      "details": {
+        "modo": "write",
+        "saida": "sitemap editorial: em dia (72 artigos indexáveis)"
+      },
+      "error": null
+    },
+    {
+      "id": "b219ec51-4f4a-4ab5-818d-1b03785809d8",
+      "action": "generate_sitemaps",
+      "status": "OK",
+      "source": "cli",
+      "timestamp": "2026-09-03T16:52:31.557Z",
+      "details": {
+        "saida": "sitemap curado: index + 8 sub-sitemaps (241 urls)"
+      },
+      "error": null
+    },
+    {
+      "id": "576e05e9-6b04-4e58-a7da-b6ffb3028ba0",
+      "action": "diff_no_regression",
+      "status": "OK",
+      "source": "cli",
+      "timestamp": "2026-09-03T16:52:31.570Z",
+      "details": {
+        "adicionadas": [
+          "/blog/bateria-de-notebook-nao-carrega-o-que-verificar",
+          "/blog/como-migrar-arquivos-para-um-computador-novo",
+          "/blog/monitor-sem-sinal-o-que-verificar"
+        ],
+        "removidas": [],
+        "total": 241
+      },
+      "error": null
+    },
+    {
+      "id": "7f9d5b58-eb7f-4577-9996-9a32c5ed26fc",
+      "action": "sync_approved",
+      "status": "OK",
+      "source": "cli",
+      "timestamp": "2026-09-03T16:57:26.393Z",
+      "details": {
+        "modo": "write",
+        "saida": "sitemap editorial: em dia (72 artigos indexáveis)"
+      },
+      "error": null
+    },
+    {
+      "id": "93e2e31d-37d4-48a8-88b1-80ebb1cf74c2",
+      "action": "generate_sitemaps",
+      "status": "OK",
+      "source": "cli",
+      "timestamp": "2026-09-03T16:57:26.521Z",
+      "details": {
+        "saida": "sitemap curado: index + 8 sub-sitemaps (241 urls)"
+      },
+      "error": null
+    },
+    {
+      "id": "c1b1e762-4b06-48b0-939d-14023f6c126f",
+      "action": "diff_no_regression",
+      "status": "OK",
+      "source": "cli",
+      "timestamp": "2026-09-03T16:57:26.533Z",
+      "details": {
+        "adicionadas": [],
+        "removidas": [],
+        "total": 241
       },
       "error": null
     }

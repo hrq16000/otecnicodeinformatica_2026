@@ -87,6 +87,39 @@ export const ATLAS_PONTES_ARTIGOS: Record<string, AtlasPonteArtigo> = {
         "Onde manter a cópia fora do local, complementando as versões locais.",
     },
   },
+  "monitor-sem-sinal-o-que-verificar": {
+    temaId: "fundamentos",
+    porQue:
+      "Uma mensagem na tela já é informação: monitor que exibe o próprio aviso está funcionando. A trilha de fundamentos ensina a ler o sintoma antes de eleger um culpado e trocar peça no escuro.",
+    proximoPasso: {
+      rotulo: "Diagnóstico técnico",
+      to: "/diagnostico-tecnico",
+      contexto:
+        "Quando nenhuma saída de vídeo responde e o teste com peça sobressalente vira necessidade.",
+    },
+  },
+  "bateria-de-notebook-nao-carrega-o-que-verificar": {
+    temaId: "manutencao-preventiva",
+    porQue:
+      "Bateria de íon-lítio perde capacidade por ciclo e por calor — e isso é medível, não é impressão. A trilha de manutenção preventiva trata autonomia como indicador acompanhado ao longo do tempo.",
+    proximoPasso: {
+      rotulo: "Backup antes da manutenção",
+      to: "/decisoes/backup-antes-da-manutencao",
+      contexto:
+        "O que copiar antes de abrir o notebook para troca de bateria ou de conector.",
+    },
+  },
+  "como-migrar-arquivos-para-um-computador-novo": {
+    temaId: "dados-backup",
+    porQue:
+      "Migração é o momento em que os dados existem em dois lugares e ninguém confere nenhum. A trilha de dados e backup transforma a troca de equipamento em oportunidade de montar rotina, não em risco pontual.",
+    proximoPasso: {
+      rotulo: "Nuvem ou HD externo",
+      to: "/decisoes/nuvem-ou-hd-externo",
+      contexto:
+        "Onde manter a cópia depois que o equipamento novo já é o principal.",
+    },
+  },
   "computador-lento-causas-solucoes": {
     temaId: "hardware-upgrades",
     porQue:

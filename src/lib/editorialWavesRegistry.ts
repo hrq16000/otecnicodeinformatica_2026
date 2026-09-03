@@ -600,6 +600,45 @@ export const WAVE_11D_BATCH_1: EditorialWaveEntry[] = [
   },
 ];
 
+export const WAVE_11E_BATCH_1: EditorialWaveEntry[] = [
+  {
+    wave: "11A",
+    batch: "7",
+    url: "/blog/monitor-sem-sinal-o-que-verificar",
+    slug: "monitor-sem-sinal-o-que-verificar",
+    ownerId: "monitor-sem-sinal-o-que-verificar",
+    cluster: "video-e-exibicao",
+    role: "satelite",
+    publishedAt: "2026-09-03",
+    targetQueries: ["monitor sem sinal", "pc liga mas nao aparece imagem", "no signal monitor o que fazer"],
+    doNotDuplicate: ["/blog/notebook-nao-liga-o-que-fazer", "/blog/como-diagnosticar-placa-mae-defeituosa"],
+  },
+  {
+    wave: "11A",
+    batch: "7",
+    url: "/blog/bateria-de-notebook-nao-carrega-o-que-verificar",
+    slug: "bateria-de-notebook-nao-carrega-o-que-verificar",
+    ownerId: "bateria-de-notebook-nao-carrega-o-que-verificar",
+    cluster: "manutencao-preventiva",
+    role: "satelite",
+    publishedAt: "2026-09-03",
+    targetQueries: ["bateria de notebook nao carrega", "conectado nao carregando", "notebook nao reconhece bateria"],
+    doNotDuplicate: ["/blog/notebook-nao-liga-o-que-fazer", "/blog/notebook-superaquecendo-o-que-fazer"],
+  },
+  {
+    wave: "11A",
+    batch: "7",
+    url: "/blog/como-migrar-arquivos-para-um-computador-novo",
+    slug: "como-migrar-arquivos-para-um-computador-novo",
+    ownerId: "como-migrar-arquivos-para-um-computador-novo",
+    cluster: "dados-backup",
+    role: "satelite",
+    publishedAt: "2026-09-03",
+    targetQueries: ["migrar arquivos para pc novo", "transferir arquivos entre computadores", "trocar de computador sem perder arquivos"],
+    doNotDuplicate: ["/blog/como-testar-restauracao-de-backup", "/blog/historico-de-arquivos-windows-como-configurar"],
+  },
+];
+
 export const EDITORIAL_WAVES: EditorialWaveEntry[] = [
   ...WAVE_10C_BATCH_0,
   ...WAVE_10D_BATCH_1,
@@ -608,6 +647,7 @@ export const EDITORIAL_WAVES: EditorialWaveEntry[] = [
   ...WAVE_11A_BATCH_4,
   ...WAVE_11C_BATCH_1,
   ...WAVE_11D_BATCH_1,
+  ...WAVE_11E_BATCH_1,
 ];
 
 /** URLs monitoradas (ordem estável, sem duplicatas). */

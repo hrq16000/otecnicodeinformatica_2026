@@ -1,27 +1,27 @@
 {
-  "geradoEm": "2026-09-03T16:35:40.340Z",
+  "geradoEm": "2026-09-03T16:57:35.107Z",
   "fonte": {
     "html": "SSR harness",
     "dist": "dist"
   },
-  "total": 69,
-  "analisadas": 69,
+  "total": 72,
+  "analisadas": 72,
   "falhas": 0,
   "medias": {
-    "palavras": 1494.94,
-    "densidadeSemantica": 56.88,
-    "densidadeKeywordPrincipal": 0.42,
-    "linksInternosSaida": 11.78,
-    "linksInternosEntrada": 2.81
+    "palavras": 1475.58,
+    "densidadeSemantica": 57.06,
+    "densidadeKeywordPrincipal": 0.43,
+    "linksInternosSaida": 11.68,
+    "linksInternosEntrada": 2.89
   },
   "orfas": [
-    "/blog/como-trocar-tela-notebook-passo-a-passo",
     "/blog/como-conectar-wifi-tv-nao-conecta",
     "/blog/botao-power-nao-funciona-jump-start-placa-mae",
     "/blog/internet-lenta-provedor-ou-roteador",
     "/blog/ordem-de-boot-na-bios-como-configurar",
-    "/blog/como-monitorar-temperatura-do-computador",
-    "/blog/historico-de-arquivos-windows-como-configurar"
+    "/blog/monitor-sem-sinal-o-que-verificar",
+    "/blog/bateria-de-notebook-nao-carrega-o-que-verificar",
+    "/blog/como-migrar-arquivos-para-um-computador-novo"
   ],
   "urls": [
     {
@@ -854,12 +854,13 @@
         "/blog/computador-lento-causas-solucoes",
         "/blog/quando-trocar-hd-por-ssd"
       ],
-      "linksInternosEntrada": 4,
+      "linksInternosEntrada": 5,
       "origensEntrada": [
         "/blog/notebook-nao-liga-o-que-fazer",
         "/blog/como-limpar-notebook-por-dentro",
         "/blog/como-trocar-pasta-termica-notebook",
-        "/blog/como-monitorar-temperatura-do-computador"
+        "/blog/como-monitorar-temperatura-do-computador",
+        "/blog/bateria-de-notebook-nao-carrega-o-que-verificar"
       ],
       "erro": null
     },
@@ -1651,8 +1652,10 @@
         "/glossario/thermal-throttling",
         "/servicos/manutencao-de-notebook"
       ],
-      "linksInternosEntrada": 0,
-      "origensEntrada": [],
+      "linksInternosEntrada": 1,
+      "origensEntrada": [
+        "/blog/monitor-sem-sinal-o-que-verificar"
+      ],
       "erro": null
     },
     {
@@ -1808,11 +1811,12 @@
         "/blog/como-saber-se-pc-tem-virus-malware",
         "/servicos/manutencao-de-computador"
       ],
-      "linksInternosEntrada": 3,
+      "linksInternosEntrada": 4,
       "origensEntrada": [
         "/blog/notebook-superaquecendo-o-que-fazer",
         "/blog/computador-entra-direto-na-bios",
-        "/blog/botao-power-nao-funciona-jump-start-placa-mae"
+        "/blog/botao-power-nao-funciona-jump-start-placa-mae",
+        "/blog/monitor-sem-sinal-o-que-verificar"
       ],
       "erro": null
     },
@@ -2136,7 +2140,7 @@
         "/ferramentas/verificador-de-backup",
         "/glossario/smart"
       ],
-      "linksInternosEntrada": 8,
+      "linksInternosEntrada": 9,
       "origensEntrada": [
         "/blog/como-clonar-hd-para-ssd",
         "/blog/computador-entra-direto-na-bios",
@@ -2145,7 +2149,8 @@
         "/blog/hd-nao-e-reconhecido-na-bios-o-que-fazer",
         "/blog/disco-com-setores-defeituosos-smart-o-que-fazer",
         "/blog/como-testar-restauracao-de-backup",
-        "/blog/pendrive-somente-leitura-protegido-contra-gravacao"
+        "/blog/pendrive-somente-leitura-protegido-contra-gravacao",
+        "/blog/como-migrar-arquivos-para-um-computador-novo"
       ],
       "erro": null
     },
@@ -3080,12 +3085,13 @@
         "/decisoes/consertar-ou-substituir",
         "/glossario/thermal-throttling"
       ],
-      "linksInternosEntrada": 4,
+      "linksInternosEntrada": 5,
       "origensEntrada": [
         "/blog/como-trocar-pasta-termica-notebook",
         "/blog/windows-11-lento-como-resolver",
         "/blog/manutencao-preventiva-de-computador-guia-completo",
-        "/blog/como-monitorar-temperatura-do-computador"
+        "/blog/como-monitorar-temperatura-do-computador",
+        "/blog/bateria-de-notebook-nao-carrega-o-que-verificar"
       ],
       "erro": null
     },
@@ -4342,13 +4348,14 @@
         "/glossario/thermal-throttling",
         "/servicos/manutencao-de-notebook"
       ],
-      "linksInternosEntrada": 5,
+      "linksInternosEntrada": 6,
       "origensEntrada": [
         "/blog/como-diagnosticar-placa-mae-defeituosa",
         "/blog/computador-entra-direto-na-bios",
         "/blog/botao-power-nao-funciona-jump-start-placa-mae",
         "/blog/curto-circuito-placa-mae-como-identificar",
-        "/blog/dispositivo-usb-nao-reconhecido-o-que-fazer"
+        "/blog/dispositivo-usb-nao-reconhecido-o-que-fazer",
+        "/blog/monitor-sem-sinal-o-que-verificar"
       ],
       "erro": null
     },
@@ -4502,13 +4509,14 @@
         "/glossario/thermal-throttling",
         "/servicos/manutencao-de-notebook"
       ],
-      "linksInternosEntrada": 5,
+      "linksInternosEntrada": 6,
       "origensEntrada": [
         "/blog/como-testar-fonte-de-alimentacao-pc",
         "/blog/computador-entra-direto-na-bios",
         "/blog/botao-power-nao-funciona-jump-start-placa-mae",
         "/blog/curto-circuito-placa-mae-como-identificar",
-        "/blog/dispositivo-usb-nao-reconhecido-o-que-fazer"
+        "/blog/dispositivo-usb-nao-reconhecido-o-que-fazer",
+        "/blog/monitor-sem-sinal-o-que-verificar"
       ],
       "erro": null
     },
@@ -4978,12 +4986,13 @@
         "/problemas/windows-nao-inicia",
         "/ferramentas/checklist-antes-de-formatar"
       ],
-      "linksInternosEntrada": 4,
+      "linksInternosEntrada": 5,
       "origensEntrada": [
         "/blog/quanto-custa-formatar-um-computador",
         "/blog/como-aprender-informatica",
         "/blog/erro-no-bootable-device-como-resolver",
-        "/blog/historico-de-arquivos-windows-como-configurar"
+        "/blog/historico-de-arquivos-windows-como-configurar",
+        "/blog/como-migrar-arquivos-para-um-computador-novo"
       ],
       "erro": null
     },
@@ -5783,12 +5792,13 @@
         "/glossario/uefi",
         "/servicos/formatacao"
       ],
-      "linksInternosEntrada": 4,
+      "linksInternosEntrada": 5,
       "origensEntrada": [
         "/blog/erro-no-bootable-device-como-resolver",
         "/blog/troquei-o-ssd-e-o-pc-so-abre-a-bios",
         "/blog/bios-corrompida-reset-cmos-atualizacao",
-        "/blog/hd-nao-e-reconhecido-na-bios-o-que-fazer"
+        "/blog/hd-nao-e-reconhecido-na-bios-o-que-fazer",
+        "/blog/monitor-sem-sinal-o-que-verificar"
       ],
       "erro": null
     },
@@ -6422,12 +6432,13 @@
         "/decisoes/ssd-ou-memoria-ram",
         "/entidades/computador-lento"
       ],
-      "linksInternosEntrada": 4,
+      "linksInternosEntrada": 5,
       "origensEntrada": [
         "/blog/como-resolver-tela-azul-windows",
         "/blog/computador-lento-causas-solucoes",
         "/blog/testar-memoria-ram-memtest86",
-        "/blog/como-monitorar-temperatura-do-computador"
+        "/blog/como-monitorar-temperatura-do-computador",
+        "/blog/monitor-sem-sinal-o-que-verificar"
       ],
       "erro": null
     },
@@ -8149,11 +8160,12 @@
         "/ferramentas/verificador-de-backup",
         "/glossario/smart"
       ],
-      "linksInternosEntrada": 3,
+      "linksInternosEntrada": 4,
       "origensEntrada": [
         "/blog/windows-reparo-automatico-em-loop",
         "/blog/manutencao-preventiva-de-computador-guia-completo",
-        "/blog/historico-de-arquivos-windows-como-configurar"
+        "/blog/historico-de-arquivos-windows-como-configurar",
+        "/blog/como-migrar-arquivos-para-um-computador-novo"
       ],
       "erro": null
     },
@@ -10489,11 +10501,12 @@
         "/servicos/recuperacao-de-dados",
         "/diagnostico-tecnico"
       ],
-      "linksInternosEntrada": 3,
+      "linksInternosEntrada": 4,
       "origensEntrada": [
         "/blog/manutencao-preventiva-de-computador-guia-completo",
         "/blog/pendrive-somente-leitura-protegido-contra-gravacao",
-        "/blog/historico-de-arquivos-windows-como-configurar"
+        "/blog/historico-de-arquivos-windows-como-configurar",
+        "/blog/como-migrar-arquivos-para-um-computador-novo"
       ],
       "erro": null
     },
@@ -10648,8 +10661,10 @@
         "/servicos/manutencao-de-computador",
         "/decisoes/backup-antes-da-manutencao"
       ],
-      "linksInternosEntrada": 0,
-      "origensEntrada": [],
+      "linksInternosEntrada": 1,
+      "origensEntrada": [
+        "/blog/bateria-de-notebook-nao-carrega-o-que-verificar"
+      ],
       "erro": null
     },
     {
@@ -10955,6 +10970,465 @@
         "/servicos/backup-para-empresas",
         "/diagnostico-tecnico",
         "/decisoes/nuvem-ou-hd-externo"
+      ],
+      "linksInternosEntrada": 1,
+      "origensEntrada": [
+        "/blog/como-migrar-arquivos-para-um-computador-novo"
+      ],
+      "erro": null
+    },
+    {
+      "url": "/blog/monitor-sem-sinal-o-que-verificar",
+      "slug": "monitor-sem-sinal-o-que-verificar",
+      "lote": "11A/7",
+      "aprovadoEm": "2026-09-03",
+      "titulo": "Monitor sem sinal: o que verificar antes de trocar de peça",
+      "palavras": 1040,
+      "termosUteis": 581,
+      "densidadeSemantica": 56.63,
+      "vocabulario": 329,
+      "keywordPrincipal": {
+        "termo": "monitor sem sinal o que verificar",
+        "ocorrencias": 3,
+        "densidade": 0.52
+      },
+      "topKeywords": [
+        {
+          "termo": "monitor",
+          "ocorrencias": 18,
+          "densidade": 3.1
+        },
+        {
+          "termo": "video",
+          "ocorrencias": 14,
+          "densidade": 2.41
+        },
+        {
+          "termo": "placa",
+          "ocorrencias": 10,
+          "densidade": 1.72
+        },
+        {
+          "termo": "cabo",
+          "ocorrencias": 9,
+          "densidade": 1.55
+        },
+        {
+          "termo": "computador",
+          "ocorrencias": 9,
+          "densidade": 1.55
+        },
+        {
+          "termo": "tecnico",
+          "ocorrencias": 9,
+          "densidade": 1.55
+        },
+        {
+          "termo": "tela",
+          "ocorrencias": 9,
+          "densidade": 1.55
+        },
+        {
+          "termo": "peca",
+          "ocorrencias": 7,
+          "densidade": 1.2
+        },
+        {
+          "termo": "saida",
+          "ocorrencias": 7,
+          "densidade": 1.2
+        },
+        {
+          "termo": "teste",
+          "ocorrencias": 6,
+          "densidade": 1.03
+        },
+        {
+          "termo": "trocar",
+          "ocorrencias": 6,
+          "densidade": 1.03
+        },
+        {
+          "termo": "atendimento",
+          "ocorrencias": 5,
+          "densidade": 0.86
+        }
+      ],
+      "topBigramas": [
+        {
+          "termo": "placa video",
+          "ocorrencias": 5,
+          "densidade": 0.86
+        },
+        {
+          "termo": "placa dedicada",
+          "ocorrencias": 4,
+          "densidade": 0.69
+        },
+        {
+          "termo": "saida video",
+          "ocorrencias": 4,
+          "densidade": 0.69
+        },
+        {
+          "termo": "curitiba regiao",
+          "ocorrencias": 3,
+          "densidade": 0.52
+        },
+        {
+          "termo": "entrada selecionada",
+          "ocorrencias": 3,
+          "densidade": 0.52
+        },
+        {
+          "termo": "monitor mostra",
+          "ocorrencias": 3,
+          "densidade": 0.52
+        },
+        {
+          "termo": "nenhuma saida",
+          "ocorrencias": 3,
+          "densidade": 0.52
+        },
+        {
+          "termo": "trocar peca",
+          "ocorrencias": 3,
+          "densidade": 0.52
+        }
+      ],
+      "headings": {
+        "h2": 12,
+        "h3": 0
+      },
+      "schemas": [
+        "Organization",
+        "WebSite",
+        "BreadcrumbList",
+        "BlogPosting",
+        "Article",
+        "TechArticle",
+        "LocalBusiness",
+        "ProfessionalService",
+        "ComputerRepairService",
+        "ItemList",
+        "FAQPage"
+      ],
+      "linksInternosSaida": 10,
+      "linksSaida": [
+        "/blog",
+        "/contato",
+        "/blog/notebook-nao-liga-o-que-fazer",
+        "/blog/como-testar-fonte-de-alimentacao-pc",
+        "/blog/memoria-ram-insuficiente-sintomas",
+        "/blog/como-diagnosticar-placa-mae-defeituosa",
+        "/blog/computador-entra-direto-na-bios",
+        "/blog/como-trocar-tela-notebook-passo-a-passo",
+        "/diagnostico-tecnico",
+        "/servicos/manutencao-de-computador"
+      ],
+      "linksInternosEntrada": 0,
+      "origensEntrada": [],
+      "erro": null
+    },
+    {
+      "url": "/blog/bateria-de-notebook-nao-carrega-o-que-verificar",
+      "slug": "bateria-de-notebook-nao-carrega-o-que-verificar",
+      "lote": "11A/7",
+      "aprovadoEm": "2026-09-03",
+      "titulo": "Bateria de notebook não carrega: o que verificar antes de comprar…",
+      "palavras": 1012,
+      "termosUteis": 570,
+      "densidadeSemantica": 64.74,
+      "vocabulario": 369,
+      "keywordPrincipal": {
+        "termo": "bateria de notebook nao carrega o que verificar",
+        "ocorrencias": 4,
+        "densidade": 0.7
+      },
+      "topKeywords": [
+        {
+          "termo": "bateria",
+          "ocorrencias": 22,
+          "densidade": 3.86
+        },
+        {
+          "termo": "capacidade",
+          "ocorrencias": 10,
+          "densidade": 1.75
+        },
+        {
+          "termo": "fonte",
+          "ocorrencias": 8,
+          "densidade": 1.4
+        },
+        {
+          "termo": "notebook",
+          "ocorrencias": 8,
+          "densidade": 1.4
+        },
+        {
+          "termo": "tecnico",
+          "ocorrencias": 8,
+          "densidade": 1.4
+        },
+        {
+          "termo": "carga",
+          "ocorrencias": 6,
+          "densidade": 1.05
+        },
+        {
+          "termo": "manutencao",
+          "ocorrencias": 6,
+          "densidade": 1.05
+        },
+        {
+          "termo": "celula",
+          "ocorrencias": 5,
+          "densidade": 0.88
+        },
+        {
+          "termo": "curitiba",
+          "ocorrencias": 5,
+          "densidade": 0.88
+        },
+        {
+          "termo": "verificar",
+          "ocorrencias": 5,
+          "densidade": 0.88
+        },
+        {
+          "termo": "atendimento",
+          "ocorrencias": 4,
+          "densidade": 0.7
+        },
+        {
+          "termo": "carrega",
+          "ocorrencias": 4,
+          "densidade": 0.7
+        }
+      ],
+      "topBigramas": [
+        {
+          "termo": "capacidade atual",
+          "ocorrencias": 3,
+          "densidade": 0.53
+        },
+        {
+          "termo": "curitiba regiao",
+          "ocorrencias": 3,
+          "densidade": 0.53
+        },
+        {
+          "termo": "limite carga",
+          "ocorrencias": 3,
+          "densidade": 0.53
+        },
+        {
+          "termo": "acelera perda",
+          "ocorrencias": 2,
+          "densidade": 0.35
+        },
+        {
+          "termo": "backup manutencao",
+          "ocorrencias": 2,
+          "densidade": 0.35
+        },
+        {
+          "termo": "bateria estufada",
+          "ocorrencias": 2,
+          "densidade": 0.35
+        },
+        {
+          "termo": "bateria ion-litio",
+          "ocorrencias": 2,
+          "densidade": 0.35
+        },
+        {
+          "termo": "bateria notebook",
+          "ocorrencias": 2,
+          "densidade": 0.35
+        }
+      ],
+      "headings": {
+        "h2": 12,
+        "h3": 0
+      },
+      "schemas": [
+        "Organization",
+        "WebSite",
+        "BreadcrumbList",
+        "BlogPosting",
+        "Article",
+        "TechArticle",
+        "LocalBusiness",
+        "ProfessionalService",
+        "ComputerRepairService",
+        "ItemList",
+        "FAQPage"
+      ],
+      "linksInternosSaida": 8,
+      "linksSaida": [
+        "/blog",
+        "/contato",
+        "/blog/como-monitorar-temperatura-do-computador",
+        "/blog/notebook-superaquecendo-o-que-fazer",
+        "/blog/como-limpar-notebook-por-dentro",
+        "/diagnostico-tecnico",
+        "/servicos/manutencao-de-computador",
+        "/decisoes/backup-antes-da-manutencao"
+      ],
+      "linksInternosEntrada": 0,
+      "origensEntrada": [],
+      "erro": null
+    },
+    {
+      "url": "/blog/como-migrar-arquivos-para-um-computador-novo",
+      "slug": "como-migrar-arquivos-para-um-computador-novo",
+      "lote": "11A/7",
+      "aprovadoEm": "2026-09-03",
+      "titulo": "Como migrar arquivos para um computador novo sem perder nada",
+      "palavras": 1039,
+      "termosUteis": 592,
+      "densidadeSemantica": 61.82,
+      "vocabulario": 366,
+      "keywordPrincipal": {
+        "termo": "como migrar arquivos para um computador novo",
+        "ocorrencias": 2,
+        "densidade": 0.34
+      },
+      "topKeywords": [
+        {
+          "termo": "antigo",
+          "ocorrencias": 11,
+          "densidade": 1.86
+        },
+        {
+          "termo": "computador",
+          "ocorrencias": 10,
+          "densidade": 1.69
+        },
+        {
+          "termo": "copia",
+          "ocorrencias": 10,
+          "densidade": 1.69
+        },
+        {
+          "termo": "disco",
+          "ocorrencias": 10,
+          "densidade": 1.69
+        },
+        {
+          "termo": "arquivos",
+          "ocorrencias": 9,
+          "densidade": 1.52
+        },
+        {
+          "termo": "equipamento",
+          "ocorrencias": 8,
+          "densidade": 1.35
+        },
+        {
+          "termo": "novo",
+          "ocorrencias": 8,
+          "densidade": 1.35
+        },
+        {
+          "termo": "backup",
+          "ocorrencias": 7,
+          "densidade": 1.18
+        },
+        {
+          "termo": "dados",
+          "ocorrencias": 7,
+          "densidade": 1.18
+        },
+        {
+          "termo": "tecnico",
+          "ocorrencias": 7,
+          "densidade": 1.18
+        },
+        {
+          "termo": "migracao",
+          "ocorrencias": 6,
+          "densidade": 1.01
+        },
+        {
+          "termo": "curitiba",
+          "ocorrencias": 5,
+          "densidade": 0.84
+        }
+      ],
+      "topBigramas": [
+        {
+          "termo": "computador novo",
+          "ocorrencias": 5,
+          "densidade": 0.85
+        },
+        {
+          "termo": "equipamento antigo",
+          "ocorrencias": 4,
+          "densidade": 0.68
+        },
+        {
+          "termo": "computador antigo",
+          "ocorrencias": 3,
+          "densidade": 0.51
+        },
+        {
+          "termo": "curitiba regiao",
+          "ocorrencias": 3,
+          "densidade": 0.51
+        },
+        {
+          "termo": "antigo formatado",
+          "ocorrencias": 2,
+          "densidade": 0.34
+        },
+        {
+          "termo": "arquivos computador",
+          "ocorrencias": 2,
+          "densidade": 0.34
+        },
+        {
+          "termo": "chamar tecnico",
+          "ocorrencias": 2,
+          "densidade": 0.34
+        },
+        {
+          "termo": "completa unidade",
+          "ocorrencias": 2,
+          "densidade": 0.34
+        }
+      ],
+      "headings": {
+        "h2": 12,
+        "h3": 0
+      },
+      "schemas": [
+        "Organization",
+        "WebSite",
+        "BreadcrumbList",
+        "BlogPosting",
+        "Article",
+        "TechArticle",
+        "LocalBusiness",
+        "ProfessionalService",
+        "ComputerRepairService",
+        "ItemList",
+        "FAQPage"
+      ],
+      "linksInternosSaida": 10,
+      "linksSaida": [
+        "/blog",
+        "/contato",
+        "/blog/disco-com-setores-defeituosos-smart-o-que-fazer",
+        "/blog/historico-de-arquivos-windows-como-configurar",
+        "/blog/como-testar-restauracao-de-backup",
+        "/decisoes/nuvem-ou-hd-externo",
+        "/blog/como-formatar-pc-sem-perder-arquivos",
+        "/blog/como-recuperar-dados-hd-com-defeito",
+        "/servicos/recuperacao-de-dados",
+        "/servicos/backup-para-empresas"
       ],
       "linksInternosEntrada": 0,
       "origensEntrada": [],

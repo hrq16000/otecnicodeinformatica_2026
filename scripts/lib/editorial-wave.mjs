@@ -664,6 +664,34 @@ export const EDITORIAL_WAVE = [
     apoioLabel: "Como testar se o backup funciona",
     cover: "/blog/historico-de-arquivos-windows-como-configurar.jpg",
   },
+  // ── Onda 11E — vídeo, energia de notebook e migração de arquivos.
+  {
+    slug: "monitor-sem-sinal-o-que-verificar",
+    approvedAt: "2026-09-03",
+    pilar: "/diagnostico-tecnico",
+    pilarLabel: "Diagnóstico técnico",
+    apoio: "/blog/como-diagnosticar-placa-mae-defeituosa",
+    apoioLabel: "Diagnóstico de placa-mãe",
+    cover: "/blog/monitor-sem-sinal-o-que-verificar.jpg",
+  },
+  {
+    slug: "bateria-de-notebook-nao-carrega-o-que-verificar",
+    approvedAt: "2026-09-03",
+    pilar: "/servicos/manutencao-de-computador",
+    pilarLabel: "Manutenção de computador",
+    apoio: "/blog/notebook-superaquecendo-o-que-fazer",
+    apoioLabel: "Notebook superaquecendo",
+    cover: "/blog/bateria-de-notebook-nao-carrega-o-que-verificar.jpg",
+  },
+  {
+    slug: "como-migrar-arquivos-para-um-computador-novo",
+    approvedAt: "2026-09-03",
+    pilar: "/servicos/backup-para-empresas",
+    pilarLabel: "Backup para empresas",
+    apoio: "/blog/historico-de-arquivos-windows-como-configurar",
+    apoioLabel: "Histórico de Arquivos do Windows",
+    cover: "/blog/como-migrar-arquivos-para-um-computador-novo.jpg",
+  },
 ];
 
 

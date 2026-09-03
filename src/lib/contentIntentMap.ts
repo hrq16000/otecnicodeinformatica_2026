@@ -532,6 +532,76 @@ export const CONTENT_INTENT_MAP: ContentNode[] = [
     justificativa:
       "Objeto é a configuração do recurso nativo de versões. A prova de restauração e a estratégia geral de cópias continuam em URLs próprias.",
   },
+  // ── Onda 11E — vídeo, energia de notebook e migração de arquivos.
+  {
+    url: "/blog/monitor-sem-sinal-o-que-verificar",
+    intent: "diagnostic",
+    topic: "ausência de sinal de vídeo entre computador e monitor",
+    queries: [
+      "monitor sem sinal",
+      "pc liga mas nao aparece imagem",
+      "no signal no monitor",
+    ],
+    serviceParent: "/servicos/manutencao-de-computador",
+    bridgesTo: [
+      "/blog/como-diagnosticar-placa-mae-defeituosa",
+      "/blog/como-testar-fonte-de-alimentacao-pc",
+      "/diagnostico-tecnico",
+    ],
+    doNotDuplicate: [
+      "/blog/notebook-nao-liga-o-que-fazer",
+      "/blog/computador-entra-direto-na-bios",
+    ],
+    novaNestaRodada: true,
+    justificativa:
+      "Objeto é o caminho do vídeo com o equipamento energizado. Falta total de energia e parada na BIOS continuam nas URLs próprias.",
+  },
+  {
+    url: "/blog/bateria-de-notebook-nao-carrega-o-que-verificar",
+    intent: "diagnostic",
+    topic: "falha de carga e capacidade real da bateria de notebook",
+    queries: [
+      "bateria de notebook nao carrega",
+      "conectado nao carregando",
+      "notebook nao reconhece a bateria",
+    ],
+    serviceParent: "/servicos/manutencao-de-computador",
+    bridgesTo: [
+      "/blog/como-monitorar-temperatura-do-computador",
+      "/blog/notebook-superaquecendo-o-que-fazer",
+      "/decisoes/backup-antes-da-manutencao",
+    ],
+    doNotDuplicate: [
+      "/blog/notebook-nao-liga-o-que-fazer",
+      "/blog/notebook-superaquecendo-o-que-fazer",
+    ],
+    novaNestaRodada: true,
+    justificativa:
+      "Trata do equipamento que funciona na tomada mas não carrega. O notebook que não dá sinal de vida permanece em URL separada.",
+  },
+  {
+    url: "/blog/como-migrar-arquivos-para-um-computador-novo",
+    intent: "informational",
+    topic: "transferência única de dados na troca de equipamento",
+    queries: [
+      "migrar arquivos para computador novo",
+      "transferir arquivos entre computadores",
+      "trocar de pc sem perder arquivos",
+    ],
+    serviceParent: "/servicos/backup-para-empresas",
+    bridgesTo: [
+      "/blog/historico-de-arquivos-windows-como-configurar",
+      "/blog/como-testar-restauracao-de-backup",
+      "/decisoes/nuvem-ou-hd-externo",
+    ],
+    doNotDuplicate: [
+      "/blog/backup-como-proteger-seus-arquivos",
+      "/blog/como-formatar-pc-sem-perder-arquivos",
+    ],
+    novaNestaRodada: true,
+    justificativa:
+      "Evento pontual de troca de máquina, com inventário e conferência. Rotina contínua de cópia e reinstalação do sistema seguem em URLs próprias.",
+  },
 ];
 
 /** Nó do mapa por URL canônica (sem barra final). */

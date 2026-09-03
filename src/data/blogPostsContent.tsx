@@ -14378,4 +14378,203 @@ bcdboot C:\\Windows /s S: /f UEFI`}</code></pre>
     ),
   },
 
+  "monitor-sem-sinal-o-que-verificar": {
+    title: "Monitor sem sinal: o que verificar antes de trocar de peça",
+    excerpt:
+      "\"Sem sinal\" na tela não quer dizer monitor queimado. A sequência para separar cabo, entrada errada, saída de vídeo e computador que nem chegou a iniciar.",
+    date: "2026-09-03",
+    readTime: "10 min",
+    category: "Diagnóstico",
+    content: (
+      <>
+        <p className="lead">A mensagem "sem sinal" (ou "no signal") significa apenas uma coisa: o monitor está ligado e não recebe imagem pela entrada selecionada. Ela não diz de quem é a culpa — e é por isso que tanta gente troca cabo, monitor e placa de vídeo sem resolver nada.</p>
+
+        <h2>Resposta curta</h2>
+        <p>Se o monitor mostra a própria mensagem na tela, ele está vivo. Verifique nesta ordem: entrada selecionada, cabo e conector, saída de vídeo usada (placa dedicada ou integrada) e, por último, se o computador realmente iniciou. Só depois disso a suspeita passa a ser de peça defeituosa.</p>
+
+        <h2>Primeiro: o monitor mostra alguma coisa?</h2>
+        <ul>
+          <li><strong>Mostra "sem sinal" ou o menu do próprio monitor:</strong> a tela e a fonte dela funcionam; o problema está antes, no caminho do vídeo.</li>
+          <li><strong>Tela totalmente apagada, sem LED e sem menu:</strong> o suspeito é a alimentação do monitor — cabo de força, tomada ou fonte externa.</li>
+          <li><strong>Imagem aparece por instantes e some:</strong> costuma ser conexão instável, adaptador de má qualidade ou resolução incompatível.</li>
+        </ul>
+        <p>Essa separação evita o erro mais comum do atendimento: tratar como falha de vídeo o que na verdade é um computador que não completou a inicialização, cenário descrito em <Link to="/blog/notebook-nao-liga-o-que-fazer" className="text-accent">notebook que não liga</Link>.</p>
+
+        <h2>A sequência de verificação</h2>
+        <table>
+          <thead>
+            <tr><th>Ordem</th><th>Verificação</th><th>O que ela elimina</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>1</td><td>Trocar a entrada no menu do monitor (HDMI 1, HDMI 2, DisplayPort, VGA)</td><td>Entrada selecionada diferente da que está em uso</td></tr>
+            <tr><td>2</td><td>Reencaixar as duas pontas do cabo com o equipamento desligado</td><td>Conector mal encaixado ou parcialmente solto</td></tr>
+            <tr><td>3</td><td>Testar outro cabo e, se possível, outro padrão de conexão</td><td>Cabo rompido internamente ou adaptador ruim</td></tr>
+            <tr><td>4</td><td>Ligar o monitor em outro computador ou notebook</td><td>Defeito do próprio monitor</td></tr>
+            <tr><td>5</td><td>Trocar a saída usada: da placa dedicada para a integrada da placa-mãe</td><td>Placa de vídeo mal encaixada, sem energia ou defeituosa</td></tr>
+            <tr><td>6</td><td>Observar ventoinhas, LEDs e sons ao ligar o gabinete</td><td>Computador que sequer inicia (não é problema de vídeo)</td></tr>
+          </tbody>
+        </table>
+        <p>Cada passo só faz sentido depois do anterior. Pular direto para o item 5 é o motivo de tanta placa de vídeo ser trocada sem necessidade.</p>
+
+        <h2>Detalhe que engana em PC de mesa</h2>
+        <p>Quando existe placa de vídeo dedicada, as saídas da placa-mãe geralmente ficam desativadas. Cabo ligado na saída de cima (placa-mãe) com placa dedicada instalada resulta exatamente em "sem sinal", com o computador funcionando perfeitamente. O inverso também acontece: placa dedicada mal encaixada ou sem o conector de energia derruba a saída de vídeo sem apagar o resto da máquina.</p>
+
+        <h2>Quando o problema é anterior ao vídeo</h2>
+        <p>Se as ventoinhas giram mas nada aparece em nenhuma saída, o computador pode estar parando antes do teste inicial de hardware. Aí a investigação muda de assunto: memória mal encaixada, alimentação insuficiente ou falha na placa. Os caminhos estão em <Link to="/blog/como-testar-fonte-de-alimentacao-pc" className="text-accent">como testar a fonte de alimentação</Link>, <Link to="/blog/memoria-ram-insuficiente-sintomas" className="text-accent">sintomas de memória</Link> e <Link to="/blog/como-diagnosticar-placa-mae-defeituosa" className="text-accent">diagnóstico de placa-mãe</Link>. Se o equipamento inicia mas para na tela da BIOS, o caso é outro e está descrito em <Link to="/blog/computador-entra-direto-na-bios" className="text-accent">computador que entra direto na BIOS</Link>.</p>
+
+        <h2>Notebook com tela apagada</h2>
+        <p>Em notebook, o teste equivalente é ligar um monitor externo. Se a imagem aparece fora e não no painel interno, o problema está na tela, no cabo flat ou na iluminação — e não no restante do equipamento. Esse é o momento de avaliar <Link to="/blog/como-trocar-tela-notebook-passo-a-passo" className="text-accent">a troca da tela</Link> com peça compatível.</p>
+
+        <h2>O que NÃO fazer</h2>
+        <ul>
+          <li>Comprar placa de vídeo antes de testar o monitor em outro computador.</li>
+          <li>Forçar conector torto ou empurrar pino desalinhado.</li>
+          <li>Empilhar adaptadores (HDMI para VGA para DVI) para "aproveitar" o cabo antigo.</li>
+          <li>Concluir que o monitor morreu quando ele ainda mostra o próprio menu.</li>
+          <li>Abrir o monitor: a fonte interna guarda carga mesmo desligada da tomada.</li>
+          <li>Trocar peças em sequência sem anotar o que já foi testado.</li>
+        </ul>
+
+        <h2>Quando parar</h2>
+        <p>Pare se sentir cheiro de queimado, se houver estalo ao ligar, se o gabinete desligar sozinho durante o teste ou se o monitor apresentar mancha e trinca no painel. Também pare quando as verificações da tabela terminarem sem conclusão: repetir o mesmo teste não gera informação nova.</p>
+
+        <h2>Quando chamar um técnico</h2>
+        <p>Chame quando nenhuma saída de vídeo produzir imagem, quando o equipamento não completar a inicialização ou quando houver suspeita de falha em placa-mãe ou fonte. A avaliação com instrumento e peça de teste está em <Link to="/diagnostico-tecnico" className="text-accent">diagnóstico técnico</Link>; a manutenção do conjunto, em <Link to="/servicos/manutencao-de-computador" className="text-accent">manutenção de computador</Link>.</p>
+      </>
+    ),
+  },
+
+  "bateria-de-notebook-nao-carrega-o-que-verificar": {
+    title: "Bateria de notebook não carrega: o que verificar antes de comprar outra",
+    excerpt:
+      "\"Conectado, não carregando\" tem mais de uma causa. Como separar fonte, conector, bateria em fim de vida e limite de carga configurado — sem trocar peça no escuro.",
+    date: "2026-09-03",
+    readTime: "11 min",
+    category: "Manutenção",
+    content: (
+      <>
+        <p className="lead">Bateria que não carrega é um dos poucos sintomas em que a peça acusada quase nunca é a única suspeita. Antes de comprar uma bateria nova, vale saber se ela realmente chegou ao fim ou se o problema está na energia que deveria chegar até ela.</p>
+
+        <h2>Resposta curta</h2>
+        <p>Separe três coisas: se o notebook liga sem bateria (fonte funcionando), se o percentual sobe com o carregador conectado (carga acontecendo) e se a capacidade atual ainda é próxima da original (bateria saudável). A troca só se justifica quando a fonte está boa e a bateria perdeu capacidade ou parou de ser reconhecida.</p>
+
+        <h2>Os quatro cenários mais comuns</h2>
+        <ul>
+          <li><strong>"Conectado, não carregando" com percentual estável:</strong> muitas vezes é limite de carga configurado pelo fabricante para preservar a bateria — comportamento normal, não defeito.</li>
+          <li><strong>Percentual cai mesmo com a fonte ligada:</strong> a fonte não entrega potência suficiente ou o contato está intermitente.</li>
+          <li><strong>Bateria não é reconhecida:</strong> aparece "bateria não detectada" ou o ícone some; suspeita de contato sujo, célula desligada por proteção ou controlador com falha.</li>
+          <li><strong>Carrega até um valor baixo e para:</strong> típico de bateria em fim de vida, com capacidade real bem abaixo da nominal.</li>
+        </ul>
+
+        <h2>Sequência de verificação</h2>
+        <table>
+          <thead>
+            <tr><th>Ordem</th><th>Verificação</th><th>Leitura do resultado</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>1</td><td>Trocar a tomada e conferir se o LED do carregador acende</td><td>Elimina extensão, filtro e tomada como causa</td></tr>
+            <tr><td>2</td><td>Conferir se o carregador é o original ou tem a mesma tensão e corrente</td><td>Fonte de menor potência pode manter ligado sem carregar</td></tr>
+            <tr><td>3</td><td>Verificar o conector e o cabo em toda a extensão</td><td>Rompimento perto do plugue é a falha mais frequente</td></tr>
+            <tr><td>4</td><td>Ligar o notebook só na fonte, sem bateria (quando removível)</td><td>Se funciona, a alimentação externa está boa</td></tr>
+            <tr><td>5</td><td>Consultar a capacidade atual no relatório de bateria do sistema</td><td>Compara a carga real com a capacidade de fábrica</td></tr>
+            <tr><td>6</td><td>Revisar o limite de carga no utilitário do fabricante ou na configuração de firmware</td><td>Explica parada em 60%, 80% ou valor semelhante</td></tr>
+          </tbody>
+        </table>
+        <p>Anote o resultado de cada linha. Um teste feito no meio da sequência, sem os anteriores, não elimina nada — só troca uma suspeita por outra.</p>
+
+        <h2>O que é desgaste normal</h2>
+        <p>Bateria de íon-lítio perde capacidade com o número de ciclos e com o tempo, mesmo em uso leve. Autonomia menor a cada ano é esperado; queda abrupta em poucas semanas, não. O sinal de atenção é a diferença entre a capacidade de projeto e a capacidade atual registrada pelo próprio sistema, que é dado medido — não estimativa visual.</p>
+
+        <h2>Calor acelera a perda</h2>
+        <p>Trabalho constante em temperatura alta reduz a vida útil da célula e ainda derruba o desempenho do restante do equipamento. Se o notebook esquenta com facilidade, o acompanhamento está em <Link to="/blog/como-monitorar-temperatura-do-computador" className="text-accent">como monitorar a temperatura</Link>, o sintoma em <Link to="/blog/notebook-superaquecendo-o-que-fazer" className="text-accent">notebook superaquecendo</Link> e a rotina preventiva em <Link to="/blog/como-limpar-notebook-por-dentro" className="text-accent">limpeza interna</Link>.</p>
+
+        <h2>Sinais que mudam a prioridade</h2>
+        <p>Bateria estufada — teclado levantado, touchpad travado, tampa que não fecha — deixa de ser questão de autonomia e passa a ser segurança. Nesse caso o equipamento não deve ser carregado nem transportado em mochila fechada até a remoção da célula. O mesmo vale para cheiro adocicado, aquecimento localizado na base ou deformação visível.</p>
+
+        <h2>O que NÃO fazer</h2>
+        <ul>
+          <li>Comprar bateria genérica sem conferir modelo, tensão e capacidade.</li>
+          <li>Perfurar, dobrar ou pressionar bateria estufada para "acomodar" na carcaça.</li>
+          <li>Deixar carregando sobre cama, sofá ou superfície que bloqueia a ventilação.</li>
+          <li>Manter carregador universal de potência menor como substituto permanente do original.</li>
+          <li>Descartar a bateria antiga no lixo comum.</li>
+          <li>Concluir que a bateria morreu sem antes verificar a fonte e o limite de carga.</li>
+        </ul>
+
+        <h2>Quando parar</h2>
+        <p>Pare imediatamente diante de estufamento, vazamento, cheiro forte ou aquecimento anormal com o equipamento ocioso. Pare também se o notebook desligar sozinho durante a carga: seguir testando com célula instável é risco, não diagnóstico.</p>
+
+        <h2>Quando chamar um técnico</h2>
+        <p>Chame quando o conector de energia estiver solto ou com folga na placa, quando a bateria não for reconhecida mesmo com fonte comprovadamente boa ou quando houver qualquer sinal físico de dano na célula. A avaliação está em <Link to="/diagnostico-tecnico" className="text-accent">diagnóstico técnico</Link> e o serviço em <Link to="/servicos/manutencao-de-computador" className="text-accent">manutenção de computador</Link>. Antes de qualquer intervenção que abra o equipamento, o critério de cópia dos dados está em <Link to="/decisoes/backup-antes-da-manutencao" className="text-accent">backup antes da manutenção</Link>.</p>
+      </>
+    ),
+  },
+
+  "como-migrar-arquivos-para-um-computador-novo": {
+    title: "Como migrar arquivos para um computador novo sem perder nada",
+    excerpt:
+      "Inventário, método de transferência, conferência e só então o descarte do equipamento antigo. O roteiro que evita a descoberta tardia de que faltou alguma coisa.",
+    date: "2026-09-03",
+    readTime: "11 min",
+    category: "Procedimentos Técnicos",
+    content: (
+      <>
+        <p className="lead">A perda de arquivo na troca de computador raramente acontece na cópia. Acontece antes, no inventário incompleto, e depois, quando o equipamento antigo é formatado ou vendido sem que ninguém tenha conferido o que realmente foi para o novo.</p>
+
+        <h2>Resposta curta</h2>
+        <p>Liste o que precisa ir, copie por um caminho só, confira arquivo por pasta comparando quantidade e tamanho, use o computador novo por alguns dias com o antigo ainda intacto e só então apague a máquina anterior. Migração não termina na cópia: termina na conferência.</p>
+
+        <h2>O inventário que quase sempre falta</h2>
+        <ul>
+          <li>Pastas fora de Documentos: área de trabalho, Downloads e pastas criadas na raiz do disco.</li>
+          <li>Arquivos de programas específicos: modelos, planilhas de configuração, bancos locais de sistemas de gestão.</li>
+          <li>E-mails guardados localmente, quando o programa não usa cópia no servidor.</li>
+          <li>Favoritos, senhas salvas no navegador e perfis de aplicativos.</li>
+          <li>Licenças, chaves de ativação e instaladores que não estão mais disponíveis para download.</li>
+          <li>Fotos e vídeos em cartões, celulares e discos externos que orbitam o mesmo computador.</li>
+        </ul>
+        <p>Escreva essa lista antes de começar. Ela é o critério de conferência no fim — sem ela, "acho que veio tudo" é a única resposta possível.</p>
+
+        <h2>Métodos e quando cada um serve</h2>
+        <table>
+          <thead>
+            <tr><th>Método</th><th>Serve bem quando</th><th>Limite</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Disco externo ou pendrive</td><td>Volume moderado e sem rede confiável entre as máquinas</td><td>Depende de espaço livre e de mídia em bom estado</td></tr>
+            <tr><td>Rede local (pasta compartilhada)</td><td>Os dois computadores ficam no mesmo local e ligados</td><td>Velocidade cai muito em Wi-Fi fraco</td></tr>
+            <tr><td>Nuvem</td><td>Poucos gigabytes e necessidade de acesso imediato no novo equipamento</td><td>Upload longo e limite de espaço do plano</td></tr>
+            <tr><td>Ligar o disco antigo direto no computador novo</td><td>O equipamento antigo não liga mais, mas o disco está íntegro</td><td>Exige abrir a máquina ou usar gaveta compatível</td></tr>
+          </tbody>
+        </table>
+        <p>Escolher um caminho e mantê-lo evita o pior cenário da migração: metade dos arquivos em um pendrive, metade na nuvem e nenhuma lista do que está onde. Se o disco antigo apresentar lentidão extrema ou ruído durante a cópia, o assunto passa a ser <Link to="/blog/disco-com-setores-defeituosos-smart-o-que-fazer" className="text-accent">disco com setores defeituosos</Link>.</p>
+
+        <h2>Conferência antes do descarte</h2>
+        <p>Compare, pasta a pasta, a quantidade de itens e o tamanho total entre origem e destino. Abra alguns arquivos grandes e alguns antigos — corrupção silenciosa costuma aparecer justamente neles. Só depois disso o computador antigo pode ser formatado, doado ou vendido. Manter a máquina antiga intacta por uma ou duas semanas custa nada e resolve o esquecimento tardio.</p>
+
+        <h2>A cópia da migração não é o backup</h2>
+        <p>Terminada a transferência, o computador novo fica com uma cópia única dos dados — exatamente a situação que a rotina de backup existe para evitar. O passo seguinte é configurar versões locais, descrito em <Link to="/blog/historico-de-arquivos-windows-como-configurar" className="text-accent">Histórico de Arquivos do Windows</Link>, e verificar o resultado conforme <Link to="/blog/como-testar-restauracao-de-backup" className="text-accent">como testar se o backup realmente funciona</Link>. A escolha do destino está em <Link to="/decisoes/nuvem-ou-hd-externo" className="text-accent">nuvem ou HD externo</Link>.</p>
+
+        <h2>Antes de repassar o equipamento antigo</h2>
+        <p>Apagar arquivos e esvaziar a lixeira não remove o conteúdo do disco. Para doação ou venda, o procedimento correto é a limpeza completa da unidade, e não a exclusão manual das pastas. Para máquinas que serão reaproveitadas na casa ou no escritório, o caminho de reinstalação preservando dados está em <Link to="/blog/como-formatar-pc-sem-perder-arquivos" className="text-accent">como formatar o PC sem perder arquivos</Link>.</p>
+
+        <h2>O que NÃO fazer</h2>
+        <ul>
+          <li>Formatar o computador antigo antes de conferir tudo o que foi copiado.</li>
+          <li>Confiar em "copiar e colar" sem conferir quantidade e tamanho no destino.</li>
+          <li>Usar pendrive antigo e sem espaço como mídia única de transferência.</li>
+          <li>Esquecer perfis de e-mail, favoritos e licenças por focar só em documentos.</li>
+          <li>Interromper a cópia na metade e recomeçar por outro caminho.</li>
+          <li>Vender ou doar o equipamento sem limpeza completa da unidade.</li>
+        </ul>
+
+        <h2>Quando parar</h2>
+        <p>Pare se a cópia acusar erro de leitura repetido, se o disco de origem emitir ruído incomum ou se o sistema pedir formatação da mídia. Insistir em copiar de um disco com falha reduz a chance de recuperação posterior.</p>
+
+        <h2>Quando chamar um técnico</h2>
+        <p>Chame quando o computador antigo não ligar mais, quando houver erro de leitura em arquivos importantes ou quando a migração envolver sistemas de trabalho, e-mails locais e vários equipamentos. A tentativa em disco com falha está descrita em <Link to="/blog/como-recuperar-dados-hd-com-defeito" className="text-accent">recuperação de dados em HD com defeito</Link> e o serviço em <Link to="/servicos/recuperacao-de-dados" className="text-accent">recuperação de dados</Link>. Para ambiente com equipe, o desdobramento é <Link to="/servicos/backup-para-empresas" className="text-accent">backup para empresas</Link>.</p>
+      </>
+    ),
+  },
+
 };

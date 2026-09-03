@@ -449,6 +449,24 @@ export const EDITORIAL_COVERS: Record<string, EditorialCover> = {
     width: 1200,
     height: 630,
   },
+  "monitor-sem-sinal-o-que-verificar": {
+    src: "/blog/monitor-sem-sinal-o-que-verificar.jpg",
+    alt: "Conector HDMI de um cabo de vídeo em primeiro plano",
+    width: 1200,
+    height: 630,
+  },
+  "bateria-de-notebook-nao-carrega-o-que-verificar": {
+    src: "/blog/bateria-de-notebook-nao-carrega-o-que-verificar.jpg",
+    alt: "Notebook aberto com a bateria removida ao lado da carcaça",
+    width: 1200,
+    height: 630,
+  },
+  "como-migrar-arquivos-para-um-computador-novo": {
+    src: "/blog/como-migrar-arquivos-para-um-computador-novo.jpg",
+    alt: "HD externo conectado a um notebook por cabo USB durante cópia de arquivos",
+    width: 1200,
+    height: 630,
+  },
 };
 
 export function getEditorialCover(slug: string): EditorialCover | undefined {
