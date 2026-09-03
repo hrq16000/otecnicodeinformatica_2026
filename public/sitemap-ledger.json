@@ -1,15 +1,15 @@
 {
-  "geradoEm": "2026-09-03T16:57:26.289Z",
+  "geradoEm": "2026-09-03T17:30:22.842Z",
   "host": "otecnicodeinformatica.com.br",
   "modo": "generate",
   "sitemap": {
     "url": "https://otecnicodeinformatica.com.br/sitemap.xml",
-    "totalUrls": 241,
+    "totalUrls": 244,
     "googleSearchConsole": "NOT_REQUESTED",
     "indexNow": "NOT_REQUESTED"
   },
   "lotes": {
-    "total": 72,
+    "total": 75,
     "itens": [
       {
         "slug": "quando-trocar-hd-por-ssd",
@@ -442,11 +442,33 @@
         "url": "/blog/como-migrar-arquivos-para-um-computador-novo",
         "approvedAt": "2026-09-03",
         "includeInSitemap": true
+      },
+      {
+        "slug": "teclado-de-notebook-nao-funciona-o-que-verificar",
+        "url": "/blog/teclado-de-notebook-nao-funciona-o-que-verificar",
+        "approvedAt": "2026-09-03",
+        "includeInSitemap": true
+      },
+      {
+        "slug": "computador-desliga-sozinho-o-que-verificar",
+        "url": "/blog/computador-desliga-sozinho-o-que-verificar",
+        "approvedAt": "2026-09-03",
+        "includeInSitemap": true
+      },
+      {
+        "slug": "computador-nao-conecta-na-internet-por-cabo",
+        "url": "/blog/computador-nao-conecta-na-internet-por-cabo",
+        "approvedAt": "2026-09-03",
+        "includeInSitemap": true
       }
     ]
   },
   "diff": {
-    "adicionadas": [],
+    "adicionadas": [
+      "/blog/computador-desliga-sozinho-o-que-verificar",
+      "/blog/computador-nao-conecta-na-internet-por-cabo",
+      "/blog/teclado-de-notebook-nao-funciona-o-que-verificar"
+    ],
     "removidas": [],
     "regressoes": []
   },
@@ -1525,6 +1547,46 @@
         "adicionadas": [],
         "removidas": [],
         "total": 241
+      },
+      "error": null
+    },
+    {
+      "id": "463f2817-e04e-438e-a20a-6a9d07e71a96",
+      "action": "sync_approved",
+      "status": "OK",
+      "source": "cli",
+      "timestamp": "2026-09-03T17:30:22.929Z",
+      "details": {
+        "modo": "write",
+        "saida": "sitemap editorial: em dia (75 artigos indexáveis)"
+      },
+      "error": null
+    },
+    {
+      "id": "04562512-0a4b-42a7-8878-404fd290cb0b",
+      "action": "generate_sitemaps",
+      "status": "OK",
+      "source": "cli",
+      "timestamp": "2026-09-03T17:30:23.030Z",
+      "details": {
+        "saida": "sitemap curado: index + 8 sub-sitemaps (244 urls)"
+      },
+      "error": null
+    },
+    {
+      "id": "fe4fbd5f-524b-41dd-ba2d-f646e2ba71fc",
+      "action": "diff_no_regression",
+      "status": "OK",
+      "source": "cli",
+      "timestamp": "2026-09-03T17:30:23.041Z",
+      "details": {
+        "adicionadas": [
+          "/blog/computador-desliga-sozinho-o-que-verificar",
+          "/blog/computador-nao-conecta-na-internet-por-cabo",
+          "/blog/teclado-de-notebook-nao-funciona-o-que-verificar"
+        ],
+        "removidas": [],
+        "total": 244
       },
       "error": null
     }
