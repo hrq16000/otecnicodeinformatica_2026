@@ -692,6 +692,34 @@ export const EDITORIAL_WAVE = [
     apoioLabel: "Histórico de Arquivos do Windows",
     cover: "/blog/como-migrar-arquivos-para-um-computador-novo.jpg",
   },
+  // ── Onda 11F — teclado de notebook, desligamento repentino e rede cabeada.
+  {
+    slug: "teclado-de-notebook-nao-funciona-o-que-verificar",
+    approvedAt: "2026-09-03",
+    pilar: "/servicos/manutencao-de-notebook",
+    pilarLabel: "Manutenção de notebook",
+    apoio: "/blog/como-limpar-notebook-por-dentro",
+    apoioLabel: "Limpeza interna do notebook",
+    cover: "/blog/teclado-de-notebook-nao-funciona-o-que-verificar.jpg",
+  },
+  {
+    slug: "computador-desliga-sozinho-o-que-verificar",
+    approvedAt: "2026-09-03",
+    pilar: "/servicos/manutencao-de-computador",
+    pilarLabel: "Manutenção de computador",
+    apoio: "/blog/como-testar-fonte-de-alimentacao-pc",
+    apoioLabel: "Como testar a fonte de alimentação",
+    cover: "/blog/computador-desliga-sozinho-o-que-verificar.jpg",
+  },
+  {
+    slug: "computador-nao-conecta-na-internet-por-cabo",
+    approvedAt: "2026-09-03",
+    pilar: "/servicos/redes-e-wifi",
+    pilarLabel: "Redes e Wi-Fi",
+    apoio: "/blog/internet-lenta-provedor-ou-roteador",
+    apoioLabel: "Internet lenta: provedor ou roteador",
+    cover: "/blog/computador-nao-conecta-na-internet-por-cabo.jpg",
+  },
 ];
 
 

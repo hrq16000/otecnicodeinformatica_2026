@@ -14577,4 +14577,204 @@ bcdboot C:\\Windows /s S: /f UEFI`}</code></pre>
     ),
   },
 
+  "teclado-de-notebook-nao-funciona-o-que-verificar": {
+    title: "Teclado de notebook não funciona: o que verificar antes de trocar",
+    excerpt:
+      "Teclas mortas, teclado inteiro parado ou caracteres trocados são problemas diferentes. Como separar sujeira, configuração, cabo flat e dano por líquido antes de comprar peça.",
+    date: "2026-09-03",
+    readTime: "10 min",
+    category: "Diagnóstico",
+    content: (
+      <>
+        <p className="lead">"O teclado parou" descreve pelo menos quatro situações distintas, e cada uma leva a um caminho diferente. Trocar o teclado sem separá-las é a forma mais cara de descobrir que o problema era configuração de idioma ou um conector solto.</p>
+
+        <h2>Resposta curta</h2>
+        <p>Ligue um teclado USB externo. Se ele funciona, o restante do computador está bem e a investigação fica restrita ao teclado interno, ao cabo flat e à sujeira. Se nem o externo responde, o assunto deixa de ser teclado e passa a ser sistema, porta ou inicialização.</p>
+
+        <h2>Quatro sintomas, quatro causas prováveis</h2>
+        <ul>
+          <li><strong>Teclado inteiro sem resposta:</strong> conector flat solto, cabo danificado ou falha após abertura recente do equipamento.</li>
+          <li><strong>Algumas teclas não respondem:</strong> sujeira sob a membrana, resíduo de líquido ou trilha interrompida em uma linha específica.</li>
+          <li><strong>Caracteres saem trocados:</strong> layout de teclado errado no sistema — nada de hardware. Acento agudo virando aspas é o caso clássico de ABNT2 configurado como internacional.</li>
+          <li><strong>Teclas repetem sozinhas ou travam:</strong> membrana pressionada, chassi empenado ou tecla presa por resíduo.</li>
+        </ul>
+        <p>Anotar qual dos quatro é o seu evita percorrer testes que não têm relação com o sintoma.</p>
+
+        <h2>A sequência de verificação</h2>
+        <table>
+          <thead>
+            <tr><th>Ordem</th><th>Verificação</th><th>O que ela elimina</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>1</td><td>Conectar um teclado USB e digitar</td><td>Falha do sistema, do usuário logado ou da inicialização</td></tr>
+            <tr><td>2</td><td>Testar as mesmas teclas na tela de senha do sistema</td><td>Programa aberto travado ou perfil com configuração própria</td></tr>
+            <tr><td>3</td><td>Conferir o layout de teclado configurado</td><td>Caracteres trocados sem defeito físico</td></tr>
+            <tr><td>4</td><td>Verificar teclas de bloqueio numérico e função (Fn)</td><td>Bloco numérico sobreposto às letras em teclado compacto</td></tr>
+            <tr><td>5</td><td>Desligar, remover a alimentação e reiniciar sem periféricos</td><td>Estado travado do controlador de entrada</td></tr>
+            <tr><td>6</td><td>Observar se o teclado responde antes do sistema carregar (tela da BIOS)</td><td>Driver ou sistema — se responde ali, o hardware está vivo</td></tr>
+          </tbody>
+        </table>
+        <p>Se o teclado funciona na tela da BIOS e falha depois, o problema é de software. Se não funciona em lugar nenhum e o externo funciona, é o teclado interno ou o cabo dele.</p>
+
+        <h2>Quando houve líquido</h2>
+        <p>Líquido derramado exige conduta diferente do restante: desligue imediatamente, desconecte a fonte, não tente secar com secador quente e não ligue "só para testar". A urgência não é o teclado — é impedir que o líquido alcance a placa principal. Nesses casos, a abertura para secagem e limpeza deve ser feita o quanto antes, e o custo de esperar costuma ser bem maior que o de uma peça.</p>
+
+        <h2>Sujeira, poeira e uso</h2>
+        <p>Teclado que falha aos poucos, em teclas específicas e usadas com frequência, costuma acumular resíduo sob a membrana. A limpeza interna do equipamento, descrita em <Link to="/blog/como-limpar-notebook-por-dentro" className="text-accent">como limpar o notebook por dentro</Link>, resolve parte dos casos e faz parte da <Link to="/blog/manutencao-preventiva-de-computador-guia-completo" className="text-accent">rotina de manutenção preventiva</Link>. O que não resolve é o teclado com trilha rompida: nele, a peça precisa ser substituída.</p>
+
+        <h2>Quando o teclado externo também não responde</h2>
+        <p>Aí o problema deixou de ser o teclado. Vale verificar se a porta reconhece outros dispositivos, caminho descrito em <Link to="/blog/dispositivo-usb-nao-reconhecido-o-que-fazer" className="text-accent">dispositivo USB não reconhecido</Link>, e se o equipamento realmente concluiu a inicialização, conforme <Link to="/blog/notebook-nao-liga-o-que-fazer" className="text-accent">notebook que não liga</Link>. Teclado morto em conjunto com touchpad morto aponta para o controlador de entrada, não para duas peças que falharam ao mesmo tempo.</p>
+
+        <h2>O que NÃO fazer</h2>
+        <ul>
+          <li>Comprar teclado novo antes de testar um teclado USB externo.</li>
+          <li>Lavar o teclado ou aplicar líquido de limpeza direto nas teclas.</li>
+          <li>Arrancar teclas com força para "limpar embaixo" — o clipe plástico quebra.</li>
+          <li>Ligar o equipamento logo após derramamento de líquido.</li>
+          <li>Reinstalar o sistema por causa de caracteres trocados.</li>
+          <li>Forçar o cabo flat no conector: ele entra sem resistência quando alinhado.</li>
+        </ul>
+
+        <h2>Quando parar</h2>
+        <p>Pare se houver cheiro de queimado, se o equipamento aquecer de forma anormal, se houver oxidação visível ou se o teclado tiver recebido líquido. Pare também quando a abertura exigir desmontagem completa do chassi: retirar dezenas de parafusos sem referência costuma criar um segundo problema.</p>
+
+        <h2>Quando chamar um técnico</h2>
+        <p>Chame quando o teclado interno estiver confirmado como morto, quando houver contato com líquido ou quando teclado e touchpad falharem juntos. A avaliação com peça de teste está em <Link to="/diagnostico-tecnico" className="text-accent">diagnóstico técnico</Link>; a substituição e a limpeza interna, em <Link to="/servicos/manutencao-de-notebook" className="text-accent">manutenção de notebook</Link>.</p>
+      </>
+    ),
+  },
+
+  "computador-desliga-sozinho-o-que-verificar": {
+    title: "Computador desliga sozinho: o que verificar antes de trocar peça",
+    excerpt:
+      "Desligamento repentino tem causas bem distintas: temperatura, fonte, energia elétrica e memória. Como identificar qual delas é a sua sem sair trocando componentes.",
+    date: "2026-09-03",
+    readTime: "11 min",
+    category: "Diagnóstico",
+    content: (
+      <>
+        <p className="lead">Um computador que desliga sozinho, sem aviso e sem tela de erro, está sendo interrompido — não está travando. Essa diferença importa: travamento aponta para software, corte imediato de energia aponta para proteção térmica, alimentação ou instabilidade elétrica.</p>
+
+        <h2>Resposta curta</h2>
+        <p>Observe <em>quando</em> o desligamento acontece. Sob esforço (jogo, edição, exportação) sugere temperatura ou fonte no limite. Aleatoriamente, inclusive parado, sugere alimentação elétrica ou contato. Poucos segundos depois de ligar sugere proteção do sistema. O padrão temporal reduz a lista de suspeitos antes de qualquer teste.</p>
+
+        <h2>O padrão diz mais que o sintoma</h2>
+        <ul>
+          <li><strong>Desliga sempre sob carga:</strong> dissipação insuficiente ou fonte sem folga para o pico de consumo.</li>
+          <li><strong>Desliga em horários e situações aleatórias:</strong> oscilação na rede elétrica, cabo de força mal encaixado ou régua sobrecarregada.</li>
+          <li><strong>Desliga e religa sozinho:</strong> configuração de reinício automático após falha, geralmente escondendo um erro de sistema.</li>
+          <li><strong>Desliga com tela azul antes:</strong> não é este artigo — o código de parada aponta a causa, conforme <Link to="/blog/codigos-de-erro-tela-azul-windows" className="text-accent">códigos de erro de tela azul</Link>.</li>
+          <li><strong>Desliga logo após ligar, sem chegar ao sistema:</strong> suspeita de curto, memória mal encaixada ou proteção da fonte.</li>
+        </ul>
+
+        <h2>Temperatura: o suspeito mais comum</h2>
+        <p>A proteção térmica corta a energia justamente para evitar dano permanente. Quando o desligamento acontece minutos depois do esforço começar, e o equipamento só volta a funcionar depois de esfriar, o diagnóstico é praticamente esse. O caminho é medir antes de agir: <Link to="/blog/como-monitorar-temperatura-do-computador" className="text-accent">como monitorar a temperatura do computador</Link> mostra como comparar leituras em datas diferentes. Em notebook, os desdobramentos estão em <Link to="/blog/notebook-superaquecendo-o-que-fazer" className="text-accent">notebook superaquecendo</Link>, <Link to="/blog/como-limpar-notebook-por-dentro" className="text-accent">limpeza interna</Link> e <Link to="/blog/como-trocar-pasta-termica-notebook" className="text-accent">troca de pasta térmica</Link>.</p>
+
+        <h2>Fonte e energia elétrica</h2>
+        <p>Fonte em fim de vida entrega tensão instável exatamente quando o consumo sobe. O teste de bancada e os sinais de falha estão em <Link to="/blog/como-testar-fonte-de-alimentacao-pc" className="text-accent">como testar a fonte de alimentação</Link>. Antes disso, elimine o mais barato: tomada diferente, sem extensão e sem régua compartilhada com equipamentos de alto consumo. Queda breve na rede elétrica derruba o computador sem deixar registro nenhum no sistema.</p>
+
+        <h2>A sequência de verificação</h2>
+        <table>
+          <thead>
+            <tr><th>Ordem</th><th>Verificação</th><th>O que ela elimina</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>1</td><td>Anotar data, hora e o que estava em uso a cada desligamento</td><td>Impressão subjetiva de "aleatório"</td></tr>
+            <tr><td>2</td><td>Ligar direto na tomada, sem régua nem extensão</td><td>Contato ruim e sobrecarga do ponto elétrico</td></tr>
+            <tr><td>3</td><td>Medir temperatura em repouso e sob esforço</td><td>Proteção térmica</td></tr>
+            <tr><td>4</td><td>Limpar entradas e saídas de ar obstruídas</td><td>Dissipação reduzida por poeira</td></tr>
+            <tr><td>5</td><td>Testar a memória com ferramenta dedicada</td><td>Módulo instável causando parada abrupta</td></tr>
+            <tr><td>6</td><td>Observar se o desligamento persiste com o mínimo de periféricos conectados</td><td>Dispositivo externo puxando corrente demais</td></tr>
+          </tbody>
+        </table>
+        <p>O teste de memória citado no item 5 está detalhado em <Link to="/blog/testar-memoria-ram-memtest86" className="text-accent">como testar a memória RAM</Link>. Ele é lento, mas é o único que dá resposta objetiva sobre o módulo.</p>
+
+        <h2>Quando o registro do sistema ajuda</h2>
+        <p>Desligamento por corte de energia costuma aparecer no visualizador de eventos como encerramento inesperado, sem erro anterior. Já um desligamento precedido de falha crítica indica problema de driver ou sistema, e o rastro está no código registrado. A ausência total de registro reforça a hipótese elétrica: o computador não teve tempo de escrever nada.</p>
+
+        <h2>O que NÃO fazer</h2>
+        <ul>
+          <li>Trocar a fonte por uma mais potente sem confirmar que o problema é de alimentação.</li>
+          <li>Aplicar pasta térmica sem antes medir temperatura e verificar poeira.</li>
+          <li>Desativar a proteção térmica ou o desligamento automático nas configurações.</li>
+          <li>Insistir em usar o equipamento que desliga sob carga: cada ciclo abrupto castiga o disco.</li>
+          <li>Reinstalar o sistema para resolver corte imediato de energia.</li>
+          <li>Ligar o gabinete em régua compartilhada com aparelhos de alto consumo.</li>
+        </ul>
+
+        <h2>Quando parar</h2>
+        <p>Pare imediatamente diante de cheiro de queimado, estalo, faísca na tomada ou aquecimento anormal do cabo de força. Pare também se o equipamento passar a desligar cada vez mais rápido: insistir aumenta o risco de perda de dados e de dano a mais de um componente.</p>
+
+        <h2>Quando chamar um técnico</h2>
+        <p>Chame quando o desligamento persistir depois de eliminar temperatura, tomada e periféricos, quando houver suspeita de fonte ou placa e quando o equipamento for de trabalho e a parada estiver custando tempo. A avaliação com instrumento e peça de teste está em <Link to="/diagnostico-tecnico" className="text-accent">diagnóstico técnico</Link>; a intervenção, em <Link to="/servicos/manutencao-de-computador" className="text-accent">manutenção de computador</Link>. Antes de qualquer abertura, garanta a cópia dos arquivos conforme <Link to="/decisoes/backup-antes-da-manutencao" className="text-accent">backup antes da manutenção</Link>.</p>
+      </>
+    ),
+  },
+
+  "computador-nao-conecta-na-internet-por-cabo": {
+    title: "Computador não conecta na internet por cabo: o que verificar",
+    excerpt:
+      "Cabo ligado e nada de internet. Como separar cabo rompido, porta do roteador, placa de rede e falha do provedor — com testes na ordem certa.",
+    date: "2026-09-03",
+    readTime: "10 min",
+    category: "Redes",
+    content: (
+      <>
+        <p className="lead">A conexão por cabo tem uma vantagem no diagnóstico: quase tudo é físico e verificável. Ou o computador enxerga a rede e não enxerga a internet, ou não enxerga nem a rede — e essas duas situações têm listas de causas completamente diferentes.</p>
+
+        <h2>Resposta curta</h2>
+        <p>Olhe as luzes da porta de rede. Sem luz nenhuma nas duas pontas, o problema é físico: cabo, conector ou porta. Com luz e sem internet, o problema está adiante: endereçamento, roteador ou provedor. Essa leitura de dez segundos separa metade dos casos.</p>
+
+        <h2>Dois cenários que não se misturam</h2>
+        <ul>
+          <li><strong>Sem enlace (nenhuma luz, "cabo de rede desconectado"):</strong> cabo rompido, clipe do conector quebrado, porta do roteador queimada ou placa de rede desativada.</li>
+          <li><strong>Com enlace e sem internet:</strong> o computador conversa com o roteador, mas não sai para fora. Suspeita de endereçamento, DNS, roteador travado ou falha do provedor.</li>
+        </ul>
+        <p>Tratar o segundo cenário trocando cabo é perda de tempo — e é o erro mais frequente.</p>
+
+        <h2>A sequência de verificação</h2>
+        <table>
+          <thead>
+            <tr><th>Ordem</th><th>Verificação</th><th>O que ela elimina</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>1</td><td>Conferir as luzes nas duas pontas do cabo</td><td>Falta de enlace físico</td></tr>
+            <tr><td>2</td><td>Trocar o cabo por outro sabidamente bom</td><td>Cabo rompido ou conector com clipe quebrado</td></tr>
+            <tr><td>3</td><td>Mudar para outra porta do roteador</td><td>Porta individual com defeito</td></tr>
+            <tr><td>4</td><td>Testar outro equipamento no mesmo cabo e porta</td><td>Placa de rede do computador</td></tr>
+            <tr><td>5</td><td>Verificar se o Wi-Fi do mesmo roteador navega</td><td>Falha do provedor (se o Wi-Fi também não navega)</td></tr>
+            <tr><td>6</td><td>Reiniciar roteador e modem, aguardando um minuto desligados</td><td>Estado travado do equipamento de rede</td></tr>
+          </tbody>
+        </table>
+        <p>Se o Wi-Fi do mesmo roteador navega normalmente e só o cabo falha, o provedor está fora da lista de suspeitos: o problema é local.</p>
+
+        <h2>Quando o cabo é o culpado</h2>
+        <p>Cabo de rede falha de dois jeitos: rompimento interno por dobra e clipe de travamento quebrado, que deixa o conector solto no encaixe. Ambos produzem conexão intermitente, que cai justamente quando alguém encosta na mesa. Cabo passado por baixo de porta, esmagado por móvel ou preso em curva fechada é candidato natural. Vale também conferir o comprimento: lances muito longos, emendados com adaptadores, degradam o sinal.</p>
+
+        <h2>Quando o enlace existe mas não há navegação</h2>
+        <p>Aqui a investigação muda de assunto. O computador precisa receber endereço do roteador; sem isso, aparece conexão "sem acesso à internet". Reiniciar o roteador resolve boa parte dos casos, e a configuração correta do equipamento está em <Link to="/blog/como-configurar-roteador-wifi-iniciantes" className="text-accent">como configurar o roteador</Link>. Se a navegação existe mas é lenta, o assunto é outro e está em <Link to="/blog/internet-lenta-provedor-ou-roteador" className="text-accent">internet lenta: provedor ou roteador</Link>.</p>
+
+        <h2>Placa de rede do computador</h2>
+        <p>Placa desativada no sistema, driver ausente depois de uma reinstalação e adaptador USB de rede não reconhecido produzem o mesmo sintoma de "sem cabo conectado". Se o adaptador é externo, o caminho de verificação é o de <Link to="/blog/dispositivo-usb-nao-reconhecido-o-que-fazer" className="text-accent">dispositivo USB não reconhecido</Link>. Se a placa é integrada e sumiu do sistema após uma atualização, vale checar <Link to="/blog/windows-update-nao-funciona-o-que-verificar" className="text-accent">o estado do Windows Update</Link> antes de suspeitar de hardware.</p>
+
+        <h2>O que NÃO fazer</h2>
+        <ul>
+          <li>Trocar de roteador antes de testar outro cabo e outra porta.</li>
+          <li>Alterar configurações avançadas de rede sem anotar o valor anterior.</li>
+          <li>Crimpar conector novo sem ferramenta apropriada e sem testador.</li>
+          <li>Emendar cabos para vencer distância em vez de usar um lance único.</li>
+          <li>Reinstalar o sistema por causa de conexão que não sobe.</li>
+          <li>Chamar o provedor antes de confirmar que o Wi-Fi da mesma casa também não navega.</li>
+        </ul>
+
+        <h2>Quando parar</h2>
+        <p>Pare se o problema atingir todos os equipamentos da casa ou do escritório ao mesmo tempo — nesse caso a verificação é com o provedor, não no computador. Pare também diante de conector queimado, cheiro de queimado no roteador ou instabilidade que apareceu depois de descarga elétrica.</p>
+
+        <h2>Quando chamar um técnico</h2>
+        <p>Chame quando houver cabeamento em parede ou canaleta, quando vários pontos de rede falharem ou quando a rede for de ambiente de trabalho com equipamentos compartilhados. O serviço está em <Link to="/servicos/redes-e-wifi" className="text-accent">redes e Wi-Fi</Link>, e a avaliação presencial em <Link to="/diagnostico-tecnico" className="text-accent">diagnóstico técnico</Link>. Para escritório com vários usuários, o desdobramento é <Link to="/servicos/suporte-tecnico-empresarial" className="text-accent">suporte técnico empresarial</Link>.</p>
+      </>
+    ),
+  },
+
 };
+

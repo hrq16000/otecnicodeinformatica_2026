@@ -639,6 +639,45 @@ export const WAVE_11E_BATCH_1: EditorialWaveEntry[] = [
   },
 ];
 
+export const WAVE_11F_BATCH_1: EditorialWaveEntry[] = [
+  {
+    wave: "11A",
+    batch: "8",
+    url: "/blog/teclado-de-notebook-nao-funciona-o-que-verificar",
+    slug: "teclado-de-notebook-nao-funciona-o-que-verificar",
+    ownerId: "teclado-de-notebook-nao-funciona-o-que-verificar",
+    cluster: "perifericos-usb",
+    role: "satelite",
+    publishedAt: "2026-09-03",
+    targetQueries: ["teclado do notebook nao funciona", "teclas do notebook nao respondem", "teclado digitando letra errada"],
+    doNotDuplicate: ["/blog/dispositivo-usb-nao-reconhecido-o-que-fazer", "/blog/notebook-nao-liga-o-que-fazer"],
+  },
+  {
+    wave: "11A",
+    batch: "8",
+    url: "/blog/computador-desliga-sozinho-o-que-verificar",
+    slug: "computador-desliga-sozinho-o-que-verificar",
+    ownerId: "computador-desliga-sozinho-o-que-verificar",
+    cluster: "liga-e-desliga",
+    role: "satelite",
+    publishedAt: "2026-09-03",
+    targetQueries: ["computador desliga sozinho", "pc desliga do nada", "notebook desliga sozinho jogando"],
+    doNotDuplicate: ["/blog/notebook-superaquecendo-o-que-fazer", "/blog/codigos-de-erro-tela-azul-windows"],
+  },
+  {
+    wave: "11A",
+    batch: "8",
+    url: "/blog/computador-nao-conecta-na-internet-por-cabo",
+    slug: "computador-nao-conecta-na-internet-por-cabo",
+    ownerId: "computador-nao-conecta-na-internet-por-cabo",
+    cluster: "internet-wifi",
+    role: "satelite",
+    publishedAt: "2026-09-03",
+    targetQueries: ["cabo de rede conectado sem internet", "pc nao conecta na internet por cabo", "cabo de rede desconectado windows"],
+    doNotDuplicate: ["/blog/internet-lenta-provedor-ou-roteador", "/blog/como-melhorar-sinal-wifi-em-casa"],
+  },
+];
+
 export const EDITORIAL_WAVES: EditorialWaveEntry[] = [
   ...WAVE_10C_BATCH_0,
   ...WAVE_10D_BATCH_1,
@@ -648,6 +687,7 @@ export const EDITORIAL_WAVES: EditorialWaveEntry[] = [
   ...WAVE_11C_BATCH_1,
   ...WAVE_11D_BATCH_1,
   ...WAVE_11E_BATCH_1,
+  ...WAVE_11F_BATCH_1,
 ];
 
 /** URLs monitoradas (ordem estável, sem duplicatas). */

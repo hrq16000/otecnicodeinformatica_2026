@@ -87,6 +87,39 @@ export const ATLAS_PONTES_ARTIGOS: Record<string, AtlasPonteArtigo> = {
         "Onde manter a cópia fora do local, complementando as versões locais.",
     },
   },
+  "teclado-de-notebook-nao-funciona-o-que-verificar": {
+    temaId: "fundamentos",
+    porQue:
+      "Teclado parado parece defeito único, mas há quatro sintomas com causas diferentes. Os fundamentos ensinam a separar hardware interno de configuração do sistema antes de encomendar peça.",
+    proximoPasso: {
+      rotulo: "Diagnóstico técnico",
+      to: "/diagnostico-tecnico",
+      contexto:
+        "Quando o teclado externo funciona, o interno não responde e a troca do módulo passa a ser a decisão.",
+    },
+  },
+  "computador-desliga-sozinho-o-que-verificar": {
+    temaId: "manutencao-preventiva",
+    porQue:
+      "Desligamento repentino costuma ter origem térmica ou elétrica — exatamente o que a manutenção preventiva evita. Ler o padrão do desligamento vale mais que trocar peça por eliminação.",
+    proximoPasso: {
+      rotulo: "Backup antes da manutenção",
+      to: "/decisoes/backup-antes-da-manutencao",
+      contexto:
+        "Antes de abrir a máquina ou testar fonte, garanta que os dados estejam copiados.",
+    },
+  },
+  "computador-nao-conecta-na-internet-por-cabo": {
+    temaId: "redes-wifi",
+    porQue:
+      "Cabo ligado sem internet é um problema de cadeia: enlace físico, endereçamento e provedor. A trilha de redes mostra por que testar na ordem evita trocar o que está bom.",
+    proximoPasso: {
+      rotulo: "Redes e Wi-Fi",
+      to: "/servicos/redes-e-wifi",
+      contexto:
+        "Quando o problema é o cabeamento da casa ou do escritório e exige intervenção no ponto de rede.",
+    },
+  },
   "monitor-sem-sinal-o-que-verificar": {
     temaId: "fundamentos",
     porQue:

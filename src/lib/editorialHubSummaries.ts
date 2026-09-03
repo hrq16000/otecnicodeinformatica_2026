@@ -13,46 +13,6 @@ export type EditorialHubSummary = {
 
 const rows: Array<EditorialHubSummary & { slug: string }> = [
   {
-    "slug": "quando-trocar-hd-por-ssd",
-    "title": "Vale a pena trocar o HD por SSD? Como avaliar o upgrade",
-    "excerpt": "O SSD acelera a inicialização e a abertura de programas, mas não resolve tudo. Veja o que muda.",
-    "date": "2024-01-05",
-    "readTime": "9 min",
-    "category": "Hardware"
-  },
-  {
-    "slug": "como-saber-se-pc-tem-virus-malware",
-    "title": "Como saber se o computador está com vírus ou malware",
-    "excerpt": "Pop-ups, navegador alterado, lentidão repentina ou arquivos bloqueados? Veja os sinais de infecção.",
-    "date": "2026-04-05",
-    "readTime": "10 min",
-    "category": "Segurança"
-  },
-  {
-    "slug": "backup-como-proteger-seus-arquivos",
-    "title": "Como evitar perder arquivos: guia de backup preventivo",
-    "excerpt": "Backup não é copiar arquivos para outra pasta do mesmo disco. Entenda cópias local, externa e em nuvem.",
-    "date": "2024-01-02",
-    "readTime": "9 min",
-    "category": "Segurança"
-  },
-  {
-    "slug": "como-melhorar-sinal-wifi-em-casa",
-    "title": "Wi-Fi caindo ou com sinal fraco: como diagnosticar",
-    "excerpt": "Wi-Fi que cai, fica lento ou não chega em alguns cômodos? Veja como separar problema da rede local e falha da operadora.",
-    "date": "2026-04-29",
-    "readTime": "9 min",
-    "category": "Tutoriais Domésticos"
-  },
-  {
-    "slug": "notebook-superaquecendo-o-que-fazer",
-    "title": "Notebook superaquecendo: sinais, prevenção e o que fazer",
-    "excerpt": "Aquecimento normal ou comportamento de risco? Veja o que observar no superaquecimento, o que fazer com segurança e os sinais que pedem desligar o equipamento.",
-    "date": "2023-12-28",
-    "readTime": "9 min",
-    "category": "Manutenção"
-  },
-  {
     "slug": "organizacao-de-ti-para-pequenos-escritorios",
     "title": "Organização de TI para pequenos escritórios: o guia prático",
     "excerpt": "Como organizar equipamentos, arquivos, acessos e rotina de manutenção em um escritório pequeno, sem contratar estrutura de TI que não cabe no negócio.",
@@ -69,28 +29,20 @@ const rows: Array<EditorialHubSummary & { slug: string }> = [
     "category": "Hardware"
   },
   {
-    "slug": "como-instalar-windows-11-do-zero",
-    "title": "Como preparar uma instalação limpa do Windows 11",
-    "excerpt": "Entenda backup, requisitos, mídia oficial, licença, drivers e riscos antes de fazer uma instalação limpa do Windows 11.",
-    "date": "2026-04-20",
+    "slug": "computador-lento-causas-solucoes",
+    "title": "Computador lento: causas possíveis e como decidir o próximo passo",
+    "excerpt": "Entenda por que um computador fica lento, o que dá para verificar com segurança e quando formatar, fazer upgrade ou buscar manutenção realmente faz diferença.",
+    "date": "2026-04-06",
     "readTime": "11 min",
-    "category": "Procedimentos Técnicos"
+    "category": "Manutenção"
   },
   {
-    "slug": "como-resolver-tela-azul-windows",
-    "title": "Como Resolver Tela Azul do Windows (BSOD): Diagnóstico e Solução",
-    "excerpt": "Análise de códigos de erro, dump de memória, drivers problemáticos e procedimento profissional de correção.",
-    "date": "2026-04-20",
+    "slug": "como-saber-se-pc-tem-virus-malware",
+    "title": "Como saber se o computador está com vírus ou malware",
+    "excerpt": "Pop-ups, navegador alterado, lentidão repentina ou arquivos bloqueados? Veja os sinais de infecção.",
+    "date": "2026-04-05",
     "readTime": "10 min",
-    "category": "Procedimentos Técnicos"
-  },
-  {
-    "slug": "como-trocar-tela-notebook-passo-a-passo",
-    "title": "Como Trocar a Tela do Notebook: Passo a Passo Profissional",
-    "excerpt": "Guia técnico para identificar a tela correta, desmontar com segurança e instalar a nova sem danificar o flat cable.",
-    "date": "2026-04-20",
-    "readTime": "10 min",
-    "category": "Procedimentos Técnicos"
+    "category": "Segurança"
   },
   {
     "slug": "notebook-nao-liga-o-que-fazer",
@@ -101,52 +53,36 @@ const rows: Array<EditorialHubSummary & { slug: string }> = [
     "category": "Manutenção"
   },
   {
-    "slug": "computador-lento-causas-solucoes",
-    "title": "Computador lento: causas possíveis e como decidir o próximo passo",
-    "excerpt": "Entenda por que um computador fica lento, o que dá para verificar com segurança e quando formatar, fazer upgrade ou buscar manutenção realmente faz diferença.",
-    "date": "2026-04-06",
-    "readTime": "11 min",
-    "category": "Manutenção"
-  },
-  {
-    "slug": "como-recuperar-dados-hd-com-defeito",
-    "title": "Recuperação de dados de HD com defeito: o que é possível",
-    "excerpt": "Como diferenciar falha lógica de falha mecânica, o que fazer nos primeiros minutos e por que insistir em ligar o disco reduz a chance de recuperar.",
-    "date": "2026-04-20",
-    "readTime": "12 min",
-    "category": "Procedimentos Técnicos"
-  },
-  {
-    "slug": "como-fazer-upgrade-ssd-nvme",
-    "title": "Upgrade para SSD NVMe: quando compensa e como é feito",
-    "excerpt": "Como saber se a sua placa aceita NVMe, o que muda de verdade no uso diário e quais são as etapas do serviço feito em bancada.",
-    "date": "2026-04-20",
-    "readTime": "11 min",
-    "category": "Procedimentos Técnicos"
-  },
-  {
-    "slug": "como-configurar-roteador-wifi-iniciantes",
-    "title": "Como configurar um roteador Wi-Fi do zero, sem complicação",
-    "excerpt": "Ordem correta das etapas, o que mudar na primeira configuração e os ajustes que evitam a maior parte dos problemas de sinal depois.",
-    "date": "2026-04-22",
-    "readTime": "11 min",
-    "category": "Redes e Wi-Fi"
-  },
-  {
-    "slug": "como-saber-quem-esta-usando-meu-wifi",
-    "title": "Como saber quem está usando o seu Wi-Fi (e o que fazer)",
-    "excerpt": "Como listar os dispositivos conectados, identificar cada um pelo nome e pelo endereço físico e retomar o controle da rede sem quebrar o que funciona.",
-    "date": "2026-04-22",
-    "readTime": "10 min",
-    "category": "Redes e Wi-Fi"
-  },
-  {
     "slug": "como-escolher-um-bom-antivirus",
     "title": "Como escolher um antivírus: o que muda de verdade na proteção",
     "excerpt": "Critérios técnicos para escolher a proteção do Windows: o que o antivírus do sistema já cobre, quando um pago faz diferença, o que é só marketing e como reconhecer falso antivírus.",
     "date": "2026-08-12",
     "readTime": "11 min",
     "category": "Segurança"
+  },
+  {
+    "slug": "quando-trocar-hd-por-ssd",
+    "title": "Vale a pena trocar o HD por SSD? Como avaliar o upgrade",
+    "excerpt": "O SSD acelera a inicialização e a abertura de programas, mas não resolve tudo. Veja o que muda.",
+    "date": "2024-01-05",
+    "readTime": "9 min",
+    "category": "Hardware"
+  },
+  {
+    "slug": "backup-como-proteger-seus-arquivos",
+    "title": "Como evitar perder arquivos: guia de backup preventivo",
+    "excerpt": "Backup não é copiar arquivos para outra pasta do mesmo disco. Entenda cópias local, externa e em nuvem.",
+    "date": "2024-01-02",
+    "readTime": "9 min",
+    "category": "Segurança"
+  },
+  {
+    "slug": "notebook-superaquecendo-o-que-fazer",
+    "title": "Notebook superaquecendo: sinais, prevenção e o que fazer",
+    "excerpt": "Aquecimento normal ou comportamento de risco? Veja o que observar no superaquecimento, o que fazer com segurança e os sinais que pedem desligar o equipamento.",
+    "date": "2023-12-28",
+    "readTime": "9 min",
+    "category": "Manutenção"
   },
   {
     "slug": "como-proteger-computador-golpes-internet",
@@ -157,36 +93,12 @@ const rows: Array<EditorialHubSummary & { slug: string }> = [
     "category": "Segurança"
   },
   {
-    "slug": "como-limpar-notebook-por-dentro",
-    "title": "Limpeza interna de notebook: o que muda de verdade e onde estão os riscos",
-    "excerpt": "Como a poeira compromete a refrigeração de um notebook, o que dá para verificar sem abrir o equipamento, o que a limpeza interna resolve, o que ela não resolve e quais erros custam caro na bancada.",
+    "slug": "windows-11-lento-como-resolver",
+    "title": "Windows 11 lento: como descobrir a causa antes de sair otimizando",
+    "excerpt": "Lentidão no Windows 11 quase nunca tem uma causa única. Como ler os sinais, separar limite de hardware de software mal configurado e decidir entre ajuste, upgrade e reinstalação.",
     "date": "2026-08-12",
     "readTime": "11 min",
-    "category": "Manutenção"
-  },
-  {
-    "slug": "como-trocar-pasta-termica-notebook",
-    "title": "Troca de pasta térmica no notebook: quando faz sentido e como não errar",
-    "excerpt": "O que a pasta térmica faz, como saber se ela é mesmo a causa do aquecimento, a sequência correta de remoção e aperto do dissipador e os erros que danificam a placa.",
-    "date": "2026-08-12",
-    "readTime": "11 min",
-    "category": "Manutenção"
-  },
-  {
-    "slug": "como-clonar-hd-para-ssd",
-    "title": "Clonar HD para SSD: quando clonar, quando reinstalar e onde o processo falha",
-    "excerpt": "A diferença real entre clonar e reinstalar, como saber se o disco de origem aguenta a clonagem, os pontos em que o processo trava e o que conferir antes de apagar o disco antigo.",
-    "date": "2026-08-12",
-    "readTime": "11 min",
-    "category": "Manutenção"
-  },
-  {
-    "slug": "como-instalar-segundo-ssd-notebook",
-    "title": "Segundo SSD no notebook: quando cabe, quando não cabe e o que muda",
-    "excerpt": "Como descobrir se o notebook aceita um segundo disco, a diferença entre slot M.2 livre e caddy no lugar do leitor óptico, os limites de cada caminho e o que fazer depois da instalação.",
-    "date": "2026-08-12",
-    "readTime": "10 min",
-    "category": "Manutenção"
+    "category": "Procedimentos Técnicos"
   },
   {
     "slug": "ransomware-como-proteger-empresa",
@@ -205,20 +117,20 @@ const rows: Array<EditorialHubSummary & { slug: string }> = [
     "category": "Segurança"
   },
   {
-    "slug": "como-instalar-impressora-windows-passo-a-passo",
-    "title": "Instalar impressora no Windows: por que ela some da rede e como deixar a instalação estável",
-    "excerpt": "O que muda entre instalar por cabo e instalar em rede, por que a impressora desaparece depois de reiniciar o roteador e como fixar o endereço para a instalação parar de se perder.",
+    "slug": "como-trocar-pasta-termica-notebook",
+    "title": "Troca de pasta térmica no notebook: quando faz sentido e como não errar",
+    "excerpt": "O que a pasta térmica faz, como saber se ela é mesmo a causa do aquecimento, a sequência correta de remoção e aperto do dissipador e os erros que danificam a placa.",
     "date": "2026-08-12",
     "readTime": "11 min",
-    "category": "Redes"
+    "category": "Manutenção"
   },
   {
-    "slug": "como-conectar-wifi-tv-nao-conecta",
-    "title": "Smart TV não conecta no Wi-Fi: como separar problema de rede de defeito da TV",
-    "excerpt": "Como descobrir se a Smart TV não conecta por causa da rede, da faixa de 5 GHz, do isolamento do roteador ou de falha no módulo Wi-Fi do aparelho — e o que fazer em cada caso.",
+    "slug": "como-clonar-hd-para-ssd",
+    "title": "Clonar HD para SSD: quando clonar, quando reinstalar e onde o processo falha",
+    "excerpt": "A diferença real entre clonar e reinstalar, como saber se o disco de origem aguenta a clonagem, os pontos em que o processo trava e o que conferir antes de apagar o disco antigo.",
     "date": "2026-08-12",
     "readTime": "11 min",
-    "category": "Redes"
+    "category": "Manutenção"
   },
   {
     "slug": "como-testar-fonte-de-alimentacao-pc",
@@ -229,6 +141,14 @@ const rows: Array<EditorialHubSummary & { slug: string }> = [
     "category": "Procedimentos Técnicos"
   },
   {
+    "slug": "como-limpar-notebook-por-dentro",
+    "title": "Limpeza interna de notebook: o que muda de verdade e onde estão os riscos",
+    "excerpt": "Como a poeira compromete a refrigeração de um notebook, o que dá para verificar sem abrir o equipamento, o que a limpeza interna resolve, o que ela não resolve e quais erros custam caro na bancada.",
+    "date": "2026-08-12",
+    "readTime": "11 min",
+    "category": "Manutenção"
+  },
+  {
     "slug": "como-diagnosticar-placa-mae-defeituosa",
     "title": "Placa-mãe defeituosa: como confirmar antes de trocar a peça errada",
     "excerpt": "Inspeção visual, teste mínimo e eliminação sistemática para distinguir falha de placa-mãe de falha de memória, fonte ou refrigeração — e quando reparo eletrônico ainda faz sentido.",
@@ -237,12 +157,60 @@ const rows: Array<EditorialHubSummary & { slug: string }> = [
     "category": "Procedimentos Técnicos"
   },
   {
-    "slug": "windows-11-lento-como-resolver",
-    "title": "Windows 11 lento: como descobrir a causa antes de sair otimizando",
-    "excerpt": "Lentidão no Windows 11 quase nunca tem uma causa única. Como ler os sinais, separar limite de hardware de software mal configurado e decidir entre ajuste, upgrade e reinstalação.",
+    "slug": "como-instalar-segundo-ssd-notebook",
+    "title": "Segundo SSD no notebook: quando cabe, quando não cabe e o que muda",
+    "excerpt": "Como descobrir se o notebook aceita um segundo disco, a diferença entre slot M.2 livre e caddy no lugar do leitor óptico, os limites de cada caminho e o que fazer depois da instalação.",
     "date": "2026-08-12",
+    "readTime": "10 min",
+    "category": "Manutenção"
+  },
+  {
+    "slug": "como-fazer-upgrade-ssd-nvme",
+    "title": "Upgrade para SSD NVMe: quando compensa e como é feito",
+    "excerpt": "Como saber se a sua placa aceita NVMe, o que muda de verdade no uso diário e quais são as etapas do serviço feito em bancada.",
+    "date": "2026-04-20",
     "readTime": "11 min",
     "category": "Procedimentos Técnicos"
+  },
+  {
+    "slug": "como-recuperar-dados-hd-com-defeito",
+    "title": "Recuperação de dados de HD com defeito: o que é possível",
+    "excerpt": "Como diferenciar falha lógica de falha mecânica, o que fazer nos primeiros minutos e por que insistir em ligar o disco reduz a chance de recuperar.",
+    "date": "2026-04-20",
+    "readTime": "12 min",
+    "category": "Procedimentos Técnicos"
+  },
+  {
+    "slug": "como-trocar-tela-notebook-passo-a-passo",
+    "title": "Como Trocar a Tela do Notebook: Passo a Passo Profissional",
+    "excerpt": "Guia técnico para identificar a tela correta, desmontar com segurança e instalar a nova sem danificar o flat cable.",
+    "date": "2026-04-20",
+    "readTime": "10 min",
+    "category": "Procedimentos Técnicos"
+  },
+  {
+    "slug": "como-instalar-windows-11-do-zero",
+    "title": "Como preparar uma instalação limpa do Windows 11",
+    "excerpt": "Entenda backup, requisitos, mídia oficial, licença, drivers e riscos antes de fazer uma instalação limpa do Windows 11.",
+    "date": "2026-04-20",
+    "readTime": "11 min",
+    "category": "Procedimentos Técnicos"
+  },
+  {
+    "slug": "como-resolver-tela-azul-windows",
+    "title": "Como Resolver Tela Azul do Windows (BSOD): Diagnóstico e Solução",
+    "excerpt": "Análise de códigos de erro, dump de memória, drivers problemáticos e procedimento profissional de correção.",
+    "date": "2026-04-20",
+    "readTime": "10 min",
+    "category": "Procedimentos Técnicos"
+  },
+  {
+    "slug": "como-instalar-impressora-windows-passo-a-passo",
+    "title": "Instalar impressora no Windows: por que ela some da rede e como deixar a instalação estável",
+    "excerpt": "O que muda entre instalar por cabo e instalar em rede, por que a impressora desaparece depois de reiniciar o roteador e como fixar o endereço para a instalação parar de se perder.",
+    "date": "2026-08-12",
+    "readTime": "11 min",
+    "category": "Redes"
   },
   {
     "slug": "como-remover-virus-windows-iniciantes",
@@ -251,6 +219,38 @@ const rows: Array<EditorialHubSummary & { slug: string }> = [
     "date": "2026-08-12",
     "readTime": "11 min",
     "category": "Procedimentos Técnicos"
+  },
+  {
+    "slug": "como-melhorar-sinal-wifi-em-casa",
+    "title": "Wi-Fi caindo ou com sinal fraco: como diagnosticar",
+    "excerpt": "Wi-Fi que cai, fica lento ou não chega em alguns cômodos? Veja como separar problema da rede local e falha da operadora.",
+    "date": "2026-04-29",
+    "readTime": "9 min",
+    "category": "Tutoriais Domésticos"
+  },
+  {
+    "slug": "como-configurar-roteador-wifi-iniciantes",
+    "title": "Como configurar um roteador Wi-Fi do zero, sem complicação",
+    "excerpt": "Ordem correta das etapas, o que mudar na primeira configuração e os ajustes que evitam a maior parte dos problemas de sinal depois.",
+    "date": "2026-04-22",
+    "readTime": "11 min",
+    "category": "Redes e Wi-Fi"
+  },
+  {
+    "slug": "como-saber-quem-esta-usando-meu-wifi",
+    "title": "Como saber quem está usando o seu Wi-Fi (e o que fazer)",
+    "excerpt": "Como listar os dispositivos conectados, identificar cada um pelo nome e pelo endereço físico e retomar o controle da rede sem quebrar o que funciona.",
+    "date": "2026-04-22",
+    "readTime": "10 min",
+    "category": "Redes e Wi-Fi"
+  },
+  {
+    "slug": "como-conectar-wifi-tv-nao-conecta",
+    "title": "Smart TV não conecta no Wi-Fi: como separar problema de rede de defeito da TV",
+    "excerpt": "Como descobrir se a Smart TV não conecta por causa da rede, da faixa de 5 GHz, do isolamento do roteador ou de falha no módulo Wi-Fi do aparelho — e o que fazer em cada caso.",
+    "date": "2026-08-12",
+    "readTime": "11 min",
+    "category": "Redes"
   },
   {
     "slug": "como-formatar-pc-sem-perder-arquivos",
@@ -503,7 +503,7 @@ const rows: Array<EditorialHubSummary & { slug: string }> = [
   {
     "slug": "ordem-de-boot-na-bios-como-configurar",
     "title": "Ordem de boot na BIOS: como configurar sem quebrar a inicialização",
-    "excerpt": "Para que serve a prioridade de inicialização, quando usar o menu temporário em vez de alterar a configuração e o que anotar antes de mexer.",
+    "excerpt": "Para que serve a prioridade de inicialização, quando usar o menu de boot temporário e por que Fast Boot e portas USB atrapalham o reconhecimento do pendrive.",
     "date": "2026-08-31",
     "readTime": "8 min",
     "category": "Diagnóstico"
@@ -511,7 +511,7 @@ const rows: Array<EditorialHubSummary & { slug: string }> = [
   {
     "slug": "windows-reparo-automatico-em-loop",
     "title": "Reparo automático em laço: o que fazer quando o Windows não sai dessa tela",
-    "excerpt": "Por que o Windows entra em reparo automático repetido, o que tentar em ordem e quando o problema deixa de ser software e passa a ser disco.",
+    "excerpt": "Por que o Windows entra em reparo automático repetido, o que observar antes de tentar qualquer comando e em que ponto a prioridade passa a ser salvar os arquivos.",
     "date": "2026-08-31",
     "readTime": "10 min",
     "category": "Diagnóstico"
@@ -557,6 +557,14 @@ const rows: Array<EditorialHubSummary & { slug: string }> = [
     "category": "Diagnóstico"
   },
   {
+    "slug": "historico-de-arquivos-windows-como-configurar",
+    "title": "Histórico de Arquivos do Windows: como configurar versões de verdade",
+    "excerpt": "O recurso nativo que guarda versões anteriores dos seus arquivos: o que ele cobre, o que ele não cobre e como configurá-lo sem confundir versionamento com backup completo.",
+    "date": "2026-09-03",
+    "readTime": "11 min",
+    "category": "Procedimentos Técnicos"
+  },
+  {
     "slug": "monitor-sem-sinal-o-que-verificar",
     "title": "Monitor sem sinal: o que verificar antes de trocar de peça",
     "excerpt": "\"Sem sinal\" na tela não quer dizer monitor queimado. A sequência para separar cabo, entrada errada, saída de vídeo e computador que nem chegou a iniciar.",
@@ -581,12 +589,28 @@ const rows: Array<EditorialHubSummary & { slug: string }> = [
     "category": "Procedimentos Técnicos"
   },
   {
-    "slug": "historico-de-arquivos-windows-como-configurar",
-    "title": "Histórico de Arquivos do Windows: como configurar versões de verdade",
-    "excerpt": "O recurso nativo que guarda versões anteriores dos seus arquivos: o que ele cobre, o que ele não cobre e como configurá-lo sem confundir versionamento com backup completo.",
+    "slug": "teclado-de-notebook-nao-funciona-o-que-verificar",
+    "title": "Teclado de notebook não funciona: o que verificar antes de trocar",
+    "excerpt": "Teclas mortas, teclado inteiro parado ou caracteres trocados são problemas diferentes. Como separar sujeira, configuração, cabo flat e dano por líquido antes de comprar peça.",
+    "date": "2026-09-03",
+    "readTime": "10 min",
+    "category": "Diagnóstico"
+  },
+  {
+    "slug": "computador-desliga-sozinho-o-que-verificar",
+    "title": "Computador desliga sozinho: o que verificar antes de trocar peça",
+    "excerpt": "Desligamento repentino tem causas bem distintas: temperatura, fonte, energia elétrica e memória. Como identificar qual delas é a sua sem sair trocando componentes.",
     "date": "2026-09-03",
     "readTime": "11 min",
-    "category": "Procedimentos Técnicos"
+    "category": "Diagnóstico"
+  },
+  {
+    "slug": "computador-nao-conecta-na-internet-por-cabo",
+    "title": "Computador não conecta na internet por cabo: o que verificar",
+    "excerpt": "Cabo ligado e nada de internet. Como separar cabo rompido, porta do roteador, placa de rede e falha do provedor — com testes na ordem certa.",
+    "date": "2026-09-03",
+    "readTime": "10 min",
+    "category": "Redes"
   }
 ];
 

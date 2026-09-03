@@ -1132,6 +1132,52 @@ const WAVE_11E: EditorialApproval[] = [
   },
 ];
 
+// ── Onda 11F — teclado de notebook, desligamento repentino e rede cabeada.
+const WAVE_11F: EditorialApproval[] = [
+  {
+    slug: "teclado-de-notebook-nao-funciona-o-que-verificar",
+    status: "approved",
+    authorType: "organization",
+    authorId: INSTITUTIONAL_AUTHOR.id,
+    reviewedAt: "2026-09-03",
+    approvedAt: "2026-09-03",
+    imageOrigin: "licensed",
+    imageLicense: "CC BY-SA 4.0",
+    imageAttribution:
+      "Foto: Gugalcrom123 (Wikimedia Commons), CC BY-SA 4.0 — https://commons.wikimedia.org/wiki/File:HP_laptop_keyboard.jpg",
+    notes:
+      "Diagnóstico de teclado interno escrito do zero na Onda 11F: separa teclado inteiro parado, teclas mortas, layout errado e dano por líquido, com teste do teclado externo como divisor. Não repete o roteiro de notebook que não liga nem o de USB não reconhecido. Capa é fotografia real licenciada, sem IA.",
+  },
+  {
+    slug: "computador-desliga-sozinho-o-que-verificar",
+    status: "approved",
+    authorType: "organization",
+    authorId: INSTITUTIONAL_AUTHOR.id,
+    reviewedAt: "2026-09-03",
+    approvedAt: "2026-09-03",
+    imageOrigin: "licensed",
+    imageLicense: "CC BY 2.0",
+    imageAttribution:
+      "Foto: Giulia Ciappa (Wikimedia Commons), CC BY 2.0 — https://commons.wikimedia.org/wiki/File:Dust_in_a_the_computer_power_supply.jpg",
+    notes:
+      "Diagnóstico de desligamento repentino escrito do zero na Onda 11F: usa o padrão temporal para separar proteção térmica, fonte, rede elétrica e memória. Tela azul e superaquecimento de notebook continuam nas URLs próprias. Capa é fotografia real licenciada, sem IA.",
+  },
+  {
+    slug: "computador-nao-conecta-na-internet-por-cabo",
+    status: "approved",
+    authorType: "organization",
+    authorId: INSTITUTIONAL_AUTHOR.id,
+    reviewedAt: "2026-09-03",
+    approvedAt: "2026-09-03",
+    imageOrigin: "licensed",
+    imageLicense: "CC BY-SA 4.0",
+    imageAttribution:
+      "Foto: Pittigrilli / Zinnmann (Wikimedia Commons), CC BY-SA 4.0 — https://commons.wikimedia.org/wiki/File:RJ-45_Ethernet_socket_on_Lenovo_T410_Laptop.jpg",
+    notes:
+      "Diagnóstico de conexão cabeada escrito do zero na Onda 11F: separa ausência de enlace físico de ausência de navegação, com teste cruzado de cabo, porta e equipamento. Não canibaliza os artigos de Wi-Fi nem o de internet lenta. Capa é fotografia real licenciada, sem IA.",
+  },
+];
+
 export const APPROVED_EDITORIAL_CONTENT = new Map<string, EditorialApproval>([
 
   ...FIRST_WAVE_SLUGS.map((slug) => [
@@ -1185,7 +1231,8 @@ export const APPROVED_EDITORIAL_CONTENT = new Map<string, EditorialApproval>([
   ...WAVE_11A.map((a) => [a.slug, a] as [string, EditorialApproval]),
   ...WAVE_11C.map((a) => [a.slug, a] as [string, EditorialApproval]),
   ...WAVE_11D.map((a) => [a.slug, a] as [string, EditorialApproval]),
-  ...WAVE_11E.map((a) => [a.slug, a] as [string, EditorialApproval]),
+  ...WAVE_11E.map((a) => [a.slug, a] as [string, EditorialApproval]),  ...WAVE_11F.map((a) => [a.slug, a] as [string, EditorialApproval]),
+
 ]);
 
 

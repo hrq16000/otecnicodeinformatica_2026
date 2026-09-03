@@ -602,6 +602,75 @@ export const CONTENT_INTENT_MAP: ContentNode[] = [
     justificativa:
       "Evento pontual de troca de máquina, com inventário e conferência. Rotina contínua de cópia e reinstalação do sistema seguem em URLs próprias.",
   },
+  {
+    url: "/blog/teclado-de-notebook-nao-funciona-o-que-verificar",
+    intent: "diagnostic",
+    topic: "teclado interno de notebook que parou de responder",
+    queries: [
+      "teclado do notebook nao funciona",
+      "teclas do notebook nao respondem",
+      "teclado do notebook digitando letra errada",
+    ],
+    serviceParent: "/servicos/manutencao-de-computador",
+    bridgesTo: [
+      "/blog/dispositivo-usb-nao-reconhecido-o-que-fazer",
+      "/blog/como-limpar-notebook-por-dentro",
+      "/diagnostico-tecnico",
+    ],
+    doNotDuplicate: [
+      "/blog/notebook-nao-liga-o-que-fazer",
+      "/blog/dispositivo-usb-nao-reconhecido-o-que-fazer",
+    ],
+    novaNestaRodada: true,
+    justificativa:
+      "Periférico integrado com testes próprios (teclado externo como divisor, layout, cabo flat, líquido). Não repete o roteiro de máquina que não liga nem o de USB não reconhecido.",
+  },
+  {
+    url: "/blog/computador-desliga-sozinho-o-que-verificar",
+    intent: "diagnostic",
+    topic: "desligamento repentino do computador durante o uso",
+    queries: [
+      "computador desliga sozinho",
+      "pc desliga do nada",
+      "computador desliga sozinho quando esquenta",
+    ],
+    serviceParent: "/servicos/manutencao-de-computador",
+    bridgesTo: [
+      "/blog/como-testar-fonte-de-alimentacao-pc",
+      "/blog/como-monitorar-temperatura-do-computador",
+      "/decisoes/backup-antes-da-manutencao",
+    ],
+    doNotDuplicate: [
+      "/blog/notebook-superaquecendo-o-que-fazer",
+      "/blog/notebook-nao-liga-o-que-fazer",
+    ],
+    novaNestaRodada: true,
+    justificativa:
+      "Corte de energia com máquina funcionando é sintoma distinto de superaquecimento de notebook e de máquina que não liga; o eixo aqui é o padrão temporal do desligamento.",
+  },
+  {
+    url: "/blog/computador-nao-conecta-na-internet-por-cabo",
+    intent: "diagnostic",
+    topic: "ausência de conexão em rede cabeada Ethernet",
+    queries: [
+      "cabo de rede conectado sem internet",
+      "computador nao conecta na internet por cabo",
+      "cabo de rede desconectado windows",
+    ],
+    serviceParent: "/servicos/redes-e-wifi",
+    bridgesTo: [
+      "/blog/internet-lenta-provedor-ou-roteador",
+      "/servicos/redes-e-wifi",
+      "/diagnostico-tecnico",
+    ],
+    doNotDuplicate: [
+      "/blog/internet-lenta-provedor-ou-roteador",
+      "/blog/como-melhorar-sinal-wifi-em-casa",
+    ],
+    novaNestaRodada: true,
+    justificativa:
+      "Rede cabeada tem cadeia física própria (cabo, porta, placa, enlace). Velocidade de conexão e cobertura Wi-Fi continuam em URLs distintas.",
+  },
 ];
 
 /** Nó do mapa por URL canônica (sem barra final). */
