@@ -995,6 +995,51 @@ const WAVE_11A: EditorialApproval[] = [
   },
 ];
 
+const WAVE_11C: EditorialApproval[] = [
+  {
+    slug: "manutencao-preventiva-de-computador-guia-completo",
+    status: "approved",
+    authorType: "organization",
+    authorId: INSTITUTIONAL_AUTHOR.id,
+    reviewedAt: "2026-09-03",
+    approvedAt: "2026-09-03",
+    imageOrigin: "licensed",
+    imageLicense: "CC BY-SA 3.0",
+    imageAttribution:
+      "Foto: McZusatz (Wikimedia Commons), CC BY-SA 3.0 — https://commons.wikimedia.org/wiki/File:Dusty_computer_cooling_fan.JPG",
+    notes:
+      "Pilar do cluster de manutenção preventiva, escrito do zero na Onda 11C; calendário próprio por frequência e pontes para limpeza, pasta térmica e teste de backup; capa é fotografia real licenciada, sem IA.",
+  },
+  {
+    slug: "dispositivo-usb-nao-reconhecido-o-que-fazer",
+    status: "approved",
+    authorType: "organization",
+    authorId: INSTITUTIONAL_AUTHOR.id,
+    reviewedAt: "2026-09-03",
+    approvedAt: "2026-09-03",
+    imageOrigin: "licensed",
+    imageLicense: "CC BY-SA 3.0",
+    imageAttribution:
+      "Foto: Zephyris (Wikimedia Commons), CC BY-SA 3.0 — https://commons.wikimedia.org/wiki/File:Male_and_Female_USB_Connectors.jpg",
+    notes:
+      "Guia de diagnóstico de periférico USB, escrito do zero na Onda 11C; isola porta, cabo, alimentação e driver sem canibalizar o roteiro específico de webcam; capa é fotografia real licenciada, sem IA.",
+  },
+  {
+    slug: "como-testar-restauracao-de-backup",
+    status: "approved",
+    authorType: "organization",
+    authorId: INSTITUTIONAL_AUTHOR.id,
+    reviewedAt: "2026-09-03",
+    approvedAt: "2026-09-03",
+    imageOrigin: "licensed",
+    imageLicense: "CC BY-SA 4.0",
+    imageAttribution:
+      "Foto: Santeri Viinamäki (Wikimedia Commons), CC BY-SA 4.0 — https://commons.wikimedia.org/wiki/File:DVD,_USB_flash_drive_and_external_hard_drive.jpg",
+    notes:
+      "Pilar do cluster de dados e backup, escrito do zero na Onda 11C; foca no teste de restauração, tema não coberto pelos artigos existentes de backup; capa é fotografia real licenciada, sem IA.",
+  },
+];
+
 export const APPROVED_EDITORIAL_CONTENT = new Map<string, EditorialApproval>([
 
   ...FIRST_WAVE_SLUGS.map((slug) => [
@@ -1042,9 +1087,11 @@ export const APPROVED_EDITORIAL_CONTENT = new Map<string, EditorialApproval>([
   ...WAVE_10D.map((a) => [a.slug, a] as [string, EditorialApproval]),
   ...WAVE_10E.map((a) => [a.slug, a] as [string, EditorialApproval]),
 
+
   ...WAVE_10F.map((a) => [a.slug, a] as [string, EditorialApproval]),
   ...WAVE_10G.map((a) => [a.slug, a] as [string, EditorialApproval]),
   ...WAVE_11A.map((a) => [a.slug, a] as [string, EditorialApproval]),
+  ...WAVE_11C.map((a) => [a.slug, a] as [string, EditorialApproval]),
 ]);
 
 

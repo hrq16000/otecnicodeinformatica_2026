@@ -244,6 +244,19 @@ const CURADORIA = [
     slug: "windows-reparo-automatico-em-loop",
     commons: "File:Windows Recovery Environment.png",
   },
+  // ── Onda 11C — guias técnicos profundos (manutenção, periféricos e backup).
+  {
+    slug: "manutencao-preventiva-de-computador-guia-completo",
+    commons: "File:Dusty computer cooling fan.JPG",
+  },
+  {
+    slug: "dispositivo-usb-nao-reconhecido-o-que-fazer",
+    commons: "File:Male and Female USB Connectors.jpg",
+  },
+  {
+    slug: "como-testar-restauracao-de-backup",
+    commons: "File:DVD, USB flash drive and external hard drive.jpg",
+  },
 ];
 
 /** Metadados + URL de uma imagem do Wikimedia Commons (licença real, sem IA). */

@@ -1,7 +1,7 @@
 # Autoridade SEO — densidade semântica, keywords e links internos
 
-Gerado em: 2026-09-03T15:10:18.098Z
-URLs analisadas: 63/63 · órfãs: 6
+Gerado em: 2026-09-03T15:53:56.386Z
+URLs analisadas: 66/66 · órfãs: 7
 
 | URL | Palavras | Dens. semântica | Keyword principal | Dens. KW | Links saída | Links entrada |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -17,22 +17,22 @@ URLs analisadas: 63/63 · órfãs: 6
 | /blog/como-trocar-tela-notebook-passo-a-passo | 1574 | 62.71% | como trocar tela notebook passo a passo | 0.6% | 7 | 0 |
 | /blog/notebook-nao-liga-o-que-fazer | 1545 | 53.73% | notebook nao liga o que fazer | 0.33% | 14 | 3 |
 | /blog/computador-lento-causas-solucoes | 1887 | 50.79% | computador lento causas solucoes | 0% | 17 | 9 |
-| /blog/como-recuperar-dados-hd-com-defeito | 1451 | 62.24% | como recuperar dados hd com defeito | 0.12% | 10 | 6 |
+| /blog/como-recuperar-dados-hd-com-defeito | 1451 | 62.24% | como recuperar dados hd com defeito | 0.12% | 10 | 7 |
 | /blog/como-fazer-upgrade-ssd-nvme | 1580 | 62.59% | como fazer upgrade ssd nvme | 0.12% | 10 | 4 |
 | /blog/como-configurar-roteador-wifi-iniciantes | 1984 | 53.83% | como configurar roteador wifi iniciantes | 0% | 9 | 3 |
 | /blog/como-saber-quem-esta-usando-meu-wifi | 1961 | 51.89% | como saber quem esta usando meu wifi | 0% | 9 | 1 |
 | /blog/como-escolher-um-bom-antivirus | 1618 | 65.19% | como escolher um bom antivirus | 0.11% | 11 | 1 |
 | /blog/como-proteger-computador-golpes-internet | 1435 | 64.04% | como proteger computador golpes internet | 0.24% | 10 | 2 |
-| /blog/como-limpar-notebook-por-dentro | 1718 | 62.1% | como limpar notebook por dentro | 0% | 12 | 2 |
-| /blog/como-trocar-pasta-termica-notebook | 1595 | 61.25% | como trocar pasta termica notebook | 0.22% | 11 | 1 |
+| /blog/como-limpar-notebook-por-dentro | 1718 | 62.1% | como limpar notebook por dentro | 0% | 12 | 3 |
+| /blog/como-trocar-pasta-termica-notebook | 1595 | 61.25% | como trocar pasta termica notebook | 0.22% | 11 | 2 |
 | /blog/como-clonar-hd-para-ssd | 1350 | 60.18% | como clonar hd para ssd | 0.91% | 12 | 5 |
 | /blog/como-instalar-segundo-ssd-notebook | 1389 | 62.09% | como instalar segundo ssd notebook | 0.26% | 11 | 2 |
-| /blog/ransomware-como-proteger-empresa | 1352 | 65.28% | ransomware como proteger empresa | 0% | 12 | 2 |
-| /blog/backup-nuvem-empresas-qual-escolher | 1889 | 56.15% | backup nuvem empresas qual escolher | 0.09% | 11 | 0 |
+| /blog/ransomware-como-proteger-empresa | 1352 | 65.28% | ransomware como proteger empresa | 0% | 12 | 3 |
+| /blog/backup-nuvem-empresas-qual-escolher | 1889 | 56.15% | backup nuvem empresas qual escolher | 0.09% | 11 | 1 |
 | /blog/como-instalar-impressora-windows-passo-a-passo | 1489 | 55.7% | como instalar impressora windows passo a passo | 0.12% | 10 | 2 |
 | /blog/como-conectar-wifi-tv-nao-conecta | 1600 | 56.32% | como conectar wifi tv nao conecta | 0% | 12 | 0 |
-| /blog/como-testar-fonte-de-alimentacao-pc | 1481 | 58.45% | como testar fonte de alimentacao pc | 0% | 11 | 4 |
-| /blog/como-diagnosticar-placa-mae-defeituosa | 1343 | 61.05% | como diagnosticar placa mae defeituosa | 0% | 11 | 4 |
+| /blog/como-testar-fonte-de-alimentacao-pc | 1481 | 58.45% | como testar fonte de alimentacao pc | 0% | 11 | 5 |
+| /blog/como-diagnosticar-placa-mae-defeituosa | 1343 | 61.05% | como diagnosticar placa mae defeituosa | 0% | 11 | 5 |
 | /blog/windows-11-lento-como-resolver | 1454 | 58.69% | windows 11 lento como resolver | 0.12% | 12 | 1 |
 | /blog/como-remover-virus-windows-iniciantes | 1316 | 66.27% | como remover virus windows iniciantes | 0% | 11 | 2 |
 | /blog/como-formatar-pc-sem-perder-arquivos | 1398 | 58.79% | como formatar pc sem perder arquivos | 0.63% | 13 | 3 |
@@ -43,7 +43,7 @@ URLs analisadas: 63/63 · órfãs: 6
 | /blog/computador-entra-direto-na-bios | 2520 | 47.18% | computador entra direto na bios | 0.42% | 18 | 4 |
 | /blog/erro-no-bootable-device-como-resolver | 1773 | 47.85% | erro no bootable device como resolver | 0.48% | 13 | 4 |
 | /blog/troquei-o-ssd-e-o-pc-so-abre-a-bios | 1644 | 53.17% | troquei o ssd e o pc so abre a bios | 0.21% | 15 | 3 |
-| /blog/limpar-arquivos-temporarios-windows | 1297 | 60% | limpar arquivos temporarios windows | 0.67% | 12 | 1 |
+| /blog/limpar-arquivos-temporarios-windows | 1297 | 60% | limpar arquivos temporarios windows | 0.67% | 12 | 2 |
 | /blog/memoria-ram-insuficiente-sintomas | 1172 | 62.95% | memoria ram insuficiente sintomas | 0.57% | 10 | 3 |
 | /blog/codigos-de-erro-tela-azul-windows | 1229 | 62.26% | codigos de erro tela azul windows | 0.56% | 11 | 3 |
 | /blog/testar-memoria-ram-memtest86 | 1124 | 62.38% | testar memoria ram memtest86 | 0.46% | 11 | 5 |
@@ -55,17 +55,20 @@ URLs analisadas: 63/63 · órfãs: 6
 | /blog/fila-de-impressao-travada-spooler-windows | 1030 | 54.75% | fila de impressao travada spooler windows | 0.48% | 11 | 1 |
 | /blog/hd-nao-e-reconhecido-na-bios-o-que-fazer | 1350 | 54.63% | hd nao e reconhecido na bios o que fazer | 0.13% | 14 | 3 |
 | /blog/ssd-nvme-nao-aparece-no-gerenciador-de-discos | 1065 | 60.73% | ssd nvme nao aparece no gerenciador de discos | 0% | 11 | 1 |
-| /blog/disco-com-setores-defeituosos-smart-o-que-fazer | 1247 | 56.32% | disco com setores defeituosos smart o que fazer | 0.4% | 11 | 1 |
+| /blog/disco-com-setores-defeituosos-smart-o-que-fazer | 1247 | 56.32% | disco com setores defeituosos smart o que fazer | 0.4% | 11 | 2 |
 | /blog/computador-sem-som-o-que-verificar | 1048 | 56.89% | computador sem som o que verificar | 0.16% | 11 | 2 |
 | /blog/fone-de-ouvido-nao-e-reconhecido-no-pc | 978 | 56.15% | fone de ouvido nao e reconhecido no pc | 0.35% | 9 | 1 |
 | /blog/servico-de-audio-do-windows-nao-esta-em-execucao | 964 | 56.69% | servico de audio do windows nao esta em execucao | 1.41% | 10 | 1 |
 | /blog/webcam-nao-funciona-o-que-verificar | 1514 | 47.87% | webcam nao funciona o que verificar | 0.34% | 11 | 1 |
-| /blog/permissoes-de-camera-no-windows | 1295 | 51.09% | permissoes de camera no windows | 1.09% | 9 | 2 |
-| /blog/webcam-usb-nao-e-detectada | 1109 | 53.74% | webcam usb nao e detectada | 0.47% | 9 | 1 |
+| /blog/permissoes-de-camera-no-windows | 1295 | 51.09% | permissoes de camera no windows | 1.09% | 9 | 3 |
+| /blog/webcam-usb-nao-e-detectada | 1109 | 53.74% | webcam usb nao e detectada | 0.47% | 9 | 2 |
 | /blog/windows-update-nao-funciona-o-que-verificar | 1625 | 50.68% | windows update nao funciona o que verificar | 0.21% | 12 | 2 |
 | /blog/limpar-cache-do-windows-update-softwaredistribution | 1220 | 55.49% | limpar cache do windows update softwaredistribution | 0.14% | 9 | 1 |
 | /blog/windows-update-travado-desfazendo-alteracoes | 1368 | 54.68% | windows update travado desfazendo alteracoes | 0.12% | 11 | 2 |
 | /blog/boot-uefi-ou-legacy-como-identificar | 1043 | 54.97% | boot uefi ou legacy como identificar | 1.01% | 12 | 1 |
 | /blog/ordem-de-boot-na-bios-como-configurar | 956 | 61.39% | ordem de boot na bios como configurar | 0.36% | 11 | 0 |
 | /blog/windows-reparo-automatico-em-loop | 986 | 62.18% | windows reparo automatico em loop | 0% | 12 | 1 |
+| /blog/manutencao-preventiva-de-computador-guia-completo | 1355 | 60.52% | manutencao preventiva de computador guia completo | 0.26% | 14 | 0 |
+| /blog/dispositivo-usb-nao-reconhecido-o-que-fazer | 1121 | 57.37% | dispositivo usb nao reconhecido o que fazer | 0.47% | 9 | 0 |
+| /blog/como-testar-restauracao-de-backup | 1098 | 60.23% | como testar restauracao de backup | 0.65% | 10 | 1 |
 

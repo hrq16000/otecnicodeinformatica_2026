@@ -13960,4 +13960,219 @@ bcdboot C:\\Windows /s S: /f UEFI`}</code></pre>
     ),
   },
 
+  "manutencao-preventiva-de-computador-guia-completo": {
+    title: "Manutenção preventiva de computador: o guia completo",
+    excerpt:
+      "O que realmente precisa ser verificado, com que frequência e em que ordem — do calor e da poeira ao estado do armazenamento — sem trocar peça por precaução.",
+    date: "2026-09-03",
+    readTime: "12 min",
+    category: "Manutenção",
+    content: (
+      <>
+        <p className="lead">Manutenção preventiva não é abrir a máquina de tempos em tempos e passar ar comprimido. É uma rotina curta de verificações que revela desgaste antes de ele virar parada — e que, na maior parte dos casos, é feita sem abrir nada.</p>
+
+        <h2>Resposta curta</h2>
+        <p>Uma rotina preventiva útil tem quatro frentes: temperatura e fluxo de ar, estado do armazenamento, espaço livre e atualizações, e cópia de segurança testada. Verificação mensal leva poucos minutos e é feita por software; a limpeza física interna é anual na maioria dos ambientes domésticos e mais frequente em local com poeira, obra, pelos de animais ou fumaça.</p>
+
+        <h2>Por que preventiva compensa</h2>
+        <p>Quase toda falha cara começa com um sinal barato. Disco que apresenta setores realocados avisa semanas antes de parar. Notebook que passa a acelerar a ventoinha em tarefas simples avisa que a dissipação piorou. Sistema sem espaço livre avisa que a próxima atualização vai falhar. O que transforma esses avisos em prejuízo é a ausência de alguém olhando.</p>
+        <p>O outro lado também é verdadeiro: manutenção em excesso cria problema. Abrir equipamento sem necessidade, trocar pasta térmica todo semestre ou reinstalar o sistema "para limpar" são intervenções que introduzem risco sem eliminar causa alguma.</p>
+
+        <h2>Calendário de verificação</h2>
+        <table>
+          <thead>
+            <tr><th>Frequência</th><th>O que verificar</th><th>Por quê</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Mensal</td><td>Espaço livre em disco, atualizações pendentes, programas que iniciam junto com o sistema</td><td>Falta de espaço e atualização acumulada são causa comum de travamento e de erro em atualização</td></tr>
+            <tr><td>Trimestral</td><td>Temperatura em uso normal, ruído das ventoinhas, poeira visível nas grades</td><td>A perda de dissipação é gradual e aparece antes como ruído e lentidão sob carga</td></tr>
+            <tr><td>Semestral</td><td>Estado de saúde do armazenamento (SMART), integridade da cópia de segurança</td><td>Disco em degradação e backup nunca testado são as duas maiores causas de perda de dados</td></tr>
+            <tr><td>Anual</td><td>Limpeza física interna, revisão de cabos e de alimentação, avaliação de idade do equipamento</td><td>Poeira acumulada e fonte no limite reduzem estabilidade antes de causar desligamento</td></tr>
+          </tbody>
+        </table>
+
+        <h2>1. Temperatura e fluxo de ar</h2>
+        <p>A referência não é um número universal — cada plataforma tem seu limite. O que interessa é o comportamento: se a máquina que rodava planilha em silêncio passou a acelerar as ventoinhas na mesma tarefa, algo mudou. Em notebook, a saída de ar quente pela lateral costuma ser o primeiro indicador, junto com a base mais quente do que o habitual.</p>
+        <p>Antes de pensar em pasta térmica, verifique o óbvio: grades obstruídas, uso sobre cama ou sofá, base sem espaço de entrada de ar e acúmulo visível de poeira. Só depois disso a discussão passa para o conjunto de dissipação. A limpeza interna está descrita em <Link to="/blog/como-limpar-notebook-por-dentro" className="text-accent">como limpar o notebook por dentro</Link>, e a troca de composto térmico em <Link to="/blog/como-trocar-pasta-termica-notebook" className="text-accent">como trocar a pasta térmica</Link>.</p>
+
+        <h2>2. Estado do armazenamento</h2>
+        <p>Esta é a verificação mais importante da lista, porque é a única em que a falha destrói dados em vez de causar inconveniência. Discos modernos mantêm um registro interno de saúde com contadores de setores realocados, tentativas de leitura repetidas e horas de uso. Contadores subindo ao longo dos meses indicam desgaste, mesmo com o sistema funcionando normalmente.</p>
+        <p>Em disco mecânico, o sinal mais grave não é digital: é sonoro. Ruído cíclico, clique repetido ou giro que para e recomeça pedem desligamento imediato. O detalhamento está em <Link to="/blog/disco-com-setores-defeituosos-smart-o-que-fazer" className="text-accent">setores defeituosos e leitura do SMART</Link>.</p>
+
+        <h2>3. Espaço livre, atualizações e inicialização</h2>
+        <p>Disco de sistema muito cheio degrada o desempenho e impede atualização. Como regra prática de trabalho, manter folga confortável na partição do sistema evita a maior parte dos erros de atualização e de arquivo temporário. A limpeza segura de temporários está em <Link to="/blog/limpar-arquivos-temporarios-windows" className="text-accent">limpar arquivos temporários no Windows</Link>.</p>
+        <p>Revise também o que inicia junto com o sistema. Programas de fabricante, atualizadores e utilitários redundantes competem por disco e memória exatamente no momento em que a máquina precisa responder. Se a lentidão persiste depois disso, o caminho de investigação é <Link to="/problemas/computador-lento" className="text-accent">computador lento</Link>.</p>
+
+        <h2>4. Cópia de segurança — e a prova de que ela funciona</h2>
+        <p>Prevenção sem backup é aposta. E backup sem teste de restauração é suposição: o arquivo pode estar corrompido, a mídia pode ter falhado em silêncio, a rotina pode ter parado meses atrás. O procedimento de conferência está em <Link to="/blog/como-testar-restauracao-de-backup" className="text-accent">como testar a restauração do backup</Link>.</p>
+        <p>Se a dúvida for onde guardar a cópia, o critério está em <Link to="/decisoes/nuvem-ou-hd-externo" className="text-accent">nuvem ou HD externo</Link>.</p>
+
+        <h2>Ambientes que exigem ciclo mais curto</h2>
+        <ul>
+          <li><strong>Poeira e obra:</strong> filtros e grades saturam em semanas, não em meses.</li>
+          <li><strong>Animais em casa:</strong> pelos formam manta sobre o dissipador e bloqueiam o fluxo de ar.</li>
+          <li><strong>Cozinha e fumaça:</strong> gordura em suspensão adere à poeira e forma crosta difícil de remover a seco.</li>
+          <li><strong>Uso contínuo:</strong> máquina ligada 24 horas envelhece armazenamento e fonte mais rápido do que uso comercial de oito horas.</li>
+          <li><strong>Escritório sem responsável de TI:</strong> a rotina precisa estar no calendário de alguém. O modelo aplicado a empresas está em <Link to="/servicos/manutencao-preventiva-empresas" className="text-accent">manutenção preventiva para empresas</Link>.</li>
+        </ul>
+
+        <h2>O que NÃO fazer</h2>
+        <ul>
+          <li>Usar compressor de ar de oficina: a pressão e a umidade danificam ventoinhas e componentes.</li>
+          <li>Girar a ventoinha com jato de ar sem travá-la — o giro forçado pode gerar corrente reversa no motor.</li>
+          <li>Trocar pasta térmica por rotina, sem sintoma e sem medição.</li>
+          <li>Instalar "otimizadores" e limpadores de registro que prometem acelerar o sistema.</li>
+          <li>Reinstalar o sistema como manutenção preventiva.</li>
+          <li>Adiar a substituição de um disco que já apresenta contadores de erro subindo.</li>
+        </ul>
+
+        <h2>Quando parar</h2>
+        <p>Pare a intervenção e priorize os dados quando o disco fizer ruído incomum, quando o equipamento desligar sozinho sob carga, quando houver cheiro de queimado ou quando a máquina não voltar a ligar depois de uma limpeza. Nesses casos, insistir custa mais caro do que parar: o encaminhamento é <Link to="/servicos/recuperacao-de-dados" className="text-accent">recuperação de dados</Link> ou avaliação presencial. A ordem correta entre backup e manutenção está em <Link to="/decisoes/backup-antes-da-manutencao" className="text-accent">backup antes da manutenção</Link>.</p>
+
+        <h2>Quando chamar um técnico</h2>
+        <p>Chame quando a temperatura continuar alta depois da limpeza externa, quando o equipamento estiver em garantia (abrir pode encerrá-la), quando houver desligamento sob carga, quando o armazenamento indicar desgaste ou quando o parque de máquinas for de uso profissional e a parada tiver custo. A avaliação inicial está em <Link to="/diagnostico-tecnico" className="text-accent">diagnóstico técnico</Link> e a execução em <Link to="/servicos/manutencao-de-computador" className="text-accent">manutenção de computador</Link>.</p>
+      </>
+    ),
+  },
+
+  "dispositivo-usb-nao-reconhecido-o-que-fazer": {
+    title: "Dispositivo USB não reconhecido: como descobrir a causa",
+    excerpt:
+      "Como separar defeito do aparelho, da porta, do cabo, da alimentação e do driver — em uma sequência de testes que não exige abrir o computador.",
+    date: "2026-09-03",
+    readTime: "11 min",
+    category: "Diagnóstico",
+    content: (
+      <>
+        <p className="lead">"Dispositivo USB não reconhecido" é uma mensagem genérica: ela diz que a comunicação falhou, não onde. A causa pode estar no aparelho, no cabo, na porta, na alimentação ou no driver — e cada uma dessas hipóteses tem um teste próprio, rápido e não destrutivo.</p>
+
+        <h2>Resposta curta</h2>
+        <p>Teste em ordem: outra porta (de preferência traseira, no desktop), outro cabo, o mesmo dispositivo em outro computador e outro dispositivo na mesma porta. Esses quatro testes isolam, na maioria dos casos, se o problema é do aparelho, do meio de conexão ou da máquina — antes de qualquer alteração de driver.</p>
+
+        <h2>O que a mensagem realmente significa</h2>
+        <p>Quando um dispositivo é conectado, ele se apresenta ao sistema informando tipo, fabricante e necessidade de energia. Se essa apresentação falhar ou vier incompleta, o sistema registra o dispositivo como desconhecido. Falha de apresentação acontece por defeito no controlador do próprio aparelho, por queda de tensão, por cabo com condutor rompido ou por conector com contato ruim.</p>
+        <p>É por isso que trocar driver costuma não resolver: quando a apresentação nem acontece, não existe driver a aplicar.</p>
+
+        <h2>Sequência de testes</h2>
+        <table>
+          <thead>
+            <tr><th>Teste</th><th>Se funcionar</th><th>Se falhar</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Outra porta do mesmo computador</td><td>Porta original com defeito ou desativada</td><td>Segue a investigação</td></tr>
+            <tr><td>Outro cabo (mesmo dispositivo)</td><td>Cabo rompido ou apenas de carga, sem dados</td><td>Segue a investigação</td></tr>
+            <tr><td>Mesmo dispositivo em outro computador</td><td>Problema é do computador (driver, energia ou porta)</td><td>Problema é do dispositivo</td></tr>
+            <tr><td>Outro dispositivo na porta original</td><td>Porta funciona; suspeita recai no aparelho</td><td>Porta ou controlador com falha</td></tr>
+            <tr><td>Conexão direta, sem hub</td><td>Hub sem alimentação própria não sustenta o consumo</td><td>Segue a investigação</td></tr>
+          </tbody>
+        </table>
+
+        <h2>Cabo: a causa mais subestimada</h2>
+        <p>Boa parte dos cabos que acompanham aparelhos pequenos é de carga apenas: transmite energia e não dados. Outra parte tem os condutores de dados rompidos por dobra próxima ao conector, sem sinal externo visível. Se o dispositivo carrega mas não aparece, o cabo é o primeiro suspeito — não o sistema.</p>
+
+        <h2>Alimentação: quando falta energia, não falta driver</h2>
+        <p>Disco externo, gravadora, hub com vários aparelhos e alguns equipamentos de áudio consomem mais do que uma única porta entrega com folga. O sintoma típico é aparecer e desaparecer, funcionar por alguns segundos ou emitir ruído de reconexão repetido. Testes válidos: conectar em porta traseira do desktop, usar cabo em Y quando o fabricante prevê, ou usar hub com fonte própria.</p>
+        <p>Se o comportamento se repete em qualquer porta e com vários dispositivos, a suspeita passa para a alimentação da própria máquina — assunto de <Link to="/blog/como-testar-fonte-de-alimentacao-pc" className="text-accent">como testar a fonte de alimentação</Link>.</p>
+
+        <h2>Porta e controlador</h2>
+        <p>Portas frontais de gabinete são as que mais falham: dependem de um cabo interno até a placa, sofrem esforço mecânico e às vezes estão apenas soltas. Em notebook, a porta sofre com o peso do pendrive e com puxões no cabo, o que solta a solda com o tempo. Sinal característico: o dispositivo só funciona se você segurar o conector em determinada posição.</p>
+        <p>Quando nenhuma porta responde e o problema aparece também nas configurações do sistema, a suspeita sobe para o controlador da placa. Esse cenário se aproxima de <Link to="/blog/como-diagnosticar-placa-mae-defeituosa" className="text-accent">diagnóstico de placa-mãe</Link>.</p>
+
+        <h2>Verificações no Windows, sem risco</h2>
+        <ul>
+          <li>Conferir se o dispositivo aparece na lista de hardware com aviso de erro — se aparece, houve apresentação e a hipótese de driver volta a ser válida.</li>
+          <li>Desligar a suspensão automática das portas no plano de energia, especialmente em notebook.</li>
+          <li>Desligar o computador da tomada por alguns minutos: isso descarrega os controladores e resolve casos de porta "travada".</li>
+          <li>Testar com o equipamento em outra tomada, sem filtro de linha compartilhado, quando houver ruído elétrico.</li>
+          <li>Casos específicos de câmera dependem de permissão, e não de hardware — veja <Link to="/blog/permissoes-de-camera-no-windows" className="text-accent">permissões de câmera no Windows</Link>.</li>
+        </ul>
+        <p>Se o aparelho envolvido for uma webcam, o roteiro dedicado está em <Link to="/blog/webcam-usb-nao-e-detectada" className="text-accent">webcam USB não é detectada</Link>.</p>
+
+        <h2>O que NÃO fazer</h2>
+        <ul>
+          <li>Desinstalar em série todos os controladores USB da lista de hardware sem saber restaurá-los — o teclado e o mouse podem parar de responder.</li>
+          <li>Instalar "atualizadores de driver" de terceiros.</li>
+          <li>Forçar o conector em ângulo para "fazer contato".</li>
+          <li>Formatar um pendrive que contém arquivos importantes só porque o sistema sugeriu formatação.</li>
+          <li>Concluir defeito do aparelho sem ter testado outro cabo.</li>
+        </ul>
+
+        <h2>Quando parar</h2>
+        <p>Pare se o dispositivo for um disco externo com arquivos sem cópia e ele passar a ser reconhecido de forma intermitente, emitir ruído ou pedir formatação. Cada nova tentativa de montagem reduz a chance de resgate — o caminho é <Link to="/servicos/recuperacao-de-dados" className="text-accent">recuperação de dados</Link>, não insistência.</p>
+
+        <h2>Quando chamar um técnico</h2>
+        <p>Chame quando nenhuma porta responder, quando o conector estiver mecanicamente solto, quando houver histórico de queda ou líquido, ou quando o dispositivo for essencial para o trabalho e os testes acima não isolarem a causa. A avaliação inicial está em <Link to="/diagnostico-tecnico" className="text-accent">diagnóstico técnico</Link>; o reparo de porta e a revisão do equipamento, em <Link to="/servicos/manutencao-de-computador" className="text-accent">manutenção de computador</Link>.</p>
+      </>
+    ),
+  },
+
+  "como-testar-restauracao-de-backup": {
+    title: "Como testar se o backup realmente funciona",
+    excerpt:
+      "Cópia nunca restaurada é suposição. O roteiro de teste de restauração, o que registrar e os erros que só aparecem no dia em que o arquivo faz falta.",
+    date: "2026-09-03",
+    readTime: "11 min",
+    category: "Procedimentos Técnicos",
+    content: (
+      <>
+        <p className="lead">A pergunta que decide se você tem backup não é "está fazendo cópia?", e sim "quando foi a última vez que você restaurou um arquivo a partir dela?". Rotina que nunca foi testada é uma promessa — e promessas falham exatamente no pior dia.</p>
+
+        <h2>Resposta curta</h2>
+        <p>Teste de restauração é escolher um arquivo real, restaurá-lo em um local separado do original, abrir o arquivo e conferir o conteúdo. Faça isso pelo menos uma vez por trimestre para arquivos pessoais e uma vez por mês em ambiente de trabalho, registrando a data e o que foi restaurado.</p>
+
+        <h2>Por que cópias falham em silêncio</h2>
+        <ul>
+          <li><strong>A rotina parou.</strong> Serviço desativado, senha alterada, assinatura vencida ou disco desconectado — e ninguém foi avisado.</li>
+          <li><strong>A pasta certa nunca entrou.</strong> É comum a rotina cobrir "Documentos" e ignorar a área de trabalho, a pasta do sistema de gestão ou os arquivos de e-mail.</li>
+          <li><strong>A mídia falhou.</strong> HD externo guardado por anos tem falha própria; pendrive não é mídia de backup.</li>
+          <li><strong>A cópia foi contaminada.</strong> Em sincronização automática, arquivo criptografado por ransomware ou apagado por engano se propaga para a nuvem.</li>
+          <li><strong>O arquivo está lá, mas corrompido.</strong> Só a abertura real revela isso.</li>
+        </ul>
+        <p>É por esse último ponto que sincronização em nuvem não substitui backup: sincronizar é espelhar o estado atual, inclusive o estado ruim. Backup é ter versões anteriores recuperáveis.</p>
+
+        <h2>Roteiro de teste de restauração</h2>
+        <table>
+          <thead>
+            <tr><th>Passo</th><th>O que fazer</th><th>O que confirma</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>1</td><td>Escolher um arquivo real e recente, de preferência grande e de formato que você use todo dia</td><td>Que a rotina cobriu o que interessa</td></tr>
+            <tr><td>2</td><td>Restaurar em uma pasta nova, nunca por cima do original</td><td>Que a restauração não destrói o dado bom</td></tr>
+            <tr><td>3</td><td>Abrir o arquivo no programa correspondente</td><td>Integridade real, não apenas presença</td></tr>
+            <tr><td>4</td><td>Conferir a data da versão restaurada</td><td>Que a rotina está rodando agora, não parou meses atrás</td></tr>
+            <tr><td>5</td><td>Testar também uma versão antiga do mesmo arquivo</td><td>Que existe histórico, e não só o estado atual espelhado</td></tr>
+            <tr><td>6</td><td>Registrar data, arquivo e resultado</td><td>Que o teste aconteceu — e quando</td></tr>
+          </tbody>
+        </table>
+
+        <h2>O que registrar</h2>
+        <p>Um registro simples resolve: data do teste, qual arquivo, de qual destino de cópia veio, se abriu corretamente e quanto tempo levou. O tempo importa: restaurar uma pasta pequena é diferente de restaurar tudo. Descobrir no dia da falha que a restauração completa levaria dias muda qualquer plano.</p>
+        <p>Em empresa, esse registro é o que sustenta a conversa sobre continuidade: quanto tempo a operação suporta ficar parada e quanto trabalho pode ser perdido entre uma cópia e outra. O desdobramento empresarial está em <Link to="/blog/backup-nuvem-empresas-qual-escolher" className="text-accent">backup em nuvem para empresas</Link> e em <Link to="/servicos/backup-para-empresas" className="text-accent">backup para empresas</Link>.</p>
+
+        <h2>Três cópias, dois tipos de mídia, uma fora do local</h2>
+        <p>A prática mais difundida é manter três cópias dos dados importantes, em dois tipos diferentes de mídia, com uma delas fora do ambiente físico principal. O motivo é simples: incêndio, furto, surto elétrico e ransomware atingem tudo o que está no mesmo lugar e conectado ao mesmo computador. A escolha entre nuvem e disco externo está detalhada em <Link to="/decisoes/nuvem-ou-hd-externo" className="text-accent">nuvem ou HD externo</Link>.</p>
+        <p>Uma cópia desconectada da rede — disco que só é ligado no momento da cópia — é a defesa mais eficaz contra criptografia maliciosa, porque o que não está acessível não é criptografado. O contexto de ataque está em <Link to="/blog/ransomware-como-proteger-empresa" className="text-accent">ransomware em empresas</Link>.</p>
+
+        <h2>Antes de qualquer manutenção</h2>
+        <p>Formatação, troca de disco, upgrade e reinstalação são momentos em que a cópia deixa de ser precaução e vira pré-requisito. O critério de decisão está em <Link to="/decisoes/backup-antes-da-manutencao" className="text-accent">backup antes da manutenção</Link>. Se o disco já apresenta sinais de falha, a cópia comum pode não ser possível — nesse cenário, o caminho é <Link to="/blog/como-recuperar-dados-hd-com-defeito" className="text-accent">recuperação de dados em HD com defeito</Link>.</p>
+
+        <h2>O que NÃO fazer</h2>
+        <ul>
+          <li>Restaurar por cima do arquivo original: se a cópia estiver corrompida, você perde os dois.</li>
+          <li>Confiar em pendrive como mídia única de backup.</li>
+          <li>Deixar o disco de backup permanentemente conectado quando o risco principal é ransomware.</li>
+          <li>Considerar "sincronizado" como sinônimo de "copiado".</li>
+          <li>Testar sempre o mesmo arquivo minúsculo — o teste precisa representar o uso real.</li>
+          <li>Guardar a única cópia no mesmo cômodo do computador.</li>
+        </ul>
+
+        <h2>Quando parar</h2>
+        <p>Pare se o teste falhar em disco que já emite ruído, se o sistema pedir formatação da mídia de backup ou se a restauração começar a apresentar erros de leitura. Continuar tentando em mídia em falha reduz a chance de resgate — a prioridade passa a ser <Link to="/servicos/recuperacao-de-dados" className="text-accent">recuperação de dados</Link>.</p>
+
+        <h2>Quando chamar um técnico</h2>
+        <p>Chame quando a rotina não puder ser interrompida para teste, quando houver dados críticos de operação envolvidos, quando a restauração completa nunca tiver sido cronometrada ou quando o teste revelar cobertura incompleta e for necessário redesenhar o esquema de cópias. A avaliação está em <Link to="/diagnostico-tecnico" className="text-accent">diagnóstico técnico</Link>.</p>
+      </>
+    ),
+  },
+
 };

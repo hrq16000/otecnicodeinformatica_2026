@@ -522,12 +522,52 @@ const WAVE_11A_BATCH_4: EditorialWaveEntry[] = [
   },
 ];
 
+export const WAVE_11C_BATCH_1: EditorialWaveEntry[] = [
+  {
+    wave: "11A",
+    batch: "5",
+    url: "/blog/manutencao-preventiva-de-computador-guia-completo",
+    slug: "manutencao-preventiva-de-computador-guia-completo",
+    ownerId: "manutencao-preventiva-de-computador-guia-completo",
+    cluster: "manutencao-preventiva",
+    role: "pilar",
+    publishedAt: "2026-09-03",
+    targetQueries: ["manutencao preventiva de computador", "com que frequencia fazer manutencao no pc", "checklist manutencao computador"],
+    doNotDuplicate: ["/servicos/manutencao-de-computador", "/blog/como-limpar-notebook-por-dentro"],
+  },
+  {
+    wave: "11A",
+    batch: "5",
+    url: "/blog/dispositivo-usb-nao-reconhecido-o-que-fazer",
+    slug: "dispositivo-usb-nao-reconhecido-o-que-fazer",
+    ownerId: "dispositivo-usb-nao-reconhecido-o-que-fazer",
+    cluster: "perifericos-usb",
+    role: "pilar",
+    publishedAt: "2026-09-03",
+    targetQueries: ["dispositivo usb nao reconhecido", "pendrive nao aparece no pc", "porta usb nao funciona"],
+    doNotDuplicate: ["/blog/webcam-usb-nao-e-detectada"],
+  },
+  {
+    wave: "11A",
+    batch: "5",
+    url: "/blog/como-testar-restauracao-de-backup",
+    slug: "como-testar-restauracao-de-backup",
+    ownerId: "como-testar-restauracao-de-backup",
+    cluster: "dados-backup",
+    role: "pilar",
+    publishedAt: "2026-09-03",
+    targetQueries: ["como testar backup", "restaurar backup teste", "backup nao funcionou"],
+    doNotDuplicate: ["/blog/backup-nuvem-empresas-qual-escolher", "/decisoes/nuvem-ou-hd-externo"],
+  },
+];
+
 export const EDITORIAL_WAVES: EditorialWaveEntry[] = [
   ...WAVE_10C_BATCH_0,
   ...WAVE_10D_BATCH_1,
   ...WAVE_10C_BATCH_3,
   ...WAVE_10C_BATCH_4,
   ...WAVE_11A_BATCH_4,
+  ...WAVE_11C_BATCH_1,
 ];
 
 /** URLs monitoradas (ordem estável, sem duplicatas). */

@@ -413,6 +413,24 @@ export const EDITORIAL_COVERS: Record<string, EditorialCover> = {
     width: 1200,
     height: 630,
   },
+  "manutencao-preventiva-de-computador-guia-completo": {
+    src: "/blog/manutencao-preventiva-de-computador-guia-completo.jpg",
+    alt: "Ventoinha de computador coberta por camada espessa de poeira",
+    width: 1200,
+    height: 630,
+  },
+  "dispositivo-usb-nao-reconhecido-o-que-fazer": {
+    src: "/blog/dispositivo-usb-nao-reconhecido-o-que-fazer.jpg",
+    alt: "Conectores USB macho e fêmea vistos de perto",
+    width: 1200,
+    height: 630,
+  },
+  "como-testar-restauracao-de-backup": {
+    src: "/blog/como-testar-restauracao-de-backup.jpg",
+    alt: "DVD, pendrive e HD externo lado a lado sobre uma superfície clara",
+    width: 1200,
+    height: 630,
+  },
 };
 
 export function getEditorialCover(slug: string): EditorialCover | undefined {

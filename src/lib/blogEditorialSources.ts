@@ -874,6 +874,36 @@ export const ARTICLE_SOURCE_MANIFEST: Record<string, ArticleSourceManifest> = {
     notes:
       "Revisão concluída (Onda 11A, Lote 4): árvore de decisão do laço de reparo automático, prioridade de backup antes de qualquer reparo destrutivo, uso de bootrec/bcdedit com ressalvas e critério para suspeitar de disco em falha física. Sem marca comercial e sem promessa. Conhecimento técnico estável — sem fonte visível.",
   },
+  "manutencao-preventiva-de-computador-guia-completo": {
+    slug: "manutencao-preventiva-de-computador-guia-completo",
+    sources: [],
+    technicalReview: "reviewed",
+    factChecked: true,
+    factCheckedAt: "2026-09-03",
+    stableKnowledge: true,
+    notes:
+      "Revisão concluída (Onda 11C): calendário de verificação por frequência, prioridade ao armazenamento e ao teste de restauração, proibição de troca de pasta térmica por rotina e ressalva sobre garantia ao abrir o equipamento. Sem marca comercial, sem promessa de prazo. Conhecimento técnico estável — sem fonte visível.",
+  },
+  "dispositivo-usb-nao-reconhecido-o-que-fazer": {
+    slug: "dispositivo-usb-nao-reconhecido-o-que-fazer",
+    sources: [],
+    technicalReview: "reviewed",
+    factChecked: true,
+    factCheckedAt: "2026-09-03",
+    stableKnowledge: true,
+    notes:
+      "Revisão concluída (Onda 11C): sequência de isolamento porta/cabo/dispositivo/alimentação, explicação da enumeração USB, alerta contra desinstalar controladores em série e parada obrigatória em disco externo com dados sem cópia. Conhecimento técnico estável — sem fonte visível.",
+  },
+  "como-testar-restauracao-de-backup": {
+    slug: "como-testar-restauracao-de-backup",
+    sources: [],
+    technicalReview: "reviewed",
+    factChecked: true,
+    factCheckedAt: "2026-09-03",
+    stableKnowledge: true,
+    notes:
+      "Revisão concluída (Onda 11C): roteiro de restauração em local separado, distinção entre sincronização e backup versionado, prática de três cópias em dois tipos de mídia com uma fora do local e registro do tempo de restauração. Sem citar produto ou fornecedor. Conhecimento técnico estável — sem fonte visível.",
+  },
 };
 
 

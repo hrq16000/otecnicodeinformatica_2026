@@ -151,6 +151,8 @@ cobramos execução que não tenha sido aprovada.
 - [UEFI ou Legacy: como identificar o modo de inicialização do seu PC](https://otecnicodeinformatica.com.br/blog/boot-uefi-ou-legacy-como-identificar)
 - [Ordem de boot na BIOS: como configurar sem quebrar a inicialização](https://otecnicodeinformatica.com.br/blog/ordem-de-boot-na-bios-como-configurar)
 - [Reparo automático em laço: o que fazer quando o Windows não sai dessa tela](https://otecnicodeinformatica.com.br/blog/windows-reparo-automatico-em-loop)
+- [Manutenção preventiva de computador: o guia completo](https://otecnicodeinformatica.com.br/blog/manutencao-preventiva-de-computador-guia-completo)
+- [Dispositivo USB não reconhecido: como descobrir a causa](https://otecnicodeinformatica.com.br/blog/dispositivo-usb-nao-reconhecido-o-que-fazer)
 
 ## Páginas institucionais e de política
 

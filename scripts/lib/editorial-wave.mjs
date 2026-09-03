@@ -609,6 +609,33 @@ export const EDITORIAL_WAVE = [
     apoioLabel: "UEFI ou Legacy: como identificar",
     cover: "/blog/windows-reparo-automatico-em-loop.jpg",
   },
+  {
+    slug: "manutencao-preventiva-de-computador-guia-completo",
+    approvedAt: "2026-09-03",
+    pilar: "/servicos/manutencao-de-computador",
+    pilarLabel: "Manutenção de computador",
+    apoio: "/blog/como-limpar-notebook-por-dentro",
+    apoioLabel: "Como limpar o notebook por dentro",
+    cover: "/blog/manutencao-preventiva-de-computador-guia-completo.jpg",
+  },
+  {
+    slug: "dispositivo-usb-nao-reconhecido-o-que-fazer",
+    approvedAt: "2026-09-03",
+    pilar: "/diagnostico-tecnico",
+    pilarLabel: "Diagnóstico técnico",
+    apoio: "/blog/webcam-usb-nao-e-detectada",
+    apoioLabel: "Webcam USB não é detectada",
+    cover: "/blog/dispositivo-usb-nao-reconhecido-o-que-fazer.jpg",
+  },
+  {
+    slug: "como-testar-restauracao-de-backup",
+    approvedAt: "2026-09-03",
+    pilar: "/servicos/backup-para-empresas",
+    pilarLabel: "Backup para empresas",
+    apoio: "/decisoes/nuvem-ou-hd-externo",
+    apoioLabel: "Nuvem ou HD externo",
+    cover: "/blog/como-testar-restauracao-de-backup.jpg",
+  },
 ];
 
 
