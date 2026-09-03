@@ -561,6 +561,45 @@ export const WAVE_11C_BATCH_1: EditorialWaveEntry[] = [
   },
 ];
 
+export const WAVE_11D_BATCH_1: EditorialWaveEntry[] = [
+  {
+    wave: "11A",
+    batch: "6",
+    url: "/blog/como-monitorar-temperatura-do-computador",
+    slug: "como-monitorar-temperatura-do-computador",
+    ownerId: "como-monitorar-temperatura-do-computador",
+    cluster: "manutencao-preventiva",
+    role: "satelite",
+    publishedAt: "2026-09-03",
+    targetQueries: ["como monitorar temperatura do pc", "temperatura normal do processador", "pc perde desempenho quando esquenta"],
+    doNotDuplicate: ["/blog/notebook-superaquecendo-o-que-fazer", "/blog/como-trocar-pasta-termica-notebook"],
+  },
+  {
+    wave: "11A",
+    batch: "6",
+    url: "/blog/pendrive-somente-leitura-protegido-contra-gravacao",
+    slug: "pendrive-somente-leitura-protegido-contra-gravacao",
+    ownerId: "pendrive-somente-leitura-protegido-contra-gravacao",
+    cluster: "perifericos-usb",
+    role: "satelite",
+    publishedAt: "2026-09-03",
+    targetQueries: ["pendrive protegido contra gravacao", "pendrive somente leitura", "cartao de memoria nao grava"],
+    doNotDuplicate: ["/blog/dispositivo-usb-nao-reconhecido-o-que-fazer"],
+  },
+  {
+    wave: "11A",
+    batch: "6",
+    url: "/blog/historico-de-arquivos-windows-como-configurar",
+    slug: "historico-de-arquivos-windows-como-configurar",
+    ownerId: "historico-de-arquivos-windows-como-configurar",
+    cluster: "dados-backup",
+    role: "satelite",
+    publishedAt: "2026-09-03",
+    targetQueries: ["historico de arquivos windows", "versoes anteriores de arquivo windows", "como configurar backup do windows"],
+    doNotDuplicate: ["/blog/como-testar-restauracao-de-backup", "/blog/backup-como-proteger-seus-arquivos"],
+  },
+];
+
 export const EDITORIAL_WAVES: EditorialWaveEntry[] = [
   ...WAVE_10C_BATCH_0,
   ...WAVE_10D_BATCH_1,
@@ -568,6 +607,7 @@ export const EDITORIAL_WAVES: EditorialWaveEntry[] = [
   ...WAVE_10C_BATCH_4,
   ...WAVE_11A_BATCH_4,
   ...WAVE_11C_BATCH_1,
+  ...WAVE_11D_BATCH_1,
 ];
 
 /** URLs monitoradas (ordem estável, sem duplicatas). */

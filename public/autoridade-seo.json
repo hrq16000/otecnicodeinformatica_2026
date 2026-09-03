@@ -1,18 +1,18 @@
 {
-  "geradoEm": "2026-09-03T15:53:56.386Z",
+  "geradoEm": "2026-09-03T16:35:40.340Z",
   "fonte": {
     "html": "SSR harness",
     "dist": "dist"
   },
-  "total": 66,
-  "analisadas": 66,
+  "total": 69,
+  "analisadas": 69,
   "falhas": 0,
   "medias": {
-    "palavras": 1516.71,
-    "densidadeSemantica": 56.62,
+    "palavras": 1494.94,
+    "densidadeSemantica": 56.88,
     "densidadeKeywordPrincipal": 0.42,
-    "linksInternosSaida": 11.83,
-    "linksInternosEntrada": 2.7
+    "linksInternosSaida": 11.78,
+    "linksInternosEntrada": 2.81
   },
   "orfas": [
     "/blog/como-trocar-tela-notebook-passo-a-passo",
@@ -20,8 +20,8 @@
     "/blog/botao-power-nao-funciona-jump-start-placa-mae",
     "/blog/internet-lenta-provedor-ou-roteador",
     "/blog/ordem-de-boot-na-bios-como-configurar",
-    "/blog/manutencao-preventiva-de-computador-guia-completo",
-    "/blog/dispositivo-usb-nao-reconhecido-o-que-fazer"
+    "/blog/como-monitorar-temperatura-do-computador",
+    "/blog/historico-de-arquivos-windows-como-configurar"
   ],
   "urls": [
     {
@@ -354,7 +354,7 @@
         "/blog/quando-trocar-hd-por-ssd",
         "/servicos/formatacao"
       ],
-      "linksInternosEntrada": 9,
+      "linksInternosEntrada": 10,
       "origensEntrada": [
         "/blog/quando-trocar-hd-por-ssd",
         "/blog/backup-como-proteger-seus-arquivos",
@@ -364,7 +364,8 @@
         "/blog/notebook-nao-liga-o-que-fazer",
         "/blog/computador-lento-causas-solucoes",
         "/blog/como-escolher-um-bom-antivirus",
-        "/blog/como-conectar-wifi-tv-nao-conecta"
+        "/blog/como-conectar-wifi-tv-nao-conecta",
+        "/blog/como-monitorar-temperatura-do-computador"
       ],
       "erro": null
     },
@@ -520,7 +521,7 @@
         "/blog/quando-trocar-hd-por-ssd",
         "/blog/como-saber-se-pc-tem-virus-malware"
       ],
-      "linksInternosEntrada": 12,
+      "linksInternosEntrada": 13,
       "origensEntrada": [
         "/blog/quando-trocar-hd-por-ssd",
         "/blog/como-saber-se-pc-tem-virus-malware",
@@ -533,7 +534,8 @@
         "/blog/como-conectar-wifi-tv-nao-conecta",
         "/blog/informatica-basica",
         "/blog/como-aprender-informatica",
-        "/blog/disco-com-setores-defeituosos-smart-o-que-fazer"
+        "/blog/disco-com-setores-defeituosos-smart-o-que-fazer",
+        "/blog/historico-de-arquivos-windows-como-configurar"
       ],
       "erro": null
     },
@@ -852,11 +854,12 @@
         "/blog/computador-lento-causas-solucoes",
         "/blog/quando-trocar-hd-por-ssd"
       ],
-      "linksInternosEntrada": 3,
+      "linksInternosEntrada": 4,
       "origensEntrada": [
         "/blog/notebook-nao-liga-o-que-fazer",
         "/blog/como-limpar-notebook-por-dentro",
-        "/blog/como-trocar-pasta-termica-notebook"
+        "/blog/como-trocar-pasta-termica-notebook",
+        "/blog/como-monitorar-temperatura-do-computador"
       ],
       "erro": null
     },
@@ -1969,7 +1972,7 @@
         "/entidades/computador-lento",
         "/blog/backup-como-proteger-seus-arquivos"
       ],
-      "linksInternosEntrada": 9,
+      "linksInternosEntrada": 10,
       "origensEntrada": [
         "/blog/quando-trocar-hd-por-ssd",
         "/blog/backup-como-proteger-seus-arquivos",
@@ -1979,7 +1982,8 @@
         "/blog/o-que-e-informatica",
         "/blog/informatica-basica",
         "/blog/limpar-arquivos-temporarios-windows",
-        "/blog/memoria-ram-insuficiente-sintomas"
+        "/blog/memoria-ram-insuficiente-sintomas",
+        "/blog/como-monitorar-temperatura-do-computador"
       ],
       "erro": null
     },
@@ -2132,7 +2136,7 @@
         "/ferramentas/verificador-de-backup",
         "/glossario/smart"
       ],
-      "linksInternosEntrada": 7,
+      "linksInternosEntrada": 8,
       "origensEntrada": [
         "/blog/como-clonar-hd-para-ssd",
         "/blog/computador-entra-direto-na-bios",
@@ -2140,7 +2144,8 @@
         "/blog/troquei-o-ssd-e-o-pc-so-abre-a-bios",
         "/blog/hd-nao-e-reconhecido-na-bios-o-que-fazer",
         "/blog/disco-com-setores-defeituosos-smart-o-que-fazer",
-        "/blog/como-testar-restauracao-de-backup"
+        "/blog/como-testar-restauracao-de-backup",
+        "/blog/pendrive-somente-leitura-protegido-contra-gravacao"
       ],
       "erro": null
     },
@@ -3075,11 +3080,12 @@
         "/decisoes/consertar-ou-substituir",
         "/glossario/thermal-throttling"
       ],
-      "linksInternosEntrada": 3,
+      "linksInternosEntrada": 4,
       "origensEntrada": [
         "/blog/como-trocar-pasta-termica-notebook",
         "/blog/windows-11-lento-como-resolver",
-        "/blog/manutencao-preventiva-de-computador-guia-completo"
+        "/blog/manutencao-preventiva-de-computador-guia-completo",
+        "/blog/como-monitorar-temperatura-do-computador"
       ],
       "erro": null
     },
@@ -3233,10 +3239,11 @@
         "/decisoes/consertar-ou-substituir",
         "/glossario/thermal-throttling"
       ],
-      "linksInternosEntrada": 2,
+      "linksInternosEntrada": 3,
       "origensEntrada": [
         "/blog/como-limpar-notebook-por-dentro",
-        "/blog/manutencao-preventiva-de-computador-guia-completo"
+        "/blog/manutencao-preventiva-de-computador-guia-completo",
+        "/blog/como-monitorar-temperatura-do-computador"
       ],
       "erro": null
     },
@@ -3709,11 +3716,12 @@
         "/entidades/backup",
         "/servicos/remocao-de-virus"
       ],
-      "linksInternosEntrada": 3,
+      "linksInternosEntrada": 4,
       "origensEntrada": [
         "/blog/backup-nuvem-empresas-qual-escolher",
         "/blog/como-remover-virus-windows-iniciantes",
-        "/blog/como-testar-restauracao-de-backup"
+        "/blog/como-testar-restauracao-de-backup",
+        "/blog/historico-de-arquivos-windows-como-configurar"
       ],
       "erro": null
     },
@@ -4970,11 +4978,12 @@
         "/problemas/windows-nao-inicia",
         "/ferramentas/checklist-antes-de-formatar"
       ],
-      "linksInternosEntrada": 3,
+      "linksInternosEntrada": 4,
       "origensEntrada": [
         "/blog/quanto-custa-formatar-um-computador",
         "/blog/como-aprender-informatica",
-        "/blog/erro-no-bootable-device-como-resolver"
+        "/blog/erro-no-bootable-device-como-resolver",
+        "/blog/historico-de-arquivos-windows-como-configurar"
       ],
       "erro": null
     },
@@ -6413,11 +6422,12 @@
         "/decisoes/ssd-ou-memoria-ram",
         "/entidades/computador-lento"
       ],
-      "linksInternosEntrada": 3,
+      "linksInternosEntrada": 4,
       "origensEntrada": [
         "/blog/como-resolver-tela-azul-windows",
         "/blog/computador-lento-causas-solucoes",
-        "/blog/testar-memoria-ram-memtest86"
+        "/blog/testar-memoria-ram-memtest86",
+        "/blog/como-monitorar-temperatura-do-computador"
       ],
       "erro": null
     },
@@ -8139,10 +8149,11 @@
         "/ferramentas/verificador-de-backup",
         "/glossario/smart"
       ],
-      "linksInternosEntrada": 2,
+      "linksInternosEntrada": 3,
       "origensEntrada": [
         "/blog/windows-reparo-automatico-em-loop",
-        "/blog/manutencao-preventiva-de-computador-guia-completo"
+        "/blog/manutencao-preventiva-de-computador-guia-completo",
+        "/blog/historico-de-arquivos-windows-como-configurar"
       ],
       "erro": null
     },
@@ -10169,8 +10180,10 @@
         "/diagnostico-tecnico",
         "/servicos/manutencao-de-computador"
       ],
-      "linksInternosEntrada": 0,
-      "origensEntrada": [],
+      "linksInternosEntrada": 1,
+      "origensEntrada": [
+        "/blog/como-monitorar-temperatura-do-computador"
+      ],
       "erro": null
     },
     {
@@ -10321,8 +10334,10 @@
         "/diagnostico-tecnico",
         "/servicos/manutencao-de-computador"
       ],
-      "linksInternosEntrada": 0,
-      "origensEntrada": [],
+      "linksInternosEntrada": 1,
+      "origensEntrada": [
+        "/blog/pendrive-somente-leitura-protegido-contra-gravacao"
+      ],
       "erro": null
     },
     {
@@ -10474,10 +10489,475 @@
         "/servicos/recuperacao-de-dados",
         "/diagnostico-tecnico"
       ],
+      "linksInternosEntrada": 3,
+      "origensEntrada": [
+        "/blog/manutencao-preventiva-de-computador-guia-completo",
+        "/blog/pendrive-somente-leitura-protegido-contra-gravacao",
+        "/blog/historico-de-arquivos-windows-como-configurar"
+      ],
+      "erro": null
+    },
+    {
+      "url": "/blog/como-monitorar-temperatura-do-computador",
+      "slug": "como-monitorar-temperatura-do-computador",
+      "lote": "11A/6",
+      "aprovadoEm": "2026-09-03",
+      "titulo": "Como monitorar a temperatura do computador (e quando ela é problema)",
+      "palavras": 1058,
+      "termosUteis": 587,
+      "densidadeSemantica": 64.91,
+      "vocabulario": 381,
+      "keywordPrincipal": {
+        "termo": "como monitorar temperatura do computador",
+        "ocorrencias": 2,
+        "densidade": 0.34
+      },
+      "topKeywords": [
+        {
+          "termo": "temperatura",
+          "ocorrencias": 12,
+          "densidade": 2.04
+        },
+        {
+          "termo": "computador",
+          "ocorrencias": 8,
+          "densidade": 1.36
+        },
+        {
+          "termo": "tecnico",
+          "ocorrencias": 8,
+          "densidade": 1.36
+        },
+        {
+          "termo": "calor",
+          "ocorrencias": 7,
+          "densidade": 1.19
+        },
+        {
+          "termo": "carga",
+          "ocorrencias": 7,
+          "densidade": 1.19
+        },
+        {
+          "termo": "medir",
+          "ocorrencias": 7,
+          "densidade": 1.19
+        },
+        {
+          "termo": "manutencao",
+          "ocorrencias": 6,
+          "densidade": 1.02
+        },
+        {
+          "termo": "ambiente",
+          "ocorrencias": 5,
+          "densidade": 0.85
+        },
+        {
+          "termo": "curitiba",
+          "ocorrencias": 5,
+          "densidade": 0.85
+        },
+        {
+          "termo": "equipamento",
+          "ocorrencias": 5,
+          "densidade": 0.85
+        },
+        {
+          "termo": "atendimento",
+          "ocorrencias": 4,
+          "densidade": 0.68
+        },
+        {
+          "termo": "causas",
+          "ocorrencias": 4,
+          "densidade": 0.68
+        }
+      ],
+      "topBigramas": [
+        {
+          "termo": "curitiba regiao",
+          "ocorrencias": 3,
+          "densidade": 0.51
+        },
+        {
+          "termo": "manutencao preventiva",
+          "ocorrencias": 3,
+          "densidade": 0.51
+        },
+        {
+          "termo": "pasta termica",
+          "ocorrencias": 3,
+          "densidade": 0.51
+        },
+        {
+          "termo": "armazenamento ssd",
+          "ocorrencias": 2,
+          "densidade": 0.34
+        },
+        {
+          "termo": "calor vira",
+          "ocorrencias": 2,
+          "densidade": 0.34
+        },
+        {
+          "termo": "causas comuns",
+          "ocorrencias": 2,
+          "densidade": 0.34
+        },
+        {
+          "termo": "chamar tecnico",
+          "ocorrencias": 2,
+          "densidade": 0.34
+        },
+        {
+          "termo": "computador problema",
+          "ocorrencias": 2,
+          "densidade": 0.34
+        }
+      ],
+      "headings": {
+        "h2": 11,
+        "h3": 0
+      },
+      "schemas": [
+        "Organization",
+        "WebSite",
+        "BreadcrumbList",
+        "BlogPosting",
+        "Article",
+        "TechArticle",
+        "LocalBusiness",
+        "ProfessionalService",
+        "ComputerRepairService",
+        "ItemList",
+        "FAQPage"
+      ],
+      "linksInternosSaida": 12,
+      "linksSaida": [
+        "/blog",
+        "/contato",
+        "/blog/computador-lento-causas-solucoes",
+        "/blog/memoria-ram-insuficiente-sintomas",
+        "/blog/como-limpar-notebook-por-dentro",
+        "/blog/como-trocar-pasta-termica-notebook",
+        "/blog/como-saber-se-pc-tem-virus-malware",
+        "/blog/notebook-superaquecendo-o-que-fazer",
+        "/blog/manutencao-preventiva-de-computador-guia-completo",
+        "/diagnostico-tecnico",
+        "/servicos/manutencao-de-computador",
+        "/decisoes/backup-antes-da-manutencao"
+      ],
+      "linksInternosEntrada": 0,
+      "origensEntrada": [],
+      "erro": null
+    },
+    {
+      "url": "/blog/pendrive-somente-leitura-protegido-contra-gravacao",
+      "slug": "pendrive-somente-leitura-protegido-contra-gravacao",
+      "lote": "11A/6",
+      "aprovadoEm": "2026-09-03",
+      "titulo": "Pendrive somente leitura: por que aparece &quot;protegido contra gravação&quot;",
+      "palavras": 986,
+      "termosUteis": 581,
+      "densidadeSemantica": 61.62,
+      "vocabulario": 358,
+      "keywordPrincipal": {
+        "termo": "pendrive somente leitura protegido contra gravacao",
+        "ocorrencias": 3,
+        "densidade": 0.52
+      },
+      "topKeywords": [
+        {
+          "termo": "midia",
+          "ocorrencias": 16,
+          "densidade": 2.75
+        },
+        {
+          "termo": "sistema",
+          "ocorrencias": 10,
+          "densidade": 1.72
+        },
+        {
+          "termo": "tecnico",
+          "ocorrencias": 9,
+          "densidade": 1.55
+        },
+        {
+          "termo": "leitura",
+          "ocorrencias": 8,
+          "densidade": 1.38
+        },
+        {
+          "termo": "somente",
+          "ocorrencias": 8,
+          "densidade": 1.38
+        },
+        {
+          "termo": "pendrive",
+          "ocorrencias": 7,
+          "densidade": 1.2
+        },
+        {
+          "termo": "computador",
+          "ocorrencias": 5,
+          "densidade": 0.86
+        },
+        {
+          "termo": "copia",
+          "ocorrencias": 5,
+          "densidade": 0.86
+        },
+        {
+          "termo": "curitiba",
+          "ocorrencias": 5,
+          "densidade": 0.86
+        },
+        {
+          "termo": "dispositivo",
+          "ocorrencias": 5,
+          "densidade": 0.86
+        },
+        {
+          "termo": "memoria",
+          "ocorrencias": 5,
+          "densidade": 0.86
+        },
+        {
+          "termo": "arquivo",
+          "ocorrencias": 4,
+          "densidade": 0.69
+        }
+      ],
+      "topBigramas": [
+        {
+          "termo": "somente leitura",
+          "ocorrencias": 6,
+          "densidade": 1.03
+        },
+        {
+          "termo": "trava fisica",
+          "ocorrencias": 4,
+          "densidade": 0.69
+        },
+        {
+          "termo": "contra gravacao",
+          "ocorrencias": 3,
+          "densidade": 0.52
+        },
+        {
+          "termo": "curitiba regiao",
+          "ocorrencias": 3,
+          "densidade": 0.52
+        },
+        {
+          "termo": "fim vida",
+          "ocorrencias": 3,
+          "densidade": 0.52
+        },
+        {
+          "termo": "quatro origens",
+          "ocorrencias": 3,
+          "densidade": 0.52
+        },
+        {
+          "termo": "aparece protegido",
+          "ocorrencias": 2,
+          "densidade": 0.34
+        },
+        {
+          "termo": "arquivo insubstituivel",
+          "ocorrencias": 2,
+          "densidade": 0.34
+        }
+      ],
+      "headings": {
+        "h2": 11,
+        "h3": 0
+      },
+      "schemas": [
+        "Organization",
+        "WebSite",
+        "BreadcrumbList",
+        "BlogPosting",
+        "Article",
+        "TechArticle",
+        "LocalBusiness",
+        "ProfessionalService",
+        "ComputerRepairService",
+        "ItemList",
+        "FAQPage"
+      ],
+      "linksInternosSaida": 8,
+      "linksSaida": [
+        "/blog",
+        "/contato",
+        "/blog/dispositivo-usb-nao-reconhecido-o-que-fazer",
+        "/blog/como-recuperar-dados-hd-com-defeito",
+        "/decisoes/nuvem-ou-hd-externo",
+        "/blog/como-testar-restauracao-de-backup",
+        "/diagnostico-tecnico",
+        "/servicos/recuperacao-de-dados"
+      ],
       "linksInternosEntrada": 1,
       "origensEntrada": [
-        "/blog/manutencao-preventiva-de-computador-guia-completo"
+        "/blog/historico-de-arquivos-windows-como-configurar"
       ],
+      "erro": null
+    },
+    {
+      "url": "/blog/historico-de-arquivos-windows-como-configurar",
+      "slug": "historico-de-arquivos-windows-como-configurar",
+      "lote": "11A/6",
+      "aprovadoEm": "2026-09-03",
+      "titulo": "Histórico de Arquivos do Windows: como configurar versões de verdade",
+      "palavras": 1004,
+      "termosUteis": 572,
+      "densidadeSemantica": 61.01,
+      "vocabulario": 349,
+      "keywordPrincipal": {
+        "termo": "historico de arquivos windows como configurar",
+        "ocorrencias": 2,
+        "densidade": 0.35
+      },
+      "topKeywords": [
+        {
+          "termo": "disco",
+          "ocorrencias": 17,
+          "densidade": 2.97
+        },
+        {
+          "termo": "versoes",
+          "ocorrencias": 12,
+          "densidade": 2.1
+        },
+        {
+          "termo": "cobre",
+          "ocorrencias": 9,
+          "densidade": 1.57
+        },
+        {
+          "termo": "pastas",
+          "ocorrencias": 8,
+          "densidade": 1.4
+        },
+        {
+          "termo": "tecnico",
+          "ocorrencias": 8,
+          "densidade": 1.4
+        },
+        {
+          "termo": "arquivos",
+          "ocorrencias": 7,
+          "densidade": 1.22
+        },
+        {
+          "termo": "copia",
+          "ocorrencias": 6,
+          "densidade": 1.05
+        },
+        {
+          "termo": "destino",
+          "ocorrencias": 6,
+          "densidade": 1.05
+        },
+        {
+          "termo": "sistema",
+          "ocorrencias": 6,
+          "densidade": 1.05
+        },
+        {
+          "termo": "backup",
+          "ocorrencias": 5,
+          "densidade": 0.87
+        },
+        {
+          "termo": "curitiba",
+          "ocorrencias": 5,
+          "densidade": 0.87
+        },
+        {
+          "termo": "espaco",
+          "ocorrencias": 5,
+          "densidade": 0.87
+        }
+      ],
+      "topBigramas": [
+        {
+          "termo": "arquivos windows",
+          "ocorrencias": 3,
+          "densidade": 0.53
+        },
+        {
+          "termo": "cobre cobre",
+          "ocorrencias": 3,
+          "densidade": 0.53
+        },
+        {
+          "termo": "curitiba regiao",
+          "ocorrencias": 3,
+          "densidade": 0.53
+        },
+        {
+          "termo": "disco versoes",
+          "ocorrencias": 3,
+          "densidade": 0.53
+        },
+        {
+          "termo": "historico arquivos",
+          "ocorrencias": 3,
+          "densidade": 0.53
+        },
+        {
+          "termo": "area trabalho",
+          "ocorrencias": 2,
+          "densidade": 0.35
+        },
+        {
+          "termo": "arquivos versoes",
+          "ocorrencias": 2,
+          "densidade": 0.35
+        },
+        {
+          "termo": "camada estrategia",
+          "ocorrencias": 2,
+          "densidade": 0.35
+        }
+      ],
+      "headings": {
+        "h2": 12,
+        "h3": 0
+      },
+      "schemas": [
+        "Organization",
+        "WebSite",
+        "BreadcrumbList",
+        "BlogPosting",
+        "Article",
+        "TechArticle",
+        "LocalBusiness",
+        "ProfessionalService",
+        "ComputerRepairService",
+        "ItemList",
+        "FAQPage"
+      ],
+      "linksInternosSaida": 12,
+      "linksSaida": [
+        "/blog",
+        "/contato",
+        "/blog/backup-como-proteger-seus-arquivos",
+        "/blog/como-testar-restauracao-de-backup",
+        "/blog/ransomware-como-proteger-empresa",
+        "/blog/disco-com-setores-defeituosos-smart-o-que-fazer",
+        "/blog/pendrive-somente-leitura-protegido-contra-gravacao",
+        "/decisoes/backup-antes-da-manutencao",
+        "/blog/como-formatar-pc-sem-perder-arquivos",
+        "/servicos/backup-para-empresas",
+        "/diagnostico-tecnico",
+        "/decisoes/nuvem-ou-hd-externo"
+      ],
+      "linksInternosEntrada": 0,
+      "origensEntrada": [],
       "erro": null
     }
   ]

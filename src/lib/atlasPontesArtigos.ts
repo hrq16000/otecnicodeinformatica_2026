@@ -54,6 +54,39 @@ export const ATLAS_PONTES_ARTIGOS: Record<string, AtlasPonteArtigo> = {
         "Onde guardar cada cópia, com o critério de risco de cada destino.",
     },
   },
+  "como-monitorar-temperatura-do-computador": {
+    temaId: "manutencao-preventiva",
+    porQue:
+      "Temperatura só significa alguma coisa quando é medida do mesmo jeito, em datas diferentes, com o ambiente anotado. A trilha de manutenção preventiva usa a tendência — e não o número isolado — para decidir quando intervir.",
+    proximoPasso: {
+      rotulo: "Backup antes da manutenção",
+      to: "/decisoes/backup-antes-da-manutencao",
+      contexto:
+        "O que copiar antes de abrir o equipamento para limpeza ou troca de peça.",
+    },
+  },
+  "pendrive-somente-leitura-protegido-contra-gravacao": {
+    temaId: "fundamentos",
+    porQue:
+      "Mídia flash envelhece por escrita e avisa entrando em somente leitura. A trilha de fundamentos explica por que a ordem correta é preservar o conteúdo primeiro e só depois tentar corrigir a estrutura.",
+    proximoPasso: {
+      rotulo: "Diagnóstico técnico",
+      to: "/diagnostico-tecnico",
+      contexto:
+        "Quando há arquivo insubstituível e a tentativa doméstica passa a ser risco.",
+    },
+  },
+  "historico-de-arquivos-windows-como-configurar": {
+    temaId: "dados-backup",
+    porQue:
+      "Versionar é diferente de espelhar: guardar o estado anterior é o que salva um documento sobrescrito. A trilha de dados e backup posiciona o versionamento como camada, não como estratégia completa.",
+    proximoPasso: {
+      rotulo: "Nuvem ou HD externo",
+      to: "/decisoes/nuvem-ou-hd-externo",
+      contexto:
+        "Onde manter a cópia fora do local, complementando as versões locais.",
+    },
+  },
   "computador-lento-causas-solucoes": {
     temaId: "hardware-upgrades",
     porQue:

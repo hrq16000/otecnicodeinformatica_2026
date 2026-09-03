@@ -539,6 +539,30 @@ const rows: Array<EditorialHubSummary & { slug: string }> = [
     "date": "2026-09-03",
     "readTime": "11 min",
     "category": "Procedimentos Técnicos"
+  },
+  {
+    "slug": "como-monitorar-temperatura-do-computador",
+    "title": "Como monitorar a temperatura do computador (e quando ela é problema)",
+    "excerpt": "Quais temperaturas medir, o que é normal sob carga, como reconhecer throttling e em que ponto o calor deixa de ser característica e vira defeito.",
+    "date": "2026-09-03",
+    "readTime": "11 min",
+    "category": "Manutenção"
+  },
+  {
+    "slug": "pendrive-somente-leitura-protegido-contra-gravacao",
+    "title": "Pendrive somente leitura: por que aparece \"protegido contra gravação\"",
+    "excerpt": "Como separar trava física, política do sistema, sistema de arquivos danificado e memória em fim de vida — e por que copiar os arquivos vem antes de qualquer tentativa de conserto.",
+    "date": "2026-09-03",
+    "readTime": "10 min",
+    "category": "Diagnóstico"
+  },
+  {
+    "slug": "historico-de-arquivos-windows-como-configurar",
+    "title": "Histórico de Arquivos do Windows: como configurar versões de verdade",
+    "excerpt": "O recurso nativo que guarda versões anteriores dos seus arquivos: o que ele cobre, o que ele não cobre e como configurá-lo sem confundir versionamento com backup completo.",
+    "date": "2026-09-03",
+    "readTime": "11 min",
+    "category": "Procedimentos Técnicos"
   }
 ];
 

@@ -464,6 +464,74 @@ export const CONTENT_INTENT_MAP: ContentNode[] = [
     justificativa:
       "Tema não coberto: a escolha de destino já existe em outra URL; aqui o objeto é a prova de que a cópia restaura.",
   },
+  // ── Onda 11D — térmica, mídia removível e versionamento de arquivos.
+  {
+    url: "/blog/como-monitorar-temperatura-do-computador",
+    intent: "diagnostic",
+    topic: "medição e interpretação de temperatura por componente",
+    queries: [
+      "como monitorar temperatura do pc",
+      "temperatura normal do processador",
+      "pc fica lento quando esquenta",
+    ],
+    serviceParent: "/servicos/manutencao-de-computador",
+    problemParent: "/problemas/computador-lento",
+    bridgesTo: [
+      "/blog/manutencao-preventiva-de-computador-guia-completo",
+      "/blog/notebook-superaquecendo-o-que-fazer",
+      "/diagnostico-tecnico",
+    ],
+    doNotDuplicate: [
+      "/blog/notebook-superaquecendo-o-que-fazer",
+      "/blog/como-trocar-pasta-termica-notebook",
+    ],
+    novaNestaRodada: true,
+    justificativa:
+      "Objeto é o método de medição e a leitura da tendência térmica. O sintoma de superaquecimento e os procedimentos manuais permanecem nas URLs próprias.",
+  },
+  {
+    url: "/blog/pendrive-somente-leitura-protegido-contra-gravacao",
+    intent: "diagnostic",
+    topic: "mídia removível em estado somente leitura",
+    queries: [
+      "pendrive protegido contra gravacao",
+      "pendrive somente leitura",
+      "cartao de memoria nao deixa gravar",
+    ],
+    serviceParent: "/servicos/recuperacao-de-dados",
+    bridgesTo: [
+      "/blog/dispositivo-usb-nao-reconhecido-o-que-fazer",
+      "/blog/como-testar-restauracao-de-backup",
+      "/diagnostico-tecnico",
+    ],
+    doNotDuplicate: ["/blog/dispositivo-usb-nao-reconhecido-o-que-fazer"],
+    novaNestaRodada: true,
+    justificativa:
+      "Caso específico em que a mídia é reconhecida mas recusa escrita. O guia geral trata do dispositivo que nem aparece e não é repetido aqui.",
+  },
+  {
+    url: "/blog/historico-de-arquivos-windows-como-configurar",
+    intent: "informational",
+    topic: "configuração de versionamento nativo de arquivos",
+    queries: [
+      "historico de arquivos windows",
+      "versoes anteriores de arquivo windows",
+      "como configurar backup no windows",
+    ],
+    serviceParent: "/servicos/backup-para-empresas",
+    bridgesTo: [
+      "/blog/como-testar-restauracao-de-backup",
+      "/decisoes/backup-antes-da-manutencao",
+      "/servicos/backup-para-empresas",
+    ],
+    doNotDuplicate: [
+      "/blog/como-testar-restauracao-de-backup",
+      "/blog/backup-como-proteger-seus-arquivos",
+    ],
+    novaNestaRodada: true,
+    justificativa:
+      "Objeto é a configuração do recurso nativo de versões. A prova de restauração e a estratégia geral de cópias continuam em URLs próprias.",
+  },
 ];
 
 /** Nó do mapa por URL canônica (sem barra final). */

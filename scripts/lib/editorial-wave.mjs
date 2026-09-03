@@ -636,6 +636,34 @@ export const EDITORIAL_WAVE = [
     apoioLabel: "Nuvem ou HD externo",
     cover: "/blog/como-testar-restauracao-de-backup.jpg",
   },
+  // ── Onda 11D — térmica, mídia removível e versionamento de arquivos.
+  {
+    slug: "como-monitorar-temperatura-do-computador",
+    approvedAt: "2026-09-03",
+    pilar: "/servicos/manutencao-de-computador",
+    pilarLabel: "Manutenção de computador",
+    apoio: "/blog/notebook-superaquecendo-o-que-fazer",
+    apoioLabel: "Notebook superaquecendo",
+    cover: "/blog/como-monitorar-temperatura-do-computador.jpg",
+  },
+  {
+    slug: "pendrive-somente-leitura-protegido-contra-gravacao",
+    approvedAt: "2026-09-03",
+    pilar: "/diagnostico-tecnico",
+    pilarLabel: "Diagnóstico técnico",
+    apoio: "/blog/dispositivo-usb-nao-reconhecido-o-que-fazer",
+    apoioLabel: "Dispositivo USB não reconhecido",
+    cover: "/blog/pendrive-somente-leitura-protegido-contra-gravacao.jpg",
+  },
+  {
+    slug: "historico-de-arquivos-windows-como-configurar",
+    approvedAt: "2026-09-03",
+    pilar: "/servicos/backup-para-empresas",
+    pilarLabel: "Backup para empresas",
+    apoio: "/blog/como-testar-restauracao-de-backup",
+    apoioLabel: "Como testar se o backup funciona",
+    cover: "/blog/historico-de-arquivos-windows-como-configurar.jpg",
+  },
 ];
 
 
