@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-09-02T07:09:24.915Z",
+  "geradoEm": "2026-09-03T15:10:11.744Z",
   "host": "otecnicodeinformatica.com.br",
   "modo": "generate",
   "sitemap": {
@@ -1279,6 +1279,42 @@
       "status": "OK",
       "source": "cli",
       "timestamp": "2026-09-02T07:09:25.165Z",
+      "details": {
+        "adicionadas": [],
+        "removidas": [],
+        "total": 232
+      },
+      "error": null
+    },
+    {
+      "id": "526a23fd-9734-4e68-b325-a960bf6db6b9",
+      "action": "sync_approved",
+      "status": "OK",
+      "source": "cli",
+      "timestamp": "2026-09-03T15:10:11.856Z",
+      "details": {
+        "modo": "write",
+        "saida": "sitemap editorial: em dia (63 artigos indexáveis)"
+      },
+      "error": null
+    },
+    {
+      "id": "7109976e-be01-41d3-8e61-51caca798f35",
+      "action": "generate_sitemaps",
+      "status": "OK",
+      "source": "cli",
+      "timestamp": "2026-09-03T15:10:11.962Z",
+      "details": {
+        "saida": "sitemap curado: index + 8 sub-sitemaps (232 urls)"
+      },
+      "error": null
+    },
+    {
+      "id": "6ed06a04-3ab7-4887-93de-ee7d5d9b3414",
+      "action": "diff_no_regression",
+      "status": "OK",
+      "source": "cli",
+      "timestamp": "2026-09-03T15:10:11.975Z",
       "details": {
         "adicionadas": [],
         "removidas": [],

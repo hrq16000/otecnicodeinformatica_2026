@@ -46,6 +46,31 @@ export interface GscSitemap {
   pendente: boolean;
 }
 
+export interface GscConsultaTop {
+  termo: string;
+  cliques: number;
+  impressoes: number;
+  ctr: number;
+  posicao: number;
+}
+
+export type EstadoInventario =
+  | "indexada"
+  | "nao-indexada"
+  | "com-impressoes"
+  | "sem-dados";
+
+export interface GscInventarioItem {
+  caminho: string;
+  estado: EstadoInventario;
+  cobertura: string | null;
+  ultimoRastreio: string | null;
+  cliques: number;
+  impressoes: number;
+  posicaoMedia: number | null;
+  consultaPrincipal: string | null;
+}
+
 export interface GscSnapshot {
   status: "ok" | "indisponivel";
   motivo?: string;
@@ -59,6 +84,8 @@ export interface GscSnapshot {
     posicao: number | null;
   } | null;
   paginas: GscPagina[];
+  consultasTop?: GscConsultaTop[];
+  inventario?: GscInventarioItem[];
   inspecoes: GscInspecao[];
   sitemaps: GscSitemap[];
   limitacoes?: string;
@@ -126,3 +153,16 @@ export const ROTULO_INDEXACAO: Record<StatusIndexacao, string> = {
 export function topPaginas(limite = 20): GscPagina[] {
   return gscSnapshot.paginas.slice(0, limite);
 }
+
+/** Inventário completo das URLs curadas com o estado real reportado pelo Google. */
+export const gscInventario: GscInventarioItem[] = gscSnapshot.inventario ?? [];
+
+/** Termos reais mais buscados no período (rastreador de consultas). */
+export const gscConsultasTop: GscConsultaTop[] = gscSnapshot.consultasTop ?? [];
+
+export const ROTULO_ESTADO: Record<EstadoInventario, string> = {
+  indexada: "Indexada",
+  "nao-indexada": "Não indexada",
+  "com-impressoes": "Aparece na busca",
+  "sem-dados": "Sem dados no período",
+};
