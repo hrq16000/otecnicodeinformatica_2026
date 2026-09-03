@@ -1,18 +1,18 @@
 {
-  "geradoEm": "2026-09-03T18:07:12.489Z",
+  "geradoEm": "2026-09-03T18:27:37.855Z",
   "fonte": {
     "html": "SSR harness",
     "dist": "dist"
   },
-  "total": 75,
-  "analisadas": 75,
+  "total": 78,
+  "analisadas": 78,
   "falhas": 0,
   "medias": {
-    "palavras": 1461.48,
-    "densidadeSemantica": 56.93,
-    "densidadeKeywordPrincipal": 0.43,
-    "linksInternosSaida": 11.6,
-    "linksInternosEntrada": 2.97
+    "palavras": 1406.88,
+    "densidadeSemantica": 57.54,
+    "densidadeKeywordPrincipal": 0.42,
+    "linksInternosSaida": 11.19,
+    "linksInternosEntrada": 2.86
   },
   "orfas": [
     "/blog/como-conectar-wifi-tv-nao-conecta",
@@ -23,7 +23,10 @@
     "/blog/como-migrar-arquivos-para-um-computador-novo",
     "/blog/teclado-de-notebook-nao-funciona-o-que-verificar",
     "/blog/computador-desliga-sozinho-o-que-verificar",
-    "/blog/computador-nao-conecta-na-internet-por-cabo"
+    "/blog/computador-nao-conecta-na-internet-por-cabo",
+    "/blog/ventoinha-do-computador-fazendo-barulho-o-que-verificar",
+    "/blog/rede-wifi-nao-aparece-na-lista-o-que-verificar",
+    "/blog/arquivo-corrompido-nao-abre-o-que-fazer"
   ],
   "urls": [
     {
@@ -11905,6 +11908,411 @@
         "/servicos/redes-e-wifi",
         "/diagnostico-tecnico",
         "/servicos/suporte-tecnico-empresarial"
+      ],
+      "linksInternosEntrada": 0,
+      "origensEntrada": [],
+      "erro": null
+    },
+    {
+      "url": "/blog/ventoinha-do-computador-fazendo-barulho-o-que-verificar",
+      "slug": "ventoinha-do-computador-fazendo-barulho-o-que-verificar",
+      "lote": "11A/8",
+      "aprovadoEm": "2026-09-03",
+      "titulo": null,
+      "palavras": 42,
+      "termosUteis": 22,
+      "densidadeSemantica": 72.73,
+      "vocabulario": 16,
+      "keywordPrincipal": {
+        "termo": "ventoinha do computador fazendo barulho o que verificar",
+        "ocorrencias": 0,
+        "densidade": 0
+      },
+      "topKeywords": [
+        {
+          "termo": "pagina",
+          "ocorrencias": 3,
+          "densidade": 13.64
+        },
+        {
+          "termo": "atendimento",
+          "ocorrencias": 2,
+          "densidade": 9.09
+        },
+        {
+          "termo": "falar",
+          "ocorrencias": 2,
+          "densidade": 9.09
+        },
+        {
+          "termo": "inicial",
+          "ocorrencias": 2,
+          "densidade": 9.09
+        },
+        {
+          "termo": "servicos",
+          "ocorrencias": 2,
+          "densidade": 9.09
+        },
+        {
+          "termo": "acessado",
+          "ocorrencias": 1,
+          "densidade": 4.55
+        },
+        {
+          "termo": "consultar",
+          "ocorrencias": 1,
+          "densidade": 4.55
+        },
+        {
+          "termo": "disponiveis",
+          "ocorrencias": 1,
+          "densidade": 4.55
+        },
+        {
+          "termo": "encontrada",
+          "ocorrencias": 1,
+          "densidade": 4.55
+        },
+        {
+          "termo": "endereco",
+          "ocorrencias": 1,
+          "densidade": 4.55
+        },
+        {
+          "termo": "erro",
+          "ocorrencias": 1,
+          "densidade": 4.55
+        },
+        {
+          "termo": "existe",
+          "ocorrencias": 1,
+          "densidade": 4.55
+        }
+      ],
+      "topBigramas": [
+        {
+          "termo": "falar atendimento",
+          "ocorrencias": 2,
+          "densidade": 9.52
+        },
+        {
+          "termo": "pagina inicial",
+          "ocorrencias": 2,
+          "densidade": 9.52
+        },
+        {
+          "termo": "acessado existe",
+          "ocorrencias": 1,
+          "densidade": 4.76
+        },
+        {
+          "termo": "atendimento pagina",
+          "ocorrencias": 1,
+          "densidade": 4.76
+        },
+        {
+          "termo": "consultar lista",
+          "ocorrencias": 1,
+          "densidade": 4.76
+        },
+        {
+          "termo": "disponiveis falar",
+          "ocorrencias": 1,
+          "densidade": 4.76
+        },
+        {
+          "termo": "encontrada endereco",
+          "ocorrencias": 1,
+          "densidade": 4.76
+        },
+        {
+          "termo": "endereco acessado",
+          "ocorrencias": 1,
+          "densidade": 4.76
+        }
+      ],
+      "headings": {
+        "h2": 0,
+        "h3": 0
+      },
+      "schemas": [
+        "Organization",
+        "WebSite"
+      ],
+      "linksInternosSaida": 1,
+      "linksSaida": [
+        "/servicos"
+      ],
+      "linksInternosEntrada": 0,
+      "origensEntrada": [],
+      "erro": null
+    },
+    {
+      "url": "/blog/rede-wifi-nao-aparece-na-lista-o-que-verificar",
+      "slug": "rede-wifi-nao-aparece-na-lista-o-que-verificar",
+      "lote": "11A/8",
+      "aprovadoEm": "2026-09-03",
+      "titulo": null,
+      "palavras": 42,
+      "termosUteis": 22,
+      "densidadeSemantica": 72.73,
+      "vocabulario": 16,
+      "keywordPrincipal": {
+        "termo": "rede wifi nao aparece na lista o que verificar",
+        "ocorrencias": 0,
+        "densidade": 0
+      },
+      "topKeywords": [
+        {
+          "termo": "pagina",
+          "ocorrencias": 3,
+          "densidade": 13.64
+        },
+        {
+          "termo": "atendimento",
+          "ocorrencias": 2,
+          "densidade": 9.09
+        },
+        {
+          "termo": "falar",
+          "ocorrencias": 2,
+          "densidade": 9.09
+        },
+        {
+          "termo": "inicial",
+          "ocorrencias": 2,
+          "densidade": 9.09
+        },
+        {
+          "termo": "servicos",
+          "ocorrencias": 2,
+          "densidade": 9.09
+        },
+        {
+          "termo": "acessado",
+          "ocorrencias": 1,
+          "densidade": 4.55
+        },
+        {
+          "termo": "consultar",
+          "ocorrencias": 1,
+          "densidade": 4.55
+        },
+        {
+          "termo": "disponiveis",
+          "ocorrencias": 1,
+          "densidade": 4.55
+        },
+        {
+          "termo": "encontrada",
+          "ocorrencias": 1,
+          "densidade": 4.55
+        },
+        {
+          "termo": "endereco",
+          "ocorrencias": 1,
+          "densidade": 4.55
+        },
+        {
+          "termo": "erro",
+          "ocorrencias": 1,
+          "densidade": 4.55
+        },
+        {
+          "termo": "existe",
+          "ocorrencias": 1,
+          "densidade": 4.55
+        }
+      ],
+      "topBigramas": [
+        {
+          "termo": "falar atendimento",
+          "ocorrencias": 2,
+          "densidade": 9.52
+        },
+        {
+          "termo": "pagina inicial",
+          "ocorrencias": 2,
+          "densidade": 9.52
+        },
+        {
+          "termo": "acessado existe",
+          "ocorrencias": 1,
+          "densidade": 4.76
+        },
+        {
+          "termo": "atendimento pagina",
+          "ocorrencias": 1,
+          "densidade": 4.76
+        },
+        {
+          "termo": "consultar lista",
+          "ocorrencias": 1,
+          "densidade": 4.76
+        },
+        {
+          "termo": "disponiveis falar",
+          "ocorrencias": 1,
+          "densidade": 4.76
+        },
+        {
+          "termo": "encontrada endereco",
+          "ocorrencias": 1,
+          "densidade": 4.76
+        },
+        {
+          "termo": "endereco acessado",
+          "ocorrencias": 1,
+          "densidade": 4.76
+        }
+      ],
+      "headings": {
+        "h2": 0,
+        "h3": 0
+      },
+      "schemas": [
+        "Organization",
+        "WebSite"
+      ],
+      "linksInternosSaida": 1,
+      "linksSaida": [
+        "/servicos"
+      ],
+      "linksInternosEntrada": 0,
+      "origensEntrada": [],
+      "erro": null
+    },
+    {
+      "url": "/blog/arquivo-corrompido-nao-abre-o-que-fazer",
+      "slug": "arquivo-corrompido-nao-abre-o-que-fazer",
+      "lote": "11A/8",
+      "aprovadoEm": "2026-09-03",
+      "titulo": null,
+      "palavras": 42,
+      "termosUteis": 22,
+      "densidadeSemantica": 72.73,
+      "vocabulario": 16,
+      "keywordPrincipal": {
+        "termo": "arquivo corrompido nao abre o que fazer",
+        "ocorrencias": 0,
+        "densidade": 0
+      },
+      "topKeywords": [
+        {
+          "termo": "pagina",
+          "ocorrencias": 3,
+          "densidade": 13.64
+        },
+        {
+          "termo": "atendimento",
+          "ocorrencias": 2,
+          "densidade": 9.09
+        },
+        {
+          "termo": "falar",
+          "ocorrencias": 2,
+          "densidade": 9.09
+        },
+        {
+          "termo": "inicial",
+          "ocorrencias": 2,
+          "densidade": 9.09
+        },
+        {
+          "termo": "servicos",
+          "ocorrencias": 2,
+          "densidade": 9.09
+        },
+        {
+          "termo": "acessado",
+          "ocorrencias": 1,
+          "densidade": 4.55
+        },
+        {
+          "termo": "consultar",
+          "ocorrencias": 1,
+          "densidade": 4.55
+        },
+        {
+          "termo": "disponiveis",
+          "ocorrencias": 1,
+          "densidade": 4.55
+        },
+        {
+          "termo": "encontrada",
+          "ocorrencias": 1,
+          "densidade": 4.55
+        },
+        {
+          "termo": "endereco",
+          "ocorrencias": 1,
+          "densidade": 4.55
+        },
+        {
+          "termo": "erro",
+          "ocorrencias": 1,
+          "densidade": 4.55
+        },
+        {
+          "termo": "existe",
+          "ocorrencias": 1,
+          "densidade": 4.55
+        }
+      ],
+      "topBigramas": [
+        {
+          "termo": "falar atendimento",
+          "ocorrencias": 2,
+          "densidade": 9.52
+        },
+        {
+          "termo": "pagina inicial",
+          "ocorrencias": 2,
+          "densidade": 9.52
+        },
+        {
+          "termo": "acessado existe",
+          "ocorrencias": 1,
+          "densidade": 4.76
+        },
+        {
+          "termo": "atendimento pagina",
+          "ocorrencias": 1,
+          "densidade": 4.76
+        },
+        {
+          "termo": "consultar lista",
+          "ocorrencias": 1,
+          "densidade": 4.76
+        },
+        {
+          "termo": "disponiveis falar",
+          "ocorrencias": 1,
+          "densidade": 4.76
+        },
+        {
+          "termo": "encontrada endereco",
+          "ocorrencias": 1,
+          "densidade": 4.76
+        },
+        {
+          "termo": "endereco acessado",
+          "ocorrencias": 1,
+          "densidade": 4.76
+        }
+      ],
+      "headings": {
+        "h2": 0,
+        "h3": 0
+      },
+      "schemas": [
+        "Organization",
+        "WebSite"
+      ],
+      "linksInternosSaida": 1,
+      "linksSaida": [
+        "/servicos"
       ],
       "linksInternosEntrada": 0,
       "origensEntrada": [],

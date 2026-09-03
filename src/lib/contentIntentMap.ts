@@ -671,6 +671,75 @@ export const CONTENT_INTENT_MAP: ContentNode[] = [
     justificativa:
       "Rede cabeada tem cadeia física própria (cabo, porta, placa, enlace). Velocidade de conexão e cobertura Wi-Fi continuam em URLs distintas.",
   },
+  {
+    url: "/blog/ventoinha-do-computador-fazendo-barulho-o-que-verificar",
+    intent: "diagnostic",
+    topic: "ruído anormal de ventoinha em computador ou notebook",
+    queries: [
+      "ventoinha do pc fazendo barulho",
+      "cooler do notebook muito barulhento",
+      "ventoinha acelerando sozinha",
+    ],
+    serviceParent: "/servicos/manutencao-de-computador",
+    bridgesTo: [
+      "/blog/manutencao-preventiva-de-computador-guia-completo",
+      "/blog/como-limpar-notebook-por-dentro",
+      "/diagnostico-tecnico",
+    ],
+    doNotDuplicate: [
+      "/blog/notebook-superaquecendo-o-que-fazer",
+      "/blog/computador-desliga-sozinho-o-que-verificar",
+    ],
+    novaNestaRodada: true,
+    justificativa:
+      "O eixo é o som e o que ele indica (obstrução, rolamento, fixação, rotação exigida). Superaquecimento e desligamento têm sintomas e roteiros próprios.",
+  },
+  {
+    url: "/blog/rede-wifi-nao-aparece-na-lista-o-que-verificar",
+    intent: "diagnostic",
+    topic: "rede Wi-Fi que não aparece na lista de redes disponíveis",
+    queries: [
+      "rede wifi nao aparece na lista",
+      "notebook nao encontra a rede wifi",
+      "rede 5ghz nao aparece",
+    ],
+    serviceParent: "/servicos/redes-e-wifi",
+    bridgesTo: [
+      "/blog/como-configurar-roteador-wifi-iniciantes",
+      "/blog/computador-nao-conecta-na-internet-por-cabo",
+      "/servicos/redes-e-wifi",
+    ],
+    doNotDuplicate: [
+      "/blog/wifi-lento-como-melhorar",
+      "/blog/como-configurar-repetidor-wifi",
+    ],
+    novaNestaRodada: true,
+    justificativa:
+      "Rede invisível é problema de visibilidade do sinal, não de velocidade ou cobertura: banda, canal, SSID oculto e adaptador desligado formam uma cadeia própria.",
+  },
+  {
+    url: "/blog/arquivo-corrompido-nao-abre-o-que-fazer",
+    intent: "diagnostic",
+    topic: "arquivo que não abre por corrupção de dados",
+    queries: [
+      "arquivo corrompido nao abre",
+      "documento do word corrompido",
+      "como recuperar arquivo danificado",
+    ],
+    serviceParent: "/servicos/recuperacao-de-dados",
+    bridgesTo: [
+      "/blog/como-recuperar-dados-hd-com-defeito",
+      "/blog/historico-de-arquivos-windows-como-configurar",
+      "/servicos/recuperacao-de-dados",
+    ],
+    doNotDuplicate: [
+      "/blog/como-recuperar-dados-hd-com-defeito",
+      "/blog/como-testar-restauracao-de-backup",
+    ],
+    novaNestaRodada: true,
+    justificativa:
+      "O escopo é o arquivo individual que não abre, com trabalho sobre cópia e versões anteriores. Disco com defeito e rotina de backup continuam em URLs distintas.",
+  },
 ];
 
 /** Nó do mapa por URL canônica (sem barra final). */

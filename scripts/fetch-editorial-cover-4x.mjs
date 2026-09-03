@@ -296,6 +296,19 @@ const CURADORIA = [
     slug: "computador-nao-conecta-na-internet-por-cabo",
     commons: "File:RJ-45 Ethernet socket on Lenovo T410 Laptop.jpg",
   },
+  // Onda 11G — ruído de ventoinha, Wi-Fi ausente na lista e arquivo corrompido.
+  {
+    slug: "ventoinha-do-computador-fazendo-barulho-o-que-verificar",
+    commons: "File:CPU-cooler-14 hg.jpg",
+  },
+  {
+    slug: "rede-wifi-nao-aparece-na-lista-o-que-verificar",
+    commons: "File:TP-Link TL-WR740N router HS2.jpg",
+  },
+  {
+    slug: "arquivo-corrompido-nao-abre-o-que-fazer",
+    commons: "File:Hard disk drive platter, Samsung MP0402H.jpg",
+  },
 ];
 
 /** Metadados + URL de uma imagem do Wikimedia Commons (licença real, sem IA). */

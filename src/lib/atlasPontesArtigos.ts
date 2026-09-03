@@ -120,6 +120,39 @@ export const ATLAS_PONTES_ARTIGOS: Record<string, AtlasPonteArtigo> = {
         "Quando o problema é o cabeamento da casa ou do escritório e exige intervenção no ponto de rede.",
     },
   },
+  "ventoinha-do-computador-fazendo-barulho-o-que-verificar": {
+    temaId: "manutencao-preventiva",
+    porQue:
+      "Ruído é informação: a ventoinha acelera porque precisa dissipar mais calor, ou range porque o rolamento chegou ao fim. A trilha de manutenção preventiva mostra por que ouvir o equipamento antecipa a falha.",
+    proximoPasso: {
+      rotulo: "Diagnóstico técnico",
+      to: "/diagnostico-tecnico",
+      contexto:
+        "Quando o ruído persiste após limpeza ou vem acompanhado de temperatura alta e desligamentos.",
+    },
+  },
+  "rede-wifi-nao-aparece-na-lista-o-que-verificar": {
+    temaId: "redes-wifi",
+    porQue:
+      "Não enxergar a rede é diferente de enxergar e não navegar. A trilha de redes explica banda, canal e alcance — o que decide se o problema é do adaptador, do roteador ou da distância.",
+    proximoPasso: {
+      rotulo: "Redes e Wi-Fi",
+      to: "/servicos/redes-e-wifi",
+      contexto:
+        "Quando a rede some para todos os dispositivos ou o ponto de acesso precisa de reconfiguração.",
+    },
+  },
+  "arquivo-corrompido-nao-abre-o-que-fazer": {
+    temaId: "dados-backup",
+    porQue:
+      "Arquivo que não abre é um teste prático da estratégia de dados: quem tem versões guardadas resolve em minutos; quem não tem depende de tentativa. A trilha mostra por que a cópia vem antes da tentativa.",
+    proximoPasso: {
+      rotulo: "Backup antes da manutenção",
+      to: "/decisoes/backup-antes-da-manutencao",
+      contexto:
+        "Antes de qualquer tentativa de reparo, preserve o original e trabalhe sobre uma cópia.",
+    },
+  },
   "monitor-sem-sinal-o-que-verificar": {
     temaId: "fundamentos",
     porQue:

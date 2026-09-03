@@ -1,7 +1,7 @@
 # Autoridade SEO — densidade semântica, keywords e links internos
 
-Gerado em: 2026-09-03T18:07:12.489Z
-URLs analisadas: 75/75 · órfãs: 9
+Gerado em: 2026-09-03T18:27:37.855Z
+URLs analisadas: 78/78 · órfãs: 12
 
 | URL | Palavras | Dens. semântica | Keyword principal | Dens. KW | Links saída | Links entrada |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -80,4 +80,7 @@ URLs analisadas: 75/75 · órfãs: 9
 | /blog/teclado-de-notebook-nao-funciona-o-que-verificar | 1136 | 53.82% | teclado de notebook nao funciona o que verificar | 0.75% | 8 | 0 |
 | /blog/computador-desliga-sozinho-o-que-verificar | 1119 | 56.74% | computador desliga sozinho o que verificar | 0.75% | 12 | 0 |
 | /blog/computador-nao-conecta-na-internet-por-cabo | 1114 | 51.44% | computador nao conecta na internet por cabo | 0.48% | 9 | 0 |
+| /blog/ventoinha-do-computador-fazendo-barulho-o-que-verificar | 42 | 72.73% | ventoinha do computador fazendo barulho o que verificar | 0% | 1 | 0 |
+| /blog/rede-wifi-nao-aparece-na-lista-o-que-verificar | 42 | 72.73% | rede wifi nao aparece na lista o que verificar | 0% | 1 | 0 |
+| /blog/arquivo-corrompido-nao-abre-o-que-fazer | 42 | 72.73% | arquivo corrompido nao abre o que fazer | 0% | 1 | 0 |
 
