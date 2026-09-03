@@ -8,7 +8,7 @@
     "REMOVIDA": 0,
     "PENDENTE": 0
   },
-  "urlsCuradas": 238,
+  "urlsCuradas": 241,
   "familias": [
     {
       "id": "garantia",
@@ -1591,6 +1591,18 @@
       }
     },
     {
+      "path": "/blog/bateria-de-notebook-nao-carrega-o-que-verificar",
+      "curada": true,
+      "total": 0,
+      "porClasse": {
+        "COMPROVADA": 0,
+        "INSTITUCIONAL": 0,
+        "CONDICIONAL": 0,
+        "REMOVIDA": 0,
+        "PENDENTE": 0
+      }
+    },
+    {
       "path": "/blog/bios-corrompida-reset-cmos-atualizacao",
       "curada": true,
       "total": 0,
@@ -1796,6 +1808,18 @@
     },
     {
       "path": "/blog/como-melhorar-sinal-wifi-em-casa",
+      "curada": true,
+      "total": 0,
+      "porClasse": {
+        "COMPROVADA": 0,
+        "INSTITUCIONAL": 0,
+        "CONDICIONAL": 0,
+        "REMOVIDA": 0,
+        "PENDENTE": 0
+      }
+    },
+    {
+      "path": "/blog/como-migrar-arquivos-para-um-computador-novo",
       "curada": true,
       "total": 0,
       "porClasse": {
@@ -2144,6 +2168,18 @@
     },
     {
       "path": "/blog/memoria-ram-insuficiente-sintomas",
+      "curada": true,
+      "total": 0,
+      "porClasse": {
+        "COMPROVADA": 0,
+        "INSTITUCIONAL": 0,
+        "CONDICIONAL": 0,
+        "REMOVIDA": 0,
+        "PENDENTE": 0
+      }
+    },
+    {
+      "path": "/blog/monitor-sem-sinal-o-que-verificar",
       "curada": true,
       "total": 0,
       "porClasse": {

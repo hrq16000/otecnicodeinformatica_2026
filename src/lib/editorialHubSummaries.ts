@@ -557,6 +557,30 @@ const rows: Array<EditorialHubSummary & { slug: string }> = [
     "category": "Diagnóstico"
   },
   {
+    "slug": "monitor-sem-sinal-o-que-verificar",
+    "title": "Monitor sem sinal: o que verificar antes de trocar de peça",
+    "excerpt": "\"Sem sinal\" na tela não quer dizer monitor queimado. A sequência para separar cabo, entrada errada, saída de vídeo e computador que nem chegou a iniciar.",
+    "date": "2026-09-03",
+    "readTime": "10 min",
+    "category": "Diagnóstico"
+  },
+  {
+    "slug": "bateria-de-notebook-nao-carrega-o-que-verificar",
+    "title": "Bateria de notebook não carrega: o que verificar antes de comprar outra",
+    "excerpt": "\"Conectado, não carregando\" tem mais de uma causa. Como separar fonte, conector, bateria em fim de vida e limite de carga configurado — sem trocar peça no escuro.",
+    "date": "2026-09-03",
+    "readTime": "11 min",
+    "category": "Manutenção"
+  },
+  {
+    "slug": "como-migrar-arquivos-para-um-computador-novo",
+    "title": "Como migrar arquivos para um computador novo sem perder nada",
+    "excerpt": "Inventário, método de transferência, conferência e só então o descarte do equipamento antigo. O roteiro que evita a descoberta tardia de que faltou alguma coisa.",
+    "date": "2026-09-03",
+    "readTime": "11 min",
+    "category": "Procedimentos Técnicos"
+  },
+  {
     "slug": "historico-de-arquivos-windows-como-configurar",
     "title": "Histórico de Arquivos do Windows: como configurar versões de verdade",
     "excerpt": "O recurso nativo que guarda versões anteriores dos seus arquivos: o que ele cobre, o que ele não cobre e como configurá-lo sem confundir versionamento com backup completo.",

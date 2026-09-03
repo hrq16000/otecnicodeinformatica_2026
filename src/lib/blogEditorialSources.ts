@@ -934,6 +934,36 @@ export const ARTICLE_SOURCE_MANIFEST: Record<string, ArticleSourceManifest> = {
     notes:
       "Revisão concluída (Onda 11D): escopo real do versionamento nativo (pastas de usuário, não sistema), destino em disco físico separado, dimensionamento e retenção, diferença entre versionar e sincronizar e teste de restauração como etapa final. Conhecimento técnico estável — sem fonte visível.",
   },
+  "monitor-sem-sinal-o-que-verificar": {
+    slug: "monitor-sem-sinal-o-que-verificar",
+    sources: [],
+    technicalReview: "reviewed",
+    factChecked: true,
+    factCheckedAt: "2026-09-03",
+    stableKnowledge: true,
+    notes:
+      "Revisão concluída (Onda 11E): separação entre monitor vivo (exibe o próprio menu), caminho do vídeo e computador que não inicia; sequência de eliminação com entrada, cabo, saída dedicada versus integrada e teste cruzado; alerta de carga residual na fonte do monitor. Conhecimento técnico estável — sem fonte visível.",
+  },
+  "bateria-de-notebook-nao-carrega-o-que-verificar": {
+    slug: "bateria-de-notebook-nao-carrega-o-que-verificar",
+    sources: [],
+    technicalReview: "reviewed",
+    factChecked: true,
+    factCheckedAt: "2026-09-03",
+    stableKnowledge: true,
+    notes:
+      "Revisão concluída (Onda 11E): quatro cenários distintos de falha de carga, verificação de fonte e conector antes da bateria, leitura da capacidade atual contra a de projeto, limite de carga do fabricante como comportamento normal e parada obrigatória diante de célula estufada. Sem indicar marca de bateria. Conhecimento técnico estável — sem fonte visível.",
+  },
+  "como-migrar-arquivos-para-um-computador-novo": {
+    slug: "como-migrar-arquivos-para-um-computador-novo",
+    sources: [],
+    technicalReview: "reviewed",
+    factChecked: true,
+    factCheckedAt: "2026-09-03",
+    stableKnowledge: true,
+    notes:
+      "Revisão concluída (Onda 11E): inventário do que costuma ficar de fora, comparação objetiva entre métodos de transferência, conferência por quantidade e tamanho antes do descarte, retenção temporária do equipamento antigo e limpeza completa da unidade antes de venda ou doação. Conhecimento técnico estável — sem fonte visível.",
+  },
 };
 
 

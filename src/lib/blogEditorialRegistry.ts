@@ -1086,6 +1086,52 @@ const WAVE_11D: EditorialApproval[] = [
   },
 ];
 
+// ── Onda 11E — vídeo, energia de notebook e migração de arquivos.
+const WAVE_11E: EditorialApproval[] = [
+  {
+    slug: "monitor-sem-sinal-o-que-verificar",
+    status: "approved",
+    authorType: "organization",
+    authorId: INSTITUTIONAL_AUTHOR.id,
+    reviewedAt: "2026-09-03",
+    approvedAt: "2026-09-03",
+    imageOrigin: "licensed",
+    imageLicense: "CC BY-SA 4.0",
+    imageAttribution:
+      "Foto: Kannan Shanmugam (Wikimedia Commons), CC BY-SA 4.0 — https://commons.wikimedia.org/wiki/File:HDMI_Cable.JPG",
+    notes:
+      "Diagnóstico de ausência de sinal de vídeo escrito do zero na Onda 11E: separa monitor vivo, caminho do vídeo e computador que não inicia, com sequência de eliminação própria. Não repete o roteiro de notebook que não liga nem o de placa-mãe. Capa é fotografia real licenciada, sem IA.",
+  },
+  {
+    slug: "bateria-de-notebook-nao-carrega-o-que-verificar",
+    status: "approved",
+    authorType: "organization",
+    authorId: INSTITUTIONAL_AUTHOR.id,
+    reviewedAt: "2026-09-03",
+    approvedAt: "2026-09-03",
+    imageOrigin: "licensed",
+    imageLicense: "CC BY-SA 2.0",
+    imageAttribution:
+      "Foto: Intel Free Press (Wikimedia Commons), CC BY-SA 2.0 — https://commons.wikimedia.org/wiki/File:Laptop_PC_Battery_Removed.jpg",
+    notes:
+      "Diagnóstico de falha de carga escrito do zero na Onda 11E: distingue fonte, conector, limite de carga do fabricante e bateria em fim de vida, com critério de parada por segurança. Tema não coberto pelos artigos de notebook existentes. Capa é fotografia real licenciada, sem IA.",
+  },
+  {
+    slug: "como-migrar-arquivos-para-um-computador-novo",
+    status: "approved",
+    authorType: "organization",
+    authorId: INSTITUTIONAL_AUTHOR.id,
+    reviewedAt: "2026-09-03",
+    approvedAt: "2026-09-03",
+    imageOrigin: "licensed",
+    imageLicense: "CC BY 4.0",
+    imageAttribution:
+      "Foto: Augkun-ane (Wikimedia Commons), CC BY 4.0 — https://commons.wikimedia.org/wiki/File:WD_Blue_Hard_Disk_Drive_connected_to_Laptop_via_USB-C.jpg",
+    notes:
+      "Procedimento de migração escrito do zero na Onda 11E: inventário, escolha de método, conferência e descarte seguro do equipamento antigo. Não canibaliza os artigos de backup, que tratam de rotina contínua. Capa é fotografia real licenciada, sem IA.",
+  },
+];
+
 export const APPROVED_EDITORIAL_CONTENT = new Map<string, EditorialApproval>([
 
   ...FIRST_WAVE_SLUGS.map((slug) => [
@@ -1139,6 +1185,7 @@ export const APPROVED_EDITORIAL_CONTENT = new Map<string, EditorialApproval>([
   ...WAVE_11A.map((a) => [a.slug, a] as [string, EditorialApproval]),
   ...WAVE_11C.map((a) => [a.slug, a] as [string, EditorialApproval]),
   ...WAVE_11D.map((a) => [a.slug, a] as [string, EditorialApproval]),
+  ...WAVE_11E.map((a) => [a.slug, a] as [string, EditorialApproval]),
 ]);
 
 

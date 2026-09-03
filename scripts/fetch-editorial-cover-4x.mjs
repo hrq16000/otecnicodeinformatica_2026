@@ -270,6 +270,19 @@ const CURADORIA = [
     slug: "historico-de-arquivos-windows-como-configurar",
     commons: "File:External portable hard drive.jpg",
   },
+  // Onda 11E — vídeo, energia de notebook e migração de arquivos.
+  {
+    slug: "monitor-sem-sinal-o-que-verificar",
+    commons: "File:HDMI Cable.JPG",
+  },
+  {
+    slug: "bateria-de-notebook-nao-carrega-o-que-verificar",
+    commons: "File:Laptop PC Battery Removed.jpg",
+  },
+  {
+    slug: "como-migrar-arquivos-para-um-computador-novo",
+    commons: "File:WD Blue Hard Disk Drive connected to Laptop via USB-C.jpg",
+  },
 ];
 
 /** Metadados + URL de uma imagem do Wikimedia Commons (licença real, sem IA). */
