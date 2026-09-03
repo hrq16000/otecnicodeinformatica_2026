@@ -283,6 +283,19 @@ const CURADORIA = [
     slug: "como-migrar-arquivos-para-um-computador-novo",
     commons: "File:WD Blue Hard Disk Drive connected to Laptop via USB-C.jpg",
   },
+  // Onda 11F — teclado de notebook, desligamento repentino e rede cabeada.
+  {
+    slug: "teclado-de-notebook-nao-funciona-o-que-verificar",
+    commons: "File:HP laptop keyboard.jpg",
+  },
+  {
+    slug: "computador-desliga-sozinho-o-que-verificar",
+    commons: "File:Dust in a the computer power supply.jpg",
+  },
+  {
+    slug: "computador-nao-conecta-na-internet-por-cabo",
+    commons: "File:RJ-45 Ethernet socket on Lenovo T410 Laptop.jpg",
+  },
 ];
 
 /** Metadados + URL de uma imagem do Wikimedia Commons (licença real, sem IA). */

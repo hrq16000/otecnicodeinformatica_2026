@@ -964,6 +964,36 @@ export const ARTICLE_SOURCE_MANIFEST: Record<string, ArticleSourceManifest> = {
     notes:
       "Revisão concluída (Onda 11E): inventário do que costuma ficar de fora, comparação objetiva entre métodos de transferência, conferência por quantidade e tamanho antes do descarte, retenção temporária do equipamento antigo e limpeza completa da unidade antes de venda ou doação. Conhecimento técnico estável — sem fonte visível.",
   },
+  "teclado-de-notebook-nao-funciona-o-que-verificar": {
+    slug: "teclado-de-notebook-nao-funciona-o-que-verificar",
+    sources: [],
+    technicalReview: "reviewed",
+    factChecked: true,
+    factCheckedAt: "2026-09-03",
+    stableKnowledge: true,
+    notes:
+      "Revisão concluída (Onda 11F): teste do teclado externo como divisor entre hardware interno e sistema, quatro sintomas com causas distintas, verificação de layout antes de suspeitar de peça, conduta específica para derramamento de líquido e limite claro de desmontagem. Conhecimento técnico estável — sem fonte visível.",
+  },
+  "computador-desliga-sozinho-o-que-verificar": {
+    slug: "computador-desliga-sozinho-o-que-verificar",
+    sources: [],
+    technicalReview: "reviewed",
+    factChecked: true,
+    factCheckedAt: "2026-09-03",
+    stableKnowledge: true,
+    notes:
+      "Revisão concluída (Onda 11F): distinção entre travamento e corte de energia, leitura do padrão temporal, eliminação do ponto elétrico antes da fonte, medição de temperatura comparada e proibição de desativar proteção térmica. Conhecimento técnico estável — sem fonte visível.",
+  },
+  "computador-nao-conecta-na-internet-por-cabo": {
+    slug: "computador-nao-conecta-na-internet-por-cabo",
+    sources: [],
+    technicalReview: "reviewed",
+    factChecked: true,
+    factCheckedAt: "2026-09-03",
+    stableKnowledge: true,
+    notes:
+      "Revisão concluída (Onda 11F): separação entre ausência de enlace e ausência de navegação pela leitura das luzes, teste cruzado de cabo, porta e equipamento, uso do Wi-Fi do mesmo roteador para isolar o provedor e limite para cabeamento estruturado. Conhecimento técnico estável — sem fonte visível.",
+  },
 };
 
 

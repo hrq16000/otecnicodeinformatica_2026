@@ -467,6 +467,24 @@ export const EDITORIAL_COVERS: Record<string, EditorialCover> = {
     width: 1200,
     height: 630,
   },
+  "teclado-de-notebook-nao-funciona-o-que-verificar": {
+    src: "/blog/teclado-de-notebook-nao-funciona-o-que-verificar.jpg",
+    alt: "Teclado de notebook visto de cima, com as teclas em detalhe",
+    width: 1200,
+    height: 630,
+  },
+  "computador-desliga-sozinho-o-que-verificar": {
+    src: "/blog/computador-desliga-sozinho-o-que-verificar.jpg",
+    alt: "Fonte de alimentação de computador aberta, com acúmulo visível de poeira",
+    width: 1200,
+    height: 630,
+  },
+  "computador-nao-conecta-na-internet-por-cabo": {
+    src: "/blog/computador-nao-conecta-na-internet-por-cabo.jpg",
+    alt: "Conector de rede RJ-45 na lateral de um notebook",
+    width: 1200,
+    height: 630,
+  },
 };
 
 export function getEditorialCover(slug: string): EditorialCover | undefined {
