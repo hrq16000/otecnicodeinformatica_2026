@@ -14175,4 +14175,207 @@ bcdboot C:\\Windows /s S: /f UEFI`}</code></pre>
     ),
   },
 
+  "como-monitorar-temperatura-do-computador": {
+    title: "Como monitorar a temperatura do computador (e quando ela é problema)",
+    excerpt:
+      "Quais temperaturas medir, o que é normal sob carga, como reconhecer throttling e em que ponto o calor deixa de ser característica e vira defeito.",
+    date: "2026-09-03",
+    readTime: "11 min",
+    category: "Manutenção",
+    content: (
+      <>
+        <p className="lead">Computador quente não é, por si só, computador com defeito. O que importa não é o número isolado, e sim o comportamento: quanto tempo leva para subir, até onde chega sob carga, se cai quando a carga acaba e se o desempenho despenca junto.</p>
+
+        <h2>Resposta curta</h2>
+        <p>Monitore três pontos — processador, placa de vídeo e armazenamento — em repouso e sob carga. Preocupe-se quando a temperatura sob carga se aproximar do limite declarado pelo fabricante do componente, quando o desempenho cair de forma abrupta ao aquecer ou quando o valor em repouso já for alto sem nada rodando.</p>
+
+        <h2>O que medir, e por quê</h2>
+        <ul>
+          <li><strong>Processador (CPU).</strong> É o sensor mais sensível e o que primeiro reduz a frequência para se proteger.</li>
+          <li><strong>Placa de vídeo (GPU).</strong> Em jogos e edição, é onde o calor se concentra; costuma ter o próprio ventilador e a própria curva.</li>
+          <li><strong>Armazenamento.</strong> SSD NVMe aquece bastante em cópias longas e reduz velocidade para se proteger.</li>
+          <li><strong>Temperatura ambiente.</strong> Nenhum valor faz sentido sem ela: 8 °C a mais no cômodo aparecem quase integralmente nos sensores.</li>
+        </ul>
+        <p>Comparar seu número com o de outra pessoa na internet quase nunca ajuda: modelo, dissipador, gabinete, ventilação e ambiente mudam tudo. O comparativo útil é com o próprio equipamento, medido em datas diferentes.</p>
+
+        <h2>Como medir de forma honesta</h2>
+        <table>
+          <thead>
+            <tr><th>Etapa</th><th>O que fazer</th><th>O que observa</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>1</td><td>Medir em repouso, 10 minutos após ligar, sem programas abertos</td><td>Base real do equipamento</td></tr>
+            <tr><td>2</td><td>Medir sob carga sustentada de 15 a 20 minutos no uso que costuma travar</td><td>Pico e estabilidade</td></tr>
+            <tr><td>3</td><td>Observar a curva de queda ao encerrar a carga</td><td>Capacidade de dissipar calor</td></tr>
+            <tr><td>4</td><td>Anotar a temperatura ambiente junto com cada medição</td><td>Comparabilidade entre datas</td></tr>
+            <tr><td>5</td><td>Repetir a mesma medição a cada trimestre</td><td>Tendência de piora por poeira ou pasta seca</td></tr>
+          </tbody>
+        </table>
+        <p>A leitura pode vir de utilitários do próprio fabricante da placa-mãe ou do notebook, e também da tela de configuração do firmware, que mostra a temperatura sem sistema operacional carregado — útil para separar calor de hardware de calor causado por processo em segundo plano.</p>
+
+        <h2>Throttling: quando o calor vira lentidão</h2>
+        <p>Ao chegar perto do limite térmico, o componente reduz a própria frequência. O sintoma percebido não é "está quente": é o computador ficar rápido nos primeiros minutos e lento depois, sempre no mesmo ponto do uso. Se a queda de desempenho acompanhar o aquecimento, o problema é térmico; se for constante desde o início, vale olhar as causas descritas em <Link to="/blog/computador-lento-causas-solucoes" className="text-accent">computador lento: causas e soluções</Link> e em <Link to="/blog/memoria-ram-insuficiente-sintomas" className="text-accent">sintomas de memória RAM insuficiente</Link>.</p>
+
+        <h2>Causas comuns de temperatura alta</h2>
+        <ul>
+          <li>Poeira acumulada no dissipador e nas grades de saída de ar, que é a causa mais frequente e a mais simples de corrigir — o procedimento está em <Link to="/blog/como-limpar-notebook-por-dentro" className="text-accent">como limpar o notebook por dentro</Link>.</li>
+          <li>Pasta térmica ressecada em equipamento antigo, tratada em <Link to="/blog/como-trocar-pasta-termica-notebook" className="text-accent">troca de pasta térmica</Link>.</li>
+          <li>Uso sobre cama, sofá ou almofada, que bloqueia a entrada de ar do notebook.</li>
+          <li>Ventoinha travada, com rolamento gasto ou desconectada.</li>
+          <li>Processo em segundo plano consumindo o processador sem que o usuário perceba, incluindo software malicioso — o quadro está em <Link to="/blog/como-saber-se-pc-tem-virus-malware" className="text-accent">como saber se o PC tem vírus</Link>.</li>
+          <li>Fluxo de ar ruim no gabinete, com cabos obstruindo a passagem ou ventoinhas invertidas.</li>
+        </ul>
+        <p>Quando o superaquecimento já provoca desligamento, o encaminhamento específico está em <Link to="/blog/notebook-superaquecendo-o-que-fazer" className="text-accent">notebook superaquecendo</Link>. A cadência de verificação que evita chegar a esse ponto está em <Link to="/blog/manutencao-preventiva-de-computador-guia-completo" className="text-accent">manutenção preventiva de computador</Link>.</p>
+
+        <h2>O que NÃO fazer</h2>
+        <ul>
+          <li>Trocar pasta térmica por rotina, sem indício de problema térmico e sem medir antes e depois.</li>
+          <li>Forçar as ventoinhas ao máximo permanentemente para mascarar sujeira acumulada.</li>
+          <li>Usar ar comprimido girando a ventoinha livremente, o que pode danificá-la.</li>
+          <li>Comparar sua temperatura com a de outro modelo e concluir defeito a partir disso.</li>
+          <li>Desativar proteções térmicas ou limites do firmware para ganhar desempenho.</li>
+          <li>Ignorar armazenamento: SSD quente que reduz velocidade parece "sistema travando".</li>
+        </ul>
+
+        <h2>Quando parar</h2>
+        <p>Pare se o equipamento desligar sozinho sob carga, se houver cheiro de queimado, se a ventoinha não girar ou se a temperatura em repouso já for alta com o ambiente fresco. Continuar usando nessas condições acelera o desgaste do componente e pode transformar um reparo simples em substituição de peça.</p>
+
+        <h2>Quando chamar um técnico</h2>
+        <p>Chame quando a limpeza não reduzir a temperatura, quando a ventoinha precisar ser substituída, quando houver suspeita de dissipador mal fixado após um reparo anterior ou quando o desligamento por calor já estiver interrompendo o trabalho. A avaliação está em <Link to="/diagnostico-tecnico" className="text-accent">diagnóstico técnico</Link>, e o serviço correspondente em <Link to="/servicos/manutencao-de-computador" className="text-accent">manutenção de computador</Link>.</p>
+      </>
+    ),
+  },
+
+  "pendrive-somente-leitura-protegido-contra-gravacao": {
+    title: "Pendrive somente leitura: por que aparece \"protegido contra gravação\"",
+    excerpt:
+      "Como separar trava física, política do sistema, sistema de arquivos danificado e memória em fim de vida — e por que copiar os arquivos vem antes de qualquer tentativa de conserto.",
+    date: "2026-09-03",
+    readTime: "10 min",
+    category: "Diagnóstico",
+    content: (
+      <>
+        <p className="lead">Quando o sistema recusa gravar em um pendrive ou cartão e avisa que a mídia está protegida contra gravação, existem quatro origens possíveis — e apenas uma delas tem conserto simples. A ordem em que você testa decide se os arquivos são preservados ou perdidos.</p>
+
+        <h2>Resposta curta</h2>
+        <p>Verifique nesta ordem: trava física no corpo do dispositivo, restrição configurada no sistema, sistema de arquivos danificado e, por último, memória em fim de vida. Antes de qualquer tentativa de correção, copie o que ainda for legível — mídia que entrou em somente leitura muitas vezes está protegendo o próprio conteúdo pela última vez.</p>
+
+        <h2>As quatro origens</h2>
+        <ul>
+          <li><strong>Trava física.</strong> Cartões SD e alguns pendrives têm uma chave lateral. Ela é mecânica e pode ficar em posição intermediária ou frouxa, mesmo parecendo destravada.</li>
+          <li><strong>Política do sistema.</strong> Configurações de segurança em ambiente corporativo, ou uma restrição aplicada antes na própria máquina, podem bloquear escrita em mídia removível — nesse caso, o mesmo pendrive grava normalmente em outro computador.</li>
+          <li><strong>Sistema de arquivos danificado.</strong> Remoção durante gravação, queda de energia ou desligamento abrupto deixam a estrutura inconsistente, e o sistema monta em modo protegido para evitar piorar.</li>
+          <li><strong>Memória em fim de vida.</strong> Memória flash tem número finito de ciclos de escrita. Ao esgotar as células reserva, o controlador passa a mídia para somente leitura de forma definitiva.</li>
+        </ul>
+        <p>O quarto caso não tem reparo: a mídia continua legível por um tempo e depois deixa de ser reconhecida. Quando o dispositivo sequer aparece, o roteiro é outro — está em <Link to="/blog/dispositivo-usb-nao-reconhecido-o-que-fazer" className="text-accent">dispositivo USB não reconhecido</Link>.</p>
+
+        <h2>Sequência de isolamento</h2>
+        <table>
+          <thead>
+            <tr><th>Teste</th><th>Como fazer</th><th>Conclusão</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Copiar primeiro</td><td>Salvar todo o conteúdo legível em disco interno antes de tentar corrigir</td><td>Preserva os dados independentemente do resultado</td></tr>
+            <tr><td>Trava física</td><td>Alternar a chave lateral, se existir, e reinserir</td><td>Volta a gravar: era mecânico</td></tr>
+            <tr><td>Outro computador</td><td>Testar a mesma mídia em máquina diferente</td><td>Grava lá: a restrição é do sistema, não da mídia</td></tr>
+            <tr><td>Outra porta e outro cabo</td><td>Trocar porta traseira, evitar hub e extensão</td><td>Elimina contato e alimentação instável</td></tr>
+            <tr><td>Outra mídia na mesma porta</td><td>Inserir outro pendrive comprovadamente bom</td><td>Também bloqueia: o problema está no computador</td></tr>
+            <tr><td>Verificação de erros</td><td>Rodar a checagem de disco do sistema, somente depois da cópia</td><td>Corrige estrutura inconsistente</td></tr>
+          </tbody>
+        </table>
+
+        <h2>Formatar resolve?</h2>
+        <p>Formatar corrige o terceiro caso — estrutura danificada — e apaga todo o conteúdo. Não corrige trava física nem memória esgotada: se a mídia estiver realmente em fim de vida, a formatação falha no meio ou parece concluir e volta a somente leitura no primeiro uso. Por isso a cópia vem antes, sempre. Se a mídia guardava a única versão de algum arquivo, o cenário passa a ser de resgate, tratado em <Link to="/blog/como-recuperar-dados-hd-com-defeito" className="text-accent">recuperação de dados em disco com defeito</Link>.</p>
+
+        <h2>Por que isso vira problema recorrente</h2>
+        <p>Pendrive e cartão são mídias de transporte, não de guarda. São pequenos, sofrem impacto, ficam em bolso e chaveiro e envelhecem por escrita. Usar um deles como cópia única é a origem da maior parte das perdas evitáveis que chegam à bancada. A alternativa está em <Link to="/decisoes/nuvem-ou-hd-externo" className="text-accent">nuvem ou HD externo</Link>, e a verificação da cópia em <Link to="/blog/como-testar-restauracao-de-backup" className="text-accent">como testar se o backup funciona</Link>.</p>
+
+        <h2>O que NÃO fazer</h2>
+        <ul>
+          <li>Formatar antes de copiar o que ainda é legível.</li>
+          <li>Rodar utilitários de "desbloqueio" de origem duvidosa, que costumam apagar a mídia sem aviso.</li>
+          <li>Alterar configurações de segurança do sistema por tentativa e erro em computador corporativo.</li>
+          <li>Insistir em gravações repetidas em mídia que já falhou: cada tentativa consome ciclos.</li>
+          <li>Confiar novamente na mídia que voltou a funcionar depois de um episódio desses.</li>
+          <li>Guardar documento importante apenas em pendrive.</li>
+        </ul>
+
+        <h2>Quando parar</h2>
+        <p>Pare se a mídia aquecer muito, se a cópia travar em determinado arquivo, se o dispositivo desaparecer durante a leitura ou se aparecer com capacidade errada. São sinais de controlador ou memória em falha, e novas tentativas reduzem a chance de resgate.</p>
+
+        <h2>Quando chamar um técnico</h2>
+        <p>Chame quando houver arquivo insubstituível na mídia, quando o mesmo comportamento se repetir em vários pendrives no mesmo computador — o que aponta para o sistema ou para as portas — ou quando o dispositivo passar a não ser reconhecido. O encaminhamento está em <Link to="/diagnostico-tecnico" className="text-accent">diagnóstico técnico</Link> e, havendo dados em risco, em <Link to="/servicos/recuperacao-de-dados" className="text-accent">recuperação de dados</Link>.</p>
+      </>
+    ),
+  },
+
+  "historico-de-arquivos-windows-como-configurar": {
+    title: "Histórico de Arquivos do Windows: como configurar versões de verdade",
+    excerpt:
+      "O recurso nativo que guarda versões anteriores dos seus arquivos: o que ele cobre, o que ele não cobre e como configurá-lo sem confundir versionamento com backup completo.",
+    date: "2026-09-03",
+    readTime: "11 min",
+    category: "Procedimentos Técnicos",
+    content: (
+      <>
+        <p className="lead">Boa parte das perdas de arquivo não vem de disco queimado: vem de sobrescrever a versão boa, salvar em cima do documento errado ou apagar sem perceber. Contra isso, cópia única não ajuda — o que resolve é ter versões anteriores recuperáveis.</p>
+
+        <h2>Resposta curta</h2>
+        <p>O Histórico de Arquivos do Windows copia periodicamente as pastas de usuário para um disco externo ou pasta de rede e mantém versões antigas. Ele serve para recuperar arquivos e versões, não para restaurar o sistema inteiro. Configure com disco dedicado, confira quais pastas entraram e teste a restauração depois.</p>
+
+        <h2>O que ele cobre — e o que não cobre</h2>
+        <ul>
+          <li><strong>Cobre:</strong> pastas de usuário como documentos, imagens, área de trabalho e favoritos, com versões sucessivas ao longo do tempo.</li>
+          <li><strong>Cobre:</strong> recuperação pontual de "a versão de ontem" sem desfazer nada do resto do sistema.</li>
+          <li><strong>Não cobre:</strong> o sistema operacional, os programas instalados e as configurações — isso é imagem do sistema, outra coisa.</li>
+          <li><strong>Não cobre:</strong> pastas fora do perfil do usuário, salvo se incluídas manualmente.</li>
+          <li><strong>Não cobre:</strong> proteção contra incêndio ou furto, porque o disco costuma ficar na mesma sala.</li>
+        </ul>
+        <p>Por isso ele é uma camada, não a estratégia inteira. O conjunto completo — três cópias, dois tipos de mídia, uma fora do local — está descrito em <Link to="/blog/backup-como-proteger-seus-arquivos" className="text-accent">como proteger seus arquivos</Link>.</p>
+
+        <h2>Configuração em ordem</h2>
+        <table>
+          <thead>
+            <tr><th>Etapa</th><th>Decisão</th><th>Critério</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>1</td><td>Escolher o destino</td><td>Disco externo dedicado ou pasta de rede; nunca outra partição do mesmo disco</td></tr>
+            <tr><td>2</td><td>Dimensionar o espaço</td><td>Pelo menos duas a três vezes o volume dos arquivos, porque versões ocupam</td></tr>
+            <tr><td>3</td><td>Revisar as pastas incluídas</td><td>Conferir se área de trabalho, downloads e pastas de trabalho entraram</td></tr>
+            <tr><td>4</td><td>Excluir o que não vale versionar</td><td>Vídeos brutos, jogos e pastas de cache consomem espaço sem retorno</td></tr>
+            <tr><td>5</td><td>Definir a frequência</td><td>Quanto mais curta, menos trabalho perdido entre uma cópia e outra</td></tr>
+            <tr><td>6</td><td>Definir por quanto tempo manter</td><td>Retenção curta economiza espaço, mas encurta a janela de recuperação</td></tr>
+            <tr><td>7</td><td>Testar a restauração</td><td>Recuperar um arquivo em pasta separada e abri-lo</td></tr>
+          </tbody>
+        </table>
+        <p>A etapa 7 é a única que prova que a configuração funciona. O roteiro completo de verificação está em <Link to="/blog/como-testar-restauracao-de-backup" className="text-accent">como testar se o backup realmente funciona</Link>.</p>
+
+        <h2>Versionamento não é sincronização</h2>
+        <p>Serviço de sincronização espelha o estado atual: se o arquivo foi corrompido ou criptografado, o espelho recebe o estado ruim. Versionamento guarda o antes. É exatamente essa diferença que salva um documento sobrescrito e limita o estrago de uma criptografia maliciosa — contexto detalhado em <Link to="/blog/ransomware-como-proteger-empresa" className="text-accent">ransomware: como proteger a empresa</Link>. Para reduzir o risco, o disco de versões só deve ficar conectado durante a cópia.</p>
+
+        <h2>Quando o disco de destino é o problema</h2>
+        <p>Rotina que "para sozinha" quase sempre é destino ausente, cheio ou com falha. Vale checar o estado do disco antes de culpar o recurso — o caminho está em <Link to="/blog/disco-com-setores-defeituosos-smart-o-que-fazer" className="text-accent">disco com setores defeituosos</Link>. Se a mídia externa entrou em somente leitura, o diagnóstico está em <Link to="/blog/pendrive-somente-leitura-protegido-contra-gravacao" className="text-accent">mídia protegida contra gravação</Link>.</p>
+
+        <h2>Antes de formatar ou trocar de disco</h2>
+        <p>Versões guardadas não substituem a cópia feita especificamente antes de uma intervenção. O critério está em <Link to="/decisoes/backup-antes-da-manutencao" className="text-accent">backup antes da manutenção</Link>, e o procedimento de reinstalação preservando dados em <Link to="/blog/como-formatar-pc-sem-perder-arquivos" className="text-accent">como formatar o PC sem perder arquivos</Link>.</p>
+
+        <h2>O que NÃO fazer</h2>
+        <ul>
+          <li>Apontar o destino para outra partição do mesmo disco físico.</li>
+          <li>Deixar o disco de versões permanentemente conectado quando o risco principal é criptografia maliciosa.</li>
+          <li>Confiar que as pastas certas entraram sem conferir a lista.</li>
+          <li>Tratar versionamento como substituto de imagem do sistema.</li>
+          <li>Ativar e nunca mais olhar: rotina sem verificação é suposição.</li>
+          <li>Reduzir a retenção ao mínimo para economizar espaço em disco pequeno.</li>
+        </ul>
+
+        <h2>Quando parar</h2>
+        <p>Pare se o destino apresentar erro de gravação, se o disco emitir ruído incomum ou se o sistema pedir formatação da mídia de versões. Insistir grava por cima de espaço que ainda pode conter dado recuperável.</p>
+
+        <h2>Quando chamar um técnico</h2>
+        <p>Chame quando houver dados de trabalho envolvidos, quando a rotina falhar de forma recorrente sem causa aparente, quando for preciso desenhar cobertura para mais de um computador ou quando a restauração completa nunca tiver sido cronometrada. Para ambiente com equipe, o desdobramento está em <Link to="/servicos/backup-para-empresas" className="text-accent">backup para empresas</Link>; a avaliação individual, em <Link to="/diagnostico-tecnico" className="text-accent">diagnóstico técnico</Link>.</p>
+      </>
+    ),
+  },
+
 };

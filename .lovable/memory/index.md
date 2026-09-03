@@ -77,3 +77,4 @@
 - [Medição de indexação real](mem://features/medicao-indexacao-gsc-bing) — Ledger GSC+Bing, painel /admin/seo, fail-closed e proibição de prometer indexação.
 - [Taxonomia de entidades](mem://features/taxonomia-entidades) — /entidades + 9 entidades conectadas (definição, problemas, ferramentas, decisões, artigos, fontes, serviços, cidades), DefinedTermSet e gate check:entidades.
 - [Onda 11C — guias técnicos profundos](mem://features/onda-11c-guias-tecnicos) — Manutenção preventiva, USB não reconhecido e teste de restauração de backup; teto de 66 artigos indexáveis.
+- [Onda 11D — guias técnicos profundos](mem://features/onda-11d-guias-tecnicos) — Temperatura, pendrive somente leitura e Histórico de Arquivos; teto de 69 artigos indexáveis.

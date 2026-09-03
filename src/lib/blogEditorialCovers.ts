@@ -431,6 +431,24 @@ export const EDITORIAL_COVERS: Record<string, EditorialCover> = {
     width: 1200,
     height: 630,
   },
+  "como-monitorar-temperatura-do-computador": {
+    src: "/blog/como-monitorar-temperatura-do-computador.jpg",
+    alt: "Conjunto de ventoinha e dissipador de calor removido de um notebook",
+    width: 1200,
+    height: 630,
+  },
+  "pendrive-somente-leitura-protegido-contra-gravacao": {
+    src: "/blog/pendrive-somente-leitura-protegido-contra-gravacao.jpg",
+    alt: "Pendrive com chave lateral de proteção contra gravação visível",
+    width: 1200,
+    height: 630,
+  },
+  "historico-de-arquivos-windows-como-configurar": {
+    src: "/blog/historico-de-arquivos-windows-como-configurar.jpg",
+    alt: "HD externo portátil conectado por cabo USB sobre uma mesa",
+    width: 1200,
+    height: 630,
+  },
 };
 
 export function getEditorialCover(slug: string): EditorialCover | undefined {

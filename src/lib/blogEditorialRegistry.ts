@@ -1040,6 +1040,52 @@ const WAVE_11C: EditorialApproval[] = [
   },
 ];
 
+// ── Onda 11D — guias técnicos profundos (térmica, mídia removível e versões).
+const WAVE_11D: EditorialApproval[] = [
+  {
+    slug: "como-monitorar-temperatura-do-computador",
+    status: "approved",
+    authorType: "organization",
+    authorId: INSTITUTIONAL_AUTHOR.id,
+    reviewedAt: "2026-09-03",
+    approvedAt: "2026-09-03",
+    imageOrigin: "licensed",
+    imageLicense: "CC BY-SA 4.0",
+    imageAttribution:
+      "Foto: Siarhei Besarab (Wikimedia Commons), CC BY-SA 4.0 — https://commons.wikimedia.org/wiki/File:ThinkPad_X220_CPU_cooling_system_(fan_and_heatsink_assembly).jpg",
+    notes:
+      "Guia de medição térmica escrito do zero na Onda 11D: método de leitura em repouso e sob carga, leitura de throttling e comparação com o próprio histórico; não repete o roteiro de superaquecimento nem os procedimentos de limpeza e pasta térmica. Capa é fotografia real licenciada, sem IA.",
+  },
+  {
+    slug: "pendrive-somente-leitura-protegido-contra-gravacao",
+    status: "approved",
+    authorType: "organization",
+    authorId: INSTITUTIONAL_AUTHOR.id,
+    reviewedAt: "2026-09-03",
+    approvedAt: "2026-09-03",
+    imageOrigin: "licensed",
+    imageLicense: "Free Art License 1.3",
+    imageAttribution:
+      "Foto: smial (Wikimedia Commons), Free Art License 1.3 — https://commons.wikimedia.org/wiki/File:USB_stick_with_write_protection_IMGP7832_wp.jpg",
+    notes:
+      "Diagnóstico de mídia removível em somente leitura, escrito do zero na Onda 11D: separa trava física, política do sistema, sistema de arquivos danificado e memória em fim de vida, com cópia obrigatória antes de qualquer correção. Não canibaliza o guia geral de USB não reconhecido. Capa é fotografia real licenciada, sem IA.",
+  },
+  {
+    slug: "historico-de-arquivos-windows-como-configurar",
+    status: "approved",
+    authorType: "organization",
+    authorId: INSTITUTIONAL_AUTHOR.id,
+    reviewedAt: "2026-09-03",
+    approvedAt: "2026-09-03",
+    imageOrigin: "licensed",
+    imageLicense: "CC BY-SA 4.0",
+    imageAttribution:
+      "Foto: Sam Frazier (Wikimedia Commons), CC BY-SA 4.0 — https://commons.wikimedia.org/wiki/File:External_portable_hard_drive.jpg",
+    notes:
+      "Procedimento de versionamento nativo do Windows, escrito do zero na Onda 11D: escopo real do recurso, dimensionamento do destino, retenção e diferença entre versionar e sincronizar. O teste de restauração permanece no artigo próprio. Capa é fotografia real licenciada, sem IA.",
+  },
+];
+
 export const APPROVED_EDITORIAL_CONTENT = new Map<string, EditorialApproval>([
 
   ...FIRST_WAVE_SLUGS.map((slug) => [
@@ -1092,6 +1138,7 @@ export const APPROVED_EDITORIAL_CONTENT = new Map<string, EditorialApproval>([
   ...WAVE_10G.map((a) => [a.slug, a] as [string, EditorialApproval]),
   ...WAVE_11A.map((a) => [a.slug, a] as [string, EditorialApproval]),
   ...WAVE_11C.map((a) => [a.slug, a] as [string, EditorialApproval]),
+  ...WAVE_11D.map((a) => [a.slug, a] as [string, EditorialApproval]),
 ]);
 
 

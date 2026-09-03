@@ -904,6 +904,36 @@ export const ARTICLE_SOURCE_MANIFEST: Record<string, ArticleSourceManifest> = {
     notes:
       "Revisão concluída (Onda 11C): roteiro de restauração em local separado, distinção entre sincronização e backup versionado, prática de três cópias em dois tipos de mídia com uma fora do local e registro do tempo de restauração. Sem citar produto ou fornecedor. Conhecimento técnico estável — sem fonte visível.",
   },
+  "como-monitorar-temperatura-do-computador": {
+    slug: "como-monitorar-temperatura-do-computador",
+    sources: [],
+    technicalReview: "reviewed",
+    factChecked: true,
+    factCheckedAt: "2026-09-03",
+    stableKnowledge: true,
+    notes:
+      "Revisão concluída (Onda 11D): método de medição em repouso e sob carga com registro da temperatura ambiente, leitura de redução de frequência por calor, causas físicas mais frequentes e proibição de desativar proteção térmica. Sem número absoluto apresentado como limite universal. Conhecimento técnico estável — sem fonte visível.",
+  },
+  "pendrive-somente-leitura-protegido-contra-gravacao": {
+    slug: "pendrive-somente-leitura-protegido-contra-gravacao",
+    sources: [],
+    technicalReview: "reviewed",
+    factChecked: true,
+    factCheckedAt: "2026-09-03",
+    stableKnowledge: true,
+    notes:
+      "Revisão concluída (Onda 11D): quatro origens do estado somente leitura, sequência de isolamento com cópia dos dados antes de qualquer correção, limite real da formatação e parada obrigatória diante de sinais de falha de controlador. Sem indicar utilitário de terceiros. Conhecimento técnico estável — sem fonte visível.",
+  },
+  "historico-de-arquivos-windows-como-configurar": {
+    slug: "historico-de-arquivos-windows-como-configurar",
+    sources: [],
+    technicalReview: "reviewed",
+    factChecked: true,
+    factCheckedAt: "2026-09-03",
+    stableKnowledge: true,
+    notes:
+      "Revisão concluída (Onda 11D): escopo real do versionamento nativo (pastas de usuário, não sistema), destino em disco físico separado, dimensionamento e retenção, diferença entre versionar e sincronizar e teste de restauração como etapa final. Conhecimento técnico estável — sem fonte visível.",
+  },
 };
 
 

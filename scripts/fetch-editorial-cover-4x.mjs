@@ -257,6 +257,19 @@ const CURADORIA = [
     slug: "como-testar-restauracao-de-backup",
     commons: "File:DVD, USB flash drive and external hard drive.jpg",
   },
+  // ── Onda 11D — guias técnicos profundos (térmica, mídia removível e versões).
+  {
+    slug: "como-monitorar-temperatura-do-computador",
+    commons: "File:ThinkPad X220 CPU cooling system (fan and heatsink assembly).jpg",
+  },
+  {
+    slug: "pendrive-somente-leitura-protegido-contra-gravacao",
+    commons: "File:USB stick with write protection IMGP7832 wp.jpg",
+  },
+  {
+    slug: "historico-de-arquivos-windows-como-configurar",
+    commons: "File:External portable hard drive.jpg",
+  },
 ];
 
 /** Metadados + URL de uma imagem do Wikimedia Commons (licença real, sem IA). */

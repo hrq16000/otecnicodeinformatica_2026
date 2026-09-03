@@ -1,15 +1,15 @@
 {
-  "geradoEm": "2026-09-03T15:53:49.226Z",
+  "geradoEm": "2026-09-03T16:35:32.750Z",
   "host": "otecnicodeinformatica.com.br",
   "modo": "generate",
   "sitemap": {
     "url": "https://otecnicodeinformatica.com.br/sitemap.xml",
-    "totalUrls": 235,
+    "totalUrls": 238,
     "googleSearchConsole": "NOT_REQUESTED",
     "indexNow": "NOT_REQUESTED"
   },
   "lotes": {
-    "total": 66,
+    "total": 69,
     "itens": [
       {
         "slug": "quando-trocar-hd-por-ssd",
@@ -406,11 +406,33 @@
         "url": "/blog/como-testar-restauracao-de-backup",
         "approvedAt": "2026-09-03",
         "includeInSitemap": true
+      },
+      {
+        "slug": "como-monitorar-temperatura-do-computador",
+        "url": "/blog/como-monitorar-temperatura-do-computador",
+        "approvedAt": "2026-09-03",
+        "includeInSitemap": true
+      },
+      {
+        "slug": "pendrive-somente-leitura-protegido-contra-gravacao",
+        "url": "/blog/pendrive-somente-leitura-protegido-contra-gravacao",
+        "approvedAt": "2026-09-03",
+        "includeInSitemap": true
+      },
+      {
+        "slug": "historico-de-arquivos-windows-como-configurar",
+        "url": "/blog/historico-de-arquivos-windows-como-configurar",
+        "approvedAt": "2026-09-03",
+        "includeInSitemap": true
       }
     ]
   },
   "diff": {
-    "adicionadas": [],
+    "adicionadas": [
+      "/blog/como-monitorar-temperatura-do-computador",
+      "/blog/historico-de-arquivos-windows-como-configurar",
+      "/blog/pendrive-somente-leitura-protegido-contra-gravacao"
+    ],
     "removidas": [],
     "regressoes": []
   },
@@ -1373,6 +1395,46 @@
         "adicionadas": [],
         "removidas": [],
         "total": 235
+      },
+      "error": null
+    },
+    {
+      "id": "ff97ebc0-091a-4b3d-8340-46eb37099ee4",
+      "action": "sync_approved",
+      "status": "OK",
+      "source": "cli",
+      "timestamp": "2026-09-03T16:35:32.897Z",
+      "details": {
+        "modo": "write",
+        "saida": "sitemap editorial: em dia (69 artigos indexáveis)"
+      },
+      "error": null
+    },
+    {
+      "id": "0cfb3423-7ab5-4e0b-b128-765ddfef7b6a",
+      "action": "generate_sitemaps",
+      "status": "OK",
+      "source": "cli",
+      "timestamp": "2026-09-03T16:35:33.070Z",
+      "details": {
+        "saida": "sitemap curado: index + 8 sub-sitemaps (238 urls)"
+      },
+      "error": null
+    },
+    {
+      "id": "0933d20e-8dfb-4276-b8aa-0240edf90a1d",
+      "action": "diff_no_regression",
+      "status": "OK",
+      "source": "cli",
+      "timestamp": "2026-09-03T16:35:33.086Z",
+      "details": {
+        "adicionadas": [
+          "/blog/como-monitorar-temperatura-do-computador",
+          "/blog/historico-de-arquivos-windows-como-configurar",
+          "/blog/pendrive-somente-leitura-protegido-contra-gravacao"
+        ],
+        "removidas": [],
+        "total": 238
       },
       "error": null
     }
