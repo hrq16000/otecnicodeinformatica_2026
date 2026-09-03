@@ -8,7 +8,7 @@
     "REMOVIDA": 0,
     "PENDENTE": 0
   },
-  "urlsCuradas": 244,
+  "urlsCuradas": 247,
   "familias": [
     {
       "id": "garantia",
@@ -1567,6 +1567,18 @@
       }
     },
     {
+      "path": "/blog/arquivo-corrompido-nao-abre-o-que-fazer",
+      "curada": true,
+      "total": 0,
+      "porClasse": {
+        "COMPROVADA": 0,
+        "INSTITUCIONAL": 0,
+        "CONDICIONAL": 0,
+        "REMOVIDA": 0,
+        "PENDENTE": 0
+      }
+    },
+    {
       "path": "/blog/backup-como-proteger-seus-arquivos",
       "curada": true,
       "total": 0,
@@ -2335,6 +2347,18 @@
       }
     },
     {
+      "path": "/blog/rede-wifi-nao-aparece-na-lista-o-que-verificar",
+      "curada": true,
+      "total": 0,
+      "porClasse": {
+        "COMPROVADA": 0,
+        "INSTITUCIONAL": 0,
+        "CONDICIONAL": 0,
+        "REMOVIDA": 0,
+        "PENDENTE": 0
+      }
+    },
+    {
       "path": "/blog/servico-de-audio-do-windows-nao-esta-em-execucao",
       "curada": true,
       "total": 0,
@@ -2384,6 +2408,18 @@
     },
     {
       "path": "/blog/troquei-o-ssd-e-o-pc-so-abre-a-bios",
+      "curada": true,
+      "total": 0,
+      "porClasse": {
+        "COMPROVADA": 0,
+        "INSTITUCIONAL": 0,
+        "CONDICIONAL": 0,
+        "REMOVIDA": 0,
+        "PENDENTE": 0
+      }
+    },
+    {
+      "path": "/blog/ventoinha-do-computador-fazendo-barulho-o-que-verificar",
       "curada": true,
       "total": 0,
       "porClasse": {
