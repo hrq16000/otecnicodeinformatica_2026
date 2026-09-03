@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-09-03T18:27:37.855Z",
+  "geradoEm": "2026-09-03T18:38:05.605Z",
   "fonte": {
     "html": "SSR harness",
     "dist": "dist"
@@ -8,11 +8,11 @@
   "analisadas": 78,
   "falhas": 0,
   "medias": {
-    "palavras": 1406.88,
-    "densidadeSemantica": 57.54,
-    "densidadeKeywordPrincipal": 0.42,
-    "linksInternosSaida": 11.19,
-    "linksInternosEntrada": 2.86
+    "palavras": 1449.04,
+    "densidadeSemantica": 56.81,
+    "densidadeKeywordPrincipal": 0.43,
+    "linksInternosSaida": 11.49,
+    "linksInternosEntrada": 3.03
   },
   "orfas": [
     "/blog/como-conectar-wifi-tv-nao-conecta",
@@ -22,8 +22,6 @@
     "/blog/bateria-de-notebook-nao-carrega-o-que-verificar",
     "/blog/como-migrar-arquivos-para-um-computador-novo",
     "/blog/teclado-de-notebook-nao-funciona-o-que-verificar",
-    "/blog/computador-desliga-sozinho-o-que-verificar",
-    "/blog/computador-nao-conecta-na-internet-por-cabo",
     "/blog/ventoinha-do-computador-fazendo-barulho-o-que-verificar",
     "/blog/rede-wifi-nao-aparece-na-lista-o-que-verificar",
     "/blog/arquivo-corrompido-nao-abre-o-que-fazer"
@@ -859,14 +857,15 @@
         "/blog/computador-lento-causas-solucoes",
         "/blog/quando-trocar-hd-por-ssd"
       ],
-      "linksInternosEntrada": 6,
+      "linksInternosEntrada": 7,
       "origensEntrada": [
         "/blog/notebook-nao-liga-o-que-fazer",
         "/blog/como-limpar-notebook-por-dentro",
         "/blog/como-trocar-pasta-termica-notebook",
         "/blog/como-monitorar-temperatura-do-computador",
         "/blog/bateria-de-notebook-nao-carrega-o-que-verificar",
-        "/blog/computador-desliga-sozinho-o-que-verificar"
+        "/blog/computador-desliga-sozinho-o-que-verificar",
+        "/blog/ventoinha-do-computador-fazendo-barulho-o-que-verificar"
       ],
       "erro": null
     },
@@ -2147,7 +2146,7 @@
         "/ferramentas/verificador-de-backup",
         "/glossario/smart"
       ],
-      "linksInternosEntrada": 9,
+      "linksInternosEntrada": 10,
       "origensEntrada": [
         "/blog/como-clonar-hd-para-ssd",
         "/blog/computador-entra-direto-na-bios",
@@ -2157,7 +2156,8 @@
         "/blog/disco-com-setores-defeituosos-smart-o-que-fazer",
         "/blog/como-testar-restauracao-de-backup",
         "/blog/pendrive-somente-leitura-protegido-contra-gravacao",
-        "/blog/como-migrar-arquivos-para-um-computador-novo"
+        "/blog/como-migrar-arquivos-para-um-computador-novo",
+        "/blog/arquivo-corrompido-nao-abre-o-que-fazer"
       ],
       "erro": null
     },
@@ -2467,12 +2467,13 @@
         "/entidades/wifi",
         "/glossario/dns"
       ],
-      "linksInternosEntrada": 4,
+      "linksInternosEntrada": 5,
       "origensEntrada": [
         "/blog/como-saber-quem-esta-usando-meu-wifi",
         "/blog/como-proteger-computador-golpes-internet",
         "/blog/como-aprender-informatica",
-        "/blog/computador-nao-conecta-na-internet-por-cabo"
+        "/blog/computador-nao-conecta-na-internet-por-cabo",
+        "/blog/rede-wifi-nao-aparece-na-lista-o-que-verificar"
       ],
       "erro": null
     },
@@ -3093,7 +3094,7 @@
         "/decisoes/consertar-ou-substituir",
         "/glossario/thermal-throttling"
       ],
-      "linksInternosEntrada": 7,
+      "linksInternosEntrada": 8,
       "origensEntrada": [
         "/blog/como-trocar-pasta-termica-notebook",
         "/blog/windows-11-lento-como-resolver",
@@ -3101,7 +3102,8 @@
         "/blog/como-monitorar-temperatura-do-computador",
         "/blog/bateria-de-notebook-nao-carrega-o-que-verificar",
         "/blog/teclado-de-notebook-nao-funciona-o-que-verificar",
-        "/blog/computador-desliga-sozinho-o-que-verificar"
+        "/blog/computador-desliga-sozinho-o-que-verificar",
+        "/blog/ventoinha-do-computador-fazendo-barulho-o-que-verificar"
       ],
       "erro": null
     },
@@ -3255,12 +3257,13 @@
         "/decisoes/consertar-ou-substituir",
         "/glossario/thermal-throttling"
       ],
-      "linksInternosEntrada": 4,
+      "linksInternosEntrada": 5,
       "origensEntrada": [
         "/blog/como-limpar-notebook-por-dentro",
         "/blog/manutencao-preventiva-de-computador-guia-completo",
         "/blog/como-monitorar-temperatura-do-computador",
-        "/blog/computador-desliga-sozinho-o-que-verificar"
+        "/blog/computador-desliga-sozinho-o-que-verificar",
+        "/blog/ventoinha-do-computador-fazendo-barulho-o-que-verificar"
       ],
       "erro": null
     },
@@ -7391,9 +7394,10 @@
         "/entidades/wifi",
         "/glossario/dns"
       ],
-      "linksInternosEntrada": 1,
+      "linksInternosEntrada": 2,
       "origensEntrada": [
-        "/blog/computador-nao-conecta-na-internet-por-cabo"
+        "/blog/computador-nao-conecta-na-internet-por-cabo",
+        "/blog/rede-wifi-nao-aparece-na-lista-o-que-verificar"
       ],
       "erro": null
     },
@@ -8176,12 +8180,13 @@
         "/ferramentas/verificador-de-backup",
         "/glossario/smart"
       ],
-      "linksInternosEntrada": 4,
+      "linksInternosEntrada": 5,
       "origensEntrada": [
         "/blog/windows-reparo-automatico-em-loop",
         "/blog/manutencao-preventiva-de-computador-guia-completo",
         "/blog/historico-de-arquivos-windows-como-configurar",
-        "/blog/como-migrar-arquivos-para-um-computador-novo"
+        "/blog/como-migrar-arquivos-para-um-computador-novo",
+        "/blog/arquivo-corrompido-nao-abre-o-que-fazer"
       ],
       "erro": null
     },
@@ -10209,10 +10214,11 @@
         "/diagnostico-tecnico",
         "/servicos/manutencao-de-computador"
       ],
-      "linksInternosEntrada": 2,
+      "linksInternosEntrada": 3,
       "origensEntrada": [
         "/blog/como-monitorar-temperatura-do-computador",
-        "/blog/teclado-de-notebook-nao-funciona-o-que-verificar"
+        "/blog/teclado-de-notebook-nao-funciona-o-que-verificar",
+        "/blog/ventoinha-do-computador-fazendo-barulho-o-que-verificar"
       ],
       "erro": null
     },
@@ -10521,12 +10527,13 @@
         "/servicos/recuperacao-de-dados",
         "/diagnostico-tecnico"
       ],
-      "linksInternosEntrada": 4,
+      "linksInternosEntrada": 5,
       "origensEntrada": [
         "/blog/manutencao-preventiva-de-computador-guia-completo",
         "/blog/pendrive-somente-leitura-protegido-contra-gravacao",
         "/blog/historico-de-arquivos-windows-como-configurar",
-        "/blog/como-migrar-arquivos-para-um-computador-novo"
+        "/blog/como-migrar-arquivos-para-um-computador-novo",
+        "/blog/arquivo-corrompido-nao-abre-o-que-fazer"
       ],
       "erro": null
     },
@@ -10681,10 +10688,11 @@
         "/servicos/manutencao-de-computador",
         "/decisoes/backup-antes-da-manutencao"
       ],
-      "linksInternosEntrada": 2,
+      "linksInternosEntrada": 3,
       "origensEntrada": [
         "/blog/bateria-de-notebook-nao-carrega-o-que-verificar",
-        "/blog/computador-desliga-sozinho-o-que-verificar"
+        "/blog/computador-desliga-sozinho-o-que-verificar",
+        "/blog/ventoinha-do-computador-fazendo-barulho-o-que-verificar"
       ],
       "erro": null
     },
@@ -10992,9 +11000,10 @@
         "/diagnostico-tecnico",
         "/decisoes/nuvem-ou-hd-externo"
       ],
-      "linksInternosEntrada": 1,
+      "linksInternosEntrada": 2,
       "origensEntrada": [
-        "/blog/como-migrar-arquivos-para-um-computador-novo"
+        "/blog/como-migrar-arquivos-para-um-computador-novo",
+        "/blog/arquivo-corrompido-nao-abre-o-que-fazer"
       ],
       "erro": null
     },
@@ -11757,8 +11766,10 @@
         "/servicos/manutencao-de-computador",
         "/decisoes/backup-antes-da-manutencao"
       ],
-      "linksInternosEntrada": 0,
-      "origensEntrada": [],
+      "linksInternosEntrada": 1,
+      "origensEntrada": [
+        "/blog/ventoinha-do-computador-fazendo-barulho-o-que-verificar"
+      ],
       "erro": null
     },
     {
@@ -11909,8 +11920,10 @@
         "/diagnostico-tecnico",
         "/servicos/suporte-tecnico-empresarial"
       ],
-      "linksInternosEntrada": 0,
-      "origensEntrada": [],
+      "linksInternosEntrada": 1,
+      "origensEntrada": [
+        "/blog/rede-wifi-nao-aparece-na-lista-o-que-verificar"
+      ],
       "erro": null
     },
     {
@@ -11918,131 +11931,149 @@
       "slug": "ventoinha-do-computador-fazendo-barulho-o-que-verificar",
       "lote": "11A/8",
       "aprovadoEm": "2026-09-03",
-      "titulo": null,
-      "palavras": 42,
-      "termosUteis": 22,
-      "densidadeSemantica": 72.73,
-      "vocabulario": 16,
+      "titulo": "Ventoinha fazendo barulho: o que o som indica antes de trocar peça",
+      "palavras": 1141,
+      "termosUteis": 677,
+      "densidadeSemantica": 54.8,
+      "vocabulario": 371,
       "keywordPrincipal": {
         "termo": "ventoinha do computador fazendo barulho o que verificar",
-        "ocorrencias": 0,
-        "densidade": 0
+        "ocorrencias": 2,
+        "densidade": 0.3
       },
       "topKeywords": [
         {
-          "termo": "pagina",
-          "ocorrencias": 3,
-          "densidade": 13.64
+          "termo": "ventoinha",
+          "ocorrencias": 17,
+          "densidade": 2.51
         },
         {
-          "termo": "atendimento",
-          "ocorrencias": 2,
-          "densidade": 9.09
+          "termo": "ruido",
+          "ocorrencias": 14,
+          "densidade": 2.07
         },
         {
-          "termo": "falar",
-          "ocorrencias": 2,
-          "densidade": 9.09
+          "termo": "temperatura",
+          "ocorrencias": 14,
+          "densidade": 2.07
         },
         {
-          "termo": "inicial",
-          "ocorrencias": 2,
-          "densidade": 9.09
+          "termo": "rotacao",
+          "ocorrencias": 13,
+          "densidade": 1.92
         },
         {
-          "termo": "servicos",
-          "ocorrencias": 2,
-          "densidade": 9.09
+          "termo": "rolamento",
+          "ocorrencias": 9,
+          "densidade": 1.33
         },
         {
-          "termo": "acessado",
-          "ocorrencias": 1,
-          "densidade": 4.55
+          "termo": "equipamento",
+          "ocorrencias": 8,
+          "densidade": 1.18
         },
         {
-          "termo": "consultar",
-          "ocorrencias": 1,
-          "densidade": 4.55
+          "termo": "limpeza",
+          "ocorrencias": 8,
+          "densidade": 1.18
         },
         {
-          "termo": "disponiveis",
-          "ocorrencias": 1,
-          "densidade": 4.55
+          "termo": "som",
+          "ocorrencias": 8,
+          "densidade": 1.18
         },
         {
-          "termo": "encontrada",
-          "ocorrencias": 1,
-          "densidade": 4.55
+          "termo": "tecnico",
+          "ocorrencias": 8,
+          "densidade": 1.18
         },
         {
-          "termo": "endereco",
-          "ocorrencias": 1,
-          "densidade": 4.55
+          "termo": "barulho",
+          "ocorrencias": 7,
+          "densidade": 1.03
         },
         {
-          "termo": "erro",
-          "ocorrencias": 1,
-          "densidade": 4.55
+          "termo": "calor",
+          "ocorrencias": 7,
+          "densidade": 1.03
         },
         {
-          "termo": "existe",
-          "ocorrencias": 1,
-          "densidade": 4.55
+          "termo": "helice",
+          "ocorrencias": 7,
+          "densidade": 1.03
         }
       ],
       "topBigramas": [
         {
-          "termo": "falar atendimento",
+          "termo": "fim vida",
+          "ocorrencias": 4,
+          "densidade": 0.59
+        },
+        {
+          "termo": "chiado agudo",
+          "ocorrencias": 3,
+          "densidade": 0.44
+        },
+        {
+          "termo": "limpeza resolve",
+          "ocorrencias": 3,
+          "densidade": 0.44
+        },
+        {
+          "termo": "manutencao preventiva",
+          "ocorrencias": 3,
+          "densidade": 0.44
+        },
+        {
+          "termo": "vem acompanhado",
+          "ocorrencias": 3,
+          "densidade": 0.44
+        },
+        {
+          "termo": "alto porem",
           "ocorrencias": 2,
-          "densidade": 9.52
+          "densidade": 0.3
         },
         {
-          "termo": "pagina inicial",
+          "termo": "barulho som",
           "ocorrencias": 2,
-          "densidade": 9.52
+          "densidade": 0.3
         },
         {
-          "termo": "acessado existe",
-          "ocorrencias": 1,
-          "densidade": 4.76
-        },
-        {
-          "termo": "atendimento pagina",
-          "ocorrencias": 1,
-          "densidade": 4.76
-        },
-        {
-          "termo": "consultar lista",
-          "ocorrencias": 1,
-          "densidade": 4.76
-        },
-        {
-          "termo": "disponiveis falar",
-          "ocorrencias": 1,
-          "densidade": 4.76
-        },
-        {
-          "termo": "encontrada endereco",
-          "ocorrencias": 1,
-          "densidade": 4.76
-        },
-        {
-          "termo": "endereco acessado",
-          "ocorrencias": 1,
-          "densidade": 4.76
+          "termo": "chamar tecnico",
+          "ocorrencias": 2,
+          "densidade": 0.3
         }
       ],
       "headings": {
-        "h2": 0,
+        "h2": 12,
         "h3": 0
       },
       "schemas": [
         "Organization",
-        "WebSite"
+        "WebSite",
+        "BreadcrumbList",
+        "BlogPosting",
+        "Article",
+        "TechArticle",
+        "LocalBusiness",
+        "ProfessionalService",
+        "ComputerRepairService",
+        "ItemList",
+        "FAQPage"
       ],
-      "linksInternosSaida": 1,
+      "linksInternosSaida": 10,
       "linksSaida": [
-        "/servicos"
+        "/blog",
+        "/contato",
+        "/blog/como-monitorar-temperatura-do-computador",
+        "/blog/como-limpar-notebook-por-dentro",
+        "/blog/manutencao-preventiva-de-computador-guia-completo",
+        "/blog/como-trocar-pasta-termica-notebook",
+        "/blog/notebook-superaquecendo-o-que-fazer",
+        "/blog/computador-desliga-sozinho-o-que-verificar",
+        "/diagnostico-tecnico",
+        "/servicos/manutencao-de-computador"
       ],
       "linksInternosEntrada": 0,
       "origensEntrada": [],
@@ -12053,11 +12084,11 @@
       "slug": "rede-wifi-nao-aparece-na-lista-o-que-verificar",
       "lote": "11A/8",
       "aprovadoEm": "2026-09-03",
-      "titulo": null,
-      "palavras": 42,
-      "termosUteis": 22,
-      "densidadeSemantica": 72.73,
-      "vocabulario": 16,
+      "titulo": "Rede Wi-Fi não aparece na lista: o que verificar antes de trocar o…",
+      "palavras": 1161,
+      "termosUteis": 641,
+      "densidadeSemantica": 51.64,
+      "vocabulario": 331,
       "keywordPrincipal": {
         "termo": "rede wifi nao aparece na lista o que verificar",
         "ocorrencias": 0,
@@ -12065,119 +12096,135 @@
       },
       "topKeywords": [
         {
-          "termo": "pagina",
-          "ocorrencias": 3,
-          "densidade": 13.64
+          "termo": "rede",
+          "ocorrencias": 38,
+          "densidade": 5.93
         },
         {
-          "termo": "atendimento",
-          "ocorrencias": 2,
-          "densidade": 9.09
+          "termo": "roteador",
+          "ocorrencias": 17,
+          "densidade": 2.65
         },
         {
-          "termo": "falar",
-          "ocorrencias": 2,
-          "densidade": 9.09
+          "termo": "aparece",
+          "ocorrencias": 15,
+          "densidade": 2.34
         },
         {
-          "termo": "inicial",
-          "ocorrencias": 2,
-          "densidade": 9.09
+          "termo": "redes",
+          "ocorrencias": 12,
+          "densidade": 1.87
         },
         {
-          "termo": "servicos",
-          "ocorrencias": 2,
-          "densidade": 9.09
+          "termo": "wi-fi",
+          "ocorrencias": 10,
+          "densidade": 1.56
         },
         {
-          "termo": "acessado",
-          "ocorrencias": 1,
-          "densidade": 4.55
+          "termo": "dispositivo",
+          "ocorrencias": 9,
+          "densidade": 1.4
         },
         {
-          "termo": "consultar",
-          "ocorrencias": 1,
-          "densidade": 4.55
+          "termo": "ghz",
+          "ocorrencias": 9,
+          "densidade": 1.4
         },
         {
-          "termo": "disponiveis",
-          "ocorrencias": 1,
-          "densidade": 4.55
+          "termo": "adaptador",
+          "ocorrencias": 8,
+          "densidade": 1.25
         },
         {
-          "termo": "encontrada",
-          "ocorrencias": 1,
-          "densidade": 4.55
+          "termo": "nome",
+          "ocorrencias": 8,
+          "densidade": 1.25
         },
         {
-          "termo": "endereco",
-          "ocorrencias": 1,
-          "densidade": 4.55
+          "termo": "problema",
+          "ocorrencias": 8,
+          "densidade": 1.25
         },
         {
-          "termo": "erro",
-          "ocorrencias": 1,
-          "densidade": 4.55
+          "termo": "banda",
+          "ocorrencias": 7,
+          "densidade": 1.09
         },
         {
-          "termo": "existe",
-          "ocorrencias": 1,
-          "densidade": 4.55
+          "termo": "canal",
+          "ocorrencias": 7,
+          "densidade": 1.09
         }
       ],
       "topBigramas": [
         {
-          "termo": "falar atendimento",
-          "ocorrencias": 2,
-          "densidade": 9.52
+          "termo": "rede aparece",
+          "ocorrencias": 9,
+          "densidade": 1.41
         },
         {
-          "termo": "pagina inicial",
-          "ocorrencias": 2,
-          "densidade": 9.52
+          "termo": "nenhuma rede",
+          "ocorrencias": 5,
+          "densidade": 0.78
         },
         {
-          "termo": "acessado existe",
-          "ocorrencias": 1,
-          "densidade": 4.76
+          "termo": "aparece lista",
+          "ocorrencias": 4,
+          "densidade": 0.63
         },
         {
-          "termo": "atendimento pagina",
-          "ocorrencias": 1,
-          "densidade": 4.76
+          "termo": "modo aviao",
+          "ocorrencias": 4,
+          "densidade": 0.63
         },
         {
-          "termo": "consultar lista",
-          "ocorrencias": 1,
-          "densidade": 4.76
+          "termo": "nome rede",
+          "ocorrencias": 4,
+          "densidade": 0.63
         },
         {
-          "termo": "disponiveis falar",
-          "ocorrencias": 1,
-          "densidade": 4.76
+          "termo": "trocar roteador",
+          "ocorrencias": 4,
+          "densidade": 0.63
         },
         {
-          "termo": "encontrada endereco",
-          "ocorrencias": 1,
-          "densidade": 4.76
+          "termo": "banda canal",
+          "ocorrencias": 3,
+          "densidade": 0.47
         },
         {
-          "termo": "endereco acessado",
-          "ocorrencias": 1,
-          "densidade": 4.76
+          "termo": "dispositivo enxerga",
+          "ocorrencias": 3,
+          "densidade": 0.47
         }
       ],
       "headings": {
-        "h2": 0,
+        "h2": 12,
         "h3": 0
       },
       "schemas": [
         "Organization",
-        "WebSite"
+        "WebSite",
+        "BreadcrumbList",
+        "BlogPosting",
+        "Article",
+        "TechArticle",
+        "LocalBusiness",
+        "ProfessionalService",
+        "ComputerRepairService",
+        "ItemList",
+        "FAQPage"
       ],
-      "linksInternosSaida": 1,
+      "linksInternosSaida": 8,
       "linksSaida": [
-        "/servicos"
+        "/blog",
+        "/contato",
+        "/blog/computador-nao-conecta-na-internet-por-cabo",
+        "/blog/como-configurar-roteador-wifi-iniciantes",
+        "/blog/como-configurar-repetidor-wifi",
+        "/blog/internet-lenta-provedor-ou-roteador",
+        "/servicos/redes-e-wifi",
+        "/servicos/suporte-tecnico-empresarial"
       ],
       "linksInternosEntrada": 0,
       "origensEntrada": [],
@@ -12188,131 +12235,147 @@
       "slug": "arquivo-corrompido-nao-abre-o-que-fazer",
       "lote": "11A/8",
       "aprovadoEm": "2026-09-03",
-      "titulo": null,
-      "palavras": 42,
-      "termosUteis": 22,
-      "densidadeSemantica": 72.73,
-      "vocabulario": 16,
+      "titulo": "Arquivo corrompido não abre: o que fazer sem piorar o caso",
+      "palavras": 1112,
+      "termosUteis": 635,
+      "densidadeSemantica": 54.49,
+      "vocabulario": 346,
       "keywordPrincipal": {
         "termo": "arquivo corrompido nao abre o que fazer",
-        "ocorrencias": 0,
-        "densidade": 0
+        "ocorrencias": 4,
+        "densidade": 0.63
       },
       "topKeywords": [
         {
-          "termo": "pagina",
-          "ocorrencias": 3,
-          "densidade": 13.64
+          "termo": "arquivo",
+          "ocorrencias": 22,
+          "densidade": 3.46
         },
         {
-          "termo": "atendimento",
-          "ocorrencias": 2,
-          "densidade": 9.09
+          "termo": "copia",
+          "ocorrencias": 14,
+          "densidade": 2.2
         },
         {
-          "termo": "falar",
-          "ocorrencias": 2,
-          "densidade": 9.09
+          "termo": "arquivos",
+          "ocorrencias": 10,
+          "densidade": 1.57
         },
         {
-          "termo": "inicial",
-          "ocorrencias": 2,
-          "densidade": 9.09
+          "termo": "conteudo",
+          "ocorrencias": 10,
+          "densidade": 1.57
         },
         {
-          "termo": "servicos",
-          "ocorrencias": 2,
-          "densidade": 9.09
+          "termo": "midia",
+          "ocorrencias": 10,
+          "densidade": 1.57
         },
         {
-          "termo": "acessado",
-          "ocorrencias": 1,
-          "densidade": 4.55
+          "termo": "recuperacao",
+          "ocorrencias": 10,
+          "densidade": 1.57
         },
         {
-          "termo": "consultar",
-          "ocorrencias": 1,
-          "densidade": 4.55
+          "termo": "tentativa",
+          "ocorrencias": 9,
+          "densidade": 1.42
         },
         {
-          "termo": "disponiveis",
-          "ocorrencias": 1,
-          "densidade": 4.55
+          "termo": "programa",
+          "ocorrencias": 8,
+          "densidade": 1.26
         },
         {
-          "termo": "encontrada",
-          "ocorrencias": 1,
-          "densidade": 4.55
+          "termo": "unidade",
+          "ocorrencias": 8,
+          "densidade": 1.26
         },
         {
-          "termo": "endereco",
-          "ocorrencias": 1,
-          "densidade": 4.55
+          "termo": "abre",
+          "ocorrencias": 7,
+          "densidade": 1.1
         },
         {
-          "termo": "erro",
-          "ocorrencias": 1,
-          "densidade": 4.55
+          "termo": "backup",
+          "ocorrencias": 7,
+          "densidade": 1.1
         },
         {
-          "termo": "existe",
-          "ocorrencias": 1,
-          "densidade": 4.55
+          "termo": "dados",
+          "ocorrencias": 7,
+          "densidade": 1.1
         }
       ],
       "topBigramas": [
         {
-          "termo": "falar atendimento",
+          "termo": "varios arquivos",
+          "ocorrencias": 4,
+          "densidade": 0.63
+        },
+        {
+          "termo": "arquivo abre",
+          "ocorrencias": 3,
+          "densidade": 0.47
+        },
+        {
+          "termo": "arquivo corrompido",
+          "ocorrencias": 3,
+          "densidade": 0.47
+        },
+        {
+          "termo": "arquivo unidade",
+          "ocorrencias": 3,
+          "densidade": 0.47
+        },
+        {
+          "termo": "copia programa",
+          "ocorrencias": 3,
+          "densidade": 0.47
+        },
+        {
+          "termo": "instalacao local",
+          "ocorrencias": 3,
+          "densidade": 0.47
+        },
+        {
+          "termo": "mesma pasta",
+          "ocorrencias": 3,
+          "densidade": 0.47
+        },
+        {
+          "termo": "abre fazer",
           "ocorrencias": 2,
-          "densidade": 9.52
-        },
-        {
-          "termo": "pagina inicial",
-          "ocorrencias": 2,
-          "densidade": 9.52
-        },
-        {
-          "termo": "acessado existe",
-          "ocorrencias": 1,
-          "densidade": 4.76
-        },
-        {
-          "termo": "atendimento pagina",
-          "ocorrencias": 1,
-          "densidade": 4.76
-        },
-        {
-          "termo": "consultar lista",
-          "ocorrencias": 1,
-          "densidade": 4.76
-        },
-        {
-          "termo": "disponiveis falar",
-          "ocorrencias": 1,
-          "densidade": 4.76
-        },
-        {
-          "termo": "encontrada endereco",
-          "ocorrencias": 1,
-          "densidade": 4.76
-        },
-        {
-          "termo": "endereco acessado",
-          "ocorrencias": 1,
-          "densidade": 4.76
+          "densidade": 0.32
         }
       ],
       "headings": {
-        "h2": 0,
+        "h2": 11,
         "h3": 0
       },
       "schemas": [
         "Organization",
-        "WebSite"
+        "WebSite",
+        "BreadcrumbList",
+        "BlogPosting",
+        "Article",
+        "TechArticle",
+        "LocalBusiness",
+        "ProfessionalService",
+        "ComputerRepairService",
+        "ItemList",
+        "FAQPage"
       ],
-      "linksInternosSaida": 1,
+      "linksInternosSaida": 8,
       "linksSaida": [
-        "/servicos"
+        "/blog",
+        "/contato",
+        "/blog/disco-com-setores-defeituosos-smart-o-que-fazer",
+        "/blog/historico-de-arquivos-windows-como-configurar",
+        "/blog/como-testar-restauracao-de-backup",
+        "/decisoes/backup-antes-da-manutencao",
+        "/blog/como-recuperar-dados-hd-com-defeito",
+        "/servicos/recuperacao-de-dados"
       ],
       "linksInternosEntrada": 0,
       "origensEntrada": [],

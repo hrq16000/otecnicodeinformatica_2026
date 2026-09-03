@@ -1,7 +1,7 @@
 # Autoridade SEO — densidade semântica, keywords e links internos
 
-Gerado em: 2026-09-03T18:27:37.855Z
-URLs analisadas: 78/78 · órfãs: 12
+Gerado em: 2026-09-03T18:38:05.605Z
+URLs analisadas: 78/78 · órfãs: 10
 
 | URL | Palavras | Dens. semântica | Keyword principal | Dens. KW | Links saída | Links entrada |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -9,7 +9,7 @@ URLs analisadas: 78/78 · órfãs: 12
 | /blog/como-saber-se-pc-tem-virus-malware | 2013 | 52.22% | como saber se pc tem virus malware | 0.25% | 15 | 10 |
 | /blog/backup-como-proteger-seus-arquivos | 2039 | 49.4% | backup como proteger seus arquivos | 0% | 13 | 13 |
 | /blog/como-melhorar-sinal-wifi-em-casa | 1494 | 55.08% | como melhorar sinal wifi em casa | 0% | 13 | 5 |
-| /blog/notebook-superaquecendo-o-que-fazer | 1622 | 58.67% | notebook superaquecendo o que fazer | 0.21% | 14 | 6 |
+| /blog/notebook-superaquecendo-o-que-fazer | 1622 | 58.67% | notebook superaquecendo o que fazer | 0.21% | 14 | 7 |
 | /blog/organizacao-de-ti-para-pequenos-escritorios | 1909 | 54.6% | organizacao de ti para pequenos escritorios | 0.27% | 16 | 1 |
 | /blog/como-escolher-uma-workstation | 1733 | 55.92% | como escolher uma workstation | 0.49% | 17 | 1 |
 | /blog/como-instalar-windows-11-do-zero | 1452 | 52.82% | como instalar windows 11 do zero | 0.23% | 14 | 5 |
@@ -17,14 +17,14 @@ URLs analisadas: 78/78 · órfãs: 12
 | /blog/como-trocar-tela-notebook-passo-a-passo | 1574 | 62.71% | como trocar tela notebook passo a passo | 0.6% | 7 | 1 |
 | /blog/notebook-nao-liga-o-que-fazer | 1545 | 53.73% | notebook nao liga o que fazer | 0.33% | 14 | 5 |
 | /blog/computador-lento-causas-solucoes | 1887 | 50.79% | computador lento causas solucoes | 0% | 17 | 10 |
-| /blog/como-recuperar-dados-hd-com-defeito | 1451 | 62.24% | como recuperar dados hd com defeito | 0.12% | 10 | 9 |
+| /blog/como-recuperar-dados-hd-com-defeito | 1451 | 62.24% | como recuperar dados hd com defeito | 0.12% | 10 | 10 |
 | /blog/como-fazer-upgrade-ssd-nvme | 1580 | 62.59% | como fazer upgrade ssd nvme | 0.12% | 10 | 4 |
-| /blog/como-configurar-roteador-wifi-iniciantes | 1984 | 53.83% | como configurar roteador wifi iniciantes | 0% | 9 | 4 |
+| /blog/como-configurar-roteador-wifi-iniciantes | 1984 | 53.83% | como configurar roteador wifi iniciantes | 0% | 9 | 5 |
 | /blog/como-saber-quem-esta-usando-meu-wifi | 1961 | 51.89% | como saber quem esta usando meu wifi | 0% | 9 | 1 |
 | /blog/como-escolher-um-bom-antivirus | 1618 | 65.19% | como escolher um bom antivirus | 0.11% | 11 | 1 |
 | /blog/como-proteger-computador-golpes-internet | 1435 | 64.04% | como proteger computador golpes internet | 0.24% | 10 | 2 |
-| /blog/como-limpar-notebook-por-dentro | 1718 | 62.1% | como limpar notebook por dentro | 0% | 12 | 7 |
-| /blog/como-trocar-pasta-termica-notebook | 1595 | 61.25% | como trocar pasta termica notebook | 0.22% | 11 | 4 |
+| /blog/como-limpar-notebook-por-dentro | 1718 | 62.1% | como limpar notebook por dentro | 0% | 12 | 8 |
+| /blog/como-trocar-pasta-termica-notebook | 1595 | 61.25% | como trocar pasta termica notebook | 0.22% | 11 | 5 |
 | /blog/como-clonar-hd-para-ssd | 1350 | 60.18% | como clonar hd para ssd | 0.91% | 12 | 5 |
 | /blog/como-instalar-segundo-ssd-notebook | 1389 | 62.09% | como instalar segundo ssd notebook | 0.26% | 11 | 2 |
 | /blog/ransomware-como-proteger-empresa | 1352 | 65.28% | ransomware como proteger empresa | 0% | 12 | 4 |
@@ -50,12 +50,12 @@ URLs analisadas: 78/78 · órfãs: 12
 | /blog/botao-power-nao-funciona-jump-start-placa-mae | 1553 | 49.66% | botao power nao funciona jump start placa mae | 0% | 13 | 0 |
 | /blog/curto-circuito-placa-mae-como-identificar | 1489 | 56.89% | curto circuito placa mae como identificar | 0% | 11 | 2 |
 | /blog/bios-corrompida-reset-cmos-atualizacao | 1602 | 51.4% | bios corrompida reset cmos atualizacao | 0.32% | 11 | 1 |
-| /blog/internet-lenta-provedor-ou-roteador | 1210 | 55.94% | internet lenta provedor ou roteador | 0.58% | 9 | 1 |
+| /blog/internet-lenta-provedor-ou-roteador | 1210 | 55.94% | internet lenta provedor ou roteador | 0.58% | 9 | 2 |
 | /blog/impressora-offline-como-resolver | 1080 | 54.42% | impressora offline como resolver | 0.62% | 11 | 1 |
 | /blog/fila-de-impressao-travada-spooler-windows | 1030 | 54.75% | fila de impressao travada spooler windows | 0.48% | 11 | 1 |
 | /blog/hd-nao-e-reconhecido-na-bios-o-que-fazer | 1350 | 54.63% | hd nao e reconhecido na bios o que fazer | 0.13% | 14 | 3 |
 | /blog/ssd-nvme-nao-aparece-no-gerenciador-de-discos | 1065 | 60.73% | ssd nvme nao aparece no gerenciador de discos | 0% | 11 | 1 |
-| /blog/disco-com-setores-defeituosos-smart-o-que-fazer | 1247 | 56.32% | disco com setores defeituosos smart o que fazer | 0.4% | 11 | 4 |
+| /blog/disco-com-setores-defeituosos-smart-o-que-fazer | 1247 | 56.32% | disco com setores defeituosos smart o que fazer | 0.4% | 11 | 5 |
 | /blog/computador-sem-som-o-que-verificar | 1048 | 56.89% | computador sem som o que verificar | 0.16% | 11 | 2 |
 | /blog/fone-de-ouvido-nao-e-reconhecido-no-pc | 978 | 56.15% | fone de ouvido nao e reconhecido no pc | 0.35% | 9 | 1 |
 | /blog/servico-de-audio-do-windows-nao-esta-em-execucao | 964 | 56.69% | servico de audio do windows nao esta em execucao | 1.41% | 10 | 1 |
@@ -68,19 +68,19 @@ URLs analisadas: 78/78 · órfãs: 12
 | /blog/boot-uefi-ou-legacy-como-identificar | 1043 | 54.97% | boot uefi ou legacy como identificar | 1.01% | 12 | 1 |
 | /blog/ordem-de-boot-na-bios-como-configurar | 956 | 61.39% | ordem de boot na bios como configurar | 0.36% | 11 | 0 |
 | /blog/windows-reparo-automatico-em-loop | 986 | 62.18% | windows reparo automatico em loop | 0% | 12 | 1 |
-| /blog/manutencao-preventiva-de-computador-guia-completo | 1355 | 60.52% | manutencao preventiva de computador guia completo | 0.26% | 14 | 2 |
+| /blog/manutencao-preventiva-de-computador-guia-completo | 1355 | 60.52% | manutencao preventiva de computador guia completo | 0.26% | 14 | 3 |
 | /blog/dispositivo-usb-nao-reconhecido-o-que-fazer | 1121 | 57.37% | dispositivo usb nao reconhecido o que fazer | 0.47% | 9 | 3 |
-| /blog/como-testar-restauracao-de-backup | 1098 | 60.23% | como testar restauracao de backup | 0.65% | 10 | 4 |
-| /blog/como-monitorar-temperatura-do-computador | 1058 | 64.91% | como monitorar temperatura do computador | 0.34% | 12 | 2 |
+| /blog/como-testar-restauracao-de-backup | 1098 | 60.23% | como testar restauracao de backup | 0.65% | 10 | 5 |
+| /blog/como-monitorar-temperatura-do-computador | 1058 | 64.91% | como monitorar temperatura do computador | 0.34% | 12 | 3 |
 | /blog/pendrive-somente-leitura-protegido-contra-gravacao | 986 | 61.62% | pendrive somente leitura protegido contra gravacao | 0.52% | 8 | 1 |
-| /blog/historico-de-arquivos-windows-como-configurar | 1004 | 61.01% | historico de arquivos windows como configurar | 0.35% | 12 | 1 |
+| /blog/historico-de-arquivos-windows-como-configurar | 1004 | 61.01% | historico de arquivos windows como configurar | 0.35% | 12 | 2 |
 | /blog/monitor-sem-sinal-o-que-verificar | 1040 | 56.63% | monitor sem sinal o que verificar | 0.52% | 10 | 0 |
 | /blog/bateria-de-notebook-nao-carrega-o-que-verificar | 1012 | 64.74% | bateria de notebook nao carrega o que verificar | 0.7% | 8 | 0 |
 | /blog/como-migrar-arquivos-para-um-computador-novo | 1039 | 61.82% | como migrar arquivos para um computador novo | 0.34% | 10 | 0 |
 | /blog/teclado-de-notebook-nao-funciona-o-que-verificar | 1136 | 53.82% | teclado de notebook nao funciona o que verificar | 0.75% | 8 | 0 |
-| /blog/computador-desliga-sozinho-o-que-verificar | 1119 | 56.74% | computador desliga sozinho o que verificar | 0.75% | 12 | 0 |
-| /blog/computador-nao-conecta-na-internet-por-cabo | 1114 | 51.44% | computador nao conecta na internet por cabo | 0.48% | 9 | 0 |
-| /blog/ventoinha-do-computador-fazendo-barulho-o-que-verificar | 42 | 72.73% | ventoinha do computador fazendo barulho o que verificar | 0% | 1 | 0 |
-| /blog/rede-wifi-nao-aparece-na-lista-o-que-verificar | 42 | 72.73% | rede wifi nao aparece na lista o que verificar | 0% | 1 | 0 |
-| /blog/arquivo-corrompido-nao-abre-o-que-fazer | 42 | 72.73% | arquivo corrompido nao abre o que fazer | 0% | 1 | 0 |
+| /blog/computador-desliga-sozinho-o-que-verificar | 1119 | 56.74% | computador desliga sozinho o que verificar | 0.75% | 12 | 1 |
+| /blog/computador-nao-conecta-na-internet-por-cabo | 1114 | 51.44% | computador nao conecta na internet por cabo | 0.48% | 9 | 1 |
+| /blog/ventoinha-do-computador-fazendo-barulho-o-que-verificar | 1141 | 54.8% | ventoinha do computador fazendo barulho o que verificar | 0.3% | 10 | 0 |
+| /blog/rede-wifi-nao-aparece-na-lista-o-que-verificar | 1161 | 51.64% | rede wifi nao aparece na lista o que verificar | 0% | 8 | 0 |
+| /blog/arquivo-corrompido-nao-abre-o-que-fazer | 1112 | 54.49% | arquivo corrompido nao abre o que fazer | 0.63% | 8 | 0 |
 
