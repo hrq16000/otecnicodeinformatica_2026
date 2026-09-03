@@ -10,6 +10,7 @@ import { SitemapLedgerPanel } from "@/components/admin/SitemapLedgerPanel";
 import { IndexacaoLedgerPanel } from "@/components/admin/IndexacaoLedgerPanel";
 import { DeployStatusPanel } from "@/components/admin/DeployStatusPanel";
 import { GscSnapshotPanel } from "@/components/admin/GscSnapshotPanel";
+import { GscInventarioPanel } from "@/components/admin/GscInventarioPanel";
 import auditoriaAfirmacoes from "@/data/trustClaimsAudit.json";
 
 
@@ -280,6 +281,8 @@ export default function AdminSeo() {
       <div className="mt-6">
         <GscSnapshotPanel />
       </div>
+
+      <GscInventarioPanel />
 
 
 

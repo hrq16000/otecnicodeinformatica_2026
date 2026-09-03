@@ -17,6 +17,7 @@
  */
 import { writeFileSync, readFileSync, existsSync } from "node:fs";
 import { resolve } from "node:path";
+import { CURATED_PATHS } from "./lib/curated-urls.mjs";
 
 const GATEWAY = "https://connector-gateway.lovable.dev/google_search_console";
 const OUT = resolve("src/data/gscSnapshot.json");
@@ -49,6 +50,8 @@ function saidaIndisponivel(motivo) {
     periodo: null,
     totais: null,
     paginas: [],
+    consultasTop: [],
+    inventario: [],
     inspecoes: [],
     sitemaps: [],
   };
@@ -184,6 +187,18 @@ const main = async () => {
     })
     .sort((a, b) => b.impressoes - a.impressoes);
 
+  // RASTREADOR DE CONSULTAS — termos reais mais buscados que trouxeram o portal.
+  const consultasRes = await consulta(["query"], 500);
+  const consultasTop = (consultasRes.rows ?? [])
+    .map((r) => ({
+      termo: r.keys[0],
+      cliques: r.clicks,
+      impressoes: r.impressions,
+      ctr: Number((r.ctr ?? 0).toFixed(4)),
+      posicao: Number((r.position ?? 0).toFixed(1)),
+    }))
+    .sort((a, b) => b.impressoes - a.impressoes);
+
   let sitemaps = [];
   try {
     const res = await api(`/webmasters/v3/sites/${enc}/sitemaps`);
@@ -201,8 +216,17 @@ const main = async () => {
   }
 
   const inspecoes = [];
-  if (process.argv.includes("--inspect")) {
-    for (const caminho of URLS_INSPECAO) {
+  const argInspect = process.argv.find((a) => a.startsWith("--inspect"));
+  if (argInspect) {
+    const limite = Number(argInspect.split("=")[1] ?? 0) || URLS_INSPECAO.length;
+    const anteriores = existsSync(OUT)
+      ? JSON.parse(readFileSync(OUT, "utf8")).inspecoes ?? []
+      : [];
+    const jaLidas = new Set(anteriores.filter((i) => i.veredito !== "ERRO").map((i) => i.caminho));
+    // prioriza a lista fixa e completa com URLs curadas ainda não inspecionadas
+    const fila = [...URLS_INSPECAO, ...CURATED_PATHS.filter((c) => !URLS_INSPECAO.includes(c) && !jaLidas.has(c))].slice(0, limite);
+    inspecoes.push(...anteriores.filter((i) => !fila.includes(i.caminho) && i.veredito !== "ERRO"));
+    for (const caminho of fila) {
       try {
         const res = await api("/v1/urlInspection/index:inspect", {
           method: "POST",
@@ -233,6 +257,32 @@ const main = async () => {
     inspecoes.push(...(JSON.parse(readFileSync(OUT, "utf8")).inspecoes ?? []));
   }
 
+  // INVENTÁRIO COMPLETO — toda URL curada recebe um estado real, mesmo sem dados.
+  const norm = (c) => (c && c.length > 1 ? c.replace(/\/+$/, "") : "/");
+  const perfPorCaminho = new Map(paginas.map((p) => [norm(p.caminho), p]));
+  const inspPorCaminho = new Map(inspecoes.map((i) => [norm(i.caminho), i]));
+  const inventario = CURATED_PATHS.map((caminho) => {
+    const p = perfPorCaminho.get(norm(caminho));
+    const i = inspPorCaminho.get(norm(caminho));
+    const estado = i?.veredito === "PASS"
+      ? "indexada"
+      : i && i.veredito !== "ERRO"
+        ? "nao-indexada"
+        : p && p.impressoes > 0
+          ? "com-impressoes"
+          : "sem-dados";
+    return {
+      caminho,
+      estado,
+      cobertura: i?.cobertura ?? null,
+      ultimoRastreio: i?.ultimoRastreio ?? null,
+      cliques: p?.cliques ?? 0,
+      impressoes: p?.impressoes ?? 0,
+      posicaoMedia: p?.posicaoMedia ?? null,
+      consultaPrincipal: p?.consultas?.[0]?.termo ?? null,
+    };
+  }).sort((a, b) => b.impressoes - a.impressoes || a.caminho.localeCompare(b.caminho));
+
   const snapshot = {
     status: "ok",
     geradoEm: new Date().toISOString(),
@@ -240,6 +290,8 @@ const main = async () => {
     periodo,
     totais,
     paginas,
+    consultasTop,
+    inventario,
     inspecoes,
     sitemaps,
     limitacoes:
@@ -250,6 +302,9 @@ const main = async () => {
   console.log("── report:gsc-snapshot ──");
   console.log(
     `  propriedade: ${siteUrl} · período ${periodo.inicio} → ${periodo.fim}`,
+  );
+  console.log(
+    `  inventário curado: ${inventario.length} urls · consultas reais: ${consultasTop.length}`,
   );
   console.log(
     `  cliques ${totais.cliques} · impressões ${totais.impressoes} · páginas com dados ${paginas.length} · inspeções ${inspecoes.length} · sitemaps ${sitemaps.length}`,

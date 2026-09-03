@@ -1,37 +1,37 @@
 {
   "status": "ok",
-  "geradoEm": "2026-09-02T04:54:41.393Z",
+  "geradoEm": "2026-09-03T15:08:36.390Z",
   "propriedade": {
     "siteUrl": "sc-domain:otecnicodeinformatica.com.br",
     "dominio": "https://otecnicodeinformatica.com.br"
   },
   "periodo": {
-    "inicio": "2026-08-02",
-    "fim": "2026-08-30"
+    "inicio": "2026-08-03",
+    "fim": "2026-08-31"
   },
   "totais": {
     "cliques": 4,
-    "impressoes": 730,
-    "ctr": 0.005479452054794521,
-    "posicao": 31.839726027397262
+    "impressoes": 821,
+    "ctr": 0.0048721071863581,
+    "posicao": 31.79171741778319
   },
   "paginas": [
     {
       "url": "https://otecnicodeinformatica.com.br/blog/o-que-e-informatica",
       "cliques": 0,
-      "impressoes": 53,
+      "impressoes": 61,
       "consultas": [
         {
           "termo": "informática",
           "cliques": 0,
-          "impressoes": 24,
-          "posicao": 68.6
+          "impressoes": 28,
+          "posicao": 68.5
         },
         {
           "termo": "informatica",
           "cliques": 0,
-          "impressoes": 16,
-          "posicao": 74.2
+          "impressoes": 18,
+          "posicao": 73.3
         },
         {
           "termo": "o que significa a palavra informatica",
@@ -76,10 +76,22 @@
           "posicao": 48
         },
         {
+          "termo": "o que estuda a informática",
+          "cliques": 0,
+          "impressoes": 1,
+          "posicao": 41
+        },
+        {
           "termo": "o que significa informática",
           "cliques": 0,
           "impressoes": 1,
           "posicao": 53
+        },
+        {
+          "termo": "texto sobre informática",
+          "cliques": 0,
+          "impressoes": 1,
+          "posicao": 81
         },
         {
           "termo": "tudo sobre informatica",
@@ -89,30 +101,36 @@
         }
       ],
       "caminho": "/blog/o-que-e-informatica",
-      "posicaoMedia": 67.2
+      "posicaoMedia": 67
     },
     {
       "url": "https://otecnicodeinformatica.com.br/blog/informatica-basica",
       "cliques": 0,
-      "impressoes": 35,
+      "impressoes": 41,
       "consultas": [
         {
           "termo": "conhecimento basico informatica",
           "cliques": 0,
-          "impressoes": 9,
-          "posicao": 50.3
+          "impressoes": 11,
+          "posicao": 51.5
         },
         {
           "termo": "informatica basica",
           "cliques": 0,
-          "impressoes": 4,
-          "posicao": 43.3
+          "impressoes": 5,
+          "posicao": 43
         },
         {
           "termo": "informatica basica conteudo",
           "cliques": 0,
           "impressoes": 4,
           "posicao": 57.5
+        },
+        {
+          "termo": "tudo sobre informatica basica",
+          "cliques": 0,
+          "impressoes": 4,
+          "posicao": 56.8
         },
         {
           "termo": "conhecimentos basicos de informatica",
@@ -133,16 +151,16 @@
           "posicao": 57
         },
         {
-          "termo": "tudo sobre informatica basica",
-          "cliques": 0,
-          "impressoes": 3,
-          "posicao": 64
-        },
-        {
           "termo": "informática basica",
           "cliques": 0,
           "impressoes": 2,
           "posicao": 54
+        },
+        {
+          "termo": "informática básica",
+          "cliques": 0,
+          "impressoes": 2,
+          "posicao": 46.5
         },
         {
           "termo": "conhecimento basico de informatica",
@@ -157,10 +175,10 @@
           "posicao": 40
         },
         {
-          "termo": "informática básica",
+          "termo": "informatica básica",
           "cliques": 0,
           "impressoes": 1,
-          "posicao": 49
+          "posicao": 45
         },
         {
           "termo": "tudo sobre informática básica",
@@ -170,12 +188,12 @@
         }
       ],
       "caminho": "/blog/informatica-basica",
-      "posicaoMedia": 51
+      "posicaoMedia": 50.4
     },
     {
       "url": "https://otecnicodeinformatica.com.br/servicos/conserto-tv",
       "cliques": 0,
-      "impressoes": 32,
+      "impressoes": 34,
       "consultas": [
         {
           "termo": "conserto de tvs",
@@ -208,6 +226,12 @@
           "posicao": 78.5
         },
         {
+          "termo": "conserto tv curitiba",
+          "cliques": 0,
+          "impressoes": 2,
+          "posicao": 74
+        },
+        {
           "termo": "técnico de tv que atende a domicílio",
           "cliques": 0,
           "impressoes": 2,
@@ -232,6 +256,12 @@
           "posicao": 73
         },
         {
+          "termo": "conserto de tv centro",
+          "cliques": 0,
+          "impressoes": 1,
+          "posicao": 79
+        },
+        {
           "termo": "conserto de tv em domicilio",
           "cliques": 0,
           "impressoes": 1,
@@ -254,18 +284,6 @@
           "cliques": 0,
           "impressoes": 1,
           "posicao": 51
-        },
-        {
-          "termo": "conserto televisor",
-          "cliques": 0,
-          "impressoes": 1,
-          "posicao": 66
-        },
-        {
-          "termo": "conserto tv curitiba",
-          "cliques": 0,
-          "impressoes": 1,
-          "posicao": 71
         }
       ],
       "caminho": "/servicos/conserto-tv",
@@ -373,7 +391,7 @@
     {
       "url": "https://otecnicodeinformatica.com.br/servicos/suporte-tecnico-empresarial",
       "cliques": 0,
-      "impressoes": 20,
+      "impressoes": 22,
       "consultas": [
         {
           "termo": "help desk terceirizado curitiba",
@@ -394,16 +412,16 @@
           "posicao": 74.5
         },
         {
+          "termo": "assistência técnica de informática para empresas",
+          "cliques": 0,
+          "impressoes": 3,
+          "posicao": 77.3
+        },
+        {
           "termo": "suporte ti empresarial curitiba",
           "cliques": 0,
           "impressoes": 3,
           "posicao": 86.3
-        },
-        {
-          "termo": "assistência técnica de informática para empresas",
-          "cliques": 0,
-          "impressoes": 1,
-          "posicao": 78
         },
         {
           "termo": "assistência técnica de ti",
@@ -431,18 +449,18 @@
         }
       ],
       "caminho": "/servicos/suporte-tecnico-empresarial",
-      "posicaoMedia": 78
+      "posicaoMedia": 77.9
     },
     {
       "url": "https://otecnicodeinformatica.com.br/conserto-impressora-curitiba",
       "cliques": 0,
-      "impressoes": 13,
+      "impressoes": 15,
       "consultas": [
         {
           "termo": "conserto de impressora",
           "cliques": 0,
-          "impressoes": 4,
-          "posicao": 98.3
+          "impressoes": 5,
+          "posicao": 98.6
         },
         {
           "termo": "assistencia tecnica hp curitiba",
@@ -475,6 +493,12 @@
           "posicao": 78
         },
         {
+          "termo": "concerto impressora",
+          "cliques": 0,
+          "impressoes": 1,
+          "posicao": 88
+        },
+        {
           "termo": "impressora assistência técnica",
           "cliques": 0,
           "impressoes": 1,
@@ -482,7 +506,79 @@
         }
       ],
       "caminho": "/conserto-impressora-curitiba",
-      "posicaoMedia": 91.8
+      "posicaoMedia": 92.1
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/blog/hd-nao-e-reconhecido-na-bios-o-que-fazer",
+      "cliques": 0,
+      "impressoes": 14,
+      "consultas": [
+        {
+          "termo": "computador nao reconhece hd",
+          "cliques": 0,
+          "impressoes": 7,
+          "posicao": 34.4
+        },
+        {
+          "termo": "pc não reconhece hd",
+          "cliques": 0,
+          "impressoes": 5,
+          "posicao": 29.8
+        },
+        {
+          "termo": "ssd nao reconhecido",
+          "cliques": 0,
+          "impressoes": 2,
+          "posicao": 38.5
+        }
+      ],
+      "caminho": "/blog/hd-nao-e-reconhecido-na-bios-o-que-fazer",
+      "posicaoMedia": 33.3
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/servicos/manutencao-de-notebook",
+      "cliques": 0,
+      "impressoes": 12,
+      "consultas": [
+        {
+          "termo": "assistencia tecnica notebook curitiba",
+          "cliques": 0,
+          "impressoes": 3,
+          "posicao": 86.3
+        },
+        {
+          "termo": "conserto de notebook curitiba",
+          "cliques": 0,
+          "impressoes": 3,
+          "posicao": 96.3
+        },
+        {
+          "termo": "manutenção notebook",
+          "cliques": 0,
+          "impressoes": 3,
+          "posicao": 67.7
+        },
+        {
+          "termo": "conserto notebook curitiba",
+          "cliques": 0,
+          "impressoes": 1,
+          "posicao": 85
+        },
+        {
+          "termo": "manutencao de notebook",
+          "cliques": 0,
+          "impressoes": 1,
+          "posicao": 42
+        },
+        {
+          "termo": "manutuenção notebook",
+          "cliques": 0,
+          "impressoes": 1,
+          "posicao": 81
+        }
+      ],
+      "caminho": "/servicos/manutencao-de-notebook",
+      "posicaoMedia": 79.9
     },
     {
       "url": "https://otecnicodeinformatica.com.br/blog/como-trocar-tela-notebook-passo-a-passo",
@@ -534,6 +630,45 @@
       ],
       "caminho": "/blog/como-trocar-tela-notebook-passo-a-passo",
       "posicaoMedia": 42.8
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/blog/como-aprender-informatica",
+      "cliques": 0,
+      "impressoes": 10,
+      "consultas": [
+        {
+          "termo": "dicas de informática básica",
+          "cliques": 0,
+          "impressoes": 3,
+          "posicao": 62
+        },
+        {
+          "termo": "como aprender informática do zero",
+          "cliques": 0,
+          "impressoes": 2,
+          "posicao": 41
+        },
+        {
+          "termo": "dicas de informática",
+          "cliques": 0,
+          "impressoes": 2,
+          "posicao": 59.5
+        },
+        {
+          "termo": "informática para iniciantes",
+          "cliques": 0,
+          "impressoes": 2,
+          "posicao": 33.5
+        },
+        {
+          "termo": "aprender informática passo a passo",
+          "cliques": 0,
+          "impressoes": 1,
+          "posicao": 36
+        }
+      ],
+      "caminho": "/blog/como-aprender-informatica",
+      "posicaoMedia": 49
     },
     {
       "url": "https://otecnicodeinformatica.com.br/servicos/suporte-tecnico-empresarial/curitiba",
@@ -677,72 +812,6 @@
       "posicaoMedia": 24.1
     },
     {
-      "url": "https://otecnicodeinformatica.com.br/blog/hd-nao-e-reconhecido-na-bios-o-que-fazer",
-      "cliques": 0,
-      "impressoes": 9,
-      "consultas": [
-        {
-          "termo": "computador nao reconhece hd",
-          "cliques": 0,
-          "impressoes": 4,
-          "posicao": 30
-        },
-        {
-          "termo": "pc não reconhece hd",
-          "cliques": 0,
-          "impressoes": 4,
-          "posicao": 27
-        },
-        {
-          "termo": "ssd nao reconhecido",
-          "cliques": 0,
-          "impressoes": 1,
-          "posicao": 39
-        }
-      ],
-      "caminho": "/blog/hd-nao-e-reconhecido-na-bios-o-que-fazer",
-      "posicaoMedia": 29.7
-    },
-    {
-      "url": "https://otecnicodeinformatica.com.br/servicos/manutencao-de-notebook",
-      "cliques": 0,
-      "impressoes": 9,
-      "consultas": [
-        {
-          "termo": "assistencia tecnica notebook curitiba",
-          "cliques": 0,
-          "impressoes": 3,
-          "posicao": 86.3
-        },
-        {
-          "termo": "conserto de notebook curitiba",
-          "cliques": 0,
-          "impressoes": 2,
-          "posicao": 96.5
-        },
-        {
-          "termo": "manutenção notebook",
-          "cliques": 0,
-          "impressoes": 2,
-          "posicao": 73.5
-        },
-        {
-          "termo": "manutencao de notebook",
-          "cliques": 0,
-          "impressoes": 1,
-          "posicao": 42
-        },
-        {
-          "termo": "manutuenção notebook",
-          "cliques": 0,
-          "impressoes": 1,
-          "posicao": 81
-        }
-      ],
-      "caminho": "/servicos/manutencao-de-notebook",
-      "posicaoMedia": 80.2
-    },
-    {
       "url": "https://otecnicodeinformatica.com.br/solucoes/recuperacao-de-dados",
       "cliques": 0,
       "impressoes": 8,
@@ -821,37 +890,49 @@
       "posicaoMedia": 52.3
     },
     {
-      "url": "https://otecnicodeinformatica.com.br/blog/como-aprender-informatica",
+      "url": "https://otecnicodeinformatica.com.br/blog/fila-de-impressao-travada-spooler-windows",
       "cliques": 0,
       "impressoes": 6,
       "consultas": [
         {
-          "termo": "dicas de informática básica",
-          "cliques": 0,
-          "impressoes": 2,
-          "posicao": 62.5
-        },
-        {
-          "termo": "informática para iniciantes",
-          "cliques": 0,
-          "impressoes": 2,
-          "posicao": 33.5
-        },
-        {
-          "termo": "como aprender informática do zero",
+          "termo": "enviando dados para o spool",
           "cliques": 0,
           "impressoes": 1,
-          "posicao": 42
+          "posicao": 38
         },
         {
-          "termo": "dicas de informática",
+          "termo": "reiniciar spooler de impressão",
           "cliques": 0,
           "impressoes": 1,
-          "posicao": 56
+          "posicao": 52
+        },
+        {
+          "termo": "reiniciar spooler de impressão cmd",
+          "cliques": 0,
+          "impressoes": 1,
+          "posicao": 50
+        },
+        {
+          "termo": "spool impressora",
+          "cliques": 0,
+          "impressoes": 1,
+          "posicao": 58
+        },
+        {
+          "termo": "spooler de impressão parando sozinho",
+          "cliques": 0,
+          "impressoes": 1,
+          "posicao": 37
+        },
+        {
+          "termo": "spooler impressora",
+          "cliques": 0,
+          "impressoes": 1,
+          "posicao": 52
         }
       ],
-      "caminho": "/blog/como-aprender-informatica",
-      "posicaoMedia": 48.3
+      "caminho": "/blog/fila-de-impressao-travada-spooler-windows",
+      "posicaoMedia": 47.8
     },
     {
       "url": "https://otecnicodeinformatica.com.br/servicos/conserto-pc-notebook/centro",
@@ -920,37 +1001,37 @@
       "posicaoMedia": 80.6
     },
     {
-      "url": "https://otecnicodeinformatica.com.br/blog/fila-de-impressao-travada-spooler-windows",
+      "url": "https://otecnicodeinformatica.com.br/blog/erro-no-bootable-device-como-resolver",
       "cliques": 0,
       "impressoes": 4,
       "consultas": [
         {
-          "termo": "reiniciar spooler de impressão",
+          "termo": "no boot device found",
           "cliques": 0,
           "impressoes": 1,
-          "posicao": 52
+          "posicao": 42
         },
         {
-          "termo": "reiniciar spooler de impressão cmd",
+          "termo": "no bootable device como resolver",
           "cliques": 0,
           "impressoes": 1,
-          "posicao": 50
+          "posicao": 39
         },
         {
-          "termo": "spool impressora",
+          "termo": "no bootable device found",
           "cliques": 0,
           "impressoes": 1,
-          "posicao": 58
+          "posicao": 47
         },
         {
-          "termo": "spooler impressora",
+          "termo": "no bootable device please restart",
           "cliques": 0,
           "impressoes": 1,
-          "posicao": 52
+          "posicao": 47
         }
       ],
-      "caminho": "/blog/fila-de-impressao-travada-spooler-windows",
-      "posicaoMedia": 53
+      "caminho": "/blog/erro-no-bootable-device-como-resolver",
+      "posicaoMedia": 43.8
     },
     {
       "url": "https://otecnicodeinformatica.com.br/blog/notebook-superaquecendo-o-que-fazer",
@@ -995,6 +1076,27 @@
       "posicaoMedia": 81
     },
     {
+      "url": "https://otecnicodeinformatica.com.br/problemas/impressora-nao-imprime",
+      "cliques": 0,
+      "impressoes": 4,
+      "consultas": [
+        {
+          "termo": "impressora não quer imprimir",
+          "cliques": 0,
+          "impressoes": 3,
+          "posicao": 70.7
+        },
+        {
+          "termo": "minha impressora não imprime",
+          "cliques": 0,
+          "impressoes": 1,
+          "posicao": 56
+        }
+      ],
+      "caminho": "/problemas/impressora-nao-imprime",
+      "posicaoMedia": 67
+    },
+    {
       "url": "https://otecnicodeinformatica.com.br/assistencia-eletrodomesticos-inteligentes-curitiba",
       "cliques": 0,
       "impressoes": 3,
@@ -1037,33 +1139,6 @@
       "posicaoMedia": 50.3
     },
     {
-      "url": "https://otecnicodeinformatica.com.br/blog/erro-no-bootable-device-como-resolver",
-      "cliques": 0,
-      "impressoes": 3,
-      "consultas": [
-        {
-          "termo": "no boot device found",
-          "cliques": 0,
-          "impressoes": 1,
-          "posicao": 42
-        },
-        {
-          "termo": "no bootable device como resolver",
-          "cliques": 0,
-          "impressoes": 1,
-          "posicao": 39
-        },
-        {
-          "termo": "no bootable device found",
-          "cliques": 0,
-          "impressoes": 1,
-          "posicao": 47
-        }
-      ],
-      "caminho": "/blog/erro-no-bootable-device-como-resolver",
-      "posicaoMedia": 42.7
-    },
-    {
       "url": "https://otecnicodeinformatica.com.br/",
       "cliques": 0,
       "impressoes": 2,
@@ -1104,6 +1179,27 @@
       ],
       "caminho": "/blog/como-saber-quem-esta-usando-meu-wifi",
       "posicaoMedia": 67.5
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/blog/fone-de-ouvido-nao-e-reconhecido-no-pc",
+      "cliques": 0,
+      "impressoes": 2,
+      "consultas": [
+        {
+          "termo": "pc nao reconhece fone",
+          "cliques": 0,
+          "impressoes": 1,
+          "posicao": 31
+        },
+        {
+          "termo": "pc não reconhece fone de ouvido",
+          "cliques": 0,
+          "impressoes": 1,
+          "posicao": 29
+        }
+      ],
+      "caminho": "/blog/fone-de-ouvido-nao-e-reconhecido-no-pc",
+      "posicaoMedia": 30
     },
     {
       "url": "https://otecnicodeinformatica.com.br/blog/impressora-offline-como-resolver",
@@ -1167,6 +1263,27 @@
       ],
       "caminho": "/problemas/teclado-notebook-nao-funciona",
       "posicaoMedia": 23.5
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/problemas/wifi-instavel",
+      "cliques": 0,
+      "impressoes": 2,
+      "consultas": [
+        {
+          "termo": "internet lenta",
+          "cliques": 0,
+          "impressoes": 1,
+          "posicao": 2
+        },
+        {
+          "termo": "queda de internet",
+          "cliques": 0,
+          "impressoes": 1,
+          "posicao": 7
+        }
+      ],
+      "caminho": "/problemas/wifi-instavel",
+      "posicaoMedia": 4.5
     },
     {
       "url": "https://otecnicodeinformatica.com.br/servicos/conserto-notebook/curitiba",
@@ -1331,21 +1448,6 @@
       "posicaoMedia": 52
     },
     {
-      "url": "https://otecnicodeinformatica.com.br/blog/fone-de-ouvido-nao-e-reconhecido-no-pc",
-      "cliques": 0,
-      "impressoes": 1,
-      "consultas": [
-        {
-          "termo": "pc não reconhece fone de ouvido",
-          "cliques": 0,
-          "impressoes": 1,
-          "posicao": 29
-        }
-      ],
-      "caminho": "/blog/fone-de-ouvido-nao-e-reconhecido-no-pc",
-      "posicaoMedia": 29
-    },
-    {
       "url": "https://otecnicodeinformatica.com.br/blog/servico-de-audio-do-windows-nao-esta-em-execucao",
       "cliques": 0,
       "impressoes": 1,
@@ -1481,6 +1583,3597 @@
       "posicaoMedia": 71
     }
   ],
+  "consultasTop": [
+    {
+      "termo": "informática",
+      "cliques": 0,
+      "impressoes": 28,
+      "ctr": 0,
+      "posicao": 68.5
+    },
+    {
+      "termo": "informatica",
+      "cliques": 0,
+      "impressoes": 18,
+      "ctr": 0,
+      "posicao": 73.3
+    },
+    {
+      "termo": "conhecimento basico informatica",
+      "cliques": 0,
+      "impressoes": 11,
+      "ctr": 0,
+      "posicao": 51.5
+    },
+    {
+      "termo": "computador nao reconhece hd",
+      "cliques": 0,
+      "impressoes": 7,
+      "ctr": 0,
+      "posicao": 34.4
+    },
+    {
+      "termo": "assistencia tecnica notebook curitiba",
+      "cliques": 0,
+      "impressoes": 6,
+      "ctr": 0,
+      "posicao": 87.3
+    },
+    {
+      "termo": "computador desligando sozinho",
+      "cliques": 0,
+      "impressoes": 6,
+      "ctr": 0,
+      "posicao": 24.3
+    },
+    {
+      "termo": "conserto de notebook curitiba",
+      "cliques": 0,
+      "impressoes": 6,
+      "ctr": 0,
+      "posicao": 80.5
+    },
+    {
+      "termo": "conserto de impressora",
+      "cliques": 0,
+      "impressoes": 5,
+      "ctr": 0,
+      "posicao": 98.6
+    },
+    {
+      "termo": "informatica basica",
+      "cliques": 0,
+      "impressoes": 5,
+      "ctr": 0,
+      "posicao": 43
+    },
+    {
+      "termo": "pc não reconhece hd",
+      "cliques": 0,
+      "impressoes": 5,
+      "ctr": 0,
+      "posicao": 29.8
+    },
+    {
+      "termo": "assistência técnica são josé dos pinhais",
+      "cliques": 0,
+      "impressoes": 4,
+      "ctr": 0,
+      "posicao": 19.3
+    },
+    {
+      "termo": "conserto de tvs",
+      "cliques": 0,
+      "impressoes": 4,
+      "ctr": 0,
+      "posicao": 71.3
+    },
+    {
+      "termo": "help desk terceirizado curitiba",
+      "cliques": 0,
+      "impressoes": 4,
+      "ctr": 0,
+      "posicao": 76.3
+    },
+    {
+      "termo": "informatica basica conteudo",
+      "cliques": 0,
+      "impressoes": 4,
+      "ctr": 0,
+      "posicao": 57.5
+    },
+    {
+      "termo": "notebook superaquecendo",
+      "cliques": 0,
+      "impressoes": 4,
+      "ctr": 0,
+      "posicao": 50.8
+    },
+    {
+      "termo": "pc desligando sozinho",
+      "cliques": 0,
+      "impressoes": 4,
+      "ctr": 0,
+      "posicao": 36.5
+    },
+    {
+      "termo": "recuperação de hd",
+      "cliques": 0,
+      "impressoes": 4,
+      "ctr": 0,
+      "posicao": 81.3
+    },
+    {
+      "termo": "suporte ti empresarial curitiba",
+      "cliques": 0,
+      "impressoes": 4,
+      "ctr": 0,
+      "posicao": 82.8
+    },
+    {
+      "termo": "suporte técnico empresarial curitiba",
+      "cliques": 0,
+      "impressoes": 4,
+      "ctr": 0,
+      "posicao": 70
+    },
+    {
+      "termo": "suporte técnico para empresas curitiba",
+      "cliques": 0,
+      "impressoes": 4,
+      "ctr": 0,
+      "posicao": 74.5
+    },
+    {
+      "termo": "tudo sobre informatica basica",
+      "cliques": 0,
+      "impressoes": 4,
+      "ctr": 0,
+      "posicao": 56.8
+    },
+    {
+      "termo": "assistência técnica de informática para empresas",
+      "cliques": 0,
+      "impressoes": 3,
+      "ctr": 0,
+      "posicao": 77.3
+    },
+    {
+      "termo": "como trocar pasta termica",
+      "cliques": 0,
+      "impressoes": 3,
+      "ctr": 0,
+      "posicao": 21.3
+    },
+    {
+      "termo": "computador desliga sozinho",
+      "cliques": 0,
+      "impressoes": 3,
+      "ctr": 0,
+      "posicao": 25.3
+    },
+    {
+      "termo": "conhecimentos basicos de informatica",
+      "cliques": 0,
+      "impressoes": 3,
+      "ctr": 0,
+      "posicao": 50.3
+    },
+    {
+      "termo": "conserto de televisores",
+      "cliques": 0,
+      "impressoes": 3,
+      "ctr": 0,
+      "posicao": 81
+    },
+    {
+      "termo": "conserto tv lcd",
+      "cliques": 0,
+      "impressoes": 3,
+      "ctr": 0,
+      "posicao": 82.3
+    },
+    {
+      "termo": "dicas de informática básica",
+      "cliques": 0,
+      "impressoes": 3,
+      "ctr": 0,
+      "posicao": 62
+    },
+    {
+      "termo": "formatacao de notebook curitiba",
+      "cliques": 0,
+      "impressoes": 3,
+      "ctr": 0,
+      "posicao": 81.3
+    },
+    {
+      "termo": "impressora não quer imprimir",
+      "cliques": 0,
+      "impressoes": 3,
+      "ctr": 0,
+      "posicao": 70.7
+    },
+    {
+      "termo": "informatica basica resumo",
+      "cliques": 0,
+      "impressoes": 3,
+      "ctr": 0,
+      "posicao": 33.3
+    },
+    {
+      "termo": "manutenção notebook",
+      "cliques": 0,
+      "impressoes": 3,
+      "ctr": 0,
+      "posicao": 67.7
+    },
+    {
+      "termo": "noções básicas de informática",
+      "cliques": 0,
+      "impressoes": 3,
+      "ctr": 0,
+      "posicao": 57
+    },
+    {
+      "termo": "o que significa a palavra informatica",
+      "cliques": 0,
+      "impressoes": 3,
+      "ctr": 0,
+      "posicao": 53
+    },
+    {
+      "termo": "o que significa informatica",
+      "cliques": 0,
+      "impressoes": 3,
+      "ctr": 0,
+      "posicao": 55.3
+    },
+    {
+      "termo": "recuperação de dados hd",
+      "cliques": 0,
+      "impressoes": 3,
+      "ctr": 0,
+      "posicao": 81.7
+    },
+    {
+      "termo": "assistencia tecnica hp curitiba",
+      "cliques": 0,
+      "impressoes": 2,
+      "ctr": 0,
+      "posicao": 77.5
+    },
+    {
+      "termo": "assistência técnica domiciliar",
+      "cliques": 0,
+      "impressoes": 2,
+      "ctr": 0,
+      "posicao": 87.5
+    },
+    {
+      "termo": "assistência técnica impressora",
+      "cliques": 0,
+      "impressoes": 2,
+      "ctr": 0,
+      "posicao": 99
+    },
+    {
+      "termo": "como aprender informática do zero",
+      "cliques": 0,
+      "impressoes": 2,
+      "ctr": 0,
+      "posicao": 41
+    },
+    {
+      "termo": "como trocar a pasta termica do notebook",
+      "cliques": 0,
+      "impressoes": 2,
+      "ctr": 0,
+      "posicao": 21.5
+    },
+    {
+      "termo": "computador desligou sozinho",
+      "cliques": 0,
+      "impressoes": 2,
+      "ctr": 0,
+      "posicao": 29
+    },
+    {
+      "termo": "conserto de tv",
+      "cliques": 0,
+      "impressoes": 2,
+      "ctr": 0,
+      "posicao": 90.5
+    },
+    {
+      "termo": "conserto de tv em curitiba",
+      "cliques": 0,
+      "impressoes": 2,
+      "ctr": 0,
+      "posicao": 78.5
+    },
+    {
+      "termo": "conserto notebook curitiba",
+      "cliques": 0,
+      "impressoes": 2,
+      "ctr": 0,
+      "posicao": 67.5
+    },
+    {
+      "termo": "conserto tv curitiba",
+      "cliques": 0,
+      "impressoes": 2,
+      "ctr": 0,
+      "posicao": 74
+    },
+    {
+      "termo": "dicas de informática",
+      "cliques": 0,
+      "impressoes": 2,
+      "ctr": 0,
+      "posicao": 59.5
+    },
+    {
+      "termo": "informática basica",
+      "cliques": 0,
+      "impressoes": 2,
+      "ctr": 0,
+      "posicao": 54
+    },
+    {
+      "termo": "informática básica",
+      "cliques": 0,
+      "impressoes": 2,
+      "ctr": 0,
+      "posicao": 46.5
+    },
+    {
+      "termo": "informática para iniciantes",
+      "cliques": 0,
+      "impressoes": 2,
+      "ctr": 0,
+      "posicao": 33.5
+    },
+    {
+      "termo": "manutenção computador empresa curitiba rápido",
+      "cliques": 0,
+      "impressoes": 2,
+      "ctr": 0,
+      "posicao": 74.5
+    },
+    {
+      "termo": "manutenção de computadores empresa curitiba",
+      "cliques": 0,
+      "impressoes": 2,
+      "ctr": 0,
+      "posicao": 89.5
+    },
+    {
+      "termo": "manutenção monitor",
+      "cliques": 0,
+      "impressoes": 2,
+      "ctr": 0,
+      "posicao": 89
+    },
+    {
+      "termo": "meu pc desliga sozinho",
+      "cliques": 0,
+      "impressoes": 2,
+      "ctr": 0,
+      "posicao": 27.5
+    },
+    {
+      "termo": "pc desliga sozinho",
+      "cliques": 0,
+      "impressoes": 2,
+      "ctr": 0,
+      "posicao": 31
+    },
+    {
+      "termo": "pc desligando sozinho não é temperatura",
+      "cliques": 0,
+      "impressoes": 2,
+      "ctr": 0,
+      "posicao": 27.5
+    },
+    {
+      "termo": "reparo de impressora",
+      "cliques": 0,
+      "impressoes": 2,
+      "ctr": 0,
+      "posicao": 93.5
+    },
+    {
+      "termo": "sem som",
+      "cliques": 0,
+      "impressoes": 2,
+      "ctr": 0,
+      "posicao": 44
+    },
+    {
+      "termo": "ssd nao reconhecido",
+      "cliques": 0,
+      "impressoes": 2,
+      "ctr": 0,
+      "posicao": 38.5
+    },
+    {
+      "termo": "troca de tela de notebook",
+      "cliques": 0,
+      "impressoes": 2,
+      "ctr": 0,
+      "posicao": 66
+    },
+    {
+      "termo": "troca tela notebook",
+      "cliques": 0,
+      "impressoes": 2,
+      "ctr": 0,
+      "posicao": 34
+    },
+    {
+      "termo": "trocar tela do notebook",
+      "cliques": 0,
+      "impressoes": 2,
+      "ctr": 0,
+      "posicao": 35.5
+    },
+    {
+      "termo": "trocar tela notebook",
+      "cliques": 0,
+      "impressoes": 2,
+      "ctr": 0,
+      "posicao": 38.5
+    },
+    {
+      "termo": "técnico de tv que atende a domicílio",
+      "cliques": 0,
+      "impressoes": 2,
+      "ctr": 0,
+      "posicao": 75.5
+    },
+    {
+      "termo": "aprender informática passo a passo",
+      "cliques": 0,
+      "impressoes": 1,
+      "ctr": 0,
+      "posicao": 36
+    },
+    {
+      "termo": "area de informatica",
+      "cliques": 0,
+      "impressoes": 1,
+      "ctr": 0,
+      "posicao": 60
+    },
+    {
+      "termo": "arrumar tv",
+      "cliques": 0,
+      "impressoes": 1,
+      "ctr": 0,
+      "posicao": 73
+    },
+    {
+      "termo": "assistencia técnica",
+      "cliques": 0,
+      "impressoes": 1,
+      "ctr": 0,
+      "posicao": 103
+    },
+    {
+      "termo": "assistência impressora",
+      "cliques": 0,
+      "impressoes": 1,
+      "ctr": 0,
+      "posicao": 100
+    },
+    {
+      "termo": "assistência técnica centro",
+      "cliques": 0,
+      "impressoes": 1,
+      "ctr": 0,
+      "posicao": 13
+    },
+    {
+      "termo": "assistência técnica de ti",
+      "cliques": 0,
+      "impressoes": 1,
+      "ctr": 0,
+      "posicao": 85
+    },
+    {
+      "termo": "assistência técnica robo aspirador perto de mim",
+      "cliques": 0,
+      "impressoes": 1,
+      "ctr": 0,
+      "posicao": 9
+    },
+    {
+      "termo": "audio.exe",
+      "cliques": 0,
+      "impressoes": 1,
+      "ctr": 0,
+      "posicao": 38
+    },
+    {
+      "termo": "backup computadores",
+      "cliques": 0,
+      "impressoes": 1,
+      "ctr": 0,
+      "posicao": 71
+    },
+    {
+      "termo": "bios corrompida",
+      "cliques": 0,
+      "impressoes": 1,
+      "ctr": 0,
+      "posicao": 46
+    },
+    {
+      "termo": "como configurar o wi fi",
+      "cliques": 0,
+      "impressoes": 1,
+      "ctr": 0,
+      "posicao": 45
+    },
+    {
+      "termo": "como entrar na bios com o pc ligado",
+      "cliques": 0,
+      "impressoes": 1,
+      "ctr": 0,
+      "posicao": 52
+    },
+    {
+      "termo": "como saber se o notebook esta com virus",
+      "cliques": 0,
+      "impressoes": 1,
+      "ctr": 0,
+      "posicao": 40
+    },
+    {
+      "termo": "como tirar impressora do offline",
+      "cliques": 0,
+      "impressoes": 1,
+      "ctr": 0,
+      "posicao": 64
+    },
+    {
+      "termo": "como trocar a tela do notebook",
+      "cliques": 0,
+      "impressoes": 1,
+      "ctr": 0,
+      "posicao": 34
+    },
+    {
+      "termo": "como trocar tela de notebook",
+      "cliques": 0,
+      "impressoes": 1,
+      "ctr": 0,
+      "posicao": 37
+    },
+    {
+      "termo": "como usar o roteador",
+      "cliques": 0,
+      "impressoes": 1,
+      "ctr": 0,
+      "posicao": 48
+    },
+    {
+      "termo": "como usar roteador",
+      "cliques": 0,
+      "impressoes": 1,
+      "ctr": 0,
+      "posicao": 44
+    },
+    {
+      "termo": "como usar um roteador",
+      "cliques": 0,
+      "impressoes": 1,
+      "ctr": 0,
+      "posicao": 47
+    },
+    {
+      "termo": "como ver quantas pessoas estão conectadas no wifi",
+      "cliques": 0,
+      "impressoes": 1,
+      "ctr": 0,
+      "posicao": 67
+    },
+    {
+      "termo": "como ver quem está usando meu wifi",
+      "cliques": 0,
+      "impressoes": 1,
+      "ctr": 0,
+      "posicao": 68
+    },
+    {
+      "termo": "computador desligando",
+      "cliques": 0,
+      "impressoes": 1,
+      "ctr": 0,
+      "posicao": 33
+    },
+    {
+      "termo": "computador desligando sozinho o que pode ser",
+      "cliques": 0,
+      "impressoes": 1,
+      "ctr": 0,
+      "posicao": 37
+    },
+    {
+      "termo": "concerto de impressoras",
+      "cliques": 0,
+      "impressoes": 1,
+      "ctr": 0,
+      "posicao": 78
+    },
+    {
+      "termo": "concerto impressora",
+      "cliques": 0,
+      "impressoes": 1,
+      "ctr": 0,
+      "posicao": 88
+    },
+    {
+      "termo": "configuração de wi-fi",
+      "cliques": 0,
+      "impressoes": 1,
+      "ctr": 0,
+      "posicao": 49
+    },
+    {
+      "termo": "configuração do modem",
+      "cliques": 0,
+      "impressoes": 1,
+      "ctr": 0,
+      "posicao": 67
+    },
+    {
+      "termo": "conhecimento basico de informatica",
+      "cliques": 0,
+      "impressoes": 1,
+      "ctr": 0,
+      "posicao": 53
+    },
+    {
+      "termo": "conhecimento basico em informatica",
+      "cliques": 0,
+      "impressoes": 1,
+      "ctr": 0,
+      "posicao": 40
+    },
+    {
+      "termo": "conserta-se televisores",
+      "cliques": 0,
+      "impressoes": 1,
+      "ctr": 0,
+      "posicao": 72
+    },
+    {
+      "termo": "conserto de hd",
+      "cliques": 0,
+      "impressoes": 1,
+      "ctr": 0,
+      "posicao": 49
+    },
+    {
+      "termo": "conserto de monitor lcd",
+      "cliques": 0,
+      "impressoes": 1,
+      "ctr": 0,
+      "posicao": 74
+    },
+    {
+      "termo": "conserto de notebook",
+      "cliques": 0,
+      "impressoes": 1,
+      "ctr": 0,
+      "posicao": 88
+    },
+    {
+      "termo": "conserto de smart tv",
+      "cliques": 0,
+      "impressoes": 1,
+      "ctr": 0,
+      "posicao": 73
+    },
+    {
+      "termo": "conserto de tv centro",
+      "cliques": 0,
+      "impressoes": 1,
+      "ctr": 0,
+      "posicao": 79
+    },
+    {
+      "termo": "conserto de tv em domicilio",
+      "cliques": 0,
+      "impressoes": 1,
+      "ctr": 0,
+      "posicao": 93
+    },
+    {
+      "termo": "conserto de tv em domicílio",
+      "cliques": 0,
+      "impressoes": 1,
+      "ctr": 0,
+      "posicao": 88
+    },
+    {
+      "termo": "conserto de tv led smart em curitiba",
+      "cliques": 0,
+      "impressoes": 1,
+      "ctr": 0,
+      "posicao": 75
+    },
+    {
+      "termo": "conserto de tv smart",
+      "cliques": 0,
+      "impressoes": 1,
+      "ctr": 0,
+      "posicao": 51
+    },
+    {
+      "termo": "conserto monitor",
+      "cliques": 0,
+      "impressoes": 1,
+      "ctr": 0,
+      "posicao": 80
+    },
+    {
+      "termo": "conserto placa de video curitiba",
+      "cliques": 0,
+      "impressoes": 1,
+      "ctr": 0,
+      "posicao": 71
+    },
+    {
+      "termo": "conserto televisor",
+      "cliques": 0,
+      "impressoes": 1,
+      "ctr": 0,
+      "posicao": 66
+    },
+    {
+      "termo": "conserto tv smart tv",
+      "cliques": 0,
+      "impressoes": 1,
+      "ctr": 0,
+      "posicao": 84
+    },
+    {
+      "termo": "consertos de tv na hora e eletrônicos em domicílio",
+      "cliques": 0,
+      "impressoes": 1,
+      "ctr": 0,
+      "posicao": 89
+    },
+    {
+      "termo": "consertos tv",
+      "cliques": 0,
+      "impressoes": 1,
+      "ctr": 0,
+      "posicao": 68
+    },
+    {
+      "termo": "data recovery curitiba",
+      "cliques": 0,
+      "impressoes": 1,
+      "ctr": 0,
+      "posicao": 53
+    },
+    {
+      "termo": "desfazendo alterações feitas no computador",
+      "cliques": 0,
+      "impressoes": 1,
+      "ctr": 0,
+      "posicao": 22
+    },
+    {
+      "termo": "diagnóstico de ti empresa curitiba",
+      "cliques": 0,
+      "impressoes": 1,
+      "ctr": 0,
+      "posicao": 80
+    },
+    {
+      "termo": "eletronica conserto tv",
+      "cliques": 0,
+      "impressoes": 1,
+      "ctr": 0,
+      "posicao": 81
+    },
+    {
+      "termo": "empresa suporte informatica curitiba pme",
+      "cliques": 0,
+      "impressoes": 1,
+      "ctr": 0,
+      "posicao": 89
+    },
+    {
+      "termo": "enviando dados para o spool",
+      "cliques": 0,
+      "impressoes": 1,
+      "ctr": 0,
+      "posicao": 38
+    },
+    {
+      "termo": "estagio da correção c",
+      "cliques": 0,
+      "impressoes": 1,
+      "ctr": 0,
+      "posicao": 51
+    },
+    {
+      "termo": "fonte com cheiro de queimado mas funcionando",
+      "cliques": 0,
+      "impressoes": 1,
+      "ctr": 0,
+      "posicao": 23
+    },
+    {
+      "termo": "impressora assistência técnica",
+      "cliques": 0,
+      "impressoes": 1,
+      "ctr": 0,
+      "posicao": 82
+    },
+    {
+      "termo": "informaica",
+      "cliques": 0,
+      "impressoes": 1,
+      "ctr": 0,
+      "posicao": 51
+    },
+    {
+      "termo": "informatica avançada",
+      "cliques": 0,
+      "impressoes": 1,
+      "ctr": 0,
+      "posicao": 6
+    },
+    {
+      "termo": "informatica básica",
+      "cliques": 0,
+      "impressoes": 1,
+      "ctr": 0,
+      "posicao": 45
+    },
+    {
+      "termo": "informatica cic",
+      "cliques": 0,
+      "impressoes": 1,
+      "ctr": 0,
+      "posicao": 7
+    },
+    {
+      "termo": "informaticamente",
+      "cliques": 0,
+      "impressoes": 1,
+      "ctr": 0,
+      "posicao": 64
+    },
+    {
+      "termo": "infromatica",
+      "cliques": 0,
+      "impressoes": 1,
+      "ctr": 0,
+      "posicao": 51
+    },
+    {
+      "termo": "internet lenta",
+      "cliques": 0,
+      "impressoes": 1,
+      "ctr": 0,
+      "posicao": 2
+    },
+    {
+      "termo": "manutencao de notebook",
+      "cliques": 0,
+      "impressoes": 1,
+      "ctr": 0,
+      "posicao": 42
+    },
+    {
+      "termo": "manutenção de monitor",
+      "cliques": 0,
+      "impressoes": 1,
+      "ctr": 0,
+      "posicao": 71
+    },
+    {
+      "termo": "manutenção informatica empresa curitiba",
+      "cliques": 0,
+      "impressoes": 1,
+      "ctr": 0,
+      "posicao": 82
+    },
+    {
+      "termo": "manutenção servidor empresa curitiba",
+      "cliques": 0,
+      "impressoes": 1,
+      "ctr": 0,
+      "posicao": 85
+    },
+    {
+      "termo": "manutuenção notebook",
+      "cliques": 0,
+      "impressoes": 1,
+      "ctr": 0,
+      "posicao": 81
+    },
+    {
+      "termo": "meu notebook não carrega",
+      "cliques": 0,
+      "impressoes": 1,
+      "ctr": 0,
+      "posicao": 50
+    },
+    {
+      "termo": "meu pc esta desligando sozinho",
+      "cliques": 0,
+      "impressoes": 1,
+      "ctr": 0,
+      "posicao": 31
+    },
+    {
+      "termo": "minha impressora não imprime",
+      "cliques": 0,
+      "impressoes": 1,
+      "ctr": 0,
+      "posicao": 56
+    },
+    {
+      "termo": "no boot device found",
+      "cliques": 0,
+      "impressoes": 1,
+      "ctr": 0,
+      "posicao": 42
+    },
+    {
+      "termo": "no bootable device como resolver",
+      "cliques": 0,
+      "impressoes": 1,
+      "ctr": 0,
+      "posicao": 39
+    },
+    {
+      "termo": "no bootable device found",
+      "cliques": 0,
+      "impressoes": 1,
+      "ctr": 0,
+      "posicao": 47
+    },
+    {
+      "termo": "no bootable device please restart",
+      "cliques": 0,
+      "impressoes": 1,
+      "ctr": 0,
+      "posicao": 47
+    },
+    {
+      "termo": "notebook não carrega",
+      "cliques": 0,
+      "impressoes": 1,
+      "ctr": 0,
+      "posicao": 51
+    },
+    {
+      "termo": "o",
+      "cliques": 0,
+      "impressoes": 1,
+      "ctr": 0,
+      "posicao": 3
+    },
+    {
+      "termo": "o q é informatica",
+      "cliques": 0,
+      "impressoes": 1,
+      "ctr": 0,
+      "posicao": 48
+    },
+    {
+      "termo": "o que estuda a informática",
+      "cliques": 0,
+      "impressoes": 1,
+      "ctr": 0,
+      "posicao": 41
+    },
+    {
+      "termo": "o que significa informática",
+      "cliques": 0,
+      "impressoes": 1,
+      "ctr": 0,
+      "posicao": 53
+    },
+    {
+      "termo": "o que é workstation",
+      "cliques": 0,
+      "impressoes": 1,
+      "ctr": 0,
+      "posicao": 57
+    },
+    {
+      "termo": "pc desliga do nada",
+      "cliques": 0,
+      "impressoes": 1,
+      "ctr": 0,
+      "posicao": 39
+    },
+    {
+      "termo": "pc desligando sozinho o que pode ser",
+      "cliques": 0,
+      "impressoes": 1,
+      "ctr": 0,
+      "posicao": 31
+    },
+    {
+      "termo": "pc fica desligando sozinho",
+      "cliques": 0,
+      "impressoes": 1,
+      "ctr": 0,
+      "posicao": 38
+    },
+    {
+      "termo": "pc nao reconhece fone",
+      "cliques": 0,
+      "impressoes": 1,
+      "ctr": 0,
+      "posicao": 31
+    },
+    {
+      "termo": "pc não reconhece fone de ouvido",
+      "cliques": 0,
+      "impressoes": 1,
+      "ctr": 0,
+      "posicao": 29
+    },
+    {
+      "termo": "porque a impressora fica offline",
+      "cliques": 0,
+      "impressoes": 1,
+      "ctr": 0,
+      "posicao": 52
+    },
+    {
+      "termo": "porque o notebook desliga sozinho",
+      "cliques": 0,
+      "impressoes": 1,
+      "ctr": 0,
+      "posicao": 37
+    },
+    {
+      "termo": "porque o pc desliga sozinho",
+      "cliques": 0,
+      "impressoes": 1,
+      "ctr": 0,
+      "posicao": 42
+    },
+    {
+      "termo": "porque o teclado do notebook não funciona",
+      "cliques": 0,
+      "impressoes": 1,
+      "ctr": 0,
+      "posicao": 24
+    },
+    {
+      "termo": "queda de internet",
+      "cliques": 0,
+      "impressoes": 1,
+      "ctr": 0,
+      "posicao": 7
+    },
+    {
+      "termo": "recuperacao de dados",
+      "cliques": 0,
+      "impressoes": 1,
+      "ctr": 0,
+      "posicao": 92
+    },
+    {
+      "termo": "reiniciar spooler de impressão",
+      "cliques": 0,
+      "impressoes": 1,
+      "ctr": 0,
+      "posicao": 52
+    },
+    {
+      "termo": "reiniciar spooler de impressão cmd",
+      "cliques": 0,
+      "impressoes": 1,
+      "ctr": 0,
+      "posicao": 50
+    },
+    {
+      "termo": "reparo backlight tv curitiba",
+      "cliques": 0,
+      "impressoes": 1,
+      "ctr": 0,
+      "posicao": 75
+    },
+    {
+      "termo": "roteador caindo sinal",
+      "cliques": 0,
+      "impressoes": 1,
+      "ctr": 0,
+      "posicao": 81
+    },
+    {
+      "termo": "roteador wifi como configurar",
+      "cliques": 0,
+      "impressoes": 1,
+      "ctr": 0,
+      "posicao": 66
+    },
+    {
+      "termo": "spool impressora",
+      "cliques": 0,
+      "impressoes": 1,
+      "ctr": 0,
+      "posicao": 58
+    },
+    {
+      "termo": "spooler de impressão parando sozinho",
+      "cliques": 0,
+      "impressoes": 1,
+      "ctr": 0,
+      "posicao": 37
+    },
+    {
+      "termo": "spooler impressora",
+      "cliques": 0,
+      "impressoes": 1,
+      "ctr": 0,
+      "posicao": 52
+    },
+    {
+      "termo": "suporte técnico 24 horas",
+      "cliques": 0,
+      "impressoes": 1,
+      "ctr": 0,
+      "posicao": 54
+    },
+    {
+      "termo": "suporte técnico para empresa",
+      "cliques": 0,
+      "impressoes": 1,
+      "ctr": 0,
+      "posicao": 97
+    },
+    {
+      "termo": "teclado notebook não funciona",
+      "cliques": 0,
+      "impressoes": 1,
+      "ctr": 0,
+      "posicao": 23
+    },
+    {
+      "termo": "tecnico de televisores a domicilio",
+      "cliques": 0,
+      "impressoes": 1,
+      "ctr": 0,
+      "posicao": 80
+    },
+    {
+      "termo": "tecnico de tv a domicilio",
+      "cliques": 0,
+      "impressoes": 1,
+      "ctr": 0,
+      "posicao": 97
+    },
+    {
+      "termo": "tela azul",
+      "cliques": 0,
+      "impressoes": 1,
+      "ctr": 0,
+      "posicao": 63
+    },
+    {
+      "termo": "testar som pc",
+      "cliques": 0,
+      "impressoes": 1,
+      "ctr": 0,
+      "posicao": 63
+    },
+    {
+      "termo": "texto sobre informática",
+      "cliques": 0,
+      "impressoes": 1,
+      "ctr": 0,
+      "posicao": 81
+    },
+    {
+      "termo": "troca da pasta termica",
+      "cliques": 0,
+      "impressoes": 1,
+      "ctr": 0,
+      "posicao": 27
+    },
+    {
+      "termo": "troca de pasta térmica",
+      "cliques": 0,
+      "impressoes": 1,
+      "ctr": 0,
+      "posicao": 23
+    },
+    {
+      "termo": "troca de tela notebook",
+      "cliques": 0,
+      "impressoes": 1,
+      "ctr": 0,
+      "posicao": 52
+    },
+    {
+      "termo": "trocar pasta termica",
+      "cliques": 0,
+      "impressoes": 1,
+      "ctr": 0,
+      "posicao": 32
+    },
+    {
+      "termo": "trocar pasta termica notebook",
+      "cliques": 0,
+      "impressoes": 1,
+      "ctr": 0,
+      "posicao": 28
+    },
+    {
+      "termo": "tudo sobre informatica",
+      "cliques": 0,
+      "impressoes": 1,
+      "ctr": 0,
+      "posicao": 76
+    },
+    {
+      "termo": "tudo sobre informática básica",
+      "cliques": 0,
+      "impressoes": 1,
+      "ctr": 0,
+      "posicao": 67
+    },
+    {
+      "termo": "técnico",
+      "cliques": 0,
+      "impressoes": 1,
+      "ctr": 0,
+      "posicao": 5
+    },
+    {
+      "termo": "técnico de informática",
+      "cliques": 0,
+      "impressoes": 1,
+      "ctr": 0,
+      "posicao": 10
+    },
+    {
+      "termo": "técnico ti",
+      "cliques": 0,
+      "impressoes": 1,
+      "ctr": 0,
+      "posicao": 6
+    }
+  ],
+  "inventario": [
+    {
+      "caminho": "/blog/o-que-e-informatica",
+      "estado": "indexada",
+      "cobertura": "Submitted and indexed",
+      "ultimoRastreio": "2026-08-25T14:26:51Z",
+      "cliques": 0,
+      "impressoes": 61,
+      "posicaoMedia": 67,
+      "consultaPrincipal": "informática"
+    },
+    {
+      "caminho": "/blog/informatica-basica",
+      "estado": "com-impressoes",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 41,
+      "posicaoMedia": 50.4,
+      "consultaPrincipal": "conhecimento basico informatica"
+    },
+    {
+      "caminho": "/servicos/conserto-tv",
+      "estado": "com-impressoes",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 34,
+      "posicaoMedia": 78.1,
+      "consultaPrincipal": "conserto de tvs"
+    },
+    {
+      "caminho": "/problemas/computador-desliga-sozinho",
+      "estado": "com-impressoes",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 29,
+      "posicaoMedia": 30.5,
+      "consultaPrincipal": "computador desligando sozinho"
+    },
+    {
+      "caminho": "/servicos/suporte-tecnico-empresarial",
+      "estado": "com-impressoes",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 22,
+      "posicaoMedia": 77.9,
+      "consultaPrincipal": "help desk terceirizado curitiba"
+    },
+    {
+      "caminho": "/blog/hd-nao-e-reconhecido-na-bios-o-que-fazer",
+      "estado": "com-impressoes",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 14,
+      "posicaoMedia": 33.3,
+      "consultaPrincipal": "computador nao reconhece hd"
+    },
+    {
+      "caminho": "/servicos/manutencao-de-notebook",
+      "estado": "com-impressoes",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 12,
+      "posicaoMedia": 79.9,
+      "consultaPrincipal": "assistencia tecnica notebook curitiba"
+    },
+    {
+      "caminho": "/blog/como-trocar-tela-notebook-passo-a-passo",
+      "estado": "com-impressoes",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 11,
+      "posicaoMedia": 42.8,
+      "consultaPrincipal": "troca de tela de notebook"
+    },
+    {
+      "caminho": "/blog/como-aprender-informatica",
+      "estado": "com-impressoes",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 10,
+      "posicaoMedia": 49,
+      "consultaPrincipal": "dicas de informática básica"
+    },
+    {
+      "caminho": "/servicos/suporte-tecnico-empresarial/curitiba",
+      "estado": "com-impressoes",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 10,
+      "posicaoMedia": 80.9,
+      "consultaPrincipal": "manutenção computador empresa curitiba rápido"
+    },
+    {
+      "caminho": "/blog/como-trocar-pasta-termica-notebook",
+      "estado": "com-impressoes",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 9,
+      "posicaoMedia": 24.1,
+      "consultaPrincipal": "como trocar pasta termica"
+    },
+    {
+      "caminho": "/solucoes/recuperacao-de-dados",
+      "estado": "com-impressoes",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 8,
+      "posicaoMedia": 82.8,
+      "consultaPrincipal": "recuperação de hd"
+    },
+    {
+      "caminho": "/blog/como-configurar-roteador-wifi-iniciantes",
+      "estado": "com-impressoes",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 7,
+      "posicaoMedia": 52.3,
+      "consultaPrincipal": "como configurar o wi fi"
+    },
+    {
+      "caminho": "/blog/fila-de-impressao-travada-spooler-windows",
+      "estado": "com-impressoes",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 6,
+      "posicaoMedia": 47.8,
+      "consultaPrincipal": "enviando dados para o spool"
+    },
+    {
+      "caminho": "/servicos/conserto-pc-notebook/centro",
+      "estado": "com-impressoes",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 6,
+      "posicaoMedia": 76.5,
+      "consultaPrincipal": "assistencia tecnica notebook curitiba"
+    },
+    {
+      "caminho": "/servicos/conserto-monitor",
+      "estado": "com-impressoes",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 5,
+      "posicaoMedia": 80.6,
+      "consultaPrincipal": "manutenção monitor"
+    },
+    {
+      "caminho": "/blog/erro-no-bootable-device-como-resolver",
+      "estado": "com-impressoes",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 4,
+      "posicaoMedia": 43.8,
+      "consultaPrincipal": "no boot device found"
+    },
+    {
+      "caminho": "/blog/notebook-superaquecendo-o-que-fazer",
+      "estado": "com-impressoes",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 4,
+      "posicaoMedia": 50.8,
+      "consultaPrincipal": "notebook superaquecendo"
+    },
+    {
+      "caminho": "/empresa-de-ti-curitiba",
+      "estado": "com-impressoes",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 4,
+      "posicaoMedia": 81,
+      "consultaPrincipal": "suporte ti empresarial curitiba"
+    },
+    {
+      "caminho": "/problemas/impressora-nao-imprime",
+      "estado": "com-impressoes",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 4,
+      "posicaoMedia": 67,
+      "consultaPrincipal": "impressora não quer imprimir"
+    },
+    {
+      "caminho": "/blog/computador-sem-som-o-que-verificar",
+      "estado": "com-impressoes",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 3,
+      "posicaoMedia": 50.3,
+      "consultaPrincipal": "sem som"
+    },
+    {
+      "caminho": "/",
+      "estado": "indexada",
+      "cobertura": "Submitted and indexed",
+      "ultimoRastreio": "2026-08-28T15:01:26Z",
+      "cliques": 0,
+      "impressoes": 2,
+      "posicaoMedia": 11.5,
+      "consultaPrincipal": "assistência técnica são josé dos pinhais"
+    },
+    {
+      "caminho": "/blog/como-saber-quem-esta-usando-meu-wifi",
+      "estado": "com-impressoes",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 2,
+      "posicaoMedia": 67.5,
+      "consultaPrincipal": "como ver quantas pessoas estão conectadas no wifi"
+    },
+    {
+      "caminho": "/blog/fone-de-ouvido-nao-e-reconhecido-no-pc",
+      "estado": "com-impressoes",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 2,
+      "posicaoMedia": 30,
+      "consultaPrincipal": "pc nao reconhece fone"
+    },
+    {
+      "caminho": "/blog/impressora-offline-como-resolver",
+      "estado": "com-impressoes",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 2,
+      "posicaoMedia": 58,
+      "consultaPrincipal": "como tirar impressora do offline"
+    },
+    {
+      "caminho": "/problemas/notebook-nao-carrega",
+      "estado": "com-impressoes",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 2,
+      "posicaoMedia": 50.5,
+      "consultaPrincipal": "meu notebook não carrega"
+    },
+    {
+      "caminho": "/problemas/teclado-notebook-nao-funciona",
+      "estado": "com-impressoes",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 2,
+      "posicaoMedia": 23.5,
+      "consultaPrincipal": "porque o teclado do notebook não funciona"
+    },
+    {
+      "caminho": "/problemas/wifi-instavel",
+      "estado": "com-impressoes",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 2,
+      "posicaoMedia": 4.5,
+      "consultaPrincipal": "internet lenta"
+    },
+    {
+      "caminho": "/servicos/conserto-notebook/curitiba",
+      "estado": "com-impressoes",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 2,
+      "posicaoMedia": 87.5,
+      "consultaPrincipal": "conserto de notebook"
+    },
+    {
+      "caminho": "/servicos/conserto-pc/curitiba",
+      "estado": "com-impressoes",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 2,
+      "posicaoMedia": 73,
+      "consultaPrincipal": "assistencia tecnica notebook curitiba"
+    },
+    {
+      "caminho": "/servicos/manutencao-preventiva-empresas",
+      "estado": "com-impressoes",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 2,
+      "posicaoMedia": 94.5,
+      "consultaPrincipal": "manutenção de computadores empresa curitiba"
+    },
+    {
+      "caminho": "/bairros/cic",
+      "estado": "com-impressoes",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 1,
+      "posicaoMedia": 7,
+      "consultaPrincipal": "informatica cic"
+    },
+    {
+      "caminho": "/blog/bios-corrompida-reset-cmos-atualizacao",
+      "estado": "com-impressoes",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 1,
+      "posicaoMedia": 46,
+      "consultaPrincipal": "bios corrompida"
+    },
+    {
+      "caminho": "/blog/como-escolher-uma-workstation",
+      "estado": "com-impressoes",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 1,
+      "posicaoMedia": 57,
+      "consultaPrincipal": "o que é workstation"
+    },
+    {
+      "caminho": "/blog/como-recuperar-dados-hd-com-defeito",
+      "estado": "com-impressoes",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 1,
+      "posicaoMedia": 49,
+      "consultaPrincipal": "conserto de hd"
+    },
+    {
+      "caminho": "/blog/como-resolver-tela-azul-windows",
+      "estado": "com-impressoes",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 1,
+      "posicaoMedia": 63,
+      "consultaPrincipal": "tela azul"
+    },
+    {
+      "caminho": "/blog/como-saber-se-pc-tem-virus-malware",
+      "estado": "com-impressoes",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 1,
+      "posicaoMedia": 40,
+      "consultaPrincipal": "como saber se o notebook esta com virus"
+    },
+    {
+      "caminho": "/blog/computador-entra-direto-na-bios",
+      "estado": "com-impressoes",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 1,
+      "posicaoMedia": 52,
+      "consultaPrincipal": "como entrar na bios com o pc ligado"
+    },
+    {
+      "caminho": "/blog/servico-de-audio-do-windows-nao-esta-em-execucao",
+      "estado": "com-impressoes",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 1,
+      "posicaoMedia": 38,
+      "consultaPrincipal": "audio.exe"
+    },
+    {
+      "caminho": "/blog/windows-update-nao-funciona-o-que-verificar",
+      "estado": "com-impressoes",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 1,
+      "posicaoMedia": 51,
+      "consultaPrincipal": "estagio da correção c"
+    },
+    {
+      "caminho": "/blog/windows-update-travado-desfazendo-alteracoes",
+      "estado": "com-impressoes",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 1,
+      "posicaoMedia": 22,
+      "consultaPrincipal": "desfazendo alterações feitas no computador"
+    },
+    {
+      "caminho": "/equipamentos/roteador",
+      "estado": "com-impressoes",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 1,
+      "posicaoMedia": 81,
+      "consultaPrincipal": "roteador caindo sinal"
+    },
+    {
+      "caminho": "/problemas/cheiro-de-queimado",
+      "estado": "com-impressoes",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 1,
+      "posicaoMedia": 23,
+      "consultaPrincipal": "fonte com cheiro de queimado mas funcionando"
+    },
+    {
+      "caminho": "/servicos/conserto-placa",
+      "estado": "com-impressoes",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 1,
+      "posicaoMedia": 71,
+      "consultaPrincipal": "conserto placa de video curitiba"
+    },
+    {
+      "caminho": "/servicos/formatacao-computador/curitiba",
+      "estado": "com-impressoes",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 1,
+      "posicaoMedia": 61,
+      "consultaPrincipal": "formatacao de notebook curitiba"
+    },
+    {
+      "caminho": "/servicos/recuperacao-de-dados",
+      "estado": "com-impressoes",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 1,
+      "posicaoMedia": 53,
+      "consultaPrincipal": "data recovery curitiba"
+    },
+    {
+      "caminho": "/solucoes/backup",
+      "estado": "com-impressoes",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 1,
+      "posicaoMedia": 71,
+      "consultaPrincipal": "backup computadores"
+    },
+    {
+      "caminho": "/anuncie",
+      "estado": "sem-dados",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 0,
+      "posicaoMedia": null,
+      "consultaPrincipal": null
+    },
+    {
+      "caminho": "/areas-atendidas",
+      "estado": "sem-dados",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 0,
+      "posicaoMedia": null,
+      "consultaPrincipal": null
+    },
+    {
+      "caminho": "/assistencia-tecnica-curitiba",
+      "estado": "sem-dados",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 0,
+      "posicaoMedia": null,
+      "consultaPrincipal": null
+    },
+    {
+      "caminho": "/atendimento-domicilio",
+      "estado": "sem-dados",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 0,
+      "posicaoMedia": null,
+      "consultaPrincipal": null
+    },
+    {
+      "caminho": "/atendimento-remoto",
+      "estado": "sem-dados",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 0,
+      "posicaoMedia": null,
+      "consultaPrincipal": null
+    },
+    {
+      "caminho": "/autoridade-tecnica",
+      "estado": "sem-dados",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 0,
+      "posicaoMedia": null,
+      "consultaPrincipal": null
+    },
+    {
+      "caminho": "/bairros",
+      "estado": "sem-dados",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 0,
+      "posicaoMedia": null,
+      "consultaPrincipal": null
+    },
+    {
+      "caminho": "/bairros/afonso-pena",
+      "estado": "sem-dados",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 0,
+      "posicaoMedia": null,
+      "consultaPrincipal": null
+    },
+    {
+      "caminho": "/bairros/agua-verde",
+      "estado": "sem-dados",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 0,
+      "posicaoMedia": null,
+      "consultaPrincipal": null
+    },
+    {
+      "caminho": "/bairros/aviacao",
+      "estado": "sem-dados",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 0,
+      "posicaoMedia": null,
+      "consultaPrincipal": null
+    },
+    {
+      "caminho": "/bairros/batel",
+      "estado": "sem-dados",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 0,
+      "posicaoMedia": null,
+      "consultaPrincipal": null
+    },
+    {
+      "caminho": "/bairros/bigorrilho",
+      "estado": "sem-dados",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 0,
+      "posicaoMedia": null,
+      "consultaPrincipal": null
+    },
+    {
+      "caminho": "/bairros/boa-vista",
+      "estado": "sem-dados",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 0,
+      "posicaoMedia": null,
+      "consultaPrincipal": null
+    },
+    {
+      "caminho": "/bairros/boqueirao",
+      "estado": "sem-dados",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 0,
+      "posicaoMedia": null,
+      "consultaPrincipal": null
+    },
+    {
+      "caminho": "/bairros/cabral",
+      "estado": "sem-dados",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 0,
+      "posicaoMedia": null,
+      "consultaPrincipal": null
+    },
+    {
+      "caminho": "/bairros/cajuru",
+      "estado": "sem-dados",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 0,
+      "posicaoMedia": null,
+      "consultaPrincipal": null
+    },
+    {
+      "caminho": "/bairros/centro",
+      "estado": "sem-dados",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 0,
+      "posicaoMedia": null,
+      "consultaPrincipal": null
+    },
+    {
+      "caminho": "/bairros/cidade-jardim-sjp",
+      "estado": "sem-dados",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 0,
+      "posicaoMedia": null,
+      "consultaPrincipal": null
+    },
+    {
+      "caminho": "/bairros/costeira",
+      "estado": "sem-dados",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 0,
+      "posicaoMedia": null,
+      "consultaPrincipal": null
+    },
+    {
+      "caminho": "/bairros/cruzeiro",
+      "estado": "sem-dados",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 0,
+      "posicaoMedia": null,
+      "consultaPrincipal": null
+    },
+    {
+      "caminho": "/bairros/guatupe",
+      "estado": "sem-dados",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 0,
+      "posicaoMedia": null,
+      "consultaPrincipal": null
+    },
+    {
+      "caminho": "/bairros/ouro-fino-sjp",
+      "estado": "sem-dados",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 0,
+      "posicaoMedia": null,
+      "consultaPrincipal": null
+    },
+    {
+      "caminho": "/bairros/pinheirinho",
+      "estado": "sem-dados",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 0,
+      "posicaoMedia": null,
+      "consultaPrincipal": null
+    },
+    {
+      "caminho": "/bairros/portao",
+      "estado": "sem-dados",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 0,
+      "posicaoMedia": null,
+      "consultaPrincipal": null
+    },
+    {
+      "caminho": "/bairros/santa-felicidade",
+      "estado": "sem-dados",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 0,
+      "posicaoMedia": null,
+      "consultaPrincipal": null
+    },
+    {
+      "caminho": "/bairros/sitio-cercado",
+      "estado": "sem-dados",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 0,
+      "posicaoMedia": null,
+      "consultaPrincipal": null
+    },
+    {
+      "caminho": "/bairros/xaxim",
+      "estado": "sem-dados",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 0,
+      "posicaoMedia": null,
+      "consultaPrincipal": null
+    },
+    {
+      "caminho": "/blog",
+      "estado": "sem-dados",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 0,
+      "posicaoMedia": null,
+      "consultaPrincipal": null
+    },
+    {
+      "caminho": "/blog/backup-como-proteger-seus-arquivos",
+      "estado": "sem-dados",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 0,
+      "posicaoMedia": null,
+      "consultaPrincipal": null
+    },
+    {
+      "caminho": "/blog/backup-nuvem-empresas-qual-escolher",
+      "estado": "sem-dados",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 0,
+      "posicaoMedia": null,
+      "consultaPrincipal": null
+    },
+    {
+      "caminho": "/blog/boot-uefi-ou-legacy-como-identificar",
+      "estado": "sem-dados",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 0,
+      "posicaoMedia": null,
+      "consultaPrincipal": null
+    },
+    {
+      "caminho": "/blog/botao-power-nao-funciona-jump-start-placa-mae",
+      "estado": "sem-dados",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 0,
+      "posicaoMedia": null,
+      "consultaPrincipal": null
+    },
+    {
+      "caminho": "/blog/codigos-de-erro-tela-azul-windows",
+      "estado": "sem-dados",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 0,
+      "posicaoMedia": null,
+      "consultaPrincipal": null
+    },
+    {
+      "caminho": "/blog/como-clonar-hd-para-ssd",
+      "estado": "sem-dados",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 0,
+      "posicaoMedia": null,
+      "consultaPrincipal": null
+    },
+    {
+      "caminho": "/blog/como-conectar-wifi-tv-nao-conecta",
+      "estado": "sem-dados",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 0,
+      "posicaoMedia": null,
+      "consultaPrincipal": null
+    },
+    {
+      "caminho": "/blog/como-diagnosticar-placa-mae-defeituosa",
+      "estado": "sem-dados",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 0,
+      "posicaoMedia": null,
+      "consultaPrincipal": null
+    },
+    {
+      "caminho": "/blog/como-escolher-um-bom-antivirus",
+      "estado": "sem-dados",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 0,
+      "posicaoMedia": null,
+      "consultaPrincipal": null
+    },
+    {
+      "caminho": "/blog/como-fazer-upgrade-ssd-nvme",
+      "estado": "sem-dados",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 0,
+      "posicaoMedia": null,
+      "consultaPrincipal": null
+    },
+    {
+      "caminho": "/blog/como-formatar-pc-sem-perder-arquivos",
+      "estado": "sem-dados",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 0,
+      "posicaoMedia": null,
+      "consultaPrincipal": null
+    },
+    {
+      "caminho": "/blog/como-instalar-impressora-windows-passo-a-passo",
+      "estado": "sem-dados",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 0,
+      "posicaoMedia": null,
+      "consultaPrincipal": null
+    },
+    {
+      "caminho": "/blog/como-instalar-segundo-ssd-notebook",
+      "estado": "sem-dados",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 0,
+      "posicaoMedia": null,
+      "consultaPrincipal": null
+    },
+    {
+      "caminho": "/blog/como-instalar-windows-11-do-zero",
+      "estado": "sem-dados",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 0,
+      "posicaoMedia": null,
+      "consultaPrincipal": null
+    },
+    {
+      "caminho": "/blog/como-limpar-notebook-por-dentro",
+      "estado": "sem-dados",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 0,
+      "posicaoMedia": null,
+      "consultaPrincipal": null
+    },
+    {
+      "caminho": "/blog/como-melhorar-sinal-wifi-em-casa",
+      "estado": "sem-dados",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 0,
+      "posicaoMedia": null,
+      "consultaPrincipal": null
+    },
+    {
+      "caminho": "/blog/como-proteger-computador-golpes-internet",
+      "estado": "sem-dados",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 0,
+      "posicaoMedia": null,
+      "consultaPrincipal": null
+    },
+    {
+      "caminho": "/blog/como-remover-virus-windows-iniciantes",
+      "estado": "sem-dados",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 0,
+      "posicaoMedia": null,
+      "consultaPrincipal": null
+    },
+    {
+      "caminho": "/blog/como-testar-fonte-de-alimentacao-pc",
+      "estado": "sem-dados",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 0,
+      "posicaoMedia": null,
+      "consultaPrincipal": null
+    },
+    {
+      "caminho": "/blog/computador-lento-causas-solucoes",
+      "estado": "sem-dados",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 0,
+      "posicaoMedia": null,
+      "consultaPrincipal": null
+    },
+    {
+      "caminho": "/blog/curto-circuito-placa-mae-como-identificar",
+      "estado": "sem-dados",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 0,
+      "posicaoMedia": null,
+      "consultaPrincipal": null
+    },
+    {
+      "caminho": "/blog/disco-com-setores-defeituosos-smart-o-que-fazer",
+      "estado": "sem-dados",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 0,
+      "posicaoMedia": null,
+      "consultaPrincipal": null
+    },
+    {
+      "caminho": "/blog/internet-lenta-provedor-ou-roteador",
+      "estado": "sem-dados",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 0,
+      "posicaoMedia": null,
+      "consultaPrincipal": null
+    },
+    {
+      "caminho": "/blog/limpar-arquivos-temporarios-windows",
+      "estado": "sem-dados",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 0,
+      "posicaoMedia": null,
+      "consultaPrincipal": null
+    },
+    {
+      "caminho": "/blog/limpar-cache-do-windows-update-softwaredistribution",
+      "estado": "sem-dados",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 0,
+      "posicaoMedia": null,
+      "consultaPrincipal": null
+    },
+    {
+      "caminho": "/blog/memoria-ram-insuficiente-sintomas",
+      "estado": "sem-dados",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 0,
+      "posicaoMedia": null,
+      "consultaPrincipal": null
+    },
+    {
+      "caminho": "/blog/notebook-nao-liga-o-que-fazer",
+      "estado": "sem-dados",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 0,
+      "posicaoMedia": null,
+      "consultaPrincipal": null
+    },
+    {
+      "caminho": "/blog/ordem-de-boot-na-bios-como-configurar",
+      "estado": "sem-dados",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 0,
+      "posicaoMedia": null,
+      "consultaPrincipal": null
+    },
+    {
+      "caminho": "/blog/organizacao-de-ti-para-pequenos-escritorios",
+      "estado": "sem-dados",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 0,
+      "posicaoMedia": null,
+      "consultaPrincipal": null
+    },
+    {
+      "caminho": "/blog/permissoes-de-camera-no-windows",
+      "estado": "sem-dados",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 0,
+      "posicaoMedia": null,
+      "consultaPrincipal": null
+    },
+    {
+      "caminho": "/blog/quando-trocar-hd-por-ssd",
+      "estado": "sem-dados",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 0,
+      "posicaoMedia": null,
+      "consultaPrincipal": null
+    },
+    {
+      "caminho": "/blog/quanto-custa-formatar-um-computador",
+      "estado": "sem-dados",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 0,
+      "posicaoMedia": null,
+      "consultaPrincipal": null
+    },
+    {
+      "caminho": "/blog/ransomware-como-proteger-empresa",
+      "estado": "sem-dados",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 0,
+      "posicaoMedia": null,
+      "consultaPrincipal": null
+    },
+    {
+      "caminho": "/blog/ssd-nvme-nao-aparece-no-gerenciador-de-discos",
+      "estado": "sem-dados",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 0,
+      "posicaoMedia": null,
+      "consultaPrincipal": null
+    },
+    {
+      "caminho": "/blog/testar-memoria-ram-memtest86",
+      "estado": "sem-dados",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 0,
+      "posicaoMedia": null,
+      "consultaPrincipal": null
+    },
+    {
+      "caminho": "/blog/troquei-o-ssd-e-o-pc-so-abre-a-bios",
+      "estado": "sem-dados",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 0,
+      "posicaoMedia": null,
+      "consultaPrincipal": null
+    },
+    {
+      "caminho": "/blog/webcam-nao-funciona-o-que-verificar",
+      "estado": "sem-dados",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 0,
+      "posicaoMedia": null,
+      "consultaPrincipal": null
+    },
+    {
+      "caminho": "/blog/webcam-usb-nao-e-detectada",
+      "estado": "sem-dados",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 0,
+      "posicaoMedia": null,
+      "consultaPrincipal": null
+    },
+    {
+      "caminho": "/blog/windows-11-lento-como-resolver",
+      "estado": "sem-dados",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 0,
+      "posicaoMedia": null,
+      "consultaPrincipal": null
+    },
+    {
+      "caminho": "/blog/windows-reparo-automatico-em-loop",
+      "estado": "sem-dados",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 0,
+      "posicaoMedia": null,
+      "consultaPrincipal": null
+    },
+    {
+      "caminho": "/coleta-e-entrega",
+      "estado": "sem-dados",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 0,
+      "posicaoMedia": null,
+      "consultaPrincipal": null
+    },
+    {
+      "caminho": "/como-funciona",
+      "estado": "indexada",
+      "cobertura": "Submitted and indexed",
+      "ultimoRastreio": "2026-08-14T20:10:50Z",
+      "cliques": 0,
+      "impressoes": 0,
+      "posicaoMedia": null,
+      "consultaPrincipal": null
+    },
+    {
+      "caminho": "/contato",
+      "estado": "indexada",
+      "cobertura": "Submitted and indexed",
+      "ultimoRastreio": "2026-08-13T18:53:05Z",
+      "cliques": 0,
+      "impressoes": 0,
+      "posicaoMedia": null,
+      "consultaPrincipal": null
+    },
+    {
+      "caminho": "/decisoes",
+      "estado": "sem-dados",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 0,
+      "posicaoMedia": null,
+      "consultaPrincipal": null
+    },
+    {
+      "caminho": "/decisoes/atualizar-para-windows-11",
+      "estado": "sem-dados",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 0,
+      "posicaoMedia": null,
+      "consultaPrincipal": null
+    },
+    {
+      "caminho": "/decisoes/backup-antes-da-manutencao",
+      "estado": "sem-dados",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 0,
+      "posicaoMedia": null,
+      "consultaPrincipal": null
+    },
+    {
+      "caminho": "/decisoes/consertar-ou-substituir",
+      "estado": "nao-indexada",
+      "cobertura": "URL is unknown to Google",
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 0,
+      "posicaoMedia": null,
+      "consultaPrincipal": null
+    },
+    {
+      "caminho": "/decisoes/formatar-ou-reparar",
+      "estado": "sem-dados",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 0,
+      "posicaoMedia": null,
+      "consultaPrincipal": null
+    },
+    {
+      "caminho": "/decisoes/hd-com-ruido",
+      "estado": "sem-dados",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 0,
+      "posicaoMedia": null,
+      "consultaPrincipal": null
+    },
+    {
+      "caminho": "/decisoes/montar-ou-comprar-pronto",
+      "estado": "sem-dados",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 0,
+      "posicaoMedia": null,
+      "consultaPrincipal": null
+    },
+    {
+      "caminho": "/decisoes/nuvem-ou-hd-externo",
+      "estado": "sem-dados",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 0,
+      "posicaoMedia": null,
+      "consultaPrincipal": null
+    },
+    {
+      "caminho": "/decisoes/remoto-ou-presencial",
+      "estado": "sem-dados",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 0,
+      "posicaoMedia": null,
+      "consultaPrincipal": null
+    },
+    {
+      "caminho": "/decisoes/ssd-ou-memoria-ram",
+      "estado": "sem-dados",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 0,
+      "posicaoMedia": null,
+      "consultaPrincipal": null
+    },
+    {
+      "caminho": "/decisoes/trocar-componente-ou-reparar",
+      "estado": "sem-dados",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 0,
+      "posicaoMedia": null,
+      "consultaPrincipal": null
+    },
+    {
+      "caminho": "/diagnostico-tecnico",
+      "estado": "sem-dados",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 0,
+      "posicaoMedia": null,
+      "consultaPrincipal": null
+    },
+    {
+      "caminho": "/entidades",
+      "estado": "nao-indexada",
+      "cobertura": "URL is unknown to Google",
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 0,
+      "posicaoMedia": null,
+      "consultaPrincipal": null
+    },
+    {
+      "caminho": "/entidades/backup",
+      "estado": "sem-dados",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 0,
+      "posicaoMedia": null,
+      "consultaPrincipal": null
+    },
+    {
+      "caminho": "/entidades/cidade",
+      "estado": "sem-dados",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 0,
+      "posicaoMedia": null,
+      "consultaPrincipal": null
+    },
+    {
+      "caminho": "/entidades/computador-lento",
+      "estado": "sem-dados",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 0,
+      "posicaoMedia": null,
+      "consultaPrincipal": null
+    },
+    {
+      "caminho": "/entidades/erro-0xc0000428",
+      "estado": "sem-dados",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 0,
+      "posicaoMedia": null,
+      "consultaPrincipal": null
+    },
+    {
+      "caminho": "/entidades/memoria-ram",
+      "estado": "sem-dados",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 0,
+      "posicaoMedia": null,
+      "consultaPrincipal": null
+    },
+    {
+      "caminho": "/entidades/servico",
+      "estado": "sem-dados",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 0,
+      "posicaoMedia": null,
+      "consultaPrincipal": null
+    },
+    {
+      "caminho": "/entidades/ssd",
+      "estado": "sem-dados",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 0,
+      "posicaoMedia": null,
+      "consultaPrincipal": null
+    },
+    {
+      "caminho": "/entidades/wifi",
+      "estado": "sem-dados",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 0,
+      "posicaoMedia": null,
+      "consultaPrincipal": null
+    },
+    {
+      "caminho": "/entidades/windows",
+      "estado": "sem-dados",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 0,
+      "posicaoMedia": null,
+      "consultaPrincipal": null
+    },
+    {
+      "caminho": "/equipamentos",
+      "estado": "sem-dados",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 0,
+      "posicaoMedia": null,
+      "consultaPrincipal": null
+    },
+    {
+      "caminho": "/equipamentos-atendidos",
+      "estado": "sem-dados",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 0,
+      "posicaoMedia": null,
+      "consultaPrincipal": null
+    },
+    {
+      "caminho": "/equipamentos/desktop",
+      "estado": "sem-dados",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 0,
+      "posicaoMedia": null,
+      "consultaPrincipal": null
+    },
+    {
+      "caminho": "/equipamentos/impressora",
+      "estado": "sem-dados",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 0,
+      "posicaoMedia": null,
+      "consultaPrincipal": null
+    },
+    {
+      "caminho": "/equipamentos/notebook",
+      "estado": "sem-dados",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 0,
+      "posicaoMedia": null,
+      "consultaPrincipal": null
+    },
+    {
+      "caminho": "/faq",
+      "estado": "indexada",
+      "cobertura": "Submitted and indexed",
+      "ultimoRastreio": "2026-08-31T04:14:59Z",
+      "cliques": 0,
+      "impressoes": 0,
+      "posicaoMedia": null,
+      "consultaPrincipal": null
+    },
+    {
+      "caminho": "/ferramentas",
+      "estado": "sem-dados",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 0,
+      "posicaoMedia": null,
+      "consultaPrincipal": null
+    },
+    {
+      "caminho": "/ferramentas/checklist-antes-de-formatar",
+      "estado": "sem-dados",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 0,
+      "posicaoMedia": null,
+      "consultaPrincipal": null
+    },
+    {
+      "caminho": "/ferramentas/checklist-computador-lento",
+      "estado": "sem-dados",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 0,
+      "posicaoMedia": null,
+      "consultaPrincipal": null
+    },
+    {
+      "caminho": "/ferramentas/roteiro-falha-de-inicializacao",
+      "estado": "sem-dados",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 0,
+      "posicaoMedia": null,
+      "consultaPrincipal": null
+    },
+    {
+      "caminho": "/ferramentas/roteiro-wifi-instavel",
+      "estado": "sem-dados",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 0,
+      "posicaoMedia": null,
+      "consultaPrincipal": null
+    },
+    {
+      "caminho": "/ferramentas/ssd-ou-ram",
+      "estado": "sem-dados",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 0,
+      "posicaoMedia": null,
+      "consultaPrincipal": null
+    },
+    {
+      "caminho": "/ferramentas/verificador-de-backup",
+      "estado": "sem-dados",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 0,
+      "posicaoMedia": null,
+      "consultaPrincipal": null
+    },
+    {
+      "caminho": "/glossario",
+      "estado": "nao-indexada",
+      "cobertura": "URL is unknown to Google",
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 0,
+      "posicaoMedia": null,
+      "consultaPrincipal": null
+    },
+    {
+      "caminho": "/glossario/backup-incremental",
+      "estado": "sem-dados",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 0,
+      "posicaoMedia": null,
+      "consultaPrincipal": null
+    },
+    {
+      "caminho": "/glossario/bios",
+      "estado": "sem-dados",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 0,
+      "posicaoMedia": null,
+      "consultaPrincipal": null
+    },
+    {
+      "caminho": "/glossario/bitlocker",
+      "estado": "sem-dados",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 0,
+      "posicaoMedia": null,
+      "consultaPrincipal": null
+    },
+    {
+      "caminho": "/glossario/bsod",
+      "estado": "sem-dados",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 0,
+      "posicaoMedia": null,
+      "consultaPrincipal": null
+    },
+    {
+      "caminho": "/glossario/dns",
+      "estado": "sem-dados",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 0,
+      "posicaoMedia": null,
+      "consultaPrincipal": null
+    },
+    {
+      "caminho": "/glossario/driver",
+      "estado": "sem-dados",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 0,
+      "posicaoMedia": null,
+      "consultaPrincipal": null
+    },
+    {
+      "caminho": "/glossario/imagem-do-sistema",
+      "estado": "sem-dados",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 0,
+      "posicaoMedia": null,
+      "consultaPrincipal": null
+    },
+    {
+      "caminho": "/glossario/memoria-ram",
+      "estado": "sem-dados",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 0,
+      "posicaoMedia": null,
+      "consultaPrincipal": null
+    },
+    {
+      "caminho": "/glossario/nat",
+      "estado": "sem-dados",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 0,
+      "posicaoMedia": null,
+      "consultaPrincipal": null
+    },
+    {
+      "caminho": "/glossario/nvme",
+      "estado": "sem-dados",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 0,
+      "posicaoMedia": null,
+      "consultaPrincipal": null
+    },
+    {
+      "caminho": "/glossario/particao",
+      "estado": "sem-dados",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 0,
+      "posicaoMedia": null,
+      "consultaPrincipal": null
+    },
+    {
+      "caminho": "/glossario/recuperacao-de-dados",
+      "estado": "sem-dados",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 0,
+      "posicaoMedia": null,
+      "consultaPrincipal": null
+    },
+    {
+      "caminho": "/glossario/secure-boot",
+      "estado": "sem-dados",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 0,
+      "posicaoMedia": null,
+      "consultaPrincipal": null
+    },
+    {
+      "caminho": "/glossario/smart",
+      "estado": "sem-dados",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 0,
+      "posicaoMedia": null,
+      "consultaPrincipal": null
+    },
+    {
+      "caminho": "/glossario/ssd",
+      "estado": "sem-dados",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 0,
+      "posicaoMedia": null,
+      "consultaPrincipal": null
+    },
+    {
+      "caminho": "/glossario/thermal-throttling",
+      "estado": "sem-dados",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 0,
+      "posicaoMedia": null,
+      "consultaPrincipal": null
+    },
+    {
+      "caminho": "/glossario/tpm",
+      "estado": "sem-dados",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 0,
+      "posicaoMedia": null,
+      "consultaPrincipal": null
+    },
+    {
+      "caminho": "/glossario/uefi",
+      "estado": "sem-dados",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 0,
+      "posicaoMedia": null,
+      "consultaPrincipal": null
+    },
+    {
+      "caminho": "/guia-tecnico-informatica",
+      "estado": "indexada",
+      "cobertura": "Submitted and indexed",
+      "ultimoRastreio": "2026-08-13T18:35:22Z",
+      "cliques": 0,
+      "impressoes": 0,
+      "posicaoMedia": null,
+      "consultaPrincipal": null
+    },
+    {
+      "caminho": "/politica-de-pecas-do-cliente",
+      "estado": "sem-dados",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 0,
+      "posicaoMedia": null,
+      "consultaPrincipal": null
+    },
+    {
+      "caminho": "/precos-e-politicas",
+      "estado": "indexada",
+      "cobertura": "Submitted and indexed",
+      "ultimoRastreio": "2026-08-15T06:55:21Z",
+      "cliques": 0,
+      "impressoes": 0,
+      "posicaoMedia": null,
+      "consultaPrincipal": null
+    },
+    {
+      "caminho": "/problemas",
+      "estado": "indexada",
+      "cobertura": "Submitted and indexed",
+      "ultimoRastreio": "2026-08-12T14:56:56Z",
+      "cliques": 0,
+      "impressoes": 0,
+      "posicaoMedia": null,
+      "consultaPrincipal": null
+    },
+    {
+      "caminho": "/problemas/arquivos-apagados",
+      "estado": "sem-dados",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 0,
+      "posicaoMedia": null,
+      "consultaPrincipal": null
+    },
+    {
+      "caminho": "/problemas/computador-esquentando",
+      "estado": "sem-dados",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 0,
+      "posicaoMedia": null,
+      "consultaPrincipal": null
+    },
+    {
+      "caminho": "/problemas/computador-lento",
+      "estado": "sem-dados",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 0,
+      "posicaoMedia": null,
+      "consultaPrincipal": null
+    },
+    {
+      "caminho": "/problemas/computador-nao-da-imagem",
+      "estado": "sem-dados",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 0,
+      "posicaoMedia": null,
+      "consultaPrincipal": null
+    },
+    {
+      "caminho": "/problemas/hd-fazendo-barulho",
+      "estado": "sem-dados",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 0,
+      "posicaoMedia": null,
+      "consultaPrincipal": null
+    },
+    {
+      "caminho": "/problemas/notebook-molhado",
+      "estado": "sem-dados",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 0,
+      "posicaoMedia": null,
+      "consultaPrincipal": null
+    },
+    {
+      "caminho": "/problemas/notebook-nao-liga",
+      "estado": "sem-dados",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 0,
+      "posicaoMedia": null,
+      "consultaPrincipal": null
+    },
+    {
+      "caminho": "/problemas/tela-azul",
+      "estado": "sem-dados",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 0,
+      "posicaoMedia": null,
+      "consultaPrincipal": null
+    },
+    {
+      "caminho": "/problemas/windows-nao-inicia",
+      "estado": "sem-dados",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 0,
+      "posicaoMedia": null,
+      "consultaPrincipal": null
+    },
+    {
+      "caminho": "/quando-nao-compensa",
+      "estado": "sem-dados",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 0,
+      "posicaoMedia": null,
+      "consultaPrincipal": null
+    },
+    {
+      "caminho": "/seguranca-dos-dados",
+      "estado": "sem-dados",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 0,
+      "posicaoMedia": null,
+      "consultaPrincipal": null
+    },
+    {
+      "caminho": "/servicos",
+      "estado": "indexada",
+      "cobertura": "Submitted and indexed",
+      "ultimoRastreio": "2026-08-14T17:17:47Z",
+      "cliques": 0,
+      "impressoes": 0,
+      "posicaoMedia": null,
+      "consultaPrincipal": null
+    },
+    {
+      "caminho": "/servicos/backup-para-empresas",
+      "estado": "sem-dados",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 0,
+      "posicaoMedia": null,
+      "consultaPrincipal": null
+    },
+    {
+      "caminho": "/servicos/backup-para-empresas/curitiba",
+      "estado": "sem-dados",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 0,
+      "posicaoMedia": null,
+      "consultaPrincipal": null
+    },
+    {
+      "caminho": "/servicos/backup-recuperacao/curitiba",
+      "estado": "sem-dados",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 0,
+      "posicaoMedia": null,
+      "consultaPrincipal": null
+    },
+    {
+      "caminho": "/servicos/backup-recuperacao/sao-jose-dos-pinhais",
+      "estado": "sem-dados",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 0,
+      "posicaoMedia": null,
+      "consultaPrincipal": null
+    },
+    {
+      "caminho": "/servicos/conserto-impressora-3d",
+      "estado": "sem-dados",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 0,
+      "posicaoMedia": null,
+      "consultaPrincipal": null
+    },
+    {
+      "caminho": "/servicos/conserto-notebook/sao-jose-dos-pinhais",
+      "estado": "sem-dados",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 0,
+      "posicaoMedia": null,
+      "consultaPrincipal": null
+    },
+    {
+      "caminho": "/servicos/conserto-pc-notebook/agua-verde",
+      "estado": "sem-dados",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 0,
+      "posicaoMedia": null,
+      "consultaPrincipal": null
+    },
+    {
+      "caminho": "/servicos/conserto-pc/sao-jose-dos-pinhais",
+      "estado": "sem-dados",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 0,
+      "posicaoMedia": null,
+      "consultaPrincipal": null
+    },
+    {
+      "caminho": "/servicos/formatacao",
+      "estado": "sem-dados",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 0,
+      "posicaoMedia": null,
+      "consultaPrincipal": null
+    },
+    {
+      "caminho": "/servicos/formatacao-computador/agua-verde",
+      "estado": "sem-dados",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 0,
+      "posicaoMedia": null,
+      "consultaPrincipal": null
+    },
+    {
+      "caminho": "/servicos/formatacao-computador/batel",
+      "estado": "sem-dados",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 0,
+      "posicaoMedia": null,
+      "consultaPrincipal": null
+    },
+    {
+      "caminho": "/servicos/formatacao-computador/cic",
+      "estado": "sem-dados",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 0,
+      "posicaoMedia": null,
+      "consultaPrincipal": null
+    },
+    {
+      "caminho": "/servicos/manutencao-de-computador",
+      "estado": "indexada",
+      "cobertura": "Submitted and indexed",
+      "ultimoRastreio": "2026-08-25T22:49:28Z",
+      "cliques": 0,
+      "impressoes": 0,
+      "posicaoMedia": null,
+      "consultaPrincipal": null
+    },
+    {
+      "caminho": "/servicos/manutencao-preventiva-empresas/curitiba",
+      "estado": "sem-dados",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 0,
+      "posicaoMedia": null,
+      "consultaPrincipal": null
+    },
+    {
+      "caminho": "/servicos/montagem-de-pc",
+      "estado": "sem-dados",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 0,
+      "posicaoMedia": null,
+      "consultaPrincipal": null
+    },
+    {
+      "caminho": "/servicos/montagem-de-pc/curitiba",
+      "estado": "sem-dados",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 0,
+      "posicaoMedia": null,
+      "consultaPrincipal": null
+    },
+    {
+      "caminho": "/servicos/pc-gamer",
+      "estado": "sem-dados",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 0,
+      "posicaoMedia": null,
+      "consultaPrincipal": null
+    },
+    {
+      "caminho": "/servicos/pc-gamer/curitiba",
+      "estado": "sem-dados",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 0,
+      "posicaoMedia": null,
+      "consultaPrincipal": null
+    },
+    {
+      "caminho": "/servicos/redes-e-wifi",
+      "estado": "sem-dados",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 0,
+      "posicaoMedia": null,
+      "consultaPrincipal": null
+    },
+    {
+      "caminho": "/servicos/redes-wifi/curitiba",
+      "estado": "sem-dados",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 0,
+      "posicaoMedia": null,
+      "consultaPrincipal": null
+    },
+    {
+      "caminho": "/servicos/redes-wifi/sao-jose-dos-pinhais",
+      "estado": "sem-dados",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 0,
+      "posicaoMedia": null,
+      "consultaPrincipal": null
+    },
+    {
+      "caminho": "/servicos/remocao-de-virus",
+      "estado": "sem-dados",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 0,
+      "posicaoMedia": null,
+      "consultaPrincipal": null
+    },
+    {
+      "caminho": "/servicos/remocao-virus/agua-verde",
+      "estado": "sem-dados",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 0,
+      "posicaoMedia": null,
+      "consultaPrincipal": null
+    },
+    {
+      "caminho": "/servicos/remocao-virus/cic",
+      "estado": "sem-dados",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 0,
+      "posicaoMedia": null,
+      "consultaPrincipal": null
+    },
+    {
+      "caminho": "/servicos/remocao-virus/curitiba",
+      "estado": "sem-dados",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 0,
+      "posicaoMedia": null,
+      "consultaPrincipal": null
+    },
+    {
+      "caminho": "/servicos/suporte-home-office",
+      "estado": "sem-dados",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 0,
+      "posicaoMedia": null,
+      "consultaPrincipal": null
+    },
+    {
+      "caminho": "/servicos/suporte-home-office/curitiba",
+      "estado": "sem-dados",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 0,
+      "posicaoMedia": null,
+      "consultaPrincipal": null
+    },
+    {
+      "caminho": "/servicos/upgrade-ssd-memoria/agua-verde",
+      "estado": "sem-dados",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 0,
+      "posicaoMedia": null,
+      "consultaPrincipal": null
+    },
+    {
+      "caminho": "/servicos/upgrade-ssd-memoria/centro",
+      "estado": "sem-dados",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 0,
+      "posicaoMedia": null,
+      "consultaPrincipal": null
+    },
+    {
+      "caminho": "/servicos/upgrade-ssd-memoria/cic",
+      "estado": "sem-dados",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 0,
+      "posicaoMedia": null,
+      "consultaPrincipal": null
+    },
+    {
+      "caminho": "/servicos/upgrade-ssd-memoria/portao",
+      "estado": "sem-dados",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 0,
+      "posicaoMedia": null,
+      "consultaPrincipal": null
+    },
+    {
+      "caminho": "/servicos/upgrade-ssd-ram",
+      "estado": "sem-dados",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 0,
+      "posicaoMedia": null,
+      "consultaPrincipal": null
+    },
+    {
+      "caminho": "/servicos/upgrade-ssd/curitiba",
+      "estado": "sem-dados",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 0,
+      "posicaoMedia": null,
+      "consultaPrincipal": null
+    },
+    {
+      "caminho": "/sobre",
+      "estado": "indexada",
+      "cobertura": "Submitted and indexed",
+      "ultimoRastreio": "2026-08-15T06:57:35Z",
+      "cliques": 0,
+      "impressoes": 0,
+      "posicaoMedia": null,
+      "consultaPrincipal": null
+    },
+    {
+      "caminho": "/solucoes",
+      "estado": "sem-dados",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 0,
+      "posicaoMedia": null,
+      "consultaPrincipal": null
+    },
+    {
+      "caminho": "/solucoes/diagnostico",
+      "estado": "sem-dados",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 0,
+      "posicaoMedia": null,
+      "consultaPrincipal": null
+    },
+    {
+      "caminho": "/solucoes/formatacao",
+      "estado": "sem-dados",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 0,
+      "posicaoMedia": null,
+      "consultaPrincipal": null
+    },
+    {
+      "caminho": "/solucoes/ssd",
+      "estado": "sem-dados",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 0,
+      "posicaoMedia": null,
+      "consultaPrincipal": null
+    },
+    {
+      "caminho": "/tecnico-informatica-araucaria",
+      "estado": "sem-dados",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 0,
+      "posicaoMedia": null,
+      "consultaPrincipal": null
+    },
+    {
+      "caminho": "/tecnico-informatica-campo-largo",
+      "estado": "sem-dados",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 0,
+      "posicaoMedia": null,
+      "consultaPrincipal": null
+    },
+    {
+      "caminho": "/tecnico-informatica-colombo",
+      "estado": "sem-dados",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 0,
+      "posicaoMedia": null,
+      "consultaPrincipal": null
+    },
+    {
+      "caminho": "/tecnico-informatica-curitiba",
+      "estado": "sem-dados",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 0,
+      "posicaoMedia": null,
+      "consultaPrincipal": null
+    },
+    {
+      "caminho": "/tecnico-informatica-pinhais",
+      "estado": "sem-dados",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 0,
+      "posicaoMedia": null,
+      "consultaPrincipal": null
+    },
+    {
+      "caminho": "/tecnico-informatica-sao-jose-pinhais",
+      "estado": "sem-dados",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 0,
+      "posicaoMedia": null,
+      "consultaPrincipal": null
+    }
+  ],
   "inspecoes": [
     {
       "caminho": "/",
@@ -1561,31 +5254,82 @@
       "canonicoGoogle": null,
       "canonicoDeclarado": null,
       "ultimoRastreio": null
+    },
+    {
+      "caminho": "/servicos",
+      "veredito": "PASS",
+      "cobertura": "Submitted and indexed",
+      "robots": "ALLOWED",
+      "busca": "SUCCESSFUL",
+      "canonicoGoogle": "https://otecnicodeinformatica.com.br/servicos",
+      "canonicoDeclarado": "https://otecnicodeinformatica.com.br/servicos",
+      "ultimoRastreio": "2026-08-14T17:17:47Z"
+    },
+    {
+      "caminho": "/como-funciona",
+      "veredito": "PASS",
+      "cobertura": "Submitted and indexed",
+      "robots": "ALLOWED",
+      "busca": "SUCCESSFUL",
+      "canonicoGoogle": "https://otecnicodeinformatica.com.br/como-funciona",
+      "canonicoDeclarado": "https://otecnicodeinformatica.com.br/como-funciona",
+      "ultimoRastreio": "2026-08-14T20:10:50Z"
+    },
+    {
+      "caminho": "/precos-e-politicas",
+      "veredito": "PASS",
+      "cobertura": "Submitted and indexed",
+      "robots": "ALLOWED",
+      "busca": "SUCCESSFUL",
+      "canonicoGoogle": "https://otecnicodeinformatica.com.br/precos-e-politicas",
+      "canonicoDeclarado": null,
+      "ultimoRastreio": "2026-08-15T06:55:21Z"
+    },
+    {
+      "caminho": "/sobre",
+      "veredito": "PASS",
+      "cobertura": "Submitted and indexed",
+      "robots": "ALLOWED",
+      "busca": "SUCCESSFUL",
+      "canonicoGoogle": "https://otecnicodeinformatica.com.br/sobre",
+      "canonicoDeclarado": "https://otecnicodeinformatica.com.br/sobre",
+      "ultimoRastreio": "2026-08-15T06:57:35Z"
+    },
+    {
+      "caminho": "/contato",
+      "veredito": "PASS",
+      "cobertura": "Submitted and indexed",
+      "robots": "ALLOWED",
+      "busca": "SUCCESSFUL",
+      "canonicoGoogle": "https://otecnicodeinformatica.com.br/contato",
+      "canonicoDeclarado": "https://otecnicodeinformatica.com.br/contato",
+      "ultimoRastreio": "2026-08-13T18:53:05Z"
+    },
+    {
+      "caminho": "/faq",
+      "veredito": "PASS",
+      "cobertura": "Submitted and indexed",
+      "robots": "ALLOWED",
+      "busca": "SUCCESSFUL",
+      "canonicoGoogle": "https://otecnicodeinformatica.com.br/faq",
+      "canonicoDeclarado": "https://otecnicodeinformatica.com.br/faq",
+      "ultimoRastreio": "2026-08-31T04:14:59Z"
     }
   ],
   "sitemaps": [
     {
-      "path": "https://otecnicodeinformatica.com.br/sitemap.xml",
-      "ultimoEnvio": "2026-09-02T03:02:30.897Z",
-      "ultimoDownload": "2026-09-02T03:02:32.887Z",
+      "path": "https://otecnicodeinformatica.com.br/sitemap-index.xml",
+      "ultimoEnvio": "2026-09-03T15:08:31.231Z",
+      "ultimoDownload": null,
       "erros": 0,
       "avisos": 0,
-      "urlsEnviadas": 185,
-      "pendente": false
-    },
-    {
-      "path": "https://otecnicodeinformatica.com.br/sitemap-main.xml",
-      "ultimoEnvio": "2026-08-12T17:57:29.047Z",
-      "ultimoDownload": "2026-08-27T18:46:44.627Z",
-      "erros": 0,
-      "avisos": 0,
-      "urlsEnviadas": 22,
-      "pendente": false
+      "urlsEnviadas": 0,
+      "pendente": true
     },
     {
       "path": "https://otecnicodeinformatica.com.br/sitemap-editorial.xml",
-      "ultimoEnvio": "2026-08-12T07:32:25.707Z",
-      "ultimoDownload": "2026-09-02T01:58:10.940Z",
+      "ultimoEnvio": "2026-09-03T15:08:31.069Z",
+      "ultimoDownload": "2026-09-03T15:08:32.597Z",
       "erros": 0,
       "avisos": 0,
       "urlsEnviadas": 64,
@@ -1593,8 +5337,8 @@
     },
     {
       "path": "https://otecnicodeinformatica.com.br/sitemap-solucoes.xml",
-      "ultimoEnvio": "2026-08-12T07:32:18.662Z",
-      "ultimoDownload": "2026-08-28T06:57:01.936Z",
+      "ultimoEnvio": "2026-09-03T15:08:30.882Z",
+      "ultimoDownload": "2026-09-03T15:08:32.490Z",
       "erros": 0,
       "avisos": 0,
       "urlsEnviadas": 6,
@@ -1602,17 +5346,17 @@
     },
     {
       "path": "https://otecnicodeinformatica.com.br/sitemap-equipamentos.xml",
-      "ultimoEnvio": "2026-08-12T07:32:07.344Z",
+      "ultimoEnvio": "2026-09-03T15:08:30.702Z",
       "ultimoDownload": "2026-08-28T22:55:25.674Z",
       "erros": 0,
       "avisos": 0,
       "urlsEnviadas": 5,
-      "pendente": false
+      "pendente": true
     },
     {
       "path": "https://otecnicodeinformatica.com.br/sitemap-problemas.xml",
-      "ultimoEnvio": "2026-08-12T07:31:58.325Z",
-      "ultimoDownload": "2026-08-31T10:46:23.165Z",
+      "ultimoEnvio": "2026-09-03T15:08:30.546Z",
+      "ultimoDownload": "2026-09-03T15:08:32.643Z",
       "erros": 0,
       "avisos": 0,
       "urlsEnviadas": 16,
@@ -1620,17 +5364,17 @@
     },
     {
       "path": "https://otecnicodeinformatica.com.br/sitemap-bairros.xml",
-      "ultimoEnvio": "2026-08-12T07:31:51.111Z",
+      "ultimoEnvio": "2026-09-03T15:08:30.352Z",
       "ultimoDownload": "2026-08-29T11:23:06.471Z",
       "erros": 0,
       "avisos": 0,
       "urlsEnviadas": 21,
-      "pendente": false
+      "pendente": true
     },
     {
       "path": "https://otecnicodeinformatica.com.br/sitemap-regioes.xml",
-      "ultimoEnvio": "2026-08-12T07:31:43.171Z",
-      "ultimoDownload": "2026-09-02T02:37:18.740Z",
+      "ultimoEnvio": "2026-09-03T15:08:30.179Z",
+      "ultimoDownload": "2026-09-03T15:08:31.823Z",
       "erros": 0,
       "avisos": 0,
       "urlsEnviadas": 6,
@@ -1638,11 +5382,29 @@
     },
     {
       "path": "https://otecnicodeinformatica.com.br/sitemap-servicos.xml",
-      "ultimoEnvio": "2026-08-12T07:31:36.280Z",
-      "ultimoDownload": "2026-08-31T10:36:53.612Z",
+      "ultimoEnvio": "2026-09-03T15:08:29.902Z",
+      "ultimoDownload": "2026-09-03T15:08:32.124Z",
       "erros": 0,
       "avisos": 0,
       "urlsEnviadas": 45,
+      "pendente": false
+    },
+    {
+      "path": "https://otecnicodeinformatica.com.br/sitemap-main.xml",
+      "ultimoEnvio": "2026-09-03T15:08:29.619Z",
+      "ultimoDownload": "2026-09-03T15:08:31.958Z",
+      "erros": 0,
+      "avisos": 0,
+      "urlsEnviadas": 70,
+      "pendente": false
+    },
+    {
+      "path": "https://otecnicodeinformatica.com.br/sitemap.xml",
+      "ultimoEnvio": "2026-09-02T03:02:30.897Z",
+      "ultimoDownload": "2026-09-02T03:02:32.887Z",
+      "erros": 0,
+      "avisos": 0,
+      "urlsEnviadas": 185,
       "pendente": false
     }
   ],
