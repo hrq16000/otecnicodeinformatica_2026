@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-09-03T17:30:22.842Z",
+  "geradoEm": "2026-09-03T17:32:13.753Z",
   "host": "otecnicodeinformatica.com.br",
   "modo": "generate",
   "sitemap": {
@@ -464,11 +464,7 @@
     ]
   },
   "diff": {
-    "adicionadas": [
-      "/blog/computador-desliga-sozinho-o-que-verificar",
-      "/blog/computador-nao-conecta-na-internet-por-cabo",
-      "/blog/teclado-de-notebook-nao-funciona-o-que-verificar"
-    ],
+    "adicionadas": [],
     "removidas": [],
     "regressoes": []
   },
@@ -1585,6 +1581,42 @@
           "/blog/computador-nao-conecta-na-internet-por-cabo",
           "/blog/teclado-de-notebook-nao-funciona-o-que-verificar"
         ],
+        "removidas": [],
+        "total": 244
+      },
+      "error": null
+    },
+    {
+      "id": "68a7bb4d-9f14-490f-8ceb-910f08e95e6d",
+      "action": "sync_approved",
+      "status": "OK",
+      "source": "cli",
+      "timestamp": "2026-09-03T17:32:13.851Z",
+      "details": {
+        "modo": "write",
+        "saida": "sitemap editorial: em dia (75 artigos indexáveis)"
+      },
+      "error": null
+    },
+    {
+      "id": "69e5cf78-632f-43ce-8320-884ad841dac5",
+      "action": "generate_sitemaps",
+      "status": "OK",
+      "source": "cli",
+      "timestamp": "2026-09-03T17:32:13.961Z",
+      "details": {
+        "saida": "sitemap curado: index + 8 sub-sitemaps (244 urls)"
+      },
+      "error": null
+    },
+    {
+      "id": "0c7dbf9b-34fb-4712-bba5-9f664a7e32ae",
+      "action": "diff_no_regression",
+      "status": "OK",
+      "source": "cli",
+      "timestamp": "2026-09-03T17:32:13.973Z",
+      "details": {
+        "adicionadas": [],
         "removidas": [],
         "total": 244
       },

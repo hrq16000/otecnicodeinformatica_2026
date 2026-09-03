@@ -1,27 +1,29 @@
 {
-  "geradoEm": "2026-09-03T16:57:35.107Z",
+  "geradoEm": "2026-09-03T17:32:23.407Z",
   "fonte": {
     "html": "SSR harness",
     "dist": "dist"
   },
-  "total": 72,
-  "analisadas": 72,
+  "total": 75,
+  "analisadas": 75,
   "falhas": 0,
   "medias": {
-    "palavras": 1475.58,
-    "densidadeSemantica": 57.06,
+    "palavras": 1456.55,
+    "densidadeSemantica": 57.14,
     "densidadeKeywordPrincipal": 0.43,
-    "linksInternosSaida": 11.68,
-    "linksInternosEntrada": 2.89
+    "linksInternosSaida": 11.6,
+    "linksInternosEntrada": 2.97
   },
   "orfas": [
     "/blog/como-conectar-wifi-tv-nao-conecta",
     "/blog/botao-power-nao-funciona-jump-start-placa-mae",
-    "/blog/internet-lenta-provedor-ou-roteador",
     "/blog/ordem-de-boot-na-bios-como-configurar",
     "/blog/monitor-sem-sinal-o-que-verificar",
     "/blog/bateria-de-notebook-nao-carrega-o-que-verificar",
-    "/blog/como-migrar-arquivos-para-um-computador-novo"
+    "/blog/como-migrar-arquivos-para-um-computador-novo",
+    "/blog/teclado-de-notebook-nao-funciona-o-que-verificar",
+    "/blog/computador-desliga-sozinho-o-que-verificar",
+    "/blog/computador-nao-conecta-na-internet-por-cabo"
   ],
   "urls": [
     {
@@ -854,13 +856,14 @@
         "/blog/computador-lento-causas-solucoes",
         "/blog/quando-trocar-hd-por-ssd"
       ],
-      "linksInternosEntrada": 5,
+      "linksInternosEntrada": 6,
       "origensEntrada": [
         "/blog/notebook-nao-liga-o-que-fazer",
         "/blog/como-limpar-notebook-por-dentro",
         "/blog/como-trocar-pasta-termica-notebook",
         "/blog/como-monitorar-temperatura-do-computador",
-        "/blog/bateria-de-notebook-nao-carrega-o-que-verificar"
+        "/blog/bateria-de-notebook-nao-carrega-o-que-verificar",
+        "/blog/computador-desliga-sozinho-o-que-verificar"
       ],
       "erro": null
     },
@@ -1811,12 +1814,13 @@
         "/blog/como-saber-se-pc-tem-virus-malware",
         "/servicos/manutencao-de-computador"
       ],
-      "linksInternosEntrada": 4,
+      "linksInternosEntrada": 5,
       "origensEntrada": [
         "/blog/notebook-superaquecendo-o-que-fazer",
         "/blog/computador-entra-direto-na-bios",
         "/blog/botao-power-nao-funciona-jump-start-placa-mae",
-        "/blog/monitor-sem-sinal-o-que-verificar"
+        "/blog/monitor-sem-sinal-o-que-verificar",
+        "/blog/teclado-de-notebook-nao-funciona-o-que-verificar"
       ],
       "erro": null
     },
@@ -2460,11 +2464,12 @@
         "/entidades/wifi",
         "/glossario/dns"
       ],
-      "linksInternosEntrada": 3,
+      "linksInternosEntrada": 4,
       "origensEntrada": [
         "/blog/como-saber-quem-esta-usando-meu-wifi",
         "/blog/como-proteger-computador-golpes-internet",
-        "/blog/como-aprender-informatica"
+        "/blog/como-aprender-informatica",
+        "/blog/computador-nao-conecta-na-internet-por-cabo"
       ],
       "erro": null
     },
@@ -3085,13 +3090,15 @@
         "/decisoes/consertar-ou-substituir",
         "/glossario/thermal-throttling"
       ],
-      "linksInternosEntrada": 5,
+      "linksInternosEntrada": 7,
       "origensEntrada": [
         "/blog/como-trocar-pasta-termica-notebook",
         "/blog/windows-11-lento-como-resolver",
         "/blog/manutencao-preventiva-de-computador-guia-completo",
         "/blog/como-monitorar-temperatura-do-computador",
-        "/blog/bateria-de-notebook-nao-carrega-o-que-verificar"
+        "/blog/bateria-de-notebook-nao-carrega-o-que-verificar",
+        "/blog/teclado-de-notebook-nao-funciona-o-que-verificar",
+        "/blog/computador-desliga-sozinho-o-que-verificar"
       ],
       "erro": null
     },
@@ -3245,11 +3252,12 @@
         "/decisoes/consertar-ou-substituir",
         "/glossario/thermal-throttling"
       ],
-      "linksInternosEntrada": 3,
+      "linksInternosEntrada": 4,
       "origensEntrada": [
         "/blog/como-limpar-notebook-por-dentro",
         "/blog/manutencao-preventiva-de-computador-guia-completo",
-        "/blog/como-monitorar-temperatura-do-computador"
+        "/blog/como-monitorar-temperatura-do-computador",
+        "/blog/computador-desliga-sozinho-o-que-verificar"
       ],
       "erro": null
     },
@@ -4348,14 +4356,15 @@
         "/glossario/thermal-throttling",
         "/servicos/manutencao-de-notebook"
       ],
-      "linksInternosEntrada": 6,
+      "linksInternosEntrada": 7,
       "origensEntrada": [
         "/blog/como-diagnosticar-placa-mae-defeituosa",
         "/blog/computador-entra-direto-na-bios",
         "/blog/botao-power-nao-funciona-jump-start-placa-mae",
         "/blog/curto-circuito-placa-mae-como-identificar",
         "/blog/dispositivo-usb-nao-reconhecido-o-que-fazer",
-        "/blog/monitor-sem-sinal-o-que-verificar"
+        "/blog/monitor-sem-sinal-o-que-verificar",
+        "/blog/computador-desliga-sozinho-o-que-verificar"
       ],
       "erro": null
     },
@@ -6592,11 +6601,12 @@
         "/decisoes/backup-antes-da-manutencao",
         "/servicos/manutencao-de-computador"
       ],
-      "linksInternosEntrada": 3,
+      "linksInternosEntrada": 4,
       "origensEntrada": [
         "/blog/como-resolver-tela-azul-windows",
         "/blog/testar-memoria-ram-memtest86",
-        "/blog/windows-update-nao-funciona-o-que-verificar"
+        "/blog/windows-update-nao-funciona-o-que-verificar",
+        "/blog/computador-desliga-sozinho-o-que-verificar"
       ],
       "erro": null
     },
@@ -6750,13 +6760,14 @@
         "/decisoes/backup-antes-da-manutencao",
         "/servicos/manutencao-de-computador"
       ],
-      "linksInternosEntrada": 5,
+      "linksInternosEntrada": 6,
       "origensEntrada": [
         "/blog/como-resolver-tela-azul-windows",
         "/blog/computador-lento-causas-solucoes",
         "/blog/memoria-ram-insuficiente-sintomas",
         "/blog/codigos-de-erro-tela-azul-windows",
-        "/blog/windows-reparo-automatico-em-loop"
+        "/blog/windows-reparo-automatico-em-loop",
+        "/blog/computador-desliga-sozinho-o-que-verificar"
       ],
       "erro": null
     },
@@ -7377,8 +7388,10 @@
         "/entidades/wifi",
         "/glossario/dns"
       ],
-      "linksInternosEntrada": 0,
-      "origensEntrada": [],
+      "linksInternosEntrada": 1,
+      "origensEntrada": [
+        "/blog/computador-nao-conecta-na-internet-por-cabo"
+      ],
       "erro": null
     },
     {
@@ -9253,10 +9266,11 @@
         "/problemas/windows-nao-inicia",
         "/ferramentas/checklist-antes-de-formatar"
       ],
-      "linksInternosEntrada": 2,
+      "linksInternosEntrada": 3,
       "origensEntrada": [
         "/blog/limpar-cache-do-windows-update-softwaredistribution",
-        "/blog/windows-update-travado-desfazendo-alteracoes"
+        "/blog/windows-update-travado-desfazendo-alteracoes",
+        "/blog/computador-nao-conecta-na-internet-por-cabo"
       ],
       "erro": null
     },
@@ -10192,9 +10206,10 @@
         "/diagnostico-tecnico",
         "/servicos/manutencao-de-computador"
       ],
-      "linksInternosEntrada": 1,
+      "linksInternosEntrada": 2,
       "origensEntrada": [
-        "/blog/como-monitorar-temperatura-do-computador"
+        "/blog/como-monitorar-temperatura-do-computador",
+        "/blog/teclado-de-notebook-nao-funciona-o-que-verificar"
       ],
       "erro": null
     },
@@ -10346,9 +10361,11 @@
         "/diagnostico-tecnico",
         "/servicos/manutencao-de-computador"
       ],
-      "linksInternosEntrada": 1,
+      "linksInternosEntrada": 3,
       "origensEntrada": [
-        "/blog/pendrive-somente-leitura-protegido-contra-gravacao"
+        "/blog/pendrive-somente-leitura-protegido-contra-gravacao",
+        "/blog/teclado-de-notebook-nao-funciona-o-que-verificar",
+        "/blog/computador-nao-conecta-na-internet-por-cabo"
       ],
       "erro": null
     },
@@ -10661,9 +10678,10 @@
         "/servicos/manutencao-de-computador",
         "/decisoes/backup-antes-da-manutencao"
       ],
-      "linksInternosEntrada": 1,
+      "linksInternosEntrada": 2,
       "origensEntrada": [
-        "/blog/bateria-de-notebook-nao-carrega-o-que-verificar"
+        "/blog/bateria-de-notebook-nao-carrega-o-que-verificar",
+        "/blog/computador-desliga-sozinho-o-que-verificar"
       ],
       "erro": null
     },
@@ -11429,6 +11447,464 @@
         "/blog/como-recuperar-dados-hd-com-defeito",
         "/servicos/recuperacao-de-dados",
         "/servicos/backup-para-empresas"
+      ],
+      "linksInternosEntrada": 0,
+      "origensEntrada": [],
+      "erro": null
+    },
+    {
+      "url": "/blog/teclado-de-notebook-nao-funciona-o-que-verificar",
+      "slug": "teclado-de-notebook-nao-funciona-o-que-verificar",
+      "lote": "11A/8",
+      "aprovadoEm": "2026-09-03",
+      "titulo": "Teclado de notebook não funciona: o que verificar antes de trocar",
+      "palavras": 1001,
+      "termosUteis": 586,
+      "densidadeSemantica": 59.73,
+      "vocabulario": 350,
+      "keywordPrincipal": {
+        "termo": "teclado de notebook nao funciona o que verificar",
+        "ocorrencias": 5,
+        "densidade": 0.85
+      },
+      "topKeywords": [
+        {
+          "termo": "teclado",
+          "ocorrencias": 30,
+          "densidade": 5.12
+        },
+        {
+          "termo": "liquido",
+          "ocorrencias": 9,
+          "densidade": 1.54
+        },
+        {
+          "termo": "tecnico",
+          "ocorrencias": 9,
+          "densidade": 1.54
+        },
+        {
+          "termo": "sistema",
+          "ocorrencias": 8,
+          "densidade": 1.37
+        },
+        {
+          "termo": "externo",
+          "ocorrencias": 7,
+          "densidade": 1.19
+        },
+        {
+          "termo": "funciona",
+          "ocorrencias": 7,
+          "densidade": 1.19
+        },
+        {
+          "termo": "quatro",
+          "ocorrencias": 7,
+          "densidade": 1.19
+        },
+        {
+          "termo": "teclas",
+          "ocorrencias": 7,
+          "densidade": 1.19
+        },
+        {
+          "termo": "responde",
+          "ocorrencias": 6,
+          "densidade": 1.02
+        },
+        {
+          "termo": "curitiba",
+          "ocorrencias": 5,
+          "densidade": 0.85
+        },
+        {
+          "termo": "equipamento",
+          "ocorrencias": 5,
+          "densidade": 0.85
+        },
+        {
+          "termo": "interno",
+          "ocorrencias": 5,
+          "densidade": 0.85
+        }
+      ],
+      "topBigramas": [
+        {
+          "termo": "curitiba regiao",
+          "ocorrencias": 3,
+          "densidade": 0.51
+        },
+        {
+          "termo": "externo funciona",
+          "ocorrencias": 3,
+          "densidade": 0.51
+        },
+        {
+          "termo": "externo responde",
+          "ocorrencias": 3,
+          "densidade": 0.51
+        },
+        {
+          "termo": "quatro sintomas",
+          "ocorrencias": 3,
+          "densidade": 0.51
+        },
+        {
+          "termo": "teclado externo",
+          "ocorrencias": 3,
+          "densidade": 0.51
+        },
+        {
+          "termo": "teclado interno",
+          "ocorrencias": 3,
+          "densidade": 0.51
+        },
+        {
+          "termo": "teclado usb",
+          "ocorrencias": 3,
+          "densidade": 0.51
+        },
+        {
+          "termo": "cabo flat",
+          "ocorrencias": 2,
+          "densidade": 0.34
+        }
+      ],
+      "headings": {
+        "h2": 12,
+        "h3": 0
+      },
+      "schemas": [
+        "Organization",
+        "WebSite",
+        "BreadcrumbList",
+        "BlogPosting",
+        "Article",
+        "TechArticle",
+        "LocalBusiness",
+        "ProfessionalService",
+        "ComputerRepairService",
+        "ItemList",
+        "FAQPage"
+      ],
+      "linksInternosSaida": 8,
+      "linksSaida": [
+        "/blog",
+        "/contato",
+        "/blog/como-limpar-notebook-por-dentro",
+        "/blog/manutencao-preventiva-de-computador-guia-completo",
+        "/blog/dispositivo-usb-nao-reconhecido-o-que-fazer",
+        "/blog/notebook-nao-liga-o-que-fazer",
+        "/diagnostico-tecnico",
+        "/servicos/manutencao-de-notebook"
+      ],
+      "linksInternosEntrada": 0,
+      "origensEntrada": [],
+      "erro": null
+    },
+    {
+      "url": "/blog/computador-desliga-sozinho-o-que-verificar",
+      "slug": "computador-desliga-sozinho-o-que-verificar",
+      "lote": "11A/8",
+      "aprovadoEm": "2026-09-03",
+      "titulo": "Computador desliga sozinho: o que verificar antes de trocar peça",
+      "palavras": 1011,
+      "termosUteis": 596,
+      "densidadeSemantica": 60.74,
+      "vocabulario": 362,
+      "keywordPrincipal": {
+        "termo": "computador desliga sozinho o que verificar",
+        "ocorrencias": 4,
+        "densidade": 0.67
+      },
+      "topKeywords": [
+        {
+          "termo": "desligamento",
+          "ocorrencias": 10,
+          "densidade": 1.68
+        },
+        {
+          "termo": "fonte",
+          "ocorrencias": 10,
+          "densidade": 1.68
+        },
+        {
+          "termo": "desliga",
+          "ocorrencias": 9,
+          "densidade": 1.51
+        },
+        {
+          "termo": "eletrica",
+          "ocorrencias": 8,
+          "densidade": 1.34
+        },
+        {
+          "termo": "sistema",
+          "ocorrencias": 8,
+          "densidade": 1.34
+        },
+        {
+          "termo": "tecnico",
+          "ocorrencias": 8,
+          "densidade": 1.34
+        },
+        {
+          "termo": "computador",
+          "ocorrencias": 7,
+          "densidade": 1.17
+        },
+        {
+          "termo": "temperatura",
+          "ocorrencias": 7,
+          "densidade": 1.17
+        },
+        {
+          "termo": "termica",
+          "ocorrencias": 7,
+          "densidade": 1.17
+        },
+        {
+          "termo": "energia",
+          "ocorrencias": 6,
+          "densidade": 1.01
+        },
+        {
+          "termo": "protecao",
+          "ocorrencias": 6,
+          "densidade": 1.01
+        },
+        {
+          "termo": "curitiba",
+          "ocorrencias": 5,
+          "densidade": 0.84
+        }
+      ],
+      "topBigramas": [
+        {
+          "termo": "protecao termica",
+          "ocorrencias": 4,
+          "densidade": 0.67
+        },
+        {
+          "termo": "computador desliga",
+          "ocorrencias": 3,
+          "densidade": 0.5
+        },
+        {
+          "termo": "curitiba regiao",
+          "ocorrencias": 3,
+          "densidade": 0.5
+        },
+        {
+          "termo": "desliga sozinho",
+          "ocorrencias": 3,
+          "densidade": 0.5
+        },
+        {
+          "termo": "registro sistema",
+          "ocorrencias": 3,
+          "densidade": 0.5
+        },
+        {
+          "termo": "trocar peca",
+          "ocorrencias": 3,
+          "densidade": 0.5
+        },
+        {
+          "termo": "alto consumo",
+          "ocorrencias": 2,
+          "densidade": 0.34
+        },
+        {
+          "termo": "backup manutencao",
+          "ocorrencias": 2,
+          "densidade": 0.34
+        }
+      ],
+      "headings": {
+        "h2": 12,
+        "h3": 0
+      },
+      "schemas": [
+        "Organization",
+        "WebSite",
+        "BreadcrumbList",
+        "BlogPosting",
+        "Article",
+        "TechArticle",
+        "LocalBusiness",
+        "ProfessionalService",
+        "ComputerRepairService",
+        "ItemList",
+        "FAQPage"
+      ],
+      "linksInternosSaida": 12,
+      "linksSaida": [
+        "/blog",
+        "/contato",
+        "/blog/codigos-de-erro-tela-azul-windows",
+        "/blog/como-monitorar-temperatura-do-computador",
+        "/blog/notebook-superaquecendo-o-que-fazer",
+        "/blog/como-limpar-notebook-por-dentro",
+        "/blog/como-trocar-pasta-termica-notebook",
+        "/blog/como-testar-fonte-de-alimentacao-pc",
+        "/blog/testar-memoria-ram-memtest86",
+        "/diagnostico-tecnico",
+        "/servicos/manutencao-de-computador",
+        "/decisoes/backup-antes-da-manutencao"
+      ],
+      "linksInternosEntrada": 0,
+      "origensEntrada": [],
+      "erro": null
+    },
+    {
+      "url": "/blog/computador-nao-conecta-na-internet-por-cabo",
+      "slug": "computador-nao-conecta-na-internet-por-cabo",
+      "lote": "11A/8",
+      "aprovadoEm": "2026-09-03",
+      "titulo": "Computador não conecta na internet por cabo: o que verificar",
+      "palavras": 987,
+      "termosUteis": 559,
+      "densidadeSemantica": 56.89,
+      "vocabulario": 318,
+      "keywordPrincipal": {
+        "termo": "computador nao conecta na internet por cabo",
+        "ocorrencias": 2,
+        "densidade": 0.36
+      },
+      "topKeywords": [
+        {
+          "termo": "cabo",
+          "ocorrencias": 19,
+          "densidade": 3.4
+        },
+        {
+          "termo": "rede",
+          "ocorrencias": 15,
+          "densidade": 2.68
+        },
+        {
+          "termo": "roteador",
+          "ocorrencias": 14,
+          "densidade": 2.5
+        },
+        {
+          "termo": "computador",
+          "ocorrencias": 9,
+          "densidade": 1.61
+        },
+        {
+          "termo": "tecnico",
+          "ocorrencias": 9,
+          "densidade": 1.61
+        },
+        {
+          "termo": "internet",
+          "ocorrencias": 8,
+          "densidade": 1.43
+        },
+        {
+          "termo": "porta",
+          "ocorrencias": 8,
+          "densidade": 1.43
+        },
+        {
+          "termo": "provedor",
+          "ocorrencias": 8,
+          "densidade": 1.43
+        },
+        {
+          "termo": "wi-fi",
+          "ocorrencias": 7,
+          "densidade": 1.25
+        },
+        {
+          "termo": "conector",
+          "ocorrencias": 6,
+          "densidade": 1.07
+        },
+        {
+          "termo": "enlace",
+          "ocorrencias": 6,
+          "densidade": 1.07
+        },
+        {
+          "termo": "placa",
+          "ocorrencias": 6,
+          "densidade": 1.07
+        }
+      ],
+      "topBigramas": [
+        {
+          "termo": "placa rede",
+          "ocorrencias": 4,
+          "densidade": 0.72
+        },
+        {
+          "termo": "curitiba regiao",
+          "ocorrencias": 3,
+          "densidade": 0.54
+        },
+        {
+          "termo": "falha provedor",
+          "ocorrencias": 3,
+          "densidade": 0.54
+        },
+        {
+          "termo": "rede computador",
+          "ocorrencias": 3,
+          "densidade": 0.54
+        },
+        {
+          "termo": "redes wi-fi",
+          "ocorrencias": 3,
+          "densidade": 0.54
+        },
+        {
+          "termo": "cabo culpado",
+          "ocorrencias": 2,
+          "densidade": 0.36
+        },
+        {
+          "termo": "cabo porta",
+          "ocorrencias": 2,
+          "densidade": 0.36
+        },
+        {
+          "termo": "cabo rede",
+          "ocorrencias": 2,
+          "densidade": 0.36
+        }
+      ],
+      "headings": {
+        "h2": 12,
+        "h3": 0
+      },
+      "schemas": [
+        "Organization",
+        "WebSite",
+        "BreadcrumbList",
+        "BlogPosting",
+        "Article",
+        "TechArticle",
+        "LocalBusiness",
+        "ProfessionalService",
+        "ComputerRepairService",
+        "ItemList",
+        "FAQPage"
+      ],
+      "linksInternosSaida": 9,
+      "linksSaida": [
+        "/blog",
+        "/contato",
+        "/blog/como-configurar-roteador-wifi-iniciantes",
+        "/blog/internet-lenta-provedor-ou-roteador",
+        "/blog/dispositivo-usb-nao-reconhecido-o-que-fazer",
+        "/blog/windows-update-nao-funciona-o-que-verificar",
+        "/servicos/redes-e-wifi",
+        "/diagnostico-tecnico",
+        "/servicos/suporte-tecnico-empresarial"
       ],
       "linksInternosEntrada": 0,
       "origensEntrada": [],
