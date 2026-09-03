@@ -485,6 +485,24 @@ export const EDITORIAL_COVERS: Record<string, EditorialCover> = {
     width: 1200,
     height: 630,
   },
+  "ventoinha-do-computador-fazendo-barulho-o-que-verificar": {
+    src: "/blog/ventoinha-do-computador-fazendo-barulho-o-que-verificar.jpg",
+    alt: "Cooler de processador com ventoinha e dissipador de alumínio em detalhe",
+    width: 1200,
+    height: 630,
+  },
+  "rede-wifi-nao-aparece-na-lista-o-que-verificar": {
+    src: "/blog/rede-wifi-nao-aparece-na-lista-o-que-verificar.jpg",
+    alt: "Roteador Wi-Fi doméstico com antenas, visto de frente",
+    width: 1200,
+    height: 630,
+  },
+  "arquivo-corrompido-nao-abre-o-que-fazer": {
+    src: "/blog/arquivo-corrompido-nao-abre-o-que-fazer.jpg",
+    alt: "Disco rígido aberto, com o prato de gravação exposto",
+    width: 1200,
+    height: 630,
+  },
 };
 
 export function getEditorialCover(slug: string): EditorialCover | undefined {

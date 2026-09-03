@@ -989,6 +989,73 @@ const PILOT_FAQ: Record<string, FAQItem[]> = {
       a: "Só depois de esgotar cabo, porta e configuração. Quando a placa integrada realmente falha, uma placa de rede adicional em slot PCIe ou um adaptador USB de rede restabelece a conexão sem substituir a placa-mãe.",
     },
   ],
+  // ── Onda 11G — ruído de ventoinha, rede Wi-Fi invisível e arquivo corrompido.
+  "ventoinha-do-computador-fazendo-barulho-o-que-verificar": [
+    {
+      q: "Ventoinha barulhenta significa defeito?",
+      a: "Nem sempre. Som alto porém constante costuma indicar rotação elevada por temperatura, o que é o comportamento esperado sob esforço. Ruído irregular, com estalo, chiado agudo ou rangido, é que aponta para desgaste mecânico ou obstrução.",
+    },
+    {
+      q: "Como saber se o barulho é do rolamento?",
+      a: "Rolamento em fim de vida produz chiado ou rangido que persiste mesmo com a máquina fria e ociosa, e frequentemente piora nos primeiros minutos após ligar. Ruído que sobe e desce conforme a carga de trabalho tem origem térmica, não mecânica.",
+    },
+    {
+      q: "Limpar o computador reduz o ruído?",
+      a: "Reduz quando a causa é poeira compactada no dissipador ou grade obstruída: com a troca de calor restabelecida, a rotação cai e o som diminui. Limpeza não corrige rolamento gasto nem hélice desbalanceada.",
+    },
+    {
+      q: "Posso reduzir a rotação para silenciar?",
+      a: "Só com acompanhamento de temperatura. Limitar a rotação sem verificar o calor gerado troca ruído por risco térmico, que costuma aparecer depois como travamento, queda de desempenho ou desligamento.",
+    },
+    {
+      q: "A ventoinha parou de girar. É urgente?",
+      a: "Sim. Ventoinha parada com o equipamento aquecendo é motivo para desligar e não continuar usando. O funcionamento sem dissipação ativa expõe processador e componentes próximos a temperaturas fora da faixa de projeto.",
+    },
+  ],
+  "rede-wifi-nao-aparece-na-lista-o-que-verificar": [
+    {
+      q: "Nenhuma rede aparece. Por onde começar?",
+      a: "Pelo dispositivo. Verifique o atalho físico de Wi-Fi do notebook, o modo avião e se o adaptador está habilitado nas configurações de rede. Se o adaptador nem consta na lista do sistema, a suspeita passa a ser driver ou hardware.",
+    },
+    {
+      q: "As redes dos vizinhos aparecem e a minha não. O que isso indica?",
+      a: "Indica que o rádio do dispositivo está funcionando e a investigação se desloca para o roteador: equipamento fora do ar, nome de rede oculto, mudança recente de canal ou rede transmitindo apenas em 5 GHz.",
+    },
+    {
+      q: "Por que a rede de 5 GHz não aparece no computador antigo?",
+      a: "Porque adaptadores que operam somente em 2,4 GHz não conseguem listar redes de 5 GHz. Não é defeito, é limitação de banda do adaptador — um adaptador USB compatível resolve sem trocar o roteador.",
+    },
+    {
+      q: "Ocultar o nome da rede deixa a conexão mais segura?",
+      a: "Não de forma relevante. A rede continua detectável por ferramentas comuns e a ocultação atrapalha a conexão de dispositivos legítimos, que passam a exigir cadastro manual de nome e senha.",
+    },
+    {
+      q: "A rede aparece, some e volta. É o mesmo problema?",
+      a: "Não. Rede intermitente é questão de cobertura ou interferência: distância, paredes, posicionamento do roteador e concorrência de canal. Rede que nunca aparece é questão de visibilidade, que tem verificações próprias.",
+    },
+  ],
+  "arquivo-corrompido-nao-abre-o-que-fazer": [
+    {
+      q: "Qual é o primeiro passo com um arquivo que não abre?",
+      a: "Copiar o arquivo para outra unidade e trabalhar apenas sobre a cópia. Tentativas de reparo podem reescrever o conteúdo, e o original preservado mantém disponíveis as alternativas que uma segunda tentativa eliminaria.",
+    },
+    {
+      q: "Como saber se o arquivo está corrompido ou se é o programa?",
+      a: "Tente abrir a cópia em outro programa capaz de ler o formato e em outro computador. Se abrir em algum deles, o conteúdo está íntegro e o problema é da instalação local. Se falhar em todos, o dano é no arquivo.",
+    },
+    {
+      q: "Arquivo com tamanho zero tem recuperação?",
+      a: "Não pelo próprio arquivo: sem bytes gravados, não há conteúdo a reconstruir. O caminho passa a ser versão anterior, backup, arquivo temporário do programa ou tentativa de recuperação na mídia onde ele estava.",
+    },
+    {
+      q: "Vários arquivos da mesma pasta pararam de abrir. O que mudou?",
+      a: "O escopo. Falha simultânea em muitos arquivos aponta para a mídia de armazenamento, não para os documentos. A conduta correta é parar de gravar naquela unidade e verificar a saúde do disco antes de novas tentativas.",
+    },
+    {
+      q: "Programas de reparo automático funcionam?",
+      a: "Às vezes recuperam parte do conteúdo, sempre dependendo de quanto foi gravado corretamente. Devem ser apontados para a cópia, nunca para o original, e nenhuma ferramenta reconstrói dado que jamais chegou a ser escrito na mídia.",
+    },
+  ],
 };
 
 

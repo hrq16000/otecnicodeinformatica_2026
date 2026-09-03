@@ -1,15 +1,15 @@
 {
-  "geradoEm": "2026-09-03T18:07:07.649Z",
+  "geradoEm": "2026-09-03T18:27:33.084Z",
   "host": "otecnicodeinformatica.com.br",
   "modo": "generate",
   "sitemap": {
     "url": "https://otecnicodeinformatica.com.br/sitemap.xml",
-    "totalUrls": 244,
+    "totalUrls": 247,
     "googleSearchConsole": "NOT_REQUESTED",
     "indexNow": "NOT_REQUESTED"
   },
   "lotes": {
-    "total": 75,
+    "total": 78,
     "itens": [
       {
         "slug": "quando-trocar-hd-por-ssd",
@@ -460,11 +460,33 @@
         "url": "/blog/computador-nao-conecta-na-internet-por-cabo",
         "approvedAt": "2026-09-03",
         "includeInSitemap": true
+      },
+      {
+        "slug": "ventoinha-do-computador-fazendo-barulho-o-que-verificar",
+        "url": "/blog/ventoinha-do-computador-fazendo-barulho-o-que-verificar",
+        "approvedAt": "2026-09-03",
+        "includeInSitemap": true
+      },
+      {
+        "slug": "rede-wifi-nao-aparece-na-lista-o-que-verificar",
+        "url": "/blog/rede-wifi-nao-aparece-na-lista-o-que-verificar",
+        "approvedAt": "2026-09-03",
+        "includeInSitemap": true
+      },
+      {
+        "slug": "arquivo-corrompido-nao-abre-o-que-fazer",
+        "url": "/blog/arquivo-corrompido-nao-abre-o-que-fazer",
+        "approvedAt": "2026-09-03",
+        "includeInSitemap": true
       }
     ]
   },
   "diff": {
-    "adicionadas": [],
+    "adicionadas": [
+      "/blog/arquivo-corrompido-nao-abre-o-que-fazer",
+      "/blog/rede-wifi-nao-aparece-na-lista-o-que-verificar",
+      "/blog/ventoinha-do-computador-fazendo-barulho-o-que-verificar"
+    ],
     "removidas": [],
     "regressoes": []
   },
@@ -1727,6 +1749,46 @@
         "adicionadas": [],
         "removidas": [],
         "total": 244
+      },
+      "error": null
+    },
+    {
+      "id": "f3b99e93-642e-4ffa-872d-3ec07b4031d3",
+      "action": "sync_approved",
+      "status": "OK",
+      "source": "cli",
+      "timestamp": "2026-09-03T18:27:33.200Z",
+      "details": {
+        "modo": "write",
+        "saida": "sitemap editorial: em dia (78 artigos indexáveis)"
+      },
+      "error": null
+    },
+    {
+      "id": "92c1c2df-7d3a-4d13-86a0-9fc5c6e92745",
+      "action": "generate_sitemaps",
+      "status": "OK",
+      "source": "cli",
+      "timestamp": "2026-09-03T18:27:33.338Z",
+      "details": {
+        "saida": "sitemap curado: index + 8 sub-sitemaps (247 urls)"
+      },
+      "error": null
+    },
+    {
+      "id": "66ddb7bc-5195-408b-9e37-ef50cf64d891",
+      "action": "diff_no_regression",
+      "status": "OK",
+      "source": "cli",
+      "timestamp": "2026-09-03T18:27:33.352Z",
+      "details": {
+        "adicionadas": [
+          "/blog/arquivo-corrompido-nao-abre-o-que-fazer",
+          "/blog/rede-wifi-nao-aparece-na-lista-o-que-verificar",
+          "/blog/ventoinha-do-computador-fazendo-barulho-o-que-verificar"
+        ],
+        "removidas": [],
+        "total": 247
       },
       "error": null
     }

@@ -611,7 +611,31 @@ const rows: Array<EditorialHubSummary & { slug: string }> = [
     "date": "2026-09-03",
     "readTime": "10 min",
     "category": "Redes"
-  }
+  },
+  {
+    "slug": "ventoinha-do-computador-fazendo-barulho-o-que-verificar",
+    "title": "Ventoinha fazendo barulho: o que o som indica antes de trocar peça",
+    "excerpt": "Chiado, estalo, zumbido grave ou rangido são ruídos com causas diferentes. Como usar o tipo de som e o momento em que ele aparece para descobrir a origem sem trocar componente à toa.",
+    "date": "2026-09-03",
+    "readTime": "10 min",
+    "category": "Diagnóstico"
+  },
+  {
+    "slug": "rede-wifi-nao-aparece-na-lista-o-que-verificar",
+    "title": "Rede Wi-Fi não aparece na lista: o que verificar antes de trocar o roteador",
+    "excerpt": "Sumir da lista é diferente de conectar e não navegar. Como separar adaptador desligado, banda de 5 GHz, rede oculta e roteador fora do ar em poucos testes.",
+    "date": "2026-09-03",
+    "readTime": "10 min",
+    "category": "Redes"
+  },
+  {
+    "slug": "arquivo-corrompido-nao-abre-o-que-fazer",
+    "title": "Arquivo corrompido não abre: o que fazer sem piorar o caso",
+    "excerpt": "Antes de tentar qualquer reparo, preserve o original. Como separar arquivo realmente danificado de programa incompatível e quando o caso vira recuperação de dados.",
+    "date": "2026-09-03",
+    "readTime": "11 min",
+    "category": "Dados"
+  },
 ];
 
 export const EDITORIAL_HUB_SUMMARIES: Record<string, EditorialHubSummary> = Object.fromEntries(

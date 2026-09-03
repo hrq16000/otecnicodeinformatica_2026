@@ -14776,5 +14776,214 @@ bcdboot C:\\Windows /s S: /f UEFI`}</code></pre>
     ),
   },
 
+  "ventoinha-do-computador-fazendo-barulho-o-que-verificar": {
+    title: "Ventoinha fazendo barulho: o que o som indica antes de trocar peça",
+    excerpt:
+      "Chiado, estalo, zumbido grave ou rangido são ruídos com causas diferentes. Como usar o tipo de som e o momento em que ele aparece para descobrir a origem sem trocar componente à toa.",
+    date: "2026-09-03",
+    readTime: "10 min",
+    category: "Diagnóstico",
+    content: (
+      <>
+        <p className="lead">Ventoinha barulhenta quase nunca é um defeito isolado: ela é o aviso de que o sistema está tentando dissipar mais calor, de que alguma coisa está encostando na hélice ou de que o rolamento chegou ao fim da vida. O som e o momento em que ele aparece dizem qual dos três é o seu caso.</p>
+
+        <h2>Resposta curta</h2>
+        <p>Se o barulho é <strong>alto porém constante e limpo</strong>, a ventoinha está girando rápido porque a temperatura pede — o problema é térmico, não mecânico. Se o barulho é <strong>irregular</strong>, com estalo, rangido ou chiado que varia, o problema está na própria peça ou em algo tocando nela.</p>
+
+        <h2>Fundamento: rotação é consequência, não causa</h2>
+        <p>A rotação da ventoinha é controlada pela temperatura medida em sensores do processador, da placa de vídeo e, em alguns equipamentos, do gabinete. Quando a temperatura sobe, a rotação sobe junto. Por isso trocar a ventoinha por um modelo "mais silencioso" sem tratar a causa térmica costuma piorar: menos ar movimentado significa mais calor acumulado.</p>
+
+        <h2>Classificando o ruído</h2>
+        <table>
+          <thead>
+            <tr><th>Som</th><th>Origem provável</th><th>O que observar</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Sopro alto e constante, como secador</td><td>Rotação máxima por temperatura</td><td>Aparece sob esforço e reduz quando a máquina esfria</td></tr>
+            <tr><td>Chiado agudo contínuo</td><td>Rolamento seco ou desgastado</td><td>Existe mesmo com a máquina ociosa e fria</td></tr>
+            <tr><td>Estalo ou tique repetido</td><td>Cabo, etiqueta ou fio encostando na hélice</td><td>Muda de ritmo conforme a rotação</td></tr>
+            <tr><td>Zumbido grave com vibração</td><td>Fixação frouxa ou hélice desbalanceada</td><td>Some ao pressionar levemente o gabinete</td></tr>
+            <tr><td>Rangido intermitente</td><td>Rolamento em fim de vida</td><td>Costuma piorar com o equipamento frio, ao ligar</td></tr>
+          </tbody>
+        </table>
+
+        <h2>A sequência de verificação segura</h2>
+        <ol>
+          <li>Com o equipamento ligado, identifique <strong>de onde</strong> vem o som: fonte, gabinete, dissipador do processador ou placa de vídeo. Em notebook, quase sempre há uma ventoinha só.</li>
+          <li>Observe se o ruído acompanha o uso. Abra um programa pesado e note se o som sobe junto — se sobe e desce com a carga, o comportamento é normal e o assunto é temperatura.</li>
+          <li>Meça a temperatura em repouso e sob uso com um monitor de hardware, como descrito em <Link to="/blog/como-monitorar-temperatura-do-computador" className="text-accent">monitoramento de temperatura</Link>.</li>
+          <li>Desligue, desconecte da tomada e verifique com o equipamento aberto se há poeira compactada no dissipador, cabo solto próximo à hélice ou grade obstruída.</li>
+          <li>Confira a fixação: parafuso frouxo transforma vibração normal em zumbido audível.</li>
+        </ol>
+        <p>Boa parte dos casos termina no passo 4. O acúmulo de poeira no dissipador reduz a troca de calor, a temperatura sobe e a ventoinha responde girando mais — o barulho é sintoma, o entupimento é a causa.</p>
+
+        <h2>Limpeza resolve o quê</h2>
+        <p>Limpeza interna resolve ruído causado por obstrução e por rotação exigida em excesso. O procedimento está descrito em <Link to="/blog/como-limpar-notebook-por-dentro" className="text-accent">como limpar o notebook por dentro</Link> e faz parte da <Link to="/blog/manutencao-preventiva-de-computador-guia-completo" className="text-accent">manutenção preventiva</Link>. Quando a pasta térmica já perdeu eficiência, a limpeza sozinha reduz pouco: o caminho é o descrito em <Link to="/blog/como-trocar-pasta-termica-notebook" className="text-accent">troca de pasta térmica</Link>.</p>
+        <p>O que a limpeza não resolve é rolamento gasto. Chiado agudo que persiste com a máquina fria e limpa indica peça no fim da vida útil — e ventoinha é item substituível.</p>
+
+        <h2>Quando o ruído vem acompanhado</h2>
+        <p>Barulho junto com travamentos ou queda de desempenho aponta para limitação térmica: o equipamento reduz a velocidade para não superaquecer. Em notebook, o quadro completo está em <Link to="/blog/notebook-superaquecendo-o-que-fazer" className="text-accent">notebook superaquecendo</Link>. Se além do ruído a máquina desliga sozinha, o roteiro correto é o de <Link to="/blog/computador-desliga-sozinho-o-que-verificar" className="text-accent">desligamento repentino</Link>, porque ali a proteção térmica já está atuando.</p>
+
+        <h2>O que NÃO fazer</h2>
+        <ul>
+          <li>Desconectar a ventoinha para silenciar o equipamento.</li>
+          <li>Forçar rotação mínima fixa no programa de controle sem acompanhar a temperatura.</li>
+          <li>Lubrificar o rolamento com óleo comum: alivia por dias e depois atrai poeira.</li>
+          <li>Segurar a hélice com o dedo para "testar" enquanto gira.</li>
+          <li>Usar aspirador doméstico direto na placa, gerando eletricidade estática.</li>
+          <li>Soprar ar comprimido girando a hélice em alta rotação, o que danifica o mancal.</li>
+        </ul>
+
+        <h2>Quando parar</h2>
+        <p>Pare se houver cheiro de queimado, se a ventoinha parar completamente com a máquina quente, se houver marca de calor na placa ou se a abertura exigir desmontagem completa do equipamento. Ventoinha parada com temperatura alta é motivo para desligar imediatamente, não para continuar usando.</p>
+
+        <h2>Quando chamar um técnico</h2>
+        <p>Chame quando o ruído persistir depois da limpeza, quando a temperatura continuar alta em repouso ou quando a ventoinha precisar de substituição em notebook, onde a peça costuma ser específica do modelo. A avaliação está em <Link to="/diagnostico-tecnico" className="text-accent">diagnóstico técnico</Link> e a execução em <Link to="/servicos/manutencao-de-computador" className="text-accent">manutenção de computador</Link>.</p>
+      </>
+    ),
+  },
+
+  "rede-wifi-nao-aparece-na-lista-o-que-verificar": {
+    title: "Rede Wi-Fi não aparece na lista: o que verificar antes de trocar o roteador",
+    excerpt:
+      "Sumir da lista é diferente de conectar e não navegar. Como separar adaptador desligado, banda de 5 GHz, rede oculta e roteador fora do ar em poucos testes.",
+    date: "2026-09-03",
+    readTime: "10 min",
+    category: "Redes",
+    content: (
+      <>
+        <p className="lead">Uma rede que não aparece na lista é um problema de visibilidade do sinal, não de velocidade. Antes de reiniciar tudo ou comprar equipamento novo, vale responder a uma pergunta: sumiu <strong>só a sua rede</strong> ou sumiram <strong>todas</strong>?</p>
+
+        <h2>Resposta curta</h2>
+        <p>Se nenhuma rede aparece, o problema está no dispositivo — adaptador desligado, modo avião ativo ou driver com falha. Se as redes dos vizinhos aparecem e a sua não, o problema está no roteador, na banda em que ele transmite ou no fato de o nome da rede estar oculto.</p>
+
+        <h2>Dois cenários, dois caminhos</h2>
+        <table>
+          <thead>
+            <tr><th>Situação</th><th>Onde investigar</th><th>Primeiro teste</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Nenhuma rede na lista</td><td>Dispositivo</td><td>Verificar o botão ou atalho de Wi-Fi e o modo avião</td></tr>
+            <tr><td>Outras redes sim, a sua não</td><td>Roteador</td><td>Verificar se outro dispositivo enxerga a rede</td></tr>
+            <tr><td>Aparece e some alternadamente</td><td>Alcance ou interferência</td><td>Aproximar-se do roteador e observar</td></tr>
+            <tr><td>Some só no computador novo</td><td>Banda ou canal</td><td>Verificar se a rede é de 5 GHz</td></tr>
+          </tbody>
+        </table>
+
+        <h2>Quando nenhuma rede aparece</h2>
+        <p>Comece pelo mais simples: muitos notebooks têm um atalho de teclado que desliga o rádio Wi-Fi, e o modo avião faz o mesmo pelo sistema. Em seguida, confirme se o adaptador está habilitado nas configurações de rede. Se ele nem aparece na lista de adaptadores, o caminho passa a ser driver ou hardware.</p>
+        <p>Um teste rápido separa configuração de defeito: conecte um adaptador Wi-Fi USB. Se as redes surgem com ele, o rádio interno é o suspeito. Se nada aparece nem assim, o problema está no sistema. Quando existe cabo disponível, vale validar a conexão pelo caminho descrito em <Link to="/blog/computador-nao-conecta-na-internet-por-cabo" className="text-accent">computador que não conecta por cabo</Link>, garantindo que a internet em si está funcionando.</p>
+
+        <h2>Quando só a sua rede sumiu</h2>
+        <p>Verifique nesta ordem:</p>
+        <ol>
+          <li><strong>Outro dispositivo enxerga a rede?</strong> Se o celular vê e o computador não, o roteador está transmitindo — a limitação é do dispositivo.</li>
+          <li><strong>A rede é de 5 GHz?</strong> Adaptadores antigos operam apenas em 2,4 GHz e simplesmente não listam redes de 5 GHz. Não é defeito: é incompatibilidade de banda.</li>
+          <li><strong>O nome da rede está oculto?</strong> Redes com difusão de nome desativada não aparecem na lista e precisam ser adicionadas manualmente, informando nome e senha.</li>
+          <li><strong>O roteador está ligado e com as luzes normais?</strong> Queda de energia às vezes deixa o equipamento em estado inconsistente.</li>
+          <li><strong>Houve mudança recente de canal?</strong> Alguns canais da faixa de 5 GHz exigem verificação de radar e ficam indisponíveis por alguns minutos após ligar.</li>
+        </ol>
+        <p>A configuração de nome, senha, banda e canal está detalhada em <Link to="/blog/como-configurar-roteador-wifi-iniciantes" className="text-accent">como configurar o roteador Wi-Fi</Link>.</p>
+
+        <h2>Alcance não é o mesmo que ausência</h2>
+        <p>Rede que aparece fraca, some e volta é um problema de cobertura, não de visibilidade. Nesse caso, o assunto é posicionamento, obstáculos e eventual ampliação, tratado em <Link to="/blog/como-configurar-repetidor-wifi" className="text-accent">configuração de repetidor</Link>. Rede visível que conecta mas navega mal é outro problema ainda: a separação entre provedor e equipamento está em <Link to="/blog/internet-lenta-provedor-ou-roteador" className="text-accent">internet lenta: provedor ou roteador</Link>.</p>
+
+        <h2>Rede esquecida e perfil corrompido</h2>
+        <p>Quando a rede aparece para outros dispositivos e o computador insiste em ignorá-la, remover o perfil salvo e conectar de novo costuma resolver. O perfil guarda banda, segurança e senha; se qualquer um desses parâmetros mudou no roteador, o dispositivo pode se comportar de forma estranha até que o registro antigo seja apagado.</p>
+
+        <h2>O que NÃO fazer</h2>
+        <ul>
+          <li>Restaurar o roteador de fábrica como primeiro passo: você perde a configuração do provedor.</li>
+          <li>Trocar o roteador antes de confirmar que outro dispositivo também não enxerga a rede.</li>
+          <li>Instalar driver de origem duvidosa oferecido por site de busca.</li>
+          <li>Desativar a segurança da rede para "facilitar" a conexão.</li>
+          <li>Fixar um canal aleatório sem verificar o ambiente.</li>
+          <li>Deixar a rede oculta achando que isso aumenta a segurança — atrapalha mais do que protege.</li>
+        </ul>
+
+        <h2>Quando parar</h2>
+        <p>Pare antes de alterar configurações de provedor, de mexer em equipamento fornecido pela operadora em regime de comodato ou de trocar credenciais de conexão sem tê-las anotadas. Também pare se o roteador estiver quente demais, com luzes apagadas ou reiniciando sozinho: isso é falha de equipamento.</p>
+
+        <h2>Quando chamar um técnico</h2>
+        <p>Chame quando a rede sumir para todos os dispositivos, quando houver necessidade de reconfigurar o equipamento do provedor ou quando o ambiente exigir cobertura planejada em mais de um ponto. O serviço correspondente é <Link to="/servicos/redes-e-wifi" className="text-accent">redes e Wi-Fi</Link>; para ambiente com equipe e vários equipamentos, o desdobramento é <Link to="/servicos/suporte-tecnico-empresarial" className="text-accent">suporte técnico empresarial</Link>.</p>
+      </>
+    ),
+  },
+
+  "arquivo-corrompido-nao-abre-o-que-fazer": {
+    title: "Arquivo corrompido não abre: o que fazer sem piorar o caso",
+    excerpt:
+      "Antes de tentar qualquer reparo, preserve o original. Como separar arquivo realmente danificado de programa incompatível e quando o caso vira recuperação de dados.",
+    date: "2026-09-03",
+    readTime: "11 min",
+    category: "Dados",
+    content: (
+      <>
+        <p className="lead">A primeira regra ao lidar com um arquivo que não abre é simples e quase sempre ignorada: <strong>trabalhe sobre uma cópia</strong>. Toda tentativa de reparo pode reescrever o arquivo, e um original preservado mantém abertas as opções que a segunda tentativa fecharia.</p>
+
+        <h2>Resposta curta</h2>
+        <p>Copie o arquivo para outra unidade, tente abrir a cópia em outro programa e em outro computador. Se abrir em algum lugar, o arquivo está íntegro e o problema é do aplicativo. Se não abrir em lugar nenhum, o conteúdo está danificado e o caminho passa a ser versão anterior, backup ou recuperação.</p>
+
+        <h2>Corrompido ou apenas incompatível?</h2>
+        <table>
+          <thead>
+            <tr><th>Sinal</th><th>Interpretação provável</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Mensagem de formato não suportado</td><td>Programa ou versão incompatível, arquivo provavelmente íntegro</td></tr>
+            <tr><td>Abre em outro computador</td><td>Instalação local com problema</td></tr>
+            <tr><td>Tamanho zero ou muito menor que o esperado</td><td>Gravação interrompida — conteúdo perdido</td></tr>
+            <tr><td>Abre parcialmente, com trechos ilegíveis</td><td>Dano parcial no conteúdo</td></tr>
+            <tr><td>Vários arquivos da mesma pasta falham</td><td>Suspeita de mídia com falha, não de arquivo isolado</td></tr>
+            <tr><td>Extensão trocada manualmente</td><td>Renomear não converte formato: reverter o nome resolve</td></tr>
+          </tbody>
+        </table>
+        <p>Quando vários arquivos falham ao mesmo tempo, o problema deixou de ser o documento. Aí o roteiro é o de mídia: verificação de integridade do disco e leitura de indicadores de saúde, tratados em <Link to="/blog/disco-com-setores-defeituosos-smart-o-que-fazer" className="text-accent">setores defeituosos e SMART</Link>.</p>
+
+        <h2>A sequência segura</h2>
+        <ol>
+          <li>Copie o arquivo para outra unidade e não mexa mais no original.</li>
+          <li>Confira o tamanho. Arquivo com zero byte não tem conteúdo a recuperar.</li>
+          <li>Abra a cópia em outro programa capaz de ler o formato.</li>
+          <li>Teste a cópia em outro computador, eliminando instalação local.</li>
+          <li>Procure versões anteriores: serviços de nuvem mantêm histórico e o Windows guarda cópias quando o recurso está ativo, como descrito em <Link to="/blog/historico-de-arquivos-windows-como-configurar" className="text-accent">Histórico de Arquivos</Link>.</li>
+          <li>Procure arquivos temporários ou de recuperação automática gerados pelo próprio programa na mesma pasta.</li>
+          <li>Só então considere uma ferramenta de reparo — sempre apontada para a cópia.</li>
+        </ol>
+        <p>Recuperar de um backup existente é sempre melhor que reparar. Se você mantém rotina de cópias, esse é o momento de usá-la — e de confirmar que ela funciona de verdade, conforme <Link to="/blog/como-testar-restauracao-de-backup" className="text-accent">teste de restauração</Link>.</p>
+
+        <h2>Por que arquivos corrompem</h2>
+        <ul>
+          <li>Desligamento ou queda de energia durante a gravação.</li>
+          <li>Remoção do pendrive ou HD externo sem ejetar com o sistema ainda escrevendo.</li>
+          <li>Setores defeituosos na mídia de armazenamento.</li>
+          <li>Transferência interrompida pela rede ou por cabo com mau contato.</li>
+          <li>Falha do próprio programa ao salvar, comum com arquivos grandes.</li>
+          <li>Ação de malware, que pode danificar ou criptografar conteúdo.</li>
+        </ul>
+        <p>Reparar o arquivo sem corrigir a causa costuma levar ao mesmo problema na semana seguinte. Se a origem for a mídia, a decisão importante não é o documento — é parar de usar aquela unidade.</p>
+
+        <h2>Sobre ferramentas de reparo</h2>
+        <p>Existem utilitários específicos por formato e eles às vezes recuperam parte do conteúdo. Mas duas cautelas valem sempre: aponte a ferramenta para a cópia e desconfie de programas que prometem recuperação garantida mediante pagamento antes de exibir qualquer resultado. Nenhuma ferramenta reconstrói dado que não foi gravado.</p>
+
+        <h2>O que NÃO fazer</h2>
+        <ul>
+          <li>Tentar reparar diretamente o arquivo original, sem cópia.</li>
+          <li>Continuar usando a unidade quando vários arquivos apresentam falha.</li>
+          <li>Rodar verificação de disco com correção automática antes de copiar o que importa.</li>
+          <li>Formatar a mídia "para limpar" antes de esgotar as tentativas de leitura.</li>
+          <li>Renomear a extensão esperando conversão de formato.</li>
+          <li>Instalar vários programas de recuperação na mesma unidade onde estão os dados perdidos.</li>
+        </ul>
+
+        <h2>Quando parar</h2>
+        <p>Pare se a unidade emitir ruído incomum, se o sistema pedir formatação da mídia, se a cópia acusar erro de leitura repetido ou se o arquivo for insubstituível e não houver backup. Cada nova tentativa em disco com falha física reduz a chance de recuperação profissional. O critério de preservar dados antes de qualquer intervenção está em <Link to="/decisoes/backup-antes-da-manutencao" className="text-accent">backup antes da manutenção</Link>.</p>
+
+        <h2>Quando chamar um técnico</h2>
+        <p>Chame quando o arquivo for crítico e não houver cópia, quando o problema atingir uma pasta inteira ou quando houver suspeita de falha física na mídia. O roteiro de disco com defeito está em <Link to="/blog/como-recuperar-dados-hd-com-defeito" className="text-accent">recuperação de dados em HD com defeito</Link> e o serviço em <Link to="/servicos/recuperacao-de-dados" className="text-accent">recuperação de dados</Link>. Vale lembrar que recuperação é tentativa técnica, sem garantia de resultado.</p>
+      </>
+    ),
+  },
+
 };
 

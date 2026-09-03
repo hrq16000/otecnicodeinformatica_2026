@@ -720,6 +720,34 @@ export const EDITORIAL_WAVE = [
     apoioLabel: "Internet lenta: provedor ou roteador",
     cover: "/blog/computador-nao-conecta-na-internet-por-cabo.jpg",
   },
+  // ── Onda 11G — ruído de ventoinha, rede Wi-Fi ausente e arquivo corrompido.
+  {
+    slug: "ventoinha-do-computador-fazendo-barulho-o-que-verificar",
+    approvedAt: "2026-09-03",
+    pilar: "/servicos/manutencao-de-computador",
+    pilarLabel: "Manutenção de computador",
+    apoio: "/blog/manutencao-preventiva-de-computador-guia-completo",
+    apoioLabel: "Manutenção preventiva de computador",
+    cover: "/blog/ventoinha-do-computador-fazendo-barulho-o-que-verificar.jpg",
+  },
+  {
+    slug: "rede-wifi-nao-aparece-na-lista-o-que-verificar",
+    approvedAt: "2026-09-03",
+    pilar: "/servicos/redes-e-wifi",
+    pilarLabel: "Redes e Wi-Fi",
+    apoio: "/blog/como-configurar-roteador-wifi-iniciantes",
+    apoioLabel: "Como configurar o roteador Wi-Fi",
+    cover: "/blog/rede-wifi-nao-aparece-na-lista-o-que-verificar.jpg",
+  },
+  {
+    slug: "arquivo-corrompido-nao-abre-o-que-fazer",
+    approvedAt: "2026-09-03",
+    pilar: "/servicos/recuperacao-de-dados",
+    pilarLabel: "Recuperação de dados",
+    apoio: "/blog/como-recuperar-dados-hd-com-defeito",
+    apoioLabel: "Recuperação de dados em HD com defeito",
+    cover: "/blog/arquivo-corrompido-nao-abre-o-que-fazer.jpg",
+  },
 ];
 
 

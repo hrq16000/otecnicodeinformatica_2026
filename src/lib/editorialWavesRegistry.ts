@@ -678,6 +678,45 @@ export const WAVE_11F_BATCH_1: EditorialWaveEntry[] = [
   },
 ];
 
+export const WAVE_11G_BATCH_1: EditorialWaveEntry[] = [
+  {
+    wave: "11A",
+    batch: "8",
+    url: "/blog/ventoinha-do-computador-fazendo-barulho-o-que-verificar",
+    slug: "ventoinha-do-computador-fazendo-barulho-o-que-verificar",
+    ownerId: "ventoinha-do-computador-fazendo-barulho-o-que-verificar",
+    cluster: "liga-e-desliga",
+    role: "satelite",
+    publishedAt: "2026-09-03",
+    targetQueries: ["ventoinha do pc fazendo barulho", "cooler do notebook barulhento", "ventoinha acelerando sozinha"],
+    doNotDuplicate: ["/blog/notebook-superaquecendo-o-que-fazer", "/blog/como-limpar-notebook-por-dentro"],
+  },
+  {
+    wave: "11A",
+    batch: "8",
+    url: "/blog/rede-wifi-nao-aparece-na-lista-o-que-verificar",
+    slug: "rede-wifi-nao-aparece-na-lista-o-que-verificar",
+    ownerId: "rede-wifi-nao-aparece-na-lista-o-que-verificar",
+    cluster: "internet-wifi",
+    role: "satelite",
+    publishedAt: "2026-09-03",
+    targetQueries: ["rede wifi nao aparece", "notebook nao encontra rede wifi", "wifi 5ghz nao aparece"],
+    doNotDuplicate: ["/blog/wifi-lento-como-melhorar", "/blog/como-configurar-repetidor-wifi"],
+  },
+  {
+    wave: "11A",
+    batch: "8",
+    url: "/blog/arquivo-corrompido-nao-abre-o-que-fazer",
+    slug: "arquivo-corrompido-nao-abre-o-que-fazer",
+    ownerId: "arquivo-corrompido-nao-abre-o-que-fazer",
+    cluster: "dados-backup",
+    role: "satelite",
+    publishedAt: "2026-09-03",
+    targetQueries: ["arquivo corrompido nao abre", "documento word corrompido", "recuperar arquivo danificado"],
+    doNotDuplicate: ["/blog/como-recuperar-dados-hd-com-defeito", "/blog/como-testar-restauracao-de-backup"],
+  },
+];
+
 export const EDITORIAL_WAVES: EditorialWaveEntry[] = [
   ...WAVE_10C_BATCH_0,
   ...WAVE_10D_BATCH_1,
@@ -688,6 +727,7 @@ export const EDITORIAL_WAVES: EditorialWaveEntry[] = [
   ...WAVE_11D_BATCH_1,
   ...WAVE_11E_BATCH_1,
   ...WAVE_11F_BATCH_1,
+  ...WAVE_11G_BATCH_1,
 ];
 
 /** URLs monitoradas (ordem estável, sem duplicatas). */

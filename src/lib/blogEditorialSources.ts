@@ -994,6 +994,36 @@ export const ARTICLE_SOURCE_MANIFEST: Record<string, ArticleSourceManifest> = {
     notes:
       "Revisão concluída (Onda 11F): separação entre ausência de enlace e ausência de navegação pela leitura das luzes, teste cruzado de cabo, porta e equipamento, uso do Wi-Fi do mesmo roteador para isolar o provedor e limite para cabeamento estruturado. Conhecimento técnico estável — sem fonte visível.",
   },
+  "ventoinha-do-computador-fazendo-barulho-o-que-verificar": {
+    slug: "ventoinha-do-computador-fazendo-barulho-o-que-verificar",
+    sources: [],
+    technicalReview: "reviewed",
+    factChecked: true,
+    factCheckedAt: "2026-09-03",
+    stableKnowledge: true,
+    notes:
+      "Revisão concluída (Onda 11G): classificação do ruído por tipo de som, relação entre rotação e temperatura, verificação de obstrução e fixação antes de trocar peça, e proibição de travar ou desconectar ventoinha para silenciar. Conhecimento técnico estável — sem fonte visível.",
+  },
+  "rede-wifi-nao-aparece-na-lista-o-que-verificar": {
+    slug: "rede-wifi-nao-aparece-na-lista-o-que-verificar",
+    sources: [],
+    technicalReview: "reviewed",
+    factChecked: true,
+    factCheckedAt: "2026-09-03",
+    stableKnowledge: true,
+    notes:
+      "Revisão concluída (Onda 11G): separação entre nenhuma rede visível e uma rede específica invisível, papel da banda de 5 GHz e do canal, SSID oculto, teste cruzado com outro dispositivo e limite entre configuração e defeito de adaptador. Conhecimento técnico estável — sem fonte visível.",
+  },
+  "arquivo-corrompido-nao-abre-o-que-fazer": {
+    slug: "arquivo-corrompido-nao-abre-o-que-fazer",
+    sources: [],
+    technicalReview: "reviewed",
+    factChecked: true,
+    factCheckedAt: "2026-09-03",
+    stableKnowledge: true,
+    notes:
+      "Revisão concluída (Onda 11G): trabalho sempre sobre cópia, distinção entre arquivo corrompido e programa incompatível, leitura de sinais de mídia em falha, recuperação por versões anteriores e limite claro para tentativa em disco com defeito. Conhecimento técnico estável — sem fonte visível.",
+  },
 };
 
 

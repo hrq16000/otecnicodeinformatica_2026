@@ -80,3 +80,4 @@
 - [Onda 11D — guias técnicos profundos](mem://features/onda-11d-guias-tecnicos) — Temperatura, pendrive somente leitura e Histórico de Arquivos; teto de 69 artigos indexáveis.
 - [Onda 11E — vídeo, energia e migração](mem://features/onda-11e-guias-tecnicos) — Monitor sem sinal, bateria que não carrega e migração para PC novo; teto de 72 artigos indexáveis.
 - [Onda 11F — teclado, desligamento e internet por cabo](mem://features/onda-11f-teclado-desligamento-internet) — 3 guias de diagnóstico, capas licenciadas e teto de 75 artigos indexáveis.
+- [Onda 11G — ventoinha, Wi-Fi invisível e arquivo corrompido](mem://features/onda-11g-ventoinha-wifi-arquivo) — 3 guias de diagnóstico, capas Commons licenciadas, FAQ própria e teto de 78 artigos indexáveis.

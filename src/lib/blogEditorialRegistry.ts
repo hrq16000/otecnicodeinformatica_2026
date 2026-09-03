@@ -1178,6 +1178,52 @@ const WAVE_11F: EditorialApproval[] = [
   },
 ];
 
+// ── Onda 11G — ruído de ventoinha, rede Wi-Fi ausente e arquivo corrompido.
+const WAVE_11G: EditorialApproval[] = [
+  {
+    slug: "ventoinha-do-computador-fazendo-barulho-o-que-verificar",
+    status: "approved",
+    authorType: "organization",
+    authorId: INSTITUTIONAL_AUTHOR.id,
+    reviewedAt: "2026-09-03",
+    approvedAt: "2026-09-03",
+    imageOrigin: "licensed",
+    imageLicense: "CC BY-SA 4.0",
+    imageAttribution:
+      "Foto: Hannes Grobe (Wikimedia Commons), CC BY-SA 4.0 — https://commons.wikimedia.org/wiki/File:CPU-cooler-14_hg.jpg",
+    notes:
+      "Diagnóstico de ruído escrito do zero na Onda 11G: separa tipo de som (chiado, estalo, zumbido, rangido), origem provável e rotação exigida por temperatura. Não repete a limpeza interna nem o superaquecimento de notebook. Capa é fotografia real licenciada, sem IA.",
+  },
+  {
+    slug: "rede-wifi-nao-aparece-na-lista-o-que-verificar",
+    status: "approved",
+    authorType: "organization",
+    authorId: INSTITUTIONAL_AUTHOR.id,
+    reviewedAt: "2026-09-03",
+    approvedAt: "2026-09-03",
+    imageOrigin: "licensed",
+    imageLicense: "CC BY 4.0",
+    imageAttribution:
+      "Foto: Hayden Schiff (Wikimedia Commons), CC BY 4.0 — https://commons.wikimedia.org/wiki/File:TP-Link_TL-WR740N_router_HS2.jpg",
+    notes:
+      "Diagnóstico de rede invisível escrito do zero na Onda 11G: separa adaptador desligado, banda de 5 GHz, SSID oculto e rede fora do ar. Cobertura fraca e velocidade continuam em URLs próprias. Capa é fotografia real licenciada, sem IA.",
+  },
+  {
+    slug: "arquivo-corrompido-nao-abre-o-que-fazer",
+    status: "approved",
+    authorType: "organization",
+    authorId: INSTITUTIONAL_AUTHOR.id,
+    reviewedAt: "2026-09-03",
+    approvedAt: "2026-09-03",
+    imageOrigin: "licensed",
+    imageLicense: "CC BY 4.0",
+    imageAttribution:
+      "Foto: Mk2010 (Wikimedia Commons), CC BY 4.0 — https://commons.wikimedia.org/wiki/File:Hard_disk_drive_platter,_Samsung_MP0402H.jpg",
+    notes:
+      "Procedimento para arquivo que não abre escrito do zero na Onda 11G: separa arquivo corrompido de programa incompatível, protege a cópia original e define quando o caso vira recuperação de dados. Não canibaliza os artigos de HD com defeito nem os de backup. Capa é fotografia real licenciada, sem IA.",
+  },
+];
+
 export const APPROVED_EDITORIAL_CONTENT = new Map<string, EditorialApproval>([
 
   ...FIRST_WAVE_SLUGS.map((slug) => [
@@ -1232,6 +1278,7 @@ export const APPROVED_EDITORIAL_CONTENT = new Map<string, EditorialApproval>([
   ...WAVE_11C.map((a) => [a.slug, a] as [string, EditorialApproval]),
   ...WAVE_11D.map((a) => [a.slug, a] as [string, EditorialApproval]),
   ...WAVE_11E.map((a) => [a.slug, a] as [string, EditorialApproval]),  ...WAVE_11F.map((a) => [a.slug, a] as [string, EditorialApproval]),
+  ...WAVE_11G.map((a) => [a.slug, a] as [string, EditorialApproval]),
 
 ]);
 
