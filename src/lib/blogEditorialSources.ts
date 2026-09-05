@@ -122,6 +122,18 @@ export const EDITORIAL_SOURCES: Record<string, EditorialSource> = {
       "Discos protegidos por BitLocker podem exigir a chave de recuperação; sem ela é possível perder o acesso aos dados.",
     ],
   },
+  "ms-bcdboot": {
+    id: "ms-bcdboot",
+    title: "BCDBoot command-line options",
+    publisher: "Microsoft Learn",
+    url: "https://learn.microsoft.com/en-us/windows-hardware/manufacture/desktop/bcdboot-command-line-options-techref-di",
+    accessedAt: "2026-09-02",
+    sourceType: "official",
+    supports: [
+      "O BCDBoot configura ou repara o ambiente de inicialização copiando arquivos de boot da instalação do Windows para a partição de sistema.",
+      "Os parâmetros de origem, destino e tipo de firmware precisam corresponder à instalação que será reparada.",
+    ],
+  },
   "ms-tech-support-scams": {
     id: "ms-tech-support-scams",
     title: "Protect yourself from tech support scams",
@@ -605,13 +617,12 @@ export const ARTICLE_SOURCE_MANIFEST: Record<string, ArticleSourceManifest> = {
   },
   "erro-no-bootable-device-como-resolver": {
     slug: "erro-no-bootable-device-como-resolver",
-    sources: [],
+    sources: ["ms-bcdboot", "ms-bitlocker-recovery"],
     technicalReview: "reviewed",
     factChecked: true,
-    factCheckedAt: "2026-08-25",
-    stableKnowledge: true,
+    factCheckedAt: "2026-09-02",
     notes:
-      "Revisão concluída (Onda 9C): diferença entre carregador MBR e partição EFI, uso correto de bootrec em MBR e de bcdboot em GPT, motivo do 'acesso negado' em /fixboot sob UEFI, recriação de partição EFI e aviso de risco de escrita em disco antes de cópia dos dados. Conhecimento técnico estável — sem fonte visível.",
+      "Revisão material em 2026-09-02: removeu conclusões absolutas sobre saúde do disco e integridade da EFI, inseriu a verificação do BitLocker antes do prompt, explicou o limite de /scanos e retirou o bloco copiável de criação/formatação de partição EFI. BCDBoot e recuperação do BitLocker sustentados por fontes oficiais Microsoft visíveis.",
   },
   "troquei-o-ssd-e-o-pc-so-abre-a-bios": {
     slug: "troquei-o-ssd-e-o-pc-so-abre-a-bios",

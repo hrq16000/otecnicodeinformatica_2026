@@ -302,8 +302,8 @@ const rows: Array<EditorialHubSummary & { slug: string }> = [
   },
   {
     "slug": "erro-no-bootable-device-como-resolver",
-    "title": "Erro \"No Bootable Device\" ou \"Boot Device Not Found\": como resolver",
-    "excerpt": "A BIOS reconhece o disco, mas o sistema não inicia. Como conferir a ordem de prioridade, identificar partição EFI ausente e reparar o boot do Windows pelo CMD.",
+    "title": "Erro \"No Bootable Device\": como verificar sem formatar",
+    "excerpt": "Como conferir detecção, ordem de boot, BitLocker e partição EFI antes de reparar a inicialização do Windows ou pensar em formatar.",
     "date": "2026-08-25",
     "readTime": "12 min",
     "category": "Procedimentos Técnicos"
@@ -383,7 +383,7 @@ const rows: Array<EditorialHubSummary & { slug: string }> = [
   {
     "slug": "impressora-offline-como-resolver",
     "title": "Impressora offline: por que aparece assim e como resolver",
-    "excerpt": "O que o status \"offline\" realmente significa no Windows, a diferença entre endereço perdido e fila travada e a sequência de verificação que resolve sem reinstalar nada.",
+    "excerpt": "O que o status offline significa no Windows e como separar endereço de rede perdido, fila pausada e falha de conexão antes de reinstalar.",
     "date": "2026-08-26",
     "readTime": "9 min",
     "category": "Procedimentos Técnicos"
@@ -486,7 +486,7 @@ const rows: Array<EditorialHubSummary & { slug: string }> = [
   },
   {
     "slug": "windows-update-travado-desfazendo-alteracoes",
-    "title": "Atualização travada e \"desfazendo alterações\": o que é reversão e o que fazer",
+    "title": "Windows Update travado ou \"desfazendo alterações\"",
     "excerpt": "Como distinguir interface parada de processo realmente parado, por que o Windows reverte uma atualização e o que fazer antes de desligar a máquina no botão.",
     "date": "2026-08-26",
     "readTime": "9 min",
