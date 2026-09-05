@@ -12146,18 +12146,18 @@ crontab -e
   },
 
   "erro-no-bootable-device-como-resolver": {
-    title: 'Erro "No Bootable Device" ou "Boot Device Not Found": como resolver',
+    title: 'Erro "No Bootable Device": como verificar sem formatar',
     excerpt:
-      "A BIOS reconhece o disco, mas o sistema não inicia. Como conferir a ordem de prioridade, identificar partição EFI ausente e reparar o boot do Windows pelo CMD.",
+      "Como conferir detecção, ordem de boot, BitLocker e partição EFI antes de reparar a inicialização do Windows ou pensar em formatar.",
     date: "2026-08-25",
     readTime: "12 min",
     category: "Procedimentos Técnicos",
     content: (
       <>
-        <p className="lead">As mensagens <strong>"No bootable device"</strong>, <strong>"Boot device not found"</strong>, <strong>"Operating system not found"</strong> e <strong>"Reboot and select proper boot device"</strong> dizem a mesma coisa com palavras diferentes: o firmware procurou um carregador de inicialização e não encontrou nenhum válido.</p>
+        <p className="lead">As mensagens <strong>"No bootable device"</strong>, <strong>"Boot device not found"</strong>, <strong>"Operating system not found"</strong> e <strong>"Reboot and select proper boot device"</strong> indicam que o firmware não encontrou um destino de inicialização válido. Elas não provam, sozinhas, se a causa está no disco, na configuração do <Link to="/glossario/uefi" className="text-accent">UEFI</Link> ou nos arquivos de boot.</p>
 
         <h2>Resposta curta</h2>
-        <p>Se o disco aparece na lista de dispositivos do Setup, o hardware está vivo e o que falhou é o <strong>carregador de inicialização</strong>: ordem de prioridade errada, partição EFI ausente ou danificada, ou registro de inicialização (BCD) corrompido. Os três casos se resolvem sem formatar, com uma mídia de instalação do Windows.</p>
+        <p>Primeiro confirme se o SSD ou HD aparece no Setup. Se aparece, ainda é preciso separar ordem de boot, modo UEFI/Legacy, partição EFI, BCD e saúde do armazenamento. Comece pelas verificações reversíveis; comandos de reparo só entram depois de identificar corretamente a instalação e proteger os dados.</p>
 
         <h2>O que está quebrado, exatamente</h2>
         <p>Um disco com Windows guarda dois conjuntos de coisas: os seus arquivos e as instruções de partida. Em máquinas modernas (UEFI + GPT), essas instruções ficam numa partição pequena formatada em FAT32, a <strong>partição de sistema EFI</strong> (ESP), com cerca de 100 MB. Em máquinas antigas (Legacy + MBR), ficam no primeiro setor do disco e numa partição reservada.</p>
@@ -12170,7 +12170,7 @@ crontab -e
         <ol>
           <li>Entre no Setup (Del, F2 ou F10, conforme o fabricante) e abra a aba <em>Boot</em>.</li>
           <li>Procure a lista <strong>Boot Priority</strong> ou <strong>Boot Option #1</strong>.</li>
-          <li>Se existir uma entrada <strong>Windows Boot Manager</strong>, coloque-a em primeiro lugar. A presença dessa entrada indica que a partição EFI está íntegra — o problema era só a ordem.</li>
+          <li>Se existir uma entrada <strong>Windows Boot Manager</strong>, coloque-a em primeiro lugar. A entrada mostra que o firmware conhece um carregador; a integridade dele só fica confirmada se o Windows iniciar.</li>
           <li>Se só aparecer o nome do disco (por exemplo, "SATA: WDC WD10..."), o firmware vê o hardware mas não achou carregador. Siga para o passo 2.</li>
           <li>Confira também se o <strong>CSM</strong> não foi ligado ou desligado recentemente: alternar esse modo esconde entradas que existem.</li>
           <li>Salve com F10 e reinicie. Se voltar a falhar, não repita a tentativa — mude de etapa.</li>
@@ -12188,6 +12188,10 @@ crontab -e
         <h2>Passo 3 — reparo automático antes do manual</h2>
         <p>Antes de digitar comandos, tente <em>Solução de problemas</em> → <em>Reparo de Inicialização</em>. Em falhas simples de BCD ele resolve sozinho. Se falhar duas vezes seguidas, passe ao reparo manual — insistir não muda o resultado.</p>
 
+        <h2>Antes do prompt: confirme o BitLocker</h2>
+        <p>O Ambiente de Recuperação pode pedir uma chave de 48 dígitos para abrir um volume protegido. Compare o identificador exibido na tela com a chave guardada na conta Microsoft, na organização que administra o computador, em arquivo ou em impressão. A chave de entrada do Windows não substitui a chave de recuperação.</p>
+        <p>Sem a chave correspondente, não limpe o TPM, não formate e não presuma que reinstalar devolverá acesso aos arquivos. O disco pode estar saudável e continuar ilegível por design. Entenda a diferença no <Link to="/glossario/bitlocker" className="text-accent">guia do BitLocker</Link>.</p>
+
         <h2>Passo 4 — reparo manual pelo prompt de comando</h2>
         <p>Comece identificando o cenário. No prompt, execute:</p>
         <pre><code className="language-cmd">{`diskpart
@@ -12201,7 +12205,7 @@ list volume`}</code></pre>
 bootrec /fixboot
 bootrec /scanos
 bootrec /rebuildbcd`}</code></pre>
-        <p>O <code>/scanos</code> deve encontrar a instalação do Windows. Se ele responde "Total de instalações identificadas: 0", o sistema não está mais legível no disco — o caminho passa a ser preservação de dados, não reparo.</p>
+        <p>O <code>/scanos</code> pode encontrar a instalação do Windows. Se ele responde "Total de instalações identificadas: 0", isso não prova perda dos arquivos: a instalação pode estar em outra letra, bloqueada pelo BitLocker, fora do padrão esperado ou realmente danificada. Pare de repetir comandos e identifique o volume antes de escrever no disco.</p>
 
         <h3>Cenário B — disco GPT (UEFI) com partição EFI presente</h3>
         <p>Atribua uma letra à partição EFI e reconstrua os arquivos de inicialização:</p>
@@ -12214,16 +12218,9 @@ bcdboot C:\\Windows /s S: /f UEFI`}</code></pre>
         <p>Troque <code>volume 3</code> pelo número real do volume FAT32 e <code>C:</code> pela letra onde está a pasta Windows (no ambiente de recuperação a letra frequentemente muda — confirme com <code>dir C:\Windows</code>).</p>
 
         <h3>Cenário C — partição EFI ausente</h3>
-        <p>Se não existe nenhum volume FAT32 pequeno, a partição foi apagada. É possível recriá-la em espaço não alocado do mesmo disco:</p>
-        <pre><code className="language-cmd">{`diskpart
-select disk 0
-create partition efi size=200
-format quick fs=fat32 label="SYSTEM"
-assign letter=S
-exit
-bcdboot C:\\Windows /s S: /f UEFI`}</code></pre>
+        <p>Se não aparece um volume FAT32 pequeno, não conclua imediatamente que a partição foi apagada: confirme o disco selecionado, o estilo GPT e se todos os volumes foram listados. Criar ou formatar uma partição modifica a estrutura do disco e não é uma etapa segura para executar por tentativa.</p>
         <aside className="rounded-lg border border-destructive/40 bg-destructive/5 p-4 not-prose my-6">
-          <p className="m-0 text-sm"><strong>Risco real:</strong> <code>create partition</code> e <code>format</code> escrevem no disco. Um número de disco errado apaga dados definitivamente. Se os arquivos ainda não têm cópia, faça a cópia antes — conectando o disco a outra máquina ou por adaptador USB. O procedimento está em <Link to="/blog/como-recuperar-dados-hd-com-defeito" className="text-accent">recuperar dados de HD com defeito</Link>.</p>
+          <p className="m-0 text-sm"><strong>Limite seguro:</strong> se a partição EFI realmente não existe, faça uma imagem ou cópia dos dados antes de recriá-la. Se houver dúvida sobre o disco, a letra da instalação, espaço não alocado ou BitLocker, interrompa. O próximo passo é diagnóstico do armazenamento, não copiar um bloco de comandos. Veja <Link to="/blog/como-recuperar-dados-hd-com-defeito" className="text-accent">como preservar dados de um disco com defeito</Link>.</p>
         </aside>
 
         <h3>Cenário D — "Acesso negado" no bootrec /fixboot</h3>
@@ -12240,10 +12237,11 @@ bcdboot C:\\Windows /s S: /f UEFI`}</code></pre>
         <p>Reinstalar o sistema resolve o sintoma, mas apaga o que estiver no disco. Só siga por esse caminho depois de confirmar a cópia dos arquivos — e sabendo o que a reinstalação envolve, como descrito em <Link to="/blog/como-formatar-pc-sem-perder-arquivos" className="text-accent">como formatar o PC sem perder arquivos</Link>.</p>
 
         <h2>Conclusão</h2>
-        <p>"No bootable device" quase nunca significa disco morto. Significa carregador ausente. A sequência é sempre a mesma: confirmar detecção, conferir ordem e modo de boot, tentar o reparo automático e, se necessário, recriar os arquivos de inicialização com <code>bcdboot</code> — protegendo os dados antes de qualquer comando que escreva no disco.</p>
+        <p>"No bootable device" não autoriza concluir que o disco morreu nem que basta recriar o carregador. A sequência segura é: confirmar detecção e saúde, conferir ordem e modo de boot, localizar a chave do BitLocker, tentar o reparo automático e só então avaliar o <code>bcdboot</code> com origem e destino identificados.</p>
         <p>Se o disco sequer aparece, volte ao guia principal: <Link to="/blog/computador-entra-direto-na-bios" className="text-accent">meu computador entra direto na BIOS</Link>. Prefere que alguém execute o reparo com os dados preservados? O escopo está em <Link to="/diagnostico-tecnico" className="text-accent">diagnóstico técnico</Link>.</p>
 
-        <p className="text-sm text-muted-foreground">Conteúdo produzido e revisado pela equipe editorial de O Técnico de Informática. Revisado em 25 de agosto de 2026.</p>
+        <EditorialReferences slug="erro-no-bootable-device-como-resolver" />
+        <p className="text-sm text-muted-foreground">Conteúdo produzido e revisado pela equipe editorial de O Técnico de Informática. Revisado em 2 de setembro de 2026.</p>
       </>
     ),
   },
@@ -12862,7 +12860,7 @@ bcdboot C:\\Windows /s S: /f UEFI`}</code></pre>
   "impressora-offline-como-resolver": {
     title: "Impressora offline: por que aparece assim e como resolver",
     excerpt:
-      "O que o status \"offline\" realmente significa no Windows, a diferença entre endereço perdido e fila travada e a sequência de verificação que resolve sem reinstalar nada.",
+      "O que o status offline significa no Windows e como separar endereço de rede perdido, fila pausada e falha de conexão antes de reinstalar.",
     date: "2026-08-26",
     readTime: "9 min",
     category: "Procedimentos Técnicos",
@@ -13699,7 +13697,7 @@ bcdboot C:\\Windows /s S: /f UEFI`}</code></pre>
   },
 
   "windows-update-travado-desfazendo-alteracoes": {
-    title: "Atualização travada e \"desfazendo alterações\": o que é reversão e o que fazer",
+    title: 'Windows Update travado ou "desfazendo alterações"',
     excerpt:
       "Como distinguir interface parada de processo realmente parado, por que o Windows reverte uma atualização e o que fazer antes de desligar a máquina no botão.",
     date: "2026-08-26",

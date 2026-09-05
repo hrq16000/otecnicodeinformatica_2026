@@ -596,14 +596,14 @@ const WAVE_9C: EditorialApproval[] = [
     status: "approved",
     authorType: "organization",
     authorId: INSTITUTIONAL_AUTHOR.id,
-    reviewedAt: "2026-08-25",
+    reviewedAt: "2026-09-02",
     approvedAt: "2026-08-25",
     imageOrigin: "licensed",
     imageLicense: "CC BY-SA 2.5",
     imageAttribution:
       "Foto: Thomas Rosenau (Wikimedia Commons), CC BY-SA 2.5 — https://commons.wikimedia.org/wiki/File:Serial_ATA_hard_disk_connected.jpg",
     notes:
-      "Satélite de erro específico escrito do zero na Onda 9C; fact-check registrado em blogEditorialSources.ts; capa é fotografia real licenciada, sem IA.",
+      "Satélite de erro específico escrito do zero na Onda 9C; revisão material de segurança e fontes oficiais concluída em 2026-09-02; capa é fotografia real licenciada, sem IA.",
   },
   {
     slug: "troquei-o-ssd-e-o-pc-so-abre-a-bios",
