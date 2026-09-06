@@ -268,14 +268,14 @@ const WAVE_5C: EditorialApproval[] = [
     status: "approved",
     authorType: "organization",
     authorId: INSTITUTIONAL_AUTHOR.id,
-    reviewedAt: "2026-08-12",
+    reviewedAt: "2026-09-06",
     approvedAt: "2026-08-12",
     imageOrigin: "licensed",
     imageLicense: "CC BY-SA 4.0",
     imageAttribution:
       "Foto: BrayLockBoy (Wikimedia Commons), CC BY-SA 4.0 — https://commons.wikimedia.org/wiki/File:MEMZ_Trojan_running_on_Samsung_N130,_13_December_2019.jpg",
     notes:
-      "Reescrita integral na Onda 5C; fact-check registrado em blogEditorialSources.ts; capa é fotografia real licenciada, sem IA.",
+      "Reescrita integral na Onda 5C; revisão material com fontes oficiais e FAQ técnico concluída em 2026-09-06; capa é fotografia real licenciada, sem IA.",
   },
   {
     slug: "como-proteger-computador-golpes-internet",
