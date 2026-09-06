@@ -2293,15 +2293,15 @@ docker run -d --name db --network minha-rede postgres
         <p className="lead">A pergunta que chega na bancada quase sempre é "qual é o melhor antivírus?". A resposta honesta é que o programa importa menos do que a combinação entre sistema atualizado, hábitos de download e uma conta de usuário que não seja administradora o tempo todo. Ainda assim, a escolha da ferramenta faz diferença — e há critérios objetivos para decidir.</p>
 
         <h2>O que já vem instalado no Windows</h2>
-        <p>Desde o Windows 10, o sistema inclui uma solução de segurança ativa por padrão, com proteção em tempo real, verificação de arquivos baixados, filtro de reputação no navegador padrão e firewall integrado. Ela é atualizada pelo mesmo canal do sistema e desliga sozinha quando outro antivírus assume o posto.</p>
-        <p>Na prática, isso muda o ponto de partida: em um computador doméstico com o sistema em dia, o cenário não é "sem proteção", e sim "com proteção básica funcionando". A pergunta correta passa a ser o que uma solução adicional acrescenta ao que já existe.</p>
+        <p>O Windows 10 e o Windows 11 incluem o aplicativo Segurança do Windows, que reúne o Microsoft Defender Antivirus, firewall e outros controles. Quando outro antivírus compatível está instalado, ativo e registrado no sistema, o Defender deixa de ser o antivírus principal; se esse produto for removido, a proteção nativa pode voltar a ser ativada.</p>
+        <p>Isso muda o ponto de partida: antes de comprar uma licença, abra <em>Segurança do Windows → Proteção contra vírus e ameaças</em> e confirme qual provedor está ativo, se a proteção em tempo real está ligada e se as definições foram atualizadas. O nome do produto importa menos do que a proteção estar realmente operante.</p>
 
         <h2>Os quatro critérios que realmente pesam</h2>
         <h3>1. Detecção por comportamento, não só por assinatura</h3>
-        <p>Assinatura é o "retrato falado" de um arquivo já conhecido. Ameaças novas mudam de forma justamente para escapar disso. O que segura um ataque recente é a análise de comportamento: um programa que começa a renomear e criptografar arquivos em massa, ou que tenta se registrar para iniciar com o sistema, precisa ser interrompido mesmo sem estar em nenhuma lista.</p>
+        <p>Assinatura é o "retrato falado" de um arquivo já conhecido. Como ameaças podem mudar para escapar desse reconhecimento, vale verificar se o produto também monitora comportamentos suspeitos. Esse recurso acrescenta uma camada de detecção, mas não garante que toda ameaça nova será bloqueada.</p>
 
         <h3>2. Proteção contra ransomware com controle de pastas</h3>
-        <p>É o recurso que mais evita prejuízo real. Ele restringe quais programas podem gravar em pastas de documentos, imagens e área de trabalho. Exige um ajuste inicial — programas legítimos podem ser bloqueados e precisam ser liberados —, mas é a diferença entre um susto e a perda de anos de arquivos.</p>
+        <p>No Windows, o acesso controlado a pastas pode impedir que aplicativos não autorizados alterem arquivos em locais protegidos. Programas legítimos também podem ser bloqueados e precisam ser permitidos de forma explícita. É uma camada útil contra ransomware, mas não substitui backup desconectado e restauração testada.</p>
 
         <h3>3. Impacto no desempenho</h3>
         <p>Uma suíte pesada em um computador com disco mecânico e 4 GB de memória transforma segurança em lentidão, e o desfecho previsível é o usuário desativando tudo. Em máquinas antigas, uma proteção leve que permanece ligada vale mais do que uma completa que será desligada na primeira semana.</p>
@@ -2310,7 +2310,7 @@ docker run -d --name db --network minha-rede postgres
         <p>Fabricante identificável, política de privacidade legível, canal de suporte e presença em testes independentes de laboratórios reconhecidos. Programa distribuído por site de download genérico, sem página oficial própria, não entra na lista de candidatos.</p>
 
         <h2>Gratuito ou pago: onde está a fronteira</h2>
-        <p>Para uso doméstico comum — navegação, streaming, banco, estudo, home office com documentos —, a proteção nativa do sistema somada a atualizações em dia e a um navegador atualizado cobre a maior parte dos cenários. O custo aqui é de disciplina, não de licença.</p>
+        <p>Para uso doméstico comum — navegação, streaming, banco, estudo e documentos —, comece avaliando a proteção nativa ativa, o sistema atualizado e os hábitos de download. Uma licença adicional não deve ser tratada como requisito automático nem como substituta dessas camadas.</p>
         <p>A versão paga passa a fazer sentido em situações específicas:</p>
         <ul>
           <li>Vários computadores para administrar, com necessidade de visão central do que está acontecendo.</li>
@@ -2319,6 +2319,15 @@ docker run -d --name db --network minha-rede postgres
           <li>Histórico de infecções repetidas, que indica necessidade de camadas extras enquanto os hábitos mudam.</li>
         </ul>
         <p>Não existe licença que compense sistema desatualizado, senha repetida em todos os serviços e download de instalador "ativado" de origem desconhecida. Essa é a ordem de prioridade — ferramenta depois de hábito.</p>
+
+        <h2>Checklist antes de comprar</h2>
+        <ol>
+          <li><strong>Confirme o provedor ativo:</strong> verifique no Segurança do Windows se há proteção em tempo real e quando ocorreu a última atualização.</li>
+          <li><strong>Defina a necessidade:</strong> anote se você precisa de gestão de vários dispositivos, suporte, controle parental ou proteção corporativa. Sem necessidade concreta, recursos extras viram custo e complexidade.</li>
+          <li><strong>Confira compatibilidade:</strong> valide a versão do Windows e os requisitos do produto no site oficial. Em equipamento antigo, observe consumo de memória e disco durante o período de avaliação.</li>
+          <li><strong>Leia renovação e cancelamento:</strong> preço promocional inicial não informa necessariamente o custo do próximo período.</li>
+          <li><strong>Planeje a troca:</strong> remova o produto anterior pelo procedimento oficial, reinicie e confirme de novo qual provedor ficou ativo. Não deixe o computador entre duas instalações sem verificar o estado final.</li>
+        </ol>
 
         <h2>Recursos que soam bem e merecem leitura atenta</h2>
         <ul>
@@ -2332,7 +2341,7 @@ docker run -d --name db --network minha-rede postgres
         <p>O golpe mais comum não invade o computador: ele convence o usuário a instalar. A imagem de capa deste guia mostra exatamente esse padrão — uma tela alarmante afirmando que a máquina está infectada. Os sinais que se repetem:</p>
         <ul>
           <li>Janela do navegador em tela cheia dizendo que "vírus foram detectados agora" e exibindo contagem regressiva.</li>
-          <li>Número de telefone para "suporte imediato" — nenhum fabricante de antivírus faz isso por pop-up.</li>
+          <li>Número de telefone para "suporte imediato" em um alerta inesperado — trate como sinal de golpe e não ligue.</li>
           <li>Verificação que "roda" dentro de uma página web. Nenhum site consegue varrer o seu disco.</li>
           <li>Pedido de pagamento por link para "liberar a limpeza".</li>
           <li>Programa que se instala sem pedir confirmação e depois resiste à desinstalação.</li>
@@ -2341,11 +2350,11 @@ docker run -d --name db --network minha-rede postgres
 
         <h2>Erros de instalação que enfraquecem a proteção</h2>
         <ol>
-          <li><strong>Dois antivírus ativos ao mesmo tempo.</strong> Eles disputam os mesmos arquivos, geram falsos positivos e derrubam o desempenho. Um em tempo real; qualquer segundo programa apenas sob demanda.</li>
+          <li><strong>Tentar forçar dois antivírus como proteção principal.</strong> O Windows gerencia o provedor registrado e pode colocar a proteção nativa em outro modo quando um produto compatível assume. Confirme o estado no Segurança do Windows em vez de ativar componentes manualmente.</li>
           <li><strong>Baixar de site agregador.</strong> Sempre pelo domínio oficial do fabricante, digitado à mão ou vindo de resultado orgânico verificado.</li>
           <li><strong>Aceitar o instalador completo sem ler.</strong> É onde entram barras de ferramentas e trocas de buscador padrão.</li>
           <li><strong>Desligar a proteção para instalar algo que ela bloqueou.</strong> Se foi bloqueado, o motivo merece verificação antes da exceção.</li>
-          <li><strong>Ignorar a fila de atualizações do sistema.</strong> Boa parte das infecções explora falha corrigida meses antes.</li>
+          <li><strong>Ignorar atualizações do sistema e do navegador.</strong> O antivírus é apenas uma camada; correções fecham falhas que poderiam ser exploradas antes mesmo da análise do arquivo.</li>
         </ol>
 
         <h2>O que fazer quando a suspeita já existe</h2>
@@ -2353,7 +2362,9 @@ docker run -d --name db --network minha-rede postgres
         <p>Quando a infecção já alterou navegador, tarefas agendadas ou serviços do sistema, a remoção manual passa a exigir método. Nesses casos, a <Link to="/servicos/remocao-de-virus">remoção de vírus e malware</Link> inclui verificação do que ficou para trás, e a <Link to="/servicos/formatacao">formatação com reinstalação do sistema</Link> entra em cena quando o estrago compromete componentes do próprio Windows. Antes de decidir, entenda o critério em <Link to="/diagnostico-tecnico">como funciona o diagnóstico técnico</Link>.</p>
 
         <h2>Resumo prático</h2>
-        <p>Mantenha o sistema atualizado, use a proteção nativa como base, avalie uma solução paga apenas diante de necessidade concreta, desconfie de qualquer aviso que apareça dentro do navegador e nunca mantenha dois antivírus disputando o mesmo computador. Essa combinação resolve a maioria dos casos que chegariam à bancada como "peguei um vírus".</p>
+        <p>Mantenha o sistema atualizado, confirme qual proteção está ativa, avalie uma solução paga apenas diante de necessidade concreta e desconfie de alertas alarmistas no navegador. Nenhum antivírus substitui backup, autenticação multifator, senhas exclusivas e cuidado com downloads.</p>
+        <EditorialReferences slug="como-escolher-um-bom-antivirus" />
+        <p className="text-sm text-muted-foreground">Conteúdo produzido e revisado pela equipe editorial de O Técnico de Informática. Revisado em 6 de setembro de 2026.</p>
       </>
     ),
   },
@@ -14984,4 +14995,3 @@ bcdboot C:\\Windows /s S: /f UEFI`}</code></pre>
   },
 
 };
-

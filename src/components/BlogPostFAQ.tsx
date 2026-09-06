@@ -61,6 +61,28 @@ const CATEGORY_EXTRA: Record<string, FAQItem[]> = {
 // categoria (que contêm valores comerciais).
 // ─────────────────────────────────────────────────────────────
 const PILOT_FAQ: Record<string, FAQItem[]> = {
+  "como-escolher-um-bom-antivirus": [
+    {
+      q: "O Windows 11 já vem com antivírus?",
+      a: "Sim. O Windows 10 e o Windows 11 incluem o Microsoft Defender Antivirus dentro do aplicativo Segurança do Windows. Antes de instalar outro produto, confirme nessa tela se a proteção em tempo real está ativa e atualizada.",
+    },
+    {
+      q: "Preciso pagar por um antivírus para ficar protegido?",
+      a: "Não obrigatoriamente. A decisão depende de necessidades adicionais, como gestão de vários dispositivos, suporte, controle parental ou políticas da empresa. Nenhuma licença substitui atualizações, backup, autenticação multifator e cuidado com downloads.",
+    },
+    {
+      q: "Posso usar dois antivírus ao mesmo tempo?",
+      a: "Não tente manter dois produtos como proteção principal. O Windows identifica o provedor registrado e ajusta o estado do Defender quando um antivírus compatível assume. Depois de instalar ou remover um produto, confira no Segurança do Windows qual proteção ficou ativa.",
+    },
+    {
+      q: "O acesso controlado a pastas substitui o backup?",
+      a: "Não. Ele pode bloquear alterações não autorizadas em pastas protegidas, mas não cobre falha física, exclusão acidental em todos os locais nem todos os cenários de ataque. Mantenha uma cópia separada e teste a restauração.",
+    },
+    {
+      q: "Como reconhecer um alerta falso de vírus no navegador?",
+      a: "Desconfie de contagem regressiva, sirene, pedido para ligar para um número ou pagar imediatamente. Não clique no alerta nem conceda acesso remoto. Feche o navegador pelo Gerenciador de Tarefas e verifique o arquivo ou o sistema pela ferramenta de segurança já instalada.",
+    },
+  ],
   // ── Onda 10D — satélites de partida, curto e BIOS (sem preço, sem prazo).
   "botao-power-nao-funciona-jump-start-placa-mae": [
     {
@@ -1145,4 +1167,3 @@ export const EditorialReferences = ({ slug }: { slug: string }) => {
 };
 
 export default BlogPostFAQ;
-

@@ -145,6 +145,42 @@ export const EDITORIAL_SOURCES: Record<string, EditorialSource> = {
       "Golpes de falso suporte técnico usam táticas de intimidação; não ligar para números exibidos em alertas.",
     ],
   },
+  "ms-windows-security-overview": {
+    id: "ms-windows-security-overview",
+    title: "Windows Security app overview",
+    publisher: "Microsoft Support",
+    url: "https://support.microsoft.com/en-us/windows/security/windows-security/windows-security-app-overview",
+    accessedAt: "2026-09-06",
+    sourceType: "official",
+    supports: [
+      "O Windows Security inclui o Microsoft Defender Antivirus no Windows 10 e no Windows 11.",
+      "Quando outro antivírus compatível está instalado e ativo, o Microsoft Defender Antivirus deixa de atuar como antivírus principal e volta a ser ativado se o produto for removido.",
+    ],
+  },
+  "ms-controlled-folder-access": {
+    id: "ms-controlled-folder-access",
+    title: "Virus and threat protection in the Windows Security app",
+    publisher: "Microsoft Support",
+    url: "https://support.microsoft.com/en-us/windows/security/threat-malware-protection/virus-and-threat-protection-in-the-windows-security-app",
+    accessedAt: "2026-09-06",
+    sourceType: "official",
+    supports: [
+      "O acesso controlado a pastas verifica aplicativos e bloqueia os não autorizados ou não confiáveis de alterar arquivos em pastas protegidas.",
+      "Aplicativos legítimos bloqueados podem ser permitidos explicitamente pelo usuário.",
+    ],
+  },
+  "cisa-upskill-checklist": {
+    id: "cisa-upskill-checklist",
+    title: "Project Upskill Checklist",
+    publisher: "CISA",
+    url: "https://www.cisa.gov/resources-tools/resources/project-upskill-checklist",
+    accessedAt: "2026-09-06",
+    sourceType: "official",
+    supports: [
+      "A proteção antimalware fornecida pelo sistema deve permanecer habilitada e atualizada.",
+      "Atualizações, senhas fortes e autenticação multifator continuam necessárias além do antivírus.",
+    ],
+  },
 
   "certbr-golpes": {
     id: "certbr-golpes",
@@ -287,13 +323,16 @@ export const ARTICLE_SOURCE_MANIFEST: Record<string, ArticleSourceManifest> = {
   },
   "como-escolher-um-bom-antivirus": {
     slug: "como-escolher-um-bom-antivirus",
-    sources: [],
+    sources: [
+      "ms-windows-security-overview",
+      "ms-controlled-folder-access",
+      "cisa-upskill-checklist",
+    ],
     technicalReview: "reviewed",
     factChecked: true,
-    factCheckedAt: "2026-08-12",
-    stableKnowledge: true,
+    factCheckedAt: "2026-09-06",
     notes:
-      "Reescrito na Onda 5C. Sem ranking de fabricante, sem indicação de produto comercial e sem promessa de detecção total. Critérios (detecção por comportamento, proteção de pastas contra ransomware, impacto em desempenho, transparência do publicador) e a regra de não manter dois antivírus em tempo real são conhecimento técnico estável.",
+      "Revisão material em 2026-09-06: funcionamento da proteção nativa, convivência com produto de terceiros e acesso controlado a pastas foram conferidos em documentação oficial; removidas promessas amplas de cobertura e afirmações absolutas sobre dois antivírus. Sem ranking de fabricante, indicação comercial ou promessa de detecção total.",
   },
   "como-proteger-computador-golpes-internet": {
     slug: "como-proteger-computador-golpes-internet",
