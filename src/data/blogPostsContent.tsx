@@ -6025,20 +6025,32 @@ Ideal: 1000VA / 600W (para crescimento)`}</code></pre>
     category: "Procedimentos Técnicos",
     content: (
       <>
-        <p className="lead">Trocar o disco por um SSD NVMe é uma das poucas intervenções que mudam a sensação de uso de um computador inteiro. Mas nem toda máquina aceita NVMe, e nem todo travamento vem do disco. Este guia explica como identificar se o upgrade se aplica ao seu caso, o que esperar do resultado e como o serviço é executado em bancada.</p>
+        <p className="lead">Trocar um HD por SSD pode transformar a resposta do computador, mas comprar apenas pelo rótulo “M.2” é uma fonte comum de erro. Este guia ajuda a confirmar formato, interface, capacidade e condições do disco atual antes de gastar — e coloca backup e acesso à chave BitLocker antes de qualquer intervenção.</p>
 
         <h2>O que diferencia um NVMe de um SSD comum</h2>
-        <p>Um SSD SATA conversa com a placa-mãe pelo mesmo barramento que os HDs usavam há mais de uma década. Um SSD NVMe usa linhas PCI Express diretamente, o que reduz muito a latência de cada leitura e permite várias filas de comandos em paralelo. Na prática, os dois eliminam o gargalo mecânico do HD; a diferença entre eles aparece principalmente em cópias grandes, compilação, edição de vídeo e abertura de projetos pesados.</p>
+        <p>Um SSD SATA conversa com a placa-mãe pelo barramento SATA. Um SSD NVMe usa uma interface criada para armazenamento de estado sólido e, em computadores pessoais, normalmente se comunica por PCI Express. Já <strong>M.2 é o formato físico</strong>: uma unidade M.2 pode usar SATA ou PCIe/NVMe. Na prática, ambos eliminam o atraso mecânico do HD; a diferença entre SATA e NVMe aparece principalmente em cópias grandes, compilação, edição de vídeo e abertura de projetos pesados.</p>
         <p>Por isso a resposta honesta é: sair de HD para qualquer SSD é uma mudança que se percebe no primeiro boot. Sair de SSD SATA para NVMe é um ganho real, porém mais discreto em uso comum de navegador e pacote de escritório. Quando alguém promete que o NVMe vai "resolver tudo", desconfie — o disco é apenas um dos componentes envolvidos.</p>
 
-        <h2>Antes de comprar: a máquina aceita NVMe?</h2>
-        <p>Três verificações resolvem a dúvida antes de qualquer compra:</p>
+        <h2>Checklist antes de comprar</h2>
+        <p>Registre o modelo completo do notebook ou da placa-mãe e consulte o manual oficial. Em seguida, confirme:</p>
         <ul>
-          <li><strong>Existe slot M.2?</strong> Placas e notebooks anteriores a essa geração podem não ter nenhum, ou ter apenas um slot com chave B destinado a SSD M.2 SATA.</li>
-          <li><strong>O slot é PCIe ou apenas SATA?</strong> O conector é parecido, mas nem todo M.2 entrega linhas PCIe. O manual da placa ou do modelo do notebook informa isso.</li>
-          <li><strong>A UEFI enxerga discos NVMe para boot?</strong> Algumas máquinas de transição reconhecem o disco como armazenamento, mas não conseguem iniciar o sistema a partir dele.</li>
+          <li><strong>Formato e interface:</strong> existe slot M.2 e ele aceita PCIe/NVMe, SATA ou ambos? O formato semelhante não torna os protocolos intercambiáveis.</li>
+          <li><strong>Chave e comprimento:</strong> confirme a chave mecânica e medidas como 2230, 2242 ou 2280; não presuma que todo módulo cabe.</li>
+          <li><strong>Inicialização:</strong> o firmware do equipamento permite usar uma unidade NVMe como disco de boot, e existe atualização documentada necessária?</li>
+          <li><strong>Capacidade útil:</strong> os dados ocupados no disco antigo cabem no novo com folga? Compare espaço usado, não apenas a capacidade anunciada.</li>
+          <li><strong>Slot ou porta compartilhada:</strong> instalar o M.2 desativa alguma porta SATA ou reduz linhas de outro slot? A tabela do manual resolve a dúvida.</li>
+          <li><strong>Fixação e dissipação:</strong> há parafuso, suporte e contato térmico adequados para o comprimento escolhido?</li>
         </ul>
-        <p>Também vale conferir o comprimento suportado (2280 é o mais comum, mas notebooks compactos usam 2230 ou 2242) e se há folga para o dissipador. Em desktops, o slot M.2 costuma compartilhar linhas com uma porta SATA: ocupar o M.2 pode desativar automaticamente uma porta, o que surpreende quem tem HD secundário instalado.</p>
+        <p>Se o manual não identifica claramente interface, dimensões e suporte de boot, pare antes da compra. Abrir a tampa apenas para “ver se encaixa” não confirma compatibilidade elétrica nem suporte do firmware.</p>
+
+        <h2>Proteja os dados antes de abrir a máquina</h2>
+        <ol>
+          <li><strong>Faça uma cópia independente:</strong> salve primeiro os arquivos insubstituíveis em outra unidade e abra uma amostra para confirmar a leitura.</li>
+          <li><strong>Confira a criptografia:</strong> se o Windows usa BitLocker ou Criptografia do dispositivo, faça backup da chave de recuperação e confirme seu acesso em outro aparelho.</li>
+          <li><strong>Registre o estado atual:</strong> anote espaço usado, partições, aplicativos indispensáveis e licenças que possam exigir reativação.</li>
+          <li><strong>Leia a saúde do disco:</strong> alertas críticos, desconexões, ruído ou erros de leitura tornam a clonagem uma carga arriscada. Priorize os dados e interrompa tentativas repetidas.</li>
+        </ol>
+        <p>Clonagem facilita a migração, mas não substitui backup: ela replica o estado do sistema e pode falhar quando a unidade de origem está degradada.</p>
 
         <h2>Quando o upgrade não é a resposta</h2>
         <p>Existem situações em que instalar um NVMe apenas troca a peça errada:</p>
@@ -6054,15 +6066,15 @@ Ideal: 1000VA / 600W (para crescimento)`}</code></pre>
         <h3>1. Leitura de saúde do disco atual</h3>
         <p>A primeira etapa é verificar os indicadores de saúde do disco de origem. Um disco com setores realocados em crescimento ou com erros de leitura muda toda a estratégia: nesse caso, não se clona — copiam-se os dados enquanto o disco ainda responde, e a instalação do sistema é feita do zero no disco novo.</p>
         <h3>2. Decisão entre clonar e instalar limpo</h3>
-        <p>Clonar preserva programas, licenças locais e configurações, e é a opção mais confortável quando o sistema está saudável. Instalação limpa é preferível quando o sistema já acumulou anos de camadas, drivers antigos e falhas de atualização. As duas rotas são apresentadas ao cliente com a diferença de tempo envolvida antes da execução.</p>
+        <p>Clonar tende a preservar programas e configurações, mas algumas licenças podem pedir nova ativação. É a opção mais confortável quando o sistema e o disco de origem estão saudáveis. Instalação limpa é preferível quando há corrupção persistente, drivers antigos ou falhas de atualização. A decisão deve considerar estado da origem, cópia dos dados e possibilidade de reinstalar aplicativos — não apenas conveniência.</p>
         <h3>3. Cópia de segurança antes de tocar no hardware</h3>
         <p>Nenhum disco é aberto ou substituído sem cópia prévia dos arquivos do usuário em mídia separada. Esse passo é inegociável, porque é justamente durante uma migração que aparecem os defeitos silenciosos de um disco antigo.</p>
         <h3>4. Instalação física</h3>
         <p>O equipamento é desligado da tomada e, em notebooks, tem a bateria desconectada quando o projeto permite. O SSD entra em ângulo no slot M.2, é apoiado e só então parafusado — pressionar o módulo para baixo antes de encaixar é o erro que mais danifica o conector. Quando existe dissipador ou espuma térmica de fábrica, o contato é refeito.</p>
         <h3>5. Configuração de firmware</h3>
-        <p>Com o disco instalado, confere-se na UEFI se ele foi reconhecido, se o modo de operação está correto e se a ordem de inicialização aponta para o disco novo. Em máquinas que vieram com criptografia de disco ativa, a chave de recuperação precisa estar em mãos antes de qualquer alteração — sem ela, o sistema pode não iniciar após a mudança.</p>
+        <p>Com o disco instalado, confere-se na UEFI se ele foi reconhecido e se a ordem de inicialização aponta para o carregador correto. Não altere modos de armazenamento ao acaso: uma mudança incompatível pode impedir a inicialização. Em máquinas com criptografia ativa, a chave de recuperação deve estar acessível antes da intervenção.</p>
         <h3>6. Testes e devolução</h3>
-        <p>Antes de devolver, o equipamento passa por reinicializações sucessivas, verificação de temperatura em carga, checagem de espaço e conferência de que os arquivos do usuário estão íntegros. O disco antigo é entregue ao cliente ou, mediante autorização por escrito, higienizado.</p>
+        <p>Antes de devolver, o equipamento passa por reinicializações sucessivas, verificação de temperatura em carga, checagem de espaço e conferência por amostragem dos arquivos copiados. Se a unidade for adicional e estiver vazia, o Windows pode exigir que ela seja colocada online, inicializada e receba um volume; confirme com cuidado o disco selecionado. O disco antigo é entregue ao cliente ou, mediante autorização por escrito, higienizado.</p>
 
         <h2>Detalhes que evitam retrabalho</h2>
         <ul>
@@ -6073,7 +6085,7 @@ Ideal: 1000VA / 600W (para crescimento)`}</code></pre>
         </ul>
 
         <h2>Quando levar para atendimento técnico</h2>
-        <p>Faz sentido buscar ajuda quando o notebook exige desmontagem completa para chegar ao slot, quando o sistema está com criptografia ativa, quando o disco atual apresenta erros de leitura ou quando os dados não podem ser perdidos em hipótese alguma. Nesses cenários, o custo do erro é maior do que o do serviço.</p>
+        <p>Interrompa e busque ajuda quando o notebook exige desmontagem completa para chegar ao slot, quando a bateria está colada ou estufada, quando você não consegue acessar a chave de recuperação, quando o disco atual apresenta erros de leitura ou quando os dados não podem ser perdidos. Nesses cenários, insistir amplia o risco.</p>
         <p>Se quiser conferir antes se o gargalo é mesmo o disco, o caminho é o <Link to="/diagnostico-tecnico">diagnóstico técnico</Link>. Para o serviço de troca e migração, veja <Link to="/servicos/upgrade-ssd-ram">instalação de SSD e upgrade de memória</Link>; se a intenção for reinstalar o sistema no disco novo, a página de <Link to="/servicos/formatacao">formatação e instalação</Link> explica o procedimento.</p>
       </>
     ),

@@ -212,14 +212,14 @@ const WAVE_5A: EditorialApproval[] = [
     status: "approved",
     authorType: "organization",
     authorId: INSTITUTIONAL_AUTHOR.id,
-    reviewedAt: "2026-08-12",
-    approvedAt: "2026-08-12",
+    reviewedAt: "2026-09-07",
+    approvedAt: "2026-09-07",
     imageOrigin: "licensed",
     imageLicense: "CC0 1.0",
     imageAttribution:
       "Foto: User5515 (Wikimedia Commons), CC0 1.0 — https://commons.wikimedia.org/wiki/File:256GB_2230_NVME_SSD_%2B_256GB_NGFF_SSD.jpg",
     notes:
-      "Reescrita integral na Onda 5A; fact-check registrado em blogEditorialSources.ts; capa é fotografia real de domínio público (CC0), sem IA.",
+      "Revisão material em 2026-09-07; fact-check e fontes primárias registrados em blogEditorialSources.ts; capa é fotografia real de domínio público (CC0), sem IA.",
   },
 ];
 
