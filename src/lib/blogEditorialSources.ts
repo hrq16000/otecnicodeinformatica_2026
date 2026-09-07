@@ -72,6 +72,8 @@ export const ALLOWED_SOURCE_HOSTS = [
   "wi-fi.org",
   "www.wi-fi.org",
   "support.google.com",
+  "nvmexpress.org",
+  "www.nvmexpress.org",
 ] as const;
 
 // ─────────────────────────────────────────────────────────────
@@ -120,6 +122,51 @@ export const EDITORIAL_SOURCES: Record<string, EditorialSource> = {
     sourceType: "official",
     supports: [
       "Discos protegidos por BitLocker podem exigir a chave de recuperação; sem ela é possível perder o acesso aos dados.",
+    ],
+  },
+  "ms-bitlocker-backup-key": {
+    id: "ms-bitlocker-backup-key",
+    title: "Back up your BitLocker recovery key",
+    publisher: "Microsoft Support",
+    url: "https://support.microsoft.com/en-us/windows/security/encryption/back-up-your-bitlocker-recovery-key",
+    accessedAt: "2026-09-07",
+    sourceType: "official",
+    supports: [
+      "A chave de recuperação do BitLocker deve ser confirmada e copiada para um local acessível antes de alterações de hardware ou firmware.",
+    ],
+  },
+  "ms-initialize-new-disks": {
+    id: "ms-initialize-new-disks",
+    title: "Initialize new disks",
+    publisher: "Microsoft Learn",
+    url: "https://learn.microsoft.com/en-us/windows-server/storage/disk-management/initialize-new-disks",
+    accessedAt: "2026-09-07",
+    sourceType: "official",
+    supports: [
+      "Um disco novo pode precisar ser colocado online e inicializado no Gerenciamento de Disco antes da criação de um volume.",
+      "A seleção do disco correto e do estilo de partição precede a criação do volume.",
+    ],
+  },
+  "nvme-official-faq": {
+    id: "nvme-official-faq",
+    title: "Frequently Asked Questions",
+    publisher: "NVM Express",
+    url: "https://nvmexpress.org/education/faqs/",
+    accessedAt: "2026-09-07",
+    sourceType: "standard",
+    supports: [
+      "M.2 descreve um formato físico que pode transportar SATA ou PCIe; o formato sozinho não confirma compatibilidade NVMe.",
+    ],
+  },
+  "nvme-base-specification-overview": {
+    id: "nvme-base-specification-overview",
+    title: "NVM Express Base Specification",
+    publisher: "NVM Express",
+    url: "https://nvmexpress.org/specification/nvm-express-base-specification/",
+    accessedAt: "2026-09-07",
+    sourceType: "standard",
+    supports: [
+      "NVMe foi projetado para armazenamento de estado sólido sobre PCI Express e é usado em vários formatos, inclusive M.2.",
     ],
   },
   "ms-bcdboot": {
@@ -366,13 +413,17 @@ export const ARTICLE_SOURCE_MANIFEST: Record<string, ArticleSourceManifest> = {
   },
   "como-fazer-upgrade-ssd-nvme": {
     slug: "como-fazer-upgrade-ssd-nvme",
-    sources: [],
+    sources: [
+      "nvme-official-faq",
+      "nvme-base-specification-overview",
+      "ms-bitlocker-backup-key",
+      "ms-initialize-new-disks",
+    ],
     technicalReview: "reviewed",
     factChecked: true,
-    factCheckedAt: "2026-08-12",
-    stableKnowledge: true,
+    factCheckedAt: "2026-09-07",
     notes:
-      "Reescrito na Onda 5A: removido o texto-modelo herdado e a marca de origem. Sem promessa de ganho percentual, sem número instável de fabricante e sem indicação de modelo comercial. Compatibilidade tratada como verificação (slot M.2, linhas PCIe, boot na UEFI), não como afirmação universal. Conhecimento técnico estável — sem fonte visível.",
+      "Revisado em 2026-09-07 com fontes primárias visíveis. Sem promessa de ganho percentual, sem número instável de fabricante e sem indicação de modelo comercial. Compatibilidade tratada como verificação de formato, interface, dimensões e suporte do equipamento; preservação dos dados e chave BitLocker antecedem a intervenção.",
   },
   "como-recuperar-dados-hd-com-defeito": {
     slug: "como-recuperar-dados-hd-com-defeito",

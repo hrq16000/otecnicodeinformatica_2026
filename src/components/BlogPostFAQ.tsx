@@ -61,6 +61,28 @@ const CATEGORY_EXTRA: Record<string, FAQItem[]> = {
 // categoria (que contêm valores comerciais).
 // ─────────────────────────────────────────────────────────────
 const PILOT_FAQ: Record<string, FAQItem[]> = {
+  "como-fazer-upgrade-ssd-nvme": [
+    {
+      q: "Todo SSD M.2 é NVMe?",
+      a: "Não. M.2 é o formato físico; há unidades M.2 que usam SATA e outras que usam PCIe/NVMe. Confira no manual do notebook ou da placa-mãe quais interfaces, chaves e comprimentos o slot aceita antes de comprar.",
+    },
+    {
+      q: "Trocar um SSD SATA por NVMe deixa qualquer computador muito mais rápido?",
+      a: "Não necessariamente. A diferença aparece mais em transferências grandes e cargas intensivas. Para navegador e escritório, o salto mais perceptível costuma ser sair de um HD mecânico para qualquer SSD; memória, temperatura e processador também podem limitar a máquina.",
+    },
+    {
+      q: "Preciso fazer backup antes de clonar o disco?",
+      a: "Sim. Clonagem não é backup: ela lê intensamente o disco antigo e replica o estado atual, inclusive problemas lógicos. Copie primeiro os arquivos insubstituíveis para outra mídia e confirme que consegue abri-los.",
+    },
+    {
+      q: "Por que conferir a chave BitLocker antes do upgrade?",
+      a: "Mudanças de hardware ou firmware podem levar o Windows a pedir a chave de recuperação. Confirme que a chave pertence ao equipamento e que está acessível em outro dispositivo antes de abrir a máquina ou alterar a ordem de boot.",
+    },
+    {
+      q: "O SSD foi instalado, mas não aparece no Explorador. Ele está com defeito?",
+      a: "Não obrigatoriamente. Se o firmware e o Gerenciamento de Disco reconhecem a unidade, um SSD novo pode estar apenas offline, não inicializado ou sem volume. Identifique cuidadosamente o disco correto antes de inicializar; não inicialize uma unidade que contenha dados importantes.",
+    },
+  ],
   "como-escolher-um-bom-antivirus": [
     {
       q: "O Windows 11 já vem com antivírus?",
