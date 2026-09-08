@@ -12823,17 +12823,38 @@ bcdboot C:\\Windows /s S: /f UEFI`}</code></pre>
     category: "Redes e Wi-Fi",
     content: (
       <>
-        <p className="lead">Antes de trocar de plano ou comprar um roteador novo, vale gastar dez minutos separando duas coisas diferentes: a velocidade que chega até a sua casa e a velocidade que sobra depois de passar pela rede interna. Elas quase nunca são iguais.</p>
+        <p className="lead">Antes de trocar de plano ou comprar um roteador novo, separe a entrega que chega ao roteador do desempenho dentro da rede. Um teste isolado no celular não faz isso. O roteiro abaixo cria uma referência por cabo, compara o Wi-Fi perto e longe e registra indicadores diferentes sem transformar um único número em diagnóstico.</p>
 
         <h2>Resposta curta</h2>
-        <p>Faça o teste de velocidade com o computador ligado por <strong>cabo</strong> direto no roteador. Se o resultado ficar próximo do contratado, a entrega do provedor está boa e o problema é interno (Wi-Fi, distância, canal, aparelho antigo). Se o resultado por cabo também estiver muito abaixo, a suspeita passa a ser da operadora ou do enlace até ela.</p>
+        <p>Faça a primeira medição com um computador ligado por <strong>cabo</strong> direto ao roteador, mas confirme antes que a porta, o adaptador e o cabo negociaram uma velocidade compatível com o plano. Se essa referência fica estável e o Wi-Fi degrada, a investigação é interna. Se o cabo também apresenta degradação recorrente, o histórico passa a sustentar a verificação do provedor.</p>
+
+        <h2>Prepare um teste que possa ser repetido</h2>
+        <ol>
+          <li><strong>Anote a referência:</strong> registre plano contratado, equipamento da operadora e horário. Não trate a velocidade anunciada como resultado constante em toda condição.</li>
+          <li><strong>Pare tráfego concorrente:</strong> pause backups, atualizações, streaming, câmeras e downloads nos demais aparelhos durante a amostra.</li>
+          <li><strong>Confira o enlace do computador:</strong> veja no sistema a velocidade negociada pela placa de rede. Um enlace de 100 Mbps não consegue medir corretamente um plano acima desse limite.</li>
+          <li><strong>Use o mesmo servidor e aparelho:</strong> mudar tudo entre as amostras impede comparar os resultados.</li>
+          <li><strong>Repita:</strong> faça três medições por cenário e repita o conjunto em outro horário. Guarde capturas com data e hora.</li>
+        </ol>
+        <p>O objetivo não é produzir um laudo regulatório, mas retirar variáveis óbvias antes de decidir entre suporte da operadora, ajuste da rede ou compra de equipamento.</p>
 
         <h2>Os dois testes que separam a origem</h2>
         <ol>
-          <li><strong>Teste por cabo:</strong> conecte um notebook ou desktop a uma porta LAN do roteador com cabo de rede, feche downloads e streaming em outros aparelhos e rode a medição três vezes em horários diferentes. Anote o pior e o melhor resultado.</li>
-          <li><strong>Teste sem fio, no mesmo cômodo do roteador:</strong> repita a medição a um ou dois metros do aparelho. Depois repita no cômodo onde a lentidão incomoda.</li>
+          <li><strong>Referência por cabo:</strong> com o link negociado corretamente e os demais usos pausados, faça as três amostras e registre todos os indicadores disponíveis.</li>
+          <li><strong>Wi-Fi perto:</strong> no mesmo aparelho, desconecte o cabo e repita próximo ao roteador, sem obstáculos relevantes.</li>
+          <li><strong>Wi-Fi no local do problema:</strong> repita exatamente no cômodo e posição em que a falha acontece.</li>
         </ol>
-        <p>Com esses três números — cabo, Wi-Fi perto e Wi-Fi longe — a conversa deixa de ser opinião. Se o cabo entrega e o Wi-Fi perto também entrega, o que falta é cobertura, e o caminho está em <Link to="/blog/como-melhorar-sinal-wifi-em-casa" className="text-accent">como melhorar o sinal de Wi-Fi em casa</Link>.</p>
+        <p>Com cabo, Wi-Fi perto e Wi-Fi no ponto ruim, a conversa deixa de ser opinião. Se cabo e Wi-Fi perto permanecem coerentes e apenas o ponto distante piora, o problema é cobertura; use o roteiro de <Link to="/blog/como-melhorar-sinal-wifi-em-casa" className="text-accent">como melhorar o sinal de Wi-Fi em casa</Link>.</p>
+
+        <h2>Não olhe apenas o download</h2>
+        <ul>
+          <li><strong>Download:</strong> afeta recebimento de arquivos, páginas pesadas e vídeo.</li>
+          <li><strong>Upload:</strong> pesa em envio de arquivos, backup em nuvem e qualidade da sua imagem em chamadas.</li>
+          <li><strong>Latência:</strong> é o tempo de resposta; jogos, telefonia e acesso remoto percebem atraso mesmo com download alto.</li>
+          <li><strong>Jitter:</strong> é a variação desse atraso; quando oscila, áudio e vídeo podem ficar entrecortados.</li>
+          <li><strong>Perda de pacotes:</strong> indica dados que precisam ser reenviados e ajuda a explicar cortes e desconexões.</li>
+        </ul>
+        <p>Não existe um único limite universal que sirva para todo serviço. Compare os cenários e a repetição no tempo: estabilidade pode importar mais que o maior valor de download exibido.</p>
 
         <h2>Tabela de decisão: o que cada combinação significa</h2>
         <table>
@@ -12846,9 +12867,9 @@ bcdboot C:\\Windows /s S: /f UEFI`}</code></pre>
             </tr>
           </thead>
           <tbody>
-            <tr><td>Próximo do contratado</td><td>Próximo do contratado</td><td>Entrega e roteador estão bem</td><td>Problema é de cobertura ou do aparelho cliente</td></tr>
-            <tr><td>Próximo do contratado</td><td>Muito abaixo</td><td>Rede sem fio limitando</td><td>Canal, banda de 5 GHz, posicionamento, roteador antigo</td></tr>
-            <tr><td>Muito abaixo</td><td>Muito abaixo</td><td>Entrega ou enlace comprometido</td><td>Abrir chamado com a operadora com os números anotados</td></tr>
+            <tr><td>Coerente e estável</td><td>Coerente perto</td><td>Referência de entrada e rádio próximos funcionam</td><td>Comparar o cômodo ruim e o aparelho afetado</td></tr>
+            <tr><td>Coerente e estável</td><td>Degrada perto</td><td>Rede sem fio ou cliente limitando</td><td>Comparar outro aparelho, faixa, canal e posicionamento</td></tr>
+            <tr><td>Degrada repetidamente</td><td>Degrada junto</td><td>Entrega, roteador ou limite do enlace cabeado</td><td>Confirmar negociação do link e abrir chamado com histórico</td></tr>
             <tr><td>Oscila muito entre medições</td><td>Oscila junto</td><td>Instabilidade no enlace ou saturação</td><td>Registrar horários e reclamar com histórico</td></tr>
             <tr><td>Bom, mas com latência alta em jogos e chamadas</td><td>Igual</td><td>Congestionamento, não falta de velocidade</td><td>Verificar quem consome a banda e priorizar</td></tr>
           </tbody>
@@ -12876,6 +12897,8 @@ bcdboot C:\\Windows /s S: /f UEFI`}</code></pre>
 
         <h2>Quando chamar um técnico</h2>
         <p>Faz sentido chamar quando os testes indicam rede interna e a casa exige cabeamento, ponto adicional ou substituição de equipamento — planejamento que evita comprar aparelho errado. O serviço está em <Link to="/servicos/redes-e-wifi" className="text-accent">redes e Wi-Fi</Link>, e o atendimento no endereço em <Link to="/atendimento-domicilio" className="text-accent">atendimento a domicílio</Link>. Se a instabilidade for permanente, comece pela leitura de <Link to="/problemas/wifi-instavel" className="text-accent">Wi-Fi instável</Link>.</p>
+
+        <EditorialReferences slug="internet-lenta-provedor-ou-roteador" />
       </>
     ),
   },

@@ -66,6 +66,10 @@ const ALLOWED_SOURCE_HOSTS = new Set([
   "csrc.nist.gov",
   "wi-fi.org",
   "www.wi-fi.org",
+  "nvmexpress.org",
+  "www.nvmexpress.org",
+  "fcc.gov",
+  "www.fcc.gov",
 ]);
 
 // Extrai blocos "  "slug": {" ... até o próximo top-level slug.

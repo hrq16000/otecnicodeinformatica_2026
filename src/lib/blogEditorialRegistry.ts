@@ -731,14 +731,14 @@ const WAVE_10E: EditorialApproval[] = [
     status: "approved",
     authorType: "organization",
     authorId: INSTITUTIONAL_AUTHOR.id,
-    reviewedAt: "2026-08-26",
-    approvedAt: "2026-08-26",
+    reviewedAt: "2026-09-08",
+    approvedAt: "2026-09-08",
     imageOrigin: "licensed",
     imageLicense: "CC BY 4.0",
     imageAttribution:
       "Foto: VulcanSphere (Wikimedia Commons), CC BY 4.0 — https://commons.wikimedia.org/wiki/File:ARRIS_CM820B_DOCSIS_Cable_Modem.jpg",
     notes:
-      "Satélite escrito do zero na Onda 10C (Lote 2); fact-check registrado em blogEditorialSources.ts; capa é fotografia real licenciada, sem IA.",
+      "Revisão material em 2026-09-08; protocolo de medição e fontes oficiais registrados em blogEditorialSources.ts; capa é fotografia real licenciada, sem IA.",
   },
   {
     slug: "impressora-offline-como-resolver",
