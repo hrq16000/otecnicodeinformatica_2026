@@ -154,23 +154,23 @@ const PILOT_FAQ: Record<string, FAQItem[]> = {
   "internet-lenta-provedor-ou-roteador": [
     {
       q: "Como saber se a internet lenta é culpa do provedor?",
-      a: "Meça a velocidade com o computador ligado por cabo direto no roteador, três vezes, em horários diferentes. Se o resultado por cabo ficar muito abaixo do contratado em todas as medições, a suspeita é da entrega da operadora. Se o cabo entrega bem, o gargalo está dentro de casa.",
+      a: "Meça por cabo com os demais usos pausados, confirme que porta, adaptador e cabo suportam o plano e repita em horários diferentes. Resultados persistentemente abaixo do esperado nessa referência sustentam a suspeita sobre a entrega; uma medição isolada não fecha o diagnóstico.",
     },
     {
-      q: "Por que o Wi-Fi é mais lento que o cabo?",
-      a: "O sinal sem fio perde intensidade com distância, paredes, laje e concorrência de redes vizinhas. Uma diferença existe sempre; o que indica problema é o Wi-Fi entregar muito pouco mesmo a um ou dois metros do roteador.",
+      q: "Por que o teste por cabo também pode parar perto de 100 Mbps?",
+      a: "Uma porta, placa de rede ou enlace negociado a 100 Mbps limita a medição mesmo que o plano seja maior. Confira no sistema a velocidade do link e teste outra porta e outro cabo antes de concluir que o provedor está entregando pouco.",
     },
     {
-      q: "Trocar por um plano mais rápido resolve?",
-      a: "Não, quando o limite é a rede interna. Se o Wi-Fi já não entrega a velocidade atual, ele não entregará o dobro. Vale contratar mais velocidade só depois de confirmar, por cabo, que a entrega atual está sendo consumida por inteiro.",
+      q: "Velocidade boa com ping alto ainda é problema de internet?",
+      a: "Pode ser. Download mede volume transferido; latência mede tempo de resposta. Jogos, chamadas e acesso remoto podem falhar com atraso, variação ou perda mesmo quando o teste mostra muitos megabits. Registre esses indicadores separadamente.",
     },
     {
-      q: "Repetidor de sinal melhora a velocidade?",
-      a: "Só quando instalado em um ponto que ainda recebe sinal bom. Colocado onde o sinal já está fraco, ele repete um sinal ruim e costuma piorar a experiência.",
+      q: "Trocar por um plano mais rápido resolve Wi-Fi ruim?",
+      a: "Não quando o limite é cobertura, interferência ou o próprio aparelho. Primeiro confirme a entrega por cabo e compare Wi-Fi perto e longe do roteador. Um plano maior não corrige o caminho interno que já não transporta o plano atual.",
     },
     {
       q: "O que registrar antes de abrir chamado com a operadora?",
-      a: "Data, hora e resultado das medições feitas por cabo, com os demais aparelhos parados. Esse histórico sustenta o pedido de verificação do enlace, em vez de apenas um reinício remoto.",
+      a: "Plano contratado, data, hora, conexão usada, velocidade negociada do link e resultados de download, upload, latência, jitter e perda. Faça capturas das medições por cabo e anote quando todos os aparelhos caíram juntos.",
     },
   ],
   "impressora-offline-como-resolver": [

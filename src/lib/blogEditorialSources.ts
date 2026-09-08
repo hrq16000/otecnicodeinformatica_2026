@@ -74,6 +74,8 @@ export const ALLOWED_SOURCE_HOSTS = [
   "support.google.com",
   "nvmexpress.org",
   "www.nvmexpress.org",
+  "fcc.gov",
+  "www.fcc.gov",
 ] as const;
 
 // ─────────────────────────────────────────────────────────────
@@ -304,6 +306,30 @@ export const EDITORIAL_SOURCES: Record<string, EditorialSource> = {
     sourceType: "official",
     supports: [
       "Redes residenciais com múltiplos pontos (EasyMesh) para melhorar cobertura em ambientes maiores.",
+    ],
+  },
+  "fcc-home-network-tips": {
+    id: "fcc-home-network-tips",
+    title: "Home Network Tips",
+    publisher: "Federal Communications Commission",
+    url: "https://www.fcc.gov/home-network-tips",
+    accessedAt: "2026-09-08",
+    sourceType: "official",
+    supports: [
+      "Testes de velocidade registram download e upload, mas o resultado dentro de casa também depende da rede Wi-Fi, da posição do roteador e dos dispositivos conectados.",
+      "Comparar medições e observar a rede doméstica ajuda a separar entrega de banda larga de limitações locais.",
+    ],
+  },
+  "fcc-speed-test-app-faq": {
+    id: "fcc-speed-test-app-faq",
+    title: "FCC Mobile Speed Test App — Frequently Asked Questions",
+    publisher: "Federal Communications Commission",
+    url: "https://www.fcc.gov/BroadbandData/speed-test-app-faq",
+    accessedAt: "2026-09-08",
+    sourceType: "official",
+    supports: [
+      "Uma medição de conexão pode registrar download, upload, latência, jitter e perda de pacotes; esses indicadores descrevem aspectos diferentes da experiência.",
+      "Resultados isolados não bastam para caracterizar de forma confiável o comportamento recorrente da conexão.",
     ],
   },
   "android-acelerar-dispositivo": {
@@ -797,13 +823,16 @@ export const ARTICLE_SOURCE_MANIFEST: Record<string, ArticleSourceManifest> = {
   // ── Onda 10C — Lote 2 (internet/Wi-Fi e impressoras).
   "internet-lenta-provedor-ou-roteador": {
     slug: "internet-lenta-provedor-ou-roteador",
-    sources: [],
+    sources: [
+      "fcc-home-network-tips",
+      "fcc-speed-test-app-faq",
+      "wifi-alliance-home",
+    ],
     technicalReview: "reviewed",
     factChecked: true,
-    factCheckedAt: "2026-08-26",
-    stableKnowledge: true,
+    factCheckedAt: "2026-09-08",
     notes:
-      "Revisão concluída (Onda 10C, Lote 2): protocolo de triagem por cabo × Wi-Fi perto × Wi-Fi longe, leitura da combinação de resultados, critérios objetivos para abrir chamado com a operadora e limites do que troca de plano ou repetidor resolve. Sem estatística inventada e sem promessa de velocidade. Conhecimento técnico estável — sem fonte visível.",
+      "Revisão material em 2026-09-08 com fontes oficiais visíveis: protocolo de triagem por cabo × Wi-Fi perto × Wi-Fi longe, validação do limite físico do enlace, leitura separada de download, upload, latência, jitter e perda e critérios objetivos para registrar o chamado. Sem estatística inventada, limiar universal ou promessa de velocidade.",
   },
   "impressora-offline-como-resolver": {
     slug: "impressora-offline-como-resolver",
