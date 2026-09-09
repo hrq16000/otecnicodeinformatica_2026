@@ -247,7 +247,7 @@ export const EDITORIAL_SOURCES: Record<string, EditorialSource> = {
     title: "#StopRansomware Guide",
     publisher: "CISA",
     url: "https://www.cisa.gov/stopransomware/ransomware-guide",
-    accessedAt: "2026-07-12",
+    accessedAt: "2026-09-09",
     sourceType: "official",
     supports: [
       "Boas práticas para prevenir, conter e responder a incidentes de ransomware; não pagar resgate como primeira reação.",
@@ -258,7 +258,7 @@ export const EDITORIAL_SOURCES: Record<string, EditorialSource> = {
     title: "Back Up Business Data",
     publisher: "CISA",
     url: "https://www.cisa.gov/audiences/small-and-medium-businesses/secure-your-business/back-up-business-data",
-    accessedAt: "2026-07-12",
+    accessedAt: "2026-09-09",
     sourceType: "official",
     supports: [
       "Backup como proteção contra perda de dados por falhas, exclusão acidental e ataques.",
@@ -269,7 +269,7 @@ export const EDITORIAL_SOURCES: Record<string, EditorialSource> = {
     title: "SP 800-34 Rev. 1 — Contingency Planning Guide for Federal Information Systems",
     publisher: "NIST (CSRC)",
     url: "https://csrc.nist.gov/pubs/sp/800/34/r1/upd1/final",
-    accessedAt: "2026-07-12",
+    accessedAt: "2026-09-09",
     sourceType: "standard",
     supports: [
       "Planejamento de contingência e restauração de dados; a restauração precisa ser testada, não apenas configurada.",
@@ -1026,13 +1026,12 @@ export const ARTICLE_SOURCE_MANIFEST: Record<string, ArticleSourceManifest> = {
   },
   "como-testar-restauracao-de-backup": {
     slug: "como-testar-restauracao-de-backup",
-    sources: [],
+    sources: ["cisa-backup", "nist-sp-800-34", "cisa-stop-ransomware"],
     technicalReview: "reviewed",
     factChecked: true,
-    factCheckedAt: "2026-09-03",
-    stableKnowledge: true,
+    factCheckedAt: "2026-09-09",
     notes:
-      "Revisão concluída (Onda 11C): roteiro de restauração em local separado, distinção entre sincronização e backup versionado, prática de três cópias em dois tipos de mídia com uma fora do local e registro do tempo de restauração. Sem citar produto ou fornecedor. Conhecimento técnico estável — sem fonte visível.",
+      "Revisão material em 2026-09-09 com fontes primárias visíveis: escopo e critérios de aprovação definidos antes do teste, restauração em destino separado, amostragem representativa, registro de ponto e tempo de recuperação e cadência orientada a impacto e mudanças. Sem produto, fornecedor ou frequência universal.",
   },
   "como-monitorar-temperatura-do-computador": {
     slug: "como-monitorar-temperatura-do-computador",

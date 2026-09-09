@@ -14159,10 +14159,19 @@ bcdboot C:\\Windows /s S: /f UEFI`}</code></pre>
     category: "Procedimentos Técnicos",
     content: (
       <>
-        <p className="lead">A pergunta que decide se você tem backup não é "está fazendo cópia?", e sim "quando foi a última vez que você restaurou um arquivo a partir dela?". Rotina que nunca foi testada é uma promessa — e promessas falham exatamente no pior dia.</p>
+        <p className="lead">A pergunta que decide se você tem backup não é "está fazendo cópia?", e sim "o que já foi restaurado, de qual versão e em quanto tempo?". O teste transforma uma rotina silenciosa em evidência: mostra cobertura, integridade e se a recuperação cabe na necessidade real.</p>
 
         <h2>Resposta curta</h2>
-        <p>Teste de restauração é escolher um arquivo real, restaurá-lo em um local separado do original, abrir o arquivo e conferir o conteúdo. Faça isso pelo menos uma vez por trimestre para arquivos pessoais e uma vez por mês em ambiente de trabalho, registrando a data e o que foi restaurado.</p>
+        <p>Escolha uma amostra representativa, restaure-a em um local separado, abra os arquivos e confira versão, conteúdo, permissões e tempo gasto. Registre o resultado e repita após mudanças relevantes. A frequência deve acompanhar o impacto da perda e a velocidade com que os dados mudam; não existe calendário universal.</p>
+
+        <h2>Defina o que o teste precisa provar</h2>
+        <ul>
+          <li><strong>Escopo:</strong> quais pastas, sistemas, contas e dispositivos deveriam estar protegidos.</li>
+          <li><strong>Ponto de recuperação:</strong> até qual data e hora você precisa voltar sem perder trabalho demais.</li>
+          <li><strong>Tempo de recuperação:</strong> quanto tempo a atividade pode ficar parada enquanto os dados retornam.</li>
+          <li><strong>Critério de aprovação:</strong> a versão esperada aparece, abre corretamente, preserva o necessário e chega dentro do tempo registrado.</li>
+        </ul>
+        <p>Em empresas, esses dois últimos limites costumam ser chamados de RPO e RTO. O nome é menos importante que a decisão concreta: quanto trabalho pode ser refeito e quanto tempo de parada a operação tolera.</p>
 
         <h2>Por que cópias falham em silêncio</h2>
         <ul>
@@ -14180,22 +14189,38 @@ bcdboot C:\\Windows /s S: /f UEFI`}</code></pre>
             <tr><th>Passo</th><th>O que fazer</th><th>O que confirma</th></tr>
           </thead>
           <tbody>
-            <tr><td>1</td><td>Escolher um arquivo real e recente, de preferência grande e de formato que você use todo dia</td><td>Que a rotina cobriu o que interessa</td></tr>
+            <tr><td>1</td><td>Escolher arquivos de pastas, datas, tamanhos e formatos diferentes</td><td>Que a amostra representa o escopo</td></tr>
             <tr><td>2</td><td>Restaurar em uma pasta nova, nunca por cima do original</td><td>Que a restauração não destrói o dado bom</td></tr>
             <tr><td>3</td><td>Abrir o arquivo no programa correspondente</td><td>Integridade real, não apenas presença</td></tr>
             <tr><td>4</td><td>Conferir a data da versão restaurada</td><td>Que a rotina está rodando agora, não parou meses atrás</td></tr>
-            <tr><td>5</td><td>Testar também uma versão antiga do mesmo arquivo</td><td>Que existe histórico, e não só o estado atual espelhado</td></tr>
-            <tr><td>6</td><td>Registrar data, arquivo e resultado</td><td>Que o teste aconteceu — e quando</td></tr>
+            <tr><td>5</td><td>Restaurar uma versão anterior dentro da retenção esperada</td><td>Que existe histórico recuperável, não só o estado atual</td></tr>
+            <tr><td>6</td><td>Registrar duração, resultado e qualquer exceção</td><td>Que a evidência pode ser comparada no próximo teste</td></tr>
           </tbody>
         </table>
 
+        <h2>Teste na profundidade compatível com o risco</h2>
+        <table>
+          <thead>
+            <tr><th>Nível</th><th>O que restaura</th><th>O que ainda não prova</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Amostra de arquivos</td><td>Arquivos variados em pasta separada</td><td>Que todas as pastas e permissões estão cobertas</td></tr>
+            <tr><td>Pasta ou conjunto de trabalho</td><td>Um projeto, usuário ou período completo</td><td>Que o sistema inteiro pode voltar a operar</td></tr>
+            <tr><td>Recuperação ampla</td><td>Dados e configurações em ambiente isolado</td><td>Depende também de licenças, credenciais e infraestrutura</td></tr>
+          </tbody>
+        </table>
+        <p>Abrir um arquivo é um bom teste inicial, não uma certificação do conjunto. Quanto maior o impacto da parada, mais representativa precisa ser a restauração.</p>
+
         <h2>O que registrar</h2>
-        <p>Um registro simples resolve: data do teste, qual arquivo, de qual destino de cópia veio, se abriu corretamente e quanto tempo levou. O tempo importa: restaurar uma pasta pequena é diferente de restaurar tudo. Descobrir no dia da falha que a restauração completa levaria dias muda qualquer plano.</p>
+        <p>Registre data, responsável, origem da cópia, versão escolhida, destino da restauração, arquivos amostrados, duração, resultado e exceções. O tempo importa: restaurar uma pasta pequena é diferente de restaurar tudo. Se o teste falhar, registre a causa, corrija a rotina e faça nova restauração; o alerta sozinho não encerra o processo.</p>
         <p>Em empresa, esse registro é o que sustenta a conversa sobre continuidade: quanto tempo a operação suporta ficar parada e quanto trabalho pode ser perdido entre uma cópia e outra. O desdobramento empresarial está em <Link to="/blog/backup-nuvem-empresas-qual-escolher" className="text-accent">backup em nuvem para empresas</Link> e em <Link to="/servicos/backup-para-empresas" className="text-accent">backup para empresas</Link>.</p>
 
         <h2>Três cópias, dois tipos de mídia, uma fora do local</h2>
-        <p>A prática mais difundida é manter três cópias dos dados importantes, em dois tipos diferentes de mídia, com uma delas fora do ambiente físico principal. O motivo é simples: incêndio, furto, surto elétrico e ransomware atingem tudo o que está no mesmo lugar e conectado ao mesmo computador. A escolha entre nuvem e disco externo está detalhada em <Link to="/decisoes/nuvem-ou-hd-externo" className="text-accent">nuvem ou HD externo</Link>.</p>
-        <p>Uma cópia desconectada da rede — disco que só é ligado no momento da cópia — é a defesa mais eficaz contra criptografia maliciosa, porque o que não está acessível não é criptografado. O contexto de ataque está em <Link to="/blog/ransomware-como-proteger-empresa" className="text-accent">ransomware em empresas</Link>.</p>
+        <p>Uma referência útil é manter três cópias dos dados importantes, em dois tipos diferentes de mídia, com uma delas fora do ambiente físico principal. Não é fórmula suficiente por si só: retenção, acesso, criptografia e teste continuam necessários. A separação reduz a chance de incêndio, furto, surto elétrico ou ransomware atingir tudo ao mesmo tempo. A escolha entre nuvem e disco externo está detalhada em <Link to="/decisoes/nuvem-ou-hd-externo" className="text-accent">nuvem ou HD externo</Link>.</p>
+        <p>Uma cópia offline ou isolada reduz a exposição à criptografia maliciosa, desde que seja atualizada e testada. Ela complementa versões protegidas e controle de acesso; não substitui essas camadas. O contexto de ataque está em <Link to="/blog/ransomware-como-proteger-empresa" className="text-accent">ransomware em empresas</Link>.</p>
+
+        <h2>Quando repetir o teste</h2>
+        <p>Além da cadência definida pelo risco, repita após trocar ferramenta ou destino, alterar senha ou conta de serviço, incluir uma pasta crítica, mudar retenção, migrar computador ou receber um alerta de falha. Uma rotina que funcionou antes da mudança não comprova a configuração atual.</p>
 
         <h2>Antes de qualquer manutenção</h2>
         <p>Formatação, troca de disco, upgrade e reinstalação são momentos em que a cópia deixa de ser precaução e vira pré-requisito. O critério de decisão está em <Link to="/decisoes/backup-antes-da-manutencao" className="text-accent">backup antes da manutenção</Link>. Se o disco já apresenta sinais de falha, a cópia comum pode não ser possível — nesse cenário, o caminho é <Link to="/blog/como-recuperar-dados-hd-com-defeito" className="text-accent">recuperação de dados em HD com defeito</Link>.</p>
@@ -14211,7 +14236,9 @@ bcdboot C:\\Windows /s S: /f UEFI`}</code></pre>
         </ul>
 
         <h2>Quando parar</h2>
-        <p>Pare se o teste falhar em disco que já emite ruído, se o sistema pedir formatação da mídia de backup ou se a restauração começar a apresentar erros de leitura. Continuar tentando em mídia em falha reduz a chance de resgate — a prioridade passa a ser <Link to="/servicos/recuperacao-de-dados" className="text-accent">recuperação de dados</Link>.</p>
+        <p>Pare se o teste envolver a única cópia disponível, se o disco emitir ruído, se o sistema pedir formatação da mídia ou se surgirem erros de leitura recorrentes. Não formate nem execute reparos sobre a única fonte; preserve o estado e avalie o caminho de <Link to="/servicos/recuperacao-de-dados" className="text-accent">recuperação de dados</Link>.</p>
+
+        <EditorialReferences slug="como-testar-restauracao-de-backup" />
 
         <h2>Quando chamar um técnico</h2>
         <p>Chame quando a rotina não puder ser interrompida para teste, quando houver dados críticos de operação envolvidos, quando a restauração completa nunca tiver sido cronometrada ou quando o teste revelar cobertura incompleta e for necessário redesenhar o esquema de cópias. A avaliação está em <Link to="/diagnostico-tecnico" className="text-accent">diagnóstico técnico</Link>.</p>

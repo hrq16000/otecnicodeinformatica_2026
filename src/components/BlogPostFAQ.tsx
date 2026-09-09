@@ -173,6 +173,28 @@ const PILOT_FAQ: Record<string, FAQItem[]> = {
       a: "Plano contratado, data, hora, conexão usada, velocidade negociada do link e resultados de download, upload, latência, jitter e perda. Faça capturas das medições por cabo e anote quando todos os aparelhos caíram juntos.",
     },
   ],
+  "como-testar-restauracao-de-backup": [
+    {
+      q: "Sincronização em nuvem conta como backup?",
+      a: "Só quando o serviço mantém versões recuperáveis e o teste confirma que elas podem ser restauradas. Uma pasta apenas sincronizada pode propagar exclusões, sobrescritas e arquivos danificados para os demais dispositivos.",
+    },
+    {
+      q: "Por que restaurar em uma pasta separada?",
+      a: "Para comparar origem e cópia sem substituir o arquivo que ainda funciona. O destino isolado também permite abrir, conferir datas e validar permissões antes de qualquer recuperação real.",
+    },
+    {
+      q: "Com que frequência devo testar a restauração?",
+      a: "Não existe intervalo único. Defina a frequência pelo impacto de perder dados, pela quantidade de mudanças e pelo tempo tolerável de parada. Repita também após trocar ferramenta, destino, credencial, política de retenção ou estrutura de pastas.",
+    },
+    {
+      q: "Abrir um arquivo prova que todo o backup funciona?",
+      a: "Não. Isso valida apenas aquela amostra. Inclua formatos, pastas, datas e tamanhos diferentes; em ambiente crítico, faça também teste de pasta ou restauração mais ampla em ambiente isolado.",
+    },
+    {
+      q: "Quando o teste de restauração pode ser considerado aprovado?",
+      a: "Quando recupera a versão esperada no destino separado, o arquivo abre e mantém conteúdo e permissões necessárias, o tempo fica registrado e nenhuma pasta crítica prevista no escopo fica de fora. Qualquer exceção deve gerar correção e novo teste.",
+    },
+  ],
   "impressora-offline-como-resolver": [
     {
       q: "O que significa a impressora aparecer offline?",
