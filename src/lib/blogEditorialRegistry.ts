@@ -1029,14 +1029,14 @@ const WAVE_11C: EditorialApproval[] = [
     status: "approved",
     authorType: "organization",
     authorId: INSTITUTIONAL_AUTHOR.id,
-    reviewedAt: "2026-09-03",
-    approvedAt: "2026-09-03",
+    reviewedAt: "2026-09-09",
+    approvedAt: "2026-09-09",
     imageOrigin: "licensed",
     imageLicense: "CC BY-SA 4.0",
     imageAttribution:
       "Foto: Santeri Viinamäki (Wikimedia Commons), CC BY-SA 4.0 — https://commons.wikimedia.org/wiki/File:DVD,_USB_flash_drive_and_external_hard_drive.jpg",
     notes:
-      "Pilar do cluster de dados e backup, escrito do zero na Onda 11C; foca no teste de restauração, tema não coberto pelos artigos existentes de backup; capa é fotografia real licenciada, sem IA.",
+      "Pilar do cluster de produtividade e continuidade, revisado materialmente em 2026-09-09; define evidência, níveis de teste e critérios de aprovação sem transformar periodicidade em regra universal. Fontes primárias no manifesto; capa real licenciada, sem IA.",
   },
 ];
 
