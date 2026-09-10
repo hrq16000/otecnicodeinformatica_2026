@@ -453,7 +453,12 @@ export const WhatsAppFunnel = () => {
       );
     }
     captureUtmsFromUrl();
+    // Auditoria de produção: registra ENFILEIRADO → ENVIADO do wa_funnel_open,
+    // sem PII (apenas local do CTA, presença de preset e carimbos de tempo).
+    registrarAuditoriaFunnelOpen("enfileirado", loc, !!preset);
     trackFunnelOpen(loc, !!preset);
+    registrarAuditoriaFunnelOpen("enviado", loc, !!preset);
+
   }, []);
 
   // Esconde botões flutuantes / rodapé WhatsApp enquanto o modal está aberto.
