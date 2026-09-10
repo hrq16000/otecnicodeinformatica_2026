@@ -984,14 +984,14 @@ const WAVE_11A: EditorialApproval[] = [
     status: "approved",
     authorType: "organization",
     authorId: INSTITUTIONAL_AUTHOR.id,
-    reviewedAt: "2026-08-31",
-    approvedAt: "2026-08-31",
+    reviewedAt: "2026-09-10",
+    approvedAt: "2026-09-10",
     imageOrigin: "licensed",
     imageLicense: "CC BY-SA 4.0",
     imageAttribution:
       "Captura: Armchair (Wikimedia Commons), CC BY-SA 4.0 — https://commons.wikimedia.org/wiki/File:Windows_Recovery_Environment.png",
     notes:
-      "Satélite de laço de reparo automático, escrito do zero na Onda 11A (Lote 4); backup priorizado antes de qualquer reparo destrutivo; capa é imagem real licenciada, sem IA.",
+      "Satélite de laço de reparo automático, escrito do zero na Onda 11A (Lote 4) e aprofundado em 2026-09-10; sequência segura no Windows RE, backup e chave BitLocker priorizados, com comandos avançados limitados a volumes identificados; capa é imagem real licenciada, sem IA.",
   },
 ];
 
