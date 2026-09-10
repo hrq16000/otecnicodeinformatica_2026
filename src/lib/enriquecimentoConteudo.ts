@@ -235,6 +235,17 @@ export const ENRIQUECIMENTO_1: Record<string, EnriquecimentoConteudo> = {
     },
     blocos: [
       {
+        id: "evidencias-antes-do-reparo",
+        titulo: "Antes de reparar: quatro evidências que evitam o procedimento errado",
+        intro: "O código orienta a investigação, mas a decisão segura vem da combinação entre a tela, o histórico e o estado da unidade. Registre estas quatro evidências antes de executar comandos no Ambiente de Recuperação.",
+        itens: [
+          { titulo: "O arquivo citado na própria tela", desc: "Fotografe o caminho e o nome completos. Um driver de armazenamento, um arquivo de sistema ou o carregador de boot apontam para etapas diferentes; “erro de assinatura” sozinho é genérico demais." },
+          { titulo: "A última mudança que coincidiu com a primeira falha", desc: "Atualização do Windows, troca de SSD, driver, queda de energia ou alteração de firmware são hipóteses rastreáveis. Não confunda coincidência com causa: use a linha do tempo para escolher o primeiro teste reversível." },
+          { titulo: "O reconhecimento da unidade no firmware", desc: "Se SSD ou HD não aparece de modo consistente no UEFI, a prioridade é preservar dados e investigar hardware. Recriar BCD ou reinstalar o Windows não faz uma unidade ausente voltar a ser confiável." },
+          { titulo: "A situação da chave de recuperação", desc: "Com BitLocker, anote o identificador solicitado e localize a chave correspondente antes de abrir ferramentas de reparo. Alterar TPM, limpar o firmware ou formatar não substitui a chave e pode complicar a recuperação." },
+        ],
+      },
+      {
         id: "significado-0xc0000428",
         titulo: "O significado técnico de 0xc0000428, sem alarmismo",
         intro: "A referência de códigos da Microsoft associa 0xC0000428 a STATUS_INVALID_IMAGE_HASH. É uma informação sobre validação no carregamento, não um diagnóstico completo do equipamento.",
