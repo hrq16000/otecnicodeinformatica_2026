@@ -497,6 +497,18 @@ export const ENRIQUECIMENTO_1: Record<string, EnriquecimentoConteudo> = {
       "Backup só conta como backup quando existe em mais de um lugar e já foi restaurado pelo menos uma vez em teste. Cópia na mesma máquina protege contra apagamento acidental, mas não contra roubo, queima da fonte, ransomware ou falha do próprio disco — que são justamente os casos em que o arquivo faz falta.",
     blocos: [
       {
+        id: "mitos-do-backup",
+        titulo: "Mitos de backup que dão falsa sensação de segurança",
+        intro: "Uma cópia só protege quando está acessível, íntegra, atualizada e pode ser restaurada.",
+        itens: [
+          { titulo: "“Sincronização é backup”", desc: "Sincronização replica exclusões, corrupção e arquivos cifrados. Para recuperação, mantenha versões e ao menos uma cópia fora do alcance da máquina." },
+          { titulo: "“A nuvem resolve tudo”", desc: "Nuvem ajuda, mas depende de conta, quota, retenção, conexão e configuração. Não substitui uma cópia independente nem a verificação de restauração." },
+          { titulo: "“Ícone verde significa arquivo recuperável”", desc: "O status do aplicativo não confirma que a pasta certa foi incluída ou que o arquivo abre. Restaure amostras e confira datas." },
+          { titulo: "“HD externo conectado o tempo todo é proteção contra ransomware”", desc: "Se a unidade está montada e gravável, o malware pode alcançá-la. Desconecte ou use controle de acesso após a rotina." },
+          { titulo: "“Backup antes de formatar é opcional”", desc: "A reinstalação altera o ambiente e pode apagar dados. A cópia deve ser conferida antes de qualquer limpeza ou mudança de partição." },
+        ],
+      },
+      {
         id: "backup-resolve",
         titulo: "O que o backup protege e o que ele não protege",
         itens: [
