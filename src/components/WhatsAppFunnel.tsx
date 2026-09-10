@@ -429,8 +429,26 @@ export const WhatsAppFunnel = () => {
     setInvalidField(null);
   }, [commit, clearTimers]);
 
+  // ---------- auditoria de produção do wa_funnel_open ----------
+  // Buffer curto em memória (últimos 20 registros) exposto em
+  // `window.__waFunnelOpenLog`, sem PII. Console só com `__funnelDebug = true`.
+  const registrarAuditoriaFunnelOpen = (fase: "enfileirado" | "enviado", loc: string, preset: boolean) => {
+    if (typeof window === "undefined") return;
+    const w = window as unknown as {
+      __waFunnelOpenLog?: Array<{ fase: string; cta_location: string; has_preset: boolean; t: number }>;
+      __funnelDebug?: boolean;
+    };
+    const registro = { fase, cta_location: loc, has_preset: preset, t: Date.now() };
+    w.__waFunnelOpenLog = [...(w.__waFunnelOpenLog ?? []), registro].slice(-20);
+    if (w.__funnelDebug) {
+      // eslint-disable-next-line no-console
+      console.debug("[wa_funnel_open]", registro);
+    }
+  };
+
   // ---------- open / close ----------
   const lastOpenRef = useRef(0);
+
   const openFunnel = useCallback((loc: string, preset?: string) => {
     const now = Date.now();
     if (now - lastOpenRef.current < 600) return;
