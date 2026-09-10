@@ -1099,6 +1099,30 @@ export const ENRIQUECIMENTO_1: Record<string, EnriquecimentoConteudo> = {
         ],
       },
     ],
+  },
+  "/problemas/fonte-queimada-curitiba": {
+    respostaRapida:
+      "PC que desliga ou não liga não condena automaticamente a fonte. É preciso separar tomada, cabo, proteção da fonte, consumo sob carga e curto em outro componente.",
+    tabelaDiagnostica: {
+      titulo: "Fonte: sintoma observado e próximo teste seguro",
+      linhas: [
+        { sintoma: "Nenhum sinal ao pressionar o botão", causa: "Tomada, cabo, chave, fonte ou curto", verificar: "Testar alimentação externa e sinais de standby sem abrir a fonte", acao: "Não abrir fonte conectada; há risco de tensão residual" },
+        { sintoma: "Desliga somente sob carga", causa: "Proteção, temperatura, fonte inadequada ou GPU", verificar: "Registrar aplicação, carga, temperatura e conectores", acao: "Não aumentar potência sem calcular o conjunto" },
+        { sintoma: "Cheiro, estalo ou fumaça", causa: "Falha elétrica ou componente danificado", verificar: "Desligar e preservar o equipamento para inspeção", acao: "Não religar para “confirmar” nem usar fonte suspeita" },
+      ],
+    },
+    blocos: [
+      {
+        id: "fonte-sem-achismo",
+        titulo: "Como avaliar a fonte sem comprar outra por tentativa",
+        itens: [
+          { titulo: "Potência não é o único critério", desc: "Modelo, qualidade, conectores, linha de 12 V, proteção e compatibilidade importam tanto quanto o número de watts." },
+          { titulo: "Proteção acionada não prova fonte ruim", desc: "O desligamento pode ser a fonte protegendo o sistema contra curto, sobrecorrente, temperatura ou falha em outro componente." },
+          { titulo: "Teste cruzado precisa ser compatível", desc: "Use uma fonte conhecida e adequada ao conjunto, com cabos próprios. Misturar cabos modulares de marcas diferentes pode danificar componentes." },
+          { titulo: "Não abra a fonte", desc: "Capacitores podem manter carga mesmo fora da tomada. Diagnóstico interno exige bancada, instrumentos e procedimento seguro." },
+        ],
+      },
+    ],
   }
 };
 
