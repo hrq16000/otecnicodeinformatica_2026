@@ -207,18 +207,6 @@ export const ENRIQUECIMENTO_1: Record<string, EnriquecimentoConteudo> = {
         ],
       },
     ],
-    fontes: [
-      {
-        titulo: "Microsoft Support — corrigir problemas de conexão Wi-Fi no Windows",
-        url: "https://support.microsoft.com/en-us/windows/fix-wi-fi-connection-issues-in-windows-9424a1f7-6f1b-4fcb-8a9c-6f7a3f9a7f5a",
-        nota: "Referência para separar falhas de conexão do dispositivo e da rede.",
-      },
-      {
-        titulo: "Microsoft Support — solução de problemas de rede no Windows",
-        url: "https://support.microsoft.com/en-us/windows/using-network-reset-to-fix-wi-fi-connection-issues-in-windows-06f1a4b9-1f1f-4d8a-9b1d-8f5f6c7d8e9a",
-        nota: "Procedimentos de diagnóstico devem preceder o reset da rede.",
-      },
-    ],
   },
 
 
