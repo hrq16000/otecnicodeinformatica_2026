@@ -1578,6 +1578,14 @@ export type Database = {
       }
       telemetry_baseline_comercial: { Args: never; Returns: string }
       telemetry_guard_selftest: { Args: never; Returns: Json }
+      triagem_publica_diaria: {
+        Args: { dias?: number }
+        Returns: {
+          dia: string
+          etapa: string
+          eventos: number
+        }[]
+      }
     }
     Enums: {
       app_role: "admin" | "moderator" | "user"
