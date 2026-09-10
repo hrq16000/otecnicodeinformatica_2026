@@ -24,6 +24,14 @@ import { PropostaMidiaForm } from "@/components/anuncie/PropostaMidiaForm";
 const CTA_CLASS =
   "inline-flex min-h-14 items-center justify-center gap-2 rounded-lg bg-accent px-7 text-base font-bold text-accent-foreground shadow-[0_14px_34px_-10px_hsl(var(--accent)/0.6)] motion-surface hover:shadow-[0_18px_40px_-12px_hsl(var(--accent)/0.55)]";
 
+const NAVEGACAO_COMERCIAL = [
+  { href: "#formatos", label: "Formatos" },
+  { href: "#publico", label: "Público" },
+  { href: "#disponibilidade", label: "Disponibilidade" },
+  { href: "#duvidas", label: "Dúvidas" },
+  { href: "#proposta", label: "Proposta" },
+];
+
 const formatos = [
   {
     icon: LayoutPanelTop,
@@ -179,6 +187,13 @@ const Anuncie = () => {
                 {siteConfig.primaryCity} e região metropolitana. Aqui você encontra os formatos disponíveis,
                 as posições recomendadas e as regras de publicidade do portal.
               </p>
+              <nav aria-label="Nesta página" className="mt-7 flex flex-wrap gap-x-4 gap-y-2 text-sm font-semibold">
+                {NAVEGACAO_COMERCIAL.map((item) => (
+                  <a key={item.href} href={item.href} className="text-accent underline-offset-4 hover:underline">
+                    {item.label}
+                  </a>
+                ))}
+              </nav>
               <div className="mt-8 flex flex-wrap gap-3">
                 <a
                   href={waHref}
@@ -202,7 +217,7 @@ const Anuncie = () => {
           </div>
         </section>
 
-        <section className="py-12 md:py-16">
+        <section id="formatos" className="scroll-mt-28 py-12 md:py-16">
           <div className="container mx-auto">
             <h2 className="text-2xl font-heading font-bold text-foreground md:text-3xl">
               Formatos e posições disponíveis
@@ -224,7 +239,7 @@ const Anuncie = () => {
           </div>
         </section>
 
-        <section className="border-t border-border/60 bg-secondary/30 py-12 md:py-16">
+        <section id="publico" className="scroll-mt-28 border-t border-border/60 bg-secondary/30 py-12 md:py-16">
           <div className="container mx-auto grid gap-10 lg:grid-cols-2">
             <div>
               <h2 className="text-2xl font-heading font-bold text-foreground md:text-3xl">
@@ -268,7 +283,7 @@ const Anuncie = () => {
           </div>
         </section>
 
-        <section className="border-t border-border/60 py-12 md:py-16">
+        <section id="disponibilidade" className="scroll-mt-28 border-t border-border/60 py-12 md:py-16">
           <div className="container mx-auto max-w-4xl">
             <h2 className="text-2xl font-heading font-bold text-foreground md:text-3xl">
               Disponibilidade por cidade e bairro
@@ -322,7 +337,9 @@ const Anuncie = () => {
           </div>
         </section>
 
-        <LocalFAQSection title="Perguntas frequentes sobre anunciar no portal" faqs={faqPublicidade} />
+        <section id="duvidas" className="scroll-mt-28">
+          <LocalFAQSection title="Perguntas frequentes sobre anunciar no portal" faqs={faqPublicidade} />
+        </section>
 
         <section className="py-12 md:py-16">
 
@@ -360,7 +377,7 @@ const Anuncie = () => {
           </div>
         </section>
 
-        <section id="proposta" className="border-t border-border/60 py-12 md:py-16">
+        <section id="proposta" className="scroll-mt-28 border-t border-border/60 py-12 md:py-16">
           <div className="container mx-auto max-w-4xl">
             <h2 className="text-2xl font-heading font-bold text-foreground md:text-3xl">
               Peça sua proposta em um minuto
