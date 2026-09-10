@@ -242,6 +242,10 @@ export default function AdminSeo() {
       </div>
 
       <div className="mt-6">
+        <DominioDnsPanel />
+      </div>
+
+      <div className="mt-6">
         <SeoHealthcheckPanel />
       </div>
 
