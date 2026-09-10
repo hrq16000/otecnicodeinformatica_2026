@@ -1,9 +1,9 @@
 {
-  "geradoEm": "2026-09-10T08:02:08.379Z",
+  "geradoEm": "2026-09-10T16:02:22.166Z",
   "dist": "./dist/client",
   "total": 247,
-  "comHtml": 79,
-  "comAviso": 52,
+  "comHtml": 0,
+  "comAviso": 0,
   "urls": [
     {
       "path": "/",
@@ -11,23 +11,14 @@
       "tipo": "pilar",
       "priority": "1.0",
       "changefreq": "weekly",
-      "semHtml": false,
-      "title": "O Técnico de Informática | Assistência Técnica em Curitiba",
-      "description": "Notebook, computador ou rede com problema? Assistência técnica em informática para casa e empresa em Curitiba e São José dos Pinhais.",
-      "canonical": "https://otecnicodeinformatica.com.br/",
-      "robots": "index, follow",
-      "schemas": [
-        "Organization",
-        "WebSite",
-        "WebPage",
-        "LocalBusiness",
-        "ProfessionalService",
-        "ComputerRepairService",
-        "FAQPage",
-        "ItemList"
-      ],
+      "semHtml": true,
+      "title": null,
+      "description": null,
+      "canonical": null,
+      "robots": null,
+      "schemas": [],
       "avisos": [],
-      "completude": 100
+      "completude": null
     },
     {
       "path": "/servicos",
@@ -2555,26 +2546,14 @@
       "tipo": "artigo",
       "priority": "0.55",
       "changefreq": "monthly",
-      "semHtml": false,
-      "title": "Vale a pena trocar o HD por SSD? Como avaliar o upgrade",
-      "description": "O SSD acelera a inicialização e a abertura de programas, mas não resolve tudo. Veja o que muda.",
-      "canonical": "https://otecnicodeinformatica.com.br/blog/quando-trocar-hd-por-ssd",
-      "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
-      "schemas": [
-        "Organization",
-        "WebSite",
-        "BreadcrumbList",
-        "BlogPosting",
-        "Article",
-        "TechArticle",
-        "LocalBusiness",
-        "ProfessionalService",
-        "ComputerRepairService",
-        "ItemList",
-        "FAQPage"
-      ],
+      "semHtml": true,
+      "title": null,
+      "description": null,
+      "canonical": null,
+      "robots": null,
+      "schemas": [],
       "avisos": [],
-      "completude": 100
+      "completude": null
     },
     {
       "path": "/blog/como-saber-se-pc-tem-virus-malware",
@@ -2582,26 +2561,14 @@
       "tipo": "artigo",
       "priority": "0.55",
       "changefreq": "monthly",
-      "semHtml": false,
-      "title": "Como saber se o computador está com vírus ou malware",
-      "description": "Pop-ups, navegador alterado, lentidão repentina ou arquivos bloqueados? Veja os sinais de infecção.",
-      "canonical": "https://otecnicodeinformatica.com.br/blog/como-saber-se-pc-tem-virus-malware",
-      "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
-      "schemas": [
-        "Organization",
-        "WebSite",
-        "BreadcrumbList",
-        "BlogPosting",
-        "Article",
-        "TechArticle",
-        "LocalBusiness",
-        "ProfessionalService",
-        "ComputerRepairService",
-        "ItemList",
-        "FAQPage"
-      ],
+      "semHtml": true,
+      "title": null,
+      "description": null,
+      "canonical": null,
+      "robots": null,
+      "schemas": [],
       "avisos": [],
-      "completude": 100
+      "completude": null
     },
     {
       "path": "/blog/backup-como-proteger-seus-arquivos",
@@ -2609,26 +2576,14 @@
       "tipo": "artigo",
       "priority": "0.55",
       "changefreq": "monthly",
-      "semHtml": false,
-      "title": "Como evitar perder arquivos: guia de backup preventivo",
-      "description": "Backup não é copiar arquivos para outra pasta do mesmo disco. Entenda cópias local, externa e em nuvem.",
-      "canonical": "https://otecnicodeinformatica.com.br/blog/backup-como-proteger-seus-arquivos",
-      "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
-      "schemas": [
-        "Organization",
-        "WebSite",
-        "BreadcrumbList",
-        "BlogPosting",
-        "Article",
-        "TechArticle",
-        "LocalBusiness",
-        "ProfessionalService",
-        "ComputerRepairService",
-        "ItemList",
-        "FAQPage"
-      ],
+      "semHtml": true,
+      "title": null,
+      "description": null,
+      "canonical": null,
+      "robots": null,
+      "schemas": [],
       "avisos": [],
-      "completude": 100
+      "completude": null
     },
     {
       "path": "/blog/como-melhorar-sinal-wifi-em-casa",
@@ -2636,26 +2591,14 @@
       "tipo": "artigo",
       "priority": "0.55",
       "changefreq": "monthly",
-      "semHtml": false,
-      "title": "Wi-Fi caindo ou com sinal fraco: como diagnosticar",
-      "description": "Wi-Fi que cai, fica lento ou não chega em alguns cômodos? Veja como separar problema da rede local e falha da operadora.",
-      "canonical": "https://otecnicodeinformatica.com.br/blog/como-melhorar-sinal-wifi-em-casa",
-      "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
-      "schemas": [
-        "Organization",
-        "WebSite",
-        "BreadcrumbList",
-        "BlogPosting",
-        "Article",
-        "TechArticle",
-        "LocalBusiness",
-        "ProfessionalService",
-        "ComputerRepairService",
-        "ItemList",
-        "FAQPage"
-      ],
+      "semHtml": true,
+      "title": null,
+      "description": null,
+      "canonical": null,
+      "robots": null,
+      "schemas": [],
       "avisos": [],
-      "completude": 100
+      "completude": null
     },
     {
       "path": "/blog/notebook-superaquecendo-o-que-fazer",
@@ -2663,26 +2606,14 @@
       "tipo": "artigo",
       "priority": "0.55",
       "changefreq": "monthly",
-      "semHtml": false,
-      "title": "Notebook superaquecendo: sinais, prevenção e o que fazer",
-      "description": "Aquecimento normal ou comportamento de risco? Veja o que observar no superaquecimento, o que fazer com segurança e os sinais que pedem desligar o equipamento.",
-      "canonical": "https://otecnicodeinformatica.com.br/blog/notebook-superaquecendo-o-que-fazer",
-      "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
-      "schemas": [
-        "Organization",
-        "WebSite",
-        "BreadcrumbList",
-        "BlogPosting",
-        "Article",
-        "TechArticle",
-        "LocalBusiness",
-        "ProfessionalService",
-        "ComputerRepairService",
-        "ItemList",
-        "FAQPage"
-      ],
+      "semHtml": true,
+      "title": null,
+      "description": null,
+      "canonical": null,
+      "robots": null,
+      "schemas": [],
       "avisos": [],
-      "completude": 100
+      "completude": null
     },
     {
       "path": "/blog/organizacao-de-ti-para-pequenos-escritorios",
@@ -2690,26 +2621,14 @@
       "tipo": "artigo",
       "priority": "0.55",
       "changefreq": "monthly",
-      "semHtml": false,
-      "title": "Organização de TI para pequenos escritórios: o guia prático",
-      "description": "Como organizar equipamentos, arquivos, acessos e rotina de manutenção em um escritório pequeno, sem contratar estrutura de TI que não cabe no negócio.",
-      "canonical": "https://otecnicodeinformatica.com.br/blog/organizacao-de-ti-para-pequenos-escritorios",
-      "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
-      "schemas": [
-        "Organization",
-        "WebSite",
-        "BreadcrumbList",
-        "BlogPosting",
-        "Article",
-        "TechArticle",
-        "LocalBusiness",
-        "ProfessionalService",
-        "ComputerRepairService",
-        "ItemList",
-        "FAQPage"
-      ],
+      "semHtml": true,
+      "title": null,
+      "description": null,
+      "canonical": null,
+      "robots": null,
+      "schemas": [],
       "avisos": [],
-      "completude": 100
+      "completude": null
     },
     {
       "path": "/blog/como-escolher-uma-workstation",
@@ -2717,26 +2636,14 @@
       "tipo": "artigo",
       "priority": "0.55",
       "changefreq": "monthly",
-      "semHtml": false,
-      "title": "Como escolher uma workstation: checklist de requisitos",
-      "description": "Checklist prático para dimensionar uma estação de trabalho profissional: o que levantar antes de comprar peça.",
-      "canonical": "https://otecnicodeinformatica.com.br/blog/como-escolher-uma-workstation",
-      "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
-      "schemas": [
-        "Organization",
-        "WebSite",
-        "BreadcrumbList",
-        "BlogPosting",
-        "Article",
-        "TechArticle",
-        "LocalBusiness",
-        "ProfessionalService",
-        "ComputerRepairService",
-        "ItemList",
-        "FAQPage"
-      ],
+      "semHtml": true,
+      "title": null,
+      "description": null,
+      "canonical": null,
+      "robots": null,
+      "schemas": [],
       "avisos": [],
-      "completude": 100
+      "completude": null
     },
     {
       "path": "/blog/como-instalar-windows-11-do-zero",
@@ -2744,26 +2651,14 @@
       "tipo": "artigo",
       "priority": "0.55",
       "changefreq": "monthly",
-      "semHtml": false,
-      "title": "Como preparar uma instalação limpa do Windows 11",
-      "description": "Entenda backup, requisitos, mídia oficial, licença, drivers e riscos antes de fazer uma instalação limpa do Windows 11.",
-      "canonical": "https://otecnicodeinformatica.com.br/blog/como-instalar-windows-11-do-zero",
-      "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
-      "schemas": [
-        "Organization",
-        "WebSite",
-        "BreadcrumbList",
-        "BlogPosting",
-        "Article",
-        "TechArticle",
-        "LocalBusiness",
-        "ProfessionalService",
-        "ComputerRepairService",
-        "ItemList",
-        "FAQPage"
-      ],
+      "semHtml": true,
+      "title": null,
+      "description": null,
+      "canonical": null,
+      "robots": null,
+      "schemas": [],
       "avisos": [],
-      "completude": 100
+      "completude": null
     },
     {
       "path": "/blog/como-resolver-tela-azul-windows",
@@ -2771,28 +2666,14 @@
       "tipo": "artigo",
       "priority": "0.55",
       "changefreq": "monthly",
-      "semHtml": false,
-      "title": "Como Resolver Tela Azul do Windows (BSOD): Diagnóstico e Solução",
-      "description": "Análise de códigos de erro, dump de memória, drivers problemáticos e procedimento profissional de correção.",
-      "canonical": "https://otecnicodeinformatica.com.br/blog/como-resolver-tela-azul-windows",
-      "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
-      "schemas": [
-        "Organization",
-        "WebSite",
-        "BreadcrumbList",
-        "BlogPosting",
-        "Article",
-        "TechArticle",
-        "LocalBusiness",
-        "ProfessionalService",
-        "ComputerRepairService",
-        "ItemList",
-        "FAQPage"
-      ],
-      "avisos": [
-        "title com 64 caracteres (>60)"
-      ],
-      "completude": 100
+      "semHtml": true,
+      "title": null,
+      "description": null,
+      "canonical": null,
+      "robots": null,
+      "schemas": [],
+      "avisos": [],
+      "completude": null
     },
     {
       "path": "/blog/como-trocar-tela-notebook-passo-a-passo",
@@ -2800,26 +2681,14 @@
       "tipo": "artigo",
       "priority": "0.55",
       "changefreq": "monthly",
-      "semHtml": false,
-      "title": "Como Trocar a Tela do Notebook: Passo a Passo Profissional",
-      "description": "Guia técnico para identificar a tela correta, desmontar com segurança e instalar a nova sem danificar o flat cable.",
-      "canonical": "https://otecnicodeinformatica.com.br/blog/como-trocar-tela-notebook-passo-a-passo",
-      "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
-      "schemas": [
-        "Organization",
-        "WebSite",
-        "BreadcrumbList",
-        "BlogPosting",
-        "Article",
-        "TechArticle",
-        "LocalBusiness",
-        "ProfessionalService",
-        "ComputerRepairService",
-        "ItemList",
-        "FAQPage"
-      ],
+      "semHtml": true,
+      "title": null,
+      "description": null,
+      "canonical": null,
+      "robots": null,
+      "schemas": [],
       "avisos": [],
-      "completude": 100
+      "completude": null
     },
     {
       "path": "/blog/notebook-nao-liga-o-que-fazer",
@@ -2827,26 +2696,14 @@
       "tipo": "artigo",
       "priority": "0.55",
       "changefreq": "monthly",
-      "semHtml": false,
-      "title": "Notebook não liga: o que verificar antes da assistência",
-      "description": "Veja verificações seguras para um notebook que não liga, liga sem imagem ou desliga sozinho e saiba quando interromper os testes.",
-      "canonical": "https://otecnicodeinformatica.com.br/blog/notebook-nao-liga-o-que-fazer",
-      "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
-      "schemas": [
-        "Organization",
-        "WebSite",
-        "BreadcrumbList",
-        "BlogPosting",
-        "Article",
-        "TechArticle",
-        "LocalBusiness",
-        "ProfessionalService",
-        "ComputerRepairService",
-        "ItemList",
-        "FAQPage"
-      ],
+      "semHtml": true,
+      "title": null,
+      "description": null,
+      "canonical": null,
+      "robots": null,
+      "schemas": [],
       "avisos": [],
-      "completude": 100
+      "completude": null
     },
     {
       "path": "/blog/computador-lento-causas-solucoes",
@@ -2854,28 +2711,14 @@
       "tipo": "artigo",
       "priority": "0.55",
       "changefreq": "monthly",
-      "semHtml": false,
-      "title": "Computador lento: causas possíveis e como decidir o próximo passo",
-      "description": "Entenda por que um computador fica lento, o que dá para verificar com segurança e quando formatar, fazer upgrade ou buscar manutenção realmente faz diferença.",
-      "canonical": "https://otecnicodeinformatica.com.br/blog/computador-lento-causas-solucoes",
-      "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
-      "schemas": [
-        "Organization",
-        "WebSite",
-        "BreadcrumbList",
-        "BlogPosting",
-        "Article",
-        "TechArticle",
-        "LocalBusiness",
-        "ProfessionalService",
-        "ComputerRepairService",
-        "ItemList",
-        "FAQPage"
-      ],
-      "avisos": [
-        "title com 65 caracteres (>60)"
-      ],
-      "completude": 100
+      "semHtml": true,
+      "title": null,
+      "description": null,
+      "canonical": null,
+      "robots": null,
+      "schemas": [],
+      "avisos": [],
+      "completude": null
     },
     {
       "path": "/blog/como-recuperar-dados-hd-com-defeito",
@@ -2883,26 +2726,14 @@
       "tipo": "artigo",
       "priority": "0.55",
       "changefreq": "monthly",
-      "semHtml": false,
-      "title": "Recuperação de dados de HD com defeito: o que é possível",
-      "description": "Como diferenciar falha lógica de falha mecânica, o que fazer nos primeiros minutos e por que insistir em ligar o disco reduz a chance de recuperar.",
-      "canonical": "https://otecnicodeinformatica.com.br/blog/como-recuperar-dados-hd-com-defeito",
-      "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
-      "schemas": [
-        "Organization",
-        "WebSite",
-        "BreadcrumbList",
-        "BlogPosting",
-        "Article",
-        "TechArticle",
-        "LocalBusiness",
-        "ProfessionalService",
-        "ComputerRepairService",
-        "ItemList",
-        "FAQPage"
-      ],
+      "semHtml": true,
+      "title": null,
+      "description": null,
+      "canonical": null,
+      "robots": null,
+      "schemas": [],
       "avisos": [],
-      "completude": 100
+      "completude": null
     },
     {
       "path": "/blog/como-fazer-upgrade-ssd-nvme",
@@ -2910,26 +2741,14 @@
       "tipo": "artigo",
       "priority": "0.55",
       "changefreq": "monthly",
-      "semHtml": false,
-      "title": "Upgrade para SSD NVMe: quando compensa e como é feito",
-      "description": "Como saber se a sua placa aceita NVMe, o que muda de verdade no uso diário e quais são as etapas do serviço feito em bancada.",
-      "canonical": "https://otecnicodeinformatica.com.br/blog/como-fazer-upgrade-ssd-nvme",
-      "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
-      "schemas": [
-        "Organization",
-        "WebSite",
-        "BreadcrumbList",
-        "BlogPosting",
-        "Article",
-        "TechArticle",
-        "LocalBusiness",
-        "ProfessionalService",
-        "ComputerRepairService",
-        "ItemList",
-        "FAQPage"
-      ],
+      "semHtml": true,
+      "title": null,
+      "description": null,
+      "canonical": null,
+      "robots": null,
+      "schemas": [],
       "avisos": [],
-      "completude": 100
+      "completude": null
     },
     {
       "path": "/blog/como-configurar-roteador-wifi-iniciantes",
@@ -2937,26 +2756,14 @@
       "tipo": "artigo",
       "priority": "0.55",
       "changefreq": "monthly",
-      "semHtml": false,
-      "title": "Como configurar um roteador Wi-Fi do zero, sem complicação",
-      "description": "Ordem correta das etapas, o que mudar na primeira configuração e os ajustes que evitam a maior parte dos problemas de sinal depois.",
-      "canonical": "https://otecnicodeinformatica.com.br/blog/como-configurar-roteador-wifi-iniciantes",
-      "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
-      "schemas": [
-        "Organization",
-        "WebSite",
-        "BreadcrumbList",
-        "BlogPosting",
-        "Article",
-        "TechArticle",
-        "LocalBusiness",
-        "ProfessionalService",
-        "ComputerRepairService",
-        "ItemList",
-        "FAQPage"
-      ],
+      "semHtml": true,
+      "title": null,
+      "description": null,
+      "canonical": null,
+      "robots": null,
+      "schemas": [],
       "avisos": [],
-      "completude": 100
+      "completude": null
     },
     {
       "path": "/blog/como-saber-quem-esta-usando-meu-wifi",
@@ -2964,26 +2771,14 @@
       "tipo": "artigo",
       "priority": "0.55",
       "changefreq": "monthly",
-      "semHtml": false,
-      "title": "Como saber quem está usando o seu Wi-Fi (e o que fazer)",
-      "description": "Como listar os dispositivos conectados, identificar cada um pelo nome e pelo endereço físico e retomar o controle da rede sem quebrar o que funciona.",
-      "canonical": "https://otecnicodeinformatica.com.br/blog/como-saber-quem-esta-usando-meu-wifi",
-      "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
-      "schemas": [
-        "Organization",
-        "WebSite",
-        "BreadcrumbList",
-        "BlogPosting",
-        "Article",
-        "TechArticle",
-        "LocalBusiness",
-        "ProfessionalService",
-        "ComputerRepairService",
-        "ItemList",
-        "FAQPage"
-      ],
+      "semHtml": true,
+      "title": null,
+      "description": null,
+      "canonical": null,
+      "robots": null,
+      "schemas": [],
       "avisos": [],
-      "completude": 100
+      "completude": null
     },
     {
       "path": "/blog/como-escolher-um-bom-antivirus",
@@ -2991,29 +2786,14 @@
       "tipo": "artigo",
       "priority": "0.55",
       "changefreq": "monthly",
-      "semHtml": false,
-      "title": "Como escolher um antivírus: o que muda de verdade na proteção",
-      "description": "Critérios técnicos para escolher a proteção do Windows: o que o antivírus do sistema já cobre, quando um pago faz diferença, o que é só marketing e como reconhecer…",
-      "canonical": "https://otecnicodeinformatica.com.br/blog/como-escolher-um-bom-antivirus",
-      "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
-      "schemas": [
-        "Organization",
-        "WebSite",
-        "BreadcrumbList",
-        "BlogPosting",
-        "Article",
-        "TechArticle",
-        "LocalBusiness",
-        "ProfessionalService",
-        "ComputerRepairService",
-        "ItemList",
-        "FAQPage"
-      ],
-      "avisos": [
-        "title com 61 caracteres (>60)",
-        "description com 164 caracteres (>160)"
-      ],
-      "completude": 100
+      "semHtml": true,
+      "title": null,
+      "description": null,
+      "canonical": null,
+      "robots": null,
+      "schemas": [],
+      "avisos": [],
+      "completude": null
     },
     {
       "path": "/blog/como-proteger-computador-golpes-internet",
@@ -3021,29 +2801,14 @@
       "tipo": "artigo",
       "priority": "0.55",
       "changefreq": "monthly",
-      "semHtml": false,
-      "title": "Como se proteger de golpes na internet: o que checar antes de clicar",
-      "description": "Phishing, sites clonados, falso suporte técnico e extensões maliciosas: como reconhecer cada padrão, o que verificar antes de clicar e o que fazer nas primeiras…",
-      "canonical": "https://otecnicodeinformatica.com.br/blog/como-proteger-computador-golpes-internet",
-      "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
-      "schemas": [
-        "Organization",
-        "WebSite",
-        "BreadcrumbList",
-        "BlogPosting",
-        "Article",
-        "TechArticle",
-        "LocalBusiness",
-        "ProfessionalService",
-        "ComputerRepairService",
-        "ItemList",
-        "FAQPage"
-      ],
-      "avisos": [
-        "title com 68 caracteres (>60)",
-        "description com 161 caracteres (>160)"
-      ],
-      "completude": 100
+      "semHtml": true,
+      "title": null,
+      "description": null,
+      "canonical": null,
+      "robots": null,
+      "schemas": [],
+      "avisos": [],
+      "completude": null
     },
     {
       "path": "/blog/como-limpar-notebook-por-dentro",
@@ -3051,29 +2816,14 @@
       "tipo": "artigo",
       "priority": "0.55",
       "changefreq": "monthly",
-      "semHtml": false,
-      "title": "Limpeza interna de notebook: o que muda de verdade e onde estão os…",
-      "description": "Como a poeira compromete a refrigeração de um notebook, o que dá para verificar sem abrir o equipamento, o que a limpeza interna resolve, o que ela não resolve e…",
-      "canonical": "https://otecnicodeinformatica.com.br/blog/como-limpar-notebook-por-dentro",
-      "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
-      "schemas": [
-        "Organization",
-        "WebSite",
-        "BreadcrumbList",
-        "BlogPosting",
-        "Article",
-        "TechArticle",
-        "LocalBusiness",
-        "ProfessionalService",
-        "ComputerRepairService",
-        "ItemList",
-        "FAQPage"
-      ],
-      "avisos": [
-        "title com 67 caracteres (>60)",
-        "description com 162 caracteres (>160)"
-      ],
-      "completude": 100
+      "semHtml": true,
+      "title": null,
+      "description": null,
+      "canonical": null,
+      "robots": null,
+      "schemas": [],
+      "avisos": [],
+      "completude": null
     },
     {
       "path": "/blog/como-trocar-pasta-termica-notebook",
@@ -3081,29 +2831,14 @@
       "tipo": "artigo",
       "priority": "0.55",
       "changefreq": "monthly",
-      "semHtml": false,
-      "title": "Troca de pasta térmica no notebook: quando faz sentido e como não…",
-      "description": "O que a pasta térmica faz, como saber se ela é mesmo a causa do aquecimento, a sequência correta de remoção e aperto do dissipador e os erros que danificam a placa.",
-      "canonical": "https://otecnicodeinformatica.com.br/blog/como-trocar-pasta-termica-notebook",
-      "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
-      "schemas": [
-        "Organization",
-        "WebSite",
-        "BreadcrumbList",
-        "BlogPosting",
-        "Article",
-        "TechArticle",
-        "LocalBusiness",
-        "ProfessionalService",
-        "ComputerRepairService",
-        "ItemList",
-        "FAQPage"
-      ],
-      "avisos": [
-        "title com 66 caracteres (>60)",
-        "description com 164 caracteres (>160)"
-      ],
-      "completude": 100
+      "semHtml": true,
+      "title": null,
+      "description": null,
+      "canonical": null,
+      "robots": null,
+      "schemas": [],
+      "avisos": [],
+      "completude": null
     },
     {
       "path": "/blog/como-clonar-hd-para-ssd",
@@ -3111,29 +2846,14 @@
       "tipo": "artigo",
       "priority": "0.55",
       "changefreq": "monthly",
-      "semHtml": false,
-      "title": "Clonar HD para SSD: quando clonar, quando reinstalar e onde o…",
-      "description": "A diferença real entre clonar e reinstalar, como saber se o disco de origem aguenta a clonagem, os pontos em que o processo trava e o que conferir antes de apagar…",
-      "canonical": "https://otecnicodeinformatica.com.br/blog/como-clonar-hd-para-ssd",
-      "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
-      "schemas": [
-        "Organization",
-        "WebSite",
-        "BreadcrumbList",
-        "BlogPosting",
-        "Article",
-        "TechArticle",
-        "LocalBusiness",
-        "ProfessionalService",
-        "ComputerRepairService",
-        "ItemList",
-        "FAQPage"
-      ],
-      "avisos": [
-        "title com 62 caracteres (>60)",
-        "description com 163 caracteres (>160)"
-      ],
-      "completude": 100
+      "semHtml": true,
+      "title": null,
+      "description": null,
+      "canonical": null,
+      "robots": null,
+      "schemas": [],
+      "avisos": [],
+      "completude": null
     },
     {
       "path": "/blog/como-instalar-segundo-ssd-notebook",
@@ -3141,29 +2861,14 @@
       "tipo": "artigo",
       "priority": "0.55",
       "changefreq": "monthly",
-      "semHtml": false,
-      "title": "Segundo SSD no notebook: quando cabe, quando não cabe e o que muda",
-      "description": "Como descobrir se o notebook aceita um segundo disco, a diferença entre slot M.2 livre e caddy no lugar do leitor óptico, os limites de cada caminho e o que fazer…",
-      "canonical": "https://otecnicodeinformatica.com.br/blog/como-instalar-segundo-ssd-notebook",
-      "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
-      "schemas": [
-        "Organization",
-        "WebSite",
-        "BreadcrumbList",
-        "BlogPosting",
-        "Article",
-        "TechArticle",
-        "LocalBusiness",
-        "ProfessionalService",
-        "ComputerRepairService",
-        "ItemList",
-        "FAQPage"
-      ],
-      "avisos": [
-        "title com 66 caracteres (>60)",
-        "description com 163 caracteres (>160)"
-      ],
-      "completude": 100
+      "semHtml": true,
+      "title": null,
+      "description": null,
+      "canonical": null,
+      "robots": null,
+      "schemas": [],
+      "avisos": [],
+      "completude": null
     },
     {
       "path": "/blog/ransomware-como-proteger-empresa",
@@ -3171,29 +2876,14 @@
       "tipo": "artigo",
       "priority": "0.55",
       "changefreq": "monthly",
-      "semHtml": false,
-      "title": "Ransomware em pequenas empresas: como o ataque entra e o que…",
-      "description": "Por onde o ransomware entra numa empresa pequena, por que o backup comum costuma ser criptografado junto, o que fazer nas primeiras horas e quais medidas realmente…",
-      "canonical": "https://otecnicodeinformatica.com.br/blog/ransomware-como-proteger-empresa",
-      "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
-      "schemas": [
-        "Organization",
-        "WebSite",
-        "BreadcrumbList",
-        "BlogPosting",
-        "Article",
-        "TechArticle",
-        "LocalBusiness",
-        "ProfessionalService",
-        "ComputerRepairService",
-        "ItemList",
-        "FAQPage"
-      ],
-      "avisos": [
-        "title com 61 caracteres (>60)",
-        "description com 164 caracteres (>160)"
-      ],
-      "completude": 100
+      "semHtml": true,
+      "title": null,
+      "description": null,
+      "canonical": null,
+      "robots": null,
+      "schemas": [],
+      "avisos": [],
+      "completude": null
     },
     {
       "path": "/blog/backup-nuvem-empresas-qual-escolher",
@@ -3201,29 +2891,14 @@
       "tipo": "artigo",
       "priority": "0.55",
       "changefreq": "monthly",
-      "semHtml": false,
-      "title": "Backup em nuvem para empresas: o que diferencia sincronização de…",
-      "description": "Por que pasta sincronizada não é backup, quais critérios comparar antes de contratar, como estruturar cópias em camadas e o teste que revela se a rotina realmente…",
-      "canonical": "https://otecnicodeinformatica.com.br/blog/backup-nuvem-empresas-qual-escolher",
-      "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
-      "schemas": [
-        "Organization",
-        "WebSite",
-        "BreadcrumbList",
-        "BlogPosting",
-        "Article",
-        "TechArticle",
-        "LocalBusiness",
-        "ProfessionalService",
-        "ComputerRepairService",
-        "ItemList",
-        "FAQPage"
-      ],
-      "avisos": [
-        "title com 65 caracteres (>60)",
-        "description com 163 caracteres (>160)"
-      ],
-      "completude": 100
+      "semHtml": true,
+      "title": null,
+      "description": null,
+      "canonical": null,
+      "robots": null,
+      "schemas": [],
+      "avisos": [],
+      "completude": null
     },
     {
       "path": "/blog/como-instalar-impressora-windows-passo-a-passo",
@@ -3231,28 +2906,14 @@
       "tipo": "artigo",
       "priority": "0.55",
       "changefreq": "monthly",
-      "semHtml": false,
-      "title": "Instalar impressora no Windows: por que ela some da rede e como…",
-      "description": "O que muda entre instalar por cabo e instalar em rede, por que a impressora desaparece depois de reiniciar o roteador e como fixar o endereço para a instalação…",
-      "canonical": "https://otecnicodeinformatica.com.br/blog/como-instalar-impressora-windows-passo-a-passo",
-      "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
-      "schemas": [
-        "Organization",
-        "WebSite",
-        "BreadcrumbList",
-        "BlogPosting",
-        "Article",
-        "TechArticle",
-        "LocalBusiness",
-        "ProfessionalService",
-        "ComputerRepairService",
-        "ItemList",
-        "FAQPage"
-      ],
-      "avisos": [
-        "title com 64 caracteres (>60)"
-      ],
-      "completude": 100
+      "semHtml": true,
+      "title": null,
+      "description": null,
+      "canonical": null,
+      "robots": null,
+      "schemas": [],
+      "avisos": [],
+      "completude": null
     },
     {
       "path": "/blog/como-conectar-wifi-tv-nao-conecta",
@@ -3260,29 +2921,14 @@
       "tipo": "artigo",
       "priority": "0.55",
       "changefreq": "monthly",
-      "semHtml": false,
-      "title": "Smart TV não conecta no Wi-Fi: como separar problema de rede de…",
-      "description": "Como descobrir se a Smart TV não conecta por causa da rede, da faixa de 5 GHz, do isolamento do roteador ou de falha no módulo Wi-Fi do aparelho — e o que fazer em…",
-      "canonical": "https://otecnicodeinformatica.com.br/blog/como-conectar-wifi-tv-nao-conecta",
-      "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
-      "schemas": [
-        "Organization",
-        "WebSite",
-        "BreadcrumbList",
-        "BlogPosting",
-        "Article",
-        "TechArticle",
-        "LocalBusiness",
-        "ProfessionalService",
-        "ComputerRepairService",
-        "ItemList",
-        "FAQPage"
-      ],
-      "avisos": [
-        "title com 64 caracteres (>60)",
-        "description com 164 caracteres (>160)"
-      ],
-      "completude": 100
+      "semHtml": true,
+      "title": null,
+      "description": null,
+      "canonical": null,
+      "robots": null,
+      "schemas": [],
+      "avisos": [],
+      "completude": null
     },
     {
       "path": "/blog/como-testar-fonte-de-alimentacao-pc",
@@ -3290,28 +2936,14 @@
       "tipo": "artigo",
       "priority": "0.55",
       "changefreq": "monthly",
-      "semHtml": false,
-      "title": "Testar a fonte do PC: o que o teste prova, o que ele não prova e…",
-      "description": "Como separar defeito de fonte de defeito de placa antes de comprar peça: o que cada teste mede, por que fonte que liga pode estar ruim e quais sinais fecham a…",
-      "canonical": "https://otecnicodeinformatica.com.br/blog/como-testar-fonte-de-alimentacao-pc",
-      "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
-      "schemas": [
-        "Organization",
-        "WebSite",
-        "BreadcrumbList",
-        "BlogPosting",
-        "Article",
-        "TechArticle",
-        "LocalBusiness",
-        "ProfessionalService",
-        "ComputerRepairService",
-        "ItemList",
-        "FAQPage"
-      ],
-      "avisos": [
-        "title com 65 caracteres (>60)"
-      ],
-      "completude": 100
+      "semHtml": true,
+      "title": null,
+      "description": null,
+      "canonical": null,
+      "robots": null,
+      "schemas": [],
+      "avisos": [],
+      "completude": null
     },
     {
       "path": "/blog/como-diagnosticar-placa-mae-defeituosa",
@@ -3319,29 +2951,14 @@
       "tipo": "artigo",
       "priority": "0.55",
       "changefreq": "monthly",
-      "semHtml": false,
-      "title": "Placa-mãe defeituosa: como confirmar antes de trocar a peça errada",
-      "description": "Inspeção visual, teste mínimo e eliminação sistemática para distinguir falha de placa-mãe de falha de memória, fonte ou refrigeração — e quando reparo eletrônico…",
-      "canonical": "https://otecnicodeinformatica.com.br/blog/como-diagnosticar-placa-mae-defeituosa",
-      "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
-      "schemas": [
-        "Organization",
-        "WebSite",
-        "BreadcrumbList",
-        "BlogPosting",
-        "Article",
-        "TechArticle",
-        "LocalBusiness",
-        "ProfessionalService",
-        "ComputerRepairService",
-        "ItemList",
-        "FAQPage"
-      ],
-      "avisos": [
-        "title com 66 caracteres (>60)",
-        "description com 162 caracteres (>160)"
-      ],
-      "completude": 100
+      "semHtml": true,
+      "title": null,
+      "description": null,
+      "canonical": null,
+      "robots": null,
+      "schemas": [],
+      "avisos": [],
+      "completude": null
     },
     {
       "path": "/blog/windows-11-lento-como-resolver",
@@ -3349,29 +2966,14 @@
       "tipo": "artigo",
       "priority": "0.55",
       "changefreq": "monthly",
-      "semHtml": false,
-      "title": "Windows 11 lento: como descobrir a causa antes de sair otimizando",
-      "description": "Lentidão no Windows 11 quase nunca tem uma causa única. Como ler os sinais, separar limite de hardware de software mal configurado e decidir entre ajuste, upgrade…",
-      "canonical": "https://otecnicodeinformatica.com.br/blog/windows-11-lento-como-resolver",
-      "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
-      "schemas": [
-        "Organization",
-        "WebSite",
-        "BreadcrumbList",
-        "BlogPosting",
-        "Article",
-        "TechArticle",
-        "LocalBusiness",
-        "ProfessionalService",
-        "ComputerRepairService",
-        "ItemList",
-        "FAQPage"
-      ],
-      "avisos": [
-        "title com 65 caracteres (>60)",
-        "description com 163 caracteres (>160)"
-      ],
-      "completude": 100
+      "semHtml": true,
+      "title": null,
+      "description": null,
+      "canonical": null,
+      "robots": null,
+      "schemas": [],
+      "avisos": [],
+      "completude": null
     },
     {
       "path": "/blog/como-remover-virus-windows-iniciantes",
@@ -3379,29 +2981,14 @@
       "tipo": "artigo",
       "priority": "0.55",
       "changefreq": "monthly",
-      "semHtml": false,
-      "title": "Remover vírus e adware do Windows: o que funciona, o que só disfarça",
-      "description": "Como reconhecer infecção de verdade, limpar sem quebrar o sistema, entender por que o problema volta e saber a hora em que remoção deixa de ser a resposta certa.",
-      "canonical": "https://otecnicodeinformatica.com.br/blog/como-remover-virus-windows-iniciantes",
-      "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
-      "schemas": [
-        "Organization",
-        "WebSite",
-        "BreadcrumbList",
-        "BlogPosting",
-        "Article",
-        "TechArticle",
-        "LocalBusiness",
-        "ProfessionalService",
-        "ComputerRepairService",
-        "ItemList",
-        "FAQPage"
-      ],
-      "avisos": [
-        "title com 68 caracteres (>60)",
-        "description com 161 caracteres (>160)"
-      ],
-      "completude": 100
+      "semHtml": true,
+      "title": null,
+      "description": null,
+      "canonical": null,
+      "robots": null,
+      "schemas": [],
+      "avisos": [],
+      "completude": null
     },
     {
       "path": "/blog/como-formatar-pc-sem-perder-arquivos",
@@ -3409,26 +2996,14 @@
       "tipo": "artigo",
       "priority": "0.55",
       "changefreq": "monthly",
-      "semHtml": false,
-      "title": "Como formatar o PC ou notebook sem perder arquivos",
-      "description": "O que decidir antes de formatar: quando a reinstalação resolve, quando não resolve, como preservar arquivos, contas e licenças, e a diferença entre redefinir o…",
-      "canonical": "https://otecnicodeinformatica.com.br/blog/como-formatar-pc-sem-perder-arquivos",
-      "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
-      "schemas": [
-        "Organization",
-        "WebSite",
-        "BreadcrumbList",
-        "BlogPosting",
-        "Article",
-        "TechArticle",
-        "LocalBusiness",
-        "ProfessionalService",
-        "ComputerRepairService",
-        "ItemList",
-        "FAQPage"
-      ],
+      "semHtml": true,
+      "title": null,
+      "description": null,
+      "canonical": null,
+      "robots": null,
+      "schemas": [],
       "avisos": [],
-      "completude": 100
+      "completude": null
     },
     {
       "path": "/blog/quanto-custa-formatar-um-computador",
@@ -3436,28 +3011,14 @@
       "tipo": "artigo",
       "priority": "0.55",
       "changefreq": "monthly",
-      "semHtml": false,
-      "title": "Quanto custa formatar um computador? | Blog | O Técnico de Informática",
-      "description": "O que entra no valor de uma formatação: tempo técnico, modalidade de atendimento, backup, licença e peças. Os valores praticados aqui e o que não está incluso.",
-      "canonical": "https://otecnicodeinformatica.com.br/blog/quanto-custa-formatar-um-computador",
-      "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
-      "schemas": [
-        "Organization",
-        "WebSite",
-        "BreadcrumbList",
-        "BlogPosting",
-        "Article",
-        "TechArticle",
-        "LocalBusiness",
-        "ProfessionalService",
-        "ComputerRepairService",
-        "ItemList",
-        "FAQPage"
-      ],
-      "avisos": [
-        "title com 70 caracteres (>60)"
-      ],
-      "completude": 100
+      "semHtml": true,
+      "title": null,
+      "description": null,
+      "canonical": null,
+      "robots": null,
+      "schemas": [],
+      "avisos": [],
+      "completude": null
     },
     {
       "path": "/blog/o-que-e-informatica",
@@ -3465,26 +3026,14 @@
       "tipo": "artigo",
       "priority": "0.55",
       "changefreq": "monthly",
-      "semHtml": false,
-      "title": "O que é informática? Definição completa em português",
-      "description": "Entenda o que é informática, para que serve, onde é aplicada e qual a diferença entre informática, computação e TI. Guia nacional em português.",
-      "canonical": "https://otecnicodeinformatica.com.br/blog/o-que-e-informatica",
-      "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
-      "schemas": [
-        "Organization",
-        "WebSite",
-        "BreadcrumbList",
-        "BlogPosting",
-        "Article",
-        "TechArticle",
-        "LocalBusiness",
-        "ProfessionalService",
-        "ComputerRepairService",
-        "ItemList",
-        "FAQPage"
-      ],
+      "semHtml": true,
+      "title": null,
+      "description": null,
+      "canonical": null,
+      "robots": null,
+      "schemas": [],
       "avisos": [],
-      "completude": 100
+      "completude": null
     },
     {
       "path": "/blog/informatica-basica",
@@ -3492,26 +3041,14 @@
       "tipo": "artigo",
       "priority": "0.55",
       "changefreq": "monthly",
-      "semHtml": false,
-      "title": "Informática Básica: O Que É, O Que Ensina e Por Onde Começar",
-      "description": "Saiba o que é informática básica, o que se aprende, para que serve e como estudar do zero. Conteúdo nacional em português, sem filler.",
-      "canonical": "https://otecnicodeinformatica.com.br/blog/informatica-basica",
-      "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
-      "schemas": [
-        "Organization",
-        "WebSite",
-        "BreadcrumbList",
-        "BlogPosting",
-        "Article",
-        "TechArticle",
-        "LocalBusiness",
-        "ProfessionalService",
-        "ComputerRepairService",
-        "ItemList",
-        "FAQPage"
-      ],
+      "semHtml": true,
+      "title": null,
+      "description": null,
+      "canonical": null,
+      "robots": null,
+      "schemas": [],
       "avisos": [],
-      "completude": 100
+      "completude": null
     },
     {
       "path": "/blog/como-aprender-informatica",
@@ -3519,28 +3056,14 @@
       "tipo": "artigo",
       "priority": "0.55",
       "changefreq": "monthly",
-      "semHtml": false,
-      "title": "Como Aprender Informática do Zero: Guia Prático para Iniciantes",
-      "description": "Descubra como aprender informática do zero, em casa, para concurso ou trabalho. Roteiro prático, recursos gratuitos e dicas de estudo.",
-      "canonical": "https://otecnicodeinformatica.com.br/blog/como-aprender-informatica",
-      "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
-      "schemas": [
-        "Organization",
-        "WebSite",
-        "BreadcrumbList",
-        "BlogPosting",
-        "Article",
-        "TechArticle",
-        "LocalBusiness",
-        "ProfessionalService",
-        "ComputerRepairService",
-        "ItemList",
-        "FAQPage"
-      ],
-      "avisos": [
-        "title com 63 caracteres (>60)"
-      ],
-      "completude": 100
+      "semHtml": true,
+      "title": null,
+      "description": null,
+      "canonical": null,
+      "robots": null,
+      "schemas": [],
+      "avisos": [],
+      "completude": null
     },
     {
       "path": "/blog/computador-entra-direto-na-bios",
@@ -3548,28 +3071,14 @@
       "tipo": "artigo",
       "priority": "0.55",
       "changefreq": "monthly",
-      "semHtml": false,
-      "title": "Meu computador entra direto na BIOS: guia de diagnóstico e solução",
-      "description": "Por que o PC abre a tela de configuração em vez do Windows: disco não detectado, conflito UEFI/Legacy (CSM), bateria CMOS e Fast Boot. Diagnóstico em ordem.",
-      "canonical": "https://otecnicodeinformatica.com.br/blog/computador-entra-direto-na-bios",
-      "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
-      "schemas": [
-        "Organization",
-        "WebSite",
-        "BreadcrumbList",
-        "BlogPosting",
-        "Article",
-        "TechArticle",
-        "LocalBusiness",
-        "ProfessionalService",
-        "ComputerRepairService",
-        "ItemList",
-        "FAQPage"
-      ],
-      "avisos": [
-        "title com 66 caracteres (>60)"
-      ],
-      "completude": 100
+      "semHtml": true,
+      "title": null,
+      "description": null,
+      "canonical": null,
+      "robots": null,
+      "schemas": [],
+      "avisos": [],
+      "completude": null
     },
     {
       "path": "/blog/erro-no-bootable-device-como-resolver",
@@ -3577,28 +3086,14 @@
       "tipo": "artigo",
       "priority": "0.55",
       "changefreq": "monthly",
-      "semHtml": false,
-      "title": "Erro &quot;No Bootable Device&quot;: como verificar sem formatar",
-      "description": "Como conferir detecção, ordem de boot, BitLocker e partição EFI antes de reparar a inicialização do Windows ou pensar em formatar.",
-      "canonical": "https://otecnicodeinformatica.com.br/blog/erro-no-bootable-device-como-resolver",
-      "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
-      "schemas": [
-        "Organization",
-        "WebSite",
-        "BreadcrumbList",
-        "BlogPosting",
-        "Article",
-        "TechArticle",
-        "LocalBusiness",
-        "ProfessionalService",
-        "ComputerRepairService",
-        "ItemList",
-        "FAQPage"
-      ],
-      "avisos": [
-        "title com 64 caracteres (>60)"
-      ],
-      "completude": 100
+      "semHtml": true,
+      "title": null,
+      "description": null,
+      "canonical": null,
+      "robots": null,
+      "schemas": [],
+      "avisos": [],
+      "completude": null
     },
     {
       "path": "/blog/troquei-o-ssd-e-o-pc-so-abre-a-bios",
@@ -3606,28 +3101,14 @@
       "tipo": "artigo",
       "priority": "0.55",
       "changefreq": "monthly",
-      "semHtml": false,
-      "title": "Troquei o HD/SSD e o PC só abre a BIOS: o que fazer",
-      "description": "Disco novo vem vazio: sem sistema instalado, o computador para no Setup. Como confirmar a detecção do M.2, resolver conflito de portas e instalar o Windows do zero.",
-      "canonical": "https://otecnicodeinformatica.com.br/blog/troquei-o-ssd-e-o-pc-so-abre-a-bios",
-      "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
-      "schemas": [
-        "Organization",
-        "WebSite",
-        "BreadcrumbList",
-        "BlogPosting",
-        "Article",
-        "TechArticle",
-        "LocalBusiness",
-        "ProfessionalService",
-        "ComputerRepairService",
-        "ItemList",
-        "FAQPage"
-      ],
-      "avisos": [
-        "description com 164 caracteres (>160)"
-      ],
-      "completude": 100
+      "semHtml": true,
+      "title": null,
+      "description": null,
+      "canonical": null,
+      "robots": null,
+      "schemas": [],
+      "avisos": [],
+      "completude": null
     },
     {
       "path": "/blog/limpar-arquivos-temporarios-windows",
@@ -3635,28 +3116,14 @@
       "tipo": "artigo",
       "priority": "0.55",
       "changefreq": "monthly",
-      "semHtml": false,
-      "title": "Como limpar arquivos temporários e liberar espaço no Windows",
-      "description": "Onde o Windows guarda arquivos temporários, quanto isso realmente pesa no desempenho e como limpar com segurança — sem programas de faxina e sem apagar o que faz…",
-      "canonical": "https://otecnicodeinformatica.com.br/blog/limpar-arquivos-temporarios-windows",
-      "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
-      "schemas": [
-        "Organization",
-        "WebSite",
-        "BreadcrumbList",
-        "BlogPosting",
-        "Article",
-        "TechArticle",
-        "LocalBusiness",
-        "ProfessionalService",
-        "ComputerRepairService",
-        "ItemList",
-        "FAQPage"
-      ],
-      "avisos": [
-        "description com 162 caracteres (>160)"
-      ],
-      "completude": 100
+      "semHtml": true,
+      "title": null,
+      "description": null,
+      "canonical": null,
+      "robots": null,
+      "schemas": [],
+      "avisos": [],
+      "completude": null
     },
     {
       "path": "/blog/memoria-ram-insuficiente-sintomas",
@@ -3664,28 +3131,14 @@
       "tipo": "artigo",
       "priority": "0.55",
       "changefreq": "monthly",
-      "semHtml": false,
-      "title": "Memória RAM insuficiente: sintomas, como confirmar e quando fazer…",
-      "description": "Como distinguir falta de memória de disco lento ou vírus, ler o Gerenciador de Tarefas sem se enganar e decidir se o upgrade de RAM resolve o seu caso.",
-      "canonical": "https://otecnicodeinformatica.com.br/blog/memoria-ram-insuficiente-sintomas",
-      "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
-      "schemas": [
-        "Organization",
-        "WebSite",
-        "BreadcrumbList",
-        "BlogPosting",
-        "Article",
-        "TechArticle",
-        "LocalBusiness",
-        "ProfessionalService",
-        "ComputerRepairService",
-        "ItemList",
-        "FAQPage"
-      ],
-      "avisos": [
-        "title com 66 caracteres (>60)"
-      ],
-      "completude": 100
+      "semHtml": true,
+      "title": null,
+      "description": null,
+      "canonical": null,
+      "robots": null,
+      "schemas": [],
+      "avisos": [],
+      "completude": null
     },
     {
       "path": "/blog/codigos-de-erro-tela-azul-windows",
@@ -3693,29 +3146,14 @@
       "tipo": "artigo",
       "priority": "0.55",
       "changefreq": "monthly",
-      "semHtml": false,
-      "title": "Códigos de erro da tela azul: como ler e o que cada um indica",
-      "description": "O que significam MEMORY_MANAGEMENT, IRQL_NOT_LESS_OR_EQUAL, CRITICAL_PROCESS_DIED e outros códigos — e como usá-los para separar defeito de driver, memória ou disco.",
-      "canonical": "https://otecnicodeinformatica.com.br/blog/codigos-de-erro-tela-azul-windows",
-      "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
-      "schemas": [
-        "Organization",
-        "WebSite",
-        "BreadcrumbList",
-        "BlogPosting",
-        "Article",
-        "TechArticle",
-        "LocalBusiness",
-        "ProfessionalService",
-        "ComputerRepairService",
-        "ItemList",
-        "FAQPage"
-      ],
-      "avisos": [
-        "title com 61 caracteres (>60)",
-        "description com 165 caracteres (>160)"
-      ],
-      "completude": 100
+      "semHtml": true,
+      "title": null,
+      "description": null,
+      "canonical": null,
+      "robots": null,
+      "schemas": [],
+      "avisos": [],
+      "completude": null
     },
     {
       "path": "/blog/testar-memoria-ram-memtest86",
@@ -3723,26 +3161,14 @@
       "tipo": "artigo",
       "priority": "0.55",
       "changefreq": "monthly",
-      "semHtml": false,
-      "title": "Como testar a memória RAM com Memtest86+ (passo a passo)",
-      "description": "Quando testar a memória, como criar a mídia de inicialização, quantas passagens fazer e como interpretar erros para saber qual módulo trocar.",
-      "canonical": "https://otecnicodeinformatica.com.br/blog/testar-memoria-ram-memtest86",
-      "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
-      "schemas": [
-        "Organization",
-        "WebSite",
-        "BreadcrumbList",
-        "BlogPosting",
-        "Article",
-        "TechArticle",
-        "LocalBusiness",
-        "ProfessionalService",
-        "ComputerRepairService",
-        "ItemList",
-        "FAQPage"
-      ],
+      "semHtml": true,
+      "title": null,
+      "description": null,
+      "canonical": null,
+      "robots": null,
+      "schemas": [],
       "avisos": [],
-      "completude": 100
+      "completude": null
     },
     {
       "path": "/blog/botao-power-nao-funciona-jump-start-placa-mae",
@@ -3750,28 +3176,14 @@
       "tipo": "artigo",
       "priority": "0.55",
       "changefreq": "monthly",
-      "semHtml": false,
-      "title": "Botão power não funciona: como ligar o PC pelo conector da placa-mãe",
-      "description": "Como separar defeito do botão frontal de falha de fonte ou placa, e como acionar a partida pelo conector do painel frontal para confirmar o diagnóstico.",
-      "canonical": "https://otecnicodeinformatica.com.br/blog/botao-power-nao-funciona-jump-start-placa-mae",
-      "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
-      "schemas": [
-        "Organization",
-        "WebSite",
-        "BreadcrumbList",
-        "BlogPosting",
-        "Article",
-        "TechArticle",
-        "LocalBusiness",
-        "ProfessionalService",
-        "ComputerRepairService",
-        "ItemList",
-        "FAQPage"
-      ],
-      "avisos": [
-        "title com 68 caracteres (>60)"
-      ],
-      "completude": 100
+      "semHtml": true,
+      "title": null,
+      "description": null,
+      "canonical": null,
+      "robots": null,
+      "schemas": [],
+      "avisos": [],
+      "completude": null
     },
     {
       "path": "/blog/curto-circuito-placa-mae-como-identificar",
@@ -3779,28 +3191,14 @@
       "tipo": "artigo",
       "priority": "0.55",
       "changefreq": "monthly",
-      "semHtml": false,
-      "title": "Curto-circuito na placa-mãe: como identificar e isolar o problema",
-      "description": "Como reconhecer um curto de alimentação, isolar componente por componente com o teste fora do gabinete e saber quando o reparo deixa de ser viável.",
-      "canonical": "https://otecnicodeinformatica.com.br/blog/curto-circuito-placa-mae-como-identificar",
-      "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
-      "schemas": [
-        "Organization",
-        "WebSite",
-        "BreadcrumbList",
-        "BlogPosting",
-        "Article",
-        "TechArticle",
-        "LocalBusiness",
-        "ProfessionalService",
-        "ComputerRepairService",
-        "ItemList",
-        "FAQPage"
-      ],
-      "avisos": [
-        "title com 65 caracteres (>60)"
-      ],
-      "completude": 100
+      "semHtml": true,
+      "title": null,
+      "description": null,
+      "canonical": null,
+      "robots": null,
+      "schemas": [],
+      "avisos": [],
+      "completude": null
     },
     {
       "path": "/blog/bios-corrompida-reset-cmos-atualizacao",
@@ -3808,26 +3206,14 @@
       "tipo": "artigo",
       "priority": "0.55",
       "changefreq": "monthly",
-      "semHtml": false,
-      "title": "BIOS corrompida: reset de CMOS e recuperação de firmware",
-      "description": "Quando o reset de CMOS resolve, como fazer pelo jumper ou pela bateria e o que muda quando o firmware realmente corrompeu durante uma atualização.",
-      "canonical": "https://otecnicodeinformatica.com.br/blog/bios-corrompida-reset-cmos-atualizacao",
-      "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
-      "schemas": [
-        "Organization",
-        "WebSite",
-        "BreadcrumbList",
-        "BlogPosting",
-        "Article",
-        "TechArticle",
-        "LocalBusiness",
-        "ProfessionalService",
-        "ComputerRepairService",
-        "ItemList",
-        "FAQPage"
-      ],
+      "semHtml": true,
+      "title": null,
+      "description": null,
+      "canonical": null,
+      "robots": null,
+      "schemas": [],
       "avisos": [],
-      "completude": 100
+      "completude": null
     },
     {
       "path": "/blog/internet-lenta-provedor-ou-roteador",
@@ -3835,26 +3221,14 @@
       "tipo": "artigo",
       "priority": "0.55",
       "changefreq": "monthly",
-      "semHtml": false,
-      "title": "Internet lenta: é o provedor ou o seu roteador?",
-      "description": "Como separar, com dois testes objetivos, a lentidão que vem da operadora da lentidão que nasce dentro de casa — e o que fazer em cada caso.",
-      "canonical": "https://otecnicodeinformatica.com.br/blog/internet-lenta-provedor-ou-roteador",
-      "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
-      "schemas": [
-        "Organization",
-        "WebSite",
-        "BreadcrumbList",
-        "BlogPosting",
-        "Article",
-        "TechArticle",
-        "LocalBusiness",
-        "ProfessionalService",
-        "ComputerRepairService",
-        "ItemList",
-        "FAQPage"
-      ],
+      "semHtml": true,
+      "title": null,
+      "description": null,
+      "canonical": null,
+      "robots": null,
+      "schemas": [],
       "avisos": [],
-      "completude": 100
+      "completude": null
     },
     {
       "path": "/blog/impressora-offline-como-resolver",
@@ -3862,26 +3236,14 @@
       "tipo": "artigo",
       "priority": "0.55",
       "changefreq": "monthly",
-      "semHtml": false,
-      "title": "Impressora offline: por que aparece assim e como resolver",
-      "description": "O que o status offline significa no Windows e como separar endereço de rede perdido, fila pausada e falha de conexão antes de reinstalar.",
-      "canonical": "https://otecnicodeinformatica.com.br/blog/impressora-offline-como-resolver",
-      "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
-      "schemas": [
-        "Organization",
-        "WebSite",
-        "BreadcrumbList",
-        "BlogPosting",
-        "Article",
-        "TechArticle",
-        "LocalBusiness",
-        "ProfessionalService",
-        "ComputerRepairService",
-        "ItemList",
-        "FAQPage"
-      ],
+      "semHtml": true,
+      "title": null,
+      "description": null,
+      "canonical": null,
+      "robots": null,
+      "schemas": [],
       "avisos": [],
-      "completude": 100
+      "completude": null
     },
     {
       "path": "/blog/fila-de-impressao-travada-spooler-windows",
@@ -3889,29 +3251,14 @@
       "tipo": "artigo",
       "priority": "0.55",
       "changefreq": "monthly",
-      "semHtml": false,
-      "title": "Fila de impressão travada: como destravar o spooler do Windows",
-      "description": "O que é o serviço de spooler, por que a fila trava com documentos presos em &quot;excluindo&quot; e o procedimento correto para limpar sem reinstalar a impressora.",
-      "canonical": "https://otecnicodeinformatica.com.br/blog/fila-de-impressao-travada-spooler-windows",
-      "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
-      "schemas": [
-        "Organization",
-        "WebSite",
-        "BreadcrumbList",
-        "BlogPosting",
-        "Article",
-        "TechArticle",
-        "LocalBusiness",
-        "ProfessionalService",
-        "ComputerRepairService",
-        "ItemList",
-        "FAQPage"
-      ],
-      "avisos": [
-        "title com 62 caracteres (>60)",
-        "description com 163 caracteres (>160)"
-      ],
-      "completude": 100
+      "semHtml": true,
+      "title": null,
+      "description": null,
+      "canonical": null,
+      "robots": null,
+      "schemas": [],
+      "avisos": [],
+      "completude": null
     },
     {
       "path": "/blog/hd-nao-e-reconhecido-na-bios-o-que-fazer",
@@ -3919,29 +3266,14 @@
       "tipo": "artigo",
       "priority": "0.55",
       "changefreq": "monthly",
-      "semHtml": false,
-      "title": "HD ou SSD não é reconhecido na BIOS: o que verificar antes de trocar",
-      "description": "Quando o disco some do Setup, o problema quase nunca é o Windows. Sequência de verificação por energia, cabo, porta e detecção — e o que NÃO fazer quando há dados…",
-      "canonical": "https://otecnicodeinformatica.com.br/blog/hd-nao-e-reconhecido-na-bios-o-que-fazer",
-      "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
-      "schemas": [
-        "Organization",
-        "WebSite",
-        "BreadcrumbList",
-        "BlogPosting",
-        "Article",
-        "TechArticle",
-        "LocalBusiness",
-        "ProfessionalService",
-        "ComputerRepairService",
-        "ItemList",
-        "FAQPage"
-      ],
-      "avisos": [
-        "title com 68 caracteres (>60)",
-        "description com 163 caracteres (>160)"
-      ],
-      "completude": 100
+      "semHtml": true,
+      "title": null,
+      "description": null,
+      "canonical": null,
+      "robots": null,
+      "schemas": [],
+      "avisos": [],
+      "completude": null
     },
     {
       "path": "/blog/ssd-nvme-nao-aparece-no-gerenciador-de-discos",
@@ -3949,29 +3281,14 @@
       "tipo": "artigo",
       "priority": "0.55",
       "changefreq": "monthly",
-      "semHtml": false,
-      "title": "SSD aparece na BIOS mas não no Windows: como inicializar o disco",
-      "description": "Disco novo chega sem inicialização, sem partição e sem letra. O que fazer no Gerenciamento de Disco, como escolher GPT ou MBR e o cuidado antes de mexer em disco…",
-      "canonical": "https://otecnicodeinformatica.com.br/blog/ssd-nvme-nao-aparece-no-gerenciador-de-discos",
-      "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
-      "schemas": [
-        "Organization",
-        "WebSite",
-        "BreadcrumbList",
-        "BlogPosting",
-        "Article",
-        "TechArticle",
-        "LocalBusiness",
-        "ProfessionalService",
-        "ComputerRepairService",
-        "ItemList",
-        "FAQPage"
-      ],
-      "avisos": [
-        "title com 64 caracteres (>60)",
-        "description com 162 caracteres (>160)"
-      ],
-      "completude": 100
+      "semHtml": true,
+      "title": null,
+      "description": null,
+      "canonical": null,
+      "robots": null,
+      "schemas": [],
+      "avisos": [],
+      "completude": null
     },
     {
       "path": "/blog/disco-com-setores-defeituosos-smart-o-que-fazer",
@@ -3979,28 +3296,14 @@
       "tipo": "artigo",
       "priority": "0.55",
       "changefreq": "monthly",
-      "semHtml": false,
-      "title": "Setores defeituosos e SMART com alerta: o que fazer (e o que não…",
-      "description": "Como ler os indicadores SMART, por que CHKDSK não é a resposta padrão para disco suspeito de falha física e qual é a ordem correta: copiar primeiro, investigar…",
-      "canonical": "https://otecnicodeinformatica.com.br/blog/disco-com-setores-defeituosos-smart-o-que-fazer",
-      "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
-      "schemas": [
-        "Organization",
-        "WebSite",
-        "BreadcrumbList",
-        "BlogPosting",
-        "Article",
-        "TechArticle",
-        "LocalBusiness",
-        "ProfessionalService",
-        "ComputerRepairService",
-        "ItemList",
-        "FAQPage"
-      ],
-      "avisos": [
-        "title com 65 caracteres (>60)"
-      ],
-      "completude": 100
+      "semHtml": true,
+      "title": null,
+      "description": null,
+      "canonical": null,
+      "robots": null,
+      "schemas": [],
+      "avisos": [],
+      "completude": null
     },
     {
       "path": "/blog/computador-sem-som-o-que-verificar",
@@ -4008,28 +3311,14 @@
       "tipo": "artigo",
       "priority": "0.55",
       "changefreq": "monthly",
-      "semHtml": false,
-      "title": "Computador sem som: sequência de verificação do alto-falante ao driver",
-      "description": "Do volume e do dispositivo de saída errado até driver e conector: como isolar a causa do silêncio no Windows sem reinstalar o sistema.",
-      "canonical": "https://otecnicodeinformatica.com.br/blog/computador-sem-som-o-que-verificar",
-      "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
-      "schemas": [
-        "Organization",
-        "WebSite",
-        "BreadcrumbList",
-        "BlogPosting",
-        "Article",
-        "TechArticle",
-        "LocalBusiness",
-        "ProfessionalService",
-        "ComputerRepairService",
-        "ItemList",
-        "FAQPage"
-      ],
-      "avisos": [
-        "title com 70 caracteres (>60)"
-      ],
-      "completude": 100
+      "semHtml": true,
+      "title": null,
+      "description": null,
+      "canonical": null,
+      "robots": null,
+      "schemas": [],
+      "avisos": [],
+      "completude": null
     },
     {
       "path": "/blog/fone-de-ouvido-nao-e-reconhecido-no-pc",
@@ -4037,29 +3326,14 @@
       "tipo": "artigo",
       "priority": "0.55",
       "changefreq": "monthly",
-      "semHtml": false,
-      "title": "Fone de ouvido não é reconhecido no PC: entrada frontal, detecção e…",
-      "description": "Por que o fone toca na entrada de trás e não na da frente, o que é detecção de conector, a diferença entre P2 combo e duas entradas e como resolver o microfone mudo.",
-      "canonical": "https://otecnicodeinformatica.com.br/blog/fone-de-ouvido-nao-e-reconhecido-no-pc",
-      "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
-      "schemas": [
-        "Organization",
-        "WebSite",
-        "BreadcrumbList",
-        "BlogPosting",
-        "Article",
-        "TechArticle",
-        "LocalBusiness",
-        "ProfessionalService",
-        "ComputerRepairService",
-        "ItemList",
-        "FAQPage"
-      ],
-      "avisos": [
-        "title com 68 caracteres (>60)",
-        "description com 165 caracteres (>160)"
-      ],
-      "completude": 100
+      "semHtml": true,
+      "title": null,
+      "description": null,
+      "canonical": null,
+      "robots": null,
+      "schemas": [],
+      "avisos": [],
+      "completude": null
     },
     {
       "path": "/blog/servico-de-audio-do-windows-nao-esta-em-execucao",
@@ -4067,29 +3341,14 @@
       "tipo": "artigo",
       "priority": "0.55",
       "changefreq": "monthly",
-      "semHtml": false,
-      "title": "Serviço de áudio do Windows não está em execução: como reativar",
-      "description": "O que são os serviços Windows Audio e Audio Endpoint Builder, como reiniciá-los na ordem correta, quando reinstalar o driver e como distinguir falha de serviço de…",
-      "canonical": "https://otecnicodeinformatica.com.br/blog/servico-de-audio-do-windows-nao-esta-em-execucao",
-      "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
-      "schemas": [
-        "Organization",
-        "WebSite",
-        "BreadcrumbList",
-        "BlogPosting",
-        "Article",
-        "TechArticle",
-        "LocalBusiness",
-        "ProfessionalService",
-        "ComputerRepairService",
-        "ItemList",
-        "FAQPage"
-      ],
-      "avisos": [
-        "title com 63 caracteres (>60)",
-        "description com 163 caracteres (>160)"
-      ],
-      "completude": 100
+      "semHtml": true,
+      "title": null,
+      "description": null,
+      "canonical": null,
+      "robots": null,
+      "schemas": [],
+      "avisos": [],
+      "completude": null
     },
     {
       "path": "/blog/webcam-nao-funciona-o-que-verificar",
@@ -4097,29 +3356,14 @@
       "tipo": "artigo",
       "priority": "0.55",
       "changefreq": "monthly",
-      "semHtml": false,
-      "title": "Webcam não funciona: como separar privacidade, aplicativo, driver e…",
-      "description": "Cinco perguntas isolam a causa quando a câmera não funciona: ela existe no sistema, o Windows libera, o aplicativo tem permissão, o driver está sadio ou o módulo…",
-      "canonical": "https://otecnicodeinformatica.com.br/blog/webcam-nao-funciona-o-que-verificar",
-      "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
-      "schemas": [
-        "Organization",
-        "WebSite",
-        "BreadcrumbList",
-        "BlogPosting",
-        "Article",
-        "TechArticle",
-        "LocalBusiness",
-        "ProfessionalService",
-        "ComputerRepairService",
-        "ItemList",
-        "FAQPage"
-      ],
-      "avisos": [
-        "title com 68 caracteres (>60)",
-        "description com 162 caracteres (>160)"
-      ],
-      "completude": 100
+      "semHtml": true,
+      "title": null,
+      "description": null,
+      "canonical": null,
+      "robots": null,
+      "schemas": [],
+      "avisos": [],
+      "completude": null
     },
     {
       "path": "/blog/permissoes-de-camera-no-windows",
@@ -4127,29 +3371,14 @@
       "tipo": "artigo",
       "priority": "0.55",
       "changefreq": "monthly",
-      "semHtml": false,
-      "title": "Permissões de câmera no Windows: quando é o sistema que bloqueia e…",
-      "description": "Acesso global, acesso por aplicativo, programas de área de trabalho e permissão de site no navegador são camadas diferentes. Entender qual está fechada resolve a…",
-      "canonical": "https://otecnicodeinformatica.com.br/blog/permissoes-de-camera-no-windows",
-      "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
-      "schemas": [
-        "Organization",
-        "WebSite",
-        "BreadcrumbList",
-        "BlogPosting",
-        "Article",
-        "TechArticle",
-        "LocalBusiness",
-        "ProfessionalService",
-        "ComputerRepairService",
-        "ItemList",
-        "FAQPage"
-      ],
-      "avisos": [
-        "title com 67 caracteres (>60)",
-        "description com 162 caracteres (>160)"
-      ],
-      "completude": 100
+      "semHtml": true,
+      "title": null,
+      "description": null,
+      "canonical": null,
+      "robots": null,
+      "schemas": [],
+      "avisos": [],
+      "completude": null
     },
     {
       "path": "/blog/webcam-usb-nao-e-detectada",
@@ -4157,28 +3386,14 @@
       "tipo": "artigo",
       "priority": "0.55",
       "changefreq": "monthly",
-      "semHtml": false,
-      "title": "Webcam USB não é detectada: porta, cabo, alimentação e driver",
-      "description": "Roteiro de eliminação para webcam externa que o Windows não enxerga: teste de porta, hub sem alimentação, cabo, dispositivo desconhecido no Gerenciador e teste…",
-      "canonical": "https://otecnicodeinformatica.com.br/blog/webcam-usb-nao-e-detectada",
-      "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
-      "schemas": [
-        "Organization",
-        "WebSite",
-        "BreadcrumbList",
-        "BlogPosting",
-        "Article",
-        "TechArticle",
-        "LocalBusiness",
-        "ProfessionalService",
-        "ComputerRepairService",
-        "ItemList",
-        "FAQPage"
-      ],
-      "avisos": [
-        "title com 61 caracteres (>60)"
-      ],
-      "completude": 100
+      "semHtml": true,
+      "title": null,
+      "description": null,
+      "canonical": null,
+      "robots": null,
+      "schemas": [],
+      "avisos": [],
+      "completude": null
     },
     {
       "path": "/blog/windows-update-nao-funciona-o-que-verificar",
@@ -4186,29 +3401,14 @@
       "tipo": "artigo",
       "priority": "0.55",
       "changefreq": "monthly",
-      "semHtml": false,
-      "title": "Windows Update não funciona: como descobrir em qual estágio a…",
-      "description": "Verificação, download, preparação, instalação e reinicialização são estágios distintos. Identificar onde a atualização para elimina metade dos procedimentos inúteis.",
-      "canonical": "https://otecnicodeinformatica.com.br/blog/windows-update-nao-funciona-o-que-verificar",
-      "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
-      "schemas": [
-        "Organization",
-        "WebSite",
-        "BreadcrumbList",
-        "BlogPosting",
-        "Article",
-        "TechArticle",
-        "LocalBusiness",
-        "ProfessionalService",
-        "ComputerRepairService",
-        "ItemList",
-        "FAQPage"
-      ],
-      "avisos": [
-        "title com 62 caracteres (>60)",
-        "description com 165 caracteres (>160)"
-      ],
-      "completude": 100
+      "semHtml": true,
+      "title": null,
+      "description": null,
+      "canonical": null,
+      "robots": null,
+      "schemas": [],
+      "avisos": [],
+      "completude": null
     },
     {
       "path": "/blog/limpar-cache-do-windows-update-softwaredistribution",
@@ -4216,29 +3416,14 @@
       "tipo": "artigo",
       "priority": "0.55",
       "changefreq": "monthly",
-      "semHtml": false,
-      "title": "Cache do Windows Update: o que é a SoftwareDistribution e como…",
-      "description": "A pasta guarda downloads e histórico do Update. Renomear é reversível, apagar não é. Quando o procedimento ajuda, o que ele custa e por que não é solução universal.",
-      "canonical": "https://otecnicodeinformatica.com.br/blog/limpar-cache-do-windows-update-softwaredistribution",
-      "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
-      "schemas": [
-        "Organization",
-        "WebSite",
-        "BreadcrumbList",
-        "BlogPosting",
-        "Article",
-        "TechArticle",
-        "LocalBusiness",
-        "ProfessionalService",
-        "ComputerRepairService",
-        "ItemList",
-        "FAQPage"
-      ],
-      "avisos": [
-        "title com 63 caracteres (>60)",
-        "description com 164 caracteres (>160)"
-      ],
-      "completude": 100
+      "semHtml": true,
+      "title": null,
+      "description": null,
+      "canonical": null,
+      "robots": null,
+      "schemas": [],
+      "avisos": [],
+      "completude": null
     },
     {
       "path": "/blog/windows-update-travado-desfazendo-alteracoes",
@@ -4246,26 +3431,14 @@
       "tipo": "artigo",
       "priority": "0.55",
       "changefreq": "monthly",
-      "semHtml": false,
-      "title": "Windows Update travado ou &quot;desfazendo alterações&quot;",
-      "description": "Como distinguir interface parada de processo realmente parado, por que o Windows reverte uma atualização e o que fazer antes de desligar a máquina no botão.",
-      "canonical": "https://otecnicodeinformatica.com.br/blog/windows-update-travado-desfazendo-alteracoes",
-      "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
-      "schemas": [
-        "Organization",
-        "WebSite",
-        "BreadcrumbList",
-        "BlogPosting",
-        "Article",
-        "TechArticle",
-        "LocalBusiness",
-        "ProfessionalService",
-        "ComputerRepairService",
-        "ItemList",
-        "FAQPage"
-      ],
+      "semHtml": true,
+      "title": null,
+      "description": null,
+      "canonical": null,
+      "robots": null,
+      "schemas": [],
       "avisos": [],
-      "completude": 100
+      "completude": null
     },
     {
       "path": "/blog/boot-uefi-ou-legacy-como-identificar",
@@ -4273,28 +3446,14 @@
       "tipo": "artigo",
       "priority": "0.55",
       "changefreq": "monthly",
-      "semHtml": false,
-      "title": "UEFI ou Legacy: como identificar o modo de inicialização do seu PC",
-      "description": "Como descobrir em qual modo o Windows foi instalado, por que GPT e MBR importam e o que muda ao alternar entre UEFI e Legacy sem preparar o disco.",
-      "canonical": "https://otecnicodeinformatica.com.br/blog/boot-uefi-ou-legacy-como-identificar",
-      "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
-      "schemas": [
-        "Organization",
-        "WebSite",
-        "BreadcrumbList",
-        "BlogPosting",
-        "Article",
-        "TechArticle",
-        "LocalBusiness",
-        "ProfessionalService",
-        "ComputerRepairService",
-        "ItemList",
-        "FAQPage"
-      ],
-      "avisos": [
-        "title com 66 caracteres (>60)"
-      ],
-      "completude": 100
+      "semHtml": true,
+      "title": null,
+      "description": null,
+      "canonical": null,
+      "robots": null,
+      "schemas": [],
+      "avisos": [],
+      "completude": null
     },
     {
       "path": "/blog/ordem-de-boot-na-bios-como-configurar",
@@ -4302,28 +3461,14 @@
       "tipo": "artigo",
       "priority": "0.55",
       "changefreq": "monthly",
-      "semHtml": false,
-      "title": "Ordem de boot na BIOS: como configurar sem quebrar a inicialização",
-      "description": "Para que serve a prioridade de inicialização, quando usar o menu de boot temporário e por que Fast Boot e portas USB atrapalham o reconhecimento do pendrive.",
-      "canonical": "https://otecnicodeinformatica.com.br/blog/ordem-de-boot-na-bios-como-configurar",
-      "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
-      "schemas": [
-        "Organization",
-        "WebSite",
-        "BreadcrumbList",
-        "BlogPosting",
-        "Article",
-        "TechArticle",
-        "LocalBusiness",
-        "ProfessionalService",
-        "ComputerRepairService",
-        "ItemList",
-        "FAQPage"
-      ],
-      "avisos": [
-        "title com 66 caracteres (>60)"
-      ],
-      "completude": 100
+      "semHtml": true,
+      "title": null,
+      "description": null,
+      "canonical": null,
+      "robots": null,
+      "schemas": [],
+      "avisos": [],
+      "completude": null
     },
     {
       "path": "/blog/windows-reparo-automatico-em-loop",
@@ -4331,29 +3476,14 @@
       "tipo": "artigo",
       "priority": "0.55",
       "changefreq": "monthly",
-      "semHtml": false,
-      "title": "Reparo automático em laço: o que fazer quando o Windows não sai…",
-      "description": "Por que o Windows entra em reparo automático repetido, o que observar antes de tentar qualquer comando e em que ponto a prioridade passa a ser salvar os arquivos.",
-      "canonical": "https://otecnicodeinformatica.com.br/blog/windows-reparo-automatico-em-loop",
-      "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
-      "schemas": [
-        "Organization",
-        "WebSite",
-        "BreadcrumbList",
-        "BlogPosting",
-        "Article",
-        "TechArticle",
-        "LocalBusiness",
-        "ProfessionalService",
-        "ComputerRepairService",
-        "ItemList",
-        "FAQPage"
-      ],
-      "avisos": [
-        "title com 64 caracteres (>60)",
-        "description com 162 caracteres (>160)"
-      ],
-      "completude": 100
+      "semHtml": true,
+      "title": null,
+      "description": null,
+      "canonical": null,
+      "robots": null,
+      "schemas": [],
+      "avisos": [],
+      "completude": null
     },
     {
       "path": "/blog/manutencao-preventiva-de-computador-guia-completo",
@@ -4361,26 +3491,14 @@
       "tipo": "artigo",
       "priority": "0.55",
       "changefreq": "monthly",
-      "semHtml": false,
-      "title": "Manutenção preventiva de computador: o guia completo",
-      "description": "O que realmente precisa ser verificado, com que frequência e em que ordem — do calor e da poeira ao estado do armazenamento — sem trocar peça por precaução.",
-      "canonical": "https://otecnicodeinformatica.com.br/blog/manutencao-preventiva-de-computador-guia-completo",
-      "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
-      "schemas": [
-        "Organization",
-        "WebSite",
-        "BreadcrumbList",
-        "BlogPosting",
-        "Article",
-        "TechArticle",
-        "LocalBusiness",
-        "ProfessionalService",
-        "ComputerRepairService",
-        "ItemList",
-        "FAQPage"
-      ],
+      "semHtml": true,
+      "title": null,
+      "description": null,
+      "canonical": null,
+      "robots": null,
+      "schemas": [],
       "avisos": [],
-      "completude": 100
+      "completude": null
     },
     {
       "path": "/blog/dispositivo-usb-nao-reconhecido-o-que-fazer",
@@ -4388,26 +3506,14 @@
       "tipo": "artigo",
       "priority": "0.55",
       "changefreq": "monthly",
-      "semHtml": false,
-      "title": "Dispositivo USB não reconhecido: como descobrir a causa",
-      "description": "Como separar defeito do aparelho, da porta, do cabo, da alimentação e do driver — em uma sequência de testes que não exige abrir o computador.",
-      "canonical": "https://otecnicodeinformatica.com.br/blog/dispositivo-usb-nao-reconhecido-o-que-fazer",
-      "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
-      "schemas": [
-        "Organization",
-        "WebSite",
-        "BreadcrumbList",
-        "BlogPosting",
-        "Article",
-        "TechArticle",
-        "LocalBusiness",
-        "ProfessionalService",
-        "ComputerRepairService",
-        "ItemList",
-        "FAQPage"
-      ],
+      "semHtml": true,
+      "title": null,
+      "description": null,
+      "canonical": null,
+      "robots": null,
+      "schemas": [],
       "avisos": [],
-      "completude": 100
+      "completude": null
     },
     {
       "path": "/blog/como-testar-restauracao-de-backup",
@@ -4415,26 +3521,14 @@
       "tipo": "artigo",
       "priority": "0.55",
       "changefreq": "monthly",
-      "semHtml": false,
-      "title": "Como testar se o backup realmente funciona",
-      "description": "Cópia nunca restaurada é suposição. O roteiro de teste de restauração, o que registrar e os erros que só aparecem no dia em que o arquivo faz falta.",
-      "canonical": "https://otecnicodeinformatica.com.br/blog/como-testar-restauracao-de-backup",
-      "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
-      "schemas": [
-        "Organization",
-        "WebSite",
-        "BreadcrumbList",
-        "BlogPosting",
-        "Article",
-        "TechArticle",
-        "LocalBusiness",
-        "ProfessionalService",
-        "ComputerRepairService",
-        "ItemList",
-        "FAQPage"
-      ],
+      "semHtml": true,
+      "title": null,
+      "description": null,
+      "canonical": null,
+      "robots": null,
+      "schemas": [],
       "avisos": [],
-      "completude": 100
+      "completude": null
     },
     {
       "path": "/blog/como-monitorar-temperatura-do-computador",
@@ -4442,28 +3536,14 @@
       "tipo": "artigo",
       "priority": "0.55",
       "changefreq": "monthly",
-      "semHtml": false,
-      "title": "Como monitorar a temperatura do computador (e quando ela é problema)",
-      "description": "Quais temperaturas medir, o que é normal sob carga, como reconhecer throttling e em que ponto o calor deixa de ser característica e vira defeito.",
-      "canonical": "https://otecnicodeinformatica.com.br/blog/como-monitorar-temperatura-do-computador",
-      "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
-      "schemas": [
-        "Organization",
-        "WebSite",
-        "BreadcrumbList",
-        "BlogPosting",
-        "Article",
-        "TechArticle",
-        "LocalBusiness",
-        "ProfessionalService",
-        "ComputerRepairService",
-        "ItemList",
-        "FAQPage"
-      ],
-      "avisos": [
-        "title com 68 caracteres (>60)"
-      ],
-      "completude": 100
+      "semHtml": true,
+      "title": null,
+      "description": null,
+      "canonical": null,
+      "robots": null,
+      "schemas": [],
+      "avisos": [],
+      "completude": null
     },
     {
       "path": "/blog/pendrive-somente-leitura-protegido-contra-gravacao",
@@ -4471,28 +3551,14 @@
       "tipo": "artigo",
       "priority": "0.55",
       "changefreq": "monthly",
-      "semHtml": false,
-      "title": "Pendrive somente leitura: por que aparece &quot;protegido contra gravação&quot;",
-      "description": "Como separar trava física, política do sistema, sistema de arquivos danificado e memória em fim de vida — e por que copiar os arquivos vem antes de qualquer…",
-      "canonical": "https://otecnicodeinformatica.com.br/blog/pendrive-somente-leitura-protegido-contra-gravacao",
-      "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
-      "schemas": [
-        "Organization",
-        "WebSite",
-        "BreadcrumbList",
-        "BlogPosting",
-        "Article",
-        "TechArticle",
-        "LocalBusiness",
-        "ProfessionalService",
-        "ComputerRepairService",
-        "ItemList",
-        "FAQPage"
-      ],
-      "avisos": [
-        "title com 79 caracteres (>60)"
-      ],
-      "completude": 100
+      "semHtml": true,
+      "title": null,
+      "description": null,
+      "canonical": null,
+      "robots": null,
+      "schemas": [],
+      "avisos": [],
+      "completude": null
     },
     {
       "path": "/blog/historico-de-arquivos-windows-como-configurar",
@@ -4500,29 +3566,14 @@
       "tipo": "artigo",
       "priority": "0.55",
       "changefreq": "monthly",
-      "semHtml": false,
-      "title": "Histórico de Arquivos do Windows: como configurar versões de verdade",
-      "description": "O recurso nativo que guarda versões anteriores dos seus arquivos: o que ele cobre, o que ele não cobre e como configurá-lo sem confundir versionamento com backup…",
-      "canonical": "https://otecnicodeinformatica.com.br/blog/historico-de-arquivos-windows-como-configurar",
-      "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
-      "schemas": [
-        "Organization",
-        "WebSite",
-        "BreadcrumbList",
-        "BlogPosting",
-        "Article",
-        "TechArticle",
-        "LocalBusiness",
-        "ProfessionalService",
-        "ComputerRepairService",
-        "ItemList",
-        "FAQPage"
-      ],
-      "avisos": [
-        "title com 68 caracteres (>60)",
-        "description com 162 caracteres (>160)"
-      ],
-      "completude": 100
+      "semHtml": true,
+      "title": null,
+      "description": null,
+      "canonical": null,
+      "robots": null,
+      "schemas": [],
+      "avisos": [],
+      "completude": null
     },
     {
       "path": "/blog/monitor-sem-sinal-o-que-verificar",
@@ -4530,28 +3581,14 @@
       "tipo": "artigo",
       "priority": "0.55",
       "changefreq": "monthly",
-      "semHtml": false,
-      "title": "Monitor sem sinal: o que verificar antes de trocar de peça",
-      "description": "&quot;Sem sinal&quot; na tela não quer dizer monitor queimado. A sequência para separar cabo, entrada errada, saída de vídeo e computador que nem chegou a iniciar.",
-      "canonical": "https://otecnicodeinformatica.com.br/blog/monitor-sem-sinal-o-que-verificar",
-      "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
-      "schemas": [
-        "Organization",
-        "WebSite",
-        "BreadcrumbList",
-        "BlogPosting",
-        "Article",
-        "TechArticle",
-        "LocalBusiness",
-        "ProfessionalService",
-        "ComputerRepairService",
-        "ItemList",
-        "FAQPage"
-      ],
-      "avisos": [
-        "description com 163 caracteres (>160)"
-      ],
-      "completude": 100
+      "semHtml": true,
+      "title": null,
+      "description": null,
+      "canonical": null,
+      "robots": null,
+      "schemas": [],
+      "avisos": [],
+      "completude": null
     },
     {
       "path": "/blog/bateria-de-notebook-nao-carrega-o-que-verificar",
@@ -4559,29 +3596,14 @@
       "tipo": "artigo",
       "priority": "0.55",
       "changefreq": "monthly",
-      "semHtml": false,
-      "title": "Bateria de notebook não carrega: o que verificar antes de comprar…",
-      "description": "&quot;Conectado, não carregando&quot; tem mais de uma causa. Como separar fonte, conector, bateria em fim de vida e limite de carga configurado — sem trocar peça no escuro.",
-      "canonical": "https://otecnicodeinformatica.com.br/blog/bateria-de-notebook-nao-carrega-o-que-verificar",
-      "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
-      "schemas": [
-        "Organization",
-        "WebSite",
-        "BreadcrumbList",
-        "BlogPosting",
-        "Article",
-        "TechArticle",
-        "LocalBusiness",
-        "ProfessionalService",
-        "ComputerRepairService",
-        "ItemList",
-        "FAQPage"
-      ],
-      "avisos": [
-        "title com 66 caracteres (>60)",
-        "description com 172 caracteres (>160)"
-      ],
-      "completude": 100
+      "semHtml": true,
+      "title": null,
+      "description": null,
+      "canonical": null,
+      "robots": null,
+      "schemas": [],
+      "avisos": [],
+      "completude": null
     },
     {
       "path": "/blog/como-migrar-arquivos-para-um-computador-novo",
@@ -4589,28 +3611,14 @@
       "tipo": "artigo",
       "priority": "0.55",
       "changefreq": "monthly",
-      "semHtml": false,
-      "title": "Como migrar arquivos para um computador novo sem perder nada",
-      "description": "Inventário, método de transferência, conferência e só então o descarte do equipamento antigo. O roteiro que evita a descoberta tardia de que faltou alguma coisa.",
-      "canonical": "https://otecnicodeinformatica.com.br/blog/como-migrar-arquivos-para-um-computador-novo",
-      "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
-      "schemas": [
-        "Organization",
-        "WebSite",
-        "BreadcrumbList",
-        "BlogPosting",
-        "Article",
-        "TechArticle",
-        "LocalBusiness",
-        "ProfessionalService",
-        "ComputerRepairService",
-        "ItemList",
-        "FAQPage"
-      ],
-      "avisos": [
-        "description com 161 caracteres (>160)"
-      ],
-      "completude": 100
+      "semHtml": true,
+      "title": null,
+      "description": null,
+      "canonical": null,
+      "robots": null,
+      "schemas": [],
+      "avisos": [],
+      "completude": null
     },
     {
       "path": "/blog/teclado-de-notebook-nao-funciona-o-que-verificar",
@@ -4618,29 +3626,14 @@
       "tipo": "artigo",
       "priority": "0.55",
       "changefreq": "monthly",
-      "semHtml": false,
-      "title": "Teclado de notebook não funciona: o que verificar antes de trocar",
-      "description": "Teclas mortas, teclado inteiro parado ou caracteres trocados são problemas diferentes. Como separar sujeira, configuração, cabo flat e dano por líquido antes de…",
-      "canonical": "https://otecnicodeinformatica.com.br/blog/teclado-de-notebook-nao-funciona-o-que-verificar",
-      "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
-      "schemas": [
-        "Organization",
-        "WebSite",
-        "BreadcrumbList",
-        "BlogPosting",
-        "Article",
-        "TechArticle",
-        "LocalBusiness",
-        "ProfessionalService",
-        "ComputerRepairService",
-        "ItemList",
-        "FAQPage"
-      ],
-      "avisos": [
-        "title com 65 caracteres (>60)",
-        "description com 161 caracteres (>160)"
-      ],
-      "completude": 100
+      "semHtml": true,
+      "title": null,
+      "description": null,
+      "canonical": null,
+      "robots": null,
+      "schemas": [],
+      "avisos": [],
+      "completude": null
     },
     {
       "path": "/blog/computador-desliga-sozinho-o-que-verificar",
@@ -4648,29 +3641,14 @@
       "tipo": "artigo",
       "priority": "0.55",
       "changefreq": "monthly",
-      "semHtml": false,
-      "title": "Computador desliga sozinho: o que verificar antes de trocar peça",
-      "description": "Desligamento repentino tem causas bem distintas: temperatura, fonte, energia elétrica e memória. Como identificar qual delas é a sua sem sair trocando componentes.",
-      "canonical": "https://otecnicodeinformatica.com.br/blog/computador-desliga-sozinho-o-que-verificar",
-      "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
-      "schemas": [
-        "Organization",
-        "WebSite",
-        "BreadcrumbList",
-        "BlogPosting",
-        "Article",
-        "TechArticle",
-        "LocalBusiness",
-        "ProfessionalService",
-        "ComputerRepairService",
-        "ItemList",
-        "FAQPage"
-      ],
-      "avisos": [
-        "title com 64 caracteres (>60)",
-        "description com 163 caracteres (>160)"
-      ],
-      "completude": 100
+      "semHtml": true,
+      "title": null,
+      "description": null,
+      "canonical": null,
+      "robots": null,
+      "schemas": [],
+      "avisos": [],
+      "completude": null
     },
     {
       "path": "/blog/computador-nao-conecta-na-internet-por-cabo",
@@ -4678,26 +3656,14 @@
       "tipo": "artigo",
       "priority": "0.55",
       "changefreq": "monthly",
-      "semHtml": false,
-      "title": "Computador não conecta na internet por cabo: o que verificar",
-      "description": "Cabo ligado e nada de internet. Como separar cabo rompido, porta do roteador, placa de rede e falha do provedor — com testes na ordem certa.",
-      "canonical": "https://otecnicodeinformatica.com.br/blog/computador-nao-conecta-na-internet-por-cabo",
-      "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
-      "schemas": [
-        "Organization",
-        "WebSite",
-        "BreadcrumbList",
-        "BlogPosting",
-        "Article",
-        "TechArticle",
-        "LocalBusiness",
-        "ProfessionalService",
-        "ComputerRepairService",
-        "ItemList",
-        "FAQPage"
-      ],
+      "semHtml": true,
+      "title": null,
+      "description": null,
+      "canonical": null,
+      "robots": null,
+      "schemas": [],
       "avisos": [],
-      "completude": 100
+      "completude": null
     },
     {
       "path": "/blog/ventoinha-do-computador-fazendo-barulho-o-que-verificar",
@@ -4705,28 +3671,14 @@
       "tipo": "artigo",
       "priority": "0.55",
       "changefreq": "monthly",
-      "semHtml": false,
-      "title": "Ventoinha fazendo barulho: o que o som indica antes de trocar peça",
-      "description": "Chiado, estalo, zumbido grave ou rangido são ruídos com causas diferentes. Como usar o tipo de som e o momento em que ele aparece para descobrir a origem sem…",
-      "canonical": "https://otecnicodeinformatica.com.br/blog/ventoinha-do-computador-fazendo-barulho-o-que-verificar",
-      "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
-      "schemas": [
-        "Organization",
-        "WebSite",
-        "BreadcrumbList",
-        "BlogPosting",
-        "Article",
-        "TechArticle",
-        "LocalBusiness",
-        "ProfessionalService",
-        "ComputerRepairService",
-        "ItemList",
-        "FAQPage"
-      ],
-      "avisos": [
-        "title com 66 caracteres (>60)"
-      ],
-      "completude": 100
+      "semHtml": true,
+      "title": null,
+      "description": null,
+      "canonical": null,
+      "robots": null,
+      "schemas": [],
+      "avisos": [],
+      "completude": null
     },
     {
       "path": "/blog/rede-wifi-nao-aparece-na-lista-o-que-verificar",
@@ -4734,28 +3686,14 @@
       "tipo": "artigo",
       "priority": "0.55",
       "changefreq": "monthly",
-      "semHtml": false,
-      "title": "Rede Wi-Fi não aparece na lista: o que verificar antes de trocar o…",
-      "description": "Sumir da lista é diferente de conectar e não navegar. Como separar adaptador desligado, banda de 5 GHz, rede oculta e roteador fora do ar em poucos testes.",
-      "canonical": "https://otecnicodeinformatica.com.br/blog/rede-wifi-nao-aparece-na-lista-o-que-verificar",
-      "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
-      "schemas": [
-        "Organization",
-        "WebSite",
-        "BreadcrumbList",
-        "BlogPosting",
-        "Article",
-        "TechArticle",
-        "LocalBusiness",
-        "ProfessionalService",
-        "ComputerRepairService",
-        "ItemList",
-        "FAQPage"
-      ],
-      "avisos": [
-        "title com 67 caracteres (>60)"
-      ],
-      "completude": 100
+      "semHtml": true,
+      "title": null,
+      "description": null,
+      "canonical": null,
+      "robots": null,
+      "schemas": [],
+      "avisos": [],
+      "completude": null
     },
     {
       "path": "/blog/arquivo-corrompido-nao-abre-o-que-fazer",
@@ -4763,28 +3701,14 @@
       "tipo": "artigo",
       "priority": "0.55",
       "changefreq": "monthly",
-      "semHtml": false,
-      "title": "Arquivo corrompido não abre: o que fazer sem piorar o caso",
-      "description": "Antes de tentar qualquer reparo, preserve o original. Como separar arquivo realmente danificado de programa incompatível e quando o caso vira recuperação de dados.",
-      "canonical": "https://otecnicodeinformatica.com.br/blog/arquivo-corrompido-nao-abre-o-que-fazer",
-      "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
-      "schemas": [
-        "Organization",
-        "WebSite",
-        "BreadcrumbList",
-        "BlogPosting",
-        "Article",
-        "TechArticle",
-        "LocalBusiness",
-        "ProfessionalService",
-        "ComputerRepairService",
-        "ItemList",
-        "FAQPage"
-      ],
-      "avisos": [
-        "description com 163 caracteres (>160)"
-      ],
-      "completude": 100
+      "semHtml": true,
+      "title": null,
+      "description": null,
+      "canonical": null,
+      "robots": null,
+      "schemas": [],
+      "avisos": [],
+      "completude": null
     }
   ]
 }
