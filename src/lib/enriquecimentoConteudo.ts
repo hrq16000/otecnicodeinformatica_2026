@@ -279,6 +279,18 @@ export const ENRIQUECIMENTO_1: Record<string, EnriquecimentoConteudo> = {
     },
     blocos: [
       {
+        id: "matriz-escolha-recuperacao",
+        titulo: "Qual opção de recuperação usar primeiro?",
+        intro: "A escolha depende do momento em que a falha começou e do que ainda funciona. Começar pela alternativa menos invasiva preserva dados e reduz tentativas aleatórias.",
+        itens: [
+          { titulo: "Começou logo após uma atualização", desc: "Registre a versão e considere desinstalar a atualização ou usar restauração disponível antes de partir para comandos de boot." },
+          { titulo: "O Windows chega ao WinRE, mas não inicia", desc: "Tente Reparo de Inicialização uma vez. Se não resolver, preserve o estado, verifique BitLocker e avance somente com evidências do arquivo ou volume afetado." },
+          { titulo: "O sistema inicia, mas ficou instável", desc: "Priorize diagnóstico dentro do Windows, pontos de restauração e desinstalação de alteração recente. Reinstalação limpa não é o primeiro teste." },
+          { titulo: "Há suspeita de malware persistente", desc: "Faça cópia segura dos dados e use a orientação oficial de recuperação. Instalação limpa pode ser necessária, mas remove aplicativos e pode apagar arquivos." },
+          { titulo: "A unidade desaparece ou apresenta erro de leitura", desc: "Interrompa reparos repetidos e priorize imagem técnica ou recuperação de dados. Recriar BCD não corrige uma unidade que não permanece detectada." },
+        ],
+      },
+      {
         id: "evidencias-antes-do-reparo",
         titulo: "Antes de reparar: quatro evidências que evitam o procedimento errado",
         intro: "O código orienta a investigação, mas a decisão segura vem da combinação entre a tela, o histórico e o estado da unidade. Registre estas quatro evidências antes de executar comandos no Ambiente de Recuperação.",
