@@ -537,6 +537,17 @@ export const ENRIQUECIMENTO_1: Record<string, EnriquecimentoConteudo> = {
       "Trocar HD por SSD é o upgrade que mais muda a sensação de uso em máquina antiga: inicialização, abertura de programas e resposta do sistema deixam de esperar uma peça mecânica. Mas SSD não corrige superaquecimento, defeito de placa-mãe, memória insuficiente para o uso nem infecção — se o sintoma é travamento aleatório ou desligamento, o diagnóstico vem antes da peça.",
     blocos: [
       {
+        id: "compatibilidade-antes-do-upgrade",
+        titulo: "Checklist antes de comprar ou clonar um SSD",
+        intro: "Capacidade e velocidade anunciadas não confirmam compatibilidade. O diagnóstico começa pelo equipamento existente e pelo destino dos dados.",
+        itens: [
+          { titulo: "Identifique a interface", desc: "Um slot M.2 pode aceitar NVMe, SATA ou apenas um dos dois. Em notebook, confirme o manual e a quantidade de baias; em desktop, confira as linhas PCIe compartilhadas." },
+          { titulo: "Confirme o esquema de inicialização", desc: "Ao migrar Windows em UEFI/GPT, o clone precisa preservar a partição EFI e o Windows Boot Manager. Misturar Legacy/MBR com UEFI pode produzir um disco que aparece, mas não inicia." },
+          { titulo: "Faça backup independente", desc: "Clonagem não é backup: ela pode copiar corrupção, arquivos cifrados ou uma partição errada. Mantenha uma cópia separada e abra amostras antes de alterar o disco original." },
+          { titulo: "Defina o teste de aceite", desc: "Após a troca, valide inicialização, arquivos essenciais, suspensão, temperatura, saúde reportada e estabilidade no uso real. Só encerre quando a rotina normal estiver confirmada." },
+        ],
+      },
+      {
         id: "sata-x-nvme",
         titulo: "SSD SATA e SSD NVMe: qual faz diferença no seu caso",
         intro:
