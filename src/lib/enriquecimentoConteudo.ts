@@ -1050,7 +1050,7 @@ export const ENRIQUECIMENTO_1: Record<string, EnriquecimentoConteudo> = {
         ],
       },
     ],
-  },,
+  },
   "/problemas/monitor-sem-sinal-curitiba": {
     respostaRapida:
       "“Sem sinal” confirma que o monitor não recebeu vídeo, mas não identifica sozinho se a falha está no cabo, entrada, GPU, RAM, fonte ou sistema.",

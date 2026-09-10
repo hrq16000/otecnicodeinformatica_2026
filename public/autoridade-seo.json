@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-09-03T18:38:05.605Z",
+  "geradoEm": "2026-09-10T06:22:41.144Z",
   "fonte": {
     "html": "SSR harness",
     "dist": "dist"
@@ -8,10 +8,10 @@
   "analisadas": 78,
   "falhas": 0,
   "medias": {
-    "palavras": 1449.04,
-    "densidadeSemantica": 56.81,
+    "palavras": 1467.12,
+    "densidadeSemantica": 56.62,
     "densidadeKeywordPrincipal": 0.43,
-    "linksInternosSaida": 11.49,
+    "linksInternosSaida": 11.5,
     "linksInternosEntrada": 3.03
   },
   "orfas": [
@@ -2167,121 +2167,121 @@
       "lote": null,
       "aprovadoEm": "2026-08-12",
       "titulo": "Upgrade para SSD NVMe: quando compensa e como é feito",
-      "palavras": 1580,
-      "termosUteis": 858,
-      "densidadeSemantica": 62.59,
-      "vocabulario": 537,
+      "palavras": 1879,
+      "termosUteis": 1052,
+      "densidadeSemantica": 57.13,
+      "vocabulario": 601,
       "keywordPrincipal": {
         "termo": "como fazer upgrade ssd nvme",
-        "ocorrencias": 1,
-        "densidade": 0.12
+        "ocorrencias": 2,
+        "densidade": 0.19
       },
       "topKeywords": [
         {
           "termo": "disco",
-          "ocorrencias": 32,
-          "densidade": 3.73
+          "ocorrencias": 37,
+          "densidade": 3.52
         },
         {
           "termo": "ssd",
-          "ocorrencias": 16,
-          "densidade": 1.86
+          "ocorrencias": 20,
+          "densidade": 1.9
         },
         {
           "termo": "nvme",
-          "ocorrencias": 14,
-          "densidade": 1.63
+          "ocorrencias": 16,
+          "densidade": 1.52
         },
         {
-          "termo": "sistema",
-          "ocorrencias": 9,
+          "termo": "chave",
+          "ocorrencias": 11,
           "densidade": 1.05
         },
         {
-          "termo": "servico",
-          "ocorrencias": 8,
-          "densidade": 0.93
-        },
-        {
-          "termo": "tecnico",
-          "ocorrencias": 8,
-          "densidade": 0.93
-        },
-        {
-          "termo": "atendimento",
-          "ocorrencias": 7,
-          "densidade": 0.82
-        },
-        {
-          "termo": "upgrade",
-          "ocorrencias": 7,
-          "densidade": 0.82
-        },
-        {
-          "termo": "copia",
-          "ocorrencias": 6,
-          "densidade": 0.7
-        },
-        {
-          "termo": "instalacao",
-          "ocorrencias": 6,
-          "densidade": 0.7
-        },
-        {
-          "termo": "leitura",
-          "ocorrencias": 6,
-          "densidade": 0.7
+          "termo": "dados",
+          "ocorrencias": 10,
+          "densidade": 0.95
         },
         {
           "termo": "recuperacao",
-          "ocorrencias": 6,
-          "densidade": 0.7
+          "ocorrencias": 9,
+          "densidade": 0.86
+        },
+        {
+          "termo": "sata",
+          "ocorrencias": 9,
+          "densidade": 0.86
+        },
+        {
+          "termo": "copia",
+          "ocorrencias": 8,
+          "densidade": 0.76
+        },
+        {
+          "termo": "unidade",
+          "ocorrencias": 8,
+          "densidade": 0.76
+        },
+        {
+          "termo": "atual",
+          "ocorrencias": 7,
+          "densidade": 0.67
+        },
+        {
+          "termo": "backup",
+          "ocorrencias": 7,
+          "densidade": 0.67
+        },
+        {
+          "termo": "firmware",
+          "ocorrencias": 7,
+          "densidade": 0.67
         }
       ],
       "topBigramas": [
         {
+          "termo": "chave recuperacao",
+          "ocorrencias": 5,
+          "densidade": 0.48
+        },
+        {
           "termo": "disco atual",
+          "ocorrencias": 5,
+          "densidade": 0.48
+        },
+        {
+          "termo": "disco antigo",
           "ocorrencias": 4,
-          "densidade": 0.47
+          "densidade": 0.38
+        },
+        {
+          "termo": "saude disco",
+          "ocorrencias": 4,
+          "densidade": 0.38
         },
         {
           "termo": "ssd nvme",
           "ocorrencias": 4,
-          "densidade": 0.47
+          "densidade": 0.38
         },
         {
-          "termo": "aceita nvme",
+          "termo": "abrir maquina",
           "ocorrencias": 3,
-          "densidade": 0.35
+          "densidade": 0.29
         },
         {
-          "termo": "curitiba regiao",
+          "termo": "arquivos insubstituiveis",
           "ocorrencias": 3,
-          "densidade": 0.35
+          "densidade": 0.29
         },
         {
-          "termo": "disco novo",
+          "termo": "erros leitura",
           "ocorrencias": 3,
-          "densidade": 0.35
-        },
-        {
-          "termo": "executado bancada",
-          "ocorrencias": 3,
-          "densidade": 0.35
-        },
-        {
-          "termo": "maquina aceita",
-          "ocorrencias": 3,
-          "densidade": 0.35
-        },
-        {
-          "termo": "saude disco",
-          "ocorrencias": 3,
-          "densidade": 0.35
+          "densidade": 0.29
         }
       ],
       "headings": {
-        "h2": 9,
+        "h2": 10,
         "h3": 10
       },
       "schemas": [
@@ -2637,121 +2637,121 @@
       "lote": null,
       "aprovadoEm": "2026-08-12",
       "titulo": "Como escolher um antivírus: o que muda de verdade na proteção",
-      "palavras": 1618,
-      "termosUteis": 928,
-      "densidadeSemantica": 65.19,
-      "vocabulario": 605,
+      "palavras": 1913,
+      "termosUteis": 1129,
+      "densidadeSemantica": 59.43,
+      "vocabulario": 671,
       "keywordPrincipal": {
         "termo": "como escolher um bom antivirus",
         "ocorrencias": 1,
-        "densidade": 0.11
+        "densidade": 0.09
       },
       "topKeywords": [
         {
           "termo": "protecao",
-          "ocorrencias": 15,
-          "densidade": 1.62
+          "ocorrencias": 23,
+          "densidade": 2.04
         },
         {
-          "termo": "sistema",
-          "ocorrencias": 12,
-          "densidade": 1.29
+          "termo": "windows",
+          "ocorrencias": 20,
+          "densidade": 1.77
         },
         {
           "termo": "antivirus",
-          "ocorrencias": 10,
-          "densidade": 1.08
+          "ocorrencias": 17,
+          "densidade": 1.51
         },
         {
           "termo": "backup",
-          "ocorrencias": 8,
-          "densidade": 0.86
+          "ocorrencias": 12,
+          "densidade": 1.06
+        },
+        {
+          "termo": "seguranca",
+          "ocorrencias": 11,
+          "densidade": 0.97
+        },
+        {
+          "termo": "sistema",
+          "ocorrencias": 10,
+          "densidade": 0.89
         },
         {
           "termo": "navegador",
-          "ocorrencias": 7,
-          "densidade": 0.75
+          "ocorrencias": 8,
+          "densidade": 0.71
         },
         {
-          "termo": "programa",
-          "ocorrencias": 7,
-          "densidade": 0.75
-        },
-        {
-          "termo": "arquivos",
-          "ocorrencias": 6,
-          "densidade": 0.65
-        },
-        {
-          "termo": "computador",
-          "ocorrencias": 6,
-          "densidade": 0.65
-        },
-        {
-          "termo": "tecnico",
-          "ocorrencias": 6,
-          "densidade": 0.65
-        },
-        {
-          "termo": "verificacao",
-          "ocorrencias": 6,
-          "densidade": 0.65
+          "termo": "produto",
+          "ocorrencias": 8,
+          "densidade": 0.71
         },
         {
           "termo": "virus",
-          "ocorrencias": 6,
-          "densidade": 0.65
+          "ocorrencias": 8,
+          "densidade": 0.71
         },
         {
-          "termo": "curitiba",
+          "termo": "confirme",
+          "ocorrencias": 6,
+          "densidade": 0.53
+        },
+        {
+          "termo": "oficial",
+          "ocorrencias": 6,
+          "densidade": 0.53
+        },
+        {
+          "termo": "acesso",
           "ocorrencias": 5,
-          "densidade": 0.54
+          "densidade": 0.44
         }
       ],
       "topBigramas": [
         {
-          "termo": "curitiba regiao",
-          "ocorrencias": 3,
-          "densidade": 0.32
-        },
-        {
-          "termo": "antivirus muda",
-          "ocorrencias": 2,
-          "densidade": 0.22
-        },
-        {
-          "termo": "comportamento assinatura",
-          "ocorrencias": 2,
-          "densidade": 0.22
-        },
-        {
-          "termo": "conforme disponibilidade",
-          "ocorrencias": 2,
-          "densidade": 0.22
-        },
-        {
-          "termo": "conta usuario",
-          "ocorrencias": 2,
-          "densidade": 0.22
+          "termo": "seguranca windows",
+          "ocorrencias": 6,
+          "densidade": 0.53
         },
         {
           "termo": "contra ransomware",
-          "ocorrencias": 2,
-          "densidade": 0.22
+          "ocorrencias": 3,
+          "densidade": 0.27
         },
         {
-          "termo": "controle pastas",
-          "ocorrencias": 2,
-          "densidade": 0.22
+          "termo": "defender antivirus",
+          "ocorrencias": 3,
+          "densidade": 0.27
         },
         {
-          "termo": "criterios realmente",
-          "ocorrencias": 2,
-          "densidade": 0.22
+          "termo": "protecao contra",
+          "ocorrencias": 3,
+          "densidade": 0.27
+        },
+        {
+          "termo": "protecao nativa",
+          "ocorrencias": 3,
+          "densidade": 0.27
+        },
+        {
+          "termo": "protecao tempo",
+          "ocorrencias": 3,
+          "densidade": 0.27
+        },
+        {
+          "termo": "sistema atualizado",
+          "ocorrencias": 3,
+          "densidade": 0.27
+        },
+        {
+          "termo": "substitui backup",
+          "ocorrencias": 3,
+          "densidade": 0.27
         }
       ],
       "headings": {
-        "h2": 11,
+        "h2": 13,
         "h3": 8
       },
       "schemas": [
@@ -5822,122 +5822,122 @@
       "slug": "erro-no-bootable-device-como-resolver",
       "lote": null,
       "aprovadoEm": "2026-08-25",
-      "titulo": "Erro &quot;No Bootable Device&quot; ou &quot;Boot Device Not Found&quot;: como resolver",
-      "palavras": 1773,
-      "termosUteis": 1045,
-      "densidadeSemantica": 47.85,
-      "vocabulario": 500,
+      "titulo": "Erro &quot;No Bootable Device&quot;: como verificar sem formatar",
+      "palavras": 1921,
+      "termosUteis": 1120,
+      "densidadeSemantica": 49.38,
+      "vocabulario": 553,
       "keywordPrincipal": {
         "termo": "erro no bootable device como resolver",
-        "ocorrencias": 5,
-        "densidade": 0.48
+        "ocorrencias": 3,
+        "densidade": 0.27
       },
       "topKeywords": [
         {
           "termo": "disco",
           "ocorrencias": 29,
-          "densidade": 2.78
+          "densidade": 2.59
         },
         {
           "termo": "reparo",
           "ocorrencias": 21,
-          "densidade": 2.01
+          "densidade": 1.88
         },
         {
           "termo": "boot",
           "ocorrencias": 20,
-          "densidade": 1.91
-        },
-        {
-          "termo": "inicializacao",
-          "ocorrencias": 17,
-          "densidade": 1.63
+          "densidade": 1.79
         },
         {
           "termo": "uefi",
-          "ocorrencias": 17,
-          "densidade": 1.63
+          "ocorrencias": 18,
+          "densidade": 1.61
         },
         {
           "termo": "particao",
-          "ocorrencias": 16,
-          "densidade": 1.53
+          "ocorrencias": 17,
+          "densidade": 1.52
         },
         {
           "termo": "windows",
-          "ocorrencias": 16,
-          "densidade": 1.53
+          "ocorrencias": 17,
+          "densidade": 1.52
         },
         {
-          "termo": "efi",
-          "ocorrencias": 12,
-          "densidade": 1.15
+          "termo": "inicializacao",
+          "ocorrencias": 14,
+          "densidade": 1.25
         },
         {
           "termo": "passo",
-          "ocorrencias": 12,
-          "densidade": 1.15
+          "ocorrencias": 13,
+          "densidade": 1.16
+        },
+        {
+          "termo": "arquivos",
+          "ocorrencias": 11,
+          "densidade": 0.98
         },
         {
           "termo": "cenario",
           "ocorrencias": 11,
-          "densidade": 1.05
+          "densidade": 0.98
         },
         {
-          "termo": "device",
+          "termo": "efi",
           "ocorrencias": 11,
-          "densidade": 1.05
+          "densidade": 0.98
         },
         {
-          "termo": "sistema",
-          "ocorrencias": 11,
-          "densidade": 1.05
+          "termo": "gpt",
+          "ocorrencias": 10,
+          "densidade": 0.89
         }
       ],
       "topBigramas": [
         {
           "termo": "particao efi",
           "ocorrencias": 8,
-          "densidade": 0.77
-        },
-        {
-          "termo": "boot device",
-          "ocorrencias": 6,
-          "densidade": 0.57
-        },
-        {
-          "termo": "not found",
-          "ocorrencias": 6,
-          "densidade": 0.57
+          "densidade": 0.71
         },
         {
           "termo": "passo reparo",
           "ocorrencias": 6,
-          "densidade": 0.57
+          "densidade": 0.54
         },
         {
           "termo": "bootable device",
           "ocorrencias": 5,
-          "densidade": 0.48
+          "densidade": 0.45
         },
         {
           "termo": "disco gpt",
           "ocorrencias": 5,
-          "densidade": 0.48
+          "densidade": 0.45
         },
         {
-          "termo": "arquivos inicializacao",
+          "termo": "ambiente recuperacao",
           "ocorrencias": 4,
-          "densidade": 0.38
+          "densidade": 0.36
+        },
+        {
+          "termo": "boot device",
+          "ocorrencias": 4,
+          "densidade": 0.36
         },
         {
           "termo": "bootrec fixboot",
           "ocorrencias": 4,
-          "densidade": 0.38
+          "densidade": 0.36
+        },
+        {
+          "termo": "cenario disco",
+          "ocorrencias": 4,
+          "densidade": 0.36
         }
       ],
       "headings": {
-        "h2": 11,
+        "h2": 13,
         "h3": 8
       },
       "schemas": [
@@ -5953,12 +5953,14 @@
         "ItemList",
         "FAQPage"
       ],
-      "linksInternosSaida": 13,
+      "linksInternosSaida": 14,
       "linksSaida": [
         "/blog",
         "/contato",
+        "/glossario/uefi",
         "/blog/computador-entra-direto-na-bios",
         "/blog/como-instalar-windows-11-do-zero",
+        "/glossario/bitlocker",
         "/blog/como-recuperar-dados-hd-com-defeito",
         "/blog/como-clonar-hd-para-ssd",
         "/blog/como-formatar-pc-sem-perder-arquivos",
@@ -5966,7 +5968,6 @@
         "/problemas/windows-nao-inicia",
         "/ferramentas/roteiro-falha-de-inicializacao",
         "/decisoes/formatar-ou-reparar",
-        "/glossario/uefi",
         "/servicos/formatacao"
       ],
       "linksInternosEntrada": 4,
@@ -7252,121 +7253,121 @@
       "lote": "10C/2",
       "aprovadoEm": "2026-08-26",
       "titulo": "Internet lenta: é o provedor ou o seu roteador?",
-      "palavras": 1210,
-      "termosUteis": 690,
-      "densidadeSemantica": 55.94,
-      "vocabulario": 386,
+      "palavras": 1515,
+      "termosUteis": 921,
+      "densidadeSemantica": 55.7,
+      "vocabulario": 513,
       "keywordPrincipal": {
         "termo": "internet lenta provedor ou roteador",
         "ocorrencias": 4,
-        "densidade": 0.58
+        "densidade": 0.43
       },
       "topKeywords": [
         {
           "termo": "wi-fi",
-          "ocorrencias": 24,
-          "densidade": 3.48
+          "ocorrencias": 29,
+          "densidade": 3.15
         },
         {
           "termo": "cabo",
-          "ocorrencias": 18,
-          "densidade": 2.61
-        },
-        {
-          "termo": "roteador",
-          "ocorrencias": 14,
-          "densidade": 2.03
+          "ocorrencias": 20,
+          "densidade": 2.17
         },
         {
           "termo": "rede",
+          "ocorrencias": 13,
+          "densidade": 1.41
+        },
+        {
+          "termo": "roteador",
           "ocorrencias": 12,
-          "densidade": 1.74
-        },
-        {
-          "termo": "entrega",
-          "ocorrencias": 11,
-          "densidade": 1.59
-        },
-        {
-          "termo": "velocidade",
-          "ocorrencias": 10,
-          "densidade": 1.45
+          "densidade": 1.3
         },
         {
           "termo": "mesmo",
+          "ocorrencias": 11,
+          "densidade": 1.19
+        },
+        {
+          "termo": "plano",
+          "ocorrencias": 11,
+          "densidade": 1.19
+        },
+        {
+          "termo": "perto",
+          "ocorrencias": 9,
+          "densidade": 0.98
+        },
+        {
+          "termo": "provedor",
+          "ocorrencias": 9,
+          "densidade": 0.98
+        },
+        {
+          "termo": "velocidade",
+          "ocorrencias": 9,
+          "densidade": 0.98
+        },
+        {
+          "termo": "aparelho",
           "ocorrencias": 8,
-          "densidade": 1.16
+          "densidade": 0.87
+        },
+        {
+          "termo": "enlace",
+          "ocorrencias": 8,
+          "densidade": 0.87
         },
         {
           "termo": "problema",
           "ocorrencias": 8,
-          "densidade": 1.16
-        },
-        {
-          "termo": "provedor",
-          "ocorrencias": 8,
-          "densidade": 1.16
-        },
-        {
-          "termo": "sinal",
-          "ocorrencias": 8,
-          "densidade": 1.16
-        },
-        {
-          "termo": "contratado",
-          "ocorrencias": 7,
-          "densidade": 1.01
-        },
-        {
-          "termo": "enlace",
-          "ocorrencias": 7,
-          "densidade": 1.01
+          "densidade": 0.87
         }
       ],
       "topBigramas": [
         {
-          "termo": "cabo entrega",
+          "termo": "wi-fi perto",
+          "ocorrencias": 6,
+          "densidade": 0.65
+        },
+        {
+          "termo": "cabo wi-fi",
           "ocorrencias": 4,
-          "densidade": 0.58
+          "densidade": 0.43
         },
         {
           "termo": "internet lenta",
           "ocorrencias": 4,
-          "densidade": 0.58
-        },
-        {
-          "termo": "proximo contratado",
-          "ocorrencias": 4,
-          "densidade": 0.58
-        },
-        {
-          "termo": "rede interna",
-          "ocorrencias": 4,
-          "densidade": 0.58
+          "densidade": 0.43
         },
         {
           "termo": "sinais problema",
           "ocorrencias": 4,
-          "densidade": 0.58
+          "densidade": 0.43
         },
         {
           "termo": "wi-fi instavel",
           "ocorrencias": 4,
-          "densidade": 0.58
+          "densidade": 0.43
         },
         {
-          "termo": "cabo wi-fi",
+          "termo": "data hora",
           "ocorrencias": 3,
-          "densidade": 0.44
+          "densidade": 0.33
         },
         {
-          "termo": "problema interno",
+          "termo": "redes wi-fi",
           "ocorrencias": 3,
-          "densidade": 0.44
+          "densidade": 0.33
+        },
+        {
+          "termo": "trocar plano",
+          "ocorrencias": 3,
+          "densidade": 0.33
         }
       ],
       "headings": {
-        "h2": 10,
+        "h2": 13,
         "h3": 4
       },
       "schemas": [
@@ -9441,31 +9442,31 @@
       "slug": "windows-update-travado-desfazendo-alteracoes",
       "lote": "10C/4",
       "aprovadoEm": "2026-08-26",
-      "titulo": "Atualização travada e &quot;desfazendo alterações&quot;: o que é reversão e o…",
-      "palavras": 1368,
-      "termosUteis": 812,
-      "densidadeSemantica": 54.68,
+      "titulo": "Windows Update travado ou &quot;desfazendo alterações&quot;",
+      "palavras": 1354,
+      "termosUteis": 810,
+      "densidadeSemantica": 54.81,
       "vocabulario": 444,
       "keywordPrincipal": {
         "termo": "windows update travado desfazendo alteracoes",
-        "ocorrencias": 1,
-        "densidade": 0.12
+        "ocorrencias": 3,
+        "densidade": 0.37
       },
       "topKeywords": [
         {
-          "termo": "atualizacao",
-          "ocorrencias": 14,
-          "densidade": 1.72
-        },
-        {
           "termo": "windows",
-          "ocorrencias": 14,
-          "densidade": 1.72
+          "ocorrencias": 16,
+          "densidade": 1.98
         },
         {
           "termo": "disco",
           "ocorrencias": 13,
           "densidade": 1.6
+        },
+        {
+          "termo": "atualizacao",
+          "ocorrencias": 12,
+          "densidade": 1.48
         },
         {
           "termo": "sistema",
@@ -9483,12 +9484,12 @@
           "densidade": 1.11
         },
         {
-          "termo": "reversao",
-          "ocorrencias": 9,
-          "densidade": 1.11
+          "termo": "componentes",
+          "ocorrencias": 8,
+          "densidade": 0.99
         },
         {
-          "termo": "componentes",
+          "termo": "update",
           "ocorrencias": 8,
           "densidade": 0.99
         },
@@ -9515,6 +9516,11 @@
       ],
       "topBigramas": [
         {
+          "termo": "windows update",
+          "ocorrencias": 7,
+          "densidade": 0.87
+        },
+        {
           "termo": "atividade disco",
           "ocorrencias": 5,
           "densidade": 0.62
@@ -9523,16 +9529,6 @@
           "termo": "desfazendo alteracoes",
           "ocorrencias": 5,
           "densidade": 0.62
-        },
-        {
-          "termo": "windows update",
-          "ocorrencias": 5,
-          "densidade": 0.62
-        },
-        {
-          "termo": "atualizacao travada",
-          "ocorrencias": 4,
-          "densidade": 0.49
         },
         {
           "termo": "chave recuperacao",
@@ -9553,6 +9549,11 @@
           "termo": "processo parado",
           "ocorrencias": 4,
           "densidade": 0.49
+        },
+        {
+          "termo": "causas comuns",
+          "ocorrencias": 3,
+          "densidade": 0.37
         }
       ],
       "headings": {
@@ -10384,121 +10385,121 @@
       "lote": "11A/5",
       "aprovadoEm": "2026-09-03",
       "titulo": "Como testar se o backup realmente funciona",
-      "palavras": 1098,
-      "termosUteis": 611,
-      "densidadeSemantica": 60.23,
-      "vocabulario": 368,
+      "palavras": 1475,
+      "termosUteis": 871,
+      "densidadeSemantica": 55.8,
+      "vocabulario": 486,
       "keywordPrincipal": {
         "termo": "como testar restauracao de backup",
         "ocorrencias": 4,
-        "densidade": 0.65
+        "densidade": 0.46
       },
       "topKeywords": [
         {
+          "termo": "teste",
+          "ocorrencias": 21,
+          "densidade": 2.41
+        },
+        {
           "termo": "backup",
-          "ocorrencias": 14,
-          "densidade": 2.29
+          "ocorrencias": 15,
+          "densidade": 1.72
         },
         {
           "termo": "copia",
-          "ocorrencias": 13,
-          "densidade": 2.13
+          "ocorrencias": 14,
+          "densidade": 1.61
         },
         {
-          "termo": "arquivo",
-          "ocorrencias": 12,
-          "densidade": 1.96
+          "termo": "pasta",
+          "ocorrencias": 11,
+          "densidade": 1.26
         },
         {
-          "termo": "midia",
-          "ocorrencias": 9,
-          "densidade": 1.47
+          "termo": "tempo",
+          "ocorrencias": 11,
+          "densidade": 1.26
         },
         {
-          "termo": "teste",
-          "ocorrencias": 9,
-          "densidade": 1.47
-        },
-        {
-          "termo": "tecnico",
-          "ocorrencias": 8,
-          "densidade": 1.31
-        },
-        {
-          "termo": "disco",
-          "ocorrencias": 7,
+          "termo": "dados",
+          "ocorrencias": 10,
           "densidade": 1.15
         },
         {
           "termo": "restauracao",
-          "ocorrencias": 7,
+          "ocorrencias": 10,
           "densidade": 1.15
+        },
+        {
+          "termo": "arquivo",
+          "ocorrencias": 9,
+          "densidade": 1.03
+        },
+        {
+          "termo": "midia",
+          "ocorrencias": 8,
+          "densidade": 0.92
         },
         {
           "termo": "rotina",
+          "ocorrencias": 8,
+          "densidade": 0.92
+        },
+        {
+          "termo": "arquivos",
           "ocorrencias": 7,
-          "densidade": 1.15
-        },
-        {
-          "termo": "copias",
-          "ocorrencias": 6,
-          "densidade": 0.98
-        },
-        {
-          "termo": "dados",
-          "ocorrencias": 6,
-          "densidade": 0.98
+          "densidade": 0.8
         },
         {
           "termo": "nuvem",
-          "ocorrencias": 6,
-          "densidade": 0.98
+          "ocorrencias": 7,
+          "densidade": 0.8
         }
       ],
       "topBigramas": [
         {
-          "termo": "curitiba regiao",
+          "termo": "abrir arquivo",
           "ocorrencias": 3,
-          "densidade": 0.49
+          "densidade": 0.34
         },
         {
           "termo": "dois tipos",
           "ocorrencias": 3,
-          "densidade": 0.49
+          "densidade": 0.34
+        },
+        {
+          "termo": "restaurar pasta",
+          "ocorrencias": 3,
+          "densidade": 0.34
+        },
+        {
+          "termo": "teste precisa",
+          "ocorrencias": 3,
+          "densidade": 0.34
         },
         {
           "termo": "teste restauracao",
           "ocorrencias": 3,
-          "densidade": 0.49
+          "densidade": 0.34
         },
         {
           "termo": "tres copias",
           "ocorrencias": 3,
-          "densidade": 0.49
+          "densidade": 0.34
         },
         {
-          "termo": "abrir arquivo",
+          "termo": "ambiente isolado",
           "ocorrencias": 2,
-          "densidade": 0.33
-        },
-        {
-          "termo": "arquivo real",
-          "ocorrencias": 2,
-          "densidade": 0.33
+          "densidade": 0.23
         },
         {
           "termo": "backup realmente",
           "ocorrencias": 2,
-          "densidade": 0.33
-        },
-        {
-          "termo": "chamar tecnico",
-          "ocorrencias": 2,
-          "densidade": 0.33
+          "densidade": 0.23
         }
       ],
       "headings": {
-        "h2": 12,
+        "h2": 16,
         "h3": 0
       },
       "schemas": [

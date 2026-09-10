@@ -1,6 +1,6 @@
 # Autoridade SEO — densidade semântica, keywords e links internos
 
-Gerado em: 2026-09-03T18:38:05.605Z
+Gerado em: 2026-09-10T06:22:41.144Z
 URLs analisadas: 78/78 · órfãs: 10
 
 | URL | Palavras | Dens. semântica | Keyword principal | Dens. KW | Links saída | Links entrada |
@@ -18,10 +18,10 @@ URLs analisadas: 78/78 · órfãs: 10
 | /blog/notebook-nao-liga-o-que-fazer | 1545 | 53.73% | notebook nao liga o que fazer | 0.33% | 14 | 5 |
 | /blog/computador-lento-causas-solucoes | 1887 | 50.79% | computador lento causas solucoes | 0% | 17 | 10 |
 | /blog/como-recuperar-dados-hd-com-defeito | 1451 | 62.24% | como recuperar dados hd com defeito | 0.12% | 10 | 10 |
-| /blog/como-fazer-upgrade-ssd-nvme | 1580 | 62.59% | como fazer upgrade ssd nvme | 0.12% | 10 | 4 |
+| /blog/como-fazer-upgrade-ssd-nvme | 1879 | 57.13% | como fazer upgrade ssd nvme | 0.19% | 10 | 4 |
 | /blog/como-configurar-roteador-wifi-iniciantes | 1984 | 53.83% | como configurar roteador wifi iniciantes | 0% | 9 | 5 |
 | /blog/como-saber-quem-esta-usando-meu-wifi | 1961 | 51.89% | como saber quem esta usando meu wifi | 0% | 9 | 1 |
-| /blog/como-escolher-um-bom-antivirus | 1618 | 65.19% | como escolher um bom antivirus | 0.11% | 11 | 1 |
+| /blog/como-escolher-um-bom-antivirus | 1913 | 59.43% | como escolher um bom antivirus | 0.09% | 11 | 1 |
 | /blog/como-proteger-computador-golpes-internet | 1435 | 64.04% | como proteger computador golpes internet | 0.24% | 10 | 2 |
 | /blog/como-limpar-notebook-por-dentro | 1718 | 62.1% | como limpar notebook por dentro | 0% | 12 | 8 |
 | /blog/como-trocar-pasta-termica-notebook | 1595 | 61.25% | como trocar pasta termica notebook | 0.22% | 11 | 5 |
@@ -41,7 +41,7 @@ URLs analisadas: 78/78 · órfãs: 10
 | /blog/informatica-basica | 3082 | 47.55% | informatica basica | 2.17% | 15 | 2 |
 | /blog/como-aprender-informatica | 2788 | 48.3% | como aprender informatica | 1.15% | 16 | 2 |
 | /blog/computador-entra-direto-na-bios | 2520 | 47.18% | computador entra direto na bios | 0.42% | 18 | 5 |
-| /blog/erro-no-bootable-device-como-resolver | 1773 | 47.85% | erro no bootable device como resolver | 0.48% | 13 | 4 |
+| /blog/erro-no-bootable-device-como-resolver | 1921 | 49.38% | erro no bootable device como resolver | 0.27% | 14 | 4 |
 | /blog/troquei-o-ssd-e-o-pc-so-abre-a-bios | 1644 | 53.17% | troquei o ssd e o pc so abre a bios | 0.21% | 15 | 3 |
 | /blog/limpar-arquivos-temporarios-windows | 1297 | 60% | limpar arquivos temporarios windows | 0.67% | 12 | 2 |
 | /blog/memoria-ram-insuficiente-sintomas | 1172 | 62.95% | memoria ram insuficiente sintomas | 0.57% | 10 | 5 |
@@ -50,7 +50,7 @@ URLs analisadas: 78/78 · órfãs: 10
 | /blog/botao-power-nao-funciona-jump-start-placa-mae | 1553 | 49.66% | botao power nao funciona jump start placa mae | 0% | 13 | 0 |
 | /blog/curto-circuito-placa-mae-como-identificar | 1489 | 56.89% | curto circuito placa mae como identificar | 0% | 11 | 2 |
 | /blog/bios-corrompida-reset-cmos-atualizacao | 1602 | 51.4% | bios corrompida reset cmos atualizacao | 0.32% | 11 | 1 |
-| /blog/internet-lenta-provedor-ou-roteador | 1210 | 55.94% | internet lenta provedor ou roteador | 0.58% | 9 | 2 |
+| /blog/internet-lenta-provedor-ou-roteador | 1515 | 55.7% | internet lenta provedor ou roteador | 0.43% | 9 | 2 |
 | /blog/impressora-offline-como-resolver | 1080 | 54.42% | impressora offline como resolver | 0.62% | 11 | 1 |
 | /blog/fila-de-impressao-travada-spooler-windows | 1030 | 54.75% | fila de impressao travada spooler windows | 0.48% | 11 | 1 |
 | /blog/hd-nao-e-reconhecido-na-bios-o-que-fazer | 1350 | 54.63% | hd nao e reconhecido na bios o que fazer | 0.13% | 14 | 3 |
@@ -64,13 +64,13 @@ URLs analisadas: 78/78 · órfãs: 10
 | /blog/webcam-usb-nao-e-detectada | 1109 | 53.74% | webcam usb nao e detectada | 0.47% | 9 | 2 |
 | /blog/windows-update-nao-funciona-o-que-verificar | 1625 | 50.68% | windows update nao funciona o que verificar | 0.21% | 12 | 3 |
 | /blog/limpar-cache-do-windows-update-softwaredistribution | 1220 | 55.49% | limpar cache do windows update softwaredistribution | 0.14% | 9 | 1 |
-| /blog/windows-update-travado-desfazendo-alteracoes | 1368 | 54.68% | windows update travado desfazendo alteracoes | 0.12% | 11 | 2 |
+| /blog/windows-update-travado-desfazendo-alteracoes | 1354 | 54.81% | windows update travado desfazendo alteracoes | 0.37% | 11 | 2 |
 | /blog/boot-uefi-ou-legacy-como-identificar | 1043 | 54.97% | boot uefi ou legacy como identificar | 1.01% | 12 | 1 |
 | /blog/ordem-de-boot-na-bios-como-configurar | 956 | 61.39% | ordem de boot na bios como configurar | 0.36% | 11 | 0 |
 | /blog/windows-reparo-automatico-em-loop | 986 | 62.18% | windows reparo automatico em loop | 0% | 12 | 1 |
 | /blog/manutencao-preventiva-de-computador-guia-completo | 1355 | 60.52% | manutencao preventiva de computador guia completo | 0.26% | 14 | 3 |
 | /blog/dispositivo-usb-nao-reconhecido-o-que-fazer | 1121 | 57.37% | dispositivo usb nao reconhecido o que fazer | 0.47% | 9 | 3 |
-| /blog/como-testar-restauracao-de-backup | 1098 | 60.23% | como testar restauracao de backup | 0.65% | 10 | 5 |
+| /blog/como-testar-restauracao-de-backup | 1475 | 55.8% | como testar restauracao de backup | 0.46% | 10 | 5 |
 | /blog/como-monitorar-temperatura-do-computador | 1058 | 64.91% | como monitorar temperatura do computador | 0.34% | 12 | 3 |
 | /blog/pendrive-somente-leitura-protegido-contra-gravacao | 986 | 61.62% | pendrive somente leitura protegido contra gravacao | 0.52% | 8 | 1 |
 | /blog/historico-de-arquivos-windows-como-configurar | 1004 | 61.01% | historico de arquivos windows como configurar | 0.35% | 12 | 2 |
