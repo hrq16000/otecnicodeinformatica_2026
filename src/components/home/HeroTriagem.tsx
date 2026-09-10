@@ -70,6 +70,20 @@ export const HeroTriagem = () => {
         aria-hidden="true"
       />
 
+      <div className="pointer-events-none absolute inset-y-0 right-0 hidden w-[48%] lg:block" aria-hidden="true">
+        <img
+          src="/hero-bancada-diagnostico-2026.png"
+          alt=""
+          width={1680}
+          height={945}
+          fetchPriority="high"
+          decoding="async"
+          className="h-full w-full object-cover object-center opacity-90"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-background via-background/85 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-b from-background/10 via-transparent to-background" />
+      </div>
+
       <div className="container relative z-10 mx-auto py-10 md:py-16">
         <div className="max-w-3xl">
           <p className="inline-flex items-center gap-2 rounded-full bg-[hsl(var(--categoria)/0.12)] px-4 py-1.5 font-heading text-xs font-semibold uppercase tracking-wider text-[hsl(var(--categoria))]">
@@ -85,6 +99,21 @@ export const HeroTriagem = () => {
             Computadores, notebooks, redes, Wi-Fi, sistemas, dados e suporte para pessoas e
             empresas. Conte o que aconteceu com suas palavras — a parte técnica fica com a gente.
           </p>
+          <figure className="relative mt-6 overflow-hidden rounded-2xl border border-border shadow-[var(--shadow-lg)] lg:hidden">
+            <img
+              src="/hero-bancada-diagnostico-2026.png"
+              alt="Bancada de diagnóstico com notebook, SSD e ferramentas de precisão"
+              width={1680}
+              height={945}
+              loading="eager"
+              fetchPriority="high"
+              decoding="async"
+              className="aspect-[16/9] w-full object-cover object-[65%_center]"
+            />
+            <figcaption className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent px-4 pb-3 pt-10 text-sm font-medium text-white">
+              Diagnóstico técnico começa pela causa.
+            </figcaption>
+          </figure>
         </div>
 
         {/* Campo principal: "O que está acontecendo?" */}
