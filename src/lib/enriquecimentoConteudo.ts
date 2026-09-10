@@ -948,6 +948,18 @@ export const ENRIQUECIMENTO_1: Record<string, EnriquecimentoConteudo> = {
     },
     blocos: [
       {
+        id: "seguranca-basica-roteador",
+        titulo: "Segurança básica do roteador sem complicar a rede",
+        intro: "Desempenho e segurança caminham juntos: uma configuração esquecida pode causar tanto instabilidade quanto acesso indevido.",
+        itens: [
+          { titulo: "Troque a senha administrativa", desc: "A senha do painel não deve ser a mesma da rede sem fio. Guarde-a em local seguro e desative acesso remoto se ele não for necessário." },
+          { titulo: "Prefira WPA2 ou WPA3", desc: "Use o modo mais forte compatível com seus dispositivos. WEP e redes abertas não devem ser tratados como opções aceitáveis para uso cotidiano." },
+          { titulo: "Separe convidados e IoT", desc: "Uma rede de convidados reduz o acesso direto de aparelhos de visita e dispositivos inteligentes, mas não substitui atualização nem segmentação profissional." },
+          { titulo: "Atualize com cópia da configuração", desc: "Baixe firmware apenas do fabricante, registre a versão e exporte a configuração quando o modelo permitir. Se a atualização falhar, não interrompa energia repetidamente." },
+          { titulo: "Desconfie de promessas absolutas", desc: "Nenhum roteador impede sozinho invasões, malware ou falhas do provedor. Segurança exige senhas, atualizações, dispositivos protegidos e acompanhamento." },
+        ],
+      },
+      {
         id: "mitos-do-roteador",
         titulo: "Mitos de roteador que geram gasto sem resolver a queda",
         intro: "Número de antenas e velocidade de caixa não substituem medição no ambiente real.",
