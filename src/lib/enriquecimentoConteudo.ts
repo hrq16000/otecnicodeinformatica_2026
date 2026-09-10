@@ -648,11 +648,21 @@ export const ENRIQUECIMENTO_1: Record<string, EnriquecimentoConteudo> = {
         ],
       },
     ],
+    fontes: [
+      {
+        titulo: "Microsoft Support — Otimizar unidades de dados no Windows",
+        url: "https://support.microsoft.com/en-us/windows/experience/storage-filemanagement/defragment-optimize-your-data-drives-in-windows",
+        nota: "Explica a otimização automática e o TRIM aplicado a SSDs.",
+      },
+      {
+        titulo: "Microsoft Support — Configurações de armazenamento no Windows",
+        url: "https://support.microsoft.com/en-us/windows/experience/storage-filemanagement/storage-settings-in-windows",
+        nota: "Mostra como conferir tipo, capacidade, uso e otimização da unidade.",
+      },
+    ],
   },
 
-  /* ------------------------------------------------------------------ */
-  /* EQUIPAMENTO — notebook                                              */
-  /* ------------------------------------------------------------------ */
+
   "/equipamentos/notebook": {
     respostaRapida:
       "No notebook, o mesmo sintoma muda de causa conforme o que acontece nos primeiros segundos depois do botão de ligar. Existe LED aceso? Tem ruído de ventoinha? Aparece o logotipo do fabricante? Essas três respostas já separam falha de alimentação, falha de inicialização e falha de imagem — que exigem trabalhos completamente diferentes.",
