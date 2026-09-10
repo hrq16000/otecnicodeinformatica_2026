@@ -545,6 +545,18 @@ export const ENRIQUECIMENTO_1: Record<string, EnriquecimentoConteudo> = {
       "Backup só conta como backup quando existe em mais de um lugar e já foi restaurado pelo menos uma vez em teste. Cópia na mesma máquina protege contra apagamento acidental, mas não contra roubo, queima da fonte, ransomware ou falha do próprio disco — que são justamente os casos em que o arquivo faz falta.",
     blocos: [
       {
+        id: "rpo-rto-backup",
+        titulo: "Backup empresarial: defina perda aceitável e tempo de retorno",
+        intro: "Uma empresa não precisa apenas de cópias; precisa saber quanto trabalho pode perder e em quanto tempo precisa voltar a operar.",
+        itens: [
+          { titulo: "RPO — ponto de recuperação", desc: "Pergunte quantos minutos ou horas de trabalho a empresa aceita perder. Esse limite define a frequência das cópias e não pode ser escolhido apenas pelo espaço disponível." },
+          { titulo: "RTO — tempo de retorno", desc: "Defina quanto tempo o serviço pode ficar parado. Restaurar um arquivo é diferente de recuperar servidor, identidade, sistema financeiro ou estação de trabalho." },
+          { titulo: "Priorize dependências", desc: "Identidade, rede, sistema de gestão, banco de dados e arquivos compartilhados podem depender uns dos outros. A lista de restauração deve refletir essa ordem." },
+          { titulo: "Teste em ambiente separado", desc: "Uma restauração que nunca foi ensaiada não é um plano. Teste amostras e, quando possível, um ambiente isolado para confirmar permissões, versões e integridade." },
+          { titulo: "Registre responsáveis e evidências", desc: "Documente quem pode restaurar, onde estão as chaves, qual cópia é válida e quando o último teste ocorreu. Sem isso, a urgência vira improviso." },
+        ],
+      },
+      {
         id: "mitos-do-backup",
         titulo: "Mitos de backup que dão falsa sensação de segurança",
         intro: "Uma cópia só protege quando está acessível, íntegra, atualizada e pode ser restaurada.",
