@@ -25,8 +25,8 @@ import { ENTIDADES_ROUTES } from "./lib/entidades-static.mjs";
 const BASE_ROUTES = [
   {
     "path": "/",
-    "title": "O Técnico de Informática | Assistência Técnica em Curitiba",
-    "description": "Assistência técnica em Curitiba com diagnóstico honesto: atendimento a domicílio, remoto ou com coleta. Escolha o serviço e continue pelo WhatsApp."
+    "title": "Soluções de Informática e Assistência Técnica em Curitiba",
+    "description": "Computador lento, notebook que não liga, Wi-Fi caindo ou arquivo perdido? Guias técnicos e assistência em informática para casa e empresa em Curitiba."
   },
   {
     "path": "/anuncie",
