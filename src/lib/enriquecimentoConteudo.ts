@@ -167,6 +167,18 @@ export const ENRIQUECIMENTO_1: Record<string, EnriquecimentoConteudo> = {
     },
     blocos: [
       {
+        id: "registro-minimo-wifi",
+        titulo: "Registro mínimo para comparar um problema de Wi‑Fi",
+        intro: "Anote os dados antes de trocar canal, resetar o roteador ou contratar outro plano. O histórico torna o defeito reproduzível.",
+        itens: [
+          { titulo: "Dispositivo e sistema", desc: "Registre modelo do celular ou notebook, versão do sistema, adaptador e se o teste foi feito por Wi‑Fi ou cabo." },
+          { titulo: "Local e distância", desc: "Anote cômodo, número de paredes, distância aproximada e se portas ou móveis mudaram entre os testes." },
+          { titulo: "Horário e duração", desc: "Informe quando começou, quanto dura a queda e se todos os dispositivos perdem conexão ao mesmo tempo." },
+          { titulo: "Resultado separado", desc: "Registre acesso ao roteador, acesso a sites por nome e acesso por endereço IP. Isso ajuda a diferenciar rádio, DNS e link externo." },
+          { titulo: "Mudança realizada", desc: "Anote cada alteração, valor anterior e resultado. Se piorar, reverta para o estado conhecido em vez de acumular mudanças." },
+        ],
+      },
+      {
         id: "matriz-teste-wifi",
         titulo: "Matriz de teste em dez minutos para Wi‑Fi instável",
         intro: "Faça os testes na mesma posição e anote horário, dispositivo, conexão e resultado. Uma medição isolada não separa rádio, roteador e provedor.",
