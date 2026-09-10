@@ -41,6 +41,20 @@ export const HeroPremium = () => (
   >
     <div className="absolute inset-0 bg-gradient-to-br from-[hsl(var(--hero-bg))] via-[hsl(205_55%_16%)] to-[hsl(var(--hero-bg-end))]" />
 
+    <div className="absolute inset-y-0 right-0 hidden w-[62%] lg:block" aria-hidden="true">
+      <img
+        src="/hero-bancada-diagnostico-2026.png"
+        alt=""
+        width={1680}
+        height={945}
+        fetchPriority="high"
+        decoding="async"
+        className="h-full w-full object-cover object-center"
+      />
+      <div className="absolute inset-0 bg-gradient-to-r from-[hsl(var(--hero-bg))] via-[hsl(var(--hero-bg)/0.88)] to-[hsl(var(--hero-bg)/0.12)]" />
+      <div className="absolute inset-0 bg-[linear-gradient(to_bottom,hsl(var(--hero-bg)/0.18),transparent_30%,hsl(var(--hero-bg)/0.5))]" />
+    </div>
+
     {/* Grid técnico sutil — estático, sem custo de imagem. */}
     <div
       className="absolute inset-0 opacity-[0.07]"
@@ -56,12 +70,28 @@ export const HeroPremium = () => (
       aria-hidden="true"
     />
 
-    <div className="container relative z-10 mx-auto py-10 md:py-20">
+    <div className="container relative z-10 mx-auto grid gap-8 py-10 md:py-20 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,0.6fr)] lg:items-center">
       <div className="max-w-3xl">
         <p className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-1.5 text-sm font-semibold text-white backdrop-blur">
           <ShieldCheck className="h-4 w-4 text-[hsl(var(--accent))]" aria-hidden="true" />
           Assistência técnica em informática
         </p>
+
+        <figure className="relative mt-5 overflow-hidden rounded-2xl border border-white/15 shadow-2xl lg:hidden">
+          <img
+            src="/hero-bancada-diagnostico-2026.png"
+            alt="Bancada de diagnóstico com notebook aberto, SSD e ferramentas de precisão"
+            width={1680}
+            height={945}
+            loading="eager"
+            fetchPriority="high"
+            decoding="async"
+            className="aspect-[16/9] w-full object-cover object-[65%_center]"
+          />
+          <figcaption className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent px-4 pb-3 pt-10 text-sm font-medium text-white/90">
+            Diagnóstico começa pela causa, não por tentativa e erro.
+          </figcaption>
+        </figure>
 
         <h1 className="mt-4 font-heading text-3xl font-bold leading-[1.08] tracking-tight sm:text-4xl md:text-5xl lg:text-[3.4rem]">
           Seu computador precisa funcionar.
