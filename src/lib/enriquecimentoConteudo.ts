@@ -1074,6 +1074,31 @@ export const ENRIQUECIMENTO_1: Record<string, EnriquecimentoConteudo> = {
         ],
       },
     ],
+  },
+  "/problemas/placa-de-video-nao-funciona-curitiba": {
+    respostaRapida:
+      "Artefato, tela preta ou queda de desempenho pode vir da GPU, do driver, da fonte, do cabo, da temperatura ou do monitor. O diagnóstico começa isolando o momento e a condição em que o vídeo falha.",
+    tabelaDiagnostica: {
+      titulo: "Placa de vídeo: sintoma, hipótese e teste",
+      linhas: [
+        { sintoma: "Artefatos já aparecem no firmware", causa: "GPU, memória de vídeo, alimentação ou conexão física", verificar: "Testar outra saída e monitor, revisar encaixe com energia desligada", acao: "Parar se houver aquecimento ou cheiro anormal" },
+        { sintoma: "Falha somente em jogos ou carga", causa: "Temperatura, fonte, driver ou instabilidade", verificar: "Reproduzir com monitoramento e registrar evento", acao: "Não aumentar tensão nem aplicar overclock para testar" },
+        { sintoma: "Imagem funciona após reinstalar driver", causa: "Conflito de software ou instalação corrompida", verificar: "Confirmar versão, estabilidade e comportamento após reinício", acao: "Não concluir que o hardware está novo apenas por um teste" },
+      ],
+    },
+    blocos: [
+      {
+        id: "isolamento-gpu-fonte-monitor",
+        titulo: "Como separar GPU, fonte, monitor e driver",
+        itens: [
+          { titulo: "Troque o monitor ou cabo", desc: "Se o defeito acompanha o computador, monitor e cabo ficam menos prováveis; se fica na mesma tela, investigue saída e monitor." },
+          { titulo: "Compare vídeo integrado e dedicado", desc: "Quando a plataforma oferece vídeo integrado, o teste pode separar GPU dedicada de sistema, fonte e placa-mãe — respeitando o manual." },
+          { titulo: "Observe o momento da falha", desc: "Falha antes do logotipo aponta para POST e hardware; falha apenas após o Windows carregar inclui driver, resolução e perfil de energia." },
+          { titulo: "Meça antes de trocar fonte", desc: "Potência nominal não é o único critério. Conectores, qualidade, estabilidade sob carga e compatibilidade com a GPU precisam ser confirmados." },
+          { titulo: "Reproduza sem modificar tudo", desc: "Registre temperatura, frequência, aplicativo e horário. Alterar driver, cabo, BIOS e perfil ao mesmo tempo elimina a evidência." },
+        ],
+      },
+    ],
   }
 };
 
