@@ -16,7 +16,10 @@ import { ACTIVE_SITEMAPS } from "./lib/curated-urls.mjs";
 
 const args = process.argv.slice(2);
 const CHECK = args.includes("--check");
-const DIST = resolve(process.cwd(), args.find((a) => !a.startsWith("--")) ?? "dist");
+// Padrão inteligente: o build SSR entrega o HTML em dist/client; caímos para
+// dist/ apenas quando aquele diretório não existe.
+const distPadrao = existsSync(resolve(process.cwd(), "dist/client")) ? "dist/client" : "dist";
+const DIST = resolve(process.cwd(), args.find((a) => !a.startsWith("--")) ?? distPadrao);
 const OUT = resolve(process.cwd(), "public/seo-inventory.json");
 
 /** Tipo editorial derivado do sitemap de origem + prefixo da rota. */

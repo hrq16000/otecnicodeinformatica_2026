@@ -43,10 +43,11 @@ export const HeroPremium = () => (
 
     <div className="absolute inset-y-0 right-0 hidden w-[62%] lg:block" aria-hidden="true">
       <img
-        src="/hero-bancada-diagnostico-2026.png"
+        src="/fotos/bancada-tecnica.jpg"
         alt=""
-        width={1680}
-        height={945}
+        aria-hidden="true"
+        width={1024}
+        height={735}
         fetchPriority="high"
         decoding="async"
         className="h-full w-full object-cover object-center"
@@ -79,10 +80,10 @@ export const HeroPremium = () => (
 
         <figure className="relative mt-5 overflow-hidden rounded-2xl border border-white/15 shadow-2xl lg:hidden">
           <img
-            src="/hero-bancada-diagnostico-2026.png"
+            src="/fotos/bancada-tecnica.jpg"
             alt="Bancada de diagnóstico com notebook aberto, SSD e ferramentas de precisão"
-            width={1680}
-            height={945}
+            width={1024}
+            height={735}
             loading="eager"
             fetchPriority="high"
             decoding="async"

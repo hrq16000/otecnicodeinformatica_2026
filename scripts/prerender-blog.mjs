@@ -41,6 +41,19 @@ async function main() {
   const handler = mod.default;
   const ctx = { waitUntil: () => {} };
 
+  // A home renderizada também é o template usado pelo gerador estático das
+  // demais rotas (scripts/prerender-cities.mjs), então precisa existir.
+  const home = await handler.fetch(new Request("http://localhost/"), {}, ctx);
+  if (home.ok) {
+    const homeHtml = await home.text();
+    await mkdir(path.join(ROOT, "dist/client"), { recursive: true });
+    await writeFile(path.join(ROOT, "dist/client/index.html"), homeHtml, "utf-8");
+    console.log("[prerender] / -> dist/client/index.html");
+  } else {
+    console.error(`[prerender] erro ${home.status} na home`);
+  }
+
+
   for (const slug of slugs) {
     const url = `http://localhost/blog/${slug}`;
     const res = await handler.fetch(new Request(url), {}, ctx);

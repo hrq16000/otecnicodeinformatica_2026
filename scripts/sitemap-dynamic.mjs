@@ -186,9 +186,45 @@ const ledger = {
   eventos: [...(anterior.eventos ?? []), ...eventos].slice(-500),
 };
 
+/* ── 5b. Ledger INCREMENTAL por onda ────────────────────────────────────────
+ * O sitemap continua sendo gerado a partir do manifesto curado (fonte única),
+ * mas o rastreamento é incremental: cada execução registra APENAS as URLs que
+ * entraram agora, com o estado de submissão. Nada é reprocessado do zero e
+ * URLs já registradas nunca reaparecem como novidade.
+ */
+const INCREMENTAL = resolve(ROOT, "public/sitemap-incremental.json");
+const incrementalAnterior = existsSync(INCREMENTAL)
+  ? JSON.parse(readFileSync(INCREMENTAL, "utf8"))
+  : { ondas: [] };
+const jaRastreadas = new Set((incrementalAnterior.ondas ?? []).flatMap((o) => o.urls ?? []));
+const novasDaOnda = adicionadas.filter((p) => !jaRastreadas.has(p));
+const incremental = {
+  geradoEm: agora,
+  host: HOST,
+  totalRastreadas: jaRastreadas.size + novasDaOnda.length,
+  totalNoSitemap: depois.size,
+  ondas: [
+    ...(incrementalAnterior.ondas ?? []),
+    ...(novasDaOnda.length
+      ? [
+          {
+            id: agora,
+            geradoEm: agora,
+            modo: ledger.modo,
+            total: novasDaOnda.length,
+            urls: novasDaOnda,
+            indexNow: indexNowStatus,
+            googleSearchConsole: gscStatus,
+          },
+        ]
+      : []),
+  ].slice(-200),
+};
+
 if (!CHECK) {
   mkdirSync(HIST_DIR, { recursive: true });
   writeFileSync(LEDGER, `${JSON.stringify(ledger, null, 2)}\n`);
+  writeFileSync(INCREMENTAL, `${JSON.stringify(incremental, null, 2)}\n`);
   if (SUBMIT && !DRY) {
     writeFileSync(resolve(HIST_DIR, `${agora.replace(/[:.]/g, "-")}.json`), `${JSON.stringify(ledger, null, 2)}\n`);
   }
@@ -197,6 +233,7 @@ if (!CHECK) {
 console.log(
   `[sitemap-dynamic] ${depois.size} URL(s) no sitemap · lotes aprovados ${lotes.length} · +${adicionadas.length}/-${removidas.length}` +
     (SUBMIT ? ` · GSC ${gscStatus} · IndexNow ${indexNowStatus}` : "") +
+    ` · incremental +${novasDaOnda.length}` +
     (CHECK ? " · CHECK (nada gravado)" : ""),
 );
 adicionadas.slice(0, 20).forEach((p) => console.log(`  + ${p}`));

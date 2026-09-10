@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-09-03T18:27:33.084Z",
+  "geradoEm": "2026-09-10T07:51:48.184Z",
   "host": "otecnicodeinformatica.com.br",
   "modo": "generate",
   "sitemap": {
@@ -482,11 +482,7 @@
     ]
   },
   "diff": {
-    "adicionadas": [
-      "/blog/arquivo-corrompido-nao-abre-o-que-fazer",
-      "/blog/rede-wifi-nao-aparece-na-lista-o-que-verificar",
-      "/blog/ventoinha-do-computador-fazendo-barulho-o-que-verificar"
-    ],
+    "adicionadas": [],
     "removidas": [],
     "regressoes": []
   },
@@ -1787,6 +1783,186 @@
           "/blog/rede-wifi-nao-aparece-na-lista-o-que-verificar",
           "/blog/ventoinha-do-computador-fazendo-barulho-o-que-verificar"
         ],
+        "removidas": [],
+        "total": 247
+      },
+      "error": null
+    },
+    {
+      "id": "cdcb3400-e1f6-489e-b076-cbe25586d184",
+      "action": "sync_approved",
+      "status": "OK",
+      "source": "cli",
+      "timestamp": "2026-09-10T06:30:44.293Z",
+      "details": {
+        "modo": "write",
+        "saida": "sitemap editorial: em dia (78 artigos indexáveis)"
+      },
+      "error": null
+    },
+    {
+      "id": "f35945ac-c99f-4954-b15f-f3acb3ac7b29",
+      "action": "generate_sitemaps",
+      "status": "OK",
+      "source": "cli",
+      "timestamp": "2026-09-10T06:30:44.442Z",
+      "details": {
+        "saida": "sitemap curado: index + 8 sub-sitemaps (247 urls)"
+      },
+      "error": null
+    },
+    {
+      "id": "679b97d9-1c6c-4cb8-947a-6f1d29ebc5f5",
+      "action": "diff_no_regression",
+      "status": "OK",
+      "source": "cli",
+      "timestamp": "2026-09-10T06:30:44.465Z",
+      "details": {
+        "adicionadas": [],
+        "removidas": [],
+        "total": 247
+      },
+      "error": null
+    },
+    {
+      "id": "fcc70636-c68a-4aac-88ee-28d6624fff4b",
+      "action": "sync_approved",
+      "status": "OK",
+      "source": "cli",
+      "timestamp": "2026-09-10T06:36:37.148Z",
+      "details": {
+        "modo": "write",
+        "saida": "sitemap editorial: em dia (78 artigos indexáveis)"
+      },
+      "error": null
+    },
+    {
+      "id": "78f9484f-9258-409a-9994-38bbbc16e7cf",
+      "action": "generate_sitemaps",
+      "status": "OK",
+      "source": "cli",
+      "timestamp": "2026-09-10T06:36:37.348Z",
+      "details": {
+        "saida": "sitemap curado: index + 8 sub-sitemaps (247 urls)"
+      },
+      "error": null
+    },
+    {
+      "id": "42926e06-8790-48e1-bb2d-34fc98c274d0",
+      "action": "diff_no_regression",
+      "status": "OK",
+      "source": "cli",
+      "timestamp": "2026-09-10T06:36:37.370Z",
+      "details": {
+        "adicionadas": [],
+        "removidas": [],
+        "total": 247
+      },
+      "error": null
+    },
+    {
+      "id": "34d29f57-b766-4289-b82f-b4a720d8b3f9",
+      "action": "sync_approved",
+      "status": "OK",
+      "source": "cli",
+      "timestamp": "2026-09-10T06:42:46.534Z",
+      "details": {
+        "modo": "write",
+        "saida": "sitemap editorial: em dia (78 artigos indexáveis)"
+      },
+      "error": null
+    },
+    {
+      "id": "9331f8ee-6cb3-469c-a37e-6b89478f5f94",
+      "action": "generate_sitemaps",
+      "status": "OK",
+      "source": "cli",
+      "timestamp": "2026-09-10T06:42:46.761Z",
+      "details": {
+        "saida": "sitemap curado: index + 8 sub-sitemaps (247 urls)"
+      },
+      "error": null
+    },
+    {
+      "id": "f561d155-4751-493c-80a2-83120d22ee47",
+      "action": "diff_no_regression",
+      "status": "OK",
+      "source": "cli",
+      "timestamp": "2026-09-10T06:42:46.817Z",
+      "details": {
+        "adicionadas": [],
+        "removidas": [],
+        "total": 247
+      },
+      "error": null
+    },
+    {
+      "id": "11f4565d-e9fe-43b1-9452-7520c28142d1",
+      "action": "sync_approved",
+      "status": "OK",
+      "source": "cli",
+      "timestamp": "2026-09-10T06:54:21.432Z",
+      "details": {
+        "modo": "write",
+        "saida": "sitemap editorial: em dia (78 artigos indexáveis)"
+      },
+      "error": null
+    },
+    {
+      "id": "5d477c3e-6146-48dd-90e8-48578e42ec5b",
+      "action": "generate_sitemaps",
+      "status": "OK",
+      "source": "cli",
+      "timestamp": "2026-09-10T06:54:21.754Z",
+      "details": {
+        "saida": "sitemap curado: index + 8 sub-sitemaps (247 urls)"
+      },
+      "error": null
+    },
+    {
+      "id": "98babb6e-c6b7-4768-bf6a-482d36820d07",
+      "action": "diff_no_regression",
+      "status": "OK",
+      "source": "cli",
+      "timestamp": "2026-09-10T06:54:21.782Z",
+      "details": {
+        "adicionadas": [],
+        "removidas": [],
+        "total": 247
+      },
+      "error": null
+    },
+    {
+      "id": "32bcabbe-c849-407f-a3da-751fcff94146",
+      "action": "sync_approved",
+      "status": "OK",
+      "source": "cli",
+      "timestamp": "2026-09-10T07:51:48.294Z",
+      "details": {
+        "modo": "write",
+        "saida": "sitemap editorial: em dia (78 artigos indexáveis)"
+      },
+      "error": null
+    },
+    {
+      "id": "3f037602-9bf5-4d11-8340-5faac80089b5",
+      "action": "generate_sitemaps",
+      "status": "OK",
+      "source": "cli",
+      "timestamp": "2026-09-10T07:51:48.457Z",
+      "details": {
+        "saida": "sitemap curado: index + 8 sub-sitemaps (247 urls)"
+      },
+      "error": null
+    },
+    {
+      "id": "f47d7ab0-34a0-4267-a562-f6c2b9e1e227",
+      "action": "diff_no_regression",
+      "status": "OK",
+      "source": "cli",
+      "timestamp": "2026-09-10T07:51:48.472Z",
+      "details": {
+        "adicionadas": [],
         "removidas": [],
         "total": 247
       },

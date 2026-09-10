@@ -11,6 +11,8 @@ import { IndexacaoLedgerPanel } from "@/components/admin/IndexacaoLedgerPanel";
 import { DeployStatusPanel } from "@/components/admin/DeployStatusPanel";
 import { GscSnapshotPanel } from "@/components/admin/GscSnapshotPanel";
 import { GscInventarioPanel } from "@/components/admin/GscInventarioPanel";
+import { SeoHealthcheckPanel } from "@/components/admin/SeoHealthcheckPanel";
+import { InterlinkSuggestionsPanel } from "@/components/admin/InterlinkSuggestionsPanel";
 import auditoriaAfirmacoes from "@/data/trustClaimsAudit.json";
 
 
@@ -237,6 +239,15 @@ export default function AdminSeo() {
       <div className="mt-6">
         <DeployStatusPanel />
       </div>
+
+      <div className="mt-6">
+        <SeoHealthcheckPanel />
+      </div>
+
+      <div className="mt-6">
+        <InterlinkSuggestionsPanel />
+      </div>
+
 
       <div className="mt-6 grid gap-3 sm:grid-cols-4">
         <Kpi label="URLs" valor={String(inv?.total ?? 0)} hint={inv ? `gerado em ${new Date(inv.geradoEm).toLocaleString("pt-BR")}` : "—"} />
