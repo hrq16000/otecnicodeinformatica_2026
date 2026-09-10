@@ -641,6 +641,18 @@ export const ENRIQUECIMENTO_1: Record<string, EnriquecimentoConteudo> = {
       "Trocar HD por SSD é o upgrade que mais muda a sensação de uso em máquina antiga: inicialização, abertura de programas e resposta do sistema deixam de esperar uma peça mecânica. Mas SSD não corrige superaquecimento, defeito de placa-mãe, memória insuficiente para o uso nem infecção — se o sintoma é travamento aleatório ou desligamento, o diagnóstico vem antes da peça.",
     blocos: [
       {
+        id: "descarte-seguro-ssd",
+        titulo: "Excluir, formatar ou descartar: o que realmente protege os dados",
+        intro: "Trocar um SSD não encerra a responsabilidade pelos dados que ficaram nele. O método depende de o dispositivo ainda funcionar e do nível de sensibilidade das informações.",
+        itens: [
+          { titulo: "Excluir arquivo não é apagar a mídia", desc: "A exclusão normalmente remove referências; dados podem permanecer até serem reutilizados. Não entregue a unidade com arquivos sensíveis apenas porque a pasta sumiu." },
+          { titulo: "Formatação rápida não é garantia", desc: "Ela recria estruturas do sistema de arquivos, mas não deve ser tratada como método universal de sanitização. O procedimento precisa considerar tipo de mídia e ferramenta do fabricante." },
+          { titulo: "TRIM muda o cenário do SSD", desc: "O comando informa blocos que podem ser limpos internamente, mas não é uma promessa de apagamento imediato nem substitui uma política de descarte." },
+          { titulo: "Unidade criptografada reduz exposição", desc: "Criptografia de dispositivo ou BitLocker ajuda quando a chave não acompanha a mídia, mas a configuração e a recuperação precisam ser verificadas antes do descarte." },
+          { titulo: "Falha física exige decisão diferente", desc: "Se o SSD não é reconhecido e contém dados sensíveis, não faça inúmeras tentativas de gravação. Preserve a unidade e registre a necessidade de descarte ou recuperação especializada." },
+        ],
+      },
+      {
         id: "migracao-reversivel-ssd",
         titulo: "Migração para SSD sem apagar o disco original às cegas",
         intro: "A migração segura mantém uma rota de retorno até confirmar que o novo sistema inicia e que os arquivos importantes estão íntegros.",
