@@ -652,6 +652,18 @@ export const ENRIQUECIMENTO_1: Record<string, EnriquecimentoConteudo> = {
     },
     blocos: [
       {
+        id: "decisao-upgrade-notebook",
+        titulo: "Antes de trocar a peça: a sequência que evita diagnóstico errado",
+        intro: "Notebook combina alimentação, bateria, tela e componentes soldados. Trocar a peça mais visível nem sempre resolve o sintoma.",
+        itens: [
+          { titulo: "Sem LED e sem reação", desc: "Comece por tomada, carregador compatível, conector DC/USB-C e circuito de carga. Não conclua que a placa-mãe queimou só porque a bateria não carrega." },
+          { titulo: "Liga, mas não chega ao logotipo", desc: "Memória, firmware, armazenamento e alimentação continuam hipóteses. Registre bipes, LEDs e mensagens antes de abrir o equipamento." },
+          { titulo: "Funciona na tomada e desliga fora dela", desc: "A bateria pode estar degradada, descalibrada ou sem comunicação. A autonomia exibida pelo sistema não é prova de capacidade real." },
+          { titulo: "Fica lento e quente", desc: "Meça temperatura e frequência sob o uso real, verifique ventilação e saúde do armazenamento. Limpeza não corrige automaticamente pasta térmica, sensor ou falha de ventoinha." },
+          { titulo: "Upgrade possível não é upgrade recomendado", desc: "Confira limite de RAM, formato do SSD, garantia, parafusos, cabos e disponibilidade de peças. Faça backup verificado antes de desmontar ou clonar." },
+        ],
+      },
+      {
         id: "notebook-verificar",
         titulo: "Verificações seguras que você pode fazer antes de acionar suporte",
         intro:
