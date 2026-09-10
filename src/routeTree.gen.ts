@@ -84,6 +84,7 @@ import { Route as TecnicoInformaticaPiraquaraRouteImport } from './routes/tecnic
 import { Route as TecnicoInformaticaQuatroBarrasRouteImport } from './routes/tecnico-informatica-quatro-barras'
 import { Route as TecnicoInformaticaSaoJosePinhaisRouteImport } from './routes/tecnico-informatica-sao-jose-pinhais'
 import { Route as TermosECondicoesRouteImport } from './routes/termos-e-condicoes'
+import { Route as TransparenciaRouteImport } from './routes/transparencia'
 import { Route as ValoresRouteImport } from './routes/valores'
 import { Route as ValorizacaoDoTrabalhoTecnicoRouteImport } from './routes/valorizacao-do-trabalho-tecnico'
 import { Route as AdminAfirmacoesRouteImport } from './routes/admin_.afirmacoes'
@@ -880,6 +881,11 @@ const TecnicoInformaticaSaoJosePinhaisRoute =
 const TermosECondicoesRoute = TermosECondicoesRouteImport.update({
   id: '/termos-e-condicoes',
   path: '/termos-e-condicoes',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TransparenciaRoute = TransparenciaRouteImport.update({
+  id: '/transparencia',
+  path: '/transparencia',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ValoresRoute = ValoresRouteImport.update({
@@ -3133,6 +3139,7 @@ export interface FileRoutesByFullPath {
   '/tecnico-informatica-quatro-barras': typeof TecnicoInformaticaQuatroBarrasRoute
   '/tecnico-informatica-sao-jose-pinhais': typeof TecnicoInformaticaSaoJosePinhaisRoute
   '/termos-e-condicoes': typeof TermosECondicoesRoute
+  '/transparencia': typeof TransparenciaRoute
   '/valores': typeof ValoresRoute
   '/valorizacao-do-trabalho-tecnico': typeof ValorizacaoDoTrabalhoTecnicoRoute
   '/admin/afirmacoes': typeof AdminAfirmacoesRoute
@@ -3615,6 +3622,7 @@ export interface FileRoutesByTo {
   '/tecnico-informatica-quatro-barras': typeof TecnicoInformaticaQuatroBarrasRoute
   '/tecnico-informatica-sao-jose-pinhais': typeof TecnicoInformaticaSaoJosePinhaisRoute
   '/termos-e-condicoes': typeof TermosECondicoesRoute
+  '/transparencia': typeof TransparenciaRoute
   '/valores': typeof ValoresRoute
   '/valorizacao-do-trabalho-tecnico': typeof ValorizacaoDoTrabalhoTecnicoRoute
   '/admin/afirmacoes': typeof AdminAfirmacoesRoute
@@ -4098,6 +4106,7 @@ export interface FileRoutesById {
   '/tecnico-informatica-quatro-barras': typeof TecnicoInformaticaQuatroBarrasRoute
   '/tecnico-informatica-sao-jose-pinhais': typeof TecnicoInformaticaSaoJosePinhaisRoute
   '/termos-e-condicoes': typeof TermosECondicoesRoute
+  '/transparencia': typeof TransparenciaRoute
   '/valores': typeof ValoresRoute
   '/valorizacao-do-trabalho-tecnico': typeof ValorizacaoDoTrabalhoTecnicoRoute
   '/admin_/afirmacoes': typeof AdminAfirmacoesRoute
@@ -4582,6 +4591,7 @@ export interface FileRouteTypes {
     | '/tecnico-informatica-quatro-barras'
     | '/tecnico-informatica-sao-jose-pinhais'
     | '/termos-e-condicoes'
+    | '/transparencia'
     | '/valores'
     | '/valorizacao-do-trabalho-tecnico'
     | '/admin/afirmacoes'
@@ -5064,6 +5074,7 @@ export interface FileRouteTypes {
     | '/tecnico-informatica-quatro-barras'
     | '/tecnico-informatica-sao-jose-pinhais'
     | '/termos-e-condicoes'
+    | '/transparencia'
     | '/valores'
     | '/valorizacao-do-trabalho-tecnico'
     | '/admin/afirmacoes'
@@ -5546,6 +5557,7 @@ export interface FileRouteTypes {
     | '/tecnico-informatica-quatro-barras'
     | '/tecnico-informatica-sao-jose-pinhais'
     | '/termos-e-condicoes'
+    | '/transparencia'
     | '/valores'
     | '/valorizacao-do-trabalho-tecnico'
     | '/admin_/afirmacoes'
@@ -6029,6 +6041,7 @@ export interface RootRouteChildren {
   TecnicoInformaticaQuatroBarrasRoute: typeof TecnicoInformaticaQuatroBarrasRoute
   TecnicoInformaticaSaoJosePinhaisRoute: typeof TecnicoInformaticaSaoJosePinhaisRoute
   TermosECondicoesRoute: typeof TermosECondicoesRoute
+  TransparenciaRoute: typeof TransparenciaRoute
   ValoresRoute: typeof ValoresRoute
   ValorizacaoDoTrabalhoTecnicoRoute: typeof ValorizacaoDoTrabalhoTecnicoRoute
   AdminAfirmacoesRoute: typeof AdminAfirmacoesRoute
@@ -6961,6 +6974,13 @@ declare module '@tanstack/react-router' {
       path: '/termos-e-condicoes'
       fullPath: '/termos-e-condicoes'
       preLoaderRoute: typeof TermosECondicoesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/transparencia': {
+      id: '/transparencia'
+      path: '/transparencia'
+      fullPath: '/transparencia'
+      preLoaderRoute: typeof TransparenciaRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/valores': {
@@ -9880,6 +9900,7 @@ const rootRouteChildren: RootRouteChildren = {
   TecnicoInformaticaQuatroBarrasRoute: TecnicoInformaticaQuatroBarrasRoute,
   TecnicoInformaticaSaoJosePinhaisRoute: TecnicoInformaticaSaoJosePinhaisRoute,
   TermosECondicoesRoute: TermosECondicoesRoute,
+  TransparenciaRoute: TransparenciaRoute,
   ValoresRoute: ValoresRoute,
   ValorizacaoDoTrabalhoTecnicoRoute: ValorizacaoDoTrabalhoTecnicoRoute,
   AdminAfirmacoesRoute: AdminAfirmacoesRoute,

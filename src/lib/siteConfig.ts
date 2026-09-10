@@ -68,10 +68,12 @@ export const siteConfig = {
   defaultTitle: `${brandConfig.brandName} | Assistência Técnica em Curitiba`,
   defaultDescription:
     "Assistência técnica em informática para notebooks, computadores, redes e suporte empresarial em Curitiba, São José dos Pinhais e Região Metropolitana.",
-  // Paridade com o HTML estático curado (scripts/curated-routes-meta.mjs) e ≤ 60 caracteres.
-  homeTitle: `${brandConfig.brandName} | Assistência Técnica em Curitiba`,
+  // Paridade com o HTML estático curado (scripts/curated-routes-meta.mjs) e ≤ 70 caracteres.
+  // Rodada 11: intenção ampliada de "assistência" para "soluções de informática",
+  // cobrindo tanto quem busca serviço quanto quem busca a solução do problema.
+  homeTitle: "Soluções de Informática e Assistência Técnica em Curitiba",
   homeDescription:
-    "Notebook, computador ou rede com problema? Assistência técnica em informática para casa e empresa em Curitiba e São José dos Pinhais.",
+    "Computador lento, notebook que não liga, Wi-Fi caindo ou arquivo perdido? Guias técnicos e assistência em informática para casa e empresa em Curitiba.",
   defaultOgImage: `${BASE_URL}${brandConfig.ogImage}`,
 
   // Contato — número NUNCA exibido como texto; só em wa.me / JSON-LD.

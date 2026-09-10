@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-09-10T18:27:20.067Z",
+  "geradoEm": "2026-09-10T21:19:30.604Z",
   "dist": "./dist/client",
   "total": 247,
   "comHtml": 79,
@@ -12,8 +12,8 @@
       "priority": "1.0",
       "changefreq": "weekly",
       "semHtml": false,
-      "title": "O Técnico de Informática | Assistência Técnica em Curitiba",
-      "description": "Notebook, computador ou rede com problema? Assistência técnica em informática para casa e empresa em Curitiba e São José dos Pinhais.",
+      "title": "Soluções de Informática e Assistência Técnica em Curitiba",
+      "description": "Computador lento, notebook que não liga, Wi-Fi caindo ou arquivo perdido? Guias técnicos e assistência em informática para casa e empresa em Curitiba.",
       "canonical": "https://otecnicodeinformatica.com.br/",
       "robots": "index, follow",
       "schemas": [
