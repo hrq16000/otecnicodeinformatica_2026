@@ -1050,7 +1050,31 @@ export const ENRIQUECIMENTO_1: Record<string, EnriquecimentoConteudo> = {
         ],
       },
     ],
-  },
+  },,
+  "/problemas/monitor-sem-sinal-curitiba": {
+    respostaRapida:
+      "“Sem sinal” confirma que o monitor não recebeu vídeo, mas não identifica sozinho se a falha está no cabo, entrada, GPU, RAM, fonte ou sistema.",
+    tabelaDiagnostica: {
+      titulo: "Monitor sem sinal: isole uma hipótese por vez",
+      linhas: [
+        { sintoma: "Menu do monitor funciona, mas não há imagem", causa: "Entrada selecionada, cabo ou saída sem sinal", verificar: "Selecionar a entrada correta e testar outro cabo ou fonte", acao: "Não condenar o monitor antes do teste cruzado" },
+        { sintoma: "Falha após trocar GPU ou RAM", causa: "Encaixe, compatibilidade ou alimentação", verificar: "Desligar energia e revisar conectores", acao: "Nunca reencaixar peças energizadas" },
+        { sintoma: "Vídeo cai somente sob carga", causa: "Temperatura, fonte, driver ou GPU instável", verificar: "Reproduzir e monitorar temperatura e eventos", acao: "Parar diante de artefatos, cheiro ou desligamento" },
+      ],
+    },
+    blocos: [
+      {
+        id: "sequencia-isolamento-video",
+        titulo: "Sequência segura para isolar a falha de vídeo",
+        itens: [
+          { titulo: "Comece pelo monitor", desc: "Confirme menu, entrada selecionada e alimentação. Se o menu não aparece, a investigação começa no monitor ou na energia." },
+          { titulo: "Troque uma variável por vez", desc: "Teste cabo, entrada, monitor e computador separadamente para saber qual mudança alterou o resultado." },
+          { titulo: "Confirme a saída correta", desc: "Em desktop com GPU dedicada, confirme no manual se o cabo deve estar na placa de vídeo ou na placa-mãe." },
+          { titulo: "Separe firmware de Windows", desc: "Se há imagem no firmware e ela some apenas no sistema, driver ou resolução entram na investigação; se nunca há imagem, o sistema não é o primeiro suspeito." },
+        ],
+      },
+    ],
+  }
 };
 
 /** Busca o enriquecimento por caminho canônico da página. */
