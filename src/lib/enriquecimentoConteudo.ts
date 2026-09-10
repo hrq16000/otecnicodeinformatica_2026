@@ -49,6 +49,18 @@ export const ENRIQUECIMENTO_1: Record<string, EnriquecimentoConteudo> = {
     },
     blocos: [
       {
+        id: "preservar-antes-de-recuperar",
+        titulo: "Antes de tentar recuperar: preserve o que ainda pode ser salvo",
+        intro: "Recuperação de dados começa reduzindo novas gravações. O tipo de unidade e o tempo desde a exclusão mudam completamente a estratégia.",
+        itens: [
+          { titulo: "Pare de usar a unidade afetada", desc: "Cada download, atualização ou arquivo temporário pode ocupar o espaço que ainda contém os dados apagados. Salve ferramentas em outra unidade." },
+          { titulo: "HD e SSD não respondem do mesmo modo", desc: "Em HD, dados apagados podem permanecer legíveis até serem sobrescritos. Em SSD, TRIM e coleta de lixo podem tornar a recuperação muito mais limitada; não prometa resultado antes da avaliação." },
+          { titulo: "Não instale o recuperador no mesmo disco", desc: "Instalar, executar e salvar o resultado na unidade afetada mistura novas gravações com os dados procurados. Use outro volume e destino separado." },
+          { titulo: "Falha física muda o procedimento", desc: "Clique, ruído, unidade que some ou erros de leitura pedem preservação e imagem técnica; insistir em varredura pode agravar o dano." },
+          { titulo: "Verifique nuvem e lixeira antes", desc: "OneDrive, Google Drive, histórico de arquivos e lixeira podem oferecer uma restauração mais segura que ferramentas de varredura, desde que a versão correta seja confirmada." },
+        ],
+      },
+      {
         id: "urgencia-dados",
         titulo: "Qual é a urgência real do seu caso",
         intro:
