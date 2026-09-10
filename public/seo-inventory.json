@@ -1,8 +1,8 @@
 {
-  "geradoEm": "2026-09-10T07:54:08.999Z",
+  "geradoEm": "2026-09-10T08:02:08.379Z",
   "dist": "./dist/client",
   "total": 247,
-  "comHtml": 78,
+  "comHtml": 79,
   "comAviso": 52,
   "urls": [
     {
@@ -11,14 +11,23 @@
       "tipo": "pilar",
       "priority": "1.0",
       "changefreq": "weekly",
-      "semHtml": true,
-      "title": null,
-      "description": null,
-      "canonical": null,
-      "robots": null,
-      "schemas": [],
+      "semHtml": false,
+      "title": "O Técnico de Informática | Assistência Técnica em Curitiba",
+      "description": "Notebook, computador ou rede com problema? Assistência técnica em informática para casa e empresa em Curitiba e São José dos Pinhais.",
+      "canonical": "https://otecnicodeinformatica.com.br/",
+      "robots": "index, follow",
+      "schemas": [
+        "Organization",
+        "WebSite",
+        "WebPage",
+        "LocalBusiness",
+        "ProfessionalService",
+        "ComputerRepairService",
+        "FAQPage",
+        "ItemList"
+      ],
       "avisos": [],
-      "completude": null
+      "completude": 100
     },
     {
       "path": "/servicos",
