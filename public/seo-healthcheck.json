@@ -1,14 +1,14 @@
 {
-  "geradoEm": "2026-09-10T18:07:31.225Z",
+  "geradoEm": "2026-09-10T18:27:20.448Z",
   "base": "https://otecnicodeinformatica.com.br",
-  "inventarioGeradoEm": "2026-09-10T16:02:34.460Z",
+  "inventarioGeradoEm": "2026-09-10T18:27:20.067Z",
   "totalUrls": 247,
   "resumo": {
     "urlsQuebradas": 0,
     "semHtmlNoBuild": 168,
     "canonicoIncorreto": 0,
     "schemaInvalido": 0,
-    "orfas": null,
+    "orfas": 0,
     "criticos": 0,
     "status": "OK"
   },
@@ -690,6 +690,6 @@
     ],
     "canonicoIncorreto": [],
     "schemaInvalido": [],
-    "orfas": null
+    "orfas": []
   }
 }

@@ -205,7 +205,13 @@ export const EDITORIAL_FIRST_WAVE: EditorialEntry[] = [
     cluster: "formatacao-sistema-virus",
     acao: "aprofundar",
     consulta: "quando formatar e como instalar Windows 11",
-    relacionados: ["backup-como-proteger-seus-arquivos", "como-saber-se-pc-tem-virus-malware"],
+    // Ponta do Atlas (rodada 1): boot e Windows Update deixam de depender só do hub.
+    relacionados: [
+      "backup-como-proteger-seus-arquivos",
+      "boot-uefi-ou-legacy-como-identificar",
+      "windows-update-nao-funciona-o-que-verificar",
+    ],
+
   },
   {
     slug: "como-saber-se-pc-tem-virus-malware",
@@ -226,7 +232,10 @@ export const EDITORIAL_FIRST_WAVE: EditorialEntry[] = [
     cluster: "redes-wifi",
     acao: "aprofundar",
     consulta: "wi-fi fraco em casa o que fazer",
+    // TV segue noindex por decisão da Rodada 4F: o core não linka para ela.
     relacionados: ["wifi-caindo-toda-hora", "como-configurar-repetidor-wifi"],
+
+
   },
   {
     slug: "notebook-superaquecendo-o-que-fazer",
@@ -242,7 +251,12 @@ export const EDITORIAL_FIRST_WAVE: EditorialEntry[] = [
     cluster: "ti-empresas",
     acao: "aprofundar",
     consulta: "como organizar a informática de um escritório pequeno",
-    relacionados: ["backup-como-proteger-seus-arquivos", "como-escolher-uma-workstation"],
+    relacionados: [
+      "backup-como-proteger-seus-arquivos",
+      "backup-nuvem-empresas-qual-escolher",
+      "como-escolher-uma-workstation",
+    ],
+
   },
   {
     slug: "como-escolher-uma-workstation",
