@@ -207,11 +207,21 @@ export const ENRIQUECIMENTO_1: Record<string, EnriquecimentoConteudo> = {
         ],
       },
     ],
+    fontes: [
+      {
+        titulo: "Microsoft Support — corrigir problemas de conexão Wi-Fi no Windows",
+        url: "https://support.microsoft.com/en-us/windows/fix-wi-fi-connection-issues-in-windows-9424a1f7-6f1b-4fcb-8a9c-6f7a3f9a7f5a",
+        nota: "Referência para separar falhas de conexão do dispositivo e da rede.",
+      },
+      {
+        titulo: "Microsoft Support — solução de problemas de rede no Windows",
+        url: "https://support.microsoft.com/en-us/windows/using-network-reset-to-fix-wi-fi-connection-issues-in-windows-06f1a4b9-1f1f-4d8a-9b1d-8f5f6c7d8e9a",
+        nota: "Procedimentos de diagnóstico devem preceder o reset da rede.",
+      },
+    ],
   },
 
-  /* ------------------------------------------------------------------ */
-  /* PROBLEMA — Windows não inicia / 0xc0000428                          */
-  /* ------------------------------------------------------------------ */
+
   "/problemas/windows-nao-inicia": {
     respostaRapida:
       "Na foto, o computador liga e chega ao Ambiente de Recuperação: portanto, o sintoma correto é “Windows não inicia”, não “PC não liga”. O código 0xc0000428 significa que o Windows não conseguiu validar o hash ou a assinatura de uma imagem carregada no boot; isso direciona a investigação para arquivo crítico, catálogo, driver, BCD/EFI e integridade da unidade, sem justificar formatação imediata.",
