@@ -718,6 +718,18 @@ export const ENRIQUECIMENTO_1: Record<string, EnriquecimentoConteudo> = {
     },
     blocos: [
       {
+        id: "mitos-do-notebook",
+        titulo: "Mitos de notebook que confundem manutenção com troca de peça",
+        intro: "Notebook tem componentes soldados, limites térmicos e baterias com desgaste. A recomendação precisa respeitar o modelo.",
+        itens: [
+          { titulo: "“Mais memória sempre resolve lentidão”", desc: "RAM insuficiente pode ser o gargalo, mas armazenamento lento, temperatura, inicialização carregada e falha de unidade produzem sintomas parecidos." },
+          { titulo: "“Bateria nova corrige qualquer desligamento”", desc: "Desligar na tomada pode envolver carregador, conector, circuito de carga, temperatura ou placa. A bateria só deve ser condenada após teste compatível." },
+          { titulo: "“Base refrigerada substitui limpeza”", desc: "A base pode melhorar circulação em alguns cenários, mas não remove poeira, corrige ventoinha ou repara pasta térmica degradada." },
+          { titulo: "“Todo notebook aceita SSD M.2”", desc: "Há modelos sem slot, com M.2 SATA, NVMe ou limitações de comprimento. Manual, placa e armazenamento atual precisam ser conferidos." },
+          { titulo: "“Formatar é manutenção preventiva”", desc: "Formatação remove o sistema, mas não corrige defeito de memória, energia, tela ou armazenamento instável. Faça diagnóstico e backup antes." },
+        ],
+      },
+      {
         id: "decisao-upgrade-notebook",
         titulo: "Antes de trocar a peça: a sequência que evita diagnóstico errado",
         intro: "Notebook combina alimentação, bateria, tela e componentes soldados. Trocar a peça mais visível nem sempre resolve o sintoma.",
