@@ -61,6 +61,28 @@ const CATEGORY_EXTRA: Record<string, FAQItem[]> = {
 // categoria (que contêm valores comerciais).
 // ─────────────────────────────────────────────────────────────
 const PILOT_FAQ: Record<string, FAQItem[]> = {
+  "windows-reparo-automatico-em-loop": [
+    {
+      q: "O Reparo Automático do Windows apaga meus arquivos?",
+      a: "O Reparo de Inicialização foi feito para corrigir problemas que impedem o Windows de iniciar e não é uma formatação. Ainda assim, o ambiente de recuperação também oferece ações mais invasivas, como redefinir ou reinstalar o sistema. Leia o efeito da opção escolhida e copie os arquivos importantes antes de avançar.",
+    },
+    {
+      q: "O laço de reparo pode ser defeito no SSD ou HD?",
+      a: "Pode. Lentidão extrema, travamentos anteriores, ruído em HD, erros de leitura ou uma unidade que some do firmware apontam para armazenamento. Nesse cenário, pare de insistir em reparos e priorize a cópia ou a recuperação dos dados.",
+    },
+    {
+      q: "Por que o Windows pede a chave BitLocker no reparo?",
+      a: "O ambiente de recuperação pode precisar desbloquear a unidade criptografada para acessar o Windows ou usar determinadas ferramentas. Confirme em outro dispositivo que a chave pertence àquele computador; não apague nem formate a unidade por não conseguir desbloqueá-la.",
+    },
+    {
+      q: "Devo executar bootrec ou bcdboot para sair do laço?",
+      a: "Não como tentativa genérica. Esses comandos tratam a configuração de inicialização e exigem que a instalação do Windows, o modo UEFI ou Legacy e as partições de origem e destino estejam corretamente identificados. Eles não corrigem SSD em falha, driver defeituoso ou atualização incompleta.",
+    },
+    {
+      q: "Quando é melhor reinstalar o Windows?",
+      a: "Depois de preservar os dados e esgotar as opções compatíveis com a causa provável, como Reparo de Inicialização, desinstalação de atualização ou restauração. Reinstalar não corrige defeito físico e pode apagar arquivos, aplicativos e configurações conforme o método escolhido.",
+    },
+  ],
   "como-fazer-upgrade-ssd-nvme": [
     {
       q: "Todo SSD M.2 é NVMe?",

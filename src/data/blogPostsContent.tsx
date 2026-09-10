@@ -13945,23 +13945,37 @@ bcdboot C:\\Windows /s S: /f UEFI`}</code></pre>
     excerpt:
       "Por que o Windows entra em reparo automático repetido, o que observar antes de tentar qualquer comando e em que ponto a prioridade passa a ser salvar os arquivos.",
     date: "2026-08-31",
-    readTime: "10 min",
+    readTime: "12 min",
     category: "Diagnóstico",
     content: (
       <>
-        <p className="lead">"Preparando reparo automático" seguido de "o PC não iniciou corretamente" e outro reinício é um laço — e o laço quase sempre tem uma causa objetiva por trás: desligamento abrupto, disco em falha, driver recente ou carregador inconsistente.</p>
+        <p className="lead">"Preparando reparo automático" seguido de "o PC não iniciou corretamente" e outro reinício é um laço. A tela informa que o Windows falhou ao iniciar; ela não prova, sozinha, que o sistema está corrompido nem que o SSD morreu.</p>
 
         <h2>Resposta curta</h2>
-        <p>O reparo automático é acionado quando o Windows detecta falhas repetidas na inicialização. Ele não é a doença, é o sintoma. Antes de rodar comandos, observe o que mudou desde a última inicialização bem-sucedida e verifique se o disco continua sendo detectado pelo firmware.</p>
+        <p>O reparo automático leva ao Ambiente de Recuperação do Windows (Windows RE) depois de falhas repetidas. O caminho seguro é registrar o sintoma, proteger os dados e avançar da opção menos disruptiva para a mais disruptiva. Comandos copiados de fóruns não são o primeiro passo.</p>
 
         <h2>Antes de tentar qualquer reparo</h2>
         <ol>
           <li>Confirme se o disco aparece na configuração do firmware. Se não aparecer, o problema não é do Windows.</li>
           <li>Desconecte periféricos não essenciais: pendrives, HDs externos, adaptadores e leitores.</li>
           <li>Anote o código de erro exibido na tela de opções avançadas, se houver.</li>
-          <li>Verifique se há criptografia de disco ativa e se você tem a chave de recuperação.</li>
-          <li>Pense nos arquivos: se não há backup, essa é a hora de tratar cópia como prioridade.</li>
+          <li>Verifique se há criptografia de disco ativa e confirme, em outro dispositivo, se você tem a chave de recuperação BitLocker daquele computador.</li>
+          <li>Liste os arquivos insubstituíveis. Se não há cópia confirmada, preservar os dados vem antes de redefinir, reinstalar ou alterar partições.</li>
         </ol>
+
+        <h2>Como interpretar o que aconteceu antes do laço</h2>
+        <table>
+          <thead>
+            <tr><th>O que ocorreu antes</th><th>Hipótese inicial</th><th>Primeira ação coerente</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Atualização do Windows</td><td>Instalação incompleta ou incompatível</td><td>Desinstalar a atualização recente pelo Windows RE</td></tr>
+            <tr><td>Driver ou periférico novo</td><td>Driver falhando durante a partida</td><td>Remover o periférico e tentar Modo de Segurança</td></tr>
+            <tr><td>Clonagem ou mudança de partições</td><td>Entrada de boot ou partição de sistema inconsistente</td><td>Identificar modo de boot, volumes e criptografia antes de qualquer comando</td></tr>
+            <tr><td>Queda de energia ou desligamento forçado</td><td>Sistema de arquivos ou atualização interrompida</td><td>Reparo de Inicialização, depois avaliação da unidade</td></tr>
+            <tr><td>Lentidão, travamentos ou ruído prévios</td><td>Armazenamento em degradação</td><td>Parar reparos repetidos e priorizar os dados</td></tr>
+          </tbody>
+        </table>
 
         <h2>Causas mais comuns</h2>
         <table>
@@ -13978,18 +13992,30 @@ bcdboot C:\\Windows /s S: /f UEFI`}</code></pre>
         </table>
         <p>Quando a suspeita for disco, o caminho é <Link to="/blog/disco-com-setores-defeituosos-smart-o-que-fazer" className="text-accent">setores defeituosos e SMART</Link>. Quando for memória, <Link to="/blog/testar-memoria-ram-memtest86" className="text-accent">teste de memória</Link>.</p>
 
-        <h2>O que costuma resolver</h2>
-        <ul>
-          <li>Desconectar periféricos e tentar uma inicialização limpa.</li>
-          <li>Usar a opção de desinstalar a atualização de qualidade mais recente, quando o laço começou logo depois dela.</li>
-          <li>Iniciar em modo de segurança para remover um driver problemático.</li>
-          <li>Restaurar um ponto de restauração anterior, quando existir.</li>
-        </ul>
+        <h2>Sequência segura no Windows RE</h2>
+        <p>Em <strong>Opções avançadas</strong>, escolha a ferramenta que corresponde à pista encontrada. Não execute todas em série sem observar o resultado.</p>
+        <ol>
+          <li><strong>Reparo de Inicialização:</strong> é a tentativa automática para problemas comuns de partida. Se falhar, registre a mensagem; repetir indefinidamente não produz diagnóstico novo.</li>
+          <li><strong>Desinstalar Atualizações:</strong> faz sentido quando o laço começou logo após uma atualização. Comece pela atualização de qualidade mais recente.</li>
+          <li><strong>Configurações de Inicialização / Modo de Segurança:</strong> use quando a pista for driver, software ou serviço recente. Se conseguir entrar, remova apenas a mudança associada ao início do problema.</li>
+          <li><strong>Restauração do Sistema:</strong> reverte arquivos e configurações do sistema para um ponto anterior sem ser uma cópia dos documentos pessoais. Verifique o ponto e os programas afetados antes de confirmar.</li>
+          <li><strong>Redefinir ou reinstalar:</strong> deixe para depois de preservar os dados. Mesmo a opção de manter arquivos remove aplicativos e não substitui um backup verificado.</li>
+        </ol>
         <p>Se o laço começou depois de uma atualização revertida, veja também <Link to="/blog/windows-update-travado-desfazendo-alteracoes" className="text-accent">atualização travada e desfazendo alterações</Link>.</p>
+
+        <h2>BitLocker: confira a chave antes de avançar</h2>
+        <p>O Windows RE pode solicitar a chave de recuperação para acessar uma unidade criptografada. O identificador exibido na tela ajuda a conferir se a chave encontrada corresponde ao equipamento. Sem a chave correta, não formate a unidade e não use a ausência de acesso como prova de corrupção: o dado pode estar íntegro, apenas protegido.</p>
+        <p>Em computador corporativo ou escolar, a chave pode estar sob a conta ou a gestão da organização. Nesse caso, envolva o responsável de TI antes de alterar firmware, TPM ou configuração de inicialização.</p>
+
+        <h2>Por que não começar por bootrec, bcdedit ou bcdboot</h2>
+        <p>Esses comandos tratam a configuração de inicialização; eles não reparam SSD defeituoso, memória instável, driver incompatível ou atualização interrompida. Em máquinas UEFI, letras de unidade vistas no Windows RE podem ser diferentes das usadas no Windows normal, e escolher a partição errada cria uma segunda falha.</p>
+        <p>Considere comando manual somente depois de confirmar, ao mesmo tempo: o disco está saudável e detectado; a unidade foi desbloqueada; a instalação correta do Windows foi localizada; o modo UEFI ou Legacy foi identificado; e há uma cópia dos dados importantes. Se qualquer item estiver incerto, pare no diagnóstico.</p>
 
         <h2>O que NÃO fazer</h2>
         <ul>
           <li>Executar comandos de reconstrução de carregador copiados de fórum sem entender o que fazem — em disco com dados sem cópia, isso pode inviabilizar a recuperação.</li>
+          <li>Criar, apagar ou formatar uma partição EFI como tentativa de rotina.</li>
+          <li>Desativar Secure Boot ou limpar o TPM sem registrar a configuração e confirmar a chave BitLocker.</li>
           <li>Formatar ou "resetar este PC" antes de salvar os arquivos.</li>
           <li>Reinstalar o sistema por cima com o disco apresentando ruído ou lentidão extrema.</li>
           <li>Insistir em dezenas de reinicializações seguidas: cada tentativa em disco em falha reduz a chance de recuperar dados.</li>
@@ -13997,6 +14023,8 @@ bcdboot C:\\Windows /s S: /f UEFI`}</code></pre>
 
         <h2>Quando parar</h2>
         <p>Pare imediatamente se o disco fizer ruído incomum, se sumir e reaparecer entre reinicializações ou se houver arquivos insubstituíveis sem cópia. A prioridade passa a ser <Link to="/servicos/recuperacao-de-dados" className="text-accent">recuperação de dados</Link>, e não reparo do sistema.</p>
+
+        <EditorialReferences slug="windows-reparo-automatico-em-loop" />
 
         <h2>Quando chamar um técnico</h2>
         <p>Chame quando o laço persistir após remover periféricos e desfazer alterações recentes, quando o sistema pedir chave de recuperação de criptografia ou quando o disco já tiver dado sinais de falha. Contexto completo do sintoma em <Link to="/problemas/windows-nao-inicia" className="text-accent">Windows não inicia</Link> e avaliação em <Link to="/diagnostico-tecnico" className="text-accent">diagnóstico técnico</Link>.</p>

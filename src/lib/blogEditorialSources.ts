@@ -183,6 +183,31 @@ export const EDITORIAL_SOURCES: Record<string, EditorialSource> = {
       "Os parâmetros de origem, destino e tipo de firmware precisam corresponder à instalação que será reparada.",
     ],
   },
+  "ms-windows-recovery-environment": {
+    id: "ms-windows-recovery-environment",
+    title: "Windows recovery environment",
+    publisher: "Microsoft Support",
+    url: "https://support.microsoft.com/en-us/windows/experience/backup-recovery/windows-recovery-environment",
+    accessedAt: "2026-09-10",
+    sourceType: "official",
+    supports: [
+      "O Windows RE reúne ferramentas de recuperação como Reparo de Inicialização, Configurações de Inicialização, Desinstalar Atualizações e Prompt de Comando.",
+      "Algumas ferramentas do ambiente de recuperação exigem a chave BitLocker quando o dispositivo está criptografado.",
+    ],
+  },
+  "ms-recovery-options-windows": {
+    id: "ms-recovery-options-windows",
+    title: "Recovery options in Windows",
+    publisher: "Microsoft Support",
+    url: "https://support.microsoft.com/en-us/windows/experience/backup-recovery/recovery-options-in-windows",
+    accessedAt: "2026-09-10",
+    sourceType: "official",
+    supports: [
+      "As opções de recuperação devem ser tentadas da menos disruptiva para a mais disruptiva.",
+      "Algumas opções de recuperação podem causar perda de dados; arquivos importantes devem ser copiados antes de prosseguir.",
+      "A desinstalação de atualização, a restauração e a reinstalação têm efeitos e limites diferentes.",
+    ],
+  },
   "ms-tech-support-scams": {
     id: "ms-tech-support-scams",
     title: "Protect yourself from tech support scams",
@@ -996,13 +1021,17 @@ export const ARTICLE_SOURCE_MANIFEST: Record<string, ArticleSourceManifest> = {
   },
   "windows-reparo-automatico-em-loop": {
     slug: "windows-reparo-automatico-em-loop",
-    sources: [],
+    sources: [
+      "ms-windows-recovery-environment",
+      "ms-recovery-options-windows",
+      "ms-bitlocker-recovery",
+      "ms-bcdboot",
+    ],
     technicalReview: "reviewed",
     factChecked: true,
-    factCheckedAt: "2026-08-31",
-    stableKnowledge: true,
+    factCheckedAt: "2026-09-10",
     notes:
-      "Revisão concluída (Onda 11A, Lote 4): árvore de decisão do laço de reparo automático, prioridade de backup antes de qualquer reparo destrutivo, uso de bootrec/bcdedit com ressalvas e critério para suspeitar de disco em falha física. Sem marca comercial e sem promessa. Conhecimento técnico estável — sem fonte visível.",
+      "Revisão aprofundada em 2026-09-10: sequência do Windows RE da opção menos disruptiva à mais disruptiva, backup e chave BitLocker antes de intervenção, limites explícitos para comandos de boot e critérios de parada diante de possível falha física. Fontes Microsoft visíveis, sem promessa de resultado.",
   },
   "manutencao-preventiva-de-computador-guia-completo": {
     slug: "manutencao-preventiva-de-computador-guia-completo",
