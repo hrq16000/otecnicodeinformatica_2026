@@ -13,6 +13,7 @@ import { GscSnapshotPanel } from "@/components/admin/GscSnapshotPanel";
 import { GscInventarioPanel } from "@/components/admin/GscInventarioPanel";
 import { SeoHealthcheckPanel } from "@/components/admin/SeoHealthcheckPanel";
 import { InterlinkSuggestionsPanel } from "@/components/admin/InterlinkSuggestionsPanel";
+import { DominioDnsPanel } from "@/components/admin/DominioDnsPanel";
 import auditoriaAfirmacoes from "@/data/trustClaimsAudit.json";
 
 
