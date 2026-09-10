@@ -72,10 +72,11 @@ export const HeroTriagem = () => {
 
       <div className="pointer-events-none absolute inset-y-0 right-0 hidden w-[48%] lg:block" aria-hidden="true">
         <img
-          src="/hero-bancada-diagnostico-2026.png"
+          src="/fotos/bancada-tecnica.jpg"
           alt=""
-          width={1680}
-          height={945}
+          aria-hidden="true"
+          width={1024}
+          height={735}
           fetchPriority="high"
           decoding="async"
           className="h-full w-full object-cover object-center opacity-90"
@@ -101,10 +102,10 @@ export const HeroTriagem = () => {
           </p>
           <figure className="relative mt-6 overflow-hidden rounded-2xl border border-border shadow-[var(--shadow-lg)] lg:hidden">
             <img
-              src="/hero-bancada-diagnostico-2026.png"
+              src="/fotos/bancada-tecnica.jpg"
               alt="Bancada de diagnóstico com notebook, SSD e ferramentas de precisão"
-              width={1680}
-              height={945}
+              width={1024}
+              height={735}
               loading="eager"
               fetchPriority="high"
               decoding="async"

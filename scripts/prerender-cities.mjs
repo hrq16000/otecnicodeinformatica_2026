@@ -246,7 +246,16 @@ async function writePage(distDir, routePath, html) {
 export function injectRootBody(html, body) {
   const marker = `<div id="root">`;
   const start = html.indexOf(marker);
-  if (start === -1) return html;
+  if (start === -1) {
+    // Build SSR (sem shell SPA): o template não traz <div id="root">. Nesse caso
+    // reconstruímos o corpo da rota — conteúdo estático próprio + os <script> do
+    // bundle, para que a hidratação continue funcionando.
+    const bodyMatch = html.match(/<body[^>]*>([\s\S]*?)<\/body>/i);
+    if (!bodyMatch) return html;
+    const scripts = (bodyMatch[1].match(/<script\b[\s\S]*?<\/script>/gi) || []).join("\n");
+    const novo = `<div id="root"><div data-static-shell="1">${body}</div></div>\n${scripts}`;
+    return html.replace(bodyMatch[0], `<body>${novo}</body>`);
+  }
   // Varredura balanceada de <div>…</div> para achar o fechamento do #root.
   let depth = 1;
   let i = start + marker.length;
@@ -327,9 +336,14 @@ function injectCuratedMeta(html, url, title, description) {
 const HOWTO_DEFAULT_DATE = "2026-06-14";
 
 function extractField(block, name) {
-  const re = new RegExp(`^\\s*${name}:\\s*"((?:[^"\\\\]|\\\\.)*)"`, "m");
+  // Aceita aspas duplas e simples: títulos com aspas internas usam ' no fonte.
+  const re = new RegExp(
+    `^\\s*${name}:\\s*(?:"((?:[^"\\\\]|\\\\.)*)"|'((?:[^'\\\\]|\\\\.)*)')`,
+    "m",
+  );
   const m = block.match(re);
-  return m ? m[1].replace(/\\"/g, '"').replace(/\\\\/g, "\\") : undefined;
+  const bruto = m ? (m[1] ?? m[2]) : undefined;
+  return bruto === undefined ? undefined : bruto.replace(/\\(["'])/g, "$1").replace(/\\\\/g, "\\");
 }
 
 // Texto puro de um trecho JSX (sem tags, sem expressões).
@@ -617,7 +631,15 @@ async function writeBlogPostPage(distDir, baseHtml, post) {
 
 export async function prerenderCities(distDir) {
   const indexPath = path.join(distDir, "index.html");
-  const baseHtml = await fs.readFile(indexPath, "utf8");
+  let baseHtml = await fs.readFile(indexPath, "utf8");
+  // Em build SSR o index.html já é a HOME renderizada: como ele serve de
+  // template para todas as rotas, removemos o JSON-LD da home para que cada
+  // rota receba apenas o seu (evita FAQPage/LocalBusiness herdados).
+  if (!baseHtml.includes(`<div id="root">`)) {
+    baseHtml = baseHtml
+      .replace(/\0/g, "")
+      .replace(/<script[^>]*type=["']application\/ld\+json["'][^>]*>[\s\S]*?<\/script>/gi, "");
+  }
   const fallbackOg = await findHashedAsset(distDir, "og-arrumar-pc-brasil");
   let written = 0;
 

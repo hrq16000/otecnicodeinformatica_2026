@@ -1,0 +1,695 @@
+{
+  "geradoEm": "2026-09-10T08:02:08.842Z",
+  "base": "https://otecnicodeinformatica.com.br",
+  "inventarioGeradoEm": "2026-09-10T08:02:08.379Z",
+  "totalUrls": 247,
+  "resumo": {
+    "urlsQuebradas": 0,
+    "semHtmlNoBuild": 168,
+    "canonicoIncorreto": 0,
+    "schemaInvalido": 0,
+    "orfas": 0,
+    "criticos": 0,
+    "status": "OK"
+  },
+  "problemas": {
+    "urlsQuebradas": [],
+    "semHtmlNoBuild": [
+      {
+        "path": "/servicos",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/como-funciona",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/precos-e-politicas",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/sobre",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/contato",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/faq",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/anuncie",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/atendimento-domicilio",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/atendimento-remoto",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/equipamentos-atendidos",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/areas-atendidas",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/diagnostico-tecnico",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/coleta-e-entrega",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/quando-nao-compensa",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/seguranca-dos-dados",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/politica-de-pecas-do-cliente",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/empresa-de-ti-curitiba",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/bairros",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/guia-tecnico-informatica",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/autoridade-tecnica",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/assistencia-tecnica-curitiba",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/decisoes",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/decisoes/formatar-ou-reparar",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/decisoes/ssd-ou-memoria-ram",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/decisoes/consertar-ou-substituir",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/decisoes/remoto-ou-presencial",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/decisoes/hd-com-ruido",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/decisoes/backup-antes-da-manutencao",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/decisoes/atualizar-para-windows-11",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/decisoes/nuvem-ou-hd-externo",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/decisoes/montar-ou-comprar-pronto",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/decisoes/trocar-componente-ou-reparar",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/glossario",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/glossario/bsod",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/glossario/uefi",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/glossario/bios",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/glossario/imagem-do-sistema",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/glossario/smart",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/glossario/ssd",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/glossario/nvme",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/glossario/backup-incremental",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/glossario/recuperacao-de-dados",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/glossario/tpm",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/glossario/bitlocker",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/glossario/dns",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/glossario/nat",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/glossario/memoria-ram",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/glossario/thermal-throttling",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/glossario/secure-boot",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/glossario/driver",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/glossario/particao",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/entidades",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/entidades/windows",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/entidades/ssd",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/entidades/memoria-ram",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/entidades/wifi",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/entidades/backup",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/entidades/erro-0xc0000428",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/entidades/computador-lento",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/entidades/cidade",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/entidades/servico",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/ferramentas",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/ferramentas/checklist-computador-lento",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/ferramentas/checklist-antes-de-formatar",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/ferramentas/roteiro-falha-de-inicializacao",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/ferramentas/verificador-de-backup",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/ferramentas/ssd-ou-ram",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/ferramentas/roteiro-wifi-instavel",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/servicos/formatacao",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/servicos/manutencao-de-notebook",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/servicos/manutencao-de-computador",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/servicos/upgrade-ssd-ram",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/servicos/remocao-de-virus",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/servicos/recuperacao-de-dados",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/servicos/redes-e-wifi",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/servicos/suporte-tecnico-empresarial",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/servicos/manutencao-preventiva-empresas",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/servicos/backup-para-empresas",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/servicos/suporte-home-office",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/servicos/montagem-de-pc",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/servicos/pc-gamer",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/servicos/conserto-tv",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/servicos/conserto-placa",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/servicos/conserto-monitor",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/servicos/conserto-impressora-3d",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/servicos/formatacao-computador/cic",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/servicos/formatacao-computador/batel",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/servicos/formatacao-computador/agua-verde",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/servicos/remocao-virus/cic",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/servicos/remocao-virus/agua-verde",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/servicos/conserto-pc-notebook/centro",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/servicos/conserto-pc-notebook/agua-verde",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/servicos/upgrade-ssd-memoria/cic",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/servicos/upgrade-ssd-memoria/centro",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/servicos/upgrade-ssd-memoria/agua-verde",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/servicos/upgrade-ssd-memoria/portao",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/servicos/formatacao-computador/curitiba",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/servicos/remocao-virus/curitiba",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/servicos/upgrade-ssd/curitiba",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/servicos/conserto-notebook/curitiba",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/servicos/conserto-pc/curitiba",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/servicos/redes-wifi/curitiba",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/servicos/backup-recuperacao/curitiba",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/servicos/suporte-tecnico-empresarial/curitiba",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/servicos/manutencao-preventiva-empresas/curitiba",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/servicos/backup-para-empresas/curitiba",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/servicos/montagem-de-pc/curitiba",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/servicos/suporte-home-office/curitiba",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/servicos/pc-gamer/curitiba",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/servicos/conserto-notebook/sao-jose-dos-pinhais",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/servicos/conserto-pc/sao-jose-dos-pinhais",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/servicos/redes-wifi/sao-jose-dos-pinhais",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/servicos/backup-recuperacao/sao-jose-dos-pinhais",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/tecnico-informatica-curitiba",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/tecnico-informatica-sao-jose-pinhais",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/tecnico-informatica-pinhais",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/tecnico-informatica-colombo",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/tecnico-informatica-araucaria",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/tecnico-informatica-campo-largo",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/bairros/cic",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/bairros/batel",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/bairros/agua-verde",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/bairros/centro",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/bairros/portao",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/bairros/santa-felicidade",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/bairros/boa-vista",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/bairros/bigorrilho",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/bairros/cabral",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/bairros/afonso-pena",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/bairros/cruzeiro",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/bairros/costeira",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/bairros/guatupe",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/bairros/xaxim",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/bairros/sitio-cercado",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/bairros/aviacao",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/bairros/ouro-fino-sjp",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/bairros/boqueirao",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/bairros/cajuru",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/bairros/pinheirinho",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/bairros/cidade-jardim-sjp",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/problemas/notebook-nao-liga",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/problemas/computador-lento",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/problemas",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/problemas/wifi-instavel",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/problemas/tela-azul",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/problemas/arquivos-apagados",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/problemas/computador-desliga-sozinho",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/problemas/notebook-nao-carrega",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/problemas/hd-fazendo-barulho",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/problemas/computador-nao-da-imagem",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/problemas/cheiro-de-queimado",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/problemas/notebook-molhado",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/problemas/windows-nao-inicia",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/problemas/computador-esquentando",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/problemas/impressora-nao-imprime",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/problemas/teclado-notebook-nao-funciona",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/equipamentos",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/equipamentos/notebook",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/equipamentos/desktop",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/equipamentos/impressora",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/equipamentos/roteador",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/solucoes",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/solucoes/diagnostico",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/solucoes/formatacao",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/solucoes/ssd",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/solucoes/backup",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/solucoes/recuperacao-de-dados",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/blog",
+        "motivo": "sem HTML prerenderizado no build"
+      }
+    ],
+    "canonicoIncorreto": [],
+    "schemaInvalido": [],
+    "orfas": []
+  }
+}

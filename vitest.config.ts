@@ -47,6 +47,9 @@ export default defineConfig({
           exclude: [...SHARED_EXCLUDE, "src/**/*.integration.test.{ts,tsx}"],
           setupFiles: ["src/test/setup.ts"],
           passWithNoTests: false,
+          // Suítes que fazem import() dinâmico de módulos grandes (Atlas, clusters)
+          // estouravam os 5s padrão em execução fria. 30s remove a intermitência.
+          testTimeout: 60_000,
         },
       },
       {

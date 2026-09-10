@@ -1,6 +1,6 @@
 # Vereditos de indexação — Onda 10C
 
-- Gerado em: 2026-09-03T18:33:03.715Z
+- Gerado em: 2026-09-10T07:58:12.461Z
 - Propriedade: `UNKNOWN` (Search Console INDISPONÍVEL — vereditos UNKNOWN)
 - Total: **26** · PUBLISHED 1 · PENDING 0 · PROBLEM 0 · UNKNOWN 25
 - Onda consolidada: **NÃO**
