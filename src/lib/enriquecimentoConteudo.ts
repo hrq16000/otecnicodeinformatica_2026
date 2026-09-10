@@ -145,6 +145,18 @@ export const ENRIQUECIMENTO_1: Record<string, EnriquecimentoConteudo> = {
     },
     blocos: [
       {
+        id: "mapa-causa-wifi",
+        titulo: "Wi-Fi instável: separe cobertura, interferência e internet",
+        intro: "“Wi-Fi ruim” pode significar rádio local, roteador, cabo, DNS ou falha do provedor. Medir em pontos diferentes evita trocar equipamento sem evidência.",
+        itens: [
+          { titulo: "Só um cômodo apresenta queda", desc: "Compare sinal perto do roteador e no ponto afetado. Distância, paredes e interferência sugerem cobertura; não provam defeito do provedor." },
+          { titulo: "Todos os dispositivos caem juntos", desc: "Observe se o roteador perde o link de internet ou apenas reinicia o rádio. Registre horário, LEDs e duração antes de alterar canais ou resetar." },
+          { titulo: "Wi-Fi conecta, mas não navega", desc: "Teste o endereço do roteador e um destino externo separadamente. Assim você diferencia rede local, DNS e indisponibilidade do link." },
+          { titulo: "Velocidade varia muito", desc: "Faça medições no mesmo dispositivo, local e horário. Resultado isolado de aplicativo não define a velocidade contratada nem a causa da instabilidade." },
+          { titulo: "Repetidor não é correção universal", desc: "Ele pode ampliar cobertura, mas também repetir um sinal ruim e aumentar latência. Posicione-o onde ainda exista sinal estável, não no ponto sem conexão." },
+        ],
+      },
+      {
         id: "wifi-x-internet",
         titulo: "Wi-Fi lento não é a mesma coisa que internet lenta",
         intro:
