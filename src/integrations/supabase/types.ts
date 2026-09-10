@@ -325,6 +325,39 @@ export type Database = {
           },
         ]
       }
+      dns_records: {
+        Row: {
+          created_at: string
+          hostname: string
+          id: string
+          observacao: string | null
+          principal: boolean
+          tipo: string
+          updated_at: string
+          valor_esperado: string
+        }
+        Insert: {
+          created_at?: string
+          hostname: string
+          id?: string
+          observacao?: string | null
+          principal?: boolean
+          tipo?: string
+          updated_at?: string
+          valor_esperado: string
+        }
+        Update: {
+          created_at?: string
+          hostname?: string
+          id?: string
+          observacao?: string | null
+          principal?: boolean
+          tipo?: string
+          updated_at?: string
+          valor_esperado?: string
+        }
+        Relationships: []
+      }
       funnel_submissions: {
         Row: {
           atendido_em: string | null
