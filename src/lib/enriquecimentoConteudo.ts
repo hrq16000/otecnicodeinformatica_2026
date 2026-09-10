@@ -840,6 +840,18 @@ export const ENRIQUECIMENTO_1: Record<string, EnriquecimentoConteudo> = {
     },
     blocos: [
       {
+        id: "mitos-do-roteador",
+        titulo: "Mitos de roteador que geram gasto sem resolver a queda",
+        intro: "Número de antenas e velocidade de caixa não substituem medição no ambiente real.",
+        itens: [
+          { titulo: "“Mais antenas sempre alcançam mais”", desc: "Antenas, potência, posicionamento, paredes e legislação de transmissão interagem. A quantidade visível não mede cobertura útil no cômodo distante." },
+          { titulo: "“Wi-Fi 6 corrige qualquer internet lenta”", desc: "O padrão pode melhorar eficiência com clientes compatíveis, mas não aumenta o plano contratado nem corrige falha de cabo, modem ou provedor." },
+          { titulo: "“Repetidor dobra a velocidade”", desc: "Ele amplia área, mas pode compartilhar o mesmo canal com o dispositivo e reduzir capacidade. O ponto deve receber sinal estável antes de retransmitir." },
+          { titulo: "“Reset resolve toda instabilidade”", desc: "Reset apaga configurações, nomes de rede e regras. Use apenas com backup da configuração e depois de registrar evidências do defeito." },
+          { titulo: "“Velocidade da embalagem é garantida em qualquer cômodo”", desc: "Taxas anunciadas são condições específicas. Distância, interferência, cliente, largura de canal e backhaul mudam o resultado observado." },
+        ],
+      },
+      {
         id: "decisao-roteador",
         titulo: "Escolha e diagnóstico do roteador sem confundir velocidade com cobertura",
         intro: "O melhor roteador depende do ambiente, dispositivos, cabeamento e qualidade do link. Trocar o aparelho não corrige toda causa de lentidão.",
