@@ -617,6 +617,18 @@ export const ENRIQUECIMENTO_1: Record<string, EnriquecimentoConteudo> = {
       "Trocar HD por SSD é o upgrade que mais muda a sensação de uso em máquina antiga: inicialização, abertura de programas e resposta do sistema deixam de esperar uma peça mecânica. Mas SSD não corrige superaquecimento, defeito de placa-mãe, memória insuficiente para o uso nem infecção — se o sintoma é travamento aleatório ou desligamento, o diagnóstico vem antes da peça.",
     blocos: [
       {
+        id: "migracao-reversivel-ssd",
+        titulo: "Migração para SSD sem apagar o disco original às cegas",
+        intro: "A migração segura mantém uma rota de retorno até confirmar que o novo sistema inicia e que os arquivos importantes estão íntegros.",
+        itens: [
+          { titulo: "Inventarie antes de clonar", desc: "Confirme capacidade usada, partições, criptografia, modo UEFI/GPT e espaço real no destino. Um SSD menor que a capacidade ocupada não comporta a clonagem integral." },
+          { titulo: "Tenha uma cópia independente", desc: "A clonagem replica o estado do disco, inclusive corrupção e arquivos ausentes. Backup separado e testado continua necessário." },
+          { titulo: "Valide o primeiro boot isolado", desc: "Após clonar, desligue e teste o novo SSD com o disco antigo desconectado quando o procedimento exigir. Isso evita que o firmware inicialize o disco errado." },
+          { titulo: "Confira dados e aplicativos", desc: "Abra documentos, projetos, navegadores, e-mail e ferramentas essenciais. “O Windows iniciou” não prova que o ambiente de trabalho foi migrado corretamente." },
+          { titulo: "Só descarte depois do aceite", desc: "Mantenha o disco original preservado até concluir os testes e confirmar a cópia. Apagar a origem antes dessa etapa elimina a alternativa de retorno." },
+        ],
+      },
+      {
         id: "limites-do-diagnostico-ssd",
         titulo: "O que um SSD pode melhorar — e o que ele não promete",
         intro: "SSD reduz espera mecânica, mas não transforma qualquer computador em equipamento novo. O resultado depende da interface, do estado do sistema e do restante do hardware.",
