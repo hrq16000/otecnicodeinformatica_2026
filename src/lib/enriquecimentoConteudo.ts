@@ -49,6 +49,18 @@ export const ENRIQUECIMENTO_1: Record<string, EnriquecimentoConteudo> = {
     },
     blocos: [
       {
+        id: "quando-escalar-recuperacao",
+        titulo: "Quando parar a tentativa caseira e escalar a recuperação",
+        intro: "O valor dos dados, o comportamento da unidade e a existência de backup definem o nível de intervenção aceitável.",
+        itens: [
+          { titulo: "Tentativa doméstica aceitável", desc: "Unidade reconhecida, sem ruídos ou erros crescentes, exclusão recente e dados não críticos. Ainda assim, use outro destino e evite instalar ferramentas na origem." },
+          { titulo: "Imagem antes de explorar", desc: "Erros de leitura, travamentos, setores instáveis ou unidade que desaparece indicam que a prioridade é copiar o estado possível antes de varrer pastas." },
+          { titulo: "Laboratório especializado", desc: "Clique mecânico, motor que não gira, conector danificado ou mídia que não é reconhecida exigem ferramentas e ambiente próprios; insistência pode reduzir a recuperação." },
+          { titulo: "Dados protegidos", desc: "BitLocker, senha de dispositivo ou criptografia de aplicativo podem tornar a chave indispensável. Não prometa recuperação sem confirmar credenciais e identificadores." },
+          { titulo: "Critério de encerramento", desc: "Pare quando o arquivo essencial for restaurado e aberto, ou quando novas tentativas só aumentarem gravações e risco. Documente o que foi testado para não repetir dano." },
+        ],
+      },
+      {
         id: "preservar-antes-de-recuperar",
         titulo: "Antes de tentar recuperar: preserve o que ainda pode ser salvo",
         intro: "Recuperação de dados começa reduzindo novas gravações. O tipo de unidade e o tempo desde a exclusão mudam completamente a estratégia.",
