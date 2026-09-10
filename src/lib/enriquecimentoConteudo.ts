@@ -157,6 +157,18 @@ export const ENRIQUECIMENTO_1: Record<string, EnriquecimentoConteudo> = {
     },
     blocos: [
       {
+        id: "matriz-teste-wifi",
+        titulo: "Matriz de teste em dez minutos para Wi‑Fi instável",
+        intro: "Faça os testes na mesma posição e anote horário, dispositivo, conexão e resultado. Uma medição isolada não separa rádio, roteador e provedor.",
+        itens: [
+          { titulo: "Teste 1 — cabo no roteador", desc: "Conecte um computador por cabo e registre latência e estabilidade. Se o cabo também falhar, o problema não é apenas cobertura sem fio." },
+          { titulo: "Teste 2 — perto do roteador", desc: "Repita o teste a poucos metros do equipamento. Melhora forte perto e queda no cômodo distante aponta para cobertura, obstáculos ou interferência." },
+          { titulo: "Teste 3 — segundo dispositivo", desc: "Use outro celular ou notebook no mesmo ponto. Se apenas um aparelho falhar, investigue driver, economia de energia ou adaptador desse cliente." },
+          { titulo: "Teste 4 — horário e padrão", desc: "Registre se a queda ocorre em horários fixos, após aquecimento ou com muitos dispositivos ativos. Padrão recorrente é evidência melhor que impressão de lentidão." },
+          { titulo: "Teste 5 — só depois altere configuração", desc: "Mude um item por vez, anote o valor anterior e reverta se o resultado piorar. Reset de fábrica apaga a configuração e não identifica a causa." },
+        ],
+      },
+      {
         id: "mapa-causa-wifi",
         titulo: "Wi-Fi instável: separe cobertura, interferência e internet",
         intro: "“Wi-Fi ruim” pode significar rádio local, roteador, cabo, DNS ou falha do provedor. Medir em pontos diferentes evita trocar equipamento sem evidência.",
