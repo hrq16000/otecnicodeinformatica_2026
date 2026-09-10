@@ -1,20 +1,24 @@
 {
-  "geradoEm": "2026-09-10T18:07:31.225Z",
+  "geradoEm": "2026-09-10T18:27:03.585Z",
   "base": "https://otecnicodeinformatica.com.br",
-  "inventarioGeradoEm": "2026-09-10T16:02:34.460Z",
+  "inventarioGeradoEm": "2026-09-10T18:20:49.475Z",
   "totalUrls": 247,
   "resumo": {
     "urlsQuebradas": 0,
-    "semHtmlNoBuild": 168,
+    "semHtmlNoBuild": 247,
     "canonicoIncorreto": 0,
     "schemaInvalido": 0,
-    "orfas": null,
+    "orfas": 0,
     "criticos": 0,
     "status": "OK"
   },
   "problemas": {
     "urlsQuebradas": [],
     "semHtmlNoBuild": [
+      {
+        "path": "/",
+        "motivo": "sem HTML prerenderizado no build"
+      },
       {
         "path": "/servicos",
         "motivo": "sem HTML prerenderizado no build"
@@ -686,10 +690,322 @@
       {
         "path": "/blog",
         "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/blog/quando-trocar-hd-por-ssd",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/blog/como-saber-se-pc-tem-virus-malware",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/blog/backup-como-proteger-seus-arquivos",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/blog/como-melhorar-sinal-wifi-em-casa",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/blog/notebook-superaquecendo-o-que-fazer",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/blog/organizacao-de-ti-para-pequenos-escritorios",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/blog/como-escolher-uma-workstation",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/blog/como-instalar-windows-11-do-zero",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/blog/como-resolver-tela-azul-windows",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/blog/como-trocar-tela-notebook-passo-a-passo",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/blog/notebook-nao-liga-o-que-fazer",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/blog/computador-lento-causas-solucoes",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/blog/como-recuperar-dados-hd-com-defeito",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/blog/como-fazer-upgrade-ssd-nvme",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/blog/como-configurar-roteador-wifi-iniciantes",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/blog/como-saber-quem-esta-usando-meu-wifi",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/blog/como-escolher-um-bom-antivirus",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/blog/como-proteger-computador-golpes-internet",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/blog/como-limpar-notebook-por-dentro",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/blog/como-trocar-pasta-termica-notebook",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/blog/como-clonar-hd-para-ssd",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/blog/como-instalar-segundo-ssd-notebook",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/blog/ransomware-como-proteger-empresa",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/blog/backup-nuvem-empresas-qual-escolher",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/blog/como-instalar-impressora-windows-passo-a-passo",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/blog/como-conectar-wifi-tv-nao-conecta",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/blog/como-testar-fonte-de-alimentacao-pc",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/blog/como-diagnosticar-placa-mae-defeituosa",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/blog/windows-11-lento-como-resolver",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/blog/como-remover-virus-windows-iniciantes",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/blog/como-formatar-pc-sem-perder-arquivos",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/blog/quanto-custa-formatar-um-computador",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/blog/o-que-e-informatica",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/blog/informatica-basica",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/blog/como-aprender-informatica",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/blog/computador-entra-direto-na-bios",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/blog/erro-no-bootable-device-como-resolver",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/blog/troquei-o-ssd-e-o-pc-so-abre-a-bios",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/blog/limpar-arquivos-temporarios-windows",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/blog/memoria-ram-insuficiente-sintomas",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/blog/codigos-de-erro-tela-azul-windows",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/blog/testar-memoria-ram-memtest86",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/blog/botao-power-nao-funciona-jump-start-placa-mae",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/blog/curto-circuito-placa-mae-como-identificar",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/blog/bios-corrompida-reset-cmos-atualizacao",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/blog/internet-lenta-provedor-ou-roteador",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/blog/impressora-offline-como-resolver",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/blog/fila-de-impressao-travada-spooler-windows",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/blog/hd-nao-e-reconhecido-na-bios-o-que-fazer",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/blog/ssd-nvme-nao-aparece-no-gerenciador-de-discos",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/blog/disco-com-setores-defeituosos-smart-o-que-fazer",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/blog/computador-sem-som-o-que-verificar",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/blog/fone-de-ouvido-nao-e-reconhecido-no-pc",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/blog/servico-de-audio-do-windows-nao-esta-em-execucao",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/blog/webcam-nao-funciona-o-que-verificar",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/blog/permissoes-de-camera-no-windows",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/blog/webcam-usb-nao-e-detectada",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/blog/windows-update-nao-funciona-o-que-verificar",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/blog/limpar-cache-do-windows-update-softwaredistribution",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/blog/windows-update-travado-desfazendo-alteracoes",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/blog/boot-uefi-ou-legacy-como-identificar",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/blog/ordem-de-boot-na-bios-como-configurar",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/blog/windows-reparo-automatico-em-loop",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/blog/manutencao-preventiva-de-computador-guia-completo",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/blog/dispositivo-usb-nao-reconhecido-o-que-fazer",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/blog/como-testar-restauracao-de-backup",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/blog/como-monitorar-temperatura-do-computador",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/blog/pendrive-somente-leitura-protegido-contra-gravacao",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/blog/historico-de-arquivos-windows-como-configurar",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/blog/monitor-sem-sinal-o-que-verificar",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/blog/bateria-de-notebook-nao-carrega-o-que-verificar",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/blog/como-migrar-arquivos-para-um-computador-novo",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/blog/teclado-de-notebook-nao-funciona-o-que-verificar",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/blog/computador-desliga-sozinho-o-que-verificar",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/blog/computador-nao-conecta-na-internet-por-cabo",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/blog/ventoinha-do-computador-fazendo-barulho-o-que-verificar",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/blog/rede-wifi-nao-aparece-na-lista-o-que-verificar",
+        "motivo": "sem HTML prerenderizado no build"
+      },
+      {
+        "path": "/blog/arquivo-corrompido-nao-abre-o-que-fazer",
+        "motivo": "sem HTML prerenderizado no build"
       }
     ],
     "canonicoIncorreto": [],
     "schemaInvalido": [],
-    "orfas": null
+    "orfas": []
   }
 }
