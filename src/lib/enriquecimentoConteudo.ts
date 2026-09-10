@@ -1149,6 +1149,32 @@ export const ENRIQUECIMENTO_1: Record<string, EnriquecimentoConteudo> = {
         ],
       },
     ],
+  },
+  "/problemas/windows-lento-curitiba": {
+    respostaRapida:
+      "Windows lento pode ser inicialização carregada, armazenamento saturado, atualização pendente, malware, memória insuficiente ou hardware envelhecido. O sintoma precisa ser medido antes de escolher a correção.",
+    tabelaDiagnostica: {
+      titulo: "Windows lento: hipótese e verificação",
+      linhas: [
+        { sintoma: "Demora antes da área de trabalho", causa: "Inicialização, unidade ou atualização", verificar: "Cronometrar boot e observar aplicativos de inicialização", acao: "Não limpar registro por tentativa" },
+        { sintoma: "Disco em 100% com pouca atividade", causa: "Processo, unidade lenta, erro de leitura ou paginação", verificar: "Observar processo, saúde e comportamento da unidade", acao: "Não interromper verificações repetidamente em disco instável" },
+        { sintoma: "CPU alta sem programa evidente", causa: "Serviço, atualização, malware ou temperatura", verificar: "Identificar processo e correlacionar com temperatura e eventos", acao: "Não encerrar processos do sistema sem saber a função" },
+        { sintoma: "Lentidão começou após atualização", causa: "Driver, versão ou tarefa de manutenção", verificar: "Registrar atualização e testar alternativa reversível", acao: "Não apagar componentes de atualização sem cópia" },
+      ],
+    },
+    blocos: [
+      {
+        id: "windows-lento-sem-receita",
+        titulo: "O que testar antes de formatar o Windows",
+        itens: [
+          { titulo: "Registre o antes", desc: "Tempo de inicialização, aplicativo afetado, uso de CPU/RAM/disco e temperatura criam uma linha de base comparável." },
+          { titulo: "Revise inicialização e armazenamento", desc: "Desabilite apenas aplicativos conhecidos e confira espaço livre. Não remova serviços por listas genéricas da internet." },
+          { titulo: "Investigue segurança", desc: "Verifique proteção, processos e eventos. Um antivírus atualizado não transforma qualquer uso alto em prova de malware." },
+          { titulo: "Considere atualização e driver", desc: "Relacione a primeira falha com a mudança realizada. Reverter ou desinstalar é diferente de apagar pastas do sistema." },
+          { titulo: "Formate com backup confirmado", desc: "Reinstalação remove aplicativos e pode apagar dados. Só faz sentido depois de separar falha de software de defeito físico." },
+        ],
+      },
+    ],
   }
 };
 
