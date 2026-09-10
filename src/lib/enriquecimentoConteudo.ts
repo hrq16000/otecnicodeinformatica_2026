@@ -1123,6 +1123,32 @@ export const ENRIQUECIMENTO_1: Record<string, EnriquecimentoConteudo> = {
         ],
       },
     ],
+  },
+  "/problemas/computador-lento-curitiba": {
+    respostaRapida:
+      "Computador lento é sintoma, não diagnóstico. O primeiro passo é observar quando a demora acontece e medir armazenamento, memória, processador, temperatura e programas em segundo plano.",
+    tabelaDiagnostica: {
+      titulo: "Lentidão: momento do sintoma e hipótese mais útil",
+      linhas: [
+        { sintoma: "Demora para iniciar", causa: "Armazenamento, inicialização carregada ou atualização", verificar: "Medir tempo de boot e revisar aplicativos de inicialização", acao: "Não formatar antes de preservar dados" },
+        { sintoma: "Trava ao abrir vários programas", causa: "Memória, paginação ou armazenamento saturado", verificar: "Observar uso de RAM e disco no Gerenciador de Tarefas", acao: "Não comprar RAM sem confirmar o limite da placa" },
+        { sintoma: "Fica lento e quente", causa: "Temperatura, poeira, ventilação ou redução de frequência", verificar: "Reproduzir sob carga e registrar temperatura e frequência", acao: "Não usar limpeza de registro como tratamento" },
+        { sintoma: "Só um aplicativo está lento", causa: "Aplicativo, perfil, atualização ou requisito específico", verificar: "Comparar outro usuário, arquivo e programa", acao: "Não condenar o computador inteiro por um único app" },
+      ],
+    },
+    blocos: [
+      {
+        id: "medicao-lentidao-sem-formatar",
+        titulo: "Medição mínima antes de recomendar upgrade ou formatação",
+        itens: [
+          { titulo: "Reproduza o sintoma", desc: "Anote tarefa, tempo de espera e se a lentidão ocorre sempre ou apenas em horários e aplicativos específicos." },
+          { titulo: "Observe o recurso limitante", desc: "CPU, memória, disco e temperatura contam histórias diferentes. O maior percentual isolado não prova a causa." },
+          { titulo: "Separe software de hardware", desc: "Inicialização carregada, malware e atualização podem coexistir com HD lento, RAM insuficiente ou aquecimento. Faça testes em sequência." },
+          { titulo: "Defina o critério de sucesso", desc: "Compare o mesmo fluxo antes e depois: boot, abertura de programa e tarefa principal. Sem métrica, “ficou melhor” pode ser apenas impressão." },
+          { titulo: "Formate somente com motivo", desc: "Reinstalar pode corrigir corrupção persistente, mas não resolve fonte, memória, temperatura ou armazenamento instável." },
+        ],
+      },
+    ],
   }
 };
 
