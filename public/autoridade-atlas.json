@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-09-10T18:11:47.485Z",
+  "geradoEm": "2026-09-10T18:25:54.553Z",
   "hub": "/guia-tecnico-informatica",
   "fonte": {
     "html": "SSR harness",
@@ -22,7 +22,7 @@
       "titulo": "Windows e inicialização",
       "destinos": 12,
       "renderizados": 12,
-      "densidadeMedia": 50.05,
+      "densidadeMedia": 50.04,
       "faltando": []
     },
     {
@@ -70,7 +70,7 @@
       "titulo": "Informática para empresas",
       "destinos": 7,
       "renderizados": 7,
-      "densidadeMedia": 53.96,
+      "densidadeMedia": 53.91,
       "faltando": []
     },
     {
@@ -129,16 +129,13 @@
     }
   ],
   "medias": {
-    "palavras": 2269.64,
+    "palavras": 2269.68,
     "densidadeSemantica": 51.55,
     "grauSaidaAtlas": 9.46,
     "grauEntradaAtlas": 9.46
   },
   "dependentesDoHub": [
-    "/blog/boot-uefi-ou-legacy-como-identificar",
-    "/blog/windows-update-nao-funciona-o-que-verificar",
-    "/blog/como-conectar-wifi-tv-nao-conecta",
-    "/blog/backup-nuvem-empresas-qual-escolher"
+    "/blog/como-conectar-wifi-tv-nao-conecta"
   ],
   "semEntrada": [],
   "nos": [
@@ -625,9 +622,10 @@
         "/servicos/formatacao"
       ],
       "grauSaidaTotal": 12,
-      "grauEntradaAtlas": 1,
+      "grauEntradaAtlas": 2,
       "origensEntrada": [
-        "/guia-tecnico-informatica"
+        "/guia-tecnico-informatica",
+        "/blog/como-instalar-windows-11-do-zero"
       ],
       "erro": null
     },
@@ -947,9 +945,10 @@
         "/problemas/windows-nao-inicia"
       ],
       "grauSaidaTotal": 12,
-      "grauEntradaAtlas": 1,
+      "grauEntradaAtlas": 2,
       "origensEntrada": [
-        "/guia-tecnico-informatica"
+        "/guia-tecnico-informatica",
+        "/blog/como-instalar-windows-11-do-zero"
       ],
       "erro": null
     },
@@ -984,10 +983,10 @@
       "url": "/blog/como-instalar-windows-11-do-zero",
       "tipo": "artigo",
       "titulo": "Como preparar uma instalação limpa do Windows 11",
-      "palavras": 1452,
-      "termosUteis": 857,
+      "palavras": 1454,
+      "termosUteis": 859,
       "vocabulario": 453,
-      "densidadeSemantica": 52.86,
+      "densidadeSemantica": 52.74,
       "linksSaidaAtlas": [
         "/servicos/recuperacao-de-dados",
         "/servicos/formatacao",
@@ -995,8 +994,8 @@
         "/precos-e-politicas",
         "/problemas/windows-nao-inicia",
         "/blog/backup-como-proteger-seus-arquivos",
-        "/blog/como-saber-se-pc-tem-virus-malware",
-        "/blog/quando-trocar-hd-por-ssd",
+        "/blog/boot-uefi-ou-legacy-como-identificar",
+        "/blog/windows-update-nao-funciona-o-que-verificar",
         "/servicos/remocao-de-virus"
       ],
       "grauSaidaTotal": 14,
@@ -1030,14 +1029,13 @@
         "/quando-nao-compensa"
       ],
       "grauSaidaTotal": 17,
-      "grauEntradaAtlas": 15,
+      "grauEntradaAtlas": 13,
       "origensEntrada": [
         "/guia-tecnico-informatica",
         "/blog/o-que-e-informatica",
         "/blog/informatica-basica",
         "/blog/como-aprender-informatica",
         "/blog/disco-com-setores-defeituosos-smart-o-que-fazer",
-        "/blog/como-instalar-windows-11-do-zero",
         "/blog/memoria-ram-insuficiente-sintomas",
         "/blog/como-melhorar-sinal-wifi-em-casa",
         "/blog/como-conectar-wifi-tv-nao-conecta",
@@ -1045,7 +1043,6 @@
         "/blog/backup-como-proteger-seus-arquivos",
         "/blog/notebook-superaquecendo-o-que-fazer",
         "/blog/limpar-arquivos-temporarios-windows",
-        "/blog/organizacao-de-ti-para-pequenos-escritorios",
         "/blog/como-escolher-uma-workstation"
       ],
       "erro": null
@@ -1716,10 +1713,9 @@
         "/servicos/formatacao"
       ],
       "grauSaidaTotal": 16,
-      "grauEntradaAtlas": 9,
+      "grauEntradaAtlas": 8,
       "origensEntrada": [
         "/guia-tecnico-informatica",
-        "/blog/como-instalar-windows-11-do-zero",
         "/blog/quando-trocar-hd-por-ssd",
         "/blog/como-melhorar-sinal-wifi-em-casa",
         "/blog/como-conectar-wifi-tv-nao-conecta",
@@ -2464,10 +2460,10 @@
       "url": "/blog/organizacao-de-ti-para-pequenos-escritorios",
       "tipo": "artigo",
       "titulo": "Organização de TI para pequenos escritórios: o guia prático",
-      "palavras": 1909,
-      "termosUteis": 1136,
-      "vocabulario": 620,
-      "densidadeSemantica": 54.58,
+      "palavras": 1910,
+      "termosUteis": 1137,
+      "vocabulario": 617,
+      "densidadeSemantica": 54.27,
       "linksSaidaAtlas": [
         "/seguranca-dos-dados",
         "/servicos/redes-e-wifi",
@@ -2476,8 +2472,8 @@
         "/servicos/remocao-de-virus",
         "/guia-tecnico-informatica",
         "/blog/backup-como-proteger-seus-arquivos",
-        "/blog/como-escolher-uma-workstation",
-        "/blog/quando-trocar-hd-por-ssd"
+        "/blog/backup-nuvem-empresas-qual-escolher",
+        "/blog/como-escolher-uma-workstation"
       ],
       "grauSaidaTotal": 17,
       "grauEntradaAtlas": 5,
@@ -2528,9 +2524,10 @@
         "/servicos/remocao-de-virus"
       ],
       "grauSaidaTotal": 11,
-      "grauEntradaAtlas": 1,
+      "grauEntradaAtlas": 2,
       "origensEntrada": [
-        "/guia-tecnico-informatica"
+        "/guia-tecnico-informatica",
+        "/blog/organizacao-de-ti-para-pequenos-escritorios"
       ],
       "erro": null
     },
