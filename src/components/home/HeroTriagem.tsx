@@ -70,20 +70,21 @@ export const HeroTriagem = () => {
         aria-hidden="true"
       />
 
-      <div className="pointer-events-none absolute inset-y-0 right-0 hidden w-[48%] lg:block" aria-hidden="true">
+      <div className="pointer-events-none absolute inset-y-0 right-0 hidden w-[46%] lg:block" aria-hidden="true">
         <img
-          src="/fotos/bancada-tecnica.jpg"
+          src="/fotos/estacao-trabalho.jpg"
           alt=""
           aria-hidden="true"
           width={1024}
-          height={735}
+          height={765}
           fetchPriority="high"
           decoding="async"
-          className="h-full w-full object-cover object-center opacity-90"
+          className="h-full w-full object-cover object-center"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-background via-background/85 to-transparent" />
-        <div className="absolute inset-0 bg-gradient-to-b from-background/10 via-transparent to-background" />
+        <div className="absolute inset-0 bg-gradient-to-r from-background via-background/70 to-background/10" />
+        <div className="absolute inset-0 bg-gradient-to-b from-background/20 via-transparent to-background/70" />
       </div>
+
 
       <div className="container relative z-10 mx-auto py-10 md:py-16">
         <div className="max-w-3xl">
