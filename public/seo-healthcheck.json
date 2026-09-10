@@ -1,19 +1,28 @@
 {
-  "geradoEm": "2026-09-10T16:02:34.891Z",
+  "geradoEm": "2026-09-10T16:18:08.983Z",
   "base": "https://otecnicodeinformatica.com.br",
   "inventarioGeradoEm": "2026-09-10T16:02:34.460Z",
   "totalUrls": 247,
   "resumo": {
-    "urlsQuebradas": 0,
+    "urlsQuebradas": 2,
     "semHtmlNoBuild": 168,
     "canonicoIncorreto": 0,
     "schemaInvalido": 0,
     "orfas": 0,
-    "criticos": 0,
-    "status": "OK"
+    "criticos": 2,
+    "status": "ATENCAO"
   },
   "problemas": {
-    "urlsQuebradas": [],
+    "urlsQuebradas": [
+      {
+        "path": "/",
+        "motivo": "falha de rede: TypeError: fetch failed"
+      },
+      {
+        "path": "/como-funciona",
+        "motivo": "falha de rede: TypeError: fetch failed"
+      }
+    ],
     "semHtmlNoBuild": [
       {
         "path": "/servicos",
