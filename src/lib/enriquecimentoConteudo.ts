@@ -1175,6 +1175,32 @@ export const ENRIQUECIMENTO_1: Record<string, EnriquecimentoConteudo> = {
         ],
       },
     ],
+  },
+  "/problemas/computador-travando-curitiba": {
+    respostaRapida:
+      "Travamento pode ser congelamento do sistema, queda de vídeo, reinício ou aplicativo isolado. Identificar qual desses eventos ocorre é mais útil do que trocar peças por tentativa.",
+    tabelaDiagnostica: {
+      titulo: "Travamento: evento observado e investigação",
+      linhas: [
+        { sintoma: "Cursor e teclado param, mas ventoinha segue", causa: "Memória, driver, processo ou armazenamento", verificar: "Registrar aplicativo, uso de recursos e eventos após reiniciar", acao: "Não forçar desligamentos repetidos se houver atividade de disco" },
+        { sintoma: "Tela congela e reinicia", causa: "Energia, temperatura, driver ou hardware", verificar: "Correlacionar carga, temperatura e horário", acao: "Não atualizar BIOS como primeiro teste" },
+        { sintoma: "Só um programa trava", causa: "Aplicativo, perfil, arquivo ou requisito", verificar: "Testar outro arquivo e usuário", acao: "Não concluir defeito do computador inteiro" },
+        { sintoma: "Travamento após upgrade", causa: "Compatibilidade, encaixe, perfil ou driver", verificar: "Revisar histórico e retornar a configuração conhecida", acao: "Não manter overclock instável" },
+      ],
+    },
+    blocos: [
+      {
+        id: "travamento-reproduzivel",
+        titulo: "Roteiro de investigação sem trocar peças por achismo",
+        itens: [
+          { titulo: "Classifique o evento", desc: "Congelamento, tela preta, reinício e aplicativo fechado têm causas e evidências diferentes. Use a descrição exata do que permaneceu funcionando." },
+          { titulo: "Reproduza com uma variável", desc: "Repita a mesma tarefa, anote carga e temperatura e não altere BIOS, driver e hardware simultaneamente." },
+          { titulo: "Observe armazenamento e memória", desc: "Erros de leitura, paginação e RAM instável podem parecer iguais na tela. Teste cada hipótese sem apagar dados." },
+          { titulo: "Correlacione com atualização", desc: "Se começou após driver ou Windows Update, registre a versão e teste reversão documentada antes de reinstalar tudo." },
+          { titulo: "Escalone diante de sinais físicos", desc: "Cheiro, ruído, desligamento abrupto ou unidade desaparecendo exigem interromper testes e preservar o equipamento." },
+        ],
+      },
+    ],
   }
 };
 
