@@ -561,6 +561,18 @@ export const ENRIQUECIMENTO_1: Record<string, EnriquecimentoConteudo> = {
       "Trocar HD por SSD é o upgrade que mais muda a sensação de uso em máquina antiga: inicialização, abertura de programas e resposta do sistema deixam de esperar uma peça mecânica. Mas SSD não corrige superaquecimento, defeito de placa-mãe, memória insuficiente para o uso nem infecção — se o sintoma é travamento aleatório ou desligamento, o diagnóstico vem antes da peça.",
     blocos: [
       {
+        id: "limites-do-diagnostico-ssd",
+        titulo: "O que um SSD pode melhorar — e o que ele não promete",
+        intro: "SSD reduz espera mecânica, mas não transforma qualquer computador em equipamento novo. O resultado depende da interface, do estado do sistema e do restante do hardware.",
+        itens: [
+          { titulo: "Velocidade não é um número universal", desc: "Leitura sequencial de laboratório não representa abrir programas, iniciar o Windows ou trabalhar com arquivos pequenos. Interface, temperatura, firmware, controlador e carga alteram o resultado." },
+          { titulo: "SMART é sinal de acompanhamento", desc: "Indicadores podem mostrar desgaste ou erros registrados, mas não garantem que a unidade continuará funcionando nem identificam toda falha iminente. Use-os junto com backup e comportamento observado." },
+          { titulo: "Vida útil não tem prazo fixo", desc: "TBW, ciclos de gravação, temperatura, energia, controlador e histórico influenciam a durabilidade. Nenhum número de anos substitui monitoramento e cópia verificada." },
+          { titulo: "SSD não substitui diagnóstico", desc: "Travamento, desligamento e tela azul também podem vir de memória, fonte, temperatura, driver ou placa-mãe. Trocar o disco sem isolar o sintoma pode gerar custo e manter a falha." },
+          { titulo: "Backup continua obrigatório", desc: "A ausência de partes móveis reduz um tipo de risco, mas não protege contra corrupção, exclusão, ransomware, falha eletrônica, roubo ou erro humano." },
+        ],
+      },
+      {
         id: "compatibilidade-antes-do-upgrade",
         titulo: "Checklist antes de comprar ou clonar um SSD",
         intro: "Capacidade e velocidade anunciadas não confirmam compatibilidade. O diagnóstico começa pelo equipamento existente e pelo destino dos dados.",
