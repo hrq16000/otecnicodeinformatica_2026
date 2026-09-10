@@ -810,6 +810,18 @@ export const ENRIQUECIMENTO_1: Record<string, EnriquecimentoConteudo> = {
     },
     blocos: [
       {
+        id: "decisao-roteador",
+        titulo: "Escolha e diagnóstico do roteador sem confundir velocidade com cobertura",
+        intro: "O melhor roteador depende do ambiente, dispositivos, cabeamento e qualidade do link. Trocar o aparelho não corrige toda causa de lentidão.",
+        itens: [
+          { titulo: "Separe link contratado de Wi-Fi", desc: "Teste um computador por cabo e depois no mesmo local por Wi-Fi. Se o cabo também oscila, investigue modem, provedor ou rota antes de culpar o sinal sem fio." },
+          { titulo: "Wi-Fi 5, 6 e 6E não garantem alcance", desc: "O padrão melhora eficiência e capacidade, mas paredes, distância, canais ocupados e dispositivos antigos continuam limitando o resultado." },
+          { titulo: "Mesh não é repetidor mágico", desc: "Mesh pode organizar a cobertura, mas nós sem backhaul adequado compartilham o meio sem fio. Posicione os pontos onde ainda exista sinal útil." },
+          { titulo: "Portas e cabos criam limites", desc: "Link acima de 100 Mb/s pode exigir portas gigabit e cabeamento adequado. Negociação em 100 Mb/s ou conector ruim cria um teto que canal de rádio não resolve." },
+          { titulo: "Firmware exige motivo e registro", desc: "Use a versão do fabricante e registre a configuração antes de atualizar. Firmware não deve ser aplicado como tentativa genérica para qualquer queda." },
+        ],
+      },
+      {
         id: "roteador-operadora",
         titulo: "Equipamento da operadora e roteador próprio: quando cada um basta",
         itens: [
