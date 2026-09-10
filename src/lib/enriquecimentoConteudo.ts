@@ -513,11 +513,25 @@ export const ENRIQUECIMENTO_1: Record<string, EnriquecimentoConteudo> = {
         ],
       },
     ],
+    fontes: [
+      {
+        titulo: "Microsoft Support — Backup, restauração e recuperação no Windows",
+        url: "https://support.microsoft.com/en-us/windows/experience/backup-recovery/backup-restore-and-recovery-in-windows",
+        nota: "Diferença entre backup, restauração e recursos de recuperação no Windows.",
+      },
+      {
+        titulo: "Microsoft Support — Fazer backup e restaurar com o Windows Backup",
+        url: "https://support.microsoft.com/en-us/windows/experience/backup-recovery/back-up-and-restore-with-windows-backup",
+        nota: "Limites e fluxo de restauração da solução integrada do Windows.",
+      },
+      {
+        titulo: "Microsoft Learn — plano de backup e restauração contra ransomware",
+        url: "https://learn.microsoft.com/en-us/azure/security/fundamentals/backup-plan-to-protect-against-ransomware",
+        nota: "Princípios de cópias isoladas, recuperação testada e priorização de sistemas críticos.",
+      },
+    ],
   },
 
-  /* ------------------------------------------------------------------ */
-  /* SOLUÇÃO — SSD                                                       */
-  /* ------------------------------------------------------------------ */
   "/solucoes/ssd": {
     respostaRapida:
       "Trocar HD por SSD é o upgrade que mais muda a sensação de uso em máquina antiga: inicialização, abertura de programas e resposta do sistema deixam de esperar uma peça mecânica. Mas SSD não corrige superaquecimento, defeito de placa-mãe, memória insuficiente para o uso nem infecção — se o sintoma é travamento aleatório ou desligamento, o diagnóstico vem antes da peça.",
