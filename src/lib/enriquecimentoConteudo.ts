@@ -960,6 +960,18 @@ export const ENRIQUECIMENTO_1: Record<string, EnriquecimentoConteudo> = {
     },
     blocos: [
       {
+        id: "dns-ipv4-ipv6-rota",
+        titulo: "DNS, IPv4, IPv6 e rota: quando o sinal não é o culpado",
+        intro: "Conectar ao Wi‑Fi não garante que o nome de um site será resolvido ou que existe rota até o destino.",
+        itens: [
+          { titulo: "Acessa o roteador, mas não abre sites", desc: "Teste o painel local e depois um endereço externo. Se o local responde, o rádio pode estar funcionando enquanto DNS, modem ou provedor falha." },
+          { titulo: "Endereço IP abre, nome não", desc: "Essa diferença aponta para resolução de nomes, não necessariamente para cobertura. Registre o resultado antes de trocar canal ou antena." },
+          { titulo: "IPv4 funciona e IPv6 falha", desc: "Clientes e provedores podem operar pilhas diferentes. Desative ou altere IPv6 somente com motivo, registro da configuração e possibilidade de reversão." },
+          { titulo: "Uma rota ou serviço específico falha", desc: "Indisponibilidade de destino, peering ou filtro pode afetar um serviço enquanto outros continuam normais. Isso não prova defeito do roteador." },
+          { titulo: "Teste comparável", desc: "Use o mesmo dispositivo, horário e conexão para comparar cabo, Wi‑Fi e outro destino. Sem controle das variáveis, a conclusão fica fraca." },
+        ],
+      },
+      {
         id: "seguranca-basica-roteador",
         titulo: "Segurança básica do roteador sem complicar a rede",
         intro: "Desempenho e segurança caminham juntos: uma configuração esquecida pode causar tanto instabilidade quanto acesso indevido.",
