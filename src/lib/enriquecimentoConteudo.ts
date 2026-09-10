@@ -117,11 +117,21 @@ export const ENRIQUECIMENTO_1: Record<string, EnriquecimentoConteudo> = {
         ],
       },
     ],
+    fontes: [
+      {
+        titulo: "Microsoft Support — Recuperação de arquivos do Windows",
+        url: "https://support.microsoft.com/pt-br/windows/experience/backup-recovery/windows-file-recovery",
+        nota: "Orienta minimizar o uso da unidade e gravar o resultado em uma unidade diferente.",
+      },
+      {
+        titulo: "Microsoft Support — Opções de recuperação no Windows",
+        url: "https://support.microsoft.com/pt-br/windows/experience/backup-recovery/recovery-options-in-windows",
+        nota: "Apresenta a ordem de recuperação e os riscos de perda de dados.",
+      },
+    ],
   },
 
-  /* ------------------------------------------------------------------ */
-  /* PROBLEMA — Wi-Fi instável                                           */
-  /* ------------------------------------------------------------------ */
+
   "/problemas/wifi-instavel": {
     respostaRapida:
       "Wi-Fi que cai ou fica lento em parte do imóvel quase sempre é problema de cobertura ou de interferência, não de velocidade contratada. O teste que separa tudo é simples: se por cabo a conexão vai bem e sem fio não, o plano está entregando e a distribuição do sinal é que precisa ser corrigida.",
