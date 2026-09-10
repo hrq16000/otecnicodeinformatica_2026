@@ -814,6 +814,18 @@ export const ENRIQUECIMENTO_1: Record<string, EnriquecimentoConteudo> = {
     },
     blocos: [
       {
+        id: "diagnostico-termico-notebook",
+        titulo: "Temperatura no notebook: medir antes de condenar a peça",
+        intro: "A sensação de calor não informa sozinha se há superaquecimento. O diagnóstico combina temperatura, frequência, rotação da ventoinha e reprodução do desligamento.",
+        itens: [
+          { titulo: "Observe o padrão", desc: "Registre se o aquecimento aparece parado, ao abrir programas ou somente sob carga. Sintoma que surge apenas em carga aponta para uma investigação diferente de calor constante em repouso." },
+          { titulo: "Compare temperatura e desempenho", desc: "Queda automática de frequência, travamento e desligamento são evidências diferentes. Não transforme qualquer ventoinha audível em diagnóstico de pasta térmica." },
+          { titulo: "Confira entradas e saídas de ar", desc: "Base, cama, sofá e poeira podem restringir o fluxo. Limpeza externa ajuda, mas não prova que o dissipador, sensor ou ventilador estejam íntegros." },
+          { titulo: "Não use temperatura como prazo de vida", desc: "Uma leitura depende de sensor, ambiente e carga. Não existe um número único que condene todos os notebooks ou determine troca imediata." },
+          { titulo: "Pare diante de bateria estufada ou cheiro anormal", desc: "Esses sinais exigem desligar, desconectar a alimentação quando seguro e evitar pressão ou abertura improvisada. O risco deixa de ser apenas desempenho." },
+        ],
+      },
+      {
         id: "mitos-do-notebook",
         titulo: "Mitos de notebook que confundem manutenção com troca de peça",
         intro: "Notebook tem componentes soldados, limites térmicos e baterias com desgaste. A recomendação precisa respeitar o modelo.",
