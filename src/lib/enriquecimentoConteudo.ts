@@ -291,6 +291,18 @@ export const ENRIQUECIMENTO_1: Record<string, EnriquecimentoConteudo> = {
     },
     blocos: [
       {
+        id: "comandos-dependem-do-modo",
+        titulo: "Comandos de boot não são receitas universais",
+        intro: "O procedimento depende do modo de firmware, do esquema de partição e da letra atribuída no WinRE. Copiar uma sequência antiga pode piorar o cenário.",
+        itens: [
+          { titulo: "UEFI/GPT", desc: "A inicialização usa uma partição EFI e o Windows Boot Manager. O diagnóstico precisa localizar a instalação e a partição de sistema antes de reconstruir arquivos de boot." },
+          { titulo: "Legacy/MBR", desc: "O fluxo legado usa estruturas diferentes. Comandos pensados para MBR não devem ser aplicados em uma instalação UEFI sem confirmar o esquema." },
+          { titulo: "Letras mudam no WinRE", desc: "A instalação que era C: no uso normal pode aparecer com outra letra na recuperação. Confirme a pasta Windows antes de executar verificações offline." },
+          { titulo: "Reparo não é conversão", desc: "Reconstruir arquivos de boot não converte com segurança MBR para GPT nem troca Legacy por UEFI. Conversão exige backup, compatibilidade e plano de retorno." },
+          { titulo: "Pare diante de dados sem cópia", desc: "Se a unidade está instável, criptografada sem chave ou com arquivos importantes sem backup, interrompa comandos de alteração e priorize preservação." },
+        ],
+      },
+      {
         id: "matriz-escolha-recuperacao",
         titulo: "Qual opção de recuperação usar primeiro?",
         intro: "A escolha depende do momento em que a falha começou e do que ainda funciona. Começar pela alternativa menos invasiva preserva dados e reduz tentativas aleatórias.",
