@@ -61,6 +61,27 @@ jobs:
       # Os passos opcionais (GSC/rede) não bloqueiam o CI.
       - name: deploy:check (gates de publicação — comando oficial)
         run: npm run deploy:check
+      # Gates de SEO com resumo anexado ao build (bloqueantes).
+      - name: Gates de SEO (auditoria, descoberta, sitemap, robots)
+        run: |
+          set -o pipefail
+          {
+            echo "## Gates de SEO"
+            echo ""
+            echo '```text'
+          } >> "$GITHUB_STEP_SUMMARY"
+          status=0
+          for gate in audit:seo check:content-discovery check:sitemap-source check:robots; do
+            saida="$(npm run --silent "$gate" 2>&1)" || status=1
+            {
+              echo "### $gate"
+              echo "$saida" | tail -20
+              echo ""
+            } >> "$GITHUB_STEP_SUMMARY"
+          done
+          echo '```' >> "$GITHUB_STEP_SUMMARY"
+          exit $status
+
       # Gates que dependem de servidor local e por isso ficam fora do orquestrador.
       - name: Interlinking local gate (mãe ⇄ bairros/cidades)
         run: node scripts/with-ssr-server.mjs npm run check:local-interlinking
