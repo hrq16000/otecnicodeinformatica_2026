@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
+
 import { Badge } from "@/components/ui/badge";
 import { Card } from "@/components/ui/card";
 
@@ -19,6 +20,9 @@ interface Sugestao {
   paraTitulo: string;
   entradasDestino: number;
   saidasOrigem: number;
+  /** Quanto maior, mais urgente é fechar esta ponta. */
+  prioridade?: number;
+
 }
 
 interface Relatorio {
@@ -45,10 +49,21 @@ export function InterlinkSuggestionsPanel() {
     };
   }, []);
 
+  // Ordena pelas pontas mais relevantes: prioridade calculada no relatório e,
+  // em empate, o destino com menos links de entrada.
   const lista = useMemo(
-    () => (dados?.sugestoes ?? []).filter((s) => cluster === "todos" || s.cluster === cluster).slice(0, 30),
+    () =>
+      (dados?.sugestoes ?? [])
+        .filter((s) => cluster === "todos" || s.cluster === cluster)
+        .slice()
+        .sort(
+          (a, b) =>
+            (b.prioridade ?? 0) - (a.prioridade ?? 0) || a.entradasDestino - b.entradasDestino,
+        )
+        .slice(0, 30),
     [dados, cluster],
   );
+
 
   if (erro || !dados) {
     return (
@@ -95,9 +110,16 @@ export function InterlinkSuggestionsPanel() {
         <p className="mt-3 text-sm text-muted-foreground">Nenhum par pendente neste tema — a malha já está fechada.</p>
       ) : (
         <ul className="mt-3 space-y-2 text-xs">
-          {lista.map((s) => (
-            <li key={`${s.de}->${s.para}`} className="rounded-md border border-border p-2">
-              <div className="text-[11px] uppercase tracking-wide text-muted-foreground">{s.cluster}</div>
+          {lista.map((s, i) => (
+            <li
+              key={`${s.de}->${s.para}`}
+              className={`rounded-md border p-2 ${i < 5 ? "border-accent/40 bg-accent/5" : "border-border"}`}
+            >
+              <div className="flex flex-wrap items-center gap-2 text-[11px] uppercase tracking-wide text-muted-foreground">
+                <span>{s.cluster}</span>
+                {i < 5 && <Badge variant="outline">ponta mais relevante</Badge>}
+              </div>
+
               <div className="mt-1">
                 <span className="font-medium">{s.deTitulo}</span>
                 <span className="text-muted-foreground"> → </span>

@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-09-10T16:01:33.102Z",
+  "geradoEm": "2026-09-10T18:20:29.691Z",
   "fonte": {
     "html": "SSR harness",
     "dist": "dist"
@@ -8,8 +8,8 @@
   "analisadas": 78,
   "falhas": 0,
   "medias": {
-    "palavras": 1467.12,
-    "densidadeSemantica": 56.62,
+    "palavras": 1475.49,
+    "densidadeSemantica": 56.5,
     "densidadeKeywordPrincipal": 0.43,
     "linksInternosSaida": 11.5,
     "linksInternosEntrada": 3.03
@@ -182,15 +182,13 @@
         "/blog/backup-como-proteger-seus-arquivos",
         "/quando-nao-compensa"
       ],
-      "linksInternosEntrada": 16,
+      "linksInternosEntrada": 14,
       "origensEntrada": [
         "/blog/como-saber-se-pc-tem-virus-malware",
         "/blog/backup-como-proteger-seus-arquivos",
         "/blog/como-melhorar-sinal-wifi-em-casa",
         "/blog/notebook-superaquecendo-o-que-fazer",
-        "/blog/organizacao-de-ti-para-pequenos-escritorios",
         "/blog/como-escolher-uma-workstation",
-        "/blog/como-instalar-windows-11-do-zero",
         "/blog/notebook-nao-liga-o-que-fazer",
         "/blog/computador-lento-causas-solucoes",
         "/blog/como-conectar-wifi-tv-nao-conecta",
@@ -357,13 +355,12 @@
         "/blog/quando-trocar-hd-por-ssd",
         "/servicos/formatacao"
       ],
-      "linksInternosEntrada": 10,
+      "linksInternosEntrada": 9,
       "origensEntrada": [
         "/blog/quando-trocar-hd-por-ssd",
         "/blog/backup-como-proteger-seus-arquivos",
         "/blog/como-melhorar-sinal-wifi-em-casa",
         "/blog/como-escolher-uma-workstation",
-        "/blog/como-instalar-windows-11-do-zero",
         "/blog/notebook-nao-liga-o-que-fazer",
         "/blog/computador-lento-causas-solucoes",
         "/blog/como-escolher-um-bom-antivirus",
@@ -875,16 +872,21 @@
       "lote": null,
       "aprovadoEm": "2026-08-06",
       "titulo": "Organização de TI para pequenos escritórios: o guia prático",
-      "palavras": 1909,
-      "termosUteis": 1130,
-      "densidadeSemantica": 54.6,
-      "vocabulario": 617,
+      "palavras": 1910,
+      "termosUteis": 1131,
+      "densidadeSemantica": 54.29,
+      "vocabulario": 614,
       "keywordPrincipal": {
         "termo": "organizacao de ti para pequenos escritorios",
         "ocorrencias": 3,
         "densidade": 0.27
       },
       "topKeywords": [
+        {
+          "termo": "backup",
+          "ocorrencias": 13,
+          "densidade": 1.15
+        },
         {
           "termo": "copia",
           "ocorrencias": 13,
@@ -899,11 +901,6 @@
           "termo": "suporte",
           "ocorrencias": 12,
           "densidade": 1.06
-        },
-        {
-          "termo": "backup",
-          "ocorrencias": 11,
-          "densidade": 0.97
         },
         {
           "termo": "quem",
@@ -921,6 +918,11 @@
           "densidade": 0.88
         },
         {
+          "termo": "empresas",
+          "ocorrencias": 9,
+          "densidade": 0.8
+        },
+        {
           "termo": "rede",
           "ocorrencias": 9,
           "densidade": 0.8
@@ -932,11 +934,6 @@
         },
         {
           "termo": "arquivos",
-          "ocorrencias": 8,
-          "densidade": 0.71
-        },
-        {
-          "termo": "empresas",
           "ocorrencias": 8,
           "densidade": 0.71
         },
@@ -1021,8 +1018,8 @@
         "/entidades/backup",
         "/servicos/remocao-de-virus",
         "/blog/backup-como-proteger-seus-arquivos",
-        "/blog/como-escolher-uma-workstation",
-        "/blog/quando-trocar-hd-por-ssd"
+        "/blog/backup-nuvem-empresas-qual-escolher",
+        "/blog/como-escolher-uma-workstation"
       ],
       "linksInternosEntrada": 1,
       "origensEntrada": [
@@ -1198,9 +1195,9 @@
       "lote": null,
       "aprovadoEm": "2026-08-12",
       "titulo": "Como preparar uma instalação limpa do Windows 11",
-      "palavras": 1452,
-      "termosUteis": 852,
-      "densidadeSemantica": 52.82,
+      "palavras": 1454,
+      "termosUteis": 854,
+      "densidadeSemantica": 52.69,
       "vocabulario": 450,
       "keywordPrincipal": {
         "termo": "como instalar windows 11 do zero",
@@ -1211,12 +1208,12 @@
         {
           "termo": "instalacao",
           "ocorrencias": 31,
-          "densidade": 3.64
+          "densidade": 3.63
         },
         {
           "termo": "windows",
-          "ocorrencias": 28,
-          "densidade": 3.29
+          "ocorrencias": 29,
+          "densidade": 3.4
         },
         {
           "termo": "limpa",
@@ -1231,7 +1228,7 @@
         {
           "termo": "disco",
           "ocorrencias": 17,
-          "densidade": 2
+          "densidade": 1.99
         },
         {
           "termo": "arquivos",
@@ -1251,17 +1248,17 @@
         {
           "termo": "equipamento",
           "ocorrencias": 9,
-          "densidade": 1.06
+          "densidade": 1.05
+        },
+        {
+          "termo": "atualizacao",
+          "ocorrencias": 8,
+          "densidade": 0.94
         },
         {
           "termo": "dados",
           "ocorrencias": 8,
           "densidade": 0.94
-        },
-        {
-          "termo": "atualizacao",
-          "ocorrencias": 7,
-          "densidade": 0.82
         },
         {
           "termo": "programas",
@@ -1273,12 +1270,12 @@
         {
           "termo": "instalacao limpa",
           "ocorrencias": 21,
-          "densidade": 2.47
+          "densidade": 2.46
         },
         {
           "termo": "disco sistema",
           "ocorrencias": 6,
-          "densidade": 0.71
+          "densidade": 0.7
         },
         {
           "termo": "limpa apaga",
@@ -1292,8 +1289,8 @@
         },
         {
           "termo": "windows update",
-          "ocorrencias": 4,
-          "densidade": 0.47
+          "ocorrencias": 5,
+          "densidade": 0.59
         },
         {
           "termo": "apaga disco",
@@ -1341,8 +1338,8 @@
         "/problemas/windows-nao-inicia",
         "/ferramentas/checklist-antes-de-formatar",
         "/blog/backup-como-proteger-seus-arquivos",
-        "/blog/como-saber-se-pc-tem-virus-malware",
-        "/blog/quando-trocar-hd-por-ssd",
+        "/blog/boot-uefi-ou-legacy-como-identificar",
+        "/blog/windows-update-nao-funciona-o-que-verificar",
         "/servicos/remocao-de-virus"
       ],
       "linksInternosEntrada": 5,
@@ -3895,8 +3892,9 @@
         "/entidades/backup",
         "/servicos/remocao-de-virus"
       ],
-      "linksInternosEntrada": 1,
+      "linksInternosEntrada": 2,
       "origensEntrada": [
+        "/blog/organizacao-de-ti-para-pequenos-escritorios",
         "/blog/como-testar-restauracao-de-backup"
       ],
       "erro": null
@@ -9275,8 +9273,9 @@
         "/problemas/windows-nao-inicia",
         "/ferramentas/checklist-antes-de-formatar"
       ],
-      "linksInternosEntrada": 3,
+      "linksInternosEntrada": 4,
       "origensEntrada": [
+        "/blog/como-instalar-windows-11-do-zero",
         "/blog/limpar-cache-do-windows-update-softwaredistribution",
         "/blog/windows-update-travado-desfazendo-alteracoes",
         "/blog/computador-nao-conecta-na-internet-por-cabo"
@@ -9745,8 +9744,9 @@
         "/glossario/uefi",
         "/servicos/formatacao"
       ],
-      "linksInternosEntrada": 1,
+      "linksInternosEntrada": 2,
       "origensEntrada": [
+        "/blog/como-instalar-windows-11-do-zero",
         "/blog/ordem-de-boot-na-bios-como-configurar"
       ],
       "erro": null
@@ -9911,10 +9911,10 @@
       "lote": "11A/4",
       "aprovadoEm": "2026-08-31",
       "titulo": "Reparo automático em laço: o que fazer quando o Windows não sai…",
-      "palavras": 986,
-      "termosUteis": 579,
-      "densidadeSemantica": 62.18,
-      "vocabulario": 360,
+      "palavras": 1636,
+      "termosUteis": 965,
+      "densidadeSemantica": 52.95,
+      "vocabulario": 511,
       "keywordPrincipal": {
         "termo": "windows reparo automatico em loop",
         "ocorrencias": 0,
@@ -9922,110 +9922,110 @@
       },
       "topKeywords": [
         {
-          "termo": "disco",
-          "ocorrencias": 14,
-          "densidade": 2.42
-        },
-        {
           "termo": "windows",
-          "ocorrencias": 10,
-          "densidade": 1.73
+          "ocorrencias": 29,
+          "densidade": 3.01
         },
         {
           "termo": "reparo",
-          "ocorrencias": 9,
-          "densidade": 1.55
+          "ocorrencias": 16,
+          "densidade": 1.66
         },
         {
-          "termo": "tecnico",
-          "ocorrencias": 8,
-          "densidade": 1.38
-        },
-        {
-          "termo": "inicializacao",
-          "ocorrencias": 7,
-          "densidade": 1.21
-        },
-        {
-          "termo": "laco",
-          "ocorrencias": 7,
-          "densidade": 1.21
+          "termo": "disco",
+          "ocorrencias": 13,
+          "densidade": 1.35
         },
         {
           "termo": "sistema",
-          "ocorrencias": 7,
-          "densidade": 1.21
-        },
-        {
-          "termo": "uefi",
-          "ocorrencias": 6,
-          "densidade": 1.04
-        },
-        {
-          "termo": "aparece",
-          "ocorrencias": 5,
-          "densidade": 0.86
+          "ocorrencias": 13,
+          "densidade": 1.35
         },
         {
           "termo": "atualizacao",
-          "ocorrencias": 5,
-          "densidade": 0.86
+          "ocorrencias": 12,
+          "densidade": 1.24
         },
         {
-          "termo": "automatico",
-          "ocorrencias": 5,
-          "densidade": 0.86
+          "termo": "dados",
+          "ocorrencias": 12,
+          "densidade": 1.24
         },
         {
-          "termo": "boot",
-          "ocorrencias": 5,
-          "densidade": 0.86
+          "termo": "inicializacao",
+          "ocorrencias": 12,
+          "densidade": 1.24
+        },
+        {
+          "termo": "chave",
+          "ocorrencias": 11,
+          "densidade": 1.14
+        },
+        {
+          "termo": "laco",
+          "ocorrencias": 10,
+          "densidade": 1.04
+        },
+        {
+          "termo": "arquivos",
+          "ocorrencias": 9,
+          "densidade": 0.93
+        },
+        {
+          "termo": "recuperacao",
+          "ocorrencias": 9,
+          "densidade": 0.93
+        },
+        {
+          "termo": "uefi",
+          "ocorrencias": 9,
+          "densidade": 0.93
         }
       ],
       "topBigramas": [
         {
           "termo": "reparo automatico",
-          "ocorrencias": 5,
-          "densidade": 0.87
+          "ocorrencias": 6,
+          "densidade": 0.62
         },
         {
-          "termo": "curitiba regiao",
+          "termo": "reparo inicializacao",
+          "ocorrencias": 4,
+          "densidade": 0.41
+        },
+        {
+          "termo": "ambiente recuperacao",
           "ocorrencias": 3,
-          "densidade": 0.52
-        },
-        {
-          "termo": "automatico laco",
-          "ocorrencias": 2,
-          "densidade": 0.35
-        },
-        {
-          "termo": "bios uefi",
-          "ocorrencias": 2,
-          "densidade": 0.35
-        },
-        {
-          "termo": "causas comuns",
-          "ocorrencias": 2,
-          "densidade": 0.35
-        },
-        {
-          "termo": "chamar tecnico",
-          "ocorrencias": 2,
-          "densidade": 0.35
+          "densidade": 0.31
         },
         {
           "termo": "chave recuperacao",
-          "ocorrencias": 2,
-          "densidade": 0.35
+          "ocorrencias": 3,
+          "densidade": 0.31
         },
         {
-          "termo": "conforme disponibilidade",
-          "ocorrencias": 2,
-          "densidade": 0.35
+          "termo": "configuracao inicializacao",
+          "ocorrencias": 3,
+          "densidade": 0.31
+        },
+        {
+          "termo": "microsoft support",
+          "ocorrencias": 3,
+          "densidade": 0.31
+        },
+        {
+          "termo": "modo uefi",
+          "ocorrencias": 3,
+          "densidade": 0.31
+        },
+        {
+          "termo": "preservar dados",
+          "ocorrencias": 3,
+          "densidade": 0.31
         }
       ],
       "headings": {
-        "h2": 10,
+        "h2": 14,
         "h3": 4
       },
       "schemas": [

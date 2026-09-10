@@ -48,12 +48,22 @@ const GRUPOS: Array<{ chave: keyof Healthcheck["problemas"]; titulo: string }> =
   { chave: "orfas", titulo: "Páginas órfãs (sem link de entrada)" },
 ];
 
+/** Chave da tarefa diária de revisão (marcação local, por navegador). */
+const CHAVE_REVISAO = "seo-healthcheck-revisao-diaria";
+const hojeISO = () => new Date().toISOString().slice(0, 10);
+
 export function SeoHealthcheckPanel() {
   const [dados, setDados] = useState<Healthcheck | null>(null);
   const [erro, setErro] = useState<string | null>(null);
+  const [revisadoEm, setRevisadoEm] = useState<string | null>(null);
 
   useEffect(() => {
     let ativo = true;
+    try {
+      setRevisadoEm(localStorage.getItem(CHAVE_REVISAO));
+    } catch {
+      /* armazenamento indisponível — a tarefa apenas aparece como pendente */
+    }
     fetch("/seo-healthcheck.json", { cache: "no-store" })
       .then((r) => (r.ok ? r.json() : Promise.reject(new Error(`HTTP ${r.status}`))))
       .then((j) => ativo && setDados(j))
@@ -62,6 +72,17 @@ export function SeoHealthcheckPanel() {
       ativo = false;
     };
   }, []);
+
+  const marcarRevisado = () => {
+    const dia = hojeISO();
+    try {
+      localStorage.setItem(CHAVE_REVISAO, dia);
+    } catch {
+      /* ignora falha de armazenamento */
+    }
+    setRevisadoEm(dia);
+  };
+
 
   if (erro || !dados) {
     return (
@@ -87,6 +108,27 @@ export function SeoHealthcheckPanel() {
           {dados.totalUrls} URL(s) curadas · gerado em {new Date(dados.geradoEm).toLocaleString("pt-BR")}
         </span>
       </div>
+
+      {/* Tarefa diária de revisão — marcação local, reinicia todo dia. */}
+      <div className="mt-3 flex flex-wrap items-center gap-2 rounded-md border border-border p-3">
+        <span className="text-sm font-medium">Revisão diária do healthcheck</span>
+        <Badge variant={revisadoEm === hojeISO() ? "default" : "outline"}>
+          {revisadoEm === hojeISO() ? "revisado hoje" : "pendente hoje"}
+        </Badge>
+        <span className="text-xs text-muted-foreground">
+          {revisadoEm ? `última revisão: ${new Date(`${revisadoEm}T12:00:00`).toLocaleDateString("pt-BR")}` : "nunca revisado neste navegador"}
+        </span>
+        <button
+          type="button"
+          onClick={marcarRevisado}
+          disabled={revisadoEm === hojeISO()}
+          className="ml-auto rounded-md border border-border px-3 py-1 text-xs font-medium hover:bg-muted disabled:opacity-50"
+        >
+          Marcar revisão de hoje
+        </button>
+      </div>
+
+
 
       <div className="mt-3 grid gap-2 sm:grid-cols-4">
         {[

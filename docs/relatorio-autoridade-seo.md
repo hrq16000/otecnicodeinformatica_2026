@@ -1,18 +1,18 @@
 # Autoridade SEO — densidade semântica, keywords e links internos
 
-Gerado em: 2026-09-10T16:01:33.102Z
+Gerado em: 2026-09-10T18:20:29.691Z
 URLs analisadas: 78/78 · órfãs: 10
 
 | URL | Palavras | Dens. semântica | Keyword principal | Dens. KW | Links saída | Links entrada |
 | --- | --- | --- | --- | --- | --- | --- |
-| /blog/quando-trocar-hd-por-ssd | 2106 | 49.2% | quando trocar hd por ssd | 0.42% | 16 | 16 |
-| /blog/como-saber-se-pc-tem-virus-malware | 2013 | 52.22% | como saber se pc tem virus malware | 0.25% | 15 | 10 |
+| /blog/quando-trocar-hd-por-ssd | 2106 | 49.2% | quando trocar hd por ssd | 0.42% | 16 | 14 |
+| /blog/como-saber-se-pc-tem-virus-malware | 2013 | 52.22% | como saber se pc tem virus malware | 0.25% | 15 | 9 |
 | /blog/backup-como-proteger-seus-arquivos | 2039 | 49.4% | backup como proteger seus arquivos | 0% | 13 | 13 |
 | /blog/como-melhorar-sinal-wifi-em-casa | 1494 | 55.08% | como melhorar sinal wifi em casa | 0% | 13 | 5 |
 | /blog/notebook-superaquecendo-o-que-fazer | 1622 | 58.67% | notebook superaquecendo o que fazer | 0.21% | 14 | 7 |
-| /blog/organizacao-de-ti-para-pequenos-escritorios | 1909 | 54.6% | organizacao de ti para pequenos escritorios | 0.27% | 16 | 1 |
+| /blog/organizacao-de-ti-para-pequenos-escritorios | 1910 | 54.29% | organizacao de ti para pequenos escritorios | 0.27% | 16 | 1 |
 | /blog/como-escolher-uma-workstation | 1733 | 55.92% | como escolher uma workstation | 0.49% | 17 | 1 |
-| /blog/como-instalar-windows-11-do-zero | 1452 | 52.82% | como instalar windows 11 do zero | 0.23% | 14 | 5 |
+| /blog/como-instalar-windows-11-do-zero | 1454 | 52.69% | como instalar windows 11 do zero | 0.23% | 14 | 5 |
 | /blog/como-resolver-tela-azul-windows | 1930 | 57.84% | como resolver tela azul windows | 0.83% | 10 | 2 |
 | /blog/como-trocar-tela-notebook-passo-a-passo | 1574 | 62.71% | como trocar tela notebook passo a passo | 0.6% | 7 | 1 |
 | /blog/notebook-nao-liga-o-que-fazer | 1545 | 53.73% | notebook nao liga o que fazer | 0.33% | 14 | 5 |
@@ -28,7 +28,7 @@ URLs analisadas: 78/78 · órfãs: 10
 | /blog/como-clonar-hd-para-ssd | 1350 | 60.18% | como clonar hd para ssd | 0.91% | 12 | 5 |
 | /blog/como-instalar-segundo-ssd-notebook | 1389 | 62.09% | como instalar segundo ssd notebook | 0.26% | 11 | 2 |
 | /blog/ransomware-como-proteger-empresa | 1352 | 65.28% | ransomware como proteger empresa | 0% | 12 | 4 |
-| /blog/backup-nuvem-empresas-qual-escolher | 1889 | 56.15% | backup nuvem empresas qual escolher | 0.09% | 11 | 1 |
+| /blog/backup-nuvem-empresas-qual-escolher | 1889 | 56.15% | backup nuvem empresas qual escolher | 0.09% | 11 | 2 |
 | /blog/como-instalar-impressora-windows-passo-a-passo | 1489 | 55.7% | como instalar impressora windows passo a passo | 0.12% | 10 | 2 |
 | /blog/como-conectar-wifi-tv-nao-conecta | 1600 | 56.32% | como conectar wifi tv nao conecta | 0% | 12 | 0 |
 | /blog/como-testar-fonte-de-alimentacao-pc | 1481 | 58.45% | como testar fonte de alimentacao pc | 0% | 11 | 7 |
@@ -62,12 +62,12 @@ URLs analisadas: 78/78 · órfãs: 10
 | /blog/webcam-nao-funciona-o-que-verificar | 1514 | 47.87% | webcam nao funciona o que verificar | 0.34% | 11 | 1 |
 | /blog/permissoes-de-camera-no-windows | 1295 | 51.09% | permissoes de camera no windows | 1.09% | 9 | 3 |
 | /blog/webcam-usb-nao-e-detectada | 1109 | 53.74% | webcam usb nao e detectada | 0.47% | 9 | 2 |
-| /blog/windows-update-nao-funciona-o-que-verificar | 1625 | 50.68% | windows update nao funciona o que verificar | 0.21% | 12 | 3 |
+| /blog/windows-update-nao-funciona-o-que-verificar | 1625 | 50.68% | windows update nao funciona o que verificar | 0.21% | 12 | 4 |
 | /blog/limpar-cache-do-windows-update-softwaredistribution | 1220 | 55.49% | limpar cache do windows update softwaredistribution | 0.14% | 9 | 1 |
 | /blog/windows-update-travado-desfazendo-alteracoes | 1354 | 54.81% | windows update travado desfazendo alteracoes | 0.37% | 11 | 2 |
-| /blog/boot-uefi-ou-legacy-como-identificar | 1043 | 54.97% | boot uefi ou legacy como identificar | 1.01% | 12 | 1 |
+| /blog/boot-uefi-ou-legacy-como-identificar | 1043 | 54.97% | boot uefi ou legacy como identificar | 1.01% | 12 | 2 |
 | /blog/ordem-de-boot-na-bios-como-configurar | 956 | 61.39% | ordem de boot na bios como configurar | 0.36% | 11 | 0 |
-| /blog/windows-reparo-automatico-em-loop | 986 | 62.18% | windows reparo automatico em loop | 0% | 12 | 1 |
+| /blog/windows-reparo-automatico-em-loop | 1636 | 52.95% | windows reparo automatico em loop | 0% | 12 | 1 |
 | /blog/manutencao-preventiva-de-computador-guia-completo | 1355 | 60.52% | manutencao preventiva de computador guia completo | 0.26% | 14 | 3 |
 | /blog/dispositivo-usb-nao-reconhecido-o-que-fazer | 1121 | 57.37% | dispositivo usb nao reconhecido o que fazer | 0.47% | 9 | 3 |
 | /blog/como-testar-restauracao-de-backup | 1475 | 55.8% | como testar restauracao de backup | 0.46% | 10 | 5 |
