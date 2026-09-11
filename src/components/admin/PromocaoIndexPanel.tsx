@@ -19,6 +19,7 @@ interface Item {
   secoes: number;
   similaridadeMax: number;
   bloqueios: string[];
+  curadoria: string[];
 }
 
 interface Relatorio {
@@ -76,8 +77,7 @@ export function PromocaoIndexPanel() {
           <h2 className="text-sm font-semibold">Fila de promoção (noindex → index)</h2>
           <p className="mt-1 text-xs text-muted-foreground">
             {dados.foraDoIndice} artigos fora do índice · gerado em{" "}
-            {new Date(dados.geradoEm).toLocaleString("pt-BR")} · mínimo {dados.criterios.minPalavras} palavras
-            próprias e similaridade ≤ {dados.criterios.maxJaccardCorpo}
+            {new Date(dados.geradoEm).toLocaleString("pt-BR")} · mínimo {dados.criterios.minPalavras} palavras e similaridade ≤ {dados.criterios.maxJaccardCorpo}
           </p>
         </div>
         <div className="flex gap-2">
@@ -112,6 +112,7 @@ export function PromocaoIndexPanel() {
               <th className="py-1 pr-3">Seções</th>
               <th className="py-1 pr-3">Sim.</th>
               <th className="py-1">O que falta</th>
+              <th className="py-1">Curadoria</th>
             </tr>
           </thead>
           <tbody>
@@ -129,6 +130,7 @@ export function PromocaoIndexPanel() {
                 <td className="py-1 pr-3">{i.secoes}</td>
                 <td className="py-1 pr-3">{i.similaridadeMax}</td>
                 <td className="py-1 text-muted-foreground">{i.bloqueios.join(" · ") || "—"}</td>
+                <td className="py-1 text-muted-foreground">{(i.curadoria ?? []).join(" · ") || "—"}</td>
               </tr>
             ))}
           </tbody>

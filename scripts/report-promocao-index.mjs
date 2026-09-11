@@ -151,12 +151,15 @@ for (const p of perfil.values()) {
   if (!temDecisao) bloqueios.push("sem bloco de limite/decisão");
 
   // 5–7. registros obrigatórios
+  // 5–7. curadoria: trabalho normal da onda de promoção (não conta como
+  // bloqueio de conteúdo, mas precisa estar feito antes de indexar).
   const fonteOk = temRegistro(srcFontes, p.slug);
   const capaOk = temRegistro(srcCapas, p.slug);
   const atlasOk = temRegistro(srcAtlas, p.slug) || temRegistro(srcInbound, p.slug) || temRegistro(srcClusters, p.slug);
-  if (!fonteOk) bloqueios.push("sem fonte primária registrada");
-  if (!capaOk) bloqueios.push("sem capa licenciada registrada");
-  if (!atlasOk) bloqueios.push("sem ponte no Atlas / links de entrada");
+  const curadoria = [];
+  if (!fonteOk) curadoria.push("registrar fonte primária");
+  if (!capaOk) curadoria.push("registrar capa licenciada");
+  if (!atlasOk) curadoria.push("criar ponte no Atlas / links de entrada");
 
   const classe = bloqueios.length === 0 ? "PRONTA" : bloqueios.length === 1 ? "QUASE" : "LONGE";
 
@@ -174,6 +177,7 @@ for (const p of perfil.values()) {
     capaOk,
     atlasOk,
     bloqueios,
+    curadoria,
     classe,
   });
 }

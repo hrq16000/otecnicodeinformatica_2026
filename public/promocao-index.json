@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-09-11T07:26:09.232Z",
+  "geradoEm": "2026-09-11T07:26:25.467Z",
   "criterios": {
     "minPalavras": 700,
     "maxJaccardCorpo": 0.35,
@@ -9,8 +9,8 @@
   "aprovados": 78,
   "foraDoIndice": 109,
   "prontas": 0,
-  "quase": 0,
-  "longe": 109,
+  "quase": 43,
+  "longe": 66,
   "proximaOnda": [],
   "itens": [
     {
@@ -27,12 +27,14 @@
       "capaOk": false,
       "atlasOk": false,
       "bloqueios": [
-        "similaridade 0.96 com /blog/como-trocar-tela-notebook-passo-a-passo",
-        "sem fonte primária registrada",
-        "sem capa licenciada registrada",
-        "sem ponte no Atlas / links de entrada"
+        "similaridade 0.96 com /blog/como-trocar-tela-notebook-passo-a-passo"
       ],
-      "classe": "LONGE"
+      "curadoria": [
+        "registrar fonte primária",
+        "registrar capa licenciada",
+        "criar ponte no Atlas / links de entrada"
+      ],
+      "classe": "QUASE"
     },
     {
       "slug": "como-montar-pc-gamer-2026",
@@ -48,12 +50,14 @@
       "capaOk": false,
       "atlasOk": false,
       "bloqueios": [
-        "similaridade 0.96 com /blog/como-trocar-tela-notebook-passo-a-passo",
-        "sem fonte primária registrada",
-        "sem capa licenciada registrada",
-        "sem ponte no Atlas / links de entrada"
+        "similaridade 0.96 com /blog/como-trocar-tela-notebook-passo-a-passo"
       ],
-      "classe": "LONGE"
+      "curadoria": [
+        "registrar fonte primária",
+        "registrar capa licenciada",
+        "criar ponte no Atlas / links de entrada"
+      ],
+      "classe": "QUASE"
     },
     {
       "slug": "como-fazer-overclock-cpu-com-seguranca",
@@ -69,12 +73,14 @@
       "capaOk": false,
       "atlasOk": false,
       "bloqueios": [
-        "similaridade 0.98 com /blog/como-trocar-tela-notebook-passo-a-passo",
-        "sem fonte primária registrada",
-        "sem capa licenciada registrada",
-        "sem ponte no Atlas / links de entrada"
+        "similaridade 0.98 com /blog/como-trocar-tela-notebook-passo-a-passo"
       ],
-      "classe": "LONGE"
+      "curadoria": [
+        "registrar fonte primária",
+        "registrar capa licenciada",
+        "criar ponte no Atlas / links de entrada"
+      ],
+      "classe": "QUASE"
     },
     {
       "slug": "como-configurar-2fa-em-tudo",
@@ -90,12 +96,14 @@
       "capaOk": false,
       "atlasOk": false,
       "bloqueios": [
-        "sem bloco de limite/decisão",
-        "sem fonte primária registrada",
-        "sem capa licenciada registrada",
-        "sem ponte no Atlas / links de entrada"
+        "sem bloco de limite/decisão"
       ],
-      "classe": "LONGE"
+      "curadoria": [
+        "registrar fonte primária",
+        "registrar capa licenciada",
+        "criar ponte no Atlas / links de entrada"
+      ],
+      "classe": "QUASE"
     },
     {
       "slug": "como-proteger-rede-wifi-empresa",
@@ -111,12 +119,14 @@
       "capaOk": false,
       "atlasOk": false,
       "bloqueios": [
-        "sem bloco de limite/decisão",
-        "sem fonte primária registrada",
-        "sem capa licenciada registrada",
-        "sem ponte no Atlas / links de entrada"
+        "sem bloco de limite/decisão"
       ],
-      "classe": "LONGE"
+      "curadoria": [
+        "registrar fonte primária",
+        "registrar capa licenciada",
+        "criar ponte no Atlas / links de entrada"
+      ],
+      "classe": "QUASE"
     },
     {
       "slug": "como-fazer-pentest-basico-rede",
@@ -132,12 +142,14 @@
       "capaOk": false,
       "atlasOk": false,
       "bloqueios": [
-        "sem bloco de limite/decisão",
-        "sem fonte primária registrada",
-        "sem capa licenciada registrada",
-        "sem ponte no Atlas / links de entrada"
+        "sem bloco de limite/decisão"
       ],
-      "classe": "LONGE"
+      "curadoria": [
+        "registrar fonte primária",
+        "registrar capa licenciada",
+        "criar ponte no Atlas / links de entrada"
+      ],
+      "classe": "QUASE"
     },
     {
       "slug": "como-configurar-firewall-ufw-linux",
@@ -153,12 +165,14 @@
       "capaOk": false,
       "atlasOk": false,
       "bloqueios": [
-        "sem bloco de limite/decisão",
-        "sem fonte primária registrada",
-        "sem capa licenciada registrada",
-        "sem ponte no Atlas / links de entrada"
+        "sem bloco de limite/decisão"
       ],
-      "classe": "LONGE"
+      "curadoria": [
+        "registrar fonte primária",
+        "registrar capa licenciada",
+        "criar ponte no Atlas / links de entrada"
+      ],
+      "classe": "QUASE"
     },
     {
       "slug": "como-configurar-vlan-rede-corporativa",
@@ -174,12 +188,14 @@
       "capaOk": false,
       "atlasOk": false,
       "bloqueios": [
-        "sem bloco de limite/decisão",
-        "sem fonte primária registrada",
-        "sem capa licenciada registrada",
-        "sem ponte no Atlas / links de entrada"
+        "sem bloco de limite/decisão"
       ],
-      "classe": "LONGE"
+      "curadoria": [
+        "registrar fonte primária",
+        "registrar capa licenciada",
+        "criar ponte no Atlas / links de entrada"
+      ],
+      "classe": "QUASE"
     },
     {
       "slug": "como-detectar-invasao-rede",
@@ -195,12 +211,14 @@
       "capaOk": false,
       "atlasOk": false,
       "bloqueios": [
-        "sem bloco de limite/decisão",
-        "sem fonte primária registrada",
-        "sem capa licenciada registrada",
-        "sem ponte no Atlas / links de entrada"
+        "sem bloco de limite/decisão"
       ],
-      "classe": "LONGE"
+      "curadoria": [
+        "registrar fonte primária",
+        "registrar capa licenciada",
+        "criar ponte no Atlas / links de entrada"
+      ],
+      "classe": "QUASE"
     },
     {
       "slug": "melhores-antivirus-2026-comparativo",
@@ -216,12 +234,14 @@
       "capaOk": false,
       "atlasOk": false,
       "bloqueios": [
-        "sem bloco de limite/decisão",
-        "sem fonte primária registrada",
-        "sem capa licenciada registrada",
-        "sem ponte no Atlas / links de entrada"
+        "sem bloco de limite/decisão"
       ],
-      "classe": "LONGE"
+      "curadoria": [
+        "registrar fonte primária",
+        "registrar capa licenciada",
+        "criar ponte no Atlas / links de entrada"
+      ],
+      "classe": "QUASE"
     },
     {
       "slug": "como-recuperar-conta-hackeada",
@@ -237,12 +257,14 @@
       "capaOk": false,
       "atlasOk": false,
       "bloqueios": [
-        "sem bloco de limite/decisão",
-        "sem fonte primária registrada",
-        "sem capa licenciada registrada",
-        "sem ponte no Atlas / links de entrada"
+        "sem bloco de limite/decisão"
       ],
-      "classe": "LONGE"
+      "curadoria": [
+        "registrar fonte primária",
+        "registrar capa licenciada",
+        "criar ponte no Atlas / links de entrada"
+      ],
+      "classe": "QUASE"
     },
     {
       "slug": "como-rodar-ia-localmente-no-pc",
@@ -258,12 +280,14 @@
       "capaOk": false,
       "atlasOk": false,
       "bloqueios": [
-        "sem bloco de limite/decisão",
-        "sem fonte primária registrada",
-        "sem capa licenciada registrada",
-        "sem ponte no Atlas / links de entrada"
+        "sem bloco de limite/decisão"
       ],
-      "classe": "LONGE"
+      "curadoria": [
+        "registrar fonte primária",
+        "registrar capa licenciada",
+        "criar ponte no Atlas / links de entrada"
+      ],
+      "classe": "QUASE"
     },
     {
       "slug": "diferenca-llm-machine-learning-deep-learning",
@@ -279,12 +303,14 @@
       "capaOk": false,
       "atlasOk": false,
       "bloqueios": [
-        "sem bloco de limite/decisão",
-        "sem fonte primária registrada",
-        "sem capa licenciada registrada",
-        "sem ponte no Atlas / links de entrada"
+        "sem bloco de limite/decisão"
       ],
-      "classe": "LONGE"
+      "curadoria": [
+        "registrar fonte primária",
+        "registrar capa licenciada",
+        "criar ponte no Atlas / links de entrada"
+      ],
+      "classe": "QUASE"
     },
     {
       "slug": "melhores-ias-para-programacao-2026",
@@ -300,12 +326,14 @@
       "capaOk": false,
       "atlasOk": false,
       "bloqueios": [
-        "sem bloco de limite/decisão",
-        "sem fonte primária registrada",
-        "sem capa licenciada registrada",
-        "sem ponte no Atlas / links de entrada"
+        "sem bloco de limite/decisão"
       ],
-      "classe": "LONGE"
+      "curadoria": [
+        "registrar fonte primária",
+        "registrar capa licenciada",
+        "criar ponte no Atlas / links de entrada"
+      ],
+      "classe": "QUASE"
     },
     {
       "slug": "ia-para-criacao-conteudo-profissional",
@@ -321,12 +349,14 @@
       "capaOk": false,
       "atlasOk": false,
       "bloqueios": [
-        "sem bloco de limite/decisão",
-        "sem fonte primária registrada",
-        "sem capa licenciada registrada",
-        "sem ponte no Atlas / links de entrada"
+        "sem bloco de limite/decisão"
       ],
-      "classe": "LONGE"
+      "curadoria": [
+        "registrar fonte primária",
+        "registrar capa licenciada",
+        "criar ponte no Atlas / links de entrada"
+      ],
+      "classe": "QUASE"
     },
     {
       "slug": "como-treinar-ia-customizada-fine-tuning",
@@ -342,12 +372,14 @@
       "capaOk": false,
       "atlasOk": false,
       "bloqueios": [
-        "sem bloco de limite/decisão",
-        "sem fonte primária registrada",
-        "sem capa licenciada registrada",
-        "sem ponte no Atlas / links de entrada"
+        "sem bloco de limite/decisão"
       ],
-      "classe": "LONGE"
+      "curadoria": [
+        "registrar fonte primária",
+        "registrar capa licenciada",
+        "criar ponte no Atlas / links de entrada"
+      ],
+      "classe": "QUASE"
     },
     {
       "slug": "como-criar-prompts-eficazes-chatgpt",
@@ -363,12 +395,14 @@
       "capaOk": false,
       "atlasOk": false,
       "bloqueios": [
-        "sem bloco de limite/decisão",
-        "sem fonte primária registrada",
-        "sem capa licenciada registrada",
-        "sem ponte no Atlas / links de entrada"
+        "sem bloco de limite/decisão"
       ],
-      "classe": "LONGE"
+      "curadoria": [
+        "registrar fonte primária",
+        "registrar capa licenciada",
+        "criar ponte no Atlas / links de entrada"
+      ],
+      "classe": "QUASE"
     },
     {
       "slug": "como-criar-imagens-com-stable-diffusion",
@@ -384,12 +418,14 @@
       "capaOk": false,
       "atlasOk": false,
       "bloqueios": [
-        "sem bloco de limite/decisão",
-        "sem fonte primária registrada",
-        "sem capa licenciada registrada",
-        "sem ponte no Atlas / links de entrada"
+        "sem bloco de limite/decisão"
       ],
-      "classe": "LONGE"
+      "curadoria": [
+        "registrar fonte primária",
+        "registrar capa licenciada",
+        "criar ponte no Atlas / links de entrada"
+      ],
+      "classe": "QUASE"
     },
     {
       "slug": "automatizar-tarefas-com-ia-n8n-make",
@@ -405,12 +441,14 @@
       "capaOk": false,
       "atlasOk": false,
       "bloqueios": [
-        "sem bloco de limite/decisão",
-        "sem fonte primária registrada",
-        "sem capa licenciada registrada",
-        "sem ponte no Atlas / links de entrada"
+        "sem bloco de limite/decisão"
       ],
-      "classe": "LONGE"
+      "curadoria": [
+        "registrar fonte primária",
+        "registrar capa licenciada",
+        "criar ponte no Atlas / links de entrada"
+      ],
+      "classe": "QUASE"
     },
     {
       "slug": "windows-11-atualizacao-kb5074105-novidades",
@@ -426,12 +464,14 @@
       "capaOk": false,
       "atlasOk": false,
       "bloqueios": [
-        "sem bloco de limite/decisão",
-        "sem fonte primária registrada",
-        "sem capa licenciada registrada",
-        "sem ponte no Atlas / links de entrada"
+        "sem bloco de limite/decisão"
       ],
-      "classe": "LONGE"
+      "curadoria": [
+        "registrar fonte primária",
+        "registrar capa licenciada",
+        "criar ponte no Atlas / links de entrada"
+      ],
+      "classe": "QUASE"
     },
     {
       "slug": "como-criar-script-bash-iniciantes",
@@ -447,12 +487,14 @@
       "capaOk": false,
       "atlasOk": false,
       "bloqueios": [
-        "sem bloco de limite/decisão",
-        "sem fonte primária registrada",
-        "sem capa licenciada registrada",
-        "sem ponte no Atlas / links de entrada"
+        "sem bloco de limite/decisão"
       ],
-      "classe": "LONGE"
+      "curadoria": [
+        "registrar fonte primária",
+        "registrar capa licenciada",
+        "criar ponte no Atlas / links de entrada"
+      ],
+      "classe": "QUASE"
     },
     {
       "slug": "como-instalar-lamp-stack-ubuntu",
@@ -468,12 +510,14 @@
       "capaOk": false,
       "atlasOk": false,
       "bloqueios": [
-        "sem bloco de limite/decisão",
-        "sem fonte primária registrada",
-        "sem capa licenciada registrada",
-        "sem ponte no Atlas / links de entrada"
+        "sem bloco de limite/decisão"
       ],
-      "classe": "LONGE"
+      "curadoria": [
+        "registrar fonte primária",
+        "registrar capa licenciada",
+        "criar ponte no Atlas / links de entrada"
+      ],
+      "classe": "QUASE"
     },
     {
       "slug": "como-usar-rsync-backup-linux",
@@ -489,12 +533,14 @@
       "capaOk": false,
       "atlasOk": false,
       "bloqueios": [
-        "sem bloco de limite/decisão",
-        "sem fonte primária registrada",
-        "sem capa licenciada registrada",
-        "sem ponte no Atlas / links de entrada"
+        "sem bloco de limite/decisão"
       ],
-      "classe": "LONGE"
+      "curadoria": [
+        "registrar fonte primária",
+        "registrar capa licenciada",
+        "criar ponte no Atlas / links de entrada"
+      ],
+      "classe": "QUASE"
     },
     {
       "slug": "como-configurar-cron-jobs-linux",
@@ -510,12 +556,14 @@
       "capaOk": false,
       "atlasOk": false,
       "bloqueios": [
-        "sem bloco de limite/decisão",
-        "sem fonte primária registrada",
-        "sem capa licenciada registrada",
-        "sem ponte no Atlas / links de entrada"
+        "sem bloco de limite/decisão"
       ],
-      "classe": "LONGE"
+      "curadoria": [
+        "registrar fonte primária",
+        "registrar capa licenciada",
+        "criar ponte no Atlas / links de entrada"
+      ],
+      "classe": "QUASE"
     },
     {
       "slug": "como-configurar-rede-linux-netplan",
@@ -531,12 +579,14 @@
       "capaOk": false,
       "atlasOk": false,
       "bloqueios": [
-        "sem bloco de limite/decisão",
-        "sem fonte primária registrada",
-        "sem capa licenciada registrada",
-        "sem ponte no Atlas / links de entrada"
+        "sem bloco de limite/decisão"
       ],
-      "classe": "LONGE"
+      "curadoria": [
+        "registrar fonte primária",
+        "registrar capa licenciada",
+        "criar ponte no Atlas / links de entrada"
+      ],
+      "classe": "QUASE"
     },
     {
       "slug": "como-instalar-postgresql-linux",
@@ -552,12 +602,14 @@
       "capaOk": false,
       "atlasOk": false,
       "bloqueios": [
-        "sem bloco de limite/decisão",
-        "sem fonte primária registrada",
-        "sem capa licenciada registrada",
-        "sem ponte no Atlas / links de entrada"
+        "sem bloco de limite/decisão"
       ],
-      "classe": "LONGE"
+      "curadoria": [
+        "registrar fonte primária",
+        "registrar capa licenciada",
+        "criar ponte no Atlas / links de entrada"
+      ],
+      "classe": "QUASE"
     },
     {
       "slug": "como-usar-systemd-linux",
@@ -573,12 +625,14 @@
       "capaOk": false,
       "atlasOk": false,
       "bloqueios": [
-        "sem bloco de limite/decisão",
-        "sem fonte primária registrada",
-        "sem capa licenciada registrada",
-        "sem ponte no Atlas / links de entrada"
+        "sem bloco de limite/decisão"
       ],
-      "classe": "LONGE"
+      "curadoria": [
+        "registrar fonte primária",
+        "registrar capa licenciada",
+        "criar ponte no Atlas / links de entrada"
+      ],
+      "classe": "QUASE"
     },
     {
       "slug": "como-monitorar-servidor-linux",
@@ -594,12 +648,14 @@
       "capaOk": false,
       "atlasOk": false,
       "bloqueios": [
-        "sem bloco de limite/decisão",
-        "sem fonte primária registrada",
-        "sem capa licenciada registrada",
-        "sem ponte no Atlas / links de entrada"
+        "sem bloco de limite/decisão"
       ],
-      "classe": "LONGE"
+      "curadoria": [
+        "registrar fonte primária",
+        "registrar capa licenciada",
+        "criar ponte no Atlas / links de entrada"
+      ],
+      "classe": "QUASE"
     },
     {
       "slug": "como-fazer-manutencao-nobreak",
@@ -615,12 +671,14 @@
       "capaOk": false,
       "atlasOk": false,
       "bloqueios": [
-        "sem bloco de limite/decisão",
-        "sem fonte primária registrada",
-        "sem capa licenciada registrada",
-        "sem ponte no Atlas / links de entrada"
+        "sem bloco de limite/decisão"
       ],
-      "classe": "LONGE"
+      "curadoria": [
+        "registrar fonte primária",
+        "registrar capa licenciada",
+        "criar ponte no Atlas / links de entrada"
+      ],
+      "classe": "QUASE"
     },
     {
       "slug": "como-configurar-firewall-pfsense",
@@ -636,12 +694,14 @@
       "capaOk": false,
       "atlasOk": false,
       "bloqueios": [
-        "sem bloco de limite/decisão",
-        "sem fonte primária registrada",
-        "sem capa licenciada registrada",
-        "sem ponte no Atlas / links de entrada"
+        "sem bloco de limite/decisão"
       ],
-      "classe": "LONGE"
+      "curadoria": [
+        "registrar fonte primária",
+        "registrar capa licenciada",
+        "criar ponte no Atlas / links de entrada"
+      ],
+      "classe": "QUASE"
     },
     {
       "slug": "como-configurar-active-directory",
@@ -657,12 +717,286 @@
       "capaOk": false,
       "atlasOk": false,
       "bloqueios": [
-        "sem bloco de limite/decisão",
-        "sem fonte primária registrada",
-        "sem capa licenciada registrada",
-        "sem ponte no Atlas / links de entrada"
+        "sem bloco de limite/decisão"
       ],
-      "classe": "LONGE"
+      "curadoria": [
+        "registrar fonte primária",
+        "registrar capa licenciada",
+        "criar ponte no Atlas / links de entrada"
+      ],
+      "classe": "QUASE"
+    },
+    {
+      "slug": "como-usar-docker-linux-guia-completo",
+      "url": "/blog/como-usar-docker-linux-guia-completo",
+      "titulo": "Como Usar Docker no Linux: Guia Completo Para Iniciantes e Técnicos",
+      "categoria": "Linux",
+      "palavras": 625,
+      "secoes": 9,
+      "similaridadeMax": 0.074,
+      "similarA": "limpar-cache-do-windows-update-softwaredistribution",
+      "intencaoMax": 0.069,
+      "fonteOk": false,
+      "capaOk": false,
+      "atlasOk": false,
+      "bloqueios": [
+        "625 palavras no corpo (mínimo 700)"
+      ],
+      "curadoria": [
+        "registrar fonte primária",
+        "registrar capa licenciada",
+        "criar ponte no Atlas / links de entrada"
+      ],
+      "classe": "QUASE"
+    },
+    {
+      "slug": "como-deixar-celular-android-mais-rapido",
+      "url": "/blog/como-deixar-celular-android-mais-rapido",
+      "titulo": "Celular Android lento: o que realmente testar antes de instalar um app de limpeza",
+      "categoria": "Celular e aplicativos",
+      "palavras": 577,
+      "secoes": 6,
+      "similaridadeMax": 0.157,
+      "similarA": "limpar-arquivos-temporarios-windows",
+      "intencaoMax": 0.111,
+      "fonteOk": true,
+      "capaOk": false,
+      "atlasOk": true,
+      "bloqueios": [
+        "577 palavras no corpo (mínimo 700)"
+      ],
+      "curadoria": [
+        "registrar capa licenciada"
+      ],
+      "classe": "QUASE"
+    },
+    {
+      "slug": "como-recuperar-dados-hd-defeituoso",
+      "url": "/blog/como-recuperar-dados-hd-defeituoso",
+      "titulo": "Como Recuperar Dados de HD Defeituoso: Métodos e Ferramentas",
+      "categoria": "Procedimentos Técnicos",
+      "palavras": 437,
+      "secoes": 12,
+      "similaridadeMax": 0.145,
+      "similarA": "como-recuperar-dados-hd-com-defeito",
+      "intencaoMax": 0.08,
+      "fonteOk": false,
+      "capaOk": false,
+      "atlasOk": true,
+      "bloqueios": [
+        "437 palavras no corpo (mínimo 700)"
+      ],
+      "curadoria": [
+        "registrar fonte primária",
+        "registrar capa licenciada"
+      ],
+      "classe": "QUASE"
+    },
+    {
+      "slug": "como-configurar-vpn-empresarial",
+      "url": "/blog/como-configurar-vpn-empresarial",
+      "titulo": "Como Configurar VPN Empresarial: Acesso Remoto Seguro",
+      "categoria": "Procedimentos Técnicos",
+      "palavras": 421,
+      "secoes": 14,
+      "similaridadeMax": 0.072,
+      "similarA": "como-configurar-roteador-wifi-iniciantes",
+      "intencaoMax": 0.077,
+      "fonteOk": false,
+      "capaOk": false,
+      "atlasOk": false,
+      "bloqueios": [
+        "421 palavras no corpo (mínimo 700)"
+      ],
+      "curadoria": [
+        "registrar fonte primária",
+        "registrar capa licenciada",
+        "criar ponte no Atlas / links de entrada"
+      ],
+      "classe": "QUASE"
+    },
+    {
+      "slug": "erros-comuns-upgrade-computador",
+      "url": "/blog/erros-comuns-upgrade-computador",
+      "titulo": "5 Erros Comuns ao Fazer Upgrade no Computador (e Como Evitar Prejuízo)",
+      "categoria": "Manutenção",
+      "palavras": 410,
+      "secoes": 5,
+      "similaridadeMax": 0.136,
+      "similarA": "como-instalar-segundo-ssd-notebook",
+      "intencaoMax": 0.097,
+      "fonteOk": false,
+      "capaOk": false,
+      "atlasOk": false,
+      "bloqueios": [
+        "410 palavras no corpo (mínimo 700)"
+      ],
+      "curadoria": [
+        "registrar fonte primária",
+        "registrar capa licenciada",
+        "criar ponte no Atlas / links de entrada"
+      ],
+      "classe": "QUASE"
+    },
+    {
+      "slug": "como-configurar-servidor-de-arquivos",
+      "url": "/blog/como-configurar-servidor-de-arquivos",
+      "titulo": "Como Configurar Servidor de Arquivos em Rede Local (Windows e Linux)",
+      "categoria": "Procedimentos Técnicos",
+      "palavras": 391,
+      "secoes": 14,
+      "similaridadeMax": 0.088,
+      "similarA": "historico-de-arquivos-windows-como-configurar",
+      "intencaoMax": 0.185,
+      "fonteOk": false,
+      "capaOk": false,
+      "atlasOk": false,
+      "bloqueios": [
+        "391 palavras no corpo (mínimo 700)"
+      ],
+      "curadoria": [
+        "registrar fonte primária",
+        "registrar capa licenciada",
+        "criar ponte no Atlas / links de entrada"
+      ],
+      "classe": "QUASE"
+    },
+    {
+      "slug": "melhores-ferramentas-ia-gratuitas-2026",
+      "url": "/blog/melhores-ferramentas-ia-gratuitas-2026",
+      "titulo": "Melhores Ferramentas de IA Gratuitas em 2026",
+      "categoria": "Inteligência Artificial",
+      "palavras": 318,
+      "secoes": 6,
+      "similaridadeMax": 0.058,
+      "similarA": "quanto-custa-formatar-um-computador",
+      "intencaoMax": 0.043,
+      "fonteOk": false,
+      "capaOk": false,
+      "atlasOk": false,
+      "bloqueios": [
+        "318 palavras no corpo (mínimo 700)"
+      ],
+      "curadoria": [
+        "registrar fonte primária",
+        "registrar capa licenciada",
+        "criar ponte no Atlas / links de entrada"
+      ],
+      "classe": "QUASE"
+    },
+    {
+      "slug": "como-deixar-windows-11-mais-rapido-iniciantes",
+      "url": "/blog/como-deixar-windows-11-mais-rapido-iniciantes",
+      "titulo": "Como Deixar o Windows 11 Mais Rápido em 2026: Guia Passo a Passo (Curitiba)",
+      "categoria": "Tutoriais Domésticos",
+      "palavras": 295,
+      "secoes": 5,
+      "similaridadeMax": 0.13,
+      "similarA": "limpar-arquivos-temporarios-windows",
+      "intencaoMax": 0.1,
+      "fonteOk": false,
+      "capaOk": false,
+      "atlasOk": false,
+      "bloqueios": [
+        "295 palavras no corpo (mínimo 700)"
+      ],
+      "curadoria": [
+        "registrar fonte primária",
+        "registrar capa licenciada",
+        "criar ponte no Atlas / links de entrada"
+      ],
+      "classe": "QUASE"
+    },
+    {
+      "slug": "trocar-windows-por-linux-vale-a-pena",
+      "url": "/blog/trocar-windows-por-linux-vale-a-pena",
+      "titulo": "Trocar o Windows Por Linux: Vale a Pena?",
+      "categoria": "Linux",
+      "palavras": 268,
+      "secoes": 5,
+      "similaridadeMax": 0.105,
+      "similarA": "como-migrar-arquivos-para-um-computador-novo",
+      "intencaoMax": 0.176,
+      "fonteOk": false,
+      "capaOk": false,
+      "atlasOk": false,
+      "bloqueios": [
+        "268 palavras no corpo (mínimo 700)"
+      ],
+      "curadoria": [
+        "registrar fonte primária",
+        "registrar capa licenciada",
+        "criar ponte no Atlas / links de entrada"
+      ],
+      "classe": "QUASE"
+    },
+    {
+      "slug": "manutencao-preventiva-computador-guia",
+      "url": "/blog/manutencao-preventiva-computador-guia",
+      "titulo": "Manutenção Preventiva do Computador: O Guia Que Evita 80% dos Problemas",
+      "categoria": "Manutenção",
+      "palavras": 239,
+      "secoes": 6,
+      "similaridadeMax": 0.111,
+      "similarA": "manutencao-preventiva-de-computador-guia-completo",
+      "intencaoMax": 0.148,
+      "fonteOk": false,
+      "capaOk": false,
+      "atlasOk": false,
+      "bloqueios": [
+        "239 palavras no corpo (mínimo 700)"
+      ],
+      "curadoria": [
+        "registrar fonte primária",
+        "registrar capa licenciada",
+        "criar ponte no Atlas / links de entrada"
+      ],
+      "classe": "QUASE"
+    },
+    {
+      "slug": "como-configurar-repetidor-wifi",
+      "url": "/blog/como-configurar-repetidor-wifi",
+      "titulo": "Como Configurar Repetidor de Wi-Fi: Passo a Passo Simples (Guia 2026)",
+      "categoria": "Tutoriais Domésticos",
+      "palavras": 237,
+      "secoes": 5,
+      "similaridadeMax": 0.101,
+      "similarA": "rede-wifi-nao-aparece-na-lista-o-que-verificar",
+      "intencaoMax": 0.148,
+      "fonteOk": false,
+      "capaOk": false,
+      "atlasOk": true,
+      "bloqueios": [
+        "237 palavras no corpo (mínimo 700)"
+      ],
+      "curadoria": [
+        "registrar fonte primária",
+        "registrar capa licenciada"
+      ],
+      "classe": "QUASE"
+    },
+    {
+      "slug": "como-criar-conta-usuario-windows-criancas",
+      "url": "/blog/como-criar-conta-usuario-windows-criancas",
+      "titulo": "Como Criar Conta de Usuário Para Crianças no Windows 11 (Controle Parental)",
+      "categoria": "Tutoriais Domésticos",
+      "palavras": 225,
+      "secoes": 5,
+      "similaridadeMax": 0.071,
+      "similarA": "permissoes-de-camera-no-windows",
+      "intencaoMax": 0.059,
+      "fonteOk": false,
+      "capaOk": false,
+      "atlasOk": false,
+      "bloqueios": [
+        "225 palavras no corpo (mínimo 700)"
+      ],
+      "curadoria": [
+        "registrar fonte primária",
+        "registrar capa licenciada",
+        "criar ponte no Atlas / links de entrada"
+      ],
+      "classe": "QUASE"
     },
     {
       "slug": "como-montar-rack-de-rede",
@@ -679,50 +1013,12 @@
       "atlasOk": false,
       "bloqueios": [
         "670 palavras no corpo (mínimo 700)",
-        "sem bloco de limite/decisão",
-        "sem fonte primária registrada",
-        "sem capa licenciada registrada",
-        "sem ponte no Atlas / links de entrada"
+        "sem bloco de limite/decisão"
       ],
-      "classe": "LONGE"
-    },
-    {
-      "slug": "como-usar-docker-linux-guia-completo",
-      "url": "/blog/como-usar-docker-linux-guia-completo",
-      "titulo": "Como Usar Docker no Linux: Guia Completo Para Iniciantes e Técnicos",
-      "categoria": "Linux",
-      "palavras": 625,
-      "secoes": 9,
-      "similaridadeMax": 0.074,
-      "similarA": "limpar-cache-do-windows-update-softwaredistribution",
-      "intencaoMax": 0.069,
-      "fonteOk": false,
-      "capaOk": false,
-      "atlasOk": false,
-      "bloqueios": [
-        "625 palavras no corpo (mínimo 700)",
-        "sem fonte primária registrada",
-        "sem capa licenciada registrada",
-        "sem ponte no Atlas / links de entrada"
-      ],
-      "classe": "LONGE"
-    },
-    {
-      "slug": "como-deixar-celular-android-mais-rapido",
-      "url": "/blog/como-deixar-celular-android-mais-rapido",
-      "titulo": "Celular Android lento: o que realmente testar antes de instalar um app de limpeza",
-      "categoria": "Celular e aplicativos",
-      "palavras": 577,
-      "secoes": 6,
-      "similaridadeMax": 0.157,
-      "similarA": "limpar-arquivos-temporarios-windows",
-      "intencaoMax": 0.111,
-      "fonteOk": true,
-      "capaOk": false,
-      "atlasOk": true,
-      "bloqueios": [
-        "577 palavras no corpo (mínimo 700)",
-        "sem capa licenciada registrada"
+      "curadoria": [
+        "registrar fonte primária",
+        "registrar capa licenciada",
+        "criar ponte no Atlas / links de entrada"
       ],
       "classe": "LONGE"
     },
@@ -741,10 +1037,12 @@
       "atlasOk": false,
       "bloqueios": [
         "524 palavras no corpo (mínimo 700)",
-        "sem bloco de limite/decisão",
-        "sem fonte primária registrada",
-        "sem capa licenciada registrada",
-        "sem ponte no Atlas / links de entrada"
+        "sem bloco de limite/decisão"
+      ],
+      "curadoria": [
+        "registrar fonte primária",
+        "registrar capa licenciada",
+        "criar ponte no Atlas / links de entrada"
       ],
       "classe": "LONGE"
     },
@@ -763,10 +1061,12 @@
       "atlasOk": false,
       "bloqueios": [
         "514 palavras no corpo (mínimo 700)",
-        "sem bloco de limite/decisão",
-        "sem fonte primária registrada",
-        "sem capa licenciada registrada",
-        "sem ponte no Atlas / links de entrada"
+        "sem bloco de limite/decisão"
+      ],
+      "curadoria": [
+        "registrar fonte primária",
+        "registrar capa licenciada",
+        "criar ponte no Atlas / links de entrada"
       ],
       "classe": "LONGE"
     },
@@ -785,10 +1085,12 @@
       "atlasOk": false,
       "bloqueios": [
         "507 palavras no corpo (mínimo 700)",
-        "sem bloco de limite/decisão",
-        "sem fonte primária registrada",
-        "sem capa licenciada registrada",
-        "sem ponte no Atlas / links de entrada"
+        "sem bloco de limite/decisão"
+      ],
+      "curadoria": [
+        "registrar fonte primária",
+        "registrar capa licenciada",
+        "criar ponte no Atlas / links de entrada"
       ],
       "classe": "LONGE"
     },
@@ -807,10 +1109,12 @@
       "atlasOk": false,
       "bloqueios": [
         "504 palavras no corpo (mínimo 700)",
-        "sem bloco de limite/decisão",
-        "sem fonte primária registrada",
-        "sem capa licenciada registrada",
-        "sem ponte no Atlas / links de entrada"
+        "sem bloco de limite/decisão"
+      ],
+      "curadoria": [
+        "registrar fonte primária",
+        "registrar capa licenciada",
+        "criar ponte no Atlas / links de entrada"
       ],
       "classe": "LONGE"
     },
@@ -829,10 +1133,12 @@
       "atlasOk": false,
       "bloqueios": [
         "462 palavras no corpo (mínimo 700)",
-        "sem bloco de limite/decisão",
-        "sem fonte primária registrada",
-        "sem capa licenciada registrada",
-        "sem ponte no Atlas / links de entrada"
+        "sem bloco de limite/decisão"
+      ],
+      "curadoria": [
+        "registrar fonte primária",
+        "registrar capa licenciada",
+        "criar ponte no Atlas / links de entrada"
       ],
       "classe": "LONGE"
     },
@@ -851,10 +1157,12 @@
       "atlasOk": false,
       "bloqueios": [
         "454 palavras no corpo (mínimo 700)",
-        "sem bloco de limite/decisão",
-        "sem fonte primária registrada",
-        "sem capa licenciada registrada",
-        "sem ponte no Atlas / links de entrada"
+        "sem bloco de limite/decisão"
+      ],
+      "curadoria": [
+        "registrar fonte primária",
+        "registrar capa licenciada",
+        "criar ponte no Atlas / links de entrada"
       ],
       "classe": "LONGE"
     },
@@ -873,10 +1181,12 @@
       "atlasOk": false,
       "bloqueios": [
         "453 palavras no corpo (mínimo 700)",
-        "sem bloco de limite/decisão",
-        "sem fonte primária registrada",
-        "sem capa licenciada registrada",
-        "sem ponte no Atlas / links de entrada"
+        "sem bloco de limite/decisão"
+      ],
+      "curadoria": [
+        "registrar fonte primária",
+        "registrar capa licenciada",
+        "criar ponte no Atlas / links de entrada"
       ],
       "classe": "LONGE"
     },
@@ -895,10 +1205,12 @@
       "atlasOk": false,
       "bloqueios": [
         "451 palavras no corpo (mínimo 700)",
-        "sem bloco de limite/decisão",
-        "sem fonte primária registrada",
-        "sem capa licenciada registrada",
-        "sem ponte no Atlas / links de entrada"
+        "sem bloco de limite/decisão"
+      ],
+      "curadoria": [
+        "registrar fonte primária",
+        "registrar capa licenciada",
+        "criar ponte no Atlas / links de entrada"
       ],
       "classe": "LONGE"
     },
@@ -917,10 +1229,12 @@
       "atlasOk": false,
       "bloqueios": [
         "446 palavras no corpo (mínimo 700)",
-        "sem bloco de limite/decisão",
-        "sem fonte primária registrada",
-        "sem capa licenciada registrada",
-        "sem ponte no Atlas / links de entrada"
+        "sem bloco de limite/decisão"
+      ],
+      "curadoria": [
+        "registrar fonte primária",
+        "registrar capa licenciada",
+        "criar ponte no Atlas / links de entrada"
       ],
       "classe": "LONGE"
     },
@@ -939,30 +1253,12 @@
       "atlasOk": false,
       "bloqueios": [
         "439 palavras no corpo (mínimo 700)",
-        "sem bloco de limite/decisão",
-        "sem fonte primária registrada",
-        "sem capa licenciada registrada",
-        "sem ponte no Atlas / links de entrada"
+        "sem bloco de limite/decisão"
       ],
-      "classe": "LONGE"
-    },
-    {
-      "slug": "como-recuperar-dados-hd-defeituoso",
-      "url": "/blog/como-recuperar-dados-hd-defeituoso",
-      "titulo": "Como Recuperar Dados de HD Defeituoso: Métodos e Ferramentas",
-      "categoria": "Procedimentos Técnicos",
-      "palavras": 437,
-      "secoes": 12,
-      "similaridadeMax": 0.145,
-      "similarA": "como-recuperar-dados-hd-com-defeito",
-      "intencaoMax": 0.08,
-      "fonteOk": false,
-      "capaOk": false,
-      "atlasOk": true,
-      "bloqueios": [
-        "437 palavras no corpo (mínimo 700)",
-        "sem fonte primária registrada",
-        "sem capa licenciada registrada"
+      "curadoria": [
+        "registrar fonte primária",
+        "registrar capa licenciada",
+        "criar ponte no Atlas / links de entrada"
       ],
       "classe": "LONGE"
     },
@@ -981,31 +1277,12 @@
       "atlasOk": false,
       "bloqueios": [
         "426 palavras no corpo (mínimo 700)",
-        "sem bloco de limite/decisão",
-        "sem fonte primária registrada",
-        "sem capa licenciada registrada",
-        "sem ponte no Atlas / links de entrada"
+        "sem bloco de limite/decisão"
       ],
-      "classe": "LONGE"
-    },
-    {
-      "slug": "como-configurar-vpn-empresarial",
-      "url": "/blog/como-configurar-vpn-empresarial",
-      "titulo": "Como Configurar VPN Empresarial: Acesso Remoto Seguro",
-      "categoria": "Procedimentos Técnicos",
-      "palavras": 421,
-      "secoes": 14,
-      "similaridadeMax": 0.072,
-      "similarA": "como-configurar-roteador-wifi-iniciantes",
-      "intencaoMax": 0.077,
-      "fonteOk": false,
-      "capaOk": false,
-      "atlasOk": false,
-      "bloqueios": [
-        "421 palavras no corpo (mínimo 700)",
-        "sem fonte primária registrada",
-        "sem capa licenciada registrada",
-        "sem ponte no Atlas / links de entrada"
+      "curadoria": [
+        "registrar fonte primária",
+        "registrar capa licenciada",
+        "criar ponte no Atlas / links de entrada"
       ],
       "classe": "LONGE"
     },
@@ -1024,31 +1301,12 @@
       "atlasOk": false,
       "bloqueios": [
         "410 palavras no corpo (mínimo 700)",
-        "sem bloco de limite/decisão",
-        "sem fonte primária registrada",
-        "sem capa licenciada registrada",
-        "sem ponte no Atlas / links de entrada"
+        "sem bloco de limite/decisão"
       ],
-      "classe": "LONGE"
-    },
-    {
-      "slug": "erros-comuns-upgrade-computador",
-      "url": "/blog/erros-comuns-upgrade-computador",
-      "titulo": "5 Erros Comuns ao Fazer Upgrade no Computador (e Como Evitar Prejuízo)",
-      "categoria": "Manutenção",
-      "palavras": 410,
-      "secoes": 5,
-      "similaridadeMax": 0.136,
-      "similarA": "como-instalar-segundo-ssd-notebook",
-      "intencaoMax": 0.097,
-      "fonteOk": false,
-      "capaOk": false,
-      "atlasOk": false,
-      "bloqueios": [
-        "410 palavras no corpo (mínimo 700)",
-        "sem fonte primária registrada",
-        "sem capa licenciada registrada",
-        "sem ponte no Atlas / links de entrada"
+      "curadoria": [
+        "registrar fonte primária",
+        "registrar capa licenciada",
+        "criar ponte no Atlas / links de entrada"
       ],
       "classe": "LONGE"
     },
@@ -1067,10 +1325,12 @@
       "atlasOk": false,
       "bloqueios": [
         "409 palavras no corpo (mínimo 700)",
-        "sem bloco de limite/decisão",
-        "sem fonte primária registrada",
-        "sem capa licenciada registrada",
-        "sem ponte no Atlas / links de entrada"
+        "sem bloco de limite/decisão"
+      ],
+      "curadoria": [
+        "registrar fonte primária",
+        "registrar capa licenciada",
+        "criar ponte no Atlas / links de entrada"
       ],
       "classe": "LONGE"
     },
@@ -1089,31 +1349,12 @@
       "atlasOk": false,
       "bloqueios": [
         "397 palavras no corpo (mínimo 700)",
-        "sem bloco de limite/decisão",
-        "sem fonte primária registrada",
-        "sem capa licenciada registrada",
-        "sem ponte no Atlas / links de entrada"
+        "sem bloco de limite/decisão"
       ],
-      "classe": "LONGE"
-    },
-    {
-      "slug": "como-configurar-servidor-de-arquivos",
-      "url": "/blog/como-configurar-servidor-de-arquivos",
-      "titulo": "Como Configurar Servidor de Arquivos em Rede Local (Windows e Linux)",
-      "categoria": "Procedimentos Técnicos",
-      "palavras": 391,
-      "secoes": 14,
-      "similaridadeMax": 0.088,
-      "similarA": "historico-de-arquivos-windows-como-configurar",
-      "intencaoMax": 0.185,
-      "fonteOk": false,
-      "capaOk": false,
-      "atlasOk": false,
-      "bloqueios": [
-        "391 palavras no corpo (mínimo 700)",
-        "sem fonte primária registrada",
-        "sem capa licenciada registrada",
-        "sem ponte no Atlas / links de entrada"
+      "curadoria": [
+        "registrar fonte primária",
+        "registrar capa licenciada",
+        "criar ponte no Atlas / links de entrada"
       ],
       "classe": "LONGE"
     },
@@ -1132,10 +1373,12 @@
       "atlasOk": false,
       "bloqueios": [
         "382 palavras no corpo (mínimo 700)",
-        "sem bloco de limite/decisão",
-        "sem fonte primária registrada",
-        "sem capa licenciada registrada",
-        "sem ponte no Atlas / links de entrada"
+        "sem bloco de limite/decisão"
+      ],
+      "curadoria": [
+        "registrar fonte primária",
+        "registrar capa licenciada",
+        "criar ponte no Atlas / links de entrada"
       ],
       "classe": "LONGE"
     },
@@ -1154,10 +1397,12 @@
       "atlasOk": false,
       "bloqueios": [
         "366 palavras no corpo (mínimo 700)",
-        "sem bloco de limite/decisão",
-        "sem fonte primária registrada",
-        "sem capa licenciada registrada",
-        "sem ponte no Atlas / links de entrada"
+        "sem bloco de limite/decisão"
+      ],
+      "curadoria": [
+        "registrar fonte primária",
+        "registrar capa licenciada",
+        "criar ponte no Atlas / links de entrada"
       ],
       "classe": "LONGE"
     },
@@ -1176,10 +1421,12 @@
       "atlasOk": false,
       "bloqueios": [
         "363 palavras no corpo (mínimo 700)",
-        "sem bloco de limite/decisão",
-        "sem fonte primária registrada",
-        "sem capa licenciada registrada",
-        "sem ponte no Atlas / links de entrada"
+        "sem bloco de limite/decisão"
+      ],
+      "curadoria": [
+        "registrar fonte primária",
+        "registrar capa licenciada",
+        "criar ponte no Atlas / links de entrada"
       ],
       "classe": "LONGE"
     },
@@ -1198,10 +1445,12 @@
       "atlasOk": false,
       "bloqueios": [
         "345 palavras no corpo (mínimo 700)",
-        "sem bloco de limite/decisão",
-        "sem fonte primária registrada",
-        "sem capa licenciada registrada",
-        "sem ponte no Atlas / links de entrada"
+        "sem bloco de limite/decisão"
+      ],
+      "curadoria": [
+        "registrar fonte primária",
+        "registrar capa licenciada",
+        "criar ponte no Atlas / links de entrada"
       ],
       "classe": "LONGE"
     },
@@ -1220,10 +1469,12 @@
       "atlasOk": false,
       "bloqueios": [
         "334 palavras no corpo (mínimo 700)",
-        "sem bloco de limite/decisão",
-        "sem fonte primária registrada",
-        "sem capa licenciada registrada",
-        "sem ponte no Atlas / links de entrada"
+        "sem bloco de limite/decisão"
+      ],
+      "curadoria": [
+        "registrar fonte primária",
+        "registrar capa licenciada",
+        "criar ponte no Atlas / links de entrada"
       ],
       "classe": "LONGE"
     },
@@ -1242,10 +1493,12 @@
       "atlasOk": false,
       "bloqueios": [
         "330 palavras no corpo (mínimo 700)",
-        "sem bloco de limite/decisão",
-        "sem fonte primária registrada",
-        "sem capa licenciada registrada",
-        "sem ponte no Atlas / links de entrada"
+        "sem bloco de limite/decisão"
+      ],
+      "curadoria": [
+        "registrar fonte primária",
+        "registrar capa licenciada",
+        "criar ponte no Atlas / links de entrada"
       ],
       "classe": "LONGE"
     },
@@ -1264,31 +1517,12 @@
       "atlasOk": false,
       "bloqueios": [
         "319 palavras no corpo (mínimo 700)",
-        "sem bloco de limite/decisão",
-        "sem fonte primária registrada",
-        "sem capa licenciada registrada",
-        "sem ponte no Atlas / links de entrada"
+        "sem bloco de limite/decisão"
       ],
-      "classe": "LONGE"
-    },
-    {
-      "slug": "melhores-ferramentas-ia-gratuitas-2026",
-      "url": "/blog/melhores-ferramentas-ia-gratuitas-2026",
-      "titulo": "Melhores Ferramentas de IA Gratuitas em 2026",
-      "categoria": "Inteligência Artificial",
-      "palavras": 318,
-      "secoes": 6,
-      "similaridadeMax": 0.058,
-      "similarA": "quanto-custa-formatar-um-computador",
-      "intencaoMax": 0.043,
-      "fonteOk": false,
-      "capaOk": false,
-      "atlasOk": false,
-      "bloqueios": [
-        "318 palavras no corpo (mínimo 700)",
-        "sem fonte primária registrada",
-        "sem capa licenciada registrada",
-        "sem ponte no Atlas / links de entrada"
+      "curadoria": [
+        "registrar fonte primária",
+        "registrar capa licenciada",
+        "criar ponte no Atlas / links de entrada"
       ],
       "classe": "LONGE"
     },
@@ -1307,9 +1541,11 @@
       "atlasOk": true,
       "bloqueios": [
         "317 palavras no corpo (mínimo 700)",
-        "sem bloco de limite/decisão",
-        "sem fonte primária registrada",
-        "sem capa licenciada registrada"
+        "sem bloco de limite/decisão"
+      ],
+      "curadoria": [
+        "registrar fonte primária",
+        "registrar capa licenciada"
       ],
       "classe": "LONGE"
     },
@@ -1328,10 +1564,12 @@
       "atlasOk": false,
       "bloqueios": [
         "298 palavras no corpo (mínimo 700)",
-        "sem bloco de limite/decisão",
-        "sem fonte primária registrada",
-        "sem capa licenciada registrada",
-        "sem ponte no Atlas / links de entrada"
+        "sem bloco de limite/decisão"
+      ],
+      "curadoria": [
+        "registrar fonte primária",
+        "registrar capa licenciada",
+        "criar ponte no Atlas / links de entrada"
       ],
       "classe": "LONGE"
     },
@@ -1350,10 +1588,12 @@
       "atlasOk": false,
       "bloqueios": [
         "297 palavras no corpo (mínimo 700)",
-        "sem bloco de limite/decisão",
-        "sem fonte primária registrada",
-        "sem capa licenciada registrada",
-        "sem ponte no Atlas / links de entrada"
+        "sem bloco de limite/decisão"
+      ],
+      "curadoria": [
+        "registrar fonte primária",
+        "registrar capa licenciada",
+        "criar ponte no Atlas / links de entrada"
       ],
       "classe": "LONGE"
     },
@@ -1372,31 +1612,12 @@
       "atlasOk": false,
       "bloqueios": [
         "295 palavras no corpo (mínimo 700)",
-        "sem bloco de limite/decisão",
-        "sem fonte primária registrada",
-        "sem capa licenciada registrada",
-        "sem ponte no Atlas / links de entrada"
+        "sem bloco de limite/decisão"
       ],
-      "classe": "LONGE"
-    },
-    {
-      "slug": "como-deixar-windows-11-mais-rapido-iniciantes",
-      "url": "/blog/como-deixar-windows-11-mais-rapido-iniciantes",
-      "titulo": "Como Deixar o Windows 11 Mais Rápido em 2026: Guia Passo a Passo (Curitiba)",
-      "categoria": "Tutoriais Domésticos",
-      "palavras": 295,
-      "secoes": 5,
-      "similaridadeMax": 0.13,
-      "similarA": "limpar-arquivos-temporarios-windows",
-      "intencaoMax": 0.1,
-      "fonteOk": false,
-      "capaOk": false,
-      "atlasOk": false,
-      "bloqueios": [
-        "295 palavras no corpo (mínimo 700)",
-        "sem fonte primária registrada",
-        "sem capa licenciada registrada",
-        "sem ponte no Atlas / links de entrada"
+      "curadoria": [
+        "registrar fonte primária",
+        "registrar capa licenciada",
+        "criar ponte no Atlas / links de entrada"
       ],
       "classe": "LONGE"
     },
@@ -1415,10 +1636,12 @@
       "atlasOk": false,
       "bloqueios": [
         "293 palavras no corpo (mínimo 700)",
-        "sem bloco de limite/decisão",
-        "sem fonte primária registrada",
-        "sem capa licenciada registrada",
-        "sem ponte no Atlas / links de entrada"
+        "sem bloco de limite/decisão"
+      ],
+      "curadoria": [
+        "registrar fonte primária",
+        "registrar capa licenciada",
+        "criar ponte no Atlas / links de entrada"
       ],
       "classe": "LONGE"
     },
@@ -1437,9 +1660,11 @@
       "atlasOk": true,
       "bloqueios": [
         "288 palavras no corpo (mínimo 700)",
-        "sem bloco de limite/decisão",
-        "sem fonte primária registrada",
-        "sem capa licenciada registrada"
+        "sem bloco de limite/decisão"
+      ],
+      "curadoria": [
+        "registrar fonte primária",
+        "registrar capa licenciada"
       ],
       "classe": "LONGE"
     },
@@ -1458,10 +1683,12 @@
       "atlasOk": false,
       "bloqueios": [
         "282 palavras no corpo (mínimo 700)",
-        "sem bloco de limite/decisão",
-        "sem fonte primária registrada",
-        "sem capa licenciada registrada",
-        "sem ponte no Atlas / links de entrada"
+        "sem bloco de limite/decisão"
+      ],
+      "curadoria": [
+        "registrar fonte primária",
+        "registrar capa licenciada",
+        "criar ponte no Atlas / links de entrada"
       ],
       "classe": "LONGE"
     },
@@ -1480,10 +1707,12 @@
       "atlasOk": false,
       "bloqueios": [
         "281 palavras no corpo (mínimo 700)",
-        "sem bloco de limite/decisão",
-        "sem fonte primária registrada",
-        "sem capa licenciada registrada",
-        "sem ponte no Atlas / links de entrada"
+        "sem bloco de limite/decisão"
+      ],
+      "curadoria": [
+        "registrar fonte primária",
+        "registrar capa licenciada",
+        "criar ponte no Atlas / links de entrada"
       ],
       "classe": "LONGE"
     },
@@ -1502,10 +1731,12 @@
       "atlasOk": false,
       "bloqueios": [
         "279 palavras no corpo (mínimo 700)",
-        "sem bloco de limite/decisão",
-        "sem fonte primária registrada",
-        "sem capa licenciada registrada",
-        "sem ponte no Atlas / links de entrada"
+        "sem bloco de limite/decisão"
+      ],
+      "curadoria": [
+        "registrar fonte primária",
+        "registrar capa licenciada",
+        "criar ponte no Atlas / links de entrada"
       ],
       "classe": "LONGE"
     },
@@ -1524,10 +1755,12 @@
       "atlasOk": false,
       "bloqueios": [
         "279 palavras no corpo (mínimo 700)",
-        "sem bloco de limite/decisão",
-        "sem fonte primária registrada",
-        "sem capa licenciada registrada",
-        "sem ponte no Atlas / links de entrada"
+        "sem bloco de limite/decisão"
+      ],
+      "curadoria": [
+        "registrar fonte primária",
+        "registrar capa licenciada",
+        "criar ponte no Atlas / links de entrada"
       ],
       "classe": "LONGE"
     },
@@ -1546,10 +1779,12 @@
       "atlasOk": false,
       "bloqueios": [
         "272 palavras no corpo (mínimo 700)",
-        "sem bloco de limite/decisão",
-        "sem fonte primária registrada",
-        "sem capa licenciada registrada",
-        "sem ponte no Atlas / links de entrada"
+        "sem bloco de limite/decisão"
+      ],
+      "curadoria": [
+        "registrar fonte primária",
+        "registrar capa licenciada",
+        "criar ponte no Atlas / links de entrada"
       ],
       "classe": "LONGE"
     },
@@ -1568,31 +1803,12 @@
       "atlasOk": false,
       "bloqueios": [
         "270 palavras no corpo (mínimo 700)",
-        "sem bloco de limite/decisão",
-        "sem fonte primária registrada",
-        "sem capa licenciada registrada",
-        "sem ponte no Atlas / links de entrada"
+        "sem bloco de limite/decisão"
       ],
-      "classe": "LONGE"
-    },
-    {
-      "slug": "trocar-windows-por-linux-vale-a-pena",
-      "url": "/blog/trocar-windows-por-linux-vale-a-pena",
-      "titulo": "Trocar o Windows Por Linux: Vale a Pena?",
-      "categoria": "Linux",
-      "palavras": 268,
-      "secoes": 5,
-      "similaridadeMax": 0.105,
-      "similarA": "como-migrar-arquivos-para-um-computador-novo",
-      "intencaoMax": 0.176,
-      "fonteOk": false,
-      "capaOk": false,
-      "atlasOk": false,
-      "bloqueios": [
-        "268 palavras no corpo (mínimo 700)",
-        "sem fonte primária registrada",
-        "sem capa licenciada registrada",
-        "sem ponte no Atlas / links de entrada"
+      "curadoria": [
+        "registrar fonte primária",
+        "registrar capa licenciada",
+        "criar ponte no Atlas / links de entrada"
       ],
       "classe": "LONGE"
     },
@@ -1611,9 +1827,11 @@
       "atlasOk": true,
       "bloqueios": [
         "267 palavras no corpo (mínimo 700)",
-        "apenas 3 seções (mínimo 4)",
-        "sem fonte primária registrada",
-        "sem capa licenciada registrada"
+        "apenas 3 seções (mínimo 4)"
+      ],
+      "curadoria": [
+        "registrar fonte primária",
+        "registrar capa licenciada"
       ],
       "classe": "LONGE"
     },
@@ -1632,10 +1850,12 @@
       "atlasOk": false,
       "bloqueios": [
         "265 palavras no corpo (mínimo 700)",
-        "sem bloco de limite/decisão",
-        "sem fonte primária registrada",
-        "sem capa licenciada registrada",
-        "sem ponte no Atlas / links de entrada"
+        "sem bloco de limite/decisão"
+      ],
+      "curadoria": [
+        "registrar fonte primária",
+        "registrar capa licenciada",
+        "criar ponte no Atlas / links de entrada"
       ],
       "classe": "LONGE"
     },
@@ -1654,10 +1874,12 @@
       "atlasOk": false,
       "bloqueios": [
         "257 palavras no corpo (mínimo 700)",
-        "sem bloco de limite/decisão",
-        "sem fonte primária registrada",
-        "sem capa licenciada registrada",
-        "sem ponte no Atlas / links de entrada"
+        "sem bloco de limite/decisão"
+      ],
+      "curadoria": [
+        "registrar fonte primária",
+        "registrar capa licenciada",
+        "criar ponte no Atlas / links de entrada"
       ],
       "classe": "LONGE"
     },
@@ -1676,10 +1898,12 @@
       "atlasOk": false,
       "bloqueios": [
         "256 palavras no corpo (mínimo 700)",
-        "sem bloco de limite/decisão",
-        "sem fonte primária registrada",
-        "sem capa licenciada registrada",
-        "sem ponte no Atlas / links de entrada"
+        "sem bloco de limite/decisão"
+      ],
+      "curadoria": [
+        "registrar fonte primária",
+        "registrar capa licenciada",
+        "criar ponte no Atlas / links de entrada"
       ],
       "classe": "LONGE"
     },
@@ -1698,10 +1922,12 @@
       "atlasOk": false,
       "bloqueios": [
         "255 palavras no corpo (mínimo 700)",
-        "sem bloco de limite/decisão",
-        "sem fonte primária registrada",
-        "sem capa licenciada registrada",
-        "sem ponte no Atlas / links de entrada"
+        "sem bloco de limite/decisão"
+      ],
+      "curadoria": [
+        "registrar fonte primária",
+        "registrar capa licenciada",
+        "criar ponte no Atlas / links de entrada"
       ],
       "classe": "LONGE"
     },
@@ -1720,10 +1946,12 @@
       "atlasOk": false,
       "bloqueios": [
         "254 palavras no corpo (mínimo 700)",
-        "sem bloco de limite/decisão",
-        "sem fonte primária registrada",
-        "sem capa licenciada registrada",
-        "sem ponte no Atlas / links de entrada"
+        "sem bloco de limite/decisão"
+      ],
+      "curadoria": [
+        "registrar fonte primária",
+        "registrar capa licenciada",
+        "criar ponte no Atlas / links de entrada"
       ],
       "classe": "LONGE"
     },
@@ -1742,10 +1970,12 @@
       "atlasOk": false,
       "bloqueios": [
         "252 palavras no corpo (mínimo 700)",
-        "sem bloco de limite/decisão",
-        "sem fonte primária registrada",
-        "sem capa licenciada registrada",
-        "sem ponte no Atlas / links de entrada"
+        "sem bloco de limite/decisão"
+      ],
+      "curadoria": [
+        "registrar fonte primária",
+        "registrar capa licenciada",
+        "criar ponte no Atlas / links de entrada"
       ],
       "classe": "LONGE"
     },
@@ -1765,10 +1995,12 @@
       "bloqueios": [
         "244 palavras no corpo (mínimo 700)",
         "apenas 3 seções (mínimo 4)",
-        "sem bloco de limite/decisão",
-        "sem fonte primária registrada",
-        "sem capa licenciada registrada",
-        "sem ponte no Atlas / links de entrada"
+        "sem bloco de limite/decisão"
+      ],
+      "curadoria": [
+        "registrar fonte primária",
+        "registrar capa licenciada",
+        "criar ponte no Atlas / links de entrada"
       ],
       "classe": "LONGE"
     },
@@ -1787,10 +2019,12 @@
       "atlasOk": false,
       "bloqueios": [
         "242 palavras no corpo (mínimo 700)",
-        "sem bloco de limite/decisão",
-        "sem fonte primária registrada",
-        "sem capa licenciada registrada",
-        "sem ponte no Atlas / links de entrada"
+        "sem bloco de limite/decisão"
+      ],
+      "curadoria": [
+        "registrar fonte primária",
+        "registrar capa licenciada",
+        "criar ponte no Atlas / links de entrada"
       ],
       "classe": "LONGE"
     },
@@ -1809,31 +2043,12 @@
       "atlasOk": false,
       "bloqueios": [
         "241 palavras no corpo (mínimo 700)",
-        "sem bloco de limite/decisão",
-        "sem fonte primária registrada",
-        "sem capa licenciada registrada",
-        "sem ponte no Atlas / links de entrada"
+        "sem bloco de limite/decisão"
       ],
-      "classe": "LONGE"
-    },
-    {
-      "slug": "manutencao-preventiva-computador-guia",
-      "url": "/blog/manutencao-preventiva-computador-guia",
-      "titulo": "Manutenção Preventiva do Computador: O Guia Que Evita 80% dos Problemas",
-      "categoria": "Manutenção",
-      "palavras": 239,
-      "secoes": 6,
-      "similaridadeMax": 0.111,
-      "similarA": "manutencao-preventiva-de-computador-guia-completo",
-      "intencaoMax": 0.148,
-      "fonteOk": false,
-      "capaOk": false,
-      "atlasOk": false,
-      "bloqueios": [
-        "239 palavras no corpo (mínimo 700)",
-        "sem fonte primária registrada",
-        "sem capa licenciada registrada",
-        "sem ponte no Atlas / links de entrada"
+      "curadoria": [
+        "registrar fonte primária",
+        "registrar capa licenciada",
+        "criar ponte no Atlas / links de entrada"
       ],
       "classe": "LONGE"
     },
@@ -1852,30 +2067,12 @@
       "atlasOk": false,
       "bloqueios": [
         "238 palavras no corpo (mínimo 700)",
-        "sem bloco de limite/decisão",
-        "sem fonte primária registrada",
-        "sem capa licenciada registrada",
-        "sem ponte no Atlas / links de entrada"
+        "sem bloco de limite/decisão"
       ],
-      "classe": "LONGE"
-    },
-    {
-      "slug": "como-configurar-repetidor-wifi",
-      "url": "/blog/como-configurar-repetidor-wifi",
-      "titulo": "Como Configurar Repetidor de Wi-Fi: Passo a Passo Simples (Guia 2026)",
-      "categoria": "Tutoriais Domésticos",
-      "palavras": 237,
-      "secoes": 5,
-      "similaridadeMax": 0.101,
-      "similarA": "rede-wifi-nao-aparece-na-lista-o-que-verificar",
-      "intencaoMax": 0.148,
-      "fonteOk": false,
-      "capaOk": false,
-      "atlasOk": true,
-      "bloqueios": [
-        "237 palavras no corpo (mínimo 700)",
-        "sem fonte primária registrada",
-        "sem capa licenciada registrada"
+      "curadoria": [
+        "registrar fonte primária",
+        "registrar capa licenciada",
+        "criar ponte no Atlas / links de entrada"
       ],
       "classe": "LONGE"
     },
@@ -1894,10 +2091,12 @@
       "atlasOk": false,
       "bloqueios": [
         "235 palavras no corpo (mínimo 700)",
-        "sem bloco de limite/decisão",
-        "sem fonte primária registrada",
-        "sem capa licenciada registrada",
-        "sem ponte no Atlas / links de entrada"
+        "sem bloco de limite/decisão"
+      ],
+      "curadoria": [
+        "registrar fonte primária",
+        "registrar capa licenciada",
+        "criar ponte no Atlas / links de entrada"
       ],
       "classe": "LONGE"
     },
@@ -1916,10 +2115,12 @@
       "atlasOk": false,
       "bloqueios": [
         "231 palavras no corpo (mínimo 700)",
-        "sem bloco de limite/decisão",
-        "sem fonte primária registrada",
-        "sem capa licenciada registrada",
-        "sem ponte no Atlas / links de entrada"
+        "sem bloco de limite/decisão"
+      ],
+      "curadoria": [
+        "registrar fonte primária",
+        "registrar capa licenciada",
+        "criar ponte no Atlas / links de entrada"
       ],
       "classe": "LONGE"
     },
@@ -1938,10 +2139,12 @@
       "atlasOk": false,
       "bloqueios": [
         "231 palavras no corpo (mínimo 700)",
-        "sem bloco de limite/decisão",
-        "sem fonte primária registrada",
-        "sem capa licenciada registrada",
-        "sem ponte no Atlas / links de entrada"
+        "sem bloco de limite/decisão"
+      ],
+      "curadoria": [
+        "registrar fonte primária",
+        "registrar capa licenciada",
+        "criar ponte no Atlas / links de entrada"
       ],
       "classe": "LONGE"
     },
@@ -1960,31 +2163,12 @@
       "atlasOk": false,
       "bloqueios": [
         "227 palavras no corpo (mínimo 700)",
-        "sem bloco de limite/decisão",
-        "sem fonte primária registrada",
-        "sem capa licenciada registrada",
-        "sem ponte no Atlas / links de entrada"
+        "sem bloco de limite/decisão"
       ],
-      "classe": "LONGE"
-    },
-    {
-      "slug": "como-criar-conta-usuario-windows-criancas",
-      "url": "/blog/como-criar-conta-usuario-windows-criancas",
-      "titulo": "Como Criar Conta de Usuário Para Crianças no Windows 11 (Controle Parental)",
-      "categoria": "Tutoriais Domésticos",
-      "palavras": 225,
-      "secoes": 5,
-      "similaridadeMax": 0.071,
-      "similarA": "permissoes-de-camera-no-windows",
-      "intencaoMax": 0.059,
-      "fonteOk": false,
-      "capaOk": false,
-      "atlasOk": false,
-      "bloqueios": [
-        "225 palavras no corpo (mínimo 700)",
-        "sem fonte primária registrada",
-        "sem capa licenciada registrada",
-        "sem ponte no Atlas / links de entrada"
+      "curadoria": [
+        "registrar fonte primária",
+        "registrar capa licenciada",
+        "criar ponte no Atlas / links de entrada"
       ],
       "classe": "LONGE"
     },
@@ -2003,10 +2187,12 @@
       "atlasOk": false,
       "bloqueios": [
         "224 palavras no corpo (mínimo 700)",
-        "sem bloco de limite/decisão",
-        "sem fonte primária registrada",
-        "sem capa licenciada registrada",
-        "sem ponte no Atlas / links de entrada"
+        "sem bloco de limite/decisão"
+      ],
+      "curadoria": [
+        "registrar fonte primária",
+        "registrar capa licenciada",
+        "criar ponte no Atlas / links de entrada"
       ],
       "classe": "LONGE"
     },
@@ -2026,10 +2212,12 @@
       "bloqueios": [
         "218 palavras no corpo (mínimo 700)",
         "apenas 3 seções (mínimo 4)",
-        "sem bloco de limite/decisão",
-        "sem fonte primária registrada",
-        "sem capa licenciada registrada",
-        "sem ponte no Atlas / links de entrada"
+        "sem bloco de limite/decisão"
+      ],
+      "curadoria": [
+        "registrar fonte primária",
+        "registrar capa licenciada",
+        "criar ponte no Atlas / links de entrada"
       ],
       "classe": "LONGE"
     },
@@ -2048,10 +2236,12 @@
       "atlasOk": false,
       "bloqueios": [
         "213 palavras no corpo (mínimo 700)",
-        "sem bloco de limite/decisão",
-        "sem fonte primária registrada",
-        "sem capa licenciada registrada",
-        "sem ponte no Atlas / links de entrada"
+        "sem bloco de limite/decisão"
+      ],
+      "curadoria": [
+        "registrar fonte primária",
+        "registrar capa licenciada",
+        "criar ponte no Atlas / links de entrada"
       ],
       "classe": "LONGE"
     },
@@ -2070,10 +2260,12 @@
       "atlasOk": false,
       "bloqueios": [
         "210 palavras no corpo (mínimo 700)",
-        "sem bloco de limite/decisão",
-        "sem fonte primária registrada",
-        "sem capa licenciada registrada",
-        "sem ponte no Atlas / links de entrada"
+        "sem bloco de limite/decisão"
+      ],
+      "curadoria": [
+        "registrar fonte primária",
+        "registrar capa licenciada",
+        "criar ponte no Atlas / links de entrada"
       ],
       "classe": "LONGE"
     },
@@ -2092,10 +2284,12 @@
       "atlasOk": false,
       "bloqueios": [
         "202 palavras no corpo (mínimo 700)",
-        "sem bloco de limite/decisão",
-        "sem fonte primária registrada",
-        "sem capa licenciada registrada",
-        "sem ponte no Atlas / links de entrada"
+        "sem bloco de limite/decisão"
+      ],
+      "curadoria": [
+        "registrar fonte primária",
+        "registrar capa licenciada",
+        "criar ponte no Atlas / links de entrada"
       ],
       "classe": "LONGE"
     },
@@ -2114,10 +2308,12 @@
       "atlasOk": false,
       "bloqueios": [
         "199 palavras no corpo (mínimo 700)",
-        "sem bloco de limite/decisão",
-        "sem fonte primária registrada",
-        "sem capa licenciada registrada",
-        "sem ponte no Atlas / links de entrada"
+        "sem bloco de limite/decisão"
+      ],
+      "curadoria": [
+        "registrar fonte primária",
+        "registrar capa licenciada",
+        "criar ponte no Atlas / links de entrada"
       ],
       "classe": "LONGE"
     },
@@ -2136,10 +2332,12 @@
       "atlasOk": false,
       "bloqueios": [
         "195 palavras no corpo (mínimo 700)",
-        "sem bloco de limite/decisão",
-        "sem fonte primária registrada",
-        "sem capa licenciada registrada",
-        "sem ponte no Atlas / links de entrada"
+        "sem bloco de limite/decisão"
+      ],
+      "curadoria": [
+        "registrar fonte primária",
+        "registrar capa licenciada",
+        "criar ponte no Atlas / links de entrada"
       ],
       "classe": "LONGE"
     },
@@ -2158,10 +2356,12 @@
       "atlasOk": false,
       "bloqueios": [
         "193 palavras no corpo (mínimo 700)",
-        "sem bloco de limite/decisão",
-        "sem fonte primária registrada",
-        "sem capa licenciada registrada",
-        "sem ponte no Atlas / links de entrada"
+        "sem bloco de limite/decisão"
+      ],
+      "curadoria": [
+        "registrar fonte primária",
+        "registrar capa licenciada",
+        "criar ponte no Atlas / links de entrada"
       ],
       "classe": "LONGE"
     },
@@ -2181,10 +2381,12 @@
       "bloqueios": [
         "181 palavras no corpo (mínimo 700)",
         "apenas 3 seções (mínimo 4)",
-        "sem bloco de limite/decisão",
-        "sem fonte primária registrada",
-        "sem capa licenciada registrada",
-        "sem ponte no Atlas / links de entrada"
+        "sem bloco de limite/decisão"
+      ],
+      "curadoria": [
+        "registrar fonte primária",
+        "registrar capa licenciada",
+        "criar ponte no Atlas / links de entrada"
       ],
       "classe": "LONGE"
     },
@@ -2203,10 +2405,12 @@
       "atlasOk": false,
       "bloqueios": [
         "181 palavras no corpo (mínimo 700)",
-        "sem bloco de limite/decisão",
-        "sem fonte primária registrada",
-        "sem capa licenciada registrada",
-        "sem ponte no Atlas / links de entrada"
+        "sem bloco de limite/decisão"
+      ],
+      "curadoria": [
+        "registrar fonte primária",
+        "registrar capa licenciada",
+        "criar ponte no Atlas / links de entrada"
       ],
       "classe": "LONGE"
     },
@@ -2225,10 +2429,12 @@
       "atlasOk": false,
       "bloqueios": [
         "178 palavras no corpo (mínimo 700)",
-        "sem bloco de limite/decisão",
-        "sem fonte primária registrada",
-        "sem capa licenciada registrada",
-        "sem ponte no Atlas / links de entrada"
+        "sem bloco de limite/decisão"
+      ],
+      "curadoria": [
+        "registrar fonte primária",
+        "registrar capa licenciada",
+        "criar ponte no Atlas / links de entrada"
       ],
       "classe": "LONGE"
     },
@@ -2247,10 +2453,12 @@
       "atlasOk": false,
       "bloqueios": [
         "178 palavras no corpo (mínimo 700)",
-        "sem bloco de limite/decisão",
-        "sem fonte primária registrada",
-        "sem capa licenciada registrada",
-        "sem ponte no Atlas / links de entrada"
+        "sem bloco de limite/decisão"
+      ],
+      "curadoria": [
+        "registrar fonte primária",
+        "registrar capa licenciada",
+        "criar ponte no Atlas / links de entrada"
       ],
       "classe": "LONGE"
     },
@@ -2269,10 +2477,12 @@
       "atlasOk": false,
       "bloqueios": [
         "176 palavras no corpo (mínimo 700)",
-        "sem bloco de limite/decisão",
-        "sem fonte primária registrada",
-        "sem capa licenciada registrada",
-        "sem ponte no Atlas / links de entrada"
+        "sem bloco de limite/decisão"
+      ],
+      "curadoria": [
+        "registrar fonte primária",
+        "registrar capa licenciada",
+        "criar ponte no Atlas / links de entrada"
       ],
       "classe": "LONGE"
     },
@@ -2291,10 +2501,12 @@
       "atlasOk": false,
       "bloqueios": [
         "176 palavras no corpo (mínimo 700)",
-        "apenas 3 seções (mínimo 4)",
-        "sem fonte primária registrada",
-        "sem capa licenciada registrada",
-        "sem ponte no Atlas / links de entrada"
+        "apenas 3 seções (mínimo 4)"
+      ],
+      "curadoria": [
+        "registrar fonte primária",
+        "registrar capa licenciada",
+        "criar ponte no Atlas / links de entrada"
       ],
       "classe": "LONGE"
     },
@@ -2313,10 +2525,12 @@
       "atlasOk": false,
       "bloqueios": [
         "175 palavras no corpo (mínimo 700)",
-        "sem bloco de limite/decisão",
-        "sem fonte primária registrada",
-        "sem capa licenciada registrada",
-        "sem ponte no Atlas / links de entrada"
+        "sem bloco de limite/decisão"
+      ],
+      "curadoria": [
+        "registrar fonte primária",
+        "registrar capa licenciada",
+        "criar ponte no Atlas / links de entrada"
       ],
       "classe": "LONGE"
     },
@@ -2336,10 +2550,12 @@
       "bloqueios": [
         "163 palavras no corpo (mínimo 700)",
         "apenas 3 seções (mínimo 4)",
-        "sem bloco de limite/decisão",
-        "sem fonte primária registrada",
-        "sem capa licenciada registrada",
-        "sem ponte no Atlas / links de entrada"
+        "sem bloco de limite/decisão"
+      ],
+      "curadoria": [
+        "registrar fonte primária",
+        "registrar capa licenciada",
+        "criar ponte no Atlas / links de entrada"
       ],
       "classe": "LONGE"
     },
@@ -2359,10 +2575,12 @@
       "bloqueios": [
         "147 palavras no corpo (mínimo 700)",
         "apenas 3 seções (mínimo 4)",
-        "sem bloco de limite/decisão",
-        "sem fonte primária registrada",
-        "sem capa licenciada registrada",
-        "sem ponte no Atlas / links de entrada"
+        "sem bloco de limite/decisão"
+      ],
+      "curadoria": [
+        "registrar fonte primária",
+        "registrar capa licenciada",
+        "criar ponte no Atlas / links de entrada"
       ],
       "classe": "LONGE"
     }
