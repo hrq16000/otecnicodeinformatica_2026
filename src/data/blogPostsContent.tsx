@@ -2922,39 +2922,38 @@ docker run -d --name db --network minha-rede postgres
   },
 
   "quando-trocar-computador-ou-reparar": {
-    title: "Quando Trocar o Computador e Quando Vale a Pena Reparar (Guia Técnico)",
-    excerpt: "PC antigo, lento ou com defeito? Descubra os critérios técnicos que definem se vale investir no reparo ou se é hora de partir para um equipamento novo.",
-    date: "2026-04-06",
-    readTime: "11 min",
+    title: "Reparar ou trocar o computador: como decidir sem regra de bolso",
+    excerpt: "Um roteiro para comparar uso, compatibilidade, falhas, suporte e risco de dados antes de reparar ou substituir o equipamento.",
+    date: "2026-09-11",
+    readTime: "10 min",
     category: "Manutenção",
     content: (
       <>
-        <p className="lead">Essa é a dúvida mais comum dos nossos clientes: <strong>"Vale a pena consertar ou é melhor comprar outro?"</strong>. A resposta depende de critérios técnicos e financeiros que vamos detalhar neste guia.</p>
+        <p className="lead">Não existe idade, geração de processador ou percentual do preço de uma máquina nova que resolva sozinho a decisão de reparar ou trocar. A escolha depende do que o computador ainda precisa fazer, de quais falhas existem, da disponibilidade de peças e do risco para os seus dados.</p>
 
-        <h2>Quando Vale a Pena Reparar</h2>
+        <h2>Separe desempenho de defeito</h2>
+        <p>Um computador lento por armazenamento cheio, inicialização carregada ou disco mecânico não é igual a um equipamento com falha elétrica, tela danificada e bateria comprometida. Liste os sintomas, confirme o modelo e defina quais programas e periféricos precisam continuar funcionando. Isso evita comprar uma máquina nova para resolver uma configuração simples — ou investir em upgrade quando há defeito estrutural.</p>
+
+        <h2>Quando o reparo pode ser coerente</h2>
         <ul>
-          <li><strong>Processador de até 5 anos:</strong> Intel Core i3/i5/i7 de 8ª geração pra cima ainda são muito úteis</li>
-          <li><strong>Custo do reparo até 40% do valor de um novo:</strong> Se o conserto fica abaixo desse limite, compensa</li>
-          <li><strong>Problema é específico:</strong> Tela, teclado, SSD, RAM — peças que se trocam facilmente</li>
-          <li><strong>O equipamento atende suas necessidades:</strong> Se faz o que você precisa, não há motivo para trocar</li>
+          <li>O defeito está identificado e é isolado, com peça compatível disponível.</li>
+          <li>Depois do reparo, o equipamento continuará atendendo o uso real: trabalho, estudo, software necessário e periféricos.</li>
+          <li>O sistema operacional e os recursos de segurança ainda têm suporte adequado para o cenário.</li>
+          <li>Há backup dos dados e uma previsão clara de quais riscos continuam existindo.</li>
         </ul>
 
-        <h2>Quando NÃO Compensa Reparar</h2>
-        <ul>
-          <li><strong>Processador muito antigo:</strong> Celeron, Pentium ou Core de 2ª/3ª geração</li>
-          <li><strong>Placa-mãe com defeito em equipamento antigo:</strong> Placa-mãe nova pode não existir para modelos descontinuados</li>
-          <li><strong>Custo do reparo acima de 50-60% do novo:</strong> O investimento não se justifica</li>
-          <li><strong>Múltiplos problemas simultâneos:</strong> Placa-mãe + tela + bateria = melhor trocar</li>
-        </ul>
+        <h2>Quando a substituição merece ser considerada</h2>
+        <p>Considere comparar alternativas se há múltiplas falhas independentes, peça crítica indisponível, incompatibilidade com o software necessário, limitações permanentes de segurança ou se o reparo não atende mais a necessidade de trabalho. Isso não significa que todo computador antigo seja descartável: a decisão deve considerar uso, possibilidade de reaproveitamento e descarte correto.</p>
 
-        <h2>Análise Custo-Benefício na Prática</h2>
-        <p>Notebook i5 de 2019 com HD lento e 4 GB de RAM: trocar por SSD (R$ 200) + 8 GB de RAM (R$ 150) = R$ 350 + mão de obra. Resultado: notebook rodando como novo por menos de R$ 500. <strong>Compensa muito.</strong></p>
-        <p>Notebook Celeron de 2015 com tela quebrada: tela nova R$ 400 + mão de obra R$ 150 = R$ 550. E o desempenho continuará ruim. <strong>Não compensa.</strong></p>
+        <h2>Verificação segura antes de decidir</h2>
+        <ol>
+          <li>Faça backup e teste a restauração de arquivos importantes.</li>
+          <li>Registre modelo, sintomas, mensagens de erro e componentes já trocados.</li>
+          <li>Confirme requisitos do sistema e do programa mais importante para você.</li>
+          <li>Peça um diagnóstico que diferencie causa, consequência e alternativa de reparo.</li>
+        </ol>
 
-        <div className="bg-accent/10 rounded-xl p-6 my-8">
-          <h3 className="text-accent font-bold mb-2">Dúvida Se Vale Reparar?</h3>
-          <p className="text-muted-foreground mb-0">Nosso técnico faz o diagnóstico e dá a opinião honesta: se não compensa, a gente avisa. Diagnóstico a partir de R$ 99,99.</p>
-        </div>
+        <p>Não use uma tabela genérica de preços ou porcentagens como veredito. Custos, disponibilidade e valor de uso mudam por modelo e caso. Para avaliar se a lentidão está ligada ao armazenamento, comece por <Link to="/blog/quando-trocar-hd-por-ssd" className="text-accent">quando trocar HD por SSD</Link>; se a máquina não liga, o ponto de partida é <Link to="/blog/notebook-nao-liga-o-que-fazer" className="text-accent">a triagem de notebook que não inicializa</Link>.</p>
       </>
     ),
   },

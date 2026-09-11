@@ -569,6 +569,16 @@ export const ARTICLE_SOURCE_MANIFEST: Record<string, ArticleSourceManifest> = {
     notes:
       "Revisão material: removeu recomendação universal de reinstalação e alegações de potência, priorizando manual, formato, protocolo, energia, espaço e preservação de dados.",
   },
+  "quando-trocar-computador-ou-reparar": {
+    slug: "quando-trocar-computador-ou-reparar",
+    sources: ["ms-win11-requirements", "cisa-backup"],
+    technicalReview: "reviewed",
+    factChecked: true,
+    factCheckedAt: "2026-09-11",
+    stableKnowledge: true,
+    notes:
+      "Reescrita material: removeu faixas fixas de idade, preço e percentual, além de exemplos de custo. A decisão passou a exigir uso real, falha identificada, suporte, compatibilidade e backup testado.",
+  },
   "como-saber-se-pc-tem-virus-malware": {
     slug: "como-saber-se-pc-tem-virus-malware",
     sources: ["certbr-golpes", "cisa-stop-ransomware", "ms-tech-support-scams"],
