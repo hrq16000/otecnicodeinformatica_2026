@@ -149,15 +149,101 @@ export type PartnerApplication = {
   experiencia: string;
 };
 
-/** Envia cadastro: entra sempre como "aguardando análise" (RLS reforça isso). */
+/**
+ * Envia cadastro: entra sempre como "aguardando análise" (RLS reforça isso).
+ * Quando existe sessão, o cadastro fica vinculado à conta — é isso que
+ * permite ao profissional editar o próprio perfil depois da aprovação.
+ */
 export async function submitPartnerApplication(app: PartnerApplication) {
   const base = slugify(`${app.nome_profissional}-${app.cidade}`);
   const slug = `${base}-${Math.random().toString(36).slice(2, 6)}`;
+  const { data: sessao } = await supabase.auth.getSession();
 
   return supabase.from("partners").insert({
     ...app,
     slug,
+    user_id: sessao.session?.user.id ?? null,
     status: "aguardando_analise" as const,
     aceite_termos_em: new Date().toISOString(),
   });
+}
+
+// ── ÁREA DO PARCEIRO (dono do cadastro) ──────────────────────────
+
+export type MyPartner = Partner & {
+  status: string;
+  plano_expira_em: string | null;
+};
+
+/** Cadastro do usuário autenticado — null quando ele ainda não tem perfil. */
+export async function getMyPartner(): Promise<MyPartner | null> {
+  const { data, error } = await supabase.rpc("get_my_partner");
+  if (error || !data || data.length === 0) return null;
+  return data[0] as unknown as MyPartner;
+}
+
+/** Fotos do próprio portfólio, com o caminho interno preservado. */
+export async function getMyPartnerPhotos(): Promise<PartnerPhoto[]> {
+  const { data, error } = await supabase.rpc("get_my_partner_photos");
+  if (error || !data) return [];
+  return data as unknown as PartnerPhoto[];
+}
+
+export type PartnerEditableFields = {
+  descricao: string;
+  experiencia: string;
+  horario: string;
+  whatsapp: string;
+  site_url: string;
+  servicos: string[];
+  especialidades: string[];
+  regioes_atendidas: string[];
+  formas_atendimento: string[];
+};
+
+/**
+ * Atualiza o próprio perfil. Status, plano e notas administrativas ficam
+ * fora do alcance do parceiro — a política do banco recusa qualquer tentativa.
+ */
+export async function updateMyPartner(partnerId: string, campos: PartnerEditableFields) {
+  return supabase
+    .from("partners")
+    .update({
+      descricao: campos.descricao.slice(0, 4000) || null,
+      experiencia: campos.experiencia.slice(0, 2000) || null,
+      horario: campos.horario.slice(0, 200) || null,
+      whatsapp: campos.whatsapp.replace(/\D/g, "").slice(0, 20) || null,
+      site_url: campos.site_url.trim() || null,
+      servicos: campos.servicos.slice(0, 30),
+      especialidades: campos.especialidades.slice(0, 20),
+      regioes_atendidas: campos.regioes_atendidas.slice(0, 30),
+      formas_atendimento: campos.formas_atendimento.slice(0, 10),
+    })
+    .eq("id", partnerId);
+}
+
+/** Envia uma foto de trabalho real para a pasta do próprio parceiro. */
+export async function uploadPartnerPhoto(partnerId: string, arquivo: File, legenda: string) {
+  const extensao = arquivo.name.split(".").pop()?.toLowerCase() ?? "jpg";
+  const caminho = `${partnerId}/${Date.now()}-${Math.random().toString(36).slice(2, 8)}.${extensao}`;
+
+  const upload = await supabase.storage.from(PARTNER_BUCKET).upload(caminho, arquivo, {
+    cacheControl: "3600",
+    upsert: false,
+  });
+  if (upload.error) return { error: upload.error };
+
+  return supabase.from("partner_photos").insert({
+    partner_id: partnerId,
+    url: caminho,
+    legenda: legenda.trim().slice(0, 160) || null,
+    ordem: 0,
+  });
+}
+
+export async function deletePartnerPhoto(foto: PartnerPhoto) {
+  if (!/^https?:\/\//i.test(foto.url)) {
+    await supabase.storage.from(PARTNER_BUCKET).remove([foto.url]);
+  }
+  return supabase.from("partner_photos").delete().eq("id", foto.id);
 }
