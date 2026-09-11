@@ -2870,14 +2870,17 @@ docker run -d --name db --network minha-rede postgres
   },
 
   "erros-comuns-upgrade-computador": {
-    title: "5 Erros Comuns ao Fazer Upgrade no Computador (e Como Evitar Prejuízo)",
-    excerpt: "Comprar RAM incompatível, instalar SSD errado, favaliar o valor peças no slot — veja os erros que causam prejuízo.",
-    date: "2026-04-06",
-    readTime: "8 min",
+    title: "Upgrade de computador: o que verificar antes de comprar peças",
+    excerpt: "Compatibilidade de memória, SSD, energia e sistema: um roteiro para decidir antes de gastar ou forçar componentes.",
+    date: "2026-09-11",
+    readTime: "10 min",
     category: "Manutenção",
     content: (
       <>
-        <p className="lead">Fazer upgrade no computador pode ser a solução mais inteligente para ganhar desempenho sem trocar a máquina. Mas quando feito sem conhecimento técnico, o resultado pode ser <strong>prejuízo financeiro e até danos permanentes</strong>. Veja os 5 erros mais comuns que encontramos no dia a dia.</p>
+        <p className="lead">Upgrade é uma decisão de compatibilidade e de gargalo, não uma lista de peças “mais rápidas”. Uma compra pode não caber fisicamente, não ser reconhecida pelo firmware ou simplesmente não resolver a causa da lentidão. Este roteiro reduz tentativas às cegas antes de gastar ou abrir o equipamento.</p>
+
+        <h2>Comece pelo problema, não pelo anúncio</h2>
+        <p>Pouco espaço, aplicativos lentos, travamentos sob carga, falhas de inicialização e limitação gráfica são sintomas diferentes. Um SSD pode melhorar o acesso a arquivos, mas não corrige superaquecimento, malware, memória defeituosa ou um processo em uso contínuo. Registre o que acontece, em que tarefa e desde quando.</p>
 
         <h2>1. Comprar RAM Incompatível</h2>
         <p>Nem toda memória RAM serve em qualquer computador. É preciso verificar o <strong>tipo (DDR3, DDR4, DDR5)</strong>, a frequência suportada pela placa-mãe e o número máximo de slots. Muita gente compra DDR4 para um notebook que só aceita DDR3 — e descobre tarde demais que não encaixa.</p>
@@ -2887,21 +2890,26 @@ docker run -d --name db --network minha-rede postgres
         <p>Existem SSDs SATA (2.5") e SSDs NVMe (M.2). Nem toda placa-mãe tem slot M.2, e mesmo as que têm podem suportar apenas SATA no slot M.2, não NVMe. Instalar o tipo errado significa que o SSD simplesmente <strong>não será reconhecido</strong>.</p>
         <p><strong>Como evitar:</strong> Verifique no manual se há slot M.2 e se ele suporta NVMe ou apenas SATA.</p>
 
-        <h2>3. Favaliar o valor Peças no Slot Errado</h2>
-        <p>Memória DDR4 não encaixa em slot DDR3 — os encaixes são diferentes propositalmente. Mas vemos casos de clientes que <strong>favaliar o valoram a peça e quebraram o slot ou a própria memória</strong>. O mesmo vale para conectores de energia, cabos SATA e até ventoinhas.</p>
+        <h2>3. Forçar peças no slot errado</h2>
+        <p>Memória DDR4 não encaixa em slot DDR3 — os encaixes são diferentes propositalmente. O mesmo vale para conectores de energia, cabos SATA e ventoinhas. Se uma peça não encaixa com pressão leve, pare e confira o manual; forçar pode danificar o slot ou o componente.</p>
         <p><strong>Regra de ouro:</strong> Se não encaixou com pressão leve, está errado. Nunca force.</p>
 
         <h2>4. Não Reinstalar o Windows Após Trocar HD por SSD</h2>
         <p>Alguns usuários copiam o HD antigo para o SSD novo usando programas de clonagem — mas o Windows pode não iniciar corretamente ou ficar instável. A clonagem funciona em muitos casos, mas em outros traz <strong>erros de driver, tela azul e lentidão inesperada</strong>.</p>
-        <p><strong>Recomendação:</strong> Sempre que possível, faça uma instalação limpa do Windows no SSD novo. É mais rápido e confiável.</p>
+        <p><strong>Decisão segura:</strong> clonagem pode servir quando o sistema atual está estável; instalação limpa é outra rota e exige backup e conferência. Nenhuma delas é automaticamente melhor em todos os casos.</p>
 
         <h2>5. Ignorar a Fonte de Alimentação</h2>
         <p>Ao adicionar uma placa de vídeo potente, é preciso uma fonte que suporte a potência necessária. Uma fonte fraca causa <strong>desligamentos aleatórios, travamentos e pode até queimar componentes</strong>. Muitos PCs de fábrica vêm com fontes de 300W — insuficiente para GPUs dedicadas.</p>
-        <p><strong>Dica:</strong> Calcule a potência necessária antes e invista em uma fonte de qualidade (80 Plus certificada).</p>
+        <p><strong>Verificação:</strong> consulte o manual da placa de vídeo, da fonte e do gabinete; confirme conectores, espaço físico e refrigeração. Nunca abra a fonte nem improvise adaptadores elétricos.</p>
+
+        <h2>Quando parar</h2>
+        <p>Interrompa a tentativa se houver cheiro de queimado, estalo, aquecimento anormal, desligamento imediato ou dados importantes sem cópia verificável. Mantenha a peça antiga até confirmar que o conjunto funciona e veja <Link to="/blog/como-clonar-hd-para-ssd" className="text-accent">os limites da clonagem de HD para SSD</Link> antes de migrar o sistema.</p>
+
+        <EditorialReferences slug="erros-comuns-upgrade-computador" />
 
         <div className="bg-accent/10 rounded-xl p-6 my-8">
           <h3 className="text-accent font-bold mb-2">Quer Fazer Upgrade Com Segurança?</h3>
-          <p className="text-muted-foreground mb-0">Nosso técnico analisa seu equipamento, indica as peças compatíveis e faz a instalação profissional. Sem risco de prejuízo. Atendemos em Curitiba e região.</p>
+          <p className="text-muted-foreground mb-0">A compatibilidade deve ser confirmada pelo modelo do equipamento, pelas especificações do fabricante e pelo diagnóstico do sintoma atual.</p>
         </div>
 
         <p><strong>Leia também:</strong></p>

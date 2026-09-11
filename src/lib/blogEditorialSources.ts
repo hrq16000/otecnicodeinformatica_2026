@@ -559,6 +559,16 @@ export const ARTICLE_SOURCE_MANIFEST: Record<string, ArticleSourceManifest> = {
     notes:
       "Reescrita material: removeu percentuais e intervalos universais sem evidência; separa rotina preventiva de diagnóstico, reforça restauração testada e define limites para sinais térmicos, elétricos e mecânicos. Fontes CISA/NIST para continuidade e cópias de segurança.",
   },
+  "erros-comuns-upgrade-computador": {
+    slug: "erros-comuns-upgrade-computador",
+    sources: ["ms-win11-requirements", "cisa-backup"],
+    technicalReview: "reviewed",
+    factChecked: true,
+    factCheckedAt: "2026-09-11",
+    stableKnowledge: true,
+    notes:
+      "Revisão material: removeu recomendação universal de reinstalação e alegações de potência, priorizando manual, formato, protocolo, energia, espaço e preservação de dados.",
+  },
   "como-saber-se-pc-tem-virus-malware": {
     slug: "como-saber-se-pc-tem-virus-malware",
     sources: ["certbr-golpes", "cisa-stop-ransomware", "ms-tech-support-scams"],
