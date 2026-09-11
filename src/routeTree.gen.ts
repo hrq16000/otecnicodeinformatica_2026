@@ -53,6 +53,7 @@ import { Route as GuiaTecnicoInformaticaRouteImport } from './routes/guia-tecnic
 import { Route as MarcasRouteImport } from './routes/marcas'
 import { Route as ObrigadoRouteImport } from './routes/obrigado'
 import { Route as OrdemDeServicoRouteImport } from './routes/ordem-de-servico'
+import { Route as ParceiroRouteImport } from './routes/parceiro'
 import { Route as PedidoRouteImport } from './routes/pedido'
 import { Route as PoliticaDeCookiesEAnunciosRouteImport } from './routes/politica-de-cookies-e-anuncios'
 import { Route as PoliticaDePecasDoClienteRouteImport } from './routes/politica-de-pecas-do-cliente'
@@ -713,6 +714,11 @@ const ObrigadoRoute = ObrigadoRouteImport.update({
 const OrdemDeServicoRoute = OrdemDeServicoRouteImport.update({
   id: '/ordem-de-servico',
   path: '/ordem-de-servico',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ParceiroRoute = ParceiroRouteImport.update({
+  id: '/parceiro',
+  path: '/parceiro',
   getParentRoute: () => rootRouteImport,
 } as any)
 const PedidoRoute = PedidoRouteImport.update({
@@ -3108,6 +3114,7 @@ export interface FileRoutesByFullPath {
   '/marcas': typeof MarcasRoute
   '/obrigado': typeof ObrigadoRoute
   '/ordem-de-servico': typeof OrdemDeServicoRoute
+  '/parceiro': typeof ParceiroRoute
   '/pedido': typeof PedidoRoute
   '/politica-de-cookies-e-anuncios': typeof PoliticaDeCookiesEAnunciosRoute
   '/politica-de-pecas-do-cliente': typeof PoliticaDePecasDoClienteRoute
@@ -3591,6 +3598,7 @@ export interface FileRoutesByTo {
   '/marcas': typeof MarcasRoute
   '/obrigado': typeof ObrigadoRoute
   '/ordem-de-servico': typeof OrdemDeServicoRoute
+  '/parceiro': typeof ParceiroRoute
   '/pedido': typeof PedidoRoute
   '/politica-de-cookies-e-anuncios': typeof PoliticaDeCookiesEAnunciosRoute
   '/politica-de-pecas-do-cliente': typeof PoliticaDePecasDoClienteRoute
@@ -4075,6 +4083,7 @@ export interface FileRoutesById {
   '/marcas': typeof MarcasRoute
   '/obrigado': typeof ObrigadoRoute
   '/ordem-de-servico': typeof OrdemDeServicoRoute
+  '/parceiro': typeof ParceiroRoute
   '/pedido': typeof PedidoRoute
   '/politica-de-cookies-e-anuncios': typeof PoliticaDeCookiesEAnunciosRoute
   '/politica-de-pecas-do-cliente': typeof PoliticaDePecasDoClienteRoute
@@ -4560,6 +4569,7 @@ export interface FileRouteTypes {
     | '/marcas'
     | '/obrigado'
     | '/ordem-de-servico'
+    | '/parceiro'
     | '/pedido'
     | '/politica-de-cookies-e-anuncios'
     | '/politica-de-pecas-do-cliente'
@@ -5043,6 +5053,7 @@ export interface FileRouteTypes {
     | '/marcas'
     | '/obrigado'
     | '/ordem-de-servico'
+    | '/parceiro'
     | '/pedido'
     | '/politica-de-cookies-e-anuncios'
     | '/politica-de-pecas-do-cliente'
@@ -5526,6 +5537,7 @@ export interface FileRouteTypes {
     | '/marcas'
     | '/obrigado'
     | '/ordem-de-servico'
+    | '/parceiro'
     | '/pedido'
     | '/politica-de-cookies-e-anuncios'
     | '/politica-de-pecas-do-cliente'
@@ -6010,6 +6022,7 @@ export interface RootRouteChildren {
   MarcasRoute: typeof MarcasRoute
   ObrigadoRoute: typeof ObrigadoRoute
   OrdemDeServicoRoute: typeof OrdemDeServicoRoute
+  ParceiroRoute: typeof ParceiroRoute
   PedidoRoute: typeof PedidoRoute
   PoliticaDeCookiesEAnunciosRoute: typeof PoliticaDeCookiesEAnunciosRoute
   PoliticaDePecasDoClienteRoute: typeof PoliticaDePecasDoClienteRoute
@@ -6757,6 +6770,13 @@ declare module '@tanstack/react-router' {
       path: '/ordem-de-servico'
       fullPath: '/ordem-de-servico'
       preLoaderRoute: typeof OrdemDeServicoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/parceiro': {
+      id: '/parceiro'
+      path: '/parceiro'
+      fullPath: '/parceiro'
+      preLoaderRoute: typeof ParceiroRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/pedido': {
@@ -9867,6 +9887,7 @@ const rootRouteChildren: RootRouteChildren = {
   MarcasRoute: MarcasRoute,
   ObrigadoRoute: ObrigadoRoute,
   OrdemDeServicoRoute: OrdemDeServicoRoute,
+  ParceiroRoute: ParceiroRoute,
   PedidoRoute: PedidoRoute,
   PoliticaDeCookiesEAnunciosRoute: PoliticaDeCookiesEAnunciosRoute,
   PoliticaDePecasDoClienteRoute: PoliticaDePecasDoClienteRoute,
