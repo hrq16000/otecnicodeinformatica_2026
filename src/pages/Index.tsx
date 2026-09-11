@@ -6,6 +6,8 @@ import { HeroTriagem } from "@/components/home/HeroTriagem";
 import { ContextosBento } from "@/components/home/ContextosBento";
 import { FaixaFotografica } from "@/components/home/FaixaFotografica";
 import { HomeFaqSsr } from "@/components/home/HomeFaqSsr";
+import { EncontreSuaSolucao } from "@/components/home/EncontreSuaSolucao";
+import { CondicoesAtendimento } from "@/components/home/CondicoesAtendimento";
 
 
 import { TrustStrip } from "@/components/TrustStrip";
@@ -60,6 +62,8 @@ const Index = () => {
         <HeroTriagem />
         <TrustStrip />
         <ContextosBento />
+        <EncontreSuaSolucao />
+        <CondicoesAtendimento />
         <FaixaFotografica />
         {/* FAQ no HTML servido: paridade obrigatória com o FAQPage JSON-LD. */}
         <HomeFaqSsr />
