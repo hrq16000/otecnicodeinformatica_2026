@@ -45,6 +45,8 @@ const tokenize = (txt) =>
     .split(/\s+/)
     .filter((w) => w.length > 3 && !STOPWORDS.has(w));
 
+const contarPalavras = (txt) => txt.split(/\s+/).filter((w) => w.length > 1).length;
+
 function jaccard(a, b) {
   if (!a.size || !b.size) return 0;
   let inter = 0;
