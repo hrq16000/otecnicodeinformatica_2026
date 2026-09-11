@@ -3349,33 +3349,33 @@ docker run -d --name db --network minha-rede postgres
   },
 
   "configurar-email-outlook-office-365": {
-    title: "Como Configurar Email Empresarial no Outlook 365",
-    excerpt: "Tutorial com sincronização celular e backup automático.",
-    date: "2024-01-09",
+    title: "Como configurar e-mail empresarial no Outlook com segurança",
+    excerpt: "Um roteiro de conta, domínio, autenticação, testes e acesso no computador e celular sem expor senhas ou prometer configuração automática.",
+    date: "2026-09-11",
     readTime: "5 min",
     category: "Office 365",
     content: (
       <>
-        <p className="lead">E-mail com domínio próprio (seunome@suaempresa.com.br) transmite profissionalismo. Veja como configurar no Outlook 365.</p>
+        <p className="lead">Configurar e-mail empresarial envolve mais que abrir o Outlook: domínio, identidade, autenticação e recuperação precisam estar definidos antes de liberar a conta em vários dispositivos. O procedimento exato varia conforme o provedor e o tipo de conta.</p>
 
         <h2>1. Configure o Domínio no Microsoft 365</h2>
-        <p>Acesse o painel administrativo do Microsoft 365, adicione seu domínio e configure os registros DNS (MX, CNAME, TXT) no seu provedor de hospedagem.</p>
+        <p>Use o painel oficial do provedor de e-mail para adicionar o domínio e aplicar os registros DNS solicitados. Não copie valores de tutoriais de terceiros: MX, SPF, DKIM e outros registros dependem do serviço contratado.</p>
 
         <h2>2. Crie as Caixas de E-mail</h2>
-        <p>No painel admin, crie os usuários e atribua licenças. Cada usuário recebe 50 GB de caixa postal e 1 TB de OneDrive.</p>
+        <p>Crie uma conta individual para cada pessoa e evite senhas compartilhadas. Defina quem administra a organização, como o acesso será recuperado e quais caixas ou grupos precisam ser compartilhados.</p>
 
         <h2>3. Configure o Outlook no PC</h2>
-        <p>Abra o Outlook, faça login com o e-mail corporativo. O Outlook detecta automaticamente as configurações do Exchange Online. Em segundos, tudo está sincronizado.</p>
+        <p>Instale ou atualize o Outlook pelo canal oficial, faça login na conta corporativa e conclua a autenticação em duas etapas quando solicitada. Se a descoberta automática falhar, confirme o tipo de conta e os dados com o administrador ou o provedor.</p>
 
         <h2>4. Sincronize no Celular</h2>
-        <p>Instale o app Outlook no celular (iOS ou Android), faça login e pronto. E-mails, calendário e contatos sincronizados em tempo real.</p>
+        <p>Use aplicativo oficial, proteção de tela no celular e autenticação em duas etapas. Em aparelho pessoal ou perdido, a empresa precisa conseguir revogar a sessão sem depender da senha de outro usuário.</p>
 
-        <h2>5. Configure Assinaturas</h2>
-        <p>Crie uma assinatura profissional com logo, cargo e telefone. No Outlook: Arquivo → Opções → Email → Assinaturas.</p>
+        <h2>5. Teste e registre o acesso</h2>
+        <p>Envie e receba mensagem de uma conta externa, confira calendário e contatos, teste recuperação de conta e registre quem administra domínio e caixas compartilhadas. Sincronização não substitui backup ou retenção de e-mails.</p>
 
         <div className="bg-accent/10 rounded-xl p-6 my-8">
-          <h3 className="text-accent font-bold mb-2">Configuração Profissional de E-mail</h3>
-          <p className="text-muted-foreground mb-0">Configuramos tudo para você: domínio, DNS, Outlook no PC e celular, assinaturas e backup. Suporte para empresas em Curitiba.</p>
+          <h3 className="text-accent font-bold mb-2">Limite de segurança</h3>
+          <p className="text-muted-foreground mb-0">Nunca envie senha, código de autenticação ou acesso administrativo por mensagem. Esses dados permitem assumir a conta e o domínio.</p>
         </div>
       </>
     ),
