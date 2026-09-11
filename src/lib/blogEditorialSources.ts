@@ -589,6 +589,14 @@ export const ARTICLE_SOURCE_MANIFEST: Record<string, ArticleSourceManifest> = {
     notes:
       "Reescrita material: retirou comparação não comprovada sobre vulnerabilidade de PMEs e recomendações de marcas. Estruturou inventário, acesso mínimo, autenticação, atualização, backup testado e resposta inicial a incidente.",
   },
+  "windows-11-vale-a-pena-atualizar": {
+    slug: "windows-11-vale-a-pena-atualizar",
+    sources: ["ms-win11-requirements", "ms-win11-installation-media"],
+    technicalReview: "reviewed",
+    factChecked: true,
+    factCheckedAt: "2026-09-11",
+    notes: "Reescrita material: removeu alegações de desempenho e compatibilidade genéricas; exige requisitos oficiais, backup testado e verificação de software e periféricos.",
+  },
   "como-saber-se-pc-tem-virus-malware": {
     slug: "como-saber-se-pc-tem-virus-malware",
     sources: ["certbr-golpes", "cisa-stop-ransomware", "ms-tech-support-scams"],

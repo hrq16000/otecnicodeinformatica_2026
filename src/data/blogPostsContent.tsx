@@ -3230,21 +3230,21 @@ docker run -d --name db --network minha-rede postgres
 
 
   "windows-11-vale-a-pena-atualizar": {
-    title: "Windows 11: Vale a Pena Atualizar?",
-    excerpt: "Requisitos, novidades, vantagens e desvantagens.",
-    date: "2026-01-15",
+    title: "Vale a pena atualizar para o Windows 11? Como decidir",
+    excerpt: "Compatibilidade, backup, suporte e programas críticos: o que conferir antes de migrar para o Windows 11.",
+    date: "2026-09-11",
     readTime: "8 min",
     category: "Windows 11",
     content: (
       <>
-        <p className="lead">O Windows 11 já está maduro e estável. Mas <strong>será que vale a pena atualizar?</strong> Depende do seu hardware e do que você faz no computador.</p>
+        <p className="lead">Atualizar para o Windows 11 é uma decisão de compatibilidade e continuidade, não apenas de interface. Antes de migrar, confirme os requisitos oficiais, faça backup testado e verifique se os programas e periféricos importantes continuam atendidos.</p>
 
         <h2>Vantagens do Windows 11</h2>
         <ul>
           <li>Interface moderna e mais organizada</li>
           <li>Melhor gerenciamento de múltiplas janelas (Snap Layouts)</li>
-          <li>Desempenho superior em jogos (DirectStorage, Auto HDR)</li>
-          <li>Integração com Android (apps no PC)</li>
+          <li>Recursos de organização de janelas e integração do sistema</li>
+          <li>Recursos de segurança disponíveis em equipamentos compatíveis</li>
           <li>Segurança aprimorada com TPM 2.0</li>
         </ul>
 
@@ -3256,15 +3256,15 @@ docker run -d --name db --network minha-rede postgres
           <li>Menu Iniciar centralizado (nem todos gostam)</li>
         </ul>
 
-        <h2>Quando Atualizar</h2>
-        <p>Se seu PC atende os requisitos e você usa Windows 10, <strong>vale atualizar</strong>. O Windows 10 perde suporte em outubro de 2025. Após isso, não recebe mais atualizações de segurança.</p>
+        <h2>Antes de atualizar</h2>
+        <ol><li>Confirme o modelo e os requisitos oficiais do Windows 11.</li><li>Atualize ou confira drivers pelo fabricante.</li><li>Faça backup e restaure ao menos um arquivo de teste.</li><li>Verifique programas, impressoras e dispositivos essenciais.</li></ol>
 
-        <h2>Quando NÃO Atualizar</h2>
-        <p>Se seu PC não tem TPM 2.0 nativamente, se você usa softwares específicos que podem não ser compatíveis, ou se está satisfeito e não quer arriscar instabilidades.</p>
+        <h2>Quando adiar</h2>
+        <p>Adie se o equipamento não atende aos requisitos, se o programa de trabalho não foi validado ou se ainda não existe cópia segura dos dados. Não use procedimentos para contornar requisitos como solução padrão: eles podem limitar suporte e atualizações futuras.</p>
 
         <div className="bg-accent/10 rounded-xl p-6 my-8">
-          <h3 className="text-accent font-bold mb-2">Quer Atualizar Com Segurança?</h3>
-          <p className="text-muted-foreground mb-0">Nosso técnico verifica compatibilidade, faz backup e atualiza sem risco de perder dados.</p>
+          <h3 className="text-accent font-bold mb-2">Decisão segura</h3>
+          <p className="text-muted-foreground mb-0">Compatibilidade e backup não garantem resultado, mas reduzem risco de interrupção e perda de dados durante a migração.</p>
         </div>
       </>
     ),
