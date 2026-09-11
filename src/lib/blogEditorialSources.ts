@@ -549,6 +549,16 @@ export const ARTICLE_SOURCE_MANIFEST: Record<string, ArticleSourceManifest> = {
     notes:
       "Fact-check concluído: sincronização não equivale sempre a backup, cópia no mesmo disco não protege contra falha do disco, sem garantia de recuperação e estratégia de múltiplas cópias apresentada como referência (não regra única). Restauração precisa ser testada. Fontes CISA/NIST.",
   },
+  "manutencao-preventiva-computador-guia": {
+    slug: "manutencao-preventiva-computador-guia",
+    sources: ["cisa-backup", "nist-sp-800-34", "cisa-stop-ransomware"],
+    technicalReview: "reviewed",
+    factChecked: true,
+    factCheckedAt: "2026-09-11",
+    stableKnowledge: true,
+    notes:
+      "Reescrita material: removeu percentuais e intervalos universais sem evidência; separa rotina preventiva de diagnóstico, reforça restauração testada e define limites para sinais térmicos, elétricos e mecânicos. Fontes CISA/NIST para continuidade e cópias de segurança.",
+  },
   "como-saber-se-pc-tem-virus-malware": {
     slug: "como-saber-se-pc-tem-virus-malware",
     sources: ["certbr-golpes", "cisa-stop-ransomware", "ms-tech-support-scams"],

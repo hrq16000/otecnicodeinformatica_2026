@@ -2952,37 +2952,58 @@ docker run -d --name db --network minha-rede postgres
   },
 
   "manutencao-preventiva-computador-guia": {
-    title: "Manutenção Preventiva do Computador: O Guia Que Evita 80% dos Problemas",
-    excerpt: "Rotinas simples que prolongam a vida útil do seu PC e evitam chamados técnicos.",
-    date: "2026-04-06",
-    readTime: "9 min",
+    title: "Manutenção preventiva do computador: o que verificar com segurança",
+    excerpt: "Uma rotina realista para reduzir falhas evitáveis, proteger dados e saber quando parar antes de causar dano.",
+    date: "2026-09-11",
+    readTime: "12 min",
     category: "Manutenção",
     content: (
       <>
-        <p className="lead">A maioria dos problemas que resolvemos diariamente poderiam ter sido evitados com <strong>manutenção preventiva simples</strong>. Veja o que fazer para manter seu computador funcionando bem por anos.</p>
+        <p className="lead">Manutenção preventiva não impede toda falha: uma peça pode falhar sem aviso e um equipamento pode sofrer queda, líquido ou oscilação elétrica. O objetivo real é reduzir riscos previsíveis, manter os dados recuperáveis e perceber sinais de desgaste antes que uma máquina pare no momento errado.</p>
 
-        <h2>1. Limpeza Física (a cada 6 meses)</h2>
-        <p>Poeira acumulada causa superaquecimento, travamentos e reduz a vida útil dos componentes. Use ar comprimido para limpar as saídas de ar e ventoinhas. Em notebooks, uma limpeza interna profissional a cada 1-2 anos é ideal.</p>
+        <h2>O que uma rotina preventiva precisa cobrir</h2>
+        <p>Uma rotina útil combina quatro frentes: dados, atualizações, refrigeração e hábitos de uso. Limpar poeira sem ter cópia dos documentos não protege contra perda de dados; atualizar o sistema sem conferir o armazenamento não resolve um disco em falha. A frequência depende do ambiente, da carga de trabalho e do valor dos arquivos — não existe intervalo universal de manutenção.</p>
 
-        <h2>2. Mantenha o Windows Atualizado</h2>
-        <p>Atualizações corrigem falhas de segurança e melhoram o desempenho. Configure para atualizar automaticamente, mas evite versões major no primeiro mês (espere a estabilização).</p>
+        <h2>Checklist mensal: baixo risco e alto retorno</h2>
+        <ol>
+          <li><strong>Confirme o backup.</strong> Verifique se a cópia recente existe e restaure ao menos um arquivo não crítico em outro local. Sincronização não é automaticamente backup: exclusões e alterações podem ser replicadas.</li>
+          <li><strong>Atualize sistema, navegador e programas críticos.</strong> Use os mecanismos oficiais; não baixe “atualizadores de drivers” genéricos nem desative proteções para instalar algo.</li>
+          <li><strong>Revise o espaço de armazenamento.</strong> Pouco espaço livre pode prejudicar atualizações e tarefas temporárias. Antes de apagar, identifique arquivos pessoais, instaladores e cópias duplicadas.</li>
+          <li><strong>Observe mudanças de comportamento.</strong> Ruído novo, travamento após alguns minutos, reinícios, queda de bateria ou mensagens de erro repetidas devem ser anotados, não normalizados.</li>
+          <li><strong>Reveja programas de inicialização e extensões.</strong> Mantenha apenas o que reconhece e realmente precisa. Remova software somente pelo método do sistema ou do fabricante.</li>
+        </ol>
 
-        <h2>3. Faça Backup Regularmente</h2>
-        <p>HD externo, nuvem (OneDrive, Google Drive) ou ambos. A regra 3-2-1: 3 cópias, em 2 mídias diferentes, 1 fora de casa. <strong>Sem backup, qualquer problema vira catástrofe.</strong></p>
+        <h2>Refrigeração: verifique o fluxo, não uma temperatura “mágica”</h2>
+        <p>Processadores e placas de vídeo variam por modelo, carga e projeto; portanto, um número isolado não diagnostica superaquecimento. O padrão importa mais: ventoinha sempre no máximo em tarefa leve, perda de desempenho após alguns minutos, desligamento repentino, saída de ar bloqueada ou ruído mecânico exigem atenção. Use o computador sobre superfície firme, deixe entradas e saídas de ar livres e não use cama, sofá ou almofada como apoio.</p>
+        <p>Se houver poeira visível na grade, é possível limpar a parte externa com cuidado e o equipamento desligado. Abrir notebook, segurar ventoinha, aplicar jato de ar no interior ou trocar pasta térmica sem procedimento específico pode causar dano. Para separar aquecimento esperado de falha, consulte <Link to="/blog/notebook-superaquecendo-o-que-fazer" className="text-accent">os sinais de superaquecimento em notebook</Link>.</p>
 
-        <h2>4. Use Antivírus Confiável</h2>
-        <p>O Windows Defender já é suficiente para a maioria. Mantenha-o ativo e atualizado. Evite instalar dois antivírus ao mesmo tempo — eles conflitam.</p>
+        <h2>Dados e segurança: a prevenção que continua valendo depois de uma falha</h2>
+        <p>Tenha cópias independentes dos arquivos importantes, de preferência uma fora do computador e outra fora do local físico. Discos externos conectados o tempo todo também podem ser afetados por ransomware, oscilação elétrica ou erro humano. Senhas únicas, autenticação em duas etapas no e-mail principal e atualizações regulares reduzem a chance de um incidente pequeno virar comprometimento de contas.</p>
+        <p>Uma máquina lenta não é prova de vírus. Primeiro confira atualizações, armazenamento, programas em execução e comportamento da rede. Pop-ups fora do navegador, extensões desconhecidas, antivírus desativado sem ação do usuário e arquivos inacessíveis são sinais que justificam um roteiro de segurança, como o guia para <Link to="/blog/como-saber-se-pc-tem-virus-malware" className="text-accent">diferenciar sinais de malware de outros problemas</Link>.</p>
 
-        <h2>5. Desinstale Programas Não Usados</h2>
-        <p>Programas desnecessários ocupam espaço, consomem recursos e podem ter vulnerabilidades. Remova pelo Painel de Controle o que não usa há mais de 3 meses.</p>
+        <EditorialReferences slug="manutencao-preventiva-computador-guia" />
 
-        <h2>6. Monitore a Temperatura</h2>
-        <p>Programas como HWMonitor mostram a temperatura em tempo real. CPU acima de 85°C sob carga é preocupante. Acima de 95°C, desligue e procure um técnico.</p>
+        <h2>O que não é manutenção preventiva</h2>
+        <ul>
+          <li>Prometer que uma limpeza “renova” qualquer computador ou elimina toda falha futura.</li>
+          <li>Trocar peças sem evidência de incompatibilidade ou defeito.</li>
+          <li>Usar programas de limpeza, registro ou driver de origem desconhecida.</li>
+          <li>Desativar antivírus, UAC, Secure Boot ou atualizações permanentemente para contornar um erro.</li>
+          <li>Fazer testes destrutivos ou abrir fonte, bateria e carregador.</li>
+        </ul>
 
-        <div className="bg-accent/10 rounded-xl p-6 my-8">
-          <h3 className="text-accent font-bold mb-2">Manutenção Preventiva Profissional</h3>
-          <p className="text-muted-foreground mb-0">Fazemos limpeza interna, troca de pasta térmica, otimização do sistema e verificação completa. Atendimento a domicílio em Curitiba e região.</p>
-        </div>
+        <h2>Quando parar e preservar o equipamento</h2>
+        <p>Interrompa o uso diante de cheiro de queimado, fumaça, bateria estufada, líquido, cabo danificado, estalos, desligamentos repetidos ou disco com ruído mecânico. Não continue “testando para ver se volta”: cada tentativa pode ampliar o dano ou reduzir a chance de preservar dados. Registre o que aconteceu, desligue com segurança quando possível e mantenha o equipamento desconectado até uma avaliação apropriada.</p>
+
+        <h2>Roteiro de decisão</h2>
+        <ol>
+          <li>Se o problema é apenas rotina: faça backup, atualize por canais oficiais, libere espaço com critério e observe o resultado.</li>
+          <li>Se há lentidão persistente: compare uso de armazenamento, programas de inicialização e sinais de aquecimento antes de comprar peça.</li>
+          <li>Se há dados importantes sem cópia: priorize o backup e o teste de restauração antes de qualquer limpeza ou reinstalação.</li>
+          <li>Se existe sinal físico ou elétrico: pare; esse não é um cenário para tentativa caseira.</li>
+        </ol>
+
+        <p>Para aprofundar a rotina de cópias, veja <Link to="/blog/backup-como-proteger-seus-arquivos" className="text-accent">como montar um backup preventivo</Link>. Quando a máquina já apresenta falha recorrente, a decisão deve partir de diagnóstico, não de uma lista genérica de peças.</p>
       </>
     ),
   },
