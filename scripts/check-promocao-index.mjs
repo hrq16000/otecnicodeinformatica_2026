@@ -17,6 +17,9 @@ import { readFileSync, existsSync } from "node:fs";
 import { join } from "node:path";
 import { EDITORIAL_WAVE } from "./lib/editorial-wave.mjs";
 
+const ROOT = process.cwd();
+const read = (p) => (existsSync(join(ROOT, p)) ? readFileSync(join(ROOT, p), "utf8") : "");
+
 // Dívida herdada: artigos que JÁ estavam indexáveis quando a política de
 // promoção passou a ser medida. Ficam registrados como exceção explícita e
 // aparecem no relatório como dívida a quitar. Nenhuma promoção NOVA pode
@@ -25,9 +28,6 @@ const BASELINE_PATH = "config/promocao-index-baseline.json";
 const baseline = new Set(
   (JSON.parse(read(BASELINE_PATH) || '{"legado":[]}').legado ?? []).map((x) => (typeof x === "string" ? x : x.slug)),
 );
-
-const ROOT = process.cwd();
-const read = (p) => (existsSync(join(ROOT, p)) ? readFileSync(join(ROOT, p), "utf8") : "");
 
 const MIN_PALAVRAS = 700;
 const MAX_SIM = 0.6;
@@ -131,10 +131,6 @@ if (bloqueantes.length) {
   process.exit(1);
 }
 
-if (false) {
-  console.error(`\n[check:promocao-index] ${erros.length} artigo(s) indexável(is) fora da política de promoção:`);
-  for (const e of erros) console.error(`  ✗ ${e}`);
-  process.exit(1);
-}
-
-console.log(`[check:promocao-index] OK — ${EDITORIAL_WAVE.length} artigo(s) indexável(is) sustentam a política de promoção.`);
+console.log(
+  `[check:promocao-index] OK — ${EDITORIAL_WAVE.length} indexável(is) · 0 promoção fora da política · ${divida.length} pendência(s) de dívida herdada.`,
+);
