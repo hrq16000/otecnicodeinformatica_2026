@@ -392,7 +392,8 @@
     "deploy:check": "node scripts/run-pipeline.mjs deploy:check",
     "deploy:check:list": "node scripts/run-pipeline.mjs deploy:check --list",
     "deploy:check:strict": "node scripts/run-pipeline.mjs deploy:check --with-optional",
-    "report:gsc-snapshot": "node scripts/report-gsc-snapshot.mjs"
+    "report:gsc-snapshot": "node scripts/report-gsc-snapshot.mjs",
+    "report:gsc-baseline": "node scripts/report-gsc-baseline.mjs"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.2",

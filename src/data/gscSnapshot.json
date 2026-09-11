@@ -1,37 +1,37 @@
 {
   "status": "ok",
-  "geradoEm": "2026-09-03T15:08:36.390Z",
+  "geradoEm": "2026-09-11T07:38:22.324Z",
   "propriedade": {
     "siteUrl": "sc-domain:otecnicodeinformatica.com.br",
     "dominio": "https://otecnicodeinformatica.com.br"
   },
   "periodo": {
-    "inicio": "2026-08-03",
-    "fim": "2026-08-31"
+    "inicio": "2026-08-11",
+    "fim": "2026-09-08"
   },
   "totais": {
     "cliques": 4,
-    "impressoes": 821,
-    "ctr": 0.0048721071863581,
-    "posicao": 31.79171741778319
+    "impressoes": 1388,
+    "ctr": 0.002881844380403458,
+    "posicao": 32.123198847262245
   },
   "paginas": [
     {
       "url": "https://otecnicodeinformatica.com.br/blog/o-que-e-informatica",
       "cliques": 0,
-      "impressoes": 61,
+      "impressoes": 74,
       "consultas": [
         {
           "termo": "informática",
           "cliques": 0,
-          "impressoes": 28,
-          "posicao": 68.5
+          "impressoes": 32,
+          "posicao": 67.8
         },
         {
           "termo": "informatica",
           "cliques": 0,
-          "impressoes": 18,
-          "posicao": 73.3
+          "impressoes": 22,
+          "posicao": 73.5
         },
         {
           "termo": "o que significa a palavra informatica",
@@ -44,6 +44,18 @@
           "cliques": 0,
           "impressoes": 3,
           "posicao": 55.3
+        },
+        {
+          "termo": "o que e informática",
+          "cliques": 0,
+          "impressoes": 2,
+          "posicao": 50.5
+        },
+        {
+          "termo": "oq e informática",
+          "cliques": 0,
+          "impressoes": 2,
+          "posicao": 49.5
         },
         {
           "termo": "area de informatica",
@@ -76,6 +88,12 @@
           "posicao": 48
         },
         {
+          "termo": "o que e informatica",
+          "cliques": 0,
+          "impressoes": 1,
+          "posicao": 49
+        },
+        {
           "termo": "o que estuda a informática",
           "cliques": 0,
           "impressoes": 1,
@@ -92,39 +110,243 @@
           "cliques": 0,
           "impressoes": 1,
           "posicao": 81
-        },
-        {
-          "termo": "tudo sobre informatica",
-          "cliques": 0,
-          "impressoes": 1,
-          "posicao": 76
         }
       ],
       "caminho": "/blog/o-que-e-informatica",
-      "posicaoMedia": 67
+      "posicaoMedia": 66
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/conserto-impressora-curitiba",
+      "cliques": 0,
+      "impressoes": 65,
+      "consultas": [
+        {
+          "termo": "conserto de impressora",
+          "cliques": 0,
+          "impressoes": 15,
+          "posicao": 95.9
+        },
+        {
+          "termo": "assistencia tecnica para impressoras",
+          "cliques": 0,
+          "impressoes": 8,
+          "posicao": 97.6
+        },
+        {
+          "termo": "assistência técnica impressora",
+          "cliques": 0,
+          "impressoes": 7,
+          "posicao": 89.4
+        },
+        {
+          "termo": "reparo de impressora",
+          "cliques": 0,
+          "impressoes": 7,
+          "posicao": 94.7
+        },
+        {
+          "termo": "assistencia tecnica impressora",
+          "cliques": 0,
+          "impressoes": 5,
+          "posicao": 98
+        },
+        {
+          "termo": "assistencia tecnica hp curitiba",
+          "cliques": 0,
+          "impressoes": 3,
+          "posicao": 75
+        },
+        {
+          "termo": "assistência impressora",
+          "cliques": 0,
+          "impressoes": 2,
+          "posicao": 88.5
+        },
+        {
+          "termo": "conserto de impressoras",
+          "cliques": 0,
+          "impressoes": 2,
+          "posicao": 94.5
+        },
+        {
+          "termo": "conserto de multifuncional",
+          "cliques": 0,
+          "impressoes": 2,
+          "posicao": 87
+        },
+        {
+          "termo": "conserto impressora",
+          "cliques": 0,
+          "impressoes": 2,
+          "posicao": 88.5
+        },
+        {
+          "termo": "arrumar impressora",
+          "cliques": 0,
+          "impressoes": 1,
+          "posicao": 11
+        },
+        {
+          "termo": "assistencia tecnica de impressora",
+          "cliques": 0,
+          "impressoes": 1,
+          "posicao": 77
+        },
+        {
+          "termo": "assistência técnica de impressora",
+          "cliques": 0,
+          "impressoes": 1,
+          "posicao": 83
+        },
+        {
+          "termo": "assistência técnica em impressora",
+          "cliques": 0,
+          "impressoes": 1,
+          "posicao": 71
+        },
+        {
+          "termo": "concerto de impressora",
+          "cliques": 0,
+          "impressoes": 1,
+          "posicao": 95
+        }
+      ],
+      "caminho": "/conserto-impressora-curitiba",
+      "posicaoMedia": 88.7
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/servicos/conserto-tv",
+      "cliques": 0,
+      "impressoes": 57,
+      "consultas": [
+        {
+          "termo": "conserto de televisores",
+          "cliques": 0,
+          "impressoes": 6,
+          "posicao": 79.8
+        },
+        {
+          "termo": "conserto tv lcd",
+          "cliques": 0,
+          "impressoes": 5,
+          "posicao": 79.2
+        },
+        {
+          "termo": "conserto de tvs",
+          "cliques": 0,
+          "impressoes": 4,
+          "posicao": 71.3
+        },
+        {
+          "termo": "conserto tv curitiba",
+          "cliques": 0,
+          "impressoes": 3,
+          "posicao": 72
+        },
+        {
+          "termo": "conserto tv smart tv",
+          "cliques": 0,
+          "impressoes": 3,
+          "posicao": 72
+        },
+        {
+          "termo": "conserto de tv",
+          "cliques": 0,
+          "impressoes": 2,
+          "posicao": 90.5
+        },
+        {
+          "termo": "conserto de tv em curitiba",
+          "cliques": 0,
+          "impressoes": 2,
+          "posicao": 78.5
+        },
+        {
+          "termo": "conserto de tv em domicilio",
+          "cliques": 0,
+          "impressoes": 2,
+          "posicao": 79.5
+        },
+        {
+          "termo": "conserto televisor",
+          "cliques": 0,
+          "impressoes": 2,
+          "posicao": 68
+        },
+        {
+          "termo": "conserto tv led",
+          "cliques": 0,
+          "impressoes": 2,
+          "posicao": 85.5
+        },
+        {
+          "termo": "consertos tv",
+          "cliques": 0,
+          "impressoes": 2,
+          "posicao": 65.5
+        },
+        {
+          "termo": "tecnico de televisores a domicilio",
+          "cliques": 0,
+          "impressoes": 2,
+          "posicao": 67
+        },
+        {
+          "termo": "técnico de tv que atende a domicílio",
+          "cliques": 0,
+          "impressoes": 2,
+          "posicao": 75.5
+        },
+        {
+          "termo": "arrumar tv",
+          "cliques": 0,
+          "impressoes": 1,
+          "posicao": 73
+        },
+        {
+          "termo": "assistência técnica smart tv",
+          "cliques": 0,
+          "impressoes": 1,
+          "posicao": 55
+        }
+      ],
+      "caminho": "/servicos/conserto-tv",
+      "posicaoMedia": 74.1
     },
     {
       "url": "https://otecnicodeinformatica.com.br/blog/informatica-basica",
       "cliques": 0,
-      "impressoes": 41,
+      "impressoes": 53,
       "consultas": [
         {
           "termo": "conhecimento basico informatica",
           "cliques": 0,
-          "impressoes": 11,
-          "posicao": 51.5
+          "impressoes": 17,
+          "posicao": 52.4
         },
         {
           "termo": "informatica basica",
           "cliques": 0,
-          "impressoes": 5,
-          "posicao": 43
+          "impressoes": 7,
+          "posicao": 43.7
         },
         {
           "termo": "informatica basica conteudo",
           "cliques": 0,
           "impressoes": 4,
           "posicao": 57.5
+        },
+        {
+          "termo": "informatica basica resumo",
+          "cliques": 0,
+          "impressoes": 4,
+          "posicao": 34.3
+        },
+        {
+          "termo": "noções básicas de informática",
+          "cliques": 0,
+          "impressoes": 4,
+          "posicao": 54
         },
         {
           "termo": "tudo sobre informatica basica",
@@ -139,16 +361,10 @@
           "posicao": 50.3
         },
         {
-          "termo": "informatica basica resumo",
+          "termo": "informática básica",
           "cliques": 0,
           "impressoes": 3,
-          "posicao": 33.3
-        },
-        {
-          "termo": "noções básicas de informática",
-          "cliques": 0,
-          "impressoes": 3,
-          "posicao": 57
+          "posicao": 46.3
         },
         {
           "termo": "informática basica",
@@ -157,10 +373,10 @@
           "posicao": 54
         },
         {
-          "termo": "informática básica",
+          "termo": "basico de informatica",
           "cliques": 0,
-          "impressoes": 2,
-          "posicao": 46.5
+          "impressoes": 1,
+          "posicao": 44
         },
         {
           "termo": "conhecimento basico de informatica",
@@ -188,106 +404,121 @@
         }
       ],
       "caminho": "/blog/informatica-basica",
-      "posicaoMedia": 50.4
+      "posicaoMedia": 50.1
     },
     {
-      "url": "https://otecnicodeinformatica.com.br/servicos/conserto-tv",
+      "url": "https://otecnicodeinformatica.com.br/blog/hd-nao-e-reconhecido-na-bios-o-que-fazer",
       "cliques": 0,
-      "impressoes": 34,
+      "impressoes": 43,
       "consultas": [
         {
-          "termo": "conserto de tvs",
+          "termo": "computador nao reconhece hd",
           "cliques": 0,
-          "impressoes": 4,
-          "posicao": 71.3
+          "impressoes": 16,
+          "posicao": 31.9
         },
         {
-          "termo": "conserto de televisores",
+          "termo": "pc não reconhece hd",
           "cliques": 0,
-          "impressoes": 3,
-          "posicao": 81
+          "impressoes": 13,
+          "posicao": 26.8
         },
         {
-          "termo": "conserto tv lcd",
+          "termo": "ssd nao reconhecido",
           "cliques": 0,
-          "impressoes": 3,
-          "posicao": 82.3
+          "impressoes": 7,
+          "posicao": 34.3
         },
         {
-          "termo": "conserto de tv",
+          "termo": "bios não reconhece ssd",
           "cliques": 0,
           "impressoes": 2,
-          "posicao": 90.5
+          "posicao": 16
         },
         {
-          "termo": "conserto de tv em curitiba",
+          "termo": "hd nao reconhece",
           "cliques": 0,
           "impressoes": 2,
-          "posicao": 78.5
+          "posicao": 23
         },
         {
-          "termo": "conserto tv curitiba",
+          "termo": "notebook não reconhece hd",
           "cliques": 0,
           "impressoes": 2,
-          "posicao": 74
+          "posicao": 34
         },
         {
-          "termo": "técnico de tv que atende a domicílio",
-          "cliques": 0,
-          "impressoes": 2,
-          "posicao": 75.5
-        },
-        {
-          "termo": "arrumar tv",
+          "termo": "hd nao reconhecido",
           "cliques": 0,
           "impressoes": 1,
-          "posicao": 73
-        },
-        {
-          "termo": "conserta-se televisores",
-          "cliques": 0,
-          "impressoes": 1,
-          "posicao": 72
-        },
-        {
-          "termo": "conserto de smart tv",
-          "cliques": 0,
-          "impressoes": 1,
-          "posicao": 73
-        },
-        {
-          "termo": "conserto de tv centro",
-          "cliques": 0,
-          "impressoes": 1,
-          "posicao": 79
-        },
-        {
-          "termo": "conserto de tv em domicilio",
-          "cliques": 0,
-          "impressoes": 1,
-          "posicao": 93
-        },
-        {
-          "termo": "conserto de tv em domicílio",
-          "cliques": 0,
-          "impressoes": 1,
-          "posicao": 88
-        },
-        {
-          "termo": "conserto de tv led smart em curitiba",
-          "cliques": 0,
-          "impressoes": 1,
-          "posicao": 75
-        },
-        {
-          "termo": "conserto de tv smart",
-          "cliques": 0,
-          "impressoes": 1,
-          "posicao": 51
+          "posicao": 36
         }
       ],
-      "caminho": "/servicos/conserto-tv",
-      "posicaoMedia": 78.1
+      "caminho": "/blog/hd-nao-e-reconhecido-na-bios-o-que-fazer",
+      "posicaoMedia": 29.8
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/servicos/suporte-tecnico-empresarial",
+      "cliques": 0,
+      "impressoes": 30,
+      "consultas": [
+        {
+          "termo": "suporte técnico empresarial curitiba",
+          "cliques": 0,
+          "impressoes": 8,
+          "posicao": 75.1
+        },
+        {
+          "termo": "suporte técnico para empresas curitiba",
+          "cliques": 0,
+          "impressoes": 6,
+          "posicao": 75.7
+        },
+        {
+          "termo": "suporte ti empresarial curitiba",
+          "cliques": 0,
+          "impressoes": 5,
+          "posicao": 86.4
+        },
+        {
+          "termo": "help desk terceirizado curitiba",
+          "cliques": 0,
+          "impressoes": 4,
+          "posicao": 76.3
+        },
+        {
+          "termo": "assistência técnica de informática para empresas",
+          "cliques": 0,
+          "impressoes": 3,
+          "posicao": 77.3
+        },
+        {
+          "termo": "assistência técnica de ti",
+          "cliques": 0,
+          "impressoes": 1,
+          "posicao": 85
+        },
+        {
+          "termo": "empresa suporte informatica curitiba pme",
+          "cliques": 0,
+          "impressoes": 1,
+          "posicao": 89
+        },
+        {
+          "termo": "suporte técnico 24 horas",
+          "cliques": 0,
+          "impressoes": 1,
+          "posicao": 54
+        },
+        {
+          "termo": "suporte técnico para empresa",
+          "cliques": 0,
+          "impressoes": 1,
+          "posicao": 97
+        }
+      ],
+      "caminho": "/servicos/suporte-tecnico-empresarial",
+      "posicaoMedia": 78.3
     },
     {
       "url": "https://otecnicodeinformatica.com.br/problemas/computador-desliga-sozinho",
@@ -389,196 +620,193 @@
       "posicaoMedia": 30.5
     },
     {
-      "url": "https://otecnicodeinformatica.com.br/servicos/suporte-tecnico-empresarial",
-      "cliques": 0,
-      "impressoes": 22,
-      "consultas": [
-        {
-          "termo": "help desk terceirizado curitiba",
-          "cliques": 0,
-          "impressoes": 4,
-          "posicao": 76.3
-        },
-        {
-          "termo": "suporte técnico empresarial curitiba",
-          "cliques": 0,
-          "impressoes": 4,
-          "posicao": 73.8
-        },
-        {
-          "termo": "suporte técnico para empresas curitiba",
-          "cliques": 0,
-          "impressoes": 4,
-          "posicao": 74.5
-        },
-        {
-          "termo": "assistência técnica de informática para empresas",
-          "cliques": 0,
-          "impressoes": 3,
-          "posicao": 77.3
-        },
-        {
-          "termo": "suporte ti empresarial curitiba",
-          "cliques": 0,
-          "impressoes": 3,
-          "posicao": 86.3
-        },
-        {
-          "termo": "assistência técnica de ti",
-          "cliques": 0,
-          "impressoes": 1,
-          "posicao": 85
-        },
-        {
-          "termo": "empresa suporte informatica curitiba pme",
-          "cliques": 0,
-          "impressoes": 1,
-          "posicao": 89
-        },
-        {
-          "termo": "suporte técnico 24 horas",
-          "cliques": 0,
-          "impressoes": 1,
-          "posicao": 54
-        },
-        {
-          "termo": "suporte técnico para empresa",
-          "cliques": 0,
-          "impressoes": 1,
-          "posicao": 97
-        }
-      ],
-      "caminho": "/servicos/suporte-tecnico-empresarial",
-      "posicaoMedia": 77.9
-    },
-    {
-      "url": "https://otecnicodeinformatica.com.br/conserto-impressora-curitiba",
-      "cliques": 0,
-      "impressoes": 15,
-      "consultas": [
-        {
-          "termo": "conserto de impressora",
-          "cliques": 0,
-          "impressoes": 5,
-          "posicao": 98.6
-        },
-        {
-          "termo": "assistencia tecnica hp curitiba",
-          "cliques": 0,
-          "impressoes": 2,
-          "posicao": 77.5
-        },
-        {
-          "termo": "assistência técnica impressora",
-          "cliques": 0,
-          "impressoes": 2,
-          "posicao": 99
-        },
-        {
-          "termo": "reparo de impressora",
-          "cliques": 0,
-          "impressoes": 2,
-          "posicao": 93.5
-        },
-        {
-          "termo": "assistência impressora",
-          "cliques": 0,
-          "impressoes": 1,
-          "posicao": 100
-        },
-        {
-          "termo": "concerto de impressoras",
-          "cliques": 0,
-          "impressoes": 1,
-          "posicao": 78
-        },
-        {
-          "termo": "concerto impressora",
-          "cliques": 0,
-          "impressoes": 1,
-          "posicao": 88
-        },
-        {
-          "termo": "impressora assistência técnica",
-          "cliques": 0,
-          "impressoes": 1,
-          "posicao": 82
-        }
-      ],
-      "caminho": "/conserto-impressora-curitiba",
-      "posicaoMedia": 92.1
-    },
-    {
-      "url": "https://otecnicodeinformatica.com.br/blog/hd-nao-e-reconhecido-na-bios-o-que-fazer",
-      "cliques": 0,
-      "impressoes": 14,
-      "consultas": [
-        {
-          "termo": "computador nao reconhece hd",
-          "cliques": 0,
-          "impressoes": 7,
-          "posicao": 34.4
-        },
-        {
-          "termo": "pc não reconhece hd",
-          "cliques": 0,
-          "impressoes": 5,
-          "posicao": 29.8
-        },
-        {
-          "termo": "ssd nao reconhecido",
-          "cliques": 0,
-          "impressoes": 2,
-          "posicao": 38.5
-        }
-      ],
-      "caminho": "/blog/hd-nao-e-reconhecido-na-bios-o-que-fazer",
-      "posicaoMedia": 33.3
-    },
-    {
       "url": "https://otecnicodeinformatica.com.br/servicos/manutencao-de-notebook",
       "cliques": 0,
-      "impressoes": 12,
+      "impressoes": 21,
       "consultas": [
         {
           "termo": "assistencia tecnica notebook curitiba",
           "cliques": 0,
-          "impressoes": 3,
-          "posicao": 86.3
+          "impressoes": 5,
+          "posicao": 82
         },
         {
           "termo": "conserto de notebook curitiba",
           "cliques": 0,
-          "impressoes": 3,
-          "posicao": 96.3
+          "impressoes": 4,
+          "posicao": 97.3
         },
         {
           "termo": "manutenção notebook",
           "cliques": 0,
+          "impressoes": 4,
+          "posicao": 70
+        },
+        {
+          "termo": "manutencao de notebook",
+          "cliques": 0,
           "impressoes": 3,
-          "posicao": 67.7
+          "posicao": 25.7
+        },
+        {
+          "termo": "manutuenção notebook",
+          "cliques": 0,
+          "impressoes": 2,
+          "posicao": 79.5
+        },
+        {
+          "termo": "assistencia notebook curitiba",
+          "cliques": 0,
+          "impressoes": 1,
+          "posicao": 91
+        },
+        {
+          "termo": "conserto de notebook",
+          "cliques": 0,
+          "impressoes": 1,
+          "posicao": 83
         },
         {
           "termo": "conserto notebook curitiba",
           "cliques": 0,
           "impressoes": 1,
           "posicao": 85
-        },
-        {
-          "termo": "manutencao de notebook",
-          "cliques": 0,
-          "impressoes": 1,
-          "posicao": 42
-        },
-        {
-          "termo": "manutuenção notebook",
-          "cliques": 0,
-          "impressoes": 1,
-          "posicao": 81
         }
       ],
       "caminho": "/servicos/manutencao-de-notebook",
-      "posicaoMedia": 79.9
+      "posicaoMedia": 75
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/blog/como-aprender-informatica",
+      "cliques": 0,
+      "impressoes": 19,
+      "consultas": [
+        {
+          "termo": "dicas de informática",
+          "cliques": 0,
+          "impressoes": 5,
+          "posicao": 63
+        },
+        {
+          "termo": "informática para iniciantes",
+          "cliques": 0,
+          "impressoes": 4,
+          "posicao": 36
+        },
+        {
+          "termo": "dicas de informática básica",
+          "cliques": 0,
+          "impressoes": 3,
+          "posicao": 62
+        },
+        {
+          "termo": "aprender informática passo a passo",
+          "cliques": 0,
+          "impressoes": 2,
+          "posicao": 36
+        },
+        {
+          "termo": "como aprender informática do zero",
+          "cliques": 0,
+          "impressoes": 2,
+          "posicao": 41
+        },
+        {
+          "termo": "como aprender informática",
+          "cliques": 0,
+          "impressoes": 1,
+          "posicao": 30
+        },
+        {
+          "termo": "como aprender informática sozinho",
+          "cliques": 0,
+          "impressoes": 1,
+          "posicao": 35
+        },
+        {
+          "termo": "como ser um bom informático",
+          "cliques": 0,
+          "impressoes": 1,
+          "posicao": 61
+        }
+      ],
+      "caminho": "/blog/como-aprender-informatica",
+      "posicaoMedia": 48.7
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/blog/fone-de-ouvido-nao-e-reconhecido-no-pc",
+      "cliques": 0,
+      "impressoes": 16,
+      "consultas": [
+        {
+          "termo": "fone de ouvido não funciona no notebook",
+          "cliques": 0,
+          "impressoes": 2,
+          "posicao": 35.5
+        },
+        {
+          "termo": "meu fone de ouvido não funciona no pc",
+          "cliques": 0,
+          "impressoes": 2,
+          "posicao": 26.5
+        },
+        {
+          "termo": "meus fones de ouvido não funciona no pc",
+          "cliques": 0,
+          "impressoes": 2,
+          "posicao": 26
+        },
+        {
+          "termo": "notebook não reconhece fone de ouvido",
+          "cliques": 0,
+          "impressoes": 2,
+          "posicao": 43.5
+        },
+        {
+          "termo": "pc não reconhece fone",
+          "cliques": 0,
+          "impressoes": 2,
+          "posicao": 28.5
+        },
+        {
+          "termo": "como saber se a entrada p2 esta funcionando",
+          "cliques": 0,
+          "impressoes": 1,
+          "posicao": 38
+        },
+        {
+          "termo": "entrada frontal fone de ouvido não funciona",
+          "cliques": 0,
+          "impressoes": 1,
+          "posicao": 26
+        },
+        {
+          "termo": "fone de ouvido não funciona no pc",
+          "cliques": 0,
+          "impressoes": 1,
+          "posicao": 38
+        },
+        {
+          "termo": "fone não funciona no pc",
+          "cliques": 0,
+          "impressoes": 1,
+          "posicao": 35
+        },
+        {
+          "termo": "pc nao reconhece fone",
+          "cliques": 0,
+          "impressoes": 1,
+          "posicao": 31
+        },
+        {
+          "termo": "pc não reconhece fone de ouvido",
+          "cliques": 0,
+          "impressoes": 1,
+          "posicao": 29
+        }
+      ],
+      "caminho": "/blog/fone-de-ouvido-nao-e-reconhecido-no-pc",
+      "posicaoMedia": 32.3
     },
     {
       "url": "https://otecnicodeinformatica.com.br/blog/como-trocar-tela-notebook-passo-a-passo",
@@ -632,45 +860,6 @@
       "posicaoMedia": 42.8
     },
     {
-      "url": "https://otecnicodeinformatica.com.br/blog/como-aprender-informatica",
-      "cliques": 0,
-      "impressoes": 10,
-      "consultas": [
-        {
-          "termo": "dicas de informática básica",
-          "cliques": 0,
-          "impressoes": 3,
-          "posicao": 62
-        },
-        {
-          "termo": "como aprender informática do zero",
-          "cliques": 0,
-          "impressoes": 2,
-          "posicao": 41
-        },
-        {
-          "termo": "dicas de informática",
-          "cliques": 0,
-          "impressoes": 2,
-          "posicao": 59.5
-        },
-        {
-          "termo": "informática para iniciantes",
-          "cliques": 0,
-          "impressoes": 2,
-          "posicao": 33.5
-        },
-        {
-          "termo": "aprender informática passo a passo",
-          "cliques": 0,
-          "impressoes": 1,
-          "posicao": 36
-        }
-      ],
-      "caminho": "/blog/como-aprender-informatica",
-      "posicaoMedia": 49
-    },
-    {
       "url": "https://otecnicodeinformatica.com.br/servicos/suporte-tecnico-empresarial/curitiba",
       "cliques": 0,
       "impressoes": 10,
@@ -716,57 +905,6 @@
       "posicaoMedia": 80.9
     },
     {
-      "url": "http://www.otecnicodeinformatica.com.br/",
-      "cliques": 0,
-      "impressoes": 9,
-      "consultas": [
-        {
-          "termo": "assistência técnica são josé dos pinhais",
-          "cliques": 0,
-          "impressoes": 3,
-          "posicao": 20
-        },
-        {
-          "termo": "assistencia técnica",
-          "cliques": 0,
-          "impressoes": 1,
-          "posicao": 103
-        },
-        {
-          "termo": "assistência técnica centro",
-          "cliques": 0,
-          "impressoes": 1,
-          "posicao": 13
-        },
-        {
-          "termo": "o",
-          "cliques": 0,
-          "impressoes": 1,
-          "posicao": 3
-        },
-        {
-          "termo": "técnico",
-          "cliques": 0,
-          "impressoes": 1,
-          "posicao": 5
-        },
-        {
-          "termo": "técnico de informática",
-          "cliques": 0,
-          "impressoes": 1,
-          "posicao": 10
-        },
-        {
-          "termo": "técnico ti",
-          "cliques": 0,
-          "impressoes": 1,
-          "posicao": 6
-        }
-      ],
-      "caminho": "/",
-      "posicaoMedia": 22.2
-    },
-    {
       "url": "https://otecnicodeinformatica.com.br/blog/como-trocar-pasta-termica-notebook",
       "cliques": 0,
       "impressoes": 9,
@@ -810,6 +948,171 @@
       ],
       "caminho": "/blog/como-trocar-pasta-termica-notebook",
       "posicaoMedia": 24.1
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/blog/fila-de-impressao-travada-spooler-windows",
+      "cliques": 0,
+      "impressoes": 9,
+      "consultas": [
+        {
+          "termo": "enviando dados para o spool",
+          "cliques": 0,
+          "impressoes": 1,
+          "posicao": 38
+        },
+        {
+          "termo": "reiniciar spooler de impressão",
+          "cliques": 0,
+          "impressoes": 1,
+          "posicao": 52
+        },
+        {
+          "termo": "reiniciar spooler de impressão cmd",
+          "cliques": 0,
+          "impressoes": 1,
+          "posicao": 50
+        },
+        {
+          "termo": "spool impressora",
+          "cliques": 0,
+          "impressoes": 1,
+          "posicao": 58
+        },
+        {
+          "termo": "spooler de impressão",
+          "cliques": 0,
+          "impressoes": 1,
+          "posicao": 43
+        },
+        {
+          "termo": "spooler de impressão não inicia",
+          "cliques": 0,
+          "impressoes": 1,
+          "posicao": 32
+        },
+        {
+          "termo": "spooler de impressão parando sozinho",
+          "cliques": 0,
+          "impressoes": 1,
+          "posicao": 37
+        },
+        {
+          "termo": "spooler de impressão parando sozinho windows 10",
+          "cliques": 0,
+          "impressoes": 1,
+          "posicao": 48
+        },
+        {
+          "termo": "spooler impressora",
+          "cliques": 0,
+          "impressoes": 1,
+          "posicao": 52
+        }
+      ],
+      "caminho": "/blog/fila-de-impressao-travada-spooler-windows",
+      "posicaoMedia": 45.6
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/servicos/conserto-monitor",
+      "cliques": 0,
+      "impressoes": 9,
+      "consultas": [
+        {
+          "termo": "conserto de monitor lcd",
+          "cliques": 0,
+          "impressoes": 2,
+          "posicao": 72.5
+        },
+        {
+          "termo": "manutenção monitor",
+          "cliques": 0,
+          "impressoes": 2,
+          "posicao": 89
+        },
+        {
+          "termo": "conserto de monitor",
+          "cliques": 0,
+          "impressoes": 1,
+          "posicao": 100
+        },
+        {
+          "termo": "conserto monitor",
+          "cliques": 0,
+          "impressoes": 1,
+          "posicao": 80
+        },
+        {
+          "termo": "manutenção de monitor",
+          "cliques": 0,
+          "impressoes": 1,
+          "posicao": 71
+        },
+        {
+          "termo": "manutenção de monitores",
+          "cliques": 0,
+          "impressoes": 1,
+          "posicao": 72
+        },
+        {
+          "termo": "reparo de monitores",
+          "cliques": 0,
+          "impressoes": 1,
+          "posicao": 78
+        }
+      ],
+      "caminho": "/servicos/conserto-monitor",
+      "posicaoMedia": 80.4
+    },
+    {
+      "url": "http://www.otecnicodeinformatica.com.br/",
+      "cliques": 0,
+      "impressoes": 8,
+      "consultas": [
+        {
+          "termo": "assistência técnica são josé dos pinhais",
+          "cliques": 0,
+          "impressoes": 2,
+          "posicao": 29.5
+        },
+        {
+          "termo": "assistencia técnica",
+          "cliques": 0,
+          "impressoes": 1,
+          "posicao": 103
+        },
+        {
+          "termo": "assistência técnica",
+          "cliques": 0,
+          "impressoes": 1,
+          "posicao": 1
+        },
+        {
+          "termo": "assistência técnica centro",
+          "cliques": 0,
+          "impressoes": 1,
+          "posicao": 13
+        },
+        {
+          "termo": "assistência técnica em são josé dos pinhais",
+          "cliques": 0,
+          "impressoes": 1,
+          "posicao": 27
+        },
+        {
+          "termo": "técnico",
+          "cliques": 0,
+          "impressoes": 1,
+          "posicao": 5
+        },
+        {
+          "termo": "técnico de informática",
+          "cliques": 0,
+          "impressoes": 1,
+          "posicao": 10
+        }
+      ],
+      "caminho": "/",
+      "posicaoMedia": 27.3
     },
     {
       "url": "https://otecnicodeinformatica.com.br/solucoes/recuperacao-de-dados",
@@ -890,51 +1193,6 @@
       "posicaoMedia": 52.3
     },
     {
-      "url": "https://otecnicodeinformatica.com.br/blog/fila-de-impressao-travada-spooler-windows",
-      "cliques": 0,
-      "impressoes": 6,
-      "consultas": [
-        {
-          "termo": "enviando dados para o spool",
-          "cliques": 0,
-          "impressoes": 1,
-          "posicao": 38
-        },
-        {
-          "termo": "reiniciar spooler de impressão",
-          "cliques": 0,
-          "impressoes": 1,
-          "posicao": 52
-        },
-        {
-          "termo": "reiniciar spooler de impressão cmd",
-          "cliques": 0,
-          "impressoes": 1,
-          "posicao": 50
-        },
-        {
-          "termo": "spool impressora",
-          "cliques": 0,
-          "impressoes": 1,
-          "posicao": 58
-        },
-        {
-          "termo": "spooler de impressão parando sozinho",
-          "cliques": 0,
-          "impressoes": 1,
-          "posicao": 37
-        },
-        {
-          "termo": "spooler impressora",
-          "cliques": 0,
-          "impressoes": 1,
-          "posicao": 52
-        }
-      ],
-      "caminho": "/blog/fila-de-impressao-travada-spooler-windows",
-      "posicaoMedia": 47.8
-    },
-    {
       "url": "https://otecnicodeinformatica.com.br/servicos/conserto-pc-notebook/centro",
       "cliques": 0,
       "impressoes": 6,
@@ -968,37 +1226,73 @@
       "posicaoMedia": 76.5
     },
     {
-      "url": "https://otecnicodeinformatica.com.br/servicos/conserto-monitor",
+      "url": "https://otecnicodeinformatica.com.br/blog/bios-corrompida-reset-cmos-atualizacao",
       "cliques": 0,
       "impressoes": 5,
       "consultas": [
         {
-          "termo": "manutenção monitor",
+          "termo": "bios corrompida",
+          "cliques": 0,
+          "impressoes": 3,
+          "posicao": 45
+        },
+        {
+          "termo": "reparar bios",
           "cliques": 0,
           "impressoes": 2,
-          "posicao": 89
-        },
-        {
-          "termo": "conserto de monitor lcd",
-          "cliques": 0,
-          "impressoes": 1,
-          "posicao": 74
-        },
-        {
-          "termo": "conserto monitor",
-          "cliques": 0,
-          "impressoes": 1,
-          "posicao": 80
-        },
-        {
-          "termo": "manutenção de monitor",
-          "cliques": 0,
-          "impressoes": 1,
-          "posicao": 71
+          "posicao": 45
         }
       ],
-      "caminho": "/servicos/conserto-monitor",
-      "posicaoMedia": 80.6
+      "caminho": "/blog/bios-corrompida-reset-cmos-atualizacao",
+      "posicaoMedia": 45
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/problemas/impressora-nao-imprime",
+      "cliques": 0,
+      "impressoes": 5,
+      "consultas": [
+        {
+          "termo": "impressora não quer imprimir",
+          "cliques": 0,
+          "impressoes": 3,
+          "posicao": 70.7
+        },
+        {
+          "termo": "minha impressora não imprime",
+          "cliques": 0,
+          "impressoes": 1,
+          "posicao": 56
+        },
+        {
+          "termo": "porque a impressora não imprime",
+          "cliques": 0,
+          "impressoes": 1,
+          "posicao": 68
+        }
+      ],
+      "caminho": "/problemas/impressora-nao-imprime",
+      "posicaoMedia": 67.2
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/blog/computador-sem-som-o-que-verificar",
+      "cliques": 0,
+      "impressoes": 4,
+      "consultas": [
+        {
+          "termo": "sem som",
+          "cliques": 0,
+          "impressoes": 3,
+          "posicao": 44.3
+        },
+        {
+          "termo": "testar som pc",
+          "cliques": 0,
+          "impressoes": 1,
+          "posicao": 63
+        }
+      ],
+      "caminho": "/blog/computador-sem-som-o-que-verificar",
+      "posicaoMedia": 49
     },
     {
       "url": "https://otecnicodeinformatica.com.br/blog/erro-no-bootable-device-como-resolver",
@@ -1076,25 +1370,52 @@
       "posicaoMedia": 81
     },
     {
-      "url": "https://otecnicodeinformatica.com.br/problemas/impressora-nao-imprime",
+      "url": "https://otecnicodeinformatica.com.br/servicos/conserto-impressora-3d",
       "cliques": 0,
       "impressoes": 4,
       "consultas": [
         {
-          "termo": "impressora não quer imprimir",
+          "termo": "manutenção de impressora 3d perto de mim",
           "cliques": 0,
-          "impressoes": 3,
-          "posicao": 70.7
+          "impressoes": 2,
+          "posicao": 80
         },
         {
-          "termo": "minha impressora não imprime",
+          "termo": "assistencia tecnica impressora 3d",
           "cliques": 0,
           "impressoes": 1,
-          "posicao": 56
+          "posicao": 86
+        },
+        {
+          "termo": "conserto impressora 3d",
+          "cliques": 0,
+          "impressoes": 1,
+          "posicao": 77
         }
       ],
-      "caminho": "/problemas/impressora-nao-imprime",
-      "posicaoMedia": 67
+      "caminho": "/servicos/conserto-impressora-3d",
+      "posicaoMedia": 80.8
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/servicos/recuperacao-de-dados",
+      "cliques": 0,
+      "impressoes": 4,
+      "consultas": [
+        {
+          "termo": "recuperação de dados empresa curitiba",
+          "cliques": 0,
+          "impressoes": 3,
+          "posicao": 68.7
+        },
+        {
+          "termo": "data recovery curitiba",
+          "cliques": 0,
+          "impressoes": 1,
+          "posicao": 53
+        }
+      ],
+      "caminho": "/servicos/recuperacao-de-dados",
+      "posicaoMedia": 64.8
     },
     {
       "url": "https://otecnicodeinformatica.com.br/assistencia-eletrodomesticos-inteligentes-curitiba",
@@ -1118,25 +1439,82 @@
       "posicaoMedia": 61.3
     },
     {
-      "url": "https://otecnicodeinformatica.com.br/blog/computador-sem-som-o-que-verificar",
+      "url": "https://otecnicodeinformatica.com.br/blog/servico-de-audio-do-windows-nao-esta-em-execucao",
       "cliques": 0,
       "impressoes": 3,
       "consultas": [
         {
-          "termo": "sem som",
-          "cliques": 0,
-          "impressoes": 2,
-          "posicao": 44
-        },
-        {
-          "termo": "testar som pc",
+          "termo": "audio.exe",
           "cliques": 0,
           "impressoes": 1,
-          "posicao": 63
+          "posicao": 38
+        },
+        {
+          "termo": "o windows não pode encontrar audio.exe",
+          "cliques": 0,
+          "impressoes": 1,
+          "posicao": 27
+        },
+        {
+          "termo": "windows não pode encontrar audio.exe",
+          "cliques": 0,
+          "impressoes": 1,
+          "posicao": 26
         }
       ],
-      "caminho": "/blog/computador-sem-som-o-que-verificar",
-      "posicaoMedia": 50.3
+      "caminho": "/blog/servico-de-audio-do-windows-nao-esta-em-execucao",
+      "posicaoMedia": 30.3
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/servicos/conserto-placa",
+      "cliques": 0,
+      "impressoes": 3,
+      "consultas": [
+        {
+          "termo": "conserto placa de video curitiba",
+          "cliques": 0,
+          "impressoes": 2,
+          "posicao": 66.5
+        },
+        {
+          "termo": "montagem de placas eletrônicas curitiba",
+          "cliques": 0,
+          "impressoes": 1,
+          "posicao": 60
+        }
+      ],
+      "caminho": "/servicos/conserto-placa",
+      "posicaoMedia": 64.3
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/servicos/manutencao-de-computador",
+      "cliques": 0,
+      "impressoes": 3,
+      "consultas": [
+        {
+          "termo": "manutenção computador empresa curitiba rápido",
+          "cliques": 0,
+          "impressoes": 3,
+          "posicao": 80.7
+        }
+      ],
+      "caminho": "/servicos/manutencao-de-computador",
+      "posicaoMedia": 80.7
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/servicos/upgrade-ssd-ram",
+      "cliques": 0,
+      "impressoes": 3,
+      "consultas": [
+        {
+          "termo": "upgrade ssd notebook empresa",
+          "cliques": 0,
+          "impressoes": 3,
+          "posicao": 57
+        }
+      ],
+      "caminho": "/servicos/upgrade-ssd-ram",
+      "posicaoMedia": 57
     },
     {
       "url": "https://otecnicodeinformatica.com.br/",
@@ -1181,27 +1559,6 @@
       "posicaoMedia": 67.5
     },
     {
-      "url": "https://otecnicodeinformatica.com.br/blog/fone-de-ouvido-nao-e-reconhecido-no-pc",
-      "cliques": 0,
-      "impressoes": 2,
-      "consultas": [
-        {
-          "termo": "pc nao reconhece fone",
-          "cliques": 0,
-          "impressoes": 1,
-          "posicao": 31
-        },
-        {
-          "termo": "pc não reconhece fone de ouvido",
-          "cliques": 0,
-          "impressoes": 1,
-          "posicao": 29
-        }
-      ],
-      "caminho": "/blog/fone-de-ouvido-nao-e-reconhecido-no-pc",
-      "posicaoMedia": 30
-    },
-    {
       "url": "https://otecnicodeinformatica.com.br/blog/impressora-offline-como-resolver",
       "cliques": 0,
       "impressoes": 2,
@@ -1221,6 +1578,72 @@
       ],
       "caminho": "/blog/impressora-offline-como-resolver",
       "posicaoMedia": 58
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/blog/memoria-ram-insuficiente-sintomas",
+      "cliques": 0,
+      "impressoes": 2,
+      "consultas": [
+        {
+          "termo": "memoria insuficiente",
+          "cliques": 0,
+          "impressoes": 2,
+          "posicao": 40.5
+        }
+      ],
+      "caminho": "/blog/memoria-ram-insuficiente-sintomas",
+      "posicaoMedia": 40.5
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/blog/windows-update-nao-funciona-o-que-verificar",
+      "cliques": 0,
+      "impressoes": 2,
+      "consultas": [
+        {
+          "termo": "estagio da correção c",
+          "cliques": 0,
+          "impressoes": 2,
+          "posicao": 51.5
+        }
+      ],
+      "caminho": "/blog/windows-update-nao-funciona-o-que-verificar",
+      "posicaoMedia": 51.5
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/blog/windows-update-travado-desfazendo-alteracoes",
+      "cliques": 0,
+      "impressoes": 2,
+      "consultas": [
+        {
+          "termo": "desfazendo alterações feitas no computador",
+          "cliques": 0,
+          "impressoes": 2,
+          "posicao": 20
+        }
+      ],
+      "caminho": "/blog/windows-update-travado-desfazendo-alteracoes",
+      "posicaoMedia": 20
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/problemas/computador-esquentando",
+      "cliques": 0,
+      "impressoes": 2,
+      "consultas": [
+        {
+          "termo": "computador esquentando",
+          "cliques": 0,
+          "impressoes": 1,
+          "posicao": 40
+        },
+        {
+          "termo": "pc esquentando muito",
+          "cliques": 0,
+          "impressoes": 1,
+          "posicao": 33
+        }
+      ],
+      "caminho": "/problemas/computador-esquentando",
+      "posicaoMedia": 36.5
     },
     {
       "url": "https://otecnicodeinformatica.com.br/problemas/notebook-nao-carrega",
@@ -1343,6 +1766,21 @@
       "posicaoMedia": 94.5
     },
     {
+      "url": "https://otecnicodeinformatica.com.br/solucoes/backup",
+      "cliques": 0,
+      "impressoes": 2,
+      "consultas": [
+        {
+          "termo": "backup computadores",
+          "cliques": 0,
+          "impressoes": 2,
+          "posicao": 60.5
+        }
+      ],
+      "caminho": "/solucoes/backup",
+      "posicaoMedia": 60.5
+    },
+    {
       "url": "https://otecnicodeinformatica.com.br/bairros/cic",
       "cliques": 0,
       "impressoes": 1,
@@ -1358,21 +1796,6 @@
       "posicaoMedia": 7
     },
     {
-      "url": "https://otecnicodeinformatica.com.br/blog/bios-corrompida-reset-cmos-atualizacao",
-      "cliques": 0,
-      "impressoes": 1,
-      "consultas": [
-        {
-          "termo": "bios corrompida",
-          "cliques": 0,
-          "impressoes": 1,
-          "posicao": 46
-        }
-      ],
-      "caminho": "/blog/bios-corrompida-reset-cmos-atualizacao",
-      "posicaoMedia": 46
-    },
-    {
       "url": "https://otecnicodeinformatica.com.br/blog/como-escolher-uma-workstation",
       "cliques": 0,
       "impressoes": 1,
@@ -1386,6 +1809,21 @@
       ],
       "caminho": "/blog/como-escolher-uma-workstation",
       "posicaoMedia": 57
+    },
+    {
+      "url": "https://otecnicodeinformatica.com.br/blog/como-melhorar-sinal-wifi-em-casa",
+      "cliques": 0,
+      "impressoes": 1,
+      "consultas": [
+        {
+          "termo": "sinal de wifi fraco",
+          "cliques": 0,
+          "impressoes": 1,
+          "posicao": 77
+        }
+      ],
+      "caminho": "/blog/como-melhorar-sinal-wifi-em-casa",
+      "posicaoMedia": 77
     },
     {
       "url": "https://otecnicodeinformatica.com.br/blog/como-recuperar-dados-hd-com-defeito",
@@ -1448,49 +1886,19 @@
       "posicaoMedia": 52
     },
     {
-      "url": "https://otecnicodeinformatica.com.br/blog/servico-de-audio-do-windows-nao-esta-em-execucao",
+      "url": "https://otecnicodeinformatica.com.br/blog/limpar-cache-do-windows-update-softwaredistribution",
       "cliques": 0,
       "impressoes": 1,
       "consultas": [
         {
-          "termo": "audio.exe",
+          "termo": "software distribution",
           "cliques": 0,
           "impressoes": 1,
-          "posicao": 38
+          "posicao": 46
         }
       ],
-      "caminho": "/blog/servico-de-audio-do-windows-nao-esta-em-execucao",
-      "posicaoMedia": 38
-    },
-    {
-      "url": "https://otecnicodeinformatica.com.br/blog/windows-update-nao-funciona-o-que-verificar",
-      "cliques": 0,
-      "impressoes": 1,
-      "consultas": [
-        {
-          "termo": "estagio da correção c",
-          "cliques": 0,
-          "impressoes": 1,
-          "posicao": 51
-        }
-      ],
-      "caminho": "/blog/windows-update-nao-funciona-o-que-verificar",
-      "posicaoMedia": 51
-    },
-    {
-      "url": "https://otecnicodeinformatica.com.br/blog/windows-update-travado-desfazendo-alteracoes",
-      "cliques": 0,
-      "impressoes": 1,
-      "consultas": [
-        {
-          "termo": "desfazendo alterações feitas no computador",
-          "cliques": 0,
-          "impressoes": 1,
-          "posicao": 22
-        }
-      ],
-      "caminho": "/blog/windows-update-travado-desfazendo-alteracoes",
-      "posicaoMedia": 22
+      "caminho": "/blog/limpar-cache-do-windows-update-softwaredistribution",
+      "posicaoMedia": 46
     },
     {
       "url": "https://otecnicodeinformatica.com.br/equipamentos/roteador",
@@ -1523,21 +1931,6 @@
       "posicaoMedia": 23
     },
     {
-      "url": "https://otecnicodeinformatica.com.br/servicos/conserto-placa",
-      "cliques": 0,
-      "impressoes": 1,
-      "consultas": [
-        {
-          "termo": "conserto placa de video curitiba",
-          "cliques": 0,
-          "impressoes": 1,
-          "posicao": 71
-        }
-      ],
-      "caminho": "/servicos/conserto-placa",
-      "posicaoMedia": 71
-    },
-    {
       "url": "https://otecnicodeinformatica.com.br/servicos/formatacao-computador/curitiba",
       "cliques": 0,
       "impressoes": 1,
@@ -1551,73 +1944,106 @@
       ],
       "caminho": "/servicos/formatacao-computador/curitiba",
       "posicaoMedia": 61
-    },
-    {
-      "url": "https://otecnicodeinformatica.com.br/servicos/recuperacao-de-dados",
-      "cliques": 0,
-      "impressoes": 1,
-      "consultas": [
-        {
-          "termo": "data recovery curitiba",
-          "cliques": 0,
-          "impressoes": 1,
-          "posicao": 53
-        }
-      ],
-      "caminho": "/servicos/recuperacao-de-dados",
-      "posicaoMedia": 53
-    },
-    {
-      "url": "https://otecnicodeinformatica.com.br/solucoes/backup",
-      "cliques": 0,
-      "impressoes": 1,
-      "consultas": [
-        {
-          "termo": "backup computadores",
-          "cliques": 0,
-          "impressoes": 1,
-          "posicao": 71
-        }
-      ],
-      "caminho": "/solucoes/backup",
-      "posicaoMedia": 71
     }
   ],
   "consultasTop": [
     {
       "termo": "informática",
       "cliques": 0,
-      "impressoes": 28,
+      "impressoes": 32,
       "ctr": 0,
-      "posicao": 68.5
+      "posicao": 67.8
     },
     {
       "termo": "informatica",
       "cliques": 0,
-      "impressoes": 18,
+      "impressoes": 22,
       "ctr": 0,
-      "posicao": 73.3
+      "posicao": 73.5
     },
     {
       "termo": "conhecimento basico informatica",
       "cliques": 0,
-      "impressoes": 11,
+      "impressoes": 17,
       "ctr": 0,
-      "posicao": 51.5
+      "posicao": 52.4
     },
     {
       "termo": "computador nao reconhece hd",
       "cliques": 0,
-      "impressoes": 7,
+      "impressoes": 16,
       "ctr": 0,
-      "posicao": 34.4
+      "posicao": 31.9
+    },
+    {
+      "termo": "conserto de impressora",
+      "cliques": 0,
+      "impressoes": 15,
+      "ctr": 0,
+      "posicao": 95.9
+    },
+    {
+      "termo": "pc não reconhece hd",
+      "cliques": 0,
+      "impressoes": 13,
+      "ctr": 0,
+      "posicao": 26.8
     },
     {
       "termo": "assistencia tecnica notebook curitiba",
       "cliques": 0,
-      "impressoes": 6,
+      "impressoes": 8,
       "ctr": 0,
-      "posicao": 87.3
+      "posicao": 84.4
+    },
+    {
+      "termo": "assistencia tecnica para impressoras",
+      "cliques": 0,
+      "impressoes": 8,
+      "ctr": 0,
+      "posicao": 97.6
+    },
+    {
+      "termo": "suporte técnico empresarial curitiba",
+      "cliques": 0,
+      "impressoes": 8,
+      "ctr": 0,
+      "posicao": 73.3
+    },
+    {
+      "termo": "assistência técnica impressora",
+      "cliques": 0,
+      "impressoes": 7,
+      "ctr": 0,
+      "posicao": 89.4
+    },
+    {
+      "termo": "conserto de notebook curitiba",
+      "cliques": 0,
+      "impressoes": 7,
+      "ctr": 0,
+      "posicao": 83.3
+    },
+    {
+      "termo": "informatica basica",
+      "cliques": 0,
+      "impressoes": 7,
+      "ctr": 0,
+      "posicao": 43.7
+    },
+    {
+      "termo": "reparo de impressora",
+      "cliques": 0,
+      "impressoes": 7,
+      "ctr": 0,
+      "posicao": 94.7
+    },
+    {
+      "termo": "ssd nao reconhecido",
+      "cliques": 0,
+      "impressoes": 7,
+      "ctr": 0,
+      "posicao": 34.3
     },
     {
       "termo": "computador desligando sozinho",
@@ -1627,39 +2053,53 @@
       "posicao": 24.3
     },
     {
-      "termo": "conserto de notebook curitiba",
+      "termo": "conserto de televisores",
       "cliques": 0,
       "impressoes": 6,
       "ctr": 0,
-      "posicao": 80.5
+      "posicao": 79.8
     },
     {
-      "termo": "conserto de impressora",
+      "termo": "suporte ti empresarial curitiba",
+      "cliques": 0,
+      "impressoes": 6,
+      "ctr": 0,
+      "posicao": 84
+    },
+    {
+      "termo": "suporte técnico para empresas curitiba",
+      "cliques": 0,
+      "impressoes": 6,
+      "ctr": 0,
+      "posicao": 75.7
+    },
+    {
+      "termo": "assistencia tecnica impressora",
       "cliques": 0,
       "impressoes": 5,
       "ctr": 0,
-      "posicao": 98.6
+      "posicao": 98
     },
     {
-      "termo": "informatica basica",
+      "termo": "conserto tv lcd",
       "cliques": 0,
       "impressoes": 5,
       "ctr": 0,
-      "posicao": 43
+      "posicao": 79.2
     },
     {
-      "termo": "pc não reconhece hd",
+      "termo": "dicas de informática",
       "cliques": 0,
       "impressoes": 5,
       "ctr": 0,
-      "posicao": 29.8
+      "posicao": 63
     },
     {
-      "termo": "assistência técnica são josé dos pinhais",
+      "termo": "manutenção computador empresa curitiba rápido",
       "cliques": 0,
-      "impressoes": 4,
+      "impressoes": 5,
       "ctr": 0,
-      "posicao": 19.3
+      "posicao": 78.2
     },
     {
       "termo": "conserto de tvs",
@@ -1683,11 +2123,39 @@
       "posicao": 57.5
     },
     {
+      "termo": "informatica basica resumo",
+      "cliques": 0,
+      "impressoes": 4,
+      "ctr": 0,
+      "posicao": 34.3
+    },
+    {
+      "termo": "informática para iniciantes",
+      "cliques": 0,
+      "impressoes": 4,
+      "ctr": 0,
+      "posicao": 36
+    },
+    {
+      "termo": "manutenção notebook",
+      "cliques": 0,
+      "impressoes": 4,
+      "ctr": 0,
+      "posicao": 70
+    },
+    {
       "termo": "notebook superaquecendo",
       "cliques": 0,
       "impressoes": 4,
       "ctr": 0,
       "posicao": 50.8
+    },
+    {
+      "termo": "noções básicas de informática",
+      "cliques": 0,
+      "impressoes": 4,
+      "ctr": 0,
+      "posicao": 54
     },
     {
       "termo": "pc desligando sozinho",
@@ -1704,27 +2172,6 @@
       "posicao": 81.3
     },
     {
-      "termo": "suporte ti empresarial curitiba",
-      "cliques": 0,
-      "impressoes": 4,
-      "ctr": 0,
-      "posicao": 82.8
-    },
-    {
-      "termo": "suporte técnico empresarial curitiba",
-      "cliques": 0,
-      "impressoes": 4,
-      "ctr": 0,
-      "posicao": 70
-    },
-    {
-      "termo": "suporte técnico para empresas curitiba",
-      "cliques": 0,
-      "impressoes": 4,
-      "ctr": 0,
-      "posicao": 74.5
-    },
-    {
       "termo": "tudo sobre informatica basica",
       "cliques": 0,
       "impressoes": 4,
@@ -1732,11 +2179,32 @@
       "posicao": 56.8
     },
     {
+      "termo": "assistencia tecnica hp curitiba",
+      "cliques": 0,
+      "impressoes": 3,
+      "ctr": 0,
+      "posicao": 75
+    },
+    {
       "termo": "assistência técnica de informática para empresas",
       "cliques": 0,
       "impressoes": 3,
       "ctr": 0,
       "posicao": 77.3
+    },
+    {
+      "termo": "assistência técnica são josé dos pinhais",
+      "cliques": 0,
+      "impressoes": 3,
+      "ctr": 0,
+      "posicao": 25.3
+    },
+    {
+      "termo": "bios corrompida",
+      "cliques": 0,
+      "impressoes": 3,
+      "ctr": 0,
+      "posicao": 45
     },
     {
       "termo": "como trocar pasta termica",
@@ -1760,18 +2228,18 @@
       "posicao": 50.3
     },
     {
-      "termo": "conserto de televisores",
+      "termo": "conserto tv curitiba",
       "cliques": 0,
       "impressoes": 3,
       "ctr": 0,
-      "posicao": 81
+      "posicao": 72
     },
     {
-      "termo": "conserto tv lcd",
+      "termo": "conserto tv smart tv",
       "cliques": 0,
       "impressoes": 3,
       "ctr": 0,
-      "posicao": 82.3
+      "posicao": 72
     },
     {
       "termo": "dicas de informática básica",
@@ -1795,25 +2263,18 @@
       "posicao": 70.7
     },
     {
-      "termo": "informatica basica resumo",
+      "termo": "informática básica",
       "cliques": 0,
       "impressoes": 3,
       "ctr": 0,
-      "posicao": 33.3
+      "posicao": 46.3
     },
     {
-      "termo": "manutenção notebook",
+      "termo": "manutencao de notebook",
       "cliques": 0,
       "impressoes": 3,
       "ctr": 0,
-      "posicao": 67.7
-    },
-    {
-      "termo": "noções básicas de informática",
-      "cliques": 0,
-      "impressoes": 3,
-      "ctr": 0,
-      "posicao": 57
+      "posicao": 25.7
     },
     {
       "termo": "o que significa a palavra informatica",
@@ -1830,6 +2291,13 @@
       "posicao": 55.3
     },
     {
+      "termo": "recuperação de dados empresa curitiba",
+      "cliques": 0,
+      "impressoes": 3,
+      "ctr": 0,
+      "posicao": 68.7
+    },
+    {
       "termo": "recuperação de dados hd",
       "cliques": 0,
       "impressoes": 3,
@@ -1837,11 +2305,32 @@
       "posicao": 81.7
     },
     {
-      "termo": "assistencia tecnica hp curitiba",
+      "termo": "sem som",
+      "cliques": 0,
+      "impressoes": 3,
+      "ctr": 0,
+      "posicao": 44.3
+    },
+    {
+      "termo": "upgrade ssd notebook empresa",
+      "cliques": 0,
+      "impressoes": 3,
+      "ctr": 0,
+      "posicao": 57
+    },
+    {
+      "termo": "aprender informática passo a passo",
       "cliques": 0,
       "impressoes": 2,
       "ctr": 0,
-      "posicao": 77.5
+      "posicao": 36
+    },
+    {
+      "termo": "assistência impressora",
+      "cliques": 0,
+      "impressoes": 2,
+      "ctr": 0,
+      "posicao": 88.5
     },
     {
       "termo": "assistência técnica domiciliar",
@@ -1851,11 +2340,18 @@
       "posicao": 87.5
     },
     {
-      "termo": "assistência técnica impressora",
+      "termo": "backup computadores",
       "cliques": 0,
       "impressoes": 2,
       "ctr": 0,
-      "posicao": 99
+      "posicao": 60.5
+    },
+    {
+      "termo": "bios não reconhece ssd",
+      "cliques": 0,
+      "impressoes": 2,
+      "ctr": 0,
+      "posicao": 16
     },
     {
       "termo": "como aprender informática do zero",
@@ -1879,6 +2375,34 @@
       "posicao": 29
     },
     {
+      "termo": "conserto de impressoras",
+      "cliques": 0,
+      "impressoes": 2,
+      "ctr": 0,
+      "posicao": 94.5
+    },
+    {
+      "termo": "conserto de monitor lcd",
+      "cliques": 0,
+      "impressoes": 2,
+      "ctr": 0,
+      "posicao": 72.5
+    },
+    {
+      "termo": "conserto de multifuncional",
+      "cliques": 0,
+      "impressoes": 2,
+      "ctr": 0,
+      "posicao": 87
+    },
+    {
+      "termo": "conserto de notebook",
+      "cliques": 0,
+      "impressoes": 2,
+      "ctr": 0,
+      "posicao": 85.5
+    },
+    {
       "termo": "conserto de tv",
       "cliques": 0,
       "impressoes": 2,
@@ -1893,6 +2417,20 @@
       "posicao": 78.5
     },
     {
+      "termo": "conserto de tv em domicilio",
+      "cliques": 0,
+      "impressoes": 2,
+      "ctr": 0,
+      "posicao": 79.5
+    },
+    {
+      "termo": "conserto impressora",
+      "cliques": 0,
+      "impressoes": 2,
+      "ctr": 0,
+      "posicao": 88.5
+    },
+    {
       "termo": "conserto notebook curitiba",
       "cliques": 0,
       "impressoes": 2,
@@ -1900,18 +2438,60 @@
       "posicao": 67.5
     },
     {
-      "termo": "conserto tv curitiba",
+      "termo": "conserto placa de video curitiba",
       "cliques": 0,
       "impressoes": 2,
       "ctr": 0,
-      "posicao": 74
+      "posicao": 66.5
     },
     {
-      "termo": "dicas de informática",
+      "termo": "conserto televisor",
       "cliques": 0,
       "impressoes": 2,
       "ctr": 0,
-      "posicao": 59.5
+      "posicao": 68
+    },
+    {
+      "termo": "conserto tv led",
+      "cliques": 0,
+      "impressoes": 2,
+      "ctr": 0,
+      "posicao": 85.5
+    },
+    {
+      "termo": "consertos tv",
+      "cliques": 0,
+      "impressoes": 2,
+      "ctr": 0,
+      "posicao": 65.5
+    },
+    {
+      "termo": "desfazendo alterações feitas no computador",
+      "cliques": 0,
+      "impressoes": 2,
+      "ctr": 0,
+      "posicao": 20
+    },
+    {
+      "termo": "estagio da correção c",
+      "cliques": 0,
+      "impressoes": 2,
+      "ctr": 0,
+      "posicao": 51.5
+    },
+    {
+      "termo": "fone de ouvido não funciona no notebook",
+      "cliques": 0,
+      "impressoes": 2,
+      "ctr": 0,
+      "posicao": 35.5
+    },
+    {
+      "termo": "hd nao reconhece",
+      "cliques": 0,
+      "impressoes": 2,
+      "ctr": 0,
+      "posicao": 23
     },
     {
       "termo": "informática basica",
@@ -1921,32 +2501,18 @@
       "posicao": 54
     },
     {
-      "termo": "informática básica",
-      "cliques": 0,
-      "impressoes": 2,
-      "ctr": 0,
-      "posicao": 46.5
-    },
-    {
-      "termo": "informática para iniciantes",
-      "cliques": 0,
-      "impressoes": 2,
-      "ctr": 0,
-      "posicao": 33.5
-    },
-    {
-      "termo": "manutenção computador empresa curitiba rápido",
-      "cliques": 0,
-      "impressoes": 2,
-      "ctr": 0,
-      "posicao": 74.5
-    },
-    {
       "termo": "manutenção de computadores empresa curitiba",
       "cliques": 0,
       "impressoes": 2,
       "ctr": 0,
       "posicao": 89.5
+    },
+    {
+      "termo": "manutenção de impressora 3d perto de mim",
+      "cliques": 0,
+      "impressoes": 2,
+      "ctr": 0,
+      "posicao": 80
     },
     {
       "termo": "manutenção monitor",
@@ -1956,11 +2522,67 @@
       "posicao": 89
     },
     {
+      "termo": "manutuenção notebook",
+      "cliques": 0,
+      "impressoes": 2,
+      "ctr": 0,
+      "posicao": 79.5
+    },
+    {
+      "termo": "memoria insuficiente",
+      "cliques": 0,
+      "impressoes": 2,
+      "ctr": 0,
+      "posicao": 40.5
+    },
+    {
+      "termo": "meu fone de ouvido não funciona no pc",
+      "cliques": 0,
+      "impressoes": 2,
+      "ctr": 0,
+      "posicao": 26.5
+    },
+    {
       "termo": "meu pc desliga sozinho",
       "cliques": 0,
       "impressoes": 2,
       "ctr": 0,
       "posicao": 27.5
+    },
+    {
+      "termo": "meus fones de ouvido não funciona no pc",
+      "cliques": 0,
+      "impressoes": 2,
+      "ctr": 0,
+      "posicao": 26
+    },
+    {
+      "termo": "notebook não reconhece fone de ouvido",
+      "cliques": 0,
+      "impressoes": 2,
+      "ctr": 0,
+      "posicao": 43.5
+    },
+    {
+      "termo": "notebook não reconhece hd",
+      "cliques": 0,
+      "impressoes": 2,
+      "ctr": 0,
+      "posicao": 34
+    },
+    {
+      "termo": "o que e informática",
+      "cliques": 0,
+      "impressoes": 2,
+      "ctr": 0,
+      "posicao": 50.5
+    },
+    {
+      "termo": "oq e informática",
+      "cliques": 0,
+      "impressoes": 2,
+      "ctr": 0,
+      "posicao": 49.5
     },
     {
       "termo": "pc desliga sozinho",
@@ -1977,25 +2599,25 @@
       "posicao": 27.5
     },
     {
-      "termo": "reparo de impressora",
+      "termo": "pc não reconhece fone",
       "cliques": 0,
       "impressoes": 2,
       "ctr": 0,
-      "posicao": 93.5
+      "posicao": 28.5
     },
     {
-      "termo": "sem som",
+      "termo": "reparar bios",
       "cliques": 0,
       "impressoes": 2,
       "ctr": 0,
-      "posicao": 44
+      "posicao": 45
     },
     {
-      "termo": "ssd nao reconhecido",
+      "termo": "tecnico de televisores a domicilio",
       "cliques": 0,
       "impressoes": 2,
       "ctr": 0,
-      "posicao": 38.5
+      "posicao": 67
     },
     {
       "termo": "troca de tela de notebook",
@@ -2033,18 +2655,18 @@
       "posicao": 75.5
     },
     {
-      "termo": "aprender informática passo a passo",
-      "cliques": 0,
-      "impressoes": 1,
-      "ctr": 0,
-      "posicao": 36
-    },
-    {
       "termo": "area de informatica",
       "cliques": 0,
       "impressoes": 1,
       "ctr": 0,
       "posicao": 60
+    },
+    {
+      "termo": "arrumar impressora",
+      "cliques": 0,
+      "impressoes": 1,
+      "ctr": 0,
+      "posicao": 11
     },
     {
       "termo": "arrumar tv",
@@ -2054,6 +2676,27 @@
       "posicao": 73
     },
     {
+      "termo": "assistencia notebook curitiba",
+      "cliques": 0,
+      "impressoes": 1,
+      "ctr": 0,
+      "posicao": 91
+    },
+    {
+      "termo": "assistencia tecnica de impressora",
+      "cliques": 0,
+      "impressoes": 1,
+      "ctr": 0,
+      "posicao": 77
+    },
+    {
+      "termo": "assistencia tecnica impressora 3d",
+      "cliques": 0,
+      "impressoes": 1,
+      "ctr": 0,
+      "posicao": 86
+    },
+    {
       "termo": "assistencia técnica",
       "cliques": 0,
       "impressoes": 1,
@@ -2061,11 +2704,11 @@
       "posicao": 103
     },
     {
-      "termo": "assistência impressora",
+      "termo": "assistência técnica",
       "cliques": 0,
       "impressoes": 1,
       "ctr": 0,
-      "posicao": 100
+      "posicao": 1
     },
     {
       "termo": "assistência técnica centro",
@@ -2075,11 +2718,32 @@
       "posicao": 13
     },
     {
+      "termo": "assistência técnica de impressora",
+      "cliques": 0,
+      "impressoes": 1,
+      "ctr": 0,
+      "posicao": 83
+    },
+    {
       "termo": "assistência técnica de ti",
       "cliques": 0,
       "impressoes": 1,
       "ctr": 0,
       "posicao": 85
+    },
+    {
+      "termo": "assistência técnica em impressora",
+      "cliques": 0,
+      "impressoes": 1,
+      "ctr": 0,
+      "posicao": 71
+    },
+    {
+      "termo": "assistência técnica em são josé dos pinhais",
+      "cliques": 0,
+      "impressoes": 1,
+      "ctr": 0,
+      "posicao": 27
     },
     {
       "termo": "assistência técnica robo aspirador perto de mim",
@@ -2089,6 +2753,13 @@
       "posicao": 9
     },
     {
+      "termo": "assistência técnica smart tv",
+      "cliques": 0,
+      "impressoes": 1,
+      "ctr": 0,
+      "posicao": 55
+    },
+    {
       "termo": "audio.exe",
       "cliques": 0,
       "impressoes": 1,
@@ -2096,18 +2767,25 @@
       "posicao": 38
     },
     {
-      "termo": "backup computadores",
+      "termo": "basico de informatica",
       "cliques": 0,
       "impressoes": 1,
       "ctr": 0,
-      "posicao": 71
+      "posicao": 44
     },
     {
-      "termo": "bios corrompida",
+      "termo": "como aprender informática",
       "cliques": 0,
       "impressoes": 1,
       "ctr": 0,
-      "posicao": 46
+      "posicao": 30
+    },
+    {
+      "termo": "como aprender informática sozinho",
+      "cliques": 0,
+      "impressoes": 1,
+      "ctr": 0,
+      "posicao": 35
     },
     {
       "termo": "como configurar o wi fi",
@@ -2124,11 +2802,25 @@
       "posicao": 52
     },
     {
+      "termo": "como saber se a entrada p2 esta funcionando",
+      "cliques": 0,
+      "impressoes": 1,
+      "ctr": 0,
+      "posicao": 38
+    },
+    {
       "termo": "como saber se o notebook esta com virus",
       "cliques": 0,
       "impressoes": 1,
       "ctr": 0,
       "posicao": 40
+    },
+    {
+      "termo": "como ser um bom informático",
+      "cliques": 0,
+      "impressoes": 1,
+      "ctr": 0,
+      "posicao": 61
     },
     {
       "termo": "como tirar impressora do offline",
@@ -2201,6 +2893,20 @@
       "posicao": 37
     },
     {
+      "termo": "computador esquentando",
+      "cliques": 0,
+      "impressoes": 1,
+      "ctr": 0,
+      "posicao": 40
+    },
+    {
+      "termo": "concerto de impressora",
+      "cliques": 0,
+      "impressoes": 1,
+      "ctr": 0,
+      "posicao": 95
+    },
+    {
       "termo": "concerto de impressoras",
       "cliques": 0,
       "impressoes": 1,
@@ -2257,18 +2963,25 @@
       "posicao": 49
     },
     {
-      "termo": "conserto de monitor lcd",
+      "termo": "conserto de impressora brother perto de mim",
       "cliques": 0,
       "impressoes": 1,
       "ctr": 0,
-      "posicao": 74
+      "posicao": 12
     },
     {
-      "termo": "conserto de notebook",
+      "termo": "conserto de impressora samsung",
       "cliques": 0,
       "impressoes": 1,
       "ctr": 0,
-      "posicao": 88
+      "posicao": 56
+    },
+    {
+      "termo": "conserto de monitor",
+      "cliques": 0,
+      "impressoes": 1,
+      "ctr": 0,
+      "posicao": 100
     },
     {
       "termo": "conserto de smart tv",
@@ -2278,6 +2991,13 @@
       "posicao": 73
     },
     {
+      "termo": "conserto de tv a domicilio",
+      "cliques": 0,
+      "impressoes": 1,
+      "ctr": 0,
+      "posicao": 66
+    },
+    {
       "termo": "conserto de tv centro",
       "cliques": 0,
       "impressoes": 1,
@@ -2285,18 +3005,18 @@
       "posicao": 79
     },
     {
-      "termo": "conserto de tv em domicilio",
-      "cliques": 0,
-      "impressoes": 1,
-      "ctr": 0,
-      "posicao": 93
-    },
-    {
       "termo": "conserto de tv em domicílio",
       "cliques": 0,
       "impressoes": 1,
       "ctr": 0,
       "posicao": 88
+    },
+    {
+      "termo": "conserto de tv led",
+      "cliques": 0,
+      "impressoes": 1,
+      "ctr": 0,
+      "posicao": 63
     },
     {
       "termo": "conserto de tv led smart em curitiba",
@@ -2313,6 +3033,20 @@
       "posicao": 51
     },
     {
+      "termo": "conserto de tv smart em curitiba",
+      "cliques": 0,
+      "impressoes": 1,
+      "ctr": 0,
+      "posicao": 76
+    },
+    {
+      "termo": "conserto impressora 3d",
+      "cliques": 0,
+      "impressoes": 1,
+      "ctr": 0,
+      "posicao": 77
+    },
+    {
       "termo": "conserto monitor",
       "cliques": 0,
       "impressoes": 1,
@@ -2320,25 +3054,32 @@
       "posicao": 80
     },
     {
-      "termo": "conserto placa de video curitiba",
+      "termo": "conserto smart tv",
       "cliques": 0,
       "impressoes": 1,
       "ctr": 0,
-      "posicao": 71
+      "posicao": 36
     },
     {
-      "termo": "conserto televisor",
+      "termo": "conserto televisão",
       "cliques": 0,
       "impressoes": 1,
       "ctr": 0,
-      "posicao": 66
+      "posicao": 65
     },
     {
-      "termo": "conserto tv smart tv",
+      "termo": "conserto tv 4k",
       "cliques": 0,
       "impressoes": 1,
       "ctr": 0,
-      "posicao": 84
+      "posicao": 81
+    },
+    {
+      "termo": "consertos de tv",
+      "cliques": 0,
+      "impressoes": 1,
+      "ctr": 0,
+      "posicao": 63
     },
     {
       "termo": "consertos de tv na hora e eletrônicos em domicílio",
@@ -2348,11 +3089,11 @@
       "posicao": 89
     },
     {
-      "termo": "consertos tv",
+      "termo": "consertos de tvs",
       "cliques": 0,
       "impressoes": 1,
       "ctr": 0,
-      "posicao": 68
+      "posicao": 55
     },
     {
       "termo": "data recovery curitiba",
@@ -2360,13 +3101,6 @@
       "impressoes": 1,
       "ctr": 0,
       "posicao": 53
-    },
-    {
-      "termo": "desfazendo alterações feitas no computador",
-      "cliques": 0,
-      "impressoes": 1,
-      "ctr": 0,
-      "posicao": 22
     },
     {
       "termo": "diagnóstico de ti empresa curitiba",
@@ -2390,6 +3124,13 @@
       "posicao": 89
     },
     {
+      "termo": "entrada frontal fone de ouvido não funciona",
+      "cliques": 0,
+      "impressoes": 1,
+      "ctr": 0,
+      "posicao": 26
+    },
+    {
       "termo": "enviando dados para o spool",
       "cliques": 0,
       "impressoes": 1,
@@ -2397,11 +3138,18 @@
       "posicao": 38
     },
     {
-      "termo": "estagio da correção c",
+      "termo": "fone de ouvido não funciona no pc",
       "cliques": 0,
       "impressoes": 1,
       "ctr": 0,
-      "posicao": 51
+      "posicao": 38
+    },
+    {
+      "termo": "fone não funciona no pc",
+      "cliques": 0,
+      "impressoes": 1,
+      "ctr": 0,
+      "posicao": 35
     },
     {
       "termo": "fonte com cheiro de queimado mas funcionando",
@@ -2409,6 +3157,13 @@
       "impressoes": 1,
       "ctr": 0,
       "posicao": 23
+    },
+    {
+      "termo": "hd nao reconhecido",
+      "cliques": 0,
+      "impressoes": 1,
+      "ctr": 0,
+      "posicao": 36
     },
     {
       "termo": "impressora assistência técnica",
@@ -2467,11 +3222,11 @@
       "posicao": 2
     },
     {
-      "termo": "manutencao de notebook",
+      "termo": "manutenção de impressora no local",
       "cliques": 0,
       "impressoes": 1,
       "ctr": 0,
-      "posicao": 42
+      "posicao": 84
     },
     {
       "termo": "manutenção de monitor",
@@ -2479,6 +3234,13 @@
       "impressoes": 1,
       "ctr": 0,
       "posicao": 71
+    },
+    {
+      "termo": "manutenção de monitores",
+      "cliques": 0,
+      "impressoes": 1,
+      "ctr": 0,
+      "posicao": 72
     },
     {
       "termo": "manutenção informatica empresa curitiba",
@@ -2493,13 +3255,6 @@
       "impressoes": 1,
       "ctr": 0,
       "posicao": 85
-    },
-    {
-      "termo": "manutuenção notebook",
-      "cliques": 0,
-      "impressoes": 1,
-      "ctr": 0,
-      "posicao": 81
     },
     {
       "termo": "meu notebook não carrega",
@@ -2521,6 +3276,13 @@
       "impressoes": 1,
       "ctr": 0,
       "posicao": 56
+    },
+    {
+      "termo": "montagem de placas eletrônicas curitiba",
+      "cliques": 0,
+      "impressoes": 1,
+      "ctr": 0,
+      "posicao": 60
     },
     {
       "termo": "no boot device found",
@@ -2558,18 +3320,18 @@
       "posicao": 51
     },
     {
-      "termo": "o",
-      "cliques": 0,
-      "impressoes": 1,
-      "ctr": 0,
-      "posicao": 3
-    },
-    {
       "termo": "o q é informatica",
       "cliques": 0,
       "impressoes": 1,
       "ctr": 0,
       "posicao": 48
+    },
+    {
+      "termo": "o que e informatica",
+      "cliques": 0,
+      "impressoes": 1,
+      "ctr": 0,
+      "posicao": 49
     },
     {
       "termo": "o que estuda a informática",
@@ -2593,6 +3355,20 @@
       "posicao": 57
     },
     {
+      "termo": "o windows não pode encontrar audio.exe",
+      "cliques": 0,
+      "impressoes": 1,
+      "ctr": 0,
+      "posicao": 27
+    },
+    {
+      "termo": "onde arrumar impressora",
+      "cliques": 0,
+      "impressoes": 1,
+      "ctr": 0,
+      "posicao": 87
+    },
+    {
       "termo": "pc desliga do nada",
       "cliques": 0,
       "impressoes": 1,
@@ -2605,6 +3381,13 @@
       "impressoes": 1,
       "ctr": 0,
       "posicao": 31
+    },
+    {
+      "termo": "pc esquentando muito",
+      "cliques": 0,
+      "impressoes": 1,
+      "ctr": 0,
+      "posicao": 33
     },
     {
       "termo": "pc fica desligando sozinho",
@@ -2633,6 +3416,13 @@
       "impressoes": 1,
       "ctr": 0,
       "posicao": 52
+    },
+    {
+      "termo": "porque a impressora não imprime",
+      "cliques": 0,
+      "impressoes": 1,
+      "ctr": 0,
+      "posicao": 68
     },
     {
       "termo": "porque o notebook desliga sozinho",
@@ -2691,6 +3481,13 @@
       "posicao": 75
     },
     {
+      "termo": "reparo de monitores",
+      "cliques": 0,
+      "impressoes": 1,
+      "ctr": 0,
+      "posicao": 78
+    },
+    {
       "termo": "roteador caindo sinal",
       "cliques": 0,
       "impressoes": 1,
@@ -2705,6 +3502,20 @@
       "posicao": 66
     },
     {
+      "termo": "sinal de wifi fraco",
+      "cliques": 0,
+      "impressoes": 1,
+      "ctr": 0,
+      "posicao": 77
+    },
+    {
+      "termo": "software distribution",
+      "cliques": 0,
+      "impressoes": 1,
+      "ctr": 0,
+      "posicao": 46
+    },
+    {
       "termo": "spool impressora",
       "cliques": 0,
       "impressoes": 1,
@@ -2712,11 +3523,32 @@
       "posicao": 58
     },
     {
+      "termo": "spooler de impressão",
+      "cliques": 0,
+      "impressoes": 1,
+      "ctr": 0,
+      "posicao": 43
+    },
+    {
+      "termo": "spooler de impressão não inicia",
+      "cliques": 0,
+      "impressoes": 1,
+      "ctr": 0,
+      "posicao": 32
+    },
+    {
       "termo": "spooler de impressão parando sozinho",
       "cliques": 0,
       "impressoes": 1,
       "ctr": 0,
       "posicao": 37
+    },
+    {
+      "termo": "spooler de impressão parando sozinho windows 10",
+      "cliques": 0,
+      "impressoes": 1,
+      "ctr": 0,
+      "posicao": 48
     },
     {
       "termo": "spooler impressora",
@@ -2745,13 +3577,6 @@
       "impressoes": 1,
       "ctr": 0,
       "posicao": 23
-    },
-    {
-      "termo": "tecnico de televisores a domicilio",
-      "cliques": 0,
-      "impressoes": 1,
-      "ctr": 0,
-      "posicao": 80
     },
     {
       "termo": "tecnico de tv a domicilio",
@@ -2845,11 +3670,11 @@
       "posicao": 10
     },
     {
-      "termo": "técnico ti",
+      "termo": "windows não pode encontrar audio.exe",
       "cliques": 0,
       "impressoes": 1,
       "ctr": 0,
-      "posicao": 6
+      "posicao": 26
     }
   ],
   "inventario": [
@@ -2859,19 +3684,9 @@
       "cobertura": "Submitted and indexed",
       "ultimoRastreio": "2026-08-25T14:26:51Z",
       "cliques": 0,
-      "impressoes": 61,
-      "posicaoMedia": 67,
+      "impressoes": 74,
+      "posicaoMedia": 66,
       "consultaPrincipal": "informática"
-    },
-    {
-      "caminho": "/blog/informatica-basica",
-      "estado": "com-impressoes",
-      "cobertura": null,
-      "ultimoRastreio": null,
-      "cliques": 0,
-      "impressoes": 41,
-      "posicaoMedia": 50.4,
-      "consultaPrincipal": "conhecimento basico informatica"
     },
     {
       "caminho": "/servicos/conserto-tv",
@@ -2879,9 +3694,39 @@
       "cobertura": null,
       "ultimoRastreio": null,
       "cliques": 0,
-      "impressoes": 34,
-      "posicaoMedia": 78.1,
-      "consultaPrincipal": "conserto de tvs"
+      "impressoes": 57,
+      "posicaoMedia": 74.1,
+      "consultaPrincipal": "conserto de televisores"
+    },
+    {
+      "caminho": "/blog/informatica-basica",
+      "estado": "com-impressoes",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 53,
+      "posicaoMedia": 50.1,
+      "consultaPrincipal": "conhecimento basico informatica"
+    },
+    {
+      "caminho": "/blog/hd-nao-e-reconhecido-na-bios-o-que-fazer",
+      "estado": "com-impressoes",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 43,
+      "posicaoMedia": 29.8,
+      "consultaPrincipal": "computador nao reconhece hd"
+    },
+    {
+      "caminho": "/servicos/suporte-tecnico-empresarial",
+      "estado": "com-impressoes",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 30,
+      "posicaoMedia": 78.3,
+      "consultaPrincipal": "suporte técnico empresarial curitiba"
     },
     {
       "caminho": "/problemas/computador-desliga-sozinho",
@@ -2894,34 +3739,34 @@
       "consultaPrincipal": "computador desligando sozinho"
     },
     {
-      "caminho": "/servicos/suporte-tecnico-empresarial",
-      "estado": "com-impressoes",
-      "cobertura": null,
-      "ultimoRastreio": null,
-      "cliques": 0,
-      "impressoes": 22,
-      "posicaoMedia": 77.9,
-      "consultaPrincipal": "help desk terceirizado curitiba"
-    },
-    {
-      "caminho": "/blog/hd-nao-e-reconhecido-na-bios-o-que-fazer",
-      "estado": "com-impressoes",
-      "cobertura": null,
-      "ultimoRastreio": null,
-      "cliques": 0,
-      "impressoes": 14,
-      "posicaoMedia": 33.3,
-      "consultaPrincipal": "computador nao reconhece hd"
-    },
-    {
       "caminho": "/servicos/manutencao-de-notebook",
       "estado": "com-impressoes",
       "cobertura": null,
       "ultimoRastreio": null,
       "cliques": 0,
-      "impressoes": 12,
-      "posicaoMedia": 79.9,
+      "impressoes": 21,
+      "posicaoMedia": 75,
       "consultaPrincipal": "assistencia tecnica notebook curitiba"
+    },
+    {
+      "caminho": "/blog/como-aprender-informatica",
+      "estado": "com-impressoes",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 19,
+      "posicaoMedia": 48.7,
+      "consultaPrincipal": "dicas de informática"
+    },
+    {
+      "caminho": "/blog/fone-de-ouvido-nao-e-reconhecido-no-pc",
+      "estado": "com-impressoes",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 16,
+      "posicaoMedia": 32.3,
+      "consultaPrincipal": "fone de ouvido não funciona no notebook"
     },
     {
       "caminho": "/blog/como-trocar-tela-notebook-passo-a-passo",
@@ -2932,16 +3777,6 @@
       "impressoes": 11,
       "posicaoMedia": 42.8,
       "consultaPrincipal": "troca de tela de notebook"
-    },
-    {
-      "caminho": "/blog/como-aprender-informatica",
-      "estado": "com-impressoes",
-      "cobertura": null,
-      "ultimoRastreio": null,
-      "cliques": 0,
-      "impressoes": 10,
-      "posicaoMedia": 49,
-      "consultaPrincipal": "dicas de informática básica"
     },
     {
       "caminho": "/servicos/suporte-tecnico-empresarial/curitiba",
@@ -2964,6 +3799,26 @@
       "consultaPrincipal": "como trocar pasta termica"
     },
     {
+      "caminho": "/blog/fila-de-impressao-travada-spooler-windows",
+      "estado": "com-impressoes",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 9,
+      "posicaoMedia": 45.6,
+      "consultaPrincipal": "enviando dados para o spool"
+    },
+    {
+      "caminho": "/servicos/conserto-monitor",
+      "estado": "com-impressoes",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 9,
+      "posicaoMedia": 80.4,
+      "consultaPrincipal": "conserto de monitor lcd"
+    },
+    {
       "caminho": "/solucoes/recuperacao-de-dados",
       "estado": "com-impressoes",
       "cobertura": null,
@@ -2984,16 +3839,6 @@
       "consultaPrincipal": "como configurar o wi fi"
     },
     {
-      "caminho": "/blog/fila-de-impressao-travada-spooler-windows",
-      "estado": "com-impressoes",
-      "cobertura": null,
-      "ultimoRastreio": null,
-      "cliques": 0,
-      "impressoes": 6,
-      "posicaoMedia": 47.8,
-      "consultaPrincipal": "enviando dados para o spool"
-    },
-    {
       "caminho": "/servicos/conserto-pc-notebook/centro",
       "estado": "com-impressoes",
       "cobertura": null,
@@ -3004,14 +3849,34 @@
       "consultaPrincipal": "assistencia tecnica notebook curitiba"
     },
     {
-      "caminho": "/servicos/conserto-monitor",
+      "caminho": "/blog/bios-corrompida-reset-cmos-atualizacao",
       "estado": "com-impressoes",
       "cobertura": null,
       "ultimoRastreio": null,
       "cliques": 0,
       "impressoes": 5,
-      "posicaoMedia": 80.6,
-      "consultaPrincipal": "manutenção monitor"
+      "posicaoMedia": 45,
+      "consultaPrincipal": "bios corrompida"
+    },
+    {
+      "caminho": "/problemas/impressora-nao-imprime",
+      "estado": "com-impressoes",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 5,
+      "posicaoMedia": 67.2,
+      "consultaPrincipal": "impressora não quer imprimir"
+    },
+    {
+      "caminho": "/blog/computador-sem-som-o-que-verificar",
+      "estado": "com-impressoes",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 4,
+      "posicaoMedia": 49,
+      "consultaPrincipal": "sem som"
     },
     {
       "caminho": "/blog/erro-no-bootable-device-como-resolver",
@@ -3044,24 +3909,64 @@
       "consultaPrincipal": "suporte ti empresarial curitiba"
     },
     {
-      "caminho": "/problemas/impressora-nao-imprime",
+      "caminho": "/servicos/conserto-impressora-3d",
       "estado": "com-impressoes",
       "cobertura": null,
       "ultimoRastreio": null,
       "cliques": 0,
       "impressoes": 4,
-      "posicaoMedia": 67,
-      "consultaPrincipal": "impressora não quer imprimir"
+      "posicaoMedia": 80.8,
+      "consultaPrincipal": "manutenção de impressora 3d perto de mim"
     },
     {
-      "caminho": "/blog/computador-sem-som-o-que-verificar",
+      "caminho": "/servicos/recuperacao-de-dados",
+      "estado": "com-impressoes",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 4,
+      "posicaoMedia": 64.8,
+      "consultaPrincipal": "recuperação de dados empresa curitiba"
+    },
+    {
+      "caminho": "/blog/servico-de-audio-do-windows-nao-esta-em-execucao",
       "estado": "com-impressoes",
       "cobertura": null,
       "ultimoRastreio": null,
       "cliques": 0,
       "impressoes": 3,
-      "posicaoMedia": 50.3,
-      "consultaPrincipal": "sem som"
+      "posicaoMedia": 30.3,
+      "consultaPrincipal": "audio.exe"
+    },
+    {
+      "caminho": "/servicos/conserto-placa",
+      "estado": "com-impressoes",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 3,
+      "posicaoMedia": 64.3,
+      "consultaPrincipal": "conserto placa de video curitiba"
+    },
+    {
+      "caminho": "/servicos/manutencao-de-computador",
+      "estado": "indexada",
+      "cobertura": "Submitted and indexed",
+      "ultimoRastreio": "2026-08-25T22:49:28Z",
+      "cliques": 0,
+      "impressoes": 3,
+      "posicaoMedia": 80.7,
+      "consultaPrincipal": "manutenção computador empresa curitiba rápido"
+    },
+    {
+      "caminho": "/servicos/upgrade-ssd-ram",
+      "estado": "com-impressoes",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 3,
+      "posicaoMedia": 57,
+      "consultaPrincipal": "upgrade ssd notebook empresa"
     },
     {
       "caminho": "/",
@@ -3084,16 +3989,6 @@
       "consultaPrincipal": "como ver quantas pessoas estão conectadas no wifi"
     },
     {
-      "caminho": "/blog/fone-de-ouvido-nao-e-reconhecido-no-pc",
-      "estado": "com-impressoes",
-      "cobertura": null,
-      "ultimoRastreio": null,
-      "cliques": 0,
-      "impressoes": 2,
-      "posicaoMedia": 30,
-      "consultaPrincipal": "pc nao reconhece fone"
-    },
-    {
       "caminho": "/blog/impressora-offline-como-resolver",
       "estado": "com-impressoes",
       "cobertura": null,
@@ -3102,6 +3997,46 @@
       "impressoes": 2,
       "posicaoMedia": 58,
       "consultaPrincipal": "como tirar impressora do offline"
+    },
+    {
+      "caminho": "/blog/memoria-ram-insuficiente-sintomas",
+      "estado": "com-impressoes",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 2,
+      "posicaoMedia": 40.5,
+      "consultaPrincipal": "memoria insuficiente"
+    },
+    {
+      "caminho": "/blog/windows-update-nao-funciona-o-que-verificar",
+      "estado": "com-impressoes",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 2,
+      "posicaoMedia": 51.5,
+      "consultaPrincipal": "estagio da correção c"
+    },
+    {
+      "caminho": "/blog/windows-update-travado-desfazendo-alteracoes",
+      "estado": "com-impressoes",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 2,
+      "posicaoMedia": 20,
+      "consultaPrincipal": "desfazendo alterações feitas no computador"
+    },
+    {
+      "caminho": "/problemas/computador-esquentando",
+      "estado": "com-impressoes",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 2,
+      "posicaoMedia": 36.5,
+      "consultaPrincipal": "computador esquentando"
     },
     {
       "caminho": "/problemas/notebook-nao-carrega",
@@ -3164,6 +4099,16 @@
       "consultaPrincipal": "manutenção de computadores empresa curitiba"
     },
     {
+      "caminho": "/solucoes/backup",
+      "estado": "com-impressoes",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 2,
+      "posicaoMedia": 60.5,
+      "consultaPrincipal": "backup computadores"
+    },
+    {
       "caminho": "/bairros/cic",
       "estado": "com-impressoes",
       "cobertura": null,
@@ -3174,16 +4119,6 @@
       "consultaPrincipal": "informatica cic"
     },
     {
-      "caminho": "/blog/bios-corrompida-reset-cmos-atualizacao",
-      "estado": "com-impressoes",
-      "cobertura": null,
-      "ultimoRastreio": null,
-      "cliques": 0,
-      "impressoes": 1,
-      "posicaoMedia": 46,
-      "consultaPrincipal": "bios corrompida"
-    },
-    {
       "caminho": "/blog/como-escolher-uma-workstation",
       "estado": "com-impressoes",
       "cobertura": null,
@@ -3192,6 +4127,16 @@
       "impressoes": 1,
       "posicaoMedia": 57,
       "consultaPrincipal": "o que é workstation"
+    },
+    {
+      "caminho": "/blog/como-melhorar-sinal-wifi-em-casa",
+      "estado": "com-impressoes",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 1,
+      "posicaoMedia": 77,
+      "consultaPrincipal": "sinal de wifi fraco"
     },
     {
       "caminho": "/blog/como-recuperar-dados-hd-com-defeito",
@@ -3234,34 +4179,14 @@
       "consultaPrincipal": "como entrar na bios com o pc ligado"
     },
     {
-      "caminho": "/blog/servico-de-audio-do-windows-nao-esta-em-execucao",
+      "caminho": "/blog/limpar-cache-do-windows-update-softwaredistribution",
       "estado": "com-impressoes",
       "cobertura": null,
       "ultimoRastreio": null,
       "cliques": 0,
       "impressoes": 1,
-      "posicaoMedia": 38,
-      "consultaPrincipal": "audio.exe"
-    },
-    {
-      "caminho": "/blog/windows-update-nao-funciona-o-que-verificar",
-      "estado": "com-impressoes",
-      "cobertura": null,
-      "ultimoRastreio": null,
-      "cliques": 0,
-      "impressoes": 1,
-      "posicaoMedia": 51,
-      "consultaPrincipal": "estagio da correção c"
-    },
-    {
-      "caminho": "/blog/windows-update-travado-desfazendo-alteracoes",
-      "estado": "com-impressoes",
-      "cobertura": null,
-      "ultimoRastreio": null,
-      "cliques": 0,
-      "impressoes": 1,
-      "posicaoMedia": 22,
-      "consultaPrincipal": "desfazendo alterações feitas no computador"
+      "posicaoMedia": 46,
+      "consultaPrincipal": "software distribution"
     },
     {
       "caminho": "/equipamentos/roteador",
@@ -3284,16 +4209,6 @@
       "consultaPrincipal": "fonte com cheiro de queimado mas funcionando"
     },
     {
-      "caminho": "/servicos/conserto-placa",
-      "estado": "com-impressoes",
-      "cobertura": null,
-      "ultimoRastreio": null,
-      "cliques": 0,
-      "impressoes": 1,
-      "posicaoMedia": 71,
-      "consultaPrincipal": "conserto placa de video curitiba"
-    },
-    {
       "caminho": "/servicos/formatacao-computador/curitiba",
       "estado": "com-impressoes",
       "cobertura": null,
@@ -3302,26 +4217,6 @@
       "impressoes": 1,
       "posicaoMedia": 61,
       "consultaPrincipal": "formatacao de notebook curitiba"
-    },
-    {
-      "caminho": "/servicos/recuperacao-de-dados",
-      "estado": "com-impressoes",
-      "cobertura": null,
-      "ultimoRastreio": null,
-      "cliques": 0,
-      "impressoes": 1,
-      "posicaoMedia": 53,
-      "consultaPrincipal": "data recovery curitiba"
-    },
-    {
-      "caminho": "/solucoes/backup",
-      "estado": "com-impressoes",
-      "cobertura": null,
-      "ultimoRastreio": null,
-      "cliques": 0,
-      "impressoes": 1,
-      "posicaoMedia": 71,
-      "consultaPrincipal": "backup computadores"
     },
     {
       "caminho": "/anuncie",
@@ -3604,6 +4499,16 @@
       "consultaPrincipal": null
     },
     {
+      "caminho": "/blog/arquivo-corrompido-nao-abre-o-que-fazer",
+      "estado": "sem-dados",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 0,
+      "posicaoMedia": null,
+      "consultaPrincipal": null
+    },
+    {
       "caminho": "/blog/backup-como-proteger-seus-arquivos",
       "estado": "sem-dados",
       "cobertura": null,
@@ -3615,6 +4520,16 @@
     },
     {
       "caminho": "/blog/backup-nuvem-empresas-qual-escolher",
+      "estado": "sem-dados",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 0,
+      "posicaoMedia": null,
+      "consultaPrincipal": null
+    },
+    {
+      "caminho": "/blog/bateria-de-notebook-nao-carrega-o-que-verificar",
       "estado": "sem-dados",
       "cobertura": null,
       "ultimoRastreio": null,
@@ -3754,7 +4669,17 @@
       "consultaPrincipal": null
     },
     {
-      "caminho": "/blog/como-melhorar-sinal-wifi-em-casa",
+      "caminho": "/blog/como-migrar-arquivos-para-um-computador-novo",
+      "estado": "sem-dados",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 0,
+      "posicaoMedia": null,
+      "consultaPrincipal": null
+    },
+    {
+      "caminho": "/blog/como-monitorar-temperatura-do-computador",
       "estado": "sem-dados",
       "cobertura": null,
       "ultimoRastreio": null,
@@ -3794,7 +4719,37 @@
       "consultaPrincipal": null
     },
     {
+      "caminho": "/blog/como-testar-restauracao-de-backup",
+      "estado": "sem-dados",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 0,
+      "posicaoMedia": null,
+      "consultaPrincipal": null
+    },
+    {
+      "caminho": "/blog/computador-desliga-sozinho-o-que-verificar",
+      "estado": "sem-dados",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 0,
+      "posicaoMedia": null,
+      "consultaPrincipal": null
+    },
+    {
       "caminho": "/blog/computador-lento-causas-solucoes",
+      "estado": "sem-dados",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 0,
+      "posicaoMedia": null,
+      "consultaPrincipal": null
+    },
+    {
+      "caminho": "/blog/computador-nao-conecta-na-internet-por-cabo",
       "estado": "sem-dados",
       "cobertura": null,
       "ultimoRastreio": null,
@@ -3824,6 +4779,26 @@
       "consultaPrincipal": null
     },
     {
+      "caminho": "/blog/dispositivo-usb-nao-reconhecido-o-que-fazer",
+      "estado": "sem-dados",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 0,
+      "posicaoMedia": null,
+      "consultaPrincipal": null
+    },
+    {
+      "caminho": "/blog/historico-de-arquivos-windows-como-configurar",
+      "estado": "sem-dados",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 0,
+      "posicaoMedia": null,
+      "consultaPrincipal": null
+    },
+    {
       "caminho": "/blog/internet-lenta-provedor-ou-roteador",
       "estado": "sem-dados",
       "cobertura": null,
@@ -3844,7 +4819,7 @@
       "consultaPrincipal": null
     },
     {
-      "caminho": "/blog/limpar-cache-do-windows-update-softwaredistribution",
+      "caminho": "/blog/manutencao-preventiva-de-computador-guia-completo",
       "estado": "sem-dados",
       "cobertura": null,
       "ultimoRastreio": null,
@@ -3854,7 +4829,7 @@
       "consultaPrincipal": null
     },
     {
-      "caminho": "/blog/memoria-ram-insuficiente-sintomas",
+      "caminho": "/blog/monitor-sem-sinal-o-que-verificar",
       "estado": "sem-dados",
       "cobertura": null,
       "ultimoRastreio": null,
@@ -3885,6 +4860,16 @@
     },
     {
       "caminho": "/blog/organizacao-de-ti-para-pequenos-escritorios",
+      "estado": "sem-dados",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 0,
+      "posicaoMedia": null,
+      "consultaPrincipal": null
+    },
+    {
+      "caminho": "/blog/pendrive-somente-leitura-protegido-contra-gravacao",
       "estado": "sem-dados",
       "cobertura": null,
       "ultimoRastreio": null,
@@ -3934,7 +4919,27 @@
       "consultaPrincipal": null
     },
     {
+      "caminho": "/blog/rede-wifi-nao-aparece-na-lista-o-que-verificar",
+      "estado": "sem-dados",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 0,
+      "posicaoMedia": null,
+      "consultaPrincipal": null
+    },
+    {
       "caminho": "/blog/ssd-nvme-nao-aparece-no-gerenciador-de-discos",
+      "estado": "sem-dados",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 0,
+      "posicaoMedia": null,
+      "consultaPrincipal": null
+    },
+    {
+      "caminho": "/blog/teclado-de-notebook-nao-funciona-o-que-verificar",
       "estado": "sem-dados",
       "cobertura": null,
       "ultimoRastreio": null,
@@ -3955,6 +4960,16 @@
     },
     {
       "caminho": "/blog/troquei-o-ssd-e-o-pc-so-abre-a-bios",
+      "estado": "sem-dados",
+      "cobertura": null,
+      "ultimoRastreio": null,
+      "cliques": 0,
+      "impressoes": 0,
+      "posicaoMedia": null,
+      "consultaPrincipal": null
+    },
+    {
+      "caminho": "/blog/ventoinha-do-computador-fazendo-barulho-o-que-verificar",
       "estado": "sem-dados",
       "cobertura": null,
       "ultimoRastreio": null,
@@ -4624,16 +5639,6 @@
       "consultaPrincipal": null
     },
     {
-      "caminho": "/problemas/computador-esquentando",
-      "estado": "sem-dados",
-      "cobertura": null,
-      "ultimoRastreio": null,
-      "cliques": 0,
-      "impressoes": 0,
-      "posicaoMedia": null,
-      "consultaPrincipal": null
-    },
-    {
       "caminho": "/problemas/computador-lento",
       "estado": "sem-dados",
       "cobertura": null,
@@ -4774,16 +5779,6 @@
       "consultaPrincipal": null
     },
     {
-      "caminho": "/servicos/conserto-impressora-3d",
-      "estado": "sem-dados",
-      "cobertura": null,
-      "ultimoRastreio": null,
-      "cliques": 0,
-      "impressoes": 0,
-      "posicaoMedia": null,
-      "consultaPrincipal": null
-    },
-    {
       "caminho": "/servicos/conserto-notebook/sao-jose-dos-pinhais",
       "estado": "sem-dados",
       "cobertura": null,
@@ -4848,16 +5843,6 @@
       "estado": "sem-dados",
       "cobertura": null,
       "ultimoRastreio": null,
-      "cliques": 0,
-      "impressoes": 0,
-      "posicaoMedia": null,
-      "consultaPrincipal": null
-    },
-    {
-      "caminho": "/servicos/manutencao-de-computador",
-      "estado": "indexada",
-      "cobertura": "Submitted and indexed",
-      "ultimoRastreio": "2026-08-25T22:49:28Z",
       "cliques": 0,
       "impressoes": 0,
       "posicaoMedia": null,
@@ -5044,16 +6029,6 @@
       "consultaPrincipal": null
     },
     {
-      "caminho": "/servicos/upgrade-ssd-ram",
-      "estado": "sem-dados",
-      "cobertura": null,
-      "ultimoRastreio": null,
-      "cliques": 0,
-      "impressoes": 0,
-      "posicaoMedia": null,
-      "consultaPrincipal": null
-    },
-    {
       "caminho": "/servicos/upgrade-ssd/curitiba",
       "estado": "sem-dados",
       "cobertura": null,
@@ -5176,6 +6151,66 @@
   ],
   "inspecoes": [
     {
+      "caminho": "/servicos",
+      "veredito": "PASS",
+      "cobertura": "Submitted and indexed",
+      "robots": "ALLOWED",
+      "busca": "SUCCESSFUL",
+      "canonicoGoogle": "https://otecnicodeinformatica.com.br/servicos",
+      "canonicoDeclarado": "https://otecnicodeinformatica.com.br/servicos",
+      "ultimoRastreio": "2026-08-14T17:17:47Z"
+    },
+    {
+      "caminho": "/como-funciona",
+      "veredito": "PASS",
+      "cobertura": "Submitted and indexed",
+      "robots": "ALLOWED",
+      "busca": "SUCCESSFUL",
+      "canonicoGoogle": "https://otecnicodeinformatica.com.br/como-funciona",
+      "canonicoDeclarado": "https://otecnicodeinformatica.com.br/como-funciona",
+      "ultimoRastreio": "2026-08-14T20:10:50Z"
+    },
+    {
+      "caminho": "/precos-e-politicas",
+      "veredito": "PASS",
+      "cobertura": "Submitted and indexed",
+      "robots": "ALLOWED",
+      "busca": "SUCCESSFUL",
+      "canonicoGoogle": "https://otecnicodeinformatica.com.br/precos-e-politicas",
+      "canonicoDeclarado": null,
+      "ultimoRastreio": "2026-08-15T06:55:21Z"
+    },
+    {
+      "caminho": "/sobre",
+      "veredito": "PASS",
+      "cobertura": "Submitted and indexed",
+      "robots": "ALLOWED",
+      "busca": "SUCCESSFUL",
+      "canonicoGoogle": "https://otecnicodeinformatica.com.br/sobre",
+      "canonicoDeclarado": "https://otecnicodeinformatica.com.br/sobre",
+      "ultimoRastreio": "2026-08-15T06:57:35Z"
+    },
+    {
+      "caminho": "/contato",
+      "veredito": "PASS",
+      "cobertura": "Submitted and indexed",
+      "robots": "ALLOWED",
+      "busca": "SUCCESSFUL",
+      "canonicoGoogle": "https://otecnicodeinformatica.com.br/contato",
+      "canonicoDeclarado": "https://otecnicodeinformatica.com.br/contato",
+      "ultimoRastreio": "2026-08-13T18:53:05Z"
+    },
+    {
+      "caminho": "/faq",
+      "veredito": "PASS",
+      "cobertura": "Submitted and indexed",
+      "robots": "ALLOWED",
+      "busca": "SUCCESSFUL",
+      "canonicoGoogle": "https://otecnicodeinformatica.com.br/faq",
+      "canonicoDeclarado": "https://otecnicodeinformatica.com.br/faq",
+      "ultimoRastreio": "2026-08-31T04:14:59Z"
+    },
+    {
       "caminho": "/",
       "veredito": "PASS",
       "cobertura": "Submitted and indexed",
@@ -5254,85 +6289,25 @@
       "canonicoGoogle": null,
       "canonicoDeclarado": null,
       "ultimoRastreio": null
-    },
-    {
-      "caminho": "/servicos",
-      "veredito": "PASS",
-      "cobertura": "Submitted and indexed",
-      "robots": "ALLOWED",
-      "busca": "SUCCESSFUL",
-      "canonicoGoogle": "https://otecnicodeinformatica.com.br/servicos",
-      "canonicoDeclarado": "https://otecnicodeinformatica.com.br/servicos",
-      "ultimoRastreio": "2026-08-14T17:17:47Z"
-    },
-    {
-      "caminho": "/como-funciona",
-      "veredito": "PASS",
-      "cobertura": "Submitted and indexed",
-      "robots": "ALLOWED",
-      "busca": "SUCCESSFUL",
-      "canonicoGoogle": "https://otecnicodeinformatica.com.br/como-funciona",
-      "canonicoDeclarado": "https://otecnicodeinformatica.com.br/como-funciona",
-      "ultimoRastreio": "2026-08-14T20:10:50Z"
-    },
-    {
-      "caminho": "/precos-e-politicas",
-      "veredito": "PASS",
-      "cobertura": "Submitted and indexed",
-      "robots": "ALLOWED",
-      "busca": "SUCCESSFUL",
-      "canonicoGoogle": "https://otecnicodeinformatica.com.br/precos-e-politicas",
-      "canonicoDeclarado": null,
-      "ultimoRastreio": "2026-08-15T06:55:21Z"
-    },
-    {
-      "caminho": "/sobre",
-      "veredito": "PASS",
-      "cobertura": "Submitted and indexed",
-      "robots": "ALLOWED",
-      "busca": "SUCCESSFUL",
-      "canonicoGoogle": "https://otecnicodeinformatica.com.br/sobre",
-      "canonicoDeclarado": "https://otecnicodeinformatica.com.br/sobre",
-      "ultimoRastreio": "2026-08-15T06:57:35Z"
-    },
-    {
-      "caminho": "/contato",
-      "veredito": "PASS",
-      "cobertura": "Submitted and indexed",
-      "robots": "ALLOWED",
-      "busca": "SUCCESSFUL",
-      "canonicoGoogle": "https://otecnicodeinformatica.com.br/contato",
-      "canonicoDeclarado": "https://otecnicodeinformatica.com.br/contato",
-      "ultimoRastreio": "2026-08-13T18:53:05Z"
-    },
-    {
-      "caminho": "/faq",
-      "veredito": "PASS",
-      "cobertura": "Submitted and indexed",
-      "robots": "ALLOWED",
-      "busca": "SUCCESSFUL",
-      "canonicoGoogle": "https://otecnicodeinformatica.com.br/faq",
-      "canonicoDeclarado": "https://otecnicodeinformatica.com.br/faq",
-      "ultimoRastreio": "2026-08-31T04:14:59Z"
     }
   ],
   "sitemaps": [
     {
       "path": "https://otecnicodeinformatica.com.br/sitemap-index.xml",
-      "ultimoEnvio": "2026-09-03T15:08:31.231Z",
-      "ultimoDownload": null,
+      "ultimoEnvio": "2026-09-10T20:36:58.437Z",
+      "ultimoDownload": "2026-09-10T20:37:01.986Z",
       "erros": 0,
       "avisos": 0,
-      "urlsEnviadas": 0,
-      "pendente": true
+      "urlsEnviadas": 247,
+      "pendente": false
     },
     {
       "path": "https://otecnicodeinformatica.com.br/sitemap-editorial.xml",
       "ultimoEnvio": "2026-09-03T15:08:31.069Z",
-      "ultimoDownload": "2026-09-03T15:08:32.597Z",
+      "ultimoDownload": "2026-09-09T05:14:02.509Z",
       "erros": 0,
       "avisos": 0,
-      "urlsEnviadas": 64,
+      "urlsEnviadas": 79,
       "pendente": false
     },
     {
@@ -5347,16 +6322,16 @@
     {
       "path": "https://otecnicodeinformatica.com.br/sitemap-equipamentos.xml",
       "ultimoEnvio": "2026-09-03T15:08:30.702Z",
-      "ultimoDownload": "2026-08-28T22:55:25.674Z",
+      "ultimoDownload": "2026-09-03T15:08:36.454Z",
       "erros": 0,
       "avisos": 0,
       "urlsEnviadas": 5,
-      "pendente": true
+      "pendente": false
     },
     {
       "path": "https://otecnicodeinformatica.com.br/sitemap-problemas.xml",
       "ultimoEnvio": "2026-09-03T15:08:30.546Z",
-      "ultimoDownload": "2026-09-03T15:08:32.643Z",
+      "ultimoDownload": "2026-09-07T15:55:05.105Z",
       "erros": 0,
       "avisos": 0,
       "urlsEnviadas": 16,
@@ -5365,11 +6340,11 @@
     {
       "path": "https://otecnicodeinformatica.com.br/sitemap-bairros.xml",
       "ultimoEnvio": "2026-09-03T15:08:30.352Z",
-      "ultimoDownload": "2026-08-29T11:23:06.471Z",
+      "ultimoDownload": "2026-09-03T15:08:37.733Z",
       "erros": 0,
       "avisos": 0,
       "urlsEnviadas": 21,
-      "pendente": true
+      "pendente": false
     },
     {
       "path": "https://otecnicodeinformatica.com.br/sitemap-regioes.xml",
@@ -5383,7 +6358,7 @@
     {
       "path": "https://otecnicodeinformatica.com.br/sitemap-servicos.xml",
       "ultimoEnvio": "2026-09-03T15:08:29.902Z",
-      "ultimoDownload": "2026-09-03T15:08:32.124Z",
+      "ultimoDownload": "2026-09-07T11:46:29.103Z",
       "erros": 0,
       "avisos": 0,
       "urlsEnviadas": 45,
@@ -5392,19 +6367,19 @@
     {
       "path": "https://otecnicodeinformatica.com.br/sitemap-main.xml",
       "ultimoEnvio": "2026-09-03T15:08:29.619Z",
-      "ultimoDownload": "2026-09-03T15:08:31.958Z",
+      "ultimoDownload": "2026-09-08T08:22:10.163Z",
       "erros": 0,
       "avisos": 0,
-      "urlsEnviadas": 70,
+      "urlsEnviadas": 69,
       "pendente": false
     },
     {
       "path": "https://otecnicodeinformatica.com.br/sitemap.xml",
       "ultimoEnvio": "2026-09-02T03:02:30.897Z",
-      "ultimoDownload": "2026-09-02T03:02:32.887Z",
+      "ultimoDownload": "2026-09-09T20:15:55.565Z",
       "erros": 0,
       "avisos": 0,
-      "urlsEnviadas": 185,
+      "urlsEnviadas": 247,
       "pendente": false
     }
   ],
