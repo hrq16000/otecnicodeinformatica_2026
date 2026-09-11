@@ -3271,39 +3271,38 @@ docker run -d --name db --network minha-rede postgres
   },
 
   "office-365-guia-completo-empresas": {
-    title: "Office 365 Para Empresas: Guia Completo",
-    excerpt: "Teams, SharePoint, OneDrive e todas as ferramentas.",
-    date: "2024-01-11",
+    title: "Microsoft 365 para empresas: como organizar contas, arquivos e acessos",
+    excerpt: "Um guia de decisão para estruturar identidade, e-mail, arquivos compartilhados e permissões sem depender de planos ou preços temporários.",
+    date: "2026-09-11",
     readTime: "12 min",
     category: "Office 365",
     content: (
       <>
-        <p className="lead">O Microsoft 365 (antigo Office 365) é muito mais do que Word, Excel e PowerPoint. É uma plataforma completa de produtividade e colaboração. Veja como aproveitar ao máximo.</p>
+        <p className="lead">Microsoft 365 pode centralizar e-mail, identidade, documentos e colaboração, mas a ferramenta não organiza uma empresa sozinha. O ponto decisivo é definir proprietários de contas, onde os arquivos ficam, quem pode compartilhar e como o acesso é removido quando alguém sai.</p>
 
-        <h2>O Que Inclui o Microsoft 365 Business</h2>
+        <h2>O que precisa ser decidido antes da implantação</h2>
         <ul>
-          <li><strong>Word, Excel, PowerPoint, Outlook:</strong> Aplicativos clássicos, sempre atualizados</li>
-          <li><strong>Teams:</strong> Videoconferência, chat e colaboração</li>
-          <li><strong>OneDrive:</strong> 1 TB de armazenamento na nuvem por usuário</li>
-          <li><strong>SharePoint:</strong> Intranet e compartilhamento de documentos</li>
-          <li><strong>Exchange:</strong> E-mail profissional com seu domínio</li>
+          <li><strong>Identidade:</strong> cada pessoa deve usar conta própria, com autenticação em duas etapas e responsável administrativo definido.</li>
+          <li><strong>Arquivos pessoais e da empresa:</strong> defina o que fica em espaço individual e o que deve permanecer em biblioteca compartilhada.</li>
+          <li><strong>Permissões:</strong> conceda apenas o acesso necessário e revise compartilhamentos externos periodicamente.</li>
+          <li><strong>Saída e continuidade:</strong> contas, caixas de e-mail e documentos precisam de procedimento de transferência, não de senha compartilhada.</li>
         </ul>
 
-        <h2>Planos e Preços</h2>
-        <p>O plano Business Basic (só web + Teams) começa em torno de R$ 30/mês por usuário. O Business Standard (apps desktop + web) fica em torno de R$ 60/mês. Para a maioria das empresas pequenas, o Standard é a melhor escolha.</p>
+        <h2>Sincronização não substitui backup</h2>
+        <p>Arquivo sincronizado facilita trabalho em vários dispositivos, mas exclusões, sobrescritas e permissões equivocadas também podem se propagar. Verifique retenção, restauração e onde está a cópia independente dos dados críticos antes de tratar a nuvem como plano de recuperação.</p>
 
-        <h2>Benefícios Para Empresas</h2>
+        <h2>Rotina mínima de governança</h2>
         <ul>
-          <li>Sempre atualizado — sem precisar comprar nova versão</li>
-          <li>Acesso de qualquer lugar (web, celular, tablet)</li>
-          <li>Backup automático na nuvem</li>
-          <li>Controle administrativo centralizado</li>
-          <li>Conformidade e segurança corporativa</li>
+          <li>Inventário de contas administrativas e contatos de recuperação.</li>
+          <li>Autenticação em duas etapas para contas críticas.</li>
+          <li>Grupos de acesso em vez de permissões individuais improvisadas.</li>
+          <li>Revisão de compartilhamentos e de colaboradores desligados.</li>
+          <li>Teste de restauração de arquivos importantes.</li>
         </ul>
 
         <div className="bg-accent/10 rounded-xl p-6 my-8">
-          <h3 className="text-accent font-bold mb-2">Implantação de Microsoft 365</h3>
-          <p className="text-muted-foreground mb-0">Configuramos e-mails, Teams, OneDrive e treinamos sua equipe. Suporte técnico para empresas em Curitiba.</p>
+          <h3 className="text-accent font-bold mb-2">Limite importante</h3>
+          <p className="text-muted-foreground mb-0">Recursos e condições variam por plano e podem mudar. Confirme a documentação oficial do fornecedor antes de contratar ou alterar licenças.</p>
         </div>
       </>
     ),
