@@ -1,58 +1,66 @@
-## Escopo aprovado
+# Plano — promoção gradual de páginas `noindex` → `index`
 
-**Política:** teto sobe de 12 → 13 âncoras. Rebaixar Cajuru, Cristo Rei e Boqueirão (viram `noindex`, páginas continuam existindo). Promover Jardim das Américas, Ecoville, Alto da XV e Rebouças.
+Objetivo: continuar convertendo páginas hoje fora do índice em páginas indexáveis,
+**sem** criar URLs novas, sem alterar canonicals existentes e sem afrouxar os gates.
+Cada promoção só acontece quando a página passa nos critérios de conteúdo próprio.
 
-**Regra de geração:** um bairro só entra como indexável (ou como `noindex` novo) se o gerador produzir ≥ 300 palavras únicas (medidas contra o texto base do template) — validado no build.
+## Estoque atual de candidatos
 
-**Analytics:** além do clique/submit atuais, medir impressão do botão "Agendar agora" e abertura do modal do funil.
+| Família | Fora do índice hoje | Observação |
+| --- | --- | --- |
+| Blog / editorial | ~128 artigos `noindex,follow` | maior estoque; muitos já têm texto próprio |
+| Bairros | ~200 (21 âncoras indexáveis) | política de poda em vigor |
+| Serviço × bairro | 11 indexáveis; resto `noindex` | precisa de blocos autorais |
+| Cidades | 5 `noindex` | operação real não comprovada |
 
-## Alterações
+## Regra de promoção (única, aplicável a todas as famílias)
 
-### 1. Governança
-- `docs/politica-poda-bairros.md`: teto → 13, nova lista de 13 âncoras, seção explicando rebaixamento (URLs preservadas conforme SEO evolutivo).
-- `.lovable/memory/features/bairro-pruning-policy.md` + `mem://index.md`: refletir teto 13 e lista atualizada.
+Uma página só sai de `noindex` quando cumprir **todos** os itens:
 
-### 2. Dados dos bairros (`src/pages/servico-bairro/wifiTvBairroData.ts`)
-- Adicionar campos: `indexable: boolean`, `narrativaLocal: string` (bloco ≥ 220 palavras exclusivas por bairro — perfil urbano, tipos de imóvel, particularidades de rede/TV, referências geográficas), `narrativaTv: string` opcional para nuances de TV.
-- Editar 12 âncoras atuais: preencher `narrativaLocal` (base para uniqueness) e marcar Cajuru/Cristo Rei/Boqueirão como `indexable: false`.
-- Adicionar 4 novas âncoras (Jardim das Américas, Ecoville, Alto da XV, Rebouças) com `narrativaLocal` próprio.
-- `buildWifiBairroData` / `buildTvBairroData`: propagar `indexable`, injetar `narrativaLocal` no início de `descricaoLonga` (fica antes do bloco genérico).
+1. Intenção única declarada e sem colisão (`check:intent-collisions`, `check:problem-intent`).
+2. ≥ 700 palavras próprias no corpo, medidas contra o vocabulário do template.
+3. Similaridade cruzada abaixo do teto do gate de similaridade local/editorial.
+4. Estrutura obrigatória: fundamento → problema → verificação segura → limite → decisão → ferramenta → serviço.
+5. Fonte primária citada (Microsoft Learn, CISA, CERT.br, NIST, fabricante).
+6. Capa real licenciada, com crédito quando exigido (sem IA).
+7. Interlinks bidirecionais (Atlas, sintoma, serviço, cidade) — zero órfã.
+8. JSON-LD válido no HTML SSR e URL entrando pelo sitemap curado.
 
-### 3. Páginas e rotas
-- Criar 8 componentes em `src/pages/servico-bairro/`:
-  `RedesWifi{JardimAmericas,Ecoville,AltoXV,Reboucas}.tsx` e `ManutencaoTv{JardimAmericas,Ecoville,AltoXV,Reboucas}.tsx`.
-- `src/LegacyApp.tsx`: importar e rotear as 8 novas páginas.
-- `public/sitemap-bairros.xml`: substituir entradas antigas por um bloco curado das 13 âncoras × Wi-Fi/TV (26 URLs, `lastmod` de hoje). Remover Cajuru/Cristo Rei/Boqueirão do sitemap.
-- Páginas Cajuru/Cristo Rei/Boqueirão existentes continuam servindo, mas passam a renderizar com `noindex` automaticamente via `indexable: false`.
+## Etapas
 
-### 4. Validador de copy (`scripts/validate-bairro-copy.mjs`)
-- Importa `BAIRROS_INDEXAVEIS` via `tsx`.
-- Para cada bairro: monta `buildWifiBairroData` + `buildTvBairroData`, extrai `descricaoLonga + narrativaLocal + FAQ`, tokeniza, remove stopwords PT-BR e o vocabulário do template compartilhado, exige ≥ 300 palavras próprias.
-- Gate adicional: Jaccard entre bairros ≤ 0.55 para evitar duplicação cruzada.
-- Falha o build via `check:bairro-copy` no `package.json` e no CI (`.github/workflows/ci.yml`).
+### 1. Inventário de promoção (relatório, sem mudança de índice)
+- Novo `scripts/report-promocao-index.mjs`: varre todas as rotas `noindex`,
+  aplica os critérios 1–4 de forma automática e classifica em
+  **PRONTA** · **QUASE** (falta 1 item) · **LONGE**.
+- Saída: `reports/promocao-index.json` + `.md` e artefato público para o painel.
+- Comando: `npm run report:promocao-index`.
 
-### 5. Analytics de impressão / modal
-- `src/lib/funnelAnalytics.ts`: adicionar
-  - `trackFunnelAgendarImpression({ ctaLocation, modalidade, equipamento })` — dispara 1× por sessão+localização quando o botão "Agendar agora" fica ≥ 50 % visível por 400 ms.
-  - `trackFunnelModalOpen({ ctaLocation, hasPreset })` — sempre que o `Dialog` transiciona de fechado→aberto.
-  - `trackFunnelModalImpression({ ctaLocation })` — 1× por sessão na primeira montagem visível do modal.
-- `src/components/WhatsAppFunnel.tsx`:
-  - `useEffect` sobre `open`: dispara `trackFunnelModalOpen` na transição (mantém `trackFunnelOpen` para compat).
-  - `IntersectionObserver` no botão "Agendar agora" (ref no botão final): dispara `trackFunnelAgendarImpression` uma vez.
-  - `trackFunnelModalImpression` na primeira renderização com `open === true`.
-- Deduplicação por chave `sessionId + eventName + ctaLocation` em `sessionStorage`.
+### 2. Painel em `/admin/seo`
+- Novo bloco "Fila de promoção": tabela ordenada por prontidão, com o motivo do bloqueio
+  de cada página e a onda sugerida. Leitura apenas — a promoção continua sendo por código.
 
-### 6. Testes / gates
-- Estender `scripts/check-cta-funnel.ts` para exigir presença das novas chamadas de tracking no funil.
-- Adicionar `bairro-copy` ao pipeline `ci.yml` (etapa entre lint e build).
-- Rodar `npm run check:jsonld` / `check:curated-meta` para garantir que os 8 novos slugs entram nos manifestos.
+### 3. Ondas de promoção (lotes pequenos e reversíveis)
+- Lote de **até 8 URLs por onda**, priorizando editorial (maior estoque, menor risco de canibalização).
+- Cada onda: elevar o teto editorial, marcar as URLs como indexáveis na fonte única
+  (`localIndexPolicy.json` / registro editorial), regenerar o sitemap curado incremental
+  e disparar IndexNow apenas para as URLs novas.
+- Bairros e serviço × bairro entram só depois, e apenas com evidência de demanda no Search Console.
 
-## Fora de escopo (explícito)
+### 4. Gate de promoção
+- Novo `scripts/check-promocao-index.mjs` no `verify`: falha se alguma URL marcada como
+  indexável não cumprir os critérios 1–8 (fail-closed).
+- Mantém tudo que já existe: `check:local-index-policy`, `check:editorial-cannibalization`,
+  `check:jsonld-ssr`, `check:curated-meta`.
 
-- Geração dos ~200 bairros noindex restantes: **não** será feita agora — a política aprovada é "gerar só com copy exclusiva validada", e não há copy manual para os demais. O gerador + validador ficam prontos para novas ondas.
-- Reordenar bairros âncora além dos 4 novos.
-- Dashboard admin de conversão (fora deste ciclo).
+### 5. Observação pós-publicação
+- Após cada onda, registrar o marco no coorte (`report:content-cohort`) e só planejar a
+  próxima onda com leitura do Search Console (impressões/cliques das URLs promovidas).
+
+## Fora de escopo
+- Criar páginas novas ou mudar slugs/canonicals.
+- Promover bairros em massa sem copy exclusiva.
+- Prometer indexação: IndexNow e GSC são pedidos, não garantias.
 
 ## Riscos
-- Rebaixar Cajuru/Boqueirão perde tráfego local existente até que Ecoville/Alto XV/Rebouças indexem — impacto SEO de 4–8 semanas.
-- Se o Jaccard ≥ 0.55 falhar em algum bairro, o build quebra até a narrativa ser reescrita.
+- Promover artigos parecidos entre si canibaliza pilares → mitigado pelo gate de similaridade.
+- Onda grande demais dilui a autoridade e atrasa o rastreamento → teto de 8 URLs por onda.
