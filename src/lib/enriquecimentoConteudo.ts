@@ -1162,6 +1162,45 @@ export const ENRIQUECIMENTO_1: Record<string, EnriquecimentoConteudo> = {
       },
     ],
   },
+  "/problemas/notebook-nao-liga": {
+    respostaRapida:
+      "Antes de pensar em formatar ou trocar peça, separe o sintoma: sem LED e sem ventoinha é um caminho de energia; LED aceso com tela preta é outro; logo do fabricante ou recuperação do Windows indicam que o notebook ligou e o problema é de inicialização.",
+    tabelaDiagnostica: {
+      titulo: "O sinal observado muda a primeira decisão",
+      linhas: [
+        { sintoma: "Nenhum LED, som ou aquecimento", causa: "Entrada de energia, carregador, conector, bateria ou circuito de alimentação", verificar: "Teste tomada e carregador compatível; observe se há LED de carga sem abrir o equipamento", acao: "Não force o botão nem use carregador de tensão incompatível" },
+        { sintoma: "LED acende, mas a tela fica preta", causa: "O notebook recebe energia, mas pode falhar em vídeo, memória ou POST", verificar: "Remova periféricos externos e registre luzes, bipes e tentativas de partida", acao: "Não conclua que a tela ou a placa-mãe falhou sem diagnóstico" },
+        { sintoma: "Mostra o logo e para no Windows", causa: "Inicialização, armazenamento, atualização ou configuração de boot", verificar: "Anote a mensagem, o código e se o disco aparece no firmware", acao: "Não formate antes de confirmar backup e chave BitLocker" },
+        { sintoma: "Liga e desliga em segundos", causa: "Proteção térmica, curto, bateria, memória ou alimentação instável", verificar: "Pare diante de cheiro, líquido, queda recente ou calor incomum", acao: "Não repita tentativas de partida; o risco é agravar o dano" },
+      ],
+    },
+    blocos: [
+      {
+        id: "limite-seguro-notebook-nao-liga",
+        titulo: "Quando a checagem externa termina e a avaliação começa",
+        intro: "O objetivo da primeira etapa é registrar o sintoma sem criar uma segunda falha. Abrir o equipamento, trocar bateria por tentativa ou insistir em ligar não são atalhos seguros.",
+        itens: [
+          { titulo: "Há energia, mas não há Windows", desc: "Se o logo aparece ou a tela de recuperação é exibida, o notebook já concluiu parte da partida. Preserve mensagens e dados: a decisão passa a ser de sistema e armazenamento, não de conector ou carregador." },
+          { titulo: "BitLocker vem antes de qualquer recuperação", desc: "Algumas ferramentas do ambiente de recuperação precisam da chave para acessar o volume. Confirme que a chave de recuperação está disponível em outro dispositivo antes de tentar restaurar, redefinir ou reinstalar." },
+          { titulo: "Líquido, cheiro ou bateria inchada interrompem o teste", desc: "Desligue, remova da tomada e não use secador, arroz ou carregador alternativo. Esses sinais exigem avaliação de bancada e podem envolver risco elétrico e corrosão." },
+          { titulo: "Dados importantes mudam a ordem", desc: "Quando os arquivos não têm cópia, preservar o armazenamento vem antes de qualquer reset. Reinstalação pode ser adequada depois, mas não é a primeira ação quando ainda há dúvida sobre os dados." },
+        ],
+        fecho: { antes: "Quando o Windows chega à recuperação, compare as alternativas de menor impacto no guia de ", to: "/blog/windows-reparo-automatico-em-loop", anchor: "reparo automático em laço", depois: "." },
+      },
+    ],
+    fontes: [
+      {
+        titulo: "Microsoft Support — Opções de recuperação no Windows",
+        url: "https://support.microsoft.com/en-us/windows/experience/backup-recovery/recovery-options-in-windows",
+        nota: "Orienta começar pelas alternativas menos invasivas e alerta para backup e chave BitLocker antes de opções que podem afetar dados.",
+      },
+      {
+        titulo: "Microsoft Support — Ambiente de Recuperação do Windows",
+        url: "https://support.microsoft.com/en-us/windows/windows-recovery-environment-0eb14733-6301-41cb-8d26-06a12b42770b",
+        nota: "Explica o papel do WinRE para falhas de inicialização e quando ele pode solicitar a chave de recuperação do BitLocker.",
+      },
+    ],
+  },
   "/problemas/windows-lento-curitiba": {
     respostaRapida:
       "Windows lento pode ser inicialização carregada, armazenamento saturado, atualização pendente, malware, memória insuficiente ou hardware envelhecido. O sintoma precisa ser medido antes de escolher a correção.",
