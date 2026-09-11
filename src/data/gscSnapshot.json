@@ -1,6 +1,6 @@
 {
   "status": "ok",
-  "geradoEm": "2026-09-11T07:38:22.324Z",
+  "geradoEm": "2026-09-11T07:52:20.752Z",
   "propriedade": {
     "siteUrl": "sc-domain:otecnicodeinformatica.com.br",
     "dominio": "https://otecnicodeinformatica.com.br"
@@ -6294,8 +6294,8 @@
   "sitemaps": [
     {
       "path": "https://otecnicodeinformatica.com.br/sitemap-index.xml",
-      "ultimoEnvio": "2026-09-10T20:36:58.437Z",
-      "ultimoDownload": "2026-09-10T20:37:01.986Z",
+      "ultimoEnvio": "2026-09-11T07:52:08.768Z",
+      "ultimoDownload": "2026-09-11T07:52:10.643Z",
       "erros": 0,
       "avisos": 0,
       "urlsEnviadas": 247,

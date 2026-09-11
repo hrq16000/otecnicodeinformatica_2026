@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-09-11T07:44:18.056Z",
+  "geradoEm": "2026-09-11T07:57:01.993Z",
   "historico": [
     {
       "geradoEm": "2026-08-31T17:57:03.969Z",
@@ -275,6 +275,15 @@
     },
     {
       "geradoEm": "2026-09-11T07:44:18.056Z",
+      "contagem": {
+        "UNKNOWN": 25,
+        "PUBLISHED": 1
+      },
+      "total": 26,
+      "consolidada": false
+    },
+    {
+      "geradoEm": "2026-09-11T07:57:01.993Z",
       "contagem": {
         "UNKNOWN": 25,
         "PUBLISHED": 1
