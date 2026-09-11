@@ -89,7 +89,7 @@ for (const a of artigos) {
     excerpt: campo(a.raw, "excerpt"),
     category: campo(a.raw, "category"),
     corpo: new Set(tokenize(textoVisivel(a.raw))),
-    palavras: tokenize(textoVisivel(a.raw)).length,
+    palavras: contarPalavras(textoVisivel(a.raw)),
     secoes: (a.raw.match(/<h[23]>/g) ?? []).length,
     raw: a.raw,
   });
@@ -131,7 +131,7 @@ for (const p of perfil.values()) {
   if (maxIntencao > MAX_INTENCAO) bloqueios.push(`intenção colide com /blog/${colisao} (${maxIntencao.toFixed(2)})`);
 
   // 2. profundidade
-  if (p.palavras < MIN_PALAVRAS) bloqueios.push(`${p.palavras} palavras próprias (mínimo ${MIN_PALAVRAS})`);
+  if (p.palavras < MIN_PALAVRAS) bloqueios.push(`${p.palavras} palavras no corpo (mínimo ${MIN_PALAVRAS})`);
 
   // 3. similaridade de corpo
   let maxSim = 0;

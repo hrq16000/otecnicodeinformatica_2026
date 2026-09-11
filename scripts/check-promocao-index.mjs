@@ -83,11 +83,13 @@ for (const item of EDITORIAL_WAVE) {
     erros.push(`${item.slug}: indexável, mas sem conteúdo localizado nas fontes de artigos.`);
     continue;
   }
-  const tokens = tokenize(textoVisivel(raw));
-  perfis.push({ slug: item.slug, tokens: new Set(tokens), palavras: tokens.length });
+  const texto = textoVisivel(raw);
+  const tokens = tokenize(texto);
+  const palavras = contarPalavras(texto);
+  perfis.push({ slug: item.slug, tokens: new Set(tokens), palavras });
 
-  if (tokens.length < MIN_PALAVRAS) {
-    erros.push(`${item.slug}: ${tokens.length} palavras próprias (mínimo ${MIN_PALAVRAS}).`);
+  if (palavras < MIN_PALAVRAS) {
+    erros.push(`${item.slug}: ${palavras} palavras no corpo (mínimo ${MIN_PALAVRAS}).`);
   }
   if (!temRegistro(srcFontes, item.slug)) erros.push(`${item.slug}: sem fonte primária registrada.`);
   if (!temRegistro(srcCapas, item.slug)) erros.push(`${item.slug}: sem capa registrada.`);
