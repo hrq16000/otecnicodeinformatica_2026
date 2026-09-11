@@ -6,6 +6,8 @@ import { HeroTriagem } from "@/components/home/HeroTriagem";
 import { ContextosBento } from "@/components/home/ContextosBento";
 import { FaixaFotografica } from "@/components/home/FaixaFotografica";
 import { HomeFaqSsr } from "@/components/home/HomeFaqSsr";
+import { EncontreSuaSolucao } from "@/components/home/EncontreSuaSolucao";
+import { CondicoesAtendimento } from "@/components/home/CondicoesAtendimento";
 
 
 import { TrustStrip } from "@/components/TrustStrip";
