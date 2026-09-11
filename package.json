@@ -72,6 +72,8 @@
     "report:interlinks-qa": "node scripts/report-interlinks-qa.mjs",
     "report:interlinks-sugestoes": "node scripts/report-interlink-suggestions.mjs",
     "report:seo-healthcheck": "node scripts/report-seo-healthcheck.mjs",
+    "report:promocao-index": "node scripts/report-promocao-index.mjs",
+    "check:promocao-index": "node scripts/check-promocao-index.mjs",
     "check:seo-healthcheck": "node scripts/report-seo-healthcheck.mjs --check",
     "check:structured-data": "node scripts/check-structured-data-postdeploy.mjs",
     "healthcheck:publicacao": "npm run seo:inventory && npm run report:seo-healthcheck && npm run report:interlinks-sugestoes && npm run check:structured-data",

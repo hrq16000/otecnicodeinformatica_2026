@@ -210,10 +210,10 @@ const md = [
   `Total ${resumo.totalArtigos} · aprovados ${resumo.aprovados} · fora do índice ${resumo.foraDoIndice}`,
   `PRONTA ${resumo.prontas} · QUASE ${resumo.quase} · LONGE ${resumo.longe}`,
   "",
-  "| URL | Classe | Palavras | Seções | Sim. máx | Bloqueios |",
-  "|---|---|---|---|---|---|",
+  "| URL | Classe | Palavras | Seções | Sim. máx | Bloqueios | Curadoria |",
+  "|---|---|---|---|---|---|---|",
   ...linhas.map(
-    (l) => `| ${l.url} | ${l.classe} | ${l.palavras} | ${l.secoes} | ${l.similaridadeMax} | ${l.bloqueios.join("; ") || "—"} |`,
+    (l) => `| ${l.url} | ${l.classe} | ${l.palavras} | ${l.secoes} | ${l.similaridadeMax} | ${l.bloqueios.join("; ") || "—"} | ${l.curadoria.join("; ") || "—"} |`,
   ),
   "",
 ].join("\n");
