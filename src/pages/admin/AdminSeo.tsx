@@ -10,6 +10,7 @@ import { SitemapLedgerPanel } from "@/components/admin/SitemapLedgerPanel";
 import { IndexacaoLedgerPanel } from "@/components/admin/IndexacaoLedgerPanel";
 import { DeployStatusPanel } from "@/components/admin/DeployStatusPanel";
 import { GscSnapshotPanel } from "@/components/admin/GscSnapshotPanel";
+import { GscAutoridadePanel } from "@/components/admin/GscAutoridadePanel";
 import { GscInventarioPanel } from "@/components/admin/GscInventarioPanel";
 import { SeoHealthcheckPanel } from "@/components/admin/SeoHealthcheckPanel";
 import { InterlinkSuggestionsPanel } from "@/components/admin/InterlinkSuggestionsPanel";
@@ -301,6 +302,10 @@ export default function AdminSeo() {
 
       <div className="mt-6">
         <GscSnapshotPanel />
+      </div>
+
+      <div className="mt-6">
+        <GscAutoridadePanel />
       </div>
 
       <GscInventarioPanel />
