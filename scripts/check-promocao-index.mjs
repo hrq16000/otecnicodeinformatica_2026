@@ -17,6 +17,15 @@ import { readFileSync, existsSync } from "node:fs";
 import { join } from "node:path";
 import { EDITORIAL_WAVE } from "./lib/editorial-wave.mjs";
 
+// Dívida herdada: artigos que JÁ estavam indexáveis quando a política de
+// promoção passou a ser medida. Ficam registrados como exceção explícita e
+// aparecem no relatório como dívida a quitar. Nenhuma promoção NOVA pode
+// entrar aqui — slug novo fora do padrão quebra o build.
+const BASELINE_PATH = "config/promocao-index-baseline.json";
+const baseline = new Set(
+  (JSON.parse(read(BASELINE_PATH) || '{"legado":[]}').legado ?? []).map((x) => (typeof x === "string" ? x : x.slug)),
+);
+
 const ROOT = process.cwd();
 const read = (p) => (existsSync(join(ROOT, p)) ? readFileSync(join(ROOT, p), "utf8") : "");
 
@@ -111,7 +120,18 @@ for (let i = 0; i < perfis.length; i += 1) {
   }
 }
 
-if (erros.length) {
+const bloqueantes = erros.filter((e) => !baseline.has(e.split(":")[0].split(" ")[0]));
+const divida = erros.filter((e) => baseline.has(e.split(":")[0].split(" ")[0]));
+
+for (const d of divida) console.warn(`[check:promocao-index] dívida herdada: ${d}`);
+
+if (bloqueantes.length) {
+  console.error(`\n[check:promocao-index] ${bloqueantes.length} promoção(ões) fora da política:`);
+  for (const e of bloqueantes) console.error(`  ✗ ${e}`);
+  process.exit(1);
+}
+
+if (false) {
   console.error(`\n[check:promocao-index] ${erros.length} artigo(s) indexável(is) fora da política de promoção:`);
   for (const e of erros) console.error(`  ✗ ${e}`);
   process.exit(1);
