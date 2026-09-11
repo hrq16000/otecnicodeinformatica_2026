@@ -1,0 +1,2588 @@
+{
+  "geradoEm": "2026-09-11T07:26:25.467Z",
+  "criterios": {
+    "minPalavras": 700,
+    "maxJaccardCorpo": 0.35,
+    "maxJaccardIntencao": 0.5
+  },
+  "totalArtigos": 187,
+  "aprovados": 78,
+  "foraDoIndice": 109,
+  "prontas": 0,
+  "quase": 43,
+  "longe": 66,
+  "proximaOnda": [],
+  "itens": [
+    {
+      "slug": "como-fazer-backup-completo-windows-11",
+      "url": "/blog/como-fazer-backup-completo-windows-11",
+      "titulo": "Como Fazer Backup Completo do Windows 11: Imagem do Sistema e Arquivos",
+      "categoria": "Procedimentos Técnicos",
+      "palavras": 1025,
+      "secoes": 10,
+      "similaridadeMax": 0.965,
+      "similarA": "como-trocar-tela-notebook-passo-a-passo",
+      "intencaoMax": 0.167,
+      "fonteOk": false,
+      "capaOk": false,
+      "atlasOk": false,
+      "bloqueios": [
+        "similaridade 0.96 com /blog/como-trocar-tela-notebook-passo-a-passo"
+      ],
+      "curadoria": [
+        "registrar fonte primária",
+        "registrar capa licenciada",
+        "criar ponte no Atlas / links de entrada"
+      ],
+      "classe": "QUASE"
+    },
+    {
+      "slug": "como-montar-pc-gamer-2026",
+      "url": "/blog/como-montar-pc-gamer-2026",
+      "titulo": "Como Montar um PC Gamer em 2026: Guia Técnico Completo",
+      "categoria": "Procedimentos Técnicos",
+      "palavras": 1024,
+      "secoes": 10,
+      "similaridadeMax": 0.965,
+      "similarA": "como-trocar-tela-notebook-passo-a-passo",
+      "intencaoMax": 0.107,
+      "fonteOk": false,
+      "capaOk": false,
+      "atlasOk": false,
+      "bloqueios": [
+        "similaridade 0.96 com /blog/como-trocar-tela-notebook-passo-a-passo"
+      ],
+      "curadoria": [
+        "registrar fonte primária",
+        "registrar capa licenciada",
+        "criar ponte no Atlas / links de entrada"
+      ],
+      "classe": "QUASE"
+    },
+    {
+      "slug": "como-fazer-overclock-cpu-com-seguranca",
+      "url": "/blog/como-fazer-overclock-cpu-com-seguranca",
+      "titulo": "Como Fazer Overclock de CPU com Segurança: Procedimento Técnico",
+      "categoria": "Procedimentos Técnicos",
+      "palavras": 1023,
+      "secoes": 10,
+      "similaridadeMax": 0.975,
+      "similarA": "como-trocar-tela-notebook-passo-a-passo",
+      "intencaoMax": 0.115,
+      "fonteOk": false,
+      "capaOk": false,
+      "atlasOk": false,
+      "bloqueios": [
+        "similaridade 0.98 com /blog/como-trocar-tela-notebook-passo-a-passo"
+      ],
+      "curadoria": [
+        "registrar fonte primária",
+        "registrar capa licenciada",
+        "criar ponte no Atlas / links de entrada"
+      ],
+      "classe": "QUASE"
+    },
+    {
+      "slug": "como-configurar-2fa-em-tudo",
+      "url": "/blog/como-configurar-2fa-em-tudo",
+      "titulo": "Como Configurar 2FA (Autenticação de Dois Fatores) em Tudo",
+      "categoria": "Segurança e Redes",
+      "palavras": 943,
+      "secoes": 10,
+      "similaridadeMax": 0.139,
+      "similarA": "backup-nuvem-empresas-qual-escolher",
+      "intencaoMax": 0.071,
+      "fonteOk": false,
+      "capaOk": false,
+      "atlasOk": false,
+      "bloqueios": [
+        "sem bloco de limite/decisão"
+      ],
+      "curadoria": [
+        "registrar fonte primária",
+        "registrar capa licenciada",
+        "criar ponte no Atlas / links de entrada"
+      ],
+      "classe": "QUASE"
+    },
+    {
+      "slug": "como-proteger-rede-wifi-empresa",
+      "url": "/blog/como-proteger-rede-wifi-empresa",
+      "titulo": "Como Proteger a Rede Wi-Fi da Sua Empresa: Guia Técnico",
+      "categoria": "Segurança e Redes",
+      "palavras": 941,
+      "secoes": 10,
+      "similaridadeMax": 0.137,
+      "similarA": "backup-nuvem-empresas-qual-escolher",
+      "intencaoMax": 0.107,
+      "fonteOk": false,
+      "capaOk": false,
+      "atlasOk": false,
+      "bloqueios": [
+        "sem bloco de limite/decisão"
+      ],
+      "curadoria": [
+        "registrar fonte primária",
+        "registrar capa licenciada",
+        "criar ponte no Atlas / links de entrada"
+      ],
+      "classe": "QUASE"
+    },
+    {
+      "slug": "como-fazer-pentest-basico-rede",
+      "url": "/blog/como-fazer-pentest-basico-rede",
+      "titulo": "Como Fazer Pentest Básico na Sua Rede: Ferramentas e Procedimento",
+      "categoria": "Segurança e Redes",
+      "palavras": 940,
+      "secoes": 10,
+      "similaridadeMax": 0.137,
+      "similarA": "backup-nuvem-empresas-qual-escolher",
+      "intencaoMax": 0.036,
+      "fonteOk": false,
+      "capaOk": false,
+      "atlasOk": false,
+      "bloqueios": [
+        "sem bloco de limite/decisão"
+      ],
+      "curadoria": [
+        "registrar fonte primária",
+        "registrar capa licenciada",
+        "criar ponte no Atlas / links de entrada"
+      ],
+      "classe": "QUASE"
+    },
+    {
+      "slug": "como-configurar-firewall-ufw-linux",
+      "url": "/blog/como-configurar-firewall-ufw-linux",
+      "titulo": "Como Configurar Firewall UFW no Linux: Guia Definitivo",
+      "categoria": "Segurança e Redes",
+      "palavras": 939,
+      "secoes": 10,
+      "similaridadeMax": 0.137,
+      "similarA": "backup-nuvem-empresas-qual-escolher",
+      "intencaoMax": 0.074,
+      "fonteOk": false,
+      "capaOk": false,
+      "atlasOk": false,
+      "bloqueios": [
+        "sem bloco de limite/decisão"
+      ],
+      "curadoria": [
+        "registrar fonte primária",
+        "registrar capa licenciada",
+        "criar ponte no Atlas / links de entrada"
+      ],
+      "classe": "QUASE"
+    },
+    {
+      "slug": "como-configurar-vlan-rede-corporativa",
+      "url": "/blog/como-configurar-vlan-rede-corporativa",
+      "titulo": "Como Configurar VLAN em Rede Corporativa: Guia Profissional",
+      "categoria": "Segurança e Redes",
+      "palavras": 939,
+      "secoes": 10,
+      "similaridadeMax": 0.137,
+      "similarA": "backup-nuvem-empresas-qual-escolher",
+      "intencaoMax": 0.074,
+      "fonteOk": false,
+      "capaOk": false,
+      "atlasOk": false,
+      "bloqueios": [
+        "sem bloco de limite/decisão"
+      ],
+      "curadoria": [
+        "registrar fonte primária",
+        "registrar capa licenciada",
+        "criar ponte no Atlas / links de entrada"
+      ],
+      "classe": "QUASE"
+    },
+    {
+      "slug": "como-detectar-invasao-rede",
+      "url": "/blog/como-detectar-invasao-rede",
+      "titulo": "Como Detectar Invasão na Rede: IDS/IPS, Logs e Análise de Tráfego",
+      "categoria": "Segurança e Redes",
+      "palavras": 938,
+      "secoes": 10,
+      "similaridadeMax": 0.135,
+      "similarA": "backup-nuvem-empresas-qual-escolher",
+      "intencaoMax": 0.074,
+      "fonteOk": false,
+      "capaOk": false,
+      "atlasOk": false,
+      "bloqueios": [
+        "sem bloco de limite/decisão"
+      ],
+      "curadoria": [
+        "registrar fonte primária",
+        "registrar capa licenciada",
+        "criar ponte no Atlas / links de entrada"
+      ],
+      "classe": "QUASE"
+    },
+    {
+      "slug": "melhores-antivirus-2026-comparativo",
+      "url": "/blog/melhores-antivirus-2026-comparativo",
+      "titulo": "Melhores Antivírus em 2026: Comparativo Real Para Casa e Empresa",
+      "categoria": "Segurança e Redes",
+      "palavras": 938,
+      "secoes": 10,
+      "similaridadeMax": 0.14,
+      "similarA": "backup-nuvem-empresas-qual-escolher",
+      "intencaoMax": 0.077,
+      "fonteOk": false,
+      "capaOk": false,
+      "atlasOk": false,
+      "bloqueios": [
+        "sem bloco de limite/decisão"
+      ],
+      "curadoria": [
+        "registrar fonte primária",
+        "registrar capa licenciada",
+        "criar ponte no Atlas / links de entrada"
+      ],
+      "classe": "QUASE"
+    },
+    {
+      "slug": "como-recuperar-conta-hackeada",
+      "url": "/blog/como-recuperar-conta-hackeada",
+      "titulo": "Como Recuperar Conta Hackeada: Procedimento de Emergência",
+      "categoria": "Segurança e Redes",
+      "palavras": 935,
+      "secoes": 10,
+      "similaridadeMax": 0.14,
+      "similarA": "backup-nuvem-empresas-qual-escolher",
+      "intencaoMax": 0.074,
+      "fonteOk": false,
+      "capaOk": false,
+      "atlasOk": false,
+      "bloqueios": [
+        "sem bloco de limite/decisão"
+      ],
+      "curadoria": [
+        "registrar fonte primária",
+        "registrar capa licenciada",
+        "criar ponte no Atlas / links de entrada"
+      ],
+      "classe": "QUASE"
+    },
+    {
+      "slug": "como-rodar-ia-localmente-no-pc",
+      "url": "/blog/como-rodar-ia-localmente-no-pc",
+      "titulo": "Como Rodar IA Localmente no PC: Ollama, LM Studio e LLMs Open Source",
+      "categoria": "Inteligência Artificial",
+      "palavras": 927,
+      "secoes": 10,
+      "similaridadeMax": 0.113,
+      "similarA": "como-aprender-informatica",
+      "intencaoMax": 0.032,
+      "fonteOk": false,
+      "capaOk": false,
+      "atlasOk": false,
+      "bloqueios": [
+        "sem bloco de limite/decisão"
+      ],
+      "curadoria": [
+        "registrar fonte primária",
+        "registrar capa licenciada",
+        "criar ponte no Atlas / links de entrada"
+      ],
+      "classe": "QUASE"
+    },
+    {
+      "slug": "diferenca-llm-machine-learning-deep-learning",
+      "url": "/blog/diferenca-llm-machine-learning-deep-learning",
+      "titulo": "Diferença Entre LLM, Machine Learning e Deep Learning Explicada",
+      "categoria": "Inteligência Artificial",
+      "palavras": 926,
+      "secoes": 10,
+      "similaridadeMax": 0.113,
+      "similarA": "como-aprender-informatica",
+      "intencaoMax": 0.083,
+      "fonteOk": false,
+      "capaOk": false,
+      "atlasOk": false,
+      "bloqueios": [
+        "sem bloco de limite/decisão"
+      ],
+      "curadoria": [
+        "registrar fonte primária",
+        "registrar capa licenciada",
+        "criar ponte no Atlas / links de entrada"
+      ],
+      "classe": "QUASE"
+    },
+    {
+      "slug": "melhores-ias-para-programacao-2026",
+      "url": "/blog/melhores-ias-para-programacao-2026",
+      "titulo": "Melhores IAs Para Programação em 2026: Copilot, Cursor, Claude e Mais",
+      "categoria": "Inteligência Artificial",
+      "palavras": 924,
+      "secoes": 10,
+      "similaridadeMax": 0.11,
+      "similarA": "como-aprender-informatica",
+      "intencaoMax": 0.038,
+      "fonteOk": false,
+      "capaOk": false,
+      "atlasOk": false,
+      "bloqueios": [
+        "sem bloco de limite/decisão"
+      ],
+      "curadoria": [
+        "registrar fonte primária",
+        "registrar capa licenciada",
+        "criar ponte no Atlas / links de entrada"
+      ],
+      "classe": "QUASE"
+    },
+    {
+      "slug": "ia-para-criacao-conteudo-profissional",
+      "url": "/blog/ia-para-criacao-conteudo-profissional",
+      "titulo": "Como Usar IA Para Criação de Conteúdo Profissional",
+      "categoria": "Inteligência Artificial",
+      "palavras": 924,
+      "secoes": 10,
+      "similaridadeMax": 0.111,
+      "similarA": "como-aprender-informatica",
+      "intencaoMax": 0.042,
+      "fonteOk": false,
+      "capaOk": false,
+      "atlasOk": false,
+      "bloqueios": [
+        "sem bloco de limite/decisão"
+      ],
+      "curadoria": [
+        "registrar fonte primária",
+        "registrar capa licenciada",
+        "criar ponte no Atlas / links de entrada"
+      ],
+      "classe": "QUASE"
+    },
+    {
+      "slug": "como-treinar-ia-customizada-fine-tuning",
+      "url": "/blog/como-treinar-ia-customizada-fine-tuning",
+      "titulo": "Como Treinar uma IA Customizada: Fine-Tuning e RAG Explicados",
+      "categoria": "Inteligência Artificial",
+      "palavras": 924,
+      "secoes": 10,
+      "similaridadeMax": 0.111,
+      "similarA": "como-aprender-informatica",
+      "intencaoMax": 0.036,
+      "fonteOk": false,
+      "capaOk": false,
+      "atlasOk": false,
+      "bloqueios": [
+        "sem bloco de limite/decisão"
+      ],
+      "curadoria": [
+        "registrar fonte primária",
+        "registrar capa licenciada",
+        "criar ponte no Atlas / links de entrada"
+      ],
+      "classe": "QUASE"
+    },
+    {
+      "slug": "como-criar-prompts-eficazes-chatgpt",
+      "url": "/blog/como-criar-prompts-eficazes-chatgpt",
+      "titulo": "Como Criar Prompts Eficazes Para ChatGPT: Guia Profissional",
+      "categoria": "Inteligência Artificial",
+      "palavras": 921,
+      "secoes": 10,
+      "similaridadeMax": 0.109,
+      "similarA": "como-aprender-informatica",
+      "intencaoMax": 0.067,
+      "fonteOk": false,
+      "capaOk": false,
+      "atlasOk": false,
+      "bloqueios": [
+        "sem bloco de limite/decisão"
+      ],
+      "curadoria": [
+        "registrar fonte primária",
+        "registrar capa licenciada",
+        "criar ponte no Atlas / links de entrada"
+      ],
+      "classe": "QUASE"
+    },
+    {
+      "slug": "como-criar-imagens-com-stable-diffusion",
+      "url": "/blog/como-criar-imagens-com-stable-diffusion",
+      "titulo": "Como Criar Imagens com Stable Diffusion: Instalação e Prompts",
+      "categoria": "Inteligência Artificial",
+      "palavras": 920,
+      "secoes": 10,
+      "similaridadeMax": 0.113,
+      "similarA": "como-aprender-informatica",
+      "intencaoMax": 0.111,
+      "fonteOk": false,
+      "capaOk": false,
+      "atlasOk": false,
+      "bloqueios": [
+        "sem bloco de limite/decisão"
+      ],
+      "curadoria": [
+        "registrar fonte primária",
+        "registrar capa licenciada",
+        "criar ponte no Atlas / links de entrada"
+      ],
+      "classe": "QUASE"
+    },
+    {
+      "slug": "automatizar-tarefas-com-ia-n8n-make",
+      "url": "/blog/automatizar-tarefas-com-ia-n8n-make",
+      "titulo": "Como Automatizar Tarefas com IA: n8n, Make e Zapier",
+      "categoria": "Inteligência Artificial",
+      "palavras": 919,
+      "secoes": 10,
+      "similaridadeMax": 0.109,
+      "similarA": "como-aprender-informatica",
+      "intencaoMax": 0.034,
+      "fonteOk": false,
+      "capaOk": false,
+      "atlasOk": false,
+      "bloqueios": [
+        "sem bloco de limite/decisão"
+      ],
+      "curadoria": [
+        "registrar fonte primária",
+        "registrar capa licenciada",
+        "criar ponte no Atlas / links de entrada"
+      ],
+      "classe": "QUASE"
+    },
+    {
+      "slug": "windows-11-atualizacao-kb5074105-novidades",
+      "url": "/blog/windows-11-atualizacao-kb5074105-novidades",
+      "titulo": "Windows 11 KB5074105: Todas as Novidades da Atualização de Janeiro 2026",
+      "categoria": "Windows 11",
+      "palavras": 823,
+      "secoes": 10,
+      "similaridadeMax": 0.118,
+      "similarA": "limpar-arquivos-temporarios-windows",
+      "intencaoMax": 0.065,
+      "fonteOk": false,
+      "capaOk": false,
+      "atlasOk": false,
+      "bloqueios": [
+        "sem bloco de limite/decisão"
+      ],
+      "curadoria": [
+        "registrar fonte primária",
+        "registrar capa licenciada",
+        "criar ponte no Atlas / links de entrada"
+      ],
+      "classe": "QUASE"
+    },
+    {
+      "slug": "como-criar-script-bash-iniciantes",
+      "url": "/blog/como-criar-script-bash-iniciantes",
+      "titulo": "Como Criar Scripts Bash no Linux: Guia Para Iniciantes e Técnicos",
+      "categoria": "Linux",
+      "palavras": 821,
+      "secoes": 10,
+      "similaridadeMax": 0.113,
+      "similarA": "como-aprender-informatica",
+      "intencaoMax": 0.069,
+      "fonteOk": false,
+      "capaOk": false,
+      "atlasOk": false,
+      "bloqueios": [
+        "sem bloco de limite/decisão"
+      ],
+      "curadoria": [
+        "registrar fonte primária",
+        "registrar capa licenciada",
+        "criar ponte no Atlas / links de entrada"
+      ],
+      "classe": "QUASE"
+    },
+    {
+      "slug": "como-instalar-lamp-stack-ubuntu",
+      "url": "/blog/como-instalar-lamp-stack-ubuntu",
+      "titulo": "Como Instalar LAMP Stack no Ubuntu: Apache, MySQL e PHP",
+      "categoria": "Linux",
+      "palavras": 821,
+      "secoes": 10,
+      "similaridadeMax": 0.115,
+      "similarA": "como-aprender-informatica",
+      "intencaoMax": 0.115,
+      "fonteOk": false,
+      "capaOk": false,
+      "atlasOk": false,
+      "bloqueios": [
+        "sem bloco de limite/decisão"
+      ],
+      "curadoria": [
+        "registrar fonte primária",
+        "registrar capa licenciada",
+        "criar ponte no Atlas / links de entrada"
+      ],
+      "classe": "QUASE"
+    },
+    {
+      "slug": "como-usar-rsync-backup-linux",
+      "url": "/blog/como-usar-rsync-backup-linux",
+      "titulo": "Como Usar rsync Para Backup no Linux: Guia Definitivo",
+      "categoria": "Linux",
+      "palavras": 821,
+      "secoes": 10,
+      "similaridadeMax": 0.111,
+      "similarA": "como-aprender-informatica",
+      "intencaoMax": 0.103,
+      "fonteOk": false,
+      "capaOk": false,
+      "atlasOk": false,
+      "bloqueios": [
+        "sem bloco de limite/decisão"
+      ],
+      "curadoria": [
+        "registrar fonte primária",
+        "registrar capa licenciada",
+        "criar ponte no Atlas / links de entrada"
+      ],
+      "classe": "QUASE"
+    },
+    {
+      "slug": "como-configurar-cron-jobs-linux",
+      "url": "/blog/como-configurar-cron-jobs-linux",
+      "titulo": "Como Configurar Cron Jobs no Linux: Agendamento de Tarefas",
+      "categoria": "Linux",
+      "palavras": 820,
+      "secoes": 10,
+      "similaridadeMax": 0.114,
+      "similarA": "como-aprender-informatica",
+      "intencaoMax": 0.031,
+      "fonteOk": false,
+      "capaOk": false,
+      "atlasOk": false,
+      "bloqueios": [
+        "sem bloco de limite/decisão"
+      ],
+      "curadoria": [
+        "registrar fonte primária",
+        "registrar capa licenciada",
+        "criar ponte no Atlas / links de entrada"
+      ],
+      "classe": "QUASE"
+    },
+    {
+      "slug": "como-configurar-rede-linux-netplan",
+      "url": "/blog/como-configurar-rede-linux-netplan",
+      "titulo": "Como Configurar Rede no Linux com Netplan: Guia Completo",
+      "categoria": "Linux",
+      "palavras": 820,
+      "secoes": 10,
+      "similaridadeMax": 0.114,
+      "similarA": "como-aprender-informatica",
+      "intencaoMax": 0.065,
+      "fonteOk": false,
+      "capaOk": false,
+      "atlasOk": false,
+      "bloqueios": [
+        "sem bloco de limite/decisão"
+      ],
+      "curadoria": [
+        "registrar fonte primária",
+        "registrar capa licenciada",
+        "criar ponte no Atlas / links de entrada"
+      ],
+      "classe": "QUASE"
+    },
+    {
+      "slug": "como-instalar-postgresql-linux",
+      "url": "/blog/como-instalar-postgresql-linux",
+      "titulo": "Como Instalar e Configurar PostgreSQL no Linux: Guia Profissional",
+      "categoria": "Linux",
+      "palavras": 819,
+      "secoes": 10,
+      "similaridadeMax": 0.116,
+      "similarA": "como-aprender-informatica",
+      "intencaoMax": 0.103,
+      "fonteOk": false,
+      "capaOk": false,
+      "atlasOk": false,
+      "bloqueios": [
+        "sem bloco de limite/decisão"
+      ],
+      "curadoria": [
+        "registrar fonte primária",
+        "registrar capa licenciada",
+        "criar ponte no Atlas / links de entrada"
+      ],
+      "classe": "QUASE"
+    },
+    {
+      "slug": "como-usar-systemd-linux",
+      "url": "/blog/como-usar-systemd-linux",
+      "titulo": "Como Usar systemd no Linux: Serviços, Logs e Boot Otimizado",
+      "categoria": "Linux",
+      "palavras": 819,
+      "secoes": 10,
+      "similaridadeMax": 0.113,
+      "similarA": "como-aprender-informatica",
+      "intencaoMax": 0.074,
+      "fonteOk": false,
+      "capaOk": false,
+      "atlasOk": false,
+      "bloqueios": [
+        "sem bloco de limite/decisão"
+      ],
+      "curadoria": [
+        "registrar fonte primária",
+        "registrar capa licenciada",
+        "criar ponte no Atlas / links de entrada"
+      ],
+      "classe": "QUASE"
+    },
+    {
+      "slug": "como-monitorar-servidor-linux",
+      "url": "/blog/como-monitorar-servidor-linux",
+      "titulo": "Como Monitorar Servidor Linux: htop, Glances, Netdata e Prometheus",
+      "categoria": "Linux",
+      "palavras": 817,
+      "secoes": 10,
+      "similaridadeMax": 0.113,
+      "similarA": "como-aprender-informatica",
+      "intencaoMax": 0.069,
+      "fonteOk": false,
+      "capaOk": false,
+      "atlasOk": false,
+      "bloqueios": [
+        "sem bloco de limite/decisão"
+      ],
+      "curadoria": [
+        "registrar fonte primária",
+        "registrar capa licenciada",
+        "criar ponte no Atlas / links de entrada"
+      ],
+      "classe": "QUASE"
+    },
+    {
+      "slug": "como-fazer-manutencao-nobreak",
+      "url": "/blog/como-fazer-manutencao-nobreak",
+      "titulo": "Como Fazer Manutenção em Nobreak: Testes, Troca de Bateria e Calibração",
+      "categoria": "Procedimentos Técnicos",
+      "palavras": 769,
+      "secoes": 12,
+      "similaridadeMax": 0.152,
+      "similarA": "bateria-de-notebook-nao-carrega-o-que-verificar",
+      "intencaoMax": 0.067,
+      "fonteOk": false,
+      "capaOk": false,
+      "atlasOk": false,
+      "bloqueios": [
+        "sem bloco de limite/decisão"
+      ],
+      "curadoria": [
+        "registrar fonte primária",
+        "registrar capa licenciada",
+        "criar ponte no Atlas / links de entrada"
+      ],
+      "classe": "QUASE"
+    },
+    {
+      "slug": "como-configurar-firewall-pfsense",
+      "url": "/blog/como-configurar-firewall-pfsense",
+      "titulo": "Como Configurar Firewall pfSense: Guia Completo Para Redes Empresariais",
+      "categoria": "Procedimentos Técnicos",
+      "palavras": 764,
+      "secoes": 13,
+      "similaridadeMax": 0.101,
+      "similarA": "informatica-basica",
+      "intencaoMax": 0.083,
+      "fonteOk": false,
+      "capaOk": false,
+      "atlasOk": false,
+      "bloqueios": [
+        "sem bloco de limite/decisão"
+      ],
+      "curadoria": [
+        "registrar fonte primária",
+        "registrar capa licenciada",
+        "criar ponte no Atlas / links de entrada"
+      ],
+      "classe": "QUASE"
+    },
+    {
+      "slug": "como-configurar-active-directory",
+      "url": "/blog/como-configurar-active-directory",
+      "titulo": "Como Configurar Active Directory no Windows Server: Passo a Passo",
+      "categoria": "Procedimentos Técnicos",
+      "palavras": 745,
+      "secoes": 15,
+      "similaridadeMax": 0.082,
+      "similarA": "servico-de-audio-do-windows-nao-esta-em-execucao",
+      "intencaoMax": 0.091,
+      "fonteOk": false,
+      "capaOk": false,
+      "atlasOk": false,
+      "bloqueios": [
+        "sem bloco de limite/decisão"
+      ],
+      "curadoria": [
+        "registrar fonte primária",
+        "registrar capa licenciada",
+        "criar ponte no Atlas / links de entrada"
+      ],
+      "classe": "QUASE"
+    },
+    {
+      "slug": "como-usar-docker-linux-guia-completo",
+      "url": "/blog/como-usar-docker-linux-guia-completo",
+      "titulo": "Como Usar Docker no Linux: Guia Completo Para Iniciantes e Técnicos",
+      "categoria": "Linux",
+      "palavras": 625,
+      "secoes": 9,
+      "similaridadeMax": 0.074,
+      "similarA": "limpar-cache-do-windows-update-softwaredistribution",
+      "intencaoMax": 0.069,
+      "fonteOk": false,
+      "capaOk": false,
+      "atlasOk": false,
+      "bloqueios": [
+        "625 palavras no corpo (mínimo 700)"
+      ],
+      "curadoria": [
+        "registrar fonte primária",
+        "registrar capa licenciada",
+        "criar ponte no Atlas / links de entrada"
+      ],
+      "classe": "QUASE"
+    },
+    {
+      "slug": "como-deixar-celular-android-mais-rapido",
+      "url": "/blog/como-deixar-celular-android-mais-rapido",
+      "titulo": "Celular Android lento: o que realmente testar antes de instalar um app de limpeza",
+      "categoria": "Celular e aplicativos",
+      "palavras": 577,
+      "secoes": 6,
+      "similaridadeMax": 0.157,
+      "similarA": "limpar-arquivos-temporarios-windows",
+      "intencaoMax": 0.111,
+      "fonteOk": true,
+      "capaOk": false,
+      "atlasOk": true,
+      "bloqueios": [
+        "577 palavras no corpo (mínimo 700)"
+      ],
+      "curadoria": [
+        "registrar capa licenciada"
+      ],
+      "classe": "QUASE"
+    },
+    {
+      "slug": "como-recuperar-dados-hd-defeituoso",
+      "url": "/blog/como-recuperar-dados-hd-defeituoso",
+      "titulo": "Como Recuperar Dados de HD Defeituoso: Métodos e Ferramentas",
+      "categoria": "Procedimentos Técnicos",
+      "palavras": 437,
+      "secoes": 12,
+      "similaridadeMax": 0.145,
+      "similarA": "como-recuperar-dados-hd-com-defeito",
+      "intencaoMax": 0.08,
+      "fonteOk": false,
+      "capaOk": false,
+      "atlasOk": true,
+      "bloqueios": [
+        "437 palavras no corpo (mínimo 700)"
+      ],
+      "curadoria": [
+        "registrar fonte primária",
+        "registrar capa licenciada"
+      ],
+      "classe": "QUASE"
+    },
+    {
+      "slug": "como-configurar-vpn-empresarial",
+      "url": "/blog/como-configurar-vpn-empresarial",
+      "titulo": "Como Configurar VPN Empresarial: Acesso Remoto Seguro",
+      "categoria": "Procedimentos Técnicos",
+      "palavras": 421,
+      "secoes": 14,
+      "similaridadeMax": 0.072,
+      "similarA": "como-configurar-roteador-wifi-iniciantes",
+      "intencaoMax": 0.077,
+      "fonteOk": false,
+      "capaOk": false,
+      "atlasOk": false,
+      "bloqueios": [
+        "421 palavras no corpo (mínimo 700)"
+      ],
+      "curadoria": [
+        "registrar fonte primária",
+        "registrar capa licenciada",
+        "criar ponte no Atlas / links de entrada"
+      ],
+      "classe": "QUASE"
+    },
+    {
+      "slug": "erros-comuns-upgrade-computador",
+      "url": "/blog/erros-comuns-upgrade-computador",
+      "titulo": "5 Erros Comuns ao Fazer Upgrade no Computador (e Como Evitar Prejuízo)",
+      "categoria": "Manutenção",
+      "palavras": 410,
+      "secoes": 5,
+      "similaridadeMax": 0.136,
+      "similarA": "como-instalar-segundo-ssd-notebook",
+      "intencaoMax": 0.097,
+      "fonteOk": false,
+      "capaOk": false,
+      "atlasOk": false,
+      "bloqueios": [
+        "410 palavras no corpo (mínimo 700)"
+      ],
+      "curadoria": [
+        "registrar fonte primária",
+        "registrar capa licenciada",
+        "criar ponte no Atlas / links de entrada"
+      ],
+      "classe": "QUASE"
+    },
+    {
+      "slug": "como-configurar-servidor-de-arquivos",
+      "url": "/blog/como-configurar-servidor-de-arquivos",
+      "titulo": "Como Configurar Servidor de Arquivos em Rede Local (Windows e Linux)",
+      "categoria": "Procedimentos Técnicos",
+      "palavras": 391,
+      "secoes": 14,
+      "similaridadeMax": 0.088,
+      "similarA": "historico-de-arquivos-windows-como-configurar",
+      "intencaoMax": 0.185,
+      "fonteOk": false,
+      "capaOk": false,
+      "atlasOk": false,
+      "bloqueios": [
+        "391 palavras no corpo (mínimo 700)"
+      ],
+      "curadoria": [
+        "registrar fonte primária",
+        "registrar capa licenciada",
+        "criar ponte no Atlas / links de entrada"
+      ],
+      "classe": "QUASE"
+    },
+    {
+      "slug": "melhores-ferramentas-ia-gratuitas-2026",
+      "url": "/blog/melhores-ferramentas-ia-gratuitas-2026",
+      "titulo": "Melhores Ferramentas de IA Gratuitas em 2026",
+      "categoria": "Inteligência Artificial",
+      "palavras": 318,
+      "secoes": 6,
+      "similaridadeMax": 0.058,
+      "similarA": "quanto-custa-formatar-um-computador",
+      "intencaoMax": 0.043,
+      "fonteOk": false,
+      "capaOk": false,
+      "atlasOk": false,
+      "bloqueios": [
+        "318 palavras no corpo (mínimo 700)"
+      ],
+      "curadoria": [
+        "registrar fonte primária",
+        "registrar capa licenciada",
+        "criar ponte no Atlas / links de entrada"
+      ],
+      "classe": "QUASE"
+    },
+    {
+      "slug": "como-deixar-windows-11-mais-rapido-iniciantes",
+      "url": "/blog/como-deixar-windows-11-mais-rapido-iniciantes",
+      "titulo": "Como Deixar o Windows 11 Mais Rápido em 2026: Guia Passo a Passo (Curitiba)",
+      "categoria": "Tutoriais Domésticos",
+      "palavras": 295,
+      "secoes": 5,
+      "similaridadeMax": 0.13,
+      "similarA": "limpar-arquivos-temporarios-windows",
+      "intencaoMax": 0.1,
+      "fonteOk": false,
+      "capaOk": false,
+      "atlasOk": false,
+      "bloqueios": [
+        "295 palavras no corpo (mínimo 700)"
+      ],
+      "curadoria": [
+        "registrar fonte primária",
+        "registrar capa licenciada",
+        "criar ponte no Atlas / links de entrada"
+      ],
+      "classe": "QUASE"
+    },
+    {
+      "slug": "trocar-windows-por-linux-vale-a-pena",
+      "url": "/blog/trocar-windows-por-linux-vale-a-pena",
+      "titulo": "Trocar o Windows Por Linux: Vale a Pena?",
+      "categoria": "Linux",
+      "palavras": 268,
+      "secoes": 5,
+      "similaridadeMax": 0.105,
+      "similarA": "como-migrar-arquivos-para-um-computador-novo",
+      "intencaoMax": 0.176,
+      "fonteOk": false,
+      "capaOk": false,
+      "atlasOk": false,
+      "bloqueios": [
+        "268 palavras no corpo (mínimo 700)"
+      ],
+      "curadoria": [
+        "registrar fonte primária",
+        "registrar capa licenciada",
+        "criar ponte no Atlas / links de entrada"
+      ],
+      "classe": "QUASE"
+    },
+    {
+      "slug": "manutencao-preventiva-computador-guia",
+      "url": "/blog/manutencao-preventiva-computador-guia",
+      "titulo": "Manutenção Preventiva do Computador: O Guia Que Evita 80% dos Problemas",
+      "categoria": "Manutenção",
+      "palavras": 239,
+      "secoes": 6,
+      "similaridadeMax": 0.111,
+      "similarA": "manutencao-preventiva-de-computador-guia-completo",
+      "intencaoMax": 0.148,
+      "fonteOk": false,
+      "capaOk": false,
+      "atlasOk": false,
+      "bloqueios": [
+        "239 palavras no corpo (mínimo 700)"
+      ],
+      "curadoria": [
+        "registrar fonte primária",
+        "registrar capa licenciada",
+        "criar ponte no Atlas / links de entrada"
+      ],
+      "classe": "QUASE"
+    },
+    {
+      "slug": "como-configurar-repetidor-wifi",
+      "url": "/blog/como-configurar-repetidor-wifi",
+      "titulo": "Como Configurar Repetidor de Wi-Fi: Passo a Passo Simples (Guia 2026)",
+      "categoria": "Tutoriais Domésticos",
+      "palavras": 237,
+      "secoes": 5,
+      "similaridadeMax": 0.101,
+      "similarA": "rede-wifi-nao-aparece-na-lista-o-que-verificar",
+      "intencaoMax": 0.148,
+      "fonteOk": false,
+      "capaOk": false,
+      "atlasOk": true,
+      "bloqueios": [
+        "237 palavras no corpo (mínimo 700)"
+      ],
+      "curadoria": [
+        "registrar fonte primária",
+        "registrar capa licenciada"
+      ],
+      "classe": "QUASE"
+    },
+    {
+      "slug": "como-criar-conta-usuario-windows-criancas",
+      "url": "/blog/como-criar-conta-usuario-windows-criancas",
+      "titulo": "Como Criar Conta de Usuário Para Crianças no Windows 11 (Controle Parental)",
+      "categoria": "Tutoriais Domésticos",
+      "palavras": 225,
+      "secoes": 5,
+      "similaridadeMax": 0.071,
+      "similarA": "permissoes-de-camera-no-windows",
+      "intencaoMax": 0.059,
+      "fonteOk": false,
+      "capaOk": false,
+      "atlasOk": false,
+      "bloqueios": [
+        "225 palavras no corpo (mínimo 700)"
+      ],
+      "curadoria": [
+        "registrar fonte primária",
+        "registrar capa licenciada",
+        "criar ponte no Atlas / links de entrada"
+      ],
+      "classe": "QUASE"
+    },
+    {
+      "slug": "como-montar-rack-de-rede",
+      "url": "/blog/como-montar-rack-de-rede",
+      "titulo": "Como Montar um Rack de Rede Profissional: Guia Técnico Completo",
+      "categoria": "Procedimentos Técnicos",
+      "palavras": 670,
+      "secoes": 12,
+      "similaridadeMax": 0.095,
+      "similarA": "organizacao-de-ti-para-pequenos-escritorios",
+      "intencaoMax": 0.111,
+      "fonteOk": false,
+      "capaOk": false,
+      "atlasOk": false,
+      "bloqueios": [
+        "670 palavras no corpo (mínimo 700)",
+        "sem bloco de limite/decisão"
+      ],
+      "curadoria": [
+        "registrar fonte primária",
+        "registrar capa licenciada",
+        "criar ponte no Atlas / links de entrada"
+      ],
+      "classe": "LONGE"
+    },
+    {
+      "slug": "como-montar-pc-do-zero-guia-completo",
+      "url": "/blog/como-montar-pc-do-zero-guia-completo",
+      "titulo": "Como Montar um PC do Zero: Guia Técnico Passo a Passo",
+      "categoria": "Procedimentos Técnicos",
+      "palavras": 524,
+      "secoes": 14,
+      "similaridadeMax": 0.115,
+      "similarA": "botao-power-nao-funciona-jump-start-placa-mae",
+      "intencaoMax": 0.125,
+      "fonteOk": false,
+      "capaOk": false,
+      "atlasOk": false,
+      "bloqueios": [
+        "524 palavras no corpo (mínimo 700)",
+        "sem bloco de limite/decisão"
+      ],
+      "curadoria": [
+        "registrar fonte primária",
+        "registrar capa licenciada",
+        "criar ponte no Atlas / links de entrada"
+      ],
+      "classe": "LONGE"
+    },
+    {
+      "slug": "linux-vs-windows-diferencas-qual-escolher",
+      "url": "/blog/linux-vs-windows-diferencas-qual-escolher",
+      "titulo": "Linux vs Windows: Diferenças Reais e Qual Escolher em 2026",
+      "categoria": "Linux",
+      "palavras": 514,
+      "secoes": 9,
+      "similaridadeMax": 0.103,
+      "similarA": "como-escolher-um-bom-antivirus",
+      "intencaoMax": 0.091,
+      "fonteOk": false,
+      "capaOk": false,
+      "atlasOk": false,
+      "bloqueios": [
+        "514 palavras no corpo (mínimo 700)",
+        "sem bloco de limite/decisão"
+      ],
+      "curadoria": [
+        "registrar fonte primária",
+        "registrar capa licenciada",
+        "criar ponte no Atlas / links de entrada"
+      ],
+      "classe": "LONGE"
+    },
+    {
+      "slug": "como-gerenciar-pacotes-apt-dnf-linux",
+      "url": "/blog/como-gerenciar-pacotes-apt-dnf-linux",
+      "titulo": "Como Gerenciar Pacotes no Linux com APT e DNF: Guia Completo",
+      "categoria": "Linux",
+      "palavras": 507,
+      "secoes": 9,
+      "similaridadeMax": 0.07,
+      "similarA": "limpar-cache-do-windows-update-softwaredistribution",
+      "intencaoMax": 0.071,
+      "fonteOk": false,
+      "capaOk": false,
+      "atlasOk": false,
+      "bloqueios": [
+        "507 palavras no corpo (mínimo 700)",
+        "sem bloco de limite/decisão"
+      ],
+      "curadoria": [
+        "registrar fonte primária",
+        "registrar capa licenciada",
+        "criar ponte no Atlas / links de entrada"
+      ],
+      "classe": "LONGE"
+    },
+    {
+      "slug": "como-configurar-servidor-web-apache-nginx-linux",
+      "url": "/blog/como-configurar-servidor-web-apache-nginx-linux",
+      "titulo": "Como Configurar Servidor Web Apache e Nginx no Linux: Guia Completo",
+      "categoria": "Linux",
+      "palavras": 504,
+      "secoes": 9,
+      "similaridadeMax": 0.064,
+      "similarA": "backup-nuvem-empresas-qual-escolher",
+      "intencaoMax": 0.115,
+      "fonteOk": false,
+      "capaOk": false,
+      "atlasOk": false,
+      "bloqueios": [
+        "504 palavras no corpo (mínimo 700)",
+        "sem bloco de limite/decisão"
+      ],
+      "curadoria": [
+        "registrar fonte primária",
+        "registrar capa licenciada",
+        "criar ponte no Atlas / links de entrada"
+      ],
+      "classe": "LONGE"
+    },
+    {
+      "slug": "como-configurar-ssh-seguro-linux",
+      "url": "/blog/como-configurar-ssh-seguro-linux",
+      "titulo": "Como Configurar SSH Seguro no Linux: Guia Anti-Invasão",
+      "categoria": "Linux",
+      "palavras": 462,
+      "secoes": 7,
+      "similaridadeMax": 0.085,
+      "similarA": "ordem-de-boot-na-bios-como-configurar",
+      "intencaoMax": 0.069,
+      "fonteOk": false,
+      "capaOk": false,
+      "atlasOk": false,
+      "bloqueios": [
+        "462 palavras no corpo (mínimo 700)",
+        "sem bloco de limite/decisão"
+      ],
+      "curadoria": [
+        "registrar fonte primária",
+        "registrar capa licenciada",
+        "criar ponte no Atlas / links de entrada"
+      ],
+      "classe": "LONGE"
+    },
+    {
+      "slug": "comandos-linux-essenciais-iniciantes",
+      "url": "/blog/comandos-linux-essenciais-iniciantes",
+      "titulo": "50 Comandos Linux Essenciais Para Iniciantes e Técnicos",
+      "categoria": "Linux",
+      "palavras": 454,
+      "secoes": 7,
+      "similaridadeMax": 0.081,
+      "similarA": "limpar-arquivos-temporarios-windows",
+      "intencaoMax": 0.095,
+      "fonteOk": false,
+      "capaOk": false,
+      "atlasOk": false,
+      "bloqueios": [
+        "454 palavras no corpo (mínimo 700)",
+        "sem bloco de limite/decisão"
+      ],
+      "curadoria": [
+        "registrar fonte primária",
+        "registrar capa licenciada",
+        "criar ponte no Atlas / links de entrada"
+      ],
+      "classe": "LONGE"
+    },
+    {
+      "slug": "como-configurar-bios-uefi-corretamente",
+      "url": "/blog/como-configurar-bios-uefi-corretamente",
+      "titulo": "Como Configurar BIOS/UEFI Corretamente: Guia Para Técnicos",
+      "categoria": "Procedimentos Técnicos",
+      "palavras": 453,
+      "secoes": 12,
+      "similaridadeMax": 0.13,
+      "similarA": "troquei-o-ssd-e-o-pc-so-abre-a-bios",
+      "intencaoMax": 0.138,
+      "fonteOk": false,
+      "capaOk": false,
+      "atlasOk": false,
+      "bloqueios": [
+        "453 palavras no corpo (mínimo 700)",
+        "sem bloco de limite/decisão"
+      ],
+      "curadoria": [
+        "registrar fonte primária",
+        "registrar capa licenciada",
+        "criar ponte no Atlas / links de entrada"
+      ],
+      "classe": "LONGE"
+    },
+    {
+      "slug": "como-usar-ia-no-dia-a-dia-dicas-praticas",
+      "url": "/blog/como-usar-ia-no-dia-a-dia-dicas-praticas",
+      "titulo": "Como Usar IA no Dia a Dia: 15 Dicas Práticas Para Trabalho e Estudo",
+      "categoria": "Inteligência Artificial",
+      "palavras": 451,
+      "secoes": 19,
+      "similaridadeMax": 0.086,
+      "similarA": "como-aprender-informatica",
+      "intencaoMax": 0.167,
+      "fonteOk": false,
+      "capaOk": false,
+      "atlasOk": false,
+      "bloqueios": [
+        "451 palavras no corpo (mínimo 700)",
+        "sem bloco de limite/decisão"
+      ],
+      "curadoria": [
+        "registrar fonte primária",
+        "registrar capa licenciada",
+        "criar ponte no Atlas / links de entrada"
+      ],
+      "classe": "LONGE"
+    },
+    {
+      "slug": "como-crimpar-cabo-de-rede-rj45",
+      "url": "/blog/como-crimpar-cabo-de-rede-rj45",
+      "titulo": "Como Crimpar Cabo de Rede RJ45: Padrão T568A e T568B",
+      "categoria": "Procedimentos Técnicos",
+      "palavras": 446,
+      "secoes": 13,
+      "similaridadeMax": 0.099,
+      "similarA": "computador-nao-conecta-na-internet-por-cabo",
+      "intencaoMax": 0.069,
+      "fonteOk": false,
+      "capaOk": false,
+      "atlasOk": false,
+      "bloqueios": [
+        "446 palavras no corpo (mínimo 700)",
+        "sem bloco de limite/decisão"
+      ],
+      "curadoria": [
+        "registrar fonte primária",
+        "registrar capa licenciada",
+        "criar ponte no Atlas / links de entrada"
+      ],
+      "classe": "LONGE"
+    },
+    {
+      "slug": "como-fazer-manutencao-impressora",
+      "url": "/blog/como-fazer-manutencao-impressora",
+      "titulo": "Como Fazer Manutenção em Impressora: Jato de Tinta e Laser",
+      "categoria": "Procedimentos Técnicos",
+      "palavras": 439,
+      "secoes": 10,
+      "similaridadeMax": 0.114,
+      "similarA": "impressora-offline-como-resolver",
+      "intencaoMax": 0.037,
+      "fonteOk": false,
+      "capaOk": false,
+      "atlasOk": false,
+      "bloqueios": [
+        "439 palavras no corpo (mínimo 700)",
+        "sem bloco de limite/decisão"
+      ],
+      "curadoria": [
+        "registrar fonte primária",
+        "registrar capa licenciada",
+        "criar ponte no Atlas / links de entrada"
+      ],
+      "classe": "LONGE"
+    },
+    {
+      "slug": "por-que-todo-prestador-deve-estar-preciso-de-um",
+      "url": "/blog/por-que-todo-prestador-deve-estar-preciso-de-um",
+      "titulo": "Por Que Todo Prestador de Serviço Deve Estar no Preciso de Um",
+      "categoria": "Plataformas",
+      "palavras": 426,
+      "secoes": 9,
+      "similaridadeMax": 0.079,
+      "similarA": "rede-wifi-nao-aparece-na-lista-o-que-verificar",
+      "intencaoMax": 0.05,
+      "fonteOk": false,
+      "capaOk": false,
+      "atlasOk": false,
+      "bloqueios": [
+        "426 palavras no corpo (mínimo 700)",
+        "sem bloco de limite/decisão"
+      ],
+      "curadoria": [
+        "registrar fonte primária",
+        "registrar capa licenciada",
+        "criar ponte no Atlas / links de entrada"
+      ],
+      "classe": "LONGE"
+    },
+    {
+      "slug": "inteligencia-artificial-evolucao-historia",
+      "url": "/blog/inteligencia-artificial-evolucao-historia",
+      "titulo": "A Evolução da Inteligência Artificial: De Turing ao ChatGPT",
+      "categoria": "Inteligência Artificial",
+      "palavras": 410,
+      "secoes": 9,
+      "similaridadeMax": 0.08,
+      "similarA": "o-que-e-informatica",
+      "intencaoMax": 0,
+      "fonteOk": false,
+      "capaOk": false,
+      "atlasOk": false,
+      "bloqueios": [
+        "410 palavras no corpo (mínimo 700)",
+        "sem bloco de limite/decisão"
+      ],
+      "curadoria": [
+        "registrar fonte primária",
+        "registrar capa licenciada",
+        "criar ponte no Atlas / links de entrada"
+      ],
+      "classe": "LONGE"
+    },
+    {
+      "slug": "como-instalar-linux-dual-boot-windows",
+      "url": "/blog/como-instalar-linux-dual-boot-windows",
+      "titulo": "Como Instalar Linux em Dual Boot com Windows: Procedimento Seguro",
+      "categoria": "Procedimentos Técnicos",
+      "palavras": 409,
+      "secoes": 9,
+      "similaridadeMax": 0.13,
+      "similarA": "ssd-nvme-nao-aparece-no-gerenciador-de-discos",
+      "intencaoMax": 0.107,
+      "fonteOk": false,
+      "capaOk": false,
+      "atlasOk": false,
+      "bloqueios": [
+        "409 palavras no corpo (mínimo 700)",
+        "sem bloco de limite/decisão"
+      ],
+      "curadoria": [
+        "registrar fonte primária",
+        "registrar capa licenciada",
+        "criar ponte no Atlas / links de entrada"
+      ],
+      "classe": "LONGE"
+    },
+    {
+      "slug": "como-configurar-backup-automatizado",
+      "url": "/blog/como-configurar-backup-automatizado",
+      "titulo": "Como Configurar Backup Automatizado: Local e Nuvem",
+      "categoria": "Procedimentos Técnicos",
+      "palavras": 397,
+      "secoes": 10,
+      "similaridadeMax": 0.136,
+      "similarA": "historico-de-arquivos-windows-como-configurar",
+      "intencaoMax": 0.13,
+      "fonteOk": false,
+      "capaOk": false,
+      "atlasOk": false,
+      "bloqueios": [
+        "397 palavras no corpo (mínimo 700)",
+        "sem bloco de limite/decisão"
+      ],
+      "curadoria": [
+        "registrar fonte primária",
+        "registrar capa licenciada",
+        "criar ponte no Atlas / links de entrada"
+      ],
+      "classe": "LONGE"
+    },
+    {
+      "slug": "como-configurar-rede-wifi-empresarial",
+      "url": "/blog/como-configurar-rede-wifi-empresarial",
+      "titulo": "Como Configurar Rede Wi-Fi Empresarial: VLANs, QoS e Segurança",
+      "categoria": "Procedimentos Técnicos",
+      "palavras": 382,
+      "secoes": 9,
+      "similaridadeMax": 0.092,
+      "similarA": "como-melhorar-sinal-wifi-em-casa",
+      "intencaoMax": 0.077,
+      "fonteOk": false,
+      "capaOk": false,
+      "atlasOk": false,
+      "bloqueios": [
+        "382 palavras no corpo (mínimo 700)",
+        "sem bloco de limite/decisão"
+      ],
+      "curadoria": [
+        "registrar fonte primária",
+        "registrar capa licenciada",
+        "criar ponte no Atlas / links de entrada"
+      ],
+      "classe": "LONGE"
+    },
+    {
+      "slug": "como-instalar-ubuntu-do-zero",
+      "url": "/blog/como-instalar-ubuntu-do-zero",
+      "titulo": "Como Instalar Ubuntu do Zero: Guia Completo 2026",
+      "categoria": "Linux",
+      "palavras": 366,
+      "secoes": 7,
+      "similaridadeMax": 0.094,
+      "similarA": "ordem-de-boot-na-bios-como-configurar",
+      "intencaoMax": 0.12,
+      "fonteOk": false,
+      "capaOk": false,
+      "atlasOk": false,
+      "bloqueios": [
+        "366 palavras no corpo (mínimo 700)",
+        "sem bloco de limite/decisão"
+      ],
+      "curadoria": [
+        "registrar fonte primária",
+        "registrar capa licenciada",
+        "criar ponte no Atlas / links de entrada"
+      ],
+      "classe": "LONGE"
+    },
+    {
+      "slug": "ia-substituir-empregos-mitos-verdades",
+      "url": "/blog/ia-substituir-empregos-mitos-verdades",
+      "titulo": "A IA Vai Substituir Empregos? Mitos, Verdades e Como Se Preparar",
+      "categoria": "Inteligência Artificial",
+      "palavras": 363,
+      "secoes": 6,
+      "similaridadeMax": 0.078,
+      "similarA": "o-que-e-informatica",
+      "intencaoMax": 0.056,
+      "fonteOk": false,
+      "capaOk": false,
+      "atlasOk": false,
+      "bloqueios": [
+        "363 palavras no corpo (mínimo 700)",
+        "sem bloco de limite/decisão"
+      ],
+      "curadoria": [
+        "registrar fonte primária",
+        "registrar capa licenciada",
+        "criar ponte no Atlas / links de entrada"
+      ],
+      "classe": "LONGE"
+    },
+    {
+      "slug": "como-economizar-bateria-celular",
+      "url": "/blog/como-economizar-bateria-celular",
+      "titulo": "Como Economizar Bateria do Celular: 12 Ajustes Reais (Android e iPhone 2026)",
+      "categoria": "Tutoriais Domésticos",
+      "palavras": 345,
+      "secoes": 13,
+      "similaridadeMax": 0.09,
+      "similarA": "bios-corrompida-reset-cmos-atualizacao",
+      "intencaoMax": 0.056,
+      "fonteOk": false,
+      "capaOk": false,
+      "atlasOk": false,
+      "bloqueios": [
+        "345 palavras no corpo (mínimo 700)",
+        "sem bloco de limite/decisão"
+      ],
+      "curadoria": [
+        "registrar fonte primária",
+        "registrar capa licenciada",
+        "criar ponte no Atlas / links de entrada"
+      ],
+      "classe": "LONGE"
+    },
+    {
+      "slug": "preciso-de-um-plataforma-prestadores",
+      "url": "/blog/preciso-de-um-plataforma-prestadores",
+      "titulo": "Preciso de Um: A Plataforma Que Conecta Prestadores de Serviços a Clientes",
+      "categoria": "Plataformas",
+      "palavras": 334,
+      "secoes": 5,
+      "similaridadeMax": 0.068,
+      "similarA": "quanto-custa-formatar-um-computador",
+      "intencaoMax": 0.037,
+      "fonteOk": false,
+      "capaOk": false,
+      "atlasOk": false,
+      "bloqueios": [
+        "334 palavras no corpo (mínimo 700)",
+        "sem bloco de limite/decisão"
+      ],
+      "curadoria": [
+        "registrar fonte primária",
+        "registrar capa licenciada",
+        "criar ponte no Atlas / links de entrada"
+      ],
+      "classe": "LONGE"
+    },
+    {
+      "slug": "ia-para-pequenas-empresas-como-comecar",
+      "url": "/blog/ia-para-pequenas-empresas-como-comecar",
+      "titulo": "IA Para Pequenas Empresas: Como Começar Sem Gastar Muito",
+      "categoria": "Inteligência Artificial",
+      "palavras": 330,
+      "secoes": 8,
+      "similaridadeMax": 0.081,
+      "similarA": "quanto-custa-formatar-um-computador",
+      "intencaoMax": 0.074,
+      "fonteOk": false,
+      "capaOk": false,
+      "atlasOk": false,
+      "bloqueios": [
+        "330 palavras no corpo (mínimo 700)",
+        "sem bloco de limite/decisão"
+      ],
+      "curadoria": [
+        "registrar fonte primária",
+        "registrar capa licenciada",
+        "criar ponte no Atlas / links de entrada"
+      ],
+      "classe": "LONGE"
+    },
+    {
+      "slug": "preciso-de-um-todos-os-ramos",
+      "url": "/blog/preciso-de-um-todos-os-ramos",
+      "titulo": "Preciso de Um Aceita Todos os Ramos: Eletricista, Pintor, Diarista e Muito Mais",
+      "categoria": "Plataformas",
+      "palavras": 319,
+      "secoes": 8,
+      "similaridadeMax": 0.065,
+      "similarA": "rede-wifi-nao-aparece-na-lista-o-que-verificar",
+      "intencaoMax": 0.038,
+      "fonteOk": false,
+      "capaOk": false,
+      "atlasOk": false,
+      "bloqueios": [
+        "319 palavras no corpo (mínimo 700)",
+        "sem bloco de limite/decisão"
+      ],
+      "curadoria": [
+        "registrar fonte primária",
+        "registrar capa licenciada",
+        "criar ponte no Atlas / links de entrada"
+      ],
+      "classe": "LONGE"
+    },
+    {
+      "slug": "preciso-de-um-para-tecnicos-informatica",
+      "url": "/blog/preciso-de-um-para-tecnicos-informatica",
+      "titulo": "Preciso de Um Para Técnicos em Informática: Amplie Sua Atuação",
+      "categoria": "Plataformas",
+      "palavras": 317,
+      "secoes": 4,
+      "similaridadeMax": 0.099,
+      "similarA": "quanto-custa-formatar-um-computador",
+      "intencaoMax": 0.05,
+      "fonteOk": false,
+      "capaOk": false,
+      "atlasOk": true,
+      "bloqueios": [
+        "317 palavras no corpo (mínimo 700)",
+        "sem bloco de limite/decisão"
+      ],
+      "curadoria": [
+        "registrar fonte primária",
+        "registrar capa licenciada"
+      ],
+      "classe": "LONGE"
+    },
+    {
+      "slug": "diferenca-camera-wifi-dvr-qual-escolher",
+      "url": "/blog/diferenca-camera-wifi-dvr-qual-escolher",
+      "titulo": "Câmera Wi-Fi ou DVR: Qual a Diferença e Qual Escolher?",
+      "categoria": "CFTV",
+      "palavras": 298,
+      "secoes": 4,
+      "similaridadeMax": 0.096,
+      "similarA": "como-melhorar-sinal-wifi-em-casa",
+      "intencaoMax": 0.118,
+      "fonteOk": false,
+      "capaOk": false,
+      "atlasOk": false,
+      "bloqueios": [
+        "298 palavras no corpo (mínimo 700)",
+        "sem bloco de limite/decisão"
+      ],
+      "curadoria": [
+        "registrar fonte primária",
+        "registrar capa licenciada",
+        "criar ponte no Atlas / links de entrada"
+      ],
+      "classe": "LONGE"
+    },
+    {
+      "slug": "preciso-de-um-para-pintores-pedreiros",
+      "url": "/blog/preciso-de-um-para-pintores-pedreiros",
+      "titulo": "Preciso de Um Para Pintores e Pedreiros: Sua Vitrine Digital",
+      "categoria": "Plataformas",
+      "palavras": 297,
+      "secoes": 6,
+      "similaridadeMax": 0.056,
+      "similarA": "computador-sem-som-o-que-verificar",
+      "intencaoMax": 0,
+      "fonteOk": false,
+      "capaOk": false,
+      "atlasOk": false,
+      "bloqueios": [
+        "297 palavras no corpo (mínimo 700)",
+        "sem bloco de limite/decisão"
+      ],
+      "curadoria": [
+        "registrar fonte primária",
+        "registrar capa licenciada",
+        "criar ponte no Atlas / links de entrada"
+      ],
+      "classe": "LONGE"
+    },
+    {
+      "slug": "como-deixar-computador-mais-rapido",
+      "url": "/blog/como-deixar-computador-mais-rapido",
+      "titulo": "Como Deixar o Computador Mais Rápido: 7 Dicas Práticas",
+      "categoria": "Dicas",
+      "palavras": 295,
+      "secoes": 7,
+      "similaridadeMax": 0.138,
+      "similarA": "limpar-arquivos-temporarios-windows",
+      "intencaoMax": 0.067,
+      "fonteOk": false,
+      "capaOk": false,
+      "atlasOk": false,
+      "bloqueios": [
+        "295 palavras no corpo (mínimo 700)",
+        "sem bloco de limite/decisão"
+      ],
+      "curadoria": [
+        "registrar fonte primária",
+        "registrar capa licenciada",
+        "criar ponte no Atlas / links de entrada"
+      ],
+      "classe": "LONGE"
+    },
+    {
+      "slug": "distribuicoes-linux-qual-melhor-para-voce",
+      "url": "/blog/distribuicoes-linux-qual-melhor-para-voce",
+      "titulo": "Distribuições Linux: Qual a Melhor Para Você?",
+      "categoria": "Linux",
+      "palavras": 293,
+      "secoes": 6,
+      "similaridadeMax": 0.064,
+      "similarA": "como-melhorar-sinal-wifi-em-casa",
+      "intencaoMax": 0,
+      "fonteOk": false,
+      "capaOk": false,
+      "atlasOk": false,
+      "bloqueios": [
+        "293 palavras no corpo (mínimo 700)",
+        "sem bloco de limite/decisão"
+      ],
+      "curadoria": [
+        "registrar fonte primária",
+        "registrar capa licenciada",
+        "criar ponte no Atlas / links de entrada"
+      ],
+      "classe": "LONGE"
+    },
+    {
+      "slug": "como-escolher-melhor-kit-cameras-seguranca",
+      "url": "/blog/como-escolher-melhor-kit-cameras-seguranca",
+      "titulo": "Como Escolher o Melhor Kit de Câmeras de Segurança Para Sua Casa ou Comércio",
+      "categoria": "CFTV",
+      "palavras": 288,
+      "secoes": 6,
+      "similaridadeMax": 0.094,
+      "similarA": "como-escolher-uma-workstation",
+      "intencaoMax": 0.087,
+      "fonteOk": false,
+      "capaOk": false,
+      "atlasOk": true,
+      "bloqueios": [
+        "288 palavras no corpo (mínimo 700)",
+        "sem bloco de limite/decisão"
+      ],
+      "curadoria": [
+        "registrar fonte primária",
+        "registrar capa licenciada"
+      ],
+      "classe": "LONGE"
+    },
+    {
+      "slug": "seguranca-casas-praia-itapoa-guaratuba",
+      "url": "/blog/seguranca-casas-praia-itapoa-guaratuba",
+      "titulo": "Segurança em Casas de Praia: Como Proteger Seu Imóvel em Itapoá e Guaratuba",
+      "categoria": "CFTV",
+      "palavras": 282,
+      "secoes": 4,
+      "similaridadeMax": 0.077,
+      "similarA": "como-saber-quem-esta-usando-meu-wifi",
+      "intencaoMax": 0.036,
+      "fonteOk": false,
+      "capaOk": false,
+      "atlasOk": false,
+      "bloqueios": [
+        "282 palavras no corpo (mínimo 700)",
+        "sem bloco de limite/decisão"
+      ],
+      "curadoria": [
+        "registrar fonte primária",
+        "registrar capa licenciada",
+        "criar ponte no Atlas / links de entrada"
+      ],
+      "classe": "LONGE"
+    },
+    {
+      "slug": "como-usar-google-fotos-iniciantes",
+      "url": "/blog/como-usar-google-fotos-iniciantes",
+      "titulo": "Como Usar o Google Fotos em 2026: Guia Completo Para Iniciantes",
+      "categoria": "Tutoriais Domésticos",
+      "palavras": 281,
+      "secoes": 8,
+      "similaridadeMax": 0.083,
+      "similarA": "ordem-de-boot-na-bios-como-configurar",
+      "intencaoMax": 0.067,
+      "fonteOk": false,
+      "capaOk": false,
+      "atlasOk": false,
+      "bloqueios": [
+        "281 palavras no corpo (mínimo 700)",
+        "sem bloco de limite/decisão"
+      ],
+      "curadoria": [
+        "registrar fonte primária",
+        "registrar capa licenciada",
+        "criar ponte no Atlas / links de entrada"
+      ],
+      "classe": "LONGE"
+    },
+    {
+      "slug": "preciso-de-um-para-eletricistas",
+      "url": "/blog/preciso-de-um-para-eletricistas",
+      "titulo": "Preciso de Um Para Eletricistas: Como Conseguir Mais Clientes",
+      "categoria": "Plataformas",
+      "palavras": 279,
+      "secoes": 5,
+      "similaridadeMax": 0.067,
+      "similarA": "boot-uefi-ou-legacy-como-identificar",
+      "intencaoMax": 0.083,
+      "fonteOk": false,
+      "capaOk": false,
+      "atlasOk": false,
+      "bloqueios": [
+        "279 palavras no corpo (mínimo 700)",
+        "sem bloco de limite/decisão"
+      ],
+      "curadoria": [
+        "registrar fonte primária",
+        "registrar capa licenciada",
+        "criar ponte no Atlas / links de entrada"
+      ],
+      "classe": "LONGE"
+    },
+    {
+      "slug": "como-fazer-backup-fotos-windows-iniciantes",
+      "url": "/blog/como-fazer-backup-fotos-windows-iniciantes",
+      "titulo": "Como Fazer Backup de Fotos no Windows 11: 3 Métodos Seguros (Guia 2026)",
+      "categoria": "Tutoriais Domésticos",
+      "palavras": 279,
+      "secoes": 5,
+      "similaridadeMax": 0.097,
+      "similarA": "como-formatar-pc-sem-perder-arquivos",
+      "intencaoMax": 0.094,
+      "fonteOk": false,
+      "capaOk": false,
+      "atlasOk": false,
+      "bloqueios": [
+        "279 palavras no corpo (mínimo 700)",
+        "sem bloco de limite/decisão"
+      ],
+      "curadoria": [
+        "registrar fonte primária",
+        "registrar capa licenciada",
+        "criar ponte no Atlas / links de entrada"
+      ],
+      "classe": "LONGE"
+    },
+    {
+      "slug": "como-cadastrar-preciso-de-um",
+      "url": "/blog/como-cadastrar-preciso-de-um",
+      "titulo": "Como Se Cadastrar no Preciso de Um e Começar a Receber Clientes Hoje",
+      "categoria": "Plataformas",
+      "palavras": 272,
+      "secoes": 5,
+      "similaridadeMax": 0.078,
+      "similarA": "rede-wifi-nao-aparece-na-lista-o-que-verificar",
+      "intencaoMax": 0.038,
+      "fonteOk": false,
+      "capaOk": false,
+      "atlasOk": false,
+      "bloqueios": [
+        "272 palavras no corpo (mínimo 700)",
+        "sem bloco de limite/decisão"
+      ],
+      "curadoria": [
+        "registrar fonte primária",
+        "registrar capa licenciada",
+        "criar ponte no Atlas / links de entrada"
+      ],
+      "classe": "LONGE"
+    },
+    {
+      "slug": "linux-para-pc-antigo-leve-rapido",
+      "url": "/blog/linux-para-pc-antigo-leve-rapido",
+      "titulo": "Linux Para PC Antigo: 5 Distros Leves Que Ressuscitam Seu Computador",
+      "categoria": "Linux",
+      "palavras": 270,
+      "secoes": 6,
+      "similaridadeMax": 0.067,
+      "similarA": "computador-nao-conecta-na-internet-por-cabo",
+      "intencaoMax": 0.074,
+      "fonteOk": false,
+      "capaOk": false,
+      "atlasOk": false,
+      "bloqueios": [
+        "270 palavras no corpo (mínimo 700)",
+        "sem bloco de limite/decisão"
+      ],
+      "curadoria": [
+        "registrar fonte primária",
+        "registrar capa licenciada",
+        "criar ponte no Atlas / links de entrada"
+      ],
+      "classe": "LONGE"
+    },
+    {
+      "slug": "quando-trocar-computador-ou-reparar",
+      "url": "/blog/quando-trocar-computador-ou-reparar",
+      "titulo": "Quando Trocar o Computador e Quando Vale a Pena Reparar (Guia Técnico)",
+      "categoria": "Manutenção",
+      "palavras": 267,
+      "secoes": 3,
+      "similaridadeMax": 0.096,
+      "similarA": "monitor-sem-sinal-o-que-verificar",
+      "intencaoMax": 0.108,
+      "fonteOk": false,
+      "capaOk": false,
+      "atlasOk": true,
+      "bloqueios": [
+        "267 palavras no corpo (mínimo 700)",
+        "apenas 3 seções (mínimo 4)"
+      ],
+      "curadoria": [
+        "registrar fonte primária",
+        "registrar capa licenciada"
+      ],
+      "classe": "LONGE"
+    },
+    {
+      "slug": "como-recuperar-conta-google-bloqueada",
+      "url": "/blog/como-recuperar-conta-google-bloqueada",
+      "titulo": "Como Recuperar Conta Google Bloqueada ou Esquecida: Guia Oficial 2026",
+      "categoria": "Tutoriais Domésticos",
+      "palavras": 265,
+      "secoes": 7,
+      "similaridadeMax": 0.096,
+      "similarA": "como-proteger-computador-golpes-internet",
+      "intencaoMax": 0.1,
+      "fonteOk": false,
+      "capaOk": false,
+      "atlasOk": false,
+      "bloqueios": [
+        "265 palavras no corpo (mínimo 700)",
+        "sem bloco de limite/decisão"
+      ],
+      "curadoria": [
+        "registrar fonte primária",
+        "registrar capa licenciada",
+        "criar ponte no Atlas / links de entrada"
+      ],
+      "classe": "LONGE"
+    },
+    {
+      "slug": "como-recuperar-arquivos-apagados-windows",
+      "url": "/blog/como-recuperar-arquivos-apagados-windows",
+      "titulo": "Como Recuperar Arquivos Apagados no Windows 11: 3 Métodos Que Funcionam",
+      "categoria": "Tutoriais Domésticos",
+      "palavras": 257,
+      "secoes": 5,
+      "similaridadeMax": 0.129,
+      "similarA": "arquivo-corrompido-nao-abre-o-que-fazer",
+      "intencaoMax": 0.1,
+      "fonteOk": false,
+      "capaOk": false,
+      "atlasOk": false,
+      "bloqueios": [
+        "257 palavras no corpo (mínimo 700)",
+        "sem bloco de limite/decisão"
+      ],
+      "curadoria": [
+        "registrar fonte primária",
+        "registrar capa licenciada",
+        "criar ponte no Atlas / links de entrada"
+      ],
+      "classe": "LONGE"
+    },
+    {
+      "slug": "como-fazer-backup-celular-android",
+      "url": "/blog/como-fazer-backup-celular-android",
+      "titulo": "Como Fazer Backup do Celular Android Completo: Fotos, Contatos e WhatsApp (2026)",
+      "categoria": "Tutoriais Domésticos",
+      "palavras": 256,
+      "secoes": 7,
+      "similaridadeMax": 0.083,
+      "similarA": "limpar-arquivos-temporarios-windows",
+      "intencaoMax": 0.069,
+      "fonteOk": false,
+      "capaOk": false,
+      "atlasOk": false,
+      "bloqueios": [
+        "256 palavras no corpo (mínimo 700)",
+        "sem bloco de limite/decisão"
+      ],
+      "curadoria": [
+        "registrar fonte primária",
+        "registrar capa licenciada",
+        "criar ponte no Atlas / links de entrada"
+      ],
+      "classe": "LONGE"
+    },
+    {
+      "slug": "como-transferir-dados-celular-novo",
+      "url": "/blog/como-transferir-dados-celular-novo",
+      "titulo": "Como Transferir Dados Para Celular Novo: Android e iPhone (Guia 2026)",
+      "categoria": "Tutoriais Domésticos",
+      "palavras": 255,
+      "secoes": 6,
+      "similaridadeMax": 0.09,
+      "similarA": "como-migrar-arquivos-para-um-computador-novo",
+      "intencaoMax": 0.118,
+      "fonteOk": false,
+      "capaOk": false,
+      "atlasOk": false,
+      "bloqueios": [
+        "255 palavras no corpo (mínimo 700)",
+        "sem bloco de limite/decisão"
+      ],
+      "curadoria": [
+        "registrar fonte primária",
+        "registrar capa licenciada",
+        "criar ponte no Atlas / links de entrada"
+      ],
+      "classe": "LONGE"
+    },
+    {
+      "slug": "dicas-manter-notebook-funcionando-bem",
+      "url": "/blog/dicas-manter-notebook-funcionando-bem",
+      "titulo": "Dicas Para Manter o Notebook Funcionando Bem (E Evitar Assistência)",
+      "categoria": "Manutenção",
+      "palavras": 254,
+      "secoes": 6,
+      "similaridadeMax": 0.12,
+      "similarA": "como-clonar-hd-para-ssd",
+      "intencaoMax": 0.087,
+      "fonteOk": false,
+      "capaOk": false,
+      "atlasOk": false,
+      "bloqueios": [
+        "254 palavras no corpo (mínimo 700)",
+        "sem bloco de limite/decisão"
+      ],
+      "curadoria": [
+        "registrar fonte primária",
+        "registrar capa licenciada",
+        "criar ponte no Atlas / links de entrada"
+      ],
+      "classe": "LONGE"
+    },
+    {
+      "slug": "wifi-lento-como-melhorar",
+      "url": "/blog/wifi-lento-como-melhorar",
+      "titulo": "Wi-Fi Lento em Casa? Veja Como Melhorar o Sinal",
+      "categoria": "Redes",
+      "palavras": 252,
+      "secoes": 5,
+      "similaridadeMax": 0.155,
+      "similarA": "como-melhorar-sinal-wifi-em-casa",
+      "intencaoMax": 0.12,
+      "fonteOk": false,
+      "capaOk": false,
+      "atlasOk": false,
+      "bloqueios": [
+        "252 palavras no corpo (mínimo 700)",
+        "sem bloco de limite/decisão"
+      ],
+      "curadoria": [
+        "registrar fonte primária",
+        "registrar capa licenciada",
+        "criar ponte no Atlas / links de entrada"
+      ],
+      "classe": "LONGE"
+    },
+    {
+      "slug": "equipe-especializada-cftv-litoral-parana",
+      "url": "/blog/equipe-especializada-cftv-litoral-parana",
+      "titulo": "Equipe Especializada em CFTV no Litoral do Paraná: Por Que Contratar Profissionais",
+      "categoria": "CFTV",
+      "palavras": 244,
+      "secoes": 3,
+      "similaridadeMax": 0.087,
+      "similarA": "testar-memoria-ram-memtest86",
+      "intencaoMax": 0.045,
+      "fonteOk": false,
+      "capaOk": false,
+      "atlasOk": false,
+      "bloqueios": [
+        "244 palavras no corpo (mínimo 700)",
+        "apenas 3 seções (mínimo 4)",
+        "sem bloco de limite/decisão"
+      ],
+      "curadoria": [
+        "registrar fonte primária",
+        "registrar capa licenciada",
+        "criar ponte no Atlas / links de entrada"
+      ],
+      "classe": "LONGE"
+    },
+    {
+      "slug": "como-trocar-senha-wifi",
+      "url": "/blog/como-trocar-senha-wifi",
+      "titulo": "Como Trocar a Senha do Wi-Fi: Passo a Passo Para Qualquer Roteador (2026)",
+      "categoria": "Tutoriais Domésticos",
+      "palavras": 242,
+      "secoes": 6,
+      "similaridadeMax": 0.1,
+      "similarA": "como-saber-quem-esta-usando-meu-wifi",
+      "intencaoMax": 0.077,
+      "fonteOk": false,
+      "capaOk": false,
+      "atlasOk": false,
+      "bloqueios": [
+        "242 palavras no corpo (mínimo 700)",
+        "sem bloco de limite/decisão"
+      ],
+      "curadoria": [
+        "registrar fonte primária",
+        "registrar capa licenciada",
+        "criar ponte no Atlas / links de entrada"
+      ],
+      "classe": "LONGE"
+    },
+    {
+      "slug": "como-instalar-aplicativos-celular-com-seguranca",
+      "url": "/blog/como-instalar-aplicativos-celular-com-seguranca",
+      "titulo": "Como Instalar Aplicativos no Celular Com Segurança: Evite Vírus e Golpes (2026)",
+      "categoria": "Tutoriais Domésticos",
+      "palavras": 241,
+      "secoes": 6,
+      "similaridadeMax": 0.093,
+      "similarA": "como-remover-virus-windows-iniciantes",
+      "intencaoMax": 0.065,
+      "fonteOk": false,
+      "capaOk": false,
+      "atlasOk": false,
+      "bloqueios": [
+        "241 palavras no corpo (mínimo 700)",
+        "sem bloco de limite/decisão"
+      ],
+      "curadoria": [
+        "registrar fonte primária",
+        "registrar capa licenciada",
+        "criar ponte no Atlas / links de entrada"
+      ],
+      "classe": "LONGE"
+    },
+    {
+      "slug": "como-bloquear-acesso-internet-criancas",
+      "url": "/blog/como-bloquear-acesso-internet-criancas",
+      "titulo": "Como Bloquear Internet em Horários Específicos: Controle Parental no Roteador (2026)",
+      "categoria": "Tutoriais Domésticos",
+      "palavras": 238,
+      "secoes": 5,
+      "similaridadeMax": 0.084,
+      "similarA": "como-instalar-impressora-windows-passo-a-passo",
+      "intencaoMax": 0.069,
+      "fonteOk": false,
+      "capaOk": false,
+      "atlasOk": false,
+      "bloqueios": [
+        "238 palavras no corpo (mínimo 700)",
+        "sem bloco de limite/decisão"
+      ],
+      "curadoria": [
+        "registrar fonte primária",
+        "registrar capa licenciada",
+        "criar ponte no Atlas / links de entrada"
+      ],
+      "classe": "LONGE"
+    },
+    {
+      "slug": "como-conectar-celular-tv",
+      "url": "/blog/como-conectar-celular-tv",
+      "titulo": "Como Conectar o Celular na TV: 4 Formas Que Funcionam em 2026 (Com e Sem Cabo)",
+      "categoria": "Tutoriais Domésticos",
+      "palavras": 235,
+      "secoes": 5,
+      "similaridadeMax": 0.079,
+      "similarA": "computador-sem-som-o-que-verificar",
+      "intencaoMax": 0.069,
+      "fonteOk": false,
+      "capaOk": false,
+      "atlasOk": false,
+      "bloqueios": [
+        "235 palavras no corpo (mínimo 700)",
+        "sem bloco de limite/decisão"
+      ],
+      "curadoria": [
+        "registrar fonte primária",
+        "registrar capa licenciada",
+        "criar ponte no Atlas / links de entrada"
+      ],
+      "classe": "LONGE"
+    },
+    {
+      "slug": "como-organizar-arquivos-windows-iniciantes",
+      "url": "/blog/como-organizar-arquivos-windows-iniciantes",
+      "titulo": "Como Organizar Arquivos no Windows 11: Método Simples Para Achar Tudo Rápido",
+      "categoria": "Tutoriais Domésticos",
+      "palavras": 231,
+      "secoes": 6,
+      "similaridadeMax": 0.093,
+      "similarA": "ssd-nvme-nao-aparece-no-gerenciador-de-discos",
+      "intencaoMax": 0.1,
+      "fonteOk": false,
+      "capaOk": false,
+      "atlasOk": false,
+      "bloqueios": [
+        "231 palavras no corpo (mínimo 700)",
+        "sem bloco de limite/decisão"
+      ],
+      "curadoria": [
+        "registrar fonte primária",
+        "registrar capa licenciada",
+        "criar ponte no Atlas / links de entrada"
+      ],
+      "classe": "LONGE"
+    },
+    {
+      "slug": "como-mudar-nome-rede-wifi",
+      "url": "/blog/como-mudar-nome-rede-wifi",
+      "titulo": "Como Mudar o Nome da Rede Wi-Fi (SSID): Passo a Passo 2026",
+      "categoria": "Tutoriais Domésticos",
+      "palavras": 231,
+      "secoes": 5,
+      "similaridadeMax": 0.079,
+      "similarA": "rede-wifi-nao-aparece-na-lista-o-que-verificar",
+      "intencaoMax": 0.097,
+      "fonteOk": false,
+      "capaOk": false,
+      "atlasOk": false,
+      "bloqueios": [
+        "231 palavras no corpo (mínimo 700)",
+        "sem bloco de limite/decisão"
+      ],
+      "curadoria": [
+        "registrar fonte primária",
+        "registrar capa licenciada",
+        "criar ponte no Atlas / links de entrada"
+      ],
+      "classe": "LONGE"
+    },
+    {
+      "slug": "sinais-computador-com-virus",
+      "url": "/blog/sinais-computador-com-virus",
+      "titulo": "5 Sinais de Que Seu Computador Está com Vírus",
+      "categoria": "Segurança",
+      "palavras": 227,
+      "secoes": 5,
+      "similaridadeMax": 0.099,
+      "similarA": "como-saber-se-pc-tem-virus-malware",
+      "intencaoMax": 0.227,
+      "fonteOk": false,
+      "capaOk": false,
+      "atlasOk": false,
+      "bloqueios": [
+        "227 palavras no corpo (mínimo 700)",
+        "sem bloco de limite/decisão"
+      ],
+      "curadoria": [
+        "registrar fonte primária",
+        "registrar capa licenciada",
+        "criar ponte no Atlas / links de entrada"
+      ],
+      "classe": "LONGE"
+    },
+    {
+      "slug": "preciso-de-um-vagas-oportunidades",
+      "url": "/blog/preciso-de-um-vagas-oportunidades",
+      "titulo": "Vagas e Oportunidades no Preciso de Um: Como Encontrar Trabalho Rápido",
+      "categoria": "Plataformas",
+      "palavras": 224,
+      "secoes": 4,
+      "similaridadeMax": 0.049,
+      "similarA": "boot-uefi-ou-legacy-como-identificar",
+      "intencaoMax": 0.045,
+      "fonteOk": false,
+      "capaOk": false,
+      "atlasOk": false,
+      "bloqueios": [
+        "224 palavras no corpo (mínimo 700)",
+        "sem bloco de limite/decisão"
+      ],
+      "curadoria": [
+        "registrar fonte primária",
+        "registrar capa licenciada",
+        "criar ponte no Atlas / links de entrada"
+      ],
+      "classe": "LONGE"
+    },
+    {
+      "slug": "monitoramento-24-horas-como-funciona",
+      "url": "/blog/monitoramento-24-horas-como-funciona",
+      "titulo": "Monitoramento 24 Horas: Como Funciona e Por Que Você Precisa",
+      "categoria": "CFTV",
+      "palavras": 218,
+      "secoes": 3,
+      "similaridadeMax": 0.074,
+      "similarA": "quanto-custa-formatar-um-computador",
+      "intencaoMax": 0.045,
+      "fonteOk": false,
+      "capaOk": false,
+      "atlasOk": false,
+      "bloqueios": [
+        "218 palavras no corpo (mínimo 700)",
+        "apenas 3 seções (mínimo 4)",
+        "sem bloco de limite/decisão"
+      ],
+      "curadoria": [
+        "registrar fonte primária",
+        "registrar capa licenciada",
+        "criar ponte no Atlas / links de entrada"
+      ],
+      "classe": "LONGE"
+    },
+    {
+      "slug": "como-fazer-teste-velocidade-internet",
+      "url": "/blog/como-fazer-teste-velocidade-internet",
+      "titulo": "Como Testar a Velocidade da Internet Corretamente: Guia 2026",
+      "categoria": "Tutoriais Domésticos",
+      "palavras": 213,
+      "secoes": 5,
+      "similaridadeMax": 0.11,
+      "similarA": "como-melhorar-sinal-wifi-em-casa",
+      "intencaoMax": 0.12,
+      "fonteOk": false,
+      "capaOk": false,
+      "atlasOk": false,
+      "bloqueios": [
+        "213 palavras no corpo (mínimo 700)",
+        "sem bloco de limite/decisão"
+      ],
+      "curadoria": [
+        "registrar fonte primária",
+        "registrar capa licenciada",
+        "criar ponte no Atlas / links de entrada"
+      ],
+      "classe": "LONGE"
+    },
+    {
+      "slug": "como-imprimir-pdf-windows",
+      "url": "/blog/como-imprimir-pdf-windows",
+      "titulo": "Como Salvar em PDF no Windows 11 Sem Programa: Guia Completo 2026",
+      "categoria": "Tutoriais Domésticos",
+      "palavras": 210,
+      "secoes": 5,
+      "similaridadeMax": 0.083,
+      "similarA": "fila-de-impressao-travada-spooler-windows",
+      "intencaoMax": 0.1,
+      "fonteOk": false,
+      "capaOk": false,
+      "atlasOk": false,
+      "bloqueios": [
+        "210 palavras no corpo (mínimo 700)",
+        "sem bloco de limite/decisão"
+      ],
+      "curadoria": [
+        "registrar fonte primária",
+        "registrar capa licenciada",
+        "criar ponte no Atlas / links de entrada"
+      ],
+      "classe": "LONGE"
+    },
+    {
+      "slug": "como-instalar-windows-11-pc-antigo",
+      "url": "/blog/como-instalar-windows-11-pc-antigo",
+      "titulo": "Como Instalar Windows 11 em PC Antigo Sem TPM 2.0",
+      "categoria": "Windows 11",
+      "palavras": 202,
+      "secoes": 4,
+      "similaridadeMax": 0.089,
+      "similarA": "como-instalar-windows-11-do-zero",
+      "intencaoMax": 0.1,
+      "fonteOk": false,
+      "capaOk": false,
+      "atlasOk": false,
+      "bloqueios": [
+        "202 palavras no corpo (mínimo 700)",
+        "sem bloco de limite/decisão"
+      ],
+      "curadoria": [
+        "registrar fonte primária",
+        "registrar capa licenciada",
+        "criar ponte no Atlas / links de entrada"
+      ],
+      "classe": "LONGE"
+    },
+    {
+      "slug": "seguranca-digital-empresas-guia-2024",
+      "url": "/blog/seguranca-digital-empresas-guia-2024",
+      "titulo": "Segurança Digital Para Empresas: Guia Essencial",
+      "categoria": "Segurança",
+      "palavras": 199,
+      "secoes": 6,
+      "similaridadeMax": 0.075,
+      "similarA": "organizacao-de-ti-para-pequenos-escritorios",
+      "intencaoMax": 0.083,
+      "fonteOk": false,
+      "capaOk": false,
+      "atlasOk": false,
+      "bloqueios": [
+        "199 palavras no corpo (mínimo 700)",
+        "sem bloco de limite/decisão"
+      ],
+      "curadoria": [
+        "registrar fonte primária",
+        "registrar capa licenciada",
+        "criar ponte no Atlas / links de entrada"
+      ],
+      "classe": "LONGE"
+    },
+    {
+      "slug": "como-usar-rede-wifi-para-visitas",
+      "url": "/blog/como-usar-rede-wifi-para-visitas",
+      "titulo": "Como Criar Rede Wi-Fi de Visitantes: Proteja Sua Senha Principal (2026)",
+      "categoria": "Tutoriais Domésticos",
+      "palavras": 195,
+      "secoes": 4,
+      "similaridadeMax": 0.072,
+      "similarA": "como-conectar-wifi-tv-nao-conecta",
+      "intencaoMax": 0.071,
+      "fonteOk": false,
+      "capaOk": false,
+      "atlasOk": false,
+      "bloqueios": [
+        "195 palavras no corpo (mínimo 700)",
+        "sem bloco de limite/decisão"
+      ],
+      "curadoria": [
+        "registrar fonte primária",
+        "registrar capa licenciada",
+        "criar ponte no Atlas / links de entrada"
+      ],
+      "classe": "LONGE"
+    },
+    {
+      "slug": "como-atualizar-windows-corretamente",
+      "url": "/blog/como-atualizar-windows-corretamente",
+      "titulo": "Como Atualizar o Windows 11 Sem Travar: Guia Seguro 2026",
+      "categoria": "Tutoriais Domésticos",
+      "palavras": 193,
+      "secoes": 5,
+      "similaridadeMax": 0.102,
+      "similarA": "windows-update-travado-desfazendo-alteracoes",
+      "intencaoMax": 0.077,
+      "fonteOk": false,
+      "capaOk": false,
+      "atlasOk": false,
+      "bloqueios": [
+        "193 palavras no corpo (mínimo 700)",
+        "sem bloco de limite/decisão"
+      ],
+      "curadoria": [
+        "registrar fonte primária",
+        "registrar capa licenciada",
+        "criar ponte no Atlas / links de entrada"
+      ],
+      "classe": "LONGE"
+    },
+    {
+      "slug": "diagnostico-tecnico-por-que-e-pago",
+      "url": "/blog/diagnostico-tecnico-por-que-e-pago",
+      "titulo": "Por Que o Diagnóstico Técnico é Pago? Entenda de Uma Vez",
+      "categoria": "Atendimento",
+      "palavras": 181,
+      "secoes": 3,
+      "similaridadeMax": 0.106,
+      "similarA": "quanto-custa-formatar-um-computador",
+      "intencaoMax": 0.05,
+      "fonteOk": false,
+      "capaOk": false,
+      "atlasOk": false,
+      "bloqueios": [
+        "181 palavras no corpo (mínimo 700)",
+        "apenas 3 seções (mínimo 4)",
+        "sem bloco de limite/decisão"
+      ],
+      "curadoria": [
+        "registrar fonte primária",
+        "registrar capa licenciada",
+        "criar ponte no Atlas / links de entrada"
+      ],
+      "classe": "LONGE"
+    },
+    {
+      "slug": "como-fazer-print-tela-celular",
+      "url": "/blog/como-fazer-print-tela-celular",
+      "titulo": "Como Tirar Print no Celular: Android, iPhone e Print Rolando (Guia 2026)",
+      "categoria": "Tutoriais Domésticos",
+      "palavras": 181,
+      "secoes": 6,
+      "similaridadeMax": 0.063,
+      "similarA": "fila-de-impressao-travada-spooler-windows",
+      "intencaoMax": 0.04,
+      "fonteOk": false,
+      "capaOk": false,
+      "atlasOk": false,
+      "bloqueios": [
+        "181 palavras no corpo (mínimo 700)",
+        "sem bloco de limite/decisão"
+      ],
+      "curadoria": [
+        "registrar fonte primária",
+        "registrar capa licenciada",
+        "criar ponte no Atlas / links de entrada"
+      ],
+      "classe": "LONGE"
+    },
+    {
+      "slug": "windows-11-vale-a-pena-atualizar",
+      "url": "/blog/windows-11-vale-a-pena-atualizar",
+      "titulo": "Windows 11: Vale a Pena Atualizar?",
+      "categoria": "Windows 11",
+      "palavras": 178,
+      "secoes": 4,
+      "similaridadeMax": 0.076,
+      "similarA": "como-instalar-windows-11-do-zero",
+      "intencaoMax": 0.111,
+      "fonteOk": false,
+      "capaOk": false,
+      "atlasOk": false,
+      "bloqueios": [
+        "178 palavras no corpo (mínimo 700)",
+        "sem bloco de limite/decisão"
+      ],
+      "curadoria": [
+        "registrar fonte primária",
+        "registrar capa licenciada",
+        "criar ponte no Atlas / links de entrada"
+      ],
+      "classe": "LONGE"
+    },
+    {
+      "slug": "como-trocar-papel-de-parede-tela-bloqueio-windows",
+      "url": "/blog/como-trocar-papel-de-parede-tela-bloqueio-windows",
+      "titulo": "Como Trocar Papel de Parede e Tela de Bloqueio no Windows 11 (2026)",
+      "categoria": "Tutoriais Domésticos",
+      "palavras": 178,
+      "secoes": 4,
+      "similaridadeMax": 0.067,
+      "similarA": "ssd-nvme-nao-aparece-no-gerenciador-de-discos",
+      "intencaoMax": 0.091,
+      "fonteOk": false,
+      "capaOk": false,
+      "atlasOk": false,
+      "bloqueios": [
+        "178 palavras no corpo (mínimo 700)",
+        "sem bloco de limite/decisão"
+      ],
+      "curadoria": [
+        "registrar fonte primária",
+        "registrar capa licenciada",
+        "criar ponte no Atlas / links de entrada"
+      ],
+      "classe": "LONGE"
+    },
+    {
+      "slug": "configurar-email-outlook-office-365",
+      "url": "/blog/configurar-email-outlook-office-365",
+      "titulo": "Como Configurar Email Empresarial no Outlook 365",
+      "categoria": "Office 365",
+      "palavras": 176,
+      "secoes": 5,
+      "similaridadeMax": 0.063,
+      "similarA": "como-instalar-windows-11-do-zero",
+      "intencaoMax": 0.087,
+      "fonteOk": false,
+      "capaOk": false,
+      "atlasOk": false,
+      "bloqueios": [
+        "176 palavras no corpo (mínimo 700)",
+        "sem bloco de limite/decisão"
+      ],
+      "curadoria": [
+        "registrar fonte primária",
+        "registrar capa licenciada",
+        "criar ponte no Atlas / links de entrada"
+      ],
+      "classe": "LONGE"
+    },
+    {
+      "slug": "phishing-como-identificar-golpes",
+      "url": "/blog/phishing-como-identificar-golpes",
+      "titulo": "Phishing: Como Identificar e Evitar Golpes por Email",
+      "categoria": "Segurança",
+      "palavras": 176,
+      "secoes": 3,
+      "similaridadeMax": 0.1,
+      "similarA": "como-proteger-computador-golpes-internet",
+      "intencaoMax": 0.074,
+      "fonteOk": false,
+      "capaOk": false,
+      "atlasOk": false,
+      "bloqueios": [
+        "176 palavras no corpo (mínimo 700)",
+        "apenas 3 seções (mínimo 4)"
+      ],
+      "curadoria": [
+        "registrar fonte primária",
+        "registrar capa licenciada",
+        "criar ponte no Atlas / links de entrada"
+      ],
+      "classe": "LONGE"
+    },
+    {
+      "slug": "como-bloquear-numero-celular",
+      "url": "/blog/como-bloquear-numero-celular",
+      "titulo": "Como Bloquear Número de Telemarketing no Celular: Android e iPhone (2026)",
+      "categoria": "Tutoriais Domésticos",
+      "palavras": 175,
+      "secoes": 5,
+      "similaridadeMax": 0.067,
+      "similarA": "permissoes-de-camera-no-windows",
+      "intencaoMax": 0.034,
+      "fonteOk": false,
+      "capaOk": false,
+      "atlasOk": false,
+      "bloqueios": [
+        "175 palavras no corpo (mínimo 700)",
+        "sem bloco de limite/decisão"
+      ],
+      "curadoria": [
+        "registrar fonte primária",
+        "registrar capa licenciada",
+        "criar ponte no Atlas / links de entrada"
+      ],
+      "classe": "LONGE"
+    },
+    {
+      "slug": "office-365-guia-completo-empresas",
+      "url": "/blog/office-365-guia-completo-empresas",
+      "titulo": "Office 365 Para Empresas: Guia Completo",
+      "categoria": "Office 365",
+      "palavras": 163,
+      "secoes": 3,
+      "similaridadeMax": 0.066,
+      "similarA": "organizacao-de-ti-para-pequenos-escritorios",
+      "intencaoMax": 0.087,
+      "fonteOk": false,
+      "capaOk": false,
+      "atlasOk": false,
+      "bloqueios": [
+        "163 palavras no corpo (mínimo 700)",
+        "apenas 3 seções (mínimo 4)",
+        "sem bloco de limite/decisão"
+      ],
+      "curadoria": [
+        "registrar fonte primária",
+        "registrar capa licenciada",
+        "criar ponte no Atlas / links de entrada"
+      ],
+      "classe": "LONGE"
+    },
+    {
+      "slug": "office-365-vs-office-tradicional",
+      "url": "/blog/office-365-vs-office-tradicional",
+      "titulo": "Office 365 vs Office Tradicional: Qual Escolher?",
+      "categoria": "Office 365",
+      "palavras": 147,
+      "secoes": 3,
+      "similaridadeMax": 0.064,
+      "similarA": "quanto-custa-formatar-um-computador",
+      "intencaoMax": 0.053,
+      "fonteOk": false,
+      "capaOk": false,
+      "atlasOk": false,
+      "bloqueios": [
+        "147 palavras no corpo (mínimo 700)",
+        "apenas 3 seções (mínimo 4)",
+        "sem bloco de limite/decisão"
+      ],
+      "curadoria": [
+        "registrar fonte primária",
+        "registrar capa licenciada",
+        "criar ponte no Atlas / links de entrada"
+      ],
+      "classe": "LONGE"
+    }
+  ]
+}

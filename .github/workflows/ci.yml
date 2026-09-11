@@ -71,7 +71,7 @@ jobs:
             echo '```text'
           } >> "$GITHUB_STEP_SUMMARY"
           status=0
-          for gate in audit:seo check:content-discovery check:sitemap-source check:robots; do
+          for gate in audit:seo check:content-discovery check:sitemap-source check:robots check:promocao-index; do
             saida="$(npm run --silent "$gate" 2>&1)" || status=1
             {
               echo "### $gate"

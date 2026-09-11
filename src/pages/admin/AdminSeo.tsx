@@ -13,6 +13,7 @@ import { GscSnapshotPanel } from "@/components/admin/GscSnapshotPanel";
 import { GscInventarioPanel } from "@/components/admin/GscInventarioPanel";
 import { SeoHealthcheckPanel } from "@/components/admin/SeoHealthcheckPanel";
 import { InterlinkSuggestionsPanel } from "@/components/admin/InterlinkSuggestionsPanel";
+import { PromocaoIndexPanel } from "@/components/admin/PromocaoIndexPanel";
 import { DominioDnsPanel } from "@/components/admin/DominioDnsPanel";
 import auditoriaAfirmacoes from "@/data/trustClaimsAudit.json";
 
@@ -251,6 +252,10 @@ export default function AdminSeo() {
 
       <div className="mt-6">
         <InterlinkSuggestionsPanel />
+      </div>
+
+      <div className="mt-6">
+        <PromocaoIndexPanel />
       </div>
 
 
