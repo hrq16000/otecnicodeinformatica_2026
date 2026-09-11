@@ -1124,7 +1124,7 @@ export const ENRIQUECIMENTO_1: Record<string, EnriquecimentoConteudo> = {
       },
     ],
   },
-  "/problemas/computador-lento-curitiba": {
+  "/problemas/computador-lento": {
     respostaRapida:
       "Computador lento é sintoma, não diagnóstico. O primeiro passo é observar quando a demora acontece e medir armazenamento, memória, processador, temperatura e programas em segundo plano.",
     tabelaDiagnostica: {
@@ -1147,6 +1147,18 @@ export const ENRIQUECIMENTO_1: Record<string, EnriquecimentoConteudo> = {
           { titulo: "Defina o critério de sucesso", desc: "Compare o mesmo fluxo antes e depois: boot, abertura de programa e tarefa principal. Sem métrica, “ficou melhor” pode ser apenas impressão." },
           { titulo: "Formate somente com motivo", desc: "Reinstalar pode corrigir corrupção persistente, mas não resolve fonte, memória, temperatura ou armazenamento instável." },
         ],
+      },
+    ],
+    fontes: [
+      {
+        titulo: "Microsoft Support — Dicas para melhorar o desempenho do PC no Windows",
+        url: "https://support.microsoft.com/pt-BR/Windows/Experience/performance-optimization/tips-to-improve-pc-performance-in-windows",
+        nota: "Sustenta a verificação de armazenamento, aplicativos de inicialização, atualizações e uso de recursos antes de concluir que há falha de hardware.",
+      },
+      {
+        titulo: "Microsoft Support — Configurar aplicativos de inicialização no Windows",
+        url: "https://support.microsoft.com/en-us/windows/experience/startup-boot/configure-startup-applications-in-windows",
+        nota: "Explica como revisar os programas que iniciam junto com o sistema, sem alterar entradas desconhecidas por tentativa.",
       },
     ],
   },
