@@ -69,7 +69,7 @@ export const CLUSTER_PROBLEMAS: ClusterProblema[] = [
     slug: "wifi-instavel",
     path: "/problemas/wifi-instavel",
     titulo: "Wi-Fi caindo ou lento em parte da casa ou do escritório",
-    metaTitle: "Wi-Fi caindo ou lento: causas e o que checar | O Técnico de Informática",
+    metaTitle: "Wi-Fi cai ou fica lento: causas e o que verificar | O Técnico",
     metaDescription:
       "Wi-Fi que cai, fica lento em alguns cômodos ou desconecta sozinho quase nunca é problema do plano. Veja as causas reais, o que testar antes e quando chamar técnico.",
     resumo:
@@ -176,7 +176,7 @@ export const CLUSTER_PROBLEMAS: ClusterProblema[] = [
     slug: "tela-azul",
     path: "/problemas/tela-azul",
     titulo: "Tela azul no Windows: o que o erro está dizendo",
-    metaTitle: "Tela azul no Windows: causas, o que anotar e como resolver | O Técnico de Informática",
+    metaTitle: "Tela azul no Windows: o que fazer antes de reiniciar | O Técnico",
     metaDescription:
       "Tela azul travando o computador? O código do erro aponta a origem: memória, driver, disco ou energia. Veja o que anotar antes de reiniciar e quando o reparo compensa.",
     resumo:
@@ -289,7 +289,7 @@ export const CLUSTER_PROBLEMAS: ClusterProblema[] = [
     slug: "arquivos-apagados",
     path: "/problemas/arquivos-apagados",
     titulo: "Arquivos apagados ou disco que não abre: o que fazer agora",
-    metaTitle: "Arquivos apagados ou HD que não abre: primeiros passos | O Técnico de Informática",
+    metaTitle: "Arquivos apagados: o que fazer antes de recuperar | O Técnico",
     metaDescription:
       "Apagou arquivos, formatou por engano ou o HD parou de abrir? O que você faz na primeira hora define a chance de recuperação. Veja o que evitar e como funciona a avaliação.",
     resumo:
@@ -497,7 +497,7 @@ export const CLUSTER_PROBLEMAS: ClusterProblema[] = [
     slug: "notebook-nao-carrega",
     path: "/problemas/notebook-nao-carrega",
     titulo: "Notebook conectado na tomada e a bateria não carrega",
-    metaTitle: "Notebook não carrega: causas e o que testar | O Técnico de Informática",
+    metaTitle: "Notebook não carrega: causas e testes seguros | O Técnico",
     metaDescription:
       "Notebook ligado na tomada que não carrega pode ser fonte, conector, bateria ou placa. Veja como identificar cada caso, o que testar sozinho e o que evita gasto errado.",
     resumo:
@@ -601,7 +601,7 @@ export const CLUSTER_PROBLEMAS: ClusterProblema[] = [
     slug: "hd-fazendo-barulho",
     path: "/problemas/hd-fazendo-barulho",
     titulo: "HD fazendo barulho: clique, estalo ou zumbido no disco",
-    metaTitle: "HD fazendo barulho: clique, estalo e risco de perder dados | O Técnico de Informática",
+    metaTitle: "HD fazendo barulho: quando parar de usar | O Técnico",
     metaDescription:
       "Clique repetido, estalo ou zumbido vindo do HD é sinal mecânico e urgente. Entenda cada ruído, o que fazer imediatamente e o que destrói a chance de recuperar os arquivos.",
     resumo:
@@ -710,7 +710,7 @@ export const CLUSTER_PROBLEMAS: ClusterProblema[] = [
     slug: "notebook-molhado",
     path: "/problemas/notebook-molhado",
     titulo: "Notebook molhado: o que fazer nos primeiros minutos",
-    metaTitle: "Notebook molhado com água ou café: o que fazer agora | O Técnico de Informática",
+    metaTitle: "Notebook molhado: o que fazer agora | O Técnico",
     metaDescription:
       "Derramou líquido no notebook? Os primeiros minutos decidem o custo do reparo. Veja o que desligar, o que nunca fazer (arroz e secador) e quando o caso é de bancada.",
     resumo:
@@ -820,7 +820,7 @@ export const CLUSTER_PROBLEMAS: ClusterProblema[] = [
     slug: "computador-nao-da-imagem",
     path: "/problemas/computador-nao-da-imagem",
     titulo: "Computador liga mas não aparece imagem no monitor",
-    metaTitle: "Computador liga e não dá imagem: causas e o que testar | O Técnico de Informática",
+    metaTitle: "PC liga, mas não dá imagem: o que verificar | O Técnico",
     metaDescription:
       "Gabinete liga, coolers giram e o monitor fica preto ou em “sem sinal”. Veja como separar monitor, cabo, memória, placa de vídeo e fonte antes de trocar qualquer peça.",
     resumo:
@@ -938,7 +938,7 @@ export const CLUSTER_PROBLEMAS: ClusterProblema[] = [
     slug: "cheiro-de-queimado",
     path: "/problemas/cheiro-de-queimado",
     titulo: "Cheiro de queimado no computador, fonte ou carregador",
-    metaTitle: "Cheiro de queimado no computador: o que fazer imediatamente | O Técnico de Informática",
+    metaTitle: "Cheiro de queimado: desligue computador e carregador | O Técnico",
     metaDescription:
       "Cheiro de queimado vindo do gabinete, da fonte ou do carregador é sinal elétrico e urgente. Veja o que desligar agora, o que nunca fazer e como o diagnóstico é conduzido.",
     resumo:
@@ -1232,7 +1232,7 @@ export const CLUSTER_PROBLEMAS: ClusterProblema[] = [
     slug: "computador-esquentando",
     path: "/problemas/computador-esquentando",
     titulo: "Computador ou notebook esquentando demais",
-    metaTitle: "Computador esquentando muito: causas e o que fazer | O Técnico de Informática",
+    metaTitle: "Computador esquentando: causas e o que fazer | O Técnico",
     metaDescription:
       "Ventoinha acelerada, base do notebook quente e queda de desempenho em jogos ou vídeo indicam problema térmico. Veja as causas, o que medir antes e qual manutenção resolve.",
     resumo:
@@ -1465,7 +1465,7 @@ export const CLUSTER_PROBLEMAS: ClusterProblema[] = [
     slug: "teclado-notebook-nao-funciona",
     path: "/problemas/teclado-notebook-nao-funciona",
     titulo: "Teclado do notebook não funciona ou falha algumas teclas",
-    metaTitle: "Teclado do notebook não funciona: causas e o que testar | O Técnico de Informática",
+    metaTitle: "Teclado do notebook falha: causas e o que testar | O Técnico",
     metaDescription:
       "Teclas que não respondem, letra repetida ou teclado morto depois de líquido? Veja como separar falha de software, flat solto e dano físico antes de trocar a peça.",
     resumo:
