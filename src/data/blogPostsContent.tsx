@@ -3383,37 +3383,42 @@ docker run -d --name db --network minha-rede postgres
   },
 
   "seguranca-digital-empresas-guia-2024": {
-    title: "Segurança Digital Para Empresas: Guia Essencial",
-    excerpt: "Firewall, antivírus corporativo, backup e políticas.",
-    date: "2024-01-08",
-    readTime: "15 min",
+    title: "Segurança digital para pequenas empresas: controles que priorizar",
+    excerpt: "Um roteiro de proteção de contas, dados, dispositivos e continuidade para empresas sem equipe de segurança dedicada.",
+    date: "2026-09-11",
+    readTime: "12 min",
     category: "Segurança",
     content: (
       <>
-        <p className="lead">Empresas são alvos cada vez mais frequentes de ataques cibernéticos. <strong>PMEs são as mais vulneráveis</strong> porque geralmente não investem em segurança. Veja o mínimo necessário.</p>
+        <p className="lead">Segurança digital em empresa pequena não começa por comprar uma ferramenta. Começa por saber quais contas controlam o negócio, onde os arquivos críticos ficam, quem pode alterar configurações e como a operação volta se uma máquina falhar. Nenhuma medida elimina todo risco; controles combinados reduzem o impacto e tornam incidentes mais detectáveis.</p>
 
-        <h2>1. Firewall Configurado</h2>
-        <p>O firewall do Windows deve estar ativo em todos os computadores. Para empresas maiores, um firewall dedicado (hardware) no roteador é recomendado.</p>
+        <h2>Os quatro ativos que precisam de responsável</h2>
+        <ul>
+          <li><strong>E-mail e identidade:</strong> conta que recupera senhas, recebe cobranças e autoriza acessos.</li>
+          <li><strong>Dados:</strong> arquivos de clientes, sistema de gestão, documentos fiscais e cópias de segurança.</li>
+          <li><strong>Dispositivos:</strong> computadores, notebooks, celulares corporativos, roteador e armazenamento.</li>
+          <li><strong>Acessos de terceiros:</strong> contabilidade, sistema de gestão, suporte remoto e fornecedores.</li>
+        </ul>
 
-        <h2>2. Antivírus Corporativo</h2>
-        <p>O Windows Defender é bom para uso pessoal, mas empresas se beneficiam de soluções como Bitdefender GravityZone ou Kaspersky Small Office, que oferecem gestão centralizada.</p>
+        <h2>Controles que vêm antes de ferramentas</h2>
+        <ol>
+          <li>Use senha única e autenticação em duas etapas no e-mail, contas financeiras e painéis administrativos.</li>
+          <li>Mantenha contas de uso diário sem privilégio de administrador; conceda acesso elevado apenas quando necessário.</li>
+          <li>Defina rotina de atualização para sistema, navegador, roteador e programas críticos, sempre pelo canal oficial.</li>
+          <li>Faça cópias independentes, com retenção e restauração testada. Uma pasta sincronizada não substitui necessariamente backup.</li>
+          <li>Registre quem tem acesso a quê e remova acessos quando a função ou o contrato termina.</li>
+        </ol>
 
-        <h2>3. Backup Automatizado</h2>
-        <p>Regra 3-2-1: 3 cópias, 2 mídias diferentes, 1 fora do local. Use backup na nuvem (OneDrive, Google Workspace) + backup local em HD externo ou NAS.</p>
+        <h2>Como treinar sem criar falsa segurança</h2>
+        <p>O treinamento deve usar situações concretas: link inesperado, pedido urgente de pagamento, código de autenticação solicitado por mensagem e programa de acesso remoto oferecido por telefone. O objetivo não é culpar quem erra, mas criar uma pausa operacional: conferir o domínio, confirmar por outro canal e comunicar o responsável antes de abrir anexo ou transferir valor.</p>
 
-        <h2>4. Senhas e Autenticação</h2>
-        <p>Política de senhas fortes + autenticação em dois fatores (2FA) em todos os acessos críticos. Use gerenciadores de senha corporativos.</p>
+        <h2>Incidente: o que fazer nas primeiras horas</h2>
+        <p>Se houver arquivo criptografado, acesso remoto desconhecido ou conta comprometida, isole o equipamento da rede, preserve evidências e proteja destinos de backup. Não formate no impulso e não altere senhas na máquina possivelmente comprometida. A resposta específica a ransomware está em <Link to="/blog/ransomware-como-proteger-empresa" className="text-accent">como conter ransomware em uma pequena empresa</Link>.</p>
 
-        <h2>5. Treinamento da Equipe</h2>
-        <p>O maior risco é o fator humano. Treine funcionários para reconhecer phishing, não usar pen drives desconhecidos e não compartilhar senhas.</p>
+        <EditorialReferences slug="seguranca-digital-empresas-guia-2024" />
 
-        <h2>6. Atualizações em Dia</h2>
-        <p>Mantenha Windows, Office, navegadores e todos os softwares atualizados. Vulnerabilidades conhecidas são as mais exploradas.</p>
-
-        <div className="bg-accent/10 rounded-xl p-6 my-8">
-          <h3 className="text-accent font-bold mb-2">Segurança Para Sua Empresa</h3>
-          <p className="text-muted-foreground mb-0">Fazemos auditoria de segurança, configuração de backup, antivírus e políticas. Suporte empresarial em Curitiba.</p>
-        </div>
+        <h2>Limite e próxima decisão</h2>
+        <p>Firewall, antivírus e nuvem não substituem inventário, acesso mínimo e cópia restaurável. Se a empresa não sabe quais dados são críticos ou quem administra as contas, comece por esse mapa antes de contratar qualquer produto. Para desenhar a rotina de cópias, veja <Link to="/blog/backup-nuvem-empresas-qual-escolher" className="text-accent">como avaliar backup em nuvem para empresas</Link>.</p>
       </>
     ),
   },

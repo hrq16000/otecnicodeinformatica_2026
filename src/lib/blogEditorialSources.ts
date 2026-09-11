@@ -579,6 +579,16 @@ export const ARTICLE_SOURCE_MANIFEST: Record<string, ArticleSourceManifest> = {
     notes:
       "Reescrita material: removeu faixas fixas de idade, preço e percentual, além de exemplos de custo. A decisão passou a exigir uso real, falha identificada, suporte, compatibilidade e backup testado.",
   },
+  "seguranca-digital-empresas-guia-2024": {
+    slug: "seguranca-digital-empresas-guia-2024",
+    sources: ["cisa-upskill-checklist", "cisa-backup", "cisa-stop-ransomware"],
+    technicalReview: "reviewed",
+    factChecked: true,
+    factCheckedAt: "2026-09-11",
+    stableKnowledge: true,
+    notes:
+      "Reescrita material: retirou comparação não comprovada sobre vulnerabilidade de PMEs e recomendações de marcas. Estruturou inventário, acesso mínimo, autenticação, atualização, backup testado e resposta inicial a incidente.",
+  },
   "como-saber-se-pc-tem-virus-malware": {
     slug: "como-saber-se-pc-tem-virus-malware",
     sources: ["certbr-golpes", "cisa-stop-ransomware", "ms-tech-support-scams"],
