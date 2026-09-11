@@ -3016,34 +3016,33 @@ docker run -d --name db --network minha-rede postgres
   },
 
   "diagnostico-tecnico-por-que-e-pago": {
-    title: "Por Que o Diagnóstico Técnico é Pago? Entenda de Uma Vez",
-    excerpt: "Explicamos por que o diagnóstico tem custo, o que ele envolve e como evita prejuízos maiores.",
-    date: "2026-04-05",
+    title: "O que um diagnóstico técnico avalia antes de um reparo",
+    excerpt: "Entenda o que é verificado, quais são os limites da triagem e por que o orçamento só pode ser definido após avaliar o equipamento.",
+    date: "2026-09-11",
     readTime: "7 min",
     category: "Atendimento",
     content: (
       <>
-        <p className="lead">Muitos clientes perguntam: <strong>"Por que cobram pelo diagnóstico?"</strong>. A resposta é simples: diagnóstico técnico é um serviço especializado que exige conhecimento, ferramentas e tempo.</p>
+        <p className="lead">Diagnóstico técnico não é a troca imediata de uma peça: é a etapa que separa sintoma, causa provável e limite seguro de cada tentativa. Ele ajuda a evitar compras incompatíveis e procedimentos que ampliem a falha, mas não permite prometer solução antes de examinar o equipamento.</p>
 
         <h2>O Que Envolve um Diagnóstico</h2>
         <ul>
           <li>Testes de hardware: memória, HD/SSD, processador, placa de vídeo</li>
           <li>Análise de software: sistema operacional, drivers, malwares</li>
-          <li>Verificação de temperatura e voltagem</li>
-          <li>Identificação da causa raiz, não apenas do sintoma</li>
-          <li>Valor detalhado com opções de solução</li>
+          <li>Verificação de comportamento térmico, energia e inicialização quando aplicável</li>
+          <li>Separação entre sintoma, causa provável e testes necessários</li>
+          <li>Registro de riscos, alternativas e limites antes de qualquer reparo</li>
         </ul>
 
-        <h2>Por Que Não é Grátis?</h2>
-        <p>O diagnóstico é a parte mais importante do atendimento. Um diagnóstico errado leva a reparos desnecessários e prejuízo. O técnico usa anos de experiência e ferramentas especializadas para chegar à causa correta.</p>
-        <p><strong>Analogia:</strong> Você não espera que um médico faça exames de graça. O diagnóstico técnico segue a mesma lógica.</p>
+        <h2>O que muda depois da avaliação</h2>
+        <p>Depois da triagem, é possível explicar o que foi observado, quais opções são compatíveis e onde há incerteza. O valor final, prazo e garantia dependem da condição real, de peças, urgência e complexidade; qualquer condição comercial deve seguir a política apresentada no orçamento, não uma promessa genérica no artigo.</p>
 
-        <h2>E Se Eu Aprovar o Serviço?</h2>
-        <p>Na maioria dos casos, <strong>o valor do diagnóstico é abatido do serviço</strong>. Ou seja, se você aprovar o reparo, o diagnóstico sai "grátis" na prática.</p>
+        <h2>Antes de entregar o equipamento</h2>
+        <p>Faça backup se o computador ainda iniciar, anote senhas ou acessos que não podem ser redefinidos e descreva quando o defeito começou. Em caso de cheiro de queimado, líquido, bateria estufada ou disco com ruído mecânico, pare de usar e não faça testes repetidos.</p>
 
         <div className="bg-accent/10 rounded-xl p-6 my-8">
-          <h3 className="text-accent font-bold mb-2">Diagnóstico Profissional</h3>
-          <p className="text-muted-foreground mb-0">A partir de R$ 99,99. Atendimento a domicílio em Curitiba e região metropolitana. Valor abatido em caso de aprovação do serviço.</p>
+          <h3 className="text-accent font-bold mb-2">Próximo passo</h3>
+          <p className="text-muted-foreground mb-0">A avaliação define o caminho mais seguro e as condições aplicáveis ao caso; não substitui backup nem garante recuperação de dados.</p>
         </div>
       </>
     ),
