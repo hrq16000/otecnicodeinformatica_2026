@@ -3309,40 +3309,36 @@ docker run -d --name db --network minha-rede postgres
   },
 
   "office-365-vs-office-tradicional": {
-    title: "Office 365 vs Office Tradicional: Qual Escolher?",
-    excerpt: "Comparativo completo entre assinatura e licença perpétua.",
-    date: "2024-01-10",
+    title: "Microsoft 365 ou licença perpétua: como decidir",
+    excerpt: "Compare colaboração, administração, continuidade e custo de mudança sem depender de recursos ou preços que podem mudar.",
+    date: "2026-09-11",
     readTime: "6 min",
     category: "Office 365",
     content: (
       <>
-        <p className="lead"><strong>Assinatura mensal ou licença vitalícia?</strong> Essa é a dúvida de muitos. Vamos comparar os dois modelos.</p>
+        <p className="lead">A escolha entre serviço por assinatura e licença perpétua depende de como o software será usado, administrado e mantido. Não existe escolha universal: colaboração, acesso remoto, suporte, arquivos compartilhados e previsibilidade de custo pesam de modo diferente para cada pessoa ou empresa.</p>
 
         <h2>Office 365 (Assinatura)</h2>
         <ul>
-          <li>Pagamento mensal ou anual</li>
-          <li>Sempre na última versão</li>
-          <li>Inclui 1 TB de OneDrive</li>
-          <li>Inclui Teams, SharePoint e mais</li>
-          <li>Suporte da Microsoft incluso</li>
+          <li>Atualizações e condições ligadas ao serviço contratado.</li>
+          <li>Recursos on-line, identidade e administração centralizada conforme o plano.</li>
+          <li>Possibilidade de trabalhar com arquivos e pessoas em ambientes compartilhados.</li>
         </ul>
 
         <h2>Office Tradicional (Licença Perpétua)</h2>
         <ul>
-          <li>Pagamento único</li>
-          <li>Versão fixa — não recebe novos recursos</li>
-          <li>Sem armazenamento na nuvem incluso</li>
-          <li>Suporte limitado (5 anos de atualizações)</li>
-          <li>Não inclui Teams e serviços online</li>
+          <li>Uso vinculado a uma versão específica do aplicativo.</li>
+          <li>Menor dependência de serviços on-line para tarefas locais.</li>
+          <li>Responsabilidade de planejar compatibilidade, atualização e continuidade separadamente.</li>
         </ul>
 
-        <h2>Qual Escolher?</h2>
-        <p><strong>Para empresas:</strong> Microsoft 365 sem dúvida. A colaboração em tempo real, backup na nuvem e e-mail profissional justificam o custo mensal.</p>
-        <p><strong>Para uso pessoal básico:</strong> Se você só precisa de Word e Excel esporadicamente, a licença perpétua pode bastar. Mas considere que ela fica desatualizada.</p>
+        <h2>Roteiro de decisão</h2>
+        <ol><li>Liste quem precisa colaborar e quais arquivos não podem ficar presos a uma pessoa.</li><li>Defina quem administra contas, recuperação e permissões.</li><li>Confirme requisitos de programas, sistemas e dispositivos existentes.</li><li>Compare o custo total de mudança, treinamento e continuidade — não apenas a licença.</li></ol>
+        <p>Serviço em nuvem não equivale automaticamente a backup. Se os dados são críticos, mantenha rotina de cópia e restauração testada, independentemente do modelo escolhido.</p>
 
         <div className="bg-accent/10 rounded-xl p-6 my-8">
-          <h3 className="text-accent font-bold mb-2">Precisa de Ajuda Para Decidir?</h3>
-          <p className="text-muted-foreground mb-0">Analisamos seu uso e indicamos o melhor plano. Instalação e configuração profissional.</p>
+          <h3 className="text-accent font-bold mb-2">Limite da comparação</h3>
+          <p className="text-muted-foreground mb-0">Planos, recursos, preços e suporte mudam. Confirme a documentação oficial antes de comprar ou migrar.</p>
         </div>
       </>
     ),
