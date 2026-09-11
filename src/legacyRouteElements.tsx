@@ -71,6 +71,7 @@ const SejaParceiro = lazyPagina(() => import("./pages/SejaParceiro"));
 const DiretorioProfissionais = lazyPagina(() => import("./pages/profissionais/DiretorioProfissionais"));
 const PerfilProfissional = lazyPagina(() => import("./pages/profissionais/PerfilProfissional"));
 const CadastroParceiro = lazyPagina(() => import("./pages/profissionais/CadastroParceiro"));
+const AreaParceiro = lazyPagina(() => import("./pages/profissionais/AreaParceiro"));
 const ProfissionaisLocal = lazyPagina(() => import("./pages/profissionais/ProfissionaisLocal"));
 const Empresas = lazyPagina(() => import("./pages/Empresas"));
 const Atendimento = lazyPagina(() => import("./pages/Atendimento"));
@@ -650,6 +651,7 @@ export const legacyRouteElements: Record<string, () => React.ReactElement> = {
   "/seja-parceiro": () => <SejaParceiro />,
   "/profissionais": () => <DiretorioProfissionais />,
   "/profissionais/cadastro": () => <CadastroParceiro />,
+  "/parceiro": () => <AreaParceiro />,
   "/profissional/:slug": () => <PerfilProfissional />,
   "/profissionais/:estado": () => <ProfissionaisLocal />,
   "/profissionais/:estado/:cidade": () => <ProfissionaisLocal />,

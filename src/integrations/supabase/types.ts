@@ -1544,6 +1544,38 @@ export type Database = {
           rows_written: number
         }[]
       }
+      get_my_partner: {
+        Args: never
+        Returns: {
+          certificacoes: string[]
+          cidade: string
+          descricao: string
+          especialidades: string[]
+          estado: string
+          experiencia: string
+          formas_atendimento: string[]
+          foto_url: string
+          horario: string
+          id: string
+          nome_profissional: string
+          plano_expira_em: string
+          regioes_atendidas: string[]
+          servicos: string[]
+          site_url: string
+          slug: string
+          status: Database["public"]["Enums"]["partner_status"]
+          whatsapp: string
+        }[]
+      }
+      get_my_partner_photos: {
+        Args: never
+        Returns: {
+          id: string
+          legenda: string
+          ordem: number
+          url: string
+        }[]
+      }
       has_role: {
         Args: {
           _role: Database["public"]["Enums"]["app_role"]
