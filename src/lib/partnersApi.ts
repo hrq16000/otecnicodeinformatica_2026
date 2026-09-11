@@ -100,6 +100,15 @@ export async function getPartnerBySlug(slug: string): Promise<Partner | null> {
   return data as unknown as Partner;
 }
 
+/** Bucket privado: caminhos internos viram URL assinada de leitura. */
+export const PARTNER_BUCKET = "parceiros";
+
+export async function resolvePhotoUrl(url: string): Promise<string | null> {
+  if (/^https?:\/\//i.test(url)) return url;
+  const { data } = await supabase.storage.from(PARTNER_BUCKET).createSignedUrl(url, 60 * 60);
+  return data?.signedUrl ?? null;
+}
+
 export async function getPartnerPhotos(partnerId: string): Promise<PartnerPhoto[]> {
   const { data, error } = await supabase
     .from("partner_photos")
@@ -107,7 +116,12 @@ export async function getPartnerPhotos(partnerId: string): Promise<PartnerPhoto[
     .eq("partner_id", partnerId)
     .order("ordem", { ascending: true });
   if (error || !data) return [];
-  return data as PartnerPhoto[];
+
+  const fotos = data as PartnerPhoto[];
+  const resolvidas = await Promise.all(
+    fotos.map(async (f) => ({ ...f, url: (await resolvePhotoUrl(f.url)) ?? "" })),
+  );
+  return resolvidas.filter((f) => f.url);
 }
 
 /** Configuração comercial do programa — administrada, nunca hardcoded na UI. */
