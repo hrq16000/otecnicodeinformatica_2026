@@ -62,6 +62,8 @@ const Index = () => {
         <HeroTriagem />
         <TrustStrip />
         <ContextosBento />
+        <EncontreSuaSolucao />
+        <CondicoesAtendimento />
         <FaixaFotografica />
         {/* FAQ no HTML servido: paridade obrigatória com o FAQPage JSON-LD. */}
         <HomeFaqSsr />
