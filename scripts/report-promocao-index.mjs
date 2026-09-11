@@ -71,7 +71,8 @@ const artigos = [...extrairArtigos("src/data/blogPostsContent.tsx"), ...extrairA
 const textoVisivel = (raw) =>
   raw
     .replace(/<[^>]*>/g, " ") // tags JSX
-    .replace(/\{[^{}]*\}/g, " ") // expressões
+    .replace(/\{[^{}]{0,120}\}/g, " ") // expressões curtas (JSX)
+    .replace(/[{}]/g, " ")
     .replace(/\s+/g, " ")
     .trim();
 

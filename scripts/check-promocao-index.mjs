@@ -63,7 +63,7 @@ const artigos = new Map(
 );
 
 const textoVisivel = (raw) =>
-  raw.replace(/<[^>]*>/g, " ").replace(/\{[^{}]*\}/g, " ").replace(/\s+/g, " ").trim();
+  raw.replace(/<[^>]*>/g, " ").replace(/\{[^{}]{0,120}\}/g, " ").replace(/[{}]/g, " ").replace(/\s+/g, " ").trim();
 
 const srcFontes = read("src/lib/blogEditorialSources.ts");
 const srcCapas = read("src/lib/blogEditorialCovers.ts");
