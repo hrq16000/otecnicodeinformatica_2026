@@ -26,6 +26,7 @@ import { SCHEMA_SLOTS, SLOT_PRIORITY, useJsonLdSlot } from "@/lib/jsonLdSlots";
 import { siteConfig, whatsappLink, absoluteUrl } from "@/lib/siteConfig";
 import { trackPageView, trackCTAClick } from "@/lib/analytics";
 import { SERVICOS_CORE } from "@/lib/servicosCore";
+import { ECOSSISTEMAS } from "@/lib/encontreSolucao";
 
 const FAQS = [
   {
