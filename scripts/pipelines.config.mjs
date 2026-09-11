@@ -27,6 +27,7 @@ export const verifySteps = [
   { name: 'Claims de confiança (E-E-A-T)', script: 'check:trust-claims' },
   { name: 'Inventário de afirmações em dia', script: 'check:afirmacoes' },
   { name: 'Governança editorial', script: 'check:editorial-governance' },
+  { name: 'Política de promoção (noindex → index)', script: 'check:promocao-index' },
   { name: 'Links internos', script: 'check:internal-links' },
   { name: 'Qualidade dos interlinks', script: 'check:interlinks-quality' },
   { name: 'Catraca anti-órfãs', script: 'check:orphan-ratchet' },
