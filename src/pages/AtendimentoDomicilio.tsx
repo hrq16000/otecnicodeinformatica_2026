@@ -588,7 +588,7 @@ const AtendimentoDomicilio = () => {
         />
 
         <TrustSection />
-        <CTASection />
+        <CTASection intent="location" subject="atendimento em domicílio em Curitiba e região" />
         <PilarEditorialLinks pilar="/atendimento-domicilio" />
         <BlocosLocal4c path="/atendimento-domicilio" />
       </main>

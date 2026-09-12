@@ -412,7 +412,7 @@ const BlogPost = () => {
           </div>
         </section>
 
-        <CTASection />
+        <CTASection intent="guide" subject={post.title} />
       </main>
       <Footer />
     </div>

@@ -332,7 +332,7 @@ export const ArrumarPCCityTemplate = ({ data }: { data: CityData }) => {
           </div>
         </section>
 
-        <CTASection />
+        <CTASection intent="service" subject={`suporte remoto em ${data.cidade}`} />
       </main>
 
       <Footer />

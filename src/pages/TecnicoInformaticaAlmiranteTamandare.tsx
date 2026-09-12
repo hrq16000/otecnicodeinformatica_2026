@@ -217,7 +217,7 @@ const TecnicoInformaticaAlmiranteTamandare = () => {
         <LocalFAQSection title="Perguntas Frequentes - Almirante Tamandaré" faqs={localFaqs} />
         <ReviewsGrid filter={{ city: "Almirante Tamandaré" }} title="Avaliações de clientes em Almirante Tamandaré" />
         <TrustSection />
-        <CTASection />
+        <CTASection intent="location" subject="Almirante Tamandaré" />
       </main>
       <BlocoInteligencia />
       <InterlinkingBlock />

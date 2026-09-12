@@ -220,7 +220,7 @@ const TecnicoInformaticaFazendaRioGrande = () => {
         <LocalFAQSection title="Perguntas Frequentes - Fazenda Rio Grande" faqs={localFaqs} />
         <ReviewsGrid filter={{ city: "Fazenda Rio Grande" }} title="Avaliações de clientes em Fazenda Rio Grande" />
         <TrustSection />
-        <CTASection />
+        <CTASection intent="location" subject="Fazenda Rio Grande" />
       </main>
       <BlocoInteligencia />
       <InterlinkingBlock />

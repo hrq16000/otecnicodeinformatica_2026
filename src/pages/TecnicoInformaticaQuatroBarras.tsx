@@ -128,7 +128,7 @@ const TecnicoInformaticaQuatroBarras = () => {
         <LocalFAQSection title="Perguntas Frequentes - Quatro Barras" faqs={localFaqs} />
         <ReviewsGrid filter={{ city: "Quatro Barras" }} title="Avaliações de clientes em Quatro Barras" />
         <TrustSection />
-        <CTASection />
+        <CTASection intent="location" subject="Quatro Barras" />
       </main>
       <BlocoInteligencia />
       <InterlinkingBlock />

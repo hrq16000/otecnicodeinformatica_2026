@@ -722,7 +722,7 @@ const PrecosEPoliticas = ({ path = "/precos-e-politicas" }: PrecosEPoliticasProp
           </div>
         </section>
 
-        <CTASection />
+        <CTASection intent="service" subject="modalidade, condições e valor do atendimento" />
       </main>
       <RealImageSection imageKey="bancadaTecnica" secondaryImageKey="ferramentas" layout="duo" caption="Bancada técnica profissional equipada" secondaryCaption="Ferramentas especializadas para cada serviço" />
       <InterlinkingBlock />

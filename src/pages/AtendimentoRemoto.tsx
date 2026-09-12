@@ -406,7 +406,7 @@ const AtendimentoRemoto = () => {
         </section>
 
         <TrustSection />
-        <CTASection />
+        <CTASection intent="service" subject="atendimento remoto" />
         <BlocosLocal4c path="/atendimento-remoto" />
         <BlocosRedes4e path="/atendimento-remoto" />
       </main>

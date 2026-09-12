@@ -327,7 +327,7 @@ const ArrumarPC = () => {
           </div>
         </section>
 
-        <CTASection />
+        <CTASection intent="service" subject="suporte remoto para computador ou notebook" />
       </main>
 
       <Footer />

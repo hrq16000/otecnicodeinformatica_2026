@@ -133,7 +133,7 @@ const TecnicoInformaticaPiraquara = () => {
         <LocalFAQSection title="Perguntas Frequentes - Piraquara" faqs={localFaqs} />
         <ReviewsGrid filter={{ city: "Piraquara" }} title="Avaliações de clientes em Piraquara" />
         <TrustSection />
-        <CTASection />
+        <CTASection intent="location" subject="Piraquara" />
       </main>
       <BlocoInteligencia />
       <InterlinkingBlock />

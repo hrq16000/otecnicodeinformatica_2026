@@ -128,7 +128,7 @@ const TecnicoInformaticaCampoMagro = () => {
         <LocalFAQSection title="Perguntas Frequentes - Campo Magro" faqs={localFaqs} />
         <ReviewsGrid filter={{ city: "Campo Magro" }} title="Avaliações de clientes em Campo Magro" />
         <TrustSection />
-        <CTASection />
+        <CTASection intent="location" subject="Campo Magro" />
       </main>
       <BlocoInteligencia />
       <InterlinkingBlock />

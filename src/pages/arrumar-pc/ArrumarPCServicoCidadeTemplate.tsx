@@ -237,7 +237,7 @@ export const ArrumarPCServicoCidadeTemplate = ({ servico, cidade }: Props) => {
           </div>
         </section>
 
-        <CTASection />
+        <CTASection intent="service" subject={`${servico.nome} em ${cidade.cidade}`} />
       </main>
 
       <Footer />
