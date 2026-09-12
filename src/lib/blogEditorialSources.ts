@@ -213,10 +213,23 @@ export const EDITORIAL_SOURCES: Record<string, EditorialSource> = {
     title: "Protect yourself from tech support scams",
     publisher: "Microsoft Support",
     url: "https://support.microsoft.com/en-us/office/protect-yourself-from-tech-support-scams",
-    accessedAt: "2026-07-12",
+    accessedAt: "2026-09-12",
     sourceType: "official",
     supports: [
       "Golpes de falso suporte técnico usam táticas de intimidação; não ligar para números exibidos em alertas.",
+    ],
+  },
+  "ms-phishing-protection": {
+    id: "ms-phishing-protection",
+    title: "Protect yourself from phishing",
+    publisher: "Microsoft Support",
+    url: "https://support.microsoft.com/en-us/security/protect-yourself-from-phishing",
+    accessedAt: "2026-09-12",
+    sourceType: "official",
+    supports: [
+      "Mensagens de phishing podem usar urgência, ameaças, domínios semelhantes e links ou anexos inesperados.",
+      "Ao suspeitar, o acesso deve ser feito por endereço ou canal oficial, sem usar o link da mensagem.",
+      "Após exposição de credenciais, deve-se registrar o incidente, trocar senhas reutilizadas, ativar autenticação multifator e avisar a instituição envolvida.",
     ],
   },
   "ms-windows-security-overview": {
@@ -260,8 +273,8 @@ export const EDITORIAL_SOURCES: Record<string, EditorialSource> = {
     id: "certbr-golpes",
     title: "Cartilha de Segurança para Internet — Golpes",
     publisher: "CERT.br / NIC.br",
-    url: "https://cartilha.cert.br/",
-    accessedAt: "2026-07-12",
+    url: "https://cartilha.cert.br/fasciculos/",
+    accessedAt: "2026-09-12",
     sourceType: "official",
     supports: [
       "Como identificar sinais de golpes e fraudes on-line e como agir ao suspeitar de um golpe.",
@@ -434,13 +447,12 @@ export const ARTICLE_SOURCE_MANIFEST: Record<string, ArticleSourceManifest> = {
   },
   "como-proteger-computador-golpes-internet": {
     slug: "como-proteger-computador-golpes-internet",
-    sources: [],
+    sources: ["certbr-golpes", "ms-phishing-protection", "ms-tech-support-scams"],
     technicalReview: "reviewed",
     factChecked: true,
-    factCheckedAt: "2026-08-12",
-    stableKnowledge: true,
+    factCheckedAt: "2026-09-12",
     notes:
-      "Reescrito na Onda 5C. Explicita que HTTPS/cadeado não atesta idoneidade do site e que código de verificação em duas etapas nunca deve ser repassado. Sem citar aplicativo de terceiros como solução, sem estatística de golpes e sem promessa de recuperação de valores.",
+      "Revisão aprofundada em 2026-09-12: resposta proporcional a mensagem, clique, credencial, acesso remoto e fraude financeira; preservação de evidências e canais oficiais priorizados. Fontes primárias visíveis, sem aplicativo de terceiros, estatística ou promessa de recuperação de valores.",
   },
   "como-configurar-roteador-wifi-iniciantes": {
     slug: "como-configurar-roteador-wifi-iniciantes",
