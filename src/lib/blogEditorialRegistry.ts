@@ -282,14 +282,14 @@ const WAVE_5C: EditorialApproval[] = [
     status: "approved",
     authorType: "organization",
     authorId: INSTITUTIONAL_AUTHOR.id,
-    reviewedAt: "2026-08-12",
-    approvedAt: "2026-08-12",
+    reviewedAt: "2026-09-12",
+    approvedAt: "2026-09-12",
     imageOrigin: "licensed",
     imageLicense: "CC0 1.0",
     imageAttribution:
       "Foto: Packer1028 (Wikimedia Commons), CC0 1.0 — https://commons.wikimedia.org/wiki/File:Computer_virus_scam.jpg",
     notes:
-      "Reescrita integral na Onda 5C; fact-check registrado em blogEditorialSources.ts; capa é fotografia real de domínio público (CC0), sem IA.",
+      "Reescrita integral na Onda 5C e aprofundada em 2026-09-12; matriz de exposição, resposta proporcional, fontes oficiais visíveis e FAQ técnico; capa é fotografia real de domínio público (CC0), sem IA.",
   },
 ];
 

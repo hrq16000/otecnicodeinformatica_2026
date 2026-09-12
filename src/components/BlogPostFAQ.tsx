@@ -127,6 +127,28 @@ const PILOT_FAQ: Record<string, FAQItem[]> = {
       a: "Desconfie de contagem regressiva, sirene, pedido para ligar para um número ou pagar imediatamente. Não clique no alerta nem conceda acesso remoto. Feche o navegador pelo Gerenciador de Tarefas e verifique o arquivo ou o sistema pela ferramenta de segurança já instalada.",
     },
   ],
+  "como-proteger-computador-golpes-internet": [
+    {
+      q: "Só clicar em um link significa que o computador foi invadido?",
+      a: "Não necessariamente. O risco depende do que ocorreu depois: download executado, permissão concedida, credencial informada ou exploração de software desatualizado. Feche a página, confira downloads, extensões e permissões e atualize o navegador; se instalou algo ou concedeu acesso remoto, trate o computador como possivelmente comprometido.",
+    },
+    {
+      q: "Cadeado e HTTPS provam que o site é verdadeiro?",
+      a: "Não. HTTPS protege a conexão com aquele endereço, mas uma página falsa também pode usar certificado válido. Confira o domínio e, para serviços sensíveis, abra o aplicativo oficial ou digite o endereço conhecido em vez de seguir o link recebido.",
+    },
+    {
+      q: "O que fazer se digitei minha senha em uma página falsa?",
+      a: "Use outro dispositivo confiável para trocar a senha, encerrar sessões e revisar dispositivos, aplicativos conectados e dados de recuperação. Se a senha era repetida, altere também as outras contas. Ative autenticação multifator e nunca aprove uma solicitação que você não iniciou.",
+    },
+    {
+      q: "Preciso formatar o computador depois de conceder acesso remoto?",
+      a: "Não tome essa decisão automaticamente. Desconecte a rede, preserve os dados do incidente e identifique o programa e as alterações feitas. Uma avaliação pode indicar remoção controlada ou, quando não é possível estabelecer confiança no sistema, reinstalação após backup seguro.",
+    },
+    {
+      q: "Posso informar um código de verificação para o suporte?",
+      a: "Não entregue código recebido por SMS, aplicativo ou e-mail e não aprove notificações inesperadas. Esses códigos autorizam acesso ou operação em seu nome. Encerre o contato e procure a instituição por um canal oficial obtido fora da mensagem.",
+    },
+  ],
   // ── Onda 10D — satélites de partida, curto e BIOS (sem preço, sem prazo).
   "botao-power-nao-funciona-jump-start-placa-mae": [
     {

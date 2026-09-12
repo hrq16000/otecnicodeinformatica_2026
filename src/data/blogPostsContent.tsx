@@ -3026,24 +3026,39 @@ docker run -d --name db --network minha-rede postgres
     excerpt:
       "Phishing, sites clonados, falso suporte técnico e extensões maliciosas: como reconhecer cada padrão, o que verificar antes de clicar e o que fazer nas primeiras horas depois de cair em um golpe.",
     date: "2026-08-12",
-    readTime: "12 min",
+    readTime: "14 min",
     category: "Segurança",
     content: (
       <>
-        <p className="lead">Golpe digital raramente depende de uma falha técnica sofisticada. Ele depende de pressa, medo e distração. Quase todos os casos que chegam para atendimento seguem o mesmo roteiro: uma mensagem urgente, um link, uma página parecida com a original e uma senha digitada em lugar errado.</p>
+        <p className="lead">Golpes digitais costumam explorar pressa, medo e distração. A resposta correta depende do que realmente aconteceu: receber uma mensagem não é o mesmo que digitar uma senha, instalar um programa ou autorizar uma transferência. Primeiro identifique a exposição; depois contenha o risco sem apagar evidências.</p>
 
         <h2>Os quatro formatos que mais aparecem</h2>
         <h3>Phishing por e-mail, SMS ou aplicativo de mensagem</h3>
-        <p>Mensagem que imita banco, operadora, loja ou órgão público, com aviso de dívida, entrega pendente, benefício disponível ou bloqueio de conta. O objetivo é levar a um formulário de login idêntico ao real. Instituições sérias não pedem senha, código de aplicativo ou dados de cartão por link.</p>
+        <p>Mensagem que imita banco, operadora, loja ou órgão público, com aviso de dívida, entrega pendente, benefício disponível ou bloqueio de conta. O objetivo pode ser levar a um formulário de login parecido com o real. Não use o link recebido para informar senha, código de verificação ou dados de cartão: abra o aplicativo ou o endereço oficial por conta própria.</p>
 
         <h3>Falso suporte técnico</h3>
-        <p>Pop-up ou ligação afirmando que o computador está infectado e oferecendo ajuda imediata, geralmente pedindo instalação de um programa de acesso remoto. A partir daí, quem está do outro lado enxerga a tela, acessa o banco aberto e instala o que quiser. Nenhum fabricante de sistema ou de antivírus liga para o usuário oferecendo limpeza.</p>
+        <p>Pop-up ou ligação não solicitada afirma que o computador está infectado e oferece ajuda imediata, geralmente pedindo a instalação de um programa de acesso remoto. Esse pedido permite que outra pessoa veja a tela e opere a sessão. Encerre o contato e procure o suporte pelo canal publicado no produto ou no site oficial.</p>
 
         <h3>Site clonado em anúncio de busca</h3>
-        <p>O endereço aparece no topo dos resultados como anúncio, com layout idêntico ao original e um domínio levemente diferente. É o formato mais eficaz contra quem confia no primeiro link. Para serviços sensíveis, digitar o endereço ou usar um favorito salvo elimina o problema.</p>
+        <p>O endereço pode aparecer como anúncio, com visual parecido com o original e domínio levemente diferente. Posição no resultado não comprova identidade. Para serviços sensíveis, abra o aplicativo oficial, use um favorito conferido anteriormente ou digite o endereço conhecido.</p>
 
         <h3>Extensão e programa "gratuito"</h3>
-        <p>Conversor de arquivos, acelerador de downloads, tradutor, cupom automático. Uma extensão com permissão de "ler e alterar dados em todos os sites" enxerga tudo o que é digitado, inclusive senhas e códigos de verificação.</p>
+        <p>Conversor de arquivos, acelerador de downloads, tradutor ou cupom automático pode pedir permissões muito maiores do que sua função exige. Uma extensão autorizada a ler e alterar dados em todos os sites tem acesso amplo ao conteúdo das páginas; confira desenvolvedor, permissões e necessidade antes de instalar.</p>
+
+        <h2>Primeiro descubra o que foi exposto</h2>
+        <p>Uma mensagem suspeita é um alerta, não prova de invasão. Use o evento mais grave que realmente ocorreu para escolher a resposta:</p>
+        <table>
+          <thead>
+            <tr><th>O que aconteceu</th><th>Risco principal</th><th>Próxima ação</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Só recebeu ou abriu a mensagem</td><td>Engano ainda não consumado</td><td>Não responda nem use os contatos da mensagem; registre o remetente e reporte como fraude</td></tr>
+            <tr><td>Clicou, mas não baixou nem informou dados</td><td>Redirecionamento, download ou permissão inesperada</td><td>Feche a página e confira downloads, extensões e permissões concedidas; mantenha navegador e sistema atualizados</td></tr>
+            <tr><td>Digitou senha ou código</td><td>Tomada da conta</td><td>Em outro dispositivo confiável, troque a senha, encerre sessões e revise recuperação e autenticação</td></tr>
+            <tr><td>Instalou programa ou concedeu acesso remoto</td><td>Alteração do computador e observação da sessão</td><td>Desconecte a rede, pare de usar contas sensíveis nessa máquina e faça uma avaliação do que foi instalado ou alterado</td></tr>
+            <tr><td>Pagou ou enviou dados bancários/documentos</td><td>Fraude financeira ou de identidade</td><td>Contate imediatamente a instituição pelo canal oficial e preserve mensagens, recibos, horários e destinatários</td></tr>
+          </tbody>
+        </table>
 
         <h2>O que verificar antes de clicar</h2>
         <ol>
@@ -3051,34 +3066,38 @@ docker run -d --name db --network minha-rede postgres
           <li><strong>Passe o cursor sobre o link antes de clicar.</strong> No computador, o endereço real aparece no canto da tela; no celular, um toque longo mostra o destino.</li>
           <li><strong>Ignore o cadeado como prova de idoneidade.</strong> Ele indica conexão criptografada, não que o site seja legítimo. Páginas de golpe também têm cadeado.</li>
           <li><strong>Estranhe a urgência.</strong> Prazo de poucos minutos, ameaça de bloqueio e pedido de sigilo são sinais de engenharia social, não de processo real.</li>
-          <li><strong>Confirme por outro canal.</strong> Fechou a mensagem e ligou para o número oficial do cartão? O suposto problema costuma desaparecer.</li>
+          <li><strong>Confirme por outro canal.</strong> Feche a mensagem e procure o telefone no cartão, no aplicativo ou no site digitado por você. Não use o número exibido no alerta.</li>
         </ol>
 
         <h2>As proteções que mais reduzem o estrago</h2>
         <h3>Senha única por serviço</h3>
-        <p>O maior multiplicador de dano é a senha repetida: um vazamento em um site pequeno abre e-mail, banco e redes sociais. Um gerenciador de senhas resolve isso sem exigir memória — basta uma frase longa como senha mestra.</p>
+        <p>Senha repetida amplia o dano: a credencial capturada em um serviço pode ser testada em outros. Um gerenciador ajuda a criar uma senha diferente para cada conta; a senha mestra também precisa ser longa, exclusiva e protegida.</p>
 
         <h3>Verificação em duas etapas onde ela importa</h3>
-        <p>Comece pelo e-mail principal, porque é ele que recupera todo o resto. Aplicativo autenticador é preferível ao código por SMS, que fica exposto a golpes de troca de chip. E o código nunca deve ser repassado a ninguém, por nenhum motivo.</p>
+        <p>Comece pelo e-mail principal, porque ele costuma recuperar outras contas. Ative o método mais forte oferecido pelo serviço e guarde os meios de recuperação. Não compartilhe códigos nem aprove solicitações inesperadas: o segundo fator também pode ser capturado por uma página falsa ou por pressão durante uma ligação.</p>
 
         <h3>Conta de uso diário sem privilégio de administrador</h3>
-        <p>É a medida menos usada e uma das mais eficazes em computador doméstico. Ela transforma uma instalação silenciosa em um pedido de senha visível.</p>
+        <p>Separar a conta administrativa da conta usada no dia a dia adiciona uma confirmação para alterações que exigem privilégio. Isso reduz a superfície de dano, mas não impede que o próprio usuário autorize uma instalação maliciosa.</p>
 
         <h3>Sistema, navegador e roteador atualizados</h3>
-        <p>Grande parte dos ataques em massa depende de falha antiga. Vale lembrar do roteador, que quase nunca recebe atenção: painel com senha de fábrica é porta aberta. O procedimento está em <Link to="/blog/como-configurar-roteador-wifi-iniciantes">como configurar um roteador do zero</Link>.</p>
+        <p>Atualizações corrigem falhas conhecidas e reduzem o risco de uma página explorar software desatualizado. Inclua navegador, sistema e roteador; troque a senha administrativa padrão do equipamento. O procedimento está em <Link to="/blog/como-configurar-roteador-wifi-iniciantes">como configurar um roteador do zero</Link>.</p>
 
         <h3>Backup em cópia separada</h3>
-        <p>É o que transforma um ataque de ransomware em transtorno em vez de perda definitiva. A cópia precisa ficar desconectada quando não estiver em uso — disco externo permanentemente plugado é criptografado junto.</p>
+        <p>Uma cópia separada e testada limita a perda quando arquivos são apagados ou criptografados. Um disco sempre conectado pode ser alcançado pelo mesmo incidente; mantenha pelo menos uma cópia isolada e confirme periodicamente que ela pode ser restaurada.</p>
 
-        <h2>Caiu no golpe: as primeiras horas</h2>
+        <h2>Se houve exposição: as primeiras horas</h2>
         <ol>
-          <li><strong>Desconecte da rede</strong> se houve acesso remoto ou instalação de programa desconhecido. Isso interrompe o que estiver em andamento.</li>
+          <li><strong>Preserve os dados do incidente.</strong> Antes de apagar a conversa, guarde capturas, endereço do site, remetente, horário, comprovante e nome do programa instalado. Não inclua senhas nem publique documentos pessoais.</li>
+          <li><strong>Desconecte da rede</strong> se houve acesso remoto, instalação desconhecida ou atividade ainda em andamento. Só clicar em uma página, sem baixar ou autorizar nada, não exige desligar toda a rede.</li>
           <li><strong>Troque as senhas de outro dispositivo confiável</strong>, começando pelo e-mail e depois pelos serviços financeiros. Trocar senha na máquina possivelmente comprometida apenas entrega a nova.</li>
-          <li><strong>Encerre as sessões ativas</strong> nas contas principais — todos os grandes serviços têm essa opção — e revise dispositivos autorizados.</li>
-          <li><strong>Comunique o banco</strong> pelos canais oficiais e registre o ocorrido. Contestação tem prazo, e o registro conta.</li>
-          <li><strong>Revise regras de encaminhamento do e-mail.</strong> É comum o invasor criar uma regra que envia cópia de tudo e some com os avisos de segurança.</li>
+          <li><strong>Encerre as sessões ativas</strong> nas contas afetadas, revise dispositivos e métodos de recuperação e troque a mesma senha onde ela tiver sido reutilizada.</li>
+          <li><strong>Comunique o banco imediatamente</strong> pelo aplicativo, número do cartão ou outro canal oficial se houve pagamento, entrega de dados financeiros ou acesso ao internet banking.</li>
+          <li><strong>Revise o e-mail afetado.</strong> Confira encaminhamento, filtros, aplicativos conectados, dispositivos e alterações nos dados de recuperação.</li>
           <li><strong>Verifique o computador antes de voltar a usá-lo para assuntos sensíveis.</strong> Programa de acesso remoto instalado por terceiros precisa ser localizado e removido.</li>
         </ol>
+
+        <h2>Quando interromper o procedimento por conta própria</h2>
+        <p>Pare se a outra pessoa ainda controla a tela, se surgiram transações desconhecidas, se a conta é corporativa, se arquivos foram criptografados ou se você não consegue determinar o que foi instalado. Não continue entrando em banco ou e-mail pelo computador suspeito. Preserve as evidências, use um dispositivo confiável para os contatos urgentes e envolva a instituição financeira ou o responsável de TI conforme o caso.</p>
 
         <h2>O que não ajuda</h2>
         <ul>
@@ -3087,6 +3106,8 @@ docker run -d --name db --network minha-rede postgres
           <li>Formatar imediatamente sem preservar arquivos e sem entender o que aconteceu; parte da evidência se perde.</li>
           <li>Trocar apenas a senha do serviço afetado e manter a mesma combinação nos demais.</li>
         </ul>
+
+        <EditorialReferences slug="como-proteger-computador-golpes-internet" />
 
         <h2>Quando pedir ajuda técnica</h2>
         <p>Acesso remoto concedido a desconhecido, arquivos que passaram a abrir com extensão estranha, navegador redirecionando sozinho e programas que reaparecem depois de removidos são cenários em que a limpeza superficial não resolve. Nesses casos, a <Link to="/servicos/remocao-de-virus">remoção de vírus e malware</Link> parte de uma varredura do que foi alterado no sistema; se houver arquivos criptografados ou apagados, vale verificar antes o que ainda pode ser preservado em <Link to="/servicos/recuperacao-de-dados">recuperação de dados</Link>. Para escolher a proteção que fica no computador depois da limpeza, veja <Link to="/blog/como-escolher-um-bom-antivirus">como escolher um antivírus</Link>.</p>
