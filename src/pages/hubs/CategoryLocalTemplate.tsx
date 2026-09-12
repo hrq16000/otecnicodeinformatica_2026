@@ -413,7 +413,7 @@ export const CategoryHub = ({ categoryId }: { categoryId: CategoryId }) => {
               className="inline-flex items-center gap-2 mt-5 bg-[hsl(var(--whatsapp))] hover:bg-[hsl(var(--whatsapp-hover))] text-white px-5 py-3 rounded-lg font-semibold"
             >
               <MessageCircle className="h-4 w-4" />
-              Falar com técnico agora
+              Solicitar avaliação técnica
             </a>
           </div>
         </section>
