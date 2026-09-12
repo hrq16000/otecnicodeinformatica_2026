@@ -8,8 +8,9 @@ import { SkeletonList } from "@/components/SkeletonSection";
 import { AnimatedSection } from "@/components/AnimatedSection";
 import { CalculadoraDeslocamento } from "@/components/CalculadoraDeslocamento";
 import { BlocosB2b4d } from "@/components/b2b/BlocosB2b4d";
+import { Button } from "@/components/ui/button";
 import { whatsappLink } from "@/lib/siteConfig";
-import { trackPageView } from "@/lib/analytics";
+import { trackPageView, trackCTAClick } from "@/lib/analytics";
 import { AlertTriangle, Building2, Network, Printer, ShieldCheck } from "lucide-react";
 
 /**
@@ -94,6 +95,7 @@ const Empresas = () => {
     ]
       .filter(Boolean)
       .join("\n");
+    trackCTAClick("whatsapp", "empresas_solicitar_atendimento");
     window.location.assign(whatsappLink(msg));
   };
 
@@ -124,12 +126,9 @@ const Empresas = () => {
               A triagem empresarial é diferente da residencial: primeiro medimos o impacto na
               operação, depois o equipamento. Quem está parado entra na frente.
             </p>
-            <a
-              href="#solicitar"
-              className="mt-8 inline-flex min-h-12 items-center rounded-xl bg-accent px-6 font-heading font-bold text-accent-foreground"
-            >
-              Solicitar atendimento empresarial
-            </a>
+            <Button asChild size="lg" className="mt-8">
+              <a href="#solicitar">Organizar atendimento empresarial</a>
+            </Button>
           </div>
         </section>
 
@@ -214,13 +213,9 @@ const Empresas = () => {
                   <textarea required rows={5} maxLength={1200} className={`${inputClass} py-3`} {...campo("problema")} />
                 </label>
 
-                <button
-                  type="submit"
-                  data-cta-location="empresas_solicitar_atendimento"
-                  className="inline-flex min-h-12 items-center rounded-xl bg-accent px-6 font-heading font-bold text-accent-foreground"
-                >
-                  Enviar solicitação pelo WhatsApp
-                </button>
+                <Button type="submit" size="lg" data-cta-location="empresas_solicitar_atendimento">
+                  Enviar cenário da empresa
+                </Button>
               </form>
             </div>
 
