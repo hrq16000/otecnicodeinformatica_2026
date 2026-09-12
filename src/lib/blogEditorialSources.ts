@@ -82,6 +82,24 @@ export const ALLOWED_SOURCE_HOSTS = [
 // FONTES CONSULTADAS (URLs confirmadas em 2026-07-12).
 // ─────────────────────────────────────────────────────────────
 export const EDITORIAL_SOURCES: Record<string, EditorialSource> = {
+  "ms-outlook-add-account": {
+    id: "ms-outlook-add-account",
+    title: "Add an email account to Outlook for Windows",
+    publisher: "Microsoft Support",
+    url: "https://support.microsoft.com/en-us/outlook/getstarted/add-an-email-account-to-outlook-for-windows",
+    accessedAt: "2026-09-11",
+    sourceType: "official",
+    supports: ["Adição de contas e configuração avançada de e-mail no Outlook."],
+  },
+  "ms-m365-admin-roles": {
+    id: "ms-m365-admin-roles",
+    title: "About administrator roles in the Microsoft 365 admin center",
+    publisher: "Microsoft Learn",
+    url: "https://learn.microsoft.com/en-us/microsoft-365/admin/add-users/about-admin-roles?view=o365-worldwide",
+    accessedAt: "2026-09-11",
+    sourceType: "official",
+    supports: ["Funções administrativas e uso de MFA para administradores no Microsoft 365."],
+  },
   "ms-win11-requirements": {
     id: "ms-win11-requirements",
     title: "Windows 11 requirements",
@@ -560,6 +578,78 @@ export const ARTICLE_SOURCE_MANIFEST: Record<string, ArticleSourceManifest> = {
     factCheckedAt: "2026-07-12",
     notes:
       "Fact-check concluído: sincronização não equivale sempre a backup, cópia no mesmo disco não protege contra falha do disco, sem garantia de recuperação e estratégia de múltiplas cópias apresentada como referência (não regra única). Restauração precisa ser testada. Fontes CISA/NIST.",
+  },
+  "manutencao-preventiva-computador-guia": {
+    slug: "manutencao-preventiva-computador-guia",
+    sources: ["cisa-backup", "nist-sp-800-34", "cisa-stop-ransomware"],
+    technicalReview: "reviewed",
+    factChecked: true,
+    factCheckedAt: "2026-09-11",
+    stableKnowledge: true,
+    notes:
+      "Reescrita material: removeu percentuais e intervalos universais sem evidência; separa rotina preventiva de diagnóstico, reforça restauração testada e define limites para sinais térmicos, elétricos e mecânicos. Fontes CISA/NIST para continuidade e cópias de segurança.",
+  },
+  "erros-comuns-upgrade-computador": {
+    slug: "erros-comuns-upgrade-computador",
+    sources: ["ms-win11-requirements", "cisa-backup"],
+    technicalReview: "reviewed",
+    factChecked: true,
+    factCheckedAt: "2026-09-11",
+    stableKnowledge: true,
+    notes:
+      "Revisão material: removeu recomendação universal de reinstalação e alegações de potência, priorizando manual, formato, protocolo, energia, espaço e preservação de dados.",
+  },
+  "quando-trocar-computador-ou-reparar": {
+    slug: "quando-trocar-computador-ou-reparar",
+    sources: ["ms-win11-requirements", "cisa-backup"],
+    technicalReview: "reviewed",
+    factChecked: true,
+    factCheckedAt: "2026-09-11",
+    stableKnowledge: true,
+    notes:
+      "Reescrita material: removeu faixas fixas de idade, preço e percentual, além de exemplos de custo. A decisão passou a exigir uso real, falha identificada, suporte, compatibilidade e backup testado.",
+  },
+  "seguranca-digital-empresas-guia-2024": {
+    slug: "seguranca-digital-empresas-guia-2024",
+    sources: ["cisa-upskill-checklist", "cisa-backup", "cisa-stop-ransomware"],
+    technicalReview: "reviewed",
+    factChecked: true,
+    factCheckedAt: "2026-09-11",
+    stableKnowledge: true,
+    notes:
+      "Reescrita material: retirou comparação não comprovada sobre vulnerabilidade de PMEs e recomendações de marcas. Estruturou inventário, acesso mínimo, autenticação, atualização, backup testado e resposta inicial a incidente.",
+  },
+  "windows-11-vale-a-pena-atualizar": {
+    slug: "windows-11-vale-a-pena-atualizar",
+    sources: ["ms-win11-requirements", "ms-win11-installation-media"],
+    technicalReview: "reviewed",
+    factChecked: true,
+    factCheckedAt: "2026-09-11",
+    notes: "Reescrita material: removeu alegações de desempenho e compatibilidade genéricas; exige requisitos oficiais, backup testado e verificação de software e periféricos.",
+  },
+  "office-365-guia-completo-empresas": {
+    slug: "office-365-guia-completo-empresas",
+    sources: ["ms-m365-admin-roles", "cisa-backup"],
+    technicalReview: "reviewed",
+    factChecked: true,
+    factCheckedAt: "2026-09-11",
+    notes: "Reescrita material: retirou planos, preços e quotas; prioriza identidade, permissões, continuidade e restauração.",
+  },
+  "office-365-vs-office-tradicional": {
+    slug: "office-365-vs-office-tradicional",
+    sources: ["ms-m365-admin-roles", "cisa-backup"],
+    technicalReview: "reviewed",
+    factChecked: true,
+    factCheckedAt: "2026-09-11",
+    notes: "Comparação reescrita sem recursos e condições fixas; decisão por colaboração, administração e continuidade.",
+  },
+  "configurar-email-outlook-office-365": {
+    slug: "configurar-email-outlook-office-365",
+    sources: ["ms-outlook-add-account", "ms-m365-admin-roles"],
+    technicalReview: "reviewed",
+    factChecked: true,
+    factCheckedAt: "2026-09-11",
+    notes: "Procedimento reescrito com conta individual, MFA, teste e limite para dados de configuração.",
   },
   "como-saber-se-pc-tem-virus-malware": {
     slug: "como-saber-se-pc-tem-virus-malware",
