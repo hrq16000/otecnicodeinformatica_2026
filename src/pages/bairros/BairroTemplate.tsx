@@ -512,7 +512,9 @@ export const BairroTemplate = ({ data }: BairroTemplateProps) => {
         </AnimatedSection>
 
         <AnimatedSection><TrustSection /></AnimatedSection>
-        <AnimatedSection><CTASection /></AnimatedSection>
+        <AnimatedSection>
+          <CTASection intent="location" subject={`${data.nome}, ${data.cidade}`} />
+        </AnimatedSection>
       </main>
       <BlocoInteligencia compact />
       <Footer />

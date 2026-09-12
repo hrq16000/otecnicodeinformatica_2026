@@ -244,7 +244,7 @@ const FAQ = () => {
           </div>
         </section>
 
-        <CTASection />
+        <CTASection intent="problem" subject="dúvida sobre atendimento, valores ou modalidade" />
       </main>
       <RealImageSection imageKey="diagnostico" caption="Diagnóstico técnico profissional com equipamentos especializados" />
       <BlocoInteligencia />

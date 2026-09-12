@@ -329,7 +329,7 @@ export const CategoryLocalTemplate = ({ categoryId, localSlug }: Props) => {
           </div>
         </section>
 
-        <CTASection />
+        <CTASection intent="location" subject={`${category.titlePrefix} em ${cityLabel}`} />
       </main>
 
       <Footer />
@@ -418,7 +418,7 @@ export const CategoryHub = ({ categoryId }: { categoryId: CategoryId }) => {
           </div>
         </section>
 
-        <CTASection />
+        <CTASection intent="location" subject={`${category.titlePrefix} em Curitiba e região`} />
       </main>
       <Footer />
     </div>
