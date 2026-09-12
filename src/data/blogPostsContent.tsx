@@ -344,7 +344,7 @@ unzip backup.zip               # Descompacta ZIP`}</code></pre>
     title: "Como Instalar Ubuntu do Zero: Guia Completo 2026",
     excerpt: "Passo a passo desde o pendrive bootável até a configuração pós-instalação.",
     date: "2026-04-13",
-    readTime: "14 min",
+    readTime: "12 min",
     category: "Linux",
     content: (
       <>
@@ -3026,7 +3026,7 @@ docker run -d --name db --network minha-rede postgres
     excerpt:
       "Phishing, sites clonados, falso suporte técnico e extensões maliciosas: como reconhecer cada padrão, o que verificar antes de clicar e o que fazer nas primeiras horas depois de cair em um golpe.",
     date: "2026-08-12",
-    readTime: "12 min",
+    readTime: "14 min",
     category: "Segurança",
     content: (
       <>
