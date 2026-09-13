@@ -76,6 +76,8 @@ export const ALLOWED_SOURCE_HOSTS = [
   "www.nvmexpress.org",
   "fcc.gov",
   "www.fcc.gov",
+  "memtest.org",
+  "www.memtest.org",
 ] as const;
 
 // ─────────────────────────────────────────────────────────────
@@ -401,6 +403,30 @@ export const EDITORIAL_SOURCES: Record<string, EditorialSource> = {
     sourceType: "official",
     supports: [
       "Limpar cache remove dados temporários; limpar dados remove configurações e dados do aplicativo.",
+    ],
+  },
+  "memtest86plus-readme": {
+    id: "memtest86plus-readme",
+    title: "Memtest86+ — README and troubleshooting",
+    publisher: "Memtest86+ Project",
+    url: "https://memtest.org/readme",
+    accessedAt: "2026-09-13",
+    sourceType: "official",
+    supports: [
+      "O Memtest86+ é um testador independente do sistema operacional, compatível com inicialização BIOS e UEFI.",
+      "Os erros observados durante o teste podem envolver memória, processador, caches ou placa-mãe; o programa não determina sozinho a peça causadora.",
+    ],
+  },
+  "memtest86plus-official": {
+    id: "memtest86plus-official",
+    title: "Memtest86+ — The Open-Source Memory Testing Tool",
+    publisher: "Memtest86+ Project",
+    url: "https://memtest.org/",
+    accessedAt: "2026-09-13",
+    sourceType: "official",
+    supports: [
+      "O Memtest86+ é gratuito, de código aberto e executado de forma independente para testar memória em arquiteturas compatíveis.",
+      "Memtest86+ e o produto MemTest86 da PassMark são projetos diferentes.",
     ],
   },
 };
@@ -819,13 +845,12 @@ export const ARTICLE_SOURCE_MANIFEST: Record<string, ArticleSourceManifest> = {
   },
   "testar-memoria-ram-memtest86": {
     slug: "testar-memoria-ram-memtest86",
-    sources: [],
+    sources: ["memtest86plus-readme", "memtest86plus-official"],
     technicalReview: "reviewed",
     factChecked: true,
-    factCheckedAt: "2026-08-25",
-    stableKnowledge: true,
+    factCheckedAt: "2026-09-13",
     notes:
-      "Revisão concluída (Onda 10C): motivo de testar fora do sistema operacional, criação da mídia inicializável, número de passagens, critério de que um único erro já caracteriza defeito, isolamento entre módulo e slot e influência de perfis XMP/EXPO. Conhecimento técnico estável — sem fonte visível.",
+      "Revisão aprofundada em 2026-09-13: separação entre detecção de erro e identificação da peça, linha de base sem XMP/EXPO, isolamento controlado entre módulo e slot, limites de um resultado sem erros e fontes oficiais visíveis do Memtest86+.",
   },
   "botao-power-nao-funciona-jump-start-placa-mae": {
     slug: "botao-power-nao-funciona-jump-start-placa-mae",

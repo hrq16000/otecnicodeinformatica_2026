@@ -239,6 +239,28 @@ const PILOT_FAQ: Record<string, FAQItem[]> = {
       a: "Quando recupera a versão esperada no destino separado, o arquivo abre e mantém conteúdo e permissões necessárias, o tempo fica registrado e nenhuma pasta crítica prevista no escopo fica de fora. Qualquer exceção deve gerar correção e novo teste.",
     },
   ],
+  "testar-memoria-ram-memtest86": [
+    {
+      q: "Um erro no Memtest86+ confirma que o módulo de RAM está defeituoso?",
+      a: "Confirma que houve instabilidade no caminho testado, mas não identifica sozinho a peça. Memória, slot, contato, perfil XMP ou EXPO, controladora do processador e placa-mãe participam do teste. Repita em configuração padrão e isole um módulo por vez no mesmo slot antes de condenar a RAM.",
+    },
+    {
+      q: "Quantas passagens do Memtest86+ devo executar?",
+      a: "Complete ao menos uma sequência integral para a triagem inicial. Se o problema é raro, aparece apenas quente ou não se repetiu, prolongue o teste e repita nas mesmas condições em que o defeito ocorre. Anote versão, configuração, módulo, slot e passagem; tempo sozinho não substitui isolamento controlado.",
+    },
+    {
+      q: "Zero erros prova que a memória está boa?",
+      a: "Não. É um resultado favorável apenas nas condições testadas. Falhas intermitentes podem depender de temperatura, carga, perfil de frequência, combinação de módulos ou outro componente. Se os travamentos continuarem, preserve os registros e investigue armazenamento, drivers, fonte, temperatura e processador.",
+    },
+    {
+      q: "Devo desativar XMP ou EXPO antes do teste?",
+      a: "Sim para estabelecer uma linha de base nas configurações padrão do firmware. Se o teste passa no padrão e falha somente com o perfil, o resultado aponta para instabilidade da configuração ou da combinação de componentes, não comprova por si só defeito físico do módulo.",
+    },
+    {
+      q: "Como diferenciar módulo defeituoso de slot com problema?",
+      a: "Teste cada módulo separadamente no mesmo slot de referência e depois um módulo que passou nos demais slots. Um módulo que falha em slots diferentes concentra a suspeita nele; módulos diferentes que falham apenas no mesmo slot apontam para slot, placa, contato ou controladora. Desligue e retire a energia antes de mover qualquer módulo.",
+    },
+  ],
   "impressora-offline-como-resolver": [
     {
       q: "O que significa a impressora aparecer offline?",
