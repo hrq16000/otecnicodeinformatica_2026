@@ -669,14 +669,14 @@ const WAVE_10C: EditorialApproval[] = [
     status: "approved",
     authorType: "organization",
     authorId: INSTITUTIONAL_AUTHOR.id,
-    reviewedAt: "2026-08-25",
-    approvedAt: "2026-08-25",
+    reviewedAt: "2026-09-13",
+    approvedAt: "2026-09-13",
     imageOrigin: "licensed",
     imageLicense: "CC BY-SA 4.0",
     imageAttribution:
       "Foto: Fastily (Wikimedia Commons), CC BY-SA 4.0 — https://commons.wikimedia.org/wiki/File:Memtest86%2B_2019-08-09.jpg",
     notes:
-      "Satélite escrito do zero na Onda 10C; fact-check registrado em blogEditorialSources.ts; capa é fotografia real licenciada, sem IA.",
+      "Revisão aprofundada em 2026-09-13 com protocolo de isolamento, limites diagnósticos, FAQ técnica e fontes primárias visíveis; capa é fotografia real licenciada, sem IA.",
   },
 ];
 

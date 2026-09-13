@@ -12550,16 +12550,16 @@ bcdboot C:\\Windows /s S: /f UEFI`}</code></pre>
   "testar-memoria-ram-memtest86": {
     title: "Como testar a memória RAM com Memtest86+ (passo a passo)",
     excerpt:
-      "Quando testar a memória, como criar a mídia de inicialização, quantas passagens fazer e como interpretar erros para saber qual módulo trocar.",
+      "Quando testar a memória, como criar a mídia de inicialização e como isolar módulo, slot e configuração sem trocar peças por tentativa.",
     date: "2026-08-25",
-    readTime: "11 min",
+    readTime: "13 min",
     category: "Procedimentos Técnicos",
     content: (
       <>
         <p className="lead">Memória com defeito é uma das causas mais frustrantes de instabilidade: o computador funciona bem por horas e depois trava, corrompe um arquivo ou mostra uma tela azul diferente da anterior. Testar a memória custa tempo e não custa peça — por isso vem antes de comprar qualquer coisa.</p>
 
         <h2>Resposta curta</h2>
-        <p>Crie um pendrive inicializável com o <strong>Memtest86+</strong>, inicie o computador por ele e deixe rodar pelo menos <strong>uma passagem completa</strong> — idealmente quatro, ou a noite inteira. <strong>Um único erro já é defeito.</strong> Não existe "erro tolerável" em memória.</p>
+        <p>Execute o <strong>Memtest86+</strong> por uma sequência completa, registre o resultado e, se aparecer qualquer erro, repita em configuração padrão para isolar módulo, slot e perfil de memória. Um erro não deve ser ignorado, mas também não prova sozinho que o módulo está defeituoso: o teste envolve processador, caches, controladora e placa-mãe. Zero erros é um resultado favorável nas condições testadas, não uma garantia contra falhas intermitentes.</p>
 
         <h2>Quando vale testar</h2>
         <ul>
@@ -12569,32 +12569,53 @@ bcdboot C:\\Windows /s S: /f UEFI`}</code></pre>
           <li>Travamentos aleatórios sem relação com o programa em uso.</li>
           <li>Depois de instalar memória nova ou ativar perfil XMP/EXPO no Setup.</li>
         </ul>
-        <p>Não vale testar quando o sintoma é lentidão constante sob carga: isso é <em>falta</em> de memória, não defeito — o critério está em <Link to="/blog/memoria-ram-insuficiente-sintomas" className="text-accent">memória RAM insuficiente: sintomas</Link>.</p>
+        <p>Lentidão constante sob carga, sem travamentos ou corrupção, costuma apontar primeiro para capacidade insuficiente, armazenamento ou outro gargalo. O critério está em <Link to="/blog/memoria-ram-insuficiente-sintomas" className="text-accent">memória RAM insuficiente: sintomas</Link>. Ainda assim, sintomas não fecham diagnóstico: teste quando houver instabilidade ou mudança recente na memória.</p>
 
         <h2>Por que testar fora do Windows</h2>
-        <p>Ferramentas que rodam dentro do sistema só conseguem examinar a memória que o sistema não está usando. O Memtest86+ inicia antes do Windows e assume a máquina inteira, o que permite varrer praticamente toda a memória com padrões de escrita e leitura que provocam o erro em vez de esperar por ele.</p>
+        <p>Ferramentas dentro do sistema não conseguem ocupar as regiões que o próprio sistema e seus programas estão usando. O Memtest86+ é independente do Windows e inicia por BIOS ou UEFI, o que permite aplicar padrões de escrita e leitura a uma parcela muito maior da memória. O nome deste guia se refere ao <strong>Memtest86+</strong>, projeto gratuito e de código aberto; ele não é o mesmo produto que o MemTest86 mantido pela PassMark.</p>
+
+        <h2>Antes de começar: preserve dados e crie uma linha de base</h2>
+        <ol>
+          <li><strong>Copie arquivos insubstituíveis.</strong> Memória instável pode corromper dados durante o uso normal; o teste não repara arquivos já afetados.</li>
+          <li><strong>Fotografe as configurações do firmware.</strong> Registre frequência, tensão e perfil ativo antes de alterar qualquer opção.</li>
+          <li><strong>Desative temporariamente XMP, EXPO e overclock.</strong> O primeiro resultado deve ser obtido nas configurações padrão. Depois, o perfil pode ser testado separadamente.</li>
+          <li><strong>Use alimentação estável.</strong> Não faça um teste prolongado durante tempestade ou em equipamento com cheiro de queimado, superaquecimento severo ou desligamentos abruptos.</li>
+          <li><strong>Identifique módulos e slots.</strong> Use rótulos como A1, A2, B1 e B2 conforme o manual da placa; isso evita comparar resultados de combinações desconhecidas.</li>
+        </ol>
 
         <h2>Passo a passo</h2>
         <ol>
           <li><strong>Baixe a imagem oficial</strong> do Memtest86+ no site do projeto, em um computador que funcione. Prefira a versão para UEFI se a máquina é atual.</li>
           <li><strong>Grave em um pendrive</strong> com uma ferramenta de gravação de imagem. O processo apaga o pendrive — use um vazio.</li>
           <li><strong>Inicie pelo pendrive:</strong> ligue a máquina pressionando a tecla de menu de inicialização (normalmente F12, F11, F9 ou Esc, conforme o fabricante) e escolha o dispositivo USB.</li>
-          <li><strong>Deixe rodar.</strong> O teste começa sozinho. Uma passagem pode levar de vinte minutos a algumas horas, conforme a quantidade de memória.</li>
-          <li><strong>Observe a linha de erros.</strong> Erros aparecem em vermelho, com o endereço em que ocorreram. Zero erro após quatro passagens é um bom sinal; qualquer erro encerra o teste com veredito.</li>
-          <li><strong>Isole o módulo culpado.</strong> Com erro confirmado e mais de um módulo instalado, teste um por vez, no mesmo slot. Se os dois passam sozinhos e falham juntos, suspeite de configuração (XMP/EXPO) ou do slot.</li>
-          <li><strong>Teste também o slot.</strong> Módulo bom em slot suspeito reproduz o erro — é assim que se separa defeito de memória de defeito de placa.</li>
+          <li><strong>Complete a sequência.</strong> Uma passagem termina apenas depois que todos os testes selecionados foram executados. O tempo varia muito com processador, velocidade e capacidade instalada.</li>
+          <li><strong>Registre antes de mudar.</strong> Fotografe tela, versão, passagem, endereço, teste, módulo, slot, frequência e perfil. Um resultado sem contexto é difícil de reproduzir.</li>
+          <li><strong>Se houver erro, volte ao padrão.</strong> Carregue as configurações padrão do firmware, mantenha XMP ou EXPO desligado e repita. Se o erro desaparecer somente assim, investigue estabilidade e compatibilidade da configuração.</li>
+          <li><strong>Isole um módulo por vez.</strong> Desligue o computador, retire o cabo de energia e aguarde antes de mover peças. Teste cada módulo separadamente no mesmo slot de referência.</li>
+          <li><strong>Faça o teste cruzado de slot.</strong> Depois, use um módulo que passou e compare os slots recomendados pelo manual. Mantenha todas as outras condições iguais.</li>
         </ol>
         <aside className="rounded-lg border border-destructive/40 bg-destructive/5 p-4 not-prose my-6">
-          <p className="m-0 text-sm"><strong>Segurança:</strong> manipule módulos com o computador desligado e sem energia, segurando pelas bordas. Se houver perfil de overclock ativo, desligue-o antes de concluir que a memória está com defeito — memória boa também falha fora de especificação.</p>
+          <p className="m-0 text-sm"><strong>Segurança:</strong> manipule módulos com o computador desligado, cabo removido e energia residual descarregada, segurando pelas bordas. Não force travas, não toque nos contatos e não abra equipamento lacrado ou em garantia sem confirmar as condições do fabricante. Memória soldada em notebook não deve ser isolada por desmontagem doméstica.</p>
         </aside>
+
+        <h2>Quantas passagens são suficientes?</h2>
+        <p>Uma sequência completa é uma triagem inicial útil para erros consistentes. Quando a falha é rara, aparece depois de aquecer ou depende de uma carga específica, prolongue o teste e repita depois de cada mudança controlada. O critério mais importante não é “passar a noite”, e sim saber exatamente <strong>qual módulo, slot, frequência e perfil</strong> estavam em uso.</p>
+        <p>Interrompa para registrar o cenário quando surgirem erros numerosos e repetíveis; continuar por horas não identifica melhor a peça. Se o resultado vier sem erros, mas o sintoma real continuar, reproduza o uso que causa a falha e amplie a investigação. Nenhuma quantidade fixa de passagens transforma um teste sintético em garantia absoluta.</p>
 
         <h2>Como interpretar o resultado</h2>
         <ul>
-          <li><strong>Zero erro, mas travamentos continuam:</strong> memória provavelmente está boa. Volte à leitura dos códigos em <Link to="/blog/codigos-de-erro-tela-azul-windows" className="text-accent">códigos de erro da tela azul</Link> e considere driver, disco, fonte ou temperatura.</li>
-          <li><strong>Erros em endereços concentrados:</strong> típico de um módulo defeituoso — a substituição resolve.</li>
-          <li><strong>Erros espalhados e em grande quantidade:</strong> pode ser módulo, slot, configuração de velocidade ou controladora do processador. É onde vale um diagnóstico presencial.</li>
-          <li><strong>Erros que só aparecem depois de uma hora:</strong> muitas vezes ligados a aquecimento. Teste com o gabinete aberto e observe se muda.</li>
+          <li><strong>Zero erro, mas travamentos continuam:</strong> mantenha a RAM como hipótese não confirmada. Volte à leitura dos <Link to="/blog/codigos-de-erro-tela-azul-windows" className="text-accent">códigos de erro da tela azul</Link> e correlacione driver, armazenamento, fonte e temperatura.</li>
+          <li><strong>Um módulo falha em slots diferentes:</strong> a suspeita se concentra no módulo, desde que frequência e demais condições tenham sido mantidas.</li>
+          <li><strong>Módulos diferentes falham no mesmo slot:</strong> investigue slot, contato, placa-mãe, encaixe do processador e controladora de memória.</li>
+          <li><strong>Todos passam sozinhos e falham juntos:</strong> confira os slots indicados no manual, a combinação suportada, a frequência e o perfil XMP ou EXPO.</li>
+          <li><strong>Só falha com XMP ou EXPO:</strong> há instabilidade naquela configuração; isso não comprova isoladamente defeito físico da RAM.</li>
+          <li><strong>Erros surgem apenas depois de aquecer:</strong> registre temperatura e tempo até a falha. Não use gabinete aberto como veredito, pois isso muda as condições do teste sem localizar a causa.</li>
         </ul>
+
+        <h2>Quando parar</h2>
+        <p>Pare e não continue alternando peças se houver cheiro de queimado, aquecimento anormal, líquido, sinais de oxidação, travas quebradas, memória soldada ou equipamento em garantia. Pare também quando não conseguir reproduzir o teste mantendo uma variável por vez: trocar módulo, slot, perfil e firmware ao mesmo tempo apaga a evidência e transforma diagnóstico em tentativa.</p>
+
+        <EditorialReferences slug="testar-memoria-ram-memtest86" />
 
         <h2>Quando chamar um técnico</h2>
         <p>Quando a máquina não inicia pelo pendrive, quando você não tem módulo reserva para comparar, quando o notebook tem memória soldada ou quando o erro persiste depois da troca — nesse ponto a suspeita passa para placa-mãe e o teste correto é de bancada. A troca de módulos com verificação de compatibilidade está em <Link to="/servicos/upgrade-ssd-ram" className="text-accent">upgrade de SSD e memória</Link>; a triagem completa, em <Link to="/diagnostico-tecnico" className="text-accent">diagnóstico técnico</Link>.</p>
