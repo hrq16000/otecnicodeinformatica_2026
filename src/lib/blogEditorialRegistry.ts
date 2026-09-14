@@ -1167,14 +1167,14 @@ const WAVE_11F: EditorialApproval[] = [
     status: "approved",
     authorType: "organization",
     authorId: INSTITUTIONAL_AUTHOR.id,
-    reviewedAt: "2026-09-03",
-    approvedAt: "2026-09-03",
+    reviewedAt: "2026-09-14",
+    approvedAt: "2026-09-14",
     imageOrigin: "licensed",
     imageLicense: "CC BY-SA 4.0",
     imageAttribution:
       "Foto: Pittigrilli / Zinnmann (Wikimedia Commons), CC BY-SA 4.0 — https://commons.wikimedia.org/wiki/File:RJ-45_Ethernet_socket_on_Lenovo_T410_Laptop.jpg",
     notes:
-      "Diagnóstico de conexão cabeada escrito do zero na Onda 11F: separa ausência de enlace físico de ausência de navegação, com teste cruzado de cabo, porta e equipamento. Não canibaliza os artigos de Wi-Fi nem o de internet lenta. Capa é fotografia real licenciada, sem IA.",
+      "Revisão material do segundo ciclo em 2026-09-14: diagnóstico por enlace, DHCP/endereço, gateway, DNS e saída externa; comandos somente de leitura antes de qualquer redefinição; comparação Wi-Fi × Ethernet tratada como evidência, não prova absoluta. Não canibaliza os artigos de Wi-Fi nem o de internet lenta. Capa é fotografia real licenciada, sem IA.",
   },
 ];
 

@@ -14856,60 +14856,98 @@ bcdboot C:\\Windows /s S: /f UEFI`}</code></pre>
     title: "Computador não conecta na internet por cabo: o que verificar",
     excerpt:
       "Cabo ligado e nada de internet. Como separar cabo rompido, porta do roteador, placa de rede e falha do provedor — com testes na ordem certa.",
-    date: "2026-09-03",
-    readTime: "10 min",
+    date: "2026-09-14",
+    readTime: "13 min",
     category: "Redes",
     content: (
       <>
-        <p className="lead">A conexão por cabo tem uma vantagem no diagnóstico: quase tudo é físico e verificável. Ou o computador enxerga a rede e não enxerga a internet, ou não enxerga nem a rede — e essas duas situações têm listas de causas completamente diferentes.</p>
+        <p className="lead">“Sem internet” pode significar cinco falhas diferentes: ausência de enlace físico, endereço IP não recebido, roteador inacessível, DNS indisponível ou saída externa interrompida. Separar essas camadas evita trocar cabo, placa ou roteador por palpite — e evita redefinir uma rede que só precisava de um teste.</p>
 
         <h2>Resposta curta</h2>
-        <p>Olhe as luzes da porta de rede. Sem luz nenhuma nas duas pontas, o problema é físico: cabo, conector ou porta. Com luz e sem internet, o problema está adiante: endereçamento, roteador ou provedor. Essa leitura de dez segundos separa metade dos casos.</p>
+        <p>Comece pelo estado da Ethernet no Windows e pelo encaixe do cabo. Se aparece “cabo de rede desconectado”, teste outro cabo conhecido e outra porta do roteador. Se a conexão aparece ativa, registre endereço IPv4, gateway e DNS com <code>ipconfig /all</code> antes de alterar qualquer coisa. Esses dados mostram em qual camada continuar; nenhuma luz ou comando, sozinho, identifica a peça defeituosa.</p>
 
-        <h2>Dois cenários que não se misturam</h2>
-        <ul>
-          <li><strong>Sem enlace (nenhuma luz, "cabo de rede desconectado"):</strong> cabo rompido, clipe do conector quebrado, porta do roteador queimada ou placa de rede desativada.</li>
-          <li><strong>Com enlace e sem internet:</strong> o computador conversa com o roteador, mas não sai para fora. Suspeita de endereçamento, DNS, roteador travado ou falha do provedor.</li>
-        </ul>
-        <p>Tratar o segundo cenário trocando cabo é perda de tempo — e é o erro mais frequente.</p>
+        <h2>Fundamento: as cinco camadas do teste</h2>
+        <table>
+          <thead>
+            <tr><th>Camada</th><th>Pergunta</th><th>Observação útil</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>1. Enlace</td><td>O adaptador reconhece o cabo?</td><td>Status da Ethernet, encaixe e luzes quando existirem</td></tr>
+            <tr><td>2. Endereço</td><td>O computador recebeu configuração da rede?</td><td>IPv4, gateway e DNS em <code>ipconfig /all</code></td></tr>
+            <tr><td>3. Rede local</td><td>O gateway está acessível?</td><td>Teste ao endereço do gateway, sem concluir por uma resposta isolada</td></tr>
+            <tr><td>4. DNS</td><td>Nomes de sites são resolvidos?</td><td><code>nslookup example.com</code></td></tr>
+            <tr><td>5. Internet</td><td>Outros dispositivos e caminhos externos funcionam?</td><td>Comparação controlada no mesmo roteador</td></tr>
+          </tbody>
+        </table>
+        <p>Enlace ativo apenas confirma que houve negociação física entre as pontas. Ele não prova que DHCP, gateway, DNS ou internet funcionam. Da mesma forma, luz apagada reforça a suspeita física, mas também pode ocorrer com adaptador desabilitado, driver ausente ou equipamento desligado.</p>
 
-        <h2>A sequência de verificação</h2>
+        <h2>1. Confirme o enlace físico</h2>
+        <p>Faça os testes por substituição, mudando uma variável por vez:</p>
         <table>
           <thead>
             <tr><th>Ordem</th><th>Verificação</th><th>O que ela elimina</th></tr>
           </thead>
           <tbody>
-            <tr><td>1</td><td>Conferir as luzes nas duas pontas do cabo</td><td>Falta de enlace físico</td></tr>
-            <tr><td>2</td><td>Trocar o cabo por outro sabidamente bom</td><td>Cabo rompido ou conector com clipe quebrado</td></tr>
-            <tr><td>3</td><td>Mudar para outra porta do roteador</td><td>Porta individual com defeito</td></tr>
-            <tr><td>4</td><td>Testar outro equipamento no mesmo cabo e porta</td><td>Placa de rede do computador</td></tr>
-            <tr><td>5</td><td>Verificar se o Wi-Fi do mesmo roteador navega</td><td>Falha do provedor (se o Wi-Fi também não navega)</td></tr>
-            <tr><td>6</td><td>Reiniciar roteador e modem, aguardando um minuto desligados</td><td>Estado travado do equipamento de rede</td></tr>
+            <tr><td>1</td><td>Reencaixar o cabo nas duas pontas</td><td>Conector parcialmente solto</td></tr>
+            <tr><td>2</td><td>Usar outro cabo comprovadamente funcional</td><td>Falha provável do cabo original</td></tr>
+            <tr><td>3</td><td>Manter o cabo bom e mudar a porta do roteador</td><td>Falha provável de uma porta específica</td></tr>
+            <tr><td>4</td><td>Testar outro equipamento no mesmo cabo e porta</td><td>Se funciona, a investigação volta ao computador</td></tr>
+            <tr><td>5</td><td>Verificar o adaptador no Windows</td><td>Adaptador desabilitado, ausente ou com erro de driver</td></tr>
           </tbody>
         </table>
-        <p>Se o Wi-Fi do mesmo roteador navega normalmente e só o cabo falha, o provedor está fora da lista de suspeitos: o problema é local.</p>
+        <p>Observe também adaptadores USB, docks e conversores: testar outra porta USB ou ligar o cabo diretamente, quando possível, separa falha do acessório de falha da Ethernet integrada.</p>
 
-        <h2>Quando o cabo é o culpado</h2>
-        <p>Cabo de rede falha de dois jeitos: rompimento interno por dobra e clipe de travamento quebrado, que deixa o conector solto no encaixe. Ambos produzem conexão intermitente, que cai justamente quando alguém encosta na mesa. Cabo passado por baixo de porta, esmagado por móvel ou preso em curva fechada é candidato natural. Vale também conferir o comprimento: lances muito longos, emendados com adaptadores, degradam o sinal.</p>
+        <h2>2. Leia a configuração sem modificá-la</h2>
+        <p>Abra o Terminal ou Prompt de Comando e execute:</p>
+        <pre><code>{`ipconfig /all`}</code></pre>
+        <p>Localize o adaptador Ethernet correto e anote o estado da mídia, o endereço IPv4, o gateway padrão e os servidores DNS. Um endereço automático na faixa <code>169.254.x.x</code>, acompanhado da ausência de gateway, indica que o Windows não recebeu uma concessão IPv4 por DHCP. Isso aponta para o caminho entre computador e servidor DHCP; não prova, por si só, defeito do roteador ou do provedor.</p>
+        <p>Não digite endereço IP, máscara, gateway ou DNS encontrados em tutorial. Em redes empresariais, VLANs, autenticação, IP fixo e políticas podem ser intencionais. Fotografe ou exporte a configuração antes de qualquer alteração e consulte quem administra a rede.</p>
 
-        <h2>Quando o enlace existe mas não há navegação</h2>
-        <p>Aqui a investigação muda de assunto. O computador precisa receber endereço do roteador; sem isso, aparece conexão "sem acesso à internet". Reiniciar o roteador resolve boa parte dos casos, e a configuração correta do equipamento está em <Link to="/blog/como-configurar-roteador-wifi-iniciantes" className="text-accent">como configurar o roteador</Link>. Se a navegação existe mas é lenta, o assunto é outro e está em <Link to="/blog/internet-lenta-provedor-ou-roteador" className="text-accent">internet lenta: provedor ou roteador</Link>.</p>
+        <h2>3. Separe rede local, DNS e internet</h2>
+        <p>Se existe gateway, teste o endereço mostrado pelo próprio <code>ipconfig</code>:</p>
+        <pre><code>{`ping ENDERECO_DO_GATEWAY`}</code></pre>
+        <p>Resposta consistente reforça que o caminho local alcança o roteador. Falta de resposta é um indício, não uma sentença: firewall ou política do equipamento pode bloquear ICMP. Confirme com o painel do roteador, outro dispositivo ou a equipe responsável pela rede antes de concluir.</p>
+        <p>Depois, consulte um nome público:</p>
+        <pre><code>{`nslookup example.com`}</code></pre>
+        <p>O <code>nslookup</code> mostra qual servidor DNS foi consultado e se houve resposta. Se a rede local funciona, mas a consulta falha, investigue DNS; se a consulta responde e o navegador não abre páginas, examine proxy, VPN, firewall, data e hora do sistema e o próprio navegador. Não “corrija” uma falha de DNS trocando cabo nem atribua toda falha de navegação ao provedor.</p>
 
-        <h2>Placa de rede do computador</h2>
-        <p>Placa desativada no sistema, driver ausente depois de uma reinstalação e adaptador USB de rede não reconhecido produzem o mesmo sintoma de "sem cabo conectado". Se o adaptador é externo, o caminho de verificação é o de <Link to="/blog/dispositivo-usb-nao-reconhecido-o-que-fazer" className="text-accent">dispositivo USB não reconhecido</Link>. Se a placa é integrada e sumiu do sistema após uma atualização, vale checar <Link to="/blog/windows-update-nao-funciona-o-que-verificar" className="text-accent">o estado do Windows Update</Link> antes de suspeitar de hardware.</p>
+        <h2>4. Use Wi-Fi e outros dispositivos como comparação</h2>
+        <p>Wi-Fi funcionando no mesmo roteador torna mais provável uma falha restrita ao caminho Ethernet, mas não exclui todas as causas externas. As interfaces podem receber DNS, endereço, VLAN, regras ou rotas diferentes; o roteador também pode tratar portas separadamente. Já cabo e Wi-Fi falhando em vários dispositivos ao mesmo tempo deslocam a suspeita para roteador, modem ou serviço externo.</p>
+        <p>Registre horário, dispositivos afetados e resultado de cada camada. Se há navegação, mas o desempenho é ruim, use o protocolo de <Link to="/blog/internet-lenta-provedor-ou-roteador" className="text-accent">internet lenta: provedor ou roteador</Link>. Para rever DHCP, nome e portas do equipamento doméstico, consulte <Link to="/blog/como-configurar-roteador-wifi-iniciantes" className="text-accent">como configurar o roteador</Link>.</p>
+
+        <h2>5. Driver e redefinição vêm depois</h2>
+        <p>Se o adaptador sumiu, está desabilitado ou apresenta erro no Gerenciador de Dispositivos, confirme primeiro o modelo e obtenha o driver no fabricante do computador ou da placa. Em adaptador externo, siga também o diagnóstico de <Link to="/blog/dispositivo-usb-nao-reconhecido-o-que-fazer" className="text-accent">dispositivo USB não reconhecido</Link>.</p>
+        <p>A Redefinição de Rede do Windows deve ficar perto do fim, depois que cabo, porta, endereço, gateway, DNS e driver foram documentados. Ela remove e reinstala adaptadores e restaura configurações padrão; VPNs, adaptadores virtuais e parâmetros empresariais podem precisar de nova configuração. Em ambiente de trabalho, obtenha autorização antes.</p>
+
+        <h2>Matriz de decisão</h2>
+        <table>
+          <thead>
+            <tr><th>Observação conjunta</th><th>Próximo foco</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Sem enlace com dois cabos e duas portas conhecidas</td><td>Adaptador, driver, dock ou hardware do computador</td></tr>
+            <tr><td>Enlace ativo, IPv4 169.254.x.x e sem gateway</td><td>DHCP, porta, VLAN ou configuração do roteador/rede</td></tr>
+            <tr><td>Gateway acessível, mas consulta DNS falha</td><td>Servidor/configuração DNS, VPN, proxy ou política</td></tr>
+            <tr><td>Ethernet falha e Wi-Fi funciona no mesmo dispositivo</td><td>Caminho e configuração específicos da Ethernet</td></tr>
+            <tr><td>Vários dispositivos e interfaces falham juntos</td><td>Roteador, modem, energia ou provedor</td></tr>
+          </tbody>
+        </table>
 
         <h2>O que NÃO fazer</h2>
         <ul>
           <li>Trocar de roteador antes de testar outro cabo e outra porta.</li>
-          <li>Alterar configurações avançadas de rede sem anotar o valor anterior.</li>
+          <li>Definir IP, gateway ou DNS manualmente sem conhecer o plano da rede.</li>
           <li>Crimpar conector novo sem ferramenta apropriada e sem testador.</li>
           <li>Emendar cabos para vencer distância em vez de usar um lance único.</li>
           <li>Reinstalar o sistema por causa de conexão que não sobe.</li>
-          <li>Chamar o provedor antes de confirmar que o Wi-Fi da mesma casa também não navega.</li>
+          <li>Executar sequências de <code>netsh</code>, remover drivers ou redefinir a rede antes de registrar o estado.</li>
+          <li>Concluir pela resposta de um único <code>ping</code>; ICMP pode estar bloqueado.</li>
         </ul>
 
         <h2>Quando parar</h2>
-        <p>Pare se o problema atingir todos os equipamentos da casa ou do escritório ao mesmo tempo — nesse caso a verificação é com o provedor, não no computador. Pare também diante de conector queimado, cheiro de queimado no roteador ou instabilidade que apareceu depois de descarga elétrica.</p>
+        <p>Pare diante de conector queimado, cheiro de queimado, dano por descarga elétrica ou cabo instalado próximo a energia sem avaliação adequada. Em rede empresarial, pare antes de alterar VLAN, IP fixo, proxy, VPN, driver homologado ou configuração do equipamento gerenciado. Se vários dispositivos perderam acesso ao mesmo tempo, preserve os testes e acione o responsável pela rede ou o provedor.</p>
+
+        <EditorialReferences slug="computador-nao-conecta-na-internet-por-cabo" />
 
         <h2>Quando chamar um técnico</h2>
         <p>Chame quando houver cabeamento em parede ou canaleta, quando vários pontos de rede falharem ou quando a rede for de ambiente de trabalho com equipamentos compartilhados. O serviço está em <Link to="/servicos/redes-e-wifi" className="text-accent">redes e Wi-Fi</Link>, e a avaliação presencial em <Link to="/diagnostico-tecnico" className="text-accent">diagnóstico técnico</Link>. Para escritório com vários usuários, o desdobramento é <Link to="/servicos/suporte-tecnico-empresarial" className="text-accent">suporte técnico empresarial</Link>.</p>

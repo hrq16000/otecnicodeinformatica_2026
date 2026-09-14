@@ -429,6 +429,51 @@ export const EDITORIAL_SOURCES: Record<string, EditorialSource> = {
       "Memtest86+ e o produto MemTest86 da PassMark são projetos diferentes.",
     ],
   },
+  "ms-fix-ethernet-windows": {
+    id: "ms-fix-ethernet-windows",
+    title: "Fix Ethernet connection problems in Windows",
+    publisher: "Microsoft Support",
+    url: "https://support.microsoft.com/en-us/windows/experience/connectivity-networking/fix-ethernet-connection-problems-in-windows",
+    accessedAt: "2026-09-14",
+    sourceType: "official",
+    supports: [
+      "O diagnóstico deve começar pelo encaixe, por outro cabo e por outra porta; a Redefinição de Rede fica como etapa final.",
+      "A Redefinição de Rede remove e reinstala adaptadores e pode exigir reconfiguração de VPNs e software de rede.",
+    ],
+  },
+  "ms-ipconfig": {
+    id: "ms-ipconfig",
+    title: "ipconfig",
+    publisher: "Microsoft Learn",
+    url: "https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/ipconfig",
+    accessedAt: "2026-09-14",
+    sourceType: "official",
+    supports: [
+      "Sem parâmetros modificadores, ipconfig exibe IPv4, IPv6, máscara e gateway; /all amplia os dados de configuração dos adaptadores.",
+    ],
+  },
+  "ms-ping": {
+    id: "ms-ping",
+    title: "ping",
+    publisher: "Microsoft Learn",
+    url: "https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/ping",
+    accessedAt: "2026-09-14",
+    sourceType: "official",
+    supports: [
+      "O comando ping envia solicitações ICMP Echo e ajuda a verificar conectividade IP; ausência de resposta também pode decorrer de filtragem.",
+    ],
+  },
+  "ms-nslookup": {
+    id: "ms-nslookup",
+    title: "nslookup",
+    publisher: "Microsoft Learn",
+    url: "https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/nslookup",
+    accessedAt: "2026-09-14",
+    sourceType: "official",
+    supports: [
+      "O nslookup exibe informações usadas para diagnosticar a infraestrutura DNS e consulta o servidor padrão quando outro não é informado.",
+    ],
+  },
 };
 
 // ─────────────────────────────────────────────────────────────
@@ -1181,13 +1226,12 @@ export const ARTICLE_SOURCE_MANIFEST: Record<string, ArticleSourceManifest> = {
   },
   "computador-nao-conecta-na-internet-por-cabo": {
     slug: "computador-nao-conecta-na-internet-por-cabo",
-    sources: [],
+    sources: ["ms-fix-ethernet-windows", "ms-ipconfig", "ms-ping", "ms-nslookup"],
     technicalReview: "reviewed",
     factChecked: true,
-    factCheckedAt: "2026-09-03",
-    stableKnowledge: true,
+    factCheckedAt: "2026-09-14",
     notes:
-      "Revisão concluída (Onda 11F): separação entre ausência de enlace e ausência de navegação pela leitura das luzes, teste cruzado de cabo, porta e equipamento, uso do Wi-Fi do mesmo roteador para isolar o provedor e limite para cabeamento estruturado. Conhecimento técnico estável — sem fonte visível.",
+      "Revisão material em 2026-09-14 com fontes Microsoft visíveis: separação de enlace, configuração DHCP/IP, gateway, DNS e acesso externo; observação por ipconfig, ping e nslookup antes de mudanças; Redefinição de Rede reservada ao fim e comparação Wi-Fi × Ethernet sem conclusão absoluta.",
   },
   "ventoinha-do-computador-fazendo-barulho-o-que-verificar": {
     slug: "ventoinha-do-computador-fazendo-barulho-o-que-verificar",
