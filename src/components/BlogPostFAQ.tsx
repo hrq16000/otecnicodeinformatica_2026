@@ -1102,7 +1102,7 @@ const PILOT_FAQ: Record<string, FAQItem[]> = {
   "computador-nao-conecta-na-internet-por-cabo": [
     {
       q: "A luz do conector de rede apagada indica o quê?",
-      a: "Indica que não há enlace físico entre a placa de rede e o equipamento do outro lado. Nesse estado o problema está no cabo, no conector, na porta do roteador ou na própria placa — configuração de rede ainda nem entra na conta.",
+      a: "Reforça que não houve enlace, mas não identifica sozinha a causa. Verifique também o status da Ethernet no Windows: cabo ou porta, adaptador desabilitado, driver ausente e equipamento do outro lado desligado podem produzir o mesmo quadro.",
     },
     {
       q: "Como testar o cabo sem equipamento próprio?",
@@ -1110,15 +1110,15 @@ const PILOT_FAQ: Record<string, FAQItem[]> = {
     },
     {
       q: "O cabo conecta mas aparece 'sem acesso à internet'. O que muda?",
-      a: "Muda a camada do problema. Com enlace ativo, a falha passa a ser de endereçamento ou de saída: endereço não recebido do roteador, DNS não respondendo ou o próprio enlace do provedor fora do ar.",
+      a: "Muda a camada do teste. Com enlace ativo, registre IPv4, gateway e DNS com ipconfig /all. Depois verifique o gateway e a resolução de nomes; DHCP, DNS, rota externa, VPN, proxy ou política local ainda podem falhar.",
     },
     {
       q: "Wi-Fi funciona e o cabo não. Isso descarta o provedor?",
-      a: "Descarta, sim. Se o Wi-Fi do mesmo roteador navega, a saída para a internet está ativa e o problema fica restrito ao caminho cabeado: porta, cabo, placa ou configuração da conexão cabeada.",
+      a: "Não de forma absoluta. É uma evidência forte de que a saída do roteador funciona e desloca o foco para a Ethernet, mas cabo e Wi-Fi podem receber DNS, endereço, VLAN, regras ou rotas diferentes. Confirme as outras camadas antes de concluir.",
     },
     {
-      q: "Vale trocar a placa de rede?",
-      a: "Só depois de esgotar cabo, porta e configuração. Quando a placa integrada realmente falha, uma placa de rede adicional em slot PCIe ou um adaptador USB de rede restabelece a conexão sem substituir a placa-mãe.",
+      q: "Quando usar a Redefinição de Rede do Windows?",
+      a: "Perto do fim, depois de documentar cabo, porta, endereço, gateway, DNS e driver. A redefinição remove e reinstala adaptadores e restaura padrões; VPNs, adaptadores virtuais e parâmetros empresariais podem precisar de nova configuração.",
     },
   ],
   // ── Onda 11G — ruído de ventoinha, rede Wi-Fi invisível e arquivo corrompido.
