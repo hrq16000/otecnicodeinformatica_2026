@@ -2870,14 +2870,17 @@ docker run -d --name db --network minha-rede postgres
   },
 
   "erros-comuns-upgrade-computador": {
-    title: "5 Erros Comuns ao Fazer Upgrade no Computador (e Como Evitar Prejuízo)",
-    excerpt: "Comprar RAM incompatível, instalar SSD errado, favaliar o valor peças no slot — veja os erros que causam prejuízo.",
-    date: "2026-04-06",
-    readTime: "8 min",
+    title: "Upgrade de computador: o que verificar antes de comprar peças",
+    excerpt: "Compatibilidade de memória, SSD, energia e sistema: um roteiro para decidir antes de gastar ou forçar componentes.",
+    date: "2026-09-11",
+    readTime: "10 min",
     category: "Manutenção",
     content: (
       <>
-        <p className="lead">Fazer upgrade no computador pode ser a solução mais inteligente para ganhar desempenho sem trocar a máquina. Mas quando feito sem conhecimento técnico, o resultado pode ser <strong>prejuízo financeiro e até danos permanentes</strong>. Veja os 5 erros mais comuns que encontramos no dia a dia.</p>
+        <p className="lead">Upgrade é uma decisão de compatibilidade e de gargalo, não uma lista de peças “mais rápidas”. Uma compra pode não caber fisicamente, não ser reconhecida pelo firmware ou simplesmente não resolver a causa da lentidão. Este roteiro reduz tentativas às cegas antes de gastar ou abrir o equipamento.</p>
+
+        <h2>Comece pelo problema, não pelo anúncio</h2>
+        <p>Pouco espaço, aplicativos lentos, travamentos sob carga, falhas de inicialização e limitação gráfica são sintomas diferentes. Um SSD pode melhorar o acesso a arquivos, mas não corrige superaquecimento, malware, memória defeituosa ou um processo em uso contínuo. Registre o que acontece, em que tarefa e desde quando.</p>
 
         <h2>1. Comprar RAM Incompatível</h2>
         <p>Nem toda memória RAM serve em qualquer computador. É preciso verificar o <strong>tipo (DDR3, DDR4, DDR5)</strong>, a frequência suportada pela placa-mãe e o número máximo de slots. Muita gente compra DDR4 para um notebook que só aceita DDR3 — e descobre tarde demais que não encaixa.</p>
@@ -2887,21 +2890,26 @@ docker run -d --name db --network minha-rede postgres
         <p>Existem SSDs SATA (2.5") e SSDs NVMe (M.2). Nem toda placa-mãe tem slot M.2, e mesmo as que têm podem suportar apenas SATA no slot M.2, não NVMe. Instalar o tipo errado significa que o SSD simplesmente <strong>não será reconhecido</strong>.</p>
         <p><strong>Como evitar:</strong> Verifique no manual se há slot M.2 e se ele suporta NVMe ou apenas SATA.</p>
 
-        <h2>3. Favaliar o valor Peças no Slot Errado</h2>
-        <p>Memória DDR4 não encaixa em slot DDR3 — os encaixes são diferentes propositalmente. Mas vemos casos de clientes que <strong>favaliar o valoram a peça e quebraram o slot ou a própria memória</strong>. O mesmo vale para conectores de energia, cabos SATA e até ventoinhas.</p>
+        <h2>3. Forçar peças no slot errado</h2>
+        <p>Memória DDR4 não encaixa em slot DDR3 — os encaixes são diferentes propositalmente. O mesmo vale para conectores de energia, cabos SATA e ventoinhas. Se uma peça não encaixa com pressão leve, pare e confira o manual; forçar pode danificar o slot ou o componente.</p>
         <p><strong>Regra de ouro:</strong> Se não encaixou com pressão leve, está errado. Nunca force.</p>
 
         <h2>4. Não Reinstalar o Windows Após Trocar HD por SSD</h2>
         <p>Alguns usuários copiam o HD antigo para o SSD novo usando programas de clonagem — mas o Windows pode não iniciar corretamente ou ficar instável. A clonagem funciona em muitos casos, mas em outros traz <strong>erros de driver, tela azul e lentidão inesperada</strong>.</p>
-        <p><strong>Recomendação:</strong> Sempre que possível, faça uma instalação limpa do Windows no SSD novo. É mais rápido e confiável.</p>
+        <p><strong>Decisão segura:</strong> clonagem pode servir quando o sistema atual está estável; instalação limpa é outra rota e exige backup e conferência. Nenhuma delas é automaticamente melhor em todos os casos.</p>
 
         <h2>5. Ignorar a Fonte de Alimentação</h2>
         <p>Ao adicionar uma placa de vídeo potente, é preciso uma fonte que suporte a potência necessária. Uma fonte fraca causa <strong>desligamentos aleatórios, travamentos e pode até queimar componentes</strong>. Muitos PCs de fábrica vêm com fontes de 300W — insuficiente para GPUs dedicadas.</p>
-        <p><strong>Dica:</strong> Calcule a potência necessária antes e invista em uma fonte de qualidade (80 Plus certificada).</p>
+        <p><strong>Verificação:</strong> consulte o manual da placa de vídeo, da fonte e do gabinete; confirme conectores, espaço físico e refrigeração. Nunca abra a fonte nem improvise adaptadores elétricos.</p>
+
+        <h2>Quando parar</h2>
+        <p>Interrompa a tentativa se houver cheiro de queimado, estalo, aquecimento anormal, desligamento imediato ou dados importantes sem cópia verificável. Mantenha a peça antiga até confirmar que o conjunto funciona e veja <Link to="/blog/como-clonar-hd-para-ssd" className="text-accent">os limites da clonagem de HD para SSD</Link> antes de migrar o sistema.</p>
+
+        <EditorialReferences slug="erros-comuns-upgrade-computador" />
 
         <div className="bg-accent/10 rounded-xl p-6 my-8">
           <h3 className="text-accent font-bold mb-2">Quer Fazer Upgrade Com Segurança?</h3>
-          <p className="text-muted-foreground mb-0">Nosso técnico analisa seu equipamento, indica as peças compatíveis e faz a instalação profissional. Sem risco de prejuízo. Atendemos em Curitiba e região.</p>
+          <p className="text-muted-foreground mb-0">A compatibilidade deve ser confirmada pelo modelo do equipamento, pelas especificações do fabricante e pelo diagnóstico do sintoma atual.</p>
         </div>
 
         <p><strong>Leia também:</strong></p>
@@ -2914,108 +2922,127 @@ docker run -d --name db --network minha-rede postgres
   },
 
   "quando-trocar-computador-ou-reparar": {
-    title: "Quando Trocar o Computador e Quando Vale a Pena Reparar (Guia Técnico)",
-    excerpt: "PC antigo, lento ou com defeito? Descubra os critérios técnicos que definem se vale investir no reparo ou se é hora de partir para um equipamento novo.",
-    date: "2026-04-06",
-    readTime: "11 min",
+    title: "Reparar ou trocar o computador: como decidir sem regra de bolso",
+    excerpt: "Um roteiro para comparar uso, compatibilidade, falhas, suporte e risco de dados antes de reparar ou substituir o equipamento.",
+    date: "2026-09-11",
+    readTime: "10 min",
     category: "Manutenção",
     content: (
       <>
-        <p className="lead">Essa é a dúvida mais comum dos nossos clientes: <strong>"Vale a pena consertar ou é melhor comprar outro?"</strong>. A resposta depende de critérios técnicos e financeiros que vamos detalhar neste guia.</p>
+        <p className="lead">Não existe idade, geração de processador ou percentual do preço de uma máquina nova que resolva sozinho a decisão de reparar ou trocar. A escolha depende do que o computador ainda precisa fazer, de quais falhas existem, da disponibilidade de peças e do risco para os seus dados.</p>
 
-        <h2>Quando Vale a Pena Reparar</h2>
+        <h2>Separe desempenho de defeito</h2>
+        <p>Um computador lento por armazenamento cheio, inicialização carregada ou disco mecânico não é igual a um equipamento com falha elétrica, tela danificada e bateria comprometida. Liste os sintomas, confirme o modelo e defina quais programas e periféricos precisam continuar funcionando. Isso evita comprar uma máquina nova para resolver uma configuração simples — ou investir em upgrade quando há defeito estrutural.</p>
+
+        <h2>Quando o reparo pode ser coerente</h2>
         <ul>
-          <li><strong>Processador de até 5 anos:</strong> Intel Core i3/i5/i7 de 8ª geração pra cima ainda são muito úteis</li>
-          <li><strong>Custo do reparo até 40% do valor de um novo:</strong> Se o conserto fica abaixo desse limite, compensa</li>
-          <li><strong>Problema é específico:</strong> Tela, teclado, SSD, RAM — peças que se trocam facilmente</li>
-          <li><strong>O equipamento atende suas necessidades:</strong> Se faz o que você precisa, não há motivo para trocar</li>
+          <li>O defeito está identificado e é isolado, com peça compatível disponível.</li>
+          <li>Depois do reparo, o equipamento continuará atendendo o uso real: trabalho, estudo, software necessário e periféricos.</li>
+          <li>O sistema operacional e os recursos de segurança ainda têm suporte adequado para o cenário.</li>
+          <li>Há backup dos dados e uma previsão clara de quais riscos continuam existindo.</li>
         </ul>
 
-        <h2>Quando NÃO Compensa Reparar</h2>
-        <ul>
-          <li><strong>Processador muito antigo:</strong> Celeron, Pentium ou Core de 2ª/3ª geração</li>
-          <li><strong>Placa-mãe com defeito em equipamento antigo:</strong> Placa-mãe nova pode não existir para modelos descontinuados</li>
-          <li><strong>Custo do reparo acima de 50-60% do novo:</strong> O investimento não se justifica</li>
-          <li><strong>Múltiplos problemas simultâneos:</strong> Placa-mãe + tela + bateria = melhor trocar</li>
-        </ul>
+        <h2>Quando a substituição merece ser considerada</h2>
+        <p>Considere comparar alternativas se há múltiplas falhas independentes, peça crítica indisponível, incompatibilidade com o software necessário, limitações permanentes de segurança ou se o reparo não atende mais a necessidade de trabalho. Isso não significa que todo computador antigo seja descartável: a decisão deve considerar uso, possibilidade de reaproveitamento e descarte correto.</p>
 
-        <h2>Análise Custo-Benefício na Prática</h2>
-        <p>Notebook i5 de 2019 com HD lento e 4 GB de RAM: trocar por SSD (R$ 200) + 8 GB de RAM (R$ 150) = R$ 350 + mão de obra. Resultado: notebook rodando como novo por menos de R$ 500. <strong>Compensa muito.</strong></p>
-        <p>Notebook Celeron de 2015 com tela quebrada: tela nova R$ 400 + mão de obra R$ 150 = R$ 550. E o desempenho continuará ruim. <strong>Não compensa.</strong></p>
+        <h2>Verificação segura antes de decidir</h2>
+        <ol>
+          <li>Faça backup e teste a restauração de arquivos importantes.</li>
+          <li>Registre modelo, sintomas, mensagens de erro e componentes já trocados.</li>
+          <li>Confirme requisitos do sistema e do programa mais importante para você.</li>
+          <li>Peça um diagnóstico que diferencie causa, consequência e alternativa de reparo.</li>
+        </ol>
 
-        <div className="bg-accent/10 rounded-xl p-6 my-8">
-          <h3 className="text-accent font-bold mb-2">Dúvida Se Vale Reparar?</h3>
-          <p className="text-muted-foreground mb-0">Nosso técnico faz o diagnóstico e dá a opinião honesta: se não compensa, a gente avisa. Diagnóstico a partir de R$ 99,99.</p>
-        </div>
+        <p>Não use uma tabela genérica de preços ou porcentagens como veredito. Custos, disponibilidade e valor de uso mudam por modelo e caso. Para avaliar se a lentidão está ligada ao armazenamento, comece por <Link to="/blog/quando-trocar-hd-por-ssd" className="text-accent">quando trocar HD por SSD</Link>; se a máquina não liga, o ponto de partida é <Link to="/blog/notebook-nao-liga-o-que-fazer" className="text-accent">a triagem de notebook que não inicializa</Link>.</p>
       </>
     ),
   },
 
   "manutencao-preventiva-computador-guia": {
-    title: "Manutenção Preventiva do Computador: O Guia Que Evita 80% dos Problemas",
-    excerpt: "Rotinas simples que prolongam a vida útil do seu PC e evitam chamados técnicos.",
-    date: "2026-04-06",
-    readTime: "9 min",
+    title: "Manutenção preventiva do computador: o que verificar com segurança",
+    excerpt: "Uma rotina realista para reduzir falhas evitáveis, proteger dados e saber quando parar antes de causar dano.",
+    date: "2026-09-11",
+    readTime: "12 min",
     category: "Manutenção",
     content: (
       <>
-        <p className="lead">A maioria dos problemas que resolvemos diariamente poderiam ter sido evitados com <strong>manutenção preventiva simples</strong>. Veja o que fazer para manter seu computador funcionando bem por anos.</p>
+        <p className="lead">Manutenção preventiva não impede toda falha: uma peça pode falhar sem aviso e um equipamento pode sofrer queda, líquido ou oscilação elétrica. O objetivo real é reduzir riscos previsíveis, manter os dados recuperáveis e perceber sinais de desgaste antes que uma máquina pare no momento errado.</p>
 
-        <h2>1. Limpeza Física (a cada 6 meses)</h2>
-        <p>Poeira acumulada causa superaquecimento, travamentos e reduz a vida útil dos componentes. Use ar comprimido para limpar as saídas de ar e ventoinhas. Em notebooks, uma limpeza interna profissional a cada 1-2 anos é ideal.</p>
+        <h2>O que uma rotina preventiva precisa cobrir</h2>
+        <p>Uma rotina útil combina quatro frentes: dados, atualizações, refrigeração e hábitos de uso. Limpar poeira sem ter cópia dos documentos não protege contra perda de dados; atualizar o sistema sem conferir o armazenamento não resolve um disco em falha. A frequência depende do ambiente, da carga de trabalho e do valor dos arquivos — não existe intervalo universal de manutenção.</p>
 
-        <h2>2. Mantenha o Windows Atualizado</h2>
-        <p>Atualizações corrigem falhas de segurança e melhoram o desempenho. Configure para atualizar automaticamente, mas evite versões major no primeiro mês (espere a estabilização).</p>
+        <h2>Checklist mensal: baixo risco e alto retorno</h2>
+        <ol>
+          <li><strong>Confirme o backup.</strong> Verifique se a cópia recente existe e restaure ao menos um arquivo não crítico em outro local. Sincronização não é automaticamente backup: exclusões e alterações podem ser replicadas.</li>
+          <li><strong>Atualize sistema, navegador e programas críticos.</strong> Use os mecanismos oficiais; não baixe “atualizadores de drivers” genéricos nem desative proteções para instalar algo.</li>
+          <li><strong>Revise o espaço de armazenamento.</strong> Pouco espaço livre pode prejudicar atualizações e tarefas temporárias. Antes de apagar, identifique arquivos pessoais, instaladores e cópias duplicadas.</li>
+          <li><strong>Observe mudanças de comportamento.</strong> Ruído novo, travamento após alguns minutos, reinícios, queda de bateria ou mensagens de erro repetidas devem ser anotados, não normalizados.</li>
+          <li><strong>Reveja programas de inicialização e extensões.</strong> Mantenha apenas o que reconhece e realmente precisa. Remova software somente pelo método do sistema ou do fabricante.</li>
+        </ol>
 
-        <h2>3. Faça Backup Regularmente</h2>
-        <p>HD externo, nuvem (OneDrive, Google Drive) ou ambos. A regra 3-2-1: 3 cópias, em 2 mídias diferentes, 1 fora de casa. <strong>Sem backup, qualquer problema vira catástrofe.</strong></p>
+        <h2>Refrigeração: verifique o fluxo, não uma temperatura “mágica”</h2>
+        <p>Processadores e placas de vídeo variam por modelo, carga e projeto; portanto, um número isolado não diagnostica superaquecimento. O padrão importa mais: ventoinha sempre no máximo em tarefa leve, perda de desempenho após alguns minutos, desligamento repentino, saída de ar bloqueada ou ruído mecânico exigem atenção. Use o computador sobre superfície firme, deixe entradas e saídas de ar livres e não use cama, sofá ou almofada como apoio.</p>
+        <p>Se houver poeira visível na grade, é possível limpar a parte externa com cuidado e o equipamento desligado. Abrir notebook, segurar ventoinha, aplicar jato de ar no interior ou trocar pasta térmica sem procedimento específico pode causar dano. Para separar aquecimento esperado de falha, consulte <Link to="/blog/notebook-superaquecendo-o-que-fazer" className="text-accent">os sinais de superaquecimento em notebook</Link>.</p>
 
-        <h2>4. Use Antivírus Confiável</h2>
-        <p>O Windows Defender já é suficiente para a maioria. Mantenha-o ativo e atualizado. Evite instalar dois antivírus ao mesmo tempo — eles conflitam.</p>
+        <h2>Dados e segurança: a prevenção que continua valendo depois de uma falha</h2>
+        <p>Tenha cópias independentes dos arquivos importantes, de preferência uma fora do computador e outra fora do local físico. Discos externos conectados o tempo todo também podem ser afetados por ransomware, oscilação elétrica ou erro humano. Senhas únicas, autenticação em duas etapas no e-mail principal e atualizações regulares reduzem a chance de um incidente pequeno virar comprometimento de contas.</p>
+        <p>Uma máquina lenta não é prova de vírus. Primeiro confira atualizações, armazenamento, programas em execução e comportamento da rede. Pop-ups fora do navegador, extensões desconhecidas, antivírus desativado sem ação do usuário e arquivos inacessíveis são sinais que justificam um roteiro de segurança, como o guia para <Link to="/blog/como-saber-se-pc-tem-virus-malware" className="text-accent">diferenciar sinais de malware de outros problemas</Link>.</p>
 
-        <h2>5. Desinstale Programas Não Usados</h2>
-        <p>Programas desnecessários ocupam espaço, consomem recursos e podem ter vulnerabilidades. Remova pelo Painel de Controle o que não usa há mais de 3 meses.</p>
+        <EditorialReferences slug="manutencao-preventiva-computador-guia" />
 
-        <h2>6. Monitore a Temperatura</h2>
-        <p>Programas como HWMonitor mostram a temperatura em tempo real. CPU acima de 85°C sob carga é preocupante. Acima de 95°C, desligue e procure um técnico.</p>
+        <h2>O que não é manutenção preventiva</h2>
+        <ul>
+          <li>Prometer que uma limpeza “renova” qualquer computador ou elimina toda falha futura.</li>
+          <li>Trocar peças sem evidência de incompatibilidade ou defeito.</li>
+          <li>Usar programas de limpeza, registro ou driver de origem desconhecida.</li>
+          <li>Desativar antivírus, UAC, Secure Boot ou atualizações permanentemente para contornar um erro.</li>
+          <li>Fazer testes destrutivos ou abrir fonte, bateria e carregador.</li>
+        </ul>
 
-        <div className="bg-accent/10 rounded-xl p-6 my-8">
-          <h3 className="text-accent font-bold mb-2">Manutenção Preventiva Profissional</h3>
-          <p className="text-muted-foreground mb-0">Fazemos limpeza interna, troca de pasta térmica, otimização do sistema e verificação completa. Atendimento a domicílio em Curitiba e região.</p>
-        </div>
+        <h2>Quando parar e preservar o equipamento</h2>
+        <p>Interrompa o uso diante de cheiro de queimado, fumaça, bateria estufada, líquido, cabo danificado, estalos, desligamentos repetidos ou disco com ruído mecânico. Não continue “testando para ver se volta”: cada tentativa pode ampliar o dano ou reduzir a chance de preservar dados. Registre o que aconteceu, desligue com segurança quando possível e mantenha o equipamento desconectado até uma avaliação apropriada.</p>
+
+        <h2>Roteiro de decisão</h2>
+        <ol>
+          <li>Se o problema é apenas rotina: faça backup, atualize por canais oficiais, libere espaço com critério e observe o resultado.</li>
+          <li>Se há lentidão persistente: compare uso de armazenamento, programas de inicialização e sinais de aquecimento antes de comprar peça.</li>
+          <li>Se há dados importantes sem cópia: priorize o backup e o teste de restauração antes de qualquer limpeza ou reinstalação.</li>
+          <li>Se existe sinal físico ou elétrico: pare; esse não é um cenário para tentativa caseira.</li>
+        </ol>
+
+        <p>Para aprofundar a rotina de cópias, veja <Link to="/blog/backup-como-proteger-seus-arquivos" className="text-accent">como montar um backup preventivo</Link>. Quando a máquina já apresenta falha recorrente, a decisão deve partir de diagnóstico, não de uma lista genérica de peças.</p>
       </>
     ),
   },
 
   "diagnostico-tecnico-por-que-e-pago": {
-    title: "Por Que o Diagnóstico Técnico é Pago? Entenda de Uma Vez",
-    excerpt: "Explicamos por que o diagnóstico tem custo, o que ele envolve e como evita prejuízos maiores.",
-    date: "2026-04-05",
+    title: "O que um diagnóstico técnico avalia antes de um reparo",
+    excerpt: "Entenda o que é verificado, quais são os limites da triagem e por que o orçamento só pode ser definido após avaliar o equipamento.",
+    date: "2026-09-11",
     readTime: "7 min",
     category: "Atendimento",
     content: (
       <>
-        <p className="lead">Muitos clientes perguntam: <strong>"Por que cobram pelo diagnóstico?"</strong>. A resposta é simples: diagnóstico técnico é um serviço especializado que exige conhecimento, ferramentas e tempo.</p>
+        <p className="lead">Diagnóstico técnico não é a troca imediata de uma peça: é a etapa que separa sintoma, causa provável e limite seguro de cada tentativa. Ele ajuda a evitar compras incompatíveis e procedimentos que ampliem a falha, mas não permite prometer solução antes de examinar o equipamento.</p>
 
         <h2>O Que Envolve um Diagnóstico</h2>
         <ul>
           <li>Testes de hardware: memória, HD/SSD, processador, placa de vídeo</li>
           <li>Análise de software: sistema operacional, drivers, malwares</li>
-          <li>Verificação de temperatura e voltagem</li>
-          <li>Identificação da causa raiz, não apenas do sintoma</li>
-          <li>Valor detalhado com opções de solução</li>
+          <li>Verificação de comportamento térmico, energia e inicialização quando aplicável</li>
+          <li>Separação entre sintoma, causa provável e testes necessários</li>
+          <li>Registro de riscos, alternativas e limites antes de qualquer reparo</li>
         </ul>
 
-        <h2>Por Que Não é Grátis?</h2>
-        <p>O diagnóstico é a parte mais importante do atendimento. Um diagnóstico errado leva a reparos desnecessários e prejuízo. O técnico usa anos de experiência e ferramentas especializadas para chegar à causa correta.</p>
-        <p><strong>Analogia:</strong> Você não espera que um médico faça exames de graça. O diagnóstico técnico segue a mesma lógica.</p>
+        <h2>O que muda depois da avaliação</h2>
+        <p>Depois da triagem, é possível explicar o que foi observado, quais opções são compatíveis e onde há incerteza. O valor final, prazo e garantia dependem da condição real, de peças, urgência e complexidade; qualquer condição comercial deve seguir a política apresentada no orçamento, não uma promessa genérica no artigo.</p>
 
-        <h2>E Se Eu Aprovar o Serviço?</h2>
-        <p>Na maioria dos casos, <strong>o valor do diagnóstico é abatido do serviço</strong>. Ou seja, se você aprovar o reparo, o diagnóstico sai "grátis" na prática.</p>
+        <h2>Antes de entregar o equipamento</h2>
+        <p>Faça backup se o computador ainda iniciar, anote senhas ou acessos que não podem ser redefinidos e descreva quando o defeito começou. Em caso de cheiro de queimado, líquido, bateria estufada ou disco com ruído mecânico, pare de usar e não faça testes repetidos.</p>
 
         <div className="bg-accent/10 rounded-xl p-6 my-8">
-          <h3 className="text-accent font-bold mb-2">Diagnóstico Profissional</h3>
-          <p className="text-muted-foreground mb-0">A partir de R$ 99,99. Atendimento a domicílio em Curitiba e região metropolitana. Valor abatido em caso de aprovação do serviço.</p>
+          <h3 className="text-accent font-bold mb-2">Próximo passo</h3>
+          <p className="text-muted-foreground mb-0">A avaliação define o caminho mais seguro e as condições aplicáveis ao caso; não substitui backup nem garante recuperação de dados.</p>
         </div>
       </>
     ),
@@ -3224,21 +3251,21 @@ docker run -d --name db --network minha-rede postgres
 
 
   "windows-11-vale-a-pena-atualizar": {
-    title: "Windows 11: Vale a Pena Atualizar?",
-    excerpt: "Requisitos, novidades, vantagens e desvantagens.",
-    date: "2026-01-15",
+    title: "Vale a pena atualizar para o Windows 11? Como decidir",
+    excerpt: "Compatibilidade, backup, suporte e programas críticos: o que conferir antes de migrar para o Windows 11.",
+    date: "2026-09-11",
     readTime: "8 min",
     category: "Windows 11",
     content: (
       <>
-        <p className="lead">O Windows 11 já está maduro e estável. Mas <strong>será que vale a pena atualizar?</strong> Depende do seu hardware e do que você faz no computador.</p>
+        <p className="lead">Atualizar para o Windows 11 é uma decisão de compatibilidade e continuidade, não apenas de interface. Antes de migrar, confirme os requisitos oficiais, faça backup testado e verifique se os programas e periféricos importantes continuam atendidos.</p>
 
         <h2>Vantagens do Windows 11</h2>
         <ul>
           <li>Interface moderna e mais organizada</li>
           <li>Melhor gerenciamento de múltiplas janelas (Snap Layouts)</li>
-          <li>Desempenho superior em jogos (DirectStorage, Auto HDR)</li>
-          <li>Integração com Android (apps no PC)</li>
+          <li>Recursos de organização de janelas e integração do sistema</li>
+          <li>Recursos de segurança disponíveis em equipamentos compatíveis</li>
           <li>Segurança aprimorada com TPM 2.0</li>
         </ul>
 
@@ -3250,164 +3277,164 @@ docker run -d --name db --network minha-rede postgres
           <li>Menu Iniciar centralizado (nem todos gostam)</li>
         </ul>
 
-        <h2>Quando Atualizar</h2>
-        <p>Se seu PC atende os requisitos e você usa Windows 10, <strong>vale atualizar</strong>. O Windows 10 perde suporte em outubro de 2025. Após isso, não recebe mais atualizações de segurança.</p>
+        <h2>Antes de atualizar</h2>
+        <ol><li>Confirme o modelo e os requisitos oficiais do Windows 11.</li><li>Atualize ou confira drivers pelo fabricante.</li><li>Faça backup e restaure ao menos um arquivo de teste.</li><li>Verifique programas, impressoras e dispositivos essenciais.</li></ol>
 
-        <h2>Quando NÃO Atualizar</h2>
-        <p>Se seu PC não tem TPM 2.0 nativamente, se você usa softwares específicos que podem não ser compatíveis, ou se está satisfeito e não quer arriscar instabilidades.</p>
+        <h2>Quando adiar</h2>
+        <p>Adie se o equipamento não atende aos requisitos, se o programa de trabalho não foi validado ou se ainda não existe cópia segura dos dados. Não use procedimentos para contornar requisitos como solução padrão: eles podem limitar suporte e atualizações futuras.</p>
 
         <div className="bg-accent/10 rounded-xl p-6 my-8">
-          <h3 className="text-accent font-bold mb-2">Quer Atualizar Com Segurança?</h3>
-          <p className="text-muted-foreground mb-0">Nosso técnico verifica compatibilidade, faz backup e atualiza sem risco de perder dados.</p>
+          <h3 className="text-accent font-bold mb-2">Decisão segura</h3>
+          <p className="text-muted-foreground mb-0">Compatibilidade e backup não garantem resultado, mas reduzem risco de interrupção e perda de dados durante a migração.</p>
         </div>
       </>
     ),
   },
 
   "office-365-guia-completo-empresas": {
-    title: "Office 365 Para Empresas: Guia Completo",
-    excerpt: "Teams, SharePoint, OneDrive e todas as ferramentas.",
-    date: "2024-01-11",
+    title: "Microsoft 365 para empresas: como organizar contas, arquivos e acessos",
+    excerpt: "Um guia de decisão para estruturar identidade, e-mail, arquivos compartilhados e permissões sem depender de planos ou preços temporários.",
+    date: "2026-09-11",
     readTime: "12 min",
     category: "Office 365",
     content: (
       <>
-        <p className="lead">O Microsoft 365 (antigo Office 365) é muito mais do que Word, Excel e PowerPoint. É uma plataforma completa de produtividade e colaboração. Veja como aproveitar ao máximo.</p>
+        <p className="lead">Microsoft 365 pode centralizar e-mail, identidade, documentos e colaboração, mas a ferramenta não organiza uma empresa sozinha. O ponto decisivo é definir proprietários de contas, onde os arquivos ficam, quem pode compartilhar e como o acesso é removido quando alguém sai.</p>
 
-        <h2>O Que Inclui o Microsoft 365 Business</h2>
+        <h2>O que precisa ser decidido antes da implantação</h2>
         <ul>
-          <li><strong>Word, Excel, PowerPoint, Outlook:</strong> Aplicativos clássicos, sempre atualizados</li>
-          <li><strong>Teams:</strong> Videoconferência, chat e colaboração</li>
-          <li><strong>OneDrive:</strong> 1 TB de armazenamento na nuvem por usuário</li>
-          <li><strong>SharePoint:</strong> Intranet e compartilhamento de documentos</li>
-          <li><strong>Exchange:</strong> E-mail profissional com seu domínio</li>
+          <li><strong>Identidade:</strong> cada pessoa deve usar conta própria, com autenticação em duas etapas e responsável administrativo definido.</li>
+          <li><strong>Arquivos pessoais e da empresa:</strong> defina o que fica em espaço individual e o que deve permanecer em biblioteca compartilhada.</li>
+          <li><strong>Permissões:</strong> conceda apenas o acesso necessário e revise compartilhamentos externos periodicamente.</li>
+          <li><strong>Saída e continuidade:</strong> contas, caixas de e-mail e documentos precisam de procedimento de transferência, não de senha compartilhada.</li>
         </ul>
 
-        <h2>Planos e Preços</h2>
-        <p>O plano Business Basic (só web + Teams) começa em torno de R$ 30/mês por usuário. O Business Standard (apps desktop + web) fica em torno de R$ 60/mês. Para a maioria das empresas pequenas, o Standard é a melhor escolha.</p>
+        <h2>Sincronização não substitui backup</h2>
+        <p>Arquivo sincronizado facilita trabalho em vários dispositivos, mas exclusões, sobrescritas e permissões equivocadas também podem se propagar. Verifique retenção, restauração e onde está a cópia independente dos dados críticos antes de tratar a nuvem como plano de recuperação.</p>
 
-        <h2>Benefícios Para Empresas</h2>
+        <h2>Rotina mínima de governança</h2>
         <ul>
-          <li>Sempre atualizado — sem precisar comprar nova versão</li>
-          <li>Acesso de qualquer lugar (web, celular, tablet)</li>
-          <li>Backup automático na nuvem</li>
-          <li>Controle administrativo centralizado</li>
-          <li>Conformidade e segurança corporativa</li>
+          <li>Inventário de contas administrativas e contatos de recuperação.</li>
+          <li>Autenticação em duas etapas para contas críticas.</li>
+          <li>Grupos de acesso em vez de permissões individuais improvisadas.</li>
+          <li>Revisão de compartilhamentos e de colaboradores desligados.</li>
+          <li>Teste de restauração de arquivos importantes.</li>
         </ul>
 
         <div className="bg-accent/10 rounded-xl p-6 my-8">
-          <h3 className="text-accent font-bold mb-2">Implantação de Microsoft 365</h3>
-          <p className="text-muted-foreground mb-0">Configuramos e-mails, Teams, OneDrive e treinamos sua equipe. Suporte técnico para empresas em Curitiba.</p>
+          <h3 className="text-accent font-bold mb-2">Limite importante</h3>
+          <p className="text-muted-foreground mb-0">Recursos e condições variam por plano e podem mudar. Confirme a documentação oficial do fornecedor antes de contratar ou alterar licenças.</p>
         </div>
       </>
     ),
   },
 
   "office-365-vs-office-tradicional": {
-    title: "Office 365 vs Office Tradicional: Qual Escolher?",
-    excerpt: "Comparativo completo entre assinatura e licença perpétua.",
-    date: "2024-01-10",
+    title: "Microsoft 365 ou licença perpétua: como decidir",
+    excerpt: "Compare colaboração, administração, continuidade e custo de mudança sem depender de recursos ou preços que podem mudar.",
+    date: "2026-09-11",
     readTime: "6 min",
     category: "Office 365",
     content: (
       <>
-        <p className="lead"><strong>Assinatura mensal ou licença vitalícia?</strong> Essa é a dúvida de muitos. Vamos comparar os dois modelos.</p>
+        <p className="lead">A escolha entre serviço por assinatura e licença perpétua depende de como o software será usado, administrado e mantido. Não existe escolha universal: colaboração, acesso remoto, suporte, arquivos compartilhados e previsibilidade de custo pesam de modo diferente para cada pessoa ou empresa.</p>
 
         <h2>Office 365 (Assinatura)</h2>
         <ul>
-          <li>Pagamento mensal ou anual</li>
-          <li>Sempre na última versão</li>
-          <li>Inclui 1 TB de OneDrive</li>
-          <li>Inclui Teams, SharePoint e mais</li>
-          <li>Suporte da Microsoft incluso</li>
+          <li>Atualizações e condições ligadas ao serviço contratado.</li>
+          <li>Recursos on-line, identidade e administração centralizada conforme o plano.</li>
+          <li>Possibilidade de trabalhar com arquivos e pessoas em ambientes compartilhados.</li>
         </ul>
 
         <h2>Office Tradicional (Licença Perpétua)</h2>
         <ul>
-          <li>Pagamento único</li>
-          <li>Versão fixa — não recebe novos recursos</li>
-          <li>Sem armazenamento na nuvem incluso</li>
-          <li>Suporte limitado (5 anos de atualizações)</li>
-          <li>Não inclui Teams e serviços online</li>
+          <li>Uso vinculado a uma versão específica do aplicativo.</li>
+          <li>Menor dependência de serviços on-line para tarefas locais.</li>
+          <li>Responsabilidade de planejar compatibilidade, atualização e continuidade separadamente.</li>
         </ul>
 
-        <h2>Qual Escolher?</h2>
-        <p><strong>Para empresas:</strong> Microsoft 365 sem dúvida. A colaboração em tempo real, backup na nuvem e e-mail profissional justificam o custo mensal.</p>
-        <p><strong>Para uso pessoal básico:</strong> Se você só precisa de Word e Excel esporadicamente, a licença perpétua pode bastar. Mas considere que ela fica desatualizada.</p>
+        <h2>Roteiro de decisão</h2>
+        <ol><li>Liste quem precisa colaborar e quais arquivos não podem ficar presos a uma pessoa.</li><li>Defina quem administra contas, recuperação e permissões.</li><li>Confirme requisitos de programas, sistemas e dispositivos existentes.</li><li>Compare o custo total de mudança, treinamento e continuidade — não apenas a licença.</li></ol>
+        <p>Serviço em nuvem não equivale automaticamente a backup. Se os dados são críticos, mantenha rotina de cópia e restauração testada, independentemente do modelo escolhido.</p>
 
         <div className="bg-accent/10 rounded-xl p-6 my-8">
-          <h3 className="text-accent font-bold mb-2">Precisa de Ajuda Para Decidir?</h3>
-          <p className="text-muted-foreground mb-0">Analisamos seu uso e indicamos o melhor plano. Instalação e configuração profissional.</p>
+          <h3 className="text-accent font-bold mb-2">Limite da comparação</h3>
+          <p className="text-muted-foreground mb-0">Planos, recursos, preços e suporte mudam. Confirme a documentação oficial antes de comprar ou migrar.</p>
         </div>
       </>
     ),
   },
 
   "configurar-email-outlook-office-365": {
-    title: "Como Configurar Email Empresarial no Outlook 365",
-    excerpt: "Tutorial com sincronização celular e backup automático.",
-    date: "2024-01-09",
+    title: "Como configurar e-mail empresarial no Outlook com segurança",
+    excerpt: "Um roteiro de conta, domínio, autenticação, testes e acesso no computador e celular sem expor senhas ou prometer configuração automática.",
+    date: "2026-09-11",
     readTime: "5 min",
     category: "Office 365",
     content: (
       <>
-        <p className="lead">E-mail com domínio próprio (seunome@suaempresa.com.br) transmite profissionalismo. Veja como configurar no Outlook 365.</p>
+        <p className="lead">Configurar e-mail empresarial envolve mais que abrir o Outlook: domínio, identidade, autenticação e recuperação precisam estar definidos antes de liberar a conta em vários dispositivos. O procedimento exato varia conforme o provedor e o tipo de conta.</p>
 
         <h2>1. Configure o Domínio no Microsoft 365</h2>
-        <p>Acesse o painel administrativo do Microsoft 365, adicione seu domínio e configure os registros DNS (MX, CNAME, TXT) no seu provedor de hospedagem.</p>
+        <p>Use o painel oficial do provedor de e-mail para adicionar o domínio e aplicar os registros DNS solicitados. Não copie valores de tutoriais de terceiros: MX, SPF, DKIM e outros registros dependem do serviço contratado.</p>
 
         <h2>2. Crie as Caixas de E-mail</h2>
-        <p>No painel admin, crie os usuários e atribua licenças. Cada usuário recebe 50 GB de caixa postal e 1 TB de OneDrive.</p>
+        <p>Crie uma conta individual para cada pessoa e evite senhas compartilhadas. Defina quem administra a organização, como o acesso será recuperado e quais caixas ou grupos precisam ser compartilhados.</p>
 
         <h2>3. Configure o Outlook no PC</h2>
-        <p>Abra o Outlook, faça login com o e-mail corporativo. O Outlook detecta automaticamente as configurações do Exchange Online. Em segundos, tudo está sincronizado.</p>
+        <p>Instale ou atualize o Outlook pelo canal oficial, faça login na conta corporativa e conclua a autenticação em duas etapas quando solicitada. Se a descoberta automática falhar, confirme o tipo de conta e os dados com o administrador ou o provedor.</p>
 
         <h2>4. Sincronize no Celular</h2>
-        <p>Instale o app Outlook no celular (iOS ou Android), faça login e pronto. E-mails, calendário e contatos sincronizados em tempo real.</p>
+        <p>Use aplicativo oficial, proteção de tela no celular e autenticação em duas etapas. Em aparelho pessoal ou perdido, a empresa precisa conseguir revogar a sessão sem depender da senha de outro usuário.</p>
 
-        <h2>5. Configure Assinaturas</h2>
-        <p>Crie uma assinatura profissional com logo, cargo e telefone. No Outlook: Arquivo → Opções → Email → Assinaturas.</p>
+        <h2>5. Teste e registre o acesso</h2>
+        <p>Envie e receba mensagem de uma conta externa, confira calendário e contatos, teste recuperação de conta e registre quem administra domínio e caixas compartilhadas. Sincronização não substitui backup ou retenção de e-mails.</p>
 
         <div className="bg-accent/10 rounded-xl p-6 my-8">
-          <h3 className="text-accent font-bold mb-2">Configuração Profissional de E-mail</h3>
-          <p className="text-muted-foreground mb-0">Configuramos tudo para você: domínio, DNS, Outlook no PC e celular, assinaturas e backup. Suporte para empresas em Curitiba.</p>
+          <h3 className="text-accent font-bold mb-2">Limite de segurança</h3>
+          <p className="text-muted-foreground mb-0">Nunca envie senha, código de autenticação ou acesso administrativo por mensagem. Esses dados permitem assumir a conta e o domínio.</p>
         </div>
       </>
     ),
   },
 
   "seguranca-digital-empresas-guia-2024": {
-    title: "Segurança Digital Para Empresas: Guia Essencial",
-    excerpt: "Firewall, antivírus corporativo, backup e políticas.",
-    date: "2024-01-08",
-    readTime: "15 min",
+    title: "Segurança digital para pequenas empresas: controles que priorizar",
+    excerpt: "Um roteiro de proteção de contas, dados, dispositivos e continuidade para empresas sem equipe de segurança dedicada.",
+    date: "2026-09-11",
+    readTime: "12 min",
     category: "Segurança",
     content: (
       <>
-        <p className="lead">Empresas são alvos cada vez mais frequentes de ataques cibernéticos. <strong>PMEs são as mais vulneráveis</strong> porque geralmente não investem em segurança. Veja o mínimo necessário.</p>
+        <p className="lead">Segurança digital em empresa pequena não começa por comprar uma ferramenta. Começa por saber quais contas controlam o negócio, onde os arquivos críticos ficam, quem pode alterar configurações e como a operação volta se uma máquina falhar. Nenhuma medida elimina todo risco; controles combinados reduzem o impacto e tornam incidentes mais detectáveis.</p>
 
-        <h2>1. Firewall Configurado</h2>
-        <p>O firewall do Windows deve estar ativo em todos os computadores. Para empresas maiores, um firewall dedicado (hardware) no roteador é recomendado.</p>
+        <h2>Os quatro ativos que precisam de responsável</h2>
+        <ul>
+          <li><strong>E-mail e identidade:</strong> conta que recupera senhas, recebe cobranças e autoriza acessos.</li>
+          <li><strong>Dados:</strong> arquivos de clientes, sistema de gestão, documentos fiscais e cópias de segurança.</li>
+          <li><strong>Dispositivos:</strong> computadores, notebooks, celulares corporativos, roteador e armazenamento.</li>
+          <li><strong>Acessos de terceiros:</strong> contabilidade, sistema de gestão, suporte remoto e fornecedores.</li>
+        </ul>
 
-        <h2>2. Antivírus Corporativo</h2>
-        <p>O Windows Defender é bom para uso pessoal, mas empresas se beneficiam de soluções como Bitdefender GravityZone ou Kaspersky Small Office, que oferecem gestão centralizada.</p>
+        <h2>Controles que vêm antes de ferramentas</h2>
+        <ol>
+          <li>Use senha única e autenticação em duas etapas no e-mail, contas financeiras e painéis administrativos.</li>
+          <li>Mantenha contas de uso diário sem privilégio de administrador; conceda acesso elevado apenas quando necessário.</li>
+          <li>Defina rotina de atualização para sistema, navegador, roteador e programas críticos, sempre pelo canal oficial.</li>
+          <li>Faça cópias independentes, com retenção e restauração testada. Uma pasta sincronizada não substitui necessariamente backup.</li>
+          <li>Registre quem tem acesso a quê e remova acessos quando a função ou o contrato termina.</li>
+        </ol>
 
-        <h2>3. Backup Automatizado</h2>
-        <p>Regra 3-2-1: 3 cópias, 2 mídias diferentes, 1 fora do local. Use backup na nuvem (OneDrive, Google Workspace) + backup local em HD externo ou NAS.</p>
+        <h2>Como treinar sem criar falsa segurança</h2>
+        <p>O treinamento deve usar situações concretas: link inesperado, pedido urgente de pagamento, código de autenticação solicitado por mensagem e programa de acesso remoto oferecido por telefone. O objetivo não é culpar quem erra, mas criar uma pausa operacional: conferir o domínio, confirmar por outro canal e comunicar o responsável antes de abrir anexo ou transferir valor.</p>
 
-        <h2>4. Senhas e Autenticação</h2>
-        <p>Política de senhas fortes + autenticação em dois fatores (2FA) em todos os acessos críticos. Use gerenciadores de senha corporativos.</p>
+        <h2>Incidente: o que fazer nas primeiras horas</h2>
+        <p>Se houver arquivo criptografado, acesso remoto desconhecido ou conta comprometida, isole o equipamento da rede, preserve evidências e proteja destinos de backup. Não formate no impulso e não altere senhas na máquina possivelmente comprometida. A resposta específica a ransomware está em <Link to="/blog/ransomware-como-proteger-empresa" className="text-accent">como conter ransomware em uma pequena empresa</Link>.</p>
 
-        <h2>5. Treinamento da Equipe</h2>
-        <p>O maior risco é o fator humano. Treine funcionários para reconhecer phishing, não usar pen drives desconhecidos e não compartilhar senhas.</p>
+        <EditorialReferences slug="seguranca-digital-empresas-guia-2024" />
 
-        <h2>6. Atualizações em Dia</h2>
-        <p>Mantenha Windows, Office, navegadores e todos os softwares atualizados. Vulnerabilidades conhecidas são as mais exploradas.</p>
-
-        <div className="bg-accent/10 rounded-xl p-6 my-8">
-          <h3 className="text-accent font-bold mb-2">Segurança Para Sua Empresa</h3>
-          <p className="text-muted-foreground mb-0">Fazemos auditoria de segurança, configuração de backup, antivírus e políticas. Suporte empresarial em Curitiba.</p>
-        </div>
+        <h2>Limite e próxima decisão</h2>
+        <p>Firewall, antivírus e nuvem não substituem inventário, acesso mínimo e cópia restaurável. Se a empresa não sabe quais dados são críticos ou quem administra as contas, comece por esse mapa antes de contratar qualquer produto. Para desenhar a rotina de cópias, veja <Link to="/blog/backup-nuvem-empresas-qual-escolher" className="text-accent">como avaliar backup em nuvem para empresas</Link>.</p>
       </>
     ),
   },

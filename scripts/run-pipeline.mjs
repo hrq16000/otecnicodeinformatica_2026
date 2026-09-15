@@ -65,7 +65,10 @@ if (pipeline.requiresDist && !existsSync(path.resolve('dist'))) {
   process.exit(1);
 }
 
-const npmCmd = process.platform === 'win32' ? 'npm.cmd' : 'npm';
+// Em instalações Windows enxutas, o Node pode estar disponível sem npm.cmd
+// no PATH, enquanto pnpm é o gerenciador configurado pelo projeto. A variável
+// permite usar o binário presente sem alterar a semântica padrão em CI/local.
+const npmCmd = process.env.PIPELINE_PACKAGE_MANAGER || (process.platform === 'win32' ? 'npm.cmd' : 'npm');
 const results = [];
 let blockingFailure = false;
 
@@ -75,7 +78,12 @@ for (const [i, step] of steps.entries()) {
   const started = Date.now();
   console.log(`\n──── ${label} — ${step.name}${optional ? ' (opcional)' : ''}`);
 
-  const res = spawnSync(npmCmd, ['run', '--silent', step.script], { stdio: 'inherit', env: process.env });
+  const res = spawnSync(npmCmd, ['run', '--silent', step.script], {
+    stdio: 'inherit',
+    env: process.env,
+    // Arquivos .cmd não são executáveis diretamente pelo spawn no Windows.
+    shell: process.platform === 'win32',
+  });
   const ok = res.status === 0;
   const durationMs = Date.now() - started;
   results.push({ script: step.script, name: step.name, optional, ok, durationMs, status: res.status ?? null });
