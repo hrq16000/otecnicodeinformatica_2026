@@ -14153,8 +14153,8 @@ bcdboot C:\\Windows /s S: /f UEFI`}</code></pre>
     title: "Dispositivo USB não reconhecido: como descobrir a causa",
     excerpt:
       "Como separar defeito do aparelho, da porta, do cabo, da alimentação e do driver — em uma sequência de testes que não exige abrir o computador.",
-    date: "2026-09-03",
-    readTime: "11 min",
+    date: "2026-09-15",
+    readTime: "13 min",
     category: "Diagnóstico",
     content: (
       <>
@@ -14454,48 +14454,61 @@ bcdboot C:\\Windows /s S: /f UEFI`}</code></pre>
     title: "Histórico de Arquivos do Windows: como configurar versões de verdade",
     excerpt:
       "O recurso nativo que guarda versões anteriores dos seus arquivos: o que ele cobre, o que ele não cobre e como configurá-lo sem confundir versionamento com backup completo.",
-    date: "2026-09-03",
-    readTime: "11 min",
+    date: "2026-09-15",
+    readTime: "13 min",
     category: "Procedimentos Técnicos",
     content: (
       <>
-        <p className="lead">Boa parte das perdas de arquivo não vem de disco queimado: vem de sobrescrever a versão boa, salvar em cima do documento errado ou apagar sem perceber. Contra isso, cópia única não ajuda — o que resolve é ter versões anteriores recuperáveis.</p>
+        <p className="lead">Boa parte das perdas não começa com um disco queimado: começa ao sobrescrever a versão boa, excluir a pasta errada ou perceber tarde demais que um documento foi alterado. O Histórico de Arquivos ajuda justamente nesse intervalo — desde que o destino esteja disponível, as pastas importantes façam parte da cobertura e uma restauração tenha sido testada.</p>
 
         <h2>Resposta curta</h2>
-        <p>O Histórico de Arquivos do Windows copia periodicamente as pastas de usuário para um disco externo ou pasta de rede e mantém versões antigas. Ele serve para recuperar arquivos e versões, não para restaurar o sistema inteiro. Configure com disco dedicado, confira quais pastas entraram e teste a restauração depois.</p>
+        <p>O Histórico de Arquivos salva automaticamente cópias das bibliotecas do Windows em uma unidade externa ou local de rede e permite voltar a versões anteriores. Ele recupera arquivos pessoais; não reinstala programas nem recompõe sozinho um computador inteiro. Antes de confiar nele, inventarie a cobertura, execute a primeira cópia e restaure uma amostra com <strong>Restaurar para...</strong>, sem substituir o original.</p>
 
-        <h2>O que ele cobre — e o que não cobre</h2>
+        <h2>Primeiro: entenda a cobertura</h2>
         <ul>
-          <li><strong>Cobre:</strong> pastas de usuário como documentos, imagens, área de trabalho e favoritos, com versões sucessivas ao longo do tempo.</li>
-          <li><strong>Cobre:</strong> recuperação pontual de "a versão de ontem" sem desfazer nada do resto do sistema.</li>
-          <li><strong>Não cobre:</strong> o sistema operacional, os programas instalados e as configurações — isso é imagem do sistema, outra coisa.</li>
-          <li><strong>Não cobre:</strong> pastas fora do perfil do usuário, salvo se incluídas manualmente.</li>
-          <li><strong>Não cobre:</strong> proteção contra incêndio ou furto, porque o disco costuma ficar na mesma sala.</li>
+          <li><strong>Cobre:</strong> as bibliotecas padrão e personalizadas, incluindo locais usuais como Documentos, Imagens, Vídeos e Área de Trabalho.</li>
+          <li><strong>Pode incluir:</strong> uma pasta guardada em outro lugar, desde que ela seja adicionada a uma biblioteca que faça parte do Histórico de Arquivos.</li>
+          <li><strong>Não substitui:</strong> uma cópia completa para recuperar sistema, aplicativos e toda a configuração após perda do equipamento.</li>
+          <li><strong>Não garante:</strong> proteção contra furto, incêndio ou falha simultânea quando computador e destino permanecem no mesmo local.</li>
         </ul>
         <p>Por isso ele é uma camada, não a estratégia inteira. O conjunto completo — três cópias, dois tipos de mídia, uma fora do local — está descrito em <Link to="/blog/backup-como-proteger-seus-arquivos" className="text-accent">como proteger seus arquivos</Link>.</p>
 
-        <h2>Configuração em ordem</h2>
+        <h2>Configuração em ordem segura</h2>
         <table>
           <thead>
             <tr><th>Etapa</th><th>Decisão</th><th>Critério</th></tr>
           </thead>
           <tbody>
             <tr><td>1</td><td>Escolher o destino</td><td>Disco externo dedicado ou pasta de rede; nunca outra partição do mesmo disco</td></tr>
-            <tr><td>2</td><td>Dimensionar o espaço</td><td>Pelo menos duas a três vezes o volume dos arquivos, porque versões ocupam</td></tr>
-            <tr><td>3</td><td>Revisar as pastas incluídas</td><td>Conferir se área de trabalho, downloads e pastas de trabalho entraram</td></tr>
-            <tr><td>4</td><td>Excluir o que não vale versionar</td><td>Vídeos brutos, jogos e pastas de cache consomem espaço sem retorno</td></tr>
-            <tr><td>5</td><td>Definir a frequência</td><td>Quanto mais curta, menos trabalho perdido entre uma cópia e outra</td></tr>
-            <tr><td>6</td><td>Definir por quanto tempo manter</td><td>Retenção curta economiza espaço, mas encurta a janela de recuperação</td></tr>
-            <tr><td>7</td><td>Testar a restauração</td><td>Recuperar um arquivo em pasta separada e abri-lo</td></tr>
+            <tr><td>2</td><td>Medir os dados</td><td>Somar o conteúdo coberto e observar quanto ele muda; não existe multiplicador universal</td></tr>
+            <tr><td>3</td><td>Ativar</td><td>Painel de Controle → Sistema e Segurança → Histórico de Arquivos → Ativar</td></tr>
+            <tr><td>4</td><td>Revisar bibliotecas</td><td>Confirmar cada pasta crítica e adicionar a uma biblioteca o que ficou de fora</td></tr>
+            <tr><td>5</td><td>Definir frequência</td><td>Relacionar o intervalo ao máximo de trabalho que pode ser refeito</td></tr>
+            <tr><td>6</td><td>Definir retenção</td><td>Equilibrar janela de recuperação, taxa de mudança e espaço disponível</td></tr>
+            <tr><td>7</td><td>Executar e testar</td><td>Concluir uma cópia e restaurar uma versão para uma pasta separada</td></tr>
           </tbody>
         </table>
-        <p>A etapa 7 é a única que prova que a configuração funciona. O roteiro completo de verificação está em <Link to="/blog/como-testar-restauracao-de-backup" className="text-accent">como testar se o backup realmente funciona</Link>.</p>
+        <p>Capacidade deve ser decidida com dados do próprio ambiente: volume inicial, crescimento, frequência de alterações e retenção desejada. Quando o espaço acaba, apagar versões antigas pode reduzir justamente a janela necessária para recuperar um erro percebido tarde. O roteiro completo de verificação está em <Link to="/blog/como-testar-restauracao-de-backup" className="text-accent">como testar se o backup realmente funciona</Link>.</p>
 
-        <h2>Versionamento não é sincronização</h2>
-        <p>Serviço de sincronização espelha o estado atual: se o arquivo foi corrompido ou criptografado, o espelho recebe o estado ruim. Versionamento guarda o antes. É exatamente essa diferença que salva um documento sobrescrito e limita o estrago de uma criptografia maliciosa — contexto detalhado em <Link to="/blog/ransomware-como-proteger-empresa" className="text-accent">ransomware: como proteger a empresa</Link>. Para reduzir o risco, o disco de versões só deve ficar conectado durante a cópia.</p>
+        <h2>Versionamento, sincronização e backup completo não são sinônimos</h2>
+        <p>Sincronização mantém arquivos disponíveis entre dispositivos e pode oferecer lixeira ou versões, conforme o serviço. Histórico de Arquivos mantém versões locais das bibliotecas. Já a recuperação de uma máquina perdida exige cobertura independente para dados, configuração e, quando necessário, sistema e aplicativos. Um recurso pode complementar o outro; o nome “backup” não prova que todos atendem ao mesmo cenário.</p>
+        <p>Manter o destino sempre disponível favorece a automação, mas uma unidade conectada também pode ser atingida por falha elétrica, exclusão ou malware com acesso a ela. A saída não é deixar o Histórico de Arquivos permanentemente desconectado — isso impediria as cópias programadas — e sim manter outra cópia separada, preferencialmente fora do equipamento e indisponível durante o uso normal. O contexto de resposta está em <Link to="/blog/ransomware-como-proteger-empresa" className="text-accent">ransomware: como proteger a empresa</Link>.</p>
+
+        <h2>Como conferir se a rotina ainda está funcionando</h2>
+        <p>Depois da primeira execução, anote a data, o destino e uma pasta usada como amostra. Confira periodicamente se há versões recentes e se o destino continua com espaço. Se o Windows avisar que a unidade foi desconectada, reconecte-a; para local de rede, volte ao Histórico de Arquivos no Painel de Controle e selecione novamente o endereço. Aguarde a próxima execução ou use <strong>Executar agora</strong>.</p>
+        <p>Ausência de versão recente não identifica sozinha a causa. Separe destino indisponível, credencial de rede vencida, falta de espaço e falha física antes de alterar retenção ou apagar histórico.</p>
+
+        <h2>Restaure sem colocar o original em risco</h2>
+        <ol>
+          <li>No Explorador de Arquivos, abra a pasta em que o item estava e acesse <strong>Restaurar versões anteriores</strong>.</li>
+          <li>Escolha uma data e use <strong>Abrir</strong> para conferir o conteúdo.</li>
+          <li>Prefira <strong>Restaurar para...</strong> e selecione uma pasta temporária em outro local.</li>
+          <li>Abra a cópia restaurada, compare conteúdo, data e tamanho e só então decida se ela deve substituir a atual.</li>
+        </ol>
+        <p>A Microsoft alerta que restaurar diretamente no local original substitui a versão atual e essa substituição não pode ser desfeita. Por isso, recuperar primeiro para outro destino é a opção mais conservadora quando ainda existe um arquivo atual.</p>
 
         <h2>Quando o disco de destino é o problema</h2>
-        <p>Rotina que "para sozinha" quase sempre é destino ausente, cheio ou com falha. Vale checar o estado do disco antes de culpar o recurso — o caminho está em <Link to="/blog/disco-com-setores-defeituosos-smart-o-que-fazer" className="text-accent">disco com setores defeituosos</Link>. Se a mídia externa entrou em somente leitura, o diagnóstico está em <Link to="/blog/pendrive-somente-leitura-protegido-contra-gravacao" className="text-accent">mídia protegida contra gravação</Link>.</p>
+        <p>Destino ausente, cheio ou com falha são hipóteses diferentes. Vale checar a conexão e o espaço antes de suspeitar da mídia; havendo lentidão, desconexões ou erros de leitura, o caminho está em <Link to="/blog/disco-com-setores-defeituosos-smart-o-que-fazer" className="text-accent">disco com setores defeituosos</Link>. Se a mídia externa entrou em somente leitura, o diagnóstico está em <Link to="/blog/pendrive-somente-leitura-protegido-contra-gravacao" className="text-accent">mídia protegida contra gravação</Link>.</p>
 
         <h2>Antes de formatar ou trocar de disco</h2>
         <p>Versões guardadas não substituem a cópia feita especificamente antes de uma intervenção. O critério está em <Link to="/decisoes/backup-antes-da-manutencao" className="text-accent">backup antes da manutenção</Link>, e o procedimento de reinstalação preservando dados em <Link to="/blog/como-formatar-pc-sem-perder-arquivos" className="text-accent">como formatar o PC sem perder arquivos</Link>.</p>
@@ -14503,7 +14516,7 @@ bcdboot C:\\Windows /s S: /f UEFI`}</code></pre>
         <h2>O que NÃO fazer</h2>
         <ul>
           <li>Apontar o destino para outra partição do mesmo disco físico.</li>
-          <li>Deixar o disco de versões permanentemente conectado quando o risco principal é criptografia maliciosa.</li>
+          <li>Confundir a unidade automatizada com a única cópia necessária e dispensar uma camada separada.</li>
           <li>Confiar que as pastas certas entraram sem conferir a lista.</li>
           <li>Tratar versionamento como substituto de imagem do sistema.</li>
           <li>Ativar e nunca mais olhar: rotina sem verificação é suposição.</li>
@@ -14512,6 +14525,8 @@ bcdboot C:\\Windows /s S: /f UEFI`}</code></pre>
 
         <h2>Quando parar</h2>
         <p>Pare se o destino apresentar erro de gravação, se o disco emitir ruído incomum ou se o sistema pedir formatação da mídia de versões. Insistir grava por cima de espaço que ainda pode conter dado recuperável.</p>
+
+        <EditorialReferences slug="historico-de-arquivos-windows-como-configurar" />
 
         <h2>Quando chamar um técnico</h2>
         <p>Chame quando houver dados de trabalho envolvidos, quando a rotina falhar de forma recorrente sem causa aparente, quando for preciso desenhar cobertura para mais de um computador ou quando a restauração completa nunca tiver sido cronometrada. Para ambiente com equipe, o desdobramento está em <Link to="/servicos/backup-para-empresas" className="text-accent">backup para empresas</Link>; a avaliação individual, em <Link to="/diagnostico-tecnico" className="text-accent">diagnóstico técnico</Link>.</p>
