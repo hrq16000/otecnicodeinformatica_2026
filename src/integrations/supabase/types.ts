@@ -374,6 +374,7 @@ export type Database = {
           neighborhood_slug: string | null
           notas_admin: string | null
           origin_route: string | null
+          prazo: string | null
           requires_coleta: boolean
           route_family: string | null
           service_slug: string | null
@@ -402,6 +403,7 @@ export type Database = {
           neighborhood_slug?: string | null
           notas_admin?: string | null
           origin_route?: string | null
+          prazo?: string | null
           requires_coleta?: boolean
           route_family?: string | null
           service_slug?: string | null
@@ -430,6 +432,7 @@ export type Database = {
           neighborhood_slug?: string | null
           notas_admin?: string | null
           origin_route?: string | null
+          prazo?: string | null
           requires_coleta?: boolean
           route_family?: string | null
           service_slug?: string | null

@@ -1,0 +1,1 @@
+ALTER TABLE public.funnel_submissions ADD COLUMN IF NOT EXISTS prazo date;
