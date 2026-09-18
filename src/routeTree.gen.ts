@@ -380,6 +380,7 @@ import { Route as EntidadesSlugRouteImport } from './routes/entidades_.$slug'
 import { Route as EquipamentosSlugRouteImport } from './routes/equipamentos_.$slug'
 import { Route as FerramentasSlugRouteImport } from './routes/ferramentas_.$slug'
 import { Route as GlossarioTermoRouteImport } from './routes/glossario_.$termo'
+import { Route as GuiasSlugRouteImport } from './routes/guias.$slug'
 import { Route as LandingConsertoComputadorSaoJoseDosPinhaisRouteImport } from './routes/landing.conserto-computador-sao-jose-dos-pinhais'
 import { Route as MarcasSlugRouteImport } from './routes/marcas_.$slug'
 import { Route as ProblemasSlugRouteImport } from './routes/problemas_.$slug'
@@ -2433,6 +2434,11 @@ const GlossarioTermoRoute = GlossarioTermoRouteImport.update({
   path: '/glossario/$termo',
   getParentRoute: () => rootRouteImport,
 } as any)
+const GuiasSlugRoute = GuiasSlugRouteImport.update({
+  id: '/guias/$slug',
+  path: '/guias/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const LandingConsertoComputadorSaoJoseDosPinhaisRoute =
   LandingConsertoComputadorSaoJoseDosPinhaisRouteImport.update({
     id: '/landing/conserto-computador-sao-jose-dos-pinhais',
@@ -3447,6 +3453,7 @@ export interface FileRoutesByFullPath {
   '/equipamentos/$slug': typeof EquipamentosSlugRoute
   '/ferramentas/$slug': typeof FerramentasSlugRoute
   '/glossario/$termo': typeof GlossarioTermoRoute
+  '/guias/$slug': typeof GuiasSlugRoute
   '/landing/conserto-computador-sao-jose-dos-pinhais': typeof LandingConsertoComputadorSaoJoseDosPinhaisRoute
   '/marcas/$slug': typeof MarcasSlugRoute
   '/problemas/$slug': typeof ProblemasSlugRoute
@@ -3932,6 +3939,7 @@ export interface FileRoutesByTo {
   '/equipamentos/$slug': typeof EquipamentosSlugRoute
   '/ferramentas/$slug': typeof FerramentasSlugRoute
   '/glossario/$termo': typeof GlossarioTermoRoute
+  '/guias/$slug': typeof GuiasSlugRoute
   '/landing/conserto-computador-sao-jose-dos-pinhais': typeof LandingConsertoComputadorSaoJoseDosPinhaisRoute
   '/marcas/$slug': typeof MarcasSlugRoute
   '/problemas/$slug': typeof ProblemasSlugRoute
@@ -4418,6 +4426,7 @@ export interface FileRoutesById {
   '/equipamentos_/$slug': typeof EquipamentosSlugRoute
   '/ferramentas_/$slug': typeof FerramentasSlugRoute
   '/glossario_/$termo': typeof GlossarioTermoRoute
+  '/guias/$slug': typeof GuiasSlugRoute
   '/landing/conserto-computador-sao-jose-dos-pinhais': typeof LandingConsertoComputadorSaoJoseDosPinhaisRoute
   '/marcas_/$slug': typeof MarcasSlugRoute
   '/problemas_/$slug': typeof ProblemasSlugRoute
@@ -4905,6 +4914,7 @@ export interface FileRouteTypes {
     | '/equipamentos/$slug'
     | '/ferramentas/$slug'
     | '/glossario/$termo'
+    | '/guias/$slug'
     | '/landing/conserto-computador-sao-jose-dos-pinhais'
     | '/marcas/$slug'
     | '/problemas/$slug'
@@ -5390,6 +5400,7 @@ export interface FileRouteTypes {
     | '/equipamentos/$slug'
     | '/ferramentas/$slug'
     | '/glossario/$termo'
+    | '/guias/$slug'
     | '/landing/conserto-computador-sao-jose-dos-pinhais'
     | '/marcas/$slug'
     | '/problemas/$slug'
@@ -5875,6 +5886,7 @@ export interface FileRouteTypes {
     | '/equipamentos_/$slug'
     | '/ferramentas_/$slug'
     | '/glossario_/$termo'
+    | '/guias/$slug'
     | '/landing/conserto-computador-sao-jose-dos-pinhais'
     | '/marcas_/$slug'
     | '/problemas_/$slug'
@@ -6361,6 +6373,7 @@ export interface RootRouteChildren {
   EquipamentosSlugRoute: typeof EquipamentosSlugRoute
   FerramentasSlugRoute: typeof FerramentasSlugRoute
   GlossarioTermoRoute: typeof GlossarioTermoRoute
+  GuiasSlugRoute: typeof GuiasSlugRoute
   LandingConsertoComputadorSaoJoseDosPinhaisRoute: typeof LandingConsertoComputadorSaoJoseDosPinhaisRoute
   MarcasSlugRoute: typeof MarcasSlugRoute
   ProblemasSlugRoute: typeof ProblemasSlugRoute
@@ -9074,6 +9087,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof GlossarioTermoRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/guias/$slug': {
+      id: '/guias/$slug'
+      path: '/guias/$slug'
+      fullPath: '/guias/$slug'
+      preLoaderRoute: typeof GuiasSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/landing/conserto-computador-sao-jose-dos-pinhais': {
       id: '/landing/conserto-computador-sao-jose-dos-pinhais'
       path: '/landing/conserto-computador-sao-jose-dos-pinhais'
@@ -10237,6 +10257,7 @@ const rootRouteChildren: RootRouteChildren = {
   EquipamentosSlugRoute: EquipamentosSlugRoute,
   FerramentasSlugRoute: FerramentasSlugRoute,
   GlossarioTermoRoute: GlossarioTermoRoute,
+  GuiasSlugRoute: GuiasSlugRoute,
   LandingConsertoComputadorSaoJoseDosPinhaisRoute:
     LandingConsertoComputadorSaoJoseDosPinhaisRoute,
   MarcasSlugRoute: MarcasSlugRoute,
