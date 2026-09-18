@@ -173,3 +173,55 @@ export function resumoAutoridade(): ResumoAutoridade {
     termosNovos: termos.filter((t) => t.novidade).length,
   };
 }
+
+export interface SegmentoAutoridade {
+  segmento: string;
+  urls: number;
+  cliques: number;
+  impressoes: number;
+  posicao: number | null;
+  topUrls: { caminho: string; impressoes: number; cliques: number; posicao: number | null }[];
+}
+
+/** Classifica uma URL curada em um segmento editorial (sintoma, cidade, serviço…). */
+export function segmentoDaUrl(caminho: string): string {
+  if (caminho.startsWith("/problemas")) return "Sintomas";
+  if (caminho.startsWith("/bairros") || /^\/(tecnico-informatica|arrumar-pc|assistencia-tecnica)-/.test(caminho))
+    return "Cidades e bairros";
+  if (caminho.startsWith("/guias")) return "Guias publicados no painel";
+  if (caminho.startsWith("/servicos") || caminho.startsWith("/equipamentos")) return "Serviços e equipamentos";
+  if (caminho.startsWith("/blog")) return "Conteúdo editorial";
+  if (caminho.startsWith("/empresa") || caminho.startsWith("/empresas")) return "Empresas";
+  return "Institucional";
+}
+
+/**
+ * Desempenho real agregado por segmento (sintoma, cidade, serviço…),
+ * com as URLs de maior alcance dentro de cada um. Fail-closed: sem
+ * snapshot válido, devolve lista vazia.
+ */
+export function autoridadePorSegmento(): SegmentoAutoridade[] {
+  if (!gscDisponivel) return [];
+  const mapa = new Map<string, AutoridadeUrl[]>();
+  for (const u of autoridadePorUrl()) {
+    const seg = segmentoDaUrl(u.caminho);
+    mapa.set(seg, [...(mapa.get(seg) ?? []), u]);
+  }
+  return Array.from(mapa.entries())
+    .map(([segmento, lista]) => {
+      const impressoes = lista.reduce((a, u) => a + u.impressoes, 0);
+      const peso = lista.reduce((a, u) => a + (u.posicao !== null ? u.impressoes || 1 : 0), 0);
+      const soma = lista.reduce((a, u) => a + (u.posicao !== null ? u.posicao * (u.impressoes || 1) : 0), 0);
+      return {
+        segmento,
+        urls: lista.length,
+        cliques: lista.reduce((a, u) => a + u.cliques, 0),
+        impressoes,
+        posicao: peso ? Number((soma / peso).toFixed(1)) : null,
+        topUrls: lista
+          .slice(0, 5)
+          .map((u) => ({ caminho: u.caminho, impressoes: u.impressoes, cliques: u.cliques, posicao: u.posicao })),
+      };
+    })
+    .sort((a, b) => b.impressoes - a.impressoes);
+}
