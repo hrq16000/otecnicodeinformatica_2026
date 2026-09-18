@@ -66,6 +66,10 @@ export async function recordSubmission(payload: {
         equipamento: payload.equipamento?.slice(0, 80),
         route_family: ctx.route_family,
         cta_location: payload.ctaLocation || "unknown",
+        // Bairro, cidade e serviço de origem da solicitação (sem PII).
+        neighborhood_slug: ctx.neighborhood_slug ?? undefined,
+        city: ctx.city ?? undefined,
+        service_slug: ctx.service_slug ?? undefined,
       });
     } catch {
       /* analytics é best-effort */
