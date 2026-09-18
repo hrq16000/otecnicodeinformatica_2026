@@ -36,7 +36,7 @@ export async function recordSubmission(payload: {
     // RODADA 6 — vínculo lead ↔ rota de origem (sem PII, sem fallback falso).
     const { buildRouteContext, getJourneyId, readTouchpoint } = await import("@/lib/analyticsContract");
     const ctx = buildRouteContext();
-    await supabase.from("funnel_submissions").insert({
+    const { data: inserido } = await supabase.from("funnel_submissions").insert({
       session_id: payload.sessionId,
       equipamento: payload.equipamento?.slice(0, 80),
       marca: payload.marca?.slice(0, 120),
