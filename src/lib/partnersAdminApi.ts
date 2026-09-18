@@ -61,8 +61,8 @@ export async function adminUpdatePartnerStatus(input: {
   const { error } = await supabase.rpc("admin_update_partner_status", {
     _partner_id: input.partnerId,
     _status: input.status,
-    _plano_expira_em: input.planoExpiraEm,
-    _notas_admin: input.notasAdmin,
+    _plano_expira_em: input.planoExpiraEm ?? undefined,
+    _notas_admin: input.notasAdmin ?? undefined,
   });
   if (error) throw new Error(error.message);
 }
