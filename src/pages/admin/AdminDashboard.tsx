@@ -284,6 +284,7 @@ const AdminDashboard = () => {
               <Download className="h-4 w-4" /> CSV
             </Button>
             <Link to="/admin/funnel"><Button variant="outline" size="sm">Leads</Button></Link>
+            <Link to="/admin/parceiros"><Button variant="outline" size="sm">Parceiros</Button></Link>
             <Button variant="outline" size="sm" onClick={signOut} className="gap-1">
               <LogOut className="h-4 w-4" /> Sair
             </Button>
