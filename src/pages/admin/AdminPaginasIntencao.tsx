@@ -237,6 +237,14 @@ export default function AdminPaginasIntencao() {
                 </label>
                 <label className="flex items-center gap-2">
                   <input
+                    type="radio"
+                    checked={form.tipo === "cidade"}
+                    onChange={() => setForm({ ...form, tipo: "cidade" })}
+                  />
+                  Cidade
+                </label>
+                <label className="flex items-center gap-2">
+                  <input
                     type="checkbox"
                     checked={form.indexavel}
                     onChange={(e) => setForm({ ...form, indexavel: e.target.checked })}
