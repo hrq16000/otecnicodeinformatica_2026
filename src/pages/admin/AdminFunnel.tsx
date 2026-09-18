@@ -303,6 +303,7 @@ const AdminFunnel = () => {
       </Helmet>
       <Header />
       <main className="flex-1 container mx-auto px-4 py-6">
+        <FunnelStatusDiario />
         <div className="flex items-center justify-between gap-2 mb-4">
           <div>
             <h1 className="text-2xl font-bold">Leads do funil</h1>
