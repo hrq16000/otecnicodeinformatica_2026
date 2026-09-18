@@ -237,6 +237,14 @@ export default function AdminPaginasIntencao() {
                 </label>
                 <label className="flex items-center gap-2">
                   <input
+                    type="radio"
+                    checked={form.tipo === "cidade"}
+                    onChange={() => setForm({ ...form, tipo: "cidade" })}
+                  />
+                  Cidade
+                </label>
+                <label className="flex items-center gap-2">
+                  <input
                     type="checkbox"
                     checked={form.indexavel}
                     onChange={(e) => setForm({ ...form, indexavel: e.target.checked })}
@@ -322,7 +330,9 @@ export default function AdminPaginasIntencao() {
                       <Badge variant={p.publicado ? "default" : "secondary"}>
                         {p.publicado ? "Publicada" : "Rascunho"}
                       </Badge>
-                      <Badge variant="outline">{p.tipo === "sintoma" ? "Sintoma" : "Solução"}</Badge>
+                      <Badge variant="outline">
+                        {p.tipo === "sintoma" ? "Sintoma" : p.tipo === "cidade" ? "Cidade" : "Solução"}
+                      </Badge>
                       {p.publicado && !p.indexavel && (
                         <Badge variant="outline">Fora das buscas</Badge>
                       )}

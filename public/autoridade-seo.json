@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-09-12T01:07:16.766Z",
+  "geradoEm": "2026-09-18T01:53:09.923Z",
   "fonte": {
     "html": "SSR harness",
     "dist": "dist"
@@ -8,11 +8,11 @@
   "analisadas": 78,
   "falhas": 0,
   "medias": {
-    "palavras": 1495.36,
-    "densidadeSemantica": 55.8,
+    "palavras": 1516.19,
+    "densidadeSemantica": 55.49,
     "densidadeKeywordPrincipal": 0.49,
-    "linksInternosSaida": 11.5,
-    "linksInternosEntrada": 3.03
+    "linksInternosSaida": 11.49,
+    "linksInternosEntrada": 3.01
   },
   "orfas": [
     "/blog/como-conectar-wifi-tv-nao-conecta",
@@ -2790,121 +2790,121 @@
       "lote": null,
       "aprovadoEm": "2026-08-12",
       "titulo": "Como se proteger de golpes na internet: o que checar antes de clicar",
-      "palavras": 1457,
-      "termosUteis": 842,
-      "densidadeSemantica": 63.54,
-      "vocabulario": 535,
+      "palavras": 1981,
+      "termosUteis": 1177,
+      "densidadeSemantica": 53.95,
+      "vocabulario": 635,
       "keywordPrincipal": {
         "termo": "como proteger computador golpes internet",
         "ocorrencias": 3,
-        "densidade": 0.36
+        "densidade": 0.25
       },
       "topKeywords": [
         {
           "termo": "senha",
-          "ocorrencias": 10,
-          "densidade": 1.19
-        },
-        {
-          "termo": "backup",
-          "ocorrencias": 9,
-          "densidade": 1.07
+          "ocorrencias": 16,
+          "densidade": 1.36
         },
         {
           "termo": "acesso",
-          "ocorrencias": 6,
-          "densidade": 0.71
+          "ocorrencias": 12,
+          "densidade": 1.02
         },
         {
-          "termo": "clicar",
-          "ocorrencias": 6,
-          "densidade": 0.71
+          "termo": "conta",
+          "ocorrencias": 12,
+          "densidade": 1.02
+        },
+        {
+          "termo": "backup",
+          "ocorrencias": 10,
+          "densidade": 0.85
         },
         {
           "termo": "computador",
-          "ocorrencias": 6,
-          "densidade": 0.71
+          "ocorrencias": 10,
+          "densidade": 0.85
         },
         {
-          "termo": "copia",
-          "ocorrencias": 6,
-          "densidade": 0.71
+          "termo": "dados",
+          "ocorrencias": 10,
+          "densidade": 0.85
         },
         {
-          "termo": "e-mail",
-          "ocorrencias": 6,
-          "densidade": 0.71
+          "termo": "mensagem",
+          "ocorrencias": 9,
+          "densidade": 0.76
         },
         {
           "termo": "programa",
-          "ocorrencias": 6,
-          "densidade": 0.71
+          "ocorrencias": 9,
+          "densidade": 0.76
         },
         {
-          "termo": "servico",
-          "ocorrencias": 6,
-          "densidade": 0.71
+          "termo": "aplicativo",
+          "ocorrencias": 8,
+          "densidade": 0.68
         },
         {
-          "termo": "tecnica",
-          "ocorrencias": 6,
-          "densidade": 0.71
+          "termo": "clicar",
+          "ocorrencias": 8,
+          "densidade": 0.68
         },
         {
-          "termo": "tecnico",
-          "ocorrencias": 6,
-          "densidade": 0.71
+          "termo": "oficial",
+          "ocorrencias": 8,
+          "densidade": 0.68
         },
         {
-          "termo": "ajuda",
-          "ocorrencias": 5,
-          "densidade": 0.59
+          "termo": "site",
+          "ocorrencias": 8,
+          "densidade": 0.68
         }
       ],
       "topBigramas": [
         {
           "termo": "acesso remoto",
+          "ocorrencias": 7,
+          "densidade": 0.6
+        },
+        {
+          "termo": "desconecte rede",
           "ocorrencias": 4,
-          "densidade": 0.48
+          "densidade": 0.34
+        },
+        {
+          "termo": "dispositivo confiavel",
+          "ocorrencias": 4,
+          "densidade": 0.34
+        },
+        {
+          "termo": "abra aplicativo",
+          "ocorrencias": 3,
+          "densidade": 0.26
         },
         {
           "termo": "backup copia",
           "ocorrencias": 3,
-          "densidade": 0.36
+          "densidade": 0.26
+        },
+        {
+          "termo": "canal oficial",
+          "ocorrencias": 3,
+          "densidade": 0.26
         },
         {
           "termo": "checar clicar",
           "ocorrencias": 3,
-          "densidade": 0.36
+          "densidade": 0.26
         },
         {
-          "termo": "duas etapas",
+          "termo": "conta propria",
           "ocorrencias": 3,
-          "densidade": 0.36
-        },
-        {
-          "termo": "golpes internet",
-          "ocorrencias": 3,
-          "densidade": 0.36
-        },
-        {
-          "termo": "internet checar",
-          "ocorrencias": 3,
-          "densidade": 0.36
-        },
-        {
-          "termo": "proteger golpes",
-          "ocorrencias": 3,
-          "densidade": 0.36
-        },
-        {
-          "termo": "verificacao duas",
-          "ocorrencias": 3,
-          "densidade": 0.36
+          "densidade": 0.26
         }
       ],
       "headings": {
-        "h2": 9,
+        "h2": 12,
         "h3": 13
       },
       "schemas": [
@@ -6621,121 +6621,121 @@
       "lote": "10C/0",
       "aprovadoEm": "2026-08-25",
       "titulo": "Como testar a memória RAM com Memtest86+ (passo a passo)",
-      "palavras": 1143,
-      "termosUteis": 652,
-      "densidadeSemantica": 61.66,
-      "vocabulario": 402,
+      "palavras": 1782,
+      "termosUteis": 1060,
+      "densidadeSemantica": 51.04,
+      "vocabulario": 541,
       "keywordPrincipal": {
         "termo": "testar memoria ram memtest86",
-        "ocorrencias": 4,
-        "densidade": 0.61
+        "ocorrencias": 8,
+        "densidade": 0.75
       },
       "topKeywords": [
         {
           "termo": "memoria",
           "ocorrencias": 21,
-          "densidade": 3.22
+          "densidade": 1.98
+        },
+        {
+          "termo": "modulo",
+          "ocorrencias": 20,
+          "densidade": 1.89
+        },
+        {
+          "termo": "teste",
+          "ocorrencias": 17,
+          "densidade": 1.6
+        },
+        {
+          "termo": "slot",
+          "ocorrencias": 15,
+          "densidade": 1.42
+        },
+        {
+          "termo": "memtest86",
+          "ocorrencias": 14,
+          "densidade": 1.32
         },
         {
           "termo": "passo",
           "ocorrencias": 12,
-          "densidade": 1.84
+          "densidade": 1.13
+        },
+        {
+          "termo": "falha",
+          "ocorrencias": 11,
+          "densidade": 1.04
+        },
+        {
+          "termo": "perfil",
+          "ocorrencias": 11,
+          "densidade": 1.04
         },
         {
           "termo": "testar",
-          "ocorrencias": 11,
-          "densidade": 1.69
+          "ocorrencias": 10,
+          "densidade": 0.94
         },
         {
-          "termo": "erro",
-          "ocorrencias": 10,
-          "densidade": 1.53
+          "termo": "resultado",
+          "ocorrencias": 9,
+          "densidade": 0.85
+        },
+        {
+          "termo": "tela",
+          "ocorrencias": 9,
+          "densidade": 0.85
         },
         {
           "termo": "azul",
           "ocorrencias": 8,
-          "densidade": 1.23
-        },
-        {
-          "termo": "tela",
-          "ocorrencias": 8,
-          "densidade": 1.23
-        },
-        {
-          "termo": "tecnico",
-          "ocorrencias": 7,
-          "densidade": 1.07
-        },
-        {
-          "termo": "defeito",
-          "ocorrencias": 6,
-          "densidade": 0.92
-        },
-        {
-          "termo": "erros",
-          "ocorrencias": 6,
-          "densidade": 0.92
-        },
-        {
-          "termo": "memtest86",
-          "ocorrencias": 6,
-          "densidade": 0.92
-        },
-        {
-          "termo": "modulo",
-          "ocorrencias": 6,
-          "densidade": 0.92
-        },
-        {
-          "termo": "teste",
-          "ocorrencias": 6,
-          "densidade": 0.92
+          "densidade": 0.75
         }
       ],
       "topBigramas": [
         {
           "termo": "tela azul",
           "ocorrencias": 8,
-          "densidade": 1.23
+          "densidade": 0.76
+        },
+        {
+          "termo": "xmp expo",
+          "ocorrencias": 7,
+          "densidade": 0.66
+        },
+        {
+          "termo": "mesmo slot",
+          "ocorrencias": 5,
+          "densidade": 0.47
+        },
+        {
+          "termo": "modulo slot",
+          "ocorrencias": 5,
+          "densidade": 0.47
         },
         {
           "termo": "passo passo",
           "ocorrencias": 5,
-          "densidade": 0.77
-        },
-        {
-          "termo": "memoria defeito",
-          "ocorrencias": 4,
-          "densidade": 0.61
+          "densidade": 0.47
         },
         {
           "termo": "memoria ram",
           "ocorrencias": 4,
-          "densidade": 0.61
+          "densidade": 0.38
         },
         {
           "termo": "testar memoria",
           "ocorrencias": 4,
-          "densidade": 0.61
+          "densidade": 0.38
         },
         {
-          "termo": "memtest86 passo",
+          "termo": "configuracoes padrao",
           "ocorrencias": 3,
-          "densidade": 0.46
-        },
-        {
-          "termo": "ram memtest86",
-          "ocorrencias": 3,
-          "densidade": 0.46
-        },
-        {
-          "termo": "vale testar",
-          "ocorrencias": 3,
-          "densidade": 0.46
+          "densidade": 0.28
         }
       ],
       "headings": {
-        "h2": 9,
+        "h2": 13,
         "h3": 4
       },
       "schemas": [
@@ -9273,12 +9273,11 @@
         "/problemas/windows-nao-inicia",
         "/ferramentas/checklist-antes-de-formatar"
       ],
-      "linksInternosEntrada": 4,
+      "linksInternosEntrada": 3,
       "origensEntrada": [
         "/blog/como-instalar-windows-11-do-zero",
         "/blog/limpar-cache-do-windows-update-softwaredistribution",
-        "/blog/windows-update-travado-desfazendo-alteracoes",
-        "/blog/computador-nao-conecta-na-internet-por-cabo"
+        "/blog/windows-update-travado-desfazendo-alteracoes"
       ],
       "erro": null
     },
@@ -11779,121 +11778,121 @@
       "lote": "11A/8",
       "aprovadoEm": "2026-09-03",
       "titulo": "Computador não conecta na internet por cabo: o que verificar",
-      "palavras": 1133,
-      "termosUteis": 631,
-      "densidadeSemantica": 50.08,
-      "vocabulario": 316,
+      "palavras": 1595,
+      "termosUteis": 978,
+      "densidadeSemantica": 45.91,
+      "vocabulario": 449,
       "keywordPrincipal": {
         "termo": "computador nao conecta na internet por cabo",
         "ocorrencias": 4,
-        "densidade": 0.63
+        "densidade": 0.41
       },
       "topKeywords": [
         {
           "termo": "cabo",
           "ocorrencias": 30,
-          "densidade": 4.75
+          "densidade": 3.07
+        },
+        {
+          "termo": "dns",
+          "ocorrencias": 21,
+          "densidade": 2.15
         },
         {
           "termo": "rede",
-          "ocorrencias": 21,
-          "densidade": 3.33
+          "ocorrencias": 20,
+          "densidade": 2.04
         },
         {
           "termo": "roteador",
           "ocorrencias": 18,
-          "densidade": 2.85
+          "densidade": 1.84
         },
         {
-          "termo": "placa",
-          "ocorrencias": 12,
-          "densidade": 1.9
+          "termo": "gateway",
+          "ocorrencias": 17,
+          "densidade": 1.74
         },
         {
-          "termo": "porta",
-          "ocorrencias": 12,
-          "densidade": 1.9
+          "termo": "endereco",
+          "ocorrencias": 13,
+          "densidade": 1.33
+        },
+        {
+          "termo": "enlace",
+          "ocorrencias": 11,
+          "densidade": 1.12
         },
         {
           "termo": "internet",
           "ocorrencias": 11,
-          "densidade": 1.74
+          "densidade": 1.12
         },
         {
-          "termo": "computador",
+          "termo": "porta",
+          "ocorrencias": 11,
+          "densidade": 1.12
+        },
+        {
+          "termo": "configuracao",
           "ocorrencias": 10,
-          "densidade": 1.58
+          "densidade": 1.02
         },
         {
-          "termo": "enlace",
+          "termo": "driver",
           "ocorrencias": 10,
-          "densidade": 1.58
+          "densidade": 1.02
         },
         {
-          "termo": "provedor",
+          "termo": "ethernet",
           "ocorrencias": 10,
-          "densidade": 1.58
-        },
-        {
-          "termo": "problema",
-          "ocorrencias": 9,
-          "densidade": 1.43
-        },
-        {
-          "termo": "wi-fi",
-          "ocorrencias": 9,
-          "densidade": 1.43
-        },
-        {
-          "termo": "conector",
-          "ocorrencias": 8,
-          "densidade": 1.27
+          "densidade": 1.02
         }
       ],
       "topBigramas": [
         {
-          "termo": "placa rede",
-          "ocorrencias": 7,
-          "densidade": 1.11
-        },
-        {
-          "termo": "porta roteador",
-          "ocorrencias": 4,
-          "densidade": 0.63
+          "termo": "gateway dns",
+          "ocorrencias": 8,
+          "densidade": 0.82
         },
         {
           "termo": "cabo porta",
-          "ocorrencias": 3,
-          "densidade": 0.48
+          "ocorrencias": 5,
+          "densidade": 0.51
         },
         {
-          "termo": "cabo verificar",
-          "ocorrencias": 3,
-          "densidade": 0.48
+          "termo": "ipv4 gateway",
+          "ocorrencias": 5,
+          "densidade": 0.51
         },
         {
-          "termo": "computador conecta",
-          "ocorrencias": 3,
-          "densidade": 0.48
-        },
-        {
-          "termo": "conecta internet",
-          "ocorrencias": 3,
-          "densidade": 0.48
+          "termo": "endereco gateway",
+          "ocorrencias": 4,
+          "densidade": 0.41
         },
         {
           "termo": "enlace fisico",
-          "ocorrencias": 3,
-          "densidade": 0.48
+          "ocorrencias": 4,
+          "densidade": 0.41
         },
         {
-          "termo": "falha provedor",
+          "termo": "ipconfig all",
+          "ocorrencias": 4,
+          "densidade": 0.41
+        },
+        {
+          "termo": "rede local",
+          "ocorrencias": 4,
+          "densidade": 0.41
+        },
+        {
+          "termo": "adaptador desabilitado",
           "ocorrencias": 3,
-          "densidade": 0.48
+          "densidade": 0.31
         }
       ],
       "headings": {
-        "h2": 12,
+        "h2": 15,
         "h3": 0
       },
       "schemas": [
@@ -11909,14 +11908,13 @@
         "ItemList",
         "FAQPage"
       ],
-      "linksInternosSaida": 9,
+      "linksInternosSaida": 8,
       "linksSaida": [
         "/blog",
         "/contato",
-        "/blog/como-configurar-roteador-wifi-iniciantes",
         "/blog/internet-lenta-provedor-ou-roteador",
+        "/blog/como-configurar-roteador-wifi-iniciantes",
         "/blog/dispositivo-usb-nao-reconhecido-o-que-fazer",
-        "/blog/windows-update-nao-funciona-o-que-verificar",
         "/servicos/redes-e-wifi",
         "/diagnostico-tecnico",
         "/servicos/suporte-tecnico-empresarial"

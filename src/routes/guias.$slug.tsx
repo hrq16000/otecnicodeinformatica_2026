@@ -108,7 +108,7 @@ function PaginaIntencao() {
       <Header />
       <main className="flex-1 container mx-auto px-4 py-10 max-w-3xl">
         <p className="text-xs uppercase tracking-wide text-muted-foreground mb-2">
-          {pagina.tipo === "sintoma" ? "Sintoma" : "Solução"}
+          {pagina.tipo === "sintoma" ? "Sintoma" : pagina.tipo === "cidade" ? "Cidade" : "Solução"}
         </p>
         <h1 className="text-3xl font-bold leading-tight mb-4">{pagina.titulo}</h1>
         {pagina.resumo && (

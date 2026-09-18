@@ -3,6 +3,7 @@ import { Link, Navigate } from "@/lib/router-compat";
 import { Helmet } from "react-helmet";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import FunnelStatusDiario from "@/components/admin/FunnelStatusDiario";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
@@ -303,6 +304,7 @@ const AdminFunnel = () => {
       </Helmet>
       <Header />
       <main className="flex-1 container mx-auto px-4 py-6">
+        <FunnelStatusDiario />
         <div className="flex items-center justify-between gap-2 mb-4">
           <div>
             <h1 className="text-2xl font-bold">Leads do funil</h1>

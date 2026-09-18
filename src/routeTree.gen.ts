@@ -427,6 +427,7 @@ import { Route as ServicosSuporteHomeOfficeRouteImport } from './routes/servicos
 import { Route as ServicosSuporteTecnicoEmpresarialRouteImport } from './routes/servicos_.suporte-tecnico-empresarial'
 import { Route as ServicosUpgradeSsdRamRouteImport } from './routes/servicos_.upgrade-ssd-ram'
 import { Route as SolucoesSlugRouteImport } from './routes/solucoes_.$slug'
+import { Route as ApiPublicSitemapPaginasRouteImport } from './routes/api/public/sitemap-paginas'
 import { Route as ProfissionaisEstadoCidadeRouteImport } from './routes/profissionais_.$estado_.$cidade'
 import { Route as ServicosServicoCidadeRouteImport } from './routes/servicos_.$servico_.$cidade'
 import { Route as ServicosBackupRecuperacaoCentroRouteImport } from './routes/servicos_.backup-recuperacao_.centro'
@@ -2693,6 +2694,11 @@ const SolucoesSlugRoute = SolucoesSlugRouteImport.update({
   path: '/solucoes/$slug',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ApiPublicSitemapPaginasRoute = ApiPublicSitemapPaginasRouteImport.update({
+  id: '/api/public/sitemap-paginas',
+  path: '/api/public/sitemap-paginas',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ProfissionaisEstadoCidadeRoute =
   ProfissionaisEstadoCidadeRouteImport.update({
     id: '/profissionais_/$estado_/$cidade',
@@ -3506,6 +3512,7 @@ export interface FileRoutesByFullPath {
   '/servicos/suporte-tecnico-empresarial': typeof ServicosSuporteTecnicoEmpresarialRoute
   '/servicos/upgrade-ssd-ram': typeof ServicosUpgradeSsdRamRoute
   '/solucoes/$slug': typeof SolucoesSlugRoute
+  '/api/public/sitemap-paginas': typeof ApiPublicSitemapPaginasRoute
   '/profissionais/$estado/$cidade': typeof ProfissionaisEstadoCidadeRoute
   '/servicos/$servico/$cidade': typeof ServicosServicoCidadeRoute
   '/servicos/backup-recuperacao/centro': typeof ServicosBackupRecuperacaoCentroRoute
@@ -3993,6 +4000,7 @@ export interface FileRoutesByTo {
   '/servicos/suporte-tecnico-empresarial': typeof ServicosSuporteTecnicoEmpresarialRoute
   '/servicos/upgrade-ssd-ram': typeof ServicosUpgradeSsdRamRoute
   '/solucoes/$slug': typeof SolucoesSlugRoute
+  '/api/public/sitemap-paginas': typeof ApiPublicSitemapPaginasRoute
   '/profissionais/$estado/$cidade': typeof ProfissionaisEstadoCidadeRoute
   '/servicos/$servico/$cidade': typeof ServicosServicoCidadeRoute
   '/servicos/backup-recuperacao/centro': typeof ServicosBackupRecuperacaoCentroRoute
@@ -4481,6 +4489,7 @@ export interface FileRoutesById {
   '/servicos_/suporte-tecnico-empresarial': typeof ServicosSuporteTecnicoEmpresarialRoute
   '/servicos_/upgrade-ssd-ram': typeof ServicosUpgradeSsdRamRoute
   '/solucoes_/$slug': typeof SolucoesSlugRoute
+  '/api/public/sitemap-paginas': typeof ApiPublicSitemapPaginasRoute
   '/profissionais_/$estado_/$cidade': typeof ProfissionaisEstadoCidadeRoute
   '/servicos_/$servico_/$cidade': typeof ServicosServicoCidadeRoute
   '/servicos_/backup-recuperacao_/centro': typeof ServicosBackupRecuperacaoCentroRoute
@@ -4970,6 +4979,7 @@ export interface FileRouteTypes {
     | '/servicos/suporte-tecnico-empresarial'
     | '/servicos/upgrade-ssd-ram'
     | '/solucoes/$slug'
+    | '/api/public/sitemap-paginas'
     | '/profissionais/$estado/$cidade'
     | '/servicos/$servico/$cidade'
     | '/servicos/backup-recuperacao/centro'
@@ -5457,6 +5467,7 @@ export interface FileRouteTypes {
     | '/servicos/suporte-tecnico-empresarial'
     | '/servicos/upgrade-ssd-ram'
     | '/solucoes/$slug'
+    | '/api/public/sitemap-paginas'
     | '/profissionais/$estado/$cidade'
     | '/servicos/$servico/$cidade'
     | '/servicos/backup-recuperacao/centro'
@@ -5944,6 +5955,7 @@ export interface FileRouteTypes {
     | '/servicos_/suporte-tecnico-empresarial'
     | '/servicos_/upgrade-ssd-ram'
     | '/solucoes_/$slug'
+    | '/api/public/sitemap-paginas'
     | '/profissionais_/$estado_/$cidade'
     | '/servicos_/$servico_/$cidade'
     | '/servicos_/backup-recuperacao_/centro'
@@ -6432,6 +6444,7 @@ export interface RootRouteChildren {
   ServicosSuporteTecnicoEmpresarialRoute: typeof ServicosSuporteTecnicoEmpresarialRoute
   ServicosUpgradeSsdRamRoute: typeof ServicosUpgradeSsdRamRoute
   SolucoesSlugRoute: typeof SolucoesSlugRoute
+  ApiPublicSitemapPaginasRoute: typeof ApiPublicSitemapPaginasRoute
   ProfissionaisEstadoCidadeRoute: typeof ProfissionaisEstadoCidadeRoute
   ServicosServicoCidadeRoute: typeof ServicosServicoCidadeRoute
   ServicosBackupRecuperacaoCentroRoute: typeof ServicosBackupRecuperacaoCentroRoute
@@ -9429,6 +9442,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof SolucoesSlugRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/api/public/sitemap-paginas': {
+      id: '/api/public/sitemap-paginas'
+      path: '/api/public/sitemap-paginas'
+      fullPath: '/api/public/sitemap-paginas'
+      preLoaderRoute: typeof ApiPublicSitemapPaginasRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/profissionais_/$estado_/$cidade': {
       id: '/profissionais_/$estado_/$cidade'
       path: '/profissionais/$estado/$cidade'
@@ -10329,6 +10349,7 @@ const rootRouteChildren: RootRouteChildren = {
     ServicosSuporteTecnicoEmpresarialRoute,
   ServicosUpgradeSsdRamRoute: ServicosUpgradeSsdRamRoute,
   SolucoesSlugRoute: SolucoesSlugRoute,
+  ApiPublicSitemapPaginasRoute: ApiPublicSitemapPaginasRoute,
   ProfissionaisEstadoCidadeRoute: ProfissionaisEstadoCidadeRoute,
   ServicosServicoCidadeRoute: ServicosServicoCidadeRoute,
   ServicosBackupRecuperacaoCentroRoute: ServicosBackupRecuperacaoCentroRoute,

@@ -1,6 +1,6 @@
 # Autoridade SEO — densidade semântica, keywords e links internos
 
-Gerado em: 2026-09-12T01:07:16.766Z
+Gerado em: 2026-09-18T01:53:09.923Z
 URLs analisadas: 78/78 · órfãs: 10
 
 | URL | Palavras | Dens. semântica | Keyword principal | Dens. KW | Links saída | Links entrada |
@@ -22,7 +22,7 @@ URLs analisadas: 78/78 · órfãs: 10
 | /blog/como-configurar-roteador-wifi-iniciantes | 2002 | 53.59% | como configurar roteador wifi iniciantes | 0% | 9 | 5 |
 | /blog/como-saber-quem-esta-usando-meu-wifi | 1982 | 51.39% | como saber quem esta usando meu wifi | 0% | 9 | 1 |
 | /blog/como-escolher-um-bom-antivirus | 1933 | 58.73% | como escolher um bom antivirus | 0.09% | 11 | 1 |
-| /blog/como-proteger-computador-golpes-internet | 1457 | 63.54% | como proteger computador golpes internet | 0.36% | 10 | 2 |
+| /blog/como-proteger-computador-golpes-internet | 1981 | 53.95% | como proteger computador golpes internet | 0.25% | 10 | 2 |
 | /blog/como-limpar-notebook-por-dentro | 1741 | 61.44% | como limpar notebook por dentro | 0% | 12 | 8 |
 | /blog/como-trocar-pasta-termica-notebook | 1617 | 60.57% | como trocar pasta termica notebook | 0.22% | 11 | 5 |
 | /blog/como-clonar-hd-para-ssd | 1372 | 59.72% | como clonar hd para ssd | 1.03% | 12 | 5 |
@@ -46,7 +46,7 @@ URLs analisadas: 78/78 · órfãs: 10
 | /blog/limpar-arquivos-temporarios-windows | 1315 | 59.66% | limpar arquivos temporarios windows | 0.79% | 12 | 2 |
 | /blog/memoria-ram-insuficiente-sintomas | 1191 | 62.32% | memoria ram insuficiente sintomas | 0.71% | 10 | 5 |
 | /blog/codigos-de-erro-tela-azul-windows | 1252 | 61.88% | codigos de erro tela azul windows | 0.69% | 11 | 4 |
-| /blog/testar-memoria-ram-memtest86 | 1143 | 61.66% | testar memoria ram memtest86 | 0.61% | 11 | 6 |
+| /blog/testar-memoria-ram-memtest86 | 1782 | 51.04% | testar memoria ram memtest86 | 0.75% | 11 | 6 |
 | /blog/botao-power-nao-funciona-jump-start-placa-mae | 1574 | 48.65% | botao power nao funciona jump start placa mae | 0% | 13 | 0 |
 | /blog/curto-circuito-placa-mae-como-identificar | 1507 | 56.21% | curto circuito placa mae como identificar | 0% | 11 | 2 |
 | /blog/bios-corrompida-reset-cmos-atualizacao | 1620 | 50.64% | bios corrompida reset cmos atualizacao | 0.43% | 11 | 1 |
@@ -62,7 +62,7 @@ URLs analisadas: 78/78 · órfãs: 10
 | /blog/webcam-nao-funciona-o-que-verificar | 1533 | 47.05% | webcam nao funciona o que verificar | 0.33% | 11 | 1 |
 | /blog/permissoes-de-camera-no-windows | 1320 | 50.27% | permissoes de camera no windows | 1.22% | 9 | 3 |
 | /blog/webcam-usb-nao-e-detectada | 1128 | 53% | webcam usb nao e detectada | 0.62% | 9 | 2 |
-| /blog/windows-update-nao-funciona-o-que-verificar | 1646 | 49.9% | windows update nao funciona o que verificar | 0.21% | 12 | 4 |
+| /blog/windows-update-nao-funciona-o-que-verificar | 1646 | 49.9% | windows update nao funciona o que verificar | 0.21% | 12 | 3 |
 | /blog/limpar-cache-do-windows-update-softwaredistribution | 1243 | 54.58% | limpar cache do windows update softwaredistribution | 0.14% | 9 | 1 |
 | /blog/windows-update-travado-desfazendo-alteracoes | 1369 | 53.5% | windows update travado desfazendo alteracoes | 0.49% | 11 | 2 |
 | /blog/boot-uefi-ou-legacy-como-identificar | 1064 | 55.02% | boot uefi ou legacy como identificar | 1.17% | 12 | 2 |
@@ -79,7 +79,7 @@ URLs analisadas: 78/78 · órfãs: 10
 | /blog/como-migrar-arquivos-para-um-computador-novo | 1058 | 61.64% | como migrar arquivos para um computador novo | 0.5% | 10 | 0 |
 | /blog/teclado-de-notebook-nao-funciona-o-que-verificar | 1156 | 52.68% | teclado de notebook nao funciona o que verificar | 0.89% | 8 | 0 |
 | /blog/computador-desliga-sozinho-o-que-verificar | 1138 | 55.93% | computador desliga sozinho o que verificar | 0.89% | 12 | 1 |
-| /blog/computador-nao-conecta-na-internet-por-cabo | 1133 | 50.08% | computador nao conecta na internet por cabo | 0.63% | 9 | 1 |
+| /blog/computador-nao-conecta-na-internet-por-cabo | 1595 | 45.91% | computador nao conecta na internet por cabo | 0.41% | 8 | 1 |
 | /blog/ventoinha-do-computador-fazendo-barulho-o-que-verificar | 1162 | 53.8% | ventoinha do computador fazendo barulho o que verificar | 0.29% | 10 | 0 |
 | /blog/rede-wifi-nao-aparece-na-lista-o-que-verificar | 1184 | 50.46% | rede wifi nao aparece na lista o que verificar | 0% | 8 | 0 |
 | /blog/arquivo-corrompido-nao-abre-o-que-fazer | 1132 | 53.51% | arquivo corrompido nao abre o que fazer | 0.78% | 8 | 0 |
