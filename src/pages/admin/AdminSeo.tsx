@@ -12,6 +12,7 @@ import { DeployStatusPanel } from "@/components/admin/DeployStatusPanel";
 import { GscSnapshotPanel } from "@/components/admin/GscSnapshotPanel";
 import { GscAutoridadePanel } from "@/components/admin/GscAutoridadePanel";
 import { GscInventarioPanel } from "@/components/admin/GscInventarioPanel";
+import { GscSegmentosPanel } from "@/components/admin/GscSegmentosPanel";
 import { SeoHealthcheckPanel } from "@/components/admin/SeoHealthcheckPanel";
 import { InterlinkSuggestionsPanel } from "@/components/admin/InterlinkSuggestionsPanel";
 import { PromocaoIndexPanel } from "@/components/admin/PromocaoIndexPanel";
