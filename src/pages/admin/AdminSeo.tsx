@@ -309,6 +309,10 @@ export default function AdminSeo() {
         <GscAutoridadePanel />
       </div>
 
+      <div className="mt-6">
+        <GscSegmentosPanel />
+      </div>
+
       <GscInventarioPanel />
 
 
