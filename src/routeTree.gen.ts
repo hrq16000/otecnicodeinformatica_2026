@@ -115,6 +115,7 @@ import { Route as AdminLinkBuilderRouteImport } from './routes/admin_.link-build
 import { Route as AdminLoginRouteImport } from './routes/admin_.login'
 import { Route as AdminOndasRouteImport } from './routes/admin_.ondas'
 import { Route as AdminOperacaoRouteImport } from './routes/admin_.operacao'
+import { Route as AdminParceirosRouteImport } from './routes/admin_.parceiros'
 import { Route as AdminPerformanceLocalRouteImport } from './routes/admin_.performance-local'
 import { Route as AdminProvasMonitorRouteImport } from './routes/admin_.provas-monitor'
 import { Route as AdminProvasVerticaisRouteImport } from './routes/admin_.provas-verticais'
@@ -1038,6 +1039,11 @@ const AdminOndasRoute = AdminOndasRouteImport.update({
 const AdminOperacaoRoute = AdminOperacaoRouteImport.update({
   id: '/admin_/operacao',
   path: '/admin/operacao',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AdminParceirosRoute = AdminParceirosRouteImport.update({
+  id: '/admin_/parceiros',
+  path: '/admin/parceiros',
   getParentRoute: () => rootRouteImport,
 } as any)
 const AdminPerformanceLocalRoute = AdminPerformanceLocalRouteImport.update({
@@ -3176,6 +3182,7 @@ export interface FileRoutesByFullPath {
   '/admin/login': typeof AdminLoginRoute
   '/admin/ondas': typeof AdminOndasRoute
   '/admin/operacao': typeof AdminOperacaoRoute
+  '/admin/parceiros': typeof AdminParceirosRoute
   '/admin/performance-local': typeof AdminPerformanceLocalRoute
   '/admin/provas-monitor': typeof AdminProvasMonitorRoute
   '/admin/provas-verticais': typeof AdminProvasVerticaisRoute
@@ -3660,6 +3667,7 @@ export interface FileRoutesByTo {
   '/admin/login': typeof AdminLoginRoute
   '/admin/ondas': typeof AdminOndasRoute
   '/admin/operacao': typeof AdminOperacaoRoute
+  '/admin/parceiros': typeof AdminParceirosRoute
   '/admin/performance-local': typeof AdminPerformanceLocalRoute
   '/admin/provas-monitor': typeof AdminProvasMonitorRoute
   '/admin/provas-verticais': typeof AdminProvasVerticaisRoute
@@ -4145,6 +4153,7 @@ export interface FileRoutesById {
   '/admin_/login': typeof AdminLoginRoute
   '/admin_/ondas': typeof AdminOndasRoute
   '/admin_/operacao': typeof AdminOperacaoRoute
+  '/admin_/parceiros': typeof AdminParceirosRoute
   '/admin_/performance-local': typeof AdminPerformanceLocalRoute
   '/admin_/provas-monitor': typeof AdminProvasMonitorRoute
   '/admin_/provas-verticais': typeof AdminProvasVerticaisRoute
@@ -4631,6 +4640,7 @@ export interface FileRouteTypes {
     | '/admin/login'
     | '/admin/ondas'
     | '/admin/operacao'
+    | '/admin/parceiros'
     | '/admin/performance-local'
     | '/admin/provas-monitor'
     | '/admin/provas-verticais'
@@ -5115,6 +5125,7 @@ export interface FileRouteTypes {
     | '/admin/login'
     | '/admin/ondas'
     | '/admin/operacao'
+    | '/admin/parceiros'
     | '/admin/performance-local'
     | '/admin/provas-monitor'
     | '/admin/provas-verticais'
@@ -5599,6 +5610,7 @@ export interface FileRouteTypes {
     | '/admin_/login'
     | '/admin_/ondas'
     | '/admin_/operacao'
+    | '/admin_/parceiros'
     | '/admin_/performance-local'
     | '/admin_/provas-monitor'
     | '/admin_/provas-verticais'
@@ -6084,6 +6096,7 @@ export interface RootRouteChildren {
   AdminLoginRoute: typeof AdminLoginRoute
   AdminOndasRoute: typeof AdminOndasRoute
   AdminOperacaoRoute: typeof AdminOperacaoRoute
+  AdminParceirosRoute: typeof AdminParceirosRoute
   AdminPerformanceLocalRoute: typeof AdminPerformanceLocalRoute
   AdminProvasMonitorRoute: typeof AdminProvasMonitorRoute
   AdminProvasVerticaisRoute: typeof AdminProvasVerticaisRoute
@@ -7204,6 +7217,13 @@ declare module '@tanstack/react-router' {
       path: '/admin/operacao'
       fullPath: '/admin/operacao'
       preLoaderRoute: typeof AdminOperacaoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/admin_/parceiros': {
+      id: '/admin_/parceiros'
+      path: '/admin/parceiros'
+      fullPath: '/admin/parceiros'
+      preLoaderRoute: typeof AdminParceirosRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/admin_/performance-local': {
@@ -9951,6 +9971,7 @@ const rootRouteChildren: RootRouteChildren = {
   AdminLoginRoute: AdminLoginRoute,
   AdminOndasRoute: AdminOndasRoute,
   AdminOperacaoRoute: AdminOperacaoRoute,
+  AdminParceirosRoute: AdminParceirosRoute,
   AdminPerformanceLocalRoute: AdminPerformanceLocalRoute,
   AdminProvasMonitorRoute: AdminProvasMonitorRoute,
   AdminProvasVerticaisRoute: AdminProvasVerticaisRoute,
