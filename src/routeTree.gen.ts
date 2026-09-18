@@ -115,6 +115,7 @@ import { Route as AdminLinkBuilderRouteImport } from './routes/admin_.link-build
 import { Route as AdminLoginRouteImport } from './routes/admin_.login'
 import { Route as AdminOndasRouteImport } from './routes/admin_.ondas'
 import { Route as AdminOperacaoRouteImport } from './routes/admin_.operacao'
+import { Route as AdminPaginasRouteImport } from './routes/admin_.paginas'
 import { Route as AdminParceirosRouteImport } from './routes/admin_.parceiros'
 import { Route as AdminPerformanceLocalRouteImport } from './routes/admin_.performance-local'
 import { Route as AdminProvasMonitorRouteImport } from './routes/admin_.provas-monitor'
@@ -380,6 +381,7 @@ import { Route as EntidadesSlugRouteImport } from './routes/entidades_.$slug'
 import { Route as EquipamentosSlugRouteImport } from './routes/equipamentos_.$slug'
 import { Route as FerramentasSlugRouteImport } from './routes/ferramentas_.$slug'
 import { Route as GlossarioTermoRouteImport } from './routes/glossario_.$termo'
+import { Route as GuiasSlugRouteImport } from './routes/guias.$slug'
 import { Route as LandingConsertoComputadorSaoJoseDosPinhaisRouteImport } from './routes/landing.conserto-computador-sao-jose-dos-pinhais'
 import { Route as MarcasSlugRouteImport } from './routes/marcas_.$slug'
 import { Route as ProblemasSlugRouteImport } from './routes/problemas_.$slug'
@@ -1039,6 +1041,11 @@ const AdminOndasRoute = AdminOndasRouteImport.update({
 const AdminOperacaoRoute = AdminOperacaoRouteImport.update({
   id: '/admin_/operacao',
   path: '/admin/operacao',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AdminPaginasRoute = AdminPaginasRouteImport.update({
+  id: '/admin_/paginas',
+  path: '/admin/paginas',
   getParentRoute: () => rootRouteImport,
 } as any)
 const AdminParceirosRoute = AdminParceirosRouteImport.update({
@@ -2433,6 +2440,11 @@ const GlossarioTermoRoute = GlossarioTermoRouteImport.update({
   path: '/glossario/$termo',
   getParentRoute: () => rootRouteImport,
 } as any)
+const GuiasSlugRoute = GuiasSlugRouteImport.update({
+  id: '/guias/$slug',
+  path: '/guias/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const LandingConsertoComputadorSaoJoseDosPinhaisRoute =
   LandingConsertoComputadorSaoJoseDosPinhaisRouteImport.update({
     id: '/landing/conserto-computador-sao-jose-dos-pinhais',
@@ -3182,6 +3194,7 @@ export interface FileRoutesByFullPath {
   '/admin/login': typeof AdminLoginRoute
   '/admin/ondas': typeof AdminOndasRoute
   '/admin/operacao': typeof AdminOperacaoRoute
+  '/admin/paginas': typeof AdminPaginasRoute
   '/admin/parceiros': typeof AdminParceirosRoute
   '/admin/performance-local': typeof AdminPerformanceLocalRoute
   '/admin/provas-monitor': typeof AdminProvasMonitorRoute
@@ -3447,6 +3460,7 @@ export interface FileRoutesByFullPath {
   '/equipamentos/$slug': typeof EquipamentosSlugRoute
   '/ferramentas/$slug': typeof FerramentasSlugRoute
   '/glossario/$termo': typeof GlossarioTermoRoute
+  '/guias/$slug': typeof GuiasSlugRoute
   '/landing/conserto-computador-sao-jose-dos-pinhais': typeof LandingConsertoComputadorSaoJoseDosPinhaisRoute
   '/marcas/$slug': typeof MarcasSlugRoute
   '/problemas/$slug': typeof ProblemasSlugRoute
@@ -3667,6 +3681,7 @@ export interface FileRoutesByTo {
   '/admin/login': typeof AdminLoginRoute
   '/admin/ondas': typeof AdminOndasRoute
   '/admin/operacao': typeof AdminOperacaoRoute
+  '/admin/paginas': typeof AdminPaginasRoute
   '/admin/parceiros': typeof AdminParceirosRoute
   '/admin/performance-local': typeof AdminPerformanceLocalRoute
   '/admin/provas-monitor': typeof AdminProvasMonitorRoute
@@ -3932,6 +3947,7 @@ export interface FileRoutesByTo {
   '/equipamentos/$slug': typeof EquipamentosSlugRoute
   '/ferramentas/$slug': typeof FerramentasSlugRoute
   '/glossario/$termo': typeof GlossarioTermoRoute
+  '/guias/$slug': typeof GuiasSlugRoute
   '/landing/conserto-computador-sao-jose-dos-pinhais': typeof LandingConsertoComputadorSaoJoseDosPinhaisRoute
   '/marcas/$slug': typeof MarcasSlugRoute
   '/problemas/$slug': typeof ProblemasSlugRoute
@@ -4153,6 +4169,7 @@ export interface FileRoutesById {
   '/admin_/login': typeof AdminLoginRoute
   '/admin_/ondas': typeof AdminOndasRoute
   '/admin_/operacao': typeof AdminOperacaoRoute
+  '/admin_/paginas': typeof AdminPaginasRoute
   '/admin_/parceiros': typeof AdminParceirosRoute
   '/admin_/performance-local': typeof AdminPerformanceLocalRoute
   '/admin_/provas-monitor': typeof AdminProvasMonitorRoute
@@ -4418,6 +4435,7 @@ export interface FileRoutesById {
   '/equipamentos_/$slug': typeof EquipamentosSlugRoute
   '/ferramentas_/$slug': typeof FerramentasSlugRoute
   '/glossario_/$termo': typeof GlossarioTermoRoute
+  '/guias/$slug': typeof GuiasSlugRoute
   '/landing/conserto-computador-sao-jose-dos-pinhais': typeof LandingConsertoComputadorSaoJoseDosPinhaisRoute
   '/marcas_/$slug': typeof MarcasSlugRoute
   '/problemas_/$slug': typeof ProblemasSlugRoute
@@ -4640,6 +4658,7 @@ export interface FileRouteTypes {
     | '/admin/login'
     | '/admin/ondas'
     | '/admin/operacao'
+    | '/admin/paginas'
     | '/admin/parceiros'
     | '/admin/performance-local'
     | '/admin/provas-monitor'
@@ -4905,6 +4924,7 @@ export interface FileRouteTypes {
     | '/equipamentos/$slug'
     | '/ferramentas/$slug'
     | '/glossario/$termo'
+    | '/guias/$slug'
     | '/landing/conserto-computador-sao-jose-dos-pinhais'
     | '/marcas/$slug'
     | '/problemas/$slug'
@@ -5125,6 +5145,7 @@ export interface FileRouteTypes {
     | '/admin/login'
     | '/admin/ondas'
     | '/admin/operacao'
+    | '/admin/paginas'
     | '/admin/parceiros'
     | '/admin/performance-local'
     | '/admin/provas-monitor'
@@ -5390,6 +5411,7 @@ export interface FileRouteTypes {
     | '/equipamentos/$slug'
     | '/ferramentas/$slug'
     | '/glossario/$termo'
+    | '/guias/$slug'
     | '/landing/conserto-computador-sao-jose-dos-pinhais'
     | '/marcas/$slug'
     | '/problemas/$slug'
@@ -5610,6 +5632,7 @@ export interface FileRouteTypes {
     | '/admin_/login'
     | '/admin_/ondas'
     | '/admin_/operacao'
+    | '/admin_/paginas'
     | '/admin_/parceiros'
     | '/admin_/performance-local'
     | '/admin_/provas-monitor'
@@ -5875,6 +5898,7 @@ export interface FileRouteTypes {
     | '/equipamentos_/$slug'
     | '/ferramentas_/$slug'
     | '/glossario_/$termo'
+    | '/guias/$slug'
     | '/landing/conserto-computador-sao-jose-dos-pinhais'
     | '/marcas_/$slug'
     | '/problemas_/$slug'
@@ -6096,6 +6120,7 @@ export interface RootRouteChildren {
   AdminLoginRoute: typeof AdminLoginRoute
   AdminOndasRoute: typeof AdminOndasRoute
   AdminOperacaoRoute: typeof AdminOperacaoRoute
+  AdminPaginasRoute: typeof AdminPaginasRoute
   AdminParceirosRoute: typeof AdminParceirosRoute
   AdminPerformanceLocalRoute: typeof AdminPerformanceLocalRoute
   AdminProvasMonitorRoute: typeof AdminProvasMonitorRoute
@@ -6361,6 +6386,7 @@ export interface RootRouteChildren {
   EquipamentosSlugRoute: typeof EquipamentosSlugRoute
   FerramentasSlugRoute: typeof FerramentasSlugRoute
   GlossarioTermoRoute: typeof GlossarioTermoRoute
+  GuiasSlugRoute: typeof GuiasSlugRoute
   LandingConsertoComputadorSaoJoseDosPinhaisRoute: typeof LandingConsertoComputadorSaoJoseDosPinhaisRoute
   MarcasSlugRoute: typeof MarcasSlugRoute
   ProblemasSlugRoute: typeof ProblemasSlugRoute
@@ -7217,6 +7243,13 @@ declare module '@tanstack/react-router' {
       path: '/admin/operacao'
       fullPath: '/admin/operacao'
       preLoaderRoute: typeof AdminOperacaoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/admin_/paginas': {
+      id: '/admin_/paginas'
+      path: '/admin/paginas'
+      fullPath: '/admin/paginas'
+      preLoaderRoute: typeof AdminPaginasRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/admin_/parceiros': {
@@ -9074,6 +9107,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof GlossarioTermoRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/guias/$slug': {
+      id: '/guias/$slug'
+      path: '/guias/$slug'
+      fullPath: '/guias/$slug'
+      preLoaderRoute: typeof GuiasSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/landing/conserto-computador-sao-jose-dos-pinhais': {
       id: '/landing/conserto-computador-sao-jose-dos-pinhais'
       path: '/landing/conserto-computador-sao-jose-dos-pinhais'
@@ -9971,6 +10011,7 @@ const rootRouteChildren: RootRouteChildren = {
   AdminLoginRoute: AdminLoginRoute,
   AdminOndasRoute: AdminOndasRoute,
   AdminOperacaoRoute: AdminOperacaoRoute,
+  AdminPaginasRoute: AdminPaginasRoute,
   AdminParceirosRoute: AdminParceirosRoute,
   AdminPerformanceLocalRoute: AdminPerformanceLocalRoute,
   AdminProvasMonitorRoute: AdminProvasMonitorRoute,
@@ -10237,6 +10278,7 @@ const rootRouteChildren: RootRouteChildren = {
   EquipamentosSlugRoute: EquipamentosSlugRoute,
   FerramentasSlugRoute: FerramentasSlugRoute,
   GlossarioTermoRoute: GlossarioTermoRoute,
+  GuiasSlugRoute: GuiasSlugRoute,
   LandingConsertoComputadorSaoJoseDosPinhaisRoute:
     LandingConsertoComputadorSaoJoseDosPinhaisRoute,
   MarcasSlugRoute: MarcasSlugRoute,

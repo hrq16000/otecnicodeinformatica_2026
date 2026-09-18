@@ -1075,14 +1075,14 @@ const WAVE_11D: EditorialApproval[] = [
     status: "approved",
     authorType: "organization",
     authorId: INSTITUTIONAL_AUTHOR.id,
-    reviewedAt: "2026-09-15",
-    approvedAt: "2026-09-15",
+    reviewedAt: "2026-09-03",
+    approvedAt: "2026-09-03",
     imageOrigin: "licensed",
     imageLicense: "CC BY-SA 4.0",
     imageAttribution:
       "Foto: Sam Frazier (Wikimedia Commons), CC BY-SA 4.0 — https://commons.wikimedia.org/wiki/File:External_portable_hard_drive.jpg",
     notes:
-      "Revisão material em 2026-09-15: cobertura por bibliotecas, configuração e reconexão do destino, dimensionamento orientado por dados e restauração conservadora com Restaurar para. Limites diante de recuperação integral e ransomware explicitados; FAQ e fontes Microsoft em paridade. Capa é fotografia real licenciada, sem IA.",
+      "Procedimento de versionamento nativo do Windows, escrito do zero na Onda 11D: escopo real do recurso, dimensionamento do destino, retenção e diferença entre versionar e sincronizar. O teste de restauração permanece no artigo próprio. Capa é fotografia real licenciada, sem IA.",
   },
 ];
 

@@ -61,28 +61,6 @@ const CATEGORY_EXTRA: Record<string, FAQItem[]> = {
 // categoria (que contêm valores comerciais).
 // ─────────────────────────────────────────────────────────────
 const PILOT_FAQ: Record<string, FAQItem[]> = {
-  "historico-de-arquivos-windows-como-configurar": [
-    {
-      q: "Histórico de Arquivos é a mesma coisa que Windows Backup?",
-      a: "Não. O Histórico de Arquivos mantém versões das bibliotecas em uma unidade externa ou local de rede. O Windows Backup e as ferramentas de recuperação atendem a outros itens, como arquivos sincronizados, preferências ou recuperação do sistema. Confirme qual cenário cada camada precisa resolver.",
-    },
-    {
-      q: "Quais pastas entram no Histórico de Arquivos?",
-      a: "As bibliotecas padrão e personalizadas fazem parte da cobertura. Uma pasta guardada em outro local pode ser adicionada a uma biblioteca, mas isso deve ser conferido na configuração e validado com uma restauração; não presuma que todo o disco foi incluído.",
-    },
-    {
-      q: "Posso usar outra partição do mesmo disco como destino?",
-      a: "Ela pode separar arquivos logicamente, mas não protege contra a falha física do disco, perda ou furto do computador. Para resiliência, use outro dispositivo físico ou local de rede e mantenha também uma cópia separada quando o impacto justificar.",
-    },
-    {
-      q: "Como restaurar uma versão sem sobrescrever o arquivo atual?",
-      a: "Abra as versões anteriores, confira a data e prefira Restaurar para..., escolhendo uma pasta temporária. Abra e compare a cópia recuperada antes de substituir qualquer arquivo. A restauração direta no local original substitui a versão atual.",
-    },
-    {
-      q: "A unidade do Histórico de Arquivos deve ficar sempre conectada?",
-      a: "Ela precisa estar disponível para as cópias automáticas acontecerem. Como uma unidade acessível também pode sofrer falha, exclusão ou malware, não a trate como única camada: mantenha outra cópia separada, offline ou fora do local conforme o risco.",
-    },
-  ],
   "windows-reparo-automatico-em-loop": [
     {
       q: "O Reparo Automático do Windows apaga meus arquivos?",

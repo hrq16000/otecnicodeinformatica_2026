@@ -315,42 +315,6 @@ export const EDITORIAL_SOURCES: Record<string, EditorialSource> = {
       "Planejamento de contingência e restauração de dados; a restauração precisa ser testada, não apenas configurada.",
     ],
   },
-  "ms-file-history-backup-restore": {
-    id: "ms-file-history-backup-restore",
-    title: "Backup and restore with File History",
-    publisher: "Microsoft Support",
-    url: "https://support.microsoft.com/en-us/windows/experience/backup-recovery/backup-and-restore-with-file-history",
-    accessedAt: "2026-09-15",
-    sourceType: "official",
-    supports: [
-      "O Histórico de Arquivos salva cópias das bibliotecas em unidade externa ou local de rede e permite recuperar versões anteriores.",
-      "Uma pasta fora das bibliotecas pode ser coberta depois de adicionada a uma biblioteca.",
-      "Restaurar para outro local evita substituir imediatamente o arquivo atual; a substituição no local original não pode ser desfeita.",
-    ],
-  },
-  "ms-file-history-reconnect": {
-    id: "ms-file-history-reconnect",
-    title: "Reconnect Your File History Drive in Windows",
-    publisher: "Microsoft Support",
-    url: "https://support.microsoft.com/en-us/windows/experience/backup-recovery/reconnect-your-file-history-drive-in-windows",
-    accessedAt: "2026-09-15",
-    sourceType: "official",
-    supports: [
-      "Uma unidade externa desconectada deve ser reconectada; um local de rede pode ser selecionado novamente no Painel de Controle.",
-      "Após corrigir o destino, é possível aguardar a próxima execução ou usar Executar agora.",
-    ],
-  },
-  "ms-windows-backup-restore-overview": {
-    id: "ms-windows-backup-restore-overview",
-    title: "Backup, restore, and recovery in Windows",
-    publisher: "Microsoft Support",
-    url: "https://support.microsoft.com/en-us/windows/experience/backup-recovery/backup-restore-and-recovery-in-windows",
-    accessedAt: "2026-09-15",
-    sourceType: "official",
-    supports: [
-      "Histórico de Arquivos, Windows Backup, Proteção do Sistema e ferramentas de recuperação atendem a finalidades diferentes.",
-    ],
-  },
   "wifi-alliance-security": {
     id: "wifi-alliance-security",
     title: "Wi-Fi Security | Wi-Fi Alliance",
@@ -1202,16 +1166,13 @@ export const ARTICLE_SOURCE_MANIFEST: Record<string, ArticleSourceManifest> = {
   },
   "historico-de-arquivos-windows-como-configurar": {
     slug: "historico-de-arquivos-windows-como-configurar",
-    sources: [
-      "ms-file-history-backup-restore",
-      "ms-file-history-reconnect",
-      "ms-windows-backup-restore-overview",
-    ],
+    sources: [],
     technicalReview: "reviewed",
     factChecked: true,
-    factCheckedAt: "2026-09-15",
+    factCheckedAt: "2026-09-03",
+    stableKnowledge: true,
     notes:
-      "Revisão material em 2026-09-15 com fontes oficiais Microsoft: cobertura por bibliotecas, inclusão explícita de pastas externas, configuração e reconexão do destino e restauração para local alternativo antes de substituir o arquivo atual. Removidos multiplicador universal de capacidade e absolutos sobre falha da rotina.",
+      "Revisão concluída (Onda 11D): escopo real do versionamento nativo (pastas de usuário, não sistema), destino em disco físico separado, dimensionamento e retenção, diferença entre versionar e sincronizar e teste de restauração como etapa final. Conhecimento técnico estável — sem fonte visível.",
   },
   "monitor-sem-sinal-o-que-verificar": {
     slug: "monitor-sem-sinal-o-que-verificar",

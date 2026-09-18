@@ -793,6 +793,51 @@ export type Database = {
         }
         Relationships: []
       }
+      paginas_editoriais: {
+        Row: {
+          conteudo: string
+          created_at: string
+          id: string
+          indexavel: boolean
+          meta_description: string
+          palavras_chave: string[]
+          publicado: boolean
+          resumo: string
+          slug: string
+          tipo: string
+          titulo: string
+          updated_at: string
+        }
+        Insert: {
+          conteudo?: string
+          created_at?: string
+          id?: string
+          indexavel?: boolean
+          meta_description?: string
+          palavras_chave?: string[]
+          publicado?: boolean
+          resumo?: string
+          slug: string
+          tipo?: string
+          titulo: string
+          updated_at?: string
+        }
+        Update: {
+          conteudo?: string
+          created_at?: string
+          id?: string
+          indexavel?: boolean
+          meta_description?: string
+          palavras_chave?: string[]
+          publicado?: boolean
+          resumo?: string
+          slug?: string
+          tipo?: string
+          titulo?: string
+          updated_at?: string
+        }
+        Relationships: []
+      }
       partner_photos: {
         Row: {
           created_at: string
