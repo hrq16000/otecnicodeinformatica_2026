@@ -5,7 +5,7 @@ import type { Database } from "@/integrations/supabase/types";
 export type PaginaEditorial = {
   id: string;
   slug: string;
-  tipo: "sintoma" | "solucao";
+  tipo: "sintoma" | "solucao" | "cidade";
   titulo: string;
   meta_description: string;
   palavras_chave: string[];
