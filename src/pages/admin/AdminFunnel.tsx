@@ -3,6 +3,7 @@ import { Link, Navigate } from "@/lib/router-compat";
 import { Helmet } from "react-helmet";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import FunnelStatusDiario from "@/components/admin/FunnelStatusDiario";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
