@@ -39,5 +39,23 @@ Corrigir a apresentação e os dados estruturados das páginas `/guias/:slug` e 
 ## Validação
 
 - revisão estática do TSX e da migração SQL;
-- diff restrito à rota compartilhada, uma migração de conteúdo e este relatório;
-- build, testes, SSR e validadores JSON-LD devem ser executados pelo CI do repositório antes do merge.
+- parser da FAQ confirmado com 5 perguntas visíveis e 5 entradas estruturadas;
+- inventário: 865 testes Vitest e 1.156 testes Playwright coletados sem mistura de runners;
+- testes: 865/865 aprovados;
+- `npm run verify`: 37/37 passos aprovados;
+- `npm run build`: aprovado com 247 URLs no sitemap curado;
+- `npm run deploy:check`: 37/37 passos aprovados com o servidor SSR iniciado pelo próprio comando;
+- SSR: 328 páginas renderizadas;
+- JSON-LD: 247 HTMLs, 1.666 blocos válidos e zero erro;
+- paridade: 1.523 perguntas em 270 `FAQPage`, sem divergência;
+- nenhuma URL, slug ou canonical alterado.
+
+## Correções do pipeline — 20/09/2026
+
+- CI alinhado ao requisito real das dependências: Node.js 22.12;
+- `@testing-library/dom` declarado diretamente, eliminando a falha de instalação limpa;
+- domínio e flag de indexação definidos de forma explícita nos builds de PR;
+- inventário E2E deixou de acessar `dist/` durante a simples coleta;
+- relatório de intenção em `/problemas` passou a ser gerado antes do gate que o consome;
+- o gate editorial agora exige HTML apenas para artigos aprovados e delega imagem/interlinks aos gates especializados; CTA continua opcional em conteúdo informativo;
+- `deploy:check` passou a iniciar e encerrar automaticamente o servidor SSR necessário aos snapshots.
