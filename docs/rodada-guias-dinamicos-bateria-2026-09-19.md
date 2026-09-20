@@ -53,7 +53,8 @@ Corrigir a apresentação e os dados estruturados das páginas `/guias/:slug` e 
 ## Correções do pipeline — 20/09/2026
 
 - CI alinhado ao requisito real das dependências: Node.js 22.12;
-- `@testing-library/dom` declarado diretamente, eliminando a falha de instalação limpa;
+- `@testing-library/dom` declarado diretamente e lockfiles npm/Bun sincronizados, eliminando a falha de instalação limpa;
+- workflows que executam scripts Bun agora instalam a versão 1.4.2 explicitamente;
 - domínio e flag de indexação definidos de forma explícita nos builds de PR;
 - inventário E2E deixou de acessar `dist/` durante a simples coleta;
 - relatório de intenção em `/problemas` passou a ser gerado antes do gate que o consome;
