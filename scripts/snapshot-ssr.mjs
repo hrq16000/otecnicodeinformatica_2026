@@ -23,7 +23,12 @@ function rotasCategoriaLocal() {
 }
 
 const dist = process.argv[2] || "dist";
-const base = (process.argv[3] || process.env.SNAPSHOT_BASE_URL || "http://localhost:8080").replace(/\/$/, "");
+const base = (
+  process.argv[3] ||
+  process.env.SNAPSHOT_BASE_URL ||
+  process.env.SSR_BASE_URL ||
+  "http://localhost:8080"
+).replace(/\/$/, "");
 
 function rotasDosSitemaps() {
   const rotas = new Set(["/"]);
