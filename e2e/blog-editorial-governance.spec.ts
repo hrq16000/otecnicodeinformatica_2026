@@ -68,7 +68,11 @@ test.describe("Registro editorial (fail-closed)", () => {
 
 // ── 2. Hub /blog no HTML estático ──────────────────────────
 test.describe("Hub /blog (estático)", () => {
-  const html = readDist("blog/index.html");
+  let html: string;
+
+  test.beforeAll(() => {
+    html = readDist("blog/index.html");
+  });
 
   test("canonical self-referente único", () => {
     const canon = html.match(/<link\s+rel=["']canonical["'][^>]*>/gi) || [];
