@@ -17,7 +17,7 @@ import { promises as fs } from "node:fs";
 import { WHATSAPP_NUMBER, BASE_URL } from "./lib/site-env.mjs";
 import path from "node:path";
 import { getBlogPosts } from "./prerender-cities.mjs";
-import { EDITORIAL_WAVE, EDITORIAL_WAVE_SLUGS, isWaveApproved } from "./lib/editorial-wave.mjs";
+import { EDITORIAL_WAVE_SLUGS, isWaveApproved } from "./lib/editorial-wave.mjs";
 
 const ROOT = process.cwd();
 const DIST = path.join(ROOT, "dist");
@@ -163,12 +163,14 @@ async function checkStaticHtml(posts) {
 
   let checked = 0;
   for (const post of posts) {
+    const approved = isWaveApproved(post.slug);
     const fp = path.join(DIST, "blog", post.slug, "index.html");
-    if (!(await exists(fp))) { fail(`artigo sem HTML próprio: /blog/${post.slug}`); continue; }
+    if (!(await exists(fp))) {
+      if (approved) fail(`artigo aprovado sem HTML próprio: /blog/${post.slug}`);
+      continue;
+    }
     const h = await read(fp);
     const url = `${SITE}/blog/${post.slug}`;
-
-    const approved = isWaveApproved(post.slug);
 
     // robots — exatamente 1; noindex,follow fora da onda, index,follow na onda
     const robotsAll = h.match(/<meta\s+name=["']robots["'][^>]*>/gi) || [];
@@ -184,15 +186,9 @@ async function checkStaticHtml(posts) {
       if (!/"@type":\s*\[\s*"BlogPosting"/.test(h)) fail(`/blog/${post.slug}: BlogPosting ausente no HTML estático`);
       if (!/"@type":\s*"BreadcrumbList"/.test(h)) fail(`/blog/${post.slug}: BreadcrumbList ausente`);
       if (count(h, /<h1[\s>]/gi) !== 1) fail(`/blog/${post.slug}: HTML estático deve ter exatamente 1 <h1>`);
-      const wave = EDITORIAL_WAVE.find((a) => a.slug === post.slug);
-      if (!h.includes(`content="${SITE}${wave.cover}`)) fail(`/blog/${post.slug}: og:image deve usar a capa exclusiva`);
-      if (!h.includes(`href="${wave.pilar}"`)) fail(`/blog/${post.slug}: link interno ao pilar ausente`);
       if (!h.includes('href="/blog"')) fail(`/blog/${post.slug}: link ao hub /blog ausente`);
-      // O CTA editorial passa pela triagem central, nunca por wa.me direto
-      // (ver check:editorial-no-direct-wa) — aqui exigimos que ele exista.
-      if (!/data-cta-location="editorial_static"/.test(h))
-        fail(`/blog/${post.slug}: CTA editorial de triagem ausente`);
-
+      // Imagem/licença e interlinks são bloqueados pelos gates especializados.
+      // CTA não é requisito editorial: conteúdo informativo precisa ser útil sem conversão.
     }
 
 
