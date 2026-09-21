@@ -60,3 +60,17 @@ Corrigir a apresentação e os dados estruturados das páginas `/guias/:slug` e 
 - relatório de intenção em `/problemas` passou a ser gerado antes do gate que o consome;
 - o gate editorial agora exige HTML apenas para artigos aprovados e delega imagem/interlinks aos gates especializados; CTA continua opcional em conteúdo informativo;
 - `deploy:check` passou a iniciar e encerrar automaticamente o servidor SSR necessário aos snapshots.
+- o Lighthouse passou a usar o mesmo servidor SSR supervisionado dos demais gates, evitando HTTP 500 do `vite preview`;
+- o teste de acessibilidade do sumário passou a localizar o `role=status` específico, sem conflito com a região `aria-live` das notificações;
+- `/assistencia-tecnica-curitiba` voltou a respeitar a política central: `noindex, follow` e exclusão do sitemap, sem alterar a URL ou o canonical;
+- os gates locais agora recebem domínio, flag de indexação e atualização forçada dos snapshots SSR de forma explícita.
+
+## Estado dos gates remotos
+
+- build local aprovado após as correções, com 246 URLs curadas;
+- política local de robots/canonical/sitemap aprovada com 32 rotas;
+- o gate de similaridade de introduções locais revelou passivo anterior em páginas de bairros e permanece bloqueante;
+- a auditoria de dependências mantém vulnerabilidades altas herdadas;
+- o Gitleaks continua bloqueado por configuração/licença da organização.
+
+Por esses bloqueios, o PR permanece aberto e não deve ser mesclado nem apresentado como publicado.
