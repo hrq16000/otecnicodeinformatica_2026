@@ -12,8 +12,6 @@
         "http://localhost:4173/servicos/suporte-tecnico-empresarial",
         "http://localhost:4173/atendimento-remoto"
       ],
-      "startServerCommand": "bun run preview -- --port 4173",
-      "startServerReadyPattern": "Local:",
       "numberOfRuns": 3,
       "settings": {
         "preset": "desktop",
