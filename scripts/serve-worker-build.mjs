@@ -10,12 +10,16 @@
 import http from "node:http";
 import { readFile, stat } from "node:fs/promises";
 import path from "node:path";
+import { promisify } from "node:util";
 import { pathToFileURL } from "node:url";
+import { brotliCompress, constants as zlibConstants, gzip } from "node:zlib";
 
 const PORT = Number(process.argv[2] || process.env.PORT || 4173);
 const ROOT = process.cwd();
 const CLIENT_DIR = path.resolve(ROOT, "dist/client");
 const WORKER_ENTRY = path.resolve(ROOT, "dist/server/index.mjs");
+const compressBrotli = promisify(brotliCompress);
+const compressGzip = promisify(gzip);
 
 const MIME = {
   ".css": "text/css; charset=utf-8",
@@ -35,6 +39,27 @@ const MIME = {
 
 const workerModule = await import(pathToFileURL(WORKER_ENTRY).href);
 const worker = workerModule.default;
+
+const COMPRESSIBLE_CONTENT =
+  /^(?:text\/|application\/(?:javascript|json|manifest\+json|xml))/i;
+
+async function encodeBody(body, acceptEncoding, contentType) {
+  if (body.byteLength < 1024 || !COMPRESSIBLE_CONTENT.test(contentType || "")) {
+    return { body };
+  }
+  if (/\bbr\b/i.test(acceptEncoding || "")) {
+    return {
+      body: await compressBrotli(body, {
+        params: { [zlibConstants.BROTLI_PARAM_QUALITY]: 4 },
+      }),
+      encoding: "br",
+    };
+  }
+  if (/\bgzip\b/i.test(acceptEncoding || "")) {
+    return { body: await compressGzip(body), encoding: "gzip" };
+  }
+  return { body };
+}
 
 async function assetFetch(request) {
   const url = new URL(request.url);
@@ -90,7 +115,21 @@ const server = http.createServer(async (req, res) => {
     res.statusCode = response.status;
     for (const [name, value] of response.headers) res.setHeader(name, value);
     if (req.method === "HEAD" || !response.body) return res.end();
-    res.end(Buffer.from(await response.arrayBuffer()));
+    const originalBody = Buffer.from(await response.arrayBuffer());
+    const alreadyEncoded = response.headers.has("content-encoding");
+    const encoded = alreadyEncoded
+      ? { body: originalBody }
+      : await encodeBody(
+          originalBody,
+          String(req.headers["accept-encoding"] || ""),
+          response.headers.get("content-type") || "",
+        );
+    if (encoded.encoding) {
+      res.setHeader("content-encoding", encoded.encoding);
+      res.setHeader("vary", "Accept-Encoding");
+    }
+    res.setHeader("content-length", String(encoded.body.byteLength));
+    res.end(encoded.body);
   } catch (error) {
     console.error("[serve-worker-build]", error);
     res.writeHead(500, { "content-type": "text/plain; charset=utf-8" });
