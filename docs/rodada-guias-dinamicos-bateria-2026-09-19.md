@@ -63,6 +63,7 @@ Corrigir a apresentação e os dados estruturados das páginas `/guias/:slug` e 
 - o Lighthouse passou a usar o mesmo servidor SSR supervisionado dos demais gates, evitando HTTP 500 do `vite preview`;
 - a coorte do Lighthouse passou a usar a rota canônica `/servicos/upgrade-ssd-ram`, substituindo o slug inexistente `/servicos/upgrade-ssd` que respondia 404;
 - a medição de desempenho passou a executar o Worker Cloudflare compilado e os assets de `dist/client`; o servidor `vite dev` deixou de contaminar TBT e score com módulos e transformações de desenvolvimento;
+- o adaptador local do Worker passou a negociar Brotli/Gzip por `Accept-Encoding`, evitando medir os assets de produção sem a compressão aplicada na borda;
 - removido o carregamento global e incondicional do AdSense; o script de terceiros volta a ser injetado apenas após consentimento explícito, como já determina a política do portal;
 - o teste de acessibilidade do sumário passou a localizar o `role=status` específico, sem conflito com a região `aria-live` das notificações;
 - `/assistencia-tecnica-curitiba` voltou a respeitar a política central: `noindex, follow` e exclusão do sitemap, sem alterar a URL ou o canonical;
