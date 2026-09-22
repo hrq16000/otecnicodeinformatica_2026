@@ -91,7 +91,11 @@ for (const { nome, viewport } of VIEWPORTS) {
         ad_personalization: "denied",
         analytics_storage: "denied",
       });
-      expect(await page.locator('script[data-adsense="1"]').count()).toBe(0);
+      expect(
+        await page
+          .locator('script[src*="pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"]')
+          .count(),
+      ).toBe(0);
     });
 
     test('o link "Saiba mais" abre a política de privacidade', async ({ page }) => {
