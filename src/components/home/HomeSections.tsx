@@ -85,6 +85,7 @@ const authorityHubs: { t: string; d: string; links: { href: string; label: strin
     t: "Diagnóstico e referência",
     d: "Conteúdo técnico para identificar o problema antes do contato.",
     links: [
+      { href: "/guia-tecnico-informatica", label: "Técnico de informática: o que faz e guia completo" },
       { href: "/diagnostico-60s", label: "Diagnóstico em 60 segundos" },
       { href: "/problemas-reais-e-casos", label: "Problemas reais e casos" },
       { href: "/marcas", label: "Marcas atendidas" },
