@@ -5509,7 +5509,7 @@ docker run -d --name db --network minha-rede postgres
 
   "como-configurar-firewall-pfsense": {
     title: "Como Configurar Firewall pfSense: Guia Completo Para Redes Empresariais",
-    excerpt: "Instalação, regras de firewall, NAT, VPN e monitoramento com pfSense.",
+    excerpt: "Instalação, regras de firewall, NAT, VPN e monitoramento com pfSense em redes de pequenas empresas.",
     date: "2026-04-13",
     readTime: "16 min",
     category: "Procedimentos Técnicos",
