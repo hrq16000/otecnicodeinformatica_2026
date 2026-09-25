@@ -240,196 +240,171 @@ export const blogPostsContentBase: Record<string, BlogPostContent> = {
     ),
   },
   "comandos-linux-essenciais-iniciantes": {
-    title: "50 Comandos Linux Essenciais Para Iniciantes e Técnicos",
-    excerpt: "Guia definitivo de comandos do terminal.",
-    date: "2026-04-13",
-    readTime: "16 min",
+    title: "Comandos Linux essenciais: guia seguro para começar no terminal",
+    excerpt:
+      "Aprenda navegação, arquivos, busca, processos, permissões e rede no Linux com exemplos que explicam o efeito de cada comando e alertam antes das opções destrutivas.",
+    date: "2026-09-25",
+    readTime: "13 min",
     category: "Linux",
     content: (
       <>
-        <p className="lead">O terminal do Linux pode parecer intimidador, mas dominar os comandos básicos transforma sua produtividade. Este guia reúne <strong>50 comandos essenciais</strong> organizados por categoria, com exemplos práticos.</p>
+        <p className="lead">Aprender terminal não é decorar cinquenta comandos. É entender três coisas: <strong>onde você está</strong>, <strong>o que o comando vai alterar</strong> e <strong>como conferir o resultado antes de avançar</strong>. Este guia organiza os comandos mais úteis por tarefa e separa leitura de operações que modificam ou apagam dados.</p>
 
-        <h2>Navegação e Arquivos</h2>
-        <pre className="bg-muted p-4 rounded-lg overflow-x-auto text-sm"><code>{`pwd          # Mostra o diretório atual
-ls           # Lista arquivos e pastas
-ls -la       # Lista com detalhes e ocultos
-cd /caminho  # Navega para um diretório
-cd ..        # Volta um nível
-cd ~         # Vai para o home do usuário
-mkdir pasta  # Cria diretório
-rmdir pasta  # Remove diretório vazio
-rm arquivo   # Remove arquivo
-rm -rf pasta # Remove pasta e conteúdo (CUIDADO!)
-cp orig dest # Copia arquivo
-mv orig dest # Move ou renomeia
-touch arq    # Cria arquivo vazio
-cat arquivo  # Mostra conteúdo do arquivo
-less arquivo # Mostra com paginação
-head -n 20 arq # Primeiras 20 linhas
-tail -f log  # Acompanha arquivo em tempo real`}</code></pre>
+        <h2>Comece por comandos que só observam</h2>
+        <p>Antes de usar <code>sudo</code>, apagar arquivos ou mudar permissões, pratique com comandos de leitura. Eles ajudam a construir um modelo mental do sistema sem alterar o disco.</p>
+        <pre><code>{`pwd
+ls
+ls -la
+whoami
+id
+uname -a
+df -h
+free -h`}</code></pre>
+        <p><code>pwd</code> mostra o diretório atual; <code>ls -la</code> inclui arquivos ocultos e detalhes; <code>df -h</code> mostra ocupação dos sistemas de arquivos; <code>free -h</code> resume memória. O manual do GNU Coreutils documenta a maior parte dessas ferramentas de arquivo, diretório e texto.</p>
 
-        <h2>Busca e Filtros</h2>
-        <pre className="bg-muted p-4 rounded-lg overflow-x-auto text-sm"><code>{`find / -name "*.log"        # Busca arquivos por nome
-find . -size +100M          # Arquivos maiores que 100MB
-grep "texto" arquivo        # Busca texto em arquivo
-grep -r "texto" /pasta/     # Busca recursiva
-grep -i "texto" arq         # Ignora maiúsculas
-wc -l arquivo               # Conta linhas
-sort arquivo                # Ordena conteúdo
-uniq                        # Remove duplicatas
-diff arq1 arq2              # Compara dois arquivos`}</code></pre>
+        <h2>Navegação e manipulação de arquivos</h2>
+        <pre><code>{`cd /caminho
+cd ..
+cd ~
+mkdir projeto
+cp arquivo.txt copia.txt
+mv antigo.txt novo.txt
+touch notas.txt`}</code></pre>
+        <p><code>cp</code> copia e <code>mv</code> move ou renomeia. Antes de acrescentar opções recursivas ou forçadas, confirme origem e destino. Um erro comum de iniciante é executar um comando correto no diretório errado.</p>
 
-        <h2>Permissões e Usuários</h2>
-        <pre className="bg-muted p-4 rounded-lg overflow-x-auto text-sm"><code>{`chmod 755 arquivo    # Define permissões (rwxr-xr-x)
-chmod +x script.sh   # Torna executável
-chown user:grupo arq # Altera dono do arquivo
-sudo comando         # Executa como root
-whoami               # Mostra usuário atual
-id                   # Mostra UID, GID e grupos
-passwd               # Altera senha
-adduser nome         # Cria novo usuário
-usermod -aG grupo user # Adiciona user ao grupo`}</code></pre>
+        <h2>Remoção: a parte em que vale desacelerar</h2>
+        <p><code>rm</code> não funciona como a Lixeira de uma interface gráfica. Arquivos removidos pela linha de comando normalmente não passam por uma etapa de recuperação simples. Por isso, prefira começar listando exatamente o alvo:</p>
+        <pre><code>{`ls -la ./pasta-alvo
+find ./pasta-alvo -maxdepth 1 -type f`}</code></pre>
+        <p>Só depois use o comando de remoção necessário. Evite transformar <code>rm -rf</code> em hábito: <code>-r</code> percorre diretórios e <code>-f</code> reduz confirmações e mensagens. Quanto maior o privilégio, maior o impacto de um caminho digitado errado.</p>
 
-        <h2>Processos e Sistema</h2>
-        <pre className="bg-muted p-4 rounded-lg overflow-x-auto text-sm"><code>{`ps aux           # Lista todos os processos
-top              # Monitor em tempo real
-htop             # Monitor interativo (instalar)
-kill PID         # Encerra processo por PID
-kill -9 PID      # Força encerramento
-systemctl status serviço  # Status de serviço
-systemctl restart serviço # Reinicia serviço
-df -h            # Espaço em disco
-du -sh /pasta    # Tamanho de uma pasta
-free -h          # Uso de memória RAM
-uname -a         # Info do kernel
-uptime           # Tempo ligado`}</code></pre>
+        <h2>Encontrar arquivos e texto</h2>
+        <pre><code>{`find . -name "*.log"
+find . -type f -size +100M
+grep -n "erro" aplicativo.log
+grep -Rni "configuracao" ./projeto
+wc -l arquivo.txt
+sort arquivo.txt
+diff arquivo-antigo arquivo-novo`}</code></pre>
+        <p><code>find</code> localiza arquivos a partir de critérios; <code>grep</code> procura texto; <code>diff</code> ajuda a comparar configurações antes e depois de uma mudança. Em diagnóstico, esses comandos costumam ser mais úteis do que editar às cegas.</p>
 
-        <h2>Rede</h2>
-        <pre className="bg-muted p-4 rounded-lg overflow-x-auto text-sm"><code>{`ip a             # Mostra interfaces de rede
-ping google.com  # Testa conectividade
-curl url         # Faz requisição HTTP
-wget url         # Baixa arquivo da web
-ss -tulnp        # Portas em uso
-traceroute host  # Rota até o destino
-nslookup domínio # Consulta DNS
-scp arq user@host:/path  # Copia via SSH
-ssh user@host    # Acesso remoto seguro`}</code></pre>
+        <h2>Processos, serviços e logs</h2>
+        <pre><code>{`ps aux
+top
+systemctl status nome.service
+journalctl -u nome.service --since today
+journalctl -p err -b`}</code></pre>
+        <p>Ao investigar um serviço, leia o status e os logs antes de reiniciar. Reiniciar pode aliviar o sintoma sem explicar a causa. <code>journalctl</code> permite filtrar mensagens da inicialização atual, por serviço e por prioridade.</p>
 
-        <h2>Compactação</h2>
-        <pre className="bg-muted p-4 rounded-lg overflow-x-auto text-sm"><code>{`tar -czf backup.tar.gz /pasta  # Compacta com gzip
-tar -xzf backup.tar.gz        # Descompacta
-zip -r backup.zip /pasta       # Compacta em ZIP
-unzip backup.zip               # Descompacta ZIP`}</code></pre>
+        <h2>Permissões: leia antes de mudar</h2>
+        <pre><code>{`ls -l arquivo
+stat arquivo
+id
+chmod u+x script.sh
+chown usuario:grupo arquivo`}</code></pre>
+        <p><code>chmod</code> muda permissões e <code>chown</code> muda proprietário/grupo. Não use <code>chmod 777</code> como “correção” genérica: isso amplia acesso e pode esconder o problema real de proprietário, grupo ou caminho. Primeiro descubra quem executa o processo e de qual permissão ele realmente precisa.</p>
 
-        <h2>Dicas de Produtividade no Terminal</h2>
+        <h2>Rede: conectividade, endereço e portas</h2>
+        <pre><code>{`ip addr
+ip route
+ping 1.1.1.1
+getent hosts exemplo.com
+ss -lntup
+curl -I https://exemplo.com`}</code></pre>
+        <p>Uma sequência útil é separar rede local, rota, DNS e aplicação. Se um endereço IP responde mas o nome não resolve, a investigação muda para DNS. Se a máquina resolve o nome mas a aplicação não abre, examine porta, serviço e firewall em vez de culpar “a internet”.</p>
+
+        <h2>Como descobrir o que um comando faz</h2>
+        <p>Não copie opção da internet sem entender. Use a ajuda instalada no próprio sistema:</p>
+        <pre><code>{`comando --help
+man comando
+info coreutils 'cp invocation'`}</code></pre>
+        <p>As páginas de manual acompanham a versão instalada e são a melhor referência para opções que podem variar entre ferramentas e distribuições.</p>
+
+        <h2>Quando usar sudo — e quando não usar</h2>
+        <p><code>sudo</code> executa uma ação com privilégio elevado. Ele não torna um comando “mais forte”; apenas aumenta o que aquele comando consegue alterar. Se uma tarefa de leitura pede <code>sudo</code>, entenda o motivo antes de continuar. Para manutenção, o padrão seguro é trabalhar como usuário comum e elevar privilégio somente na etapa que realmente exige administração.</p>
+
+        <h2>Checklist para praticar sem medo</h2>
         <ul>
-          <li><strong>Tab</strong> — autocompleta comandos e caminhos</li>
-          <li><strong>Ctrl+R</strong> — busca no histórico de comandos</li>
-          <li><strong>!!</strong> — repete o último comando (útil: <code>sudo !!</code>)</li>
-          <li><strong>Ctrl+C</strong> — cancela comando em execução</li>
-          <li><strong>Ctrl+L</strong> — limpa a tela</li>
-          <li><strong>comando1 | comando2</strong> — pipe: saída de um vira entrada do outro</li>
-          <li><strong>comando &gt; arquivo</strong> — redireciona saída para arquivo</li>
-          <li><strong>comando &gt;&gt; arquivo</strong> — adiciona ao final do arquivo</li>
+          <li>Crie uma pasta de laboratório dentro do seu diretório pessoal.</li>
+          <li>Pratique <code>cp</code>, <code>mv</code>, <code>find</code>, <code>grep</code> e <code>diff</code> em arquivos descartáveis.</li>
+          <li>Leia <code>--help</code> ou <code>man</code> antes de usar opções novas.</li>
+          <li>Confirme o diretório com <code>pwd</code> antes de remover ou mover em massa.</li>
+          <li>Evite <code>sudo</code> enquanto estiver aprendendo manipulação básica.</li>
         </ul>
 
-        <div className="bg-accent/10 rounded-xl p-6 my-8">
-          <h3 className="text-accent font-bold mb-2">Precisa de Ajuda com Linux?</h3>
-          <p className="text-muted-foreground mb-0">Instalamos, configuramos e damos suporte a Linux em Curitiba e região. De servidores a desktops.</p>
-        </div>
+        <p>Se o objetivo é instalar um sistema para praticar, siga o guia de <Link to="/blog/como-instalar-ubuntu-do-zero" className="text-accent">instalação do Ubuntu</Link>. Para entender onde o Linux entra no diagnóstico de computadores e servidores, consulte o <Link to="/guia-tecnico-informatica" className="text-accent">Atlas de Informática</Link>.</p>
+        <EditorialReferences slug="comandos-linux-essenciais-iniciantes" />
       </>
     ),
   },
+
   "como-instalar-ubuntu-do-zero": {
-    title: "Como Instalar Ubuntu do Zero: Guia Completo 2026",
-    excerpt: "Passo a passo desde o pendrive bootável até a configuração pós-instalação.",
-    date: "2026-04-13",
-    readTime: "12 min",
+    title: "Como instalar Ubuntu do zero: pendrive, backup e instalação segura",
+    excerpt:
+      "Passo a passo para testar compatibilidade, criar a mídia, proteger seus arquivos, escolher o tipo de instalação e atualizar o Ubuntu depois do primeiro boot.",
+    date: "2026-09-25",
+    readTime: "13 min",
     category: "Linux",
     content: (
       <>
-        <p className="lead">O Ubuntu é a distribuição Linux mais popular do mundo — e por bons motivos. É gratuito, seguro, leve e fácil de usar. Este guia mostra <strong>como instalar o Ubuntu do zero</strong>, desde a criação do pendrive bootável até as configurações essenciais pós-instalação.</p>
+        <p className="lead">Instalar Ubuntu é simples quando a parte mais importante acontece <strong>antes</strong> do instalador: backup confirmado, teste de hardware e decisão consciente sobre o disco. O risco não está em clicar “Avançar”; está em escolher o disco errado, apagar uma partição necessária ou descobrir depois que Wi-Fi, vídeo ou um aplicativo crítico não funciona como esperado.</p>
 
-        <h2>Requisitos Mínimos</h2>
-        <ul>
-          <li>Processador dual-core de 2 GHz ou superior</li>
-          <li>4 GB de RAM (recomendado 8 GB)</li>
-          <li>25 GB de espaço em disco (recomendado 50 GB)</li>
-          <li>Pendrive USB de 4 GB ou mais</li>
-          <li>Conexão com internet (recomendado)</li>
-        </ul>
-
-        <h2>Passo 1: Baixar a ISO do Ubuntu</h2>
-        <p>Acesse <strong>ubuntu.com/download</strong> e baixe a versão LTS mais recente (Ubuntu 24.04 LTS). A versão LTS tem suporte de 5 anos — ideal para estabilidade.</p>
-
-        <h2>Passo 2: Criar Pendrive Bootável</h2>
-        <p>No Windows, use o <strong>Rufus</strong> (gratuito):</p>
+        <h2>Resposta curta: o roteiro seguro</h2>
         <ol>
-          <li>Baixe e abra o Rufus</li>
-          <li>Selecione o pendrive USB</li>
-          <li>Em "Seleção de Boot", escolha a ISO do Ubuntu</li>
-          <li>Partição: GPT (para UEFI) ou MBR (para BIOS legado)</li>
-          <li>Clique em "Iniciar" e aguarde</li>
+          <li>Faça backup e abra alguns arquivos da cópia para confirmar que ela funciona.</li>
+          <li>Baixe a imagem no site oficial do Ubuntu.</li>
+          <li>Crie um pendrive inicializável com uma ferramenta apropriada.</li>
+          <li>Inicie pelo USB e use a opção de experimentar antes de instalar.</li>
+          <li>Teste Wi-Fi, áudio, vídeo, teclado, touchpad e periféricos importantes.</li>
+          <li>Escolha conscientemente entre instalar ao lado do sistema atual ou apagar o disco.</li>
+          <li>Depois do primeiro boot, aplique atualizações e só então personalize o ambiente.</li>
         </ol>
 
-        <h2>Passo 3: Configurar Boot pelo Pendrive</h2>
-        <p>Reinicie o computador e acesse o menu de boot:</p>
+        <h2>1. Backup vem antes do pendrive</h2>
+        <p>Se o computador já tem arquivos, salve documentos, fotos, chaves de recuperação, instaladores/licenças indispensáveis e qualquer dado que não possa ser recriado. Uma cópia que nunca foi aberta é apenas uma suposição. Teste alguns arquivos em outro dispositivo antes de mexer nas partições.</p>
+        <p>Se o Windows usa BitLocker ou outra criptografia, confirme também que a chave de recuperação está acessível. Dual boot, alteração de firmware e mudanças de partição são situações em que uma chave esquecida pode virar problema maior que a própria instalação.</p>
+
+        <h2>2. Baixe a imagem oficial</h2>
+        <p>Use a página oficial de download do Ubuntu Desktop e prefira uma versão LTS quando a prioridade for estabilidade e ciclo de suporte mais longo. Evite ISOs repassadas por fóruns, drives compartilhados ou sites de terceiros.</p>
+        <p>Os requisitos mudam entre versões. Em vez de guardar números antigos de memória e processador, confira os requisitos publicados para a versão que você vai instalar. A documentação oficial também permite testar Ubuntu por USB sem fazer alterações permanentes no disco.</p>
+
+        <h2>3. Crie a mídia inicializável</h2>
+        <p>Gravar a ISO é diferente de simplesmente copiar o arquivo para o pendrive. Use um gravador de imagem confiável e confira duas vezes qual unidade será apagada. O processo de criação da mídia destrói o conteúdo do pendrive escolhido.</p>
+
+        <h2>4. Teste Ubuntu antes de instalar</h2>
+        <p>Ao iniciar pelo USB, use <strong>Try Ubuntu</strong> quando disponível. Essa etapa é valiosa porque testa o computador real sem comprometer as partições existentes. Verifique:</p>
         <ul>
-          <li><strong>Dell/Lenovo:</strong> F12</li>
-          <li><strong>HP:</strong> F9</li>
-          <li><strong>ASUS/Acer:</strong> F2 ou ESC</li>
-          <li><strong>MSI:</strong> F11</li>
-        </ul>
-        <p>Selecione o pendrive USB na lista de dispositivos de boot.</p>
-
-        <h2>Passo 4: Instalação</h2>
-        <ol>
-          <li>Selecione "Instalar Ubuntu" (não "Experimentar")</li>
-          <li>Escolha o idioma: <strong>Português do Brasil</strong></li>
-          <li>Marque "Instalar software de terceiros" (codecs, drivers Wi-Fi)</li>
-          <li>Tipo de instalação: "Apagar disco e instalar Ubuntu" (para instalação limpa)</li>
-          <li>Selecione fuso horário: <strong>São Paulo</strong></li>
-          <li>Crie seu usuário e senha</li>
-          <li>Aguarde a instalação (10-20 minutos)</li>
-          <li>Reinicie e remova o pendrive quando solicitado</li>
-        </ol>
-
-        <h2>Passo 5: Configurações Pós-Instalação</h2>
-        <p>Após o primeiro boot, execute no terminal:</p>
-        <pre className="bg-muted p-4 rounded-lg overflow-x-auto text-sm"><code>{`# Atualizar tudo
-sudo apt update && sudo apt upgrade -y
-
-# Instalar codecs multimídia
-sudo apt install ubuntu-restricted-extras -y
-
-# Instalar ferramentas essenciais
-sudo apt install git curl wget htop neofetch -y
-
-# Instalar navegador alternativo (ex: Chrome)
-wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-sudo dpkg -i google-chrome-stable_current_amd64.deb
-
-# Instalar Flatpak (mais apps)
-sudo apt install flatpak gnome-software-plugin-flatpak -y
-flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo`}</code></pre>
-
-        <h2>Softwares Essenciais Para Instalar</h2>
-        <ul>
-          <li><strong>LibreOffice</strong> — já vem instalado (equivalente ao Office)</li>
-          <li><strong>VLC</strong> — player de mídia universal</li>
-          <li><strong>GIMP</strong> — editor de imagens (alternativa ao Photoshop)</li>
-          <li><strong>Visual Studio Code</strong> — editor de código</li>
-          <li><strong>Timeshift</strong> — backup/restauração do sistema</li>
-          <li><strong>Flameshot</strong> — captura de tela avançada</li>
+          <li>Wi-Fi e Ethernet;</li>
+          <li>áudio e microfone;</li>
+          <li>resolução, brilho e múltiplos monitores;</li>
+          <li>teclado, touchpad e teclas de função;</li>
+          <li>Bluetooth e periféricos indispensáveis;</li>
+          <li>se os aplicativos essenciais ao seu trabalho têm versão Linux, alternativa ou acesso web.</li>
         </ul>
 
-        <div className="bg-accent/10 rounded-xl p-6 my-8">
-          <h3 className="text-accent font-bold mb-2">Instalação Profissional de Linux</h3>
-          <p className="text-muted-foreground mb-0">Nosso técnico instala Ubuntu, Mint ou qualquer distribuição no seu computador com todos os drivers e softwares configurados. Atendemos em Curitiba e região.</p>
-        </div>
+        <h2>5. Escolha do disco: a decisão que não pode ser automática</h2>
+        <p><strong>Apagar disco e instalar Ubuntu</strong> é apropriado apenas quando você decidiu substituir o conteúdo daquele disco e já confirmou o backup. Instalar ao lado de outro sistema exige espaço e atenção à partição escolhida. Particionamento manual é para quem entende a estrutura existente e sabe exatamente o que deseja preservar.</p>
+        <p>Se o instalador não enxerga o disco, não altere modos de controladora às cegas. Alguns equipamentos usam Intel RST e exigem preparação específica. Siga a documentação do fabricante/Ubuntu e preserve a possibilidade de iniciar o sistema atual antes de modificar esse tipo de configuração.</p>
+
+        <h2>6. Instalação e primeiro boot</h2>
+        <p>Depois de escolher idioma, teclado, rede e tipo de instalação, revise o resumo antes de confirmar operações no disco. Ao terminar, reinicie, remova o pendrive quando solicitado e faça login.</p>
+        <p>No primeiro boot, aplique as atualizações pelo Software Updater ou pelo terminal:</p>
+        <pre><code>{`sudo apt update
+sudo apt upgrade`}</code></pre>
+        <p><code>apt update</code> atualiza o índice de pacotes; <code>apt upgrade</code> aplica versões disponíveis conforme as dependências. Não transforme o pós-instalação em uma lista automática de PPAs e scripts encontrados na internet. Instale apenas o que você realmente precisa e prefira repositórios oficiais.</p>
+
+        <h2>Dual boot ou substituir o Windows?</h2>
+        <p>Dual boot é útil quando você ainda depende de um aplicativo ou periférico exclusivo do Windows. Substituir o sistema faz mais sentido quando o fluxo de trabalho já foi testado no Ubuntu e não há dependência escondida. Para um computador de produção, vale testar alguns dias pelo USB ou por uma máquina secundária antes da migração definitiva.</p>
+
+        <h2>Quando parar e pedir ajuda</h2>
+        <p>Pare se houver dados sem backup, disco com sinais de falha, BitLocker sem chave conhecida, partições que você não reconhece ou se o instalador propõe apagar um disco diferente do esperado. Também não improvise em máquinas corporativas com VPN, certificados, domínio ou software licenciado sem inventário do que precisa ser restaurado depois.</p>
+
+        <p>Depois da instalação, o próximo passo é dominar o <Link to="/blog/comandos-linux-essenciais-iniciantes" className="text-accent">terminal Linux com segurança</Link> e entender o <Link to="/blog/como-gerenciar-pacotes-apt-dnf-linux" className="text-accent">gerenciamento de pacotes</Link>. Para uma visão geral de diagnóstico e manutenção, consulte o <Link to="/guia-tecnico-informatica" className="text-accent">Atlas de Informática</Link>.</p>
+        <EditorialReferences slug="como-instalar-ubuntu-do-zero" />
       </>
     ),
   },
+
   "distribuicoes-linux-qual-melhor-para-voce": {
     title: "Distribuições Linux: Qual a Melhor Para Você?",
     excerpt: "Comparativo entre as principais distros.",
@@ -792,283 +767,157 @@ sudo certbot renew --dry-run`}</code></pre>
     ),
   },
   "como-gerenciar-pacotes-apt-dnf-linux": {
-    title: "Como Gerenciar Pacotes no Linux com APT e DNF: Guia Completo",
-    excerpt: "Domine os gerenciadores de pacotes APT (Debian/Ubuntu) e DNF (Fedora/RHEL) com exemplos práticos.",
-    date: "2026-04-13",
+    title: "APT e DNF no Linux: instalar, atualizar e remover pacotes com segurança",
+    excerpt:
+      "Entenda índice, repositórios, transações, atualização e remoção em sistemas Debian/Ubuntu e Fedora/RPM sem copiar comandos de repositórios desconhecidos.",
+    date: "2026-09-25",
     readTime: "12 min",
     category: "Linux",
     content: (
       <>
-        <p className="lead">No Linux, instalar, atualizar e remover programas é feito pelo <strong>gerenciador de pacotes</strong>. Entender APT e DNF é fundamental para qualquer administrador Linux. Neste guia, cobrimos desde o básico até técnicas avançadas como pinning, repositórios de terceiros e resolução de dependências.</p>
+        <p className="lead">APT e DNF resolvem o mesmo problema em famílias diferentes de Linux: localizar software em repositórios, calcular dependências e registrar uma transação. A habilidade importante não é decorar sintaxe; é saber <strong>de onde o pacote vem</strong>, <strong>o que a transação pretende mudar</strong> e <strong>como revisar antes de confirmar</strong>.</p>
 
-        <h2>APT — Debian, Ubuntu, Mint e Derivados</h2>
-        <p>O APT (Advanced Package Tool) é o gerenciador padrão das distribuições baseadas em Debian — as mais populares do mundo.</p>
+        <h2>APT e DNF: em quais sistemas aparecem?</h2>
+        <p>Ubuntu e Debian usam pacotes <code>.deb</code> e ferramentas da família APT. Fedora e outros sistemas da família RPM usam DNF. Há diferenças entre versões e distribuições, então trate os exemplos abaixo como base e consulte a documentação do sistema quando uma opção não existir.</p>
 
-        <h3>Comandos Essenciais do APT</h3>
-        <pre><code>{`# Atualizar lista de pacotes disponíveis
-sudo apt update
+        <h2>APT: atualização do índice não é atualização dos programas</h2>
+        <pre><code>{`sudo apt update
+apt list --upgradable
+sudo apt upgrade`}</code></pre>
+        <p><code>apt update</code> baixa metadados dos repositórios configurados; ele não instala as novas versões sozinho. <code>apt upgrade</code> executa a atualização permitida pelo resolvedor. Essa separação é importante para diagnóstico: se <code>update</code> falha, investigue repositório, assinatura, DNS ou rede antes de tentar “consertar” pacotes instalados.</p>
 
-# Atualizar todos os pacotes instalados
-sudo apt upgrade -y
-
-# Atualização completa (inclui remoção de pacotes obsoletos)
-sudo apt full-upgrade -y
-
-# Instalar um pacote
-sudo apt install nome-do-pacote -y
-
-# Instalar múltiplos pacotes
-sudo apt install nginx php mysql-server -y
-
-# Remover pacote (mantém configs)
+        <h2>Instalar, pesquisar e remover com APT</h2>
+        <pre><code>{`apt search nome
+apt show nome-do-pacote
+sudo apt install nome-do-pacote
 sudo apt remove nome-do-pacote
+sudo apt remove --purge nome-do-pacote
+sudo apt autoremove`}</code></pre>
+        <p><code>remove</code> e <code>--purge</code> não são equivalentes: o segundo também remove arquivos de configuração gerenciados pelo pacote. Revise a lista apresentada pelo APT antes de confirmar, principalmente quando <code>autoremove</code> propõe uma quantidade grande de dependências.</p>
 
-# Remover pacote + configurações
-sudo apt purge nome-do-pacote
+        <h2>DNF: transações e histórico</h2>
+        <pre><code>{`dnf search nome
+dnf info nome-do-pacote
+sudo dnf install nome-do-pacote
+sudo dnf upgrade
+sudo dnf remove nome-do-pacote
+dnf history`}</code></pre>
+        <p>A documentação do DNF descreve comandos de instalação, remoção, busca, informações, atualização e histórico de transações. O histórico é útil para entender o que mudou, mas não deve ser tratado como garantia de “desfazer qualquer atualização”: arquivos de aplicação e dados externos ao gerenciador podem ter mudado por conta própria.</p>
 
-# Remover dependências órfãs
-sudo apt autoremove -y
-
-# Buscar pacotes
-apt search "servidor web"
-
-# Ver informações de um pacote
-apt show nginx
-
-# Listar pacotes instalados
-apt list --installed
-
-# Ver pacotes atualizáveis
-apt list --upgradable`}</code></pre>
-
-        <h3>Gerenciando Repositórios</h3>
-        <pre><code>{`# Adicionar repositório PPA (Ubuntu)
-sudo add-apt-repository ppa:ondrej/php
-sudo apt update
-
-# Adicionar repositório manualmente
-echo "deb http://repo.exemplo.com/ubuntu jammy main" | sudo tee /etc/apt/sources.list.d/exemplo.list
-
-# Adicionar chave GPG do repositório
-curl -fsSL https://repo.exemplo.com/key.gpg | sudo gpg --dearmor -o /etc/apt/keyrings/exemplo.gpg
-
-# Remover PPA
-sudo add-apt-repository --remove ppa:ondrej/php`}</code></pre>
-
-        <h3>APT Pinning — Prioridade de Versões</h3>
-        <pre><code>{`# /etc/apt/preferences.d/firefox
-Package: firefox
-Pin: release a=jammy-security
-Pin-Priority: 1000`}</code></pre>
-        <p>O pinning permite favaliar o valor uma versão específica de um pacote, útil quando você precisa manter uma versão estável mesmo com repositórios mais novos adicionados.</p>
-
-        <h2>DNF — Fedora, RHEL, CentOS Stream, AlmaLinux</h2>
-        <p>O DNF (Dandified YUM) é o gerenciador padrão da família Red Hat — dominante em servidores corporativos.</p>
-
-        <h3>Comandos Essenciais do DNF</h3>
-        <pre><code>{`# Atualizar lista + instalar atualizações
-sudo dnf upgrade -y
-
-# Instalar pacote
-sudo dnf install nginx -y
-
-# Remover pacote
-sudo dnf remove nginx
-
-# Buscar pacotes
-dnf search "servidor web"
-
-# Ver informações
-dnf info nginx
-
-# Listar instalados
-dnf list installed
-
-# Ver histórico de transações
-dnf history
-
-# Desfazer última transação
-sudo dnf history undo last
-
-# Limpar cache
-sudo dnf clean all
-
-# Instalar grupo de pacotes
-sudo dnf groupinstall "Development Tools"
-
-# Listar grupos disponíveis
-dnf grouplist`}</code></pre>
-
-        <h3>Repositórios no DNF</h3>
-        <pre><code>{`# Habilitar repositório EPEL (Enterprise Linux)
-sudo dnf install epel-release -y
-
-# Adicionar RPM Fusion (codecs e drivers)
-sudo dnf install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm
-
-# Listar repositórios
-dnf repolist
-
-# Desabilitar um repositório temporariamente
-sudo dnf --disablerepo=epel install pacote`}</code></pre>
-
-        <h2>Comparativo APT vs DNF</h2>
-        <div className="overflow-x-auto">
-          <table className="w-full text-sm">
-            <thead><tr><th className="text-left p-2 border-b">Ação</th><th className="text-left p-2 border-b">APT</th><th className="text-left p-2 border-b">DNF</th></tr></thead>
-            <tbody>
-              <tr><td className="p-2 border-b">Atualizar lista</td><td className="p-2 border-b">apt update</td><td className="p-2 border-b">(automático)</td></tr>
-              <tr><td className="p-2 border-b">Atualizar tudo</td><td className="p-2 border-b">apt upgrade</td><td className="p-2 border-b">dnf upgrade</td></tr>
-              <tr><td className="p-2 border-b">Instalar</td><td className="p-2 border-b">apt install pkg</td><td className="p-2 border-b">dnf install pkg</td></tr>
-              <tr><td className="p-2 border-b">Remover</td><td className="p-2 border-b">apt remove pkg</td><td className="p-2 border-b">dnf remove pkg</td></tr>
-              <tr><td className="p-2 border-b">Buscar</td><td className="p-2 border-b">apt search</td><td className="p-2 border-b">dnf search</td></tr>
-              <tr><td className="p-2 border-b">Desfazer</td><td className="p-2 border-b">❌</td><td className="p-2 border-b">dnf history undo</td></tr>
-              <tr><td className="p-2 border-b">Formato</td><td className="p-2 border-b">.deb</td><td className="p-2 border-b">.rpm</td></tr>
-            </tbody>
-          </table>
-        </div>
-
-        <h2>Flatpak e Snap — Alternativas Universais</h2>
-        <p>Além de APT e DNF, existem formatos universais que funcionam em qualquer distro:</p>
+        <h2>Repositório de terceiros é uma decisão de confiança</h2>
+        <p>Adicionar um repositório concede a ele a possibilidade de fornecer software que será instalado com privilégio administrativo. Antes de adicionar PPA, arquivo <code>.repo</code>, chave ou script <code>curl | sh</code>, confirme:</p>
         <ul>
-          <li><strong>Flatpak:</strong> sandbox seguro, usado pelo GNOME Software. Ideal para apps desktop (Firefox, LibreOffice, VLC)</li>
-          <li><strong>Snap:</strong> desenvolvido pela Canonical. Atualizações automáticas, mas mais pesado que Flatpak</li>
-          <li><strong>AppImage:</strong> executável portátil sem instalação. Basta dar permissão e executar</li>
+          <li>quem publica o repositório;</li>
+          <li>se ele oferece instruções oficiais para sua versão do sistema;</li>
+          <li>como a assinatura dos pacotes é verificada;</li>
+          <li>como remover o repositório sem quebrar dependências;</li>
+          <li>se o mesmo software já existe no repositório oficial.</li>
         </ul>
+        <p>A documentação do Ubuntu recomenda cautela com fontes não padrão porque pacotes externos podem tornar o sistema instável ou introduzir software não confiável.</p>
 
-        <div className="bg-accent/10 rounded-xl p-6 my-8">
-          <h3 className="text-accent font-bold mb-2">Suporte Linux Para Sua Empresa</h3>
-          <p className="text-muted-foreground mb-0">Gerenciamos servidores Linux, configuramos repositórios e mantemos seus sistemas atualizados e seguros. Atendimento em Curitiba e região.</p>
-        </div>
+        <h2>Não use <code>-y</code> enquanto estiver aprendendo</h2>
+        <p>Responder automaticamente “sim” é útil em automação cuidadosamente revisada, mas ruim para aprendizagem e manutenção interativa. Leia a transação: novos pacotes, remoções, espaço em disco e dependências. Quando um gerenciador quer remover algo inesperado, pare e descubra por quê.</p>
+
+        <h2>APT em scripts: prefira a interface apropriada</h2>
+        <p>A própria documentação do Ubuntu diferencia o uso interativo de <code>apt</code> do uso em scripts, onde <code>apt-get</code> é a interface mais estável para automação. Em servidores, essa diferença evita scripts frágeis e saídas desenhadas para humanos.</p>
+
+        <h2>Como diagnosticar um update que falha</h2>
+        <ol>
+          <li>Leia a primeira mensagem de erro, não apenas a última.</li>
+          <li>Confirme data/hora e conectividade.</li>
+          <li>Identifique qual repositório gerou o erro.</li>
+          <li>Verifique se a distribuição ainda está dentro do ciclo de suporte.</li>
+          <li>Não desative verificação de assinatura para “fazer funcionar”.</li>
+          <li>Se o erro surgiu depois de adicionar uma fonte externa, isole essa fonte antes de alterar o resto do sistema.</li>
+        </ol>
+
+        <h2>APT, DNF, Snap e Flatpak não são a mesma camada</h2>
+        <p>APT e DNF gerenciam pacotes integrados à distribuição. Snap e Flatpak têm modelos próprios de empacotamento e distribuição, especialmente para aplicações. Não misture fontes sem motivo: duplicar a mesma aplicação em formatos diferentes pode confundir atualizações, atalhos e associações de arquivo.</p>
+
+        <h2>Quando parar</h2>
+        <p>Pare se o gerenciador propõe remover componentes centrais, se há repositórios desconhecidos, se aparecem conflitos depois de uma atualização interrompida ou se o sistema é servidor de produção sem janela de manutenção e backup. Nesses cenários, salve a saída do comando e investigue a transação antes de insistir.</p>
+
+        <p>Se os comandos ainda são novos, comece pelo <Link to="/blog/comandos-linux-essenciais-iniciantes" className="text-accent">guia de terminal Linux</Link>. Para servidores acessados remotamente, siga depois para <Link to="/blog/como-configurar-ssh-seguro-linux" className="text-accent">SSH seguro</Link>.</p>
+        <EditorialReferences slug="como-gerenciar-pacotes-apt-dnf-linux" />
       </>
     ),
   },
+
   "como-configurar-ssh-seguro-linux": {
-    title: "Como Configurar SSH Seguro no Linux: Guia Anti-Invasão",
-    excerpt: "Hardening completo do SSH: chaves, fail2ban, porta customizada e autenticação de dois fatores.",
-    date: "2026-04-13",
-    readTime: "13 min",
+    title: "SSH seguro no Linux: chaves, sshd_config e validação sem se trancar fora",
+    excerpt:
+      "Roteiro de hardening para OpenSSH com chave pública, privilégio mínimo, validação da configuração e teste em segunda sessão antes de desabilitar senha.",
+    date: "2026-09-25",
+    readTime: "14 min",
     category: "Linux",
     content: (
       <>
-        <p className="lead">O SSH (Secure Shell) é a porta de entrada para administrar servidores Linux remotamente — e também o alvo número 1 de atacantes. Neste guia, mostramos como configurar o SSH de forma <strong>realmente segura</strong>, com autenticação por chaves, fail2ban, porta customizada e MFA.</p>
+        <p className="lead">Endurecer SSH não é trocar a porta 22 e instalar um bloqueador de IP. O objetivo é reduzir credenciais reutilizáveis, limitar quem pode entrar, proteger a chave privada e aplicar mudanças <strong>sem perder o único acesso ao servidor</strong>. A ordem das etapas é tão importante quanto as diretivas usadas.</p>
 
-        <h2>Por Que a Configuração Padrão do SSH é Insegura?</h2>
+        <h2>Modelo seguro: primeiro crie uma segunda forma de entrar</h2>
+        <p>Antes de desabilitar senha ou root, confirme que existe um usuário administrativo funcional, com acesso por chave pública e capacidade de usar <code>sudo</code> quando necessário. Mantenha a sessão atual aberta durante o teste. Se o servidor estiver em nuvem, saiba também como acessar console de emergência do provedor.</p>
+
+        <h2>1. Gere uma chave moderna no cliente</h2>
+        <pre><code>{`ssh-keygen -t ed25519
+ssh-copy-id usuario@servidor
+ssh usuario@servidor`}</code></pre>
+        <p>A chave privada fica no computador cliente e não deve ser enviada ao servidor. O servidor recebe apenas a chave pública. Proteja a chave privada com permissões adequadas e, quando compatível com seu fluxo, use uma frase secreta.</p>
+
+        <h2>2. Use arquivos de configuração em vez de editar às cegas</h2>
+        <p>No Ubuntu, o OpenSSH Server usa <code>/etc/ssh/sshd_config</code> e pode incluir fragmentos em <code>/etc/ssh/sshd_config.d/</code>. Antes de mudar qualquer diretiva, veja o valor efetivo:</p>
+        <pre><code>{`sudo sshd -T | less`}</code></pre>
+        <p>Isso ajuda a identificar configurações herdadas por arquivos incluídos, evitando editar uma linha que depois é sobrescrita por outro fragmento.</p>
+
+        <h2>3. Desabilite login direto de root e restrinja usuários</h2>
+        <p>Em servidores onde a administração já funciona por usuário nominal e <code>sudo</code>, bloqueie login direto de root e limite os usuários ou grupos autorizados conforme sua política. Exemplo de fragmento:</p>
+        <pre><code>{`# /etc/ssh/sshd_config.d/10-hardening.conf
+PermitRootLogin no
+PubkeyAuthentication yes
+AllowUsers adminlinux`}</code></pre>
+        <p>Não copie <code>AllowUsers</code> sem trocar pelo usuário real. Uma lista errada pode bloquear toda a equipe.</p>
+
+        <h2>4. Só desabilite senha depois de provar a chave</h2>
+        <p>Abra uma segunda sessão e confirme que a autenticação por chave funciona. Só então considere:</p>
+        <pre><code>{`PasswordAuthentication no`}</code></pre>
+        <p>Em ambientes com diretório, bastion host, PAM ou MFA, a política de autenticação pode ser mais complexa. A documentação oficial do OpenSSH/Ubuntu deve ser a referência antes de combinar métodos.</p>
+
+        <h2>5. Valide a configuração antes de recarregar</h2>
+        <pre><code>{`sudo sshd -t
+sudo systemctl reload ssh`}</code></pre>
+        <p><code>sshd -t</code> verifica a sintaxe básica. Prefira <code>reload</code> quando a distribuição oferecer esse fluxo; mantenha a sessão atual aberta e teste uma nova conexão antes de encerrá-la.</p>
+
+        <h2>Trocar a porta 22 não substitui autenticação forte</h2>
+        <p>Uma porta diferente pode reduzir ruído de scanners oportunistas, mas não transforma uma senha fraca em autenticação segura. Trate mudança de porta como detalhe operacional, não como controle principal. Chaves, privilégio mínimo, atualização, firewall e monitoramento têm efeito mais importante.</p>
+
+        <h2>Firewall e exposição</h2>
+        <p>Se o SSH só é necessário por uma rede administrativa, VPN ou faixa conhecida, limite a origem no firewall em vez de publicar o serviço para toda a internet. Em nuvem, confira tanto o firewall do sistema quanto as regras do provedor.</p>
+
+        <h2>Logs: investigue antes de instalar mais uma camada</h2>
+        <pre><code>{`journalctl -u ssh --since today
+last
+lastb`}</code></pre>
+        <p>Os nomes de serviço e disponibilidade de <code>lastb</code> variam por distribuição. O objetivo é acompanhar autenticações, falhas e mudanças de origem. Ferramentas de bloqueio por repetição podem ser úteis, mas não substituem a eliminação de senhas expostas e o fechamento de acessos desnecessários.</p>
+
+        <h2>MFA em SSH exige projeto, não receita universal</h2>
+        <p>MFA pode usar PAM, identidade centralizada, chaves físicas ou mecanismos externos. A configuração depende da distribuição e do método de autenticação já existente. Não aplique um tutorial de PAM em produção sem console de recuperação e teste controlado, porque uma única diretiva incompatível pode impedir todos os logins.</p>
+
+        <h2>Checklist antes de fechar a sessão atual</h2>
         <ul>
-          <li>Porta 22 é escaneada automaticamente por bots 24/7</li>
-          <li>Login por senha permite ataques de força bruta</li>
-          <li>Root com acesso direto é um risco crítico</li>
-          <li>Sem rate-limiting, um bot pode testar milhares de senhas por minuto</li>
-        </ul>
-        <p>Um servidor na internet sem hardening recebe <strong>centenas de tentativas de login por hora</strong>. Veja como se proteger:</p>
-
-        <h2>Passo 1: Gerar Par de Chaves SSH</h2>
-        <p>Autenticação por chaves é infinitamente mais segura que senhas:</p>
-        <pre><code>{`# No seu computador local (não no servidor!)
-ssh-keygen -t ed25519 -C "seu-email@exemplo.com"
-
-# Vai gerar:
-# ~/.ssh/id_ed25519       (chave privada - NUNCA compartilhe!)
-# ~/.ssh/id_ed25519.pub   (chave pública - copie para o servidor)
-
-# Copiar chave pública para o servidor
-ssh-copy-id usuario@IP-DO-SERVIDOR
-
-# Testar conexão com chave
-ssh usuario@IP-DO-SERVIDOR
-# Deve conectar sem pedir senha`}</code></pre>
-
-        <h2>Passo 2: Hardening do sshd_config</h2>
-        <pre><code>{`sudo nano /etc/ssh/sshd_config
-
-# Altere as seguintes linhas:
-Port 2222                          # Porta customizada (evita 99% dos bots)
-PermitRootLogin no                 # Bloqueia login como root
-PasswordAuthentication no          # Desabilita login por senha
-PubkeyAuthentication yes           # Somente chaves SSH
-MaxAuthTries 3                     # Máximo de tentativas
-LoginGraceTime 30                  # Tempo máximo para autenticar
-ClientAliveInterval 300            # Desconecta sessões ociosas
-ClientAliveCountMax 2              # Após 2 pings sem resposta
-AllowUsers seuusuario              # Somente usuários específicos
-Protocol 2                         # Somente protocolo SSH2
-X11Forwarding no                   # Desabilita X11 (desnecessário)
-PermitEmptyPasswords no            # Bloqueia senhas vazias
-
-# Reiniciar SSH (mantenha a sessão atual aberta!)
-sudo systemctl restart sshd`}</code></pre>
-        <p className="text-sm text-muted-foreground"><strong>⚠️ IMPORTANTE:</strong> Antes de reiniciar o SSH, abra uma segunda sessão SSH para testar. Se algo der errado, você ainda terá acesso pela sessão original.</p>
-
-        <h2>Passo 3: Instalar fail2ban</h2>
-        <p>O fail2ban monitora logs e bane IPs que tentam força bruta:</p>
-        <pre><code>{`sudo apt install fail2ban -y  # Debian/Ubuntu
-sudo dnf install fail2ban -y  # Fedora/RHEL
-
-# Criar configuração local
-sudo cp /etc/fail2ban/jail.conf /etc/fail2ban/jail.local
-sudo nano /etc/fail2ban/jail.local`}</code></pre>
-        <pre><code>{`[sshd]
-enabled = true
-port = 2222
-filter = sshd
-logpath = /var/log/auth.log
-maxretry = 3
-bantime = 3600
-findtime = 600`}</code></pre>
-        <pre><code>{`sudo systemctl enable fail2ban
-sudo systemctl start fail2ban
-
-# Ver IPs banidos
-sudo fail2ban-client status sshd`}</code></pre>
-
-        <h2>Passo 4: Firewall (UFW)</h2>
-        <pre><code>{`# Permitir apenas a porta SSH customizada
-sudo ufw allow 2222/tcp
-sudo ufw enable
-
-# Verificar regras
-sudo ufw status verbose`}</code></pre>
-
-        <h2>Passo 5: Autenticação de Dois Fatores (MFA)</h2>
-        <pre><code>{`sudo apt install libpam-google-authenticator -y
-
-# Configurar para seu usuário
-google-authenticator
-# Responda: y, y, y, n, y
-# Escaneie o QR code com Google Authenticator ou Authy
-
-# Editar PAM
-sudo nano /etc/pam.d/sshd
-# Adicionar no final:
-auth required pam_google_authenticator.so
-
-# Editar sshd_config
-sudo nano /etc/ssh/sshd_config
-# Alterar:
-ChallengeResponseAuthentication yes
-AuthenticationMethods publickey,keyboard-interactive
-
-sudo systemctl restart sshd`}</code></pre>
-
-        <h2>Checklist de Segurança SSH</h2>
-        <ul>
-          <li>✅ Porta customizada (não 22)</li>
-          <li>✅ Autenticação somente por chaves</li>
-          <li>✅ Root login desabilitado</li>
-          <li>✅ fail2ban ativo e configurado</li>
-          <li>✅ Firewall permitindo apenas portas necessárias</li>
-          <li>✅ MFA habilitado (para ambientes críticos)</li>
-          <li>✅ Logs monitorados regularmente</li>
-          <li>✅ Atualizações de segurança automáticas</li>
+          <li>Usuário administrativo nominal funciona.</li>
+          <li>Login por chave foi testado em uma segunda sessão.</li>
+          <li>A chave privada está protegida e existe recuperação.</li>
+          <li><code>sshd -t</code> não reporta erro.</li>
+          <li>Root direto está desabilitado quando não é necessário.</li>
+          <li>Firewall expõe apenas o necessário.</li>
+          <li>Console ou canal de recuperação é conhecido.</li>
         </ul>
 
-        <div className="bg-accent/10 rounded-xl p-6 my-8">
-          <h3 className="text-accent font-bold mb-2">Precisa Proteger Seu Servidor?</h3>
-          <p className="text-muted-foreground mb-0">Fazemos hardening completo de servidores Linux: SSH, firewall, fail2ban, atualizações automáticas e monitoramento. Consultoria técnica em Curitiba e remoto.</p>
-        </div>
+        <p>Para entender os comandos usados na validação, veja <Link to="/blog/comandos-linux-essenciais-iniciantes" className="text-accent">comandos Linux essenciais</Link>. Para cópia remota e backup sobre SSH, siga para <Link to="/blog/como-usar-rsync-backup-linux" className="text-accent">rsync no Linux</Link>.</p>
+        <EditorialReferences slug="como-configurar-ssh-seguro-linux" />
       </>
     ),
   },
+
   "como-usar-docker-linux-guia-completo": {
     title: "Como Usar Docker no Linux: Guia Completo Para Iniciantes e Técnicos",
     excerpt: "Instalação, containers, Docker Compose, volumes, redes e boas práticas para ambientes de produção.",
@@ -7528,121 +7377,76 @@ crontab -e
   },
 
   "como-usar-rsync-backup-linux": {
-    title: "Como Usar rsync Para Backup no Linux: Guia Definitivo",
-    excerpt: "Sincronização local e remota, backup incremental, exclusões e automação com cron — o canivete suíço do sysadmin.",
-    date: "2026-04-20",
-    readTime: "11 min",
+    title: "Rsync para backup no Linux: cópia incremental, SSH e teste de restauração",
+    excerpt:
+      "Aprenda rsync local e remoto, modo dry-run, exclusões, preservação de atributos e por que sincronização só vira backup quando existe histórico e restauração testada.",
+    date: "2026-09-25",
+    readTime: "13 min",
     category: "Linux",
     content: (
       <>
-        <p className="lead">Usar rsync Para Backup no Linux é uma das habilidades mais valorizadas em ambientes de servidor e desenvolvimento. Neste guia técnico, vamos cobrir desde os conceitos fundamentais até os comandos avançados que técnicos e sysadmins usam no dia a dia.</p>
+        <p className="lead">Rsync é uma ferramenta de cópia local e remota muito eficiente, mas <strong>sincronizar não é automaticamente fazer backup</strong>. Se o destino espelha exclusões ou corrupção da origem e não existe histórico recuperável, você tem uma cópia sincronizada. Este guia começa pelo teste sem alterações e termina pela parte que realmente valida um backup: restaurar.</p>
 
-        <h2>Por Que Aprender Esse Recurso do Linux</h2>
-        <p>Linux domina mais de 96% dos servidores web do mundo. Cada loja online, cada streaming, cada API que você usa provavelmente roda em Linux. Dominar suas ferramentas é dominar a infraestrutura moderna.</p>
-        <p>Para profissionais de TI em Curitiba, conhecimento sólido de Linux é diferencial competitivo direto: empresas pagam mais por quem sabe administrar servidores Linux do que por quem só sabe Windows.</p>
+        <h2>O que rsync faz</h2>
+        <p>Rsync compara origem e destino e transfere apenas o necessário conforme seus critérios. Pode copiar localmente ou usar um shell remoto, normalmente SSH. A documentação oficial destaca suporte a links, permissões, proprietários, grupos e opções de exclusão, dependendo do modo escolhido.</p>
 
-        <h2>Pré-Requisitos Antes de Começar</h2>
-        <p>Para acompanhar este guia com proveito, você deve ter:</p>
+        <h2>Primeira regra: origem e destino precisam estar óbvios</h2>
+        <pre><code>{`rsync -avh --dry-run /dados/ /backup/dados/`}</code></pre>
+        <p><code>--dry-run</code> mostra o que seria feito sem executar a transferência. Use-o sempre que o comando envolver exclusão, uma unidade montada recentemente ou um destino remoto. Observe também a barra final: em rsync, <code>/dados/</code> significa copiar o conteúdo da pasta, enquanto <code>/dados</code> pode criar um nível adicional no destino.</p>
+
+        <h2>Cópia local básica</h2>
+        <pre><code>{`rsync -avh --progress /dados/ /backup/dados/`}</code></pre>
+        <p><code>-a</code> ativa o modo arquivo, que combina várias opções de recursão e preservação. Isso não significa que todos os metadados possíveis são preservados em qualquer sistema de arquivos. ACLs, atributos estendidos, IDs de usuário e destinos FAT/NTFS exigem atenção adicional.</p>
+
+        <h2>Backup remoto sobre SSH</h2>
+        <pre><code>{`rsync -avh --progress /dados/ usuario@servidor:/backup/maquina01/`}</code></pre>
+        <p>Para esse fluxo, rsync precisa estar disponível nas duas pontas e o acesso SSH precisa funcionar. Configure a autenticação com chave e restrinja o usuário remoto ao necessário. O guia de <Link to="/blog/como-configurar-ssh-seguro-linux" className="text-accent">SSH seguro</Link> explica como testar a chave antes de remover login por senha.</p>
+
+        <h2>Exclusões úteis</h2>
+        <pre><code>{`rsync -avh \
+  --exclude='cache/' \
+  --exclude='*.tmp' \
+  /home/usuario/ /backup/home-usuario/`}</code></pre>
+        <p>Exclusão deve ser explícita e revisada. Não exclua diretórios por “parecerem cache” quando aplicativos guardam bancos, perfis ou dados importantes em caminhos pouco óbvios.</p>
+
+        <h2><code>--delete</code>: útil e perigoso</h2>
+        <p><code>--delete</code> remove do destino o que deixou de existir na origem. Isso é excelente para espelhamento e potencialmente desastroso para uma cópia que você imaginava ser histórica. Antes de usar:</p>
+        <pre><code>{`rsync -avh --delete --dry-run /dados/ /espelho/dados/`}</code></pre>
+        <p>Leia a lista completa. Se o objetivo é backup, combine rsync com snapshots, versões, destinos rotativos ou outra camada que retenha estados anteriores.</p>
+
+        <h2>Como transformar sincronização em estratégia de backup</h2>
         <ul>
-          <li>Uma instalação Linux funcional — Ubuntu 22.04+, Debian 12+ ou derivada</li>
-          <li>Acesso ao terminal com privilégios sudo</li>
-          <li>Conhecimento básico de navegação por linha de comando (cd, ls, mv, cp)</li>
-          <li>Editor de texto preferido (nano para iniciantes, vim para experientes)</li>
-          <li>Conexão à internet para instalação de pacotes</li>
-        </ul>
-        <p>Se nunca usou Linux, comece com nossos artigos sobre comandos essenciais antes de avançar.</p>
-
-        <h2>Conceitos Fundamentais</h2>
-        <p>Antes de digitar qualquer comando, é importante entender <strong>por que</strong> as coisas funcionam de determinada forma no Linux. Diferente do Windows, onde muitas operações são abstraídas pela interface, no Linux você está mais próximo do sistema operacional real.</p>
-        <ul>
-          <li><strong>Tudo é arquivo</strong> — dispositivos, processos, sockets, tudo é representado como arquivo no filesystem</li>
-          <li><strong>Permissões granulares</strong> — leitura, escrita, execução para dono, grupo e outros</li>
-          <li><strong>Pipes e composição</strong> — comandos pequenos que se combinam para tarefas complexas</li>
-          <li><strong>Configuração em texto puro</strong> — quase tudo é configurado em arquivos /etc/* legíveis</li>
-          <li><strong>Open Source</strong> — você pode auditar, modificar e contribuir para qualquer ferramenta</li>
-        </ul>
-
-        <h2>Instalação e Configuração Inicial</h2>
-        <p>A maioria das ferramentas que vamos usar já vem pré-instalada nas distribuições principais. Quando não vem, a instalação é direta:</p>
-        <pre><code>{`sudo apt update
-sudo apt install -y curl wget git build-essential`}</code></pre>
-        <p>Para distribuições baseadas em RHEL (Fedora, Rocky, AlmaLinux), substitua <code>apt</code> por <code>dnf</code>. Para Arch Linux, use <code>pacman -S</code>.</p>
-        <p>Depois da instalação, verifique a versão dos pacotes para garantir compatibilidade com este guia:</p>
-        <pre><code>{`uname -a              # informações do kernel
-lsb_release -a       # versão da distribuição
-which bash python3   # caminho dos interpretadores`}</code></pre>
-
-        <h2>Comandos e Operações Principais</h2>
-        <p>Os comandos básicos que você vai usar com frequência:</p>
-        <ul>
-          <li><strong>ls -lah</strong> — listagem detalhada com tamanhos legíveis</li>
-          <li><strong>grep -r "padrao" .</strong> — busca recursiva por texto em arquivos</li>
-          <li><strong>find /var/log -name "*.log" -mtime -7</strong> — encontra logs modificados nos últimos 7 dias</li>
-          <li><strong>tail -f /var/log/syslog</strong> — monitora arquivo em tempo real</li>
-          <li><strong>ps aux | grep nome</strong> — encontra processos por nome</li>
-          <li><strong>du -sh *</strong> — tamanho de cada diretório no atual</li>
-          <li><strong>df -h</strong> — espaço livre em todas as partições</li>
-          <li><strong>journalctl -u nome.service -f</strong> — logs de serviço em tempo real</li>
-        </ul>
-        <p>Combine comandos com pipes para tarefas complexas. Por exemplo, encontrar os 10 maiores arquivos do sistema:</p>
-        <pre><code>{`sudo find / -type f -exec du -h {} + 2>/dev/null | sort -rh | head -10`}</code></pre>
-
-        <h2>Configuração Avançada</h2>
-        <p>Depois do básico, é hora de aprofundar. As configurações avançadas separam o usuário casual do profissional.</p>
-        <p>Edite o arquivo de configuração com permissão adequada:</p>
-        <pre><code>{`sudo nano /etc/configuracao.conf`}</code></pre>
-        <p>Aplique as alterações:</p>
-        <ul>
-          <li><strong>Recarregar configuração</strong> sem reiniciar o serviço quando possível</li>
-          <li><strong>Reiniciar o serviço</strong> com <code>sudo systemctl restart nome</code></li>
-          <li><strong>Verificar status</strong> com <code>sudo systemctl status nome</code></li>
-          <li><strong>Ver logs recentes</strong> com <code>sudo journalctl -u nome -n 50</code></li>
-        </ul>
-        <p>Sempre faça backup de arquivos de configuração antes de editar:</p>
-        <pre><code>{`sudo cp /etc/configuracao.conf /etc/configuracao.conf.bak`}</code></pre>
-
-        <h2>Boas Práticas de Segurança</h2>
-        <p>Servidores Linux são alvos constantes na internet. Seguir boas práticas não é opcional, é obrigatório.</p>
-        <ul>
-          <li><strong>Nunca rode como root</strong> em uso normal — use sudo apenas quando necessário</li>
-          <li><strong>Mantenha o sistema atualizado</strong> — <code>sudo apt update && sudo apt upgrade</code> semanalmente</li>
-          <li><strong>Configure firewall</strong> — UFW para desktops, iptables/nftables para servidores</li>
-          <li><strong>Desabilite serviços não usados</strong> — menos superfície de ataque</li>
-          <li><strong>Use chaves SSH</strong> em vez de senha — desabilite login por senha em produção</li>
-          <li><strong>Fail2ban</strong> — bloqueia IPs após tentativas falhas de login</li>
-          <li><strong>Monitore logs</strong> — falhas de autenticação suspeitas em /var/log/auth.log</li>
+          <li><strong>Separação:</strong> mantenha ao menos uma cópia fora da máquina de origem.</li>
+          <li><strong>Histórico:</strong> preserve versões ou snapshots para sobreviver a exclusão e ransomware.</li>
+          <li><strong>Imutabilidade/offline:</strong> quando o risco justificar, use uma cópia que a conta normal da origem não consiga apagar.</li>
+          <li><strong>Monitoramento:</strong> registre código de saída e volume transferido; um job silencioso pode estar falhando há semanas.</li>
+          <li><strong>Restauração:</strong> faça testes periódicos com arquivos reais e documente o procedimento.</li>
         </ul>
 
-        <h2>Troubleshooting de Problemas Comuns</h2>
-        <p>Quando algo dá errado — e vai dar — saber depurar é fundamental.</p>
+        <h2>Automação: cron só depois do comando manual funcionar</h2>
+        <p>Primeiro execute manualmente, depois com <code>--dry-run</code>, depois sem <code>--dry-run</code> e só então automatize. Um exemplo simples:</p>
+        <pre><code>{`15 2 * * * /usr/bin/rsync -a /dados/ /backup/dados/ >> /var/log/backup-rsync.log 2>&1`}</code></pre>
+        <p>Em produção, capture também código de saída e gere alerta em falha. Cron não garante que o disco externo esteja montado nem que o destino remoto tenha espaço.</p>
+
+        <h2>Validação depois da cópia</h2>
+        <p>Quantidade de arquivos e tamanho total ajudam, mas não provam recuperação. Escolha amostras, restaure para um diretório temporário e abra os dados com o aplicativo correspondente. Para dados críticos, faça testes de restauração completos em intervalo definido pelo risco e pelo tempo aceitável de indisponibilidade.</p>
+
+        <h2>Quando rsync não é a ferramenta suficiente</h2>
+        <p>Rsync sozinho não oferece catálogo de versões, política de retenção, deduplicação histórica, gerenciamento centralizado ou proteção contra exclusão por credenciais comprometidas. Para ambientes empresariais, ele pode ser um componente de cópia, mas a estratégia precisa definir RPO, RTO, retenção, criptografia e responsabilidade por testes.</p>
+
+        <h2>Checklist antes de automatizar</h2>
         <ul>
-          <li><strong>Comando não encontrado</strong> — verifique o PATH com <code>echo $PATH</code></li>
-          <li><strong>Permissão negada</strong> — confira as permissões com <code>ls -la</code> e quem é o dono</li>
-          <li><strong>Disco cheio</strong> — use <code>df -h</code> e <code>du -sh *</code> para encontrar consumidores</li>
-          <li><strong>Processo travado</strong> — identifique com <code>htop</code> e termine com <code>kill -9 PID</code></li>
-          <li><strong>Serviço não inicia</strong> — sempre comece por <code>journalctl -u nome.service</code></li>
-          <li><strong>Rede não funciona</strong> — teste com <code>ping</code>, <code>ip a</code>, <code>ss -tuln</code></li>
+          <li>Origem e destino foram conferidos com <code>--dry-run</code>.</li>
+          <li>O comportamento da barra final foi entendido.</li>
+          <li>Exclusões foram revisadas.</li>
+          <li><code>--delete</code> só é usado quando o destino deve ser espelho.</li>
+          <li>O destino tem espaço e montagem verificáveis.</li>
+          <li>Existe retenção/histórico para o que realmente é backup.</li>
+          <li>Uma restauração de teste já funcionou.</li>
         </ul>
 
-        <h2>Automação e Produtividade</h2>
-        <p>O verdadeiro poder do Linux está em automatizar tudo. Tarefas que levam horas em interfaces gráficas são resolvidas em segundos com scripts.</p>
-        <p>Crie um script bash básico para tarefas repetitivas:</p>
-        <pre><code>{`#!/bin/bash
-set -euo pipefail
-echo "Iniciando manutencao em $(date)"
-sudo apt update && sudo apt upgrade -y
-sudo apt autoremove -y
-sudo journalctl --vacuum-time=7d
-echo "Concluido em $(date)"`}</code></pre>
-        <p>Torne executável e agende com cron para rodar automaticamente:</p>
-        <pre><code>{`chmod +x manutencao.sh
-crontab -e
-# adicione: 0 3 * * 0 /caminho/manutencao.sh > /var/log/manut.log 2>&1`}</code></pre>
-
-        <h2>Suporte Linux em Curitiba</h2>
-        <p>A <strong>{BRAND_NAME}</strong> oferece suporte profissional para servidores e desktops Linux em Curitiba e região. Configuração de servidores web, e-mail, samba, firewall, monitoramento, backup e migração de Windows para Linux. Atendemos empresas de todos os portes com SLA definido e técnicos certificados.</p>
-        <p>Cobertura: Curitiba, São José dos Pinhais, Pinhais, Colombo, Almirante Tamandaré, Araucária, Campo Largo, Campo Magro, Piraquara, Quatro Barras e Fazenda Rio Grande.</p>
-
+        <p>Para organizar uma estratégia mais ampla de cópia e recuperação, consulte <Link to="/solucoes/backup" className="text-accent">soluções de backup</Link> e o <Link to="/guia-tecnico-informatica" className="text-accent">Atlas de Informática</Link>.</p>
+        <EditorialReferences slug="como-usar-rsync-backup-linux" />
       </>
     ),
   },
