@@ -108,7 +108,7 @@ const AutoridadeTecnica = () => {
           <div className="flex flex-col gap-3 sm:flex-row">
             <Button asChild size="lg" variant="outline" className="min-h-12 border-white/25 bg-transparent text-white hover:bg-white/10 hover:text-white">
               <Link to="/guia-tecnico-informatica">
-                <BookOpenText className="mr-2 h-5 w-5" /> Ir para o Atlas de Informática
+                <BookOpenText className="mr-2 h-5 w-5" /> Guia do técnico de informática
               </Link>
             </Button>
             <Button asChild size="lg" className="min-h-12">
@@ -314,7 +314,7 @@ const AutoridadeTecnica = () => {
           <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
             Se você chegou aqui para estudar, siga pelo{" "}
             <Link to="/guia-tecnico-informatica" className="font-bold text-accent underline-offset-4 hover:underline">
-              Atlas de Informática
+              guia do técnico de informática
             </Link>{" "}
             ou pelo{" "}
             <Link to="/glossario" className="font-bold text-accent underline-offset-4 hover:underline">
