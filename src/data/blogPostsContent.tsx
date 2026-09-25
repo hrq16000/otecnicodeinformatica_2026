@@ -10085,6 +10085,7 @@ crontab -e
     ),
   },
 
+
   "como-organizar-arquivos-windows-iniciantes": {
     title: "Como organizar arquivos no Windows 11 sem perder documentos: método prático",
     excerpt:
@@ -10247,6 +10248,127 @@ crontab -e
           <Link to="/guia-tecnico-informatica#tema-dados-backup" className="text-accent"> Atlas de dados e backup</Link>.
         </p>
         <EditorialReferences slug="como-organizar-arquivos-windows-iniciantes" />
+      </>
+    ),
+  },
+
+"como-atualizar-windows-corretamente": {
+    title: "Como atualizar o Windows 11 com segurança e o que fazer quando falha",
+    excerpt:
+      "Passo a passo para preparar, instalar e validar atualizações do Windows 11, com backup, energia, espaço, reinício e diagnóstico oficial quando o Windows Update apresenta erro.",
+    date: "2026-09-25",
+    readTime: "10 min",
+    category: "Windows",
+    content: (
+      <>
+        <p className="lead">Atualizar o Windows é rotina de manutenção, não procedimento de emergência. O caminho seguro é preparar os dados e a máquina, usar o Windows Update, deixar o processo concluir e validar o sistema depois. Quando aparece erro, a prioridade é registrar o código e usar a solução de problemas oficial antes de apagar cache, executar comandos ou forçar desligamentos.</p>
+
+        <h2>Resposta curta</h2>
+        <p>Salve o trabalho, confirme backup dos arquivos importantes, mantenha notebook conectado à energia e verifique se há espaço disponível. Em Windows 11, abra Configurações → Windows Update → Verificar se há atualizações. Instale o que for aplicável e reinicie quando solicitado. Se falhar, anote o código/etapa e execute a solução de problemas do Windows Update pelo aplicativo Obter Ajuda.</p>
+
+        <h2>1. Antes da atualização</h2>
+        <ul>
+          <li>Salve documentos e feche tarefas críticas.</li>
+          <li>Confirme uma cópia dos arquivos que não podem ser perdidos.</li>
+          <li>Conecte notebook à fonte de energia.</li>
+          <li>Garanta espaço livre suficiente para download e arquivos temporários.</li>
+          <li>Se o disco usa BitLocker, saiba onde está a chave de recuperação antes de mudanças maiores de firmware ou sistema.</li>
+        </ul>
+        <p>Não existe um tempo fixo de “uma ou duas horas” para toda atualização. O tempo varia por pacote, conexão, armazenamento e hardware.</p>
+
+        <h2>2. Use o Windows Update como canal principal</h2>
+        <p>Abra <strong>Configurações → Windows Update</strong> e verifique atualizações. O sistema pode oferecer atualizações de qualidade, recursos e itens opcionais. Leia o que está sendo instalado e reinicie quando necessário. Drivers críticos específicos também podem ser obtidos do fabricante do computador quando houver orientação para isso.</p>
+
+        <h2>3. Reinício: espere pelo estado, não por um cronômetro universal</h2>
+        <p>Durante a instalação, o PC pode reiniciar mais de uma vez e ficar alguns períodos sem mudança aparente. Evite cortar energia enquanto há atividade de atualização. Se a máquina realmente congelar, primeiro observe sinais de atividade, mensagens e tempo decorrido. Um desligamento forçado no meio da gravação pode transformar uma atualização lenta em um sistema que não inicia.</p>
+        <p>Se houver mensagem de erro ou reversão automática, registre exatamente o texto/código antes de tentar outra coisa.</p>
+
+        <h2>4. Horário ativo reduz interrupções</h2>
+        <p>O Windows permite configurar horário ativo e opções de reinicialização para diminuir reinícios inconvenientes. Isso não impede atualizações para sempre; serve para adaptar a manutenção à sua rotina. Em empresas, políticas de atualização devem ser coordenadas com janelas e sistemas críticos.</p>
+
+        <h2>5. Quando o Windows Update dá erro</h2>
+        <p>A Microsoft orienta começar pelo solucionador do Windows Update no aplicativo <strong>Obter Ajuda</strong> e, se necessário, seguir as etapas gerais do suporte. Faça uma tentativa por vez e teste novamente. Evite copiar comandos agressivos de páginas aleatórias antes de entender o erro.</p>
+        <p>O portal também mantém uma trilha específica em <Link to="/blog/windows-update-nao-funciona-o-que-verificar" className="text-accent">Windows Update não funciona: o que verificar</Link>.</p>
+
+        <h2>6. Atualização opcional não é obrigação automática</h2>
+        <p>Atualizações opcionais e drivers devem ser avaliados pelo problema que resolvem. Se um computador está estável, não é necessário instalar um driver aleatório apenas porque tem número mais novo. Prefira Windows Update e fabricante do equipamento e mantenha um ponto claro de retorno quando a mudança afeta hardware essencial.</p>
+
+        <h2>7. Depois de atualizar, valide</h2>
+        <ul>
+          <li>Confirme que o Windows inicia normalmente.</li>
+          <li>Teste rede, áudio, vídeo, impressão e periféricos importantes.</li>
+          <li>Abra os aplicativos usados no trabalho.</li>
+          <li>Confira novamente o Windows Update para saber se há etapa pendente.</li>
+          <li>Se surgiu erro novo, registre quando começou e qual atualização precedeu o sintoma.</li>
+        </ul>
+
+        <h2>Quando parar</h2>
+        <p>Interrompa a sequência de tentativas se o Windows não inicia, o disco apresenta falha, a máquina entra em loop de reparo, o BitLocker pede uma chave que você não possui ou a atualização afetou um ambiente de produção sem plano de retorno. Nesses cenários, preservar dados e capacidade de recuperação vem antes de “terminar a atualização”.</p>
+
+        <p>Para loops pós-atualização, veja <Link to="/blog/windows-update-travado-desfazendo-alteracoes" className="text-accent">Windows Update travado ou desfazendo alterações</Link>. Para a visão geral, use o <Link to="/guia-tecnico-informatica#tema-sistemas-operacionais" className="text-accent">Atlas de sistemas operacionais</Link>.</p>
+        <EditorialReferences slug="como-atualizar-windows-corretamente" />
+      </>
+    ),
+  },
+
+  
+"como-recuperar-arquivos-apagados-windows": {
+    title: "Como recuperar arquivos apagados no Windows sem reduzir a chance de recuperação",
+    excerpt:
+      "Lixeira, versões de backup e Windows File Recovery: a ordem segura para tentar recuperar arquivos apagados e por que você deve reduzir o uso do disco após a exclusão.",
+    date: "2026-09-25",
+    readTime: "10 min",
+    category: "Backup e Dados",
+    content: (
+      <>
+        <p className="lead">Quando um arquivo importante é apagado, a primeira medida é <strong>evitar novas gravações na unidade</strong>. Instalar programas, baixar arquivos ou continuar usando o computador pode ocupar o espaço onde os dados apagados ainda estavam recuperáveis. A Microsoft faz a mesma recomendação para o Windows File Recovery: minimizar ou evitar o uso do computador aumenta a chance de recuperação.</p>
+
+        <h2>Resposta curta: tente nesta ordem</h2>
+        <ol>
+          <li>Verifique Lixeira e lixeira do serviço de nuvem, se aplicável.</li>
+          <li>Procure uma cópia em backup ou Histórico de Arquivos.</li>
+          <li>Se não houver cópia, pare de gravar no disco e considere o Windows File Recovery ou ferramenta apropriada, salvando o resultado em outra unidade.</li>
+          <li>Se o disco falha, desconecta ou faz ruído anormal, pare as tentativas domésticas e preserve a mídia.</li>
+        </ol>
+
+        <h2>1. Lixeira: restauração sem varredura</h2>
+        <p>Se o arquivo ainda está na Lixeira, restaure por ali. O Windows devolve o item à localização original. Se ele estava em uma pasta sincronizada com nuvem, confira também a lixeira e o histórico do serviço, porque o estado pode não ser igual ao da Lixeira local.</p>
+
+        <h2>2. Backup e versões anteriores vêm antes da recuperação forense</h2>
+        <p>Se você usa Histórico de Arquivos ou outro sistema de backup, prefira restaurar uma cópia conhecida. O Histórico de Arquivos permite recuperar versões anteriores quando a proteção já estava configurada. Isso é mais previsível do que varrer espaço não alocado de um disco.</p>
+        <p>Consulte <Link to="/blog/historico-de-arquivos-windows-como-configurar" className="text-accent">Histórico de Arquivos no Windows</Link> e <Link to="/blog/como-testar-restauracao-de-backup" className="text-accent">como testar uma restauração</Link>.</p>
+
+        <h2>3. Windows File Recovery: quando não há backup</h2>
+        <p>A Microsoft oferece o Windows File Recovery para tentar recuperar arquivos apagados de armazenamento local que não estão mais na Lixeira. É uma ferramenta de linha de comando e o resultado depende do tipo de sistema de arquivos, do tempo e do quanto a unidade foi usada depois da exclusão.</p>
+        <p>A regra crítica é usar <strong>outra unidade como destino</strong>. Recuperar para o mesmo disco pode sobrescrever justamente os dados que ainda poderiam ser encontrados.</p>
+
+        <h2>4. SSD muda o cenário</h2>
+        <p>Em SSDs, recursos de gerenciamento de blocos como TRIM podem tornar a recuperação de arquivos apagados mais difícil ou impossível após o sistema informar que aqueles blocos não são mais necessários. Por isso não existe promessa honesta de recuperação. Quanto menos você escrever na unidade após perceber a exclusão, melhor para qualquer tentativa subsequente.</p>
+
+        <h2>5. O que não fazer depois de apagar algo importante</h2>
+        <ul>
+          <li>Não instale a ferramenta de recuperação no mesmo disco que perdeu o arquivo.</li>
+          <li>Não baixe jogos, vídeos ou atualizações grandes “enquanto procura”.</li>
+          <li>Não desfragmente nem faça limpeza agressiva.</li>
+          <li>Não formate novamente para tentar “corrigir” a unidade.</li>
+          <li>Não continue ligando um HD que apresenta ruído mecânico ou desconexões.</li>
+        </ul>
+
+        <h2>6. Formatação acidental e disco defeituoso são casos diferentes</h2>
+        <p>Exclusão de arquivo em disco saudável é diferente de partição formatada, sistema de arquivos danificado ou mídia com defeito físico. Em disco que apresenta SMART crítico, lentidão extrema ou falha de leitura, priorize imagem/clonagem técnica e preservação, não varreduras repetidas. Veja <Link to="/servicos/recuperacao-de-dados" className="text-accent">recuperação de dados</Link> para entender o limite entre tentativa lógica e problema de mídia.</p>
+
+        <h2>Checklist antes de qualquer tentativa</h2>
+        <ul>
+          <li>Unidade onde o arquivo estava identificada.</li>
+          <li>Lixeira local e da nuvem verificadas.</li>
+          <li>Backups/Histórico de Arquivos consultados.</li>
+          <li>Uso da unidade reduzido.</li>
+          <li>Outra unidade preparada para receber arquivos recuperados.</li>
+          <li>Sinais de falha física avaliados antes de varrer.</li>
+        </ul>
+
+        <p>Depois de recuperar o que for possível, elimine o ponto único de falha com o <Link to="/guia-tecnico-informatica#tema-dados-backup" className="text-accent">Atlas de dados e backup</Link>.</p>
+        <EditorialReferences slug="como-recuperar-arquivos-apagados-windows" />
       </>
     ),
   },
