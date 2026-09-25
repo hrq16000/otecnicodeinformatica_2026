@@ -34,7 +34,7 @@ export function DiagnosticoIa() {
           equipamento: "descricao_ia",
           sintoma: r.nome,
           ctaLocation: "home_diagnostico_ia",
-          waMessage: `[Descrição do visitante]\n${descricao.trim().slice(0, 1200)}\n\n[Sugestão] ${r.nome} (${r.href})`,
+          waMessage: `[Descrição do visitante]\n${descricao.trim().slice(0, 1200)}\n\n[Sugestão] ${r.nome} (${r.href})\n[Urgência] ${r.urgencia}`,
         }),
       ).catch(() => {});
     } catch (err) {
@@ -76,6 +76,9 @@ export function DiagnosticoIa() {
               <strong className="text-foreground">Antes de tudo, verifique:</strong> {res.verificacaoSegura}
             </p>
             <p className="mt-2 text-sm text-muted-foreground">Modalidade sugerida: {MODALIDADE[res.modalidade]}</p>
+            <p className="mt-1 text-sm text-muted-foreground">
+              Prioridade estimada: {{ baixa: "baixa", media: "média", alta: "alta — evite usar o equipamento até a avaliação" }[res.urgencia]}
+            </p>
             <Button asChild variant="outline" className="mt-4">
               <Link to={res.href as "/"}>Ver o serviço</Link>
             </Button>
