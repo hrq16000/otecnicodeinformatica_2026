@@ -80,6 +80,12 @@ export const ALLOWED_SOURCE_HOSTS = [
   "memtest.org",
   "www.memtest.org",
   "docs.netgate.com",
+  "ubuntu.com",
+  "www.ubuntu.com",
+  "gnu.org",
+  "www.gnu.org",
+  "dnf.readthedocs.io",
+  "download.samba.org",
 ] as const;
 
 // ─────────────────────────────────────────────────────────────
@@ -579,6 +585,81 @@ export const EDITORIAL_SOURCES: Record<string, EditorialSource> = {
     sourceType: "official",
     supports: [
       "Segurança de AD DS exige reduzir superfície de ataque, proteger controladores, aplicar privilégio mínimo, monitorar e planejar recuperação de comprometimento.",
+    ],
+  },
+
+  "gnu-coreutils-manual": {
+    id: "gnu-coreutils-manual",
+    title: "GNU Coreutils Manual",
+    publisher: "GNU Project",
+    url: "https://www.gnu.org/software/coreutils/manual/coreutils.html",
+    accessedAt: "2026-09-25",
+    sourceType: "official",
+    supports: [
+      "GNU Coreutils documenta utilitários fundamentais de arquivos, diretórios, texto e informação do sistema usados no terminal Linux.",
+      "Opções destrutivas e comportamentos de comandos como cp, mv e rm devem ser conferidos na documentação antes do uso privilegiado.",
+    ],
+  },
+  "ubuntu-install-desktop": {
+    id: "ubuntu-install-desktop",
+    title: "Install Ubuntu Desktop",
+    publisher: "Canonical / Ubuntu",
+    url: "https://ubuntu.com/desktop/docs/en/26.04/tutorial/install-ubuntu-desktop/",
+    accessedAt: "2026-09-25",
+    sourceType: "official",
+    supports: [
+      "A documentação oficial orienta criar mídia inicializável, experimentar o Ubuntu antes da instalação e revisar o tipo de instalação antes de alterar o disco.",
+      "O fluxo oficial recomenda aplicar atualizações após a instalação e destaca casos de compatibilidade como Intel RST.",
+    ],
+  },
+  "ubuntu-package-management": {
+    id: "ubuntu-package-management",
+    title: "Install and manage packages",
+    publisher: "Canonical / Ubuntu",
+    url: "https://ubuntu.com/server/docs/how-to/software/package-management/",
+    accessedAt: "2026-09-25",
+    sourceType: "official",
+    supports: [
+      "APT gerencia instalação, remoção, índice de pacotes e atualizações em Ubuntu.",
+      "apt update atualiza o índice; apt upgrade aplica atualizações disponíveis.",
+      "A documentação recomenda cautela com repositórios de terceiros e diferencia apt interativo de apt-get para scripts.",
+    ],
+  },
+  "dnf-command-reference": {
+    id: "dnf-command-reference",
+    title: "DNF Command Reference",
+    publisher: "DNF Project",
+    url: "https://dnf.readthedocs.io/en/stable/command_ref.html",
+    accessedAt: "2026-09-25",
+    sourceType: "official",
+    supports: [
+      "DNF oferece comandos de busca, informação, instalação, remoção, atualização e histórico de transações em sistemas RPM compatíveis.",
+      "O histórico registra transações do gerenciador e auxilia a auditoria de mudanças de pacotes.",
+    ],
+  },
+  "ubuntu-openssh-server": {
+    id: "ubuntu-openssh-server",
+    title: "OpenSSH server",
+    publisher: "Canonical / Ubuntu",
+    url: "https://ubuntu.com/server/docs/how-to/security/openssh-server/",
+    accessedAt: "2026-09-25",
+    sourceType: "official",
+    supports: [
+      "OpenSSH fornece acesso remoto criptografado e suporta autenticação por senha, chave pública e outros métodos.",
+      "O servidor pode ser configurado em /etc/ssh/sshd_config e por fragmentos em /etc/ssh/sshd_config.d/.",
+    ],
+  },
+  "rsync-manpage": {
+    id: "rsync-manpage",
+    title: "rsync(1) manpage",
+    publisher: "Rsync Project / Samba",
+    url: "https://download.samba.org/pub/rsync/rsync.1",
+    accessedAt: "2026-09-25",
+    sourceType: "official",
+    supports: [
+      "Rsync copia arquivos local ou remotamente e pode usar SSH como transporte.",
+      "O modo archive combina recursão e preservação de atributos, com limites documentados para ACLs e atributos adicionais.",
+      "Opções de exclusão e delete alteram o comportamento do destino e exigem validação cuidadosa.",
     ],
   },
 
@@ -1407,6 +1488,52 @@ export const ARTICLE_SOURCE_MANIFEST: Record<string, ArticleSourceManifest> = {
     notes:
       "Reescrita material completa em 2026-09-25 com documentação Microsoft atual para Windows Server: AD DS, dependência de DNS, segurança, redundância, GPO, backup e critérios de parada.",
   },
+  "comandos-linux-essenciais-iniciantes": {
+    slug: "comandos-linux-essenciais-iniciantes",
+    sources: ["gnu-coreutils-manual"],
+    technicalReview: "reviewed",
+    factChecked: true,
+    factCheckedAt: "2026-09-25",
+    notes:
+      "Reescrita material: foco em leitura antes de escrita, risco de rm/sudo, permissões, processos, rede e consulta ao manual. Removida lista inflada de comandos sem contexto.",
+  },
+  "como-instalar-ubuntu-do-zero": {
+    slug: "como-instalar-ubuntu-do-zero",
+    sources: ["ubuntu-install-desktop", "ubuntu-package-management"],
+    technicalReview: "reviewed",
+    factChecked: true,
+    factCheckedAt: "2026-09-25",
+    notes:
+      "Reescrita integral contra documentação Ubuntu atual: backup, teste via USB, compatibilidade, escolha do disco e atualização pós-instalação. Removidos requisitos e atalhos de boot universais obsoletos.",
+  },
+  "como-gerenciar-pacotes-apt-dnf-linux": {
+    slug: "como-gerenciar-pacotes-apt-dnf-linux",
+    sources: ["ubuntu-package-management", "dnf-command-reference"],
+    technicalReview: "reviewed",
+    factChecked: true,
+    factCheckedAt: "2026-09-25",
+    notes:
+      "Reescrita material: separa índice/transação, explicita risco de repositórios de terceiros e uso de -y, diferencia apt interativo de apt-get em scripts e revisa DNF por documentação do projeto.",
+  },
+  "como-configurar-ssh-seguro-linux": {
+    slug: "como-configurar-ssh-seguro-linux",
+    sources: ["ubuntu-openssh-server"],
+    technicalReview: "reviewed",
+    factChecked: true,
+    factCheckedAt: "2026-09-25",
+    notes:
+      "Reescrita integral: remove estatísticas sem fonte, promessa de segurança por troca de porta e receitas PAM frágeis. Prioriza chave, segunda sessão, validação sshd, privilégio mínimo e recuperação.",
+  },
+  "como-usar-rsync-backup-linux": {
+    slug: "como-usar-rsync-backup-linux",
+    sources: ["rsync-manpage"],
+    technicalReview: "reviewed",
+    factChecked: true,
+    factCheckedAt: "2026-09-25",
+    notes:
+      "Reescrita integral: remove estatísticas e alegações de mercado, explica dry-run, barra final, archive, delete, SSH, retenção e teste de restauração. Diferencia sincronização de estratégia de backup.",
+  },
+
 
 };
 
