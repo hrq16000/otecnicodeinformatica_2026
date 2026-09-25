@@ -13,18 +13,24 @@ jobs:
   gates-locais:
     runs-on: ubuntu-latest
     timeout-minutes: 30
+    env:
+      VITE_SITE_DOMAIN: otecnicodeinformatica.com.br
+      VITE_SITE_INDEXING_ENABLED: "true"
+      SSR_FORCE_REFRESH: "1"
     steps:
       - uses: actions/checkout@v4
+      - uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: 1.4.2
       - uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 22.12.0
           cache: npm
       - run: npm ci
 
       - name: Build (SSR + sitemaps)
         run: npm run build
         env:
-          VITE_SITE_DOMAIN: ${{ secrets.VITE_SITE_DOMAIN }}
           VITE_WHATSAPP_NUMBER: ${{ secrets.VITE_WHATSAPP_NUMBER }}
 
       - name: Auditoria de metadados

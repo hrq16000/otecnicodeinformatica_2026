@@ -8,6 +8,7 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 import { Button } from "@/components/ui/button";
 import { trackCTAClick, trackPageView } from "@/lib/analytics";
 import { WHATSAPP_NUMBER as WA_NUMBER, WHATSAPP_PHONE_E164 as WA_PHONE_E164, SITE_BASE_URL } from "@/lib/siteConfig";
+import { isNoindex } from "@/lib/localIndexPolicy";
 import { BlocosLocal4c } from "@/components/local/BlocosLocal4c";
 import {
   MessageCircle,
@@ -306,6 +307,7 @@ export default function AssistenciaTecnicaCuritiba() {
         title="Assistência Técnica em Curitiba | Consoles, PC e Placas"
         description="Assistência técnica em Curitiba: PlayStation, Xbox, Nintendo, placas de vídeo, PCs e notebooks. Diagnóstico honesto e valor combinado antes do reparo."
         path="/assistencia-tecnica-curitiba"
+        noindex={isNoindex("/assistencia-tecnica-curitiba")}
         breadcrumbs={[
           { name: "Início", path: "/" },
           { name: "Serviços", path: "/servicos" },

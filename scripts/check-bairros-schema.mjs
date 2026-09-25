@@ -6,7 +6,8 @@
  *   • BreadcrumbList bem formado (posições sequenciais, itens absolutos e
  *     apontando para rotas internas existentes);
  *   • FAQPage com ao menos 3 perguntas com resposta preenchida;
- *   • WebPage com url/canonical coerentes com a própria rota.
+ *   • WebPage com url/canonical coerentes com a própria rota;
+ *   • nenhum LocalBusiness próprio do bairro (bairro é área atendida, não filial).
  *
  * JSON-LD malformado, link quebrado ou schema ausente derrubam o build.
  *
@@ -98,19 +99,16 @@ for (const path of rotasBairro) {
     erros.push(`${path}: WebPage.url (${webpage.url}) não corresponde à rota`);
   }
 
-  // LocalBusiness (rich result local): mesma entidade do site, areaServed no bairro.
-  const [negocio] = tipos("LocalBusiness");
-  if (!negocio) erros.push(`${path}: LocalBusiness ausente`);
-  else {
-    if (!String(negocio.url ?? "").endsWith(path)) {
-      erros.push(`${path}: LocalBusiness.url (${negocio.url}) não corresponde à rota`);
+  // Bairro é área atendida, não uma unidade/filial. A identidade do negócio
+  // permanece no #organization global; criar LocalBusiness com @id/url do bairro
+  // geraria uma entidade local fictícia e conflitaria com o gate antidoorway.
+  const negocios = tipos("LocalBusiness");
+  for (const negocio of negocios) {
+    const id = String(negocio?.["@id"] ?? "");
+    const url = String(negocio?.url ?? "");
+    if (id.includes("/bairros/") || url.endsWith(path)) {
+      erros.push(`${path}: LocalBusiness próprio do bairro (filial fictícia)`);
     }
-    for (const campo of ["name", "telephone", "address", "areaServed"]) {
-      if (!negocio[campo]) erros.push(`${path}: LocalBusiness sem ${campo}`);
-    }
-    const area = negocio.areaServed;
-    const areaNome = Array.isArray(area) ? area[0]?.name : area?.name;
-    if (!areaNome) erros.push(`${path}: LocalBusiness.areaServed sem name`);
     if (negocio.aggregateRating || negocio.review) {
       erros.push(`${path}: LocalBusiness com rating/review — proibido (nunca inventar avaliação)`);
     }
@@ -151,5 +149,5 @@ if (erros.length) {
   process.exit(1);
 }
 console.log(
-  "\n✓ BreadcrumbList, FAQPage, WebPage, LocalBusiness e imagem principal válidos em todas as rotas de bairro indexáveis.",
+  "\n✓ BreadcrumbList, FAQPage, WebPage, ausência de filial fictícia e imagem principal válidos em todas as rotas de bairro indexáveis.",
 );

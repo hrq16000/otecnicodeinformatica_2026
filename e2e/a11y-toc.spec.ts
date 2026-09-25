@@ -61,6 +61,8 @@ test.describe("TOC — acessibilidade", () => {
     const botao = page.locator(".article-toc__copy").first();
     await botao.click();
     await expect(botao).toBeFocused();
-    await expect(page.locator("[aria-live='polite']")).toContainText("copiado");
+    // A aplicação também possui a região aria-live do sistema de notificações.
+    // O status do TOC é o alvo semântico correto e permanece único.
+    await expect(page.getByRole("status")).toContainText("copiado");
   });
 });

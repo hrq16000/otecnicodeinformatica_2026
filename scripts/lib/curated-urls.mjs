@@ -56,9 +56,8 @@ export const HUBS = [
   { path: "/guia-tecnico-informatica", changefreq: "monthly", priority: "0.7" },
   // Página de autoridade técnica: método editorial, clusters e fontes primárias.
   { path: "/autoridade-tecnica", changefreq: "monthly", priority: "0.7" },
-  // Hub genérico de assistência técnica: rota indexável (index, follow) que
-  // estava fora do sitemap — incoerência entre robots e descoberta.
-  { path: "/assistencia-tecnica-curitiba", changefreq: "weekly", priority: "0.8" },
+  // /assistencia-tecnica-curitiba permanece noindex e fora do sitemap por
+  // sobreposição com a landing canônica /tecnico-informatica-curitiba.
 ];
 
 /**

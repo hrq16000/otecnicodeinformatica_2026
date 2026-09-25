@@ -4,7 +4,7 @@
     "collect": {
       "url": [
         "http://localhost:4173/servicos/formatacao",
-        "http://localhost:4173/servicos/upgrade-ssd",
+        "http://localhost:4173/servicos/upgrade-ssd-ram",
         "http://localhost:4173/servicos/recuperacao-de-dados",
         "http://localhost:4173/servicos/redes-e-wifi",
         "http://localhost:4173/servicos/manutencao-preventiva-empresas",
@@ -12,8 +12,6 @@
         "http://localhost:4173/servicos/suporte-tecnico-empresarial",
         "http://localhost:4173/atendimento-remoto"
       ],
-      "startServerCommand": "bun run preview -- --port 4173",
-      "startServerReadyPattern": "Local:",
       "numberOfRuns": 3,
       "settings": {
         "preset": "desktop",
