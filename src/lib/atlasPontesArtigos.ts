@@ -532,6 +532,21 @@ export const ATLAS_PONTES_ARTIGOS: Record<string, AtlasPonteArtigo> = {
     },
   },
 
+  "como-configurar-bios-uefi-corretamente": {
+    temaId: "sistemas-operacionais",
+    porQue: "Firmware, boot, Secure Boot, TPM, armazenamento e Windows formam uma mesma cadeia de inicialização. A trilha evita tratar cada opção da UEFI como ajuste isolado.",
+    proximoPasso: { rotulo: "Roteiro de falha de inicialização", to: "/ferramentas/roteiro-falha-de-inicializacao", contexto: "Use um roteiro reversível quando a máquina deixa de encontrar o sistema ou muda de comportamento após o firmware." },
+  },
+  "como-configurar-servidor-de-arquivos": {
+    temaId: "informatica-empresas",
+    porQue: "Servidor de arquivos une identidade, permissões, rede, continuidade e suporte. A trilha empresarial coloca SMB/Samba dentro da operação de TI, e não como uma pasta isolada.",
+    proximoPasso: { rotulo: "Organização de TI para pequenos escritórios", to: "/blog/organizacao-de-ti-para-pequenos-escritorios", contexto: "Conecte compartilhamentos a inventário, responsáveis, acessos e rotina de backup." },
+  },
+  "como-configurar-firewall-ufw-linux": {
+    temaId: "redes-wifi",
+    porQue: "UFW controla o tráfego do host, mas precisa respeitar a arquitetura de serviços, administração remota e demais camadas de firewall. A trilha de redes ajuda a modelar origem, destino e acesso.",
+    proximoPasso: { rotulo: "Firewall pfSense", to: "/blog/como-configurar-firewall-pfsense", contexto: "Quando o problema deixa de ser um único host e passa a envolver várias redes, NAT, VPN e segmentação." },
+  },
 
 };
 
