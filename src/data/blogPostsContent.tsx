@@ -508,80 +508,66 @@ flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flat
     ),
   },
   "trocar-windows-por-linux-vale-a-pena": {
-    title: "Trocar Windows por Linux vale a pena? Checklist de compatibilidade antes de migrar",
-    excerpt:
-      "Decida com base em aplicativos, periféricos, arquivos, jogos e suporte do hardware. Veja como testar Linux por USB antes de alterar o disco.",
-    date: "2026-09-25",
-    readTime: "11 min",
+    title: "Trocar o Windows Por Linux: Vale a Pena?",
+    excerpt: "O que funciona, o que não funciona e como migrar.",
+    date: "2026-04-13",
+    readTime: "10 min",
     category: "Linux",
     content: (
       <>
-        <p className="lead">Trocar Windows por Linux pode ser uma ótima decisão — ou pode quebrar justamente o programa que sustenta seu trabalho. A pergunta correta não é “Linux é melhor?”, e sim: <strong>meus aplicativos, arquivos, periféricos e rotina funcionam na distribuição que pretendo usar?</strong> A vantagem é que distribuições como Ubuntu permitem testar o sistema por USB antes de fazer mudanças permanentes no computador.</p>
+        <p className="lead">Você está cansado de lentidão, vírus e atualizações finformadas do Windows? A migração para Linux pode ser a solução — mas <strong>não é para todos</strong>. Veja quando vale a pena e como fazer a transição.</p>
 
-        <h2>Resposta curta</h2>
-        <p>Vale considerar Linux quando suas tarefas dependem principalmente de navegador, ferramentas multiplataforma, desenvolvimento ou softwares com versão nativa para Linux. Mantenha Windows — ou teste dual boot/virtualização — quando você depende de aplicativo proprietário, periférico com driver específico, jogo com mecanismo anti-cheat incompatível ou integração corporativa que só foi homologada no Windows.</p>
-
-        <h2>1. Faça um inventário do que precisa continuar funcionando</h2>
-        <p>Liste programas usados semanalmente, arquivos críticos, impressoras/scanners, VPN, certificado digital, sincronização em nuvem, jogos e acessórios. Para cada item, classifique: versão Linux oficial, equivalente aceitável, funciona via navegador, depende de compatibilidade adicional ou não tem alternativa prática.</p>
-        <p>Evite decidir pela existência de um “programa parecido”. Se você troca arquivos com clientes em formatos específicos, usa macros, plugins, drivers ou recursos avançados, teste o fluxo real — abrir, editar, exportar, imprimir e compartilhar — antes da migração.</p>
-
-        <h2>2. Teste o hardware com um sistema live</h2>
-        <p>A documentação atual do Ubuntu recomenda experimentar o sistema diretamente por USB antes da instalação. Essa sessão de teste não altera o disco por padrão e permite verificar teclado, touchpad, Wi-Fi, Bluetooth, áudio, vídeo, webcam, suspensão e periféricos.</p>
-        <p>Alguns drivers proprietários podem não estar ativos na sessão live; portanto, ausência de um recurso ali não prova incompatibilidade definitiva. Ainda assim, o teste revela problemas básicos antes de você reparticionar ou apagar o sistema atual.</p>
-
-        <h2>3. Compare seu hardware com os requisitos e a realidade atual</h2>
-        <p>Linux pode dar nova utilidade a máquinas que não atendem aos requisitos oficiais do Windows 11, mas isso não significa que “qualquer Linux roda bem com 2 GB de RAM”. Ambiente gráfico, navegador moderno e quantidade de abas ainda consomem memória e CPU. Escolha distribuição/desktop compatíveis com a capacidade real e com o suporte que você precisa.</p>
-        <p>Os requisitos oficiais do Windows 11 incluem CPU compatível de 64 bits, 4 GB de RAM, 64 GB de armazenamento, UEFI/Secure Boot e TPM 2.0. Se uma máquina ficou fora dessa linha, migrar para Linux pode ser uma opção legítima — desde que os aplicativos e periféricos necessários sejam compatíveis.</p>
-
-        <h2>4. Aplicativos: nativo, web, equivalente ou sem substituto?</h2>
-        <table>
-          <thead><tr><th>Situação</th><th>Como decidir</th></tr></thead>
-          <tbody>
-            <tr><td>Aplicativo tem versão Linux oficial</td><td>Instale em live/VM ou consulte requisitos da versão usada</td></tr>
-            <tr><td>Trabalho é feito no navegador</td><td>Teste navegador, impressão, câmera, certificado e upload/download</td></tr>
-            <tr><td>Há equivalente livre</td><td>Teste compatibilidade de arquivos e recursos, não apenas aparência</td></tr>
-            <tr><td>Software é exclusivo do Windows</td><td>Avalie manter Windows, dual boot, VM ou estação separada</td></tr>
-          </tbody>
-        </table>
-        <p>Camadas de compatibilidade podem funcionar em alguns programas, mas não devem ser tratadas como garantia para software crítico. Se o fornecedor não dá suporte ao cenário, documente o risco antes de depender dele em produção.</p>
-
-        <h2>5. Jogos e GPU exigem teste específico</h2>
-        <p>A compatibilidade de jogos muda com frequência e depende do título, anti-cheat, driver e GPU. Pesquise o jogo atual, não uma lista antiga. Para placas de vídeo que usam driver proprietário, confira a documentação da distribuição e do fabricante. A própria documentação do Ubuntu observa que a sessão live pode não incluir todos os drivers proprietários disponíveis após a instalação.</p>
-
-        <h2>6. Backup antes de qualquer alteração no disco</h2>
-        <p>A documentação do Ubuntu recomenda backup antes da instalação. Faça uma cópia independente dos arquivos e confirme que consegue abri-la. Se Windows usa BitLocker e você pretende instalar lado a lado no mesmo disco, guarde a chave de recuperação e leia o aviso do instalador: o Ubuntu não consegue manipular com segurança uma instalação Windows criptografada por BitLocker sem os passos apropriados.</p>
-        <p>Use o <Link to="/ferramentas/checklist-antes-de-formatar" className="text-accent">checklist antes de formatar</Link> para não esquecer arquivos, contas e chaves.</p>
-
-        <h2>7. Dual boot, máquina virtual ou migração total?</h2>
+        <h2>Quando Vale a Pena Trocar</h2>
         <ul>
-          <li><strong>Migração total:</strong> melhor quando todo o fluxo já foi validado e você quer simplificar manutenção.</li>
-          <li><strong>Dual boot:</strong> útil quando precisa de desempenho nativo nos dois sistemas, mas aumenta complexidade de partições e boot.</li>
-          <li><strong>Máquina virtual:</strong> boa para uso ocasional de outro sistema quando hardware tem recursos suficientes e o aplicativo funciona virtualizado.</li>
-          <li><strong>WSL:</strong> alternativa para quem quer ferramentas Linux mantendo Windows como sistema principal; não substitui um desktop Linux completo.</li>
+          <li><strong>PC antigo/lento</strong> — Linux roda bem em máquinas com 2 GB de RAM</li>
+          <li><strong>Uso básico</strong> — internet, e-mail, documentos, vídeos</li>
+          <li><strong>Desenvolvimento</strong> — terminal nativo, Docker sem WSL, melhor para programação</li>
+          <li><strong>Privacidade</strong> — sem telemetria, sem conta Microsoft obrigatória</li>
+          <li><strong>Economia</strong> — sem custo de licença</li>
         </ul>
 
-        <h2>8. Plano de teste em 30–60 minutos</h2>
+        <h2>Quando NÃO Vale a Pena</h2>
+        <ul>
+          <li><strong>Jogos competitivos</strong> — Valorant, Fortnite e outros com anti-cheat não rodam</li>
+          <li><strong>Adobe</strong> — sem Photoshop, Premiere, After Effects nativos</li>
+          <li><strong>Software específico</strong> — AutoCAD, SAP, softwares contábeis brasileiros</li>
+          <li><strong>Impressoras/scanners antigos</strong> — alguns não têm driver Linux</li>
+        </ul>
+
+        <h2>Alternativa: Dual Boot</h2>
+        <p>Não precisa escolher um ou outro. O <strong>dual boot</strong> permite ter Windows e Linux no mesmo computador. Ao ligar, você escolhe qual sistema iniciar. Assim, você pode usar Linux no dia a dia e Windows quando precisar de um software específico.</p>
+
+        <h2>Equivalências de Software</h2>
+        <div className="overflow-x-auto">
+          <table className="w-full text-sm">
+            <thead><tr><th className="text-left p-2 border-b">Windows</th><th className="text-left p-2 border-b">Linux</th></tr></thead>
+            <tbody>
+              <tr><td className="p-2 border-b">Microsoft Office</td><td className="p-2 border-b">LibreOffice / OnlyOffice</td></tr>
+              <tr><td className="p-2 border-b">Photoshop</td><td className="p-2 border-b">GIMP / Krita</td></tr>
+              <tr><td className="p-2 border-b">Premiere</td><td className="p-2 border-b">DaVinci Resolve / Kdenlive</td></tr>
+              <tr><td className="p-2 border-b">Outlook</td><td className="p-2 border-b">Thunderbird / Evolution</td></tr>
+              <tr><td className="p-2 border-b">Notepad++</td><td className="p-2 border-b">VS Code / Kate</td></tr>
+              <tr><td className="p-2 border-b">WinRAR</td><td className="p-2 border-b">File Roller (nativo)</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h2>Passo a Passo da Migração</h2>
         <ol>
-          <li>Inicialize uma distribuição suportada por USB no modo de teste.</li>
-          <li>Conecte Wi-Fi/Ethernet e teste áudio, câmera, Bluetooth e suspensão.</li>
-          <li>Abra os principais formatos de arquivo que você usa.</li>
-          <li>Valide impressora/scanner e periféricos essenciais.</li>
-          <li>Confira se seus serviços web e autenticação funcionam.</li>
-          <li>Liste o que ainda depende do Windows antes de decidir instalar.</li>
+          <li><strong>Faça backup</strong> de todos os seus arquivos (HD externo ou nuvem)</li>
+          <li><strong>Liste</strong> todos os programas que você usa e verifique equivalentes</li>
+          <li><strong>Teste antes</strong> — rode o Ubuntu pelo pendrive (Live USB) sem instalar</li>
+          <li><strong>Instale em dual boot</strong> para período de adaptação</li>
+          <li>Após 30 dias confortável, <strong>remova o Windows</strong> se quiser</li>
         </ol>
 
-        <h2>Quando não migrar ainda</h2>
-        <p>Adie a troca se você não tem backup, depende de software sem alternativa validada, precisa de suporte oficial do fornecedor apenas no Windows ou não consegue testar um periférico crítico. Migração é uma decisão de compatibilidade e continuidade, não um exercício de preferência.</p>
-
-        <h2>Quando procurar ajuda</h2>
-        <p>Peça apoio antes de reparticionar se o computador usa BitLocker, RAID, múltiplos discos, boot corporativo, criptografia ou dados sem cópia. Também vale revisão quando você quer dual boot e não entende a diferença entre partição de sistema, partição de dados e boot UEFI.</p>
-
-        <p>Para entender o que cada sistema faz e como o hardware participa da decisão, continue no <Link to="/guia-tecnico-informatica#tema-sistemas-operacionais" className="text-accent">Atlas de sistemas operacionais</Link>.</p>
-        <EditorialReferences slug="trocar-windows-por-linux-vale-a-pena" />
+        <div className="bg-accent/10 rounded-xl p-6 my-8">
+          <h3 className="text-accent font-bold mb-2">Migração Assistida</h3>
+          <p className="text-muted-foreground mb-0">Nosso técnico faz backup dos seus dados, instala Linux, configura dual boot e transfere seus arquivos. Sem risco de perder nada.</p>
+        </div>
       </>
     ),
   },
-
   "linux-para-pc-antigo-leve-rapido": {
     title: "Linux Para PC Antigo: 5 Distros Leves Que Ressuscitam Seu Computador",
     excerpt: "Distros leves para máquinas com pouca RAM.",
@@ -2884,64 +2870,45 @@ docker run -d --name db --network minha-rede postgres
   },
 
   "erros-comuns-upgrade-computador": {
-    title: "Upgrade de PC ou notebook: checklist de compatibilidade antes de comprar peças",
-    excerpt:
-      "Evite RAM, SSD e fonte incompatíveis. Um checklist técnico para confirmar interface, geração, capacidade, firmware, energia e plano de backup antes do upgrade.",
-    date: "2026-09-25",
-    readTime: "11 min",
-    category: "Hardware e Manutenção",
+    title: "5 Erros Comuns ao Fazer Upgrade no Computador (e Como Evitar Prejuízo)",
+    excerpt: "Comprar RAM incompatível, instalar SSD errado, favaliar o valor peças no slot — veja os erros que causam prejuízo.",
+    date: "2026-04-06",
+    readTime: "8 min",
+    category: "Manutenção",
     content: (
       <>
-        <p className="lead">O erro mais caro em um upgrade geralmente acontece antes de abrir o gabinete: comprar pela aparência ou pelo nome comercial sem verificar o modelo exato do computador/placa-mãe e as interfaces suportadas. M.2 é formato físico e pode usar protocolos diferentes; módulos de memória da mesma família podem ter limitações de densidade, capacidade e BIOS. O procedimento seguro começa pelo manual e termina com um plano de retorno.</p>
+        <p className="lead">Fazer upgrade no computador pode ser a solução mais inteligente para ganhar desempenho sem trocar a máquina. Mas quando feito sem conhecimento técnico, o resultado pode ser <strong>prejuízo financeiro e até danos permanentes</strong>. Veja os 5 erros mais comuns que encontramos no dia a dia.</p>
 
-        <h2>Resposta curta</h2>
-        <p>Antes de comprar, anote modelo exato do equipamento/placa-mãe, CPU, memória instalada, slots livres, tipo de armazenamento, fonte e versão de BIOS. Consulte o manual do fabricante e, quando possível, uma lista/configurador de compatibilidade. Faça backup antes de mexer em armazenamento e confirme a chave BitLocker quando houver criptografia. Não force conector que não encaixa.</p>
+        <h2>1. Comprar RAM Incompatível</h2>
+        <p>Nem toda memória RAM serve em qualquer computador. É preciso verificar o <strong>tipo (DDR3, DDR4, DDR5)</strong>, a frequência suportada pela placa-mãe e o número máximo de slots. Muita gente compra DDR4 para um notebook que só aceita DDR3 — e descobre tarde demais que não encaixa.</p>
+        <p><strong>Como evitar:</strong> Consulte o manual da placa-mãe ou use ferramentas como CPU-Z para verificar as especificações antes de comprar.</p>
 
-        <h2>1. RAM: geração é só o primeiro filtro</h2>
-        <p>DDR4 e DDR5 usam características elétricas e encaixes diferentes, mas compatibilidade não termina no nome da geração. Fabricantes de memória documentam que densidade dos chips, topologia de bancos, combinação de módulos e versão de BIOS também podem afetar POST e estabilidade. A Kingston, por exemplo, orienta conferir a compatibilidade do sistema e manter BIOS atualizada quando necessário.</p>
-        <p>Cheque: DIMM ou SODIMM, geração, capacidade máxima por slot e total, número de slots, ECC ou não-ECC quando aplicável, velocidade suportada e regras do fabricante para combinação de módulos.</p>
+        <h2>2. Instalar SSD Sem Verificar a Interface</h2>
+        <p>Existem SSDs SATA (2.5") e SSDs NVMe (M.2). Nem toda placa-mãe tem slot M.2, e mesmo as que têm podem suportar apenas SATA no slot M.2, não NVMe. Instalar o tipo errado significa que o SSD simplesmente <strong>não será reconhecido</strong>.</p>
+        <p><strong>Como evitar:</strong> Verifique no manual se há slot M.2 e se ele suporta NVMe ou apenas SATA.</p>
 
-        <h2>2. M.2 não significa automaticamente NVMe</h2>
-        <p>M.2 é um formato. Um SSD M.2 pode usar SATA ou PCIe/NVMe conforme o dispositivo e o slot. A documentação da Kingston e a especificação NVMe deixam claro que aparência física não prova protocolo. Em alguns sistemas, o slot compartilha lanes/portas e pode desativar outro conector quando ocupado.</p>
-        <p>Antes da compra, confirme no manual: chave/formato físico, comprimentos aceitos (como 2280), protocolo suportado, geração/largura PCIe e eventuais compartilhamentos de portas.</p>
+        <h2>3. Favaliar o valor Peças no Slot Errado</h2>
+        <p>Memória DDR4 não encaixa em slot DDR3 — os encaixes são diferentes propositalmente. Mas vemos casos de clientes que <strong>favaliar o valoram a peça e quebraram o slot ou a própria memória</strong>. O mesmo vale para conectores de energia, cabos SATA e até ventoinhas.</p>
+        <p><strong>Regra de ouro:</strong> Se não encaixou com pressão leve, está errado. Nunca force.</p>
 
-        <h2>3. SATA de 2,5" ainda exige energia e espaço</h2>
-        <p>Em desktop, um SSD SATA precisa de porta SATA de dados e alimentação. Em notebook, pode existir baia física sem cabo ou adaptador instalado. “Tem espaço” não significa que todos os conectores necessários estão presentes. Verifique kit/cabo/caddy específico do modelo antes de comprar.</p>
+        <h2>4. Não Reinstalar o Windows Após Trocar HD por SSD</h2>
+        <p>Alguns usuários copiam o HD antigo para o SSD novo usando programas de clonagem — mas o Windows pode não iniciar corretamente ou ficar instável. A clonagem funciona em muitos casos, mas em outros traz <strong>erros de driver, tela azul e lentidão inesperada</strong>.</p>
+        <p><strong>Recomendação:</strong> Sempre que possível, faça uma instalação limpa do Windows no SSD novo. É mais rápido e confiável.</p>
 
-        <h2>4. GPU: slot não é o único requisito</h2>
-        <p>Uma placa de vídeo pode encaixar em PCIe e ainda assim não ser uma boa combinação. Confira dimensões do gabinete, potência e conectores da fonte, ventilação, compatibilidade de firmware e se a CPU/uso justificam o investimento. Não use apenas uma calculadora genérica de watts; siga a recomendação do fabricante da GPU e da fonte para o modelo real.</p>
+        <h2>5. Ignorar a Fonte de Alimentação</h2>
+        <p>Ao adicionar uma placa de vídeo potente, é preciso uma fonte que suporte a potência necessária. Uma fonte fraca causa <strong>desligamentos aleatórios, travamentos e pode até queimar componentes</strong>. Muitos PCs de fábrica vêm com fontes de 300W — insuficiente para GPUs dedicadas.</p>
+        <p><strong>Dica:</strong> Calcule a potência necessária antes e invista em uma fonte de qualidade (80 Plus certificada).</p>
 
-        <h2>5. Fonte: potência nominal não substitui compatibilidade</h2>
-        <p>Além da potência, confirme conectores, padrão/formato, capacidade disponível nas saídas necessárias e qualidade/proteções do modelo. Adaptadores improvisados em alimentação de GPU podem transformar um upgrade simples em risco térmico e elétrico. Se a fonte não possui o conector exigido pelo hardware, investigue o motivo antes de adaptar.</p>
+        <div className="bg-accent/10 rounded-xl p-6 my-8">
+          <h3 className="text-accent font-bold mb-2">Quer Fazer Upgrade Com Segurança?</h3>
+          <p className="text-muted-foreground mb-0">Nosso técnico analisa seu equipamento, indica as peças compatíveis e faz a instalação profissional. Sem risco de prejuízo. Atendemos em Curitiba e região.</p>
+        </div>
 
-        <h2>6. BIOS/UEFI: atualize só quando houver motivo</h2>
-        <p>Uma BIOS mais nova pode adicionar compatibilidade de CPU, memória ou armazenamento, mas atualização de firmware também tem risco. Leia as notas da versão, confirme revisão exata da placa e siga o método do fabricante. Não atualize “porque é mais novo” no meio de uma máquina instável ou sem alimentação confiável.</p>
-
-        <h2>7. Clonar ou instalar do zero?</h2>
-        <p>Trocar HD por SSD não exige automaticamente instalação limpa. Clonagem pode preservar sistema e aplicativos quando origem está saudável, espaço cabe no destino e a ferramenta suporta o layout. Instalação limpa faz sentido quando há corrupção, mudança de edição/arquitetura ou quando você quer recomeçar conscientemente. A decisão deve considerar backup e licença, não uma regra absoluta.</p>
-
-        <h2>8. Windows 11 também entra na compatibilidade</h2>
-        <p>Se o objetivo do upgrade é migrar para Windows 11, verifique requisitos oficiais antes de gastar: CPU suportada, 4 GB de RAM, armazenamento de 64 GB ou mais, UEFI/Secure Boot e TPM 2.0 fazem parte dos requisitos mínimos. Colocar mais RAM ou SSD não resolve sozinho uma plataforma fora dos requisitos de firmware/CPU.</p>
-
-        <h2>Checklist antes da compra</h2>
+        <p><strong>Leia também:</strong></p>
         <ul>
-          <li>Modelo exato do PC/notebook/placa-mãe registrado.</li>
-          <li>Manual e especificações oficiais consultados.</li>
-          <li>RAM: formato, geração, capacidade, densidade/combinação e slots conferidos.</li>
-          <li>SSD: protocolo, formato, comprimento e compartilhamento de portas conferidos.</li>
-          <li>GPU: espaço físico, fonte, conectores e ventilação conferidos.</li>
-          <li>Backup feito e testado; chave BitLocker salva se aplicável.</li>
-          <li>Plano de teste e retorno definido antes de desmontar.</li>
+          <li><Link to="/servicos/upgrade-ssd-ram" className="text-accent">Upgrade de SSD e memória RAM</Link></li>
+          <li><Link to="/quando-nao-compensa" className="text-accent">Quando não compensa reparar</Link></li>
         </ul>
-
-        <h2>Depois do upgrade: valide antes de fechar tudo</h2>
-        <p>Entre na BIOS/UEFI e confirme detecção, depois inicialize o sistema e verifique capacidade, temperaturas e estabilidade. Em RAM, teste carga e, se houver comportamento estranho, use diagnóstico de memória. Em armazenamento, confirme SMART/estado, partições e boot. Só descarte ou apague o disco antigo depois de conferir os arquivos no novo ambiente.</p>
-
-        <h2>Quando parar</h2>
-        <p>Não force peça, conector ou tampa. Pare se o equipamento não liga após a troca, apresenta cheiro de aquecimento, exige atualização de BIOS que você não consegue validar ou possui dados sem backup. Em notebook soldado/ultrafino, confirme primeiro se memória e armazenamento são realmente substituíveis.</p>
-
-        <p>Para upgrades de armazenamento e RAM, veja <Link to="/servicos/upgrade-ssd-ram" className="text-accent">upgrade de SSD e memória</Link> e, se a decisão é econômica, <Link to="/quando-nao-compensa" className="text-accent">quando não compensa reparar ou investir</Link>.</p>
-        <EditorialReferences slug="erros-comuns-upgrade-computador" />
       </>
     ),
   },
@@ -3969,25 +3936,15 @@ docker run -d --name db --network minha-rede postgres
   // ═══════════════════════════════════════════════════════════════
 
   "como-trocar-pasta-termica-notebook": {
-    title: "Como trocar pasta térmica do notebook com segurança: passo a passo",
+    title: "Troca de pasta térmica no notebook: quando faz sentido e como não errar",
     excerpt:
-      "Como trocar pasta térmica do notebook: diagnóstico antes de abrir, desconexão da bateria, remoção do dissipador, limpeza, aplicação e remontagem sem danificar a placa.",
+      "O que a pasta térmica faz, como saber se ela é mesmo a causa do aquecimento, a sequência correta de remoção e aperto do dissipador e os erros que danificam a placa.",
     date: "2026-08-12",
     readTime: "11 min",
     category: "Manutenção",
     content: (
       <>
-        <p className="lead">Para trocar pasta térmica do notebook com segurança, não comece pela pasta: confirme primeiro que o sistema de refrigeração está limpo, desligue totalmente o equipamento, desconecte carregador e bateria interna, registre a posição dos parafusos e só então remova o dissipador. A pasta apenas melhora o contato térmico entre chip e dissipador; ela não corrige ventoinha defeituosa, heatpipe danificado nem obstrução por poeira.</p>
-
-        <h2>Como trocar pasta térmica: sequência segura</h2>
-        <ol>
-          <li>Desligue o notebook e desconecte carregador e bateria.</li>
-          <li>Abra a carcaça com ferramenta adequada e registre parafusos e cabos.</li>
-          <li>Solte o dissipador em passes alternados, seguindo a numeração quando houver.</li>
-          <li>Remova o composto antigo com material apropriado e deixe as superfícies limpas e secas.</li>
-          <li>Aplique pequena quantidade de composto não condutivo e reposicione o dissipador sem arrastar.</li>
-          <li>Aperte em sequência alternada, reconecte a ventoinha e teste temperatura e estabilidade sob carga.</li>
-        </ol>
+        <p className="lead">A pasta térmica é uma camada muito fina de composto entre a superfície do processador e a base do dissipador. Ela não esfria nada sozinha: apenas preenche as imperfeições microscópicas das duas peças para que o calor atravesse por contato em vez de por ar. Quando resseca, esse contato piora e a temperatura sobe mesmo com a refrigeração limpa.</p>
 
         <h2>O que a troca resolve — e o que não resolve</h2>
         <p>Trocar o composto recupera a transferência de calor no ponto de contato. É a resposta certa quando o conjunto está limpo, a ventoinha gira normalmente e ainda assim a máquina aquece rápido sob carga.</p>
@@ -4697,93 +4654,88 @@ docker run -d --name db --network minha-rede postgres
   },
 
   "como-configurar-bios-uefi-corretamente": {
-    title: "BIOS/UEFI: como configurar sem perder o boot, o BitLocker ou a estabilidade",
-    excerpt: "Guia técnico para identificar UEFI, Secure Boot, TPM, ordem de boot, modo de armazenamento e perfis de memória sem aplicar receitas universais nem arriscar os dados.",
-    date: "2026-09-25",
-    readTime: "15 min",
-    category: "Hardware e Windows",
+    title: "Como Configurar BIOS/UEFI Corretamente: Guia Para Técnicos",
+    excerpt: "Boot order, XMP, Secure Boot, CSM, TPM — todas as configurações essenciais explicadas.",
+    date: "2026-04-08",
+    readTime: "11 min",
+    category: "Procedimentos Técnicos",
     content: (
       <>
-        <p className="lead">Configurar BIOS/UEFI com segurança não é “ativar tudo que parece moderno”. O firmware controla a inicialização, recursos de segurança, armazenamento e parte do comportamento do hardware. Uma alteração incompatível pode impedir o Windows de iniciar, acionar a recuperação do BitLocker ou tornar uma máquina antes estável em uma máquina instável.</p>
-        <h2>Resposta direta</h2>
-        <p>Antes de mudar qualquer opção, registre o estado atual, confirme o modelo exato do computador ou placa-mãe e descubra qual problema você está tentando resolver. Em Windows 11, os pontos que mais exigem cuidado são <strong>UEFI/Legacy, Secure Boot, TPM 2.0, modo do controlador de armazenamento e ordem de boot</strong>. Mude uma coisa por vez, salve, reinicie e valide. Se surgir pedido de chave BitLocker, disco desaparecer, Windows parar de iniciar ou você não souber por que uma opção precisa mudar, pare e volte ao último estado conhecido.</p>
-        <h2>1. BIOS e UEFI não são sinônimos perfeitos</h2>
-        <p>BIOS é o nome histórico do firmware de PCs; UEFI é a arquitetura moderna usada pela maioria dos equipamentos atuais. Na prática, fabricantes ainda chamam a tela de configuração de “BIOS Setup”, mesmo quando o equipamento usa UEFI. Para diagnóstico, o que importa é identificar o modo de inicialização e não presumir pela aparência da tela.</p>
-        <p>No Windows, você pode começar pelo <strong>Informações do Sistema</strong> e pela documentação do fabricante. Se precisar entrar no firmware sem adivinhar teclas, o próprio Windows oferece o caminho <strong>Configurações → Sistema → Recuperação → Inicialização avançada → Solução de problemas → Opções avançadas → Configurações de Firmware UEFI</strong> quando o equipamento expõe essa opção.</p>
-        <p>Veja também <Link to="/blog/boot-uefi-ou-legacy-como-identificar" className="text-accent">como identificar UEFI ou Legacy</Link> e o glossário de <Link to="/glossario/uefi" className="text-accent">UEFI</Link>.</p>
-        <h2>2. Faça um baseline antes de tocar</h2>
+        <p className="lead">A BIOS/UEFI é o primeiro software que roda quando o computador liga. <strong>Configurações incorretas causam desde lentidão até impossibilidade de dar boot.</strong> Este guia cobre as configurações essenciais que todo técnico precisa conhecer.</p>
+
+        <h2>BIOS vs UEFI: Qual a Diferença?</h2>
         <ul>
-          <li>Fotografe as telas que pretende alterar.</li>
-          <li>Anote modelo da placa-mãe ou notebook e a versão atual do firmware.</li>
-          <li>Confirme se o Windows inicia normalmente antes da intervenção.</li>
-          <li>Verifique se o disco do sistema usa BitLocker ou criptografia do dispositivo e localize a chave de recuperação.</li>
-          <li>Se a máquina usa RAID, Intel RST, VMD, Optane ou configuração corporativa, documente isso antes de alterar armazenamento.</li>
-          <li>Em equipamento de empresa, confirme se há política de TI para Secure Boot, TPM e atualização de firmware.</li>
+          <li><strong>BIOS (Basic Input/Output System):</strong> Interface legada, texto em tela azul, suporta discos MBR até 2TB, boot lento</li>
+          <li><strong>UEFI (Unified Extensible Firmware Interface):</strong> Interface gráfica moderna, suporta discos GPT maiores que 2TB, Secure Boot, boot rápido. Todo PC fabricado após 2012 usa UEFI</li>
         </ul>
-        <h2>3. Secure Boot: segurança de inicialização, não “modo de desempenho”</h2>
-        <p>Secure Boot ajuda a impedir que software não confiável seja carregado no processo de inicialização. No Windows 11, o equipamento precisa ser compatível com Secure Boot em modo UEFI; a Microsoft recomenda mantê-lo habilitado quando não existe uma necessidade técnica legítima de desativação temporária.</p>
-        <p>Não desative Secure Boot só porque um tutorial mandou. Antes, identifique o erro que você está tentando resolver. Mudanças entre Legacy/CSM e UEFI podem alterar a forma como o disco de sistema é inicializado e não devem ser feitas como tentativa aleatória.</p>
-        <h2>4. TPM 2.0: confirme antes de habilitar ou limpar</h2>
-        <p>TPM 2.0 é requisito do Windows 11 e participa de recursos de segurança como Windows Hello e BitLocker. Dependendo do fabricante, a opção pode aparecer como TPM, Security Device, Intel PTT, AMD fTPM ou outro rótulo semelhante.</p>
-        <p><strong>Habilitar</strong> um TPM disponível é diferente de <strong>limpar</strong> o TPM. Não use opções como Clear TPM por impulso: elas podem invalidar chaves protegidas pelo módulo e exigir recuperação. Para entender a função, veja o glossário de <Link to="/glossario/tpm" className="text-accent">TPM</Link> e de <Link to="/glossario/bitlocker" className="text-accent">BitLocker</Link>.</p>
-        <h2>5. Ordem de boot: mude o destino, não o modo inteiro</h2>
-        <p>Se o objetivo é iniciar por um pendrive de instalação ou diagnóstico, normalmente basta usar o menu de boot temporário ou ajustar a prioridade do dispositivo. Isso é diferente de trocar UEFI por Legacy/CSM. Depois do teste, confirme que o Windows Boot Manager ou o disco correto voltou a ser a primeira opção.</p>
-        <p>O passo a passo específico está em <Link to="/blog/ordem-de-boot-na-bios-como-configurar" className="text-accent">ordem de boot na BIOS/UEFI</Link>.</p>
-        <h2>6. AHCI, RAID, VMD e RST: não troque por regra de internet</h2>
-        <p>O modo de armazenamento precisa ser compatível com a instalação atual e com o controlador do equipamento. Trocar AHCI, RAID, VMD ou RST depois que o sistema foi instalado pode fazer o Windows perder acesso ao volume de inicialização. Não existe uma regra segura de “sempre use AHCI”.</p>
-        <p>Se um SSD “sumiu”, confirme primeiro se ele aparece no firmware, no controlador correto e na documentação do modelo. Para falhas de detecção, use o guia <Link to="/blog/ssd-nvme-nao-aparece-no-gerenciador-de-discos" className="text-accent">SSD/NVMe não aparece no Windows</Link>.</p>
-        <h2>7. XMP/EXPO e memória: perfil anunciado não é garantia de estabilidade</h2>
-        <p>Perfis de memória como XMP ou EXPO aplicam parâmetros definidos para o kit e a plataforma. Eles podem melhorar a operação em relação ao perfil básico, mas a estabilidade depende de processador, placa-mãe, BIOS e combinação dos módulos. Se o objetivo é diagnosticar travamentos, reinícios ou erros de memória, o primeiro passo é testar uma configuração conhecida e estável — não aumentar frequência.</p>
-        <p>Após qualquer mudança, valide com uso real e, quando necessário, teste de memória. Consulte <Link to="/blog/testar-memoria-ram-memtest86" className="text-accent">como testar memória RAM</Link>.</p>
-        <h2>8. Atualização de BIOS/UEFI: só com motivo e procedimento do fabricante</h2>
-        <p>Atualização de firmware pode corrigir compatibilidade, segurança ou suporte a hardware, mas não deve ser tratada como “otimização automática”. Use exclusivamente o arquivo e o método do fabricante para o modelo exato, mantenha alimentação estável e leia as notas da versão.</p>
-        <p>Antes de atualizar, confirme a chave de recuperação do BitLocker e qualquer requisito específico do fabricante. Uma interrupção ou imagem incompatível pode deixar a placa sem inicialização.</p>
-        <h2>Quando parar imediatamente</h2>
+
+        <h2>Como Acessar a BIOS/UEFI</h2>
+        <p>Pressione a tecla correta durante a inicialização (antes do logo do Windows):</p>
         <ul>
-          <li>O firmware ou a recuperação do Windows pede uma chave BitLocker que você não possui.</li>
-          <li>O disco do sistema deixou de aparecer depois de alterar AHCI/RAID/VMD/RST.</li>
-          <li>O equipamento é corporativo e você não sabe se Secure Boot/TPM são gerenciados.</li>
-          <li>Você está prestes a usar Clear TPM, Secure Erase, apagar chaves ou atualizar firmware sem backup e sem documentação.</li>
-          <li>Depois de uma alteração o PC entra em loop, não dá vídeo ou não encontra o Windows.</li>
+          <li><strong>Del / Delete:</strong> Maioria das placas desktop (ASUS, Gigabyte, MSI, ASRock)</li>
+          <li><strong>F2:</strong> Notebooks (Dell, Acer, Lenovo, ASUS)</li>
+          <li><strong>F10:</strong> HP</li>
+          <li><strong>F1:</strong> Lenovo ThinkPad</li>
+          <li><strong>ESC:</strong> Menu de boot em muitos fabricantes</li>
         </ul>
-        <h2>O que não fazer</h2>
+
+        <h2>Configurações Essenciais</h2>
+
+        <h3>1. Boot Order (Ordem de Boot)</h3>
+        <p>Define qual dispositivo o PC tenta iniciar primeiro:</p>
         <ul>
-          <li>Não copie valores de tensão, clock ou timings de outro computador.</li>
-          <li>Não altere várias opções ao mesmo tempo: você perde a capacidade de identificar a causa.</li>
-          <li>Não trate “Load Defaults” como solução neutra em máquina com RAID, BitLocker ou configuração especial.</li>
-          <li>Não desative Secure Boot, TPM ou recursos de segurança só para “fazer funcionar” sem entender a dependência.</li>
-          <li>Não atualize firmware durante instabilidade elétrica ou com arquivo de outro modelo.</li>
+          <li><strong>Para uso normal:</strong> 1º SSD/HD → 2º USB (para emergências)</li>
+          <li><strong>Para instalação do Windows:</strong> 1º USB → 2º SSD</li>
+          <li><strong>Após instalação:</strong> Voltar para 1º SSD</li>
         </ul>
-        <h2>Checklist de validação</h2>
+
+        <h3>2. AHCI vs IDE (Modo SATA)</h3>
+        <p><strong>Sempre use AHCI</strong> para SSDs e HDs modernos. O modo IDE é para compatibilidade com sistemas antigos. Trocar após instalar o Windows causa tela azul — configure antes da formatação.</p>
+
+        <h3>3. XMP / DOCP (Perfil de Memória)</h3>
+        <p>A RAM DDR4/DDR5 roda na velocidade base (2133 MHz para DDR4) até que você ative o perfil XMP/DOCP. Se comprou RAM de 3200 MHz e ela roda a 2133 MHz, <strong>ative o XMP na BIOS</strong>.</p>
+
+        <h3>4. Secure Boot</h3>
         <ul>
-          <li>Windows Boot Manager continua visível e o sistema inicia.</li>
-          <li>SSD/HD aparecem com a mesma topologia esperada.</li>
-          <li>Secure Boot e TPM estão no estado planejado, sem alertas inesperados.</li>
-          <li>BitLocker não entrou em recuperação sem que a chave esteja disponível.</li>
-          <li>Data/hora, rede, USB e periféricos essenciais continuam funcionando.</li>
-          <li>Se houve alteração de memória, a máquina passou por teste de estabilidade.</li>
+          <li><strong>Ativado:</strong> Necessário para Windows 11 e impede boot de sistemas não assinados</li>
+          <li><strong>Desativado:</strong> Necessário para instalar Linux em algumas configurações ou dar boot por pendrives não UEFI</li>
         </ul>
-        <h2>Decisão: qual ajuste realmente faz sentido?</h2>
-        <p>Se o problema é apenas escolher um dispositivo de inicialização, mexa na ordem de boot. Se é requisito do Windows 11, trate UEFI, Secure Boot e TPM separadamente. Se o disco não aparece, diagnostique controlador e armazenamento antes de trocar o modo. Se o problema é instabilidade, volte ao baseline antes de ativar perfis de desempenho.</p>
-        <h2>Perguntas frequentes</h2>
-        <h3>Preciso ativar Secure Boot para usar Windows 11?</h3>
-        <p>O Windows 11 exige que o computador seja compatível com Secure Boot em UEFI; manter o recurso habilitado melhora a proteção de inicialização e é a recomendação geral da Microsoft.</p>
-        <h3>Ativar TPM apaga meus arquivos?</h3>
-        <p>Habilitar um TPM disponível não é o mesmo que limpá-lo. O risco maior está em operações de limpeza/redefinição de chaves e em mudanças que acionem recuperação de criptografia. Tenha a chave BitLocker antes de intervenções.</p>
-        <h3>Posso ativar XMP/EXPO em qualquer PC?</h3>
-        <p>Não como regra universal. Compatibilidade e estabilidade dependem do conjunto CPU, placa-mãe, firmware e módulos. Em diagnóstico, priorize um baseline estável.</p>
-        <h3>BIOS desatualizada deixa o PC lento?</h3>
-        <p>Não é um diagnóstico suficiente. Atualize firmware quando houver correção, requisito ou suporte relevante documentado pelo fabricante — não como ritual de limpeza.</p>
-        <h2>Glossário rápido</h2>
-        <dl>
-          <dt>UEFI</dt><dd>Interface de firmware moderna responsável por inicializar o hardware e entregar o controle ao sistema operacional.</dd>
-          <dt>Secure Boot</dt><dd>Mecanismo que verifica componentes confiáveis durante a inicialização.</dd>
-          <dt>TPM</dt><dd>Módulo ou implementação de firmware usada para proteger chaves e recursos de segurança.</dd>
-          <dt>CSM/Legacy</dt><dd>Modo de compatibilidade com formas antigas de inicialização.</dd>
-          <dt>BitLocker</dt><dd>Criptografia de volume do Windows que pode exigir chave de recuperação após mudanças relevantes.</dd>
-        </dl>
-        <p>Para organizar o diagnóstico como um técnico de informática — firmware, armazenamento, Windows e segurança — siga o <Link to="/guia-tecnico-informatica#tema-sistemas-operacionais" className="text-accent">Atlas de sistemas operacionais</Link>.</p>
-        <EditorialReferences slug="como-configurar-bios-uefi-corretamente" />
+
+        <h3>5. CSM (Compatibility Support Module)</h3>
+        <ul>
+          <li><strong>Desativado:</strong> Para Windows 11 e sistemas UEFI puros (recomendado)</li>
+          <li><strong>Ativado:</strong> Para compatibilidade com sistemas legados e hardware antigo</li>
+        </ul>
+
+        <h3>6. TPM 2.0</h3>
+        <p><strong>Obrigatório para Windows 11.</strong> Em processadores AMD, ative "fTPM" na BIOS. Em Intel, ative "Intel PTT". Geralmente está na seção Security ou Advanced.</p>
+
+        <h3>7. Virtualização (VT-x / AMD-V)</h3>
+        <p>Ative se usar máquinas virtuais (VirtualBox, VMware, WSL2, Docker). Geralmente em Advanced → CPU Configuration.</p>
+
+        <h3>8. Fan Control (Controle de Ventiladores)</h3>
+        <p>Configure as curvas de ventoinha para equilíbrio entre silêncio e refrigeração. Perfis comuns: Silent (silencioso), Standard (equilibrado), Performance (máxima refrigeração).</p>
+
+        <h2>Configurações Para Evitar Problemas</h2>
+        <ul>
+          <li>✅ Sempre salve e anote as alterações feitas</li>
+          <li>✅ Use "Load Optimized Defaults" se algo der errado</li>
+          <li>✅ Atualize a BIOS apenas quando necessário (e nunca durante queda de energia)</li>
+          <li>❌ Nunca altere voltagens sem conhecimento (pode queimar componentes)</li>
+          <li>❌ Nunca desative o Secure Boot sem motivo</li>
+        </ul>
+
+        <div className="bg-accent/10 rounded-xl p-6 my-8">
+          <h3 className="text-accent font-bold mb-2">PC Não Está Dando Boot?</h3>
+          <p className="text-muted-foreground mb-0">Configurações incorretas na BIOS causam vários problemas. Nosso técnico resolve no local em Curitiba e região.</p>
+        </div>
+
+        <p><strong>Leia também:</strong></p>
+        <ul>
+          <li><Link to="/blog/como-diagnosticar-placa-mae-defeituosa" className="text-accent">Como diagnosticar placa-mãe defeituosa</Link></li>
+          <li><Link to="/blog/como-montar-pc-do-zero-guia-completo" className="text-accent">Como montar um PC do zero</Link></li>
+          <li><Link to="/servicos/computador-nao-liga" className="text-accent">Computador não liga: causas e soluções</Link></li>
+        </ul>
       </>
     ),
   },
@@ -5223,112 +5175,89 @@ docker run -d --name db --network minha-rede postgres
   },
 
   "como-configurar-servidor-de-arquivos": {
-    title: "Servidor de arquivos: como planejar SMB no Windows ou Samba sem expor dados",
-    excerpt: "Guia técnico para decidir arquitetura, usuários, grupos, permissões, compartilhamentos SMB, Samba, firewall, backup e restauração sem senha em script nem acesso convidado por padrão.",
-    date: "2026-09-25",
-    readTime: "17 min",
-    category: "Redes e Infraestrutura",
+    title: "Como Configurar Servidor de Arquivos em Rede Local (Windows e Linux)",
+    excerpt: "Procedimento técnico completo para montar um file server com permissões, mapeamento e backup.",
+    date: "2026-04-13",
+    readTime: "14 min",
+    category: "Procedimentos Técnicos",
     content: (
       <>
-        <p className="lead">Um servidor de arquivos não é apenas “uma pasta compartilhada”. Ele centraliza dados que várias pessoas podem ler, alterar e apagar; por isso, identidade, permissões, rede, backup e restauração precisam ser planejados juntos. Este guia cobre Windows e Samba em Linux sem presumir que toda empresa precisa do mesmo desenho.</p>
-        <h2>Resposta direta</h2>
-        <p>Para uma rede pequena, comece por cinco decisões: <strong>quem usa, quais dados existem, quem pode ler/escrever, onde o compartilhamento ficará e como ele será restaurado</strong>. Use contas individuais e grupos, evite acesso convidado, não coloque senha dentro de comandos ou scripts, não exponha SMB diretamente à internet e mantenha uma cópia de backup que possa ser restaurada sem depender do próprio servidor.</p>
-        <h2>1. Quando um servidor de arquivos faz sentido?</h2>
+        <p className="lead">Um servidor de arquivos centraliza o armazenamento e o compartilhamento de documentos em uma rede local, eliminando pen drives e pastas duplicadas. Neste guia, mostramos como configurar um file server tanto no <strong>Windows</strong> quanto no <strong>Linux</strong>, com permissões, mapeamento automático e rotina de backup.</p>
+
+        <h2>Quando Vale a Pena Ter um Servidor de Arquivos</h2>
         <ul>
-          <li>Várias pessoas trabalham nos mesmos documentos e precisam de uma origem comum.</li>
-          <li>É necessário separar acesso por equipe, função ou projeto.</li>
-          <li>Arquivos precisam de rotina centralizada de backup, retenção ou auditoria.</li>
-          <li>O volume de dados, a rede local ou requisitos de controle tornam a nuvem isoladamente insuficiente.</li>
+          <li>Escritórios com 3+ computadores que precisam compartilhar documentos</li>
+          <li>Empresas que precisam de controle de acesso por usuário/departamento</li>
+          <li>Ambientes que exigem backup centralizado e versionamento</li>
+          <li>Substituição de soluções em nuvem por questões de privacidade ou velocidade</li>
         </ul>
-        <p>Se duas pessoas apenas trocam alguns arquivos, uma solução de nuvem bem administrada pode ser mais simples. Se o trabalho depende de disponibilidade local, permissões detalhadas e grande volume, um servidor ou NAS ganha sentido. A decisão vem da operação, não da vontade de “ter servidor”.</p>
-        <h2>2. Modele usuários e grupos antes das pastas</h2>
-        <p>Evite conceder acesso pessoa por pessoa em dezenas de diretórios. Crie grupos que representem funções — por exemplo, Financeiro-Leitura, Financeiro-Edicao e Gestores — e associe usuários a esses grupos. Isso torna entrada, mudança de função e desligamento de pessoas auditáveis.</p>
+
+        <h2>Opção 1: Windows — Compartilhamento com Permissões</h2>
+
+        <h3>Passo 1: Preparar o Computador Servidor</h3>
         <ul>
-          <li>Uma pessoa, uma conta: não compartilhe usuário genérico entre funcionários.</li>
-          <li>Conceda somente o acesso necessário para a função.</li>
-          <li>Separe leitura de alteração quando o processo permitir.</li>
-          <li>Documente quem aprova acesso a cada conjunto de dados.</li>
+          <li>Use Windows 10/11 Pro ou Windows Server (o Home tem limitação de 20 conexões)</li>
+          <li>Defina IP fixo: <code>Configurações → Rede → Ethernet → Editar → Manual → IPv4</code></li>
+          <li>Exemplo: IP <code>192.168.1.100</code>, Máscara <code>255.255.255.0</code>, Gateway <code>192.168.1.1</code></li>
         </ul>
-        <h2>3. Windows: SMB existe também no Windows cliente, mas recursos variam</h2>
-        <p>Windows 10/11 e Windows Server incluem componentes cliente e servidor SMB. Isso significa que um Windows 11 pode hospedar um compartilhamento, mas recursos, escala e administração disponíveis variam entre edições e versões. Não escolha a plataforma com base em um número fixo copiado de um tutorial: dimensione pela quantidade de usuários, necessidade de domínio, auditoria, disponibilidade e política da empresa.</p>
-        <p>No Windows, configure a pasta, o compartilhamento e as permissões de sistema de arquivos de forma coerente. Teste com uma conta comum — não apenas com administrador — para verificar o acesso efetivo.</p>
-        <h2>4. Use nome do servidor e identidade, não senha gravada em comando</h2>
-        <p>Um caminho SMB normalmente é acessado como <code>\\servidor\compartilhamento</code>. Em ambientes com Active Directory e Kerberos, usar o nome correto do servidor é importante para a autenticação; conectar por IP pode mudar o mecanismo disponível. Evite exemplos do tipo “mapear unidade com usuário e senha em texto aberto”, porque eles transformam uma credencial em arquivo, histórico ou log.</p>
-        <p>Para mapeamento gerenciado, prefira mecanismos de política, credenciais protegidas e autenticação da própria sessão do usuário.</p>
-        <h2>5. Segurança SMB: não exponha a porta 445 à internet</h2>
-        <p>O SMB foi feito para compartilhamento em redes controladas. A orientação de segurança da Microsoft é bloquear SMB direto na borda da internet e usar segmentação/isolamento. Para acesso remoto, use uma arquitetura própria para isso — por exemplo, VPN corporativa ou recursos suportados de SMB sobre QUIC quando o ambiente atender aos requisitos.</p>
-        <p>Em versões recentes, recursos como assinatura SMB e criptografia foram fortalecidos. Não “desligue segurança para compatibilidade” sem entender qual cliente antigo está forçando a mudança e qual risco foi introduzido.</p>
-        <h2>6. Samba no Linux: exemplo mínimo com autenticação</h2>
-        <p>O Samba implementa SMB em Linux. Um compartilhamento de trabalho deve apontar para um caminho controlado, permitir somente os usuários ou grupos necessários e manter <code>guest ok = no</code> quando o objetivo é conteúdo autenticado. Na documentação do Samba, <code>guest ok = yes</code> significa que não é necessária senha para acessar aquele serviço.</p>
-        <p>Exemplo conceitual de um compartilhamento autenticado:</p>
-        <pre><code>{"[Financeiro]\n  path = /srv/samba/financeiro\n  read only = no\n  valid users = @financeiro\n  guest ok = no\n  create mask = 0660\n  directory mask = 0770"}</code></pre>
-        <p>Crie usuários e grupos de acordo com a política real, configure a senha Samba pelo mecanismo administrativo e valide o arquivo com a ferramenta de teste da sua distribuição antes de reiniciar o serviço. Não copie caminhos, donos ou modos sem entender a estrutura local.</p>
-        <h2>7. Firewall: permita o compartilhamento só de onde ele precisa ser usado</h2>
-        <p>Num servidor Linux com UFW, você pode usar o perfil de aplicação Samba e restringir a origem à sub-rede de trabalho, em vez de liberar o serviço para qualquer origem. No Windows, use as regras do Defender Firewall de acordo com o perfil e o escopo da rede.</p>
-        <p>Se o servidor tem mais de uma interface, VLAN ou rede de administração, confirme em qual segmento o SMB deve escutar e quem pode iniciar conexões. Para arquitetura de rede, veja <Link to="/blog/como-proteger-rede-wifi-empresa" className="text-accent">proteção e segmentação da rede empresarial</Link>.</p>
-        <h2>8. Compartilhamento não substitui backup</h2>
-        <p>Centralizar arquivos melhora organização, mas também cria um ponto de impacto: exclusão acidental, ransomware, falha do armazenamento ou erro administrativo pode atingir muitos dados de uma vez. RAID melhora disponibilidade diante de algumas falhas de disco; <strong>RAID não é backup</strong>.</p>
+
+        <h3>Passo 2: Criar a Estrutura de Pastas</h3>
+        <pre><code>{"D:\\SERVIDOR\\\n├── Financeiro\\\n├── Comercial\\\n├── RH\\\n├── TI\\\n└── Público\\"}</code></pre>
+
+        <h3>Passo 3: Criar Usuários e Grupos</h3>
+        <ol>
+          <li>Abra <code>lusrmgr.msc</code> (Gerenciamento de Usuários Locais)</li>
+          <li>Crie usuários: <code>joao.silva</code>, <code>maria.rh</code>, etc.</li>
+          <li>Crie grupos: <code>GRP_Financeiro</code>, <code>GRP_Comercial</code>, <code>GRP_RH</code></li>
+          <li>Adicione cada usuário ao grupo correspondente</li>
+        </ol>
+
+        <h3>Passo 4: Compartilhar e Definir Permissões</h3>
+        <ol>
+          <li>Clique com botão direito na pasta → Propriedades → Compartilhamento Avançado</li>
+          <li>Marque "Compartilhar esta pasta"</li>
+          <li>Em Permissões: remova "Todos", adicione o grupo com Controle Total</li>
+          <li>Na aba Segurança (NTFS): configure permissões granulares</li>
+        </ol>
+
+        <div className="bg-amber-50 dark:bg-amber-950/30 border border-amber-200 dark:border-amber-800 rounded-xl p-4 my-6">
+          <p className="text-sm"><strong>⚠️ Regra de ouro:</strong> As permissões de Compartilhamento e NTFS são cumulativas — a mais restritiva prevalece. Configure ambas corretamente.</p>
+        </div>
+
+        <h3>Passo 5: Mapear nos Clientes</h3>
+        <pre><code>{"net use S: \\\\192.168.1.100\\Financeiro /user:joao.silva Senha123! /persistent:yes"}</code></pre>
+
+        <h2>Opção 2: Linux — Samba File Server</h2>
+
+        <h3>Instalação do Samba</h3>
+        <pre><code>{"sudo apt update\nsudo apt install samba samba-common-bin -y"}</code></pre>
+
+        <h3>Criar Estrutura e Usuários</h3>
+        <pre><code>{"sudo mkdir -p /srv/samba/financeiro\nsudo mkdir -p /srv/samba/publico\nsudo groupadd grp_financeiro\nsudo useradd -M -s /usr/sbin/nologin joao\nsudo smbpasswd -a joao\nsudo chown -R root:grp_financeiro /srv/samba/financeiro\nsudo chmod -R 2770 /srv/samba/financeiro"}</code></pre>
+
+        <h3>Configurar smb.conf</h3>
+        <pre><code>{"[Financeiro]\n   path = /srv/samba/financeiro\n   browseable = yes\n   read only = no\n   valid users = @grp_financeiro\n   create mask = 0660\n\n[Publico]\n   path = /srv/samba/publico\n   browseable = yes\n   read only = no\n   guest ok = yes"}</code></pre>
+
+        <h2>Opção 3: NAS Dedicado</h2>
         <ul>
-          <li>Mantenha pelo menos uma cópia independente do servidor.</li>
-          <li>Defina retenção/versionamento conforme o tipo de dado.</li>
-          <li>Proteja credenciais e destino de backup contra a mesma conta que usa o compartilhamento.</li>
-          <li>Teste restauração de uma pasta e de arquivos individuais.</li>
+          <li><strong>Synology DS224+</strong> — ideal para até 20 usuários, interface web intuitiva</li>
+          <li><strong>QNAP TS-264</strong> — com saída HDMI e virtualização</li>
+          <li>Configure RAID 1 (espelhamento) para proteção contra falha de disco</li>
+          <li>Habilite snapshots automáticos para versionamento</li>
         </ul>
-        <p>Use o guia <Link to="/blog/como-testar-restauracao-de-backup" className="text-accent">como testar restauração de backup</Link> antes de considerar a rotina concluída.</p>
-        <h2>9. NAS, Windows Server ou Samba: como decidir</h2>
+
+        <h2>Backup do Servidor</h2>
+        <pre><code>{"# Windows (Robocopy)\nrobocopy D:\\SERVIDOR\\ E:\\BACKUP\\ /MIR /LOG:C:\\Logs\\backup.log\n\n# Linux (rsync + cron)\n0 23 * * * rsync -avz --delete /srv/samba/ /mnt/backup/"}</code></pre>
+
+        <h2>Checklist Final</h2>
         <ul>
-          <li><strong>NAS:</strong> costuma simplificar administração de armazenamento e snapshots em ambientes pequenos, desde que o modelo e suporte atendam à necessidade.</li>
-          <li><strong>Windows Server:</strong> faz sentido quando integração com identidade Microsoft, políticas, recursos de servidor e administração centralizada são parte do desenho.</li>
-          <li><strong>Samba/Linux:</strong> oferece flexibilidade e integração SMB, mas exige operação disciplinada do sistema, permissões, atualizações e backup.</li>
+          <li>✅ IP fixo configurado no servidor</li>
+          <li>✅ Pastas com estrutura departamental</li>
+          <li>✅ Usuários e grupos com permissões NTFS + compartilhamento</li>
+          <li>✅ Mapeamento automático nos clientes</li>
+          <li>✅ Backup agendado (local + off-site)</li>
+          <li>✅ Firewall configurado e antivírus ativo</li>
         </ul>
-        <p>Nenhuma opção elimina a necessidade de inventário, usuários, grupos, backup e monitoração.</p>
-        <h2>10. Checklist de implantação</h2>
-        <ul>
-          <li>Inventário de dados e responsáveis definido.</li>
-          <li>Usuários individuais e grupos criados.</li>
-          <li>Compartilhamentos com menor privilégio e sem convidado por padrão.</li>
-          <li>Nome do servidor, DNS e endereço estável planejados.</li>
-          <li>SMB restrito à rede necessária; porta 445 não exposta à internet.</li>
-          <li>Logs e eventos relevantes habilitados para diagnóstico.</li>
-          <li>Backup independente executado e restauração testada.</li>
-          <li>Procedimento de entrada/saída de usuários documentado.</li>
-        </ul>
-        <h2>Quando parar e revisar o projeto</h2>
-        <ul>
-          <li>Você precisa habilitar acesso convidado para “fazer funcionar”.</li>
-          <li>O compartilhamento só funciona quando o firewall é desligado por inteiro.</li>
-          <li>Usuários precisam usar a mesma conta administrativa.</li>
-          <li>O único backup está no mesmo servidor ou no mesmo volume.</li>
-          <li>O acesso remoto depende de publicar SMB diretamente na internet.</li>
-          <li>Você não consegue explicar quem pode apagar, restaurar ou conceder acesso.</li>
-        </ul>
-        <h2>O que não fazer</h2>
-        <ul>
-          <li>Não grave senhas em <code>net use</code>, scripts ou documentação operacional.</li>
-          <li>Não habilite <code>guest ok = yes</code> por padrão em dados de trabalho.</li>
-          <li>Não use “Everyone/Controle Total” como substituto de um modelo de grupos.</li>
-          <li>Não trate RAID, snapshot e backup como se fossem a mesma coisa.</li>
-          <li>Não abra TCP 445 para a internet para facilitar acesso remoto.</li>
-        </ul>
-        <h2>Perguntas frequentes</h2>
-        <h3>Windows 11 pode compartilhar arquivos como servidor?</h3>
-        <p>Sim, o Windows cliente inclui o componente servidor SMB, mas recursos e limites variam. Para ambiente empresarial, escolha a plataforma pela necessidade de identidade, administração, disponibilidade e suporte.</p>
-        <h3>Samba precisa de acesso convidado?</h3>
-        <p>Não. Para dados autenticados, mantenha acesso convidado desabilitado e use usuários/grupos. A documentação do Samba define <code>guest ok = yes</code> como acesso sem senha.</p>
-        <h3>Mapear unidade por IP é errado?</h3>
-        <p>Não é sempre “errado”, mas em ambientes de domínio pode impedir o uso esperado de Kerberos. Prefira nome/DNS consistente quando a arquitetura depende de autenticação integrada.</p>
-        <h3>Posso acessar meu servidor de arquivos de fora da empresa?</h3>
-        <p>Sim, mas não expondo SMB cru à internet. Use uma camada de acesso remoto adequada, com autenticação e criptografia planejadas.</p>
-        <h2>Glossário rápido</h2>
-        <dl>
-          <dt>SMB</dt><dd>Protocolo de compartilhamento de arquivos e outros recursos usado pelo Windows e implementado pelo Samba.</dd>
-          <dt>Share</dt><dd>Recurso publicado na rede, como uma pasta compartilhada.</dd>
-          <dt>ACL</dt><dd>Lista de controle de acesso que define permissões para identidades.</dd>
-          <dt>Samba</dt><dd>Implementação livre de protocolos SMB para sistemas Unix/Linux.</dd>
-          <dt>Kerberos</dt><dd>Protocolo de autenticação usado em ambientes de domínio para validar identidades e serviços.</dd>
-        </dl>
-        <p>Para ligar identidade, rede, backup e suporte à operação, siga o <Link to="/guia-tecnico-informatica#tema-informatica-empresas" className="text-accent">Atlas de informática para empresas</Link>.</p>
-        <EditorialReferences slug="como-configurar-servidor-de-arquivos" />
       </>
     ),
   },
@@ -5432,77 +5361,97 @@ docker run -d --name db --network minha-rede postgres
   },
 
   "como-configurar-vpn-empresarial": {
-    title: "VPN empresarial: como planejar acesso remoto seguro sem expor a rede",
-    excerpt:
-      "Arquitetura e checklist para VPN de acesso remoto: identidade, MFA, rotas, segmentação, WireGuard/OpenVPN, logs, revogação e teste de recuperação.",
-    date: "2026-09-25",
-    readTime: "12 min",
-    category: "Redes e Infraestrutura",
+    title: "Como Configurar VPN Empresarial: Acesso Remoto Seguro",
+    excerpt: "Procedimento técnico para implementar VPN com WireGuard, OpenVPN e Windows Server.",
+    date: "2026-04-13",
+    readTime: "13 min",
+    category: "Procedimentos Técnicos",
     content: (
       <>
-        <p className="lead">Uma VPN empresarial não é apenas “abrir uma porta e gerar um arquivo de cliente”. Ela cria um novo caminho para dentro da rede, então precisa nascer com identidade, escopo, revogação e monitoramento definidos. A decisão principal é quais recursos o usuário remoto precisa alcançar — e quais não deve alcançar — antes de escolher WireGuard, OpenVPN, IKEv2 ou outra implementação suportada pela infraestrutura.</p>
+        <p className="lead">Uma VPN permite que colaboradores acessem a rede interna da empresa de forma segura pela internet. Essencial para home office, filiais e acesso remoto a servidores. Mostramos 3 abordagens: <strong>WireGuard</strong>, <strong>OpenVPN</strong> e <strong>Windows Server RRAS</strong>.</p>
 
-        <h2>Resposta curta</h2>
-        <p>Mapeie usuários e recursos, escolha uma solução mantida e compatível com seu firewall/sistema, use credenciais ou chaves individuais, aplique MFA quando a plataforma permitir, limite rotas ao necessário, não exponha painéis administrativos diretamente à internet e documente revogação. Teste a conexão a partir de uma rede externa e mantenha um caminho local de recuperação antes de alterar firewall ou rotas.</p>
-
-        <h2>1. Defina o caso de uso</h2>
-        <table>
-          <thead><tr><th>Cenário</th><th>O que precisa ser decidido</th></tr></thead>
-          <tbody>
-            <tr><td>Home office</td><td>Quais sistemas internos cada perfil pode alcançar</td></tr>
-            <tr><td>Filial ↔ matriz</td><td>Sub-redes, rotas, redundância e quem inicia o túnel</td></tr>
-            <tr><td>Administração técnica</td><td>Rede de gestão separada e autenticação forte</td></tr>
-            <tr><td>Acesso de fornecedor</td><td>Prazo, escopo mínimo e revogação automática/manual</td></tr>
-          </tbody>
-        </table>
-        <p>Evite conceder “a rede inteira” só porque é mais fácil. O acesso remoto deve seguir privilégio mínimo: cada perfil alcança os recursos necessários ao trabalho.</p>
-
-        <h2>2. Escolha tecnologia pela operação, não por ranking</h2>
-        <p>WireGuard mantém uma interface pequena e usa pares de chaves; a documentação oficial mostra a configuração por interfaces, peers, chaves, endpoints e AllowedIPs. OpenVPN oferece ampla flexibilidade e documentação própria para roteamento, certificados e hardening. Equipamentos de firewall também podem oferecer IKEv2/IPsec ou VPN gerenciada.</p>
-        <p>A melhor opção é a que sua equipe consegue atualizar, monitorar, revogar e restaurar. Uma tecnologia tecnicamente boa, mas abandonada sem responsável, vira risco operacional.</p>
-
-        <h2>3. Identidade individual e MFA</h2>
-        <p>Nunca distribua uma única credencial ou perfil para toda a equipe. Chave/certificado/conta deve identificar um usuário ou dispositivo para que a saída de uma pessoa não exija recriar toda a VPN. Para soluções que suportam autenticação interativa, adicione MFA e prefira métodos resistentes a phishing quando disponíveis.</p>
-        <p>Registre quem aprovou o acesso, quais recursos foram liberados e a data de revisão. A rotina de autenticação está detalhada em <Link to="/blog/como-configurar-2fa-em-tudo" className="text-accent">como configurar 2FA/MFA com segurança</Link>.</p>
-
-        <h2>4. Split tunnel ou full tunnel?</h2>
-        <p><strong>Split tunnel</strong> envia pela VPN apenas os destinos corporativos definidos. <strong>Full tunnel</strong> envia todo o tráfego do cliente pelo túnel. Não existe escolha universal: full tunnel aumenta controle de saída, mas exige capacidade de banda e políticas para todo o tráfego; split tunnel reduz carga, mas deixa o dispositivo simultaneamente conectado à internet local e à rede corporativa.</p>
-        <p>Documente a decisão e teste DNS, impressão, aplicações internas e acesso à internet no cenário real. Não use rotas amplas por conveniência sem entender o impacto.</p>
-
-        <h2>5. Firewall e segmentação</h2>
-        <p>Crie regras específicas para a interface/rede da VPN. Um usuário remoto não precisa automaticamente alcançar câmeras, impressoras, administração de switches ou todos os servidores. Se o firewall possui segmentos/VLANs, trate a VPN como outra zona e permita somente os fluxos necessários.</p>
-        <p>Não exponha RDP, painel de firewall ou servidor de arquivos diretamente à internet apenas para “facilitar” o acesso. A VPN existe justamente para reduzir essa exposição.</p>
-
-        <h2>6. DNS e nomes internos</h2>
-        <p>Se os usuários acessam recursos por nome — especialmente em ambiente Active Directory — a VPN precisa entregar resolução DNS coerente. Evite mandar clientes para DNS público quando o recurso só existe na zona interna. Valide nome e IP separadamente para distinguir falha de rota de falha de resolução.</p>
-
-        <h2>7. Logs, atualização e revogação</h2>
+        <h2>Quando Sua Empresa Precisa de VPN</h2>
         <ul>
-          <li>Registre conexões suficientes para suporte e investigação, respeitando política de privacidade.</li>
-          <li>Mantenha servidor/appliance e clientes em versões suportadas.</li>
-          <li>Revogue acesso de colaborador/fornecedor imediatamente quando terminar a necessidade.</li>
-          <li>Revise chaves, certificados e contas antigas periodicamente.</li>
-          <li>Faça backup da configuração do gateway antes de mudanças relevantes.</li>
+          <li>Home office com acesso a arquivos do servidor</li>
+          <li>Filiais se comunicando com a matriz</li>
+          <li>Acesso remoto a ERP, câmeras CFTV ou servidores</li>
+          <li>Proteção de dados em redes Wi-Fi públicas</li>
+          <li>Conformidade com LGPD — criptografia em trânsito</li>
         </ul>
 
-        <h2>8. Teste de implantação</h2>
+        <h2>Opção 1: WireGuard (Recomendada)</h2>
+        <p>Protocolo mais moderno: rápido, leve e com criptografia state-of-the-art.</p>
+
+        <h3>Instalação no Servidor Linux</h3>
+        <pre><code>{"sudo apt update && sudo apt install wireguard -y\n\n# Gerar chaves\nwg genkey | tee /etc/wireguard/server_private.key | wg pubkey > /etc/wireguard/server_public.key\nchmod 600 /etc/wireguard/server_private.key"}</code></pre>
+
+        <h3>Configuração do Servidor (wg0.conf)</h3>
+        <pre><code>{"[Interface]\nAddress = 10.0.0.1/24\nListenPort = 51820\nPrivateKey = SERVER_PRIVATE_KEY\nPostUp = iptables -A FORWARD -i wg0 -j ACCEPT; iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE\nPostDown = iptables -D FORWARD -i wg0 -j ACCEPT; iptables -t nat -D POSTROUTING -o eth0 -j MASQUERADE\n\n[Peer]\nPublicKey = CLIENTE_PUBLIC_KEY\nAllowedIPs = 10.0.0.2/32"}</code></pre>
+
+        <h3>Ativar</h3>
+        <pre><code>{"echo 'net.ipv4.ip_forward = 1' | sudo tee -a /etc/sysctl.conf\nsudo sysctl -p\nsudo wg-quick up wg0\nsudo systemctl enable wg-quick@wg0"}</code></pre>
+
+        <h3>Configuração do Cliente</h3>
+        <pre><code>{"[Interface]\nAddress = 10.0.0.2/32\nPrivateKey = CLIENTE_PRIVATE_KEY\nDNS = 8.8.8.8\n\n[Peer]\nPublicKey = SERVER_PUBLIC_KEY\nEndpoint = IP_PUBLICO:51820\nAllowedIPs = 192.168.1.0/24, 10.0.0.0/24\nPersistentKeepalive = 25"}</code></pre>
+
+        <div className="bg-green-50 dark:bg-green-950/30 border border-green-200 dark:border-green-800 rounded-xl p-4 my-6">
+          <p className="text-sm"><strong>✅ Split Tunnel vs Full Tunnel:</strong> Use <code>AllowedIPs = 192.168.1.0/24</code> para acessar apenas a rede interna, ou <code>0.0.0.0/0</code> para rotear todo o tráfego pela VPN.</p>
+        </div>
+
+        <h2>Opção 2: OpenVPN</h2>
+        <p>Protocolo mais estabelecido — funciona em praticamente qualquer dispositivo e firewall.</p>
+
+        <h3>Instalação Rápida</h3>
+        <pre><code>{"curl -O https://raw.githubusercontent.com/angristan/openvpn-install/master/openvpn-install.sh\nchmod +x openvpn-install.sh\nsudo ./openvpn-install.sh"}</code></pre>
+        <p>O script interativo configura tudo e gera um arquivo <code>.ovpn</code> para importar no OpenVPN Connect do colaborador.</p>
+
+        <h3>Adicionar Novos Usuários</h3>
+        <pre><code>{"sudo ./openvpn-install.sh\n# Selecione 'Add a new client'\n# O .ovpn será gerado em /root/"}</code></pre>
+
+        <h2>Opção 3: Windows Server RRAS</h2>
         <ol>
-          <li>Use uma conexão externa real (outra internet/4G), não o mesmo Wi-Fi interno.</li>
-          <li>Confirme autenticação e segundo fator quando houver.</li>
-          <li>Teste somente os recursos autorizados — e confirme que recursos proibidos continuam bloqueados.</li>
-          <li>Valide DNS interno, tempo de sessão e reconexão.</li>
-          <li>Revogue um usuário de teste e prove que o acesso realmente deixa de funcionar.</li>
-          <li>Teste o procedimento de recuperação/backup do gateway.</li>
+          <li>Server Manager → Add Roles → Remote Access → RRAS</li>
+          <li>Configure SSTP ou IKEv2 (mais seguros que PPTP)</li>
+          <li>Defina pool de IPs para clientes VPN</li>
+          <li>Configure NPS para controle de acesso via Active Directory</li>
         </ol>
 
-        <h2>WireGuard: o que AllowedIPs realmente merece atenção</h2>
-        <p>Na configuração oficial do WireGuard, peers têm chaves e <code>AllowedIPs</code>, que participam tanto da escolha de rota quanto de quais endereços são associados ao peer. Isso exige planejamento: copiar uma configuração de internet sem adaptar sub-redes pode rotear tráfego demais ou criar conflito com a rede local do colaborador. Use exemplos oficiais para entender a sintaxe, mas desenhe endereçamento próprio.</p>
+        <h2>Portas e Firewall</h2>
+        <ul>
+          <li><strong>WireGuard:</strong> UDP 51820</li>
+          <li><strong>OpenVPN:</strong> UDP 1194</li>
+          <li><strong>IKEv2:</strong> UDP 500, 4500</li>
+          <li><strong>SSTP:</strong> TCP 443</li>
+        </ul>
+        <p>Configure port forwarding no roteador e libere no firewall do servidor.</p>
 
-        <h2>Quando parar</h2>
-        <p>Pare antes de alterar remotamente o único firewall da empresa se não existe acesso local de recuperação. Também não prossiga se você não sabe quais sub-redes estão em uso, se existem rotas sobrepostas ou se o servidor VPN já atende usuários em produção sem backup da configuração. Primeiro documente; depois mude uma camada por vez.</p>
+        <h2>Comparativo</h2>
+        <ul>
+          <li><strong>WireGuard:</strong> Mais rápido e simples. Ideal para PMEs sem AD</li>
+          <li><strong>OpenVPN:</strong> Mais compatível. Funciona atrás de proxies e firewalls restritivos</li>
+          <li><strong>RRAS:</strong> Integração nativa com Active Directory. Requer licença Windows Server</li>
+        </ul>
 
-        <p>Para a base da arquitetura, consulte <Link to="/blog/como-configurar-firewall-pfsense" className="text-accent">firewall pfSense</Link>, <Link to="/blog/como-proteger-rede-wifi-empresa" className="text-accent">Wi-Fi empresarial</Link> e o <Link to="/guia-tecnico-informatica#tema-redes-wifi" className="text-accent">Atlas de redes</Link>.</p>
-        <EditorialReferences slug="como-configurar-vpn-empresarial" />
+        <h2>Segurança</h2>
+        <ul>
+          <li>Use certificados + senha (two-factor) quando possível</li>
+          <li>Ative logging para auditoria de conexões</li>
+          <li>Limite acesso VPN apenas aos recursos necessários</li>
+          <li>Revogue acesso imediatamente ao desligar colaborador</li>
+          <li>Mantenha o software VPN sempre atualizado</li>
+        </ul>
+
+        <h2>Checklist de Implementação</h2>
+        <ul>
+          <li>✅ Protocolo escolhido adequado ao cenário</li>
+          <li>✅ IP fixo ou DDNS configurado</li>
+          <li>✅ Port forwarding no roteador</li>
+          <li>✅ Firewall configurado</li>
+          <li>✅ Chaves/certificados para cada usuário</li>
+          <li>✅ Teste de conexão externa (4G do celular)</li>
+          <li>✅ Documentação entregue aos colaboradores</li>
+          <li>✅ Procedimento de revogação documentado</li>
+        </ul>
       </>
     ),
   },
@@ -8723,100 +8672,127 @@ crontab -e
   },
 
   "como-configurar-firewall-ufw-linux": {
-    title: "UFW no Linux: firewall host sem se trancar fora do servidor",
-    excerpt: "Como planejar, testar e aplicar regras UFW em Ubuntu: SSH, portas, origem por rede, perfis de aplicação, logs, exclusão de regras e critérios de parada.",
-    date: "2026-09-25",
-    readTime: "14 min",
+    title: "Como Configurar Firewall UFW no Linux: Guia Definitivo",
+    excerpt: "Configuração de regras, portas, serviços e logs do UFW para proteger servidores e desktops Linux.",
+    date: "2026-04-20",
+    readTime: "10 min",
     category: "Segurança e Redes",
     content: (
       <>
-        <p className="lead">UFW (Uncomplicated Firewall) é a interface padrão do Ubuntu para administrar um firewall de host. Ele simplifica regras comuns, mas não substitui o desenho da rede nem torna seguro um serviço mal configurado. Em servidor remoto, o erro mais comum é habilitar o firewall antes de garantir a regra de acesso administrativo — e perder a própria sessão.</p>
-        <h2>Resposta direta</h2>
-        <p>Antes de executar <code>sudo ufw enable</code>, descubra quais serviços realmente precisam receber conexões e de onde elas devem vir. Em servidor acessado por SSH, crie e valide primeiro a regra de SSH para a sua origem administrativa. Depois habilite o UFW, confira <code>sudo ufw status verbose</code>, teste uma segunda conexão antes de fechar a primeira e só então avance para outras portas.</p>
-        <h2>1. Entenda o papel do UFW</h2>
-        <p>O UFW gerencia filtragem de tráfego no próprio host. A documentação do Ubuntu o descreve como uma forma simplificada de criar e remover regras para firewall baseado em host. Isso é diferente de um firewall de borda, de uma regra de Security Group em nuvem ou de segmentação entre VLANs.</p>
-        <p>Se o objetivo é controlar tráfego entre redes, VPNs, NAT complexo ou múltiplos segmentos, um gateway dedicado pode ser a camada certa. Veja também <Link to="/blog/como-configurar-firewall-pfsense" className="text-accent">como pensar regras em um firewall de borda</Link>.</p>
-        <h2>2. Faça inventário das portas antes das regras</h2>
+        <p className="lead">Segurança digital deixou de ser problema só de grandes corporações. Em 2026, ataques cibernéticos atingem desde pessoas comuns até pequenas empresas em Curitiba todos os dias. Este guia técnico mostra como configurar firewall ufw no linux de forma profissional e eficaz.</p>
+
+        <h2>Cenário de Ameaças em 2026</h2>
+        <p>O custo médio de um incidente de segurança para pequenas empresas brasileiras passou de R$ 80 mil em 2025, segundo levantamentos do setor. Os ataques mais comuns que vemos no atendimento técnico em Curitiba:</p>
         <ul>
-          <li>Qual serviço está escutando?</li><li>Ele precisa aceitar conexões externas ou apenas locais?</li><li>Qual protocolo e porta usa?</li><li>Quais redes ou hosts devem iniciar a conexão?</li><li>Existe outra camada de firewall na nuvem, roteador ou provedor?</li>
+          <li><strong>Ransomware</strong> — criptografia dos arquivos e cobrança de resgate (R$ 5 mil a R$ 500 mil)</li>
+          <li><strong>Phishing direcionado</strong> — e-mails personalizados que enganam até usuários experientes</li>
+          <li><strong>Engenharia social</strong> — ligações se passando por banco, suporte técnico ou parceiro</li>
+          <li><strong>Invasão por credenciais vazadas</strong> — senhas reutilizadas em sites comprometidos</li>
+          <li><strong>Ataques a roteadores domésticos</strong> — captura de tráfego e redirecionamento DNS</li>
+          <li><strong>Sequestro de WhatsApp Business</strong> — uso da conta para golpes contra clientes</li>
         </ul>
-        <p>Não abra uma porta só porque um tutorial lista aquela porta. Primeiro confirme o processo que está escutando e a necessidade do serviço.</p>
-        <h2>3. Veja o estado atual antes de habilitar</h2>
-        <p>Comece por comandos de leitura:</p>
+
+        <h2>Princípios Fundamentais de Segurança</h2>
+        <p>Antes de ferramentas e configurações, internalize os princípios. Eles guiam toda decisão de segurança.</p>
         <ul>
-          <li><code>sudo ufw status</code> — mostra se o UFW está ativo e as regras visíveis.</li>
-          <li><code>sudo ufw status verbose</code> — inclui informações adicionais do estado.</li>
-          <li><code>sudo ufw status numbered</code> — numera regras para facilitar revisão e exclusão.</li>
-          <li><code>sudo ufw app list</code> — lista perfis instalados por aplicações.</li>
+          <li><strong>Defesa em profundidade</strong> — múltiplas camadas, nunca dependa de uma única proteção</li>
+          <li><strong>Princípio do menor privilégio</strong> — cada usuário e processo só tem acesso ao mínimo necessário</li>
+          <li><strong>Zero Trust</strong> — nunca confie automaticamente, verifique sempre, mesmo dentro da rede</li>
+          <li><strong>Segregação de funções</strong> — quem aprova não é quem executa, quem audita não é quem opera</li>
+          <li><strong>Backup imune</strong> — pelo menos uma cópia offline ou imutável, fora do alcance de ransomware</li>
+          <li><strong>Atualização contínua</strong> — vulnerabilidades conhecidas são as mais exploradas</li>
         </ul>
-        <p>O Ubuntu informa que o UFW começa desabilitado por padrão. Isso não significa que o servidor esteja “sem nenhuma proteção”: pode haver firewall de nuvem, roteador ou outras regras. Por isso, diagnostique todas as camadas.</p>
-        <h2>4. Servidor remoto: preserve o caminho de administração</h2>
-        <p>Se você administra por SSH, permita o acesso antes de habilitar o firewall. Quando possível, restrinja pela rede ou host de administração em vez de aceitar SSH de qualquer origem.</p>
-        <p>Exemplo da própria documentação do Ubuntu para permitir SSH apenas de uma origem específica: <code>sudo ufw allow proto tcp from 192.168.0.2 to any port 22</code>. Em uma rede inteira, ajuste a origem para a sub-rede que realmente administra o servidor.</p>
-        <p>Depois de habilitar, mantenha a sessão atual aberta e teste uma nova sessão. Se a nova conexão falhar, não feche o único acesso que ainda funciona.</p>
-        <h2>5. Teste uma regra antes de aplicá-la</h2>
-        <p>O UFW oferece <code>--dry-run</code> para mostrar as regras resultantes sem aplicá-las. Por exemplo, <code>sudo ufw --dry-run allow http</code>. Use essa etapa para conferir o efeito de mudanças simples antes da aplicação.</p>
-        <h2>6. Abra somente o serviço necessário</h2>
-        <p>A documentação do Ubuntu mostra regras por número de porta e por perfil de aplicação. Exemplos comuns:</p>
+
+        <h2>Avaliação de Riscos Inicial</h2>
+        <p>Não é possível proteger o que você não conhece. O primeiro passo é mapear sua infraestrutura.</p>
+        <p>Faça um inventário completo:</p>
         <ul>
-          <li><code>sudo ufw allow 22</code> — permite porta 22; em produção, prefira restringir origem quando viável.</li>
-          <li><code>sudo ufw allow http</code> — usa o nome de serviço quando disponível.</li>
-          <li><code>sudo ufw allow Samba</code> — usa o perfil de aplicação instalado.</li>
-          <li><code>sudo ufw allow from 192.168.0.0/24 to any app Samba</code> — restringe Samba à rede local de exemplo.</li>
+          <li>Quais dispositivos estão conectados à rede (computadores, celulares, IoT, impressoras)</li>
+          <li>Quais sistemas e aplicativos são usados (sistemas internos, SaaS, e-mail)</li>
+          <li>Quais dados são tratados (cadastros, financeiro, saúde, propriedade intelectual)</li>
+          <li>Quem tem acesso a quê (usuários, fornecedores, parceiros)</li>
+          <li>Onde estão os backups e qual a frequência</li>
+          <li>Quais ferramentas de segurança já estão em uso</li>
         </ul>
-        <p>O ponto não é decorar comandos: é associar cada regra a um serviço, uma origem e uma justificativa.</p>
-        <h2>7. Remova regras com precisão</h2>
-        <p>Evite “resetar tudo” para corrigir uma regra errada. Use <code>sudo ufw status numbered</code> para revisar a ordem e remova a regra específica. A documentação também aceita exclusão pelo próprio texto da regra, como <code>sudo ufw delete deny 22</code>.</p>
-        <h2>8. Logs ajudam, mas não substituem diagnóstico</h2>
-        <p>O Ubuntu documenta <code>sudo ufw logging on</code> para ativar registros do firewall. Use logs para entender bloqueios inesperados e tentativas de conexão, mas considere volume, retenção e a ferramenta de log do sistema. Um pacote bloqueado não prova, sozinho, uma invasão.</p>
-        <h2>9. Regras padrão e saída: decida conscientemente</h2>
-        <p>Muitos servidores adotam a lógica de negar entradas não solicitadas e permitir saídas, mas isso é uma política, não uma lei. Antes de mudar defaults em produção, documente serviços de monitoramento, DNS, NTP, atualizações, bancos e integrações que dependem de tráfego de saída.</p>
-        <p>Em ambientes mais restritos, filtragem de saída exige inventário e observabilidade para não quebrar dependências legítimas.</p>
-        <h2>10. UFW em servidor com Docker, roteamento ou NAT</h2>
-        <p>Contêineres, encaminhamento de pacotes, bridges e regras de NAT podem introduzir caminhos de tráfego que não se comportam como um host simples. Se a máquina também atua como roteador, gateway ou host de contêineres publicados, não aplique um roteiro básico sem entender a cadeia de regras e a arquitetura.</p>
-        <p>Nesses casos, desenhe primeiro o fluxo: origem → interface → serviço → retorno. Se houver VPN de acesso remoto, conecte a política ao <Link to="/blog/como-configurar-vpn-empresarial" className="text-accent">planejamento de VPN empresarial</Link>.</p>
-        <h2>Quando parar</h2>
+        <p>Esse mapeamento revela vulnerabilidades óbvias que muitas vezes passam despercebidas — como aquela impressora que ninguém mais usa mas continua acessível pela rede.</p>
+
+        <h2>Configuração Técnica Recomendada</h2>
+        <p>Com o mapeamento em mãos, parta para a configuração técnica. As recomendações abaixo são baseline mínimo para qualquer ambiente profissional.</p>
         <ul>
-          <li>Você administra o servidor remotamente e não possui console alternativo nem regra SSH validada.</li>
-          <li>Não sabe qual processo usa a porta que pretende abrir.</li>
-          <li>A máquina roteia tráfego, faz NAT ou hospeda contêineres e você não mapeou essas regras.</li>
-          <li>Existe firewall de nuvem/roteador e você não sabe qual camada está bloqueando.</li>
-          <li>Para fazer o serviço funcionar, a única ideia restante é desabilitar o firewall por completo.</li>
+          <li><strong>Firewall configurado</strong> — bloqueia portas não usadas, limita acesso externo a serviços essenciais</li>
+          <li><strong>Antivírus em todos os endpoints</strong> — Bitdefender, ESET ou Kaspersky em versão corporativa</li>
+          <li><strong>Patch management</strong> — atualizações de SO e aplicativos aplicadas em até 30 dias da liberação</li>
+          <li><strong>EDR (Endpoint Detection and Response)</strong> — para detectar ataques que escapam do antivírus tradicional</li>
+          <li><strong>VPN para acesso remoto</strong> — nada de RDP exposto direto na internet</li>
+          <li><strong>2FA em todos os serviços críticos</strong> — e-mail, ERP, painel administrativo, redes sociais corporativas</li>
+          <li><strong>Logs centralizados</strong> — pelo menos 90 dias de retenção para investigação de incidentes</li>
         </ul>
-        <h2>O que não fazer</h2>
+
+        <h2>Procedimento Detalhado de Implementação</h2>
+        <p>Vamos ao passo a passo prático. Adapte ao seu ambiente, mas siga a ordem — pular etapas deixa brechas.</p>
+        <ol>
+          <li><strong>Inventário e classificação</strong> — saiba o que precisa proteger e qual a criticidade de cada ativo</li>
+          <li><strong>Hardening de senhas</strong> — gerenciador de senhas (Bitwarden, 1Password) para todos os usuários</li>
+          <li><strong>2FA universal</strong> — comece pelo e-mail (porta de entrada para tudo), depois bancos, redes sociais e sistemas internos</li>
+          <li><strong>Firewall e segmentação</strong> — separe rede de visitantes, IoT e produção</li>
+          <li><strong>Backup 3-2-1</strong> — 3 cópias, 2 mídias diferentes, 1 offsite</li>
+          <li><strong>Atualizações automáticas</strong> — configure janela de manutenção e aplique patches</li>
+          <li><strong>Treinamento de usuários</strong> — phishing é o vetor #1, e usuário treinado é a melhor defesa</li>
+          <li><strong>Monitoramento contínuo</strong> — logs revisados periodicamente, alertas configurados para anomalias</li>
+          <li><strong>Plano de resposta a incidentes</strong> — quem chamar, o que fazer, como comunicar quando algo der errado</li>
+          <li><strong>Auditoria periódica</strong> — pentest anual e revisão de configurações trimestral</li>
+        </ol>
+
+        <h2>Ferramentas Recomendadas</h2>
+        <p>Mercado de segurança tem centenas de ferramentas. Para o cenário típico de SMB em Curitiba, essa stack cobre o essencial:</p>
         <ul>
-          <li>Não habilite UFW em servidor remoto antes de preservar o acesso administrativo.</li>
-          <li>Não abra “qualquer origem” quando o serviço só precisa da rede local.</li>
-          <li>Não use porta aberta como substituto de autenticação segura no serviço.</li>
-          <li>Não interprete log de bloqueio como prova automática de ataque.</li>
-          <li>Não misture alterações de UFW, roteamento, Docker e firewall de nuvem numa única mudança sem plano de rollback.</li>
+          <li><strong>Bitdefender GravityZone</strong> ou <strong>ESET Protect</strong> — antivírus + EDR centralizado</li>
+          <li><strong>pfSense</strong> ou <strong>OPNsense</strong> — firewall corporativo open source</li>
+          <li><strong>Bitwarden Business</strong> — gerenciador de senhas com SSO e auditoria</li>
+          <li><strong>Veeam Backup</strong> ou <strong>Acronis</strong> — backup empresarial com replicação</li>
+          <li><strong>Wazuh</strong> — SIEM open source para correlação de logs</li>
+          <li><strong>Cloudflare</strong> — proteção DDoS e WAF para sites e aplicações</li>
+          <li><strong>YubiKey</strong> ou <strong>Authy</strong> — 2FA físico e em apps</li>
         </ul>
-        <h2>Checklist de validação</h2>
+
+        <h2>Erros Comuns Que Geram Vulnerabilidade</h2>
+        <p>Os ataques bem-sucedidos quase sempre exploram falhas conhecidas e evitáveis.</p>
         <ul>
-          <li><code>sudo ufw status verbose</code> mostra o estado esperado.</li>
-          <li>Uma segunda sessão SSH abre a partir da rede administrativa autorizada.</li>
-          <li>Portas necessárias respondem apenas das origens previstas.</li>
-          <li>Portas que não deveriam estar públicas continuam inacessíveis.</li>
-          <li>Aplicação, DNS, atualizações e monitoramento continuam funcionando.</li>
-          <li>As regras possuem justificativa documentada e podem ser revertidas individualmente.</li>
+          <li><strong>Senha "12345678"</strong> ou similar em conta administrativa</li>
+          <li><strong>Reutilizar senha</strong> entre serviços pessoais e corporativos</li>
+          <li><strong>Adiar atualizações</strong> de SO e aplicativos por meses ou anos</li>
+          <li><strong>Antivírus expirado</strong> sem que o usuário perceba</li>
+          <li><strong>Backup que nunca é testado</strong> — descobrir que não funciona depois do incidente</li>
+          <li><strong>Compartilhar credenciais</strong> entre funcionários por WhatsApp</li>
+          <li><strong>Acesso remoto direto via RDP</strong> sem VPN</li>
+          <li><strong>Wi-Fi corporativo</strong> com senha conhecida por todos os funcionários, terceiros e clientes</li>
         </ul>
-        <h2>Decisão: UFW é a camada certa?</h2>
-        <p>Use UFW quando você precisa controlar conexões do próprio host Ubuntu com regras compreensíveis. Se a necessidade é segmentar várias redes, controlar NAT, concentrar VPNs ou aplicar política para muitos dispositivos, trate o problema como arquitetura de firewall/gateway. Se o servidor está em nuvem, alinhe UFW com Security Groups/firewall do provedor em vez de configurar cada camada sem relação.</p>
-        <h2>Perguntas frequentes</h2>
-        <h3>UFW substitui um firewall de borda?</h3><p>Não. UFW protege o host; um firewall de borda controla tráfego entre redes e pode aplicar políticas antes de o pacote chegar ao servidor.</p>
-        <h3>Posso permitir SSH só da minha rede?</h3><p>Sim. O UFW aceita regras com origem específica ou sub-rede. Isso reduz exposição quando a arquitetura permite uma origem administrativa estável.</p>
-        <h3>Preciso reiniciar o servidor depois de cada regra?</h3><p>As regras do UFW são aplicadas pelo próprio utilitário; o importante é verificar o estado e testar o serviço após a mudança.</p>
-        <h3>UFW protege uma aplicação vulnerável?</h3><p>Ele reduz superfície de rede e controla quem alcança uma porta, mas não corrige vulnerabilidades, senhas fracas ou falhas da aplicação.</p>
-        <h2>Glossário rápido</h2>
-        <dl>
-          <dt>Firewall de host</dt><dd>Filtro aplicado no próprio computador ou servidor.</dd>
-          <dt>Regra de entrada</dt><dd>Política para tráfego que tenta chegar ao host.</dd>
-          <dt>Origem</dt><dd>Host ou rede de onde a conexão é iniciada.</dd>
-          <dt>Porta</dt><dd>Identificador lógico usado por serviços de rede.</dd>
-          <dt>Dry run</dt><dd>Simulação que mostra o efeito esperado sem aplicar a regra.</dd>
-        </dl>
-        <p>Para conectar firewall, VPN, Wi-Fi e segmentação ao diagnóstico de rede, siga o <Link to="/guia-tecnico-informatica#tema-redes-wifi" className="text-accent">Atlas de redes e Wi-Fi</Link>.</p>
-        <EditorialReferences slug="como-configurar-firewall-ufw-linux" />
+
+        <h2>Resposta a Incidentes</h2>
+        <p>Cedo ou tarde, algo vai dar errado. Ter um plano definido é diferença entre incidente controlado e desastre.</p>
+        <ol>
+          <li><strong>Detecção</strong> — usuário relata, alerta de monitoramento dispara, antivírus bloqueia</li>
+          <li><strong>Contenção</strong> — desconectar máquinas afetadas da rede imediatamente</li>
+          <li><strong>Erradicação</strong> — remover malware, fechar vetor de entrada, trocar credenciais comprometidas</li>
+          <li><strong>Recuperação</strong> — restaurar de backup limpo, validar integridade antes de voltar à produção</li>
+          <li><strong>Lições aprendidas</strong> — documentar o que aconteceu, ajustar processos para evitar recorrência</li>
+        </ol>
+        <p><strong>Nunca pague resgate de ransomware sem consultar especialista.</strong> Pagar não garante recuperação dos dados e marca sua empresa como alvo fácil para futuras extorsões.</p>
+
+        <h2>Conformidade e LGPD</h2>
+        <p>Empresas que tratam dados pessoais têm obrigações legais. A LGPD não é opcional, e multas chegam a 2% do faturamento limitado a R$ 50 milhões por infração.</p>
+        <ul>
+          <li><strong>Mapeamento de dados pessoais</strong> coletados e tratados</li>
+          <li><strong>Base legal documentada</strong> para cada tratamento</li>
+          <li><strong>Política de privacidade</strong> clara e acessível</li>
+          <li><strong>Encarregado de proteção de dados</strong> (DPO) designado</li>
+          <li><strong>Plano de resposta a incidentes</strong> que inclua notificação à ANPD em até 48h</li>
+          <li><strong>Direitos dos titulares</strong> implementados (acesso, correção, exclusão)</li>
+        </ul>
+
+        <h2>Suporte em Segurança em Curitiba</h2>
+        <p>A <strong>{BRAND_NAME}</strong> oferece consultoria e implementação de segurança digital para empresas em Curitiba e região metropolitana. Auditoria, hardening, configuração de firewall, implementação de backup, treinamento de usuários e resposta a incidentes. Atendemos Curitiba, São José dos Pinhais, Pinhais, Colombo, Almirante Tamandaré, Araucária, Campo Largo, Campo Magro, Piraquara, Quatro Barras e Fazenda Rio Grande com técnicos certificados em segurança ofensiva e defensiva.</p>
+
       </>
     ),
   },
@@ -9578,236 +9554,218 @@ crontab -e
   },
 
   "como-recuperar-conta-hackeada": {
-    title: "Conta hackeada: como recuperar acesso e fechar as portas usadas pelo invasor",
-    excerpt:
-      "Procedimento seguro para conta comprometida: usar recuperação oficial, revisar sessões e dados de segurança, trocar senha, ativar MFA e proteger o e-mail principal.",
-    date: "2026-09-25",
-    readTime: "11 min",
-    category: "Segurança",
-    content: (
-      <>
-        <p className="lead">Se uma conta foi invadida, trocar a senha é importante, mas pode não ser suficiente. O invasor pode ter criado sessão persistente, alterado telefone/e-mail de recuperação, adicionado regra de encaminhamento ou obtido acesso ao dispositivo usado para entrar. A recuperação precisa seguir o canal oficial do provedor e depois revisar como a conta foi mantida acessível.</p>
-
-        <h2>Resposta curta: a ordem de emergência</h2>
-        <ol>
-          <li>Use um dispositivo confiável e abra o site/app oficial do provedor.</li>
-          <li>Se não consegue entrar, use o fluxo oficial de recuperação — não “suporte” recebido por mensagem.</li>
-          <li>Se ainda entra, altere a senha para uma exclusiva e encerre sessões/dispositivos desconhecidos.</li>
-          <li>Revise e-mail, telefone, chaves/passkeys, aplicativos conectados e regras de encaminhamento.</li>
-          <li>Ative MFA com método forte e gere códigos de recuperação.</li>
-          <li>Proteja primeiro o e-mail principal, porque ele costuma redefinir outras contas.</li>
-        </ol>
-
-        <h2>1. Pare de usar links enviados pelo suposto suporte</h2>
-        <p>Golpistas frequentemente aparecem logo depois do incidente oferecendo recuperação. Digite o endereço do serviço ou abra o aplicativo instalado. Google e Microsoft orientam usar suas próprias páginas de recuperação quando alguém altera senha, telefone ou outras informações da conta.</p>
-        <p>Nunca entregue código de verificação, código de recuperação ou aprovação de MFA a uma pessoa por telefone, chat ou mensagem. Esses códigos existem para provar que <em>você</em> está entrando.</p>
-
-        <h2>2. Se você ainda consegue entrar</h2>
-        <p>Não saia imediatamente da única sessão válida antes de conferir os meios de recuperação. Em uma sessão confiável:</p>
-        <ul>
-          <li>Troque a senha por uma nova, exclusiva e não usada em outro serviço.</li>
-          <li>Revise dispositivos/sessões e encerre os que você não reconhece.</li>
-          <li>Confira telefone e e-mail de recuperação.</li>
-          <li>Remova aplicativos, extensões ou acessos de terceiros desconhecidos.</li>
-          <li>Revise métodos de autenticação e chaves/passkeys adicionadas recentemente.</li>
-          <li>No e-mail, procure encaminhamentos, filtros, respostas automáticas e endereços delegados.</li>
-        </ul>
-
-        <h2>3. Se você não consegue mais entrar</h2>
-        <p>Use o fluxo oficial do provedor. O Google orienta responder às perguntas de recuperação da melhor forma possível e usar o processo específico para conta comprometida. A Microsoft oferece um auxiliar de entrada e formulário de recuperação conforme o estado da conta. Não existe atalho legítimo em que um terceiro “puxa” sua senha do servidor.</p>
-        <p>Faça a tentativa em dispositivo, navegador e localização que você já usava com a conta quando possível; provedores podem usar sinais de histórico para avaliar a recuperação.</p>
-
-        <h2>4. Proteja o dispositivo antes de redefinir tudo</h2>
-        <p>Se existe chance de malware, extensão maliciosa ou software de acesso remoto no computador, corrija o dispositivo antes de confiar uma senha nova a ele. A Microsoft recomenda verificar malware antes de alterar a senha de uma conta comprometida. Atualize o sistema, remova software suspeito e faça uma verificação de segurança.</p>
-        <p>Em celular, revise aplicativos instalados, permissões administrativas/acessibilidade e atualizações. Se o incidente começou depois de instalar APK/app fora da loja oficial, trate o dispositivo como potencialmente comprometido até revisar.</p>
-
-        <h2>5. O e-mail principal tem prioridade</h2>
-        <p>Se a mesma pessoa obteve seu e-mail, ela pode solicitar redefinição de senha de redes sociais, lojas e outros serviços. Recupere e proteja o e-mail antes ou em paralelo às contas dependentes. Depois pesquise mensagens de “senha alterada”, “novo login” e “dados de recuperação modificados” para mapear o alcance do incidente.</p>
-
-        <h2>6. Revise sessões, não só a senha</h2>
-        <p>Trocar senha nem sempre invalida automaticamente todos os tokens/sessões em todos os produtos. Use a opção do provedor para revisar dispositivos e sessões ativas e encerre acessos desconhecidos. Em contas corporativas, peça ao administrador para revogar sessões/tokens pelo console de identidade.</p>
-
-        <h2>7. Ative MFA e prepare recuperação</h2>
-        <p>Depois de recuperar controle, ative autenticação multifator. Prefira métodos resistentes a phishing quando disponíveis e guarde códigos de recuperação em local separado da conta. Não dependa do mesmo celular como único fator e único canal de recuperação. O passo a passo está em <Link to="/blog/como-configurar-2fa-em-tudo" className="text-accent">como configurar 2FA/MFA</Link>.</p>
-
-        <h2>8. Se houve fraude financeira ou uso da conta contra terceiros</h2>
-        <p>Contate diretamente a instituição financeira ou plataforma pelo canal oficial, preserve comprovantes e registre o ocorrido. Avise contatos quando o invasor enviou mensagens em seu nome para que não façam pagamentos ou entreguem códigos. Não apague evidências importantes antes de registrar datas, mensagens e alertas de login.</p>
-
-        <h2>9. O que não fazer</h2>
-        <ul>
-          <li>Não pague alguém que promete “hackear de volta” sua conta.</li>
-          <li>Não envie documento ou selfie a páginas não oficiais.</li>
-          <li>Não reutilize a nova senha em outras contas.</li>
-          <li>Não aprove solicitações de MFA que você não iniciou.</li>
-          <li>Não apague a única sessão válida antes de revisar recuperação, salvo risco claro de dispositivo comprometido.</li>
-        </ul>
-
-        <h2>Checklist pós-recuperação</h2>
-        <ul>
-          <li>Senha exclusiva alterada.</li>
-          <li>E-mail e telefone de recuperação conferidos.</li>
-          <li>Sessões/dispositivos desconhecidos removidos.</li>
-          <li>Apps conectados e encaminhamentos revisados.</li>
-          <li>MFA ativado e códigos de recuperação guardados.</li>
-          <li>Outras contas que reutilizavam a senha também corrigidas.</li>
-          <li>Dispositivo verificado e atualizado.</li>
-        </ul>
-
-        <h2>Quando parar e usar apenas o provedor</h2>
-        <p>Se a conta está bloqueada, se o provedor exige verificação de identidade ou se você perdeu todos os fatores, use somente o processo oficial. Um técnico pode ajudar a proteger o dispositivo e organizar evidências, mas não pode ignorar os controles de identidade do Google, Microsoft, Meta, banco ou outra plataforma.</p>
-
-        <p>Para reduzir recorrência, continue com <Link to="/blog/como-proteger-computador-golpes-internet" className="text-accent">proteção contra golpes e phishing</Link> e o <Link to="/guia-tecnico-informatica#tema-seguranca-privacidade" className="text-accent">Atlas de segurança</Link>.</p>
-        <EditorialReferences slug="como-recuperar-conta-hackeada" />
-      </>
-    ),
-  },
-
-  
-"como-deixar-windows-11-mais-rapido-iniciantes": {
-    title: "Windows 11 lento: como deixar o PC mais rápido sem truques",
-    excerpt:
-      "Diagnóstico prático para Windows 11 lento: inicialização, armazenamento, processos, atualizações e sinais de limite de hardware antes de instalar otimizadores.",
-    date: "2026-09-25",
-    readTime: "11 min",
-    category: "Windows",
-    content: (
-      <>
-        <p className="lead">Deixar o Windows 11 mais rápido começa por descobrir <strong>onde</strong> está a lentidão. Inicialização demorada, disco ocupado, pouca memória, aplicativo pesado e hardware antigo produzem sintomas parecidos, mas pedem soluções diferentes. A própria Microsoft recomenda combinar atualização, limpeza de armazenamento, revisão de aplicativos de inicialização e observação de recursos — não instalar “aceleradores” por reflexo.</p>
-
-        <h2>Resposta curta</h2>
-        <p>Reinicie o PC, atualize o Windows, abra o Gerenciador de Tarefas e observe CPU, memória e disco durante a lentidão. Desative da inicialização apenas programas que você reconhece e não precisa abrir automaticamente. Libere espaço com as ferramentas do próprio Windows e desinstale o que não usa. Se disco, memória ou CPU continuam no limite mesmo com poucos programas, o gargalo pode ser de hardware.</p>
-
-        <h2>1. Primeiro defina quando o computador fica lento</h2>
-        <table>
-          <thead><tr><th>Sintoma</th><th>Pista inicial</th></tr></thead>
-          <tbody>
-            <tr><td>Demora só para ligar</td><td>Aplicativos de inicialização, disco e atualizações</td></tr>
-            <tr><td>Fica lento ao abrir muitas abas</td><td>Memória e consumo do navegador</td></tr>
-            <tr><td>Trava ao copiar/abrir arquivos</td><td>Armazenamento e saúde da unidade</td></tr>
-            <tr><td>Perde desempenho depois de alguns minutos</td><td>Temperatura e limitação térmica</td></tr>
-            <tr><td>Um programa específico trava</td><td>Aplicativo, driver ou requisito daquele software</td></tr>
-          </tbody>
-        </table>
-        <p>Essa classificação evita mexer em dez configurações ao mesmo tempo e depois não saber o que realmente resolveu.</p>
-
-        <h2>2. Veja o uso real no Gerenciador de Tarefas</h2>
-        <p>Pressione <strong>Ctrl + Shift + Esc</strong> e observe a guia Processos durante o problema. Ordene por CPU, Memória e Disco. Um pico curto pode ser normal; o que interessa é recurso que permanece alto enquanto a máquina responde mal. Depois abra Desempenho para conferir capacidade total de memória, tipo de disco e comportamento da CPU.</p>
-        <p>Não finalize processo desconhecido apenas porque aparece no topo. Primeiro identifique o aplicativo ou serviço. Processos do sistema, antivírus e atualização podem usar recursos temporariamente.</p>
-
-        <h2>3. Reduza o que inicia com o Windows</h2>
-        <p>A Microsoft documenta que aplicativos iniciados automaticamente afetam o tempo de inicialização e a atividade em segundo plano. No Gerenciador de Tarefas, abra <strong>Aplicativos de inicialização</strong> e desative apenas itens que você conhece e pode abrir manualmente quando precisar.</p>
-        <p>Evite desativar software de segurança, sincronização que protege arquivos ou utilitário necessário ao hardware sem entender a consequência. A meta é remover conveniência desnecessária, não desmontar o ambiente.</p>
-
-        <h2>4. Libere armazenamento sem apagar às cegas</h2>
-        <p>Em Configurações → Sistema → Armazenamento, o Windows mostra categorias de uso e oferece arquivos temporários e Sensor de Armazenamento. Revise o que será removido antes de confirmar, especialmente Downloads e Lixeira. Desinstalar aplicativos que não são mais usados também reduz armazenamento ocupado e processos em segundo plano.</p>
-        <p>Não existe uma porcentagem mágica de espaço livre válida para todo computador. O sinal relevante é falta de espaço para atualização, paginação e arquivos temporários, junto do comportamento observado.</p>
-
-        <h2>5. Atualize Windows e drivers pelo canal correto</h2>
-        <p>Windows Update entrega correções e também pode oferecer drivers opcionais. Faça backup do que é importante, instale atualizações pelo Windows Update ou pelo fabricante do equipamento e reinicie quando solicitado. Evite “atualizador universal de drivers” de terceiros: ele adiciona outra variável a um sistema que você está tentando diagnosticar.</p>
-
-        <h2>6. Reiniciar ajuda, mas não é diagnóstico</h2>
-        <p>Reiniciar encerra processos e reinicializa serviços; isso pode corrigir um estado temporário. Se a lentidão volta sempre depois do mesmo tempo ou da abertura do mesmo programa, registre o padrão. A repetição é mais útil para o diagnóstico do que reiniciar diariamente e aceitar o problema.</p>
-
-        <h2>7. Quando limpeza de software não resolve</h2>
-        <ul>
-          <li>Memória fica quase toda ocupada com sua carga normal de trabalho.</li>
-          <li>O sistema está em HD mecânico e passa longos períodos limitado pelo disco.</li>
-          <li>A CPU é antiga para o software atual e permanece saturada.</li>
-          <li>Temperatura sobe e o clock cai sob carga.</li>
-          <li>O disco apresenta erros, lentidão anormal ou alertas de saúde.</li>
-        </ul>
-        <p>Nesse ponto, compare <Link to="/decisoes/ssd-ou-memoria-ram" className="text-accent">SSD ou memória RAM</Link> e consulte <Link to="/problemas/computador-lento" className="text-accent">computador lento: diagnóstico por sintoma</Link> antes de comprar peças.</p>
-
-        <h2>O que não fazer</h2>
-        <ul>
-          <li>Não instalar vários “boosters”, limpadores de registro ou pacotes de driver.</li>
-          <li>Não desabilitar serviços aleatórios de uma lista da internet.</li>
-          <li>Não apagar pastas do sistema para ganhar espaço.</li>
-          <li>Não formatar antes de medir o gargalo e conferir backup.</li>
-        </ul>
-
-        <h2>Checklist de diagnóstico</h2>
-        <ul>
-          <li>Problema reproduzido e momento da lentidão identificado.</li>
-          <li>CPU, memória e disco observados durante o sintoma.</li>
-          <li>Inicialização revisada.</li>
-          <li>Armazenamento revisado com ferramentas do Windows.</li>
-          <li>Windows atualizado por canal oficial.</li>
-          <li>Hardware avaliado se o limite persistir.</li>
-        </ul>
-
-        <p>Para entender o raciocínio completo em vez de seguir receitas isoladas, continue no <Link to="/guia-tecnico-informatica#tema-hardware-upgrades" className="text-accent">Atlas de hardware e desempenho</Link>.</p>
-        <EditorialReferences slug="como-deixar-windows-11-mais-rapido-iniciantes" />
-      </>
-    ),
-  },
-
-  
-"como-fazer-backup-fotos-windows-iniciantes": {
-    title: "Como fazer backup de fotos no Windows e comprovar que a cópia funciona",
-    excerpt:
-      "Método seguro para proteger fotos no Windows usando disco externo, Histórico de Arquivos e nuvem — com verificação de restauração e sem confundir sincronização com backup.",
-    date: "2026-09-25",
+    title: "Como Recuperar Conta Hackeada: Procedimento de Emergência",
+    excerpt: "Passo a passo profissional para recuperar contas de Gmail, Instagram, WhatsApp e bancos comprometidas.",
+    date: "2026-04-20",
     readTime: "10 min",
-    category: "Backup e Dados",
+    category: "Segurança e Redes",
     content: (
       <>
-        <p className="lead">Backup de fotos não é apenas arrastar uma pasta e esperar a barra terminar. A cópia precisa estar em outro local, ser verificável e continuar disponível se o computador falhar, for perdido ou tiver arquivos apagados por engano. O Windows oferece caminhos nativos para cópia e versionamento; nuvem pode complementar, mas sincronização e backup não são exatamente a mesma coisa.</p>
+        <p className="lead">Segurança digital deixou de ser problema só de grandes corporações. Em 2026, ataques cibernéticos atingem desde pessoas comuns até pequenas empresas em Curitiba todos os dias. Este guia técnico mostra como recuperar conta hackeada de forma profissional e eficaz.</p>
 
-        <h2>Resposta curta</h2>
-        <p>Localize todas as pastas que realmente contêm fotos, faça uma cópia para disco externo ou serviço de nuvem confiável, confira quantidade/tamanho aproximados e abra arquivos diretamente do destino. Para proteção contínua, configure um mecanismo de versionamento como o Histórico de Arquivos ou uma solução de backup equivalente. Mantenha pelo menos uma cópia que não dependa do mesmo disco do computador.</p>
+        <h2>Cenário de Ameaças em 2026</h2>
+        <p>O custo médio de um incidente de segurança para pequenas empresas brasileiras passou de R$ 80 mil em 2025, segundo levantamentos do setor. Os ataques mais comuns que vemos no atendimento técnico em Curitiba:</p>
+        <ul>
+          <li><strong>Ransomware</strong> — criptografia dos arquivos e cobrança de resgate (R$ 5 mil a R$ 500 mil)</li>
+          <li><strong>Phishing direcionado</strong> — e-mails personalizados que enganam até usuários experientes</li>
+          <li><strong>Engenharia social</strong> — ligações se passando por banco, suporte técnico ou parceiro</li>
+          <li><strong>Invasão por credenciais vazadas</strong> — senhas reutilizadas em sites comprometidos</li>
+          <li><strong>Ataques a roteadores domésticos</strong> — captura de tráfego e redirecionamento DNS</li>
+          <li><strong>Sequestro de WhatsApp Business</strong> — uso da conta para golpes contra clientes</li>
+        </ul>
 
-        <h2>1. Antes de copiar, descubra onde as fotos estão</h2>
-        <p>Imagens podem estar em <strong>Imagens</strong>, Área de Trabalho, Downloads, pastas de aplicativos, cartões de memória e diretórios criados manualmente. Abra o Explorador de Arquivos e faça um inventário. Se o computador veio de outro equipamento, confirme também pastas antigas de usuário.</p>
-        <p>Não comece apagando duplicatas. Primeiro preserve; organização e deduplicação vêm depois da cópia validada.</p>
+        <h2>Princípios Fundamentais de Segurança</h2>
+        <p>Antes de ferramentas e configurações, internalize os princípios. Eles guiam toda decisão de segurança.</p>
+        <ul>
+          <li><strong>Defesa em profundidade</strong> — múltiplas camadas, nunca dependa de uma única proteção</li>
+          <li><strong>Princípio do menor privilégio</strong> — cada usuário e processo só tem acesso ao mínimo necessário</li>
+          <li><strong>Zero Trust</strong> — nunca confie automaticamente, verifique sempre, mesmo dentro da rede</li>
+          <li><strong>Segregação de funções</strong> — quem aprova não é quem executa, quem audita não é quem opera</li>
+          <li><strong>Backup imune</strong> — pelo menos uma cópia offline ou imutável, fora do alcance de ransomware</li>
+          <li><strong>Atualização contínua</strong> — vulnerabilidades conhecidas são as mais exploradas</li>
+        </ul>
 
-        <h2>2. Cópia em disco externo: simples e controlável</h2>
+        <h2>Avaliação de Riscos Inicial</h2>
+        <p>Não é possível proteger o que você não conhece. O primeiro passo é mapear sua infraestrutura.</p>
+        <p>Faça um inventário completo:</p>
+        <ul>
+          <li>Quais dispositivos estão conectados à rede (computadores, celulares, IoT, impressoras)</li>
+          <li>Quais sistemas e aplicativos são usados (sistemas internos, SaaS, e-mail)</li>
+          <li>Quais dados são tratados (cadastros, financeiro, saúde, propriedade intelectual)</li>
+          <li>Quem tem acesso a quê (usuários, fornecedores, parceiros)</li>
+          <li>Onde estão os backups e qual a frequência</li>
+          <li>Quais ferramentas de segurança já estão em uso</li>
+        </ul>
+        <p>Esse mapeamento revela vulnerabilidades óbvias que muitas vezes passam despercebidas — como aquela impressora que ninguém mais usa mas continua acessível pela rede.</p>
+
+        <h2>Configuração Técnica Recomendada</h2>
+        <p>Com o mapeamento em mãos, parta para a configuração técnica. As recomendações abaixo são baseline mínimo para qualquer ambiente profissional.</p>
+        <ul>
+          <li><strong>Firewall configurado</strong> — bloqueia portas não usadas, limita acesso externo a serviços essenciais</li>
+          <li><strong>Antivírus em todos os endpoints</strong> — Bitdefender, ESET ou Kaspersky em versão corporativa</li>
+          <li><strong>Patch management</strong> — atualizações de SO e aplicativos aplicadas em até 30 dias da liberação</li>
+          <li><strong>EDR (Endpoint Detection and Response)</strong> — para detectar ataques que escapam do antivírus tradicional</li>
+          <li><strong>VPN para acesso remoto</strong> — nada de RDP exposto direto na internet</li>
+          <li><strong>2FA em todos os serviços críticos</strong> — e-mail, ERP, painel administrativo, redes sociais corporativas</li>
+          <li><strong>Logs centralizados</strong> — pelo menos 90 dias de retenção para investigação de incidentes</li>
+        </ul>
+
+        <h2>Procedimento Detalhado de Implementação</h2>
+        <p>Vamos ao passo a passo prático. Adapte ao seu ambiente, mas siga a ordem — pular etapas deixa brechas.</p>
         <ol>
-          <li>Conecte um HD/SSD externo com espaço suficiente.</li>
-          <li>Crie uma pasta datada, por exemplo <strong>Backup-Fotos-2026-09</strong>.</li>
-          <li>Copie as pastas inventariadas, sem mover os originais.</li>
-          <li>Aguarde o término e ejete o dispositivo corretamente.</li>
-          <li>Reconecte e abra uma amostra de fotos diretamente do disco externo.</li>
+          <li><strong>Inventário e classificação</strong> — saiba o que precisa proteger e qual a criticidade de cada ativo</li>
+          <li><strong>Hardening de senhas</strong> — gerenciador de senhas (Bitwarden, 1Password) para todos os usuários</li>
+          <li><strong>2FA universal</strong> — comece pelo e-mail (porta de entrada para tudo), depois bancos, redes sociais e sistemas internos</li>
+          <li><strong>Firewall e segmentação</strong> — separe rede de visitantes, IoT e produção</li>
+          <li><strong>Backup 3-2-1</strong> — 3 cópias, 2 mídias diferentes, 1 offsite</li>
+          <li><strong>Atualizações automáticas</strong> — configure janela de manutenção e aplique patches</li>
+          <li><strong>Treinamento de usuários</strong> — phishing é o vetor #1, e usuário treinado é a melhor defesa</li>
+          <li><strong>Monitoramento contínuo</strong> — logs revisados periodicamente, alertas configurados para anomalias</li>
+          <li><strong>Plano de resposta a incidentes</strong> — quem chamar, o que fazer, como comunicar quando algo der errado</li>
+          <li><strong>Auditoria periódica</strong> — pentest anual e revisão de configurações trimestral</li>
         </ol>
-        <p>Uma cópia externa guardada permanentemente conectada ao PC continua exposta a exclusão acidental, ransomware e falha elétrica. Depois da cópia, mantenha o dispositivo desconectado quando não estiver em uso, se esse for o papel dele no plano.</p>
 
-        <h2>3. Histórico de Arquivos: versões para arquivos pessoais</h2>
-        <p>A Microsoft mantém o Histórico de Arquivos como recurso para salvar cópias automáticas de arquivos pessoais em uma unidade adequada e restaurar versões anteriores. Ele é útil para mudanças e exclusões acidentais, mas precisa ser configurado antes do incidente e o destino precisa estar disponível nos ciclos de backup.</p>
-        <p>Depois de configurar, faça um teste controlado: crie um arquivo de teste, aguarde o backup e confirme que a restauração funciona. Um backup nunca testado é apenas uma expectativa.</p>
-
-        <h2>4. Nuvem: o que ela protege e o que precisa ser conferido</h2>
-        <p>Serviços de nuvem podem sincronizar pastas e manter versões/lixeira conforme o produto e o plano. Isso ajuda contra perda do computador, mas uma alteração ou exclusão pode também ser sincronizada. Antes de tratar a nuvem como única proteção, entenda retenção, histórico de versões, limite de armazenamento e o que acontece quando um arquivo é apagado.</p>
-        <p>O ideal é combinar cópias que não falham pelo mesmo motivo: por exemplo, computador + disco externo + cópia remota/versionada, conforme a importância do acervo.</p>
-
-        <h2>5. Como verificar se o backup está íntegro</h2>
+        <h2>Ferramentas Recomendadas</h2>
+        <p>Mercado de segurança tem centenas de ferramentas. Para o cenário típico de SMB em Curitiba, essa stack cobre o essencial:</p>
         <ul>
-          <li>Compare a estrutura de pastas do original e do destino.</li>
-          <li>Abra fotos antigas e recentes diretamente da cópia.</li>
-          <li>Teste formatos diferentes, inclusive vídeos se fazem parte do acervo.</li>
-          <li>Confira se o destino não ficou sem espaço no meio da operação.</li>
-          <li>Registre a data da última verificação.</li>
-        </ul>
-        <p>Para um procedimento formal, use o guia <Link to="/blog/como-testar-restauracao-de-backup" className="text-accent">como testar a restauração de um backup</Link>.</p>
-
-        <h2>6. Se o disco já apresenta falhas, pare de organizar</h2>
-        <p>Se pastas somem, a cópia trava sempre no mesmo ponto, o disco desconecta ou arquivos começam a não abrir, não continue movendo e renomeando milhares de itens. Reduza o uso da unidade e trate o caso como possível recuperação de dados. Cada gravação adicional pode complicar uma recuperação em mídia deteriorada.</p>
-
-        <h2>Checklist de um backup confiável</h2>
-        <ul>
-          <li>Originais localizados e não apagados durante a primeira cópia.</li>
-          <li>Cópia em armazenamento diferente do disco principal.</li>
-          <li>Arquivos do destino abertos com sucesso.</li>
-          <li>Proteção contínua/versionamento configurados quando necessários.</li>
-          <li>Plano para perda física, falha do disco e exclusão acidental.</li>
-          <li>Teste periódico de restauração previsto.</li>
+          <li><strong>Bitdefender GravityZone</strong> ou <strong>ESET Protect</strong> — antivírus + EDR centralizado</li>
+          <li><strong>pfSense</strong> ou <strong>OPNsense</strong> — firewall corporativo open source</li>
+          <li><strong>Bitwarden Business</strong> — gerenciador de senhas com SSO e auditoria</li>
+          <li><strong>Veeam Backup</strong> ou <strong>Acronis</strong> — backup empresarial com replicação</li>
+          <li><strong>Wazuh</strong> — SIEM open source para correlação de logs</li>
+          <li><strong>Cloudflare</strong> — proteção DDoS e WAF para sites e aplicações</li>
+          <li><strong>YubiKey</strong> ou <strong>Authy</strong> — 2FA físico e em apps</li>
         </ul>
 
-        <p>Se você ainda não decidiu entre nuvem e mídia física, compare <Link to="/decisoes/nuvem-ou-hd-externo" className="text-accent">nuvem ou HD externo</Link> e veja o <Link to="/guia-tecnico-informatica#tema-dados-backup" className="text-accent">Atlas de dados e backup</Link>.</p>
-        <EditorialReferences slug="como-fazer-backup-fotos-windows-iniciantes" />
+        <h2>Erros Comuns Que Geram Vulnerabilidade</h2>
+        <p>Os ataques bem-sucedidos quase sempre exploram falhas conhecidas e evitáveis.</p>
+        <ul>
+          <li><strong>Senha "12345678"</strong> ou similar em conta administrativa</li>
+          <li><strong>Reutilizar senha</strong> entre serviços pessoais e corporativos</li>
+          <li><strong>Adiar atualizações</strong> de SO e aplicativos por meses ou anos</li>
+          <li><strong>Antivírus expirado</strong> sem que o usuário perceba</li>
+          <li><strong>Backup que nunca é testado</strong> — descobrir que não funciona depois do incidente</li>
+          <li><strong>Compartilhar credenciais</strong> entre funcionários por WhatsApp</li>
+          <li><strong>Acesso remoto direto via RDP</strong> sem VPN</li>
+          <li><strong>Wi-Fi corporativo</strong> com senha conhecida por todos os funcionários, terceiros e clientes</li>
+        </ul>
+
+        <h2>Resposta a Incidentes</h2>
+        <p>Cedo ou tarde, algo vai dar errado. Ter um plano definido é diferença entre incidente controlado e desastre.</p>
+        <ol>
+          <li><strong>Detecção</strong> — usuário relata, alerta de monitoramento dispara, antivírus bloqueia</li>
+          <li><strong>Contenção</strong> — desconectar máquinas afetadas da rede imediatamente</li>
+          <li><strong>Erradicação</strong> — remover malware, fechar vetor de entrada, trocar credenciais comprometidas</li>
+          <li><strong>Recuperação</strong> — restaurar de backup limpo, validar integridade antes de voltar à produção</li>
+          <li><strong>Lições aprendidas</strong> — documentar o que aconteceu, ajustar processos para evitar recorrência</li>
+        </ol>
+        <p><strong>Nunca pague resgate de ransomware sem consultar especialista.</strong> Pagar não garante recuperação dos dados e marca sua empresa como alvo fácil para futuras extorsões.</p>
+
+        <h2>Conformidade e LGPD</h2>
+        <p>Empresas que tratam dados pessoais têm obrigações legais. A LGPD não é opcional, e multas chegam a 2% do faturamento limitado a R$ 50 milhões por infração.</p>
+        <ul>
+          <li><strong>Mapeamento de dados pessoais</strong> coletados e tratados</li>
+          <li><strong>Base legal documentada</strong> para cada tratamento</li>
+          <li><strong>Política de privacidade</strong> clara e acessível</li>
+          <li><strong>Encarregado de proteção de dados</strong> (DPO) designado</li>
+          <li><strong>Plano de resposta a incidentes</strong> que inclua notificação à ANPD em até 48h</li>
+          <li><strong>Direitos dos titulares</strong> implementados (acesso, correção, exclusão)</li>
+        </ul>
+
+        <h2>Suporte em Segurança em Curitiba</h2>
+        <p>A <strong>{BRAND_NAME}</strong> oferece consultoria e implementação de segurança digital para empresas em Curitiba e região metropolitana. Auditoria, hardening, configuração de firewall, implementação de backup, treinamento de usuários e resposta a incidentes. Atendemos Curitiba, São José dos Pinhais, Pinhais, Colombo, Almirante Tamandaré, Araucária, Campo Largo, Campo Magro, Piraquara, Quatro Barras e Fazenda Rio Grande com técnicos certificados em segurança ofensiva e defensiva.</p>
+
       </>
     ),
   },
+  "como-deixar-windows-11-mais-rapido-iniciantes": {
+    title: "Como Deixar o Windows 11 Mais Rápido em 2026: Guia Passo a Passo (Curitiba)",
+    excerpt: "PC lento em Curitiba? Aprenda como acelerar o Windows 11 com 5 passos simples — sem instalar nada e sem risco de quebrar o computador.",
+    date: "2026-04-29",
+    readTime: "8 min",
+    category: "Tutoriais Domésticos",
+    content: (
+      <>
+        <p className="lead">Se o seu Windows 11 está lento, travando ou demorando para abrir programas, calma — na maioria das vezes a solução é simples e você mesmo consegue fazer. Este guia foi feito para quem não é técnico: tudo explicado passo a passo, com palavras do dia a dia.</p>
 
+        <h2>1. Reinicie o Computador (Sim, de Verdade)</h2>
+        <p>O Windows 11 acumula 'lixo' na memória conforme você usa. Suspender ou fechar a tampa do notebook NÃO é a mesma coisa que reiniciar.</p>
+        <p>Clique no botão Iniciar (ícone do Windows na barra) → Ligar/Desligar → <strong>Reiniciar</strong>. Espere ele voltar e teste.</p>
+
+        <h2>2. Desligue Programas Que Abrem Sozinhos</h2>
+        <p>Muitos programas se instalam para abrir junto com o Windows e isso deixa tudo lento.</p>
+        <ol>
+          <li>Aperte as teclas <strong>Ctrl + Shift + Esc</strong> ao mesmo tempo (abre o Gerenciador de Tarefas)</li>
+          <li>Clique na aba <strong>Aplicativos de inicialização</strong></li>
+          <li>Veja os que estão como 'Habilitado'</li>
+          <li>Clique com o botão direito nos que você não usa (Spotify, Steam, Skype, OneDrive se não usar) e escolha <strong>Desabilitar</strong></li>
+        </ol>
+
+        <h2>3. Libere Espaço no Disco</h2>
+        <p>Quando o disco fica cheio, o Windows trava. O ideal é ter pelo menos 20% livre.</p>
+        <ol>
+          <li>No campo de busca, digite <strong>Limpeza de Disco</strong> e abra</li>
+          <li>Selecione o disco C: e clique OK</li>
+          <li>Marque tudo que aparece (arquivos temporários, lixeira, miniaturas) e clique OK</li>
+          <li>Confirme e espere terminar</li>
+        </ol>
+
+        <h2>4. Atualize o Windows</h2>
+        <p>Atualizações corrigem problemas de desempenho. Vá em <strong>Configurações → Windows Update → Verificar atualizações</strong> e instale o que aparecer. Reinicie depois.</p>
+
+        <h2>5. Quando Chamar um Técnico</h2>
+        <p>Se mesmo depois disso seu PC continuar lento, pode ser disco antigo (HD em vez de SSD), pouca memória RAM ou vírus. Nesses casos, a <strong>O Técnico de Informática</strong> faz diagnóstico em casa em Curitiba e região metropolitana — chame pelo WhatsApp.</p>
+
+      </>
+    ),
+  },
+  "como-fazer-backup-fotos-windows-iniciantes": {
+    title: "Como Fazer Backup de Fotos no Windows 11: 3 Métodos Seguros (Guia 2026)",
+    excerpt: "Aprenda como fazer backup das suas fotos no Windows usando pendrive, OneDrive ou Google Fotos. Atendimento técnico em Curitiba se precisar de ajuda.",
+    date: "2026-04-29",
+    readTime: "7 min",
+    category: "Tutoriais Domésticos",
+    content: (
+      <>
+        <p className="lead">Perder fotos da família é um dos maiores arrependimentos que ouvimos de clientes. A boa notícia: fazer backup é mais fácil do que você imagina. Veja três formas, da mais simples para a mais segura.</p>
+
+        <h2>Forma 1: Pendrive ou HD Externo (Mais Fácil)</h2>
+        <ol>
+          <li>Conecte o pendrive ou HD externo na entrada USB</li>
+          <li>Espere aparecer a notificação 'Dispositivo pronto'</li>
+          <li>Abra o <strong>Explorador de Arquivos</strong> (ícone de pasta amarela)</li>
+          <li>Vá em <strong>Imagens</strong> no lado esquerdo</li>
+          <li>Selecione tudo (Ctrl + A) e arraste para o pendrive na lateral</li>
+          <li>Espere a cópia terminar antes de remover</li>
+        </ol>
+
+        <h2>Forma 2: Google Fotos (Salva Sozinho na Internet)</h2>
+        <p>Vantagem: backup automático e você acessa de qualquer lugar.</p>
+        <ol>
+          <li>Acesse <strong>photos.google.com</strong> no navegador</li>
+          <li>Faça login com sua conta do Google (mesma do Gmail)</li>
+          <li>Clique em <strong>Carregar → Computador</strong></li>
+          <li>Selecione a pasta de fotos e espere subir</li>
+        </ol>
+
+        <h2>Forma 3: OneDrive (Já Vem no Windows)</h2>
+        <p>O Windows 11 já tem OneDrive instalado. Configure assim:</p>
+        <ol>
+          <li>Clique no ícone de nuvem azul na barra de baixo (perto do relógio)</li>
+          <li>Faça login com seu e-mail Microsoft</li>
+          <li>Marque a opção <strong>Fotos</strong> para sincronizar</li>
+          <li>Pronto — toda foto nova vai para a nuvem automaticamente</li>
+        </ol>
+
+        <h2>Dica de Ouro: Faça Dois Backups</h2>
+        <p>Especialistas recomendam a regra <strong>3-2-1</strong>: três cópias, em dois lugares diferentes, sendo uma fora de casa (nuvem). Assim, mesmo que tudo dê errado, suas fotos estão seguras.</p>
+
+        <h2>Ajuda Profissional</h2>
+        <p>Não conseguiu? A O Técnico de Informática faz backup completo em sua casa, configura nuvem e ainda recupera fotos de HDs com defeito. Atendemos Curitiba, São José dos Pinhais e região via WhatsApp.</p>
+
+      </>
+    ),
+  },
   "como-instalar-impressora-windows-passo-a-passo": {
     title: "Instalar impressora no Windows: por que ela some da rede e como deixar a instalação estável",
     excerpt:
@@ -9936,444 +9894,128 @@ crontab -e
     ),
   },
 
-  "como-resetar-senha-windows": {
-    title: "Esqueceu a senha do Windows? Como recuperar o acesso pelos métodos oficiais",
-    excerpt:
-      "Como diferenciar PIN, senha da conta Microsoft e senha local, usar os fluxos oficiais de recuperação do Windows e saber quando parar — sem bypass de autenticação.",
-    date: "2026-09-25",
-    readTime: "11 min",
-    category: "Windows e Segurança",
-    content: (
-      <>
-        <p className="lead">
-          “Esqueci a senha do Windows” pode significar três coisas diferentes: você esqueceu o <strong>PIN do dispositivo</strong>,
-          a <strong>senha da conta Microsoft</strong> ou a <strong>senha de uma conta local</strong>. O método correto
-          depende dessa identificação. Este guia usa apenas caminhos oficiais de recuperação e não ensina a
-          contornar a autenticação de outra pessoa.
-        </p>
-
-        <h2>Resposta curta</h2>
-        <p>
-          Na tela de entrada, verifique qual opção de credencial está selecionada. Para conta Microsoft, use
-          “Esqueci minha senha”/recuperação da conta e confirme sua identidade pelos canais cadastrados. Para conta
-          local, use “Redefinir senha” e responda às perguntas de segurança, ou um disco de redefinição criado
-          anteriormente. Em computador de empresa/escola, procure o administrador. Se o disco estiver protegido
-          por BitLocker e o Windows pedir a chave de recuperação, localize essa chave antes de qualquer reinstalação.
-        </p>
-
-        <h2>1. PIN não é a mesma coisa que senha</h2>
-        <p>
-          O PIN do Windows Hello é uma credencial do dispositivo. Na tela de entrada, abra <strong>Opções de entrada</strong>
-          para verificar se você está tentando PIN ou senha. Se você lembra a senha da conta, mas esqueceu o PIN,
-          use o fluxo de recuperação do próprio Windows Hello em vez de alterar a senha sem necessidade.
-        </p>
-
-        <h2>2. Se o Windows usa uma conta Microsoft</h2>
-        <p>
-          A Microsoft oferece recuperação pela tela de entrada e também pela página oficial de redefinição. O
-          processo exige verificar a identidade por um método cadastrado. Faça a recuperação em dispositivo e
-          conexão confiáveis, confira o endereço antes de digitar códigos e nunca compartilhe o código de
-          verificação com “suporte” por mensagem ou telefone.
-        </p>
-        <ol>
-          <li>Escolha a opção de senha na tela de entrada.</li>
-          <li>Selecione “Esqueci minha senha” quando disponível.</li>
-          <li>Siga a verificação de identidade.</li>
-          <li>Crie uma nova senha exclusiva.</li>
-          <li>Volte ao PC, conecte-o à internet e tente o login novamente.</li>
-        </ol>
-
-        <h2>3. Se é uma conta local</h2>
-        <p>
-          Para contas locais configuradas com perguntas de segurança, o Windows oferece <strong>Redefinir senha</strong>
-          na tela de entrada depois de uma tentativa inválida. Responda às perguntas definidas para aquela conta.
-          Se você criou anteriormente um disco de redefinição de senha, ele também pode ser usado para aquela
-          conta local.
-        </p>
-        <p>
-          Um disco de redefinição é preventivo: precisa ter sido criado enquanto você ainda tinha acesso. Não é
-          um pendrive genérico baixado da internet.
-        </p>
-
-        <h2>4. Computador de empresa ou escola</h2>
-        <p>
-          Em dispositivo gerenciado, domínio, Entra ID ou políticas corporativas podem controlar o login. Não
-          tente “tomar posse” da conta local nem alterar arquivos de sistema para burlar a tela. O responsável de
-          TI precisa seguir o processo de identidade da organização e preservar auditoria, criptografia e acesso
-          aos dados corporativos.
-        </p>
-
-        <h2>5. E se houver outra conta administradora?</h2>
-        <p>
-          Outra conta administradora legítima pode gerenciar algumas contas locais, mas isso não recupera a senha
-          antiga nem descriptografa dados protegidos por credenciais/chaves que aquela conta não possui. Antes de
-          alterar uma conta, confirme propriedade do equipamento, impacto sobre arquivos criptografados e se há
-          políticas de empresa.
-        </p>
-
-        <h2>6. BitLocker: senha do Windows e chave de recuperação são coisas diferentes</h2>
-        <p>
-          Se o Windows entra no ambiente de recuperação e solicita uma chave BitLocker, não improvise. A chave
-          protege o volume criptografado e deve ser localizada nos locais onde foi salva pela conta ou organização.
-          Redefinir a senha de login não substitui a chave do BitLocker.
-        </p>
-        <p>
-          Antes de formatar ou limpar o disco, confirme se há dados sem cópia e se a chave pode ser recuperada.
-          Veja <Link to="/seguranca-dos-dados" className="text-accent">segurança dos dados</Link> e
-          {" "}<Link to="/blog/como-fazer-backup-fotos-windows-iniciantes" className="text-accent">backup no Windows</Link>.
-        </p>
-
-        <h2>O que NÃO fazer</h2>
-        <ul>
-          <li>Não substituir executáveis de acessibilidade, arquivos de sistema ou registro para abrir um prompt na tela de login.</li>
-          <li>Não usar “removedores de senha” de origem desconhecida.</li>
-          <li>Não entregar códigos de verificação ou chave BitLocker a terceiros não autorizados.</li>
-          <li>Não formatar antes de avaliar dados que existem apenas naquele disco.</li>
-          <li>Não tratar conta corporativa como conta pessoal.</li>
-        </ul>
-
-        <h2>Quando parar</h2>
-        <p>
-          Pare se você não consegue comprovar/validar a conta, se o equipamento não é seu, se a máquina é
-          gerenciada por uma organização, se o BitLocker exige uma chave ausente ou se existem dados importantes
-          sem backup. Nesses casos, o objetivo não é “forçar entrada”: é preservar dados e usar o canal de
-          recuperação autorizado.
-        </p>
-
-        <h2>Checklist de decisão</h2>
-        <ul>
-          <li>Identifiquei se estou usando PIN, conta Microsoft ou conta local.</li>
-          <li>Estou no equipamento e conta que tenho autorização para recuperar.</li>
-          <li>Usei a recuperação oficial da Microsoft/Windows.</li>
-          <li>Não executei bypass de autenticação.</li>
-          <li>Confirmei a situação do BitLocker antes de reinstalar.</li>
-          <li>Se for corporativo, envolvi o administrador responsável.</li>
-        </ul>
-
-        <h2>Glossário rápido</h2>
-        <ul>
-          <li><strong>PIN do Windows Hello:</strong> credencial vinculada ao dispositivo para entrada local.</li>
-          <li><strong>Conta Microsoft:</strong> identidade online usada em serviços Microsoft e, quando configurado, no login do Windows.</li>
-          <li><strong>Conta local:</strong> conta armazenada no próprio Windows, sem depender de uma identidade Microsoft para o login.</li>
-          <li><strong>BitLocker:</strong> criptografia de volume que pode exigir chave de recuperação em determinados eventos.</li>
-        </ul>
-
-        <h2>Perguntas frequentes</h2>
-        <h3>O suporte consegue me dizer minha senha antiga?</h3>
-        <p>
-          Não. A recuperação redefine a credencial depois da verificação adequada; não existe procedimento
-          legítimo de suporte para revelar uma senha esquecida.
-        </p>
-        <h3>Formatar resolve?</h3>
-        <p>
-          Reinstalar o sistema pode remover o bloqueio ao apagar a instalação, mas também pode destruir dados e
-          configurações. É última alternativa, não método de recuperação de senha.
-        </p>
-        <h3>Posso usar um tutorial que troca utilman.exe por cmd.exe?</h3>
-        <p>
-          Este portal não recomenda bypass de autenticação por alteração de arquivos do sistema. Use os métodos
-          oficiais de recuperação ou o administrador autorizado.
-        </p>
-
-        <p>
-          Se o problema evoluiu para falha de inicialização, siga o guia de
-          <Link to="/blog/windows-reparo-automatico-em-loop" className="text-accent"> Windows em loop de reparo</Link>.
-          Para a visão completa de sistema, use o
-          <Link to="/guia-tecnico-informatica#tema-sistemas-operacionais" className="text-accent"> Atlas de sistemas operacionais</Link>.
-        </p>
-        <EditorialReferences slug="como-resetar-senha-windows" />
-      </>
-    ),
-  },
-
-
   "como-organizar-arquivos-windows-iniciantes": {
-    title: "Como organizar arquivos no Windows 11 sem perder documentos: método prático",
-    excerpt:
-      "Um método seguro para organizar pastas e documentos no Windows 11: estrutura, nomes, busca, Acesso Rápido, OneDrive, backup e cuidados antes de mover muitos arquivos.",
-    date: "2026-09-25",
-    readTime: "12 min",
-    category: "Windows",
+    title: "Como Organizar Arquivos no Windows 11: Método Simples Para Achar Tudo Rápido",
+    excerpt: "Aprenda como organizar pastas, documentos e fotos no Windows 11 com um método prático que nunca mais vai te deixar perder arquivos.",
+    date: "2026-04-29",
+    readTime: "6 min",
+    category: "Tutoriais Domésticos",
     content: (
       <>
-        <p className="lead">
-          Organizar arquivos não é “limpar a tela”: é criar um sistema em que você saiba <strong>onde salvar,
-          como nomear, como encontrar e como recuperar</strong> um documento. No Windows 11, o Explorador de
-          Arquivos já oferece pastas de usuário, pesquisa, Acesso Rápido e integração com nuvem. O trabalho
-          importante é definir uma estrutura simples e não mover tudo de uma vez sem conferir cópias e
-          sincronização.
-        </p>
+        <p className="lead">Área de trabalho cheia de arquivos? Documentos espalhados? Aprenda a organizar de um jeito simples que vai durar para sempre.</p>
 
-        <h2>Resposta curta</h2>
-        <p>
-          Use poucas pastas principais, crie subpastas por assunto ou projeto, dê nomes previsíveis aos arquivos,
-          arquive versões antigas em vez de espalhá-las e use a pesquisa do Explorador quando não lembrar o
-          caminho. Antes de reorganizar centenas de itens, confirme uma cópia dos arquivos importantes e saiba
-          se Área de Trabalho, Documentos ou Imagens estão sendo sincronizados pelo OneDrive.
-        </p>
+        <h2>Use as Pastas Que o Windows Já Criou</h2>
+        <p>O Windows tem pastas prontas para você: <strong>Documentos, Imagens, Vídeos, Downloads</strong>. Aproveite-as em vez de jogar tudo na Área de Trabalho.</p>
 
-        <h2>1. Primeiro descubra onde seus arquivos realmente estão</h2>
-        <p>
-          Abra o Explorador com <strong>Windows + E</strong> e confira Área de Trabalho, Documentos, Downloads,
-          Imagens e a pasta do OneDrive, se existir. O Windows também pode mostrar arquivos locais e de nuvem na
-          mesma interface. Antes de mover qualquer coisa, responda: este arquivo está só no computador, está
-          sincronizado, está “somente online” ou já existe em outro backup?
-        </p>
-        <p>
-          Essa distinção evita um erro comum: mover ou apagar um item achando que existe outra cópia quando, na
-          prática, existe apenas uma versão sincronizada.
-        </p>
-
-        <h2>2. Escolha uma estrutura pequena que responda “onde isso pertence?”</h2>
-        <p>Uma estrutura doméstica simples pode começar assim:</p>
-        <ul>
-          <li><strong>Documentos/Pessoal</strong> — documentos particulares e comprovantes.</li>
-          <li><strong>Documentos/Trabalho</strong> — projetos e arquivos profissionais.</li>
-          <li><strong>Documentos/Financeiro</strong> — notas, recibos e documentos tributários.</li>
-          <li><strong>Imagens/Fotos</strong> — fotos separadas por ano, evento ou tema.</li>
-          <li><strong>Arquivo</strong> — material encerrado que precisa ser guardado, mas não usado diariamente.</li>
-        </ul>
-        <p>
-          Evite criar dez níveis de subpastas. Se você precisa abrir muitas pastas para chegar a um documento,
-          provavelmente a estrutura está específica demais. A regra útil é: cada arquivo deve ter um destino
-          previsível sem exigir memória perfeita.
-        </p>
-
-        <h2>3. Nomeie para pesquisar, não para decorar</h2>
-        <p>
-          Bons nomes incluem o contexto que você pesquisaria depois. Em vez de <code>documento-final2.pdf</code>,
-          prefira algo como <code>2026-09-cliente-contrato-assinado.pdf</code>. Para arquivos recorrentes,
-          <strong>AAAA-MM</strong> no início ajuda a ordenar cronologicamente sem depender da data interna do
-          arquivo.
-        </p>
-        <ul>
-          <li>Use palavras que diferenciem o documento de outros parecidos.</li>
-          <li>Evite “novo”, “final”, “final-final” como único controle de versão.</li>
-          <li>Quando houver revisão, use um padrão simples, como <code>v01</code>, <code>v02</code> ou data.</li>
-          <li>Não renomeie extensões como <code>.docx</code>, <code>.xlsx</code> ou <code>.jpg</code> manualmente.</li>
-        </ul>
-
-        <h2>4. Use a pesquisa e o Acesso Rápido do Explorador</h2>
-        <p>
-          A Microsoft permite pesquisar pela barra de tarefas ou pelo próprio Explorador. Se você sabe parte do
-          nome, extensão ou pasta provável, pesquisar costuma ser mais rápido do que navegar por árvore de
-          diretórios. Pastas usadas todo dia podem ser fixadas no Acesso Rápido; isso cria um atalho, não uma
-          segunda cópia.
-        </p>
-
-        <h2>5. Downloads é caixa de entrada, não arquivo definitivo</h2>
-        <p>
-          A pasta Downloads acumula instaladores, PDFs, imagens e anexos sem contexto. Crie uma rotina: abra,
-          decida se precisa guardar, mova para a pasta definitiva ou exclua o que é descartável. Antes de apagar
-          em massa, ordene por tipo e data e confira itens sem nome claro.
-        </p>
-
-        <h2>6. OneDrive: entenda sincronização antes de reorganizar</h2>
-        <p>
-          O Windows pode fazer backup/sincronização de pastas conhecidas como Área de Trabalho, Documentos e
-          Imagens pelo OneDrive. Mudanças feitas em arquivos sincronizados podem se refletir na nuvem e em outros
-          dispositivos. Por isso, uma grande reorganização deve ser feita com atenção ao estado da sincronização
-          e ao espaço disponível.
-        </p>
-        <p>
-          Sincronização melhora disponibilidade, mas não substitui sozinha uma estratégia de backup independente.
-          Para arquivos que não podem ser perdidos, mantenha uma segunda cópia e teste a restauração. Veja
-          <Link to="/blog/como-fazer-backup-fotos-windows-iniciantes" className="text-accent"> como fazer backup de fotos no Windows</Link>
-          {" "}e <Link to="/blog/como-testar-restauracao-de-backup" className="text-accent">como testar a restauração</Link>.
-        </p>
-
-        <h2>7. Como organizar um computador já bagunçado</h2>
+        <h2>Crie Subpastas Por Assunto</h2>
         <ol>
-          <li>Faça uma cópia dos arquivos insubstituíveis.</li>
-          <li>Mapeie Documentos, Área de Trabalho, Downloads, Imagens e OneDrive.</li>
-          <li>Crie de quatro a seis pastas principais.</li>
-          <li>Mova primeiro arquivos fáceis de reconhecer.</li>
-          <li>Separe uma pasta <strong>Revisar</strong> para itens duvidosos; não apague por impulso.</li>
-          <li>Renomeie lotes pequenos e confira se os arquivos ainda abrem.</li>
-          <li>Só depois remova duplicatas confirmadas.</li>
+          <li>Abra <strong>Documentos</strong></li>
+          <li>Clique com o botão direito numa área vazia → <strong>Novo → Pasta</strong></li>
+          <li>Dê um nome claro: 'Trabalho', 'Família', 'Banco', 'Receitas'</li>
+          <li>Dentro de 'Trabalho' crie outras: 'Contratos 2026', 'Notas fiscais'</li>
+          <li>Arraste seus arquivos soltos para dentro das pastas certas</li>
         </ol>
 
-        <h2>O que não fazer</h2>
-        <ul>
-          <li>Não mover pastas de programas, <code>Windows</code>, <code>Program Files</code> ou perfis ocultos para “organizar espaço”.</li>
-          <li>Não usar limpadores automáticos para decidir quais documentos pessoais podem ser apagados.</li>
-          <li>Não fazer reorganização em massa enquanto o disco apresenta erros, desconexões ou ruído anormal.</li>
-          <li>Não assumir que “está na nuvem” significa que existe uma versão recuperável para qualquer exclusão.</li>
-          <li>Não excluir duplicatas apenas pelo nome; compare tamanho, conteúdo e data quando o arquivo for importante.</li>
-        </ul>
+        <h2>Renomeie Arquivos com Datas</h2>
+        <p>Em vez de 'Documento1.pdf' use <strong>'2026-04-Conta-Luz.pdf'</strong>. O ano-mês na frente faz tudo ficar em ordem cronológica automaticamente.</p>
 
-        <h2>Quando parar e preservar antes de mexer</h2>
-        <p>
-          Pare se o disco estiver muito lento de forma anormal, desaparecendo do sistema, produzindo erros de
-          leitura ou se você encontrar arquivos que não abrem. Nessa situação, organização deixa de ser prioridade;
-          primeiro preserve os dados. Use a trilha de <Link to="/servicos/recuperacao-de-dados" className="text-accent">recuperação de dados</Link>
-          {" "}ou o guia de <Link to="/blog/arquivo-corrompido-nao-abre-o-que-fazer" className="text-accent">arquivo corrompido</Link>.
-        </p>
+        <h2>Use a Busca do Windows</h2>
+        <p>Aperte a tecla <strong>Windows</strong> e comece a digitar o nome do arquivo. Ele aparece em segundos. Por isso bons nomes ajudam tanto.</p>
 
-        <h2>Checklist final</h2>
-        <ul>
-          <li>Cada categoria importante tem uma pasta previsível.</li>
-          <li>Os nomes permitem identificar o arquivo sem abri-lo.</li>
-          <li>Downloads não é usado como arquivo permanente.</li>
-          <li>Pastas frequentes estão no Acesso Rápido.</li>
-          <li>Você sabe quais pastas estão sincronizadas.</li>
-          <li>Arquivos críticos têm cópia adicional e restauração verificável.</li>
-        </ul>
+        <h2>Limpe a Área de Trabalho</h2>
+        <p>A Área de Trabalho deveria ter no máximo 10 ícones. Mova tudo para Documentos. PC mais limpo = PC mais rápido.</p>
 
-        <h2>Glossário rápido</h2>
-        <ul>
-          <li><strong>Acesso Rápido:</strong> atalhos para pastas frequentes no Explorador.</li>
-          <li><strong>Sincronização:</strong> propagação de alterações entre dispositivos e nuvem.</li>
-          <li><strong>Backup:</strong> cópia destinada à recuperação depois de perda, falha ou erro.</li>
-          <li><strong>Arquivo somente online:</strong> item visível no Explorador cujo conteúdo pode estar apenas na nuvem até ser aberto.</li>
-        </ul>
+        <h2>Faça Backup Depois de Organizar</h2>
+        <p>Agora que está organizado, faça backup (veja nosso guia de backup de fotos). Se precisar de ajuda, a O Técnico de Informática organiza seus arquivos e configura backup automático em casa.</p>
 
-        <h2>Perguntas frequentes</h2>
-        <h3>Muitos ícones na Área de Trabalho deixam o computador lento?</h3>
-        <p>
-          Não use isso como regra de diagnóstico. Uma Área de Trabalho cheia dificulta encontrar documentos, mas
-          lentidão persistente deve ser investigada por CPU, memória, disco, inicialização e temperatura. Veja
-          <Link to="/blog/como-deixar-windows-11-mais-rapido-iniciantes" className="text-accent"> o diagnóstico de desempenho do Windows 11</Link>.
-        </p>
-        <h3>Posso mover a pasta Documentos inteira para outro disco?</h3>
-        <p>
-          É possível alterar locais de pastas em alguns cenários, mas faça isso pelo mecanismo suportado pelo
-          Windows/aplicativo e depois de entender sincronização e permissões. Arrastar pastas de sistema de forma
-          improvisada pode quebrar atalhos e aplicativos.
-        </p>
-        <h3>Organizar arquivos substitui backup?</h3>
-        <p>Não. Organização facilita localizar; backup existe para recuperar.</p>
-
-        <p>
-          Para conectar organização, manutenção, backup e segurança numa mesma visão, continue pelo
-          <Link to="/guia-tecnico-informatica#tema-dados-backup" className="text-accent"> Atlas de dados e backup</Link>.
-        </p>
-        <EditorialReferences slug="como-organizar-arquivos-windows-iniciantes" />
       </>
     ),
   },
-
-"como-atualizar-windows-corretamente": {
-    title: "Como atualizar o Windows 11 com segurança e o que fazer quando falha",
-    excerpt:
-      "Passo a passo para preparar, instalar e validar atualizações do Windows 11, com backup, energia, espaço, reinício e diagnóstico oficial quando o Windows Update apresenta erro.",
-    date: "2026-09-25",
-    readTime: "10 min",
-    category: "Windows",
+  "como-atualizar-windows-corretamente": {
+    title: "Como Atualizar o Windows 11 Sem Travar: Guia Seguro 2026",
+    excerpt: "Atualização do Windows travando ou dando erro? Aprenda como atualizar o Windows 11 corretamente. Suporte técnico em Curitiba se precisar.",
+    date: "2026-04-29",
+    readTime: "6 min",
+    category: "Tutoriais Domésticos",
     content: (
       <>
-        <p className="lead">Atualizar o Windows é rotina de manutenção, não procedimento de emergência. O caminho seguro é preparar os dados e a máquina, usar o Windows Update, deixar o processo concluir e validar o sistema depois. Quando aparece erro, a prioridade é registrar o código e usar a solução de problemas oficial antes de apagar cache, executar comandos ou forçar desligamentos.</p>
+        <p className="lead">Atualizar o Windows é importante para segurança, mas no momento errado vira pesadelo. Veja como fazer com tranquilidade.</p>
 
-        <h2>Resposta curta</h2>
-        <p>Salve o trabalho, confirme backup dos arquivos importantes, mantenha notebook conectado à energia e verifique se há espaço disponível. Em Windows 11, abra Configurações → Windows Update → Verificar se há atualizações. Instale o que for aplicável e reinicie quando solicitado. Se falhar, anote o código/etapa e execute a solução de problemas do Windows Update pelo aplicativo Obter Ajuda.</p>
-
-        <h2>1. Antes da atualização</h2>
+        <h2>Quando Atualizar</h2>
         <ul>
-          <li>Salve documentos e feche tarefas críticas.</li>
-          <li>Confirme uma cópia dos arquivos que não podem ser perdidos.</li>
-          <li>Conecte notebook à fonte de energia.</li>
-          <li>Garanta espaço livre suficiente para download e arquivos temporários.</li>
-          <li>Se o disco usa BitLocker, saiba onde está a chave de recuperação antes de mudanças maiores de firmware ou sistema.</li>
-        </ul>
-        <p>Não existe um tempo fixo de “uma ou duas horas” para toda atualização. O tempo varia por pacote, conexão, armazenamento e hardware.</p>
-
-        <h2>2. Use o Windows Update como canal principal</h2>
-        <p>Abra <strong>Configurações → Windows Update</strong> e verifique atualizações. O sistema pode oferecer atualizações de qualidade, recursos e itens opcionais. Leia o que está sendo instalado e reinicie quando necessário. Drivers críticos específicos também podem ser obtidos do fabricante do computador quando houver orientação para isso.</p>
-
-        <h2>3. Reinício: espere pelo estado, não por um cronômetro universal</h2>
-        <p>Durante a instalação, o PC pode reiniciar mais de uma vez e ficar alguns períodos sem mudança aparente. Evite cortar energia enquanto há atividade de atualização. Se a máquina realmente congelar, primeiro observe sinais de atividade, mensagens e tempo decorrido. Um desligamento forçado no meio da gravação pode transformar uma atualização lenta em um sistema que não inicia.</p>
-        <p>Se houver mensagem de erro ou reversão automática, registre exatamente o texto/código antes de tentar outra coisa.</p>
-
-        <h2>4. Horário ativo reduz interrupções</h2>
-        <p>O Windows permite configurar horário ativo e opções de reinicialização para diminuir reinícios inconvenientes. Isso não impede atualizações para sempre; serve para adaptar a manutenção à sua rotina. Em empresas, políticas de atualização devem ser coordenadas com janelas e sistemas críticos.</p>
-
-        <h2>5. Quando o Windows Update dá erro</h2>
-        <p>A Microsoft orienta começar pelo solucionador do Windows Update no aplicativo <strong>Obter Ajuda</strong> e, se necessário, seguir as etapas gerais do suporte. Faça uma tentativa por vez e teste novamente. Evite copiar comandos agressivos de páginas aleatórias antes de entender o erro.</p>
-        <p>O portal também mantém uma trilha específica em <Link to="/blog/windows-update-nao-funciona-o-que-verificar" className="text-accent">Windows Update não funciona: o que verificar</Link>.</p>
-
-        <h2>6. Atualização opcional não é obrigação automática</h2>
-        <p>Atualizações opcionais e drivers devem ser avaliados pelo problema que resolvem. Se um computador está estável, não é necessário instalar um driver aleatório apenas porque tem número mais novo. Prefira Windows Update e fabricante do equipamento e mantenha um ponto claro de retorno quando a mudança afeta hardware essencial.</p>
-
-        <h2>7. Depois de atualizar, valide</h2>
-        <ul>
-          <li>Confirme que o Windows inicia normalmente.</li>
-          <li>Teste rede, áudio, vídeo, impressão e periféricos importantes.</li>
-          <li>Abra os aplicativos usados no trabalho.</li>
-          <li>Confira novamente o Windows Update para saber se há etapa pendente.</li>
-          <li>Se surgiu erro novo, registre quando começou e qual atualização precedeu o sintoma.</li>
+          <li>Quando você tem 1-2 horas livres</li>
+          <li>Com o notebook na tomada</li>
+          <li>Internet boa e estável</li>
+          <li>Sem trabalho urgente para entregar</li>
         </ul>
 
-        <h2>Quando parar</h2>
-        <p>Interrompa a sequência de tentativas se o Windows não inicia, o disco apresenta falha, a máquina entra em loop de reparo, o BitLocker pede uma chave que você não possui ou a atualização afetou um ambiente de produção sem plano de retorno. Nesses cenários, preservar dados e capacidade de recuperação vem antes de “terminar a atualização”.</p>
-
-        <p>Para loops pós-atualização, veja <Link to="/blog/windows-update-travado-desfazendo-alteracoes" className="text-accent">Windows Update travado ou desfazendo alterações</Link>. Para a visão geral, use o <Link to="/guia-tecnico-informatica#tema-sistemas-operacionais" className="text-accent">Atlas de sistemas operacionais</Link>.</p>
-        <EditorialReferences slug="como-atualizar-windows-corretamente" />
-      </>
-    ),
-  },
-
-  
-"como-recuperar-arquivos-apagados-windows": {
-    title: "Como recuperar arquivos apagados no Windows sem reduzir a chance de recuperação",
-    excerpt:
-      "Lixeira, versões de backup e Windows File Recovery: a ordem segura para tentar recuperar arquivos apagados e por que você deve reduzir o uso do disco após a exclusão.",
-    date: "2026-09-25",
-    readTime: "10 min",
-    category: "Backup e Dados",
-    content: (
-      <>
-        <p className="lead">Quando um arquivo importante é apagado, a primeira medida é <strong>evitar novas gravações na unidade</strong>. Instalar programas, baixar arquivos ou continuar usando o computador pode ocupar o espaço onde os dados apagados ainda estavam recuperáveis. A Microsoft faz a mesma recomendação para o Windows File Recovery: minimizar ou evitar o uso do computador aumenta a chance de recuperação.</p>
-
-        <h2>Resposta curta: tente nesta ordem</h2>
+        <h2>Passo a Passo</h2>
         <ol>
-          <li>Verifique Lixeira e lixeira do serviço de nuvem, se aplicável.</li>
-          <li>Procure uma cópia em backup ou Histórico de Arquivos.</li>
-          <li>Se não houver cópia, pare de gravar no disco e considere o Windows File Recovery ou ferramenta apropriada, salvando o resultado em outra unidade.</li>
-          <li>Se o disco falha, desconecta ou faz ruído anormal, pare as tentativas domésticas e preserve a mídia.</li>
+          <li>Salve e feche todos os programas abertos</li>
+          <li>Vá em <strong>Configurações → Windows Update</strong></li>
+          <li>Clique em <strong>Verificar atualizações</strong></li>
+          <li>Espere baixar (pode demorar)</li>
+          <li>Quando aparecer 'Reiniciar agora', clique e <strong>NÃO desligue</strong> o PC enquanto estiver instalando</li>
         </ol>
 
-        <h2>1. Lixeira: restauração sem varredura</h2>
-        <p>Se o arquivo ainda está na Lixeira, restaure por ali. O Windows devolve o item à localização original. Se ele estava em uma pasta sincronizada com nuvem, confira também a lixeira e o histórico do serviço, porque o estado pode não ser igual ao da Lixeira local.</p>
+        <h2>Se Travar</h2>
+        <p>Espere pelo menos 2 horas antes de fazer qualquer coisa. Atualizações grandes parecem travadas mas estão trabalhando. Se passar disso, force desligar (segurar o botão por 10 segundos), ligue de novo e o Windows volta sozinho.</p>
 
-        <h2>2. Backup e versões anteriores vêm antes da recuperação forense</h2>
-        <p>Se você usa Histórico de Arquivos ou outro sistema de backup, prefira restaurar uma cópia conhecida. O Histórico de Arquivos permite recuperar versões anteriores quando a proteção já estava configurada. Isso é mais previsível do que varrer espaço não alocado de um disco.</p>
-        <p>Consulte <Link to="/blog/historico-de-arquivos-windows-como-configurar" className="text-accent">Histórico de Arquivos no Windows</Link> e <Link to="/blog/como-testar-restauracao-de-backup" className="text-accent">como testar uma restauração</Link>.</p>
+        <h2>Programe o Horário</h2>
+        <p>Em <strong>Windows Update → Opções avançadas → Horário ativo</strong> diga ao Windows quando você usa o PC. Ele só atualiza fora desse horário.</p>
 
-        <h2>3. Windows File Recovery: quando não há backup</h2>
-        <p>A Microsoft oferece o Windows File Recovery para tentar recuperar arquivos apagados de armazenamento local que não estão mais na Lixeira. É uma ferramenta de linha de comando e o resultado depende do tipo de sistema de arquivos, do tempo e do quanto a unidade foi usada depois da exclusão.</p>
-        <p>A regra crítica é usar <strong>outra unidade como destino</strong>. Recuperar para o mesmo disco pode sobrescrever justamente os dados que ainda poderiam ser encontrados.</p>
+        <h2>Atualização Não Funciona</h2>
+        <p>Erros recorrentes (códigos como 0x80070002) podem indicar problema de disco ou arquivos corrompidos. A O Técnico de Informática resolve em domicílio em Curitiba sem perder seus dados.</p>
 
-        <h2>4. SSD muda o cenário</h2>
-        <p>Em SSDs, recursos de gerenciamento de blocos como TRIM podem tornar a recuperação de arquivos apagados mais difícil ou impossível após o sistema informar que aqueles blocos não são mais necessários. Por isso não existe promessa honesta de recuperação. Quanto menos você escrever na unidade após perceber a exclusão, melhor para qualquer tentativa subsequente.</p>
-
-        <h2>5. O que não fazer depois de apagar algo importante</h2>
-        <ul>
-          <li>Não instale a ferramenta de recuperação no mesmo disco que perdeu o arquivo.</li>
-          <li>Não baixe jogos, vídeos ou atualizações grandes “enquanto procura”.</li>
-          <li>Não desfragmente nem faça limpeza agressiva.</li>
-          <li>Não formate novamente para tentar “corrigir” a unidade.</li>
-          <li>Não continue ligando um HD que apresenta ruído mecânico ou desconexões.</li>
-        </ul>
-
-        <h2>6. Formatação acidental e disco defeituoso são casos diferentes</h2>
-        <p>Exclusão de arquivo em disco saudável é diferente de partição formatada, sistema de arquivos danificado ou mídia com defeito físico. Em disco que apresenta SMART crítico, lentidão extrema ou falha de leitura, priorize imagem/clonagem técnica e preservação, não varreduras repetidas. Veja <Link to="/servicos/recuperacao-de-dados" className="text-accent">recuperação de dados</Link> para entender o limite entre tentativa lógica e problema de mídia.</p>
-
-        <h2>Checklist antes de qualquer tentativa</h2>
-        <ul>
-          <li>Unidade onde o arquivo estava identificada.</li>
-          <li>Lixeira local e da nuvem verificadas.</li>
-          <li>Backups/Histórico de Arquivos consultados.</li>
-          <li>Uso da unidade reduzido.</li>
-          <li>Outra unidade preparada para receber arquivos recuperados.</li>
-          <li>Sinais de falha física avaliados antes de varrer.</li>
-        </ul>
-
-        <p>Depois de recuperar o que for possível, elimine o ponto único de falha com o <Link to="/guia-tecnico-informatica#tema-dados-backup" className="text-accent">Atlas de dados e backup</Link>.</p>
-        <EditorialReferences slug="como-recuperar-arquivos-apagados-windows" />
       </>
     ),
   },
+  "como-recuperar-arquivos-apagados-windows": {
+    title: "Como Recuperar Arquivos Apagados no Windows 11: 3 Métodos Que Funcionam",
+    excerpt: "Apagou um arquivo importante? Aprenda como recuperar arquivos deletados no Windows com Recuva, lixeira e histórico. Recuperação profissional em Curitiba.",
+    date: "2026-04-29",
+    readTime: "7 min",
+    category: "Tutoriais Domésticos",
+    content: (
+      <>
+        <p className="lead">Apagar arquivo importante por engano acontece com todo mundo. Não entre em pânico — na maioria das vezes dá para recuperar.</p>
 
+        <h2>Método 1: Lixeira (O Mais Óbvio)</h2>
+        <ol>
+          <li>Abra a <strong>Lixeira</strong> (ícone na Área de Trabalho)</li>
+          <li>Procure seu arquivo (use a busca no canto superior se tiver muita coisa)</li>
+          <li>Clique com botão direito → <strong>Restaurar</strong></li>
+          <li>Ele volta para o lugar original</li>
+        </ol>
+
+        <h2>Método 2: Recuva (Quando Esvaziou a Lixeira)</h2>
+        <p>O Recuva é um programa grátis que recupera arquivos mesmo depois de a Lixeira ser esvaziada — desde que você não tenha gravado muita coisa nova depois.</p>
+        <ol>
+          <li>Acesse <strong>ccleaner.com/recuva</strong> e baixe a versão grátis</li>
+          <li>Instale e abra</li>
+          <li>Escolha o tipo de arquivo (Imagens, Documentos, etc.) e clique <strong>Avançar</strong></li>
+          <li>Selecione onde estava e clique <strong>Iniciar</strong></li>
+          <li>Marque os arquivos com bolinha verde (chance alta de recuperar) e clique <strong>Recuperar</strong></li>
+          <li><strong>SALVE EM OUTRO DRIVE</strong> (pendrive ou HD externo) — não no mesmo lugar</li>
+        </ol>
+
+        <h2>Método 3: Histórico de Arquivos</h2>
+        <p>Se você ativou o backup automático antes (em Configurações → Atualização e Segurança → Backup), pode restaurar versões anteriores.</p>
+        <ol>
+          <li>Clique com botão direito na pasta onde estava o arquivo</li>
+          <li>Escolha <strong>Restaurar versões anteriores</strong></li>
+          <li>Selecione a data e restaure</li>
+        </ol>
+
+        <h2>Regra de Ouro</h2>
+        <p>Quanto MENOS você usar o computador depois de apagar, MAIOR a chance de recuperar. Não instale programas, não baixe arquivos grandes, não desfragmente.</p>
+
+        <h2>Casos Difíceis</h2>
+        <p>HD com defeito, formatação acidental, arquivos muito antigos? A O Técnico de Informática tem ferramentas profissionais de recuperação. Atendemos Curitiba e região — quanto mais rápido, melhor a chance.</p>
+
+      </>
+    ),
+  },
   "como-trocar-papel-de-parede-tela-bloqueio-windows": {
     title: "Como Trocar Papel de Parede e Tela de Bloqueio no Windows 11 (2026)",
     excerpt: "Personalize seu Windows 11 com fotos suas. Veja como trocar o papel de parede e a tela de bloqueio em 3 cliques.",
@@ -11112,168 +10754,54 @@ crontab -e
     ),
   },
   "como-trocar-senha-wifi": {
-    title: "Como trocar a senha do Wi-Fi com segurança sem perder a configuração do roteador",
-    excerpt:
-      "Passo a passo seguro para alterar a senha da rede Wi-Fi, identificar o painel correto, escolher WPA2/WPA3, reconectar dispositivos e saber quando não fazer reset de fábrica.",
-    date: "2026-09-25",
-    readTime: "12 min",
-    category: "Redes e Segurança",
+    title: "Como Trocar a Senha do Wi-Fi: Passo a Passo Para Qualquer Roteador (2026)",
+    excerpt: "Vizinho usando seu Wi-Fi? Aprenda como trocar a senha do Wi-Fi em 5 minutos em qualquer roteador (TP-Link, Intelbras, Vivo, Claro).",
+    date: "2026-04-29",
+    readTime: "5 min",
+    category: "Tutoriais Domésticos",
     content: (
       <>
-        <p className="lead">
-          Trocar a senha do Wi-Fi é uma alteração simples quando você ainda tem acesso administrativo ao roteador.
-          O risco aparece quando a pessoa confunde <strong>senha da rede</strong> com <strong>senha de administração</strong>
-          ou usa o botão de reset sem saber se o equipamento também guarda parâmetros da operadora, telefone,
-          IPTV, VLAN ou modo bridge. O procedimento seguro começa identificando quem administra o equipamento.
-        </p>
+        <p className="lead">Trocar a senha do Wi-Fi é simples e deve ser feito sempre que suspeitar de uso indevido ou tiver compartilhado com alguém que não deveria ter mais acesso.</p>
 
-        <h2>Resposta curta</h2>
-        <p>
-          Entre no aplicativo ou painel oficial do seu roteador/operadora, abra as configurações da rede sem fio,
-          altere a credencial da rede principal, mantenha um modo de segurança moderno compatível — preferencialmente
-          WPA3 quando todos os dispositivos suportarem, ou WPA2/WPA3 conforme o equipamento — salve e reconecte
-          seus aparelhos. Não use credenciais genéricas de sites e não faça reset de fábrica apenas porque esqueceu
-          a senha do painel.
-        </p>
-
-        <h2>1. Descubra se o roteador é seu ou gerenciado pela operadora</h2>
-        <p>
-          Alguns equipamentos são administrados por aplicativo da operadora; outros usam um painel local indicado
-          na etiqueta ou no manual. Não assuma que o endereço é sempre <code>192.168.0.1</code> nem que existe
-          usuário “admin/admin”. Consulte a etiqueta, o aplicativo oficial, o manual do modelo ou a página da
-          operadora.
-        </p>
-        <p>
-          No Windows, informações da conexão ajudam a identificar o gateway da rede, mas o endereço do gateway
-          não substitui a documentação do equipamento e não fornece credenciais administrativas.
-        </p>
-
-        <h2>2. Diferencie três credenciais</h2>
+        <h2>O Que Você Precisa</h2>
         <ul>
-          <li><strong>Senha do Wi-Fi:</strong> usada por celulares, TVs e computadores para entrar na rede.</li>
-          <li><strong>Senha de administrador:</strong> protege o painel que altera configurações do roteador.</li>
-          <li><strong>Conta da operadora/fabricante:</strong> pode controlar o roteador por aplicativo ou nuvem.</li>
-        </ul>
-        <p>
-          Elas não precisam ser iguais — e, por segurança, não deveriam ser reutilizadas. Alterar a senha do Wi-Fi
-          não exige divulgar a senha de administrador a outras pessoas da casa ou empresa.
-        </p>
-
-        <h2>3. Antes de salvar a mudança</h2>
-        <ul>
-          <li>Anote o nome atual da rede (SSID) e quais bandas estão ativas.</li>
-          <li>Confirme que você tem acesso administrativo legítimo ao equipamento.</li>
-          <li>Se o roteador atende trabalho, câmeras, automação ou telefonia, planeje a reconexão desses dispositivos.</li>
-          <li>Evite alterar ao mesmo tempo senha, SSID, canal, largura de canal e modo de segurança; mude uma variável por vez.</li>
+          <li>Estar conectado no Wi-Fi (por cabo ou pelo próprio Wi-Fi atual)</li>
+          <li>Saber o IP do roteador (geralmente 192.168.0.1 ou 192.168.1.1)</li>
+          <li>Senha de administrador (na etiqueta do roteador)</li>
         </ul>
 
-        <h2>4. Altere a senha no painel oficial</h2>
+        <h2>Passo a Passo</h2>
         <ol>
-          <li>Conecte-se ao roteador por cabo, se isso estiver disponível; reduz a chance de perder a sessão durante a troca.</li>
-          <li>Abra o aplicativo/painel oficial e autentique-se como administrador.</li>
-          <li>Localize Wi-Fi, Wireless ou Rede sem fio.</li>
-          <li>Escolha a rede principal e altere a senha.</li>
-          <li>Revise o modo de segurança exibido pelo próprio equipamento.</li>
-          <li>Salve/aplique e aguarde o rádio reiniciar, se o roteador fizer isso.</li>
+          <li>Abra o navegador e digite o IP do roteador na barra</li>
+          <li>Faça login (admin/admin geralmente)</li>
+          <li>Procure menu <strong>Wireless</strong>, <strong>Wi-Fi</strong> ou <strong>Sem fio</strong></li>
+          <li>Clique em <strong>Segurança</strong> ou <strong>Senha</strong></li>
+          <li>Mude a senha para algo forte (12+ caracteres, com letras, números e símbolos)</li>
+          <li>Mantenha o tipo de segurança em <strong>WPA2-PSK</strong> ou <strong>WPA3</strong></li>
+          <li>Salve e aplique</li>
         </ol>
 
-        <h2>5. WPA2, WPA3 e compatibilidade</h2>
-        <p>
-          WPA3 acrescenta proteções ao Wi-Fi moderno, mas equipamentos antigos podem não suportá-lo. Em ambiente
-          misto, o roteador pode oferecer um modo de transição. Não rebaixe para protocolos antigos apenas para
-          manter um dispositivo obsoleto sem antes avaliar o risco; às vezes o melhor é isolar ou substituir esse
-          dispositivo.
-        </p>
-        <p>
-          Para uma rede empresarial, senha compartilhada é só uma parte da segurança. Segmentação, firmware,
-          administração e rede de visitantes também importam. Veja
-          <Link to="/blog/como-proteger-rede-wifi-empresa" className="text-accent"> como proteger o Wi-Fi da empresa</Link>.
-        </p>
+        <h2>Depois de Trocar</h2>
+        <p>Você será desconectado. Reconecte celulares, TV, notebook, câmeras com a nova senha. Anote em local seguro.</p>
 
-        <h2>6. Como escolher uma senha de Wi-Fi</h2>
-        <p>
-          Prefira uma frase longa e exclusiva, que não seja reutilizada em e-mail, banco ou conta Microsoft.
-          Evite endereço, telefone, nome da família e padrões fáceis de adivinhar. Não publicamos uma “senha
-          modelo” porque exemplos públicos viram padrões reutilizados.
-        </p>
-        <p>
-          Guarde a credencial em um gerenciador de senhas ou em local controlado. Se precisa oferecer acesso a
-          visitantes, use a função de rede de convidados quando o roteador fornecer isolamento adequado, em vez de
-          entregar a credencial administrativa ou misturar visitantes com dispositivos internos.
-        </p>
-
-        <h2>7. Depois da troca: reconecte e valide</h2>
+        <h2>Senha Forte É Assim</h2>
         <ul>
-          <li>Reconecte um computador ou celular e confirme navegação.</li>
-          <li>Teste dispositivos importantes: impressora, TV, câmeras e automação.</li>
-          <li>Se usa duas bandas com o mesmo nome, confirme que os dispositivos voltaram a associar normalmente.</li>
-          <li>Em empresa, valide também recursos internos e não apenas acesso à internet.</li>
+          <li>Mínimo 12 caracteres</li>
+          <li>Misture LETRAS maiúsculas e minúsculas</li>
+          <li>Inclua números e símbolos (!@#$)</li>
+          <li>NÃO use nome, data de nascimento ou 'minhacasa123'</li>
+          <li>Exemplo bom: <strong>Curitiba!2026#Casa</strong></li>
         </ul>
 
-        <h2>O que NÃO fazer</h2>
-        <ul>
-          <li>Não usar listas de “login padrão” de sites aleatórios.</li>
-          <li>Não manter a senha administrativa de fábrica quando o equipamento permite alterá-la.</li>
-          <li>Não habilitar administração remota pela internet sem necessidade e controle.</li>
-          <li>Não atualizar firmware de fonte não oficial.</li>
-          <li>Não apertar Reset de fábrica como primeira tentativa para recuperar acesso.</li>
-        </ul>
+        <h2>Esqueci a Senha do Painel?</h2>
+        <p>Aperte e segure o botão <strong>Reset</strong> atrás do roteador por 10 segundos. Volta para configuração de fábrica e você reconfigura. Atenção: vai apagar a senha do Wi-Fi também e voltar para a padrão de etiqueta.</p>
 
-        <h2>Quando o reset de fábrica é perigoso</h2>
-        <p>
-          O reset apaga configurações locais. Em equipamentos do provedor ou ambientes com bridge, VLAN, PPPoE,
-          telefonia, IPTV, IP fixo, regras de porta ou rede corporativa, você pode transformar uma troca de senha
-          em indisponibilidade completa. Se não houver backup/configuração documentada, pare e consulte o suporte
-          do fabricante ou da operadora.
-        </p>
+        <h2>Ajuda Profissional</h2>
+        <p>A O Técnico de Informática configura segurança avançada, rede separada para visitas e reset de roteador em casa em Curitiba — atendimento via WhatsApp.</p>
 
-        <h2>Checklist</h2>
-        <ul>
-          <li>Identifiquei o administrador real do equipamento.</li>
-          <li>Separei senha do Wi-Fi da senha do painel.</li>
-          <li>Usei o aplicativo/manual oficial, não credenciais genéricas.</li>
-          <li>Escolhi uma frase longa e exclusiva.</li>
-          <li>Revisei WPA2/WPA3 conforme compatibilidade.</li>
-          <li>Reconectei e testei os dispositivos críticos.</li>
-          <li>Não fiz reset sem conhecer o impacto.</li>
-        </ul>
-
-        <h2>Glossário rápido</h2>
-        <ul>
-          <li><strong>SSID:</strong> nome anunciado pela rede Wi-Fi.</li>
-          <li><strong>WPA2/WPA3:</strong> famílias de proteção usadas para autenticar e criptografar redes Wi-Fi.</li>
-          <li><strong>Gateway:</strong> equipamento que encaminha tráfego da rede local para outras redes.</li>
-          <li><strong>Firmware:</strong> software interno do roteador, fornecido pelo fabricante/operadora.</li>
-        </ul>
-
-        <h2>Perguntas frequentes</h2>
-        <h3>Trocar a senha expulsa quem já estava conectado?</h3>
-        <p>
-          Os clientes que dependem daquela credencial precisam autenticar novamente. O comportamento exato durante
-          a aplicação varia por roteador; valide os dispositivos após salvar.
-        </p>
-        <h3>Preciso esconder o nome da rede?</h3>
-        <p>
-          Ocultar SSID não substitui autenticação e criptografia fortes. Priorize modo de segurança moderno,
-          credenciais exclusivas, firmware suportado e administração protegida.
-        </p>
-        <h3>O Wi-Fi ficou pior depois da troca; a senha causa lentidão?</h3>
-        <p>
-          A senha em si não explica cobertura fraca. Verifique se outras configurações foram alteradas junto.
-          Para desempenho e cobertura, use o
-          <Link to="/blog/como-fazer-teste-velocidade-internet" className="text-accent"> teste de velocidade com referência por cabo</Link>
-          {" "}e o <Link to="/blog/como-melhorar-sinal-wifi-em-casa" className="text-accent">diagnóstico de sinal Wi-Fi</Link>.
-        </p>
-
-        <p>
-          Para conectar segurança, cobertura e diagnóstico, siga o
-          <Link to="/guia-tecnico-informatica#tema-redes-wifi" className="text-accent"> Atlas de redes e Wi-Fi</Link>.
-        </p>
-        <EditorialReferences slug="como-trocar-senha-wifi" />
       </>
     ),
   },
-
   "como-usar-rede-wifi-para-visitas": {
     title: "Como Criar Rede Wi-Fi de Visitantes: Proteja Sua Senha Principal (2026)",
     excerpt: "Aprenda como criar uma rede Wi-Fi separada para visitas em qualquer roteador, sem dar a senha principal. Configuração ajudada em Curitiba.",
@@ -11314,81 +10842,48 @@ crontab -e
     ),
   },
   "como-configurar-repetidor-wifi": {
-    title: "Como configurar repetidor Wi-Fi sem piorar a rede: posição, WPS e teste",
-    excerpt:
-      "Guia prático para configurar um extensor Wi-Fi, escolher a posição correta, validar sinal e velocidade e saber quando repetidor deixa de ser a solução.",
-    date: "2026-09-25",
-    readTime: "10 min",
-    category: "Redes e Wi-Fi",
+    title: "Como Configurar Repetidor de Wi-Fi: Passo a Passo Simples (Guia 2026)",
+    excerpt: "Comprou um repetidor de Wi-Fi mas não sabe instalar? Aprenda como configurar em 10 minutos. Instalação profissional em Curitiba se preferir.",
+    date: "2026-04-29",
+    readTime: "6 min",
+    category: "Tutoriais Domésticos",
     content: (
       <>
-        <p className="lead">Um repetidor não cria internet nova: ele recebe a rede sem fio existente e tenta retransmiti-la. Por isso a instalação começa pela posição. Se o extensor for colocado justamente onde o Wi-Fi original já chega muito fraco, ele terá pouco sinal de qualidade para repetir. O objetivo é encontrar um ponto intermediário em que o roteador ainda seja recebido de forma estável e, a partir dali, ampliar a cobertura.</p>
+        <p className="lead">Repetidor estende o sinal do roteador para áreas que não pegam. A configuração é simples seguindo este guia.</p>
 
-        <h2>Resposta curta</h2>
-        <p>Configure o repetidor próximo ao roteador, valide que ele entrou na rede correta e só depois leve-o ao ponto definitivo. Use WPS apenas se o roteador e o extensor suportarem o recurso e o fabricante orientar esse fluxo para os modelos envolvidos. Na configuração manual, use o endereço, aplicativo ou QR indicado na etiqueta/manual do próprio equipamento — não uma senha ou URL genérica encontrada em tutorial.</p>
+        <h2>Onde Colocar o Repetidor</h2>
+        <p>O lugar certo é <strong>no meio do caminho</strong> entre o roteador e o lugar onde o sinal é fraco. Não adianta colocar onde você quer o sinal — coloque onde ainda tem sinal médio do roteador.</p>
 
-        <h2>1. Antes de configurar, descubra se o problema é cobertura</h2>
-        <p>Teste a internet perto do roteador e depois no cômodo problemático. Se a conexão já está ruim ao lado do roteador, um repetidor apenas redistribui um problema existente. Nesse caso, verifique primeiro provedor, modem, roteador e interferência. O guia <Link to="/blog/internet-lenta-provedor-ou-roteador" className="text-accent">internet lenta: provedor ou roteador?</Link> mostra essa separação.</p>
-        <p>Se perto do roteador a rede funciona bem e perde qualidade com distância, paredes ou mudança de piso, aí existe um caso real de cobertura.</p>
-
-        <h2>2. Escolha a posição antes de pensar no nome da rede</h2>
-        <p>O melhor ponto costuma ficar entre o roteador e a área sem cobertura, mas não existe uma distância universal. Paredes, lajes, espelhos, móveis metálicos e redes vizinhas mudam bastante o resultado. Use o indicador de sinal do próprio extensor quando disponível e confirme na prática com um celular ou notebook.</p>
-        <ul>
-          <li>Evite esconder o repetidor atrás de TV, rack metálico ou dentro de armário fechado.</li>
-          <li>Prefira tomada livre e posição ventilada.</li>
-          <li>Não escolha o ponto definitivo apenas porque “fica no meio”: teste estabilidade naquele local.</li>
-          <li>Se houver dois andares, experimente posições próximas à circulação entre os pavimentos em vez de assumir que o sinal atravessará a laje bem.</li>
-        </ul>
-
-        <h2>3. Configuração por WPS</h2>
-        <p>Fabricantes como a TP-Link documentam WPS para modelos compatíveis: o extensor fica inicialmente próximo ao roteador, o WPS é acionado no roteador e depois no repetidor dentro da janela indicada pelo fabricante. Os LEDs confirmam quando a associação foi concluída. O procedimento exato varia por modelo, por isso consulte o manual da sua versão de hardware.</p>
+        <h2>Método 1: Botão WPS (Mais Fácil)</h2>
         <ol>
-          <li>Ligue o extensor próximo ao roteador e aguarde inicialização completa.</li>
-          <li>Confirme no manual que os dois equipamentos suportam WPS para esse modo de operação.</li>
-          <li>Acione WPS no roteador e, em seguida, no extensor conforme a janela indicada.</li>
-          <li>Espere o indicador de conexão estabilizar antes de desligar ou mover o aparelho.</li>
-          <li>Leve o extensor ao ponto planejado e valide novamente o indicador de sinal.</li>
+          <li>Plug o repetidor próximo ao roteador (perto, na primeira vez)</li>
+          <li>Espere 1 minuto</li>
+          <li>Aperte o botão <strong>WPS</strong> do roteador</li>
+          <li>Em até 2 minutos, aperte o botão <strong>WPS</strong> do repetidor</li>
+          <li>Espere a luz parar de piscar e ficar fixa</li>
+          <li>Mova o repetidor para o local definitivo</li>
         </ol>
 
-        <h2>4. Configuração manual sem endereço inventado</h2>
-        <p>Quando WPS não está disponível ou você quer controlar SSID e banda, conecte-se à rede inicial do repetidor e use somente o endereço/app informado na etiqueta ou documentação oficial. Alguns modelos abrem um endereço local; outros dependem de aplicativo. Não presuma que “admin/admin” seja a credencial: equipamentos atuais frequentemente exigem a criação de senha administrativa no primeiro acesso.</p>
-        <p>Selecione a rede principal correta, informe a senha e defina o nome da rede estendida. Se o equipamento permite manter o mesmo SSID, isso simplifica a experiência, mas a troca entre pontos depende dos recursos do cliente e da arquitetura da rede; não há garantia de roaming perfeito apenas porque os nomes são iguais.</p>
+        <h2>Método 2: Manual (Quando WPS Não Tem)</h2>
+        <ol>
+          <li>Plug o repetidor e conecte no Wi-Fi dele (nome aparece na etiqueta)</li>
+          <li>Acesse no navegador o endereço da etiqueta (ex: <strong>tplinkrepeater.net</strong>)</li>
+          <li>Faça login (admin geralmente)</li>
+          <li>Escolha sua rede Wi-Fi principal</li>
+          <li>Digite a senha</li>
+          <li>Defina o nome do Wi-Fi do repetidor (pode ser igual ou com '_EXT')</li>
+          <li>Salve e mova para o local</li>
+        </ol>
 
-        <h2>5. 2,4 GHz e 5 GHz</h2>
-        <p>2,4 GHz normalmente alcança mais longe e atravessa obstáculos melhor, enquanto 5 GHz tende a oferecer mais capacidade em distâncias menores. Em repetidores dual band, confira se a ligação com o roteador e a rede entregue ao cliente estão nas bandas esperadas. Um extensor 5 GHz colocado longe demais pode perder o benefício de velocidade; um 2,4 GHz congestionado pode ter boa “barrinha” e desempenho ruim.</p>
+        <h2>Verificando se Funcionou</h2>
+        <p>Vá ao local com sinal fraco e veja se aparece a rede do repetidor. Conecte e teste velocidade. Se ainda fraco, mude o repetidor de lugar.</p>
 
-        <h2>6. Como validar se ficou melhor</h2>
-        <table>
-          <thead><tr><th>Teste</th><th>O que observar</th></tr></thead>
-          <tbody>
-            <tr><td>Perto do roteador</td><td>Cria a referência de velocidade e latência da rede principal</td></tr>
-            <tr><td>No ponto do repetidor</td><td>Confirma que o extensor ainda recebe sinal estável do roteador</td></tr>
-            <tr><td>No cômodo alvo</td><td>Mostra se cobertura e estabilidade realmente melhoraram</td></tr>
-            <tr><td>Durante chamada/vídeo</td><td>Revela quedas e variações que um teste curto de velocidade pode não mostrar</td></tr>
-          </tbody>
-        </table>
-        <p>Compare antes e depois no mesmo aparelho e nos mesmos pontos. Não use apenas o número máximo do teste de velocidade; estabilidade e ausência de quedas importam tanto quanto pico de Mbps.</p>
+        <h2>Limites do Repetidor</h2>
+        <p>Repetidor reduz velocidade pela metade. Para casas grandes, sistema <strong>Mesh</strong> (vários pontos integrados) é muito superior. A O Técnico de Informática instala mesh em Curitiba e região com cobertura total.</p>
 
-        <h2>7. Por que repetidor pode reduzir desempenho?</h2>
-        <p>Extensores que recebem e retransmitem pelo mesmo rádio precisam dividir tempo de transmissão. O impacto varia conforme projeto, banda, backhaul e condições do ambiente, então a regra “sempre cai exatamente pela metade” é simplificação demais. Em cenários com alta demanda, muitos dispositivos ou vários cômodos, um sistema mesh com backhaul adequado ou pontos de acesso cabeados tende a ser mais previsível.</p>
-
-        <h2>Quando repetidor não é a solução</h2>
-        <ul>
-          <li>O roteador principal já entrega internet ruim mesmo de perto.</li>
-          <li>O ponto onde o repetidor teria de ficar não recebe sinal estável.</li>
-          <li>Há vários andares ou áreas grandes que exigem múltiplos saltos.</li>
-          <li>Você precisa de baixa latência e estabilidade para trabalho, voz ou jogos.</li>
-          <li>Existe possibilidade de cabeamento Ethernet para pontos de acesso.</li>
-        </ul>
-
-        <h2>Quando parar e pedir diagnóstico</h2>
-        <p>Se o repetidor conecta mas perde a rede após algumas horas, se há conflito de DHCP/endereço, se a rede fica com nomes duplicados difíceis de identificar ou se você precisa de mais de um extensor em cascata, pare de adicionar equipamentos. Mapeie cobertura e topologia antes de continuar. Para projetos maiores, veja <Link to="/servicos/redes-e-wifi" className="text-accent">redes e Wi-Fi</Link> e o <Link to="/guia-tecnico-informatica#tema-redes-wifi" className="text-accent">Atlas de redes</Link>.</p>
-
-        <EditorialReferences slug="como-configurar-repetidor-wifi" />
       </>
     ),
   },
-
   "como-saber-quem-esta-usando-meu-wifi": {
     title: "Como saber quem está usando o seu Wi-Fi (e o que fazer)",
     excerpt: "Como listar os dispositivos conectados, identificar cada um pelo nome e pelo endereço físico e retomar o controle da rede sem quebrar o que funciona.",
@@ -11575,77 +11070,41 @@ crontab -e
     ),
   },
 
-  
-"como-fazer-teste-velocidade-internet": {
-    title: "Como fazer teste de velocidade da internet e interpretar download, latência e Wi-Fi",
-    excerpt:
-      "Método para testar a internet sem confundir problema do provedor com Wi-Fi: referência por cabo, medições repetidas, download, upload, latência, jitter e perda de pacotes.",
-    date: "2026-09-25",
-    readTime: "10 min",
-    category: "Redes e Wi-Fi",
+  "como-fazer-teste-velocidade-internet": {
+    title: "Como Testar a Velocidade da Internet Corretamente: Guia 2026",
+    excerpt: "Internet lenta em Curitiba? Aprenda como fazer um teste de velocidade confiável e descobrir se o problema é da operadora ou do seu Wi-Fi.",
+    date: "2026-04-29",
+    readTime: "5 min",
+    category: "Tutoriais Domésticos",
     content: (
       <>
-        <p className="lead">Um teste de velocidade é uma fotografia daquele momento, não um diagnóstico completo. O resultado depende do provedor, do roteador, do Wi-Fi, do aparelho usado, de outros dispositivos consumindo banda e do servidor de teste. A FCC destaca que download e upload são apenas parte da medição; latência, jitter e perda de pacotes descrevem outros aspectos importantes da experiência.</p>
+        <p className="lead">Antes de reclamar com a operadora, faça o teste do jeito certo. Resultados errados levam à conclusão errada.</p>
 
-        <h2>Resposta curta</h2>
-        <p>Crie primeiro uma referência perto do roteador ou por Ethernet quando possível, pause grandes transferências e faça mais de uma medição em horários e pontos comparáveis. Depois repita no Wi-Fi onde o problema ocorre. Se a referência cabeada é boa e o Wi-Fi cai muito, investigue a rede local. Se cabo e Wi-Fi apresentam o mesmo padrão ruim, o problema pode estar antes do Wi-Fi — modem, link do provedor ou equipamento de borda.</p>
-
-        <h2>1. O que cada número mede</h2>
-        <table>
-          <thead><tr><th>Métrica</th><th>O que representa</th></tr></thead>
-          <tbody>
-            <tr><td>Download</td><td>Taxa de dados recebidos durante o teste</td></tr>
-            <tr><td>Upload</td><td>Taxa de dados enviados</td></tr>
-            <tr><td>Latência</td><td>Tempo de ida/volta percebido na comunicação</td></tr>
-            <tr><td>Jitter</td><td>Variação da latência entre medições</td></tr>
-            <tr><td>Perda de pacotes</td><td>Dados que não chegam ao destino e precisam ser tratados/retransmitidos</td></tr>
-          </tbody>
-        </table>
-        <p>Videochamada pode sofrer mesmo com download alto se latência, jitter ou perda estão ruins. Por isso “quantos megas deu” não responde tudo.</p>
-
-        <h2>2. Faça uma medição de referência</h2>
+        <h2>Como Testar Corretamente</h2>
         <ol>
-          <li>Escolha um computador em boas condições e, quando possível, conecte-o por Ethernet ao roteador/gateway.</li>
-          <li>Pause downloads, backup em nuvem e streaming intenso durante a medição.</li>
-          <li>Evite VPN corporativa se o objetivo é medir o acesso local à internet — ou registre que ela está ativa se o problema acontece justamente pela VPN.</li>
-          <li>Faça algumas medições e anote horário, aparelho, conexão e resultados.</li>
+          <li>Conecte o computador no roteador POR CABO (não por Wi-Fi)</li>
+          <li>Feche todos os programas, sites e downloads</li>
+          <li>Pause Netflix, YouTube, downloads</li>
+          <li>Acesse <strong>fast.com</strong> ou <strong>speedtest.net</strong></li>
+          <li>Clique em <strong>Iniciar</strong> e espere terminar</li>
+          <li>Anote o resultado de DOWNLOAD e UPLOAD</li>
         </ol>
-        <p>Ethernet reduz uma variável, mas não é uma garantia absoluta: cabo, porta, placa de rede e negociação também podem limitar o teste. Verifique se a conexão cabeada negociou a velocidade esperada quando o resultado é surpreendentemente baixo.</p>
 
-        <h2>3. Depois teste o Wi-Fi no local problemático</h2>
-        <p>Repita o teste no mesmo aparelho em diferentes pontos. A comparação mostra quanto do problema surge dentro da rede sem fio. Distância, paredes, banda usada, canal, interferência e capacidade do cliente influenciam. Wi-Fi <strong>não é obrigatoriamente sempre mais lento que qualquer cabo</strong>; o importante é comparar as tecnologias e capacidades reais do seu ambiente.</p>
+        <h2>Resultado Por Wi-Fi É Sempre Menor</h2>
+        <p>Wi-Fi sempre dá menos que cabo. Não compare com sua velocidade contratada usando Wi-Fi — só cabo é o teste real.</p>
 
-        <h2>4. Uma medição isolada não prova recorrência</h2>
-        <p>A FCC recomenda considerar contexto e múltiplas medições. Se o problema aparece à noite, meça também nesse período. Se acontece em uma sala específica, registre naquele local. Uma sequência com data, horário e conexão é mais útil para suporte do que um único print.</p>
+        <h2>Se Está Bem Abaixo do Contratado</h2>
+        <p>Você contratou 300 mega e o teste por cabo deu 40 mega? Isso é problema da operadora. Por lei, devem entregar pelo menos 80% do contratado em média (40% mínimo a qualquer momento).</p>
 
-        <h2>5. Como separar provedor de rede interna</h2>
-        <ul>
-          <li><strong>Cabo/referência boa + Wi-Fi ruim:</strong> investigue cobertura, canal, banda, posicionamento e capacidade do ponto de acesso.</li>
-          <li><strong>Cabo e Wi-Fi ruins ao mesmo tempo:</strong> investigue modem/ONU, link do provedor, roteador, negociação de porta e saturação geral.</li>
-          <li><strong>Só um aparelho ruim:</strong> investigue o próprio cliente, driver, banda e configuração.</li>
-          <li><strong>Velocidade boa, chamadas ruins:</strong> observe latência, jitter, perda e estabilidade.</li>
-        </ul>
-        <p>O roteiro aprofundado está em <Link to="/blog/internet-lenta-provedor-ou-roteador" className="text-accent">internet lenta: provedor ou roteador?</Link>.</p>
+        <h2>O Que Reclamar Para Operadora</h2>
+        <p>Ligue ou abra chat e diga: <strong>'Fiz teste por cabo direto no modem, todos os outros equipamentos desligados, e estou recebendo X mega de Y contratados. Quero técnico no local ou crédito proporcional.'</strong></p>
 
-        <h2>6. Não use porcentagem regulatória antiga como diagnóstico técnico</h2>
-        <p>Metas regulatórias e metodologia de medição podem mudar e dependem do contexto do serviço. Em vez de aplicar um número antigo de um tutorial como sentença, consulte o contrato e a regulamentação vigente e leve ao provedor uma série de medições reproduzíveis. Tecnicamente, primeiro prove onde ocorre a degradação.</p>
+        <h2>Continuou Lento Mesmo Após Visita Técnica?</h2>
+        <p>Pode ser cabeamento interno antigo, modem velho ou interferência. A O Técnico de Informática faz análise independente e ajuda a comprovar para a operadora — atendemos Curitiba via WhatsApp.</p>
 
-        <h2>Checklist de evidência</h2>
-        <ul>
-          <li>Plano/velocidade contratada registrada.</li>
-          <li>Modelo e conexão do aparelho de teste anotados.</li>
-          <li>Medição de referência e medição no ponto problemático.</li>
-          <li>Download, upload e latência registrados; jitter/perda quando a ferramenta informa.</li>
-          <li>Mais de um horário quando o problema é intermitente.</li>
-          <li>VPN e tráfego intenso controlados ou anotados.</li>
-        </ul>
-
-        <p>Se a causa ficar na rede interna, consulte <Link to="/servicos/redes-e-wifi" className="text-accent">redes e Wi-Fi</Link> e o <Link to="/guia-tecnico-informatica#tema-redes-wifi" className="text-accent">Atlas de redes</Link>.</p>
-        <EditorialReferences slug="como-fazer-teste-velocidade-internet" />
       </>
     ),
   },
-
   "como-bloquear-acesso-internet-criancas": {
     title: "Como Bloquear Internet em Horários Específicos: Controle Parental no Roteador (2026)",
     excerpt: "Filhos online o dia inteiro? Aprenda como bloquear o Wi-Fi em horários no próprio roteador, sem instalar app. Configuração ajudada em Curitiba.",
@@ -13606,18 +13065,15 @@ bcdboot C:\\Windows /s S: /f UEFI`}</code></pre>
 
   // ── Onda 10C — Lote 3: armazenamento não detectado (cluster 7).
   "hd-nao-e-reconhecido-na-bios-o-que-fazer": {
-    title: "Computador não reconhece HD ou SSD: BIOS, Windows e o que verificar",
+    title: "HD ou SSD não é reconhecido na BIOS: o que verificar antes de trocar",
     excerpt:
-      "Se o PC não reconhece o HD ou SSD, primeiro descubra se o disco sumiu da BIOS ou só do Windows. Veja a sequência segura por energia, cabo, porta, slot e detecção.",
+      "Quando o disco some do Setup, o problema quase nunca é o Windows. Sequência de verificação por energia, cabo, porta e detecção — e o que NÃO fazer quando há dados importantes.",
     date: "2026-08-26",
     readTime: "10 min",
     category: "Diagnóstico",
     content: (
       <>
-        <p className="lead">Quando o computador não reconhece HD ou SSD, a primeira divisão é simples: o disco aparece na BIOS/UEFI ou sumiu também do firmware? Se aparece na BIOS mas não no Windows, o caminho é lógico — partição, letra ou inicialização. Se não aparece nem na BIOS, investigue alimentação, cabo, porta, slot e o próprio disco antes de comprar peça ou formatar.</p>
-
-        <h2>PC não reconhece HD: BIOS ou Windows?</h2>
-        <p>Abra a tela de armazenamento da BIOS/UEFI e procure o modelo do disco. Essa verificação muda todo o diagnóstico: <strong>presente na BIOS e ausente no Windows</strong> aponta para configuração do sistema; <strong>ausente nos dois</strong> aponta para conexão, compatibilidade, alimentação ou falha física. Em mídia com arquivos importantes, não inicialize nem formate para “ver se volta”.</p>
+        <p className="lead">Se o disco não aparece na lista de dispositivos da BIOS, o Windows nem chega a ter a chance de enxergá-lo. Antes de comprar outro disco ou falar em recuperação, vale percorrer uma sequência curta que separa falha de conexão de falha do próprio disco.</p>
 
         <h2>Resposta curta</h2>
         <p>A BIOS mostra o que o controlador de armazenamento consegue enumerar. Se o disco não aparece ali, existem três famílias de causa: <strong>alimentação</strong> (o disco não recebe energia), <strong>enlace de dados</strong> (cabo, porta ou slot com mau contato ou desabilitado) e <strong>o próprio disco</strong> (eletrônica ou mecânica com defeito). O objetivo do teste é descobrir qual delas é, sem escrever nada na mídia.</p>
@@ -13851,18 +13307,15 @@ bcdboot C:\\Windows /s S: /f UEFI`}</code></pre>
   },
 
   "fone-de-ouvido-nao-e-reconhecido-no-pc": {
-    title: "Fone de ouvido não funciona no PC ou notebook: o que verificar",
+    title: "Fone de ouvido não é reconhecido no PC: entrada frontal, detecção e microfone",
     excerpt:
-      "Fone não reconhecido no PC ou notebook? Veja saída padrão, conector P2, painel frontal, microfone, driver, USB e Bluetooth antes de concluir que o fone queimou.",
+      "Por que o fone toca na entrada de trás e não na da frente, o que é detecção de conector, a diferença entre P2 combo e duas entradas e como resolver o microfone mudo.",
     date: "2026-08-26",
     readTime: "8 min",
     category: "Procedimentos Técnicos",
     content: (
       <>
-        <p className="lead">Se o fone de ouvido não funciona no PC ou notebook, primeiro teste o próprio fone em outro aparelho e depois confira qual saída de áudio o Windows selecionou. Se o fone funciona em outro dispositivo, a causa costuma estar em detecção do conector, tipo de plugue, saída padrão, permissão do microfone, driver ou perfil Bluetooth — não necessariamente em defeito físico.</p>
-
-        <h2>Fone não funciona no notebook: comece por estes testes</h2>
-        <p>Em notebook com conector único, confirme se o plugue é P2/TRRS compatível e se entrou até o fim. Depois abra Configurações → Sistema → Som e selecione manualmente o fone como saída. Se o áudio sai mas o microfone não, confira a entrada selecionada e as permissões de microfone. Em headset USB ou Bluetooth, escolha o dispositivo correto porque ele aparece separado da placa de som interna.</p>
+        <p className="lead">Fone funcionando em um conector e ignorado em outro é sintoma de detecção, não de defeito. Entender como o computador percebe que algo foi plugado resolve a maior parte desses casos.</p>
 
         <h2>Resposta curta</h2>
         <p>O conector de áudio informa ao controlador que um plugue foi inserido. Quando essa detecção não chega — cabo interno do painel frontal solto, configuração errada de painel, plugue incompatível ou conector sujo —, o sistema simplesmente segue tocando na saída anterior, como se nada tivesse sido conectado.</p>
@@ -15707,6 +15160,74 @@ bcdboot C:\\Windows /s S: /f UEFI`}</code></pre>
 
         <h2>Quando chamar um técnico</h2>
         <p>Chame quando o arquivo for crítico e não houver cópia, quando o problema atingir uma pasta inteira ou quando houver suspeita de falha física na mídia. O roteiro de disco com defeito está em <Link to="/blog/como-recuperar-dados-hd-com-defeito" className="text-accent">recuperação de dados em HD com defeito</Link> e o serviço em <Link to="/servicos/recuperacao-de-dados" className="text-accent">recuperação de dados</Link>. Vale lembrar que recuperação é tentativa técnica, sem garantia de resultado.</p>
+      </>
+    ),
+  },
+
+  "ssd-nao-aparece-no-instalador-do-windows": {
+    title: "SSD não aparece no instalador do Windows: causas e sequência segura",
+    excerpt:
+      "O instalador do Windows abriu, mas a lista de discos está vazia? Entenda a diferença entre BIOS, controlador VMD/RAID, driver de armazenamento e falha física — e o que verificar sem apagar dados.",
+    date: "2026-09-25",
+    readTime: "12 min",
+    category: "Windows",
+    content: (
+      <>
+        <p className="lead">Quando a tela <strong>“Onde você quer instalar o Windows?”</strong> não mostra nenhum SSD, o problema não é necessariamente um disco queimado. O instalador pode estar sem o driver do controlador de armazenamento, o firmware pode não enumerar a unidade ou o modo de armazenamento pode ter mudado. A ordem da investigação importa porque comandos de particionamento podem apagar dados.</p>
+
+        <h2>Resposta curta</h2>
+        <p>Primeiro confirme se o SSD aparece na BIOS/UEFI. Se não aparece ali, investigue conexão, slot, compatibilidade e defeito físico. Se aparece na BIOS, mas não no instalador, o suspeito principal passa a ser o modo do controlador — VMD, Intel RST ou RAID — ou a ausência do driver correto na mídia de instalação. Só use o DiskPart depois de confirmar que o disco certo foi identificado e que não há dados a preservar.</p>
+
+        <h2>O que a tela vazia realmente significa</h2>
+        <table>
+          <thead><tr><th>Onde o SSD aparece?</th><th>Leitura mais provável</th><th>Próxima verificação</th></tr></thead>
+          <tbody>
+            <tr><td>Não aparece na BIOS/UEFI</td><td>Conexão, slot, compatibilidade ou falha física</td><td>Informações de armazenamento e teste físico</td></tr>
+            <tr><td>Aparece na BIOS, não no instalador</td><td>Controlador em VMD/RAID/RST sem driver na mídia</td><td>Carregar driver do fabricante ou revisar o modo documentado</td></tr>
+            <tr><td>Aparece como destino, mas não instala</td><td>Modo de boot, partições ou mídia incompatíveis</td><td>UEFI/GPT, espaço e mensagem exata do instalador</td></tr>
+            <tr><td>Aparece e desaparece</td><td>Instabilidade de conexão, firmware, temperatura ou unidade</td><td>Parar a instalação e preservar dados</td></tr>
+          </tbody>
+        </table>
+
+        <h2>1. Verifique a BIOS antes do instalador</h2>
+        <p>Reinicie e abra o Setup pelo atalho indicado pelo fabricante. Procure o nome do modelo em informações de armazenamento, NVMe, SATA ou dispositivos PCIe. Não confunda a presença do pendrive de instalação com a presença do SSD: são listas diferentes. Se a unidade não aparece no firmware, carregar um driver no instalador não resolverá a causa.</p>
+        <p>Em notebooks, confirme também se o módulo M.2 tem o mesmo protocolo aceito pelo slot. M.2 descreve o formato; alguns slots aceitam NVMe, outros SATA, e há equipamentos que compartilham linhas com portas SATA. O manual do modelo é a fonte para essa compatibilidade.</p>
+
+        <h2>2. Quando BIOS reconhece, mas o Windows Setup não</h2>
+        <p>Em computadores recentes, especialmente notebooks com Intel, o armazenamento pode operar atrás de VMD ou Intel Rapid Storage Technology. A BIOS enxerga o SSD porque possui o suporte do fabricante; a mídia genérica do Windows pode não ter o driver necessário para apresentar o volume. Nesse cenário, a tela de seleção fica vazia mesmo com a unidade saudável.</p>
+        <ol>
+          <li>Baixe o driver de armazenamento na página oficial do fabricante do notebook ou da placa-mãe.</li>
+          <li>Extraia os arquivos para outro pendrive — não deixe apenas um instalador <code>.exe</code>.</li>
+          <li>Na tela de discos, escolha <strong>Carregar driver</strong> e a pasta que contém o arquivo <code>.inf</code> correspondente à arquitetura do Windows.</li>
+          <li>Confirme se o modelo do SSD surge antes de avançar.</li>
+        </ol>
+        <p>Não use pacote de driver de site genérico nem altere VMD/RAID para AHCI por tentativa. A mudança pode impedir o sistema já instalado de iniciar e, em ambientes com criptografia, exigir a chave de recuperação.</p>
+
+        <h2>3. Modo UEFI, GPT e a mídia de instalação</h2>
+        <p>Em máquinas atuais, a combinação mais previsível é inicializar a mídia em <strong>UEFI</strong> e instalar em um disco com tabela <strong>GPT</strong>. Isso é diferente de “SSD não detectado”: o disco pode aparecer, mas o instalador recusa a seleção por incompatibilidade entre o modo de inicialização e a tabela de partições.</p>
+        <p>Confira no menu de boot se o pendrive foi iniciado como <strong>UEFI: nome do dispositivo</strong>. Se houver uma instalação antiga no disco, não converta MBR para GPT nem apague partições antes de confirmar backup, BitLocker e o objetivo da instalação. O guia de instalação limpa está em <Link to="/blog/como-instalar-windows-11-do-zero" className="text-accent">como instalar o Windows 11 do zero</Link>.</p>
+
+        <h2>4. DiskPart: útil, mas destrutivo</h2>
+        <p>O DiskPart pode confirmar se o ambiente de instalação enxerga o hardware, mas <strong>clean</strong>, <strong>create partition</strong> e comandos semelhantes alteram o disco. Use primeiro apenas a leitura: <code>list disk</code>, <code>list volume</code> e <code>detail disk</code>. Compare capacidade e modelo com a etiqueta física ou com a BIOS. Um número de disco errado pode apagar a unidade que contém seus arquivos.</p>
+        <p>Se a lista do DiskPart também estiver vazia, o problema continua abaixo do particionamento: driver, controlador, firmware ou hardware. Formatar não faz um SSD invisível aparecer.</p>
+
+        <h2>5. Quando suspeitar de falha física</h2>
+        <p>Pare a instalação se o SSD some durante a cópia, causa congelamentos, aparece com capacidade absurda ou é detectado de forma intermitente. Não insista em formatar uma unidade que contém dados importantes. Teste cruzado em outro computador, outro slot compatível ou ferramenta oficial do fabricante ajuda a separar plataforma de mídia.</p>
+        <p>Se o SSD aparece no Gerenciamento de Disco depois que o Windows inicia, o cenário é diferente e está explicado em <Link to="/blog/ssd-nvme-nao-aparece-no-gerenciador-de-discos" className="text-accent">SSD que não aparece no Gerenciador de Discos</Link>. Se nem a BIOS o detecta, compare com <Link to="/blog/hd-nao-e-reconhecido-na-bios-o-que-fazer" className="text-accent">disco que não é reconhecido na BIOS</Link>.</p>
+
+        <h2>O que não fazer</h2>
+        <ul>
+          <li>Formatar ou executar <code>clean</code> sem identificar o disco e confirmar backup.</li>
+          <li>Trocar VMD/RAID/AHCI sem anotar o estado original e sem entender o sistema já instalado.</li>
+          <li>Baixar driver de armazenamento de agregador não oficial.</li>
+          <li>Atualizar BIOS no meio de uma instalação sem energia estável e sem o procedimento do fabricante.</li>
+          <li>Continuar tentando quando a unidade desaparece ou há dados sem cópia.</li>
+        </ul>
+
+        <h2>Quando chamar um técnico</h2>
+        <p>Procure avaliação técnica quando a unidade não aparece na BIOS, quando a criptografia BitLocker está ativa, quando o driver correto não resolve ou quando existem dados importantes no SSD. O serviço relacionado é <Link to="/servicos/formatacao" className="text-accent">formatação e instalação do sistema</Link>; se houver risco de perda de dados, priorize <Link to="/servicos/recuperacao-de-dados" className="text-accent">recuperação de dados</Link> antes de qualquer limpeza.</p>
+
+        <EditorialReferences slug="ssd-nao-aparece-no-instalador-do-windows" />
       </>
     ),
   },

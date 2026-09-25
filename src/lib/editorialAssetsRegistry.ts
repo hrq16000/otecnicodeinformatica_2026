@@ -63,9 +63,10 @@ const LICENSE_URLS: Record<string, string> = {
   "CC BY-SA 4.0": "https://creativecommons.org/licenses/by-sa/4.0/",
   CC0: "https://creativecommons.org/publicdomain/zero/1.0/",
   "Public Domain": "https://creativecommons.org/publicdomain/mark/1.0/",
+  "Free Art License 1.3": "https://artlibre.org/licence/lal/en/",
   "Licença Unsplash": "https://unsplash.com/license",
   "Licença Pexels": "https://www.pexels.com/license/",
-  "Todos os direitos reservados": "https://otecnicodeinformatica.com.br/termos-e-condicoes",
+  "Uso autorizado": "https://otecnicodeinformatica.com.br/",
 };
 
 /** Licenças que exigem crédito visível. */
@@ -78,10 +79,10 @@ const SOURCE_POR_PLATAFORMA: Array<[RegExp, AssetSourceType]> = [
   [/flickr/i, "OTHER_LICENSED"],
 ];
 
-/** Interpreta "Foto: Autor (Plataforma), Licença — URL". */
+/** Interpreta "Foto/Captura: Autor (Plataforma), Licença — URL". */
 function interpretarAtribuicao(texto: string | undefined) {
   if (!texto) return { author: null, platform: null, originalUrl: null };
-  const author = texto.match(/Foto:\s*([^(,—]+)/)?.[1]?.trim() ?? null;
+  const author = texto.match(/(?:Foto|Captura|Imagem):\s*([^(,—]+)/)?.[1]?.trim() ?? null;
   const platform = texto.match(/\(([^)]+)\)/)?.[1]?.trim() ?? null;
   const originalUrl = texto.match(/https?:\/\/\S+/)?.[0] ?? null;
   return { author, platform, originalUrl };

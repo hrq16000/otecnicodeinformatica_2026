@@ -70,6 +70,8 @@ const ALLOWED_SOURCE_HOSTS = new Set([
   "www.nvmexpress.org",
   "fcc.gov",
   "www.fcc.gov",
+  "memtest.org",
+  "www.memtest.org",
 ]);
 
 // Extrai blocos "  "slug": {" ... até o próximo top-level slug.
