@@ -337,6 +337,62 @@ export const ATLAS_PONTES_ARTIGOS: Record<string, AtlasPonteArtigo> = {
         "Critério de decisão por idade, uso e custo real do equipamento.",
     },
   },
+  "como-configurar-2fa-em-tudo": {
+    temaId: "seguranca-privacidade",
+    porQue:
+      "Autenticação multifator é a camada que limita o dano quando uma senha vaza. A trilha de segurança organiza senha exclusiva, fator resistente a phishing, recuperação e revisão de sessões como partes do mesmo controle de identidade.",
+    proximoPasso: {
+      rotulo: "Proteção contra golpes e phishing",
+      to: "/blog/como-proteger-computador-golpes-internet",
+      contexto:
+        "Aprenda a reconhecer o golpe que tenta capturar senha e segundo fator antes de qualquer alteração na conta.",
+    },
+  },
+  "como-proteger-rede-wifi-empresa": {
+    temaId: "redes-wifi",
+    porQue:
+      "Wi-Fi empresarial é infraestrutura de acesso: criptografia, segmentação, administração e ciclo de firmware precisam funcionar juntos. A trilha de redes separa cobertura, desempenho e segurança para evitar que uma correção esconda outro problema.",
+    proximoPasso: {
+      rotulo: "Redes e Wi-Fi",
+      to: "/servicos/redes-e-wifi",
+      contexto:
+        "Quando o desenho exige medição no local, cabeamento, novos pontos de acesso ou segmentação aplicada.",
+    },
+  },
+  "como-configurar-firewall-pfsense": {
+    temaId: "redes-wifi",
+    porQue:
+      "Firewall transforma o desenho lógico da rede em regras verificáveis: quem inicia tráfego, para onde e por qual serviço. A trilha de redes ajuda a definir segmentos antes de escrever regras e NAT.",
+    proximoPasso: {
+      rotulo: "Proteger o Wi-Fi da empresa",
+      to: "/blog/como-proteger-rede-wifi-empresa",
+      contexto:
+        "Organize SSIDs, visitantes, IoT e administração antes de aplicar o controle entre redes no firewall.",
+    },
+  },
+  "como-configurar-active-directory": {
+    temaId: "informatica-empresas",
+    porQue:
+      "Active Directory só entrega controle quando identidade, DNS, privilégio, políticas e recuperação são operados como uma rotina. A trilha empresarial coloca o diretório dentro da organização de TI, em vez de tratá-lo como instalação isolada de servidor.",
+    proximoPasso: {
+      rotulo: "Organização de TI para pequenos escritórios",
+      to: "/blog/organizacao-de-ti-para-pequenos-escritorios",
+      contexto:
+        "Conecte identidade e políticas ao inventário, dados, responsáveis e continuidade do ambiente.",
+    },
+  },
+  "como-deixar-celular-android-mais-rapido": {
+    temaId: "fundamentos",
+    porQue:
+      "Lentidão em Android também exige separar armazenamento, aplicativo, conexão, temperatura e limite do hardware. A trilha de fundamentos aplica o mesmo princípio de diagnóstico: observar a camada responsável antes de instalar ferramenta de limpeza.",
+    proximoPasso: {
+      rotulo: "Diagnóstico técnico",
+      to: "/diagnostico-tecnico",
+      contexto:
+        "Quando há aquecimento, reinicialização, risco para dados ou o teste por eliminação não identifica a causa.",
+    },
+  },
+
 };
 
 export interface AtlasPonteArtigoResolvida extends AtlasPonteArtigo {
