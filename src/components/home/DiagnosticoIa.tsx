@@ -25,7 +25,18 @@ export function DiagnosticoIa() {
     setErro(null);
     setRes(null);
     try {
-      setRes(await sugerir({ data: { descricao } }));
+      const r = await sugerir({ data: { descricao } });
+      setRes(r);
+      // Grava a descrição em /admin/funnel (best-effort, sem bloquear a tela).
+      import("@/lib/funnelSubmission").then(({ recordSubmission, getSessionId }) =>
+        recordSubmission({
+          sessionId: getSessionId(),
+          equipamento: "descricao_ia",
+          sintoma: r.nome,
+          ctaLocation: "home_diagnostico_ia",
+          waMessage: `[Descrição do visitante]\n${descricao.trim().slice(0, 1200)}\n\n[Sugestão] ${r.nome} (${r.href})`,
+        }),
+      ).catch(() => {});
     } catch (err) {
       setErro(err instanceof Error ? err.message : "Não foi possível analisar agora.");
     } finally {
