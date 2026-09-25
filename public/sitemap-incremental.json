@@ -1,7 +1,19 @@
 {
-  "geradoEm": "2026-09-25T13:35:39.946Z",
+  "geradoEm": "2026-09-25T00:28:03.865Z",
   "host": "otecnicodeinformatica.com.br",
-  "totalRastreadas": 0,
-  "totalNoSitemap": 267,
-  "ondas": []
+  "totalRastreadas": 1,
+  "totalNoSitemap": 248,
+  "ondas": [
+    {
+      "id": "2026-09-25T00:27:25.183Z",
+      "geradoEm": "2026-09-25T00:27:25.183Z",
+      "modo": "generate",
+      "total": 1,
+      "urls": [
+        "/blog/ssd-nao-aparece-no-instalador-do-windows"
+      ],
+      "indexNow": "NOT_REQUESTED",
+      "googleSearchConsole": "NOT_REQUESTED"
+    }
+  ]
 }

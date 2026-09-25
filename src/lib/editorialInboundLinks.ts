@@ -222,6 +222,11 @@ const MAPA: Record<string, EditorialInboundLink[]> = {
   ],
   "/servicos/formatacao": [
     {
+      slug: "ssd-nao-aparece-no-instalador-do-windows",
+      label: "SSD não aparece no instalador do Windows",
+      hint: "Como separar BIOS, driver do controlador, UEFI/GPT e falha física antes de formatar.",
+    },
+    {
       slug: "como-formatar-pc-sem-perder-arquivos",
       label: "Formatar sem perder arquivos: o guia",
       hint: "Quando reinstalar resolve, como preservar arquivos e a diferença entre redefinir e instalar do zero.",

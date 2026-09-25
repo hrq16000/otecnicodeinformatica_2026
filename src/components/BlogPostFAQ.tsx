@@ -1188,6 +1188,28 @@ const PILOT_FAQ: Record<string, FAQItem[]> = {
       a: "Às vezes recuperam parte do conteúdo, sempre dependendo de quanto foi gravado corretamente. Devem ser apontados para a cópia, nunca para o original, e nenhuma ferramenta reconstrói dado que jamais chegou a ser escrito na mídia.",
     },
   ],
+  "ssd-nao-aparece-no-instalador-do-windows": [
+    {
+      q: "Se o SSD aparece na BIOS, por que o instalador do Windows não o mostra?",
+      a: "O caso mais comum é o controlador operar em VMD, Intel RST ou RAID e a mídia genérica não ter o driver correspondente. Também pode haver uma mídia de instalação inadequada ou uma alteração de modo de boot. Carregar o driver oficial do fabricante costuma ser mais seguro do que mudar a BIOS por tentativa.",
+    },
+    {
+      q: "Posso mudar VMD ou RAID para AHCI?",
+      a: "Não como tentativa automática. A mudança pode impedir o Windows já instalado de iniciar e, com BitLocker, exigir a chave de recuperação. Anote o estado original, confirme o manual do equipamento e só altere o modo quando o procedimento for compatível com a instalação pretendida.",
+    },
+    {
+      q: "O DiskPart resolve SSD que não aparece?",
+      a: "Não quando a causa é driver, controlador ou hardware. DiskPart ajuda a confirmar se o ambiente enxerga a unidade, mas comandos como clean e create partition alteram o disco e podem apagar dados. Use primeiro apenas list disk, list volume e detail disk.",
+    },
+    {
+      q: "A tela vazia prova que o SSD está queimado?",
+      a: "Não. Se a BIOS reconhece o modelo, a unidade está sendo enumerada pelo firmware e a investigação deve começar por driver e modo do controlador. Falha física ganha força quando o SSD não aparece na BIOS, desaparece durante a instalação ou falha em outro equipamento compatível.",
+    },
+    {
+      q: "É seguro instalar o Windows sem fazer backup?",
+      a: "Não se houver arquivos importantes. Instalação limpa, exclusão de partições e comandos de limpeza podem destruir dados. Preserve os arquivos e confirme a chave BitLocker antes de avançar.",
+    },
+  ],
 };
 
 

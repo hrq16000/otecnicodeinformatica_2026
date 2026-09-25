@@ -748,157 +748,16 @@ export const EDITORIAL_WAVE = [
     apoioLabel: "Recuperação de dados em HD com defeito",
     cover: "/blog/arquivo-corrompido-nao-abre-o-que-fazer.jpg",
   },
-  // ── Onda 11H — promoção noindex → index após reescrita material.
+  // ── Onda 11A — Lote 9: Windows Setup e armazenamento não enumerado.
   {
-    slug: "como-configurar-2fa-em-tudo",
+    slug: "ssd-nao-aparece-no-instalador-do-windows",
     approvedAt: "2026-09-25",
-    pilar: "/seguranca-dos-dados",
-    pilarLabel: "Segurança dos dados",
-    apoio: "/blog/como-proteger-computador-golpes-internet",
-    apoioLabel: "Proteção contra golpes e phishing",
-    cover: "/blog/como-configurar-2fa-em-tudo.svg",
+    pilar: "/servicos/formatacao",
+    pilarLabel: "Formatação e instalação do sistema",
+    apoio: "/blog/ssd-nvme-nao-aparece-no-gerenciador-de-discos",
+    apoioLabel: "SSD não aparece no Gerenciador de Discos",
+    cover: "/blog/ssd-nao-aparece-no-instalador-do-windows.jpg",
   },
-  {
-    slug: "como-proteger-rede-wifi-empresa",
-    approvedAt: "2026-09-25",
-    pilar: "/servicos/redes-e-wifi",
-    pilarLabel: "Redes e Wi-Fi",
-    apoio: "/blog/internet-lenta-provedor-ou-roteador",
-    apoioLabel: "Internet lenta: provedor ou roteador",
-    cover: "/blog/como-proteger-rede-wifi-empresa.svg",
-  },
-  {
-    slug: "como-configurar-firewall-pfsense",
-    approvedAt: "2026-09-25",
-    pilar: "/servicos/redes-e-wifi",
-    pilarLabel: "Redes e Wi-Fi",
-    apoio: "/blog/como-proteger-rede-wifi-empresa",
-    apoioLabel: "Proteger o Wi-Fi da empresa",
-    cover: "/blog/como-configurar-firewall-pfsense.svg",
-  },
-  {
-    slug: "como-configurar-active-directory",
-    approvedAt: "2026-09-25",
-    pilar: "/servicos/suporte-tecnico-empresarial",
-    pilarLabel: "Suporte técnico empresarial",
-    apoio: "/blog/organizacao-de-ti-para-pequenos-escritorios",
-    apoioLabel: "Organização de TI para pequenos escritórios",
-    cover: "/blog/como-configurar-active-directory.svg",
-  },
-  {
-    slug: "como-deixar-celular-android-mais-rapido",
-    approvedAt: "2026-09-25",
-    pilar: "/diagnostico-tecnico",
-    pilarLabel: "Diagnóstico técnico",
-    apoio: "/guia-tecnico-informatica",
-    apoioLabel: "Atlas de Informática",
-    cover: "/blog/como-deixar-celular-android-mais-rapido.svg",
-  },
-
-  // ── Onda 11I — segunda promoção de acervo após reescrita e fact-check.
-  {
-    slug: "como-configurar-repetidor-wifi", approvedAt: "2026-09-25",
-    pilar: "/servicos/redes-e-wifi", pilarLabel: "Redes e Wi-Fi",
-    apoio: "/blog/como-melhorar-sinal-wifi-em-casa", apoioLabel: "Como melhorar o sinal Wi-Fi",
-    cover: "/blog/como-configurar-repetidor-wifi.svg",
-  },
-  {
-    slug: "trocar-windows-por-linux-vale-a-pena", approvedAt: "2026-09-25",
-    pilar: "/guia-tecnico-informatica", pilarLabel: "Guia do técnico de informática",
-    apoio: "/decisoes/atualizar-para-windows-11", apoioLabel: "Atualizar para Windows 11",
-    cover: "/blog/trocar-windows-por-linux-vale-a-pena.svg",
-  },
-  {
-    slug: "erros-comuns-upgrade-computador", approvedAt: "2026-09-25",
-    pilar: "/servicos/upgrade-ssd-ram", pilarLabel: "Upgrade de SSD e memória",
-    apoio: "/decisoes/ssd-ou-memoria-ram", apoioLabel: "SSD ou memória RAM",
-    cover: "/blog/erros-comuns-upgrade-computador.svg",
-  },
-  {
-    slug: "como-configurar-vpn-empresarial", approvedAt: "2026-09-25",
-    pilar: "/servicos/suporte-tecnico-empresarial", pilarLabel: "Suporte técnico empresarial",
-    apoio: "/blog/como-proteger-rede-wifi-empresa", apoioLabel: "Proteger o Wi-Fi da empresa",
-    cover: "/blog/como-configurar-vpn-empresarial.svg",
-  },
-  {
-    slug: "como-recuperar-conta-hackeada", approvedAt: "2026-09-25",
-    pilar: "/seguranca-dos-dados", pilarLabel: "Segurança dos dados",
-    apoio: "/blog/como-configurar-2fa-em-tudo", apoioLabel: "Configurar 2FA/MFA",
-    cover: "/blog/como-recuperar-conta-hackeada.svg",
-  },
-
-  // ── Onda 11J — Windows, backup e conectividade.
-  {
-    slug: "como-deixar-windows-11-mais-rapido-iniciantes", approvedAt: "2026-09-25",
-    pilar: "/problemas/computador-lento", pilarLabel: "Computador lento",
-    apoio: "/decisoes/ssd-ou-memoria-ram", apoioLabel: "SSD ou memória RAM",
-    cover: "/blog/windows-11-lento-como-resolver.jpg",
-  },
-  {
-    slug: "como-fazer-backup-fotos-windows-iniciantes", approvedAt: "2026-09-25",
-    pilar: "/seguranca-dos-dados", pilarLabel: "Segurança dos dados",
-    apoio: "/blog/como-testar-restauracao-de-backup", apoioLabel: "Testar restauração de backup",
-    cover: "/blog/historico-de-arquivos-windows-como-configurar.jpg",
-  },
-  {
-    slug: "como-atualizar-windows-corretamente", approvedAt: "2026-09-25",
-    pilar: "/guia-tecnico-informatica", pilarLabel: "Guia do técnico de informática",
-    apoio: "/blog/windows-update-nao-funciona-o-que-verificar", apoioLabel: "Windows Update não funciona",
-    cover: "/blog/windows-update-nao-funciona-o-que-verificar.jpg",
-  },
-  {
-    slug: "como-recuperar-arquivos-apagados-windows", approvedAt: "2026-09-25",
-    pilar: "/servicos/recuperacao-de-dados", pilarLabel: "Recuperação de dados",
-    apoio: "/blog/como-testar-restauracao-de-backup", apoioLabel: "Testar restauração de backup",
-    cover: "/blog/como-testar-restauracao-de-backup.jpg",
-  },
-  {
-    slug: "como-fazer-teste-velocidade-internet", approvedAt: "2026-09-25",
-    pilar: "/servicos/redes-e-wifi", pilarLabel: "Redes e Wi-Fi",
-    apoio: "/blog/internet-lenta-provedor-ou-roteador", apoioLabel: "Internet lenta: provedor ou roteador",
-    cover: "/blog/internet-lenta-provedor-ou-roteador.jpg",
-  },
-
-
-  // ── Onda 11K — credenciais, organização e segurança Wi-Fi.
-  {
-    slug: "como-resetar-senha-windows", approvedAt: "2026-09-25",
-    pilar: "/seguranca-dos-dados", pilarLabel: "Segurança dos dados",
-    apoio: "/blog/windows-reparo-automatico-em-loop", apoioLabel: "Recuperação do Windows",
-    cover: "/blog/como-resetar-senha-windows.svg",
-  },
-  {
-    slug: "como-organizar-arquivos-windows-iniciantes", approvedAt: "2026-09-25",
-    pilar: "/guia-tecnico-informatica", pilarLabel: "Guia do técnico de informática",
-    apoio: "/blog/como-testar-restauracao-de-backup", apoioLabel: "Testar restauração de backup",
-    cover: "/blog/como-organizar-arquivos-windows-iniciantes.svg",
-  },
-  {
-    slug: "como-trocar-senha-wifi", approvedAt: "2026-09-25",
-    pilar: "/servicos/redes-e-wifi", pilarLabel: "Redes e Wi-Fi",
-    apoio: "/blog/como-proteger-rede-wifi-empresa", apoioLabel: "Proteger o Wi-Fi",
-    cover: "/blog/como-trocar-senha-wifi.svg",
-  },
-  // ── Onda 11L — firmware, servidor de arquivos e firewall Linux.
-  {
-    slug: "como-configurar-bios-uefi-corretamente", approvedAt: "2026-09-25",
-    pilar: "/guia-tecnico-informatica", pilarLabel: "Guia do técnico de informática",
-    apoio: "/blog/boot-uefi-ou-legacy-como-identificar", apoioLabel: "Identificar UEFI ou Legacy",
-    cover: "/blog/como-configurar-bios-uefi-corretamente.svg",
-  },
-  {
-    slug: "como-configurar-servidor-de-arquivos", approvedAt: "2026-09-25",
-    pilar: "/empresa-de-ti-curitiba", pilarLabel: "TI para empresas",
-    apoio: "/blog/organizacao-de-ti-para-pequenos-escritorios", apoioLabel: "Organização de TI",
-    cover: "/blog/como-configurar-servidor-de-arquivos.svg",
-  },
-  {
-    slug: "como-configurar-firewall-ufw-linux", approvedAt: "2026-09-25",
-    pilar: "/seguranca-dos-dados", pilarLabel: "Segurança dos dados",
-    apoio: "/blog/como-configurar-firewall-pfsense", apoioLabel: "Firewall pfSense",
-    cover: "/blog/como-configurar-firewall-ufw-linux.svg",
-  },
-
 ];
 
 

@@ -259,6 +259,11 @@ export const ENTIDADES: Entidade[] = [
         to: "/blog/ssd-nvme-nao-aparece-no-gerenciador-de-discos",
         contexto: "Reconhecimento do disco novo pelo firmware e pelo sistema.",
       },
+      {
+        rotulo: "SSD não aparece no instalador do Windows",
+        to: "/blog/ssd-nao-aparece-no-instalador-do-windows",
+        contexto: "Diferença entre BIOS, driver do controlador e particionamento durante a instalação.",
+      },
     ],
     servicos: [
       {

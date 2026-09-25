@@ -800,6 +800,20 @@ const WAVE_10F: EditorialApproval[] = [
       "Satélite escrito do zero na Onda 10C (Lote 3); fact-check registrado em blogEditorialSources.ts; capa é fotografia real licenciada, sem IA.",
   },
   {
+    slug: "ssd-nao-aparece-no-instalador-do-windows",
+    status: "approved",
+    authorType: "organization",
+    authorId: INSTITUTIONAL_AUTHOR.id,
+    reviewedAt: "2026-09-25",
+    approvedAt: "2026-09-25",
+    imageOrigin: "owned",
+    imageLicense: "Uso autorizado",
+    imageAttribution:
+      "Imagem fornecida pelo responsável editorial para uso no portal — https://otecnicodeinformatica.com.br/",
+    notes:
+      "Pilar de intenção específica sobre Windows Setup, escrito a partir do caso fornecido pelo responsável editorial; revisão técnica e fontes primárias registradas em blogEditorialSources.ts; imagem real fornecida e autorizada, sem IA.",
+  },
+  {
     slug: "disco-com-setores-defeituosos-smart-o-que-fazer",
     status: "approved",
     authorType: "organization",
@@ -1224,214 +1238,6 @@ const WAVE_11G: EditorialApproval[] = [
   },
 ];
 
-
-// ── Onda 11H — promoção controlada noindex → index (2026-09-25).
-// Cinco artigos herdados foram reescritos materialmente, revisados contra
-// fontes primárias e receberam capas vetoriais originais da própria marca.
-const WAVE_11H: EditorialApproval[] = [
-  {
-    slug: "como-configurar-2fa-em-tudo",
-    status: "approved",
-    authorType: "organization",
-    authorId: INSTITUTIONAL_AUTHOR.id,
-    reviewedAt: "2026-09-25",
-    approvedAt: "2026-09-25",
-    imageOrigin: "owned",
-    imageLicense: "Todos os direitos reservados",
-    imageAttribution:
-      "Arte editorial original: O Técnico de Informática — https://otecnicodeinformatica.com.br/blog/como-configurar-2fa-em-tudo",
-    notes:
-      "Reescrita completa com CISA e NIST: diferencia MFA/2FA, resistência a phishing, recuperação e critérios de parada. Capa vetorial própria, sem IA e sem terceiros.",
-  },
-  {
-    slug: "como-proteger-rede-wifi-empresa",
-    status: "approved",
-    authorType: "organization",
-    authorId: INSTITUTIONAL_AUTHOR.id,
-    reviewedAt: "2026-09-25",
-    approvedAt: "2026-09-25",
-    imageOrigin: "owned",
-    imageLicense: "Todos os direitos reservados",
-    imageAttribution:
-      "Arte editorial original: O Técnico de Informática — https://otecnicodeinformatica.com.br/blog/como-proteger-rede-wifi-empresa",
-    notes:
-      "Reescrita completa com Wi-Fi Alliance e CISA: criptografia, segmentação, gestão, firmware e limites operacionais. Capa vetorial própria, sem IA.",
-  },
-  {
-    slug: "como-configurar-firewall-pfsense",
-    status: "approved",
-    authorType: "organization",
-    authorId: INSTITUTIONAL_AUTHOR.id,
-    reviewedAt: "2026-09-25",
-    approvedAt: "2026-09-25",
-    imageOrigin: "owned",
-    imageLicense: "Todos os direitos reservados",
-    imageAttribution:
-      "Arte editorial original: O Técnico de Informática — https://otecnicodeinformatica.com.br/blog/como-configurar-firewall-pfsense",
-    notes:
-      "Reescrita completa com documentação oficial Netgate: interfaces, regras, NAT, VLANs, administração, backup e recuperação sem defaults frágeis de versão. Capa vetorial própria, sem IA.",
-  },
-  {
-    slug: "como-configurar-active-directory",
-    status: "approved",
-    authorType: "organization",
-    authorId: INSTITUTIONAL_AUTHOR.id,
-    reviewedAt: "2026-09-25",
-    approvedAt: "2026-09-25",
-    imageOrigin: "owned",
-    imageLicense: "Todos os direitos reservados",
-    imageAttribution:
-      "Arte editorial original: O Técnico de Informática — https://otecnicodeinformatica.com.br/blog/como-configurar-active-directory",
-    notes:
-      "Reescrita completa com Microsoft Learn: AD DS, DNS, segurança, redundância, GPO, backup e critérios de parada. Capa vetorial própria, sem IA.",
-  },
-  {
-    slug: "como-deixar-celular-android-mais-rapido",
-    status: "approved",
-    authorType: "organization",
-    authorId: INSTITUTIONAL_AUTHOR.id,
-    reviewedAt: "2026-09-25",
-    approvedAt: "2026-09-25",
-    imageOrigin: "owned",
-    imageLicense: "Todos os direitos reservados",
-    imageAttribution:
-      "Arte editorial original: O Técnico de Informática — https://otecnicodeinformatica.com.br/blog/como-deixar-celular-android-mais-rapido",
-    notes:
-      "Artigo ampliado e realinhado com a ajuda oficial do Android/Google: armazenamento, apps, cache, temperatura, reset e limite do hardware, sem aceleradores milagrosos. Capa vetorial própria, sem IA.",
-  },
-];
-
-// ── Onda 11I — segunda promoção controlada noindex → index (2026-09-25).
-const WAVE_11I: EditorialApproval[] = [
-  {
-    slug: "como-configurar-repetidor-wifi", status: "approved", authorType: "organization", authorId: INSTITUTIONAL_AUTHOR.id,
-    reviewedAt: "2026-09-25", approvedAt: "2026-09-25", imageOrigin: "owned", imageLicense: "Todos os direitos reservados",
-    imageAttribution: "Arte editorial original: O Técnico de Informática — https://otecnicodeinformatica.com.br/blog/como-configurar-repetidor-wifi",
-    notes: "Reescrita material com documentação de fabricante e Wi‑Fi Alliance: posicionamento, WPS, bandas, validação e limites do repetidor sem credenciais genéricas nem promessa de perda fixa de velocidade.",
-  },
-  {
-    slug: "trocar-windows-por-linux-vale-a-pena", status: "approved", authorType: "organization", authorId: INSTITUTIONAL_AUTHOR.id,
-    reviewedAt: "2026-09-25", approvedAt: "2026-09-25", imageOrigin: "owned", imageLicense: "Todos os direitos reservados",
-    imageAttribution: "Arte editorial original: O Técnico de Informática — https://otecnicodeinformatica.com.br/blog/trocar-windows-por-linux-vale-a-pena",
-    notes: "Reescrita orientada por compatibilidade e teste live com documentação Ubuntu e requisitos Microsoft; remove generalizações de memória, software, jogos e telemetria.",
-  },
-  {
-    slug: "erros-comuns-upgrade-computador", status: "approved", authorType: "organization", authorId: INSTITUTIONAL_AUTHOR.id,
-    reviewedAt: "2026-09-25", approvedAt: "2026-09-25", imageOrigin: "owned", imageLicense: "Todos os direitos reservados",
-    imageAttribution: "Arte editorial original: O Técnico de Informática — https://otecnicodeinformatica.com.br/blog/erros-comuns-upgrade-computador",
-    notes: "Reescrita completa com documentação de memória, SSD/NVMe, requisitos do Windows e BitLocker; acrescenta compatibilidade, backup, firmware, energia e validação pós-upgrade.",
-  },
-  {
-    slug: "como-configurar-vpn-empresarial", status: "approved", authorType: "organization", authorId: INSTITUTIONAL_AUTHOR.id,
-    reviewedAt: "2026-09-25", approvedAt: "2026-09-25", imageOrigin: "owned", imageLicense: "Todos os direitos reservados",
-    imageAttribution: "Arte editorial original: O Técnico de Informática — https://otecnicodeinformatica.com.br/blog/como-configurar-vpn-empresarial",
-    notes: "Reescrita defensiva com WireGuard/OpenVPN/CISA/Netgate: identidade individual, MFA, rotas, segmentação, DNS, logs, revogação e recuperação, sem scripts copiar-e-colar frágeis.",
-  },
-  {
-    slug: "como-recuperar-conta-hackeada", status: "approved", authorType: "organization", authorId: INSTITUTIONAL_AUTHOR.id,
-    reviewedAt: "2026-09-25", approvedAt: "2026-09-25", imageOrigin: "owned", imageLicense: "Todos os direitos reservados",
-    imageAttribution: "Arte editorial original: O Técnico de Informática — https://otecnicodeinformatica.com.br/blog/como-recuperar-conta-hackeada",
-    notes: "Reescrita baseada em fluxos oficiais Google/Microsoft e CISA: recuperação, sessões, fatores, dispositivo, evidências e limites de suporte; remove estatísticas e promessas sem fonte.",
-  },
-];
-
-// ── Onda 11J — Windows, backup e conectividade qualificados (2026-09-25).
-const WAVE_11J: EditorialApproval[] = [
-  {
-    slug: "como-deixar-windows-11-mais-rapido-iniciantes", status: "approved", authorType: "organization", authorId: INSTITUTIONAL_AUTHOR.id,
-    reviewedAt: "2026-09-25", approvedAt: "2026-09-25", imageOrigin: "licensed", imageLicense: "CC BY-SA 4.0",
-    imageAttribution: "Foto: Laurabatanero (Wikimedia Commons), CC BY-SA 4.0 — https://commons.wikimedia.org/wiki/File:Working_on_my_laptop.jpg",
-    notes: "Reescrita com Microsoft Support: diagnóstico por CPU/memória/disco, inicialização, armazenamento e atualização; remove porcentagens mágicas, otimizadores e promessa local.",
-  },
-  {
-    slug: "como-fazer-backup-fotos-windows-iniciantes", status: "approved", authorType: "organization", authorId: INSTITUTIONAL_AUTHOR.id,
-    reviewedAt: "2026-09-25", approvedAt: "2026-09-25", imageOrigin: "licensed", imageLicense: "CC BY-SA 4.0",
-    imageAttribution: "Foto: Sam Frazier (Wikimedia Commons), CC BY-SA 4.0 — https://commons.wikimedia.org/wiki/File:External_portable_hard_drive.jpg",
-    notes: "Reescrita com Microsoft/CISA/NIST: inventário, cópia externa, Histórico de Arquivos, nuvem, verificação e restauração; distingue sincronização de backup.",
-  },
-  {
-    slug: "como-atualizar-windows-corretamente", status: "approved", authorType: "organization", authorId: INSTITUTIONAL_AUTHOR.id,
-    reviewedAt: "2026-09-25", approvedAt: "2026-09-25", imageOrigin: "licensed", imageLicense: "Public Domain",
-    imageAttribution: "Foto: Dion Dresschers (Wikimedia Commons), domínio público — https://commons.wikimedia.org/wiki/File:Cc0-windows-update_dion_dresschers.png",
-    notes: "Reescrita com Microsoft Support: preparação, Windows Update, Obter Ajuda, validação e critérios de parada; remove cronômetros universais e desligamento forçado como receita.",
-  },
-  {
-    slug: "como-recuperar-arquivos-apagados-windows", status: "approved", authorType: "organization", authorId: INSTITUTIONAL_AUTHOR.id,
-    reviewedAt: "2026-09-25", approvedAt: "2026-09-25", imageOrigin: "licensed", imageLicense: "CC BY-SA 4.0",
-    imageAttribution: "Foto: Santeri Viinamäki (Wikimedia Commons), CC BY-SA 4.0 — https://commons.wikimedia.org/wiki/File:DVD,_USB_flash_drive_and_external_hard_drive.jpg",
-    notes: "Reescrita com Microsoft Support: Lixeira, backup, Windows File Recovery, destino separado, redução de gravações e limites de SSD/falha física.",
-  },
-  {
-    slug: "como-fazer-teste-velocidade-internet", status: "approved", authorType: "organization", authorId: INSTITUTIONAL_AUTHOR.id,
-    reviewedAt: "2026-09-25", approvedAt: "2026-09-25", imageOrigin: "licensed", imageLicense: "CC BY 4.0",
-    imageAttribution: "Foto: VulcanSphere (Wikimedia Commons), CC BY 4.0 — https://commons.wikimedia.org/wiki/File:ARRIS_CM820B_DOCSIS_Cable_Modem.jpg",
-    notes: "Reescrita com FCC: referência cabeada, múltiplas medições, download/upload/latência/jitter/perda; remove regra absoluta sobre Wi‑Fi e percentuais regulatórios antigos.",
-  },
-];
-
-
-// ── Onda 11K — credenciais, organização do Windows e segurança Wi-Fi.
-const WAVE_11K: EditorialApproval[] = [
-  {
-    slug: "como-resetar-senha-windows",
-    status: "approved",
-    authorType: "organization",
-    authorId: INSTITUTIONAL_AUTHOR.id,
-    reviewedAt: "2026-09-25",
-    approvedAt: "2026-09-25",
-    imageOrigin: "owned",
-    imageLicense: "Todos os direitos reservados",
-    imageAttribution: "Arte editorial original: O Técnico de Informática — https://otecnicodeinformatica.com.br/blog/como-resetar-senha-windows",
-    notes: "Reescrita completa com Microsoft Support: recuperação oficial por tipo de credencial, BitLocker, contas corporativas e remoção explícita de bypass de autenticação.",
-  },
-  {
-    slug: "como-organizar-arquivos-windows-iniciantes",
-    status: "approved",
-    authorType: "organization",
-    authorId: INSTITUTIONAL_AUTHOR.id,
-    reviewedAt: "2026-09-25",
-    approvedAt: "2026-09-25",
-    imageOrigin: "owned",
-    imageLicense: "Todos os direitos reservados",
-    imageAttribution: "Arte editorial original: O Técnico de Informática — https://otecnicodeinformatica.com.br/blog/como-organizar-arquivos-windows-iniciantes",
-    notes: "Reescrita completa com Microsoft Support: Explorador, pesquisa, Acesso Rápido, OneDrive, backup e segurança antes de movimentação em massa.",
-  },
-  {
-    slug: "como-trocar-senha-wifi",
-    status: "approved",
-    authorType: "organization",
-    authorId: INSTITUTIONAL_AUTHOR.id,
-    reviewedAt: "2026-09-25",
-    approvedAt: "2026-09-25",
-    imageOrigin: "owned",
-    imageLicense: "Todos os direitos reservados",
-    imageAttribution: "Arte editorial original: O Técnico de Informática — https://otecnicodeinformatica.com.br/blog/como-trocar-senha-wifi",
-    notes: "Reescrita completa com orientação oficial de segurança: painel legítimo, senhas separadas, WPA2/WPA3, firmware, validação e critérios para não resetar roteador gerenciado.",
-  },
-];
-
-
-const WAVE_11L: EditorialApproval[] = [
-  {
-    slug: "como-configurar-bios-uefi-corretamente", status: "approved", authorType: "organization", authorId: INSTITUTIONAL_AUTHOR.id,
-    reviewedAt: "2026-09-25", approvedAt: "2026-09-25", imageOrigin: "owned", imageLicense: "Todos os direitos reservados",
-    imageAttribution: "Arte editorial original: O Técnico de Informática — https://otecnicodeinformatica.com.br/blog/como-configurar-bios-uefi-corretamente",
-    notes: "Reescrita com Microsoft Support: UEFI, Secure Boot, TPM, BitLocker, armazenamento e perfis de memória tratados por diagnóstico e rollback.",
-  },
-  {
-    slug: "como-configurar-servidor-de-arquivos", status: "approved", authorType: "organization", authorId: INSTITUTIONAL_AUTHOR.id,
-    reviewedAt: "2026-09-25", approvedAt: "2026-09-25", imageOrigin: "owned", imageLicense: "Todos os direitos reservados",
-    imageAttribution: "Arte editorial original: O Técnico de Informática — https://otecnicodeinformatica.com.br/blog/como-configurar-servidor-de-arquivos",
-    notes: "Reescrita com Microsoft Learn e Samba: identidade, SMB autenticado, segmentação, backup testado e acesso remoto sem expor 445.",
-  },
-  {
-    slug: "como-configurar-firewall-ufw-linux", status: "approved", authorType: "organization", authorId: INSTITUTIONAL_AUTHOR.id,
-    reviewedAt: "2026-09-25", approvedAt: "2026-09-25", imageOrigin: "owned", imageLicense: "Todos os direitos reservados",
-    imageAttribution: "Arte editorial original: O Técnico de Informática — https://otecnicodeinformatica.com.br/blog/como-configurar-firewall-ufw-linux",
-    notes: "Reescrita com Ubuntu Server: regras por necessidade, preservação de SSH, dry-run, origem, perfis, logs e critérios de parada.",
-  },
-];
-
 export const APPROVED_EDITORIAL_CONTENT = new Map<string, EditorialApproval>([
 
   ...FIRST_WAVE_SLUGS.map((slug) => [
@@ -1487,11 +1293,6 @@ export const APPROVED_EDITORIAL_CONTENT = new Map<string, EditorialApproval>([
   ...WAVE_11D.map((a) => [a.slug, a] as [string, EditorialApproval]),
   ...WAVE_11E.map((a) => [a.slug, a] as [string, EditorialApproval]),  ...WAVE_11F.map((a) => [a.slug, a] as [string, EditorialApproval]),
   ...WAVE_11G.map((a) => [a.slug, a] as [string, EditorialApproval]),
-  ...WAVE_11H.map((a) => [a.slug, a] as [string, EditorialApproval]),
-  ...WAVE_11I.map((a) => [a.slug, a] as [string, EditorialApproval]),
-  ...WAVE_11J.map((a) => [a.slug, a] as [string, EditorialApproval]),
-  ...WAVE_11K.map((a) => [a.slug, a] as [string, EditorialApproval]),
-  ...WAVE_11L.map((a) => [a.slug, a] as [string, EditorialApproval]),
 
 ]);
 
