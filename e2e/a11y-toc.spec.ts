@@ -61,6 +61,6 @@ test.describe("TOC — acessibilidade", () => {
     const botao = page.locator(".article-toc__copy").first();
     await botao.click();
     await expect(botao).toBeFocused();
-    await expect(page.locator("[aria-live='polite']")).toContainText("copiado");
+    await expect(page.getByRole("status")).toContainText("copiado");
   });
 });
