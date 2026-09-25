@@ -416,22 +416,7 @@ const defs: PostDef[] = [
     ],
     whenToCall: "Em notebooks modernos (especialmente gamer e Apple), a troca é delicada e exige desmontagem completa. Oriento por vídeo-chamada ou indico técnico próximo da sua cidade.",
   },
-  {
-    slug: "como-resetar-senha-windows",
-    title: "Como Resetar Senha do Windows (Esqueceu a Senha? Resolva)",
-    excerpt: "Esqueceu a senha do Windows 10/11? Veja métodos legítimos para resetar sem perder arquivos.",
-    category: "Software / Sistema",
-    lead: "Esquecer a senha não é fim do mundo — existem métodos legítimos para resetar sem reinstalar o Windows. Veja em ordem de simplicidade.",
-    sections: [
-      { h: "Método 1: conta Microsoft", p: "Se sua conta é Microsoft (e-mail), vá em account.microsoft.com em outro dispositivo e use 'Esqueci minha senha'. Após resetar, espere alguns minutos e tente no PC com a nova senha." },
-      { h: "Método 2: perguntas de segurança (conta local)", p: "Na tela de login, após errar a senha, aparece 'Redefinir senha'. Responda as perguntas que você configurou ao criar a conta." },
-      { h: "Método 3: pendrive de redefinição", p: "Se você criou um pendrive de redefinição antes (Painel de Controle → Contas), use-o agora." },
-      { h: "Método 4: outro usuário admin", p: "Se há outra conta de administrador, faça login e mude a senha em 'Gerenciar outra conta'." },
-      { h: "Método 5: modo de recuperação (avançado)", p: "Inicie pelo pendrive de instalação do Windows → 'Reparar o computador' → Prompt de Comando → renomeie utilman.exe para utilman.bak e copie cmd.exe como utilman.exe. Na tela de login, clique no ícone de acessibilidade — abrirá cmd. Digite: net user [usuário] [novasenha]." },
-      { h: "BitLocker ligado?", p: "Se o disco está criptografado e você não tem a chave de recuperação (salva na conta Microsoft), não há como recuperar — só formatando." },
-    ],
-    whenToCall: "Faço reset remoto após a conta ser desbloqueada, ou oriento o método correto para o seu caso (conta local, BitLocker, Pro vs Home). Sempre legal e sem perder arquivos.",
-  },
+
   {
     slug: "diferenca-windows-10-vs-11",
     title: "Windows 10 vs Windows 11: Devo Atualizar em 2026? (Análise Honesta)",
