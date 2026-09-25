@@ -9661,94 +9661,152 @@ crontab -e
     ),
   },
 
-  "como-deixar-windows-11-mais-rapido-iniciantes": {
-    title: "Como Deixar o Windows 11 Mais Rápido em 2026: Guia Passo a Passo (Curitiba)",
-    excerpt: "PC lento em Curitiba? Aprenda como acelerar o Windows 11 com 5 passos simples — sem instalar nada e sem risco de quebrar o computador.",
-    date: "2026-04-29",
-    readTime: "8 min",
-    category: "Tutoriais Domésticos",
+  
+"como-deixar-windows-11-mais-rapido-iniciantes": {
+    title: "Windows 11 lento: como deixar o PC mais rápido sem truques",
+    excerpt:
+      "Diagnóstico prático para Windows 11 lento: inicialização, armazenamento, processos, atualizações e sinais de limite de hardware antes de instalar otimizadores.",
+    date: "2026-09-25",
+    readTime: "11 min",
+    category: "Windows",
     content: (
       <>
-        <p className="lead">Se o seu Windows 11 está lento, travando ou demorando para abrir programas, calma — na maioria das vezes a solução é simples e você mesmo consegue fazer. Este guia foi feito para quem não é técnico: tudo explicado passo a passo, com palavras do dia a dia.</p>
+        <p className="lead">Deixar o Windows 11 mais rápido começa por descobrir <strong>onde</strong> está a lentidão. Inicialização demorada, disco ocupado, pouca memória, aplicativo pesado e hardware antigo produzem sintomas parecidos, mas pedem soluções diferentes. A própria Microsoft recomenda combinar atualização, limpeza de armazenamento, revisão de aplicativos de inicialização e observação de recursos — não instalar “aceleradores” por reflexo.</p>
 
-        <h2>1. Reinicie o Computador (Sim, de Verdade)</h2>
-        <p>O Windows 11 acumula 'lixo' na memória conforme você usa. Suspender ou fechar a tampa do notebook NÃO é a mesma coisa que reiniciar.</p>
-        <p>Clique no botão Iniciar (ícone do Windows na barra) → Ligar/Desligar → <strong>Reiniciar</strong>. Espere ele voltar e teste.</p>
+        <h2>Resposta curta</h2>
+        <p>Reinicie o PC, atualize o Windows, abra o Gerenciador de Tarefas e observe CPU, memória e disco durante a lentidão. Desative da inicialização apenas programas que você reconhece e não precisa abrir automaticamente. Libere espaço com as ferramentas do próprio Windows e desinstale o que não usa. Se disco, memória ou CPU continuam no limite mesmo com poucos programas, o gargalo pode ser de hardware.</p>
 
-        <h2>2. Desligue Programas Que Abrem Sozinhos</h2>
-        <p>Muitos programas se instalam para abrir junto com o Windows e isso deixa tudo lento.</p>
-        <ol>
-          <li>Aperte as teclas <strong>Ctrl + Shift + Esc</strong> ao mesmo tempo (abre o Gerenciador de Tarefas)</li>
-          <li>Clique na aba <strong>Aplicativos de inicialização</strong></li>
-          <li>Veja os que estão como 'Habilitado'</li>
-          <li>Clique com o botão direito nos que você não usa (Spotify, Steam, Skype, OneDrive se não usar) e escolha <strong>Desabilitar</strong></li>
-        </ol>
+        <h2>1. Primeiro defina quando o computador fica lento</h2>
+        <table>
+          <thead><tr><th>Sintoma</th><th>Pista inicial</th></tr></thead>
+          <tbody>
+            <tr><td>Demora só para ligar</td><td>Aplicativos de inicialização, disco e atualizações</td></tr>
+            <tr><td>Fica lento ao abrir muitas abas</td><td>Memória e consumo do navegador</td></tr>
+            <tr><td>Trava ao copiar/abrir arquivos</td><td>Armazenamento e saúde da unidade</td></tr>
+            <tr><td>Perde desempenho depois de alguns minutos</td><td>Temperatura e limitação térmica</td></tr>
+            <tr><td>Um programa específico trava</td><td>Aplicativo, driver ou requisito daquele software</td></tr>
+          </tbody>
+        </table>
+        <p>Essa classificação evita mexer em dez configurações ao mesmo tempo e depois não saber o que realmente resolveu.</p>
 
-        <h2>3. Libere Espaço no Disco</h2>
-        <p>Quando o disco fica cheio, o Windows trava. O ideal é ter pelo menos 20% livre.</p>
-        <ol>
-          <li>No campo de busca, digite <strong>Limpeza de Disco</strong> e abra</li>
-          <li>Selecione o disco C: e clique OK</li>
-          <li>Marque tudo que aparece (arquivos temporários, lixeira, miniaturas) e clique OK</li>
-          <li>Confirme e espere terminar</li>
-        </ol>
+        <h2>2. Veja o uso real no Gerenciador de Tarefas</h2>
+        <p>Pressione <strong>Ctrl + Shift + Esc</strong> e observe a guia Processos durante o problema. Ordene por CPU, Memória e Disco. Um pico curto pode ser normal; o que interessa é recurso que permanece alto enquanto a máquina responde mal. Depois abra Desempenho para conferir capacidade total de memória, tipo de disco e comportamento da CPU.</p>
+        <p>Não finalize processo desconhecido apenas porque aparece no topo. Primeiro identifique o aplicativo ou serviço. Processos do sistema, antivírus e atualização podem usar recursos temporariamente.</p>
 
-        <h2>4. Atualize o Windows</h2>
-        <p>Atualizações corrigem problemas de desempenho. Vá em <strong>Configurações → Windows Update → Verificar atualizações</strong> e instale o que aparecer. Reinicie depois.</p>
+        <h2>3. Reduza o que inicia com o Windows</h2>
+        <p>A Microsoft documenta que aplicativos iniciados automaticamente afetam o tempo de inicialização e a atividade em segundo plano. No Gerenciador de Tarefas, abra <strong>Aplicativos de inicialização</strong> e desative apenas itens que você conhece e pode abrir manualmente quando precisar.</p>
+        <p>Evite desativar software de segurança, sincronização que protege arquivos ou utilitário necessário ao hardware sem entender a consequência. A meta é remover conveniência desnecessária, não desmontar o ambiente.</p>
 
-        <h2>5. Quando Chamar um Técnico</h2>
-        <p>Se mesmo depois disso seu PC continuar lento, pode ser disco antigo (HD em vez de SSD), pouca memória RAM ou vírus. Nesses casos, a <strong>O Técnico de Informática</strong> faz diagnóstico em casa em Curitiba e região metropolitana — chame pelo WhatsApp.</p>
+        <h2>4. Libere armazenamento sem apagar às cegas</h2>
+        <p>Em Configurações → Sistema → Armazenamento, o Windows mostra categorias de uso e oferece arquivos temporários e Sensor de Armazenamento. Revise o que será removido antes de confirmar, especialmente Downloads e Lixeira. Desinstalar aplicativos que não são mais usados também reduz armazenamento ocupado e processos em segundo plano.</p>
+        <p>Não existe uma porcentagem mágica de espaço livre válida para todo computador. O sinal relevante é falta de espaço para atualização, paginação e arquivos temporários, junto do comportamento observado.</p>
 
+        <h2>5. Atualize Windows e drivers pelo canal correto</h2>
+        <p>Windows Update entrega correções e também pode oferecer drivers opcionais. Faça backup do que é importante, instale atualizações pelo Windows Update ou pelo fabricante do equipamento e reinicie quando solicitado. Evite “atualizador universal de drivers” de terceiros: ele adiciona outra variável a um sistema que você está tentando diagnosticar.</p>
+
+        <h2>6. Reiniciar ajuda, mas não é diagnóstico</h2>
+        <p>Reiniciar encerra processos e reinicializa serviços; isso pode corrigir um estado temporário. Se a lentidão volta sempre depois do mesmo tempo ou da abertura do mesmo programa, registre o padrão. A repetição é mais útil para o diagnóstico do que reiniciar diariamente e aceitar o problema.</p>
+
+        <h2>7. Quando limpeza de software não resolve</h2>
+        <ul>
+          <li>Memória fica quase toda ocupada com sua carga normal de trabalho.</li>
+          <li>O sistema está em HD mecânico e passa longos períodos limitado pelo disco.</li>
+          <li>A CPU é antiga para o software atual e permanece saturada.</li>
+          <li>Temperatura sobe e o clock cai sob carga.</li>
+          <li>O disco apresenta erros, lentidão anormal ou alertas de saúde.</li>
+        </ul>
+        <p>Nesse ponto, compare <Link to="/decisoes/ssd-ou-memoria-ram" className="text-accent">SSD ou memória RAM</Link> e consulte <Link to="/problemas/computador-lento" className="text-accent">computador lento: diagnóstico por sintoma</Link> antes de comprar peças.</p>
+
+        <h2>O que não fazer</h2>
+        <ul>
+          <li>Não instalar vários “boosters”, limpadores de registro ou pacotes de driver.</li>
+          <li>Não desabilitar serviços aleatórios de uma lista da internet.</li>
+          <li>Não apagar pastas do sistema para ganhar espaço.</li>
+          <li>Não formatar antes de medir o gargalo e conferir backup.</li>
+        </ul>
+
+        <h2>Checklist de diagnóstico</h2>
+        <ul>
+          <li>Problema reproduzido e momento da lentidão identificado.</li>
+          <li>CPU, memória e disco observados durante o sintoma.</li>
+          <li>Inicialização revisada.</li>
+          <li>Armazenamento revisado com ferramentas do Windows.</li>
+          <li>Windows atualizado por canal oficial.</li>
+          <li>Hardware avaliado se o limite persistir.</li>
+        </ul>
+
+        <p>Para entender o raciocínio completo em vez de seguir receitas isoladas, continue no <Link to="/guia-tecnico-informatica#tema-hardware-upgrades" className="text-accent">Atlas de hardware e desempenho</Link>.</p>
+        <EditorialReferences slug="como-deixar-windows-11-mais-rapido-iniciantes" />
       </>
     ),
   },
-  "como-fazer-backup-fotos-windows-iniciantes": {
-    title: "Como Fazer Backup de Fotos no Windows 11: 3 Métodos Seguros (Guia 2026)",
-    excerpt: "Aprenda como fazer backup das suas fotos no Windows usando pendrive, OneDrive ou Google Fotos. Atendimento técnico em Curitiba se precisar de ajuda.",
-    date: "2026-04-29",
-    readTime: "7 min",
-    category: "Tutoriais Domésticos",
+
+  
+"como-fazer-backup-fotos-windows-iniciantes": {
+    title: "Como fazer backup de fotos no Windows e comprovar que a cópia funciona",
+    excerpt:
+      "Método seguro para proteger fotos no Windows usando disco externo, Histórico de Arquivos e nuvem — com verificação de restauração e sem confundir sincronização com backup.",
+    date: "2026-09-25",
+    readTime: "10 min",
+    category: "Backup e Dados",
     content: (
       <>
-        <p className="lead">Perder fotos da família é um dos maiores arrependimentos que ouvimos de clientes. A boa notícia: fazer backup é mais fácil do que você imagina. Veja três formas, da mais simples para a mais segura.</p>
+        <p className="lead">Backup de fotos não é apenas arrastar uma pasta e esperar a barra terminar. A cópia precisa estar em outro local, ser verificável e continuar disponível se o computador falhar, for perdido ou tiver arquivos apagados por engano. O Windows oferece caminhos nativos para cópia e versionamento; nuvem pode complementar, mas sincronização e backup não são exatamente a mesma coisa.</p>
 
-        <h2>Forma 1: Pendrive ou HD Externo (Mais Fácil)</h2>
+        <h2>Resposta curta</h2>
+        <p>Localize todas as pastas que realmente contêm fotos, faça uma cópia para disco externo ou serviço de nuvem confiável, confira quantidade/tamanho aproximados e abra arquivos diretamente do destino. Para proteção contínua, configure um mecanismo de versionamento como o Histórico de Arquivos ou uma solução de backup equivalente. Mantenha pelo menos uma cópia que não dependa do mesmo disco do computador.</p>
+
+        <h2>1. Antes de copiar, descubra onde as fotos estão</h2>
+        <p>Imagens podem estar em <strong>Imagens</strong>, Área de Trabalho, Downloads, pastas de aplicativos, cartões de memória e diretórios criados manualmente. Abra o Explorador de Arquivos e faça um inventário. Se o computador veio de outro equipamento, confirme também pastas antigas de usuário.</p>
+        <p>Não comece apagando duplicatas. Primeiro preserve; organização e deduplicação vêm depois da cópia validada.</p>
+
+        <h2>2. Cópia em disco externo: simples e controlável</h2>
         <ol>
-          <li>Conecte o pendrive ou HD externo na entrada USB</li>
-          <li>Espere aparecer a notificação 'Dispositivo pronto'</li>
-          <li>Abra o <strong>Explorador de Arquivos</strong> (ícone de pasta amarela)</li>
-          <li>Vá em <strong>Imagens</strong> no lado esquerdo</li>
-          <li>Selecione tudo (Ctrl + A) e arraste para o pendrive na lateral</li>
-          <li>Espere a cópia terminar antes de remover</li>
+          <li>Conecte um HD/SSD externo com espaço suficiente.</li>
+          <li>Crie uma pasta datada, por exemplo <strong>Backup-Fotos-2026-09</strong>.</li>
+          <li>Copie as pastas inventariadas, sem mover os originais.</li>
+          <li>Aguarde o término e ejete o dispositivo corretamente.</li>
+          <li>Reconecte e abra uma amostra de fotos diretamente do disco externo.</li>
         </ol>
+        <p>Uma cópia externa guardada permanentemente conectada ao PC continua exposta a exclusão acidental, ransomware e falha elétrica. Depois da cópia, mantenha o dispositivo desconectado quando não estiver em uso, se esse for o papel dele no plano.</p>
 
-        <h2>Forma 2: Google Fotos (Salva Sozinho na Internet)</h2>
-        <p>Vantagem: backup automático e você acessa de qualquer lugar.</p>
-        <ol>
-          <li>Acesse <strong>photos.google.com</strong> no navegador</li>
-          <li>Faça login com sua conta do Google (mesma do Gmail)</li>
-          <li>Clique em <strong>Carregar → Computador</strong></li>
-          <li>Selecione a pasta de fotos e espere subir</li>
-        </ol>
+        <h2>3. Histórico de Arquivos: versões para arquivos pessoais</h2>
+        <p>A Microsoft mantém o Histórico de Arquivos como recurso para salvar cópias automáticas de arquivos pessoais em uma unidade adequada e restaurar versões anteriores. Ele é útil para mudanças e exclusões acidentais, mas precisa ser configurado antes do incidente e o destino precisa estar disponível nos ciclos de backup.</p>
+        <p>Depois de configurar, faça um teste controlado: crie um arquivo de teste, aguarde o backup e confirme que a restauração funciona. Um backup nunca testado é apenas uma expectativa.</p>
 
-        <h2>Forma 3: OneDrive (Já Vem no Windows)</h2>
-        <p>O Windows 11 já tem OneDrive instalado. Configure assim:</p>
-        <ol>
-          <li>Clique no ícone de nuvem azul na barra de baixo (perto do relógio)</li>
-          <li>Faça login com seu e-mail Microsoft</li>
-          <li>Marque a opção <strong>Fotos</strong> para sincronizar</li>
-          <li>Pronto — toda foto nova vai para a nuvem automaticamente</li>
-        </ol>
+        <h2>4. Nuvem: o que ela protege e o que precisa ser conferido</h2>
+        <p>Serviços de nuvem podem sincronizar pastas e manter versões/lixeira conforme o produto e o plano. Isso ajuda contra perda do computador, mas uma alteração ou exclusão pode também ser sincronizada. Antes de tratar a nuvem como única proteção, entenda retenção, histórico de versões, limite de armazenamento e o que acontece quando um arquivo é apagado.</p>
+        <p>O ideal é combinar cópias que não falham pelo mesmo motivo: por exemplo, computador + disco externo + cópia remota/versionada, conforme a importância do acervo.</p>
 
-        <h2>Dica de Ouro: Faça Dois Backups</h2>
-        <p>Especialistas recomendam a regra <strong>3-2-1</strong>: três cópias, em dois lugares diferentes, sendo uma fora de casa (nuvem). Assim, mesmo que tudo dê errado, suas fotos estão seguras.</p>
+        <h2>5. Como verificar se o backup está íntegro</h2>
+        <ul>
+          <li>Compare a estrutura de pastas do original e do destino.</li>
+          <li>Abra fotos antigas e recentes diretamente da cópia.</li>
+          <li>Teste formatos diferentes, inclusive vídeos se fazem parte do acervo.</li>
+          <li>Confira se o destino não ficou sem espaço no meio da operação.</li>
+          <li>Registre a data da última verificação.</li>
+        </ul>
+        <p>Para um procedimento formal, use o guia <Link to="/blog/como-testar-restauracao-de-backup" className="text-accent">como testar a restauração de um backup</Link>.</p>
 
-        <h2>Ajuda Profissional</h2>
-        <p>Não conseguiu? A O Técnico de Informática faz backup completo em sua casa, configura nuvem e ainda recupera fotos de HDs com defeito. Atendemos Curitiba, São José dos Pinhais e região via WhatsApp.</p>
+        <h2>6. Se o disco já apresenta falhas, pare de organizar</h2>
+        <p>Se pastas somem, a cópia trava sempre no mesmo ponto, o disco desconecta ou arquivos começam a não abrir, não continue movendo e renomeando milhares de itens. Reduza o uso da unidade e trate o caso como possível recuperação de dados. Cada gravação adicional pode complicar uma recuperação em mídia deteriorada.</p>
 
+        <h2>Checklist de um backup confiável</h2>
+        <ul>
+          <li>Originais localizados e não apagados durante a primeira cópia.</li>
+          <li>Cópia em armazenamento diferente do disco principal.</li>
+          <li>Arquivos do destino abertos com sucesso.</li>
+          <li>Proteção contínua/versionamento configurados quando necessários.</li>
+          <li>Plano para perda física, falha do disco e exclusão acidental.</li>
+          <li>Teste periódico de restauração previsto.</li>
+        </ul>
+
+        <p>Se você ainda não decidiu entre nuvem e mídia física, compare <Link to="/decisoes/nuvem-ou-hd-externo" className="text-accent">nuvem ou HD externo</Link> e veja o <Link to="/guia-tecnico-informatica#tema-dados-backup" className="text-accent">Atlas de dados e backup</Link>.</p>
+        <EditorialReferences slug="como-fazer-backup-fotos-windows-iniciantes" />
       </>
     ),
   },
+
   "como-instalar-impressora-windows-passo-a-passo": {
     title: "Instalar impressora no Windows: por que ela some da rede e como deixar a instalação estável",
     excerpt:
@@ -9914,91 +9972,128 @@ crontab -e
       </>
     ),
   },
-  "como-atualizar-windows-corretamente": {
-    title: "Como Atualizar o Windows 11 Sem Travar: Guia Seguro 2026",
-    excerpt: "Atualização do Windows travando ou dando erro? Aprenda como atualizar o Windows 11 corretamente. Suporte técnico em Curitiba se precisar.",
-    date: "2026-04-29",
-    readTime: "6 min",
-    category: "Tutoriais Domésticos",
+  
+"como-atualizar-windows-corretamente": {
+    title: "Como atualizar o Windows 11 com segurança e o que fazer quando falha",
+    excerpt:
+      "Passo a passo para preparar, instalar e validar atualizações do Windows 11, com backup, energia, espaço, reinício e diagnóstico oficial quando o Windows Update apresenta erro.",
+    date: "2026-09-25",
+    readTime: "10 min",
+    category: "Windows",
     content: (
       <>
-        <p className="lead">Atualizar o Windows é importante para segurança, mas no momento errado vira pesadelo. Veja como fazer com tranquilidade.</p>
+        <p className="lead">Atualizar o Windows é rotina de manutenção, não procedimento de emergência. O caminho seguro é preparar os dados e a máquina, usar o Windows Update, deixar o processo concluir e validar o sistema depois. Quando aparece erro, a prioridade é registrar o código e usar a solução de problemas oficial antes de apagar cache, executar comandos ou forçar desligamentos.</p>
 
-        <h2>Quando Atualizar</h2>
+        <h2>Resposta curta</h2>
+        <p>Salve o trabalho, confirme backup dos arquivos importantes, mantenha notebook conectado à energia e verifique se há espaço disponível. Em Windows 11, abra Configurações → Windows Update → Verificar se há atualizações. Instale o que for aplicável e reinicie quando solicitado. Se falhar, anote o código/etapa e execute a solução de problemas do Windows Update pelo aplicativo Obter Ajuda.</p>
+
+        <h2>1. Antes da atualização</h2>
         <ul>
-          <li>Quando você tem 1-2 horas livres</li>
-          <li>Com o notebook na tomada</li>
-          <li>Internet boa e estável</li>
-          <li>Sem trabalho urgente para entregar</li>
+          <li>Salve documentos e feche tarefas críticas.</li>
+          <li>Confirme uma cópia dos arquivos que não podem ser perdidos.</li>
+          <li>Conecte notebook à fonte de energia.</li>
+          <li>Garanta espaço livre suficiente para download e arquivos temporários.</li>
+          <li>Se o disco usa BitLocker, saiba onde está a chave de recuperação antes de mudanças maiores de firmware ou sistema.</li>
+        </ul>
+        <p>Não existe um tempo fixo de “uma ou duas horas” para toda atualização. O tempo varia por pacote, conexão, armazenamento e hardware.</p>
+
+        <h2>2. Use o Windows Update como canal principal</h2>
+        <p>Abra <strong>Configurações → Windows Update</strong> e verifique atualizações. O sistema pode oferecer atualizações de qualidade, recursos e itens opcionais. Leia o que está sendo instalado e reinicie quando necessário. Drivers críticos específicos também podem ser obtidos do fabricante do computador quando houver orientação para isso.</p>
+
+        <h2>3. Reinício: espere pelo estado, não por um cronômetro universal</h2>
+        <p>Durante a instalação, o PC pode reiniciar mais de uma vez e ficar alguns períodos sem mudança aparente. Evite cortar energia enquanto há atividade de atualização. Se a máquina realmente congelar, primeiro observe sinais de atividade, mensagens e tempo decorrido. Um desligamento forçado no meio da gravação pode transformar uma atualização lenta em um sistema que não inicia.</p>
+        <p>Se houver mensagem de erro ou reversão automática, registre exatamente o texto/código antes de tentar outra coisa.</p>
+
+        <h2>4. Horário ativo reduz interrupções</h2>
+        <p>O Windows permite configurar horário ativo e opções de reinicialização para diminuir reinícios inconvenientes. Isso não impede atualizações para sempre; serve para adaptar a manutenção à sua rotina. Em empresas, políticas de atualização devem ser coordenadas com janelas e sistemas críticos.</p>
+
+        <h2>5. Quando o Windows Update dá erro</h2>
+        <p>A Microsoft orienta começar pelo solucionador do Windows Update no aplicativo <strong>Obter Ajuda</strong> e, se necessário, seguir as etapas gerais do suporte. Faça uma tentativa por vez e teste novamente. Evite copiar comandos agressivos de páginas aleatórias antes de entender o erro.</p>
+        <p>O portal também mantém uma trilha específica em <Link to="/blog/windows-update-nao-funciona-o-que-verificar" className="text-accent">Windows Update não funciona: o que verificar</Link>.</p>
+
+        <h2>6. Atualização opcional não é obrigação automática</h2>
+        <p>Atualizações opcionais e drivers devem ser avaliados pelo problema que resolvem. Se um computador está estável, não é necessário instalar um driver aleatório apenas porque tem número mais novo. Prefira Windows Update e fabricante do equipamento e mantenha um ponto claro de retorno quando a mudança afeta hardware essencial.</p>
+
+        <h2>7. Depois de atualizar, valide</h2>
+        <ul>
+          <li>Confirme que o Windows inicia normalmente.</li>
+          <li>Teste rede, áudio, vídeo, impressão e periféricos importantes.</li>
+          <li>Abra os aplicativos usados no trabalho.</li>
+          <li>Confira novamente o Windows Update para saber se há etapa pendente.</li>
+          <li>Se surgiu erro novo, registre quando começou e qual atualização precedeu o sintoma.</li>
         </ul>
 
-        <h2>Passo a Passo</h2>
-        <ol>
-          <li>Salve e feche todos os programas abertos</li>
-          <li>Vá em <strong>Configurações → Windows Update</strong></li>
-          <li>Clique em <strong>Verificar atualizações</strong></li>
-          <li>Espere baixar (pode demorar)</li>
-          <li>Quando aparecer 'Reiniciar agora', clique e <strong>NÃO desligue</strong> o PC enquanto estiver instalando</li>
-        </ol>
+        <h2>Quando parar</h2>
+        <p>Interrompa a sequência de tentativas se o Windows não inicia, o disco apresenta falha, a máquina entra em loop de reparo, o BitLocker pede uma chave que você não possui ou a atualização afetou um ambiente de produção sem plano de retorno. Nesses cenários, preservar dados e capacidade de recuperação vem antes de “terminar a atualização”.</p>
 
-        <h2>Se Travar</h2>
-        <p>Espere pelo menos 2 horas antes de fazer qualquer coisa. Atualizações grandes parecem travadas mas estão trabalhando. Se passar disso, force desligar (segurar o botão por 10 segundos), ligue de novo e o Windows volta sozinho.</p>
-
-        <h2>Programe o Horário</h2>
-        <p>Em <strong>Windows Update → Opções avançadas → Horário ativo</strong> diga ao Windows quando você usa o PC. Ele só atualiza fora desse horário.</p>
-
-        <h2>Atualização Não Funciona</h2>
-        <p>Erros recorrentes (códigos como 0x80070002) podem indicar problema de disco ou arquivos corrompidos. A O Técnico de Informática resolve em domicílio em Curitiba sem perder seus dados.</p>
-
+        <p>Para loops pós-atualização, veja <Link to="/blog/windows-update-travado-desfazendo-alteracoes" className="text-accent">Windows Update travado ou desfazendo alterações</Link>. Para a visão geral, use o <Link to="/guia-tecnico-informatica#tema-sistemas-operacionais" className="text-accent">Atlas de sistemas operacionais</Link>.</p>
+        <EditorialReferences slug="como-atualizar-windows-corretamente" />
       </>
     ),
   },
-  "como-recuperar-arquivos-apagados-windows": {
-    title: "Como Recuperar Arquivos Apagados no Windows 11: 3 Métodos Que Funcionam",
-    excerpt: "Apagou um arquivo importante? Aprenda como recuperar arquivos deletados no Windows com Recuva, lixeira e histórico. Recuperação profissional em Curitiba.",
-    date: "2026-04-29",
-    readTime: "7 min",
-    category: "Tutoriais Domésticos",
+
+  
+"como-recuperar-arquivos-apagados-windows": {
+    title: "Como recuperar arquivos apagados no Windows sem reduzir a chance de recuperação",
+    excerpt:
+      "Lixeira, versões de backup e Windows File Recovery: a ordem segura para tentar recuperar arquivos apagados e por que você deve reduzir o uso do disco após a exclusão.",
+    date: "2026-09-25",
+    readTime: "10 min",
+    category: "Backup e Dados",
     content: (
       <>
-        <p className="lead">Apagar arquivo importante por engano acontece com todo mundo. Não entre em pânico — na maioria das vezes dá para recuperar.</p>
+        <p className="lead">Quando um arquivo importante é apagado, a primeira medida é <strong>evitar novas gravações na unidade</strong>. Instalar programas, baixar arquivos ou continuar usando o computador pode ocupar o espaço onde os dados apagados ainda estavam recuperáveis. A Microsoft faz a mesma recomendação para o Windows File Recovery: minimizar ou evitar o uso do computador aumenta a chance de recuperação.</p>
 
-        <h2>Método 1: Lixeira (O Mais Óbvio)</h2>
+        <h2>Resposta curta: tente nesta ordem</h2>
         <ol>
-          <li>Abra a <strong>Lixeira</strong> (ícone na Área de Trabalho)</li>
-          <li>Procure seu arquivo (use a busca no canto superior se tiver muita coisa)</li>
-          <li>Clique com botão direito → <strong>Restaurar</strong></li>
-          <li>Ele volta para o lugar original</li>
+          <li>Verifique Lixeira e lixeira do serviço de nuvem, se aplicável.</li>
+          <li>Procure uma cópia em backup ou Histórico de Arquivos.</li>
+          <li>Se não houver cópia, pare de gravar no disco e considere o Windows File Recovery ou ferramenta apropriada, salvando o resultado em outra unidade.</li>
+          <li>Se o disco falha, desconecta ou faz ruído anormal, pare as tentativas domésticas e preserve a mídia.</li>
         </ol>
 
-        <h2>Método 2: Recuva (Quando Esvaziou a Lixeira)</h2>
-        <p>O Recuva é um programa grátis que recupera arquivos mesmo depois de a Lixeira ser esvaziada — desde que você não tenha gravado muita coisa nova depois.</p>
-        <ol>
-          <li>Acesse <strong>ccleaner.com/recuva</strong> e baixe a versão grátis</li>
-          <li>Instale e abra</li>
-          <li>Escolha o tipo de arquivo (Imagens, Documentos, etc.) e clique <strong>Avançar</strong></li>
-          <li>Selecione onde estava e clique <strong>Iniciar</strong></li>
-          <li>Marque os arquivos com bolinha verde (chance alta de recuperar) e clique <strong>Recuperar</strong></li>
-          <li><strong>SALVE EM OUTRO DRIVE</strong> (pendrive ou HD externo) — não no mesmo lugar</li>
-        </ol>
+        <h2>1. Lixeira: restauração sem varredura</h2>
+        <p>Se o arquivo ainda está na Lixeira, restaure por ali. O Windows devolve o item à localização original. Se ele estava em uma pasta sincronizada com nuvem, confira também a lixeira e o histórico do serviço, porque o estado pode não ser igual ao da Lixeira local.</p>
 
-        <h2>Método 3: Histórico de Arquivos</h2>
-        <p>Se você ativou o backup automático antes (em Configurações → Atualização e Segurança → Backup), pode restaurar versões anteriores.</p>
-        <ol>
-          <li>Clique com botão direito na pasta onde estava o arquivo</li>
-          <li>Escolha <strong>Restaurar versões anteriores</strong></li>
-          <li>Selecione a data e restaure</li>
-        </ol>
+        <h2>2. Backup e versões anteriores vêm antes da recuperação forense</h2>
+        <p>Se você usa Histórico de Arquivos ou outro sistema de backup, prefira restaurar uma cópia conhecida. O Histórico de Arquivos permite recuperar versões anteriores quando a proteção já estava configurada. Isso é mais previsível do que varrer espaço não alocado de um disco.</p>
+        <p>Consulte <Link to="/blog/historico-de-arquivos-windows-como-configurar" className="text-accent">Histórico de Arquivos no Windows</Link> e <Link to="/blog/como-testar-restauracao-de-backup" className="text-accent">como testar uma restauração</Link>.</p>
 
-        <h2>Regra de Ouro</h2>
-        <p>Quanto MENOS você usar o computador depois de apagar, MAIOR a chance de recuperar. Não instale programas, não baixe arquivos grandes, não desfragmente.</p>
+        <h2>3. Windows File Recovery: quando não há backup</h2>
+        <p>A Microsoft oferece o Windows File Recovery para tentar recuperar arquivos apagados de armazenamento local que não estão mais na Lixeira. É uma ferramenta de linha de comando e o resultado depende do tipo de sistema de arquivos, do tempo e do quanto a unidade foi usada depois da exclusão.</p>
+        <p>A regra crítica é usar <strong>outra unidade como destino</strong>. Recuperar para o mesmo disco pode sobrescrever justamente os dados que ainda poderiam ser encontrados.</p>
 
-        <h2>Casos Difíceis</h2>
-        <p>HD com defeito, formatação acidental, arquivos muito antigos? A O Técnico de Informática tem ferramentas profissionais de recuperação. Atendemos Curitiba e região — quanto mais rápido, melhor a chance.</p>
+        <h2>4. SSD muda o cenário</h2>
+        <p>Em SSDs, recursos de gerenciamento de blocos como TRIM podem tornar a recuperação de arquivos apagados mais difícil ou impossível após o sistema informar que aqueles blocos não são mais necessários. Por isso não existe promessa honesta de recuperação. Quanto menos você escrever na unidade após perceber a exclusão, melhor para qualquer tentativa subsequente.</p>
 
+        <h2>5. O que não fazer depois de apagar algo importante</h2>
+        <ul>
+          <li>Não instale a ferramenta de recuperação no mesmo disco que perdeu o arquivo.</li>
+          <li>Não baixe jogos, vídeos ou atualizações grandes “enquanto procura”.</li>
+          <li>Não desfragmente nem faça limpeza agressiva.</li>
+          <li>Não formate novamente para tentar “corrigir” a unidade.</li>
+          <li>Não continue ligando um HD que apresenta ruído mecânico ou desconexões.</li>
+        </ul>
+
+        <h2>6. Formatação acidental e disco defeituoso são casos diferentes</h2>
+        <p>Exclusão de arquivo em disco saudável é diferente de partição formatada, sistema de arquivos danificado ou mídia com defeito físico. Em disco que apresenta SMART crítico, lentidão extrema ou falha de leitura, priorize imagem/clonagem técnica e preservação, não varreduras repetidas. Veja <Link to="/servicos/recuperacao-de-dados" className="text-accent">recuperação de dados</Link> para entender o limite entre tentativa lógica e problema de mídia.</p>
+
+        <h2>Checklist antes de qualquer tentativa</h2>
+        <ul>
+          <li>Unidade onde o arquivo estava identificada.</li>
+          <li>Lixeira local e da nuvem verificadas.</li>
+          <li>Backups/Histórico de Arquivos consultados.</li>
+          <li>Uso da unidade reduzido.</li>
+          <li>Outra unidade preparada para receber arquivos recuperados.</li>
+          <li>Sinais de falha física avaliados antes de varrer.</li>
+        </ul>
+
+        <p>Depois de recuperar o que for possível, elimine o ponto único de falha com o <Link to="/guia-tecnico-informatica#tema-dados-backup" className="text-accent">Atlas de dados e backup</Link>.</p>
+        <EditorialReferences slug="como-recuperar-arquivos-apagados-windows" />
       </>
     ),
   },
+
   "como-trocar-papel-de-parede-tela-bloqueio-windows": {
     title: "Como Trocar Papel de Parede e Tela de Bloqueio no Windows 11 (2026)",
     excerpt: "Personalize seu Windows 11 com fotos suas. Veja como trocar o papel de parede e a tela de bloqueio em 3 cliques.",
@@ -11086,41 +11181,77 @@ crontab -e
     ),
   },
 
-  "como-fazer-teste-velocidade-internet": {
-    title: "Como Testar a Velocidade da Internet Corretamente: Guia 2026",
-    excerpt: "Internet lenta em Curitiba? Aprenda como fazer um teste de velocidade confiável e descobrir se o problema é da operadora ou do seu Wi-Fi.",
-    date: "2026-04-29",
-    readTime: "5 min",
-    category: "Tutoriais Domésticos",
+  
+"como-fazer-teste-velocidade-internet": {
+    title: "Como fazer teste de velocidade da internet e interpretar download, latência e Wi-Fi",
+    excerpt:
+      "Método para testar a internet sem confundir problema do provedor com Wi-Fi: referência por cabo, medições repetidas, download, upload, latência, jitter e perda de pacotes.",
+    date: "2026-09-25",
+    readTime: "10 min",
+    category: "Redes e Wi-Fi",
     content: (
       <>
-        <p className="lead">Antes de reclamar com a operadora, faça o teste do jeito certo. Resultados errados levam à conclusão errada.</p>
+        <p className="lead">Um teste de velocidade é uma fotografia daquele momento, não um diagnóstico completo. O resultado depende do provedor, do roteador, do Wi-Fi, do aparelho usado, de outros dispositivos consumindo banda e do servidor de teste. A FCC destaca que download e upload são apenas parte da medição; latência, jitter e perda de pacotes descrevem outros aspectos importantes da experiência.</p>
 
-        <h2>Como Testar Corretamente</h2>
+        <h2>Resposta curta</h2>
+        <p>Crie primeiro uma referência perto do roteador ou por Ethernet quando possível, pause grandes transferências e faça mais de uma medição em horários e pontos comparáveis. Depois repita no Wi-Fi onde o problema ocorre. Se a referência cabeada é boa e o Wi-Fi cai muito, investigue a rede local. Se cabo e Wi-Fi apresentam o mesmo padrão ruim, o problema pode estar antes do Wi-Fi — modem, link do provedor ou equipamento de borda.</p>
+
+        <h2>1. O que cada número mede</h2>
+        <table>
+          <thead><tr><th>Métrica</th><th>O que representa</th></tr></thead>
+          <tbody>
+            <tr><td>Download</td><td>Taxa de dados recebidos durante o teste</td></tr>
+            <tr><td>Upload</td><td>Taxa de dados enviados</td></tr>
+            <tr><td>Latência</td><td>Tempo de ida/volta percebido na comunicação</td></tr>
+            <tr><td>Jitter</td><td>Variação da latência entre medições</td></tr>
+            <tr><td>Perda de pacotes</td><td>Dados que não chegam ao destino e precisam ser tratados/retransmitidos</td></tr>
+          </tbody>
+        </table>
+        <p>Videochamada pode sofrer mesmo com download alto se latência, jitter ou perda estão ruins. Por isso “quantos megas deu” não responde tudo.</p>
+
+        <h2>2. Faça uma medição de referência</h2>
         <ol>
-          <li>Conecte o computador no roteador POR CABO (não por Wi-Fi)</li>
-          <li>Feche todos os programas, sites e downloads</li>
-          <li>Pause Netflix, YouTube, downloads</li>
-          <li>Acesse <strong>fast.com</strong> ou <strong>speedtest.net</strong></li>
-          <li>Clique em <strong>Iniciar</strong> e espere terminar</li>
-          <li>Anote o resultado de DOWNLOAD e UPLOAD</li>
+          <li>Escolha um computador em boas condições e, quando possível, conecte-o por Ethernet ao roteador/gateway.</li>
+          <li>Pause downloads, backup em nuvem e streaming intenso durante a medição.</li>
+          <li>Evite VPN corporativa se o objetivo é medir o acesso local à internet — ou registre que ela está ativa se o problema acontece justamente pela VPN.</li>
+          <li>Faça algumas medições e anote horário, aparelho, conexão e resultados.</li>
         </ol>
+        <p>Ethernet reduz uma variável, mas não é uma garantia absoluta: cabo, porta, placa de rede e negociação também podem limitar o teste. Verifique se a conexão cabeada negociou a velocidade esperada quando o resultado é surpreendentemente baixo.</p>
 
-        <h2>Resultado Por Wi-Fi É Sempre Menor</h2>
-        <p>Wi-Fi sempre dá menos que cabo. Não compare com sua velocidade contratada usando Wi-Fi — só cabo é o teste real.</p>
+        <h2>3. Depois teste o Wi-Fi no local problemático</h2>
+        <p>Repita o teste no mesmo aparelho em diferentes pontos. A comparação mostra quanto do problema surge dentro da rede sem fio. Distância, paredes, banda usada, canal, interferência e capacidade do cliente influenciam. Wi-Fi <strong>não é obrigatoriamente sempre mais lento que qualquer cabo</strong>; o importante é comparar as tecnologias e capacidades reais do seu ambiente.</p>
 
-        <h2>Se Está Bem Abaixo do Contratado</h2>
-        <p>Você contratou 300 mega e o teste por cabo deu 40 mega? Isso é problema da operadora. Por lei, devem entregar pelo menos 80% do contratado em média (40% mínimo a qualquer momento).</p>
+        <h2>4. Uma medição isolada não prova recorrência</h2>
+        <p>A FCC recomenda considerar contexto e múltiplas medições. Se o problema aparece à noite, meça também nesse período. Se acontece em uma sala específica, registre naquele local. Uma sequência com data, horário e conexão é mais útil para suporte do que um único print.</p>
 
-        <h2>O Que Reclamar Para Operadora</h2>
-        <p>Ligue ou abra chat e diga: <strong>'Fiz teste por cabo direto no modem, todos os outros equipamentos desligados, e estou recebendo X mega de Y contratados. Quero técnico no local ou crédito proporcional.'</strong></p>
+        <h2>5. Como separar provedor de rede interna</h2>
+        <ul>
+          <li><strong>Cabo/referência boa + Wi-Fi ruim:</strong> investigue cobertura, canal, banda, posicionamento e capacidade do ponto de acesso.</li>
+          <li><strong>Cabo e Wi-Fi ruins ao mesmo tempo:</strong> investigue modem/ONU, link do provedor, roteador, negociação de porta e saturação geral.</li>
+          <li><strong>Só um aparelho ruim:</strong> investigue o próprio cliente, driver, banda e configuração.</li>
+          <li><strong>Velocidade boa, chamadas ruins:</strong> observe latência, jitter, perda e estabilidade.</li>
+        </ul>
+        <p>O roteiro aprofundado está em <Link to="/blog/internet-lenta-provedor-ou-roteador" className="text-accent">internet lenta: provedor ou roteador?</Link>.</p>
 
-        <h2>Continuou Lento Mesmo Após Visita Técnica?</h2>
-        <p>Pode ser cabeamento interno antigo, modem velho ou interferência. A O Técnico de Informática faz análise independente e ajuda a comprovar para a operadora — atendemos Curitiba via WhatsApp.</p>
+        <h2>6. Não use porcentagem regulatória antiga como diagnóstico técnico</h2>
+        <p>Metas regulatórias e metodologia de medição podem mudar e dependem do contexto do serviço. Em vez de aplicar um número antigo de um tutorial como sentença, consulte o contrato e a regulamentação vigente e leve ao provedor uma série de medições reproduzíveis. Tecnicamente, primeiro prove onde ocorre a degradação.</p>
 
+        <h2>Checklist de evidência</h2>
+        <ul>
+          <li>Plano/velocidade contratada registrada.</li>
+          <li>Modelo e conexão do aparelho de teste anotados.</li>
+          <li>Medição de referência e medição no ponto problemático.</li>
+          <li>Download, upload e latência registrados; jitter/perda quando a ferramenta informa.</li>
+          <li>Mais de um horário quando o problema é intermitente.</li>
+          <li>VPN e tráfego intenso controlados ou anotados.</li>
+        </ul>
+
+        <p>Se a causa ficar na rede interna, consulte <Link to="/servicos/redes-e-wifi" className="text-accent">redes e Wi-Fi</Link> e o <Link to="/guia-tecnico-informatica#tema-redes-wifi" className="text-accent">Atlas de redes</Link>.</p>
+        <EditorialReferences slug="como-fazer-teste-velocidade-internet" />
       </>
     ),
   },
+
   "como-bloquear-acesso-internet-criancas": {
     title: "Como Bloquear Internet em Horários Específicos: Controle Parental no Roteador (2026)",
     excerpt: "Filhos online o dia inteiro? Aprenda como bloquear o Wi-Fi em horários no próprio roteador, sem instalar app. Configuração ajudada em Curitiba.",
