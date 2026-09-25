@@ -5,6 +5,7 @@ import { Badge } from "@/components/ui/badge";
 import { Input } from "@/components/ui/input";
 import { toast } from "@/hooks/use-toast";
 import { exportarCsv } from "@/lib/exportarRelatorio";
+import { descricaoDe, prioridadeDe } from "@/lib/funnelPrioridade";
 
 type Acao = {
   id: string;
@@ -16,6 +17,7 @@ type Acao = {
   sintoma: string | null;
   status_atendimento: string;
   prazo: string | null;
+  wa_message: string | null;
 };
 
 const STATUS = ["novo", "contatado", "agendado", "fechado", "perdido"] as const;
@@ -43,7 +45,7 @@ export default function FunnelAcoesBairro({ dias = 60 }: { dias?: number }) {
     const desde = new Date(Date.now() - dias * 864e5).toISOString();
     void supabase
       .from("funnel_submissions")
-      .select("id, created_at, neighborhood_slug, city, service_slug, equipamento, sintoma, status_atendimento, prazo")
+      .select("id, created_at, neighborhood_slug, city, service_slug, equipamento, sintoma, status_atendimento, prazo, wa_message")
       .gte("created_at", desde)
       .order("created_at", { ascending: false })
       .then(({ data }) => {
@@ -84,10 +86,12 @@ export default function FunnelAcoesBairro({ dias = 60 }: { dias?: number }) {
               "chamados",
               linhas.map((l) => ({
                 data: l.created_at.slice(0, 10),
+                prioridade: prioridadeDe(l.wa_message),
                 bairro: l.neighborhood_slug ?? "",
                 cidade: l.city ?? "",
                 servico: l.service_slug ?? l.equipamento ?? "",
                 sintoma: l.sintoma ?? "",
+                descricao_visitante: descricaoDe(l.wa_message),
                 status: l.status_atendimento,
                 prazo: l.prazo ?? "",
                 sla: sla(l),
