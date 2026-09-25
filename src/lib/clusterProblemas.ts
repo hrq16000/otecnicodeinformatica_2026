@@ -946,9 +946,9 @@ export const CLUSTER_PROBLEMAS: ClusterProblema[] = [
     titulo: "Cheiro de queimado no computador, fonte ou carregador",
     metaTitle: "Cheiro de queimado: desligue computador e carregador | O Técnico",
     metaDescription:
-      "Cheiro de queimado vindo do gabinete, da fonte ou do carregador é sinal elétrico e urgente. Veja o que desligar agora, o que nunca fazer e como o diagnóstico é conduzido.",
+      "Fonte com cheiro de queimado, carregador aquecendo ou odor vindo do PC? Pare o uso e veja como cortar a energia com segurança, quando não tocar no aparelho e como o diagnóstico é feito.",
     resumo:
-      "Cheiro de queimado é um dos poucos sintomas em que a orientação certa é parar de usar o equipamento imediatamente. Ele indica que algum componente ultrapassou a temperatura de projeto ou que houve falha elétrica — e o risco deixa de ser só perder a peça: envolve dano em cascata na placa e, em casos extremos, princípio de incêndio. O diagnóstico depois é técnico e frio; o primeiro passo é elétrico e imediato.",
+      "Cheiro de queimado, derretimento, estalo ou fumaça exigem interromper o uso. Se for seguro tocar no plugue e não houver fogo, desligue o equipamento e desconecte a alimentação. Se houver fumaça ativa, chama, tomada derretida ou aparelho muito quente, não manuseie para investigar: afaste-se, corte a energia do circuito apenas se isso puder ser feito com segurança e acione o serviço de emergência quando houver incêndio. Só depois vem o diagnóstico do componente.",
     waMessage:
       "Olá! Vim da página sobre cheiro de queimado. Senti cheiro no meu equipamento e preciso de orientação urgente.",
     sintomas: [
@@ -961,8 +961,8 @@ export const CLUSTER_PROBLEMAS: ClusterProblema[] = [
         desc: "O equipamento apaga junto com o odor e não volta. Padrão típico de proteção da fonte atuando ou de componente que abriu em curto.",
       },
       {
-        titulo: "Cheiro adocicado ou de peixe",
-        desc: "Odor característico de capacitor eletrolítico rompido e de alguns retardantes de chama em sobreaquecimento. Merece inspeção visual da placa antes de religar.",
+        titulo: "Odor químico ou acre sem origem visível",
+        desc: "Materiais de isolamento, eletrólitos e plásticos aquecidos podem produzir odores diferentes. Não tente identificar o componente aproximando o rosto; desligue e deixe a localização para inspeção visual e elétrica em bancada.",
       },
       {
         titulo: "Estalo ou clarão junto do cheiro",
@@ -975,8 +975,8 @@ export const CLUSTER_PROBLEMAS: ClusterProblema[] = [
     ],
     causas: [
       {
-        titulo: "Fonte de alimentação em fim de vida",
-        desc: "Capacitores secos e ventilação obstruída fazem a fonte trabalhar acima do limite. É a origem mais comum de cheiro em computador de mesa e costuma envolver troca da peça, não reparo.",
+        titulo: "Fonte de alimentação ou estágio de entrada danificado",
+        desc: "Falha de componente, ventilação bloqueada, conexão ruim ou surto podem aquecer a fonte e seus cabos. A origem precisa ser isolada antes de substituir a peça, porque a placa ou a própria rede elétrica também podem estar envolvidas.",
       },
       {
         titulo: "Carregador ou cabo com mau contato",
@@ -995,16 +995,16 @@ export const CLUSTER_PROBLEMAS: ClusterProblema[] = [
         desc: "Capacitor estufado, bobina queimada ou circuito de alimentação em curto liberam odor característico. A inspeção sob lupa localiza o ponto antes de qualquer energização.",
       },
       {
-        titulo: "Bateria inchada ou danificada",
-        desc: "Célula de lítio deformada é risco separado: além do odor, existe possibilidade de aquecimento descontrolado. O procedimento correto é remover a bateria e descartar em ponto adequado.",
+        titulo: "Bateria de íons de lítio inchada ou danificada",
+        desc: "Inchaço, calor anormal, vazamento, estalo ou fumaça indicam risco de incêndio. Pare de carregar e usar. Não perfure, pressione nem tente remover uma bateria interna quente ou danificada sem treinamento; o descarte deve seguir a orientação local para bateria defeituosa.",
       },
     ],
     antesDeChamar: [
-      "Desligue o equipamento pelo botão de energia e tire o plugue da tomada — em notebook, retire também o carregador e a bateria removível.",
-      "Não religue para “ver se o cheiro volta”: se houve curto, a nova energização amplia o dano.",
-      "Identifique de onde vem o odor com o equipamento já desligado: fonte, carregador, régua, tomada ou monitor têm caminhos de reparo diferentes.",
-      "Verifique se há marca escura, derretimento no conector ou capacitor estufado, e fotografe o que encontrar para adiantar a triagem.",
-      "Se houver bateria visivelmente inchada, mantenha o aparelho em superfície não inflamável, longe de material combustível, até o atendimento.",
+      "Se não houver fumaça, chama, plugue derretido ou calor que impeça o manuseio seguro, desligue o equipamento e desconecte a alimentação. Se houver risco ao tocar, corte o circuito no disjuntor apenas se isso puder ser feito com segurança.",
+      "Não religue para “ver se o cheiro volta”: uma nova energização pode ampliar o dano ou iniciar aquecimento novamente.",
+      "Sem abrir o equipamento, observe de longe se o odor parece vir da tomada, régua, carregador, fonte externa, monitor ou gabinete. Não aproxime o rosto para cheirar componentes.",
+      "Fotografe somente sinais externos visíveis, como plugue escurecido ou plástico deformado. Não abra fonte, carregador ou bateria para procurar a origem.",
+      "Se houver bateria inchada, muito quente, estalando ou soltando fumaça, pare de carregar e não pressione nem perfure. Não mova um dispositivo em combustão; priorize afastamento e segurança.",
     ],
     naoFaca: [
       "Não use o equipamento “só um pouco para salvar arquivos” — o risco elétrico é maior que o benefício, e a cópia pode ser feita depois com o disco fora da máquina.",
@@ -1038,11 +1038,11 @@ export const CLUSTER_PROBLEMAS: ClusterProblema[] = [
       },
       {
         q: "Meus arquivos estão perdidos?",
-        a: "Na maioria dos casos elétricos o disco continua íntegro, mesmo quando a placa não tem reparo viável. Retiramos a unidade e copiamos os dados em separado. Não prometemos recuperação total antes de examinar o dispositivo.",
+        a: "Não dá para concluir pelo cheiro. O armazenamento pode ter permanecido íntegro ou pode ter sido afetado pelo mesmo evento elétrico. Primeiro eliminamos o risco de energização; depois o disco é avaliado separadamente e a recuperação é tratada sem prometer resultado antes do exame.",
       },
       {
         q: "Estabilizador ou nobreak evita esse problema?",
-        a: "Reduz o risco de surto pela rede, mas não substitui manutenção: poeira, fonte no fim da vida e conector com mau contato queimam mesmo com proteção instalada. Um bom filtro de linha ajuda; limpeza periódica e fonte adequada ajudam mais.",
+        a: "Proteção contra surto e nobreak podem reduzir riscos ligados a eventos da rede quando corretamente especificados, mas não impedem falha interna, conector frouxo, carregador defeituoso ou bateria danificada. A proteção precisa ser compatível com a instalação elétrica e com o equipamento.",
       },
       {
         q: "Vale a pena consertar um equipamento que queimou?",
@@ -1240,11 +1240,17 @@ export const CLUSTER_PROBLEMAS: ClusterProblema[] = [
     titulo: "Computador ou notebook esquentando demais",
     metaTitle: "Computador esquentando: causas e o que fazer | O Técnico",
     metaDescription:
-      "Ventoinha acelerada, base do notebook quente e queda de desempenho em jogos ou vídeo indicam problema térmico. Veja as causas, o que medir antes e qual manutenção resolve.",
+      "Computador esquentando muito ou PC quente sob carga? Veja como separar aquecimento normal, throttling, ventilação obstruída e falha de refrigeração sem usar temperatura genérica.",
     resumo:
-      "Calor não é defeito por si só: todo equipamento aquece. O problema começa quando a temperatura passa do limite de projeto e o próprio processador reduz a velocidade para se proteger — é aí que a máquina fica lenta em tarefas pesadas, a ventoinha acelera sem parar e a base do notebook incomoda no colo. A investigação térmica é medida, não estimada.",
+      "Computador quente não significa, sozinho, defeito. A temperatura varia conforme processador, projeto do equipamento, ambiente e carga. O sinal mais útil é a combinação entre calor, ruído de ventoinha, perda de desempenho, travamento ou desligamento. O diagnóstico correto compara o comportamento com a especificação do fabricante e procura evidência de throttling, fluxo de ar ruim ou carga anormal antes de indicar limpeza ou troca de peça.",
     waMessage:
       "Olá! Vim da página sobre computador esquentando. Meu equipamento está muito quente e quero avaliação térmica.",
+    ponteEditorial: {
+      antes: "Se você quer medir antes de abrir o equipamento, siga o guia de ",
+      to: "/blog/como-monitorar-temperatura-do-computador",
+      anchor: "como monitorar temperatura e reconhecer throttling",
+      depois: ".",
+    },
     sintomas: [
       {
         titulo: "Ventoinha acelerada o tempo todo",
@@ -1252,7 +1258,7 @@ export const CLUSTER_PROBLEMAS: ClusterProblema[] = [
       },
       {
         titulo: "Cai o desempenho depois de alguns minutos",
-        desc: "Começa bem e piora com o uso é a assinatura clássica de redução automática de frequência por temperatura. O gráfico de desempenho despenca sempre no mesmo ponto.",
+        desc: "Começa bem e piora sob carga pode indicar redução automática de frequência por limite térmico ou de potência. Confirme com telemetria e com a especificação do processador, porque queda de clock também pode ter outras causas.",
       },
       {
         titulo: "Base do notebook quente demais para apoiar",
@@ -1273,8 +1279,8 @@ export const CLUSTER_PROBLEMAS: ClusterProblema[] = [
         desc: "Em notebook, uma manta de fiapo se forma entre a ventoinha e as aletas. É a causa mais comum e não aparece em nenhuma inspeção externa.",
       },
       {
-        titulo: "Pasta térmica ressecada",
-        desc: "O composto entre processador e dissipador perde eficiência com o tempo. Depois de alguns anos, a mesma carga passa a gerar dezenas de graus a mais.",
+        titulo: "Interface térmica ou dissipador com contato inadequado",
+        desc: "Pasta térmica degradada, aplicação inadequada, pressão irregular ou dissipador mal assentado podem elevar a resistência térmica. A hipótese precisa ser confirmada junto com limpeza, montagem e comportamento sob carga — não pela idade do equipamento isoladamente.",
       },
       {
         titulo: "Ventoinha com rolamento gasto",
@@ -1298,10 +1304,10 @@ export const CLUSTER_PROBLEMAS: ClusterProblema[] = [
       "Confira a saída de ar com a máquina ligada. Fluxo fraco com barulho alto praticamente confirma obstrução.",
       "Verifique no gerenciador de tarefas se algum processo mantém uso alto sem você estar usando nada.",
       "Apoie o notebook em superfície rígida e plana por um dia e compare — se melhorar bastante, parte do problema é apoio.",
-      "Anote há quantos anos o equipamento nunca passou por limpeza interna. Acima de dois anos de uso doméstico, a manutenção já está atrasada.",
+      "Registre quando foi a última limpeza e em que ambiente o equipamento trabalha. Poeira, pelos, fumaça, obra e uso intenso mudam muito o intervalo; não existe periodicidade universal que sirva para todo computador.",
     ],
     naoFaca: [
-      "Não sopre ar comprimido girando a ventoinha livremente: sem travar as pás, o giro forçado danifica o rolamento e gera tensão no circuito.",
+      "Não aplique jato de ar de forma que a ventoinha dispare em rotação livre. Em limpeza interna, imobilize as pás e siga o procedimento do fabricante para não forçar rolamento, conector ou circuito.",
       "Não use aspirador comum encostado na placa — a eletricidade estática gerada é risco real para componentes.",
       "Não empilhe pasta térmica achando que mais quantidade resfria mais; excesso atrapalha o contato e piora a condução.",
       "Não deixe o equipamento rodando em ciclo de travamento por calor: cada parada abrupta pode corromper o arquivo aberto.",
@@ -1323,7 +1329,7 @@ export const CLUSTER_PROBLEMAS: ClusterProblema[] = [
     faq: [
       {
         q: "Qual temperatura é considerada alta?",
-        a: "Depende do modelo, mas a referência prática é o comportamento: se o equipamento reduz a velocidade sozinho ou desliga por proteção, passou do limite dele. Por isso medimos antes e depois da manutenção, em vez de trabalhar com números genéricos.",
+        a: "Não existe um número universal. O limite depende do processador e do projeto térmico do equipamento. Compare a leitura com a especificação do fabricante e observe se há throttling, perda sustentada de desempenho ou desligamento de proteção. Temperatura alta durante carga pesada, isoladamente, não prova defeito.",
       },
       {
         q: "Base refrigeradora resolve?",
@@ -1331,11 +1337,11 @@ export const CLUSTER_PROBLEMAS: ClusterProblema[] = [
       },
       {
         q: "De quanto em quanto tempo fazer limpeza interna?",
-        a: "Em uso doméstico comum, algo entre um e dois anos. Em ambiente com pet, obra por perto, fumo ou uso intenso de jogos, o intervalo cai bastante. Quem carrega o notebook todo dia na mochila também acumula mais rápido.",
+        a: "Use condição, não calendário fixo. Fluxo de ar menor, ventoinha mais ruidosa, poeira visível nas entradas e aumento persistente de temperatura são sinais para inspecionar. Ambiente com pelos, fumaça, obra ou muita poeira costuma exigir revisão mais frequente.",
       },
       {
         q: "Trocar só a pasta térmica adianta?",
-        a: "Adianta quando o radiador está limpo e a ventoinha saudável. Se o caminho do ar continua obstruído, a pasta nova baixa poucos graus e o problema volta em semanas — por isso os dois serviços costumam andar juntos.",
+        a: "Pode ajudar quando a interface térmica está realmente comprometida, mas não corrige radiador obstruído, ventoinha defeituosa, dissipador mal assentado ou carga anormal de software. O ganho deve ser verificado comparando a mesma carga antes e depois.",
       },
       {
         q: "O calor pode ter estragado alguma peça?",
@@ -1473,19 +1479,19 @@ export const CLUSTER_PROBLEMAS: ClusterProblema[] = [
     titulo: "Teclado do notebook não funciona ou falha algumas teclas",
     metaTitle: "Teclado do notebook falha: causas e o que testar | O Técnico",
     metaDescription:
-      "Teclas que não respondem, letra repetida ou teclado morto depois de líquido? Veja como separar falha de software, flat solto e dano físico antes de trocar a peça.",
+      "Teclado do notebook não funciona, repete letras ou perdeu algumas teclas? Veja testes seguros para separar Windows, layout, cabo flat, líquido e defeito físico antes de trocar a peça.",
     resumo:
-      "Teclado de notebook falha de três formas bem diferentes: teclas isoladas que param, o teclado inteiro que morre e teclas que digitam sozinhas ou repetem. Cada padrão aponta para uma origem distinta, e o teste com um teclado USB externo separa em minutos o que é peça do que é sistema.",
+      "Quando o teclado do notebook não funciona, o padrão da falha ajuda a reduzir as hipóteses, mas nenhum teste isolado fecha o diagnóstico. Um teclado USB externo, a tela de firmware/recuperação e a comparação entre teclas específicas e o teclado inteiro ajudam a separar software, configuração, cabo flat, oxidação e defeito da própria peça sem comprar teclado por tentativa.",
     waMessage:
       "Olá! Vim da página sobre teclado de notebook com defeito. Preciso de avaliação do meu teclado.",
     sintomas: [
       {
         titulo: "Algumas teclas pararam, o resto funciona",
-        desc: "Falha localizada quase sempre é membrana ou trilha rompida sob aquelas teclas. Software não escolhe teclas específicas para desligar — por isso esse padrão aponta para a peça.",
+        desc: "Falha localizada favorece hipótese de desgaste, sujeira, membrana ou trilha, mas remapeamento, layout, filtro de teclado e aplicativos também podem afetar teclas específicas. Compare o comportamento fora do aplicativo e, quando possível, antes do Windows carregar.",
       },
       {
         titulo: "Teclado inteiro sem resposta",
-        desc: "Quando nada responde, mas o touchpad funciona, a suspeita principal é o cabo flat solto ou oxidado no conector da placa. Se o touchpad também morreu, a origem tende a ser controladora ou driver.",
+        desc: "Quando nada responde, verifique primeiro se o problema também existe fora do Windows e se um teclado externo funciona. Cabo flat, alimentação, firmware, driver e a própria matriz do teclado continuam como hipóteses; o touchpad não é prova definitiva porque pode usar outro caminho de conexão.",
       },
       {
         titulo: "Tecla repetindo ou digitando sozinha",
@@ -1497,7 +1503,7 @@ export const CLUSTER_PROBLEMAS: ClusterProblema[] = [
       },
       {
         titulo: "Falha só depois de um tempo ligado",
-        desc: "Teclado que começa bem e falha com o notebook aquecido sugere mau contato que se agrava com dilatação — geralmente no conector ou em solda fria da controladora.",
+        desc: "Falha que aparece apenas depois de aquecer merece correlação com temperatura e tempo de uso. Mau contato é uma hipótese, mas o padrão também pode vir de software, energia ou outro componente; não conclua solda fria sem inspeção e medição.",
       },
     ],
     causas: [
@@ -1523,8 +1529,8 @@ export const CLUSTER_PROBLEMAS: ClusterProblema[] = [
       },
     ],
     antesDeChamar: [
-      "Ligue um teclado USB externo. Se ele digitar tudo normalmente, o sistema está bom e o problema é o teclado interno ou o cabo dele.",
-      "Reinicie e observe o teclado antes do Windows carregar, na tela de inicialização. Funcionando ali, a falha é de software.",
+      "Ligue um teclado USB externo. Se ele funcionar normalmente, o caminho do teclado interno fica mais suspeito, mas isso não elimina configuração, firmware ou driver específico do equipamento.",
+      "Quando o equipamento permitir, teste teclas na UEFI/BIOS ou no ambiente de recuperação. Funcionando fora do Windows, a investigação deve priorizar sistema, driver, layout e utilitários antes de trocar a peça.",
       "Teste a tecla suspeita em um editor de texto simples, sem jogo ou programa que reconfigure atalhos.",
       "Confira se o teclado numérico embutido está ativo quando letras viram números.",
       "Anote se houve líquido, queda ou abertura do equipamento nos últimos meses — muda completamente o roteiro do diagnóstico.",
@@ -1568,7 +1574,7 @@ export const CLUSTER_PROBLEMAS: ClusterProblema[] = [
       },
       {
         q: "Teclado que digita sozinho pode ser vírus?",
-        a: "É muito improvável. Digitação repetida em teclas específicas é contato preso. Antes de tratar como praga, o teste com teclado externo resolve a dúvida em um minuto.",
+        a: "Repetição consistente de uma tecla costuma apontar primeiro para contato físico, sujeira, líquido ou configuração, mas não trate isso como prova. Teste outro teclado, outro aplicativo e o ambiente de recuperação; se houver outros sinais de acesso indevido, investigue segurança separadamente.",
       },
     ],
     relacionados: [
