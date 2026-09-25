@@ -1,10 +1,10 @@
 {
   "geradoEm": "2026-09-25",
-  "total": 298,
+  "total": 297,
   "porClasse": {
     "COMPROVADA": 114,
     "INSTITUCIONAL": 21,
-    "CONDICIONAL": 163,
+    "CONDICIONAL": 162,
     "REMOVIDA": 0,
     "PENDENTE": 0
   },
@@ -20,7 +20,7 @@
       "id": "prazo-prometido",
       "titulo": "Prazo de atendimento prometido",
       "risco": "Prazo fixo sem controle de agenda, trânsito e peça.",
-      "total": 107
+      "total": 106
     },
     {
       "id": "todos-os-portes",
@@ -4917,7 +4917,7 @@
       "familiaTitulo": "Prazo de atendimento prometido",
       "risco": "Prazo fixo sem controle de agenda, trânsito e peça.",
       "arquivo": "src/data/blogPostsContent.tsx",
-      "linha": 9191,
+      "linha": 9268,
       "trecho": "<li><strong>Plano de resposta a incidentes</strong> que inclua notificação à ANPD em até 48h</li>",
       "classificacao": "CONDICIONAL",
       "criterio": "Tempos de deslocamento e janelas de atendimento são estimativas dependentes de agenda, trânsito e disponibilidade de peça",
@@ -4930,7 +4930,7 @@
       "familiaTitulo": "Prazo de atendimento prometido",
       "risco": "Prazo fixo sem controle de agenda, trânsito e peça.",
       "arquivo": "src/data/blogPostsContent.tsx",
-      "linha": 9317,
+      "linha": 9394,
       "trecho": "<li><strong>Plano de resposta a incidentes</strong> que inclua notificação à ANPD em até 48h</li>",
       "classificacao": "CONDICIONAL",
       "criterio": "Tempos de deslocamento e janelas de atendimento são estimativas dependentes de agenda, trânsito e disponibilidade de peça",
@@ -4943,20 +4943,7 @@
       "familiaTitulo": "Prazo de atendimento prometido",
       "risco": "Prazo fixo sem controle de agenda, trânsito e peça.",
       "arquivo": "src/data/blogPostsContent.tsx",
-      "linha": 9443,
-      "trecho": "<li><strong>Plano de resposta a incidentes</strong> que inclua notificação à ANPD em até 48h</li>",
-      "classificacao": "CONDICIONAL",
-      "criterio": "Tempos de deslocamento e janelas de atendimento são estimativas dependentes de agenda, trânsito e disponibilidade de peça",
-      "evidencia": "Não existe SLA contratado; o texto precisa manter o qualificador ('conforme disponibilidade', 'estimado', 'quando há peça em estoque')",
-      "acao": "Proibido prazo absoluto sem condicionante. 'Atendimento imediato' e 'resposta em até 5 minutos' foram removidos nesta rodada.",
-      "urls": []
-    },
-    {
-      "familia": "prazo-prometido",
-      "familiaTitulo": "Prazo de atendimento prometido",
-      "risco": "Prazo fixo sem controle de agenda, trânsito e peça.",
-      "arquivo": "src/data/blogPostsContent.tsx",
-      "linha": 9569,
+      "linha": 9520,
       "trecho": "<li><strong>Plano de resposta a incidentes</strong> que inclua notificação à ANPD em até 48h</li>",
       "classificacao": "CONDICIONAL",
       "criterio": "Tempos de deslocamento e janelas de atendimento são estimativas dependentes de agenda, trânsito e disponibilidade de peça",
