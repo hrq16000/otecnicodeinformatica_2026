@@ -98,24 +98,18 @@ for (const path of rotasBairro) {
     erros.push(`${path}: WebPage.url (${webpage.url}) não corresponde à rota`);
   }
 
-  // LocalBusiness (rich result local): mesma entidade do site, areaServed no bairro.
-  const [negocio] = tipos("LocalBusiness");
-  if (!negocio) erros.push(`${path}: LocalBusiness ausente`);
-  else {
-    if (!String(negocio.url ?? "").endsWith(path)) {
-      erros.push(`${path}: LocalBusiness.url (${negocio.url}) não corresponde à rota`);
+  // LocalBusiness é a entidade GLOBAL da operação, não uma filial por bairro.
+  // A página de bairro deve se representar por WebPage + Place/areaServed.
+  // Se o JSON-LD global estiver presente no HTML, ele não pode fingir URL,
+  // @id ou endereço de rua específicos da rota de bairro (FASE 31).
+  for (const negocio of tipos("LocalBusiness")) {
+    const negocioUrl = String(negocio.url ?? "");
+    const negocioId = String(negocio["@id"] ?? "");
+    if (negocioUrl.endsWith(path) || negocioId.includes(`${path}#`)) {
+      erros.push(`${path}: LocalBusiness próprio do bairro/filial fictícia — proibido`);
     }
-    for (const campo of ["name", "telephone", "address", "areaServed"]) {
-      if (!negocio[campo]) erros.push(`${path}: LocalBusiness sem ${campo}`);
-    }
-    const area = negocio.areaServed;
-    const areaNome = Array.isArray(area) ? area[0]?.name : area?.name;
-    if (!areaNome) erros.push(`${path}: LocalBusiness.areaServed sem name`);
     if (negocio.aggregateRating || negocio.review) {
       erros.push(`${path}: LocalBusiness com rating/review — proibido (nunca inventar avaliação)`);
-    }
-    if (negocio.address?.streetAddress) {
-      erros.push(`${path}: LocalBusiness com endereço de rua no bairro (filial inexistente)`);
     }
   }
 
@@ -151,5 +145,5 @@ if (erros.length) {
   process.exit(1);
 }
 console.log(
-  "\n✓ BreadcrumbList, FAQPage, WebPage, LocalBusiness e imagem principal válidos em todas as rotas de bairro indexáveis.",
+  "\n✓ BreadcrumbList, FAQPage, WebPage e imagem principal válidos; nenhum LocalBusiness fictício por bairro.",
 );
