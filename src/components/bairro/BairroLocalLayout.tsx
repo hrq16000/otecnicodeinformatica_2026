@@ -161,10 +161,7 @@ export const BairroLocalLayout = ({ data }: { data: BairroLocalData }) => {
                 {data.h1}
               </h1>
               <p className="mt-5 max-w-2xl text-lg text-muted-foreground">{data.subtitulo}</p>
-              <p
-                data-local-intro
-                className="mt-4 max-w-3xl text-base leading-relaxed text-muted-foreground"
-              >
+              <p className="mt-4 max-w-3xl text-base leading-relaxed text-muted-foreground">
                 {data.introducaoLocal[0]}
               </p>
               <div className="mt-8">
