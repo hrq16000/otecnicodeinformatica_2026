@@ -392,12 +392,12 @@ export const CLUSTER_PROBLEMAS: ClusterProblema[] = [
   {
     slug: "computador-desliga-sozinho",
     path: "/problemas/computador-desliga-sozinho",
-    titulo: "Computador desligando sozinho ou reiniciando do nada",
-    metaTitle: "Computador desliga sozinho: causas e o que checar | O Técnico de Informática",
+    titulo: "Computador ou PC desligando sozinho: causas e testes seguros",
+    metaTitle: "PC desliga sozinho: causas, testes e quando parar | O Técnico",
     metaDescription:
-      "Desligamento súbito quase sempre é temperatura, fonte ou alimentação — raramente vírus. Veja como identificar a causa, o que testar antes e quando parar de usar.",
+      "PC ou computador desligando sozinho pode envolver temperatura, fonte, tomada, memória, placa ou sistema. Veja a ordem de testes e quando interromper o uso.",
     resumo:
-      "Desligamento sem aviso, sem tela azul e sem mensagem é um comportamento de proteção: alguma coisa cortou a energia ou o processador atingiu o limite térmico e o equipamento se desligou para não queimar. Por isso o diagnóstico começa por temperatura e alimentação, não por formatação.",
+      "Quando o computador desliga sozinho, o sintoma precisa ser separado em dois grupos: corte seco de energia e reinício comandado pelo sistema. O primeiro costuma levar a temperatura, fonte, tomada ou placa; o segundo também pode envolver memória, driver, atualização ou falha registrada pelo Windows. Essa diferença evita formatar ou trocar peça antes de entender o padrão.",
     waMessage:
       "Olá! Vim da página sobre computador que desliga sozinho. Preciso de diagnóstico de temperatura/fonte.",
     sintomas: [
@@ -407,7 +407,7 @@ export const CLUSTER_PROBLEMAS: ClusterProblema[] = [
       },
       {
         titulo: "Desliga a qualquer momento, mesmo parado",
-        desc: "Corte sem relação com carga aponta para alimentação: fonte com capacitor no fim da vida, cabo de força folgado, régua sobrecarregada ou oscilação na tomada. Nesses casos o equipamento apaga de forma seca, como se tirassem o plugue.",
+        desc: "Quando não há relação clara com temperatura ou carga, a investigação muda para alimentação e instabilidade: fonte degradada, cabo ou tomada com mau contato, régua sobrecarregada, memória instável e falha intermitente de placa entram na lista. O padrão do desligamento e o histórico de eventos ajudam a separar essas hipóteses.",
       },
       {
         titulo: "Reinicia sozinho e volta na tela de boas-vindas",
@@ -482,14 +482,20 @@ export const CLUSTER_PROBLEMAS: ClusterProblema[] = [
       },
       {
         q: "Notebook também desliga sozinho por temperatura?",
-        a: "Sim, e com mais frequência que desktop, porque o espaço interno é menor. Em notebook a limpeza envolve desmontagem parcial e troca de pasta térmica — procedimento de bancada, não de mesa do cliente.",
+        a: "Pode acontecer. O espaço interno menor torna refrigeração e acúmulo de poeira relevantes, mas temperatura não deve ser assumida como causa sem observar o comportamento e medir o equipamento. Em notebook, limpeza interna e revisão térmica exigem desmontagem adequada.",
+      },
+      {
+        q: "Meu PC desliga sozinho e não é temperatura. O que verificar?",
+        a: "Comece separando corte seco de reinício. Se a temperatura está normal, verifique tomada e cabo, teste sem régua ou extensão, observe se a falha aparece sob carga e consulte o histórico de eventos do sistema. Fonte instável, memória, placa-mãe e drivers entram na investigação; trocar componentes por tentativa tende a encarecer o diagnóstico.",
       },
     ],
     relacionados: [
       { to: "/servicos/computador-nao-liga", titulo: "Computador não liga", desc: "Quando o desligamento evolui para máquina que não dá sinal nenhum." },
-      { to: "/problemas/computador-esquentando", titulo: "Computador esquentando", desc: "Desligamento repentino sob carga costuma ser proteção térmica — este é o sintoma vizinho." },
-      { to: "/servicos/manutencao-de-notebook", titulo: "Manutenção preventiva", desc: "Limpeza interna, troca de pasta térmica e revisão de refrigeração." },
-      { to: "/problemas", titulo: "Outros sintomas", desc: "Volte ao hub e escolha o problema mais parecido com o seu." },
+      { to: "/problemas/computador-esquentando", titulo: "Computador esquentando", desc: "Quando o desligamento aparece sob carga, compare o sintoma com a trilha de temperatura." },
+      { to: "/glossario/thermal-throttling", titulo: "Thermal throttling", desc: "Entenda a redução automática de desempenho por temperatura e por que ela é diferente de um corte de energia." },
+      { to: "/decisoes/backup-antes-da-manutencao", titulo: "Backup antes da manutenção", desc: "O que preservar antes de abrir a máquina, testar fonte ou iniciar uma intervenção." },
+      { to: "/servicos/manutencao-de-notebook", titulo: "Manutenção de notebook", desc: "Quando o sintoma exige desmontagem, limpeza interna ou avaliação de alimentação." },
+      { to: "/problemas", titulo: "Outros sintomas", desc: "Volte ao hub e compare o problema com outros sinais do equipamento." },
     ],
     foto: "bancada-tecnica",
   },

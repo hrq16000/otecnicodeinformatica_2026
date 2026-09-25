@@ -290,8 +290,8 @@ export const BAIRROS: Record<string, BairroLocalData> = {
       depois: ".",
     },
     introducaoLocal: [
-      "O Centro de Curitiba tem ritmo comercial: lojas, escritórios de advocacia e contabilidade, imobiliárias e consultórios que não podem ficar com o computador parado no meio do expediente. Os chamados mais comuns envolvem PC de balcão travando, lentidão com sistemas e planilhas e rede instável afetando o atendimento.",
-      "Como cada hora parada pesa no comércio, priorizamos triagem rápida pelo WhatsApp e diagnóstico objetivo. A partir daí, indicamos se o caso é resolvido no local, de forma remota ou por coleta — sempre com valor aprovado antes da execução.",
+      "No Centro de Curitiba, a informática costuma estar misturada à operação do negócio: o mesmo computador pode abrir o sistema de vendas, conversar com a impressora, acessar certificado digital e manter planilhas do dia. Quando algo falha, a primeira pergunta não é apenas “qual peça estragou?”, mas qual elo da operação deixou de funcionar e o que ainda está disponível para manter o atendimento enquanto a causa é investigada.",
+      "A triagem considera esse cenário antes de sugerir qualquer intervenção. Um erro de impressão pode vir de porta, driver ou rede; uma lentidão pode estar no disco, na memória ou no próprio sistema usado pela empresa. A modalidade — remoto, visita ou coleta — é escolhida depois dessa separação, com preservação das configurações de trabalho e aprovação do valor antes da execução.",
     ],
     operacaoLocal: [
       "Triagem pelo WhatsApp pensando na rotina comercial",

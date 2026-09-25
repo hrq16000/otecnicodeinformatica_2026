@@ -3936,15 +3936,25 @@ docker run -d --name db --network minha-rede postgres
   // ═══════════════════════════════════════════════════════════════
 
   "como-trocar-pasta-termica-notebook": {
-    title: "Troca de pasta térmica no notebook: quando faz sentido e como não errar",
+    title: "Como trocar pasta térmica do notebook com segurança: passo a passo",
     excerpt:
-      "O que a pasta térmica faz, como saber se ela é mesmo a causa do aquecimento, a sequência correta de remoção e aperto do dissipador e os erros que danificam a placa.",
+      "Como trocar pasta térmica do notebook: diagnóstico antes de abrir, desconexão da bateria, remoção do dissipador, limpeza, aplicação e remontagem sem danificar a placa.",
     date: "2026-08-12",
     readTime: "11 min",
     category: "Manutenção",
     content: (
       <>
-        <p className="lead">A pasta térmica é uma camada muito fina de composto entre a superfície do processador e a base do dissipador. Ela não esfria nada sozinha: apenas preenche as imperfeições microscópicas das duas peças para que o calor atravesse por contato em vez de por ar. Quando resseca, esse contato piora e a temperatura sobe mesmo com a refrigeração limpa.</p>
+        <p className="lead">Para trocar pasta térmica do notebook com segurança, não comece pela pasta: confirme primeiro que o sistema de refrigeração está limpo, desligue totalmente o equipamento, desconecte carregador e bateria interna, registre a posição dos parafusos e só então remova o dissipador. A pasta apenas melhora o contato térmico entre chip e dissipador; ela não corrige ventoinha defeituosa, heatpipe danificado nem obstrução por poeira.</p>
+
+        <h2>Como trocar pasta térmica: sequência segura</h2>
+        <ol>
+          <li>Desligue o notebook e desconecte carregador e bateria.</li>
+          <li>Abra a carcaça com ferramenta adequada e registre parafusos e cabos.</li>
+          <li>Solte o dissipador em passes alternados, seguindo a numeração quando houver.</li>
+          <li>Remova o composto antigo com material apropriado e deixe as superfícies limpas e secas.</li>
+          <li>Aplique pequena quantidade de composto não condutivo e reposicione o dissipador sem arrastar.</li>
+          <li>Aperte em sequência alternada, reconecte a ventoinha e teste temperatura e estabilidade sob carga.</li>
+        </ol>
 
         <h2>O que a troca resolve — e o que não resolve</h2>
         <p>Trocar o composto recupera a transferência de calor no ponto de contato. É a resposta certa quando o conjunto está limpo, a ventoinha gira normalmente e ainda assim a máquina aquece rápido sob carga.</p>
@@ -13065,15 +13075,18 @@ bcdboot C:\\Windows /s S: /f UEFI`}</code></pre>
 
   // ── Onda 10C — Lote 3: armazenamento não detectado (cluster 7).
   "hd-nao-e-reconhecido-na-bios-o-que-fazer": {
-    title: "HD ou SSD não é reconhecido na BIOS: o que verificar antes de trocar",
+    title: "Computador não reconhece HD ou SSD: BIOS, Windows e o que verificar",
     excerpt:
-      "Quando o disco some do Setup, o problema quase nunca é o Windows. Sequência de verificação por energia, cabo, porta e detecção — e o que NÃO fazer quando há dados importantes.",
+      "Se o PC não reconhece o HD ou SSD, primeiro descubra se o disco sumiu da BIOS ou só do Windows. Veja a sequência segura por energia, cabo, porta, slot e detecção.",
     date: "2026-08-26",
     readTime: "10 min",
     category: "Diagnóstico",
     content: (
       <>
-        <p className="lead">Se o disco não aparece na lista de dispositivos da BIOS, o Windows nem chega a ter a chance de enxergá-lo. Antes de comprar outro disco ou falar em recuperação, vale percorrer uma sequência curta que separa falha de conexão de falha do próprio disco.</p>
+        <p className="lead">Quando o computador não reconhece HD ou SSD, a primeira divisão é simples: o disco aparece na BIOS/UEFI ou sumiu também do firmware? Se aparece na BIOS mas não no Windows, o caminho é lógico — partição, letra ou inicialização. Se não aparece nem na BIOS, investigue alimentação, cabo, porta, slot e o próprio disco antes de comprar peça ou formatar.</p>
+
+        <h2>PC não reconhece HD: BIOS ou Windows?</h2>
+        <p>Abra a tela de armazenamento da BIOS/UEFI e procure o modelo do disco. Essa verificação muda todo o diagnóstico: <strong>presente na BIOS e ausente no Windows</strong> aponta para configuração do sistema; <strong>ausente nos dois</strong> aponta para conexão, compatibilidade, alimentação ou falha física. Em mídia com arquivos importantes, não inicialize nem formate para “ver se volta”.</p>
 
         <h2>Resposta curta</h2>
         <p>A BIOS mostra o que o controlador de armazenamento consegue enumerar. Se o disco não aparece ali, existem três famílias de causa: <strong>alimentação</strong> (o disco não recebe energia), <strong>enlace de dados</strong> (cabo, porta ou slot com mau contato ou desabilitado) e <strong>o próprio disco</strong> (eletrônica ou mecânica com defeito). O objetivo do teste é descobrir qual delas é, sem escrever nada na mídia.</p>
@@ -13307,15 +13320,18 @@ bcdboot C:\\Windows /s S: /f UEFI`}</code></pre>
   },
 
   "fone-de-ouvido-nao-e-reconhecido-no-pc": {
-    title: "Fone de ouvido não é reconhecido no PC: entrada frontal, detecção e microfone",
+    title: "Fone de ouvido não funciona no PC ou notebook: o que verificar",
     excerpt:
-      "Por que o fone toca na entrada de trás e não na da frente, o que é detecção de conector, a diferença entre P2 combo e duas entradas e como resolver o microfone mudo.",
+      "Fone não reconhecido no PC ou notebook? Veja saída padrão, conector P2, painel frontal, microfone, driver, USB e Bluetooth antes de concluir que o fone queimou.",
     date: "2026-08-26",
     readTime: "8 min",
     category: "Procedimentos Técnicos",
     content: (
       <>
-        <p className="lead">Fone funcionando em um conector e ignorado em outro é sintoma de detecção, não de defeito. Entender como o computador percebe que algo foi plugado resolve a maior parte desses casos.</p>
+        <p className="lead">Se o fone de ouvido não funciona no PC ou notebook, primeiro teste o próprio fone em outro aparelho e depois confira qual saída de áudio o Windows selecionou. Se o fone funciona em outro dispositivo, a causa costuma estar em detecção do conector, tipo de plugue, saída padrão, permissão do microfone, driver ou perfil Bluetooth — não necessariamente em defeito físico.</p>
+
+        <h2>Fone não funciona no notebook: comece por estes testes</h2>
+        <p>Em notebook com conector único, confirme se o plugue é P2/TRRS compatível e se entrou até o fim. Depois abra Configurações → Sistema → Som e selecione manualmente o fone como saída. Se o áudio sai mas o microfone não, confira a entrada selecionada e as permissões de microfone. Em headset USB ou Bluetooth, escolha o dispositivo correto porque ele aparece separado da placa de som interna.</p>
 
         <h2>Resposta curta</h2>
         <p>O conector de áudio informa ao controlador que um plugue foi inserido. Quando essa detecção não chega — cabo interno do painel frontal solto, configuração errada de painel, plugue incompatível ou conector sujo —, o sistema simplesmente segue tocando na saída anterior, como se nada tivesse sido conectado.</p>

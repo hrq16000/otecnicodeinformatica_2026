@@ -91,37 +91,9 @@ export const BairroLocalLayout = ({ data }: { data: BairroLocalData }) => {
       }
     : null;
 
-  /**
-   * LocalBusiness da página de bairro: mesma entidade do site (mesmo NAP), com
-   * `areaServed` restrito ao bairro. Não declara endereço/filial no bairro —
-   * o endereço permanece o da operação, como nas landings de cidade.
-   */
-  const localBusinessSchema = {
-    "@context": "https://schema.org",
-    "@type": ["LocalBusiness", "ComputerRepairService"],
-    "@id": `${absoluteUrl(path)}#localbusiness`,
-    name: `${siteConfig.brandName} — ${data.nome}, ${cidade}`,
-    description: data.metaDescription,
-    url: absoluteUrl(path),
-    telephone: siteConfig.phoneE164,
-    address: {
-      "@type": "PostalAddress",
-      addressLocality: cidade,
-      addressRegion: siteConfig.region,
-      addressCountry: siteConfig.country,
-    },
-    areaServed: {
-      "@type": "Place",
-      name: data.areaName,
-      containedInPlace: {
-        "@type": "City",
-        name: cidade,
-        containedInPlace: { "@type": "State", name: "Paraná" },
-      },
-    },
-    ...(imageObject ? { image: imagemPrincipal!.url } : {}),
-    priceRange: "$$",
-  };
+  // Página de bairro não cria uma entidade LocalBusiness própria. O bairro é
+  // área de cobertura da entidade global do site, não filial/endereço separado.
+  // A entidade desta rota é WebPage + Place, evitando sinal de filial fictícia.
 
   const webPageSchema = {
     "@context": "https://schema.org",
@@ -149,7 +121,6 @@ export const BairroLocalLayout = ({ data }: { data: BairroLocalData }) => {
     })),
   };
 
-  useJsonLdSlot(SCHEMA_SLOTS.localBusiness, localBusinessSchema, SLOT_PRIORITY.page);
   useJsonLdSlot(SCHEMA_SLOTS.webPage, webPageSchema, SLOT_PRIORITY.page);
   useJsonLdSlot(SCHEMA_SLOTS.faq, faqSchema, SLOT_PRIORITY.page);
 
@@ -190,6 +161,9 @@ export const BairroLocalLayout = ({ data }: { data: BairroLocalData }) => {
                 {data.h1}
               </h1>
               <p className="mt-5 max-w-2xl text-lg text-muted-foreground">{data.subtitulo}</p>
+              <p className="mt-4 max-w-3xl text-base leading-relaxed text-muted-foreground">
+                {data.introducaoLocal[0]}
+              </p>
               <div className="mt-8">
                 <a
                   href={waHref}
@@ -224,7 +198,7 @@ export const BairroLocalLayout = ({ data }: { data: BairroLocalData }) => {
                 Atendimento técnico {data.nomeLocativo}
               </h2>
               <div className="mt-5 space-y-4 text-muted-foreground">
-                {data.introducaoLocal.map((par, i) => (
+                {data.introducaoLocal.slice(1).map((par, i) => (
                   <p key={i}>{par}</p>
                 ))}
               </div>
