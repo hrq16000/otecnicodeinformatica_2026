@@ -36,7 +36,10 @@ export async function recordSubmission(payload: {
     // RODADA 6 — vínculo lead ↔ rota de origem (sem PII, sem fallback falso).
     const { buildRouteContext, getJourneyId, readTouchpoint } = await import("@/lib/analyticsContract");
     const ctx = buildRouteContext();
-    const { data: inserido } = await supabase.from("funnel_submissions").insert({
+    // Insert puro: visitantes anônimos têm apenas INSERT (sem SELECT) nesta
+    // tabela. Um .select() aqui faria o PostgREST aplicar RETURNING, que o
+    // RLS rejeita (42501) e descarta a solicitação inteira.
+    await supabase.from("funnel_submissions").insert({
       session_id: payload.sessionId,
       equipamento: payload.equipamento?.slice(0, 80),
       marca: payload.marca?.slice(0, 120),
