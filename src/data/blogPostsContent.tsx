@@ -9142,6 +9142,7 @@ crontab -e
           <li>Conta de administrador ou financeiro: chave física ou passkey.</li>
           <li>Serviço que só oferece SMS: ative mesmo assim e peça à operadora bloqueio de troca de chip sem presença.</li>
         </ul>
+        <p>Revise as contas a cada seis meses: remova aparelhos antigos da lista de dispositivos confiáveis, confirme que o e-mail e o telefone de recuperação ainda são seus e gere novos códigos de recuperação se usou algum.</p>
         <p>Para a parte de rede do escritório, que é outro assunto, veja o guia de proteção da rede Wi-Fi da empresa.</p>
 
 
@@ -10335,7 +10336,7 @@ crontab -e
           <li>Se o disco faz estalos, some e volta ou está muito lento, desligue o computador. Insistir em programas de recuperação num disco com falha física pode destruir o que ainda era recuperável.</li>
         </ul>
         <h2>Limite: SSD e TRIM</h2>
-        <p>Em SSDs, o Windows envia o comando TRIM logo depois da exclusão, e o próprio controlador do disco apaga os blocos pouco tempo depois. Por isso, a chance de recuperar arquivos apagados em SSD é bem menor do que em HD mecânico. Qualquer tentativa é uma tentativa de recuperação, sem garantia de resultado. A proteção real continua sendo ter cópia antes da perda.</p>
+        <p>Em SSDs, o Windows envia o comando TRIM logo depois da exclusão, e o próprio controlador do disco apaga os blocos pouco tempo depois. Por isso, a chance de recuperar arquivos apagados em SSD é bem menor do que em HD mecânico. Qualquer tentativa é uma tentativa de recuperação, sem garantia de resultado. A proteção real continua sendo ter cópia antes da perda, de preferência automática e em outro dispositivo, como um HD externo ou a nuvem.</p>
         <EditorialReferences slug="como-recuperar-arquivos-apagados-windows" />
       </>
     ),
@@ -11615,7 +11616,7 @@ crontab -e
         <p>Se a causa ficar na rede interna, consulte <Link to="/servicos/redes-e-wifi" className="text-accent">redes e Wi-Fi</Link> e o <Link to="/guia-tecnico-informatica#tema-redes-wifi" className="text-accent">Atlas de redes</Link>.</p>
         <h2>Como registrar os resultados para reclamar com a operadora</h2>
         <p>Um teste isolado não prova nada. Faça medições em horários diferentes durante pelo menos três dias, sempre com o computador ligado por cabo ao roteador e com outros aparelhos desconectados. Anote data, horário, velocidade de download, upload e latência, e salve a captura de tela de cada resultado.</p>
-        <p>A Anatel usa o medidor oficial da Entidade Aferidora da Qualidade (EAQ) como referência. Com esse histórico em mãos, abra protocolo na operadora e informe a média obtida em comparação com a velocidade contratada. Se o problema aparecer só no Wi-Fi e não no cabo, a causa está na rede interna, e a operadora não vai tratar isso como falha do serviço.</p>
+        <p>A Anatel usa o medidor oficial da Entidade Aferidora da Qualidade (EAQ) como referência. Com esse histórico em mãos, abra protocolo na operadora e informe a média obtida em comparação com a velocidade contratada. Se o problema aparecer só no Wi-Fi e não no cabo, a causa está na rede interna, e a operadora não vai tratar isso como falha do serviço. Nesse caso, reposicione o roteador ou revise o canal do Wi-Fi antes de trocar de plano.</p>
         <EditorialReferences slug="como-fazer-teste-velocidade-internet" />
       </>
     ),
