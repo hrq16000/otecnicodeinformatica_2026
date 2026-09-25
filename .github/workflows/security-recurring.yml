@@ -61,7 +61,7 @@ jobs:
           docker run --rm \
             -v "${{ github.workspace }}:/repo" \
             ghcr.io/gitleaks/gitleaks:v8.30.1 \
-            dir /repo --redact --no-banner --verbose
+            git /repo --redact --no-banner --verbose
 
       # 6) Notificação (Slack/e-mail) quando qualquer etapa acima falhar.
       - name: Notificar falha do pipeline de segurança
