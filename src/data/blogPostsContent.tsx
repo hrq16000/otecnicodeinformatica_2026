@@ -9663,7 +9663,7 @@ crontab -e
   },
 
   
-"como-deixar-windows-11-mais-rapido-iniciantes": {
+  "como-deixar-windows-11-mais-rapido-iniciantes": {
     title: "Windows 11 lento: como deixar o PC mais rápido sem truques",
     excerpt:
       "Diagnóstico prático para Windows 11 lento: inicialização, armazenamento, processos, atualizações e sinais de limite de hardware antes de instalar otimizadores.",
@@ -9743,7 +9743,7 @@ crontab -e
   },
 
   
-"como-fazer-backup-fotos-windows-iniciantes": {
+  "como-fazer-backup-fotos-windows-iniciantes": {
     title: "Como fazer backup de fotos no Windows e comprovar que a cópia funciona",
     excerpt:
       "Método seguro para proteger fotos no Windows usando disco externo, Histórico de Arquivos e nuvem — com verificação de restauração e sem confundir sincronização com backup.",
@@ -10253,7 +10253,7 @@ crontab -e
     ),
   },
 
-"como-atualizar-windows-corretamente": {
+  "como-atualizar-windows-corretamente": {
     title: "Como atualizar o Windows 11 com segurança e o que fazer quando falha",
     excerpt:
       "Passo a passo para preparar, instalar e validar atualizações do Windows 11, com backup, energia, espaço, reinício e diagnóstico oficial quando o Windows Update apresenta erro.",
@@ -10313,7 +10313,7 @@ crontab -e
   },
 
   
-"como-recuperar-arquivos-apagados-windows": {
+  "como-recuperar-arquivos-apagados-windows": {
     title: "Como recuperar arquivos apagados no Windows sem reduzir a chance de recuperação",
     excerpt:
       "Lixeira, versões de backup e Windows File Recovery: a ordem segura para tentar recuperar arquivos apagados e por que você deve reduzir o uso do disco após a exclusão.",
@@ -11576,7 +11576,7 @@ crontab -e
   },
 
   
-"como-fazer-teste-velocidade-internet": {
+  "como-fazer-teste-velocidade-internet": {
     title: "Como fazer teste de velocidade da internet e interpretar download, latência e Wi-Fi",
     excerpt:
       "Método para testar a internet sem confundir problema do provedor com Wi-Fi: referência por cabo, medições repetidas, download, upload, latência, jitter e perda de pacotes.",
