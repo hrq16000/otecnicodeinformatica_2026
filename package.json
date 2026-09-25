@@ -396,6 +396,7 @@
     "report:gsc-baseline": "node scripts/report-gsc-baseline.mjs"
   },
   "dependencies": {
+    "@ai-sdk/openai": "^4.0.72",
     "@hookform/resolvers": "^5.2.2",
     "@playwright/test": "1.56.1",
     "@radix-ui/react-accordion": "^1.2.12",
@@ -432,6 +433,7 @@
     "@tanstack/react-start": "1.168.32",
     "@tanstack/router-plugin": "1.168.23",
     "@types/dompurify": "^3.0.5",
+    "ai": "^7.0.107",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "cmdk": "^1.1.1",
@@ -459,7 +461,7 @@
     "vaul": "^1.1.2",
     "vite-tsconfig-paths": "^6.0.2",
     "web-vitals": "^5.2.0",
-    "zod": "^3.24.2"
+    "zod": "^4.6.5"
   },
   "devDependencies": {
     "@axe-core/playwright": "^4.12.1",
