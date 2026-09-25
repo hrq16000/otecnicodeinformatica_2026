@@ -81,6 +81,17 @@ const CHECKLIST = [
  * nem novas URLs. */
 const PILARES_ESTUDO = [
   {
+    id: "fundamentos",
+    titulo: "Fundamentos e carreira em informática",
+    resumo:
+      "Comece pela definição do campo, avance pelas noções básicas e depois organize uma trilha de aprendizado.",
+    links: [
+      ["O que é informática", "/blog/o-que-e-informatica"],
+      ["Informática básica", "/blog/informatica-basica"],
+      ["Como aprender informática", "/blog/como-aprender-informatica"],
+    ],
+  },
+  {
     id: "windows",
     titulo: "Windows e inicialização",
     resumo: "Entenda o caminho entre firmware, boot, atualização e reparo do sistema.",
