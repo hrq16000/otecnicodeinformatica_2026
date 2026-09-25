@@ -69,6 +69,7 @@ export const ALLOWED_SOURCE_HOSTS = [
   "nist.gov",
   "www.nist.gov",
   "csrc.nist.gov",
+  "pages.nist.gov",
   "wi-fi.org",
   "www.wi-fi.org",
   "support.google.com",
@@ -78,6 +79,7 @@ export const ALLOWED_SOURCE_HOSTS = [
   "www.fcc.gov",
   "memtest.org",
   "www.memtest.org",
+  "docs.netgate.com",
 ] as const;
 
 // ─────────────────────────────────────────────────────────────
@@ -474,6 +476,112 @@ export const EDITORIAL_SOURCES: Record<string, EditorialSource> = {
       "O nslookup exibe informações usadas para diagnosticar a infraestrutura DNS e consulta o servidor padrão quando outro não é informado.",
     ],
   },
+  "cisa-require-mfa": {
+    id: "cisa-require-mfa",
+    title: "Require Multifactor Authentication",
+    publisher: "CISA",
+    url: "https://www.cisa.gov/audiences/small-and-medium-businesses/secure-your-business/require-multifactor-authentication",
+    accessedAt: "2026-09-25",
+    sourceType: "official",
+    supports: [
+      "MFA adiciona uma camada além da senha e deve ser exigida em contas críticas, especialmente acesso remoto e privilegiado.",
+      "Métodos de MFA têm níveis diferentes de resistência; métodos resistentes a phishing devem ser priorizados quando disponíveis.",
+      "SMS e e-mail são alternativas mais fracas quando métodos mais fortes não estão disponíveis.",
+    ],
+  },
+  "nist-800-63b-authenticators": {
+    id: "nist-800-63b-authenticators",
+    title: "SP 800-63B — Authenticators",
+    publisher: "NIST",
+    url: "https://pages.nist.gov/800-63-4/sp800-63b/authenticators/",
+    accessedAt: "2026-09-25",
+    sourceType: "standard",
+    supports: [
+      "Autenticação resistente a phishing depende de mecanismos criptográficos vinculados à sessão/verificador.",
+      "Códigos inseridos manualmente, como OTP, não são considerados resistentes a phishing porque podem ser retransmitidos por um impostor.",
+    ],
+  },
+  "cisa-secure-wifi-networks": {
+    id: "cisa-secure-wifi-networks",
+    title: "A Guide to Securing Networks for Wi-Fi",
+    publisher: "CISA",
+    url: "https://www.cisa.gov/sites/default/files/publications/A_Guide_to_Securing_Networks_for_Wi-Fi.pdf",
+    accessedAt: "2026-09-25",
+    sourceType: "official",
+    supports: [
+      "Redes Wi-Fi devem usar controles em camadas para reduzir ameaças sem fio.",
+      "A segurança da WLAN depende de configuração, autenticação, criptografia, segmentação e gestão, não apenas do nome ou ocultação do SSID.",
+    ],
+  },
+  "netgate-pfsense-docs": {
+    id: "netgate-pfsense-docs",
+    title: "pfSense Documentation",
+    publisher: "Netgate",
+    url: "https://docs.netgate.com/pfsense/en/latest/",
+    accessedAt: "2026-09-25",
+    sourceType: "official",
+    supports: [
+      "A documentação oficial organiza pfSense em instalação, interfaces, firewall, NAT, VLANs, VPN, autenticação, logs e recuperação.",
+    ],
+  },
+  "netgate-pfsense-firewall": {
+    id: "netgate-pfsense-firewall",
+    title: "Firewall",
+    publisher: "Netgate",
+    url: "https://docs.netgate.com/pfsense/en/latest/firewall/index.html",
+    accessedAt: "2026-09-25",
+    sourceType: "official",
+    supports: [
+      "Regras de firewall controlam o tráfego permitido ou bloqueado e devem ser desenhadas conforme origem, destino, protocolo e intenção.",
+    ],
+  },
+  "netgate-pfsense-backup": {
+    id: "netgate-pfsense-backup",
+    title: "Backup and Recovery",
+    publisher: "Netgate",
+    url: "https://docs.netgate.com/pfsense/en/latest/backup/index.html",
+    accessedAt: "2026-09-25",
+    sourceType: "official",
+    supports: [
+      "A configuração do pfSense deve ser copiada com frequência, armazenada com segurança e ter processo de restauração conhecido.",
+      "O arquivo de configuração concentra a maior parte do estado necessário para reconstrução do firewall.",
+    ],
+  },
+  "ms-ad-ds-overview": {
+    id: "ms-ad-ds-overview",
+    title: "Active Directory Domain Services overview",
+    publisher: "Microsoft Learn",
+    url: "https://learn.microsoft.com/en-us/windows-server/identity/ad-ds/active-directory-domain-services",
+    accessedAt: "2026-09-25",
+    sourceType: "official",
+    supports: [
+      "AD DS organiza de forma hierárquica objetos de rede como usuários e computadores e disponibiliza esses dados a administradores e usuários autorizados.",
+    ],
+  },
+  "ms-ad-ds-dns": {
+    id: "ms-ad-ds-dns",
+    title: "DNS and AD DS",
+    publisher: "Microsoft Learn",
+    url: "https://learn.microsoft.com/en-us/windows-server/identity/ad-ds/plan/dns-and-ad-ds",
+    accessedAt: "2026-09-25",
+    sourceType: "official",
+    supports: [
+      "AD DS usa DNS para clientes localizarem controladores de domínio e para a comunicação entre controladores.",
+      "Zonas DNS integradas ao Active Directory simplificam replicação de dados DNS no ambiente de domínio.",
+    ],
+  },
+  "ms-ad-ds-security": {
+    id: "ms-ad-ds-security",
+    title: "Best practices for securing Active Directory",
+    publisher: "Microsoft Learn",
+    url: "https://learn.microsoft.com/en-us/windows-server/identity/ad-ds/plan/security-best-practices/best-practices-for-securing-active-directory",
+    accessedAt: "2026-09-25",
+    sourceType: "official",
+    supports: [
+      "Segurança de AD DS exige reduzir superfície de ataque, proteger controladores, aplicar privilégio mínimo, monitorar e planejar recuperação de comprometimento.",
+    ],
+  },
+
 };
 
 // ─────────────────────────────────────────────────────────────
@@ -1263,6 +1371,43 @@ export const ARTICLE_SOURCE_MANIFEST: Record<string, ArticleSourceManifest> = {
     notes:
       "Revisão concluída (Onda 11G): trabalho sempre sobre cópia, distinção entre arquivo corrompido e programa incompatível, leitura de sinais de mídia em falha, recuperação por versões anteriores e limite claro para tentativa em disco com defeito. Conhecimento técnico estável — sem fonte visível.",
   },
+  "como-configurar-2fa-em-tudo": {
+    slug: "como-configurar-2fa-em-tudo",
+    sources: ["cisa-require-mfa", "nist-800-63b-authenticators"],
+    technicalReview: "reviewed",
+    factChecked: true,
+    factCheckedAt: "2026-09-25",
+    notes:
+      "Reescrita material completa em 2026-09-25: removidas estatísticas sem fonte, listas genéricas de produtos e promessas locais; diferencia 2FA de MFA, métodos resistentes a phishing, OTP, recuperação e ordem de implantação com base em CISA e NIST.",
+  },
+  "como-proteger-rede-wifi-empresa": {
+    slug: "como-proteger-rede-wifi-empresa",
+    sources: ["wifi-alliance-security", "cisa-secure-wifi-networks"],
+    technicalReview: "reviewed",
+    factChecked: true,
+    factCheckedAt: "2026-09-25",
+    notes:
+      "Reescrita material completa em 2026-09-25: foco em criptografia, segmentação, administração, ciclo de firmware e validação; removidas métricas inventadas, marcas recomendadas e alegações locais não comprovadas.",
+  },
+  "como-configurar-firewall-pfsense": {
+    slug: "como-configurar-firewall-pfsense",
+    sources: ["netgate-pfsense-docs", "netgate-pfsense-firewall", "netgate-pfsense-backup"],
+    technicalReview: "reviewed",
+    factChecked: true,
+    factCheckedAt: "2026-09-25",
+    notes:
+      "Reescrita material completa em 2026-09-25 contra a documentação atual da Netgate: removidos preços, senhas/defaults e prescrições de pacotes dependentes de versão; preservados planejamento, regras, NAT, VLANs, backup e recuperação.",
+  },
+  "como-configurar-active-directory": {
+    slug: "como-configurar-active-directory",
+    sources: ["ms-ad-ds-overview", "ms-ad-ds-dns", "ms-ad-ds-security"],
+    technicalReview: "reviewed",
+    factChecked: true,
+    factCheckedAt: "2026-09-25",
+    notes:
+      "Reescrita material completa em 2026-09-25 com documentação Microsoft atual para Windows Server: AD DS, dependência de DNS, segurança, redundância, GPO, backup e critérios de parada.",
+  },
+
 };
 
 

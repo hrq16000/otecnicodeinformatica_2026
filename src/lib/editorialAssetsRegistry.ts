@@ -65,6 +65,7 @@ const LICENSE_URLS: Record<string, string> = {
   "Public Domain": "https://creativecommons.org/publicdomain/mark/1.0/",
   "Licença Unsplash": "https://unsplash.com/license",
   "Licença Pexels": "https://www.pexels.com/license/",
+  "Todos os direitos reservados": "https://otecnicodeinformatica.com.br/termos-e-condicoes",
 };
 
 /** Licenças que exigem crédito visível. */

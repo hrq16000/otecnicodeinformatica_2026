@@ -1224,6 +1224,83 @@ const WAVE_11G: EditorialApproval[] = [
   },
 ];
 
+
+// ── Onda 11H — promoção controlada noindex → index (2026-09-25).
+// Cinco artigos herdados foram reescritos materialmente, revisados contra
+// fontes primárias e receberam capas vetoriais originais da própria marca.
+const WAVE_11H: EditorialApproval[] = [
+  {
+    slug: "como-configurar-2fa-em-tudo",
+    status: "approved",
+    authorType: "organization",
+    authorId: INSTITUTIONAL_AUTHOR.id,
+    reviewedAt: "2026-09-25",
+    approvedAt: "2026-09-25",
+    imageOrigin: "owned",
+    imageLicense: "Todos os direitos reservados",
+    imageAttribution:
+      "Arte editorial original: O Técnico de Informática — https://otecnicodeinformatica.com.br/blog/como-configurar-2fa-em-tudo",
+    notes:
+      "Reescrita completa com CISA e NIST: diferencia MFA/2FA, resistência a phishing, recuperação e critérios de parada. Capa vetorial própria, sem IA e sem terceiros.",
+  },
+  {
+    slug: "como-proteger-rede-wifi-empresa",
+    status: "approved",
+    authorType: "organization",
+    authorId: INSTITUTIONAL_AUTHOR.id,
+    reviewedAt: "2026-09-25",
+    approvedAt: "2026-09-25",
+    imageOrigin: "owned",
+    imageLicense: "Todos os direitos reservados",
+    imageAttribution:
+      "Arte editorial original: O Técnico de Informática — https://otecnicodeinformatica.com.br/blog/como-proteger-rede-wifi-empresa",
+    notes:
+      "Reescrita completa com Wi-Fi Alliance e CISA: criptografia, segmentação, gestão, firmware e limites operacionais. Capa vetorial própria, sem IA.",
+  },
+  {
+    slug: "como-configurar-firewall-pfsense",
+    status: "approved",
+    authorType: "organization",
+    authorId: INSTITUTIONAL_AUTHOR.id,
+    reviewedAt: "2026-09-25",
+    approvedAt: "2026-09-25",
+    imageOrigin: "owned",
+    imageLicense: "Todos os direitos reservados",
+    imageAttribution:
+      "Arte editorial original: O Técnico de Informática — https://otecnicodeinformatica.com.br/blog/como-configurar-firewall-pfsense",
+    notes:
+      "Reescrita completa com documentação oficial Netgate: interfaces, regras, NAT, VLANs, administração, backup e recuperação sem defaults frágeis de versão. Capa vetorial própria, sem IA.",
+  },
+  {
+    slug: "como-configurar-active-directory",
+    status: "approved",
+    authorType: "organization",
+    authorId: INSTITUTIONAL_AUTHOR.id,
+    reviewedAt: "2026-09-25",
+    approvedAt: "2026-09-25",
+    imageOrigin: "owned",
+    imageLicense: "Todos os direitos reservados",
+    imageAttribution:
+      "Arte editorial original: O Técnico de Informática — https://otecnicodeinformatica.com.br/blog/como-configurar-active-directory",
+    notes:
+      "Reescrita completa com Microsoft Learn: AD DS, DNS, segurança, redundância, GPO, backup e critérios de parada. Capa vetorial própria, sem IA.",
+  },
+  {
+    slug: "como-deixar-celular-android-mais-rapido",
+    status: "approved",
+    authorType: "organization",
+    authorId: INSTITUTIONAL_AUTHOR.id,
+    reviewedAt: "2026-09-25",
+    approvedAt: "2026-09-25",
+    imageOrigin: "owned",
+    imageLicense: "Todos os direitos reservados",
+    imageAttribution:
+      "Arte editorial original: O Técnico de Informática — https://otecnicodeinformatica.com.br/blog/como-deixar-celular-android-mais-rapido",
+    notes:
+      "Artigo ampliado e realinhado com a ajuda oficial do Android/Google: armazenamento, apps, cache, temperatura, reset e limite do hardware, sem aceleradores milagrosos. Capa vetorial própria, sem IA.",
+  },
+];
+
 export const APPROVED_EDITORIAL_CONTENT = new Map<string, EditorialApproval>([
 
   ...FIRST_WAVE_SLUGS.map((slug) => [
@@ -1279,6 +1356,7 @@ export const APPROVED_EDITORIAL_CONTENT = new Map<string, EditorialApproval>([
   ...WAVE_11D.map((a) => [a.slug, a] as [string, EditorialApproval]),
   ...WAVE_11E.map((a) => [a.slug, a] as [string, EditorialApproval]),  ...WAVE_11F.map((a) => [a.slug, a] as [string, EditorialApproval]),
   ...WAVE_11G.map((a) => [a.slug, a] as [string, EditorialApproval]),
+  ...WAVE_11H.map((a) => [a.slug, a] as [string, EditorialApproval]),
 
 ]);
 

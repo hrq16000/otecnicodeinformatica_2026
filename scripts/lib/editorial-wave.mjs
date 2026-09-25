@@ -748,6 +748,53 @@ export const EDITORIAL_WAVE = [
     apoioLabel: "Recuperação de dados em HD com defeito",
     cover: "/blog/arquivo-corrompido-nao-abre-o-que-fazer.jpg",
   },
+  // ── Onda 11H — promoção noindex → index após reescrita material.
+  {
+    slug: "como-configurar-2fa-em-tudo",
+    approvedAt: "2026-09-25",
+    pilar: "/seguranca-dos-dados",
+    pilarLabel: "Segurança dos dados",
+    apoio: "/blog/como-proteger-computador-golpes-internet",
+    apoioLabel: "Proteção contra golpes e phishing",
+    cover: "/blog/como-configurar-2fa-em-tudo.svg",
+  },
+  {
+    slug: "como-proteger-rede-wifi-empresa",
+    approvedAt: "2026-09-25",
+    pilar: "/servicos/redes-e-wifi",
+    pilarLabel: "Redes e Wi-Fi",
+    apoio: "/blog/internet-lenta-provedor-ou-roteador",
+    apoioLabel: "Internet lenta: provedor ou roteador",
+    cover: "/blog/como-proteger-rede-wifi-empresa.svg",
+  },
+  {
+    slug: "como-configurar-firewall-pfsense",
+    approvedAt: "2026-09-25",
+    pilar: "/servicos/redes-e-wifi",
+    pilarLabel: "Redes e Wi-Fi",
+    apoio: "/blog/como-proteger-rede-wifi-empresa",
+    apoioLabel: "Proteger o Wi-Fi da empresa",
+    cover: "/blog/como-configurar-firewall-pfsense.svg",
+  },
+  {
+    slug: "como-configurar-active-directory",
+    approvedAt: "2026-09-25",
+    pilar: "/servicos/suporte-tecnico-empresarial",
+    pilarLabel: "Suporte técnico empresarial",
+    apoio: "/blog/organizacao-de-ti-para-pequenos-escritorios",
+    apoioLabel: "Organização de TI para pequenos escritórios",
+    cover: "/blog/como-configurar-active-directory.svg",
+  },
+  {
+    slug: "como-deixar-celular-android-mais-rapido",
+    approvedAt: "2026-09-25",
+    pilar: "/diagnostico-tecnico",
+    pilarLabel: "Diagnóstico técnico",
+    apoio: "/guia-tecnico-informatica",
+    apoioLabel: "Atlas de Informática",
+    cover: "/blog/como-deixar-celular-android-mais-rapido.svg",
+  },
+
 ];
 
 
