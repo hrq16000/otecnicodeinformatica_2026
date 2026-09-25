@@ -1410,6 +1410,28 @@ const WAVE_11K: EditorialApproval[] = [
   },
 ];
 
+
+const WAVE_11L: EditorialApproval[] = [
+  {
+    slug: "como-configurar-bios-uefi-corretamente", status: "approved", authorType: "organization", authorId: INSTITUTIONAL_AUTHOR.id,
+    reviewedAt: "2026-09-25", approvedAt: "2026-09-25", imageOrigin: "owned", imageLicense: "Todos os direitos reservados",
+    imageAttribution: "Arte editorial original: O Técnico de Informática — https://otecnicodeinformatica.com.br/blog/como-configurar-bios-uefi-corretamente",
+    notes: "Reescrita com Microsoft Support: UEFI, Secure Boot, TPM, BitLocker, armazenamento e perfis de memória tratados por diagnóstico e rollback.",
+  },
+  {
+    slug: "como-configurar-servidor-de-arquivos", status: "approved", authorType: "organization", authorId: INSTITUTIONAL_AUTHOR.id,
+    reviewedAt: "2026-09-25", approvedAt: "2026-09-25", imageOrigin: "owned", imageLicense: "Todos os direitos reservados",
+    imageAttribution: "Arte editorial original: O Técnico de Informática — https://otecnicodeinformatica.com.br/blog/como-configurar-servidor-de-arquivos",
+    notes: "Reescrita com Microsoft Learn e Samba: identidade, SMB autenticado, segmentação, backup testado e acesso remoto sem expor 445.",
+  },
+  {
+    slug: "como-configurar-firewall-ufw-linux", status: "approved", authorType: "organization", authorId: INSTITUTIONAL_AUTHOR.id,
+    reviewedAt: "2026-09-25", approvedAt: "2026-09-25", imageOrigin: "owned", imageLicense: "Todos os direitos reservados",
+    imageAttribution: "Arte editorial original: O Técnico de Informática — https://otecnicodeinformatica.com.br/blog/como-configurar-firewall-ufw-linux",
+    notes: "Reescrita com Ubuntu Server: regras por necessidade, preservação de SSH, dry-run, origem, perfis, logs e critérios de parada.",
+  },
+];
+
 export const APPROVED_EDITORIAL_CONTENT = new Map<string, EditorialApproval>([
 
   ...FIRST_WAVE_SLUGS.map((slug) => [
@@ -1469,6 +1491,7 @@ export const APPROVED_EDITORIAL_CONTENT = new Map<string, EditorialApproval>([
   ...WAVE_11I.map((a) => [a.slug, a] as [string, EditorialApproval]),
   ...WAVE_11J.map((a) => [a.slug, a] as [string, EditorialApproval]),
   ...WAVE_11K.map((a) => [a.slug, a] as [string, EditorialApproval]),
+  ...WAVE_11L.map((a) => [a.slug, a] as [string, EditorialApproval]),
 
 ]);
 

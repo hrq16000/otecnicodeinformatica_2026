@@ -873,6 +873,29 @@ export const WAVE_11K_BATCH_1: EditorialWaveEntry[] = [
   },
 ];
 
+
+/** Onda 11L — firmware, servidor de arquivos e firewall Linux. */
+export const WAVE_11L_BATCH_1: EditorialWaveEntry[] = [
+  {
+    wave: "11A", batch: "13", url: "/blog/como-configurar-bios-uefi-corretamente", slug: "como-configurar-bios-uefi-corretamente",
+    ownerId: "bios-uefi-configuracao-segura", cluster: "sistemas-operacionais", role: "satelite", publishedAt: "2026-09-25",
+    targetQueries: ["como configurar bios uefi", "secure boot tpm bios", "configurar uefi sem perder boot"],
+    doNotDuplicate: ["/blog/boot-uefi-ou-legacy-como-identificar", "/blog/ordem-de-boot-na-bios-como-configurar", "/blog/bios-corrompida-reset-cmos-atualizacao"],
+  },
+  {
+    wave: "11A", batch: "13", url: "/blog/como-configurar-servidor-de-arquivos", slug: "como-configurar-servidor-de-arquivos",
+    ownerId: "servidor-arquivos-smb-samba", cluster: "informatica-empresas", role: "pilar", publishedAt: "2026-09-25",
+    targetQueries: ["como configurar servidor de arquivos", "servidor smb windows", "samba servidor de arquivos"],
+    doNotDuplicate: ["/blog/como-configurar-active-directory", "/blog/organizacao-de-ti-para-pequenos-escritorios", "/servicos/backup-para-empresas"],
+  },
+  {
+    wave: "11A", batch: "13", url: "/blog/como-configurar-firewall-ufw-linux", slug: "como-configurar-firewall-ufw-linux",
+    ownerId: "ufw-firewall-host-ubuntu", cluster: "internet-wifi", role: "satelite", publishedAt: "2026-09-25",
+    targetQueries: ["como configurar ufw", "ufw ubuntu firewall", "permitir ssh ufw"],
+    doNotDuplicate: ["/blog/como-configurar-firewall-pfsense", "/blog/como-configurar-vpn-empresarial"],
+  },
+];
+
 export const EDITORIAL_WAVES: EditorialWaveEntry[] = [
   ...WAVE_10C_BATCH_0,
   ...WAVE_10D_BATCH_1,
@@ -888,6 +911,7 @@ export const EDITORIAL_WAVES: EditorialWaveEntry[] = [
   ...WAVE_11I_BATCH_1,
   ...WAVE_11J_BATCH_1,
   ...WAVE_11K_BATCH_1,
+  ...WAVE_11L_BATCH_1,
 ];
 
 /** URLs monitoradas (ordem estável, sem duplicatas). */

@@ -879,6 +879,26 @@ export const EDITORIAL_WAVE = [
     apoio: "/blog/como-proteger-rede-wifi-empresa", apoioLabel: "Proteger o Wi-Fi",
     cover: "/blog/como-trocar-senha-wifi.svg",
   },
+  // ── Onda 11L — firmware, servidor de arquivos e firewall Linux.
+  {
+    slug: "como-configurar-bios-uefi-corretamente", approvedAt: "2026-09-25",
+    pilar: "/guia-tecnico-informatica", pilarLabel: "Guia do técnico de informática",
+    apoio: "/blog/boot-uefi-ou-legacy-como-identificar", apoioLabel: "Identificar UEFI ou Legacy",
+    cover: "/blog/como-configurar-bios-uefi-corretamente.svg",
+  },
+  {
+    slug: "como-configurar-servidor-de-arquivos", approvedAt: "2026-09-25",
+    pilar: "/empresa-de-ti-curitiba", pilarLabel: "TI para empresas",
+    apoio: "/blog/organizacao-de-ti-para-pequenos-escritorios", apoioLabel: "Organização de TI",
+    cover: "/blog/como-configurar-servidor-de-arquivos.svg",
+  },
+  {
+    slug: "como-configurar-firewall-ufw-linux", approvedAt: "2026-09-25",
+    pilar: "/seguranca-dos-dados", pilarLabel: "Segurança dos dados",
+    apoio: "/blog/como-configurar-firewall-pfsense", apoioLabel: "Firewall pfSense",
+    cover: "/blog/como-configurar-firewall-ufw-linux.svg",
+  },
+
 ];
 
 
