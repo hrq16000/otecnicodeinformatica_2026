@@ -16,7 +16,7 @@ const MARKDOWN_DIRS = ["docs"].filter((p) => existsSync(p));
 // Arquivos onde a citação do token é legítima (documentação da própria migração
 // e testes de regressão que precisam do valor literal para provar o bloqueio).
 const ALLOWLIST = [
-  /^AGENTS\\.md$/,
+  /^AGENTS\.md$/,
   /^scripts\/lib\/site-env\.mjs$/,
   /^scripts\/check-brand-isolation\.mjs$/,
   /\.test\.(ts|tsx|mjs|js)$/,
