@@ -60,7 +60,7 @@ export default function FunnelPrioridades({ dias = 30 }: { dias?: number }) {
   }, [dias]);
 
   const marcar = async (id: string, status: string) => {
-    const campos: Record<string, unknown> = { status_atendimento: status };
+    const campos: { status_atendimento: string; atendido_em?: string } = { status_atendimento: status };
     if (status === "fechado") campos.atendido_em = new Date().toISOString();
     const { error } = await supabase.from("funnel_submissions").update(campos).eq("id", id);
     if (error) {
