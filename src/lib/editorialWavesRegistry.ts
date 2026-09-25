@@ -717,6 +717,71 @@ export const WAVE_11G_BATCH_1: EditorialWaveEntry[] = [
   },
 ];
 
+
+/** Onda 11H — promoção de acervo herdado após reescrita e fact-check. */
+export const WAVE_11H_BATCH_1: EditorialWaveEntry[] = [
+  {
+    wave: "11A",
+    batch: "9",
+    url: "/blog/como-configurar-2fa-em-tudo",
+    slug: "como-configurar-2fa-em-tudo",
+    ownerId: "mfa-2fa-contas-criticas",
+    cluster: "seguranca-identidade",
+    role: "pilar",
+    publishedAt: "2026-09-25",
+    targetQueries: ["como configurar 2fa", "autenticacao de dois fatores", "mfa como ativar"],
+    doNotDuplicate: ["/blog/como-proteger-computador-golpes-internet"],
+  },
+  {
+    wave: "11A",
+    batch: "9",
+    url: "/blog/como-proteger-rede-wifi-empresa",
+    slug: "como-proteger-rede-wifi-empresa",
+    ownerId: "wifi-empresa-seguranca",
+    cluster: "internet-wifi",
+    role: "pilar",
+    publishedAt: "2026-09-25",
+    targetQueries: ["como proteger wifi da empresa", "seguranca wifi empresarial", "wpa3 empresa"],
+    doNotDuplicate: ["/blog/como-configurar-roteador-wifi-iniciantes", "/blog/como-melhorar-sinal-wifi-em-casa"],
+  },
+  {
+    wave: "11A",
+    batch: "9",
+    url: "/blog/como-configurar-firewall-pfsense",
+    slug: "como-configurar-firewall-pfsense",
+    ownerId: "pfsense-firewall-configuracao",
+    cluster: "internet-wifi",
+    role: "satelite",
+    publishedAt: "2026-09-25",
+    targetQueries: ["como configurar pfsense", "regras firewall pfsense", "pfsense backup configuracao"],
+    doNotDuplicate: ["/blog/como-proteger-rede-wifi-empresa"],
+  },
+  {
+    wave: "11A",
+    batch: "9",
+    url: "/blog/como-configurar-active-directory",
+    slug: "como-configurar-active-directory",
+    ownerId: "active-directory-planejamento",
+    cluster: "informatica-empresas",
+    role: "pilar",
+    publishedAt: "2026-09-25",
+    targetQueries: ["como configurar active directory", "active directory dns", "planejar ad ds"],
+    doNotDuplicate: ["/blog/organizacao-de-ti-para-pequenos-escritorios"],
+  },
+  {
+    wave: "11A",
+    batch: "9",
+    url: "/blog/como-deixar-celular-android-mais-rapido",
+    slug: "como-deixar-celular-android-mais-rapido",
+    ownerId: "android-lento-diagnostico",
+    cluster: "fundamentos",
+    role: "satelite",
+    publishedAt: "2026-09-25",
+    targetQueries: ["celular android lento", "como deixar android mais rapido", "celular lento o que fazer"],
+    doNotDuplicate: ["/diagnostico-tecnico"],
+  },
+];
+
 export const EDITORIAL_WAVES: EditorialWaveEntry[] = [
   ...WAVE_10C_BATCH_0,
   ...WAVE_10D_BATCH_1,
@@ -728,6 +793,7 @@ export const EDITORIAL_WAVES: EditorialWaveEntry[] = [
   ...WAVE_11E_BATCH_1,
   ...WAVE_11F_BATCH_1,
   ...WAVE_11G_BATCH_1,
+  ...WAVE_11H_BATCH_1,
 ];
 
 /** URLs monitoradas (ordem estável, sem duplicatas). */
