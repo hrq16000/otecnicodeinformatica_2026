@@ -601,6 +601,27 @@ export const EDITORIAL_COVERS: Record<string, EditorialCover> = {
   },
 
 
+  // ── Onda 11K — capas vetoriais próprias.
+  "como-resetar-senha-windows": {
+    src: "/blog/como-resetar-senha-windows.svg",
+    alt: "Ilustração editorial sobre recuperação oficial de acesso ao Windows",
+    width: 1200,
+    height: 630,
+  },
+  "como-organizar-arquivos-windows-iniciantes": {
+    src: "/blog/como-organizar-arquivos-windows-iniciantes.svg",
+    alt: "Ilustração editorial sobre organização de arquivos, pastas, busca e backup no Windows",
+    width: 1200,
+    height: 630,
+  },
+  "como-trocar-senha-wifi": {
+    src: "/blog/como-trocar-senha-wifi.svg",
+    alt: "Ilustração editorial sobre troca segura da senha da rede Wi-Fi",
+    width: 1200,
+    height: 630,
+  },
+
+
 };
 
 export function getEditorialCover(slug: string): EditorialCover | undefined {
