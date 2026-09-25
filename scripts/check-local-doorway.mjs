@@ -113,6 +113,17 @@ function extrair(path) {
   const html = htmlDaRota(path, dist);
   if (!html) return null;
   const texto = textoDe(html);
+  // Páginas locais podem marcar explicitamente o parágrafo autoral da primeira
+  // dobra. Isso evita que breadcrumb, CTA e rótulos compartilhados sejam
+  // confundidos com a introdução editorial pelo gate. O threshold não muda.
+  const introMarcadaHtml =
+    html.match(/<p[^>]*data-local-intro(?:=["'][^"']*["'])?[^>]*>([\s\S]*?)<\/p>/i)?.[1] ?? "";
+  const introMarcada = introMarcadaHtml
+    ? semAcento(introMarcadaHtml.replace(/<[^>]+>/g, " ").replace(/&[a-z]+;/gi, " "))
+        .replace(/[^a-z0-9\s]/g, " ")
+        .replace(/\s+/g, " ")
+        .trim()
+    : "";
   const h2 = [...html.matchAll(/<h2[^>]*>([\s\S]*?)<\/h2>/gi)].map((m) =>
     semAcento(m[1].replace(/<[^>]+>/g, " ")).replace(/\s+/g, " ").trim(),
   );
@@ -132,7 +143,7 @@ function extrair(path) {
     h2,
     faqs,
     texto,
-    intro: texto.split(" ").slice(0, 120).join(" "),
+    intro: introMarcada || texto.split(" ").slice(0, 120).join(" "),
     palavras: texto.split(" ").filter(Boolean).length,
     grams: ngrams(texto),
   };
