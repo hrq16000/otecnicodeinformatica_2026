@@ -567,6 +567,40 @@ export const EDITORIAL_COVERS: Record<string, EditorialCover> = {
     height: 630,
   },
 
+  // ── Onda 11J — enriquecimento de Windows, backup e conectividade.
+  // Reuso controlado de fotografias já versionadas e licenciadas no acervo.
+  "como-deixar-windows-11-mais-rapido-iniciantes": {
+    src: "/blog/windows-11-lento-como-resolver.jpg",
+    alt: "Pessoa usando notebook em ambiente de trabalho durante diagnóstico de desempenho do Windows",
+    width: 1200,
+    height: 630,
+  },
+  "como-fazer-backup-fotos-windows-iniciantes": {
+    src: "/blog/historico-de-arquivos-windows-como-configurar.jpg",
+    alt: "HD externo portátil usado como destino de backup de fotos e arquivos pessoais",
+    width: 1200,
+    height: 630,
+  },
+  "como-atualizar-windows-corretamente": {
+    src: "/blog/windows-update-nao-funciona-o-que-verificar.jpg",
+    alt: "Tela do Windows Update durante verificação e instalação de atualizações",
+    width: 1200,
+    height: 630,
+  },
+  "como-recuperar-arquivos-apagados-windows": {
+    src: "/blog/como-testar-restauracao-de-backup.jpg",
+    alt: "Mídias de armazenamento usadas em backup e recuperação de arquivos",
+    width: 1200,
+    height: 630,
+  },
+  "como-fazer-teste-velocidade-internet": {
+    src: "/blog/internet-lenta-provedor-ou-roteador.jpg",
+    alt: "Modem de banda larga usado em testes para separar conexão do provedor e rede local",
+    width: 1200,
+    height: 630,
+  },
+
+
 };
 
 export function getEditorialCover(slug: string): EditorialCover | undefined {
