@@ -67,6 +67,11 @@
       "why": "Painel interno, não público."
     },
     {
+      "file": "src/components/admin",
+      "rule": "*",
+      "why": "Painel interno (não público): rótulos operacionais de acompanhamento de chamados, não promessas a visitantes."
+    },
+    {
       "file": "src/pages/CFTV.tsx",
       "rule": "garantia-divergente",
       "why": "Vertical CFTV: garantia de 1 ano é do equipamento Intelbras (fabricante) e da instalação do kit — regra própria, distinta da mão de obra de informática."

@@ -6,6 +6,7 @@ import { Footer } from "@/components/Footer";
 import NotFound from "@/pages/NotFound";
 import { MapPin, MessageCircle, Clock, BadgeCheck, ExternalLink } from "lucide-react";
 import {
+  assinarFotosPublicas,
   getPartnerBySlug,
   getPartnerPhotos,
   type Partner,
@@ -22,6 +23,7 @@ const PerfilProfissional = () => {
   const [estado, setEstadoCarga] = useState<"carregando" | "ok" | "ausente">("carregando");
   const [parceiro, setParceiro] = useState<Partner | null>(null);
   const [fotos, setFotos] = useState<PartnerPhoto[]>([]);
+  const [fotoPerfil, setFotoPerfil] = useState<string | null>(null);
 
   useEffect(() => {
     let ativo = true;
@@ -33,6 +35,13 @@ const PerfilProfissional = () => {
       }
       setParceiro(p);
       setEstadoCarga("ok");
+      // Foto de perfil interna sai por link temporário assinado no servidor.
+      if (p.foto_url && !/^https?:\/\//i.test(p.foto_url)) {
+        const mapa = await assinarFotosPublicas([p.foto_url]);
+        if (ativo) setFotoPerfil(mapa[p.foto_url] ?? null);
+      } else {
+        setFotoPerfil(p.foto_url);
+      }
       setFotos(await getPartnerPhotos(p.id));
     });
     return () => {
@@ -81,9 +90,9 @@ const PerfilProfissional = () => {
       <main>
         <section className="border-b border-border bg-card">
           <div className="container mx-auto flex flex-col gap-6 py-12 md:flex-row md:items-center">
-            {p.foto_url && (
+            {fotoPerfil && (
               <img
-                src={p.foto_url}
+                src={fotoPerfil}
                 alt={`Foto de ${p.nome_profissional}`}
                 loading="lazy"
                 className="h-28 w-28 rounded-2xl object-cover"

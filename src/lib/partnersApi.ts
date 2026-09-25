@@ -10,6 +10,7 @@
  */
 
 import { supabase } from "@/integrations/supabase/client";
+import { assinarFotos } from "@/lib/partnersPhotos.functions";
 
 export type Partner = {
   id: string;
@@ -103,8 +104,21 @@ export async function getPartnerBySlug(slug: string): Promise<Partner | null> {
 /** Bucket privado: caminhos internos viram URL assinada de leitura. */
 export const PARTNER_BUCKET = "parceiros";
 
+const isUrlExterna = (url: string) => /^https?:\/\//i.test(url);
+
+/**
+ * Páginas públicas: caminhos internos são assinados NO SERVIDOR — o visitante
+ * não tem permissão de leitura na pasta, só recebe o link temporário.
+ */
+export async function assinarFotosPublicas(paths: string[]): Promise<Record<string, string>> {
+  const internas = paths.filter((p) => !isUrlExterna(p));
+  if (internas.length === 0) return {};
+  return assinarFotos({ data: { paths: internas.slice(0, 30) } });
+}
+
+/** Área do parceiro (dono do arquivo): assina no cliente com a própria sessão. */
 export async function resolvePhotoUrl(url: string): Promise<string | null> {
-  if (/^https?:\/\//i.test(url)) return url;
+  if (isUrlExterna(url)) return url;
   const { data } = await supabase.storage.from(PARTNER_BUCKET).createSignedUrl(url, 60 * 60);
   return data?.signedUrl ?? null;
 }
@@ -118,9 +132,11 @@ export async function getPartnerPhotos(partnerId: string): Promise<PartnerPhoto[
   if (error || !data) return [];
 
   const fotos = data as PartnerPhoto[];
-  const resolvidas = await Promise.all(
-    fotos.map(async (f) => ({ ...f, url: (await resolvePhotoUrl(f.url)) ?? "" })),
-  );
+  const mapa = await assinarFotosPublicas(fotos.map((f) => f.url));
+  const resolvidas = fotos.map((f) => ({
+    ...f,
+    url: isUrlExterna(f.url) ? f.url : (mapa[f.url] ?? ""),
+  }));
   return resolvidas.filter((f) => f.url);
 }
 
