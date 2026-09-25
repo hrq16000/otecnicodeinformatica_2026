@@ -306,6 +306,7 @@ export default function AssistenciaTecnicaCuritiba() {
         title="Assistência Técnica em Curitiba | Consoles, PC e Placas"
         description="Assistência técnica em Curitiba: PlayStation, Xbox, Nintendo, placas de vídeo, PCs e notebooks. Diagnóstico honesto e valor combinado antes do reparo."
         path="/assistencia-tecnica-curitiba"
+        noindex
         breadcrumbs={[
           { name: "Início", path: "/" },
           { name: "Serviços", path: "/servicos" },
