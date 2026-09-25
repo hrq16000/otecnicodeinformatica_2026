@@ -147,7 +147,7 @@ export const ArticleToc = ({ headings }: { headings: TocHeading[] }) => {
           })}
         </ol>
       </details>
-      <p aria-live="polite" role="status" className="sr-only">
+      <p data-toc-live-status aria-live="polite" role="status" className="sr-only">
         {aviso}
       </p>
     </nav>
