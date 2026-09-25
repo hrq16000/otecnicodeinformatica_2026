@@ -58,13 +58,12 @@ export async function recordSubmission(payload: {
       journey_id: getJourneyId(),
       landing_route: readTouchpoint("first")?.landing_route ?? null,
       ...utm,
-    }).select("id").maybeSingle();
+    });
 
     // GA4: cada solicitação registrada vira um evento de lead (sem PII).
     try {
       const { track } = await import("@/lib/funnelAnalytics");
       track("generate_lead", {
-        lead_id: inserido?.id ?? undefined,
         status_atendimento: "novo",
         equipamento: payload.equipamento?.slice(0, 80),
         route_family: ctx.route_family,
