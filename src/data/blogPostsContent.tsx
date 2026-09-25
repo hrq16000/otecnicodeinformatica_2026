@@ -4765,7 +4765,7 @@ docker run -d --name db --network minha-rede postgres
         </ul>
         <h2>Decisão: qual ajuste realmente faz sentido?</h2>
         <p>Se o problema é apenas escolher um dispositivo de inicialização, mexa na ordem de boot. Se é requisito do Windows 11, trate UEFI, Secure Boot e TPM separadamente. Se o disco não aparece, diagnostique controlador e armazenamento antes de trocar o modo. Se o problema é instabilidade, volte ao baseline antes de ativar perfis de desempenho.</p>
-        <h2>Perguntas frequentes</h2>
+        <h2>Dúvidas rápidas antes de começar</h2>
         <h3>Preciso ativar Secure Boot para usar Windows 11?</h3>
         <p>O Windows 11 exige que o computador seja compatível com Secure Boot em UEFI; manter o recurso habilitado melhora a proteção de inicialização e é a recomendação geral da Microsoft.</p>
         <h3>Ativar TPM apaga meus arquivos?</h3>
@@ -5310,7 +5310,7 @@ docker run -d --name db --network minha-rede postgres
           <li>Não trate RAID, snapshot e backup como se fossem a mesma coisa.</li>
           <li>Não abra TCP 445 para a internet para facilitar acesso remoto.</li>
         </ul>
-        <h2>Perguntas frequentes</h2>
+        <h2>Dúvidas rápidas antes de começar</h2>
         <h3>Windows 11 pode compartilhar arquivos como servidor?</h3>
         <p>Sim, o Windows cliente inclui o componente servidor SMB, mas recursos e limites variam. Para ambiente empresarial, escolha a plataforma pela necessidade de identidade, administração, disponibilidade e suporte.</p>
         <h3>Samba precisa de acesso convidado?</h3>
@@ -5509,7 +5509,7 @@ docker run -d --name db --network minha-rede postgres
 
   "como-configurar-firewall-pfsense": {
     title: "Como Configurar Firewall pfSense: Guia Completo Para Redes Empresariais",
-    excerpt: "Instalação, regras de firewall, NAT, VPN e monitoramento com pfSense.",
+    excerpt: "Instalação, regras de firewall, NAT, VPN e monitoramento com pfSense em redes de pequenas empresas.",
     date: "2026-04-13",
     readTime: "16 min",
     category: "Procedimentos Técnicos",
@@ -8802,7 +8802,7 @@ crontab -e
         </ul>
         <h2>Decisão: UFW é a camada certa?</h2>
         <p>Use UFW quando você precisa controlar conexões do próprio host Ubuntu com regras compreensíveis. Se a necessidade é segmentar várias redes, controlar NAT, concentrar VPNs ou aplicar política para muitos dispositivos, trate o problema como arquitetura de firewall/gateway. Se o servidor está em nuvem, alinhe UFW com Security Groups/firewall do provedor em vez de configurar cada camada sem relação.</p>
-        <h2>Perguntas frequentes</h2>
+        <h2>Dúvidas rápidas antes de começar</h2>
         <h3>UFW substitui um firewall de borda?</h3><p>Não. UFW protege o host; um firewall de borda controla tráfego entre redes e pode aplicar políticas antes de o pacote chegar ao servidor.</p>
         <h3>Posso permitir SSH só da minha rede?</h3><p>Sim. O UFW aceita regras com origem específica ou sub-rede. Isso reduz exposição quando a arquitetura permite uma origem administrativa estável.</p>
         <h3>Preciso reiniciar o servidor depois de cada regra?</h3><p>As regras do UFW são aplicadas pelo próprio utilitário; o importante é verificar o estado e testar o serviço após a mudança.</p>
@@ -9081,119 +9081,70 @@ crontab -e
     category: "Segurança e Redes",
     content: (
       <>
-        <p className="lead">Segurança digital deixou de ser problema só de grandes corporações. Em 2026, ataques cibernéticos atingem desde pessoas comuns até pequenas empresas em Curitiba todos os dias. Este guia técnico mostra como configurar 2fa (autenticação de dois fatores) em tudo de forma profissional e eficaz.</p>
+        <p className="lead">A verificação em duas etapas (2FA) pede, além da senha, uma segunda prova de que é você: um código gerado no celular, uma chave física ou uma confirmação no aplicativo. Se a senha vazar, o invasor ainda para nessa segunda porta. Este guia mostra em que ordem ativar, qual método escolher em cada conta e como não ficar trancado para fora.</p>
 
-        <h2>Cenário de Ameaças em 2026</h2>
-        <p>O custo médio de um incidente de segurança para pequenas empresas brasileiras passou de R$ 80 mil em 2025, segundo levantamentos do setor. Os ataques mais comuns que vemos no atendimento técnico em Curitiba:</p>
+        <h2>O que muda quando o 2FA está ligado</h2>
+        <p>Senha é algo que você sabe. O segundo fator é algo que você tem (celular, chave USB) ou algo que você é (digital, rosto). A CISA recomenda a autenticação multifator como uma das medidas de maior impacto para contas pessoais e de trabalho, justamente porque a maioria das invasões começa com senha reaproveitada ou capturada em página falsa.</p>
+        <p>O 2FA não substitui senha forte e única. Ele cobre o cenário em que a senha já não é segredo.</p>
+
+        <h2>Os métodos, do mais fraco ao mais forte</h2>
         <ul>
-          <li><strong>Ransomware</strong> — criptografia dos arquivos e cobrança de resgate (R$ 5 mil a R$ 500 mil)</li>
-          <li><strong>Phishing direcionado</strong> — e-mails personalizados que enganam até usuários experientes</li>
-          <li><strong>Engenharia social</strong> — ligações se passando por banco, suporte técnico ou parceiro</li>
-          <li><strong>Invasão por credenciais vazadas</strong> — senhas reutilizadas em sites comprometidos</li>
-          <li><strong>Ataques a roteadores domésticos</strong> — captura de tráfego e redirecionamento DNS</li>
-          <li><strong>Sequestro de WhatsApp Business</strong> — uso da conta para golpes contra clientes</li>
+          <li><strong>Código por SMS</strong> — melhor que nada, mas vulnerável a clonagem de chip (troca de SIM). Use só quando o serviço não oferece outra opção.</li>
+          <li><strong>Código por e-mail</strong> — depende da segurança da própria caixa de e-mail; se ela cair, cai tudo junto.</li>
+          <li><strong>Aplicativo autenticador (TOTP)</strong> — Microsoft Authenticator, Google Authenticator, Aegis ou 2FAS geram um código de 6 dígitos que muda a cada 30 segundos, sem depender da operadora.</li>
+          <li><strong>Notificação no aplicativo</strong> — prático, mas exige atenção: nunca aprove um pedido que você não iniciou.</li>
+          <li><strong>Chave de segurança e passkeys (FIDO2/WebAuthn)</strong> — resistem a páginas falsas porque a chave só responde ao site verdadeiro. O NIST (SP 800-63B) classifica esse tipo de autenticador como resistente a phishing.</li>
         </ul>
 
-        <h2>Princípios Fundamentais de Segurança</h2>
-        <p>Antes de ferramentas e configurações, internalize os princípios. Eles guiam toda decisão de segurança.</p>
-        <ul>
-          <li><strong>Defesa em profundidade</strong> — múltiplas camadas, nunca dependa de uma única proteção</li>
-          <li><strong>Princípio do menor privilégio</strong> — cada usuário e processo só tem acesso ao mínimo necessário</li>
-          <li><strong>Zero Trust</strong> — nunca confie automaticamente, verifique sempre, mesmo dentro da rede</li>
-          <li><strong>Segregação de funções</strong> — quem aprova não é quem executa, quem audita não é quem opera</li>
-          <li><strong>Backup imune</strong> — pelo menos uma cópia offline ou imutável, fora do alcance de ransomware</li>
-          <li><strong>Atualização contínua</strong> — vulnerabilidades conhecidas são as mais exploradas</li>
-        </ul>
-
-        <h2>Avaliação de Riscos Inicial</h2>
-        <p>Não é possível proteger o que você não conhece. O primeiro passo é mapear sua infraestrutura.</p>
-        <p>Faça um inventário completo:</p>
-        <ul>
-          <li>Quais dispositivos estão conectados à rede (computadores, celulares, IoT, impressoras)</li>
-          <li>Quais sistemas e aplicativos são usados (sistemas internos, SaaS, e-mail)</li>
-          <li>Quais dados são tratados (cadastros, financeiro, saúde, propriedade intelectual)</li>
-          <li>Quem tem acesso a quê (usuários, fornecedores, parceiros)</li>
-          <li>Onde estão os backups e qual a frequência</li>
-          <li>Quais ferramentas de segurança já estão em uso</li>
-        </ul>
-        <p>Esse mapeamento revela vulnerabilidades óbvias que muitas vezes passam despercebidas — como aquela impressora que ninguém mais usa mas continua acessível pela rede.</p>
-
-        <h2>Configuração Técnica Recomendada</h2>
-        <p>Com o mapeamento em mãos, parta para a configuração técnica. As recomendações abaixo são baseline mínimo para qualquer ambiente profissional.</p>
-        <ul>
-          <li><strong>Firewall configurado</strong> — bloqueia portas não usadas, limita acesso externo a serviços essenciais</li>
-          <li><strong>Antivírus em todos os endpoints</strong> — Bitdefender, ESET ou Kaspersky em versão corporativa</li>
-          <li><strong>Patch management</strong> — atualizações de SO e aplicativos aplicadas em até 30 dias da liberação</li>
-          <li><strong>EDR (Endpoint Detection and Response)</strong> — para detectar ataques que escapam do antivírus tradicional</li>
-          <li><strong>VPN para acesso remoto</strong> — nada de RDP exposto direto na internet</li>
-          <li><strong>2FA em todos os serviços críticos</strong> — e-mail, ERP, painel administrativo, redes sociais corporativas</li>
-          <li><strong>Logs centralizados</strong> — pelo menos 90 dias de retenção para investigação de incidentes</li>
-        </ul>
-
-        <h2>Procedimento Detalhado de Implementação</h2>
-        <p>Vamos ao passo a passo prático. Adapte ao seu ambiente, mas siga a ordem — pular etapas deixa brechas.</p>
+        <h2>Ordem recomendada de ativação</h2>
+        <p>Não tente ligar tudo numa tarde. Siga a ordem de impacto:</p>
         <ol>
-          <li><strong>Inventário e classificação</strong> — saiba o que precisa proteger e qual a criticidade de cada ativo</li>
-          <li><strong>Hardening de senhas</strong> — gerenciador de senhas (Bitwarden, 1Password) para todos os usuários</li>
-          <li><strong>2FA universal</strong> — comece pelo e-mail (porta de entrada para tudo), depois bancos, redes sociais e sistemas internos</li>
-          <li><strong>Firewall e segmentação</strong> — separe rede de visitantes, IoT e produção</li>
-          <li><strong>Backup 3-2-1</strong> — 3 cópias, 2 mídias diferentes, 1 offsite</li>
-          <li><strong>Atualizações automáticas</strong> — configure janela de manutenção e aplique patches</li>
-          <li><strong>Treinamento de usuários</strong> — phishing é o vetor #1, e usuário treinado é a melhor defesa</li>
-          <li><strong>Monitoramento contínuo</strong> — logs revisados periodicamente, alertas configurados para anomalias</li>
-          <li><strong>Plano de resposta a incidentes</strong> — quem chamar, o que fazer, como comunicar quando algo der errado</li>
-          <li><strong>Auditoria periódica</strong> — pentest anual e revisão de configurações trimestral</li>
+          <li><strong>E-mail principal</strong> — é por ele que se recupera a senha de quase todo o resto.</li>
+          <li><strong>Conta Microsoft ou Google do celular e do computador</strong> — guardam fotos, contatos, backups e senhas salvas.</li>
+          <li><strong>WhatsApp</strong> — em Configurações → Conta → Confirmação em duas etapas, crie um PIN de seis dígitos e cadastre um e-mail de recuperação.</li>
+          <li><strong>Bancos e carteiras digitais</strong> — use o token do próprio aplicativo do banco.</li>
+          <li><strong>Redes sociais e lojas online</strong> — Instagram, Facebook, Mercado Livre, Amazon.</li>
+          <li><strong>Serviços de trabalho</strong> — sistema de gestão, contabilidade, painel do site, provedor de domínio.</li>
         </ol>
 
-        <h2>Ferramentas Recomendadas</h2>
-        <p>Mercado de segurança tem centenas de ferramentas. Para o cenário típico de SMB em Curitiba, essa stack cobre o essencial:</p>
-        <ul>
-          <li><strong>Bitdefender GravityZone</strong> ou <strong>ESET Protect</strong> — antivírus + EDR centralizado</li>
-          <li><strong>pfSense</strong> ou <strong>OPNsense</strong> — firewall corporativo open source</li>
-          <li><strong>Bitwarden Business</strong> — gerenciador de senhas com SSO e auditoria</li>
-          <li><strong>Veeam Backup</strong> ou <strong>Acronis</strong> — backup empresarial com replicação</li>
-          <li><strong>Wazuh</strong> — SIEM open source para correlação de logs</li>
-          <li><strong>Cloudflare</strong> — proteção DDoS e WAF para sites e aplicações</li>
-          <li><strong>YubiKey</strong> ou <strong>Authy</strong> — 2FA físico e em apps</li>
-        </ul>
-
-        <h2>Erros Comuns Que Geram Vulnerabilidade</h2>
-        <p>Os ataques bem-sucedidos quase sempre exploram falhas conhecidas e evitáveis.</p>
-        <ul>
-          <li><strong>Senha "12345678"</strong> ou similar em conta administrativa</li>
-          <li><strong>Reutilizar senha</strong> entre serviços pessoais e corporativos</li>
-          <li><strong>Adiar atualizações</strong> de SO e aplicativos por meses ou anos</li>
-          <li><strong>Antivírus expirado</strong> sem que o usuário perceba</li>
-          <li><strong>Backup que nunca é testado</strong> — descobrir que não funciona depois do incidente</li>
-          <li><strong>Compartilhar credenciais</strong> entre funcionários por WhatsApp</li>
-          <li><strong>Acesso remoto direto via RDP</strong> sem VPN</li>
-          <li><strong>Wi-Fi corporativo</strong> com senha conhecida por todos os funcionários, terceiros e clientes</li>
-        </ul>
-
-        <h2>Resposta a Incidentes</h2>
-        <p>Cedo ou tarde, algo vai dar errado. Ter um plano definido é diferença entre incidente controlado e desastre.</p>
+        <h2>Passo a passo genérico com aplicativo autenticador</h2>
         <ol>
-          <li><strong>Detecção</strong> — usuário relata, alerta de monitoramento dispara, antivírus bloqueia</li>
-          <li><strong>Contenção</strong> — desconectar máquinas afetadas da rede imediatamente</li>
-          <li><strong>Erradicação</strong> — remover malware, fechar vetor de entrada, trocar credenciais comprometidas</li>
-          <li><strong>Recuperação</strong> — restaurar de backup limpo, validar integridade antes de voltar à produção</li>
-          <li><strong>Lições aprendidas</strong> — documentar o que aconteceu, ajustar processos para evitar recorrência</li>
+          <li>Instale o autenticador no celular antes de começar.</li>
+          <li>No serviço, abra Segurança → Verificação em duas etapas (o nome varia).</li>
+          <li>Escolha "aplicativo autenticador" e leia o QR Code com o celular.</li>
+          <li>Digite o código de 6 dígitos que aparecer para confirmar.</li>
+          <li>Salve os <strong>códigos de recuperação</strong> oferecidos no final — imprima ou guarde num gerenciador de senhas.</li>
+          <li>Saia da conta e entre de novo para testar antes de fechar a página.</li>
         </ol>
-        <p><strong>Nunca pague resgate de ransomware sem consultar especialista.</strong> Pagar não garante recuperação dos dados e marca sua empresa como alvo fácil para futuras extorsões.</p>
 
-        <h2>Conformidade e LGPD</h2>
-        <p>Empresas que tratam dados pessoais têm obrigações legais. A LGPD não é opcional, e multas chegam a 2% do faturamento limitado a R$ 50 milhões por infração.</p>
+        <h2>Verificação segura: não fique trancado para fora</h2>
+        <p>O problema mais comum não é invasão, é perder o celular e não conseguir entrar. Antes de ativar em muitas contas:</p>
         <ul>
-          <li><strong>Mapeamento de dados pessoais</strong> coletados e tratados</li>
-          <li><strong>Base legal documentada</strong> para cada tratamento</li>
-          <li><strong>Política de privacidade</strong> clara e acessível</li>
-          <li><strong>Encarregado de proteção de dados</strong> (DPO) designado</li>
-          <li><strong>Plano de resposta a incidentes</strong> que inclua notificação à ANPD em até 48h</li>
-          <li><strong>Direitos dos titulares</strong> implementados (acesso, correção, exclusão)</li>
+          <li>Guarde os códigos de recuperação fora do celular.</li>
+          <li>Use um autenticador com backup criptografado ou exportação (Microsoft Authenticator, 2FAS, Aegis).</li>
+          <li>Cadastre um segundo método em contas críticas: uma chave física reserva ou um segundo aparelho.</li>
+          <li>Ao trocar de celular, transfira o autenticador <strong>antes</strong> de apagar o aparelho antigo.</li>
         </ul>
 
-        <h2>Suporte em Segurança em Curitiba</h2>
-        <p>A <strong>{BRAND_NAME}</strong> oferece consultoria e implementação de segurança digital para empresas em Curitiba e região metropolitana. Auditoria, hardening, configuração de firewall, implementação de backup, treinamento de usuários e resposta a incidentes. Atendemos Curitiba, São José dos Pinhais, Pinhais, Colombo, Almirante Tamandaré, Araucária, Campo Largo, Campo Magro, Piraquara, Quatro Barras e Fazenda Rio Grande com técnicos certificados em segurança ofensiva e defensiva.</p>
+        <h2>Golpes que tentam driblar o 2FA</h2>
+        <ul>
+          <li><strong>"Me passa o código que chegou aí"</strong> — nenhuma empresa séria pede o código por telefone ou mensagem. Quem pede está tentando entrar na sua conta.</li>
+          <li><strong>Fadiga de notificação</strong> — dezenas de pedidos de aprovação seguidos até você tocar em "sim". Recuse e troque a senha.</li>
+          <li><strong>Página falsa em tempo real</strong> — copia senha e código ao mesmo tempo. Só passkeys e chaves físicas bloqueiam esse ataque.</li>
+        </ul>
+
+        <h2>Limites: quando pedir ajuda</h2>
+        <p>Se você já perdeu o acesso a uma conta com 2FA e não tem códigos de recuperação, o caminho é o processo oficial de recuperação do próprio serviço — ninguém de fora consegue "desbloquear" a conta. Em empresas com várias pessoas, faz sentido centralizar a política (quem usa qual método, onde ficam os códigos) em vez de cada um decidir sozinho.</p>
+
+        <h2>Decisão rápida</h2>
+        <ul>
+          <li>Uso pessoal: autenticador no celular + códigos de recuperação impressos.</li>
+          <li>Conta de administrador ou financeiro: chave física ou passkey.</li>
+          <li>Serviço que só oferece SMS: ative mesmo assim e peça à operadora bloqueio de troca de chip sem presença.</li>
+        </ul>
+        <p>Revise as contas a cada seis meses: remova aparelhos antigos da lista de dispositivos confiáveis, confirme que o e-mail e o telefone de recuperação ainda são seus e gere novos códigos de recuperação se usou algum.</p>
+        <p>Para a parte de rede do escritório, que é outro assunto, veja o guia de proteção da rede Wi-Fi da empresa.</p>
+
 
       </>
     ),
@@ -9663,7 +9614,7 @@ crontab -e
   },
 
   
-"como-deixar-windows-11-mais-rapido-iniciantes": {
+  "como-deixar-windows-11-mais-rapido-iniciantes": {
     title: "Windows 11 lento: como deixar o PC mais rápido sem truques",
     excerpt:
       "Diagnóstico prático para Windows 11 lento: inicialização, armazenamento, processos, atualizações e sinais de limite de hardware antes de instalar otimizadores.",
@@ -9737,13 +9688,15 @@ crontab -e
         </ul>
 
         <p>Para entender o raciocínio completo em vez de seguir receitas isoladas, continue no <Link to="/guia-tecnico-informatica#tema-hardware-upgrades" className="text-accent">Atlas de hardware e desempenho</Link>.</p>
+        <h2>Limite deste guia</h2>
+        <p>Nenhum ajuste desta lista exige desativar antivírus, Secure Boot ou controle de conta de usuário. Se alguém recomendar isso para ganhar velocidade, desconfie: o ganho é mínimo e o risco é alto.</p>
         <EditorialReferences slug="como-deixar-windows-11-mais-rapido-iniciantes" />
       </>
     ),
   },
 
   
-"como-fazer-backup-fotos-windows-iniciantes": {
+  "como-fazer-backup-fotos-windows-iniciantes": {
     title: "Como fazer backup de fotos no Windows e comprovar que a cópia funciona",
     excerpt:
       "Método seguro para proteger fotos no Windows usando disco externo, Histórico de Arquivos e nuvem — com verificação de restauração e sem confundir sincronização com backup.",
@@ -9803,6 +9756,9 @@ crontab -e
         </ul>
 
         <p>Se você ainda não decidiu entre nuvem e mídia física, compare <Link to="/decisoes/nuvem-ou-hd-externo" className="text-accent">nuvem ou HD externo</Link> e veja o <Link to="/guia-tecnico-informatica#tema-dados-backup" className="text-accent">Atlas de dados e backup</Link>.</p>
+        <h2>Como testar se o backup funciona de verdade</h2>
+        <p>Backup que nunca foi testado é só uma esperança. Uma vez por mês, escolha três fotos aleatórias de meses diferentes e abra cada uma diretamente no HD externo ou na nuvem, sem passar pela pasta original. Confira se abrem em tamanho cheio e não apenas como miniatura. Verifique também a data da cópia mais recente: se ela tem semanas, a sincronização parou em algum momento e ninguém percebeu.</p>
+        <p>Guarde o HD externo desconectado quando não estiver copiando. Assim, um vírus que criptografe o computador não alcança a cópia.</p>
         <EditorialReferences slug="como-fazer-backup-fotos-windows-iniciantes" />
       </>
     ),
@@ -10058,7 +10014,7 @@ crontab -e
           <li><strong>BitLocker:</strong> criptografia de volume que pode exigir chave de recuperação em determinados eventos.</li>
         </ul>
 
-        <h2>Perguntas frequentes</h2>
+        <h2>Dúvidas rápidas antes de começar</h2>
         <h3>O suporte consegue me dizer minha senha antiga?</h3>
         <p>
           Não. A recuperação redefine a credencial depois da verificação adequada; não existe procedimento
@@ -10228,7 +10184,7 @@ crontab -e
           <li><strong>Arquivo somente online:</strong> item visível no Explorador cujo conteúdo pode estar apenas na nuvem até ser aberto.</li>
         </ul>
 
-        <h2>Perguntas frequentes</h2>
+        <h2>Dúvidas rápidas antes de começar</h2>
         <h3>Muitos ícones na Área de Trabalho deixam o computador lento?</h3>
         <p>
           Não use isso como regra de diagnóstico. Uma Área de Trabalho cheia dificulta encontrar documentos, mas
@@ -10253,7 +10209,7 @@ crontab -e
     ),
   },
 
-"como-atualizar-windows-corretamente": {
+  "como-atualizar-windows-corretamente": {
     title: "Como atualizar o Windows 11 com segurança e o que fazer quando falha",
     excerpt:
       "Passo a passo para preparar, instalar e validar atualizações do Windows 11, com backup, energia, espaço, reinício e diagnóstico oficial quando o Windows Update apresenta erro.",
@@ -10307,13 +10263,16 @@ crontab -e
         <p>Interrompa a sequência de tentativas se o Windows não inicia, o disco apresenta falha, a máquina entra em loop de reparo, o BitLocker pede uma chave que você não possui ou a atualização afetou um ambiente de produção sem plano de retorno. Nesses cenários, preservar dados e capacidade de recuperação vem antes de “terminar a atualização”.</p>
 
         <p>Para loops pós-atualização, veja <Link to="/blog/windows-update-travado-desfazendo-alteracoes" className="text-accent">Windows Update travado ou desfazendo alterações</Link>. Para a visão geral, use o <Link to="/guia-tecnico-informatica#tema-sistemas-operacionais" className="text-accent">Atlas de sistemas operacionais</Link>.</p>
+        <h2>Verificação segura depois de atualizar</h2>
+        <p>Depois de cada atualização grande, confira três pontos. Primeiro, em Configurações → Windows Update → Histórico de atualizações, veja se o item aparece como instalado com sucesso e não como falha. Segundo, abra os programas que você usa todo dia, como navegador, e-mail e sistemas do trabalho, e confirme que funcionam normalmente. Terceiro, teste impressora, câmera e som, que são os dispositivos que mais sofrem com troca de driver.</p>
+        <p>Se algo quebrou, a Microsoft permite desinstalar atualizações recentes pelo próprio histórico e, nos primeiros dez dias após uma atualização de versão, voltar à versão anterior em Configurações → Sistema → Recuperação. Não desative o Windows Update de forma permanente para evitar problemas: pausar por algumas semanas resolve o incômodo sem deixar o computador exposto a falhas de segurança já corrigidas.</p>
         <EditorialReferences slug="como-atualizar-windows-corretamente" />
       </>
     ),
   },
 
   
-"como-recuperar-arquivos-apagados-windows": {
+  "como-recuperar-arquivos-apagados-windows": {
     title: "Como recuperar arquivos apagados no Windows sem reduzir a chance de recuperação",
     excerpt:
       "Lixeira, versões de backup e Windows File Recovery: a ordem segura para tentar recuperar arquivos apagados e por que você deve reduzir o uso do disco após a exclusão.",
@@ -10369,6 +10328,15 @@ crontab -e
         </ul>
 
         <p>Depois de recuperar o que for possível, elimine o ponto único de falha com o <Link to="/guia-tecnico-informatica#tema-dados-backup" className="text-accent">Atlas de dados e backup</Link>.</p>
+        <h2>O que nunca fazer enquanto tenta recuperar</h2>
+        <ul>
+          <li>Não instale o programa de recuperação no mesmo disco onde estavam os arquivos apagados: a instalação pode gravar por cima deles.</li>
+          <li>Não salve os arquivos recuperados no disco de origem. Use sempre um pendrive ou HD externo separado.</li>
+          <li>Não rode desfragmentação, otimização ou "limpeza" do disco nesse período.</li>
+          <li>Se o disco faz estalos, some e volta ou está muito lento, desligue o computador. Insistir em programas de recuperação num disco com falha física pode destruir o que ainda era recuperável.</li>
+        </ul>
+        <h2>Limite: SSD e TRIM</h2>
+        <p>Em SSDs, o Windows envia o comando TRIM logo depois da exclusão, e o próprio controlador do disco apaga os blocos pouco tempo depois. Por isso, a chance de recuperar arquivos apagados em SSD é bem menor do que em HD mecânico. Qualquer tentativa é uma tentativa de recuperação, sem garantia de resultado. A proteção real continua sendo ter cópia antes da perda, de preferência automática e em outro dispositivo, como um HD externo ou a nuvem.</p>
         <EditorialReferences slug="como-recuperar-arquivos-apagados-windows" />
       </>
     ),
@@ -10538,6 +10506,11 @@ crontab -e
         <h2>Resumo para decidir</h2>
         <p>Comece observando espaço, atualizações e se o problema pertence a um app ou ao sistema inteiro. Limpe cache apenas quando houver motivo; não confunda com limpar dados. Remova apps sem uso, revise mídia com cuidado e mantenha uma cópia dos dados importantes. Se houver aquecimento, desligamentos ou falhas físicas, pare de tentar acelerar por software.</p>
 
+        <h2>Verificação segura antes de apagar qualquer coisa</h2>
+        <p>Antes de limpar armazenamento ou restaurar o aparelho, confirme que fotos, conversas e contatos estão salvos. No Android, abra Configurações → Google → Backup e veja a data do último backup. No WhatsApp, vá em Configurações → Conversas → Backup de conversas e faça um backup manual. Fotos devem aparecer no Google Fotos ou em outro serviço antes de você apagar a galeria local.</p>
+        <p>Evite aplicativos de "limpeza" e "acelerador" baixados fora da Play Store ou que pedem permissões excessivas, como acesso a mensagens ou ao administrador do dispositivo. Eles costumam exibir anúncios, rodar em segundo plano e deixar o celular mais lento, o contrário do prometido. O próprio sistema já tem a ferramenta "Liberar espaço" em Configurações → Armazenamento.</p>
+        <h2>Quando a lentidão não é de software</h2>
+        <p>Se o aparelho continua lento mesmo depois da restauração de fábrica, o gargalo provavelmente é físico: memória interna quase no fim da vida útil, bateria degradada que faz o sistema reduzir o desempenho ou pouca memória RAM para as versões atuais dos aplicativos. Nesses casos, a decisão passa a ser comparar o custo de um reparo com o de um aparelho novo, e não insistir em mais limpezas.</p>
         <EditorialReferences slug="como-deixar-celular-android-mais-rapido" />
 
       </>
@@ -11246,7 +11219,7 @@ crontab -e
           <li><strong>Firmware:</strong> software interno do roteador, fornecido pelo fabricante/operadora.</li>
         </ul>
 
-        <h2>Perguntas frequentes</h2>
+        <h2>Dúvidas rápidas antes de começar</h2>
         <h3>Trocar a senha expulsa quem já estava conectado?</h3>
         <p>
           Os clientes que dependem daquela credencial precisam autenticar novamente. O comportamento exato durante
@@ -11576,7 +11549,7 @@ crontab -e
   },
 
   
-"como-fazer-teste-velocidade-internet": {
+  "como-fazer-teste-velocidade-internet": {
     title: "Como fazer teste de velocidade da internet e interpretar download, latência e Wi-Fi",
     excerpt:
       "Método para testar a internet sem confundir problema do provedor com Wi-Fi: referência por cabo, medições repetidas, download, upload, latência, jitter e perda de pacotes.",
@@ -11641,6 +11614,9 @@ crontab -e
         </ul>
 
         <p>Se a causa ficar na rede interna, consulte <Link to="/servicos/redes-e-wifi" className="text-accent">redes e Wi-Fi</Link> e o <Link to="/guia-tecnico-informatica#tema-redes-wifi" className="text-accent">Atlas de redes</Link>.</p>
+        <h2>Como registrar os resultados para reclamar com a operadora</h2>
+        <p>Um teste isolado não prova nada. Faça medições em horários diferentes durante pelo menos três dias, sempre com o computador ligado por cabo ao roteador e com outros aparelhos desconectados. Anote data, horário, velocidade de download, upload e latência, e salve a captura de tela de cada resultado.</p>
+        <p>A Anatel usa o medidor oficial da Entidade Aferidora da Qualidade (EAQ) como referência. Com esse histórico em mãos, abra protocolo na operadora e informe a média obtida em comparação com a velocidade contratada. Se o problema aparecer só no Wi-Fi e não no cabo, a causa está na rede interna, e a operadora não vai tratar isso como falha do serviço. Nesse caso, reposicione o roteador ou revise o canal do Wi-Fi antes de trocar de plano.</p>
         <EditorialReferences slug="como-fazer-teste-velocidade-internet" />
       </>
     ),

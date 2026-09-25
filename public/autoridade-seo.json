@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-09-25T13:35:44.895Z",
+  "geradoEm": "2026-09-25T14:02:31.581Z",
   "fonte": {
     "html": "SSR harness",
     "dist": "dist"
@@ -8,8 +8,8 @@
   "analisadas": 99,
   "falhas": 0,
   "medias": {
-    "palavras": 1472.18,
-    "densidadeSemantica": 55.6,
+    "palavras": 1478.4,
+    "densidadeSemantica": 55.48,
     "densidadeKeywordPrincipal": 0.43,
     "linksInternosSaida": 10.03,
     "linksInternosEntrada": 2.76
@@ -12423,121 +12423,121 @@
       "lote": "11A/9",
       "aprovadoEm": "2026-09-25",
       "titulo": "Como Configurar 2FA (Autenticação de Dois Fatores) em Tudo",
-      "palavras": 1337,
-      "termosUteis": 852,
-      "densidadeSemantica": 65.73,
-      "vocabulario": 560,
+      "palavras": 1105,
+      "termosUteis": 639,
+      "densidadeSemantica": 61.82,
+      "vocabulario": 395,
       "keywordPrincipal": {
         "termo": "como configurar 2fa em tudo",
-        "ocorrencias": 4,
+        "ocorrencias": 3,
         "densidade": 0.47
       },
       "topKeywords": [
         {
-          "termo": "seguranca",
-          "ocorrencias": 14,
-          "densidade": 1.64
-        },
-        {
-          "termo": "curitiba",
-          "ocorrencias": 11,
-          "densidade": 1.29
+          "termo": "senha",
+          "ocorrencias": 12,
+          "densidade": 1.88
         },
         {
           "termo": "2fa",
+          "ocorrencias": 10,
+          "densidade": 1.56
+        },
+        {
+          "termo": "autenticador",
+          "ocorrencias": 9,
+          "densidade": 1.41
+        },
+        {
+          "termo": "celular",
+          "ocorrencias": 9,
+          "densidade": 1.41
+        },
+        {
+          "termo": "conta",
+          "ocorrencias": 9,
+          "densidade": 1.41
+        },
+        {
+          "termo": "recuperacao",
+          "ocorrencias": 9,
+          "densidade": 1.41
+        },
+        {
+          "termo": "codigo",
+          "ocorrencias": 8,
+          "densidade": 1.25
+        },
+        {
+          "termo": "aplicativo",
           "ocorrencias": 7,
-          "densidade": 0.82
+          "densidade": 1.1
         },
         {
-          "termo": "backup",
+          "termo": "servico",
           "ocorrencias": 7,
-          "densidade": 0.82
+          "densidade": 1.1
         },
         {
-          "termo": "tecnico",
-          "ocorrencias": 7,
-          "densidade": 0.82
-        },
-        {
-          "termo": "acesso",
+          "termo": "chave",
           "ocorrencias": 6,
-          "densidade": 0.7
+          "densidade": 0.94
         },
         {
-          "termo": "incidentes",
+          "termo": "codigos",
           "ocorrencias": 6,
-          "densidade": 0.7
+          "densidade": 0.94
         },
         {
-          "termo": "quem",
+          "termo": "passo",
           "ocorrencias": 6,
-          "densidade": 0.7
-        },
-        {
-          "termo": "senha",
-          "ocorrencias": 6,
-          "densidade": 0.7
-        },
-        {
-          "termo": "tecnica",
-          "ocorrencias": 6,
-          "densidade": 0.7
-        },
-        {
-          "termo": "antivirus",
-          "ocorrencias": 5,
-          "densidade": 0.59
-        },
-        {
-          "termo": "ataques",
-          "ocorrencias": 5,
-          "densidade": 0.59
+          "densidade": 0.94
         }
       ],
       "topBigramas": [
         {
-          "termo": "resposta incidentes",
+          "termo": "codigos recuperacao",
           "ocorrencias": 5,
-          "densidade": 0.59
+          "densidade": 0.78
+        },
+        {
+          "termo": "aplicativo autenticador",
+          "ocorrencias": 4,
+          "densidade": 0.63
         },
         {
           "termo": "2fa autenticacao",
-          "ocorrencias": 4,
+          "ocorrencias": 3,
           "densidade": 0.47
         },
         {
           "termo": "autenticacao dois",
-          "ocorrencias": 4,
+          "ocorrencias": 3,
+          "densidade": 0.47
+        },
+        {
+          "termo": "chave fisica",
+          "ocorrencias": 3,
           "densidade": 0.47
         },
         {
           "termo": "configurar 2fa",
-          "ocorrencias": 4,
+          "ocorrencias": 3,
           "densidade": 0.47
         },
         {
           "termo": "dois fatores",
-          "ocorrencias": 4,
+          "ocorrencias": 3,
           "densidade": 0.47
         },
         {
-          "termo": "configuracao tecnica",
+          "termo": "duas etapas",
           "ocorrencias": 3,
-          "densidade": 0.35
-        },
-        {
-          "termo": "curitiba regiao",
-          "ocorrencias": 3,
-          "densidade": 0.35
-        },
-        {
-          "termo": "acesso remoto",
-          "ocorrencias": 2,
-          "densidade": 0.24
+          "densidade": 0.47
         }
       ],
       "headings": {
-        "h2": 13,
+        "h2": 11,
         "h3": 0
       },
       "schemas": [
@@ -13018,121 +13018,121 @@
       "lote": "11A/9",
       "aprovadoEm": "2026-09-25",
       "titulo": "Celular Android lento: o que realmente testar antes de instalar um…",
-      "palavras": 1061,
-      "termosUteis": 639,
-      "densidadeSemantica": 59.78,
-      "vocabulario": 382,
+      "palavras": 1272,
+      "termosUteis": 758,
+      "densidadeSemantica": 56.6,
+      "vocabulario": 429,
       "keywordPrincipal": {
         "termo": "como deixar celular android mais rapido",
-        "ocorrencias": 0,
-        "densidade": 0
+        "ocorrencias": 1,
+        "densidade": 0.13
       },
       "topKeywords": [
         {
           "termo": "app",
           "ocorrencias": 14,
-          "densidade": 2.19
+          "densidade": 1.85
         },
         {
           "termo": "dados",
           "ocorrencias": 10,
-          "densidade": 1.56
+          "densidade": 1.32
         },
         {
           "termo": "android",
-          "ocorrencias": 8,
-          "densidade": 1.25
+          "ocorrencias": 9,
+          "densidade": 1.19
+        },
+        {
+          "termo": "espaco",
+          "ocorrencias": 9,
+          "densidade": 1.19
+        },
+        {
+          "termo": "lento",
+          "ocorrencias": 9,
+          "densidade": 1.19
         },
         {
           "termo": "aplicativo",
           "ocorrencias": 8,
-          "densidade": 1.25
+          "densidade": 1.06
         },
         {
-          "termo": "espaco",
+          "termo": "celular",
           "ocorrencias": 8,
-          "densidade": 1.25
+          "densidade": 1.06
+        },
+        {
+          "termo": "limpeza",
+          "ocorrencias": 8,
+          "densidade": 1.06
         },
         {
           "termo": "apps",
           "ocorrencias": 7,
-          "densidade": 1.1
+          "densidade": 0.92
         },
         {
-          "termo": "celular",
+          "termo": "backup",
           "ocorrencias": 7,
-          "densidade": 1.1
+          "densidade": 0.92
         },
         {
-          "termo": "lento",
-          "ocorrencias": 7,
-          "densidade": 1.1
-        },
-        {
-          "termo": "limpeza",
-          "ocorrencias": 7,
-          "densidade": 1.1
-        },
-        {
-          "termo": "arquivos",
+          "termo": "aparelho",
           "ocorrencias": 6,
-          "densidade": 0.94
+          "densidade": 0.79
         },
         {
-          "termo": "cache",
+          "termo": "armazenamento",
           "ocorrencias": 6,
-          "densidade": 0.94
-        },
-        {
-          "termo": "instalar",
-          "ocorrencias": 6,
-          "densidade": 0.94
+          "densidade": 0.79
         }
       ],
       "topBigramas": [
         {
           "termo": "app limpeza",
           "ocorrencias": 5,
-          "densidade": 0.78
+          "densidade": 0.66
         },
         {
           "termo": "android lento",
           "ocorrencias": 4,
-          "densidade": 0.63
+          "densidade": 0.53
         },
         {
           "termo": "instalar app",
           "ocorrencias": 4,
-          "densidade": 0.63
+          "densidade": 0.53
         },
         {
           "termo": "proximo passo",
           "ocorrencias": 4,
-          "densidade": 0.63
+          "densidade": 0.53
         },
         {
           "termo": "celular android",
           "ocorrencias": 3,
-          "densidade": 0.47
+          "densidade": 0.4
         },
         {
           "termo": "lento realmente",
           "ocorrencias": 3,
-          "densidade": 0.47
+          "densidade": 0.4
         },
         {
           "termo": "realmente testar",
           "ocorrencias": 3,
-          "densidade": 0.47
+          "densidade": 0.4
         },
         {
           "termo": "testar instalar",
           "ocorrencias": 3,
-          "densidade": 0.47
+          "densidade": 0.4
         }
       ],
       "headings": {
-        "h2": 10,
+        "h2": 12,
         "h3": 2
       },
       "schemas": [
@@ -13909,10 +13909,10 @@
       "lote": "11A/11",
       "aprovadoEm": "2026-09-25",
       "titulo": "Windows 11 lento: como deixar o PC mais rápido sem truques",
-      "palavras": 1111,
-      "termosUteis": 665,
-      "densidadeSemantica": 60.3,
-      "vocabulario": 401,
+      "palavras": 1149,
+      "termosUteis": 691,
+      "densidadeSemantica": 60.35,
+      "vocabulario": 417,
       "keywordPrincipal": {
         "termo": "como deixar windows 11 mais rapido iniciantes",
         "ocorrencias": 0,
@@ -13922,108 +13922,108 @@
         {
           "termo": "windows",
           "ocorrencias": 19,
-          "densidade": 2.86
+          "densidade": 2.75
         },
         {
           "termo": "memoria",
           "ocorrencias": 11,
-          "densidade": 1.65
+          "densidade": 1.59
         },
         {
           "termo": "disco",
           "ocorrencias": 10,
-          "densidade": 1.5
+          "densidade": 1.45
         },
         {
           "termo": "armazenamento",
           "ocorrencias": 8,
-          "densidade": 1.2
+          "densidade": 1.16
         },
         {
           "termo": "inicializacao",
           "ocorrencias": 8,
-          "densidade": 1.2
+          "densidade": 1.16
         },
         {
           "termo": "cpu",
           "ocorrencias": 7,
-          "densidade": 1.05
+          "densidade": 1.01
         },
         {
           "termo": "hardware",
           "ocorrencias": 7,
-          "densidade": 1.05
+          "densidade": 1.01
         },
         {
           "termo": "lento",
           "ocorrencias": 7,
-          "densidade": 1.05
+          "densidade": 1.01
         },
         {
           "termo": "diagnostico",
           "ocorrencias": 6,
-          "densidade": 0.9
+          "densidade": 0.87
+        },
+        {
+          "termo": "guia",
+          "ocorrencias": 6,
+          "densidade": 0.87
         },
         {
           "termo": "lentidao",
           "ocorrencias": 6,
-          "densidade": 0.9
+          "densidade": 0.87
         },
         {
           "termo": "aplicativos",
           "ocorrencias": 5,
-          "densidade": 0.75
-        },
-        {
-          "termo": "desempenho",
-          "ocorrencias": 5,
-          "densidade": 0.75
+          "densidade": 0.72
         }
       ],
       "topBigramas": [
         {
           "termo": "cpu memoria",
           "ocorrencias": 4,
-          "densidade": 0.6
+          "densidade": 0.58
         },
         {
           "termo": "gerenciador tarefas",
           "ocorrencias": 4,
-          "densidade": 0.6
+          "densidade": 0.58
         },
         {
           "termo": "memoria disco",
           "ocorrencias": 4,
-          "densidade": 0.6
+          "densidade": 0.58
         },
         {
           "termo": "aplicativos inicializacao",
           "ocorrencias": 3,
-          "densidade": 0.45
+          "densidade": 0.43
         },
         {
           "termo": "atualize windows",
           "ocorrencias": 3,
-          "densidade": 0.45
+          "densidade": 0.43
         },
         {
           "termo": "deixar rapido",
           "ocorrencias": 3,
-          "densidade": 0.45
+          "densidade": 0.43
         },
         {
           "termo": "fica lento",
           "ocorrencias": 3,
-          "densidade": 0.45
+          "densidade": 0.43
         },
         {
           "termo": "lento deixar",
           "ocorrencias": 3,
-          "densidade": 0.45
+          "densidade": 0.43
         }
       ],
       "headings": {
-        "h2": 14,
+        "h2": 15,
         "h3": 0
       },
       "schemas": [
@@ -14058,10 +14058,10 @@
       "lote": "11A/11",
       "aprovadoEm": "2026-09-25",
       "titulo": "Como fazer backup de fotos no Windows e comprovar que a cópia funciona",
-      "palavras": 1047,
-      "termosUteis": 612,
-      "densidadeSemantica": 58.33,
-      "vocabulario": 357,
+      "palavras": 1151,
+      "termosUteis": 663,
+      "densidadeSemantica": 57.32,
+      "vocabulario": 380,
       "keywordPrincipal": {
         "termo": "como fazer backup fotos windows iniciantes",
         "ocorrencias": 0,
@@ -14070,109 +14070,109 @@
       "topKeywords": [
         {
           "termo": "backup",
-          "ocorrencias": 19,
-          "densidade": 3.1
+          "ocorrencias": 22,
+          "densidade": 3.32
         },
         {
           "termo": "copia",
-          "ocorrencias": 19,
-          "densidade": 3.1
+          "ocorrencias": 21,
+          "densidade": 3.17
         },
         {
           "termo": "arquivos",
           "ocorrencias": 13,
-          "densidade": 2.12
+          "densidade": 1.96
         },
         {
           "termo": "disco",
           "ocorrencias": 11,
-          "densidade": 1.8
+          "densidade": 1.66
         },
         {
           "termo": "fotos",
-          "ocorrencias": 10,
-          "densidade": 1.63
-        },
-        {
-          "termo": "nuvem",
-          "ocorrencias": 8,
-          "densidade": 1.31
+          "ocorrencias": 11,
+          "densidade": 1.66
         },
         {
           "termo": "externo",
+          "ocorrencias": 9,
+          "densidade": 1.36
+        },
+        {
+          "termo": "nuvem",
+          "ocorrencias": 9,
+          "densidade": 1.36
+        },
+        {
+          "termo": "computador",
           "ocorrencias": 7,
-          "densidade": 1.14
+          "densidade": 1.06
         },
         {
           "termo": "pastas",
           "ocorrencias": 7,
-          "densidade": 1.14
+          "densidade": 1.06
         },
         {
-          "termo": "computador",
+          "termo": "funciona",
           "ocorrencias": 6,
-          "densidade": 0.98
+          "densidade": 0.9
         },
         {
           "termo": "historico",
           "ocorrencias": 6,
-          "densidade": 0.98
+          "densidade": 0.9
         },
         {
           "termo": "precisa",
           "ocorrencias": 6,
-          "densidade": 0.98
-        },
-        {
-          "termo": "dados",
-          "ocorrencias": 5,
-          "densidade": 0.82
+          "densidade": 0.9
         }
       ],
       "topBigramas": [
         {
           "termo": "disco externo",
           "ocorrencias": 5,
-          "densidade": 0.82
+          "densidade": 0.76
         },
         {
           "termo": "historico arquivos",
           "ocorrencias": 5,
-          "densidade": 0.82
+          "densidade": 0.76
         },
         {
           "termo": "backup fotos",
           "ocorrencias": 4,
-          "densidade": 0.65
+          "densidade": 0.6
         },
         {
           "termo": "fazer backup",
           "ocorrencias": 4,
-          "densidade": 0.65
+          "densidade": 0.6
         },
         {
           "termo": "arquivos pessoais",
           "ocorrencias": 3,
-          "densidade": 0.49
+          "densidade": 0.45
         },
         {
           "termo": "comprovar copia",
           "ocorrencias": 3,
-          "densidade": 0.49
+          "densidade": 0.45
         },
         {
           "termo": "copia disco",
           "ocorrencias": 3,
-          "densidade": 0.49
+          "densidade": 0.45
         },
         {
           "termo": "copia funciona",
           "ocorrencias": 3,
-          "densidade": 0.49
+          "densidade": 0.45
         }
       ],
       "headings": {
-        "h2": 12,
+        "h2": 13,
         "h3": 0
       },
       "schemas": [
@@ -14208,10 +14208,10 @@
       "lote": "11A/11",
       "aprovadoEm": "2026-09-25",
       "titulo": "Como atualizar o Windows 11 com segurança e o que fazer quando falha",
-      "palavras": 937,
-      "termosUteis": 543,
-      "densidadeSemantica": 64.09,
-      "vocabulario": 348,
+      "palavras": 1073,
+      "termosUteis": 625,
+      "densidadeSemantica": 62.56,
+      "vocabulario": 391,
       "keywordPrincipal": {
         "termo": "como atualizar windows corretamente",
         "ocorrencias": 0,
@@ -14220,109 +14220,109 @@
       "topKeywords": [
         {
           "termo": "windows",
-          "ocorrencias": 24,
-          "densidade": 4.42
+          "ocorrencias": 26,
+          "densidade": 4.16
         },
         {
           "termo": "update",
-          "ocorrencias": 14,
-          "densidade": 2.58
+          "ocorrencias": 16,
+          "densidade": 2.56
         },
         {
           "termo": "atualizacao",
-          "ocorrencias": 11,
-          "densidade": 2.03
+          "ocorrencias": 13,
+          "densidade": 2.08
         },
         {
           "termo": "atualizar",
-          "ocorrencias": 6,
-          "densidade": 1.1
+          "ocorrencias": 8,
+          "densidade": 1.28
+        },
+        {
+          "termo": "atualizacoes",
+          "ocorrencias": 7,
+          "densidade": 1.12
         },
         {
           "termo": "erro",
           "ocorrencias": 6,
-          "densidade": 1.1
-        },
-        {
-          "termo": "atualizacoes",
-          "ocorrencias": 5,
-          "densidade": 0.92
+          "densidade": 0.96
         },
         {
           "termo": "confirme",
+          "ocorrencias": 5,
+          "densidade": 0.8
+        },
+        {
+          "termo": "falha",
+          "ocorrencias": 5,
+          "densidade": 0.8
+        },
+        {
+          "termo": "sistema",
+          "ocorrencias": 5,
+          "densidade": 0.8
+        },
+        {
+          "termo": "abra",
           "ocorrencias": 4,
-          "densidade": 0.74
+          "densidade": 0.64
+        },
+        {
+          "termo": "configuracoes",
+          "ocorrencias": 4,
+          "densidade": 0.64
         },
         {
           "termo": "curitiba",
           "ocorrencias": 4,
-          "densidade": 0.74
-        },
-        {
-          "termo": "falha",
-          "ocorrencias": 4,
-          "densidade": 0.74
-        },
-        {
-          "termo": "horario",
-          "ocorrencias": 4,
-          "densidade": 0.74
-        },
-        {
-          "termo": "orientacao",
-          "ocorrencias": 4,
-          "densidade": 0.74
-        },
-        {
-          "termo": "sistema",
-          "ocorrencias": 4,
-          "densidade": 0.74
+          "densidade": 0.64
         }
       ],
       "topBigramas": [
         {
           "termo": "windows update",
-          "ocorrencias": 14,
-          "densidade": 2.58
+          "ocorrencias": 16,
+          "densidade": 2.56
         },
         {
           "termo": "atualizar windows",
           "ocorrencias": 4,
-          "densidade": 0.74
+          "densidade": 0.64
+        },
+        {
+          "termo": "configuracoes windows",
+          "ocorrencias": 3,
+          "densidade": 0.48
         },
         {
           "termo": "fazer falha",
           "ocorrencias": 3,
-          "densidade": 0.55
+          "densidade": 0.48
         },
         {
           "termo": "horario ativo",
           "ocorrencias": 3,
-          "densidade": 0.55
+          "densidade": 0.48
         },
         {
           "termo": "seguranca fazer",
           "ocorrencias": 3,
-          "densidade": 0.55
+          "densidade": 0.48
         },
         {
           "termo": "solucao problemas",
           "ocorrencias": 3,
-          "densidade": 0.55
+          "densidade": 0.48
         },
         {
           "termo": "windows seguranca",
           "ocorrencias": 3,
-          "densidade": 0.55
-        },
-        {
-          "termo": "abra configuracoes",
-          "ocorrencias": 2,
-          "densidade": 0.37
+          "densidade": 0.48
         }
       ],
       "headings": {
-        "h2": 12,
+        "h2": 13,
         "h3": 0
       },
       "schemas": [
@@ -14355,121 +14355,121 @@
       "lote": "11A/11",
       "aprovadoEm": "2026-09-25",
       "titulo": "Como recuperar arquivos apagados no Windows sem reduzir a chance de…",
-      "palavras": 938,
-      "termosUteis": 546,
-      "densidadeSemantica": 56.23,
-      "vocabulario": 307,
+      "palavras": 1117,
+      "termosUteis": 644,
+      "densidadeSemantica": 53.88,
+      "vocabulario": 347,
       "keywordPrincipal": {
         "termo": "como recuperar arquivos apagados windows",
-        "ocorrencias": 6,
-        "densidade": 1.1
+        "ocorrencias": 8,
+        "densidade": 1.24
       },
       "topKeywords": [
         {
           "termo": "arquivos",
-          "ocorrencias": 16,
-          "densidade": 2.93
+          "ocorrencias": 19,
+          "densidade": 2.95
         },
         {
           "termo": "recuperacao",
-          "ocorrencias": 14,
-          "densidade": 2.56
+          "ocorrencias": 17,
+          "densidade": 2.64
+        },
+        {
+          "termo": "disco",
+          "ocorrencias": 15,
+          "densidade": 2.33
+        },
+        {
+          "termo": "windows",
+          "ocorrencias": 12,
+          "densidade": 1.86
         },
         {
           "termo": "backup",
           "ocorrencias": 11,
-          "densidade": 2.01
+          "densidade": 1.71
         },
         {
-          "termo": "windows",
-          "ocorrencias": 11,
-          "densidade": 2.01
-        },
-        {
-          "termo": "disco",
-          "ocorrencias": 9,
-          "densidade": 1.65
+          "termo": "recuperar",
+          "ocorrencias": 10,
+          "densidade": 1.55
         },
         {
           "termo": "lixeira",
           "ocorrencias": 9,
-          "densidade": 1.65
+          "densidade": 1.4
         },
         {
           "termo": "unidade",
           "ocorrencias": 9,
-          "densidade": 1.65
+          "densidade": 1.4
+        },
+        {
+          "termo": "apagados",
+          "ocorrencias": 8,
+          "densidade": 1.24
         },
         {
           "termo": "dados",
           "ocorrencias": 8,
-          "densidade": 1.47
+          "densidade": 1.24
         },
         {
           "termo": "historico",
           "ocorrencias": 7,
-          "densidade": 1.28
+          "densidade": 1.09
         },
         {
-          "termo": "recuperar",
-          "ocorrencias": 7,
-          "densidade": 1.28
-        },
-        {
-          "termo": "apagados",
+          "termo": "tentativa",
           "ocorrencias": 6,
-          "densidade": 1.1
-        },
-        {
-          "termo": "arquivo",
-          "ocorrencias": 5,
-          "densidade": 0.92
+          "densidade": 0.93
         }
       ],
       "topBigramas": [
         {
-          "termo": "historico arquivos",
-          "ocorrencias": 6,
-          "densidade": 1.1
+          "termo": "arquivos apagados",
+          "ocorrencias": 7,
+          "densidade": 1.09
         },
         {
-          "termo": "arquivos apagados",
-          "ocorrencias": 5,
-          "densidade": 0.92
+          "termo": "historico arquivos",
+          "ocorrencias": 6,
+          "densidade": 0.93
         },
         {
           "termo": "file recovery",
           "ocorrencias": 5,
-          "densidade": 0.92
+          "densidade": 0.78
+        },
+        {
+          "termo": "recuperar arquivos",
+          "ocorrencias": 5,
+          "densidade": 0.78
         },
         {
           "termo": "windows file",
           "ocorrencias": 5,
-          "densidade": 0.92
+          "densidade": 0.78
         },
         {
           "termo": "chance recuperacao",
           "ocorrencias": 4,
-          "densidade": 0.73
-        },
-        {
-          "termo": "recuperar arquivos",
-          "ocorrencias": 4,
-          "densidade": 0.73
+          "densidade": 0.62
         },
         {
           "termo": "apagados windows",
           "ocorrencias": 3,
-          "densidade": 0.55
+          "densidade": 0.47
         },
         {
-          "termo": "reduzir chance",
+          "termo": "mesmo disco",
           "ocorrencias": 3,
-          "densidade": 0.55
+          "densidade": 0.47
         }
       ],
       "headings": {
-        "h2": 12,
+        "h2": 14,
         "h3": 0
       },
       "schemas": [
@@ -14503,121 +14503,121 @@
       "lote": "11A/11",
       "aprovadoEm": "2026-09-25",
       "titulo": "Como fazer teste de velocidade da internet e interpretar download…",
-      "palavras": 997,
-      "termosUteis": 613,
-      "densidadeSemantica": 56.61,
-      "vocabulario": 347,
+      "palavras": 1141,
+      "termosUteis": 690,
+      "densidadeSemantica": 54.93,
+      "vocabulario": 379,
       "keywordPrincipal": {
         "termo": "como fazer teste velocidade internet",
         "ocorrencias": 3,
-        "densidade": 0.49
+        "densidade": 0.43
       },
       "topKeywords": [
         {
           "termo": "wi-fi",
-          "ocorrencias": 17,
-          "densidade": 2.77
+          "ocorrencias": 19,
+          "densidade": 2.75
         },
         {
           "termo": "teste",
-          "ocorrencias": 12,
-          "densidade": 1.96
+          "ocorrencias": 13,
+          "densidade": 1.88
         },
         {
           "termo": "latencia",
-          "ocorrencias": 10,
-          "densidade": 1.63
+          "ocorrencias": 11,
+          "densidade": 1.59
         },
         {
           "termo": "medicao",
           "ocorrencias": 10,
-          "densidade": 1.63
+          "densidade": 1.45
+        },
+        {
+          "termo": "velocidade",
+          "ocorrencias": 10,
+          "densidade": 1.45
+        },
+        {
+          "termo": "download",
+          "ocorrencias": 9,
+          "densidade": 1.3
         },
         {
           "termo": "provedor",
           "ocorrencias": 9,
-          "densidade": 1.47
-        },
-        {
-          "termo": "download",
-          "ocorrencias": 8,
-          "densidade": 1.31
+          "densidade": 1.3
         },
         {
           "termo": "rede",
-          "ocorrencias": 8,
-          "densidade": 1.31
-        },
-        {
-          "termo": "velocidade",
-          "ocorrencias": 8,
-          "densidade": 1.31
+          "ocorrencias": 9,
+          "densidade": 1.3
         },
         {
           "termo": "referencia",
+          "ocorrencias": 8,
+          "densidade": 1.16
+        },
+        {
+          "termo": "roteador",
+          "ocorrencias": 8,
+          "densidade": 1.16
+        },
+        {
+          "termo": "cabo",
           "ocorrencias": 7,
-          "densidade": 1.14
+          "densidade": 1.01
         },
         {
-          "termo": "internet",
-          "ocorrencias": 6,
-          "densidade": 0.98
-        },
-        {
-          "termo": "jitter",
-          "ocorrencias": 6,
-          "densidade": 0.98
-        },
-        {
-          "termo": "perda",
-          "ocorrencias": 6,
-          "densidade": 0.98
+          "termo": "problema",
+          "ocorrencias": 7,
+          "densidade": 1.01
         }
       ],
       "topBigramas": [
         {
           "termo": "jitter perda",
           "ocorrencias": 5,
-          "densidade": 0.82
+          "densidade": 0.73
+        },
+        {
+          "termo": "rede interna",
+          "ocorrencias": 5,
+          "densidade": 0.73
+        },
+        {
+          "termo": "download upload",
+          "ocorrencias": 4,
+          "densidade": 0.58
         },
         {
           "termo": "latencia jitter",
           "ocorrencias": 4,
-          "densidade": 0.65
+          "densidade": 0.58
         },
         {
           "termo": "provedor roteador",
           "ocorrencias": 4,
-          "densidade": 0.65
-        },
-        {
-          "termo": "rede interna",
-          "ocorrencias": 4,
-          "densidade": 0.65
+          "densidade": 0.58
         },
         {
           "termo": "teste velocidade",
           "ocorrencias": 4,
-          "densidade": 0.65
+          "densidade": 0.58
         },
         {
           "termo": "download latencia",
           "ocorrencias": 3,
-          "densidade": 0.49
-        },
-        {
-          "termo": "download upload",
-          "ocorrencias": 3,
-          "densidade": 0.49
+          "densidade": 0.44
         },
         {
           "termo": "faca medicao",
           "ocorrencias": 3,
-          "densidade": 0.49
+          "densidade": 0.44
         }
       ],
       "headings": {
-        "h2": 12,
+        "h2": 13,
         "h3": 0
       },
       "schemas": [
@@ -14652,10 +14652,10 @@
       "lote": "11A/12",
       "aprovadoEm": "2026-09-25",
       "titulo": "Esqueceu a senha do Windows? Como recuperar o acesso pelos métodos…",
-      "palavras": 1272,
-      "termosUteis": 730,
-      "densidadeSemantica": 49.18,
-      "vocabulario": 359,
+      "palavras": 1278,
+      "termosUteis": 732,
+      "densidadeSemantica": 49.45,
+      "vocabulario": 362,
       "keywordPrincipal": {
         "termo": "como resetar senha windows",
         "ocorrencias": 0,
@@ -14665,17 +14665,17 @@
         {
           "termo": "conta",
           "ocorrencias": 30,
-          "densidade": 4.11
+          "densidade": 4.1
         },
         {
           "termo": "senha",
           "ocorrencias": 29,
-          "densidade": 3.97
+          "densidade": 3.96
         },
         {
           "termo": "windows",
           "ocorrencias": 23,
-          "densidade": 3.15
+          "densidade": 3.14
         },
         {
           "termo": "recuperacao",
@@ -14685,12 +14685,12 @@
         {
           "termo": "microsoft",
           "ocorrencias": 14,
-          "densidade": 1.92
+          "densidade": 1.91
         },
         {
           "termo": "chave",
           "ocorrencias": 11,
-          "densidade": 1.51
+          "densidade": 1.5
         },
         {
           "termo": "bitlocker",
@@ -14705,17 +14705,17 @@
         {
           "termo": "dados",
           "ocorrencias": 8,
-          "densidade": 1.1
+          "densidade": 1.09
         },
         {
           "termo": "entrada",
           "ocorrencias": 8,
-          "densidade": 1.1
+          "densidade": 1.09
         },
         {
           "termo": "pin",
           "ocorrencias": 8,
-          "densidade": 1.1
+          "densidade": 1.09
         },
         {
           "termo": "disco",
@@ -14742,12 +14742,12 @@
         {
           "termo": "senha conta",
           "ocorrencias": 5,
-          "densidade": 0.69
+          "densidade": 0.68
         },
         {
           "termo": "tela entrada",
           "ocorrencias": 5,
-          "densidade": 0.69
+          "densidade": 0.68
         },
         {
           "termo": "chave recuperacao",
@@ -14800,10 +14800,10 @@
       "lote": "11A/12",
       "aprovadoEm": "2026-09-25",
       "titulo": "Como organizar arquivos no Windows 11 sem perder documentos: método…",
-      "palavras": 1431,
-      "termosUteis": 865,
-      "densidadeSemantica": 52.6,
-      "vocabulario": 455,
+      "palavras": 1437,
+      "termosUteis": 867,
+      "densidadeSemantica": 52.71,
+      "vocabulario": 457,
       "keywordPrincipal": {
         "termo": "como organizar arquivos windows iniciantes",
         "ocorrencias": 0,
@@ -14823,17 +14823,17 @@
         {
           "termo": "backup",
           "ocorrencias": 14,
-          "densidade": 1.62
+          "densidade": 1.61
         },
         {
           "termo": "pastas",
           "ocorrencias": 14,
-          "densidade": 1.62
+          "densidade": 1.61
         },
         {
           "termo": "windows",
           "ocorrencias": 14,
-          "densidade": 1.62
+          "densidade": 1.61
         },
         {
           "termo": "arquivo",
@@ -14950,10 +14950,10 @@
       "lote": "11A/12",
       "aprovadoEm": "2026-09-25",
       "titulo": "Como trocar a senha do Wi-Fi com segurança sem perder a configuração…",
-      "palavras": 1379,
-      "termosUteis": 830,
-      "densidadeSemantica": 53.73,
-      "vocabulario": 446,
+      "palavras": 1385,
+      "termosUteis": 832,
+      "densidadeSemantica": 53.97,
+      "vocabulario": 449,
       "keywordPrincipal": {
         "termo": "como trocar senha wifi",
         "ocorrencias": 0,
@@ -14968,22 +14968,22 @@
         {
           "termo": "wi-fi",
           "ocorrencias": 23,
-          "densidade": 2.77
+          "densidade": 2.76
         },
         {
           "termo": "rede",
           "ocorrencias": 17,
-          "densidade": 2.05
+          "densidade": 2.04
         },
         {
           "termo": "roteador",
           "ocorrencias": 16,
-          "densidade": 1.93
+          "densidade": 1.92
         },
         {
           "termo": "seguranca",
           "ocorrencias": 11,
-          "densidade": 1.33
+          "densidade": 1.32
         },
         {
           "termo": "equipamento",
@@ -15025,7 +15025,7 @@
         {
           "termo": "senha wi-fi",
           "ocorrencias": 9,
-          "densidade": 1.09
+          "densidade": 1.08
         },
         {
           "termo": "trocar senha",
@@ -15098,10 +15098,10 @@
       "lote": "11A/13",
       "aprovadoEm": "2026-09-25",
       "titulo": "BIOS/UEFI: como configurar sem perder o boot, o BitLocker ou a…",
-      "palavras": 1784,
-      "termosUteis": 1039,
-      "densidadeSemantica": 48.12,
-      "vocabulario": 500,
+      "palavras": 1790,
+      "termosUteis": 1041,
+      "densidadeSemantica": 48.22,
+      "vocabulario": 502,
       "keywordPrincipal": {
         "termo": "como configurar bios uefi corretamente",
         "ocorrencias": 0,
@@ -15111,7 +15111,7 @@
         {
           "termo": "boot",
           "ocorrencias": 27,
-          "densidade": 2.6
+          "densidade": 2.59
         },
         {
           "termo": "windows",
@@ -15131,7 +15131,7 @@
         {
           "termo": "secure",
           "ocorrencias": 17,
-          "densidade": 1.64
+          "densidade": 1.63
         },
         {
           "termo": "firmware",
@@ -15146,7 +15146,7 @@
         {
           "termo": "bios",
           "ocorrencias": 14,
-          "densidade": 1.35
+          "densidade": 1.34
         },
         {
           "termo": "inicializacao",
@@ -15161,12 +15161,12 @@
         {
           "termo": "confirme",
           "ocorrencias": 9,
-          "densidade": 0.87
+          "densidade": 0.86
         },
         {
           "termo": "recuperacao",
           "ocorrencias": 9,
-          "densidade": 0.87
+          "densidade": 0.86
         }
       ],
       "topBigramas": [
@@ -15198,17 +15198,17 @@
         {
           "termo": "ahci raid",
           "ocorrencias": 4,
-          "densidade": 0.39
+          "densidade": 0.38
         },
         {
           "termo": "raid vmd",
           "ocorrencias": 4,
-          "densidade": 0.39
+          "densidade": 0.38
         },
         {
           "termo": "recursos seguranca",
           "ocorrencias": 4,
-          "densidade": 0.39
+          "densidade": 0.38
         }
       ],
       "headings": {
@@ -15250,10 +15250,10 @@
       "lote": "11A/13",
       "aprovadoEm": "2026-09-25",
       "titulo": "Servidor de arquivos: como planejar SMB no Windows ou Samba sem…",
-      "palavras": 1849,
-      "termosUteis": 1126,
-      "densidadeSemantica": 49.47,
-      "vocabulario": 557,
+      "palavras": 1855,
+      "termosUteis": 1128,
+      "densidadeSemantica": 49.65,
+      "vocabulario": 560,
       "keywordPrincipal": {
         "termo": "como configurar servidor de arquivos",
         "ocorrencias": 0,
@@ -15263,12 +15263,12 @@
         {
           "termo": "smb",
           "ocorrencias": 28,
-          "densidade": 2.49
+          "densidade": 2.48
         },
         {
           "termo": "servidor",
           "ocorrencias": 26,
-          "densidade": 2.31
+          "densidade": 2.3
         },
         {
           "termo": "windows",
@@ -15345,17 +15345,17 @@
         {
           "termo": "acesso remoto",
           "ocorrencias": 4,
-          "densidade": 0.36
+          "densidade": 0.35
         },
         {
           "termo": "samba linux",
           "ocorrencias": 4,
-          "densidade": 0.36
+          "densidade": 0.35
         },
         {
           "termo": "windows samba",
           "ocorrencias": 4,
-          "densidade": 0.36
+          "densidade": 0.35
         },
         {
           "termo": "arquivos planejar",
@@ -15398,10 +15398,10 @@
       "lote": "11A/13",
       "aprovadoEm": "2026-09-25",
       "titulo": "UFW no Linux: firewall host sem se trancar fora do servidor",
-      "palavras": 1722,
-      "termosUteis": 1042,
-      "densidadeSemantica": 49.14,
-      "vocabulario": 512,
+      "palavras": 1728,
+      "termosUteis": 1044,
+      "densidadeSemantica": 49.33,
+      "vocabulario": 515,
       "keywordPrincipal": {
         "termo": "como configurar firewall ufw linux",
         "ocorrencias": 1,
@@ -15411,32 +15411,32 @@
         {
           "termo": "ufw",
           "ocorrencias": 43,
-          "densidade": 4.13
+          "densidade": 4.12
         },
         {
           "termo": "firewall",
           "ocorrencias": 26,
-          "densidade": 2.5
+          "densidade": 2.49
         },
         {
           "termo": "regras",
           "ocorrencias": 21,
-          "densidade": 2.02
+          "densidade": 2.01
         },
         {
           "termo": "servidor",
           "ocorrencias": 18,
-          "densidade": 1.73
+          "densidade": 1.72
         },
         {
           "termo": "host",
           "ocorrencias": 16,
-          "densidade": 1.54
+          "densidade": 1.53
         },
         {
           "termo": "sudo",
           "ocorrencias": 16,
-          "densidade": 1.54
+          "densidade": 1.53
         },
         {
           "termo": "servico",
@@ -15473,7 +15473,7 @@
         {
           "termo": "sudo ufw",
           "ocorrencias": 16,
-          "densidade": 1.54
+          "densidade": 1.53
         },
         {
           "termo": "ufw status",

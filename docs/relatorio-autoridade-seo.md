@@ -1,6 +1,6 @@
 # Autoridade SEO — densidade semântica, keywords e links internos
 
-Gerado em: 2026-09-25T13:35:44.895Z
+Gerado em: 2026-09-25T14:02:31.581Z
 URLs analisadas: 99/99 · órfãs: 21
 
 | URL | Palavras | Dens. semântica | Keyword principal | Dens. KW | Links saída | Links entrada |
@@ -83,25 +83,25 @@ URLs analisadas: 99/99 · órfãs: 21
 | /blog/ventoinha-do-computador-fazendo-barulho-o-que-verificar | 1162 | 53.8% | ventoinha do computador fazendo barulho o que verificar | 0.29% | 10 | 0 |
 | /blog/rede-wifi-nao-aparece-na-lista-o-que-verificar | 1184 | 50.46% | rede wifi nao aparece na lista o que verificar | 0% | 8 | 0 |
 | /blog/arquivo-corrompido-nao-abre-o-que-fazer | 1132 | 53.51% | arquivo corrompido nao abre o que fazer | 0.78% | 8 | 1 |
-| /blog/como-configurar-2fa-em-tudo | 1337 | 65.73% | como configurar 2fa em tudo | 0.47% | 3 | 2 |
+| /blog/como-configurar-2fa-em-tudo | 1105 | 61.82% | como configurar 2fa em tudo | 0.47% | 3 | 2 |
 | /blog/como-proteger-rede-wifi-empresa | 1331 | 65.26% | como proteger rede wifi empresa | 0% | 3 | 4 |
 | /blog/como-configurar-firewall-pfsense | 1200 | 59.04% | como configurar firewall pfsense | 0.53% | 3 | 2 |
 | /blog/como-configurar-active-directory | 1180 | 53.54% | como configurar active directory | 0.54% | 3 | 0 |
-| /blog/como-deixar-celular-android-mais-rapido | 1061 | 59.78% | como deixar celular android mais rapido | 0% | 8 | 0 |
+| /blog/como-deixar-celular-android-mais-rapido | 1272 | 56.6% | como deixar celular android mais rapido | 0.13% | 8 | 0 |
 | /blog/como-configurar-repetidor-wifi | 1346 | 57.02% | como configurar repetidor wifi | 0% | 4 | 2 |
 | /blog/trocar-windows-por-linux-vale-a-pena | 1233 | 58.04% | trocar windows por linux vale a pena | 0.41% | 3 | 0 |
 | /blog/erros-comuns-upgrade-computador | 1281 | 56.75% | erros comuns upgrade computador | 0% | 4 | 0 |
 | /blog/como-configurar-vpn-empresarial | 1191 | 58.96% | como configurar vpn empresarial | 0.13% | 5 | 1 |
 | /blog/como-recuperar-conta-hackeada | 1268 | 55.35% | como recuperar conta hackeada | 0.39% | 4 | 0 |
-| /blog/como-deixar-windows-11-mais-rapido-iniciantes | 1111 | 60.3% | como deixar windows 11 mais rapido iniciantes | 0% | 4 | 1 |
-| /blog/como-fazer-backup-fotos-windows-iniciantes | 1047 | 58.33% | como fazer backup fotos windows iniciantes | 0% | 4 | 2 |
-| /blog/como-atualizar-windows-corretamente | 937 | 64.09% | como atualizar windows corretamente | 0% | 4 | 0 |
-| /blog/como-recuperar-arquivos-apagados-windows | 938 | 56.23% | como recuperar arquivos apagados windows | 1.1% | 5 | 0 |
-| /blog/como-fazer-teste-velocidade-internet | 997 | 56.61% | como fazer teste velocidade internet | 0.49% | 4 | 1 |
-| /blog/como-resetar-senha-windows | 1272 | 49.18% | como resetar senha windows | 0% | 5 | 0 |
-| /blog/como-organizar-arquivos-windows-iniciantes | 1431 | 52.6% | como organizar arquivos windows iniciantes | 0% | 7 | 0 |
-| /blog/como-trocar-senha-wifi | 1379 | 53.73% | como trocar senha wifi | 0% | 5 | 0 |
-| /blog/como-configurar-bios-uefi-corretamente | 1784 | 48.12% | como configurar bios uefi corretamente | 0% | 9 | 0 |
-| /blog/como-configurar-servidor-de-arquivos | 1849 | 49.47% | como configurar servidor de arquivos | 0% | 5 | 0 |
-| /blog/como-configurar-firewall-ufw-linux | 1722 | 49.14% | como configurar firewall ufw linux | 0.1% | 4 | 0 |
+| /blog/como-deixar-windows-11-mais-rapido-iniciantes | 1149 | 60.35% | como deixar windows 11 mais rapido iniciantes | 0% | 4 | 1 |
+| /blog/como-fazer-backup-fotos-windows-iniciantes | 1151 | 57.32% | como fazer backup fotos windows iniciantes | 0% | 4 | 2 |
+| /blog/como-atualizar-windows-corretamente | 1073 | 62.56% | como atualizar windows corretamente | 0% | 4 | 0 |
+| /blog/como-recuperar-arquivos-apagados-windows | 1117 | 53.88% | como recuperar arquivos apagados windows | 1.24% | 5 | 0 |
+| /blog/como-fazer-teste-velocidade-internet | 1141 | 54.93% | como fazer teste velocidade internet | 0.43% | 4 | 1 |
+| /blog/como-resetar-senha-windows | 1278 | 49.45% | como resetar senha windows | 0% | 5 | 0 |
+| /blog/como-organizar-arquivos-windows-iniciantes | 1437 | 52.71% | como organizar arquivos windows iniciantes | 0% | 7 | 0 |
+| /blog/como-trocar-senha-wifi | 1385 | 53.97% | como trocar senha wifi | 0% | 5 | 0 |
+| /blog/como-configurar-bios-uefi-corretamente | 1790 | 48.22% | como configurar bios uefi corretamente | 0% | 9 | 0 |
+| /blog/como-configurar-servidor-de-arquivos | 1855 | 49.65% | como configurar servidor de arquivos | 0% | 5 | 0 |
+| /blog/como-configurar-firewall-ufw-linux | 1728 | 49.33% | como configurar firewall ufw linux | 0.1% | 4 | 0 |
 

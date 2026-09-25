@@ -17,6 +17,7 @@ import { SeoHealthcheckPanel } from "@/components/admin/SeoHealthcheckPanel";
 import { InterlinkSuggestionsPanel } from "@/components/admin/InterlinkSuggestionsPanel";
 import { PromocaoIndexPanel } from "@/components/admin/PromocaoIndexPanel";
 import { DominioDnsPanel } from "@/components/admin/DominioDnsPanel";
+import { WhatsappCliquesPanel } from "@/components/admin/WhatsappCliquesPanel";
 import auditoriaAfirmacoes from "@/data/trustClaimsAudit.json";
 
 
@@ -311,6 +312,7 @@ export default function AdminSeo() {
 
       <div className="mt-6">
         <GscSegmentosPanel />
+        <WhatsappCliquesPanel />
       </div>
 
       <GscInventarioPanel />

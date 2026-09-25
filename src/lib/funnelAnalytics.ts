@@ -431,10 +431,14 @@ function persistClickEvent(eventType: string, location: string, ctx: { modalidad
     variant: typeof extra.variant === "string" ? extra.variant : activeVariant(),
     modalidade: ctx.modalidade,
     equipamento: ctx.equipamento,
-    problema: ctx.problema,
-    servico: typeof extra.servico === "string" ? extra.servico : null,
-    bairro: typeof extra.bairro === "string" ? extra.bairro : null,
-    cidade: typeof extra.cidade === "string" ? extra.cidade : null,
+    // Sintoma: triagem → página de problema/sintoma → desconhecido.
+    problema:
+      ctx.problema && ctx.problema !== "unknown"
+        ? ctx.problema
+        : (path.match(/^\/(?:problemas?|guias)\/([a-z0-9-]+)/)?.[1] ?? ctx.problema),
+    servico: typeof extra.servico === "string" ? extra.servico : (contrato.service_slug ?? null),
+    bairro: typeof extra.bairro === "string" ? extra.bairro : (contrato.neighborhood_slug ?? null),
+    cidade: typeof extra.cidade === "string" ? extra.cidade : (contrato.city ?? null),
     customer_type: resolveCustomerType(),
     session_id: getSessionId(),
     path,
