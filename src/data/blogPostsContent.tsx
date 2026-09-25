@@ -9935,44 +9935,323 @@ crontab -e
     ),
   },
 
-  "como-organizar-arquivos-windows-iniciantes": {
-    title: "Como Organizar Arquivos no Windows 11: Método Simples Para Achar Tudo Rápido",
-    excerpt: "Aprenda como organizar pastas, documentos e fotos no Windows 11 com um método prático que nunca mais vai te deixar perder arquivos.",
-    date: "2026-04-29",
-    readTime: "6 min",
-    category: "Tutoriais Domésticos",
+  "como-resetar-senha-windows": {
+    title: "Esqueceu a senha do Windows? Como recuperar o acesso pelos métodos oficiais",
+    excerpt:
+      "Como diferenciar PIN, senha da conta Microsoft e senha local, usar os fluxos oficiais de recuperação do Windows e saber quando parar — sem bypass de autenticação.",
+    date: "2026-09-25",
+    readTime: "11 min",
+    category: "Windows e Segurança",
     content: (
       <>
-        <p className="lead">Área de trabalho cheia de arquivos? Documentos espalhados? Aprenda a organizar de um jeito simples que vai durar para sempre.</p>
+        <p className="lead">
+          “Esqueci a senha do Windows” pode significar três coisas diferentes: você esqueceu o <strong>PIN do dispositivo</strong>,
+          a <strong>senha da conta Microsoft</strong> ou a <strong>senha de uma conta local</strong>. O método correto
+          depende dessa identificação. Este guia usa apenas caminhos oficiais de recuperação e não ensina a
+          contornar a autenticação de outra pessoa.
+        </p>
 
-        <h2>Use as Pastas Que o Windows Já Criou</h2>
-        <p>O Windows tem pastas prontas para você: <strong>Documentos, Imagens, Vídeos, Downloads</strong>. Aproveite-as em vez de jogar tudo na Área de Trabalho.</p>
+        <h2>Resposta curta</h2>
+        <p>
+          Na tela de entrada, verifique qual opção de credencial está selecionada. Para conta Microsoft, use
+          “Esqueci minha senha”/recuperação da conta e confirme sua identidade pelos canais cadastrados. Para conta
+          local, use “Redefinir senha” e responda às perguntas de segurança, ou um disco de redefinição criado
+          anteriormente. Em computador de empresa/escola, procure o administrador. Se o disco estiver protegido
+          por BitLocker e o Windows pedir a chave de recuperação, localize essa chave antes de qualquer reinstalação.
+        </p>
 
-        <h2>Crie Subpastas Por Assunto</h2>
+        <h2>1. PIN não é a mesma coisa que senha</h2>
+        <p>
+          O PIN do Windows Hello é uma credencial do dispositivo. Na tela de entrada, abra <strong>Opções de entrada</strong>
+          para verificar se você está tentando PIN ou senha. Se você lembra a senha da conta, mas esqueceu o PIN,
+          use o fluxo de recuperação do próprio Windows Hello em vez de alterar a senha sem necessidade.
+        </p>
+
+        <h2>2. Se o Windows usa uma conta Microsoft</h2>
+        <p>
+          A Microsoft oferece recuperação pela tela de entrada e também pela página oficial de redefinição. O
+          processo exige verificar a identidade por um método cadastrado. Faça a recuperação em dispositivo e
+          conexão confiáveis, confira o endereço antes de digitar códigos e nunca compartilhe o código de
+          verificação com “suporte” por mensagem ou telefone.
+        </p>
         <ol>
-          <li>Abra <strong>Documentos</strong></li>
-          <li>Clique com o botão direito numa área vazia → <strong>Novo → Pasta</strong></li>
-          <li>Dê um nome claro: 'Trabalho', 'Família', 'Banco', 'Receitas'</li>
-          <li>Dentro de 'Trabalho' crie outras: 'Contratos 2026', 'Notas fiscais'</li>
-          <li>Arraste seus arquivos soltos para dentro das pastas certas</li>
+          <li>Escolha a opção de senha na tela de entrada.</li>
+          <li>Selecione “Esqueci minha senha” quando disponível.</li>
+          <li>Siga a verificação de identidade.</li>
+          <li>Crie uma nova senha exclusiva.</li>
+          <li>Volte ao PC, conecte-o à internet e tente o login novamente.</li>
         </ol>
 
-        <h2>Renomeie Arquivos com Datas</h2>
-        <p>Em vez de 'Documento1.pdf' use <strong>'2026-04-Conta-Luz.pdf'</strong>. O ano-mês na frente faz tudo ficar em ordem cronológica automaticamente.</p>
+        <h2>3. Se é uma conta local</h2>
+        <p>
+          Para contas locais configuradas com perguntas de segurança, o Windows oferece <strong>Redefinir senha</strong>
+          na tela de entrada depois de uma tentativa inválida. Responda às perguntas definidas para aquela conta.
+          Se você criou anteriormente um disco de redefinição de senha, ele também pode ser usado para aquela
+          conta local.
+        </p>
+        <p>
+          Um disco de redefinição é preventivo: precisa ter sido criado enquanto você ainda tinha acesso. Não é
+          um pendrive genérico baixado da internet.
+        </p>
 
-        <h2>Use a Busca do Windows</h2>
-        <p>Aperte a tecla <strong>Windows</strong> e comece a digitar o nome do arquivo. Ele aparece em segundos. Por isso bons nomes ajudam tanto.</p>
+        <h2>4. Computador de empresa ou escola</h2>
+        <p>
+          Em dispositivo gerenciado, domínio, Entra ID ou políticas corporativas podem controlar o login. Não
+          tente “tomar posse” da conta local nem alterar arquivos de sistema para burlar a tela. O responsável de
+          TI precisa seguir o processo de identidade da organização e preservar auditoria, criptografia e acesso
+          aos dados corporativos.
+        </p>
 
-        <h2>Limpe a Área de Trabalho</h2>
-        <p>A Área de Trabalho deveria ter no máximo 10 ícones. Mova tudo para Documentos. PC mais limpo = PC mais rápido.</p>
+        <h2>5. E se houver outra conta administradora?</h2>
+        <p>
+          Outra conta administradora legítima pode gerenciar algumas contas locais, mas isso não recupera a senha
+          antiga nem descriptografa dados protegidos por credenciais/chaves que aquela conta não possui. Antes de
+          alterar uma conta, confirme propriedade do equipamento, impacto sobre arquivos criptografados e se há
+          políticas de empresa.
+        </p>
 
-        <h2>Faça Backup Depois de Organizar</h2>
-        <p>Agora que está organizado, faça backup (veja nosso guia de backup de fotos). Se precisar de ajuda, a O Técnico de Informática organiza seus arquivos e configura backup automático em casa.</p>
+        <h2>6. BitLocker: senha do Windows e chave de recuperação são coisas diferentes</h2>
+        <p>
+          Se o Windows entra no ambiente de recuperação e solicita uma chave BitLocker, não improvise. A chave
+          protege o volume criptografado e deve ser localizada nos locais onde foi salva pela conta ou organização.
+          Redefinir a senha de login não substitui a chave do BitLocker.
+        </p>
+        <p>
+          Antes de formatar ou limpar o disco, confirme se há dados sem cópia e se a chave pode ser recuperada.
+          Veja <Link to="/seguranca-dos-dados" className="text-accent">segurança dos dados</Link> e
+          {" "}<Link to="/blog/como-fazer-backup-fotos-windows-iniciantes" className="text-accent">backup no Windows</Link>.
+        </p>
 
+        <h2>O que NÃO fazer</h2>
+        <ul>
+          <li>Não substituir executáveis de acessibilidade, arquivos de sistema ou registro para abrir um prompt na tela de login.</li>
+          <li>Não usar “removedores de senha” de origem desconhecida.</li>
+          <li>Não entregar códigos de verificação ou chave BitLocker a terceiros não autorizados.</li>
+          <li>Não formatar antes de avaliar dados que existem apenas naquele disco.</li>
+          <li>Não tratar conta corporativa como conta pessoal.</li>
+        </ul>
+
+        <h2>Quando parar</h2>
+        <p>
+          Pare se você não consegue comprovar/validar a conta, se o equipamento não é seu, se a máquina é
+          gerenciada por uma organização, se o BitLocker exige uma chave ausente ou se existem dados importantes
+          sem backup. Nesses casos, o objetivo não é “forçar entrada”: é preservar dados e usar o canal de
+          recuperação autorizado.
+        </p>
+
+        <h2>Checklist de decisão</h2>
+        <ul>
+          <li>Identifiquei se estou usando PIN, conta Microsoft ou conta local.</li>
+          <li>Estou no equipamento e conta que tenho autorização para recuperar.</li>
+          <li>Usei a recuperação oficial da Microsoft/Windows.</li>
+          <li>Não executei bypass de autenticação.</li>
+          <li>Confirmei a situação do BitLocker antes de reinstalar.</li>
+          <li>Se for corporativo, envolvi o administrador responsável.</li>
+        </ul>
+
+        <h2>Glossário rápido</h2>
+        <ul>
+          <li><strong>PIN do Windows Hello:</strong> credencial vinculada ao dispositivo para entrada local.</li>
+          <li><strong>Conta Microsoft:</strong> identidade online usada em serviços Microsoft e, quando configurado, no login do Windows.</li>
+          <li><strong>Conta local:</strong> conta armazenada no próprio Windows, sem depender de uma identidade Microsoft para o login.</li>
+          <li><strong>BitLocker:</strong> criptografia de volume que pode exigir chave de recuperação em determinados eventos.</li>
+        </ul>
+
+        <h2>Perguntas frequentes</h2>
+        <h3>O suporte consegue me dizer minha senha antiga?</h3>
+        <p>
+          Não. A recuperação redefine a credencial depois da verificação adequada; não existe procedimento
+          legítimo de suporte para revelar uma senha esquecida.
+        </p>
+        <h3>Formatar resolve?</h3>
+        <p>
+          Reinstalar o sistema pode remover o bloqueio ao apagar a instalação, mas também pode destruir dados e
+          configurações. É última alternativa, não método de recuperação de senha.
+        </p>
+        <h3>Posso usar um tutorial que troca utilman.exe por cmd.exe?</h3>
+        <p>
+          Este portal não recomenda bypass de autenticação por alteração de arquivos do sistema. Use os métodos
+          oficiais de recuperação ou o administrador autorizado.
+        </p>
+
+        <p>
+          Se o problema evoluiu para falha de inicialização, siga o guia de
+          <Link to="/blog/windows-reparo-automatico-em-loop" className="text-accent"> Windows em loop de reparo</Link>.
+          Para a visão completa de sistema, use o
+          <Link to="/guia-tecnico-informatica#tema-sistemas-operacionais" className="text-accent"> Atlas de sistemas operacionais</Link>.
+        </p>
+        <EditorialReferences slug="como-resetar-senha-windows" />
       </>
     ),
   },
-  
+
+
+  "como-organizar-arquivos-windows-iniciantes": {
+    title: "Como organizar arquivos no Windows 11 sem perder documentos: método prático",
+    excerpt:
+      "Um método seguro para organizar pastas e documentos no Windows 11: estrutura, nomes, busca, Acesso Rápido, OneDrive, backup e cuidados antes de mover muitos arquivos.",
+    date: "2026-09-25",
+    readTime: "12 min",
+    category: "Windows",
+    content: (
+      <>
+        <p className="lead">
+          Organizar arquivos não é “limpar a tela”: é criar um sistema em que você saiba <strong>onde salvar,
+          como nomear, como encontrar e como recuperar</strong> um documento. No Windows 11, o Explorador de
+          Arquivos já oferece pastas de usuário, pesquisa, Acesso Rápido e integração com nuvem. O trabalho
+          importante é definir uma estrutura simples e não mover tudo de uma vez sem conferir cópias e
+          sincronização.
+        </p>
+
+        <h2>Resposta curta</h2>
+        <p>
+          Use poucas pastas principais, crie subpastas por assunto ou projeto, dê nomes previsíveis aos arquivos,
+          arquive versões antigas em vez de espalhá-las e use a pesquisa do Explorador quando não lembrar o
+          caminho. Antes de reorganizar centenas de itens, confirme uma cópia dos arquivos importantes e saiba
+          se Área de Trabalho, Documentos ou Imagens estão sendo sincronizados pelo OneDrive.
+        </p>
+
+        <h2>1. Primeiro descubra onde seus arquivos realmente estão</h2>
+        <p>
+          Abra o Explorador com <strong>Windows + E</strong> e confira Área de Trabalho, Documentos, Downloads,
+          Imagens e a pasta do OneDrive, se existir. O Windows também pode mostrar arquivos locais e de nuvem na
+          mesma interface. Antes de mover qualquer coisa, responda: este arquivo está só no computador, está
+          sincronizado, está “somente online” ou já existe em outro backup?
+        </p>
+        <p>
+          Essa distinção evita um erro comum: mover ou apagar um item achando que existe outra cópia quando, na
+          prática, existe apenas uma versão sincronizada.
+        </p>
+
+        <h2>2. Escolha uma estrutura pequena que responda “onde isso pertence?”</h2>
+        <p>Uma estrutura doméstica simples pode começar assim:</p>
+        <ul>
+          <li><strong>Documentos/Pessoal</strong> — documentos particulares e comprovantes.</li>
+          <li><strong>Documentos/Trabalho</strong> — projetos e arquivos profissionais.</li>
+          <li><strong>Documentos/Financeiro</strong> — notas, recibos e documentos tributários.</li>
+          <li><strong>Imagens/Fotos</strong> — fotos separadas por ano, evento ou tema.</li>
+          <li><strong>Arquivo</strong> — material encerrado que precisa ser guardado, mas não usado diariamente.</li>
+        </ul>
+        <p>
+          Evite criar dez níveis de subpastas. Se você precisa abrir muitas pastas para chegar a um documento,
+          provavelmente a estrutura está específica demais. A regra útil é: cada arquivo deve ter um destino
+          previsível sem exigir memória perfeita.
+        </p>
+
+        <h2>3. Nomeie para pesquisar, não para decorar</h2>
+        <p>
+          Bons nomes incluem o contexto que você pesquisaria depois. Em vez de <code>documento-final2.pdf</code>,
+          prefira algo como <code>2026-09-cliente-contrato-assinado.pdf</code>. Para arquivos recorrentes,
+          <strong>AAAA-MM</strong> no início ajuda a ordenar cronologicamente sem depender da data interna do
+          arquivo.
+        </p>
+        <ul>
+          <li>Use palavras que diferenciem o documento de outros parecidos.</li>
+          <li>Evite “novo”, “final”, “final-final” como único controle de versão.</li>
+          <li>Quando houver revisão, use um padrão simples, como <code>v01</code>, <code>v02</code> ou data.</li>
+          <li>Não renomeie extensões como <code>.docx</code>, <code>.xlsx</code> ou <code>.jpg</code> manualmente.</li>
+        </ul>
+
+        <h2>4. Use a pesquisa e o Acesso Rápido do Explorador</h2>
+        <p>
+          A Microsoft permite pesquisar pela barra de tarefas ou pelo próprio Explorador. Se você sabe parte do
+          nome, extensão ou pasta provável, pesquisar costuma ser mais rápido do que navegar por árvore de
+          diretórios. Pastas usadas todo dia podem ser fixadas no Acesso Rápido; isso cria um atalho, não uma
+          segunda cópia.
+        </p>
+
+        <h2>5. Downloads é caixa de entrada, não arquivo definitivo</h2>
+        <p>
+          A pasta Downloads acumula instaladores, PDFs, imagens e anexos sem contexto. Crie uma rotina: abra,
+          decida se precisa guardar, mova para a pasta definitiva ou exclua o que é descartável. Antes de apagar
+          em massa, ordene por tipo e data e confira itens sem nome claro.
+        </p>
+
+        <h2>6. OneDrive: entenda sincronização antes de reorganizar</h2>
+        <p>
+          O Windows pode fazer backup/sincronização de pastas conhecidas como Área de Trabalho, Documentos e
+          Imagens pelo OneDrive. Mudanças feitas em arquivos sincronizados podem se refletir na nuvem e em outros
+          dispositivos. Por isso, uma grande reorganização deve ser feita com atenção ao estado da sincronização
+          e ao espaço disponível.
+        </p>
+        <p>
+          Sincronização melhora disponibilidade, mas não substitui sozinha uma estratégia de backup independente.
+          Para arquivos que não podem ser perdidos, mantenha uma segunda cópia e teste a restauração. Veja
+          <Link to="/blog/como-fazer-backup-fotos-windows-iniciantes" className="text-accent"> como fazer backup de fotos no Windows</Link>
+          {" "}e <Link to="/blog/como-testar-restauracao-de-backup" className="text-accent">como testar a restauração</Link>.
+        </p>
+
+        <h2>7. Como organizar um computador já bagunçado</h2>
+        <ol>
+          <li>Faça uma cópia dos arquivos insubstituíveis.</li>
+          <li>Mapeie Documentos, Área de Trabalho, Downloads, Imagens e OneDrive.</li>
+          <li>Crie de quatro a seis pastas principais.</li>
+          <li>Mova primeiro arquivos fáceis de reconhecer.</li>
+          <li>Separe uma pasta <strong>Revisar</strong> para itens duvidosos; não apague por impulso.</li>
+          <li>Renomeie lotes pequenos e confira se os arquivos ainda abrem.</li>
+          <li>Só depois remova duplicatas confirmadas.</li>
+        </ol>
+
+        <h2>O que não fazer</h2>
+        <ul>
+          <li>Não mover pastas de programas, <code>Windows</code>, <code>Program Files</code> ou perfis ocultos para “organizar espaço”.</li>
+          <li>Não usar limpadores automáticos para decidir quais documentos pessoais podem ser apagados.</li>
+          <li>Não fazer reorganização em massa enquanto o disco apresenta erros, desconexões ou ruído anormal.</li>
+          <li>Não assumir que “está na nuvem” significa que existe uma versão recuperável para qualquer exclusão.</li>
+          <li>Não excluir duplicatas apenas pelo nome; compare tamanho, conteúdo e data quando o arquivo for importante.</li>
+        </ul>
+
+        <h2>Quando parar e preservar antes de mexer</h2>
+        <p>
+          Pare se o disco estiver muito lento de forma anormal, desaparecendo do sistema, produzindo erros de
+          leitura ou se você encontrar arquivos que não abrem. Nessa situação, organização deixa de ser prioridade;
+          primeiro preserve os dados. Use a trilha de <Link to="/servicos/recuperacao-de-dados" className="text-accent">recuperação de dados</Link>
+          {" "}ou o guia de <Link to="/blog/arquivo-corrompido-nao-abre-o-que-fazer" className="text-accent">arquivo corrompido</Link>.
+        </p>
+
+        <h2>Checklist final</h2>
+        <ul>
+          <li>Cada categoria importante tem uma pasta previsível.</li>
+          <li>Os nomes permitem identificar o arquivo sem abri-lo.</li>
+          <li>Downloads não é usado como arquivo permanente.</li>
+          <li>Pastas frequentes estão no Acesso Rápido.</li>
+          <li>Você sabe quais pastas estão sincronizadas.</li>
+          <li>Arquivos críticos têm cópia adicional e restauração verificável.</li>
+        </ul>
+
+        <h2>Glossário rápido</h2>
+        <ul>
+          <li><strong>Acesso Rápido:</strong> atalhos para pastas frequentes no Explorador.</li>
+          <li><strong>Sincronização:</strong> propagação de alterações entre dispositivos e nuvem.</li>
+          <li><strong>Backup:</strong> cópia destinada à recuperação depois de perda, falha ou erro.</li>
+          <li><strong>Arquivo somente online:</strong> item visível no Explorador cujo conteúdo pode estar apenas na nuvem até ser aberto.</li>
+        </ul>
+
+        <h2>Perguntas frequentes</h2>
+        <h3>Muitos ícones na Área de Trabalho deixam o computador lento?</h3>
+        <p>
+          Não use isso como regra de diagnóstico. Uma Área de Trabalho cheia dificulta encontrar documentos, mas
+          lentidão persistente deve ser investigada por CPU, memória, disco, inicialização e temperatura. Veja
+          <Link to="/blog/como-deixar-windows-11-mais-rapido-iniciantes" className="text-accent"> o diagnóstico de desempenho do Windows 11</Link>.
+        </p>
+        <h3>Posso mover a pasta Documentos inteira para outro disco?</h3>
+        <p>
+          É possível alterar locais de pastas em alguns cenários, mas faça isso pelo mecanismo suportado pelo
+          Windows/aplicativo e depois de entender sincronização e permissões. Arrastar pastas de sistema de forma
+          improvisada pode quebrar atalhos e aplicativos.
+        </p>
+        <h3>Organizar arquivos substitui backup?</h3>
+        <p>Não. Organização facilita localizar; backup existe para recuperar.</p>
+
+        <p>
+          Para conectar organização, manutenção, backup e segurança numa mesma visão, continue pelo
+          <Link to="/guia-tecnico-informatica#tema-dados-backup" className="text-accent"> Atlas de dados e backup</Link>.
+        </p>
+        <EditorialReferences slug="como-organizar-arquivos-windows-iniciantes" />
+      </>
+    ),
+  },
+
 "como-atualizar-windows-corretamente": {
     title: "Como atualizar o Windows 11 com segurança e o que fazer quando falha",
     excerpt:
@@ -10832,54 +11111,168 @@ crontab -e
     ),
   },
   "como-trocar-senha-wifi": {
-    title: "Como Trocar a Senha do Wi-Fi: Passo a Passo Para Qualquer Roteador (2026)",
-    excerpt: "Vizinho usando seu Wi-Fi? Aprenda como trocar a senha do Wi-Fi em 5 minutos em qualquer roteador (TP-Link, Intelbras, Vivo, Claro).",
-    date: "2026-04-29",
-    readTime: "5 min",
-    category: "Tutoriais Domésticos",
+    title: "Como trocar a senha do Wi-Fi com segurança sem perder a configuração do roteador",
+    excerpt:
+      "Passo a passo seguro para alterar a senha da rede Wi-Fi, identificar o painel correto, escolher WPA2/WPA3, reconectar dispositivos e saber quando não fazer reset de fábrica.",
+    date: "2026-09-25",
+    readTime: "12 min",
+    category: "Redes e Segurança",
     content: (
       <>
-        <p className="lead">Trocar a senha do Wi-Fi é simples e deve ser feito sempre que suspeitar de uso indevido ou tiver compartilhado com alguém que não deveria ter mais acesso.</p>
+        <p className="lead">
+          Trocar a senha do Wi-Fi é uma alteração simples quando você ainda tem acesso administrativo ao roteador.
+          O risco aparece quando a pessoa confunde <strong>senha da rede</strong> com <strong>senha de administração</strong>
+          ou usa o botão de reset sem saber se o equipamento também guarda parâmetros da operadora, telefone,
+          IPTV, VLAN ou modo bridge. O procedimento seguro começa identificando quem administra o equipamento.
+        </p>
 
-        <h2>O Que Você Precisa</h2>
+        <h2>Resposta curta</h2>
+        <p>
+          Entre no aplicativo ou painel oficial do seu roteador/operadora, abra as configurações da rede sem fio,
+          altere a credencial da rede principal, mantenha um modo de segurança moderno compatível — preferencialmente
+          WPA3 quando todos os dispositivos suportarem, ou WPA2/WPA3 conforme o equipamento — salve e reconecte
+          seus aparelhos. Não use credenciais genéricas de sites e não faça reset de fábrica apenas porque esqueceu
+          a senha do painel.
+        </p>
+
+        <h2>1. Descubra se o roteador é seu ou gerenciado pela operadora</h2>
+        <p>
+          Alguns equipamentos são administrados por aplicativo da operadora; outros usam um painel local indicado
+          na etiqueta ou no manual. Não assuma que o endereço é sempre <code>192.168.0.1</code> nem que existe
+          usuário “admin/admin”. Consulte a etiqueta, o aplicativo oficial, o manual do modelo ou a página da
+          operadora.
+        </p>
+        <p>
+          No Windows, informações da conexão ajudam a identificar o gateway da rede, mas o endereço do gateway
+          não substitui a documentação do equipamento e não fornece credenciais administrativas.
+        </p>
+
+        <h2>2. Diferencie três credenciais</h2>
         <ul>
-          <li>Estar conectado no Wi-Fi (por cabo ou pelo próprio Wi-Fi atual)</li>
-          <li>Saber o IP do roteador (geralmente 192.168.0.1 ou 192.168.1.1)</li>
-          <li>Senha de administrador (na etiqueta do roteador)</li>
+          <li><strong>Senha do Wi-Fi:</strong> usada por celulares, TVs e computadores para entrar na rede.</li>
+          <li><strong>Senha de administrador:</strong> protege o painel que altera configurações do roteador.</li>
+          <li><strong>Conta da operadora/fabricante:</strong> pode controlar o roteador por aplicativo ou nuvem.</li>
+        </ul>
+        <p>
+          Elas não precisam ser iguais — e, por segurança, não deveriam ser reutilizadas. Alterar a senha do Wi-Fi
+          não exige divulgar a senha de administrador a outras pessoas da casa ou empresa.
+        </p>
+
+        <h2>3. Antes de salvar a mudança</h2>
+        <ul>
+          <li>Anote o nome atual da rede (SSID) e quais bandas estão ativas.</li>
+          <li>Confirme que você tem acesso administrativo legítimo ao equipamento.</li>
+          <li>Se o roteador atende trabalho, câmeras, automação ou telefonia, planeje a reconexão desses dispositivos.</li>
+          <li>Evite alterar ao mesmo tempo senha, SSID, canal, largura de canal e modo de segurança; mude uma variável por vez.</li>
         </ul>
 
-        <h2>Passo a Passo</h2>
+        <h2>4. Altere a senha no painel oficial</h2>
         <ol>
-          <li>Abra o navegador e digite o IP do roteador na barra</li>
-          <li>Faça login (admin/admin geralmente)</li>
-          <li>Procure menu <strong>Wireless</strong>, <strong>Wi-Fi</strong> ou <strong>Sem fio</strong></li>
-          <li>Clique em <strong>Segurança</strong> ou <strong>Senha</strong></li>
-          <li>Mude a senha para algo forte (12+ caracteres, com letras, números e símbolos)</li>
-          <li>Mantenha o tipo de segurança em <strong>WPA2-PSK</strong> ou <strong>WPA3</strong></li>
-          <li>Salve e aplique</li>
+          <li>Conecte-se ao roteador por cabo, se isso estiver disponível; reduz a chance de perder a sessão durante a troca.</li>
+          <li>Abra o aplicativo/painel oficial e autentique-se como administrador.</li>
+          <li>Localize Wi-Fi, Wireless ou Rede sem fio.</li>
+          <li>Escolha a rede principal e altere a senha.</li>
+          <li>Revise o modo de segurança exibido pelo próprio equipamento.</li>
+          <li>Salve/aplique e aguarde o rádio reiniciar, se o roteador fizer isso.</li>
         </ol>
 
-        <h2>Depois de Trocar</h2>
-        <p>Você será desconectado. Reconecte celulares, TV, notebook, câmeras com a nova senha. Anote em local seguro.</p>
+        <h2>5. WPA2, WPA3 e compatibilidade</h2>
+        <p>
+          WPA3 acrescenta proteções ao Wi-Fi moderno, mas equipamentos antigos podem não suportá-lo. Em ambiente
+          misto, o roteador pode oferecer um modo de transição. Não rebaixe para protocolos antigos apenas para
+          manter um dispositivo obsoleto sem antes avaliar o risco; às vezes o melhor é isolar ou substituir esse
+          dispositivo.
+        </p>
+        <p>
+          Para uma rede empresarial, senha compartilhada é só uma parte da segurança. Segmentação, firmware,
+          administração e rede de visitantes também importam. Veja
+          <Link to="/blog/como-proteger-rede-wifi-empresa" className="text-accent"> como proteger o Wi-Fi da empresa</Link>.
+        </p>
 
-        <h2>Senha Forte É Assim</h2>
+        <h2>6. Como escolher uma senha de Wi-Fi</h2>
+        <p>
+          Prefira uma frase longa e exclusiva, que não seja reutilizada em e-mail, banco ou conta Microsoft.
+          Evite endereço, telefone, nome da família e padrões fáceis de adivinhar. Não publicamos uma “senha
+          modelo” porque exemplos públicos viram padrões reutilizados.
+        </p>
+        <p>
+          Guarde a credencial em um gerenciador de senhas ou em local controlado. Se precisa oferecer acesso a
+          visitantes, use a função de rede de convidados quando o roteador fornecer isolamento adequado, em vez de
+          entregar a credencial administrativa ou misturar visitantes com dispositivos internos.
+        </p>
+
+        <h2>7. Depois da troca: reconecte e valide</h2>
         <ul>
-          <li>Mínimo 12 caracteres</li>
-          <li>Misture LETRAS maiúsculas e minúsculas</li>
-          <li>Inclua números e símbolos (!@#$)</li>
-          <li>NÃO use nome, data de nascimento ou 'minhacasa123'</li>
-          <li>Exemplo bom: <strong>Curitiba!2026#Casa</strong></li>
+          <li>Reconecte um computador ou celular e confirme navegação.</li>
+          <li>Teste dispositivos importantes: impressora, TV, câmeras e automação.</li>
+          <li>Se usa duas bandas com o mesmo nome, confirme que os dispositivos voltaram a associar normalmente.</li>
+          <li>Em empresa, valide também recursos internos e não apenas acesso à internet.</li>
         </ul>
 
-        <h2>Esqueci a Senha do Painel?</h2>
-        <p>Aperte e segure o botão <strong>Reset</strong> atrás do roteador por 10 segundos. Volta para configuração de fábrica e você reconfigura. Atenção: vai apagar a senha do Wi-Fi também e voltar para a padrão de etiqueta.</p>
+        <h2>O que NÃO fazer</h2>
+        <ul>
+          <li>Não usar listas de “login padrão” de sites aleatórios.</li>
+          <li>Não manter a senha administrativa de fábrica quando o equipamento permite alterá-la.</li>
+          <li>Não habilitar administração remota pela internet sem necessidade e controle.</li>
+          <li>Não atualizar firmware de fonte não oficial.</li>
+          <li>Não apertar Reset de fábrica como primeira tentativa para recuperar acesso.</li>
+        </ul>
 
-        <h2>Ajuda Profissional</h2>
-        <p>A O Técnico de Informática configura segurança avançada, rede separada para visitas e reset de roteador em casa em Curitiba — atendimento via WhatsApp.</p>
+        <h2>Quando o reset de fábrica é perigoso</h2>
+        <p>
+          O reset apaga configurações locais. Em equipamentos do provedor ou ambientes com bridge, VLAN, PPPoE,
+          telefonia, IPTV, IP fixo, regras de porta ou rede corporativa, você pode transformar uma troca de senha
+          em indisponibilidade completa. Se não houver backup/configuração documentada, pare e consulte o suporte
+          do fabricante ou da operadora.
+        </p>
 
+        <h2>Checklist</h2>
+        <ul>
+          <li>Identifiquei o administrador real do equipamento.</li>
+          <li>Separei senha do Wi-Fi da senha do painel.</li>
+          <li>Usei o aplicativo/manual oficial, não credenciais genéricas.</li>
+          <li>Escolhi uma frase longa e exclusiva.</li>
+          <li>Revisei WPA2/WPA3 conforme compatibilidade.</li>
+          <li>Reconectei e testei os dispositivos críticos.</li>
+          <li>Não fiz reset sem conhecer o impacto.</li>
+        </ul>
+
+        <h2>Glossário rápido</h2>
+        <ul>
+          <li><strong>SSID:</strong> nome anunciado pela rede Wi-Fi.</li>
+          <li><strong>WPA2/WPA3:</strong> famílias de proteção usadas para autenticar e criptografar redes Wi-Fi.</li>
+          <li><strong>Gateway:</strong> equipamento que encaminha tráfego da rede local para outras redes.</li>
+          <li><strong>Firmware:</strong> software interno do roteador, fornecido pelo fabricante/operadora.</li>
+        </ul>
+
+        <h2>Perguntas frequentes</h2>
+        <h3>Trocar a senha expulsa quem já estava conectado?</h3>
+        <p>
+          Os clientes que dependem daquela credencial precisam autenticar novamente. O comportamento exato durante
+          a aplicação varia por roteador; valide os dispositivos após salvar.
+        </p>
+        <h3>Preciso esconder o nome da rede?</h3>
+        <p>
+          Ocultar SSID não substitui autenticação e criptografia fortes. Priorize modo de segurança moderno,
+          credenciais exclusivas, firmware suportado e administração protegida.
+        </p>
+        <h3>O Wi-Fi ficou pior depois da troca; a senha causa lentidão?</h3>
+        <p>
+          A senha em si não explica cobertura fraca. Verifique se outras configurações foram alteradas junto.
+          Para desempenho e cobertura, use o
+          <Link to="/blog/como-fazer-teste-velocidade-internet" className="text-accent"> teste de velocidade com referência por cabo</Link>
+          {" "}e o <Link to="/blog/como-melhorar-sinal-wifi-em-casa" className="text-accent">diagnóstico de sinal Wi-Fi</Link>.
+        </p>
+
+        <p>
+          Para conectar segurança, cobertura e diagnóstico, siga o
+          <Link to="/guia-tecnico-informatica#tema-redes-wifi" className="text-accent"> Atlas de redes e Wi-Fi</Link>.
+        </p>
+        <EditorialReferences slug="como-trocar-senha-wifi" />
       </>
     ),
   },
+
   "como-usar-rede-wifi-para-visitas": {
     title: "Como Criar Rede Wi-Fi de Visitantes: Proteja Sua Senha Principal (2026)",
     excerpt: "Aprenda como criar uma rede Wi-Fi separada para visitas em qualquer roteador, sem dar a senha principal. Configuração ajudada em Curitiba.",

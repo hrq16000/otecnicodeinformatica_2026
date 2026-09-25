@@ -86,6 +86,8 @@ export const ALLOWED_SOURCE_HOSTS = [
   "wireguard.com",
   "openvpn.net",
   "www.kingston.com",
+  "nsa.gov",
+  "www.nsa.gov",
 ] as const;
 
 // ─────────────────────────────────────────────────────────────
@@ -749,6 +751,76 @@ export const EDITORIAL_SOURCES: Record<string, EditorialSource> = {
     supports: [
       "Windows File Recovery pode tentar recuperar arquivos apagados de armazenamento local quando não estão disponíveis na Lixeira ou em backup.",
       "Minimizar o uso do computador após a exclusão pode aumentar a chance de recuperação.",
+    ],
+  },
+
+  "ms-password-reset-windows": {
+    id: "ms-password-reset-windows",
+    title: "Altere ou redefina a senha da sua conta Microsoft no Windows",
+    publisher: "Microsoft Support",
+    url: "https://support.microsoft.com/pt-br/accounts-billing/security/change-or-reset-your-microsoft-account-password-in-windows",
+    accessedAt: "2026-09-25",
+    sourceType: "official",
+    supports: [
+      "A recuperação de uma conta Microsoft pode ser iniciada pela tela de entrada do Windows ou pelo fluxo oficial de redefinição.",
+      "Uma conta local pode oferecer Redefinir senha com perguntas de segurança configuradas anteriormente.",
+      "O suporte da Microsoft não recupera nem contorna uma senha esquecida.",
+    ],
+  },
+  "ms-local-password-reset-disk": {
+    id: "ms-local-password-reset-disk",
+    title: "Criar um disco de redefinição de senha para uma conta local no Windows",
+    publisher: "Microsoft Support",
+    url: "https://support.microsoft.com/pt-br/windows/security/identity-signin/create-a-password-reset-disk-for-a-local-account-in-windows",
+    accessedAt: "2026-09-25",
+    sourceType: "official",
+    supports: [
+      "O disco de redefinição é uma medida preventiva para contas locais e precisa ser criado enquanto a conta está acessível.",
+    ],
+  },
+  "ms-file-explorer-windows": {
+    id: "ms-file-explorer-windows",
+    title: "Explorador de Arquivos no Windows",
+    publisher: "Microsoft Support",
+    url: "https://support.microsoft.com/pt-br/windows/experience/fileexplorer/file-explorer-in-windows",
+    accessedAt: "2026-09-25",
+    sourceType: "official",
+    supports: [
+      "O Explorador de Arquivos gerencia arquivos e pastas locais e de nuvem e permite fixar pastas no Acesso Rápido.",
+    ],
+  },
+  "ms-find-files-windows": {
+    id: "ms-find-files-windows",
+    title: "Localizar seus arquivos e aplicativos no Windows",
+    publisher: "Microsoft Support",
+    url: "https://support.microsoft.com/pt-br/windows/experience/storage-filemanagement/find-your-files-and-apps-in-windows",
+    accessedAt: "2026-09-25",
+    sourceType: "official",
+    supports: [
+      "A Pesquisa do Windows e a pesquisa do Explorador podem localizar documentos no computador e no OneDrive.",
+    ],
+  },
+  "ms-onedrive-folder-backup": {
+    id: "ms-onedrive-folder-backup",
+    title: "Fazer backup de suas pastas com o OneDrive",
+    publisher: "Microsoft Support",
+    url: "https://support.microsoft.com/pt-BR/onedrive/back-up-your-folders-with-onedrive",
+    accessedAt: "2026-09-25",
+    sourceType: "official",
+    supports: [
+      "O OneDrive pode proteger e sincronizar pastas conhecidas do Windows, incluindo Área de Trabalho, Documentos e Imagens.",
+      "Parar o backup de uma pasta exige decidir onde os arquivos permanecerão e pode exigir baixar itens somente online.",
+    ],
+  },
+  "nsa-router-hygiene-2026": {
+    id: "nsa-router-hygiene-2026",
+    title: "Improve Router Hygiene to Protect Against Russian State-Sponsored Targeting",
+    publisher: "National Security Agency",
+    url: "https://www.nsa.gov/Press-Room/Press-Releases-Statements/Press-Release-View/Article/4541059/nsa-and-partners-release-guidance-on-improving-router-hygiene-to-protect-agains/",
+    accessedAt: "2026-09-25",
+    sourceType: "official",
+    supports: [
+      "Roteadores devem usar senhas fortes e exclusivas e manter imagens de software/firmware atualizadas.",
     ],
   },
 
@@ -1668,6 +1740,34 @@ export const ARTICLE_SOURCE_MANIFEST: Record<string, ArticleSourceManifest> = {
     factCheckedAt: "2026-09-25",
     notes:
       "Reescrita material: remove regra falsa de que Wi-Fi é sempre mais lento e percentuais regulatórios antigos; ensina referência cabeada, repetição de medições, latência, jitter e perda.",
+  },
+
+  "como-resetar-senha-windows": {
+    slug: "como-resetar-senha-windows",
+    sources: ["ms-password-reset-windows", "ms-local-password-reset-disk", "ms-bitlocker-recovery"],
+    technicalReview: "reviewed",
+    factChecked: true,
+    factCheckedAt: "2026-09-25",
+    notes:
+      "Onda 11K: removido bypass por substituição de utilman.exe/cmd.exe; conteúdo agora diferencia PIN, conta Microsoft, conta local, conta corporativa e BitLocker e usa apenas recuperação oficial.",
+  },
+  "como-organizar-arquivos-windows-iniciantes": {
+    slug: "como-organizar-arquivos-windows-iniciantes",
+    sources: ["ms-file-explorer-windows", "ms-find-files-windows", "ms-onedrive-folder-backup"],
+    technicalReview: "reviewed",
+    factChecked: true,
+    factCheckedAt: "2026-09-25",
+    notes:
+      "Onda 11K: reescrita material com estrutura de pastas, nomenclatura, pesquisa, Acesso Rápido, sincronização, backup e critérios de parada diante de falha de disco.",
+  },
+  "como-trocar-senha-wifi": {
+    slug: "como-trocar-senha-wifi",
+    sources: ["wifi-alliance-security", "nsa-router-hygiene-2026"],
+    technicalReview: "reviewed",
+    factChecked: true,
+    factCheckedAt: "2026-09-25",
+    notes:
+      "Onda 11K: removidas credenciais e endereços genéricos, reset de fábrica como primeira opção e regra fixa de senha; adicionados painel oficial, separação de credenciais, WPA2/WPA3, firmware, validação e limites para roteador gerenciado.",
   },
 
 };

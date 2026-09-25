@@ -1369,6 +1369,47 @@ const WAVE_11J: EditorialApproval[] = [
   },
 ];
 
+
+// ── Onda 11K — credenciais, organização do Windows e segurança Wi-Fi.
+const WAVE_11K: EditorialApproval[] = [
+  {
+    slug: "como-resetar-senha-windows",
+    status: "approved",
+    authorType: "organization",
+    authorId: INSTITUTIONAL_AUTHOR.id,
+    reviewedAt: "2026-09-25",
+    approvedAt: "2026-09-25",
+    imageOrigin: "owned",
+    imageLicense: "Todos os direitos reservados",
+    imageAttribution: "Arte editorial original: O Técnico de Informática — https://otecnicodeinformatica.com.br/blog/como-resetar-senha-windows",
+    notes: "Reescrita completa com Microsoft Support: recuperação oficial por tipo de credencial, BitLocker, contas corporativas e remoção explícita de bypass de autenticação.",
+  },
+  {
+    slug: "como-organizar-arquivos-windows-iniciantes",
+    status: "approved",
+    authorType: "organization",
+    authorId: INSTITUTIONAL_AUTHOR.id,
+    reviewedAt: "2026-09-25",
+    approvedAt: "2026-09-25",
+    imageOrigin: "owned",
+    imageLicense: "Todos os direitos reservados",
+    imageAttribution: "Arte editorial original: O Técnico de Informática — https://otecnicodeinformatica.com.br/blog/como-organizar-arquivos-windows-iniciantes",
+    notes: "Reescrita completa com Microsoft Support: Explorador, pesquisa, Acesso Rápido, OneDrive, backup e segurança antes de movimentação em massa.",
+  },
+  {
+    slug: "como-trocar-senha-wifi",
+    status: "approved",
+    authorType: "organization",
+    authorId: INSTITUTIONAL_AUTHOR.id,
+    reviewedAt: "2026-09-25",
+    approvedAt: "2026-09-25",
+    imageOrigin: "owned",
+    imageLicense: "Todos os direitos reservados",
+    imageAttribution: "Arte editorial original: O Técnico de Informática — https://otecnicodeinformatica.com.br/blog/como-trocar-senha-wifi",
+    notes: "Reescrita completa com orientação oficial de segurança: painel legítimo, senhas separadas, WPA2/WPA3, firmware, validação e critérios para não resetar roteador gerenciado.",
+  },
+];
+
 export const APPROVED_EDITORIAL_CONTENT = new Map<string, EditorialApproval>([
 
   ...FIRST_WAVE_SLUGS.map((slug) => [
@@ -1427,6 +1468,7 @@ export const APPROVED_EDITORIAL_CONTENT = new Map<string, EditorialApproval>([
   ...WAVE_11H.map((a) => [a.slug, a] as [string, EditorialApproval]),
   ...WAVE_11I.map((a) => [a.slug, a] as [string, EditorialApproval]),
   ...WAVE_11J.map((a) => [a.slug, a] as [string, EditorialApproval]),
+  ...WAVE_11K.map((a) => [a.slug, a] as [string, EditorialApproval]),
 
 ]);
 

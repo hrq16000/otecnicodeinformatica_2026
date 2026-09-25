@@ -501,6 +501,38 @@ export const ATLAS_PONTES_ARTIGOS: Record<string, AtlasPonteArtigo> = {
   },
 
 
+  "como-resetar-senha-windows": {
+    temaId: "sistemas-operacionais",
+    porQue:
+      "Recuperação de acesso exige identificar a credencial certa antes de alterar qualquer coisa. A trilha de sistemas conecta conta, Windows Hello, recuperação, BitLocker e preservação de dados.",
+    proximoPasso: {
+      rotulo: "Segurança dos dados",
+      to: "/seguranca-dos-dados",
+      contexto: "Revise credenciais, chaves de recuperação e cópias antes de qualquer reinstalação.",
+    },
+  },
+  "como-organizar-arquivos-windows-iniciantes": {
+    temaId: "dados-backup",
+    porQue:
+      "Organização só é confiável quando localização, sincronização e recuperação são entendidas juntas. A trilha de dados separa estrutura de pastas, nuvem e backup.",
+    proximoPasso: {
+      rotulo: "Testar restauração de backup",
+      to: "/blog/como-testar-restauracao-de-backup",
+      contexto: "Confirme que os arquivos organizados podem ser recuperados se o computador falhar.",
+    },
+  },
+  "como-trocar-senha-wifi": {
+    temaId: "redes-wifi",
+    porQue:
+      "A senha é uma das camadas da rede. A trilha de redes conecta autenticação, firmware, segmentação, cobertura e diagnóstico sem transformar reset de fábrica em rotina.",
+    proximoPasso: {
+      rotulo: "Proteger o Wi-Fi da empresa",
+      to: "/blog/como-proteger-rede-wifi-empresa",
+      contexto: "Avance de uma credencial doméstica para segmentação, administração e ciclo de firmware.",
+    },
+  },
+
+
 };
 
 export interface AtlasPonteArtigoResolvida extends AtlasPonteArtigo {

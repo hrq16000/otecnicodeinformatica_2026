@@ -850,6 +850,29 @@ export const WAVE_11J_BATCH_1: EditorialWaveEntry[] = [
   },
 ];
 
+
+/** Onda 11K — credenciais, organização e segurança Wi-Fi. */
+export const WAVE_11K_BATCH_1: EditorialWaveEntry[] = [
+  {
+    wave: "11A", batch: "12", url: "/blog/como-resetar-senha-windows", slug: "como-resetar-senha-windows",
+    ownerId: "windows-recuperacao-credencial-oficial", cluster: "sistemas-operacionais", role: "satelite", publishedAt: "2026-09-25",
+    targetQueries: ["esqueci senha windows", "resetar senha windows conta microsoft", "redefinir senha conta local windows"],
+    doNotDuplicate: ["/blog/como-recuperar-conta-hackeada", "/seguranca-dos-dados"],
+  },
+  {
+    wave: "11A", batch: "12", url: "/blog/como-organizar-arquivos-windows-iniciantes", slug: "como-organizar-arquivos-windows-iniciantes",
+    ownerId: "windows-organizacao-arquivos", cluster: "dados-backup", role: "satelite", publishedAt: "2026-09-25",
+    targetQueries: ["como organizar arquivos windows 11", "organizar pastas no windows", "como achar arquivos windows"],
+    doNotDuplicate: ["/blog/como-fazer-backup-fotos-windows-iniciantes", "/blog/como-migrar-arquivos-para-um-computador-novo"],
+  },
+  {
+    wave: "11A", batch: "12", url: "/blog/como-trocar-senha-wifi", slug: "como-trocar-senha-wifi",
+    ownerId: "wifi-alterar-credencial-seguranca", cluster: "internet-wifi", role: "satelite", publishedAt: "2026-09-25",
+    targetQueries: ["como trocar senha wifi", "mudar senha do roteador wifi", "alterar senha rede wifi"],
+    doNotDuplicate: ["/blog/como-proteger-rede-wifi-empresa", "/blog/como-configurar-roteador-wifi-iniciantes"],
+  },
+];
+
 export const EDITORIAL_WAVES: EditorialWaveEntry[] = [
   ...WAVE_10C_BATCH_0,
   ...WAVE_10D_BATCH_1,
@@ -864,6 +887,7 @@ export const EDITORIAL_WAVES: EditorialWaveEntry[] = [
   ...WAVE_11H_BATCH_1,
   ...WAVE_11I_BATCH_1,
   ...WAVE_11J_BATCH_1,
+  ...WAVE_11K_BATCH_1,
 ];
 
 /** URLs monitoradas (ordem estável, sem duplicatas). */

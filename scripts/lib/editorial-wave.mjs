@@ -859,6 +859,26 @@ export const EDITORIAL_WAVE = [
     cover: "/blog/internet-lenta-provedor-ou-roteador.jpg",
   },
 
+
+  // ── Onda 11K — credenciais, organização e segurança Wi-Fi.
+  {
+    slug: "como-resetar-senha-windows", approvedAt: "2026-09-25",
+    pilar: "/seguranca-dos-dados", pilarLabel: "Segurança dos dados",
+    apoio: "/blog/windows-reparo-automatico-em-loop", apoioLabel: "Recuperação do Windows",
+    cover: "/blog/como-resetar-senha-windows.svg",
+  },
+  {
+    slug: "como-organizar-arquivos-windows-iniciantes", approvedAt: "2026-09-25",
+    pilar: "/guia-tecnico-informatica", pilarLabel: "Guia do técnico de informática",
+    apoio: "/blog/como-testar-restauracao-de-backup", apoioLabel: "Testar restauração de backup",
+    cover: "/blog/como-organizar-arquivos-windows-iniciantes.svg",
+  },
+  {
+    slug: "como-trocar-senha-wifi", approvedAt: "2026-09-25",
+    pilar: "/servicos/redes-e-wifi", pilarLabel: "Redes e Wi-Fi",
+    apoio: "/blog/como-proteger-rede-wifi-empresa", apoioLabel: "Proteger o Wi-Fi",
+    cover: "/blog/como-trocar-senha-wifi.svg",
+  },
 ];
 
 
