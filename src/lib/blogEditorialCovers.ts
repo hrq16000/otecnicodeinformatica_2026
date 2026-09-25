@@ -621,6 +621,22 @@ export const EDITORIAL_COVERS: Record<string, EditorialCover> = {
     height: 630,
   },
 
+  // ── Onda 11L — firmware, SMB e firewall Linux.
+  "como-configurar-bios-uefi-corretamente": {
+    src: "/blog/como-configurar-bios-uefi-corretamente.svg",
+    alt: "Ilustração editorial de firmware UEFI com boot, Secure Boot, TPM e armazenamento",
+    width: 1200, height: 630,
+  },
+  "como-configurar-servidor-de-arquivos": {
+    src: "/blog/como-configurar-servidor-de-arquivos.svg",
+    alt: "Ilustração editorial de servidor de arquivos com usuários, permissões e cópias de segurança",
+    width: 1200, height: 630,
+  },
+  "como-configurar-firewall-ufw-linux": {
+    src: "/blog/como-configurar-firewall-ufw-linux.svg",
+    alt: "Ilustração editorial de firewall UFW filtrando conexões para um servidor Linux",
+    width: 1200, height: 630,
+  },
 
 };
 
