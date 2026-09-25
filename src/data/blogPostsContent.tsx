@@ -4765,7 +4765,7 @@ docker run -d --name db --network minha-rede postgres
         </ul>
         <h2>Decisão: qual ajuste realmente faz sentido?</h2>
         <p>Se o problema é apenas escolher um dispositivo de inicialização, mexa na ordem de boot. Se é requisito do Windows 11, trate UEFI, Secure Boot e TPM separadamente. Se o disco não aparece, diagnostique controlador e armazenamento antes de trocar o modo. Se o problema é instabilidade, volte ao baseline antes de ativar perfis de desempenho.</p>
-        <h2>Perguntas frequentes</h2>
+        <h2>Dúvidas rápidas antes de começar</h2>
         <h3>Preciso ativar Secure Boot para usar Windows 11?</h3>
         <p>O Windows 11 exige que o computador seja compatível com Secure Boot em UEFI; manter o recurso habilitado melhora a proteção de inicialização e é a recomendação geral da Microsoft.</p>
         <h3>Ativar TPM apaga meus arquivos?</h3>
@@ -5310,7 +5310,7 @@ docker run -d --name db --network minha-rede postgres
           <li>Não trate RAID, snapshot e backup como se fossem a mesma coisa.</li>
           <li>Não abra TCP 445 para a internet para facilitar acesso remoto.</li>
         </ul>
-        <h2>Perguntas frequentes</h2>
+        <h2>Dúvidas rápidas antes de começar</h2>
         <h3>Windows 11 pode compartilhar arquivos como servidor?</h3>
         <p>Sim, o Windows cliente inclui o componente servidor SMB, mas recursos e limites variam. Para ambiente empresarial, escolha a plataforma pela necessidade de identidade, administração, disponibilidade e suporte.</p>
         <h3>Samba precisa de acesso convidado?</h3>
@@ -8802,7 +8802,7 @@ crontab -e
         </ul>
         <h2>Decisão: UFW é a camada certa?</h2>
         <p>Use UFW quando você precisa controlar conexões do próprio host Ubuntu com regras compreensíveis. Se a necessidade é segmentar várias redes, controlar NAT, concentrar VPNs ou aplicar política para muitos dispositivos, trate o problema como arquitetura de firewall/gateway. Se o servidor está em nuvem, alinhe UFW com Security Groups/firewall do provedor em vez de configurar cada camada sem relação.</p>
-        <h2>Perguntas frequentes</h2>
+        <h2>Dúvidas rápidas antes de começar</h2>
         <h3>UFW substitui um firewall de borda?</h3><p>Não. UFW protege o host; um firewall de borda controla tráfego entre redes e pode aplicar políticas antes de o pacote chegar ao servidor.</p>
         <h3>Posso permitir SSH só da minha rede?</h3><p>Sim. O UFW aceita regras com origem específica ou sub-rede. Isso reduz exposição quando a arquitetura permite uma origem administrativa estável.</p>
         <h3>Preciso reiniciar o servidor depois de cada regra?</h3><p>As regras do UFW são aplicadas pelo próprio utilitário; o importante é verificar o estado e testar o serviço após a mudança.</p>
@@ -10058,7 +10058,7 @@ crontab -e
           <li><strong>BitLocker:</strong> criptografia de volume que pode exigir chave de recuperação em determinados eventos.</li>
         </ul>
 
-        <h2>Perguntas frequentes</h2>
+        <h2>Dúvidas rápidas antes de começar</h2>
         <h3>O suporte consegue me dizer minha senha antiga?</h3>
         <p>
           Não. A recuperação redefine a credencial depois da verificação adequada; não existe procedimento
@@ -10228,7 +10228,7 @@ crontab -e
           <li><strong>Arquivo somente online:</strong> item visível no Explorador cujo conteúdo pode estar apenas na nuvem até ser aberto.</li>
         </ul>
 
-        <h2>Perguntas frequentes</h2>
+        <h2>Dúvidas rápidas antes de começar</h2>
         <h3>Muitos ícones na Área de Trabalho deixam o computador lento?</h3>
         <p>
           Não use isso como regra de diagnóstico. Uma Área de Trabalho cheia dificulta encontrar documentos, mas
@@ -11246,7 +11246,7 @@ crontab -e
           <li><strong>Firmware:</strong> software interno do roteador, fornecido pelo fabricante/operadora.</li>
         </ul>
 
-        <h2>Perguntas frequentes</h2>
+        <h2>Dúvidas rápidas antes de começar</h2>
         <h3>Trocar a senha expulsa quem já estava conectado?</h3>
         <p>
           Os clientes que dependem daquela credencial precisam autenticar novamente. O comportamento exato durante
