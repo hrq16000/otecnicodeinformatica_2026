@@ -393,6 +393,62 @@ export const ATLAS_PONTES_ARTIGOS: Record<string, AtlasPonteArtigo> = {
     },
   },
 
+  "como-configurar-repetidor-wifi": {
+    temaId: "redes-wifi",
+    porQue:
+      "Extensor de alcance só ajuda quando o problema real é cobertura e o ponto escolhido ainda recebe um sinal útil. A trilha de redes ensina a separar provedor, roteador, interferência, cobertura e arquitetura antes de adicionar equipamentos.",
+    proximoPasso: {
+      rotulo: "Internet lenta: provedor ou roteador",
+      to: "/blog/internet-lenta-provedor-ou-roteador",
+      contexto:
+        "Confirme se a origem da lentidão está na cobertura Wi-Fi ou já existe perto do roteador.",
+    },
+  },
+  "trocar-windows-por-linux-vale-a-pena": {
+    temaId: "sistemas-operacionais",
+    porQue:
+      "Migrar de sistema operacional é uma decisão de compatibilidade: aplicativos, hardware, boot, criptografia e recuperação precisam ser testados antes de alterar o disco.",
+    proximoPasso: {
+      rotulo: "Checklist antes de formatar",
+      to: "/ferramentas/checklist-antes-de-formatar",
+      contexto:
+        "Garanta dados, contas e chaves antes de instalar outro sistema ou reparticionar.",
+    },
+  },
+  "erros-comuns-upgrade-computador": {
+    temaId: "hardware-upgrades",
+    porQue:
+      "Upgrade seguro começa por compatibilidade elétrica, física, lógica e de firmware. A trilha de hardware ajuda a decidir se RAM, SSD, GPU ou fonte resolvem o gargalo real.",
+    proximoPasso: {
+      rotulo: "Upgrade de SSD e RAM",
+      to: "/servicos/upgrade-ssd-ram",
+      contexto:
+        "Quando a compatibilidade está confirmada e o objetivo é executar a troca com validação.",
+    },
+  },
+  "como-configurar-vpn-empresarial": {
+    temaId: "redes-wifi",
+    porQue:
+      "VPN cria um caminho autenticado para dentro da rede; identidade, rotas, DNS, segmentação, firewall e revogação precisam ser planejados juntos.",
+    proximoPasso: {
+      rotulo: "Firewall pfSense",
+      to: "/blog/como-configurar-firewall-pfsense",
+      contexto:
+        "Defina regras e segmentação do gateway antes de ampliar acesso remoto.",
+    },
+  },
+  "como-recuperar-conta-hackeada": {
+    temaId: "seguranca-privacidade",
+    porQue:
+      "Recuperar uma conta é só a primeira parte. A trilha de segurança conecta sessão, dispositivo, senha, MFA, recuperação e prevenção de phishing para impedir reentrada.",
+    proximoPasso: {
+      rotulo: "Configurar 2FA/MFA",
+      to: "/blog/como-configurar-2fa-em-tudo",
+      contexto:
+        "Depois de retomar controle, fortaleça autenticação e prepare métodos de recuperação.",
+    },
+  },
+
 };
 
 export interface AtlasPonteArtigoResolvida extends AtlasPonteArtigo {
