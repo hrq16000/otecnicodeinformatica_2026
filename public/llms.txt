@@ -152,6 +152,23 @@ cobramos execução que não tenha sido aprovada.
 - [Ordem de boot na BIOS: como configurar sem quebrar a inicialização](https://otecnicodeinformatica.com.br/blog/ordem-de-boot-na-bios-como-configurar)
 - [Manutenção preventiva de computador: o guia completo](https://otecnicodeinformatica.com.br/blog/manutencao-preventiva-de-computador-guia-completo)
 - [Dispositivo USB não reconhecido: como descobrir a causa](https://otecnicodeinformatica.com.br/blog/dispositivo-usb-nao-reconhecido-o-que-fazer)
+- [Como Configurar 2FA (Autenticação de Dois Fatores) em Tudo](https://otecnicodeinformatica.com.br/blog/como-configurar-2fa-em-tudo)
+- [Como Proteger a Rede Wi-Fi da Sua Empresa: Guia Técnico](https://otecnicodeinformatica.com.br/blog/como-proteger-rede-wifi-empresa)
+- [Como Configurar Firewall pfSense: Guia Completo Para Redes Empresariais](https://otecnicodeinformatica.com.br/blog/como-configurar-firewall-pfsense)
+- [Como Configurar Active Directory no Windows Server: Passo a Passo](https://otecnicodeinformatica.com.br/blog/como-configurar-active-directory)
+- [Como configurar repetidor Wi-Fi sem piorar a rede: posição, WPS e teste](https://otecnicodeinformatica.com.br/blog/como-configurar-repetidor-wifi)
+- [Trocar Windows por Linux vale a pena? Checklist de compatibilidade antes de migrar](https://otecnicodeinformatica.com.br/blog/trocar-windows-por-linux-vale-a-pena)
+- [Upgrade de PC ou notebook: checklist de compatibilidade antes de comprar peças](https://otecnicodeinformatica.com.br/blog/erros-comuns-upgrade-computador)
+- [VPN empresarial: como planejar acesso remoto seguro sem expor a rede](https://otecnicodeinformatica.com.br/blog/como-configurar-vpn-empresarial)
+- [Conta hackeada: como recuperar acesso e fechar as portas usadas pelo invasor](https://otecnicodeinformatica.com.br/blog/como-recuperar-conta-hackeada)
+- [Windows 11 lento: como deixar o PC mais rápido sem truques](https://otecnicodeinformatica.com.br/blog/como-deixar-windows-11-mais-rapido-iniciantes)
+- [Como fazer backup de fotos no Windows e comprovar que a cópia funciona](https://otecnicodeinformatica.com.br/blog/como-fazer-backup-fotos-windows-iniciantes)
+- [Como atualizar o Windows 11 com segurança e o que fazer quando falha](https://otecnicodeinformatica.com.br/blog/como-atualizar-windows-corretamente)
+- [Como recuperar arquivos apagados no Windows sem reduzir a chance de recuperação](https://otecnicodeinformatica.com.br/blog/como-recuperar-arquivos-apagados-windows)
+- [Como fazer teste de velocidade da internet e interpretar download, latência e Wi-Fi](https://otecnicodeinformatica.com.br/blog/como-fazer-teste-velocidade-internet)
+- [Esqueceu a senha do Windows? Como recuperar o acesso pelos métodos oficiais](https://otecnicodeinformatica.com.br/blog/como-resetar-senha-windows)
+- [Como organizar arquivos no Windows 11 sem perder documentos: método prático](https://otecnicodeinformatica.com.br/blog/como-organizar-arquivos-windows-iniciantes)
+- [Como trocar a senha do Wi-Fi com segurança sem perder a configuração do roteador](https://otecnicodeinformatica.com.br/blog/como-trocar-senha-wifi)
 
 ## Páginas institucionais e de política
 

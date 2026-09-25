@@ -4,6 +4,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Input } from "@/components/ui/input";
 import { toast } from "@/hooks/use-toast";
+import { exportarCsv } from "@/lib/exportarRelatorio";
 
 type Acao = {
   id: string;
@@ -20,6 +21,14 @@ type Acao = {
 const STATUS = ["novo", "contatado", "agendado", "fechado", "perdido"] as const;
 
 const hoje = () => new Date().toISOString().slice(0, 10);
+
+/** SLA: primeiro contato em até 24 h após a solicitação. */
+const sla = (l: Acao) =>
+  l.status_atendimento !== "novo"
+    ? "respondido"
+    : Date.now() - new Date(l.created_at).getTime() > 864e5
+      ? "estourado"
+      : "no prazo";
 
 /**
  * AÇÕES POR BAIRRO E SERVIÇO — gestão direta de cada solicitação.
@@ -62,10 +71,32 @@ export default function FunnelAcoesBairro({ dias = 60 }: { dias?: number }) {
 
   return (
     <Card className="mb-6">
-      <CardHeader className="pb-2">
+      <CardHeader className="flex flex-row items-center justify-between pb-2">
         <CardTitle className="text-base">
-          Ações por bairro e serviço — status e prazo ({dias} dias)
+          Ações por bairro e serviço — status, prazo e SLA ({dias} dias)
         </CardTitle>
+        <button
+          type="button"
+          className="rounded-md border px-3 py-1 text-xs"
+          disabled={!linhas.length}
+          onClick={() =>
+            exportarCsv(
+              "chamados",
+              linhas.map((l) => ({
+                data: l.created_at.slice(0, 10),
+                bairro: l.neighborhood_slug ?? "",
+                cidade: l.city ?? "",
+                servico: l.service_slug ?? l.equipamento ?? "",
+                sintoma: l.sintoma ?? "",
+                status: l.status_atendimento,
+                prazo: l.prazo ?? "",
+                sla: sla(l),
+              })),
+            )
+          }
+        >
+          Exportar CSV
+        </button>
       </CardHeader>
       <CardContent>
         {carregando ? (
@@ -118,6 +149,11 @@ export default function FunnelAcoesBairro({ dias = 60 }: { dias?: number }) {
                           if (valor !== (i.prazo ?? null)) void salvar(i.id, { prazo: valor });
                         }}
                       />
+                      {sla(i) === "estourado" && (
+                        <Badge variant="destructive" className="text-[10px]">
+                          SLA 24 h estourado
+                        </Badge>
+                      )}
                       {i.prazo && i.prazo < hoje() && i.status_atendimento !== "fechado" && (
                         <Badge variant="destructive" className="text-[10px]">
                           vencido
