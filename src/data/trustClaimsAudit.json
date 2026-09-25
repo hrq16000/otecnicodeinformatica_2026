@@ -1,14 +1,14 @@
 {
-  "geradoEm": "2026-09-03",
-  "total": 304,
+  "geradoEm": "2026-09-25",
+  "total": 298,
   "porClasse": {
     "COMPROVADA": 114,
     "INSTITUCIONAL": 21,
-    "CONDICIONAL": 169,
+    "CONDICIONAL": 163,
     "REMOVIDA": 0,
     "PENDENTE": 0
   },
-  "urlsCuradas": 247,
+  "urlsCuradas": 267,
   "familias": [
     {
       "id": "garantia",
@@ -20,7 +20,7 @@
       "id": "prazo-prometido",
       "titulo": "Prazo de atendimento prometido",
       "risco": "Prazo fixo sem controle de agenda, trânsito e peça.",
-      "total": 113
+      "total": 107
     },
     {
       "id": "todos-os-portes",
@@ -80,7 +80,7 @@
     },
     {
       "path": "/assistencia-tecnica-curitiba",
-      "curada": true,
+      "curada": false,
       "total": 6,
       "porClasse": {
         "COMPROVADA": 3,
@@ -1675,6 +1675,18 @@
       }
     },
     {
+      "path": "/blog/como-atualizar-windows-corretamente",
+      "curada": true,
+      "total": 0,
+      "porClasse": {
+        "COMPROVADA": 0,
+        "INSTITUCIONAL": 0,
+        "CONDICIONAL": 0,
+        "REMOVIDA": 0,
+        "PENDENTE": 0
+      }
+    },
+    {
       "path": "/blog/como-clonar-hd-para-ssd",
       "curada": true,
       "total": 0,
@@ -1699,7 +1711,127 @@
       }
     },
     {
+      "path": "/blog/como-configurar-2fa-em-tudo",
+      "curada": true,
+      "total": 0,
+      "porClasse": {
+        "COMPROVADA": 0,
+        "INSTITUCIONAL": 0,
+        "CONDICIONAL": 0,
+        "REMOVIDA": 0,
+        "PENDENTE": 0
+      }
+    },
+    {
+      "path": "/blog/como-configurar-active-directory",
+      "curada": true,
+      "total": 0,
+      "porClasse": {
+        "COMPROVADA": 0,
+        "INSTITUCIONAL": 0,
+        "CONDICIONAL": 0,
+        "REMOVIDA": 0,
+        "PENDENTE": 0
+      }
+    },
+    {
+      "path": "/blog/como-configurar-bios-uefi-corretamente",
+      "curada": true,
+      "total": 0,
+      "porClasse": {
+        "COMPROVADA": 0,
+        "INSTITUCIONAL": 0,
+        "CONDICIONAL": 0,
+        "REMOVIDA": 0,
+        "PENDENTE": 0
+      }
+    },
+    {
+      "path": "/blog/como-configurar-firewall-pfsense",
+      "curada": true,
+      "total": 0,
+      "porClasse": {
+        "COMPROVADA": 0,
+        "INSTITUCIONAL": 0,
+        "CONDICIONAL": 0,
+        "REMOVIDA": 0,
+        "PENDENTE": 0
+      }
+    },
+    {
+      "path": "/blog/como-configurar-firewall-ufw-linux",
+      "curada": true,
+      "total": 0,
+      "porClasse": {
+        "COMPROVADA": 0,
+        "INSTITUCIONAL": 0,
+        "CONDICIONAL": 0,
+        "REMOVIDA": 0,
+        "PENDENTE": 0
+      }
+    },
+    {
+      "path": "/blog/como-configurar-repetidor-wifi",
+      "curada": true,
+      "total": 0,
+      "porClasse": {
+        "COMPROVADA": 0,
+        "INSTITUCIONAL": 0,
+        "CONDICIONAL": 0,
+        "REMOVIDA": 0,
+        "PENDENTE": 0
+      }
+    },
+    {
       "path": "/blog/como-configurar-roteador-wifi-iniciantes",
+      "curada": true,
+      "total": 0,
+      "porClasse": {
+        "COMPROVADA": 0,
+        "INSTITUCIONAL": 0,
+        "CONDICIONAL": 0,
+        "REMOVIDA": 0,
+        "PENDENTE": 0
+      }
+    },
+    {
+      "path": "/blog/como-configurar-servidor-de-arquivos",
+      "curada": true,
+      "total": 0,
+      "porClasse": {
+        "COMPROVADA": 0,
+        "INSTITUCIONAL": 0,
+        "CONDICIONAL": 0,
+        "REMOVIDA": 0,
+        "PENDENTE": 0
+      }
+    },
+    {
+      "path": "/blog/como-configurar-vpn-empresarial",
+      "curada": true,
+      "total": 0,
+      "porClasse": {
+        "COMPROVADA": 0,
+        "INSTITUCIONAL": 0,
+        "CONDICIONAL": 0,
+        "REMOVIDA": 0,
+        "PENDENTE": 0
+      }
+    },
+    {
+      "path": "/blog/como-deixar-celular-android-mais-rapido",
+      "curada": true,
+      "total": 0,
+      "porClasse": {
+        "COMPROVADA": 0,
+        "INSTITUCIONAL": 0,
+        "CONDICIONAL": 0,
+        "REMOVIDA": 0,
+        "PENDENTE": 0
+      }
+    },
+    {
+      "path": "/blog/como-deixar-windows-11-mais-rapido-iniciantes",
       "curada": true,
       "total": 0,
       "porClasse": {
@@ -1736,6 +1868,30 @@
     },
     {
       "path": "/blog/como-escolher-uma-workstation",
+      "curada": true,
+      "total": 0,
+      "porClasse": {
+        "COMPROVADA": 0,
+        "INSTITUCIONAL": 0,
+        "CONDICIONAL": 0,
+        "REMOVIDA": 0,
+        "PENDENTE": 0
+      }
+    },
+    {
+      "path": "/blog/como-fazer-backup-fotos-windows-iniciantes",
+      "curada": true,
+      "total": 0,
+      "porClasse": {
+        "COMPROVADA": 0,
+        "INSTITUCIONAL": 0,
+        "CONDICIONAL": 0,
+        "REMOVIDA": 0,
+        "PENDENTE": 0
+      }
+    },
+    {
+      "path": "/blog/como-fazer-teste-velocidade-internet",
       "curada": true,
       "total": 0,
       "porClasse": {
@@ -1855,7 +2011,55 @@
       }
     },
     {
+      "path": "/blog/como-organizar-arquivos-windows-iniciantes",
+      "curada": true,
+      "total": 0,
+      "porClasse": {
+        "COMPROVADA": 0,
+        "INSTITUCIONAL": 0,
+        "CONDICIONAL": 0,
+        "REMOVIDA": 0,
+        "PENDENTE": 0
+      }
+    },
+    {
       "path": "/blog/como-proteger-computador-golpes-internet",
+      "curada": true,
+      "total": 0,
+      "porClasse": {
+        "COMPROVADA": 0,
+        "INSTITUCIONAL": 0,
+        "CONDICIONAL": 0,
+        "REMOVIDA": 0,
+        "PENDENTE": 0
+      }
+    },
+    {
+      "path": "/blog/como-proteger-rede-wifi-empresa",
+      "curada": true,
+      "total": 0,
+      "porClasse": {
+        "COMPROVADA": 0,
+        "INSTITUCIONAL": 0,
+        "CONDICIONAL": 0,
+        "REMOVIDA": 0,
+        "PENDENTE": 0
+      }
+    },
+    {
+      "path": "/blog/como-recuperar-arquivos-apagados-windows",
+      "curada": true,
+      "total": 0,
+      "porClasse": {
+        "COMPROVADA": 0,
+        "INSTITUCIONAL": 0,
+        "CONDICIONAL": 0,
+        "REMOVIDA": 0,
+        "PENDENTE": 0
+      }
+    },
+    {
+      "path": "/blog/como-recuperar-conta-hackeada",
       "curada": true,
       "total": 0,
       "porClasse": {
@@ -1880,6 +2084,18 @@
     },
     {
       "path": "/blog/como-remover-virus-windows-iniciantes",
+      "curada": true,
+      "total": 0,
+      "porClasse": {
+        "COMPROVADA": 0,
+        "INSTITUCIONAL": 0,
+        "CONDICIONAL": 0,
+        "REMOVIDA": 0,
+        "PENDENTE": 0
+      }
+    },
+    {
+      "path": "/blog/como-resetar-senha-windows",
       "curada": true,
       "total": 0,
       "porClasse": {
@@ -1952,6 +2168,18 @@
     },
     {
       "path": "/blog/como-trocar-pasta-termica-notebook",
+      "curada": true,
+      "total": 0,
+      "porClasse": {
+        "COMPROVADA": 0,
+        "INSTITUCIONAL": 0,
+        "CONDICIONAL": 0,
+        "REMOVIDA": 0,
+        "PENDENTE": 0
+      }
+    },
+    {
+      "path": "/blog/como-trocar-senha-wifi",
       "curada": true,
       "total": 0,
       "porClasse": {
@@ -2072,6 +2300,18 @@
     },
     {
       "path": "/blog/erro-no-bootable-device-como-resolver",
+      "curada": true,
+      "total": 0,
+      "porClasse": {
+        "COMPROVADA": 0,
+        "INSTITUCIONAL": 0,
+        "CONDICIONAL": 0,
+        "REMOVIDA": 0,
+        "PENDENTE": 0
+      }
+    },
+    {
+      "path": "/blog/erros-comuns-upgrade-computador",
       "curada": true,
       "total": 0,
       "porClasse": {
@@ -2396,6 +2636,18 @@
     },
     {
       "path": "/blog/testar-memoria-ram-memtest86",
+      "curada": true,
+      "total": 0,
+      "porClasse": {
+        "COMPROVADA": 0,
+        "INSTITUCIONAL": 0,
+        "CONDICIONAL": 0,
+        "REMOVIDA": 0,
+        "PENDENTE": 0
+      }
+    },
+    {
+      "path": "/blog/trocar-windows-por-linux-vale-a-pena",
       "curada": true,
       "total": 0,
       "porClasse": {
@@ -4340,7 +4592,7 @@
       "familiaTitulo": "Identificação do técnico",
       "risco": "Compromisso operacional; precisa ser cumprido em todo atendimento.",
       "arquivo": "src/components/home/HomeSections.tsx",
-      "linha": 330,
+      "linha": 331,
       "trecho": "{/* 5B. PROVA REAL — bancada, técnico identificado e atendimento (fail-closed) */}",
       "classificacao": "INSTITUCIONAL",
       "criterio": "Compromisso operacional do negócio, não métrica",
@@ -4405,7 +4657,7 @@
       "familiaTitulo": "Garantia",
       "risco": "Prazo ou abrangência divergente da política comercial central.",
       "arquivo": "src/data/blogPostsContent.tsx",
-      "linha": 2012,
+      "linha": 2026,
       "trecho": "<p className=\"text-muted-foreground mb-0\">O Técnico de Informática instala câmeras Intelbras em <strong>Itapoá, Guaratuba e todo o litoral do PR</strong>. Kit completo com 4 câmera",
       "classificacao": "COMPROVADA",
       "criterio": "Prazo e escopo vêm da fonte comercial única",
@@ -4418,7 +4670,7 @@
       "familiaTitulo": "Garantia",
       "risco": "Prazo ou abrangência divergente da política comercial central.",
       "arquivo": "src/data/blogPostsContent.tsx",
-      "linha": 2050,
+      "linha": 2064,
       "trecho": "<p>No Brasil, a <strong>Intelbras</strong> é líder absoluta em CFTV. Oferece equipamentos de qualidade, suporte nacional, garantia real e app de acesso remoto estável. Evite marcas",
       "classificacao": "COMPROVADA",
       "criterio": "Prazo e escopo vêm da fonte comercial única",
@@ -4431,7 +4683,7 @@
       "familiaTitulo": "Garantia",
       "risco": "Prazo ou abrangência divergente da política comercial central.",
       "arquivo": "src/data/blogPostsContent.tsx",
-      "linha": 2063,
+      "linha": 2077,
       "trecho": "<p className=\"text-muted-foreground mb-0\">Kit completo com 4 câmeras HD, DVR 4 canais, HD de gravação, cabos, conectores e <strong>instalação profissional inclusa</strong> por R$ 1",
       "classificacao": "COMPROVADA",
       "criterio": "Prazo e escopo vêm da fonte comercial única",
@@ -4444,7 +4696,7 @@
       "familiaTitulo": "Garantia",
       "risco": "Prazo ou abrangência divergente da política comercial central.",
       "arquivo": "src/data/blogPostsContent.tsx",
-      "linha": 2138,
+      "linha": 2152,
       "trecho": "<p className=\"text-muted-foreground mb-0\">Kit 4 câmeras Intelbras com instalação especializada por <strong>R$ 1.350</strong>. Atendimento no litoral do Paraná conforme disponibilid",
       "classificacao": "COMPROVADA",
       "criterio": "Prazo e escopo vêm da fonte comercial única",
@@ -4457,7 +4709,7 @@
       "familiaTitulo": "Tempo de experiência / atuação",
       "risco": "Anos de mercado divergentes entre páginas e sem fonte única.",
       "arquivo": "src/data/blogPostsContent.tsx",
-      "linha": 2259,
+      "linha": 2273,
       "trecho": "um problema detectado desde 2025. A empresa afirma estar trabalhando em uma correção, mas ainda não divulgou prazo.",
       "classificacao": "CONDICIONAL",
       "criterio": "Data de início da atuação técnica vem da configuração única do site, não de certificação externa",
@@ -4470,7 +4722,7 @@
       "familiaTitulo": "Prazo de atendimento prometido",
       "risco": "Prazo fixo sem controle de agenda, trânsito e peça.",
       "arquivo": "src/data/blogPostsContent.tsx",
-      "linha": 6231,
+      "linha": 6326,
       "trecho": "<p>Atendemos Curitiba, São José dos Pinhais, Pinhais, Colombo, Almirante Tamandaré, Araucária, Campo Largo, Campo Magro, Piraquara, Quatro Barras e Fazenda Rio Grande. Diagnóstico ",
       "classificacao": "CONDICIONAL",
       "criterio": "Tempos de deslocamento e janelas de atendimento são estimativas dependentes de agenda, trânsito e disponibilidade de peça",
@@ -4483,7 +4735,7 @@
       "familiaTitulo": "Prazo de atendimento prometido",
       "risco": "Prazo fixo sem controle de agenda, trânsito e peça.",
       "arquivo": "src/data/blogPostsContent.tsx",
-      "linha": 6346,
+      "linha": 6441,
       "trecho": "<p>Atendemos Curitiba, São José dos Pinhais, Pinhais, Colombo, Almirante Tamandaré, Araucária, Campo Largo, Campo Magro, Piraquara, Quatro Barras e Fazenda Rio Grande. Diagnóstico ",
       "classificacao": "CONDICIONAL",
       "criterio": "Tempos de deslocamento e janelas de atendimento são estimativas dependentes de agenda, trânsito e disponibilidade de peça",
@@ -4496,7 +4748,7 @@
       "familiaTitulo": "Prazo de atendimento prometido",
       "risco": "Prazo fixo sem controle de agenda, trânsito e peça.",
       "arquivo": "src/data/blogPostsContent.tsx",
-      "linha": 6554,
+      "linha": 6649,
       "trecho": "<p>Atendemos Curitiba, São José dos Pinhais, Pinhais, Colombo, Almirante Tamandaré, Araucária, Campo Largo, Campo Magro, Piraquara, Quatro Barras e Fazenda Rio Grande. Diagnóstico ",
       "classificacao": "CONDICIONAL",
       "criterio": "Tempos de deslocamento e janelas de atendimento são estimativas dependentes de agenda, trânsito e disponibilidade de peça",
@@ -4509,7 +4761,7 @@
       "familiaTitulo": "Prazo de atendimento prometido",
       "risco": "Prazo fixo sem controle de agenda, trânsito e peça.",
       "arquivo": "src/data/blogPostsContent.tsx",
-      "linha": 6669,
+      "linha": 6764,
       "trecho": "<p>Atendemos Curitiba, São José dos Pinhais, Pinhais, Colombo, Almirante Tamandaré, Araucária, Campo Largo, Campo Magro, Piraquara, Quatro Barras e Fazenda Rio Grande. Diagnóstico ",
       "classificacao": "CONDICIONAL",
       "criterio": "Tempos de deslocamento e janelas de atendimento são estimativas dependentes de agenda, trânsito e disponibilidade de peça",
@@ -4522,7 +4774,7 @@
       "familiaTitulo": "Prazo de atendimento prometido",
       "risco": "Prazo fixo sem controle de agenda, trânsito e peça.",
       "arquivo": "src/data/blogPostsContent.tsx",
-      "linha": 6784,
+      "linha": 6879,
       "trecho": "<p>Atendemos Curitiba, São José dos Pinhais, Pinhais, Colombo, Almirante Tamandaré, Araucária, Campo Largo, Campo Magro, Piraquara, Quatro Barras e Fazenda Rio Grande. Diagnóstico ",
       "classificacao": "CONDICIONAL",
       "criterio": "Tempos de deslocamento e janelas de atendimento são estimativas dependentes de agenda, trânsito e disponibilidade de peça",
@@ -4535,7 +4787,7 @@
       "familiaTitulo": "Cobertura empresarial irrestrita",
       "risco": "“Todos os portes / todas as marcas / todos os modelos” não é sustentável.",
       "arquivo": "src/data/blogPostsContent.tsx",
-      "linha": 6903,
+      "linha": 6998,
       "trecho": "<p>A <strong>{BRAND_NAME}</strong> oferece suporte profissional para servidores e desktops Linux em Curitiba e região. Configuração de servidores web, e-mail, samba, firewall, moni",
       "classificacao": "CONDICIONAL",
       "criterio": "Atendimento a qualquer marca vale para diagnóstico e serviços de software/hardware comum; depende de disponibilidade de peça e de o modelo permitir reparo",
@@ -4548,7 +4800,7 @@
       "familiaTitulo": "Cobertura empresarial irrestrita",
       "risco": "“Todos os portes / todas as marcas / todos os modelos” não é sustentável.",
       "arquivo": "src/data/blogPostsContent.tsx",
-      "linha": 7023,
+      "linha": 7118,
       "trecho": "<p>A <strong>{BRAND_NAME}</strong> oferece suporte profissional para servidores e desktops Linux em Curitiba e região. Configuração de servidores web, e-mail, samba, firewall, moni",
       "classificacao": "CONDICIONAL",
       "criterio": "Atendimento a qualquer marca vale para diagnóstico e serviços de software/hardware comum; depende de disponibilidade de peça e de o modelo permitir reparo",
@@ -4561,7 +4813,7 @@
       "familiaTitulo": "Cobertura empresarial irrestrita",
       "risco": "“Todos os portes / todas as marcas / todos os modelos” não é sustentável.",
       "arquivo": "src/data/blogPostsContent.tsx",
-      "linha": 7143,
+      "linha": 7238,
       "trecho": "<p>A <strong>{BRAND_NAME}</strong> oferece suporte profissional para servidores e desktops Linux em Curitiba e região. Configuração de servidores web, e-mail, samba, firewall, moni",
       "classificacao": "CONDICIONAL",
       "criterio": "Atendimento a qualquer marca vale para diagnóstico e serviços de software/hardware comum; depende de disponibilidade de peça e de o modelo permitir reparo",
@@ -4574,7 +4826,7 @@
       "familiaTitulo": "Cobertura empresarial irrestrita",
       "risco": "“Todos os portes / todas as marcas / todos os modelos” não é sustentável.",
       "arquivo": "src/data/blogPostsContent.tsx",
-      "linha": 7263,
+      "linha": 7358,
       "trecho": "<p>A <strong>{BRAND_NAME}</strong> oferece suporte profissional para servidores e desktops Linux em Curitiba e região. Configuração de servidores web, e-mail, samba, firewall, moni",
       "classificacao": "CONDICIONAL",
       "criterio": "Atendimento a qualquer marca vale para diagnóstico e serviços de software/hardware comum; depende de disponibilidade de peça e de o modelo permitir reparo",
@@ -4587,7 +4839,7 @@
       "familiaTitulo": "Cobertura empresarial irrestrita",
       "risco": "“Todos os portes / todas as marcas / todos os modelos” não é sustentável.",
       "arquivo": "src/data/blogPostsContent.tsx",
-      "linha": 7383,
+      "linha": 7478,
       "trecho": "<p>A <strong>{BRAND_NAME}</strong> oferece suporte profissional para servidores e desktops Linux em Curitiba e região. Configuração de servidores web, e-mail, samba, firewall, moni",
       "classificacao": "CONDICIONAL",
       "criterio": "Atendimento a qualquer marca vale para diagnóstico e serviços de software/hardware comum; depende de disponibilidade de peça e de o modelo permitir reparo",
@@ -4600,7 +4852,7 @@
       "familiaTitulo": "Cobertura empresarial irrestrita",
       "risco": "“Todos os portes / todas as marcas / todos os modelos” não é sustentável.",
       "arquivo": "src/data/blogPostsContent.tsx",
-      "linha": 7503,
+      "linha": 7598,
       "trecho": "<p>A <strong>{BRAND_NAME}</strong> oferece suporte profissional para servidores e desktops Linux em Curitiba e região. Configuração de servidores web, e-mail, samba, firewall, moni",
       "classificacao": "CONDICIONAL",
       "criterio": "Atendimento a qualquer marca vale para diagnóstico e serviços de software/hardware comum; depende de disponibilidade de peça e de o modelo permitir reparo",
@@ -4613,7 +4865,7 @@
       "familiaTitulo": "Cobertura empresarial irrestrita",
       "risco": "“Todos os portes / todas as marcas / todos os modelos” não é sustentável.",
       "arquivo": "src/data/blogPostsContent.tsx",
-      "linha": 7623,
+      "linha": 7718,
       "trecho": "<p>A <strong>{BRAND_NAME}</strong> oferece suporte profissional para servidores e desktops Linux em Curitiba e região. Configuração de servidores web, e-mail, samba, firewall, moni",
       "classificacao": "CONDICIONAL",
       "criterio": "Atendimento a qualquer marca vale para diagnóstico e serviços de software/hardware comum; depende de disponibilidade de peça e de o modelo permitir reparo",
@@ -4626,7 +4878,7 @@
       "familiaTitulo": "Cobertura empresarial irrestrita",
       "risco": "“Todos os portes / todas as marcas / todos os modelos” não é sustentável.",
       "arquivo": "src/data/blogPostsContent.tsx",
-      "linha": 7743,
+      "linha": 7838,
       "trecho": "<p>A <strong>{BRAND_NAME}</strong> oferece suporte profissional para servidores e desktops Linux em Curitiba e região. Configuração de servidores web, e-mail, samba, firewall, moni",
       "classificacao": "CONDICIONAL",
       "criterio": "Atendimento a qualquer marca vale para diagnóstico e serviços de software/hardware comum; depende de disponibilidade de peça e de o modelo permitir reparo",
@@ -4639,7 +4891,7 @@
       "familiaTitulo": "Prazo de atendimento prometido",
       "risco": "Prazo fixo sem controle de agenda, trânsito e peça.",
       "arquivo": "src/data/blogPostsContent.tsx",
-      "linha": 8745,
+      "linha": 8939,
       "trecho": "<li><strong>Plano de resposta a incidentes</strong> que inclua notificação à ANPD em até 48h</li>",
       "classificacao": "CONDICIONAL",
       "criterio": "Tempos de deslocamento e janelas de atendimento são estimativas dependentes de agenda, trânsito e disponibilidade de peça",
@@ -4652,7 +4904,7 @@
       "familiaTitulo": "Prazo de atendimento prometido",
       "risco": "Prazo fixo sem controle de agenda, trânsito e peça.",
       "arquivo": "src/data/blogPostsContent.tsx",
-      "linha": 8871,
+      "linha": 9065,
       "trecho": "<li><strong>Plano de resposta a incidentes</strong> que inclua notificação à ANPD em até 48h</li>",
       "classificacao": "CONDICIONAL",
       "criterio": "Tempos de deslocamento e janelas de atendimento são estimativas dependentes de agenda, trânsito e disponibilidade de peça",
@@ -4665,7 +4917,7 @@
       "familiaTitulo": "Prazo de atendimento prometido",
       "risco": "Prazo fixo sem controle de agenda, trânsito e peça.",
       "arquivo": "src/data/blogPostsContent.tsx",
-      "linha": 8997,
+      "linha": 9191,
       "trecho": "<li><strong>Plano de resposta a incidentes</strong> que inclua notificação à ANPD em até 48h</li>",
       "classificacao": "CONDICIONAL",
       "criterio": "Tempos de deslocamento e janelas de atendimento são estimativas dependentes de agenda, trânsito e disponibilidade de peça",
@@ -4678,7 +4930,7 @@
       "familiaTitulo": "Prazo de atendimento prometido",
       "risco": "Prazo fixo sem controle de agenda, trânsito e peça.",
       "arquivo": "src/data/blogPostsContent.tsx",
-      "linha": 9123,
+      "linha": 9317,
       "trecho": "<li><strong>Plano de resposta a incidentes</strong> que inclua notificação à ANPD em até 48h</li>",
       "classificacao": "CONDICIONAL",
       "criterio": "Tempos de deslocamento e janelas de atendimento são estimativas dependentes de agenda, trânsito e disponibilidade de peça",
@@ -4691,7 +4943,7 @@
       "familiaTitulo": "Prazo de atendimento prometido",
       "risco": "Prazo fixo sem controle de agenda, trânsito e peça.",
       "arquivo": "src/data/blogPostsContent.tsx",
-      "linha": 9249,
+      "linha": 9443,
       "trecho": "<li><strong>Plano de resposta a incidentes</strong> que inclua notificação à ANPD em até 48h</li>",
       "classificacao": "CONDICIONAL",
       "criterio": "Tempos de deslocamento e janelas de atendimento são estimativas dependentes de agenda, trânsito e disponibilidade de peça",
@@ -4704,47 +4956,8 @@
       "familiaTitulo": "Prazo de atendimento prometido",
       "risco": "Prazo fixo sem controle de agenda, trânsito e peça.",
       "arquivo": "src/data/blogPostsContent.tsx",
-      "linha": 9375,
+      "linha": 9569,
       "trecho": "<li><strong>Plano de resposta a incidentes</strong> que inclua notificação à ANPD em até 48h</li>",
-      "classificacao": "CONDICIONAL",
-      "criterio": "Tempos de deslocamento e janelas de atendimento são estimativas dependentes de agenda, trânsito e disponibilidade de peça",
-      "evidencia": "Não existe SLA contratado; o texto precisa manter o qualificador ('conforme disponibilidade', 'estimado', 'quando há peça em estoque')",
-      "acao": "Proibido prazo absoluto sem condicionante. 'Atendimento imediato' e 'resposta em até 5 minutos' foram removidos nesta rodada.",
-      "urls": []
-    },
-    {
-      "familia": "prazo-prometido",
-      "familiaTitulo": "Prazo de atendimento prometido",
-      "risco": "Prazo fixo sem controle de agenda, trânsito e peça.",
-      "arquivo": "src/data/blogPostsContent.tsx",
-      "linha": 9501,
-      "trecho": "<li><strong>Plano de resposta a incidentes</strong> que inclua notificação à ANPD em até 48h</li>",
-      "classificacao": "CONDICIONAL",
-      "criterio": "Tempos de deslocamento e janelas de atendimento são estimativas dependentes de agenda, trânsito e disponibilidade de peça",
-      "evidencia": "Não existe SLA contratado; o texto precisa manter o qualificador ('conforme disponibilidade', 'estimado', 'quando há peça em estoque')",
-      "acao": "Proibido prazo absoluto sem condicionante. 'Atendimento imediato' e 'resposta em até 5 minutos' foram removidos nesta rodada.",
-      "urls": []
-    },
-    {
-      "familia": "prazo-prometido",
-      "familiaTitulo": "Prazo de atendimento prometido",
-      "risco": "Prazo fixo sem controle de agenda, trânsito e peça.",
-      "arquivo": "src/data/blogPostsContent.tsx",
-      "linha": 9627,
-      "trecho": "<li><strong>Plano de resposta a incidentes</strong> que inclua notificação à ANPD em até 48h</li>",
-      "classificacao": "CONDICIONAL",
-      "criterio": "Tempos de deslocamento e janelas de atendimento são estimativas dependentes de agenda, trânsito e disponibilidade de peça",
-      "evidencia": "Não existe SLA contratado; o texto precisa manter o qualificador ('conforme disponibilidade', 'estimado', 'quando há peça em estoque')",
-      "acao": "Proibido prazo absoluto sem condicionante. 'Atendimento imediato' e 'resposta em até 5 minutos' foram removidos nesta rodada.",
-      "urls": []
-    },
-    {
-      "familia": "prazo-prometido",
-      "familiaTitulo": "Prazo de atendimento prometido",
-      "risco": "Prazo fixo sem controle de agenda, trânsito e peça.",
-      "arquivo": "src/data/blogPostsContent.tsx",
-      "linha": 10818,
-      "trecho": "<li>Em até 2 minutos, aperte o botão <strong>WPS</strong> do repetidor</li>",
       "classificacao": "CONDICIONAL",
       "criterio": "Tempos de deslocamento e janelas de atendimento são estimativas dependentes de agenda, trânsito e disponibilidade de peça",
       "evidencia": "Não existe SLA contratado; o texto precisa manter o qualificador ('conforme disponibilidade', 'estimado', 'quando há peça em estoque')",
@@ -4823,19 +5036,6 @@
       "arquivo": "src/lib/bairrosLote4.ts",
       "linha": 97,
       "trecho": "\"A partir dessa resposta, a triagem pelo WhatsApp separa o que dá para tratar por acesso remoto no mesmo dia, o que exige visita ao endereço onde o notebook está e o que precisa ir",
-      "classificacao": "CONDICIONAL",
-      "criterio": "Tempos de deslocamento e janelas de atendimento são estimativas dependentes de agenda, trânsito e disponibilidade de peça",
-      "evidencia": "Não existe SLA contratado; o texto precisa manter o qualificador ('conforme disponibilidade', 'estimado', 'quando há peça em estoque')",
-      "acao": "Proibido prazo absoluto sem condicionante. 'Atendimento imediato' e 'resposta em até 5 minutos' foram removidos nesta rodada.",
-      "urls": []
-    },
-    {
-      "familia": "prazo-prometido",
-      "familiaTitulo": "Prazo de atendimento prometido",
-      "risco": "Prazo fixo sem controle de agenda, trânsito e peça.",
-      "arquivo": "src/lib/bairrosLote4.ts",
-      "linha": 229,
-      "trecho": "\"O atendimento leva isso em conta desde a triagem pelo WhatsApp. Perguntamos o que precisa voltar a funcionar primeiro, se existe prazo no mesmo dia e se há um segundo equipamento ",
       "classificacao": "CONDICIONAL",
       "criterio": "Tempos de deslocamento e janelas de atendimento são estimativas dependentes de agenda, trânsito e disponibilidade de peça",
       "evidencia": "Não existe SLA contratado; o texto precisa manter o qualificador ('conforme disponibilidade', 'estimado', 'quando há peça em estoque')",
@@ -5185,19 +5385,6 @@
       "familiaTitulo": "Prazo de atendimento prometido",
       "risco": "Prazo fixo sem controle de agenda, trânsito e peça.",
       "arquivo": "src/lib/problemaPagesData.ts",
-      "linha": 55,
-      "trecho": "metaDescription: \"Seu computador não liga? Veja causas reais, sintomas, riscos e como resolver com diagnóstico técnico em Curitiba. Atendimento a domicílio no mesmo dia.\",",
-      "classificacao": "CONDICIONAL",
-      "criterio": "Tempos de deslocamento e janelas de atendimento são estimativas dependentes de agenda, trânsito e disponibilidade de peça",
-      "evidencia": "Não existe SLA contratado; o texto precisa manter o qualificador ('conforme disponibilidade', 'estimado', 'quando há peça em estoque')",
-      "acao": "Proibido prazo absoluto sem condicionante. 'Atendimento imediato' e 'resposta em até 5 minutos' foram removidos nesta rodada.",
-      "urls": []
-    },
-    {
-      "familia": "prazo-prometido",
-      "familiaTitulo": "Prazo de atendimento prometido",
-      "risco": "Prazo fixo sem controle de agenda, trânsito e peça.",
-      "arquivo": "src/lib/problemaPagesData.ts",
       "linha": 99,
       "trecho": "Para casos simples (cabo, RAM, config), resolvemos na própria visita. Para casos médios (troca de fonte, reinstalação), geralmente resolvemos no mesmo dia. Para casos complexos (re",
       "classificacao": "CONDICIONAL",
@@ -5213,19 +5400,6 @@
       "arquivo": "src/lib/problemaPagesData.ts",
       "linha": 135,
       "trecho": "O atendimento a domicílio está disponível no mesmo dia para a maioria das regiões, sujeito à disponibilidade da agenda.`,",
-      "classificacao": "CONDICIONAL",
-      "criterio": "Tempos de deslocamento e janelas de atendimento são estimativas dependentes de agenda, trânsito e disponibilidade de peça",
-      "evidencia": "Não existe SLA contratado; o texto precisa manter o qualificador ('conforme disponibilidade', 'estimado', 'quando há peça em estoque')",
-      "acao": "Proibido prazo absoluto sem condicionante. 'Atendimento imediato' e 'resposta em até 5 minutos' foram removidos nesta rodada.",
-      "urls": []
-    },
-    {
-      "familia": "prazo-prometido",
-      "familiaTitulo": "Prazo de atendimento prometido",
-      "risco": "Prazo fixo sem controle de agenda, trânsito e peça.",
-      "arquivo": "src/lib/problemaPagesData.ts",
-      "linha": 140,
-      "trecho": "metaDescription: \"Computador ligando e desligando sozinho em Curitiba? Veja causas, riscos e solução profissional. Diagnóstico no mesmo dia.\",",
       "classificacao": "CONDICIONAL",
       "criterio": "Tempos de deslocamento e janelas de atendimento são estimativas dependentes de agenda, trânsito e disponibilidade de peça",
       "evidencia": "Não existe SLA contratado; o texto precisa manter o qualificador ('conforme disponibilidade', 'estimado', 'quando há peça em estoque')",
@@ -6176,7 +6350,7 @@
       "familiaTitulo": "Garantia",
       "risco": "Prazo ou abrangência divergente da política comercial central.",
       "arquivo": "src/pages/AssistenciaTecnicaCuritiba.tsx",
-      "linha": 488,
+      "linha": 489,
       "trecho": "Diagnóstico e reparo de consoles e placas com bancada própria, orçamento informado antes da execução e garantia conforme o serviço executado.",
       "classificacao": "COMPROVADA",
       "criterio": "Prazo e escopo vêm da fonte comercial única",
@@ -6581,7 +6755,7 @@
       "familiaTitulo": "Garantia",
       "risco": "Prazo ou abrangência divergente da política comercial central.",
       "arquivo": "src/pages/Servicos.tsx",
-      "linha": 57,
+      "linha": 58,
       "trecho": "question: \"Existe garantia do serviço executado?\",",
       "classificacao": "COMPROVADA",
       "criterio": "Prazo e escopo vêm da fonte comercial única",
