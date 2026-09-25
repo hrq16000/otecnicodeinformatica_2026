@@ -9687,6 +9687,8 @@ crontab -e
         </ul>
 
         <p>Para entender o raciocínio completo em vez de seguir receitas isoladas, continue no <Link to="/guia-tecnico-informatica#tema-hardware-upgrades" className="text-accent">Atlas de hardware e desempenho</Link>.</p>
+        <h2>Limite deste guia</h2>
+        <p>Nenhum ajuste desta lista exige desativar antivírus, Secure Boot ou controle de conta de usuário. Se alguém recomendar isso para ganhar velocidade, desconfie: o ganho é mínimo e o risco é alto.</p>
         <EditorialReferences slug="como-deixar-windows-11-mais-rapido-iniciantes" />
       </>
     ),
@@ -9753,6 +9755,9 @@ crontab -e
         </ul>
 
         <p>Se você ainda não decidiu entre nuvem e mídia física, compare <Link to="/decisoes/nuvem-ou-hd-externo" className="text-accent">nuvem ou HD externo</Link> e veja o <Link to="/guia-tecnico-informatica#tema-dados-backup" className="text-accent">Atlas de dados e backup</Link>.</p>
+        <h2>Como testar se o backup funciona de verdade</h2>
+        <p>Backup que nunca foi testado é só uma esperança. Uma vez por mês, escolha três fotos aleatórias de meses diferentes e abra cada uma diretamente no HD externo ou na nuvem, sem passar pela pasta original. Confira se abrem em tamanho cheio e não apenas como miniatura. Verifique também a data da cópia mais recente: se ela tem semanas, a sincronização parou em algum momento e ninguém percebeu.</p>
+        <p>Guarde o HD externo desconectado quando não estiver copiando. Assim, um vírus que criptografe o computador não alcança a cópia.</p>
         <EditorialReferences slug="como-fazer-backup-fotos-windows-iniciantes" />
       </>
     ),
@@ -10257,6 +10262,9 @@ crontab -e
         <p>Interrompa a sequência de tentativas se o Windows não inicia, o disco apresenta falha, a máquina entra em loop de reparo, o BitLocker pede uma chave que você não possui ou a atualização afetou um ambiente de produção sem plano de retorno. Nesses cenários, preservar dados e capacidade de recuperação vem antes de “terminar a atualização”.</p>
 
         <p>Para loops pós-atualização, veja <Link to="/blog/windows-update-travado-desfazendo-alteracoes" className="text-accent">Windows Update travado ou desfazendo alterações</Link>. Para a visão geral, use o <Link to="/guia-tecnico-informatica#tema-sistemas-operacionais" className="text-accent">Atlas de sistemas operacionais</Link>.</p>
+        <h2>Verificação segura depois de atualizar</h2>
+        <p>Depois de cada atualização grande, confira três pontos. Primeiro, em Configurações → Windows Update → Histórico de atualizações, veja se o item aparece como instalado com sucesso e não como falha. Segundo, abra os programas que você usa todo dia, como navegador, e-mail e sistemas do trabalho, e confirme que funcionam normalmente. Terceiro, teste impressora, câmera e som, que são os dispositivos que mais sofrem com troca de driver.</p>
+        <p>Se algo quebrou, a Microsoft permite desinstalar atualizações recentes pelo próprio histórico e, nos primeiros dez dias após uma atualização de versão, voltar à versão anterior em Configurações → Sistema → Recuperação. Não desative o Windows Update de forma permanente para evitar problemas: pausar por algumas semanas resolve o incômodo sem deixar o computador exposto a falhas de segurança já corrigidas.</p>
         <EditorialReferences slug="como-atualizar-windows-corretamente" />
       </>
     ),
@@ -10319,6 +10327,15 @@ crontab -e
         </ul>
 
         <p>Depois de recuperar o que for possível, elimine o ponto único de falha com o <Link to="/guia-tecnico-informatica#tema-dados-backup" className="text-accent">Atlas de dados e backup</Link>.</p>
+        <h2>O que nunca fazer enquanto tenta recuperar</h2>
+        <ul>
+          <li>Não instale o programa de recuperação no mesmo disco onde estavam os arquivos apagados: a instalação pode gravar por cima deles.</li>
+          <li>Não salve os arquivos recuperados no disco de origem. Use um pendrive ou HD externo.</li>
+          <li>Não rode desfragmentação, otimização ou "limpeza" do disco nesse período.</li>
+          <li>Se o disco faz estalos, some e volta ou está muito lento, desligue o computador. Insistir em programas de recuperação num disco com falha física pode destruir o que ainda era recuperável.</li>
+        </ul>
+        <h2>Limite: SSD e TRIM</h2>
+        <p>Em SSDs, o Windows envia o comando TRIM logo depois da exclusão, e o próprio controlador do disco apaga os blocos pouco tempo depois. Por isso, a chance de recuperar arquivos apagados em SSD é bem menor do que em HD mecânico. Qualquer tentativa é uma tentativa de recuperação, sem garantia de resultado. A proteção real continua sendo ter cópia antes da perda.</p>
         <EditorialReferences slug="como-recuperar-arquivos-apagados-windows" />
       </>
     ),
@@ -10488,6 +10505,11 @@ crontab -e
         <h2>Resumo para decidir</h2>
         <p>Comece observando espaço, atualizações e se o problema pertence a um app ou ao sistema inteiro. Limpe cache apenas quando houver motivo; não confunda com limpar dados. Remova apps sem uso, revise mídia com cuidado e mantenha uma cópia dos dados importantes. Se houver aquecimento, desligamentos ou falhas físicas, pare de tentar acelerar por software.</p>
 
+        <h2>Verificação segura antes de apagar qualquer coisa</h2>
+        <p>Antes de limpar armazenamento ou restaurar o aparelho, confirme que fotos, conversas e contatos estão salvos. No Android, abra Configurações → Google → Backup e veja a data do último backup. No WhatsApp, vá em Configurações → Conversas → Backup de conversas e faça um backup manual. Fotos devem aparecer no Google Fotos ou em outro serviço antes de você apagar a galeria local.</p>
+        <p>Evite aplicativos de "limpeza" e "acelerador" baixados fora da Play Store ou que pedem permissões excessivas, como acesso a mensagens ou ao administrador do dispositivo. Eles costumam exibir anúncios, rodar em segundo plano e deixar o celular mais lento, o contrário do prometido. O próprio sistema já tem a ferramenta "Liberar espaço" em Configurações → Armazenamento.</p>
+        <h2>Quando a lentidão não é de software</h2>
+        <p>Se o aparelho continua lento mesmo depois da restauração de fábrica, o gargalo provavelmente é físico: memória interna quase no fim da vida útil, bateria degradada que faz o sistema reduzir o desempenho ou pouca memória RAM para as versões atuais dos aplicativos. Nesses casos, a decisão passa a ser comparar o custo de um reparo com o de um aparelho novo, e não insistir em mais limpezas.</p>
         <EditorialReferences slug="como-deixar-celular-android-mais-rapido" />
 
       </>
@@ -11591,6 +11613,9 @@ crontab -e
         </ul>
 
         <p>Se a causa ficar na rede interna, consulte <Link to="/servicos/redes-e-wifi" className="text-accent">redes e Wi-Fi</Link> e o <Link to="/guia-tecnico-informatica#tema-redes-wifi" className="text-accent">Atlas de redes</Link>.</p>
+        <h2>Como registrar os resultados para reclamar com a operadora</h2>
+        <p>Um teste isolado não prova nada. Faça medições em horários diferentes durante pelo menos três dias, sempre com o computador ligado por cabo ao roteador e com outros aparelhos desconectados. Anote data, horário, velocidade de download, upload e latência, e salve a captura de tela de cada resultado.</p>
+        <p>A Anatel usa o medidor oficial da Entidade Aferidora da Qualidade (EAQ) como referência. Com esse histórico em mãos, abra protocolo na operadora e informe a média obtida em comparação com a velocidade contratada. Se o problema aparecer só no Wi-Fi e não no cabo, a causa está na rede interna, e a operadora não vai tratar isso como falha do serviço.</p>
         <EditorialReferences slug="como-fazer-teste-velocidade-internet" />
       </>
     ),
