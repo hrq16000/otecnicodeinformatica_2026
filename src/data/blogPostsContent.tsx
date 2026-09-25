@@ -9081,119 +9081,69 @@ crontab -e
     category: "Segurança e Redes",
     content: (
       <>
-        <p className="lead">Segurança digital deixou de ser problema só de grandes corporações. Em 2026, ataques cibernéticos atingem desde pessoas comuns até pequenas empresas em Curitiba todos os dias. Este guia técnico mostra como configurar 2fa (autenticação de dois fatores) em tudo de forma profissional e eficaz.</p>
+        <p className="lead">A verificação em duas etapas (2FA) pede, além da senha, uma segunda prova de que é você: um código gerado no celular, uma chave física ou uma confirmação no aplicativo. Se a senha vazar, o invasor ainda para nessa segunda porta. Este guia mostra em que ordem ativar, qual método escolher em cada conta e como não ficar trancado para fora.</p>
 
-        <h2>Cenário de Ameaças em 2026</h2>
-        <p>O custo médio de um incidente de segurança para pequenas empresas brasileiras passou de R$ 80 mil em 2025, segundo levantamentos do setor. Os ataques mais comuns que vemos no atendimento técnico em Curitiba:</p>
+        <h2>O que muda quando o 2FA está ligado</h2>
+        <p>Senha é algo que você sabe. O segundo fator é algo que você tem (celular, chave USB) ou algo que você é (digital, rosto). A CISA recomenda a autenticação multifator como uma das medidas de maior impacto para contas pessoais e de trabalho, justamente porque a maioria das invasões começa com senha reaproveitada ou capturada em página falsa.</p>
+        <p>O 2FA não substitui senha forte e única. Ele cobre o cenário em que a senha já não é segredo.</p>
+
+        <h2>Os métodos, do mais fraco ao mais forte</h2>
         <ul>
-          <li><strong>Ransomware</strong> — criptografia dos arquivos e cobrança de resgate (R$ 5 mil a R$ 500 mil)</li>
-          <li><strong>Phishing direcionado</strong> — e-mails personalizados que enganam até usuários experientes</li>
-          <li><strong>Engenharia social</strong> — ligações se passando por banco, suporte técnico ou parceiro</li>
-          <li><strong>Invasão por credenciais vazadas</strong> — senhas reutilizadas em sites comprometidos</li>
-          <li><strong>Ataques a roteadores domésticos</strong> — captura de tráfego e redirecionamento DNS</li>
-          <li><strong>Sequestro de WhatsApp Business</strong> — uso da conta para golpes contra clientes</li>
+          <li><strong>Código por SMS</strong> — melhor que nada, mas vulnerável a clonagem de chip (troca de SIM). Use só quando o serviço não oferece outra opção.</li>
+          <li><strong>Código por e-mail</strong> — depende da segurança da própria caixa de e-mail; se ela cair, cai tudo junto.</li>
+          <li><strong>Aplicativo autenticador (TOTP)</strong> — Microsoft Authenticator, Google Authenticator, Aegis ou 2FAS geram um código de 6 dígitos que muda a cada 30 segundos, sem depender da operadora.</li>
+          <li><strong>Notificação no aplicativo</strong> — prático, mas exige atenção: nunca aprove um pedido que você não iniciou.</li>
+          <li><strong>Chave de segurança e passkeys (FIDO2/WebAuthn)</strong> — resistem a páginas falsas porque a chave só responde ao site verdadeiro. O NIST (SP 800-63B) classifica esse tipo de autenticador como resistente a phishing.</li>
         </ul>
 
-        <h2>Princípios Fundamentais de Segurança</h2>
-        <p>Antes de ferramentas e configurações, internalize os princípios. Eles guiam toda decisão de segurança.</p>
-        <ul>
-          <li><strong>Defesa em profundidade</strong> — múltiplas camadas, nunca dependa de uma única proteção</li>
-          <li><strong>Princípio do menor privilégio</strong> — cada usuário e processo só tem acesso ao mínimo necessário</li>
-          <li><strong>Zero Trust</strong> — nunca confie automaticamente, verifique sempre, mesmo dentro da rede</li>
-          <li><strong>Segregação de funções</strong> — quem aprova não é quem executa, quem audita não é quem opera</li>
-          <li><strong>Backup imune</strong> — pelo menos uma cópia offline ou imutável, fora do alcance de ransomware</li>
-          <li><strong>Atualização contínua</strong> — vulnerabilidades conhecidas são as mais exploradas</li>
-        </ul>
-
-        <h2>Avaliação de Riscos Inicial</h2>
-        <p>Não é possível proteger o que você não conhece. O primeiro passo é mapear sua infraestrutura.</p>
-        <p>Faça um inventário completo:</p>
-        <ul>
-          <li>Quais dispositivos estão conectados à rede (computadores, celulares, IoT, impressoras)</li>
-          <li>Quais sistemas e aplicativos são usados (sistemas internos, SaaS, e-mail)</li>
-          <li>Quais dados são tratados (cadastros, financeiro, saúde, propriedade intelectual)</li>
-          <li>Quem tem acesso a quê (usuários, fornecedores, parceiros)</li>
-          <li>Onde estão os backups e qual a frequência</li>
-          <li>Quais ferramentas de segurança já estão em uso</li>
-        </ul>
-        <p>Esse mapeamento revela vulnerabilidades óbvias que muitas vezes passam despercebidas — como aquela impressora que ninguém mais usa mas continua acessível pela rede.</p>
-
-        <h2>Configuração Técnica Recomendada</h2>
-        <p>Com o mapeamento em mãos, parta para a configuração técnica. As recomendações abaixo são baseline mínimo para qualquer ambiente profissional.</p>
-        <ul>
-          <li><strong>Firewall configurado</strong> — bloqueia portas não usadas, limita acesso externo a serviços essenciais</li>
-          <li><strong>Antivírus em todos os endpoints</strong> — Bitdefender, ESET ou Kaspersky em versão corporativa</li>
-          <li><strong>Patch management</strong> — atualizações de SO e aplicativos aplicadas em até 30 dias da liberação</li>
-          <li><strong>EDR (Endpoint Detection and Response)</strong> — para detectar ataques que escapam do antivírus tradicional</li>
-          <li><strong>VPN para acesso remoto</strong> — nada de RDP exposto direto na internet</li>
-          <li><strong>2FA em todos os serviços críticos</strong> — e-mail, ERP, painel administrativo, redes sociais corporativas</li>
-          <li><strong>Logs centralizados</strong> — pelo menos 90 dias de retenção para investigação de incidentes</li>
-        </ul>
-
-        <h2>Procedimento Detalhado de Implementação</h2>
-        <p>Vamos ao passo a passo prático. Adapte ao seu ambiente, mas siga a ordem — pular etapas deixa brechas.</p>
+        <h2>Ordem recomendada de ativação</h2>
+        <p>Não tente ligar tudo numa tarde. Siga a ordem de impacto:</p>
         <ol>
-          <li><strong>Inventário e classificação</strong> — saiba o que precisa proteger e qual a criticidade de cada ativo</li>
-          <li><strong>Hardening de senhas</strong> — gerenciador de senhas (Bitwarden, 1Password) para todos os usuários</li>
-          <li><strong>2FA universal</strong> — comece pelo e-mail (porta de entrada para tudo), depois bancos, redes sociais e sistemas internos</li>
-          <li><strong>Firewall e segmentação</strong> — separe rede de visitantes, IoT e produção</li>
-          <li><strong>Backup 3-2-1</strong> — 3 cópias, 2 mídias diferentes, 1 offsite</li>
-          <li><strong>Atualizações automáticas</strong> — configure janela de manutenção e aplique patches</li>
-          <li><strong>Treinamento de usuários</strong> — phishing é o vetor #1, e usuário treinado é a melhor defesa</li>
-          <li><strong>Monitoramento contínuo</strong> — logs revisados periodicamente, alertas configurados para anomalias</li>
-          <li><strong>Plano de resposta a incidentes</strong> — quem chamar, o que fazer, como comunicar quando algo der errado</li>
-          <li><strong>Auditoria periódica</strong> — pentest anual e revisão de configurações trimestral</li>
+          <li><strong>E-mail principal</strong> — é por ele que se recupera a senha de quase todo o resto.</li>
+          <li><strong>Conta Microsoft ou Google do celular e do computador</strong> — guardam fotos, contatos, backups e senhas salvas.</li>
+          <li><strong>WhatsApp</strong> — em Configurações → Conta → Confirmação em duas etapas, crie um PIN de seis dígitos e cadastre um e-mail de recuperação.</li>
+          <li><strong>Bancos e carteiras digitais</strong> — use o token do próprio aplicativo do banco.</li>
+          <li><strong>Redes sociais e lojas online</strong> — Instagram, Facebook, Mercado Livre, Amazon.</li>
+          <li><strong>Serviços de trabalho</strong> — sistema de gestão, contabilidade, painel do site, provedor de domínio.</li>
         </ol>
 
-        <h2>Ferramentas Recomendadas</h2>
-        <p>Mercado de segurança tem centenas de ferramentas. Para o cenário típico de SMB em Curitiba, essa stack cobre o essencial:</p>
-        <ul>
-          <li><strong>Bitdefender GravityZone</strong> ou <strong>ESET Protect</strong> — antivírus + EDR centralizado</li>
-          <li><strong>pfSense</strong> ou <strong>OPNsense</strong> — firewall corporativo open source</li>
-          <li><strong>Bitwarden Business</strong> — gerenciador de senhas com SSO e auditoria</li>
-          <li><strong>Veeam Backup</strong> ou <strong>Acronis</strong> — backup empresarial com replicação</li>
-          <li><strong>Wazuh</strong> — SIEM open source para correlação de logs</li>
-          <li><strong>Cloudflare</strong> — proteção DDoS e WAF para sites e aplicações</li>
-          <li><strong>YubiKey</strong> ou <strong>Authy</strong> — 2FA físico e em apps</li>
-        </ul>
-
-        <h2>Erros Comuns Que Geram Vulnerabilidade</h2>
-        <p>Os ataques bem-sucedidos quase sempre exploram falhas conhecidas e evitáveis.</p>
-        <ul>
-          <li><strong>Senha "12345678"</strong> ou similar em conta administrativa</li>
-          <li><strong>Reutilizar senha</strong> entre serviços pessoais e corporativos</li>
-          <li><strong>Adiar atualizações</strong> de SO e aplicativos por meses ou anos</li>
-          <li><strong>Antivírus expirado</strong> sem que o usuário perceba</li>
-          <li><strong>Backup que nunca é testado</strong> — descobrir que não funciona depois do incidente</li>
-          <li><strong>Compartilhar credenciais</strong> entre funcionários por WhatsApp</li>
-          <li><strong>Acesso remoto direto via RDP</strong> sem VPN</li>
-          <li><strong>Wi-Fi corporativo</strong> com senha conhecida por todos os funcionários, terceiros e clientes</li>
-        </ul>
-
-        <h2>Resposta a Incidentes</h2>
-        <p>Cedo ou tarde, algo vai dar errado. Ter um plano definido é diferença entre incidente controlado e desastre.</p>
+        <h2>Passo a passo genérico com aplicativo autenticador</h2>
         <ol>
-          <li><strong>Detecção</strong> — usuário relata, alerta de monitoramento dispara, antivírus bloqueia</li>
-          <li><strong>Contenção</strong> — desconectar máquinas afetadas da rede imediatamente</li>
-          <li><strong>Erradicação</strong> — remover malware, fechar vetor de entrada, trocar credenciais comprometidas</li>
-          <li><strong>Recuperação</strong> — restaurar de backup limpo, validar integridade antes de voltar à produção</li>
-          <li><strong>Lições aprendidas</strong> — documentar o que aconteceu, ajustar processos para evitar recorrência</li>
+          <li>Instale o autenticador no celular antes de começar.</li>
+          <li>No serviço, abra Segurança → Verificação em duas etapas (o nome varia).</li>
+          <li>Escolha "aplicativo autenticador" e leia o QR Code com o celular.</li>
+          <li>Digite o código de 6 dígitos que aparecer para confirmar.</li>
+          <li>Salve os <strong>códigos de recuperação</strong> oferecidos no final — imprima ou guarde num gerenciador de senhas.</li>
+          <li>Saia da conta e entre de novo para testar antes de fechar a página.</li>
         </ol>
-        <p><strong>Nunca pague resgate de ransomware sem consultar especialista.</strong> Pagar não garante recuperação dos dados e marca sua empresa como alvo fácil para futuras extorsões.</p>
 
-        <h2>Conformidade e LGPD</h2>
-        <p>Empresas que tratam dados pessoais têm obrigações legais. A LGPD não é opcional, e multas chegam a 2% do faturamento limitado a R$ 50 milhões por infração.</p>
+        <h2>Verificação segura: não fique trancado para fora</h2>
+        <p>O problema mais comum não é invasão, é perder o celular e não conseguir entrar. Antes de ativar em muitas contas:</p>
         <ul>
-          <li><strong>Mapeamento de dados pessoais</strong> coletados e tratados</li>
-          <li><strong>Base legal documentada</strong> para cada tratamento</li>
-          <li><strong>Política de privacidade</strong> clara e acessível</li>
-          <li><strong>Encarregado de proteção de dados</strong> (DPO) designado</li>
-          <li><strong>Plano de resposta a incidentes</strong> que inclua notificação à ANPD em até 48h</li>
-          <li><strong>Direitos dos titulares</strong> implementados (acesso, correção, exclusão)</li>
+          <li>Guarde os códigos de recuperação fora do celular.</li>
+          <li>Use um autenticador com backup criptografado ou exportação (Microsoft Authenticator, 2FAS, Aegis).</li>
+          <li>Cadastre um segundo método em contas críticas: uma chave física reserva ou um segundo aparelho.</li>
+          <li>Ao trocar de celular, transfira o autenticador <strong>antes</strong> de apagar o aparelho antigo.</li>
         </ul>
 
-        <h2>Suporte em Segurança em Curitiba</h2>
-        <p>A <strong>{BRAND_NAME}</strong> oferece consultoria e implementação de segurança digital para empresas em Curitiba e região metropolitana. Auditoria, hardening, configuração de firewall, implementação de backup, treinamento de usuários e resposta a incidentes. Atendemos Curitiba, São José dos Pinhais, Pinhais, Colombo, Almirante Tamandaré, Araucária, Campo Largo, Campo Magro, Piraquara, Quatro Barras e Fazenda Rio Grande com técnicos certificados em segurança ofensiva e defensiva.</p>
+        <h2>Golpes que tentam driblar o 2FA</h2>
+        <ul>
+          <li><strong>"Me passa o código que chegou aí"</strong> — nenhuma empresa séria pede o código por telefone ou mensagem. Quem pede está tentando entrar na sua conta.</li>
+          <li><strong>Fadiga de notificação</strong> — dezenas de pedidos de aprovação seguidos até você tocar em "sim". Recuse e troque a senha.</li>
+          <li><strong>Página falsa em tempo real</strong> — copia senha e código ao mesmo tempo. Só passkeys e chaves físicas bloqueiam esse ataque.</li>
+        </ul>
+
+        <h2>Limites: quando pedir ajuda</h2>
+        <p>Se você já perdeu o acesso a uma conta com 2FA e não tem códigos de recuperação, o caminho é o processo oficial de recuperação do próprio serviço — ninguém de fora consegue "desbloquear" a conta. Em empresas com várias pessoas, faz sentido centralizar a política (quem usa qual método, onde ficam os códigos) em vez de cada um decidir sozinho.</p>
+
+        <h2>Decisão rápida</h2>
+        <ul>
+          <li>Uso pessoal: autenticador no celular + códigos de recuperação impressos.</li>
+          <li>Conta de administrador ou financeiro: chave física ou passkey.</li>
+          <li>Serviço que só oferece SMS: ative mesmo assim e peça à operadora bloqueio de troca de chip sem presença.</li>
+        </ul>
+        <p>Para a parte de rede do escritório, que é outro assunto, veja o guia de proteção da rede Wi-Fi da empresa.</p>
+
 
       </>
     ),
