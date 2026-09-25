@@ -1,16 +1,16 @@
 # Autoridade SEO — densidade semântica, keywords e links internos
 
-Gerado em: 2026-09-25T06:08:54.859Z
-URLs analisadas: 96/96 · órfãs: 20
+Gerado em: 2026-09-18T05:25:25.199Z
+URLs analisadas: 78/78 · órfãs: 10
 
 | URL | Palavras | Dens. semântica | Keyword principal | Dens. KW | Links saída | Links entrada |
 | --- | --- | --- | --- | --- | --- | --- |
-| /blog/quando-trocar-hd-por-ssd | 2127 | 48.78% | quando trocar hd por ssd | 0.5% | 16 | 15 |
-| /blog/como-saber-se-pc-tem-virus-malware | 2032 | 51.47% | como saber se pc tem virus malware | 0.33% | 15 | 10 |
+| /blog/quando-trocar-hd-por-ssd | 2127 | 48.78% | quando trocar hd por ssd | 0.5% | 16 | 14 |
+| /blog/como-saber-se-pc-tem-virus-malware | 2032 | 51.47% | como saber se pc tem virus malware | 0.33% | 15 | 9 |
 | /blog/backup-como-proteger-seus-arquivos | 2056 | 49.06% | backup como proteger seus arquivos | 0% | 13 | 13 |
-| /blog/como-melhorar-sinal-wifi-em-casa | 1515 | 53.59% | como melhorar sinal wifi em casa | 0% | 13 | 6 |
+| /blog/como-melhorar-sinal-wifi-em-casa | 1511 | 53.94% | como melhorar sinal wifi em casa | 0% | 13 | 5 |
 | /blog/notebook-superaquecendo-o-que-fazer | 1639 | 57.65% | notebook superaquecendo o que fazer | 0.31% | 14 | 7 |
-| /blog/organizacao-de-ti-para-pequenos-escritorios | 1928 | 53.52% | organizacao de ti para pequenos escritorios | 0.35% | 16 | 2 |
+| /blog/organizacao-de-ti-para-pequenos-escritorios | 1928 | 53.52% | organizacao de ti para pequenos escritorios | 0.35% | 16 | 1 |
 | /blog/como-escolher-uma-workstation | 1749 | 55.4% | como escolher uma workstation | 0.59% | 17 | 1 |
 | /blog/como-instalar-windows-11-do-zero | 1471 | 52.21% | como instalar windows 11 do zero | 0.23% | 14 | 5 |
 | /blog/como-resolver-tela-azul-windows | 1949 | 57.43% | como resolver tela azul windows | 0.83% | 10 | 2 |
@@ -22,9 +22,9 @@ URLs analisadas: 96/96 · órfãs: 20
 | /blog/como-configurar-roteador-wifi-iniciantes | 2002 | 53.59% | como configurar roteador wifi iniciantes | 0% | 9 | 5 |
 | /blog/como-saber-quem-esta-usando-meu-wifi | 1982 | 51.39% | como saber quem esta usando meu wifi | 0% | 9 | 1 |
 | /blog/como-escolher-um-bom-antivirus | 1933 | 58.73% | como escolher um bom antivirus | 0.09% | 11 | 1 |
-| /blog/como-proteger-computador-golpes-internet | 1981 | 53.95% | como proteger computador golpes internet | 0.25% | 10 | 4 |
+| /blog/como-proteger-computador-golpes-internet | 1981 | 53.95% | como proteger computador golpes internet | 0.25% | 10 | 2 |
 | /blog/como-limpar-notebook-por-dentro | 1741 | 61.44% | como limpar notebook por dentro | 0% | 12 | 8 |
-| /blog/como-trocar-pasta-termica-notebook | 1698 | 57.72% | como trocar pasta termica notebook | 0.81% | 11 | 5 |
+| /blog/como-trocar-pasta-termica-notebook | 1617 | 60.57% | como trocar pasta termica notebook | 0.22% | 11 | 5 |
 | /blog/como-clonar-hd-para-ssd | 1372 | 59.72% | como clonar hd para ssd | 1.03% | 12 | 5 |
 | /blog/como-instalar-segundo-ssd-notebook | 1411 | 61.87% | como instalar segundo ssd notebook | 0.26% | 11 | 2 |
 | /blog/ransomware-como-proteger-empresa | 1376 | 64.63% | ransomware como proteger empresa | 0% | 12 | 4 |
@@ -37,9 +37,9 @@ URLs analisadas: 96/96 · órfãs: 20
 | /blog/como-remover-virus-windows-iniciantes | 1338 | 65.63% | como remover virus windows iniciantes | 0% | 11 | 2 |
 | /blog/como-formatar-pc-sem-perder-arquivos | 1416 | 58.25% | como formatar pc sem perder arquivos | 0.75% | 13 | 5 |
 | /blog/quanto-custa-formatar-um-computador | 999 | 65.29% | quanto custa formatar um computador | 0.54% | 12 | 1 |
-| /blog/o-que-e-informatica | 2565 | 48.73% | o que e informatica | 4.78% | 13 | 2 |
-| /blog/informatica-basica | 3170 | 46.95% | informatica basica | 2.22% | 15 | 2 |
-| /blog/como-aprender-informatica | 2879 | 47.46% | como aprender informatica | 1.28% | 16 | 2 |
+| /blog/o-que-e-informatica | 2493 | 49.44% | o que e informatica | 4.73% | 13 | 2 |
+| /blog/informatica-basica | 3103 | 47.14% | informatica basica | 2.22% | 15 | 2 |
+| /blog/como-aprender-informatica | 2806 | 47.79% | como aprender informatica | 1.2% | 16 | 2 |
 | /blog/computador-entra-direto-na-bios | 2540 | 46.74% | computador entra direto na bios | 0.42% | 18 | 5 |
 | /blog/erro-no-bootable-device-como-resolver | 1938 | 48.71% | erro no bootable device como resolver | 0.18% | 14 | 4 |
 | /blog/troquei-o-ssd-e-o-pc-so-abre-a-bios | 1667 | 52.35% | troquei o ssd e o pc so abre a bios | 0.32% | 15 | 3 |
@@ -50,30 +50,30 @@ URLs analisadas: 96/96 · órfãs: 20
 | /blog/botao-power-nao-funciona-jump-start-placa-mae | 1574 | 48.65% | botao power nao funciona jump start placa mae | 0% | 13 | 0 |
 | /blog/curto-circuito-placa-mae-como-identificar | 1507 | 56.21% | curto circuito placa mae como identificar | 0% | 11 | 2 |
 | /blog/bios-corrompida-reset-cmos-atualizacao | 1620 | 50.64% | bios corrompida reset cmos atualizacao | 0.43% | 11 | 1 |
-| /blog/internet-lenta-provedor-ou-roteador | 1533 | 55.03% | internet lenta provedor ou roteador | 0.54% | 9 | 4 |
+| /blog/internet-lenta-provedor-ou-roteador | 1533 | 55.03% | internet lenta provedor ou roteador | 0.54% | 9 | 2 |
 | /blog/impressora-offline-como-resolver | 1098 | 53.93% | impressora offline como resolver | 0.62% | 11 | 1 |
 | /blog/fila-de-impressao-travada-spooler-windows | 1049 | 53.91% | fila de impressao travada spooler windows | 0.64% | 11 | 1 |
-| /blog/hd-nao-e-reconhecido-na-bios-o-que-fazer | 1529 | 51.1% | hd nao e reconhecido na bios o que fazer | 0.12% | 15 | 3 |
+| /blog/hd-nao-e-reconhecido-na-bios-o-que-fazer | 1373 | 53.48% | hd nao e reconhecido na bios o que fazer | 0.13% | 14 | 3 |
 | /blog/ssd-nvme-nao-aparece-no-gerenciador-de-discos | 1086 | 59.06% | ssd nvme nao aparece no gerenciador de discos | 0% | 11 | 1 |
-| /blog/disco-com-setores-defeituosos-smart-o-que-fazer | 1270 | 55.22% | disco com setores defeituosos smart o que fazer | 0.53% | 11 | 6 |
+| /blog/disco-com-setores-defeituosos-smart-o-que-fazer | 1270 | 55.22% | disco com setores defeituosos smart o que fazer | 0.53% | 11 | 5 |
 | /blog/computador-sem-som-o-que-verificar | 1067 | 55.7% | computador sem som o que verificar | 0.16% | 11 | 2 |
-| /blog/fone-de-ouvido-nao-e-reconhecido-no-pc | 1135 | 50.76% | fone de ouvido nao e reconhecido no pc | 0% | 9 | 1 |
+| /blog/fone-de-ouvido-nao-e-reconhecido-no-pc | 1000 | 54.79% | fone de ouvido nao e reconhecido no pc | 0.51% | 9 | 1 |
 | /blog/servico-de-audio-do-windows-nao-esta-em-execucao | 984 | 55.67% | servico de audio do windows nao esta em execucao | 1.57% | 10 | 1 |
 | /blog/webcam-nao-funciona-o-que-verificar | 1533 | 47.05% | webcam nao funciona o que verificar | 0.33% | 11 | 1 |
 | /blog/permissoes-de-camera-no-windows | 1320 | 50.27% | permissoes de camera no windows | 1.22% | 9 | 3 |
 | /blog/webcam-usb-nao-e-detectada | 1128 | 53% | webcam usb nao e detectada | 0.62% | 9 | 2 |
-| /blog/windows-update-nao-funciona-o-que-verificar | 1646 | 49.9% | windows update nao funciona o que verificar | 0.21% | 12 | 4 |
+| /blog/windows-update-nao-funciona-o-que-verificar | 1646 | 49.9% | windows update nao funciona o que verificar | 0.21% | 12 | 3 |
 | /blog/limpar-cache-do-windows-update-softwaredistribution | 1243 | 54.58% | limpar cache do windows update softwaredistribution | 0.14% | 9 | 1 |
-| /blog/windows-update-travado-desfazendo-alteracoes | 1369 | 53.5% | windows update travado desfazendo alteracoes | 0.49% | 11 | 3 |
+| /blog/windows-update-travado-desfazendo-alteracoes | 1369 | 53.5% | windows update travado desfazendo alteracoes | 0.49% | 11 | 2 |
 | /blog/boot-uefi-ou-legacy-como-identificar | 1064 | 55.02% | boot uefi ou legacy como identificar | 1.17% | 12 | 2 |
 | /blog/ordem-de-boot-na-bios-como-configurar | 976 | 60.56% | ordem de boot na bios como configurar | 0.53% | 11 | 0 |
-| /blog/windows-reparo-automatico-em-loop | 1659 | 51.8% | windows reparo automatico em loop | 0% | 12 | 2 |
+| /blog/windows-reparo-automatico-em-loop | 1659 | 51.8% | windows reparo automatico em loop | 0% | 12 | 1 |
 | /blog/manutencao-preventiva-de-computador-guia-completo | 1371 | 60.39% | manutencao preventiva de computador guia completo | 0.39% | 14 | 3 |
 | /blog/dispositivo-usb-nao-reconhecido-o-que-fazer | 1138 | 56.77% | dispositivo usb nao reconhecido o que fazer | 0.47% | 9 | 3 |
-| /blog/como-testar-restauracao-de-backup | 1491 | 55.09% | como testar restauracao de backup | 0.57% | 10 | 8 |
+| /blog/como-testar-restauracao-de-backup | 1491 | 55.09% | como testar restauracao de backup | 0.57% | 10 | 5 |
 | /blog/como-monitorar-temperatura-do-computador | 1078 | 64.64% | como monitorar temperatura do computador | 0.51% | 12 | 3 |
 | /blog/pendrive-somente-leitura-protegido-contra-gravacao | 1004 | 60.88% | pendrive somente leitura protegido contra gravacao | 0.68% | 8 | 1 |
-| /blog/historico-de-arquivos-windows-como-configurar | 1023 | 60.55% | historico de arquivos windows como configurar | 0.52% | 12 | 3 |
+| /blog/historico-de-arquivos-windows-como-configurar | 1023 | 60.55% | historico de arquivos windows como configurar | 0.52% | 12 | 2 |
 | /blog/monitor-sem-sinal-o-que-verificar | 1060 | 55.8% | monitor sem sinal o que verificar | 0.68% | 10 | 0 |
 | /blog/bateria-de-notebook-nao-carrega-o-que-verificar | 1033 | 64% | bateria de notebook nao carrega o que verificar | 0.87% | 8 | 0 |
 | /blog/como-migrar-arquivos-para-um-computador-novo | 1058 | 61.64% | como migrar arquivos para um computador novo | 0.5% | 10 | 0 |
@@ -82,23 +82,5 @@ URLs analisadas: 96/96 · órfãs: 20
 | /blog/computador-nao-conecta-na-internet-por-cabo | 1595 | 45.91% | computador nao conecta na internet por cabo | 0.41% | 8 | 1 |
 | /blog/ventoinha-do-computador-fazendo-barulho-o-que-verificar | 1162 | 53.8% | ventoinha do computador fazendo barulho o que verificar | 0.29% | 10 | 0 |
 | /blog/rede-wifi-nao-aparece-na-lista-o-que-verificar | 1184 | 50.46% | rede wifi nao aparece na lista o que verificar | 0% | 8 | 0 |
-| /blog/arquivo-corrompido-nao-abre-o-que-fazer | 1132 | 53.51% | arquivo corrompido nao abre o que fazer | 0.78% | 8 | 1 |
-| /blog/como-configurar-2fa-em-tudo | 1321 | 56.97% | como configurar 2fa em tudo | 0.4% | 5 | 2 |
-| /blog/como-proteger-rede-wifi-empresa | 1331 | 65.26% | como proteger rede wifi empresa | 0% | 3 | 4 |
-| /blog/como-configurar-firewall-pfsense | 1200 | 59.04% | como configurar firewall pfsense | 0.53% | 3 | 1 |
-| /blog/como-configurar-active-directory | 1180 | 53.54% | como configurar active directory | 0.54% | 3 | 0 |
-| /blog/como-deixar-celular-android-mais-rapido | 1255 | 57.28% | como deixar celular android mais rapido | 0% | 8 | 0 |
-| /blog/como-configurar-repetidor-wifi | 1346 | 57.02% | como configurar repetidor wifi | 0% | 4 | 2 |
-| /blog/trocar-windows-por-linux-vale-a-pena | 1233 | 58.04% | trocar windows por linux vale a pena | 0.41% | 3 | 0 |
-| /blog/erros-comuns-upgrade-computador | 1281 | 56.75% | erros comuns upgrade computador | 0% | 4 | 0 |
-| /blog/como-configurar-vpn-empresarial | 1191 | 58.96% | como configurar vpn empresarial | 0.13% | 5 | 0 |
-| /blog/como-recuperar-conta-hackeada | 1268 | 55.35% | como recuperar conta hackeada | 0.39% | 4 | 0 |
-| /blog/como-deixar-windows-11-mais-rapido-iniciantes | 1210 | 58.75% | como deixar windows 11 mais rapido iniciantes | 0% | 4 | 1 |
-| /blog/como-fazer-backup-fotos-windows-iniciantes | 1153 | 57.95% | como fazer backup fotos windows iniciantes | 0% | 4 | 2 |
-| /blog/como-atualizar-windows-corretamente | 1092 | 62.18% | como atualizar windows corretamente | 0% | 4 | 0 |
-| /blog/como-recuperar-arquivos-apagados-windows | 1126 | 56.31% | como recuperar arquivos apagados windows | 0.92% | 5 | 0 |
-| /blog/como-fazer-teste-velocidade-internet | 1165 | 56.7% | como fazer teste velocidade internet | 0.42% | 4 | 1 |
-| /blog/como-resetar-senha-windows | 1278 | 49.32% | como resetar senha windows | 0% | 5 | 0 |
-| /blog/como-organizar-arquivos-windows-iniciantes | 1437 | 52.71% | como organizar arquivos windows iniciantes | 0% | 7 | 0 |
-| /blog/como-trocar-senha-wifi | 1385 | 53.85% | como trocar senha wifi | 0% | 5 | 0 |
+| /blog/arquivo-corrompido-nao-abre-o-que-fazer | 1132 | 53.51% | arquivo corrompido nao abre o que fazer | 0.78% | 8 | 0 |
 

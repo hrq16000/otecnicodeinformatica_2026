@@ -5509,7 +5509,7 @@ docker run -d --name db --network minha-rede postgres
 
   "como-configurar-firewall-pfsense": {
     title: "Como Configurar Firewall pfSense: Guia Completo Para Redes Empresariais",
-    excerpt: "Instalação, regras de firewall, NAT, VPN e monitoramento com pfSense: o passo a passo completo para redes empresariais, do primeiro acesso às políticas de tráfego.",
+    excerpt: "Instalação, regras de firewall, NAT, VPN e monitoramento com pfSense.",
     date: "2026-04-13",
     readTime: "16 min",
     category: "Procedimentos Técnicos",
@@ -9081,76 +9081,119 @@ crontab -e
     category: "Segurança e Redes",
     content: (
       <>
-        <p className="lead">Senha sozinha deixou de ser barreira suficiente: vazamentos de cadastros e reuso de senhas fazem com que uma única senha comprometida abra várias contas de uma vez. A autenticação de dois fatores (2FA) adiciona uma segunda verificação — algo que só você tem — e é a medida que mais reduz o impacto de uma senha descoberta. Este guia mostra como ativar nas contas que mais importam, em que ordem e com quais cuidados.</p>
+        <p className="lead">Segurança digital deixou de ser problema só de grandes corporações. Em 2026, ataques cibernéticos atingem desde pessoas comuns até pequenas empresas em Curitiba todos os dias. Este guia técnico mostra como configurar 2fa (autenticação de dois fatores) em tudo de forma profissional e eficaz.</p>
 
-        <h2>Resposta curta</h2>
-        <p>Ative o 2FA primeiro no e-mail principal (ele recupera todas as outras contas), depois no banco, no WhatsApp, nas redes sociais e nos sistemas de trabalho. Prefira aplicativo autenticador ou chave física; SMS funciona, mas é o método mais frágil. Guarde os códigos de recuperação offline, em papel, fora do computador e do celular.</p>
-
-        <h2>Por que a senha sozinha não sustenta mais a conta</h2>
-        <p>Uma senha pode ser descoberta de três formas principais: vazamento de um serviço que você usa, reuso da mesma senha em outro site comprometido e phishing — a página falsa que você digita a senha sem perceber. A Microsoft orienta o uso de autenticação multifator exatamente porque o segundo fator invalida o valor de uma senha roubada: quem tem a senha, mas não tem o seu celular, o seu token ou a sua chave, não entra.</p>
-
-        <h2>Antes de ativar: verificação segura da conta</h2>
+        <h2>Cenário de Ameaças em 2026</h2>
+        <p>O custo médio de um incidente de segurança para pequenas empresas brasileiras passou de R$ 80 mil em 2025, segundo levantamentos do setor. Os ataques mais comuns que vemos no atendimento técnico em Curitiba:</p>
         <ul>
-          <li>Confirme que o e-mail de recuperação e o telefone cadastrados estão atualizados e sob seu controle.</li>
-          <li>Revise a atividade recente de login (quase todo serviço tem essa página em Segurança) e encerre sessões que você não reconhece.</li>
-          <li>Troque a senha se houver qualquer acesso estranho — antes, não depois, de ativar o 2FA.</li>
-          <li>Verifique se o computador e o celular estão sem sinais de malware, porque um aparelho comprometido enxerga o que você faz dentro dele.</li>
+          <li><strong>Ransomware</strong> — criptografia dos arquivos e cobrança de resgate (R$ 5 mil a R$ 500 mil)</li>
+          <li><strong>Phishing direcionado</strong> — e-mails personalizados que enganam até usuários experientes</li>
+          <li><strong>Engenharia social</strong> — ligações se passando por banco, suporte técnico ou parceiro</li>
+          <li><strong>Invasão por credenciais vazadas</strong> — senhas reutilizadas em sites comprometidos</li>
+          <li><strong>Ataques a roteadores domésticos</strong> — captura de tráfego e redirecionamento DNS</li>
+          <li><strong>Sequestro de WhatsApp Business</strong> — uso da conta para golpes contra clientes</li>
         </ul>
 
-        <h2>Onde ativar, na prática</h2>
-        <p>O caminho muda de nome entre serviços, mas o padrão é sempre o mesmo: <strong>Configurações → Segurança (ou Login e segurança) → Verificação em duas etapas / Autenticação de dois fatores</strong>. Pontos de atenção por tipo de conta:</p>
+        <h2>Princípios Fundamentais de Segurança</h2>
+        <p>Antes de ferramentas e configurações, internalize os princípios. Eles guiam toda decisão de segurança.</p>
         <ul>
-          <li><strong>E-mail (Google, Microsoft, outros):</strong> é o cofre de todas as outras contas — venha para cá primeiro. Ative o 2FA e revise os e-mails e telefones de recuperação.</li>
-          <li><strong>Bancos e carteiras digitais:</strong> quase todos exigem o próprio mecanismo (token do app do banco ou cartão físico). Confira nas configurações de segurança do app quais proteções estão ativas.</li>
-          <li><strong>WhatsApp:</strong> ative a confirmação em duas etapas e cadastre um e-mail de recuperação — protege contra o sequestro do número, golpe comum contra empresas.</li>
-          <li><strong>Redes sociais (Instagram, Facebook, LinkedIn):</strong> use aplicativo autenticador; evite depender de SMS. Contas empresariais devem ter o 2FA ativado por todos que têm acesso, não só pelo dono.</li>
-          <li><strong>Sistemas da empresa (e-mail corporativo, ERP, painéis):</strong> quem administra o ambiente pode exigir o 2FA para todos os usuários de uma vez, no painel de administração.</li>
+          <li><strong>Defesa em profundidade</strong> — múltiplas camadas, nunca dependa de uma única proteção</li>
+          <li><strong>Princípio do menor privilégio</strong> — cada usuário e processo só tem acesso ao mínimo necessário</li>
+          <li><strong>Zero Trust</strong> — nunca confie automaticamente, verifique sempre, mesmo dentro da rede</li>
+          <li><strong>Segregação de funções</strong> — quem aprova não é quem executa, quem audita não é quem opera</li>
+          <li><strong>Backup imune</strong> — pelo menos uma cópia offline ou imutável, fora do alcance de ransomware</li>
+          <li><strong>Atualização contínua</strong> — vulnerabilidades conhecidas são as mais exploradas</li>
         </ul>
 
-        <h2>Qual método escolher</h2>
-        <table>
-          <thead><tr><th>Método</th><th>Resistência</th><th>Quando usar</th></tr></thead>
-          <tbody>
-            <tr><td>Aplicativo autenticador (códigos que trocam a cada 30 segundos)</td><td>Boa</td><td>Uso diário na maioria das contas pessoais e de trabalho</td></tr>
-            <tr><td>Notificação no celular (aprovou/negou)</td><td>Média</td><td>Conveniente, mas exige disciplina para nunca aprovar sem reconhecer</td></tr>
-            <tr><td>SMS</td><td>Baixa</td><td>Última opção: depende da operadora e pode ser interceptado por troca de chip</td></tr>
-            <tr><td>Chave física de segurança</td><td>Alta</td><td>Contas críticas e administrativas; resiste até a phishing</td></tr>
-          </tbody>
-        </table>
-        <p>As diretrizes do NIST para identidade digital tratam verificação por SMS como opção mais frágil justamente por depender da rede telefônica. Se o serviço oferecer aplicativo autenticador, prefira-o; para contas que administram outras contas, chave física é o padrão mais resistente.</p>
-
-        <h2>Códigos de recuperação: o elo que as pessoas esquecem</h2>
-        <p>Ao ativar o 2FA, o serviço entrega códigos de uso único para o dia em que você trocar de celular, perder o aparelho ou ficar sem sinal. São o seu caminho de volta. Imprima ou anote em papel e guarde em lugar seguro — nunca em foto na galeria do celular, que é justamente o aparelho que você pode perder, e nunca no mesmo gerenciador de senhas do computador que pode falhar junto.</p>
-
-        <h2>Limites: o que o 2FA não resolve</h2>
+        <h2>Avaliação de Riscos Inicial</h2>
+        <p>Não é possível proteger o que você não conhece. O primeiro passo é mapear sua infraestrutura.</p>
+        <p>Faça um inventário completo:</p>
         <ul>
-          <li>Não protege contra malware já instalado no aparelho, que pode sequestrar a sessão aberta.</li>
-          <li>Não substitui atualizações do sistema nem senha forte e única por conta.</li>
-          <li>Não cobre a conta enquanto você não terminar a ativação em todos os dispositivos e serviços em que ela é usada.</li>
-          <li>Perde a força se você aprova notificações sem reconhecer a origem — golpe conhecido como "fadiga de MFA" pressiona a pessoa com pedidos repetidos até alguém aprovar por cansaço.</li>
+          <li>Quais dispositivos estão conectados à rede (computadores, celulares, IoT, impressoras)</li>
+          <li>Quais sistemas e aplicativos são usados (sistemas internos, SaaS, e-mail)</li>
+          <li>Quais dados são tratados (cadastros, financeiro, saúde, propriedade intelectual)</li>
+          <li>Quem tem acesso a quê (usuários, fornecedores, parceiros)</li>
+          <li>Onde estão os backups e qual a frequência</li>
+          <li>Quais ferramentas de segurança já estão em uso</li>
+        </ul>
+        <p>Esse mapeamento revela vulnerabilidades óbvias que muitas vezes passam despercebidas — como aquela impressora que ninguém mais usa mas continua acessível pela rede.</p>
+
+        <h2>Configuração Técnica Recomendada</h2>
+        <p>Com o mapeamento em mãos, parta para a configuração técnica. As recomendações abaixo são baseline mínimo para qualquer ambiente profissional.</p>
+        <ul>
+          <li><strong>Firewall configurado</strong> — bloqueia portas não usadas, limita acesso externo a serviços essenciais</li>
+          <li><strong>Antivírus em todos os endpoints</strong> — Bitdefender, ESET ou Kaspersky em versão corporativa</li>
+          <li><strong>Patch management</strong> — atualizações de SO e aplicativos aplicadas em até 30 dias da liberação</li>
+          <li><strong>EDR (Endpoint Detection and Response)</strong> — para detectar ataques que escapam do antivírus tradicional</li>
+          <li><strong>VPN para acesso remoto</strong> — nada de RDP exposto direto na internet</li>
+          <li><strong>2FA em todos os serviços críticos</strong> — e-mail, ERP, painel administrativo, redes sociais corporativas</li>
+          <li><strong>Logs centralizados</strong> — pelo menos 90 dias de retenção para investigação de incidentes</li>
         </ul>
 
-        <h2>Se você perdeu o segundo fator</h2>
-        <p>Use um código de recuperação anotado. Sem ele, o caminho é o suporte oficial do serviço — que pode levar dias e pedir comprovações. Por isso a ordem importa: e-mail e banco primeiro, com códigos guardados, antes de estender o 2FA para o resto. Nunca entregue códigos recebidos por SMS para quem ligou "do suporte": banco e plataforma legítimos não pedem o código por telefone.</p>
+        <h2>Procedimento Detalhado de Implementação</h2>
+        <p>Vamos ao passo a passo prático. Adapte ao seu ambiente, mas siga a ordem — pular etapas deixa brechas.</p>
+        <ol>
+          <li><strong>Inventário e classificação</strong> — saiba o que precisa proteger e qual a criticidade de cada ativo</li>
+          <li><strong>Hardening de senhas</strong> — gerenciador de senhas (Bitwarden, 1Password) para todos os usuários</li>
+          <li><strong>2FA universal</strong> — comece pelo e-mail (porta de entrada para tudo), depois bancos, redes sociais e sistemas internos</li>
+          <li><strong>Firewall e segmentação</strong> — separe rede de visitantes, IoT e produção</li>
+          <li><strong>Backup 3-2-1</strong> — 3 cópias, 2 mídias diferentes, 1 offsite</li>
+          <li><strong>Atualizações automáticas</strong> — configure janela de manutenção e aplique patches</li>
+          <li><strong>Treinamento de usuários</strong> — phishing é o vetor #1, e usuário treinado é a melhor defesa</li>
+          <li><strong>Monitoramento contínuo</strong> — logs revisados periodicamente, alertas configurados para anomalias</li>
+          <li><strong>Plano de resposta a incidentes</strong> — quem chamar, o que fazer, como comunicar quando algo der errado</li>
+          <li><strong>Auditoria periódica</strong> — pentest anual e revisão de configurações trimestral</li>
+        </ol>
 
-        <h2>O que não fazer</h2>
+        <h2>Ferramentas Recomendadas</h2>
+        <p>Mercado de segurança tem centenas de ferramentas. Para o cenário típico de SMB em Curitiba, essa stack cobre o essencial:</p>
         <ul>
-          <li>Não aprovar notificação de login que você não iniciou — negue e troque a senha em seguida.</li>
-          <li>Não compartilhar códigos temporários por mensagem com ninguém, incluindo colegas de trabalho.</li>
-          <li>Não deixar a conta empresarial com 2FA ativado só no administrador — o acesso de qualquer usuário é porta de entrada.</li>
-          <li>Não confundir "dispositivo confiável" com segurança: em computador compartilhado, nunca marque essa opção.</li>
+          <li><strong>Bitdefender GravityZone</strong> ou <strong>ESET Protect</strong> — antivírus + EDR centralizado</li>
+          <li><strong>pfSense</strong> ou <strong>OPNsense</strong> — firewall corporativo open source</li>
+          <li><strong>Bitwarden Business</strong> — gerenciador de senhas com SSO e auditoria</li>
+          <li><strong>Veeam Backup</strong> ou <strong>Acronis</strong> — backup empresarial com replicação</li>
+          <li><strong>Wazuh</strong> — SIEM open source para correlação de logs</li>
+          <li><strong>Cloudflare</strong> — proteção DDoS e WAF para sites e aplicações</li>
+          <li><strong>YubiKey</strong> ou <strong>Authy</strong> — 2FA físico e em apps</li>
         </ul>
 
-        <h2>Checklist de conta protegida</h2>
+        <h2>Erros Comuns Que Geram Vulnerabilidade</h2>
+        <p>Os ataques bem-sucedidos quase sempre exploram falhas conhecidas e evitáveis.</p>
         <ul>
-          <li>E-mail principal com 2FA ativo e recuperação atualizada.</li>
-          <li>Banco, WhatsApp e redes sociais com segunda verificação.</li>
-          <li>Autenticador ou chave física em vez de SMS, quando houver opção.</li>
-          <li>Códigos de recuperação anotados offline.</li>
-          <li>Atividade de login revisada e sessões desconhecidas encerradas.</li>
+          <li><strong>Senha "12345678"</strong> ou similar em conta administrativa</li>
+          <li><strong>Reutilizar senha</strong> entre serviços pessoais e corporativos</li>
+          <li><strong>Adiar atualizações</strong> de SO e aplicativos por meses ou anos</li>
+          <li><strong>Antivírus expirado</strong> sem que o usuário perceba</li>
+          <li><strong>Backup que nunca é testado</strong> — descobrir que não funciona depois do incidente</li>
+          <li><strong>Compartilhar credenciais</strong> entre funcionários por WhatsApp</li>
+          <li><strong>Acesso remoto direto via RDP</strong> sem VPN</li>
+          <li><strong>Wi-Fi corporativo</strong> com senha conhecida por todos os funcionários, terceiros e clientes</li>
         </ul>
 
-        <p>O 2FA é uma camada do conjunto — para a rede e os equipamentos da empresa, continue em <Link to="/blog/como-proteger-rede-wifi-empresa" className="text-accent">como proteger a rede Wi-Fi da empresa</Link> e, se há suspeita de conta já comprometida, veja <Link to="/servicos/remocao-de-virus" className="text-accent">remoção de vírus e malware</Link>.</p>
+        <h2>Resposta a Incidentes</h2>
+        <p>Cedo ou tarde, algo vai dar errado. Ter um plano definido é diferença entre incidente controlado e desastre.</p>
+        <ol>
+          <li><strong>Detecção</strong> — usuário relata, alerta de monitoramento dispara, antivírus bloqueia</li>
+          <li><strong>Contenção</strong> — desconectar máquinas afetadas da rede imediatamente</li>
+          <li><strong>Erradicação</strong> — remover malware, fechar vetor de entrada, trocar credenciais comprometidas</li>
+          <li><strong>Recuperação</strong> — restaurar de backup limpo, validar integridade antes de voltar à produção</li>
+          <li><strong>Lições aprendidas</strong> — documentar o que aconteceu, ajustar processos para evitar recorrência</li>
+        </ol>
+        <p><strong>Nunca pague resgate de ransomware sem consultar especialista.</strong> Pagar não garante recuperação dos dados e marca sua empresa como alvo fácil para futuras extorsões.</p>
+
+        <h2>Conformidade e LGPD</h2>
+        <p>Empresas que tratam dados pessoais têm obrigações legais. A LGPD não é opcional, e multas chegam a 2% do faturamento limitado a R$ 50 milhões por infração.</p>
+        <ul>
+          <li><strong>Mapeamento de dados pessoais</strong> coletados e tratados</li>
+          <li><strong>Base legal documentada</strong> para cada tratamento</li>
+          <li><strong>Política de privacidade</strong> clara e acessível</li>
+          <li><strong>Encarregado de proteção de dados</strong> (DPO) designado</li>
+          <li><strong>Plano de resposta a incidentes</strong> que inclua notificação à ANPD em até 48h</li>
+          <li><strong>Direitos dos titulares</strong> implementados (acesso, correção, exclusão)</li>
+        </ul>
+
+        <h2>Suporte em Segurança em Curitiba</h2>
+        <p>A <strong>{BRAND_NAME}</strong> oferece consultoria e implementação de segurança digital para empresas em Curitiba e região metropolitana. Auditoria, hardening, configuração de firewall, implementação de backup, treinamento de usuários e resposta a incidentes. Atendemos Curitiba, São José dos Pinhais, Pinhais, Colombo, Almirante Tamandaré, Araucária, Campo Largo, Campo Magro, Piraquara, Quatro Barras e Fazenda Rio Grande com técnicos certificados em segurança ofensiva e defensiva.</p>
 
       </>
     ),
@@ -9620,7 +9663,7 @@ crontab -e
   },
 
   
-  "como-deixar-windows-11-mais-rapido-iniciantes": {
+"como-deixar-windows-11-mais-rapido-iniciantes": {
     title: "Windows 11 lento: como deixar o PC mais rápido sem truques",
     excerpt:
       "Diagnóstico prático para Windows 11 lento: inicialização, armazenamento, processos, atualizações e sinais de limite de hardware antes de instalar otimizadores.",
@@ -9693,9 +9736,6 @@ crontab -e
           <li>Hardware avaliado se o limite persistir.</li>
         </ul>
 
-        <h2>Como saber se o que você fez resolveu</h2>
-        <p>Meça antes e depois com o mesmo método. Anote o tempo de ligar até conseguir abrir o navegador, o espaço livre em disco e a memória ocupada em repouso (logo após ligar, sem abrir programas). Depois de cada mudança — inicialização revisada, espaço liberado, atualização concluída — repita as três medições. Melhora pequena e sustentada vale mais do que um dia rápido seguido de volta ao problema: melhora que desaparece em poucas horas indica processo em segundo plano ou hardware no limite, e não configuração.</p>
-
         <p>Para entender o raciocínio completo em vez de seguir receitas isoladas, continue no <Link to="/guia-tecnico-informatica#tema-hardware-upgrades" className="text-accent">Atlas de hardware e desempenho</Link>.</p>
         <EditorialReferences slug="como-deixar-windows-11-mais-rapido-iniciantes" />
       </>
@@ -9703,7 +9743,7 @@ crontab -e
   },
 
   
-  "como-fazer-backup-fotos-windows-iniciantes": {
+"como-fazer-backup-fotos-windows-iniciantes": {
     title: "Como fazer backup de fotos no Windows e comprovar que a cópia funciona",
     excerpt:
       "Método seguro para proteger fotos no Windows usando disco externo, Histórico de Arquivos e nuvem — com verificação de restauração e sem confundir sincronização com backup.",
@@ -9761,9 +9801,6 @@ crontab -e
           <li>Plano para perda física, falha do disco e exclusão acidental.</li>
           <li>Teste periódico de restauração previsto.</li>
         </ul>
-
-        <h2>Organize agora para facilitar toda cópia futura</h2>
-        <p>Backup de fotos espalhadas em dezenas de pastas tende a ser incompleto. Antes da próxima cópia, defina um único lugar canônico para fotos no computador — por exemplo, uma pasta principal com subpastas por ano — e mova para lá o que estiver em Área de Trabalho, Downloads e pastas de aplicativos. Ao duplicar uma pasta para conferência, apague a cópia redundante depois de comparar contagem e tamanho total, porque duas versões "parecidas" da mesma coleção é o cenário clássico em que a pessoa restaura a versão antiga e perde as fotos mais recentes.</p>
 
         <p>Se você ainda não decidiu entre nuvem e mídia física, compare <Link to="/decisoes/nuvem-ou-hd-externo" className="text-accent">nuvem ou HD externo</Link> e veja o <Link to="/guia-tecnico-informatica#tema-dados-backup" className="text-accent">Atlas de dados e backup</Link>.</p>
         <EditorialReferences slug="como-fazer-backup-fotos-windows-iniciantes" />
@@ -10021,7 +10058,7 @@ crontab -e
           <li><strong>BitLocker:</strong> criptografia de volume que pode exigir chave de recuperação em determinados eventos.</li>
         </ul>
 
-        <h2>Dúvidas comuns sobre a redefinição</h2>
+        <h2>Perguntas frequentes</h2>
         <h3>O suporte consegue me dizer minha senha antiga?</h3>
         <p>
           Não. A recuperação redefine a credencial depois da verificação adequada; não existe procedimento
@@ -10191,7 +10228,7 @@ crontab -e
           <li><strong>Arquivo somente online:</strong> item visível no Explorador cujo conteúdo pode estar apenas na nuvem até ser aberto.</li>
         </ul>
 
-        <h2>Dúvidas comuns sobre a organização</h2>
+        <h2>Perguntas frequentes</h2>
         <h3>Muitos ícones na Área de Trabalho deixam o computador lento?</h3>
         <p>
           Não use isso como regra de diagnóstico. Uma Área de Trabalho cheia dificulta encontrar documentos, mas
@@ -10216,7 +10253,7 @@ crontab -e
     ),
   },
 
-  "como-atualizar-windows-corretamente": {
+"como-atualizar-windows-corretamente": {
     title: "Como atualizar o Windows 11 com segurança e o que fazer quando falha",
     excerpt:
       "Passo a passo para preparar, instalar e validar atualizações do Windows 11, com backup, energia, espaço, reinício e diagnóstico oficial quando o Windows Update apresenta erro.",
@@ -10269,11 +10306,6 @@ crontab -e
         <h2>Quando parar</h2>
         <p>Interrompa a sequência de tentativas se o Windows não inicia, o disco apresenta falha, a máquina entra em loop de reparo, o BitLocker pede uma chave que você não possui ou a atualização afetou um ambiente de produção sem plano de retorno. Nesses cenários, preservar dados e capacidade de recuperação vem antes de “terminar a atualização”.</p>
 
-        <h2>Notebooks: energia durante a atualização</h2>
-        <p>Em notebook, atualização interrompida por falta de bateria é uma das causas de inicialização com reparo. Antes de instalar atualizações acumuladas, conecte o carregador e confira se a bateria ainda segura carga. Se o equipamento desliga sozinho mesmo conectado, ou a porcentagem não sobe, resolva primeiro a questão de energia — uma atualização cortada no meio pode exigir recuperação do sistema, e é muito mais arriscada do que instalar tudo em outro momento. Em desktop, evite fazer atualizações grandes na véspera de usar a máquina para algo importante: deixe janela para eventuais reinícios.</p>
-
-        <p>Também vale separar a atualização do sistema de outras mudanças. Instalar atualização, trocar antivírus e reorganizar discos em uma mesma sessão de manutenção torna impossível saber o que causou um problema novo. Uma mudança por vez, com reinício entre elas, é o que mantém o diagnóstico possível se algo sair do comportamento esperado.</p>
-
         <p>Para loops pós-atualização, veja <Link to="/blog/windows-update-travado-desfazendo-alteracoes" className="text-accent">Windows Update travado ou desfazendo alterações</Link>. Para a visão geral, use o <Link to="/guia-tecnico-informatica#tema-sistemas-operacionais" className="text-accent">Atlas de sistemas operacionais</Link>.</p>
         <EditorialReferences slug="como-atualizar-windows-corretamente" />
       </>
@@ -10281,7 +10313,7 @@ crontab -e
   },
 
   
-  "como-recuperar-arquivos-apagados-windows": {
+"como-recuperar-arquivos-apagados-windows": {
     title: "Como recuperar arquivos apagados no Windows sem reduzir a chance de recuperação",
     excerpt:
       "Lixeira, versões de backup e Windows File Recovery: a ordem segura para tentar recuperar arquivos apagados e por que você deve reduzir o uso do disco após a exclusão.",
@@ -10335,11 +10367,6 @@ crontab -e
           <li>Outra unidade preparada para receber arquivos recuperados.</li>
           <li>Sinais de falha física avaliados antes de varrer.</li>
         </ul>
-
-        <h2>Depois da recuperação: confira o que realmente voltou</h2>
-        <p>Arquivo recuperado não é sinônimo de arquivo íntegro. Abra cada documento importante e verifique se o conteúdo está completo; recuperações de espaço não alocado podem trazer fragmentos, nomes trocados (arquivos salvos com nomes técnicos) e cópias parciais. Para fotos, abra em tamanho grande e confira se a imagem não aparece cortada ou com faixas de cor — sinais de recuperação incompleta. Documente a data e a origem de cada lote recuperado: isso evita que, meses depois, alguém trate um fragmento como a versão final do documento.</p>
-        <p>Vale a mesma regra do backup: o resultado da recuperação deve ser copiado imediatamente para outra unidade. Se os arquivos recuperados são os únicos existentes de um documento essencial, trate-os como cópia única de valor crítico até existir um backup de verdade.</p>
-        <p>Por fim, registre o que a experiência revelou. Se o arquivo importante só existia em um lugar, o problema não era a exclusão acidental — era a falta de cópia. Ajustar isso custa menos do que repetir uma varredura de recuperação, cujo resultado nunca é certo.</p>
 
         <p>Depois de recuperar o que for possível, elimine o ponto único de falha com o <Link to="/guia-tecnico-informatica#tema-dados-backup" className="text-accent">Atlas de dados e backup</Link>.</p>
         <EditorialReferences slug="como-recuperar-arquivos-apagados-windows" />
@@ -10510,11 +10537,6 @@ crontab -e
 
         <h2>Resumo para decidir</h2>
         <p>Comece observando espaço, atualizações e se o problema pertence a um app ou ao sistema inteiro. Limpe cache apenas quando houver motivo; não confunda com limpar dados. Remova apps sem uso, revise mídia com cuidado e mantenha uma cópia dos dados importantes. Se houver aquecimento, desligamentos ou falhas físicas, pare de tentar acelerar por software.</p>
-
-        <h2>Quanto espaço livre manter no aparelho</h2>
-        <p>Não existe número universal, mas há um sinal claro de alerta: quando o armazenamento chega muito perto do limite, o próprio sistema perde espaço para atualizações e para a memória de apoio dos aplicativos, e a lentidão aparece em conjunto. Se o seu aparelho está nesse ponto, a ordem prática é: revise Downloads e mídia repetida, verifique os apps que mais ocupam espaço com arquivos baixados e só depois considere remover aplicativos. Enquanto fizer essa revisão, evite instalar "limpadores" — eles ocupam espaço, pedem permissões amplas e não dizem quais arquivos consideraram desnecessários. Se após liberar espaço de forma conferida a lentidão persistir, a causa provável está em outro item desta lista.</p>
-
-        <p>Um detalhe que costuma passar despercebido: cartão de memória não é extensão infinita do armazenamento. Alguns aplicativos não funcionam bem a partir do cartão, e a remoção do cartão pode derrubar dados que apps mantinham nele. Ao mover conteúdo para o cartão, confirme no app correspondente que ele continuará acessível — e inclua o cartão no plano de cópia das fotos, porque ele também falha e pode ser perdido com o aparelho.</p>
 
         <EditorialReferences slug="como-deixar-celular-android-mais-rapido" />
 
@@ -11224,7 +11246,7 @@ crontab -e
           <li><strong>Firmware:</strong> software interno do roteador, fornecido pelo fabricante/operadora.</li>
         </ul>
 
-        <h2>Dúvidas comuns sobre a troca</h2>
+        <h2>Perguntas frequentes</h2>
         <h3>Trocar a senha expulsa quem já estava conectado?</h3>
         <p>
           Os clientes que dependem daquela credencial precisam autenticar novamente. O comportamento exato durante
@@ -11554,7 +11576,7 @@ crontab -e
   },
 
   
-  "como-fazer-teste-velocidade-internet": {
+"como-fazer-teste-velocidade-internet": {
     title: "Como fazer teste de velocidade da internet e interpretar download, latência e Wi-Fi",
     excerpt:
       "Método para testar a internet sem confundir problema do provedor com Wi-Fi: referência por cabo, medições repetidas, download, upload, latência, jitter e perda de pacotes.",
@@ -11617,10 +11639,6 @@ crontab -e
           <li>Mais de um horário quando o problema é intermitente.</li>
           <li>VPN e tráfego intenso controlados ou anotados.</li>
         </ul>
-
-        <h2>Quando o resultado vem acima do contratado</h2>
-        <p>Medir acima da velocidade contratada não é erro nem sinal de benefício permanente. Muitos planos entregam picos curtos acima do valor contratado em cargas rápidas — e a ferramenta mede justamente esses picos. O que sustenta o uso real é a velocidade sustentada, a latência e a estabilidade em horários de pico. Para chamadas de vídeo e jogos, latência baixa e estática ausente importam mais do que download alto: uma conexão de 100 Mbps com oscilação forte pode ser pior para reunião do que 50 Mbps estáveis. Por isso, interprete o conjunto de números da medição, não só o destaque grande na tela.</p>
-        <p>Guarde o histórico das medições em vez de confiar na memória: data, horário, número e aparelho usado. Séries curtas e comparáveis são o que permite perceber degradação gradual — aquela que ninguém nota no dia, mas que aparece quando duas medições de meses diferentes são postas lado a lado com o mesmo método.</p>
 
         <p>Se a causa ficar na rede interna, consulte <Link to="/servicos/redes-e-wifi" className="text-accent">redes e Wi-Fi</Link> e o <Link to="/guia-tecnico-informatica#tema-redes-wifi" className="text-accent">Atlas de redes</Link>.</p>
         <EditorialReferences slug="como-fazer-teste-velocidade-internet" />
