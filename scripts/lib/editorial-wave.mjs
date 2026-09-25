@@ -827,6 +827,38 @@ export const EDITORIAL_WAVE = [
     cover: "/blog/como-recuperar-conta-hackeada.svg",
   },
 
+  // ── Onda 11J — Windows, backup e conectividade.
+  {
+    slug: "como-deixar-windows-11-mais-rapido-iniciantes", approvedAt: "2026-09-25",
+    pilar: "/problemas/computador-lento", pilarLabel: "Computador lento",
+    apoio: "/decisoes/ssd-ou-memoria-ram", apoioLabel: "SSD ou memória RAM",
+    cover: "/blog/windows-11-lento-como-resolver.jpg",
+  },
+  {
+    slug: "como-fazer-backup-fotos-windows-iniciantes", approvedAt: "2026-09-25",
+    pilar: "/seguranca-dos-dados", pilarLabel: "Segurança dos dados",
+    apoio: "/blog/como-testar-restauracao-de-backup", apoioLabel: "Testar restauração de backup",
+    cover: "/blog/historico-de-arquivos-windows-como-configurar.jpg",
+  },
+  {
+    slug: "como-atualizar-windows-corretamente", approvedAt: "2026-09-25",
+    pilar: "/guia-tecnico-informatica", pilarLabel: "Guia do técnico de informática",
+    apoio: "/blog/windows-update-nao-funciona-o-que-verificar", apoioLabel: "Windows Update não funciona",
+    cover: "/blog/windows-update-nao-funciona-o-que-verificar.jpg",
+  },
+  {
+    slug: "como-recuperar-arquivos-apagados-windows", approvedAt: "2026-09-25",
+    pilar: "/servicos/recuperacao-de-dados", pilarLabel: "Recuperação de dados",
+    apoio: "/blog/como-testar-restauracao-de-backup", apoioLabel: "Testar restauração de backup",
+    cover: "/blog/como-testar-restauracao-de-backup.jpg",
+  },
+  {
+    slug: "como-fazer-teste-velocidade-internet", approvedAt: "2026-09-25",
+    pilar: "/servicos/redes-e-wifi", pilarLabel: "Redes e Wi-Fi",
+    apoio: "/blog/internet-lenta-provedor-ou-roteador", apoioLabel: "Internet lenta: provedor ou roteador",
+    cover: "/blog/internet-lenta-provedor-ou-roteador.jpg",
+  },
+
 ];
 
 

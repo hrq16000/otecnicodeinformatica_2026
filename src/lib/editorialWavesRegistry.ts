@@ -816,6 +816,40 @@ export const WAVE_11I_BATCH_1: EditorialWaveEntry[] = [
   },
 ];
 
+/** Onda 11J — Windows, backup e conectividade qualificados. */
+export const WAVE_11J_BATCH_1: EditorialWaveEntry[] = [
+  {
+    wave: "11A", batch: "11", url: "/blog/como-deixar-windows-11-mais-rapido-iniciantes", slug: "como-deixar-windows-11-mais-rapido-iniciantes",
+    ownerId: "windows-11-desempenho-diagnostico", cluster: "lentidao", role: "satelite", publishedAt: "2026-09-25",
+    targetQueries: ["como deixar windows 11 mais rapido", "windows 11 lento", "pc windows 11 travando"],
+    doNotDuplicate: ["/blog/windows-11-lento-como-resolver", "/problemas/computador-lento"],
+  },
+  {
+    wave: "11A", batch: "11", url: "/blog/como-fazer-backup-fotos-windows-iniciantes", slug: "como-fazer-backup-fotos-windows-iniciantes",
+    ownerId: "backup-fotos-windows", cluster: "dados-backup", role: "satelite", publishedAt: "2026-09-25",
+    targetQueries: ["como fazer backup de fotos no windows", "backup fotos hd externo", "proteger fotos no pc"],
+    doNotDuplicate: ["/blog/backup-como-proteger-seus-arquivos", "/blog/historico-de-arquivos-windows-como-configurar"],
+  },
+  {
+    wave: "11A", batch: "11", url: "/blog/como-atualizar-windows-corretamente", slug: "como-atualizar-windows-corretamente",
+    ownerId: "windows-update-manutencao-segura", cluster: "windows-update", role: "satelite", publishedAt: "2026-09-25",
+    targetQueries: ["como atualizar windows 11", "atualizar windows corretamente", "windows update guia"],
+    doNotDuplicate: ["/blog/windows-update-nao-funciona-o-que-verificar", "/blog/windows-update-travado-desfazendo-alteracoes"],
+  },
+  {
+    wave: "11A", batch: "11", url: "/blog/como-recuperar-arquivos-apagados-windows", slug: "como-recuperar-arquivos-apagados-windows",
+    ownerId: "arquivos-apagados-windows-recuperacao", cluster: "dados-backup", role: "satelite", publishedAt: "2026-09-25",
+    targetQueries: ["recuperar arquivos apagados windows", "windows file recovery", "arquivo apagado lixeira vazia"],
+    doNotDuplicate: ["/servicos/recuperacao-de-dados", "/blog/como-recuperar-dados-hd-com-defeito"],
+  },
+  {
+    wave: "11A", batch: "11", url: "/blog/como-fazer-teste-velocidade-internet", slug: "como-fazer-teste-velocidade-internet",
+    ownerId: "teste-velocidade-internet-diagnostico", cluster: "internet-wifi", role: "satelite", publishedAt: "2026-09-25",
+    targetQueries: ["como testar velocidade da internet", "teste internet por cabo e wifi", "latencia jitter perda pacotes"],
+    doNotDuplicate: ["/blog/internet-lenta-provedor-ou-roteador", "/blog/como-melhorar-sinal-wifi-em-casa"],
+  },
+];
+
 export const EDITORIAL_WAVES: EditorialWaveEntry[] = [
   ...WAVE_10C_BATCH_0,
   ...WAVE_10D_BATCH_1,
@@ -829,6 +863,7 @@ export const EDITORIAL_WAVES: EditorialWaveEntry[] = [
   ...WAVE_11G_BATCH_1,
   ...WAVE_11H_BATCH_1,
   ...WAVE_11I_BATCH_1,
+  ...WAVE_11J_BATCH_1,
 ];
 
 /** URLs monitoradas (ordem estável, sem duplicatas). */

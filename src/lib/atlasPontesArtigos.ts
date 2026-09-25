@@ -449,6 +449,58 @@ export const ATLAS_PONTES_ARTIGOS: Record<string, AtlasPonteArtigo> = {
     },
   },
 
+  "como-deixar-windows-11-mais-rapido-iniciantes": {
+    temaId: "hardware-upgrades",
+    porQue:
+      "Desempenho no Windows precisa ser medido por recurso: CPU, memória, disco, inicialização e temperatura. A trilha de hardware evita transformar toda lentidão em formatação ou compra de peça.",
+    proximoPasso: {
+      rotulo: "SSD ou memória RAM",
+      to: "/decisoes/ssd-ou-memoria-ram",
+      contexto: "Compare o gargalo real antes de decidir qual upgrade faz sentido.",
+    },
+  },
+  "como-fazer-backup-fotos-windows-iniciantes": {
+    temaId: "dados-backup",
+    porQue:
+      "Fotos precisam sobreviver à falha do computador, à exclusão e à perda física. A trilha de dados separa cópia, sincronização, versionamento e restauração.",
+    proximoPasso: {
+      rotulo: "Testar restauração de backup",
+      to: "/blog/como-testar-restauracao-de-backup",
+      contexto: "Comprove que a cópia abre e pode ser restaurada antes de depender dela.",
+    },
+  },
+  "como-atualizar-windows-corretamente": {
+    temaId: "sistemas-operacionais",
+    porQue:
+      "Atualização é manutenção do sistema operacional: preparação, canal oficial, reinício e validação reduzem risco e tornam falhas reproduzíveis.",
+    proximoPasso: {
+      rotulo: "Windows Update não funciona",
+      to: "/blog/windows-update-nao-funciona-o-que-verificar",
+      contexto: "Use a trilha de diagnóstico quando a atualização falha ou retorna código de erro.",
+    },
+  },
+  "como-recuperar-arquivos-apagados-windows": {
+    temaId: "dados-backup",
+    porQue:
+      "Recuperação depende de preservar a mídia e reduzir novas gravações. A trilha de dados mostra quando restaurar backup, quando tentar recuperação lógica e quando parar.",
+    proximoPasso: {
+      rotulo: "Recuperação de dados",
+      to: "/servicos/recuperacao-de-dados",
+      contexto: "Entenda o limite entre exclusão lógica, mídia instável e defeito físico.",
+    },
+  },
+  "como-fazer-teste-velocidade-internet": {
+    temaId: "redes-wifi",
+    porQue:
+      "Velocidade é só uma parte da experiência de rede. A trilha de redes conecta download, upload, latência, jitter, perda, Ethernet e Wi-Fi ao ponto real da falha.",
+    proximoPasso: {
+      rotulo: "Internet lenta: provedor ou roteador",
+      to: "/blog/internet-lenta-provedor-ou-roteador",
+      contexto: "Transforme os resultados do teste em diagnóstico de provedor versus rede interna.",
+    },
+  },
+
+
 };
 
 export interface AtlasPonteArtigoResolvida extends AtlasPonteArtigo {
