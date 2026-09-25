@@ -694,6 +694,64 @@ export const EDITORIAL_SOURCES: Record<string, EditorialSource> = {
     ],
   },
 
+  "ms-pc-performance": {
+    id: "ms-pc-performance",
+    title: "Dicas para melhorar o desempenho do PC no Windows",
+    publisher: "Microsoft Support",
+    url: "https://support.microsoft.com/pt-br/windows/experience/performance-optimization/tips-to-improve-pc-performance-in-windows",
+    accessedAt: "2026-09-25",
+    sourceType: "official",
+    supports: [
+      "Atualizações, espaço de armazenamento, aplicativos de inicialização e observação de recursos são etapas documentadas de diagnóstico de desempenho.",
+      "Hardware antigo pode limitar o ganho obtido apenas com otimizações de software.",
+    ],
+  },
+  "ms-startup-apps": {
+    id: "ms-startup-apps",
+    title: "Configurar aplicações de Arranque no Windows",
+    publisher: "Microsoft Support",
+    url: "https://support.microsoft.com/pt-br/windows/experience/startup-boot/configure-startup-applications-in-windows",
+    accessedAt: "2026-09-25",
+    sourceType: "official",
+    supports: [
+      "Aplicativos que iniciam automaticamente podem afetar tempo de inicialização e atividade do sistema.",
+    ],
+  },
+  "ms-file-history": {
+    id: "ms-file-history",
+    title: "Fazer backup e restaurar com o Histórico de Arquivos",
+    publisher: "Microsoft Support",
+    url: "https://support.microsoft.com/pt-br/windows/experience/backup-recovery/backup-and-restore-with-file-history",
+    accessedAt: "2026-09-25",
+    sourceType: "official",
+    supports: [
+      "O Histórico de Arquivos mantém cópias de arquivos pessoais e permite restaurar versões anteriores quando previamente configurado.",
+    ],
+  },
+  "ms-windows-update-troubleshoot": {
+    id: "ms-windows-update-troubleshoot",
+    title: "Solução de problemas do Windows Update",
+    publisher: "Microsoft Support",
+    url: "https://support.microsoft.com/pt-br/windows/solu%C3%A7%C3%A3o-de-problemas-do-windows-update-19bc41ca-ad72-ae67-af3c-89ce169755dd",
+    accessedAt: "2026-09-25",
+    sourceType: "official",
+    supports: [
+      "No Windows 11, a Microsoft orienta começar a investigação de falhas de atualização pelo solucionador do Windows Update no aplicativo Obter Ajuda.",
+    ],
+  },
+  "ms-windows-file-recovery": {
+    id: "ms-windows-file-recovery",
+    title: "Recuperação de arquivos do Windows",
+    publisher: "Microsoft Support",
+    url: "https://support.microsoft.com/pt-br/windows/experience/backup-recovery/windows-file-recovery",
+    accessedAt: "2026-09-25",
+    sourceType: "official",
+    supports: [
+      "Windows File Recovery pode tentar recuperar arquivos apagados de armazenamento local quando não estão disponíveis na Lixeira ou em backup.",
+      "Minimizar o uso do computador após a exclusão pode aumentar a chance de recuperação.",
+    ],
+  },
+
 };
 
 // ─────────────────────────────────────────────────────────────
@@ -1564,6 +1622,52 @@ export const ARTICLE_SOURCE_MANIFEST: Record<string, ArticleSourceManifest> = {
     factCheckedAt: "2026-09-25",
     notes:
       "Reescrita completa em 2026-09-25: remove estatísticas/valores sem fonte, stack comercial e alegações locais; foca recuperação oficial, sessão, recovery, MFA, dispositivo e preservação de evidências.",
+  },
+
+  "como-deixar-windows-11-mais-rapido-iniciantes": {
+    slug: "como-deixar-windows-11-mais-rapido-iniciantes",
+    sources: ["ms-pc-performance", "ms-startup-apps"],
+    technicalReview: "reviewed",
+    factChecked: true,
+    factCheckedAt: "2026-09-25",
+    notes:
+      "Reescrita material: substitui receitas genéricas por diagnóstico por recurso, inicialização, armazenamento, atualização e limite de hardware; remove porcentagem mágica de espaço e alegação de atendimento local.",
+  },
+  "como-fazer-backup-fotos-windows-iniciantes": {
+    slug: "como-fazer-backup-fotos-windows-iniciantes",
+    sources: ["ms-file-history", "cisa-backup", "nist-sp-800-34"],
+    technicalReview: "reviewed",
+    factChecked: true,
+    factCheckedAt: "2026-09-25",
+    notes:
+      "Reescrita material: diferencia cópia, sincronização, versionamento e restauração; adiciona inventário, verificação e critério de parada diante de mídia instável.",
+  },
+  "como-atualizar-windows-corretamente": {
+    slug: "como-atualizar-windows-corretamente",
+    sources: ["ms-windows-update-troubleshoot", "ms-pc-performance"],
+    technicalReview: "reviewed",
+    factChecked: true,
+    factCheckedAt: "2026-09-25",
+    notes:
+      "Reescrita material: remove cronômetros universais e instrução de forçar desligamento; prioriza preparação, Windows Update, registro de erro, Obter Ajuda e validação pós-atualização.",
+  },
+  "como-recuperar-arquivos-apagados-windows": {
+    slug: "como-recuperar-arquivos-apagados-windows",
+    sources: ["ms-windows-file-recovery", "ms-file-history"],
+    technicalReview: "reviewed",
+    factChecked: true,
+    factCheckedAt: "2026-09-25",
+    notes:
+      "Reescrita material: prioriza Lixeira/backup, reduz gravações na mídia, usa Windows File Recovery com destino separado e define limites para SSD e falha física.",
+  },
+  "como-fazer-teste-velocidade-internet": {
+    slug: "como-fazer-teste-velocidade-internet",
+    sources: ["fcc-home-network-tips", "fcc-speed-test-app-faq"],
+    technicalReview: "reviewed",
+    factChecked: true,
+    factCheckedAt: "2026-09-25",
+    notes:
+      "Reescrita material: remove regra falsa de que Wi-Fi é sempre mais lento e percentuais regulatórios antigos; ensina referência cabeada, repetição de medições, latência, jitter e perda.",
   },
 
 };
