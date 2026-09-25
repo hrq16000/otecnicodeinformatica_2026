@@ -7,11 +7,16 @@ import { readFileSync, existsSync, readdirSync, statSync } from "node:fs";
 import { join, extname } from "node:path";
 import { LEGACY_TOKENS } from "./lib/site-env.mjs";
 
-const ROOTS = ["index.html", "src", "public", "dist"].filter((p) => existsSync(p));
+const ROOTS = ["index.html", "src", "public", "scripts", "dist"].filter((p) => existsSync(p));
+const ROOT_MARKDOWN = readdirSync(".").filter(
+  (entry) => entry.toLowerCase().endsWith(".md") && statSync(entry).isFile(),
+);
+const MARKDOWN_DIRS = ["docs"].filter((p) => existsSync(p));
 
 // Arquivos onde a citação do token é legítima (documentação da própria migração
 // e testes de regressão que precisam do valor literal para provar o bloqueio).
 const ALLOWLIST = [
+  /^AGENTS\\.md$/,
   /^scripts\/lib\/site-env\.mjs$/,
   /^scripts\/check-brand-isolation\.mjs$/,
   /\.test\.(ts|tsx|mjs|js)$/,
@@ -30,7 +35,18 @@ const walk = (p) => {
   if (SKIP_EXT.has(extname(p).toLowerCase())) return;
   files.push(p);
 };
+const walkMarkdown = (p) => {
+  const st = statSync(p);
+  if (st.isDirectory()) {
+    for (const entry of readdirSync(p)) walkMarkdown(join(p, entry));
+    return;
+  }
+  if (extname(p).toLowerCase() !== ".md") return;
+  files.push(p);
+};
 for (const r of ROOTS) walk(r);
+for (const file of ROOT_MARKDOWN) files.push(file);
+for (const dir of MARKDOWN_DIRS) walkMarkdown(dir);
 
 const violations = [];
 for (const file of files) {
