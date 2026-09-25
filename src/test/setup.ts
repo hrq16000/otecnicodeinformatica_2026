@@ -6,6 +6,19 @@
  */
 import { afterEach } from "vitest";
 
+// Supabase v2 valida a presença de WebSocket ao criar o client em ambiente Node.
+// A suíte unitária não usa Realtime; um stub mínimo evita que imports puros de páginas
+// falhem antes mesmo do teste começar. Em jsdom/browser o WebSocket real permanece intacto.
+if (typeof globalThis.WebSocket === "undefined") {
+  class TestWebSocket {
+    static readonly CONNECTING = 0;
+    static readonly OPEN = 1;
+    static readonly CLOSING = 2;
+    static readonly CLOSED = 3;
+  }
+  globalThis.WebSocket = TestWebSocket as unknown as typeof WebSocket;
+}
+
 const hasDom = typeof window !== "undefined" && typeof document !== "undefined";
 
 if (hasDom) {
