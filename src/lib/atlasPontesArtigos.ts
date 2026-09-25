@@ -21,6 +21,17 @@ export interface AtlasPonteArtigo {
 }
 
 export const ATLAS_PONTES_ARTIGOS: Record<string, AtlasPonteArtigo> = {
+  "hd-nao-e-reconhecido-na-bios-o-que-fazer": {
+    temaId: "dados-backup",
+    porQue:
+      "Disco que some da BIOS não é só um problema de inicialização: pode envolver energia, conexão, controladora ou falha da própria mídia. O Atlas coloca preservação de dados antes de qualquer tentativa que escreva no disco.",
+    proximoPasso: {
+      rotulo: "SMART e setores defeituosos",
+      to: "/blog/disco-com-setores-defeituosos-smart-o-que-fazer",
+      contexto:
+        "Entenda quais sinais de saúde do disco ajudam a separar falha lógica de degradação física.",
+    },
+  },
   "o-que-e-informatica": {
     temaId: "fundamentos",
     porQue:
