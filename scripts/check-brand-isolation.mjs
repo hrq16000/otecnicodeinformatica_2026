@@ -7,7 +7,9 @@ import { readFileSync, existsSync, readdirSync, statSync } from "node:fs";
 import { join, extname } from "node:path";
 import { LEGACY_TOKENS } from "./lib/site-env.mjs";
 
-const ROOTS = ["index.html", "src", "public", "scripts", "dist"].filter((p) => existsSync(p));
+const ROOTS = ["index.html", "src", "public", "scripts", "dist"].filter((p) =>
+  existsSync(p),
+);
 const ROOT_MARKDOWN = readdirSync(".").filter(
   (entry) => entry.toLowerCase().endsWith(".md") && statSync(entry).isFile(),
 );
@@ -23,7 +25,20 @@ const ALLOWLIST = [
   /^src\/lib\/legacy\//,
 ];
 
-const SKIP_EXT = new Set([".png", ".jpg", ".jpeg", ".webp", ".avif", ".ico", ".woff", ".woff2", ".mp4", ".pdf", ".gz", ".br"]);
+const SKIP_EXT = new Set([
+  ".png",
+  ".jpg",
+  ".jpeg",
+  ".webp",
+  ".avif",
+  ".ico",
+  ".woff",
+  ".woff2",
+  ".mp4",
+  ".pdf",
+  ".gz",
+  ".br",
+]);
 
 const files = [];
 const walk = (p) => {
@@ -74,4 +89,6 @@ if (violations.length) {
   process.exit(1);
 }
 
-console.log(`[check:brand-isolation] OK — ${files.length} arquivos, nenhum identificador herdado.`);
+console.log(
+  `[check:brand-isolation] OK — ${files.length} arquivos, nenhum identificador herdado.`,
+);
