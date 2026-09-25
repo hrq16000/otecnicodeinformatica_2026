@@ -82,6 +82,8 @@ export const ALLOWED_SOURCE_HOSTS = [
   "docs.netgate.com",
   "www.tp-link.com",
   "ubuntu.com",
+  "samba.org",
+  "www.samba.org",
   "www.wireguard.com",
   "wireguard.com",
   "openvpn.net",
@@ -821,6 +823,86 @@ export const EDITORIAL_SOURCES: Record<string, EditorialSource> = {
     sourceType: "official",
     supports: [
       "Roteadores devem usar senhas fortes e exclusivas e manter imagens de software/firmware atualizadas.",
+    ],
+  },
+
+  "ms-secure-boot-windows11-2026": {
+    id: "ms-secure-boot-windows11-2026",
+    title: "Windows 11 and Secure Boot",
+    publisher: "Microsoft Support",
+    url: "https://support.microsoft.com/en-us/windows/security/devicesecurity/windows-11-and-secure-boot",
+    accessedAt: "2026-09-25",
+    sourceType: "official",
+    supports: [
+      "Secure Boot ajuda a impedir software malicioso no processo de inicialização.",
+      "O Windows oferece acesso às Configurações de Firmware UEFI pela Inicialização avançada.",
+      "A Microsoft recomenda reabilitar Secure Boot após uma desativação temporária necessária.",
+    ],
+  },
+  "ms-enable-tpm2-2026": {
+    id: "ms-enable-tpm2-2026",
+    title: "Enable TPM 2.0 on your PC",
+    publisher: "Microsoft Support",
+    url: "https://support.microsoft.com/en-us/windows/security/devicesecurity/enable-tpm-2-0-on-your-pc",
+    accessedAt: "2026-09-25",
+    sourceType: "official",
+    supports: [
+      "TPM 2.0 é requisito do Windows 11 e pode aparecer no firmware com rótulos como Intel PTT ou AMD fTPM.",
+      "A localização e o nome da configuração variam conforme fabricante e dispositivo.",
+    ],
+  },
+  "ms-smb-overview-2026": {
+    id: "ms-smb-overview-2026",
+    title: "What is SMB File Sharing for Windows and Windows Server?",
+    publisher: "Microsoft Learn",
+    url: "https://learn.microsoft.com/en-us/windows-server/storage/file-server/file-server-smb-overview",
+    accessedAt: "2026-09-25",
+    sourceType: "official",
+    supports: [
+      "Windows cliente e Windows Server incluem componentes cliente e servidor SMB.",
+      "Recursos de SMB variam conforme sistema e versão.",
+    ],
+  },
+  "ms-smb-hardening-2026": {
+    id: "ms-smb-hardening-2026",
+    title: "SMB security hardening in Windows Server and Windows Client",
+    publisher: "Microsoft Learn",
+    url: "https://learn.microsoft.com/en-us/windows-server/storage/file-server/smb-security-hardening",
+    accessedAt: "2026-09-25",
+    sourceType: "official",
+    supports: ["Versões recentes do Windows reforçam assinatura, autenticação e outros controles de segurança do SMB."],
+  },
+  "ms-smb-secure-traffic-2026": {
+    id: "ms-smb-secure-traffic-2026",
+    title: "Secure SMB Traffic in Windows Server",
+    publisher: "Microsoft Learn",
+    url: "https://learn.microsoft.com/en-us/windows-server/storage/file-server/smb-secure-traffic",
+    accessedAt: "2026-09-25",
+    sourceType: "official",
+    supports: ["A Microsoft recomenda bloquear TCP 445 na borda da internet e usar segmentação como defesa em profundidade."],
+  },
+  "samba-smb-conf-current-2026": {
+    id: "samba-smb-conf-current-2026",
+    title: "smb.conf — Samba current documentation",
+    publisher: "Samba",
+    url: "https://www.samba.org/samba/docs/current/man-html/smb.conf.5",
+    accessedAt: "2026-09-25",
+    sourceType: "official",
+    supports: [
+      "guest ok = yes permite acesso ao serviço sem senha e o padrão é guest ok = no.",
+      "valid users limita quais usuários podem entrar no serviço.",
+    ],
+  },
+  "ubuntu-ufw-firewall-2026": {
+    id: "ubuntu-ufw-firewall-2026",
+    title: "Firewall — Ubuntu Server documentation",
+    publisher: "Ubuntu",
+    url: "https://ubuntu.com/server/docs/how-to/security/firewalls/",
+    accessedAt: "2026-09-25",
+    sourceType: "official",
+    supports: [
+      "UFW é a ferramenta padrão do Ubuntu para firewall de host e começa desabilitada por padrão.",
+      "A documentação cobre enable, allow, deny, status numbered, delete, regras por origem, --dry-run, perfis de aplicação e logging.",
     ],
   },
 
@@ -1768,6 +1850,31 @@ export const ARTICLE_SOURCE_MANIFEST: Record<string, ArticleSourceManifest> = {
     factCheckedAt: "2026-09-25",
     notes:
       "Onda 11K: removidas credenciais e endereços genéricos, reset de fábrica como primeira opção e regra fixa de senha; adicionados painel oficial, separação de credenciais, WPA2/WPA3, firmware, validação e limites para roteador gerenciado.",
+  },
+
+  "como-configurar-bios-uefi-corretamente": {
+    slug: "como-configurar-bios-uefi-corretamente",
+    sources: ["ms-secure-boot-windows11-2026", "ms-enable-tpm2-2026", "ms-bitlocker-backup-key"],
+    technicalReview: "reviewed",
+    factChecked: true,
+    factCheckedAt: "2026-09-25",
+    notes: "Onda 11L: removidos absolutos sobre UEFI/AHCI/XMP e chaves de fabricante; adicionados baseline, BitLocker, Secure Boot, TPM, armazenamento, critérios de parada e decisão por objetivo.",
+  },
+  "como-configurar-servidor-de-arquivos": {
+    slug: "como-configurar-servidor-de-arquivos",
+    sources: ["ms-smb-overview-2026", "ms-smb-hardening-2026", "ms-smb-secure-traffic-2026", "samba-smb-conf-current-2026"],
+    technicalReview: "reviewed",
+    factChecked: true,
+    factCheckedAt: "2026-09-25",
+    notes: "Onda 11L: removidos senha em comando, guest share e números fixos de capacidade; conteúdo agora prioriza identidade, grupos, SMB autenticado, segmentação, backup e restauração.",
+  },
+  "como-configurar-firewall-ufw-linux": {
+    slug: "como-configurar-firewall-ufw-linux",
+    sources: ["ubuntu-ufw-firewall-2026"],
+    technicalReview: "reviewed",
+    factChecked: true,
+    factCheckedAt: "2026-09-25",
+    notes: "Onda 11L: removidas estatísticas e stack comercial sem fonte; reescrito em torno do UFW oficial, preservação de SSH, dry-run, origem, perfis, logs, rollback e limites de firewall de host.",
   },
 
 };
