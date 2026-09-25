@@ -782,6 +782,40 @@ export const WAVE_11H_BATCH_1: EditorialWaveEntry[] = [
   },
 ];
 
+/** Onda 11I — segunda promoção de acervo herdado qualificado. */
+export const WAVE_11I_BATCH_1: EditorialWaveEntry[] = [
+  {
+    wave: "11A", batch: "10", url: "/blog/como-configurar-repetidor-wifi", slug: "como-configurar-repetidor-wifi",
+    ownerId: "repetidor-wifi-configuracao", cluster: "internet-wifi", role: "satelite", publishedAt: "2026-09-25",
+    targetQueries: ["como configurar repetidor wifi", "onde colocar repetidor wifi", "repetidor wifi vale a pena"],
+    doNotDuplicate: ["/blog/como-melhorar-sinal-wifi-em-casa", "/blog/rede-wifi-nao-aparece-na-lista-o-que-verificar"],
+  },
+  {
+    wave: "11A", batch: "10", url: "/blog/trocar-windows-por-linux-vale-a-pena", slug: "trocar-windows-por-linux-vale-a-pena",
+    ownerId: "windows-linux-migracao", cluster: "fundamentos", role: "pilar", publishedAt: "2026-09-25",
+    targetQueries: ["trocar windows por linux vale a pena", "migrar windows para linux", "linux em pc antigo"],
+    doNotDuplicate: ["/decisoes/atualizar-para-windows-11", "/blog/como-instalar-windows-11-do-zero"],
+  },
+  {
+    wave: "11A", batch: "10", url: "/blog/erros-comuns-upgrade-computador", slug: "erros-comuns-upgrade-computador",
+    ownerId: "upgrade-compatibilidade-hardware", cluster: "hardware-upgrade", role: "satelite", publishedAt: "2026-09-25",
+    targetQueries: ["erros upgrade pc", "como saber se memoria ram e compativel", "ssd m2 sata nvme compatibilidade"],
+    doNotDuplicate: ["/servicos/upgrade-ssd-ram", "/decisoes/ssd-ou-memoria-ram"],
+  },
+  {
+    wave: "11A", batch: "10", url: "/blog/como-configurar-vpn-empresarial", slug: "como-configurar-vpn-empresarial",
+    ownerId: "vpn-empresarial-acesso-remoto", cluster: "informatica-empresas", role: "pilar", publishedAt: "2026-09-25",
+    targetQueries: ["como configurar vpn empresarial", "vpn acesso remoto empresa", "wireguard empresa"],
+    doNotDuplicate: ["/blog/como-configurar-firewall-pfsense", "/blog/como-proteger-rede-wifi-empresa"],
+  },
+  {
+    wave: "11A", batch: "10", url: "/blog/como-recuperar-conta-hackeada", slug: "como-recuperar-conta-hackeada",
+    ownerId: "conta-comprometida-recuperacao", cluster: "seguranca-identidade", role: "pilar", publishedAt: "2026-09-25",
+    targetQueries: ["como recuperar conta hackeada", "conta invadida o que fazer", "recuperar conta comprometida"],
+    doNotDuplicate: ["/blog/como-configurar-2fa-em-tudo", "/blog/como-proteger-computador-golpes-internet"],
+  },
+];
+
 export const EDITORIAL_WAVES: EditorialWaveEntry[] = [
   ...WAVE_10C_BATCH_0,
   ...WAVE_10D_BATCH_1,
@@ -794,6 +828,7 @@ export const EDITORIAL_WAVES: EditorialWaveEntry[] = [
   ...WAVE_11F_BATCH_1,
   ...WAVE_11G_BATCH_1,
   ...WAVE_11H_BATCH_1,
+  ...WAVE_11I_BATCH_1,
 ];
 
 /** URLs monitoradas (ordem estável, sem duplicatas). */
