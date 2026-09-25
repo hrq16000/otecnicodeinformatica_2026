@@ -10331,7 +10331,7 @@ crontab -e
         <h2>O que nunca fazer enquanto tenta recuperar</h2>
         <ul>
           <li>Não instale o programa de recuperação no mesmo disco onde estavam os arquivos apagados: a instalação pode gravar por cima deles.</li>
-          <li>Não salve os arquivos recuperados no disco de origem. Use um pendrive ou HD externo.</li>
+          <li>Não salve os arquivos recuperados no disco de origem. Use sempre um pendrive ou HD externo separado.</li>
           <li>Não rode desfragmentação, otimização ou "limpeza" do disco nesse período.</li>
           <li>Se o disco faz estalos, some e volta ou está muito lento, desligue o computador. Insistir em programas de recuperação num disco com falha física pode destruir o que ainda era recuperável.</li>
         </ul>
