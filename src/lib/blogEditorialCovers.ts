@@ -535,6 +535,38 @@ export const EDITORIAL_COVERS: Record<string, EditorialCover> = {
     height: 630,
   },
 
+  // ── Onda 11I — segunda promoção noindex → index.
+  "como-configurar-repetidor-wifi": {
+    src: "/blog/como-configurar-repetidor-wifi.svg",
+    alt: "Ilustração editorial de roteador, repetidor e zonas de cobertura Wi-Fi",
+    width: 1200,
+    height: 630,
+  },
+  "trocar-windows-por-linux-vale-a-pena": {
+    src: "/blog/trocar-windows-por-linux-vale-a-pena.svg",
+    alt: "Ilustração editorial de duas rotas de sistema operacional ligadas ao mesmo computador",
+    width: 1200,
+    height: 630,
+  },
+  "erros-comuns-upgrade-computador": {
+    src: "/blog/erros-comuns-upgrade-computador.svg",
+    alt: "Ilustração editorial de placa, memória e SSD com sinais de compatibilidade",
+    width: 1200,
+    height: 630,
+  },
+  "como-configurar-vpn-empresarial": {
+    src: "/blog/como-configurar-vpn-empresarial.svg",
+    alt: "Ilustração editorial de túnel VPN ligando usuário remoto a rede corporativa",
+    width: 1200,
+    height: 630,
+  },
+  "como-recuperar-conta-hackeada": {
+    src: "/blog/como-recuperar-conta-hackeada.svg",
+    alt: "Ilustração editorial de recuperação de conta, chave e revisão de sessões",
+    width: 1200,
+    height: 630,
+  },
+
 };
 
 export function getEditorialCover(slug: string): EditorialCover | undefined {
