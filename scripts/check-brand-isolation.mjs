@@ -1,17 +1,20 @@
 // RODADA 1 — GATE DE VAZAMENTO DE MARCA
 // Falha o build se qualquer identificador da marca de origem aparecer em
-// artefatos que vão para produção (index.html, public/, src/, dist/ se existir).
+// código/artefatos publicados ou documentação do próprio projeto.
 //
 // Uso: npm run check:brand-isolation
 import { readFileSync, existsSync, readdirSync, statSync } from "node:fs";
 import { join, extname } from "node:path";
 import { LEGACY_TOKENS } from "./lib/site-env.mjs";
 
-const ROOTS = ["index.html", "src", "public", "dist"].filter((p) => existsSync(p));
+const ROOTS = ["index.html", "src", "public", "dist", "docs"].filter((p) => existsSync(p));
+const ROOT_MARKDOWN = readdirSync(".")
+  .filter((entry) => extname(entry).toLowerCase() === ".md")
+  .filter((entry) => statSync(entry).isFile());
 
-// Arquivos onde a citação do token é legítima (documentação da própria migração
-// e testes de regressão que precisam do valor literal para provar o bloqueio).
+// Citações estritamente necessárias para implementar/documentar o próprio bloqueio.
 const ALLOWLIST = [
+  /^AGENTS\.md$/,
   /^scripts\/lib\/site-env\.mjs$/,
   /^scripts\/check-brand-isolation\.mjs$/,
   /\.test\.(ts|tsx|mjs|js)$/,
@@ -31,6 +34,7 @@ const walk = (p) => {
   files.push(p);
 };
 for (const r of ROOTS) walk(r);
+for (const md of ROOT_MARKDOWN) files.push(md);
 
 const violations = [];
 for (const file of files) {
@@ -42,18 +46,22 @@ for (const file of files) {
   } catch {
     continue;
   }
-  for (const token of LEGACY_TOKENS) {
-    if (!content.includes(token)) continue;
-    const line = content.split("\n").findIndex((l) => l.includes(token)) + 1;
-    violations.push(`${rel}:${line} → ${token}`);
-  }
+
+  const lines = content.split("\n");
+  lines.forEach((lineText, index) => {
+    for (const token of LEGACY_TOKENS) {
+      if (lineText.includes(token)) {
+        violations.push(`${rel}:${index + 1} → ${token}`);
+      }
+    }
+  });
 }
 
 if (violations.length) {
   console.error("[check:brand-isolation] Identificadores da marca de origem encontrados:\n");
   for (const v of violations) console.error("  ✗ " + v);
   console.error(
-    `\n${violations.length} ocorrência(s). Nada da marca de origem pode ir para produção.`,
+    `\n${violations.length} ocorrência(s). Nada da marca de origem pode permanecer fora da allowlist de governança.`,
   );
   process.exit(1);
 }
