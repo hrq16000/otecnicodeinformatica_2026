@@ -1335,6 +1335,40 @@ const WAVE_11I: EditorialApproval[] = [
   },
 ];
 
+// ── Onda 11J — Windows, backup e conectividade qualificados (2026-09-25).
+const WAVE_11J: EditorialApproval[] = [
+  {
+    slug: "como-deixar-windows-11-mais-rapido-iniciantes", status: "approved", authorType: "organization", authorId: INSTITUTIONAL_AUTHOR.id,
+    reviewedAt: "2026-09-25", approvedAt: "2026-09-25", imageOrigin: "licensed", imageLicense: "CC BY-SA 4.0",
+    imageAttribution: "Foto: Laurabatanero (Wikimedia Commons), CC BY-SA 4.0 — https://commons.wikimedia.org/wiki/File:Working_on_my_laptop.jpg",
+    notes: "Reescrita com Microsoft Support: diagnóstico por CPU/memória/disco, inicialização, armazenamento e atualização; remove porcentagens mágicas, otimizadores e promessa local.",
+  },
+  {
+    slug: "como-fazer-backup-fotos-windows-iniciantes", status: "approved", authorType: "organization", authorId: INSTITUTIONAL_AUTHOR.id,
+    reviewedAt: "2026-09-25", approvedAt: "2026-09-25", imageOrigin: "licensed", imageLicense: "CC BY-SA 4.0",
+    imageAttribution: "Foto: Sam Frazier (Wikimedia Commons), CC BY-SA 4.0 — https://commons.wikimedia.org/wiki/File:External_portable_hard_drive.jpg",
+    notes: "Reescrita com Microsoft/CISA/NIST: inventário, cópia externa, Histórico de Arquivos, nuvem, verificação e restauração; distingue sincronização de backup.",
+  },
+  {
+    slug: "como-atualizar-windows-corretamente", status: "approved", authorType: "organization", authorId: INSTITUTIONAL_AUTHOR.id,
+    reviewedAt: "2026-09-25", approvedAt: "2026-09-25", imageOrigin: "licensed", imageLicense: "Public Domain",
+    imageAttribution: "Foto: Dion Dresschers (Wikimedia Commons), domínio público — https://commons.wikimedia.org/wiki/File:Cc0-windows-update_dion_dresschers.png",
+    notes: "Reescrita com Microsoft Support: preparação, Windows Update, Obter Ajuda, validação e critérios de parada; remove cronômetros universais e desligamento forçado como receita.",
+  },
+  {
+    slug: "como-recuperar-arquivos-apagados-windows", status: "approved", authorType: "organization", authorId: INSTITUTIONAL_AUTHOR.id,
+    reviewedAt: "2026-09-25", approvedAt: "2026-09-25", imageOrigin: "licensed", imageLicense: "CC BY-SA 4.0",
+    imageAttribution: "Foto: Santeri Viinamäki (Wikimedia Commons), CC BY-SA 4.0 — https://commons.wikimedia.org/wiki/File:DVD,_USB_flash_drive_and_external_hard_drive.jpg",
+    notes: "Reescrita com Microsoft Support: Lixeira, backup, Windows File Recovery, destino separado, redução de gravações e limites de SSD/falha física.",
+  },
+  {
+    slug: "como-fazer-teste-velocidade-internet", status: "approved", authorType: "organization", authorId: INSTITUTIONAL_AUTHOR.id,
+    reviewedAt: "2026-09-25", approvedAt: "2026-09-25", imageOrigin: "licensed", imageLicense: "CC BY 4.0",
+    imageAttribution: "Foto: VulcanSphere (Wikimedia Commons), CC BY 4.0 — https://commons.wikimedia.org/wiki/File:ARRIS_CM820B_DOCSIS_Cable_Modem.jpg",
+    notes: "Reescrita com FCC: referência cabeada, múltiplas medições, download/upload/latência/jitter/perda; remove regra absoluta sobre Wi‑Fi e percentuais regulatórios antigos.",
+  },
+];
+
 export const APPROVED_EDITORIAL_CONTENT = new Map<string, EditorialApproval>([
 
   ...FIRST_WAVE_SLUGS.map((slug) => [
@@ -1392,6 +1426,7 @@ export const APPROVED_EDITORIAL_CONTENT = new Map<string, EditorialApproval>([
   ...WAVE_11G.map((a) => [a.slug, a] as [string, EditorialApproval]),
   ...WAVE_11H.map((a) => [a.slug, a] as [string, EditorialApproval]),
   ...WAVE_11I.map((a) => [a.slug, a] as [string, EditorialApproval]),
+  ...WAVE_11J.map((a) => [a.slug, a] as [string, EditorialApproval]),
 
 ]);
 
