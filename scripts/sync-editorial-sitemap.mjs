@@ -10,7 +10,7 @@
  * ele acrescenta a entrada correspondente na onda editorial.
  *
  * Fail-closed:
- *   • capa obrigatória em `public/blog/<slug>.jpg` (ou .png/.webp) — sem capa
+ *   • capa obrigatória em `public/blog/<slug>.jpg` (ou .png/.webp/.svg) — sem capa
  *     real o slug NÃO entra no sitemap e o script falha;
  *   • pilar/apoio derivados por heurística de tema e sempre apontando para
  *     rotas existentes na própria onda ou nos serviços canônicos;
@@ -41,7 +41,7 @@ function pilarPara(slug) {
 }
 
 function capaPara(slug) {
-  for (const ext of ["jpg", "webp", "png"]) {
+  for (const ext of ["jpg", "webp", "png", "svg"]) {
     if (existsSync(resolve(`public/blog/${slug}.${ext}`))) return `/blog/${slug}.${ext}`;
   }
   return null;
