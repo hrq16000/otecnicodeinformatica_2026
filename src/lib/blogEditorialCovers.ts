@@ -503,6 +503,38 @@ export const EDITORIAL_COVERS: Record<string, EditorialCover> = {
     width: 1200,
     height: 630,
   },
+  // ── Onda 11H — promoção noindex → index com capas vetoriais próprias da marca.
+  "como-configurar-2fa-em-tudo": {
+    src: "/blog/como-configurar-2fa-em-tudo.svg",
+    alt: "Ilustração editorial de autenticação multifator com cadeado e verificações independentes",
+    width: 1200,
+    height: 630,
+  },
+  "como-proteger-rede-wifi-empresa": {
+    src: "/blog/como-proteger-rede-wifi-empresa.svg",
+    alt: "Ilustração editorial de rede Wi-Fi empresarial segmentada e protegida por escudo",
+    width: 1200,
+    height: 630,
+  },
+  "como-configurar-firewall-pfsense": {
+    src: "/blog/como-configurar-firewall-pfsense.svg",
+    alt: "Ilustração editorial de firewall controlando tráfego entre segmentos de rede",
+    width: 1200,
+    height: 630,
+  },
+  "como-configurar-active-directory": {
+    src: "/blog/como-configurar-active-directory.svg",
+    alt: "Ilustração editorial de estrutura hierárquica de identidades, usuários e computadores",
+    width: 1200,
+    height: 630,
+  },
+  "como-deixar-celular-android-mais-rapido": {
+    src: "/blog/como-deixar-celular-android-mais-rapido.svg",
+    alt: "Ilustração editorial de smartphone com medidor de desempenho e armazenamento",
+    width: 1200,
+    height: 630,
+  },
+
 };
 
 export function getEditorialCover(slug: string): EditorialCover | undefined {
