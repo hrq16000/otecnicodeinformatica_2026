@@ -4697,88 +4697,93 @@ docker run -d --name db --network minha-rede postgres
   },
 
   "como-configurar-bios-uefi-corretamente": {
-    title: "Como Configurar BIOS/UEFI Corretamente: Guia Para Técnicos",
-    excerpt: "Boot order, XMP, Secure Boot, CSM, TPM — todas as configurações essenciais explicadas.",
-    date: "2026-04-08",
-    readTime: "11 min",
-    category: "Procedimentos Técnicos",
+    title: "BIOS/UEFI: como configurar sem perder o boot, o BitLocker ou a estabilidade",
+    excerpt: "Guia técnico para identificar UEFI, Secure Boot, TPM, ordem de boot, modo de armazenamento e perfis de memória sem aplicar receitas universais nem arriscar os dados.",
+    date: "2026-09-25",
+    readTime: "15 min",
+    category: "Hardware e Windows",
     content: (
       <>
-        <p className="lead">A BIOS/UEFI é o primeiro software que roda quando o computador liga. <strong>Configurações incorretas causam desde lentidão até impossibilidade de dar boot.</strong> Este guia cobre as configurações essenciais que todo técnico precisa conhecer.</p>
-
-        <h2>BIOS vs UEFI: Qual a Diferença?</h2>
+        <p className="lead">Configurar BIOS/UEFI com segurança não é “ativar tudo que parece moderno”. O firmware controla a inicialização, recursos de segurança, armazenamento e parte do comportamento do hardware. Uma alteração incompatível pode impedir o Windows de iniciar, acionar a recuperação do BitLocker ou tornar uma máquina antes estável em uma máquina instável.</p>
+        <h2>Resposta direta</h2>
+        <p>Antes de mudar qualquer opção, registre o estado atual, confirme o modelo exato do computador ou placa-mãe e descubra qual problema você está tentando resolver. Em Windows 11, os pontos que mais exigem cuidado são <strong>UEFI/Legacy, Secure Boot, TPM 2.0, modo do controlador de armazenamento e ordem de boot</strong>. Mude uma coisa por vez, salve, reinicie e valide. Se surgir pedido de chave BitLocker, disco desaparecer, Windows parar de iniciar ou você não souber por que uma opção precisa mudar, pare e volte ao último estado conhecido.</p>
+        <h2>1. BIOS e UEFI não são sinônimos perfeitos</h2>
+        <p>BIOS é o nome histórico do firmware de PCs; UEFI é a arquitetura moderna usada pela maioria dos equipamentos atuais. Na prática, fabricantes ainda chamam a tela de configuração de “BIOS Setup”, mesmo quando o equipamento usa UEFI. Para diagnóstico, o que importa é identificar o modo de inicialização e não presumir pela aparência da tela.</p>
+        <p>No Windows, você pode começar pelo <strong>Informações do Sistema</strong> e pela documentação do fabricante. Se precisar entrar no firmware sem adivinhar teclas, o próprio Windows oferece o caminho <strong>Configurações → Sistema → Recuperação → Inicialização avançada → Solução de problemas → Opções avançadas → Configurações de Firmware UEFI</strong> quando o equipamento expõe essa opção.</p>
+        <p>Veja também <Link to="/blog/boot-uefi-ou-legacy-como-identificar" className="text-accent">como identificar UEFI ou Legacy</Link> e o glossário de <Link to="/glossario/uefi" className="text-accent">UEFI</Link>.</p>
+        <h2>2. Faça um baseline antes de tocar</h2>
         <ul>
-          <li><strong>BIOS (Basic Input/Output System):</strong> Interface legada, texto em tela azul, suporta discos MBR até 2TB, boot lento</li>
-          <li><strong>UEFI (Unified Extensible Firmware Interface):</strong> Interface gráfica moderna, suporta discos GPT maiores que 2TB, Secure Boot, boot rápido. Todo PC fabricado após 2012 usa UEFI</li>
+          <li>Fotografe as telas que pretende alterar.</li>
+          <li>Anote modelo da placa-mãe ou notebook e a versão atual do firmware.</li>
+          <li>Confirme se o Windows inicia normalmente antes da intervenção.</li>
+          <li>Verifique se o disco do sistema usa BitLocker ou criptografia do dispositivo e localize a chave de recuperação.</li>
+          <li>Se a máquina usa RAID, Intel RST, VMD, Optane ou configuração corporativa, documente isso antes de alterar armazenamento.</li>
+          <li>Em equipamento de empresa, confirme se há política de TI para Secure Boot, TPM e atualização de firmware.</li>
         </ul>
-
-        <h2>Como Acessar a BIOS/UEFI</h2>
-        <p>Pressione a tecla correta durante a inicialização (antes do logo do Windows):</p>
+        <h2>3. Secure Boot: segurança de inicialização, não “modo de desempenho”</h2>
+        <p>Secure Boot ajuda a impedir que software não confiável seja carregado no processo de inicialização. No Windows 11, o equipamento precisa ser compatível com Secure Boot em modo UEFI; a Microsoft recomenda mantê-lo habilitado quando não existe uma necessidade técnica legítima de desativação temporária.</p>
+        <p>Não desative Secure Boot só porque um tutorial mandou. Antes, identifique o erro que você está tentando resolver. Mudanças entre Legacy/CSM e UEFI podem alterar a forma como o disco de sistema é inicializado e não devem ser feitas como tentativa aleatória.</p>
+        <h2>4. TPM 2.0: confirme antes de habilitar ou limpar</h2>
+        <p>TPM 2.0 é requisito do Windows 11 e participa de recursos de segurança como Windows Hello e BitLocker. Dependendo do fabricante, a opção pode aparecer como TPM, Security Device, Intel PTT, AMD fTPM ou outro rótulo semelhante.</p>
+        <p><strong>Habilitar</strong> um TPM disponível é diferente de <strong>limpar</strong> o TPM. Não use opções como Clear TPM por impulso: elas podem invalidar chaves protegidas pelo módulo e exigir recuperação. Para entender a função, veja o glossário de <Link to="/glossario/tpm" className="text-accent">TPM</Link> e de <Link to="/glossario/bitlocker" className="text-accent">BitLocker</Link>.</p>
+        <h2>5. Ordem de boot: mude o destino, não o modo inteiro</h2>
+        <p>Se o objetivo é iniciar por um pendrive de instalação ou diagnóstico, normalmente basta usar o menu de boot temporário ou ajustar a prioridade do dispositivo. Isso é diferente de trocar UEFI por Legacy/CSM. Depois do teste, confirme que o Windows Boot Manager ou o disco correto voltou a ser a primeira opção.</p>
+        <p>O passo a passo específico está em <Link to="/blog/ordem-de-boot-na-bios-como-configurar" className="text-accent">ordem de boot na BIOS/UEFI</Link>.</p>
+        <h2>6. AHCI, RAID, VMD e RST: não troque por regra de internet</h2>
+        <p>O modo de armazenamento precisa ser compatível com a instalação atual e com o controlador do equipamento. Trocar AHCI, RAID, VMD ou RST depois que o sistema foi instalado pode fazer o Windows perder acesso ao volume de inicialização. Não existe uma regra segura de “sempre use AHCI”.</p>
+        <p>Se um SSD “sumiu”, confirme primeiro se ele aparece no firmware, no controlador correto e na documentação do modelo. Para falhas de detecção, use o guia <Link to="/blog/ssd-nvme-nao-aparece-no-gerenciador-de-discos" className="text-accent">SSD/NVMe não aparece no Windows</Link>.</p>
+        <h2>7. XMP/EXPO e memória: perfil anunciado não é garantia de estabilidade</h2>
+        <p>Perfis de memória como XMP ou EXPO aplicam parâmetros definidos para o kit e a plataforma. Eles podem melhorar a operação em relação ao perfil básico, mas a estabilidade depende de processador, placa-mãe, BIOS e combinação dos módulos. Se o objetivo é diagnosticar travamentos, reinícios ou erros de memória, o primeiro passo é testar uma configuração conhecida e estável — não aumentar frequência.</p>
+        <p>Após qualquer mudança, valide com uso real e, quando necessário, teste de memória. Consulte <Link to="/blog/testar-memoria-ram-memtest86" className="text-accent">como testar memória RAM</Link>.</p>
+        <h2>8. Atualização de BIOS/UEFI: só com motivo e procedimento do fabricante</h2>
+        <p>Atualização de firmware pode corrigir compatibilidade, segurança ou suporte a hardware, mas não deve ser tratada como “otimização automática”. Use exclusivamente o arquivo e o método do fabricante para o modelo exato, mantenha alimentação estável e leia as notas da versão.</p>
+        <p>Antes de atualizar, confirme a chave de recuperação do BitLocker e qualquer requisito específico do fabricante. Uma interrupção ou imagem incompatível pode deixar a placa sem inicialização.</p>
+        <h2>Quando parar imediatamente</h2>
         <ul>
-          <li><strong>Del / Delete:</strong> Maioria das placas desktop (ASUS, Gigabyte, MSI, ASRock)</li>
-          <li><strong>F2:</strong> Notebooks (Dell, Acer, Lenovo, ASUS)</li>
-          <li><strong>F10:</strong> HP</li>
-          <li><strong>F1:</strong> Lenovo ThinkPad</li>
-          <li><strong>ESC:</strong> Menu de boot em muitos fabricantes</li>
+          <li>O firmware ou a recuperação do Windows pede uma chave BitLocker que você não possui.</li>
+          <li>O disco do sistema deixou de aparecer depois de alterar AHCI/RAID/VMD/RST.</li>
+          <li>O equipamento é corporativo e você não sabe se Secure Boot/TPM são gerenciados.</li>
+          <li>Você está prestes a usar Clear TPM, Secure Erase, apagar chaves ou atualizar firmware sem backup e sem documentação.</li>
+          <li>Depois de uma alteração o PC entra em loop, não dá vídeo ou não encontra o Windows.</li>
         </ul>
-
-        <h2>Configurações Essenciais</h2>
-
-        <h3>1. Boot Order (Ordem de Boot)</h3>
-        <p>Define qual dispositivo o PC tenta iniciar primeiro:</p>
+        <h2>O que não fazer</h2>
         <ul>
-          <li><strong>Para uso normal:</strong> 1º SSD/HD → 2º USB (para emergências)</li>
-          <li><strong>Para instalação do Windows:</strong> 1º USB → 2º SSD</li>
-          <li><strong>Após instalação:</strong> Voltar para 1º SSD</li>
+          <li>Não copie valores de tensão, clock ou timings de outro computador.</li>
+          <li>Não altere várias opções ao mesmo tempo: você perde a capacidade de identificar a causa.</li>
+          <li>Não trate “Load Defaults” como solução neutra em máquina com RAID, BitLocker ou configuração especial.</li>
+          <li>Não desative Secure Boot, TPM ou recursos de segurança só para “fazer funcionar” sem entender a dependência.</li>
+          <li>Não atualize firmware durante instabilidade elétrica ou com arquivo de outro modelo.</li>
         </ul>
-
-        <h3>2. AHCI vs IDE (Modo SATA)</h3>
-        <p><strong>Sempre use AHCI</strong> para SSDs e HDs modernos. O modo IDE é para compatibilidade com sistemas antigos. Trocar após instalar o Windows causa tela azul — configure antes da formatação.</p>
-
-        <h3>3. XMP / DOCP (Perfil de Memória)</h3>
-        <p>A RAM DDR4/DDR5 roda na velocidade base (2133 MHz para DDR4) até que você ative o perfil XMP/DOCP. Se comprou RAM de 3200 MHz e ela roda a 2133 MHz, <strong>ative o XMP na BIOS</strong>.</p>
-
-        <h3>4. Secure Boot</h3>
+        <h2>Checklist de validação</h2>
         <ul>
-          <li><strong>Ativado:</strong> Necessário para Windows 11 e impede boot de sistemas não assinados</li>
-          <li><strong>Desativado:</strong> Necessário para instalar Linux em algumas configurações ou dar boot por pendrives não UEFI</li>
+          <li>Windows Boot Manager continua visível e o sistema inicia.</li>
+          <li>SSD/HD aparecem com a mesma topologia esperada.</li>
+          <li>Secure Boot e TPM estão no estado planejado, sem alertas inesperados.</li>
+          <li>BitLocker não entrou em recuperação sem que a chave esteja disponível.</li>
+          <li>Data/hora, rede, USB e periféricos essenciais continuam funcionando.</li>
+          <li>Se houve alteração de memória, a máquina passou por teste de estabilidade.</li>
         </ul>
-
-        <h3>5. CSM (Compatibility Support Module)</h3>
-        <ul>
-          <li><strong>Desativado:</strong> Para Windows 11 e sistemas UEFI puros (recomendado)</li>
-          <li><strong>Ativado:</strong> Para compatibilidade com sistemas legados e hardware antigo</li>
-        </ul>
-
-        <h3>6. TPM 2.0</h3>
-        <p><strong>Obrigatório para Windows 11.</strong> Em processadores AMD, ative "fTPM" na BIOS. Em Intel, ative "Intel PTT". Geralmente está na seção Security ou Advanced.</p>
-
-        <h3>7. Virtualização (VT-x / AMD-V)</h3>
-        <p>Ative se usar máquinas virtuais (VirtualBox, VMware, WSL2, Docker). Geralmente em Advanced → CPU Configuration.</p>
-
-        <h3>8. Fan Control (Controle de Ventiladores)</h3>
-        <p>Configure as curvas de ventoinha para equilíbrio entre silêncio e refrigeração. Perfis comuns: Silent (silencioso), Standard (equilibrado), Performance (máxima refrigeração).</p>
-
-        <h2>Configurações Para Evitar Problemas</h2>
-        <ul>
-          <li>✅ Sempre salve e anote as alterações feitas</li>
-          <li>✅ Use "Load Optimized Defaults" se algo der errado</li>
-          <li>✅ Atualize a BIOS apenas quando necessário (e nunca durante queda de energia)</li>
-          <li>❌ Nunca altere voltagens sem conhecimento (pode queimar componentes)</li>
-          <li>❌ Nunca desative o Secure Boot sem motivo</li>
-        </ul>
-
-        <div className="bg-accent/10 rounded-xl p-6 my-8">
-          <h3 className="text-accent font-bold mb-2">PC Não Está Dando Boot?</h3>
-          <p className="text-muted-foreground mb-0">Configurações incorretas na BIOS causam vários problemas. Nosso técnico resolve no local em Curitiba e região.</p>
-        </div>
-
-        <p><strong>Leia também:</strong></p>
-        <ul>
-          <li><Link to="/blog/como-diagnosticar-placa-mae-defeituosa" className="text-accent">Como diagnosticar placa-mãe defeituosa</Link></li>
-          <li><Link to="/blog/como-montar-pc-do-zero-guia-completo" className="text-accent">Como montar um PC do zero</Link></li>
-          <li><Link to="/servicos/computador-nao-liga" className="text-accent">Computador não liga: causas e soluções</Link></li>
-        </ul>
+        <h2>Decisão: qual ajuste realmente faz sentido?</h2>
+        <p>Se o problema é apenas escolher um dispositivo de inicialização, mexa na ordem de boot. Se é requisito do Windows 11, trate UEFI, Secure Boot e TPM separadamente. Se o disco não aparece, diagnostique controlador e armazenamento antes de trocar o modo. Se o problema é instabilidade, volte ao baseline antes de ativar perfis de desempenho.</p>
+        <h2>Perguntas frequentes</h2>
+        <h3>Preciso ativar Secure Boot para usar Windows 11?</h3>
+        <p>O Windows 11 exige que o computador seja compatível com Secure Boot em UEFI; manter o recurso habilitado melhora a proteção de inicialização e é a recomendação geral da Microsoft.</p>
+        <h3>Ativar TPM apaga meus arquivos?</h3>
+        <p>Habilitar um TPM disponível não é o mesmo que limpá-lo. O risco maior está em operações de limpeza/redefinição de chaves e em mudanças que acionem recuperação de criptografia. Tenha a chave BitLocker antes de intervenções.</p>
+        <h3>Posso ativar XMP/EXPO em qualquer PC?</h3>
+        <p>Não como regra universal. Compatibilidade e estabilidade dependem do conjunto CPU, placa-mãe, firmware e módulos. Em diagnóstico, priorize um baseline estável.</p>
+        <h3>BIOS desatualizada deixa o PC lento?</h3>
+        <p>Não é um diagnóstico suficiente. Atualize firmware quando houver correção, requisito ou suporte relevante documentado pelo fabricante — não como ritual de limpeza.</p>
+        <h2>Glossário rápido</h2>
+        <dl>
+          <dt>UEFI</dt><dd>Interface de firmware moderna responsável por inicializar o hardware e entregar o controle ao sistema operacional.</dd>
+          <dt>Secure Boot</dt><dd>Mecanismo que verifica componentes confiáveis durante a inicialização.</dd>
+          <dt>TPM</dt><dd>Módulo ou implementação de firmware usada para proteger chaves e recursos de segurança.</dd>
+          <dt>CSM/Legacy</dt><dd>Modo de compatibilidade com formas antigas de inicialização.</dd>
+          <dt>BitLocker</dt><dd>Criptografia de volume do Windows que pode exigir chave de recuperação após mudanças relevantes.</dd>
+        </dl>
+        <p>Para organizar o diagnóstico como um técnico de informática — firmware, armazenamento, Windows e segurança — siga o <Link to="/guia-tecnico-informatica#tema-sistemas-operacionais" className="text-accent">Atlas de sistemas operacionais</Link>.</p>
+        <EditorialReferences slug="como-configurar-bios-uefi-corretamente" />
       </>
     ),
   },
@@ -5218,89 +5223,112 @@ docker run -d --name db --network minha-rede postgres
   },
 
   "como-configurar-servidor-de-arquivos": {
-    title: "Como Configurar Servidor de Arquivos em Rede Local (Windows e Linux)",
-    excerpt: "Procedimento técnico completo para montar um file server com permissões, mapeamento e backup.",
-    date: "2026-04-13",
-    readTime: "14 min",
-    category: "Procedimentos Técnicos",
+    title: "Servidor de arquivos: como planejar SMB no Windows ou Samba sem expor dados",
+    excerpt: "Guia técnico para decidir arquitetura, usuários, grupos, permissões, compartilhamentos SMB, Samba, firewall, backup e restauração sem senha em script nem acesso convidado por padrão.",
+    date: "2026-09-25",
+    readTime: "17 min",
+    category: "Redes e Infraestrutura",
     content: (
       <>
-        <p className="lead">Um servidor de arquivos centraliza o armazenamento e o compartilhamento de documentos em uma rede local, eliminando pen drives e pastas duplicadas. Neste guia, mostramos como configurar um file server tanto no <strong>Windows</strong> quanto no <strong>Linux</strong>, com permissões, mapeamento automático e rotina de backup.</p>
-
-        <h2>Quando Vale a Pena Ter um Servidor de Arquivos</h2>
+        <p className="lead">Um servidor de arquivos não é apenas “uma pasta compartilhada”. Ele centraliza dados que várias pessoas podem ler, alterar e apagar; por isso, identidade, permissões, rede, backup e restauração precisam ser planejados juntos. Este guia cobre Windows e Samba em Linux sem presumir que toda empresa precisa do mesmo desenho.</p>
+        <h2>Resposta direta</h2>
+        <p>Para uma rede pequena, comece por cinco decisões: <strong>quem usa, quais dados existem, quem pode ler/escrever, onde o compartilhamento ficará e como ele será restaurado</strong>. Use contas individuais e grupos, evite acesso convidado, não coloque senha dentro de comandos ou scripts, não exponha SMB diretamente à internet e mantenha uma cópia de backup que possa ser restaurada sem depender do próprio servidor.</p>
+        <h2>1. Quando um servidor de arquivos faz sentido?</h2>
         <ul>
-          <li>Escritórios com 3+ computadores que precisam compartilhar documentos</li>
-          <li>Empresas que precisam de controle de acesso por usuário/departamento</li>
-          <li>Ambientes que exigem backup centralizado e versionamento</li>
-          <li>Substituição de soluções em nuvem por questões de privacidade ou velocidade</li>
+          <li>Várias pessoas trabalham nos mesmos documentos e precisam de uma origem comum.</li>
+          <li>É necessário separar acesso por equipe, função ou projeto.</li>
+          <li>Arquivos precisam de rotina centralizada de backup, retenção ou auditoria.</li>
+          <li>O volume de dados, a rede local ou requisitos de controle tornam a nuvem isoladamente insuficiente.</li>
         </ul>
-
-        <h2>Opção 1: Windows — Compartilhamento com Permissões</h2>
-
-        <h3>Passo 1: Preparar o Computador Servidor</h3>
+        <p>Se duas pessoas apenas trocam alguns arquivos, uma solução de nuvem bem administrada pode ser mais simples. Se o trabalho depende de disponibilidade local, permissões detalhadas e grande volume, um servidor ou NAS ganha sentido. A decisão vem da operação, não da vontade de “ter servidor”.</p>
+        <h2>2. Modele usuários e grupos antes das pastas</h2>
+        <p>Evite conceder acesso pessoa por pessoa em dezenas de diretórios. Crie grupos que representem funções — por exemplo, Financeiro-Leitura, Financeiro-Edicao e Gestores — e associe usuários a esses grupos. Isso torna entrada, mudança de função e desligamento de pessoas auditáveis.</p>
         <ul>
-          <li>Use Windows 10/11 Pro ou Windows Server (o Home tem limitação de 20 conexões)</li>
-          <li>Defina IP fixo: <code>Configurações → Rede → Ethernet → Editar → Manual → IPv4</code></li>
-          <li>Exemplo: IP <code>192.168.1.100</code>, Máscara <code>255.255.255.0</code>, Gateway <code>192.168.1.1</code></li>
+          <li>Uma pessoa, uma conta: não compartilhe usuário genérico entre funcionários.</li>
+          <li>Conceda somente o acesso necessário para a função.</li>
+          <li>Separe leitura de alteração quando o processo permitir.</li>
+          <li>Documente quem aprova acesso a cada conjunto de dados.</li>
         </ul>
-
-        <h3>Passo 2: Criar a Estrutura de Pastas</h3>
-        <pre><code>{"D:\\SERVIDOR\\\n├── Financeiro\\\n├── Comercial\\\n├── RH\\\n├── TI\\\n└── Público\\"}</code></pre>
-
-        <h3>Passo 3: Criar Usuários e Grupos</h3>
-        <ol>
-          <li>Abra <code>lusrmgr.msc</code> (Gerenciamento de Usuários Locais)</li>
-          <li>Crie usuários: <code>joao.silva</code>, <code>maria.rh</code>, etc.</li>
-          <li>Crie grupos: <code>GRP_Financeiro</code>, <code>GRP_Comercial</code>, <code>GRP_RH</code></li>
-          <li>Adicione cada usuário ao grupo correspondente</li>
-        </ol>
-
-        <h3>Passo 4: Compartilhar e Definir Permissões</h3>
-        <ol>
-          <li>Clique com botão direito na pasta → Propriedades → Compartilhamento Avançado</li>
-          <li>Marque "Compartilhar esta pasta"</li>
-          <li>Em Permissões: remova "Todos", adicione o grupo com Controle Total</li>
-          <li>Na aba Segurança (NTFS): configure permissões granulares</li>
-        </ol>
-
-        <div className="bg-amber-50 dark:bg-amber-950/30 border border-amber-200 dark:border-amber-800 rounded-xl p-4 my-6">
-          <p className="text-sm"><strong>⚠️ Regra de ouro:</strong> As permissões de Compartilhamento e NTFS são cumulativas — a mais restritiva prevalece. Configure ambas corretamente.</p>
-        </div>
-
-        <h3>Passo 5: Mapear nos Clientes</h3>
-        <pre><code>{"net use S: \\\\192.168.1.100\\Financeiro /user:joao.silva Senha123! /persistent:yes"}</code></pre>
-
-        <h2>Opção 2: Linux — Samba File Server</h2>
-
-        <h3>Instalação do Samba</h3>
-        <pre><code>{"sudo apt update\nsudo apt install samba samba-common-bin -y"}</code></pre>
-
-        <h3>Criar Estrutura e Usuários</h3>
-        <pre><code>{"sudo mkdir -p /srv/samba/financeiro\nsudo mkdir -p /srv/samba/publico\nsudo groupadd grp_financeiro\nsudo useradd -M -s /usr/sbin/nologin joao\nsudo smbpasswd -a joao\nsudo chown -R root:grp_financeiro /srv/samba/financeiro\nsudo chmod -R 2770 /srv/samba/financeiro"}</code></pre>
-
-        <h3>Configurar smb.conf</h3>
-        <pre><code>{"[Financeiro]\n   path = /srv/samba/financeiro\n   browseable = yes\n   read only = no\n   valid users = @grp_financeiro\n   create mask = 0660\n\n[Publico]\n   path = /srv/samba/publico\n   browseable = yes\n   read only = no\n   guest ok = yes"}</code></pre>
-
-        <h2>Opção 3: NAS Dedicado</h2>
+        <h2>3. Windows: SMB existe também no Windows cliente, mas recursos variam</h2>
+        <p>Windows 10/11 e Windows Server incluem componentes cliente e servidor SMB. Isso significa que um Windows 11 pode hospedar um compartilhamento, mas recursos, escala e administração disponíveis variam entre edições e versões. Não escolha a plataforma com base em um número fixo copiado de um tutorial: dimensione pela quantidade de usuários, necessidade de domínio, auditoria, disponibilidade e política da empresa.</p>
+        <p>No Windows, configure a pasta, o compartilhamento e as permissões de sistema de arquivos de forma coerente. Teste com uma conta comum — não apenas com administrador — para verificar o acesso efetivo.</p>
+        <h2>4. Use nome do servidor e identidade, não senha gravada em comando</h2>
+        <p>Um caminho SMB normalmente é acessado como <code>\\servidor\compartilhamento</code>. Em ambientes com Active Directory e Kerberos, usar o nome correto do servidor é importante para a autenticação; conectar por IP pode mudar o mecanismo disponível. Evite exemplos do tipo “mapear unidade com usuário e senha em texto aberto”, porque eles transformam uma credencial em arquivo, histórico ou log.</p>
+        <p>Para mapeamento gerenciado, prefira mecanismos de política, credenciais protegidas e autenticação da própria sessão do usuário.</p>
+        <h2>5. Segurança SMB: não exponha a porta 445 à internet</h2>
+        <p>O SMB foi feito para compartilhamento em redes controladas. A orientação de segurança da Microsoft é bloquear SMB direto na borda da internet e usar segmentação/isolamento. Para acesso remoto, use uma arquitetura própria para isso — por exemplo, VPN corporativa ou recursos suportados de SMB sobre QUIC quando o ambiente atender aos requisitos.</p>
+        <p>Em versões recentes, recursos como assinatura SMB e criptografia foram fortalecidos. Não “desligue segurança para compatibilidade” sem entender qual cliente antigo está forçando a mudança e qual risco foi introduzido.</p>
+        <h2>6. Samba no Linux: exemplo mínimo com autenticação</h2>
+        <p>O Samba implementa SMB em Linux. Um compartilhamento de trabalho deve apontar para um caminho controlado, permitir somente os usuários ou grupos necessários e manter <code>guest ok = no</code> quando o objetivo é conteúdo autenticado. Na documentação do Samba, <code>guest ok = yes</code> significa que não é necessária senha para acessar aquele serviço.</p>
+        <p>Exemplo conceitual de um compartilhamento autenticado:</p>
+        <pre><code>{"[Financeiro]\n  path = /srv/samba/financeiro\n  read only = no\n  valid users = @financeiro\n  guest ok = no\n  create mask = 0660\n  directory mask = 0770"}</code></pre>
+        <p>Crie usuários e grupos de acordo com a política real, configure a senha Samba pelo mecanismo administrativo e valide o arquivo com a ferramenta de teste da sua distribuição antes de reiniciar o serviço. Não copie caminhos, donos ou modos sem entender a estrutura local.</p>
+        <h2>7. Firewall: permita o compartilhamento só de onde ele precisa ser usado</h2>
+        <p>Num servidor Linux com UFW, você pode usar o perfil de aplicação Samba e restringir a origem à sub-rede de trabalho, em vez de liberar o serviço para qualquer origem. No Windows, use as regras do Defender Firewall de acordo com o perfil e o escopo da rede.</p>
+        <p>Se o servidor tem mais de uma interface, VLAN ou rede de administração, confirme em qual segmento o SMB deve escutar e quem pode iniciar conexões. Para arquitetura de rede, veja <Link to="/blog/como-proteger-rede-wifi-empresa" className="text-accent">proteção e segmentação da rede empresarial</Link>.</p>
+        <h2>8. Compartilhamento não substitui backup</h2>
+        <p>Centralizar arquivos melhora organização, mas também cria um ponto de impacto: exclusão acidental, ransomware, falha do armazenamento ou erro administrativo pode atingir muitos dados de uma vez. RAID melhora disponibilidade diante de algumas falhas de disco; <strong>RAID não é backup</strong>.</p>
         <ul>
-          <li><strong>Synology DS224+</strong> — ideal para até 20 usuários, interface web intuitiva</li>
-          <li><strong>QNAP TS-264</strong> — com saída HDMI e virtualização</li>
-          <li>Configure RAID 1 (espelhamento) para proteção contra falha de disco</li>
-          <li>Habilite snapshots automáticos para versionamento</li>
+          <li>Mantenha pelo menos uma cópia independente do servidor.</li>
+          <li>Defina retenção/versionamento conforme o tipo de dado.</li>
+          <li>Proteja credenciais e destino de backup contra a mesma conta que usa o compartilhamento.</li>
+          <li>Teste restauração de uma pasta e de arquivos individuais.</li>
         </ul>
-
-        <h2>Backup do Servidor</h2>
-        <pre><code>{"# Windows (Robocopy)\nrobocopy D:\\SERVIDOR\\ E:\\BACKUP\\ /MIR /LOG:C:\\Logs\\backup.log\n\n# Linux (rsync + cron)\n0 23 * * * rsync -avz --delete /srv/samba/ /mnt/backup/"}</code></pre>
-
-        <h2>Checklist Final</h2>
+        <p>Use o guia <Link to="/blog/como-testar-restauracao-de-backup" className="text-accent">como testar restauração de backup</Link> antes de considerar a rotina concluída.</p>
+        <h2>9. NAS, Windows Server ou Samba: como decidir</h2>
         <ul>
-          <li>✅ IP fixo configurado no servidor</li>
-          <li>✅ Pastas com estrutura departamental</li>
-          <li>✅ Usuários e grupos com permissões NTFS + compartilhamento</li>
-          <li>✅ Mapeamento automático nos clientes</li>
-          <li>✅ Backup agendado (local + off-site)</li>
-          <li>✅ Firewall configurado e antivírus ativo</li>
+          <li><strong>NAS:</strong> costuma simplificar administração de armazenamento e snapshots em ambientes pequenos, desde que o modelo e suporte atendam à necessidade.</li>
+          <li><strong>Windows Server:</strong> faz sentido quando integração com identidade Microsoft, políticas, recursos de servidor e administração centralizada são parte do desenho.</li>
+          <li><strong>Samba/Linux:</strong> oferece flexibilidade e integração SMB, mas exige operação disciplinada do sistema, permissões, atualizações e backup.</li>
         </ul>
+        <p>Nenhuma opção elimina a necessidade de inventário, usuários, grupos, backup e monitoração.</p>
+        <h2>10. Checklist de implantação</h2>
+        <ul>
+          <li>Inventário de dados e responsáveis definido.</li>
+          <li>Usuários individuais e grupos criados.</li>
+          <li>Compartilhamentos com menor privilégio e sem convidado por padrão.</li>
+          <li>Nome do servidor, DNS e endereço estável planejados.</li>
+          <li>SMB restrito à rede necessária; porta 445 não exposta à internet.</li>
+          <li>Logs e eventos relevantes habilitados para diagnóstico.</li>
+          <li>Backup independente executado e restauração testada.</li>
+          <li>Procedimento de entrada/saída de usuários documentado.</li>
+        </ul>
+        <h2>Quando parar e revisar o projeto</h2>
+        <ul>
+          <li>Você precisa habilitar acesso convidado para “fazer funcionar”.</li>
+          <li>O compartilhamento só funciona quando o firewall é desligado por inteiro.</li>
+          <li>Usuários precisam usar a mesma conta administrativa.</li>
+          <li>O único backup está no mesmo servidor ou no mesmo volume.</li>
+          <li>O acesso remoto depende de publicar SMB diretamente na internet.</li>
+          <li>Você não consegue explicar quem pode apagar, restaurar ou conceder acesso.</li>
+        </ul>
+        <h2>O que não fazer</h2>
+        <ul>
+          <li>Não grave senhas em <code>net use</code>, scripts ou documentação operacional.</li>
+          <li>Não habilite <code>guest ok = yes</code> por padrão em dados de trabalho.</li>
+          <li>Não use “Everyone/Controle Total” como substituto de um modelo de grupos.</li>
+          <li>Não trate RAID, snapshot e backup como se fossem a mesma coisa.</li>
+          <li>Não abra TCP 445 para a internet para facilitar acesso remoto.</li>
+        </ul>
+        <h2>Perguntas frequentes</h2>
+        <h3>Windows 11 pode compartilhar arquivos como servidor?</h3>
+        <p>Sim, o Windows cliente inclui o componente servidor SMB, mas recursos e limites variam. Para ambiente empresarial, escolha a plataforma pela necessidade de identidade, administração, disponibilidade e suporte.</p>
+        <h3>Samba precisa de acesso convidado?</h3>
+        <p>Não. Para dados autenticados, mantenha acesso convidado desabilitado e use usuários/grupos. A documentação do Samba define <code>guest ok = yes</code> como acesso sem senha.</p>
+        <h3>Mapear unidade por IP é errado?</h3>
+        <p>Não é sempre “errado”, mas em ambientes de domínio pode impedir o uso esperado de Kerberos. Prefira nome/DNS consistente quando a arquitetura depende de autenticação integrada.</p>
+        <h3>Posso acessar meu servidor de arquivos de fora da empresa?</h3>
+        <p>Sim, mas não expondo SMB cru à internet. Use uma camada de acesso remoto adequada, com autenticação e criptografia planejadas.</p>
+        <h2>Glossário rápido</h2>
+        <dl>
+          <dt>SMB</dt><dd>Protocolo de compartilhamento de arquivos e outros recursos usado pelo Windows e implementado pelo Samba.</dd>
+          <dt>Share</dt><dd>Recurso publicado na rede, como uma pasta compartilhada.</dd>
+          <dt>ACL</dt><dd>Lista de controle de acesso que define permissões para identidades.</dd>
+          <dt>Samba</dt><dd>Implementação livre de protocolos SMB para sistemas Unix/Linux.</dd>
+          <dt>Kerberos</dt><dd>Protocolo de autenticação usado em ambientes de domínio para validar identidades e serviços.</dd>
+        </dl>
+        <p>Para ligar identidade, rede, backup e suporte à operação, siga o <Link to="/guia-tecnico-informatica#tema-informatica-empresas" className="text-accent">Atlas de informática para empresas</Link>.</p>
+        <EditorialReferences slug="como-configurar-servidor-de-arquivos" />
       </>
     ),
   },
@@ -8695,127 +8723,100 @@ crontab -e
   },
 
   "como-configurar-firewall-ufw-linux": {
-    title: "Como Configurar Firewall UFW no Linux: Guia Definitivo",
-    excerpt: "Configuração de regras, portas, serviços e logs do UFW para proteger servidores e desktops Linux.",
-    date: "2026-04-20",
-    readTime: "10 min",
+    title: "UFW no Linux: firewall host sem se trancar fora do servidor",
+    excerpt: "Como planejar, testar e aplicar regras UFW em Ubuntu: SSH, portas, origem por rede, perfis de aplicação, logs, exclusão de regras e critérios de parada.",
+    date: "2026-09-25",
+    readTime: "14 min",
     category: "Segurança e Redes",
     content: (
       <>
-        <p className="lead">Segurança digital deixou de ser problema só de grandes corporações. Em 2026, ataques cibernéticos atingem desde pessoas comuns até pequenas empresas em Curitiba todos os dias. Este guia técnico mostra como configurar firewall ufw no linux de forma profissional e eficaz.</p>
-
-        <h2>Cenário de Ameaças em 2026</h2>
-        <p>O custo médio de um incidente de segurança para pequenas empresas brasileiras passou de R$ 80 mil em 2025, segundo levantamentos do setor. Os ataques mais comuns que vemos no atendimento técnico em Curitiba:</p>
+        <p className="lead">UFW (Uncomplicated Firewall) é a interface padrão do Ubuntu para administrar um firewall de host. Ele simplifica regras comuns, mas não substitui o desenho da rede nem torna seguro um serviço mal configurado. Em servidor remoto, o erro mais comum é habilitar o firewall antes de garantir a regra de acesso administrativo — e perder a própria sessão.</p>
+        <h2>Resposta direta</h2>
+        <p>Antes de executar <code>sudo ufw enable</code>, descubra quais serviços realmente precisam receber conexões e de onde elas devem vir. Em servidor acessado por SSH, crie e valide primeiro a regra de SSH para a sua origem administrativa. Depois habilite o UFW, confira <code>sudo ufw status verbose</code>, teste uma segunda conexão antes de fechar a primeira e só então avance para outras portas.</p>
+        <h2>1. Entenda o papel do UFW</h2>
+        <p>O UFW gerencia filtragem de tráfego no próprio host. A documentação do Ubuntu o descreve como uma forma simplificada de criar e remover regras para firewall baseado em host. Isso é diferente de um firewall de borda, de uma regra de Security Group em nuvem ou de segmentação entre VLANs.</p>
+        <p>Se o objetivo é controlar tráfego entre redes, VPNs, NAT complexo ou múltiplos segmentos, um gateway dedicado pode ser a camada certa. Veja também <Link to="/blog/como-configurar-firewall-pfsense" className="text-accent">como pensar regras em um firewall de borda</Link>.</p>
+        <h2>2. Faça inventário das portas antes das regras</h2>
         <ul>
-          <li><strong>Ransomware</strong> — criptografia dos arquivos e cobrança de resgate (R$ 5 mil a R$ 500 mil)</li>
-          <li><strong>Phishing direcionado</strong> — e-mails personalizados que enganam até usuários experientes</li>
-          <li><strong>Engenharia social</strong> — ligações se passando por banco, suporte técnico ou parceiro</li>
-          <li><strong>Invasão por credenciais vazadas</strong> — senhas reutilizadas em sites comprometidos</li>
-          <li><strong>Ataques a roteadores domésticos</strong> — captura de tráfego e redirecionamento DNS</li>
-          <li><strong>Sequestro de WhatsApp Business</strong> — uso da conta para golpes contra clientes</li>
+          <li>Qual serviço está escutando?</li><li>Ele precisa aceitar conexões externas ou apenas locais?</li><li>Qual protocolo e porta usa?</li><li>Quais redes ou hosts devem iniciar a conexão?</li><li>Existe outra camada de firewall na nuvem, roteador ou provedor?</li>
         </ul>
-
-        <h2>Princípios Fundamentais de Segurança</h2>
-        <p>Antes de ferramentas e configurações, internalize os princípios. Eles guiam toda decisão de segurança.</p>
+        <p>Não abra uma porta só porque um tutorial lista aquela porta. Primeiro confirme o processo que está escutando e a necessidade do serviço.</p>
+        <h2>3. Veja o estado atual antes de habilitar</h2>
+        <p>Comece por comandos de leitura:</p>
         <ul>
-          <li><strong>Defesa em profundidade</strong> — múltiplas camadas, nunca dependa de uma única proteção</li>
-          <li><strong>Princípio do menor privilégio</strong> — cada usuário e processo só tem acesso ao mínimo necessário</li>
-          <li><strong>Zero Trust</strong> — nunca confie automaticamente, verifique sempre, mesmo dentro da rede</li>
-          <li><strong>Segregação de funções</strong> — quem aprova não é quem executa, quem audita não é quem opera</li>
-          <li><strong>Backup imune</strong> — pelo menos uma cópia offline ou imutável, fora do alcance de ransomware</li>
-          <li><strong>Atualização contínua</strong> — vulnerabilidades conhecidas são as mais exploradas</li>
+          <li><code>sudo ufw status</code> — mostra se o UFW está ativo e as regras visíveis.</li>
+          <li><code>sudo ufw status verbose</code> — inclui informações adicionais do estado.</li>
+          <li><code>sudo ufw status numbered</code> — numera regras para facilitar revisão e exclusão.</li>
+          <li><code>sudo ufw app list</code> — lista perfis instalados por aplicações.</li>
         </ul>
-
-        <h2>Avaliação de Riscos Inicial</h2>
-        <p>Não é possível proteger o que você não conhece. O primeiro passo é mapear sua infraestrutura.</p>
-        <p>Faça um inventário completo:</p>
+        <p>O Ubuntu informa que o UFW começa desabilitado por padrão. Isso não significa que o servidor esteja “sem nenhuma proteção”: pode haver firewall de nuvem, roteador ou outras regras. Por isso, diagnostique todas as camadas.</p>
+        <h2>4. Servidor remoto: preserve o caminho de administração</h2>
+        <p>Se você administra por SSH, permita o acesso antes de habilitar o firewall. Quando possível, restrinja pela rede ou host de administração em vez de aceitar SSH de qualquer origem.</p>
+        <p>Exemplo da própria documentação do Ubuntu para permitir SSH apenas de uma origem específica: <code>sudo ufw allow proto tcp from 192.168.0.2 to any port 22</code>. Em uma rede inteira, ajuste a origem para a sub-rede que realmente administra o servidor.</p>
+        <p>Depois de habilitar, mantenha a sessão atual aberta e teste uma nova sessão. Se a nova conexão falhar, não feche o único acesso que ainda funciona.</p>
+        <h2>5. Teste uma regra antes de aplicá-la</h2>
+        <p>O UFW oferece <code>--dry-run</code> para mostrar as regras resultantes sem aplicá-las. Por exemplo, <code>sudo ufw --dry-run allow http</code>. Use essa etapa para conferir o efeito de mudanças simples antes da aplicação.</p>
+        <h2>6. Abra somente o serviço necessário</h2>
+        <p>A documentação do Ubuntu mostra regras por número de porta e por perfil de aplicação. Exemplos comuns:</p>
         <ul>
-          <li>Quais dispositivos estão conectados à rede (computadores, celulares, IoT, impressoras)</li>
-          <li>Quais sistemas e aplicativos são usados (sistemas internos, SaaS, e-mail)</li>
-          <li>Quais dados são tratados (cadastros, financeiro, saúde, propriedade intelectual)</li>
-          <li>Quem tem acesso a quê (usuários, fornecedores, parceiros)</li>
-          <li>Onde estão os backups e qual a frequência</li>
-          <li>Quais ferramentas de segurança já estão em uso</li>
+          <li><code>sudo ufw allow 22</code> — permite porta 22; em produção, prefira restringir origem quando viável.</li>
+          <li><code>sudo ufw allow http</code> — usa o nome de serviço quando disponível.</li>
+          <li><code>sudo ufw allow Samba</code> — usa o perfil de aplicação instalado.</li>
+          <li><code>sudo ufw allow from 192.168.0.0/24 to any app Samba</code> — restringe Samba à rede local de exemplo.</li>
         </ul>
-        <p>Esse mapeamento revela vulnerabilidades óbvias que muitas vezes passam despercebidas — como aquela impressora que ninguém mais usa mas continua acessível pela rede.</p>
-
-        <h2>Configuração Técnica Recomendada</h2>
-        <p>Com o mapeamento em mãos, parta para a configuração técnica. As recomendações abaixo são baseline mínimo para qualquer ambiente profissional.</p>
+        <p>O ponto não é decorar comandos: é associar cada regra a um serviço, uma origem e uma justificativa.</p>
+        <h2>7. Remova regras com precisão</h2>
+        <p>Evite “resetar tudo” para corrigir uma regra errada. Use <code>sudo ufw status numbered</code> para revisar a ordem e remova a regra específica. A documentação também aceita exclusão pelo próprio texto da regra, como <code>sudo ufw delete deny 22</code>.</p>
+        <h2>8. Logs ajudam, mas não substituem diagnóstico</h2>
+        <p>O Ubuntu documenta <code>sudo ufw logging on</code> para ativar registros do firewall. Use logs para entender bloqueios inesperados e tentativas de conexão, mas considere volume, retenção e a ferramenta de log do sistema. Um pacote bloqueado não prova, sozinho, uma invasão.</p>
+        <h2>9. Regras padrão e saída: decida conscientemente</h2>
+        <p>Muitos servidores adotam a lógica de negar entradas não solicitadas e permitir saídas, mas isso é uma política, não uma lei. Antes de mudar defaults em produção, documente serviços de monitoramento, DNS, NTP, atualizações, bancos e integrações que dependem de tráfego de saída.</p>
+        <p>Em ambientes mais restritos, filtragem de saída exige inventário e observabilidade para não quebrar dependências legítimas.</p>
+        <h2>10. UFW em servidor com Docker, roteamento ou NAT</h2>
+        <p>Contêineres, encaminhamento de pacotes, bridges e regras de NAT podem introduzir caminhos de tráfego que não se comportam como um host simples. Se a máquina também atua como roteador, gateway ou host de contêineres publicados, não aplique um roteiro básico sem entender a cadeia de regras e a arquitetura.</p>
+        <p>Nesses casos, desenhe primeiro o fluxo: origem → interface → serviço → retorno. Se houver VPN de acesso remoto, conecte a política ao <Link to="/blog/como-configurar-vpn-empresarial" className="text-accent">planejamento de VPN empresarial</Link>.</p>
+        <h2>Quando parar</h2>
         <ul>
-          <li><strong>Firewall configurado</strong> — bloqueia portas não usadas, limita acesso externo a serviços essenciais</li>
-          <li><strong>Antivírus em todos os endpoints</strong> — Bitdefender, ESET ou Kaspersky em versão corporativa</li>
-          <li><strong>Patch management</strong> — atualizações de SO e aplicativos aplicadas em até 30 dias da liberação</li>
-          <li><strong>EDR (Endpoint Detection and Response)</strong> — para detectar ataques que escapam do antivírus tradicional</li>
-          <li><strong>VPN para acesso remoto</strong> — nada de RDP exposto direto na internet</li>
-          <li><strong>2FA em todos os serviços críticos</strong> — e-mail, ERP, painel administrativo, redes sociais corporativas</li>
-          <li><strong>Logs centralizados</strong> — pelo menos 90 dias de retenção para investigação de incidentes</li>
+          <li>Você administra o servidor remotamente e não possui console alternativo nem regra SSH validada.</li>
+          <li>Não sabe qual processo usa a porta que pretende abrir.</li>
+          <li>A máquina roteia tráfego, faz NAT ou hospeda contêineres e você não mapeou essas regras.</li>
+          <li>Existe firewall de nuvem/roteador e você não sabe qual camada está bloqueando.</li>
+          <li>Para fazer o serviço funcionar, a única ideia restante é desabilitar o firewall por completo.</li>
         </ul>
-
-        <h2>Procedimento Detalhado de Implementação</h2>
-        <p>Vamos ao passo a passo prático. Adapte ao seu ambiente, mas siga a ordem — pular etapas deixa brechas.</p>
-        <ol>
-          <li><strong>Inventário e classificação</strong> — saiba o que precisa proteger e qual a criticidade de cada ativo</li>
-          <li><strong>Hardening de senhas</strong> — gerenciador de senhas (Bitwarden, 1Password) para todos os usuários</li>
-          <li><strong>2FA universal</strong> — comece pelo e-mail (porta de entrada para tudo), depois bancos, redes sociais e sistemas internos</li>
-          <li><strong>Firewall e segmentação</strong> — separe rede de visitantes, IoT e produção</li>
-          <li><strong>Backup 3-2-1</strong> — 3 cópias, 2 mídias diferentes, 1 offsite</li>
-          <li><strong>Atualizações automáticas</strong> — configure janela de manutenção e aplique patches</li>
-          <li><strong>Treinamento de usuários</strong> — phishing é o vetor #1, e usuário treinado é a melhor defesa</li>
-          <li><strong>Monitoramento contínuo</strong> — logs revisados periodicamente, alertas configurados para anomalias</li>
-          <li><strong>Plano de resposta a incidentes</strong> — quem chamar, o que fazer, como comunicar quando algo der errado</li>
-          <li><strong>Auditoria periódica</strong> — pentest anual e revisão de configurações trimestral</li>
-        </ol>
-
-        <h2>Ferramentas Recomendadas</h2>
-        <p>Mercado de segurança tem centenas de ferramentas. Para o cenário típico de SMB em Curitiba, essa stack cobre o essencial:</p>
+        <h2>O que não fazer</h2>
         <ul>
-          <li><strong>Bitdefender GravityZone</strong> ou <strong>ESET Protect</strong> — antivírus + EDR centralizado</li>
-          <li><strong>pfSense</strong> ou <strong>OPNsense</strong> — firewall corporativo open source</li>
-          <li><strong>Bitwarden Business</strong> — gerenciador de senhas com SSO e auditoria</li>
-          <li><strong>Veeam Backup</strong> ou <strong>Acronis</strong> — backup empresarial com replicação</li>
-          <li><strong>Wazuh</strong> — SIEM open source para correlação de logs</li>
-          <li><strong>Cloudflare</strong> — proteção DDoS e WAF para sites e aplicações</li>
-          <li><strong>YubiKey</strong> ou <strong>Authy</strong> — 2FA físico e em apps</li>
+          <li>Não habilite UFW em servidor remoto antes de preservar o acesso administrativo.</li>
+          <li>Não abra “qualquer origem” quando o serviço só precisa da rede local.</li>
+          <li>Não use porta aberta como substituto de autenticação segura no serviço.</li>
+          <li>Não interprete log de bloqueio como prova automática de ataque.</li>
+          <li>Não misture alterações de UFW, roteamento, Docker e firewall de nuvem numa única mudança sem plano de rollback.</li>
         </ul>
-
-        <h2>Erros Comuns Que Geram Vulnerabilidade</h2>
-        <p>Os ataques bem-sucedidos quase sempre exploram falhas conhecidas e evitáveis.</p>
+        <h2>Checklist de validação</h2>
         <ul>
-          <li><strong>Senha "12345678"</strong> ou similar em conta administrativa</li>
-          <li><strong>Reutilizar senha</strong> entre serviços pessoais e corporativos</li>
-          <li><strong>Adiar atualizações</strong> de SO e aplicativos por meses ou anos</li>
-          <li><strong>Antivírus expirado</strong> sem que o usuário perceba</li>
-          <li><strong>Backup que nunca é testado</strong> — descobrir que não funciona depois do incidente</li>
-          <li><strong>Compartilhar credenciais</strong> entre funcionários por WhatsApp</li>
-          <li><strong>Acesso remoto direto via RDP</strong> sem VPN</li>
-          <li><strong>Wi-Fi corporativo</strong> com senha conhecida por todos os funcionários, terceiros e clientes</li>
+          <li><code>sudo ufw status verbose</code> mostra o estado esperado.</li>
+          <li>Uma segunda sessão SSH abre a partir da rede administrativa autorizada.</li>
+          <li>Portas necessárias respondem apenas das origens previstas.</li>
+          <li>Portas que não deveriam estar públicas continuam inacessíveis.</li>
+          <li>Aplicação, DNS, atualizações e monitoramento continuam funcionando.</li>
+          <li>As regras possuem justificativa documentada e podem ser revertidas individualmente.</li>
         </ul>
-
-        <h2>Resposta a Incidentes</h2>
-        <p>Cedo ou tarde, algo vai dar errado. Ter um plano definido é diferença entre incidente controlado e desastre.</p>
-        <ol>
-          <li><strong>Detecção</strong> — usuário relata, alerta de monitoramento dispara, antivírus bloqueia</li>
-          <li><strong>Contenção</strong> — desconectar máquinas afetadas da rede imediatamente</li>
-          <li><strong>Erradicação</strong> — remover malware, fechar vetor de entrada, trocar credenciais comprometidas</li>
-          <li><strong>Recuperação</strong> — restaurar de backup limpo, validar integridade antes de voltar à produção</li>
-          <li><strong>Lições aprendidas</strong> — documentar o que aconteceu, ajustar processos para evitar recorrência</li>
-        </ol>
-        <p><strong>Nunca pague resgate de ransomware sem consultar especialista.</strong> Pagar não garante recuperação dos dados e marca sua empresa como alvo fácil para futuras extorsões.</p>
-
-        <h2>Conformidade e LGPD</h2>
-        <p>Empresas que tratam dados pessoais têm obrigações legais. A LGPD não é opcional, e multas chegam a 2% do faturamento limitado a R$ 50 milhões por infração.</p>
-        <ul>
-          <li><strong>Mapeamento de dados pessoais</strong> coletados e tratados</li>
-          <li><strong>Base legal documentada</strong> para cada tratamento</li>
-          <li><strong>Política de privacidade</strong> clara e acessível</li>
-          <li><strong>Encarregado de proteção de dados</strong> (DPO) designado</li>
-          <li><strong>Plano de resposta a incidentes</strong> que inclua notificação à ANPD em até 48h</li>
-          <li><strong>Direitos dos titulares</strong> implementados (acesso, correção, exclusão)</li>
-        </ul>
-
-        <h2>Suporte em Segurança em Curitiba</h2>
-        <p>A <strong>{BRAND_NAME}</strong> oferece consultoria e implementação de segurança digital para empresas em Curitiba e região metropolitana. Auditoria, hardening, configuração de firewall, implementação de backup, treinamento de usuários e resposta a incidentes. Atendemos Curitiba, São José dos Pinhais, Pinhais, Colombo, Almirante Tamandaré, Araucária, Campo Largo, Campo Magro, Piraquara, Quatro Barras e Fazenda Rio Grande com técnicos certificados em segurança ofensiva e defensiva.</p>
-
+        <h2>Decisão: UFW é a camada certa?</h2>
+        <p>Use UFW quando você precisa controlar conexões do próprio host Ubuntu com regras compreensíveis. Se a necessidade é segmentar várias redes, controlar NAT, concentrar VPNs ou aplicar política para muitos dispositivos, trate o problema como arquitetura de firewall/gateway. Se o servidor está em nuvem, alinhe UFW com Security Groups/firewall do provedor em vez de configurar cada camada sem relação.</p>
+        <h2>Perguntas frequentes</h2>
+        <h3>UFW substitui um firewall de borda?</h3><p>Não. UFW protege o host; um firewall de borda controla tráfego entre redes e pode aplicar políticas antes de o pacote chegar ao servidor.</p>
+        <h3>Posso permitir SSH só da minha rede?</h3><p>Sim. O UFW aceita regras com origem específica ou sub-rede. Isso reduz exposição quando a arquitetura permite uma origem administrativa estável.</p>
+        <h3>Preciso reiniciar o servidor depois de cada regra?</h3><p>As regras do UFW são aplicadas pelo próprio utilitário; o importante é verificar o estado e testar o serviço após a mudança.</p>
+        <h3>UFW protege uma aplicação vulnerável?</h3><p>Ele reduz superfície de rede e controla quem alcança uma porta, mas não corrige vulnerabilidades, senhas fracas ou falhas da aplicação.</p>
+        <h2>Glossário rápido</h2>
+        <dl>
+          <dt>Firewall de host</dt><dd>Filtro aplicado no próprio computador ou servidor.</dd>
+          <dt>Regra de entrada</dt><dd>Política para tráfego que tenta chegar ao host.</dd>
+          <dt>Origem</dt><dd>Host ou rede de onde a conexão é iniciada.</dd>
+          <dt>Porta</dt><dd>Identificador lógico usado por serviços de rede.</dd>
+          <dt>Dry run</dt><dd>Simulação que mostra o efeito esperado sem aplicar a regra.</dd>
+        </dl>
+        <p>Para conectar firewall, VPN, Wi-Fi e segmentação ao diagnóstico de rede, siga o <Link to="/guia-tecnico-informatica#tema-redes-wifi" className="text-accent">Atlas de redes e Wi-Fi</Link>.</p>
+        <EditorialReferences slug="como-configurar-firewall-ufw-linux" />
       </>
     ),
   },
