@@ -19,6 +19,12 @@ export interface EditorialCover {
 }
 
 export const EDITORIAL_COVERS: Record<string, EditorialCover> = {
+  "manutencao-preventiva-computador-guia": {
+    src: "/blog/manutencao-preventiva-computador-guia.jpg",
+    alt: "Bancada preparada para manutenção de notebook, com pulseira antiestática e ferramentas",
+    width: 1200,
+    height: 630,
+  },
   "como-configurar-roteador-wifi-iniciantes": {
     src: "/blog/como-configurar-roteador-wifi-iniciantes.jpg",
     alt: "Roteador Wi-Fi doméstico com antenas externas sobre superfície clara",
