@@ -34,10 +34,30 @@ jobs:
         run: |
           set -e
           bunx --bun npm audit --audit-level=high --json > audit.json || true
-          node -e "const r=require('./audit.json');const m=r.metadata?.vulnerabilities||{};const bad=(m.high||0)+(m.critical||0);console.log('high:',m.high,'critical:',m.critical);if(bad>0){process.exit(1)}"
+          node - <<'NODE'
+          const r = require("./audit.json");
+          const m = r.metadata?.vulnerabilities || {};
+          const rows = Object.entries(r.vulnerabilities || {})
+            .filter(([, v]) => ["high", "critical"].includes(v.severity))
+            .map(([name, v]) => ({
+              name,
+              severity: v.severity,
+              direct: Boolean(v.isDirect),
+              range: v.range,
+              fix: v.fixAvailable === true
+                ? "available"
+                : v.fixAvailable && typeof v.fixAvailable === "object"
+                  ? `${v.fixAvailable.name || name}@${v.fixAvailable.version || "?"}${v.fixAvailable.isSemVerMajor ? " (major)" : ""}`
+                  : "none",
+            }));
+          console.log("high:", m.high || 0, "critical:", m.critical || 0);
+          for (const row of rows) console.log(JSON.stringify(row));
+          if ((m.high || 0) + (m.critical || 0) > 0) process.exit(1);
+          NODE
 
       # 2) Block secrets being committed.
       - name: Gitleaks secret scan
+        if: always()
         run: |
           docker run --rm \
             -v "${{ github.workspace }}:/repo" \
