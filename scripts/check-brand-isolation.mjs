@@ -1,6 +1,6 @@
 // RODADA 1 — GATE DE VAZAMENTO DE MARCA
-// Falha o build se qualquer identificador da marca de origem aparecer em
-// artefatos que vão para produção (index.html, public/, src/, dist/ se existir).
+// Falha a validação se qualquer identificador de outra marca aparecer em
+// código, conteúdo público ou documentação operacional.
 //
 // Uso: npm run check:brand-isolation
 import { readFileSync, existsSync, readdirSync, statSync } from "node:fs";
@@ -15,8 +15,8 @@ const ROOT_MARKDOWN = readdirSync(".").filter(
 );
 const MARKDOWN_DIRS = ["docs"].filter((p) => existsSync(p));
 
-// Arquivos onde a citação do token é legítima (documentação da própria migração
-// e testes de regressão que precisam do valor literal para provar o bloqueio).
+// Exceções estritamente normativas/técnicas que precisam conter o valor literal
+// para declarar ou testar a própria regra de bloqueio.
 const ALLOWLIST = [
   /^AGENTS\.md$/,
   /^scripts\/lib\/site-env\.mjs$/,
@@ -81,7 +81,9 @@ for (const file of files) {
 }
 
 if (violations.length) {
-  console.error("[check:brand-isolation] Identificadores da marca de origem encontrados:\n");
+  console.error(
+    "[check:brand-isolation] Identificadores da marca de origem encontrados:\n",
+  );
   for (const v of violations) console.error("  ✗ " + v);
   console.error(
     `\n${violations.length} ocorrência(s). Nada da marca de origem pode ir para produção.`,
