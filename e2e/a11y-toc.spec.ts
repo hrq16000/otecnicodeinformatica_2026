@@ -21,6 +21,9 @@ test.describe("TOC — acessibilidade", () => {
       await page.goto(ARTIGO);
       const nav = page.getByRole("navigation", { name: "Índice do artigo" });
       await expect(nav).toBeVisible();
+      // O artigo faz hidratação cliente após o SSR. Esperar o marcador do TOC
+      // evita que o axe rode durante a troca de contexto da hidratação.
+      await expect(page.locator(".article-toc__copy").first()).toHaveAttribute("data-toc-ready", "true");
 
       const resultado = await new AxeBuilder({ page })
         .include("nav[aria-label='Índice do artigo']")
