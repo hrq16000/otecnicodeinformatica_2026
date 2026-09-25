@@ -56,11 +56,13 @@ const CopiarLinkSecao = ({
   texto,
   posicao,
   anunciar,
+  ready,
 }: {
   id: string;
   texto: string;
   posicao: number;
   anunciar: (mensagem: string) => void;
+  ready: boolean;
 }) => {
   const [copiado, setCopiado] = useState(false);
   const botaoRef = useRef<HTMLButtonElement>(null);
@@ -89,6 +91,8 @@ const CopiarLinkSecao = ({
       ref={botaoRef}
       type="button"
       onClick={copiar}
+      disabled={!ready}
+      data-toc-ready={ready ? "true" : "false"}
       aria-label={copiado ? `Link da seção ${texto} copiado` : `Copiar link da seção ${texto}`}
       className="article-toc__copy inline-flex h-11 w-11 md:h-8 md:w-8 shrink-0 items-center justify-center rounded-md text-muted-foreground transition-colors hover:bg-muted hover:text-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-background"
     >
@@ -104,6 +108,11 @@ const CopiarLinkSecao = ({
 export const ArticleToc = ({ headings }: { headings: TocHeading[] }) => {
   const ativo = useScrollSpy(headings.map((h) => h.id));
   const [aviso, setAviso] = useState("");
+  const [hydrated, setHydrated] = useState(false);
+
+  useEffect(() => {
+    setHydrated(true);
+  }, []);
 
   if (!headings.length) return null;
 
@@ -141,7 +150,13 @@ export const ArticleToc = ({ headings }: { headings: TocHeading[] }) => {
                 >
                   {h.text}
                 </a>
-                <CopiarLinkSecao id={h.id} texto={h.text} posicao={i + 1} anunciar={setAviso} />
+                <CopiarLinkSecao
+                  id={h.id}
+                  texto={h.text}
+                  posicao={i + 1}
+                  anunciar={setAviso}
+                  ready={hydrated}
+                />
               </li>
             );
           })}
