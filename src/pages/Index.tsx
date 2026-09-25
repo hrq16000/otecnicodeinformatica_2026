@@ -7,6 +7,7 @@ import { ContextosBento } from "@/components/home/ContextosBento";
 import { FaixaFotografica } from "@/components/home/FaixaFotografica";
 import { HomeFaqSsr } from "@/components/home/HomeFaqSsr";
 import { EncontreSuaSolucao } from "@/components/home/EncontreSuaSolucao";
+import { DiagnosticoIa } from "@/components/home/DiagnosticoIa";
 import { CondicoesAtendimento } from "@/components/home/CondicoesAtendimento";
 
 
@@ -63,6 +64,7 @@ const Index = () => {
         <TrustStrip />
         <ContextosBento />
         <EncontreSuaSolucao />
+        <DiagnosticoIa />
         <CondicoesAtendimento />
         <FaixaFotografica />
         {/* FAQ no HTML servido: paridade obrigatória com o FAQPage JSON-LD. */}
