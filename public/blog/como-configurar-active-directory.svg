@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="t d">
+<title id="t">Diretório e identidade corporativa</title><desc id="d">Ilustração editorial abstrata de estrutura hierárquica de identidades e computadores.</desc>
+<defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#07152b"/><stop offset="1" stop-color="#143b5f"/></linearGradient></defs><rect width="1200" height="630" fill="url(#g)"/>
+<g fill="none" stroke-linecap="round" stroke-linejoin="round"><rect x="510" y="80" width="180" height="110" rx="30" stroke="#f8fbff" stroke-width="16"/><circle cx="600" cy="125" r="22" stroke="#00d4ff" stroke-width="12"/><path d="M560 170c16-27 64-27 80 0" stroke="#00d4ff" stroke-width="12"/>
+<path d="M600 190v85M300 275h600M300 275v80M600 275v80M900 275v80" stroke="#68e0ff" stroke-width="14"/>
+<rect x="210" y="355" width="180" height="120" rx="24" stroke="#2374e1" stroke-width="16"/><rect x="510" y="355" width="180" height="120" rx="24" stroke="#2374e1" stroke-width="16"/><rect x="810" y="355" width="180" height="120" rx="24" stroke="#2374e1" stroke-width="16"/>
+<path d="M255 405h90M555 405h90M855 405h90M255 438h58M555 438h58M855 438h58" stroke="#f8fbff" stroke-width="12"/>
+<path d="M300 475v60M600 475v60M900 475v60" stroke="#00d4ff" stroke-width="12"/><circle cx="300" cy="555" r="22" fill="#00d4ff" stroke="none"/><circle cx="600" cy="555" r="22" fill="#00d4ff" stroke="none"/><circle cx="900" cy="555" r="22" fill="#00d4ff" stroke="none"/></g></svg>
