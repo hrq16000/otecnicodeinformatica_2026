@@ -795,6 +795,38 @@ export const EDITORIAL_WAVE = [
     cover: "/blog/como-deixar-celular-android-mais-rapido.svg",
   },
 
+  // ── Onda 11I — segunda promoção de acervo após reescrita e fact-check.
+  {
+    slug: "como-configurar-repetidor-wifi", approvedAt: "2026-09-25",
+    pilar: "/servicos/redes-e-wifi", pilarLabel: "Redes e Wi-Fi",
+    apoio: "/blog/como-melhorar-sinal-wifi-em-casa", apoioLabel: "Como melhorar o sinal Wi-Fi",
+    cover: "/blog/como-configurar-repetidor-wifi.svg",
+  },
+  {
+    slug: "trocar-windows-por-linux-vale-a-pena", approvedAt: "2026-09-25",
+    pilar: "/guia-tecnico-informatica", pilarLabel: "Guia do técnico de informática",
+    apoio: "/decisoes/atualizar-para-windows-11", apoioLabel: "Atualizar para Windows 11",
+    cover: "/blog/trocar-windows-por-linux-vale-a-pena.svg",
+  },
+  {
+    slug: "erros-comuns-upgrade-computador", approvedAt: "2026-09-25",
+    pilar: "/servicos/upgrade-ssd-ram", pilarLabel: "Upgrade de SSD e memória",
+    apoio: "/decisoes/ssd-ou-memoria-ram", apoioLabel: "SSD ou memória RAM",
+    cover: "/blog/erros-comuns-upgrade-computador.svg",
+  },
+  {
+    slug: "como-configurar-vpn-empresarial", approvedAt: "2026-09-25",
+    pilar: "/servicos/suporte-tecnico-empresarial", pilarLabel: "Suporte técnico empresarial",
+    apoio: "/blog/como-proteger-rede-wifi-empresa", apoioLabel: "Proteger o Wi-Fi da empresa",
+    cover: "/blog/como-configurar-vpn-empresarial.svg",
+  },
+  {
+    slug: "como-recuperar-conta-hackeada", approvedAt: "2026-09-25",
+    pilar: "/seguranca-dos-dados", pilarLabel: "Segurança dos dados",
+    apoio: "/blog/como-configurar-2fa-em-tudo", apoioLabel: "Configurar 2FA/MFA",
+    cover: "/blog/como-recuperar-conta-hackeada.svg",
+  },
+
 ];
 
 

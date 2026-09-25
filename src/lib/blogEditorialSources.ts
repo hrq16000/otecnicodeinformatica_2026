@@ -80,6 +80,12 @@ export const ALLOWED_SOURCE_HOSTS = [
   "memtest.org",
   "www.memtest.org",
   "docs.netgate.com",
+  "www.tp-link.com",
+  "ubuntu.com",
+  "www.wireguard.com",
+  "wireguard.com",
+  "openvpn.net",
+  "www.kingston.com",
 ] as const;
 
 // ─────────────────────────────────────────────────────────────
@@ -579,6 +585,112 @@ export const EDITORIAL_SOURCES: Record<string, EditorialSource> = {
     sourceType: "official",
     supports: [
       "Segurança de AD DS exige reduzir superfície de ataque, proteger controladores, aplicar privilégio mínimo, monitorar e planejar recuperação de comprometimento.",
+    ],
+  },
+
+  "tplink-onemesh-wps": {
+    id: "tplink-onemesh-wps",
+    title: "Como configurar o extensor de alcance OneMesh através do botão WPS",
+    publisher: "TP-Link Brasil",
+    url: "https://www.tp-link.com/br/support/faq/2508/",
+    accessedAt: "2026-09-25",
+    sourceType: "official",
+    supports: [
+      "Em modelos compatíveis, a configuração WPS começa com o extensor próximo ao roteador e exige acionar WPS nos dois equipamentos dentro da janela indicada.",
+      "O procedimento depende de modelo e revisão de hardware; a página de suporte do produto deve ser consultada.",
+    ],
+  },
+  "ubuntu-try-desktop": {
+    id: "ubuntu-try-desktop",
+    title: "Try Ubuntu Desktop",
+    publisher: "Ubuntu",
+    url: "https://ubuntu.com/desktop/docs/en/26.04/tutorial/try-ubuntu-desktop/",
+    accessedAt: "2026-09-25",
+    sourceType: "official",
+    supports: [
+      "Ubuntu Desktop pode ser executado a partir de USB em modo de teste sem fazer alterações permanentes no computador.",
+      "O modo de teste permite verificar o funcionamento do hardware antes da instalação.",
+    ],
+  },
+  "ubuntu-install-desktop": {
+    id: "ubuntu-install-desktop",
+    title: "Install Ubuntu Desktop",
+    publisher: "Ubuntu",
+    url: "https://ubuntu.com/desktop/docs/en/26.04/tutorial/install-ubuntu-desktop/",
+    accessedAt: "2026-09-25",
+    sourceType: "official",
+    supports: [
+      "A documentação recomenda backup dos dados antes da instalação e oferece instalação ao lado de outro sistema quando o cenário é compatível.",
+      "BitLocker ativo pode impedir que o instalador manipule com segurança a instalação Windows no mesmo disco até que a situação seja tratada.",
+    ],
+  },
+  "kingston-memory-support": {
+    id: "kingston-memory-support",
+    title: "Memória de Desktop/Notebook — Suporte",
+    publisher: "Kingston Technology",
+    url: "https://www.kingston.com/br/support/technical/products/desktop-notebook-memory",
+    accessedAt: "2026-09-25",
+    sourceType: "official",
+    supports: [
+      "Compatibilidade de memória depende de plataforma, densidade dos chips, organização dos módulos e suporte de BIOS, não apenas da geração DDR.",
+      "O fabricante recomenda consultar compatibilidade do sistema e atualizar BIOS quando necessário para suportar módulos mais novos.",
+    ],
+  },
+  "kingston-ssd-faq": {
+    id: "kingston-ssd-faq",
+    title: "Perguntas frequentes sobre SSDs SATA, NVMe e M.2",
+    publisher: "Kingston Technology",
+    url: "https://www.kingston.com/br/ssd/ssd-faq",
+    accessedAt: "2026-09-25",
+    sourceType: "official",
+    supports: [
+      "M.2 é um formato que pode transportar SATA ou PCIe; SSD M.2 SATA e M.2 PCIe/NVMe não são automaticamente intercambiáveis.",
+      "Alguns slots M.2 compartilham lanes/portas e podem desabilitar outros dispositivos conforme a placa-mãe.",
+    ],
+  },
+  "wireguard-quickstart": {
+    id: "wireguard-quickstart",
+    title: "WireGuard Quick Start",
+    publisher: "WireGuard",
+    url: "https://www.wireguard.com/quickstart/",
+    accessedAt: "2026-09-25",
+    sourceType: "official",
+    supports: [
+      "WireGuard configura interfaces, pares, chaves, endpoints e AllowedIPs; AllowedIPs participa da associação/roteamento do tráfego entre peers.",
+    ],
+  },
+  "openvpn-community-docs": {
+    id: "openvpn-community-docs",
+    title: "OpenVPN Community Documentation",
+    publisher: "OpenVPN",
+    url: "https://openvpn.net/community-docs/",
+    accessedAt: "2026-09-25",
+    sourceType: "official",
+    supports: [
+      "A documentação oficial do projeto cobre configuração, roteamento, segurança, gerenciamento e troubleshooting do OpenVPN.",
+    ],
+  },
+  "google-account-compromised": {
+    id: "google-account-compromised",
+    title: "Proteger uma Conta do Google invadida ou comprometida",
+    publisher: "Google Account Help",
+    url: "https://support.google.com/accounts/answer/6294825?hl=pt",
+    accessedAt: "2026-09-25",
+    sourceType: "official",
+    supports: [
+      "Quando há atividade desconhecida, o Google orienta usar a recuperação oficial, revisar atividade e dispositivos e reforçar a segurança da conta.",
+      "Se não for possível entrar, o fluxo oficial de recuperação deve ser usado para retomar o acesso.",
+    ],
+  },
+  "microsoft-account-compromised": {
+    id: "microsoft-account-compromised",
+    title: "Como recuperar uma conta Microsoft invadida ou comprometida",
+    publisher: "Microsoft Support",
+    url: "https://support.microsoft.com/pt-br/accounts-billing/manage/how-to-recover-a-hacked-or-compromised-microsoft-account",
+    accessedAt: "2026-09-25",
+    sourceType: "official",
+    supports: [
+      "A Microsoft orienta verificar malware antes de confiar uma nova senha ao dispositivo, alterar ou redefinir a senha e revisar configurações da conta.",
     ],
   },
 
@@ -1406,6 +1518,52 @@ export const ARTICLE_SOURCE_MANIFEST: Record<string, ArticleSourceManifest> = {
     factCheckedAt: "2026-09-25",
     notes:
       "Reescrita material completa em 2026-09-25 com documentação Microsoft atual para Windows Server: AD DS, dependência de DNS, segurança, redundância, GPO, backup e critérios de parada.",
+  },
+
+  "como-configurar-repetidor-wifi": {
+    slug: "como-configurar-repetidor-wifi",
+    sources: ["tplink-onemesh-wps", "wifi-alliance-security"],
+    technicalReview: "reviewed",
+    factChecked: true,
+    factCheckedAt: "2026-09-25",
+    notes:
+      "Reescrita completa em 2026-09-25: remove senha/endereço genéricos e regra falsa de perda exata de 50%; prioriza posição, manual do modelo, WPS compatível e validação antes/depois.",
+  },
+  "trocar-windows-por-linux-vale-a-pena": {
+    slug: "trocar-windows-por-linux-vale-a-pena",
+    sources: ["ubuntu-try-desktop", "ubuntu-install-desktop", "ms-win11-requirements"],
+    technicalReview: "reviewed",
+    factChecked: true,
+    factCheckedAt: "2026-09-25",
+    notes:
+      "Reescrita material em 2026-09-25: remove generalizações sobre 2 GB, telemetria e compatibilidade de jogos; usa teste live, backup, BitLocker e requisitos atuais como critérios de decisão.",
+  },
+  "erros-comuns-upgrade-computador": {
+    slug: "erros-comuns-upgrade-computador",
+    sources: ["kingston-memory-support", "kingston-ssd-faq", "nvme-official-faq", "ms-win11-requirements", "ms-bitlocker-backup-key"],
+    technicalReview: "reviewed",
+    factChecked: true,
+    factCheckedAt: "2026-09-25",
+    notes:
+      "Reescrita completa em 2026-09-25: corrige erros textuais e a recomendação absoluta de instalação limpa; adiciona compatibilidade real de RAM, M.2/SATA/NVMe, BIOS, GPU/fonte, backup e validação pós-upgrade.",
+  },
+  "como-configurar-vpn-empresarial": {
+    slug: "como-configurar-vpn-empresarial",
+    sources: ["wireguard-quickstart", "openvpn-community-docs", "cisa-require-mfa", "netgate-pfsense-docs"],
+    technicalReview: "reviewed",
+    factChecked: true,
+    factCheckedAt: "2026-09-25",
+    notes:
+      "Reescrita material em 2026-09-25: substitui script/copiar-colar por arquitetura defensiva de acesso remoto, identidade individual, MFA, rotas, segmentação, DNS, logs, revogação e plano de recuperação.",
+  },
+  "como-recuperar-conta-hackeada": {
+    slug: "como-recuperar-conta-hackeada",
+    sources: ["google-account-compromised", "microsoft-account-compromised", "cisa-require-mfa", "ms-phishing-protection"],
+    technicalReview: "reviewed",
+    factChecked: true,
+    factCheckedAt: "2026-09-25",
+    notes:
+      "Reescrita completa em 2026-09-25: remove estatísticas/valores sem fonte, stack comercial e alegações locais; foca recuperação oficial, sessão, recovery, MFA, dispositivo e preservação de evidências.",
   },
 
 };

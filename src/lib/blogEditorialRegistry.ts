@@ -1301,6 +1301,40 @@ const WAVE_11H: EditorialApproval[] = [
   },
 ];
 
+// ── Onda 11I — segunda promoção controlada noindex → index (2026-09-25).
+const WAVE_11I: EditorialApproval[] = [
+  {
+    slug: "como-configurar-repetidor-wifi", status: "approved", authorType: "organization", authorId: INSTITUTIONAL_AUTHOR.id,
+    reviewedAt: "2026-09-25", approvedAt: "2026-09-25", imageOrigin: "owned", imageLicense: "Todos os direitos reservados",
+    imageAttribution: "Arte editorial original: O Técnico de Informática — https://otecnicodeinformatica.com.br/blog/como-configurar-repetidor-wifi",
+    notes: "Reescrita material com documentação de fabricante e Wi‑Fi Alliance: posicionamento, WPS, bandas, validação e limites do repetidor sem credenciais genéricas nem promessa de perda fixa de velocidade.",
+  },
+  {
+    slug: "trocar-windows-por-linux-vale-a-pena", status: "approved", authorType: "organization", authorId: INSTITUTIONAL_AUTHOR.id,
+    reviewedAt: "2026-09-25", approvedAt: "2026-09-25", imageOrigin: "owned", imageLicense: "Todos os direitos reservados",
+    imageAttribution: "Arte editorial original: O Técnico de Informática — https://otecnicodeinformatica.com.br/blog/trocar-windows-por-linux-vale-a-pena",
+    notes: "Reescrita orientada por compatibilidade e teste live com documentação Ubuntu e requisitos Microsoft; remove generalizações de memória, software, jogos e telemetria.",
+  },
+  {
+    slug: "erros-comuns-upgrade-computador", status: "approved", authorType: "organization", authorId: INSTITUTIONAL_AUTHOR.id,
+    reviewedAt: "2026-09-25", approvedAt: "2026-09-25", imageOrigin: "owned", imageLicense: "Todos os direitos reservados",
+    imageAttribution: "Arte editorial original: O Técnico de Informática — https://otecnicodeinformatica.com.br/blog/erros-comuns-upgrade-computador",
+    notes: "Reescrita completa com documentação de memória, SSD/NVMe, requisitos do Windows e BitLocker; acrescenta compatibilidade, backup, firmware, energia e validação pós-upgrade.",
+  },
+  {
+    slug: "como-configurar-vpn-empresarial", status: "approved", authorType: "organization", authorId: INSTITUTIONAL_AUTHOR.id,
+    reviewedAt: "2026-09-25", approvedAt: "2026-09-25", imageOrigin: "owned", imageLicense: "Todos os direitos reservados",
+    imageAttribution: "Arte editorial original: O Técnico de Informática — https://otecnicodeinformatica.com.br/blog/como-configurar-vpn-empresarial",
+    notes: "Reescrita defensiva com WireGuard/OpenVPN/CISA/Netgate: identidade individual, MFA, rotas, segmentação, DNS, logs, revogação e recuperação, sem scripts copiar-e-colar frágeis.",
+  },
+  {
+    slug: "como-recuperar-conta-hackeada", status: "approved", authorType: "organization", authorId: INSTITUTIONAL_AUTHOR.id,
+    reviewedAt: "2026-09-25", approvedAt: "2026-09-25", imageOrigin: "owned", imageLicense: "Todos os direitos reservados",
+    imageAttribution: "Arte editorial original: O Técnico de Informática — https://otecnicodeinformatica.com.br/blog/como-recuperar-conta-hackeada",
+    notes: "Reescrita baseada em fluxos oficiais Google/Microsoft e CISA: recuperação, sessões, fatores, dispositivo, evidências e limites de suporte; remove estatísticas e promessas sem fonte.",
+  },
+];
+
 export const APPROVED_EDITORIAL_CONTENT = new Map<string, EditorialApproval>([
 
   ...FIRST_WAVE_SLUGS.map((slug) => [
@@ -1357,6 +1391,7 @@ export const APPROVED_EDITORIAL_CONTENT = new Map<string, EditorialApproval>([
   ...WAVE_11E.map((a) => [a.slug, a] as [string, EditorialApproval]),  ...WAVE_11F.map((a) => [a.slug, a] as [string, EditorialApproval]),
   ...WAVE_11G.map((a) => [a.slug, a] as [string, EditorialApproval]),
   ...WAVE_11H.map((a) => [a.slug, a] as [string, EditorialApproval]),
+  ...WAVE_11I.map((a) => [a.slug, a] as [string, EditorialApproval]),
 
 ]);
 

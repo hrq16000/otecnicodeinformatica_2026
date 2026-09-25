@@ -508,66 +508,80 @@ flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flat
     ),
   },
   "trocar-windows-por-linux-vale-a-pena": {
-    title: "Trocar o Windows Por Linux: Vale a Pena?",
-    excerpt: "O que funciona, o que não funciona e como migrar.",
-    date: "2026-04-13",
-    readTime: "10 min",
+    title: "Trocar Windows por Linux vale a pena? Checklist de compatibilidade antes de migrar",
+    excerpt:
+      "Decida com base em aplicativos, periféricos, arquivos, jogos e suporte do hardware. Veja como testar Linux por USB antes de alterar o disco.",
+    date: "2026-09-25",
+    readTime: "11 min",
     category: "Linux",
     content: (
       <>
-        <p className="lead">Você está cansado de lentidão, vírus e atualizações finformadas do Windows? A migração para Linux pode ser a solução — mas <strong>não é para todos</strong>. Veja quando vale a pena e como fazer a transição.</p>
+        <p className="lead">Trocar Windows por Linux pode ser uma ótima decisão — ou pode quebrar justamente o programa que sustenta seu trabalho. A pergunta correta não é “Linux é melhor?”, e sim: <strong>meus aplicativos, arquivos, periféricos e rotina funcionam na distribuição que pretendo usar?</strong> A vantagem é que distribuições como Ubuntu permitem testar o sistema por USB antes de fazer mudanças permanentes no computador.</p>
 
-        <h2>Quando Vale a Pena Trocar</h2>
+        <h2>Resposta curta</h2>
+        <p>Vale considerar Linux quando suas tarefas dependem principalmente de navegador, ferramentas multiplataforma, desenvolvimento ou softwares com versão nativa para Linux. Mantenha Windows — ou teste dual boot/virtualização — quando você depende de aplicativo proprietário, periférico com driver específico, jogo com mecanismo anti-cheat incompatível ou integração corporativa que só foi homologada no Windows.</p>
+
+        <h2>1. Faça um inventário do que precisa continuar funcionando</h2>
+        <p>Liste programas usados semanalmente, arquivos críticos, impressoras/scanners, VPN, certificado digital, sincronização em nuvem, jogos e acessórios. Para cada item, classifique: versão Linux oficial, equivalente aceitável, funciona via navegador, depende de compatibilidade adicional ou não tem alternativa prática.</p>
+        <p>Evite decidir pela existência de um “programa parecido”. Se você troca arquivos com clientes em formatos específicos, usa macros, plugins, drivers ou recursos avançados, teste o fluxo real — abrir, editar, exportar, imprimir e compartilhar — antes da migração.</p>
+
+        <h2>2. Teste o hardware com um sistema live</h2>
+        <p>A documentação atual do Ubuntu recomenda experimentar o sistema diretamente por USB antes da instalação. Essa sessão de teste não altera o disco por padrão e permite verificar teclado, touchpad, Wi-Fi, Bluetooth, áudio, vídeo, webcam, suspensão e periféricos.</p>
+        <p>Alguns drivers proprietários podem não estar ativos na sessão live; portanto, ausência de um recurso ali não prova incompatibilidade definitiva. Ainda assim, o teste revela problemas básicos antes de você reparticionar ou apagar o sistema atual.</p>
+
+        <h2>3. Compare seu hardware com os requisitos e a realidade atual</h2>
+        <p>Linux pode dar nova utilidade a máquinas que não atendem aos requisitos oficiais do Windows 11, mas isso não significa que “qualquer Linux roda bem com 2 GB de RAM”. Ambiente gráfico, navegador moderno e quantidade de abas ainda consomem memória e CPU. Escolha distribuição/desktop compatíveis com a capacidade real e com o suporte que você precisa.</p>
+        <p>Os requisitos oficiais do Windows 11 incluem CPU compatível de 64 bits, 4 GB de RAM, 64 GB de armazenamento, UEFI/Secure Boot e TPM 2.0. Se uma máquina ficou fora dessa linha, migrar para Linux pode ser uma opção legítima — desde que os aplicativos e periféricos necessários sejam compatíveis.</p>
+
+        <h2>4. Aplicativos: nativo, web, equivalente ou sem substituto?</h2>
+        <table>
+          <thead><tr><th>Situação</th><th>Como decidir</th></tr></thead>
+          <tbody>
+            <tr><td>Aplicativo tem versão Linux oficial</td><td>Instale em live/VM ou consulte requisitos da versão usada</td></tr>
+            <tr><td>Trabalho é feito no navegador</td><td>Teste navegador, impressão, câmera, certificado e upload/download</td></tr>
+            <tr><td>Há equivalente livre</td><td>Teste compatibilidade de arquivos e recursos, não apenas aparência</td></tr>
+            <tr><td>Software é exclusivo do Windows</td><td>Avalie manter Windows, dual boot, VM ou estação separada</td></tr>
+          </tbody>
+        </table>
+        <p>Camadas de compatibilidade podem funcionar em alguns programas, mas não devem ser tratadas como garantia para software crítico. Se o fornecedor não dá suporte ao cenário, documente o risco antes de depender dele em produção.</p>
+
+        <h2>5. Jogos e GPU exigem teste específico</h2>
+        <p>A compatibilidade de jogos muda com frequência e depende do título, anti-cheat, driver e GPU. Pesquise o jogo atual, não uma lista antiga. Para placas de vídeo que usam driver proprietário, confira a documentação da distribuição e do fabricante. A própria documentação do Ubuntu observa que a sessão live pode não incluir todos os drivers proprietários disponíveis após a instalação.</p>
+
+        <h2>6. Backup antes de qualquer alteração no disco</h2>
+        <p>A documentação do Ubuntu recomenda backup antes da instalação. Faça uma cópia independente dos arquivos e confirme que consegue abri-la. Se Windows usa BitLocker e você pretende instalar lado a lado no mesmo disco, guarde a chave de recuperação e leia o aviso do instalador: o Ubuntu não consegue manipular com segurança uma instalação Windows criptografada por BitLocker sem os passos apropriados.</p>
+        <p>Use o <Link to="/ferramentas/checklist-antes-de-formatar" className="text-accent">checklist antes de formatar</Link> para não esquecer arquivos, contas e chaves.</p>
+
+        <h2>7. Dual boot, máquina virtual ou migração total?</h2>
         <ul>
-          <li><strong>PC antigo/lento</strong> — Linux roda bem em máquinas com 2 GB de RAM</li>
-          <li><strong>Uso básico</strong> — internet, e-mail, documentos, vídeos</li>
-          <li><strong>Desenvolvimento</strong> — terminal nativo, Docker sem WSL, melhor para programação</li>
-          <li><strong>Privacidade</strong> — sem telemetria, sem conta Microsoft obrigatória</li>
-          <li><strong>Economia</strong> — sem custo de licença</li>
+          <li><strong>Migração total:</strong> melhor quando todo o fluxo já foi validado e você quer simplificar manutenção.</li>
+          <li><strong>Dual boot:</strong> útil quando precisa de desempenho nativo nos dois sistemas, mas aumenta complexidade de partições e boot.</li>
+          <li><strong>Máquina virtual:</strong> boa para uso ocasional de outro sistema quando hardware tem recursos suficientes e o aplicativo funciona virtualizado.</li>
+          <li><strong>WSL:</strong> alternativa para quem quer ferramentas Linux mantendo Windows como sistema principal; não substitui um desktop Linux completo.</li>
         </ul>
 
-        <h2>Quando NÃO Vale a Pena</h2>
-        <ul>
-          <li><strong>Jogos competitivos</strong> — Valorant, Fortnite e outros com anti-cheat não rodam</li>
-          <li><strong>Adobe</strong> — sem Photoshop, Premiere, After Effects nativos</li>
-          <li><strong>Software específico</strong> — AutoCAD, SAP, softwares contábeis brasileiros</li>
-          <li><strong>Impressoras/scanners antigos</strong> — alguns não têm driver Linux</li>
-        </ul>
-
-        <h2>Alternativa: Dual Boot</h2>
-        <p>Não precisa escolher um ou outro. O <strong>dual boot</strong> permite ter Windows e Linux no mesmo computador. Ao ligar, você escolhe qual sistema iniciar. Assim, você pode usar Linux no dia a dia e Windows quando precisar de um software específico.</p>
-
-        <h2>Equivalências de Software</h2>
-        <div className="overflow-x-auto">
-          <table className="w-full text-sm">
-            <thead><tr><th className="text-left p-2 border-b">Windows</th><th className="text-left p-2 border-b">Linux</th></tr></thead>
-            <tbody>
-              <tr><td className="p-2 border-b">Microsoft Office</td><td className="p-2 border-b">LibreOffice / OnlyOffice</td></tr>
-              <tr><td className="p-2 border-b">Photoshop</td><td className="p-2 border-b">GIMP / Krita</td></tr>
-              <tr><td className="p-2 border-b">Premiere</td><td className="p-2 border-b">DaVinci Resolve / Kdenlive</td></tr>
-              <tr><td className="p-2 border-b">Outlook</td><td className="p-2 border-b">Thunderbird / Evolution</td></tr>
-              <tr><td className="p-2 border-b">Notepad++</td><td className="p-2 border-b">VS Code / Kate</td></tr>
-              <tr><td className="p-2 border-b">WinRAR</td><td className="p-2 border-b">File Roller (nativo)</td></tr>
-            </tbody>
-          </table>
-        </div>
-
-        <h2>Passo a Passo da Migração</h2>
+        <h2>8. Plano de teste em 30–60 minutos</h2>
         <ol>
-          <li><strong>Faça backup</strong> de todos os seus arquivos (HD externo ou nuvem)</li>
-          <li><strong>Liste</strong> todos os programas que você usa e verifique equivalentes</li>
-          <li><strong>Teste antes</strong> — rode o Ubuntu pelo pendrive (Live USB) sem instalar</li>
-          <li><strong>Instale em dual boot</strong> para período de adaptação</li>
-          <li>Após 30 dias confortável, <strong>remova o Windows</strong> se quiser</li>
+          <li>Inicialize uma distribuição suportada por USB no modo de teste.</li>
+          <li>Conecte Wi-Fi/Ethernet e teste áudio, câmera, Bluetooth e suspensão.</li>
+          <li>Abra os principais formatos de arquivo que você usa.</li>
+          <li>Valide impressora/scanner e periféricos essenciais.</li>
+          <li>Confira se seus serviços web e autenticação funcionam.</li>
+          <li>Liste o que ainda depende do Windows antes de decidir instalar.</li>
         </ol>
 
-        <div className="bg-accent/10 rounded-xl p-6 my-8">
-          <h3 className="text-accent font-bold mb-2">Migração Assistida</h3>
-          <p className="text-muted-foreground mb-0">Nosso técnico faz backup dos seus dados, instala Linux, configura dual boot e transfere seus arquivos. Sem risco de perder nada.</p>
-        </div>
+        <h2>Quando não migrar ainda</h2>
+        <p>Adie a troca se você não tem backup, depende de software sem alternativa validada, precisa de suporte oficial do fornecedor apenas no Windows ou não consegue testar um periférico crítico. Migração é uma decisão de compatibilidade e continuidade, não um exercício de preferência.</p>
+
+        <h2>Quando procurar ajuda</h2>
+        <p>Peça apoio antes de reparticionar se o computador usa BitLocker, RAID, múltiplos discos, boot corporativo, criptografia ou dados sem cópia. Também vale revisão quando você quer dual boot e não entende a diferença entre partição de sistema, partição de dados e boot UEFI.</p>
+
+        <p>Para entender o que cada sistema faz e como o hardware participa da decisão, continue no <Link to="/guia-tecnico-informatica#tema-sistemas-operacionais" className="text-accent">Atlas de sistemas operacionais</Link>.</p>
+        <EditorialReferences slug="trocar-windows-por-linux-vale-a-pena" />
       </>
     ),
   },
+
   "linux-para-pc-antigo-leve-rapido": {
     title: "Linux Para PC Antigo: 5 Distros Leves Que Ressuscitam Seu Computador",
     excerpt: "Distros leves para máquinas com pouca RAM.",
@@ -2870,45 +2884,64 @@ docker run -d --name db --network minha-rede postgres
   },
 
   "erros-comuns-upgrade-computador": {
-    title: "5 Erros Comuns ao Fazer Upgrade no Computador (e Como Evitar Prejuízo)",
-    excerpt: "Comprar RAM incompatível, instalar SSD errado, favaliar o valor peças no slot — veja os erros que causam prejuízo.",
-    date: "2026-04-06",
-    readTime: "8 min",
-    category: "Manutenção",
+    title: "Upgrade de PC ou notebook: checklist de compatibilidade antes de comprar peças",
+    excerpt:
+      "Evite RAM, SSD e fonte incompatíveis. Um checklist técnico para confirmar interface, geração, capacidade, firmware, energia e plano de backup antes do upgrade.",
+    date: "2026-09-25",
+    readTime: "11 min",
+    category: "Hardware e Manutenção",
     content: (
       <>
-        <p className="lead">Fazer upgrade no computador pode ser a solução mais inteligente para ganhar desempenho sem trocar a máquina. Mas quando feito sem conhecimento técnico, o resultado pode ser <strong>prejuízo financeiro e até danos permanentes</strong>. Veja os 5 erros mais comuns que encontramos no dia a dia.</p>
+        <p className="lead">O erro mais caro em um upgrade geralmente acontece antes de abrir o gabinete: comprar pela aparência ou pelo nome comercial sem verificar o modelo exato do computador/placa-mãe e as interfaces suportadas. M.2 é formato físico e pode usar protocolos diferentes; módulos de memória da mesma família podem ter limitações de densidade, capacidade e BIOS. O procedimento seguro começa pelo manual e termina com um plano de retorno.</p>
 
-        <h2>1. Comprar RAM Incompatível</h2>
-        <p>Nem toda memória RAM serve em qualquer computador. É preciso verificar o <strong>tipo (DDR3, DDR4, DDR5)</strong>, a frequência suportada pela placa-mãe e o número máximo de slots. Muita gente compra DDR4 para um notebook que só aceita DDR3 — e descobre tarde demais que não encaixa.</p>
-        <p><strong>Como evitar:</strong> Consulte o manual da placa-mãe ou use ferramentas como CPU-Z para verificar as especificações antes de comprar.</p>
+        <h2>Resposta curta</h2>
+        <p>Antes de comprar, anote modelo exato do equipamento/placa-mãe, CPU, memória instalada, slots livres, tipo de armazenamento, fonte e versão de BIOS. Consulte o manual do fabricante e, quando possível, uma lista/configurador de compatibilidade. Faça backup antes de mexer em armazenamento e confirme a chave BitLocker quando houver criptografia. Não force conector que não encaixa.</p>
 
-        <h2>2. Instalar SSD Sem Verificar a Interface</h2>
-        <p>Existem SSDs SATA (2.5") e SSDs NVMe (M.2). Nem toda placa-mãe tem slot M.2, e mesmo as que têm podem suportar apenas SATA no slot M.2, não NVMe. Instalar o tipo errado significa que o SSD simplesmente <strong>não será reconhecido</strong>.</p>
-        <p><strong>Como evitar:</strong> Verifique no manual se há slot M.2 e se ele suporta NVMe ou apenas SATA.</p>
+        <h2>1. RAM: geração é só o primeiro filtro</h2>
+        <p>DDR4 e DDR5 usam características elétricas e encaixes diferentes, mas compatibilidade não termina no nome da geração. Fabricantes de memória documentam que densidade dos chips, topologia de bancos, combinação de módulos e versão de BIOS também podem afetar POST e estabilidade. A Kingston, por exemplo, orienta conferir a compatibilidade do sistema e manter BIOS atualizada quando necessário.</p>
+        <p>Cheque: DIMM ou SODIMM, geração, capacidade máxima por slot e total, número de slots, ECC ou não-ECC quando aplicável, velocidade suportada e regras do fabricante para combinação de módulos.</p>
 
-        <h2>3. Favaliar o valor Peças no Slot Errado</h2>
-        <p>Memória DDR4 não encaixa em slot DDR3 — os encaixes são diferentes propositalmente. Mas vemos casos de clientes que <strong>favaliar o valoram a peça e quebraram o slot ou a própria memória</strong>. O mesmo vale para conectores de energia, cabos SATA e até ventoinhas.</p>
-        <p><strong>Regra de ouro:</strong> Se não encaixou com pressão leve, está errado. Nunca force.</p>
+        <h2>2. M.2 não significa automaticamente NVMe</h2>
+        <p>M.2 é um formato. Um SSD M.2 pode usar SATA ou PCIe/NVMe conforme o dispositivo e o slot. A documentação da Kingston e a especificação NVMe deixam claro que aparência física não prova protocolo. Em alguns sistemas, o slot compartilha lanes/portas e pode desativar outro conector quando ocupado.</p>
+        <p>Antes da compra, confirme no manual: chave/formato físico, comprimentos aceitos (como 2280), protocolo suportado, geração/largura PCIe e eventuais compartilhamentos de portas.</p>
 
-        <h2>4. Não Reinstalar o Windows Após Trocar HD por SSD</h2>
-        <p>Alguns usuários copiam o HD antigo para o SSD novo usando programas de clonagem — mas o Windows pode não iniciar corretamente ou ficar instável. A clonagem funciona em muitos casos, mas em outros traz <strong>erros de driver, tela azul e lentidão inesperada</strong>.</p>
-        <p><strong>Recomendação:</strong> Sempre que possível, faça uma instalação limpa do Windows no SSD novo. É mais rápido e confiável.</p>
+        <h2>3. SATA de 2,5" ainda exige energia e espaço</h2>
+        <p>Em desktop, um SSD SATA precisa de porta SATA de dados e alimentação. Em notebook, pode existir baia física sem cabo ou adaptador instalado. “Tem espaço” não significa que todos os conectores necessários estão presentes. Verifique kit/cabo/caddy específico do modelo antes de comprar.</p>
 
-        <h2>5. Ignorar a Fonte de Alimentação</h2>
-        <p>Ao adicionar uma placa de vídeo potente, é preciso uma fonte que suporte a potência necessária. Uma fonte fraca causa <strong>desligamentos aleatórios, travamentos e pode até queimar componentes</strong>. Muitos PCs de fábrica vêm com fontes de 300W — insuficiente para GPUs dedicadas.</p>
-        <p><strong>Dica:</strong> Calcule a potência necessária antes e invista em uma fonte de qualidade (80 Plus certificada).</p>
+        <h2>4. GPU: slot não é o único requisito</h2>
+        <p>Uma placa de vídeo pode encaixar em PCIe e ainda assim não ser uma boa combinação. Confira dimensões do gabinete, potência e conectores da fonte, ventilação, compatibilidade de firmware e se a CPU/uso justificam o investimento. Não use apenas uma calculadora genérica de watts; siga a recomendação do fabricante da GPU e da fonte para o modelo real.</p>
 
-        <div className="bg-accent/10 rounded-xl p-6 my-8">
-          <h3 className="text-accent font-bold mb-2">Quer Fazer Upgrade Com Segurança?</h3>
-          <p className="text-muted-foreground mb-0">Nosso técnico analisa seu equipamento, indica as peças compatíveis e faz a instalação profissional. Sem risco de prejuízo. Atendemos em Curitiba e região.</p>
-        </div>
+        <h2>5. Fonte: potência nominal não substitui compatibilidade</h2>
+        <p>Além da potência, confirme conectores, padrão/formato, capacidade disponível nas saídas necessárias e qualidade/proteções do modelo. Adaptadores improvisados em alimentação de GPU podem transformar um upgrade simples em risco térmico e elétrico. Se a fonte não possui o conector exigido pelo hardware, investigue o motivo antes de adaptar.</p>
 
-        <p><strong>Leia também:</strong></p>
+        <h2>6. BIOS/UEFI: atualize só quando houver motivo</h2>
+        <p>Uma BIOS mais nova pode adicionar compatibilidade de CPU, memória ou armazenamento, mas atualização de firmware também tem risco. Leia as notas da versão, confirme revisão exata da placa e siga o método do fabricante. Não atualize “porque é mais novo” no meio de uma máquina instável ou sem alimentação confiável.</p>
+
+        <h2>7. Clonar ou instalar do zero?</h2>
+        <p>Trocar HD por SSD não exige automaticamente instalação limpa. Clonagem pode preservar sistema e aplicativos quando origem está saudável, espaço cabe no destino e a ferramenta suporta o layout. Instalação limpa faz sentido quando há corrupção, mudança de edição/arquitetura ou quando você quer recomeçar conscientemente. A decisão deve considerar backup e licença, não uma regra absoluta.</p>
+
+        <h2>8. Windows 11 também entra na compatibilidade</h2>
+        <p>Se o objetivo do upgrade é migrar para Windows 11, verifique requisitos oficiais antes de gastar: CPU suportada, 4 GB de RAM, armazenamento de 64 GB ou mais, UEFI/Secure Boot e TPM 2.0 fazem parte dos requisitos mínimos. Colocar mais RAM ou SSD não resolve sozinho uma plataforma fora dos requisitos de firmware/CPU.</p>
+
+        <h2>Checklist antes da compra</h2>
         <ul>
-          <li><Link to="/servicos/upgrade-ssd-ram" className="text-accent">Upgrade de SSD e memória RAM</Link></li>
-          <li><Link to="/quando-nao-compensa" className="text-accent">Quando não compensa reparar</Link></li>
+          <li>Modelo exato do PC/notebook/placa-mãe registrado.</li>
+          <li>Manual e especificações oficiais consultados.</li>
+          <li>RAM: formato, geração, capacidade, densidade/combinação e slots conferidos.</li>
+          <li>SSD: protocolo, formato, comprimento e compartilhamento de portas conferidos.</li>
+          <li>GPU: espaço físico, fonte, conectores e ventilação conferidos.</li>
+          <li>Backup feito e testado; chave BitLocker salva se aplicável.</li>
+          <li>Plano de teste e retorno definido antes de desmontar.</li>
         </ul>
+
+        <h2>Depois do upgrade: valide antes de fechar tudo</h2>
+        <p>Entre na BIOS/UEFI e confirme detecção, depois inicialize o sistema e verifique capacidade, temperaturas e estabilidade. Em RAM, teste carga e, se houver comportamento estranho, use diagnóstico de memória. Em armazenamento, confirme SMART/estado, partições e boot. Só descarte ou apague o disco antigo depois de conferir os arquivos no novo ambiente.</p>
+
+        <h2>Quando parar</h2>
+        <p>Não force peça, conector ou tampa. Pare se o equipamento não liga após a troca, apresenta cheiro de aquecimento, exige atualização de BIOS que você não consegue validar ou possui dados sem backup. Em notebook soldado/ultrafino, confirme primeiro se memória e armazenamento são realmente substituíveis.</p>
+
+        <p>Para upgrades de armazenamento e RAM, veja <Link to="/servicos/upgrade-ssd-ram" className="text-accent">upgrade de SSD e memória</Link> e, se a decisão é econômica, <Link to="/quando-nao-compensa" className="text-accent">quando não compensa reparar ou investir</Link>.</p>
+        <EditorialReferences slug="erros-comuns-upgrade-computador" />
       </>
     ),
   },
@@ -5371,167 +5404,222 @@ docker run -d --name db --network minha-rede postgres
   },
 
   "como-configurar-vpn-empresarial": {
-    title: "Como Configurar VPN Empresarial: Acesso Remoto Seguro",
-    excerpt: "Procedimento técnico para implementar VPN com WireGuard, OpenVPN e Windows Server.",
-    date: "2026-04-13",
-    readTime: "13 min",
-    category: "Procedimentos Técnicos",
+    title: "VPN empresarial: como planejar acesso remoto seguro sem expor a rede",
+    excerpt:
+      "Arquitetura e checklist para VPN de acesso remoto: identidade, MFA, rotas, segmentação, WireGuard/OpenVPN, logs, revogação e teste de recuperação.",
+    date: "2026-09-25",
+    readTime: "12 min",
+    category: "Redes e Infraestrutura",
     content: (
       <>
-        <p className="lead">Uma VPN permite que colaboradores acessem a rede interna da empresa de forma segura pela internet. Essencial para home office, filiais e acesso remoto a servidores. Mostramos 3 abordagens: <strong>WireGuard</strong>, <strong>OpenVPN</strong> e <strong>Windows Server RRAS</strong>.</p>
+        <p className="lead">Uma VPN empresarial não é apenas “abrir uma porta e gerar um arquivo de cliente”. Ela cria um novo caminho para dentro da rede, então precisa nascer com identidade, escopo, revogação e monitoramento definidos. A decisão principal é quais recursos o usuário remoto precisa alcançar — e quais não deve alcançar — antes de escolher WireGuard, OpenVPN, IKEv2 ou outra implementação suportada pela infraestrutura.</p>
 
-        <h2>Quando Sua Empresa Precisa de VPN</h2>
+        <h2>Resposta curta</h2>
+        <p>Mapeie usuários e recursos, escolha uma solução mantida e compatível com seu firewall/sistema, use credenciais ou chaves individuais, aplique MFA quando a plataforma permitir, limite rotas ao necessário, não exponha painéis administrativos diretamente à internet e documente revogação. Teste a conexão a partir de uma rede externa e mantenha um caminho local de recuperação antes de alterar firewall ou rotas.</p>
+
+        <h2>1. Defina o caso de uso</h2>
+        <table>
+          <thead><tr><th>Cenário</th><th>O que precisa ser decidido</th></tr></thead>
+          <tbody>
+            <tr><td>Home office</td><td>Quais sistemas internos cada perfil pode alcançar</td></tr>
+            <tr><td>Filial ↔ matriz</td><td>Sub-redes, rotas, redundância e quem inicia o túnel</td></tr>
+            <tr><td>Administração técnica</td><td>Rede de gestão separada e autenticação forte</td></tr>
+            <tr><td>Acesso de fornecedor</td><td>Prazo, escopo mínimo e revogação automática/manual</td></tr>
+          </tbody>
+        </table>
+        <p>Evite conceder “a rede inteira” só porque é mais fácil. O acesso remoto deve seguir privilégio mínimo: cada perfil alcança os recursos necessários ao trabalho.</p>
+
+        <h2>2. Escolha tecnologia pela operação, não por ranking</h2>
+        <p>WireGuard mantém uma interface pequena e usa pares de chaves; a documentação oficial mostra a configuração por interfaces, peers, chaves, endpoints e AllowedIPs. OpenVPN oferece ampla flexibilidade e documentação própria para roteamento, certificados e hardening. Equipamentos de firewall também podem oferecer IKEv2/IPsec ou VPN gerenciada.</p>
+        <p>A melhor opção é a que sua equipe consegue atualizar, monitorar, revogar e restaurar. Uma tecnologia tecnicamente boa, mas abandonada sem responsável, vira risco operacional.</p>
+
+        <h2>3. Identidade individual e MFA</h2>
+        <p>Nunca distribua uma única credencial ou perfil para toda a equipe. Chave/certificado/conta deve identificar um usuário ou dispositivo para que a saída de uma pessoa não exija recriar toda a VPN. Para soluções que suportam autenticação interativa, adicione MFA e prefira métodos resistentes a phishing quando disponíveis.</p>
+        <p>Registre quem aprovou o acesso, quais recursos foram liberados e a data de revisão. A rotina de autenticação está detalhada em <Link to="/blog/como-configurar-2fa-em-tudo" className="text-accent">como configurar 2FA/MFA com segurança</Link>.</p>
+
+        <h2>4. Split tunnel ou full tunnel?</h2>
+        <p><strong>Split tunnel</strong> envia pela VPN apenas os destinos corporativos definidos. <strong>Full tunnel</strong> envia todo o tráfego do cliente pelo túnel. Não existe escolha universal: full tunnel aumenta controle de saída, mas exige capacidade de banda e políticas para todo o tráfego; split tunnel reduz carga, mas deixa o dispositivo simultaneamente conectado à internet local e à rede corporativa.</p>
+        <p>Documente a decisão e teste DNS, impressão, aplicações internas e acesso à internet no cenário real. Não use rotas amplas por conveniência sem entender o impacto.</p>
+
+        <h2>5. Firewall e segmentação</h2>
+        <p>Crie regras específicas para a interface/rede da VPN. Um usuário remoto não precisa automaticamente alcançar câmeras, impressoras, administração de switches ou todos os servidores. Se o firewall possui segmentos/VLANs, trate a VPN como outra zona e permita somente os fluxos necessários.</p>
+        <p>Não exponha RDP, painel de firewall ou servidor de arquivos diretamente à internet apenas para “facilitar” o acesso. A VPN existe justamente para reduzir essa exposição.</p>
+
+        <h2>6. DNS e nomes internos</h2>
+        <p>Se os usuários acessam recursos por nome — especialmente em ambiente Active Directory — a VPN precisa entregar resolução DNS coerente. Evite mandar clientes para DNS público quando o recurso só existe na zona interna. Valide nome e IP separadamente para distinguir falha de rota de falha de resolução.</p>
+
+        <h2>7. Logs, atualização e revogação</h2>
         <ul>
-          <li>Home office com acesso a arquivos do servidor</li>
-          <li>Filiais se comunicando com a matriz</li>
-          <li>Acesso remoto a ERP, câmeras CFTV ou servidores</li>
-          <li>Proteção de dados em redes Wi-Fi públicas</li>
-          <li>Conformidade com LGPD — criptografia em trânsito</li>
+          <li>Registre conexões suficientes para suporte e investigação, respeitando política de privacidade.</li>
+          <li>Mantenha servidor/appliance e clientes em versões suportadas.</li>
+          <li>Revogue acesso de colaborador/fornecedor imediatamente quando terminar a necessidade.</li>
+          <li>Revise chaves, certificados e contas antigas periodicamente.</li>
+          <li>Faça backup da configuração do gateway antes de mudanças relevantes.</li>
         </ul>
 
-        <h2>Opção 1: WireGuard (Recomendada)</h2>
-        <p>Protocolo mais moderno: rápido, leve e com criptografia state-of-the-art.</p>
-
-        <h3>Instalação no Servidor Linux</h3>
-        <pre><code>{"sudo apt update && sudo apt install wireguard -y\n\n# Gerar chaves\nwg genkey | tee /etc/wireguard/server_private.key | wg pubkey > /etc/wireguard/server_public.key\nchmod 600 /etc/wireguard/server_private.key"}</code></pre>
-
-        <h3>Configuração do Servidor (wg0.conf)</h3>
-        <pre><code>{"[Interface]\nAddress = 10.0.0.1/24\nListenPort = 51820\nPrivateKey = SERVER_PRIVATE_KEY\nPostUp = iptables -A FORWARD -i wg0 -j ACCEPT; iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE\nPostDown = iptables -D FORWARD -i wg0 -j ACCEPT; iptables -t nat -D POSTROUTING -o eth0 -j MASQUERADE\n\n[Peer]\nPublicKey = CLIENTE_PUBLIC_KEY\nAllowedIPs = 10.0.0.2/32"}</code></pre>
-
-        <h3>Ativar</h3>
-        <pre><code>{"echo 'net.ipv4.ip_forward = 1' | sudo tee -a /etc/sysctl.conf\nsudo sysctl -p\nsudo wg-quick up wg0\nsudo systemctl enable wg-quick@wg0"}</code></pre>
-
-        <h3>Configuração do Cliente</h3>
-        <pre><code>{"[Interface]\nAddress = 10.0.0.2/32\nPrivateKey = CLIENTE_PRIVATE_KEY\nDNS = 8.8.8.8\n\n[Peer]\nPublicKey = SERVER_PUBLIC_KEY\nEndpoint = IP_PUBLICO:51820\nAllowedIPs = 192.168.1.0/24, 10.0.0.0/24\nPersistentKeepalive = 25"}</code></pre>
-
-        <div className="bg-green-50 dark:bg-green-950/30 border border-green-200 dark:border-green-800 rounded-xl p-4 my-6">
-          <p className="text-sm"><strong>✅ Split Tunnel vs Full Tunnel:</strong> Use <code>AllowedIPs = 192.168.1.0/24</code> para acessar apenas a rede interna, ou <code>0.0.0.0/0</code> para rotear todo o tráfego pela VPN.</p>
-        </div>
-
-        <h2>Opção 2: OpenVPN</h2>
-        <p>Protocolo mais estabelecido — funciona em praticamente qualquer dispositivo e firewall.</p>
-
-        <h3>Instalação Rápida</h3>
-        <pre><code>{"curl -O https://raw.githubusercontent.com/angristan/openvpn-install/master/openvpn-install.sh\nchmod +x openvpn-install.sh\nsudo ./openvpn-install.sh"}</code></pre>
-        <p>O script interativo configura tudo e gera um arquivo <code>.ovpn</code> para importar no OpenVPN Connect do colaborador.</p>
-
-        <h3>Adicionar Novos Usuários</h3>
-        <pre><code>{"sudo ./openvpn-install.sh\n# Selecione 'Add a new client'\n# O .ovpn será gerado em /root/"}</code></pre>
-
-        <h2>Opção 3: Windows Server RRAS</h2>
+        <h2>8. Teste de implantação</h2>
         <ol>
-          <li>Server Manager → Add Roles → Remote Access → RRAS</li>
-          <li>Configure SSTP ou IKEv2 (mais seguros que PPTP)</li>
-          <li>Defina pool de IPs para clientes VPN</li>
-          <li>Configure NPS para controle de acesso via Active Directory</li>
+          <li>Use uma conexão externa real (outra internet/4G), não o mesmo Wi-Fi interno.</li>
+          <li>Confirme autenticação e segundo fator quando houver.</li>
+          <li>Teste somente os recursos autorizados — e confirme que recursos proibidos continuam bloqueados.</li>
+          <li>Valide DNS interno, tempo de sessão e reconexão.</li>
+          <li>Revogue um usuário de teste e prove que o acesso realmente deixa de funcionar.</li>
+          <li>Teste o procedimento de recuperação/backup do gateway.</li>
         </ol>
 
-        <h2>Portas e Firewall</h2>
-        <ul>
-          <li><strong>WireGuard:</strong> UDP 51820</li>
-          <li><strong>OpenVPN:</strong> UDP 1194</li>
-          <li><strong>IKEv2:</strong> UDP 500, 4500</li>
-          <li><strong>SSTP:</strong> TCP 443</li>
-        </ul>
-        <p>Configure port forwarding no roteador e libere no firewall do servidor.</p>
+        <h2>WireGuard: o que AllowedIPs realmente merece atenção</h2>
+        <p>Na configuração oficial do WireGuard, peers têm chaves e <code>AllowedIPs</code>, que participam tanto da escolha de rota quanto de quais endereços são associados ao peer. Isso exige planejamento: copiar uma configuração de internet sem adaptar sub-redes pode rotear tráfego demais ou criar conflito com a rede local do colaborador. Use exemplos oficiais para entender a sintaxe, mas desenhe endereçamento próprio.</p>
 
-        <h2>Comparativo</h2>
-        <ul>
-          <li><strong>WireGuard:</strong> Mais rápido e simples. Ideal para PMEs sem AD</li>
-          <li><strong>OpenVPN:</strong> Mais compatível. Funciona atrás de proxies e firewalls restritivos</li>
-          <li><strong>RRAS:</strong> Integração nativa com Active Directory. Requer licença Windows Server</li>
-        </ul>
+        <h2>Quando parar</h2>
+        <p>Pare antes de alterar remotamente o único firewall da empresa se não existe acesso local de recuperação. Também não prossiga se você não sabe quais sub-redes estão em uso, se existem rotas sobrepostas ou se o servidor VPN já atende usuários em produção sem backup da configuração. Primeiro documente; depois mude uma camada por vez.</p>
 
-        <h2>Segurança</h2>
-        <ul>
-          <li>Use certificados + senha (two-factor) quando possível</li>
-          <li>Ative logging para auditoria de conexões</li>
-          <li>Limite acesso VPN apenas aos recursos necessários</li>
-          <li>Revogue acesso imediatamente ao desligar colaborador</li>
-          <li>Mantenha o software VPN sempre atualizado</li>
-        </ul>
-
-        <h2>Checklist de Implementação</h2>
-        <ul>
-          <li>✅ Protocolo escolhido adequado ao cenário</li>
-          <li>✅ IP fixo ou DDNS configurado</li>
-          <li>✅ Port forwarding no roteador</li>
-          <li>✅ Firewall configurado</li>
-          <li>✅ Chaves/certificados para cada usuário</li>
-          <li>✅ Teste de conexão externa (4G do celular)</li>
-          <li>✅ Documentação entregue aos colaboradores</li>
-          <li>✅ Procedimento de revogação documentado</li>
-        </ul>
+        <p>Para a base da arquitetura, consulte <Link to="/blog/como-configurar-firewall-pfsense" className="text-accent">firewall pfSense</Link>, <Link to="/blog/como-proteger-rede-wifi-empresa" className="text-accent">Wi-Fi empresarial</Link> e o <Link to="/guia-tecnico-informatica#tema-redes-wifi" className="text-accent">Atlas de redes</Link>.</p>
+        <EditorialReferences slug="como-configurar-vpn-empresarial" />
       </>
     ),
   },
 
   "como-configurar-firewall-pfsense": {
-    title: "Como configurar pfSense com segurança: interfaces, regras, NAT e backup",
-    excerpt:
-      "Um roteiro de implantação do pfSense baseado na documentação da Netgate: planejar interfaces, aplicar regras mínimas, revisar NAT, proteger o painel e manter backup restaurável.",
-    date: "2026-09-25",
-    readTime: "14 min",
-    category: "Redes e Infraestrutura",
+    title: "Como Configurar Firewall pfSense: Guia Completo Para Redes Empresariais",
+    excerpt: "Instalação, regras de firewall, NAT, VPN e monitoramento com pfSense.",
+    date: "2026-04-13",
+    readTime: "16 min",
+    category: "Procedimentos Técnicos",
     content: (
       <>
-        <p className="lead">Configurar pfSense com segurança é menos sobre acumular pacotes e mais sobre controlar caminhos: qual interface recebe tráfego, qual rede pode iniciar conexão para qual destino, como a administração é alcançada e como voltar ao estado anterior se uma regra bloquear o acesso. A própria documentação da Netgate organiza o produto em torno de firewall, NAT, VPN, VLANs, autenticação, logs e recuperação — esta é a ordem que faz sentido para uma implantação previsível.</p>
+        <p className="lead">O <strong>pfSense</strong> é o firewall open-source mais utilizado no mundo corporativo. Baseado em FreeBSD, ele oferece recursos de nível enterprise — NAT, VPN, IDS/IPS, proxy, balanceamento de carga — sem custo de licenciamento. Neste guia, cobrimos desde a instalação até configurações avançadas.</p>
 
-        <h2>Resposta curta</h2>
-        <p>Planeje WAN/LAN/VLANs antes de instalar, mantenha a interface de administração acessível apenas por redes autorizadas, comece com regras explícitas e simples, publique serviços somente quando houver necessidade, faça backup do <code>config.xml</code> antes de mudanças importantes e valide cada alteração a partir de um cliente real. Não copie regras prontas sem entender origem, destino, protocolo e direção.</p>
+        <h2>1. O Que é o pfSense e Por Que Usar?</h2>
+        <p>O pfSense transforma qualquer computador com duas placas de rede em um firewall de alto desempenho. Ele é usado em empresas de todos os tamanhos por oferecer:</p>
+        <ul>
+          <li><strong>Firewall stateful</strong> com inspeção de pacotes e filtragem por porta, protocolo e IP</li>
+          <li><strong>NAT avançado</strong> — port forwarding, 1:1 NAT, outbound NAT customizado</li>
+          <li><strong>VPN integrada</strong> — OpenVPN e IPsec nativos</li>
+          <li><strong>Proxy e filtro de conteúdo</strong> — Squid + SquidGuard para controle de acesso web</li>
+          <li><strong>IDS/IPS</strong> — Snort ou Suricata para detecção de intrusão</li>
+          <li><strong>Dashboard em tempo real</strong> — monitoramento de tráfego, conexões ativas, logs</li>
+          <li><strong>Alta disponibilidade</strong> — CARP para failover entre dois firewalls</li>
+        </ul>
 
-        <h2>1. Desenhe a rede antes do firewall</h2>
-        <p>Registre interfaces, sub-redes, gateways, DHCP/DNS, VLANs e serviços que precisam atravessar segmentos. Um desenho mínimo evita o erro clássico de criar regras enquanto ainda se decide qual rede representa usuários, servidores, visitantes ou administração.</p>
-        <p>Defina também o caminho de emergência: uma máquina que consiga acessar localmente a interface LAN e uma cópia da configuração conhecida como boa. A Netgate recomenda manter backups frequentes e cópias em locais seguros; restauração precisa ser parte do plano, não uma ideia para depois da falha.</p>
+        <h2>2. Requisitos de Hardware</h2>
+        <p>O pfSense roda em hardware modesto, mas o dimensionamento depende do throughput desejado:</p>
+        <div className="overflow-x-auto">
+          <table>
+            <thead><tr><th>Cenário</th><th>CPU</th><th>RAM</th><th>Disco</th><th>NICs</th></tr></thead>
+            <tbody>
+              <tr><td>Escritório pequeno (até 20 usuários)</td><td>Dual-core 1.5 GHz</td><td>2 GB</td><td>16 GB SSD</td><td>2x Gigabit</td></tr>
+              <tr><td>Empresa média (20-100 usuários)</td><td>Quad-core 2.0 GHz</td><td>4 GB</td><td>32 GB SSD</td><td>3-4x Gigabit</td></tr>
+              <tr><td>Empresa grande (100+ usuários, VPN, IDS)</td><td>Xeon / Ryzen</td><td>8-16 GB</td><td>64 GB SSD</td><td>4-6x Gigabit</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p><strong>Dica:</strong> placas de rede Intel (i210, i350) são as mais compatíveis e estáveis com pfSense. Evite Realtek em produção.</p>
 
-        <h2>2. Instalação e atribuição de interfaces</h2>
-        <p>Use mídia e documentação oficiais para a versão escolhida. Na primeira inicialização, identifique fisicamente as interfaces antes de atribuir WAN e LAN. Em equipamento com várias portas, anote endereço MAC e etiqueta da porta para que uma troca futura não dependa de tentativa.</p>
-        <p>Depois da atribuição, faça a configuração inicial pela rede interna. Não abra o painel de administração na WAN apenas para facilitar acesso remoto: a documentação da Netgate recomenda restringir o gerenciamento e, quando acesso externo é necessário, preferir um caminho controlado como VPN.</p>
-
-        <h2>3. Regras de firewall: escreva intenção, não exceção</h2>
-        <p>Regras devem responder quatro perguntas: <strong>quem inicia</strong>, <strong>para onde</strong>, <strong>qual serviço/protocolo</strong> e <strong>por que isso existe</strong>. Use descrições claras e aliases para grupos de hosts/portas quando isso reduzir repetição.</p>
+        <h2>3. Instalação Passo a Passo</h2>
         <ol>
-          <li>Comece pela política necessária para a LAN sair à internet.</li>
-          <li>Crie redes de visitantes/IoT em interfaces ou VLANs próprias.</li>
-          <li>Permita entre segmentos apenas os serviços realmente exigidos.</li>
-          <li>Mantenha o painel do firewall fora das redes que não administram a infraestrutura.</li>
-          <li>Ative logging seletivo nas regras relevantes para conseguir diagnosticar sem inundar o armazenamento.</li>
+          <li>Baixe a ISO oficial em <strong>pfsense.org/download</strong> (AMD64, USB Memstick Installer)</li>
+          <li>Grave no pendrive com <strong>Rufus</strong> (Windows) ou <code>dd</code> (Linux): <code>dd if=pfSense.img of=/dev/sdX bs=4M status=progress</code></li>
+          <li>Configure o BIOS para boot por USB e inicie a instalação</li>
+          <li>Aceite o layout de teclado e selecione <strong>Install pfSense</strong></li>
+          <li>Escolha o disco de destino (ZFS recomendado para ambientes de produção)</li>
+          <li>Após reiniciar, atribua as interfaces: <strong>WAN</strong> (internet) e <strong>LAN</strong> (rede interna)</li>
+          <li>Acesse o painel web em <code>https://192.168.1.1</code> (usuário: <code>admin</code>, senha: <code>pfsense</code>)</li>
         </ol>
-        <p>Evite a regra temporária “any to any” sem prazo e responsável. Ela costuma sobreviver à manutenção que a criou.</p>
 
-        <h2>4. NAT e publicação de serviços</h2>
-        <p>NAT traduz endereços; regra de firewall controla permissão. Antes de criar port forward, pergunte se o serviço precisa mesmo ficar acessível pela internet. Painéis administrativos, RDP e dispositivos de infraestrutura geralmente devem ser alcançados por VPN ou acesso restrito, não por porta aberta indiscriminadamente.</p>
-        <p>Quando uma publicação for necessária, limite destino, protocolo e origem quando possível, documente o dono do serviço e teste a partir de uma rede externa. Remova redirecionamentos antigos junto com o sistema que dependia deles.</p>
+        <h2>4. Configuração Inicial (Wizard)</h2>
+        <p>O assistente de configuração cobre os pontos essenciais:</p>
+        <ul>
+          <li><strong>Hostname e domínio</strong> — ex: <code>fw01.empresa.local</code></li>
+          <li><strong>DNS</strong> — configure servidores confiáveis (1.1.1.1, 8.8.8.8 ou DNS interno)</li>
+          <li><strong>Fuso horário</strong> — importante para logs corretos</li>
+          <li><strong>WAN</strong> — DHCP (provedor), PPPoE ou IP estático</li>
+          <li><strong>LAN</strong> — defina a sub-rede interna (ex: 10.0.1.0/24)</li>
+          <li><strong>Senha do admin</strong> — troque imediatamente!</li>
+        </ul>
 
-        <h2>5. VLAN não é firewall automático</h2>
-        <p>Separar usuários, servidores, visitantes e IoT em VLANs cria domínios lógicos distintos, mas o ganho de segurança vem das regras entre esses segmentos. Teste explicitamente o que deve e o que não deve atravessar. Um visitante que ainda alcança servidor de arquivos significa que a segmentação não cumpriu o objetivo.</p>
+        <h2>5. Regras de Firewall</h2>
+        <p>O pfSense processa regras de cima para baixo, com a primeira regra correspondente vencendo:</p>
+        <ul>
+          <li><strong>LAN → WAN</strong>: por padrão, tudo é permitido. Recomendamos restringir:</li>
+          <li>Bloquear portas conhecidas de malware (445, 135-139 para internet)</li>
+          <li>Permitir apenas DNS para servidores específicos (evita DNS leak)</li>
+          <li>Criar aliases para agrupar IPs e portas (facilita manutenção)</li>
+        </ul>
+        <p>Exemplo de regra restritiva:</p>
+        <pre><code>{`Action: Pass
+Interface: LAN
+Source: LAN net
+Destination: any
+Port: 80, 443, 53
+Protocol: TCP/UDP
+Description: Navegação web + DNS`}</code></pre>
 
-        <h2>6. DNS, DHCP e serviços de base</h2>
-        <p>Defina conscientemente quem entrega DHCP e quem resolve DNS. Duplicar servidores DHCP por engano gera sintomas intermitentes difíceis de rastrear. Se o pfSense será o resolvedor ou encaminhador da rede, documente upstreams e regras de saída. Se existe DNS interno — por exemplo, em ambiente Active Directory — preserve essa dependência no desenho.</p>
+        <h2>6. NAT e Port Forwarding</h2>
+        <p>Para expor serviços internos (câmeras, servidores):</p>
+        <ol>
+          <li>Vá em <strong>Firewall → NAT → Port Forward</strong></li>
+          <li>Crie uma regra: Interface WAN, porta externa 8080 → IP interno 10.0.1.50, porta 80</li>
+          <li>O pfSense cria automaticamente a regra de firewall correspondente</li>
+        </ol>
 
-        <h2>7. Backup antes da mudança</h2>
-        <p>Exporte a configuração antes de atualização, alteração ampla de regras, troca de interfaces ou mudança de VLAN. Guarde mais de uma versão e fora do próprio firewall. Um backup útil é o que você consegue localizar e restaurar. A documentação da Netgate trata o <code>config.xml</code> como o núcleo da configuração e recomenda múltiplas cópias seguras.</p>
+        <h2>7. VPN com OpenVPN</h2>
+        <p>O pfSense tem um assistente de VPN que simplifica muito a configuração:</p>
+        <ol>
+          <li>Vá em <strong>VPN → OpenVPN → Wizards</strong></li>
+          <li>Crie uma CA (Autoridade Certificadora) interna</li>
+          <li>Crie o certificado do servidor</li>
+          <li>Configure: protocolo UDP, porta 1194, túnel 10.8.0.0/24</li>
+          <li>Instale o pacote <strong>openvpn-client-export</strong> para gerar configs prontas para download</li>
+          <li>Distribua os arquivos .ovpn para os colaboradores</li>
+        </ol>
 
-        <h2>8. Validação depois de cada bloco</h2>
-        <table>
-          <thead><tr><th>Teste</th><th>O que prova</th></tr></thead>
-          <tbody>
-            <tr><td>Cliente LAN navega e resolve DNS</td><td>Saída básica e resolução funcionam</td></tr>
-            <tr><td>Visitante navega mas não alcança rede interna</td><td>Isolamento está efetivo</td></tr>
-            <tr><td>Administração abre apenas da rede autorizada</td><td>Plano de gerenciamento está restrito</td></tr>
-            <tr><td>Serviço publicado responde externamente e nada além dele</td><td>NAT + regra correspondem à intenção</td></tr>
-            <tr><td>Restauração de configuração é conhecida/documentada</td><td>Existe caminho de retorno</td></tr>
-          </tbody>
-        </table>
+        <h2>8. Proxy com Squid + SquidGuard</h2>
+        <p>Para controle de acesso à internet:</p>
+        <ul>
+          <li>Instale os pacotes <strong>Squid</strong> e <strong>SquidGuard</strong> em System → Package Manager</li>
+          <li>Configure o Squid em modo transparente (intercepta HTTP sem configurar navegadores)</li>
+          <li>Use listas de bloqueio do SquidGuard para categorias (redes sociais, streaming, adult)</li>
+          <li>Gere relatórios de acesso com <strong>LightSquid</strong></li>
+        </ul>
 
-        <h2>O que não copiar de tutorial antigo</h2>
-        <p>Versões, pacotes e menus mudam. Não use senha padrão encontrada em artigo antigo, não instale pacote só porque ele aparece em uma lista de “essenciais” e não assuma que a tela atual será idêntica à de uma versão passada. A documentação oficial da Netgate deve ser a referência para a versão em produção.</p>
+        <h2>9. IDS/IPS com Suricata</h2>
+        <p>Detecção e prevenção de intrusão em tempo real:</p>
+        <ul>
+          <li>Instale o pacote <strong>Suricata</strong></li>
+          <li>Configure na interface WAN para monitorar tráfego de entrada</li>
+          <li>Ative as regras <strong>ET Open</strong> (gratuitas) ou <strong>Snort VRT</strong> (com registro)</li>
+          <li>Modo IDS = apenas alerta; modo IPS = bloqueia automaticamente</li>
+        </ul>
 
-        <h2>Quando parar e pedir revisão</h2>
-        <p>Pare antes de alterar firewall que atende múltiplas unidades, VPN de produção, telefonia, acesso remoto crítico ou rede sem documentação. Se não há acesso local disponível para recuperação, uma regra errada pode transformar ajuste remoto em indisponibilidade. Faça a mudança em janela combinada, com backup e plano de retorno.</p>
+        <h2>10. Monitoramento e Logs</h2>
+        <ul>
+          <li><strong>Dashboard</strong> — widgets de tráfego em tempo real, uso de CPU/RAM, conexões ativas</li>
+          <li><strong>Status → System Logs</strong> — logs detalhados de firewall, DHCP, VPN</li>
+          <li><strong>Pacote ntopng</strong> — análise profunda de tráfego por host, protocolo e aplicação</li>
+          <li><strong>Exportar logs</strong> — envie para um servidor syslog centralizado</li>
+        </ul>
 
-        <p>Se o objetivo é organizar a rede antes do firewall, comece por <Link to="/blog/como-proteger-rede-wifi-empresa" className="text-accent">como proteger o Wi-Fi da empresa</Link> e pelo <Link to="/guia-tecnico-informatica#tema-redes-wifi" className="text-accent">Atlas de redes e Wi-Fi</Link>.</p>
-        <EditorialReferences slug="como-configurar-firewall-pfsense" />
+        <h2>11. Backup e Restauração</h2>
+        <p>Sempre mantenha backup da configuração:</p>
+        <ul>
+          <li><strong>Diagnostics → Backup & Restore</strong> — exporta arquivo XML com todas as configurações</li>
+          <li>Configure backup automático com o pacote <strong>AutoConfigBackup</strong></li>
+          <li>Armazene backups em local seguro fora do pfSense</li>
+        </ul>
+
+        <h2>Checklist de Segurança do pfSense</h2>
+        <ul>
+          <li>✅ Senha do admin alterada</li>
+          <li>✅ Acesso ao painel web apenas pela LAN (ou VPN)</li>
+          <li>✅ HTTPS habilitado no painel com certificado válido</li>
+          <li>✅ Regras de firewall restritivas (deny by default na WAN)</li>
+          <li>✅ Atualizações de firmware aplicadas regularmente</li>
+          <li>✅ Backup da configuração salvo externamente</li>
+          <li>✅ Logs monitorados periodicamente</li>
+        </ul>
+
+        <h2>Precisa de Ajuda com Firewall Empresarial?</h2>
+        <p>A <strong>{BRAND_NAME}</strong> configura e mantém firewalls pfSense para empresas em Curitiba e região metropolitana. Desde a escolha do hardware até a configuração de VPN e IDS — cuidamos de toda a infraestrutura de segurança da sua rede.</p>
       </>
     ),
   },
@@ -5664,79 +5752,158 @@ Patch Panel porta 02 → Switch porta 02 → Ponto 2F-RH-P02`}</code></pre>
   },
 
   "como-configurar-active-directory": {
-    title: "Como planejar e configurar Active Directory: domínio, DNS e segurança",
-    excerpt:
-      "Guia de implantação de AD DS no Windows Server com foco em planejamento: domínio, DNS, controladores, unidades organizacionais, contas, políticas, backup e validação.",
-    date: "2026-09-25",
-    readTime: "14 min",
-    category: "Redes e Infraestrutura",
+    title: "Como Configurar Active Directory no Windows Server: Passo a Passo",
+    excerpt: "Instalação do AD DS, criação de domínio, GPOs e integração com estações.",
+    date: "2026-04-13",
+    readTime: "15 min",
+    category: "Procedimentos Técnicos",
     content: (
       <>
-        <p className="lead">Active Directory não começa no botão “promover este servidor a controlador de domínio”. O trabalho importante vem antes: decidir o namespace, garantir DNS coerente, separar funções administrativas, planejar redundância e saber como recuperar o diretório. O AD DS é a estrutura hierárquica que organiza objetos como usuários, computadores e grupos; DNS é parte da descoberta dos controladores e não um detalhe opcional.</p>
+        <p className="lead">O <strong>Active Directory (AD)</strong> é o coração da infraestrutura de TI corporativa baseada em Windows. Ele centraliza autenticação, políticas de segurança, gerenciamento de computadores e permissões de acesso. Neste guia, configuramos um domínio AD do zero no Windows Server 2022.</p>
 
-        <h2>Resposta curta</h2>
-        <p>Defina um domínio DNS completo, planeje no mínimo a arquitetura de DNS e controladores antes da promoção, use contas administrativas separadas das contas de uso diário, organize usuários/computadores em OUs com propósito claro, aplique políticas em etapas e mantenha backup testado. Não renomeie domínio, altere DNS ou mova funções críticas por tentativa.</p>
-
-        <h2>1. Quando AD DS faz sentido</h2>
-        <p>AD DS resolve identidade e administração centralizada: contas, grupos, computadores, políticas e acesso a recursos dentro de uma organização. Ele faz sentido quando o ganho de controle supera o custo de operar servidores, DNS, backup, atualização e monitoramento.</p>
-        <p>Uma empresa com poucos dispositivos e todos os serviços em nuvem pode não precisar de um domínio local. Já ambientes com estações Windows gerenciadas, arquivos internos, aplicações legadas ou exigência de políticas centralizadas podem justificar AD DS. A decisão deve partir das dependências, não do número de computadores isoladamente.</p>
-
-        <h2>2. Nome do domínio e DNS</h2>
-        <p>A Microsoft recomenda nomes DNS totalmente qualificados para novos domínios e documenta que o AD DS usa DNS para clientes localizarem controladores de domínio e para comunicação entre controladores. Isso significa que “internet funciona” não prova que o DNS do domínio está correto.</p>
+        <h2>1. O Que é o Active Directory?</h2>
+        <p>O AD é um serviço de diretório da Microsoft que funciona como uma base de dados hierárquica de objetos de rede:</p>
         <ul>
-          <li>Defina o namespace antes da instalação e registre a decisão.</li>
-          <li>Faça clientes do domínio consultarem DNS capaz de resolver a zona do AD.</li>
-          <li>Evite apontar estações diretamente para DNS público como se ele conhecesse os registros internos do domínio.</li>
-          <li>Planeje encaminhadores/recursão para nomes externos sem quebrar a resolução interna.</li>
+          <li><strong>Usuários</strong> — contas de login com senhas, permissões e dados de perfil</li>
+          <li><strong>Computadores</strong> — máquinas ingressadas no domínio, gerenciáveis remotamente</li>
+          <li><strong>Grupos</strong> — agrupamento lógico para aplicar permissões em lote</li>
+          <li><strong>GPOs (Group Policy Objects)</strong> — políticas de configuração aplicadas automaticamente</li>
+          <li><strong>Unidades Organizacionais (OUs)</strong> — pastas lógicas para organizar objetos</li>
         </ul>
 
-        <h2>3. Primeiro controlador de domínio</h2>
-        <p>Prepare o Windows Server atualizado, endereço de rede estável e nome definitivo do servidor antes da promoção. Instale a função AD DS pelo mecanismo suportado da versão e use o assistente de promoção para criar a floresta/domínio quando for uma implantação nova.</p>
-        <p>Durante a promoção, registre nome do domínio, nível funcional aplicável, opções de DNS, senha de recuperação dos Serviços de Diretório (DSRM) e caminhos escolhidos. Guarde a senha DSRM de forma protegida; ela não é uma senha de uso cotidiano.</p>
+        <h2>2. Requisitos</h2>
+        <div className="overflow-x-auto">
+          <table>
+            <thead><tr><th>Componente</th><th>Mínimo</th><th>Recomendado</th></tr></thead>
+            <tbody>
+              <tr><td>Windows Server</td><td>2016</td><td>2022 Standard/Datacenter</td></tr>
+              <tr><td>CPU</td><td>Dual-core 1.4 GHz</td><td>Quad-core 2.0 GHz+</td></tr>
+              <tr><td>RAM</td><td>2 GB</td><td>8 GB+</td></tr>
+              <tr><td>Disco</td><td>40 GB</td><td>100 GB SSD</td></tr>
+              <tr><td>Rede</td><td>1x Gigabit (IP fixo)</td><td>2x Gigabit (teaming)</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p><strong>Importante:</strong> o servidor AD DEVE ter IP fixo e ser o DNS primário da rede.</p>
 
-        <h2>4. Redundância: um domínio não deveria depender de uma única máquina</h2>
-        <p>Depois de estabilizar o primeiro controlador, planeje um segundo controlador de domínio/DNS em infraestrutura independente quando o ambiente exigir continuidade. A redundância não é “backup automático”: controladores replicam mudanças, inclusive erros. Backup continua necessário para cenários de recuperação.</p>
-        <p>Valide replicação e DNS antes de considerar o segundo controlador pronto. Só depois pense em desligar servidor antigo ou transferir funções.</p>
-
-        <h2>5. Organize OUs para administração, não para desenhar organograma</h2>
-        <p>Unidades Organizacionais servem para delegação e aplicação de políticas. Evite criar uma árvore profunda só para copiar departamentos da empresa. Pergunte quais objetos precisam de políticas diferentes e quais responsabilidades precisam ser delegadas; a estrutura nasce daí.</p>
-        <p>Use grupos para conceder acesso a recursos e prefira atribuir permissões a grupos em vez de usuários individualmente. Isso torna entrada, mudança de função e desligamento auditáveis.</p>
-
-        <h2>6. Contas administrativas separadas</h2>
-        <p>Não use uma conta com privilégio de domínio para e-mail, navegador e tarefas diárias. Mantenha contas administrativas distintas e aplique privilégio mínimo. A própria documentação de segurança da Microsoft enfatiza redução de superfície de ataque, proteção de controladores e práticas administrativas específicas.</p>
-        <p>Revise grupos privilegiados regularmente e remova contas antigas. Uma conta de administrador esquecida é uma credencial permanente esperando ser descoberta.</p>
-
-        <h2>7. GPO: aplique em etapas</h2>
+        <h2>3. Instalação do AD DS (Active Directory Domain Services)</h2>
         <ol>
-          <li>Crie a política com objetivo descrito.</li>
-          <li>Vincule primeiro a uma OU de teste.</li>
-          <li>Valide efeito em usuário e computador representativos.</li>
-          <li>Registre exceções e dependências.</li>
-          <li>Amplie o escopo gradualmente.</li>
+          <li>Abra o <strong>Server Manager</strong> → <strong>Add Roles and Features</strong></li>
+          <li>Selecione <strong>Role-based installation</strong></li>
+          <li>Marque <strong>Active Directory Domain Services</strong></li>
+          <li>Aceite os recursos dependentes (inclui ferramentas de gerenciamento)</li>
+          <li>Conclua a instalação e clique em <strong>"Promote this server to a domain controller"</strong></li>
         </ol>
-        <p>Evite alterar a Default Domain Policy para tudo. Separar políticas por objetivo facilita diagnosticar qual configuração causou um comportamento e desfazer somente o que precisa.</p>
 
-        <h2>8. Backup e recuperação</h2>
-        <p>Documente quem faz backup do estado do sistema/controladores, onde as cópias ficam, como credenciais de recuperação são protegidas e quando ocorreu o último teste. Replicação entre controladores não substitui cópia independente: exclusão ou configuração errada pode se propagar.</p>
-        <p>Antes de mudanças estruturais — DNS, controladores, funções FSMO, trust, migração — confirme backup e plano de retorno. A prática geral de validar cópias está detalhada em <Link to="/blog/como-testar-restauracao-de-backup" className="text-accent">como testar se o backup realmente funciona</Link>.</p>
+        <h2>4. Criação do Domínio (Promoção do DC)</h2>
+        <p>No assistente de promoção:</p>
+        <ol>
+          <li>Selecione <strong>"Add a new forest"</strong> (primeiro domínio da empresa)</li>
+          <li>Defina o nome do domínio raiz: ex: <code>empresa.local</code> ou <code>corp.empresa.com.br</code></li>
+          <li>Nível funcional da floresta: <strong>Windows Server 2016</strong> (compatibilidade) ou superior</li>
+          <li>Marque <strong>DNS Server</strong> (será configurado automaticamente)</li>
+          <li>Defina a senha de <strong>DSRM</strong> (Directory Services Restore Mode) — guarde com segurança!</li>
+          <li>Aceite os caminhos padrão (NTDS, SYSVOL) ou personalize</li>
+          <li>Revise e clique em <strong>Install</strong> — o servidor reiniciará como Domain Controller</li>
+        </ol>
 
-        <h2>Checklist pós-implantação</h2>
+        <h2>5. Configuração do DNS</h2>
+        <p>O AD depende fortemente do DNS. Após a promoção:</p>
         <ul>
-          <li>Clientes localizam controladores e resolvem DNS interno/externo corretamente.</li>
-          <li>Horário está sincronizado; autenticação depende dele.</li>
-          <li>Replicação entre controladores está saudável.</li>
-          <li>Contas administrativas são separadas das contas normais.</li>
-          <li>OUs e grupos possuem propósito documentado.</li>
-          <li>GPOs foram testadas antes de ampliar escopo.</li>
-          <li>Backup e procedimento de recuperação estão registrados e testados.</li>
-          <li>Atualizações e logs dos controladores entram na rotina operacional.</li>
+          <li>Verifique se a zona de pesquisa direta (<code>empresa.local</code>) foi criada automaticamente</li>
+          <li>Adicione um <strong>forwarder</strong> para resolução externa: DNS → Properties → Forwarders → 1.1.1.1, 8.8.8.8</li>
+          <li>Configure as estações para usar o IP do servidor AD como DNS primário</li>
+          <li>Teste com <code>nslookup empresa.local</code> de uma estação</li>
         </ul>
 
-        <h2>Quando parar e pedir ajuda</h2>
-        <p>Não avance por tentativa em domínio existente se DNS está inconsistente, replicação apresenta erros, há somente um controlador sem backup ou você pretende renomear domínio/migrar floresta sem mapa de dependências. Nesses casos, preserve o estado, colete diagnósticos e desenhe a mudança antes de executar.</p>
+        <h2>6. Estrutura de Unidades Organizacionais (OUs)</h2>
+        <p>Organize objetos por departamento ou localidade:</p>
+        <pre><code>{`empresa.local
+├── OU=Curitiba
+│   ├── OU=TI
+│   │   ├── OU=Usuarios
+│   │   └── OU=Computadores
+│   ├── OU=Financeiro
+│   │   ├── OU=Usuarios
+│   │   └── OU=Computadores
+│   └── OU=RH
+│       ├── OU=Usuarios
+│       └── OU=Computadores
+├── OU=Servidores
+└── OU=Grupos`}</code></pre>
 
-        <p>Para infraestrutura de pequenas empresas, conecte esta implantação ao <Link to="/blog/organizacao-de-ti-para-pequenos-escritorios" className="text-accent">guia de organização de TI</Link> e ao <Link to="/guia-tecnico-informatica#tema-informatica-empresas" className="text-accent">Atlas de informática para empresas</Link>.</p>
-        <EditorialReferences slug="como-configurar-active-directory" />
+        <h2>7. Criação de Usuários e Grupos</h2>
+        <h3>Via Interface (ADUC)</h3>
+        <ol>
+          <li>Abra <strong>Active Directory Users and Computers</strong></li>
+          <li>Navegue até a OU desejada → Botão direito → <strong>New → User</strong></li>
+          <li>Preencha: nome, sobrenome, logon name (ex: <code>joao.silva</code>)</li>
+          <li>Defina senha e políticas (trocar no primeiro login, não expira, etc.)</li>
+        </ol>
+        <h3>Via PowerShell (em massa)</h3>
+        <pre><code>{`# Criar usuário individual
+New-ADUser -Name "João Silva" -SamAccountName "joao.silva" \\
+  -UserPrincipalName "joao.silva@empresa.local" \\
+  -Path "OU=Usuarios,OU=TI,OU=Curitiba,DC=empresa,DC=local" \\
+  -AccountPassword (ConvertTo-SecureString "Senha@123" -AsPlainText -Force) \\
+  -Enabled $true
+
+# Importar usuários de CSV
+Import-Csv "C:\\usuarios.csv" | ForEach-Object {
+  New-ADUser -Name $_.Nome -SamAccountName $_.Login \\
+    -Path $_.OU -AccountPassword (ConvertTo-SecureString $_.Senha -AsPlainText -Force) \\
+    -Enabled $true
+}`}</code></pre>
+
+        <h2>8. Ingressar Estações no Domínio</h2>
+        <ol>
+          <li>Na estação, configure o DNS para apontar ao IP do servidor AD</li>
+          <li><strong>Configurações → Sistema → Sobre → Ingressar em um domínio</strong></li>
+          <li>Digite o nome do domínio: <code>empresa.local</code></li>
+          <li>Informe credenciais de administrador do domínio</li>
+          <li>Reinicie a estação — ela aparecerá em <strong>Computers</strong> no ADUC</li>
+          <li>Mova o objeto para a OU correta</li>
+        </ol>
+
+        <h2>9. Group Policy Objects (GPOs)</h2>
+        <p>GPOs são o recurso mais poderoso do AD — permitem configurar centenas de políticas remotamente:</p>
+        <h3>GPOs Essenciais Para Empresas</h3>
+        <ul>
+          <li><strong>Política de senha</strong> — mínimo 8 caracteres, complexidade, expiração a cada 90 dias</li>
+          <li><strong>Bloqueio de conta</strong> — bloquear após 5 tentativas incorretas por 30 minutos</li>
+          <li><strong>Mapeamento de unidades de rede</strong> — drives compartilhados por departamento</li>
+          <li><strong>Restrição de Painel de Controle</strong> — impedir alterações em configurações de rede</li>
+          <li><strong>Configuração de proxy</strong> — favaliar o valor uso do proxy corporativo</li>
+          <li><strong>Papel de parede corporativo</strong> — identidade visual nos desktops</li>
+          <li><strong>Instalação de software</strong> — distribuir programas automaticamente</li>
+          <li><strong>Windows Update (WSUS)</strong> — controlar atualizações centralizadamente</li>
+        </ul>
+
+        <h2>10. Segundo Domain Controller (Redundância)</h2>
+        <p>Nunca opere com um único DC. Para adicionar um segundo:</p>
+        <ol>
+          <li>Instale Windows Server no segundo servidor (IP fixo, DNS apontando ao DC1)</li>
+          <li>Instale a role AD DS</li>
+          <li>Na promoção, selecione <strong>"Add a domain controller to an existing domain"</strong></li>
+          <li>Informe o nome do domínio e credenciais de admin</li>
+          <li>O AD replicará automaticamente todos os objetos</li>
+        </ol>
+
+        <h2>Checklist de Implantação do AD</h2>
+        <ul>
+          <li>✅ Servidor com IP fixo e DNS configurado</li>
+          <li>✅ AD DS instalado e domínio promovido</li>
+          <li>✅ Estrutura de OUs criada por departamento</li>
+          <li>✅ Usuários e grupos criados</li>
+          <li>✅ Estações ingressadas no domínio</li>
+          <li>✅ GPOs essenciais aplicadas</li>
+          <li>✅ Segundo DC configurado para redundância</li>
+          <li>✅ Backup do System State agendado</li>
+          <li>✅ Senha DSRM armazenada em cofre seguro</li>
+        </ul>
+
+        <h2>Implantação de Active Directory em Curitiba</h2>
+        <p>A <strong>{BRAND_NAME}</strong> implanta e gerencia ambientes Active Directory para empresas em Curitiba e região metropolitana. Do planejamento à migração de usuários, GPOs e políticas de segurança — sua infraestrutura Windows em mãos experientes.</p>
       </>
     ),
   },
@@ -8654,77 +8821,127 @@ crontab -e
   },
 
   "como-proteger-rede-wifi-empresa": {
-    title: "Como proteger o Wi-Fi da empresa: WPA3, rede de visitantes e gestão",
-    excerpt:
-      "Checklist técnico para proteger a rede Wi-Fi empresarial sem transformar segurança em improviso: criptografia, segmentação, credenciais, firmware, administração e monitoramento.",
-    date: "2026-09-25",
+    title: "Como Proteger a Rede Wi-Fi da Sua Empresa: Guia Técnico",
+    excerpt: "WPA3, segregação de redes (VLAN), captive portal, RADIUS e monitoramento — segurança real para SMB.",
+    date: "2026-04-20",
     readTime: "12 min",
     category: "Segurança e Redes",
     content: (
       <>
-        <p className="lead">A rede Wi-Fi da empresa não deve ser tratada como uma única senha compartilhada entre funcionários, impressoras, câmeras e visitantes. A proteção melhora quando cada grupo recebe o acesso necessário — e nada além dele —, a administração fica separada do uso comum e a configuração pode ser revisada sem depender da memória de quem instalou o roteador.</p>
+        <p className="lead">Segurança digital deixou de ser problema só de grandes corporações. Em 2026, ataques cibernéticos atingem desde pessoas comuns até pequenas empresas em Curitiba todos os dias. Este guia técnico mostra como proteger a rede wi-fi da sua empresa de forma profissional e eficaz.</p>
 
-        <h2>Resposta curta</h2>
-        <p>Use WPA3 quando os equipamentos suportarem; mantenha WPA2 com criptografia moderna para o legado necessário; elimine WEP e WPA antigos; crie rede de visitantes separada da rede interna; troque credenciais administrativas padrão; mantenha firmware suportado e documente quem pode alterar a configuração. Em ambientes com usuários e equipamentos suficientes para justificar gestão centralizada, considere autenticação por usuário e segmentação por VLAN.</p>
-
-        <h2>Comece pelo inventário, não pelo painel do roteador</h2>
-        <p>Liste pontos de acesso, switches, roteadores e redes sem fio existentes. Para cada SSID, anote finalidade, quem usa, método de autenticação, faixa/sub-rede, acesso permitido e responsável. Inclua dispositivos que quase nunca são lembrados: impressoras, TVs, câmeras, coletores, automação e equipamentos de terceiros.</p>
-        <p>Esse inventário revela o problema mais comum: uma rede única dá a um visitante ou dispositivo simples a mesma proximidade de rede que um computador com documentos e sistemas internos.</p>
-
-        <h2>1. Criptografia e autenticação</h2>
-        <p>A Wi-Fi Alliance mantém WPA3 como geração atual de segurança Wi-Fi. Quando aparelhos legados impedirem migração completa, use o modo compatível recomendado pelo fabricante e planeje a retirada dos equipamentos que só aceitam padrões antigos. WEP e WPA legado não devem ser preservados para “não mexer no que funciona”.</p>
-        <p>Para uma empresa pequena, uma senha forte e exclusiva pode ser suficiente em uma rede interna bem segmentada. Conforme aumenta o número de usuários, a autenticação individual — por exemplo, 802.1X/RADIUS quando a infraestrutura suporta — melhora revogação e rastreabilidade porque a saída de uma pessoa não exige trocar a senha de todos.</p>
-
-        <h2>2. Separe funcionário, visitante e dispositivo</h2>
-        <table>
-          <thead><tr><th>Rede</th><th>Precisa acessar</th><th>Não deveria acessar</th></tr></thead>
-          <tbody>
-            <tr><td>Corporativa</td><td>Sistemas, arquivos e recursos internos autorizados</td><td>Administração da infraestrutura sem necessidade</td></tr>
-            <tr><td>Visitantes</td><td>Internet</td><td>Servidores, impressoras, estações e dispositivos internos</td></tr>
-            <tr><td>IoT/periféricos</td><td>Somente serviços necessários ao funcionamento</td><td>Estações e dados corporativos por padrão</td></tr>
-            <tr><td>Administração</td><td>Painéis de rede e gerenciamento</td><td>Acesso de usuários comuns</td></tr>
-          </tbody>
-        </table>
-        <p>VLAN é uma ferramenta para implementar essa separação, não um objetivo por si só. Ela só melhora segurança se regras de firewall controlarem o tráfego entre segmentos. Criar quatro VLANs e permitir tudo entre elas apenas muda os nomes do problema.</p>
-
-        <h2>3. Proteja o plano de administração</h2>
+        <h2>Cenário de Ameaças em 2026</h2>
+        <p>O custo médio de um incidente de segurança para pequenas empresas brasileiras passou de R$ 80 mil em 2025, segundo levantamentos do setor. Os ataques mais comuns que vemos no atendimento técnico em Curitiba:</p>
         <ul>
-          <li>Troque usuário/senha padrão quando o equipamento permitir.</li>
-          <li>Não exponha a interface de administração diretamente à internet.</li>
-          <li>Restrinja quem consegue chegar ao painel a partir da rede interna.</li>
-          <li>Use HTTPS e autenticação multifator quando o produto oferecer.</li>
-          <li>Mantenha um backup exportado da configuração depois de mudanças relevantes.</li>
-          <li>Registre modelo, versão de firmware e data da última revisão.</li>
+          <li><strong>Ransomware</strong> — criptografia dos arquivos e cobrança de resgate (R$ 5 mil a R$ 500 mil)</li>
+          <li><strong>Phishing direcionado</strong> — e-mails personalizados que enganam até usuários experientes</li>
+          <li><strong>Engenharia social</strong> — ligações se passando por banco, suporte técnico ou parceiro</li>
+          <li><strong>Invasão por credenciais vazadas</strong> — senhas reutilizadas em sites comprometidos</li>
+          <li><strong>Ataques a roteadores domésticos</strong> — captura de tráfego e redirecionamento DNS</li>
+          <li><strong>Sequestro de WhatsApp Business</strong> — uso da conta para golpes contra clientes</li>
         </ul>
 
-        <h2>4. Firmware e ciclo de vida</h2>
-        <p>Atualização não é “instalar qualquer versão no horário comercial”. Primeiro confirme modelo e revisão de hardware, leia notas da versão, faça backup da configuração e tenha uma janela de retorno caso algo falhe. Se o equipamento deixou de receber correções de segurança, o risco não se resolve adiando firmware indefinidamente: planeje substituição.</p>
-
-        <h2>5. WPS, SSID e conveniência</h2>
-        <p>Desative WPS quando não houver necessidade operacional. O nome da rede não precisa revelar empresa, endereço, andar ou modelo do roteador. Ocultar SSID, por outro lado, não deve ser tratado como controle de segurança: dispositivos ainda precisam anunciar e descobrir a rede. A proteção está na autenticação, criptografia e segmentação.</p>
-
-        <h2>6. Monitore mudanças e acessos anormais</h2>
-        <p>Não é necessário começar com uma plataforma cara. O básico é saber quais equipamentos estão autorizados, revisar clientes conectados, guardar logs disponíveis e investigar mudanças de configuração que não foram registradas. Em infraestrutura gerenciada, centralize eventos de controladora, firewall e autenticação para que uma falha não desapareça quando o equipamento reiniciar.</p>
-
-        <h2>Quando uma rede simples deixa de ser suficiente?</h2>
-        <p>Se a empresa cresceu a ponto de compartilhar a mesma senha com dezenas de pessoas, precisa liberar e revogar acesso individual, possui sistemas internos sensíveis, vários pontos de acesso ou terceiros frequentes, a rede doméstica “esticada” virou dívida operacional. O passo seguinte é projetar identidade, segmentação, cobertura e administração em conjunto.</p>
-
-        <h2>Quando parar e chamar um profissional</h2>
-        <p>Não faça mudanças remotas sem plano de retorno quando o mesmo equipamento fornece internet, telefonia, VPN ou acesso aos sistemas da empresa. Também vale interromper se você não sabe quais portas/VLANs carregam serviços críticos ou se a configuração atual não tem backup. Primeiro documente o estado; depois altere uma camada por vez.</p>
-
-        <h2>Checklist de revisão</h2>
+        <h2>Princípios Fundamentais de Segurança</h2>
+        <p>Antes de ferramentas e configurações, internalize os princípios. Eles guiam toda decisão de segurança.</p>
         <ul>
-          <li>WPA3/WPA2 moderno e nenhum WEP/WPA legado ativo.</li>
-          <li>Visitantes isolados da rede interna.</li>
-          <li>Dispositivos/IoT limitados ao que precisam.</li>
-          <li>Administração não exposta à internet.</li>
-          <li>Senha administrativa exclusiva e MFA quando disponível.</li>
-          <li>Firmware suportado e backup de configuração.</li>
-          <li>Mapa de SSIDs, VLANs, sub-redes e responsáveis atualizado.</li>
+          <li><strong>Defesa em profundidade</strong> — múltiplas camadas, nunca dependa de uma única proteção</li>
+          <li><strong>Princípio do menor privilégio</strong> — cada usuário e processo só tem acesso ao mínimo necessário</li>
+          <li><strong>Zero Trust</strong> — nunca confie automaticamente, verifique sempre, mesmo dentro da rede</li>
+          <li><strong>Segregação de funções</strong> — quem aprova não é quem executa, quem audita não é quem opera</li>
+          <li><strong>Backup imune</strong> — pelo menos uma cópia offline ou imutável, fora do alcance de ransomware</li>
+          <li><strong>Atualização contínua</strong> — vulnerabilidades conhecidas são as mais exploradas</li>
         </ul>
 
-        <p>Para separar problemas de cobertura de problemas de segurança, veja <Link to="/blog/internet-lenta-provedor-ou-roteador" className="text-accent">como testar provedor versus roteador</Link> e <Link to="/servicos/redes-e-wifi" className="text-accent">redes e Wi-Fi</Link>.</p>
-        <EditorialReferences slug="como-proteger-rede-wifi-empresa" />
+        <h2>Avaliação de Riscos Inicial</h2>
+        <p>Não é possível proteger o que você não conhece. O primeiro passo é mapear sua infraestrutura.</p>
+        <p>Faça um inventário completo:</p>
+        <ul>
+          <li>Quais dispositivos estão conectados à rede (computadores, celulares, IoT, impressoras)</li>
+          <li>Quais sistemas e aplicativos são usados (sistemas internos, SaaS, e-mail)</li>
+          <li>Quais dados são tratados (cadastros, financeiro, saúde, propriedade intelectual)</li>
+          <li>Quem tem acesso a quê (usuários, fornecedores, parceiros)</li>
+          <li>Onde estão os backups e qual a frequência</li>
+          <li>Quais ferramentas de segurança já estão em uso</li>
+        </ul>
+        <p>Esse mapeamento revela vulnerabilidades óbvias que muitas vezes passam despercebidas — como aquela impressora que ninguém mais usa mas continua acessível pela rede.</p>
+
+        <h2>Configuração Técnica Recomendada</h2>
+        <p>Com o mapeamento em mãos, parta para a configuração técnica. As recomendações abaixo são baseline mínimo para qualquer ambiente profissional.</p>
+        <ul>
+          <li><strong>Firewall configurado</strong> — bloqueia portas não usadas, limita acesso externo a serviços essenciais</li>
+          <li><strong>Antivírus em todos os endpoints</strong> — Bitdefender, ESET ou Kaspersky em versão corporativa</li>
+          <li><strong>Patch management</strong> — atualizações de SO e aplicativos aplicadas em até 30 dias da liberação</li>
+          <li><strong>EDR (Endpoint Detection and Response)</strong> — para detectar ataques que escapam do antivírus tradicional</li>
+          <li><strong>VPN para acesso remoto</strong> — nada de RDP exposto direto na internet</li>
+          <li><strong>2FA em todos os serviços críticos</strong> — e-mail, ERP, painel administrativo, redes sociais corporativas</li>
+          <li><strong>Logs centralizados</strong> — pelo menos 90 dias de retenção para investigação de incidentes</li>
+        </ul>
+
+        <h2>Procedimento Detalhado de Implementação</h2>
+        <p>Vamos ao passo a passo prático. Adapte ao seu ambiente, mas siga a ordem — pular etapas deixa brechas.</p>
+        <ol>
+          <li><strong>Inventário e classificação</strong> — saiba o que precisa proteger e qual a criticidade de cada ativo</li>
+          <li><strong>Hardening de senhas</strong> — gerenciador de senhas (Bitwarden, 1Password) para todos os usuários</li>
+          <li><strong>2FA universal</strong> — comece pelo e-mail (porta de entrada para tudo), depois bancos, redes sociais e sistemas internos</li>
+          <li><strong>Firewall e segmentação</strong> — separe rede de visitantes, IoT e produção</li>
+          <li><strong>Backup 3-2-1</strong> — 3 cópias, 2 mídias diferentes, 1 offsite</li>
+          <li><strong>Atualizações automáticas</strong> — configure janela de manutenção e aplique patches</li>
+          <li><strong>Treinamento de usuários</strong> — phishing é o vetor #1, e usuário treinado é a melhor defesa</li>
+          <li><strong>Monitoramento contínuo</strong> — logs revisados periodicamente, alertas configurados para anomalias</li>
+          <li><strong>Plano de resposta a incidentes</strong> — quem chamar, o que fazer, como comunicar quando algo der errado</li>
+          <li><strong>Auditoria periódica</strong> — pentest anual e revisão de configurações trimestral</li>
+        </ol>
+
+        <h2>Ferramentas Recomendadas</h2>
+        <p>Mercado de segurança tem centenas de ferramentas. Para o cenário típico de SMB em Curitiba, essa stack cobre o essencial:</p>
+        <ul>
+          <li><strong>Bitdefender GravityZone</strong> ou <strong>ESET Protect</strong> — antivírus + EDR centralizado</li>
+          <li><strong>pfSense</strong> ou <strong>OPNsense</strong> — firewall corporativo open source</li>
+          <li><strong>Bitwarden Business</strong> — gerenciador de senhas com SSO e auditoria</li>
+          <li><strong>Veeam Backup</strong> ou <strong>Acronis</strong> — backup empresarial com replicação</li>
+          <li><strong>Wazuh</strong> — SIEM open source para correlação de logs</li>
+          <li><strong>Cloudflare</strong> — proteção DDoS e WAF para sites e aplicações</li>
+          <li><strong>YubiKey</strong> ou <strong>Authy</strong> — 2FA físico e em apps</li>
+        </ul>
+
+        <h2>Erros Comuns Que Geram Vulnerabilidade</h2>
+        <p>Os ataques bem-sucedidos quase sempre exploram falhas conhecidas e evitáveis.</p>
+        <ul>
+          <li><strong>Senha "12345678"</strong> ou similar em conta administrativa</li>
+          <li><strong>Reutilizar senha</strong> entre serviços pessoais e corporativos</li>
+          <li><strong>Adiar atualizações</strong> de SO e aplicativos por meses ou anos</li>
+          <li><strong>Antivírus expirado</strong> sem que o usuário perceba</li>
+          <li><strong>Backup que nunca é testado</strong> — descobrir que não funciona depois do incidente</li>
+          <li><strong>Compartilhar credenciais</strong> entre funcionários por WhatsApp</li>
+          <li><strong>Acesso remoto direto via RDP</strong> sem VPN</li>
+          <li><strong>Wi-Fi corporativo</strong> com senha conhecida por todos os funcionários, terceiros e clientes</li>
+        </ul>
+
+        <h2>Resposta a Incidentes</h2>
+        <p>Cedo ou tarde, algo vai dar errado. Ter um plano definido é diferença entre incidente controlado e desastre.</p>
+        <ol>
+          <li><strong>Detecção</strong> — usuário relata, alerta de monitoramento dispara, antivírus bloqueia</li>
+          <li><strong>Contenção</strong> — desconectar máquinas afetadas da rede imediatamente</li>
+          <li><strong>Erradicação</strong> — remover malware, fechar vetor de entrada, trocar credenciais comprometidas</li>
+          <li><strong>Recuperação</strong> — restaurar de backup limpo, validar integridade antes de voltar à produção</li>
+          <li><strong>Lições aprendidas</strong> — documentar o que aconteceu, ajustar processos para evitar recorrência</li>
+        </ol>
+        <p><strong>Nunca pague resgate de ransomware sem consultar especialista.</strong> Pagar não garante recuperação dos dados e marca sua empresa como alvo fácil para futuras extorsões.</p>
+
+        <h2>Conformidade e LGPD</h2>
+        <p>Empresas que tratam dados pessoais têm obrigações legais. A LGPD não é opcional, e multas chegam a 2% do faturamento limitado a R$ 50 milhões por infração.</p>
+        <ul>
+          <li><strong>Mapeamento de dados pessoais</strong> coletados e tratados</li>
+          <li><strong>Base legal documentada</strong> para cada tratamento</li>
+          <li><strong>Política de privacidade</strong> clara e acessível</li>
+          <li><strong>Encarregado de proteção de dados</strong> (DPO) designado</li>
+          <li><strong>Plano de resposta a incidentes</strong> que inclua notificação à ANPD em até 48h</li>
+          <li><strong>Direitos dos titulares</strong> implementados (acesso, correção, exclusão)</li>
+        </ul>
+
+        <h2>Suporte em Segurança em Curitiba</h2>
+        <p>A <strong>{BRAND_NAME}</strong> oferece consultoria e implementação de segurança digital para empresas em Curitiba e região metropolitana. Auditoria, hardening, configuração de firewall, implementação de backup, treinamento de usuários e resposta a incidentes. Atendemos Curitiba, São José dos Pinhais, Pinhais, Colombo, Almirante Tamandaré, Araucária, Campo Largo, Campo Magro, Piraquara, Quatro Barras e Fazenda Rio Grande com técnicos certificados em segurança ofensiva e defensiva.</p>
+
       </>
     ),
   },
@@ -8856,78 +9073,127 @@ crontab -e
   },
 
   "como-configurar-2fa-em-tudo": {
-    title: "Como configurar 2FA/MFA com segurança: do e-mail às contas críticas",
-    excerpt:
-      "Um roteiro prático para ativar autenticação multifator, escolher métodos mais resistentes a phishing, guardar códigos de recuperação e evitar ficar sem acesso.",
-    date: "2026-09-25",
-    readTime: "11 min",
-    category: "Segurança",
+    title: "Como Configurar 2FA (Autenticação de Dois Fatores) em Tudo",
+    excerpt: "Guia prático para ativar 2FA em e-mail, redes sociais, bancos, servidores e aplicações empresariais.",
+    date: "2026-04-20",
+    readTime: "10 min",
+    category: "Segurança e Redes",
     content: (
       <>
-        <p className="lead">Ativar 2FA não é marcar uma caixa e esquecer. A proteção melhora quando o segundo fator é realmente diferente da senha, o método escolhido resiste ao tipo de golpe que você enfrenta e existe um plano de recuperação caso o celular seja perdido. O roteiro abaixo começa pelas contas que destravam todas as outras e termina com a conferência que evita falsa sensação de segurança.</p>
+        <p className="lead">Segurança digital deixou de ser problema só de grandes corporações. Em 2026, ataques cibernéticos atingem desde pessoas comuns até pequenas empresas em Curitiba todos os dias. Este guia técnico mostra como configurar 2fa (autenticação de dois fatores) em tudo de forma profissional e eficaz.</p>
 
-        <h2>Resposta curta: por onde começar</h2>
-        <p>Proteja primeiro o <strong>e-mail principal</strong>, depois o gerenciador de senhas, armazenamento em nuvem, contas administrativas e serviços financeiros. Sempre que o serviço oferecer, prefira um método resistente a phishing, como chave de segurança ou autenticação criptográfica vinculada ao site correto. Códigos temporários por aplicativo continuam úteis; SMS e e-mail de código ficam como alternativa quando não há opção mais forte.</p>
+        <h2>Cenário de Ameaças em 2026</h2>
+        <p>O custo médio de um incidente de segurança para pequenas empresas brasileiras passou de R$ 80 mil em 2025, segundo levantamentos do setor. Os ataques mais comuns que vemos no atendimento técnico em Curitiba:</p>
+        <ul>
+          <li><strong>Ransomware</strong> — criptografia dos arquivos e cobrança de resgate (R$ 5 mil a R$ 500 mil)</li>
+          <li><strong>Phishing direcionado</strong> — e-mails personalizados que enganam até usuários experientes</li>
+          <li><strong>Engenharia social</strong> — ligações se passando por banco, suporte técnico ou parceiro</li>
+          <li><strong>Invasão por credenciais vazadas</strong> — senhas reutilizadas em sites comprometidos</li>
+          <li><strong>Ataques a roteadores domésticos</strong> — captura de tráfego e redirecionamento DNS</li>
+          <li><strong>Sequestro de WhatsApp Business</strong> — uso da conta para golpes contra clientes</li>
+        </ul>
 
-        <h2>2FA e MFA: qual é a diferença prática?</h2>
-        <p>2FA significa autenticação com dois fatores. MFA é o termo mais amplo: autenticação multifator, com dois ou mais fatores independentes. Os fatores normalmente pertencem a categorias diferentes: algo que você <strong>sabe</strong> (senha ou PIN), algo que você <strong>tem</strong> (telefone, chave física ou dispositivo registrado) e algo que você <strong>é</strong> (biometria usada dentro de um autenticador).</p>
-        <p>Dois passos não são automaticamente dois fatores. Digitar uma senha e depois outra senha continua dependendo da mesma categoria. A ideia é impedir que o vazamento de uma credencial, sozinho, entregue a conta.</p>
+        <h2>Princípios Fundamentais de Segurança</h2>
+        <p>Antes de ferramentas e configurações, internalize os princípios. Eles guiam toda decisão de segurança.</p>
+        <ul>
+          <li><strong>Defesa em profundidade</strong> — múltiplas camadas, nunca dependa de uma única proteção</li>
+          <li><strong>Princípio do menor privilégio</strong> — cada usuário e processo só tem acesso ao mínimo necessário</li>
+          <li><strong>Zero Trust</strong> — nunca confie automaticamente, verifique sempre, mesmo dentro da rede</li>
+          <li><strong>Segregação de funções</strong> — quem aprova não é quem executa, quem audita não é quem opera</li>
+          <li><strong>Backup imune</strong> — pelo menos uma cópia offline ou imutável, fora do alcance de ransomware</li>
+          <li><strong>Atualização contínua</strong> — vulnerabilidades conhecidas são as mais exploradas</li>
+        </ul>
 
-        <h2>Escolha do método: nem todo segundo fator protege igual</h2>
-        <table>
-          <thead><tr><th>Método</th><th>Ponto forte</th><th>Limite que importa</th></tr></thead>
-          <tbody>
-            <tr><td>Chave de segurança / passkey</td><td>Pode vincular a autenticação ao serviço legítimo e resistir melhor a phishing</td><td>Exige cadastro prévio e plano para dispositivo reserva</td></tr>
-            <tr><td>Aplicativo com aprovação/number matching</td><td>Boa experiência e confirmação fora da senha</td><td>Não aprove aprovações inesperadas; fadiga de push continua sendo risco</td></tr>
-            <tr><td>Aplicativo com código TOTP</td><td>Funciona mesmo sem sinal de celular</td><td>O código pode ser digitado em página falsa e retransmitido</td></tr>
-            <tr><td>SMS ou e-mail</td><td>Ampla disponibilidade</td><td>É menos resistente a interceptação, tomada de conta e phishing</td></tr>
-          </tbody>
-        </table>
-        <p>O NIST não considera códigos digitados manualmente, como OTP, resistentes a phishing, porque o usuário pode entregá-los a um site impostor. A CISA também recomenda priorizar métodos resistentes a phishing quando disponíveis.</p>
+        <h2>Avaliação de Riscos Inicial</h2>
+        <p>Não é possível proteger o que você não conhece. O primeiro passo é mapear sua infraestrutura.</p>
+        <p>Faça um inventário completo:</p>
+        <ul>
+          <li>Quais dispositivos estão conectados à rede (computadores, celulares, IoT, impressoras)</li>
+          <li>Quais sistemas e aplicativos são usados (sistemas internos, SaaS, e-mail)</li>
+          <li>Quais dados são tratados (cadastros, financeiro, saúde, propriedade intelectual)</li>
+          <li>Quem tem acesso a quê (usuários, fornecedores, parceiros)</li>
+          <li>Onde estão os backups e qual a frequência</li>
+          <li>Quais ferramentas de segurança já estão em uso</li>
+        </ul>
+        <p>Esse mapeamento revela vulnerabilidades óbvias que muitas vezes passam despercebidas — como aquela impressora que ninguém mais usa mas continua acessível pela rede.</p>
 
-        <h2>Roteiro seguro para ativar em uma conta</h2>
+        <h2>Configuração Técnica Recomendada</h2>
+        <p>Com o mapeamento em mãos, parta para a configuração técnica. As recomendações abaixo são baseline mínimo para qualquer ambiente profissional.</p>
+        <ul>
+          <li><strong>Firewall configurado</strong> — bloqueia portas não usadas, limita acesso externo a serviços essenciais</li>
+          <li><strong>Antivírus em todos os endpoints</strong> — Bitdefender, ESET ou Kaspersky em versão corporativa</li>
+          <li><strong>Patch management</strong> — atualizações de SO e aplicativos aplicadas em até 30 dias da liberação</li>
+          <li><strong>EDR (Endpoint Detection and Response)</strong> — para detectar ataques que escapam do antivírus tradicional</li>
+          <li><strong>VPN para acesso remoto</strong> — nada de RDP exposto direto na internet</li>
+          <li><strong>2FA em todos os serviços críticos</strong> — e-mail, ERP, painel administrativo, redes sociais corporativas</li>
+          <li><strong>Logs centralizados</strong> — pelo menos 90 dias de retenção para investigação de incidentes</li>
+        </ul>
+
+        <h2>Procedimento Detalhado de Implementação</h2>
+        <p>Vamos ao passo a passo prático. Adapte ao seu ambiente, mas siga a ordem — pular etapas deixa brechas.</p>
         <ol>
-          <li><strong>Entre pelo endereço oficial:</strong> digite o domínio ou abra o aplicativo instalado. Não ative segurança a partir de link recebido em mensagem.</li>
-          <li><strong>Revise a senha:</strong> antes do 2FA, troque senha reutilizada ou comprometida por uma exclusiva.</li>
-          <li><strong>Cadastre o método mais forte disponível:</strong> chave/passkey quando compatível; caso contrário, aplicativo autenticador; SMS apenas quando for a alternativa oferecida.</li>
-          <li><strong>Cadastre redundância:</strong> uma segunda chave, outro dispositivo autorizado ou um método de recuperação que não dependa do mesmo telefone.</li>
-          <li><strong>Guarde códigos de recuperação:</strong> fora da caixa de e-mail protegida por aquela mesma conta. Um cofre de senhas ou cópia física protegida são opções.</li>
-          <li><strong>Saia e teste:</strong> faça um login novo em navegador privado para provar que o fluxo funciona antes de encerrar a sessão atual.</li>
-          <li><strong>Revise sessões abertas:</strong> remova aparelhos que você não reconhece e confirme dados de recuperação.</li>
+          <li><strong>Inventário e classificação</strong> — saiba o que precisa proteger e qual a criticidade de cada ativo</li>
+          <li><strong>Hardening de senhas</strong> — gerenciador de senhas (Bitwarden, 1Password) para todos os usuários</li>
+          <li><strong>2FA universal</strong> — comece pelo e-mail (porta de entrada para tudo), depois bancos, redes sociais e sistemas internos</li>
+          <li><strong>Firewall e segmentação</strong> — separe rede de visitantes, IoT e produção</li>
+          <li><strong>Backup 3-2-1</strong> — 3 cópias, 2 mídias diferentes, 1 offsite</li>
+          <li><strong>Atualizações automáticas</strong> — configure janela de manutenção e aplique patches</li>
+          <li><strong>Treinamento de usuários</strong> — phishing é o vetor #1, e usuário treinado é a melhor defesa</li>
+          <li><strong>Monitoramento contínuo</strong> — logs revisados periodicamente, alertas configurados para anomalias</li>
+          <li><strong>Plano de resposta a incidentes</strong> — quem chamar, o que fazer, como comunicar quando algo der errado</li>
+          <li><strong>Auditoria periódica</strong> — pentest anual e revisão de configurações trimestral</li>
         </ol>
 
-        <h2>A ordem de prioridade que reduz mais risco</h2>
-        <p><strong>E-mail vem primeiro</strong> porque normalmente recebe redefinições de senha. Em seguida proteja o gerenciador de senhas e a conta que controla seu celular ou computador. Depois vêm nuvem, redes sociais, mensageiros, painéis de empresa e contas financeiras. Em ambiente corporativo, contas administrativas e acesso remoto devem entrar no primeiro grupo, não no fim da fila.</p>
-        <p>Se você reutiliza a mesma senha em várias contas, corrija isso em paralelo. O segundo fator diminui o impacto de uma senha vazada, mas não transforma reutilização em prática segura.</p>
-
-        <h2>Como reconhecer um pedido de MFA suspeito</h2>
+        <h2>Ferramentas Recomendadas</h2>
+        <p>Mercado de segurança tem centenas de ferramentas. Para o cenário típico de SMB em Curitiba, essa stack cobre o essencial:</p>
         <ul>
-          <li>Você recebe uma aprovação no celular sem estar tentando entrar.</li>
-          <li>O navegador pede senha e código depois de você ter aberto um link de e-mail ou mensagem urgente.</li>
-          <li>Uma pessoa em ligação pede para você informar o código “para cancelar uma fraude”.</li>
-          <li>Chegam várias aprovações seguidas até você aceitar por cansaço.</li>
-        </ul>
-        <p>Nesses casos, negue a solicitação, acesse a conta por canal oficial, troque a senha se houver indício de exposição e revise sessões/dispositivos. O guia de <Link to="/blog/como-proteger-computador-golpes-internet" className="text-accent">proteção contra golpes e phishing</Link> explica como separar mensagem suspeita de comprometimento real.</p>
-
-        <h2>Troquei ou perdi o celular: o que fazer antes</h2>
-        <p>Antes de apagar o aparelho antigo, confirme que o novo consegue autenticar. Exporte ou sincronize os autenticadores somente pelo recurso oficial do produto, verifique chaves/passkeys cadastradas e mantenha os códigos de recuperação acessíveis. Se a conta usa o mesmo telefone como fator e como único canal de recuperação, crie uma alternativa antes da troca.</p>
-
-        <h2>Quando parar e pedir suporte</h2>
-        <p>Não continue tentando se você só possui uma sessão ainda aberta e não tem código de recuperação, se a conta é administrativa de empresa, se existem sinais de invasão ou se o serviço exige remoção do único autenticador antes de cadastrar outro. Nesses cenários, preserve a sessão válida e siga o fluxo oficial de recuperação do provedor. Para contas de trabalho, registre a mudança e envolva quem administra identidade e acessos.</p>
-
-        <h2>Checklist final</h2>
-        <ul>
-          <li>Senha exclusiva e não compartilhada.</li>
-          <li>MFA ativado no e-mail e nas contas críticas.</li>
-          <li>Método resistente a phishing usado quando disponível.</li>
-          <li>Método ou dispositivo reserva cadastrado.</li>
-          <li>Códigos de recuperação guardados fora da própria conta.</li>
-          <li>Sessões e dispositivos desconhecidos removidos.</li>
-          <li>Teste de login concluído antes de apagar o aparelho antigo.</li>
+          <li><strong>Bitdefender GravityZone</strong> ou <strong>ESET Protect</strong> — antivírus + EDR centralizado</li>
+          <li><strong>pfSense</strong> ou <strong>OPNsense</strong> — firewall corporativo open source</li>
+          <li><strong>Bitwarden Business</strong> — gerenciador de senhas com SSO e auditoria</li>
+          <li><strong>Veeam Backup</strong> ou <strong>Acronis</strong> — backup empresarial com replicação</li>
+          <li><strong>Wazuh</strong> — SIEM open source para correlação de logs</li>
+          <li><strong>Cloudflare</strong> — proteção DDoS e WAF para sites e aplicações</li>
+          <li><strong>YubiKey</strong> ou <strong>Authy</strong> — 2FA físico e em apps</li>
         </ul>
 
-        <p>Autenticação multifator é uma camada, não um substituto para atualização, backup e cuidado com links. Para organizar as demais camadas, consulte o <Link to="/guia-tecnico-informatica#tema-seguranca-privacidade" className="text-accent">Atlas de segurança e privacidade</Link>.</p>
-        <EditorialReferences slug="como-configurar-2fa-em-tudo" />
+        <h2>Erros Comuns Que Geram Vulnerabilidade</h2>
+        <p>Os ataques bem-sucedidos quase sempre exploram falhas conhecidas e evitáveis.</p>
+        <ul>
+          <li><strong>Senha "12345678"</strong> ou similar em conta administrativa</li>
+          <li><strong>Reutilizar senha</strong> entre serviços pessoais e corporativos</li>
+          <li><strong>Adiar atualizações</strong> de SO e aplicativos por meses ou anos</li>
+          <li><strong>Antivírus expirado</strong> sem que o usuário perceba</li>
+          <li><strong>Backup que nunca é testado</strong> — descobrir que não funciona depois do incidente</li>
+          <li><strong>Compartilhar credenciais</strong> entre funcionários por WhatsApp</li>
+          <li><strong>Acesso remoto direto via RDP</strong> sem VPN</li>
+          <li><strong>Wi-Fi corporativo</strong> com senha conhecida por todos os funcionários, terceiros e clientes</li>
+        </ul>
+
+        <h2>Resposta a Incidentes</h2>
+        <p>Cedo ou tarde, algo vai dar errado. Ter um plano definido é diferença entre incidente controlado e desastre.</p>
+        <ol>
+          <li><strong>Detecção</strong> — usuário relata, alerta de monitoramento dispara, antivírus bloqueia</li>
+          <li><strong>Contenção</strong> — desconectar máquinas afetadas da rede imediatamente</li>
+          <li><strong>Erradicação</strong> — remover malware, fechar vetor de entrada, trocar credenciais comprometidas</li>
+          <li><strong>Recuperação</strong> — restaurar de backup limpo, validar integridade antes de voltar à produção</li>
+          <li><strong>Lições aprendidas</strong> — documentar o que aconteceu, ajustar processos para evitar recorrência</li>
+        </ol>
+        <p><strong>Nunca pague resgate de ransomware sem consultar especialista.</strong> Pagar não garante recuperação dos dados e marca sua empresa como alvo fácil para futuras extorsões.</p>
+
+        <h2>Conformidade e LGPD</h2>
+        <p>Empresas que tratam dados pessoais têm obrigações legais. A LGPD não é opcional, e multas chegam a 2% do faturamento limitado a R$ 50 milhões por infração.</p>
+        <ul>
+          <li><strong>Mapeamento de dados pessoais</strong> coletados e tratados</li>
+          <li><strong>Base legal documentada</strong> para cada tratamento</li>
+          <li><strong>Política de privacidade</strong> clara e acessível</li>
+          <li><strong>Encarregado de proteção de dados</strong> (DPO) designado</li>
+          <li><strong>Plano de resposta a incidentes</strong> que inclua notificação à ANPD em até 48h</li>
+          <li><strong>Direitos dos titulares</strong> implementados (acesso, correção, exclusão)</li>
+        </ul>
+
+        <h2>Suporte em Segurança em Curitiba</h2>
+        <p>A <strong>{BRAND_NAME}</strong> oferece consultoria e implementação de segurança digital para empresas em Curitiba e região metropolitana. Auditoria, hardening, configuração de firewall, implementação de backup, treinamento de usuários e resposta a incidentes. Atendemos Curitiba, São José dos Pinhais, Pinhais, Colombo, Almirante Tamandaré, Araucária, Campo Largo, Campo Magro, Piraquara, Quatro Barras e Fazenda Rio Grande com técnicos certificados em segurança ofensiva e defensiva.</p>
+
       </>
     ),
   },
@@ -9311,130 +9577,90 @@ crontab -e
   },
 
   "como-recuperar-conta-hackeada": {
-    title: "Como Recuperar Conta Hackeada: Procedimento de Emergência",
-    excerpt: "Passo a passo profissional para recuperar contas de Gmail, Instagram, WhatsApp e bancos comprometidas.",
-    date: "2026-04-20",
-    readTime: "10 min",
-    category: "Segurança e Redes",
+    title: "Conta hackeada: como recuperar acesso e fechar as portas usadas pelo invasor",
+    excerpt:
+      "Procedimento seguro para conta comprometida: usar recuperação oficial, revisar sessões e dados de segurança, trocar senha, ativar MFA e proteger o e-mail principal.",
+    date: "2026-09-25",
+    readTime: "11 min",
+    category: "Segurança",
     content: (
       <>
-        <p className="lead">Segurança digital deixou de ser problema só de grandes corporações. Em 2026, ataques cibernéticos atingem desde pessoas comuns até pequenas empresas em Curitiba todos os dias. Este guia técnico mostra como recuperar conta hackeada de forma profissional e eficaz.</p>
+        <p className="lead">Se uma conta foi invadida, trocar a senha é importante, mas pode não ser suficiente. O invasor pode ter criado sessão persistente, alterado telefone/e-mail de recuperação, adicionado regra de encaminhamento ou obtido acesso ao dispositivo usado para entrar. A recuperação precisa seguir o canal oficial do provedor e depois revisar como a conta foi mantida acessível.</p>
 
-        <h2>Cenário de Ameaças em 2026</h2>
-        <p>O custo médio de um incidente de segurança para pequenas empresas brasileiras passou de R$ 80 mil em 2025, segundo levantamentos do setor. Os ataques mais comuns que vemos no atendimento técnico em Curitiba:</p>
-        <ul>
-          <li><strong>Ransomware</strong> — criptografia dos arquivos e cobrança de resgate (R$ 5 mil a R$ 500 mil)</li>
-          <li><strong>Phishing direcionado</strong> — e-mails personalizados que enganam até usuários experientes</li>
-          <li><strong>Engenharia social</strong> — ligações se passando por banco, suporte técnico ou parceiro</li>
-          <li><strong>Invasão por credenciais vazadas</strong> — senhas reutilizadas em sites comprometidos</li>
-          <li><strong>Ataques a roteadores domésticos</strong> — captura de tráfego e redirecionamento DNS</li>
-          <li><strong>Sequestro de WhatsApp Business</strong> — uso da conta para golpes contra clientes</li>
-        </ul>
-
-        <h2>Princípios Fundamentais de Segurança</h2>
-        <p>Antes de ferramentas e configurações, internalize os princípios. Eles guiam toda decisão de segurança.</p>
-        <ul>
-          <li><strong>Defesa em profundidade</strong> — múltiplas camadas, nunca dependa de uma única proteção</li>
-          <li><strong>Princípio do menor privilégio</strong> — cada usuário e processo só tem acesso ao mínimo necessário</li>
-          <li><strong>Zero Trust</strong> — nunca confie automaticamente, verifique sempre, mesmo dentro da rede</li>
-          <li><strong>Segregação de funções</strong> — quem aprova não é quem executa, quem audita não é quem opera</li>
-          <li><strong>Backup imune</strong> — pelo menos uma cópia offline ou imutável, fora do alcance de ransomware</li>
-          <li><strong>Atualização contínua</strong> — vulnerabilidades conhecidas são as mais exploradas</li>
-        </ul>
-
-        <h2>Avaliação de Riscos Inicial</h2>
-        <p>Não é possível proteger o que você não conhece. O primeiro passo é mapear sua infraestrutura.</p>
-        <p>Faça um inventário completo:</p>
-        <ul>
-          <li>Quais dispositivos estão conectados à rede (computadores, celulares, IoT, impressoras)</li>
-          <li>Quais sistemas e aplicativos são usados (sistemas internos, SaaS, e-mail)</li>
-          <li>Quais dados são tratados (cadastros, financeiro, saúde, propriedade intelectual)</li>
-          <li>Quem tem acesso a quê (usuários, fornecedores, parceiros)</li>
-          <li>Onde estão os backups e qual a frequência</li>
-          <li>Quais ferramentas de segurança já estão em uso</li>
-        </ul>
-        <p>Esse mapeamento revela vulnerabilidades óbvias que muitas vezes passam despercebidas — como aquela impressora que ninguém mais usa mas continua acessível pela rede.</p>
-
-        <h2>Configuração Técnica Recomendada</h2>
-        <p>Com o mapeamento em mãos, parta para a configuração técnica. As recomendações abaixo são baseline mínimo para qualquer ambiente profissional.</p>
-        <ul>
-          <li><strong>Firewall configurado</strong> — bloqueia portas não usadas, limita acesso externo a serviços essenciais</li>
-          <li><strong>Antivírus em todos os endpoints</strong> — Bitdefender, ESET ou Kaspersky em versão corporativa</li>
-          <li><strong>Patch management</strong> — atualizações de SO e aplicativos aplicadas em até 30 dias da liberação</li>
-          <li><strong>EDR (Endpoint Detection and Response)</strong> — para detectar ataques que escapam do antivírus tradicional</li>
-          <li><strong>VPN para acesso remoto</strong> — nada de RDP exposto direto na internet</li>
-          <li><strong>2FA em todos os serviços críticos</strong> — e-mail, ERP, painel administrativo, redes sociais corporativas</li>
-          <li><strong>Logs centralizados</strong> — pelo menos 90 dias de retenção para investigação de incidentes</li>
-        </ul>
-
-        <h2>Procedimento Detalhado de Implementação</h2>
-        <p>Vamos ao passo a passo prático. Adapte ao seu ambiente, mas siga a ordem — pular etapas deixa brechas.</p>
+        <h2>Resposta curta: a ordem de emergência</h2>
         <ol>
-          <li><strong>Inventário e classificação</strong> — saiba o que precisa proteger e qual a criticidade de cada ativo</li>
-          <li><strong>Hardening de senhas</strong> — gerenciador de senhas (Bitwarden, 1Password) para todos os usuários</li>
-          <li><strong>2FA universal</strong> — comece pelo e-mail (porta de entrada para tudo), depois bancos, redes sociais e sistemas internos</li>
-          <li><strong>Firewall e segmentação</strong> — separe rede de visitantes, IoT e produção</li>
-          <li><strong>Backup 3-2-1</strong> — 3 cópias, 2 mídias diferentes, 1 offsite</li>
-          <li><strong>Atualizações automáticas</strong> — configure janela de manutenção e aplique patches</li>
-          <li><strong>Treinamento de usuários</strong> — phishing é o vetor #1, e usuário treinado é a melhor defesa</li>
-          <li><strong>Monitoramento contínuo</strong> — logs revisados periodicamente, alertas configurados para anomalias</li>
-          <li><strong>Plano de resposta a incidentes</strong> — quem chamar, o que fazer, como comunicar quando algo der errado</li>
-          <li><strong>Auditoria periódica</strong> — pentest anual e revisão de configurações trimestral</li>
+          <li>Use um dispositivo confiável e abra o site/app oficial do provedor.</li>
+          <li>Se não consegue entrar, use o fluxo oficial de recuperação — não “suporte” recebido por mensagem.</li>
+          <li>Se ainda entra, altere a senha para uma exclusiva e encerre sessões/dispositivos desconhecidos.</li>
+          <li>Revise e-mail, telefone, chaves/passkeys, aplicativos conectados e regras de encaminhamento.</li>
+          <li>Ative MFA com método forte e gere códigos de recuperação.</li>
+          <li>Proteja primeiro o e-mail principal, porque ele costuma redefinir outras contas.</li>
         </ol>
 
-        <h2>Ferramentas Recomendadas</h2>
-        <p>Mercado de segurança tem centenas de ferramentas. Para o cenário típico de SMB em Curitiba, essa stack cobre o essencial:</p>
+        <h2>1. Pare de usar links enviados pelo suposto suporte</h2>
+        <p>Golpistas frequentemente aparecem logo depois do incidente oferecendo recuperação. Digite o endereço do serviço ou abra o aplicativo instalado. Google e Microsoft orientam usar suas próprias páginas de recuperação quando alguém altera senha, telefone ou outras informações da conta.</p>
+        <p>Nunca entregue código de verificação, código de recuperação ou aprovação de MFA a uma pessoa por telefone, chat ou mensagem. Esses códigos existem para provar que <em>você</em> está entrando.</p>
+
+        <h2>2. Se você ainda consegue entrar</h2>
+        <p>Não saia imediatamente da única sessão válida antes de conferir os meios de recuperação. Em uma sessão confiável:</p>
         <ul>
-          <li><strong>Bitdefender GravityZone</strong> ou <strong>ESET Protect</strong> — antivírus + EDR centralizado</li>
-          <li><strong>pfSense</strong> ou <strong>OPNsense</strong> — firewall corporativo open source</li>
-          <li><strong>Bitwarden Business</strong> — gerenciador de senhas com SSO e auditoria</li>
-          <li><strong>Veeam Backup</strong> ou <strong>Acronis</strong> — backup empresarial com replicação</li>
-          <li><strong>Wazuh</strong> — SIEM open source para correlação de logs</li>
-          <li><strong>Cloudflare</strong> — proteção DDoS e WAF para sites e aplicações</li>
-          <li><strong>YubiKey</strong> ou <strong>Authy</strong> — 2FA físico e em apps</li>
+          <li>Troque a senha por uma nova, exclusiva e não usada em outro serviço.</li>
+          <li>Revise dispositivos/sessões e encerre os que você não reconhece.</li>
+          <li>Confira telefone e e-mail de recuperação.</li>
+          <li>Remova aplicativos, extensões ou acessos de terceiros desconhecidos.</li>
+          <li>Revise métodos de autenticação e chaves/passkeys adicionadas recentemente.</li>
+          <li>No e-mail, procure encaminhamentos, filtros, respostas automáticas e endereços delegados.</li>
         </ul>
 
-        <h2>Erros Comuns Que Geram Vulnerabilidade</h2>
-        <p>Os ataques bem-sucedidos quase sempre exploram falhas conhecidas e evitáveis.</p>
+        <h2>3. Se você não consegue mais entrar</h2>
+        <p>Use o fluxo oficial do provedor. O Google orienta responder às perguntas de recuperação da melhor forma possível e usar o processo específico para conta comprometida. A Microsoft oferece um auxiliar de entrada e formulário de recuperação conforme o estado da conta. Não existe atalho legítimo em que um terceiro “puxa” sua senha do servidor.</p>
+        <p>Faça a tentativa em dispositivo, navegador e localização que você já usava com a conta quando possível; provedores podem usar sinais de histórico para avaliar a recuperação.</p>
+
+        <h2>4. Proteja o dispositivo antes de redefinir tudo</h2>
+        <p>Se existe chance de malware, extensão maliciosa ou software de acesso remoto no computador, corrija o dispositivo antes de confiar uma senha nova a ele. A Microsoft recomenda verificar malware antes de alterar a senha de uma conta comprometida. Atualize o sistema, remova software suspeito e faça uma verificação de segurança.</p>
+        <p>Em celular, revise aplicativos instalados, permissões administrativas/acessibilidade e atualizações. Se o incidente começou depois de instalar APK/app fora da loja oficial, trate o dispositivo como potencialmente comprometido até revisar.</p>
+
+        <h2>5. O e-mail principal tem prioridade</h2>
+        <p>Se a mesma pessoa obteve seu e-mail, ela pode solicitar redefinição de senha de redes sociais, lojas e outros serviços. Recupere e proteja o e-mail antes ou em paralelo às contas dependentes. Depois pesquise mensagens de “senha alterada”, “novo login” e “dados de recuperação modificados” para mapear o alcance do incidente.</p>
+
+        <h2>6. Revise sessões, não só a senha</h2>
+        <p>Trocar senha nem sempre invalida automaticamente todos os tokens/sessões em todos os produtos. Use a opção do provedor para revisar dispositivos e sessões ativas e encerre acessos desconhecidos. Em contas corporativas, peça ao administrador para revogar sessões/tokens pelo console de identidade.</p>
+
+        <h2>7. Ative MFA e prepare recuperação</h2>
+        <p>Depois de recuperar controle, ative autenticação multifator. Prefira métodos resistentes a phishing quando disponíveis e guarde códigos de recuperação em local separado da conta. Não dependa do mesmo celular como único fator e único canal de recuperação. O passo a passo está em <Link to="/blog/como-configurar-2fa-em-tudo" className="text-accent">como configurar 2FA/MFA</Link>.</p>
+
+        <h2>8. Se houve fraude financeira ou uso da conta contra terceiros</h2>
+        <p>Contate diretamente a instituição financeira ou plataforma pelo canal oficial, preserve comprovantes e registre o ocorrido. Avise contatos quando o invasor enviou mensagens em seu nome para que não façam pagamentos ou entreguem códigos. Não apague evidências importantes antes de registrar datas, mensagens e alertas de login.</p>
+
+        <h2>9. O que não fazer</h2>
         <ul>
-          <li><strong>Senha "12345678"</strong> ou similar em conta administrativa</li>
-          <li><strong>Reutilizar senha</strong> entre serviços pessoais e corporativos</li>
-          <li><strong>Adiar atualizações</strong> de SO e aplicativos por meses ou anos</li>
-          <li><strong>Antivírus expirado</strong> sem que o usuário perceba</li>
-          <li><strong>Backup que nunca é testado</strong> — descobrir que não funciona depois do incidente</li>
-          <li><strong>Compartilhar credenciais</strong> entre funcionários por WhatsApp</li>
-          <li><strong>Acesso remoto direto via RDP</strong> sem VPN</li>
-          <li><strong>Wi-Fi corporativo</strong> com senha conhecida por todos os funcionários, terceiros e clientes</li>
+          <li>Não pague alguém que promete “hackear de volta” sua conta.</li>
+          <li>Não envie documento ou selfie a páginas não oficiais.</li>
+          <li>Não reutilize a nova senha em outras contas.</li>
+          <li>Não aprove solicitações de MFA que você não iniciou.</li>
+          <li>Não apague a única sessão válida antes de revisar recuperação, salvo risco claro de dispositivo comprometido.</li>
         </ul>
 
-        <h2>Resposta a Incidentes</h2>
-        <p>Cedo ou tarde, algo vai dar errado. Ter um plano definido é diferença entre incidente controlado e desastre.</p>
-        <ol>
-          <li><strong>Detecção</strong> — usuário relata, alerta de monitoramento dispara, antivírus bloqueia</li>
-          <li><strong>Contenção</strong> — desconectar máquinas afetadas da rede imediatamente</li>
-          <li><strong>Erradicação</strong> — remover malware, fechar vetor de entrada, trocar credenciais comprometidas</li>
-          <li><strong>Recuperação</strong> — restaurar de backup limpo, validar integridade antes de voltar à produção</li>
-          <li><strong>Lições aprendidas</strong> — documentar o que aconteceu, ajustar processos para evitar recorrência</li>
-        </ol>
-        <p><strong>Nunca pague resgate de ransomware sem consultar especialista.</strong> Pagar não garante recuperação dos dados e marca sua empresa como alvo fácil para futuras extorsões.</p>
-
-        <h2>Conformidade e LGPD</h2>
-        <p>Empresas que tratam dados pessoais têm obrigações legais. A LGPD não é opcional, e multas chegam a 2% do faturamento limitado a R$ 50 milhões por infração.</p>
+        <h2>Checklist pós-recuperação</h2>
         <ul>
-          <li><strong>Mapeamento de dados pessoais</strong> coletados e tratados</li>
-          <li><strong>Base legal documentada</strong> para cada tratamento</li>
-          <li><strong>Política de privacidade</strong> clara e acessível</li>
-          <li><strong>Encarregado de proteção de dados</strong> (DPO) designado</li>
-          <li><strong>Plano de resposta a incidentes</strong> que inclua notificação à ANPD em até 48h</li>
-          <li><strong>Direitos dos titulares</strong> implementados (acesso, correção, exclusão)</li>
+          <li>Senha exclusiva alterada.</li>
+          <li>E-mail e telefone de recuperação conferidos.</li>
+          <li>Sessões/dispositivos desconhecidos removidos.</li>
+          <li>Apps conectados e encaminhamentos revisados.</li>
+          <li>MFA ativado e códigos de recuperação guardados.</li>
+          <li>Outras contas que reutilizavam a senha também corrigidas.</li>
+          <li>Dispositivo verificado e atualizado.</li>
         </ul>
 
-        <h2>Suporte em Segurança em Curitiba</h2>
-        <p>A <strong>{BRAND_NAME}</strong> oferece consultoria e implementação de segurança digital para empresas em Curitiba e região metropolitana. Auditoria, hardening, configuração de firewall, implementação de backup, treinamento de usuários e resposta a incidentes. Atendemos Curitiba, São José dos Pinhais, Pinhais, Colombo, Almirante Tamandaré, Araucária, Campo Largo, Campo Magro, Piraquara, Quatro Barras e Fazenda Rio Grande com técnicos certificados em segurança ofensiva e defensiva.</p>
+        <h2>Quando parar e usar apenas o provedor</h2>
+        <p>Se a conta está bloqueada, se o provedor exige verificação de identidade ou se você perdeu todos os fatores, use somente o processo oficial. Um técnico pode ajudar a proteger o dispositivo e organizar evidências, mas não pode ignorar os controles de identidade do Google, Microsoft, Meta, banco ou outra plataforma.</p>
 
+        <p>Para reduzir recorrência, continue com <Link to="/blog/como-proteger-computador-golpes-internet" className="text-accent">proteção contra golpes e phishing</Link> e o <Link to="/guia-tecnico-informatica#tema-seguranca-privacidade" className="text-accent">Atlas de segurança</Link>.</p>
+        <EditorialReferences slug="como-recuperar-conta-hackeada" />
       </>
     ),
   },
+
   "como-deixar-windows-11-mais-rapido-iniciantes": {
     title: "Como Deixar o Windows 11 Mais Rápido em 2026: Guia Passo a Passo (Curitiba)",
     excerpt: "PC lento em Curitiba? Aprenda como acelerar o Windows 11 com 5 passos simples — sem instalar nada e sem risco de quebrar o computador.",
@@ -9891,73 +10117,57 @@ crontab -e
     ),
   },
   "como-deixar-celular-android-mais-rapido": {
-    title: "Celular Android lento: diagnóstico antes de instalar app de limpeza",
-    excerpt:
-      "O que verificar quando o Android fica lento: espaço livre, atualização, app problemático, cache, bateria e limites do hardware — sem promessas de acelerador milagroso.",
-    date: "2026-09-25",
+    title: "Celular Android lento: o que realmente testar antes de instalar um app de limpeza",
+    excerpt: "Apps de limpeza não consertam todo tipo de lentidão. Veja como separar falta de espaço, aplicativo com falha, atualização pendente e limite do aparelho sem apagar dados por impulso.",
+    date: "2026-08-31",
     readTime: "10 min",
     category: "Celular e aplicativos",
     content: (
       <>
-        <p className="lead">Celular Android lento não é diagnóstico: pode ser armazenamento quase cheio, aplicativo travado, atualização pendente, sincronização intensa, aquecimento ou simplesmente hardware que já não acompanha a carga atual. A orientação oficial do Android é testar uma causa por vez e verificar o resultado depois de cada etapa — exatamente o oposto de instalar vários “limpadores” ao mesmo tempo.</p>
+        <p className="lead">Celular lento não é sinônimo de “celular sujo”. Muitas vezes o problema é pouco espaço, um único aplicativo com falha, atualização pendente, bateria desgastada ou simplesmente o limite do hardware. Um limpador genérico não diagnostica essas causas — e pode pedir permissões desnecessárias. Comece pelo sintoma e por ajustes reversíveis.</p>
 
-        <h2>Resposta curta</h2>
-        <p>Reinicie, confira espaço livre, atualize sistema e aplicativos, identifique se a lentidão acontece em um app específico e remova o que você não usa. Limpar cache pode ajudar um aplicativo com dados temporários problemáticos; limpar armazenamento/dados é diferente e pode apagar informações do app. Se o aparelho continua lento mesmo em tarefas básicas, investigue bateria, temperatura e limite do hardware antes de resetar.</p>
+        <h2>Veredito técnico: app de limpeza não cria desempenho</h2>
+        <p>Limpar arquivos temporários pode resolver um aplicativo que abriu dados corrompidos ou liberar algum espaço. Isso não amplia a memória RAM, não repara bateria, não melhora sinal de internet e não substitui atualização do sistema. Evite apps que prometem “turbo”, limpeza de RAM contínua, economia milagrosa ou que exigem acesso amplo a arquivos e acessibilidade sem explicar por quê.</p>
 
-        <h2>1. Descubra se o problema é do celular ou da internet</h2>
-        <p>Se só páginas, vídeos ou mensagens demoram, faça um teste simples: abra uma função que não depende da rede, como Configurações, câmera ou galeria local. Se esses menus respondem normalmente e apenas conteúdo online atrasa, o gargalo pode estar na conexão. O guia de <Link to="/blog/internet-lenta-provedor-ou-roteador" className="text-accent">internet lenta: provedor ou roteador</Link> ajuda a separar as camadas.</p>
+        <h2>Primeiro, descubra qual lentidão está acontecendo</h2>
+        <div className="not-prose my-8 overflow-x-auto rounded-xl border border-border">
+          <table className="w-full min-w-[620px] text-left text-sm">
+            <thead className="bg-muted/60"><tr><th className="p-3">Sintoma</th><th className="p-3">Teste seguro</th><th className="p-3">Próximo passo</th></tr></thead>
+            <tbody className="divide-y divide-border text-muted-foreground">
+              <tr><td className="p-3">Tudo demora e o armazenamento está quase cheio</td><td className="p-3">Veja o uso por fotos, vídeos, downloads e apps</td><td className="p-3">Libere espaço de itens conferidos; não apague por lote.</td></tr>
+              <tr><td className="p-3">Só um app trava ou fecha</td><td className="p-3">Atualize o app e teste novamente</td><td className="p-3">Limpe apenas o cache dele; se persistir, procure suporte do desenvolvedor.</td></tr>
+              <tr><td className="p-3">O aparelho aquece e fica lento em vários apps</td><td className="p-3">Pare o uso pesado, retire da carga e deixe resfriar</td><td className="p-3">Investigue bateria, carregador e aplicativos em segundo plano; não force uso aquecido.</td></tr>
+              <tr><td className="p-3">Ficou lento depois de instalar um app</td><td className="p-3">Desinstale o app recente e observe por um dia</td><td className="p-3">Reinstale apenas se ele for confiável e o problema não voltar.</td></tr>
+            </tbody>
+          </table>
+        </div>
 
-        <h2>2. Verifique o armazenamento disponível</h2>
-        <p>O suporte oficial do Android alerta que o smartphone pode apresentar problemas quando há menos de aproximadamente 10% de armazenamento livre. Abra Configurações → Armazenamento e observe quais categorias ocupam espaço. Vídeos baixados, mídia de mensageiros e pastas de câmera costumam crescer sem serem percebidos.</p>
-        <p>Libere espaço com uma ordem segura: apague downloads que você reconhece, mova fotos/vídeos já copiados, desinstale apps sem uso e considere o recurso de arquivamento quando disponível. Não instale um “otimizador” só para apagar arquivos que o próprio sistema já consegue mostrar.</p>
+        <h2>O que libera espaço sem recorrer a limpador</h2>
+        <ol>
+          <li><strong>Revise Downloads e mídia repetida.</strong> Abra os arquivos antes de excluir e confirme se fotos importantes já possuem uma cópia acessível.</li>
+          <li><strong>Desinstale o que não usa.</strong> Pela Play Store ou pelas configurações, remova apps que não têm função atual. Quando disponível, arquivar app pouco usado reduz espaço ocupado sem tratar isso como backup.</li>
+          <li><strong>Verifique o armazenamento de apps grandes.</strong> Mensageiros, navegadores e serviços de vídeo acumulam arquivos baixados. Prefira as ferramentas internas do próprio app para identificar mídia e downloads.</li>
+          <li><strong>Atualize sistema e aplicativos.</strong> Correções podem resolver falhas de um aplicativo específico; atualize com bateria suficiente e conexão confiável.</li>
+        </ol>
 
-        <h2>3. Atualize sistema e aplicativos</h2>
-        <p>Atualizações corrigem falhas e incompatibilidades, mas também podem iniciar tarefas de otimização logo depois da instalação. Verifique atualizações do Android fornecidas pelo fabricante e, na Play Store, atualize aplicativos importantes. Depois reinicie e observe o aparelho por algum tempo antes de concluir que a atualização piorou o desempenho.</p>
+        <h2>Cache e dados: não são o mesmo botão</h2>
+        <p>Cache é conteúdo temporário usado para abrir partes de um app mais rápido. Limpar cache pode ajudar em uma falha pontual e normalmente não equivale a apagar sua conta. Já “limpar dados” ou “limpar armazenamento” pode remover configurações, sessões e arquivos mantidos pelo aplicativo. Antes de tocar nesse segundo botão, confirme que você sabe entrar novamente e que os dados importantes estão sincronizados ou copiados.</p>
 
-        <h2>4. Um app específico está deixando tudo lento?</h2>
-        <p>Se a lentidão começou depois de instalar ou atualizar um aplicativo, compare o comportamento com ele fechado. O Android recomenda investigar apps problemáticos individualmente. Force a parada apenas para teste, observe consumo de bateria/armazenamento e remova o aplicativo se o problema desaparecer e você não precisar dele.</p>
-        <p>Evite fechar todos os aplicativos compulsivamente como rotina. O sistema gerencia memória automaticamente; encerrar e reabrir tudo o tempo todo pode aumentar trabalho e consumo.</p>
+        <aside className="not-prose my-8 rounded-xl border border-amber-500/30 bg-amber-500/10 p-5 text-sm text-foreground">
+          <strong>Parada segura:</strong> não restaure o celular de fábrica para “testar se melhora” sem backup verificado. A restauração apaga dados locais e só deve entrar depois de identificar o problema, confirmar contas/chaves de acesso e testar alternativas reversíveis.
+        </aside>
 
-        <h2>5. Cache não é a mesma coisa que dados</h2>
-        <table>
-          <thead><tr><th>Ação</th><th>O que faz</th><th>Risco</th></tr></thead>
-          <tbody>
-            <tr><td>Limpar cache</td><td>Remove arquivos temporários do aplicativo</td><td>O app pode ficar mais lento na primeira abertura enquanto recria o cache</td></tr>
-            <tr><td>Limpar armazenamento/dados</td><td>Reinicia os dados locais do aplicativo</td><td>Pode remover login, configurações e conteúdo local</td></tr>
-            <tr><td>Desinstalar</td><td>Remove aplicativo e dados locais associados</td><td>Conteúdo não sincronizado pode ser perdido</td></tr>
-          </tbody>
-        </table>
-        <p>Antes de limpar dados, confirme se fotos, conversas, arquivos ou autenticação estão sincronizados/recuperáveis. “Limpar tudo” não é uma etapa de desempenho neutra.</p>
+        <h2>Quando o aplicativo não é a causa</h2>
+        <p>Se o aparelho perde carga rapidamente, desliga, aquece sem uso pesado, apresenta tela com defeito ou continua travando após espaço livre e atualização, a origem pode ser física. Não existe aplicativo capaz de recuperar capacidade de bateria, corrigir conector de carga ou compensar um componente em falha. Nesses casos, a decisão correta é preservar os dados e buscar uma avaliação do aparelho, em vez de instalar mais “otimizadores”.</p>
 
-        <h2>6. Observe temperatura e bateria</h2>
-        <p>Um aparelho muito quente pode reduzir desempenho para proteger os componentes. Tire a capa durante o teste, interrompa jogo/câmera/carregamento pesado e veja se a resposta melhora ao esfriar. Bateria degradada também pode acompanhar travamentos, desligamentos ou autonomia muito curta; procure diagnóstico quando houver estufamento, aquecimento anormal ou desligamento inesperado.</p>
-
-        <h2>7. Modo de segurança e teste por eliminação</h2>
-        <p>Em muitos fabricantes, o modo de segurança inicia o Android sem aplicativos de terceiros. O procedimento varia por marca; consulte a documentação do fabricante. Se o aparelho fica normal nesse modo, a evidência aponta para um app instalado. Reative o uso normal e remova os candidatos recentes um por vez, testando entre mudanças.</p>
-
-        <h2>8. Restaurar de fábrica é a última etapa</h2>
-        <p>Reset pode ajudar quando há configuração corrompida ou acúmulo de problemas de software, mas apaga o aparelho. Antes, confirme backup de fotos, arquivos, contatos, autenticação em duas etapas e códigos de recuperação. Depois da restauração, teste o aparelho antes de reinstalar todos os apps; se você recolocar tudo de uma vez, pode trazer o problema junto.</p>
-
-        <h2>O que costuma piorar</h2>
-        <ul>
-          <li>Instalar vários “RAM booster”, “battery saver” e “cleaner” desconhecidos.</li>
-          <li>Apagar pastas do sistema sem saber o que pertencem.</li>
-          <li>Limpar dados de mensageiro sem confirmar backup.</li>
-          <li>Ativar opções de desenvolvedor copiadas de vídeo como se fossem correção universal.</li>
-          <li>Resetar antes de testar espaço, apps e atualizações.</li>
-        </ul>
-
-        <h2>Quando o limite é o hardware</h2>
-        <p>Se o aparelho possui pouco armazenamento/memória para a versão atual dos aplicativos, permanece lento depois de uma restauração limpa e não há app específico causando o problema, o gargalo pode ser estrutural. Nesse cenário, repetir limpeza não cria capacidade nova. Compare o custo de bateria/reparo com a idade do aparelho e o uso necessário.</p>
-
-        <h2>Quando parar e procurar assistência</h2>
-        <p>Pare se houver bateria estufada, calor excessivo mesmo parado, desligamentos, falha de armazenamento, reinicialização em loop ou dados importantes sem backup. Lentidão deixa de ser problema de otimização quando existe risco físico ou de perda de dados.</p>
+        <h2>Resumo para decidir</h2>
+        <p>Comece observando espaço, atualizações e se o problema pertence a um app ou ao sistema inteiro. Limpe cache apenas quando houver motivo; não confunda com limpar dados. Remova apps sem uso, revise mídia com cuidado e mantenha uma cópia dos dados importantes. Se houver aquecimento, desligamentos ou falhas físicas, pare de tentar acelerar por software.</p>
 
         <EditorialReferences slug="como-deixar-celular-android-mais-rapido" />
+
       </>
     ),
   },
-
   "como-economizar-bateria-celular": {
     title: "Como Economizar Bateria do Celular: 12 Ajustes Reais (Android e iPhone 2026)",
     excerpt: "Bateria do celular acabando rápido? Aprenda como economizar bateria com 12 ajustes que dobram a autonomia — Android e iPhone.",
@@ -10615,48 +10825,81 @@ crontab -e
     ),
   },
   "como-configurar-repetidor-wifi": {
-    title: "Como Configurar Repetidor de Wi-Fi: Passo a Passo Simples (Guia 2026)",
-    excerpt: "Comprou um repetidor de Wi-Fi mas não sabe instalar? Aprenda como configurar em 10 minutos. Instalação profissional em Curitiba se preferir.",
-    date: "2026-04-29",
-    readTime: "6 min",
-    category: "Tutoriais Domésticos",
+    title: "Como configurar repetidor Wi-Fi sem piorar a rede: posição, WPS e teste",
+    excerpt:
+      "Guia prático para configurar um extensor Wi-Fi, escolher a posição correta, validar sinal e velocidade e saber quando repetidor deixa de ser a solução.",
+    date: "2026-09-25",
+    readTime: "10 min",
+    category: "Redes e Wi-Fi",
     content: (
       <>
-        <p className="lead">Repetidor estende o sinal do roteador para áreas que não pegam. A configuração é simples seguindo este guia.</p>
+        <p className="lead">Um repetidor não cria internet nova: ele recebe a rede sem fio existente e tenta retransmiti-la. Por isso a instalação começa pela posição. Se o extensor for colocado justamente onde o Wi-Fi original já chega muito fraco, ele terá pouco sinal de qualidade para repetir. O objetivo é encontrar um ponto intermediário em que o roteador ainda seja recebido de forma estável e, a partir dali, ampliar a cobertura.</p>
 
-        <h2>Onde Colocar o Repetidor</h2>
-        <p>O lugar certo é <strong>no meio do caminho</strong> entre o roteador e o lugar onde o sinal é fraco. Não adianta colocar onde você quer o sinal — coloque onde ainda tem sinal médio do roteador.</p>
+        <h2>Resposta curta</h2>
+        <p>Configure o repetidor próximo ao roteador, valide que ele entrou na rede correta e só depois leve-o ao ponto definitivo. Use WPS apenas se o roteador e o extensor suportarem o recurso e o fabricante orientar esse fluxo para os modelos envolvidos. Na configuração manual, use o endereço, aplicativo ou QR indicado na etiqueta/manual do próprio equipamento — não uma senha ou URL genérica encontrada em tutorial.</p>
 
-        <h2>Método 1: Botão WPS (Mais Fácil)</h2>
+        <h2>1. Antes de configurar, descubra se o problema é cobertura</h2>
+        <p>Teste a internet perto do roteador e depois no cômodo problemático. Se a conexão já está ruim ao lado do roteador, um repetidor apenas redistribui um problema existente. Nesse caso, verifique primeiro provedor, modem, roteador e interferência. O guia <Link to="/blog/internet-lenta-provedor-ou-roteador" className="text-accent">internet lenta: provedor ou roteador?</Link> mostra essa separação.</p>
+        <p>Se perto do roteador a rede funciona bem e perde qualidade com distância, paredes ou mudança de piso, aí existe um caso real de cobertura.</p>
+
+        <h2>2. Escolha a posição antes de pensar no nome da rede</h2>
+        <p>O melhor ponto costuma ficar entre o roteador e a área sem cobertura, mas não existe uma distância universal. Paredes, lajes, espelhos, móveis metálicos e redes vizinhas mudam bastante o resultado. Use o indicador de sinal do próprio extensor quando disponível e confirme na prática com um celular ou notebook.</p>
+        <ul>
+          <li>Evite esconder o repetidor atrás de TV, rack metálico ou dentro de armário fechado.</li>
+          <li>Prefira tomada livre e posição ventilada.</li>
+          <li>Não escolha o ponto definitivo apenas porque “fica no meio”: teste estabilidade naquele local.</li>
+          <li>Se houver dois andares, experimente posições próximas à circulação entre os pavimentos em vez de assumir que o sinal atravessará a laje bem.</li>
+        </ul>
+
+        <h2>3. Configuração por WPS</h2>
+        <p>Fabricantes como a TP-Link documentam WPS para modelos compatíveis: o extensor fica inicialmente próximo ao roteador, o WPS é acionado no roteador e depois no repetidor dentro da janela indicada pelo fabricante. Os LEDs confirmam quando a associação foi concluída. O procedimento exato varia por modelo, por isso consulte o manual da sua versão de hardware.</p>
         <ol>
-          <li>Plug o repetidor próximo ao roteador (perto, na primeira vez)</li>
-          <li>Espere 1 minuto</li>
-          <li>Aperte o botão <strong>WPS</strong> do roteador</li>
-          <li>Em até 2 minutos, aperte o botão <strong>WPS</strong> do repetidor</li>
-          <li>Espere a luz parar de piscar e ficar fixa</li>
-          <li>Mova o repetidor para o local definitivo</li>
+          <li>Ligue o extensor próximo ao roteador e aguarde inicialização completa.</li>
+          <li>Confirme no manual que os dois equipamentos suportam WPS para esse modo de operação.</li>
+          <li>Acione WPS no roteador e, em seguida, no extensor conforme a janela indicada.</li>
+          <li>Espere o indicador de conexão estabilizar antes de desligar ou mover o aparelho.</li>
+          <li>Leve o extensor ao ponto planejado e valide novamente o indicador de sinal.</li>
         </ol>
 
-        <h2>Método 2: Manual (Quando WPS Não Tem)</h2>
-        <ol>
-          <li>Plug o repetidor e conecte no Wi-Fi dele (nome aparece na etiqueta)</li>
-          <li>Acesse no navegador o endereço da etiqueta (ex: <strong>tplinkrepeater.net</strong>)</li>
-          <li>Faça login (admin geralmente)</li>
-          <li>Escolha sua rede Wi-Fi principal</li>
-          <li>Digite a senha</li>
-          <li>Defina o nome do Wi-Fi do repetidor (pode ser igual ou com '_EXT')</li>
-          <li>Salve e mova para o local</li>
-        </ol>
+        <h2>4. Configuração manual sem endereço inventado</h2>
+        <p>Quando WPS não está disponível ou você quer controlar SSID e banda, conecte-se à rede inicial do repetidor e use somente o endereço/app informado na etiqueta ou documentação oficial. Alguns modelos abrem um endereço local; outros dependem de aplicativo. Não presuma que “admin/admin” seja a credencial: equipamentos atuais frequentemente exigem a criação de senha administrativa no primeiro acesso.</p>
+        <p>Selecione a rede principal correta, informe a senha e defina o nome da rede estendida. Se o equipamento permite manter o mesmo SSID, isso simplifica a experiência, mas a troca entre pontos depende dos recursos do cliente e da arquitetura da rede; não há garantia de roaming perfeito apenas porque os nomes são iguais.</p>
 
-        <h2>Verificando se Funcionou</h2>
-        <p>Vá ao local com sinal fraco e veja se aparece a rede do repetidor. Conecte e teste velocidade. Se ainda fraco, mude o repetidor de lugar.</p>
+        <h2>5. 2,4 GHz e 5 GHz</h2>
+        <p>2,4 GHz normalmente alcança mais longe e atravessa obstáculos melhor, enquanto 5 GHz tende a oferecer mais capacidade em distâncias menores. Em repetidores dual band, confira se a ligação com o roteador e a rede entregue ao cliente estão nas bandas esperadas. Um extensor 5 GHz colocado longe demais pode perder o benefício de velocidade; um 2,4 GHz congestionado pode ter boa “barrinha” e desempenho ruim.</p>
 
-        <h2>Limites do Repetidor</h2>
-        <p>Repetidor reduz velocidade pela metade. Para casas grandes, sistema <strong>Mesh</strong> (vários pontos integrados) é muito superior. A O Técnico de Informática instala mesh em Curitiba e região com cobertura total.</p>
+        <h2>6. Como validar se ficou melhor</h2>
+        <table>
+          <thead><tr><th>Teste</th><th>O que observar</th></tr></thead>
+          <tbody>
+            <tr><td>Perto do roteador</td><td>Cria a referência de velocidade e latência da rede principal</td></tr>
+            <tr><td>No ponto do repetidor</td><td>Confirma que o extensor ainda recebe sinal estável do roteador</td></tr>
+            <tr><td>No cômodo alvo</td><td>Mostra se cobertura e estabilidade realmente melhoraram</td></tr>
+            <tr><td>Durante chamada/vídeo</td><td>Revela quedas e variações que um teste curto de velocidade pode não mostrar</td></tr>
+          </tbody>
+        </table>
+        <p>Compare antes e depois no mesmo aparelho e nos mesmos pontos. Não use apenas o número máximo do teste de velocidade; estabilidade e ausência de quedas importam tanto quanto pico de Mbps.</p>
 
+        <h2>7. Por que repetidor pode reduzir desempenho?</h2>
+        <p>Extensores que recebem e retransmitem pelo mesmo rádio precisam dividir tempo de transmissão. O impacto varia conforme projeto, banda, backhaul e condições do ambiente, então a regra “sempre cai exatamente pela metade” é simplificação demais. Em cenários com alta demanda, muitos dispositivos ou vários cômodos, um sistema mesh com backhaul adequado ou pontos de acesso cabeados tende a ser mais previsível.</p>
+
+        <h2>Quando repetidor não é a solução</h2>
+        <ul>
+          <li>O roteador principal já entrega internet ruim mesmo de perto.</li>
+          <li>O ponto onde o repetidor teria de ficar não recebe sinal estável.</li>
+          <li>Há vários andares ou áreas grandes que exigem múltiplos saltos.</li>
+          <li>Você precisa de baixa latência e estabilidade para trabalho, voz ou jogos.</li>
+          <li>Existe possibilidade de cabeamento Ethernet para pontos de acesso.</li>
+        </ul>
+
+        <h2>Quando parar e pedir diagnóstico</h2>
+        <p>Se o repetidor conecta mas perde a rede após algumas horas, se há conflito de DHCP/endereço, se a rede fica com nomes duplicados difíceis de identificar ou se você precisa de mais de um extensor em cascata, pare de adicionar equipamentos. Mapeie cobertura e topologia antes de continuar. Para projetos maiores, veja <Link to="/servicos/redes-e-wifi" className="text-accent">redes e Wi-Fi</Link> e o <Link to="/guia-tecnico-informatica#tema-redes-wifi" className="text-accent">Atlas de redes</Link>.</p>
+
+        <EditorialReferences slug="como-configurar-repetidor-wifi" />
       </>
     ),
   },
+
   "como-saber-quem-esta-usando-meu-wifi": {
     title: "Como saber quem está usando o seu Wi-Fi (e o que fazer)",
     excerpt: "Como listar os dispositivos conectados, identificar cada um pelo nome e pelo endereço físico e retomar o controle da rede sem quebrar o que funciona.",
