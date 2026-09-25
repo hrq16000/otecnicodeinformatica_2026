@@ -62,7 +62,7 @@ jobs:
           docker run --rm \
             -v "${{ github.workspace }}:/repo" \
             ghcr.io/gitleaks/gitleaks:v8.30.1 \
-            dir /repo --redact --no-banner --verbose
+            git /repo --redact --no-banner --verbose
 
       # 3) Static analysis on JS/TS.
       - name: Semgrep (OWASP/React rulesets)
