@@ -32,6 +32,7 @@ export type DiagnosticoIa = {
   motivo: string;
   verificacaoSegura: string;
   modalidade: "remoto" | "domicilio" | "coleta";
+  urgencia: "baixa" | "media" | "alta";
 };
 
 const Input = z.object({ descricao: z.string().trim().min(10).max(1200) });
@@ -56,12 +57,14 @@ export const sugerirServico = createServerFn({ method: "POST" })
           motivo: z.string(),
           verificacaoSegura: z.string(),
           modalidade: z.enum(["remoto", "domicilio", "coleta"]),
+          urgencia: z.enum(["baixa", "media", "alta"]),
         }),
       }),
       system:
         "Você é a triagem de O Técnico de Informática. Leia o sintoma descrito pelo visitante e escolha o serviço mais adequado da lista. " +
         "Responda em português do Brasil, tom humano e direto. 'motivo': até 2 frases explicando a escolha. " +
         "'verificacaoSegura': 1 verificação simples e segura que o próprio visitante pode fazer (nunca desativar antivírus, Secure Boot ou UAC; nunca abrir o equipamento). " +
+        "'urgencia': alta se há risco de perda de dados, cheiro de queimado, vírus/golpe ativo ou trabalho parado; media se o uso está prejudicado; baixa se é incômodo ou melhoria. " +
         "Não cite preços, prazos, garantias nem prometa resultado. Serviços: " +
         JSON.stringify(SERVICOS_IA),
       prompt: data.descricao,

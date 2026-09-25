@@ -22,6 +22,18 @@ export async function recordSubmission(payload: {
   ctaLocation?: string;
   waMessage: string;
 }): Promise<void> {
+  // Idempotência: ignora o mesmo envio repetido (clique duplo/recarregar) em 10 min.
+  try {
+    const assinatura = `${payload.sessionId}|${payload.equipamento}|${payload.sintoma}|${payload.waMessage.slice(0, 300)}`;
+    let h = 0;
+    for (let i = 0; i < assinatura.length; i++) h = (h * 31 + assinatura.charCodeAt(i)) | 0;
+    const chave = `funnel_sent_${h}`;
+    const anterior = Number(sessionStorage.getItem(chave) || 0);
+    if (Date.now() - anterior < 10 * 60 * 1000) return;
+    sessionStorage.setItem(chave, String(Date.now()));
+  } catch {
+    /* sem sessionStorage: segue com o envio */
+  }
   const sp = new URLSearchParams(typeof window !== "undefined" ? window.location.search : "");
   const utm = {
     utm_source: sp.get("utm_source") || undefined,
