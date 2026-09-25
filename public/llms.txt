@@ -169,6 +169,9 @@ cobramos execução que não tenha sido aprovada.
 - [Esqueceu a senha do Windows? Como recuperar o acesso pelos métodos oficiais](https://otecnicodeinformatica.com.br/blog/como-resetar-senha-windows)
 - [Como organizar arquivos no Windows 11 sem perder documentos: método prático](https://otecnicodeinformatica.com.br/blog/como-organizar-arquivos-windows-iniciantes)
 - [Como trocar a senha do Wi-Fi com segurança sem perder a configuração do roteador](https://otecnicodeinformatica.com.br/blog/como-trocar-senha-wifi)
+- [BIOS/UEFI: como configurar sem perder o boot, o BitLocker ou a estabilidade](https://otecnicodeinformatica.com.br/blog/como-configurar-bios-uefi-corretamente)
+- [Servidor de arquivos: como planejar SMB no Windows ou Samba sem expor dados](https://otecnicodeinformatica.com.br/blog/como-configurar-servidor-de-arquivos)
+- [UFW no Linux: firewall host sem se trancar fora do servidor](https://otecnicodeinformatica.com.br/blog/como-configurar-firewall-ufw-linux)
 
 ## Páginas institucionais e de política
 
