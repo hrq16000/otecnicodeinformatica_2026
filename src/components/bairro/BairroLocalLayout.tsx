@@ -190,6 +190,9 @@ export const BairroLocalLayout = ({ data }: { data: BairroLocalData }) => {
                 {data.h1}
               </h1>
               <p className="mt-5 max-w-2xl text-lg text-muted-foreground">{data.subtitulo}</p>
+              <p className="mt-4 max-w-3xl text-base leading-relaxed text-muted-foreground">
+                {data.introducaoLocal[0]}
+              </p>
               <div className="mt-8">
                 <a
                   href={waHref}
@@ -224,7 +227,7 @@ export const BairroLocalLayout = ({ data }: { data: BairroLocalData }) => {
                 Atendimento técnico {data.nomeLocativo}
               </h2>
               <div className="mt-5 space-y-4 text-muted-foreground">
-                {data.introducaoLocal.map((par, i) => (
+                {data.introducaoLocal.slice(1).map((par, i) => (
                   <p key={i}>{par}</p>
                 ))}
               </div>
