@@ -21,6 +21,50 @@ export interface AtlasPonteArtigo {
 }
 
 export const ATLAS_PONTES_ARTIGOS: Record<string, AtlasPonteArtigo> = {
+  "hd-nao-e-reconhecido-na-bios-o-que-fazer": {
+    temaId: "dados-backup",
+    porQue:
+      "Disco que some da BIOS não é só um problema de inicialização: pode envolver energia, conexão, controladora ou falha da própria mídia. O Atlas coloca preservação de dados antes de qualquer tentativa que escreva no disco.",
+    proximoPasso: {
+      rotulo: "SMART e setores defeituosos",
+      to: "/blog/disco-com-setores-defeituosos-smart-o-que-fazer",
+      contexto:
+        "Entenda quais sinais de saúde do disco ajudam a separar falha lógica de degradação física.",
+    },
+  },
+  "o-que-e-informatica": {
+    temaId: "fundamentos",
+    porQue:
+      "Entender o que é informática vem antes de escolher ferramenta, curso ou serviço. O Atlas organiza esse campo amplo em fundamentos, sistemas, hardware, redes, segurança, dados e decisões práticas, sem misturar definição com atendimento.",
+    proximoPasso: {
+      rotulo: "Informática básica",
+      to: "/blog/informatica-basica",
+      contexto:
+        "Transforme a definição geral em conceitos e habilidades que aparecem no uso diário do computador.",
+    },
+  },
+  "informatica-basica": {
+    temaId: "fundamentos",
+    porQue:
+      "Informática básica é a camada de vocabulário e operação que sustenta todo o restante: arquivos, sistema, programas, armazenamento e rede. O Atlas conecta esses fundamentos aos sintomas reais e às verificações seguras.",
+    proximoPasso: {
+      rotulo: "Como aprender informática",
+      to: "/blog/como-aprender-informatica",
+      contexto:
+        "Organize uma sequência de estudo em vez de acumular dicas isoladas.",
+    },
+  },
+  "como-aprender-informatica": {
+    temaId: "fundamentos",
+    porQue:
+      "Aprender informática fica mais eficiente quando o estudo segue uma ordem: conceito, uso, sintoma, verificação e decisão. O Atlas oferece essa estrutura e evita que a aprendizagem vire uma coleção de tutoriais desconectados.",
+    proximoPasso: {
+      rotulo: "Guia do técnico de informática",
+      to: "/guia-tecnico-informatica#profissao",
+      contexto:
+        "Veja como os fundamentos se relacionam com a atuação profissional, suporte e diagnóstico técnico.",
+    },
+  },
   "manutencao-preventiva-de-computador-guia-completo": {
     temaId: "manutencao-preventiva",
     porQue:

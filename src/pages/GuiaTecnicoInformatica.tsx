@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { Link } from "@/lib/router-compat";
-import { ArrowRight, CheckCircle2, MessageCircle, ShieldCheck, Wrench } from "lucide-react";
+import { ArrowRight, CheckCircle2, ExternalLink, MessageCircle, ShieldCheck, Wrench } from "lucide-react";
 import { PageSEO } from "@/components/PageSEO";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
@@ -21,9 +21,12 @@ import { ATLAS_GUIAS_DECISAO, ATLAS_REVISADO_EM, ATLAS_TEMAS } from "@/lib/atlas
 import { temPaginaDeDecisao } from "@/lib/guiasDecisao";
 
 const PATH = "/guia-tecnico-informatica";
-const TITLE = "Atlas de Informática: guia técnico de PC e notebook";
+const TITLE = "Técnico de Informática: o que faz e guia completo";
 const DESCRIPTION =
-  "Atlas de Informática: trilhas de fundamentos, Windows, hardware, redes, segurança, backup e decisões de compra e reparo, com verificações seguras por tema.";
+  "Técnico de informática ou técnico em informática: entenda o que faz, áreas de atuação, formação, problemas que resolve e quando buscar ajuda.";
+
+const MEC_CNCT_URL =
+  "https://www.gov.br/saude/pt-br/composicao/sgtes/diretrizes-para-formacao-tecnica-na-saude/publicacoes/catalogo-nacional-de-cursos-tecnicos.pdf/@@download/file";
 
 const WA_MESSAGE =
   "Olá! Vim do guia técnico de informática. Quero descrever meu problema para a triagem.";
@@ -77,6 +80,17 @@ const CHECKLIST = [
  * em uma verificação ou decisão. São atalhos editoriais, não novas intenções
  * nem novas URLs. */
 const PILARES_ESTUDO = [
+  {
+    id: "fundamentos",
+    titulo: "Fundamentos e carreira em informática",
+    resumo:
+      "Comece pela definição do campo, avance pelas noções básicas e depois organize uma trilha de aprendizado.",
+    links: [
+      ["O que é informática", "/blog/o-que-e-informatica"],
+      ["Informática básica", "/blog/informatica-basica"],
+      ["Como aprender informática", "/blog/como-aprender-informatica"],
+    ],
+  },
   {
     id: "windows",
     titulo: "Windows e inicialização",
@@ -149,6 +163,26 @@ const UPGRADES = [
 ];
 
 const FAQS = [
+  {
+    question: "O que faz um técnico em informática?",
+    answer:
+      "O técnico em informática atua com sistemas, equipamentos, redes e suporte ao usuário. O Catálogo Nacional de Cursos Técnicos do MEC inclui montagem, instalação e configuração de equipamentos, sistemas operacionais, aplicativos, manutenção preventiva e corretiva, conectividade, help desk e redes entre as competências da formação.",
+  },
+  {
+    question: "Técnico de informática e técnico em informática são a mesma coisa?",
+    answer:
+      "No uso cotidiano, as duas expressões costumam apontar para o mesmo campo profissional. “Técnico em Informática” é a denominação formal da habilitação técnica usada pelo MEC; “técnico de informática” é uma forma muito comum de procurar o profissional ou o serviço. Nesta página, as duas expressões são tratadas sem criar páginas duplicadas.",
+  },
+  {
+    question: "Técnico de informática é TI?",
+    answer:
+      "Sim. O trabalho do técnico em informática faz parte do campo de Tecnologia da Informação, mas TI é mais amplo e também inclui desenvolvimento de software, dados, segurança, nuvem, gestão, infraestrutura e outras especialidades.",
+  },
+  {
+    question: "Quanto tempo dura o curso técnico em informática?",
+    answer:
+      "O Catálogo Nacional de Cursos Técnicos do MEC informa carga horária mínima de 1.200 horas e duração média de cerca de um ano e meio para a habilitação Técnico em Informática. A organização concreta pode variar conforme a instituição e a modalidade do curso.",
+  },
   {
     question: "Como sei se o problema é de hardware ou de software?",
     answer:
@@ -265,6 +299,20 @@ const GuiaTecnicoInformatica = () => {
       description: DESCRIPTION,
       inLanguage: "pt-BR",
       isPartOf: { "@id": `${SITE_BASE_URL}/#website` },
+      about: [
+        { "@type": "Thing", name: "Técnico em Informática" },
+        { "@type": "Thing", name: "Técnico de Informática" },
+        { "@type": "Thing", name: "Tecnologia da Informação" },
+        { "@type": "Thing", name: "Manutenção de computadores" },
+        { "@type": "Thing", name: "Suporte técnico" },
+      ],
+      citation: [
+        {
+          "@type": "CreativeWork",
+          name: "Catálogo Nacional de Cursos Técnicos — Técnico em Informática",
+          url: MEC_CNCT_URL,
+        },
+      ],
       mainEntity: {
         "@type": "ItemList",
         name: "Temas do Atlas de Informática",
@@ -292,17 +340,17 @@ const GuiaTecnicoInformatica = () => {
       <section className="bg-[hsl(var(--hero-bg))] text-white">
         <div className="container mx-auto max-w-4xl px-4 py-8 sm:py-12 md:py-14">
           <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-accent-on-dark sm:mb-3 sm:text-sm">
-            Atlas de Informática · aprender antes de contratar
+            Técnico de informática · referência prática antes de contratar
           </p>
           <h1 className="mb-3 text-[1.7rem] font-bold leading-[1.12] sm:mb-4 sm:text-3xl md:text-4xl">
-            Atlas de Informática: aprenda, identifique e decida
+            Técnico de informática: o que faz, o que resolve e quando chamar
           </h1>
           <p className="mb-4 text-[0.95rem] leading-relaxed opacity-95 sm:mb-6 sm:text-base">
-            Este hub organiza o conhecimento técnico do portal em nove temas — de fundamentos a
-            decisões de compra e reparo. Cada tema segue a mesma trilha: aprender o fundamento,
-            identificar o sintoma, executar só verificações seguras, saber quando parar e escolher a
-            solução adequada. O atendimento aparece por último, de propósito: entender vem antes de
-            contratar.
+            Técnico de informática e técnico em informática são formas usadas para falar de um
+            profissional que atua com computadores, sistemas, redes e suporte. Esta página reúne a
+            definição da profissão, os problemas que esse profissional costuma investigar e um Atlas
+            técnico para estudar Windows, hardware, segurança, redes, dados e decisões de reparo sem
+            transformar informação em propaganda.
           </p>
           <Button asChild size="lg" className="min-h-14">
             <a href={waHref} onClick={cta("hero")} data-cta-location="guia_hero">
@@ -326,6 +374,7 @@ const GuiaTecnicoInformatica = () => {
         <PageTableOfContents
           className="mb-12"
           items={[
+            { id: "profissao", label: "O que faz um técnico de informática?" },
             { id: "atlas", label: "Trilhas por tema" },
             { id: "pilares", label: "Pilares de estudo" },
             { id: "guias-decisao", label: "Guias de decisão" },
@@ -341,6 +390,109 @@ const GuiaTecnicoInformatica = () => {
             { id: "faq", label: "Perguntas frequentes" },
           ]}
         />
+
+        <section
+          id="profissao"
+          className="mb-12 scroll-mt-24"
+          aria-labelledby="profissao-titulo"
+        >
+          <p className="mb-2 text-xs font-bold uppercase tracking-wide text-accent">
+            Entidade principal
+          </p>
+          <h2 id="profissao-titulo" className="text-2xl font-bold text-foreground">
+            O que faz um técnico de informática?
+          </h2>
+          <p className="mt-3 leading-relaxed text-muted-foreground">
+            Técnico de informática é o profissional procurado para instalar, configurar, manter e
+            diagnosticar computadores, sistemas, periféricos e redes. Na denominação formal da
+            formação profissional, o MEC usa <strong className="text-foreground">Técnico em Informática</strong>.
+            O Catálogo Nacional de Cursos Técnicos inclui montagem e configuração de equipamentos,
+            instalação de sistemas operacionais e aplicativos, manutenção preventiva e corretiva,
+            conectividade, atendimento help desk e redes de computadores.
+          </p>
+          <p className="mt-3 leading-relaxed text-muted-foreground">
+            Isso explica por que uma busca por “técnico de informática” mistura duas intenções:
+            pessoas querendo entender a profissão e pessoas procurando alguém para resolver um
+            problema. Este portal separa as duas coisas. O conteúdo nacional explica; as páginas
+            locais tratam atendimento em{" "}
+            <Link to="/tecnico-informatica-curitiba" className="font-semibold text-accent hover:underline">
+              Curitiba
+            </Link>{" "}
+            e{" "}
+            <Link
+              to="/tecnico-informatica-sao-jose-pinhais"
+              className="font-semibold text-accent hover:underline"
+            >
+              São José dos Pinhais
+            </Link>
+            .
+          </p>
+
+          <div className="mt-6 grid gap-4 md:grid-cols-2">
+            <article className="rounded-xl border border-border bg-card p-5">
+              <h3 className="font-heading text-base font-bold text-foreground">
+                Técnico de informática ou técnico em informática?
+              </h3>
+              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                As duas formas aparecem no uso real. “Técnico em Informática” é a nomenclatura da
+                habilitação técnica; “técnico de informática” é muito usada pelo público para
+                procurar o profissional e seus serviços. Aqui elas apontam para a mesma entidade,
+                sem criar páginas artificiais para cada variação de palavra-chave.
+              </p>
+            </article>
+            <article className="rounded-xl border border-border bg-card p-5">
+              <h3 className="font-heading text-base font-bold text-foreground">
+                Técnico de informática é TI?
+              </h3>
+              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                Sim. A atuação está dentro de Tecnologia da Informação, mas TI é um campo mais
+                amplo. Também engloba desenvolvimento, dados, segurança, nuvem, infraestrutura,
+                gestão e outras especialidades que não são sinônimo de manutenção de computadores.
+              </p>
+            </article>
+            <article className="rounded-xl border border-border bg-card p-5">
+              <h3 className="font-heading text-base font-bold text-foreground">
+                Curso técnico em informática: duração e escopo
+              </h3>
+              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                O catálogo nacional do MEC informa carga horária mínima de 1.200 horas e duração
+                média de cerca de um ano e meio para a habilitação. A estrutura pode variar entre
+                instituições e modalidades. “Informática para Internet” é outra habilitação, com
+                foco próprio, e não deve ser tratada como simples sinônimo.
+              </p>
+            </article>
+            <article className="rounded-xl border border-border bg-card p-5">
+              <h3 className="font-heading text-base font-bold text-foreground">
+                Quando a profissão vira assistência técnica?
+              </h3>
+              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                Quando o problema envolve diagnóstico, manutenção, configuração, rede, sistema ou
+                componente físico, parte dessas competências passa para a prática de suporte e
+                assistência. O sintoma ainda precisa ser investigado: “não liga”, “está lento” e
+                “a internet cai” descrevem comportamentos, não diagnósticos.
+              </p>
+            </article>
+          </div>
+
+          <div className="mt-5 rounded-xl border border-border bg-secondary/40 p-5">
+            <h3 className="font-heading text-sm font-bold text-foreground">Fonte primária da definição</h3>
+            <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+              A descrição de formação e competências acima foi conferida no Catálogo Nacional de
+              Cursos Técnicos, publicação oficial do MEC. A referência serve para delimitar a
+              profissão; os guias de diagnóstico do portal usam documentação técnica específica de
+              fabricantes e órgãos de segurança conforme cada assunto.
+            </p>
+            <a
+              href={MEC_CNCT_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-3 inline-flex items-center gap-1.5 text-sm font-semibold text-accent hover:underline"
+            >
+              Consultar o Catálogo Nacional de Cursos Técnicos
+              <ExternalLink className="h-4 w-4" aria-hidden="true" />
+            </a>
+          </div>
+        </section>
 
         <div className="mb-12">
           <AtlasTrilhas />
