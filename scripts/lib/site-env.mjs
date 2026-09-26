@@ -77,6 +77,8 @@ export const ADSENSE_PUBLISHER_ID = clean(env.ADSENSE_PUBLISHER_ID);
 export const LEGACY_TOKENS = [
   "tecnico.curitiba.br",
   "tecnicocuritiba.com.br",
+  "precisodeumtecnico.com",
+  "mestredosservicos.com.br",
   // Número da marca de ORIGEM. O número canônico atual (definido em
   // VITE_WHATSAPP_NUMBER e cobrado por check:canonical-contact) não entra
   // nesta lista — ele precisa aparecer em wa.me e no telephone do JSON-LD.
