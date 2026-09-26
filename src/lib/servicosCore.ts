@@ -244,7 +244,7 @@ export const SERVICOS_CORE: Record<string, ServicoLandingData> = {
       {
         titulo: "Prazo, retirada e o que não fazemos",
         paragrafos: [
-          "Limpeza interna, revisão térmica e reparos simples seguem a disponibilidade da agenda. Serviços que dependem de peça específica acompanham o prazo de reposição, informado antes da aprovação. Quando o equipamento precisa de bancada, a logística é definida na triagem."
+          "Limpeza interna, revisão térmica e reparos simples seguem a disponibilidade da agenda. Serviços que dependem de peça específica acompanham o prazo de reposição, informado antes da aprovação. Quando o equipamento precisa de bancada, a logística é definida na triagem.",
           "Não fazemos remoção de senha de equipamento sem comprovação de propriedade, não trabalhamos com desbloqueio de conta de fabricante e não assumimos reparo de placa com dano estrutural irreversível — nesses casos indicamos o caminho honesto, que às vezes é migrar seus dados e planejar a substituição.",
         ],
       },
