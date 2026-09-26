@@ -1,14 +1,14 @@
 {
-  "geradoEm": "2026-09-25",
-  "total": 297,
+  "geradoEm": "2026-09-26",
+  "total": 292,
   "porClasse": {
     "COMPROVADA": 114,
     "INSTITUCIONAL": 21,
-    "CONDICIONAL": 162,
+    "CONDICIONAL": 157,
     "REMOVIDA": 0,
     "PENDENTE": 0
   },
-  "urlsCuradas": 267,
+  "urlsCuradas": 279,
   "familias": [
     {
       "id": "garantia",
@@ -20,7 +20,7 @@
       "id": "prazo-prometido",
       "titulo": "Prazo de atendimento prometido",
       "risco": "Prazo fixo sem controle de agenda, trânsito e peça.",
-      "total": 106
+      "total": 101
     },
     {
       "id": "todos-os-portes",
@@ -595,18 +595,6 @@
       }
     },
     {
-      "path": "/bairros/hauer",
-      "curada": false,
-      "total": 1,
-      "porClasse": {
-        "COMPROVADA": 0,
-        "INSTITUCIONAL": 0,
-        "CONDICIONAL": 1,
-        "REMOVIDA": 0,
-        "PENDENTE": 0
-      }
-    },
-    {
       "path": "/bairros/independencia-sjp",
       "curada": false,
       "total": 1,
@@ -691,18 +679,6 @@
       }
     },
     {
-      "path": "/bairros/novo-mundo",
-      "curada": false,
-      "total": 1,
-      "porClasse": {
-        "COMPROVADA": 0,
-        "INSTITUCIONAL": 0,
-        "CONDICIONAL": 1,
-        "REMOVIDA": 0,
-        "PENDENTE": 0
-      }
-    },
-    {
       "path": "/bairros/osvaldo-cruz-colombo",
       "curada": false,
       "total": 1,
@@ -715,43 +691,7 @@
       }
     },
     {
-      "path": "/bairros/parque-da-fonte",
-      "curada": false,
-      "total": 1,
-      "porClasse": {
-        "COMPROVADA": 0,
-        "INSTITUCIONAL": 0,
-        "CONDICIONAL": 1,
-        "REMOVIDA": 0,
-        "PENDENTE": 0
-      }
-    },
-    {
       "path": "/bairros/parque-industrial-frg",
-      "curada": false,
-      "total": 1,
-      "porClasse": {
-        "COMPROVADA": 0,
-        "INSTITUCIONAL": 0,
-        "CONDICIONAL": 1,
-        "REMOVIDA": 0,
-        "PENDENTE": 0
-      }
-    },
-    {
-      "path": "/bairros/quississana-sjp",
-      "curada": false,
-      "total": 1,
-      "porClasse": {
-        "COMPROVADA": 0,
-        "INSTITUCIONAL": 0,
-        "CONDICIONAL": 1,
-        "REMOVIDA": 0,
-        "PENDENTE": 0
-      }
-    },
-    {
-      "path": "/bairros/reboucas",
       "curada": false,
       "total": 1,
       "porClasse": {
@@ -1339,6 +1279,18 @@
       }
     },
     {
+      "path": "/bairros/bacacheri",
+      "curada": true,
+      "total": 0,
+      "porClasse": {
+        "COMPROVADA": 0,
+        "INSTITUCIONAL": 0,
+        "CONDICIONAL": 0,
+        "REMOVIDA": 0,
+        "PENDENTE": 0
+      }
+    },
+    {
       "path": "/bairros/batel",
       "curada": true,
       "total": 0,
@@ -1483,7 +1435,79 @@
       }
     },
     {
+      "path": "/bairros/hauer",
+      "curada": true,
+      "total": 0,
+      "porClasse": {
+        "COMPROVADA": 0,
+        "INSTITUCIONAL": 0,
+        "CONDICIONAL": 0,
+        "REMOVIDA": 0,
+        "PENDENTE": 0
+      }
+    },
+    {
+      "path": "/bairros/juveve",
+      "curada": true,
+      "total": 0,
+      "porClasse": {
+        "COMPROVADA": 0,
+        "INSTITUCIONAL": 0,
+        "CONDICIONAL": 0,
+        "REMOVIDA": 0,
+        "PENDENTE": 0
+      }
+    },
+    {
+      "path": "/bairros/merces",
+      "curada": true,
+      "total": 0,
+      "porClasse": {
+        "COMPROVADA": 0,
+        "INSTITUCIONAL": 0,
+        "CONDICIONAL": 0,
+        "REMOVIDA": 0,
+        "PENDENTE": 0
+      }
+    },
+    {
+      "path": "/bairros/novo-mundo",
+      "curada": true,
+      "total": 0,
+      "porClasse": {
+        "COMPROVADA": 0,
+        "INSTITUCIONAL": 0,
+        "CONDICIONAL": 0,
+        "REMOVIDA": 0,
+        "PENDENTE": 0
+      }
+    },
+    {
       "path": "/bairros/ouro-fino-sjp",
+      "curada": true,
+      "total": 0,
+      "porClasse": {
+        "COMPROVADA": 0,
+        "INSTITUCIONAL": 0,
+        "CONDICIONAL": 0,
+        "REMOVIDA": 0,
+        "PENDENTE": 0
+      }
+    },
+    {
+      "path": "/bairros/parque-da-fonte",
+      "curada": true,
+      "total": 0,
+      "porClasse": {
+        "COMPROVADA": 0,
+        "INSTITUCIONAL": 0,
+        "CONDICIONAL": 0,
+        "REMOVIDA": 0,
+        "PENDENTE": 0
+      }
+    },
+    {
+      "path": "/bairros/pedro-moro-sjp",
       "curada": true,
       "total": 0,
       "porClasse": {
@@ -1508,6 +1532,42 @@
     },
     {
       "path": "/bairros/portao",
+      "curada": true,
+      "total": 0,
+      "porClasse": {
+        "COMPROVADA": 0,
+        "INSTITUCIONAL": 0,
+        "CONDICIONAL": 0,
+        "REMOVIDA": 0,
+        "PENDENTE": 0
+      }
+    },
+    {
+      "path": "/bairros/quississana-sjp",
+      "curada": true,
+      "total": 0,
+      "porClasse": {
+        "COMPROVADA": 0,
+        "INSTITUCIONAL": 0,
+        "CONDICIONAL": 0,
+        "REMOVIDA": 0,
+        "PENDENTE": 0
+      }
+    },
+    {
+      "path": "/bairros/reboucas",
+      "curada": true,
+      "total": 0,
+      "porClasse": {
+        "COMPROVADA": 0,
+        "INSTITUCIONAL": 0,
+        "CONDICIONAL": 0,
+        "REMOVIDA": 0,
+        "PENDENTE": 0
+      }
+    },
+    {
+      "path": "/bairros/rio-pequeno-sjp",
       "curada": true,
       "total": 0,
       "porClasse": {
@@ -2611,6 +2671,18 @@
       }
     },
     {
+      "path": "/blog/ssd-nao-aparece-no-instalador-do-windows",
+      "curada": true,
+      "total": 0,
+      "porClasse": {
+        "COMPROVADA": 0,
+        "INSTITUCIONAL": 0,
+        "CONDICIONAL": 0,
+        "REMOVIDA": 0,
+        "PENDENTE": 0
+      }
+    },
+    {
       "path": "/blog/ssd-nvme-nao-aparece-no-gerenciador-de-discos",
       "curada": true,
       "total": 0,
@@ -3008,6 +3080,18 @@
     },
     {
       "path": "/entidades/ssd",
+      "curada": true,
+      "total": 0,
+      "porClasse": {
+        "COMPROVADA": 0,
+        "INSTITUCIONAL": 0,
+        "CONDICIONAL": 0,
+        "REMOVIDA": 0,
+        "PENDENTE": 0
+      }
+    },
+    {
+      "path": "/entidades/tecnico-de-informatica",
       "curada": true,
       "total": 0,
       "porClasse": {
@@ -4722,7 +4806,7 @@
       "familiaTitulo": "Prazo de atendimento prometido",
       "risco": "Prazo fixo sem controle de agenda, trânsito e peça.",
       "arquivo": "src/data/blogPostsContent.tsx",
-      "linha": 6326,
+      "linha": 6349,
       "trecho": "<p>Atendemos Curitiba, São José dos Pinhais, Pinhais, Colombo, Almirante Tamandaré, Araucária, Campo Largo, Campo Magro, Piraquara, Quatro Barras e Fazenda Rio Grande. Diagnóstico ",
       "classificacao": "CONDICIONAL",
       "criterio": "Tempos de deslocamento e janelas de atendimento são estimativas dependentes de agenda, trânsito e disponibilidade de peça",
@@ -4735,7 +4819,7 @@
       "familiaTitulo": "Prazo de atendimento prometido",
       "risco": "Prazo fixo sem controle de agenda, trânsito e peça.",
       "arquivo": "src/data/blogPostsContent.tsx",
-      "linha": 6441,
+      "linha": 6464,
       "trecho": "<p>Atendemos Curitiba, São José dos Pinhais, Pinhais, Colombo, Almirante Tamandaré, Araucária, Campo Largo, Campo Magro, Piraquara, Quatro Barras e Fazenda Rio Grande. Diagnóstico ",
       "classificacao": "CONDICIONAL",
       "criterio": "Tempos de deslocamento e janelas de atendimento são estimativas dependentes de agenda, trânsito e disponibilidade de peça",
@@ -4748,7 +4832,7 @@
       "familiaTitulo": "Prazo de atendimento prometido",
       "risco": "Prazo fixo sem controle de agenda, trânsito e peça.",
       "arquivo": "src/data/blogPostsContent.tsx",
-      "linha": 6649,
+      "linha": 6672,
       "trecho": "<p>Atendemos Curitiba, São José dos Pinhais, Pinhais, Colombo, Almirante Tamandaré, Araucária, Campo Largo, Campo Magro, Piraquara, Quatro Barras e Fazenda Rio Grande. Diagnóstico ",
       "classificacao": "CONDICIONAL",
       "criterio": "Tempos de deslocamento e janelas de atendimento são estimativas dependentes de agenda, trânsito e disponibilidade de peça",
@@ -4761,7 +4845,7 @@
       "familiaTitulo": "Prazo de atendimento prometido",
       "risco": "Prazo fixo sem controle de agenda, trânsito e peça.",
       "arquivo": "src/data/blogPostsContent.tsx",
-      "linha": 6764,
+      "linha": 6787,
       "trecho": "<p>Atendemos Curitiba, São José dos Pinhais, Pinhais, Colombo, Almirante Tamandaré, Araucária, Campo Largo, Campo Magro, Piraquara, Quatro Barras e Fazenda Rio Grande. Diagnóstico ",
       "classificacao": "CONDICIONAL",
       "criterio": "Tempos de deslocamento e janelas de atendimento são estimativas dependentes de agenda, trânsito e disponibilidade de peça",
@@ -4774,7 +4858,7 @@
       "familiaTitulo": "Prazo de atendimento prometido",
       "risco": "Prazo fixo sem controle de agenda, trânsito e peça.",
       "arquivo": "src/data/blogPostsContent.tsx",
-      "linha": 6879,
+      "linha": 6902,
       "trecho": "<p>Atendemos Curitiba, São José dos Pinhais, Pinhais, Colombo, Almirante Tamandaré, Araucária, Campo Largo, Campo Magro, Piraquara, Quatro Barras e Fazenda Rio Grande. Diagnóstico ",
       "classificacao": "CONDICIONAL",
       "criterio": "Tempos de deslocamento e janelas de atendimento são estimativas dependentes de agenda, trânsito e disponibilidade de peça",
@@ -4787,7 +4871,7 @@
       "familiaTitulo": "Cobertura empresarial irrestrita",
       "risco": "“Todos os portes / todas as marcas / todos os modelos” não é sustentável.",
       "arquivo": "src/data/blogPostsContent.tsx",
-      "linha": 6998,
+      "linha": 7021,
       "trecho": "<p>A <strong>{BRAND_NAME}</strong> oferece suporte profissional para servidores e desktops Linux em Curitiba e região. Configuração de servidores web, e-mail, samba, firewall, moni",
       "classificacao": "CONDICIONAL",
       "criterio": "Atendimento a qualquer marca vale para diagnóstico e serviços de software/hardware comum; depende de disponibilidade de peça e de o modelo permitir reparo",
@@ -4800,7 +4884,7 @@
       "familiaTitulo": "Cobertura empresarial irrestrita",
       "risco": "“Todos os portes / todas as marcas / todos os modelos” não é sustentável.",
       "arquivo": "src/data/blogPostsContent.tsx",
-      "linha": 7118,
+      "linha": 7141,
       "trecho": "<p>A <strong>{BRAND_NAME}</strong> oferece suporte profissional para servidores e desktops Linux em Curitiba e região. Configuração de servidores web, e-mail, samba, firewall, moni",
       "classificacao": "CONDICIONAL",
       "criterio": "Atendimento a qualquer marca vale para diagnóstico e serviços de software/hardware comum; depende de disponibilidade de peça e de o modelo permitir reparo",
@@ -4813,7 +4897,7 @@
       "familiaTitulo": "Cobertura empresarial irrestrita",
       "risco": "“Todos os portes / todas as marcas / todos os modelos” não é sustentável.",
       "arquivo": "src/data/blogPostsContent.tsx",
-      "linha": 7238,
+      "linha": 7261,
       "trecho": "<p>A <strong>{BRAND_NAME}</strong> oferece suporte profissional para servidores e desktops Linux em Curitiba e região. Configuração de servidores web, e-mail, samba, firewall, moni",
       "classificacao": "CONDICIONAL",
       "criterio": "Atendimento a qualquer marca vale para diagnóstico e serviços de software/hardware comum; depende de disponibilidade de peça e de o modelo permitir reparo",
@@ -4826,7 +4910,7 @@
       "familiaTitulo": "Cobertura empresarial irrestrita",
       "risco": "“Todos os portes / todas as marcas / todos os modelos” não é sustentável.",
       "arquivo": "src/data/blogPostsContent.tsx",
-      "linha": 7358,
+      "linha": 7381,
       "trecho": "<p>A <strong>{BRAND_NAME}</strong> oferece suporte profissional para servidores e desktops Linux em Curitiba e região. Configuração de servidores web, e-mail, samba, firewall, moni",
       "classificacao": "CONDICIONAL",
       "criterio": "Atendimento a qualquer marca vale para diagnóstico e serviços de software/hardware comum; depende de disponibilidade de peça e de o modelo permitir reparo",
@@ -4839,7 +4923,7 @@
       "familiaTitulo": "Cobertura empresarial irrestrita",
       "risco": "“Todos os portes / todas as marcas / todos os modelos” não é sustentável.",
       "arquivo": "src/data/blogPostsContent.tsx",
-      "linha": 7478,
+      "linha": 7501,
       "trecho": "<p>A <strong>{BRAND_NAME}</strong> oferece suporte profissional para servidores e desktops Linux em Curitiba e região. Configuração de servidores web, e-mail, samba, firewall, moni",
       "classificacao": "CONDICIONAL",
       "criterio": "Atendimento a qualquer marca vale para diagnóstico e serviços de software/hardware comum; depende de disponibilidade de peça e de o modelo permitir reparo",
@@ -4852,7 +4936,7 @@
       "familiaTitulo": "Cobertura empresarial irrestrita",
       "risco": "“Todos os portes / todas as marcas / todos os modelos” não é sustentável.",
       "arquivo": "src/data/blogPostsContent.tsx",
-      "linha": 7598,
+      "linha": 7621,
       "trecho": "<p>A <strong>{BRAND_NAME}</strong> oferece suporte profissional para servidores e desktops Linux em Curitiba e região. Configuração de servidores web, e-mail, samba, firewall, moni",
       "classificacao": "CONDICIONAL",
       "criterio": "Atendimento a qualquer marca vale para diagnóstico e serviços de software/hardware comum; depende de disponibilidade de peça e de o modelo permitir reparo",
@@ -4865,7 +4949,7 @@
       "familiaTitulo": "Cobertura empresarial irrestrita",
       "risco": "“Todos os portes / todas as marcas / todos os modelos” não é sustentável.",
       "arquivo": "src/data/blogPostsContent.tsx",
-      "linha": 7718,
+      "linha": 7741,
       "trecho": "<p>A <strong>{BRAND_NAME}</strong> oferece suporte profissional para servidores e desktops Linux em Curitiba e região. Configuração de servidores web, e-mail, samba, firewall, moni",
       "classificacao": "CONDICIONAL",
       "criterio": "Atendimento a qualquer marca vale para diagnóstico e serviços de software/hardware comum; depende de disponibilidade de peça e de o modelo permitir reparo",
@@ -4878,7 +4962,7 @@
       "familiaTitulo": "Cobertura empresarial irrestrita",
       "risco": "“Todos os portes / todas as marcas / todos os modelos” não é sustentável.",
       "arquivo": "src/data/blogPostsContent.tsx",
-      "linha": 7838,
+      "linha": 7861,
       "trecho": "<p>A <strong>{BRAND_NAME}</strong> oferece suporte profissional para servidores e desktops Linux em Curitiba e região. Configuração de servidores web, e-mail, samba, firewall, moni",
       "classificacao": "CONDICIONAL",
       "criterio": "Atendimento a qualquer marca vale para diagnóstico e serviços de software/hardware comum; depende de disponibilidade de peça e de o modelo permitir reparo",
@@ -4891,7 +4975,7 @@
       "familiaTitulo": "Prazo de atendimento prometido",
       "risco": "Prazo fixo sem controle de agenda, trânsito e peça.",
       "arquivo": "src/data/blogPostsContent.tsx",
-      "linha": 8939,
+      "linha": 8962,
       "trecho": "<li><strong>Plano de resposta a incidentes</strong> que inclua notificação à ANPD em até 48h</li>",
       "classificacao": "CONDICIONAL",
       "criterio": "Tempos de deslocamento e janelas de atendimento são estimativas dependentes de agenda, trânsito e disponibilidade de peça",
@@ -4904,7 +4988,7 @@
       "familiaTitulo": "Prazo de atendimento prometido",
       "risco": "Prazo fixo sem controle de agenda, trânsito e peça.",
       "arquivo": "src/data/blogPostsContent.tsx",
-      "linha": 9065,
+      "linha": 9088,
       "trecho": "<li><strong>Plano de resposta a incidentes</strong> que inclua notificação à ANPD em até 48h</li>",
       "classificacao": "CONDICIONAL",
       "criterio": "Tempos de deslocamento e janelas de atendimento são estimativas dependentes de agenda, trânsito e disponibilidade de peça",
@@ -4917,7 +5001,7 @@
       "familiaTitulo": "Prazo de atendimento prometido",
       "risco": "Prazo fixo sem controle de agenda, trânsito e peça.",
       "arquivo": "src/data/blogPostsContent.tsx",
-      "linha": 9268,
+      "linha": 9291,
       "trecho": "<li><strong>Plano de resposta a incidentes</strong> que inclua notificação à ANPD em até 48h</li>",
       "classificacao": "CONDICIONAL",
       "criterio": "Tempos de deslocamento e janelas de atendimento são estimativas dependentes de agenda, trânsito e disponibilidade de peça",
@@ -4930,7 +5014,7 @@
       "familiaTitulo": "Prazo de atendimento prometido",
       "risco": "Prazo fixo sem controle de agenda, trânsito e peça.",
       "arquivo": "src/data/blogPostsContent.tsx",
-      "linha": 9394,
+      "linha": 9417,
       "trecho": "<li><strong>Plano de resposta a incidentes</strong> que inclua notificação à ANPD em até 48h</li>",
       "classificacao": "CONDICIONAL",
       "criterio": "Tempos de deslocamento e janelas de atendimento são estimativas dependentes de agenda, trânsito e disponibilidade de peça",
@@ -4943,7 +5027,7 @@
       "familiaTitulo": "Prazo de atendimento prometido",
       "risco": "Prazo fixo sem controle de agenda, trânsito e peça.",
       "arquivo": "src/data/blogPostsContent.tsx",
-      "linha": 9520,
+      "linha": 9543,
       "trecho": "<li><strong>Plano de resposta a incidentes</strong> que inclua notificação à ANPD em até 48h</li>",
       "classificacao": "CONDICIONAL",
       "criterio": "Tempos de deslocamento e janelas de atendimento são estimativas dependentes de agenda, trânsito e disponibilidade de peça",
@@ -7172,21 +7256,6 @@
       "familia": "prazo-prometido",
       "familiaTitulo": "Prazo de atendimento prometido",
       "risco": "Prazo fixo sem controle de agenda, trânsito e peça.",
-      "arquivo": "src/pages/bairros/Hauer.tsx",
-      "linha": 13,
-      "trecho": "tempoDeslocamento: \"Atendimento em até 30 min\",",
-      "classificacao": "CONDICIONAL",
-      "criterio": "Tempos de deslocamento e janelas de atendimento são estimativas dependentes de agenda, trânsito e disponibilidade de peça",
-      "evidencia": "Não existe SLA contratado; o texto precisa manter o qualificador ('conforme disponibilidade', 'estimado', 'quando há peça em estoque')",
-      "acao": "Proibido prazo absoluto sem condicionante. 'Atendimento imediato' e 'resposta em até 5 minutos' foram removidos nesta rodada.",
-      "urls": [
-        "/bairros/hauer"
-      ]
-    },
-    {
-      "familia": "prazo-prometido",
-      "familiaTitulo": "Prazo de atendimento prometido",
-      "risco": "Prazo fixo sem controle de agenda, trânsito e peça.",
       "arquivo": "src/pages/bairros/IndependenciaSJP.tsx",
       "linha": 13,
       "trecho": "tempoDeslocamento: \"Atendimento em até 40 min\",",
@@ -7292,21 +7361,6 @@
       "familia": "prazo-prometido",
       "familiaTitulo": "Prazo de atendimento prometido",
       "risco": "Prazo fixo sem controle de agenda, trânsito e peça.",
-      "arquivo": "src/pages/bairros/NovoMundo.tsx",
-      "linha": 13,
-      "trecho": "tempoDeslocamento: \"Atendimento em até 35 min\",",
-      "classificacao": "CONDICIONAL",
-      "criterio": "Tempos de deslocamento e janelas de atendimento são estimativas dependentes de agenda, trânsito e disponibilidade de peça",
-      "evidencia": "Não existe SLA contratado; o texto precisa manter o qualificador ('conforme disponibilidade', 'estimado', 'quando há peça em estoque')",
-      "acao": "Proibido prazo absoluto sem condicionante. 'Atendimento imediato' e 'resposta em até 5 minutos' foram removidos nesta rodada.",
-      "urls": [
-        "/bairros/novo-mundo"
-      ]
-    },
-    {
-      "familia": "prazo-prometido",
-      "familiaTitulo": "Prazo de atendimento prometido",
-      "risco": "Prazo fixo sem controle de agenda, trânsito e peça.",
       "arquivo": "src/pages/bairros/OswaldoCruzColombo.tsx",
       "linha": 13,
       "trecho": "tempoDeslocamento: \"Atendimento em até 45 min\",",
@@ -7316,51 +7370,6 @@
       "acao": "Proibido prazo absoluto sem condicionante. 'Atendimento imediato' e 'resposta em até 5 minutos' foram removidos nesta rodada.",
       "urls": [
         "/bairros/osvaldo-cruz-colombo"
-      ]
-    },
-    {
-      "familia": "prazo-prometido",
-      "familiaTitulo": "Prazo de atendimento prometido",
-      "risco": "Prazo fixo sem controle de agenda, trânsito e peça.",
-      "arquivo": "src/pages/bairros/ParqueDaFonte.tsx",
-      "linha": 23,
-      "trecho": "tempoDeslocamento: \"Atendimento em até 35 minutos\",",
-      "classificacao": "CONDICIONAL",
-      "criterio": "Tempos de deslocamento e janelas de atendimento são estimativas dependentes de agenda, trânsito e disponibilidade de peça",
-      "evidencia": "Não existe SLA contratado; o texto precisa manter o qualificador ('conforme disponibilidade', 'estimado', 'quando há peça em estoque')",
-      "acao": "Proibido prazo absoluto sem condicionante. 'Atendimento imediato' e 'resposta em até 5 minutos' foram removidos nesta rodada.",
-      "urls": [
-        "/bairros/parque-da-fonte"
-      ]
-    },
-    {
-      "familia": "prazo-prometido",
-      "familiaTitulo": "Prazo de atendimento prometido",
-      "risco": "Prazo fixo sem controle de agenda, trânsito e peça.",
-      "arquivo": "src/pages/bairros/QuissisanaSJP.tsx",
-      "linha": 13,
-      "trecho": "tempoDeslocamento: \"Atendimento em até 40 min\",",
-      "classificacao": "CONDICIONAL",
-      "criterio": "Tempos de deslocamento e janelas de atendimento são estimativas dependentes de agenda, trânsito e disponibilidade de peça",
-      "evidencia": "Não existe SLA contratado; o texto precisa manter o qualificador ('conforme disponibilidade', 'estimado', 'quando há peça em estoque')",
-      "acao": "Proibido prazo absoluto sem condicionante. 'Atendimento imediato' e 'resposta em até 5 minutos' foram removidos nesta rodada.",
-      "urls": [
-        "/bairros/quississana-sjp"
-      ]
-    },
-    {
-      "familia": "prazo-prometido",
-      "familiaTitulo": "Prazo de atendimento prometido",
-      "risco": "Prazo fixo sem controle de agenda, trânsito e peça.",
-      "arquivo": "src/pages/bairros/Reboucas.tsx",
-      "linha": 13,
-      "trecho": "tempoDeslocamento: \"Atendimento em até 30 min\",",
-      "classificacao": "CONDICIONAL",
-      "criterio": "Tempos de deslocamento e janelas de atendimento são estimativas dependentes de agenda, trânsito e disponibilidade de peça",
-      "evidencia": "Não existe SLA contratado; o texto precisa manter o qualificador ('conforme disponibilidade', 'estimado', 'quando há peça em estoque')",
-      "acao": "Proibido prazo absoluto sem condicionante. 'Atendimento imediato' e 'resposta em até 5 minutos' foram removidos nesta rodada.",
-      "urls": [
-        "/bairros/reboucas"
       ]
     },
     {

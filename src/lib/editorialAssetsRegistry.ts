@@ -65,6 +65,7 @@ const LICENSE_URLS: Record<string, string> = {
   "Public Domain": "https://creativecommons.org/publicdomain/mark/1.0/",
   "Licença Unsplash": "https://unsplash.com/license",
   "Licença Pexels": "https://www.pexels.com/license/",
+  "Free Art License 1.3": "https://artlibre.org/licence/lal/en/",
   "Todos os direitos reservados": "https://otecnicodeinformatica.com.br/termos-e-condicoes",
 };
 
@@ -81,7 +82,7 @@ const SOURCE_POR_PLATAFORMA: Array<[RegExp, AssetSourceType]> = [
 /** Interpreta "Foto: Autor (Plataforma), Licença — URL". */
 function interpretarAtribuicao(texto: string | undefined) {
   if (!texto) return { author: null, platform: null, originalUrl: null };
-  const author = texto.match(/Foto:\s*([^(,—]+)/)?.[1]?.trim() ?? null;
+  const author = texto.match(/(?:Foto|Captura):\s*([^(,—]+)/)?.[1]?.trim() ?? null;
   const platform = texto.match(/\(([^)]+)\)/)?.[1]?.trim() ?? null;
   const originalUrl = texto.match(/https?:\/\/\S+/)?.[0] ?? null;
   return { author, platform, originalUrl };

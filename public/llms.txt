@@ -172,6 +172,7 @@ cobramos execução que não tenha sido aprovada.
 - [BIOS/UEFI: como configurar sem perder o boot, o BitLocker ou a estabilidade](https://otecnicodeinformatica.com.br/blog/como-configurar-bios-uefi-corretamente)
 - [Servidor de arquivos: como planejar SMB no Windows ou Samba sem expor dados](https://otecnicodeinformatica.com.br/blog/como-configurar-servidor-de-arquivos)
 - [UFW no Linux: firewall host sem se trancar fora do servidor](https://otecnicodeinformatica.com.br/blog/como-configurar-firewall-ufw-linux)
+- [SSD não aparece no instalador do Windows: causas e sequência segura](https://otecnicodeinformatica.com.br/blog/ssd-nao-aparece-no-instalador-do-windows)
 
 ## Páginas institucionais e de política
 
@@ -230,6 +231,7 @@ cobramos execução que não tenha sido aprovada.
 - [SSD ou RAM: orientação inicial | Ferramenta gratuita](https://otecnicodeinformatica.com.br/ferramentas/ssd-ou-ram)
 - [Wi-Fi instável: roteiro de observação | Ferramenta gratuita](https://otecnicodeinformatica.com.br/ferramentas/roteiro-wifi-instavel)
 - [Entidades Técnicas do Portal | Mapa de Conteúdo Conectado](https://otecnicodeinformatica.com.br/entidades)
+- [Técnico de Informática: mapa técnico completo | Entidades](https://otecnicodeinformatica.com.br/entidades/tecnico-de-informatica)
 - [Windows: mapa técnico completo | Entidades](https://otecnicodeinformatica.com.br/entidades/windows)
 - [SSD: mapa técnico completo | Entidades](https://otecnicodeinformatica.com.br/entidades/ssd)
 - [Memória RAM: mapa técnico completo | Entidades](https://otecnicodeinformatica.com.br/entidades/memoria-ram)

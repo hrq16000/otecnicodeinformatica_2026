@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-09-25T14:02:25.734Z",
+  "geradoEm": "2026-09-26T12:47:58.219Z",
   "fonte": {
     "gscDisponivel": false,
     "verdictsEm": "2026-09-25T13:56:57.884Z",
@@ -13,7 +13,7 @@
     "autorizadoPor": "Henrique Rodrigues (responsável editorial)",
     "autorizadoEm": "2026-08-31T21:23:00Z"
   },
-  "total": 61,
+  "total": 62,
   "lotes": [
     {
       "lote": "10C/0",
@@ -237,6 +237,21 @@
       "aprovadas": 3,
       "noSitemap": 3,
       "publicadoEm": "2026-09-25",
+      "ultimaAtualizacao": null,
+      "cobertura": 0
+    },
+    {
+      "lote": "11A/14",
+      "wave": "11A",
+      "batch": "14",
+      "total": 1,
+      "publicadas": 0,
+      "pendentes": 1,
+      "erros": 0,
+      "rascunhos": 0,
+      "aprovadas": 1,
+      "noSitemap": 1,
+      "publicadoEm": "2026-09-26",
       "ultimaAtualizacao": null,
       "cobertura": 0
     }
@@ -1692,6 +1707,30 @@
       "role": "satelite",
       "publishedAt": "2026-09-25",
       "lote": "11A/13",
+      "aprovado": true,
+      "noSitemap": true,
+      "status": "PENDENTE",
+      "veredito": "UNKNOWN",
+      "estadoBusca": "UNKNOWN",
+      "ultimoCrawl": null,
+      "submetidoSitemap": false,
+      "submetidoIndexNow": false,
+      "ultimaAtualizacao": null,
+      "httpStatus": null,
+      "canonicalValido": null,
+      "schemaValido": null,
+      "erros": []
+    },
+    {
+      "wave": "11A",
+      "batch": "14",
+      "url": "/blog/ssd-nao-aparece-no-instalador-do-windows",
+      "slug": "ssd-nao-aparece-no-instalador-do-windows",
+      "ownerId": "ssd-ausente-windows-setup",
+      "cluster": "armazenamento-nao-detectado",
+      "role": "satelite",
+      "publishedAt": "2026-09-26",
+      "lote": "11A/14",
       "aprovado": true,
       "noSitemap": true,
       "status": "PENDENTE",

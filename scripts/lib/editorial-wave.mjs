@@ -898,6 +898,16 @@ export const EDITORIAL_WAVE = [
     apoio: "/blog/como-configurar-firewall-pfsense", apoioLabel: "Firewall pfSense",
     cover: "/blog/como-configurar-firewall-ufw-linux.svg",
   },
+  // ── Onda 11M — Windows Setup e armazenamento não enumerado.
+  {
+    slug: "ssd-nao-aparece-no-instalador-do-windows",
+    approvedAt: "2026-09-26",
+    pilar: "/servicos/formatacao",
+    pilarLabel: "Formatação e instalação do sistema",
+    apoio: "/blog/ssd-nvme-nao-aparece-no-gerenciador-de-discos",
+    apoioLabel: "SSD não aparece no Gerenciamento de Disco",
+    cover: "/blog/ssd-nao-aparece-no-instalador-do-windows.jpg",
+  },
 
 ];
 

@@ -896,6 +896,30 @@ export const WAVE_11L_BATCH_1: EditorialWaveEntry[] = [
   },
 ];
 
+/** Onda 11M — Windows Setup e controlador de armazenamento. */
+export const WAVE_11M_BATCH_1: EditorialWaveEntry[] = [
+  {
+    wave: "11A",
+    batch: "14",
+    url: "/blog/ssd-nao-aparece-no-instalador-do-windows",
+    slug: "ssd-nao-aparece-no-instalador-do-windows",
+    ownerId: "ssd-ausente-windows-setup",
+    cluster: "armazenamento-nao-detectado",
+    role: "satelite",
+    publishedAt: "2026-09-26",
+    targetQueries: [
+      "ssd nao aparece no instalador do windows",
+      "windows setup nao mostra ssd",
+      "carregar driver armazenamento instalacao windows",
+    ],
+    doNotDuplicate: [
+      "/blog/ssd-nvme-nao-aparece-no-gerenciador-de-discos",
+      "/blog/hd-nao-e-reconhecido-na-bios-o-que-fazer",
+      "/blog/como-instalar-windows-11-do-zero",
+    ],
+  },
+];
+
 export const EDITORIAL_WAVES: EditorialWaveEntry[] = [
   ...WAVE_10C_BATCH_0,
   ...WAVE_10D_BATCH_1,
@@ -912,6 +936,7 @@ export const EDITORIAL_WAVES: EditorialWaveEntry[] = [
   ...WAVE_11J_BATCH_1,
   ...WAVE_11K_BATCH_1,
   ...WAVE_11L_BATCH_1,
+  ...WAVE_11M_BATCH_1,
 ];
 
 /** URLs monitoradas (ordem estável, sem duplicatas). */
