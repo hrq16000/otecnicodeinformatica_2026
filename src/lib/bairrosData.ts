@@ -10,6 +10,7 @@ import { SERVICOS_CANONICOS } from "@/lib/cidadesData";
 import { BAIRROS_LOTE_2 } from "@/lib/bairrosLote2";
 import { BAIRROS_LOTE_3 } from "@/lib/bairrosLote3";
 import { BAIRROS_LOTE_4 } from "@/lib/bairrosLote4";
+import { BAIRROS_LOTE_5 } from "@/lib/bairrosLote5";
 
 
 export interface BairroFaq {
@@ -395,6 +396,9 @@ Object.assign(BAIRROS, BAIRROS_LOTE_3);
 
 // MICRO-RODADA LOCAL 2 — Lote 4 de bairros âncora (rotas já existentes).
 Object.assign(BAIRROS, BAIRROS_LOTE_4);
+
+// ONDA LOCAL 5 — 10 bairros adicionais com conteúdo autoral próprio.
+Object.assign(BAIRROS, BAIRROS_LOTE_5);
 
 
 export const BAIRRO_LIST = Object.values(BAIRROS);

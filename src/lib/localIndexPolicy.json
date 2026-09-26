@@ -477,6 +477,86 @@
       "cidadeSlug": "sao-jose-dos-pinhais",
       "parent": "/tecnico-informatica-sao-jose-pinhais",
       "lote": 4
+    },
+    {
+      "slug": "reboucas",
+      "intent": "atendimento de informática no Rebouças (home office, escritório, impressora e rede)",
+      "cidade": "Curitiba",
+      "cidadeSlug": "curitiba",
+      "parent": "/tecnico-informatica-curitiba",
+      "lote": 5
+    },
+    {
+      "slug": "hauer",
+      "intent": "atendimento de informática no Hauer (PC doméstico, upgrade e Wi-Fi)",
+      "cidade": "Curitiba",
+      "cidadeSlug": "curitiba",
+      "parent": "/tecnico-informatica-curitiba",
+      "lote": 5
+    },
+    {
+      "slug": "novo-mundo",
+      "intent": "atendimento de informática no Novo Mundo (dados, Windows e rede doméstica)",
+      "cidade": "Curitiba",
+      "cidadeSlug": "curitiba",
+      "parent": "/tecnico-informatica-curitiba",
+      "lote": 5
+    },
+    {
+      "slug": "bacacheri",
+      "intent": "atendimento de informática no Bacacheri (notebook, Wi-Fi e home office)",
+      "cidade": "Curitiba",
+      "cidadeSlug": "curitiba",
+      "parent": "/tecnico-informatica-curitiba",
+      "lote": 5
+    },
+    {
+      "slug": "juveve",
+      "intent": "atendimento de informática no Juvevê (home office, periféricos e pequenos escritórios)",
+      "cidade": "Curitiba",
+      "cidadeSlug": "curitiba",
+      "parent": "/tecnico-informatica-curitiba",
+      "lote": 5
+    },
+    {
+      "slug": "merces",
+      "intent": "atendimento de informática nas Mercês (backup, notebook e Wi-Fi)",
+      "cidade": "Curitiba",
+      "cidadeSlug": "curitiba",
+      "parent": "/tecnico-informatica-curitiba",
+      "lote": 5
+    },
+    {
+      "slug": "parque-da-fonte",
+      "intent": "atendimento de informática no Parque da Fonte (notebook, PC e Wi-Fi)",
+      "cidade": "São José dos Pinhais",
+      "cidadeSlug": "sao-jose-dos-pinhais",
+      "parent": "/tecnico-informatica-sao-jose-pinhais",
+      "lote": 5
+    },
+    {
+      "slug": "rio-pequeno-sjp",
+      "intent": "atendimento de informática no Rio Pequeno (dados, PC e notebook)",
+      "cidade": "São José dos Pinhais",
+      "cidadeSlug": "sao-jose-dos-pinhais",
+      "parent": "/tecnico-informatica-sao-jose-pinhais",
+      "lote": 5
+    },
+    {
+      "slug": "quississana-sjp",
+      "intent": "atendimento de informática no Quississana (Wi-Fi, notebook e PC)",
+      "cidade": "São José dos Pinhais",
+      "cidadeSlug": "sao-jose-dos-pinhais",
+      "parent": "/tecnico-informatica-sao-jose-pinhais",
+      "lote": 5
+    },
+    {
+      "slug": "pedro-moro-sjp",
+      "intent": "atendimento de informática no Pedro Moro (PC, impressora e rede)",
+      "cidade": "São José dos Pinhais",
+      "cidadeSlug": "sao-jose-dos-pinhais",
+      "parent": "/tecnico-informatica-sao-jose-pinhais",
+      "lote": 5
     }
   ],
   "servicoBairroIndexaveis": [
@@ -545,5 +625,17 @@
     "/bairros/cajuru",
     "/bairros/pinheirinho",
     "/bairros/cidade-jardim-sjp"
+  ],
+  "loteLocal5": [
+    "/bairros/reboucas",
+    "/bairros/hauer",
+    "/bairros/novo-mundo",
+    "/bairros/bacacheri",
+    "/bairros/juveve",
+    "/bairros/merces",
+    "/bairros/parque-da-fonte",
+    "/bairros/rio-pequeno-sjp",
+    "/bairros/quississana-sjp",
+    "/bairros/pedro-moro-sjp"
   ]
 }
