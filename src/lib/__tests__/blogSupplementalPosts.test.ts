@@ -1,0 +1,34 @@
+import { describe, expect, it } from "vitest";
+import { blogSupplementalPosts } from "@/data/blogSupplementalPosts";
+import { getEditorialCover } from "@/lib/blogEditorialCovers";
+import { getArticleSources, getTechnicalReviewStatus } from "@/lib/blogEditorialSources";
+import { isEditorialApproved } from "@/lib/blogEditorialRegistry";
+import { findEditorialEntry } from "@/lib/editorialWavesRegistry";
+import { EDITORIAL_HUB_SUMMARIES } from "@/lib/editorialHubSummaries";
+
+const SLUG = "ssd-nao-aparece-no-instalador-do-windows";
+
+describe("guia suplementar SSD ausente no Windows Setup", () => {
+  it("mantém conteúdo e metadados editoriais completos", () => {
+    const post = blogSupplementalPosts[SLUG];
+    expect(post).toBeTruthy();
+    expect(post.title).toMatch(/SSD não aparece no instalador do Windows/i);
+    expect(post.excerpt.length).toBeGreaterThan(100);
+    expect(post.readTime).toBe("12 min");
+    expect(post.content).toBeTruthy();
+  });
+
+  it("só entra no índice com aprovação, revisão, fontes e capa", () => {
+    expect(isEditorialApproved(SLUG)).toBe(true);
+    expect(getTechnicalReviewStatus(SLUG)).toBe("reviewed");
+    expect(getArticleSources(SLUG).length).toBeGreaterThanOrEqual(4);
+    expect(getEditorialCover(SLUG)?.src).toBe("/blog/ssd-nao-aparece-no-instalador-do-windows.svg");
+  });
+
+  it("possui owner editorial e resumo de descoberta", () => {
+    const entry = findEditorialEntry("/blog/" + SLUG);
+    expect(entry?.ownerId).toBe("ssd-ausente-windows-setup");
+    expect(entry?.doNotDuplicate).toContain("/blog/ssd-nvme-nao-aparece-no-gerenciador-de-discos");
+    expect(EDITORIAL_HUB_SUMMARIES[SLUG]?.category).toBe("Procedimentos Técnicos");
+  });
+});
