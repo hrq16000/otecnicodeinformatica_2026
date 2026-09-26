@@ -970,7 +970,7 @@ export const SERVICOS_CORE: Record<string, ServicoLandingData> = {
       { label: "Atendimento remoto", to: "/atendimento-remoto" },
       { label: "Preços e políticas", to: "/precos-e-politicas" },
     ],
-    dateModified: "2026-08-06",
+    dateModified: "2026-09-26",
   },
 
   // 9 ─────────────────────────────────────────────────────────
