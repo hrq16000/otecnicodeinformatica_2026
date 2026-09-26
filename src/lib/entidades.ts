@@ -383,6 +383,11 @@ export const ENTIDADES: Entidade[] = [
         contexto: "Reconhecimento do disco novo pelo firmware e pelo sistema.",
       },
       {
+        rotulo: "HD ou SSD não é reconhecido na BIOS",
+        to: "/blog/hd-nao-e-reconhecido-na-bios-o-que-fazer",
+        contexto: "Diagnóstico quando a unidade some antes mesmo de o Windows carregar.",
+      },
+      {
         rotulo: "SSD não aparece no instalador do Windows",
         to: "/blog/ssd-nao-aparece-no-instalador-do-windows",
         contexto: "Quando o firmware reconhece a unidade, mas o Windows Setup não a lista como destino.",
