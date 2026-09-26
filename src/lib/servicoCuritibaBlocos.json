@@ -617,9 +617,9 @@
       "intentGlobal": "entender modelos de suporte, escopo de atendimento, níveis de serviço e o que um contrato de TI cobre",
       "intentLocal": "contratar suporte técnico para uma empresa em Curitiba sabendo tempo de deslocamento, rotina de visitas e como abrir chamado no dia a dia",
       "title": "Suporte Técnico Empresarial em Curitiba | Chamado e Visita",
-      "description": "Suporte técnico empresarial em Curitiba: chamado por WhatsApp, atendimento remoto imediato e visita ao escritório conforme urgência.",
+      "description": "Suporte técnico empresarial em Curitiba: abertura de chamado, triagem remota e visita ao escritório conforme o tipo de falha e a disponibilidade da agenda.",
       "h1": "Suporte técnico empresarial em Curitiba",
-      "subtitulo": "Como funciona o atendimento para empresas de Curitiba: quem abre o chamado, o que é resolvido remoto na hora e quando o técnico vai até o escritório.",
+      "subtitulo": "Como funciona o atendimento para empresas de Curitiba: abertura do chamado, triagem remota, critérios de visita e condições confirmadas antes do deslocamento.",
       "intro": [
         "Escritório com dez, vinte ou cinquenta estações não sofre com um defeito espetacular: sofre com fila de pequenos chamados que ninguém resolve. Impressora fora da rede, usuário sem acesso à pasta, e-mail travado, sistema de gestão lento no fim do mês, máquina nova para configurar.",
         "O atendimento a empresas em Curitiba organiza isso por prioridade e canal único: quem abre o chamado, o que já foi tentado e qual o impacto para a operação. Nada é combinado por conversa paralela, e cada intervenção fica registrada para a próxima ocorrência ser mais rápida."
@@ -628,22 +628,22 @@
         {
           "titulo": "Como a sua empresa abre um chamado",
           "paragrafos": [
-            "O chamado começa pelo WhatsApp da operação, com uma frase objetiva: qual máquina, qual usuário e o que parou. Em Curitiba, essa triagem existe justamente para separar o que é resolvido em minutos por acesso remoto do que exige alguém no local.",
+            "O chamado começa pelo WhatsApp da operação, com uma frase objetiva: qual máquina, qual usuário e o que parou. Em Curitiba, essa triagem separa o que pode ser tratado remotamente do que realmente exige alguém no local.",
             "Quem abre o chamado normalmente é a pessoa que sentou na máquina, não um setor de TI. Por isso não pedimos código de erro nem diagnóstico: descrever o sintoma em português comum é suficiente para a triagem seguir."
           ]
         },
         {
           "titulo": "Remoto primeiro, visita quando faz diferença",
           "paragrafos": [
-            "A maior parte dos chamados de escritório — impressora que sumiu da rede, usuário sem acesso a pasta compartilhada, sistema que não abre depois de atualização — é resolvida remotamente sem esperar deslocamento.",
+            "Chamados de escritório como impressora fora da rede, usuário sem acesso a pasta compartilhada ou sistema que não abre depois de atualização podem ser avaliados remotamente primeiro, quando o equipamento liga e há conectividade.",
             "A visita entra quando o problema é físico ou de infraestrutura: máquina que não liga, cabeamento, switch, ponto de rede, troca de equipamento. Nesse caso, o horário é combinado antes considerando o trânsito de Curitiba e o expediente do escritório."
           ]
         },
         {
           "titulo": "Deslocamento e regiões de Curitiba",
           "paragrafos": [
-            "Atendimentos no Centro, Batel, Água Verde, Portão, Boa Vista e no eixo empresarial da Cidade Industrial costumam ser encaixados no mesmo dia quando o chamado entra pela manhã.",
-            "Fora desse raio, o atendimento continua acontecendo, mas com agendamento — a diferença é de janela de horário, não de escopo. Toda condição de deslocamento é informada antes da confirmação, nunca depois do serviço."
+            "Atendemos empresas em diferentes regiões de Curitiba. A janela presencial depende da agenda, do deslocamento e do tipo de incidente; ela é confirmada na triagem antes de qualquer visita.",
+            "A região do escritório não muda o escopo técnico, mas pode mudar a janela disponível para atendimento presencial. Toda condição de deslocamento é informada antes da confirmação, nunca depois do serviço."
           ]
         },
         {
@@ -663,23 +663,23 @@
         {
           "titulo": "Horário, urgência e expediente",
           "paragrafos": [
-            "O atendimento acompanha o horário comercial da operação. Chamados abertos perto do fim do expediente são triados no mesmo dia e, quando não dá para resolver, ficam com prioridade na abertura do dia seguinte.",
-            "Se a parada afeta faturamento — caixa, emissor fiscal, servidor de arquivos — avise isso na primeira mensagem. Urgência real muda a ordem da fila; urgência declarada sem contexto, não."
+            "O atendimento segue a disponibilidade informada na triagem. Chamados próximos ao fim do expediente podem exigir agendamento para outra janela, sem promessa automática de resposta ou visita no mesmo dia.",
+            "Se a parada afeta faturamento — caixa, emissor fiscal ou servidor de arquivos — informe isso na primeira mensagem. O impacto operacional ajuda a classificar o chamado, mas a prioridade e a janela continuam sujeitas à disponibilidade combinada."
           ]
         }
       ],
       "faq": [
         {
           "pergunta": "Vocês atendem empresas em qualquer região de Curitiba?",
-          "resposta": "Sim. O atendimento remoto não depende de região e a visita presencial cobre Curitiba inteira, com janelas de horário mais estreitas nas regiões mais distantes do eixo central."
+          "resposta": "Sim. O atendimento remoto não depende do bairro; para visita presencial, a janela é confirmada conforme agenda, deslocamento e tipo de incidente."
         },
         {
           "pergunta": "Preciso ter contrato para ser atendido?",
           "resposta": "Não. O atendimento avulso por chamado é o formato padrão. Visitas recorrentes só são sugeridas quando o próprio histórico de chamados mostra vantagem financeira."
         },
         {
-          "pergunta": "O suporte remoto é feito na hora?",
-          "resposta": "Quando a máquina liga e tem internet, sim — o acesso remoto é iniciado durante a triagem, sem esperar agendamento."
+          "pergunta": "O suporte remoto começa imediatamente?",
+          "resposta": "Quando a máquina liga e tem internet, verificamos na triagem se o caso permite acesso remoto e qual janela está disponível. O início não é automático nem garantido no mesmo momento."
         },
         {
           "pergunta": "Vocês configuram máquina nova de funcionário?",

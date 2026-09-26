@@ -8,6 +8,7 @@ import {
   isNoindex,
   resolveLocal,
 } from "@/lib/localIndexPolicy";
+import { SERVICOS_CORE } from "@/lib/servicosCore";
 
 describe("localIndexPolicy — regra de ouro", () => {
   it("nunca coloca no sitemap uma entidade não indexável", () => {
@@ -75,6 +76,25 @@ describe("localIndexPolicy — Lote Local 1", () => {
       expect(canonicalFor(path)).toBe(path);
       expect(d.sitemap).toBe(true);
     }
+  });
+});
+
+
+describe("localIndexPolicy — owner local do suporte empresarial", () => {
+  it("mantém Curitiba na página filha e fora da intenção principal do pai", () => {
+    const childPath = "/servicos/suporte-tecnico-empresarial/curitiba";
+    const child = resolveLocal(childPath);
+    const parent = SERVICOS_CORE["suporte-tecnico-empresarial"];
+
+    expect(child.indexability).toBe("index");
+    expect(child.canonical).toBe(childPath);
+    expect(child.sitemap).toBe(true);
+
+    expect(parent.metaTitle.toLowerCase()).not.toContain("curitiba");
+    expect(parent.h1.toLowerCase()).not.toContain("curitiba");
+    expect(
+      parent.relacionados.some((link) => link.to === childPath),
+    ).toBe(true);
   });
 });
 
