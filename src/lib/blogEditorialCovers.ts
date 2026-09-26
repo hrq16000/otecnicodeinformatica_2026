@@ -654,6 +654,14 @@ export const EDITORIAL_COVERS: Record<string, EditorialCover> = {
     height: 630,
   },
 
+  // ── Onda 11O — fechamento do estoque programático independente.
+  "pc-nao-liga-o-que-fazer": {
+    src: "/blog/pc-nao-liga-o-que-fazer.svg",
+    alt: "Ilustração editorial de gabinete, botão de energia, monitor e etapas de alimentação, POST e vídeo",
+    width: 1200,
+    height: 630,
+  },
+
 };
 
 export function getEditorialCover(slug: string): EditorialCover | undefined {
