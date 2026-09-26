@@ -106,9 +106,9 @@ const ConsertoImpressoraCuritiba = () => {
               { t: "Impressora não puxa papel", d: "Troca do rolo de tração e limpeza do mecanismo." },
               { t: "Imprime borrado ou com falhas", d: "Limpeza profunda da cabeça de impressão ou troca quando necessário." },
               { t: "Erro de driver / não conecta no Wi-Fi", d: "Reinstalação e configuração de IP fixo na rede." },
-              { t: "Cartucho não reconhece", d: "Reset de chip, recarga ou troca por original/compatível." },
+              { t: "Cartucho ou toner não reconhecido", d: "Verificação de encaixe, suprimento, chip e compatibilidade antes de indicar substituição." },
               { t: "Atolamento constante de papel", d: "Limpeza dos sensores e troca de roletes desgastados." },
-              { t: "Instalação de bulk ink (tanque)", d: "Sistema com 6 meses de garantia, economia de até 90% em tinta." },
+              { t: "Sistema de tinta / tanque", d: "Diagnóstico de alimentação, ar no circuito, reconhecimento e fluxo antes de alterar o sistema." },
             ].map((p) => (
               <div key={p.t} className="p-5 rounded-xl border bg-card hover:shadow-md transition">
                 <CheckCircle className="w-6 h-6 text-accent mb-2" />
@@ -181,7 +181,7 @@ const ConsertoImpressoraCuritiba = () => {
             </table>
           </div>
           <p className="text-xs text-muted-foreground text-center mt-3">
-            Valores orientativos para Curitiba e região. valor fechado antes do conserto.
+            Valores orientativos para Curitiba e região; o orçamento final depende do modelo, da causa confirmada e das peças necessárias.
           </p>
         </div>
       </section>
