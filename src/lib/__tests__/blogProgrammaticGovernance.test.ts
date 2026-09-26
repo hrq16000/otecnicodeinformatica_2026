@@ -6,6 +6,7 @@ import {
   PROGRAMMATIC_REVIEW,
 } from "@/lib/blogProgrammaticGovernance";
 import { REDIRECT_MATRIX, resolveRedirect } from "@/lib/redirectMatrix";
+import { getArticleSources, getTechnicalReviewStatus } from "@/lib/blogEditorialSources";
 
 describe("governança do estoque programático", () => {
   it("classifica exatamente todo artigo programático herdado", () => {
@@ -39,6 +40,15 @@ describe("governança do estoque programático", () => {
   it("não redireciona as cinco intenções que ainda precisam de qualificação", () => {
     for (const decision of PROGRAMMATIC_REVIEW) {
       expect(resolveRedirect(`/blog/${decision.slug}`)).toBeNull();
+    }
+  });
+
+  it("mantém as quatro intenções independentes tecnicamente revisadas", () => {
+    for (const decision of PROGRAMMATIC_REVIEW) {
+      expect(getTechnicalReviewStatus(decision.slug)).toBe("reviewed");
+      if (decision.slug !== "pc-nao-liga-o-que-fazer") {
+        expect(getArticleSources(decision.slug).length).toBeGreaterThan(0);
+      }
     }
   });
 
