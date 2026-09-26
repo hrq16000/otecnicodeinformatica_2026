@@ -635,7 +635,7 @@ const rows: Array<EditorialHubSummary & { slug: string }> = [
     "date": "2026-09-03",
     "readTime": "11 min",
     "category": "Dados"
-  },,
+  },
   {
     "slug": "como-fazer-backup-na-nuvem",
     "title": "Backup na nuvem: como montar uma cópia que você consegue restaurar",
