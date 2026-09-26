@@ -906,6 +906,32 @@ export const EDITORIAL_SOURCES: Record<string, EditorialSource> = {
     ],
   },
 
+  "ms-windows-file-recovery-2026": {
+    id: "ms-windows-file-recovery-2026",
+    title: "Windows File Recovery",
+    publisher: "Microsoft Support",
+    url: "https://support.microsoft.com/pt-br/windows/experience/backup-recovery/windows-file-recovery",
+    accessedAt: "2026-09-26",
+    sourceType: "official",
+    supports: [
+      "Após exclusão, minimizar ou evitar o uso do computador reduz o risco de sobrescrever o espaço marcado como livre.",
+      "Na recuperação com Windows File Recovery, unidade de origem e destino precisam ser diferentes.",
+      "A ferramenta cobre armazenamento local e não substitui restauração por backup ou histórico de versões.",
+    ],
+  },
+  "ms-file-history-2026": {
+    id: "ms-file-history-2026",
+    title: "Fazer backup e restaurar com o Histórico de Arquivos",
+    publisher: "Microsoft Support",
+    url: "https://support.microsoft.com/pt-br/windows/experience/backup-recovery/backup-and-restore-with-file-history",
+    accessedAt: "2026-09-26",
+    sourceType: "official",
+    supports: [
+      "O Histórico de Arquivos mantém cópias de arquivos pessoais e permite restaurar versões anteriores.",
+      "Uma restauração pode ser feita para local diferente para evitar substituir a versão atual.",
+    ],
+  },
+
 };
 
 // ─────────────────────────────────────────────────────────────
@@ -926,6 +952,43 @@ export const EDITORIAL_SOURCES: Record<string, EditorialSource> = {
 //     (vazio) em blogEditorialRegistry.ts.
 // ─────────────────────────────────────────────────────────────
 export const ARTICLE_SOURCE_MANIFEST: Record<string, ArticleSourceManifest> = {
+  "pc-nao-liga-o-que-fazer": {
+    slug: "pc-nao-liga-o-que-fazer",
+    sources: [],
+    technicalReview: "reviewed",
+    factChecked: true,
+    factCheckedAt: "2026-09-26",
+    stableKnowledge: true,
+    notes:
+      "Revisão material concluída após reescrita: separa ausência de energia, POST/vídeo e boot; remove ponte com clipe na fonte, reset de CMOS como receita genérica, abrasivos e troca de peça por tentativa. Sem percentual de causa, sem diagnóstico fechado e com critérios claros de parada.",
+  },
+  "wifi-caindo-toda-hora": {
+    slug: "wifi-caindo-toda-hora",
+    sources: ["fcc-home-network-tips", "wifi-alliance-home"],
+    technicalReview: "reviewed",
+    factChecked: true,
+    factCheckedAt: "2026-09-26",
+    notes:
+      "Revisão material concluída: separa dispositivo, WLAN, roteador/modem e provedor; remove limite universal de conexões e canal obrigatório. FCC sustenta a distinção entre desempenho da rede doméstica e banda larga; Wi-Fi Alliance sustenta cobertura com múltiplos pontos.",
+  },
+  "como-fazer-backup-na-nuvem": {
+    slug: "como-fazer-backup-na-nuvem",
+    sources: ["cisa-backup", "nist-sp-800-34"],
+    technicalReview: "reviewed",
+    factChecked: true,
+    factCheckedAt: "2026-09-26",
+    notes:
+      "Revisão material concluída: remove franquias, preços e ranking de fornecedores; diferencia sincronização de backup, exige cópia independente e teste de restauração, e trata 3-2-1 como referência de redundância, não regra mágica.",
+  },
+  "como-recuperar-arquivos-apagados": {
+    slug: "como-recuperar-arquivos-apagados",
+    sources: ["ms-windows-file-recovery-2026", "ms-file-history-2026"],
+    technicalReview: "reviewed",
+    factChecked: true,
+    factCheckedAt: "2026-09-26",
+    notes:
+      "Revisão material concluída: prioriza não sobrescrever a origem, procura versões/backups antes de varredura, exige destino diferente na recuperação e remove lista promocional de ferramentas e absolutos sobre TRIM/SSD.",
+  },
   "como-deixar-celular-android-mais-rapido": {
     slug: "como-deixar-celular-android-mais-rapido",
     sources: ["android-acelerar-dispositivo", "android-arquivar-apps", "android-cache-google-app"],
