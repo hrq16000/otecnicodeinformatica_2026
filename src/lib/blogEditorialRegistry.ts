@@ -1432,6 +1432,24 @@ const WAVE_11L: EditorialApproval[] = [
   },
 ];
 
+
+const WAVE_11M: EditorialApproval[] = [
+  {
+    slug: "como-fazer-backup-na-nuvem",
+    status: "approved",
+    authorType: "organization",
+    authorId: INSTITUTIONAL_AUTHOR.id,
+    reviewedAt: "2026-09-26",
+    approvedAt: "2026-09-26",
+    imageOrigin: "owned",
+    imageLicense: "Todos os direitos reservados",
+    imageAttribution:
+      "Arte editorial original: O Técnico de Informática — https://otecnicodeinformatica.com.br/blog/como-fazer-backup-na-nuvem",
+    notes:
+      "Intenção independente qualificada no fechamento do estoque programático: distingue sincronização de backup, exige cópia independente e restauração testada, com revisão técnica CISA/NIST. Capa vetorial própria, sem terceiros e sem dados pessoais.",
+  },
+];
+
 export const APPROVED_EDITORIAL_CONTENT = new Map<string, EditorialApproval>([
 
   ...FIRST_WAVE_SLUGS.map((slug) => [
@@ -1492,6 +1510,7 @@ export const APPROVED_EDITORIAL_CONTENT = new Map<string, EditorialApproval>([
   ...WAVE_11J.map((a) => [a.slug, a] as [string, EditorialApproval]),
   ...WAVE_11K.map((a) => [a.slug, a] as [string, EditorialApproval]),
   ...WAVE_11L.map((a) => [a.slug, a] as [string, EditorialApproval]),
+  ...WAVE_11M.map((a) => [a.slug, a] as [string, EditorialApproval]),
 
 ]);
 
