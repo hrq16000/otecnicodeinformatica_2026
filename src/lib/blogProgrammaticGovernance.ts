@@ -34,7 +34,7 @@ export const PROGRAMMATIC_EDITORIAL_GOVERNANCE: ProgrammaticEditorialDecision[] 
     slug: "pc-nao-liga-o-que-fazer",
     status: "review",
     rationale:
-      "Intenção de desktop sem energia é distinta das páginas de vídeo/boot. O texto já foi reescrito com diagnóstico seguro e sem ponte em fonte; permanece noindex até revisão técnica formal, fontes e asset editorial próprio.",
+      "Intenção de desktop sem energia é distinta das páginas de vídeo/boot. O texto já foi reescrito com diagnóstico seguro e sem ponte em fonte; passou por revisão técnica formal; permanece noindex até receber asset editorial próprio com proveniência.",
   },
   {
     slug: "tela-azul-windows-como-resolver",
@@ -52,7 +52,7 @@ export const PROGRAMMATIC_EDITORIAL_GOVERNANCE: ProgrammaticEditorialDecision[] 
     slug: "wifi-caindo-toda-hora",
     status: "review",
     rationale:
-      "Instabilidade de Wi-Fi sustenta intenção própria de isolamento dispositivo × WLAN × roteador × provedor. O texto já foi reescrito sem números universais; permanece noindex até revisão técnica formal, fontes e asset editorial próprio.",
+      "Instabilidade de Wi-Fi sustenta intenção própria de isolamento dispositivo × WLAN × roteador × provedor. O texto já foi reescrito sem números universais; passou por revisão técnica formal; permanece noindex até receber asset editorial próprio com proveniência.",
   },
   {
     slug: "pc-muito-lento-como-acelerar",
@@ -88,13 +88,13 @@ export const PROGRAMMATIC_EDITORIAL_GOVERNANCE: ProgrammaticEditorialDecision[] 
     slug: "como-fazer-backup-na-nuvem",
     status: "review",
     rationale:
-      "Procedimento de backup pessoal em nuvem é independente do comparativo nuvem vs HD externo. O texto já foi reescrito com sincronização × backup, cópia independente e teste de restauração; permanece noindex até revisão técnica formal, fontes primárias e asset próprio.",
+      "Procedimento de backup pessoal em nuvem é independente do comparativo nuvem vs HD externo. O texto já foi reescrito com sincronização × backup, cópia independente e teste de restauração; passou por revisão técnica com fontes primárias; permanece noindex até receber asset editorial próprio com proveniência.",
   },
   {
     slug: "como-recuperar-arquivos-apagados",
     status: "review",
     rationale:
-      "A intenção procedural é distinta da página de sintoma. O texto já foi reescrito com prioridade a não sobrescrever a mídia, diferenças entre HD/SSD e critérios de parada; permanece noindex até revisão técnica formal, fontes primárias e asset próprio.",
+      "A intenção procedural é distinta da página de sintoma. O texto já foi reescrito com prioridade a não sobrescrever a mídia, diferenças entre HD/SSD e critérios de parada; passou por revisão técnica com fontes primárias; permanece noindex até receber asset editorial próprio com proveniência.",
   },
   {
     slug: "como-aumentar-velocidade-internet",
