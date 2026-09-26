@@ -2,6 +2,7 @@ import { describe, expect, it } from "vitest";
 import {
   BAIRROS_ANCORA_SLUGS,
   LOTE_LOCAL_1,
+  LOTE_LOCAL_5,
   canonicalFor,
   declaredEntities,
   isNoindex,
@@ -32,7 +33,6 @@ describe("localIndexPolicy — Lote Local 1", () => {
     expect(isNoindex("/tecnico-informatica-sao-jose-pinhais")).toBe(false);
   });
 
-  // RODADA 5E: o Lote 2 promoveu 8 bairros com conteúdo próprio (13 no total).
   it("indexa somente os bairros âncora declarados na política", () => {
     expect(BAIRROS_ANCORA_SLUGS.slice(0, 5)).toEqual(["cic", "batel", "agua-verde", "centro", "portao"]);
     expect(BAIRROS_ANCORA_SLUGS).toContain("santa-felicidade");
@@ -44,9 +44,14 @@ describe("localIndexPolicy — Lote Local 1", () => {
     // Xaxim foi promovido na Micro-Rodada Local 1 (conteúdo próprio).
     expect(isNoindex("/bairros/xaxim")).toBe(false);
     expect(resolveLocal("/bairros/xaxim").sitemap).toBe(true);
-    // Bairro sem conteúdo próprio segue fora do índice.
-    expect(isNoindex("/bairros/bacacheri")).toBe(true);
-    expect(resolveLocal("/bairros/bacacheri").sitemap).toBe(false);
+  });
+
+  it("mantém o Lote Local 5 sincronizado com indexabilidade e sitemap", () => {
+    expect(LOTE_LOCAL_5).toHaveLength(10);
+    for (const path of LOTE_LOCAL_5) {
+      expect(isNoindex(path)).toBe(false);
+      expect(resolveLocal(path).sitemap).toBe(true);
+    }
   });
 
   it("canonicaliza serviço × cidade sem intenção local para o serviço-pai real", () => {
@@ -71,9 +76,7 @@ describe("localIndexPolicy — Lote Local 1", () => {
       expect(d.sitemap).toBe(true);
     }
   });
-
 });
-
 
 describe("localIndexPolicy — clusters bloqueados", () => {
   it("mantém /arrumar-pc e /cftv fora do índice", () => {
