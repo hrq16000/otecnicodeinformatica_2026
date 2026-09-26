@@ -1480,17 +1480,17 @@ export const SERVICOS_CORE: Record<string, ServicoLandingData> = {
   "conserto-tv": {
     path: "conserto-tv",
     trackingKey: "conserto-tv",
-    metaTitle: "Conserto de TV e Smart TV em Curitiba | Bancada e Coleta",
+    metaTitle: "Conserto de TV LED, LCD e Smart TV em Curitiba | Coleta",
     metaDescription:
-      "Conserto de TV LED, LCD e Smart TV em Curitiba: avaliação em bancada, reparo em nível de componente quando viável, coleta e entrega.",
+      "Conserto de TV LED, LCD e Smart TV em Curitiba, com coleta e avaliação em bancada. Não realizamos conserto de TV a domicílio; orçamento após diagnóstico.",
     serviceName: "Conserto de TV e Smart TV",
     serviceDescription:
-      "Avaliação e reparo de TV LED, LCD e Smart TV em Curitiba e região, com trabalho em bancada, reparo em nível de componente quando viável, critérios claros de aceite e recusa e logística de coleta e entrega.",
+      "Conserto de televisores LED, LCD e Smart TV em Curitiba e região, com coleta, avaliação em bancada, reparo em nível de componente quando viável e critérios claros de aceite ou recusa."
     eyebrow: "TV e Smart TV em Curitiba",
-    h1: "Conserto de TV e Smart TV em Curitiba",
+    h1: "Conserto de TV LED, LCD e Smart TV em Curitiba",
     h1Accent: "com avaliação em bancada, coleta e entrega",
     intro:
-      "Televisor que não liga, liga sem imagem, mostra imagem com listras ou manchas, perde o som, reinicia sozinho ou trava na tela da marca. Esses sintomas têm causas diferentes — fonte, placa principal, comando do painel, iluminação interna ou o próprio painel — e só a avaliação em bancada separa o que é reparável do que não compensa. Não fazemos visita para TV: o aparelho é coletado, avaliado com o equipamento aberto e você recebe o resultado por escrito antes de qualquer serviço. Descreva marca, modelo e sintoma pela triagem no WhatsApp.",
+      "TV LED, LCD ou Smart TV que não liga, liga sem imagem, apresenta listras ou manchas, perde o som, reinicia ou trava na tela da marca precisa de diagnóstico por sintoma. Fonte, placa principal, iluminação interna, comando do painel e o próprio painel podem produzir sinais parecidos. Não realizamos conserto de TV a domicílio: o fluxo é coleta, avaliação em bancada e orçamento antes de qualquer reparo. Informe marca, modelo, tamanho e sintoma na triagem pelo WhatsApp."
     whatsappMessage:
       "Olá! Vim da página de conserto de TV e Smart TV. Triagem: (1) marca e modelo: (2) tamanho da tela: " +
       "(3) o que acontece ao ligar (não liga / sem imagem / sem som / listras / reinicia): (4) houve queda, raio ou oscilação de energia: " +
@@ -1533,7 +1533,7 @@ export const SERVICOS_CORE: Record<string, ServicoLandingData> = {
         "Televisores usados como painel em recepção, sala de reunião e área de espera: mesmo processo de bancada, com registro por equipamento para controle interno da empresa.",
     },
     faqs: [
-      { question: "Vocês fazem visita para consertar TV?", answer: "Não. Televisor exige bancada, instrumentos de medição e espaço de apoio para abrir o aparelho com segurança — nada disso é reproduzível na sala do cliente. Por isso o atendimento de TV é sempre por coleta, avaliação em laboratório e entrega. As condições e a taxa mínima estão publicadas na página de coleta e entrega e em preços e políticas." },
+      { question: "Tem conserto de TV a domicílio em Curitiba?", answer: "Não. O reparo de TV exige bancada, instrumentos de medição e apoio adequado para abrir o aparelho com segurança. O fluxo é coleta, avaliação em bancada e devolução. As condições da coleta e os valores aplicáveis ficam nas páginas de coleta e entrega e de preços e políticas." },
       { question: "Como sei se vale a pena consertar minha TV?", answer: "A resposta honesta só existe depois da avaliação com o aparelho aberto. Defeito de fonte ou de iluminação interna costuma ter reparo viável; painel trincado, com mancha de impacto ou com falha interna de linha normalmente não compensa, porque o painel é a parte mais cara do conjunto. Quando o reparo não compensa, dizemos isso e você decide — não empurramos serviço." },
       { question: "TV com tela quebrada tem conserto?", answer: "Na prática, não trabalhamos com troca de painel. Painel trincado, com marca de impacto ou com mancha interna é considerado fora de reparo aqui, porque o custo da peça e o risco de manuseio se aproximam ou ultrapassam o valor do aparelho. Você recebe essa informação na triagem, antes da coleta, para não pagar por uma avaliação previsível." },
       { question: "O que é reparo em nível de componente numa TV?", answer: "É trabalhar dentro da placa em vez de trocar a placa inteira. Medimos os estágios do circuito, identificamos o componente que falhou e substituímos apenas ele quando é viável e seguro. Nem todo defeito permite esse caminho: circuitos com componente indisponível, placa com dano extenso por corrosão ou por descarga elétrica, e módulos que só o fabricante fornece já montados seguem outra rota." },
@@ -1555,11 +1555,11 @@ export const SERVICOS_CORE: Record<string, ServicoLandingData> = {
     ],
     blocoLocal: [
       {
-        titulo: "Sintomas de TV e o que cada um costuma indicar",
+        titulo: "Conserto de TV LED, LCD e Smart TV: sintomas e diagnóstico",
         paragrafos: [
           "Televisor que não dá nenhum sinal de vida — sem luz de espera, sem estalo, sem reação ao controle nem ao botão físico — aponta para o estágio de alimentação. A fonte de uma TV entrega tensões diferentes para partes diferentes do aparelho, e a falha de um único estágio pode derrubar tudo ou apenas parte do conjunto. É por isso que a medição precisa ser feita com o aparelho aberto e energizado por quem sabe onde encostar a ponta de prova: o interior de uma TV mantém pontos com tensão perigosa mesmo desligada da tomada.",
-          "Tela escura com som normal é outro cenário, e é o mais frequente na bancada. O aparelho processa o sinal, o áudio sai, mas nada aparece. Na maioria das vezes o problema está na iluminação interna do painel ou no circuito que a alimenta. Uma forma caseira de suspeitar disso é iluminar a tela de perto com uma lanterna, em ambiente escuro, e verificar se a imagem aparece fraca ao fundo. Isso é indício, não diagnóstico: a confirmação exige medição.",
-          "Listras verticais, faixas horizontais, manchas escuras que não mudam de lugar e áreas com cor deslocada normalmente têm origem no painel ou na conexão entre o painel e a placa que o comanda. Esse é o grupo de sintomas com maior chance de recusa técnica, porque o painel não é peça que reparamos. Já reinício espontâneo, desligamento após alguns minutos e travamento na tela da marca costumam envolver alimentação instável ou a placa principal, e esses têm chance real de reparo.",
+          "Tela escura com som normal é um sintoma comum em televisores LED e pode envolver a iluminação interna do painel ou o circuito que a alimenta; outras causas também são possíveis. Iluminar a tela de perto com uma lanterna, em ambiente escuro, pode revelar imagem fraca ao fundo e servir como indício, mas a confirmação exige medição em bancada."
+          "Listras verticais, faixas horizontais, manchas fixas e áreas com cor deslocada podem envolver o painel ou a conexão entre ele e a placa de controle. Como não trabalhamos com troca de painel, a avaliação precisa separar falha de painel de falha eletrônica antes de indicar reparo. Reinício espontâneo, desligamento após alguns minutos e travamento na tela da marca podem envolver alimentação ou placa principal e também exigem medição."
           "Perda de som com imagem normal, entrada HDMI que parou de funcionar em todas as fontes e falha de rede na Smart TV são sintomas de circuitos específicos da placa principal. Nesses casos vale um teste prévio simples antes de mover o aparelho: trocar o cabo, testar outra entrada, testar outra fonte de vídeo e reiniciar o aparelho pela tomada. Se o comportamento se mantém em todas as combinações, a origem é interna.",
         ],
       },
@@ -1604,7 +1604,7 @@ export const SERVICOS_CORE: Record<string, ServicoLandingData> = {
       { label: "Quando não compensa consertar", to: "/quando-nao-compensa" },
       { label: "Equipamentos atendidos", to: "/equipamentos-atendidos" },
     ],
-    dateModified: "2026-08-07",
+    dateModified: "2026-09-26",
   },
 
   // 14 ─────────────────────────────────────────────────────────
