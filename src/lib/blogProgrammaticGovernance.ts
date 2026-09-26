@@ -39,9 +39,9 @@ export type ProgrammaticEditorialDecision =
 export const PROGRAMMATIC_EDITORIAL_GOVERNANCE: ProgrammaticEditorialDecision[] = [
   {
     slug: "pc-nao-liga-o-que-fazer",
-    status: "review",
+    status: "promoted",
     rationale:
-      "Intenção de desktop sem energia é distinta das páginas de vídeo/boot. O texto já foi reescrito com diagnóstico seguro e sem ponte em fonte; passou por revisão técnica formal; permanece noindex até receber asset editorial próprio com proveniência.",
+      "Intenção de desktop sem energia/sem POST é distinta das páginas de notebook, vídeo e boot. O texto foi reescrito com diagnóstico seguro, passou por revisão técnica formal, recebeu capa vetorial própria e foi promovido de forma controlada ao índice.",
   },
   {
     slug: "tela-azul-windows-como-resolver",
