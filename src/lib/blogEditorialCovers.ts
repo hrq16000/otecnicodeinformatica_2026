@@ -662,6 +662,14 @@ export const EDITORIAL_COVERS: Record<string, EditorialCover> = {
     height: 630,
   },
 
+  // ── Onda 11P — Windows Setup e controlador de armazenamento.
+  "ssd-nao-aparece-no-instalador-do-windows": {
+    src: "/blog/ssd-nao-aparece-no-instalador-do-windows.svg",
+    alt: "Ilustração editorial de SSD, firmware e instalador do Windows conectados por uma sequência de diagnóstico",
+    width: 1200,
+    height: 630,
+  },
+
 };
 
 export function getEditorialCover(slug: string): EditorialCover | undefined {
