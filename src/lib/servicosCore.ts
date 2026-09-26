@@ -842,25 +842,25 @@ export const SERVICOS_CORE: Record<string, ServicoLandingData> = {
       { label: "Suporte para empresas", to: "/empresa-de-ti-curitiba" },
       { label: "Preços e políticas", to: "/precos-e-politicas" },
     ],
-    dateModified: "2026-08-06",
+    dateModified: "2026-09-26",
   },
 
   // 8 ─────────────────────────────────────────────────────────
   "suporte-tecnico-empresarial": {
     path: "suporte-tecnico-empresarial",
     trackingKey: "suporte-empresarial",
-    metaTitle: "Suporte Técnico para Empresas em Curitiba | Informática",
+    metaTitle: "Suporte Técnico para Empresas | Escopo e Atendimento",
     metaDescription:
-      "Suporte técnico de informática para empresas em Curitiba, com atendimento para computadores, usuários, redes, impressoras e manutenção preventiva.",
+      "Entenda o suporte técnico para empresas: estações, usuários, redes, impressoras, backup, atendimento avulso ou recorrente e critérios de triagem.",
     serviceName: "Suporte Técnico Empresarial",
     serviceDescription:
-      "Suporte de informática para empresas: estações, rede, impressoras, backups e manutenção preventiva, com atendimento pontual ou recorrente em Curitiba e região.",
-    eyebrow: "Empresas em Curitiba",
-    h1: "Suporte técnico de informática para empresas em Curitiba",
+      "Suporte de informática para empresas: estações, rede, impressoras, backups e manutenção preventiva, com atendimento pontual ou recorrente conforme escopo e modalidade.",
+    eyebrow: "Suporte para empresas",
+    h1: "Suporte técnico de informática para empresas",
     h1Accent: "menos paradas, mais previsibilidade",
     intro:
-      "Empresa parada custa caro. Damos suporte técnico às estações de trabalho da equipe, à rede interna, às impressoras compartilhadas e às rotinas de backup, com atendimento pontual para emergências ou recorrente para prevenir problemas. É o suporte prático do dia a dia; a estruturação institucional de TI mais ampla você encontra na página Empresa de TI em Curitiba. Fale pelo WhatsApp para avaliarmos a necessidade.",
-    whatsappMessage: "Olá! Preciso de suporte técnico de informática para uma empresa em Curitiba.",
+      "Suporte técnico empresarial organiza incidentes de estações, usuários, rede, impressão e backup sem confundir chamado avulso com contrato recorrente. Esta página explica escopo, modalidades, limites e como a triagem funciona; a contratação por cidade fica nas páginas locais específicas.",
+    whatsappMessage: "Olá! Preciso de suporte técnico de informática para uma empresa.",
     incluso: [
       { title: "Estações de trabalho", desc: "Manutenção e configuração dos computadores da equipe." },
       { title: "Rede e conectividade", desc: "Estabilidade, segurança e organização da rede interna." },
@@ -884,7 +884,7 @@ export const SERVICOS_CORE: Record<string, ServicoLandingData> = {
       { title: "Escopo do serviço", desc: "Atendimento pontual, projeto específico ou acompanhamento recorrente." },
       { title: "Rotinas de backup", desc: "Estruturar e manter backups influencia o escopo." },
       { title: "Urgência", desc: "Emergências com empresa parada podem alterar prioridade." },
-      { title: "Deslocamento", desc: "Atendimento presencial considera a localização em Curitiba e região." },
+      { title: "Deslocamento", desc: "Quando o atendimento é presencial, localização e modalidade são consideradas antes do agendamento." },
     ],
     atendimento: {
       residencial:
@@ -901,7 +901,7 @@ export const SERVICOS_CORE: Record<string, ServicoLandingData> = {
       { question: "É possível atender vários computadores?", answer: "Sim. Atendimentos com várias estações são organizados por lote e por prioridade, para que a operação não pare inteira durante o serviço." },
       { question: "Como funciona o faturamento?", answer: "O escopo é definido após o diagnóstico e o valor é apresentado e aprovado antes da execução. As formas de pagamento e as condições aplicáveis estão descritas na página de preços e políticas." },
       { question: "O atendimento empresarial tem garantia?", answer: "Sim, conforme o serviço executado e as condições publicadas em preços e políticas. A garantia cobre o serviço realizado, não novas falhas de causa diferente nem alterações feitas depois da entrega." },
-      { question: "Vocês atendem empresas de qual porte?", answer: "Atendemos principalmente autônomos, escritórios, comércios e micro e pequenas empresas em Curitiba e região, de forma avulsa ou recorrente, dentro da nossa capacidade operacional." },
+      { question: "Vocês atendem empresas de qual porte?", answer: "Atendemos principalmente autônomos, escritórios, comércios e micro e pequenas empresas, de forma avulsa ou recorrente, dentro da nossa capacidade operacional." },
       { question: "Como funciona o atendimento recorrente?", answer: "Definimos escopo, itens acompanhados e periodicidade conforme a necessidade da empresa. Não é suporte ilimitado: o que está incluído e o que é cobrado à parte fica registrado antes de começar." },
       { question: "Fazem atendimento de emergência?", answer: "Avaliamos situações com operação parada e priorizamos o restabelecimento conforme a disponibilidade da agenda. Não mantemos plantão em regime ininterrupto." },
       { question: "Resolvem problemas de rede e impressão?", answer: "Sim, esses estão entre os chamados mais comuns. Casos que envolvem cobertura, cabeamento ou reestruturação da conectividade são conduzidos pela página de redes e Wi-Fi." },
@@ -914,6 +914,7 @@ export const SERVICOS_CORE: Record<string, ServicoLandingData> = {
     ],
 
     relacionados: [
+      { label: "Suporte empresarial em Curitiba", to: "/servicos/suporte-tecnico-empresarial/curitiba" },
       { label: "Empresa de TI em Curitiba", to: "/empresa-de-ti-curitiba" },
       { label: "Manutenção preventiva para empresas", to: "/servicos/manutencao-preventiva-empresas" },
       { label: "Backup para empresas", to: "/servicos/backup-para-empresas" },
@@ -963,6 +964,7 @@ export const SERVICOS_CORE: Record<string, ServicoLandingData> = {
     ],
 
     linksLocais: [
+      { label: "Suporte empresarial em Curitiba", to: "/servicos/suporte-tecnico-empresarial/curitiba" },
       { label: "Empresa de TI em Curitiba", to: "/empresa-de-ti-curitiba" },
       { label: "Atendimento técnico em Curitiba", to: "/tecnico-informatica-curitiba" },
       { label: "Atendimento remoto", to: "/atendimento-remoto" },
