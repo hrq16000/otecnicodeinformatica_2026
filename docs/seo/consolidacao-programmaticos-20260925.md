@@ -9,7 +9,8 @@ Princípio: não aumentar o índice com conteúdo fraco, duplicado ou datado.
 Os 18 artigos programáticos herdados foram classificados em duas filas:
 
 - **15 consolidações por 301**: a intenção já possui uma URL canônica mais forte, revisada e/ou indexável.
-- **3 em revisão**: podem sustentar intenção própria, mas o conteúdo atual não passa o padrão editorial.
+- **1 promovida**: `/blog/como-fazer-backup-na-nuvem` passou por reescrita, revisão técnica, fontes primárias e asset próprio;
+- **2 em revisão**: ainda sustentam intenção própria, mas aguardam fechamento editorial/asset próprio.
 
 A fonte executável dessa decisão é `src/lib/blogProgrammaticGovernance.ts`.
 
@@ -33,12 +34,14 @@ A fonte executável dessa decisão é `src/lib/blogProgrammaticGovernance.ts`.
 | /blog/diferenca-windows-10-vs-11 | /decisoes/atualizar-para-windows-11 |
 | /blog/como-recuperar-arquivos-apagados | /blog/como-recuperar-arquivos-apagados-windows |
 
+## Intenção promovida após qualificação
+
+- `/blog/como-fazer-backup-na-nuvem`: conteúdo independente de backup pessoal em nuvem, com distinção sincronização × backup, cópia independente, restauração testada, revisão CISA/NIST e capa vetorial própria.
+
 ## Intenções mantidas em revisão
 
 - `/blog/pc-nao-liga-o-que-fazer`: reescrever removendo ponte de fonte com clipe, reset de CMOS como receita genérica e conclusões por tentativa.
 - `/blog/wifi-caindo-toda-hora`: reescrever com isolamento dispositivo × LAN × Wi-Fi × provedor, sem números universais de conexões/canais.
-- `/blog/como-fazer-backup-na-nuvem`: qualificar com versionamento, restauração testada, cópia independente e fontes primárias.
-- `/blog/como-recuperar-arquivos-apagados`: qualificar com prioridade absoluta a não sobrescrever a mídia e critérios de parada.
 
 ## Correção estrutural feita nesta rodada
 
