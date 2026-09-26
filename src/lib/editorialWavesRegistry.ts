@@ -930,6 +930,29 @@ export const WAVE_11N_BATCH_1: EditorialWaveEntry[] = [
   },
 ];
 
+
+/** Onda 11O — fechamento do estoque programático independente. */
+export const WAVE_11O_BATCH_1: EditorialWaveEntry[] = [
+  {
+    wave: "11A",
+    batch: "16",
+    url: "/blog/pc-nao-liga-o-que-fazer",
+    slug: "pc-nao-liga-o-que-fazer",
+    ownerId: "desktop-nao-liga-energia-post-video",
+    cluster: "liga-e-desliga",
+    role: "pilar",
+    publishedAt: "2026-09-26",
+    targetQueries: ["pc nao liga", "computador nao liga", "pc liga mas nao da video"],
+    doNotDuplicate: [
+      "/blog/notebook-nao-liga-o-que-fazer",
+      "/blog/monitor-sem-sinal-o-que-verificar",
+      "/blog/como-testar-fonte-de-alimentacao-pc",
+      "/blog/como-diagnosticar-placa-mae-defeituosa",
+      "/blog/computador-desliga-sozinho-o-que-verificar",
+    ],
+  },
+];
+
 export const EDITORIAL_WAVES: EditorialWaveEntry[] = [
   ...WAVE_10C_BATCH_0,
   ...WAVE_10D_BATCH_1,
@@ -948,6 +971,7 @@ export const EDITORIAL_WAVES: EditorialWaveEntry[] = [
   ...WAVE_11L_BATCH_1,
   ...WAVE_11M_BATCH_1,
   ...WAVE_11N_BATCH_1,
+  ...WAVE_11O_BATCH_1,
 ];
 
 /** URLs monitoradas (ordem estável, sem duplicatas). */
