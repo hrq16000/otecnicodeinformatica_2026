@@ -17,9 +17,9 @@ describe("governança do estoque programático", () => {
     expect(new Set(governed).size).toBe(governed.length);
   });
 
-  it("consolida 14 duplicatas e mantém 4 intenções em revisão", () => {
-    expect(PROGRAMMATIC_REDIRECTS).toHaveLength(14);
-    expect(PROGRAMMATIC_REVIEW).toHaveLength(4);
+  it("consolida 15 duplicatas e mantém 3 intenções em revisão", () => {
+    expect(PROGRAMMATIC_REDIRECTS).toHaveLength(15);
+    expect(PROGRAMMATIC_REVIEW).toHaveLength(3);
   });
 
   it("materializa toda consolidação editorial na matriz única de redirects", () => {

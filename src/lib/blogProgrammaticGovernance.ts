@@ -92,9 +92,10 @@ export const PROGRAMMATIC_EDITORIAL_GOVERNANCE: ProgrammaticEditorialDecision[] 
   },
   {
     slug: "como-recuperar-arquivos-apagados",
-    status: "review",
+    status: "redirect",
+    target: "/blog/como-recuperar-arquivos-apagados-windows",
     rationale:
-      "A intenção procedural é distinta da página de sintoma. O texto já foi reescrito com prioridade a não sobrescrever a mídia, diferenças entre HD/SSD e critérios de parada; passou por revisão técnica com fontes primárias; permanece noindex até receber asset editorial próprio com proveniência.",
+      "O acervo já possui guia aprovado com a mesma intenção, fontes Microsoft e capa licenciada. A URL herdada vira alias para concentrar autoridade na owner canônica.",
   },
   {
     slug: "como-aumentar-velocidade-internet",

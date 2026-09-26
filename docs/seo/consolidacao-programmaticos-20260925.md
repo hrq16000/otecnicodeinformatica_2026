@@ -8,8 +8,8 @@ Princípio: não aumentar o índice com conteúdo fraco, duplicado ou datado.
 
 Os 18 artigos programáticos herdados foram classificados em duas filas:
 
-- **14 consolidações por 301**: a intenção já possui uma URL canônica mais forte, revisada e/ou indexável.
-- **4 em revisão**: podem sustentar intenção própria, mas o conteúdo atual não passa o padrão editorial.
+- **15 consolidações por 301**: a intenção já possui uma URL canônica mais forte, revisada e/ou indexável.
+- **3 em revisão**: podem sustentar intenção própria, mas o conteúdo atual não passa o padrão editorial.
 
 A fonte executável dessa decisão é `src/lib/blogProgrammaticGovernance.ts`.
 
@@ -31,6 +31,7 @@ A fonte executável dessa decisão é `src/lib/blogProgrammaticGovernance.ts`.
 | /blog/como-trocar-pasta-termica | /blog/como-trocar-pasta-termica-notebook |
 | /blog/melhores-antivirus-gratuitos-2026 | /blog/como-escolher-um-bom-antivirus |
 | /blog/diferenca-windows-10-vs-11 | /decisoes/atualizar-para-windows-11 |
+| /blog/como-recuperar-arquivos-apagados | /blog/como-recuperar-arquivos-apagados-windows |
 
 ## Intenções mantidas em revisão
 
