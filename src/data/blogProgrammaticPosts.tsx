@@ -325,50 +325,115 @@ const defs: PostDef[] = [
   },
   {
     slug: "como-fazer-backup-na-nuvem",
-    title: "Como Fazer Backup na Nuvem em 2026: Guia Completo e Seguro",
-    excerpt: "Aprenda a configurar backup automático na nuvem (Google Drive, OneDrive, Mega) e nunca mais perca fotos e documentos.",
+    title: "Backup na nuvem: como montar uma cópia que você consegue restaurar",
+    excerpt:
+      "Sincronizar não basta: organize arquivos, mantenha cópia independente, confirme versionamento e teste a restauração antes de confiar no backup.",
     category: "Segurança",
-    lead: "A regra 3-2-1 do backup: 3 cópias, em 2 mídias diferentes, com 1 fora de casa (nuvem). Veja como fazer sem complicação.",
+    readTime: "11 min",
+    lead:
+      "Backup na nuvem não é apenas colocar arquivos em uma pasta sincronizada. Uma estratégia útil precisa responder a três perguntas: o que está protegido, quantas cópias independentes existem e se uma restauração já foi testada. O provedor pode mudar; esses critérios continuam válidos.",
     sections: [
       {
-        h: "Compare os serviços (planos gratuitos)",
+        h: "1. Separe sincronização de backup",
         list: [
-          "<strong>Google Drive</strong>: 15GB grátis, integração com Android e Gmail",
-          "<strong>OneDrive</strong>: 5GB grátis, integrado ao Windows 11",
-          "<strong>Mega</strong>: 20GB grátis, foco em privacidade (criptografia)",
-          "<strong>iCloud</strong>: 5GB grátis, melhor para usuários Apple",
+          "<strong>Sincronização</strong> mantém arquivos alinhados entre dispositivos, mas uma exclusão ou alteração pode se propagar.",
+          "<strong>Versionamento e lixeira do provedor</strong> ajudam a recuperar estados anteriores, mas retenção e limites dependem do serviço e do plano.",
+          "<strong>Cópia independente</strong> fica fora do caminho normal de sincronização e reduz o risco de uma ação errada afetar tudo ao mesmo tempo.",
+          "Veja o conceito completo em <a href=\"/blog/backup-como-proteger-seus-arquivos\">backup: como proteger seus arquivos</a>.",
         ],
       },
-      { h: "Backup das fotos (o mais importante)", p: "Instale Google Fotos no celular e ative 'Backup'. Faça o mesmo no PC com Google Drive Desktop apontando para a pasta Imagens." },
-      { h: "Backup de documentos", p: "Mova a pasta Documentos para dentro do OneDrive ou Google Drive. Tudo que salvar ali sincroniza automaticamente." },
-      { h: "Backup de WhatsApp", p: "WhatsApp → Configurações → Conversas → Backup → diário no Google Drive (Android) ou iCloud (iPhone). Ative criptografia." },
-      { h: "Backup local também (regra 3-2-1)", p: "Compre um HD externo de 1TB e use o 'Histórico de Arquivos' do Windows. Mantenha desconectado quando não estiver fazendo backup (proteção contra ransomware)." },
+      {
+        h: "2. Defina primeiro o que não pode ser perdido",
+        list: [
+          "Documentos de trabalho, fotos originais, projetos, arquivos financeiros e chaves de recuperação merecem prioridade.",
+          "Não presuma que Área de Trabalho, Downloads, e-mail local ou pastas de aplicativos entram automaticamente na nuvem; confirme o escopo configurado.",
+          "Antes de migrar ou formatar, faça um inventário do que precisa existir depois da restauração.",
+        ],
+      },
+      {
+        h: "3. Use múltiplas cópias como estratégia, não como número mágico",
+        p:
+          "A regra 3-2-1 é uma referência conhecida: múltiplas cópias, em meios diferentes, com pelo menos uma fora do equipamento principal. O ponto importante não é decorar a fórmula, mas evitar que falha do computador, ransomware, exclusão acidental ou problema de conta atinja todas as cópias ao mesmo tempo.",
+      },
+      {
+        h: "4. Configure a nuvem sem depender de preços ou franquias que mudam",
+        list: [
+          "Escolha um serviço que ofereça autenticação forte, histórico/versionamento compatível com a sua necessidade e exportação dos arquivos.",
+          "Ative autenticação em dois fatores e guarde os meios de recuperação da conta em local separado.",
+          "Não baseie a decisão em uma franquia gratuita citada em um artigo: capacidade, preço e política de retenção mudam. Confira sempre a página oficial do provedor.",
+          "Para comparar nuvem e armazenamento local, use <a href=\"/decisoes/nuvem-ou-hd-externo\">nuvem ou HD externo?</a>.",
+        ],
+      },
+      {
+        h: "5. Teste a restauração antes de considerar o trabalho concluído",
+        list: [
+          "Escolha uma pequena amostra representativa: documento, foto, pasta e arquivo grande.",
+          "Restaure para um local diferente do original e abra os arquivos, em vez de apenas verificar se aparecem na interface.",
+          "Registre qual conta, dispositivo e método foram usados para restaurar; isso reduz improviso quando houver uma perda real.",
+          "Use também o roteiro <a href=\"/blog/como-testar-restauracao-de-backup\">como testar a restauração de um backup</a>.",
+        ],
+      },
     ],
-    whenToCall: "Configuro backup automático na nuvem + local remotamente em ~40 minutos. Ideal para quem tem fotos de família e documentos importantes e não quer arriscar.",
+    whenToCall:
+      "Procure ajuda quando os dados existem em vários serviços sem uma cópia claramente restaurável, quando a conta foi bloqueada ou comprometida, quando há grande volume para migrar, ou antes de formatar um computador que contém arquivos únicos. O objetivo é provar a restauração antes de apagar a origem.",
   },
+
   {
     slug: "como-recuperar-arquivos-apagados",
-    title: "Como Recuperar Arquivos Apagados (Mesmo da Lixeira)",
-    excerpt: "Apagou por engano? Esvaziou a lixeira? Pen drive corrompido? Veja como recuperar arquivos com ferramentas gratuitas e profissionais.",
+    title: "Arquivos apagados: o que fazer antes de tentar recuperar",
+    excerpt:
+      "Apagou um arquivo ou esvaziou a lixeira? Pare de gravar no mesmo disco, procure cópias existentes e só então escolha um método de recuperação.",
     category: "Procedimentos Técnicos",
-    lead: "Arquivo apagado raramente é arquivo perdido — o Windows apenas marca o espaço como livre. Quanto mais rápido você agir, maior a chance de recuperação.",
+    readTime: "11 min",
+    lead:
+      "Ao apagar um arquivo, a prioridade não é instalar várias ferramentas: é evitar novas gravações na mesma mídia. O resultado depende do tipo de armazenamento, do que aconteceu depois da exclusão e de existirem versões, lixeira, backup ou dados ainda não sobrescritos.",
     sections: [
-      { h: "Regra de ouro: pare de usar o disco", p: "Cada gravação nova pode sobrescrever os dados apagados. Se o arquivo era do C:, não baixe ferramenta de recuperação no C: — use outro disco ou pen drive." },
       {
-        h: "Ferramentas gratuitas que funcionam",
+        h: "1. Pare de escrever no local onde o arquivo estava",
         list: [
-          "<strong>Recuva</strong> — clássica, fácil para iniciantes",
-          "<strong>PhotoRec</strong> — gratuita, recupera fotos, vídeos e documentos por assinatura de arquivo",
-          "<strong>Disk Drill</strong> — interface bonita, versão gratuita até 500MB",
-          "<strong>EaseUS Data Recovery</strong> — boa taxa de sucesso, gratuita até 2GB",
+          "Não baixe ferramenta de recuperação no mesmo disco que continha o arquivo perdido.",
+          "Evite instalar programas, copiar arquivos grandes ou executar limpeza/otimização nessa unidade.",
+          "Se for cartão, pendrive ou disco externo, desconecte depois de identificar o problema e preserve a mídia até decidir o próximo passo.",
+          "Se o disco também apresenta ruído, desconexões ou lentidão severa, trate primeiro como possível falha física.",
         ],
       },
-      { h: "Cartão SD ou pen drive corrompido", p: "Não formate quando o Windows pedir! Use o PhotoRec apontando para o cartão. Funciona mesmo em mídias que aparecem como 'precisa formatar'." },
-      { h: "HD com bad blocks", p: "Use HDDScan ou Victoria para mapear setores ruins. Se o HD ainda for reconhecido, dá para clonar com ddrescue (Linux) e recuperar do clone." },
-      { h: "SSD apagado: chances baixas", p: "TRIM apaga permanentemente em SSDs. Recuperação só é possível em raros casos (TRIM desativado, RAID específico). Backup é a única defesa real." },
+      {
+        h: "2. Procure cópias antes de fazer varredura de recuperação",
+        list: [
+          "Confira Lixeira, histórico/versionamento do serviço de nuvem e outras máquinas sincronizadas.",
+          "Verifique backups externos e pontos de restauração de arquivos que você já tenha configurado.",
+          "Em ambientes corporativos, confirme se existe backup central antes de manipular a estação.",
+          "O guia <a href=\"/problemas/arquivos-apagados\">arquivos apagados: primeiros passos</a> organiza essa triagem.",
+        ],
+      },
+      {
+        h: "3. HD, SSD, pendrive e cartão não se comportam do mesmo jeito",
+        p:
+          "Em discos magnéticos, um arquivo excluído pode continuar recuperável até que seus blocos sejam sobrescritos. Em SSDs, recursos como TRIM e rotinas internas do controlador podem reduzir a possibilidade de recuperação, mas o comportamento depende do sistema, da unidade e do momento em que os comandos foram processados. Não trate “SSD = impossível” como regra absoluta.",
+      },
+      {
+        h: "4. Ferramentas de recuperação não devem escrever na origem",
+        list: [
+          "Quando uma ferramenta for apropriada, execute a partir de outra unidade e salve os arquivos recuperados em destino diferente.",
+          "Não formate uma mídia apenas porque o sistema pede formatação; isso altera estruturas que podem ser úteis à recuperação.",
+          "Não rode reparo de sistema de arquivos por tentativa em unidade com dados únicos sem antes avaliar o risco.",
+          "Se houver falha física ou setores instáveis, a abordagem muda para aquisição/imagem controlada; consulte <a href=\"/blog/como-recuperar-dados-hd-com-defeito\">recuperação de dados de HD com defeito</a>.",
+        ],
+      },
+      {
+        h: "5. Critérios de parada",
+        list: [
+          "HD com clique, raspagem, rotação irregular ou desaparecendo da BIOS/UEFI.",
+          "Unidade que desconecta durante leitura ou deixa o sistema travado.",
+          "Arquivos empresariais, fiscais, jurídicos ou pessoais sem nenhuma outra cópia.",
+          "Ransomware ou suspeita de invasão: preserve evidências e não misture recuperação de arquivo com limpeza do incidente.",
+        ],
+      },
     ],
-    whenToCall: "Em casos sérios (HD físico danificado, ransomware, partição perdida), evite mexer — cada tentativa amadora reduz as chances. Faço diagnóstico remoto antes de qualquer ação destrutiva.",
+    whenToCall:
+      "A avaliação especializada é indicada quando a mídia apresenta sinais físicos, quando os dados são insubstituíveis ou quando tentativas anteriores já alteraram partições e sistema de arquivos. Em recuperação, reduzir novas escritas costuma ser mais importante do que tentar mais uma ferramenta.",
   },
+
   {
     slug: "como-aumentar-velocidade-internet",
     title: "Como Aumentar a Velocidade da Internet em Casa (Sem Mudar de Plano)",
