@@ -211,6 +211,7 @@ Demais municípios da Região Metropolitana são avaliados sob consulta pelo Wha
 - [SSD ou RAM: orientação inicial | Ferramenta gratuita](https://otecnicodeinformatica.com.br/ferramentas/ssd-ou-ram)
 - [Wi-Fi instável: roteiro de observação | Ferramenta gratuita](https://otecnicodeinformatica.com.br/ferramentas/roteiro-wifi-instavel)
 - [Entidades Técnicas do Portal | Mapa de Conteúdo Conectado](https://otecnicodeinformatica.com.br/entidades)
+- [Técnico de Informática: mapa técnico completo | Entidades](https://otecnicodeinformatica.com.br/entidades/tecnico-de-informatica)
 - [Windows: mapa técnico completo | Entidades](https://otecnicodeinformatica.com.br/entidades/windows)
 - [SSD: mapa técnico completo | Entidades](https://otecnicodeinformatica.com.br/entidades/ssd)
 - [Memória RAM: mapa técnico completo | Entidades](https://otecnicodeinformatica.com.br/entidades/memoria-ram)

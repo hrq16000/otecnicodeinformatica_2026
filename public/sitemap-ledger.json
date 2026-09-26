@@ -1,15 +1,15 @@
 {
-  "geradoEm": "2026-09-25T14:02:25.476Z",
+  "geradoEm": "2026-09-26T12:47:58.049Z",
   "host": "otecnicodeinformatica.com.br",
   "modo": "generate",
   "sitemap": {
     "url": "https://otecnicodeinformatica.com.br/sitemap.xml",
-    "totalUrls": 267,
+    "totalUrls": 279,
     "googleSearchConsole": "NOT_REQUESTED",
     "indexNow": "NOT_REQUESTED"
   },
   "lotes": {
-    "total": 99,
+    "total": 100,
     "itens": [
       {
         "slug": "quando-trocar-hd-por-ssd",
@@ -604,11 +604,30 @@
         "url": "/blog/como-configurar-firewall-ufw-linux",
         "approvedAt": "2026-09-25",
         "includeInSitemap": true
+      },
+      {
+        "slug": "ssd-nao-aparece-no-instalador-do-windows",
+        "url": "/blog/ssd-nao-aparece-no-instalador-do-windows",
+        "approvedAt": "2026-09-26",
+        "includeInSitemap": true
       }
     ]
   },
   "diff": {
-    "adicionadas": [],
+    "adicionadas": [
+      "/bairros/bacacheri",
+      "/bairros/hauer",
+      "/bairros/juveve",
+      "/bairros/merces",
+      "/bairros/novo-mundo",
+      "/bairros/parque-da-fonte",
+      "/bairros/pedro-moro-sjp",
+      "/bairros/quississana-sjp",
+      "/bairros/reboucas",
+      "/bairros/rio-pequeno-sjp",
+      "/blog/ssd-nao-aparece-no-instalador-do-windows",
+      "/entidades/tecnico-de-informatica"
+    ],
     "removidas": [],
     "regressoes": []
   },
@@ -2703,6 +2722,55 @@
         "adicionadas": [],
         "removidas": [],
         "total": 267
+      },
+      "error": null
+    },
+    {
+      "id": "6645a608-ad45-4ccd-a0d8-883ef48158ee",
+      "action": "sync_approved",
+      "status": "OK",
+      "source": "cli",
+      "timestamp": "2026-09-26T12:47:58.098Z",
+      "details": {
+        "modo": "write",
+        "saida": "sitemap editorial: em dia (100 artigos indexáveis)"
+      },
+      "error": null
+    },
+    {
+      "id": "8dcde9ce-2a22-4ab2-88c2-3a7bfe333a1a",
+      "action": "generate_sitemaps",
+      "status": "OK",
+      "source": "cli",
+      "timestamp": "2026-09-26T12:47:58.157Z",
+      "details": {
+        "saida": "sitemap curado: index + 8 sub-sitemaps (279 urls)"
+      },
+      "error": null
+    },
+    {
+      "id": "a200d469-6fdc-4fd4-bc4f-feb98e8f6e3f",
+      "action": "diff_no_regression",
+      "status": "OK",
+      "source": "cli",
+      "timestamp": "2026-09-26T12:47:58.163Z",
+      "details": {
+        "adicionadas": [
+          "/bairros/bacacheri",
+          "/bairros/hauer",
+          "/bairros/juveve",
+          "/bairros/merces",
+          "/bairros/novo-mundo",
+          "/bairros/parque-da-fonte",
+          "/bairros/pedro-moro-sjp",
+          "/bairros/quississana-sjp",
+          "/bairros/reboucas",
+          "/bairros/rio-pequeno-sjp",
+          "/blog/ssd-nao-aparece-no-instalador-do-windows",
+          "/entidades/tecnico-de-informatica"
+        ],
+        "removidas": [],
+        "total": 279
       },
       "error": null
     }

@@ -19,6 +19,12 @@ export interface EditorialCover {
 }
 
 export const EDITORIAL_COVERS: Record<string, EditorialCover> = {
+  "ssd-nao-aparece-no-instalador-do-windows": {
+    src: "/blog/ssd-nao-aparece-no-instalador-do-windows.jpg",
+    alt: "Tela do instalador do Windows sem unidade listada e com opção para carregar driver de armazenamento",
+    width: 1200,
+    height: 630,
+  },
   "como-configurar-roteador-wifi-iniciantes": {
     src: "/blog/como-configurar-roteador-wifi-iniciantes.jpg",
     alt: "Roteador Wi-Fi doméstico com antenas externas sobre superfície clara",

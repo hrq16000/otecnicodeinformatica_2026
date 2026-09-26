@@ -1432,6 +1432,23 @@ const WAVE_11L: EditorialApproval[] = [
   },
 ];
 
+const WAVE_11M: EditorialApproval[] = [
+  {
+    slug: "ssd-nao-aparece-no-instalador-do-windows",
+    status: "approved",
+    authorType: "organization",
+    authorId: INSTITUTIONAL_AUTHOR.id,
+    reviewedAt: "2026-09-26",
+    approvedAt: "2026-09-26",
+    imageOrigin: "owned",
+    imageLicense: "Todos os direitos reservados",
+    imageAttribution:
+      "Imagem fornecida pelo responsável editorial para uso no portal — https://otecnicodeinformatica.com.br/",
+    notes:
+      "Guia original de intenção específica sobre Windows Setup; revisão técnica e fontes primárias registradas em blogEditorialSources.ts; fotografia real fornecida e autorizada, sem IA.",
+  },
+];
+
 export const APPROVED_EDITORIAL_CONTENT = new Map<string, EditorialApproval>([
 
   ...FIRST_WAVE_SLUGS.map((slug) => [
@@ -1492,6 +1509,7 @@ export const APPROVED_EDITORIAL_CONTENT = new Map<string, EditorialApproval>([
   ...WAVE_11J.map((a) => [a.slug, a] as [string, EditorialApproval]),
   ...WAVE_11K.map((a) => [a.slug, a] as [string, EditorialApproval]),
   ...WAVE_11L.map((a) => [a.slug, a] as [string, EditorialApproval]),
+  ...WAVE_11M.map((a) => [a.slug, a] as [string, EditorialApproval]),
 
 ]);
 

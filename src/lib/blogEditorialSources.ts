@@ -118,6 +118,18 @@ export const EDITORIAL_SOURCES: Record<string, EditorialSource> = {
       "Uso de mídia oficial de instalação para instalação limpa ou reinstalação do Windows.",
     ],
   },
+  "ms-windows-setup-boot-start-driver": {
+    id: "ms-windows-setup-boot-start-driver",
+    title: "Install a boot-start driver",
+    publisher: "Microsoft Learn",
+    url: "https://learn.microsoft.com/en-us/windows-hardware/drivers/install/installing-a-boot-start-driver",
+    accessedAt: "2026-09-26",
+    sourceType: "official",
+    supports: [
+      "O Windows depende de drivers de inicialização para acessar dispositivos necessários ao carregamento do sistema.",
+      "Quando o driver necessário não está incluído no Windows, deve ser usado um pacote fornecido pelo fabricante do dispositivo.",
+    ],
+  },
   "ms-win11-activation": {
     id: "ms-win11-activation",
     title: "Activate Windows",
@@ -1905,6 +1917,20 @@ export const ARTICLE_SOURCE_MANIFEST: Record<string, ArticleSourceManifest> = {
     factChecked: true,
     factCheckedAt: "2026-09-25",
     notes: "Onda 11L: removidas estatísticas e stack comercial sem fonte; reescrito em torno do UFW oficial, preservação de SSH, dry-run, origem, perfis, logs, rollback e limites de firewall de host.",
+  },
+  "ssd-nao-aparece-no-instalador-do-windows": {
+    slug: "ssd-nao-aparece-no-instalador-do-windows",
+    sources: [
+      "ms-win11-installation-media",
+      "ms-windows-setup-boot-start-driver",
+      "ms-bitlocker-backup-key",
+      "nvme-official-faq",
+    ],
+    technicalReview: "reviewed",
+    factChecked: true,
+    factCheckedAt: "2026-09-26",
+    notes:
+      "Revisão material concluída com documentação oficial Microsoft e NVM Express: firmware separado do Windows Setup, driver de armazenamento do fabricante, cautela com VMD/RST/RAID/AHCI, compatibilidade M.2/NVMe, mídia oficial, BitLocker e limite destrutivo do DiskPart. Sem promessa comercial.",
   },
 
 };

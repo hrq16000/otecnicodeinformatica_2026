@@ -1,7 +1,30 @@
 {
-  "geradoEm": "2026-09-25T14:02:25.476Z",
+  "geradoEm": "2026-09-26T12:47:58.049Z",
   "host": "otecnicodeinformatica.com.br",
-  "totalRastreadas": 0,
-  "totalNoSitemap": 267,
-  "ondas": []
+  "totalRastreadas": 12,
+  "totalNoSitemap": 279,
+  "ondas": [
+    {
+      "id": "2026-09-26T12:47:58.049Z",
+      "geradoEm": "2026-09-26T12:47:58.049Z",
+      "modo": "generate",
+      "total": 12,
+      "urls": [
+        "/bairros/bacacheri",
+        "/bairros/hauer",
+        "/bairros/juveve",
+        "/bairros/merces",
+        "/bairros/novo-mundo",
+        "/bairros/parque-da-fonte",
+        "/bairros/pedro-moro-sjp",
+        "/bairros/quississana-sjp",
+        "/bairros/reboucas",
+        "/bairros/rio-pequeno-sjp",
+        "/blog/ssd-nao-aparece-no-instalador-do-windows",
+        "/entidades/tecnico-de-informatica"
+      ],
+      "indexNow": "NOT_REQUESTED",
+      "googleSearchConsole": "NOT_REQUESTED"
+    }
+  ]
 }
