@@ -1188,6 +1188,29 @@ const PILOT_FAQ: Record<string, FAQItem[]> = {
       a: "Às vezes recuperam parte do conteúdo, sempre dependendo de quanto foi gravado corretamente. Devem ser apontados para a cópia, nunca para o original, e nenhuma ferramenta reconstrói dado que jamais chegou a ser escrito na mídia.",
     },
   ],
+  "ssd-nao-aparece-no-instalador-do-windows": [
+    {
+      q: "Se o SSD aparece na BIOS, por que o instalador do Windows não o mostra?",
+      a: "O firmware pode reconhecer a unidade enquanto o Windows Setup ainda não tem o driver necessário para o controlador de armazenamento. VMD, Intel RST, RAID e soluções do fabricante podem exigir um driver oficial durante a instalação.",
+    },
+    {
+      q: "Posso desativar VMD ou trocar RAID por AHCI para o SSD aparecer?",
+      a: "Não como tentativa automática. A mudança pode impedir um Windows já instalado de iniciar e pode acionar a recuperação do BitLocker. Registre a configuração original e siga a documentação do fabricante.",
+    },
+    {
+      q: "O DiskPart resolve um SSD que não aparece?",
+      a: "Não quando a causa está em firmware, controlador, driver ou hardware. Use primeiro apenas list disk e list volume para observar o que o ambiente de instalação enxerga; comandos como clean podem apagar a estrutura de dados.",
+    },
+    {
+      q: "Se o SSD não aparece no instalador, ele está queimado?",
+      a: "Não necessariamente. Se a BIOS reconhece o modelo, investigue driver e controlador antes de concluir falha física. A suspeita de hardware cresce quando a unidade também some do firmware, fica intermitente ou falha em outro equipamento compatível.",
+    },
+    {
+      q: "É seguro apagar as partições e tentar de novo?",
+      a: "Somente se você confirmou que não há dados necessários e que uma instalação limpa é realmente o objetivo. Com arquivos importantes ou BitLocker, preserve os dados e a chave de recuperação antes de qualquer exclusão.",
+    },
+  ],
+
 };
 
 
