@@ -128,9 +128,10 @@ export const PROGRAMMATIC_EDITORIAL_GOVERNANCE: ProgrammaticEditorialDecision[] 
   },
   {
     slug: "diferenca-windows-10-vs-11",
-    status: "review",
+    status: "redirect",
+    target: "/decisoes/atualizar-para-windows-11",
     rationale:
-      "Comparativo pode ser útil em 2026, mas precisa ser alinhado ao fim do suporte do Windows 10 e separado da decisão 'atualizar para Windows 11'.",
+      "A intenção real é decidir se deve migrar. O guia de decisão já cobre requisitos, compatibilidade, backup e riscos, evitando uma segunda owner concorrente.",
   },
   {
     slug: "melhores-antivirus-gratuitos-2026",
