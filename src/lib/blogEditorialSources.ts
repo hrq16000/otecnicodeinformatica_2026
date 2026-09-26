@@ -955,15 +955,7 @@ export const ARTICLE_SOURCE_MANIFEST: Record<string, ArticleSourceManifest> = {
     notes:
       "Revisão material concluída: remove franquias, preços e ranking de fornecedores; diferencia sincronização de backup, exige cópia independente e teste de restauração, e trata 3-2-1 como referência de redundância, não regra mágica.",
   },
-  "como-recuperar-arquivos-apagados": {
-    slug: "como-recuperar-arquivos-apagados",
-    sources: ["ms-windows-file-recovery", "ms-file-history"],
-    technicalReview: "reviewed",
-    factChecked: true,
-    factCheckedAt: "2026-09-26",
-    notes:
-      "Revisão material concluída: prioriza não sobrescrever a origem, procura versões/backups antes de varredura, exige destino diferente na recuperação e remove lista promocional de ferramentas e absolutos sobre TRIM/SSD.",
-  },
+
   "como-deixar-celular-android-mais-rapido": {
     slug: "como-deixar-celular-android-mais-rapido",
     sources: ["android-acelerar-dispositivo", "android-arquivar-apps", "android-cache-google-app"],
