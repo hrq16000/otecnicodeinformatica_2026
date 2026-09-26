@@ -437,7 +437,14 @@ const GuiaTecnicoInformatica = () => {
                 As duas formas aparecem no uso real. “Técnico em Informática” é a nomenclatura da
                 habilitação técnica; “técnico de informática” é muito usada pelo público para
                 procurar o profissional e seus serviços. Aqui elas apontam para a mesma entidade,
-                sem criar páginas artificiais para cada variação de palavra-chave.
+                sem criar páginas artificiais para cada variação de palavra-chave. O{" "}
+                <Link
+                  to="/entidades/tecnico-de-informatica"
+                  className="font-semibold text-accent hover:underline"
+                >
+                  nó semântico Técnico de Informática
+                </Link>{" "}
+                conecta essa definição aos sintomas, ferramentas, serviços e cidades já existentes.
               </p>
             </article>
             <article className="rounded-xl border border-border bg-card p-5">

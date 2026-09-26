@@ -115,6 +115,7 @@ export const DECISOES_SLUGS = [
 
 /** Taxonomia de entidades (fonte: src/lib/entidades.ts). */
 export const ENTIDADES_SLUGS = [
+  "tecnico-de-informatica",
   "windows",
   "ssd",
   "memoria-ram",
