@@ -913,6 +913,23 @@ export const WAVE_11M_BATCH_1: EditorialWaveEntry[] = [
   },
 ];
 
+
+/** Onda 11N — promoção controlada de Wi-Fi instável. */
+export const WAVE_11N_BATCH_1: EditorialWaveEntry[] = [
+  {
+    wave: "11A",
+    batch: "15",
+    url: "/blog/wifi-caindo-toda-hora",
+    slug: "wifi-caindo-toda-hora",
+    ownerId: "wifi-instavel-camadas-diagnostico",
+    cluster: "internet-wifi",
+    role: "satelite",
+    publishedAt: "2026-09-26",
+    targetQueries: ["wifi caindo toda hora", "wifi desconectando", "internet cai so no wifi"],
+    doNotDuplicate: ["/problemas/wifi-instavel", "/blog/internet-lenta-provedor-ou-roteador", "/ferramentas/roteiro-wifi-instavel"],
+  },
+];
+
 export const EDITORIAL_WAVES: EditorialWaveEntry[] = [
   ...WAVE_10C_BATCH_0,
   ...WAVE_10D_BATCH_1,
@@ -930,6 +947,7 @@ export const EDITORIAL_WAVES: EditorialWaveEntry[] = [
   ...WAVE_11K_BATCH_1,
   ...WAVE_11L_BATCH_1,
   ...WAVE_11M_BATCH_1,
+  ...WAVE_11N_BATCH_1,
 ];
 
 /** URLs monitoradas (ordem estável, sem duplicatas). */
