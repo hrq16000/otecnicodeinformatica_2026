@@ -479,6 +479,8 @@ const defs: PostDef[] = [
 
 const HOWTO_DEFAULT_DATE = "2026-06-14";
 
+export const PROGRAMMATIC_POST_SLUGS = defs.map((d) => d.slug);
+
 export const programmaticPosts: Record<string, ProgrammaticPost> = defs.reduce(
   (acc, d) => {
     acc[d.slug] = {
