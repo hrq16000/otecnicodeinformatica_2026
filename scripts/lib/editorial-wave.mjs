@@ -910,6 +910,12 @@ export const EDITORIAL_WAVE = [
     apoio: "/blog/internet-lenta-provedor-ou-roteador", apoioLabel: "Internet lenta: provedor ou roteador",
     cover: "/blog/wifi-caindo-toda-hora.svg",
   },
+  {
+    slug: "pc-nao-liga-o-que-fazer", approvedAt: "2026-09-26",
+    pilar: "/diagnostico-tecnico", pilarLabel: "Diagnóstico técnico",
+    apoio: "/blog/como-testar-fonte-de-alimentacao-pc", apoioLabel: "Como testar a fonte do PC",
+    cover: "/blog/pc-nao-liga-o-que-fazer.svg",
+  },
 ];
 
 
