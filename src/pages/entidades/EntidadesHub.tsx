@@ -14,7 +14,7 @@ import { ENTIDADES, ENTIDADES_REVISADO_EM } from "@/lib/entidades";
 const PATH = "/entidades";
 const TITLE = "Entidades Técnicas do Portal | Mapa de Conteúdo Conectado";
 const DESCRIPTION =
-  "Windows, SSD, memória RAM, Wi-Fi, backup, erro 0xc0000428 e computador lento: cada entidade reúne definição, problemas, ferramentas, decisões, artigos e serviços.";
+  "Técnico de informática, Windows, SSD, memória, Wi-Fi e backup: entidades que conectam definições, problemas, ferramentas, decisões, artigos e serviços.";
 
 const EntidadesHub = () => {
   useEffect(() => {
