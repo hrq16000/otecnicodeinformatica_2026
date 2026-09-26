@@ -19,6 +19,7 @@ import { getCategoryCover } from "@/lib/categoryCovers";
 import { withOgVersion } from "@/lib/ogCacheBust";
 import { programmaticPosts } from "@/data/blogProgrammaticPosts";
 import { blogPostsContentBase } from "@/data/blogPostsContent";
+import { blogSupplementalPosts } from "@/data/blogSupplementalPosts";
 import type { BlogPostContent } from "@/data/blogPostsContent";
 import { BlogPostFAQ } from "@/components/BlogPostFAQ";
 import { EnriquecimentoFase2 } from "@/components/editorial/EnriquecimentoFase2";
@@ -39,7 +40,7 @@ import { encurtar, tituloComMarca, DESCRIPTION_MAX } from "@/lib/socialMeta";
 
 type PostsMap = Record<string, BlogPostContent>;
 
-const posts: PostsMap = { ...blogPostsContentBase, ...programmaticPosts };
+const posts: PostsMap = { ...blogPostsContentBase, ...blogSupplementalPosts, ...programmaticPosts };
 
 // Indexabilidade é decidida EXCLUSIVAMENTE pelo registro editorial
 // fail-closed (src/lib/blogEditorialRegistry.ts). Categoria, data,
