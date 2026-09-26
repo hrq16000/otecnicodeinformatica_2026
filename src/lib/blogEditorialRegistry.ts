@@ -1468,6 +1468,24 @@ const WAVE_11N: EditorialApproval[] = [
   },
 ];
 
+
+const WAVE_11O: EditorialApproval[] = [
+  {
+    slug: "pc-nao-liga-o-que-fazer",
+    status: "approved",
+    authorType: "organization",
+    authorId: INSTITUTIONAL_AUTHOR.id,
+    reviewedAt: "2026-09-26",
+    approvedAt: "2026-09-26",
+    imageOrigin: "owned",
+    imageLicense: "Todos os direitos reservados",
+    imageAttribution:
+      "Arte editorial original: O Técnico de Informática — https://otecnicodeinformatica.com.br/blog/pc-nao-liga-o-que-fazer",
+    notes:
+      "Owner editorial para desktop que não liga/sem energia ou liga sem POST: separa alimentação, POST/vídeo e boot antes de qualquer troca de peça. Revisão material remove ponte em fonte, reset de CMOS genérico e diagnóstico por tentativa. Capa vetorial própria, sem terceiros e sem dados pessoais.",
+  },
+];
+
 export const APPROVED_EDITORIAL_CONTENT = new Map<string, EditorialApproval>([
 
   ...FIRST_WAVE_SLUGS.map((slug) => [
@@ -1530,6 +1548,7 @@ export const APPROVED_EDITORIAL_CONTENT = new Map<string, EditorialApproval>([
   ...WAVE_11L.map((a) => [a.slug, a] as [string, EditorialApproval]),
   ...WAVE_11M.map((a) => [a.slug, a] as [string, EditorialApproval]),
   ...WAVE_11N.map((a) => [a.slug, a] as [string, EditorialApproval]),
+  ...WAVE_11O.map((a) => [a.slug, a] as [string, EditorialApproval]),
 
 ]);
 
