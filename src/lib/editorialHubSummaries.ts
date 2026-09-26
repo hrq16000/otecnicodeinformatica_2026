@@ -1,7 +1,7 @@
 /**
  * Índice leve do hub editorial. Mantém título, resumo e tema no HTML inicial
  * de /blog sem transferir o corpo completo de cada artigo para a página-hub.
- * Atualizar junto de blogPostsContent.tsx e do registro editorial.
+ * Atualizar junto de blogPostsContent.tsx/blogSupplementalPosts.tsx e do registro editorial.
  */
 export type EditorialHubSummary = {
   title: string;
@@ -635,7 +635,39 @@ const rows: Array<EditorialHubSummary & { slug: string }> = [
     "date": "2026-09-03",
     "readTime": "11 min",
     "category": "Dados"
+  },,
+  {
+    "slug": "como-fazer-backup-na-nuvem",
+    "title": "Backup na nuvem: como montar uma cópia que você consegue restaurar",
+    "excerpt": "Sincronizar não basta: organize arquivos, mantenha cópia independente, confirme versionamento e teste a restauração antes de confiar no backup.",
+    "date": "2026-09-26",
+    "readTime": "11 min",
+    "category": "Segurança"
   },
+  {
+    "slug": "wifi-caindo-toda-hora",
+    "title": "Wi-Fi caindo toda hora: como descobrir se é sinal, roteador ou provedor",
+    "excerpt": "Wi-Fi desconecta em um aparelho ou na casa inteira? Compare cabo, distância, banda e dispositivos antes de trocar roteador ou culpar o provedor.",
+    "date": "2026-09-26",
+    "readTime": "10 min",
+    "category": "Redes"
+  },
+  {
+    "slug": "pc-nao-liga-o-que-fazer",
+    "title": "PC não liga: como separar energia, vídeo e inicialização com segurança",
+    "excerpt": "PC sem sinal, com ventoinha sem vídeo ou reiniciando? Separe energia, POST e imagem antes de abrir a máquina ou trocar peças.",
+    "date": "2026-09-26",
+    "readTime": "10 min",
+    "category": "Diagnóstico"
+  },
+  {
+    "slug": "ssd-nao-aparece-no-instalador-do-windows",
+    "title": "SSD não aparece no instalador do Windows: como diagnosticar sem apagar dados",
+    "excerpt": "A BIOS reconhece o SSD, mas o Windows Setup não mostra nenhuma unidade? Separe firmware, controlador, driver e compatibilidade antes de mudar VMD, RAID ou apagar partições.",
+    "date": "2026-09-26",
+    "readTime": "12 min",
+    "category": "Procedimentos Técnicos"
+  }
 ];
 
 export const EDITORIAL_HUB_SUMMARIES: Record<string, EditorialHubSummary> = Object.fromEntries(
