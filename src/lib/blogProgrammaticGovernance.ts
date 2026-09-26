@@ -25,9 +25,16 @@ export type ProgrammaticReviewDecision = {
   rationale: string;
 };
 
+export type ProgrammaticPromotedDecision = {
+  slug: string;
+  status: "promoted";
+  rationale: string;
+};
+
 export type ProgrammaticEditorialDecision =
   | ProgrammaticRedirectDecision
-  | ProgrammaticReviewDecision;
+  | ProgrammaticReviewDecision
+  | ProgrammaticPromotedDecision;
 
 export const PROGRAMMATIC_EDITORIAL_GOVERNANCE: ProgrammaticEditorialDecision[] = [
   {
@@ -86,9 +93,9 @@ export const PROGRAMMATIC_EDITORIAL_GOVERNANCE: ProgrammaticEditorialDecision[] 
   },
   {
     slug: "como-fazer-backup-na-nuvem",
-    status: "review",
+    status: "promoted",
     rationale:
-      "Procedimento de backup pessoal em nuvem é independente do comparativo nuvem vs HD externo. O texto já foi reescrito com sincronização × backup, cópia independente e teste de restauração; passou por revisão técnica com fontes primárias; permanece noindex até receber asset editorial próprio com proveniência.",
+      "Procedimento de backup pessoal em nuvem é independente do comparativo nuvem vs HD externo. O texto foi reescrito, revisado com CISA/NIST, recebeu capa vetorial própria com procedência registrada e foi promovido de forma controlada ao índice.",
   },
   {
     slug: "como-recuperar-arquivos-apagados",
@@ -148,4 +155,8 @@ export const PROGRAMMATIC_REDIRECTS = PROGRAMMATIC_EDITORIAL_GOVERNANCE.filter(
 
 export const PROGRAMMATIC_REVIEW = PROGRAMMATIC_EDITORIAL_GOVERNANCE.filter(
   (d): d is ProgrammaticReviewDecision => d.status === "review",
+);
+
+export const PROGRAMMATIC_PROMOTED = PROGRAMMATIC_EDITORIAL_GOVERNANCE.filter(
+  (d): d is ProgrammaticPromotedDecision => d.status === "promoted",
 );
