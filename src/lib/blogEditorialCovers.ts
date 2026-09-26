@@ -646,6 +646,14 @@ export const EDITORIAL_COVERS: Record<string, EditorialCover> = {
     height: 630,
   },
 
+  // ── Onda 11N — promoção de Wi-Fi instável após revisão técnica.
+  "wifi-caindo-toda-hora": {
+    src: "/blog/wifi-caindo-toda-hora.svg",
+    alt: "Ilustração editorial de roteador, notebook e conexão cabeada representando diagnóstico de Wi-Fi instável",
+    width: 1200,
+    height: 630,
+  },
+
 };
 
 export function getEditorialCover(slug: string): EditorialCover | undefined {

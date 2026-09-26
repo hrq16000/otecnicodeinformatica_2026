@@ -903,7 +903,13 @@ export const EDITORIAL_WAVE = [
     pilar: "/seguranca-dos-dados", pilarLabel: "Segurança dos dados",
     apoio: "/blog/como-testar-restauracao-de-backup", apoioLabel: "Testar restauração de backup",
     cover: "/blog/como-fazer-backup-na-nuvem.svg",
-  }
+  },
+  {
+    slug: "wifi-caindo-toda-hora", approvedAt: "2026-09-26",
+    pilar: "/servicos/redes-e-wifi", pilarLabel: "Redes e Wi-Fi",
+    apoio: "/blog/internet-lenta-provedor-ou-roteador", apoioLabel: "Internet lenta: provedor ou roteador",
+    cover: "/blog/wifi-caindo-toda-hora.svg",
+  },
 ];
 
 

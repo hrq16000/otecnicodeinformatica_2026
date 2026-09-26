@@ -18,10 +18,10 @@ describe("governança do estoque programático", () => {
     expect(new Set(governed).size).toBe(governed.length);
   });
 
-  it("consolida 15 duplicatas, promove 1 intenção e mantém 2 em revisão", () => {
+  it("consolida 15 duplicatas, promove 2 intenções e mantém 1 em revisão", () => {
     expect(PROGRAMMATIC_REDIRECTS).toHaveLength(15);
-    expect(PROGRAMMATIC_PROMOTED).toHaveLength(1);
-    expect(PROGRAMMATIC_REVIEW).toHaveLength(2);
+    expect(PROGRAMMATIC_PROMOTED).toHaveLength(2);
+    expect(PROGRAMMATIC_REVIEW).toHaveLength(1);
   });
 
   it("materializa toda consolidação editorial na matriz única de redirects", () => {
@@ -54,9 +54,12 @@ describe("governança do estoque programático", () => {
     }
   });
 
-  it("registra a promoção editorial do backup na nuvem sem redirect", () => {
-    expect(PROGRAMMATIC_PROMOTED.map((d) => d.slug)).toEqual(["como-fazer-backup-na-nuvem"]);
+  it("registra promoções editoriais sem redirect", () => {
+    expect(PROGRAMMATIC_PROMOTED.map((d) => d.slug).sort()).toEqual(
+      ["como-fazer-backup-na-nuvem", "wifi-caindo-toda-hora"].sort(),
+    );
     expect(resolveRedirect("/blog/como-fazer-backup-na-nuvem")).toBeNull();
+    expect(resolveRedirect("/blog/wifi-caindo-toda-hora")).toBeNull();
   });
 
   it("nunca redireciona um alias programático para outro alias programático", () => {

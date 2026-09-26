@@ -9,8 +9,8 @@ Princípio: não aumentar o índice com conteúdo fraco, duplicado ou datado.
 Os 18 artigos programáticos herdados foram classificados em duas filas:
 
 - **15 consolidações por 301**: a intenção já possui uma URL canônica mais forte, revisada e/ou indexável.
-- **1 promovida**: `/blog/como-fazer-backup-na-nuvem` passou por reescrita, revisão técnica, fontes primárias e asset próprio;
-- **2 em revisão**: ainda sustentam intenção própria, mas aguardam fechamento editorial/asset próprio.
+- **2 promovidas**: `/blog/como-fazer-backup-na-nuvem` e `/blog/wifi-caindo-toda-hora` passaram por reescrita, revisão técnica, fontes primárias e asset próprio;
+- **1 em revisão**: `/blog/pc-nao-liga-o-que-fazer` ainda sustenta intenção própria, mas aguarda fechamento editorial/asset próprio.
 
 A fonte executável dessa decisão é `src/lib/blogProgrammaticGovernance.ts`.
 
@@ -34,14 +34,14 @@ A fonte executável dessa decisão é `src/lib/blogProgrammaticGovernance.ts`.
 | /blog/diferenca-windows-10-vs-11 | /decisoes/atualizar-para-windows-11 |
 | /blog/como-recuperar-arquivos-apagados | /blog/como-recuperar-arquivos-apagados-windows |
 
-## Intenção promovida após qualificação
+## Intenções promovidas após qualificação
 
 - `/blog/como-fazer-backup-na-nuvem`: conteúdo independente de backup pessoal em nuvem, com distinção sincronização × backup, cópia independente, restauração testada, revisão CISA/NIST e capa vetorial própria.
+- `/blog/wifi-caindo-toda-hora`: conteúdo independente de instabilidade Wi-Fi, com isolamento dispositivo × WLAN × roteador/modem × provedor, revisão FCC/Wi-Fi Alliance e capa vetorial própria.
 
 ## Intenções mantidas em revisão
 
 - `/blog/pc-nao-liga-o-que-fazer`: reescrever removendo ponte de fonte com clipe, reset de CMOS como receita genérica e conclusões por tentativa.
-- `/blog/wifi-caindo-toda-hora`: reescrever com isolamento dispositivo × LAN × Wi-Fi × provedor, sem números universais de conexões/canais.
 
 ## Correção estrutural feita nesta rodada
 
