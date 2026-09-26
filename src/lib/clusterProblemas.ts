@@ -393,9 +393,9 @@ export const CLUSTER_PROBLEMAS: ClusterProblema[] = [
     slug: "computador-desliga-sozinho",
     path: "/problemas/computador-desliga-sozinho",
     titulo: "Computador ou PC desligando sozinho: causas e testes seguros",
-    metaTitle: "PC desliga sozinho: causas, testes e quando parar | O Técnico",
+    metaTitle: "PC desliga sozinho: causas e testes seguros",
     metaDescription:
-      "PC ou computador desligando sozinho pode envolver temperatura, fonte, tomada, memória, placa ou sistema. Veja a ordem de testes e quando interromper o uso.",
+      "PC desliga sozinho, mesmo sem aquecer? Veja como separar temperatura, fonte, tomada, memória, placa e reinício do sistema antes de trocar peças.",
     resumo:
       "Quando o computador desliga sozinho, o sintoma precisa ser separado em dois grupos: corte seco de energia e reinício comandado pelo sistema. O primeiro costuma levar a temperatura, fonte, tomada ou placa; o segundo também pode envolver memória, driver, atualização ou falha registrada pelo Windows. Essa diferença evita formatar ou trocar peça antes de entender o padrão.",
     waMessage:
@@ -403,7 +403,7 @@ export const CLUSTER_PROBLEMAS: ClusterProblema[] = [
     sintomas: [
       {
         titulo: "Desliga depois de alguns minutos de uso pesado",
-        desc: "Jogo, edição de vídeo ou videochamada elevam a carga e a temperatura. Se o desligamento acontece justamente nesses momentos e o equipamento volta a ligar depois de esfriar, o padrão é térmico: dissipador entupido, ventoinha parada ou pasta térmica ressecada.",
+        desc: "Jogo, edição de vídeo ou videochamada elevam a carga e a temperatura. Se o desligamento coincide com esforço e melhora depois de esfriar, a hipótese térmica ganha força — mas ainda precisa ser confirmada por temperatura, ventilação e estado do sistema de refrigeração.",
       },
       {
         titulo: "Desliga a qualquer momento, mesmo parado",
@@ -411,17 +411,21 @@ export const CLUSTER_PROBLEMAS: ClusterProblema[] = [
       },
       {
         titulo: "Reinicia sozinho e volta na tela de boas-vindas",
-        desc: "Reinício imediato, sem apagar de vez, costuma ser driver, atualização mal aplicada ou memória instável. É o único cenário desta lista em que o software entra como suspeito principal.",
+        desc: "Reinício imediato, sem permanecer totalmente desligado, também pode envolver driver, atualização, memória instável ou configuração de reinício automático. O histórico de eventos ajuda a separar software de corte real de energia.",
       },
       {
         titulo: "Não volta a ligar logo em seguida",
-        desc: "Quando o botão não responde por alguns minutos, a proteção da fonte foi acionada. Insistir em ligar repetidamente nessa condição é o caminho mais rápido para danificar placa-mãe e disco.",
+        desc: "Quando o botão não responde por alguns minutos, proteção térmica ou elétrica passa a ser uma hipótese importante, mas não é diagnóstico fechado. Evite insistir em ciclos repetidos de liga/desliga até identificar a causa.",
+      },
+      {
+        titulo: "Desliga sozinho e a temperatura parece normal",
+        desc: "Se CPU e gabinete não mostram aquecimento anormal, priorize alimentação e estabilidade: teste tomada e cabo, retire régua/extensão, observe se a falha aparece sob carga e consulte os eventos do sistema. Fonte, memória, placa e driver entram na investigação conforme o padrão.",
       },
     ],
     causas: [
       {
         titulo: "Superaquecimento por sujeira ou pasta térmica vencida",
-        desc: "Poeira compactada entre as aletas do dissipador reduz a troca de calor e a pasta térmica perde eficiência com o tempo. O processador chega ao limite e o desligamento é a última defesa antes do dano permanente.",
+        desc: "Poeira compactada entre as aletas reduz a troca de calor, ventoinha com falha limita o fluxo e a interface térmica pode degradar. Sob temperatura crítica, o equipamento pode reduzir desempenho ou desligar por proteção.",
       },
       {
         titulo: "Fonte de alimentação degradada ou subdimensionada",
@@ -429,7 +433,7 @@ export const CLUSTER_PROBLEMAS: ClusterProblema[] = [
       },
       {
         titulo: "Energia elétrica do ambiente",
-        desc: "Régua com muitos aparelhos, tomada sem aterramento e queda breve de rede provocam desligamentos que parecem defeito do computador. Um teste simples em outro ponto de energia separa as hipóteses.",
+        desc: "Régua sobrecarregada, tomada com mau contato, cabo defeituoso ou queda breve de energia podem imitar defeito do computador. Testar outro ponto de energia, sem extensão ou régua, ajuda a separar a alimentação externa da falha interna.",
       },
       {
         titulo: "Memória ou placa-mãe com falha intermitente",
@@ -446,7 +450,7 @@ export const CLUSTER_PROBLEMAS: ClusterProblema[] = [
     naoFaca: [
       "Não insista em apertar o botão de ligar várias vezes seguidas quando a máquina não responde.",
       "Não formate: desligamento por temperatura ou fonte volta igual depois da formatação, e os dados já terão ido embora.",
-      "Não use ar comprimido segurando as ventoinhas soltas — girar acima da rotação nominal danifica o rolamento.",
+      "Ao usar ar comprimido, mantenha a ventoinha imobilizada; deixá-la girar livremente em alta rotação pode danificar o conjunto.",
       "Não substitua a fonte por outra genérica sem conferir potência e conectores; fonte errada leva placa-mãe junto.",
     ],
     modalidades: [
@@ -466,7 +470,7 @@ export const CLUSTER_PROBLEMAS: ClusterProblema[] = [
     faq: [
       {
         q: "Computador que desliga sozinho é vírus?",
-        a: "Quase nunca. Vírus costuma deixar o sistema lento, exibir anúncios ou travar programas — não cortar a energia da máquina. Desligamento seco é sinal físico: temperatura, fonte ou alimentação.",
+        a: "Malware pode causar travamentos ou reinícios, mas um corte seco de energia deve levar primeiro à investigação de temperatura e alimentação. A distinção entre desligar completamente e reiniciar ajuda a decidir se software entra como hipótese relevante.",
       },
       {
         q: "Só limpar por dentro resolve?",
@@ -474,7 +478,7 @@ export const CLUSTER_PROBLEMAS: ClusterProblema[] = [
       },
       {
         q: "Posso continuar usando até resolver?",
-        a: "Se o desligamento é térmico e esporádico, o risco é moderado. Se acontece durante gravação de arquivos, o risco de corromper dados é real — a orientação é fazer cópia dos arquivos importantes antes de qualquer coisa.",
+        a: "Desligamentos inesperados podem interromper gravações e corromper arquivos ou o sistema. Faça backup do que for importante e evite uso pesado até identificar a causa, especialmente se houver cheiro, estalo, aquecimento anormal ou dificuldade para religar.",
       },
       {
         q: "Como vocês descobrem se é a fonte?",
