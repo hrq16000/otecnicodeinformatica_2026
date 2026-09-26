@@ -88,13 +88,13 @@ export const PROGRAMMATIC_EDITORIAL_GOVERNANCE: ProgrammaticEditorialDecision[] 
     slug: "como-fazer-backup-na-nuvem",
     status: "review",
     rationale:
-      "Procedimento de backup pessoal em nuvem pode ser independente do comparativo nuvem vs HD externo, mas precisa ser reescrito com restauração, versionamento e fontes primárias.",
+      "Procedimento de backup pessoal em nuvem é independente do comparativo nuvem vs HD externo. O texto já foi reescrito com sincronização × backup, cópia independente e teste de restauração; permanece noindex até revisão técnica formal, fontes primárias e asset próprio.",
   },
   {
     slug: "como-recuperar-arquivos-apagados",
     status: "review",
     rationale:
-      "Pode sustentar intenção procedural própria, desde que seja reescrito com prioridade a não sobrescrever a mídia e critérios claros de parada.",
+      "A intenção procedural é distinta da página de sintoma. O texto já foi reescrito com prioridade a não sobrescrever a mídia, diferenças entre HD/SSD e critérios de parada; permanece noindex até revisão técnica formal, fontes primárias e asset próprio.",
   },
   {
     slug: "como-aumentar-velocidade-internet",
