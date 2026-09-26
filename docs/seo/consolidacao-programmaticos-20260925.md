@@ -6,11 +6,11 @@ Princípio: não aumentar o índice com conteúdo fraco, duplicado ou datado.
 
 ## Resultado do inventário
 
-Os 18 artigos programáticos herdados foram classificados em duas filas:
+Os 18 artigos programáticos herdados foram classificados em decisões editoriais explícitas:
 
 - **15 consolidações por 301**: a intenção já possui uma URL canônica mais forte, revisada e/ou indexável.
-- **2 promovidas**: `/blog/como-fazer-backup-na-nuvem` e `/blog/wifi-caindo-toda-hora` passaram por reescrita, revisão técnica, fontes primárias e asset próprio;
-- **1 em revisão**: `/blog/pc-nao-liga-o-que-fazer` ainda sustenta intenção própria, mas aguarda fechamento editorial/asset próprio.
+- **3 promovidas**: `/blog/como-fazer-backup-na-nuvem`, `/blog/wifi-caindo-toda-hora` e `/blog/pc-nao-liga-o-que-fazer` passaram por reescrita, revisão técnica e asset próprio;
+- **0 em revisão**: o estoque programático herdado ficou totalmente classificado em consolidação ou owner qualificada.
 
 A fonte executável dessa decisão é `src/lib/blogProgrammaticGovernance.ts`.
 
@@ -38,10 +38,7 @@ A fonte executável dessa decisão é `src/lib/blogProgrammaticGovernance.ts`.
 
 - `/blog/como-fazer-backup-na-nuvem`: conteúdo independente de backup pessoal em nuvem, com distinção sincronização × backup, cópia independente, restauração testada, revisão CISA/NIST e capa vetorial própria.
 - `/blog/wifi-caindo-toda-hora`: conteúdo independente de instabilidade Wi-Fi, com isolamento dispositivo × WLAN × roteador/modem × provedor, revisão FCC/Wi-Fi Alliance e capa vetorial própria.
-
-## Intenções mantidas em revisão
-
-- `/blog/pc-nao-liga-o-que-fazer`: reescrever removendo ponte de fonte com clipe, reset de CMOS como receita genérica e conclusões por tentativa.
+- `/blog/pc-nao-liga-o-que-fazer`: owner independente para desktop sem energia/sem POST, com separação de alimentação, vídeo e boot, revisão técnica e capa vetorial própria.
 
 ## Correção estrutural feita nesta rodada
 
@@ -51,4 +48,4 @@ A rota dinâmica do blog agora consulta a matriz no próprio loader e emite redi
 
 ## Regra permanente
 
-Qualquer novo item em `blogProgrammaticPosts.tsx` precisa aparecer na governança como `redirect` ou `review`. O teste bloqueante compara os dois inventários e impede artigo programático sem decisão editorial explícita.
+Qualquer novo item em `blogProgrammaticPosts.tsx` precisa aparecer na governança como `redirect`, `review` ou `promoted`. O teste bloqueante compara os inventários e impede artigo programático sem decisão editorial explícita; `promoted` só é válido quando a aprovação editorial e os gates de indexação também estiverem satisfeitos.
