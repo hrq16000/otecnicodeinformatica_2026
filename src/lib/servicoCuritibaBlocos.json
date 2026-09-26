@@ -13,14 +13,14 @@
       "subtitulo": "Como funciona contratar o conserto do seu notebook em Curitiba: modalidades disponíveis, logística de coleta, prazos reais e o que informar na triagem.",
       "intro": [
         "Tela que pisca, dobradiça estalando, carcaça esquentando perto do teclado ou o aparelho desligando sozinho depois de meia hora: o notebook avisa antes de parar de vez. Como tudo fica dentro de um chassi fechado, a checagem começa pela alimentação e pela bateria, passa pela dissipação e só depois abre para inspeção interna.",
-        "Em Curitiba a triagem acontece pelo WhatsApp com foto do modelo e da etiqueta, porque peça de portátil é específica de linha. Casos de sistema resolvemos remoto no mesmo dia; casos físicos seguem para bancada com prazo informado antes de qualquer desmontagem."
+        "Em Curitiba a triagem acontece pelo WhatsApp com foto do modelo e da etiqueta, porque peça de portátil é específica de linha. Casos de sistema podem começar por avaliação remota; casos físicos seguem para visita, coleta ou bancada, com a modalidade e a janela confirmadas antes do deslocamento."
       ],
       "blocos": [
         {
           "titulo": "Como o atendimento de notebook acontece em Curitiba",
           "paragrafos": [
             "O atendimento começa sempre por uma triagem no WhatsApp, antes de qualquer deslocamento. Você descreve o modelo, o sintoma e o bairro; a partir daí definimos se o caso se resolve no seu endereço, se vale a pena combinar a coleta do aparelho ou se o notebook precisa ir para bancada. Notebook é um equipamento portátil, e essa portabilidade muda a logística: na maioria dos casos o cliente prefere entregar o aparelho ou receber a coleta a esperar um técnico no local.",
-            "Curitiba concentra a maior parte da nossa agenda, então a janela de atendimento costuma ser combinada para o mesmo dia ou para o dia seguinte, conforme a disponibilidade real. Não trabalhamos com promessa de chegada em minutos: informamos a janela possível na triagem e confirmamos o horário antes de sair."
+            "A janela de atendimento em Curitiba depende da agenda, do bairro, da modalidade e do tipo de defeito. Não prometemos chegada em minutos nem atendimento no mesmo dia: informamos a janela disponível na triagem e confirmamos o horário antes do deslocamento."
           ]
         },
         {
@@ -62,7 +62,7 @@
       "faq": [
         {
           "pergunta": "Vocês consertam notebook em qualquer região de Curitiba?",
-          "resposta": "Sim, Curitiba é a região de maior concentração da agenda. A modalidade (coleta, visita ou bancada) é definida na triagem pelo WhatsApp conforme o sintoma e o bairro."
+          "resposta": "Sim. A modalidade — coleta, visita, suporte remoto ou bancada — é definida na triagem conforme o sintoma, o bairro e o que pode ser resolvido com segurança."
         },
         {
           "pergunta": "Preciso levar o notebook ou vocês buscam?",
@@ -74,7 +74,7 @@
         },
         {
           "pergunta": "Em quanto tempo o notebook fica pronto?",
-          "resposta": "Depende do reparo. Serviços de software e limpeza costumam ser resolvidos no mesmo atendimento; trocas que dependem de peça sob encomenda seguem o prazo do fornecedor, informado por escrito antes da aprovação."
+          "resposta": "Depende do reparo e da agenda. Serviços de software podem permitir solução remota; limpeza e reparos físicos dependem da modalidade e da bancada. Trocas com peça sob encomenda seguem o prazo do fornecedor, informado antes da aprovação."
         },
         {
           "pergunta": "Atendem empresas com vários notebooks?",

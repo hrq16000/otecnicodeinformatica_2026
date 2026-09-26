@@ -98,6 +98,25 @@ describe("localIndexPolicy — owner local do suporte empresarial", () => {
   });
 });
 
+
+describe("localIndexPolicy — owner local do conserto de notebook", () => {
+  it("mantém Curitiba na página filha e fora da intenção principal do pai", () => {
+    const childPath = "/servicos/conserto-notebook/curitiba";
+    const child = resolveLocal(childPath);
+    const parent = SERVICOS_CORE["manutencao-de-notebook"];
+
+    expect(child.indexability).toBe("index");
+    expect(child.canonical).toBe(childPath);
+    expect(child.sitemap).toBe(true);
+
+    expect(parent.metaTitle.toLowerCase()).not.toContain("curitiba");
+    expect(parent.h1.toLowerCase()).not.toContain("curitiba");
+    expect(
+      parent.relacionados.some((link) => link.to === childPath),
+    ).toBe(true);
+  });
+});
+
 describe("localIndexPolicy — clusters bloqueados", () => {
   it("mantém /arrumar-pc e /cftv fora do índice", () => {
     expect(isNoindex("/arrumar-pc/sao-paulo")).toBe(true);

@@ -138,14 +138,14 @@ export const SERVICOS_CORE: Record<string, ServicoLandingData> = {
   "manutencao-de-notebook": {
     path: "manutencao-de-notebook",
     trackingKey: "manutencao-notebook",
-    metaTitle: "Assistência Técnica de Notebook em Curitiba | Diagnóstico",
+    metaTitle: "Manutenção de Notebook | Diagnóstico e Reparo",
     metaDescription:
-      "Assistência técnica de notebook em Curitiba: lentidão, aquecimento, tela, teclado, bateria e limpeza interna. Todas as marcas.",
+      "Manutenção de notebook com diagnóstico para lentidão, aquecimento, tela, teclado, bateria, carga, limpeza interna e falhas de hardware ou sistema.",
     serviceName: "Manutenção de Notebook",
     serviceDescription:
-      "Diagnóstico e manutenção de notebooks: limpeza interna, troca de pasta térmica, tela, teclado, bateria e desempenho, com atendimento em Curitiba e região.",
-    eyebrow: "Notebook em Curitiba",
-    h1: "Assistência técnica de notebook em Curitiba",
+      "Diagnóstico e manutenção de notebooks: limpeza interna, sistema térmico, tela, teclado, bateria, carga, armazenamento e desempenho, conforme o defeito confirmado.",
+    eyebrow: "Manutenção de notebook",
+    h1: "Manutenção e assistência técnica de notebook",
     h1Accent: "diagnóstico antes de informar o valor",
     intro:
       "Notebook que não liga, esquenta e desliga, ficou lento ou está com tela, teclado ou bateria com defeito? Atendemos as marcas mais comuns do mercado e começamos sempre pelo diagnóstico, para identificar a causa real antes de falar em peça ou preço. Nem toda placa tem reparo viável, e explicamos isso com honestidade. Descreva o sintoma pelo WhatsApp e combinamos o próximo passo.",
@@ -175,11 +175,11 @@ export const SERVICOS_CORE: Record<string, ServicoLandingData> = {
       { title: "Complexidade", desc: "Reparos em placa e conectores exigem mais tempo de bancada." },
       { title: "Risco de dados", desc: "Quando há dados importantes, priorizamos backup antes de intervir." },
       { title: "Urgência", desc: "Prazos curtos podem alterar o agendamento e a disponibilidade de peça." },
-      { title: "Deslocamento", desc: "Coleta e entrega consideram a localização em Curitiba e região." },
+      { title: "Modalidade", desc: "Coleta, bancada, atendimento no endereço ou suporte remoto dependem do tipo de falha e do que pode ser resolvido com segurança." },
     ],
     atendimento: {
       residencial:
-        "Atendimento de notebook em domicílio ou por coleta e entrega em Curitiba e região, ideal para quem usa o aparelho em casa, nos estudos ou no home office.",
+        "A modalidade é definida na triagem: alguns casos permitem suporte remoto ou atendimento no endereço; desmontagem, troca de peça e testes prolongados normalmente exigem bancada.",
       empresarial:
         "Manutenção de notebooks corporativos e de equipes, com diagnóstico, limpeza, troca de peças e upgrade para reduzir paradas no trabalho.",
     },
@@ -187,7 +187,7 @@ export const SERVICOS_CORE: Record<string, ServicoLandingData> = {
       { question: "Meu notebook esquenta muito, tem solução?", answer: "Na maioria dos casos, sim. O aquecimento costuma vir de poeira acumulada e pasta térmica ressecada. Fazemos limpeza interna e avaliamos a ventoinha e o dissipador." },
       { question: "Vale a pena consertar ou é melhor trocar?", answer: "Depende do custo do reparo frente ao valor do aparelho. Após o diagnóstico explicamos com honestidade quando compensa consertar e quando não vale." },
       { question: "Vocês trocam tela e teclado?", answer: "Sim, avaliamos e substituímos tela, dobradiça, teclado, bateria e conectores, conforme o modelo e a disponibilidade de peça. Nem toda placa, porém, tem reparo viável." },
-      { question: "Preciso levar o notebook até vocês?", answer: "Atendemos em domicílio e também por coleta e entrega em Curitiba e região, conforme o tipo de serviço." },
+      { question: "Preciso levar o notebook até vocês?", answer: "Depende do defeito. Casos de software e configuração podem permitir atendimento remoto ou no endereço; desmontagem, troca de peça e testes prolongados normalmente exigem bancada ou coleta combinada." },
       { question: "Quanto tempo leva a manutenção?", answer: "Serviços simples podem sair conforme a disponibilidade da agenda; reparos que dependem de peça específica levam mais tempo. Informamos o prazo junto com o valor." },
       { question: "Meu notebook não liga. O que devo fazer?", answer: "Teste outra tomada, observe se algum LED acende e remova periféricos externos. Se não houver mudança, evite novas tentativas — principalmente após líquido, queda, cheiro ou aquecimento — e encaminhe para diagnóstico. Os sinais e as causas possíveis estão detalhados na página sobre notebook que não liga." },
       { question: "Notebook aquecendo precisa de limpeza?", answer: "Aquecimento pode estar relacionado a poeira acumulada e pasta térmica ressecada, mas também a ventoinha com desgaste, dissipador obstruído ou uso intenso sem ventilação. A limpeza é indicada depois da avaliação, não antes dela." },
@@ -198,6 +198,7 @@ export const SERVICOS_CORE: Record<string, ServicoLandingData> = {
       { question: "A manutenção do notebook tem garantia?", answer: "Sim, conforme o serviço efetivamente executado e a peça aplicada. As condições de garantia estão descritas na página de preços e políticas." },
     ],
     relacionados: [
+      { label: "Conserto de notebook em Curitiba", to: "/servicos/conserto-notebook/curitiba" },
       { label: "Upgrade de SSD e RAM", to: "/servicos/upgrade-ssd-ram" },
       { label: "Formatação", to: "/servicos/formatacao" },
       { label: "Remoção de vírus", to: "/servicos/remocao-de-virus" },
@@ -243,18 +244,18 @@ export const SERVICOS_CORE: Record<string, ServicoLandingData> = {
       {
         titulo: "Prazo, retirada e o que não fazemos",
         paragrafos: [
-          "Limpeza interna e troca de pasta costumam ficar prontas conforme a disponibilidade da agenda. Serviços que dependem de peça específica seguem o prazo de reposição, informado na aprovação. Quando o equipamento precisa de bancada, oferecemos coleta e entrega em Curitiba e região para você não perder o dia.",
+          "Limpeza interna, revisão térmica e reparos simples seguem a disponibilidade da agenda. Serviços que dependem de peça específica acompanham o prazo de reposição, informado antes da aprovação. Quando o equipamento precisa de bancada, a logística é definida na triagem.",
           "Não fazemos remoção de senha de equipamento sem comprovação de propriedade, não trabalhamos com desbloqueio de conta de fabricante e não assumimos reparo de placa com dano estrutural irreversível — nesses casos indicamos o caminho honesto, que às vezes é migrar seus dados e planejar a substituição.",
         ],
       },
     ],
     linksLocais: [
-      { label: "Atendimento técnico em Curitiba", to: "/tecnico-informatica-curitiba" },
-      { label: "Técnico no seu endereço", to: "/atendimento-domicilio" },
+      { label: "Conserto de notebook em Curitiba", to: "/servicos/conserto-notebook/curitiba" },
       { label: "Coleta e entrega do equipamento", to: "/coleta-e-entrega" },
+      { label: "Como funciona o atendimento", to: "/como-funciona" },
       { label: "Preços e políticas", to: "/precos-e-politicas" },
     ],
-    dateModified: "2026-08-05",
+    dateModified: "2026-09-26",
   },
 
   // 3 ─────────────────────────────────────────────────────────
