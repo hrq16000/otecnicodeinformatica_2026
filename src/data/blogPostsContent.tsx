@@ -3971,36 +3971,40 @@ docker run -d --name db --network minha-rede postgres
   "como-trocar-pasta-termica-notebook": {
     title: "Como trocar pasta térmica do notebook com segurança: passo a passo",
     excerpt:
-      "Como trocar pasta térmica do notebook: diagnóstico antes de abrir, desconexão da bateria, remoção do dissipador, limpeza, aplicação e remontagem sem danificar a placa.",
+      "Como trocar pasta térmica do notebook: quando a troca faz sentido, como seguir o procedimento do fabricante e quais sinais exigem parar antes de abrir.",
     date: "2026-08-12",
-    readTime: "11 min",
+    readTime: "13 min",
     category: "Manutenção",
     content: (
       <>
-        <p className="lead">Para trocar pasta térmica do notebook com segurança, não comece pela pasta: confirme primeiro que o sistema de refrigeração está limpo, desligue totalmente o equipamento, desconecte carregador e bateria interna, registre a posição dos parafusos e só então remova o dissipador. A pasta apenas melhora o contato térmico entre chip e dissipador; ela não corrige ventoinha defeituosa, heatpipe danificado nem obstrução por poeira.</p>
+        <p className="lead">Trocar pasta térmica do notebook só faz sentido depois de separar interface térmica de outras causas de aquecimento. Confirme fluxo de ar, ventoinha e comportamento sob a mesma carga; consulte o manual de serviço do modelo antes de abrir; desligue o equipamento e isole a bateria conforme o procedimento do fabricante. A pasta melhora o contato térmico entre chip e dissipador, mas não corrige ventoinha defeituosa, heatpipe danificado, montagem incorreta ou radiador obstruído.</p>
+
+        <aside className="rounded-lg border border-border bg-muted/40 p-4 not-prose my-6">
+          <p className="m-0 text-sm"><strong>Critério de segurança:</strong> não abra o equipamento se houver bateria inchada, cheiro de queimado, fumaça, líquido recente ou ausência de procedimento confiável para o modelo. Nesses cenários, a prioridade deixa de ser temperatura e passa a ser segurança e preservação do equipamento.</p>
+        </aside>
 
         <h2>Como trocar pasta térmica: sequência segura</h2>
         <ol>
-          <li>Desligue o notebook e desconecte carregador e bateria.</li>
-          <li>Abra a carcaça com ferramenta adequada e registre parafusos e cabos.</li>
-          <li>Solte o dissipador em passes alternados, seguindo a numeração quando houver.</li>
-          <li>Remova o composto antigo com material apropriado e deixe as superfícies limpas e secas.</li>
-          <li>Aplique pequena quantidade de composto não condutivo e reposicione o dissipador sem arrastar.</li>
-          <li>Aperte em sequência alternada, reconecte a ventoinha e teste temperatura e estabilidade sob carga.</li>
+          <li><strong>Identifique o modelo exato</strong> e consulte o manual de serviço ou procedimento do fabricante. A ordem de desmontagem e o acesso à bateria variam entre notebooks.</li>
+          <li><strong>Desligue totalmente e retire o carregador.</strong> Depois de abrir, isole a bateria interna somente pelo método previsto para o equipamento.</li>
+          <li><strong>Registre parafusos, cabos e pads térmicos</strong> antes de remover o conjunto. Espessura e posição dos pads fazem parte do projeto térmico.</li>
+          <li><strong>Solte o dissipador gradualmente</strong>, respeitando marcações ou sequência do fabricante quando existirem; não invente uma ordem universal.</li>
+          <li><strong>Limpe e reaplique o material térmico</strong> conforme a orientação do fabricante do equipamento ou do composto. Não misture pasta com pads nem improvise espessuras.</li>
+          <li><strong>Remonte e compare a mesma carga</strong> observando temperatura, frequência, ventoinha e estabilidade. A melhora precisa aparecer no comportamento, não só na sensação ao tocar a carcaça.</li>
         </ol>
 
         <h2>O que a troca resolve — e o que não resolve</h2>
-        <p>Trocar o composto recupera a transferência de calor no ponto de contato. É a resposta certa quando o conjunto está limpo, a ventoinha gira normalmente e ainda assim a máquina aquece rápido sob carga.</p>
-        <p>Não é a resposta quando as aletas estão obstruídas por poeira compactada, quando a ventoinha tem rolamento gasto, quando o heatpipe está amassado ou quando o problema é lentidão de software confundida com calor. Nesses casos, o composto novo dura pouco tempo antes de o sintoma voltar. A parte de obstrução está detalhada em <Link to="/blog/como-limpar-notebook-por-dentro">limpeza interna de notebook</Link>.</p>
+        <p>O material de interface térmica preenche irregularidades microscópicas entre as superfícies de contato e ajuda a transferir calor para o dissipador. A troca é uma hipótese de manutenção quando o conjunto foi removido, quando o fabricante determina reaplicação ou quando há evidência de contato térmico inadequado.</p>
+        <p>Ela não substitui diagnóstico de radiador obstruído, ventoinha com falha, dissipador mal assentado, heatpipe danificado ou carga anormal de software. Antes de abrir, compare também <Link to="/problemas/computador-esquentando">computador esquentando: causas e testes seguros</Link> e a orientação de <Link to="/blog/como-limpar-notebook-por-dentro">limpeza interna de notebook</Link>.</p>
 
-        <h2>Sinais que apontam para interface térmica ruim</h2>
+        <h2>Sinais que justificam investigar a interface térmica</h2>
         <ul>
-          <li>Temperatura sobe muito rápido logo no início da carga e demora a cair depois.</li>
-          <li>Refrigeração já foi limpa recentemente e o quadro não mudou.</li>
-          <li>Queda de desempenho sob carga com ventoinha em rotação alta e saída de ar quente e forte — sinal de que o ar circula, mas o calor não chega bem até ele.</li>
-          <li>Equipamento com vários anos de uso e histórico de temperatura alta contínua.</li>
+          <li>O equipamento apresenta <Link to="/glossario/thermal-throttling">thermal throttling</Link> repetível sob a mesma carga, mesmo depois de confirmar entradas, saídas de ar e ventoinha.</li>
+          <li>O dissipador foi removido anteriormente ou há suspeita de assentamento inadequado.</li>
+          <li>A ventoinha responde à carga e existe fluxo de ar, mas a transferência de calor continua inconsistente quando comparada ao comportamento esperado para o modelo.</li>
+          <li>O manual de serviço prevê inspeção ou reaplicação do material ao remover o conjunto térmico.</li>
         </ul>
-        <p>Se a saída de ar está fraca, o caso é obstrução, não composto. Essa distinção evita abrir a máquina duas vezes.</p>
+        <p>Nenhum desses sinais, isoladamente, prova que a pasta é a causa. Fluxo de ar fraco, ruído mecânico, desligamento súbito ou bateria deformada mudam o roteiro de diagnóstico.</p>
 
         <h2>Preparação: onde a maioria dos danos acontece</h2>
         <p>Antes de qualquer ferramenta encostar no equipamento:</p>
@@ -4013,11 +4017,11 @@ docker run -d --name db --network minha-rede postgres
         </ul>
 
         <h2>Remoção do dissipador</h2>
-        <p>Os parafusos do dissipador vêm numerados na própria peça. A ordem existe porque a pressão precisa sair e entrar de forma distribuída: pressão desigual empena a base, e base empenada não faz contato uniforme com o chip.</p>
+        <p>Alguns conjuntos trazem parafusos numerados ou instruções de aperto e soltura; outros dependem do manual de serviço. O objetivo é retirar e reassentar o conjunto sem concentrar esforço nem danificar conectores, pads ou a placa.</p>
         <ol>
-          <li>Solte os parafusos aos poucos, alternando entre eles, na ordem inversa à numeração — sem soltar um de cada vez até o fim.</li>
-          <li>Desconecte o cabo da ventoinha pelo conector, nunca puxando pela fiação.</li>
-          <li>Levante o conjunto com movimento suave. Se estiver aderido pela pasta endurecida, aplique um leve giro para romper a aderência em vez de puxar com força — puxar arranca o chip do soquete em alguns modelos.</li>
+          <li>Quando houver sequência indicada no dissipador ou no manual, siga-a e solte os pontos gradualmente. Sem indicação, não presuma que a ordem de outro modelo serve para o seu.</li>
+          <li>Desconecte a ventoinha pelo corpo do conector, sem tracionar a fiação.</li>
+          <li>Se o conjunto estiver aderido, não force com ferramenta metálica nem faça alavanca sobre a placa. Consulte o procedimento do fabricante antes de continuar.</li>
         </ol>
 
         <h2>Limpeza das superfícies</h2>
@@ -4025,14 +4029,14 @@ docker run -d --name db --network minha-rede postgres
         <p>Se houver almofada térmica sobre chips vizinhos — memória de vídeo ou controlador —, ela não é substituída por pasta. É outro material, com espessura própria; comprimir a peça sem essa almofada cria folga e piora o resfriamento daquele componente.</p>
 
         <h2>Aplicação do composto</h2>
-        <p>Quantidade é a parte mais errada do procedimento. A camada útil é fina o bastante para preencher rugosidade — o excesso não melhora nada, escorre para fora sob pressão e, em compostos condutivos, pode fechar contato onde não deve.</p>
+        <p>Não existe um desenho ou volume universal de pasta para todo notebook. Processador, dissipador, material térmico original e orientação do fabricante mudam o procedimento. Use a quantidade e o método previstos pelo fabricante do equipamento ou do TIM e evite adicionar material sobre uma camada pré-aplicada.</p>
         <ul>
-          <li>Um ponto central pequeno, proporcional ao tamanho do chip, é suficiente na maioria dos processadores de notebook.</li>
-          <li>Não espalhe com o dedo. A pressão de aperto do dissipador distribui melhor e evita bolhas de ar.</li>
-          <li>Em chips retangulares maiores, uma linha fina no eixo maior distribui de forma mais previsível do que um ponto único.</li>
-          <li>Prefira composto não condutivo em manutenção doméstica: o ganho de compostos metálicos é pequeno perto do risco de curto por escorrimento.</li>
+          <li>Não use o dedo nem objetos contaminados para espalhar material térmico.</li>
+          <li>Não substitua pad térmico por pasta: o pad também compensa distância física e sua espessura faz parte da montagem.</li>
+          <li>Materiais eletricamente condutivos e metal líquido exigem controle de compatibilidade e isolamento; não devem ser improvisados em equipamento que não foi projetado para eles.</li>
+          <li>Se a superfície, o pad ou o método de aplicação do modelo não estiverem claros, pare e consulte a documentação técnica antes de energizar.</li>
         </ul>
-        <p>Este guia não indica marca nem modelo de composto. O que define o resultado é a espessura correta e o contato limpo, não o rótulo.</p>
+        <p>A Intel também orienta que material pré-aplicado não receba uma camada extra e que a reaplicação seja feita quando o conjunto térmico é reinstalado, respeitando o procedimento correspondente ao hardware.</p>
 
         <h2>Remontagem e verificação</h2>
         <ol>
@@ -4042,7 +4046,20 @@ docker run -d --name db --network minha-rede postgres
           <li>Feche a carcaça só depois de conferir que nenhum cabo ficou preso entre a tampa e a placa.</li>
           <li>Ligue e acompanhe o comportamento sob carga real por alguns minutos, comparando com o que acontecia antes.</li>
         </ol>
-        <p>Sem essa comparação não há como afirmar que a troca funcionou. E se a temperatura continuar alta com a refrigeração limpa e a pasta nova, o próximo suspeito é o próprio conjunto de dissipação ou a ventoinha.</p>
+        <p>Sem essa comparação não há como afirmar que a troca funcionou. Se o comportamento térmico continuar anormal, volte ao diagnóstico: montagem, dissipador, ventoinha, firmware, carga e limites específicos do processador ainda precisam ser considerados.</p>
+
+        <h2>Critérios de parada</h2>
+        <table>
+          <thead>
+            <tr><th>Sinal</th><th>O que significa para o procedimento</th><th>Decisão</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Bateria inchada, cheiro, fumaça ou líquido</td><td>Há risco além da interface térmica</td><td>Não abrir para “trocar pasta”; priorizar segurança</td></tr>
+            <tr><td>Pad rasgado, deslocado ou sem espessura identificada</td><td>A montagem térmica não pode ser recomposta por tentativa</td><td>Parar e identificar a peça correta</td></tr>
+            <tr><td>Sem manual e desmontagem exige placa, tela ou muitos flats</td><td>Risco de dano supera o benefício do teste caseiro</td><td>Encaminhar para bancada</td></tr>
+            <tr><td>Temperatura alta sem throttling ou instabilidade</td><td>O número isolado não prova defeito</td><td>Comparar com limite do processador/OEM antes de intervir</td></tr>
+          </tbody>
+        </table>
 
         <h2>Erros que custam caro</h2>
         <ul>
@@ -4055,12 +4072,18 @@ docker run -d --name db --network minha-rede postgres
         </ul>
         <p>Em equipamentos dentro da garantia de fábrica, confira as condições do fabricante antes de abrir: a abertura por terceiro pode afetar a cobertura.</p>
 
+        <h2>Fontes primárias para conferir o procedimento</h2>
+        <ul>
+          <li><a href="https://www.intel.com/content/www/us/en/support/articles/000005576/processors.html" target="_blank" rel="noreferrer" className="text-accent">Intel Support — aplicação e remoção de Thermal Interface Material (TIM)</a>: mostra que a orientação depende da solução térmica e que material pré-aplicado não deve receber pasta adicional.</li>
+          <li><a href="https://www.intel.com/content/www/us/en/support/articles/000088048/processors.html" target="_blank" rel="noreferrer" className="text-accent">Intel Support — throttling e solução de refrigeração</a>: referência para separar limite térmico de simples sensação de calor.</li>
+        </ul>
+
         <h2>Quando não fazer sozinho</h2>
         <p>Modelos em que o dissipador só é alcançado após remover teclado, placa e cabos de tela concentram risco maior do que ganho. O mesmo vale para máquinas com bateria inchada, líquido derramado, cheiro de queimado ou desligamento imediato ao ligar — nesses casos o aquecimento é sintoma, não o problema principal.</p>
         <p>O critério de verificação e cobrança está em <Link to="/diagnostico-tecnico">como funciona o diagnóstico técnico</Link>. O procedimento completo de refrigeração faz parte da <Link to="/servicos/manutencao-de-notebook">manutenção de notebook</Link>, e quando o equipamento não pode sair do lugar existe o <Link to="/atendimento-domicilio">atendimento no endereço</Link>. Se o quadro for de calor recorrente, comece por <Link to="/blog/notebook-superaquecendo-o-que-fazer">notebook superaquecendo: o que fazer</Link>.</p>
 
         <h2>Resumo prático</h2>
-        <p>Troque a pasta quando a refrigeração já estiver limpa e o aquecimento persistir. Corte a energia da bateria antes de tudo, remova o dissipador em passes alternados, limpe as duas superfícies por completo, aplique uma camada fina e aperte na ordem numerada. Depois, teste sob carga e compare — é o teste que confirma o serviço, não a aparência da montagem.</p>
+        <p>Não troque pasta térmica por calendário nem por um número isolado de temperatura. Primeiro confirme o comportamento térmico, consulte o procedimento do modelo e elimine obstrução e falha de ventoinha. Se o dissipador precisar ser removido, preserve pads, siga a sequência do fabricante, reaplique o TIM pelo método indicado e compare a mesma carga depois da montagem. Se surgir sinal elétrico, bateria deformada ou dúvida sobre a desmontagem, pare.</p>
       </>
     ),
   },
@@ -13584,33 +13607,33 @@ bcdboot C:\\Windows /s S: /f UEFI`}</code></pre>
   "hd-nao-e-reconhecido-na-bios-o-que-fazer": {
     title: "Computador não reconhece HD ou SSD: BIOS, Windows e o que verificar",
     excerpt:
-      "Se o PC não reconhece o HD ou SSD, primeiro descubra se o disco sumiu da BIOS ou só do Windows. Veja a sequência segura por energia, cabo, porta, slot e detecção.",
+      "PC não reconhece HD ou SSD? Separe BIOS/UEFI de Windows, proteja dados existentes e teste conexão, compatibilidade e detecção sem inicializar a unidade por engano.",
     date: "2026-08-26",
-    readTime: "10 min",
+    readTime: "12 min",
     category: "Diagnóstico",
     content: (
       <>
-        <p className="lead">Quando o computador não reconhece HD ou SSD, a primeira divisão é simples: o disco aparece na BIOS/UEFI ou sumiu também do firmware? Se aparece na BIOS mas não no Windows, o caminho é lógico — partição, letra ou inicialização. Se não aparece nem na BIOS, investigue alimentação, cabo, porta, slot e o próprio disco antes de comprar peça ou formatar.</p>
+        <p className="lead">Quando o computador não reconhece HD ou SSD, faça primeiro uma separação que protege os dados: a unidade aparece na BIOS/UEFI, no Gerenciamento de Disco do Windows, nos dois ou em nenhum? Se o disco já tinha arquivos, não inicialize, não formate e não crie partição apenas porque o Windows ofereceu essa opção. A partir dessa leitura, investigue configuração, compatibilidade, alimentação, cabo, porta, slot e a própria unidade sem escrever nela por tentativa.</p>
 
         <h2>PC não reconhece HD: BIOS ou Windows?</h2>
         <p>Abra a tela de armazenamento da BIOS/UEFI e procure o modelo do disco. Essa verificação muda todo o diagnóstico: <strong>presente na BIOS e ausente no Windows</strong> aponta para configuração do sistema; <strong>ausente nos dois</strong> aponta para conexão, compatibilidade, alimentação ou falha física. Em mídia com arquivos importantes, não inicialize nem formate para “ver se volta”.</p>
 
         <h2>Resposta curta</h2>
-        <p>A BIOS mostra o que o controlador de armazenamento consegue enumerar. Se o disco não aparece ali, existem três famílias de causa: <strong>alimentação</strong> (o disco não recebe energia), <strong>enlace de dados</strong> (cabo, porta ou slot com mau contato ou desabilitado) e <strong>o próprio disco</strong> (eletrônica ou mecânica com defeito). O objetivo do teste é descobrir qual delas é, sem escrever nada na mídia.</p>
+        <p>Se a unidade não aparece na BIOS/UEFI, o firmware não conseguiu enumerá-la naquele caminho. Isso pode envolver configuração do firmware, compatibilidade do slot, compartilhamento de portas, alimentação, conexão ou falha da própria unidade. Se aparece no firmware e some apenas no Windows, o diagnóstico muda para estado do disco, partições, letra de unidade, driver/controlador e configuração do sistema. O objetivo é localizar em qual camada a detecção para — sem transformar um problema de leitura em perda de dados.</p>
 
         <aside className="rounded-lg border border-border bg-muted/40 p-4 not-prose my-6">
-          <p className="m-0 text-sm"><strong>Antes de qualquer coisa:</strong> se o disco faz ruído repetitivo (clique, arranhado, estalo), se já apresentou desconexões durante o uso ou se contém arquivos que você não tem em outro lugar, pare. Não rode utilitários de correção, não formate e não reinstale o sistema. Cada nova tentativa de leitura em mídia doente reduz a chance de recuperação. O caminho nesse caso é <Link to="/servicos/recuperacao-de-dados" className="text-accent">recuperação de dados</Link>, não reparo.</p>
+          <p className="m-0 text-sm"><strong>Antes de qualquer coisa:</strong> se a unidade tem arquivos sem cópia, apresenta desconexões repetidas, ruído anormal em HD mecânico ou desaparece durante leitura, pare os testes destrutivos. Não inicialize, não formate, não reinstale o sistema e não rode ferramentas de “reparo” que gravem na mídia. O objetivo passa a ser preservar o estado para <Link to="/servicos/recuperacao-de-dados" className="text-accent">avaliação de recuperação de dados</Link>.</p>
         </aside>
 
         <h2>Sequência de verificação</h2>
         <ol>
-          <li><strong>Confirme onde o disco deveria aparecer.</strong> No Setup, procure a página de armazenamento (SATA Configuration, Storage, NVMe Configuration). Alguns firmwares listam discos M.2 em uma tela separada dos SATA.</li>
-          <li><strong>Desligue de verdade.</strong> Chave da fonte em O, cabo de força removido, botão de ligar pressionado por dez segundos para descarregar. Em notebook, remova a bateria quando for removível.</li>
-          <li><strong>Reassente o disco.</strong> Em SATA, recoloque o cabo de dados nas duas pontas e troque o conector de energia por outro que saia da fonte. Em M.2, solte o parafuso, retire e recoloque a placa firmemente até o encaixe.</li>
-          <li><strong>Troque a porta.</strong> Use outra porta SATA da placa e um cabo diferente. Cabo SATA é o componente mais barato do conjunto e um dos que mais falham por dobra e mau contato.</li>
-          <li><strong>Elimine concorrência de slot.</strong> Em muitas placas, ocupar um slot M.2 desabilita portas SATA específicas — o manual da placa traz a tabela. Se o SSD novo derrubou o HD antigo, é isso.</li>
-          <li><strong>Teste isolado.</strong> Deixe apenas o disco suspeito conectado. Se ele aparece sozinho e some acompanhado, a suspeita passa para alimentação insuficiente ou conflito de porta.</li>
-          <li><strong>Teste em outra máquina</strong> (ou por adaptador USB, quando não houver dados críticos envolvidos). Disco que não é enumerado em nenhum computador tem defeito próprio.</li>
+          <li><strong>Confirme a camada da falha.</strong> Procure a unidade na BIOS/UEFI e depois no Gerenciamento de Disco. Alguns firmwares separam SATA, NVMe e M.2 em telas diferentes.</li>
+          <li><strong>Identifique interface e compatibilidade.</strong> M.2 é formato físico; o slot pode aceitar NVMe, SATA ou ambos. Consulte o manual da placa ou do notebook antes de mover a unidade entre slots.</li>
+          <li><strong>Se for abrir o equipamento, desligue e desconecte a alimentação.</strong> Em notebook com bateria interna, siga o procedimento de isolamento do fabricante; sem manual ou acesso seguro, não improvise.</li>
+          <li><strong>Em desktop SATA,</strong> verifique encaixe do cabo de dados e alimentação e, quando houver segurança para isso, teste cabo e porta conhecidos como funcionais.</li>
+          <li><strong>Em M.2,</strong> confirme tipo, chave, comprimento, slot correto e eventuais regras de compartilhamento com portas SATA no manual da placa-mãe.</li>
+          <li><strong>Se o firmware detecta e o Windows não mostra no Explorador,</strong> abra o Gerenciamento de Disco antes de mexer em hardware. Um disco pode estar offline, sem letra ou sem volume montado.</li>
+          <li><strong>Outro computador ou adaptador é apenas evidência adicional.</strong> Se a unidade continuar ausente, isso aumenta a suspeita sobre ela, mas compatibilidade do adaptador e do protocolo também precisam ser consideradas.</li>
         </ol>
 
         <h2>Tabela de decisão</h2>
@@ -13623,23 +13646,37 @@ bcdboot C:\\Windows /s S: /f UEFI`}</code></pre>
             </tr>
           </thead>
           <tbody>
-            <tr><td>Disco não gira e não esquenta (HD mecânico)</td><td>Sem alimentação ou eletrônica com defeito</td><td>Trocar o conector de energia da fonte; persistindo, é falha do disco</td></tr>
-            <tr><td>Gira normalmente e mesmo assim não aparece</td><td>Cabo, porta ou enlace de dados</td><td>Trocar cabo e porta SATA antes de qualquer outra hipótese</td></tr>
-            <tr><td>Aparece e some entre reinícios</td><td>Mau contato ou alimentação instável</td><td>Reassentar, testar outra porta e observar; não instalar sistema nesse estado</td></tr>
-            <tr><td>SSD M.2 novo não aparece e o HD sumiu junto</td><td>Compartilhamento de faixas entre M.2 e SATA</td><td>Consultar a tabela de slots no manual da placa</td></tr>
-            <tr><td>Ruído repetitivo, estalo ou arranhado</td><td>Falha mecânica</td><td>Desligar imediatamente e tratar como caso de recuperação</td></tr>
-            <tr><td>Aparece na BIOS, mas o sistema não inicia</td><td>Ordem de boot ou partição de inicialização</td><td>Ver <Link to="/blog/erro-no-bootable-device-como-resolver" className="text-accent">no bootable device</Link></td></tr>
+            <tr><td>HD não gira ou não dá sinais de alimentação</td><td>Alimentação, conexão ou eletrônica da unidade</td><td>Não concluir defeito só pelo toque; verificar alimentação de forma segura</td></tr>
+            <tr><td>Unidade some da BIOS/UEFI e do Windows</td><td>Configuração, compatibilidade, porta, cabo, alimentação ou unidade</td><td>Começar pelo manual e pelo caminho físico, sem inicializar a mídia</td></tr>
+            <tr><td>Aparece e some entre reinícios</td><td>Conexão, alimentação, controlador ou unidade instável</td><td>Interromper gravações e registrar em qual camada a unidade desaparece</td></tr>
+            <tr><td>SSD M.2 novo coincide com porta SATA que deixou de aparecer</td><td>Possível compartilhamento de recursos</td><td>Consultar a tabela de slots/portas do fabricante</td></tr>
+            <tr><td>HD mecânico faz clique, raspagem ou ruído novo e repetitivo</td><td>Possível falha física</td><td>Parar testes de escrita e priorizar os dados</td></tr>
+            <tr><td>Aparece na BIOS, mas o sistema não inicia</td><td>Boot, partição, carregador de inicialização ou sistema</td><td>Ver <Link to="/blog/erro-no-bootable-device-como-resolver" className="text-accent">no bootable device</Link></td></tr>
           </tbody>
         </table>
 
         <h2>Quando o disco aparece na BIOS, mas não no Windows</h2>
-        <p>Aí o quadro é outro e bem mais simples: o disco foi enumerado, só não recebeu tratamento do sistema. Disco novo costuma chegar sem inicialização, sem partição e sem letra. Esse cenário está detalhado em <Link to="/blog/ssd-nvme-nao-aparece-no-gerenciador-de-discos" className="text-accent">SSD não aparece no Gerenciador de Discos</Link>.</p>
+        <p>Abra o Gerenciamento de Disco e observe o estado antes de clicar em qualquer opção. Uma unidade <strong>nova e vazia</strong> pode precisar ser inicializada para uso; uma unidade que já tinha dados não deve ser tratada como “nova” só porque o Windows a mostra como desconhecida ou não inicializada. A própria documentação da Microsoft limita o procedimento de inicialização ao disco novo sem dados existentes. Veja também <Link to="/blog/ssd-nvme-nao-aparece-no-gerenciador-de-discos" className="text-accent">SSD não aparece no Gerenciador de Discos</Link>.</p>
 
         <h2>Quando o Setup abre no lugar do sistema</h2>
         <p>Se a máquina entra direto na tela de configuração sempre que liga, o disco pode até estar íntegro — o firmware é que não encontrou um alvo de partida válido. O caminho está em <Link to="/blog/computador-entra-direto-na-bios" className="text-accent">computador entra direto na BIOS</Link> e, em caso de troca recente, em <Link to="/blog/troquei-o-ssd-e-o-pc-so-abre-a-bios" className="text-accent">troquei o SSD e o PC só abre a BIOS</Link>.</p>
 
+        <h2>Critérios de parada</h2>
+        <ul>
+          <li>A unidade contém dados únicos e o Windows pede inicialização ou formatação.</li>
+          <li>O HD mecânico passou a emitir ruído anormal ou a unidade desconecta durante leitura.</li>
+          <li>O equipamento tem cheiro, aquecimento anormal ou desliga durante o teste.</li>
+          <li>A abertura exige remover bateria interna ou componentes sem procedimento confiável do fabricante.</li>
+        </ul>
+
+        <h2>Fontes primárias</h2>
+        <ul>
+          <li><a href="https://learn.microsoft.com/pt-br/windows-server/storage/disk-management/overview-of-disk-management" target="_blank" rel="noreferrer" className="text-accent">Microsoft Learn — visão geral do Gerenciamento de Disco</a>: referência para identificar discos, volumes e partições no Windows.</li>
+          <li><a href="https://learn.microsoft.com/pt-br/windows-server/storage/disk-management/initialize-new-disks" target="_blank" rel="noreferrer" className="text-accent">Microsoft Learn — inicializar novos discos</a>: o procedimento é descrito para disco novo sem dados existentes e traz alerta para preservar dados de unidades já usadas.</li>
+        </ul>
+
         <h2>Quando chamar um técnico</h2>
-        <p>Chame quando houver dados sem cópia, quando o disco emitir ruído, quando a máquina desligar sozinha durante o teste ou quando o disco sumir de forma intermitente com o sistema já instalado. O procedimento correto nesses casos começa por imagem bit a bit, não por conserto: veja <Link to="/blog/como-recuperar-dados-hd-com-defeito" className="text-accent">como recuperar dados de HD com defeito</Link> e, se preferir avaliação presencial, <Link to="/diagnostico-tecnico" className="text-accent">diagnóstico técnico</Link>.</p>
+        <p>Chame quando houver dados sem cópia, ruído anormal, desconexão intermitente ou dúvida se a unidade tem informação que precisa ser preservada. Em recuperação, o primeiro objetivo é evitar escrita desnecessária e escolher uma estratégia de aquisição adequada ao estado da mídia — não “consertar” a estrutura por tentativa. Compare <Link to="/blog/como-recuperar-dados-hd-com-defeito" className="text-accent">como recuperar dados de HD com defeito</Link> e, se preferir avaliação presencial, <Link to="/diagnostico-tecnico" className="text-accent">diagnóstico técnico</Link>.</p>
       </>
     ),
   },
@@ -13829,28 +13866,29 @@ bcdboot C:\\Windows /s S: /f UEFI`}</code></pre>
   "fone-de-ouvido-nao-e-reconhecido-no-pc": {
     title: "Fone de ouvido não funciona no PC ou notebook: o que verificar",
     excerpt:
-      "Fone não reconhecido no PC ou notebook? Veja saída padrão, conector P2, painel frontal, microfone, driver, USB e Bluetooth antes de concluir que o fone queimou.",
+      "Fone não reconhecido no PC ou notebook? Isole o próprio fone, a saída do Windows, o conector, o microfone, USB e Bluetooth antes de trocar driver ou abrir a máquina.",
     date: "2026-08-26",
-    readTime: "8 min",
+    readTime: "10 min",
     category: "Procedimentos Técnicos",
     content: (
       <>
-        <p className="lead">Se o fone de ouvido não funciona no PC ou notebook, primeiro teste o próprio fone em outro aparelho e depois confira qual saída de áudio o Windows selecionou. Se o fone funciona em outro dispositivo, a causa costuma estar em detecção do conector, tipo de plugue, saída padrão, permissão do microfone, driver ou perfil Bluetooth — não necessariamente em defeito físico.</p>
+        <p className="lead">Se o fone de ouvido não funciona no PC ou notebook, comece isolando três camadas: o próprio fone, a saída escolhida no Windows e o caminho físico ou sem fio usado para conectar. Teste o fone em outro aparelho compatível, confirme a saída e o volume no sistema e só depois investigue conector, entrada do microfone, driver, USB ou Bluetooth. Um teste isolado ajuda a reduzir hipóteses, mas não prova sozinho qual peça falhou.</p>
 
         <h2>Fone não funciona no notebook: comece por estes testes</h2>
-        <p>Em notebook com conector único, confirme se o plugue é P2/TRRS compatível e se entrou até o fim. Depois abra Configurações → Sistema → Som e selecione manualmente o fone como saída. Se o áudio sai mas o microfone não, confira a entrada selecionada e as permissões de microfone. Em headset USB ou Bluetooth, escolha o dispositivo correto porque ele aparece separado da placa de som interna.</p>
+        <p>Abra Configurações → Sistema → Som e confirme a saída ativa antes de reinstalar qualquer driver. Em conector analógico, verifique se o plugue e a porta são compatíveis com o desenho do equipamento; em USB ou Bluetooth, o headset aparece como dispositivo separado. Se o áudio funciona e apenas o microfone falha, confira também a entrada selecionada e as permissões de microfone do Windows e do aplicativo.</p>
 
         <h2>Resposta curta</h2>
-        <p>O conector de áudio informa ao controlador que um plugue foi inserido. Quando essa detecção não chega — cabo interno do painel frontal solto, configuração errada de painel, plugue incompatível ou conector sujo —, o sistema simplesmente segue tocando na saída anterior, como se nada tivesse sido conectado.</p>
+        <p>Fone sem som pode ser uma seleção de saída, volume por aplicativo, conector analógico, painel frontal, driver, dispositivo USB ou conexão Bluetooth. O diagnóstico fica mais rápido quando você muda uma variável por vez: primeiro outro aparelho para validar o fone, depois outra saída no PC, depois as configurações do Windows. Evite começar por “atualizador de driver” de origem desconhecida.</p>
 
         <h2>Verificação em ordem</h2>
         <ol>
-          <li><strong>Teste na saída traseira</strong> (verde) do desktop. Funcionando ali, o problema é do painel frontal, não do fone.</li>
-          <li><strong>Confira o tipo de plugue.</strong> Headset de celular usa plugue combinado, com áudio e microfone no mesmo conector. Em placas com duas entradas separadas, ele toca som mas não capta voz sem adaptador em Y.</li>
-          <li><strong>Verifique a lista de dispositivos:</strong> Configurações → Sistema → Som. Se o fone não aparece ao plugar, a detecção não está chegando ao sistema.</li>
-          <li><strong>No utilitário do fabricante do áudio</strong>, quando existir, confira a configuração do painel frontal e a associação do conector.</li>
-          <li><strong>Limpe o conector.</strong> Poeira compactada impede o contato do plugue; ar comprimido em jatos curtos, com a máquina desligada, costuma bastar.</li>
-          <li><strong>Para microfone,</strong> confira Privacidade → Microfone e o dispositivo de entrada padrão. Aplicativo de reunião pode manter uma entrada diferente da do sistema.</li>
+          <li><strong>Valide o fone em outro equipamento compatível.</strong> Se também falhar, investigue o próprio fone antes do computador.</li>
+          <li><strong>Confira a saída do Windows:</strong> Configurações → Sistema → Som. Selecione o dispositivo desejado e verifique volume geral e volume do aplicativo.</li>
+          <li><strong>Em desktop, compare painel frontal e traseiro</strong> quando as duas conexões forem compatíveis. Se uma funciona e a outra não, isso isola o caminho do conector, mas não prova sozinho cabo desconectado.</li>
+          <li><strong>Confira o padrão do plugue e das portas.</strong> Um headset combinado pode precisar de adaptador apropriado quando o computador usa conectores separados para áudio e microfone.</li>
+          <li><strong>Para microfone,</strong> confirme a entrada selecionada e as permissões de privacidade do Windows e do aplicativo de chamada.</li>
+          <li><strong>Em USB ou Bluetooth,</strong> confirme que o dispositivo está conectado, selecionado como saída/entrada e sem erro no Gerenciador de Dispositivos antes de remover ou reinstalar software.</li>
+          <li><strong>Se houver sujeira visível no conector,</strong> desligue o equipamento e siga a orientação de limpeza do fabricante. Não introduza objeto metálico nem líquido na porta.</li>
         </ol>
 
         <h2>Tabela de decisão</h2>
@@ -13863,20 +13901,34 @@ bcdboot C:\\Windows /s S: /f UEFI`}</code></pre>
             </tr>
           </thead>
           <tbody>
-            <tr><td>Toca atrás, não toca na frente</td><td>Cabo do painel frontal desconectado da placa</td><td>Reconectar o cabo interno de áudio frontal</td></tr>
-            <tr><td>Fone não aparece na lista ao plugar</td><td>Detecção de conector inativa</td><td>Conferir configuração do painel e o driver do áudio</td></tr>
-            <tr><td>Som sai, microfone não capta</td><td>Plugue combinado em entradas separadas</td><td>Usar adaptador em Y ou porta USB</td></tr>
-            <tr><td>Ruído ao encostar no cabo</td><td>Plugue ou cabo do fone com mau contato</td><td>Testar o fone em outro aparelho</td></tr>
-            <tr><td>Só um lado toca</td><td>Plugue mal inserido ou cabo rompido</td><td>Empurrar até o fim e testar outro fone</td></tr>
-            <tr><td>Nada funciona, em nenhuma entrada</td><td>Driver ou serviço de áudio</td><td>Ver <Link to="/blog/computador-sem-som-o-que-verificar" className="text-accent">computador sem som</Link></td></tr>
+            <tr><td>Funciona atrás, não funciona na frente</td><td>Caminho do painel frontal, configuração ou conector</td><td>Verificar detecção e ligação do painel antes de abrir</td></tr>
+            <tr><td>Dispositivo aparece, mas não sai som</td><td>Saída errada, volume, mixer, formato ou driver</td><td>Seguir o solucionador e conferir a saída ativa</td></tr>
+            <tr><td>Som funciona, microfone não</td><td>Entrada errada, permissão, padrão do plugue ou aplicativo</td><td>Conferir entrada e privacidade antes de comprar adaptador</td></tr>
+            <tr><td>Ruído muda ao movimentar o cabo</td><td>Possível mau contato físico</td><td>Testar outro fone e evitar forçar o conector</td></tr>
+            <tr><td>Só um canal toca em mais de um dispositivo</td><td>Possível falha no fone/cabo</td><td>Comparar com outro fone conhecido como funcional</td></tr>
+            <tr><td>Nenhuma saída reproduz áudio</td><td>Problema mais amplo de áudio no Windows ou hardware</td><td>Ver <Link to="/blog/computador-sem-som-o-que-verificar" className="text-accent">computador sem som</Link></td></tr>
           </tbody>
         </table>
 
         <h2>Headset USB e Bluetooth</h2>
-        <p>Headsets USB trazem a própria placa de som e aparecem como um dispositivo separado — se não forem selecionados como saída padrão, o som continua na caixa. Em Bluetooth, é comum haver dois perfis: um estéreo, de melhor qualidade e sem microfone, e outro de comunicação, com microfone e áudio mais pobre. Aplicativos de chamada alternam entre eles, e essa troca explica a queda de qualidade durante reuniões.</p>
+        <p>Headsets USB normalmente aparecem como um dispositivo de áudio separado, por isso vale confirmar saída e entrada no Windows e no aplicativo. Em Bluetooth, recursos e qualidade durante chamadas dependem do headset, da versão do Windows, do codec e do modo de comunicação negociado. Se a qualidade muda ao abrir uma reunião, confirme qual saída e qual microfone o aplicativo passou a usar antes de tratar isso como defeito.</p>
+
+        <h2>Critérios de parada</h2>
+        <ul>
+          <li>Porta afundada, quebrada ou aquecendo.</li>
+          <li>Falha começou após líquido, queda ou abertura recente do equipamento.</li>
+          <li>É preciso desmontar notebook ou placa frontal sem documentação do modelo.</li>
+          <li>O problema de áudio vem acompanhado de cheiro, estalo elétrico ou desligamento.</li>
+        </ul>
+
+        <h2>Fontes primárias</h2>
+        <ul>
+          <li><a href="https://support.microsoft.com/pt-br/windows/hardware/audio/fix-sound-or-audio-problems-in-windows" target="_blank" rel="noreferrer" className="text-accent">Microsoft Support — corrigir problemas de som ou áudio no Windows</a>: sequência oficial para saída, volume, solucionador, driver e serviços de áudio.</li>
+          <li><a href="https://support.microsoft.com/pt-br/windows/hardware/audio/fix-audio-issues-when-no-sound-plays-from-speakers-or-headphones-in-windows" target="_blank" rel="noreferrer" className="text-accent">Microsoft Support — sem som em alto-falantes ou fones</a>: verificações específicas quando o dispositivo está conectado, mas não reproduz áudio.</li>
+        </ul>
 
         <h2>Quando chamar um técnico</h2>
-        <p>Chame quando o conector estiver folgado ou afundado no gabinete, quando houver contato intermitente ao movimentar o plugue, ou quando o painel frontal tiver parado depois de uma montagem ou limpeza. Reparo de conector e recolocação de cabo interno entram em <Link to="/servicos/manutencao-de-computador" className="text-accent">manutenção de computador</Link>; em portáteis, <Link to="/servicos/manutencao-de-notebook" className="text-accent">manutenção de notebook</Link>.</p>
+        <p>Chame quando o conector estiver folgado, afundado ou intermitente, quando o painel frontal parar após montagem, ou quando os testes de software e de outro fone isolarem a falha no caminho físico. Reparo de conector e revisão do painel entram em <Link to="/servicos/manutencao-de-computador" className="text-accent">manutenção de computador</Link>; em portáteis, <Link to="/servicos/manutencao-de-notebook" className="text-accent">manutenção de notebook</Link>.</p>
       </>
     ),
   },
