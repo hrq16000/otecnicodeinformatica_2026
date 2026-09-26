@@ -57,9 +57,9 @@ export const PROGRAMMATIC_EDITORIAL_GOVERNANCE: ProgrammaticEditorialDecision[] 
   },
   {
     slug: "wifi-caindo-toda-hora",
-    status: "review",
+    status: "promoted",
     rationale:
-      "Instabilidade de Wi-Fi sustenta intenção própria de isolamento dispositivo × WLAN × roteador × provedor. O texto já foi reescrito sem números universais; passou por revisão técnica formal; permanece noindex até receber asset editorial próprio com proveniência.",
+      "Instabilidade de Wi-Fi sustenta intenção própria de isolamento dispositivo × WLAN × roteador × provedor. O texto foi reescrito, revisado com fontes FCC/Wi-Fi Alliance, recebeu capa vetorial própria e foi promovido de forma controlada ao índice.",
   },
   {
     slug: "pc-muito-lento-como-acelerar",
