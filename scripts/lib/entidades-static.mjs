@@ -4,8 +4,14 @@ export const ENTIDADES_ROUTES = [
   {
     "path": "/entidades",
     "title": "Entidades Técnicas do Portal | Mapa de Conteúdo Conectado",
-    "description": "Windows, SSD, memória RAM, Wi-Fi, backup, erro 0xc0000428 e computador lento: cada entidade reúne definição, problemas, ferramentas, decisões, artigos e serviços.",
+    "description": "Técnico de informática, Windows, SSD, memória, Wi-Fi e backup: entidades que conectam definições, problemas, ferramentas, decisões, artigos e serviços.",
     "h1": "Entidades técnicas do portal"
+  },
+  {
+    "path": "/entidades/tecnico-de-informatica",
+    "title": "Técnico de Informática: mapa técnico completo | Entidades",
+    "description": "Profissional que diagnostica, configura e mantém computadores, sistemas e redes, conectando o sintoma relatado à solução técnica apropriada.",
+    "h1": "Técnico de Informática"
   },
   {
     "path": "/entidades/windows",
