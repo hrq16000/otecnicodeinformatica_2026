@@ -1450,6 +1450,24 @@ const WAVE_11M: EditorialApproval[] = [
   },
 ];
 
+
+const WAVE_11N: EditorialApproval[] = [
+  {
+    slug: "wifi-caindo-toda-hora",
+    status: "approved",
+    authorType: "organization",
+    authorId: INSTITUTIONAL_AUTHOR.id,
+    reviewedAt: "2026-09-26",
+    approvedAt: "2026-09-26",
+    imageOrigin: "owned",
+    imageLicense: "Todos os direitos reservados",
+    imageAttribution:
+      "Arte editorial original: O Técnico de Informática — https://otecnicodeinformatica.com.br/blog/wifi-caindo-toda-hora",
+    notes:
+      "Intenção independente de instabilidade Wi-Fi qualificada após reescrita e revisão material: separa dispositivo, WLAN, roteador/modem e provedor, evita canal/limite universal e usa FCC/Wi-Fi Alliance como fontes primárias. Capa vetorial própria, sem terceiros e sem dados pessoais.",
+  },
+];
+
 export const APPROVED_EDITORIAL_CONTENT = new Map<string, EditorialApproval>([
 
   ...FIRST_WAVE_SLUGS.map((slug) => [
@@ -1511,6 +1529,7 @@ export const APPROVED_EDITORIAL_CONTENT = new Map<string, EditorialApproval>([
   ...WAVE_11K.map((a) => [a.slug, a] as [string, EditorialApproval]),
   ...WAVE_11L.map((a) => [a.slug, a] as [string, EditorialApproval]),
   ...WAVE_11M.map((a) => [a.slug, a] as [string, EditorialApproval]),
+  ...WAVE_11N.map((a) => [a.slug, a] as [string, EditorialApproval]),
 
 ]);
 
