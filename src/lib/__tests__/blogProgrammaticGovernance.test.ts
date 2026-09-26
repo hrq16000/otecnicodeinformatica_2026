@@ -18,10 +18,10 @@ describe("governança do estoque programático", () => {
     expect(new Set(governed).size).toBe(governed.length);
   });
 
-  it("consolida 15 duplicatas, promove 2 intenções e mantém 1 em revisão", () => {
+  it("consolida 15 duplicatas e promove as 3 intenções independentes qualificadas", () => {
     expect(PROGRAMMATIC_REDIRECTS).toHaveLength(15);
-    expect(PROGRAMMATIC_PROMOTED).toHaveLength(2);
-    expect(PROGRAMMATIC_REVIEW).toHaveLength(1);
+    expect(PROGRAMMATIC_PROMOTED).toHaveLength(3);
+    expect(PROGRAMMATIC_REVIEW).toHaveLength(0);
   });
 
   it("materializa toda consolidação editorial na matriz única de redirects", () => {
@@ -39,14 +39,12 @@ describe("governança do estoque programático", () => {
     }
   });
 
-  it("não redireciona as intenções que ainda precisam de qualificação", () => {
-    for (const decision of PROGRAMMATIC_REVIEW) {
-      expect(resolveRedirect(`/blog/${decision.slug}`)).toBeNull();
-    }
+  it("encerra a fila de revisão programática", () => {
+    expect(PROGRAMMATIC_REVIEW).toEqual([]);
   });
 
-  it("mantém as intenções independentes restantes tecnicamente revisadas", () => {
-    for (const decision of PROGRAMMATIC_REVIEW) {
+  it("mantém as três intenções promovidas tecnicamente revisadas", () => {
+    for (const decision of PROGRAMMATIC_PROMOTED) {
       expect(getTechnicalReviewStatus(decision.slug)).toBe("reviewed");
       if (decision.slug !== "pc-nao-liga-o-que-fazer") {
         expect(getArticleSources(decision.slug).length).toBeGreaterThan(0);
@@ -54,12 +52,13 @@ describe("governança do estoque programático", () => {
     }
   });
 
-  it("registra promoções editoriais sem redirect", () => {
+  it("registra as três promoções editoriais sem redirect", () => {
     expect(PROGRAMMATIC_PROMOTED.map((d) => d.slug).sort()).toEqual(
-      ["como-fazer-backup-na-nuvem", "wifi-caindo-toda-hora"].sort(),
+      ["como-fazer-backup-na-nuvem", "pc-nao-liga-o-que-fazer", "wifi-caindo-toda-hora"].sort(),
     );
     expect(resolveRedirect("/blog/como-fazer-backup-na-nuvem")).toBeNull();
     expect(resolveRedirect("/blog/wifi-caindo-toda-hora")).toBeNull();
+    expect(resolveRedirect("/blog/pc-nao-liga-o-que-fazer")).toBeNull();
   });
 
   it("nunca redireciona um alias programático para outro alias programático", () => {
