@@ -82,6 +82,8 @@ export const LOTE_LOCAL_2 = data.loteLocal2 as string[];
 export const LOTE_LOCAL_3 = (data as { loteLocal3?: string[] }).loteLocal3 ?? [];
 /** Lote 4 de bairros âncora (Micro-Rodada Local 2) — rotas já existentes. */
 export const LOTE_LOCAL_4 = (data as { loteLocal4?: string[] }).loteLocal4 ?? [];
+/** Lote 5 — bairros adicionais de Curitiba + SJP com conteúdo autoral. */
+export const LOTE_LOCAL_5 = (data as { loteLocal5?: string[] }).loteLocal5 ?? [];
 
 /** Metadados do bairro âncora (cidade-pai, intenção, lote). */
 export function bairroAncora(slug: string): BairroAncora | undefined {
