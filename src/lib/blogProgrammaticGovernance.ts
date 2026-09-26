@@ -34,7 +34,7 @@ export const PROGRAMMATIC_EDITORIAL_GOVERNANCE: ProgrammaticEditorialDecision[] 
     slug: "pc-nao-liga-o-que-fazer",
     status: "review",
     rationale:
-      "Intenção de desktop sem energia pode merecer guia próprio, mas o texto atual contém procedimentos arriscados e conclusões excessivas; permanece noindex até reescrita.",
+      "Intenção de desktop sem energia é distinta das páginas de vídeo/boot. O texto já foi reescrito com diagnóstico seguro e sem ponte em fonte; permanece noindex até revisão técnica formal, fontes e asset editorial próprio.",
   },
   {
     slug: "tela-azul-windows-como-resolver",
@@ -52,7 +52,7 @@ export const PROGRAMMATIC_EDITORIAL_GOVERNANCE: ProgrammaticEditorialDecision[] 
     slug: "wifi-caindo-toda-hora",
     status: "review",
     rationale:
-      "Instabilidade de Wi-Fi pode sustentar uma intenção própria, mas o texto atual usa absolutos técnicos e recomendações genéricas; exige reescrita antes de indexação.",
+      "Instabilidade de Wi-Fi sustenta intenção própria de isolamento dispositivo × WLAN × roteador × provedor. O texto já foi reescrito sem números universais; permanece noindex até revisão técnica formal, fontes e asset editorial próprio.",
   },
   {
     slug: "pc-muito-lento-como-acelerar",
