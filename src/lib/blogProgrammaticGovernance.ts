@@ -5,11 +5,13 @@
  * src/data/blogProgrammaticPosts.tsx.
  *
  * Regra:
- * - redirect: intenção já coberta por URL canônica mais forte; não promover.
- * - review: intenção potencialmente útil, mas exige reescrita/revisão antes
- *   de qualquer aprovação para indexação.
+ * - redirect: intenção já coberta por URL canônica mais forte; consolidar.
+ * - review: intenção potencialmente útil, mas ainda não aprovada.
+ * - promoted: intenção independente que concluiu conteúdo, revisão técnica,
+ *   asset/proveniência e aprovação editorial.
  *
- * Nada aqui, sozinho, torna uma URL indexável.
+ * "promoted" registra a decisão; a indexabilidade continua dependente da
+ * aprovação editorial válida e dos gates de sitemap/robots.
  */
 
 export type ProgrammaticRedirectDecision = {
