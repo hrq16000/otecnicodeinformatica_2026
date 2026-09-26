@@ -8,8 +8,8 @@ Princípio: não aumentar o índice com conteúdo fraco, duplicado ou datado.
 
 Os 18 artigos programáticos herdados foram classificados em duas filas:
 
-- **13 consolidações por 301**: a intenção já possui uma URL canônica mais forte, revisada e/ou indexável.
-- **5 em revisão**: podem sustentar intenção própria, mas o conteúdo atual não passa o padrão editorial.
+- **14 consolidações por 301**: a intenção já possui uma URL canônica mais forte, revisada e/ou indexável.
+- **4 em revisão**: podem sustentar intenção própria, mas o conteúdo atual não passa o padrão editorial.
 
 A fonte executável dessa decisão é `src/lib/blogProgrammaticGovernance.ts`.
 
@@ -30,6 +30,7 @@ A fonte executável dessa decisão é `src/lib/blogProgrammaticGovernance.ts`.
 | /blog/como-instalar-windows-11-do-zero-2026 | /blog/como-instalar-windows-11-do-zero |
 | /blog/como-trocar-pasta-termica | /blog/como-trocar-pasta-termica-notebook |
 | /blog/melhores-antivirus-gratuitos-2026 | /blog/como-escolher-um-bom-antivirus |
+| /blog/diferenca-windows-10-vs-11 | /decisoes/atualizar-para-windows-11 |
 
 ## Intenções mantidas em revisão
 
@@ -37,7 +38,6 @@ A fonte executável dessa decisão é `src/lib/blogProgrammaticGovernance.ts`.
 - `/blog/wifi-caindo-toda-hora`: reescrever com isolamento dispositivo × LAN × Wi-Fi × provedor, sem números universais de conexões/canais.
 - `/blog/como-fazer-backup-na-nuvem`: qualificar com versionamento, restauração testada, cópia independente e fontes primárias.
 - `/blog/como-recuperar-arquivos-apagados`: qualificar com prioridade absoluta a não sobrescrever a mídia e critérios de parada.
-- `/blog/diferenca-windows-10-vs-11`: atualizar para o contexto pós-fim de suporte do Windows 10 e separar comparação da decisão de upgrade.
 
 ## Correção estrutural feita nesta rodada
 
