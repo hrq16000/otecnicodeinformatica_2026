@@ -896,6 +896,23 @@ export const WAVE_11L_BATCH_1: EditorialWaveEntry[] = [
   },
 ];
 
+
+/** Onda 11M — fechamento controlado do estoque programático qualificado. */
+export const WAVE_11M_BATCH_1: EditorialWaveEntry[] = [
+  {
+    wave: "11A",
+    batch: "14",
+    url: "/blog/como-fazer-backup-na-nuvem",
+    slug: "como-fazer-backup-na-nuvem",
+    ownerId: "backup-nuvem-restauracao-verificavel",
+    cluster: "dados-backup",
+    role: "satelite",
+    publishedAt: "2026-09-26",
+    targetQueries: ["como fazer backup na nuvem", "backup nuvem arquivos", "sincronizacao e backup diferenca"],
+    doNotDuplicate: ["/blog/backup-como-proteger-seus-arquivos", "/blog/como-testar-restauracao-de-backup", "/decisoes/nuvem-ou-hd-externo"],
+  },
+];
+
 export const EDITORIAL_WAVES: EditorialWaveEntry[] = [
   ...WAVE_10C_BATCH_0,
   ...WAVE_10D_BATCH_1,
@@ -912,6 +929,7 @@ export const EDITORIAL_WAVES: EditorialWaveEntry[] = [
   ...WAVE_11J_BATCH_1,
   ...WAVE_11K_BATCH_1,
   ...WAVE_11L_BATCH_1,
+  ...WAVE_11M_BATCH_1,
 ];
 
 /** URLs monitoradas (ordem estável, sem duplicatas). */
