@@ -53,36 +53,60 @@ const renderPost = (d: PostDef): React.ReactNode => (
 const defs: PostDef[] = [
   {
     slug: "pc-nao-liga-o-que-fazer",
-    title: "PC Não Liga: O Que Fazer Passo a Passo (Guia 2026)",
-    excerpt: "PC não dá sinal de vida? Veja o passo a passo para identificar se é fonte, placa-mãe, memória ou apenas mau contato.",
+    title: "PC não liga: como separar energia, vídeo e inicialização com segurança",
+    excerpt:
+      "PC sem sinal, com ventoinha sem vídeo ou reiniciando? Separe energia, POST e imagem antes de abrir a máquina ou trocar peças.",
     category: "Problemas de Computador",
-    lead: "Quando o PC simplesmente não liga, o pânico bate — mas em 70% dos casos o problema é simples: fonte, conexão, ou memória RAM. Veja como diagnosticar.",
+    readTime: "10 min",
+    lead:
+      "“PC não liga” pode descrever situações diferentes: nenhuma energia, ventoinhas girando sem imagem, liga e desliga, ou sistema que não inicia. Antes de qualquer desmontagem, identifique em qual etapa o computador para. Essa separação evita trocar fonte, memória ou placa-mãe por tentativa.",
     sections: [
-      { h: "1. Verifique a alimentação", p: "Antes de qualquer coisa, confirme o básico: cabo de força conectado, régua/estabilizador ligado e tomada funcionando (teste com outro aparelho)." },
       {
-        h: "2. Identifique os sinais",
+        h: "1. Comece pelo que pode ser verificado sem abrir o gabinete",
         list: [
-          "<strong>Nada acontece</strong> (sem LED, sem som): fonte ou cabo de força",
-          "<strong>LED acende, ventoinhas giram, mas não dá vídeo</strong>: memória RAM ou placa de vídeo",
-          "<strong>Liga e desliga sozinho</strong>: superaquecimento ou fonte fraca",
-          "<strong>Beeps repetidos</strong>: erro de POST (consulte o manual da placa-mãe)",
+          "Teste a tomada com outro aparelho e, se houver régua ou filtro antigo, compare diretamente em uma tomada conhecida como funcional.",
+          "Confira o cabo de força e a chave traseira da fonte, quando o modelo tiver essa chave.",
+          "Desconecte periféricos USB e acessórios externos e tente uma única inicialização de comparação.",
+          "Observe LEDs, ventoinhas, bipes e se o monitor chega a indicar mudança de sinal; anote o comportamento em vez de repetir tentativas em sequência.",
         ],
       },
       {
-        h: "3. Teste a fonte",
-        p: "Desconecte o cabo ATX (24 pinos) da placa-mãe. Use um clipe para fazer ponte entre o fio verde e qualquer preto no conector. Se a ventoinha da fonte girar, a fonte tem vida — mas isso não garante que está entregando tensão correta.",
+        h: "2. “Sem energia” é diferente de “liga, mas não dá vídeo”",
+        list: [
+          "<strong>Nenhum LED e nenhuma ventoinha:</strong> o caminho de alimentação precisa ser verificado antes de memória ou sistema.",
+          "<strong>Ventoinhas giram, mas não há imagem:</strong> trate como falha de POST/vídeo; consulte <a href=\"/problemas/computador-nao-da-imagem\">computador liga mas não dá imagem</a>.",
+          "<strong>Liga e desliga sozinho:</strong> alimentação, proteção térmica e placa podem estar envolvidas; veja <a href=\"/problemas/computador-desliga-sozinho\">computador desliga sozinho</a>.",
+          "<strong>Chega ao logotipo e trava:</strong> o problema já saiu da etapa de energia e entra em boot/sistema.",
+        ],
       },
       {
-        h: "4. Reassente memória RAM e placa de vídeo",
-        p: "Tire da tomada, abra o gabinete, remova os pentes de RAM e a GPU. Limpe os contatos com borracha branca, recoloque firmemente até travar. Em muitos casos isso resolve.",
+        h: "3. Depois de queda de energia, upgrade ou manutenção recente",
+        p:
+          "Se a falha começou imediatamente após trocar memória, placa de vídeo, SSD ou mexer em cabos internos, essa mudança é a evidência mais importante. Desligue da tomada antes de qualquer inspeção e não continue desmontando se não souber identificar conectores e travas do seu hardware.",
       },
       {
-        h: "5. Limpe a CMOS",
-        p: "Remova a bateria da placa-mãe (CR2032) por 30 segundos e recoloque. Isso reseta a BIOS e pode resolver problemas após upgrade ou configuração errada.",
+        h: "4. O que não usar como teste rápido",
+        list: [
+          "Não abra a carcaça da fonte de alimentação: capacitores internos podem manter energia mesmo fora da tomada.",
+          "Não use ponte com clipe no conector ATX como diagnóstico de usuário. Fazer a ventoinha girar não comprova tensões corretas sob carga e o procedimento adiciona risco desnecessário.",
+          "Não limpe contatos com abrasivos e não remova bateria CMOS como receita universal. Reset de firmware apaga configurações e só faz sentido quando há hipótese concreta ligada à configuração.",
+          "Não substitua peças em sequência para “ver se pega”. O diagnóstico deve reduzir hipóteses antes da compra.",
+        ],
+      },
+      {
+        h: "5. Próximos caminhos de diagnóstico",
+        list: [
+          "Suspeita de fonte: <a href=\"/blog/como-testar-fonte-de-alimentacao-pc\">como testar a fonte do PC com critérios seguros</a>.",
+          "Sinais de placa-mãe: <a href=\"/blog/como-diagnosticar-placa-mae-defeituosa\">como diagnosticar placa-mãe defeituosa</a>.",
+          "Botão frontal ou ligação do gabinete: <a href=\"/blog/botao-power-nao-funciona-jump-start-placa-mae\">botão power não funciona</a>.",
+          "Se a causa ainda estiver aberta, veja <a href=\"/diagnostico-tecnico\">como funciona o diagnóstico técnico</a> antes de autorizar troca de peça.",
+        ],
       },
     ],
-    whenToCall: "Se após esses passos o PC continua sem ligar, provavelmente é placa-mãe ou fonte com defeito interno — casos que exigem multímetro, fonte de bancada e às vezes microsoldagem.",
+    whenToCall:
+      "Interrompa as tentativas e procure avaliação quando houver cheiro de queimado, estalo elétrico, líquido, componente visivelmente danificado, fonte que arma e desarma repetidamente ou quando o equipamento contiver dados importantes e o comportamento mudar a cada tentativa. Esses sinais pedem medição e inspeção controlada, não troca de peça por tentativa.",
   },
+
   {
     slug: "tela-azul-windows-como-resolver",
     title: "Tela Azul no Windows: Como Resolver de Verdade (BSOD 2026)",
@@ -147,28 +171,60 @@ const defs: PostDef[] = [
   },
   {
     slug: "wifi-caindo-toda-hora",
-    title: "Wi-Fi Caindo Toda Hora? 10 Soluções Que Funcionam em 2026",
-    excerpt: "Internet caindo sem motivo aparente? Veja como resolver problemas de Wi-Fi instável em roteadores TP-Link, Intelbras, Vivo e outros.",
+    title: "Wi-Fi caindo toda hora: como descobrir se é sinal, roteador ou provedor",
+    excerpt:
+      "Wi-Fi desconecta em um aparelho ou na casa inteira? Compare cabo, distância, banda e dispositivos antes de trocar roteador ou culpar o provedor.",
     category: "Redes",
-    lead: "Wi-Fi instável é um dos problemas mais frustrantes — e raramente é culpa da operadora. Veja o método que técnicos usam para diagnosticar e resolver.",
+    readTime: "10 min",
+    lead:
+      "Quando o Wi-Fi cai, primeiro descubra qual camada falhou: um único dispositivo, somente a rede sem fio, o roteador inteiro ou também a conexão cabeada. Essa comparação é mais útil do que trocar canal, repetidor ou roteador sem evidência.",
     sections: [
       {
-        h: "Diagnóstico em 30 segundos",
+        h: "1. Isole a queda em quatro perguntas",
         list: [
-          "Cai só no celular ou também no PC com cabo?",
-          "Cai em todos os cômodos ou só em um?",
-          "Cai sempre no mesmo horário?",
-          "Começou após algum evento (mudança, novo aparelho, atualização)?",
+          "<strong>Só um dispositivo cai?</strong> O problema pode estar no adaptador, driver, economia de energia ou configuração daquele aparelho.",
+          "<strong>Todos perdem Wi-Fi, mas um computador no cabo continua online?</strong> A investigação fica concentrada na rede sem fio e no roteador.",
+          "<strong>Cabo e Wi-Fi caem juntos?</strong> O problema pode estar no roteador, modem/ONT ou no link do provedor.",
+          "<strong>Só acontece longe do roteador?</strong> Trate primeiro como cobertura e obstáculos, não como velocidade contratada.",
         ],
       },
-      { h: "Solução 1: mude o canal Wi-Fi", p: "No painel do roteador (geralmente 192.168.0.1 ou 192.168.1.1), troque o canal de 'Automático' para 1, 6 ou 11 (em 2.4GHz). Apartamentos sofrem com interferência de vizinhos." },
-      { h: "Solução 2: separe as bandas 2.4 e 5GHz", p: "Crie SSIDs diferentes. Use 5GHz para celulares e notebooks próximos; 2.4GHz para dispositivos longe ou IoT." },
-      { h: "Solução 3: atualize o firmware do roteador", p: "Firmware antigo trava periodicamente. Verifique no site do fabricante." },
-      { h: "Solução 4: posicionamento", p: "Roteador no centro da casa, alto, longe de espelhos, micro-ondas, paredes de concreto e aquários." },
-      { h: "Solução 5: dispositivos demais", p: "Roteadores básicos travam com mais de 15 conexões simultâneas. IoT (lâmpadas, câmeras) somam rapidamente." },
+      {
+        h: "2. Faça comparações simples antes de alterar a configuração",
+        list: [
+          "Teste perto do roteador e depois no ponto onde a queda costuma acontecer, usando o mesmo dispositivo.",
+          "Compare, no mesmo horário, um equipamento no cabo e outro no Wi-Fi quando isso for possível.",
+          "Reinicie modem/roteador uma vez para comparação; reiniciar todo dia não é solução e pode esconder a recorrência.",
+          "Se a falha começou após atualização ou troca de roteador, registre essa mudança antes de restaurar configurações de fábrica.",
+        ],
+      },
+      {
+        h: "3. 2,4 GHz, 5 GHz e canal: não existe ajuste universal",
+        p:
+          "Bandas e canais têm comportamentos diferentes conforme distância, obstáculos, vizinhança e capacidade do equipamento. Forçar um canal fixo ou separar nomes de rede pode ajudar em alguns ambientes, mas também pode piorar outros. Antes de alterar, registre a configuração atual e compare o resultado no mesmo local e horário.",
+      },
+      {
+        h: "4. Posicionamento e interferência",
+        list: [
+          "Evite esconder o roteador dentro de armário fechado, atrás de grandes superfícies metálicas ou no chão quando houver alternativa.",
+          "Paredes densas, lajes e distância reduzem sinal; um repetidor não corrige automaticamente um ponto em que o próprio repetidor já recebe sinal ruim.",
+          "Número de dispositivos, capacidade de rádio e firmware variam muito entre modelos; não use um limite universal de conexões como diagnóstico.",
+          "Atualize firmware apenas pela interface ou página oficial do fabricante e confirme o modelo/revisão de hardware antes de aplicar arquivo.",
+        ],
+      },
+      {
+        h: "5. Use o sintoma para seguir a trilha correta",
+        list: [
+          "Quedas intermitentes: <a href=\"/problemas/wifi-instavel\">Wi-Fi instável — causas e testes seguros</a>.",
+          "Dúvida entre operadora e rede local: <a href=\"/blog/internet-lenta-provedor-ou-roteador\">internet lenta: provedor ou roteador?</a>.",
+          "Roteiro passo a passo: <a href=\"/ferramentas/roteiro-wifi-instavel\">ferramenta de diagnóstico de Wi-Fi instável</a>.",
+          "Cobertura, configuração e rede local: <a href=\"/servicos/redes-e-wifi\">serviço de redes e Wi-Fi</a>.",
+        ],
+      },
     ],
-    whenToCall: "Se o Wi-Fi continua caindo após essas otimizações, pode ser hora de migrar para roteador mesh ou reconfigurar a rede com VLANs. Posso ajudar remotamente em qualquer cidade do Brasil.",
+    whenToCall:
+      "Vale partir para avaliação quando cabo e Wi-Fi caem juntos sem explicação do provedor, o roteador reinicia sozinho, a falha aparece em vários dispositivos mesmo perto dele, ou quando a solução exige reposicionar pontos, trocar equipamento ou revisar cabeamento. O objetivo é medir qual camada falha antes de comprar repetidor, mesh ou roteador novo.",
   },
+
   {
     slug: "pc-muito-lento-como-acelerar",
     title: "PC Muito Lento: Como Acelerar em 30 Minutos (Sem Formatar)",
