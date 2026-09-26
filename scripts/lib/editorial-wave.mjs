@@ -915,7 +915,7 @@ export const EDITORIAL_WAVE = [
     pilar: "/diagnostico-tecnico", pilarLabel: "Diagnóstico técnico",
     apoio: "/blog/como-testar-fonte-de-alimentacao-pc", apoioLabel: "Como testar a fonte do PC",
     cover: "/blog/pc-nao-liga-o-que-fazer.svg",
-  },,
+  },
   {
     slug: "ssd-nao-aparece-no-instalador-do-windows", approvedAt: "2026-09-26",
     pilar: "/servicos/formatacao", pilarLabel: "Formatação e instalação do sistema",
