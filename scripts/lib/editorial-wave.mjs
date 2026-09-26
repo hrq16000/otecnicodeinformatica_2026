@@ -898,7 +898,6 @@ export const EDITORIAL_WAVE = [
     apoio: "/blog/como-configurar-firewall-pfsense", apoioLabel: "Firewall pfSense",
     cover: "/blog/como-configurar-firewall-ufw-linux.svg",
   },
-,
   {
     slug: "como-fazer-backup-na-nuvem", approvedAt: "2026-09-26",
     pilar: "/seguranca-dos-dados", pilarLabel: "Segurança dos dados",
