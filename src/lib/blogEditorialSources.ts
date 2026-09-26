@@ -906,31 +906,6 @@ export const EDITORIAL_SOURCES: Record<string, EditorialSource> = {
     ],
   },
 
-  "ms-windows-file-recovery-2026": {
-    id: "ms-windows-file-recovery-2026",
-    title: "Windows File Recovery",
-    publisher: "Microsoft Support",
-    url: "https://support.microsoft.com/pt-br/windows/experience/backup-recovery/windows-file-recovery",
-    accessedAt: "2026-09-26",
-    sourceType: "official",
-    supports: [
-      "Após exclusão, minimizar ou evitar o uso do computador reduz o risco de sobrescrever o espaço marcado como livre.",
-      "Na recuperação com Windows File Recovery, unidade de origem e destino precisam ser diferentes.",
-      "A ferramenta cobre armazenamento local e não substitui restauração por backup ou histórico de versões.",
-    ],
-  },
-  "ms-file-history-2026": {
-    id: "ms-file-history-2026",
-    title: "Fazer backup e restaurar com o Histórico de Arquivos",
-    publisher: "Microsoft Support",
-    url: "https://support.microsoft.com/pt-br/windows/experience/backup-recovery/backup-and-restore-with-file-history",
-    accessedAt: "2026-09-26",
-    sourceType: "official",
-    supports: [
-      "O Histórico de Arquivos mantém cópias de arquivos pessoais e permite restaurar versões anteriores.",
-      "Uma restauração pode ser feita para local diferente para evitar substituir a versão atual.",
-    ],
-  },
 
 };
 
@@ -982,7 +957,7 @@ export const ARTICLE_SOURCE_MANIFEST: Record<string, ArticleSourceManifest> = {
   },
   "como-recuperar-arquivos-apagados": {
     slug: "como-recuperar-arquivos-apagados",
-    sources: ["ms-windows-file-recovery-2026", "ms-file-history-2026"],
+    sources: ["ms-windows-file-recovery", "ms-file-history"],
     technicalReview: "reviewed",
     factChecked: true,
     factCheckedAt: "2026-09-26",
