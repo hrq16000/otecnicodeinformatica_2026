@@ -638,6 +638,14 @@ export const EDITORIAL_COVERS: Record<string, EditorialCover> = {
     width: 1200, height: 630,
   },
 
+  // ── Onda 11M — promoção final do estoque programático qualificado.
+  "como-fazer-backup-na-nuvem": {
+    src: "/blog/como-fazer-backup-na-nuvem.svg",
+    alt: "Ilustração editorial de notebook, nuvem e unidade externa representando cópias independentes e restauração",
+    width: 1200,
+    height: 630,
+  },
+
 };
 
 export function getEditorialCover(slug: string): EditorialCover | undefined {
