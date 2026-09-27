@@ -933,17 +933,6 @@ export const EDITORIAL_SOURCES: Record<string, EditorialSource> = {
       "Navegação, caminhos, arquivos, diretórios, comandos básicos e uso seguro do terminal por iniciantes.",
     ],
   },
-  "ubuntu-desktop-install-2026": {
-    id: "ubuntu-desktop-install-2026",
-    title: "Install Ubuntu Desktop",
-    publisher: "Ubuntu",
-    url: "https://ubuntu.com/desktop/docs/en/26.04/tutorial/install-ubuntu-desktop/",
-    accessedAt: "2026-09-26",
-    sourceType: "official",
-    supports: [
-      "Fluxo atual de criação de mídia, teste do hardware, instalação guiada e cuidados antes de alterar o disco.",
-    ],
-  },
   "ubuntu-package-management-2026": {
     id: "ubuntu-package-management-2026",
     title: "Install and manage packages",
@@ -1028,14 +1017,6 @@ export const ARTICLE_SOURCE_MANIFEST: Record<string, ArticleSourceManifest> = {
     factChecked: false,
     notes:
       "Onda Linux 1: fonte primária vinculada; ainda exige reescrita material, remoção de contagem/título promocional e revisão comando a comando antes de qualquer aprovação.",
-  },
-  "como-instalar-ubuntu-do-zero": {
-    slug: "como-instalar-ubuntu-do-zero",
-    sources: ["ubuntu-desktop-install-2026"],
-    technicalReview: "pending",
-    factChecked: false,
-    notes:
-      "Onda Linux 1: instalação oficial vinculada; ainda exige atualizar requisitos/versão, reforçar backup e particionamento e revisar procedimentos destrutivos antes de indexar.",
   },
   "como-gerenciar-pacotes-apt-dnf-linux": {
     slug: "como-gerenciar-pacotes-apt-dnf-linux",
