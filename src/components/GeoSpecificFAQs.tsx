@@ -25,7 +25,7 @@ export const bairroFAQs: Record<string, GeoFAQ[]> = {
     },
     {
       question: "Atendem empresas e escritórios no Centro?",
-      answer: "Com certeza. Grande parte dos nossos clientes são empresas e escritórios no Centro de Curitiba. Oferecemos desde atendimentos pontuais até contratos mensais de suporte."
+      answer: "Sim. O suporte pode atender computadores, rede e periféricos de empresas e escritórios no Centro, conforme o escopo do chamado. Atendimento recorrente é avaliado separadamente."
     },
     {
       question: "Vocês informam horário de chegada ao Centro?",
@@ -45,7 +45,7 @@ export const bairroFAQs: Record<string, GeoFAQ[]> = {
     },
     {
       question: "Fazem suporte para home office no Batel?",
-      answer: "Claro. Muitos profissionais do Batel trabalham em home office. Configuramos sua estação de trabalho completa: VPN, impressoras, scanner, backup em nuvem e otimização de desempenho."
+      answer: "Sim. Podemos configurar estação de home office, incluindo VPN, impressora, scanner, backup e ajustes de desempenho, conforme a necessidade e compatibilidade dos equipamentos."
     },
     {
       question: "Consertam MacBook e notebooks Apple no Batel?",
@@ -61,7 +61,7 @@ export const bairroFAQs: Record<string, GeoFAQ[]> = {
     },
     {
       question: "Fazem upgrade de SSD no Portão?",
-      answer: "Sim! O upgrade de HD para SSD é um dos serviços mais procurados no Portão. Instalamos SSDs de diversas capacidades e fazemos a migração completa do sistema."
+      answer: "Sim. O upgrade de HD para SSD pode ser indicado quando o diagnóstico confirma gargalo de armazenamento. A capacidade e a possibilidade de migração são avaliadas antes da execução."
     },
     {
       question: "Quanto tempo leva um atendimento de vírus no Portão?",
@@ -113,7 +113,7 @@ export const bairroFAQs: Record<string, GeoFAQ[]> = {
     },
     {
       question: "Fazem suporte para empresas de transporte no Afonso Pena?",
-      answer: "Sim. Várias empresas de transporte e logística da região contam com nosso suporte. Configuramos sistemas de rastreamento, redes e backup de dados."
+      answer: "Podemos prestar suporte a computadores, rede e backup de empresas da região. Sistemas específicos de rastreamento ou integrações de terceiros são avaliados antes de qualquer alteração."
     }
   ],
 
@@ -121,7 +121,7 @@ export const bairroFAQs: Record<string, GeoFAQ[]> = {
   "centro-araucaria": [
     {
       question: "Vocês atendem em Araucária mesmo?",
-      answer: "Sim! Araucária faz parte da nossa área de cobertura. Atendemos o Centro de Araucária e demais bairros da cidade com a mesma qualidade de Curitiba."
+      answer: "Sim. Araucária faz parte da área de atendimento. A modalidade, o horário e o escopo são confirmados após a triagem do problema e do endereço."
     },
     {
       question: "Como é definido o valor do atendimento em Araucária?",
@@ -161,7 +161,7 @@ export const bairroFAQs: Record<string, GeoFAQ[]> = {
     },
     {
       question: "Fazem formatação em Pinhais?",
-      answer: "Claro! Formatação de computadores e notebooks é um dos serviços mais realizados em Pinhais. Valor a partir de R$ 99,99 com Windows, drivers e programas."
+      answer: "Sim. A formatação pode ser realizada quando o diagnóstico indicar necessidade. Antes da reinstalação, confirmamos backup, compatibilidade de drivers e o escopo dos programas a instalar."
     }
   ]
 };
