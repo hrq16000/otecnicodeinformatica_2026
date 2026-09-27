@@ -966,10 +966,11 @@ export const EDITORIAL_SOURCES: Record<string, EditorialSource> = {
     title: "Install and manage packages",
     publisher: "Ubuntu Server documentation",
     url: "https://ubuntu.com/server/docs/how-to/software/package-management/",
-    accessedAt: "2026-09-26",
+    accessedAt: "2026-09-27",
     sourceType: "official",
     supports: [
-      "Uso de APT para atualizar índice, instalar, remover e atualizar pacotes em Ubuntu.",
+      "Uso de APT para atualizar índice, pesquisar, instalar, remover e atualizar pacotes em Ubuntu.",
+      "Diferença operacional entre upgrade e full-upgrade e necessidade de revisar mudanças propostas.",
       "APT é voltado ao uso interativo; apt-get é indicado pela documentação para scripts não interativos.",
     ],
   },
@@ -978,10 +979,11 @@ export const EDITORIAL_SOURCES: Record<string, EditorialSource> = {
     title: "DNF5 Package Management Utility",
     publisher: "DNF5 documentation",
     url: "https://dnf5.readthedocs.io/en/latest/dnf5.8.html",
-    accessedAt: "2026-09-26",
+    accessedAt: "2026-09-27",
     sourceType: "official",
     supports: [
-      "DNF5 gerencia pacotes em distribuições RPM e oferece comandos de instalação, remoção e atualização.",
+      "DNF5 gerencia pacotes em distribuições RPM e oferece busca, informações, instalação, remoção e atualização.",
+      "A transação é resolvida a partir dos repositórios configurados e precisa ser revisada antes de confirmação.",
     ],
   },
   "ubuntu-openssh-server-2026": {
@@ -1054,10 +1056,11 @@ export const ARTICLE_SOURCE_MANIFEST: Record<string, ArticleSourceManifest> = {
   "como-gerenciar-pacotes-apt-dnf-linux": {
     slug: "como-gerenciar-pacotes-apt-dnf-linux",
     sources: ["ubuntu-package-management-2026", "dnf5-command-reference-2026"],
-    technicalReview: "pending",
-    factChecked: false,
+    technicalReview: "reviewed",
+    factChecked: true,
+    factCheckedAt: "2026-09-27",
     notes:
-      "Onda Linux 1: referências oficiais de APT e DNF5 vinculadas; conteúdo ainda precisa distinguir gerações do DNF e revisar comandos destrutivos/automação.",
+      "Reescrita material concluída: separa APT de DNF/DNF5, remove repositórios fictícios e confirmações -y indiscriminadas, diferencia apt de apt-get em automação, trata full-upgrade/autoremove como transações a revisar e proíbe contornar assinatura. Permanece noindex até capa/proveniência e aprovação editorial.",
   },
   "como-configurar-ssh-seguro-linux": {
     slug: "como-configurar-ssh-seguro-linux",
