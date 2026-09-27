@@ -258,7 +258,6 @@ const OuroFinoSJP = lazyPagina(() => import("./pages/bairros/OuroFinoSJP"));
 const AgricolareSJP = lazyPagina(() => import("./pages/bairros/AgricolareSJP"));
 const CampoLargoSJP = lazyPagina(() => import("./pages/bairros/CampoLargoSJP"));
 const ItaliaSJP = lazyPagina(() => import("./pages/bairros/ItaliaSJP"));
-const BordoDoCampoSJP2 = lazyPagina(() => import("./pages/bairros/BordoDoCampoSJP2"));
 const IndependenciaSJP = lazyPagina(() => import("./pages/bairros/IndependenciaSJP"));
 const OswaldoCruzColombo = lazyPagina(() => import("./pages/bairros/OswaldoCruzColombo"));
 const ColareColombo = lazyPagina(() => import("./pages/bairros/ColareColombo"));
@@ -775,9 +774,7 @@ export const legacyRouteElements: Record<string, () => React.ReactElement> = {
   "/bairros/ouro-fino-sjp": () => <OuroFinoSJP />,
   "/bairros/agricola-sjp": () => <AgricolareSJP />,
   "/bairros/campo-largo-roseira-sjp": () => <CampoLargoSJP />,
-  "/bairros/italia-sjp": () => <ItaliaSJP />,
-  "/bairros/borda-campo-sjp": () => <BordoDoCampoSJP2 />,
-  "/bairros/independencia-sjp": () => <IndependenciaSJP />,
+  "/bairros/italia-sjp": () => <ItaliaSJP />,  "/bairros/independencia-sjp": () => <IndependenciaSJP />,
   "/bairros/osvaldo-cruz-colombo": () => <OswaldoCruzColombo />,
   "/bairros/sao-dimas-colombo": () => <ColareColombo />,
   "/bairros/campina-grande-colombo": () => <CampinaGrandeColombo />,
