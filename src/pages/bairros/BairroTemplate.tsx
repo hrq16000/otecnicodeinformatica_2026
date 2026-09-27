@@ -1,6 +1,7 @@
 import { SmartImage } from "@/components/SmartImage";
 import { useEffect } from "react";
 import { PageSEO } from "@/components/PageSEO";
+import { resolveLocal } from "@/lib/localIndexPolicy";
 import { SCHEMA_SLOTS, SLOT_PRIORITY, useJsonLdSlot } from "@/lib/jsonLdSlots";
 import { AnimatedSection } from "@/components/AnimatedSection";
 import { IMAGES } from "@/lib/images";
@@ -52,8 +53,6 @@ interface BairroData {
   conteudoExclusivo?: string;
   problemasComuns?: string[];
   dicasLocais?: string;
-  /** Quando true, o bairro é âncora indexável (conteúdo único ≥300 palavras) */
-  indexavel?: boolean;
 }
 
 interface BairroTemplateProps {
@@ -61,6 +60,10 @@ interface BairroTemplateProps {
 }
 
 export const BairroTemplate = ({ data }: BairroTemplateProps) => {
+  const path = `/bairros/${data.slug}`;
+  // Fonte única de indexabilidade/canonical: nunca confiar em flags locais
+  // herdados dos arquivos de bairro.
+  const indexDecision = resolveLocal(path);
   const whatsappMessage = `Olá! Preciso de um técnico de informática em ${data.nome}. Serviço: [DESCREVA O PROBLEMA]`;
   const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(whatsappMessage)}`;
 
@@ -70,7 +73,7 @@ export const BairroTemplate = ({ data }: BairroTemplateProps) => {
     if (metaDescription) {
       metaDescription.setAttribute("content", data.metaDescription);
     }
-    trackPageView(`/bairros/${data.slug}`, `Bairro ${data.nome}`);
+    trackPageView(path, `Bairro ${data.nome}`);
   }, [data]);
 
   const handleWhatsAppClick = () => {
@@ -146,7 +149,12 @@ export const BairroTemplate = ({ data }: BairroTemplateProps) => {
 
   return (
     <div className="min-h-screen bg-background">
-      <PageSEO noindex={!data.indexavel} title={data.metaTitle} description={data.metaDescription} path={`/bairros/${data.slug}`} breadcrumbs={[
+      <PageSEO
+        noindex={indexDecision.indexability !== "index"}
+        title={data.metaTitle}
+        description={data.metaDescription}
+        path={indexDecision.canonical}
+        breadcrumbs={[
         { name: "Início", path: "/" },
         { name: `Técnico em ${data.cidade}`, path: getCityLink() },
         { name: data.nome, path: `/bairros/${data.slug}` }
