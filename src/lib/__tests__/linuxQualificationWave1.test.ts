@@ -5,16 +5,16 @@ import { isEditorialApproved } from "@/lib/blogEditorialRegistry";
 
 const pendingSlugs = [
   "comandos-linux-essenciais-iniciantes",
-  "como-gerenciar-pacotes-apt-dnf-linux",
 ];
 
 const reviewedButNoindex = [
+  "como-gerenciar-pacotes-apt-dnf-linux",
   "como-configurar-ssh-seguro-linux",
   "como-usar-rsync-backup-linux",
 ];
 
 describe("onda Linux 1 — qualificação fail-closed", () => {
-  it("mantém os dois owners ainda não reescritos pendentes e noindex", () => {
+  it("mantém o owner ainda não reescrito pendente e noindex", () => {
     for (const slug of pendingSlugs) {
       expect(getArticleSources(slug).length).toBeGreaterThan(0);
       expect(getTechnicalReviewStatus(slug)).toBe("pending");

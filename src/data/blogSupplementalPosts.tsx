@@ -709,6 +709,184 @@ export const blogSupplementalPosts: Record<string, BlogPostContent> = {
       </>
     ),
   },
+
+  "como-gerenciar-pacotes-apt-dnf-linux": {
+    title: "APT e DNF no Linux: instalar, atualizar e remover pacotes com segurança",
+    excerpt:
+      "Aprenda a usar APT e DNF/DNF5 sem misturar distribuições: identificar a família do sistema, revisar mudanças, lidar com repositórios e automatizar sem apagar pacotes por engano.",
+    date: "2026-09-27",
+    readTime: "13 min",
+    category: "Linux",
+    content: (
+      <>
+        <p className="lead">
+          APT e DNF resolvem o mesmo tipo de problema em famílias diferentes de Linux: localizar pacotes em
+          repositórios, instalar dependências, aplicar atualizações e remover software. O erro comum é tratar os
+          comandos como equivalentes linha por linha ou copiar receitas de uma distribuição para outra. A sequência
+          segura começa identificando o sistema, entendendo a transação proposta e só então confirmando a mudança.
+        </p>
+
+        <h2>Resposta curta: descubra a distribuição antes de escolher o comando</h2>
+        <pre><code>{"cat /etc/os-release\ncommand -v apt\ncommand -v apt-get\ncommand -v dnf5\ncommand -v dnf"}</code></pre>
+        <p>
+          Em Debian/Ubuntu e derivados, APT é a família esperada. Em sistemas RPM modernos, DNF ou DNF5 pode ser a
+          interface disponível. Não force um gerenciador que não pertence à distribuição e não misture
+          repositórios de famílias diferentes.
+        </p>
+
+        <h2>1. APT: atualizar o índice não é a mesma coisa que atualizar pacotes</h2>
+        <p>
+          <code>apt update</code> atualiza os metadados dos repositórios configurados. Ele não instala as novas
+          versões por si só. Depois disso, use <code>apt list --upgradable</code> para revisar o que está disponível
+          antes de decidir pela atualização.
+        </p>
+        <pre><code>{"sudo apt update\napt list --upgradable"}</code></pre>
+        <p>
+          Para aplicar atualizações, <code>apt upgrade</code> é a operação interativa comum. Leia a lista de pacotes,
+          o espaço necessário e qualquer aviso antes de confirmar:
+        </p>
+        <pre><code>{"sudo apt upgrade"}</code></pre>
+
+        <h2>2. Instalar, consultar e remover com APT</h2>
+        <p>
+          Instalação e consulta devem usar o nome real do pacote oferecido pelos repositórios configurados.
+        </p>
+        <pre><code>{"apt search rsync\napt show rsync\nsudo apt install rsync"}</code></pre>
+        <p>
+          Para remover, diferencie o pacote da configuração local. <code>apt remove</code> remove o pacote mas pode
+          preservar arquivos de configuração; <code>apt purge</code> também remove configurações gerenciadas pelo
+          pacote. Antes de usar <code>autoremove</code>, leia a lista proposta:
+        </p>
+        <pre><code>{"sudo apt remove nome-do-pacote\nsudo apt purge nome-do-pacote\nsudo apt autoremove"}</code></pre>
+        <p>
+          Não transforme <code>autoremove</code> em rotina cega. Dependências marcadas como automáticas podem ser
+          importantes para uma aplicação que você ainda usa.
+        </p>
+
+        <h2>3. full-upgrade pode alterar mais do que upgrade</h2>
+        <p>
+          A documentação do APT diferencia operações que apenas atualizam pacotes daquelas que podem instalar ou
+          remover dependências para resolver a transação. Em máquina de produção, não trate
+          <code>full-upgrade</code> como substituto automático de <code>upgrade</code>. Revise cuidadosamente a
+          proposta antes de confirmar.
+        </p>
+        <pre><code>{"sudo apt full-upgrade"}</code></pre>
+        <p>
+          Se a proposta inclui remoção de componente crítico, biblioteca central ou serviço que você não esperava
+          alterar, pare e investigue a dependência antes de continuar.
+        </p>
+
+        <h2>4. apt e apt-get têm papéis diferentes em automação</h2>
+        <p>
+          A documentação do Ubuntu recomenda APT para uso interativo e <code>apt-get</code> para scripts
+          não interativos, porque a interface de script precisa de comportamento mais estável. Isso não significa
+          adicionar <code>-y</code> a toda operação: automação deve definir claramente o que pode mudar e registrar
+          falhas.
+        </p>
+        <pre><code>{"sudo apt-get update\nsudo apt-get install nome-do-pacote"}</code></pre>
+        <p>
+          Em servidor, prefira automação declarativa ou uma janela de manutenção a comandos que aceitam qualquer
+          alteração sem revisão.
+        </p>
+
+        <h2>5. DNF e DNF5: confira qual geração existe no sistema</h2>
+        <p>
+          A família Fedora/RHEL evoluiu de DNF para DNF5. Algumas distribuições expõem <code>dnf5</code>
+          explicitamente; outras mantêm <code>dnf</code> como comando principal. Descubra o binário real e consulte
+          sua documentação local:
+        </p>
+        <pre><code>{"command -v dnf5 || command -v dnf\ndnf5 --version 2>/dev/null || dnf --version\nman dnf5 2>/dev/null || man dnf"}</code></pre>
+        <p>
+          O restante deste guia usa <code>dnf5</code> como referência da geração atual. Se seu sistema oferece
+          apenas <code>dnf</code>, confirme a sintaxe correspondente antes de copiar comandos.
+        </p>
+
+        <h2>6. Operações básicas com DNF5</h2>
+        <pre><code>{"dnf5 search rsync\ndnf5 info rsync\nsudo dnf5 install rsync\nsudo dnf5 upgrade\nsudo dnf5 remove rsync"}</code></pre>
+        <p>
+          Como no APT, a parte importante não é decorar verbos: é revisar a transação antes de confirmar. Uma
+          remoção pode levar dependências junto; uma atualização pode trocar bibliotecas usadas por serviços em
+          execução.
+        </p>
+
+        <h2>7. Repositórios de terceiros precisam de origem e assinatura verificáveis</h2>
+        <p>
+          O gerenciador de pacotes confia nos repositórios configurados. Adicionar uma fonte de terceiros amplia a
+          cadeia de confiança do sistema. Use somente instruções oficiais do fornecedor ou projeto, confirme a
+          distribuição e versão suportadas e valide a chave/assinatura conforme a documentação do repositório.
+        </p>
+        <p>
+          Evite receitas genéricas que mandam baixar uma chave de domínio fictício, copiar um
+          <code>sources.list</code> pronto ou instalar um arquivo RPM aleatório. A URL e a chave precisam pertencer
+          ao fornecedor real que você decidiu confiar.
+        </p>
+
+        <h2>8. Erro de repositório não é motivo para desativar verificação de assinatura</h2>
+        <p>
+          Falha de assinatura, chave expirada, metadado inválido ou repositório incompatível deve interromper a
+          atualização até a origem ser entendida. Não contorne a verificação de assinatura para “fazer funcionar”.
+          Isso remove justamente a proteção que permite ao gerenciador verificar procedência e integridade.
+        </p>
+
+        <h2>9. Não apague arquivos de lock por reflexo</h2>
+        <p>
+          Se APT, dpkg ou DNF informa que outra transação está em andamento, primeiro descubra se existe um processo
+          legítimo trabalhando. Remover arquivos de lock enquanto o gerenciador ainda escreve no banco de pacotes
+          pode deixar o estado inconsistente.
+        </p>
+        <pre><code>{"ps aux | grep -E 'apt|dpkg|dnf' | grep -v grep"}</code></pre>
+        <p>
+          Em máquinas com atualização automática, aguarde o processo terminar ou investigue o serviço responsável.
+          Só faça recuperação de estado depois de confirmar que não existe uma transação ativa.
+        </p>
+
+        <h2>10. Atualização em produção exige plano de retorno</h2>
+        <p>
+          Antes de atualizar um servidor importante, saiba quais serviços dependem dos pacotes, como validar a
+          aplicação depois da mudança e como restaurar configuração ou dados. O histórico de transações pode ajudar
+          no diagnóstico, mas não trate “undo” como garantia de rollback completo: dados, migrações e formatos de
+          arquivo podem não voltar junto com o pacote.
+        </p>
+        <p>
+          Para sistemas críticos, snapshot ou backup testado antes da janela de manutenção é uma proteção mais
+          sólida do que confiar em reversão automática do gerenciador.
+        </p>
+
+        <h2>Quando parar antes de confirmar a transação</h2>
+        <p>
+          Pare se a operação propõe remover muitos pacotes, substituir componentes centrais, usar repositório que
+          você não reconhece, ignorar assinatura, alterar uma versão crítica fora da janela de manutenção ou se você
+          não sabe como validar o serviço depois. Em servidor remoto, também pare se não existe acesso de recuperação
+          caso rede ou SSH deixem de subir após a atualização.
+        </p>
+
+        <h2>Checklist prático</h2>
+        <ul>
+          <li>Distribuição e gerenciador foram identificados em <code>/etc/os-release</code>.</li>
+          <li>Repositórios configurados são conhecidos e compatíveis com a versão do sistema.</li>
+          <li>A lista de instalação, atualização ou remoção foi revisada antes da confirmação.</li>
+          <li>Operações destrutivas não usam confirmação automática sem necessidade.</li>
+          <li>Scripts usam a interface indicada pela documentação da distribuição.</li>
+          <li>Falhas de assinatura não são ignoradas.</li>
+          <li>Existe backup/snapshot e método de validação para mudanças críticas.</li>
+        </ul>
+
+        <h2>Fontes oficiais consultadas</h2>
+        <ul>
+          <li>
+            <a href="https://ubuntu.com/server/docs/how-to/software/package-management/" rel="nofollow noopener" target="_blank">
+              Ubuntu Server — Install and manage packages
+            </a>
+          </li>
+          <li>
+            <a href="https://dnf5.readthedocs.io/en/latest/dnf5.8.html" rel="nofollow noopener" target="_blank">
+              DNF5 — Package Management Utility
+            </a>
+          </li>
+        </ul>
+      </>
+    ),
+  },
 };
 
 export default blogSupplementalPosts;

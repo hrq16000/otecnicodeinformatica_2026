@@ -117,3 +117,31 @@ describe("guia suplementar de SSH seguro no Linux", () => {
     expect(EDITORIAL_HUB_SUMMARIES[slug]?.category).toBe("Linux");
   });
 });
+
+
+describe("guia suplementar de APT e DNF no Linux", () => {
+  const slug = "como-gerenciar-pacotes-apt-dnf-linux";
+
+  it("substitui a receita genérica por transações revisáveis", () => {
+    const post = blogSupplementalPosts[slug];
+    expect(post).toBeTruthy();
+    expect(post.title).toMatch(/APT e DNF/i);
+    expect(post.excerpt).toMatch(/distribuiç|transaç/i);
+    expect(post.readTime).toBe("13 min");
+    expect(post.content).toBeTruthy();
+  });
+
+  it("conclui revisão técnica mas continua fail-closed", () => {
+    expect(getTechnicalReviewStatus(slug)).toBe("reviewed");
+    expect(getArticleSources(slug).length).toBeGreaterThanOrEqual(2);
+    expect(isEditorialApproved(slug)).toBe(false);
+    expect(getEditorialCover(slug)).toBeUndefined();
+  });
+
+  it("separa pacotes de shell básico e instalação do sistema", () => {
+    const node = contentNode("/blog/" + slug);
+    expect(node?.intent).toBe("informational");
+    expect(node?.doNotDuplicate).toContain("/blog/comandos-linux-essenciais-iniciantes");
+    expect(EDITORIAL_HUB_SUMMARIES[slug]?.category).toBe("Linux");
+  });
+});
