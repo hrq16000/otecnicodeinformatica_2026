@@ -6238,116 +6238,113 @@ Ideal: 1000VA / 600W (para crescimento)`}</code></pre>
     ),
   },
   "como-trocar-tela-notebook-passo-a-passo": {
-    title: "Como Trocar a Tela do Notebook: Passo a Passo Profissional",
-    excerpt: "Guia técnico para identificar a tela correta, desmontar com segurança e instalar a nova sem danificar o flat cable.",
+    title: "Troca de tela de notebook: como identificar a peça e substituir com segurança",
+    excerpt: "Como confirmar se o defeito é da tela, identificar o painel compatível, desconectar a bateria, cuidar do flat cable e testar a nova tela sem improvisos.",
     date: "2026-04-20",
-    readTime: "10 min",
+    readTime: "11 min",
     category: "Procedimentos Técnicos",
     content: (
       <>
-        <p className="lead">Realizar <strong>trocar a tela do notebook</strong> exige procedimento técnico, ferramentas adequadas e atenção a detalhes que separam o trabalho amador do profissional. Neste guia, você vai aprender o passo a passo real usado em laboratórios de assistência técnica em Curitiba.</p>
+        <p className="lead">Trocar a tela do notebook não começa pela desmontagem: começa por confirmar se o defeito realmente está no painel e por identificar a peça correta. Tela preta, imagem piscando, listras, manchas, ausência de iluminação e imagem que some ao mover a tampa podem ter causas diferentes. Este guia mostra uma sequência segura para diagnosticar, identificar compatibilidade e substituir o painel sem transformar um defeito de tela em dano no cabo, na placa ou na carcaça.</p>
 
-        <h2>Por Que o Procedimento Importa</h2>
-        <p>Trabalhar em hardware sem método é a principal causa de dano permanente em equipamentos. Pequenos descuidos — descarga eletrostática, parafuso errado, conector mal encaixado — podem transformar um serviço simples em um problema irreversível. Por isso, todo técnico profissional segue um <strong>checklist documentado</strong> antes, durante e depois de cada intervenção.</p>
-        <p>O custo médio de um erro evitável em manutenção de hardware varia entre R$ 200 e R$ 2.000, dependendo da peça danificada. Já o custo de seguir o procedimento correto é apenas o tempo de leitura deste artigo.</p>
+        <aside className="rounded-lg border border-border bg-muted/40 p-4 not-prose my-6">
+          <h2 className="text-base font-semibold m-0">Resumo antes de abrir</h2>
+          <ul className="mt-2 mb-0 list-disc pl-5 text-sm">
+            <li>Confirme primeiro se o defeito é do painel, do cabo de vídeo ou de outra parte do notebook.</li>
+            <li>Não compre a tela apenas pelo nome comercial do notebook: confira o código do painel e suas especificações.</li>
+            <li>Desligue o equipamento, retire o carregador e desconecte a bateria interna antes de mexer no conector da tela.</li>
+            <li>Conectores eDP/LVDS não devem ser forçados nem conectados com alimentação presente.</li>
+            <li>Telas coladas, touch e conjuntos com vidro integrado exigem procedimento específico do modelo.</li>
+          </ul>
+        </aside>
 
-        <h2>Ferramentas e Materiais Necessários</h2>
-        <p>Antes de começar, separe todo o material. Interromper o procedimento no meio para buscar uma chave Phillips é como abrir uma cirurgia sem o instrumental.</p>
+        <h2>1. Antes de trocar: confirme se o defeito é realmente da tela</h2>
+        <p>Uma tela quebrada por impacto é fácil de reconhecer quando há trinca, vazamento de cristal, áreas pretas permanentes ou manchas que surgiram logo após a queda. Já uma tela que fica preta sem dano físico exige mais cuidado: o defeito pode estar no painel, no cabo de vídeo, na iluminação, no circuito de alimentação da tela ou até na placa-mãe.</p>
+        <p>Alguns testes ajudam a separar as hipóteses sem desmontar o equipamento. Se houver saída HDMI ou DisplayPort, conecte um monitor externo. Imagem normal no monitor externo indica que processador gráfico e sistema provavelmente estão funcionando, mas não prova sozinho que o painel está defeituoso. Se a imagem interna muda ao movimentar lentamente a tampa, o cabo que passa pela dobradiça entra como suspeita importante.</p>
+        <p>Quando a tela parece totalmente escura, iluminar de lado com uma lanterna pode revelar uma imagem muito fraca. Isso sugere falha de iluminação ou alimentação do painel, mas é apenas um indício. O diagnóstico final depende do modelo e da arquitetura da tela.</p>
+
+        <h2>2. Identifique a tela pelo painel, não apenas pelo modelo do notebook</h2>
+        <p>O mesmo modelo comercial de notebook pode ter saído de fábrica com telas diferentes ao longo da produção. Por isso, pesquisar somente pelo nome impresso na tampa não é suficiente para garantir compatibilidade.</p>
+        <p>O método mais confiável é conferir a etiqueta do painel instalado e cruzar as características principais:</p>
         <ul>
-          <li><strong>Pulseira antiestática</strong> (ESD) — protege componentes contra descarga eletrostática, principal causa silenciosa de morte de placas</li>
-          <li><strong>Chaves Phillips e Torx</strong> — kit de precisão com bits magnéticos, indispensável para notebooks modernos</li>
-          <li><strong>Pasta térmica de qualidade</strong> — Arctic MX-6, Noctua NT-H2 ou Thermal Grizzly Kryonaut (evite genéricas)</li>
-          <li><strong>Álcool isopropílico 99,9%</strong> — para limpeza de pasta térmica antiga e contatos oxidados</li>
-          <li><strong>Pincel antiestático</strong> e pano de microfibra — limpeza segura de placas e dissipadores</li>
-          <li><strong>Pinça de precisão</strong> — manuseio de conectores flat cable e parafusos pequenos</li>
-          <li><strong>Pendrive com Ventoy</strong> — para boot de utilitários (MemTest86, Hiren's BootCD, Hard Disk Sentinel)</li>
+          <li><strong>Tamanho físico:</strong> 13,3", 14", 15,6" e outras medidas não são intercambiáveis só porque cabem visualmente.</li>
+          <li><strong>Resolução:</strong> HD, Full HD ou outra resolução precisa ser compatível com o conjunto.</li>
+          <li><strong>Interface:</strong> notebooks mais antigos podem usar LVDS; os mais novos normalmente usam eDP. São padrões diferentes.</li>
+          <li><strong>Quantidade e posição dos pinos:</strong> o conector pode ter variações de pinagem e localização.</li>
+          <li><strong>Fixação:</strong> alguns painéis usam abas e parafusos; outros ficam presos por fitas adesivas de liberação controlada.</li>
+          <li><strong>Touch:</strong> em alguns equipamentos o vidro, o sensor de toque e o display formam um conjunto único.</li>
+          <li><strong>Taxa de atualização e recursos do painel:</strong> em notebooks gamer ou profissionais, uma tela fisicamente parecida pode não ser eletricamente equivalente.</li>
         </ul>
-        <p>Investir R$ 300-500 num kit profissional retorna em economia já no primeiro serviço evitando danos.</p>
+        <p>Quando houver dúvida entre dois códigos de painel, consulte a documentação de serviço do fabricante ou a ficha técnica do próprio painel. Adaptar conector, cortar suporte ou forçar uma tela "quase compatível" é sinal de que a peça não foi corretamente identificada.</p>
 
-        <h2>Preparação do Ambiente</h2>
-        <p>O local de trabalho influencia diretamente a qualidade do serviço. Profissionais sérios trabalham em ambientes controlados — não em cima do sofá da sala.</p>
+        <h2>3. Ferramentas realmente necessárias</h2>
+        <p>Para uma troca de tela convencional, o conjunto de ferramentas é pequeno. Não há motivo para incluir pasta térmica, testes de CPU ou utilitários de disco em um procedimento que trabalha no conjunto do display.</p>
         <ul>
-          <li><strong>Bancada plana e iluminada</strong> — preferencialmente com manta antiestática</li>
-          <li><strong>Recipientes para parafusos</strong> — separe por etapa da desmontagem (use bandejas magnéticas ou organizadores)</li>
-          <li><strong>Documentação aberta</strong> — manual de serviço do equipamento, vídeos do iFixit, fórum específico</li>
-          <li><strong>Câmera ou celular</strong> — fotografe cada etapa antes de desconectar (especialmente conectores flat)</li>
-          <li><strong>Sem animais ou crianças</strong> — peças pequenas se perdem em frações de segundo</li>
-          <li><strong>Temperatura ambiente</strong> — entre 18-25°C, sem umidade alta (problemas comuns em Curitiba no inverno)</li>
-        </ul>
-
-        <h2>Diagnóstico Inicial</h2>
-        <p>Nunca comece um procedimento sem entender o estado atual do equipamento. O diagnóstico determina se a intervenção planejada é realmente a correta — ou se você está prestes a substituir uma peça boa enquanto o problema real é outro.</p>
-        <p>Documente:</p>
-        <ul>
-          <li>Modelo exato do equipamento e número de série</li>
-          <li>Sintomas relatados pelo usuário e quando começaram</li>
-          <li>Última intervenção realizada (atualização, queda, contato com líquido)</li>
-          <li>Estado físico aparente — pontos de impacto, sinais de líquido, cheiro de queimado</li>
-          <li>Comportamento ao ligar — LEDs, ventoinhas, beeps, mensagens de POST</li>
-        </ul>
-        <p>Esse registro vale ouro: serve de proteção em caso de discussão sobre danos pré-existentes e ajuda a refinar o diagnóstico se o problema persistir.</p>
-
-        <h2>Procedimento Passo a Passo</h2>
-        <p>Com tudo preparado, execute o procedimento na ordem correta. <strong>Pular etapas é o caminho mais curto para o retrabalho.</strong></p>
-        <ol>
-          <li><strong>Backup completo dos dados</strong> — antes de qualquer intervenção em hardware com armazenamento, copie tudo. HD/SSD podem morrer durante o processo.</li>
-          <li><strong>Desligue completamente</strong> — não basta hibernar. Desconecte da tomada e remova a bateria (se removível). Aguarde 30 segundos para descarga residual.</li>
-          <li><strong>Aterre-se</strong> — toque numa parte metálica aterrada antes de manusear componentes. Use pulseira ESD em peças sensíveis (RAM, GPU, SSD NVMe).</li>
-          <li><strong>Desmontagem documentada</strong> — fotografe cada parafuso retirado e cada conector desconectado. Use bandejas separadas por etapa.</li>
-          <li><strong>Execução técnica</strong> — siga o procedimento específico para o tipo de intervenção. Não force nada. Se está duro, há algo errado.</li>
-          <li><strong>Limpeza durante a montagem</strong> — aproveite o equipamento aberto para limpeza completa de coolers, dissipadores e contatos.</li>
-          <li><strong>Remontagem na ordem inversa</strong> — sem pular conectores. Confira cada flat cable e cada parafuso antes de fechar.</li>
-          <li><strong>Teste antes de fechar definitivamente</strong> — ligue com a tampa solta e verifique se tudo funciona. Só então parafuse tudo.</li>
-        </ol>
-
-        <h2>Erros Comuns Que Devem Ser Evitados</h2>
-        <p>Mesmo técnicos experientes cometem erros recorrentes. Conhecê-los previamente reduz drasticamente as chances de problema.</p>
-        <ul>
-          <li><strong>Excesso de pasta térmica</strong> — uma quantidade do tamanho de um grão de arroz é suficiente. Excesso prejudica a dissipação.</li>
-          <li><strong>Apertar parafusos demais</strong> — especialmente em notebooks, pode quebrar o plástico ou empenar a placa</li>
-          <li><strong>Favaliar o valor conectores</strong> — flat cables têm orientação específica. Se está duro, está errado.</li>
-          <li><strong>Misturar parafusos</strong> — usar parafuso longo onde deveria ser curto pode perfurar componentes internos</li>
-          <li><strong>Trabalhar com o equipamento ligado</strong> — exceto em testes específicos, sempre desligue. Curtos acidentais são fatais.</li>
-          <li><strong>Pular o teste pós-procedimento</strong> — fechar tudo sem testar é receita para retrabalho</li>
+          <li>chave de precisão adequada aos parafusos do modelo;</li>
+          <li>espátula plástica ou palheta para soltar a moldura sem marcar o acabamento;</li>
+          <li>recipiente para organizar parafusos;</li>
+          <li>pinça plástica, quando necessária para fitas e travas;</li>
+          <li>proteção antiestática compatível com o ambiente de bancada;</li>
+          <li>documentação do modelo ou fotos da desmontagem para registrar a posição de cabos e parafusos.</li>
         </ul>
 
-        <h2>Validação e Testes Pós-Procedimento</h2>
-        <p>O serviço só está concluído quando passa nos testes. Profissionais entregam o equipamento com relatório de testes, não com base em "tá funcionando".</p>
+        <h2>4. Desligue e desconecte a bateria antes do cabo da tela</h2>
+        <p>Desligar o Windows e retirar o carregador não elimina toda a alimentação interna. Em notebooks com bateria interna, a placa continua energizada enquanto a bateria estiver conectada.</p>
+        <p>Antes de desconectar ou reconectar o flat cable da tela, abra o equipamento conforme o procedimento do fabricante e desconecte a bateria interna. Isso reduz o risco de curto no conector e de dano no circuito de alimentação do display. Em modelos nos quais a bateria não pode ser desconectada sem desmontagem extensa, o procedimento exige ainda mais atenção e não deve ser improvisado.</p>
+        <p>Se o equipamento estiver na garantia, verifique as condições do fabricante antes de abrir. Alguns modelos têm lacres, procedimentos próprios ou programas de reparo autorizados.</p>
+
+        <h2>5. Remova a moldura sem torcer o painel</h2>
+        <p>Em telas tradicionais, a moldura frontal pode ser presa por encaixes, parafusos ocultos ou ambos. Comece pelas áreas indicadas no manual e use ferramenta plástica. Forçar um ponto preso pode quebrar a moldura ou transmitir pressão ao painel.</p>
+        <p>Nos modelos com tela colada, a situação muda. Fitas adesivas podem exigir tração em direção específica; puxar para cima ou cortar sem controle pode danificar cabo, tampa ou o próprio painel. Em telas touch e conjuntos com vidro integrado, muitas vezes a substituição é do módulo completo, não apenas do LCD.</p>
+        <p>Se a remoção exigir calor, solvente, corte de adesivo próximo a cabos ou separação de vidro, interrompa o procedimento genérico e procure a documentação específica daquele equipamento.</p>
+
+        <h2>6. Fotografe o roteamento do cabo e a posição do conector</h2>
+        <p>Antes de retirar a tela antiga, registre como o cabo passa pela tampa e como chega ao conector. O cabo pode ter folga calculada para o movimento da dobradiça; alterar esse caminho pode fazer a imagem falhar depois de algumas aberturas e fechamentos.</p>
+        <p>O conector do painel normalmente possui fita ou trava de retenção. Remova a fixação sem puxar pelos fios. O cabo deve sair alinhado com o conector, sem torção. Se houver resistência anormal, pare e confirme o tipo de trava.</p>
+
+        <h2>7. Compare a tela nova com a antiga antes de energizar</h2>
+        <p>Coloque os dois painéis lado a lado e confira etiqueta, posição do conector, pontos de fixação, espessura e dimensões. Uma diferença pequena pode ser suficiente para impedir montagem correta ou causar pressão na tampa.</p>
+        <p>Não tente "ver se funciona" conectando uma peça incompatível. O teste só deve ser feito quando a compatibilidade elétrica e mecânica estiver confirmada.</p>
+
+        <h2>8. Conecte, fixe e faça um teste controlado</h2>
+        <p>Com a bateria ainda desconectada, encaixe o cabo da tela de forma reta e recoloque a trava ou fita de retenção. Posicione o painel sem deixar parafuso, ferramenta ou parte metálica solta perto da placa.</p>
+        <p>Para o teste, siga a sequência de remontagem mínima prevista pelo fabricante: reconecte a bateria, ligue o equipamento e observe imagem, brilho e estabilidade. Não mova o conector da tela com o notebook energizado.</p>
+        <p>Se a imagem estiver normal, desligue novamente antes de finalizar a moldura e os parafusos. Se não houver imagem, não force novo encaixe com o equipamento ligado; volte à etapa de diagnóstico.</p>
+
+        <h2>9. O que testar antes de fechar definitivamente</h2>
         <ul>
-          <li><strong>Teste de boot completo</strong> — entrar no SO sem erros, sem mensagens de POST anormais</li>
-          <li><strong>Stress test de CPU</strong> — Cinebench R23 ou Prime95 por 30 minutos, monitorando temperatura</li>
-          <li><strong>Stress test de GPU</strong> — FurMark ou 3DMark por 20 minutos (em GPUs dedicadas)</li>
-          <li><strong>Teste de memória RAM</strong> — MemTest86 por pelo menos um ciclo completo</li>
-          <li><strong>Teste de disco</strong> — CrystalDiskInfo (saúde) e CrystalDiskMark (performance)</li>
-          <li><strong>Teste de carga prolongada</strong> — uso real por algumas horas antes de devolver ao cliente</li>
+          <li>imagem desde a tela de inicialização, não apenas dentro do Windows;</li>
+          <li>controle de brilho;</li>
+          <li>ausência de linhas, manchas novas ou cintilação;</li>
+          <li>movimento completo da tampa sem perda de imagem;</li>
+          <li>webcam e microfone, quando o cabo passa pelo mesmo conjunto;</li>
+          <li>sensor de fechamento da tampa e suspensão, quando aplicável;</li>
+          <li>touch, se o modelo possuir tela sensível ao toque.</li>
+        </ul>
+        <p>Teste de CPU, GPU, memória ou disco só faz sentido se houver outro sintoma independente. Eles não fazem parte da validação normal de uma simples troca de painel.</p>
+
+        <h2>10. Erros comuns que causam retrabalho</h2>
+        <ul>
+          <li><strong>Comprar pela descrição do anúncio:</strong> "tela para notebook X" não substitui a conferência do código e da interface.</li>
+          <li><strong>Mexer no flat cable com a bateria conectada:</strong> aumenta o risco de dano elétrico.</li>
+          <li><strong>Puxar o cabo pelos fios:</strong> pode romper condutores internamente mesmo sem dano visível.</li>
+          <li><strong>Usar parafuso errado:</strong> parafuso longo em ponto curto pode marcar a tampa ou atingir componentes.</li>
+          <li><strong>Pressionar o centro da tela:</strong> painéis são sensíveis a pressão pontual e torção.</li>
+          <li><strong>Ignorar dobradiça quebrada:</strong> uma dobradiça ou tampa danificada pode voltar a trincar a tela nova.</li>
+          <li><strong>Reutilizar adesivo sem verificar retenção:</strong> em modelos colados, a fixação faz parte da segurança mecânica do conjunto.</li>
         </ul>
 
-        <h2>Quando Chamar um Profissional</h2>
-        <p>Há situações em que tentar resolver sozinho não compensa. O custo do erro é maior que o do serviço técnico.</p>
-        <ul>
-          <li>Equipamento ainda em garantia — abrir cancela a cobertura do fabricante</li>
-          <li>Problema envolve solda em placa-mãe (BGA, SMD, microsoldagem)</li>
-          <li>Recuperação de dados de HD com falha mecânica (cabeça travada, motor queimado)</li>
-          <li>Contato com líquido — cada minuto sem limpeza profissional causa mais corrosão</li>
-          <li>Falta de ferramenta específica (estação de retrabalho, microscópio, oscilador)</li>
-          <li>Quando o equipamento tem valor sentimental ou contém dados insubstituíveis</li>
-        </ul>
+        <h2>11. Quando a troca de tela não deve ser feita em casa</h2>
+        <p>Há cenários em que a substituição deixa de ser um procedimento simples. Pare antes de avançar se houver tampa rachada, dobradiça arrancando a carcaça, cabo queimado, contato com líquido, conector danificado na placa-mãe, conjunto touch colado ou necessidade de desmontar praticamente todo o equipamento para chegar à bateria e ao display.</p>
+        <p>Também não vale trocar a tela por tentativa quando o defeito não está confirmado. Se o notebook não produz imagem nem em monitor externo, apresenta artefatos em ambas as telas ou falha durante o POST, a investigação precisa incluir placa, memória e circuito de vídeo.</p>
 
-        <h2>Garantia e Documentação do Serviço</h2>
-        <p>Todo serviço técnico profissional vem com <strong>garantia escrita</strong> e documentação. Se o serviço não tem nota fiscal, ordem de serviço e prazo de garantia, não é serviço profissional.</p>
-        <p>Em Curitiba, a {BRAND_NAME} emite ordem de serviço completa com:</p>
-        <ul>
-          <li>Diagnóstico inicial documentado</li>
-          <li>Lista de peças trocadas (com nota fiscal das peças)</li>
-          <li>Procedimentos realizados</li>
-          <li>Testes executados e resultados</li>
-          <li>Garantia mínima de 90 dias para serviços e peças</li>
-        </ul>
+        <h2>12. Vale a pena trocar a tela do notebook?</h2>
+        <p>A decisão depende do preço do painel compatível, do estado da tampa e das dobradiças, da idade do equipamento e de outros defeitos presentes. Em alguns modelos o painel é uma peça separada e o reparo é direto; em outros, display, vidro e tampa formam um conjunto caro.</p>
+        <p>Compare o custo total do reparo com o valor de um equipamento equivalente e com a vida útil restante. O critério é parecido com o de <Link to="/decisoes/consertar-ou-substituir" className="text-accent">consertar ou substituir o equipamento</Link>: não existe percentual universal que sirva para todos os notebooks.</p>
 
-        <h2>Fazendo Trocar a Tela do Notebook em Curitiba</h2>
-        <p>Se você prefere deixar o serviço com quem faz isso todos os dias, a <strong>{BRAND_NAME}</strong> realiza trocar a tela do notebook em Curitiba e região metropolitana. Atendimento a domicílio, laboratório próprio, garantia escrita e valor transparente antes da execução.</p>
-        <p>Atendemos Curitiba, São José dos Pinhais, Pinhais, Colombo, Almirante Tamandaré, Araucária, Campo Largo, Campo Magro, Piraquara, Quatro Barras e Fazenda Rio Grande. Diagnóstico via WhatsApp em até 5 minutos.</p>
-
+        <h2>Troca de tela e assistência técnica</h2>
+        <p>Se a identificação do painel, a desmontagem da tampa ou o flat cable não estiverem claros, o caminho mais seguro é fazer o diagnóstico antes de comprar a peça. A página de <Link to="/servicos/manutencao-de-notebook" className="text-accent">manutenção de notebook</Link> explica o escopo técnico geral; para atendimento local, veja <Link to="/servicos/conserto-notebook/curitiba" className="text-accent">conserto de notebook em Curitiba</Link>.</p>
+        <p>O ponto principal é simples: uma troca de tela bem feita depende mais de identificar corretamente o defeito e a compatibilidade do painel do que de velocidade na desmontagem.</p>
       </>
     ),
   },
