@@ -219,11 +219,9 @@ const TimbotuvaCL = lazyPagina(() => import("./pages/bairros/TimbotuvaCL"));
 const JardimPlanaltoIICL = lazyPagina(() => import("./pages/bairros/JardimPlanaltoIICL"));
 const JardimPedroDemeterco = lazyPagina(() => import("./pages/bairros/JardimPedroDemeterco"));
 const JardimKarlaPinhais = lazyPagina(() => import("./pages/bairros/JardimKarlaPinhais"));
-const JardimClaudiaIIPinhais = lazyPagina(() => import("./pages/bairros/JardimClaudiaIIPinhais"));
 const JardimWissingerPinhais = lazyPagina(() => import("./pages/bairros/JardimWissingerPinhais"));
 const VilaAmeliaPinhais = lazyPagina(() => import("./pages/bairros/VilaAmeliaPinhais"));
 const JardimEsplanadaPinhais = lazyPagina(() => import("./pages/bairros/JardimEsplanadaPinhais"));
-const VilaMariaAntonietaPinhais = lazyPagina(() => import("./pages/bairros/VilaMariaAntonietaPinhais"));
 const JardimDonaRosaPinhais = lazyPagina(() => import("./pages/bairros/JardimDonaRosaPinhais"));
 const ParqueNascentesPinhais = lazyPagina(() => import("./pages/bairros/ParqueNascentesPinhais"));
 const JardimTropicalPinhais = lazyPagina(() => import("./pages/bairros/JardimTropicalPinhais"));
@@ -718,13 +716,9 @@ export const legacyRouteElements: Record<string, () => React.ReactElement> = {
   "/bairros/timbotuva-cl": () => <TimbotuvaCL />,
   "/bairros/jardim-planalto-ii-cl": () => <JardimPlanaltoIICL />,
   "/bairros/jardim-pedro-demeterco": () => <JardimPedroDemeterco />,
-  "/bairros/jardim-karla-pinhais": () => <JardimKarlaPinhais />,
-  "/bairros/jardim-claudia-ii-pinhais": () => <JardimClaudiaIIPinhais />,
-  "/bairros/jardim-wissinger-pinhais": () => <JardimWissingerPinhais />,
+  "/bairros/jardim-karla-pinhais": () => <JardimKarlaPinhais />,  "/bairros/jardim-wissinger-pinhais": () => <JardimWissingerPinhais />,
   "/bairros/vila-amelia-pinhais": () => <VilaAmeliaPinhais />,
-  "/bairros/jardim-esplanada-pinhais": () => <JardimEsplanadaPinhais />,
-  "/bairros/vila-maria-antonieta-pinhais": () => <VilaMariaAntonietaPinhais />,
-  "/bairros/jardim-dona-rosa-pinhais": () => <JardimDonaRosaPinhais />,
+  "/bairros/jardim-esplanada-pinhais": () => <JardimEsplanadaPinhais />,  "/bairros/jardim-dona-rosa-pinhais": () => <JardimDonaRosaPinhais />,
   "/bairros/parque-nascentes-pinhais": () => <ParqueNascentesPinhais />,
   "/bairros/jardim-tropical-pinhais": () => <JardimTropicalPinhais />,
   "/bairros/centro-campo-largo": () => <CampoLargoCentro />,
