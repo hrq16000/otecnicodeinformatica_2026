@@ -953,6 +953,14 @@ export const EDITORIAL_WAVE = [
     cover: "/blog/como-instalar-ubuntu-do-zero.svg",
   },
 
+  // ── Onda 11U — comandos Linux após reescrita, fact-check e capa própria.
+  {
+    slug: "comandos-linux-essenciais-iniciantes", approvedAt: "2026-09-27",
+    pilar: "/blog/informatica-basica", pilarLabel: "Informática básica",
+    apoio: "/blog/como-gerenciar-pacotes-apt-dnf-linux", apoioLabel: "APT e DNF no Linux",
+    cover: "/blog/como-instalar-ubuntu-do-zero.svg",
+  },
+
 ];
 
 

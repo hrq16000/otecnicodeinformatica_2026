@@ -705,6 +705,15 @@ export const EDITORIAL_COVERS: Record<string, EditorialCover> = {
     height: 630,
   },
 
+  // ── Onda 11U — comandos Linux: promoção final da coorte Linux 1.
+  // Reuso controlado de arte editorial própria já versionada no acervo.
+  "comandos-linux-essenciais-iniciantes": {
+    src: "/blog/como-instalar-ubuntu-do-zero.svg",
+    alt: "Ilustração editorial de ambiente Linux usada para representar aprendizagem segura do terminal e comandos básicos",
+    width: 1200,
+    height: 630,
+  },
+
 };
 
 export function getEditorialCover(slug: string): EditorialCover | undefined {

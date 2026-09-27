@@ -1053,7 +1053,7 @@ export const ARTICLE_SOURCE_MANIFEST: Record<string, ArticleSourceManifest> = {
     factChecked: true,
     factCheckedAt: "2026-09-27",
     notes:
-      "Reescrita material concluída: remove contagem promocional e receitas destrutivas sem contexto; organiza navegação, arquivos, busca, pipes, permissões, processos e rede com laboratório seguro, man/--help e critérios de parada. rm -rf, kill -9, chmod 777 e sudo deixam de ser recomendações padrão. Permanece noindex até capa/proveniência e aprovação editorial.",
+      "Reescrita material concluída: remove contagem promocional e receitas destrutivas sem contexto; organiza navegação, arquivos, busca, pipes, permissões, processos e rede com laboratório seguro, man/--help e critérios de parada. rm -rf, kill -9, chmod 777 e sudo deixam de ser recomendações padrão. Promovido em 2026-09-27 após capa própria/proveniência, ownership e gates editoriais.",
   },
   "como-gerenciar-pacotes-apt-dnf-linux": {
     slug: "como-gerenciar-pacotes-apt-dnf-linux",
