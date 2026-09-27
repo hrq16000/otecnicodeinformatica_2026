@@ -135,17 +135,19 @@ describe("guia suplementar de APT e DNF no Linux", () => {
     expect(post.content).toBeTruthy();
   });
 
-  it("conclui revisão técnica mas continua fail-closed", () => {
+  it("só entra no índice após revisão, fontes e capa própria", () => {
     expect(getTechnicalReviewStatus(slug)).toBe("reviewed");
     expect(getArticleSources(slug).length).toBeGreaterThanOrEqual(2);
-    expect(isEditorialApproved(slug)).toBe(false);
-    expect(getEditorialCover(slug)).toBeUndefined();
+    expect(isEditorialApproved(slug)).toBe(true);
+    expect(getEditorialCover(slug)?.src).toBe("/blog/como-instalar-ubuntu-do-zero.svg");
   });
 
   it("separa pacotes de shell básico e instalação do sistema", () => {
     const node = contentNode("/blog/" + slug);
+    const entry = findEditorialEntry("/blog/" + slug);
     expect(node?.intent).toBe("informational");
     expect(node?.doNotDuplicate).toContain("/blog/comandos-linux-essenciais-iniciantes");
+    expect(entry?.ownerId).toBe("linux-pacotes-apt-dnf");
     expect(EDITORIAL_HUB_SUMMARIES[slug]?.category).toBe("Linux");
   });
 });

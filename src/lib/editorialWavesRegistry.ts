@@ -1053,6 +1053,30 @@ export const WAVE_11S_BATCH_1: EditorialWaveEntry[] = [
   },
 ];
 
+
+/** Onda 11T — promoção controlada do owner APT/DNF. */
+export const WAVE_11T_BATCH_1: EditorialWaveEntry[] = [
+  {
+    wave: "11A",
+    batch: "21",
+    url: "/blog/como-gerenciar-pacotes-apt-dnf-linux",
+    slug: "como-gerenciar-pacotes-apt-dnf-linux",
+    ownerId: "linux-pacotes-apt-dnf",
+    cluster: "linux-fundamentos",
+    role: "satelite",
+    publishedAt: "2026-09-27",
+    targetQueries: [
+      "apt linux comandos",
+      "dnf5 comandos",
+      "instalar atualizar remover pacotes linux",
+    ],
+    doNotDuplicate: [
+      "/blog/comandos-linux-essenciais-iniciantes",
+      "/blog/como-instalar-ubuntu-do-zero",
+    ],
+  },
+];
+
 export const EDITORIAL_WAVES: EditorialWaveEntry[] = [
   ...WAVE_10C_BATCH_0,
   ...WAVE_10D_BATCH_1,
@@ -1076,6 +1100,7 @@ export const EDITORIAL_WAVES: EditorialWaveEntry[] = [
   ...WAVE_11Q_BATCH_1,
   ...WAVE_11R_BATCH_1,
   ...WAVE_11S_BATCH_1,
+  ...WAVE_11T_BATCH_1,
 ];
 
 /** URLs monitoradas (ordem estável, sem duplicatas). */

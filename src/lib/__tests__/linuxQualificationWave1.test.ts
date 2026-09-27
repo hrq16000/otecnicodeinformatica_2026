@@ -5,7 +5,6 @@ import { isEditorialApproved } from "@/lib/blogEditorialRegistry";
 
 const reviewedButNoindex = [
   "comandos-linux-essenciais-iniciantes",
-  "como-gerenciar-pacotes-apt-dnf-linux",
 ];
 
 describe("onda Linux 1 — qualificação fail-closed", () => {

@@ -1558,6 +1558,24 @@ const WAVE_11S: EditorialApproval[] = [
   },
 ];
 
+
+const WAVE_11T: EditorialApproval[] = [
+  {
+    slug: "como-gerenciar-pacotes-apt-dnf-linux",
+    status: "approved",
+    authorType: "organization",
+    authorId: INSTITUTIONAL_AUTHOR.id,
+    reviewedAt: "2026-09-27",
+    approvedAt: "2026-09-27",
+    imageOrigin: "owned",
+    imageLicense: "Todos os direitos reservados",
+    imageAttribution:
+      "Arte editorial original: O Técnico de Informática — https://otecnicodeinformatica.com.br/blog/como-instalar-ubuntu-do-zero",
+    notes:
+      "Owner específico de gerenciamento de pacotes revisado e fact-checked em 2026-09-27. Capa reutiliza arte editorial própria já versionada; conteúdo separa APT de DNF/DNF5, exige identificação da distribuição, revisão da transação e não contorna assinatura.",
+  },
+];
+
 export const APPROVED_EDITORIAL_CONTENT = new Map<string, EditorialApproval>([
 
   ...FIRST_WAVE_SLUGS.map((slug) => [
@@ -1625,6 +1643,7 @@ export const APPROVED_EDITORIAL_CONTENT = new Map<string, EditorialApproval>([
   ...WAVE_11Q.map((a) => [a.slug, a] as [string, EditorialApproval]),
   ...WAVE_11R.map((a) => [a.slug, a] as [string, EditorialApproval]),
   ...WAVE_11S.map((a) => [a.slug, a] as [string, EditorialApproval]),
+  ...WAVE_11T.map((a) => [a.slug, a] as [string, EditorialApproval]),
 
 ]);
 

@@ -1062,7 +1062,7 @@ export const ARTICLE_SOURCE_MANIFEST: Record<string, ArticleSourceManifest> = {
     factChecked: true,
     factCheckedAt: "2026-09-27",
     notes:
-      "Reescrita material concluída: separa APT de DNF/DNF5, remove repositórios fictícios e confirmações -y indiscriminadas, diferencia apt de apt-get em automação, trata full-upgrade/autoremove como transações a revisar e proíbe contornar assinatura. Permanece noindex até capa/proveniência e aprovação editorial.",
+      "Reescrita material concluída: separa APT de DNF/DNF5, remove repositórios fictícios e confirmações -y indiscriminadas, diferencia apt de apt-get em automação, trata full-upgrade/autoremove como transações a revisar e proíbe contornar assinatura. Promovido em 2026-09-27 após capa própria/proveniência, ownership e gates editoriais.",
   },
   "como-configurar-ssh-seguro-linux": {
     slug: "como-configurar-ssh-seguro-linux",
