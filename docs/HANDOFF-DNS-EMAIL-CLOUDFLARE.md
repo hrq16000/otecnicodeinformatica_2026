@@ -1,4 +1,4 @@
-# Handoff Operacional — DNS, E-mail e Cloudflare · tecnico.curitiba.br
+# Handoff Operacional — DNS, E-mail e Cloudflare · [LEGACY_DOMAIN_REMOVED]
 
 > Documento único de encerramento e handoff. Descreve tudo o que precisa ser
 > executado **manualmente** fora do ambiente do projeto (HostEG/cPanel, GDNS,
@@ -39,10 +39,10 @@ Validação técnica desta rodada (somente leitura, sem publicação):
 
 ## 2. Estado atual da produção
 
-- Site online: `https://tecnico.curitiba.br/` → HTTP 200.
+- Site online: `https://[LEGACY_DOMAIN_REMOVED]/` → HTTP 200.
 - `/robots.txt` → HTTP 200. `/sitemap-index.xml` → HTTP 200.
-- Canonical na home: `<link rel="canonical" href="https://tecnico.curitiba.br/" />`.
-- Domínio antigo (`tecnicocuritiba.com.br`) ausente do canonical/sitemap.
+- Canonical na home: `<link rel="canonical" href="https://[LEGACY_DOMAIN_REMOVED]/" />`.
+- Domínio antigo (`[LEGACY_DOMAIN_REMOVED]`) ausente do canonical/sitemap.
 - Servido atrás do Cloudflare **interno do Lovable** (`server: cloudflare`, `cf-ray`), fora do controle do proprietário.
 - Nenhuma migration pendente. CSP enforcement ausente.
 
@@ -69,10 +69,10 @@ DNS autoritativo atual (NS, TTL 86400):
 
 | Tipo | Nome | Valor atual | TTL |
 |---|---|---|---|
-| A | apex `tecnico.curitiba.br` | `185.158.133.1` (origem Lovable/web) | 14400 |
+| A | apex `[LEGACY_DOMAIN_REMOVED]` | `185.158.133.1` (origem Lovable/web) | 14400 |
 | A | `www` | `185.158.133.1` | 14400 |
-| MX | apex | `0 tecnico.curitiba.br` ⚠️ aponta para o IP web | 14400 |
-| CNAME | `mail` | `tecnico.curitiba.br` → resolve `185.158.133.1` ⚠️ | 14400 |
+| MX | apex | `0 [LEGACY_DOMAIN_REMOVED]` ⚠️ aponta para o IP web | 14400 |
+| CNAME | `mail` | `[LEGACY_DOMAIN_REMOVED]` → resolve `185.158.133.1` ⚠️ | 14400 |
 | A | `webmail` | `181.214.95.10` (HostEG) | 14400 |
 | A | `cpanel` | `181.214.95.10` (HostEG) | 14400 |
 | TXT (SPF) | apex | `v=spf1 +a +mx +ip4:181.214.95.10 include:spf.enterprise.gdns.com.br ~all` | 14400 |
@@ -86,7 +86,7 @@ DNS autoritativo atual (NS, TTL 86400):
 
 ## 4. Diagnóstico do e-mail (bloqueador crítico pré-existente)
 
-- O `MX 0 tecnico.curitiba.br` e o `mail CNAME tecnico.curitiba.br` **resolvem para `185.158.133.1`**, que é o IP **web** do Lovable — **não** o servidor de e-mail.
+- O `MX 0 [LEGACY_DOMAIN_REMOVED]` e o `mail CNAME [LEGACY_DOMAIN_REMOVED]` **resolvem para `185.158.133.1`**, que é o IP **web** do Lovable — **não** o servidor de e-mail.
 - O servidor de e-mail real provável é **HostEG/cPanel**:
   - IP identificado: `181.214.95.10`
   - PTR/hostname reverso: `enterprise.hosteg.net`
@@ -145,7 +145,7 @@ O **CNAME oficial do modo proxy do Lovable ainda não foi obtido**. Não presumi
 11. Abrir Lovable → Settings → Domains → Advanced.
 12. Ativar modo Cloudflare/proxy.
 13. Copiar CNAME e TXT **literalmente**.
-14. Criar zona `tecnico.curitiba.br` na Cloudflare.
+14. Criar zona `[LEGACY_DOMAIN_REMOVED]` na Cloudflare.
 15. Recriar todos os registros.
 16. Manter e-mail como **DNS only**.
 17. Configurar web como **Proxied**.
@@ -161,7 +161,7 @@ O **CNAME oficial do modo proxy do Lovable ainda não foi obtido**. Não presumi
 
 ### Correção de e-mail preferencial na GDNS (usar só valores confirmados pelo HostEG)
 - `mail` A → `181.214.95.10` (substitui o CNAME atual) — **DNS only**
-- `MX` → `0 mail.tecnico.curitiba.br` (host não proxyado)
+- `MX` → `0 mail.[LEGACY_DOMAIN_REMOVED]` (host não proxyado)
 - Preservar sem alterações: SPF, DKIM, DMARC, webmail, cpanel, `_autodiscover._tcp`.
 - Nunca apontar MX para: apex proxyado, IP da Cloudflare, host proxyado, `*.lovable.app`.
 
@@ -189,7 +189,7 @@ O **CNAME oficial do modo proxy do Lovable ainda não foi obtido**. Não presumi
 
 ## 9. Transform Rule planejada (Response Headers)
 
-- **Condição:** `http.host in {"tecnico.curitiba.br" "www.tecnico.curitiba.br"}`
+- **Condição:** `http.host in {"[LEGACY_DOMAIN_REMOVED]" "www.[LEGACY_DOMAIN_REMOVED]"}`
 - **Operação:** `Set static` (nunca `Add`).
 - **Headers:**
   - `X-Frame-Options` → `DENY`

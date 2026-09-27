@@ -70,7 +70,7 @@ Checklist humano (Fase 3), a marcar por quem executar:
 [ ] adicionar São José dos Pinhais
 [ ] categoria principal aprovada
 [ ] categorias secundárias aprovadas
-[ ] URL canônica https://tecnico.curitiba.br
+[ ] URL canônica https://[LEGACY_DOMAIN_REMOVED]
 [ ] telefone/WhatsApp +55 41 99708-6380
 [ ] horários aprovados (item 3)
 [ ] descrição ≤750 caracteres
@@ -243,7 +243,7 @@ a função é entidade e consistência local.
 ```text
 NOME     Técnico em Curitiba
 TELEFONE +55 41 99708-6380 (WhatsApp, canal único)
-URL      https://tecnico.curitiba.br
+URL      https://[LEGACY_DOMAIN_REMOVED]
 ÁREA     Curitiba · São José dos Pinhais
 ENDEREÇO não publicar
 CEP      não publicar

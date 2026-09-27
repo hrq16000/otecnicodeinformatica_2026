@@ -101,9 +101,9 @@ Objetivo: ranquear em **TOP 3** do Google para o cluster *técnico de informáti
 {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
-  "@id": "https://tecnicocuritiba.com.br/#business",
+  "@id": "https://[LEGACY_DOMAIN_REMOVED]/#business",
   "name": "Técnico Curitiba",
-  "image": "https://tecnicocuritiba.com.br/og.jpg",
+  "image": "https://[LEGACY_DOMAIN_REMOVED]/og.jpg",
   "telephone": "+5541999999999",
   "priceRange": "R$ 99,99+",
   "areaServed": ["Curitiba","Pinhais","São José dos Pinhais","Araucária","Colombo","Campo Largo"],
@@ -119,7 +119,7 @@ Objetivo: ranquear em **TOP 3** do Google para o cluster *técnico de informáti
 {
   "@context":"https://schema.org","@type":"Service",
   "serviceType":"Formatação de computador",
-  "provider":{"@id":"https://tecnicocuritiba.com.br/#business"},
+  "provider":{"@id":"https://[LEGACY_DOMAIN_REMOVED]/#business"},
   "areaServed":"Curitiba",
   "offers":{"@type":"Offer","price":"99.99","priceCurrency":"BRL"}
 }

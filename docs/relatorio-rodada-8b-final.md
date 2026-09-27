@@ -12,7 +12,7 @@ nova foi criada. Nenhum parâmetro de CRO foi alterado.
 - Fonte única: `VITE_WHATSAPP_NUMBER` (.env) → `src/lib/config/contact.ts`
   (`whatsappLink()`, `WHATSAPP_PHONE_E164`). Nenhum URL wa.me hardcoded.
 - `scripts/lib/migration-critical.mjs`: `OFFICIAL_WA = 5541997086380`,
-  `LEGACY_WA = 5541997452053`.
+  `LEGACY_WA = [LEGACY_CONTACT_REMOVED]`.
 - E2E atualizados (`mobile-ctas`, `smoke-buttons`, `whatsapp-funnel`,
   `localbusiness-jsonld`, `assistencia-tecnica-curitiba`).
 

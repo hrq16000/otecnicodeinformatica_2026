@@ -88,13 +88,13 @@ Nenhuma nova violação introduzida. Dívida histórica mantida (vertical congel
 Home (`dist/index.html`):
 - title: Técnico em Curitiba | Assistência Técnica e Suporte Local
 - description: assistência técnica ampla em Curitiba
-- canonical: `https://tecnico.curitiba.br/` (self)
+- canonical: `https://[LEGACY_DOMAIN_REMOVED]/` (self)
 - robots: index, follow
 - H1: "Técnico em Curitiba — Assistência Técnica e Suporte Local"
 
 Landing (`dist/tecnico-informatica-curitiba/index.html`):
 - title: Técnico de Informática em Curitiba | PC e Notebook
-- canonical: `https://tecnico.curitiba.br/tecnico-informatica-curitiba` (self)
+- canonical: `https://[LEGACY_DOMAIN_REMOVED]/tecnico-informatica-curitiba` (self)
 - robots: index, follow
 - H1: "Técnico de Informática em Curitiba"
 

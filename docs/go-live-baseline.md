@@ -1,7 +1,7 @@
 # Go-live — baseline de indexação e medição
 
 Data do registro: 2026-08-06 (UTC)
-Propriedade Search Console: `sc-domain:tecnico.curitiba.br` (siteOwner)
+Propriedade Search Console: `sc-domain:[LEGACY_DOMAIN_REMOVED]` (siteOwner)
 
 Este documento é o marco zero. A partir dele, **nenhuma alteração deve ser feita
 por suposição** — apenas com evidência vinda do Search Console ou do funil.
@@ -12,15 +12,15 @@ por suposição** — apenas com evidência vinda do Search Console ou do funil.
 
 | Verificação | Resultado |
 | --- | --- |
-| `https://tecnico.curitiba.br/` | 200, HTTPS válido |
-| `https://www.tecnico.curitiba.br/` | 200, HTTPS válido |
+| `https://[LEGACY_DOMAIN_REMOVED]/` | 200, HTTPS válido |
+| `https://www.[LEGACY_DOMAIN_REMOVED]/` | 200, HTTPS válido |
 | `/robots.txt` | 200, `Allow: /` para Googlebot, Bingbot e demais agentes |
 | `/sitemap.xml` | 200, `sitemapindex` com 5 sub-sitemaps |
 | Sitemaps herdados (`news`, `marcas`, `problemas`) | servidos com 0 `<loc>` (zerados, sem URLs órfãs) |
 
 ## 2. Sitemap enviado
 
-- Enviado via API: `https://tecnico.curitiba.br/sitemap.xml`
+- Enviado via API: `https://[LEGACY_DOMAIN_REMOVED]/sitemap.xml`
 - `lastSubmitted`: 2026-08-06T04:32:48Z · `lastDownloaded`: 2026-08-06T04:32:50Z
 - **errors: 0 · warnings: 0 · isPending: false**
 - Sub-sitemaps: `main` (14), `servicos` (19), `regioes`, `bairros`, `editorial` (6)

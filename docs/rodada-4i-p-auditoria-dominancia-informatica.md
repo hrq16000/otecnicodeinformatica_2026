@@ -1,7 +1,7 @@
 # RODADA 4I-P — AUDITORIA DE DOMINÂNCIA SEO EM INFORMÁTICA
 
 **Modo:** somente leitura. Zero alteração de código, copy, rota, canonical, sitemap, schema, funil, tracking ou banco.
-**Data:** 2026-08-08 · **Propriedade GSC:** `sc-domain:tecnico.curitiba.br`
+**Data:** 2026-08-08 · **Propriedade GSC:** `sc-domain:[LEGACY_DOMAIN_REMOVED]`
 **Git inicial:** `git status --short` vazio · `git diff --stat` vazio.
 
 ---

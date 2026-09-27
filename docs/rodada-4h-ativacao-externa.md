@@ -27,7 +27,7 @@ do perfil, e o bloqueio real — fotos — é de captura, não de autorização.
 | Elemento | Situação |
 | --- | --- |
 | Nome | Técnico em Curitiba — consistente em site, schema e pacote GBP |
-| URL canônica | https://tecnico.curitiba.br |
+| URL canônica | https://[LEGACY_DOMAIN_REMOVED] |
 | Contato | WhatsApp +55 41 99708-6380, canal único |
 | Endereço/CEP/CNPJ | Não autorizados para exposição (governança 4G) |
 | Modelo | Service Area Business |
@@ -128,7 +128,7 @@ Padrão único, idêntico em toda plataforma:
 ```text
 Nome:  Técnico em Curitiba
 Fone:  +55 41 99708-6380
-Site:  https://tecnico.curitiba.br
+Site:  https://[LEGACY_DOMAIN_REMOVED]
 Área:  Curitiba e São José dos Pinhais (PR)
 ```
 
