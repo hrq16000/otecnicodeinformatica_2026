@@ -165,17 +165,19 @@ describe("guia suplementar de comandos Linux para iniciantes", () => {
     expect(post.content).toBeTruthy();
   });
 
-  it("conclui revisão técnica mas continua fail-closed", () => {
+  it("só entra no índice após revisão, fonte e capa própria", () => {
     expect(getTechnicalReviewStatus(slug)).toBe("reviewed");
     expect(getArticleSources(slug).length).toBeGreaterThanOrEqual(1);
-    expect(isEditorialApproved(slug)).toBe(false);
-    expect(getEditorialCover(slug)).toBeUndefined();
+    expect(isEditorialApproved(slug)).toBe(true);
+    expect(getEditorialCover(slug)?.src).toBe("/blog/como-instalar-ubuntu-do-zero.svg");
   });
 
   it("separa fundamentos do shell de pacotes e SSH", () => {
     const node = contentNode("/blog/" + slug);
+    const entry = findEditorialEntry("/blog/" + slug);
     expect(node?.intent).toBe("informational");
     expect(node?.doNotDuplicate).toContain("/blog/como-gerenciar-pacotes-apt-dnf-linux");
+    expect(entry?.ownerId).toBe("linux-terminal-comandos-basicos");
     expect(EDITORIAL_HUB_SUMMARIES[slug]?.category).toBe("Linux");
   });
 });
