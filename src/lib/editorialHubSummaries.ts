@@ -667,6 +667,14 @@ const rows: Array<EditorialHubSummary & { slug: string }> = [
     "date": "2026-09-26",
     "readTime": "12 min",
     "category": "Procedimentos Técnicos"
+  },
+  {
+    "slug": "como-instalar-ubuntu-do-zero",
+    "title": "Como instalar Ubuntu do zero: guia seguro para PC e notebook",
+    "excerpt": "Pendrive, backup, disco, dual boot, BitLocker e atualização pós-instalação organizados na ordem certa para instalar Ubuntu sem apagar dados por engano.",
+    "date": "2026-09-26",
+    "readTime": "13 min",
+    "category": "Linux"
   }
 ];
 
