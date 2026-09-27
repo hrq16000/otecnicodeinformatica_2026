@@ -1071,7 +1071,7 @@ export const ARTICLE_SOURCE_MANIFEST: Record<string, ArticleSourceManifest> = {
     factChecked: true,
     factCheckedAt: "2026-09-27",
     notes:
-      "Reescrita material concluída: remove estatísticas de bots, promessa de porta customizada, receita genérica de fail2ban/MFA e parâmetros arbitrários; prioriza chave testada em segunda sessão, configuração efetiva, sshd -t, reload com rollback e critérios explícitos de parada. Permanece noindex até capa/proveniência e aprovação editorial.",
+      "Reescrita material concluída: remove estatísticas de bots, promessa de porta customizada, receita genérica de fail2ban/MFA e parâmetros arbitrários; prioriza chave testada em segunda sessão, configuração efetiva, sshd -t, reload com rollback e critérios explícitos de parada. Promovido em 2026-09-27 após capa licenciada/proveniência, ownership e gates editoriais.",
   },
   "como-usar-rsync-backup-linux": {
     slug: "como-usar-rsync-backup-linux",

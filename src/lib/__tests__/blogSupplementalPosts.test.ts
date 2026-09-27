@@ -105,17 +105,19 @@ describe("guia suplementar de SSH seguro no Linux", () => {
     expect(post.content).toBeTruthy();
   });
 
-  it("conclui revisão técnica mas continua fail-closed", () => {
+  it("só entra no índice após revisão, fontes e capa licenciada", () => {
     expect(getTechnicalReviewStatus(slug)).toBe("reviewed");
     expect(getArticleSources(slug).length).toBeGreaterThanOrEqual(2);
-    expect(isEditorialApproved(slug)).toBe(false);
-    expect(getEditorialCover(slug)).toBeUndefined();
+    expect(isEditorialApproved(slug)).toBe(true);
+    expect(getEditorialCover(slug)?.src).toBe("/blog/backup-nuvem-empresas-qual-escolher.jpg");
   });
 
   it("separa SSH de firewall e MFA", () => {
     const node = contentNode("/blog/" + slug);
+    const entry = findEditorialEntry("/blog/" + slug);
     expect(node?.intent).toBe("informational");
     expect(node?.doNotDuplicate).toContain("/blog/como-configurar-firewall-ufw-linux");
+    expect(entry?.ownerId).toBe("openssh-chaves-validacao-rollback");
     expect(EDITORIAL_HUB_SUMMARIES[slug]?.category).toBe("Linux");
   });
 });

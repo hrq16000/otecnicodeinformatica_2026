@@ -937,6 +937,14 @@ export const EDITORIAL_WAVE = [
     cover: "/blog/historico-de-arquivos-windows-como-configurar.jpg",
   },
 
+  // ── Onda 11S — SSH após reescrita, fact-check e capa licenciada.
+  {
+    slug: "como-configurar-ssh-seguro-linux", approvedAt: "2026-09-27",
+    pilar: "/servicos/suporte-tecnico-empresarial", pilarLabel: "Suporte técnico empresarial",
+    apoio: "/blog/como-configurar-firewall-ufw-linux", apoioLabel: "Firewall UFW no Linux",
+    cover: "/blog/backup-nuvem-empresas-qual-escolher.jpg",
+  },
+
 ];
 
 

@@ -687,6 +687,15 @@ export const EDITORIAL_COVERS: Record<string, EditorialCover> = {
     height: 630,
   },
 
+  // ── Onda 11S — SSH: promoção controlada após revisão técnica.
+  // Reuso controlado de fotografia real já versionada e licenciada no acervo.
+  "como-configurar-ssh-seguro-linux": {
+    src: "/blog/backup-nuvem-empresas-qual-escolher.jpg",
+    alt: "Corredor de data center com racks de servidores, representando administração remota segura por SSH",
+    width: 1200,
+    height: 630,
+  },
+
 };
 
 export function getEditorialCover(slug: string): EditorialCover | undefined {
