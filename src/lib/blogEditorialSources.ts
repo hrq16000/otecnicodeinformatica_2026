@@ -82,8 +82,11 @@ export const ALLOWED_SOURCE_HOSTS = [
   "docs.netgate.com",
   "www.tp-link.com",
   "ubuntu.com",
+  "man.openbsd.org",
+  "dnf5.readthedocs.io",
   "documentation.ubuntu.com",
   "samba.org",
+  "rsync.samba.org",
   "www.samba.org",
   "www.wireguard.com",
   "wireguard.com",
@@ -947,6 +950,73 @@ export const EDITORIAL_SOURCES: Record<string, EditorialSource> = {
       "O procedimento oficial documenta ferramentas gráficas e também alerta para o risco do dd quando o destino é informado incorretamente.",
     ],
   },
+  "ubuntu-cli-beginners-2026": {
+    id: "ubuntu-cli-beginners-2026",
+    title: "The Linux command line for beginners",
+    publisher: "Ubuntu",
+    url: "https://ubuntu.com/tutorials/command-line-for-beginners",
+    accessedAt: "2026-09-26",
+    sourceType: "official",
+    supports: [
+      "Navegação, caminhos, arquivos, diretórios, comandos básicos e uso seguro do terminal por iniciantes.",
+    ],
+  },
+  "ubuntu-package-management-2026": {
+    id: "ubuntu-package-management-2026",
+    title: "Install and manage packages",
+    publisher: "Ubuntu Server documentation",
+    url: "https://ubuntu.com/server/docs/how-to/software/package-management/",
+    accessedAt: "2026-09-26",
+    sourceType: "official",
+    supports: [
+      "Uso de APT para atualizar índice, instalar, remover e atualizar pacotes em Ubuntu.",
+      "APT é voltado ao uso interativo; apt-get é indicado pela documentação para scripts não interativos.",
+    ],
+  },
+  "dnf5-command-reference-2026": {
+    id: "dnf5-command-reference-2026",
+    title: "DNF5 Package Management Utility",
+    publisher: "DNF5 documentation",
+    url: "https://dnf5.readthedocs.io/en/latest/dnf5.8.html",
+    accessedAt: "2026-09-26",
+    sourceType: "official",
+    supports: [
+      "DNF5 gerencia pacotes em distribuições RPM e oferece comandos de instalação, remoção e atualização.",
+    ],
+  },
+  "ubuntu-openssh-server-2026": {
+    id: "ubuntu-openssh-server-2026",
+    title: "OpenSSH server",
+    publisher: "Ubuntu Server documentation",
+    url: "https://ubuntu.com/server/docs/how-to/security/openssh-server/",
+    accessedAt: "2026-09-26",
+    sourceType: "official",
+    supports: [
+      "Instalação e configuração do servidor OpenSSH no Ubuntu e uso de arquivos de configuração do sshd.",
+    ],
+  },
+  "openssh-sshd-config-2026": {
+    id: "openssh-sshd-config-2026",
+    title: "sshd_config(5)",
+    publisher: "OpenBSD manual pages / OpenSSH",
+    url: "https://man.openbsd.org/sshd_config",
+    accessedAt: "2026-09-26",
+    sourceType: "official",
+    supports: [
+      "Semântica e valores das diretivas do daemon OpenSSH, incluindo autenticação, usuários, forwarding e timeouts.",
+    ],
+  },
+  "rsync-manpage-2026": {
+    id: "rsync-manpage-2026",
+    title: "rsync(1) manpage",
+    publisher: "rsync / Samba",
+    url: "https://rsync.samba.org/ftp/rsync/rsync.1",
+    accessedAt: "2026-09-26",
+    sourceType: "official",
+    supports: [
+      "Sintaxe, cópia local/remota, modo archive e comportamento das principais opções do rsync.",
+    ],
+  },
 
 };
 
@@ -968,6 +1038,39 @@ export const EDITORIAL_SOURCES: Record<string, EditorialSource> = {
 //     (vazio) em blogEditorialRegistry.ts.
 // ─────────────────────────────────────────────────────────────
 export const ARTICLE_SOURCE_MANIFEST: Record<string, ArticleSourceManifest> = {
+  "comandos-linux-essenciais-iniciantes": {
+    slug: "comandos-linux-essenciais-iniciantes",
+    sources: ["ubuntu-cli-beginners-2026"],
+    technicalReview: "pending",
+    factChecked: false,
+    notes:
+      "Onda Linux 1: fonte primária vinculada; ainda exige reescrita material, remoção de contagem/título promocional e revisão comando a comando antes de qualquer aprovação.",
+  },
+  "como-gerenciar-pacotes-apt-dnf-linux": {
+    slug: "como-gerenciar-pacotes-apt-dnf-linux",
+    sources: ["ubuntu-package-management-2026", "dnf5-command-reference-2026"],
+    technicalReview: "pending",
+    factChecked: false,
+    notes:
+      "Onda Linux 1: referências oficiais de APT e DNF5 vinculadas; conteúdo ainda precisa distinguir gerações do DNF e revisar comandos destrutivos/automação.",
+  },
+  "como-configurar-ssh-seguro-linux": {
+    slug: "como-configurar-ssh-seguro-linux",
+    sources: ["ubuntu-openssh-server-2026", "openssh-sshd-config-2026"],
+    technicalReview: "pending",
+    factChecked: false,
+    notes:
+      "Onda Linux 1: artigo permanece bloqueado para promoção até remover linguagem anti-invasão, revisar porta customizada/fail2ban/MFA e garantir rollback para não perder acesso remoto.",
+  },
+  "como-usar-rsync-backup-linux": {
+    slug: "como-usar-rsync-backup-linux",
+    sources: ["rsync-manpage-2026"],
+    technicalReview: "pending",
+    factChecked: false,
+    notes:
+      "Onda Linux 1: manpage oficial vinculada; ainda exige separar sincronização de backup, revisar --delete/automação e adicionar restauração/verificação antes de promoção.",
+  },
+
   "pc-nao-liga-o-que-fazer": {
     slug: "pc-nao-liga-o-que-fazer",
     sources: [],
