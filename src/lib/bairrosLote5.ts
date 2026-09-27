@@ -477,7 +477,7 @@ export const BAIRROS_LOTE_5: Record<string, BairroLocalData> = {
     areaName: "Rio Pequeno, São José dos Pinhais",
     metaTitle: "Técnico de informática no Rio Pequeno | São José dos Pinhais",
     metaDescription:
-      "Atendimento de informática no Rio Pequeno, SJP: PC, notebook, backup, Wi‑Fi, SSD, formatação e diagnóstico técnico.",
+      "Atendimento de informática no Rio Pequeno, São José dos Pinhais: PC, notebook, backup, Wi‑Fi, SSD, formatação e diagnóstico técnico.",
     h1: "Técnico de informática no Rio Pequeno – São José dos Pinhais",
     subtitulo:
       "Suporte para computador de casa, estudo e trabalho com preservação de dados e diagnóstico antes da troca de peças.",
@@ -609,7 +609,7 @@ export const BAIRROS_LOTE_5: Record<string, BairroLocalData> = {
     areaName: "Pedro Moro, São José dos Pinhais",
     metaTitle: "Técnico de informática no Pedro Moro | PC e notebook em SJP",
     metaDescription:
-      "Atendimento de informática no Pedro Moro, SJP: PC, notebook, impressora, Wi‑Fi, backup, SSD e formatação com triagem técnica.",
+      "Atendimento de informática no Pedro Moro, São José dos Pinhais: PC, notebook, impressora, Wi‑Fi, backup, SSD e formatação com triagem técnica.",
     h1: "Técnico de informática no Pedro Moro – São José dos Pinhais",
     subtitulo:
       "Atendimento para computador, notebook e periféricos com foco em reduzir tentativa e preservar configurações importantes.",
