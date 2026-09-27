@@ -700,6 +700,14 @@ const rows: Array<EditorialHubSummary & { slug: string }> = [
     "readTime": "13 min",
     "category": "Linux"
   },
+  {
+    "slug": "comandos-linux-essenciais-iniciantes",
+    "title": "Comandos Linux para iniciantes: terminal seguro sem decorar uma lista",
+    "excerpt": "Navegação, arquivos, grep, pipes, permissões e processos explicados pelo efeito de cada comando, com limites claros para sudo e operações destrutivas.",
+    "date": "2026-09-27",
+    "readTime": "12 min",
+    "category": "Linux"
+  },
 ];
 
 export const EDITORIAL_HUB_SUMMARIES: Record<string, EditorialHubSummary> = Object.fromEntries(
