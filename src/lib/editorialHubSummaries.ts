@@ -675,7 +675,7 @@ const rows: Array<EditorialHubSummary & { slug: string }> = [
     "date": "2026-09-26",
     "readTime": "13 min",
     "category": "Linux"
-  }
+  },
   {
     "slug": "como-usar-rsync-backup-linux",
     "title": "Como usar rsync para backup no Linux sem apagar arquivos por engano",
