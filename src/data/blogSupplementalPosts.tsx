@@ -335,6 +335,201 @@ export const blogSupplementalPosts: Record<string, BlogPostContent> = {
       </>
     ),
   },
+
+  "como-usar-rsync-backup-linux": {
+    title: "Como usar rsync para backup no Linux sem apagar arquivos por engano",
+    excerpt:
+      "Use rsync para cópias locais e remotas no Linux, entenda a diferença entre sincronização e backup, teste com --dry-run e trate --delete como operação destrutiva.",
+    date: "2026-09-27",
+    readTime: "13 min",
+    category: "Linux",
+    content: (
+      <>
+        <p className="lead">
+          O <code>rsync</code> é uma ferramenta de cópia e sincronização de arquivos. Ele pode reduzir transferências
+          repetidas porque compara origem e destino, funciona localmente ou por conexão remota e preserva metadados
+          quando as opções corretas são usadas. Mas existe uma diferença importante: <strong>sincronizar não é,
+          sozinho, ter backup</strong>. Se o destino apenas reproduz o estado atual da origem, exclusões e arquivos
+          corrompidos podem ser propagados. Um backup de verdade precisa considerar independência, retenção e teste
+          de restauração.
+        </p>
+
+        <h2>Resposta curta: use rsync como ferramenta de cópia, não como garantia de backup</h2>
+        <p>
+          Para uma primeira cópia local, comece sem exclusões e faça um ensaio antes de escrever. O manual oficial
+          documenta <code>--dry-run</code> (<code>-n</code>) justamente para mostrar o que seria alterado sem
+          executar a transferência. Quando a lista estiver correta, rode o comando real. Só considere
+          <code>--delete</code> depois de entender exatamente qual é a origem, qual é o destino e qual diretório
+          será sincronizado.
+        </p>
+        <pre><code>{"rsync -ani /dados/origem/ /mnt/backup/origem/\nrsync -ai  /dados/origem/ /mnt/backup/origem/"}</code></pre>
+        <p>
+          No exemplo, <code>-a</code> ativa o modo de arquivamento, <code>-n</code> faz o ensaio e <code>-i</code>
+          detalha as mudanças. O segundo comando é executado somente depois de conferir o resultado do primeiro.
+        </p>
+
+        <h2>1. O que o rsync faz e o que ele não faz</h2>
+        <p>
+          O rsync copia arquivos entre diretórios locais ou entre máquinas. Ele é útil para replicar uma árvore de
+          arquivos, atualizar apenas o que mudou e automatizar transferências previsíveis. Isso não significa que
+          ele mantenha versões históricas por padrão. Se um documento foi sobrescrito na origem e a sincronização
+          atualizar o destino, a versão anterior pode deixar de existir também.
+        </p>
+        <p>
+          Por isso, trate o rsync como uma <strong>ferramenta dentro da estratégia de backup</strong>. O destino
+          deve ser independente o suficiente para sobreviver ao problema da origem, e a estratégia precisa dizer
+          como recuperar uma versão anterior quando isso for necessário. Para a visão geral, consulte{" "}
+          <a href="/blog/backup-como-proteger-seus-arquivos">backup: como proteger seus arquivos</a>.
+        </p>
+
+        <h2>2. Antes do primeiro comando: identifique origem e destino</h2>
+        <p>
+          O erro mais perigoso em uma cópia automatizada é inverter os lados. Antes de usar rsync, liste os dois
+          caminhos e confirme o conteúdo. Em um disco externo, valide também se o ponto de montagem é realmente o
+          esperado; um diretório vazio criado porque o disco não montou não é o mesmo destino.
+        </p>
+        <pre><code>{"ls -lah /dados/origem/\nfindmnt /mnt/backup\nls -lah /mnt/backup/"}</code></pre>
+        <p>
+          Se houver dados insubstituíveis, faça a primeira execução sem <code>--delete</code>. O objetivo inicial é
+          provar que o comando copia na direção correta e que o destino possui espaço e permissões adequados.
+        </p>
+
+        <h2>3. A barra final na origem muda o resultado</h2>
+        <p>
+          O manual do rsync chama atenção para a barra final no caminho de origem. Com
+          <code>/dados/fotos/</code>, o conteúdo de <code>fotos</code> é copiado para o destino. Sem a barra final,
+          o diretório <code>fotos</code> pode ser criado como um nível adicional no destino. Essa diferença parece
+          pequena no terminal, mas muda a árvore resultante.
+        </p>
+        <pre><code>{"rsync -ani /dados/fotos/ /mnt/backup/fotos/\nrsync -ani /dados/fotos  /mnt/backup/"}</code></pre>
+        <p>
+          Faça o ensaio das duas formas se estiver em dúvida e confira os caminhos exibidos antes da transferência
+          real.
+        </p>
+
+        <h2>4. O que o modo archive preserva</h2>
+        <p>
+          A opção <code>-a</code> é uma forma compacta de ativar o modo de arquivamento do rsync. Ela é adequada
+          quando você quer preservar uma árvore de arquivos com atributos relevantes, mas não deve ser tratada
+          como sinônimo de “backup completo do sistema”. Sistemas de arquivos, ACLs, atributos estendidos,
+          snapshots, bancos de dados em uso e aplicações com estado podem exigir opções ou procedimentos próprios.
+        </p>
+        <p>
+          Para documentos, fotos e diretórios de projeto, <code>-a</code> costuma ser um ponto de partida claro.
+          Para servidores e aplicações, primeiro descubra como a própria aplicação recomenda realizar cópia
+          consistente.
+        </p>
+
+        <h2>5. Exclusões: reduza o escopo de forma explícita</h2>
+        <p>
+          Arquivos temporários, caches ou diretórios reconstruíveis podem ser excluídos quando isso fizer parte do
+          plano. Prefira regras visíveis e revisáveis em vez de uma sequência longa de opções improvisadas.
+        </p>
+        <pre><code>{"rsync -ani --exclude='cache/' --exclude='*.tmp' /dados/origem/ /mnt/backup/origem/"}</code></pre>
+        <p>
+          Uma exclusão é uma decisão de retenção: tudo que não é copiado precisa ser dispensável ou estar protegido
+          por outro mecanismo. Não copie uma lista pronta da internet sem comparar com a estrutura real dos seus
+          dados.
+        </p>
+
+        <h2>6. Por que --delete exige uma etapa separada de validação</h2>
+        <p>
+          <code>--delete</code> remove do destino itens que não existem mais na origem dentro do escopo
+          sincronizado. O próprio manual oficial recomenda testar primeiro com <code>--dry-run</code>, porque uma
+          origem errada, um ponto de montagem ausente ou uma regra de exclusão mal definida pode transformar uma
+          sincronização em perda de arquivos.
+        </p>
+        <pre><code>{"rsync -ani --delete /dados/origem/ /mnt/espelho/origem/"}</code></pre>
+        <p>
+          Só execute a versão sem <code>-n</code> quando as exclusões listadas forem exatamente as esperadas.
+          Mesmo assim, um espelho com <code>--delete</code> continua não substituindo retenção histórica: se você
+          precisa recuperar o estado de ontem ou da semana passada, use snapshots, versionamento ou cópias
+          independentes além do espelho.
+        </p>
+
+        <h2>7. Cópia remota por SSH</h2>
+        <p>
+          O rsync pode usar um host remoto como origem ou destino. Antes de automatizar, faça a conexão SSH
+          funcionar separadamente, confirme o usuário e teste o caminho remoto com uma cópia pequena.
+        </p>
+        <pre><code>{"rsync -ani /dados/projeto/ usuario@servidor:/srv/backup/projeto/\nrsync -ai  /dados/projeto/ usuario@servidor:/srv/backup/projeto/"}</code></pre>
+        <p>
+          Não coloque senha em texto puro dentro de script ou cron. Quando autenticação por chave for apropriada,
+          proteja a chave, limite permissões e mantenha um caminho de recuperação. O guia de SSH fica em uma URL
+          separada justamente porque autenticação remota é outra decisão técnica.
+        </p>
+
+        <h2>8. Automatize só depois de validar uma execução manual</h2>
+        <p>
+          Agendamento transforma um erro ocasional em erro recorrente. Antes de usar cron ou timer do systemd,
+          valide manualmente a origem, o destino, as exclusões e o resultado da restauração. Registre saída e código
+          de retorno para perceber quando a tarefa deixou de funcionar.
+        </p>
+        <p>
+          Uma rotina automática também precisa verificar se o destino está disponível. Em discos removíveis e
+          montagens de rede, não assuma que o caminho existe só porque o diretório existe no sistema.
+        </p>
+
+        <h2>9. Como verificar se a cópia pode ser restaurada</h2>
+        <p>
+          Backup não termina quando o comando retorna sem erro. Escolha uma amostra representativa: arquivo pequeno,
+          documento grande, diretório com subpastas e, quando aplicável, permissões importantes. Restaure para um
+          local temporário e abra os arquivos a partir da cópia restaurada.
+        </p>
+        <p>
+          Para uma rotina mais completa, veja{" "}
+          <a href="/blog/como-testar-restauracao-de-backup">como testar a restauração de um backup</a>. O teste
+          periódico é o que separa uma cópia presumida de uma recuperação demonstrada.
+        </p>
+
+        <h2>10. Rsync, snapshot e sincronização em nuvem não são a mesma coisa</h2>
+        <table>
+          <thead>
+            <tr><th>Ferramenta</th><th>Função principal</th><th>Limite típico</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>rsync</td><td>Copiar e sincronizar arquivos e diretórios</td><td>Não cria histórico de versões por padrão</td></tr>
+            <tr><td>Snapshot</td><td>Registrar estados de um volume ou conjunto de dados</td><td>Pode depender do mesmo armazenamento físico</td></tr>
+            <tr><td>Sincronização em nuvem</td><td>Replicar estado entre dispositivos/serviço</td><td>Pode propagar alteração ou exclusão</td></tr>
+            <tr><td>Backup com retenção</td><td>Manter cópias recuperáveis em pontos diferentes do tempo</td><td>Exige política, capacidade e teste de restauração</td></tr>
+          </tbody>
+        </table>
+
+        <h2>Quando parar antes de continuar</h2>
+        <p>
+          Interrompa a automação se você não consegue explicar qual diretório é a origem, qual é o destino, se o
+          destino está realmente montado, o que será excluído ou como restaurar um arquivo. Pare também diante de
+          erros de entrada/saída, disco com sinais de falha ou dados únicos sem outra cópia. Nessas situações, a
+          prioridade é preservar o estado existente antes de sincronizar novamente.
+        </p>
+
+        <h2>Checklist de decisão</h2>
+        <ul>
+          <li>Origem e destino foram conferidos separadamente.</li>
+          <li>O primeiro ensaio usa <code>--dry-run</code> e saída detalhada.</li>
+          <li>A barra final da origem produz a árvore desejada.</li>
+          <li>Exclusões foram justificadas item por item.</li>
+          <li><code>--delete</code> não entra antes de um ensaio específico para exclusões.</li>
+          <li>Existe uma cópia ou retenção independente do espelho.</li>
+          <li>Uma restauração de teste foi executada e validada.</li>
+          <li>A automação registra falha em vez de assumir que sempre funcionou.</li>
+        </ul>
+
+        <h2>Fontes oficiais consultadas</h2>
+        <ul>
+          <li>
+            <a href="https://rsync.samba.org/ftp/rsync/rsync.1" rel="nofollow noopener" target="_blank">
+              rsync(1) manpage — projeto rsync / Samba
+            </a>
+          </li>
+        </ul>
+        <p>
+          Para escolher onde manter uma cópia independente, veja também{" "}
+          <a href="/decisoes/nuvem-ou-hd-externo">nuvem ou HD externo</a>.
+        </p>
+      </>
+    ),
+  },
 };
 
 export default blogSupplementalPosts;
