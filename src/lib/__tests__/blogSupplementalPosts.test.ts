@@ -126,7 +126,7 @@ describe("guia suplementar de APT e DNF no Linux", () => {
     const post = blogSupplementalPosts[slug];
     expect(post).toBeTruthy();
     expect(post.title).toMatch(/APT e DNF/i);
-    expect(post.excerpt).toMatch(/distribuição|transaç/i);
+    expect(post.excerpt).toMatch(/distribuiç|transaç/i);
     expect(post.readTime).toBe("13 min");
     expect(post.content).toBeTruthy();
   });
