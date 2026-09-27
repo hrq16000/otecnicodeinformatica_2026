@@ -145,3 +145,31 @@ describe("guia suplementar de APT e DNF no Linux", () => {
     expect(EDITORIAL_HUB_SUMMARIES[slug]?.category).toBe("Linux");
   });
 });
+
+
+describe("guia suplementar de comandos Linux para iniciantes", () => {
+  const slug = "comandos-linux-essenciais-iniciantes";
+
+  it("substitui lista promocional por trilha segura de terminal", () => {
+    const post = blogSupplementalPosts[slug];
+    expect(post).toBeTruthy();
+    expect(post.title).toMatch(/Comandos Linux/i);
+    expect(post.excerpt).toMatch(/sudo|operaç|efeito/i);
+    expect(post.readTime).toBe("12 min");
+    expect(post.content).toBeTruthy();
+  });
+
+  it("conclui revisão técnica mas continua fail-closed", () => {
+    expect(getTechnicalReviewStatus(slug)).toBe("reviewed");
+    expect(getArticleSources(slug).length).toBeGreaterThanOrEqual(1);
+    expect(isEditorialApproved(slug)).toBe(false);
+    expect(getEditorialCover(slug)).toBeUndefined();
+  });
+
+  it("separa fundamentos do shell de pacotes e SSH", () => {
+    const node = contentNode("/blog/" + slug);
+    expect(node?.intent).toBe("informational");
+    expect(node?.doNotDuplicate).toContain("/blog/como-gerenciar-pacotes-apt-dnf-linux");
+    expect(EDITORIAL_HUB_SUMMARIES[slug]?.category).toBe("Linux");
+  });
+});
