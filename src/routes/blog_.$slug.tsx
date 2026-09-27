@@ -6,6 +6,7 @@ import { isEditorialApproved } from "@/lib/blogEditorialRegistry";
 import { withOgVersion } from "@/lib/ogCacheBust";
 import { metaSocial } from "@/lib/socialMeta";
 import { resolveRedirect } from "@/lib/redirectMatrix";
+import { applyBlogSearchIntent } from "@/lib/blogSearchIntentOverrides";
 
 /**
  * Única rota que não passa pelo mapa de `legacyRouteElements`, portanto compõe
@@ -39,8 +40,9 @@ export const Route = createFileRoute("/blog_/$slug")({
       import("@/data/blogProgrammaticPosts"),
     ]);
     const posts = { ...blogPostsContentBase, ...blogSupplementalPosts, ...programmaticPosts };
-    const post = posts[params.slug] ?? null;
-    if (!post) return { post: null };
+    const rawPost = posts[params.slug] ?? null;
+    if (!rawPost) return { post: null };
+    const post = applyBlogSearchIntent(params.slug, rawPost);
     return {
       post: {
         title: post.title,
