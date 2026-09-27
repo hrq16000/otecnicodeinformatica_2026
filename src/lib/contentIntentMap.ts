@@ -787,6 +787,29 @@ export const CONTENT_INTENT_MAP: ContentNode[] = [
     justificativa:
       "Owner do acesso remoto OpenSSH: chaves, autenticação, usuários permitidos, validação do daemon e rollback. Firewall e MFA permanecem em owners separados.",
   },
+  {
+    url: "/blog/como-gerenciar-pacotes-apt-dnf-linux",
+    intent: "informational",
+    topic: "gerenciamento seguro de pacotes Linux com APT e DNF/DNF5",
+    queries: [
+      "apt linux comandos",
+      "dnf5 comandos",
+      "instalar atualizar remover pacotes linux",
+    ],
+    serviceParent: "/servicos/suporte-tecnico-empresarial",
+    bridgesTo: [
+      "/blog/comandos-linux-essenciais-iniciantes",
+      "/blog/como-configurar-ssh-seguro-linux",
+      "/blog/como-instalar-ubuntu-do-zero",
+    ],
+    doNotDuplicate: [
+      "/blog/comandos-linux-essenciais-iniciantes",
+      "/blog/como-instalar-ubuntu-do-zero",
+    ],
+    novaNestaRodada: false,
+    justificativa:
+      "Owner de transações de pacotes e repositórios. Comandos básicos do shell e instalação do sistema operacional permanecem em URLs próprias.",
+  },
 ];
 
 /** Nó do mapa por URL canônica (sem barra final). */
