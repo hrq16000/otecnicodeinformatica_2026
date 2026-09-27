@@ -949,6 +949,14 @@
       "cidadeSlug": "sao-jose-dos-pinhais",
       "parent": "/tecnico-informatica-sao-jose-pinhais",
       "lote": 10
+    },
+    {
+      "slug": "campo-largo-roseira-sjp",
+      "intent": "diagnóstico de informática em Campo Largo da Roseira com foco em armazenamento, estabilidade, rede e preservação de dados",
+      "cidade": "São José dos Pinhais",
+      "cidadeSlug": "sao-jose-dos-pinhais",
+      "parent": "/tecnico-informatica-sao-jose-pinhais",
+      "lote": 11
     }
   ],
   "servicoBairroIndexaveis": [
@@ -1088,5 +1096,8 @@
     "/bairros/academia-sjp",
     "/bairros/colonia-murici-sjp",
     "/bairros/italia-sjp"
+  ],
+  "loteLocal11": [
+    "/bairros/campo-largo-roseira-sjp"
   ]
 }
