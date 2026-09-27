@@ -925,6 +925,30 @@
       "cidadeSlug": "sao-jose-dos-pinhais",
       "parent": "/tecnico-informatica-sao-jose-pinhais",
       "lote": 9
+    },
+    {
+      "slug": "academia-sjp",
+      "intent": "diagnóstico de informática no Academia com foco em notebook, Windows, armazenamento e backup",
+      "cidade": "São José dos Pinhais",
+      "cidadeSlug": "sao-jose-dos-pinhais",
+      "parent": "/tecnico-informatica-sao-jose-pinhais",
+      "lote": 10
+    },
+    {
+      "slug": "colonia-murici-sjp",
+      "intent": "suporte de informática na Colônia Murici com foco em remoto, visita, bancada e conectividade",
+      "cidade": "São José dos Pinhais",
+      "cidadeSlug": "sao-jose-dos-pinhais",
+      "parent": "/tecnico-informatica-sao-jose-pinhais",
+      "lote": 10
+    },
+    {
+      "slug": "italia-sjp",
+      "intent": "diagnóstico de informática no Jardim Itália com foco em Windows, periféricos, rede e continuidade de uso",
+      "cidade": "São José dos Pinhais",
+      "cidadeSlug": "sao-jose-dos-pinhais",
+      "parent": "/tecnico-informatica-sao-jose-pinhais",
+      "lote": 10
     }
   ],
   "servicoBairroIndexaveis": [
@@ -1059,5 +1083,10 @@
     "/bairros/tingui",
     "/bairros/ipe-sjp",
     "/bairros/borda-do-campo-sjp"
+  ],
+  "loteLocal10": [
+    "/bairros/academia-sjp",
+    "/bairros/colonia-murici-sjp",
+    "/bairros/italia-sjp"
   ]
 }
