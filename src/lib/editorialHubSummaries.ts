@@ -692,6 +692,14 @@ const rows: Array<EditorialHubSummary & { slug: string }> = [
     "readTime": "13 min",
     "category": "Linux"
   },
+  {
+    "slug": "como-gerenciar-pacotes-apt-dnf-linux",
+    "title": "APT e DNF no Linux: instalar, atualizar e remover pacotes com segurança",
+    "excerpt": "Identifique a distribuição, revise transações, diferencie APT de DNF/DNF5 e trate repositórios e automação sem comandos destrutivos por reflexo.",
+    "date": "2026-09-27",
+    "readTime": "13 min",
+    "category": "Linux"
+  },
 ];
 
 export const EDITORIAL_HUB_SUMMARIES: Record<string, EditorialHubSummary> = Object.fromEntries(
