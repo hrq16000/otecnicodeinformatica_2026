@@ -21,6 +21,47 @@ export interface AtlasPonteArtigo {
 }
 
 export const ATLAS_PONTES_ARTIGOS: Record<string, AtlasPonteArtigo> = {
+  "comandos-linux-essenciais-iniciantes": {
+    temaId: "fundamentos",
+    porQue:
+      "O terminal é uma interface para operar arquivos, processos e rede; a trilha de fundamentos ajuda a entender primeiro o efeito do comando e só depois memorizar sintaxe.",
+    proximoPasso: {
+      rotulo: "Informática básica",
+      to: "/blog/informatica-basica",
+      contexto: "Conecte os comandos ao vocabulário de arquivos, sistema, rede e segurança.",
+    },
+  },
+  "como-gerenciar-pacotes-apt-dnf-linux": {
+    temaId: "fundamentos",
+    porQue:
+      "Gerenciadores de pacotes controlam origem, dependências, atualização e remoção de software; entender a distribuição e o repositório vem antes do comando.",
+    proximoPasso: {
+      rotulo: "Trocar Windows por Linux vale a pena?",
+      to: "/blog/trocar-windows-por-linux-vale-a-pena",
+      contexto: "Veja como disponibilidade de aplicativos e suporte entram na decisão de plataforma.",
+    },
+  },
+  "como-configurar-ssh-seguro-linux": {
+    temaId: "seguranca-privacidade",
+    porQue:
+      "SSH expõe uma superfície de autenticação remota. A trilha de segurança coloca identidade, chaves, acesso mínimo, firewall e recuperação antes de receitas de hardening.",
+    proximoPasso: {
+      rotulo: "Firewall UFW no Linux",
+      to: "/blog/como-configurar-firewall-ufw-linux",
+      contexto: "Restrinja a superfície de rede sem perder o caminho de administração.",
+    },
+  },
+  "como-usar-rsync-backup-linux": {
+    temaId: "dados-backup",
+    porQue:
+      "Rsync é uma ferramenta de cópia e sincronização; backup exige também independência, retenção e teste de restauração. A trilha de dados mantém essa distinção explícita.",
+    proximoPasso: {
+      rotulo: "Nuvem ou HD externo",
+      to: "/decisoes/nuvem-ou-hd-externo",
+      contexto: "Escolha onde manter uma cópia independente do sistema de origem.",
+    },
+  },
+
   "hd-nao-e-reconhecido-na-bios-o-que-fazer": {
     temaId: "dados-backup",
     porQue:
