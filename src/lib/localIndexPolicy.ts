@@ -88,6 +88,8 @@ export const LOTE_LOCAL_5 = (data as { loteLocal5?: string[] }).loteLocal5 ?? []
 export const LOTE_LOCAL_6 = (data as { loteLocal6?: string[] }).loteLocal6 ?? [];
 /** Lote 7 — bairros de Araucária promovidos após validação autoral. */
 export const LOTE_LOCAL_7 = (data as { loteLocal7?: string[] }).loteLocal7 ?? [];
+/** Lote 8 — bairros adicionais de Campo Largo promovidos após validação autoral. */
+export const LOTE_LOCAL_8 = (data as { loteLocal8?: string[] }).loteLocal8 ?? [];
 
 /** Metadados do bairro âncora (cidade-pai, intenção, lote). */
 export function bairroAncora(slug: string): BairroAncora | undefined {
