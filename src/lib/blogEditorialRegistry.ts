@@ -1504,6 +1504,24 @@ const WAVE_11P: EditorialApproval[] = [
   },
 ];
 
+
+const WAVE_11Q: EditorialApproval[] = [
+  {
+    slug: "como-instalar-ubuntu-do-zero",
+    status: "approved",
+    authorType: "organization",
+    authorId: INSTITUTIONAL_AUTHOR.id,
+    reviewedAt: "2026-09-26",
+    approvedAt: "2026-09-26",
+    imageOrigin: "owned",
+    imageLicense: "Todos os direitos reservados",
+    imageAttribution:
+      "Arte editorial original: O Técnico de Informática — https://otecnicodeinformatica.com.br/blog/como-instalar-ubuntu-do-zero",
+    notes:
+      "Reescrita material baseada na documentação oficial Ubuntu: backup, mídia bootável, escolha de disco, dual boot, BitLocker, criptografia, atualização e critérios de parada. Capa vetorial própria, sem terceiros e sem dados pessoais.",
+  },
+];
+
 export const APPROVED_EDITORIAL_CONTENT = new Map<string, EditorialApproval>([
 
   ...FIRST_WAVE_SLUGS.map((slug) => [
@@ -1568,6 +1586,7 @@ export const APPROVED_EDITORIAL_CONTENT = new Map<string, EditorialApproval>([
   ...WAVE_11N.map((a) => [a.slug, a] as [string, EditorialApproval]),
   ...WAVE_11O.map((a) => [a.slug, a] as [string, EditorialApproval]),
   ...WAVE_11P.map((a) => [a.slug, a] as [string, EditorialApproval]),
+  ...WAVE_11Q.map((a) => [a.slug, a] as [string, EditorialApproval]),
 
 ]);
 
