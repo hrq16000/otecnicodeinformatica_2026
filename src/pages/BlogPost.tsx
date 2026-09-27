@@ -37,6 +37,7 @@ import { ArticleToc } from "@/components/editorial/ArticleToc";
 import { getArticleSources, getTechnicalReviewStatus } from "@/lib/blogEditorialSources";
 import NotFound from "./NotFound";
 import { encurtar, tituloComMarca, DESCRIPTION_MAX } from "@/lib/socialMeta";
+import { applyBlogSearchIntent } from "@/lib/blogSearchIntentOverrides";
 
 type PostsMap = Record<string, BlogPostContent>;
 
@@ -55,8 +56,9 @@ const BlogPost = () => {
   // O conteúdo completo vem do mapa de posts importado estaticamente,
   // garantindo que o SSR renderize o artigo sem depender de importação dinâmica.
   const staticPost = slug ? posts[slug] : null;
-  const post = (staticPost ??
+  const rawPost = (staticPost ??
     (loaderData?.post ? (loaderData.post as BlogPostContent) : null)) as BlogPostContent | null;
+  const post = rawPost && slug ? applyBlogSearchIntent(slug, rawPost) : rawPost;
 
   useCanonical(`${SITE_BASE_URL}/blog/${slug}`);
 
