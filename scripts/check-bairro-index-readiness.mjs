@@ -8,7 +8,7 @@ import { join } from "node:path";
 
 const policy = JSON.parse(readFileSync("src/lib/localIndexPolicy.json", "utf8"));
 const paths = Object.entries(policy)
-  .filter(([key, value]) => /^loteLocal\\d+$/.test(key) && Number(key.replace("loteLocal", "")) >= 6 && Array.isArray(value))
+  .filter(([key, value]) => /^loteLocal\d+$/.test(key) && Number(key.replace("loteLocal", "")) >= 6 && Array.isArray(value))
   .sort(([a], [b]) => Number(a.replace("loteLocal", "")) - Number(b.replace("loteLocal", "")))
   .flatMap(([, value]) => value);
 const dir = "src/pages/bairros";
@@ -28,10 +28,10 @@ function arrayItems(src, field) {
 }
 function normalize(text) {
   return text.normalize("NFD")
-    .replace(/[\\u0300-\\u036f]/g, "")
+    .replace(/[\u0300-\u036f]/g, "")
     .toLowerCase()
     .replace(/[^a-z0-9 ]+/g, " ")
-    .replace(/\\s+/g, " ")
+    .replace(/\s+/g, " ")
     .trim();
 }
 function shingles(text, n = 4) {
@@ -51,7 +51,7 @@ const forbidden = [
   /conta com demanda constante por servicos de informatica/i,
   /resolvendo a maioria dos problemas na primeira visita/i,
   /atendimento em 30 60 min/i,
-  /chegamos em \\d/i,
+  /chegamos em \d/i,
   /cidade vizinha de curitiba com acesso rapido pela regiao/i,
 ];
 
