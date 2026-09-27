@@ -945,6 +945,14 @@ export const EDITORIAL_WAVE = [
     cover: "/blog/backup-nuvem-empresas-qual-escolher.jpg",
   },
 
+  // ── Onda 11T — APT/DNF após reescrita, fact-check e capa própria.
+  {
+    slug: "como-gerenciar-pacotes-apt-dnf-linux", approvedAt: "2026-09-27",
+    pilar: "/blog/comandos-linux-essenciais-iniciantes", pilarLabel: "Comandos Linux para iniciantes",
+    apoio: "/blog/como-instalar-ubuntu-do-zero", apoioLabel: "Instalar Ubuntu com segurança",
+    cover: "/blog/como-instalar-ubuntu-do-zero.svg",
+  },
+
 ];
 
 
