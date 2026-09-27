@@ -6,13 +6,15 @@ import { isEditorialApproved } from "@/lib/blogEditorialRegistry";
 const pendingSlugs = [
   "comandos-linux-essenciais-iniciantes",
   "como-gerenciar-pacotes-apt-dnf-linux",
-  "como-configurar-ssh-seguro-linux",
 ];
 
-const reviewedButNoindex = "como-usar-rsync-backup-linux";
+const reviewedButNoindex = [
+  "como-configurar-ssh-seguro-linux",
+  "como-usar-rsync-backup-linux",
+];
 
 describe("onda Linux 1 — qualificação fail-closed", () => {
-  it("mantém os três owners ainda não reescritos pendentes e noindex", () => {
+  it("mantém os dois owners ainda não reescritos pendentes e noindex", () => {
     for (const slug of pendingSlugs) {
       expect(getArticleSources(slug).length).toBeGreaterThan(0);
       expect(getTechnicalReviewStatus(slug)).toBe("pending");
@@ -21,10 +23,12 @@ describe("onda Linux 1 — qualificação fail-closed", () => {
     }
   });
 
-  it("permite concluir revisão do rsync sem promover antes da capa e aprovação", () => {
-    expect(getArticleSources(reviewedButNoindex).length).toBeGreaterThan(0);
-    expect(getTechnicalReviewStatus(reviewedButNoindex)).toBe("reviewed");
-    expect(atlasPonteDoArtigo(reviewedButNoindex)).not.toBeNull();
-    expect(isEditorialApproved(reviewedButNoindex)).toBe(false);
+  it("permite concluir revisão sem promover antes da capa e aprovação", () => {
+    for (const slug of reviewedButNoindex) {
+      expect(getArticleSources(slug).length).toBeGreaterThan(0);
+      expect(getTechnicalReviewStatus(slug)).toBe("reviewed");
+      expect(atlasPonteDoArtigo(slug)).not.toBeNull();
+      expect(isEditorialApproved(slug)).toBe(false);
+    }
   });
 });
