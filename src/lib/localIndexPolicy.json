@@ -901,6 +901,30 @@
       "cidadeSlug": "campo-largo",
       "parent": "/tecnico-informatica-campo-largo",
       "lote": 8
+    },
+    {
+      "slug": "tingui",
+      "intent": "diagnóstico de informática no Tingui com foco em desempenho sob carga, Wi-Fi e preservação de dados",
+      "cidade": "Curitiba",
+      "cidadeSlug": "curitiba",
+      "parent": "/tecnico-informatica-curitiba",
+      "lote": 9
+    },
+    {
+      "slug": "ipe-sjp",
+      "intent": "suporte de informática no Ipê com foco em dados, periféricos, notebook e conectividade",
+      "cidade": "São José dos Pinhais",
+      "cidadeSlug": "sao-jose-dos-pinhais",
+      "parent": "/tecnico-informatica-sao-jose-pinhais",
+      "lote": 9
+    },
+    {
+      "slug": "borda-do-campo-sjp",
+      "intent": "diagnóstico de informática na Borda do Campo com foco em remoto versus presencial, rede e hardware",
+      "cidade": "São José dos Pinhais",
+      "cidadeSlug": "sao-jose-dos-pinhais",
+      "parent": "/tecnico-informatica-sao-jose-pinhais",
+      "lote": 9
     }
   ],
   "servicoBairroIndexaveis": [
@@ -1030,5 +1054,10 @@
     "/bairros/sao-silvestre",
     "/bairros/itaqui",
     "/bairros/vila-solene"
+  ],
+  "loteLocal9": [
+    "/bairros/tingui",
+    "/bairros/ipe-sjp",
+    "/bairros/borda-do-campo-sjp"
   ]
 }
