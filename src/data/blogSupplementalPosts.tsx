@@ -530,6 +530,185 @@ export const blogSupplementalPosts: Record<string, BlogPostContent> = {
       </>
     ),
   },
+
+  "como-configurar-ssh-seguro-linux": {
+    title: "Como configurar SSH com segurança no Linux sem perder acesso",
+    excerpt:
+      "Configure OpenSSH com chaves, validação do sshd_config e rollback: teste o acesso antes de desativar senha, trate porta customizada como ruído e evite lockout.",
+    date: "2026-09-27",
+    readTime: "13 min",
+    category: "Linux",
+    content: (
+      <>
+        <p className="lead">
+          Proteger SSH não é empilhar opções de hardening até o servidor “parecer seguro”. O objetivo é reduzir
+          formas desnecessárias de autenticação e privilégio <strong>sem perder o caminho legítimo de
+          administração</strong>. A sequência segura é: entender como o servidor está acessível hoje, preparar uma
+          chave, testar a chave em uma segunda sessão, validar a configuração do daemon e só então remover o método
+          antigo de acesso.
+        </p>
+
+        <h2>Resposta curta: endureça o acesso em etapas reversíveis</h2>
+        <ol>
+          <li>Confirme um caminho de recuperação: console, painel da VM, acesso físico ou sessão já aberta.</li>
+          <li>Instale/valide o OpenSSH Server pela documentação da sua distribuição.</li>
+          <li>Crie uma chave no cliente e teste o login por chave em uma nova sessão.</li>
+          <li>Revise a configuração efetiva antes de mudar autenticação ou usuários permitidos.</li>
+          <li>Teste a sintaxe do <code>sshd</code> antes de recarregar o serviço.</li>
+          <li>Só depois desative autenticação por senha, se o ambiente realmente permitir.</li>
+          <li>Mantenha a sessão antiga aberta até confirmar um novo login completo.</li>
+        </ol>
+
+        <h2>1. Antes de editar: descubra como você recupera o servidor</h2>
+        <p>
+          Se o SSH é o único caminho de administração, uma configuração incorreta pode bloquear o próprio
+          administrador. Em servidor virtual, confirme antes se existe console pelo provedor ou modo de recuperação.
+          Em máquina local, confirme acesso físico. Em qualquer cenário, mantenha uma sessão SSH atual aberta durante
+          os testes e use uma segunda sessão para validar o novo caminho.
+        </p>
+        <p>
+          Esse cuidado vem antes de “desativar senha”, trocar porta ou restringir usuários. Segurança que elimina o
+          caminho de recuperação pode transformar uma correção simples em indisponibilidade.
+        </p>
+
+        <h2>2. Instale e confira o OpenSSH Server</h2>
+        <p>
+          No Ubuntu Server, a documentação oficial usa o pacote <code>openssh-server</code>. Depois da instalação,
+          confirme que o serviço está ativo e que o equipamento está escutando antes de alterar qualquer diretiva.
+        </p>
+        <pre><code>{"sudo apt update\nsudo apt install openssh-server\nsystemctl status ssh\nss -tlnp | grep ssh"}</code></pre>
+        <p>
+          O nome do pacote e do serviço pode mudar em outras distribuições. Não copie comandos de Ubuntu para Fedora,
+          RHEL ou outra família sem consultar a documentação correspondente.
+        </p>
+
+        <h2>3. Gere a chave no cliente, não no servidor</h2>
+        <p>
+          A chave privada deve permanecer no dispositivo cliente. Para uma chave Ed25519, um exemplo comum é:
+        </p>
+        <pre><code>{"ssh-keygen -t ed25519 -C \"administracao-servidor\""}</code></pre>
+        <p>
+          Proteja a chave privada com permissões adequadas e, quando fizer sentido para o uso, com frase secreta.
+          A parte pública pode ser adicionada ao <code>authorized_keys</code> do usuário remoto. O utilitário
+          <code>ssh-copy-id</code> pode ajudar quando a distribuição o disponibiliza:
+        </p>
+        <pre><code>{"ssh-copy-id usuario@servidor\nssh usuario@servidor"}</code></pre>
+        <p>
+          O ponto decisivo é abrir <strong>uma nova conexão</strong> e confirmar que ela usa a chave esperada antes
+          de desligar qualquer método anterior de autenticação.
+        </p>
+
+        <h2>4. Veja a configuração efetiva antes de concluir o que está ativo</h2>
+        <p>
+          OpenSSH pode ler o arquivo principal e arquivos adicionais de configuração. Em Ubuntu, a documentação
+          atual descreve o uso de snippets em <code>/etc/ssh/sshd_config.d/</code>. Antes de editar, descubra de
+          onde a diretiva está vindo e evite manter valores contraditórios em mais de um arquivo.
+        </p>
+        <pre><code>{"sudo sshd -T | less\nsudo grep -R \"^[[:space:]]*PasswordAuthentication\\|^[[:space:]]*PermitRootLogin\\|^[[:space:]]*PubkeyAuthentication\" /etc/ssh/sshd_config /etc/ssh/sshd_config.d 2>/dev/null"}</code></pre>
+        <p>
+          A saída efetiva é mais útil do que assumir que uma linha comentada representa o valor ativo.
+        </p>
+
+        <h2>5. Chaves primeiro; senha só é removida depois do teste</h2>
+        <p>
+          Uma política comum é permitir autenticação por chave e impedir login remoto direto como root. Em um
+          ambiente onde todos os administradores já conseguem entrar por chave e existe recuperação fora do SSH,
+          também pode fazer sentido desativar senha.
+        </p>
+        <pre><code>{"PubkeyAuthentication yes\nPermitRootLogin no\nPasswordAuthentication no"}</code></pre>
+        <p>
+          Não cole essas três linhas e recarregue imediatamente. A ordem segura é testar a chave, validar a
+          configuração, manter a sessão atual aberta, recarregar e então testar uma nova conexão. Se existem
+          automações, appliances, contas legadas ou acesso de emergência dependentes de senha, inventarie-os antes.
+        </p>
+
+        <h2>6. Valide a sintaxe antes de recarregar o daemon</h2>
+        <p>
+          O OpenSSH oferece teste de configuração. Use-o antes de aplicar uma alteração:
+        </p>
+        <pre><code>{"sudo sshd -t"}</code></pre>
+        <p>
+          Sem saída de erro, recarregue o serviço conforme a sua distribuição. No Ubuntu, o serviço normalmente é
+          <code>ssh</code>:
+        </p>
+        <pre><code>{"sudo systemctl reload ssh"}</code></pre>
+        <p>
+          Depois do reload, abra uma nova sessão do zero. Só feche a sessão antiga quando o login novo estiver
+          confirmado.
+        </p>
+
+        <h2>7. Restringir usuários pode ajudar — se a lista estiver correta</h2>
+        <p>
+          Diretivas como <code>AllowUsers</code> e <code>AllowGroups</code> podem reduzir quem tem permissão para
+          autenticar via SSH. Elas também podem bloquear toda a equipe se um usuário ou grupo for omitido. Use-as
+          apenas quando houver inventário claro de administradores e outro caminho de recuperação.
+        </p>
+        <pre><code>{"AllowGroups ssh-admins"}</code></pre>
+        <p>
+          Em ambientes gerenciados por diretório, automação ou configuração central, confirme primeiro como os
+          usuários e grupos chegam ao sistema.
+        </p>
+
+        <h2>8. Trocar a porta não substitui autenticação forte</h2>
+        <p>
+          Mudar a porta padrão pode reduzir ruído de varreduras oportunistas e volume de logs, mas não corrige senha
+          fraca, chave vazada, usuário privilegiado ou software desatualizado. Trate a troca de porta como decisão
+          operacional, não como o núcleo da segurança.
+        </p>
+        <p>
+          Se a porta mudar, atualize firewall, automações, monitoramento e clientes antes de remover a regra antiga.
+          Faça a mudança em duas etapas e teste a nova porta com a antiga ainda disponível quando a arquitetura
+          permitir.
+        </p>
+
+        <h2>9. Firewall, bloqueio de tentativas e MFA são camadas separadas</h2>
+        <p>
+          Firewall pode limitar de onde o serviço é alcançável; ferramentas de bloqueio por log podem reagir a
+          tentativas repetidas; autenticação multifator adiciona outra exigência ao login. Nenhuma dessas camadas
+          deve ser instalada por receita genérica sem considerar a distribuição, o provedor, o método de
+          autenticação e a forma de recuperação.
+        </p>
+        <p>
+          Por isso, este guia não prescreve valores universais de banimento, uma porta específica nem um módulo PAM
+          de terceiros. Para firewall, siga a trilha específica em{" "}
+          <a href="/blog/como-configurar-firewall-ufw-linux">como configurar firewall UFW no Linux</a>.
+        </p>
+
+        <h2>10. O que revisar depois da mudança</h2>
+        <ul>
+          <li>Uma nova sessão autentica pelo método esperado.</li>
+          <li>O usuário administrativo tem apenas o privilégio necessário.</li>
+          <li>O login direto como root está coerente com a política definida.</li>
+          <li>Firewall e monitoramento conhecem a porta realmente usada.</li>
+          <li>Logs de autenticação estão sendo coletados e revisados.</li>
+          <li>Existe processo para revogar uma chave perdida ou de ex-funcionário.</li>
+          <li>Existe acesso de recuperação independente do mesmo arquivo de configuração.</li>
+        </ul>
+
+        <h2>Quando parar e não aplicar a alteração</h2>
+        <p>
+          Pare antes de desativar senha ou recarregar o serviço se você não tem uma segunda sessão funcionando por
+          chave, não tem console de recuperação, não sabe quais automações dependem do SSH, não consegue explicar a
+          configuração efetiva ou encontrou erro em <code>sshd -t</code>. Em servidor remoto, preservar um acesso
+          conhecido é mais importante do que concluir o hardening na mesma sessão.
+        </p>
+
+        <h2>Fontes oficiais consultadas</h2>
+        <ul>
+          <li>
+            <a href="https://ubuntu.com/server/docs/how-to/security/openssh-server/" rel="nofollow noopener" target="_blank">
+              Ubuntu Server — OpenSSH server
+            </a>
+          </li>
+          <li>
+            <a href="https://man.openbsd.org/sshd_config" rel="nofollow noopener" target="_blank">
+              OpenSSH — sshd_config(5)
+            </a>
+          </li>
+        </ul>
+      </>
+    ),
+  },
 };
 
 export default blogSupplementalPosts;
