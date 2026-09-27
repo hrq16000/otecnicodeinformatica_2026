@@ -955,10 +955,11 @@ export const EDITORIAL_SOURCES: Record<string, EditorialSource> = {
     title: "The Linux command line for beginners",
     publisher: "Ubuntu",
     url: "https://ubuntu.com/tutorials/command-line-for-beginners",
-    accessedAt: "2026-09-26",
+    accessedAt: "2026-09-27",
     sourceType: "official",
     supports: [
-      "Navegação, caminhos, arquivos, diretórios, comandos básicos e uso seguro do terminal por iniciantes.",
+      "Navegação por caminhos absolutos e relativos, arquivos, diretórios, pipes, redirecionamento e comandos básicos.",
+      "Uso pedagógico do terminal por iniciantes com atenção ao efeito de operações que alteram ou removem dados.",
     ],
   },
   "ubuntu-package-management-2026": {
@@ -1048,10 +1049,11 @@ export const ARTICLE_SOURCE_MANIFEST: Record<string, ArticleSourceManifest> = {
   "comandos-linux-essenciais-iniciantes": {
     slug: "comandos-linux-essenciais-iniciantes",
     sources: ["ubuntu-cli-beginners-2026"],
-    technicalReview: "pending",
-    factChecked: false,
+    technicalReview: "reviewed",
+    factChecked: true,
+    factCheckedAt: "2026-09-27",
     notes:
-      "Onda Linux 1: fonte primária vinculada; ainda exige reescrita material, remoção de contagem/título promocional e revisão comando a comando antes de qualquer aprovação.",
+      "Reescrita material concluída: remove contagem promocional e receitas destrutivas sem contexto; organiza navegação, arquivos, busca, pipes, permissões, processos e rede com laboratório seguro, man/--help e critérios de parada. rm -rf, kill -9, chmod 777 e sudo deixam de ser recomendações padrão. Permanece noindex até capa/proveniência e aprovação editorial.",
   },
   "como-gerenciar-pacotes-apt-dnf-linux": {
     slug: "como-gerenciar-pacotes-apt-dnf-linux",
