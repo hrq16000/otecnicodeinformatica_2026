@@ -978,6 +978,31 @@ export const WAVE_11P_BATCH_1: EditorialWaveEntry[] = [
   },
 ];
 
+
+/** Onda 11Q — primeira qualificação do backlog Linux. */
+export const WAVE_11Q_BATCH_1: EditorialWaveEntry[] = [
+  {
+    wave: "11A",
+    batch: "18",
+    url: "/blog/como-instalar-ubuntu-do-zero",
+    slug: "como-instalar-ubuntu-do-zero",
+    ownerId: "ubuntu-instalacao-segura-desktop",
+    cluster: "sistemas-operacionais",
+    role: "pilar",
+    publishedAt: "2026-09-26",
+    targetQueries: [
+      "como instalar ubuntu do zero",
+      "instalar ubuntu por pendrive",
+      "como instalar ubuntu no pc",
+    ],
+    doNotDuplicate: [
+      "/blog/trocar-windows-por-linux-vale-a-pena",
+      "/blog/como-instalar-linux-dual-boot-windows",
+      "/blog/como-instalar-windows-11-do-zero",
+    ],
+  },
+];
+
 export const EDITORIAL_WAVES: EditorialWaveEntry[] = [
   ...WAVE_10C_BATCH_0,
   ...WAVE_10D_BATCH_1,
@@ -998,6 +1023,7 @@ export const EDITORIAL_WAVES: EditorialWaveEntry[] = [
   ...WAVE_11N_BATCH_1,
   ...WAVE_11O_BATCH_1,
   ...WAVE_11P_BATCH_1,
+  ...WAVE_11Q_BATCH_1,
 ];
 
 /** URLs monitoradas (ordem estável, sem duplicatas). */
