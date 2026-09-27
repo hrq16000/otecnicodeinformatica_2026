@@ -764,6 +764,29 @@ export const CONTENT_INTENT_MAP: ContentNode[] = [
     justificativa:
       "Owner específico do uso do rsync: sintaxe, direção da cópia, barra final, dry-run, exclusões e --delete. Estratégia geral de backup, prova de restauração e backup em nuvem permanecem em URLs próprias.",
   },
+  {
+    url: "/blog/como-configurar-ssh-seguro-linux",
+    intent: "informational",
+    topic: "configuração segura do servidor OpenSSH com autenticação por chave e prevenção de lockout",
+    queries: [
+      "configurar ssh seguro linux",
+      "ssh chave publica linux",
+      "desativar senha ssh sem perder acesso",
+    ],
+    serviceParent: "/servicos/suporte-tecnico-empresarial",
+    bridgesTo: [
+      "/blog/como-configurar-firewall-ufw-linux",
+      "/blog/comandos-linux-essenciais-iniciantes",
+      "/diagnostico-tecnico",
+    ],
+    doNotDuplicate: [
+      "/blog/como-configurar-firewall-ufw-linux",
+      "/blog/como-configurar-2fa-em-tudo",
+    ],
+    novaNestaRodada: false,
+    justificativa:
+      "Owner do acesso remoto OpenSSH: chaves, autenticação, usuários permitidos, validação do daemon e rollback. Firewall e MFA permanecem em owners separados.",
+  },
 ];
 
 /** Nó do mapa por URL canônica (sem barra final). */
