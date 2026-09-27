@@ -1028,6 +1028,31 @@ export const WAVE_11R_BATCH_1: EditorialWaveEntry[] = [
   },
 ];
 
+
+/** Onda 11S — promoção controlada do owner SSH. */
+export const WAVE_11S_BATCH_1: EditorialWaveEntry[] = [
+  {
+    wave: "11A",
+    batch: "20",
+    url: "/blog/como-configurar-ssh-seguro-linux",
+    slug: "como-configurar-ssh-seguro-linux",
+    ownerId: "openssh-chaves-validacao-rollback",
+    cluster: "seguranca-infra",
+    role: "satelite",
+    publishedAt: "2026-09-27",
+    targetQueries: [
+      "configurar ssh seguro linux",
+      "ssh chave publica linux",
+      "desativar senha ssh sem perder acesso",
+    ],
+    doNotDuplicate: [
+      "/blog/como-configurar-firewall-ufw-linux",
+      "/blog/como-configurar-2fa-em-tudo",
+      "/blog/como-configurar-vpn-empresarial",
+    ],
+  },
+];
+
 export const EDITORIAL_WAVES: EditorialWaveEntry[] = [
   ...WAVE_10C_BATCH_0,
   ...WAVE_10D_BATCH_1,
@@ -1050,6 +1075,7 @@ export const EDITORIAL_WAVES: EditorialWaveEntry[] = [
   ...WAVE_11P_BATCH_1,
   ...WAVE_11Q_BATCH_1,
   ...WAVE_11R_BATCH_1,
+  ...WAVE_11S_BATCH_1,
 ];
 
 /** URLs monitoradas (ordem estável, sem duplicatas). */
