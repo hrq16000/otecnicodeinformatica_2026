@@ -270,7 +270,7 @@ const rows: Array<EditorialHubSummary & { slug: string }> = [
   },
   {
     "slug": "o-que-e-informatica",
-    "title": "O que é informática? Definição completa em português",
+    "title": "O que é informática? Significado, definição e exemplos",
     "excerpt": "Informática é o processamento automático da informação com computadores. Entenda hardware, software, redes, dados e a diferença entre informática, computação e TI.",
     "date": "2026-08-15",
     "readTime": "10 min",
@@ -278,8 +278,8 @@ const rows: Array<EditorialHubSummary & { slug: string }> = [
   },
   {
     "slug": "informatica-basica",
-    "title": "Informática Básica: O Que É, O Que Ensina e Por Onde Começar",
-    "excerpt": "Informática básica reúne sistema operacional, arquivos, internet, e-mail, texto, planilhas, segurança e backup. Veja o que estudar e pratique do zero.",
+    "title": "Informática básica: conteúdos, noções e conhecimentos essenciais",
+    "excerpt": "Informática básica reúne sistema operacional, arquivos, internet, e-mail, texto, planilhas, segurança e hardware. Veja os conhecimentos essenciais para iniciantes.",
     "date": "2026-08-15",
     "readTime": "12 min",
     "category": "Fundamentos"
@@ -287,7 +287,7 @@ const rows: Array<EditorialHubSummary & { slug: string }> = [
   {
     "slug": "como-aprender-informatica",
     "title": "Como Aprender Informática do Zero: Guia Prático para Iniciantes",
-    "excerpt": "Aprenda informática do zero com roteiro em 4 fases, plano de 30 dias, exercícios práticos e recursos gratuitos para estudo, trabalho ou concurso.",
+    "excerpt": "Como aprender informática do zero: roteiro passo a passo em 4 fases, com plano de 30 dias, exercícios práticos e objetivos para trabalho ou concurso.",
     "date": "2026-08-15",
     "readTime": "13 min",
     "category": "Fundamentos"
