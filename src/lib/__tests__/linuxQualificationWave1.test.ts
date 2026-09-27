@@ -5,7 +5,6 @@ import { isEditorialApproved } from "@/lib/blogEditorialRegistry";
 
 const slugs = [
   "comandos-linux-essenciais-iniciantes",
-  "como-instalar-ubuntu-do-zero",
   "como-gerenciar-pacotes-apt-dnf-linux",
   "como-configurar-ssh-seguro-linux",
   "como-usar-rsync-backup-linux",
