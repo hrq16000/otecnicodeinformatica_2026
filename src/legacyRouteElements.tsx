@@ -198,7 +198,6 @@ const CapelaVelhaAraucaria = lazyPagina(() => import("./pages/bairros/CapelaVelh
 const ThomazCoelhoAraucaria = lazyPagina(() => import("./pages/bairros/ThomazCoelhoAraucaria"));
 
 const CacheiraAraucaria = lazyPagina(() => import("./pages/bairros/CacheiraAraucaria"));
-const ThomazCoelhoIIAraucaria = lazyPagina(() => import("./pages/bairros/ThomazCoelhoIIAraucaria"));
 const JardimBoaVistaAraucaria = lazyPagina(() => import("./pages/bairros/JardimBoaVistaAraucaria"));
 const SaoMiguelAraucaria = lazyPagina(() => import("./pages/bairros/SaoMiguelAraucaria"));
 const CaliforniaAraucaria = lazyPagina(() => import("./pages/bairros/CaliforniaAraucaria"));
@@ -697,9 +696,7 @@ export const legacyRouteElements: Record<string, () => React.ReactElement> = {
   "/bairros/centro-araucaria": () => <AraucariaCentro />,
   "/bairros/capela-velha": () => <CapelaVelhaAraucaria />,
   "/bairros/thomaz-coelho": () => <ThomazCoelhoAraucaria />,
-  "/bairros/cachoeira-araucaria": () => <CacheiraAraucaria />,
-  "/bairros/thomaz-coelho-ii": () => <ThomazCoelhoIIAraucaria />,
-  "/bairros/jardim-boa-vista-araucaria": () => <JardimBoaVistaAraucaria />,
+  "/bairros/cachoeira-araucaria": () => <CacheiraAraucaria />,  "/bairros/jardim-boa-vista-araucaria": () => <JardimBoaVistaAraucaria />,
   "/bairros/sao-miguel-araucaria": () => <SaoMiguelAraucaria />,
   "/bairros/california-araucaria": () => <CaliforniaAraucaria />,
   "/bairros/vila-nova-araucaria": () => <VilaNovaAraucaria />,
