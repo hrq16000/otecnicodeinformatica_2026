@@ -1077,6 +1077,31 @@ export const WAVE_11T_BATCH_1: EditorialWaveEntry[] = [
   },
 ];
 
+
+/** Onda 11U — promoção final da coorte Linux 1. */
+export const WAVE_11U_BATCH_1: EditorialWaveEntry[] = [
+  {
+    wave: "11A",
+    batch: "22",
+    url: "/blog/comandos-linux-essenciais-iniciantes",
+    slug: "comandos-linux-essenciais-iniciantes",
+    ownerId: "linux-terminal-comandos-basicos",
+    cluster: "linux-fundamentos",
+    role: "pilar",
+    publishedAt: "2026-09-27",
+    targetQueries: [
+      "comandos linux iniciantes",
+      "comandos básicos linux",
+      "como usar terminal linux",
+    ],
+    doNotDuplicate: [
+      "/blog/como-gerenciar-pacotes-apt-dnf-linux",
+      "/blog/como-configurar-ssh-seguro-linux",
+      "/blog/como-instalar-ubuntu-do-zero",
+    ],
+  },
+];
+
 export const EDITORIAL_WAVES: EditorialWaveEntry[] = [
   ...WAVE_10C_BATCH_0,
   ...WAVE_10D_BATCH_1,
@@ -1101,6 +1126,7 @@ export const EDITORIAL_WAVES: EditorialWaveEntry[] = [
   ...WAVE_11R_BATCH_1,
   ...WAVE_11S_BATCH_1,
   ...WAVE_11T_BATCH_1,
+  ...WAVE_11U_BATCH_1,
 ];
 
 /** URLs monitoradas (ordem estável, sem duplicatas). */
