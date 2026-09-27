@@ -684,6 +684,14 @@ const rows: Array<EditorialHubSummary & { slug: string }> = [
     "readTime": "13 min",
     "category": "Linux"
   },
+  {
+    "slug": "como-configurar-ssh-seguro-linux",
+    "title": "Como configurar SSH com segurança no Linux sem perder acesso",
+    "excerpt": "Chaves, sshd_config, validação antes do reload e rollback: endureça o OpenSSH em etapas sem transformar hardening em lockout.",
+    "date": "2026-09-27",
+    "readTime": "13 min",
+    "category": "Linux"
+  },
 ];
 
 export const EDITORIAL_HUB_SUMMARIES: Record<string, EditorialHubSummary> = Object.fromEntries(
