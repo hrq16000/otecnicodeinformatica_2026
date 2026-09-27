@@ -1485,12 +1485,12 @@ export const SERVICOS_CORE: Record<string, ServicoLandingData> = {
       "Conserto de TV LED, LCD e Smart TV em Curitiba, com coleta e avaliação em bancada. Não realizamos conserto de TV a domicílio; orçamento após diagnóstico.",
     serviceName: "Conserto de TV e Smart TV",
     serviceDescription:
-      "Conserto de televisores LED, LCD e Smart TV em Curitiba e região, com coleta, avaliação em bancada, reparo em nível de componente quando viável e critérios claros de aceite ou recusa."
+      "Conserto de televisores LED, LCD e Smart TV em Curitiba e região, com coleta, avaliação em bancada, reparo em nível de componente quando viável e critérios claros de aceite ou recusa.",
     eyebrow: "TV e Smart TV em Curitiba",
     h1: "Conserto de TV LED, LCD e Smart TV em Curitiba",
     h1Accent: "com avaliação em bancada, coleta e entrega",
     intro:
-      "TV LED, LCD ou Smart TV que não liga, liga sem imagem, apresenta listras ou manchas, perde o som, reinicia ou trava na tela da marca precisa de diagnóstico por sintoma. Fonte, placa principal, iluminação interna, comando do painel e o próprio painel podem produzir sinais parecidos. Não realizamos conserto de TV a domicílio: o fluxo é coleta, avaliação em bancada e orçamento antes de qualquer reparo. Informe marca, modelo, tamanho e sintoma na triagem pelo WhatsApp."
+      "TV LED, LCD ou Smart TV que não liga, liga sem imagem, apresenta listras ou manchas, perde o som, reinicia ou trava na tela da marca precisa de diagnóstico por sintoma. Fonte, placa principal, iluminação interna, comando do painel e o próprio painel podem produzir sinais parecidos. Não realizamos conserto de TV a domicílio: o fluxo é coleta, avaliação em bancada e orçamento antes de qualquer reparo. Informe marca, modelo, tamanho e sintoma na triagem pelo WhatsApp.",
     whatsappMessage:
       "Olá! Vim da página de conserto de TV e Smart TV. Triagem: (1) marca e modelo: (2) tamanho da tela: " +
       "(3) o que acontece ao ligar (não liga / sem imagem / sem som / listras / reinicia): (4) houve queda, raio ou oscilação de energia: " +
