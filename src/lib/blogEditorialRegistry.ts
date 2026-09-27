@@ -1540,6 +1540,24 @@ const WAVE_11R: EditorialApproval[] = [
   },
 ];
 
+
+const WAVE_11S: EditorialApproval[] = [
+  {
+    slug: "como-configurar-ssh-seguro-linux",
+    status: "approved",
+    authorType: "organization",
+    authorId: INSTITUTIONAL_AUTHOR.id,
+    reviewedAt: "2026-09-27",
+    approvedAt: "2026-09-27",
+    imageOrigin: "licensed",
+    imageLicense: "CC BY-SA 3.0",
+    imageAttribution:
+      "Foto: BalticServers.com (Wikimedia Commons), CC BY-SA 3.0 — https://commons.wikimedia.org/wiki/File:BalticServers_data_center.jpg",
+    notes:
+      "Owner específico de OpenSSH revisado e fact-checked em 2026-09-27. Capa reutiliza fotografia real licenciada já versionada no acervo; conteúdo prioriza chave testada, configuração efetiva, sshd -t, segunda sessão e rollback, sem tratar porta customizada ou fail2ban como núcleo da segurança.",
+  },
+];
+
 export const APPROVED_EDITORIAL_CONTENT = new Map<string, EditorialApproval>([
 
   ...FIRST_WAVE_SLUGS.map((slug) => [
@@ -1606,6 +1624,7 @@ export const APPROVED_EDITORIAL_CONTENT = new Map<string, EditorialApproval>([
   ...WAVE_11P.map((a) => [a.slug, a] as [string, EditorialApproval]),
   ...WAVE_11Q.map((a) => [a.slug, a] as [string, EditorialApproval]),
   ...WAVE_11R.map((a) => [a.slug, a] as [string, EditorialApproval]),
+  ...WAVE_11S.map((a) => [a.slug, a] as [string, EditorialApproval]),
 
 ]);
 
