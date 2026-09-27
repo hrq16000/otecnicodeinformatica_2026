@@ -696,6 +696,15 @@ export const EDITORIAL_COVERS: Record<string, EditorialCover> = {
     height: 630,
   },
 
+  // ── Onda 11T — APT/DNF: promoção controlada após revisão técnica.
+  // Reuso controlado de arte editorial própria já versionada no acervo.
+  "como-gerenciar-pacotes-apt-dnf-linux": {
+    src: "/blog/como-instalar-ubuntu-do-zero.svg",
+    alt: "Ilustração editorial de ambiente Linux usada para representar instalação, atualização e remoção segura de pacotes",
+    width: 1200,
+    height: 630,
+  },
+
 };
 
 export function getEditorialCover(slug: string): EditorialCover | undefined {
