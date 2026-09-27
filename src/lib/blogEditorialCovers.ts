@@ -670,6 +670,14 @@ export const EDITORIAL_COVERS: Record<string, EditorialCover> = {
     height: 630,
   },
 
+  // ── Onda 11Q — instalação segura do Ubuntu.
+  "como-instalar-ubuntu-do-zero": {
+    src: "/blog/como-instalar-ubuntu-do-zero.svg",
+    alt: "Ilustração editorial de notebook, pendrive e disco representando instalação segura de Linux",
+    width: 1200,
+    height: 630,
+  },
+
 };
 
 export function getEditorialCover(slug: string): EditorialCover | undefined {
