@@ -32,3 +32,31 @@ describe("guia suplementar SSD ausente no Windows Setup", () => {
     expect(EDITORIAL_HUB_SUMMARIES[SLUG]?.category).toBe("Procedimentos Técnicos");
   });
 });
+
+
+describe("guia suplementar de instalação segura do Ubuntu", () => {
+  const slug = "como-instalar-ubuntu-do-zero";
+
+  it("substitui o conteúdo herdado por uma versão editorial completa", () => {
+    const post = blogSupplementalPosts[slug];
+    expect(post).toBeTruthy();
+    expect(post.title).toMatch(/instalar Ubuntu do zero/i);
+    expect(post.excerpt.length).toBeGreaterThan(120);
+    expect(post.readTime).toBe("13 min");
+    expect(post.content).toBeTruthy();
+  });
+
+  it("só entra no índice com aprovação, revisão, fontes e capa próprias", () => {
+    expect(isEditorialApproved(slug)).toBe(true);
+    expect(getTechnicalReviewStatus(slug)).toBe("reviewed");
+    expect(getArticleSources(slug).length).toBeGreaterThanOrEqual(2);
+    expect(getEditorialCover(slug)?.src).toBe("/blog/como-instalar-ubuntu-do-zero.svg");
+  });
+
+  it("tem owner, anti-canibalização e descoberta no hub", () => {
+    const entry = findEditorialEntry("/blog/" + slug);
+    expect(entry?.ownerId).toBe("ubuntu-instalacao-segura-desktop");
+    expect(entry?.doNotDuplicate).toContain("/blog/como-instalar-linux-dual-boot-windows");
+    expect(EDITORIAL_HUB_SUMMARIES[slug]?.category).toBe("Linux");
+  });
+});
