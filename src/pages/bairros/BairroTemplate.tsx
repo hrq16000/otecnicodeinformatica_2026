@@ -68,8 +68,8 @@ export const BairroTemplate = ({ data }: BairroTemplateProps) => {
   const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(whatsappMessage)}`;
   const primaryImage = {
     contentUrl: `${SITE_BASE_URL}/fotos/bancada-tecnica.jpg`,
-    width: 1200,
-    height: 800,
+    width: 1024,
+    height: 735,
     caption: `Bancada técnica usada em diagnóstico de computadores e notebooks — atendimento disponível em ${data.nome}, ${data.cidade}`,
   };
 
