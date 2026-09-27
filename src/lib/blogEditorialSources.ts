@@ -1158,10 +1158,10 @@ export const ARTICLE_SOURCE_MANIFEST: Record<string, ArticleSourceManifest> = {
     sources: [],
     technicalReview: "reviewed",
     factChecked: true,
-    factCheckedAt: "2026-08-12",
+    factCheckedAt: "2026-09-26",
     stableKnowledge: true,
     notes:
-      "Revisão concluída (Rodada 4Y): identificação da tela pelo código do painel, distinção entre defeito de painel e de cabo/placa de vídeo, alerta de risco em telas coladas e touch, sem indicação de peça específica, sem preço de peça e sem promessa de compatibilidade universal. Conhecimento técnico estável — sem fonte visível.",
+      "Revisão material concluída em 2026-09-26: remove template genérico e alegações frágeis; diferencia painel, cabo, iluminação e placa; exige identificação pelo código e especificações do painel; cobre eDP/LVDS, tela touch/colada, desconexão da bateria antes do flat cable e teste controlado; sem preço genérico, SLA, lista artificial de cidades ou compatibilidade universal.",
   },
   "como-limpar-notebook-por-dentro": {
     slug: "como-limpar-notebook-por-dentro",
