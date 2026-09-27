@@ -31,16 +31,6 @@ export const ATLAS_PONTES_ARTIGOS: Record<string, AtlasPonteArtigo> = {
       contexto: "Conecte os comandos ao vocabulário de arquivos, sistema, rede e segurança.",
     },
   },
-  "como-instalar-ubuntu-do-zero": {
-    temaId: "fundamentos",
-    porQue:
-      "Instalar um sistema operacional mexe em boot, armazenamento e dados. A trilha de fundamentos mantém backup, teste de hardware e escolha de disco antes da escrita.",
-    proximoPasso: {
-      rotulo: "Trocar Windows por Linux vale a pena?",
-      to: "/blog/trocar-windows-por-linux-vale-a-pena",
-      contexto: "Valide compatibilidade de aplicativos, periféricos e arquivos antes de alterar o disco.",
-    },
-  },
   "como-gerenciar-pacotes-apt-dnf-linux": {
     temaId: "fundamentos",
     porQue:
