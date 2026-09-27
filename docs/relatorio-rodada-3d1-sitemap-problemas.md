@@ -1,6 +1,6 @@
 # Relatório — RODADA 3D.1 (microgate do sitemap de problemas)
 
-Data: 2026-08-06 · Domínio: https://tecnico.curitiba.br · Escopo: correção isolada, sem conteúdo novo
+Data: 2026-08-06 · Domínio: https://[LEGACY_DOMAIN_REMOVED] · Escopo: correção isolada, sem conteúdo novo
 
 ## 1. Causa raiz
 
@@ -51,8 +51,8 @@ exit 1
 
 | URL | Elegível antes | Critério ausente | Ação | Depois | Sitemap | Canonical |
 |---|---|---|---|---|---|---|
-| `/problemas/notebook-nao-liga` | parcial | links de entrada no HTML servido | link estático a partir de `/servicos` e `/servicos/manutencao-de-notebook` | ✔ elegível | `sitemap-problemas.xml` | self, `https://tecnico.curitiba.br/problemas/notebook-nao-liga` |
-| `/problemas/computador-lento` | parcial | links de entrada + `lastmod` futuro (2026-08-08) | link estático a partir de `/servicos` e `/servicos/manutencao-de-computador`; lastmod → 2026-08-06 | ✔ elegível | `sitemap-problemas.xml` | self, `https://tecnico.curitiba.br/problemas/computador-lento` |
+| `/problemas/notebook-nao-liga` | parcial | links de entrada no HTML servido | link estático a partir de `/servicos` e `/servicos/manutencao-de-notebook` | ✔ elegível | `sitemap-problemas.xml` | self, `https://[LEGACY_DOMAIN_REMOVED]/problemas/notebook-nao-liga` |
+| `/problemas/computador-lento` | parcial | links de entrada + `lastmod` futuro (2026-08-08) | link estático a partir de `/servicos` e `/servicos/manutencao-de-computador`; lastmod → 2026-08-06 | ✔ elegível | `sitemap-problemas.xml` | self, `https://[LEGACY_DOMAIN_REMOVED]/problemas/computador-lento` |
 
 Demais critérios verificados no artefato (ambas): HTTP 200, title/description/H1
 exclusivos, 716 e 1020 palavras no HTML servido, `WebPage` + `BreadcrumbList` +

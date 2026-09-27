@@ -41,7 +41,7 @@ Execução: 13/08/2026, sandbox de build do projeto. Nenhuma falha mascarada.
 | `check:cannibalization` | ✅ com 2 avisos | 19 páginas P0 comparadas, nenhuma canibalização bloqueante |
 | `check:security` | ✅ | `reviews.client_phone`, `reviews.select_star`, `og_validation_status` seguem 401 |
 | `check:rls-always-true` | ✅ | 14 migrações varridas; `partner_program_settings` SELECT allowlistado com justificativa |
-| `check:nap -- --confirm=5541997452053` | ✅ | 6/6 páginas auditadas, 0 violações (`reports/nap-whatsapp.json`) |
+| `check:nap -- --confirm=[LEGACY_CONTACT_REMOVED]` | ✅ | 6/6 páginas auditadas, 0 violações (`reports/nap-whatsapp.json`) |
 
 ## E2E
 

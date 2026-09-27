@@ -1,6 +1,6 @@
 # Relatório — RODADA 3D (terceira onda editorial)
 
-Data: 2026-08-06 · Domínio: https://tecnico.curitiba.br
+Data: 2026-08-06 · Domínio: https://[LEGACY_DOMAIN_REMOVED]
 
 ## 1. Descoberta de rotas (antes de editar)
 

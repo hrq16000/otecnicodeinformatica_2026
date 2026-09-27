@@ -21,7 +21,7 @@ MODELO            Service Area Business
 ENDEREÇO          oculto
 ÁREA PRINCIPAL    Curitiba
 ÁREA SECUNDÁRIA   São José dos Pinhais
-SITE              https://tecnico.curitiba.br
+SITE              https://[LEGACY_DOMAIN_REMOVED]
 WHATSAPP          +55 41 99708-6380
 DESCRIÇÃO         versão de 701 caracteres (Parte 7)
 SERVIÇOS          os 12 da Parte 6, sem preço

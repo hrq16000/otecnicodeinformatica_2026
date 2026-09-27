@@ -1,6 +1,6 @@
 # Rodada 3C — Publicação, validação e monitoramento
 
-Data: 06/08/2026 · Base: https://tecnico.curitiba.br
+Data: 06/08/2026 · Base: https://[LEGACY_DOMAIN_REMOVED]
 
 ## 1. Publicação e páginas no ar
 
@@ -45,7 +45,7 @@ Artefatos: `reports/edge-smoke.json`, `reports/redirect-coverage.json`,
 | /servicos/recuperacao-de-dados | PASS | Submitted and indexed | 12/07 |
 | /problemas/computador-lento | NEUTRAL | URL is unknown to Google | — |
 
-Desempenho 05/07–02/08 (28 dias, propriedade `sc-domain:tecnico.curitiba.br`):
+Desempenho 05/07–02/08 (28 dias, propriedade `sc-domain:[LEGACY_DOMAIN_REMOVED]`):
 
 | URL | Impressões | Cliques | Posição média |
 | --- | ---: | ---: | ---: |

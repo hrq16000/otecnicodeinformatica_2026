@@ -2,7 +2,7 @@
 
 **Operação:** Telemetria first-party do funil (`click_events`)
 **Status:** AUTORIZADO — decisão de governança de 07/08/2026 (referência UTC 08/08/2026)
-**Responsável pela decisão:** Henrique Rodrigues — responsável pelo projeto tecnico.curitiba.br
+**Responsável pela decisão:** Henrique Rodrigues — responsável pelo projeto [LEGACY_DOMAIN_REMOVED]
 **Rodada de implementação:** 4E.4
 **Revisão obrigatória:** anual (GOVERNANCE_REVIEW_MONTHS = 12) — próxima revisão até 07/08/2027
 
@@ -12,13 +12,13 @@
 
 | Papel | Identificação |
 | --- | --- |
-| Controlador | Operação tecnico.curitiba.br (Henrique Rodrigues) |
+| Controlador | Operação [LEGACY_DOMAIN_REMOVED] (Henrique Rodrigues) |
 | Operador (infraestrutura) | Provedor de backend gerenciado do portal (banco de dados e funções) |
 | Encarregado / contato | Canal público de contato do portal (WhatsApp e página de privacidade) |
 
 ## 2. Categorias de titulares
 
-Visitantes do portal tecnico.curitiba.br que interagem com o funil de atendimento
+Visitantes do portal [LEGACY_DOMAIN_REMOVED] que interagem com o funil de atendimento
 (cliques em CTA, abertura de triagem, envio de agendamento, encaminhamento a WhatsApp).
 
 ## 3. Categorias de dados tratados

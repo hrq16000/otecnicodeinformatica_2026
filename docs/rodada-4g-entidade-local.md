@@ -36,7 +36,7 @@ Estado final idêntico ao inicial (ver §32).
 | CEP | **ausente** | — | Não | Não |
 | Horário | Seg–Sex 08:00–18:00 · Sáb 09:00–13:00 | `OPENING_HOURS` | Sim (schema) | Não verificado externamente |
 | Área de atendimento | Curitiba, SJP, Pinhais, Colombo, Araucária, Campo Largo, RMC | `siteConfig.serviceArea` | Sim | Não |
-| URL canônica | https://tecnico.curitiba.br | `siteConfig.baseUrl` | Sim | Não |
+| URL canônica | https://[LEGACY_DOMAIN_REMOVED] | `siteConfig.baseUrl` | Sim | Não |
 | Logo | og-image / logo do portal | `siteConfig.defaultOgImage` | Sim | Não |
 | Ano de início | 1998 | `siteConfig.foundedYear` | Sim | **Não comprovado documentalmente** |
 
