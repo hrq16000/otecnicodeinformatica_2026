@@ -84,6 +84,8 @@ export const LOTE_LOCAL_3 = (data as { loteLocal3?: string[] }).loteLocal3 ?? []
 export const LOTE_LOCAL_4 = (data as { loteLocal4?: string[] }).loteLocal4 ?? [];
 /** Lote 5 — bairros adicionais de Curitiba + SJP com conteúdo autoral. */
 export const LOTE_LOCAL_5 = (data as { loteLocal5?: string[] }).loteLocal5 ?? [];
+/** Lote 6 — bairros promovidos somente após conteúdo autoral + medição de similaridade. */
+export const LOTE_LOCAL_6 = (data as { loteLocal6?: string[] }).loteLocal6 ?? [];
 
 /** Metadados do bairro âncora (cidade-pai, intenção, lote). */
 export function bairroAncora(slug: string): BairroAncora | undefined {

@@ -327,7 +327,7 @@
     "check:national-foundation-pillars": "node scripts/check-national-foundation-pillars.mjs",
     "ssr:with-server": "node scripts/with-ssr-server.mjs",
     "gates:local": "node scripts/with-ssr-server.mjs npm run check:local-all",
-    "check:local-all": "npm run check:local-template-policy && npm run check:local-index-policy && npm run check:local-doorway && npm run check:local-neighborhood-intent && npm run check:local-service-intent && npm run check:local-interlinking && npm run check:local-seo-quality && npm run check:local-intro-similarity && npm run check:local-schema && npm run check:bairros-galeria && npm run check:local-regression",
+    "check:local-all": "npm run check:local-template-policy && npm run check:bairro-index-readiness && npm run check:local-index-policy && npm run check:local-doorway && npm run check:programmatic-similarity && npm run check:local-neighborhood-intent && npm run check:local-service-intent && npm run check:local-interlinking && npm run check:local-seo-quality && npm run check:local-intro-similarity && npm run check:local-schema && npm run check:bairros-galeria && npm run check:local-regression",
     "test": "vitest run",
     "test:unit": "vitest run --project unit --project scripts",
     "test:unit:watch": "vitest --project unit --project scripts",
@@ -394,7 +394,8 @@
     "deploy:check:list": "node scripts/run-pipeline.mjs deploy:check --list",
     "deploy:check:strict": "node scripts/with-ssr-server.mjs node scripts/run-pipeline.mjs deploy:check --with-optional",
     "report:gsc-snapshot": "node scripts/report-gsc-snapshot.mjs",
-    "report:gsc-baseline": "node scripts/report-gsc-baseline.mjs"
+    "report:gsc-baseline": "node scripts/report-gsc-baseline.mjs",
+    "check:bairro-index-readiness": "node scripts/check-bairro-index-readiness.mjs"
   },
   "dependencies": {
     "@ai-sdk/openai": "^4.0.72",
