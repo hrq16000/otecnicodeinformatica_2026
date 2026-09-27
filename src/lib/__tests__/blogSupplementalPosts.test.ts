@@ -5,6 +5,7 @@ import { getArticleSources, getTechnicalReviewStatus } from "@/lib/blogEditorial
 import { isEditorialApproved } from "@/lib/blogEditorialRegistry";
 import { findEditorialEntry } from "@/lib/editorialWavesRegistry";
 import { EDITORIAL_HUB_SUMMARIES } from "@/lib/editorialHubSummaries";
+import { contentNode } from "@/lib/contentIntentMap";
 
 const SLUG = "ssd-nao-aparece-no-instalador-do-windows";
 
@@ -57,6 +58,34 @@ describe("guia suplementar de instalação segura do Ubuntu", () => {
     const entry = findEditorialEntry("/blog/" + slug);
     expect(entry?.ownerId).toBe("ubuntu-instalacao-segura-desktop");
     expect(entry?.doNotDuplicate).toContain("/blog/como-instalar-linux-dual-boot-windows");
+    expect(EDITORIAL_HUB_SUMMARIES[slug]?.category).toBe("Linux");
+  });
+});
+
+
+describe("guia suplementar de rsync para backup no Linux", () => {
+  const slug = "como-usar-rsync-backup-linux";
+
+  it("substitui o texto-modelo por conteúdo específico e seguro", () => {
+    const post = blogSupplementalPosts[slug];
+    expect(post).toBeTruthy();
+    expect(post.title).toMatch(/rsync/i);
+    expect(post.excerpt).toMatch(/sincroniza|sincronização/i);
+    expect(post.readTime).toBe("13 min");
+    expect(post.content).toBeTruthy();
+  });
+
+  it("conclui revisão técnica sem liberar indexação prematuramente", () => {
+    expect(getTechnicalReviewStatus(slug)).toBe("reviewed");
+    expect(getArticleSources(slug).length).toBeGreaterThanOrEqual(1);
+    expect(isEditorialApproved(slug)).toBe(false);
+    expect(getEditorialCover(slug)).toBeUndefined();
+  });
+
+  it("tem owner distinto da estratégia geral de backup", () => {
+    const node = contentNode("/blog/" + slug);
+    expect(node?.intent).toBe("informational");
+    expect(node?.doNotDuplicate).toContain("/blog/backup-como-proteger-seus-arquivos");
     expect(EDITORIAL_HUB_SUMMARIES[slug]?.category).toBe("Linux");
   });
 });

@@ -740,6 +740,30 @@ export const CONTENT_INTENT_MAP: ContentNode[] = [
     justificativa:
       "O escopo é o arquivo individual que não abre, com trabalho sobre cópia e versões anteriores. Disco com defeito e rotina de backup continuam em URLs distintas.",
   },
+  {
+    url: "/blog/como-usar-rsync-backup-linux",
+    intent: "informational",
+    topic: "cópia e sincronização de arquivos com rsync dentro de uma estratégia de backup",
+    queries: [
+      "rsync backup linux",
+      "como usar rsync",
+      "rsync dry run delete",
+    ],
+    serviceParent: "/servicos/backup-para-empresas",
+    bridgesTo: [
+      "/blog/backup-como-proteger-seus-arquivos",
+      "/blog/como-testar-restauracao-de-backup",
+      "/decisoes/nuvem-ou-hd-externo",
+    ],
+    doNotDuplicate: [
+      "/blog/backup-como-proteger-seus-arquivos",
+      "/blog/como-testar-restauracao-de-backup",
+      "/blog/como-fazer-backup-na-nuvem",
+    ],
+    novaNestaRodada: false,
+    justificativa:
+      "Owner específico do uso do rsync: sintaxe, direção da cópia, barra final, dry-run, exclusões e --delete. Estratégia geral de backup, prova de restauração e backup em nuvem permanecem em URLs próprias.",
+  },
 ];
 
 /** Nó do mapa por URL canônica (sem barra final). */

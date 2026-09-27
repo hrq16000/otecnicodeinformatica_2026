@@ -1011,10 +1011,12 @@ export const EDITORIAL_SOURCES: Record<string, EditorialSource> = {
     title: "rsync(1) manpage",
     publisher: "rsync / Samba",
     url: "https://rsync.samba.org/ftp/rsync/rsync.1",
-    accessedAt: "2026-09-26",
+    accessedAt: "2026-09-27",
     sourceType: "official",
     supports: [
-      "Sintaxe, cópia local/remota, modo archive e comportamento das principais opções do rsync.",
+      "Sintaxe e cópia local/remota, incluindo a diferença causada pela barra final no caminho de origem.",
+      "Modo archive e opções de inspeção como --dry-run/-n e --itemize-changes/-i.",
+      "Comportamento destrutivo de --delete e recomendação explícita do manual para ensaiar com --dry-run antes de excluir.",
     ],
   },
 
@@ -1065,10 +1067,11 @@ export const ARTICLE_SOURCE_MANIFEST: Record<string, ArticleSourceManifest> = {
   "como-usar-rsync-backup-linux": {
     slug: "como-usar-rsync-backup-linux",
     sources: ["rsync-manpage-2026"],
-    technicalReview: "pending",
-    factChecked: false,
+    technicalReview: "reviewed",
+    factChecked: true,
+    factCheckedAt: "2026-09-27",
     notes:
-      "Onda Linux 1: manpage oficial vinculada; ainda exige separar sincronização de backup, revisar --delete/automação e adicionar restauração/verificação antes de promoção.",
+      "Reescrita material concluída: rsync é tratado como cópia/sincronização e não como backup por si só; barra final, --dry-run e --delete seguem a manpage oficial; automação só entra após validação manual e o texto exige retenção independente e teste de restauração. Conteúdo permanece noindex até capa/proveniência e aprovação editorial.",
   },
 
   "pc-nao-liga-o-que-fazer": {
