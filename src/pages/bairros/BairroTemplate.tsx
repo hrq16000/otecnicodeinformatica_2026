@@ -21,7 +21,7 @@ import { ServiceLocalLinks } from "@/components/ServiceLocalLinks";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import { trackPageView, trackCTAClick } from "@/lib/analytics";
 import { Button } from "@/components/ui/button";
-import { WHATSAPP_NUMBER as WA_NUMBER } from "@/lib/siteConfig";
+import { WHATSAPP_NUMBER as WA_NUMBER, absoluteUrl } from "@/lib/siteConfig";
 import { 
   MessageCircle, 
   MapPin, 
@@ -129,6 +129,45 @@ export const BairroTemplate = ({ data }: BairroTemplateProps) => {
   };
 
   useJsonLdSlot(SCHEMA_SLOTS.localBusiness, localSchema, SLOT_PRIORITY.page);
+
+  // O template já exibe esta foto técnica real no conteúdo. Declaramos a
+  // MESMA imagem no WebPage para manter paridade entre HTML visível e schema,
+  // sem inventar foto local nem usar placeholder.
+  const primaryImage = {
+    "@type": "ImageObject",
+    "@id": `${absoluteUrl(path)}#primaryimage`,
+    url: IMAGES.atendimentoDomiciliar,
+    contentUrl: IMAGES.atendimentoDomiciliar,
+    width: 800,
+    height: 400,
+    caption: IMAGES.atendimentoDomiciliarAlt,
+  };
+
+  const webPageSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${absoluteUrl(path)}#webpage`,
+    url: absoluteUrl(path),
+    name: data.metaTitle,
+    headline: data.h1,
+    description: data.metaDescription,
+    inLanguage: "pt-BR",
+    isPartOf: { "@id": `${absoluteUrl("/")}#website` },
+    about: {
+      "@type": "Place",
+      name: data.nome,
+      address: {
+        "@type": "PostalAddress",
+        addressLocality: data.cidade,
+        addressRegion: "PR",
+        addressCountry: "BR",
+      },
+    },
+    primaryImageOfPage: primaryImage,
+    image: primaryImage,
+  };
+
+  useJsonLdSlot(SCHEMA_SLOTS.webPage, webPageSchema, SLOT_PRIORITY.page);
 
   const getCityLink = () => {
     switch (data.cidade) {
