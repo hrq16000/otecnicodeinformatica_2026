@@ -929,6 +929,14 @@ export const EDITORIAL_WAVE = [
     cover: "/blog/como-instalar-ubuntu-do-zero.svg",
   },
 
+  // ── Onda 11R — rsync após reescrita, fact-check e capa licenciada.
+  {
+    slug: "como-usar-rsync-backup-linux", approvedAt: "2026-09-27",
+    pilar: "/blog/backup-como-proteger-seus-arquivos", pilarLabel: "Backup e proteção de arquivos",
+    apoio: "/blog/como-testar-restauracao-de-backup", apoioLabel: "Testar restauração de backup",
+    cover: "/blog/historico-de-arquivos-windows-como-configurar.jpg",
+  },
+
 ];
 
 
