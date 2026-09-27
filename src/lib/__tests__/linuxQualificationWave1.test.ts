@@ -7,7 +7,6 @@ const reviewedButNoindex = [
   "comandos-linux-essenciais-iniciantes",
   "como-gerenciar-pacotes-apt-dnf-linux",
   "como-configurar-ssh-seguro-linux",
-  "como-usar-rsync-backup-linux",
 ];
 
 describe("onda Linux 1 — qualificação fail-closed", () => {
