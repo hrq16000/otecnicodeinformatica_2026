@@ -1080,7 +1080,7 @@ export const ARTICLE_SOURCE_MANIFEST: Record<string, ArticleSourceManifest> = {
     factChecked: true,
     factCheckedAt: "2026-09-27",
     notes:
-      "Reescrita material concluída: rsync é tratado como cópia/sincronização e não como backup por si só; barra final, --dry-run e --delete seguem a manpage oficial; automação só entra após validação manual e o texto exige retenção independente e teste de restauração. Conteúdo permanece noindex até capa/proveniência e aprovação editorial.",
+      "Reescrita material concluída: rsync é tratado como cópia/sincronização e não como backup por si só; barra final, --dry-run e --delete seguem a manpage oficial; automação só entra após validação manual e o texto exige retenção independente e teste de restauração. Promovido em 2026-09-27 após capa licenciada/proveniência, ownership e gates editoriais.",
   },
 
   "pc-nao-liga-o-que-fazer": {
