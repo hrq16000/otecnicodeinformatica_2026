@@ -507,7 +507,7 @@ export const EDITORIAL_SOURCES: Record<string, EditorialSource> = {
     title: "Require Multifactor Authentication",
     publisher: "CISA",
     url: "https://www.cisa.gov/audiences/small-and-medium-businesses/secure-your-business/require-multifactor-authentication",
-    accessedAt: "2026-09-25",
+    accessedAt: "2026-09-27",
     sourceType: "official",
     supports: [
       "MFA adiciona uma camada além da senha e deve ser exigida em contas críticas, especialmente acesso remoto e privilegiado.",
@@ -520,7 +520,7 @@ export const EDITORIAL_SOURCES: Record<string, EditorialSource> = {
     title: "SP 800-63B — Authenticators",
     publisher: "NIST",
     url: "https://pages.nist.gov/800-63-4/sp800-63b/authenticators/",
-    accessedAt: "2026-09-25",
+    accessedAt: "2026-09-27",
     sourceType: "standard",
     supports: [
       "Autenticação resistente a phishing depende de mecanismos criptográficos vinculados à sessão/verificador.",
@@ -1886,9 +1886,9 @@ export const ARTICLE_SOURCE_MANIFEST: Record<string, ArticleSourceManifest> = {
     sources: ["cisa-require-mfa", "nist-800-63b-authenticators"],
     technicalReview: "reviewed",
     factChecked: true,
-    factCheckedAt: "2026-09-25",
+    factCheckedAt: "2026-09-27",
     notes:
-      "Reescrita material completa em 2026-09-25: removidas estatísticas sem fonte, listas genéricas de produtos e promessas locais; diferencia 2FA de MFA, métodos resistentes a phishing, OTP, recuperação e ordem de implantação com base em CISA e NIST.",
+      "Revisão material atualizada em 2026-09-27: diferencia 2FA de MFA, compara resistência a phishing, remove recomendações dependentes de produto/operadora e acrescenta recuperação, teste de entrada e cinco FAQs com base em CISA e NIST SP 800-63B-4.",
   },
   "como-proteger-rede-wifi-empresa": {
     slug: "como-proteger-rede-wifi-empresa",

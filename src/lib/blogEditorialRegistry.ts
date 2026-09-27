@@ -1234,14 +1234,14 @@ const WAVE_11H: EditorialApproval[] = [
     status: "approved",
     authorType: "organization",
     authorId: INSTITUTIONAL_AUTHOR.id,
-    reviewedAt: "2026-09-25",
+    reviewedAt: "2026-09-27",
     approvedAt: "2026-09-25",
     imageOrigin: "owned",
     imageLicense: "Todos os direitos reservados",
     imageAttribution:
       "Arte editorial original: O Técnico de Informática — https://otecnicodeinformatica.com.br/blog/como-configurar-2fa-em-tudo",
     notes:
-      "Reescrita completa com CISA e NIST: diferencia MFA/2FA, resistência a phishing, recuperação e critérios de parada. Capa vetorial própria, sem IA e sem terceiros.",
+      "Revisão atualizada em 2026-09-27 com CISA e NIST SP 800-63B-4: diferencia MFA/2FA, resistência a phishing, recuperação, teste de entrada, cinco FAQs visíveis e critérios de parada. Capa vetorial própria, sem IA e sem terceiros.",
   },
   {
     slug: "como-proteger-rede-wifi-empresa",
