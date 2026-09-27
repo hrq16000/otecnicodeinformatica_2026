@@ -887,6 +887,190 @@ export const blogSupplementalPosts: Record<string, BlogPostContent> = {
       </>
     ),
   },
+
+  "comandos-linux-essenciais-iniciantes": {
+    title: "Comandos Linux para iniciantes: terminal seguro sem decorar uma lista",
+    excerpt:
+      "Aprenda pwd, ls, cd, cp, mv, rm, grep, pipes, permissões e processos entendendo o efeito de cada comando — com cuidados para sudo, exclusão recursiva e redirecionamento.",
+    date: "2026-09-27",
+    readTime: "12 min",
+    category: "Linux",
+    content: (
+      <>
+        <p className="lead">
+          Aprender terminal não é memorizar cinquenta comandos. O mais útil é entender três coisas antes de executar:
+          <strong> onde você está, qual caminho será afetado e se a operação altera ou apenas lê dados</strong>.
+          Com essa base, poucos comandos já resolvem navegação, cópia, busca, diagnóstico e leitura de arquivos sem
+          transformar o terminal em tentativa e erro.
+        </p>
+
+        <h2>Resposta curta: comece por comandos de leitura antes dos comandos que alteram</h2>
+        <p>
+          Para treinar com segurança, crie um diretório de laboratório dentro da sua pasta pessoal e trabalhe apenas
+          nele:
+        </p>
+        <pre><code>{"mkdir -p ~/laboratorio-terminal\ncd ~/laboratorio-terminal\npwd\nls -la"}</code></pre>
+        <p>
+          <code>pwd</code> confirma o diretório atual; <code>ls -la</code> mostra o conteúdo, inclusive arquivos
+          ocultos. Antes de copiar, mover ou apagar, confira novamente o caminho.
+        </p>
+
+        <h2>1. Caminho absoluto e caminho relativo</h2>
+        <p>
+          Um caminho que começa com <code>/</code> é absoluto. Um caminho como <code>documentos/arquivo.txt</code>
+          é relativo ao diretório atual. O atalho <code>~</code> representa a pasta pessoal do usuário.
+        </p>
+        <pre><code>{"pwd\ncd ~\ncd ~/laboratorio-terminal\ncd .."}</code></pre>
+        <p>
+          Se um diretório contém espaços, use aspas: <code>cd "Meus Arquivos"</code>. Evite adivinhar caminhos;
+          use a tecla Tab para completar nomes quando possível.
+        </p>
+
+        <h2>2. Liste antes de modificar</h2>
+        <pre><code>{"ls\nls -la\nls -lh"}</code></pre>
+        <p>
+          <code>-l</code> adiciona detalhes; <code>-a</code> inclui nomes iniciados por ponto; <code>-h</code>
+          torna tamanhos mais legíveis quando usado com listagens que mostram tamanho. Essa inspeção simples reduz
+          erros de caminho antes de operações destrutivas.
+        </p>
+
+        <h2>3. Criar arquivos e diretórios de teste</h2>
+        <pre><code>{"mkdir projeto\ntouch projeto/notas.txt\nprintf '%s\\n' 'primeira linha' > projeto/notas.txt\ncat projeto/notas.txt"}</code></pre>
+        <p>
+          O operador <code>&gt;</code> sobrescreve o arquivo de destino. Para acrescentar conteúdo ao final, use
+          <code>&gt;&gt;</code>. Essa diferença é importante: redirecionamento pode destruir conteúdo existente tão
+          facilmente quanto um comando de remoção.
+        </p>
+
+        <h2>4. Copiar e mover: valide o destino</h2>
+        <pre><code>{"cp projeto/notas.txt projeto/notas-copia.txt\nmv projeto/notas-copia.txt projeto/notas-antigas.txt\nls -la projeto"}</code></pre>
+        <p>
+          Para iniciantes, opções interativas podem ajudar em operações que substituem um arquivo existente, mas não
+          trate confirmação interativa como única proteção. A defesa principal continua sendo conferir origem e
+          destino antes de executar.
+        </p>
+
+        <h2>5. Remover: comece pelo menor escopo possível</h2>
+        <p>
+          <code>rm</code> não envia arquivos para uma lixeira universal. Ao remover um arquivo de teste, confirme
+          primeiro o nome:
+        </p>
+        <pre><code>{"ls -l projeto/notas-antigas.txt\nrm projeto/notas-antigas.txt"}</code></pre>
+        <p>
+          Evite usar <code>rm -rf</code> como atalho. A combinação é recursiva e não interativa; um caminho digitado
+          incorretamente pode apagar uma árvore inteira. Para diretório vazio, <code>rmdir</code> é uma opção mais
+          restritiva porque falha quando ainda existe conteúdo.
+        </p>
+
+        <h2>6. Ler arquivos sem abrir editor</h2>
+        <pre><code>{"cat projeto/notas.txt\nless projeto/notas.txt\nhead -n 20 projeto/notas.txt\ntail -n 20 projeto/notas.txt"}</code></pre>
+        <p>
+          <code>cat</code> funciona bem para conteúdo curto. <code>less</code> é melhor para arquivos longos porque
+          permite navegar sem despejar tudo de uma vez no terminal.
+        </p>
+
+        <h2>7. Buscar texto e arquivos em um escopo conhecido</h2>
+        <pre><code>{"grep -n \"linha\" projeto/notas.txt\ngrep -R \"linha\" projeto/\nfind projeto -type f -name '*.txt'"}</code></pre>
+        <p>
+          Prefira começar a busca em um diretório específico em vez de procurar no sistema inteiro. Buscas a partir
+          de <code>/</code> podem ser lentas, produzir muitos erros de permissão e incentivar uso desnecessário de
+          <code>sudo</code>.
+        </p>
+
+        <h2>8. Pipes conectam saída e entrada</h2>
+        <p>
+          O operador <code>|</code> envia a saída de um comando para outro. Um exemplo simples:
+        </p>
+        <pre><code>{"ls -la | less\nprintf '%s\\n' alpha beta gamma | grep beta"}</code></pre>
+        <p>
+          Antes de usar um pipeline longo, execute cada parte separadamente e observe a saída. Não conecte um
+          download da internet diretamente a um shell só porque uma página mandou copiar e colar.
+        </p>
+
+        <h2>9. Permissões: leia antes de alterar</h2>
+        <pre><code>{"ls -l projeto/notas.txt\nid\nwhoami"}</code></pre>
+        <p>
+          A listagem mostra permissões e proprietário. Para tornar um script próprio executável, uma alteração
+          explícita é mais fácil de entender do que permissões amplas:
+        </p>
+        <pre><code>{"chmod u+x script.sh"}</code></pre>
+        <p>
+          Evite receitas como <code>chmod 777</code>. Elas concedem permissões muito amplas e normalmente escondem
+          o problema real de proprietário, grupo ou necessidade de acesso.
+        </p>
+
+        <h2>10. sudo não é “modo administrador permanente”</h2>
+        <p>
+          <code>sudo</code> eleva um comando específico conforme a política do sistema. Antes de acrescentá-lo a
+          uma linha que falhou, descubra por que a permissão foi negada. Um caminho errado executado com privilégio
+          elevado aumenta o impacto do erro.
+        </p>
+        <p>
+          Para instalação e remoção de pacotes, use o guia separado de{" "}
+          <a href="/blog/como-gerenciar-pacotes-apt-dnf-linux">APT e DNF no Linux</a>, porque atualizar software é
+          uma transação diferente de manipular arquivos.
+        </p>
+
+        <h2>11. Processos: tente encerrar normalmente antes de forçar</h2>
+        <pre><code>{"ps aux | less\ntop\nkill PID"}</code></pre>
+        <p>
+          <code>kill</code> sem sinal explícito solicita encerramento normal. Não use <code>kill -9</code> como
+          primeira tentativa: o sinal forçado impede o processo de executar rotinas normais de encerramento e pode
+          deixar arquivos temporários ou estado incompleto.
+        </p>
+
+        <h2>12. Espaço em disco e tamanho de diretórios</h2>
+        <pre><code>{"df -h\ndu -sh ~/laboratorio-terminal"}</code></pre>
+        <p>
+          <code>df</code> mostra uso dos sistemas de arquivos montados; <code>du</code> mede o espaço usado por um
+          caminho. Essa distinção ajuda a investigar “disco cheio” sem começar apagando arquivos aleatoriamente.
+        </p>
+
+        <h2>13. Rede: observe antes de mudar</h2>
+        <pre><code>{"ip address\nip route\nping -c 4 1.1.1.1\nss -tln"}</code></pre>
+        <p>
+          Esses comandos ajudam a observar interfaces, rota e portas em escuta. O resultado não fecha diagnóstico
+          sozinho: ausência de resposta a ping, por exemplo, não prova que a internet está indisponível porque o
+          destino pode filtrar ICMP.
+        </p>
+
+        <h2>14. Use a ajuda local como fonte primária do comando instalado</h2>
+        <pre><code>{"man ls\nman rm\nls --help\nrm --help"}</code></pre>
+        <p>
+          A página de manual corresponde ao software instalado naquela máquina. Quando um tutorial externo e o
+          <code>man</code> local divergem, pare e confirme a versão antes de executar a opção.
+        </p>
+
+        <h2>Quando parar antes de apertar Enter</h2>
+        <p>
+          Pare se o comando usa <code>sudo</code>, exclusão recursiva, redirecionamento para arquivo importante,
+          mudança de proprietário/permissões ou pipeline que executa conteúdo baixado e você não consegue explicar
+          cada parte. Copiar uma linha sem entender o caminho afetado é o principal sinal de que ainda falta uma
+          etapa de leitura.
+        </p>
+
+        <h2>Checklist para aprender terminal sem criar hábito perigoso</h2>
+        <ul>
+          <li>Confirmo o diretório atual com <code>pwd</code> quando o caminho importa.</li>
+          <li>Uso <code>ls</code> antes de copiar, mover ou remover.</li>
+          <li>Treino primeiro dentro da minha pasta pessoal.</li>
+          <li>Distingo operações de leitura de operações que escrevem ou apagam.</li>
+          <li>Não acrescento <code>sudo</code> automaticamente quando aparece “permissão negada”.</li>
+          <li>Não uso <code>rm -rf</code>, <code>kill -9</code> ou <code>chmod 777</code> como solução padrão.</li>
+          <li>Leio <code>man</code> ou <code>--help</code> antes de usar opção desconhecida.</li>
+        </ul>
+
+        <h2>Fonte oficial consultada</h2>
+        <ul>
+          <li>
+            <a href="https://ubuntu.com/tutorials/command-line-for-beginners" rel="nofollow noopener" target="_blank">
+              Ubuntu — The Linux command line for beginners
+            </a>
+          </li>
+        </ul>
+      </>
+    ),
+  },
 };
 
 export default blogSupplementalPosts;
