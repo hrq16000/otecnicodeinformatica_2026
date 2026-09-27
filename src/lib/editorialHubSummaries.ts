@@ -271,7 +271,7 @@ const rows: Array<EditorialHubSummary & { slug: string }> = [
   {
     "slug": "o-que-e-informatica",
     "title": "O que é informática? Definição completa em português",
-    "excerpt": "Entenda o que é informática, para que serve, onde é aplicada e qual a diferença entre informática, computação e TI. Guia nacional em português.",
+    "excerpt": "Informática é o processamento automático da informação com computadores. Entenda hardware, software, redes, dados e a diferença entre informática, computação e TI.",
     "date": "2026-08-15",
     "readTime": "10 min",
     "category": "Fundamentos"
@@ -279,7 +279,7 @@ const rows: Array<EditorialHubSummary & { slug: string }> = [
   {
     "slug": "informatica-basica",
     "title": "Informática Básica: O Que É, O Que Ensina e Por Onde Começar",
-    "excerpt": "Saiba o que é informática básica, o que se aprende, para que serve e como estudar do zero. Conteúdo nacional em português, sem filler.",
+    "excerpt": "Informática básica reúne sistema operacional, arquivos, internet, e-mail, texto, planilhas, segurança e backup. Veja o que estudar e pratique do zero.",
     "date": "2026-08-15",
     "readTime": "12 min",
     "category": "Fundamentos"
@@ -287,7 +287,7 @@ const rows: Array<EditorialHubSummary & { slug: string }> = [
   {
     "slug": "como-aprender-informatica",
     "title": "Como Aprender Informática do Zero: Guia Prático para Iniciantes",
-    "excerpt": "Descubra como aprender informática do zero, em casa, para concurso ou trabalho. Roteiro prático, recursos gratuitos e dicas de estudo.",
+    "excerpt": "Aprenda informática do zero com roteiro em 4 fases, plano de 30 dias, exercícios práticos e recursos gratuitos para estudo, trabalho ou concurso.",
     "date": "2026-08-15",
     "readTime": "13 min",
     "category": "Fundamentos"
