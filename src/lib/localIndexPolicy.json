@@ -557,6 +557,142 @@
       "cidadeSlug": "sao-jose-dos-pinhais",
       "parent": "/tecnico-informatica-sao-jose-pinhais",
       "lote": 5
+    },
+    {
+      "slug": "emiliano-perneta",
+      "intent": "diagnóstico e suporte de informática no Emiliano Perneta com triagem por sintoma e logística local",
+      "cidade": "Pinhais",
+      "cidadeSlug": "pinhais",
+      "parent": "/tecnico-informatica-pinhais",
+      "lote": 6
+    },
+    {
+      "slug": "maria-antonieta",
+      "intent": "suporte de informática no Maria Antonieta com triagem por equipamento, endereço e modalidade",
+      "cidade": "Pinhais",
+      "cidadeSlug": "pinhais",
+      "parent": "/tecnico-informatica-pinhais",
+      "lote": 6
+    },
+    {
+      "slug": "vargem-grande",
+      "intent": "diagnóstico de informática no Vargem Grande com foco em inicialização, armazenamento e rede",
+      "cidade": "Pinhais",
+      "cidadeSlug": "pinhais",
+      "parent": "/tecnico-informatica-pinhais",
+      "lote": 6
+    },
+    {
+      "slug": "estancia-pinhais",
+      "intent": "suporte de informática na Estância Pinhais com decisão entre remoto, visita e bancada",
+      "cidade": "Pinhais",
+      "cidadeSlug": "pinhais",
+      "parent": "/tecnico-informatica-pinhais",
+      "lote": 6
+    },
+    {
+      "slug": "alto-taruma",
+      "intent": "diagnóstico de informática no Alto Tarumã com roteiro por alimentação, vídeo, desempenho e Wi-Fi",
+      "cidade": "Pinhais",
+      "cidadeSlug": "pinhais",
+      "parent": "/tecnico-informatica-pinhais",
+      "lote": 6
+    },
+    {
+      "slug": "jardim-claudia",
+      "intent": "suporte de informática no Jardim Cláudia com diagnóstico de tela azul, aquecimento, rede e dados",
+      "cidade": "Pinhais",
+      "cidadeSlug": "pinhais",
+      "parent": "/tecnico-informatica-pinhais",
+      "lote": 6
+    },
+    {
+      "slug": "atuba-pinhais",
+      "intent": "diagnóstico de informática no Atuba com foco em reinicialização, carga, periféricos e rede",
+      "cidade": "Pinhais",
+      "cidadeSlug": "pinhais",
+      "parent": "/tecnico-informatica-pinhais",
+      "lote": 6
+    },
+    {
+      "slug": "jardim-amelia",
+      "intent": "suporte de informática no Jardim Amélia com avaliação de desempenho, armazenamento e Wi-Fi",
+      "cidade": "Pinhais",
+      "cidadeSlug": "pinhais",
+      "parent": "/tecnico-informatica-pinhais",
+      "lote": 6
+    },
+    {
+      "slug": "jardim-karla-pinhais",
+      "intent": "diagnóstico de informática no Jardim Karla com foco em bateria, temperatura, drivers e rede",
+      "cidade": "Pinhais",
+      "cidadeSlug": "pinhais",
+      "parent": "/tecnico-informatica-pinhais",
+      "lote": 6
+    },
+    {
+      "slug": "pineville",
+      "intent": "suporte de informática no Pineville com diagnóstico de notebook, PC, rede e periféricos",
+      "cidade": "Pinhais",
+      "cidadeSlug": "pinhais",
+      "parent": "/tecnico-informatica-pinhais",
+      "lote": 6
+    },
+    {
+      "slug": "weissopolis",
+      "intent": "diagnóstico de informática no Weissópolis com foco em travamentos, armazenamento, Wi-Fi e periféricos",
+      "cidade": "Pinhais",
+      "cidadeSlug": "pinhais",
+      "parent": "/tecnico-informatica-pinhais",
+      "lote": 6
+    },
+    {
+      "slug": "centro-pinhais",
+      "intent": "suporte de informática no Centro de Pinhais com foco em continuidade de trabalho, dados e conectividade",
+      "cidade": "Pinhais",
+      "cidadeSlug": "pinhais",
+      "parent": "/tecnico-informatica-pinhais",
+      "lote": 6
+    },
+    {
+      "slug": "bateias",
+      "intent": "diagnóstico de informática em Bateias com foco em desempenho, inicialização, rede e preservação de dados",
+      "cidade": "Campo Largo",
+      "cidadeSlug": "campo-largo",
+      "parent": "/tecnico-informatica-campo-largo",
+      "lote": 6
+    },
+    {
+      "slug": "santa-cruz-campo-largo",
+      "intent": "suporte de informática em Santa Cruz com foco em Windows, drivers, periféricos e conectividade",
+      "cidade": "Campo Largo",
+      "cidadeSlug": "campo-largo",
+      "parent": "/tecnico-informatica-campo-largo",
+      "lote": 6
+    },
+    {
+      "slug": "tres-corregos",
+      "intent": "diagnóstico de informática em Três Córregos com foco em inicialização, armazenamento e recuperação de dados",
+      "cidade": "Campo Largo",
+      "cidadeSlug": "campo-largo",
+      "parent": "/tecnico-informatica-campo-largo",
+      "lote": 6
+    },
+    {
+      "slug": "parque-nascentes-pinhais",
+      "intent": "suporte de informática no Parque das Nascentes com triagem de rede, desempenho, armazenamento e dados",
+      "cidade": "Pinhais",
+      "cidadeSlug": "pinhais",
+      "parent": "/tecnico-informatica-pinhais",
+      "lote": 6
+    },
+    {
+      "slug": "vila-amelia-pinhais",
+      "intent": "diagnóstico de informática na Vila Amélia com foco em carregamento, armazenamento e preservação de dados",
+      "cidade": "Pinhais",
+      "cidadeSlug": "pinhais",
+      "parent": "/tecnico-informatica-pinhais",
+      "lote": 6
     }
   ],
   "servicoBairroIndexaveis": [
@@ -637,5 +773,24 @@
     "/bairros/rio-pequeno-sjp",
     "/bairros/quississana-sjp",
     "/bairros/pedro-moro-sjp"
+  ],
+  "loteLocal6": [
+    "/bairros/emiliano-perneta",
+    "/bairros/maria-antonieta",
+    "/bairros/vargem-grande",
+    "/bairros/estancia-pinhais",
+    "/bairros/alto-taruma",
+    "/bairros/jardim-claudia",
+    "/bairros/atuba-pinhais",
+    "/bairros/jardim-amelia",
+    "/bairros/jardim-karla-pinhais",
+    "/bairros/pineville",
+    "/bairros/weissopolis",
+    "/bairros/centro-pinhais",
+    "/bairros/bateias",
+    "/bairros/santa-cruz-campo-largo",
+    "/bairros/tres-corregos",
+    "/bairros/parque-nascentes-pinhais",
+    "/bairros/vila-amelia-pinhais"
   ]
 }
