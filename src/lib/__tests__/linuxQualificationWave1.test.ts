@@ -6,7 +6,6 @@ import { isEditorialApproved } from "@/lib/blogEditorialRegistry";
 const reviewedButNoindex = [
   "comandos-linux-essenciais-iniciantes",
   "como-gerenciar-pacotes-apt-dnf-linux",
-  "como-configurar-ssh-seguro-linux",
 ];
 
 describe("onda Linux 1 — qualificação fail-closed", () => {
