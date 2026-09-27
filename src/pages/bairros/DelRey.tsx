@@ -39,7 +39,9 @@ Se o computador está lento, primeiro verificamos se o armazenamento é realment
 
 Quando o disco apresenta erros, preservar os arquivos vem antes de reinstalar o sistema. Em notebook que perde desempenho sob carga, temperatura e energia precisam ser consideradas.
 
-Essa lógica dá à página do Del Rey uma intenção própria voltada a desempenho, armazenamento e notebook, evitando uma landing genérica.`,
+Essa lógica dá à página do Del Rey uma intenção própria voltada a desempenho, armazenamento e notebook, evitando uma landing genérica.
+
+Também diferenciamos lentidão contínua de lentidão que aparece apenas após alguns minutos. Quando o problema piora conforme a máquina aquece, temperatura e refrigeração entram na investigação. Quando a lentidão está presente desde a inicialização, armazenamento, memória e programas carregados com o Windows ganham prioridade. Essa distinção ajuda a evitar troca de SSD ou formatação sem evidência de que essas ações realmente resolverão a causa.`,
   problemasComuns: [
     "Notebook demora para iniciar",
     "SSD ou HD apresenta erros",
