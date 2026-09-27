@@ -56,7 +56,7 @@ export interface ServicoBairroData {
   bairrosProximos: { nome: string; slug: string }[];
   /** Blocos autorais exclusivos da combinação (onda 4S). */
   blocos?: { titulo: string; paragrafos: string[] }[];
-  /** Se true, sobrescreve `noindex` do PageSEO (default false = noindex). */
+  /** Legado de dados: mantido por compatibilidade. Não governa SEO; a policy central é soberana. */
   indexable?: boolean;
 }
 
@@ -156,11 +156,11 @@ export const ServicoBairroTemplate = ({ data }: { data: ServicoBairroData }) => 
   };
 
 
-  // Fonte única de indexabilidade: a política local manda sobre a flag manual
-  // do arquivo de dados (evita rota promovida na policy renderizando noindex).
+  // Fonte única de indexabilidade: a política local é soberana.
+  // Flags herdadas nos dados não podem promover uma rota fora da policy.
   const rotaCanonica = `/servicos/${data.servicoSlug}/${data.bairroSlug}`;
   const decisaoLocal = resolveLocal(rotaCanonica);
-  const noindexRota = decisaoLocal.indexability !== "index" && !data.indexable;
+  const noindexRota = decisaoLocal.indexability !== "index";
 
   return (
     <div className="min-h-screen bg-background">
