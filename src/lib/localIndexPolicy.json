@@ -693,6 +693,174 @@
       "cidadeSlug": "pinhais",
       "parent": "/tecnico-informatica-pinhais",
       "lote": 6
+    },
+    {
+      "slug": "jardim-iguacu-araucaria",
+      "intent": "diagnóstico de informática no Jardim Iguaçu com foco em armazenamento, dados e conectividade",
+      "cidade": "Araucária",
+      "cidadeSlug": "araucaria",
+      "parent": "/tecnico-informatica-araucaria",
+      "lote": 7
+    },
+    {
+      "slug": "jardim-shangrila-araucaria",
+      "intent": "suporte de informática no Jardim Shangri-Lá com foco em rede, periféricos e drivers",
+      "cidade": "Araucária",
+      "cidadeSlug": "araucaria",
+      "parent": "/tecnico-informatica-araucaria",
+      "lote": 7
+    },
+    {
+      "slug": "vila-nova-araucaria",
+      "intent": "diagnóstico de informática na Vila Nova com foco em continuidade de uso, sistema, rede e arquivos",
+      "cidade": "Araucária",
+      "cidadeSlug": "araucaria",
+      "parent": "/tecnico-informatica-araucaria",
+      "lote": 7
+    },
+    {
+      "slug": "industrial-araucaria",
+      "intent": "suporte de informática no Jardim Industrial com foco em estações, rede e continuidade operacional",
+      "cidade": "Araucária",
+      "cidadeSlug": "araucaria",
+      "parent": "/tecnico-informatica-araucaria",
+      "lote": 7
+    },
+    {
+      "slug": "california-araucaria",
+      "intent": "diagnóstico de informática no Jardim Califórnia com foco em notebook, bateria, fonte e Wi-Fi",
+      "cidade": "Araucária",
+      "cidadeSlug": "araucaria",
+      "parent": "/tecnico-informatica-araucaria",
+      "lote": 7
+    },
+    {
+      "slug": "sao-miguel-araucaria",
+      "intent": "suporte de informática em São Miguel com foco em inicialização, armazenamento e estabilidade",
+      "cidade": "Araucária",
+      "cidadeSlug": "araucaria",
+      "parent": "/tecnico-informatica-araucaria",
+      "lote": 7
+    },
+    {
+      "slug": "capela-velha",
+      "intent": "diagnóstico de informática na Capela Velha com foco em Windows, backup e conectividade",
+      "cidade": "Araucária",
+      "cidadeSlug": "araucaria",
+      "parent": "/tecnico-informatica-araucaria",
+      "lote": 7
+    },
+    {
+      "slug": "chapada",
+      "intent": "suporte de informática na Chapada com foco em estabilidade, rede e diagnóstico antes de upgrade",
+      "cidade": "Araucária",
+      "cidadeSlug": "araucaria",
+      "parent": "/tecnico-informatica-araucaria",
+      "lote": 7
+    },
+    {
+      "slug": "thomaz-coelho",
+      "intent": "diagnóstico de informática no Thomaz Coelho com foco em estações, rede e continuidade de uso",
+      "cidade": "Araucária",
+      "cidadeSlug": "araucaria",
+      "parent": "/tecnico-informatica-araucaria",
+      "lote": 7
+    },
+    {
+      "slug": "estacao-araucaria",
+      "intent": "suporte de informática no Estação com foco em Windows, periféricos e continuidade de uso",
+      "cidade": "Araucária",
+      "cidadeSlug": "araucaria",
+      "parent": "/tecnico-informatica-araucaria",
+      "lote": 7
+    },
+    {
+      "slug": "guajuvira",
+      "intent": "diagnóstico de informática no Guajuvira com foco em conectividade e decisão entre remoto, visita e bancada",
+      "cidade": "Araucária",
+      "cidadeSlug": "araucaria",
+      "parent": "/tecnico-informatica-araucaria",
+      "lote": 7
+    },
+    {
+      "slug": "barigui-araucaria",
+      "intent": "suporte de informática no Barigui com foco em armazenamento, backup e estabilidade",
+      "cidade": "Araucária",
+      "cidadeSlug": "araucaria",
+      "parent": "/tecnico-informatica-araucaria",
+      "lote": 7
+    },
+    {
+      "slug": "boqueirao-araucaria",
+      "intent": "diagnóstico de informática no Boqueirão com foco em energia, vídeo e falhas físicas",
+      "cidade": "Araucária",
+      "cidadeSlug": "araucaria",
+      "parent": "/tecnico-informatica-araucaria",
+      "lote": 7
+    },
+    {
+      "slug": "centro-araucaria",
+      "intent": "suporte de informática no Centro de Araucária com foco em continuidade de trabalho, rede e periféricos",
+      "cidade": "Araucária",
+      "cidadeSlug": "araucaria",
+      "parent": "/tecnico-informatica-araucaria",
+      "lote": 7
+    },
+    {
+      "slug": "costeira-araucaria",
+      "intent": "diagnóstico de informática na Costeira com foco em notebook, bateria, temperatura e Wi-Fi",
+      "cidade": "Araucária",
+      "cidadeSlug": "araucaria",
+      "parent": "/tecnico-informatica-araucaria",
+      "lote": 7
+    },
+    {
+      "slug": "fazenda-velha-araucaria",
+      "intent": "suporte de informática na Fazenda Velha com foco em Windows, aplicativos, rede e arquivos",
+      "cidade": "Araucária",
+      "cidadeSlug": "araucaria",
+      "parent": "/tecnico-informatica-araucaria",
+      "lote": 7
+    },
+    {
+      "slug": "sabia",
+      "intent": "diagnóstico de informática no Sabiá com foco em SSD, HD, backup e preservação de dados",
+      "cidade": "Araucária",
+      "cidadeSlug": "araucaria",
+      "parent": "/tecnico-informatica-araucaria",
+      "lote": 7
+    },
+    {
+      "slug": "passauna",
+      "intent": "suporte de informática no Passaúna com foco em Wi-Fi, rede e definição remoto versus presencial",
+      "cidade": "Araucária",
+      "cidadeSlug": "araucaria",
+      "parent": "/tecnico-informatica-araucaria",
+      "lote": 7
+    },
+    {
+      "slug": "campina-da-barra",
+      "intent": "diagnóstico de informática na Campina da Barra com foco em notebook, bateria, fonte e aquecimento",
+      "cidade": "Araucária",
+      "cidadeSlug": "araucaria",
+      "parent": "/tecnico-informatica-araucaria",
+      "lote": 7
+    },
+    {
+      "slug": "tindiquera",
+      "intent": "suporte de informática no Tindiquera com foco em Wi-Fi, rede cabeada e drivers",
+      "cidade": "Araucária",
+      "cidadeSlug": "araucaria",
+      "parent": "/tecnico-informatica-araucaria",
+      "lote": 7
+    },
+    {
+      "slug": "porto-das-laranjeiras",
+      "intent": "diagnóstico de informática no Porto das Laranjeiras com foco em estações, Windows e periféricos",
+      "cidade": "Araucária",
+      "cidadeSlug": "araucaria",
+      "parent": "/tecnico-informatica-araucaria",
+      "lote": 7
     }
   ],
   "servicoBairroIndexaveis": [
@@ -792,5 +960,28 @@
     "/bairros/tres-corregos",
     "/bairros/parque-nascentes-pinhais",
     "/bairros/vila-amelia-pinhais"
+  ],
+  "loteLocal7": [
+    "/bairros/jardim-iguacu-araucaria",
+    "/bairros/jardim-shangrila-araucaria",
+    "/bairros/vila-nova-araucaria",
+    "/bairros/industrial-araucaria",
+    "/bairros/california-araucaria",
+    "/bairros/sao-miguel-araucaria",
+    "/bairros/capela-velha",
+    "/bairros/chapada",
+    "/bairros/thomaz-coelho",
+    "/bairros/estacao-araucaria",
+    "/bairros/guajuvira",
+    "/bairros/barigui-araucaria",
+    "/bairros/boqueirao-araucaria",
+    "/bairros/centro-araucaria",
+    "/bairros/costeira-araucaria",
+    "/bairros/fazenda-velha-araucaria",
+    "/bairros/sabia",
+    "/bairros/passauna",
+    "/bairros/campina-da-barra",
+    "/bairros/tindiquera",
+    "/bairros/porto-das-laranjeiras"
   ]
 }
