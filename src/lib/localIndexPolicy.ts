@@ -94,6 +94,8 @@ export const LOTE_LOCAL_8 = (data as { loteLocal8?: string[] }).loteLocal8 ?? []
 export const LOTE_LOCAL_9 = (data as { loteLocal9?: string[] }).loteLocal9 ?? [];
 /** Lote 10 — Academia, Murici e Jardim Itália promovidos após validação autoral. */
 export const LOTE_LOCAL_10 = (data as { loteLocal10?: string[] }).loteLocal10 ?? [];
+/** Lote 11 — Campo Largo da Roseira promovido após validação autoral. */
+export const LOTE_LOCAL_11 = (data as { loteLocal11?: string[] }).loteLocal11 ?? [];
 
 /** Metadados do bairro âncora (cidade-pai, intenção, lote). */
 export function bairroAncora(slug: string): BairroAncora | undefined {
