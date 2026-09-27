@@ -22,6 +22,7 @@ export const LOTE_LOCAL_7 = data.loteLocal7 ?? [];
 export const LOTE_LOCAL_8 = data.loteLocal8 ?? [];
 export const LOTE_LOCAL_9 = data.loteLocal9 ?? [];
 export const LOTE_LOCAL_10 = data.loteLocal10 ?? [];
+export const LOTE_LOCAL_11 = data.loteLocal11 ?? [];
 export const bairroAncora = (slug) => data.bairrosAncora.find((b) => b.slug === slug);
 export const SERVICO_BAIRRO_INDEXAVEIS = data.servicoBairroIndexaveis;
 export const LOTE_LOCAL_1 = data.loteLocal1;
