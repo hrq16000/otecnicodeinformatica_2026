@@ -16,20 +16,20 @@ export const bairroFAQs: Record<string, GeoFAQ[]> = {
   // Curitiba - Centro
   "centro": [
     {
-      question: "Atendem conforme a disponibilidade da agenda no Centro de Curitiba?",
-      answer: "Sim! O Centro de Curitiba é uma das regiões com maior disponibilidade. Na maioria dos casos, conseguimos Atendimento conforme a agenda, especialmente para urgências em escritórios e empresas da região central."
+      question: "Como funciona o atendimento no Centro de Curitiba?",
+      answer: "O atendimento começa por triagem no WhatsApp. Depois de entender o problema e o endereço, definimos se o caso pode ser remoto, presencial ou precisa de bancada, conforme a agenda disponível."
     },
     {
-      question: "Tem estacionamento fácil para o técnico no Centro?",
-      answer: "Não se preocupe com isso! Nosso técnico já conhece bem a região central e utiliza estacionamentos conveniados. O deslocamento já está incluso no valor do atendimento."
+      question: "Como é organizada a visita no Centro?",
+      answer: "Confirmamos o endereço, o tipo de prédio e as condições de acesso antes da visita. Quando o caso pode ser resolvido remotamente ou por coleta, essa alternativa é informada na triagem."
     },
     {
       question: "Atendem empresas e escritórios no Centro?",
       answer: "Com certeza. Grande parte dos nossos clientes são empresas e escritórios no Centro de Curitiba. Oferecemos desde atendimentos pontuais até contratos mensais de suporte."
     },
     {
-      question: "Qual o tempo médio de chegada ao Centro de Curitiba?",
-      answer: "Em horário comercial, nosso técnico chega em média de 30 a 45 minutos no Centro. Fora do horário de pico, pode ser ainda mais rápido."
+      question: "Vocês informam horário de chegada ao Centro?",
+      answer: "O horário é combinado depois da triagem e da confirmação do endereço. Não prometemos tempo fixo de chegada antes de avaliar agenda, trânsito e modalidade do atendimento."
     }
   ],
 
@@ -56,16 +56,16 @@ export const bairroFAQs: Record<string, GeoFAQ[]> = {
   // Curitiba - Portão
   "portao": [
     {
-      question: "Atendem fins de semana no Portão?",
-      answer: "Sim. Aos sábados atendemos das 9h às 13h. Para urgências no Portão, entre em contato via WhatsApp que verificamos disponibilidade especial."
+      question: "Há atendimento aos fins de semana no Portão?",
+      answer: "A disponibilidade varia conforme a agenda. A confirmação de data e horário é feita no WhatsApp depois da triagem do problema."
     },
     {
       question: "Fazem upgrade de SSD no Portão?",
       answer: "Sim! O upgrade de HD para SSD é um dos serviços mais procurados no Portão. Instalamos SSDs de diversas capacidades e fazemos a migração completa do sistema."
     },
     {
-      question: "Quanto tempo demora para resolver vírus no Portão?",
-      answer: "Depende da infecção. Vírus simples resolvemos em 1-2 horas no local. Ransomware e infecções graves podem precisar de coleta do equipamento para tratamento mais extenso."
+      question: "Quanto tempo leva um atendimento de vírus no Portão?",
+      answer: "O prazo depende do tipo de infecção, do estado do sistema e da necessidade de backup. Casos mais complexos podem exigir coleta ou bancada, e isso é informado após o diagnóstico."
     }
   ],
 
@@ -80,36 +80,36 @@ export const bairroFAQs: Record<string, GeoFAQ[]> = {
       answer: "Trabalhamos principalmente com computadores e notebooks comerciais. Para equipamentos industriais específicos, podemos fazer diagnóstico inicial e indicar a solução adequada."
     },
     {
-      question: "Qual o valor do deslocamento até a CIC?",
-      answer: "O deslocamento já está incluso no valor da visita técnica (a partir de R$ 99,99). Não cobramos taxa extra para atendimento na CIC."
+      question: "Como é definido o valor de atendimento na CIC?",
+      answer: "O diagnóstico parte de R$ 99,99 quando aplicável. O valor final depende do equipamento, da complexidade, da modalidade de atendimento e de eventuais peças, sempre informado antes da execução."
     }
   ],
 
   // Curitiba - Santa Felicidade
   "santa-felicidade": [
     {
-      question: "Atendem restaurantes e comércios em Santa Felicidade?",
-      answer: "Com certeza. Santa Felicidade é conhecida pelos restaurantes e atendemos vários estabelecimentos na região. Configuramos PDVs, impressoras fiscais, redes e sistemas de gestão."
+      question: "Atendem comércios em Santa Felicidade?",
+      answer: "Sim, o suporte pode atender computadores, rede e periféricos de pequenos comércios, conforme o escopo do chamado. Sistemas fiscais ou integrações específicas são avaliados antes de qualquer alteração."
     },
     {
       question: "Fazem instalação de câmeras de segurança em Santa Felicidade?",
       answer: "Fazemos a configuração de sistemas de câmeras IP e DVR/NVR. Para instalação física das câmeras, trabalhamos em parceria com profissionais especializados."
     },
     {
-      question: "Quanto tempo o técnico demora para chegar em Santa Felicidade?",
-      answer: "De Curitiba centro, nosso técnico chega em Santa Felicidade em aproximadamente 40-50 minutos, dependendo do trânsito na região."
+      question: "Como é definido o horário em Santa Felicidade?",
+      answer: "O horário é confirmado depois da triagem e do endereço. A disponibilidade depende da agenda, do trânsito e de a falha exigir visita, suporte remoto ou bancada."
     }
   ],
 
   // São José dos Pinhais
   "afonso-pena": [
     {
-      question: "Atendem a região do aeroporto em São José dos Pinhais?",
-      answer: "Sim! Atendemos toda a região do Afonso Pena, incluindo áreas próximas ao Aeroporto Internacional. Empresas de logística e serviços aeroportuários são atendidas regularmente."
+      question: "Atendem a região do Afonso Pena em São José dos Pinhais?",
+      answer: "Sim. O Afonso Pena está na área atendida. A modalidade e o horário são definidos após a triagem do equipamento e a confirmação do endereço."
     },
     {
-      question: "Qual o tempo de deslocamento até Afonso Pena?",
-      answer: "A partir de Curitiba, chegamos ao Afonso Pena em aproximadamente 30-40 minutos. É uma das regiões mais próximas de SJP que atendemos."
+      question: "Vocês informam tempo de chegada ao Afonso Pena?",
+      answer: "Não usamos um tempo fixo antes da triagem. O horário é combinado conforme o endereço, a agenda e o tipo de atendimento necessário."
     },
     {
       question: "Fazem suporte para empresas de transporte no Afonso Pena?",
@@ -124,8 +124,8 @@ export const bairroFAQs: Record<string, GeoFAQ[]> = {
       answer: "Sim! Araucária faz parte da nossa área de cobertura. Atendemos o Centro de Araucária e demais bairros da cidade com a mesma qualidade de Curitiba."
     },
     {
-      question: "Qual o valor do atendimento em Araucária?",
-      answer: "O valor é o mesmo: R$ 99,99. Não cobramos taxa extra de deslocamento para Araucária."
+      question: "Como é definido o valor do atendimento em Araucária?",
+      answer: "O diagnóstico parte de R$ 99,99 quando aplicável. O valor final depende do equipamento, da complexidade, da modalidade e de eventuais peças, sempre aprovado antes da execução."
     },
     {
       question: "Atendem indústrias em Araucária?",
@@ -140,8 +140,8 @@ export const bairroFAQs: Record<string, GeoFAQ[]> = {
       answer: "Sim! Campo Largo está na nossa área de atendimento. Atendemos residências e empresas em toda a cidade, especialmente na região central."
     },
     {
-      question: "Demora muito para o técnico chegar em Campo Largo?",
-      answer: "O deslocamento de Curitiba a Campo Largo leva em média 50-60 minutos. Agendamos horários que permitam um atendimento tranquilo e sem pressa."
+      question: "Como é definido o horário em Campo Largo?",
+      answer: "A agenda é confirmada depois da triagem e do endereço. Não prometemos tempo fixo de chegada antes de avaliar deslocamento e modalidade necessária."
     },
     {
       question: "Fazem reparo de notebook em Campo Largo?",
@@ -152,12 +152,12 @@ export const bairroFAQs: Record<string, GeoFAQ[]> = {
   // Pinhais
   "centro-pinhais": [
     {
-      question: "Em quanto tempo conseguem atender em Pinhais?",
-      answer: "Na maioria dos casos, sim. Pinhais é bem próximo de Curitiba e conseguimos encaixar atendimentos com boa agilidade, especialmente pela manhã."
+      question: "Como funciona a disponibilidade em Pinhais?",
+      answer: "A disponibilidade é confirmada depois da triagem do problema e do endereço. Quando o caso pode começar remotamente, essa opção também é informada."
     },
     {
-      question: "Qual o tempo de chegada até Pinhais?",
-      answer: "De Curitiba, nosso técnico chega em Pinhais em aproximadamente 25-35 minutos, dependendo do trânsito na região."
+      question: "Vocês prometem tempo fixo de chegada em Pinhais?",
+      answer: "Não. O horário é combinado conforme agenda, endereço, trânsito e modalidade do atendimento, evitando promessas antes de entender o caso."
     },
     {
       question: "Fazem formatação em Pinhais?",

@@ -14,11 +14,19 @@ interface BreadcrumbItem {
   path: string;
 }
 
+interface PageSEOPrimaryImage {
+  contentUrl: string;
+  width: number;
+  height: number;
+  caption: string;
+}
+
 interface PageSEOProps {
   title: string;
   description: string;
   path?: string;
   ogImage?: string;
+  primaryImage?: PageSEOPrimaryImage;
   ogType?: "website" | "article" | "profile" | "product";
   noindex?: boolean;
   breadcrumbs?: BreadcrumbItem[];
@@ -35,6 +43,7 @@ export const PageSEO = ({
   description,
   path = "",
   ogImage = DEFAULT_OG_IMAGE,
+  primaryImage,
   ogType = "website",
   noindex = false,
   breadcrumbs,
@@ -77,8 +86,20 @@ export const PageSEO = ({
       ...(breadcrumbs && breadcrumbs.length > 0
         ? { breadcrumb: { "@id": `${url}#breadcrumb` } }
         : {}),
+      ...(primaryImage
+        ? {
+            primaryImageOfPage: {
+              "@type": "ImageObject",
+              contentUrl: primaryImage.contentUrl,
+              url: primaryImage.contentUrl,
+              width: primaryImage.width,
+              height: primaryImage.height,
+              caption: primaryImage.caption,
+            },
+          }
+        : {}),
     }),
-    [url, title, description, breadcrumbs],
+    [url, title, description, breadcrumbs, primaryImage],
   );
   useJsonLdSlot(SCHEMA_SLOTS.webPage, webPageSchema, SLOT_PRIORITY.component);
 
