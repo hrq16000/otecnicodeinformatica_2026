@@ -810,6 +810,29 @@ export const CONTENT_INTENT_MAP: ContentNode[] = [
     justificativa:
       "Owner de transações de pacotes e repositórios. Comandos básicos do shell e instalação do sistema operacional permanecem em URLs próprias.",
   },
+  {
+    url: "/blog/comandos-linux-essenciais-iniciantes",
+    intent: "informational",
+    topic: "fundamentos do terminal Linux para iniciantes com uso seguro de arquivos, pipes, permissões e processos",
+    queries: [
+      "comandos linux iniciantes",
+      "comandos básicos linux",
+      "como usar terminal linux",
+    ],
+    serviceParent: "/guia-tecnico-informatica",
+    bridgesTo: [
+      "/blog/informatica-basica",
+      "/blog/como-gerenciar-pacotes-apt-dnf-linux",
+      "/blog/como-configurar-ssh-seguro-linux",
+    ],
+    doNotDuplicate: [
+      "/blog/como-gerenciar-pacotes-apt-dnf-linux",
+      "/blog/como-configurar-ssh-seguro-linux",
+    ],
+    novaNestaRodada: false,
+    justificativa:
+      "Owner dos fundamentos do shell e manipulação segura de caminhos/arquivos. Pacotes, SSH e administração especializada permanecem em URLs próprias.",
+  },
 ];
 
 /** Nó do mapa por URL canônica (sem barra final). */
