@@ -89,3 +89,31 @@ describe("guia suplementar de rsync para backup no Linux", () => {
     expect(EDITORIAL_HUB_SUMMARIES[slug]?.category).toBe("Linux");
   });
 });
+
+
+describe("guia suplementar de SSH seguro no Linux", () => {
+  const slug = "como-configurar-ssh-seguro-linux";
+
+  it("substitui a receita genérica por configuração reversível", () => {
+    const post = blogSupplementalPosts[slug];
+    expect(post).toBeTruthy();
+    expect(post.title).toMatch(/SSH/i);
+    expect(post.excerpt).toMatch(/chave|lockout/i);
+    expect(post.readTime).toBe("13 min");
+    expect(post.content).toBeTruthy();
+  });
+
+  it("conclui revisão técnica mas continua fail-closed", () => {
+    expect(getTechnicalReviewStatus(slug)).toBe("reviewed");
+    expect(getArticleSources(slug).length).toBeGreaterThanOrEqual(2);
+    expect(isEditorialApproved(slug)).toBe(false);
+    expect(getEditorialCover(slug)).toBeUndefined();
+  });
+
+  it("separa SSH de firewall e MFA", () => {
+    const node = contentNode("/blog/" + slug);
+    expect(node?.intent).toBe("informational");
+    expect(node?.doNotDuplicate).toContain("/blog/como-configurar-firewall-ufw-linux");
+    expect(EDITORIAL_HUB_SUMMARIES[slug]?.category).toBe("Linux");
+  });
+});
