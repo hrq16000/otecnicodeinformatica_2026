@@ -90,6 +90,8 @@ export const LOTE_LOCAL_6 = (data as { loteLocal6?: string[] }).loteLocal6 ?? []
 export const LOTE_LOCAL_7 = (data as { loteLocal7?: string[] }).loteLocal7 ?? [];
 /** Lote 8 — bairros adicionais de Campo Largo promovidos após validação autoral. */
 export const LOTE_LOCAL_8 = (data as { loteLocal8?: string[] }).loteLocal8 ?? [];
+/** Lote 9 — Tingui, Ipê e Borda do Campo promovidos após validação autoral. */
+export const LOTE_LOCAL_9 = (data as { loteLocal9?: string[] }).loteLocal9 ?? [];
 
 /** Metadados do bairro âncora (cidade-pai, intenção, lote). */
 export function bairroAncora(slug: string): BairroAncora | undefined {
