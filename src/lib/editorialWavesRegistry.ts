@@ -1003,6 +1003,31 @@ export const WAVE_11Q_BATCH_1: EditorialWaveEntry[] = [
   },
 ];
 
+
+/** Onda 11R — promoção controlada do owner rsync. */
+export const WAVE_11R_BATCH_1: EditorialWaveEntry[] = [
+  {
+    wave: "11A",
+    batch: "19",
+    url: "/blog/como-usar-rsync-backup-linux",
+    slug: "como-usar-rsync-backup-linux",
+    ownerId: "rsync-copia-sincronizacao-backup",
+    cluster: "dados-backup",
+    role: "satelite",
+    publishedAt: "2026-09-27",
+    targetQueries: [
+      "rsync backup linux",
+      "como usar rsync",
+      "rsync dry run delete",
+    ],
+    doNotDuplicate: [
+      "/blog/backup-como-proteger-seus-arquivos",
+      "/blog/como-testar-restauracao-de-backup",
+      "/blog/como-fazer-backup-na-nuvem",
+    ],
+  },
+];
+
 export const EDITORIAL_WAVES: EditorialWaveEntry[] = [
   ...WAVE_10C_BATCH_0,
   ...WAVE_10D_BATCH_1,
@@ -1024,6 +1049,7 @@ export const EDITORIAL_WAVES: EditorialWaveEntry[] = [
   ...WAVE_11O_BATCH_1,
   ...WAVE_11P_BATCH_1,
   ...WAVE_11Q_BATCH_1,
+  ...WAVE_11R_BATCH_1,
 ];
 
 /** URLs monitoradas (ordem estável, sem duplicatas). */

@@ -75,17 +75,19 @@ describe("guia suplementar de rsync para backup no Linux", () => {
     expect(post.content).toBeTruthy();
   });
 
-  it("conclui revisão técnica sem liberar indexação prematuramente", () => {
+  it("só entra no índice após revisão, fonte e capa licenciada", () => {
     expect(getTechnicalReviewStatus(slug)).toBe("reviewed");
     expect(getArticleSources(slug).length).toBeGreaterThanOrEqual(1);
-    expect(isEditorialApproved(slug)).toBe(false);
-    expect(getEditorialCover(slug)).toBeUndefined();
+    expect(isEditorialApproved(slug)).toBe(true);
+    expect(getEditorialCover(slug)?.src).toBe("/blog/historico-de-arquivos-windows-como-configurar.jpg");
   });
 
   it("tem owner distinto da estratégia geral de backup", () => {
     const node = contentNode("/blog/" + slug);
+    const entry = findEditorialEntry("/blog/" + slug);
     expect(node?.intent).toBe("informational");
     expect(node?.doNotDuplicate).toContain("/blog/backup-como-proteger-seus-arquivos");
+    expect(entry?.ownerId).toBe("rsync-copia-sincronizacao-backup");
     expect(EDITORIAL_HUB_SUMMARIES[slug]?.category).toBe("Linux");
   });
 });

@@ -1522,6 +1522,24 @@ const WAVE_11Q: EditorialApproval[] = [
   },
 ];
 
+
+const WAVE_11R: EditorialApproval[] = [
+  {
+    slug: "como-usar-rsync-backup-linux",
+    status: "approved",
+    authorType: "organization",
+    authorId: INSTITUTIONAL_AUTHOR.id,
+    reviewedAt: "2026-09-27",
+    approvedAt: "2026-09-27",
+    imageOrigin: "licensed",
+    imageLicense: "CC BY-SA 4.0",
+    imageAttribution:
+      "Foto: Sam Frazier (Wikimedia Commons), CC BY-SA 4.0 — https://commons.wikimedia.org/wiki/File:External_portable_hard_drive.jpg",
+    notes:
+      "Owner específico de rsync revisado e fact-checked em 2026-09-27. Capa reutiliza de forma controlada fotografia real licenciada já versionada no acervo; conteúdo separa sincronização de backup, protege contra --delete e exige teste de restauração.",
+  },
+];
+
 export const APPROVED_EDITORIAL_CONTENT = new Map<string, EditorialApproval>([
 
   ...FIRST_WAVE_SLUGS.map((slug) => [
@@ -1587,6 +1605,7 @@ export const APPROVED_EDITORIAL_CONTENT = new Map<string, EditorialApproval>([
   ...WAVE_11O.map((a) => [a.slug, a] as [string, EditorialApproval]),
   ...WAVE_11P.map((a) => [a.slug, a] as [string, EditorialApproval]),
   ...WAVE_11Q.map((a) => [a.slug, a] as [string, EditorialApproval]),
+  ...WAVE_11R.map((a) => [a.slug, a] as [string, EditorialApproval]),
 
 ]);
 

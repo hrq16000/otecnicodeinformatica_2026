@@ -678,6 +678,15 @@ export const EDITORIAL_COVERS: Record<string, EditorialCover> = {
     height: 630,
   },
 
+  // ── Onda 11R — rsync: promoção controlada após revisão técnica.
+  // Reuso controlado de fotografia real já versionada e licenciada no acervo.
+  "como-usar-rsync-backup-linux": {
+    src: "/blog/historico-de-arquivos-windows-como-configurar.jpg",
+    alt: "HD externo portátil conectado a um computador, representando cópia e sincronização de arquivos com rsync",
+    width: 1200,
+    height: 630,
+  },
+
 };
 
 export function getEditorialCover(slug: string): EditorialCover | undefined {
