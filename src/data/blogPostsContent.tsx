@@ -11853,8 +11853,8 @@ crontab -e
   },
 
   "o-que-e-informatica": {
-    title: "O que é informática? Definição completa em português",
-    excerpt: "Entenda o que é informática, para que serve, onde é aplicada e qual a diferença entre informática, computação e TI. Guia nacional em português.",
+    title: "O que é informática? Significado, definição e exemplos",
+    excerpt: "Informática é o processamento automático da informação com computadores. Entenda hardware, software, redes, dados e a diferença entre informática, computação e TI.",
     date: "2026-08-15",
     readTime: "10 min",
     category: "Fundamentos",
@@ -12071,8 +12071,8 @@ crontab -e
   },
 
   "informatica-basica": {
-    title: "Informática Básica: O Que É, O Que Ensina e Por Onde Começar",
-    excerpt: "Saiba o que é informática básica, o que se aprende, para que serve e como estudar do zero. Conteúdo nacional em português, sem filler.",
+    title: "Informática básica: conteúdos, noções e conhecimentos essenciais",
+    excerpt: "Informática básica reúne sistema operacional, arquivos, internet, e-mail, texto, planilhas, segurança e hardware. Veja os conhecimentos essenciais para iniciantes.",
     date: "2026-08-15",
     readTime: "12 min",
     category: "Fundamentos",
@@ -12334,7 +12334,7 @@ crontab -e
 
   "como-aprender-informatica": {
     title: "Como Aprender Informática do Zero: Guia Prático para Iniciantes",
-    excerpt: "Descubra como aprender informática do zero, em casa, para concurso ou trabalho. Roteiro prático, recursos gratuitos e dicas de estudo.",
+    excerpt: "Como aprender informática do zero: roteiro passo a passo em 4 fases, com plano de 30 dias, exercícios práticos e objetivos para trabalho ou concurso.",
     date: "2026-08-15",
     readTime: "13 min",
     category: "Fundamentos",
