@@ -676,6 +676,14 @@ const rows: Array<EditorialHubSummary & { slug: string }> = [
     "readTime": "13 min",
     "category": "Linux"
   }
+  {
+    "slug": "como-usar-rsync-backup-linux",
+    "title": "Como usar rsync para backup no Linux sem apagar arquivos por engano",
+    "excerpt": "Cópia local e remota, barra final, dry-run, --delete, automação e teste de restauração — com a diferença entre sincronização e backup explícita.",
+    "date": "2026-09-27",
+    "readTime": "13 min",
+    "category": "Linux"
+  },
 ];
 
 export const EDITORIAL_HUB_SUMMARIES: Record<string, EditorialHubSummary> = Object.fromEntries(
