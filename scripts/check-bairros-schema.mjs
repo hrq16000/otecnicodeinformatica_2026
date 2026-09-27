@@ -146,5 +146,5 @@ if (erros.length) {
   process.exit(1);
 }
 console.log(
-  "\n✓ BreadcrumbList, FAQPage e WebPage válidos; primaryImageOfPage é validada quando presente; nenhum LocalBusiness fictício por bairro.",
+  "\n✓ BreadcrumbList, FAQPage e WebPage válidos; primaryImageOfPage obrigatória, real e exibida; nenhum LocalBusiness fictício por bairro.",
 );
