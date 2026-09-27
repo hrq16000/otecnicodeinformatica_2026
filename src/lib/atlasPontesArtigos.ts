@@ -548,6 +548,18 @@ export const ATLAS_PONTES_ARTIGOS: Record<string, AtlasPonteArtigo> = {
     proximoPasso: { rotulo: "Firewall pfSense", to: "/blog/como-configurar-firewall-pfsense", contexto: "Quando o problema deixa de ser um único host e passa a envolver várias redes, NAT, VPN e segmentação." },
   },
 
+  "como-instalar-ubuntu-do-zero": {
+    temaId: "sistemas-operacionais",
+    porQue:
+      "Instalar um sistema operacional é uma decisão de armazenamento e inicialização antes de ser um procedimento de software. A trilha conecta backup, firmware, disco, dual boot, criptografia e validação pós-instalação.",
+    proximoPasso: {
+      rotulo: "Trocar Windows por Linux: vale a pena?",
+      to: "/blog/trocar-windows-por-linux-vale-a-pena",
+      contexto:
+        "Compare compatibilidade, aplicativos e rotina de uso antes de transformar um teste do Ubuntu em migração definitiva.",
+    },
+  },
+
 };
 
 export interface AtlasPonteArtigoResolvida extends AtlasPonteArtigo {

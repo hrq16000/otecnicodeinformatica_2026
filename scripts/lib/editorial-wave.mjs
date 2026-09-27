@@ -921,7 +921,14 @@ export const EDITORIAL_WAVE = [
     pilar: "/servicos/formatacao", pilarLabel: "Formatação e instalação do sistema",
     apoio: "/blog/ssd-nvme-nao-aparece-no-gerenciador-de-discos", apoioLabel: "SSD não aparece no Gerenciamento de Disco",
     cover: "/blog/ssd-nao-aparece-no-instalador-do-windows.svg",
-  }
+  },
+  {
+    slug: "como-instalar-ubuntu-do-zero", approvedAt: "2026-09-26",
+    pilar: "/guia-tecnico-informatica", pilarLabel: "Guia do técnico de informática",
+    apoio: "/blog/trocar-windows-por-linux-vale-a-pena", apoioLabel: "Trocar Windows por Linux",
+    cover: "/blog/como-instalar-ubuntu-do-zero.svg",
+  },
+
 ];
 
 

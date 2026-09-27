@@ -82,6 +82,7 @@ export const ALLOWED_SOURCE_HOSTS = [
   "docs.netgate.com",
   "www.tp-link.com",
   "ubuntu.com",
+  "documentation.ubuntu.com",
   "samba.org",
   "www.samba.org",
   "www.wireguard.com",
@@ -918,6 +919,34 @@ export const EDITORIAL_SOURCES: Record<string, EditorialSource> = {
     ],
   },
 
+
+  "ubuntu-desktop-install-2604": {
+    id: "ubuntu-desktop-install-2604",
+    title: "Install Ubuntu Desktop",
+    publisher: "Ubuntu",
+    url: "https://ubuntu.com/desktop/docs/en/26.04/tutorial/install-ubuntu-desktop/",
+    accessedAt: "2026-09-26",
+    sourceType: "official",
+    supports: [
+      "O instalador diferencia apagar o disco, instalação ao lado e particionamento manual.",
+      "BitLocker pode impedir uma instalação segura ao lado do Windows enquanto a instalação permanece criptografada.",
+      "A criptografia por senha exige que a credencial seja guardada fora do sistema.",
+      "Após a instalação, o Ubuntu recomenda aplicar atualizações do sistema.",
+    ],
+  },
+  "ubuntu-bootable-usb-current": {
+    id: "ubuntu-bootable-usb-current",
+    title: "Create a bootable USB stick",
+    publisher: "Ubuntu Desktop documentation",
+    url: "https://documentation.ubuntu.com/desktop/en/latest/how-to/create-a-bootable-usb-stick/",
+    accessedAt: "2026-09-26",
+    sourceType: "official",
+    supports: [
+      "A imagem precisa ser gravada no pendrive; copiar o arquivo ISO não cria a mídia de instalação.",
+      "A criação da mídia apaga o conteúdo do pendrive e exige seleção cuidadosa do dispositivo correto.",
+      "O procedimento oficial documenta ferramentas gráficas e também alerta para o risco do dd quando o destino é informado incorretamente.",
+    ],
+  },
 
 };
 
@@ -1932,6 +1961,16 @@ export const ARTICLE_SOURCE_MANIFEST: Record<string, ArticleSourceManifest> = {
     factCheckedAt: "2026-09-26",
     notes:
       "Revisão material concluída com documentação oficial Microsoft e NVM Express: firmware separado do Windows Setup, driver de armazenamento do fabricante, cautela com VMD/RST/RAID/AHCI, compatibilidade M.2/NVMe, mídia oficial, BitLocker e limite destrutivo do DiskPart.",
+  },
+
+  "como-instalar-ubuntu-do-zero": {
+    slug: "como-instalar-ubuntu-do-zero",
+    sources: ["ubuntu-desktop-install-2604", "ubuntu-bootable-usb-current"],
+    technicalReview: "reviewed",
+    factChecked: true,
+    factCheckedAt: "2026-09-26",
+    notes:
+      "Reescrita material com documentação oficial Ubuntu 26.04 e documentação corrente de mídia bootável: prioriza backup, seleção correta do disco, diferença entre apagar/dual boot/manual, alerta de BitLocker, proteção da senha de criptografia, mídia oficial e atualização pós-instalação. Sem comando destrutivo apresentado como rotina e sem promessa de compatibilidade universal.",
   },
 
 };

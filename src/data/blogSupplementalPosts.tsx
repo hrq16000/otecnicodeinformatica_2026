@@ -146,6 +146,195 @@ export const blogSupplementalPosts: Record<string, BlogPostContent> = {
       </>
     ),
   },
+
+  "como-instalar-ubuntu-do-zero": {
+    title: "Como instalar Ubuntu do zero: guia seguro para PC e notebook",
+    excerpt:
+      "Instale Ubuntu por pendrive com backup, escolha correta do disco, dual boot, BitLocker e atualização pós-instalação — sem apagar dados por engano.",
+    date: "2026-09-26",
+    readTime: "13 min",
+    category: "Linux e Sistemas Operacionais",
+    content: (
+      <>
+        <p className="lead">
+          Instalar Ubuntu não é apenas clicar em “avançar”. A parte que merece atenção acontece antes da cópia dos
+          arquivos: confirmar o backup, criar a mídia corretamente, identificar o disco certo e decidir se o
+          computador ficará só com Ubuntu ou continuará com outro sistema. Este guia segue a documentação oficial
+          atual do Ubuntu e prioriza decisões reversíveis antes de qualquer etapa destrutiva.
+        </p>
+
+        <h2>Resposta curta: a ordem segura da instalação</h2>
+        <ol>
+          <li>Faça backup dos arquivos importantes e confirme que a cópia abre.</li>
+          <li>Baixe a imagem do Ubuntu no site oficial.</li>
+          <li>Grave a imagem em um pendrive próprio para instalação; copiar o arquivo ISO não basta.</li>
+          <li>Inicialize pelo pendrive e teste o ambiente antes de instalar quando houver dúvida de compatibilidade.</li>
+          <li>Escolha conscientemente entre apagar o disco, instalar ao lado de outro sistema ou particionar manualmente.</li>
+          <li>Revise o resumo final antes de confirmar qualquer alteração no armazenamento.</li>
+          <li>Depois da instalação, aplique as atualizações e valide rede, áudio, vídeo e periféricos.</li>
+        </ol>
+
+        <h2>1. Antes de começar: defina o que deve sobreviver à instalação</h2>
+        <p>
+          Se o computador já tem Windows, outro Linux ou arquivos pessoais, comece pelo inventário: documentos,
+          fotos, perfis de navegador, chaves de recuperação, arquivos de trabalho e qualquer configuração que não
+          possa ser recriada. Backup não é “copiei uma pasta e acho que foi”; abra alguns arquivos diretamente na
+          cópia e confirme que o destino está acessível sem depender do computador que será alterado.
+        </p>
+        <p>
+          Se houver Windows com BitLocker, confirme a chave de recuperação antes de mexer em partições ou firmware.
+          A própria documentação do Ubuntu informa que o instalador não consegue instalar com segurança ao lado de
+          uma instalação Windows que permaneça inacessível por BitLocker. Se essa situação aparecer, pare e resolva
+          a criptografia pelo procedimento oficial antes de insistir.
+        </p>
+
+        <h2>2. Baixe a imagem do Ubuntu pela fonte oficial</h2>
+        <p>
+          Use a página oficial de download do Ubuntu Desktop. Evite imagens modificadas, torrents sem origem
+          confirmada e arquivos hospedados em sites de terceiros. Uma imagem de instalação é código que terá acesso
+          total ao disco; a procedência faz parte da segurança da instalação.
+        </p>
+        <p>
+          A versão exata muda com o ciclo de lançamentos. Por isso, este guia não depende de um número específico:
+          siga a versão suportada apresentada pela Canonical para o seu equipamento e confirme requisitos e notas
+          da versão antes de instalar em uma máquina de produção.
+        </p>
+
+        <h2>3. Criar pendrive bootável não é copiar o ISO</h2>
+        <p>
+          O pendrive precisa ser gravado como mídia de instalação. A documentação atual do Ubuntu recomenda um
+          pendrive de pelo menos 8 GB e alerta que o processo apaga o conteúdo do dispositivo. Separe um pendrive
+          sem arquivos importantes e confira duas vezes qual unidade foi selecionada antes de iniciar a gravação.
+        </p>
+        <p>
+          No Windows, o guia oficial apresenta uma ferramenta de gravação de imagem; no Ubuntu, as opções incluem
+          Discos e Startup Disk Creator. Se você estiver no Linux e pensar em usar <code>dd</code>, trate esse
+          caminho como avançado: escolher o dispositivo de saída errado pode sobrescrever o disco do sistema.
+        </p>
+
+        <h2>4. Inicialize pelo USB e teste o hardware antes de alterar o disco</h2>
+        <p>
+          Muitos computadores abrem o menu de boot por uma tecla exibida logo ao ligar. A tecla varia por
+          fabricante, então prefira a indicação da tela ou o manual do equipamento em vez de uma lista genérica.
+          Se o pendrive não aparece, confirme primeiro se a mídia foi gravada corretamente e se o firmware detecta
+          o dispositivo.
+        </p>
+        <p>
+          Quando o instalador oferece a opção de experimentar o Ubuntu, use esse ambiente para uma verificação
+          rápida: teclado, touchpad, Wi-Fi, áudio, vídeo, brilho e detecção dos discos. Esse teste não prova que
+          todo hardware terá suporte perfeito em qualquer cenário, mas ajuda a descobrir incompatibilidades óbvias
+          antes de escrever no armazenamento.
+        </p>
+
+        <h2>5. Escolha o tipo de instalação pelo objetivo, não por hábito</h2>
+        <table>
+          <thead>
+            <tr><th>Objetivo</th><th>Opção adequada</th><th>Principal cuidado</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Ubuntu será o único sistema</td>
+              <td>Apagar o disco e instalar Ubuntu</td>
+              <td>Apaga os dados do disco selecionado; confirme backup e unidade correta.</td>
+            </tr>
+            <tr>
+              <td>Manter Windows e Ubuntu</td>
+              <td>Instalar ao lado, quando o instalador oferecer essa opção</td>
+              <td>Confirme espaço, backup e estado do BitLocker antes de prosseguir.</td>
+            </tr>
+            <tr>
+              <td>Layout específico de partições</td>
+              <td>Particionamento manual</td>
+              <td>É opção avançada; não improvise tamanhos ou pontos de montagem sem entender o layout.</td>
+            </tr>
+          </tbody>
+        </table>
+        <p>
+          A opção “apagar o disco” significa exatamente isso: o Ubuntu passa a ocupar o armazenamento selecionado.
+          Em computadores com mais de um disco, confirme modelo e capacidade antes de continuar. Nunca use apagar,
+          formatar ou recriar tabela de partição como teste para descobrir “se funciona”.
+        </p>
+
+        <h2>6. Dual boot: preserve o sistema existente antes de criar espaço</h2>
+        <p>
+          Se o objetivo é manter Windows e Ubuntu, o cenário mais simples é quando o instalador reconhece o outro
+          sistema e oferece instalação ao lado. Mesmo assim, backup continua obrigatório. Se a opção não aparece,
+          não transforme particionamento manual em tentativa e erro: primeiro descubra por que o sistema existente
+          ou o espaço disponível não foram reconhecidos.
+        </p>
+        <p>
+          BitLocker merece atenção especial. Quando o instalador alerta que a instalação Windows está criptografada,
+          a documentação oficial orienta resolver essa condição antes da instalação lado a lado ou usar outro disco
+          não criptografado. Não desative criptografia sem ter a chave de recuperação e uma cópia dos dados.
+        </p>
+
+        <h2>7. Criptografia do Ubuntu: guarde a credencial fora do computador</h2>
+        <p>
+          O instalador oferece opções de criptografia de disco em cenários compatíveis. Se você escolher criptografia
+          com senha, guarde essa senha fora do próprio computador. A documentação do Ubuntu alerta que perder a
+          credencial pode impedir a recuperação dos dados. Criptografia protege o armazenamento; ela não substitui
+          backup.
+        </p>
+
+        <h2>8. Revise o resumo antes de instalar</h2>
+        <p>
+          Antes da confirmação final, leia o resumo como se fosse um orçamento de serviço: qual disco será alterado,
+          qual tipo de instalação foi escolhido e quais opções adicionais serão aplicadas. Se qualquer item estiver
+          diferente do planejado, volte. Depois que a escrita de partições começa, a reversão pode exigir restauração
+          de backup ou recuperação de dados.
+        </p>
+
+        <h2>9. Depois do primeiro boot: atualize antes de personalizar</h2>
+        <p>
+          Após entrar no novo sistema, conecte à internet e aplique as atualizações. O Ubuntu oferece atualização
+          pela interface gráfica e também pelo terminal. Para quem prefere terminal, a documentação oficial usa:
+        </p>
+        <pre><code>{"sudo apt update\nsudo apt upgrade"}</code></pre>
+        <p>
+          Depois, reinicie se solicitado e valide novamente Wi-Fi, áudio, vídeo, suspensão, webcam, Bluetooth e
+          periféricos que realmente fazem parte do seu uso. Só então vale instalar aplicativos e migrar os arquivos
+          do backup.
+        </p>
+
+        <h2>10. O que não fazer durante uma instalação</h2>
+        <ul>
+          <li>Não apague partições para “ver se o instalador reconhece depois”.</li>
+          <li>Não escolha um disco apenas pela letra que ele tinha no Windows; o instalador usa outra identificação.</li>
+          <li>Não use imagem modificada ou script de pós-instalação sem entender a origem.</li>
+          <li>Não desative BitLocker ou altere firmware sem confirmar chaves e backup.</li>
+          <li>Não use particionamento manual se você não consegue explicar o que será criado, mantido e apagado.</li>
+          <li>Não trate a conclusão do instalador como fim do trabalho: atualizações e validação fazem parte da instalação.</li>
+        </ul>
+
+        <h2>Quando parar e pedir ajuda</h2>
+        <p>
+          Interrompa antes de escrever no disco se houver dados sem backup, BitLocker sem chave disponível, disco
+          ausente no firmware, partições que você não reconhece, erro de armazenamento, instalação corporativa com
+          políticas próprias ou dúvida sobre qual unidade será apagada. Nesses cenários, preservar o estado atual é
+          mais importante do que concluir a instalação na mesma hora.
+        </p>
+        <p>
+          Se o objetivo for apenas aprender Linux sem alterar a máquina principal, considere primeiro testar pelo
+          ambiente do pendrive ou usar uma máquina virtual. Para decidir se vale migrar de sistema, veja também{" "}
+          <a href="/blog/trocar-windows-por-linux-vale-a-pena">trocar Windows por Linux: quando faz sentido</a>.
+        </p>
+
+        <h2>Fontes oficiais consultadas</h2>
+        <ul>
+          <li>
+            <a href="https://ubuntu.com/desktop/docs/en/26.04/tutorial/install-ubuntu-desktop/" rel="nofollow noopener" target="_blank">
+              Ubuntu Desktop — Install Ubuntu Desktop
+            </a>
+          </li>
+          <li>
+            <a href="https://documentation.ubuntu.com/desktop/en/latest/how-to/create-a-bootable-usb-stick/" rel="nofollow noopener" target="_blank">
+              Ubuntu Desktop — Create a bootable USB stick
+            </a>
+          </li>
+        </ul>
+      </>
+    ),
+  },
 };
 
 export default blogSupplementalPosts;
