@@ -861,6 +861,46 @@
       "cidadeSlug": "araucaria",
       "parent": "/tecnico-informatica-araucaria",
       "lote": 7
+    },
+    {
+      "slug": "botiatuva",
+      "intent": "diagnóstico de informática no Botiatuva com foco em energia, inicialização, armazenamento e Wi-Fi",
+      "cidade": "Campo Largo",
+      "cidadeSlug": "campo-largo",
+      "parent": "/tecnico-informatica-campo-largo",
+      "lote": 8
+    },
+    {
+      "slug": "rondinha",
+      "intent": "suporte de informática no Rondinha com foco em tela azul, armazenamento, dados e conectividade",
+      "cidade": "Campo Largo",
+      "cidadeSlug": "campo-largo",
+      "parent": "/tecnico-informatica-campo-largo",
+      "lote": 8
+    },
+    {
+      "slug": "sao-silvestre",
+      "intent": "diagnóstico de informática em São Silvestre com foco em desempenho, upgrade e preservação de dados",
+      "cidade": "Campo Largo",
+      "cidadeSlug": "campo-largo",
+      "parent": "/tecnico-informatica-campo-largo",
+      "lote": 8
+    },
+    {
+      "slug": "itaqui",
+      "intent": "suporte de informática no Itaqui com foco em rede, inicialização e preservação de arquivos",
+      "cidade": "Campo Largo",
+      "cidadeSlug": "campo-largo",
+      "parent": "/tecnico-informatica-campo-largo",
+      "lote": 8
+    },
+    {
+      "slug": "vila-solene",
+      "intent": "diagnóstico de informática na Vila Solene com foco em Windows, periféricos, notebook e conectividade",
+      "cidade": "Campo Largo",
+      "cidadeSlug": "campo-largo",
+      "parent": "/tecnico-informatica-campo-largo",
+      "lote": 8
     }
   ],
   "servicoBairroIndexaveis": [
@@ -983,5 +1023,12 @@
     "/bairros/campina-da-barra",
     "/bairros/tindiquera",
     "/bairros/porto-das-laranjeiras"
+  ],
+  "loteLocal8": [
+    "/bairros/botiatuva",
+    "/bairros/rondinha",
+    "/bairros/sao-silvestre",
+    "/bairros/itaqui",
+    "/bairros/vila-solene"
   ]
 }
