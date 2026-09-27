@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="t d">
+<title id="t">Instalação segura de Linux por pendrive</title>
+<desc id="d">Notebook, pendrive, disco e terminal representando preparação, instalação e validação de um sistema Linux.</desc>
+<rect width="1200" height="630" rx="32" fill="#07182b"/>
+<circle cx="1025" cy="115" r="150" fill="#0b2f50"/>
+<circle cx="1050" cy="105" r="78" fill="#e86a33"/>
+<path d="M1015 105h70M1050 70v70" stroke="#fff" stroke-width="14" stroke-linecap="round"/>
+<rect x="120" y="115" width="600" height="350" rx="28" fill="#102d49" stroke="#4fa8d8" stroke-width="8"/>
+<rect x="160" y="155" width="520" height="255" rx="14" fill="#06111f"/>
+<path d="M205 210l45 38-45 38M280 286h105" fill="none" stroke="#65c9ff" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="115" y="465" width="610" height="34" rx="17" fill="#4fa8d8"/>
+<rect x="790" y="255" width="110" height="210" rx="18" fill="#e9f4fb"/>
+<rect x="820" y="220" width="50" height="55" rx="8" fill="#e86a33"/>
+<path d="M815 325h60M815 365h60M815 405h60" stroke="#24506e" stroke-width="12" stroke-linecap="round"/>
+<path d="M740 360c55 0 70 0 110 0" stroke="#65c9ff" stroke-width="10" stroke-dasharray="16 14"/>
+<ellipse cx="1010" cy="420" rx="125" ry="48" fill="#123a5c" stroke="#65c9ff" stroke-width="7"/>
+<path d="M885 420v72c0 27 56 48 125 48s125-21 125-48v-72" fill="#0d2740" stroke="#65c9ff" stroke-width="7"/>
+<path d="M930 420c26 17 134 17 160 0" fill="none" stroke="#e86a33" stroke-width="9"/>
+</svg>
