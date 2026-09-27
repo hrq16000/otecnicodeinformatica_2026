@@ -989,10 +989,12 @@ export const EDITORIAL_SOURCES: Record<string, EditorialSource> = {
     title: "OpenSSH server",
     publisher: "Ubuntu Server documentation",
     url: "https://ubuntu.com/server/docs/how-to/security/openssh-server/",
-    accessedAt: "2026-09-26",
+    accessedAt: "2026-09-27",
     sourceType: "official",
     supports: [
-      "Instalação e configuração do servidor OpenSSH no Ubuntu e uso de arquivos de configuração do sshd.",
+      "Instalação do OpenSSH Server no Ubuntu e administração do serviço ssh.",
+      "Uso do arquivo principal e de snippets em sshd_config.d para configuração do servidor.",
+      "Validação da configuração antes de aplicar mudanças e uso de autenticação por chave.",
     ],
   },
   "openssh-sshd-config-2026": {
@@ -1000,10 +1002,11 @@ export const EDITORIAL_SOURCES: Record<string, EditorialSource> = {
     title: "sshd_config(5)",
     publisher: "OpenBSD manual pages / OpenSSH",
     url: "https://man.openbsd.org/sshd_config",
-    accessedAt: "2026-09-26",
+    accessedAt: "2026-09-27",
     sourceType: "official",
     supports: [
-      "Semântica e valores das diretivas do daemon OpenSSH, incluindo autenticação, usuários, forwarding e timeouts.",
+      "Semântica das diretivas PubkeyAuthentication, PasswordAuthentication, PermitRootLogin, AllowUsers e AllowGroups.",
+      "Composição da configuração do daemon OpenSSH e opções de autenticação, usuários, forwarding e timeouts.",
     ],
   },
   "rsync-manpage-2026": {
@@ -1059,10 +1062,11 @@ export const ARTICLE_SOURCE_MANIFEST: Record<string, ArticleSourceManifest> = {
   "como-configurar-ssh-seguro-linux": {
     slug: "como-configurar-ssh-seguro-linux",
     sources: ["ubuntu-openssh-server-2026", "openssh-sshd-config-2026"],
-    technicalReview: "pending",
-    factChecked: false,
+    technicalReview: "reviewed",
+    factChecked: true,
+    factCheckedAt: "2026-09-27",
     notes:
-      "Onda Linux 1: artigo permanece bloqueado para promoção até remover linguagem anti-invasão, revisar porta customizada/fail2ban/MFA e garantir rollback para não perder acesso remoto.",
+      "Reescrita material concluída: remove estatísticas de bots, promessa de porta customizada, receita genérica de fail2ban/MFA e parâmetros arbitrários; prioriza chave testada em segunda sessão, configuração efetiva, sshd -t, reload com rollback e critérios explícitos de parada. Permanece noindex até capa/proveniência e aprovação editorial.",
   },
   "como-usar-rsync-backup-linux": {
     slug: "como-usar-rsync-backup-linux",
