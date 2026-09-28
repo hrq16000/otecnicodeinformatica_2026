@@ -16,81 +16,96 @@ export const BAIRROS_LOTE_2: Record<string, BairroLocalData> = {
     nomeLocativo: "em Santa Felicidade",
     cidade: "Curitiba",
     areaName: "Santa Felicidade, Curitiba",
-    metaTitle: "Técnico de Informática em Santa Felicidade | Curitiba",
+    metaTitle: "Técnico de informática em Santa Felicidade | Wi‑Fi, PC e notebook",
     metaDescription:
-      "Informática em Santa Felicidade, Curitiba: Wi-Fi que não cobre a casa toda, manutenção de computador, formatação e suporte ao comércio. Triagem pelo WhatsApp.",
-    h1: "Atendimento de informática em Santa Felicidade – Curitiba",
+      "Técnico de informática em Santa Felicidade, Curitiba: diagnóstico de Wi‑Fi, PC e notebook, backup, SSD e formatação. Triagem antes de indicar equipamento.",
+    h1: "Técnico de informática em Santa Felicidade – Curitiba",
     subtitulo:
-      "Terrenos e casas maiores mudam o projeto de rede: aqui a conversa começa pelo alcance do Wi-Fi e pelo que realmente precisa de visita.",
+      "Diagnóstico de computador, notebook e rede para decidir entre suporte remoto, visita e bancada antes de comprar equipamento ou formatar.",
     whatsappMessage:
       "Olá! Preciso de atendimento de informática em Santa Felicidade, Curitiba. Pode me orientar?",
     introducaoLocal: [
-      "Santa Felicidade é uma região de casas com mais área construída, muros altos e imóveis com dois pavimentos ou edícula nos fundos. Esse formato tem consequência direta em informática: o roteador entregue pelo provedor costuma ficar no cômodo onde o cabo entrou e não alcança o restante da casa. Boa parte dos chamados que chegam daqui começa como 'internet ruim' e termina como projeto de cobertura de rede, não como defeito de computador.",
-      "A outra metade da demanda vem do comércio da região, com restaurantes, lojas e prestadores que dependem de um único computador para emitir documento fiscal, imprimir e acessar sistema. Nesse caso, o objetivo do atendimento é reduzir o tempo de parada: primeiro entender pelo WhatsApp se dá para resolver remotamente, depois decidir entre visita e coleta.",
+      "Santa Felicidade integra a regional homônima de Curitiba. A Administração Regional funciona na Rua Santa Bertila Boscardin, 213, ao lado do Terminal Santa Felicidade, dentro da Rua da Cidadania. A Prefeitura lista ainda Butiatuvinha, Campina do Siqueira, Cascatinha, Lamenha Pequena, Mossunguê, Orleans, Santo Inácio, São Braz, São João, Vista Alegre e parte norte do Campo Comprido na mesma regional.",
+      "Nesta página, o recorte local serve para organizar a cobertura e facilitar a identificação do endereço. O diagnóstico continua sendo guiado pelo sintoma: Wi‑Fi fraco, computador lento, notebook aquecendo e impressora sem comunicação são problemas diferentes e não devem receber a mesma solução automática.",
     ],
     contextoLocal: [
-      "Nas residências, os pedidos mais comuns são de cobertura de sinal em cômodo distante, computador de mesa antigo com disco mecânico e notebook de estudo que ficou lento depois de anos sem manutenção. Em casa grande, repetidor colocado no lugar errado costuma piorar a experiência: o aparelho conecta no sinal fraco e mantém a conexão ruim mesmo perto de um ponto melhor. A avaliação verifica onde o sinal cai de fato antes de indicar equipamento.",
-      "No comércio, o padrão muda para impressora que parou de ser reconhecida, sistema que não abre depois de atualização e máquina compartilhada por vários funcionários sem separação de usuários. Esse último ponto é o que mais gera reincidência: sem contas separadas, qualquer instalação indevida vira problema de todo mundo.",
+      "Em Wi‑Fi, o primeiro teste é comparar dispositivos e pontos do imóvel. Se o sinal cai apenas em um notebook, adaptador, driver e configuração desse equipamento ganham prioridade. Se vários aparelhos perdem qualidade no mesmo ponto, posição do roteador, obstáculos, banda utilizada e distribuição do sinal passam a ser mais relevantes.",
+      "Repetidor, mesh e segundo ponto cabeado resolvem cenários diferentes. Repetidor precisa receber sinal utilizável para retransmitir; mesh depende de posicionamento adequado entre os nós; cabeamento elimina parte da incerteza do rádio quando existe caminho viável. A escolha deve vir depois da medição, não antes.",
+      "Em PC ou notebook lento, verificamos armazenamento, memória, temperatura e carga de programas antes de sugerir formatação ou upgrade. Um SSD degradado, pouca RAM ou superaquecimento podem produzir a mesma sensação de lentidão. Trocar peça sem separar essas hipóteses aumenta custo sem garantir resultado.",
+      "Quando existem arquivos importantes, backup é tratado antes de reinstalação ou intervenção em armazenamento. Se houver ruído, erro de leitura ou falha intermitente de HD/SSD, insistir no uso pode reduzir a chance de recuperação. Nesse caso, a prioridade deixa de ser desempenho e passa a ser preservação dos dados.",
     ],
     logisticaLocal: [
-      "Casa com portão fechado e cachorro solto é detalhe operacional, não curiosidade: combinamos pelo WhatsApp quem recebe o técnico e onde o equipamento estará ligado, para que a avaliação comece assim que a porta abre. Quando o serviço envolve cabeamento ou passagem entre pavimentos, avisamos antes que o tempo em campo é maior.",
-      "Quando o caso é de bancada — reparo interno, troca de peça, tentativa de recuperação de dados — a coleta costuma ser melhor do que abrir o equipamento no local. O equipamento sai identificado, o serviço é executado em bancada e a devolução acontece no mesmo endereço, com a peça trocada disponível para conferência.",
+      "O endereço completo é confirmado antes do atendimento. Como referências públicas da região, a Rua da Cidadania Santa Felicidade, a Rua Santa Bertila Boscardin e o Terminal Santa Felicidade ajudam a localizar o ponto, mas não representam filial ou oficina.",
+      "Configuração, navegador, contas, parte dos erros do Windows e algumas falhas de impressão podem começar por acesso remoto. Problemas que dependem da cobertura da rede, cabeamento, posição do roteador ou periféricos no ambiente exigem visita. Desmontagem, falha física e testes prolongados seguem para bancada.",
+      "Não há promessa fixa de chegada associada ao bairro. Modalidade, agenda, deslocamento e prazo são definidos após a triagem conforme endereço, tipo de falha, complexidade e eventual necessidade de peça.",
     ],
     operacaoLocal: [
-      "Triagem pelo WhatsApp separando problema de rede de problema de máquina",
-      "Teste de cobertura de sinal antes de indicar repetidor ou mesh",
-      "Diagnóstico antes do valor; execução só após sua aprovação",
-      "Registro do que foi feito, para o histórico ficar com você",
+      "Triagem pelo WhatsApp para separar rede, sistema, armazenamento, temperatura e periféricos",
+      "Teste de cobertura antes de indicar repetidor, mesh ou novo roteador",
+      "Backup conferido antes de formatação ou intervenção em disco",
+      "Escopo, modalidade e valor informados antes da execução",
     ],
     atendimentoLocal: [
-      "Ajuste de Wi-Fi e cobertura em casas de dois pavimentos",
-      "Instalação e configuração de roteador, repetidor ou mesh",
-      "Formatação com backup conferido antes",
-      "Suporte ao computador de balcão do comércio da região",
+      "Wi‑Fi com baixa cobertura, queda ou desempenho irregular",
+      "Computador ou notebook lento, travando ou reiniciando",
+      "Windows, drivers, contas e programas com falha de configuração",
+      "Impressora e periféricos sem comunicação",
     ],
     coletaBancada: [
-      "Troca de SSD ou memória em desktop antigo",
-      "Notebook que não liga ou desliga sozinho por superaquecimento",
-      "Tentativa de recuperação de arquivos em disco com falha",
+      "SSD, HD, memória, fonte ou outro componente que exija teste físico",
+      "Notebook com superaquecimento, conector, teclado ou tela danificada",
+      "Tentativa de recuperação de arquivos em armazenamento com falha",
     ],
     publicoAtendido: [
-      "Famílias com mais de um computador em casa",
-      "Home office em imóvel amplo, com sinal irregular",
-      "Comércio de bairro com uma ou duas estações de trabalho",
+      "Residências com computador, notebook e múltiplos dispositivos na rede",
+      "Home office dependente de Wi‑Fi, webcam, áudio e periféricos",
+      "Pequenos negócios com computador, impressora e rede local",
     ],
     servicosPrioritarios: [
       "/servicos/redes-e-wifi",
       "/servicos/manutencao-de-computador",
-      "/servicos/formatacao",
+      "/servicos/manutencao-de-notebook",
       "/servicos/upgrade-ssd-ram",
+      "/servicos/formatacao",
     ],
     servicosCidade: [
       {
         to: "/servicos/redes-wifi/curitiba",
         label: "Redes e Wi-Fi em Curitiba",
-        desc: "Como funciona a visita para rede e Wi-Fi na cidade.",
+        desc: "Como funciona a avaliação de rede e Wi-Fi na cidade.",
       },
+    ],
+    problemasRelacionados: [
+      { to: "/problemas/wifi-instavel", label: "Wi-Fi instável", desc: "Como diferenciar cobertura ruim, falha do dispositivo e problema no roteador ou no link." },
+      { to: "/problemas/computador-lento", label: "Computador lento", desc: "O que medir em armazenamento, memória, software e temperatura antes de fazer upgrade." },
+      { to: "/problemas/computador-esquentando", label: "Computador esquentando", desc: "Quando temperatura e ventilação passam a exigir inspeção física." },
+      { to: "/problemas/arquivos-apagados", label: "Arquivos apagados", desc: "O que evitar antes de tentar recuperar dados importantes." },
     ],
     faqLocal: [
       {
-        question: "Meu Wi-Fi não chega no segundo andar. Isso é resolvido em visita?",
+        question: "Meu Wi‑Fi não chega bem a todos os cômodos. Preciso comprar mesh?",
         answer:
-          "Normalmente sim, mas depende do imóvel. A visita mede onde o sinal cai e testa posicionamento antes de indicar repetidor, mesh ou cabo até um segundo ponto. Só indicamos equipamento quando o teste mostra que ele resolve.",
+          "Não necessariamente. Primeiro verificamos posição do roteador, qualidade do sinal nos pontos de uso e comportamento de outros dispositivos. Repetidor, mesh, segundo ponto cabeado ou simples reposicionamento resolvem situações diferentes.",
       },
       {
-        question: "Vocês atendem o comércio de Santa Felicidade?",
+        question: "Dá para diagnosticar a rede sem visita?",
         answer:
-          "Sim, para computador de balcão, impressora e rede local. A prioridade é reduzir a parada: tentamos remoto primeiro quando o sintoma permite e, se não resolver, combinamos visita.",
+          "Parte da triagem pode ser feita remotamente, mas cobertura, interferência, posição do roteador e cabeamento precisam ser avaliados no ambiente quando os testes iniciais não isolam a causa.",
       },
       {
-        question: "Preciso comprar o roteador antes de chamar?",
+        question: "Meu notebook está lento. Formatar é o primeiro passo?",
         answer:
-          "Não. Compre depois da avaliação. Comprar antes é o erro mais comum: em muitos casos o aparelho atual serve e o problema está no posicionamento ou na configuração.",
+          "Não. Antes medimos armazenamento, memória, temperatura e carga de programas. Se o gargalo for físico, formatar não resolve a causa e pode apenas atrasar o diagnóstico.",
       },
       {
-        question: "Dá para resolver sem levar o computador?",
+        question: "Vocês atendem Santa Felicidade no local?",
         answer:
-          "Muitos casos sim — formatação, limpeza de sistema e configuração podem ser feitos no local. Reparo interno e recuperação de dados são serviços de bancada e seguem por coleta, com sua aprovação.",
+          "Sim, mediante disponibilidade e confirmação do endereço. A modalidade pode ser remota, no local ou por coleta para bancada, conforme o tipo de falha identificado na triagem.",
+      },
+      {
+        question: "Qual referência ajuda a localizar o atendimento em Santa Felicidade?",
+        answer:
+          "O endereço completo é sempre o principal dado. Como referências públicas, a Rua da Cidadania Santa Felicidade, a Rua Santa Bertila Boscardin e o Terminal Santa Felicidade ajudam a confirmar a região.",
       },
     ],
   },
