@@ -444,75 +444,70 @@ export const BAIRROS_LOTE_2: Record<string, BairroLocalData> = {
     nomeLocativo: "no Cruzeiro",
     cidade: "São José dos Pinhais",
     areaName: "Cruzeiro, São José dos Pinhais",
-    metaTitle: "Técnico de Informática no Cruzeiro | São José dos Pinhais",
+    metaTitle: "Técnico de informática no Cruzeiro | Notebook, PC, Wi‑Fi e backup",
     metaDescription:
-      "Assistência de informática no Cruzeiro, São José dos Pinhais: conserto de notebook, formatação, remoção de vírus e Wi-Fi. Diagnóstico antes do valor, com aprovação sua.",
-    h1: "Atendimento de informática no Cruzeiro – São José dos Pinhais",
+      "Técnico de informática no Cruzeiro, São José dos Pinhais: diagnóstico de notebook e PC, Wi‑Fi, impressora, backup e Windows. Triagem antes da execução.",
+    h1: "Técnico de informática no Cruzeiro – São José dos Pinhais",
     subtitulo:
-      "Bairro residencial com comércio de rua: a maior parte dos chamados é de notebook e computador de casa, com decisão entre remoto, visita e coleta.",
+      "Diagnóstico de notebook, computador e rede para preservar dados e separar software, hardware e conectividade antes de formatar ou trocar peça.",
     whatsappMessage:
       "Olá! Preciso de atendimento de informática no Cruzeiro, em São José dos Pinhais. Pode me orientar?",
     introducaoLocal: [
-      "O Cruzeiro é um bairro predominantemente residencial de São José dos Pinhais, com comércio de rua distribuído entre as quadras. A demanda que chega daqui é sobretudo doméstica: notebook de estudo e trabalho, computador de mesa da família e o roteador único que precisa atender a casa inteira.",
-      "Como boa parte desses casos é de software, a triagem tenta primeiro entender se dá para resolver remotamente. Quando o equipamento não liga, quando o problema é físico ou quando a rede precisa ser vista no imóvel, aí a visita faz sentido.",
+      "O Cruzeiro é um bairro oficialmente mapeado por São José dos Pinhais. Entre as referências públicas locais estão a UBS Xingu, na Rua Ilhio Pedro Gasparelo, 854, e o CMEI Quero-Quero Aprender, na Rua Rubens Huergo, 130. Essas referências servem apenas para situar a cobertura e não representam oficina ou unidade física da marca.",
+      "Nesta página, o foco técnico é separar problemas de notebook, Windows, Wi‑Fi e periféricos antes de sugerir formatação ou troca de equipamento. Lentidão, aquecimento, aviso falso e impressora offline podem exigir caminhos completamente diferentes.",
     ],
     contextoLocal: [
-      "Os relatos mais frequentes são de lentidão progressiva, tela com aviso falso pedindo pagamento, arquivos que sumiram depois de uma atualização e notebook desligando ao rodar programas mais pesados. Cada um leva a um caminho diferente: limpeza de sistema, remoção de ameaça, tentativa de recuperação ou limpeza interna com troca de pasta térmica.",
-      "Também aparecem impressoras domésticas que param de imprimir após atualização do sistema e TVs e consoles disputando a mesma rede à noite. Ajustar prioridade e posicionamento resolve mais do que trocar o plano de internet.",
+      "Quando o notebook trava ou fica lento, verificamos armazenamento, memória, temperatura e programas em segundo plano. Se o disco apresenta erro de leitura ou travamento durante cópia, a prioridade passa a ser preservar os dados antes de reinstalar o sistema.",
+      "Avisos que pedem pagamento, bloqueio de tela ou instalação imediata de programas precisam ser tratados como suspeitos até verificação. A orientação é não pagar, não fornecer credenciais e não instalar software indicado pela própria mensagem.",
+      "Em Wi‑Fi, comparamos outros dispositivos. Se apenas um computador perde conexão, adaptador e driver desse equipamento entram primeiro. Se vários aparelhos falham no mesmo trecho, roteador, cobertura, banda e conexão principal passam a ser investigados.",
+      "Quando a impressora deixa de responder depois de atualização, verificamos teste interno, porta configurada, endereço na rede e fila antes de concluir por defeito físico.",
     ],
     logisticaLocal: [
-      "As visitas no Cruzeiro são combinadas por janela de horário pelo WhatsApp, com confirmação de endereço e de quem estará no local. Quando o problema é de rede, pedimos que o roteador e os aparelhos com queixa estejam acessíveis durante a avaliação.",
-      "Quando o caso é de bancada, a coleta é combinada com retirada e devolução no mesmo endereço em São José dos Pinhais. O equipamento sai identificado e a peça substituída fica disponível para conferência na entrega.",
+      "O endereço completo é confirmado antes do atendimento. Como referências públicas do bairro, a UBS Xingu e o CMEI Quero-Quero Aprender ajudam a situar a região.",
+      "Configuração, navegador, contas e parte dos erros do Windows podem começar remotamente. Rede do imóvel, impressora e equipamentos que precisam ser testados juntos normalmente pedem visita. Falhas físicas e desmontagem seguem para bancada.",
+      "Não existe promessa fixa de chegada ou conclusão vinculada ao bairro. Agenda, modalidade e prazo são definidos após a triagem conforme endereço, complexidade e eventual necessidade de peça.",
     ],
     operacaoLocal: [
-      "Tentativa de solução remota quando o sintoma permite",
-      "Visita combinada por janela, com o equipamento acessível",
-      "Diagnóstico antes do valor e aprovação antes de executar",
-      "Peça substituída disponível para conferência na entrega",
+      "Triagem pelo WhatsApp registrando equipamento, sintoma e arquivos importantes",
+      "Separação entre software, armazenamento, temperatura, rede e periféricos",
+      "Conferência de backup antes de formatação ou intervenção em disco",
+      "Escopo, modalidade e valor informados antes da execução",
     ],
     atendimentoLocal: [
-      "Remoção de vírus e de avisos falsos de bloqueio",
-      "Formatação com backup conferido antes",
-      "Configuração de impressora doméstica",
-      "Ajuste de Wi-Fi para cobrir a casa",
+      "Notebook ou PC lento, travando ou reiniciando",
+      "Windows, navegador, contas e programas com erro",
+      "Wi‑Fi com queda ou falha em um dispositivo específico",
+      "Impressora e periféricos sem comunicação",
     ],
     coletaBancada: [
-      "Notebook que não liga ou desliga sozinho",
-      "Troca de tela, teclado ou bateria",
-      "Upgrade de SSD e memória",
+      "SSD, HD, memória, bateria, teclado ou tela que exijam teste físico",
+      "Notebook com aquecimento, falha de energia ou conector danificado",
+      "Tentativa de recuperação de dados em armazenamento com falha",
     ],
     publicoAtendido: [
-      "Famílias com computador ou notebook de uso diário",
-      "Estudantes e trabalho remoto",
-      "Comércio de rua com uma estação de trabalho",
+      "Residências com computador ou notebook de uso diário",
+      "Home office dependente de Wi‑Fi, arquivos e periféricos",
+      "Usuários que precisam preservar dados antes da manutenção",
     ],
     servicosPrioritarios: [
       "/servicos/manutencao-de-notebook",
-      "/servicos/remocao-de-virus",
-      "/servicos/formatacao",
+      "/servicos/manutencao-de-computador",
       "/servicos/redes-e-wifi",
+      "/servicos/formatacao",
+      "/servicos/recuperacao-de-dados",
+    ],
+    problemasRelacionados: [
+      { to: "/problemas/computador-lento", label: "Computador lento", desc: "Como separar armazenamento, memória, software e temperatura antes de fazer upgrade." },
+      { to: "/problemas/wifi-instavel", label: "Wi-Fi instável", desc: "Como distinguir falha de dispositivo, cobertura ruim e problema no roteador ou no link." },
+      { to: "/problemas/impressora-nao-imprime", label: "Impressora não imprime", desc: "O que verificar em fila, porta, driver e rede antes de substituir equipamento." },
+      { to: "/problemas/arquivos-apagados", label: "Arquivos apagados", desc: "O que evitar antes de tentar recuperar documentos importantes." },
     ],
     faqLocal: [
-      {
-        question: "Apareceu um aviso pedindo pagamento para desbloquear o PC. O que faço?",
-        answer:
-          "Não pague e não instale nada indicado pela mensagem. Descreva o aviso pelo WhatsApp: na maioria das vezes é golpe e o equipamento é liberado com uma limpeza de sistema.",
-      },
-      {
-        question: "Dá para resolver sem o técnico ir até minha casa?",
-        answer:
-          "Quando o computador liga e conecta à internet, muitos casos de software são resolvidos remotamente, com sua autorização e acompanhamento na tela.",
-      },
-      {
-        question: "Vocês fazem coleta no Cruzeiro?",
-        answer:
-          "Sim, para serviços de bancada. A retirada e a devolução são combinadas no mesmo endereço, em São José dos Pinhais, com registro do que foi retirado.",
-      },
-      {
-        question: "Meu notebook esquenta muito. Isso tem conserto?",
-        answer:
-          "Na maior parte dos casos sim: limpeza interna, troca de pasta térmica e verificação das ventoinhas. Se o aquecimento vier de defeito em componente, isso aparece no diagnóstico antes do orçamento.",
-      },
+      { question: "Apareceu um aviso pedindo pagamento para desbloquear o PC. O que faço?", answer: "Não pague, não informe credenciais e não instale programas indicados pela mensagem. Primeiro verificamos se é golpe, malware ou apenas uma notificação falsa." },
+      { question: "Meu notebook esquenta e fica lento. Formatar resolve?", answer: "Não se a causa for térmica. Verificamos temperatura, ventilação, armazenamento e memória antes de decidir por limpeza interna, upgrade ou reinstalação." },
+      { question: "A impressora parou depois de uma atualização. Preciso trocar?", answer: "Não necessariamente. Primeiro verificamos porta, driver, endereço de rede e fila de impressão antes de concluir por defeito físico." },
+      { question: "O atendimento pode começar remotamente?", answer: "Sim, quando o equipamento liga e mantém conexão. Configuração, navegador e parte dos erros do Windows podem ser triados remotamente; falhas físicas e problemas que dependem do ambiente exigem visita ou bancada." },
+      { question: "Qual referência ajuda a localizar o atendimento no Cruzeiro?", answer: "O endereço completo é sempre o principal dado. Como referências públicas, a UBS Xingu e o CMEI Quero-Quero Aprender ajudam a confirmar a região." },
     ],
   },
 
