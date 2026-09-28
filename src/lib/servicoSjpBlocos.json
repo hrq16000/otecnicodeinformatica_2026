@@ -13,8 +13,8 @@
       "nome": "Conserto de Notebook",
       "intentGlobal": "entender o serviço de manutenção de notebook: sintomas, causas, peças e procedimentos",
       "intentLocal": "contratar conserto de notebook em São José dos Pinhais com triagem entre software, carga, tela, teclado, temperatura e armazenamento, escolhendo remoto, visita ou bancada conforme o defeito",
-      "title": "Conserto de notebook em São José dos Pinhais | Tela, carga, SSD e Windows",
-      "description": "Conserto de notebook em São José dos Pinhais: diagnóstico de tela, carga, teclado, aquecimento, SSD, memória e Windows. Triagem antes de formatar ou trocar peça.",
+      "title": "Conserto de notebook em SJP | Tela, carga, SSD e Windows",
+      "description": "Conserto de notebook em São José dos Pinhais: tela, carga, teclado, aquecimento, SSD, memória e Windows. Triagem antes de trocar peça.",
       "h1": "Conserto de notebook em São José dos Pinhais",
       "subtitulo": "Diagnóstico de tela, carga, teclado, aquecimento, SSD, memória e Windows para decidir entre ajuste remoto, atendimento no endereço e bancada sem trocar peça por tentativa.",
       "intro": [
@@ -104,8 +104,8 @@
       "nome": "Conserto de PC",
       "intentGlobal": "entender a manutenção de computador de mesa: diagnóstico, componentes, limpeza e troca de peças",
       "intentLocal": "contratar conserto de computador de mesa em São José dos Pinhais com diagnóstico de fonte, vídeo, memória, armazenamento e temperatura antes de decidir entre ajuste remoto, visita ou bancada",
-      "title": "Conserto de computador em São José dos Pinhais | Fonte, SSD, memória e Windows",
-      "description": "Conserto de PC em São José dos Pinhais: diagnóstico de fonte, vídeo, memória, SSD, temperatura, Windows e rede. Triagem antes de trocar componente.",
+      "title": "Conserto de PC em SJP | Fonte, SSD, memória e Windows",
+      "description": "Conserto de PC em São José dos Pinhais: diagnóstico de fonte, vídeo, memória, SSD, temperatura, Windows e rede antes de trocar componente.",
       "h1": "Conserto de computador em São José dos Pinhais",
       "subtitulo": "Diagnóstico de fonte, vídeo, memória, armazenamento, temperatura e Windows para trocar somente o componente que o teste realmente indicar.",
       "intro": [
