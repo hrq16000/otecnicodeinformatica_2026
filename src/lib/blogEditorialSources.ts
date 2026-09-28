@@ -1384,7 +1384,8 @@ export const ARTICLE_SOURCE_MANIFEST: Record<string, ArticleSourceManifest> = {
     factChecked: true,
     factCheckedAt: "2026-09-28",
     stableKnowledge: true,
-    notes:\n      "Revisão material em 2026-09-28: removeu absolutos sobre SSID único, 5 GHz e módulo Wi-Fi; passou a separar cobertura, compatibilidade de faixa/canal/segurança, isolamento de clientes e falha do rádio da TV. Mantém testes reversíveis antes de reset de fábrica.",
+    notes:
+      "Revisão material em 2026-09-28: removeu absolutos sobre SSID único, 5 GHz e módulo Wi-Fi; passou a separar cobertura, compatibilidade de faixa/canal/segurança, isolamento de clientes e falha do rádio da TV. Mantém testes reversíveis antes de reset de fábrica.",
   },
   "como-testar-fonte-de-alimentacao-pc": {
     slug: "como-testar-fonte-de-alimentacao-pc",
@@ -1433,7 +1434,8 @@ export const ARTICLE_SOURCE_MANIFEST: Record<string, ArticleSourceManifest> = {
     factChecked: true,
     factCheckedAt: "2026-09-28",
     stableKnowledge: true,
-    notes:\n      "Revisão material em 2026-09-28: resposta curta prioriza backup verificável e chave BitLocker; removeu absolutos sobre instalação limpa, ativação e ordem universal de drivers; preserva a distinção entre redefinir, reparar e instalar do zero.",
+    notes:
+      "Revisão material em 2026-09-28: resposta curta prioriza backup verificável e chave BitLocker; removeu absolutos sobre instalação limpa, ativação e ordem universal de drivers; preserva a distinção entre redefinir, reparar e instalar do zero.",
   },
   "quanto-custa-formatar-um-computador": {
     slug: "quanto-custa-formatar-um-computador",
@@ -1471,7 +1473,8 @@ export const ARTICLE_SOURCE_MANIFEST: Record<string, ArticleSourceManifest> = {
     factChecked: true,
     factCheckedAt: "2026-09-28",
     stableKnowledge: true,
-    notes:\n      "Revisão material em 2026-09-28: separou SSD novo vazio de SSD clonado/com Windows; removeu a exigência universal de AHCI e passou a tratar AHCI/RST/VMD/RAID conforme o equipamento; reforçou detecção, UEFI, bootloader, BitLocker e preservação do disco antigo.",
+    notes:
+      "Revisão material em 2026-09-28: separou SSD novo vazio de SSD clonado/com Windows; removeu a exigência universal de AHCI e passou a tratar AHCI/RST/VMD/RAID conforme o equipamento; reforçou detecção, UEFI, bootloader, BitLocker e preservação do disco antigo.",
   },
   "limpar-arquivos-temporarios-windows": {
     slug: "limpar-arquivos-temporarios-windows",
