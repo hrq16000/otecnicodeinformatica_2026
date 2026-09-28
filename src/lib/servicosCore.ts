@@ -255,7 +255,7 @@ export const SERVICOS_CORE: Record<string, ServicoLandingData> = {
       { label: "Como funciona o atendimento", to: "/como-funciona" },
       { label: "Preços e políticas", to: "/precos-e-politicas" },
     ],
-    dateModified: "2026-09-26",
+    dateModified: "2026-09-28",
   },
 
   // 3 ─────────────────────────────────────────────────────────
@@ -385,17 +385,17 @@ export const SERVICOS_CORE: Record<string, ServicoLandingData> = {
   "upgrade-ssd-ram": {
     path: "upgrade-ssd-ram",
     trackingKey: "upgrade-ssd-ram",
-    metaTitle: "Instalação de SSD e Upgrade de Memória em Curitiba",
+    metaTitle: "Upgrade de SSD e RAM em Curitiba | SATA, NVMe e Memória",
     metaDescription:
-      "Instalação de SSD e upgrade de memória RAM em Curitiba com avaliação de compatibilidade, clonagem e backup. Ganho real de desempenho, sem promessa de milagre.",
+      "Upgrade de SSD e RAM em Curitiba com avaliação de SATA/NVMe, memória compatível, clonagem ou instalação limpa e backup antes da migração.",
     serviceName: "Upgrade de SSD e Memória RAM",
     serviceDescription:
       "Instalação de SSD e ampliação de RAM com avaliação de compatibilidade, clonagem do sistema e backup, para ganho real de desempenho em Curitiba e região.",
     eyebrow: "Desempenho em Curitiba",
-    h1: "Instalação de SSD e upgrade de memória RAM em Curitiba",
+    h1: "Upgrade de SSD e memória RAM em Curitiba",
     h1Accent: "ganho real de desempenho",
     intro:
-      "Trocar o HD por um SSD e ampliar a memória é o upgrade com melhor custo-benefício para a maioria das máquinas. Antes de indicar peça, avaliamos a compatibilidade do seu equipamento (SATA ou NVMe, limite de RAM) e, quando possível, clonamos o Windows para você não perder nada. O ganho é real, mas depende do gargalo de cada máquina — não prometemos milagre em equipamento condenado. Envie o modelo pelo WhatsApp para avaliação.",
+      "SSD e memória resolvem gargalos diferentes. Antes de indicar peça, verificamos se a lentidão vem de armazenamento, falta de RAM, temperatura ou software e confirmamos compatibilidade SATA/NVMe, slots e limite de memória. Clonagem ou instalação limpa é decidida pelo estado do sistema e do disco de origem. Envie o modelo e o sintoma pelo WhatsApp para avaliação.",
     whatsappMessage: "Olá! Quero fazer upgrade de SSD e/ou memória. Podem avaliar meu equipamento?",
     incluso: [
       { title: "Avaliação de compatibilidade", desc: "Checamos o que o seu equipamento suporta antes de indicar peças." },
@@ -496,7 +496,7 @@ export const SERVICOS_CORE: Record<string, ServicoLandingData> = {
       { label: "Técnico no seu endereço", to: "/atendimento-domicilio" },
       { label: "Preços e políticas", to: "/precos-e-politicas" },
     ],
-    dateModified: "2026-08-05",
+    dateModified: "2026-09-28",
   },
 
   // 5 ─────────────────────────────────────────────────────────
@@ -720,17 +720,17 @@ export const SERVICOS_CORE: Record<string, ServicoLandingData> = {
   "redes-e-wifi": {
     path: "redes-e-wifi",
     trackingKey: "redes-wifi",
-    metaTitle: "Configuração de Redes e Wi-Fi em Curitiba | Roteadores",
+    metaTitle: "Wi-Fi e Redes em Curitiba | Mesh, Roteador e Cabeamento",
     metaDescription:
-      "Configuração de redes e Wi-Fi em Curitiba: internet instável, roteador, repetidor, cabeamento e rede empresarial. Cobertura melhor em casa e no trabalho.",
+      "Wi-Fi e redes em Curitiba: diagnóstico de sinal, roteador, mesh, repetidor, cabeamento e impressora em rede. Medição antes de indicar equipamento.",
     serviceName: "Redes e Wi-Fi",
     serviceDescription:
       "Instalação e configuração de redes e Wi-Fi residenciais e empresariais: roteador, repetidor, cabeamento e estabilidade, em Curitiba e região.",
     eyebrow: "Conectividade em Curitiba",
-    h1: "Instalação e configuração de redes e Wi-Fi em Curitiba",
+    h1: "Wi-Fi e redes em Curitiba: diagnóstico, cobertura e cabeamento",
     h1Accent: "internet estável em casa e na empresa",
     intro:
-      "Wi-Fi que cai, sinal fraco em alguns cômodos ou rede instável no trabalho? Avaliamos o ambiente e configuramos roteador, repetidores, mesh e cabeamento para melhorar cobertura e estabilidade. Muitas vezes o problema é o posicionamento ou o excesso de dispositivos, não o plano — mas falhas que são do provedor só confirmamos após diagnóstico. Fale pelo WhatsApp para avaliarmos o seu caso.",
+      "Wi-Fi que cai, sinal fraco em alguns cômodos ou rede instável no trabalho? Primeiro separamos cobertura, interferência, roteador, dispositivo e link do provedor. Só depois dessa medição indicamos reposicionamento, mesh, repetidor, cabeamento ou troca de equipamento. Fale pelo WhatsApp para descrever o ambiente e o sintoma.",
     whatsappMessage: "Olá! Preciso melhorar minha rede/Wi-Fi. Podem avaliar?",
     incluso: [
       { title: "Análise do ambiente", desc: "Avaliação de cobertura, interferências e pontos críticos." },
@@ -799,8 +799,8 @@ export const SERVICOS_CORE: Record<string, ServicoLandingData> = {
         titulo: "Por que o Wi-Fi cai em parte da casa (e o repetidor nem sempre resolve)",
         paragrafos: [
           "A queixa mais comum não é falta de internet, é falta de cobertura. O roteador costuma ficar onde o cabo da operadora entrou — hall, área de serviço, atrás da TV — e o sinal ainda precisa atravessar parede de concreto, laje, caixa d'água e espelho. Em imóveis alongados ou sobrados de Curitiba, o resultado é sempre o mesmo: sala com sinal cheio e quarto dos fundos com conexão que cai na videochamada.",
-          "Repetidor simples entrega metade da banda, porque escuta e retransmite pelo mesmo rádio. Quando ele é instalado justamente onde o sinal já chegava fraco, o problema piora: o celular gruda no repetidor ruim em vez de voltar ao roteador. Por isso medimos antes de indicar equipamento — em muitos casos, reposicionar o roteador e corrigir canal resolve sem custo de hardware.",
-          "Em prédios com muitas redes vizinhas, a faixa de 2,4 GHz vive congestionada. Separar as bandas, fixar canal limpo e priorizar 5 GHz para os aparelhos próximos costuma devolver estabilidade imediata, sem trocar nada.",
+          "Repetidor pode reduzir o throughput disponível quando usa o mesmo rádio para receber e retransmitir, e o resultado piora se ele for instalado onde o sinal de origem já chega fraco. Por isso medimos antes de indicar equipamento — em alguns cenários, reposicionar o roteador ou ajustar canal e banda resolve sem adicionar hardware.",
+          "Em prédios com muitas redes vizinhas, a faixa de 2,4 GHz pode ficar congestionada. Separar bandas, revisar canais e priorizar 5 GHz para dispositivos compatíveis e próximos pode melhorar estabilidade sem exigir troca imediata de equipamento.",
         ],
       },
       {
