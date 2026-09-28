@@ -25,6 +25,16 @@ Se a máquina continua operacional, parte da triagem pode começar remotamente. 
     "Polo descentralizado da Escola da Cultura no Del Rey"
   ],
   tempoDeslocamento: "Modalidade e agenda definidas após triagem do equipamento e do endereço",
+  tituloSecaoPrincipal: "Desempenho de notebook e armazenamento no Del Rey",
+  tituloSecaoContexto: "Lentidão no boot, queda sob carga e sinais do disco",
+  triagemResumo: "No Del Rey, a triagem separa lentidão desde a inicialização de perda de desempenho que aparece só depois de aquecer. Essa diferença ajuda a decidir se o foco deve ser armazenamento, memória, temperatura, energia ou software.",
+  faqTitulo: "Dúvidas sobre desempenho de notebook no Del Rey",
+  faqsCustom: [
+    { question: "Notebook começa rápido e fica lento depois. O que isso sugere?", answer: "Quando a piora aparece após alguns minutos, temperatura e energia ganham importância. Também verificamos memória e processos antes de indicar qualquer upgrade." },
+    { question: "Lentidão desde o boot sempre significa que precisa de SSD?", answer: "Não. Armazenamento é uma hipótese, mas memória, programas de inicialização e erros do sistema também podem ser responsáveis. O gargalo precisa ser confirmado." },
+    { question: "Se o disco apresenta erros, ainda vale tentar reinstalar o Windows?", answer: "Primeiro avaliamos a condição do armazenamento e os arquivos importantes. Reinstalar em um disco instável pode aumentar o risco e não corrigir a causa." },
+    { question: "Wi-Fi ruim apenas no notebook pode ser defeito da rede?", answer: "Pode, mas testamos outro aparelho no mesmo ponto. Se só o notebook falha, driver e adaptador passam a ser hipóteses mais fortes." },
+  ],
   servicosDestaque: [
     "Diagnóstico de SSD e HD",
     "Notebook com lentidão",
