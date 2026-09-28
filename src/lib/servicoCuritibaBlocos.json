@@ -879,86 +879,87 @@
       "parent": "/servicos/montagem-de-pc",
       "nome": "Montagem de computador",
       "intentGlobal": "entender escolha de componentes, compatibilidade, dimensionamento de fonte, refrigeração e etapas técnicas da montagem",
-      "intentLocal": "montar um computador em Curitiba sabendo quem compra as peças, onde a montagem acontece e como fica a garantia de cada componente",
-      "title": "Montagem de Computador em Curitiba | Peças e Garantia",
-      "description": "Montagem de computador em Curitiba: conferência da lista de peças antes da compra, montagem em bancada com testes e orientação sobre garantia de cada componente.",
-      "h1": "Montagem de computador em Curitiba",
-      "subtitulo": "Quem compra as peças, onde a máquina é montada e como funciona a garantia dos componentes quando a montagem é feita em Curitiba.",
+      "intentLocal": "contratar montagem de computador em Curitiba com conferência de compatibilidade, BIOS/UEFI, fonte, refrigeração, testes e documentação das peças antes da entrega",
+      "title": "Montagem de PC em Curitiba | Compatibilidade, BIOS, fonte e testes",
+      "description": "Montagem de PC em Curitiba com conferência de CPU, placa-mãe, memória, fonte, gabinete, BIOS/UEFI e testes de estabilidade antes da entrega.",
+      "h1": "Montagem de PC em Curitiba",
+      "subtitulo": "Conferência de compatibilidade antes da compra, montagem em bancada, BIOS/UEFI, organização elétrica e testes para entregar uma máquina validada — não apenas ligada.",
       "intro": [
-        "Montar um computador começa muito antes da chave de fenda: é decidir a configuração pelo uso real, conferir se placa-mãe, memória, fonte e gabinete conversam entre si e dimensionar o que sobra para um upgrade futuro. Peça incompatível comprada em promoção é o prejuízo mais comum.",
-        "Com a lista aprovada, vem a montagem física com organização de cabos, ajuste de BIOS/UEFI, instalação do sistema e testes de estabilidade antes da entrega em Curitiba. Serve tanto para máquina nova quanto para quem já tem peças compradas e não quer arriscar a montagem."
+        "Montar um computador começa na lista de peças. CPU, placa-mãe, memória, fonte, gabinete, cooler, armazenamento e placa de vídeo precisam ser compatíveis entre si física, elétrica e logicamente. Uma peça 'compatível no papel' ainda pode exigir atualização de BIOS, perfil de memória específico ou espaço que o gabinete não oferece.",
+        "Depois da conferência vem a montagem em bancada, com organização de cabos, primeira inicialização, ajustes necessários de BIOS/UEFI, instalação do sistema quando contratada e testes de estabilidade. A entrega acontece com o conjunto validado para o uso pretendido."
       ],
       "blocos": [
         {
-          "titulo": "Conferência da lista antes de qualquer compra",
+          "titulo": "Compatibilidade antes da compra",
           "paragrafos": [
-            "Antes de comprar, mandamos a lista pretendida e conferimos compatibilidade, dimensionamento de fonte e espaço do gabinete. Essa etapa é a que mais evita prejuízo em Curitiba: peça incompatível comprada em promoção raramente é devolvida sem custo.",
-            "Se a lista veio de um orçamento de loja, conferimos do mesmo jeito. Não é preciso comprar conosco para a conferência acontecer."
+            "A lista é revisada antes do pagamento sempre que possível. Conferimos soquete e chipset, suporte de memória, tamanho do cooler, comprimento e espessura da placa de vídeo, potência e conectores da fonte, formato da placa-mãe e espaço útil do gabinete.",
+            "Também verificamos dependências menos óbvias: versão de BIOS necessária para determinada CPU, quantidade de pistas ou portas disponíveis, compartilhamento de conectores M.2/SATA e limitações de memória em certas combinações."
           ]
         },
         {
-          "titulo": "Quem fornece as peças",
+          "titulo": "Fonte e alimentação sem adaptador improvisado",
           "paragrafos": [
-            "Você pode comprar tudo e nos chamar apenas para montar, ou pedir que a compra seja intermediada. Os dois formatos existem e o valor da mão de obra é o mesmo.",
-            "Quando a compra é sua, a garantia fica direto com a loja — o que costuma ser mais rápido para acionar. Explicamos essa diferença antes, porque ela pesa mais que a diferença de preço."
+            "A fonte é dimensionada para o conjunto real e para a forma de uso. Além da potência, conferimos conectores, padrão, qualidade e margem para picos de consumo. Adaptador não é tratado como solução automática para fonte inadequada.",
+            "Cabos modulares de fontes diferentes não são intercambiáveis por aparência. Cada fonte usa pinagem própria no lado modular; misturar cabos pode danificar componentes. A montagem mantém apenas cabos compatíveis com o modelo instalado."
           ]
         },
         {
-          "titulo": "Onde a montagem acontece",
+          "titulo": "BIOS/UEFI, memória e primeiro boot",
           "paragrafos": [
-            "A montagem é feita em bancada, não no seu endereço. Cabo mal encaixado e parafuso faltando aparecem justamente em montagem improvisada em cima da mesa da sala.",
-            "Em Curitiba, isso significa combinar a entrega das peças e a retirada da máquina pronta, ou usar coleta e entrega quando você não tem como se deslocar."
+            "No primeiro boot verificamos reconhecimento de processador, memória e armazenamento, além de versão de BIOS/UEFI. Quando a plataforma exige atualização, o procedimento é feito com cuidado antes de ativar ajustes de desempenho.",
+            "Perfis de memória como XMP ou equivalentes só são ativados depois que a máquina inicia estável em configuração básica. Frequência anunciada no kit não substitui teste de estabilidade no conjunto real."
           ]
         },
         {
-          "titulo": "Testes antes de entregar",
+          "titulo": "Refrigeração e organização do gabinete",
           "paragrafos": [
-            "A máquina só é entregue depois de ligar, rodar teste de estabilidade, verificar temperatura sob carga e confirmar que memória e armazenamento estão reconhecidos na velocidade correta.",
-            "Sai também com sistema instalado, atualizações aplicadas e drivers corretos — não com a configuração padrão da primeira inicialização."
+            "Orientação de ventoinhas, posição do radiador quando houver, pressão de ar, folga para cabos e distância entre GPU e painéis afetam temperatura e ruído. Organização interna não é apenas estética; ela também facilita manutenção e reduz obstrução do fluxo.",
+            "Depois da montagem, conferimos temperaturas em repouso e sob carga compatível com o uso da máquina. Se o gabinete ou o cooler limitarem o conjunto, isso é informado antes de recomendar alteração."
           ]
         },
         {
-          "titulo": "Garantia dividida em duas partes",
+          "titulo": "Sistema, drivers e validação",
           "paragrafos": [
-            "A garantia das peças é do fabricante ou da loja, com prazo próprio de cada componente. A garantia do serviço é da montagem: encaixe, cabeamento, configuração e funcionamento do conjunto entregue.",
-            "Se um componente falhar dentro do prazo, orientamos o acionamento e remontamos a máquina depois da troca sem cobrar a mão de obra de novo."
+            "Quando a instalação do sistema faz parte do escopo, usamos drivers corretos da plataforma e do fabricante da placa de vídeo, aplicamos atualizações relevantes e verificamos dispositivos no sistema. Software adicional é instalado conforme combinado.",
+            "A máquina passa por testes de memória, armazenamento e estabilidade adequados à configuração. O objetivo não é prometer que nunca haverá falha, e sim reduzir a chance de entregar uma montagem com erro básico, componente não reconhecido ou configuração instável."
           ]
         },
         {
-          "titulo": "Migrar do computador antigo",
+          "titulo": "Peças do cliente, garantia e documentação",
           "paragrafos": [
-            "Se existe uma máquina antiga, a migração de arquivos e programas é combinada junto com a montagem, evitando que você fique com dois computadores pela metade em casa.",
-            "Peças aproveitáveis do equipamento antigo — disco, memória, gabinete — são avaliadas antes. Reaproveitar é comum, mas só quando não compromete o resto da configuração nova."
+            "Você pode fornecer as peças. Nesse caso, registramos o que foi recebido e se algum item chega com sinal de uso, dano ou embalagem violada. Garantia de componente continua ligada à loja ou fabricante conforme a compra.",
+            "A garantia da montagem cobre o serviço executado. Se um componente apresentar defeito, ajudamos a separar falha de peça de problema de montagem para que o acionamento correto seja feito sem trocar componentes desnecessariamente."
           ]
         }
       ],
       "faq": [
         {
-          "pergunta": "Preciso comprar as peças com vocês?",
-          "resposta": "Não. Você pode comprar por conta própria; a conferência de compatibilidade e a montagem acontecem do mesmo jeito."
+          "pergunta": "Posso mandar minha lista de peças antes de comprar?",
+          "resposta": "Sim. Conferir compatibilidade antes da compra é a melhor etapa para evitar placa-mãe, memória, fonte, cooler ou gabinete incompatíveis."
         },
         {
-          "pergunta": "Vocês montam na minha casa em Curitiba?",
-          "resposta": "A montagem é em bancada, com testes. Combinamos entrega das peças e retirada da máquina pronta, ou coleta e entrega."
+          "pergunta": "Vocês atualizam a BIOS se a CPU exigir?",
+          "resposta": "Quando necessário e compatível com a placa, sim. Primeiro confirmamos modelo, versão atual e método disponível para reduzir risco durante a atualização."
         },
         {
-          "pergunta": "A máquina sai com sistema instalado?",
-          "resposta": "Sim, com sistema, atualizações e drivers corretos, além de teste de estabilidade e temperatura sob carga."
+          "pergunta": "Ativam XMP ou perfil de memória?",
+          "resposta": "Quando a plataforma suporta e o conjunto fica estável, sim. A ativação vem depois do primeiro boot e de uma validação básica, porque frequência anunciada não garante estabilidade em toda configuração."
         },
         {
-          "pergunta": "Como fica a garantia das peças?",
-          "resposta": "Fica com a loja ou o fabricante de cada componente. A garantia do nosso serviço cobre a montagem e a configuração entregues."
+          "pergunta": "A máquina é testada antes da entrega?",
+          "resposta": "Sim. Verificamos reconhecimento de componentes, memória, armazenamento, temperaturas e estabilidade de acordo com o uso previsto antes da entrega."
         },
         {
-          "pergunta": "Dá para aproveitar peças do computador antigo?",
-          "resposta": "Frequentemente sim. Avaliamos antes se o reaproveitamento não vira gargalo da configuração nova."
+          "pergunta": "Posso fornecer todas as peças?",
+          "resposta": "Sim. Registramos os componentes recebidos, montamos e testamos o conjunto. Garantia das peças continua com a loja ou fabricante; a garantia da montagem cobre o serviço executado."
         }
       ],
       "interlinks": [
         "/servicos/montagem-de-pc",
+        "/servicos/pc-gamer/curitiba",
         "/servicos/upgrade-ssd/curitiba",
         "/tecnico-informatica-curitiba",
-        "/coleta-e-entrega",
+        "/problemas/computador-esquentando",
         "/areas-atendidas"
       ]
     },
@@ -1055,87 +1056,88 @@
       "parent": "/servicos/pc-gamer",
       "nome": "PC gamer",
       "intentGlobal": "entender configurações, placas de vídeo, gargalos, refrigeração e desempenho esperado por faixa de investimento",
-      "intentLocal": "montar, revisar ou consertar um PC gamer em Curitiba, com bancada, teste sob carga e cuidado no transporte da máquina",
-      "title": "PC Gamer em Curitiba | Montagem, Revisão e Manutenção",
-      "description": "PC gamer em Curitiba: montagem em bancada com teste sob carga, revisão térmica de máquina que está travando e coleta com transporte cuidadoso da sua torre.",
-      "h1": "PC gamer em Curitiba: montagem, revisão e manutenção",
-      "subtitulo": "Onde a máquina é montada ou revisada em Curitiba, como funciona o transporte da torre e o que é testado antes de devolver.",
+      "intentLocal": "diagnosticar, revisar ou reparar PC gamer em Curitiba com teste de estabilidade, temperatura, fonte, memória, armazenamento e placa de vídeo antes de indicar upgrade",
+      "title": "PC gamer em Curitiba | Travamentos, temperatura, fonte e upgrade",
+      "description": "PC gamer em Curitiba: diagnóstico de travamentos, temperatura, fonte, memória, SSD e placa de vídeo, com teste sob carga antes de trocar componente.",
+      "h1": "PC gamer em Curitiba: diagnóstico, revisão e upgrade",
+      "subtitulo": "Teste sob carga para separar temperatura, fonte, memória, armazenamento, placa de vídeo e software antes de trocar componente ou refazer a máquina.",
       "intro": [
-        "Queda de quadros no meio da partida, temperatura de GPU subindo até o jogo fechar, travamento com tela preta e ventoinha acelerada, ou fonte subdimensionada depois de uma troca de placa de vídeo. Máquina de jogo falha sob carga, e é exatamente sob carga que ela precisa ser testada.",
-        "Em Curitiba o trabalho passa por medir temperatura e clock em estresse, revisar refrigeração e pasta térmica, conferir folga da fonte, avaliar memória e armazenamento e indicar qual upgrade muda o desempenho de verdade. Vale para máquina nova a montar e para torre que já vinha rodando."
+        "PC gamer que trava apenas em jogo, perde desempenho depois de alguns minutos, reinicia sob carga ou apresenta tela preta precisa ser testado no cenário em que a falha realmente aparece. Temperatura, alimentação, memória, armazenamento, driver e placa de vídeo podem produzir sintomas parecidos.",
+        "A revisão começa pela reprodução controlada do defeito e pela leitura dos sinais do sistema. Só depois entram troca de pasta térmica, ajuste de fluxo de ar, substituição de fonte, memória, SSD ou placa. Upgrade é consequência do diagnóstico, não ponto de partida."
       ],
       "blocos": [
         {
-          "titulo": "Montagem, revisão ou reparo",
+          "titulo": "Travamento em jogo: temperatura, fonte, memória ou driver?",
           "paragrafos": [
-            "Três pedidos diferentes chegam com o mesmo nome. Montagem é máquina nova a partir das peças; revisão é máquina que funciona mas esquenta, faz barulho ou perdeu desempenho; reparo é máquina que travou, reinicia ou não dá imagem.",
-            "A triagem em Curitiba separa esses três casos logo no início, porque o prazo e a forma de atendimento mudam completamente entre eles."
+            "Quando o problema aparece apenas sob carga, observamos temperatura de CPU e GPU, uso de memória, estabilidade da fonte e comportamento dos drivers. Travamento com queda de clock aponta para um caminho; reinício abrupto aponta para outro; artefatos de vídeo e tela preta exigem testes específicos.",
+            "O objetivo é reproduzir a falha de forma controlada. Um PC que funciona em desktop e falha apenas durante jogo pesado não pode ser avaliado apenas por inicialização e navegação."
           ]
         },
         {
-          "titulo": "Por que é serviço de bancada",
+          "titulo": "Teste sob carga e estabilidade antes de trocar peça",
           "paragrafos": [
-            "Máquina gamer exige teste sob carga por tempo, com acompanhamento de temperatura e estabilidade. Isso não acontece direito em uma visita rápida no seu endereço.",
-            "Por isso o formato padrão em Curitiba é coleta ou entrega na bancada. A visita fica reservada para checagens simples e orientação de configuração."
+            "Após a inspeção inicial, executamos testes compatíveis com o sintoma para verificar CPU, GPU, memória e armazenamento. A duração e o tipo do teste variam conforme o defeito; não usamos um único benchmark como prova universal.",
+            "Quando o problema some após ajuste de software, driver ou configuração, isso também é resultado válido. A troca de componente só entra quando os sinais apontam para hardware ou quando o upgrade é uma decisão de desempenho, não de reparo."
           ]
         },
         {
-          "titulo": "Transporte da torre",
+          "titulo": "Temperatura e fluxo de ar do gabinete",
           "paragrafos": [
-            "Gabinete gamer é pesado e tem componentes grandes suspensos na placa. No transporte, placa de vídeo pesada e cooler de torre são desmontados quando necessário para o percurso não gerar dano novo.",
-            "Se você mesmo vai trazer a máquina, oriente-se antes por mensagem: em boa parte dos casos, dois minutos de instrução evitam um problema criado dentro do carro."
+            "Temperatura não depende apenas de pasta térmica. Ventoinhas instaladas na direção errada, filtro saturado, cabo bloqueando entrada de ar, gabinete restritivo e curva de rotação inadequada podem elevar a temperatura mesmo com dissipador em bom estado.",
+            "A revisão considera entrada e saída de ar, estado das ventoinhas, fixação do cooler e comportamento térmico sob carga. Limpeza e troca de pasta são feitas quando o estado físico e as medições justificam."
           ]
         },
         {
-          "titulo": "Temperatura e barulho",
+          "titulo": "Fonte: potência nominal não conta a história inteira",
           "paragrafos": [
-            "Queda de desempenho no meio da partida quase sempre é térmica: pasta ressecada, fluxo de ar errado no gabinete ou pó acumulado. A revisão trata isso e mede o resultado antes e depois.",
-            "Barulho repentino costuma ser cooler ou fonte. Fonte com ruído anormal é tratada com prioridade, porque falha de fonte leva outros componentes junto."
+            "Fonte precisa ser avaliada pela potência adequada ao conjunto, conectores disponíveis, qualidade do modelo e comportamento sob carga. Uma troca de placa de vídeo pode expor limitação que não aparecia na configuração antiga.",
+            "Ruído elétrico, desligamento instantâneo, reinício em pico de carga e conector aquecendo precisam de inspeção antes de continuar usando a máquina. Não recomendamos adaptadores improvisados para contornar falta de conector de alimentação."
           ]
         },
         {
-          "titulo": "Upgrade sem trocar tudo",
+          "titulo": "Upgrade com foco no gargalo real",
           "paragrafos": [
-            "Muita máquina em Curitiba chega para troca completa e sai com upgrade pontual. Identificar onde está o gargalo real evita gasto grande com ganho pequeno.",
-            "Quando a troca realmente compensa, dizemos com número: o que a peça nova entrega em relação à atual, sem promessa de desempenho que a máquina não vai alcançar."
+            "Antes de recomendar CPU, GPU, memória ou SSD, verificamos o uso atual e o tipo de jogo ou aplicação. Uma placa de vídeo mais forte não resolve falta de memória; mais RAM não corrige armazenamento degradado; processador novo pode exigir placa-mãe e memória diferentes.",
+            "Quando o upgrade faz sentido, conferimos compatibilidade elétrica, física e de firmware antes da compra. O objetivo é evitar peça cara com ganho pequeno ou componente que não cabe, não alimenta ou não conversa com a plataforma atual."
           ]
         },
         {
-          "titulo": "Entrega e teste final",
+          "titulo": "Bancada, transporte e devolução",
           "paragrafos": [
-            "A devolução acontece depois de teste sob carga, conferência de temperatura e verificação de que o armazenamento e a memória estão operando na velocidade correta.",
-            "Você recebe o relato do que foi feito e o que ficou fora do escopo — inclusive quando a recomendação é não gastar agora."
+            "Teste sob carga, desmontagem ampla e substituição de componentes são mais seguros em bancada. A modalidade de atendimento é combinada conforme o defeito, o endereço e a agenda; não existe promessa fixa de coleta ou prazo.",
+            "Antes da devolução, repetimos os testes relevantes e registramos o que foi alterado. Se a recomendação for não gastar naquele momento, isso também entra no parecer."
           ]
         }
       ],
       "faq": [
         {
-          "pergunta": "Vocês atendem PC gamer na minha casa em Curitiba?",
-          "resposta": "Para diagnóstico simples e orientação, sim. Montagem, revisão térmica e reparo são feitos em bancada, com teste sob carga."
+          "pergunta": "Meu PC trava só quando jogo. É a placa de vídeo?",
+          "resposta": "Não necessariamente. Temperatura, fonte, memória, driver e armazenamento também podem causar falha apenas sob carga. O diagnóstico precisa reproduzir o problema e comparar esses sinais."
         },
         {
-          "pergunta": "Como faço para levar minha torre?",
-          "resposta": "Você pode trazer ou solicitar coleta. Antes disso, orientamos por mensagem como transportar sem forçar a placa de vídeo e o cooler."
+          "pergunta": "Temperatura alta sempre resolve com troca de pasta térmica?",
+          "resposta": "Não. Fluxo de ar, ventoinhas, gabinete, fixação do cooler e curva de rotação também influenciam. A troca de pasta é feita quando a inspeção e as medições justificam."
         },
         {
-          "pergunta": "Minha máquina trava só quando jogo. É peça queimada?",
-          "resposta": "Na maioria das vezes é temperatura ou fonte no limite, não peça queimada. O teste sob carga é justamente o que diferencia esses cenários."
+          "pergunta": "Como saber se minha fonte aguenta a placa de vídeo?",
+          "resposta": "É preciso considerar consumo do conjunto, conectores, qualidade da fonte e margem de operação, não apenas o número de watts no rótulo. Conferimos isso antes de recomendar a GPU ou a fonte."
         },
         {
-          "pergunta": "Dá para melhorar sem trocar a máquina inteira?",
-          "resposta": "Frequentemente sim. Identificamos o gargalo real e indicamos o upgrade pontual quando o ganho justifica o gasto."
+          "pergunta": "Vale fazer upgrade ou montar outro PC?",
+          "resposta": "Depende da plataforma atual e do gargalo. Avaliamos CPU, GPU, memória, armazenamento e compatibilidade para comparar o ganho real de um upgrade com o custo de uma configuração nova."
         },
         {
-          "pergunta": "Vocês compram as peças?",
-          "resposta": "Podemos intermediar ou apenas conferir a lista que você pretende comprar, com a compatibilidade validada antes do pagamento."
+          "pergunta": "O PC gamer precisa ir para bancada?",
+          "resposta": "Quando o caso exige teste prolongado, desmontagem ou troca de componentes, bancada costuma ser a opção mais adequada. Ajustes simples de software podem começar remotamente quando a máquina está estável."
         }
       ],
       "interlinks": [
         "/servicos/pc-gamer",
         "/servicos/montagem-de-pc/curitiba",
-        "/tecnico-informatica-curitiba",
-        "/coleta-e-entrega",
-        "/servicos/upgrade-ssd/curitiba"
+        "/servicos/upgrade-ssd/curitiba",
+        "/problemas/computador-esquentando",
+        "/problemas/computador-reiniciando",
+        "/tecnico-informatica-curitiba"
       ]
     }
   }
