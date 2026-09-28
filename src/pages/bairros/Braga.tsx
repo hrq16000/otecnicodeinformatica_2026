@@ -29,6 +29,16 @@ Parte das falhas de software e configuração pode começar remotamente quando a
     "Escola Municipal Madre Paulina"
   ],
   tempoDeslocamento: "Agenda definida após triagem do problema e do endereço",
+  tituloSecaoPrincipal: "Rede, impressão e continuidade de uso no Braga",
+  tituloSecaoContexto: "Uma estação falhou ou a infraestrutura inteira?",
+  triagemResumo: "No Braga, a triagem compara o equipamento afetado com outras estações e dispositivos. Essa comparação mostra se vale investigar driver, adaptador e fila de impressão na máquina ou se o problema está na rede e na infraestrutura compartilhada.",
+  faqTitulo: "Perguntas sobre rede e estações no Braga",
+  faqsCustom: [
+    { question: "Só um computador perdeu a rede. Por onde começa o diagnóstico?", answer: "Começamos na própria estação: adaptador, driver, endereço de rede e configuração. Se outras máquinas continuam normais, a infraestrutura geral deixa de ser a primeira hipótese." },
+    { question: "Se várias máquinas ficam sem internet ao mesmo tempo, o que muda?", answer: "O foco passa para roteador, switch, cabeamento e conexão principal. Testar uma estação isoladamente já não representa o comportamento do conjunto." },
+    { question: "Impressora funciona em um PC e não em outro. Isso ajuda no diagnóstico?", answer: "Ajuda bastante. Esse teste indica que a impressora pode estar operacional e direciona a análise para driver, fila, permissões ou comunicação da estação que falhou." },
+    { question: "É possível corrigir configuração de rede por acesso remoto?", answer: "Em alguns casos, sim, desde que o computador ainda tenha conexão utilizável. Falhas físicas de cabo, porta, fonte ou hardware exigem avaliação no local." },
+  ],
   servicosDestaque: [
     "Correção de Windows e drivers",
     "Configuração de rede",
