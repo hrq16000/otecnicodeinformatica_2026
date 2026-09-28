@@ -1,26 +1,26 @@
 {
-  "geradoEm": "2026-09-25",
-  "total": 297,
+  "geradoEm": "2026-09-28",
+  "total": 279,
   "porClasse": {
-    "COMPROVADA": 114,
+    "COMPROVADA": 111,
     "INSTITUCIONAL": 21,
-    "CONDICIONAL": 162,
+    "CONDICIONAL": 147,
     "REMOVIDA": 0,
     "PENDENTE": 0
   },
-  "urlsCuradas": 267,
+  "urlsCuradas": 348,
   "familias": [
     {
       "id": "garantia",
       "titulo": "Garantia",
       "risco": "Prazo ou abrangência divergente da política comercial central.",
-      "total": 114
+      "total": 111
     },
     {
       "id": "prazo-prometido",
       "titulo": "Prazo de atendimento prometido",
       "risco": "Prazo fixo sem controle de agenda, trânsito e peça.",
-      "total": 106
+      "total": 91
     },
     {
       "id": "todos-os-portes",
@@ -116,18 +116,6 @@
     },
     {
       "path": "/conserto-celular/:local",
-      "curada": false,
-      "total": 4,
-      "porClasse": {
-        "COMPROVADA": 3,
-        "INSTITUCIONAL": 0,
-        "CONDICIONAL": 1,
-        "REMOVIDA": 0,
-        "PENDENTE": 0
-      }
-    },
-    {
-      "path": "/conserto-impressora-curitiba",
       "curada": false,
       "total": 4,
       "porClasse": {
@@ -463,18 +451,6 @@
       }
     },
     {
-      "path": "/bairros/academia-sjp",
-      "curada": false,
-      "total": 1,
-      "porClasse": {
-        "COMPROVADA": 0,
-        "INSTITUCIONAL": 0,
-        "CONDICIONAL": 1,
-        "REMOVIDA": 0,
-        "PENDENTE": 0
-      }
-    },
-    {
       "path": "/bairros/agricola-sjp",
       "curada": false,
       "total": 1,
@@ -499,43 +475,7 @@
       }
     },
     {
-      "path": "/bairros/aristocrata",
-      "curada": false,
-      "total": 1,
-      "porClasse": {
-        "COMPROVADA": 0,
-        "INSTITUCIONAL": 0,
-        "CONDICIONAL": 1,
-        "REMOVIDA": 0,
-        "PENDENTE": 0
-      }
-    },
-    {
       "path": "/bairros/boa-vista-at",
-      "curada": false,
-      "total": 1,
-      "porClasse": {
-        "COMPROVADA": 0,
-        "INSTITUCIONAL": 0,
-        "CONDICIONAL": 1,
-        "REMOVIDA": 0,
-        "PENDENTE": 0
-      }
-    },
-    {
-      "path": "/bairros/boneca-do-iguacu-sjp",
-      "curada": false,
-      "total": 1,
-      "porClasse": {
-        "COMPROVADA": 0,
-        "INSTITUCIONAL": 0,
-        "CONDICIONAL": 1,
-        "REMOVIDA": 0,
-        "PENDENTE": 0
-      }
-    },
-    {
-      "path": "/bairros/campo-largo-roseira-sjp",
       "curada": false,
       "total": 1,
       "porClasse": {
@@ -571,55 +511,7 @@
       }
     },
     {
-      "path": "/bairros/del-rey",
-      "curada": false,
-      "total": 1,
-      "porClasse": {
-        "COMPROVADA": 0,
-        "INSTITUCIONAL": 0,
-        "CONDICIONAL": 1,
-        "REMOVIDA": 0,
-        "PENDENTE": 0
-      }
-    },
-    {
       "path": "/bairros/fazendinha",
-      "curada": false,
-      "total": 1,
-      "porClasse": {
-        "COMPROVADA": 0,
-        "INSTITUCIONAL": 0,
-        "CONDICIONAL": 1,
-        "REMOVIDA": 0,
-        "PENDENTE": 0
-      }
-    },
-    {
-      "path": "/bairros/hauer",
-      "curada": false,
-      "total": 1,
-      "porClasse": {
-        "COMPROVADA": 0,
-        "INSTITUCIONAL": 0,
-        "CONDICIONAL": 1,
-        "REMOVIDA": 0,
-        "PENDENTE": 0
-      }
-    },
-    {
-      "path": "/bairros/independencia-sjp",
-      "curada": false,
-      "total": 1,
-      "porClasse": {
-        "COMPROVADA": 0,
-        "INSTITUCIONAL": 0,
-        "CONDICIONAL": 1,
-        "REMOVIDA": 0,
-        "PENDENTE": 0
-      }
-    },
-    {
-      "path": "/bairros/italia-sjp",
       "curada": false,
       "total": 1,
       "porClasse": {
@@ -691,31 +583,7 @@
       }
     },
     {
-      "path": "/bairros/novo-mundo",
-      "curada": false,
-      "total": 1,
-      "porClasse": {
-        "COMPROVADA": 0,
-        "INSTITUCIONAL": 0,
-        "CONDICIONAL": 1,
-        "REMOVIDA": 0,
-        "PENDENTE": 0
-      }
-    },
-    {
       "path": "/bairros/osvaldo-cruz-colombo",
-      "curada": false,
-      "total": 1,
-      "porClasse": {
-        "COMPROVADA": 0,
-        "INSTITUCIONAL": 0,
-        "CONDICIONAL": 1,
-        "REMOVIDA": 0,
-        "PENDENTE": 0
-      }
-    },
-    {
-      "path": "/bairros/parque-da-fonte",
       "curada": false,
       "total": 1,
       "porClasse": {
@@ -739,55 +607,7 @@
       }
     },
     {
-      "path": "/bairros/quississana-sjp",
-      "curada": false,
-      "total": 1,
-      "porClasse": {
-        "COMPROVADA": 0,
-        "INSTITUCIONAL": 0,
-        "CONDICIONAL": 1,
-        "REMOVIDA": 0,
-        "PENDENTE": 0
-      }
-    },
-    {
-      "path": "/bairros/reboucas",
-      "curada": false,
-      "total": 1,
-      "porClasse": {
-        "COMPROVADA": 0,
-        "INSTITUCIONAL": 0,
-        "CONDICIONAL": 1,
-        "REMOVIDA": 0,
-        "PENDENTE": 0
-      }
-    },
-    {
-      "path": "/bairros/sao-cristovao",
-      "curada": false,
-      "total": 1,
-      "porClasse": {
-        "COMPROVADA": 0,
-        "INSTITUCIONAL": 0,
-        "CONDICIONAL": 1,
-        "REMOVIDA": 0,
-        "PENDENTE": 0
-      }
-    },
-    {
       "path": "/bairros/sao-dimas-colombo",
-      "curada": false,
-      "total": 1,
-      "porClasse": {
-        "COMPROVADA": 0,
-        "INSTITUCIONAL": 0,
-        "CONDICIONAL": 1,
-        "REMOVIDA": 0,
-        "PENDENTE": 0
-      }
-    },
-    {
-      "path": "/bairros/sao-marcos",
       "curada": false,
       "total": 1,
       "porClasse": {
@@ -1303,6 +1123,18 @@
       }
     },
     {
+      "path": "/bairros/academia-sjp",
+      "curada": true,
+      "total": 0,
+      "porClasse": {
+        "COMPROVADA": 0,
+        "INSTITUCIONAL": 0,
+        "CONDICIONAL": 0,
+        "REMOVIDA": 0,
+        "PENDENTE": 0
+      }
+    },
+    {
       "path": "/bairros/afonso-pena",
       "curada": true,
       "total": 0,
@@ -1327,7 +1159,91 @@
       }
     },
     {
+      "path": "/bairros/alto-taruma",
+      "curada": true,
+      "total": 0,
+      "porClasse": {
+        "COMPROVADA": 0,
+        "INSTITUCIONAL": 0,
+        "CONDICIONAL": 0,
+        "REMOVIDA": 0,
+        "PENDENTE": 0
+      }
+    },
+    {
+      "path": "/bairros/aristocrata",
+      "curada": true,
+      "total": 0,
+      "porClasse": {
+        "COMPROVADA": 0,
+        "INSTITUCIONAL": 0,
+        "CONDICIONAL": 0,
+        "REMOVIDA": 0,
+        "PENDENTE": 0
+      }
+    },
+    {
+      "path": "/bairros/atuba-pinhais",
+      "curada": true,
+      "total": 0,
+      "porClasse": {
+        "COMPROVADA": 0,
+        "INSTITUCIONAL": 0,
+        "CONDICIONAL": 0,
+        "REMOVIDA": 0,
+        "PENDENTE": 0
+      }
+    },
+    {
       "path": "/bairros/aviacao",
+      "curada": true,
+      "total": 0,
+      "porClasse": {
+        "COMPROVADA": 0,
+        "INSTITUCIONAL": 0,
+        "CONDICIONAL": 0,
+        "REMOVIDA": 0,
+        "PENDENTE": 0
+      }
+    },
+    {
+      "path": "/bairros/bacacheri",
+      "curada": true,
+      "total": 0,
+      "porClasse": {
+        "COMPROVADA": 0,
+        "INSTITUCIONAL": 0,
+        "CONDICIONAL": 0,
+        "REMOVIDA": 0,
+        "PENDENTE": 0
+      }
+    },
+    {
+      "path": "/bairros/barigui-araucaria",
+      "curada": true,
+      "total": 0,
+      "porClasse": {
+        "COMPROVADA": 0,
+        "INSTITUCIONAL": 0,
+        "CONDICIONAL": 0,
+        "REMOVIDA": 0,
+        "PENDENTE": 0
+      }
+    },
+    {
+      "path": "/bairros/barro-preto",
+      "curada": true,
+      "total": 0,
+      "porClasse": {
+        "COMPROVADA": 0,
+        "INSTITUCIONAL": 0,
+        "CONDICIONAL": 0,
+        "REMOVIDA": 0,
+        "PENDENTE": 0
+      }
+    },
+    {
+      "path": "/bairros/bateias",
       "curada": true,
       "total": 0,
       "porClasse": {
@@ -1375,7 +1291,67 @@
       }
     },
     {
+      "path": "/bairros/boneca-do-iguacu-sjp",
+      "curada": true,
+      "total": 0,
+      "porClasse": {
+        "COMPROVADA": 0,
+        "INSTITUCIONAL": 0,
+        "CONDICIONAL": 0,
+        "REMOVIDA": 0,
+        "PENDENTE": 0
+      }
+    },
+    {
       "path": "/bairros/boqueirao",
+      "curada": true,
+      "total": 0,
+      "porClasse": {
+        "COMPROVADA": 0,
+        "INSTITUCIONAL": 0,
+        "CONDICIONAL": 0,
+        "REMOVIDA": 0,
+        "PENDENTE": 0
+      }
+    },
+    {
+      "path": "/bairros/boqueirao-araucaria",
+      "curada": true,
+      "total": 0,
+      "porClasse": {
+        "COMPROVADA": 0,
+        "INSTITUCIONAL": 0,
+        "CONDICIONAL": 0,
+        "REMOVIDA": 0,
+        "PENDENTE": 0
+      }
+    },
+    {
+      "path": "/bairros/borda-do-campo-sjp",
+      "curada": true,
+      "total": 0,
+      "porClasse": {
+        "COMPROVADA": 0,
+        "INSTITUCIONAL": 0,
+        "CONDICIONAL": 0,
+        "REMOVIDA": 0,
+        "PENDENTE": 0
+      }
+    },
+    {
+      "path": "/bairros/botiatuva",
+      "curada": true,
+      "total": 0,
+      "porClasse": {
+        "COMPROVADA": 0,
+        "INSTITUCIONAL": 0,
+        "CONDICIONAL": 0,
+        "REMOVIDA": 0,
+        "PENDENTE": 0
+      }
+    },
+    {
+      "path": "/bairros/braga",
       "curada": true,
       "total": 0,
       "porClasse": {
@@ -1411,7 +1387,103 @@
       }
     },
     {
+      "path": "/bairros/california-araucaria",
+      "curada": true,
+      "total": 0,
+      "porClasse": {
+        "COMPROVADA": 0,
+        "INSTITUCIONAL": 0,
+        "CONDICIONAL": 0,
+        "REMOVIDA": 0,
+        "PENDENTE": 0
+      }
+    },
+    {
+      "path": "/bairros/campina-da-barra",
+      "curada": true,
+      "total": 0,
+      "porClasse": {
+        "COMPROVADA": 0,
+        "INSTITUCIONAL": 0,
+        "CONDICIONAL": 0,
+        "REMOVIDA": 0,
+        "PENDENTE": 0
+      }
+    },
+    {
+      "path": "/bairros/campo-largo-roseira-sjp",
+      "curada": true,
+      "total": 0,
+      "porClasse": {
+        "COMPROVADA": 0,
+        "INSTITUCIONAL": 0,
+        "CONDICIONAL": 0,
+        "REMOVIDA": 0,
+        "PENDENTE": 0
+      }
+    },
+    {
+      "path": "/bairros/capela-velha",
+      "curada": true,
+      "total": 0,
+      "porClasse": {
+        "COMPROVADA": 0,
+        "INSTITUCIONAL": 0,
+        "CONDICIONAL": 0,
+        "REMOVIDA": 0,
+        "PENDENTE": 0
+      }
+    },
+    {
       "path": "/bairros/centro",
+      "curada": true,
+      "total": 0,
+      "porClasse": {
+        "COMPROVADA": 0,
+        "INSTITUCIONAL": 0,
+        "CONDICIONAL": 0,
+        "REMOVIDA": 0,
+        "PENDENTE": 0
+      }
+    },
+    {
+      "path": "/bairros/centro-araucaria",
+      "curada": true,
+      "total": 0,
+      "porClasse": {
+        "COMPROVADA": 0,
+        "INSTITUCIONAL": 0,
+        "CONDICIONAL": 0,
+        "REMOVIDA": 0,
+        "PENDENTE": 0
+      }
+    },
+    {
+      "path": "/bairros/centro-campo-largo",
+      "curada": true,
+      "total": 0,
+      "porClasse": {
+        "COMPROVADA": 0,
+        "INSTITUCIONAL": 0,
+        "CONDICIONAL": 0,
+        "REMOVIDA": 0,
+        "PENDENTE": 0
+      }
+    },
+    {
+      "path": "/bairros/centro-pinhais",
+      "curada": true,
+      "total": 0,
+      "porClasse": {
+        "COMPROVADA": 0,
+        "INSTITUCIONAL": 0,
+        "CONDICIONAL": 0,
+        "REMOVIDA": 0,
+        "PENDENTE": 0
+      }
+    },
+    {
+      "path": "/bairros/chapada",
       "curada": true,
       "total": 0,
       "porClasse": {
@@ -1447,7 +1519,31 @@
       }
     },
     {
+      "path": "/bairros/colonia-murici-sjp",
+      "curada": true,
+      "total": 0,
+      "porClasse": {
+        "COMPROVADA": 0,
+        "INSTITUCIONAL": 0,
+        "CONDICIONAL": 0,
+        "REMOVIDA": 0,
+        "PENDENTE": 0
+      }
+    },
+    {
       "path": "/bairros/costeira",
+      "curada": true,
+      "total": 0,
+      "porClasse": {
+        "COMPROVADA": 0,
+        "INSTITUCIONAL": 0,
+        "CONDICIONAL": 0,
+        "REMOVIDA": 0,
+        "PENDENTE": 0
+      }
+    },
+    {
+      "path": "/bairros/costeira-araucaria",
       "curada": true,
       "total": 0,
       "porClasse": {
@@ -1471,6 +1567,90 @@
       }
     },
     {
+      "path": "/bairros/del-rey",
+      "curada": true,
+      "total": 0,
+      "porClasse": {
+        "COMPROVADA": 0,
+        "INSTITUCIONAL": 0,
+        "CONDICIONAL": 0,
+        "REMOVIDA": 0,
+        "PENDENTE": 0
+      }
+    },
+    {
+      "path": "/bairros/emiliano-perneta",
+      "curada": true,
+      "total": 0,
+      "porClasse": {
+        "COMPROVADA": 0,
+        "INSTITUCIONAL": 0,
+        "CONDICIONAL": 0,
+        "REMOVIDA": 0,
+        "PENDENTE": 0
+      }
+    },
+    {
+      "path": "/bairros/estacao-araucaria",
+      "curada": true,
+      "total": 0,
+      "porClasse": {
+        "COMPROVADA": 0,
+        "INSTITUCIONAL": 0,
+        "CONDICIONAL": 0,
+        "REMOVIDA": 0,
+        "PENDENTE": 0
+      }
+    },
+    {
+      "path": "/bairros/estancia-pinhais",
+      "curada": true,
+      "total": 0,
+      "porClasse": {
+        "COMPROVADA": 0,
+        "INSTITUCIONAL": 0,
+        "CONDICIONAL": 0,
+        "REMOVIDA": 0,
+        "PENDENTE": 0
+      }
+    },
+    {
+      "path": "/bairros/fazenda-velha-araucaria",
+      "curada": true,
+      "total": 0,
+      "porClasse": {
+        "COMPROVADA": 0,
+        "INSTITUCIONAL": 0,
+        "CONDICIONAL": 0,
+        "REMOVIDA": 0,
+        "PENDENTE": 0
+      }
+    },
+    {
+      "path": "/bairros/ferraria",
+      "curada": true,
+      "total": 0,
+      "porClasse": {
+        "COMPROVADA": 0,
+        "INSTITUCIONAL": 0,
+        "CONDICIONAL": 0,
+        "REMOVIDA": 0,
+        "PENDENTE": 0
+      }
+    },
+    {
+      "path": "/bairros/guajuvira",
+      "curada": true,
+      "total": 0,
+      "porClasse": {
+        "COMPROVADA": 0,
+        "INSTITUCIONAL": 0,
+        "CONDICIONAL": 0,
+        "REMOVIDA": 0,
+        "PENDENTE": 0
+      }
+    },
+    {
       "path": "/bairros/guatupe",
       "curada": true,
       "total": 0,
@@ -1483,7 +1663,235 @@
       }
     },
     {
+      "path": "/bairros/hauer",
+      "curada": true,
+      "total": 0,
+      "porClasse": {
+        "COMPROVADA": 0,
+        "INSTITUCIONAL": 0,
+        "CONDICIONAL": 0,
+        "REMOVIDA": 0,
+        "PENDENTE": 0
+      }
+    },
+    {
+      "path": "/bairros/industrial-araucaria",
+      "curada": true,
+      "total": 0,
+      "porClasse": {
+        "COMPROVADA": 0,
+        "INSTITUCIONAL": 0,
+        "CONDICIONAL": 0,
+        "REMOVIDA": 0,
+        "PENDENTE": 0
+      }
+    },
+    {
+      "path": "/bairros/ipe-sjp",
+      "curada": true,
+      "total": 0,
+      "porClasse": {
+        "COMPROVADA": 0,
+        "INSTITUCIONAL": 0,
+        "CONDICIONAL": 0,
+        "REMOVIDA": 0,
+        "PENDENTE": 0
+      }
+    },
+    {
+      "path": "/bairros/italia-sjp",
+      "curada": true,
+      "total": 0,
+      "porClasse": {
+        "COMPROVADA": 0,
+        "INSTITUCIONAL": 0,
+        "CONDICIONAL": 0,
+        "REMOVIDA": 0,
+        "PENDENTE": 0
+      }
+    },
+    {
+      "path": "/bairros/itaqui",
+      "curada": true,
+      "total": 0,
+      "porClasse": {
+        "COMPROVADA": 0,
+        "INSTITUCIONAL": 0,
+        "CONDICIONAL": 0,
+        "REMOVIDA": 0,
+        "PENDENTE": 0
+      }
+    },
+    {
+      "path": "/bairros/jardim-amelia",
+      "curada": true,
+      "total": 0,
+      "porClasse": {
+        "COMPROVADA": 0,
+        "INSTITUCIONAL": 0,
+        "CONDICIONAL": 0,
+        "REMOVIDA": 0,
+        "PENDENTE": 0
+      }
+    },
+    {
+      "path": "/bairros/jardim-claudia",
+      "curada": true,
+      "total": 0,
+      "porClasse": {
+        "COMPROVADA": 0,
+        "INSTITUCIONAL": 0,
+        "CONDICIONAL": 0,
+        "REMOVIDA": 0,
+        "PENDENTE": 0
+      }
+    },
+    {
+      "path": "/bairros/jardim-iguacu-araucaria",
+      "curada": true,
+      "total": 0,
+      "porClasse": {
+        "COMPROVADA": 0,
+        "INSTITUCIONAL": 0,
+        "CONDICIONAL": 0,
+        "REMOVIDA": 0,
+        "PENDENTE": 0
+      }
+    },
+    {
+      "path": "/bairros/jardim-karla-pinhais",
+      "curada": true,
+      "total": 0,
+      "porClasse": {
+        "COMPROVADA": 0,
+        "INSTITUCIONAL": 0,
+        "CONDICIONAL": 0,
+        "REMOVIDA": 0,
+        "PENDENTE": 0
+      }
+    },
+    {
+      "path": "/bairros/jardim-shangrila-araucaria",
+      "curada": true,
+      "total": 0,
+      "porClasse": {
+        "COMPROVADA": 0,
+        "INSTITUCIONAL": 0,
+        "CONDICIONAL": 0,
+        "REMOVIDA": 0,
+        "PENDENTE": 0
+      }
+    },
+    {
+      "path": "/bairros/juveve",
+      "curada": true,
+      "total": 0,
+      "porClasse": {
+        "COMPROVADA": 0,
+        "INSTITUCIONAL": 0,
+        "CONDICIONAL": 0,
+        "REMOVIDA": 0,
+        "PENDENTE": 0
+      }
+    },
+    {
+      "path": "/bairros/maria-antonieta",
+      "curada": true,
+      "total": 0,
+      "porClasse": {
+        "COMPROVADA": 0,
+        "INSTITUCIONAL": 0,
+        "CONDICIONAL": 0,
+        "REMOVIDA": 0,
+        "PENDENTE": 0
+      }
+    },
+    {
+      "path": "/bairros/merces",
+      "curada": true,
+      "total": 0,
+      "porClasse": {
+        "COMPROVADA": 0,
+        "INSTITUCIONAL": 0,
+        "CONDICIONAL": 0,
+        "REMOVIDA": 0,
+        "PENDENTE": 0
+      }
+    },
+    {
+      "path": "/bairros/novo-mundo",
+      "curada": true,
+      "total": 0,
+      "porClasse": {
+        "COMPROVADA": 0,
+        "INSTITUCIONAL": 0,
+        "CONDICIONAL": 0,
+        "REMOVIDA": 0,
+        "PENDENTE": 0
+      }
+    },
+    {
       "path": "/bairros/ouro-fino-sjp",
+      "curada": true,
+      "total": 0,
+      "porClasse": {
+        "COMPROVADA": 0,
+        "INSTITUCIONAL": 0,
+        "CONDICIONAL": 0,
+        "REMOVIDA": 0,
+        "PENDENTE": 0
+      }
+    },
+    {
+      "path": "/bairros/parque-da-fonte",
+      "curada": true,
+      "total": 0,
+      "porClasse": {
+        "COMPROVADA": 0,
+        "INSTITUCIONAL": 0,
+        "CONDICIONAL": 0,
+        "REMOVIDA": 0,
+        "PENDENTE": 0
+      }
+    },
+    {
+      "path": "/bairros/parque-nascentes-pinhais",
+      "curada": true,
+      "total": 0,
+      "porClasse": {
+        "COMPROVADA": 0,
+        "INSTITUCIONAL": 0,
+        "CONDICIONAL": 0,
+        "REMOVIDA": 0,
+        "PENDENTE": 0
+      }
+    },
+    {
+      "path": "/bairros/passauna",
+      "curada": true,
+      "total": 0,
+      "porClasse": {
+        "COMPROVADA": 0,
+        "INSTITUCIONAL": 0,
+        "CONDICIONAL": 0,
+        "REMOVIDA": 0,
+        "PENDENTE": 0
+      }
+    },
+    {
+      "path": "/bairros/pedro-moro-sjp",
+      "curada": true,
+      "total": 0,
+      "porClasse": {
+        "COMPROVADA": 0,
+        "INSTITUCIONAL": 0,
+        "CONDICIONAL": 0,
+        "REMOVIDA": 0,
+        "PENDENTE": 0
+      }
+    },
+    {
+      "path": "/bairros/pineville",
       "curada": true,
       "total": 0,
       "porClasse": {
@@ -1519,6 +1927,90 @@
       }
     },
     {
+      "path": "/bairros/porto-das-laranjeiras",
+      "curada": true,
+      "total": 0,
+      "porClasse": {
+        "COMPROVADA": 0,
+        "INSTITUCIONAL": 0,
+        "CONDICIONAL": 0,
+        "REMOVIDA": 0,
+        "PENDENTE": 0
+      }
+    },
+    {
+      "path": "/bairros/quississana-sjp",
+      "curada": true,
+      "total": 0,
+      "porClasse": {
+        "COMPROVADA": 0,
+        "INSTITUCIONAL": 0,
+        "CONDICIONAL": 0,
+        "REMOVIDA": 0,
+        "PENDENTE": 0
+      }
+    },
+    {
+      "path": "/bairros/reboucas",
+      "curada": true,
+      "total": 0,
+      "porClasse": {
+        "COMPROVADA": 0,
+        "INSTITUCIONAL": 0,
+        "CONDICIONAL": 0,
+        "REMOVIDA": 0,
+        "PENDENTE": 0
+      }
+    },
+    {
+      "path": "/bairros/rio-pequeno-sjp",
+      "curada": true,
+      "total": 0,
+      "porClasse": {
+        "COMPROVADA": 0,
+        "INSTITUCIONAL": 0,
+        "CONDICIONAL": 0,
+        "REMOVIDA": 0,
+        "PENDENTE": 0
+      }
+    },
+    {
+      "path": "/bairros/rondinha",
+      "curada": true,
+      "total": 0,
+      "porClasse": {
+        "COMPROVADA": 0,
+        "INSTITUCIONAL": 0,
+        "CONDICIONAL": 0,
+        "REMOVIDA": 0,
+        "PENDENTE": 0
+      }
+    },
+    {
+      "path": "/bairros/sabia",
+      "curada": true,
+      "total": 0,
+      "porClasse": {
+        "COMPROVADA": 0,
+        "INSTITUCIONAL": 0,
+        "CONDICIONAL": 0,
+        "REMOVIDA": 0,
+        "PENDENTE": 0
+      }
+    },
+    {
+      "path": "/bairros/santa-cruz-campo-largo",
+      "curada": true,
+      "total": 0,
+      "porClasse": {
+        "COMPROVADA": 0,
+        "INSTITUCIONAL": 0,
+        "CONDICIONAL": 0,
+        "REMOVIDA": 0,
+        "PENDENTE": 0
+      }
+    },
+    {
       "path": "/bairros/santa-felicidade",
       "curada": true,
       "total": 0,
@@ -1531,7 +2023,187 @@
       }
     },
     {
+      "path": "/bairros/sao-cristovao",
+      "curada": true,
+      "total": 0,
+      "porClasse": {
+        "COMPROVADA": 0,
+        "INSTITUCIONAL": 0,
+        "CONDICIONAL": 0,
+        "REMOVIDA": 0,
+        "PENDENTE": 0
+      }
+    },
+    {
+      "path": "/bairros/sao-domingos",
+      "curada": true,
+      "total": 0,
+      "porClasse": {
+        "COMPROVADA": 0,
+        "INSTITUCIONAL": 0,
+        "CONDICIONAL": 0,
+        "REMOVIDA": 0,
+        "PENDENTE": 0
+      }
+    },
+    {
+      "path": "/bairros/sao-francisco",
+      "curada": true,
+      "total": 0,
+      "porClasse": {
+        "COMPROVADA": 0,
+        "INSTITUCIONAL": 0,
+        "CONDICIONAL": 0,
+        "REMOVIDA": 0,
+        "PENDENTE": 0
+      }
+    },
+    {
+      "path": "/bairros/sao-marcos",
+      "curada": true,
+      "total": 0,
+      "porClasse": {
+        "COMPROVADA": 0,
+        "INSTITUCIONAL": 0,
+        "CONDICIONAL": 0,
+        "REMOVIDA": 0,
+        "PENDENTE": 0
+      }
+    },
+    {
+      "path": "/bairros/sao-miguel-araucaria",
+      "curada": true,
+      "total": 0,
+      "porClasse": {
+        "COMPROVADA": 0,
+        "INSTITUCIONAL": 0,
+        "CONDICIONAL": 0,
+        "REMOVIDA": 0,
+        "PENDENTE": 0
+      }
+    },
+    {
+      "path": "/bairros/sao-silvestre",
+      "curada": true,
+      "total": 0,
+      "porClasse": {
+        "COMPROVADA": 0,
+        "INSTITUCIONAL": 0,
+        "CONDICIONAL": 0,
+        "REMOVIDA": 0,
+        "PENDENTE": 0
+      }
+    },
+    {
       "path": "/bairros/sitio-cercado",
+      "curada": true,
+      "total": 0,
+      "porClasse": {
+        "COMPROVADA": 0,
+        "INSTITUCIONAL": 0,
+        "CONDICIONAL": 0,
+        "REMOVIDA": 0,
+        "PENDENTE": 0
+      }
+    },
+    {
+      "path": "/bairros/thomaz-coelho",
+      "curada": true,
+      "total": 0,
+      "porClasse": {
+        "COMPROVADA": 0,
+        "INSTITUCIONAL": 0,
+        "CONDICIONAL": 0,
+        "REMOVIDA": 0,
+        "PENDENTE": 0
+      }
+    },
+    {
+      "path": "/bairros/tindiquera",
+      "curada": true,
+      "total": 0,
+      "porClasse": {
+        "COMPROVADA": 0,
+        "INSTITUCIONAL": 0,
+        "CONDICIONAL": 0,
+        "REMOVIDA": 0,
+        "PENDENTE": 0
+      }
+    },
+    {
+      "path": "/bairros/tingui",
+      "curada": true,
+      "total": 0,
+      "porClasse": {
+        "COMPROVADA": 0,
+        "INSTITUCIONAL": 0,
+        "CONDICIONAL": 0,
+        "REMOVIDA": 0,
+        "PENDENTE": 0
+      }
+    },
+    {
+      "path": "/bairros/tres-corregos",
+      "curada": true,
+      "total": 0,
+      "porClasse": {
+        "COMPROVADA": 0,
+        "INSTITUCIONAL": 0,
+        "CONDICIONAL": 0,
+        "REMOVIDA": 0,
+        "PENDENTE": 0
+      }
+    },
+    {
+      "path": "/bairros/vargem-grande",
+      "curada": true,
+      "total": 0,
+      "porClasse": {
+        "COMPROVADA": 0,
+        "INSTITUCIONAL": 0,
+        "CONDICIONAL": 0,
+        "REMOVIDA": 0,
+        "PENDENTE": 0
+      }
+    },
+    {
+      "path": "/bairros/vila-amelia-pinhais",
+      "curada": true,
+      "total": 0,
+      "porClasse": {
+        "COMPROVADA": 0,
+        "INSTITUCIONAL": 0,
+        "CONDICIONAL": 0,
+        "REMOVIDA": 0,
+        "PENDENTE": 0
+      }
+    },
+    {
+      "path": "/bairros/vila-nova-araucaria",
+      "curada": true,
+      "total": 0,
+      "porClasse": {
+        "COMPROVADA": 0,
+        "INSTITUCIONAL": 0,
+        "CONDICIONAL": 0,
+        "REMOVIDA": 0,
+        "PENDENTE": 0
+      }
+    },
+    {
+      "path": "/bairros/vila-solene",
+      "curada": true,
+      "total": 0,
+      "porClasse": {
+        "COMPROVADA": 0,
+        "INSTITUCIONAL": 0,
+        "CONDICIONAL": 0,
+        "REMOVIDA": 0,
+        "PENDENTE": 0
+      }
+    },
+    {
+      "path": "/bairros/weissopolis",
       "curada": true,
       "total": 0,
       "porClasse": {
@@ -1652,6 +2324,18 @@
     },
     {
       "path": "/blog/codigos-de-erro-tela-azul-windows",
+      "curada": true,
+      "total": 0,
+      "porClasse": {
+        "COMPROVADA": 0,
+        "INSTITUCIONAL": 0,
+        "CONDICIONAL": 0,
+        "REMOVIDA": 0,
+        "PENDENTE": 0
+      }
+    },
+    {
+      "path": "/blog/comandos-linux-essenciais-iniciantes",
       "curada": true,
       "total": 0,
       "porClasse": {
@@ -1807,6 +2491,18 @@
       }
     },
     {
+      "path": "/blog/como-configurar-ssh-seguro-linux",
+      "curada": true,
+      "total": 0,
+      "porClasse": {
+        "COMPROVADA": 0,
+        "INSTITUCIONAL": 0,
+        "CONDICIONAL": 0,
+        "REMOVIDA": 0,
+        "PENDENTE": 0
+      }
+    },
+    {
       "path": "/blog/como-configurar-vpn-empresarial",
       "curada": true,
       "total": 0,
@@ -1891,6 +2587,18 @@
       }
     },
     {
+      "path": "/blog/como-fazer-backup-na-nuvem",
+      "curada": true,
+      "total": 0,
+      "porClasse": {
+        "COMPROVADA": 0,
+        "INSTITUCIONAL": 0,
+        "CONDICIONAL": 0,
+        "REMOVIDA": 0,
+        "PENDENTE": 0
+      }
+    },
+    {
       "path": "/blog/como-fazer-teste-velocidade-internet",
       "curada": true,
       "total": 0,
@@ -1927,6 +2635,18 @@
       }
     },
     {
+      "path": "/blog/como-gerenciar-pacotes-apt-dnf-linux",
+      "curada": true,
+      "total": 0,
+      "porClasse": {
+        "COMPROVADA": 0,
+        "INSTITUCIONAL": 0,
+        "CONDICIONAL": 0,
+        "REMOVIDA": 0,
+        "PENDENTE": 0
+      }
+    },
+    {
       "path": "/blog/como-instalar-impressora-windows-passo-a-passo",
       "curada": true,
       "total": 0,
@@ -1940,6 +2660,18 @@
     },
     {
       "path": "/blog/como-instalar-segundo-ssd-notebook",
+      "curada": true,
+      "total": 0,
+      "porClasse": {
+        "COMPROVADA": 0,
+        "INSTITUCIONAL": 0,
+        "CONDICIONAL": 0,
+        "REMOVIDA": 0,
+        "PENDENTE": 0
+      }
+    },
+    {
+      "path": "/blog/como-instalar-ubuntu-do-zero",
       "curada": true,
       "total": 0,
       "porClasse": {
@@ -2192,6 +2924,18 @@
     },
     {
       "path": "/blog/como-trocar-tela-notebook-passo-a-passo",
+      "curada": true,
+      "total": 0,
+      "porClasse": {
+        "COMPROVADA": 0,
+        "INSTITUCIONAL": 0,
+        "CONDICIONAL": 0,
+        "REMOVIDA": 0,
+        "PENDENTE": 0
+      }
+    },
+    {
+      "path": "/blog/como-usar-rsync-backup-linux",
       "curada": true,
       "total": 0,
       "porClasse": {
@@ -2527,6 +3271,18 @@
       }
     },
     {
+      "path": "/blog/pc-nao-liga-o-que-fazer",
+      "curada": true,
+      "total": 0,
+      "porClasse": {
+        "COMPROVADA": 0,
+        "INSTITUCIONAL": 0,
+        "CONDICIONAL": 0,
+        "REMOVIDA": 0,
+        "PENDENTE": 0
+      }
+    },
+    {
       "path": "/blog/pendrive-somente-leitura-protegido-contra-gravacao",
       "curada": true,
       "total": 0,
@@ -2600,6 +3356,18 @@
     },
     {
       "path": "/blog/servico-de-audio-do-windows-nao-esta-em-execucao",
+      "curada": true,
+      "total": 0,
+      "porClasse": {
+        "COMPROVADA": 0,
+        "INSTITUCIONAL": 0,
+        "CONDICIONAL": 0,
+        "REMOVIDA": 0,
+        "PENDENTE": 0
+      }
+    },
+    {
+      "path": "/blog/ssd-nao-aparece-no-instalador-do-windows",
       "curada": true,
       "total": 0,
       "porClasse": {
@@ -2696,6 +3464,18 @@
     },
     {
       "path": "/blog/webcam-usb-nao-e-detectada",
+      "curada": true,
+      "total": 0,
+      "porClasse": {
+        "COMPROVADA": 0,
+        "INSTITUCIONAL": 0,
+        "CONDICIONAL": 0,
+        "REMOVIDA": 0,
+        "PENDENTE": 0
+      }
+    },
+    {
+      "path": "/blog/wifi-caindo-toda-hora",
       "curada": true,
       "total": 0,
       "porClasse": {
@@ -3008,6 +3788,18 @@
     },
     {
       "path": "/entidades/ssd",
+      "curada": true,
+      "total": 0,
+      "porClasse": {
+        "COMPROVADA": 0,
+        "INSTITUCIONAL": 0,
+        "CONDICIONAL": 0,
+        "REMOVIDA": 0,
+        "PENDENTE": 0
+      }
+    },
+    {
+      "path": "/entidades/tecnico-de-informatica",
       "curada": true,
       "total": 0,
       "porClasse": {
@@ -4722,7 +5514,7 @@
       "familiaTitulo": "Prazo de atendimento prometido",
       "risco": "Prazo fixo sem controle de agenda, trânsito e peça.",
       "arquivo": "src/data/blogPostsContent.tsx",
-      "linha": 6326,
+      "linha": 6349,
       "trecho": "<p>Atendemos Curitiba, São José dos Pinhais, Pinhais, Colombo, Almirante Tamandaré, Araucária, Campo Largo, Campo Magro, Piraquara, Quatro Barras e Fazenda Rio Grande. Diagnóstico ",
       "classificacao": "CONDICIONAL",
       "criterio": "Tempos de deslocamento e janelas de atendimento são estimativas dependentes de agenda, trânsito e disponibilidade de peça",
@@ -4735,7 +5527,7 @@
       "familiaTitulo": "Prazo de atendimento prometido",
       "risco": "Prazo fixo sem controle de agenda, trânsito e peça.",
       "arquivo": "src/data/blogPostsContent.tsx",
-      "linha": 6441,
+      "linha": 6464,
       "trecho": "<p>Atendemos Curitiba, São José dos Pinhais, Pinhais, Colombo, Almirante Tamandaré, Araucária, Campo Largo, Campo Magro, Piraquara, Quatro Barras e Fazenda Rio Grande. Diagnóstico ",
       "classificacao": "CONDICIONAL",
       "criterio": "Tempos de deslocamento e janelas de atendimento são estimativas dependentes de agenda, trânsito e disponibilidade de peça",
@@ -4748,7 +5540,7 @@
       "familiaTitulo": "Prazo de atendimento prometido",
       "risco": "Prazo fixo sem controle de agenda, trânsito e peça.",
       "arquivo": "src/data/blogPostsContent.tsx",
-      "linha": 6649,
+      "linha": 6672,
       "trecho": "<p>Atendemos Curitiba, São José dos Pinhais, Pinhais, Colombo, Almirante Tamandaré, Araucária, Campo Largo, Campo Magro, Piraquara, Quatro Barras e Fazenda Rio Grande. Diagnóstico ",
       "classificacao": "CONDICIONAL",
       "criterio": "Tempos de deslocamento e janelas de atendimento são estimativas dependentes de agenda, trânsito e disponibilidade de peça",
@@ -4761,7 +5553,7 @@
       "familiaTitulo": "Prazo de atendimento prometido",
       "risco": "Prazo fixo sem controle de agenda, trânsito e peça.",
       "arquivo": "src/data/blogPostsContent.tsx",
-      "linha": 6764,
+      "linha": 6787,
       "trecho": "<p>Atendemos Curitiba, São José dos Pinhais, Pinhais, Colombo, Almirante Tamandaré, Araucária, Campo Largo, Campo Magro, Piraquara, Quatro Barras e Fazenda Rio Grande. Diagnóstico ",
       "classificacao": "CONDICIONAL",
       "criterio": "Tempos de deslocamento e janelas de atendimento são estimativas dependentes de agenda, trânsito e disponibilidade de peça",
@@ -4774,7 +5566,7 @@
       "familiaTitulo": "Prazo de atendimento prometido",
       "risco": "Prazo fixo sem controle de agenda, trânsito e peça.",
       "arquivo": "src/data/blogPostsContent.tsx",
-      "linha": 6879,
+      "linha": 6902,
       "trecho": "<p>Atendemos Curitiba, São José dos Pinhais, Pinhais, Colombo, Almirante Tamandaré, Araucária, Campo Largo, Campo Magro, Piraquara, Quatro Barras e Fazenda Rio Grande. Diagnóstico ",
       "classificacao": "CONDICIONAL",
       "criterio": "Tempos de deslocamento e janelas de atendimento são estimativas dependentes de agenda, trânsito e disponibilidade de peça",
@@ -4787,7 +5579,7 @@
       "familiaTitulo": "Cobertura empresarial irrestrita",
       "risco": "“Todos os portes / todas as marcas / todos os modelos” não é sustentável.",
       "arquivo": "src/data/blogPostsContent.tsx",
-      "linha": 6998,
+      "linha": 7021,
       "trecho": "<p>A <strong>{BRAND_NAME}</strong> oferece suporte profissional para servidores e desktops Linux em Curitiba e região. Configuração de servidores web, e-mail, samba, firewall, moni",
       "classificacao": "CONDICIONAL",
       "criterio": "Atendimento a qualquer marca vale para diagnóstico e serviços de software/hardware comum; depende de disponibilidade de peça e de o modelo permitir reparo",
@@ -4800,7 +5592,7 @@
       "familiaTitulo": "Cobertura empresarial irrestrita",
       "risco": "“Todos os portes / todas as marcas / todos os modelos” não é sustentável.",
       "arquivo": "src/data/blogPostsContent.tsx",
-      "linha": 7118,
+      "linha": 7141,
       "trecho": "<p>A <strong>{BRAND_NAME}</strong> oferece suporte profissional para servidores e desktops Linux em Curitiba e região. Configuração de servidores web, e-mail, samba, firewall, moni",
       "classificacao": "CONDICIONAL",
       "criterio": "Atendimento a qualquer marca vale para diagnóstico e serviços de software/hardware comum; depende de disponibilidade de peça e de o modelo permitir reparo",
@@ -4813,7 +5605,7 @@
       "familiaTitulo": "Cobertura empresarial irrestrita",
       "risco": "“Todos os portes / todas as marcas / todos os modelos” não é sustentável.",
       "arquivo": "src/data/blogPostsContent.tsx",
-      "linha": 7238,
+      "linha": 7261,
       "trecho": "<p>A <strong>{BRAND_NAME}</strong> oferece suporte profissional para servidores e desktops Linux em Curitiba e região. Configuração de servidores web, e-mail, samba, firewall, moni",
       "classificacao": "CONDICIONAL",
       "criterio": "Atendimento a qualquer marca vale para diagnóstico e serviços de software/hardware comum; depende de disponibilidade de peça e de o modelo permitir reparo",
@@ -4826,7 +5618,7 @@
       "familiaTitulo": "Cobertura empresarial irrestrita",
       "risco": "“Todos os portes / todas as marcas / todos os modelos” não é sustentável.",
       "arquivo": "src/data/blogPostsContent.tsx",
-      "linha": 7358,
+      "linha": 7381,
       "trecho": "<p>A <strong>{BRAND_NAME}</strong> oferece suporte profissional para servidores e desktops Linux em Curitiba e região. Configuração de servidores web, e-mail, samba, firewall, moni",
       "classificacao": "CONDICIONAL",
       "criterio": "Atendimento a qualquer marca vale para diagnóstico e serviços de software/hardware comum; depende de disponibilidade de peça e de o modelo permitir reparo",
@@ -4839,7 +5631,7 @@
       "familiaTitulo": "Cobertura empresarial irrestrita",
       "risco": "“Todos os portes / todas as marcas / todos os modelos” não é sustentável.",
       "arquivo": "src/data/blogPostsContent.tsx",
-      "linha": 7478,
+      "linha": 7501,
       "trecho": "<p>A <strong>{BRAND_NAME}</strong> oferece suporte profissional para servidores e desktops Linux em Curitiba e região. Configuração de servidores web, e-mail, samba, firewall, moni",
       "classificacao": "CONDICIONAL",
       "criterio": "Atendimento a qualquer marca vale para diagnóstico e serviços de software/hardware comum; depende de disponibilidade de peça e de o modelo permitir reparo",
@@ -4852,7 +5644,7 @@
       "familiaTitulo": "Cobertura empresarial irrestrita",
       "risco": "“Todos os portes / todas as marcas / todos os modelos” não é sustentável.",
       "arquivo": "src/data/blogPostsContent.tsx",
-      "linha": 7598,
+      "linha": 7621,
       "trecho": "<p>A <strong>{BRAND_NAME}</strong> oferece suporte profissional para servidores e desktops Linux em Curitiba e região. Configuração de servidores web, e-mail, samba, firewall, moni",
       "classificacao": "CONDICIONAL",
       "criterio": "Atendimento a qualquer marca vale para diagnóstico e serviços de software/hardware comum; depende de disponibilidade de peça e de o modelo permitir reparo",
@@ -4865,7 +5657,7 @@
       "familiaTitulo": "Cobertura empresarial irrestrita",
       "risco": "“Todos os portes / todas as marcas / todos os modelos” não é sustentável.",
       "arquivo": "src/data/blogPostsContent.tsx",
-      "linha": 7718,
+      "linha": 7741,
       "trecho": "<p>A <strong>{BRAND_NAME}</strong> oferece suporte profissional para servidores e desktops Linux em Curitiba e região. Configuração de servidores web, e-mail, samba, firewall, moni",
       "classificacao": "CONDICIONAL",
       "criterio": "Atendimento a qualquer marca vale para diagnóstico e serviços de software/hardware comum; depende de disponibilidade de peça e de o modelo permitir reparo",
@@ -4878,7 +5670,7 @@
       "familiaTitulo": "Cobertura empresarial irrestrita",
       "risco": "“Todos os portes / todas as marcas / todos os modelos” não é sustentável.",
       "arquivo": "src/data/blogPostsContent.tsx",
-      "linha": 7838,
+      "linha": 7861,
       "trecho": "<p>A <strong>{BRAND_NAME}</strong> oferece suporte profissional para servidores e desktops Linux em Curitiba e região. Configuração de servidores web, e-mail, samba, firewall, moni",
       "classificacao": "CONDICIONAL",
       "criterio": "Atendimento a qualquer marca vale para diagnóstico e serviços de software/hardware comum; depende de disponibilidade de peça e de o modelo permitir reparo",
@@ -4891,7 +5683,7 @@
       "familiaTitulo": "Prazo de atendimento prometido",
       "risco": "Prazo fixo sem controle de agenda, trânsito e peça.",
       "arquivo": "src/data/blogPostsContent.tsx",
-      "linha": 8939,
+      "linha": 8962,
       "trecho": "<li><strong>Plano de resposta a incidentes</strong> que inclua notificação à ANPD em até 48h</li>",
       "classificacao": "CONDICIONAL",
       "criterio": "Tempos de deslocamento e janelas de atendimento são estimativas dependentes de agenda, trânsito e disponibilidade de peça",
@@ -4904,7 +5696,7 @@
       "familiaTitulo": "Prazo de atendimento prometido",
       "risco": "Prazo fixo sem controle de agenda, trânsito e peça.",
       "arquivo": "src/data/blogPostsContent.tsx",
-      "linha": 9065,
+      "linha": 9088,
       "trecho": "<li><strong>Plano de resposta a incidentes</strong> que inclua notificação à ANPD em até 48h</li>",
       "classificacao": "CONDICIONAL",
       "criterio": "Tempos de deslocamento e janelas de atendimento são estimativas dependentes de agenda, trânsito e disponibilidade de peça",
@@ -4917,7 +5709,7 @@
       "familiaTitulo": "Prazo de atendimento prometido",
       "risco": "Prazo fixo sem controle de agenda, trânsito e peça.",
       "arquivo": "src/data/blogPostsContent.tsx",
-      "linha": 9268,
+      "linha": 9291,
       "trecho": "<li><strong>Plano de resposta a incidentes</strong> que inclua notificação à ANPD em até 48h</li>",
       "classificacao": "CONDICIONAL",
       "criterio": "Tempos de deslocamento e janelas de atendimento são estimativas dependentes de agenda, trânsito e disponibilidade de peça",
@@ -4930,7 +5722,7 @@
       "familiaTitulo": "Prazo de atendimento prometido",
       "risco": "Prazo fixo sem controle de agenda, trânsito e peça.",
       "arquivo": "src/data/blogPostsContent.tsx",
-      "linha": 9394,
+      "linha": 9417,
       "trecho": "<li><strong>Plano de resposta a incidentes</strong> que inclua notificação à ANPD em até 48h</li>",
       "classificacao": "CONDICIONAL",
       "criterio": "Tempos de deslocamento e janelas de atendimento são estimativas dependentes de agenda, trânsito e disponibilidade de peça",
@@ -4943,7 +5735,7 @@
       "familiaTitulo": "Prazo de atendimento prometido",
       "risco": "Prazo fixo sem controle de agenda, trânsito e peça.",
       "arquivo": "src/data/blogPostsContent.tsx",
-      "linha": 9520,
+      "linha": 9543,
       "trecho": "<li><strong>Plano de resposta a incidentes</strong> que inclua notificação à ANPD em até 48h</li>",
       "classificacao": "CONDICIONAL",
       "criterio": "Tempos de deslocamento e janelas de atendimento são estimativas dependentes de agenda, trânsito e disponibilidade de peça",
@@ -6191,7 +6983,7 @@
       "familiaTitulo": "Garantia",
       "risco": "Prazo ou abrangência divergente da política comercial central.",
       "arquivo": "src/lib/servicosCore.ts",
-      "linha": 1823,
+      "linha": 1826,
       "trecho": "\"O teste final tem um roteiro mínimo que não pulamos: monitor remontado, ligado em duas entradas de vídeo diferentes, verificação de uniformidade de brilho e período contínuo de fu",
       "classificacao": "COMPROVADA",
       "criterio": "Prazo e escopo vêm da fonte comercial única",
@@ -6204,7 +6996,7 @@
       "familiaTitulo": "Garantia",
       "risco": "Prazo ou abrangência divergente da política comercial central.",
       "arquivo": "src/lib/servicosCore.ts",
-      "linha": 2019,
+      "linha": 2022,
       "trecho": "{ question: \"A garantia cobre a qualidade das minhas próximas impressões?\", answer: \"Não, e é importante ser claro nisso. A garantia de 90 dias cobre a mão de obra do ponto reparad",
       "classificacao": "COMPROVADA",
       "criterio": "Prazo e escopo vêm da fonte comercial única",
@@ -6573,66 +7365,6 @@
       ]
     },
     {
-      "familia": "garantia",
-      "familiaTitulo": "Garantia",
-      "risco": "Prazo ou abrangência divergente da política comercial central.",
-      "arquivo": "src/pages/ConsertoImpressoraCuritiba.tsx",
-      "linha": 77,
-      "trecho": "domiciliar em até 60 minutos, valor fechado antes do conserto e garantia de 90 dias.",
-      "classificacao": "COMPROVADA",
-      "criterio": "Prazo e escopo vêm da fonte comercial única",
-      "evidencia": "src/lib/config/commercial.ts + src/lib/politicaComercial.ts (90 dias de mão de obra no ponto reparado; peças conforme fabricante)",
-      "acao": "Manter sempre escopado: nunca 'garantia em todos os serviços' sem qualificar o que é coberto.",
-      "urls": [
-        "/conserto-impressora-curitiba"
-      ]
-    },
-    {
-      "familia": "prazo-prometido",
-      "familiaTitulo": "Prazo de atendimento prometido",
-      "risco": "Prazo fixo sem controle de agenda, trânsito e peça.",
-      "arquivo": "src/pages/ConsertoImpressoraCuritiba.tsx",
-      "linha": 77,
-      "trecho": "domiciliar em até 60 minutos, valor fechado antes do conserto e garantia de 90 dias.",
-      "classificacao": "CONDICIONAL",
-      "criterio": "Tempos de deslocamento e janelas de atendimento são estimativas dependentes de agenda, trânsito e disponibilidade de peça",
-      "evidencia": "Não existe SLA contratado; o texto precisa manter o qualificador ('conforme disponibilidade', 'estimado', 'quando há peça em estoque')",
-      "acao": "Proibido prazo absoluto sem condicionante. 'Atendimento imediato' e 'resposta em até 5 minutos' foram removidos nesta rodada.",
-      "urls": [
-        "/conserto-impressora-curitiba"
-      ]
-    },
-    {
-      "familia": "garantia",
-      "familiaTitulo": "Garantia",
-      "risco": "Prazo ou abrangência divergente da política comercial central.",
-      "arquivo": "src/pages/ConsertoImpressoraCuritiba.tsx",
-      "linha": 95,
-      "trecho": "<p className=\"text-muted-foreground mt-2\">Garantia de 90 dias no serviço · atendimento sem compromisso</p>",
-      "classificacao": "COMPROVADA",
-      "criterio": "Prazo e escopo vêm da fonte comercial única",
-      "evidencia": "src/lib/config/commercial.ts + src/lib/politicaComercial.ts (90 dias de mão de obra no ponto reparado; peças conforme fabricante)",
-      "acao": "Manter sempre escopado: nunca 'garantia em todos os serviços' sem qualificar o que é coberto.",
-      "urls": [
-        "/conserto-impressora-curitiba"
-      ]
-    },
-    {
-      "familia": "garantia",
-      "familiaTitulo": "Garantia",
-      "risco": "Prazo ou abrangência divergente da política comercial central.",
-      "arquivo": "src/pages/ConsertoImpressoraCuritiba.tsx",
-      "linha": 160,
-      "trecho": "{ i: <Shield className=\"w-7 h-7 text-accent\" />, t: \"Garantia de 90 dias\", d: \"Em serviços e peças trocadas, formalizada por escrito.\" },",
-      "classificacao": "COMPROVADA",
-      "criterio": "Prazo e escopo vêm da fonte comercial única",
-      "evidencia": "src/lib/config/commercial.ts + src/lib/politicaComercial.ts (90 dias de mão de obra no ponto reparado; peças conforme fabricante)",
-      "acao": "Manter sempre escopado: nunca 'garantia em todos os serviços' sem qualificar o que é coberto.",
-      "urls": [
-        "/conserto-impressora-curitiba"
-      ]
-    },
-    {
       "familia": "depoimento",
       "familiaTitulo": "Depoimento, avaliação ou estrela",
       "risco": "Prova social só pode existir se for verificável e atribuível.",
@@ -6951,21 +7683,6 @@
       "familia": "prazo-prometido",
       "familiaTitulo": "Prazo de atendimento prometido",
       "risco": "Prazo fixo sem controle de agenda, trânsito e peça.",
-      "arquivo": "src/pages/bairros/AcademiaSJP.tsx",
-      "linha": 13,
-      "trecho": "tempoDeslocamento: \"Atendimento em até 45 min\",",
-      "classificacao": "CONDICIONAL",
-      "criterio": "Tempos de deslocamento e janelas de atendimento são estimativas dependentes de agenda, trânsito e disponibilidade de peça",
-      "evidencia": "Não existe SLA contratado; o texto precisa manter o qualificador ('conforme disponibilidade', 'estimado', 'quando há peça em estoque')",
-      "acao": "Proibido prazo absoluto sem condicionante. 'Atendimento imediato' e 'resposta em até 5 minutos' foram removidos nesta rodada.",
-      "urls": [
-        "/bairros/academia-sjp"
-      ]
-    },
-    {
-      "familia": "prazo-prometido",
-      "familiaTitulo": "Prazo de atendimento prometido",
-      "risco": "Prazo fixo sem controle de agenda, trânsito e peça.",
       "arquivo": "src/pages/bairros/AgricolareSJP.tsx",
       "linha": 13,
       "trecho": "tempoDeslocamento: \"Atendimento em até 45 min\",",
@@ -6993,26 +7710,11 @@
       ]
     },
     {
-      "familia": "prazo-prometido",
-      "familiaTitulo": "Prazo de atendimento prometido",
-      "risco": "Prazo fixo sem controle de agenda, trânsito e peça.",
-      "arquivo": "src/pages/bairros/Aristocrata.tsx",
-      "linha": 23,
-      "trecho": "tempoDeslocamento: \"Atendimento em até 40 minutos\",",
-      "classificacao": "CONDICIONAL",
-      "criterio": "Tempos de deslocamento e janelas de atendimento são estimativas dependentes de agenda, trânsito e disponibilidade de peça",
-      "evidencia": "Não existe SLA contratado; o texto precisa manter o qualificador ('conforme disponibilidade', 'estimado', 'quando há peça em estoque')",
-      "acao": "Proibido prazo absoluto sem condicionante. 'Atendimento imediato' e 'resposta em até 5 minutos' foram removidos nesta rodada.",
-      "urls": [
-        "/bairros/aristocrata"
-      ]
-    },
-    {
       "familia": "identificacao-tecnico",
       "familiaTitulo": "Identificação do técnico",
       "risco": "Compromisso operacional; precisa ser cumprido em todo atendimento.",
       "arquivo": "src/pages/bairros/BairroTemplate.tsx",
-      "linha": 93,
+      "linha": 102,
       "trecho": "title: \"Profissional Identificado\",",
       "classificacao": "INSTITUCIONAL",
       "criterio": "Compromisso operacional do negócio, não métrica",
@@ -7025,7 +7727,7 @@
       "familiaTitulo": "Identificação do técnico",
       "risco": "Compromisso operacional; precisa ser cumprido em todo atendimento.",
       "arquivo": "src/pages/bairros/BairroTemplate.tsx",
-      "linha": 94,
+      "linha": 103,
       "trecho": "description: \"Técnico identificado, com equipamentos profissionais e registro do atendimento. Segurança para sua família.\",",
       "classificacao": "INSTITUCIONAL",
       "criterio": "Compromisso operacional do negócio, não métrica",
@@ -7046,36 +7748,6 @@
       "acao": "Proibido prazo absoluto sem condicionante. 'Atendimento imediato' e 'resposta em até 5 minutos' foram removidos nesta rodada.",
       "urls": [
         "/bairros/boa-vista-at"
-      ]
-    },
-    {
-      "familia": "prazo-prometido",
-      "familiaTitulo": "Prazo de atendimento prometido",
-      "risco": "Prazo fixo sem controle de agenda, trânsito e peça.",
-      "arquivo": "src/pages/bairros/BonecaSJP.tsx",
-      "linha": 13,
-      "trecho": "tempoDeslocamento: \"Atendimento em até 50 min\",",
-      "classificacao": "CONDICIONAL",
-      "criterio": "Tempos de deslocamento e janelas de atendimento são estimativas dependentes de agenda, trânsito e disponibilidade de peça",
-      "evidencia": "Não existe SLA contratado; o texto precisa manter o qualificador ('conforme disponibilidade', 'estimado', 'quando há peça em estoque')",
-      "acao": "Proibido prazo absoluto sem condicionante. 'Atendimento imediato' e 'resposta em até 5 minutos' foram removidos nesta rodada.",
-      "urls": [
-        "/bairros/boneca-do-iguacu-sjp"
-      ]
-    },
-    {
-      "familia": "prazo-prometido",
-      "familiaTitulo": "Prazo de atendimento prometido",
-      "risco": "Prazo fixo sem controle de agenda, trânsito e peça.",
-      "arquivo": "src/pages/bairros/CampoLargoSJP.tsx",
-      "linha": 13,
-      "trecho": "tempoDeslocamento: \"Atendimento em até 50 min\",",
-      "classificacao": "CONDICIONAL",
-      "criterio": "Tempos de deslocamento e janelas de atendimento são estimativas dependentes de agenda, trânsito e disponibilidade de peça",
-      "evidencia": "Não existe SLA contratado; o texto precisa manter o qualificador ('conforme disponibilidade', 'estimado', 'quando há peça em estoque')",
-      "acao": "Proibido prazo absoluto sem condicionante. 'Atendimento imediato' e 'resposta em até 5 minutos' foram removidos nesta rodada.",
-      "urls": [
-        "/bairros/campo-largo-roseira-sjp"
       ]
     },
     {
@@ -7127,21 +7799,6 @@
       "familia": "prazo-prometido",
       "familiaTitulo": "Prazo de atendimento prometido",
       "risco": "Prazo fixo sem controle de agenda, trânsito e peça.",
-      "arquivo": "src/pages/bairros/DelRey.tsx",
-      "linha": 23,
-      "trecho": "tempoDeslocamento: \"Atendimento em até 35 minutos\",",
-      "classificacao": "CONDICIONAL",
-      "criterio": "Tempos de deslocamento e janelas de atendimento são estimativas dependentes de agenda, trânsito e disponibilidade de peça",
-      "evidencia": "Não existe SLA contratado; o texto precisa manter o qualificador ('conforme disponibilidade', 'estimado', 'quando há peça em estoque')",
-      "acao": "Proibido prazo absoluto sem condicionante. 'Atendimento imediato' e 'resposta em até 5 minutos' foram removidos nesta rodada.",
-      "urls": [
-        "/bairros/del-rey"
-      ]
-    },
-    {
-      "familia": "prazo-prometido",
-      "familiaTitulo": "Prazo de atendimento prometido",
-      "risco": "Prazo fixo sem controle de agenda, trânsito e peça.",
       "arquivo": "src/pages/bairros/EucaliptosFRG2.tsx",
       "linha": 13,
       "trecho": "tempoDeslocamento: \"Atendimento em até 50 min\",",
@@ -7166,51 +7823,6 @@
       "acao": "Proibido prazo absoluto sem condicionante. 'Atendimento imediato' e 'resposta em até 5 minutos' foram removidos nesta rodada.",
       "urls": [
         "/bairros/fazendinha"
-      ]
-    },
-    {
-      "familia": "prazo-prometido",
-      "familiaTitulo": "Prazo de atendimento prometido",
-      "risco": "Prazo fixo sem controle de agenda, trânsito e peça.",
-      "arquivo": "src/pages/bairros/Hauer.tsx",
-      "linha": 13,
-      "trecho": "tempoDeslocamento: \"Atendimento em até 30 min\",",
-      "classificacao": "CONDICIONAL",
-      "criterio": "Tempos de deslocamento e janelas de atendimento são estimativas dependentes de agenda, trânsito e disponibilidade de peça",
-      "evidencia": "Não existe SLA contratado; o texto precisa manter o qualificador ('conforme disponibilidade', 'estimado', 'quando há peça em estoque')",
-      "acao": "Proibido prazo absoluto sem condicionante. 'Atendimento imediato' e 'resposta em até 5 minutos' foram removidos nesta rodada.",
-      "urls": [
-        "/bairros/hauer"
-      ]
-    },
-    {
-      "familia": "prazo-prometido",
-      "familiaTitulo": "Prazo de atendimento prometido",
-      "risco": "Prazo fixo sem controle de agenda, trânsito e peça.",
-      "arquivo": "src/pages/bairros/IndependenciaSJP.tsx",
-      "linha": 13,
-      "trecho": "tempoDeslocamento: \"Atendimento em até 40 min\",",
-      "classificacao": "CONDICIONAL",
-      "criterio": "Tempos de deslocamento e janelas de atendimento são estimativas dependentes de agenda, trânsito e disponibilidade de peça",
-      "evidencia": "Não existe SLA contratado; o texto precisa manter o qualificador ('conforme disponibilidade', 'estimado', 'quando há peça em estoque')",
-      "acao": "Proibido prazo absoluto sem condicionante. 'Atendimento imediato' e 'resposta em até 5 minutos' foram removidos nesta rodada.",
-      "urls": [
-        "/bairros/independencia-sjp"
-      ]
-    },
-    {
-      "familia": "prazo-prometido",
-      "familiaTitulo": "Prazo de atendimento prometido",
-      "risco": "Prazo fixo sem controle de agenda, trânsito e peça.",
-      "arquivo": "src/pages/bairros/ItaliaSJP.tsx",
-      "linha": 13,
-      "trecho": "tempoDeslocamento: \"Atendimento em até 35 min\",",
-      "classificacao": "CONDICIONAL",
-      "criterio": "Tempos de deslocamento e janelas de atendimento são estimativas dependentes de agenda, trânsito e disponibilidade de peça",
-      "evidencia": "Não existe SLA contratado; o texto precisa manter o qualificador ('conforme disponibilidade', 'estimado', 'quando há peça em estoque')",
-      "acao": "Proibido prazo absoluto sem condicionante. 'Atendimento imediato' e 'resposta em até 5 minutos' foram removidos nesta rodada.",
-      "urls": [
-        "/bairros/italia-sjp"
       ]
     },
     {
@@ -7292,21 +7904,6 @@
       "familia": "prazo-prometido",
       "familiaTitulo": "Prazo de atendimento prometido",
       "risco": "Prazo fixo sem controle de agenda, trânsito e peça.",
-      "arquivo": "src/pages/bairros/NovoMundo.tsx",
-      "linha": 13,
-      "trecho": "tempoDeslocamento: \"Atendimento em até 35 min\",",
-      "classificacao": "CONDICIONAL",
-      "criterio": "Tempos de deslocamento e janelas de atendimento são estimativas dependentes de agenda, trânsito e disponibilidade de peça",
-      "evidencia": "Não existe SLA contratado; o texto precisa manter o qualificador ('conforme disponibilidade', 'estimado', 'quando há peça em estoque')",
-      "acao": "Proibido prazo absoluto sem condicionante. 'Atendimento imediato' e 'resposta em até 5 minutos' foram removidos nesta rodada.",
-      "urls": [
-        "/bairros/novo-mundo"
-      ]
-    },
-    {
-      "familia": "prazo-prometido",
-      "familiaTitulo": "Prazo de atendimento prometido",
-      "risco": "Prazo fixo sem controle de agenda, trânsito e peça.",
       "arquivo": "src/pages/bairros/OswaldoCruzColombo.tsx",
       "linha": 13,
       "trecho": "tempoDeslocamento: \"Atendimento em até 45 min\",",
@@ -7316,81 +7913,6 @@
       "acao": "Proibido prazo absoluto sem condicionante. 'Atendimento imediato' e 'resposta em até 5 minutos' foram removidos nesta rodada.",
       "urls": [
         "/bairros/osvaldo-cruz-colombo"
-      ]
-    },
-    {
-      "familia": "prazo-prometido",
-      "familiaTitulo": "Prazo de atendimento prometido",
-      "risco": "Prazo fixo sem controle de agenda, trânsito e peça.",
-      "arquivo": "src/pages/bairros/ParqueDaFonte.tsx",
-      "linha": 23,
-      "trecho": "tempoDeslocamento: \"Atendimento em até 35 minutos\",",
-      "classificacao": "CONDICIONAL",
-      "criterio": "Tempos de deslocamento e janelas de atendimento são estimativas dependentes de agenda, trânsito e disponibilidade de peça",
-      "evidencia": "Não existe SLA contratado; o texto precisa manter o qualificador ('conforme disponibilidade', 'estimado', 'quando há peça em estoque')",
-      "acao": "Proibido prazo absoluto sem condicionante. 'Atendimento imediato' e 'resposta em até 5 minutos' foram removidos nesta rodada.",
-      "urls": [
-        "/bairros/parque-da-fonte"
-      ]
-    },
-    {
-      "familia": "prazo-prometido",
-      "familiaTitulo": "Prazo de atendimento prometido",
-      "risco": "Prazo fixo sem controle de agenda, trânsito e peça.",
-      "arquivo": "src/pages/bairros/QuissisanaSJP.tsx",
-      "linha": 13,
-      "trecho": "tempoDeslocamento: \"Atendimento em até 40 min\",",
-      "classificacao": "CONDICIONAL",
-      "criterio": "Tempos de deslocamento e janelas de atendimento são estimativas dependentes de agenda, trânsito e disponibilidade de peça",
-      "evidencia": "Não existe SLA contratado; o texto precisa manter o qualificador ('conforme disponibilidade', 'estimado', 'quando há peça em estoque')",
-      "acao": "Proibido prazo absoluto sem condicionante. 'Atendimento imediato' e 'resposta em até 5 minutos' foram removidos nesta rodada.",
-      "urls": [
-        "/bairros/quississana-sjp"
-      ]
-    },
-    {
-      "familia": "prazo-prometido",
-      "familiaTitulo": "Prazo de atendimento prometido",
-      "risco": "Prazo fixo sem controle de agenda, trânsito e peça.",
-      "arquivo": "src/pages/bairros/Reboucas.tsx",
-      "linha": 13,
-      "trecho": "tempoDeslocamento: \"Atendimento em até 30 min\",",
-      "classificacao": "CONDICIONAL",
-      "criterio": "Tempos de deslocamento e janelas de atendimento são estimativas dependentes de agenda, trânsito e disponibilidade de peça",
-      "evidencia": "Não existe SLA contratado; o texto precisa manter o qualificador ('conforme disponibilidade', 'estimado', 'quando há peça em estoque')",
-      "acao": "Proibido prazo absoluto sem condicionante. 'Atendimento imediato' e 'resposta em até 5 minutos' foram removidos nesta rodada.",
-      "urls": [
-        "/bairros/reboucas"
-      ]
-    },
-    {
-      "familia": "prazo-prometido",
-      "familiaTitulo": "Prazo de atendimento prometido",
-      "risco": "Prazo fixo sem controle de agenda, trânsito e peça.",
-      "arquivo": "src/pages/bairros/SaoCristovao.tsx",
-      "linha": 23,
-      "trecho": "tempoDeslocamento: \"Atendimento em até 40 minutos\",",
-      "classificacao": "CONDICIONAL",
-      "criterio": "Tempos de deslocamento e janelas de atendimento são estimativas dependentes de agenda, trânsito e disponibilidade de peça",
-      "evidencia": "Não existe SLA contratado; o texto precisa manter o qualificador ('conforme disponibilidade', 'estimado', 'quando há peça em estoque')",
-      "acao": "Proibido prazo absoluto sem condicionante. 'Atendimento imediato' e 'resposta em até 5 minutos' foram removidos nesta rodada.",
-      "urls": [
-        "/bairros/sao-cristovao"
-      ]
-    },
-    {
-      "familia": "prazo-prometido",
-      "familiaTitulo": "Prazo de atendimento prometido",
-      "risco": "Prazo fixo sem controle de agenda, trânsito e peça.",
-      "arquivo": "src/pages/bairros/SaoMarcos.tsx",
-      "linha": 23,
-      "trecho": "tempoDeslocamento: \"Atendimento em até 45 minutos\",",
-      "classificacao": "CONDICIONAL",
-      "criterio": "Tempos de deslocamento e janelas de atendimento são estimativas dependentes de agenda, trânsito e disponibilidade de peça",
-      "evidencia": "Não existe SLA contratado; o texto precisa manter o qualificador ('conforme disponibilidade', 'estimado', 'quando há peça em estoque')",
-      "acao": "Proibido prazo absoluto sem condicionante. 'Atendimento imediato' e 'resposta em até 5 minutos' foram removidos nesta rodada.",
-      "urls": [
-        "/bairros/sao-marcos"
       ]
     },
     {
