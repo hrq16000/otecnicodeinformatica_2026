@@ -27,6 +27,16 @@ Quando existem arquivos importantes, backup vem antes de formatação. Se a máq
     "Centro de Qualificação e Capacitação"
   ],
   tempoDeslocamento: "Agenda definida após triagem do problema e do endereço",
+  tituloSecaoPrincipal: "Windows, aplicativos e periféricos em São Cristóvão",
+  tituloSecaoContexto: "Quando a função falha, mas o computador ainda inicia",
+  triagemResumo: "Em São Cristóvão, o roteiro parte da função interrompida: aplicativo, impressora, áudio, webcam ou acesso à rede. Se o sistema continua inicializando, investigamos software e comunicação antes de tratar o caso como falha física.",
+  faqTitulo: "Dúvidas sobre Windows e periféricos em São Cristóvão",
+  faqsCustom: [
+    { question: "Um aplicativo parou de abrir, mas o Windows funciona. Precisa formatar?", answer: "Não necessariamente. Primeiro verificamos erro do aplicativo, atualização, permissões, dependências e integridade do sistema antes de considerar reinstalação ampla." },
+    { question: "Impressora offline é problema da impressora ou do computador?", answer: "Pode ser qualquer um dos dois. Testamos fila, driver, conexão e outro computador para descobrir se a falha está na estação, na rede ou no próprio equipamento." },
+    { question: "Webcam ou áudio sumiu após atualização. Isso pode ser driver?", answer: "Sim. Se o hardware continua reconhecido, driver e configuração são hipóteses fortes. Defeito físico ganha peso quando o dispositivo deixa de aparecer em diferentes testes." },
+    { question: "Quando o suporte pode começar remotamente?", answer: "Quando o computador ainda inicia, está conectado e a falha é de software, configuração ou periférico. Ausência de energia, vídeo ou necessidade de desmontagem exige outra modalidade." },
+  ],
   servicosDestaque: [
     "Correção de Windows e drivers",
     "Impressora e periféricos",
