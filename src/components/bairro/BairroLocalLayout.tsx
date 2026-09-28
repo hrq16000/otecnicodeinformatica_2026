@@ -22,6 +22,7 @@ import { servicoByPath, type BairroLocalData } from "@/lib/bairrosData";
 import { SCHEMA_SLOTS, SLOT_PRIORITY, useJsonLdSlot } from "@/lib/jsonLdSlots";
 import { BairroFotos } from "@/components/bairro/BairroFotos";
 import { fotoTecnicaDoBairro, galeriaDoBairro } from "@/lib/galeriaBairro";
+import { SintomasFrequentesBairro } from "@/components/bairro/SintomasFrequentesBairro";
 
 const CTA_CLASS =
   "inline-flex min-h-14 items-center justify-center gap-2 rounded-lg bg-accent px-7 text-base font-bold text-accent-foreground shadow-[0_14px_34px_-10px_hsl(var(--accent)/0.6)] motion-surface hover:shadow-[0_18px_40px_-12px_hsl(var(--accent)/0.55)]";
@@ -252,6 +253,8 @@ export const BairroLocalLayout = ({ data }: { data: BairroLocalData }) => {
             </aside>
           </div>
         </section>
+
+        <SintomasFrequentesBairro slug={data.slug} nome={data.nome} />
 
         {/* Ponte editorial: conteúdo útil antes do bloco comercial local. */}
         <section className="border-b border-border/60 bg-background py-12 md:py-16" aria-labelledby="leituras-bairro">
