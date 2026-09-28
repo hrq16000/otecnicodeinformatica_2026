@@ -1,7 +1,9 @@
 import { BairroTemplate } from "./BairroTemplate";
 
-// Referência local verificada em 27/09/2026:
-// - Prefeitura de Campo Largo: Vila Solene aparece nas comunicações municipais atuais como região do município.
+// Referências locais verificadas em 27/09/2026:
+// - Prefeitura de Campo Largo: comunicado de abastecimento de 2026 lista Vila Solene entre as regiões do município.
+// - Acervo Histórico de Campo Largo: registro municipal de 1997 identifica imóvel na Rua Manoel Ozorio Portela, Vila Solene.
+//   A via é usada aqui apenas como referência histórica documentada, sem inferir numeração ou configuração urbana atual.
 const data = {
   nome: "Vila Solene",
   slug: "vila-solene",
@@ -10,7 +12,7 @@ const data = {
   metaDescription: "Suporte de informática na Vila Solene, Campo Largo. Triagem para notebook, PC, Windows, periféricos e rede, com atendimento conforme o caso.",
   h1: "Técnico de Informática na Vila Solene – Campo Largo",
   subtitulo: "Triagem técnica antes da execução, com foco em software, periféricos, conectividade e preservação dos dados.",
-  descricaoLonga: `Vila Solene aparece nas comunicações atuais da Prefeitura de Campo Largo como uma das regiões do município. Como não há necessidade de inventar referências específicas para tornar a página útil, a localização é tratada de forma objetiva e o conteúdo se concentra no que realmente ajuda quem procura assistência de informática.
+  descricaoLonga: `Vila Solene aparece nas comunicações atuais da Prefeitura de Campo Largo como uma das regiões do município, inclusive em aviso oficial de abastecimento publicado em 2026. O acervo histórico municipal também registra a Rua Manoel Ozorio Portela associada à Vila Solene em publicação de 1997. Essa segunda referência é tratada explicitamente como histórica: ela ajuda a documentar a identidade local sem afirmar que numeração, limites ou configuração viária permanecem iguais hoje. O conteúdo técnico se concentra no que realmente ajuda quem procura assistência de informática.
 
 Um dos cenários mais comuns em suporte é quando o computador funciona, mas algum recurso deixa de responder. Impressora pode aparecer offline, áudio pode sumir, câmera pode parar depois de atualização, programas podem deixar de abrir ou o Windows pode ficar instável. Esses sintomas não significam automaticamente que a máquina precisa ser formatada.
 
@@ -20,7 +22,8 @@ Quando o problema é desempenho, a análise também evita atalhos. SSD, memória
 
 Se o computador ainda está conectado e utilizável, a triagem pode começar remotamente. Se há necessidade de desmontagem, teste elétrico ou falha física, o atendimento muda para visita ou bancada. A página da Vila Solene foi reescrita com uma abordagem técnica própria, sem promessas de prazo ou frases genéricas sobre o bairro.`,
   pontosReferencia: [
-    "Vila Solene – Campo Largo"
+    "Vila Solene – Campo Largo (comunicação municipal de 2026)",
+    "Rua Manoel Ozorio Portela (referência histórica no acervo municipal)"
   ],
   tempoDeslocamento: "Atendimento definido após triagem do problema e do endereço",
   servicosDestaque: [
