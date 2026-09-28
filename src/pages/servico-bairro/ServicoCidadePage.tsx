@@ -104,7 +104,7 @@ const ServicoCidadePage = () => {
     { icon: Shield, titulo: "Garantia no Serviço", descricao: "Todo reparo conta com garantia. Peças de qualidade" },
     { icon: Star, titulo: "Atendimento Humanizado", descricao: "Explicamos o problema com clareza, sem jargão técnico" },
   ] : [
-    { icon: MapPin, titulo: `Atendimento Local em ${cidade.nome}`, descricao: "Técnico vai até seu endereço com todas as ferramentas" },
+    { icon: MapPin, titulo: `Atendimento em ${cidade.nome}`, descricao: "Modalidade definida após a triagem: remoto, visita ou bancada conforme o caso" },
     { icon: Clock, titulo: "Atendimento conforme a agenda", descricao: "Agende pelo WhatsApp; o horário depende da disponibilidade da agenda" },
     { icon: Shield, titulo: "Garantia conforme o serviço executado", descricao: "Garantia sobre a mão de obra do reparo executado, registrada no orçamento" },
     { icon: Star, titulo: "Valor informado antes", descricao: "Você aprova o valor antes de qualquer execução" },
@@ -166,7 +166,7 @@ const ServicoCidadePage = () => {
                 ? local.subtitulo
                 : isSemVisita
                   ? `atendimento humanizado para ${servico.nome.toLowerCase()} em ${cidade.nome}. Traga o equipamento para avaliação.`
-                  : `Atendemos no seu endereço em ${cidade.nome} ainda hoje`
+                  : `Atendimento em ${cidade.nome} com modalidade e horário definidos após a triagem`
               }
             </p>
 
@@ -244,8 +244,8 @@ const ServicoCidadePage = () => {
           <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
             {[
               { step: "1", titulo: "Chame no WhatsApp", desc: `Descreva o problema e informe sua localização em ${cidade.nome}` },
-              { step: "2", titulo: "Agendamento Rápido", desc: `Definimos o melhor horário para ir até você em ${cidade.nome}` },
-              { step: "3", titulo: "Serviço Concluído", desc: "Técnico resolve no local com garantia. Você acompanha tudo" },
+              { step: "2", titulo: "Modalidade e agenda", desc: `Definimos o formato de atendimento e o horário disponível em ${cidade.nome}` },
+              { step: "3", titulo: "Diagnóstico e execução", desc: "Você recebe o diagnóstico e aprova o escopo antes da execução" },
             ].map((p, i) => (
               <div 
                 key={i} 
@@ -333,7 +333,7 @@ const ServicoCidadePage = () => {
             Precisa de {servico.nome} em {cidade.nome}?
           </h2>
           <p className="text-white/90 mb-8 max-w-2xl mx-auto reveal-text" data-reveal-delay="100">
-            Entre em contato agora e agende seu atendimento a domicílio. Respondemos em até 15 minutos.
+            Entre em contato pelo WhatsApp para descrever o problema e definir a modalidade de atendimento conforme o diagnóstico e a agenda.
           </p>
           <Button size="lg" variant="whatsapp" onClick={handleWhatsAppClick} className="motion-surface hover:shadow-lg reveal-text" data-reveal-delay="200">
             <MessageCircle className="mr-2 h-5 w-5" />
