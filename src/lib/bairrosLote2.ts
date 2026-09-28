@@ -523,75 +523,71 @@ export const BAIRROS_LOTE_2: Record<string, BairroLocalData> = {
     nomeLocativo: "na Costeira",
     cidade: "São José dos Pinhais",
     areaName: "Costeira, São José dos Pinhais",
-    metaTitle: "Técnico de Informática na Costeira | São José dos Pinhais",
+    metaTitle: "Técnico de informática na Costeira | PC, notebook, SSD e backup",
     metaDescription:
-      "Informática na Costeira, São José dos Pinhais: manutenção de computador, upgrade de SSD, formatação e rede doméstica. Diagnóstico antes do valor, coleta combinada.",
-    h1: "Atendimento de informática na Costeira – São José dos Pinhais",
+      "Técnico de informática na Costeira, São José dos Pinhais: diagnóstico de PC e notebook, SSD, backup, Wi‑Fi e formatação. Triagem antes de trocar peça.",
+    h1: "Técnico de informática na Costeira – São José dos Pinhais",
     subtitulo:
-      "Bairro residencial próximo à divisa com Curitiba, onde a maioria dos chamados envolve equipamento antigo que ainda pode render alguns anos.",
+      "Diagnóstico de computador, notebook e rede para separar armazenamento, memória, temperatura e configuração antes de investir em peça ou formatação.",
     whatsappMessage:
       "Olá! Preciso de atendimento de informática na Costeira, em São José dos Pinhais. Pode me orientar?",
     introducaoLocal: [
-      "A Costeira fica na porção de São José dos Pinhais que faz divisa com Curitiba, num trecho essencialmente residencial. A característica que mais define os chamados daqui é o parque de equipamentos: muitos computadores de mesa com anos de uso, ainda funcionais, que perderam desempenho e nunca passaram por manutenção.",
-      "Nesse cenário, o serviço mais útil raramente é o mais caro. Antes de sugerir troca de máquina, medimos o que está segurando o desempenho — disco, memória, temperatura ou sistema — e mostramos o que muda com cada intervenção.",
+      "A Costeira conta com uma referência administrativa municipal importante: a Subprefeitura Murici funciona na Rua Dr. Murici, no próprio bairro. Essa referência pública é usada apenas para situar a cobertura e não representa oficina ou unidade física da marca.",
+      "Nesta página, o foco é prolongar a vida útil do equipamento quando isso faz sentido técnico. Computador lento, notebook aquecendo, armazenamento antigo e Wi‑Fi irregular precisam ser medidos antes de decidir entre ajuste, upgrade, formatação ou substituição.",
     ],
     contextoLocal: [
-      "É comum encontrar desktop com disco mecânico saturado, memória insuficiente para o uso atual e fonte genérica próxima do limite. A ordem importa: colocar SSD numa máquina que desliga por fonte instável só transfere o problema.",
-      "Nas redes domésticas, aparece o roteador antigo do provedor tentando atender celular, TV e computador ao mesmo tempo. Antes de trocar equipamento, verificamos posicionamento, canal e se o cabeamento interno da casa comporta um ponto adicional.",
+      "Em desktop ou notebook lento, o diagnóstico começa por armazenamento, memória, temperatura e carga de programas. HD degradado, SSD próximo do fim da vida útil, pouca RAM e superaquecimento podem produzir sintomas semelhantes. A medição evita trocar peça sem atacar a causa.",
+      "Antes de instalar SSD ou migrar sistema, verificamos o estado do armazenamento atual e a existência de backup. Se houver erro de leitura ou travamento durante cópia, a prioridade muda para preservação dos dados antes de tentar clonagem ou reinstalação.",
+      "Em Wi‑Fi, comparamos outros aparelhos e pontos do imóvel. Se só um computador falha, adaptador e driver desse dispositivo entram primeiro. Se vários aparelhos perdem conexão no mesmo trecho, posição do roteador, obstáculos, banda e distribuição do sinal passam a ser investigados.",
+      "Desligamento sob carga exige olhar alimentação e temperatura antes de qualquer upgrade. Fonte instável, ventoinha com problema ou dissipador saturado podem tornar inútil a troca de armazenamento ou memória até que a causa elétrica ou térmica seja resolvida.",
     ],
     logisticaLocal: [
-      "Por estar na divisa, muita gente da Costeira pergunta se o atendimento é 'de Curitiba' ou 'de São José'. O endereço da visita é o que define: chamados na Costeira são atendidos como São José dos Pinhais, com agendamento combinado por janela.",
-      "Para serviço de bancada, a coleta é combinada com retirada e devolução no mesmo endereço. Em desktop, normalmente só o gabinete é retirado — monitor, teclado e mouse ficam com você.",
+      "O endereço completo é confirmado antes do atendimento. Como referência pública, a Subprefeitura Murici fica na Rua Dr. Murici, na Costeira, e ajuda a localizar a região.",
+      "Configuração, navegador, contas e parte dos erros do Windows podem começar remotamente. Rede do imóvel e periféricos no ambiente normalmente exigem visita. Falhas físicas, desmontagem e testes prolongados seguem para bancada.",
+      "Não há promessa fixa de chegada ou conclusão associada ao bairro. Agenda, modalidade e prazo são definidos após a triagem conforme endereço, complexidade e eventual necessidade de peça.",
     ],
     operacaoLocal: [
-      "Medição do gargalo real antes de indicar peça",
-      "Verificação de alimentação e temperatura antes de upgrade",
-      "Diagnóstico antes do valor, com aprovação sua",
-      "Coleta só do gabinete quando o caso é de desktop",
+      "Triagem pelo WhatsApp para registrar equipamento, sintoma e arquivos importantes",
+      "Medição de armazenamento, memória e temperatura antes de indicar upgrade",
+      "Conferência de backup antes de clonagem, formatação ou intervenção em disco",
+      "Escopo, modalidade e valor informados antes da execução",
     ],
     atendimentoLocal: [
-      "Limpeza interna e revisão térmica do desktop",
-      "Formatação com backup conferido antes",
-      "Configuração de rede doméstica e posicionamento do roteador",
-      "Instalação e configuração de periféricos",
+      "Computador ou notebook lento, travando ou reiniciando",
+      "Wi‑Fi com queda, baixa cobertura ou falha em um dispositivo",
+      "Windows, drivers e programas com erro de configuração",
+      "Backup e preparação para migração de armazenamento",
     ],
     coletaBancada: [
-      "Upgrade de SSD e memória com migração do sistema",
-      "Troca de fonte em computador que desliga sob carga",
-      "Tentativa de recuperação de arquivos em disco antigo",
+      "SSD, HD, memória, fonte ou outro componente que exija teste físico",
+      "Notebook com aquecimento, falha de energia, tela ou conector",
+      "Tentativa de recuperação de dados em armazenamento com falha",
     ],
     publicoAtendido: [
-      "Famílias com desktop de vários anos de uso",
-      "Estudo e trabalho em casa",
-      "Quem quer estender a vida útil do equipamento antes de trocar",
+      "Residências com computador ou notebook de uso diário",
+      "Home office que precisa preservar arquivos e conectividade",
+      "Usuários avaliando se vale fazer upgrade antes de trocar de equipamento",
     ],
     servicosPrioritarios: [
       "/servicos/manutencao-de-computador",
+      "/servicos/manutencao-de-notebook",
       "/servicos/upgrade-ssd-ram",
+      "/servicos/redes-e-wifi",
       "/servicos/formatacao",
       "/servicos/recuperacao-de-dados",
     ],
+    problemasRelacionados: [
+      { to: "/problemas/computador-lento", label: "Computador lento", desc: "Como separar armazenamento, memória, software e temperatura antes de fazer upgrade." },
+      { to: "/problemas/hd-fazendo-barulho", label: "HD fazendo barulho", desc: "Quando o sinal físico muda a prioridade para preservação de dados." },
+      { to: "/problemas/computador-esquentando", label: "Computador esquentando", desc: "Sinais que justificam inspeção de ventilação, poeira e ventoinha." },
+      { to: "/problemas/wifi-instavel", label: "Wi-Fi instável", desc: "Como distinguir falha de dispositivo, cobertura ruim e problema no roteador ou no link." },
+    ],
     faqLocal: [
-      {
-        question: "Meu computador tem mais de cinco anos. Vale investir?",
-        answer:
-          "Depende do que está limitando. Em muitas máquinas, SSD e memória devolvem uso fluido por um custo bem menor que a troca. Quando não vale, dizemos isso no diagnóstico em vez de empurrar peça.",
-      },
-      {
-        question: "Preciso levar o monitor junto na coleta?",
-        answer:
-          "Não. Em desktop, normalmente só o gabinete é retirado. Monitor, teclado e mouse ficam com você, a menos que a queixa seja justamente em um deles.",
-      },
-      {
-        question: "A Costeira é atendida como Curitiba ou São José dos Pinhais?",
-        answer:
-          "Como São José dos Pinhais, porque o endereço da visita é o que define o atendimento. A divisa não muda a forma de agendar nem as modalidades disponíveis.",
-      },
-      {
-        question: "Vocês instalam o SSD sem reinstalar tudo?",
-        answer:
-          "Quando o sistema atual está íntegro, a migração preserva programas e arquivos. Se o sistema já apresenta falhas, a instalação limpa costuma render um resultado melhor — isso é combinado antes.",
-      },
+      { question: "Meu computador é antigo. Vale colocar SSD?", answer: "Depende do estado do restante do equipamento e do gargalo real. Verificamos armazenamento, memória, temperatura e alimentação antes de recomendar o upgrade." },
+      { question: "Dá para migrar o sistema sem formatar?", answer: "Quando o sistema e o disco de origem estão íntegros, a clonagem pode preservar programas e configurações. Se houver erro de leitura ou corrupção, a prioridade passa a ser backup e avaliação da mídia." },
+      { question: "O Wi‑Fi cai só no notebook. Preciso trocar o roteador?", answer: "Não é a primeira hipótese se os demais aparelhos continuam conectados. Nesse caso verificamos adaptador, driver e configuração do próprio notebook antes de alterar o roteador." },
+      { question: "O atendimento pode começar remotamente?", answer: "Sim, quando o equipamento liga e mantém conexão. Configuração e parte dos erros do Windows podem ser triados remotamente; falhas físicas e problemas que dependem do ambiente exigem visita ou bancada." },
+      { question: "Qual referência ajuda a localizar o atendimento na Costeira?", answer: "O endereço completo é sempre o principal dado. Como referência pública, a Subprefeitura Murici fica na Rua Dr. Murici, no bairro Costeira." },
     ],
   },
 
@@ -602,75 +598,71 @@ export const BAIRROS_LOTE_2: Record<string, BairroLocalData> = {
     nomeLocativo: "no Guatupê",
     cidade: "São José dos Pinhais",
     areaName: "Guatupê, São José dos Pinhais",
-    metaTitle: "Técnico de Informática no Guatupê | São José dos Pinhais",
+    metaTitle: "Técnico de informática no Guatupê | PC, notebook, rede e backup",
     metaDescription:
-      "Atendimento de informática no Guatupê, São José dos Pinhais: computador de comércio, rede local, formatação e manutenção. Triagem e orçamento pelo WhatsApp.",
-    h1: "Atendimento de informática no Guatupê – São José dos Pinhais",
+      "Técnico de informática no Guatupê, São José dos Pinhais: diagnóstico de PC e notebook, rede, impressora, backup e Windows. Triagem antes da execução.",
+    h1: "Técnico de informática no Guatupê – São José dos Pinhais",
     subtitulo:
-      "Perfil misto, com residências e pequenas operações comerciais: o critério principal aqui é o tempo que o equipamento pode ficar parado.",
+      "Diagnóstico de computador, notebook e rede com foco em continuidade, comunicação e preservação de dados antes de formatar ou trocar equipamento.",
     whatsappMessage:
       "Olá! Preciso de atendimento de informática no Guatupê, em São José dos Pinhais. Pode me orientar?",
     introducaoLocal: [
-      "O Guatupê mistura ruas residenciais com pequenas operações comerciais e prestadores que trabalham no próprio imóvel. Isso cria uma pergunta prática logo na triagem: esse computador pode ficar parado hoje? A resposta muda a modalidade e a ordem do serviço.",
-      "Para quem depende da máquina no balcão ou no atendimento, o objetivo é devolver a operação primeiro e tratar a causa em seguida. Para uso doméstico, dá para planejar a intervenção com mais calma e aproveitar para resolver o que estava se acumulando.",
+      "O Guatupê possui atendimento descentralizado da Prefeitura na Subprefeitura Guatupê, localizada na Praça da Juventude. Essa referência pública serve para localizar a cobertura e não representa oficina, filial ou técnico residente no endereço.",
+      "Nesta página, a prioridade técnica é separar falha do computador, da rede e dos periféricos. Uma máquina de trabalho que não imprime, um notebook que perde Wi‑Fi e um Windows que trava podem interromper a rotina pelo mesmo motivo aparente, mas exigem testes diferentes.",
     ],
     contextoLocal: [
-      "Nos pequenos negócios do bairro, os chamados costumam envolver o computador que emite documento e imprime, a rede que liga o balcão ao escritório dos fundos e o backup que ninguém confere. Uma cópia testada evita que uma falha simples de disco vire perda de histórico.",
-      "Na parte residencial, o que domina é lentidão acumulada, sistema desatualizado e Wi-Fi irregular em imóvel comprido, em que o sinal precisa atravessar vários cômodos até chegar ao fundo da casa.",
+      "Em computador usado para trabalho, registramos primeiro o que ficou indisponível: sistema, arquivos, impressão, internet ou acesso a um compartilhamento. Essa sequência ajuda a restaurar a função essencial sem fazer alterações invasivas antes de entender a causa.",
+      "Em impressora ou scanner de rede, verificamos se o equipamento funciona sozinho, qual endereço recebeu, qual porta está configurada e se a fila está presa. Quando vários computadores perdem o mesmo dispositivo, rede e comunicação ganham prioridade sobre troca de hardware.",
+      "Em Wi‑Fi, comparamos outros dispositivos. Se apenas um notebook falha, adaptador, driver e configuração de energia entram primeiro. Se vários aparelhos apresentam a mesma queda, roteador, cobertura, cabeamento e conexão principal passam a ser investigados.",
+      "Backup é verificado antes de formatação ou intervenção em armazenamento. Uma cópia precisa estar atualizada e acessível; quando o disco apresenta erro de leitura ou travamento durante cópia, preservar os dados vem antes de reinstalar o sistema.",
     ],
     logisticaLocal: [
-      "As visitas são combinadas por janela e, no comércio, preferencialmente em horário de menor movimento, para que o equipamento fique livre. Quando existe mais de uma máquina com queixa, listamos as prioridades antes para aproveitar melhor o tempo em campo.",
-      "Serviços de bancada seguem por coleta, com retirada e devolução no mesmo endereço em São José dos Pinhais e registro do que foi retirado. Em máquina usada na operação, combinamos a retirada para o período em que ela não é necessária.",
+      "O endereço completo é confirmado antes do atendimento. Como referência pública, a Subprefeitura Guatupê fica na Praça da Juventude, no próprio bairro.",
+      "Configuração, navegador, contas e parte dos erros do Windows podem começar remotamente. Rede do local, impressora, scanner e dispositivos que precisam ser testados juntos normalmente pedem visita. Falhas físicas e testes prolongados seguem para bancada.",
+      "Não existe promessa fixa de chegada ou conclusão vinculada ao bairro. Agenda, modalidade e prazo são definidos após a triagem conforme endereço, impacto da falha, complexidade e eventual necessidade de peça.",
     ],
     operacaoLocal: [
-      "Primeira pergunta da triagem: esse equipamento pode ficar parado hoje?",
-      "Prioridades listadas antes quando há mais de uma máquina",
-      "Diagnóstico antes do valor, com aprovação sua",
-      "Coleta programada para o período de menor impacto",
+      "Triagem pelo WhatsApp registrando equipamento, sintoma e função que ficou indisponível",
+      "Separação entre software, armazenamento, rede, periféricos e falha física",
+      "Conferência de backup antes de formatação ou intervenção em disco",
+      "Escopo, modalidade e valor informados antes da execução",
     ],
     atendimentoLocal: [
-      "Suporte ao computador de balcão e à impressora",
-      "Configuração de rede local entre balcão e escritório",
-      "Rotina de backup com teste de restauração",
-      "Formatação e reinstalação do sistema",
+      "Computador ou notebook lento, travando ou reiniciando",
+      "Impressora e scanner sem comunicação na rede",
+      "Wi‑Fi com queda, baixa cobertura ou falha em um dispositivo",
+      "Windows, drivers, contas e programas com erro",
     ],
     coletaBancada: [
-      "Reparo interno de desktop usado na operação",
-      "Upgrade de SSD e memória",
-      "Disco com falha e risco de perda de histórico",
+      "SSD, HD, memória, fonte ou outro componente que exija teste físico",
+      "Notebook com aquecimento, falha de energia, tela ou conector",
+      "Tentativa de recuperação de dados em armazenamento com falha",
     ],
     publicoAtendido: [
-      "Pequenos comércios e prestadores do bairro",
-      "Profissionais que trabalham no próprio imóvel",
-      "Residências com computador de uso diário",
+      "Residências com computador ou notebook de uso diário",
+      "Home office dependente de rede, arquivos e periféricos",
+      "Pequenos negócios com computador, impressora e dados de operação",
     ],
     servicosPrioritarios: [
       "/servicos/manutencao-de-computador",
+      "/servicos/manutencao-de-notebook",
       "/servicos/redes-e-wifi",
       "/servicos/recuperacao-de-dados",
       "/servicos/formatacao",
     ],
+    problemasRelacionados: [
+      { to: "/problemas/computador-lento", label: "Computador lento", desc: "Como separar armazenamento, memória, software e temperatura antes de fazer upgrade." },
+      { to: "/problemas/impressora-nao-imprime", label: "Impressora não imprime", desc: "O que verificar em fila, porta, driver e rede antes de substituir equipamento." },
+      { to: "/problemas/wifi-instavel", label: "Wi-Fi instável", desc: "Como distinguir falha de dispositivo, cobertura ruim e problema no roteador ou no link." },
+      { to: "/problemas/arquivos-apagados", label: "Arquivos apagados", desc: "O que evitar antes de tentar recuperar documentos importantes." },
+    ],
     faqLocal: [
-      {
-        question: "O computador do meu comércio parou. Dá para resolver no mesmo dia?",
-        answer:
-          "Depende da agenda e do tipo de falha. Na triagem verificamos se existe solução remota imediata e, quando não houver, combinamos a janela de visita mais próxima possível — sem prometer horário antes de confirmar.",
-      },
-      {
-        question: "Vocês configuram rede entre o balcão e o escritório?",
-        answer:
-          "Sim. A avaliação verifica se o caminho comporta cabo ou se a melhor solução é um ponto sem fio adicional, considerando a estrutura do imóvel.",
-      },
-      {
-        question: "Como sei se meu backup está funcionando?",
-        answer:
-          "Testando a restauração. Configuramos a rotina e restauramos um arquivo de exemplo junto com você, para confirmar que a cópia é utilizável.",
-      },
-      {
-        question: "Atendem também residências no Guatupê?",
-        answer:
-          "Sim. O fluxo é o mesmo: triagem pelo WhatsApp, diagnóstico antes do valor e escolha entre remoto, visita ou coleta conforme o problema.",
-      },
+      { question: "Vocês atendem o Guatupê, em São José dos Pinhais?", answer: "Sim, mediante disponibilidade e confirmação do endereço. A modalidade pode ser remota, no local ou por coleta para bancada, conforme o tipo de falha identificado na triagem." },
+      { question: "A impressora está offline em todos os computadores. Pode ser rede?", answer: "Sim. Quando vários computadores perdem o mesmo dispositivo, verificamos endereço, porta, fila e comunicação de rede antes de concluir por falha física." },
+      { question: "O Wi‑Fi cai só em um notebook. Preciso trocar o roteador?", answer: "Não é a primeira hipótese quando os outros aparelhos continuam conectados. Nesse caso verificamos adaptador, driver e configuração do próprio notebook antes de alterar o roteador." },
+      { question: "Como vocês conferem o backup antes de formatar?", answer: "Confirmamos o que precisa ser preservado, onde está a cópia e se ela pode ser acessada. Se o armazenamento apresenta sinais de falha, a prioridade passa a ser preservar os dados." },
+      { question: "Qual referência ajuda a localizar o atendimento no Guatupê?", answer: "O endereço completo é sempre o principal dado. Como referência pública, a Subprefeitura Guatupê fica na Praça da Juventude, no próprio bairro." },
     ],
   },
+
 };
