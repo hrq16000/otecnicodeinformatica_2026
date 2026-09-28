@@ -618,7 +618,7 @@ export const BAIRROS_LOTE_2: Record<string, BairroLocalData> = {
     whatsappMessage:
       "Olá! Preciso de atendimento de informática no Guatupê, em São José dos Pinhais. Pode me orientar?",
     introducaoLocal: [
-      "O Guatupê possui atendimento descentralizado da Prefeitura na Subprefeitura Guatupê, localizada na Praça da Juventude. Essa referência pública serve para localizar a cobertura e não representa oficina, filial ou técnico residente no endereço.",
+      "O Guatupê possui atendimento descentralizado da Prefeitura na Subprefeitura Guatupê, localizada na Praça da Juventude. Essa referência pública serve para localizar a cobertura e não representam oficina, filial ou ponto físico da marca no endereço.",
       "Nesta página, a prioridade técnica é separar falha do computador, da rede e dos periféricos. Uma máquina de trabalho que não imprime, um notebook que perde Wi‑Fi e um Windows que trava podem interromper a rotina pelo mesmo motivo aparente, mas exigem testes diferentes.",
     ],
     contextoLocal: [
