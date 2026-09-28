@@ -31,6 +31,16 @@ Se a máquina ainda está operacional, parte da triagem pode começar remotament
     "Escola Municipal Eugênia da Cruz Santos Talamini"
   ],
   tempoDeslocamento: "Modalidade e agenda definidas após triagem do sintoma e endereço",
+  tituloSecaoPrincipal: "Diagnóstico de estabilidade e armazenamento em São Marcos",
+  tituloSecaoContexto: "Reinicialização, calor e disco: sinais que mudam o diagnóstico",
+  triagemResumo: "Em São Marcos, a triagem separa reinicialização sob carga, falha de inicialização, ausência de vídeo e lentidão contínua. Essa diferença define se o próximo passo é testar temperatura, alimentação, memória, armazenamento ou sistema antes de qualquer reinstalação.",
+  faqTitulo: "Dúvidas sobre travamentos e armazenamento em São Marcos",
+  faqsCustom: [
+    { question: "Se o computador reinicia só quando uso programas pesados, o que vocês verificam?", answer: "A análise prioriza temperatura, alimentação, memória e comportamento sob carga. Reinstalar o Windows não é a primeira medida quando a falha aparece apenas em uso intenso." },
+    { question: "Quando um SSD ou HD com erro deve parar de ser usado?", answer: "Quando há travamentos na cópia, desaparecimento do disco ou erros recorrentes, reduzimos escrita e uso desnecessário para priorizar backup ou recuperação dos arquivos importantes." },
+    { question: "PC liga sem imagem: vale tentar formatar?", answer: "Não. Sem vídeo, o diagnóstico começa por sinais de energia, memória, vídeo e alimentação. Formatação depende de o armazenamento e o sistema sequer estarem acessíveis." },
+    { question: "Como vocês diferenciam Wi-Fi ruim de problema no computador?", answer: "Comparamos outro dispositivo no mesmo ponto e, quando possível, conexão por cabo. Se apenas uma máquina falha, driver ou adaptador ganham prioridade no diagnóstico." },
+  ],
   servicosDestaque: [
     "Diagnóstico de reinicializações",
     "Análise de SSD e HD",
