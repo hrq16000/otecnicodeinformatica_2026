@@ -1045,6 +1045,22 @@
       "cidadeSlug": "campo-largo",
       "parent": "/tecnico-informatica-campo-largo",
       "lote": 12
+    },
+    {
+      "slug": "sao-marcos-campo-largo",
+      "intent": "diagnóstico de informática em São Marcos de Campo Largo com foco em estabilidade, armazenamento, memória e preservação de dados",
+      "cidade": "Campo Largo",
+      "cidadeSlug": "campo-largo",
+      "parent": "/tecnico-informatica-campo-largo",
+      "lote": 14
+    },
+    {
+      "slug": "timbotuva-cl",
+      "intent": "suporte de informática no Timbotuva com foco em conectividade, triagem remota, notebook e preservação de arquivos",
+      "cidade": "Campo Largo",
+      "cidadeSlug": "campo-largo",
+      "parent": "/tecnico-informatica-campo-largo",
+      "lote": 14
     }
   ],
   "servicoBairroIndexaveis": [
@@ -1200,5 +1216,9 @@
     "/bairros/sao-francisco",
     "/bairros/centro-campo-largo",
     "/bairros/ferraria"
+  ],
+  "loteLocal14": [
+    "/bairros/sao-marcos-campo-largo",
+    "/bairros/timbotuva-cl"
   ]
 }
