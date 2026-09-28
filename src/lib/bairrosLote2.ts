@@ -279,81 +279,97 @@ export const BAIRROS_LOTE_2: Record<string, BairroLocalData> = {
     nomeLocativo: "no Cabral",
     cidade: "Curitiba",
     areaName: "Cabral, Curitiba",
-    metaTitle: "Técnico de Informática no Cabral | Curitiba",
+    metaTitle: "Técnico de informática no Cabral | PC, notebook, backup e rede",
     metaDescription:
-      "Informática no Cabral, Curitiba: suporte a consultórios e escritórios, manutenção de computador, backup e rede de apartamento. Orçamento pelo WhatsApp.",
-    h1: "Atendimento de informática no Cabral – Curitiba",
+      "Técnico de informática no Cabral, Curitiba: diagnóstico de PC e notebook, backup, rede, impressora e certificado digital. Triagem antes da execução.",
+    h1: "Técnico de informática no Cabral – Curitiba",
     subtitulo:
-      "Consultórios, escritórios pequenos e residências no mesmo quarteirão — a triagem separa o que é urgência de trabalho do que pode esperar.",
+      "Diagnóstico para computador, notebook e ambiente de trabalho com foco em continuidade, dados e comunicação antes de formatar ou trocar equipamento.",
     whatsappMessage:
       "Olá! Preciso de atendimento de informática no Cabral, em Curitiba. Pode me orientar?",
     introducaoLocal: [
-      "O Cabral concentra consultórios, escritórios de profissionais liberais e prédios residenciais próximos. O efeito prático é que boa parte dos chamados chega com prazo: a máquina que parou é a mesma que emite documento, guarda o histórico do cliente e roda o sistema do dia. Por isso a triagem começa perguntando o que está bloqueado agora.",
-      "Quando o equipamento é de trabalho, tratamos primeiro a continuidade — o que dá para destravar hoje — e depois a causa. Essa separação evita a decisão apressada de formatar uma máquina que ainda tinha arquivo sem cópia.",
+      "O Cabral integra a Regional Matriz de Curitiba. Entre as referências públicas do bairro está o Terminal Cabral, na Avenida Paraná, entre as ruas Chichorro Júnior e dos Funcionários. A Administração Regional Matriz funciona na Praça Rui Barbosa, no Centro. Essas referências servem apenas para localizar a cobertura; não representam oficina ou unidade física da marca.",
+      "Nesta página, o foco técnico é continuidade de trabalho e preservação de dados. Quando um computador usado para atendimento, documentos, certificado digital ou impressão apresenta falha, a prioridade é identificar o que deixou de funcionar e o que ainda pode ser preservado antes de qualquer reinstalação.",
     ],
     contextoLocal: [
-      "Os casos mais comuns em escritório do bairro são sistema de gestão que não abre após atualização, certificado digital que deixou de ser reconhecido, impressora fiscal ou multifuncional fora da rede e computador que ficou lento com o acúmulo de anos de uso. Nenhum deles se resolve bem no escuro: é preciso ver a mensagem de erro real.",
-      "Na parte residencial, aparecem notebooks compartilhados por mais de uma pessoa, sem contas separadas, e roteador antigo entregue pelo provedor há vários contratos. Contas separadas e uma configuração de rede feita com calma resolvem uma parte grande das reclamações recorrentes.",
+      "Em certificado digital, token ou assinatura que deixa de funcionar após atualização, o diagnóstico passa por driver, reconhecimento USB, navegador, cadeia de certificados e software do fornecedor. Reinstalar o Windows antes de testar essas camadas pode aumentar a indisponibilidade sem resolver a causa.",
+      "Em impressora ou scanner de rede, verificamos se o próprio equipamento funciona, qual endereço recebeu, se a porta configurada no computador continua correta e se a fila está bloqueada. Quando vários computadores perdem o mesmo dispositivo ao mesmo tempo, a investigação muda para rede e configuração compartilhada.",
+      "Backup também precisa ser testado, não apenas configurado. Uma cópia automática que não conclui, sincroniza pasta errada ou nunca foi restaurada pode transmitir uma falsa sensação de segurança. Antes de manutenção invasiva, confirmamos onde estão os arquivos, quando foi a última cópia e se ela pode ser aberta.",
+      "Em computador lento ou instável, armazenamento, memória, temperatura e software são separados antes de decidir por upgrade ou formatação. Se houver erro de leitura ou travamento durante cópia, a prioridade passa a ser preservação dos dados antes de insistir no uso.",
     ],
     logisticaLocal: [
-      "Para escritório e consultório, combinamos o horário considerando o expediente: início do dia e fim de tarde costumam permitir mexer na máquina sem interromper atendimento. Quando o problema envolve software de terceiros, pedimos o contato do suporte do fornecedor antes da visita.",
-      "Serviços de bancada seguem por coleta com registro do que foi retirado. Em equipamento com dados de clientes, a orientação é conferir a cópia antes da retirada e definir por escrito o que pode ou não ser acessado durante o serviço.",
+      "O endereço completo é confirmado antes do atendimento. Como referências públicas do bairro, a Avenida Paraná e o Terminal Cabral ajudam a situar a região, enquanto a Regional Matriz organiza o atendimento municipal da área.",
+      "Problemas de configuração, certificado, navegador, contas e parte das falhas de software podem começar remotamente. Rede, impressora, scanner e dispositivos que precisam ser testados no ambiente normalmente exigem visita. Falha física, desmontagem ou teste prolongado seguem para bancada.",
+      "Não há promessa fixa de chegada ou conclusão associada ao bairro. Agenda, modalidade e prazo são definidos após a triagem, conforme endereço, impacto da falha, complexidade e eventual necessidade de peça.",
     ],
     operacaoLocal: [
-      "Triagem começa pelo que está bloqueando o trabalho agora",
-      "Verificação de cópia dos dados antes de qualquer formatação",
-      "Diagnóstico antes do valor e aprovação antes da execução",
-      "Escopo por escrito quando o chamado é de empresa",
+      "Triagem começa pelo que está bloqueando a operação e pelos dados que precisam ser preservados",
+      "Verificação de backup antes de reinstalação, migração ou intervenção em armazenamento",
+      "Separação entre software, certificado, rede, periféricos e falha física",
+      "Escopo, modalidade e valor informados antes da execução",
     ],
     atendimentoLocal: [
-      "Suporte a sistema de gestão e certificado digital",
-      "Configuração de impressora e digitalização em rede",
-      "Rotina de backup em nuvem ou disco externo",
-      "Manutenção preventiva da estação de trabalho",
+      "Certificado digital, token e assinatura eletrônica sem funcionamento",
+      "Impressora, scanner e compartilhamentos de rede sem comunicação",
+      "Computador ou notebook lento, travando ou reiniciando",
+      "Backup, sincronização e organização de cópias de trabalho",
     ],
     coletaBancada: [
-      "Upgrade de SSD com migração do sistema em uso",
-      "Computador que desliga sozinho sob carga",
-      "Tentativa de recuperação de dados de disco com falha",
+      "SSD, HD, memória, fonte ou outro componente que exija teste físico",
+      "Notebook com falha de energia, aquecimento, tela ou conector",
+      "Tentativa de recuperação de dados em armazenamento com falha",
     ],
     publicoAtendido: [
-      "Consultórios e escritórios pequenos",
-      "Profissionais liberais com máquina única de trabalho",
-      "Residências em prédios do entorno",
+      "Profissionais que dependem de computador, certificado e documentos digitais",
+      "Pequenos escritórios com impressora, scanner e arquivos compartilhados",
+      "Residências com notebook ou PC que precisam preservar dados antes da manutenção",
     ],
     servicosPrioritarios: [
       "/servicos/suporte-tecnico-empresarial",
       "/servicos/manutencao-de-computador",
+      "/servicos/manutencao-de-notebook",
       "/servicos/recuperacao-de-dados",
+      "/servicos/redes-e-wifi",
       "/servicos/upgrade-ssd-ram",
     ],
     servicosCidade: [
       {
         to: "/servicos/backup-recuperacao/curitiba",
         label: "Backup e recuperação em Curitiba",
-        desc: "Coleta, sigilo e devolução combinados na cidade.",
+        desc: "Como funciona a avaliação de cópias e recuperação na cidade.",
       },
+    ],
+    problemasRelacionados: [
+      { to: "/problemas/computador-lento", label: "Computador lento", desc: "Como separar armazenamento, memória, software e temperatura antes de fazer upgrade." },
+      { to: "/problemas/impressora-nao-imprime", label: "Impressora não imprime", desc: "O que verificar em fila, porta, driver e rede antes de substituir equipamento." },
+      { to: "/problemas/arquivos-apagados", label: "Arquivos apagados", desc: "O que evitar antes de tentar recuperar documentos importantes." },
+      { to: "/problemas/windows-nao-inicia", label: "Windows não inicia", desc: "Como diferenciar falha de inicialização, armazenamento e ausência de vídeo antes de formatar." },
     ],
     faqLocal: [
       {
-        question: "Meu sistema de gestão parou depois de uma atualização. Vocês resolvem?",
+        question: "O certificado digital parou de funcionar depois de uma atualização. Precisa formatar?",
         answer:
-          "Avaliamos o ambiente — sistema operacional, permissões, rede e certificado. Parte das falhas depende de liberação do fornecedor do software; nesse caso, tratamos junto com o suporte dele em vez de reinstalar às cegas.",
+          "Não é o primeiro passo. Verificamos reconhecimento do token, driver, navegador, cadeia de certificados e software do fornecedor antes de considerar reinstalação do sistema.",
       },
       {
-        question: "Vocês configuram rotina de backup para o escritório?",
+        question: "Vocês configuram backup para computador de trabalho?",
         answer:
-          "Sim. Definimos o que precisa de cópia, com que frequência e para onde vai, e testamos a restauração. Backup que nunca foi restaurado não conta como backup.",
+          "Sim. O objetivo é definir o que precisa de cópia, onde ela fica e se a restauração funciona. Antes de manutenção invasiva, confirmamos que a cópia existe e pode ser acessada.",
       },
       {
-        question: "Atendem fora do horário comercial?",
+        question: "A impressora sumiu de todos os computadores. Pode ser defeito dela?",
         answer:
-          "O agendamento é combinado caso a caso pelo WhatsApp, considerando a agenda disponível. Não prometemos horário antes de confirmar a disponibilidade real.",
+          "Pode, mas quando vários computadores perdem o mesmo dispositivo ao mesmo tempo também verificamos rede, endereço, porta e configuração compartilhada antes de concluir por falha física.",
       },
       {
-        question: "O certificado digital parou de ser reconhecido. É problema do computador?",
+        question: "O atendimento pode começar remotamente?",
         answer:
-          "Pode ser driver, navegador, atualização do sistema ou o próprio token. A avaliação testa cada camada antes de indicar reinstalação ou contato com a autoridade certificadora.",
+          "Sim, quando o computador liga e mantém conexão. Configuração, certificado, navegador e parte das falhas de software podem ser triados remotamente; rede local e defeitos físicos podem exigir visita ou bancada.",
+      },
+      {
+        question: "Qual referência ajuda a localizar o atendimento no Cabral?",
+        answer:
+          "O endereço completo é sempre o principal dado. Como referência pública do bairro, o Terminal Cabral fica na Avenida Paraná, entre as ruas Chichorro Júnior e dos Funcionários.",
       },
     ],
   },
