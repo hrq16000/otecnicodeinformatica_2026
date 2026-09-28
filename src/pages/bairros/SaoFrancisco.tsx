@@ -27,6 +27,16 @@ Se o equipamento está operacional e conectado, parte da triagem pode começar r
     "Polo descentralizado da Escola da Cultura"
   ],
   tempoDeslocamento: "Modalidade e agenda definidas após triagem do equipamento e do endereço",
+  tituloSecaoPrincipal: "Bateria, autonomia e dados em São Francisco",
+  tituloSecaoContexto: "Quando o notebook perde carga, estabilidade ou acesso aos arquivos",
+  triagemResumo: "Em São Francisco, a triagem dá prioridade ao comportamento da bateria, da fonte e dos arquivos antes de qualquer reinstalação. Autonomia baixa, falha de carregamento e disco instável exigem testes diferentes de uma simples lentidão do Windows.",
+  faqTitulo: "Perguntas sobre bateria e preservação de dados em São Francisco",
+  faqsCustom: [
+    { question: "Notebook funciona na tomada mas desliga ao retirar a fonte. O que vocês verificam?", answer: "A análise começa por bateria, circuito de carga e gerenciamento de energia. Não tratamos esse sintoma como problema de Windows sem testar a parte elétrica." },
+    { question: "Bateria com pouca autonomia precisa ser trocada imediatamente?", answer: "Primeiro avaliamos desgaste, ciclos e comportamento de carga. A troca é indicada quando os testes mostram que a bateria realmente perdeu capacidade ou estabilidade." },
+    { question: "Disco com arquivos importantes e falhas intermitentes: qual é a prioridade?", answer: "Preservar os dados. Evitamos gravações desnecessárias e avaliamos backup ou recuperação antes de reinstalar o sistema ou executar testes agressivos." },
+    { question: "Como separar queda de desempenho de problema de bateria ou temperatura?", answer: "Observamos se a piora acontece fora da tomada, sob carga ou depois de aquecer. O padrão do sintoma ajuda a direcionar a investigação para energia, refrigeração ou desempenho." },
+  ],
   servicosDestaque: [
     "Diagnóstico de notebook lento",
     "Análise de SSD e HD",
