@@ -113,11 +113,11 @@ for (const path of rotasBairro) {
     }
   }
 
-  // Imagem principal obrigatória: deve ser um asset real exibido na própria página.
-  // Não exige que a foto seja específica daquele bairro, mas proíbe schema sem imagem verificável.
+  // Imagem principal é opcional em WebPage.
+  // Quando existir no schema, deve apontar para uma imagem real exibida na própria página.
+  // Nunca inventar placeholder ou imagem só para satisfazer o gate.
   const imagem = webpage?.primaryImageOfPage;
-  if (!imagem) erros.push(`${path}: WebPage sem primaryImageOfPage`);
-  else {
+  if (imagem) {
     const url = imagem.contentUrl ?? imagem.url;
     if (!/^https:\/\//.test(String(url))) erros.push(`${path}: primaryImageOfPage sem URL absoluta`);
     if (!imagem.width || !imagem.height) erros.push(`${path}: primaryImageOfPage sem width/height`);
@@ -146,5 +146,5 @@ if (erros.length) {
   process.exit(1);
 }
 console.log(
-  "\n✓ BreadcrumbList, FAQPage e WebPage válidos; primaryImageOfPage obrigatória, real e exibida; nenhum LocalBusiness fictício por bairro.",
+  "\n✓ BreadcrumbList, FAQPage e WebPage válidos; primaryImageOfPage validada quando presente; nenhum LocalBusiness fictício por bairro.",
 );
