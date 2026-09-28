@@ -967,14 +967,6 @@
       "lote": 12
     },
     {
-      "slug": "sao-marcos",
-      "intent": "diagnóstico de informática em São Marcos com foco em estabilidade, armazenamento, rede e preservação de dados",
-      "cidade": "São José dos Pinhais",
-      "cidadeSlug": "sao-jose-dos-pinhais",
-      "parent": "/tecnico-informatica-sao-jose-pinhais",
-      "lote": 12
-    },
-    {
       "slug": "aristocrata",
       "intent": "suporte de informática no Aristocrata com foco em notebook, Windows, periféricos e rede",
       "cidade": "São José dos Pinhais",
@@ -999,38 +991,6 @@
       "lote": 12
     },
     {
-      "slug": "sao-cristovao",
-      "intent": "suporte de informática em São Cristóvão com foco em Windows, rede, periféricos e continuidade de uso",
-      "cidade": "São José dos Pinhais",
-      "cidadeSlug": "sao-jose-dos-pinhais",
-      "parent": "/tecnico-informatica-sao-jose-pinhais",
-      "lote": 12
-    },
-    {
-      "slug": "del-rey",
-      "intent": "diagnóstico de informática no Del Rey com foco em notebook, armazenamento, desempenho e Wi-Fi",
-      "cidade": "São José dos Pinhais",
-      "cidadeSlug": "sao-jose-dos-pinhais",
-      "parent": "/tecnico-informatica-sao-jose-pinhais",
-      "lote": 12
-    },
-    {
-      "slug": "braga",
-      "intent": "suporte de informática no Braga com foco em continuidade de uso, rede, Windows e periféricos",
-      "cidade": "São José dos Pinhais",
-      "cidadeSlug": "sao-jose-dos-pinhais",
-      "parent": "/tecnico-informatica-sao-jose-pinhais",
-      "lote": 12
-    },
-    {
-      "slug": "sao-francisco",
-      "intent": "diagnóstico de informática em São Francisco com foco em notebook, armazenamento, backup e Wi-Fi",
-      "cidade": "São José dos Pinhais",
-      "cidadeSlug": "sao-jose-dos-pinhais",
-      "parent": "/tecnico-informatica-sao-jose-pinhais",
-      "lote": 12
-    },
-    {
       "slug": "independencia-sjp",
       "intent": "diagnóstico de informática no Independência com foco em estabilidade, armazenamento, notebook e conectividade",
       "cidade": "São José dos Pinhais",
@@ -1041,30 +1001,6 @@
     {
       "slug": "centro-campo-largo",
       "intent": "suporte de informática no Centro de Campo Largo com foco em continuidade de uso, rede, Windows e periféricos",
-      "cidade": "Campo Largo",
-      "cidadeSlug": "campo-largo",
-      "parent": "/tecnico-informatica-campo-largo",
-      "lote": 12
-    },
-    {
-      "slug": "ferraria",
-      "intent": "diagnóstico de informática na Ferraria com foco em conectividade, notebook e escolha entre remoto, visita e bancada",
-      "cidade": "Campo Largo",
-      "cidadeSlug": "campo-largo",
-      "parent": "/tecnico-informatica-campo-largo",
-      "lote": 12
-    },
-    {
-      "slug": "sao-marcos-campo-largo",
-      "intent": "diagnóstico de informática em São Marcos com foco em estabilidade, armazenamento, memória e notebook",
-      "cidade": "Campo Largo",
-      "cidadeSlug": "campo-largo",
-      "parent": "/tecnico-informatica-campo-largo",
-      "lote": 12
-    },
-    {
-      "slug": "timbotuva-cl",
-      "intent": "suporte de informática no Timbotuva com foco em conectividade, triagem remota, notebook e Windows",
       "cidade": "Campo Largo",
       "cidadeSlug": "campo-largo",
       "parent": "/tecnico-informatica-campo-largo",
@@ -1214,18 +1150,10 @@
   ],
   "loteLocal12": [
     "/bairros/boneca-do-iguacu-sjp",
-    "/bairros/sao-marcos",
     "/bairros/aristocrata",
     "/bairros/barro-preto",
     "/bairros/sao-domingos",
-    "/bairros/sao-cristovao",
-    "/bairros/del-rey",
-    "/bairros/braga",
-    "/bairros/sao-francisco",
     "/bairros/independencia-sjp",
-    "/bairros/centro-campo-largo",
-    "/bairros/ferraria",
-    "/bairros/sao-marcos-campo-largo",
-    "/bairros/timbotuva-cl"
+    "/bairros/centro-campo-largo"
   ]
 }
