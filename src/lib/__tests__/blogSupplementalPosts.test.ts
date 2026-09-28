@@ -181,3 +181,23 @@ describe("guia suplementar de comandos Linux para iniciantes", () => {
     expect(EDITORIAL_HUB_SUMMARIES[slug]?.category).toBe("Linux");
   });
 });
+
+
+const RESTORED_GSC_SLUGS = [
+  "como-conectar-wifi-tv-nao-conecta",
+  "como-formatar-pc-sem-perder-arquivos",
+  "troquei-o-ssd-e-o-pc-so-abre-a-bios",
+] as const;
+
+describe("regressão: artigos aprovados e indexados no GSC mantêm corpo editorial", () => {
+  it.each(RESTORED_GSC_SLUGS)("%s permanece resolvível no mapa suplementar", (slug) => {
+    const post = blogSupplementalPosts[slug];
+    expect(post).toBeTruthy();
+    expect(post.title.length).toBeGreaterThan(20);
+    expect(post.excerpt.length).toBeGreaterThan(80);
+    expect(post.content).toBeTruthy();
+    expect(isEditorialApproved(slug)).toBe(true);
+    expect(getArticleSources(slug).length).toBeGreaterThan(0);
+    expect(getEditorialCover(slug)).toBeTruthy();
+  });
+});
