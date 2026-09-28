@@ -113,9 +113,10 @@ for (const path of rotasBairro) {
     }
   }
 
-  // Imagem principal indexável (ImageObject com URL absoluta e dimensões).
+  // Imagem principal obrigatória: deve ser um asset real exibido na própria página.
+  // Não exige que a foto seja específica daquele bairro, mas proíbe schema sem imagem verificável.
   const imagem = webpage?.primaryImageOfPage;
-  if (!imagem) erros.push(`${path}: WebPage sem primaryImageOfPage (página sem foto real)`);
+  if (!imagem) erros.push(`${path}: WebPage sem primaryImageOfPage`);
   else {
     const url = imagem.contentUrl ?? imagem.url;
     if (!/^https:\/\//.test(String(url))) erros.push(`${path}: primaryImageOfPage sem URL absoluta`);
@@ -145,5 +146,5 @@ if (erros.length) {
   process.exit(1);
 }
 console.log(
-  "\n✓ BreadcrumbList, FAQPage, WebPage e imagem principal válidos; nenhum LocalBusiness fictício por bairro.",
+  "\n✓ BreadcrumbList, FAQPage e WebPage válidos; primaryImageOfPage obrigatória, real e exibida; nenhum LocalBusiness fictício por bairro.",
 );
