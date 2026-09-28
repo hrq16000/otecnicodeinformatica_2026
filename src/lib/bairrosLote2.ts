@@ -188,87 +188,82 @@ export const BAIRROS_LOTE_2: Record<string, BairroLocalData> = {
     nomeLocativo: "no Bigorrilho",
     cidade: "Curitiba",
     areaName: "Bigorrilho, Curitiba",
-    metaTitle: "Técnico de Informática no Bigorrilho | Curitiba",
+    metaTitle: "Técnico de informática no Bigorrilho | Notebook, Wi‑Fi e home office",
     metaDescription:
-      "Informática no Bigorrilho, Curitiba: notebook de home office, Wi-Fi em apartamento, upgrade de SSD e coleta combinada com a portaria. Diagnóstico a partir de R$ 99,99.",
-    h1: "Atendimento de informática no Bigorrilho – Curitiba",
+      "Técnico de informática no Bigorrilho, Curitiba: diagnóstico de notebook, Wi‑Fi, dock, monitor, SSD e backup. Triagem antes de trocar equipamento.",
+    h1: "Técnico de informática no Bigorrilho – Curitiba",
     subtitulo:
-      "Bairro verticalizado: aqui o detalhe que mais afeta o atendimento é o acesso ao apartamento e a interferência de Wi-Fi entre unidades.",
+      "Diagnóstico de notebook, home office e rede para separar configuração, interferência e falha física antes de comprar equipamento ou formatar.",
     whatsappMessage:
       "Olá! Preciso de atendimento de informática no Bigorrilho, em Curitiba. Pode me orientar?",
     introducaoLocal: [
-      "O Bigorrilho é um dos bairros mais verticalizados de Curitiba, com prédios residenciais e salas comerciais no mesmo quarteirão. O perfil de equipamento acompanha: notebook como máquina principal, monitor externo, dock e rede doméstica dividida entre trabalho e streaming. Praticamente todo chamado passa por uma dessas três coisas.",
-      "Em prédio, o Wi-Fi tem um problema que casa não tem: dezenas de redes vizinhas competindo pelos mesmos canais. Quando o relato é 'a internet cai só à noite', o primeiro teste é de canal e interferência, não de velocidade contratada.",
+      "O Bigorrilho integra a Regional Matriz de Curitiba, que também atende bairros como Batel, Cabral, Centro, Mercês e São Francisco. A Administração Regional Matriz funciona na Praça Rui Barbosa, 101. Essa referência pública serve apenas para situar a cobertura e não representa oficina ou unidade física da marca.",
+      "Nesta página, o foco técnico está no conjunto notebook + periféricos + rede. Monitor externo sem imagem, dock instável, bateria degradada e Wi‑Fi irregular podem interromper o home office de maneiras diferentes e precisam ser separados antes de formatar ou substituir equipamento.",
     ],
     contextoLocal: [
-      "Nos notebooks de home office aparecem com frequência bateria que já não segura carga, teclado com teclas falhando, dock que derruba a conexão do monitor e aquecimento após anos sem limpeza interna. São defeitos que se acumulam devagar e costumam ser confundidos com 'computador velho'.",
-      "Do lado da rede, o roteador do provedor instalado atrás da TV, dentro do armário ou no hall de entrada explica boa parte das quedas. Antes de vender equipamento novo, testamos o reposicionamento e a mudança de canal — quando isso não basta, aí sim faz sentido discutir mesh ou ponto cabeado até o escritório.",
+      "Quando monitor ou dock apresentam falha, verificamos cabo, porta, fonte do acessório, driver de vídeo e comportamento sem o dock. Esse teste reduz o risco de trocar o monitor quando a origem está na conexão USB-C, no adaptador ou no software.",
+      "Em Wi‑Fi de apartamento, comparamos bandas, canais e dispositivos. Se apenas um notebook perde conexão, adaptador e driver desse equipamento entram primeiro. Se vários aparelhos sofrem no mesmo ponto ou horário, posição do roteador, interferência e distribuição do sinal passam a ter mais peso.",
+      "Em notebook lento, armazenamento, memória e temperatura são medidos antes de recomendar SSD, RAM ou reinstalação. O ganho real depende de qual recurso está limitando o uso; fazer upgrade sem medir pode aumentar custo sem resolver a causa.",
+      "Backup é conferido antes de qualquer reinstalação ou migração de armazenamento. Quando o disco apresenta erro de leitura ou travamento durante cópia, a prioridade passa a ser preservação dos dados antes de insistir em clonagem.",
     ],
     logisticaLocal: [
-      "Em condomínio, o acesso precisa ser combinado antes: nome do técnico liberado na portaria, apartamento, horário e vaga de visitante quando houver. Isso evita a situação clássica de o técnico chegar e não conseguir subir.",
-      "A coleta em prédio funciona bem quando é combinada com a portaria e o equipamento é entregue já desconectado, com fonte e acessórios. Registramos o que foi retirado na conversa do WhatsApp, e a devolução acontece pelo mesmo caminho combinado.",
+      "O endereço completo é confirmado antes do atendimento. Em condomínio, nome para liberação, apartamento e regras de acesso são combinados antes da visita para evitar deslocamento improdutivo.",
+      "Configuração, navegador, contas, dock e parte dos erros do Windows podem começar remotamente. Rede do imóvel e periféricos que precisam ser testados no ambiente normalmente pedem visita. Falhas físicas e desmontagem seguem para bancada.",
+      "Não existe promessa fixa de chegada associada ao bairro. Agenda, modalidade e prazo são definidos após a triagem conforme endereço, acesso, complexidade e eventual necessidade de peça.",
     ],
     operacaoLocal: [
-      "Liberação na portaria combinada antes da visita",
-      "Teste de canal e interferência antes de sugerir equipamento",
-      "Diagnóstico antes do valor, com sua aprovação para executar",
-      "Registro por escrito do que foi retirado, quando houver coleta",
+      "Triagem pelo WhatsApp registrando notebook, periféricos e sintoma",
+      "Teste isolado de monitor, dock, cabo, porta e driver antes de substituir acessórios",
+      "Medição de armazenamento, memória e temperatura antes de indicar upgrade",
+      "Escopo, modalidade e valor informados antes da execução",
     ],
     atendimentoLocal: [
-      "Ajuste de Wi-Fi em apartamento com muitas redes vizinhas",
-      "Configuração de home office: monitor, dock e periféricos",
-      "Formatação e reinstalação limpa do sistema",
-      "Limpeza interna e troca de pasta térmica em notebook",
+      "Notebook lento, travando ou reiniciando",
+      "Monitor, dock, webcam, áudio e periféricos com falha",
+      "Wi‑Fi com queda ou desempenho irregular",
+      "Windows, drivers, contas e programas com erro",
     ],
     coletaBancada: [
-      "Upgrade de SSD ou memória em notebook",
-      "Troca de tela, teclado ou bateria",
-      "Notebook que não liga ou reinicia sozinho",
+      "SSD, memória, bateria, teclado ou tela que exijam desmontagem",
+      "Notebook com aquecimento, falha de energia ou conector danificado",
+      "Tentativa de recuperação de dados em armazenamento com falha",
     ],
     publicoAtendido: [
-      "Home office e trabalho híbrido em apartamento",
-      "Salas comerciais pequenas do bairro",
-      "Estudantes e profissionais com notebook como máquina única",
+      "Home office e trabalho híbrido com notebook e periféricos",
+      "Profissionais que usam monitor externo, dock e videochamada",
+      "Residências que precisam preservar arquivos antes da manutenção",
     ],
     servicosPrioritarios: [
       "/servicos/manutencao-de-notebook",
-      "/servicos/upgrade-ssd-ram",
       "/servicos/redes-e-wifi",
+      "/servicos/upgrade-ssd-ram",
       "/servicos/formatacao",
+      "/servicos/recuperacao-de-dados",
     ],
     servicosCidade: [
       {
         to: "/servicos/conserto-notebook/curitiba",
         label: "Conserto de notebook em Curitiba",
-        desc: "Coleta, visita e prazo de bancada na cidade.",
+        desc: "Como funciona diagnóstico, visita e bancada na cidade.",
       },
       {
         to: "/servicos/upgrade-ssd/curitiba",
         label: "Upgrade de SSD em Curitiba",
-        desc: "Quem fornece a peça, prazo e migração sem formatar.",
+        desc: "Quando clonagem, instalação limpa e backup fazem sentido.",
       },
     ],
+    problemasRelacionados: [
+      { to: "/problemas/computador-lento", label: "Computador lento", desc: "Como separar armazenamento, memória, software e temperatura antes de fazer upgrade." },
+      { to: "/problemas/wifi-instavel", label: "Wi-Fi instável", desc: "Como distinguir falha de dispositivo, interferência e problema no roteador ou no link." },
+      { to: "/problemas/computador-esquentando", label: "Computador esquentando", desc: "Sinais que justificam inspeção de ventilação, poeira e ventoinha." },
+      { to: "/problemas/arquivos-apagados", label: "Arquivos apagados", desc: "O que evitar antes de tentar recuperar documentos importantes." },
+    ],
     faqLocal: [
-      {
-        question: "Como funciona a coleta em prédio?",
-        answer:
-          "Combinamos horário e liberação com a portaria pelo WhatsApp. O equipamento é entregue desconectado, com fonte, e o que foi retirado fica registrado na conversa. A devolução segue o mesmo combinado.",
-      },
-      {
-        question: "Minha internet cai à noite. É problema do provedor?",
-        answer:
-          "Nem sempre. Em prédio, o horário de pico junta muitas redes nos mesmos canais. Testamos canal, posicionamento e a conexão com fio antes de concluir que a falha é do provedor.",
-      },
-      {
-        question: "Vale trocar o notebook ou fazer upgrade?",
-        answer:
-          "Depende do equipamento. Em máquina com processador ainda adequado, SSD e memória mudam bastante a experiência por um custo menor que a troca. Avaliamos e explicamos antes de indicar.",
-      },
-      {
-        question: "Vocês atendem sala comercial no bairro?",
-        answer:
-          "Sim, para estação de trabalho, impressora e rede local. Chamados recorrentes de empresa são combinados sob consulta, sempre com escopo definido antes.",
-      },
+      { question: "Meu monitor externo falha só quando uso o dock. O monitor está com defeito?", answer: "Não necessariamente. Testamos cabo, porta, alimentação do dock, driver de vídeo e conexão direta antes de concluir por defeito do monitor." },
+      { question: "Minha internet cai mais à noite. Preciso trocar o plano?", answer: "Não é possível concluir só pelo horário. Em apartamento, interferência e ocupação dos canais também podem pesar. Comparamos sinal, outros dispositivos e conexão próxima ao roteador antes de decidir." },
+      { question: "Vale fazer upgrade de SSD ou memória?", answer: "Depende do gargalo medido. Armazenamento lento e pouca memória causam sintomas diferentes, e o upgrade é indicado somente depois de verificar o uso real." },
+      { question: "O atendimento pode começar remotamente?", answer: "Sim, quando o notebook liga e mantém conexão. Configuração, drivers e parte das falhas de periféricos podem ser triados remotamente; defeitos físicos e rede do ambiente exigem visita ou bancada." },
+      { question: "Qual referência administrativa atende o Bigorrilho?", answer: "O Bigorrilho integra a Regional Matriz. A Administração Regional Matriz funciona na Praça Rui Barbosa, 101, no Centro." },
     ],
   },
 
