@@ -1,5 +1,4 @@
 import { useEffect, useRef, useState } from "react";
-import QRCode from "qrcode";
 import { MessageCircle, QrCode } from "lucide-react";
 import { siteConfig } from "@/lib/siteConfig";
 import { trackQrCode, trackWaClick } from "@/lib/funnelAnalytics";

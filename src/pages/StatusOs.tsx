@@ -1,6 +1,5 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { Link } from "@/lib/router-compat";
-import QRCode from "qrcode";
 import {
   Search,
   Clock,
