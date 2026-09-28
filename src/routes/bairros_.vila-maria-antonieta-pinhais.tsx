@@ -1,8 +1,10 @@
-import { createFileRoute } from "@tanstack/react-router";
-import { legacyRouteElements } from "@/legacyRouteElements";
+import { createFileRoute, redirect } from "@tanstack/react-router";
 
-const RouteComponent = legacyRouteElements["/bairros/vila-maria-antonieta-pinhais"];
-
-export const Route = createFileRoute("/bairros_/vila-maria-antonieta-pinhais")({
-  component: RouteComponent,
+export const Route = createFileRoute("/bairros_/.vila-maria-antonieta-pinhais")({
+  beforeLoad: () => {
+    throw redirect({
+      to: "/bairros/maria-antonieta",
+      statusCode: 301,
+    });
+  },
 });
