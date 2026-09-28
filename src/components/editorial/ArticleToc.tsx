@@ -117,7 +117,7 @@ export const ArticleToc = ({ headings }: { headings: TocHeading[] }) => {
   if (!headings.length) return null;
 
   return (
-    <nav aria-label="Índice do artigo" className="not-prose my-8">
+    <nav aria-label="Índice do artigo" data-toc-ready={hydrated ? "true" : "false"} className="not-prose my-8">
       {/* Mobile: recolhido por padrão (CSS reabre em md+ via .article-toc). */}
       <details className="article-toc rounded-xl border border-border bg-muted/40 p-4">
         <summary className="article-toc__summary flex cursor-pointer list-none items-center gap-2 font-heading text-sm font-semibold text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent">
