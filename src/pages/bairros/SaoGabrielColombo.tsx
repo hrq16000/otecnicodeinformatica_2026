@@ -41,7 +41,9 @@ Quando o Windows ainda está operacional, parte da triagem pode começar remotam
 
 Se a impressora, webcam ou áudio deixa de funcionar depois de atualização, o diagnóstico começa verificando reconhecimento do dispositivo, driver e configuração. Se outro computador consegue usar o equipamento, a falha provavelmente está na estação original.
 
-Essa abordagem dá à página de São Gabriel uma intenção própria voltada a Windows, periféricos e continuidade de uso.`,
+Essa abordagem dá à página de São Gabriel uma intenção própria voltada a Windows, periféricos e continuidade de uso.
+
+Também diferenciamos falhas intermitentes de falhas permanentes. Se uma impressora funciona após reiniciar e volta a ficar offline, fila, serviço de impressão e rede precisam ser observados. Se uma webcam aparece apenas em alguns aplicativos, permissões e configuração entram na análise. Esse tipo de detalhe evita trocar hardware quando a causa está no sistema.`,
   problemasComuns: [
     "Impressora fica offline",
     "Webcam ou áudio para depois de atualização",
