@@ -1480,17 +1480,17 @@ export const SERVICOS_CORE: Record<string, ServicoLandingData> = {
   "conserto-tv": {
     path: "conserto-tv",
     trackingKey: "conserto-tv",
-    metaTitle: "Conserto de TV LED, LCD e Smart TV em Curitiba | Coleta",
+    metaTitle: "Conserto e Assistência Técnica de TV em Curitiba | Smart TV",
     metaDescription:
-      "Conserto de TV LED, LCD e Smart TV em Curitiba, com coleta e avaliação em bancada. Não realizamos conserto de TV a domicílio; orçamento após diagnóstico.",
+      "Conserto e assistência técnica de TV e Smart TV em Curitiba: LED/LCD, sem imagem, backlight, fonte e placa. Triagem e coleta para diagnóstico em bancada.",
     serviceName: "Conserto de TV e Smart TV",
     serviceDescription:
       "Conserto de televisores LED, LCD e Smart TV em Curitiba e região, com coleta, avaliação em bancada, reparo em nível de componente quando viável e critérios claros de aceite ou recusa.",
     eyebrow: "TV e Smart TV em Curitiba",
-    h1: "Conserto de TV LED, LCD e Smart TV em Curitiba",
+    h1: "Conserto e assistência técnica de TV e Smart TV em Curitiba",
     h1Accent: "com avaliação em bancada, coleta e entrega",
     intro:
-      "TV LED, LCD ou Smart TV que não liga, liga sem imagem, apresenta listras ou manchas, perde o som, reinicia ou trava na tela da marca precisa de diagnóstico por sintoma. Fonte, placa principal, iluminação interna, comando do painel e o próprio painel podem produzir sinais parecidos. Não realizamos conserto de TV a domicílio: o fluxo é coleta, avaliação em bancada e orçamento antes de qualquer reparo. Informe marca, modelo, tamanho e sintoma na triagem pelo WhatsApp.",
+      "TV LED, LCD ou Smart TV que não liga, fica sem imagem, perde o som, reinicia ou trava na tela da marca precisa de diagnóstico por sintoma. Fonte, placa principal, backlight, comando do painel e o próprio painel podem produzir sinais parecidos. A triagem começa pelo WhatsApp; quando o caso exige abertura e medição, o fluxo é coleta, avaliação em bancada e orçamento antes de qualquer reparo. Não prometemos conserto no endereço sem diagnóstico. Informe marca, modelo, tamanho e sintoma.",
     whatsappMessage:
       "Olá! Vim da página de conserto de TV e Smart TV. Triagem: (1) marca e modelo: (2) tamanho da tela: " +
       "(3) o que acontece ao ligar (não liga / sem imagem / sem som / listras / reinicia): (4) houve queda, raio ou oscilação de energia: " +
@@ -1540,15 +1540,16 @@ export const SERVICOS_CORE: Record<string, ServicoLandingData> = {
       { question: "A tela está escura mas o som funciona. O que costuma ser?", answer: "Esse é o sintoma mais associado ao conjunto de iluminação interna ou ao circuito que o alimenta. Também pode envolver o comando do painel. A verificação é feita em bancada, com o aparelho aberto e medição direta — sem abrir, qualquer diagnóstico é chute. Só depois da medição informamos o que foi encontrado e qual o escopo do reparo." },
       { question: "Vocês consertam Smart TV travada na tela da marca?", answer: "Avaliamos. Travamento na inicialização pode vir de falha de alimentação, de memória interna ou da própria placa principal. O que não fazemos é modificação não oficial de software, instalação de firmware de origem duvidosa nem desbloqueio de recursos do aparelho. Trabalhamos com procedimentos suportados pelo fabricante ou com reparo eletrônico." },
       { question: "Minha TV tomou raio. Ainda dá para avaliar?", answer: "Dá para avaliar, com a ressalva de que descarga elétrica raramente atinge um ponto só. É comum encontrar fonte, placa principal e entradas comprometidas ao mesmo tempo. Nesses casos a avaliação define o quanto do conjunto foi afetado, e a decisão de seguir ou não depende da relação entre o escopo encontrado e o valor do aparelho." },
-      { question: "Existe garantia no conserto de TV?", answer: "Sim: 90 dias sobre a mão de obra e sobre o reparo executado, contados da entrega. A garantia cobre o defeito tratado e o serviço realizado. Ficam fora dela outros defeitos que apareçam depois em pontos diferentes do aparelho, dano por nova oscilação elétrica, queda, infiltração, tentativa de reparo por terceiros e o painel, que não é peça reparada por nós." },
+      { question: "Como funciona a garantia no conserto de TV?", answer: "A garantia segue o serviço executado e o ponto reparado, conforme as condições publicadas em preços e políticas. O laudo identifica o defeito tratado e os limites de cobertura, incluindo situações como dano novo, surto posterior, queda, infiltração ou intervenção de terceiros." },
       { question: "Vocês trabalham com peças originais?", answer: "Trabalhamos com componentes adequados à especificação do circuito. Em linha de televisores, boa parte dos componentes eletrônicos é de mercado e não tem versão de marca do fabricante do aparelho. Quando o reparo depende de módulo específico, informamos a origem da peça e o valor antes de comprar — nada é adquirido sem a sua autorização." },
       { question: "Quanto tempo demora o conserto de uma TV?", answer: "Não trabalhamos com promessa de prazo fixo. Depende do defeito encontrado, da necessidade de peça e da disponibilidade do componente no mercado. Depois da avaliação você recebe uma previsão realista para o seu caso específico, e qualquer mudança nessa previsão é comunicada." },
       { question: "Posso levar a TV até vocês em vez de coletar?", answer: "O fluxo padrão é a coleta, justamente porque o transporte de televisor tem risco: painel é sensível a pressão e a torção, e um aparelho mal apoiado no carro chega com dano novo. Se você preferir outro arranjo, trate isso na triagem pelo WhatsApp antes de mover o aparelho." },
-      { question: "Vocês consertam monitor de computador também?", answer: "Monitor entra como categoria atendida na avaliação de equipamentos, com o mesmo critério de bancada e as mesmas limitações de painel. Não existe página nem processo separado: o encaminhamento é feito pela triagem, junto com as demais categorias de equipamentos atendidos." },
+      { question: "Vocês consertam monitor de computador também?", answer: "Sim, monitor possui fluxo próprio de triagem e bancada. A página de conserto e manutenção de monitor detalha fonte, backlight, placa, entradas de vídeo e as limitações de painel antes da coleta." },
     ],
     relacionados: [
       { label: "Coleta e entrega", to: "/coleta-e-entrega" },
       { label: "Conserto de placa eletrônica", to: "/servicos/conserto-placa" },
+      { label: "Conserto de monitor", to: "/servicos/conserto-monitor" },
       { label: "Equipamentos atendidos", to: "/equipamentos-atendidos" },
       { label: "Quando não compensa consertar", to: "/quando-nao-compensa" },
       ...LINKS_BASE,
@@ -1592,7 +1593,7 @@ export const SERVICOS_CORE: Record<string, ServicoLandingData> = {
       {
         titulo: "Garantia, limites e o que não prometemos",
         paragrafos: [
-          "A garantia é de 90 dias sobre a mão de obra e sobre o reparo executado, contados da entrega. Ela cobre exatamente o defeito tratado. Se o mesmo problema retornar dentro desse período, o aparelho volta para a bancada sem custo de mão de obra. O que não está coberto: defeito novo em outro ponto do televisor, dano por descarga elétrica posterior, queda, infiltração, uso em tensão incorreta, e qualquer intervenção feita por terceiros depois da nossa entrega.",
+          "A garantia acompanha o serviço efetivamente executado e o ponto reparado, conforme as condições publicadas em preços e políticas. O laudo registra o defeito tratado e as limitações aplicáveis. Defeito novo em outro ponto do televisor, descarga elétrica posterior, queda, infiltração, uso inadequado ou intervenção de terceiros não são tratados como continuação automática do reparo anterior.",
           "Também não prometemos o que não podemos sustentar. Não garantimos que todo televisor tem conserto, não damos prazo fixo antes de saber qual peça o caso exige, não afirmamos que o aparelho vai durar mais um número específico de anos e não dizemos que o reparo devolve o televisor ao estado de novo. Equipamento com muitos anos de uso tem desgaste natural em componentes que ainda funcionam, e isso não é reparável de forma preventiva sem trocar tudo — o que não faz sentido econômico.",
           "Quando o reparo não compensa, a orientação é essa mesma, e ela vem acompanhada do motivo. Aparelho de tela menor com defeito no painel, televisor antigo cuja peça necessária custa mais que um modelo novo equivalente, ou conjunto com dano em várias frentes: nesses casos dizer que não vale a pena é o serviço mais útil que podemos prestar. A página sobre quando não compensa consertar detalha esse raciocínio para todas as categorias que atendemos.",
         ],
@@ -1604,7 +1605,7 @@ export const SERVICOS_CORE: Record<string, ServicoLandingData> = {
       { label: "Quando não compensa consertar", to: "/quando-nao-compensa" },
       { label: "Equipamentos atendidos", to: "/equipamentos-atendidos" },
     ],
-    dateModified: "2026-09-26",
+    dateModified: "2026-09-28",
   },
 
   // 14 ─────────────────────────────────────────────────────────
