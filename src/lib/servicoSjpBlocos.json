@@ -12,87 +12,88 @@
       "cidadeNome": "São José dos Pinhais",
       "nome": "Conserto de Notebook",
       "intentGlobal": "entender o serviço de manutenção de notebook: sintomas, causas, peças e procedimentos",
-      "intentLocal": "contratar conserto de notebook em São José dos Pinhais sabendo como funciona a coleta intermunicipal, a janela de rota e o custo de deslocamento",
-      "title": "Conserto de Notebook em São José dos Pinhais",
-      "description": "Conserto de notebook em São José dos Pinhais: triagem no WhatsApp, coleta combinada por rota do dia e bancada. Deslocamento e prazo informados antes.",
+      "intentLocal": "contratar conserto de notebook em São José dos Pinhais com triagem entre software, carga, tela, teclado, temperatura e armazenamento, escolhendo remoto, visita ou bancada conforme o defeito",
+      "title": "Conserto de notebook em São José dos Pinhais | Tela, carga, SSD e Windows",
+      "description": "Conserto de notebook em São José dos Pinhais: diagnóstico de tela, carga, teclado, aquecimento, SSD, memória e Windows. Triagem antes de formatar ou trocar peça.",
       "h1": "Conserto de notebook em São José dos Pinhais",
-      "subtitulo": "Como funciona contratar o conserto do seu notebook em São José dos Pinhais: rota de coleta, janela de atendimento, custo de deslocamento e o que resolvemos antes de sair do lugar.",
+      "subtitulo": "Diagnóstico de tela, carga, teclado, aquecimento, SSD, memória e Windows para decidir entre ajuste remoto, atendimento no endereço e bancada sem trocar peça por tentativa.",
       "intro": [
-        "Notebook com defeito em São José dos Pinhais quase sempre chega com a mesma dúvida: precisa deslocar alguém ou dá para resolver sem sair de casa? Como o portátil é transportável, boa parte dos casos entra em coleta combinada — carcaça, bateria, conector de energia e tela pedem bancada, não mesa de cliente.",
-        "A triagem separa o que é sistema, e sai remoto no mesmo dia, do que é físico, que entra na rota de retirada da região. Você recebe a janela de coleta, o prazo estimado e o custo de deslocamento antes de autorizar qualquer coisa."
+        "Notebook que não liga, carrega de forma intermitente, esquenta, fica lento ou apresenta falha de tela não deve receber a mesma solução automática. A triagem em São José dos Pinhais começa pelo sintoma e pelo que ainda funciona: LEDs acendem, a fonte é reconhecida, há imagem externa, o Windows inicia, o teclado responde e os arquivos importantes continuam acessíveis.",
+        "Com essas respostas, separamos software de falha física e definimos a modalidade adequada. Configuração, drivers e parte dos problemas do Windows podem começar remotamente; tela, conector, bateria, teclado, superaquecimento e componentes internos normalmente exigem inspeção física e, quando necessário, bancada."
       ],
       "blocos": [
         {
-          "titulo": "Rota do dia: por que o agendamento em São José dos Pinhais funciona diferente",
+          "titulo": "Notebook não liga ou não carrega: fonte, bateria, conector ou placa?",
           "paragrafos": [
-            "São José dos Pinhais não faz parte da agenda de bairro em bairro que usamos na cidade-sede. Aqui o atendimento é organizado por rota: reunimos os chamados confirmados da região e definimos uma janela de deslocamento, normalmente por período. Isso significa que o horário é combinado com antecedência e confirmado no dia, em vez de encaixado a qualquer hora.",
-            "Na prática, quem procura o conserto de um notebook em São José dos Pinhais recebe duas informações logo na triagem: qual é a próxima janela disponível para a região e se o caso pode ser resolvido antes disso por acesso remoto. Nenhum deslocamento é iniciado sem essa confirmação, e nenhuma data é prometida sem que a rota exista de fato."
+            "Quando não há sinal de vida, o diagnóstico compara fonte, cabo, conector, bateria e circuito de alimentação. Quando o notebook liga apenas em determinada posição do carregador, o padrão aponta para conexão física; quando reconhece a fonte mas não carrega a bateria, a investigação muda. Esses cenários não devem ser tratados como 'placa queimada' sem teste.",
+            "Se houver sinais de líquido, cheiro de queimado, aquecimento anormal ou conector danificado, recomendamos interromper o uso até a inspeção. Continuar energizando um equipamento com falha elétrica pode ampliar o dano e dificultar a preservação dos dados."
           ]
         },
         {
-          "titulo": "Coleta combinada do aparelho e devolução",
+          "titulo": "Tela preta não significa necessariamente tela quebrada",
           "paragrafos": [
-            "Notebook é portátil, e em São José dos Pinhais isso pesa mais do que em Curitiba: como o deslocamento é intermunicipal, a coleta costuma sair mais barata e mais rápida que uma visita para diagnóstico. Combinamos endereço, ponto de referência e horário dentro da janela da rota, registramos o estado do aparelho na retirada e informamos o número de acompanhamento pelo WhatsApp.",
-            "A devolução acontece na rota seguinte da região, após a aprovação do orçamento. Se o reparo depender de peça encomendada, o prazo do fornecedor entra na conta e é informado por escrito antes de qualquer aprovação — não existe cobrança por tentativa nem por diagnóstico já combinado."
+            "Notebook que acende LEDs e ventoinha mas não mostra imagem pode ter falha de tela, cabo, memória, vídeo ou inicialização. O teste com monitor externo ajuda a separar o conjunto da tela do restante do equipamento, mas o resultado precisa ser combinado com outros sinais para evitar conclusão precipitada.",
+            "Tela trincada, manchas, linhas permanentes e imagem que muda ao movimentar a tampa seguem outra linha de diagnóstico. Modelo exato do painel, conector e compatibilidade são confirmados antes de cotar a peça; não tratamos 'tela de notebook' como componente universal."
           ]
         },
         {
-          "titulo": "Quando a visita ao endereço compensa",
+          "titulo": "Lentidão: medir SSD, memória e temperatura antes de formatar",
           "paragrafos": [
-            "A visita continua disponível para quem não pode ficar sem o equipamento no local: home office com máquina única, consultório com prontuário aberto, escritório pequeno em que o notebook fica atrelado a impressora, leitor ou sistema instalado. Nesses casos vamos até o endereço dentro da janela combinada.",
-            "A regra comercial de deslocamento é a mesma de todo o atendimento: dentro do raio previsto não há adicional conforme a modalidade; acima dele, o excedente é cobrado por quilômetro e informado antes de você confirmar. Você sempre sabe o custo do deslocamento antes de o técnico sair."
+            "Notebook lento pode estar limitado por armazenamento degradado, pouca memória, excesso de programas na inicialização ou temperatura elevada. Medimos uso de disco, RAM e comportamento térmico antes de indicar formatação ou upgrade. Formatar uma máquina com SSD ou HD falhando não corrige a causa e pode colocar arquivos em risco.",
+            "Quando o armazenamento atual está íntegro e o upgrade faz sentido, avaliamos compatibilidade de SSD e memória e decidimos entre clonagem e instalação limpa. Se houver erro de leitura, travamento durante cópia ou ruído mecânico em HD, a prioridade muda para backup e preservação dos dados."
           ]
         },
         {
-          "titulo": "Remoto primeiro, quando o sintoma permite",
+          "titulo": "Aquecimento, ventoinha e desligamento sob carga",
           "paragrafos": [
-            "Boa parte dos chamados de notebook que chegam de São José dos Pinhais não exige presença física: lentidão após atualização, aplicativo que não abre, impressora que sumiu da rede, e-mail travado, conta bloqueada, senha perdida em programa de trabalho. Nesses casos abrimos acesso remoto no mesmo dia e evitamos completamente o deslocamento.",
-            "Só encaminhamos para coleta ou visita o que realmente depende de mão em hardware: aparelho que não liga, tela quebrada, conector de energia solto, superaquecimento, teclado com teclas mortas, dobradiça rompida. Essa triagem é o que mantém o custo final honesto para quem está fora da cidade-sede."
+            "Temperatura alta precisa ser observada junto com desempenho, rotação da ventoinha e momento em que o notebook reduz velocidade ou desliga. Poeira, fluxo de ar obstruído, ventoinha defeituosa e interface térmica envelhecida são hipóteses diferentes e precisam ser confirmadas na inspeção.",
+            "Limpeza interna não é indicada apenas porque o notebook tem alguns anos. Ela faz sentido quando o comportamento térmico e o estado físico justificam a abertura. Em equipamentos finos ou com bateria interna, desmontagem exige cuidado com conectores e parafusos específicos do modelo."
           ]
         },
         {
-          "titulo": "Cobertura dentro do município",
+          "titulo": "Windows, drivers e periféricos: quando o problema pode começar remotamente",
           "paragrafos": [
-            "Atendemos a área urbana de São José dos Pinhais, incluindo a região central, os bairros ao longo da avenida Rui Barbosa, o entorno do aeroporto Afonso Pena e os bairros residenciais mais próximos da divisa com Curitiba. Regiões rurais e distritos afastados dependem de confirmação de rota — dizemos isso na triagem em vez de aceitar o chamado e desmarcar depois.",
-            "Se o seu endereço estiver fora da rota da semana, a alternativa oferecida é a entrega do aparelho em bancada ou o atendimento remoto. Preferimos indicar o caminho possível a manter um pedido aberto sem data."
+            "Se o notebook liga, entra no sistema e mantém conexão, parte da triagem pode ser feita sem deslocamento. Erros após atualização, driver de áudio ou vídeo, webcam, navegador, conta, impressora e alguns problemas de desempenho podem ser verificados remotamente antes de decidir pela inspeção física.",
+            "O remoto não substitui teste de bateria, conector, tela, teclado danificado ou componente interno. Quando o comportamento aponta para hardware, a continuidade do atendimento é combinada conforme endereço, agenda e necessidade de bancada."
           ]
         },
         {
-          "titulo": "Para empresas e comércios da região",
+          "titulo": "Backup e decisão de reparo antes da troca de peça",
           "paragrafos": [
-            "O entorno logístico e industrial do município gera um perfil de chamado diferente do residencial: várias máquinas do mesmo modelo, notebooks usados em turno e equipamentos que não podem parar no meio do expediente. Para esses casos combinamos a coleta de mais de um aparelho na mesma rota e a devolução escalonada, para que a operação nunca fique sem máquina.",
-            "Quando o contrato envolve manutenção contínua, o acompanhamento passa a ser feito pelo mesmo canal, com registro do que foi trocado em cada equipamento. Detalhes técnicos de cada reparo continuam descritos na página do serviço, que é onde a parte técnica é aprofundada."
+            "Antes de qualquer reinstalação ou intervenção em armazenamento, identificamos quais arquivos precisam ser preservados e se existe cópia atualizada. Em notebook de trabalho ou estudo, documentos, fotos, perfis de navegador e arquivos de aplicações podem ser mais importantes que o próprio sistema instalado.",
+            "Depois do diagnóstico, o orçamento separa mão de obra, peça e eventual necessidade de migração ou recuperação. Se o custo do reparo não fizer sentido diante do estado e da idade do equipamento, essa informação entra na decisão antes da execução."
           ]
         }
       ],
       "faq": [
         {
-          "pergunta": "Vocês atendem São José dos Pinhais mesmo não estando na cidade?",
-          "resposta": "Sim. O atendimento é organizado por rota da região, com janela confirmada antes do deslocamento. Se não houver rota próxima na data, oferecemos acesso remoto ou entrega do aparelho em bancada."
+          "pergunta": "Meu notebook não liga. Dá para saber se é placa-mãe?",
+          "resposta": "Não com segurança apenas pelo sintoma. Fonte, bateria, conector, memória e circuito de alimentação podem produzir comportamentos parecidos. O diagnóstico físico separa essas hipóteses antes de condenar a placa."
         },
         {
-          "pergunta": "É possível pedir coleta do notebook em São José dos Pinhais?",
-          "resposta": "Sim, e costuma ser a melhor opção para reparos de bancada. Combinamos endereço e horário dentro da janela da rota, registramos o estado do aparelho na retirada e devolvemos após a aprovação do orçamento."
+          "pergunta": "Tela preta significa que preciso trocar a tela?",
+          "resposta": "Não necessariamente. O defeito pode estar no painel, cabo, memória, vídeo ou inicialização. Testamos os sinais do equipamento e, quando útil, saída para monitor externo antes de indicar a peça."
         },
         {
-          "pergunta": "Como funciona o custo de deslocamento até São José dos Pinhais?",
-          "resposta": "Dentro do raio previsto não há adicional conforme a modalidade; acima do raio, o excedente é cobrado por quilômetro. O valor é informado na triagem, antes de você confirmar o atendimento."
+          "pergunta": "Notebook lento precisa ser formatado?",
+          "resposta": "Depende da causa. SSD ou HD degradado, pouca memória e superaquecimento continuam causando lentidão depois da formatação. Por isso medimos armazenamento, RAM e temperatura antes de reinstalar."
         },
         {
-          "pergunta": "Preciso levar o notebook até algum lugar?",
-          "resposta": "Não é obrigatório. Você pode optar pela coleta, pela visita ao endereço ou pela entrega em bancada — o que for mais rápido para o seu caso é indicado na triagem pelo WhatsApp."
+          "pergunta": "É possível começar o atendimento remotamente em São José dos Pinhais?",
+          "resposta": "Sim, quando o notebook liga e mantém conexão. Windows, drivers, programas, navegador e parte das falhas de periféricos podem ser triados remotamente. Defeitos físicos exigem inspeção no equipamento."
         },
         {
-          "pergunta": "Dá para resolver sem ninguém ir até minha casa?",
-          "resposta": "Em muitos casos sim. Problemas de sistema, rede, impressora, e-mail e programas costumam ser resolvidos por acesso remoto no mesmo dia, sem deslocamento e sem espera de rota."
+          "pergunta": "Como funciona coleta ou visita em São José dos Pinhais?",
+          "resposta": "A modalidade é definida após a triagem conforme o defeito, o endereço e a agenda. Quando há coleta ou visita, horário, deslocamento e escopo são combinados antes da execução."
         }
       ],
       "interlinks": [
         "/servicos/manutencao-de-notebook",
         "/tecnico-informatica-sao-jose-pinhais",
-        "/areas-atendidas",
-        "/coleta-e-entrega",
-        "/problemas/notebook-nao-liga"
+        "/problemas/notebook-nao-liga",
+        "/problemas/computador-esquentando",
+        "/servicos/upgrade-ssd-ram",
+        "/servicos/recuperacao-de-dados"
       ]
     },
     "conserto-pc": {
@@ -102,87 +103,88 @@
       "cidadeNome": "São José dos Pinhais",
       "nome": "Conserto de PC",
       "intentGlobal": "entender a manutenção de computador de mesa: diagnóstico, componentes, limpeza e troca de peças",
-      "intentLocal": "contratar conserto de computador de mesa em São José dos Pinhais, onde o gabinete raramente se desloca e a visita é a modalidade padrão",
-      "title": "Conserto de PC em São José dos Pinhais | Visita Agendada",
-      "description": "Conserto de computador de mesa em São José dos Pinhais com visita agendada por rota, diagnóstico no local e transporte do gabinete só quando necessário.",
-      "h1": "Conserto de PC em São José dos Pinhais",
-      "subtitulo": "Computador de mesa não é equipamento de carregar: veja como a visita é agendada em São José dos Pinhais, quando o gabinete precisa sair e como fica o transporte.",
+      "intentLocal": "contratar conserto de computador de mesa em São José dos Pinhais com diagnóstico de fonte, vídeo, memória, armazenamento e temperatura antes de decidir entre ajuste remoto, visita ou bancada",
+      "title": "Conserto de computador em São José dos Pinhais | Fonte, SSD, memória e Windows",
+      "description": "Conserto de PC em São José dos Pinhais: diagnóstico de fonte, vídeo, memória, SSD, temperatura, Windows e rede. Triagem antes de trocar componente.",
+      "h1": "Conserto de computador em São José dos Pinhais",
+      "subtitulo": "Diagnóstico de fonte, vídeo, memória, armazenamento, temperatura e Windows para trocar somente o componente que o teste realmente indicar.",
       "intro": [
-        "O desktop no município segue lógica oposta à do portátil: monitor, cabos, estabilizador e periféricos formam uma instalação inteira, e desmontar tudo para transportar costuma custar mais do que levar o técnico até o local uma única vez.",
-        "Por isso a visita agendada é o caminho padrão em São José dos Pinhais, com diagnóstico do gabinete na sua mesa, teste de fonte, memória e armazenamento e substituição de componente já na mesma ida. O gabinete só viaja quando o reparo exige bancada, e isso é dito antes."
+        "Computador de mesa permite testar componentes de forma isolada, e essa é a principal vantagem do diagnóstico. PC que não liga, reinicia, perde vídeo ou trava pode envolver fonte, memória, armazenamento, placa de vídeo, refrigeração ou software; trocar peças em sequência sem medir transforma o reparo em tentativa.",
+        "A triagem registra o comportamento da máquina e o ambiente em que a falha aparece. Se o Windows ainda inicia, parte da investigação pode começar remotamente. Falha de energia, ausência de vídeo, desligamento sob carga e componente suspeito exigem inspeção física e podem ser avaliados no endereço ou em bancada conforme o caso."
       ],
       "blocos": [
         {
-          "titulo": "Por que o desktop muda a logística no município",
+          "titulo": "PC não liga: começar pela alimentação, não pela placa-mãe",
           "paragrafos": [
-            "Diferente do notebook, o computador de mesa envolve monitor, cabos, estabilizador, periféricos e, muitas vezes, uma instalação inteira montada em cima da mesa do cliente. Em São José dos Pinhais, onde o deslocamento é intermunicipal, isso empurra o atendimento para a visita: é mais barato levar o técnico uma vez do que transportar um gabinete duas.",
-            "Por isso, quando o chamado é de desktop, a triagem já tenta reunir tudo o que será feito na mesma ida: limpeza interna, troca de pasta térmica, revisão de fonte, instalação de SSD, organização de cabos e ajuste do sistema. Uma visita bem preparada evita uma segunda cobrança de deslocamento."
+            "Quando não há qualquer sinal de energia, verificamos tomada, cabo, chave da fonte e comportamento do circuito antes de apontar placa-mãe. Fonte defeituosa, curto em periférico e conexão interna podem produzir o mesmo resultado para quem aperta o botão.",
+            "Se ventoinhas giram mas não há vídeo, a sequência muda para memória, vídeo, alimentação dos componentes e inicialização. Bipes, LEDs de diagnóstico e comportamento ao remover componentes ajudam a restringir a causa sem substituir peças por tentativa."
           ]
         },
         {
-          "titulo": "O que perguntamos antes de agendar a visita",
+          "titulo": "Reinício e desligamento: fonte, temperatura ou instabilidade?",
           "paragrafos": [
-            "Antes de marcar, pedimos três informações: o que a máquina faz (não liga, reinicia, trava, faz barulho, demora a abrir), há quanto tempo isso acontece e se houve queda de energia, mudança de lugar ou instalação recente. Com isso decidimos quais peças de reposição levar na rota, em vez de descobrir a falta no meio do serviço.",
-            "Essa preparação é o que permite resolver a maioria dos casos em uma única ida. Quando o diagnóstico apontar necessidade de peça específica, informamos o prazo de aquisição antes de continuar e você decide se aprova."
+            "Reinício sob carga pode indicar alimentação instável, temperatura elevada, memória ou software. Observamos em que situação a falha aparece: jogo, renderização, navegador, inicialização ou mesmo em repouso. Esse contexto define os próximos testes.",
+            "Antes de trocar a fonte, verificamos potência adequada, conectores, tensões e comportamento do conjunto. Antes de culpar a temperatura, observamos dissipador, ventoinhas, fluxo de ar e leituras do sistema. A decisão vem da evidência combinada."
           ]
         },
         {
-          "titulo": "Quando o gabinete precisa sair do endereço",
+          "titulo": "Sem vídeo: memória, placa de vídeo, cabo ou monitor",
           "paragrafos": [
-            "Alguns reparos não têm como ser feitos na mesa do cliente: teste demorado de fonte e memória, reparo de placa em bancada, montagem que exige troca de vários componentes ao mesmo tempo. Nesses casos levamos apenas o gabinete, deixando monitor, teclado, mouse e cabos no local.",
-            "O gabinete é retirado com registro do estado, transportado com proteção e devolvido na rota seguinte da região, reinstalado e testado com você presente. Você não fica sem monitor nem sem periférico enquanto isso."
+            "Ausência de imagem não significa automaticamente placa de vídeo queimada. Testamos monitor e cabo, memória, saída de vídeo disponível e sinais de inicialização. Em máquinas com vídeo integrado e dedicado, comparar as saídas pode ajudar a isolar o componente.",
+            "Quando a falha surgiu após transporte, limpeza ou instalação de peça, conexão física ganha prioridade. Memória mal encaixada, cabo de alimentação da placa de vídeo e conector do monitor são verificados antes de qualquer orçamento de componente."
           ]
         },
         {
-          "titulo": "Atendimento remoto como triagem prévia",
+          "titulo": "SSD, HD e memória: upgrade só depois de identificar o gargalo",
           "paragrafos": [
-            "Se o computador ainda liga e chega ao sistema, o primeiro passo pode ser remoto. Lentidão, erro de atualização, programa que não abre, impressora sumida e configuração de conta são resolvidos por acesso à distância no mesmo dia, sem esperar rota e sem cobrança de deslocamento.",
-            "Quando o remoto mostra que o problema é físico — disco falhando, memória com erro, fonte instável — a visita já é agendada com o diagnóstico adiantado, o que encurta bastante o tempo de máquina parada."
+            "PC lento pode estar limitado por armazenamento, RAM, temperatura ou excesso de software. Medimos uso de disco e memória antes de sugerir SSD ou ampliação de RAM. O objetivo é escolher o componente que realmente muda o uso, não montar uma lista de compras.",
+            "Se o disco apresenta erro de leitura, ruído ou travamento durante cópia, a prioridade passa a ser backup. Clonar armazenamento instável sem avaliar o estado pode falhar no meio do processo e aumentar o risco para os dados."
           ]
         },
         {
-          "titulo": "Custo, deslocamento e transparência",
+          "titulo": "Windows e rede: quando o hardware está bom",
           "paragrafos": [
-            "A referência comercial é a mesma de toda a operação: a visita de inspeção tem valor informado antes do agendamento e o deslocamento segue a política de raio e quilometragem excedente. Peças e mão de obra são apresentadas separadamente, para você saber exatamente o que está pagando.",
-            "Nada é executado sem aprovação. Se, durante o diagnóstico, ficar claro que o reparo não compensa diante do valor da máquina, dizemos isso — trocar um equipamento antigo às vezes é a recomendação mais honesta."
+            "Se testes básicos não apontam falha física, investigamos Windows, drivers, inicialização, malware, atualizações e comunicação de rede. Impressora que some, compartilhamento que deixa de abrir e internet que falha apenas em um PC podem estar na configuração daquele computador, não no roteador.",
+            "Quando a máquina liga e mantém conexão, parte dessa triagem pode começar remotamente. Isso evita deslocamento desnecessário e ajuda a chegar a uma eventual visita com a hipótese física já mais delimitada."
           ]
         },
         {
-          "titulo": "Escritórios, lojas e consultórios do município",
+          "titulo": "Visita, bancada e transporte do gabinete",
           "paragrafos": [
-            "Em ambientes comerciais de São José dos Pinhais o desktop costuma estar ligado a impressora fiscal, leitor, catraca ou sistema de gestão. Nesses casos a visita é agendada fora do horário de pico do estabelecimento e testamos o conjunto inteiro, não só a máquina.",
-            "Quando são várias estações, organizamos o atendimento por etapas na mesma rota, para que o balcão ou o caixa nunca fique totalmente parado. O conteúdo técnico sobre componentes e diagnóstico continua na página do serviço."
+            "Desktop pode ser testado no local quando a falha depende do monitor, rede, periféricos ou ambiente. Já testes prolongados, desmontagem ampla e troca de componentes podem ser mais seguros em bancada. A modalidade é definida depois da triagem, não por regra fixa.",
+            "Quando o gabinete precisa ser retirado, combinamos previamente o que será transportado. Monitor, teclado e demais periféricos só precisam acompanhar quando fazem parte do defeito investigado. Prazo, peça e valor são informados antes da execução."
           ]
         }
       ],
       "faq": [
         {
-          "pergunta": "Vocês vão até São José dos Pinhais para consertar computador de mesa?",
-          "resposta": "Sim. Para desktop a visita é a modalidade padrão, agendada dentro da janela de rota da região e confirmada antes do deslocamento."
+          "pergunta": "Meu computador não liga. É a fonte?",
+          "resposta": "Pode ser, mas não é possível concluir sem teste. Cabo, fonte, placa, botão, curto em periférico e conexões internas podem causar sintomas parecidos. A alimentação é verificada antes de trocar componente."
         },
         {
-          "pergunta": "Preciso desmontar o computador e levar até vocês?",
-          "resposta": "Não. Na maior parte dos casos o serviço é feito no seu endereço. Se o reparo exigir bancada, levamos somente o gabinete e deixamos monitor, teclado, mouse e cabos com você."
+          "pergunta": "O PC liga mas não dá vídeo. Preciso trocar a placa de vídeo?",
+          "resposta": "Não necessariamente. Monitor, cabo, memória, alimentação e inicialização também podem causar ausência de imagem. Testamos essas camadas antes de indicar placa de vídeo."
         },
         {
-          "pergunta": "Dá para resolver o problema do meu PC sem visita?",
-          "resposta": "Se a máquina liga e chega ao sistema, muitas vezes sim: fazemos acesso remoto no mesmo dia. A visita fica reservada para falhas físicas comprovadas."
+          "pergunta": "Meu PC reinicia quando jogo. Pode ser temperatura?",
+          "resposta": "Pode ser temperatura, fonte, memória, placa de vídeo ou software. O diagnóstico observa quando a falha acontece e cruza temperaturas, alimentação e estabilidade antes de concluir."
         },
         {
-          "pergunta": "Como é cobrado o deslocamento até o município?",
-          "resposta": "Segue a política de raio de atendimento e quilometragem excedente, informada na triagem. Você aprova o custo total antes de o técnico sair."
+          "pergunta": "Dá para começar o conserto remotamente?",
+          "resposta": "Se o Windows inicia e a máquina mantém conexão, sim. Problemas de sistema, drivers, programas e parte das falhas de rede podem ser triados remotamente. Falhas de energia e ausência de vídeo exigem inspeção física."
         },
         {
-          "pergunta": "Atendem empresas e comércios em São José dos Pinhais?",
-          "resposta": "Sim. Agendamos fora do horário de pico e, quando há várias estações, o atendimento é feito por etapas na mesma rota para não parar a operação."
+          "pergunta": "Preciso levar monitor, teclado e mouse junto com o gabinete?",
+          "resposta": "Somente se algum desses itens fizer parte do sintoma. Quando o problema está no próprio gabinete, a triagem define o que precisa acompanhar o equipamento antes da retirada ou visita."
         }
       ],
       "interlinks": [
         "/servicos/manutencao-de-computador",
         "/tecnico-informatica-sao-jose-pinhais",
-        "/areas-atendidas",
-        "/empresas",
-        "/problemas/computador-lento"
+        "/problemas/computador-nao-liga",
+        "/problemas/computador-lento",
+        "/servicos/upgrade-ssd-ram",
+        "/servicos/redes-e-wifi"
       ]
     },
     "redes-wifi": {
