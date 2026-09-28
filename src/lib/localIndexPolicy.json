@@ -957,6 +957,94 @@
       "cidadeSlug": "sao-jose-dos-pinhais",
       "parent": "/tecnico-informatica-sao-jose-pinhais",
       "lote": 11
+    },
+    {
+      "slug": "boneca-do-iguacu-sjp",
+      "intent": "suporte de informática na Boneca do Iguaçu com foco em Windows, periféricos e conectividade",
+      "cidade": "São José dos Pinhais",
+      "cidadeSlug": "sao-jose-dos-pinhais",
+      "parent": "/tecnico-informatica-sao-jose-pinhais",
+      "lote": 12
+    },
+    {
+      "slug": "sao-marcos",
+      "intent": "diagnóstico de informática em São Marcos com foco em estabilidade, armazenamento e rede",
+      "cidade": "São José dos Pinhais",
+      "cidadeSlug": "sao-jose-dos-pinhais",
+      "parent": "/tecnico-informatica-sao-jose-pinhais",
+      "lote": 12
+    },
+    {
+      "slug": "aristocrata",
+      "intent": "suporte de informática no Aristocrata com foco em notebook, Windows e periféricos",
+      "cidade": "São José dos Pinhais",
+      "cidadeSlug": "sao-jose-dos-pinhais",
+      "parent": "/tecnico-informatica-sao-jose-pinhais",
+      "lote": 12
+    },
+    {
+      "slug": "barro-preto",
+      "intent": "diagnóstico de informática no Barro Preto com foco em armazenamento, estabilidade e preservação de dados",
+      "cidade": "São José dos Pinhais",
+      "cidadeSlug": "sao-jose-dos-pinhais",
+      "parent": "/tecnico-informatica-sao-jose-pinhais",
+      "lote": 12
+    },
+    {
+      "slug": "sao-domingos",
+      "intent": "suporte de informática em São Domingos com foco em conectividade, rede e triagem remota versus presencial",
+      "cidade": "São José dos Pinhais",
+      "cidadeSlug": "sao-jose-dos-pinhais",
+      "parent": "/tecnico-informatica-sao-jose-pinhais",
+      "lote": 12
+    },
+    {
+      "slug": "sao-cristovao",
+      "intent": "suporte de informática em São Cristóvão com foco em Windows, rede, periféricos e continuidade de uso",
+      "cidade": "São José dos Pinhais",
+      "cidadeSlug": "sao-jose-dos-pinhais",
+      "parent": "/tecnico-informatica-sao-jose-pinhais",
+      "lote": 12
+    },
+    {
+      "slug": "del-rey",
+      "intent": "diagnóstico de informática no Del Rey com foco em notebook, armazenamento e desempenho",
+      "cidade": "São José dos Pinhais",
+      "cidadeSlug": "sao-jose-dos-pinhais",
+      "parent": "/tecnico-informatica-sao-jose-pinhais",
+      "lote": 12
+    },
+    {
+      "slug": "braga",
+      "intent": "suporte de informática no Braga com foco em continuidade de uso, rede e periféricos",
+      "cidade": "São José dos Pinhais",
+      "cidadeSlug": "sao-jose-dos-pinhais",
+      "parent": "/tecnico-informatica-sao-jose-pinhais",
+      "lote": 12
+    },
+    {
+      "slug": "sao-francisco",
+      "intent": "diagnóstico de informática em São Francisco com foco em notebook, armazenamento, backup e Wi-Fi",
+      "cidade": "São José dos Pinhais",
+      "cidadeSlug": "sao-jose-dos-pinhais",
+      "parent": "/tecnico-informatica-sao-jose-pinhais",
+      "lote": 12
+    },
+    {
+      "slug": "centro-campo-largo",
+      "intent": "suporte de informática no Centro de Campo Largo com foco em continuidade de uso, rede e periféricos",
+      "cidade": "Campo Largo",
+      "cidadeSlug": "campo-largo",
+      "parent": "/tecnico-informatica-campo-largo",
+      "lote": 12
+    },
+    {
+      "slug": "ferraria",
+      "intent": "diagnóstico de informática na Ferraria com foco em conectividade, notebook e escolha entre remoto, visita e bancada",
+      "cidade": "Campo Largo",
+      "cidadeSlug": "campo-largo",
+      "parent": "/tecnico-informatica-campo-largo",
+      "lote": 12
     }
   ],
   "servicoBairroIndexaveis": [
@@ -1099,5 +1187,18 @@
   ],
   "loteLocal11": [
     "/bairros/campo-largo-roseira-sjp"
+  ],
+  "loteLocal12": [
+    "/bairros/boneca-do-iguacu-sjp",
+    "/bairros/sao-marcos",
+    "/bairros/aristocrata",
+    "/bairros/barro-preto",
+    "/bairros/sao-domingos",
+    "/bairros/sao-cristovao",
+    "/bairros/del-rey",
+    "/bairros/braga",
+    "/bairros/sao-francisco",
+    "/bairros/centro-campo-largo",
+    "/bairros/ferraria"
   ]
 }
