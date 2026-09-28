@@ -11494,35 +11494,35 @@ crontab -e
     ),
   },
   "como-conectar-wifi-tv-nao-conecta": {
-    title: "Smart TV não conecta no Wi-Fi: como separar problema de rede de defeito da TV",
+    title: "Smart TV não conecta no Wi-Fi? Diagnóstico passo a passo",
     excerpt:
-      "Como descobrir se a Smart TV não conecta por causa da rede, da faixa de 5 GHz, do isolamento do roteador ou de falha no módulo Wi-Fi do aparelho — e o que fazer em cada caso.",
+      "Smart TV não conecta no Wi-Fi? Compare cobertura, 2,4/5 GHz, segurança, isolamento da rede e cabo antes de resetar a TV ou culpar o módulo sem fio.",
     date: "2026-08-12",
     readTime: "11 min",
     category: "Redes",
     content: (
       <>
-        <p className="lead">Smart TV que não conecta tem duas famílias de causa muito diferentes: a rede não está entregando conexão utilizável naquele ponto da casa, ou o módulo Wi-Fi da própria TV está falhando. Os dois sintomas parecem iguais na tela. A diferença aparece no teste, e é ela que decide se o caso se resolve no roteador ou exige avaliação do aparelho.</p>
+        <p className="lead">Se a Smart TV não conecta no Wi-Fi, primeiro descubra se a falha acompanha o local, a configuração da rede ou apenas a TV. Compare outro dispositivo no mesmo ponto, confirme quais faixas e padrões o modelo suporta e teste cabo quando disponível. Só depois faz sentido resetar configurações ou suspeitar do módulo sem fio.</p>
 
         <h2>O teste que separa os dois cenários</h2>
         <p>Antes de qualquer configuração, leve um celular até o local exato da TV — mesma altura, mesma parede, TV ligada. Depois observe:</p>
         <ul>
           <li><strong>Celular também pega mal ali:</strong> o problema é cobertura. A TV está apenas na pior posição da casa, normalmente atrás de móvel, em parede com estrutura metálica ou no cômodo mais distante do roteador.</li>
           <li><strong>Celular conecta bem e a TV não enxerga a rede:</strong> o caso costuma ser de faixa ou de configuração do roteador, não de alcance.</li>
-          <li><strong>A TV conecta, mas cai sozinha depois de minutos ou horas:</strong> comportamento típico de rede saturada, canal congestionado ou módulo Wi-Fi do aparelho com falha térmica — nessa ordem de probabilidade.</li>
-          <li><strong>A TV não enxerga nenhuma rede, nem a do vizinho:</strong> forte indício de falha no módulo Wi-Fi do aparelho.</li>
+          <li><strong>A TV conecta, mas cai depois de minutos ou horas:</strong> compare outros dispositivos e o comportamento perto do roteador. Interferência, cobertura, configuração do roteador e falha do próprio aparelho continuam como hipóteses até o teste separar a camada.</li>
+          <li><strong>A TV não enxerga nenhuma rede:</strong> confirme Wi-Fi habilitado, reinicie o aparelho e verifique compatibilidade de faixa/canal. Se nenhum SSID aparece mesmo após essas verificações, a hipótese de falha no rádio da TV ganha força.</li>
         </ul>
 
-        <h2>Faixa de 5 GHz: a causa mais frequente de "a rede não aparece"</h2>
-        <p>Muitas TVs, inclusive modelos recentes de linha de entrada, operam apenas em 2,4 GHz. Se o roteador transmite as duas faixas com o mesmo nome de rede, a TV pode simplesmente não listar nada — para ela, aquela rede não existe.</p>
-        <p>A solução é separar os nomes das faixas no roteador e conectar a TV explicitamente à faixa de 2,4 GHz. Ela alcança mais longe e atravessa parede melhor; a perda de velocidade é irrelevante para vídeo, que consome muito menos banda do que a maioria das pessoas imagina.</p>
+        <h2>2,4 GHz ou 5 GHz: confirme o que a sua TV suporta</h2>
+        <p>Algumas TVs suportam apenas 2,4 GHz; outras trabalham também em 5 GHz. O mesmo nome de rede nas duas faixas não é, por si só, um defeito. O que pode mudar o resultado é a combinação entre faixa suportada, canal utilizado, segurança configurada no roteador e recursos como direcionamento automático entre bandas.</p>
+        <p>Consulte as especificações do modelo e, para diagnóstico, compare temporariamente uma rede 2,4 GHz conhecida como compatível. Separar os nomes das faixas pode ajudar a testar, mas não precisa virar configuração permanente. Em geral, 2,4 GHz alcança mais longe e sofre mais congestionamento; 5 GHz oferece mais capacidade em distâncias menores.</p>
 
         <h2>Isolamento de clientes e rede de visitantes</h2>
         <p>Roteadores de operadora frequentemente vêm com rede de visitantes ativa e isolamento entre aparelhos. A TV conectada nessa rede acessa a internet, mas não conversa com celular nem computador — e aí o espelhamento de tela e os aplicativos de controle deixam de funcionar, mesmo com o vídeo rodando normalmente.</p>
         <p>Quando o sintoma é "a TV tem internet mas o celular não a encontra", esse é o primeiro item a verificar. A separação correta entre rede de trabalho, rede doméstica e rede de visitantes faz parte do que ajustamos em <Link to="/servicos/redes-e-wifi">redes e Wi-Fi</Link>.</p>
 
         <h2>Canal congestionado em prédio</h2>
-        <p>Em edifício, dezenas de redes disputam as mesmas frequências. A TV conecta, o ícone fica normal, e mesmo assim o vídeo trava e a conexão cai. Não é defeito: é disputa por espaço no ar. Fixar um canal menos ocupado em 2,4 GHz e reposicionar o roteador para longe de metal, espelho, caixa d'água e do próprio armário costuma mudar o resultado mais do que trocar de aparelho.</p>
+        <p>Em edifício, muitas redes podem disputar as mesmas frequências. A TV conecta, o ícone fica normal, e ainda assim o vídeo pode travar ou a conexão cair. Compare o comportamento perto do roteador e em outro horário antes de concluir por defeito. Ajuste de canal, posição do roteador e banda utilizada podem ajudar quando a causa é interferência ou cobertura.</p>
 
         <h2>O que fazer, na ordem que evita retrabalho</h2>
         <ol>
@@ -11531,9 +11531,9 @@ crontab -e
           <li><strong>Conectar à faixa de 2,4 GHz</strong> com nome próprio, se as faixas ainda estiverem unificadas.</li>
           <li><strong>Verificar rede de visitantes e isolamento de clientes</strong> no roteador.</li>
           <li><strong>Atualizar o sistema da TV</strong>, quando ela conseguir conectar ao menos por cabo — correções de conectividade são comuns nessas atualizações.</li>
-          <li><strong>Testar por cabo de rede.</strong> É o teste decisivo: se por cabo funciona perfeitamente e por Wi-Fi nunca funciona, o módulo sem fio do aparelho é o suspeito principal.</li>
+          <li><strong>Testar por cabo de rede, quando a TV tiver Ethernet.</strong> Se por cabo funciona e no Wi-Fi não, a investigação fica concentrada na camada sem fio — configuração, compatibilidade, cobertura ou rádio da TV — sem concluir automaticamente por defeito do módulo.</li>
         </ol>
-        <p>Reset de fábrica só faz sentido depois desses passos. Ele apaga contas, aplicativos e preferências e raramente resolve o que os itens anteriores não resolveram.</p>
+        <p>Deixe o reset de fábrica para depois dos testes reversíveis. Ele apaga contas, aplicativos e preferências e não corrige incompatibilidade de faixa, cobertura ruim ou defeito físico.</p>
 
         <aside className="not-prose my-8 rounded-2xl border border-accent/25 bg-accent/[0.04] p-5 md:p-6" aria-labelledby="matriz-tv-wifi">
           <span className="text-xs font-semibold uppercase tracking-[0.14em] text-accent">Matriz de diagnóstico</span>
@@ -11549,7 +11549,7 @@ crontab -e
               </thead>
               <tbody className="divide-y divide-border text-muted-foreground">
                 <tr><td className="p-3">Celular e TV falham no mesmo ponto</td><td className="p-3">Compare perto do roteador e no local da TV</td><td className="p-3">Trate cobertura antes de mexer na TV.</td></tr>
-                <tr><td className="p-3">TV não encontra a rede, mas o celular encontra</td><td className="p-3">Confira a faixa disponível e separe o nome de 2,4 GHz</td><td className="p-3">Ajuste a rede; não compre adaptador por palpite.</td></tr>
+                <tr><td className="p-3">TV não encontra a rede, mas o celular encontra</td><td className="p-3">Confira faixas, canal e segurança suportados; teste 2,4 GHz quando compatível</td><td className="p-3">Isole compatibilidade antes de resetar ou comprar adaptador.</td></tr>
                 <tr><td className="p-3">TV navega, mas não aparece para o celular</td><td className="p-3">Verifique rede de visitantes e isolamento de clientes</td><td className="p-3">Mantenha os dois na mesma rede doméstica.</td></tr>
                 <tr><td className="p-3">Cabo funciona e Wi‑Fi falha sempre</td><td className="p-3">Atualize o sistema e repita o teste após reconectar a rede</td><td className="p-3">Só então avalie o módulo Wi‑Fi ou uma solução cabeada.</td></tr>
               </tbody>
@@ -11743,13 +11743,16 @@ crontab -e
   "como-formatar-pc-sem-perder-arquivos": {
     title: "Como formatar o PC ou notebook sem perder arquivos",
     excerpt:
-      "O que decidir antes de formatar: quando a reinstalação resolve, quando não resolve, como preservar arquivos, contas e licenças, e a diferença entre redefinir o sistema e instalar do zero.",
+      "Como formatar PC ou notebook sem perder arquivos: checklist de backup, BitLocker, contas e licenças, além da diferença entre redefinir e instalar do zero.",
     date: "2026-08-14",
     readTime: "12 min",
     category: "Procedimentos Técnicos",
     content: (
       <>
-        <p className="lead">Formatar é uma decisão, não um botão. Feita na hora certa, devolve uma máquina previsível. Feita como palpite, apaga anos de arquivo e devolve o mesmo problema em duas semanas. Este guia mostra como decidir e como executar sem perder o que importa.</p>
+        <p className="lead">Para formatar sem perder arquivos, o primeiro passo não é criar o pendrive: é confirmar uma cópia que abre fora do computador, guardar chaves de recuperação e registrar contas e licenças. Depois disso, escolha entre redefinir, reparar ou instalar do zero conforme a causa do problema.</p>
+
+        <h2>Resposta curta: faça o backup verificável antes de apagar</h2>
+        <p>Copie os arquivos importantes para outro destino, abra amostras diretamente nessa cópia e confirme chaves como BitLocker antes de mexer em partições. Se o disco apresenta erro de leitura, some do sistema ou trava durante a cópia, pare: nesse cenário preservar dados é mais importante do que concluir a formatação.</p>
 
         <h2>Antes: formatar resolve o seu caso?</h2>
         <p>Reinstalar o sistema resolve o que é software: configuração quebrada, perfil corrompido, resíduo de programas desinstalados pela metade, atualização mal aplicada, infecção persistente. Não resolve o que é físico nem o que é limite de hardware.</p>
@@ -11779,13 +11782,13 @@ crontab -e
         <ul>
           <li><strong>Redefinir mantendo arquivos:</strong> o Windows reinstala a si mesmo e preserva as pastas do usuário. Remove programas instalados. É o caminho mais rápido para configuração quebrada.</li>
           <li><strong>Reinstalação por cima (mantendo tudo):</strong> repara componentes do sistema preservando programas e arquivos. Útil quando o Windows falha em atualizar ou apresenta erro recorrente.</li>
-          <li><strong>Instalação limpa:</strong> apaga a partição do sistema e começa do zero. É a única opção confiável quando houve infecção séria ou quando a máquina acumulou anos de instalação.</li>
+          <li><strong>Instalação limpa:</strong> recria o ambiente do sistema e pode ser preferível quando há corrupção persistente, comprometimento grave ou quando a decisão é realmente começar do zero. Ela apaga o conteúdo da partição escolhida, portanto depende de backup verificado.</li>
         </ul>
         <p>O passo a passo detalhado da instalação limpa, incluindo mídia de instalação e particionamento, está em <Link to="/blog/como-instalar-windows-11-do-zero">como instalar o Windows 11 do zero</Link>. Se a motivação for infecção, leia antes <Link to="/blog/como-remover-virus-windows-iniciantes">como remover vírus e adware</Link>: em boa parte dos casos a limpeza dirigida resolve sem apagar nada.</p>
 
         <h2>Licença, contas e drivers</h2>
-        <p>Em máquinas de fábrica, a licença normalmente está vinculada ao equipamento e é reconhecida automaticamente após a instalação. Em máquinas montadas, a licença costuma estar vinculada a uma conta — entrar com a mesma conta evita perder a ativação. Programas pagos exigem o registro original; sem ele, reinstalar significa comprar de novo.</p>
-        <p>Depois da instalação, a ordem dos drivers importa: chipset primeiro, depois vídeo, rede, áudio e periféricos. Prefira sempre o site do fabricante do equipamento. Pacotes genéricos de "atualizador de drivers" são uma das causas mais comuns de instabilidade em máquina recém-formatada.</p>
+        <p>A forma de ativação do Windows varia conforme a licença e o equipamento. Antes de apagar, confira se o sistema está ativado, se existe licença digital vinculada à conta e se algum software pago exige chave, conta ou desativação prévia. Não presuma que toda licença será recuperada automaticamente depois da reinstalação.</p>
+        <p>Depois da instalação, use Windows Update e os pacotes oficiais do fabricante do equipamento ou dos componentes quando forem necessários. Em plataformas que exigem drivers específicos de chipset, armazenamento, vídeo ou rede, siga a documentação do modelo. Evite pacotes genéricos de “atualizador de drivers” de origem desconhecida.</p>
 
         <h2>O que costuma dar errado</h2>
         <ul>
@@ -12831,21 +12834,21 @@ bcdboot C:\\Windows /s S: /f UEFI`}</code></pre>
   },
 
   "troquei-o-ssd-e-o-pc-so-abre-a-bios": {
-    title: "Troquei o HD/SSD e o PC só abre a BIOS: o que fazer",
+    title: "PC só abre a BIOS após trocar SSD? Veja o que verificar",
     excerpt:
-      "Disco novo vem vazio: sem sistema instalado, o computador para no Setup. Como confirmar a detecção do M.2, resolver conflito de portas e instalar o Windows do zero.",
+      "PC volta à BIOS depois de trocar o SSD? Veja detecção SATA/NVMe, UEFI, ordem de boot, clonagem e Windows antes de formatar ou mudar o controlador.",
     date: "2026-08-25",
     readTime: "11 min",
     category: "Procedimentos Técnicos",
     content: (
       <>
-        <p className="lead">Instalar um SSD novo e ver a máquina parar na tela de configuração não é sinal de defeito. É o comportamento esperado: <strong>disco novo sai de fábrica vazio</strong>, sem sistema operacional e sem carregador de inicialização. Não existe nada para o firmware iniciar.</p>
+        <p className="lead">Se você instalou um SSD novo sem sistema, cair na BIOS ou receber mensagem de que não há dispositivo inicializável pode ser esperado. Mas, se o SSD foi clonado, já tinha Windows ou substituiu um disco que inicializava normalmente, o sintoma pede diagnóstico de detecção, modo UEFI, ordem de boot e arquivos de inicialização antes de formatar.</p>
 
         <h2>Resposta curta</h2>
         <p>Confirme que o disco novo aparece na lista de dispositivos do Setup, verifique se o slot M.2 usado não desativou uma porta SATA, e instale o sistema a partir de um pendrive — ou, se a intenção era manter tudo como estava, faça a clonagem corretamente em vez de instalar do zero.</p>
 
         <h2>Por que o disco novo não inicia sozinho</h2>
-        <p>Um SSD recém-comprado normalmente nem tem tabela de partições. Ele é um espaço bruto. Para virar um disco de sistema ele precisa ser <strong>inicializado</strong> (receber uma tabela GPT ou MBR), <strong>particionado</strong>, <strong>formatado</strong> e finalmente receber a instalação. O instalador do Windows faz as quatro etapas, então não é necessário preparar o disco antes.</p>
+        <p>Um SSD novo pode chegar sem sistema inicializável e, em muitos casos, sem uma estrutura de partições útil para aquele computador. Para virar disco de sistema, ele precisa ter esquema de partição compatível, partição de inicialização e o sistema instalado. O instalador do Windows consegue preparar essas estruturas durante uma instalação limpa; se a intenção era migrar o sistema antigo, clonagem e boot precisam ser validados separadamente.</p>
         <p>Existe uma exceção que causa confusão: SSDs vendidos como "com Windows instalado" por lojas independentes. Nesses casos, a instalação costuma estar vinculada ao hardware de origem e falhar no primeiro boot.</p>
 
         <h2>Passo 1 — o disco aparece no Setup?</h2>
@@ -12854,13 +12857,13 @@ bcdboot C:\\Windows /s S: /f UEFI`}</code></pre>
           <li><strong>M.2 mal encaixado:</strong> o módulo entra inclinado, encosta no fim do conector e só então é preso pelo parafuso. Sem o parafuso, ele fica levantado e perde contato.</li>
           <li><strong>Slot incompatível:</strong> há slots M.2 apenas SATA, apenas NVMe (PCIe) e híbridos. Confira no manual da placa ou do notebook qual é o do seu modelo. Chave B, M ou B+M no conector do módulo é o primeiro indício.</li>
           <li><strong>Conflito de portas:</strong> ativar o segundo M.2 desabilita portas SATA específicas em muitas placas. É por isso que, ao instalar o SSD novo, o HD antigo às vezes "some".</li>
-          <li><strong>SATA em modo errado:</strong> o controlador precisa estar em <strong>AHCI</strong>. Modo RAID ou Intel RST esconde discos do instalador do Windows.</li>
+          <li><strong>Controlador de armazenamento:</strong> alguns equipamentos usam AHCI; outros dependem de RAID, Intel RST/VMD ou driver específico. Não altere esse modo por tentativa: a mudança pode impedir um Windows existente de iniciar e pode acionar recuperação do BitLocker.</li>
           <li><strong>Adaptador ou caddy:</strong> adaptadores baratos de baia ótica falham com frequência. Teste o disco direto na placa antes de culpar o disco.</li>
         </ul>
         <p>Detalhes de compatibilidade antes da compra estão em <Link to="/blog/como-fazer-upgrade-ssd-nvme" className="text-accent">upgrade para SSD NVMe</Link>, e o caso específico de notebooks com dois armazenamentos em <Link to="/blog/como-instalar-segundo-ssd-notebook" className="text-accent">como instalar um segundo SSD no notebook</Link>.</p>
 
         <h2>Passo 2 — configurar o slot M.2 na BIOS</h2>
-        <p>Placas com vários slots M.2 costumam expor opções que precisam bater com o hardware instalado:</p>
+        <p>Algumas placas e notebooks expõem opções de M.2/PCIe no firmware; outras fazem a detecção automaticamente. Só altere o que existir no manual do modelo e registre o valor original antes de testar:</p>
         <ul>
           <li><strong>M.2 Mode / M.2 Configuration:</strong> alterna entre SATA e PCIe para o slot. Em <em>Auto</em> geralmente funciona; em modo fixo errado, o disco desaparece.</li>
           <li><strong>Geração PCIe (Gen3 × Gen4):</strong> deixar em <em>Auto</em> é o recomendado. Forçar Gen4 em placa ou disco que não suportam produz instabilidade e detecção intermitente; forçar Gen3 num disco Gen4 apenas limita a velocidade, sem impedir o funcionamento.</li>
@@ -12890,10 +12893,10 @@ bcdboot C:\\Windows /s S: /f UEFI`}</code></pre>
           <li><strong>Instalar do zero</strong> quando o sistema antigo estava lento, instável, infectado ou muito antigo. Você perde a configuração, mas ganha um ambiente limpo.</li>
           <li><strong>Clonar</strong> quando o sistema funciona bem e há muitos programas configurados. O critério, os riscos e o motivo de uma cópia às vezes não inicializar estão em <Link to="/blog/como-clonar-hd-para-ssd" className="text-accent">clonar HD para SSD</Link>.</li>
         </ul>
-        <p>Se você clonou e a máquina parou no Setup, o problema não é o disco novo: é o carregador que não veio junto — o reparo está em <Link to="/blog/erro-no-bootable-device-como-resolver" className="text-accent">erro "No Bootable Device"</Link>.</p>
+        <p>Se você clonou e a máquina parou no Setup, confirme se o firmware detecta o SSD, se o modo UEFI/Legacy combina com a instalação e se a partição/arquivos de boot foram copiados corretamente. O diagnóstico complementar está em <Link to="/blog/erro-no-bootable-device-como-resolver" className="text-accent">erro "No Bootable Device"</Link>.</p>
 
         <h2>Conclusão</h2>
-        <p>Disco novo sempre para na BIOS até receber um sistema. A sequência correta é confirmar a detecção, ajustar o slot e o modo de boot, instalar com apenas o disco novo conectado e só depois reconectar o antigo para copiar os arquivos.</p>
+        <p>Quando o SSD novo não tem sistema inicializável, o computador precisa de instalação ou clonagem válida antes de conseguir iniciar por ele. A sequência segura é confirmar a detecção, preservar o disco antigo e os dados, verificar o modo de boot e só então decidir entre instalar do zero ou corrigir/migrar a inicialização.</p>
         <p>Para o quadro completo de causas de parada no Setup, volte ao guia principal: <Link to="/blog/computador-entra-direto-na-bios" className="text-accent">meu computador entra direto na BIOS</Link>. Para executar o upgrade com dados preservados e teste de saúde do disco, veja <Link to="/servicos/upgrade-ssd-ram" className="text-accent">upgrade de SSD e memória</Link>.</p>
 
         <p className="text-sm text-muted-foreground">Conteúdo produzido e revisado pela equipe editorial de O Técnico de Informática. Revisado em 25 de agosto de 2026.</p>
