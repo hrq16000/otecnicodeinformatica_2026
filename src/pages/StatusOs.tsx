@@ -118,12 +118,26 @@ const StatusOs = () => {
   const shareUrl = resultado ? `${BASE_URL}${PATH}?os=${encodeURIComponent(resultado.protocolo)}` : "";
 
   useEffect(() => {
-    if (!shareUrl || !qrRef.current) return;
-    void QRCode.toCanvas(qrRef.current, shareUrl, {
-      width: 148,
-      margin: 1,
-      color: { dark: "#0b1320", light: "#ffffff" },
-    });
+    const canvas = qrRef.current;
+    if (!shareUrl || !canvas) return;
+    let ativo = true;
+    // Carregado só no cliente: o pacote "qrcode" (via pngjs) quebra a renderização no servidor.
+    import("qrcode")
+      .then((mod) => {
+        if (ativo && qrRef.current) {
+          return mod.default.toCanvas(qrRef.current, shareUrl, {
+            width: 148,
+            margin: 1,
+            color: { dark: "#0b1320", light: "#ffffff" },
+          });
+        }
+      })
+      .catch(() => {
+        /* falha ao desenhar o QR — o link continua visível para cópia manual */
+      });
+    return () => {
+      ativo = false;
+    };
   }, [shareUrl]);
 
   const timeline = useMemo(() => (resultado ? osTimeline(resultado) : []), [resultado, estado]);
