@@ -26,6 +26,16 @@ Se a máquina está operacional e conectada, parte da triagem pode começar remo
     "São Marcos – Campo Largo"
   ],
   tempoDeslocamento: "Agenda definida após triagem do equipamento e do endereço",
+  tituloSecaoPrincipal: "Armazenamento e inicialização em São Marcos de Campo Largo",
+  tituloSecaoContexto: "Disco lento, boot demorado e travamentos: como separar as causas",
+  triagemResumo: "Em São Marcos de Campo Largo, a triagem começa pelo momento em que a falha aparece: durante o boot, ao abrir arquivos, ao copiar dados ou depois de algum tempo de uso. Isso ajuda a separar armazenamento, memória, sistema e temperatura sem partir direto para formatação.",
+  faqTitulo: "Perguntas sobre boot e armazenamento em São Marcos de Campo Largo",
+  faqsCustom: [
+    { question: "Computador demora no boot: vocês testam o disco antes de formatar?", answer: "Sim. Verificamos sinais do SSD ou HD, espaço livre e comportamento do sistema. Formatação só entra depois de separar lentidão de software de possível falha física." },
+    { question: "Travamento ao copiar arquivos pode indicar problema no armazenamento?", answer: "Pode. Quando a falha aparece durante leitura ou gravação, o armazenamento merece atenção e os dados importantes devem ser preservados antes de testes agressivos." },
+    { question: "Como memória insuficiente se diferencia de disco lento?", answer: "Observamos uso de RAM, paginação e resposta do armazenamento durante a tarefa. Os dois gargalos podem parecer semelhantes, mas exigem soluções diferentes." },
+    { question: "Quando o backup vira prioridade no atendimento?", answer: "Se o disco apresenta erros, some do sistema ou contém arquivos sem cópia recente, preservar os dados vem antes de reinstalar o sistema ou trocar componentes." },
+  ],
   servicosDestaque: [
     "Diagnóstico de SSD e HD",
     "Windows lento ou instável",
