@@ -8,19 +8,21 @@ const data = {
   nome: "Independência",
   slug: "independencia-sjp",
   cidade: "São José dos Pinhais",
-  metaTitle: "Técnico de Informática no Jardim Independência, SJP | Diagnóstico",
-  metaDescription: "Assistência de informática no Jardim Independência, São José dos Pinhais. Diagnóstico de PC, notebook, armazenamento e rede com triagem antes da execução.",
+  metaTitle: "Técnico de Informática no Jardim Independência, SJP | Suporte",
+  metaDescription: "Suporte de informática no Jardim Independência, São José dos Pinhais. Windows, impressora, periféricos, programas e acesso remoto com diagnóstico antes da execução.",
   h1: "Técnico de Informática no Jardim Independência – São José dos Pinhais",
-  subtitulo: "Triagem técnica para estabilidade, armazenamento e conectividade antes de formatar ou trocar componentes.",
-  descricaoLonga: `O Jardim Independência aparece em ações e projetos recentes da Prefeitura de São José dos Pinhais. Em 2025, o município teve aprovado o projeto Parque Linear Jardim Independência em uma iniciativa internacional de aceleração de projetos socioambientais. A Prefeitura também mantém o Estádio Municipal Moacir Tomelin, na Rua Leonir Ludgero Schreber, e já realizou ações do SINE nos Bairros na própria região. Essas referências permitem situar a página em fatos públicos verificáveis, sem inventar características locais.
+  subtitulo: "Suporte para Windows, programas e periféricos com triagem remota quando possível e visita quando o problema exige presença física.",
+  descricaoLonga: `O Jardim Independência aparece em ações e projetos recentes da Prefeitura de São José dos Pinhais. Em 2025, o município teve aprovado o projeto Parque Linear Jardim Independência em uma iniciativa internacional de aceleração de projetos socioambientais. A região também possui o Estádio Municipal Moacir Tomelin, na Rua Leonir Ludgero Schreber, e já recebeu ações do SINE nos Bairros. Essas referências ajudam a confirmar a localização sem recorrer a descrições genéricas.
 
-Nesta página, o foco técnico está em estabilidade, armazenamento e conectividade. Um computador que demora para iniciar, congela ao abrir arquivos ou reinicia durante uso pode ter causas diferentes: Windows, SSD ou HD, memória, temperatura ou alimentação. Formatar antes de separar essas hipóteses pode gerar retrabalho e colocar dados importantes em risco.
+Nesta página, a orientação técnica parte de uma pergunta prática: qual função deixou de funcionar? Um computador pode ligar normalmente e ainda impedir trabalho ou estudo porque a impressora ficou offline, o navegador deixou de acessar um sistema, a webcam sumiu, o áudio parou ou um programa passou a fechar sozinho. Nesses casos, formatar o computador inteiro antes de investigar a função afetada costuma ser um atalho ruim.
 
-Quando o sistema ainda inicia, verificamos espaço livre, eventos do Windows, uso de memória, comportamento do armazenamento e sinais de aquecimento. Se o SSD ou HD apresenta erros, desaparece do sistema ou trava durante cópia, a prioridade pode passar para backup ou recuperação de dados.
+Quando o Windows ainda inicia, a triagem pode começar verificando atualizações recentes, drivers, dispositivos reconhecidos, fila de impressão, permissões, inicialização de programas e comunicação de rede. Em impressoras, por exemplo, saber se outro computador consegue imprimir ajuda a separar falha do equipamento, da rede ou daquela estação específica.
 
-Em rede, comparamos outros dispositivos para saber se a falha está no computador ou na infraestrutura. Se apenas um notebook perde conexão, driver ou adaptador entram primeiro. Se vários aparelhos apresentam instabilidade, o foco muda para roteador, cobertura e conexão principal.
+Webcam, microfone e áudio também podem parar depois de atualização, mudança de porta USB ou alteração de configuração. Se o dispositivo aparece no sistema, a investigação segue por software e permissões; se não aparece em nenhuma porta ou em outro computador, a hipótese física ganha peso.
 
-Parte dos problemas de software e configuração pode começar por triagem remota quando a máquina continua operacional. Falhas físicas, ausência de vídeo, alimentação instável ou armazenamento com sinais de falha normalmente exigem visita ou bancada. A página do Jardim Independência foi reescrita para explicar esse processo com conteúdo próprio, referências municipais atuais e sem prometer prazo antes do diagnóstico.`,
+Parte desses casos pode ser avaliada por suporte remoto quando a máquina está funcionando e conectada. Se há conector danificado, falha de energia, tela sem imagem ou necessidade de abrir o equipamento, a visita ou a bancada passam a ser mais adequadas.
+
+A página do Jardim Independência foi reescrita para ter uma função editorial própria: orientar problemas de Windows, programas e periféricos, deixando claro quando vale tentar remoto e quando o defeito exige avaliação física.`,
   pontosReferencia: [
     "Jardim Independência – São José dos Pinhais",
     "Rua Leonir Ludgero Schreber",
@@ -28,31 +30,31 @@ Parte dos problemas de software e configuração pode começar por triagem remot
     "Rua Divonsir Luciano",
     "Projeto Parque Linear Jardim Independência"
   ],
-  tempoDeslocamento: "Modalidade e agenda definidas após triagem do endereço e do defeito",
+  tempoDeslocamento: "Modalidade e agenda definidas após triagem do endereço e da função afetada",
   servicosDestaque: [
-    "Diagnóstico de SSD e HD",
-    "Computador que reinicia ou trava",
-    "Correção de Windows",
-    "Backup e recuperação de arquivos",
-    "Diagnóstico de Wi-Fi e rede",
-    "Avaliação de memória e temperatura"
+    "Correção de Windows e atualizações",
+    "Impressora e fila de impressão",
+    "Webcam, microfone e áudio",
+    "Programas que deixam de abrir",
+    "Suporte remoto",
+    "Configuração de rede e periféricos"
   ],
-  conteudoExclusivo: `Travamento, reinicialização e disco lento pedem testes diferentes
+  conteudoExclusivo: `Quando o computador liga, mas uma função específica para
 
-Quando a máquina trava ao copiar arquivos, armazenamento ganha peso. Quando reinicia sob carga, temperatura e alimentação precisam ser consideradas. Quando apenas demora para iniciar, sistema, programas e disco entram na análise.
+Uma impressora offline não exige o mesmo diagnóstico de um Windows que não inicia. Uma webcam ausente pode ser driver, permissão ou conexão USB. Um programa que fecha sozinho pode estar relacionado a atualização, perfil do usuário ou arquivos do próprio aplicativo.
 
-Em rede, testar outro dispositivo ajuda a separar defeito local de infraestrutura. Se o armazenamento apresenta sinais de falha, preservar os arquivos é mais importante do que insistir em fazer o Windows iniciar.
+O objetivo da triagem é isolar a função afetada antes de alterar o restante do sistema. Se o problema puder ser reproduzido com o computador conectado, o suporte remoto pode ser suficiente para verificar configuração e software. Se houver falha física, a modalidade muda.
 
-No Jardim Independência, esta página concentra esse roteiro de estabilidade, armazenamento e rede para oferecer orientação técnica própria antes do atendimento.`,
+No Jardim Independência, essa abordagem evita transformar qualquer erro de software em formatação completa e dá à página uma intenção técnica diferente das rotas focadas em armazenamento ou hardware.`,
   problemasComuns: [
-    "Computador demora para iniciar",
-    "SSD ou HD trava durante cópia",
-    "Máquina reinicia durante uso",
-    "Notebook perde conexão Wi-Fi",
-    "Windows apresenta erros recorrentes",
-    "Arquivos importantes sem backup"
+    "Impressora aparece offline",
+    "Webcam ou microfone deixa de funcionar",
+    "Programa fecha depois de atualização",
+    "Windows perde configuração de áudio",
+    "Computador acessa internet, mas não um sistema específico",
+    "Periférico USB não é reconhecido"
   ],
-  dicasLocais: `Ao pedir atendimento no Jardim Independência, informe o endereço e uma referência como o Estádio Municipal Moacir Tomelin ou a Rua Leonir Ludgero Schreber. Para travamentos, diga em qual tarefa ocorrem; para rede, teste outro aparelho; para armazenamento, evite formatar se houver arquivos importantes.`,
+  dicasLocais: `Ao pedir atendimento no Jardim Independência, informe o endereço e uma referência como o Estádio Municipal Moacir Tomelin ou a Rua Leonir Ludgero Schreber. Para impressora, diga se outro computador consegue usá-la; para webcam ou áudio, informe se o dispositivo aparece no Windows; para programas, envie a mensagem de erro exibida.`,
 };
 
 const IndependenciaSJP = () => <BairroTemplate data={data} />;
