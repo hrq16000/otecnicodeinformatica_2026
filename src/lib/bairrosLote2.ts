@@ -102,51 +102,55 @@ export const BAIRROS_LOTE_2: Record<string, BairroLocalData> = {
     nomeLocativo: "na Boa Vista",
     cidade: "Curitiba",
     areaName: "Boa Vista, Curitiba",
-    metaTitle: "Técnico de Informática na Boa Vista | Curitiba",
+    metaTitle: "Técnico de informática na Boa Vista | PC, notebook, backup e rede",
     metaDescription:
-      "Informática na Boa Vista, Curitiba: manutenção de computador, formatação, remoção de vírus e suporte a consultórios e escritórios. Diagnóstico antes do valor.",
-    h1: "Atendimento de informática na Boa Vista – Curitiba",
+      "Técnico de informática na Boa Vista, Curitiba: diagnóstico de PC e notebook, backup, impressora, rede e formatação. Triagem antes da execução.",
+    h1: "Técnico de informática na Boa Vista – Curitiba",
     subtitulo:
-      "Região residencial extensa, com consultórios e escritórios pequenos misturados às ruas de casas. A triagem define se o caso é remoto, visita ou bancada.",
+      "Diagnóstico de computador, notebook e ambiente de trabalho com foco em dados, rede e continuidade antes de formatar ou trocar equipamento.",
     whatsappMessage:
       "Olá! Preciso de atendimento de informática na Boa Vista, em Curitiba. Pode me orientar?",
     introducaoLocal: [
-      "A Boa Vista é um bairro grande e majoritariamente residencial, com ruas de casas intercaladas por consultórios, clínicas pequenas e escritórios de profissionais liberais. Essa mistura produz dois perfis de chamado bem diferentes: o computador de casa que ficou lento com o tempo e a máquina de trabalho que não pode parar porque roda o sistema de agendamento e os prontuários.",
-      "Em ambos, o caminho é o mesmo: descrever o sintoma pelo WhatsApp, receber as primeiras orientações e só então definir a modalidade. O que muda é a prioridade — em consultório, a primeira pergunta é sempre onde estão os dados e se existe cópia recente.",
+      "Boa Vista integra a Regional Boa Vista de Curitiba, que também abrange Abranches, Atuba, Bacacheri, Bairro Alto, Barreirinha, Cachoeira, Pilarzinho, Santa Cândida, São Lourenço, Taboão e Tingui. A Administração Regional e a Rua da Cidadania Boa Vista ficam na Avenida Paraná, 3600. Essas referências públicas servem para situar a cobertura e não representam oficina ou unidade física da marca.",
+      "Nesta página, o foco é separar falha de sistema, armazenamento, rede, periféricos e backup antes de indicar solução. Computador lento, impressora offline, Windows com erro e arquivos sem cópia exigem verificações diferentes e não devem receber a mesma resposta automática.",
     ],
     contextoLocal: [
-      "Nos atendimentos residenciais do bairro predominam lentidão por disco mecânico, sistema cheio de programas iniciando junto com o Windows e navegador com extensões instaladas sem intenção. Nesses casos, medir antes de trocar peça evita gasto desnecessário: às vezes o ganho vem da limpeza de inicialização, às vezes só o SSD resolve de verdade.",
-      "Nos consultórios e escritórios, o que aparece com frequência é backup inexistente ou nunca testado, sistema de gestão travando após atualização e impressora compartilhada que deixa de responder quando o computador principal é desligado. Antes de qualquer formatação em máquina de trabalho, conferimos a cópia dos dados junto com você.",
+      "Quando o computador fica lento, verificamos uso de disco, memória, temperatura e programas em inicialização. Um SSD degradado, pouca RAM, software consumindo recursos ou superaquecimento podem produzir sintomas parecidos. O diagnóstico evita trocar peça por tentativa ou formatar uma máquina com falha física.",
+      "Em impressora de rede, o primeiro passo é confirmar se o próprio equipamento conclui um teste interno, qual endereço recebeu e se a porta configurada no computador continua correta. Quando vários computadores perdem a mesma impressora ao mesmo tempo, a investigação muda para rede, endereço e fila compartilhada.",
+      "Backup não é tratado como simples cópia de arquivos. Conferimos origem, destino, data da última cópia e, quando aplicável, teste de restauração. Uma rotina que nunca foi validada pode falhar justamente quando a máquina precisa ser formatada ou o armazenamento apresenta defeito.",
+      "Em Windows que parou de iniciar ou começou a apresentar erros após atualização, a triagem separa inicialização do sistema, armazenamento e ausência de vídeo. Reinstalar o sistema sem verificar a causa pode apagar o contexto do problema e aumentar o risco para os dados.",
     ],
     logisticaLocal: [
-      "Em consultório, o horário importa mais do que o endereço: combinamos a avaliação na janela em que a agenda está livre, para não interromper atendimento. Quando existe sistema de terceiros envolvido, pedimos antes o contato do suporte do software, porque parte das falhas depende de liberação do fornecedor.",
-      "Serviços que exigem abrir o equipamento são feitos em bancada. A retirada é combinada, o equipamento sai identificado e a devolução ocorre no mesmo endereço. Em máquina com dados sensíveis, o procedimento inclui registro do que foi acessado e devolução de qualquer mídia envolvida.",
+      "O endereço completo é confirmado antes do atendimento. Como referência pública, a Rua da Cidadania Boa Vista fica na Avenida Paraná, 3600, sede da Administração Regional.",
+      "Configuração, navegador, contas e parte dos erros do Windows podem começar remotamente. Rede do local, impressora, cabeamento e dispositivos que precisam ser testados juntos normalmente pedem visita. Falhas físicas, desmontagem e testes prolongados seguem para bancada.",
+      "Não há promessa fixa de chegada ou conclusão vinculada ao bairro. Modalidade, agenda e prazo são definidos após a triagem conforme endereço, complexidade e eventual necessidade de peça.",
     ],
     operacaoLocal: [
-      "Triagem pelo WhatsApp com pergunta sobre backup logo no início",
-      "Medição do gargalo real antes de indicar troca de peça",
-      "Diagnóstico técnico antes de informar o valor",
-      "Agendamento na janela livre da agenda, quando for consultório",
+      "Triagem pelo WhatsApp registrando equipamento, sintoma e impacto",
+      "Separação entre software, armazenamento, memória, temperatura, rede e periféricos",
+      "Conferência de backup antes de formatação ou intervenção em disco",
+      "Escopo, modalidade e valor informados antes da execução",
     ],
     atendimentoLocal: [
-      "Remoção de vírus e limpeza de sistema com verificação de reincidência",
-      "Formatação com backup conferido antes da execução",
-      "Configuração de impressora compartilhada na rede local",
-      "Suporte pontual a estação de trabalho de consultório ou escritório",
+      "Computador ou notebook lento, travando ou reiniciando",
+      "Impressora e scanner sem comunicação na rede",
+      "Windows, drivers, contas e programas com erro",
+      "Backup, sincronização e organização de cópias",
     ],
     coletaBancada: [
-      "Upgrade de SSD e memória com migração do sistema",
-      "Falha intermitente que não se reproduz em visita curta",
-      "Disco com setores defeituosos e risco de perda de arquivos",
+      "SSD, HD, memória, fonte ou outro componente que exija teste físico",
+      "Notebook com aquecimento, falha de energia, tela ou conector",
+      "Tentativa de recuperação de dados em armazenamento com falha",
     ],
     publicoAtendido: [
-      "Residências com computador de uso diário",
-      "Consultórios e clínicas pequenas do bairro",
-      "Escritórios de profissionais liberais",
+      "Residências com computador ou notebook de uso diário",
+      "Home office dependente de rede, webcam, áudio e periféricos",
+      "Pequenos escritórios que precisam preservar arquivos e continuidade de trabalho",
     ],
     servicosPrioritarios: [
       "/servicos/manutencao-de-computador",
-      "/servicos/remocao-de-virus",
+      "/servicos/manutencao-de-notebook",
+      "/servicos/redes-e-wifi",
       "/servicos/formatacao",
       "/servicos/recuperacao-de-dados",
     ],
@@ -154,30 +158,21 @@ export const BAIRROS_LOTE_2: Record<string, BairroLocalData> = {
       {
         to: "/servicos/remocao-virus/curitiba",
         label: "Remoção de vírus em Curitiba",
-        desc: "Urgência, contenção em rede e decisão entre remoto e visita.",
+        desc: "Como funciona a triagem de segurança e software na cidade.",
       },
     ],
+    problemasRelacionados: [
+      { to: "/problemas/computador-lento", label: "Computador lento", desc: "Como separar armazenamento, memória, software e temperatura antes de fazer upgrade." },
+      { to: "/problemas/impressora-nao-imprime", label: "Impressora não imprime", desc: "O que verificar em fila, porta, driver e rede antes de substituir equipamento." },
+      { to: "/problemas/windows-nao-inicia", label: "Windows não inicia", desc: "Como diferenciar inicialização, armazenamento e ausência de vídeo antes de formatar." },
+      { to: "/problemas/arquivos-apagados", label: "Arquivos apagados", desc: "O que evitar antes de tentar recuperar documentos importantes." },
+    ],
     faqLocal: [
-      {
-        question: "Atendem consultórios e clínicas na Boa Vista?",
-        answer:
-          "Sim, com suporte pontual à estação de trabalho, à impressora e à rotina de cópia dos dados. O agendamento é combinado para a janela em que a agenda estiver livre.",
-      },
-      {
-        question: "Vocês formatam sem apagar meus arquivos?",
-        answer:
-          "A formatação apaga o sistema, por isso a cópia dos dados é conferida com você antes. Se não houver espaço ou mídia para o backup, isso é resolvido antes de qualquer execução.",
-      },
-      {
-        question: "Meu computador ficou lento de repente. É vírus?",
-        answer:
-          "Pode ser, mas nem sempre. Lentidão súbita também aparece por disco em falha, atualização mal concluída ou programa novo consumindo memória. O diagnóstico separa as causas antes de indicar o serviço.",
-      },
-      {
-        question: "O atendimento pode ser remoto?",
-        answer:
-          "Quando o computador liga e conecta à internet, boa parte dos casos de software é resolvida remotamente. Problemas de hardware, rede física e equipamento que não inicia exigem presença.",
-      },
+      { question: "Meu computador ficou lento de repente. É vírus?", answer: "Pode ser, mas também pode haver problema de armazenamento, memória, atualização ou temperatura. O diagnóstico mede essas hipóteses antes de indicar remoção de malware, upgrade ou formatação." },
+      { question: "A impressora sumiu da rede. Preciso reinstalar tudo?", answer: "Nem sempre. Primeiro verificamos se a impressora funciona sozinha, qual endereço recebeu, qual porta está configurada e se a fila está bloqueada." },
+      { question: "Vocês conferem o backup antes de formatar?", answer: "Sim. Antes de reinstalar o sistema, verificamos onde estão os arquivos, se a cópia está atualizada e se pode ser acessada." },
+      { question: "O atendimento pode começar remotamente?", answer: "Sim, quando o equipamento liga e mantém conexão. Configuração, navegador e parte dos erros do Windows podem ser triados remotamente; falhas físicas e problemas de rede do ambiente exigem visita ou bancada." },
+      { question: "Qual referência ajuda a localizar o atendimento na Boa Vista?", answer: "O endereço completo é sempre o principal dado. Como referência pública, a Rua da Cidadania Boa Vista fica na Avenida Paraná, 3600." },
     ],
   },
 
@@ -365,75 +360,70 @@ export const BAIRROS_LOTE_2: Record<string, BairroLocalData> = {
     nomeLocativo: "no Afonso Pena",
     cidade: "São José dos Pinhais",
     areaName: "Afonso Pena, São José dos Pinhais",
-    metaTitle: "Técnico de Informática no Afonso Pena | São José dos Pinhais",
+    metaTitle: "Técnico de informática no Afonso Pena | PC, notebook, rede e backup",
     metaDescription:
-      "Informática no Afonso Pena, São José dos Pinhais: suporte a empresas perto do aeroporto, manutenção de computador, rede e backup. Combine pelo WhatsApp.",
-    h1: "Atendimento de informática no Afonso Pena – São José dos Pinhais",
+      "Técnico de informática no Afonso Pena, São José dos Pinhais: diagnóstico de PC e notebook, rede, backup, impressora e Windows. Triagem antes da execução.",
+    h1: "Técnico de informática no Afonso Pena – São José dos Pinhais",
     subtitulo:
-      "Região com forte presença de empresas e serviços ligados ao aeroporto, somada a ruas residenciais — o atendimento é planejado por janela de agenda.",
+      "Diagnóstico de computador, notebook e rede para preservar dados e continuidade antes de formatar, trocar peça ou alterar o ambiente.",
     whatsappMessage:
       "Olá! Preciso de atendimento de informática no Afonso Pena, em São José dos Pinhais. Pode me orientar?",
     introducaoLocal: [
-      "O Afonso Pena, em São José dos Pinhais, é conhecido pela vizinhança do aeroporto e pela presença de empresas de logística, transporte e serviços. Isso puxa a demanda para o lado corporativo: estações de trabalho que operam em turno, impressoras compartilhadas e rede que precisa se manter estável durante o expediente.",
-      "Ao mesmo tempo, as ruas residenciais do bairro geram chamados de computador de casa, notebook de estudo e Wi-Fi que não cobre o imóvel inteiro. A triagem pelo WhatsApp serve para saber qual dos dois cenários é o seu antes de deslocar equipe.",
+      "Afonso Pena possui estrutura administrativa própria no município. A Subprefeitura Afonso Pena funciona na Rua Professora Lourdes Grutter Bonin, 100, esquina com a Almirante Alexandrino. O bairro também tem como referência o Centro de Esporte e Lazer Max Rosenmann, na Avenida Rui Barbosa, 5151. Essas referências públicas são usadas apenas para situar a cobertura; não representam oficina ou unidade física da marca.",
+      "Nesta página, o foco é continuidade de operação e preservação de dados. Computador compartilhado, notebook de trabalho, impressora de rede e conexão instável exigem diagnóstico por camadas para evitar formatação ou troca de equipamento sem causa definida.",
     ],
     contextoLocal: [
-      "Em empresa, o que mais aparece é máquina compartilhada entre turnos sem usuários separados, atualização adiada por meses e ausência de cópia dos dados fora do próprio computador. Quando o equipamento falha nesse contexto, o problema deixa de ser técnico e vira operacional: ninguém sabe o que estava salvo só ali.",
-      "Nas residências, os pedidos seguem o padrão de bairro extenso: computador antigo com disco mecânico, notebook aquecendo por falta de limpeza interna e roteador posicionado onde o cabo entrou, e não onde o sinal é usado.",
+      "Em máquina usada por mais de uma pessoa, contas separadas ajudam a isolar configurações, arquivos e permissões. Quando todos usam o mesmo perfil, uma extensão, programa ou alteração de navegador afeta todos ao mesmo tempo e dificulta identificar a origem da falha.",
+      "Em rede e Wi‑Fi, comparamos outros dispositivos antes de culpar o roteador. Se apenas um computador perde conexão, adaptador, driver e configuração desse equipamento entram primeiro. Se vários aparelhos falham juntos, roteador, cabeamento, cobertura e conexão principal passam a ser investigados.",
+      "Em impressora ou scanner de rede, verificamos teste interno, endereço recebido, porta configurada e fila. Quando o equipamento funciona sozinho, mas some dos computadores, a hipótese principal deixa de ser defeito físico e passa a ser comunicação.",
+      "Backup é conferido antes de reinstalação, migração ou intervenção em armazenamento. Se o HD ou SSD apresenta erro de leitura, ruído ou travamento durante cópia, a prioridade passa a ser preservar os dados antes de insistir no uso.",
     ],
     logisticaLocal: [
-      "Como o bairro é grande e cruzado por vias de tráfego pesado, o agendamento é feito por janela combinada, e não por promessa de chegada imediata. Em empresa, definimos com quem opera o equipamento o horário em que a máquina pode ficar parada.",
-      "Quando o serviço é de bancada, a coleta é combinada com retirada e devolução no mesmo endereço em São José dos Pinhais. Para máquina crítica de operação, a orientação é programar a retirada fora do turno de produção.",
+      "O endereço completo é confirmado antes do atendimento. Como referências públicas, a Subprefeitura Afonso Pena, a Avenida Rui Barbosa e o Centro de Esporte e Lazer Max Rosenmann ajudam a localizar a região.",
+      "Configuração, navegador, contas e parte dos erros do Windows podem começar remotamente. Rede do local, impressora compartilhada e dispositivos que precisam ser testados no ambiente normalmente pedem visita. Falha física, desmontagem e testes prolongados seguem para bancada.",
+      "Não existe promessa fixa de chegada vinculada ao bairro. Agenda, deslocamento e prazo são definidos após a triagem conforme endereço, impacto da falha, complexidade e eventual necessidade de peça.",
     ],
     operacaoLocal: [
-      "Triagem pelo WhatsApp identificando se é chamado residencial ou de empresa",
-      "Janela de agendamento combinada, sem promessa de tempo de chegada",
-      "Diagnóstico antes do valor; execução após sua aprovação",
-      "Registro do atendimento por equipamento e setor, quando for empresa",
+      "Triagem pelo WhatsApp identificando equipamento, sintoma e impacto",
+      "Separação entre software, armazenamento, rede, periféricos e falha física",
+      "Conferência de backup antes de formatação, migração ou intervenção em disco",
+      "Escopo, modalidade e valor informados antes da execução",
     ],
     atendimentoLocal: [
-      "Suporte a estações de trabalho e impressoras em rede",
-      "Configuração de usuários separados em máquina compartilhada",
-      "Formatação com backup conferido antes",
-      "Ajuste de rede e Wi-Fi em residência ou escritório",
+      "Computador ou notebook lento, travando ou reiniciando",
+      "Impressora e scanner sem comunicação na rede",
+      "Wi‑Fi com queda, baixa cobertura ou falha em um dispositivo",
+      "Windows, drivers, contas e programas com erro",
     ],
     coletaBancada: [
-      "Reparo interno de desktop e notebook",
-      "Upgrade de SSD e memória com migração do sistema",
-      "Tentativa de recuperação de dados em disco com falha",
+      "SSD, HD, memória, fonte ou outro componente que exija teste físico",
+      "Notebook com aquecimento, falha de energia, tela ou conector",
+      "Tentativa de recuperação de dados em armazenamento com falha",
     ],
     publicoAtendido: [
-      "Empresas de logística, transporte e serviços do entorno",
-      "Escritórios administrativos com poucas estações",
-      "Residências do bairro",
+      "Residências com computador ou notebook de uso diário",
+      "Home office dependente de rede, periféricos e arquivos locais",
+      "Pequenos negócios com computador, impressora e dados de operação",
     ],
     servicosPrioritarios: [
       "/servicos/suporte-tecnico-empresarial",
       "/servicos/manutencao-de-computador",
+      "/servicos/manutencao-de-notebook",
       "/servicos/redes-e-wifi",
       "/servicos/formatacao",
     ],
+    problemasRelacionados: [
+      { to: "/problemas/computador-lento", label: "Computador lento", desc: "Como separar armazenamento, memória, software e temperatura antes de fazer upgrade." },
+      { to: "/problemas/wifi-instavel", label: "Wi-Fi instável", desc: "Como distinguir falha de dispositivo, cobertura ruim e problema no roteador ou no link." },
+      { to: "/problemas/impressora-nao-imprime", label: "Impressora não imprime", desc: "O que verificar em fila, porta, driver e rede antes de substituir equipamento." },
+      { to: "/problemas/arquivos-apagados", label: "Arquivos apagados", desc: "O que evitar antes de tentar recuperar documentos importantes." },
+    ],
     faqLocal: [
-      {
-        question: "Vocês atendem empresas no Afonso Pena?",
-        answer:
-          "Sim, com suporte pontual ou recorrente sob consulta a estações de trabalho, impressoras e rede. O escopo é definido antes, e o registro do atendimento fica com a empresa.",
-      },
-      {
-        question: "O técnico vai até São José dos Pinhais ou preciso levar o equipamento?",
-        answer:
-          "As duas modalidades existem. Visita e coleta são combinadas em São José dos Pinhais conforme o problema; casos de software costumam ser resolvidos remotamente.",
-      },
-      {
-        question: "Em quanto tempo o técnico chega?",
-        answer:
-          "Não prometemos tempo de chegada. O agendamento é por janela combinada, considerando a agenda do dia e o deslocamento até o bairro.",
-      },
-      {
-        question: "Como funciona o backup em máquina usada por vários funcionários?",
-        answer:
-          "Primeiro separamos os usuários, depois definimos o que precisa de cópia e para onde vai. O teste de restauração faz parte do serviço — sem ele, não há garantia de que a cópia serve.",
-      },
+      { question: "Vocês atendem o Afonso Pena, em São José dos Pinhais?", answer: "Sim, mediante disponibilidade e confirmação do endereço. A modalidade pode ser remota, no local ou por coleta para bancada, conforme o tipo de falha identificado na triagem." },
+      { question: "A rede caiu só em um computador. Preciso trocar o roteador?", answer: "Não é a primeira hipótese quando os demais dispositivos continuam conectados. Nesse caso verificamos adaptador, driver e configuração do próprio computador antes de alterar o roteador." },
+      { question: "A impressora está offline em todos os computadores. Pode ser rede?", answer: "Sim. Quando vários computadores perdem o mesmo dispositivo, verificamos endereço, porta, fila e comunicação de rede antes de concluir por falha física." },
+      { question: "Como o backup é tratado antes da formatação?", answer: "Confirmamos o que precisa ser preservado, onde está a cópia e se ela pode ser acessada. Se o armazenamento apresenta sinais de falha, a prioridade passa a ser preservar os dados antes de reinstalar." },
+      { question: "Qual referência ajuda a localizar o atendimento no Afonso Pena?", answer: "O endereço completo é sempre o principal dado. Como referências públicas, a Subprefeitura Afonso Pena e o Centro de Esporte e Lazer Max Rosenmann ajudam a confirmar a região." },
     ],
   },
 
