@@ -1,6 +1,6 @@
 # Autoridade SEO — densidade semântica, keywords e links internos
 
-Gerado em: 2026-09-28T05:42:50.095Z
+Gerado em: 2026-09-28T05:44:52.801Z
 URLs analisadas: 108/108 · órfãs: 23
 
 | URL | Palavras | Dens. semântica | Keyword principal | Dens. KW | Links saída | Links entrada |
