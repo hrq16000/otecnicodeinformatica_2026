@@ -53,6 +53,11 @@ interface BairroData {
   conteudoExclusivo?: string;
   problemasComuns?: string[];
   dicasLocais?: string;
+  tituloSecaoPrincipal?: string;
+  tituloSecaoContexto?: string;
+  triagemResumo?: string;
+  faqTitulo?: string;
+  faqsCustom?: Array<{ question: string; answer: string }>;
 }
 
 interface BairroTemplateProps {
@@ -268,14 +273,12 @@ export const BairroTemplate = ({ data }: BairroTemplateProps) => {
                 <div className="grid lg:grid-cols-5 gap-8">
                   <div className="lg:col-span-3">
                     <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-6 reveal-text">
-                      Assistência Técnica em Informática no {data.nome}
+                      {data.tituloSecaoPrincipal ?? `Assistência Técnica em Informática no ${data.nome}`}
                     </h2>
                     <div className="prose prose-lg text-muted-foreground">
                       <p className="mb-4">{data.descricaoLonga}</p>
                       <p className="mb-4">
-                        O atendimento em {data.nome} começa pela triagem do sintoma e do endereço. 
-                        A partir daí, definimos se o caso pode seguir por suporte remoto, visita ou bancada, 
-                        preservando arquivos e evitando troca de peças ou formatação sem diagnóstico.
+                        {data.triagemResumo ?? `O atendimento em ${data.nome} começa pela triagem do sintoma e do endereço. A partir daí, definimos se o caso pode seguir por suporte remoto, visita ou bancada, preservando arquivos e evitando troca de peças ou formatação sem diagnóstico.`}
                       </p>
                     </div>
                     <div className="mt-6">
@@ -346,7 +349,7 @@ export const BairroTemplate = ({ data }: BairroTemplateProps) => {
             <div className="container mx-auto px-4 relative z-10">
               <div className="max-w-4xl mx-auto">
                 <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-6 reveal-text">
-                  Informática no {data.nome}: O Que Você Precisa Saber
+                  {data.tituloSecaoContexto ?? `Informática no ${data.nome}: O Que Você Precisa Saber`}
                 </h2>
 
                 <div className="prose prose-lg text-muted-foreground mb-8">
@@ -506,7 +509,12 @@ export const BairroTemplate = ({ data }: BairroTemplateProps) => {
         </AnimatedSection>
 
         <AnimatedSection>
-          {bairroFAQs[data.slug] ? (
+          {data.faqsCustom?.length ? (
+            <LocalFAQSection
+              title={data.faqTitulo ?? `Dúvidas técnicas sobre atendimento em ${data.nome}`}
+              faqs={data.faqsCustom}
+            />
+          ) : bairroFAQs[data.slug] ? (
             <GeoSpecificFAQs bairroSlug={data.slug} bairroNome={data.nome} cidadeNome={data.cidade} />
           ) : (
             <LocalFAQSection
