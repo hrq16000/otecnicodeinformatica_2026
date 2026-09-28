@@ -69,9 +69,9 @@ export const CLUSTER_PROBLEMAS: ClusterProblema[] = [
     slug: "wifi-instavel",
     path: "/problemas/wifi-instavel",
     titulo: "Wi-Fi caindo ou lento em parte da casa ou do escritório",
-    metaTitle: "Wi-Fi cai ou fica lento: causas e o que verificar | O Técnico",
+    metaTitle: "Internet lenta ou queda de Wi-Fi: o que verificar | O Técnico",
     metaDescription:
-      "Wi-Fi que cai, fica lento em alguns cômodos ou desconecta sozinho quase nunca é problema do plano. Veja as causas reais, o que testar antes e quando chamar técnico.",
+      "Internet lenta ou com queda toda hora? Veja como separar sinal fraco do Wi-Fi, roteador e operadora com testes simples, antes de trocar plano ou aparelho.",
     resumo:
       "Na maior parte dos atendimentos de Wi-Fi instável o plano contratado está entregando o que promete — o sinal é que não chega. A investigação separa três coisas diferentes: a internet que entra no imóvel, o equipamento que distribui o sinal e o caminho físico até o aparelho que está reclamando.",
     waMessage:
@@ -393,9 +393,9 @@ export const CLUSTER_PROBLEMAS: ClusterProblema[] = [
     slug: "computador-desliga-sozinho",
     path: "/problemas/computador-desliga-sozinho",
     titulo: "Computador ou PC desligando sozinho: causas e testes seguros",
-    metaTitle: "PC desliga sozinho: causas e testes seguros",
+    metaTitle: "Computador desligando sozinho: causas e testes seguros",
     metaDescription:
-      "PC desliga sozinho, mesmo sem aquecer? Veja como separar temperatura, fonte, tomada, memória, placa e reinício do sistema antes de trocar peças.",
+      "Computador ou PC desligando sozinho, mesmo sem esquentar? Veja como separar temperatura, fonte, tomada, memória e sistema antes de trocar peças.",
     resumo:
       "Quando o computador desliga sozinho, o sintoma precisa ser separado em dois grupos: corte seco de energia e reinício comandado pelo sistema. O primeiro costuma levar a temperatura, fonte, tomada ou placa; o segundo também pode envolver memória, driver, atualização ou falha registrada pelo Windows. Essa diferença evita formatar ou trocar peça antes de entender o padrão.",
     waMessage:
@@ -507,9 +507,9 @@ export const CLUSTER_PROBLEMAS: ClusterProblema[] = [
     slug: "notebook-nao-carrega",
     path: "/problemas/notebook-nao-carrega",
     titulo: "Notebook conectado na tomada e a bateria não carrega",
-    metaTitle: "Notebook não carrega: causas e testes seguros | O Técnico",
+    metaTitle: "Meu notebook não carrega: causas e testes seguros | O Técnico",
     metaDescription:
-      "Notebook ligado na tomada que não carrega pode ser fonte, conector, bateria ou placa. Veja como identificar cada caso, o que testar sozinho e o que evita gasto errado.",
+      "Notebook não carrega mesmo ligado na tomada? Veja como separar fonte, conector, bateria e placa com testes seguros e evitar comprar peça errada.",
     resumo:
       "“Conectada, não carregando” é uma mensagem que aparece em quatro cenários bem diferentes: carregador entregando tensão errada, conector de energia com mau contato, bateria no fim da vida útil ou circuito de carga da placa-mãe com falha. Cada um tem custo e solução distintos — e trocar a bateria por palpite é o erro mais comum.",
     waMessage:
@@ -948,9 +948,9 @@ export const CLUSTER_PROBLEMAS: ClusterProblema[] = [
     slug: "cheiro-de-queimado",
     path: "/problemas/cheiro-de-queimado",
     titulo: "Cheiro de queimado no computador, fonte ou carregador",
-    metaTitle: "Cheiro de queimado: desligue computador e carregador | O Técnico",
+    metaTitle: "Fonte com cheiro de queimado, mesmo funcionando? | O Técnico",
     metaDescription:
-      "Fonte com cheiro de queimado, carregador aquecendo ou odor vindo do PC? Pare o uso e veja como cortar a energia com segurança, quando não tocar no aparelho e como o diagnóstico é feito.",
+      "Fonte com cheiro de queimado mas o PC ainda funciona? Desligue da tomada: veja por que continuar usando é arriscado e como o diagnóstico é feito.",
     resumo:
       "Cheiro de queimado, derretimento, estalo ou fumaça exigem interromper o uso. Se for seguro tocar no plugue e não houver fogo, desligue o equipamento e desconecte a alimentação. Se houver fumaça ativa, chama, tomada derretida ou aparelho muito quente, não manuseie para investigar: afaste-se, corte a energia do circuito apenas se isso puder ser feito com segurança e acione o serviço de emergência quando houver incêndio. Só depois vem o diagnóstico do componente.",
     waMessage:
@@ -1242,9 +1242,9 @@ export const CLUSTER_PROBLEMAS: ClusterProblema[] = [
     slug: "computador-esquentando",
     path: "/problemas/computador-esquentando",
     titulo: "Computador ou notebook esquentando demais",
-    metaTitle: "Computador esquentando: causas e o que fazer | O Técnico",
+    metaTitle: "PC esquentando muito: causas e o que fazer | O Técnico",
     metaDescription:
-      "Computador esquentando muito ou PC quente sob carga? Veja como separar aquecimento normal, throttling, ventilação obstruída e falha de refrigeração sem usar temperatura genérica.",
+      "Computador ou PC esquentando muito? Veja como separar aquecimento normal, ventilação obstruída, poeira e falha de refrigeração antes de trocar peças.",
     resumo:
       "Computador quente não significa, sozinho, defeito. A temperatura varia conforme processador, projeto do equipamento, ambiente e carga. O sinal mais útil é a combinação entre calor, ruído de ventoinha, perda de desempenho, travamento ou desligamento. O diagnóstico correto compara o comportamento com a especificação do fabricante e procura evidência de throttling, fluxo de ar ruim ou carga anormal antes de indicar limpeza ou troca de peça.",
     waMessage:
@@ -1364,9 +1364,9 @@ export const CLUSTER_PROBLEMAS: ClusterProblema[] = [
     slug: "impressora-nao-imprime",
     path: "/problemas/impressora-nao-imprime",
     titulo: "Impressora não imprime mesmo aparecendo conectada",
-    metaTitle: "Impressora não imprime: causas e o que checar | O Técnico de Informática",
+    metaTitle: "Impressora não quer imprimir? Causas e o que checar | O Técnico",
     metaDescription:
-      "Documento fica na fila, a impressora aparece offline ou sai página em branco? Veja o que separa falha de rede, driver e cabeça de impressão — e o que testar antes de chamar técnico.",
+      "Minha impressora não imprime: documento parado na fila, offline ou página em branco? Veja o que separa rede, driver e cabeça de impressão antes de chamar técnico.",
     resumo:
       "Impressora que não imprime raramente está quebrada. Na maior parte dos atendimentos o equipamento imprime perfeitamente quando testado sozinho: o que falha é o caminho entre o computador e ele — fila travada, endereço de rede que mudou, driver duplicado ou porta apontando para o lugar errado.",
     waMessage:
@@ -1481,9 +1481,9 @@ export const CLUSTER_PROBLEMAS: ClusterProblema[] = [
     slug: "teclado-notebook-nao-funciona",
     path: "/problemas/teclado-notebook-nao-funciona",
     titulo: "Teclado do notebook não funciona ou falha algumas teclas",
-    metaTitle: "Teclado do notebook falha: causas e o que testar | O Técnico",
+    metaTitle: "Teclado do notebook não funciona? Causas e testes | O Técnico",
     metaDescription:
-      "Teclado do notebook não funciona, repete letras ou perdeu algumas teclas? Veja testes seguros para separar Windows, layout, cabo flat, líquido e defeito físico antes de trocar a peça.",
+      "Por que o teclado do notebook não funciona? Veja testes seguros para separar Windows, layout, cabo flat, líquido e defeito físico antes de trocar a peça.",
     resumo:
       "Quando o teclado do notebook não funciona, o padrão da falha ajuda a reduzir as hipóteses, mas nenhum teste isolado fecha o diagnóstico. Um teclado USB externo, a tela de firmware/recuperação e a comparação entre teclas específicas e o teclado inteiro ajudam a separar software, configuração, cabo flat, oxidação e defeito da própria peça sem comprar teclado por tentativa.",
     waMessage:
