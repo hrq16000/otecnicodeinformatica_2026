@@ -1382,10 +1382,9 @@ export const ARTICLE_SOURCE_MANIFEST: Record<string, ArticleSourceManifest> = {
     sources: [],
     technicalReview: "reviewed",
     factChecked: true,
-    factCheckedAt: "2026-08-12",
+    factCheckedAt: "2026-09-28",
     stableKnowledge: true,
-    notes:
-      "Revisão concluída (Onda 5G): teste comparativo com celular no mesmo ponto, limitação de 2,4 GHz em TVs, isolamento de clientes/rede de visitantes, congestionamento de canal em prédio e critério para suspeitar do módulo Wi-Fi do aparelho. Sem estatística inventada e sem promessa de reparo. Conhecimento técnico estável — sem fonte visível.",
+    notes:\n      "Revisão material em 2026-09-28: removeu absolutos sobre SSID único, 5 GHz e módulo Wi-Fi; passou a separar cobertura, compatibilidade de faixa/canal/segurança, isolamento de clientes e falha do rádio da TV. Mantém testes reversíveis antes de reset de fábrica.",
   },
   "como-testar-fonte-de-alimentacao-pc": {
     slug: "como-testar-fonte-de-alimentacao-pc",
@@ -1432,10 +1431,9 @@ export const ARTICLE_SOURCE_MANIFEST: Record<string, ArticleSourceManifest> = {
     sources: [],
     technicalReview: "reviewed",
     factChecked: true,
-    factCheckedAt: "2026-08-14",
+    factCheckedAt: "2026-09-28",
     stableKnowledge: true,
-    notes:
-      "Revisão concluída (Onda 8E): critério de quando reinstalar resolve e quando não resolve, backup verificado (abrir o arquivo no destino) como pré-requisito, chave de criptografia antes de qualquer formatação, diferença entre redefinir, reinstalar por cima e instalação limpa, vínculo de licença e ordem de drivers. Sem promessa de prazo, sem marca comercial e sem passo comercial disfarçado de tutorial. Conhecimento técnico estável — sem fonte visível.",
+    notes:\n      "Revisão material em 2026-09-28: resposta curta prioriza backup verificável e chave BitLocker; removeu absolutos sobre instalação limpa, ativação e ordem universal de drivers; preserva a distinção entre redefinir, reparar e instalar do zero.",
   },
   "quanto-custa-formatar-um-computador": {
     slug: "quanto-custa-formatar-um-computador",
@@ -1471,10 +1469,9 @@ export const ARTICLE_SOURCE_MANIFEST: Record<string, ArticleSourceManifest> = {
     sources: [],
     technicalReview: "reviewed",
     factChecked: true,
-    factCheckedAt: "2026-08-25",
+    factCheckedAt: "2026-09-28",
     stableKnowledge: true,
-    notes:
-      "Revisão concluída (Onda 9C): disco novo sem tabela de partições, compatibilidade de chave/slot M.2 (SATA × NVMe), conflito de linhas PCIe e portas SATA, controlador em AHCI, instalação com apenas o disco novo conectado e critério entre instalar do zero e clonar. Conhecimento técnico estável — sem fonte visível.",
+    notes:\n      "Revisão material em 2026-09-28: separou SSD novo vazio de SSD clonado/com Windows; removeu a exigência universal de AHCI e passou a tratar AHCI/RST/VMD/RAID conforme o equipamento; reforçou detecção, UEFI, bootloader, BitLocker e preservação do disco antigo.",
   },
   "limpar-arquivos-temporarios-windows": {
     slug: "limpar-arquivos-temporarios-windows",
