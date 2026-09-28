@@ -1,16 +1,13 @@
 #!/usr/bin/env node
 /**
- * Gate de prontidão para promoção de bairros ao índice.
- * Ondas autorais: todo loteLocalN com N >= 6 em src/lib/localIndexPolicy.json.
+ * Gate de prontidão autoral para TODO bairro indexável.
+ * Fonte única: bairrosAncora em src/lib/localIndexPolicy.json.
  */
 import { readFileSync, readdirSync } from "node:fs";
 import { join } from "node:path";
 
 const policy = JSON.parse(readFileSync("src/lib/localIndexPolicy.json", "utf8"));
-const paths = Object.entries(policy)
-  .filter(([key, value]) => /^loteLocal\d+$/.test(key) && Number(key.replace("loteLocal", "")) >= 6 && Array.isArray(value))
-  .sort(([a], [b]) => Number(a.replace("loteLocal", "")) - Number(b.replace("loteLocal", "")))
-  .flatMap(([, value]) => value);
+const paths = [...new Set((policy.bairrosAncora ?? []).map((bairro) => "/bairros/" + bairro.slug))].sort();
 const dir = "src/pages/bairros";
 const sources = readdirSync(dir)
   .filter((f) => f.endsWith(".tsx"))
@@ -18,6 +15,7 @@ const sources = readdirSync(dir)
 
 const errors = [];
 const pages = [];
+const delegated = [];
 
 function fieldTemplate(src, field) {
   return src.match(new RegExp(field + ":\\s*`([\\s\\S]*?)`"))?.[1] ?? "";
@@ -58,8 +56,19 @@ const forbidden = [
 for (const path of paths) {
   const slug = path.replace("/bairros/", "");
   const matches = sources.filter(({ src }) => src.includes('slug: "' + slug + '"'));
+  if (matches.length === 0) {
+    const wrappers = sources.filter(({ src }) =>
+      src.includes('BAIRROS["' + slug + '"]') || src.includes("BAIRROS['" + slug + "']")
+    );
+    if (wrappers.length === 1) {
+      delegated.push({ path, file: wrappers[0].file });
+      continue;
+    }
+    errors.push(path + ": sem fonte inline e esperado exatamente 1 wrapper BAIRROS[slug]; encontrados " + wrappers.length + ".");
+    continue;
+  }
   if (matches.length !== 1) {
-    errors.push(path + ": esperado exatamente 1 arquivo-fonte; encontrados " + matches.length + ".");
+    errors.push(path + ": esperado exatamente 1 arquivo-fonte inline; encontrados " + matches.length + ".");
     continue;
   }
 
@@ -92,7 +101,8 @@ for (let i = 0; i < pages.length; i += 1) {
   }
 }
 
-for (const p of pages) console.log("[index-readiness] OK " + p.path + " — " + p.words + " palavras — " + p.file);
+for (const p of pages) console.log("[index-readiness] OK inline " + p.path + " — " + p.words + " palavras — " + p.file);
+for (const p of delegated) console.log("[index-readiness] OK curado " + p.path + " — wrapper " + p.file + " — conteúdo final validado pelos gates SSR.");
 
 if (errors.length) {
   console.error("[check-bairro-index-readiness] " + errors.length + " falha(s):");
@@ -100,4 +110,4 @@ if (errors.length) {
   process.exit(1);
 }
 
-console.log("[check-bairro-index-readiness] OK — " + pages.length + " bairros autorais das ondas >= 6 aptos ao índice.");
+console.log("[check-bairro-index-readiness] OK — " + (pages.length + delegated.length) + " bairros indexáveis cobertos (" + pages.length + " inline + " + delegated.length + " curados por BAIRROS). A originalidade renderizada permanece bloqueada por check:local-neighborhood-intent e check:local-doorway.");
