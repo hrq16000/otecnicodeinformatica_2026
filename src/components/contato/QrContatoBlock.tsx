@@ -1,5 +1,4 @@
 import { useEffect, useRef, useState } from "react";
-import QRCode from "qrcode";
 import { MessageCircle, QrCode } from "lucide-react";
 import { siteConfig } from "@/lib/siteConfig";
 import { trackQrCode, trackWaClick } from "@/lib/funnelAnalytics";
@@ -48,12 +47,27 @@ export const QrContatoBlock = ({
   useEffect(() => {
     const canvas = canvasRef.current;
     if (!canvas) return;
-    void QRCode.toCanvas(canvas, url, {
-      width: 176,
-      margin: 1,
-      color: { dark: "#0b1320", light: "#ffffff" },
-    });
-    trackQrCode("open", "whatsapp", location);
+    let ativo = true;
+    // Carregado só no cliente: o pacote "qrcode" (via pngjs) quebra a renderização no servidor.
+    import("qrcode")
+      .then((mod) => {
+        if (ativo && canvasRef.current) {
+          return mod.default.toCanvas(canvasRef.current, url, {
+            width: 176,
+            margin: 1,
+            color: { dark: "#0b1320", light: "#ffffff" },
+          });
+        }
+      })
+      .then(() => {
+        if (ativo) trackQrCode("open", "whatsapp", location);
+      })
+      .catch(() => {
+        /* falha ao desenhar o QR — o botão de WhatsApp continua disponível */
+      });
+    return () => {
+      ativo = false;
+    };
   }, [url, location]);
 
   return (
