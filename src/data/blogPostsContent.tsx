@@ -11494,15 +11494,15 @@ crontab -e
     ),
   },
   "como-conectar-wifi-tv-nao-conecta": {
-    title: "Smart TV não conecta no Wi-Fi: como separar problema de rede de defeito da TV",
+    title: "Smart TV não conecta no Wi-Fi: causas e testes antes de mexer na rede",
     excerpt:
-      "Como descobrir se a Smart TV não conecta por causa da rede, da faixa de 5 GHz, do isolamento do roteador ou de falha no módulo Wi-Fi do aparelho — e o que fazer em cada caso.",
+      "Smart TV não conecta no Wi-Fi? Compare celular, 2,4/5 GHz, sinal e roteador antes de concluir que a TV ou o módulo Wi-Fi está com defeito.",
     date: "2026-08-12",
     readTime: "11 min",
     category: "Redes",
     content: (
       <>
-        <p className="lead">Smart TV que não conecta tem duas famílias de causa muito diferentes: a rede não está entregando conexão utilizável naquele ponto da casa, ou o módulo Wi-Fi da própria TV está falhando. Os dois sintomas parecem iguais na tela. A diferença aparece no teste, e é ela que decide se o caso se resolve no roteador ou exige avaliação do aparelho.</p>
+        <p className="lead">Se a Smart TV não conecta no Wi-Fi, não comece restaurando tudo. Primeiro compare outro aparelho no mesmo ponto, confirme se a TV enxerga a rede e teste qual faixa o modelo aceita. Isso separa cobertura e configuração do roteador de uma possível falha do Wi-Fi da própria TV.</p>
 
         <h2>O teste que separa os dois cenários</h2>
         <p>Antes de qualquer configuração, leve um celular até o local exato da TV — mesma altura, mesma parede, TV ligada. Depois observe:</p>
@@ -11513,9 +11513,9 @@ crontab -e
           <li><strong>A TV não enxerga nenhuma rede, nem a do vizinho:</strong> forte indício de falha no módulo Wi-Fi do aparelho.</li>
         </ul>
 
-        <h2>Faixa de 5 GHz: a causa mais frequente de "a rede não aparece"</h2>
-        <p>Muitas TVs, inclusive modelos recentes de linha de entrada, operam apenas em 2,4 GHz. Se o roteador transmite as duas faixas com o mesmo nome de rede, a TV pode simplesmente não listar nada — para ela, aquela rede não existe.</p>
-        <p>A solução é separar os nomes das faixas no roteador e conectar a TV explicitamente à faixa de 2,4 GHz. Ela alcança mais longe e atravessa parede melhor; a perda de velocidade é irrelevante para vídeo, que consome muito menos banda do que a maioria das pessoas imagina.</p>
+        <h2>2,4 GHz e 5 GHz: confirme o que a TV realmente suporta</h2>
+        <p>Algumas TVs operam apenas em 2,4 GHz ou têm limitações específicas de canal e segurança. Se a rede de 5 GHz não aparece, consulte as especificações do modelo antes de concluir por defeito. Separar temporariamente os nomes das bandas pode ajudar a identificar qual rede a TV realmente enxerga.</p>
+        <p>Quando o modelo suporta 2,4 GHz, essa faixa costuma alcançar melhor pontos mais distantes; 5 GHz tende a oferecer mais capacidade em distâncias menores. O melhor teste é comparar as duas no mesmo local sem transformar uma configuração temporária em regra universal.</p>
 
         <h2>Isolamento de clientes e rede de visitantes</h2>
         <p>Roteadores de operadora frequentemente vêm com rede de visitantes ativa e isolamento entre aparelhos. A TV conectada nessa rede acessa a internet, mas não conversa com celular nem computador — e aí o espelhamento de tela e os aplicativos de controle deixam de funcionar, mesmo com o vídeo rodando normalmente.</p>
@@ -11741,15 +11741,15 @@ crontab -e
   // Intenção informacional. Não localiza a página: a ponte comercial e local
   // acontece por links contextuais, nunca por repetição de cidade no texto.
   "como-formatar-pc-sem-perder-arquivos": {
-    title: "Como formatar o PC ou notebook sem perder arquivos",
+    title: "Como formatar PC ou notebook sem perder arquivos: ordem segura",
     excerpt:
-      "O que decidir antes de formatar: quando a reinstalação resolve, quando não resolve, como preservar arquivos, contas e licenças, e a diferença entre redefinir o sistema e instalar do zero.",
+      "Como formatar PC ou notebook sem perder arquivos: backup verificado, contas, licenças, BitLocker e diferença entre redefinir e instalar do zero.",
     date: "2026-08-14",
     readTime: "12 min",
     category: "Procedimentos Técnicos",
     content: (
       <>
-        <p className="lead">Formatar é uma decisão, não um botão. Feita na hora certa, devolve uma máquina previsível. Feita como palpite, apaga anos de arquivo e devolve o mesmo problema em duas semanas. Este guia mostra como decidir e como executar sem perder o que importa.</p>
+        <p className="lead">Para formatar sem perder arquivos, o passo decisivo acontece antes da instalação: fazer uma cópia independente, abrir arquivos no destino, registrar contas/licenças e confirmar a chave do BitLocker quando houver. Só depois vale decidir entre redefinir o Windows e fazer instalação limpa.</p>
 
         <h2>Antes: formatar resolve o seu caso?</h2>
         <p>Reinstalar o sistema resolve o que é software: configuração quebrada, perfil corrompido, resíduo de programas desinstalados pela metade, atualização mal aplicada, infecção persistente. Não resolve o que é físico nem o que é limite de hardware.</p>
