@@ -11,16 +11,16 @@ const data = {
   metaTitle: "Técnico de Informática no Braga, SJP | Suporte",
   metaDescription: "Suporte de informática no Braga, São José dos Pinhais. Diagnóstico de PC, rede, Windows e periféricos com triagem antes da execução.",
   h1: "Técnico de Informática no Braga – São José dos Pinhais",
-  subtitulo: "Triagem para computador, rede e periféricos com foco em continuidade de uso e redução de retrabalho.",
-  descricaoLonga: `O Braga possui referências municipais claras em São José dos Pinhais. A rede pública mantém a Unidade de Saúde Braga, a Escola Municipal Pedro Moro Redeschi na Rua Joinville e a Escola Municipal Madre Paulina na Rua Campo Largo. Essas referências permitem localizar o atendimento com base em dados públicos verificáveis.
+  subtitulo: "Diagnóstico de inicialização, tela azul e estabilidade antes de formatar ou trocar componentes.",
+  descricaoLonga: `O Braga possui referências municipais claras em São José dos Pinhais. A Unidade de Saúde Braga integra a rede pública, a Escola Municipal Pedro Moro Redeschi fica na Rua Joinville e a Escola Municipal Madre Paulina na Rua Campo Largo. Essas referências servem para confirmar a localização sem criar promessas de deslocamento.
 
-Nesta página, o foco técnico está em continuidade de uso, rede e periféricos. Um computador pode ligar normalmente e ainda assim ficar praticamente parado quando perde acesso à internet, impressora, arquivos compartilhados ou aplicativos importantes. Por isso, a triagem começa pela função que deixou de funcionar.
+Nesta página, o foco técnico passa a ser inicialização e estabilidade do computador. Tela azul, reparo automático, reinicialização em ciclo e máquina que liga sem chegar ao Windows são sintomas que precisam ser separados antes de qualquer reinstalação. A causa pode estar no sistema, memória, armazenamento, temperatura ou alimentação.
 
-Se o Windows ainda inicia, verificamos eventos, drivers, atualizações, uso de memória e comunicação com dispositivos. Em impressoras, testamos fila, conexão e disponibilidade em outro computador. Em rede, comparamos outras estações antes de atribuir a falha ao roteador.
+Se o Windows ainda abre, coletamos códigos de erro, eventos, estado do SSD ou HD e uso de memória. Se a máquina cai em reparo automático ou deixa de reconhecer o disco, o armazenamento merece atenção antes de formatar. Em tela azul, uma foto do código e a informação sobre o que aconteceu imediatamente antes da falha ajudam a direcionar os testes.
 
-Quando o PC não liga, perde vídeo ou reinicia sob carga, o diagnóstico muda para alimentação, memória, temperatura e hardware. Se o armazenamento apresenta erros, backup e preservação de dados entram antes de reinstalação. Em notebook, bateria e fonte também são consideradas quando há perda de desempenho.
+Quando o computador reinicia sob carga, fonte e temperatura entram na investigação. Se liga sem vídeo, memória, vídeo e alimentação passam à frente do sistema operacional. Arquivos importantes são considerados antes de testes destrutivos ou reinstalação.
 
-Parte das falhas de software e configuração pode começar remotamente quando a máquina continua operacional. Falhas físicas, desmontagem e testes prolongados exigem visita ou bancada. A página do Braga foi reescrita para explicar essa diferença com conteúdo próprio e sem prometer solução ou prazo antes do diagnóstico.`,
+A triagem remota faz sentido quando a máquina ainda inicia e permite coletar dados. Casos sem vídeo, sem energia ou com armazenamento instável exigem visita ou bancada. A página do Braga foi reescrita para responder a falhas de inicialização e estabilidade, com uma intenção diferente das páginas de rede e periféricos.`,
   pontosReferencia: [
     "Unidade de Saúde Braga",
     "Rua Joinville",
@@ -30,29 +30,29 @@ Parte das falhas de software e configuração pode começar remotamente quando a
   ],
   tempoDeslocamento: "Agenda definida após triagem do problema e do endereço",
   servicosDestaque: [
-    "Correção de Windows e drivers",
-    "Configuração de rede",
-    "Impressora e periféricos",
-    "Diagnóstico de PC sem vídeo",
-    "Backup antes de reinstalação",
-    "Avaliação de SSD e memória"
+    "Diagnóstico de tela azul",
+    "Windows em reparo automático",
+    "PC que reinicia ou não inicia",
+    "Teste de SSD e HD",
+    "Teste de memória",
+    "Backup antes de reinstalação"
   ],
-  conteudoExclusivo: `Quando a máquina liga, mas a rotina para
+  conteudoExclusivo: `Tela azul e reparo automático não significam a mesma causa
 
-Perder acesso à rede, à impressora ou a um programa pode ser tão crítico quanto uma falha física. O primeiro passo é saber se o problema atinge apenas uma estação ou várias.
+Um código de tela azul pode apontar para driver, memória ou hardware. Reparo automático recorrente pode surgir por falha no sistema ou por armazenamento instável. Já um computador que liga sem vídeo precisa de uma linha de testes física.
 
-Se apenas um computador falha, driver, adaptador e configuração ganham peso. Se várias máquinas perdem acesso juntas, a investigação passa para infraestrutura. Em Windows, formatação só entra quando existe justificativa e backup resolvido.
+Por isso, o atendimento no Braga começa registrando o sintoma exato e o momento em que ele aparece. Se houver dados importantes, o estado do armazenamento é verificado antes de reinstalar o Windows.
 
-Essa abordagem dá à página do Braga uma função própria voltada a continuidade de uso, rede e periféricos.`,
+Essa separação reduz tentativas e dá à página do Braga uma função editorial própria voltada a inicialização e estabilidade.`,
   problemasComuns: [
-    "Computador perde acesso à rede",
-    "Impressora fica offline",
-    "Windows apresenta erro de driver",
-    "PC liga sem imagem",
-    "SSD apresenta lentidão",
-    "Arquivos importantes precisam de backup"
+    "Windows entra em reparo automático",
+    "Tela azul com código recorrente",
+    "Computador reinicia antes de abrir o sistema",
+    "PC liga sem apresentar imagem",
+    "SSD ou HD deixa de ser reconhecido",
+    "Arquivos importantes antes de reinstalação"
   ],
-  dicasLocais: `Ao pedir atendimento no Braga, informe o endereço e uma referência como a Unidade de Saúde Braga, Rua Joinville ou Rua Campo Largo. Para rede, diga se outros equipamentos apresentam a mesma falha; para impressora, teste outro computador; para Windows, envie a mensagem de erro.`,
+  dicasLocais: `Ao pedir atendimento no Braga, informe o endereço e uma referência como a Unidade de Saúde Braga, Rua Joinville ou Rua Campo Largo. Para tela azul, envie foto do código; para reparo automático, diga se o disco aparece na BIOS; e, se houver arquivos importantes, evite formatar antes da triagem.`,
 };
 
 const Braga = () => <BairroTemplate data={data} />;
