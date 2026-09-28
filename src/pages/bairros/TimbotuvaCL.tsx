@@ -26,6 +26,16 @@ Quando existem arquivos importantes, backup entra antes de formatação ou troca
     "BR-277, km 108"
   ],
   tempoDeslocamento: "Modalidade e agenda definidas após triagem do endereço e do defeito",
+  tituloSecaoPrincipal: "Conectividade e acesso remoto no Timbotuva",
+  tituloSecaoContexto: "Quando a rede existe, mas o computador ainda não comunica direito",
+  triagemResumo: "No Timbotuva, a triagem começa verificando se o computador obtém rede, navega, resolve nomes e mantém conexão estável. A partir daí, separamos configuração, driver, adaptador e infraestrutura antes de decidir por visita ou troca de equipamento.",
+  faqTitulo: "Perguntas sobre rede e acesso remoto no Timbotuva",
+  faqsCustom: [
+    { question: "O computador conecta ao Wi-Fi, mas a internet cai. O que vocês testam?", answer: "Verificamos estabilidade do adaptador, endereço de rede, DNS e comportamento de outros dispositivos. Conectar ao Wi-Fi não garante que toda a comunicação esteja funcionando corretamente." },
+    { question: "Se o acesso remoto não conecta, isso prova que a internet está ruim?", answer: "Não. Firewall, serviço, configuração, DNS ou o próprio software de acesso podem impedir a sessão mesmo com navegação normal. A triagem separa essas camadas." },
+    { question: "Notebook só funciona perto do roteador. Precisa trocar o roteador?", answer: "Primeiro comparamos outros aparelhos no mesmo ponto e avaliamos adaptador, antena e cobertura. Troca de roteador só faz sentido quando os testes indicam problema na infraestrutura." },
+    { question: "Quando um problema de rede passa a exigir visita?", answer: "Quando precisamos testar cabeamento, portas, posicionamento, alimentação do roteador ou quando o computador não mantém conexão suficiente para diagnóstico remoto." },
+  ],
   servicosDestaque: [
     "Diagnóstico de Wi-Fi e rede",
     "Triagem e suporte remoto",
@@ -34,20 +44,20 @@ Quando existem arquivos importantes, backup entra antes de formatação ou troca
     "Backup e preservação de arquivos",
     "Avaliação de fonte e bateria"
   ],
-  conteudoExclusivo: `Nem todo chamado precisa começar com deslocamento
+  conteudoExclusivo: `Conectar ao Wi-Fi não encerra o diagnóstico de rede
 
-Se o computador ainda inicia e a falha está em configuração, programa, driver ou acesso, a triagem remota pode reduzir hipóteses ou resolver parte do problema. Se não há vídeo, energia ou existe defeito físico, o atendimento precisa mudar.
+Uma máquina pode mostrar sinal e ainda falhar em DNS, gateway, estabilidade do adaptador ou comunicação com serviços específicos. Por isso, a triagem compara navegação, outros dispositivos e comportamento do mesmo computador em condições diferentes.
 
-Em Wi-Fi, comparar outro dispositivo evita culpar o roteador por uma falha isolada. Em notebook sem carga, fonte, bateria e conector precisam ser separados.
+Se o notebook funciona apenas perto do roteador, avaliamos cobertura e o próprio adaptador. Se navega, mas o acesso remoto não conecta, firewall, serviço e configuração entram no diagnóstico. Quando a conexão cai em todos os aparelhos, a investigação passa para infraestrutura.
 
-Essa abordagem dá à página de Timbotuva uma função própria voltada à decisão entre remoto, visita e bancada, sem transformar a localização em promessa de velocidade.`,
+No Timbotuva, a página foi reorganizada para explicar essas camadas de conectividade e não repetir o roteiro de falhas físicas usado em outras localidades.`,
   problemasComuns: [
-    "Notebook perde conexão Wi-Fi",
-    "Computador não liga",
-    "PC liga sem apresentar vídeo",
-    "Windows apresenta erro de configuração",
-    "Roteador funciona para alguns dispositivos e falha para outros",
-    "Arquivos importantes em máquina instável"
+    "Notebook conecta ao Wi-Fi, mas perde internet",
+    "Acesso remoto falha apesar de a navegação funcionar",
+    "Driver de rede desaparece depois de atualização",
+    "Notebook só mantém conexão perto do roteador",
+    "Windows perde configuração de IP ou DNS",
+    "Vários dispositivos apresentam queda ao mesmo tempo"
   ],
   dicasLocais: `Ao pedir atendimento no Timbotuva, informe o endereço e uma referência local confiável, como a Rua Germânia ou o acesso pela BR-277. Diga se o computador ainda acessa a internet; isso ajuda a avaliar suporte remoto. Para máquina sem vídeo ou sem energia, informe LEDs, ventoinhas e bipes.`,
 };
