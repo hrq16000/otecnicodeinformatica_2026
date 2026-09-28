@@ -29,6 +29,16 @@ Quando existem arquivos importantes, backup entra antes de formatação ou troca
     "CEU da Cultura da Ferraria"
   ],
   tempoDeslocamento: "Modalidade e agenda definidas após triagem do defeito e do endereço",
+  tituloSecaoPrincipal: "Suporte remoto, visita e hardware na Ferraria",
+  tituloSecaoContexto: "O sintoma define se o atendimento começa à distância ou em bancada",
+  triagemResumo: "Na Ferraria, primeiro verificamos se a máquina ainda inicia, mantém conexão e permite testes remotos. Erros de software e configuração podem começar à distância; ausência de energia, vídeo, conector danificado ou aquecimento exigem avaliação física.",
+  faqTitulo: "Dúvidas sobre modalidade de atendimento na Ferraria",
+  faqsCustom: [
+    { question: "Quando um chamado na Ferraria pode começar por suporte remoto?", answer: "Quando o computador ainda inicia, possui conexão estável e a falha está em software, configuração ou acesso. Isso permite reduzir hipóteses antes de qualquer deslocamento." },
+    { question: "PC sem vídeo pode ser resolvido remotamente?", answer: "Não de forma confiável. Sem imagem, o diagnóstico depende de sinais de energia, memória, vídeo e alimentação, o que normalmente exige avaliação física." },
+    { question: "Notebook sem carga deve ser tratado como problema de bateria?", answer: "Não automaticamente. Fonte, conector, bateria e circuito interno podem produzir sintomas parecidos e precisam ser separados por teste." },
+    { question: "Como vocês decidem entre visita e bancada?", answer: "A decisão depende de desmontagem, tempo de teste, necessidade de medição e risco para os dados. Casos simples podem ficar no local; falhas físicas mais complexas seguem para bancada." },
+  ],
   servicosDestaque: [
     "Diagnóstico de Wi-Fi e rede",
     "Triagem e suporte remoto",
