@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "@/lib/router-compat";
 import type { BlogPostContent } from "@/data/blogPostsContent";
 
 /**
@@ -1071,6 +1072,195 @@ export const blogSupplementalPosts: Record<string, BlogPostContent> = {
       </>
     ),
   },
+  // Restauração SEO 2026-09-28:
+  // artigos aprovados, com fontes/capas preservadas e ainda indexados no GSC,
+  // mas cujo corpo havia desaparecido dos mapas carregados por BlogPost.
+  "como-conectar-wifi-tv-nao-conecta": {
+    title: "Smart TV não conecta no Wi-Fi: como separar problema de rede de defeito da TV",
+    excerpt:
+      "Como descobrir se a Smart TV não conecta por causa da rede, da faixa de 5 GHz, do isolamento do roteador ou de falha no módulo Wi-Fi do aparelho — e o que fazer em cada caso.",
+    date: "2026-08-12",
+    readTime: "11 min",
+    category: "Redes",
+    content: (
+      <>
+        <p className="lead">Smart TV que não conecta tem duas famílias de causa muito diferentes: a rede não está entregando conexão utilizável naquele ponto da casa, ou o módulo Wi-Fi da própria TV está falhando. Os dois sintomas parecem iguais na tela. A diferença aparece no teste, e é ela que decide se o caso se resolve no roteador ou exige avaliação do aparelho.</p>
+
+        <h2>O teste que separa os dois cenários</h2>
+        <p>Antes de qualquer configuração, leve um celular até o local exato da TV — mesma altura, mesma parede, TV ligada. Depois observe:</p>
+        <ul>
+          <li><strong>Celular também pega mal ali:</strong> o problema é cobertura. A TV está apenas na pior posição da casa, normalmente atrás de móvel, em parede com estrutura metálica ou no cômodo mais distante do roteador.</li>
+          <li><strong>Celular conecta bem e a TV não enxerga a rede:</strong> o caso costuma ser de faixa ou de configuração do roteador, não de alcance.</li>
+          <li><strong>A TV conecta, mas cai sozinha depois de minutos ou horas:</strong> comportamento típico de rede saturada, canal congestionado ou módulo Wi-Fi do aparelho com falha térmica — nessa ordem de probabilidade.</li>
+          <li><strong>A TV não enxerga nenhuma rede, nem a do vizinho:</strong> forte indício de falha no módulo Wi-Fi do aparelho.</li>
+        </ul>
+
+        <h2>Faixa de 5 GHz: a causa mais frequente de "a rede não aparece"</h2>
+        <p>Muitas TVs, inclusive modelos recentes de linha de entrada, operam apenas em 2,4 GHz. Se o roteador transmite as duas faixas com o mesmo nome de rede, a TV pode simplesmente não listar nada — para ela, aquela rede não existe.</p>
+        <p>A solução é separar os nomes das faixas no roteador e conectar a TV explicitamente à faixa de 2,4 GHz. Ela alcança mais longe e atravessa parede melhor; a perda de velocidade é irrelevante para vídeo, que consome muito menos banda do que a maioria das pessoas imagina.</p>
+
+        <h2>Isolamento de clientes e rede de visitantes</h2>
+        <p>Roteadores de operadora frequentemente vêm com rede de visitantes ativa e isolamento entre aparelhos. A TV conectada nessa rede acessa a internet, mas não conversa com celular nem computador — e aí o espelhamento de tela e os aplicativos de controle deixam de funcionar, mesmo com o vídeo rodando normalmente.</p>
+        <p>Quando o sintoma é "a TV tem internet mas o celular não a encontra", esse é o primeiro item a verificar. A separação correta entre rede de trabalho, rede doméstica e rede de visitantes faz parte do que ajustamos em <Link to="/servicos/redes-e-wifi">redes e Wi-Fi</Link>.</p>
+
+        <h2>Canal congestionado em prédio</h2>
+        <p>Em edifício, dezenas de redes disputam as mesmas frequências. A TV conecta, o ícone fica normal, e mesmo assim o vídeo trava e a conexão cai. Não é defeito: é disputa por espaço no ar. Fixar um canal menos ocupado em 2,4 GHz e reposicionar o roteador para longe de metal, espelho, caixa d'água e do próprio armário costuma mudar o resultado mais do que trocar de aparelho.</p>
+
+        <h2>O que fazer, na ordem que evita retrabalho</h2>
+        <ol>
+          <li><strong>Desligar TV e roteador da tomada</strong> por um minuto, religando primeiro o roteador e aguardando ele estabilizar. Isso limpa sessões travadas dos dois lados.</li>
+          <li><strong>Esquecer a rede na TV e reconectar</strong>, digitando a senha com atenção a maiúsculas e minúsculas — o teclado da TV frequentemente ativa maiúscula automática na primeira letra.</li>
+          <li><strong>Conectar à faixa de 2,4 GHz</strong> com nome próprio, se as faixas ainda estiverem unificadas.</li>
+          <li><strong>Verificar rede de visitantes e isolamento de clientes</strong> no roteador.</li>
+          <li><strong>Atualizar o sistema da TV</strong>, quando ela conseguir conectar ao menos por cabo — correções de conectividade são comuns nessas atualizações.</li>
+          <li><strong>Testar por cabo de rede.</strong> É o teste decisivo: se por cabo funciona perfeitamente e por Wi-Fi nunca funciona, o módulo sem fio do aparelho é o suspeito principal.</li>
+        </ol>
+        <p>Reset de fábrica só faz sentido depois desses passos. Ele apaga contas, aplicativos e preferências e raramente resolve o que os itens anteriores não resolveram.</p>
+
+        <h2>Quando é defeito da TV — e o que isso significa na prática</h2>
+        <p>Quando a TV não lista nenhuma rede, conecta por cabo sem falha e o problema persiste após atualização e reset, o cenário aponta para o módulo Wi-Fi do aparelho. Nesse ponto entra uma conversa honesta de custo: em boa parte dos televisores de linha de entrada, o reparo dessa parte custa mais do que resolver o uso com conexão cabeada ou com um aparelho externo de streaming ligado à porta HDMI.</p>
+        <p>Não prometemos reparo antes de avaliar, e não trocamos placa por suposição. A avaliação de imagem, som, placa e alimentação segue o escopo descrito em <Link to="/servicos/conserto-tv">conserto de TV</Link>, com o critério de verificação e cobrança explicado em <Link to="/diagnostico-tecnico">como funciona o diagnóstico técnico</Link>.</p>
+
+        <h2>Resumo prático</h2>
+        <p>Compare a TV com o celular no mesmo ponto para separar cobertura de configuração. Se a rede não aparece na lista, quase sempre é faixa de 5 GHz; se aparece e cai, é congestionamento ou distância; se o celular não encontra a TV, é rede de visitantes ou isolamento; se por cabo funciona e por Wi-Fi nunca funciona, é o módulo sem fio do aparelho — e aí vale comparar o custo do reparo com a solução por cabo ou aparelho externo.</p>
+      </>
+    ),
+  },
+
+  "como-formatar-pc-sem-perder-arquivos": {
+    title: "Como formatar o PC ou notebook sem perder arquivos",
+    excerpt:
+      "O que decidir antes de formatar: quando a reinstalação resolve, quando não resolve, como preservar arquivos, contas e licenças, e a diferença entre redefinir o sistema e instalar do zero.",
+    date: "2026-08-14",
+    readTime: "12 min",
+    category: "Procedimentos Técnicos",
+    content: (
+      <>
+        <p className="lead">Formatar é uma decisão, não um botão. Feita na hora certa, devolve uma máquina previsível. Feita como palpite, apaga anos de arquivo e devolve o mesmo problema em duas semanas. Este guia mostra como decidir e como executar sem perder o que importa.</p>
+
+        <h2>Antes: formatar resolve o seu caso?</h2>
+        <p>Reinstalar o sistema resolve o que é software: configuração quebrada, perfil corrompido, resíduo de programas desinstalados pela metade, atualização mal aplicada, infecção persistente. Não resolve o que é físico nem o que é limite de hardware.</p>
+        <ul>
+          <li><strong>Disco mecânico com Windows 10/11:</strong> a máquina volta rápida por poucos dias e regride. O gargalo é a fila de leitura do disco, não o sistema.</li>
+          <li><strong>Pouca memória:</strong> o sistema recém-instalado abre menos coisas ao mesmo tempo — isso não é ganho de desempenho, é uso menor.</li>
+          <li><strong>Superaquecimento:</strong> queda de velocidade depois de alguns minutos é temperatura, não software.</li>
+          <li><strong>Disco com setores em falha:</strong> formatar sobre um disco falhando costuma travar no meio da instalação e pode inviabilizar a recuperação depois.</li>
+          <li><strong>Travamento ao ligar, sem chegar ao sistema:</strong> investigue hardware antes; formatação não é diagnóstico.</li>
+        </ul>
+        <p>Se a queixa é lentidão e você ainda não sabe a causa, o caminho honesto é medir antes de apagar: veja <Link to="/problemas/computador-lento">como identificar por que o computador está lento</Link> e só depois decida.</p>
+
+        <h2>Backup: o passo que não pode ser presumido</h2>
+        <p>Backup só existe quando foi conferido. Copiar a pasta e não abrir nenhum arquivo depois não é backup — é esperança. O mínimo antes de qualquer formatação:</p>
+        <ol>
+          <li>Copie Documentos, Imagens, Vídeos, Downloads e Área de Trabalho para um disco externo ou nuvem.</li>
+          <li>Abra pelo menos um arquivo de cada pasta copiada, no destino, para confirmar integridade.</li>
+          <li>Exporte favoritos e senhas do navegador (ou confirme que a conta sincroniza).</li>
+          <li>Localize os dados de e-mail: contas configuradas em programa local guardam mensagens em arquivo próprio, que precisa ser copiado.</li>
+          <li>Anote licenças de programas pagos e onde foram compradas.</li>
+          <li>Se o disco estiver criptografado, salve a chave de recuperação antes — sem ela, o conteúdo é irrecuperável.</li>
+        </ol>
+        <p>Arquivos que não abrem, mídia que some do explorador ou pasta que trava a cópia são sinal de disco doente. Nesse caso pare: continuar tentando reduz as chances de <Link to="/servicos/recuperacao-de-dados">recuperação de dados</Link>.</p>
+
+        <h2>Redefinir o sistema x instalar do zero</h2>
+        <p>São procedimentos diferentes com resultados diferentes:</p>
+        <ul>
+          <li><strong>Redefinir mantendo arquivos:</strong> o Windows reinstala a si mesmo e preserva as pastas do usuário. Remove programas instalados. É o caminho mais rápido para configuração quebrada.</li>
+          <li><strong>Reinstalação por cima (mantendo tudo):</strong> repara componentes do sistema preservando programas e arquivos. Útil quando o Windows falha em atualizar ou apresenta erro recorrente.</li>
+          <li><strong>Instalação limpa:</strong> apaga a partição do sistema e começa do zero. É a única opção confiável quando houve infecção séria ou quando a máquina acumulou anos de instalação.</li>
+        </ul>
+        <p>O passo a passo detalhado da instalação limpa, incluindo mídia de instalação e particionamento, está em <Link to="/blog/como-instalar-windows-11-do-zero">como instalar o Windows 11 do zero</Link>. Se a motivação for infecção, leia antes <Link to="/blog/como-remover-virus-windows-iniciantes">como remover vírus e adware</Link>: em boa parte dos casos a limpeza dirigida resolve sem apagar nada.</p>
+
+        <h2>Licença, contas e drivers</h2>
+        <p>Em máquinas de fábrica, a licença normalmente está vinculada ao equipamento e é reconhecida automaticamente após a instalação. Em máquinas montadas, a licença costuma estar vinculada a uma conta — entrar com a mesma conta evita perder a ativação. Programas pagos exigem o registro original; sem ele, reinstalar significa comprar de novo.</p>
+        <p>Depois da instalação, a ordem dos drivers importa: chipset primeiro, depois vídeo, rede, áudio e periféricos. Prefira sempre o site do fabricante do equipamento. Pacotes genéricos de "atualizador de drivers" são uma das causas mais comuns de instabilidade em máquina recém-formatada.</p>
+
+        <h2>O que costuma dar errado</h2>
+        <ul>
+          <li>Descobrir, no meio da instalação, que a chave de criptografia não foi salva.</li>
+          <li>Formatar a partição errada em máquina com dois discos.</li>
+          <li>Perder e-mails que estavam apenas no programa local.</li>
+          <li>Reinstalar sem ter a rede funcionando: sem driver de rede, não há como baixar os outros.</li>
+          <li>Reinstalar sobre disco com falha e travar no meio, sem backup verificado.</li>
+        </ul>
+
+        <h2>Quando faz sentido chamar alguém</h2>
+        <p>Não porque o procedimento é secreto — ele está inteiro aí em cima. Faz sentido quando o custo de errar é alto: arquivo de trabalho sem cópia, e-mail de anos, sistema de gestão instalado localmente, disco com sinais de falha ou máquina que precisa voltar a funcionar no mesmo dia.</p>
+        <p>Se você não tem certeza de que formatar é o caminho, o passo anterior é o <Link to="/diagnostico-tecnico">diagnóstico técnico</Link>. E se já decidiu, o escopo, as condições e o que está incluso estão em <Link to="/servicos/formatacao">formatação e instalação do sistema</Link> — o custo dessa e das demais modalidades está detalhado em <Link to="/blog/quanto-custa-formatar-um-computador">quanto custa formatar um computador</Link>.</p>
+      </>
+    ),
+  },
+
+  "troquei-o-ssd-e-o-pc-so-abre-a-bios": {
+    title: "Troquei o HD/SSD e o PC só abre a BIOS: o que fazer",
+    excerpt:
+      "Disco novo vem vazio: sem sistema instalado, o computador para no Setup. Como confirmar a detecção do M.2, resolver conflito de portas e instalar o Windows do zero.",
+    date: "2026-08-25",
+    readTime: "11 min",
+    category: "Procedimentos Técnicos",
+    content: (
+      <>
+        <p className="lead">Instalar um SSD novo e ver a máquina parar na tela de configuração não é sinal de defeito. É o comportamento esperado: <strong>disco novo sai de fábrica vazio</strong>, sem sistema operacional e sem carregador de inicialização. Não existe nada para o firmware iniciar.</p>
+
+        <h2>Resposta curta</h2>
+        <p>Confirme que o disco novo aparece na lista de dispositivos do Setup, verifique se o slot M.2 usado não desativou uma porta SATA, e instale o sistema a partir de um pendrive — ou, se a intenção era manter tudo como estava, faça a clonagem corretamente em vez de instalar do zero.</p>
+
+        <h2>Por que o disco novo não inicia sozinho</h2>
+        <p>Um SSD recém-comprado normalmente nem tem tabela de partições. Ele é um espaço bruto. Para virar um disco de sistema ele precisa ser <strong>inicializado</strong> (receber uma tabela GPT ou MBR), <strong>particionado</strong>, <strong>formatado</strong> e finalmente receber a instalação. O instalador do Windows faz as quatro etapas, então não é necessário preparar o disco antes.</p>
+        <p>Existe uma exceção que causa confusão: SSDs vendidos como "com Windows instalado" por lojas independentes. Nesses casos, a instalação costuma estar vinculada ao hardware de origem e falhar no primeiro boot.</p>
+
+        <h2>Passo 1 — o disco aparece no Setup?</h2>
+        <p>Entre no Setup e procure a aba de informações do sistema ou de armazenamento. O modelo do disco novo precisa estar listado. Se não estiver:</p>
+        <ul>
+          <li><strong>M.2 mal encaixado:</strong> o módulo entra inclinado, encosta no fim do conector e só então é preso pelo parafuso. Sem o parafuso, ele fica levantado e perde contato.</li>
+          <li><strong>Slot incompatível:</strong> há slots M.2 apenas SATA, apenas NVMe (PCIe) e híbridos. Confira no manual da placa ou do notebook qual é o do seu modelo. Chave B, M ou B+M no conector do módulo é o primeiro indício.</li>
+          <li><strong>Conflito de portas:</strong> ativar o segundo M.2 desabilita portas SATA específicas em muitas placas. É por isso que, ao instalar o SSD novo, o HD antigo às vezes "some".</li>
+          <li><strong>SATA em modo errado:</strong> o controlador precisa estar em <strong>AHCI</strong>. Modo RAID ou Intel RST esconde discos do instalador do Windows.</li>
+          <li><strong>Adaptador ou caddy:</strong> adaptadores baratos de baia ótica falham com frequência. Teste o disco direto na placa antes de culpar o disco.</li>
+        </ul>
+        <p>Detalhes de compatibilidade antes da compra estão em <Link to="/blog/como-fazer-upgrade-ssd-nvme" className="text-accent">upgrade para SSD NVMe</Link>, e o caso específico de notebooks com dois armazenamentos em <Link to="/blog/como-instalar-segundo-ssd-notebook" className="text-accent">como instalar um segundo SSD no notebook</Link>.</p>
+
+        <h2>Passo 2 — configurar o slot M.2 na BIOS</h2>
+        <p>Placas com vários slots M.2 costumam expor opções que precisam bater com o hardware instalado:</p>
+        <ul>
+          <li><strong>M.2 Mode / M.2 Configuration:</strong> alterna entre SATA e PCIe para o slot. Em <em>Auto</em> geralmente funciona; em modo fixo errado, o disco desaparece.</li>
+          <li><strong>Geração PCIe (Gen3 × Gen4):</strong> deixar em <em>Auto</em> é o recomendado. Forçar Gen4 em placa ou disco que não suportam produz instabilidade e detecção intermitente; forçar Gen3 num disco Gen4 apenas limita a velocidade, sem impedir o funcionamento.</li>
+          <li><strong>Divisão de linhas PCIe:</strong> em algumas placas, ocupar o segundo M.2 reduz as linhas da placa de vídeo. Não impede o boot, mas explica queda de desempenho depois do upgrade.</li>
+          <li><strong>Boot mode:</strong> para instalar Windows 11, mantenha <strong>UEFI</strong> com CSM desabilitado e Secure Boot ligado.</li>
+        </ul>
+
+        <h2>Passo 3 — instalar o Windows a partir do Setup</h2>
+        <ol>
+          <li>Crie a mídia de instalação em outro computador — a etapa está detalhada em <Link to="/blog/como-instalar-windows-11-do-zero" className="text-accent">como instalar o Windows 11 do zero</Link>.</li>
+          <li>Conecte o pendrive, ligue e abra o menu de inicialização (F12, F11 ou F8) ou coloque o pendrive em primeiro lugar na lista de prioridade.</li>
+          <li>Escolha a entrada com prefixo <strong>UEFI:</strong> para que a instalação use GPT.</li>
+          <li>Ao chegar na escolha do disco, selecione o <strong>espaço não alocado</strong> do SSD novo e avance. O instalador cria automaticamente a partição EFI, a reservada e a do sistema.</li>
+          <li>Se o instalador informar que não é possível instalar naquele disco, quase sempre é conflito de modo (MBR × GPT) ou controlador em RAID — ajuste no Setup e recomece.</li>
+          <li>Depois da instalação, entre no Setup e confirme que <strong>Windows Boot Manager</strong> ficou como primeira opção.</li>
+        </ol>
+        <aside className="rounded-lg border border-border bg-muted/40 p-4 not-prose my-6">
+          <p className="m-0 text-sm"><strong>Disco antigo conectado?</strong> Durante a instalação, deixe apenas o SSD novo ligado. Com dois discos presentes, o instalador pode gravar a partição de inicialização no disco errado — e a máquina deixa de iniciar quando o antigo for removido.</p>
+        </aside>
+
+        <h2>Passo 4 — recuperar os arquivos do disco antigo</h2>
+        <p>Depois que o sistema novo estiver funcionando, reconecte o disco antigo como secundário (interno ou por adaptador USB). Ele aparecerá como uma unidade comum e os documentos, fotos e downloads continuam acessíveis nas pastas de usuário.</p>
+        <p>Programas não migram dessa forma: precisam ser reinstalados. Contas de e-mail configuradas localmente exigem exportação prévia — se esse era o seu caso e o disco antigo já foi apagado, o caminho é o de <Link to="/blog/como-recuperar-dados-hd-com-defeito" className="text-accent">recuperação de dados</Link>.</p>
+
+        <h2>Instalar do zero ou clonar?</h2>
+        <ul>
+          <li><strong>Instalar do zero</strong> quando o sistema antigo estava lento, instável, infectado ou muito antigo. Você perde a configuração, mas ganha um ambiente limpo.</li>
+          <li><strong>Clonar</strong> quando o sistema funciona bem e há muitos programas configurados. O critério, os riscos e o motivo de uma cópia às vezes não inicializar estão em <Link to="/blog/como-clonar-hd-para-ssd" className="text-accent">clonar HD para SSD</Link>.</li>
+        </ul>
+        <p>Se você clonou e a máquina parou no Setup, o problema não é o disco novo: é o carregador que não veio junto — o reparo está em <Link to="/blog/erro-no-bootable-device-como-resolver" className="text-accent">erro "No Bootable Device"</Link>.</p>
+
+        <h2>Conclusão</h2>
+        <p>Disco novo sempre para na BIOS até receber um sistema. A sequência correta é confirmar a detecção, ajustar o slot e o modo de boot, instalar com apenas o disco novo conectado e só depois reconectar o antigo para copiar os arquivos.</p>
+        <p>Para o quadro completo de causas de parada no Setup, volte ao guia principal: <Link to="/blog/computador-entra-direto-na-bios" className="text-accent">meu computador entra direto na BIOS</Link>. Para executar o upgrade com dados preservados e teste de saúde do disco, veja <Link to="/servicos/upgrade-ssd-ram" className="text-accent">upgrade de SSD e memória</Link>.</p>
+
+        <p className="text-sm text-muted-foreground">Conteúdo produzido e revisado pela equipe editorial de O Técnico de Informática. Revisado em 25 de agosto de 2026.</p>
+      </>
+    ),
+  },
+
 };
 
 export default blogSupplementalPosts;
