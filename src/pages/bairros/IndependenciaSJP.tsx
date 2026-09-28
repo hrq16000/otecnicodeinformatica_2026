@@ -1,56 +1,60 @@
 import { BairroTemplate } from "./BairroTemplate";
 
-// Referências locais verificadas em 27/09/2026:
-// - Prefeitura de São José dos Pinhais: publicação de 08/01/2026 identifica explicitamente o bairro Independência.
-// - Prefeitura de São José dos Pinhais: mutirão municipal de saúde realizado no bairro Independência.
-// - Prefeitura de São José dos Pinhais: Rua Anibal Silva documentada em obra municipal de pavimentação no bairro.
+// Referências locais verificadas em 28/09/2026:
+// - Prefeitura de São José dos Pinhais: Projeto Parque Linear Jardim Independência, aprovado em acelerador global em 2025.
+// - Prefeitura de São José dos Pinhais: Estádio Municipal Moacir Tomelin — Rua Leonir Ludgero Schreber, 100, Jardim Independência.
+// - Prefeitura de São José dos Pinhais: ações do SINE nos Bairros realizadas no Jardim Independência, com atendimento na Rua Divonsir Luciano.
 const data = {
   nome: "Independência",
   slug: "independencia-sjp",
   cidade: "São José dos Pinhais",
-  metaTitle: "Técnico de Informática no Independência, SJP | Diagnóstico",
-  metaDescription: "Assistência de informática no Independência, São José dos Pinhais. Diagnóstico de Windows, armazenamento, notebook e rede com triagem antes da execução.",
-  h1: "Técnico de Informática no Independência – São José dos Pinhais",
-  subtitulo: "Triagem para estabilidade, armazenamento e conectividade antes de formatar, trocar peças ou indicar equipamento novo.",
-  descricaoLonga: `O Independência é identificado explicitamente pela Prefeitura de São José dos Pinhais em publicações municipais recentes. O bairro também já recebeu ações públicas de saúde e a Rua Anibal Silva aparece em documentação de infraestrutura do município. Essas referências confirmam a localidade sem recorrer a pontos genéricos ou estimativas de deslocamento.
+  metaTitle: "Técnico de Informática no Jardim Independência, SJP | Suporte",
+  metaDescription: "Suporte de informática no Jardim Independência, São José dos Pinhais. Windows, impressora, periféricos, programas e acesso remoto com diagnóstico antes da execução.",
+  h1: "Técnico de Informática no Jardim Independência – São José dos Pinhais",
+  subtitulo: "Suporte para Windows, programas e periféricos com triagem remota quando possível e visita quando o problema exige presença física.",
+  descricaoLonga: `O Jardim Independência aparece em ações e projetos recentes da Prefeitura de São José dos Pinhais. Em 2025, o município teve aprovado o projeto Parque Linear Jardim Independência em uma iniciativa internacional de aceleração de projetos socioambientais. A região também possui o Estádio Municipal Moacir Tomelin, na Rua Leonir Ludgero Schreber, e já recebeu ações do SINE nos Bairros. Essas referências ajudam a confirmar a localização sem recorrer a descrições genéricas.
 
-Nesta página, o foco técnico está em estabilidade, armazenamento e conectividade. Um computador que demora para iniciar, trava ao abrir arquivos ou reinicia durante uso pode ter causas diferentes: Windows, memória, SSD ou HD, temperatura ou alimentação. Formatar antes de separar essas hipóteses pode gerar retrabalho e colocar dados importantes em risco.
+Nesta página, a orientação técnica parte de uma pergunta prática: qual função deixou de funcionar? Um computador pode ligar normalmente e ainda impedir trabalho ou estudo porque a impressora ficou offline, o navegador deixou de acessar um sistema, a webcam sumiu, o áudio parou ou um programa passou a fechar sozinho. Nesses casos, formatar o computador inteiro antes de investigar a função afetada costuma ser um atalho ruim.
 
-Quando o sistema ainda inicia, verificamos espaço livre, eventos do Windows, uso de memória e comportamento do armazenamento. Se o SSD ou HD apresenta erros, desaparece do sistema ou trava durante cópia, a prioridade passa a ser backup ou recuperação de dados. Se o armazenamento está saudável, a investigação segue por software, memória, temperatura e alimentação.
+Quando o Windows ainda inicia, a triagem pode começar verificando atualizações recentes, drivers, dispositivos reconhecidos, fila de impressão, permissões, inicialização de programas e comunicação de rede. Em impressoras, por exemplo, saber se outro computador consegue imprimir ajuda a separar falha do equipamento, da rede ou daquela estação específica.
 
-Em notebook, fonte, bateria e aquecimento entram quando existe desligamento, autonomia baixa ou queda de desempenho sob carga. Em Wi-Fi, comparamos outros dispositivos para entender se a falha está no próprio computador ou na infraestrutura. Se apenas uma máquina perde conexão, driver e adaptador ganham peso; se vários aparelhos falham juntos, o foco muda para roteador, cobertura ou conexão principal.
+Webcam, microfone e áudio também podem parar depois de atualização, mudança de porta USB ou alteração de configuração. Se o dispositivo aparece no sistema, a investigação segue por software e permissões; se não aparece em nenhuma porta ou em outro computador, a hipótese física ganha peso.
 
-Quando o equipamento continua operacional e conectado, parte da triagem pode começar remotamente. Falhas físicas, ausência de vídeo, armazenamento instável ou necessidade de desmontagem exigem visita ou bancada. A página do Independência foi reescrita para explicar esse processo com conteúdo próprio, referências municipais verificáveis e sem promessa de solução ou horário antes do diagnóstico.`,
+Parte desses casos pode ser avaliada por suporte remoto quando a máquina está funcionando e conectada. Se há conector danificado, falha de energia, tela sem imagem ou necessidade de abrir o equipamento, a visita ou a bancada passam a ser mais adequadas.
+
+A página do Jardim Independência foi reescrita para ter uma função editorial própria: orientar problemas de Windows, programas e periféricos, deixando claro quando vale tentar remoto e quando o defeito exige avaliação física.`,
   pontosReferencia: [
-    "Independência – São José dos Pinhais",
-    "Rua Anibal Silva",
-    "Área de ações municipais no bairro Independência"
+    "Jardim Independência – São José dos Pinhais",
+    "Rua Leonir Ludgero Schreber",
+    "Estádio Municipal Moacir Tomelin",
+    "Rua Divonsir Luciano",
+    "Projeto Parque Linear Jardim Independência"
   ],
-  tempoDeslocamento: "Modalidade e agenda definidas após triagem do endereço e do defeito",
+  tempoDeslocamento: "Modalidade e agenda definidas após triagem do endereço e da função afetada",
   servicosDestaque: [
-    "Diagnóstico de SSD e HD",
-    "Windows lento ou instável",
-    "Notebook com aquecimento",
-    "Diagnóstico de Wi-Fi",
-    "Backup e recuperação de arquivos",
-    "Avaliação de memória e alimentação"
+    "Correção de Windows e atualizações",
+    "Impressora e fila de impressão",
+    "Webcam, microfone e áudio",
+    "Programas que deixam de abrir",
+    "Suporte remoto",
+    "Configuração de rede e periféricos"
   ],
-  conteudoExclusivo: `Quando travamento e lentidão não significam a mesma coisa
+  conteudoExclusivo: `Quando o computador liga, mas uma função específica para
 
-Uma máquina que apenas demora para iniciar pede análise diferente de um computador que congela ao copiar arquivos ou reinicia sob carga. No primeiro caso, programas, Windows e armazenamento podem ser a causa. No segundo, disco, memória, temperatura ou alimentação ganham prioridade.
+Uma impressora offline não exige o mesmo diagnóstico de um Windows que não inicia. Uma webcam ausente pode ser driver, permissão ou conexão USB. Um programa que fecha sozinho pode estar relacionado a atualização, perfil do usuário ou arquivos do próprio aplicativo.
 
-Em rede, comparar outro dispositivo no mesmo ponto evita culpar o roteador por uma falha isolada. Em armazenamento com sinais de erro, preservar os dados vem antes de reinstalar o sistema.
+O objetivo da triagem é isolar a função afetada antes de alterar o restante do sistema. Se o problema puder ser reproduzido com o computador conectado, o suporte remoto pode ser suficiente para verificar configuração e software. Se houver falha física, a modalidade muda.
 
-Essa lógica dá à página do Independência uma função própria, voltada a estabilidade, armazenamento e diagnóstico por sintoma.`,
+No Jardim Independência, essa abordagem evita transformar qualquer erro de software em formatação completa e dá à página uma intenção técnica diferente das rotas focadas em armazenamento ou hardware.`,
   problemasComuns: [
-    "Computador demora para iniciar",
-    "SSD ou HD trava durante cópia",
-    "Máquina reinicia durante uso",
-    "Notebook aquece e perde desempenho",
-    "Wi-Fi falha apenas em um equipamento",
-    "Arquivos importantes sem backup"
+    "Impressora aparece offline",
+    "Webcam ou microfone deixa de funcionar",
+    "Programa fecha depois de atualização",
+    "Windows perde configuração de áudio",
+    "Computador acessa internet, mas não um sistema específico",
+    "Periférico USB não é reconhecido"
   ],
-  dicasLocais: `Ao pedir atendimento no Independência, informe o endereço e, quando fizer sentido, a Rua Anibal Silva como referência. Para travamentos, diga em qual tarefa ocorrem; para armazenamento, evite formatar se houver arquivos importantes; para rede, teste outro dispositivo no mesmo ponto.`,
+  dicasLocais: `Ao pedir atendimento no Jardim Independência, informe o endereço e uma referência como o Estádio Municipal Moacir Tomelin ou a Rua Leonir Ludgero Schreber. Para impressora, diga se outro computador consegue usá-la; para webcam ou áudio, informe se o dispositivo aparece no Windows; para programas, envie a mensagem de erro exibida.`,
 };
 
 const IndependenciaSJP = () => <BairroTemplate data={data} />;
