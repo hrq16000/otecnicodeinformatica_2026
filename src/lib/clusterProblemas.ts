@@ -834,7 +834,7 @@ export const CLUSTER_PROBLEMAS: ClusterProblema[] = [
     metaDescription:
       "Computador liga mas não dá imagem ou mostra “sem sinal”? Separe monitor, cabo, RAM, placa de vídeo, fonte e POST antes de comprar ou trocar qualquer peça.",
     resumo:
-      "Se o computador liga mas não dá imagem, primeiro confirme se o monitor está recebendo sinal e se o cabo está na saída correta. Depois o diagnóstico separa memória, vídeo, alimentação e POST. O sintoma não aponta sozinho para placa de vídeo: trocar peça antes de isolar essas camadas costuma gerar custo sem resolver a causa."
+      "Se o computador liga mas não dá imagem, primeiro confirme se o monitor está recebendo sinal e se o cabo está na saída correta. Depois o diagnóstico separa memória, vídeo, alimentação e POST. O sintoma não aponta sozinho para placa de vídeo: trocar peça antes de isolar essas camadas costuma gerar custo sem resolver a causa.",
     waMessage:
       "Olá! Vim da página sobre computador que liga e não dá imagem. Preciso de diagnóstico do meu equipamento.",
     sintomas: [
