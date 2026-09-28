@@ -405,7 +405,7 @@ export const BairroTemplate = ({ data }: BairroTemplateProps) => {
                 {/* Second image with hover zoom */}
                 <div className="mb-8 rounded-xl overflow-hidden shadow-lg group">
                   <SmartImage wrapperClassName="w-full" 
-                    src={IMAGES.notebookReparo} 
+                    src="/fotos/bancada-tecnica.jpg" 
                     alt={`Conserto de notebook e manutenção de computador no ${data.nome}, ${data.cidade}`}
                     className="w-full h-48 md:h-56 object-cover transition-transform duration-700 group-"
                     

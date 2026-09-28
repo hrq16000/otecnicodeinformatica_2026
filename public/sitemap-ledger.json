@@ -1,15 +1,15 @@
 {
-  "geradoEm": "2026-09-25T14:02:25.476Z",
+  "geradoEm": "2026-09-28T05:44:48.174Z",
   "host": "otecnicodeinformatica.com.br",
   "modo": "generate",
   "sitemap": {
     "url": "https://otecnicodeinformatica.com.br/sitemap.xml",
-    "totalUrls": 267,
+    "totalUrls": 348,
     "googleSearchConsole": "NOT_REQUESTED",
     "indexNow": "NOT_REQUESTED"
   },
   "lotes": {
-    "total": 99,
+    "total": 108,
     "itens": [
       {
         "slug": "quando-trocar-hd-por-ssd",
@@ -603,6 +603,60 @@
         "slug": "como-configurar-firewall-ufw-linux",
         "url": "/blog/como-configurar-firewall-ufw-linux",
         "approvedAt": "2026-09-25",
+        "includeInSitemap": true
+      },
+      {
+        "slug": "como-fazer-backup-na-nuvem",
+        "url": "/blog/como-fazer-backup-na-nuvem",
+        "approvedAt": "2026-09-26",
+        "includeInSitemap": true
+      },
+      {
+        "slug": "wifi-caindo-toda-hora",
+        "url": "/blog/wifi-caindo-toda-hora",
+        "approvedAt": "2026-09-26",
+        "includeInSitemap": true
+      },
+      {
+        "slug": "pc-nao-liga-o-que-fazer",
+        "url": "/blog/pc-nao-liga-o-que-fazer",
+        "approvedAt": "2026-09-26",
+        "includeInSitemap": true
+      },
+      {
+        "slug": "ssd-nao-aparece-no-instalador-do-windows",
+        "url": "/blog/ssd-nao-aparece-no-instalador-do-windows",
+        "approvedAt": "2026-09-26",
+        "includeInSitemap": true
+      },
+      {
+        "slug": "como-instalar-ubuntu-do-zero",
+        "url": "/blog/como-instalar-ubuntu-do-zero",
+        "approvedAt": "2026-09-26",
+        "includeInSitemap": true
+      },
+      {
+        "slug": "como-usar-rsync-backup-linux",
+        "url": "/blog/como-usar-rsync-backup-linux",
+        "approvedAt": "2026-09-27",
+        "includeInSitemap": true
+      },
+      {
+        "slug": "como-configurar-ssh-seguro-linux",
+        "url": "/blog/como-configurar-ssh-seguro-linux",
+        "approvedAt": "2026-09-27",
+        "includeInSitemap": true
+      },
+      {
+        "slug": "como-gerenciar-pacotes-apt-dnf-linux",
+        "url": "/blog/como-gerenciar-pacotes-apt-dnf-linux",
+        "approvedAt": "2026-09-27",
+        "includeInSitemap": true
+      },
+      {
+        "slug": "comandos-linux-essenciais-iniciantes",
+        "url": "/blog/comandos-linux-essenciais-iniciantes",
+        "approvedAt": "2026-09-27",
         "includeInSitemap": true
       }
     ]
@@ -2703,6 +2757,114 @@
         "adicionadas": [],
         "removidas": [],
         "total": 267
+      },
+      "error": null
+    },
+    {
+      "id": "6ecef58a-030b-4633-854c-020427d77067",
+      "action": "sync_approved",
+      "status": "OK",
+      "source": "cli",
+      "timestamp": "2026-09-28T05:40:29.126Z",
+      "details": {
+        "modo": "write",
+        "saida": "sitemap editorial: em dia (108 artigos indexáveis)"
+      },
+      "error": null
+    },
+    {
+      "id": "a18740e7-1861-4208-8fcb-da4385503bba",
+      "action": "generate_sitemaps",
+      "status": "OK",
+      "source": "cli",
+      "timestamp": "2026-09-28T05:40:29.204Z",
+      "details": {
+        "saida": "sitemap curado: index + 8 sub-sitemaps (348 urls)"
+      },
+      "error": null
+    },
+    {
+      "id": "695f4d16-164a-4608-802b-4cef2e8e0e62",
+      "action": "diff_no_regression",
+      "status": "OK",
+      "source": "cli",
+      "timestamp": "2026-09-28T05:40:29.215Z",
+      "details": {
+        "adicionadas": [],
+        "removidas": [],
+        "total": 348
+      },
+      "error": null
+    },
+    {
+      "id": "61346569-3568-4a9c-9a11-bc3d91149219",
+      "action": "sync_approved",
+      "status": "OK",
+      "source": "cli",
+      "timestamp": "2026-09-28T05:42:44.510Z",
+      "details": {
+        "modo": "write",
+        "saida": "sitemap editorial: em dia (108 artigos indexáveis)"
+      },
+      "error": null
+    },
+    {
+      "id": "d409f7b3-4dd8-4ffd-98a3-9b73c3e3ec5e",
+      "action": "generate_sitemaps",
+      "status": "OK",
+      "source": "cli",
+      "timestamp": "2026-09-28T05:42:44.651Z",
+      "details": {
+        "saida": "sitemap curado: index + 8 sub-sitemaps (348 urls)"
+      },
+      "error": null
+    },
+    {
+      "id": "2166387a-d98b-4630-8b26-27d097ed6f39",
+      "action": "diff_no_regression",
+      "status": "OK",
+      "source": "cli",
+      "timestamp": "2026-09-28T05:42:44.664Z",
+      "details": {
+        "adicionadas": [],
+        "removidas": [],
+        "total": 348
+      },
+      "error": null
+    },
+    {
+      "id": "a6ed3272-38cd-4e9b-a3ee-66f30e2f5b79",
+      "action": "sync_approved",
+      "status": "OK",
+      "source": "cli",
+      "timestamp": "2026-09-28T05:44:48.258Z",
+      "details": {
+        "modo": "write",
+        "saida": "sitemap editorial: em dia (108 artigos indexáveis)"
+      },
+      "error": null
+    },
+    {
+      "id": "9ba45203-42e0-4acb-b42f-96dedbca48fe",
+      "action": "generate_sitemaps",
+      "status": "OK",
+      "source": "cli",
+      "timestamp": "2026-09-28T05:44:48.349Z",
+      "details": {
+        "saida": "sitemap curado: index + 8 sub-sitemaps (348 urls)"
+      },
+      "error": null
+    },
+    {
+      "id": "41f09e70-8b08-47e6-8fd5-b52238f23531",
+      "action": "diff_no_regression",
+      "status": "OK",
+      "source": "cli",
+      "timestamp": "2026-09-28T05:44:48.363Z",
+      "details": {
+        "adicionadas": [],
+        "removidas": [],
+        "total": 348
       },
       "error": null
     }
