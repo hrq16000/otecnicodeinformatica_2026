@@ -73,64 +73,64 @@ export const CLUSTER_PROBLEMAS: ClusterProblema[] = [
     metaDescription:
       "Internet lenta ou com queda toda hora? Veja como separar sinal fraco do Wi-Fi, roteador e operadora com testes simples, antes de trocar plano ou aparelho.",
     resumo:
-      "Na maior parte dos atendimentos de Wi-Fi instável o plano contratado está entregando o que promete — o sinal é que não chega. A investigação separa três coisas diferentes: a internet que entra no imóvel, o equipamento que distribui o sinal e o caminho físico até o aparelho que está reclamando.",
+      "Internet lenta e queda de Wi-Fi não são a mesma coisa. O diagnóstico separa três camadas: o link que chega ao imóvel, o roteador/ponto de acesso que distribui a rede e o caminho sem fio até cada dispositivo. Comparar cabo, proximidade do roteador e outro aparelho ajuda a descobrir em qual camada a falha realmente está.",
     waMessage:
       "Olá! Vim da página sobre Wi-Fi instável. Meu sinal cai/fica lento e preciso de diagnóstico da rede.",
     sintomas: [
       {
         titulo: "Cai só em alguns cômodos ou andares",
-        desc: "Sinal que desaparece em um ponto específico indica atenuação por parede, laje, espelho ou caixa metálica. Nesses casos trocar de plano não muda nada: o problema é cobertura, resolvido com posicionamento, repetidor cabeado ou malha mesh.",
+        desc: "Quando o sinal piora em pontos específicos, obstáculos, distância, posicionamento e interferência entram primeiro no diagnóstico. A comparação entre cômodos ajuda a separar cobertura de limitação do link; a solução pode envolver reposicionamento, ponto cabeado, access point ou malha, conforme o ambiente.",
       },
       {
         titulo: "Desconecta sozinho em horários parecidos",
-        desc: "Queda com hora marcada costuma ter causa externa: interferência de rede vizinha no mesmo canal, forno micro-ondas, equipamento com temporizador ou reinício automático do roteador da operadora.",
+        desc: "Padrão de horário pode apontar interferência, congestionamento, rotina de algum equipamento ou instabilidade do próprio link. O horário é uma pista, não uma conclusão: ele precisa ser comparado com outros dispositivos e, quando possível, com teste por cabo.",
       },
       {
         titulo: "Conecta, mas 'sem internet'",
-        desc: "O aparelho enxerga a rede e não navega. Aqui a falha está entre roteador e provedor: DNS, arrendamento de IP, cabo de entrada mal encaixado ou modem em modo incorreto — não na antena do notebook.",
+        desc: "O aparelho enxerga a rede, mas não navega. A investigação passa por DNS, endereço IP, gateway, roteador, modem/link do provedor e pelo próprio dispositivo. Comparar outro aparelho na mesma rede evita concluir cedo demais onde está a falha.",
       },
       {
         titulo: "Rápido no celular, lento no computador",
-        desc: "Quando um aparelho vai bem e outro não, a rede está saudável e o problema é do dispositivo: driver de rede, adaptador antigo, banda 2.4 GHz saturada ou economia de energia desligando a placa.",
+        desc: "Quando um aparelho vai bem e outro não no mesmo ponto e horário, a investigação começa pelo dispositivo: driver, adaptador, banda utilizada e economia de energia. Isso reduz a probabilidade de falha geral da rede, mas não elimina roteador ou interferência sem teste adicional.",
       },
     ],
     causas: [
       {
         titulo: "Roteador em local ruim",
-        desc: "Dentro de armário, atrás da TV, no chão ou colado à parede externa. O equipamento distribui sinal em esfera; obstáculo próximo derruba a cobertura inteira.",
+        desc: "Armário, móveis, paredes, metal e posicionamento desfavorável podem atenuar o sinal ou criar áreas de cobertura pior. Antes de trocar equipamento, vale comparar o desempenho em posições diferentes e observar se o padrão acompanha o ambiente.",
       },
       {
         titulo: "Equipamento da operadora fazendo tudo sozinho",
-        desc: "Modem/roteador combinado atende bem apartamentos pequenos. Em imóvel grande, com laje ou muitas paredes, ele não dá conta e precisa de um distribuidor adicional — de preferência ligado por cabo.",
+        desc: "Modem/roteador combinado pode ser suficiente em ambientes menores e simples. Em imóveis maiores, com lajes, paredes ou muitos dispositivos, pode ser necessário adicionar pontos de acesso ou malha; backhaul cabeado costuma oferecer maior previsibilidade quando é viável.",
       },
       {
         titulo: "Canal e faixa saturados",
-        desc: "Em prédio, dezenas de redes disputam os mesmos canais de 2.4 GHz. Reorganizar canal e separar as faixas 2.4/5 GHz costuma devolver estabilidade sem trocar nada.",
+        desc: "Em prédios, várias redes podem disputar canais na faixa de 2,4 GHz. Revisar canais, largura de canal e uso de 2,4/5 GHz pode melhorar estabilidade sem troca de equipamento, desde que o diagnóstico confirme interferência e os dispositivos sejam compatíveis.",
       },
       {
         titulo: "Cabeamento e conectores",
-        desc: "Cabo de rede prensado por móvel, conector mal crimpado ou emenda improvisada geram queda intermitente que parece 'problema da internet'.",
+        desc: "Cabo de rede prensado, conector mal crimpado ou emenda inadequada podem causar perda de pacote, negociação instável ou quedas intermitentes que se confundem com falha do provedor.",
       },
       {
         titulo: "Repetidor mal configurado",
-        desc: "Repetidor colocado onde o sinal já é fraco repete sinal fraco e ainda divide a banda pela metade. É a causa mais comum de rede que piorou depois de uma 'melhoria'.",
+        desc: "Repetidor colocado onde o sinal de origem já chega fraco tende a retransmitir uma conexão ruim. Em alguns modos, o mesmo rádio recebe e retransmite dados, reduzindo o throughput disponível. O impacto real depende do equipamento, da banda, do backhaul e do posicionamento.",
       },
     ],
     antesDeChamar: [
       "Teste a velocidade com o aparelho ao lado do roteador e depois no cômodo que reclama — a diferença já indica se é cobertura ou provedor.",
-      "Ligue um notebook por cabo no roteador. Se por cabo funciona bem, a internet está chegando e o problema é a distribuição sem fio.",
-      "Anote o horário das quedas por dois ou três dias. Padrão de horário muda completamente o diagnóstico.",
+      "Quando for possível, compare o mesmo cenário por cabo. Se o desempenho cabeado se mantém estável e o Wi‑Fi piora, cobertura, interferência, banda e configuração sem fio ganham prioridade no diagnóstico.",
+      "Anote o horário das quedas por dois ou três dias. Um padrão de horário ajuda a priorizar hipóteses como interferência, congestionamento, rotina de equipamento ou instabilidade externa.",
       "Verifique se a rede piorou depois de alguma mudança: móvel novo, repetidor, troca de plano, mudança do roteador de lugar.",
     ],
     naoFaca: [
       "Não resete o roteador da operadora sem ter as credenciais de acesso — em algumas conexões a reconfiguração exige suporte do provedor.",
-      "Não instale vários repetidores em sequência. Cada salto divide a banda e aumenta a instabilidade.",
-      "Não troque de plano antes do diagnóstico: se o gargalo é cobertura, mais megas não chegam ao cômodo.",
+      "Evite encadear repetidores sem medir o resultado. Dependendo do modo de operação e do backhaul, cada salto pode reduzir throughput, aumentar latência e ampliar a instabilidade.",
+      "Evite trocar de plano antes de comparar link cabeado e cobertura. Se o gargalo estiver na distribuição sem fio, aumentar a velocidade contratada pode não melhorar o ponto com sinal ruim.",
     ],
     modalidades: [
       {
         titulo: "Suporte remoto",
-        desc: "Ajuste de canal, separação de faixas, DNS, configuração de repetidor e revisão de dispositivos podem ser feitos com acesso remoto, quando ainda existe conexão utilizável.",
+        desc: "Ajustes de canal, faixas, DNS e configurações de alguns dispositivos podem ser avaliados ou executados remotamente quando ainda há conexão utilizável e acesso administrativo disponível.",
       },
       {
         titulo: "Atendimento no endereço",
@@ -138,25 +138,25 @@ export const CLUSTER_PROBLEMAS: ClusterProblema[] = [
       },
       {
         titulo: "Projeto de rede para empresa",
-        desc: "Escritório com muitos dispositivos, impressora em rede e sistema em nuvem pede segmentação, cabeamento e equipamento adequado — não repetidor doméstico.",
+        desc: "Ambientes com muitos dispositivos, impressoras em rede e aplicações críticas podem exigir segmentação, cabeamento e pontos de acesso dimensionados para a carga, em vez de ampliar a rede sem medir capacidade e cobertura.",
       },
     ],
     faq: [
       {
         q: "Trocar o roteador resolve Wi-Fi que cai?",
-        a: "Resolve quando o equipamento é o gargalo — modelo antigo, sem 5 GHz ou com defeito. Não resolve quando o problema é posicionamento, cabo ou interferência. Por isso o diagnóstico vem antes da indicação de compra.",
+        a: "Pode resolver quando o equipamento é o gargalo, por limitação, falha ou incompatibilidade. Se a causa for posicionamento, cabeamento, interferência ou configuração, a troca isolada pode não corrigir o problema. Por isso o diagnóstico vem antes da indicação de compra.",
       },
       {
         q: "Mesh é melhor que repetidor?",
-        a: "Em geral sim, porque os pontos trabalham como uma rede só e o aparelho troca de ponto sem cair. Mas mesh também depende de bom posicionamento e, quando possível, de ligação por cabo entre os pontos.",
+        a: "Mesh pode oferecer gerenciamento e roaming mais integrados que um repetidor simples, mas não é automaticamente melhor em todo ambiente. Posicionamento, qualidade do backhaul, compatibilidade dos dispositivos e possibilidade de cabeamento determinam o resultado.",
       },
       {
         q: "Preciso trocar meu plano de internet?",
-        a: "Só se o teste com cabo mostrar que a velocidade contratada não está chegando. Se por cabo o resultado é bom, o plano não é o problema.",
+        a: "A comparação por cabo ajuda a separar o link da distribuição sem fio. Se o desempenho cabeado também fica abaixo do esperado, provedor, modem/roteador e cabeamento entram na investigação. Se por cabo está consistente e o Wi-Fi piora à distância, cobertura e interferência ganham prioridade.",
       },
       {
         q: "Dá para resolver sem visita?",
-        a: "Parte dos casos sim — configuração e ajuste de canal são feitos remotamente. Cobertura, cabeamento e interferência física exigem medição no local.",
+        a: "Parte dos casos pode ser tratada remotamente, especialmente configuração e testes lógicos. Cobertura, cabeamento e interferência física normalmente exigem medição no local para uma conclusão confiável.",
       },
       {
         q: "Vocês vendem o equipamento?",
@@ -291,27 +291,27 @@ export const CLUSTER_PROBLEMAS: ClusterProblema[] = [
     titulo: "Arquivos apagados ou disco que não abre: o que fazer agora",
     metaTitle: "Arquivos apagados: o que fazer antes de recuperar | O Técnico",
     metaDescription:
-      "Apagou arquivos, formatou por engano ou o HD parou de abrir? O que você faz na primeira hora define a chance de recuperação. Veja o que evitar e como funciona a avaliação.",
+      "Apagou arquivos, formatou por engano ou o HD parou de abrir? Veja o que fazer logo após a perda, o que evitar e como o tipo de mídia influencia a tentativa de recuperação.",
     resumo:
-      "Em recuperação de dados, o maior inimigo é a tentativa apressada. Arquivo apagado normalmente continua no disco até ser sobrescrito — e cada programa instalado, cada cópia nova e cada tentativa de reparo automático aumenta a chance de sobrescrever exatamente o que você quer de volta. Nenhum profissional sério promete recuperação total antes da avaliação.",
+      "Em recuperação de dados, a primeira decisão é parar de gravar no dispositivo. Em HDs e algumas mídias, dados apagados podem permanecer até serem sobrescritos. Em SSDs modernos, recursos como TRIM e coleta de lixo podem tornar blocos apagados indisponíveis muito antes, mesmo sem nova gravação visível. Por isso o tipo de mídia e o que aconteceu depois da perda mudam completamente a chance de recuperação.",
     waMessage:
       "Olá! Vim da página sobre arquivos apagados. Preciso de avaliação para tentar recuperar dados.",
     sintomas: [
       {
         titulo: "Apaguei e esvaziei a lixeira",
-        desc: "Cenário com boa chance quando o equipamento é desligado logo. O sistema apenas marcou o espaço como livre; o conteúdo permanece até algo gravar por cima.",
+        desc: "Em HD ou mídia sem TRIM, desligar cedo pode preservar blocos que ainda não foram sobrescritos. Em SSDs, a exclusão pode acionar TRIM e reduzir drasticamente a chance de recuperação. O tipo de armazenamento precisa ser identificado antes de estimar possibilidade.",
       },
       {
         titulo: "Formatei o disco ou o pendrive por engano",
-        desc: "Formatação rápida não zera os dados. A estrutura de índice é refeita, mas os blocos continuam lá — desde que nada novo seja gravado.",
+        desc: "Formatação rápida geralmente recria estruturas do sistema de arquivos sem fazer uma sobrescrita completa de todos os blocos. Em HD isso pode deixar dados recuperáveis; em SSD, TRIM e controladores modernos podem invalidar blocos rapidamente. Não existe garantia baseada apenas no tipo de formatação.",
       },
       {
         titulo: "O disco pede para ser formatado ao conectar",
-        desc: "Sinal de estrutura de arquivos corrompida. Aceitar a formatação é o erro mais caro dessa situação.",
+        desc: "Pode indicar corrupção do sistema de arquivos, falha da mídia ou incompatibilidade de leitura. Confirmar uma formatação antes de avaliar o dispositivo pode gravar novos metadados e dificultar a tentativa de recuperação.",
       },
       {
         titulo: "HD externo fazendo barulho de clique",
-        desc: "Ruído repetitivo indica problema mecânico. Aqui cada nova ligação pode danificar mais a superfície: o correto é desligar e não insistir.",
+        desc: "Ruído repetitivo pode indicar falha mecânica. Nessa situação, novas tentativas de energização podem agravar o dano; se os dados forem importantes, o mais seguro é interromper o uso e avaliar a mídia antes de insistir.",
       },
     ],
     causas: [
@@ -321,7 +321,7 @@ export const CLUSTER_PROBLEMAS: ClusterProblema[] = [
       },
       {
         titulo: "Corrupção lógica",
-        desc: "Queda de energia durante gravação, remoção do pendrive sem ejetar e falha de atualização deixam a tabela de arquivos inconsistente.",
+        desc: "Queda de energia durante gravação, remoção abrupta de mídia e falhas de atualização podem deixar estruturas do sistema de arquivos inconsistentes.",
       },
       {
         titulo: "Falha física do disco",
@@ -334,14 +334,14 @@ export const CLUSTER_PROBLEMAS: ClusterProblema[] = [
     ],
     antesDeChamar: [
       "Pare de usar o equipamento ou o disco imediatamente. Não instale nada nele — nem o programa de recuperação.",
-      "Se for disco externo ou pendrive, desconecte e guarde. Reconectar várias vezes piora casos mecânicos.",
+      "Se for disco externo ou pendrive, desconecte e guarde. Reconectar repetidamente pode agravar falhas físicas e também aumentar o risco de novas gravações automáticas.",
       "Liste o que precisa voltar: pastas, período, tipos de arquivo. Isso orienta a busca e a validação do resultado.",
-      "Verifique se existe cópia esquecida: nuvem, e-mail, celular, HD antigo. Boa parte dos casos se resolve antes de qualquer laboratório.",
+      "Verifique se existe cópia esquecida: nuvem, e-mail, celular, HD antigo. Em alguns casos, localizar uma cópia íntegra evita qualquer intervenção na mídia afetada.",
     ],
     naoFaca: [
       "Não aceite a formatação sugerida pelo sistema quando o disco 'pede para formatar'.",
-      "Não rode utilitários de correção de disco no volume afetado — eles reorganizam a estrutura e podem eliminar o que ainda seria recuperável.",
-      "Não abra o disco rígido. Ambiente doméstico contamina os pratos e encerra a chance de recuperação mecânica.",
+      "Evite utilitários de reparo no volume afetado antes de preservar a mídia. Eles podem alterar estruturas do sistema de arquivos e reduzir opções de recuperação.",
+      "Não abra um disco rígido fora de ambiente e procedimento adequados. Poeira e manuseio incorreto podem contaminar componentes internos e reduzir severamente a possibilidade de recuperação mecânica.",
       "Não grave nada novo no dispositivo, nem os próprios arquivos recuperados.",
     ],
     modalidades: [
@@ -351,7 +351,7 @@ export const CLUSTER_PROBLEMAS: ClusterProblema[] = [
       },
       {
         titulo: "Recuperação lógica",
-        desc: "Exclusão, formatação e corrupção de estrutura, trabalhando sempre sobre cópia do dispositivo, nunca no original.",
+        desc: "Exclusão, formatação e corrupção de estrutura, priorizando imagem ou cópia da mídia quando tecnicamente possível para reduzir alterações no original.",
       },
       {
         titulo: "Encaminhamento especializado",
@@ -365,15 +365,15 @@ export const CLUSTER_PROBLEMAS: ClusterProblema[] = [
       },
       {
         q: "Quanto custa recuperar dados?",
-        a: "Depende do tipo de falha. Casos lógicos têm custo previsível; casos físicos dependem de peça, tempo e encaminhamento. O valor é apresentado depois da avaliação e antes de qualquer execução.",
+        a: "Depende do tipo de falha, da mídia, do volume de dados e do nível de acesso possível. Casos físicos podem exigir encaminhamento especializado. O valor é apresentado depois da avaliação e antes de qualquer execução.",
       },
       {
         q: "Programas de recuperação que baixo na internet funcionam?",
-        a: "Às vezes, em exclusão simples. O risco é instalar o programa no mesmo disco e sobrescrever justamente os arquivos que você quer. Se os dados forem importantes, não é o primeiro passo indicado.",
+        a: "Podem funcionar em alguns casos lógicos, principalmente quando a mídia está saudável. O risco é instalar ou salvar resultados no mesmo dispositivo, sobrescrever dados ainda recuperáveis ou insistir numa mídia fisicamente instável. Se os arquivos forem importantes, o primeiro passo é preservar o estado da mídia.",
       },
       {
         q: "Quanto tempo leva?",
-        a: "Varredura lógica costuma levar de horas a alguns dias, conforme o tamanho do disco. Casos físicos dependem de avaliação e de peça compatível.",
+        a: "O tempo depende do tamanho da mídia, velocidade de leitura, quantidade de erros e tipo de falha. Varredura lógica e imagem de um dispositivo saudável podem ser bem diferentes de uma mídia com setores instáveis ou defeito físico; a estimativa vem depois da avaliação.",
       },
       {
         q: "Depois de recuperar, como evitar de novo?",
