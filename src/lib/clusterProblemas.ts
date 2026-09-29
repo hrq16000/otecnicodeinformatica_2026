@@ -830,11 +830,11 @@ export const CLUSTER_PROBLEMAS: ClusterProblema[] = [
     slug: "computador-nao-da-imagem",
     path: "/problemas/computador-nao-da-imagem",
     titulo: "Computador liga mas não aparece imagem no monitor",
-    metaTitle: "PC liga, mas não dá imagem: o que verificar | O Técnico",
+    metaTitle: "Computador liga mas não dá imagem: o que testar | O Técnico",
     metaDescription:
-      "Gabinete liga, coolers giram e o monitor fica preto ou em “sem sinal”. Veja como separar monitor, cabo, memória, placa de vídeo e fonte antes de trocar qualquer peça.",
+      "Computador liga mas não dá imagem ou mostra “sem sinal”? Separe monitor, cabo, RAM, placa de vídeo, fonte e POST antes de comprar ou trocar qualquer peça.",
     resumo:
-      "Ligar e não dar imagem não é um defeito só: é o resultado visível de qualquer falha que impeça o computador de concluir a inicialização. O diagnóstico útil começa separando três blocos — o que exibe (monitor e cabo), o que gera vídeo (placa de vídeo ou vídeo integrado) e o que permite ligar (fonte, memória e placa-mãe). Trocar peça antes dessa separação é a forma mais cara de descobrir o problema.",
+      "Se o computador liga mas não dá imagem, primeiro confirme se o monitor está recebendo sinal e se o cabo está na saída correta. Depois o diagnóstico separa memória, vídeo, alimentação e POST. O sintoma não aponta sozinho para placa de vídeo: trocar peça antes de isolar essas camadas costuma gerar custo sem resolver a causa.",
     waMessage:
       "Olá! Vim da página sobre computador que liga e não dá imagem. Preciso de diagnóstico do meu equipamento.",
     sintomas: [
@@ -889,7 +889,7 @@ export const CLUSTER_PROBLEMAS: ClusterProblema[] = [
       "Teste outro cabo e outra entrada do monitor, e confirme no menu do monitor qual entrada está selecionada.",
       "Se houver placa de vídeo dedicada, confirme que o cabo está na saída da placa e não na saída da placa-mãe.",
       "Ligue o monitor em outro aparelho (notebook, videogame ou TV box) para descobrir se o problema é do monitor.",
-      "Desligue da tomada, abra o gabinete e reencaixe firmemente memória e placa de vídeo até ouvir o clique das travas.",
+      "Se você tem segurança para abrir o gabinete, desligue da tomada e reencaixe memória e placa de vídeo sem forçar conectores. Se houver cheiro, marca de queima, líquido ou dúvida sobre o procedimento, interrompa e deixe a inspeção para bancada.",
       "Anote bipes, LEDs piscando e se algo mudou antes da falha: queda de energia, limpeza, troca de peça ou transporte.",
     ],
     naoFaca: [
@@ -906,7 +906,7 @@ export const CLUSTER_PROBLEMAS: ClusterProblema[] = [
       },
       {
         titulo: "Visita técnica com peças de referência",
-        desc: "Quando o computador precisa ficar onde está, a visita leva cabo, memória e fonte de teste para isolar o componente no local, em janela de até 30 minutos de inspeção.",
+        desc: "Quando o computador precisa ficar onde está, a visita pode usar cabos e componentes de referência para isolar a falha no local. O tempo e a modalidade dependem do sintoma, do acesso e dos testes necessários."
       },
       {
         titulo: "Bancada para teste sob carga",
@@ -1066,11 +1066,11 @@ export const CLUSTER_PROBLEMAS: ClusterProblema[] = [
     slug: "windows-nao-inicia",
     path: "/problemas/windows-nao-inicia",
     titulo: "Windows não inicia: erro 0xc0000428, reparo automático e loop de boot",
-    metaTitle: "Erro 0xc0000428: Windows não inicia | Técnico de Informática",
+    metaTitle: "Windows não inicia: reparo automático, boot e 0xc0000428",
     metaDescription:
-      "PC liga, mas o Windows exibe 0xc0000428, reparo automático ou loop? Entenda assinatura digital, WinRE, BitLocker e a ordem segura sem formatar.",
+      "Windows não inicia, entra em reparo automático ou mostra 0xc0000428? Veja como separar boot, SSD/HD, BCD, WinRE e BitLocker antes de formatar.",
     resumo:
-      "Se a máquina acende e chega à tela de Recuperação, ela não é um “PC que não liga”: o firmware e parte da inicialização funcionaram, mas isso não prova que SSD, memória ou outros componentes estejam saudáveis. No código 0xc0000428, o Windows informa que não conseguiu validar o hash ou a assinatura de uma imagem de inicialização. O arquivo citado na tela e a mudança que antecedeu o erro determinam o próximo teste.",
+      "Se o computador liga mas o Windows não inicia, primeiro identifique até onde a inicialização chega: firmware, tela de recuperação, reparo automático, código de erro ou reinício. Isso separa falha de boot de um PC que nem conclui o POST. No erro 0xc0000428, o Windows informa falha de validação de uma imagem de inicialização; o arquivo citado e o que mudou antes do erro definem o próximo teste.",
     waMessage:
       "Olá! Vim da página sobre Windows que não inicia. Meu sistema não abre e preciso de diagnóstico sem perder arquivos.",
     sintomas: [
