@@ -295,6 +295,12 @@ async function checkDates(posts) {
 async function main() {
   const { posts, duplicates } = await getBlogPosts(".");
   note(`inventário: ${posts.length} artigos únicos (${posts.filter(p => p.origin === "manual").length} manuais, ${posts.filter(p => p.origin === "programmatic").length} programáticos)`);
+  const inventorySlugs = new Set(posts.map((p) => p.slug));
+  const approvedWithoutContent = EDITORIAL_WAVE_SLUGS.filter((slug) => !inventorySlugs.has(slug));
+  if (approvedWithoutContent.length) {
+    fail(`inventário: ${approvedWithoutContent.length} owner(s) aprovada(s) sem conteúdo renderizável: ${approvedWithoutContent.join(", ")}`);
+  }
+  note(`owners aprovadas com conteúdo: ${EDITORIAL_WAVE_SLUGS.length - approvedWithoutContent.length}/${EDITORIAL_WAVE_SLUGS.length}`);
   if (duplicates.length) note(`slugs duplicados ignorados: ${duplicates.length} (${duplicates.join(", ")})`);
 
   await checkRegistry();
