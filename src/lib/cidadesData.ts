@@ -64,11 +64,27 @@ export const MODALIDADES_ATENDIMENTO: { label: string; to: string; desc: string 
 
 // Bairros curados de Curitiba — a landing de Curitiba é a página-mãe deles.
 export const CURITIBA_BAIRROS: { label: string; to: string; desc: string }[] = [
-  { label: "CIC (Cidade Industrial)", to: "/bairros/cic", desc: "Atendimento para residências e empresas no maior bairro de Curitiba." },
-  { label: "Batel", to: "/bairros/batel", desc: "Suporte para home office, residências e pequenos escritórios." },
-  { label: "Água Verde", to: "/bairros/agua-verde", desc: "Manutenção de notebook e PC para quem trabalha e estuda em casa." },
-  { label: "Centro", to: "/bairros/centro", desc: "Atendimento ágil para lojas, consultórios e escritórios da região central." },
-  { label: "Portão", to: "/bairros/portao", desc: "Conserto de notebook, PC e redes para casas e comércios do bairro." },
+  { label: "CIC (Cidade Industrial)", to: "/bairros/cic", desc: "Atendimento de informática na CIC para residências, trabalho e rede local." },
+  { label: "Batel", to: "/bairros/batel", desc: "Notebook, home office, periféricos e rede em apartamentos e escritórios." },
+  { label: "Água Verde", to: "/bairros/agua-verde", desc: "PC, notebook, Wi-Fi, SSD e backup com diagnóstico antes do reparo." },
+  { label: "Centro", to: "/bairros/centro", desc: "Continuidade de trabalho, impressão, rede e manutenção na região central." },
+  { label: "Portão", to: "/bairros/portao", desc: "PC, notebook, rede e periféricos para residências e comércio de bairro." },
+  { label: "Santa Felicidade", to: "/bairros/santa-felicidade", desc: "Wi-Fi, notebook e PC com foco em cobertura, dados e diagnóstico técnico." },
+  { label: "Boa Vista", to: "/bairros/boa-vista", desc: "Computador, notebook, backup, impressão e rede para uso residencial e profissional." },
+  { label: "Bigorrilho", to: "/bairros/bigorrilho", desc: "Home office, notebook, dock, monitor e Wi-Fi em edifícios e escritórios." },
+  { label: "Cabral", to: "/bairros/cabral", desc: "PC, notebook, backup, certificado digital, impressão e rede." },
+  { label: "Xaxim", to: "/bairros/xaxim", desc: "Diagnóstico de PC doméstico, armazenamento, formatação e Wi-Fi." },
+  { label: "Sítio Cercado", to: "/bairros/sitio-cercado", desc: "PC, notebook, impressora, backup e rede em uso residencial e comercial." },
+  { label: "Boqueirão", to: "/bairros/boqueirao", desc: "PC, notebook, Wi-Fi, impressora e manutenção com triagem por sintoma." },
+  { label: "Cajuru", to: "/bairros/cajuru", desc: "Notebook, SSD, memória, Windows e Wi-Fi para estudo, trabalho e uso diário." },
+  { label: "Pinheirinho", to: "/bairros/pinheirinho", desc: "Wi-Fi, PC, notebook, armazenamento e preservação de dados." },
+  { label: "Rebouças", to: "/bairros/reboucas", desc: "Home office, escritório, impressora e rede com diagnóstico antes da intervenção." },
+  { label: "Hauer", to: "/bairros/hauer", desc: "PC doméstico, upgrade, notebook e Wi-Fi com triagem técnica." },
+  { label: "Novo Mundo", to: "/bairros/novo-mundo", desc: "Windows, dados, notebook e rede doméstica com foco em continuidade." },
+  { label: "Bacacheri", to: "/bairros/bacacheri", desc: "Notebook, Wi-Fi e home office com diagnóstico de desempenho e conectividade." },
+  { label: "Juvevê", to: "/bairros/juveve", desc: "Home office, periféricos, notebook e pequenos escritórios." },
+  { label: "Mercês", to: "/bairros/merces", desc: "Backup, notebook, Wi-Fi e preservação de arquivos." },
+  { label: "Tingui", to: "/bairros/tingui", desc: "Desempenho sob carga, Wi-Fi e preservação de dados com diagnóstico próprio." },
 ];
 
 // Processo comum (não é conteúdo SEO exclusivo; é institucional).
