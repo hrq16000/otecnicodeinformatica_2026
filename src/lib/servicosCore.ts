@@ -138,14 +138,14 @@ export const SERVICOS_CORE: Record<string, ServicoLandingData> = {
   "manutencao-de-notebook": {
     path: "manutencao-de-notebook",
     trackingKey: "manutencao-notebook",
-    metaTitle: "Manutenção e Conserto de Notebook em Curitiba | Diagnóstico",
+    metaTitle: "Manutenção e Conserto de Notebook | Diagnóstico",
     metaDescription:
-      "Manutenção e conserto de notebook em Curitiba: diagnóstico de lentidão, aquecimento, tela, teclado, bateria, carga, SSD, memória e Windows antes do reparo.",
+      "Manutenção e conserto de notebook com diagnóstico de lentidão, aquecimento, tela, teclado, bateria, carga, SSD, memória e Windows antes do reparo.",
     serviceName: "Manutenção de Notebook",
     serviceDescription:
       "Diagnóstico e manutenção de notebooks: limpeza interna, sistema térmico, tela, teclado, bateria, carga, armazenamento e desempenho, conforme o defeito confirmado.",
     eyebrow: "Manutenção de notebook",
-    h1: "Manutenção e conserto de notebook em Curitiba",
+    h1: "Manutenção e conserto de notebook",
     h1Accent: "diagnóstico antes de informar o valor",
     intro:
       "Notebook que não liga, esquenta, fica lento ou apresenta falha de tela, teclado, bateria ou carga precisa de diagnóstico antes de trocar peça. Separamos sistema, armazenamento, memória, temperatura, energia e dano físico para decidir entre ajuste, upgrade, reparo ou bancada. Descreva o sintoma e o modelo pelo WhatsApp para definir o próximo passo.",
