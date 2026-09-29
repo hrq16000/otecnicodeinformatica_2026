@@ -55,7 +55,7 @@ export const SERVICOS_CORE: Record<string, ServicoLandingData> = {
       { title: "Estado do sistema", desc: "Sistema muito corrompido ou com falhas pode demandar etapas extras." },
       { title: "Programas específicos", desc: "Softwares particulares (impressão fiscal, sistemas de trabalho) somam configuração." },
       { title: "Urgência", desc: "Prazos apertados podem influenciar o agendamento." },
-      { title: "Deslocamento", desc: "Atendimento em domicílio considera a localização em Curitiba e região." },
+      { title: "Modalidade", desc: "Remoto, visita, coleta ou bancada dependem do sintoma, do endereço e dos testes necessários." },
     ],
     atendimento: {
       residencial:
@@ -138,17 +138,17 @@ export const SERVICOS_CORE: Record<string, ServicoLandingData> = {
   "manutencao-de-notebook": {
     path: "manutencao-de-notebook",
     trackingKey: "manutencao-notebook",
-    metaTitle: "Manutenção de Notebook | Diagnóstico e Reparo",
+    metaTitle: "Manutenção e Conserto de Notebook em Curitiba | Diagnóstico",
     metaDescription:
-      "Manutenção de notebook com diagnóstico para lentidão, aquecimento, tela, teclado, bateria, carga, limpeza interna e falhas de hardware ou sistema.",
+      "Manutenção e conserto de notebook em Curitiba: diagnóstico de lentidão, aquecimento, tela, teclado, bateria, carga, SSD, memória e Windows antes do reparo.",
     serviceName: "Manutenção de Notebook",
     serviceDescription:
       "Diagnóstico e manutenção de notebooks: limpeza interna, sistema térmico, tela, teclado, bateria, carga, armazenamento e desempenho, conforme o defeito confirmado.",
     eyebrow: "Manutenção de notebook",
-    h1: "Manutenção e assistência técnica de notebook",
+    h1: "Manutenção e conserto de notebook em Curitiba",
     h1Accent: "diagnóstico antes de informar o valor",
     intro:
-      "Notebook que não liga, esquenta e desliga, ficou lento ou está com tela, teclado ou bateria com defeito? Atendemos as marcas mais comuns do mercado e começamos sempre pelo diagnóstico, para identificar a causa real antes de falar em peça ou preço. Nem toda placa tem reparo viável, e explicamos isso com honestidade. Descreva o sintoma pelo WhatsApp e combinamos o próximo passo.",
+      "Notebook que não liga, esquenta, fica lento ou apresenta falha de tela, teclado, bateria ou carga precisa de diagnóstico antes de trocar peça. Separamos sistema, armazenamento, memória, temperatura, energia e dano físico para decidir entre ajuste, upgrade, reparo ou bancada. Descreva o sintoma e o modelo pelo WhatsApp para definir o próximo passo."
     whatsappMessage: "Olá! Meu notebook está com problema. Podem avaliar?",
     incluso: [
       { title: "Diagnóstico do notebook", desc: "Avaliação de hardware e software para achar a causa real." },
@@ -212,8 +212,8 @@ export const SERVICOS_CORE: Record<string, ServicoLandingData> = {
       {
         titulo: "Os três defeitos que mais chegam em notebook",
         paragrafos: [
-          "O primeiro é superaquecimento: ventoinha barulhenta, base quente, quedas em jogo ou videochamada e desligamento repentino. Quase sempre é pasta térmica ressecada somada a dissipador entupido de poeira e pelo de animal — serviço de bancada, com limpeza física e troca da interface térmica, não algo que se resolve por software.",
-          "O segundo é não ligar. Aqui é preciso separar fonte, conector de energia, bateria e placa. Um notebook que acende LED mas não dá vídeo tem causa diferente de um que não reage a nada. Fazemos essa separação no diagnóstico antes de falar em peça, porque trocar carregador por chute é o erro mais caro do usuário.",
+          "O primeiro é superaquecimento: ventoinha barulhenta, base quente, queda de desempenho ou desligamento sob carga. Poeira, fluxo de ar obstruído, ventoinha, dissipador e interface térmica entram na inspeção; a causa precisa ser confirmada antes de abrir o equipamento ou trocar material térmico."
+          "O segundo é não ligar. Aqui é preciso separar fonte, conector de energia, bateria, memória e placa. Um notebook que acende LEDs mas não mostra imagem segue uma linha diferente de um equipamento sem qualquer sinal de energia. Essa separação vem antes de comprar carregador ou condenar a placa."
           "O terceiro é dano físico: dobradiça estourada, tela trincada, teclado com líquido, porta de carga solta. Líquido é urgência real — quanto mais tempo ligado, maior a corrosão. O certo é desligar, não tentar secar com secador e levar o equipamento o quanto antes.",
         ],
       },
@@ -262,17 +262,17 @@ export const SERVICOS_CORE: Record<string, ServicoLandingData> = {
   "manutencao-de-computador": {
     path: "manutencao-de-computador",
     trackingKey: "manutencao-computador",
-    metaTitle: "Assistência Técnica de Computador em Curitiba | PC",
+    metaTitle: "Manutenção e Conserto de Computador em Curitiba | PC",
     metaDescription:
-      "Assistência técnica de computador em Curitiba: travamentos, fonte, memória, HD/SSD e placa-mãe. Casa e empresa.",
+      "Manutenção e conserto de computador em Curitiba: diagnóstico de fonte, memória, SSD/HD, vídeo, temperatura, placa-mãe e Windows antes da troca de peça.",
     serviceName: "Manutenção de Computador (Desktop)",
     serviceDescription:
       "Diagnóstico e manutenção de PCs desktop: fonte, memória, armazenamento, placa-mãe, travamentos e limpeza, com atendimento em Curitiba e região.",
     eyebrow: "PC desktop em Curitiba",
-    h1: "Manutenção e assistência técnica de computador em Curitiba",
+    h1: "Manutenção e conserto de computador em Curitiba",
     h1Accent: "sem troca de peça desnecessária",
     intro:
-      "Computador que não liga, trava, reinicia sozinho, dá tela azul ou não dá vídeo? No desktop, quase todo componente pode ser testado de forma isolada — fonte, memória, armazenamento, placa de vídeo e placa-mãe. Testamos cada parte para isolar a causa real antes de indicar qualquer troca. Esta página é sobre PC de mesa; se o seu equipamento é notebook, veja a assistência específica. Fale pelo WhatsApp para começar o diagnóstico.",
+      "Computador de mesa que não liga, trava, reinicia, dá tela azul ou fica sem vídeo permite testar fonte, memória, armazenamento, placa de vídeo e placa-mãe por etapas. O diagnóstico isola o componente ou a camada de software antes de indicar troca. Esta página é sobre desktop; notebook segue um fluxo próprio de manutenção."
     whatsappMessage: "Olá! Meu computador de mesa está com problema. Podem avaliar?",
     incluso: [
       { title: "Diagnóstico completo", desc: "Teste de fonte, memória, armazenamento e placa-mãe." },
@@ -301,7 +301,7 @@ export const SERVICOS_CORE: Record<string, ServicoLandingData> = {
     ],
     atendimento: {
       residencial:
-        "Manutenção de PC de mesa em domicílio ou por coleta e entrega em Curitiba e região, com diagnóstico transparente antes de aprovar qualquer serviço.",
+        "A modalidade é definida na triagem: software e configuração podem começar remotamente; rede e periféricos podem exigir visita; desmontagem, troca de componentes e testes prolongados normalmente seguem para bancada."
       empresarial:
         "Manutenção de desktops e estações de trabalho de escritórios e empresas, de forma pontual ou preventiva, para manter a equipe produtiva.",
     },
@@ -309,7 +309,7 @@ export const SERVICOS_CORE: Record<string, ServicoLandingData> = {
       { question: "Meu PC liga mas não dá imagem, o que pode ser?", answer: "Pode ser memória, placa de vídeo, fonte ou placa-mãe. O diagnóstico isola o componente responsável antes de qualquer troca." },
       { question: "O computador reinicia sozinho, é grave?", answer: "Nem sempre. Costuma estar ligado a superaquecimento, fonte instável, memória ou software. Avaliamos para identificar a causa correta." },
       { question: "Vocês fazem limpeza e troca de pasta térmica?", answer: "Sim. A limpeza interna e a manutenção da refrigeração ajudam a reduzir travamentos e desligamentos por temperatura." },
-      { question: "Atendem em domicílio?", answer: "Sim, em Curitiba e região, com opção de coleta e entrega quando o reparo precisa de bancada." },
+      { question: "Atendem no endereço?", answer: "Quando o defeito depende do ambiente, da rede ou de periféricos, a visita pode ser adequada. Desmontagem, troca de componentes e testes prolongados normalmente exigem bancada. A modalidade é definida após a triagem." },
       { question: "Vale a pena consertar um PC antigo?", answer: "Depende do custo do reparo e de um upgrade frente ao valor da máquina. Explicamos com transparência quando compensa investir." },
       { question: "Computador lento precisa ser formatado?", answer: "Nem sempre. Lentidão pode estar relacionada a disco mecânico no fim da vida, memória insuficiente, temperatura alta ou sistema comprometido. A formatação só é indicada quando a causa é de software; o diagnóstico é o que faz essa separação." },
       { question: "Como saber se o problema é fonte ou placa-mãe?", answer: "Pela descrição não é possível afirmar. No desktop, alimentação e placa são testadas de forma isolada, com componentes conhecidos, para identificar qual dos dois está envolvido antes de qualquer substituição." },
@@ -850,17 +850,17 @@ export const SERVICOS_CORE: Record<string, ServicoLandingData> = {
   "suporte-tecnico-empresarial": {
     path: "suporte-tecnico-empresarial",
     trackingKey: "suporte-empresarial",
-    metaTitle: "Suporte Técnico para Empresas | Escopo e Atendimento",
+    metaTitle: "Suporte Técnico Empresarial | Help Desk e Assistência de TI",
     metaDescription:
-      "Entenda o suporte técnico para empresas: estações, usuários, redes, impressoras, backup, atendimento avulso ou recorrente e critérios de triagem.",
+      "Suporte técnico empresarial e help desk: estações, usuários, rede, impressoras, backup, acesso remoto e atendimento avulso ou recorrente com escopo definido.",
     serviceName: "Suporte Técnico Empresarial",
     serviceDescription:
       "Suporte de informática para empresas: estações, rede, impressoras, backups e manutenção preventiva, com atendimento pontual ou recorrente conforme escopo e modalidade.",
     eyebrow: "Suporte para empresas",
-    h1: "Suporte técnico de informática para empresas",
+    h1: "Suporte técnico empresarial e help desk para empresas",
     h1Accent: "menos paradas, mais previsibilidade",
     intro:
-      "Suporte técnico empresarial organiza incidentes de estações, usuários, rede, impressão e backup sem confundir chamado avulso com contrato recorrente. Esta página explica escopo, modalidades, limites e como a triagem funciona; a contratação por cidade fica nas páginas locais específicas.",
+      "Suporte técnico empresarial organiza incidentes de estações, usuários, rede, impressão, backup e acesso a sistemas sem confundir help desk avulso com contrato recorrente. Esta página explica escopo, modalidades, limites e triagem; a contratação local por cidade permanece nas páginas específicas."
     whatsappMessage: "Olá! Preciso de suporte técnico de informática para uma empresa.",
     incluso: [
       { title: "Estações de trabalho", desc: "Manutenção e configuração dos computadores da equipe." },
@@ -884,7 +884,7 @@ export const SERVICOS_CORE: Record<string, ServicoLandingData> = {
       { title: "Complexidade da rede", desc: "Infraestrutura, servidores locais e segmentação." },
       { title: "Escopo do serviço", desc: "Atendimento pontual, projeto específico ou acompanhamento recorrente." },
       { title: "Rotinas de backup", desc: "Estruturar e manter backups influencia o escopo." },
-      { title: "Urgência", desc: "Emergências com empresa parada podem alterar prioridade." },
+      { title: "Impacto operacional", desc: "Chamados que bloqueiam faturamento, acesso ou trabalho de várias pessoas recebem prioridade conforme agenda e escopo contratado." },
       { title: "Deslocamento", desc: "Quando o atendimento é presencial, localização e modalidade são consideradas antes do agendamento." },
     ],
     atendimento: {
