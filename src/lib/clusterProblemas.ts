@@ -73,7 +73,7 @@ export const CLUSTER_PROBLEMAS: ClusterProblema[] = [
     metaDescription:
       "Internet lenta ou com queda toda hora? Veja como separar sinal fraco do Wi-Fi, roteador e operadora com testes simples, antes de trocar plano ou aparelho.",
     resumo:
-      "Na maior parte dos atendimentos de Wi-Fi instável o plano contratado está entregando o que promete — o sinal é que não chega. A investigação separa três coisas diferentes: a internet que entra no imóvel, o equipamento que distribui o sinal e o caminho físico até o aparelho que está reclamando.",
+      "Internet lenta e queda de Wi-Fi não são a mesma coisa. O diagnóstico separa três camadas: o link que chega ao imóvel, o roteador/ponto de acesso que distribui a rede e o caminho sem fio até cada dispositivo. Comparar cabo, proximidade do roteador e outro aparelho ajuda a descobrir em qual camada a falha realmente está."
     waMessage:
       "Olá! Vim da página sobre Wi-Fi instável. Meu sinal cai/fica lento e preciso de diagnóstico da rede.",
     sintomas: [
@@ -83,7 +83,7 @@ export const CLUSTER_PROBLEMAS: ClusterProblema[] = [
       },
       {
         titulo: "Desconecta sozinho em horários parecidos",
-        desc: "Queda com hora marcada costuma ter causa externa: interferência de rede vizinha no mesmo canal, forno micro-ondas, equipamento com temporizador ou reinício automático do roteador da operadora.",
+        desc: "Padrão de horário pode apontar interferência, congestionamento, rotina de algum equipamento ou instabilidade do próprio link. O horário é uma pista, não uma conclusão: ele precisa ser comparado com outros dispositivos e, quando possível, com teste por cabo.",
       },
       {
         titulo: "Conecta, mas 'sem internet'",
@@ -91,7 +91,7 @@ export const CLUSTER_PROBLEMAS: ClusterProblema[] = [
       },
       {
         titulo: "Rápido no celular, lento no computador",
-        desc: "Quando um aparelho vai bem e outro não, a rede está saudável e o problema é do dispositivo: driver de rede, adaptador antigo, banda 2.4 GHz saturada ou economia de energia desligando a placa.",
+        desc: "Quando um aparelho vai bem e outro não no mesmo ponto e horário, a investigação começa pelo dispositivo: driver, adaptador, banda utilizada e economia de energia. Isso reduz a probabilidade de falha geral da rede, mas não elimina roteador ou interferência sem teste adicional.",
       },
     ],
     causas: [
@@ -105,7 +105,7 @@ export const CLUSTER_PROBLEMAS: ClusterProblema[] = [
       },
       {
         titulo: "Canal e faixa saturados",
-        desc: "Em prédio, dezenas de redes disputam os mesmos canais de 2.4 GHz. Reorganizar canal e separar as faixas 2.4/5 GHz costuma devolver estabilidade sem trocar nada.",
+        desc: "Em prédios, várias redes podem disputar canais na faixa de 2,4 GHz. Revisar canais, largura de canal e uso de 2,4/5 GHz pode melhorar estabilidade sem troca de equipamento, desde que o diagnóstico confirme interferência e os dispositivos sejam compatíveis.",
       },
       {
         titulo: "Cabeamento e conectores",
@@ -113,7 +113,7 @@ export const CLUSTER_PROBLEMAS: ClusterProblema[] = [
       },
       {
         titulo: "Repetidor mal configurado",
-        desc: "Repetidor colocado onde o sinal já é fraco repete sinal fraco e ainda divide a banda pela metade. É a causa mais comum de rede que piorou depois de uma 'melhoria'.",
+        desc: "Repetidor colocado onde o sinal de origem já chega fraco tende a retransmitir uma conexão ruim. Em alguns modos, o mesmo rádio recebe e retransmite dados, reduzindo o throughput disponível. O impacto real depende do equipamento, da banda, do backhaul e do posicionamento.",
       },
     ],
     antesDeChamar: [
@@ -148,11 +148,11 @@ export const CLUSTER_PROBLEMAS: ClusterProblema[] = [
       },
       {
         q: "Mesh é melhor que repetidor?",
-        a: "Em geral sim, porque os pontos trabalham como uma rede só e o aparelho troca de ponto sem cair. Mas mesh também depende de bom posicionamento e, quando possível, de ligação por cabo entre os pontos.",
+        a: "Mesh pode oferecer gerenciamento e roaming mais integrados que um repetidor simples, mas não é automaticamente melhor em todo ambiente. Posicionamento, qualidade do backhaul, compatibilidade dos dispositivos e possibilidade de cabeamento determinam o resultado.",
       },
       {
         q: "Preciso trocar meu plano de internet?",
-        a: "Só se o teste com cabo mostrar que a velocidade contratada não está chegando. Se por cabo o resultado é bom, o plano não é o problema.",
+        a: "A comparação por cabo ajuda a separar o link da distribuição sem fio. Se o desempenho cabeado também fica abaixo do esperado, provedor, modem/roteador e cabeamento entram na investigação. Se por cabo está consistente e o Wi-Fi piora à distância, cobertura e interferência ganham prioridade.",
       },
       {
         q: "Dá para resolver sem visita?",
@@ -293,17 +293,17 @@ export const CLUSTER_PROBLEMAS: ClusterProblema[] = [
     metaDescription:
       "Apagou arquivos, formatou por engano ou o HD parou de abrir? O que você faz na primeira hora define a chance de recuperação. Veja o que evitar e como funciona a avaliação.",
     resumo:
-      "Em recuperação de dados, o maior inimigo é a tentativa apressada. Arquivo apagado normalmente continua no disco até ser sobrescrito — e cada programa instalado, cada cópia nova e cada tentativa de reparo automático aumenta a chance de sobrescrever exatamente o que você quer de volta. Nenhum profissional sério promete recuperação total antes da avaliação.",
+      "Em recuperação de dados, a primeira decisão é parar de gravar no dispositivo. Em HDs e algumas mídias, dados apagados podem permanecer até serem sobrescritos. Em SSDs modernos, recursos como TRIM e coleta de lixo podem tornar blocos apagados indisponíveis muito antes, mesmo sem nova gravação visível. Por isso o tipo de mídia e o que aconteceu depois da perda mudam completamente a chance de recuperação."
     waMessage:
       "Olá! Vim da página sobre arquivos apagados. Preciso de avaliação para tentar recuperar dados.",
     sintomas: [
       {
         titulo: "Apaguei e esvaziei a lixeira",
-        desc: "Cenário com boa chance quando o equipamento é desligado logo. O sistema apenas marcou o espaço como livre; o conteúdo permanece até algo gravar por cima.",
+        desc: "Em HD ou mídia sem TRIM, desligar cedo pode preservar blocos que ainda não foram sobrescritos. Em SSDs, a exclusão pode acionar TRIM e reduzir drasticamente a chance de recuperação. O tipo de armazenamento precisa ser identificado antes de estimar possibilidade."
       },
       {
         titulo: "Formatei o disco ou o pendrive por engano",
-        desc: "Formatação rápida não zera os dados. A estrutura de índice é refeita, mas os blocos continuam lá — desde que nada novo seja gravado.",
+        desc: "Formatação rápida geralmente recria estruturas do sistema de arquivos sem fazer uma sobrescrita completa de todos os blocos. Em HD isso pode deixar dados recuperáveis; em SSD, TRIM e controladores modernos podem invalidar blocos rapidamente. Não existe garantia baseada apenas no tipo de formatação."
       },
       {
         titulo: "O disco pede para ser formatado ao conectar",
@@ -369,11 +369,11 @@ export const CLUSTER_PROBLEMAS: ClusterProblema[] = [
       },
       {
         q: "Programas de recuperação que baixo na internet funcionam?",
-        a: "Às vezes, em exclusão simples. O risco é instalar o programa no mesmo disco e sobrescrever justamente os arquivos que você quer. Se os dados forem importantes, não é o primeiro passo indicado.",
+        a: "Podem funcionar em alguns casos lógicos, principalmente quando a mídia está saudável. O risco é instalar ou salvar resultados no mesmo dispositivo, sobrescrever dados ainda recuperáveis ou insistir numa mídia fisicamente instável. Se os arquivos forem importantes, o primeiro passo é preservar o estado da mídia."
       },
       {
         q: "Quanto tempo leva?",
-        a: "Varredura lógica costuma levar de horas a alguns dias, conforme o tamanho do disco. Casos físicos dependem de avaliação e de peça compatível.",
+        a: "O tempo depende do tamanho da mídia, velocidade de leitura, quantidade de erros e tipo de falha. Varredura lógica e imagem de um dispositivo saudável podem ser bem diferentes de uma mídia com setores instáveis ou defeito físico; a estimativa vem depois da avaliação."
       },
       {
         q: "Depois de recuperar, como evitar de novo?",
