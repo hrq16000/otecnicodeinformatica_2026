@@ -11494,35 +11494,38 @@ crontab -e
     ),
   },
   "como-conectar-wifi-tv-nao-conecta": {
-    title: "Smart TV não conecta no Wi-Fi: como separar problema de rede de defeito da TV",
+    title: "Smart TV não conecta no Wi-Fi? Como descobrir a causa",
     excerpt:
-      "Como descobrir se a Smart TV não conecta por causa da rede, da faixa de 5 GHz, do isolamento do roteador ou de falha no módulo Wi-Fi do aparelho — e o que fazer em cada caso.",
+      "Smart TV não conecta no Wi-Fi? Compare celular, 2,4/5 GHz, rede de visitantes e cabo antes de resetar a TV ou trocar equipamento.",
     date: "2026-08-12",
     readTime: "11 min",
     category: "Redes",
     content: (
       <>
-        <p className="lead">Smart TV que não conecta tem duas famílias de causa muito diferentes: a rede não está entregando conexão utilizável naquele ponto da casa, ou o módulo Wi-Fi da própria TV está falhando. Os dois sintomas parecem iguais na tela. A diferença aparece no teste, e é ela que decide se o caso se resolve no roteador ou exige avaliação do aparelho.</p>
+        <p className="lead">Smart TV que não conecta pode falhar por cobertura, configuração do roteador, incompatibilidade de banda ou pelo próprio módulo sem fio. Em vez de resetar tudo, compare primeiro a TV com outro dispositivo no mesmo ponto e depois teste a conexão por cabo, quando houver porta disponível.</p>
+
+        <h2>Resposta curta</h2>
+        <p>Se celular e TV falham no mesmo local, investigue cobertura e roteador. Se o celular funciona e a TV nem encontra a rede, verifique bandas e configuração. Se a TV funciona por cabo e continua falhando apenas no Wi-Fi depois de atualização e reconexão, o módulo sem fio passa a ser uma hipótese relevante. Reset de fábrica fica para depois desses testes.</p>
 
         <h2>O teste que separa os dois cenários</h2>
         <p>Antes de qualquer configuração, leve um celular até o local exato da TV — mesma altura, mesma parede, TV ligada. Depois observe:</p>
         <ul>
           <li><strong>Celular também pega mal ali:</strong> o problema é cobertura. A TV está apenas na pior posição da casa, normalmente atrás de móvel, em parede com estrutura metálica ou no cômodo mais distante do roteador.</li>
           <li><strong>Celular conecta bem e a TV não enxerga a rede:</strong> o caso costuma ser de faixa ou de configuração do roteador, não de alcance.</li>
-          <li><strong>A TV conecta, mas cai sozinha depois de minutos ou horas:</strong> comportamento típico de rede saturada, canal congestionado ou módulo Wi-Fi do aparelho com falha térmica — nessa ordem de probabilidade.</li>
-          <li><strong>A TV não enxerga nenhuma rede, nem a do vizinho:</strong> forte indício de falha no módulo Wi-Fi do aparelho.</li>
+          <li><strong>A TV conecta, mas cai sozinha depois de minutos ou horas:</strong> congestionamento, cobertura, roteador e o próprio módulo Wi-Fi entram na investigação. O padrão precisa ser comparado com outros dispositivos antes de apontar a causa.</li>
+          <li><strong>A TV não enxerga nenhuma rede, nem redes próximas:</strong> configuração, software e módulo Wi-Fi do aparelho passam a merecer atenção, especialmente se outros dispositivos enxergam redes normalmente.</li>
         </ul>
 
-        <h2>Faixa de 5 GHz: a causa mais frequente de "a rede não aparece"</h2>
-        <p>Muitas TVs, inclusive modelos recentes de linha de entrada, operam apenas em 2,4 GHz. Se o roteador transmite as duas faixas com o mesmo nome de rede, a TV pode simplesmente não listar nada — para ela, aquela rede não existe.</p>
-        <p>A solução é separar os nomes das faixas no roteador e conectar a TV explicitamente à faixa de 2,4 GHz. Ela alcança mais longe e atravessa parede melhor; a perda de velocidade é irrelevante para vídeo, que consome muito menos banda do que a maioria das pessoas imagina.</p>
+        <h2>Faixa de 5 GHz: uma causa comum de “a rede não aparece”</h2>
+        <p>Algumas TVs operam apenas em 2,4 GHz ou têm limitações específicas de banda/canal. Se o roteador usa nomes unificados para 2,4 e 5 GHz, a TV pode não mostrar a rede esperada ou escolher uma combinação incompatível. O manual do modelo confirma as bandas suportadas.</p>
+        <p>Separar temporariamente os nomes das faixas pode ajudar no diagnóstico e permitir testar a TV explicitamente em 2,4 GHz. Essa faixa tende a ter maior alcance, enquanto 5 GHz costuma oferecer mais capacidade em distâncias menores; o resultado real depende do ambiente e do equipamento.</p>
 
         <h2>Isolamento de clientes e rede de visitantes</h2>
         <p>Roteadores de operadora frequentemente vêm com rede de visitantes ativa e isolamento entre aparelhos. A TV conectada nessa rede acessa a internet, mas não conversa com celular nem computador — e aí o espelhamento de tela e os aplicativos de controle deixam de funcionar, mesmo com o vídeo rodando normalmente.</p>
         <p>Quando o sintoma é "a TV tem internet mas o celular não a encontra", esse é o primeiro item a verificar. A separação correta entre rede de trabalho, rede doméstica e rede de visitantes faz parte do que ajustamos em <Link to="/servicos/redes-e-wifi">redes e Wi-Fi</Link>.</p>
 
         <h2>Canal congestionado em prédio</h2>
-        <p>Em edifício, dezenas de redes disputam as mesmas frequências. A TV conecta, o ícone fica normal, e mesmo assim o vídeo trava e a conexão cai. Não é defeito: é disputa por espaço no ar. Fixar um canal menos ocupado em 2,4 GHz e reposicionar o roteador para longe de metal, espelho, caixa d'água e do próprio armário costuma mudar o resultado mais do que trocar de aparelho.</p>
+        <p>Em edifícios, várias redes podem disputar as mesmas frequências. A TV pode conectar e ainda sofrer travamentos ou quedas por interferência, cobertura ou capacidade do roteador. Comparar o comportamento em outro horário, próximo ao roteador e em outra banda ajuda antes de fixar canal ou trocar equipamento.</p>
 
         <h2>O que fazer, na ordem que evita retrabalho</h2>
         <ol>
@@ -11562,11 +11565,11 @@ crontab -e
         </aside>
 
         <h2>Quando é defeito da TV — e o que isso significa na prática</h2>
-        <p>Quando a TV não lista nenhuma rede, conecta por cabo sem falha e o problema persiste após atualização e reset, o cenário aponta para o módulo Wi-Fi do aparelho. Nesse ponto entra uma conversa honesta de custo: em boa parte dos televisores de linha de entrada, o reparo dessa parte custa mais do que resolver o uso com conexão cabeada ou com um aparelho externo de streaming ligado à porta HDMI.</p>
+        <p>Quando a TV não lista redes, funciona por cabo e continua falhando no Wi-Fi depois de atualização e nova configuração, o módulo sem fio passa a ser uma hipótese importante. A decisão entre reparar, manter conexão cabeada ou usar um dispositivo externo depende do modelo, do defeito confirmado e do custo do reparo.</p>
         <p>Não prometemos reparo antes de avaliar, e não trocamos placa por suposição. A avaliação de imagem, som, placa e alimentação segue o escopo descrito em <Link to="/servicos/conserto-tv">conserto de TV</Link>, com o critério de verificação e cobrança explicado em <Link to="/diagnostico-tecnico">como funciona o diagnóstico técnico</Link>.</p>
 
         <h2>Resumo prático</h2>
-        <p>Compare a TV com o celular no mesmo ponto para separar cobertura de configuração. Se a rede não aparece na lista, quase sempre é faixa de 5 GHz; se aparece e cai, é congestionamento ou distância; se o celular não encontra a TV, é rede de visitantes ou isolamento; se por cabo funciona e por Wi-Fi nunca funciona, é o módulo sem fio do aparelho — e aí vale comparar o custo do reparo com a solução por cabo ou aparelho externo.</p>
+        <p>Compare a TV com o celular no mesmo ponto para separar cobertura de configuração. Se a rede não aparece, verifique bandas e compatibilidade; se aparece e cai, compare cobertura, interferência e roteador; se o celular não encontra a TV, revise rede de visitantes e isolamento; se por cabo funciona e o Wi-Fi continua falhando, investigue o módulo sem fio antes de trocar a TV.</p>
       </>
     ),
   },
@@ -11749,15 +11752,18 @@ crontab -e
     category: "Procedimentos Técnicos",
     content: (
       <>
-        <p className="lead">Formatar é uma decisão, não um botão. Feita na hora certa, devolve uma máquina previsível. Feita como palpite, apaga anos de arquivo e devolve o mesmo problema em duas semanas. Este guia mostra como decidir e como executar sem perder o que importa.</p>
+        <p className="lead">Formatar é uma decisão, não um botão. Feita na hora certa, corrige problemas de software; feita por tentativa, pode apagar arquivos e deixar intacta uma falha de hardware. Este guia começa pelo backup e pela decisão de quando reinstalar realmente faz sentido.</p>
+
+        <h2>Resposta curta: como formatar sem perder arquivos</h2>
+        <p>Antes de apagar qualquer partição, copie os arquivos importantes para outro destino, abra amostras da cópia para confirmar que funcionam, salve chaves de recuperação e licenças e verifique se o disco está saudável. Só depois escolha entre redefinir o Windows, reparar a instalação existente ou fazer instalação limpa. Se o armazenamento apresenta erro de leitura, pare: recuperação de dados vem antes da formatação.</p>
 
         <h2>Antes: formatar resolve o seu caso?</h2>
         <p>Reinstalar o sistema resolve o que é software: configuração quebrada, perfil corrompido, resíduo de programas desinstalados pela metade, atualização mal aplicada, infecção persistente. Não resolve o que é físico nem o que é limite de hardware.</p>
         <ul>
-          <li><strong>Disco mecânico com Windows 10/11:</strong> a máquina volta rápida por poucos dias e regride. O gargalo é a fila de leitura do disco, não o sistema.</li>
-          <li><strong>Pouca memória:</strong> o sistema recém-instalado abre menos coisas ao mesmo tempo — isso não é ganho de desempenho, é uso menor.</li>
-          <li><strong>Superaquecimento:</strong> queda de velocidade depois de alguns minutos é temperatura, não software.</li>
-          <li><strong>Disco com setores em falha:</strong> formatar sobre um disco falhando costuma travar no meio da instalação e pode inviabilizar a recuperação depois.</li>
+          <li><strong>Disco mecânico com Windows 10/11:</strong> a reinstalação não elimina a limitação de desempenho do armazenamento. Se o gargalo é o HD, o sistema pode continuar lento mesmo recém-instalado.</li>
+          <li><strong>Pouca memória:</strong> reinstalar pode reduzir processos acumulados, mas não aumenta a capacidade física de RAM. Se a memória é o gargalo, ela continuará limitando o uso simultâneo.</li>
+          <li><strong>Superaquecimento:</strong> queda de desempenho após aquecimento aponta para investigação térmica; reinstalar o sistema não corrige ventilação, ventoinha ou dissipação.</li>
+          <li><strong>Disco com sinais de falha:</strong> escrever novamente na unidade pode agravar a situação ou reduzir opções de recuperação. Preserve os dados e avalie o armazenamento antes de reinstalar.</li>
           <li><strong>Travamento ao ligar, sem chegar ao sistema:</strong> investigue hardware antes; formatação não é diagnóstico.</li>
         </ul>
         <p>Se a queixa é lentidão e você ainda não sabe a causa, o caminho honesto é medir antes de apagar: veja <Link to="/problemas/computador-lento">como identificar por que o computador está lento</Link> e só depois decida.</p>
@@ -11779,12 +11785,12 @@ crontab -e
         <ul>
           <li><strong>Redefinir mantendo arquivos:</strong> o Windows reinstala a si mesmo e preserva as pastas do usuário. Remove programas instalados. É o caminho mais rápido para configuração quebrada.</li>
           <li><strong>Reinstalação por cima (mantendo tudo):</strong> repara componentes do sistema preservando programas e arquivos. Útil quando o Windows falha em atualizar ou apresenta erro recorrente.</li>
-          <li><strong>Instalação limpa:</strong> apaga a partição do sistema e começa do zero. É a única opção confiável quando houve infecção séria ou quando a máquina acumulou anos de instalação.</li>
+          <li><strong>Instalação limpa:</strong> recria o sistema do zero e remove programas/configurações da instalação anterior. Pode ser indicada em alguns cenários de corrupção ou comprometimento, mas exige backup e não substitui diagnóstico de hardware.</li>
         </ul>
         <p>O passo a passo detalhado da instalação limpa, incluindo mídia de instalação e particionamento, está em <Link to="/blog/como-instalar-windows-11-do-zero">como instalar o Windows 11 do zero</Link>. Se a motivação for infecção, leia antes <Link to="/blog/como-remover-virus-windows-iniciantes">como remover vírus e adware</Link>: em boa parte dos casos a limpeza dirigida resolve sem apagar nada.</p>
 
         <h2>Licença, contas e drivers</h2>
-        <p>Em máquinas de fábrica, a licença normalmente está vinculada ao equipamento e é reconhecida automaticamente após a instalação. Em máquinas montadas, a licença costuma estar vinculada a uma conta — entrar com a mesma conta evita perder a ativação. Programas pagos exigem o registro original; sem ele, reinstalar significa comprar de novo.</p>
+        <p>A ativação do Windows pode estar associada ao hardware, a uma licença digital ou a uma conta, conforme a edição e a forma de aquisição. Antes da reinstalação, confirme o estado de ativação e guarde as informações necessárias. Programas pagos seguem regras próprias de licença e podem exigir conta, chave ou desativação prévia.</p>
         <p>Depois da instalação, a ordem dos drivers importa: chipset primeiro, depois vídeo, rede, áudio e periféricos. Prefira sempre o site do fabricante do equipamento. Pacotes genéricos de "atualizador de drivers" são uma das causas mais comuns de instabilidade em máquina recém-formatada.</p>
 
         <h2>O que costuma dar errado</h2>
