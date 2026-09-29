@@ -212,7 +212,7 @@ const WAVE_5A: EditorialApproval[] = [
     status: "approved",
     authorType: "organization",
     authorId: INSTITUTIONAL_AUTHOR.id,
-    reviewedAt: "2026-09-07",
+    reviewedAt: "2026-09-29",
     approvedAt: "2026-09-07",
     imageOrigin: "licensed",
     imageLicense: "CC0 1.0",
