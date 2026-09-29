@@ -1382,10 +1382,10 @@ export const ARTICLE_SOURCE_MANIFEST: Record<string, ArticleSourceManifest> = {
     sources: [],
     technicalReview: "reviewed",
     factChecked: true,
-    factCheckedAt: "2026-08-12",
+    factCheckedAt: "2026-09-28",
     stableKnowledge: true,
     notes:
-      "Revisão concluída (Onda 5G): teste comparativo com celular no mesmo ponto, limitação de 2,4 GHz em TVs, isolamento de clientes/rede de visitantes, congestionamento de canal em prédio e critério para suspeitar do módulo Wi-Fi do aparelho. Sem estatística inventada e sem promessa de reparo. Conhecimento técnico estável — sem fonte visível.",
+      "Revisão material em 2026-09-28: resposta curta no topo, remoção de absolutos sobre 5 GHz/canal/módulo Wi-Fi e decisão por comparação TV × outro dispositivo × cabo. Conhecimento técnico estável — sem fonte visível.",
   },
   "como-testar-fonte-de-alimentacao-pc": {
     slug: "como-testar-fonte-de-alimentacao-pc",
@@ -1432,10 +1432,10 @@ export const ARTICLE_SOURCE_MANIFEST: Record<string, ArticleSourceManifest> = {
     sources: [],
     technicalReview: "reviewed",
     factChecked: true,
-    factCheckedAt: "2026-08-14",
+    factCheckedAt: "2026-09-28",
     stableKnowledge: true,
     notes:
-      "Revisão concluída (Onda 8E): critério de quando reinstalar resolve e quando não resolve, backup verificado (abrir o arquivo no destino) como pré-requisito, chave de criptografia antes de qualquer formatação, diferença entre redefinir, reinstalar por cima e instalação limpa, vínculo de licença e ordem de drivers. Sem promessa de prazo, sem marca comercial e sem passo comercial disfarçado de tutorial. Conhecimento técnico estável — sem fonte visível.",
+      "Revisão material em 2026-09-28: resposta curta no topo, backup verificado antes de qualquer ação destrutiva, remoção de absolutos sobre HD/RAM/instalação limpa e linguagem de ativação/licenças mais precisa. Conhecimento técnico estável — sem fonte visível.",
   },
   "quanto-custa-formatar-um-computador": {
     slug: "quanto-custa-formatar-um-computador",
