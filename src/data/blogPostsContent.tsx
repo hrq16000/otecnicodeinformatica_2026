@@ -3620,80 +3620,96 @@ docker run -d --name db --network minha-rede postgres
   },
 
   "como-testar-fonte-de-alimentacao-pc": {
-    title: "Testar a fonte do PC: o que o teste prova, o que ele não prova e quando trocar",
+    title: "Como testar a fonte do PC com segurança: sinais, limites e diagnóstico",
     excerpt:
-      "Como separar defeito de fonte de defeito de placa antes de comprar peça: o que cada teste mede, por que fonte que liga pode estar ruim e quais sinais fecham a decisão de troca.",
+      "Veja o que cada teste de fonte realmente prova, por que tensão em repouso não basta, quando parar e como confirmar a suspeita sem condenar fonte ou placa por tentativa.",
     date: "2026-08-12",
-    readTime: "10 min",
+    readTime: "12 min",
     category: "Procedimentos Técnicos",
     content: (
       <>
-        <p className="lead">A fonte é o componente que mais leva a culpa e o que menos é testado direito. Ela alimenta tudo, então qualquer falha estranha parece "problema de fonte". O objetivo aqui não é decorar valores: é entender o que cada teste realmente prova, para não trocar peça boa nem insistir em peça ruim.</p>
+        <p className="lead">Uma fonte defeituosa pode causar computador sem sinal, reinícios, desligamentos sob carga e partidas abortadas — mas nenhum desses sintomas identifica a fonte sozinho. O diagnóstico mais confiável combina padrão da falha, inspeção, isolamento de componentes e comparação controlada. Medições energizadas ficam para bancada: em casa, o objetivo é reduzir risco e evitar trocar uma peça boa.</p>
 
-        <h2>Por que a fonte engana o diagnóstico</h2>
-        <p>Uma fonte não falha só de um jeito. Ela pode não ligar, pode ligar e entregar tensão fora de faixa, pode entregar tensão certa em repouso e afundar quando o processador e a placa de vídeo puxam corrente ao mesmo tempo, ou pode entregar tensão média correta com ruído elétrico alto o suficiente para reiniciar o sistema. Só o primeiro caso é óbvio.</p>
-        <p>Por isso o padrão de sintomas importa mais do que qualquer leitura isolada. Falha que aparece só sob carga, só depois de aquecer, ou só ao ligar o computador com tudo conectado aponta para regulação sob demanda — exatamente o que um teste rápido de bancada não vê.</p>
+        <h2>Resposta direta</h2>
+        <p>Se você quer saber se a fonte do PC está ruim, não use um único teste como veredito. Primeiro observe quando a falha acontece e desligue o equipamento da tomada antes de mexer em cabos. Depois elimine periféricos e conexões não essenciais. Quando houver uma fonte compatível e comprovadamente funcional, a comparação controlada é uma evidência muito mais útil do que apenas ver uma ventoinha girar. Se o próximo passo exigir abrir a fonte ou medir conectores energizados, pare e leve para bancada.</p>
 
-        <h2>Sintomas que combinam com fonte</h2>
+        <h2>Sintomas compatíveis com fonte — mas não exclusivos dela</h2>
         <ul>
-          <li>Nada acende: sem LED, sem giro de ventoinha, sem reação ao botão.</li>
-          <li>Liga por um instante e desliga sozinho, em ciclo repetido.</li>
-          <li>Reinício súbito sob esforço — jogo, renderização, cópia grande de arquivos.</li>
-          <li>Desligamentos que aumentam quando a máquina já está quente.</li>
-          <li>Cheiro de queimado ou ruído elétrico agudo vindo do gabinete.</li>
+          <li>O computador não apresenta qualquer reação ao botão de ligar.</li>
+          <li>Energiza por um instante e desliga em seguida.</li>
+          <li>Reinicia ou desliga apenas quando CPU e GPU entram em carga.</li>
+          <li>A falha aparece depois de algum tempo de funcionamento e some após esfriar.</li>
+          <li>Há cheiro de queimado, estalo, plástico deformado ou marca escura próxima à alimentação.</li>
         </ul>
-        <p>Os mesmos sintomas aparecem em memória com contato sujo, em refrigeração saturada e em placa-mãe com regulagem defeituosa. Nenhum deles fecha diagnóstico sozinho: eles apenas colocam a fonte na lista de suspeitos.</p>
+        <p>Memória, placa-mãe, superaquecimento, cabo mal assentado, periférico em falha e até contato indevido com o gabinete podem produzir sintomas semelhantes. Por isso, <strong>sintoma serve para ordenar hipóteses; não serve para condenar a fonte</strong>.</p>
 
-        <h2>Segurança antes de qualquer teste</h2>
-        <p>Fonte de computador guarda energia em capacitores mesmo depois de desligada da tomada. Isso muda as regras:</p>
+        <h2>Antes de testar: a linha de segurança</h2>
         <ul>
-          <li>Não abra a caixa metálica da fonte. Não há manutenção doméstica ali dentro.</li>
-          <li>Trabalhe sempre com o cabo de força retirado ao conectar ou desconectar qualquer coisa.</li>
-          <li>Nunca teste com o gabinete apoiado em superfície metálica ou úmida.</li>
-          <li>Se houver marca de queimado, estufamento visível ou cheiro forte, o teste acabou: a peça é descartada, não investigada.</li>
+          <li><strong>Não abra a carcaça metálica da fonte.</strong> O lado primário trabalha com tensão de rede e capacitores podem reter carga.</li>
+          <li><strong>Retire o cabo da tomada antes de conectar ou desconectar peças.</strong></li>
+          <li><strong>Não reutilize cabos modulares de outra fonte por aparência.</strong> A compatibilidade deve ser confirmada para o modelo específico.</li>
+          <li><strong>Pare diante de queimado, líquido, conector derretido ou carbonização.</strong> Não vale energizar novamente apenas para “ver se ainda liga”.</li>
+          <li><strong>Se você não trabalha com medição elétrica, não transforme o multímetro em primeiro teste.</strong> A comparação com uma fonte compatível conhecida reduz muito o risco de erro e exposição.</li>
         </ul>
 
-        <h2>Teste 1 — a fonte reage sozinha?</h2>
-        <p>Existe um teste clássico que força a fonte a ligar fora da placa-mãe, curtocircuitando o sinal de acionamento a um terra do conector principal. Ele responde uma única pergunta: a fonte reage ao comando de ligar.</p>
-        <p>É um teste de exclusão, não de aprovação. Fonte que gira a ventoinha nesse teste pode continuar entregando tensão errada. E fonte que não reage também pode estar apenas em proteção por causa de curto em outro componente ligado a ela. Por isso o teste vale com todos os cabos de periférico desconectados.</p>
-
-        <h2>Teste 2 — medir com o multímetro</h2>
-        <p>Medir tensão contínua nos conectores mostra se a saída está dentro das faixas previstas pelo padrão de fonte do PC. As linhas principais toleram cerca de 5% de variação; a linha auxiliar de standby permanece ativa mesmo com a máquina desligada, o que explica placa com LED aceso e computador que não liga.</p>
+        <h2>Ordem de diagnóstico com menor risco</h2>
         <ol>
-          <li>Ajuste o instrumento para tensão contínua, em escala compatível.</li>
-          <li>Fixe a ponta de referência em um terra do próprio conector.</li>
-          <li>Toque as linhas positivas uma a uma e anote cada leitura em vez de decidir na hora.</li>
-          <li>Repita a medição com a máquina montada e ligada, não apenas em teste isolado.</li>
+          <li><strong>Registre o padrão.</strong> Anote se a falha ocorre ao apertar o botão, durante carga, depois de aquecer ou ao conectar um componente específico.</li>
+          <li><strong>Faça inspeção com tudo desenergizado.</strong> Confira ATX principal, alimentação do processador, conectores da GPU, cabos danificados e sinais físicos.</li>
+          <li><strong>Reduza o sistema.</strong> Desconecte dispositivos não essenciais e observe se o comportamento muda. Mude uma variável por vez.</li>
+          <li><strong>Separe fonte de placa.</strong> Se houver uma fonte de capacidade adequada e compatível, use os cabos correspondentes a ela e repita o mesmo cenário.</li>
+          <li><strong>Use os sinais da placa.</strong> LEDs de diagnóstico, códigos ou bipes documentados pelo fabricante ajudam a localizar em qual etapa a inicialização parou.</li>
+          <li><strong>Escalone para bancada.</strong> Persistindo a dúvida, o próximo passo é medição controlada com equipamento e carga apropriados — não tentativa aleatória de peças.</li>
         </ol>
-        <p>Leitura estável dentro da faixa em repouso não aprova a fonte. Aprova só aquele momento, naquela demanda.</p>
 
-        <h2>Teste 3 — o único que vale a decisão: sob carga</h2>
-        <p>A prova real é medir enquanto o computador trabalha. Se a linha de 12 V cai abaixo da faixa quando o processador e o vídeo puxam junto, ou se a leitura oscila de forma visível, a fonte não está regulando. É esse comportamento que derruba a máquina no meio de um jogo e volta a "funcionar perfeitamente" no teste seguinte em repouso.</p>
-        <p>O mesmo raciocínio vale para a temperatura: fonte que só falha depois de meia hora ligada precisa ser testada depois de meia hora ligada. Teste de dois minutos aprova defeito térmico.</p>
+        <h2>O teste de acionamento prova muito pouco</h2>
+        <p>O conhecido teste que aciona a fonte sem a placa-mãe verifica apenas se ela responde ao sinal de ligar. Ele <strong>não aprova regulação de tensão, comportamento sob carga, ripple, resposta térmica nem todas as proteções</strong>. Uma fonte pode reagir nesse teste e ainda falhar quando o computador exige potência real.</p>
+        <p>Por isso, para quem não tem experiência de bancada, esse procedimento não deve ser usado como atalho para “confirmar” que a fonte está boa. Um testador apropriado ou a substituição controlada por uma unidade compatível fornece uma comparação mais útil.</p>
 
-        <h2>Substituição controlada: o teste mais confiável</h2>
-        <p>Em bancada, o método que menos erra não é medição — é troca por uma fonte sabidamente boa e de capacidade adequada. Se o sintoma some, a peça estava ruim. Se o sintoma continua idêntico, a fonte foi descartada como causa e o próximo suspeito é a placa, a memória ou a refrigeração. Esse cruzamento evita comprar peça por eliminação errada.</p>
+        <h2>Tensão correta em repouso também não encerra o caso</h2>
+        <p>O guia ATX define faixas de regulação para as saídas da fonte e exige que elas sejam atendidas nas condições especificadas de linha, carga e ambiente. Isso é diferente de medir um único valor com o computador praticamente sem demanda. Uma leitura aceitável em repouso mostra apenas que aquela saída estava dentro da faixa naquele instante.</p>
+        <p>Falhas de regulação podem surgir quando a carga muda, quando a unidade aquece ou durante transientes. Por esse motivo, medir conectores energizados sob carga é um procedimento de bancada, com técnica para evitar curto acidental e interpretação da especificação aplicável — não um passo obrigatório para o usuário doméstico.</p>
 
-        <h2>Quando trocar sem hesitar</h2>
+        <h2>Proteções explicam alguns desligamentos instantâneos</h2>
+        <p>Fontes ATX incluem requisitos de proteção, inclusive contra curto-circuito nas saídas. Quando uma condição anormal aparece, a fonte pode interromper a alimentação. Isso explica por que um PC pode “tentar ligar” e desligar imediatamente, mas <strong>não identifica onde está o defeito</strong>: o problema pode estar na própria fonte ou em outro ramo do sistema.</p>
+        <p>Se esse é o seu sintoma, veja também <Link to="/blog/curto-circuito-placa-mae-como-identificar" className="text-accent">curto-circuito na placa-mãe: sinais, teste mínimo e diagnóstico seguro</Link>, que separa montagem, periféricos, fonte e placa sem assumir a causa.</p>
+
+        <h2>O que cada teste realmente responde</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Teste</th>
+              <th>O que ele pode indicar</th>
+              <th>O que ele não prova</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Inspeção visual e olfativa</td><td>Dano físico evidente, aquecimento anormal, conector comprometido</td><td>Que a eletrônica interna está saudável</td></tr>
+            <tr><td>Acionamento sem placa-mãe</td><td>Resposta ao comando de ligar</td><td>Regulação sob carga, ripple ou estabilidade</td></tr>
+            <tr><td>Leitura de tensão em bancada</td><td>Se uma saída permanece na faixa nas condições medidas</td><td>Que todas as saídas e transientes estão corretos em qualquer carga</td></tr>
+            <tr><td>Fonte compatível conhecida</td><td>Se o comportamento muda ao substituir uma variável importante</td><td>Diagnóstico absoluto sem conferir cabos, potência e demais componentes</td></tr>
+            <tr><td>Falha reproduzida sob carga</td><td>Relação entre demanda e defeito</td><td>Que a fonte é necessariamente a origem sem comparação adicional</td></tr>
+          </tbody>
+        </table>
+
+        <h2>Quando a substituição da fonte fica bem sustentada</h2>
         <ul>
-          <li>Tensão fora de faixa em qualquer linha principal, mesmo que só sob carga.</li>
-          <li>Oscilação perceptível durante a medição.</li>
-          <li>Sem reação no teste de acionamento com tudo desconectado.</li>
-          <li>Sinais físicos: estufamento, vazamento, marca de queimado, ruído elétrico.</li>
-          <li>Fonte genérica sem especificação clara em máquina que ganhou placa de vídeo dedicada.</li>
+          <li>Existe dano físico ou térmico evidente na unidade ou em seus conectores.</li>
+          <li>Uma medição de bancada confirma saída fora da especificação aplicável ou instabilidade reproduzível.</li>
+          <li>O defeito desaparece de forma consistente com uma fonte compatível conhecida, usando cabeamento correto, e volta com a unidade suspeita.</li>
+          <li>A própria fonte entra repetidamente em proteção sem carga externa problemática identificada.</li>
         </ul>
-        <p>Não trocamos fonte por idade. Trocamos por comportamento medido ou por evidência física — e registramos qual dos dois motivou a decisão.</p>
+        <p>Idade, marca, ruído de ventoinha ou uma leitura isolada não são motivo suficiente para condenar a peça. A decisão melhora quando existe uma evidência reproduzível.</p>
 
-        <h2>Quando o caso deixa de ser doméstico</h2>
-        <p>Se a máquina já queimou fonte mais de uma vez, se houve surto elétrico, se há marca de carbonização na placa ou se o computador desliga também com fonte boa, o problema saiu da fonte. Nesse ponto o caminho é diagnóstico de placa, não substituição repetida de peça.</p>
-        <p>O critério de verificação e cobrança está em <Link to="/diagnostico-tecnico">como funciona o diagnóstico técnico</Link>. Quando o quadro é de máquina que não dá sinal, comece por <Link to="/servicos/computador-nao-liga">computador não liga</Link>; se a suspeita passa para a eletrônica, o procedimento está em <Link to="/servicos/conserto-placa">conserto de placa</Link>. Para separar os dois casos, veja <Link to="/blog/como-diagnosticar-placa-mae-defeituosa">como diagnosticar placa-mãe defeituosa</Link>.</p>
+        <h2>Quando parar de testar em casa</h2>
+        <p>Pare quando houver cheiro de queimado, carbonização, líquido, conector derretido, mais de uma fonte danificada no mesmo computador, necessidade de abrir a fonte, ou quando o próximo passo exigir medição energizada. Se a máquina também falha com uma fonte compatível comprovadamente funcional, passe a investigar placa-mãe, montagem e periféricos em vez de repetir trocas.</p>
+        <p>O fluxo completo está em <Link to="/diagnostico-tecnico">diagnóstico técnico</Link>. Para computador que não apresenta sinal, veja <Link to="/servicos/computador-nao-liga">computador não liga</Link>; quando a suspeita migra para a placa, consulte <Link to="/blog/como-diagnosticar-placa-mae-defeituosa">como diagnosticar placa-mãe defeituosa</Link>.</p>
 
         <h2>Resumo prático</h2>
-        <p>Comece pelos sintomas e pelo padrão em que eles aparecem. Confirme reação da fonte com tudo desconectado, meça as linhas em repouso, repita sob carga real e, se ainda houver dúvida, troque por uma fonte boa para cruzar o resultado. Decisão de troca vem de medição fora de faixa, oscilação ou dano físico — nunca de suposição.</p>
+        <p>Trate a fonte como uma hipótese, não como culpada automática. Observe o padrão da falha, desenergize antes de mexer, isole componentes, compare com uma unidade compatível conhecida e só use medição sob carga em bancada. O melhor diagnóstico é o que muda uma variável por vez e registra o resultado — não o que força uma conclusão a partir de um único teste.</p>
       </>
     ),
   },
-
   "como-limpar-notebook-por-dentro": {
     title: "Limpeza interna de notebook: o que muda de verdade e onde estão os riscos",
     excerpt:
