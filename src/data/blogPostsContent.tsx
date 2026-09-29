@@ -13501,63 +13501,94 @@ bcdboot C:\\Windows /s S: /f UEFI`}</code></pre>
   },
 
   "webcam-usb-nao-e-detectada": {
-    title: "Webcam USB não é detectada: porta, cabo, alimentação e driver",
+    title: "Webcam USB não é detectada no Windows: diagnóstico por etapas",
     excerpt:
-      "Roteiro de eliminação para webcam externa que o Windows não enxerga: teste de porta, hub sem alimentação, cabo, dispositivo desconhecido no Gerenciador e teste cruzado em outro computador.",
+      "Como separar conexão USB, hub, enumeração, driver UVC, permissão e defeito físico quando uma webcam externa não aparece no Windows.",
     date: "2026-08-26",
-    readTime: "8 min",
+    readTime: "10 min",
     category: "Procedimentos Técnicos",
     content: (
       <>
-        <p className="lead">Webcam USB que não aparece é, na maioria das vezes, um problema de porta, cabo ou alimentação — não da câmera. O caminho mais curto é eliminar essas três variáveis antes de tocar em driver.</p>
+        <p className="lead">Quando uma webcam USB não aparece, a primeira pergunta não é “qual driver instalar?”, mas <strong>em que ponto ela deixou de ser reconhecida</strong>. Conexão física, enumeração USB, driver, permissões e aplicativo são camadas diferentes. Testar uma camada por vez evita reinstalar software quando o Windows nem está enxergando o dispositivo.</p>
 
-        <h2>Resposta curta</h2>
-        <p>Conecte a câmera direto em uma porta traseira do computador, sem hub e sem extensão. Se o Windows emitir o som de conexão e o dispositivo surgir no Gerenciador de Dispositivos, o problema estava no caminho anterior. Se nada acontece em nenhuma porta, teste o mesmo cabo e a mesma câmera em outro computador antes de concluir qualquer coisa.</p>
+        <h2>Resposta direta</h2>
+        <p>Conecte a webcam diretamente a outra porta USB do mesmo computador, sem hub ou extensão durante o teste. Depois verifique se ela aparece no Gerenciador de Dispositivos. Se continuar ausente, teste a mesma webcam em outro computador compatível. A própria Microsoft recomenda essas comparações para separar problema da câmera de problema da máquina. Se o Windows detecta a câmera, mas um aplicativo não mostra imagem, passe a investigar permissão, seleção do dispositivo e driver em vez de continuar trocando portas.</p>
 
-        <h2>Por que acontece?</h2>
+        <h2>Primeiro separe “não detectada” de “detectada, mas sem imagem”</h2>
         <table>
           <thead>
-            <tr><th>Causa</th><th>Sintoma</th><th>Como diferenciar</th><th>Risco</th></tr>
+            <tr>
+              <th>O que você observa</th>
+              <th>Camada a investigar primeiro</th>
+              <th>Próximo teste útil</th>
+            </tr>
           </thead>
           <tbody>
-            <tr><td>Hub sem fonte própria</td><td>Câmera não liga ou desconecta ao gravar</td><td>Funciona ligada direto na máquina</td><td>Nenhum</td></tr>
-            <tr><td>Porta frontal com cabo interno frouxo</td><td>Falha só nas portas da frente</td><td>Porta traseira funciona normalmente</td><td>Baixo</td></tr>
-            <tr><td>Cabo rompido ou extensão longa demais</td><td>Conexão intermitente ao mover o cabo</td><td>Outro cabo resolve</td><td>Nenhum</td></tr>
-            <tr><td>Driver não instalado</td><td>Dispositivo desconhecido no Gerenciador</td><td>Aparece com alerta amarelo</td><td>Médio</td></tr>
-            <tr><td>Conflito com outra câmera</td><td>Programa escolhe o dispositivo errado</td><td>Duas câmeras listadas no programa</td><td>Nenhum</td></tr>
-            <tr><td>Câmera com defeito</td><td>Nada em nenhuma porta e em outro computador</td><td>Teste cruzado negativo</td><td>—</td></tr>
+            <tr><td>Nada muda ao conectar</td><td>Porta, cabo, hub, alimentação ou dispositivo</td><td>Outra porta direta e depois outro computador</td></tr>
+            <tr><td>Aparece como dispositivo desconhecido ou com alerta</td><td>Enumeração/driver</td><td>Identificar o dispositivo e verificar alterações de hardware</td></tr>
+            <tr><td>Aparece em Câmeras, mas o app não mostra vídeo</td><td>Aplicativo, permissão ou seleção de câmera</td><td>Testar no aplicativo Câmera e conferir acesso à câmera</td></tr>
+            <tr><td>Funciona fora do hub, mas não no hub</td><td>Caminho USB, energia ou banda compartilhada</td><td>Testar o hub sem outros periféricos ou usar conexão direta</td></tr>
+            <tr><td>Falha também em outro computador</td><td>Câmera, cabo removível ou compatibilidade</td><td>Trocar apenas o cabo, se removível, antes de condenar a câmera</td></tr>
           </tbody>
         </table>
 
-        <h2>Árvore de eliminação</h2>
+        <h2>Etapa 1 — elimine o caminho físico sem abrir nada</h2>
         <ol>
-          <li><strong>É detectada?</strong> Ao conectar, o Windows emite som e mostra notificação? Não → troque de porta, de preferência traseira, e remova hub e extensão.</li>
-          <li><strong>Aparece no Gerenciador de Dispositivos?</strong> Procure em Câmeras, em Dispositivos de imagem e também em Controladores USB. Um item "Dispositivo desconhecido" já é resposta: falta driver ou o dispositivo não está se identificando.</li>
-          <li><strong>O aplicativo Câmera abre imagem?</strong> Sim → hardware e driver estão bem; o resto é permissão ou seleção de dispositivo.</li>
-          <li><strong>Outros programas acessam?</strong> Se só um falha, o assunto é <Link to="/blog/permissoes-de-camera-no-windows" className="text-accent">permissão de câmera</Link>.</li>
-          <li><strong>Funciona em outro computador?</strong> Sim → o problema é da máquina. Não → é da câmera ou do cabo.</li>
+          <li>Desconecte hubs, extensões e adaptadores que não sejam indispensáveis.</li>
+          <li>Conecte a câmera diretamente a outra porta USB do computador.</li>
+          <li>Se o cabo for removível e houver outro cabo compatível conhecido, compare um de cada vez.</li>
+          <li>Observe se o Windows reage à conexão e se o item aparece ou desaparece no Gerenciador de Dispositivos.</li>
         </ol>
+        <p>Não existe regra de que “porta traseira resolve”: em desktops ela pode ser uma boa comparação porque reduz intermediários, mas o que interessa é usar uma porta funcional e direta. Em notebook, compare portas diferentes sem assumir que todas compartilham exatamente o mesmo controlador ou capacidade.</p>
 
-        <h2>USB 2, USB 3 e alimentação</h2>
-        <p>Câmeras de resolução mais alta consomem banda e energia. Ligadas em hub passivo compartilhado com teclado, mouse, disco externo e outros periféricos, elas simplesmente somem ou travam durante a transmissão. Portas traseiras costumam ser ligadas diretamente aos controladores da placa e são a referência de teste. Se a câmera exige USB 3 e a porta é USB 2, a imagem pode abrir em resolução reduzida ou nem abrir.</p>
+        <h2>Etapa 2 — veja se o Windows conseguiu enumerar a câmera</h2>
+        <p>No Gerenciador de Dispositivos, procure em <strong>Câmeras</strong>, <strong>Dispositivos de geração de imagens</strong> e <strong>Controladores de som, vídeo e jogos</strong>. Se a câmera não estiver listada, a Microsoft orienta verificar alterações de hardware. Um item com alerta informa que existe um problema de reconhecimento ou driver, mas o ícone sozinho não identifica a causa.</p>
+        <p>Se conectar e desconectar a webcam faz um item desconhecido aparecer e sumir, você ganhou uma pista: a camada USB está percebendo alguma coisa. Registre o nome, código de erro e identificadores antes de remover ou instalar qualquer driver.</p>
 
-        <h2>Driver: quando e de onde</h2>
-        <p>A maioria das webcams atuais usa o driver de classe genérico do próprio Windows e não exige instalação. Quando exige, o pacote correto vem do site do fabricante da câmera, para o modelo exato. Vale também deixar o Windows Update procurar drivers opcionais antes de qualquer coisa. Programas que prometem "atualizar todos os drivers" e sites agregadores de driver são desnecessários e frequentemente instalam algo pior do que o problema original.</p>
+        <h2>Etapa 3 — teste a câmera em outro dispositivo</h2>
+        <p>O teste cruzado reduz a quantidade de hipóteses. Se a mesma câmera funciona em outro computador, volte a investigar porta, driver, política e sistema do primeiro equipamento. Se falha nos dois, ainda confira cabo removível, alimentação própria e requisitos do modelo antes de concluir defeito físico.</p>
+        <p>Esse teste é mais informativo do que repetir várias instalações de driver no mesmo Windows, porque altera o computador mantendo a câmera como variável comum.</p>
 
-        <h2>O que NÃO fazer</h2>
+        <h2>Etapa 4 — se foi detectada, separe driver de permissão</h2>
+        <p>Abra o aplicativo Câmera do Windows. Se ele mostra vídeo, a cadeia básica dispositivo → driver → captura está funcionando, e o problema tende a estar no aplicativo específico, na seleção da câmera ou nas permissões. Nesse caso, siga o guia de <Link to="/blog/permissoes-de-camera-no-windows" className="text-accent">permissões de câmera no Windows</Link>.</p>
+        <p>Se o aplicativo Câmera também falha, volte ao Gerenciador de Dispositivos e ao histórico da falha. Uma atualização recente, um driver incompatível ou uma câmera que deixou de enumerar corretamente exigem caminhos diferentes; evite instalar pacotes genéricos de sites agregadores.</p>
+
+        <h2>Driver UVC: quando ele entra no diagnóstico</h2>
+        <p>A Microsoft informa que muitas webcams USB são compatíveis com <strong>USB Video Class (UVC)</strong> e podem usar o driver UVC incluído no Windows. Isso não significa que toda webcam deve ser forçada a usar esse driver: recursos específicos do fabricante podem depender de extensões próprias.</p>
+        <p>Se o dispositivo está presente no Gerenciador, o modelo é UVC compatível e o problema aponta para driver, a documentação da Microsoft descreve a troca para o driver <em>USB Video Device</em> como uma alternativa de diagnóstico. Faça isso somente depois de registrar o driver atual e sabendo que recursos específicos, como determinadas integrações biométricas, podem deixar de funcionar.</p>
+
+        <h2>Hub, energia e banda: hipótese, não diagnóstico automático</h2>
+        <p>Uma webcam pode dividir energia e banda USB com outros dispositivos conectados ao mesmo hub ou caminho. Se ela funciona diretamente no computador e falha somente quando volta ao hub, essa comparação sustenta investigar o hub, sua alimentação e os demais periféricos. Ela não prova, por si só, que “USB 2 é insuficiente” ou que uma porta específica está defeituosa.</p>
+        <p>Use a especificação da própria câmera para saber requisitos de interface e alimentação. Evite inferir resolução ou compatibilidade apenas pela cor da porta ou pelo formato do conector.</p>
+
+        <h2>O que não fazer</h2>
         <ul>
-          <li>Instalar utilitário de driver de origem desconhecida para resolver uma webcam de baixo custo.</li>
-          <li>Testar apenas nas portas frontais e concluir que a câmera morreu.</li>
-          <li>Empilhar hub em hub para ganhar portas com periféricos de vídeo.</li>
-          <li>Abrir a carcaça da câmera antes do teste cruzado em outro computador.</li>
+          <li>Instalar “atualizador universal de drivers” para tentar fazer a webcam aparecer.</li>
+          <li>Desinstalar vários controladores USB em sequência sem registrar o estado original.</li>
+          <li>Concluir que a webcam queimou depois de um único teste negativo.</li>
+          <li>Abrir a câmera antes de comparar porta, cabo e outro computador.</li>
+          <li>Ignorar reinício, cheiro de queimado ou aquecimento anormal ao conectar um periférico.</li>
         </ul>
 
-        <h2>Quando chamar um técnico</h2>
-        <p>Chame quando o Gerenciador acusar erro de controlador USB, quando várias portas pararem de funcionar ao mesmo tempo ou quando o computador reiniciar ao conectar o periférico. Esses sinais apontam para a placa, não para a câmera — avaliação em <Link to="/diagnostico-tecnico" className="text-accent">diagnóstico técnico</Link> e reparo em <Link to="/servicos/manutencao-de-computador" className="text-accent">manutenção de computador</Link>.</p>
+        <aside className="rounded-lg border border-destructive/40 bg-destructive/5 p-4 not-prose my-6">
+          <p className="m-0 text-sm"><strong>Pare o teste</strong> se o computador reinicia ou desliga ao conectar a webcam, se há conector aquecendo, cheiro de queimado, líquido ou dano físico na porta. Nesses casos, continuar conectando o dispositivo pode ampliar um defeito elétrico.</p>
+        </aside>
+
+        <h2>Perguntas rápidas</h2>
+        <h3>Se a webcam aparece no Gerenciador, ela está boa?</h3>
+        <p>Não necessariamente. Isso confirma que o Windows conseguiu identificar algum dispositivo, mas ainda podem existir problema de driver, captura, cabo intermitente ou falha do próprio módulo.</p>
+
+        <h3>Se funciona no aplicativo Câmera, preciso reinstalar driver?</h3>
+        <p>Normalmente o próximo passo é verificar o aplicativo que falha, sua câmera selecionada e as permissões. Reinstalar driver sem uma evidência nessa camada pode acrescentar uma variável sem resolver a causa.</p>
+
+        <h3>Uma webcam USB sempre precisa de driver do fabricante?</h3>
+        <p>Não. Muitas usam o driver UVC incluído no Windows. Modelos com recursos específicos podem usar software ou extensões do fabricante, então confirme a documentação do modelo.</p>
+
+        <h2>Quando escalar para diagnóstico técnico</h2>
+        <p>Vale escalar quando várias portas USB apresentam a mesma falha, o Gerenciador registra erros persistentes de controlador, a máquina reinicia ao conectar o periférico ou a webcam continua ausente depois dos testes cruzados. O caminho é <Link to="/diagnostico-tecnico" className="text-accent">diagnóstico técnico</Link>; se a investigação apontar para a máquina, veja também <Link to="/servicos/manutencao-de-computador" className="text-accent">manutenção de computador</Link>.</p>
       </>
     ),
   },
-
   "windows-update-nao-funciona-o-que-verificar": {
     title: "Windows Update não funciona: como descobrir em qual estágio a atualização falha",
     excerpt:

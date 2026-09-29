@@ -891,7 +891,7 @@ const WAVE_10G: EditorialApproval[] = [
     status: "approved",
     authorType: "organization",
     authorId: INSTITUTIONAL_AUTHOR.id,
-    reviewedAt: "2026-08-26",
+    reviewedAt: "2026-09-29",
     approvedAt: "2026-08-26",
     imageOrigin: "licensed",
     imageLicense: "CC0",
