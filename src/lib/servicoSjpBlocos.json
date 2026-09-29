@@ -194,86 +194,86 @@
       "cidadeNome": "São José dos Pinhais",
       "nome": "Redes e Wi-Fi",
       "intentGlobal": "entender projeto e correção de redes: cabeamento, roteadores, canais, repetidores e mesh",
-      "intentLocal": "resolver Wi-Fi e rede em São José dos Pinhais, onde o serviço é sempre presencial e depende de medição no imóvel",
-      "title": "Wi-Fi e Rede em São José dos Pinhais | Visita Técnica",
-      "description": "Correção de Wi-Fi e rede em São José dos Pinhais: medição de sinal no imóvel, ajuste de roteador e cabeamento com visita agendada por rota.",
-      "h1": "Wi-Fi e rede em São José dos Pinhais",
-      "subtitulo": "Rede não se conserta à distância: veja como é feita a medição no imóvel, o que muda em casas maiores e terrenos amplos do município e como agendar.",
+      "intentLocal": "resolver Wi-Fi e rede em São José dos Pinhais separando link do provedor, cobertura, interferência, roteador, dispositivo e cabeamento antes de indicar equipamento",
+      "title": "Wi-Fi e Redes em SJP | Mesh, roteador, sinal e cabeamento",
+      "description": "Wi-Fi e redes em São José dos Pinhais: diagnóstico de sinal, roteador, mesh, repetidor, cabeamento e dispositivos antes de indicar equipamento.",
+      "h1": "Wi-Fi e redes em São José dos Pinhais",
+      "subtitulo": "Diagnóstico para separar internet do provedor, cobertura, interferência, roteador e dispositivo antes de comprar repetidor, mesh ou trocar plano.",
       "intro": [
-        "Casa térrea grande, sobrado com laje ou galpão comercial: em São José dos Pinhais a queixa mais frequente não é internet lenta, é internet que não chega ao outro lado do imóvel. Um roteador único no ponto de entrada da operadora não cobre planta espalhada.",
-        "O trabalho começa medindo sinal ambiente por ambiente e verificando o link direto no modem. Com isso definimos se a solução é reposicionar, passar cabo até um segundo ponto, instalar sistema malha ou apenas separar as faixas — sem trocar equipamento por precaução."
+        "Quando o Wi-Fi cai ou não chega bem a um ponto do imóvel, o primeiro passo é descobrir se a falha está no link da operadora, na distribuição do sinal ou em um único dispositivo. Testar perto do roteador e comparar celular, notebook e outros aparelhos já elimina várias hipóteses antes da visita.",
+        "A triagem pode começar remotamente com testes básicos. Quando o problema depende de distância, paredes, interferência, cabeamento ou posicionamento dos equipamentos, a medição precisa ser feita no local. A modalidade é definida pelo sintoma, não por regra fixa."
       ],
       "blocos": [
         {
-          "titulo": "Rede é serviço presencial — e isso define o agendamento",
+          "titulo": "Separar internet lenta de Wi-Fi ruim",
           "paragrafos": [
-            "Wi-Fi depende de parede, distância, interferência e do ponto onde o roteador foi instalado. Nenhuma dessas variáveis pode ser medida por acesso remoto, então todo chamado de rede em São José dos Pinhais vira visita técnica. O que o remoto resolve é apenas configuração de senha, rede de convidados e ajuste pontual do roteador.",
-            "Por isso, para esse serviço, a rota da região não é só uma conveniência: é a própria condição do atendimento. Confirmamos a janela, levamos o equipamento de medição e reservamos tempo suficiente para percorrer o imóvel inteiro."
+            "Se a conexão fica lenta mesmo ao lado do roteador e em vários aparelhos, o link do provedor entra na investigação. Se o desempenho é bom perto do roteador e cai apenas em determinados pontos, cobertura e obstáculos passam a ser mais relevantes.",
+            "O teste por cabo, quando disponível, ajuda a separar rede sem fio de internet contratada. Sem essa comparação, aumentar o plano ou comprar repetidor pode atacar o problema errado."
           ]
         },
         {
-          "titulo": "Como é feita a medição no imóvel",
+          "titulo": "Um dispositivo falha ou todos falham?",
           "paragrafos": [
-            "Chegando ao endereço, medimos o sinal cômodo a cômodo e nos pontos onde você realmente usa a internet — não só ao lado do roteador. Registramos a potência recebida, a interferência de redes vizinhas e a diferença entre as faixas de frequência disponíveis.",
-            "Só depois disso apresentamos o caminho: reposicionar o roteador, trocar o canal, passar cabo até um segundo ponto, instalar um equipamento adicional ou substituir o aparelho que a operadora deixou. A recomendação vem da medição, nunca de um pacote fechado vendido antes de entrar na casa."
+            "Quando apenas um notebook perde conexão enquanto celular e televisão continuam normais, adaptador, driver, configuração de energia e sistema daquele equipamento ganham prioridade.",
+            "Quando vários dispositivos apresentam a mesma queda no mesmo ponto, roteador, interferência, distância, banda e estrutura do imóvel passam a ter mais peso. Essa comparação simples evita trocar equipamento por tentativa."
           ]
         },
         {
-          "titulo": "O que muda nos imóveis de São José dos Pinhais",
+          "titulo": "Repetidor, mesh ou ponto cabeado",
           "paragrafos": [
-            "Boa parte das casas atendidas no município tem terreno maior, edícula, área de serviço afastada ou construção em etapas, com paredes de espessuras diferentes. Isso cria pontos cegos que um único roteador no meio da sala não cobre, mesmo sendo um aparelho novo.",
-            "Nesses casos a solução costuma ser cabo até um segundo ponto de distribuição, e não mais um repetidor empilhado. Falamos isso abertamente porque repetidor mal posicionado é a causa mais comum de rede lenta que já encontramos na região."
+            "Repetidor precisa receber sinal utilizável para retransmitir. Mesh funciona melhor quando os nós mantêm boa comunicação entre si. Um ponto cabeado pode ser mais previsível quando existe caminho físico adequado.",
+            "Nenhuma dessas opções é universal. A escolha depende de planta, distância, obstáculos, quantidade de dispositivos, necessidade de mobilidade e possibilidade de passagem de cabo."
           ]
         },
         {
-          "titulo": "Rede em comércios e escritórios do município",
+          "titulo": "Canais, 2,4 GHz e 5 GHz",
           "paragrafos": [
-            "Em estabelecimentos comerciais o problema raramente é só o Wi-Fi: costuma envolver máquina de cartão, impressora fiscal, câmeras e computador do caixa disputando a mesma rede. O trabalho é separar o que é operação do que é acesso de cliente e garantir que o essencial não caia no horário de movimento.",
-            "Quando há mais de um ambiente ou um segundo pavimento, o projeto é dividido em etapas executadas na mesma visita sempre que possível, para concentrar o deslocamento em uma única ida."
+            "A faixa de 2,4 GHz alcança mais longe, mas costuma ter mais interferência; 5 GHz oferece mais capacidade em distâncias menores e sofre mais com obstáculos. Equipamentos modernos podem usar seleção automática, mas nem sempre ela escolhe o melhor comportamento para cada ambiente.",
+            "Antes de fixar canal ou separar nomes de rede, verificamos o que os dispositivos suportam e se a mudança realmente melhora estabilidade. Ajuste de rádio sem medição pode apenas deslocar o problema."
           ]
         },
         {
-          "titulo": "Agendamento, tempo e custo",
+          "titulo": "Rede para impressora, câmera e dispositivos locais",
           "paragrafos": [
-            "Chamados de rede levam mais tempo que um atendimento comum: a medição, os testes e a validação final consomem boa parte do período. Por isso agendamos com janela dedicada dentro da rota da região e informamos, antes, o valor da visita e a regra de deslocamento por quilometragem.",
-            "Materiais como cabo, conector e canaleta são orçados separadamente da mão de obra, e a instalação só começa depois da sua aprovação."
+            "Wi-Fi não serve apenas para internet. Impressoras, câmeras, televisores, dispositivos de automação e compartilhamentos dependem de endereçamento e comunicação local. Às vezes a internet funciona, mas um equipamento some da rede.",
+            "Nesse cenário verificamos endereço IP, isolamento de clientes, banda utilizada, DHCP e comunicação entre os dispositivos antes de culpar o próprio periférico."
           ]
         },
         {
-          "titulo": "Validação antes de encerrar",
+          "titulo": "Validação depois da alteração",
           "paragrafos": [
-            "Antes de sair, refazemos a medição nos mesmos pontos do início e mostramos a diferença. Se algum cômodo continuar fora do padrão, isso é registrado com a explicação técnica do motivo, em vez de ser deixado sem resposta.",
-            "Você recebe o resumo do que foi alterado — posição, canal, senha, equipamentos e pontos de cabo — para não depender de memória caso precise chamar alguém no futuro."
+            "Depois de reposicionar, configurar ou instalar equipamento, repetimos os testes nos pontos onde a falha era percebida. O objetivo é comparar antes e depois, não apenas confirmar que o roteador está ligado.",
+            "Quando algum ponto continua limitado por estrutura física ou interferência, isso é informado junto com as opções possíveis. Não tratamos cobertura de rádio como promessa absoluta."
           ]
         }
       ],
       "faq": [
         {
-          "pergunta": "Vocês fazem instalação de rede em São José dos Pinhais?",
-          "resposta": "Sim, com visita agendada dentro da janela de rota da região. Rede exige medição no imóvel, então esse serviço nunca é feito apenas por acesso remoto."
+          "pergunta": "Meu Wi-Fi não chega bem a um cômodo. Preciso de mesh?",
+          "resposta": "Não necessariamente. Primeiro verificamos desempenho perto do roteador, distância, obstáculos e outros dispositivos. Reposicionamento, repetidor, mesh ou ponto cabeado resolvem cenários diferentes."
         },
         {
-          "pergunta": "Meu Wi-Fi não pega nos fundos da casa. Dá para resolver?",
-          "resposta": "Na maioria dos casos sim. Medimos o sinal ponto a ponto e indicamos se a solução é reposicionar o roteador, passar cabo até um segundo ponto ou instalar equipamento adicional."
+          "pergunta": "Dá para começar o diagnóstico remotamente?",
+          "resposta": "Sim. Podemos comparar testes perto do roteador, outros dispositivos e configuração básica. Quando a falha depende de cobertura, interferência ou cabeamento, a continuidade precisa ser feita no local."
         },
         {
-          "pergunta": "Repetidor resolve?",
-          "resposta": "Depende da medição. Em imóveis maiores, comuns no município, o repetidor costuma piorar a estabilidade e o cabo até um segundo ponto entrega resultado melhor."
+          "pergunta": "Repetidor sempre reduz a velocidade?",
+          "resposta": "O resultado depende do modelo, da forma como ele recebe e retransmite o sinal e da qualidade do enlace com o roteador. Instalar onde o sinal já chega muito fraco costuma gerar desempenho ruim, por isso a posição precisa ser avaliada."
         },
         {
-          "pergunta": "Atendem comércio com máquina de cartão e impressora fiscal?",
-          "resposta": "Sim. Nesses casos separamos a rede de operação da rede de clientes e testamos todos os equipamentos antes de encerrar o atendimento."
+          "pergunta": "Vale trocar o plano de internet?",
+          "resposta": "Só depois de separar link contratado de Wi-Fi. Se o teste por cabo ou próximo ao roteador já está abaixo do esperado em vários aparelhos, o provedor entra na investigação. Se o problema aparece apenas longe do roteador, aumentar o plano pode não mudar a cobertura."
         },
         {
-          "pergunta": "Quanto tempo demora uma visita de rede?",
-          "resposta": "Mais que um atendimento comum, porque inclui medição inicial, execução e nova medição de validação. A janela é reservada no agendamento e informada antes."
+          "pergunta": "Vocês configuram impressora e dispositivos na rede?",
+          "resposta": "Sim, quando o problema envolve comunicação local. Verificamos endereço, porta, banda, DHCP e se os dispositivos conseguem se enxergar antes de concluir por defeito do equipamento."
         }
       ],
       "interlinks": [
         "/servicos/redes-e-wifi",
         "/tecnico-informatica-sao-jose-pinhais",
-        "/areas-atendidas",
         "/problemas/wifi-instavel",
+        "/problemas/impressora-nao-imprime",
         "/atendimento-domicilio"
       ]
     },
@@ -284,87 +284,87 @@
       "cidadeNome": "São José dos Pinhais",
       "nome": "Backup e Recuperação de Dados",
       "intentGlobal": "entender técnicas de backup e recuperação: mídias, falhas lógicas, falhas físicas, chances reais e limites",
-      "intentLocal": "acionar backup ou recuperação de dados em São José dos Pinhais com o cuidado no transporte da mídia e prazos honestos de bancada",
-      "title": "Recuperação de Dados em São José dos Pinhais | Coleta",
-      "description": "Backup e recuperação de dados em São José dos Pinhais: coleta cuidadosa da mídia, avaliação em bancada e prazo informado antes de qualquer tentativa.",
-      "h1": "Backup e recuperação de dados em São José dos Pinhais",
-      "subtitulo": "O que fazer primeiro, como a mídia é retirada e transportada com segurança e por que esse serviço é o único em que pedimos para você não tentar nada antes.",
+      "intentLocal": "acionar backup ou recuperação de dados em São José dos Pinhais com triagem entre exclusão lógica, falha física, clonagem e preservação da mídia antes de qualquer tentativa",
+      "title": "Recuperação de Dados em SJP | HD, SSD, pen drive e backup",
+      "description": "Recuperação de dados em São José dos Pinhais: HD, SSD e pen drive, com triagem entre falha lógica e física, preservação da mídia e avaliação antes da tentativa.",
+      "h1": "Recuperação de dados em São José dos Pinhais",
+      "subtitulo": "Primeiro preservar a mídia, depois separar exclusão lógica, falha de leitura e dano físico antes de escolher clonagem, recuperação ou laboratório especializado.",
       "intro": [
-        "Mídia com dados perdidos em São José dos Pinhais é caso de logística delicada: quanto menos o disco for ligado e desligado, maior a chance de leitura. O primeiro pedido na triagem é sempre desligar o equipamento e não tentar programas de recuperação baixados às pressas.",
-        "Combinamos a retirada da mídia pela rota da região, fazemos a imagem em ambiente controlado e enviamos a lista do que foi efetivamente lido antes de qualquer cobrança de recuperação. Sem imagem legível, não há serviço a cobrar — e isso é dito de saída."
+        "Quando arquivos somem, o disco deixa de aparecer ou o computador pede para formatar a unidade, a primeira decisão é não agravar o caso. Evite instalar programas de recuperação no mesmo disco, copiar novos arquivos para a mídia ou insistir em ligar um HD com ruído mecânico.",
+        "A triagem identifica tipo de mídia, sintoma, o que aconteceu antes da falha e quais arquivos são prioritários. Só depois definimos se o caso pode começar por orientação remota, se a mídia precisa ser removida para bancada ou se há sinais que justificam encaminhamento para estrutura especializada."
       ],
       "blocos": [
         {
-          "titulo": "A primeira orientação é parar de usar o equipamento",
+          "titulo": "A primeira medida é evitar novas gravações",
           "paragrafos": [
-            "Quando o chamado é perda de arquivo, disco que não aparece ou pen drive que pede formatação, a instrução inicial dada ainda no WhatsApp é desligar o equipamento e não instalar programas de recuperação. Cada nova gravação diminui a chance de trazer o arquivo de volta, e isso vale muito mais que a pressa de resolver sozinho.",
-            "Essa orientação é dada antes de qualquer combinação de horário, justamente porque o cliente de São José dos Pinhais vai esperar a rota da região. O tempo de espera não prejudica o resultado; o uso continuado do disco, sim."
+            "Arquivo apagado pode continuar presente fisicamente até que novos dados ocupem o mesmo espaço. Por isso instalar programas, baixar arquivos ou continuar usando o computador pode reduzir a chance de recuperação. Em SSDs, recursos como TRIM também podem alterar rapidamente o cenário, então o tempo é importante, mas a pressa não deve virar tentativa aleatória.",
+            "Se o disco faz estalos, some e volta, trava o sistema ao ser conectado ou apresenta leitura extremamente lenta, interromper o uso é ainda mais importante. Repetir ciclos de energia em mídia com possível falha mecânica pode piorar o dano."
           ]
         },
         {
-          "titulo": "Retirada e transporte da mídia",
+          "titulo": "Falha lógica e falha física são caminhos diferentes",
           "paragrafos": [
-            "Esse é o único serviço em que o transporte exige cuidado especial. A mídia é retirada do equipamento no local, embalada com proteção antiestática e registrada com identificação e estado aparente. Discos com ruído mecânico não são ligados novamente durante o trajeto.",
-            "Se você preferir, é possível entregar apenas o disco ou o pen drive, sem mover o computador inteiro. Para quem está fora da cidade-sede, isso costuma ser o caminho mais rápido para começar a avaliação."
+            "Exclusão acidental, partição perdida e sistema de arquivos corrompido são falhas lógicas. Já ruído mecânico, unidade que não gira, conector danificado, placa queimada ou leitura instável apontam para falha física. O procedimento, o risco e a estrutura necessária mudam completamente entre essas categorias.",
+            "A avaliação existe para separar esses cenários antes da tentativa. Não prometemos percentual de recuperação antes de examinar a mídia e não tratamos toda perda de arquivo como caso simples de software."
           ]
         },
         {
-          "titulo": "Avaliação antes de qualquer promessa",
+          "titulo": "Clonagem antes da recuperação quando a mídia está instável",
           "paragrafos": [
-            "Na bancada, o primeiro passo é distinguir falha lógica de falha física, porque as duas têm custos, prazos e chances completamente diferentes. Só depois dessa avaliação informamos o que é possível, o que é improvável e o que está fora do nosso alcance.",
-            "Não existe garantia de recuperação total, e não prometemos isso para fechar serviço. Quando o caso exige sala limpa ou equipamento que não temos, dizemos claramente — e você decide se quer seguir por outro caminho."
+            "Quando a unidade ainda responde, mas apresenta setores defeituosos ou leitura irregular, trabalhar diretamente nela pode aumentar o desgaste. Nesses casos a estratégia costuma ser criar uma imagem ou clone setor a setor e executar a recuperação sobre a cópia, preservando o original.",
+            "Nem toda mídia instável pode ser clonada em bancada comum. Se o caso exigir abertura de disco, troca de cabeças ou ambiente controlado, informamos a limitação e o encaminhamento adequado antes de insistir em procedimentos que possam reduzir a chance de sucesso."
           ]
         },
         {
-          "titulo": "Prazos reais para quem está no município",
+          "titulo": "HD, SSD e pen drive têm comportamentos diferentes",
           "paragrafos": [
-            "Recuperação não tem prazo de balcão: a leitura de um disco danificado pode levar horas ou dias, e apressar o processo aumenta o risco de perder o que ainda está legível. Informamos uma estimativa após a avaliação e mantemos o acompanhamento pelo WhatsApp.",
-            "A devolução da mídia e da cópia dos arquivos acontece na rota seguinte da região ou por retirada combinada, conforme o que for mais rápido para você."
+            "HD mecânico permite observar ruído, rotação e padrões de leitura; SSD depende de controladora, memória flash e recursos internos que tornam alguns tipos de falha menos previsíveis; pen drives e cartões podem falhar no conector, controladora ou memória.",
+            "Por isso o mesmo sintoma — unidade não reconhecida — não significa o mesmo defeito. Marca, modelo, capacidade, interface e histórico de queda, líquido, surto ou formatação ajudam a escolher a primeira etapa."
           ]
         },
         {
-          "titulo": "Backup preventivo depois do susto",
+          "titulo": "Backup preventivo depois da recuperação",
           "paragrafos": [
-            "Boa parte de quem aciona esse serviço no município nunca teve rotina de backup. Depois da recuperação, configuramos uma rotina simples: uma cópia local e uma cópia fora do equipamento, com verificação periódica de que a cópia está mesmo sendo feita.",
-            "Para casa, isso costuma ser um disco externo mais uma nuvem. Para escritórios da região, o desenho envolve também o teste de restauração — porque backup que nunca foi restaurado não é backup, é esperança."
+            "Depois de recuperar ou substituir a mídia, o passo mais importante é não repetir o risco. Uma rotina simples costuma combinar cópia local com uma cópia fora do equipamento, de preferência automática.",
+            "Backup só é confiável quando a restauração é testada. Para arquivos de trabalho, fotos e documentos importantes, verificamos periodicamente se a cópia está atualizada e se pode ser aberta em outro dispositivo."
           ]
         },
         {
-          "titulo": "Sigilo dos arquivos",
+          "titulo": "Privacidade e entrega dos arquivos",
           "paragrafos": [
-            "Arquivos pessoais, fotos, documentos de escritório e dados de clientes passam por bancada, então o compromisso de sigilo é parte do serviço. Os dados recuperados são entregues a você e removidos das nossas mídias de trabalho após a confirmação da entrega.",
-            "Detalhes técnicos sobre tipos de falha, mídias suportadas e limites de cada procedimento ficam na página do serviço, que é a referência para a parte teórica."
+            "Mídias podem conter documentos pessoais, fotos, contratos e dados de clientes. O acesso é limitado ao necessário para identificar e copiar o conteúdo recuperável, e o resultado é entregue no meio combinado com o cliente.",
+            "Quando há necessidade de encaminhamento para laboratório externo, isso é informado antes. O cliente decide se aceita o fluxo, o custo e as condições de privacidade do serviço especializado."
           ]
         }
       ],
       "faq": [
         {
-          "pergunta": "Perdi arquivos e moro em São José dos Pinhais. O que faço agora?",
-          "resposta": "Desligue o equipamento e não instale programas de recuperação. Fale pelo WhatsApp: combinamos a retirada da mídia na próxima rota da região ou a entrega direta para avaliação."
+          "pergunta": "Apaguei arquivos importantes. O que devo fazer agora?",
+          "resposta": "Pare de usar o disco ou dispositivo onde os arquivos estavam, evite instalar programas de recuperação no mesmo local e faça a triagem antes de novas gravações."
+        },
+        {
+          "pergunta": "Meu HD está fazendo barulho. Posso tentar copiar os arquivos?",
+          "resposta": "Se há ruído mecânico anormal, desligar a unidade é mais seguro do que repetir tentativas. O caso precisa ser avaliado antes de novos ciclos de energia ou cópia prolongada."
+        },
+        {
+          "pergunta": "Vocês garantem recuperação total?",
+          "resposta": "Não. A possibilidade depende do tipo de falha, do estado físico da mídia e do que aconteceu depois da perda. O diagnóstico define o que é viável e quando o caso precisa de estrutura especializada."
         },
         {
           "pergunta": "Preciso levar o computador inteiro?",
-          "resposta": "Não. Na maioria dos casos basta o disco, o SSD ou o pen drive. Retiramos a mídia no local ou você entrega apenas ela, o que agiliza bastante o início da avaliação."
-        },
-        {
-          "pergunta": "Vocês garantem que vão recuperar tudo?",
-          "resposta": "Não. Nenhuma recuperação séria promete resultado antes da avaliação. Distinguimos falha lógica de falha física e informamos as chances reais, incluindo os casos em que o serviço está fora do nosso alcance."
-        },
-        {
-          "pergunta": "Quanto tempo demora?",
-          "resposta": "Depende do estado da mídia: a leitura pode levar de horas a dias. A estimativa é dada após a avaliação em bancada e o andamento é acompanhado pelo WhatsApp."
+          "resposta": "Nem sempre. Em muitos casos basta a mídia, mas notebooks, SSDs internos e situações em que o defeito pode estar no próprio equipamento exigem avaliação do conjunto. A triagem define o que precisa ser levado."
         },
         {
           "pergunta": "Depois vocês ajudam a configurar backup?",
-          "resposta": "Sim. Configuramos uma rotina com cópia local e cópia fora do equipamento e, no caso de escritórios, incluímos o teste de restauração para confirmar que o backup funciona."
+          "resposta": "Sim. Podemos organizar uma rotina com cópia local e cópia externa e orientar teste de restauração para confirmar que o backup realmente funciona."
         }
       ],
       "interlinks": [
         "/servicos/recuperacao-de-dados",
         "/tecnico-informatica-sao-jose-pinhais",
-        "/areas-atendidas",
-        "/seguranca-dos-dados",
-        "/problemas/arquivos-apagados"
+        "/problemas/arquivos-apagados",
+        "/problemas/hd-fazendo-barulho",
+        "/seguranca-dos-dados"
       ]
     }
   }
