@@ -92,6 +92,7 @@ export const ALLOWED_SOURCE_HOSTS = [
   "wireguard.com",
   "openvpn.net",
   "www.kingston.com",
+  "edc.intel.com",
   "nsa.gov",
   "www.nsa.gov",
 ] as const;
@@ -201,6 +202,31 @@ export const EDITORIAL_SOURCES: Record<string, EditorialSource> = {
       "NVMe foi projetado para armazenamento de estado sólido sobre PCI Express e é usado em vários formatos, inclusive M.2.",
     ],
   },
+  "intel-atx3-dc-regulation": {
+    id: "intel-atx3-dc-regulation",
+    title: "ATX Version 3 Multi Rail Desktop Platform Power Supply Design Guide — DC Voltage Regulation",
+    publisher: "Intel",
+    url: "https://edc.intel.com/content/www/us/en/design/ipla/software-development-platforms/client/platforms/alder-lake-desktop/atx-version-3-0-multi-rail-desktop-platform-power-supply-design-guide/2.1a/dc-voltage-regulation-required/",
+    accessedAt: "2026-09-29",
+    sourceType: "standard",
+    supports: [
+      "O guia ATX define faixas de regulação das saídas DC e exige conformidade nas condições especificadas de linha, carga e ambiente.",
+      "Uma leitura isolada em repouso não representa, por si só, o comportamento da fonte em todas as condições de carga.",
+    ],
+  },
+  "intel-atx3-short-circuit-protection": {
+    id: "intel-atx3-short-circuit-protection",
+    title: "ATX Version 3 Multi Rail Desktop Platform Power Supply Design Guide — Short Circuit Protection",
+    publisher: "Intel",
+    url: "https://edc.intel.com/content/www/us/en/design/ipla/software-development-platforms/client/platforms/alder-lake-desktop/atx-version-3-0-multi-rail-desktop-platform-power-supply-design-guide/2.1/short-circuit-protection-scp-required/",
+    accessedAt: "2026-09-29",
+    sourceType: "standard",
+    supports: [
+      "O guia ATX exige proteção contra curto-circuito nas principais saídas da fonte.",
+      "O desligamento por proteção é compatível com condição anormal de saída, mas não identifica sozinho qual componente do sistema originou a falha.",
+    ],
+  },
+
   "ms-bcdboot": {
     id: "ms-bcdboot",
     title: "BCDBoot command-line options",
@@ -1389,13 +1415,12 @@ export const ARTICLE_SOURCE_MANIFEST: Record<string, ArticleSourceManifest> = {
   },
   "como-testar-fonte-de-alimentacao-pc": {
     slug: "como-testar-fonte-de-alimentacao-pc",
-    sources: [],
+    sources: ["intel-atx3-dc-regulation", "intel-atx3-short-circuit-protection"],
     technicalReview: "reviewed",
     factChecked: true,
-    factCheckedAt: "2026-08-12",
-    stableKnowledge: true,
+    factCheckedAt: "2026-09-29",
     notes:
-      "Revisão concluída (Onda 5H): modos de falha da fonte (não liga, tensão fora de faixa, queda sob carga, ruído), segurança com capacitores carregados, limite do teste de acionamento, medição em repouso × sob carga e substituição controlada como cruzamento. Sem marca comercial e sem promessa. Conhecimento técnico estável — sem fonte visível.",
+      "Revisão material em 2026-09-29 guiada pelo GSC: remove o teste energizado como checklist doméstico, separa sintoma de diagnóstico, explica os limites do acionamento e da leitura em repouso, prioriza substituição controlada e critérios de parada e ancora regulação/proteção em documentação oficial do guia ATX da Intel.",
   },
   "como-diagnosticar-placa-mae-defeituosa": {
     slug: "como-diagnosticar-placa-mae-defeituosa",
