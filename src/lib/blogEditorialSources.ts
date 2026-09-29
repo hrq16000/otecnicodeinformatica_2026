@@ -1448,13 +1448,12 @@ export const ARTICLE_SOURCE_MANIFEST: Record<string, ArticleSourceManifest> = {
   },
   "windows-11-lento-como-resolver": {
     slug: "windows-11-lento-como-resolver",
-    sources: [],
+    sources: ["ms-pc-performance", "ms-startup-apps"],
     technicalReview: "reviewed",
     factChecked: true,
-    factCheckedAt: "2026-08-12",
-    stableKnowledge: true,
+    factCheckedAt: "2026-09-29",
     notes:
-      "Revisão concluída (Onda 5I): classificação da lentidão por sintoma, leitura de saturação de disco/memória/CPU, limite de hardware (armazenamento mecânico e pouca RAM), throttling térmico, ajustes de software com efeito real e critério para reinstalação com backup verificado. Sem marca comercial e sem promessa de ganho percentual. Conhecimento técnico estável — sem fonte visível.",
+      "Revisão material em 2026-09-29 guiada pelo GSC: remove limiares arbitrários de RAM e disco, separa saturação observada de causa diagnosticada, trata temperatura como hipótese verificável, elimina alegações internas de bancada e inclui critérios de parada. Diagnóstico de desempenho e aplicativos de inicialização ancorados em documentação oficial Microsoft.",
   },
   "como-remover-virus-windows-iniciantes": {
     slug: "como-remover-virus-windows-iniciantes",
