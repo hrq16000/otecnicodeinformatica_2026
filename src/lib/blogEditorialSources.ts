@@ -227,6 +227,20 @@ export const EDITORIAL_SOURCES: Record<string, EditorialSource> = {
     ],
   },
 
+  "ms-camera-troubleshooting-windows": {
+    id: "ms-camera-troubleshooting-windows",
+    title: "Camera doesn't work in Windows",
+    publisher: "Microsoft Support",
+    url: "https://support.microsoft.com/en-us/windows/hardware/camera/camera-doesn-t-work-in-windows",
+    accessedAt: "2026-09-29",
+    sourceType: "official",
+    supports: [
+      "Para webcam externa, a Microsoft orienta conferir conexão USB, testar outra porta e testar a câmera em outro dispositivo para separar falha da câmera de falha do computador.",
+      "O Gerenciador de Dispositivos é usado para localizar a câmera e verificar alterações de hardware quando ela não aparece.",
+      "Muitas webcams USB são compatíveis com UVC e podem usar o driver USB Video Device incluído no Windows, com a ressalva de que recursos específicos do fabricante podem não funcionar com o driver genérico.",
+    ],
+  },
+
   "ms-bcdboot": {
     id: "ms-bcdboot",
     title: "BCDBoot command-line options",
@@ -1686,13 +1700,12 @@ export const ARTICLE_SOURCE_MANIFEST: Record<string, ArticleSourceManifest> = {
   },
   "webcam-usb-nao-e-detectada": {
     slug: "webcam-usb-nao-e-detectada",
-    sources: [],
+    sources: ["ms-camera-troubleshooting-windows"],
     technicalReview: "reviewed",
     factChecked: true,
-    factCheckedAt: "2026-08-26",
-    stableKnowledge: true,
+    factCheckedAt: "2026-09-29",
     notes:
-      "Revisão concluída (Onda 10C, Lote 4): eliminação por porta/hub/cabo, consumo e banda em USB 2 e 3, leitura do Gerenciador de Dispositivos, teste cruzado em outro computador e recusa explícita de agregadores de driver. Sem marca comercial e sem promessa. Conhecimento técnico estável — sem fonte visível.",
+      "Revisão material em 2026-09-29 guiada pelo GSC: separa ausência de enumeração de falha de captura/permissão, elimina conclusões determinísticas sobre porta, hub e USB 2/3, adiciona teste cruzado, critérios de parada e uso condicional do driver UVC. Fonte oficial Microsoft visível.",
   },
   "windows-update-nao-funciona-o-que-verificar": {
     slug: "windows-update-nao-funciona-o-que-verificar",
