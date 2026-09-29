@@ -309,7 +309,7 @@ export const CidadeLandingLayout = ({ data }: { data: CidadeData }) => {
                 Bairros de {data.cidade} com páginas próprias
               </h2>
               <p className="mt-2 max-w-2xl text-muted-foreground">
-                Estas páginas são bairros âncora aprovados pela política de indexação local e possuem conteúdo técnico próprio.
+                Consulte os guias de cada bairro para ver sintomas, decisões técnicas e caminhos de atendimento com conteúdo próprio para aquela rota.
               </p>
               <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
                 {data.bairrosIndexaveis.map((b) => (
