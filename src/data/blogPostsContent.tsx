@@ -11386,17 +11386,17 @@ crontab -e
   },
 
   "como-saber-quem-esta-usando-meu-wifi": {
-    title: "Como saber quem está usando o seu Wi-Fi (e o que fazer)",
-    excerpt: "Como listar os dispositivos conectados, identificar cada um pelo nome e pelo endereço físico e retomar o controle da rede sem quebrar o que funciona.",
+    title: "Como ver quem está usando meu Wi-Fi e quais aparelhos estão conectados",
+    excerpt: "Veja como listar aparelhos conectados ao Wi-Fi, identificar dispositivos desconhecidos e diferenciar cliente ativo, lease DHCP e endereço MAC privado.",
     date: "2026-04-22",
     readTime: "10 min",
     category: "Redes e Wi-Fi",
     content: (
       <>
-        <p className="lead">A suspeita costuma começar assim: a internet ficou lenta sem motivo, ou apareceu um aparelho desconhecido na lista do roteador. Antes de trocar tudo, vale entender o que a lista de dispositivos realmente mostra — e o que ela não mostra.</p>
+        <p className="lead">Para ver quem está usando seu Wi-Fi, comece pelo painel do roteador e pela lista de clientes/dispositivos. Mas atenção: uma entrada desconhecida não prova invasão, e algumas listas mantêm registros DHCP de aparelhos que já não estão ativos. O objetivo é cruzar a lista com os aparelhos reais da casa antes de bloquear ou restaurar a rede.</p>
 
         <h2>Resposta rápida</h2>
-        <p>Abra o painel do roteador e procure a lista de dispositivos conectados ou clientes DHCP: ela é a única fonte confiável, porque enxerga também o que está em economia de energia. Compare a lista com o inventário dos aparelhos da casa, desligando um por vez para identificar o que não reconhecer. Nome estranho não prova invasão — celulares modernos usam endereço físico aleatório por rede. Se, mesmo com todos os aparelhos desligados, restar alguém conectado, ou se houver configuração alterada sem sua ação, troque a senha do Wi-Fi e a senha de administração, desligue WPS e acesso remoto e atualize o firmware.</p>
+        <p>Abra o painel do roteador e procure a lista de dispositivos, clientes ou leases DHCP. Ela é a referência principal, mas nem toda entrada representa um aparelho ativo naquele instante: alguns roteadores mantêm leases por um período. Compare nomes, endereços e horários com o inventário da casa e desligue o Wi-Fi de um aparelho por vez quando precisar identificar uma entrada. Nome estranho ou MAC diferente do endereço de fábrica não prova invasão; sistemas atuais podem usar endereço MAC privado por rede.</p>
 
         <h2>Onde ver os aparelhos conectados</h2>
         <p>O lugar confiável é o painel do próprio roteador, normalmente em uma seção chamada "dispositivos conectados", "clientes DHCP" ou "mapa da rede". Ali aparecem o nome informado por cada aparelho, o endereço IP recebido e o endereço físico (MAC) da placa de rede.</p>
@@ -11404,7 +11404,7 @@ crontab -e
 
         <h2>Por que a lista parece cheia de estranhos</h2>
         <p>Uma casa comum tem mais dispositivos conectados do que as pessoas imaginam: TV, console, caixa de som, aspirador, lâmpadas, câmeras, relógio, tablet antigo esquecido na gaveta. Muitos se apresentam com nomes genéricos ou apenas com um código do fabricante.</p>
-        <p>Some-se a isso a privacidade de endereço MAC: celulares modernos geram um endereço aleatório por rede, o que faz o mesmo aparelho aparecer com identidades diferentes ao longo do tempo. Ou seja, um nome estranho na lista não é prova de invasão.</p>
+        <p>Some-se a isso a privacidade de endereço MAC: celulares e computadores podem usar um endereço privado diferente do endereço físico de fábrica. Dependendo do sistema e da configuração, esse identificador pode mudar ao redefinir a rede ou a própria opção de privacidade. Por isso, um nome ou MAC desconhecido não é prova de invasão.</p>
 
         <h2>Como identificar cada aparelho com método</h2>
         <ol>
@@ -11416,12 +11416,12 @@ crontab -e
 
         <h2>Sinais que merecem atenção de verdade</h2>
         <ul>
-          <li>Dispositivo conectado enquanto todos os aparelhos da casa estão desligados.</li>
+          <li>Dispositivo que continua aparecendo como ativo depois de confirmar que não é apenas um lease antigo e depois de desligar os aparelhos conhecidos.</li>
           <li>Alteração de configurações que você não fez — DNS trocado, acesso remoto habilitado, rede de visitantes ligada sozinha.</li>
           <li>Tráfego contínuo em horários em que ninguém usa a internet.</li>
           <li>Senha do painel que deixou de funcionar.</li>
         </ul>
-        <p>Esse conjunto aponta para acesso indevido ou para roteador comprometido — e aí não basta bloquear um endereço.</p>
+        <p>Esse conjunto justifica uma revisão de segurança do roteador, mas ainda precisa ser confirmado antes de concluir por acesso indevido.</p>
 
         <h2>Retomando o controle da rede</h2>
         <h3>1. Troque a senha do Wi-Fi</h3>
@@ -11429,7 +11429,7 @@ crontab -e
         <h3>2. Troque a senha de administração</h3>
         <p>É diferente da senha do Wi-Fi e é a que realmente protege as configurações. Se ela ainda era a de fábrica, considere que qualquer pessoa que já esteve na rede pôde acessá-la.</p>
         <h3>3. Desative WPS e acesso remoto</h3>
-        <p>O WPS permite entrar sem digitar senha e é o atalho mais explorado em redes domésticas. O acesso remoto ao painel expõe o roteador à internet inteira.</p>
+        <p>Se você não usa WPS, desativá-lo reduz uma função de pareamento desnecessária. O acesso remoto ao painel também deve ficar desligado quando não há necessidade explícita e configuração segura para administrá-lo.</p>
         <h3>4. Atualize o firmware</h3>
         <p>Boa parte das invasões de roteador explora falhas já corrigidas pelo fabricante em versões mais novas.</p>
         <h3>5. Isole o que não precisa da rede principal</h3>
@@ -11458,10 +11458,10 @@ crontab -e
 
         <h2>Árvore de decisão</h2>
         <ol>
-          <li>A lista mostra algum dispositivo ativo com todos os aparelhos da casa desligados? Se não, o problema provavelmente é consumo ou cobertura, não intrusão.</li>
+          <li>A lista mostra algum dispositivo realmente ativo depois de excluir leases antigos e aparelhos conhecidos? Se não, lentidão pode estar ligada a consumo, cobertura ou outra causa da rede — não há evidência suficiente de intrusão.</li>
           <li>Se sim, alguma configuração do roteador mudou sem você mexer (DNS, acesso remoto, rede de visitantes)? Se mudou, trate como roteador comprometido: atualização de firmware e reconfiguração completa, não apenas bloqueio de um endereço.</li>
-          <li>Se nada mudou, troque primeiro a senha do Wi-Fi. Se a entrada desconhecida some e não volta, o caso está resolvido.</li>
-          <li>Se a entrada volta mesmo após a troca de senha, a senha de administração provavelmente também está comprometida. Restaure o roteador ao padrão de fábrica e configure do zero.</li>
+          <li>Se houver um cliente não reconhecido confirmado, troque a senha do Wi-Fi e reconecte somente os aparelhos conhecidos. Observe a lista novamente antes de concluir que o caso foi resolvido.</li>
+          <li>Se uma entrada não reconhecida reaparecer depois da troca de senha, verifique primeiro se ela corresponde a um aparelho conhecido com MAC privado. Se houver também configuração alterada ou credencial administrativa suspeita, considere trocar a senha de administração e, quando necessário, restaurar o roteador seguindo as instruções do fabricante ou provedor.</li>
           <li>Se o equipamento é antigo, não recebe mais firmware do fabricante e o problema persiste, a substituição passa a ser a alternativa técnica realista.</li>
         </ol>
 
@@ -12837,21 +12837,21 @@ bcdboot C:\\Windows /s S: /f UEFI`}</code></pre>
   },
 
   "troquei-o-ssd-e-o-pc-so-abre-a-bios": {
-    title: "Troquei o HD/SSD e o PC só abre a BIOS: o que fazer",
+    title: "Troquei o SSD e o PC só abre a BIOS: o que verificar",
     excerpt:
-      "Disco novo vem vazio: sem sistema instalado, o computador para no Setup. Como confirmar a detecção do M.2, resolver conflito de portas e instalar o Windows do zero.",
+      "Depois de trocar o SSD, o PC abre direto a BIOS? Veja como separar disco vazio, boot order, detecção M.2/SATA, clone sem boot e controlador antes de formatar.",
     date: "2026-08-25",
     readTime: "11 min",
     category: "Procedimentos Técnicos",
     content: (
       <>
-        <p className="lead">Instalar um SSD novo e ver a máquina parar na tela de configuração não é sinal de defeito. É o comportamento esperado: <strong>disco novo sai de fábrica vazio</strong>, sem sistema operacional e sem carregador de inicialização. Não existe nada para o firmware iniciar.</p>
+        <p className="lead">Depois de trocar o SSD, abrir direto a BIOS pode ter causas diferentes: o SSD pode estar vazio, o firmware pode não estar detectando a unidade, a ordem de boot pode apontar para o disco errado ou uma clonagem pode não ter levado a estrutura de inicialização corretamente. O primeiro passo é descobrir qual desses cenários existe antes de formatar.</p>
 
         <h2>Resposta curta</h2>
-        <p>Confirme que o disco novo aparece na lista de dispositivos do Setup, verifique se o slot M.2 usado não desativou uma porta SATA, e instale o sistema a partir de um pendrive — ou, se a intenção era manter tudo como estava, faça a clonagem corretamente em vez de instalar do zero.</p>
+        <p>Confirme primeiro se o SSD aparece no firmware. Se aparece e está vazio, a máquina ainda precisa de um sistema inicializável. Se foi clonado, confira ordem de boot e a presença do Windows Boot Manager ou da partição EFI antes de repetir a clonagem. Se o SSD não aparece, a investigação fica em encaixe, slot, interface e controlador.</p>
 
         <h2>Por que o disco novo não inicia sozinho</h2>
-        <p>Um SSD recém-comprado normalmente nem tem tabela de partições. Ele é um espaço bruto. Para virar um disco de sistema ele precisa ser <strong>inicializado</strong> (receber uma tabela GPT ou MBR), <strong>particionado</strong>, <strong>formatado</strong> e finalmente receber a instalação. O instalador do Windows faz as quatro etapas, então não é necessário preparar o disco antes.</p>
+        <p>Um SSD novo pode chegar sem partições e sem sistema operacional. Para virar um disco de sistema, ele precisa de uma estrutura de partições compatível e de arquivos de inicialização; uma instalação limpa pode criar essa estrutura durante o processo. Se o SSD foi clonado, porém, a situação é diferente: o foco passa a ser confirmar se as partições de sistema e o carregador também foram copiados.</p>
         <p>Existe uma exceção que causa confusão: SSDs vendidos como "com Windows instalado" por lojas independentes. Nesses casos, a instalação costuma estar vinculada ao hardware de origem e falhar no primeiro boot.</p>
 
         <h2>Passo 1 — o disco aparece no Setup?</h2>
@@ -12860,7 +12860,7 @@ bcdboot C:\\Windows /s S: /f UEFI`}</code></pre>
           <li><strong>M.2 mal encaixado:</strong> o módulo entra inclinado, encosta no fim do conector e só então é preso pelo parafuso. Sem o parafuso, ele fica levantado e perde contato.</li>
           <li><strong>Slot incompatível:</strong> há slots M.2 apenas SATA, apenas NVMe (PCIe) e híbridos. Confira no manual da placa ou do notebook qual é o do seu modelo. Chave B, M ou B+M no conector do módulo é o primeiro indício.</li>
           <li><strong>Conflito de portas:</strong> ativar o segundo M.2 desabilita portas SATA específicas em muitas placas. É por isso que, ao instalar o SSD novo, o HD antigo às vezes "some".</li>
-          <li><strong>SATA em modo errado:</strong> o controlador precisa estar em <strong>AHCI</strong>. Modo RAID ou Intel RST esconde discos do instalador do Windows.</li>
+          <li><strong>Modo do controlador:</strong> AHCI, RAID, Intel RST/VMD e outras opções dependem do equipamento e da instalação existente. Não altere esse modo por tentativa: uma mudança pode fazer o Windows antigo parar de iniciar ou exigir driver específico no instalador. Registre a configuração original e siga a documentação do fabricante.</li>
           <li><strong>Adaptador ou caddy:</strong> adaptadores baratos de baia ótica falham com frequência. Teste o disco direto na placa antes de culpar o disco.</li>
         </ul>
         <p>Detalhes de compatibilidade antes da compra estão em <Link to="/blog/como-fazer-upgrade-ssd-nvme" className="text-accent">upgrade para SSD NVMe</Link>, e o caso específico de notebooks com dois armazenamentos em <Link to="/blog/como-instalar-segundo-ssd-notebook" className="text-accent">como instalar um segundo SSD no notebook</Link>.</p>
@@ -12871,7 +12871,7 @@ bcdboot C:\\Windows /s S: /f UEFI`}</code></pre>
           <li><strong>M.2 Mode / M.2 Configuration:</strong> alterna entre SATA e PCIe para o slot. Em <em>Auto</em> geralmente funciona; em modo fixo errado, o disco desaparece.</li>
           <li><strong>Geração PCIe (Gen3 × Gen4):</strong> deixar em <em>Auto</em> é o recomendado. Forçar Gen4 em placa ou disco que não suportam produz instabilidade e detecção intermitente; forçar Gen3 num disco Gen4 apenas limita a velocidade, sem impedir o funcionamento.</li>
           <li><strong>Divisão de linhas PCIe:</strong> em algumas placas, ocupar o segundo M.2 reduz as linhas da placa de vídeo. Não impede o boot, mas explica queda de desempenho depois do upgrade.</li>
-          <li><strong>Boot mode:</strong> para instalar Windows 11, mantenha <strong>UEFI</strong> com CSM desabilitado e Secure Boot ligado.</li>
+          <li><strong>Boot mode:</strong> instalações modernas do Windows 11 usam UEFI e exigem suporte a Secure Boot. Antes de mudar CSM, Secure Boot ou modo de inicialização, confirme a configuração recomendada pelo fabricante e preserve a chave do BitLocker quando existir.</li>
         </ul>
 
         <h2>Passo 3 — instalar o Windows a partir do Setup</h2>
@@ -12879,12 +12879,12 @@ bcdboot C:\\Windows /s S: /f UEFI`}</code></pre>
           <li>Crie a mídia de instalação em outro computador — a etapa está detalhada em <Link to="/blog/como-instalar-windows-11-do-zero" className="text-accent">como instalar o Windows 11 do zero</Link>.</li>
           <li>Conecte o pendrive, ligue e abra o menu de inicialização (F12, F11 ou F8) ou coloque o pendrive em primeiro lugar na lista de prioridade.</li>
           <li>Escolha a entrada com prefixo <strong>UEFI:</strong> para que a instalação use GPT.</li>
-          <li>Ao chegar na escolha do disco, selecione o <strong>espaço não alocado</strong> do SSD novo e avance. O instalador cria automaticamente a partição EFI, a reservada e a do sistema.</li>
-          <li>Se o instalador informar que não é possível instalar naquele disco, quase sempre é conflito de modo (MBR × GPT) ou controlador em RAID — ajuste no Setup e recomece.</li>
+          <li>Em uma instalação limpa intencional, depois de confirmar que o SSD correto está vazio e que não há dados a preservar, selecione o espaço não alocado conforme o fluxo oficial do instalador. Não exclua partições de outro disco por engano.</li>
+          <li>Se o instalador não mostrar o SSD ou recusar o destino, verifique a mensagem exata, o modo de boot, a tabela de partições, o driver do controlador e a compatibilidade antes de apagar ou converter o disco.</li>
           <li>Depois da instalação, entre no Setup e confirme que <strong>Windows Boot Manager</strong> ficou como primeira opção.</li>
         </ol>
         <aside className="rounded-lg border border-border bg-muted/40 p-4 not-prose my-6">
-          <p className="m-0 text-sm"><strong>Disco antigo conectado?</strong> Durante a instalação, deixe apenas o SSD novo ligado. Com dois discos presentes, o instalador pode gravar a partição de inicialização no disco errado — e a máquina deixa de iniciar quando o antigo for removido.</p>
+          <aside className="rounded-lg border border-border bg-muted/40 p-4 not-prose my-6"><p className="m-0 text-sm"><strong>Há outros discos conectados?</strong> Quando for seguro e os dados estiverem preservados, desconectar temporariamente outros discos pode reduzir o risco de selecionar a unidade errada ou de o instalador colocar arquivos de boot em outro disco. Em notebook ou equipamento com desmontagem complexa, não force essa etapa sem necessidade.</p></aside>
         </aside>
 
         <h2>Passo 4 — recuperar os arquivos do disco antigo</h2>
@@ -12896,13 +12896,14 @@ bcdboot C:\\Windows /s S: /f UEFI`}</code></pre>
           <li><strong>Instalar do zero</strong> quando o sistema antigo estava lento, instável, infectado ou muito antigo. Você perde a configuração, mas ganha um ambiente limpo.</li>
           <li><strong>Clonar</strong> quando o sistema funciona bem e há muitos programas configurados. O critério, os riscos e o motivo de uma cópia às vezes não inicializar estão em <Link to="/blog/como-clonar-hd-para-ssd" className="text-accent">clonar HD para SSD</Link>.</li>
         </ul>
-        <p>Se você clonou e a máquina parou no Setup, o problema não é o disco novo: é o carregador que não veio junto — o reparo está em <Link to="/blog/erro-no-bootable-device-como-resolver" className="text-accent">erro "No Bootable Device"</Link>.</p>
+        <p>Se você clonou e a máquina parou no Setup, confira primeiro se o SSD é detectado, se a ordem de boot aponta para o Windows Boot Manager e se a estrutura EFI/BCD foi clonada corretamente. O roteiro relacionado está em <Link to="/blog/erro-no-bootable-device-como-resolver">erro "No Bootable Device"</Link>.</p>
 
         <h2>Conclusão</h2>
-        <p>Disco novo sempre para na BIOS até receber um sistema. A sequência correta é confirmar a detecção, ajustar o slot e o modo de boot, instalar com apenas o disco novo conectado e só depois reconectar o antigo para copiar os arquivos.</p>
+        <p>Depois da troca do SSD, a sequência segura é confirmar detecção, identificar se o disco está vazio ou clonado, revisar a ordem de boot e só então decidir entre instalação limpa, reparo do boot ou nova clonagem. Alterações de controlador e exclusão de partições ficam para depois dessa identificação.</p>
         <p>Para o quadro completo de causas de parada no Setup, volte ao guia principal: <Link to="/blog/computador-entra-direto-na-bios" className="text-accent">meu computador entra direto na BIOS</Link>. Para executar o upgrade com dados preservados e teste de saúde do disco, veja <Link to="/servicos/upgrade-ssd-ram" className="text-accent">upgrade de SSD e memória</Link>.</p>
 
-        <p className="text-sm text-muted-foreground">Conteúdo produzido e revisado pela equipe editorial de O Técnico de Informática. Revisado em 25 de agosto de 2026.</p>
+        <EditorialReferences slug="troquei-o-ssd-e-o-pc-so-abre-a-bios" />
+        <p className="text-sm text-muted-foreground">Conteúdo produzido e revisado pela equipe editorial de O Técnico de Informática. Revisado em 28 de setembro de 2026.</p>
       </>
     ),
   },
