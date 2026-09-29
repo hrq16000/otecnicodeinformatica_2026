@@ -28,9 +28,9 @@ import { whatsappLink, absoluteUrl } from "@/lib/siteConfig";
 import { trackPageView, trackCTAClick } from "@/lib/analytics";
 
 const PATH = "/problemas/notebook-nao-liga";
-const TITLE = "Notebook Não Liga? Assistência Técnica em Curitiba";
+const TITLE = "Notebook não liga? O que testar com segurança | O Técnico";
 const DESCRIPTION =
-  "Notebook não liga ou liga sem imagem? Entenda os sinais, as causas possíveis, os testes externos seguros e como funciona o diagnóstico técnico em Curitiba.";
+  "Notebook não liga, acende a luz sem imagem ou liga e desliga? Veja testes externos seguros, causas possíveis e quando interromper as tentativas.";
 
 const WA_MESSAGE =
   "Olá! Vim da página sobre notebook que não liga. Meu notebook não está ligando e preciso de diagnóstico.";
@@ -177,7 +177,7 @@ const NotebookNaoLiga = () => {
       <section className="bg-[hsl(var(--hero-bg))] text-white">
         <div className="container mx-auto max-w-4xl px-4 py-8 sm:py-12 md:py-14">
           <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-accent sm:mb-3 sm:text-sm">
-            Sintoma · Curitiba e região
+            Sintoma técnico · notebook
           </p>
           <h1 className="mb-3 text-[1.7rem] font-bold leading-[1.12] sm:mb-4 sm:text-3xl md:text-4xl">
             Notebook não liga: o que pode estar acontecendo e como é feito o diagnóstico
@@ -379,9 +379,9 @@ const NotebookNaoLiga = () => {
             <ShieldCheck className="h-6 w-6 text-accent" /> Seus arquivos podem continuar preservados
           </h2>
           <p className="mb-3 text-muted-foreground">
-            Em boa parte dos casos de notebook que não liga, o armazenamento está intacto: a falha está na energia, na
-            tela ou na placa. Isso significa que documentos, fotos e trabalhos normalmente continuam gravados no HD ou
-            no SSD, mesmo com o equipamento sem ligar.
+            Em muitos casos de notebook que não liga, o armazenamento continua íntegro porque a falha está na energia,
+            na tela ou em outro circuito. Ainda assim, isso não deve ser presumido sem avaliação: se houver sinais de falha
+            no HD ou SSD, preservar os dados passa a ser a prioridade antes de insistir no uso.
           </p>
           <p className="text-muted-foreground">
             Quando a suspeita recai sobre o próprio armazenamento, a ordem muda: preservar os dados passa a ser
