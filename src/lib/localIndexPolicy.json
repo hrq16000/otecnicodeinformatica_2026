@@ -1061,6 +1061,14 @@
       "cidadeSlug": "campo-largo",
       "parent": "/tecnico-informatica-campo-largo",
       "lote": 14
+    },
+    {
+      "slug": "independencia-sjp",
+      "intent": "suporte de informática no Jardim Independência com foco em Windows, programas, periféricos, impressão e suporte remoto",
+      "cidade": "São José dos Pinhais",
+      "cidadeSlug": "sao-jose-dos-pinhais",
+      "parent": "/tecnico-informatica-sao-jose-pinhais",
+      "lote": 13
     }
   ],
   "servicoBairroIndexaveis": [
@@ -1220,5 +1228,8 @@
   "loteLocal14": [
     "/bairros/sao-marcos-campo-largo",
     "/bairros/timbotuva-cl"
+  ],
+  "loteLocal13": [
+    "/bairros/independencia-sjp"
   ]
 }
