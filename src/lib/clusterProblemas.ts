@@ -834,13 +834,13 @@ export const CLUSTER_PROBLEMAS: ClusterProblema[] = [
     metaDescription:
       "Computador liga mas não dá imagem ou mostra “sem sinal”? Separe monitor, cabo, RAM, placa de vídeo, fonte e POST antes de comprar ou trocar qualquer peça.",
     resumo:
-      "Se o computador liga mas não dá imagem, primeiro confirme se o monitor está recebendo sinal e se o cabo está na saída correta. Depois o diagnóstico separa memória, vídeo, alimentação e POST. O sintoma não aponta sozinho para placa de vídeo: trocar peça antes de isolar essas camadas costuma gerar custo sem resolver a causa.",
+      "Se o computador liga mas não dá imagem, comece separando tela/cabo de falha de POST. Confirme a entrada do monitor e a saída de vídeo usada; depois teste memória, placa de vídeo, alimentação e sinais de diagnóstico da placa-mãe. O sintoma, sozinho, não confirma placa de vídeo nem placa-mãe — a decisão deve vir da eliminação controlada das hipóteses.",
     waMessage:
       "Olá! Vim da página sobre computador que liga e não dá imagem. Preciso de diagnóstico do meu equipamento.",
     sintomas: [
       {
         titulo: "Monitor mostra “sem sinal” e entra em espera",
-        desc: "O monitor está funcionando e informando que nada chega até ele. A investigação vai para cabo, entrada selecionada e saída de vídeo usada — muita gente liga o cabo na saída da placa-mãe com uma placa de vídeo dedicada instalada.",
+        desc: "O monitor está energizado e informa que não recebeu sinal de vídeo. A investigação começa por cabo, entrada selecionada e saída usada no computador, incluindo a diferença entre a saída da placa-mãe e a da placa de vídeo dedicada.",
       },
       {
         titulo: "Tela totalmente preta, sem mensagem nenhuma",
@@ -848,7 +848,7 @@ export const CLUSTER_PROBLEMAS: ClusterProblema[] = [
       },
       {
         titulo: "Coolers giram, luzes acendem, nada acontece",
-        desc: "O computador aparenta ligar, mas não passa do POST. Memória mal encaixada, contato oxidado, placa de vídeo mal assentada e falha de placa-mãe são as causas mais comuns nesse padrão.",
+        desc: "O computador aparenta energizar, mas não conclui o POST. Memória mal encaixada, contato ruim, placa de vídeo, alimentação e placa-mãe entram na sequência de descarte; a ordem exata depende dos sinais de diagnóstico disponíveis.",
       },
       {
         titulo: "Bipes ou LEDs piscando em sequência",
@@ -862,7 +862,7 @@ export const CLUSTER_PROBLEMAS: ClusterProblema[] = [
     causas: [
       {
         titulo: "Cabo, adaptador ou entrada errada",
-        desc: "Cabo HDMI danificado, adaptador de má qualidade e entrada do monitor no canal errado respondem por uma parcela grande dos chamados. É a primeira verificação justamente porque não custa nada.",
+        desc: "Cabo HDMI defeituoso, adaptador incompatível ou entrada errada podem produzir exatamente o mesmo sintoma de uma falha interna. Por isso essa é a primeira verificação: é reversível, rápida e não exige abrir o computador.",
       },
       {
         titulo: "Memória RAM com mau contato ou defeituosa",
@@ -874,7 +874,7 @@ export const CLUSTER_PROBLEMAS: ClusterProblema[] = [
       },
       {
         titulo: "Fonte degradada",
-        desc: "Fonte que entrega tensão só no instante inicial faz o computador ligar sem concluir a inicialização. É uma causa frequente em máquinas com anos de uso e só se confirma com teste sob carga.",
+        desc: "Uma fonte instável pode energizar ventoinhas e LEDs sem manter o conjunto estável o bastante para completar a inicialização. A hipótese precisa ser confirmada por medição adequada ou comparação controlada com uma fonte compatível.",
       },
       {
         titulo: "Placa-mãe com capacitor ou trilha comprometidos",
@@ -916,7 +916,7 @@ export const CLUSTER_PROBLEMAS: ClusterProblema[] = [
     faq: [
       {
         q: "Meu computador liga e não dá imagem: é a placa de vídeo?",
-        a: "Pode ser, mas é a conclusão menos provável logo de início. Cabo, entrada errada, memória com mau contato e fonte degradada aparecem com muito mais frequência. A placa de vídeo só é apontada depois de testada em outro equipamento ou substituída por uma de referência.",
+        a: "Pode ser, mas o sintoma não permite fechar esse diagnóstico sozinho. Primeiro descarte cabo, entrada, memória, alimentação e sinais de POST; a placa de vídeo ganha força como hipótese quando o comportamento muda em teste controlado com outro vídeo compatível ou quando a própria placa apresenta evidência objetiva de falha.",
       },
       {
         q: "Os bipes ajudam a descobrir o problema?",
@@ -932,7 +932,7 @@ export const CLUSTER_PROBLEMAS: ClusterProblema[] = [
       },
       {
         q: "Dá para resolver sem levar o computador?",
-        a: "Cabo, entrada, reencaixe e configuração resolvem uma parte relevante dos casos remotamente ou em visita. Teste de fonte sob carga e inspeção de placa exigem bancada, com instrumentos que não vão para a casa do cliente.",
+        a: "Algumas verificações externas — cabo, entrada selecionada, conexão na saída correta e sinais visíveis — podem ser feitas sem bancada. Quando é preciso testar fonte, memória, placa de vídeo ou placa-mãe por comparação controlada, a bancada tende a ser o ambiente mais adequado.",
       },
     ],
     relacionados: [
