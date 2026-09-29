@@ -12,9 +12,9 @@ import { trackPageView, trackCTAClick } from "@/lib/analytics";
 import { ENTIDADES, ENTIDADES_REVISADO_EM } from "@/lib/entidades";
 
 const PATH = "/entidades";
-const TITLE = "Entidades Técnicas do Portal | Mapa de Conteúdo Conectado";
+const TITLE = "Entidades de Informática | Windows, SSD, RAM, Wi-Fi e Backup";
 const DESCRIPTION =
-  "Técnico de informática, Windows, SSD, memória, Wi-Fi e backup: entidades que conectam definições, problemas, ferramentas, decisões, artigos e serviços.";
+  "Mapa de entidades de informática: técnico de informática, Windows, SSD, RAM, Wi-Fi e backup conectados a problemas, ferramentas, decisões e serviços.";
 
 const EntidadesHub = () => {
   useEffect(() => {
@@ -42,9 +42,12 @@ const EntidadesHub = () => {
         description: DESCRIPTION,
         hasDefinedTerm: ENTIDADES.map((e) => ({
           "@type": "DefinedTerm",
+          "@id": `${SITE_BASE_URL}/entidades/${e.slug}#term`,
           name: e.nome,
+          alternateName: e.tambemChamada,
           description: e.resumo,
           termCode: e.slug,
+          inDefinedTermSet: { "@id": `${url}#entidades` },
           url: `${SITE_BASE_URL}/entidades/${e.slug}`,
         })),
       },
@@ -88,6 +91,26 @@ const EntidadesHub = () => {
             Use este mapa para atravessar o conteúdo por assunto em vez de por página.
           </p>
         </header>
+
+        <section className="mt-8 rounded-xl border border-border bg-card p-5 md:p-6" aria-labelledby="como-ler-mapa">
+          <h2 id="como-ler-mapa" className="font-heading text-xl font-bold text-foreground">
+            Como ler o mapa de entidades
+          </h2>
+          <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+            Cada entidade reúne seis relações explícitas: problemas em que aparece, ferramentas de
+            verificação, decisões que ela influencia, artigos que aprofundam o assunto, serviços
+            relacionados e cidades em que o atendimento existe. Isso evita tratar páginas isoladas
+            como assuntos desconectados e deixa claro qual é o papel de cada conteúdo.
+          </p>
+          <ul className="mt-4 grid gap-3 text-sm text-muted-foreground sm:grid-cols-2">
+            <li><strong className="text-foreground">Definição:</strong> o que a entidade é e o que não é.</li>
+            <li><strong className="text-foreground">Diagnóstico:</strong> sintomas e problemas ligados à entidade.</li>
+            <li><strong className="text-foreground">Verificação:</strong> ferramentas e checklists antes de agir.</li>
+            <li><strong className="text-foreground">Decisão:</strong> critérios para escolher o próximo passo.</li>
+            <li><strong className="text-foreground">Execução:</strong> serviços relacionados quando há necessidade técnica.</li>
+            <li><strong className="text-foreground">Cobertura:</strong> cidades reais vinculadas ao atendimento local.</li>
+          </ul>
+        </section>
 
         <section className="mt-8 grid gap-4 md:grid-cols-2" aria-label="Entidades disponíveis">
           {ENTIDADES.map((e) => (
