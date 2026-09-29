@@ -11386,8 +11386,8 @@ crontab -e
   },
 
   "como-saber-quem-esta-usando-meu-wifi": {
-    title: "Como saber quem está usando o seu Wi-Fi (e o que fazer)",
-    excerpt: "Como listar os dispositivos conectados, identificar cada um pelo nome e pelo endereço físico e retomar o controle da rede sem quebrar o que funciona.",
+    title: "Como ver quem está usando meu Wi‑Fi: dispositivos conectados",
+    excerpt: "Veja quem está conectado ao seu Wi‑Fi pelo roteador, como identificar dispositivos desconhecidos, entender MAC privado e reforçar a segurança sem bloquear aparelho legítimo.",
     date: "2026-04-22",
     readTime: "10 min",
     category: "Redes e Wi-Fi",
@@ -11396,15 +11396,15 @@ crontab -e
         <p className="lead">A suspeita costuma começar assim: a internet ficou lenta sem motivo, ou apareceu um aparelho desconhecido na lista do roteador. Antes de trocar tudo, vale entender o que a lista de dispositivos realmente mostra — e o que ela não mostra.</p>
 
         <h2>Resposta rápida</h2>
-        <p>Abra o painel do roteador e procure a lista de dispositivos conectados ou clientes DHCP: ela é a única fonte confiável, porque enxerga também o que está em economia de energia. Compare a lista com o inventário dos aparelhos da casa, desligando um por vez para identificar o que não reconhecer. Nome estranho não prova invasão — celulares modernos usam endereço físico aleatório por rede. Se, mesmo com todos os aparelhos desligados, restar alguém conectado, ou se houver configuração alterada sem sua ação, troque a senha do Wi-Fi e a senha de administração, desligue WPS e acesso remoto e atualize o firmware.</p>
+        <p>Abra o painel do roteador e procure a lista de clientes conectados, dispositivos associados ou concessões DHCP. O nome varia por fabricante, e nenhuma dessas telas é perfeita: aparelhos em repouso podem aparecer como inativos e alguns roteadores mantêm entradas antigas por um tempo. Compare a lista com os dispositivos da casa e identifique um por vez. Nome estranho ou MAC diferente não prova invasão — celulares e notebooks podem usar endereço privado por rede. Se surgir dispositivo ativo que você não reconhece ou houver configuração alterada sem sua ação, troque a senha do Wi‑Fi e a senha de administração, revise WPS/acesso remoto e atualize o firmware pelo canal oficial.</p>
 
         <h2>Onde ver os aparelhos conectados</h2>
-        <p>O lugar confiável é o painel do próprio roteador, normalmente em uma seção chamada "dispositivos conectados", "clientes DHCP" ou "mapa da rede". Ali aparecem o nome informado por cada aparelho, o endereço IP recebido e o endereço físico (MAC) da placa de rede.</p>
+        <p>O melhor ponto de partida é o painel do próprio roteador, normalmente em uma seção chamada “dispositivos conectados”, “clientes”, “DHCP” ou “mapa da rede”. Dependendo do modelo, ali aparecem nome informado pelo aparelho, IP, MAC, banda e estado da conexão. A interface do roteador é mais útil que um aplicativo de varredura, mas também pode manter entradas antigas ou mostrar nomes genéricos.</p>
         <p>Aplicativos de celular que "escaneiam a rede" ajudam a ter uma visão rápida, mas só enxergam o que responde no momento da varredura. Um aparelho desligado ou em economia de energia não aparece — por isso a lista do roteador é a referência.</p>
 
         <h2>Por que a lista parece cheia de estranhos</h2>
         <p>Uma casa comum tem mais dispositivos conectados do que as pessoas imaginam: TV, console, caixa de som, aspirador, lâmpadas, câmeras, relógio, tablet antigo esquecido na gaveta. Muitos se apresentam com nomes genéricos ou apenas com um código do fabricante.</p>
-        <p>Some-se a isso a privacidade de endereço MAC: celulares modernos geram um endereço aleatório por rede, o que faz o mesmo aparelho aparecer com identidades diferentes ao longo do tempo. Ou seja, um nome estranho na lista não é prova de invasão.</p>
+        <p>Some-se a isso a privacidade de endereço MAC: sistemas modernos podem usar um endereço privado para cada rede e, em alguns modos, rotacioná-lo ao longo do tempo. Por isso o mesmo aparelho pode aparecer com um MAC diferente do endereço físico gravado no hardware. Um nome estranho ou um MAC novo, sozinho, não é prova de invasão.</p>
 
         <h2>Como identificar cada aparelho com método</h2>
         <ol>
@@ -11428,8 +11428,8 @@ crontab -e
         <p>Use uma frase longa e mude o padrão de segurança para WPA3 ou WPA2 com AES. Todos os aparelhos precisarão reconectar — separe uma hora tranquila para isso.</p>
         <h3>2. Troque a senha de administração</h3>
         <p>É diferente da senha do Wi-Fi e é a que realmente protege as configurações. Se ela ainda era a de fábrica, considere que qualquer pessoa que já esteve na rede pôde acessá-la.</p>
-        <h3>3. Desative WPS e acesso remoto</h3>
-        <p>O WPS permite entrar sem digitar senha e é o atalho mais explorado em redes domésticas. O acesso remoto ao painel expõe o roteador à internet inteira.</p>
+        <h3>3. Revise WPS e acesso remoto</h3>
+        <p>Se você não usa WPS, desativá-lo reduz uma superfície de acesso desnecessária. O gerenciamento remoto também deve permanecer desligado quando não houver necessidade clara e configuração segura; quando habilitado, ele expõe a interface administrativa para além da rede local.</p>
         <h3>4. Atualize o firmware</h3>
         <p>Boa parte das invasões de roteador explora falhas já corrigidas pelo fabricante em versões mais novas.</p>
         <h3>5. Isole o que não precisa da rede principal</h3>
@@ -11461,7 +11461,7 @@ crontab -e
           <li>A lista mostra algum dispositivo ativo com todos os aparelhos da casa desligados? Se não, o problema provavelmente é consumo ou cobertura, não intrusão.</li>
           <li>Se sim, alguma configuração do roteador mudou sem você mexer (DNS, acesso remoto, rede de visitantes)? Se mudou, trate como roteador comprometido: atualização de firmware e reconfiguração completa, não apenas bloqueio de um endereço.</li>
           <li>Se nada mudou, troque primeiro a senha do Wi-Fi. Se a entrada desconhecida some e não volta, o caso está resolvido.</li>
-          <li>Se a entrada volta mesmo após a troca de senha, a senha de administração provavelmente também está comprometida. Restaure o roteador ao padrão de fábrica e configure do zero.</li>
+          <li>Se a entrada desconhecida reaparece após trocar a senha, confirme primeiro se não é um dispositivo legítimo com MAC privado e revise a senha/administração do roteador. Restauração de fábrica fica como etapa posterior, depois de registrar configuração do provedor e demais ajustes necessários.</li>
           <li>Se o equipamento é antigo, não recebe mais firmware do fabricante e o problema persiste, a substituição passa a ser a alternativa técnica realista.</li>
         </ol>
 
@@ -11481,7 +11481,7 @@ crontab -e
         <ul>
           <li><strong>Cliente DHCP:</strong> aparelho que recebeu automaticamente um endereço IP do roteador.</li>
           <li><strong>Endereço físico (MAC):</strong> identificador da placa de rede; pode ser aleatório por rede em celulares recentes.</li>
-          <li><strong>WPS:</strong> conexão sem digitar senha, apertando um botão; é o atalho mais explorado em redes domésticas.</li>
+          <li><strong>WPS:</strong> mecanismo de associação simplificada; se não for necessário no seu ambiente, pode ser desativado para reduzir recursos de acesso que você não usa.</li>
           <li><strong>Firmware:</strong> o sistema interno do roteador; atualizações corrigem falhas exploradas remotamente.</li>
           <li><strong>Rede de convidados:</strong> rede separada que impede o visitante de alcançar os demais aparelhos da casa.</li>
         </ul>
@@ -11494,35 +11494,35 @@ crontab -e
     ),
   },
   "como-conectar-wifi-tv-nao-conecta": {
-    title: "Smart TV não conecta no Wi-Fi: como separar problema de rede de defeito da TV",
+    title: "Smart TV não conecta no Wi‑Fi: o que testar antes de resetar",
     excerpt:
-      "Como descobrir se a Smart TV não conecta por causa da rede, da faixa de 5 GHz, do isolamento do roteador ou de falha no módulo Wi-Fi do aparelho — e o que fazer em cada caso.",
+      "Smart TV não encontra a rede, cai do Wi‑Fi ou conecta sem internet? Compare celular, cabo, bandas, roteador e módulo Wi‑Fi antes de resetar ou trocar peça.",
     date: "2026-08-12",
     readTime: "11 min",
     category: "Redes",
     content: (
       <>
-        <p className="lead">Smart TV que não conecta tem duas famílias de causa muito diferentes: a rede não está entregando conexão utilizável naquele ponto da casa, ou o módulo Wi-Fi da própria TV está falhando. Os dois sintomas parecem iguais na tela. A diferença aparece no teste, e é ela que decide se o caso se resolve no roteador ou exige avaliação do aparelho.</p>
+        <p className="lead">Smart TV que não conecta pode falhar por cobertura, configuração do roteador, compatibilidade de banda, software da própria TV ou defeito no módulo Wi‑Fi. Antes de resetar tudo, compare o comportamento de outro dispositivo no mesmo ponto, teste a rede por cabo quando possível e registre exatamente se a TV não encontra a rede, conecta sem internet ou cai depois de algum tempo.</p>
 
         <h2>O teste que separa os dois cenários</h2>
         <p>Antes de qualquer configuração, leve um celular até o local exato da TV — mesma altura, mesma parede, TV ligada. Depois observe:</p>
         <ul>
-          <li><strong>Celular também pega mal ali:</strong> o problema é cobertura. A TV está apenas na pior posição da casa, normalmente atrás de móvel, em parede com estrutura metálica ou no cômodo mais distante do roteador.</li>
-          <li><strong>Celular conecta bem e a TV não enxerga a rede:</strong> o caso costuma ser de faixa ou de configuração do roteador, não de alcance.</li>
-          <li><strong>A TV conecta, mas cai sozinha depois de minutos ou horas:</strong> comportamento típico de rede saturada, canal congestionado ou módulo Wi-Fi do aparelho com falha térmica — nessa ordem de probabilidade.</li>
-          <li><strong>A TV não enxerga nenhuma rede, nem a do vizinho:</strong> forte indício de falha no módulo Wi-Fi do aparelho.</li>
+          <li><strong>Celular também pega mal ali:</strong> cobertura e interferência ganham prioridade, mas ainda compare o resultado perto do roteador e, se possível, por cabo antes de descartar o link do provedor.</li>
+          <li><strong>Celular conecta bem e a TV não enxerga a rede:</strong> confira compatibilidade de banda, nome da rede, segurança usada pelo roteador e software da TV antes de suspeitar do módulo sem fio.</li>
+          <li><strong>A TV conecta, mas cai sozinha depois de minutos ou horas:</strong> compare outros dispositivos no mesmo horário. Interferência, roteador, software da TV e módulo Wi‑Fi entram como hipóteses; o padrão sozinho não define a ordem.</li>
+          <li><strong>A TV não enxerga nenhuma rede:</strong> confirme antes se o Wi‑Fi está habilitado e se o modelo suporta a banda usada. Persistindo após reinício e atualização, o módulo sem fio passa a ser uma hipótese relevante.</li>
         </ul>
 
-        <h2>Faixa de 5 GHz: a causa mais frequente de "a rede não aparece"</h2>
-        <p>Muitas TVs, inclusive modelos recentes de linha de entrada, operam apenas em 2,4 GHz. Se o roteador transmite as duas faixas com o mesmo nome de rede, a TV pode simplesmente não listar nada — para ela, aquela rede não existe.</p>
-        <p>A solução é separar os nomes das faixas no roteador e conectar a TV explicitamente à faixa de 2,4 GHz. Ela alcança mais longe e atravessa parede melhor; a perda de velocidade é irrelevante para vídeo, que consome muito menos banda do que a maioria das pessoas imagina.</p>
+        <h2>2,4 GHz e 5 GHz: confirme o que a sua TV realmente suporta</h2>
+        <p>Algumas TVs aceitam apenas 2,4 GHz; outras suportam 2,4 e 5 GHz, com limitações que variam por modelo e região. Consulte a especificação do aparelho antes de concluir que a rede “sumiu” por defeito. Nome único para as duas bandas normalmente funciona, mas separar temporariamente os SSIDs pode ajudar no diagnóstico de compatibilidade.</p>
+        <p>Como teste, conecte a TV à banda que o fabricante declara suportar e compare estabilidade no mesmo local. A faixa de 2,4 GHz tende a ter maior alcance; 5 GHz costuma oferecer mais capacidade perto do roteador. Streaming depende de estabilidade e throughput suficiente, não de uma regra fixa de banda.</p>
 
         <h2>Isolamento de clientes e rede de visitantes</h2>
         <p>Roteadores de operadora frequentemente vêm com rede de visitantes ativa e isolamento entre aparelhos. A TV conectada nessa rede acessa a internet, mas não conversa com celular nem computador — e aí o espelhamento de tela e os aplicativos de controle deixam de funcionar, mesmo com o vídeo rodando normalmente.</p>
         <p>Quando o sintoma é "a TV tem internet mas o celular não a encontra", esse é o primeiro item a verificar. A separação correta entre rede de trabalho, rede doméstica e rede de visitantes faz parte do que ajustamos em <Link to="/servicos/redes-e-wifi">redes e Wi-Fi</Link>.</p>
 
         <h2>Canal congestionado em prédio</h2>
-        <p>Em edifício, dezenas de redes disputam as mesmas frequências. A TV conecta, o ícone fica normal, e mesmo assim o vídeo trava e a conexão cai. Não é defeito: é disputa por espaço no ar. Fixar um canal menos ocupado em 2,4 GHz e reposicionar o roteador para longe de metal, espelho, caixa d'água e do próprio armário costuma mudar o resultado mais do que trocar de aparelho.</p>
+        <p>Em edifícios, redes vizinhas podem disputar os mesmos canais. Se a TV conecta, mas vídeo trava ou a conexão cai, compare o comportamento em horários e pontos diferentes antes de concluir por defeito. Ajuste de canal, largura de canal e posicionamento do roteador só deve ser feito depois de registrar a configuração atual e medir o resultado.</p>
 
         <h2>O que fazer, na ordem que evita retrabalho</h2>
         <ol>
@@ -11566,7 +11566,7 @@ crontab -e
         <p>Não prometemos reparo antes de avaliar, e não trocamos placa por suposição. A avaliação de imagem, som, placa e alimentação segue o escopo descrito em <Link to="/servicos/conserto-tv">conserto de TV</Link>, com o critério de verificação e cobrança explicado em <Link to="/diagnostico-tecnico">como funciona o diagnóstico técnico</Link>.</p>
 
         <h2>Resumo prático</h2>
-        <p>Compare a TV com o celular no mesmo ponto para separar cobertura de configuração. Se a rede não aparece na lista, quase sempre é faixa de 5 GHz; se aparece e cai, é congestionamento ou distância; se o celular não encontra a TV, é rede de visitantes ou isolamento; se por cabo funciona e por Wi-Fi nunca funciona, é o módulo sem fio do aparelho — e aí vale comparar o custo do reparo com a solução por cabo ou aparelho externo.</p>
+        <p>Compare a TV com outro dispositivo no mesmo ponto, confirme as bandas suportadas pelo modelo e, quando possível, teste por cabo. Esses três testes separam boa parte dos casos de cobertura, configuração e falha do módulo. Rede de visitantes e isolamento explicam alguns cenários de espelhamento; queda recorrente exige comparar roteador, interferência, software e hardware antes de trocar peça.</p>
       </>
     ),
   },
@@ -11741,22 +11741,22 @@ crontab -e
   // Intenção informacional. Não localiza a página: a ponte comercial e local
   // acontece por links contextuais, nunca por repetição de cidade no texto.
   "como-formatar-pc-sem-perder-arquivos": {
-    title: "Como formatar o PC ou notebook sem perder arquivos",
+    title: "Como formatar PC ou notebook sem perder arquivos: checklist seguro",
     excerpt:
-      "O que decidir antes de formatar: quando a reinstalação resolve, quando não resolve, como preservar arquivos, contas e licenças, e a diferença entre redefinir o sistema e instalar do zero.",
+      "Como formatar PC ou notebook sem perder arquivos: backup, BitLocker, contas, licenças, drivers e escolha entre redefinir, reparar ou instalar o Windows do zero.",
     date: "2026-08-14",
     readTime: "12 min",
     category: "Procedimentos Técnicos",
     content: (
       <>
-        <p className="lead">Formatar é uma decisão, não um botão. Feita na hora certa, devolve uma máquina previsível. Feita como palpite, apaga anos de arquivo e devolve o mesmo problema em duas semanas. Este guia mostra como decidir e como executar sem perder o que importa.</p>
+        <p className="lead">Formatar é uma decisão, não um botão de “acelerar”. Antes de reinstalar o Windows, confirme que os arquivos importantes têm cópia verificável, registre contas e licenças, guarde a chave do BitLocker quando existir e descubra se a causa é realmente software. Este guia organiza essa decisão para reduzir o risco de apagar dados e terminar com o mesmo defeito.</p>
 
         <h2>Antes: formatar resolve o seu caso?</h2>
         <p>Reinstalar o sistema resolve o que é software: configuração quebrada, perfil corrompido, resíduo de programas desinstalados pela metade, atualização mal aplicada, infecção persistente. Não resolve o que é físico nem o que é limite de hardware.</p>
         <ul>
-          <li><strong>Disco mecânico com Windows 10/11:</strong> a máquina volta rápida por poucos dias e regride. O gargalo é a fila de leitura do disco, não o sistema.</li>
+          <li><strong>Disco mecânico sob carga alta:</strong> a reinstalação pode aliviar software acumulado, mas não elimina a limitação de latência do HD. Meça uso de disco e saúde da unidade antes de concluir que formatar resolve.</li>
           <li><strong>Pouca memória:</strong> o sistema recém-instalado abre menos coisas ao mesmo tempo — isso não é ganho de desempenho, é uso menor.</li>
-          <li><strong>Superaquecimento:</strong> queda de velocidade depois de alguns minutos é temperatura, não software.</li>
+          <li><strong>Superaquecimento:</strong> se o desempenho cai conforme a temperatura sobe, a causa pode ser térmica; confirme temperatura e ventilação antes de reinstalar.</li>
           <li><strong>Disco com setores em falha:</strong> formatar sobre um disco falhando costuma travar no meio da instalação e pode inviabilizar a recuperação depois.</li>
           <li><strong>Travamento ao ligar, sem chegar ao sistema:</strong> investigue hardware antes; formatação não é diagnóstico.</li>
         </ul>
@@ -11777,15 +11777,15 @@ crontab -e
         <h2>Redefinir o sistema x instalar do zero</h2>
         <p>São procedimentos diferentes com resultados diferentes:</p>
         <ul>
-          <li><strong>Redefinir mantendo arquivos:</strong> o Windows reinstala a si mesmo e preserva as pastas do usuário. Remove programas instalados. É o caminho mais rápido para configuração quebrada.</li>
+          <li><strong>Redefinir mantendo arquivos:</strong> o Windows reinstala componentes do sistema e preserva arquivos pessoais conforme a opção escolhida, mas remove aplicativos e pode exigir reconfiguração. Faça backup mesmo assim.</li>
           <li><strong>Reinstalação por cima (mantendo tudo):</strong> repara componentes do sistema preservando programas e arquivos. Útil quando o Windows falha em atualizar ou apresenta erro recorrente.</li>
-          <li><strong>Instalação limpa:</strong> apaga a partição do sistema e começa do zero. É a única opção confiável quando houve infecção séria ou quando a máquina acumulou anos de instalação.</li>
+          <li><strong>Instalação limpa:</strong> recria o ambiente do zero e pode ser adequada quando há corrupção persistente ou quando você quer eliminar aplicações/configurações acumuladas. Em incidentes de segurança, a decisão também depende de backup confiável, credenciais e do tipo de comprometimento.</li>
         </ul>
         <p>O passo a passo detalhado da instalação limpa, incluindo mídia de instalação e particionamento, está em <Link to="/blog/como-instalar-windows-11-do-zero">como instalar o Windows 11 do zero</Link>. Se a motivação for infecção, leia antes <Link to="/blog/como-remover-virus-windows-iniciantes">como remover vírus e adware</Link>: em boa parte dos casos a limpeza dirigida resolve sem apagar nada.</p>
 
         <h2>Licença, contas e drivers</h2>
-        <p>Em máquinas de fábrica, a licença normalmente está vinculada ao equipamento e é reconhecida automaticamente após a instalação. Em máquinas montadas, a licença costuma estar vinculada a uma conta — entrar com a mesma conta evita perder a ativação. Programas pagos exigem o registro original; sem ele, reinstalar significa comprar de novo.</p>
-        <p>Depois da instalação, a ordem dos drivers importa: chipset primeiro, depois vídeo, rede, áudio e periféricos. Prefira sempre o site do fabricante do equipamento. Pacotes genéricos de "atualizador de drivers" são uma das causas mais comuns de instabilidade em máquina recém-formatada.</p>
+        <p>A ativação do Windows depende do tipo de licença e do vínculo existente com o hardware ou a conta Microsoft. Muitas máquinas reativam automaticamente após reinstalação da mesma edição, mas isso não deve ser presumido. Antes de apagar o sistema, confirme edição, status de ativação e credenciais. Programas pagos seguem regras próprias do fornecedor; registre chaves, conta e método de recuperação antes de reinstalar.</p>
+        <p>Depois da instalação, prefira Windows Update e os canais oficiais do fabricante do notebook, placa-mãe ou componente. Em alguns equipamentos a sequência de chipset, armazenamento, vídeo, rede e áudio influencia dependências. Evite “atualizadores universais” de terceiros, que podem instalar versões inadequadas.</p>
 
         <h2>O que costuma dar errado</h2>
         <ul>
@@ -12831,15 +12831,15 @@ bcdboot C:\\Windows /s S: /f UEFI`}</code></pre>
   },
 
   "troquei-o-ssd-e-o-pc-so-abre-a-bios": {
-    title: "Troquei o HD/SSD e o PC só abre a BIOS: o que fazer",
+    title: "Troquei o SSD e o PC só abre a BIOS: diagnóstico passo a passo",
     excerpt:
-      "Disco novo vem vazio: sem sistema instalado, o computador para no Setup. Como confirmar a detecção do M.2, resolver conflito de portas e instalar o Windows do zero.",
+      "Após trocar HD/SSD, o PC entra direto na BIOS? Veja como confirmar detecção do disco, UEFI/boot, VMD/RST/AHCI, clonagem e Windows Boot Manager sem apagar dados por tentativa.",
     date: "2026-08-25",
     readTime: "11 min",
     category: "Procedimentos Técnicos",
     content: (
       <>
-        <p className="lead">Instalar um SSD novo e ver a máquina parar na tela de configuração não é sinal de defeito. É o comportamento esperado: <strong>disco novo sai de fábrica vazio</strong>, sem sistema operacional e sem carregador de inicialização. Não existe nada para o firmware iniciar.</p>
+        <p className="lead">Se você substituiu o HD/SSD e o PC passou a abrir direto na BIOS/UEFI, primeiro descubra se o disco novo é detectado e se existe um sistema inicializável nele. SSD novo normalmente vem sem Windows, mas uma clonagem, um disco reaproveitado ou outro armazenamento ainda conectado mudam o diagnóstico. Não altere modo SATA, apague partições ou recrie boot antes de identificar qual cenário é o seu.</p>
 
         <h2>Resposta curta</h2>
         <p>Confirme que o disco novo aparece na lista de dispositivos do Setup, verifique se o slot M.2 usado não desativou uma porta SATA, e instale o sistema a partir de um pendrive — ou, se a intenção era manter tudo como estava, faça a clonagem corretamente em vez de instalar do zero.</p>
@@ -12854,7 +12854,7 @@ bcdboot C:\\Windows /s S: /f UEFI`}</code></pre>
           <li><strong>M.2 mal encaixado:</strong> o módulo entra inclinado, encosta no fim do conector e só então é preso pelo parafuso. Sem o parafuso, ele fica levantado e perde contato.</li>
           <li><strong>Slot incompatível:</strong> há slots M.2 apenas SATA, apenas NVMe (PCIe) e híbridos. Confira no manual da placa ou do notebook qual é o do seu modelo. Chave B, M ou B+M no conector do módulo é o primeiro indício.</li>
           <li><strong>Conflito de portas:</strong> ativar o segundo M.2 desabilita portas SATA específicas em muitas placas. É por isso que, ao instalar o SSD novo, o HD antigo às vezes "some".</li>
-          <li><strong>SATA em modo errado:</strong> o controlador precisa estar em <strong>AHCI</strong>. Modo RAID ou Intel RST esconde discos do instalador do Windows.</li>
+          <li><strong>Controlador de armazenamento:</strong> AHCI, RAID, Intel RST/VMD e opções equivalentes precisam corresponder à instalação e aos drivers usados. Em alguns equipamentos o Windows Setup exige driver do controlador. Mudar esse modo por tentativa pode impedir um Windows existente de iniciar.</li>
           <li><strong>Adaptador ou caddy:</strong> adaptadores baratos de baia ótica falham com frequência. Teste o disco direto na placa antes de culpar o disco.</li>
         </ul>
         <p>Detalhes de compatibilidade antes da compra estão em <Link to="/blog/como-fazer-upgrade-ssd-nvme" className="text-accent">upgrade para SSD NVMe</Link>, e o caso específico de notebooks com dois armazenamentos em <Link to="/blog/como-instalar-segundo-ssd-notebook" className="text-accent">como instalar um segundo SSD no notebook</Link>.</p>
@@ -12865,7 +12865,7 @@ bcdboot C:\\Windows /s S: /f UEFI`}</code></pre>
           <li><strong>M.2 Mode / M.2 Configuration:</strong> alterna entre SATA e PCIe para o slot. Em <em>Auto</em> geralmente funciona; em modo fixo errado, o disco desaparece.</li>
           <li><strong>Geração PCIe (Gen3 × Gen4):</strong> deixar em <em>Auto</em> é o recomendado. Forçar Gen4 em placa ou disco que não suportam produz instabilidade e detecção intermitente; forçar Gen3 num disco Gen4 apenas limita a velocidade, sem impedir o funcionamento.</li>
           <li><strong>Divisão de linhas PCIe:</strong> em algumas placas, ocupar o segundo M.2 reduz as linhas da placa de vídeo. Não impede o boot, mas explica queda de desempenho depois do upgrade.</li>
-          <li><strong>Boot mode:</strong> para instalar Windows 11, mantenha <strong>UEFI</strong> com CSM desabilitado e Secure Boot ligado.</li>
+          <li><strong>Modo de boot:</strong> instalações suportadas do Windows 11 usam UEFI e requisitos de Secure Boot/TPM conforme o equipamento. Não altere CSM, Secure Boot ou modo do controlador sem registrar o estado atual, especialmente se existe sistema antigo ou BitLocker.</li>
         </ul>
 
         <h2>Passo 3 — instalar o Windows a partir do Setup</h2>
@@ -12874,7 +12874,7 @@ bcdboot C:\\Windows /s S: /f UEFI`}</code></pre>
           <li>Conecte o pendrive, ligue e abra o menu de inicialização (F12, F11 ou F8) ou coloque o pendrive em primeiro lugar na lista de prioridade.</li>
           <li>Escolha a entrada com prefixo <strong>UEFI:</strong> para que a instalação use GPT.</li>
           <li>Ao chegar na escolha do disco, selecione o <strong>espaço não alocado</strong> do SSD novo e avance. O instalador cria automaticamente a partição EFI, a reservada e a do sistema.</li>
-          <li>Se o instalador informar que não é possível instalar naquele disco, quase sempre é conflito de modo (MBR × GPT) ou controlador em RAID — ajuste no Setup e recomece.</li>
+          <li>Se o instalador não permitir avançar, leia a mensagem exata antes de mudar firmware ou partições. Particionamento, driver de controlador, edição do Windows, BitLocker e estado do disco exigem soluções diferentes.</li>
           <li>Depois da instalação, entre no Setup e confirme que <strong>Windows Boot Manager</strong> ficou como primeira opção.</li>
         </ol>
         <aside className="rounded-lg border border-border bg-muted/40 p-4 not-prose my-6">
@@ -12890,10 +12890,10 @@ bcdboot C:\\Windows /s S: /f UEFI`}</code></pre>
           <li><strong>Instalar do zero</strong> quando o sistema antigo estava lento, instável, infectado ou muito antigo. Você perde a configuração, mas ganha um ambiente limpo.</li>
           <li><strong>Clonar</strong> quando o sistema funciona bem e há muitos programas configurados. O critério, os riscos e o motivo de uma cópia às vezes não inicializar estão em <Link to="/blog/como-clonar-hd-para-ssd" className="text-accent">clonar HD para SSD</Link>.</li>
         </ul>
-        <p>Se você clonou e a máquina parou no Setup, o problema não é o disco novo: é o carregador que não veio junto — o reparo está em <Link to="/blog/erro-no-bootable-device-como-resolver" className="text-accent">erro "No Bootable Device"</Link>.</p>
+        <p>Se você clonou e a máquina passou a abrir o Setup, verifique ordem de boot, presença do Windows Boot Manager, partição EFI/BCD e compatibilidade entre o modo de firmware e o esquema de partições. A clonagem pode ter copiado dados corretamente e ainda assim deixar a inicialização incompleta — o diagnóstico está em <Link to="/blog/erro-no-bootable-device-como-resolver" className="text-accent">erro "No Bootable Device"</Link>.</p>
 
         <h2>Conclusão</h2>
-        <p>Disco novo sempre para na BIOS até receber um sistema. A sequência correta é confirmar a detecção, ajustar o slot e o modo de boot, instalar com apenas o disco novo conectado e só depois reconectar o antigo para copiar os arquivos.</p>
+        <p>Se o SSD novo é o único disco e ainda não possui sistema, o computador não terá o que inicializar e pode abrir a BIOS/UEFI. A sequência segura é confirmar detecção e compatibilidade, identificar se você quer instalação limpa ou clonagem, preservar o disco antigo e só então ajustar boot ou instalar o Windows.</p>
         <p>Para o quadro completo de causas de parada no Setup, volte ao guia principal: <Link to="/blog/computador-entra-direto-na-bios" className="text-accent">meu computador entra direto na BIOS</Link>. Para executar o upgrade com dados preservados e teste de saúde do disco, veja <Link to="/servicos/upgrade-ssd-ram" className="text-accent">upgrade de SSD e memória</Link>.</p>
 
         <p className="text-sm text-muted-foreground">Conteúdo produzido e revisado pela equipe editorial de O Técnico de Informática. Revisado em 25 de agosto de 2026.</p>
