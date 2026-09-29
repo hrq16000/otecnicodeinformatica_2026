@@ -1199,9 +1199,9 @@ export const ARTICLE_SOURCE_MANIFEST: Record<string, ArticleSourceManifest> = {
     ],
     technicalReview: "reviewed",
     factChecked: true,
-    factCheckedAt: "2026-09-07",
+    factCheckedAt: "2026-09-29",
     notes:
-      "Revisado em 2026-09-07 com fontes primárias visíveis. Sem promessa de ganho percentual, sem número instável de fabricante e sem indicação de modelo comercial. Compatibilidade tratada como verificação de formato, interface, dimensões e suporte do equipamento; preservação dos dados e chave BitLocker antecedem a intervenção.",
+      "Revisão material em 2026-09-29 guiada pelo GSC: separa formato M.2 de protocolo/interface, substitui promessas subjetivas por uma matriz de decisão, remove alegações internas de bancada, explicita clonagem versus instalação limpa, preservação de dados, BitLocker, validação pós-instalação e critérios de parada. Mantém as fontes primárias NVM Express e Microsoft já verificadas.",
   },
   "como-recuperar-dados-hd-com-defeito": {
     slug: "como-recuperar-dados-hd-com-defeito",
