@@ -1158,10 +1158,10 @@ export const ARTICLE_SOURCE_MANIFEST: Record<string, ArticleSourceManifest> = {
     sources: ["wifi-alliance-security"],
     technicalReview: "reviewed",
     factChecked: true,
-    factCheckedAt: "2026-08-12",
+    factCheckedAt: "2026-09-28",
     stableKnowledge: true,
     notes:
-      "Reescrito na Onda 5B. Explicita que endereço MAC aleatório por rede torna nomes desconhecidos inconclusivos e que filtro de MAC não é medida de segurança. Sem indicação de aplicativo de terceiros e sem promessa de detecção de invasão.",
+      "Revisão material em 2026-09-28: lista DHCP tratada como referência de clientes/leases, não prova de presença ativa; MAC privado e WPS descritos sem absolutos; fluxo exige confirmar dispositivo antes de concluir por intrusão. Fonte Wi-Fi Alliance mantida.",
   },
   "como-fazer-upgrade-ssd-nvme": {
     slug: "como-fazer-upgrade-ssd-nvme",
@@ -1382,10 +1382,10 @@ export const ARTICLE_SOURCE_MANIFEST: Record<string, ArticleSourceManifest> = {
     sources: [],
     technicalReview: "reviewed",
     factChecked: true,
-    factCheckedAt: "2026-08-12",
+    factCheckedAt: "2026-09-28",
     stableKnowledge: true,
     notes:
-      "Revisão concluída (Onda 5G): teste comparativo com celular no mesmo ponto, limitação de 2,4 GHz em TVs, isolamento de clientes/rede de visitantes, congestionamento de canal em prédio e critério para suspeitar do módulo Wi-Fi do aparelho. Sem estatística inventada e sem promessa de reparo. Conhecimento técnico estável — sem fonte visível.",
+      "Revisão material em 2026-09-28: resposta curta no topo, remoção de absolutos sobre 5 GHz/canal/módulo Wi-Fi e decisão por comparação TV × outro dispositivo × cabo. Conhecimento técnico estável — sem fonte visível.",
   },
   "como-testar-fonte-de-alimentacao-pc": {
     slug: "como-testar-fonte-de-alimentacao-pc",
@@ -1432,10 +1432,10 @@ export const ARTICLE_SOURCE_MANIFEST: Record<string, ArticleSourceManifest> = {
     sources: [],
     technicalReview: "reviewed",
     factChecked: true,
-    factCheckedAt: "2026-08-14",
+    factCheckedAt: "2026-09-28",
     stableKnowledge: true,
     notes:
-      "Revisão concluída (Onda 8E): critério de quando reinstalar resolve e quando não resolve, backup verificado (abrir o arquivo no destino) como pré-requisito, chave de criptografia antes de qualquer formatação, diferença entre redefinir, reinstalar por cima e instalação limpa, vínculo de licença e ordem de drivers. Sem promessa de prazo, sem marca comercial e sem passo comercial disfarçado de tutorial. Conhecimento técnico estável — sem fonte visível.",
+      "Revisão material em 2026-09-28: resposta curta no topo, backup verificado antes de qualquer ação destrutiva, remoção de absolutos sobre HD/RAM/instalação limpa e linguagem de ativação/licenças mais precisa. Conhecimento técnico estável — sem fonte visível.",
   },
   "quanto-custa-formatar-um-computador": {
     slug: "quanto-custa-formatar-um-computador",
@@ -1468,13 +1468,13 @@ export const ARTICLE_SOURCE_MANIFEST: Record<string, ArticleSourceManifest> = {
   },
   "troquei-o-ssd-e-o-pc-so-abre-a-bios": {
     slug: "troquei-o-ssd-e-o-pc-so-abre-a-bios",
-    sources: [],
+    sources: ["ms-win11-requirements", "ms-bitlocker-recovery", "ms-initialize-new-disks"],
     technicalReview: "reviewed",
     factChecked: true,
-    factCheckedAt: "2026-08-25",
+    factCheckedAt: "2026-09-28",
     stableKnowledge: true,
     notes:
-      "Revisão concluída (Onda 9C): disco novo sem tabela de partições, compatibilidade de chave/slot M.2 (SATA × NVMe), conflito de linhas PCIe e portas SATA, controlador em AHCI, instalação com apenas o disco novo conectado e critério entre instalar do zero e clonar. Conhecimento técnico estável — sem fonte visível.",
+      "Revisão material em 2026-09-28: remove regra universal de AHCI, distingue SSD vazio de clone sem boot, preserva configuração original do controlador e BitLocker antes de mudanças e evita exclusão de partições por tentativa. Fontes oficiais Microsoft visíveis.",
   },
   "limpar-arquivos-temporarios-windows": {
     slug: "limpar-arquivos-temporarios-windows",
