@@ -1480,17 +1480,17 @@ export const SERVICOS_CORE: Record<string, ServicoLandingData> = {
   "conserto-tv": {
     path: "conserto-tv",
     trackingKey: "conserto-tv",
-    metaTitle: "Conserto de TV LED, LCD e Smart TV em Curitiba | Coleta",
+    metaTitle: "Conserto e Assistência Técnica de TV em Curitiba | Smart TV",
     metaDescription:
-      "Conserto de TV LED, LCD e Smart TV em Curitiba, com coleta e avaliação em bancada. Não realizamos conserto de TV a domicílio; orçamento após diagnóstico.",
+      "Conserto e assistência técnica de TV e Smart TV em Curitiba: LED/LCD, sem imagem, backlight, fonte e placa. Triagem e coleta para diagnóstico em bancada.",
     serviceName: "Conserto de TV e Smart TV",
     serviceDescription:
       "Conserto de televisores LED, LCD e Smart TV em Curitiba e região, com coleta, avaliação em bancada, reparo em nível de componente quando viável e critérios claros de aceite ou recusa.",
     eyebrow: "TV e Smart TV em Curitiba",
-    h1: "Conserto de TV LED, LCD e Smart TV em Curitiba",
+    h1: "Conserto e assistência técnica de TV e Smart TV em Curitiba",
     h1Accent: "com avaliação em bancada, coleta e entrega",
     intro:
-      "TV LED, LCD ou Smart TV que não liga, liga sem imagem, apresenta listras ou manchas, perde o som, reinicia ou trava na tela da marca precisa de diagnóstico por sintoma. Fonte, placa principal, iluminação interna, comando do painel e o próprio painel podem produzir sinais parecidos. Não realizamos conserto de TV a domicílio: o fluxo é coleta, avaliação em bancada e orçamento antes de qualquer reparo. Informe marca, modelo, tamanho e sintoma na triagem pelo WhatsApp.",
+      "TV LED, LCD ou Smart TV que não liga, fica sem imagem, perde o som, reinicia ou trava na tela da marca precisa de diagnóstico por sintoma. Fonte, placa principal, backlight, comando do painel e o próprio painel podem produzir sinais parecidos. A triagem começa pelo WhatsApp; quando o caso exige abertura e medição, o fluxo é coleta, avaliação em bancada e orçamento antes de qualquer reparo. Não prometemos conserto no endereço sem diagnóstico. Informe marca, modelo, tamanho e sintoma.",
     whatsappMessage:
       "Olá! Vim da página de conserto de TV e Smart TV. Triagem: (1) marca e modelo: (2) tamanho da tela: " +
       "(3) o que acontece ao ligar (não liga / sem imagem / sem som / listras / reinicia): (4) houve queda, raio ou oscilação de energia: " +
@@ -1540,15 +1540,16 @@ export const SERVICOS_CORE: Record<string, ServicoLandingData> = {
       { question: "A tela está escura mas o som funciona. O que costuma ser?", answer: "Esse é o sintoma mais associado ao conjunto de iluminação interna ou ao circuito que o alimenta. Também pode envolver o comando do painel. A verificação é feita em bancada, com o aparelho aberto e medição direta — sem abrir, qualquer diagnóstico é chute. Só depois da medição informamos o que foi encontrado e qual o escopo do reparo." },
       { question: "Vocês consertam Smart TV travada na tela da marca?", answer: "Avaliamos. Travamento na inicialização pode vir de falha de alimentação, de memória interna ou da própria placa principal. O que não fazemos é modificação não oficial de software, instalação de firmware de origem duvidosa nem desbloqueio de recursos do aparelho. Trabalhamos com procedimentos suportados pelo fabricante ou com reparo eletrônico." },
       { question: "Minha TV tomou raio. Ainda dá para avaliar?", answer: "Dá para avaliar, com a ressalva de que descarga elétrica raramente atinge um ponto só. É comum encontrar fonte, placa principal e entradas comprometidas ao mesmo tempo. Nesses casos a avaliação define o quanto do conjunto foi afetado, e a decisão de seguir ou não depende da relação entre o escopo encontrado e o valor do aparelho." },
-      { question: "Existe garantia no conserto de TV?", answer: "Sim: 90 dias sobre a mão de obra e sobre o reparo executado, contados da entrega. A garantia cobre o defeito tratado e o serviço realizado. Ficam fora dela outros defeitos que apareçam depois em pontos diferentes do aparelho, dano por nova oscilação elétrica, queda, infiltração, tentativa de reparo por terceiros e o painel, que não é peça reparada por nós." },
+      { question: "Como funciona a garantia no conserto de TV?", answer: "A garantia segue o serviço executado e o ponto reparado, conforme as condições publicadas em preços e políticas. O laudo identifica o defeito tratado e os limites de cobertura, incluindo situações como dano novo, surto posterior, queda, infiltração ou intervenção de terceiros." },
       { question: "Vocês trabalham com peças originais?", answer: "Trabalhamos com componentes adequados à especificação do circuito. Em linha de televisores, boa parte dos componentes eletrônicos é de mercado e não tem versão de marca do fabricante do aparelho. Quando o reparo depende de módulo específico, informamos a origem da peça e o valor antes de comprar — nada é adquirido sem a sua autorização." },
       { question: "Quanto tempo demora o conserto de uma TV?", answer: "Não trabalhamos com promessa de prazo fixo. Depende do defeito encontrado, da necessidade de peça e da disponibilidade do componente no mercado. Depois da avaliação você recebe uma previsão realista para o seu caso específico, e qualquer mudança nessa previsão é comunicada." },
       { question: "Posso levar a TV até vocês em vez de coletar?", answer: "O fluxo padrão é a coleta, justamente porque o transporte de televisor tem risco: painel é sensível a pressão e a torção, e um aparelho mal apoiado no carro chega com dano novo. Se você preferir outro arranjo, trate isso na triagem pelo WhatsApp antes de mover o aparelho." },
-      { question: "Vocês consertam monitor de computador também?", answer: "Monitor entra como categoria atendida na avaliação de equipamentos, com o mesmo critério de bancada e as mesmas limitações de painel. Não existe página nem processo separado: o encaminhamento é feito pela triagem, junto com as demais categorias de equipamentos atendidos." },
+      { question: "Vocês consertam monitor de computador também?", answer: "Sim, monitor possui fluxo próprio de triagem e bancada. A página de conserto e manutenção de monitor detalha fonte, backlight, placa, entradas de vídeo e as limitações de painel antes da coleta." },
     ],
     relacionados: [
       { label: "Coleta e entrega", to: "/coleta-e-entrega" },
       { label: "Conserto de placa eletrônica", to: "/servicos/conserto-placa" },
+      { label: "Conserto de monitor", to: "/servicos/conserto-monitor" },
       { label: "Equipamentos atendidos", to: "/equipamentos-atendidos" },
       { label: "Quando não compensa consertar", to: "/quando-nao-compensa" },
       ...LINKS_BASE,
@@ -1592,7 +1593,7 @@ export const SERVICOS_CORE: Record<string, ServicoLandingData> = {
       {
         titulo: "Garantia, limites e o que não prometemos",
         paragrafos: [
-          "A garantia é de 90 dias sobre a mão de obra e sobre o reparo executado, contados da entrega. Ela cobre exatamente o defeito tratado. Se o mesmo problema retornar dentro desse período, o aparelho volta para a bancada sem custo de mão de obra. O que não está coberto: defeito novo em outro ponto do televisor, dano por descarga elétrica posterior, queda, infiltração, uso em tensão incorreta, e qualquer intervenção feita por terceiros depois da nossa entrega.",
+          "A garantia acompanha o serviço efetivamente executado e o ponto reparado, conforme as condições publicadas em preços e políticas. O laudo registra o defeito tratado e as limitações aplicáveis. Defeito novo em outro ponto do televisor, descarga elétrica posterior, queda, infiltração, uso inadequado ou intervenção de terceiros não são tratados como continuação automática do reparo anterior.",
           "Também não prometemos o que não podemos sustentar. Não garantimos que todo televisor tem conserto, não damos prazo fixo antes de saber qual peça o caso exige, não afirmamos que o aparelho vai durar mais um número específico de anos e não dizemos que o reparo devolve o televisor ao estado de novo. Equipamento com muitos anos de uso tem desgaste natural em componentes que ainda funcionam, e isso não é reparável de forma preventiva sem trocar tudo — o que não faz sentido econômico.",
           "Quando o reparo não compensa, a orientação é essa mesma, e ela vem acompanhada do motivo. Aparelho de tela menor com defeito no painel, televisor antigo cuja peça necessária custa mais que um modelo novo equivalente, ou conjunto com dano em várias frentes: nesses casos dizer que não vale a pena é o serviço mais útil que podemos prestar. A página sobre quando não compensa consertar detalha esse raciocínio para todas as categorias que atendemos.",
         ],
@@ -1604,7 +1605,7 @@ export const SERVICOS_CORE: Record<string, ServicoLandingData> = {
       { label: "Quando não compensa consertar", to: "/quando-nao-compensa" },
       { label: "Equipamentos atendidos", to: "/equipamentos-atendidos" },
     ],
-    dateModified: "2026-09-26",
+    dateModified: "2026-09-28",
   },
 
   // 14 ─────────────────────────────────────────────────────────
@@ -1721,17 +1722,17 @@ export const SERVICOS_CORE: Record<string, ServicoLandingData> = {
   "conserto-monitor": {
     path: "conserto-monitor",
     trackingKey: "conserto-monitor",
-    metaTitle: "Conserto de Monitor em Curitiba | Fonte, Backlight e Placa",
+    metaTitle: "Conserto e Manutenção de Monitor em Curitiba | LCD e LED",
     metaDescription:
-      "Conserto de monitor em Curitiba: monitor que não liga, sem imagem, piscando ou com backlight apagado.",
+      "Conserto e manutenção de monitor em Curitiba: diagnóstico de LCD/LED, fonte, backlight, placa e entradas de vídeo antes de indicar reparo.",
     serviceName: "Conserto de monitor",
     serviceDescription:
       "Avaliação e conserto de monitores em Curitiba e região: falhas de alimentação, fonte interna e externa, backlight, placa lógica e entradas de vídeo, com trabalho em bancada, critérios de aceite declarados e logística de coleta e entrega.",
     eyebrow: "Monitores em Curitiba",
-    h1: "Conserto de monitor em Curitiba",
+    h1: "Conserto e manutenção de monitor em Curitiba",
     h1Accent: "com avaliação em bancada e reparo em nível de componente",
     intro:
-      "Monitor que não liga, que acende o LED e não mostra imagem, que fica piscando ou que só aparece quando você aponta uma lanterna para a tela. Boa parte desses casos é falha elétrica — fonte, alimentação ou placa lógica — e tem reparo viável sem trocar o aparelho. O que não tratamos é dano físico ao painel: tela trincada ou com mancha de pressão depende de uma peça que costuma custar mais que um monitor novo, e dizemos isso antes de você gastar com coleta. Envie marca, modelo e o sintoma pela triagem no WhatsApp.",
+      "Monitor LCD/LED que não liga, acende o LED sem imagem, pisca ou fica escuro precisa ser separado entre alimentação, backlight, placa lógica, entrada de vídeo e painel. Falha eletrônica pode ter reparo viável; dano físico de painel costuma ter baixa viabilidade econômica e é triado antes da coleta. Envie marca, modelo, polegadas e o sintoma pelo WhatsApp.",
     whatsappMessage:
       "Olá! Vim da página de conserto de monitor e quero fazer a triagem. " +
       "(1) marca, modelo e polegadas: (2) o monitor liga (o LED de energia acende): " +
@@ -1780,7 +1781,7 @@ export const SERVICOS_CORE: Record<string, ServicoLandingData> = {
       { question: "A tela está preta mas o LED acende. O que é?", answer: "São dois cenários distintos e a bancada separa um do outro. Se ao apontar uma lanterna bem próxima da tela você consegue enxergar a imagem fraca, a imagem está sendo gerada normalmente e o que falhou foi a iluminação: driver de backlight ou barra de LED. Se não aparece nada nem com a lanterna, a suspeita passa para a placa lógica ou para o estágio de entrada de vídeo. O teste da lanterna é o primeiro que fazemos no recebimento, porque muda todo o caminho do diagnóstico." },
       { question: "Vocês trocam painel de monitor trincado?", answer: "Não. Essa é uma recusa declarada antes da coleta e ela vale para trinca, mancha de pressão, marca de impacto e infiltração no painel. O motivo é econômico e não técnico: o painel é a peça mais cara do conjunto e, na maior parte dos modelos, custa próximo ou acima do valor de um monitor novo equivalente. Preferimos dizer isso na triagem a coletar o aparelho, cobrar avaliação e devolver com a mesma resposta. Falhas eletrônicas e de alimentação, ao contrário, costumam ter boa viabilidade de reparo." },
       { question: "Monitor gamer de alta taxa de atualização tem atendimento?", answer: "Sim, para as mesmas falhas de qualquer outro monitor: alimentação, fonte externa, backlight, conector de vídeo e placa. O que não fazemos é prometer validação de desempenho. Não temos bancada dedicada para certificar taxa de atualização máxima, tempo de resposta, faixa de cor ampliada ou sincronização adaptativa, então não anunciamos esses itens como resultado do reparo. Testamos o monitor funcionando em duas entradas de vídeo, de forma estável, e é isso que declaramos no laudo." },
-      { question: "Qual é a garantia do conserto de monitor?", answer: "90 dias sobre a mão de obra e sobre o ponto reparado, contados da entrega. A cobertura é do defeito tratado e do componente que substituímos. Não estão cobertos: defeito novo em outro estágio do aparelho, dano por surto ou oscilação elétrica posterior, queda, infiltração, uso em tensão incorreta, intervenção de terceiros depois da nossa entrega e o painel, que não é peça reparada por nós. Quando o monitor chega com histórico de líquido ou de reparo anterior, a cobertura é registrada de forma ainda mais delimitada no laudo." },
+      { question: "Como funciona a garantia do conserto de monitor?", answer: "A garantia segue o serviço executado e o ponto efetivamente reparado, conforme as condições publicadas em preços e políticas. O laudo informa o que foi tratado e quais situações ficam fora da cobertura, como dano novo, surto posterior, queda, líquido ou intervenção de terceiros." },
       { question: "Compensa consertar ou é melhor comprar outro?", answer: "É a pergunta que a avaliação responde, e nem sempre a resposta favorece o reparo. Pesamos o valor do serviço, o valor de um monitor equivalente novo, a idade do aparelho, o tamanho e o estado geral. Em monitores pequenos e antigos, muito fora de garantia, o reparo frequentemente não compensa e dizemos isso. Já em monitores maiores, ultrawide, curvos ou de uso profissional, uma falha de fonte costuma ser bem mais barata de resolver do que substituir o conjunto." },
       { question: "Como funciona a coleta do monitor?", answer: "Pela logística de coleta e entrega, nas faixas de distância publicadas: até 8 km, de 8 a 15 km e de 15 a 30 km, o que inclui Curitiba e cidades vizinhas como São José dos Pinhais, Pinhais, Colombo, Araucária e Campo Largo. No recebimento registramos marca, modelo, número de série, estado do painel com foto, base ou pedestal, cabo e fonte. Esse registro protege os dois lados em caso de dúvida sobre avaria de transporte, e é por isso que ele é obrigatório." },
       { question: "Preciso enviar a base e os cabos junto?", answer: "A fonte externa sim, sempre, porque em muitos casos o defeito está nela e não no monitor. A base ou pedestal ajuda no teste final, já que o aparelho precisa ficar em pé e ligado por um período contínuo. O cabo de vídeo é opcional: temos cabos de bancada para o teste, mas se o seu cabo é parte da suspeita, envie junto para que possamos descartá-lo. Monitor ultrawide, curvo ou acima de 32 polegadas exige embalagem extra, e orientamos isso na triagem." },
@@ -1791,7 +1792,7 @@ export const SERVICOS_CORE: Record<string, ServicoLandingData> = {
       { question: "Existe risco de danificar o monitor durante o conserto?", answer: "Existe, e ele é declarado antes da coleta. Abrir um monitor envolve soltar clipes plásticos que endurecem com o tempo, manipular o cabo plano que liga a placa ao painel e movimentar o conjunto óptico. Em aparelhos antigos, plástico quebradiço pode trincar na abertura, e em alguns modelos o painel é acessível apenas por um caminho que exige manuseio direto. Trabalhamos com o aparelho apoiado, ferramenta apropriada e registro fotográfico de entrada, e você recebe aviso quando o modelo é de risco maior. O que não fazemos é prometer risco zero em equipamento que já chega com defeito." },
       { question: "O monitor pegou raio ou queda de energia. Muda alguma coisa?", answer: "Muda bastante. Surto elétrico raramente danifica um único ponto: normalmente atinge o estágio de entrada, pode alcançar o conversor de tensão e às vezes chega à placa lógica. Reparamos o que está no caminho identificado, mas alertamos que dano por surto costuma deixar componentes marginalmente comprometidos, que falham semanas depois. Por isso a garantia nesses casos cobre o ponto reparado e não o aparelho como um todo, e isso fica escrito no laudo. Se você tem outros equipamentos na mesma tomada, vale revisar o aterramento e o protetor antes da devolução." },
       { question: "Posso usar o monitor com uma fonte genérica enquanto isso?", answer: "Não recomendamos. Fonte com tensão correta mas corrente insuficiente faz o monitor ligar e desligar em ciclo, e fonte com polaridade ou tensão errada danifica o estágio de entrada de forma imediata e irreversível. Boa parte dos monitores que chegam com placa queimada passou por isso. Se a suspeita é da fonte, envie a original junto na coleta: testamos as duas e informamos qual peça precisa ser substituída." },
-      { question: "Qual é o prazo típico do conserto de monitor?", answer: "A avaliação em bancada fica pronta em até 2 dias úteis depois do recebimento, e você recebe o laudo com o valor antes de qualquer reparo. Aprovado o serviço, o caso mais comum — fonte, alimentação ou backlight com componente de linha — costuma ser concluído em 2 a 5 dias úteis. Reparo em placa lógica com necessidade de peça específica pode chegar a 10 dias úteis, dependendo do fornecimento. A coleta e a entrega entram além desse prazo, conforme a faixa de distância. Quando qualquer etapa atrasa, avisamos com o motivo em vez de deixar você perguntando." },
+      { question: "Quanto tempo leva o conserto de monitor?", answer: "O prazo é informado depois da avaliação, porque depende da falha encontrada, da desmontagem necessária e da disponibilidade de componente. Fonte, backlight e placa lógica têm tempos diferentes; coleta e entrega também entram no planejamento quando aplicáveis." },
       { question: "E se depois da avaliação eu não quiser fazer o conserto?", answer: "Você paga apenas a avaliação e a logística, e o monitor volta montado, com todas as peças e no mesmo estado em que chegou. Não fazemos retenção de equipamento e não desmontamos aparelho recusado para aproveitamento de peça. O laudo é seu e traz o que foi medido, o que foi encontrado e por que recomendamos ou não o reparo — inclusive quando a nossa recomendação é a de não consertar." },
     ],
     relacionados: [
@@ -1805,7 +1806,7 @@ export const SERVICOS_CORE: Record<string, ServicoLandingData> = {
       {
         titulo: "Os quatro caminhos de falha de um monitor",
         paragrafos: [
-          "Monitor é um equipamento com poucas partes e uma sequência de falha bastante previsível, o que torna o diagnóstico objetivo quando a bancada segue método. O primeiro caminho é a alimentação externa: o adaptador de fonte, aquele bloco que fica no cabo, é o componente que mais falha em toda a categoria. Ele envelhece, perde capacidade e passa a entregar tensão instável, o que faz o monitor desligar sozinho, piscar ou simplesmente não ligar. É a falha mais barata de resolver e a primeira que verificamos, justamente porque não faz sentido abrir um aparelho antes de descartar o que está fora dele.",
+          "Monitor tem poucos blocos funcionais principais, e o diagnóstico fica mais objetivo quando a bancada segue uma sequência. O primeiro caminho é a alimentação externa: o adaptador de fonte, quando existe, é uma causa comum e simples de descartar antes de abrir o aparelho. Ele pode perder capacidade e entregar tensão instável, fazendo o monitor desligar, piscar ou deixar de ligar. Por isso fonte, tomada, cabo e sinal de vídeo entram cedo no diagnóstico.",
           "O segundo caminho é a fonte interna, presente nos modelos que ligam direto na tomada. Aqui o padrão são capacitores que perdem característica com o tempo e com o calor, além de estágios de chaveamento que desarmam. O sintoma clássico é o monitor que tenta ligar, dá um sinal de vida e desiste, ou que funciona por alguns minutos e apaga. Esse conjunto de defeitos costuma ter reparo viável em nível de componente, com substituição pontual das peças que saíram de especificação, e é onde o trabalho de bancada mais se paga em relação a comprar outro aparelho.",
           "O terceiro caminho é a iluminação, o chamado backlight. A imagem continua sendo gerada, mas a tela fica escura porque o driver de iluminação ou as barras de LED pararam. O teste da lanterna resolve essa dúvida em segundos, e o reparo varia bastante: driver com componente queimado tem solução direta, enquanto barra de LED depende de peça compatível e de abrir o conjunto óptico. O quarto caminho é a placa lógica, responsável por interpretar o sinal das entradas HDMI, DisplayPort, VGA e USB-C — inclui desde conector físico solto ou quebrado até estágio de entrada danificado por conexão a quente.",
         ],
@@ -1833,7 +1834,7 @@ export const SERVICOS_CORE: Record<string, ServicoLandingData> = {
       { label: "Coleta e entrega", to: "/coleta-e-entrega" },
       { label: "Equipamentos atendidos", to: "/equipamentos-atendidos" },
     ],
-    dateModified: "2026-08-07",
+    dateModified: "2026-09-28",
   },
 
   // 16 ────────────────────────────────────────────────────────
@@ -1957,17 +1958,17 @@ export const SERVICOS_CORE: Record<string, ServicoLandingData> = {
   "conserto-impressora-3d": {
     path: "conserto-impressora-3d",
     trackingKey: "conserto-impressora-3d",
-    metaTitle: "Conserto de Impressora 3D em Curitiba | FDM e Resina",
+    metaTitle: "Assistência Técnica e Conserto de Impressora 3D em Curitiba",
     metaDescription:
-      "Conserto e calibração de impressora 3D em Curitiba: entupimento de bico, falha de extrusão, camada deslocada, mesa desnivelada e placa queimada.",
+      "Assistência técnica e conserto de impressora 3D em Curitiba: FDM e resina, extrusão, hotend, nivelamento, eixos, sensores, fonte e placa.",
     serviceName: "Conserto e calibração de impressora 3D",
     serviceDescription:
       "Diagnóstico, reparo e calibração de impressoras 3D FDM e de resina em Curitiba e região: extrusão, hotend, eixos, correias, sensores, fonte e placa, com trabalho em bancada, ciclos de impressão de teste e escopo declarado antes da execução.",
     eyebrow: "Impressão 3D em Curitiba",
-    h1: "Conserto de impressora 3D em Curitiba",
+    h1: "Assistência técnica e conserto de impressora 3D em Curitiba",
     h1Accent: "com calibração e impressão de teste antes da devolução",
     intro:
-      "Bico entupido, extrusor patinando, camada deslocando no meio da peça, primeira camada que não gruda, ruído metálico nos eixos ou máquina que não liga depois de um surto de energia. Impressora 3D quebra por motivos mecânicos, elétricos e de parâmetro — e tratar tudo como se fosse configuração é o que faz o problema voltar. Aqui o equipamento entra em bancada, a causa é isolada e a máquina só volta depois de imprimir uma peça de teste. Envie modelo, tipo (FDM ou resina) e fotos da falha pela triagem no WhatsApp.",
+      "Bico entupido, extrusor patinando, camada deslocada, primeira camada que não adere, ruído nos eixos ou máquina que não liga podem ter origem mecânica, elétrica ou de parâmetro. A assistência técnica separa essas camadas antes de trocar peça ou alterar firmware. Quando o caso exige bancada, a validação inclui calibração e impressão de teste. Envie modelo, tipo (FDM ou resina) e fotos da falha pela triagem no WhatsApp.",
     whatsappMessage:
       "Olá! Vim da página de conserto de impressora 3D e quero fazer a triagem. " +
       "(1) marca e modelo da impressora: (2) é FDM (filamento) ou resina: " +
@@ -2019,7 +2020,7 @@ export const SERVICOS_CORE: Record<string, ServicoLandingData> = {
       { question: "Vocês fazem modelagem 3D ou preparam meus arquivos?", answer: "Não. O escopo é a máquina: mecânica, eletrônica e calibração. Não desenvolvemos modelagem, não corrigimos malha e não assumimos responsabilidade por falha de projeto do arquivo. O que fazemos é revisar o perfil de fatiamento quando o defeito é claramente de parâmetro, e essa revisão vem por escrito para você aplicar nas próximas peças." },
       { question: "Por que o mínimo da impressora 3D é maior que o dos outros equipamentos?", answer: "Porque o tempo de bancada é maior por natureza. Um conserto comum termina quando o aparelho liga e opera. Uma impressora 3D só pode ser considerada resolvida depois de imprimir: isso significa desmontar o conjunto de extrusão ou os eixos, remontar, calibrar mesa, offset, passo e fluxo, e então rodar ciclos completos de impressão de teste que levam horas cada um. O valor mínimo reflete esse tempo, e ele é informado antes da coleta, nunca depois." },
       { question: "Impressora que não liga depois de queda de energia tem conserto?", answer: "Frequentemente sim. Nesses casos a falha costuma estar na fonte, no fusível, no estágio de alimentação da placa ou em um driver de motor queimado. São reparos viáveis em nível de componente. O que muda o cenário é dano extenso na placa controladora: aí comparamos o custo de reparo com o de uma placa nova compatível e dizemos qual dos dois faz sentido, sem empurrar o caminho mais caro." },
-      { question: "A garantia cobre a qualidade das minhas próximas impressões?", answer: "Não, e é importante ser claro nisso. A garantia de 90 dias cobre a mão de obra do ponto reparado e o funcionamento do que foi tratado. Qualidade de impressão depende também do material que você usa, do perfil de fatiamento, da umidade do filamento e do modelo que você fatia — variáveis que ficam do seu lado depois da entrega. A peça de teste impressa na bancada documenta o estado da máquina no momento da devolução." },
+      { question: "A garantia cobre a qualidade das minhas próximas impressões?", answer: "A garantia segue o ponto reparado e as condições publicadas para o serviço. Qualidade de impressão também depende do material, perfil de fatiamento, umidade do filamento ou parâmetros de cura e do próprio arquivo. A peça de teste documenta o estado da máquina na devolução, mas não transforma variáveis de uso em garantia universal." },
       { question: "Preciso enviar o filamento ou a resina junto?", answer: "Ajuda bastante. Boa parte das falhas de extrusão e de cura é específica do material que você usa, e testar com o seu material reproduz o problema real em vez de um cenário ideal de bancada. Se não for possível, usamos material de referência para validar o funcionamento e o laudo registra que o teste foi feito com material diferente do seu." },
       { question: "Atendem impressora 3D em domicílio?", answer: "Na maior parte dos casos não compensa. O trabalho exige desmontagem, ferramenta de bancada e ciclos longos de impressão de teste, e nada disso cabe em uma janela de 30 minutos no seu endereço. Ajustes simples de perfil e orientação de uso podem ser resolvidos na própria triagem, sem coleta e sem custo de visita." },
       { question: "Vale a pena consertar uma impressora 3D antiga?", answer: "Depende de qual peça falhou e de quanto ela representa em relação a uma máquina nova equivalente. Reparo de eixo, extrusão, fonte e sensores costuma compensar com folga. Já uma máquina de entrada com placa e conjunto de extrusão comprometidos ao mesmo tempo pode chegar perto do valor de substituição — e nesse caso o parecer diz isso com o número na frente, para você decidir com informação em vez de com palpite." },
@@ -2045,7 +2046,7 @@ export const SERVICOS_CORE: Record<string, ServicoLandingData> = {
         paragrafos: [
           "Em Curitiba a impressão 3D já saiu do hobby: escritórios de arquitetura imprimem maquete e estudo volumétrico, engenharias validam encaixe antes de mandar usinar, laboratórios de prótese e clínicas de odontologia trabalham com resina, e pequenas operações produzem peça de reposição em baixo volume. Nesses cenários a máquina parada é fila de entrega parada, e o atendimento precisa refletir isso.",
           "Na prática, isso muda três coisas. Primeiro, o registro é individual por equipamento, o que importa quando há mais de uma máquina e é preciso saber qual já passou por qual intervenção. Segundo, o parecer separa o que devolve a máquina à operação agora do que pode ser programado para depois, em vez de entregar uma lista única de tudo que seria ideal fazer. Terceiro, a decisão entre reparar e substituir vem com o número na frente, porque para quem produz a conta é de disponibilidade, não só de custo de peça.",
-          "O que não muda é a política de valor: nada avança sem aprovação por escrito, peça não está inclusa no mínimo e a garantia cobre a mão de obra do ponto reparado. Uma impressora usada em produção volta com a peça de teste impressa e com os valores de calibração registrados, para servir de referência na próxima manutenção.",
+          "O que não muda é a política de aprovação: nada avança sem aceite do escopo e das peças necessárias. Uma impressora usada em produção volta com a peça de teste e com os valores de calibração registrados, para servir de referência na próxima manutenção."
         ],
       },
       {
@@ -2063,7 +2064,7 @@ export const SERVICOS_CORE: Record<string, ServicoLandingData> = {
       { label: "Reparo de placa eletrônica", to: "/servicos/conserto-placa" },
       { label: "Preços e políticas", to: "/precos-e-politicas" },
     ],
-    dateModified: "2026-08-25",
+    dateModified: "2026-09-28",
   },
 };
 
