@@ -1530,10 +1530,10 @@ export const ARTICLE_SOURCE_MANIFEST: Record<string, ArticleSourceManifest> = {
     sources: [],
     technicalReview: "reviewed",
     factChecked: true,
-    factCheckedAt: "2026-08-26",
+    factCheckedAt: "2026-09-29",
     stableKnowledge: true,
     notes:
-      "Revisão concluída (Onda 10D): atuação da proteção OCP/SCP da fonte no padrão de partida abortada, teste de bancada mínima fora do gabinete, isolamento incremental de periféricos, espaçadores metálicos como causa frequente e inviabilidade econômica do reparo em nível de componente. Conhecimento técnico estável — sem fonte visível.",
+      "Revisão material em 2026-09-29: o desligamento imediato passa a ser tratado como sintoma, não prova de curto; o roteiro separa fonte, cabeamento, montagem, periféricos e placa por comparação controlada, inclui segurança de cabos modulares, limites do teste de continuidade, critérios de parada e remove generalizações de frequência e custo. Conhecimento técnico estável — sem fonte visível.",
   },
   "bios-corrompida-reset-cmos-atualizacao": {
     slug: "bios-corrompida-reset-cmos-atualizacao",
