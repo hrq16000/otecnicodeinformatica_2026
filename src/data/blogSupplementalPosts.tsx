@@ -1071,6 +1071,248 @@ export const blogSupplementalPosts: Record<string, BlogPostContent> = {
       </>
     ),
   },
+
+  "como-conectar-wifi-tv-nao-conecta": {
+    title: "TV não conecta no Wi-Fi: como descobrir se é rede, senha ou a própria TV",
+    excerpt:
+      "Smart TV não conecta no Wi-Fi, cai da rede ou diz que está sem internet? Separe sinal, senha, roteador, DNS e falha da própria TV antes de resetar tudo.",
+    date: "2026-09-28",
+    readTime: "13 min",
+    category: "Redes e Wi-Fi",
+    content: (
+      <>
+        <p className="lead">
+          Quando a TV não conecta no Wi-Fi, o erro pode estar em quatro camadas diferentes: a conexão da internet,
+          o roteador, a comunicação sem fio ou a própria Smart TV. O melhor diagnóstico não começa restaurando
+          fábrica nem trocando o roteador: começa comparando a TV com outros dispositivos e descobrindo em qual
+          etapa a conexão falha.
+        </p>
+
+        <h2>Resposta curta: faça estes quatro testes primeiro</h2>
+        <ol>
+          <li>Confirme se celular ou notebook navegam normalmente na mesma rede.</li>
+          <li>Na TV, esqueça a rede Wi-Fi e conecte novamente digitando a senha do zero.</li>
+          <li>Reinicie uma vez a TV e o roteador, sem repetir ciclos de energia em sequência.</li>
+          <li>Teste a TV perto do roteador ou, se for possível, compare com cabo de rede ou hotspot do celular.</li>
+        </ol>
+        <p>
+          Esses quatro testes já separam boa parte dos casos entre <strong>problema geral de internet</strong>,
+          <strong>cobertura Wi-Fi</strong>, <strong>configuração</strong> e <strong>falha específica da TV</strong>.
+        </p>
+
+        <h2>1. Descubra se a internet caiu ou se apenas a TV ficou offline</h2>
+        <p>
+          Se nenhum aparelho navega, a TV provavelmente não é a causa principal. Verifique modem/ONT e roteador,
+          depois compare um dispositivo por cabo quando houver essa opção. Se celulares e notebooks continuam
+          normais e somente a TV falha, a investigação fica concentrada nela e na forma como ela se conecta à rede.
+        </p>
+        <p>
+          Para quedas que atingem vários dispositivos, consulte também{" "}
+          <a href="/problemas/wifi-instavel">Wi-Fi instável: como separar roteador, sinal e provedor</a>.
+        </p>
+
+        <h2>2. “Conectado sem internet” é diferente de “não encontra a rede”</h2>
+        <ul>
+          <li>
+            <strong>A TV nem mostra o nome da rede:</strong> verifique distância, banda suportada, sinal e se outras
+            redes aparecem na lista.
+          </li>
+          <li>
+            <strong>A rede aparece, mas a senha é recusada:</strong> apague a rede salva e digite a senha novamente;
+            confirme letras maiúsculas, caracteres especiais e o layout do teclado virtual.
+          </li>
+          <li>
+            <strong>Conecta, mas diz “sem internet”:</strong> a TV entrou na rede local, porém pode haver falha de
+            DNS, gateway, data/hora, roteador ou acesso externo.
+          </li>
+          <li>
+            <strong>Conecta e cai depois:</strong> compare intensidade do sinal, interferência, economia de energia
+            e comportamento em outra rede.
+          </li>
+        </ul>
+
+        <h2>3. 2,4 GHz, 5 GHz e compatibilidade</h2>
+        <p>
+          Algumas TVs trabalham melhor em 2,4 GHz por alcance; outras aproveitam 5 GHz quando estão próximas ao
+          roteador. Isso não significa que uma banda seja “sempre melhor”. O resultado depende da distância, das
+          paredes, do canal, do hardware da TV e do roteador.
+        </p>
+        <p>
+          Se o roteador usa o mesmo nome para as duas bandas, teste próximo ao equipamento. Se ele permite redes
+          separadas e você sabe voltar à configuração anterior, comparar 2,4 e 5 GHz pode ajudar a identificar se a
+          falha está ligada à banda. Não altere canal, largura ou segurança em massa sem registrar o estado atual.
+        </p>
+
+        <h2>4. Teste com hotspot do celular para separar TV de roteador</h2>
+        <p>
+          Um hotspot temporário é um bom teste comparativo: se a TV conecta e navega pelo celular, o módulo Wi-Fi
+          dela está ao menos conseguindo autenticar e trocar dados. Isso desloca a investigação para o roteador,
+          configuração de segurança, DHCP ou compatibilidade entre os dois equipamentos.
+        </p>
+        <p>
+          Se a TV também falha no hotspot, atualizações, data/hora, configuração de rede e o próprio adaptador
+          interno da TV ganham peso. Use o hotspot apenas como teste; streaming por rede móvel pode consumir muitos
+          dados.
+        </p>
+
+        <h2>5. Data e hora erradas podem parecer falha de internet</h2>
+        <p>
+          Serviços online usam certificados digitais. Uma TV com data ou hora muito incorretas pode conectar ao
+          Wi-Fi, mas falhar ao abrir aplicativos e servidores seguros. Confirme data, hora e fuso antes de concluir
+          que a internet está bloqueada.
+        </p>
+
+        <h2>6. Quando vale reiniciar a rede da TV — e quando não vale restaurar fábrica</h2>
+        <p>
+          Esquecer a rede e cadastrar novamente é uma ação reversível. Já restaurar a TV aos padrões de fábrica
+          apaga contas, aplicativos e preferências, e deve ficar para depois dos testes simples. Se a falha começou
+          logo após uma atualização, queda de energia ou troca de roteador, registre esse contexto antes de resetar
+          qualquer coisa.
+        </p>
+
+        <h2>7. Cabo de rede é um teste excelente quando a TV tem Ethernet</h2>
+        <p>
+          Se a TV funciona por cabo e falha apenas no Wi-Fi, internet, DNS e aplicativos deixam de ser os primeiros
+          suspeitos; a investigação passa para rádio, sinal e configuração sem fio. Se falha também por cabo, o
+          problema está mais abaixo na pilha: rede do roteador, configuração da TV ou serviço externo.
+        </p>
+
+        <h2>8. Quando interromper os testes</h2>
+        <p>
+          Procure avaliação quando a TV não encontra nenhuma rede mesmo perto do roteador, quando o Wi-Fi desaparece
+          do menu, quando a conexão cai em redes diferentes ou quando Ethernet funciona e o rádio interno permanece
+          indisponível após configuração e atualização. Nesses casos pode haver falha de módulo, antena, cabo interno
+          ou placa.
+        </p>
+        <p>
+          Para problemas de cobertura no imóvel, veja{" "}
+          <a href="/servicos/redes-e-wifi">diagnóstico de redes e Wi-Fi</a>. Para defeito eletrônico da própria TV,
+          consulte <a href="/servicos/conserto-tv">assistência técnica e conserto de TV</a>.
+        </p>
+      </>
+    ),
+  },
+
+  "como-formatar-pc-sem-perder-arquivos": {
+    title: "Como formatar o PC sem perder arquivos: backup, chaves e ordem segura",
+    excerpt:
+      "Vai formatar o computador? Veja o que salvar antes, como validar o backup, preservar BitLocker, navegador e licenças e quando evitar a formatação.",
+    date: "2026-09-28",
+    readTime: "15 min",
+    category: "Windows e Manutenção",
+    content: (
+      <>
+        <p className="lead">
+          Formatar sem perder arquivos não significa apenas copiar a pasta Documentos. Antes de reinstalar o Windows,
+          você precisa identificar dados locais, arquivos sincronizados, chaves de recuperação, contas, favoritos,
+          licenças e qualquer software que dependa de configuração específica. O backup deve ser validado antes de
+          apagar partições ou iniciar uma instalação limpa.
+        </p>
+
+        <h2>Resposta curta: a ordem segura antes de formatar</h2>
+        <ol>
+          <li>Liste os arquivos e configurações que não podem ser recriados.</li>
+          <li>Faça a cópia para outro dispositivo ou nuvem e abra alguns arquivos diretamente na cópia.</li>
+          <li>Confirme chaves de recuperação, especialmente BitLocker quando estiver ativo.</li>
+          <li>Registre contas, navegadores, e-mails, softwares e periféricos que precisarão ser reinstalados.</li>
+          <li>Baixe a mídia oficial do Windows e confirme a edição/licença usada no computador.</li>
+          <li>Só então decida entre reparo, redefinição do Windows e instalação limpa.</li>
+        </ol>
+
+        <h2>1. O que realmente precisa entrar no backup</h2>
+        <ul>
+          <li>Documentos, planilhas, fotos, vídeos, projetos e arquivos da Área de Trabalho.</li>
+          <li>Pastas de trabalho fora dos locais padrão, inclusive em outras partições.</li>
+          <li>Favoritos e perfis de navegador quando não estiverem sincronizados.</li>
+          <li>Arquivos de e-mail locais, quando o programa usa armazenamento no computador.</li>
+          <li>Perfis, presets, bancos locais, máquinas virtuais e dados de aplicativos específicos.</li>
+          <li>Chaves de licença, instaladores especiais e informações de acesso que não estejam em um gerenciador seguro.</li>
+        </ul>
+        <p>
+          Se o computador contém dados profissionais, faça um inventário por aplicação. “Copiei meus documentos”
+          não protege um banco local, um perfil de software técnico ou uma caixa de e-mail armazenada fora das pastas
+          comuns.
+        </p>
+
+        <h2>2. Sincronização em nuvem não é automaticamente um backup completo</h2>
+        <p>
+          OneDrive, Google Drive e outros serviços podem manter arquivos apenas online, espelhar exclusões ou estar
+          com sincronização incompleta. Antes de formatar, confirme no serviço web se os arquivos realmente chegaram
+          à nuvem e se as pastas importantes estão incluídas.
+        </p>
+        <p>
+          Para dados críticos, prefira ter pelo menos uma cópia independente do computador que será apagado. Um HD
+          externo desconectado após a cópia ou outro dispositivo de armazenamento reduz o risco de descobrir tarde
+          demais que a sincronização estava incompleta.
+        </p>
+
+        <h2>3. Valide o backup: copiar não basta</h2>
+        <p>
+          Abra documentos, fotos e arquivos maiores diretamente no destino. Compare pastas importantes e verifique se
+          o tamanho faz sentido. Para trabalho profissional, teste também arquivos de formatos específicos no
+          programa que será usado depois da reinstalação quando isso for possível.
+        </p>
+
+        <h2>4. Confirme BitLocker e chaves de recuperação</h2>
+        <p>
+          Se a unidade usa BitLocker, guarde a chave de recuperação fora do computador antes de alterar partições,
+          firmware ou instalação. Em alguns cenários o Windows recupera a ativação automaticamente pela conta, mas a
+          chave de BitLocker é outra coisa: sem ela, dados de uma unidade criptografada podem ficar inacessíveis.
+        </p>
+
+        <h2>5. Formatação não é o primeiro remédio para toda lentidão</h2>
+        <p>
+          Se o computador está lento porque o SSD/HD está degradado, a memória é insuficiente ou há
+          superaquecimento, reinstalar o Windows não elimina a causa. Antes de apagar o sistema, observe saúde do
+          armazenamento, uso de memória e temperatura.
+        </p>
+        <p>
+          Se a lentidão é o motivo da formatação, compare também{" "}
+          <a href="/problemas/computador-lento">computador lento: como separar software e hardware</a>.
+        </p>
+
+        <h2>6. Redefinir o Windows ou fazer instalação limpa?</h2>
+        <p>
+          A redefinição do Windows pode preservar arquivos em alguns modos, mas não substitui backup. Uma instalação
+          limpa oferece um ambiente novo, porém exige reinstalar aplicativos e reconfigurar o sistema. A escolha
+          depende do problema que você está tentando resolver e do quanto precisa preservar da instalação atual.
+        </p>
+
+        <h2>7. Na tela de discos, pare antes de apagar a partição errada</h2>
+        <p>
+          Se houver mais de um SSD ou HD, identifique cada unidade por capacidade e contexto antes de excluir
+          partições. Quando houver dúvida, desligar fisicamente unidades secundárias durante a instalação pode reduzir
+          o risco em desktops, desde que você saiba fazê-lo com segurança.
+        </p>
+        <p>
+          Não use <code>diskpart clean</code>, exclusão de partições ou conversões como “teste”. Essas ações alteram
+          a estrutura do disco e podem destruir caminhos de recuperação.
+        </p>
+
+        <h2>8. Depois da instalação: a restauração também faz parte do processo</h2>
+        <ol>
+          <li>Conclua Windows Update e drivers essenciais pelo fabricante.</li>
+          <li>Confirme áudio, vídeo, rede, impressora e periféricos.</li>
+          <li>Reinstale aplicativos a partir de fontes oficiais.</li>
+          <li>Restaure os arquivos para locais organizados.</li>
+          <li>Abra uma amostra dos dados restaurados.</li>
+          <li>Reative uma rotina de backup antes de voltar ao uso normal.</li>
+        </ol>
+
+        <h2>Quando não formatar ainda</h2>
+        <p>
+          Interrompa a formatação se o disco apresentar ruído, desaparecer da BIOS, travar durante cópia, tiver
+          arquivos importantes sem backup validado, usar BitLocker sem chave disponível ou se você não conseguir
+          identificar com segurança qual unidade será apagada. Nesses casos, preservar dados vem antes de reinstalar.
+        </p>
+        <p>
+          Se você prefere delegar o processo, veja{" "}
+          <a href="/servicos/formatacao">formatação com backup e reinstalação</a> e{" "}
+          <a href="/servicos/recuperacao-de-dados">recuperação de dados</a>.
+        </p>
+      </>
+    ),
+  },
 };
 
 export default blogSupplementalPosts;
