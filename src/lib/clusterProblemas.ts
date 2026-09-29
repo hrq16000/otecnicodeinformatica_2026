@@ -69,21 +69,21 @@ export const CLUSTER_PROBLEMAS: ClusterProblema[] = [
     slug: "wifi-instavel",
     path: "/problemas/wifi-instavel",
     titulo: "Wi-Fi caindo ou lento em parte da casa ou do escritório",
-    metaTitle: "Internet lenta ou queda de Wi-Fi: o que verificar | O Técnico",
+    metaTitle: "Wi-Fi caindo ou internet lenta: o que verificar | O Técnico",
     metaDescription:
-      "Internet lenta ou com queda toda hora? Veja como separar sinal fraco do Wi-Fi, roteador e operadora com testes simples, antes de trocar plano ou aparelho.",
+      "Wi-Fi caindo ou internet lenta? Separe cobertura, roteador, dispositivo e link da operadora com testes simples antes de trocar plano ou equipamento.",
     resumo:
-      "Na maior parte dos atendimentos de Wi-Fi instável o plano contratado está entregando o que promete — o sinal é que não chega. A investigação separa três coisas diferentes: a internet que entra no imóvel, o equipamento que distribui o sinal e o caminho físico até o aparelho que está reclamando.",
+      "Wi-Fi instável pode vir do link da operadora, do roteador, da cobertura ou de um único dispositivo. A investigação separa essas camadas comparando conexão por cabo, sinal próximo ao roteador e comportamento no ponto onde a queda ou lentidão aparece.",
     waMessage:
       "Olá! Vim da página sobre Wi-Fi instável. Meu sinal cai/fica lento e preciso de diagnóstico da rede.",
     sintomas: [
       {
         titulo: "Cai só em alguns cômodos ou andares",
-        desc: "Sinal que desaparece em um ponto específico indica atenuação por parede, laje, espelho ou caixa metálica. Nesses casos trocar de plano não muda nada: o problema é cobertura, resolvido com posicionamento, repetidor cabeado ou malha mesh.",
+        desc: "Quando a conexão funciona bem perto do roteador e piora em um ponto específico, cobertura e obstáculos ganham prioridade na investigação. Reposicionamento, ponto cabeado, access point ou malha mesh podem ser opções conforme a medição."
       },
       {
         titulo: "Desconecta sozinho em horários parecidos",
-        desc: "Queda com hora marcada costuma ter causa externa: interferência de rede vizinha no mesmo canal, forno micro-ondas, equipamento com temporizador ou reinício automático do roteador da operadora.",
+        desc: "Queda em horários parecidos pode estar ligada a interferência, congestionamento, equipamento reiniciando, uso simultâneo ou comportamento do próprio link. Registrar horário e aparelhos afetados ajuda a separar as hipóteses."
       },
       {
         titulo: "Conecta, mas 'sem internet'",
@@ -91,7 +91,7 @@ export const CLUSTER_PROBLEMAS: ClusterProblema[] = [
       },
       {
         titulo: "Rápido no celular, lento no computador",
-        desc: "Quando um aparelho vai bem e outro não, a rede está saudável e o problema é do dispositivo: driver de rede, adaptador antigo, banda 2.4 GHz saturada ou economia de energia desligando a placa.",
+        desc: "Quando um aparelho vai bem e outro não, a prioridade do diagnóstico muda para o dispositivo que falha: driver, adaptador, banda utilizada e economia de energia entram antes de alterar toda a rede."
       },
     ],
     causas: [
@@ -105,7 +105,7 @@ export const CLUSTER_PROBLEMAS: ClusterProblema[] = [
       },
       {
         titulo: "Canal e faixa saturados",
-        desc: "Em prédio, dezenas de redes disputam os mesmos canais de 2.4 GHz. Reorganizar canal e separar as faixas 2.4/5 GHz costuma devolver estabilidade sem trocar nada.",
+        desc: "Em prédio, várias redes podem disputar os mesmos canais de 2,4 GHz. Revisar canal, largura e uso de 2,4/5 GHz pode melhorar estabilidade sem exigir troca imediata de equipamento."
       },
       {
         titulo: "Cabeamento e conectores",
@@ -113,7 +113,7 @@ export const CLUSTER_PROBLEMAS: ClusterProblema[] = [
       },
       {
         titulo: "Repetidor mal configurado",
-        desc: "Repetidor colocado onde o sinal já é fraco repete sinal fraco e ainda divide a banda pela metade. É a causa mais comum de rede que piorou depois de uma 'melhoria'.",
+        desc: "Repetidor colocado onde o sinal de origem já chega fraco tende a repetir uma conexão ruim e pode reduzir o throughput disponível, especialmente quando recebe e retransmite pelo mesmo rádio. O posicionamento precisa ser medido antes da instalação."
       },
     ],
     antesDeChamar: [
@@ -148,11 +148,11 @@ export const CLUSTER_PROBLEMAS: ClusterProblema[] = [
       },
       {
         q: "Mesh é melhor que repetidor?",
-        a: "Em geral sim, porque os pontos trabalham como uma rede só e o aparelho troca de ponto sem cair. Mas mesh também depende de bom posicionamento e, quando possível, de ligação por cabo entre os pontos.",
+        a: "Depende do ambiente. Mesh facilita uma rede única entre vários pontos, mas ainda depende de posicionamento, qualidade do enlace entre nós e, quando disponível, backhaul cabeado. Em alguns casos um ponto cabeado simples resolve melhor."
       },
       {
         q: "Preciso trocar meu plano de internet?",
-        a: "Só se o teste com cabo mostrar que a velocidade contratada não está chegando. Se por cabo o resultado é bom, o plano não é o problema.",
+        a: "Antes de trocar de plano, compare o desempenho por cabo e perto do roteador com o resultado no ponto de uso. Se o link entrega bem na origem e piora apenas no Wi-Fi, cobertura ou interferência ganham prioridade; se o desempenho também é baixo por cabo, o link ou o equipamento de borda precisam ser investigados."
       },
       {
         q: "Dá para resolver sem visita?",
@@ -393,7 +393,7 @@ export const CLUSTER_PROBLEMAS: ClusterProblema[] = [
     slug: "computador-desliga-sozinho",
     path: "/problemas/computador-desliga-sozinho",
     titulo: "Computador ou PC desligando sozinho: causas e testes seguros",
-    metaTitle: "Computador desligando sozinho: causas e testes seguros",
+    metaTitle: "PC desliga sozinho: temperatura, fonte ou energia? | O Técnico",
     metaDescription:
       "Computador ou PC desligando sozinho, mesmo sem esquentar? Veja como separar temperatura, fonte, tomada, memória e sistema antes de trocar peças.",
     resumo:
@@ -429,7 +429,7 @@ export const CLUSTER_PROBLEMAS: ClusterProblema[] = [
       },
       {
         titulo: "Fonte de alimentação degradada ou subdimensionada",
-        desc: "Fonte que entrega tensão instável sob carga derruba a máquina sem registrar erro nenhum no sistema. Verificamos tensão sob carga real, não apenas se a fonte 'liga'.",
+        desc: "Fonte que fica instável sob carga pode desligar a máquina sem um erro útil no sistema. A avaliação considera comportamento sob carga e, quando aplicável, comparação com fonte compatível de referência — não apenas se a fonte consegue ligar."
       },
       {
         titulo: "Energia elétrica do ambiente",
@@ -451,7 +451,7 @@ export const CLUSTER_PROBLEMAS: ClusterProblema[] = [
       "Não insista em apertar o botão de ligar várias vezes seguidas quando a máquina não responde.",
       "Não formate: desligamento por temperatura ou fonte volta igual depois da formatação, e os dados já terão ido embora.",
       "Ao usar ar comprimido, mantenha a ventoinha imobilizada; deixá-la girar livremente em alta rotação pode danificar o conjunto.",
-      "Não substitua a fonte por outra genérica sem conferir potência e conectores; fonte errada leva placa-mãe junto.",
+      "Não substitua a fonte por outra genérica sem conferir potência, conectores e compatibilidade; uma fonte inadequada pode causar instabilidade ou danificar componentes."
     ],
     modalidades: [
       {
