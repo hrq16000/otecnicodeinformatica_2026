@@ -46,7 +46,7 @@ function isH3SwallowedErrorBody(body: string): boolean {
 
 const CANONICAL_HOST = "otecnicodeinformatica.com.br";
 
-function canonicalHostRedirect(request: Request): Response | null {
+export function canonicalHostRedirect(request: Request): Response | null {
   const url = new URL(request.url);
   const isCanonicalDomain =
     url.hostname === CANONICAL_HOST || url.hostname === `www.${CANONICAL_HOST}`;
