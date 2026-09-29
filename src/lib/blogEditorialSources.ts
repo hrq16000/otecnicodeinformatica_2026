@@ -1158,10 +1158,10 @@ export const ARTICLE_SOURCE_MANIFEST: Record<string, ArticleSourceManifest> = {
     sources: ["wifi-alliance-security"],
     technicalReview: "reviewed",
     factChecked: true,
-    factCheckedAt: "2026-08-12",
+    factCheckedAt: "2026-09-28",
     stableKnowledge: true,
     notes:
-      "Reescrito na Onda 5B. Explicita que endereço MAC aleatório por rede torna nomes desconhecidos inconclusivos e que filtro de MAC não é medida de segurança. Sem indicação de aplicativo de terceiros e sem promessa de detecção de invasão.",
+      "Revisão material em 2026-09-28: lista DHCP tratada como referência de clientes/leases, não prova de presença ativa; MAC privado e WPS descritos sem absolutos; fluxo exige confirmar dispositivo antes de concluir por intrusão. Fonte Wi-Fi Alliance mantida.",
   },
   "como-fazer-upgrade-ssd-nvme": {
     slug: "como-fazer-upgrade-ssd-nvme",
@@ -1468,13 +1468,13 @@ export const ARTICLE_SOURCE_MANIFEST: Record<string, ArticleSourceManifest> = {
   },
   "troquei-o-ssd-e-o-pc-so-abre-a-bios": {
     slug: "troquei-o-ssd-e-o-pc-so-abre-a-bios",
-    sources: [],
+    sources: ["ms-win11-requirements", "ms-bitlocker-recovery", "ms-initialize-new-disks"],
     technicalReview: "reviewed",
     factChecked: true,
-    factCheckedAt: "2026-08-25",
+    factCheckedAt: "2026-09-28",
     stableKnowledge: true,
     notes:
-      "Revisão concluída (Onda 9C): disco novo sem tabela de partições, compatibilidade de chave/slot M.2 (SATA × NVMe), conflito de linhas PCIe e portas SATA, controlador em AHCI, instalação com apenas o disco novo conectado e critério entre instalar do zero e clonar. Conhecimento técnico estável — sem fonte visível.",
+      "Revisão material em 2026-09-28: remove regra universal de AHCI, distingue SSD vazio de clone sem boot, preserva configuração original do controlador e BitLocker antes de mudanças e evita exclusão de partições por tentativa. Fontes oficiais Microsoft visíveis.",
   },
   "limpar-arquivos-temporarios-windows": {
     slug: "limpar-arquivos-temporarios-windows",
