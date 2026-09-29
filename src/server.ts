@@ -44,9 +44,30 @@ function isH3SwallowedErrorBody(body: string): boolean {
   }
 }
 
+const CANONICAL_HOST = "otecnicodeinformatica.com.br";
+
+function canonicalHostRedirect(request: Request): Response | null {
+  const url = new URL(request.url);
+  const isCanonicalDomain =
+    url.hostname === CANONICAL_HOST || url.hostname === `www.${CANONICAL_HOST}`;
+
+  // Não interfere em previews, localhost ou domínios internos do provedor.
+  if (!isCanonicalDomain) return null;
+
+  if (url.protocol === "https:" && url.hostname === CANONICAL_HOST) return null;
+
+  url.protocol = "https:";
+  url.hostname = CANONICAL_HOST;
+  url.port = "";
+
+  return Response.redirect(url.toString(), 308);
+}
+
 export default {
   async fetch(request: Request, env: unknown, ctx: unknown) {
     try {
+      const canonicalRedirect = canonicalHostRedirect(request);
+      if (canonicalRedirect) return canonicalRedirect;
       const handler = await getServerEntry();
       const response = await handler.fetch(request, env, ctx);
       return await normalizeCatastrophicSsrResponse(response);
