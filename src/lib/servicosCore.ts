@@ -148,7 +148,7 @@ export const SERVICOS_CORE: Record<string, ServicoLandingData> = {
     h1: "Manutenção e conserto de notebook em Curitiba",
     h1Accent: "diagnóstico antes de informar o valor",
     intro:
-      "Notebook que não liga, esquenta, fica lento ou apresenta falha de tela, teclado, bateria ou carga precisa de diagnóstico antes de trocar peça. Separamos sistema, armazenamento, memória, temperatura, energia e dano físico para decidir entre ajuste, upgrade, reparo ou bancada. Descreva o sintoma e o modelo pelo WhatsApp para definir o próximo passo."
+      "Notebook que não liga, esquenta, fica lento ou apresenta falha de tela, teclado, bateria ou carga precisa de diagnóstico antes de trocar peça. Separamos sistema, armazenamento, memória, temperatura, energia e dano físico para decidir entre ajuste, upgrade, reparo ou bancada. Descreva o sintoma e o modelo pelo WhatsApp para definir o próximo passo.",
     whatsappMessage: "Olá! Meu notebook está com problema. Podem avaliar?",
     incluso: [
       { title: "Diagnóstico do notebook", desc: "Avaliação de hardware e software para achar a causa real." },
