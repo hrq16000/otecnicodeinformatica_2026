@@ -34,6 +34,8 @@ export interface CidadeData {
   contextoLocal?: string[];
   /** Logística e acesso reais da localidade (conteúdo autoral) */
   logisticaLocal?: string[];
+  /** Bairros âncora indexáveis ligados à cidade — somente rotas aprovadas pela policy. */
+  bairrosIndexaveis?: { label: string; to: string; desc: string }[];
   /** Quando chamar um técnico — exemplos práticos */
   quandoChamar: { title: string; desc: string }[];
   /** FAQ local — mínimo 5 por cidade, conteúdo distinto */
@@ -216,6 +218,22 @@ export const CIDADES: Record<string, CidadeData> = {
       "Diagnóstico de Wi‑Fi comparando dispositivos e pontos do ambiente",
       "Backup e estado do armazenamento antes de formatação ou migração",
       "Atendimento remoto, visita ou bancada definidos conforme o defeito",
+    ],
+    bairrosIndexaveis: [
+      { label: "Emiliano Perneta", to: "/bairros/emiliano-perneta", desc: "Triagem por sintoma e modalidade para PC, notebook e rede." },
+      { label: "Maria Antonieta", to: "/bairros/maria-antonieta", desc: "Suporte por equipamento, endereço e necessidade de remoto, visita ou bancada." },
+      { label: "Vargem Grande", to: "/bairros/vargem-grande", desc: "Diagnóstico de inicialização, armazenamento, desempenho e rede." },
+      { label: "Estância Pinhais", to: "/bairros/estancia-pinhais", desc: "Atendimento com decisão entre suporte remoto, visita e bancada." },
+      { label: "Alto Tarumã", to: "/bairros/alto-taruma", desc: "Roteiro técnico para alimentação, vídeo, desempenho e Wi‑Fi." },
+      { label: "Jardim Cláudia", to: "/bairros/jardim-claudia", desc: "Diagnóstico de tela azul, aquecimento, rede e preservação de dados." },
+      { label: "Atuba", to: "/bairros/atuba-pinhais", desc: "Reinicialização, carga, periféricos e conectividade." },
+      { label: "Jardim Amélia", to: "/bairros/jardim-amelia", desc: "Desempenho, armazenamento e Wi‑Fi com diagnóstico antes de upgrade." },
+      { label: "Jardim Karla", to: "/bairros/jardim-karla-pinhais", desc: "Bateria, temperatura, drivers e rede em notebook e PC." },
+      { label: "Pineville", to: "/bairros/pineville", desc: "Suporte para notebook, computador, rede e periféricos." },
+      { label: "Weissópolis", to: "/bairros/weissopolis", desc: "Travamentos, armazenamento, Wi‑Fi e periféricos." },
+      { label: "Centro de Pinhais", to: "/bairros/centro-pinhais", desc: "Continuidade de trabalho, dados, impressão e conectividade." },
+      { label: "Parque das Nascentes", to: "/bairros/parque-nascentes-pinhais", desc: "Rede, desempenho, armazenamento e proteção de arquivos." },
+      { label: "Vila Amélia", to: "/bairros/vila-amelia-pinhais", desc: "Carregamento, armazenamento e preservação de dados." },
     ],
     quandoChamar: [
       { title: "PC ou notebook lento", desc: "Demora para iniciar, trava ou perde desempenho durante o uso." },
