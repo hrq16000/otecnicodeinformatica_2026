@@ -293,7 +293,7 @@ export const CLUSTER_PROBLEMAS: ClusterProblema[] = [
     metaDescription:
       "Apagou arquivos, formatou por engano ou o HD parou de abrir? O que você faz na primeira hora define a chance de recuperação. Veja o que evitar e como funciona a avaliação.",
     resumo:
-      "Em recuperação de dados, a primeira decisão é parar de gravar no dispositivo. Em HDs e algumas mídias, dados apagados podem permanecer até serem sobrescritos. Em SSDs modernos, recursos como TRIM e coleta de lixo podem tornar blocos apagados indisponíveis muito antes, mesmo sem nova gravação visível. Por isso o tipo de mídia e o que aconteceu depois da perda mudam completamente a chance de recuperação."
+      "Em recuperação de dados, a primeira decisão é parar de gravar no dispositivo. Em HDs e algumas mídias, dados apagados podem permanecer até serem sobrescritos. Em SSDs modernos, recursos como TRIM e coleta de lixo podem tornar blocos apagados indisponíveis muito antes, mesmo sem nova gravação visível. Por isso o tipo de mídia e o que aconteceu depois da perda mudam completamente a chance de recuperação.",
     waMessage:
       "Olá! Vim da página sobre arquivos apagados. Preciso de avaliação para tentar recuperar dados.",
     sintomas: [
