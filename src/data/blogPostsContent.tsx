@@ -2715,77 +2715,111 @@ docker run -d --name db --network minha-rede postgres
   },
 
   "windows-11-lento-como-resolver": {
-    title: "Windows 11 lento: como descobrir a causa antes de sair otimizando",
+    title: "Windows 11 lento: diagnóstico por recurso antes de otimizar",
     excerpt:
-      "Lentidão no Windows 11 quase nunca tem uma causa única. Como ler os sinais, separar limite de hardware de software mal configurado e decidir entre ajuste, upgrade e reinstalação.",
+      "Windows 11 lento não aponta para uma causa única. Veja como separar inicialização, armazenamento, memória, CPU, temperatura e software antes de decidir por ajuste, upgrade ou reinstalação.",
     date: "2026-08-12",
-    readTime: "11 min",
+    readTime: "13 min",
     category: "Procedimentos Técnicos",
     content: (
       <>
-        <p className="lead">A maior parte das listas de "otimização" trata sintoma. Elas desativam animação, limpam pasta temporária e prometem velocidade — sem nunca perguntar por que a máquina ficou lenta. Aqui o caminho é o contrário: primeiro identificar qual recurso está saturado, depois agir só onde faz diferença.</p>
+        <p className="lead">“Windows 11 lento” descreve um resultado, não a causa. Antes de desativar recursos, instalar otimizadores ou comprar memória e SSD, registre <strong>quando</strong> a lentidão aparece e observe qual recurso muda naquele momento. O objetivo é transformar sensação de lentidão em evidência reproduzível.</p>
 
-        <h2>Lentidão não é um sintoma só</h2>
-        <p>Antes de qualquer ajuste, descreva com precisão o que está lento. Demora para chegar à área de trabalho é um problema. Travamento momentâneo ao abrir programas é outro. Interface que engasga ao rolar página é outro ainda. Cada um aponta para um recurso diferente e exige decisão diferente.</p>
+        <h2>Resposta direta</h2>
+        <p>Comece pelo padrão da falha: inicialização demorada, programas que abrem devagar, travadas ao alternar tarefas, navegador pesado ou queda de desempenho depois de alguns minutos. Em seguida, compare CPU, memória, disco e processos no Gerenciador de Tarefas durante o problema. <strong>Um percentual isolado não condena hardware</strong>; o que importa é a relação entre a saturação observada e o sintoma reproduzido.</p>
+
+        <h2>Primeiro descreva o tipo de lentidão</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Quando acontece</th>
+              <th>Hipóteses que merecem verificação</th>
+              <th>Próximo passo útil</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Logo após entrar no Windows</td><td>Aplicativos de inicialização, atualização, sincronização, armazenamento lento</td><td>Observar Inicializar aplicativos e atividade de disco/processos</td></tr>
+            <tr><td>Ao abrir vários programas ou abas</td><td>Pressão de memória, paginação, extensão pesada, aplicativo específico</td><td>Comparar memória e processo responsável durante a travada</td></tr>
+            <tr><td>Sob carga de CPU/GPU</td><td>Processo legítimo pesado, refrigeração, energia, driver ou aplicativo</td><td>Reproduzir a tarefa e observar uso, temperatura e frequência</td></tr>
+            <tr><td>Apenas em um aplicativo</td><td>Configuração, extensão, perfil, cache ou requisito daquele programa</td><td>Testar o mesmo cenário sem extensões/perfil secundário quando possível</td></tr>
+            <tr><td>Piorou de repente</td><td>Atualização recente, software novo, falha de armazenamento, malware ou mudança de driver</td><td>Relacionar a data da mudança com o início do sintoma</td></tr>
+          </tbody>
+        </table>
+
+        <h2>Leia o Gerenciador de Tarefas sem usar “números mágicos”</h2>
+        <p>Observe a máquina durante a lentidão, não apenas parada. CPU, memória e disco podem atingir uso alto de forma normal por alguns instantes. O sinal relevante é a saturação que <strong>permanece ou se repete junto com o sintoma</strong> e aponta para um processo ou recurso específico.</p>
         <ul>
-          <li><strong>Demora na inicialização:</strong> disco lento ou fila grande de programas iniciando junto com o sistema.</li>
-          <li><strong>Travadas curtas e repetidas:</strong> falta de memória — o sistema passa a usar o disco como memória de apoio.</li>
-          <li><strong>Lentidão constante em tudo:</strong> processador saturado por algum processo em segundo plano ou por limite térmico.</li>
-          <li><strong>Só o navegador pesa:</strong> excesso de abas, extensões e cache — não é o Windows.</li>
-          <li><strong>Piorou de repente:</strong> atualização mal aplicada, driver trocado ou software indesejado instalado.</li>
+          <li><strong>Disco muito ocupado:</strong> identifique qual processo está lendo ou gravando e se o comportamento coincide com a travada. Atualização, antivírus, sincronização e armazenamento com problema podem produzir sintomas diferentes.</li>
+          <li><strong>Memória pressionada:</strong> procure aumento consistente do uso enquanto aplicativos ficam sem resposta ou o sistema passa a paginar intensamente. Não existe um percentual universal que, sozinho, determine necessidade de upgrade.</li>
+          <li><strong>CPU alta:</strong> descubra qual processo sustenta o consumo. Uma tarefa conhecida e temporária tem interpretação diferente de um processo desconhecido ou de uso alto contínuo sem atividade esperada.</li>
+          <li><strong>Uso aparentemente baixo:</strong> lentidão ainda pode estar ligada a armazenamento com erro, driver, aplicação específica, temperatura, energia ou latência externa. “Tudo abaixo de 100%” não significa que o sistema está saudável.</li>
         </ul>
 
-        <h2>Leia o Gerenciador de Tarefas antes de mexer</h2>
-        <p>Abra o Gerenciador de Tarefas e observe a aba de desempenho durante alguns minutos de uso normal, não com a máquina parada. O que interessa é qual coluna encosta no teto:</p>
-        <ol>
-          <li><strong>Disco em 100% de forma contínua:</strong> gargalo clássico de disco mecânico com Windows 11. Nenhum ajuste de software resolve de forma duradoura.</li>
-          <li><strong>Memória acima de 80% em uso comum:</strong> a máquina está trabalhando no limite; qualquer programa a mais gera engasgo.</li>
-          <li><strong>Processador alto sem você fazer nada:</strong> vale identificar o processo. Indexação e atualização em andamento são temporários; mineração, adware e antivírus duplicado não são.</li>
-          <li><strong>Tudo baixo e mesmo assim lento:</strong> suspeite de disco com setores em falha ou de queda de desempenho por temperatura.</li>
-        </ol>
-        <p>Essa leitura de dois minutos evita horas de ajustes inúteis, porque troca palpite por evidência.</p>
+        <h2>Armazenamento lento não é sinônimo automático de “troque por SSD”</h2>
+        <p>Um computador com HD mecânico pode ter maior latência de acesso que um sistema em SSD, mas isso não transforma todo uso alto de disco em diagnóstico fechado. Primeiro diferencie fila de I/O causada pela carga normal, pouca memória com paginação, atualização, sincronização, antivírus e possível degradação da própria unidade.</p>
+        <p>Se o armazenamento for de fato o gargalo e o equipamento for compatível, migrar para SSD pode reduzir a espera por leitura e escrita. A decisão fica mais sólida quando o problema é reproduzido e o restante do sistema não está impondo um limite diferente. Para planejar a troca sem comprar pela expectativa, veja <Link to="/blog/como-fazer-upgrade-ssd-nvme">upgrade para SSD/NVMe</Link>.</p>
 
-        <h2>Limite de hardware não se resolve com ajuste</h2>
-        <p>O Windows 11 assume armazenamento de estado sólido e folga de memória. Em disco mecânico, o sistema fica preso na fila de leitura mesmo com processador sobrando: é por isso que a máquina demora para abrir a área de trabalho e trava por alguns segundos ao clicar em qualquer coisa. Trocar para SSD é a mudança com maior efeito perceptível, e nenhum ajuste de configuração substitui isso.</p>
-        <p>Memória é a segunda barreira. Com pouca RAM, o sistema empurra parte do conteúdo para o arquivo de paginação no disco, e a lentidão vira ciclo: falta memória, sobra acesso a disco, tudo engasga. Antes de comprar módulo, porém, confirme a leitura no Gerenciador de Tarefas — máquina com memória sobrando não melhora nada com mais memória.</p>
-        <p>Existe ainda o caso do notebook que começa rápido e vai perdendo desempenho depois de alguns minutos. Isso não é software: é refrigeração saturada reduzindo a frequência do processador para conter temperatura. O tratamento está em <Link to="/blog/como-limpar-notebook-por-dentro">limpeza interna e manutenção da refrigeração</Link>, não em configuração do Windows.</p>
+        <h2>Memória: observe pressão, não um percentual fixo</h2>
+        <p>RAM insuficiente pode aumentar paginação e deixar a troca entre aplicativos mais lenta, mas o número exibido pelo Gerenciador de Tarefas precisa ser interpretado junto com a carga real. Antes de comprar memória, compare o uso em repouso e durante a tarefa que trava, confira quais processos cresceram e verifique a compatibilidade física e lógica do equipamento.</p>
+        <p>Mais RAM ajuda quando existe pressão real de memória. Se há folga consistente durante o problema, aumentar capacidade não corrige um gargalo que está em outro lugar.</p>
 
-        <h2>O que ajustar quando o gargalo é software</h2>
-        <p>Quando o hardware é compatível e a máquina ainda arrasta, os ajustes que realmente pesam são poucos:</p>
+        <h2>Quando a máquina começa rápida e degrada depois</h2>
+        <p>Queda de desempenho depois de alguns minutos pode envolver temperatura, política de energia, carga acumulada de processos ou o próprio aplicativo. Superaquecimento é uma hipótese importante em notebooks, mas não deve ser declarado sem medir temperatura, frequência e comportamento sob a mesma carga.</p>
+        <p>Se houver temperatura alta acompanhada de redução de frequência e perda de desempenho, investigue ventilação, poeira, ventoinha e montagem térmica. Se a temperatura estiver normal, continue procurando a causa em software, energia, driver ou carga de trabalho.</p>
+
+        <h2>Aplicativos de inicialização: ajuste documentado, não “limpeza milagrosa”</h2>
+        <p>A Microsoft documenta que aplicativos configurados para iniciar automaticamente podem afetar o tempo de inicialização e a atividade do sistema. Desabilite somente o que você reconhece e não precisa abrir com o Windows. Evite desativar serviços aleatórios ou usar scripts de “debloat” sem entender o que removem.</p>
+
+        <h2>Quando a suspeita é software</h2>
         <ul>
-          <li><strong>Programas na inicialização:</strong> tudo que sobe junto com o sistema disputa disco e memória no pior momento. Mantenha só o necessário.</li>
-          <li><strong>Antivírus duplicado:</strong> duas soluções de proteção ativas ao mesmo tempo verificam o mesmo arquivo duas vezes e brigam entre si. Uma é o bastante.</li>
-          <li><strong>Sincronização de nuvem:</strong> pastas grandes sincronizando em segundo plano consomem disco e rede continuamente. Vale limitar as pastas envolvidas.</li>
-          <li><strong>Driver de vídeo e chipset:</strong> instalados pelo fabricante do equipamento, resolvem travamento de interface que nenhuma limpeza corrige.</li>
-          <li><strong>Espaço livre no disco do sistema:</strong> disco quase cheio degrada desempenho de forma real. Deixe folga de trabalho.</li>
+          <li><strong>Inicialização:</strong> reduza aplicativos automáticos que não são necessários no começo da sessão.</li>
+          <li><strong>Atualizações:</strong> verifique se Windows e aplicativos estão concluindo uma atualização ou reinicialização pendente antes de comparar desempenho.</li>
+          <li><strong>Espaço de armazenamento:</strong> pouco espaço pode dificultar operações do sistema; libere espaço com ferramentas do próprio Windows e confirme o resultado.</li>
+          <li><strong>Aplicativo específico:</strong> teste extensões, perfil secundário ou reinstalação daquele aplicativo antes de concluir que o Windows inteiro está lento.</li>
+          <li><strong>Software indesejado:</strong> anúncios inesperados, redirecionamentos, processos estranhos ou mudanças não autorizadas justificam uma verificação de segurança, mas lentidão sozinha não prova infecção.</li>
         </ul>
-        <p>Efeitos visuais e "dicas do sistema" entram por último, e com expectativa modesta: mudam a sensação de resposta, não a capacidade da máquina.</p>
 
-        <h2>Quando desconfiar de infecção</h2>
-        <p>Lentidão que aparece de um dia para o outro, junto com anúncios fora do lugar, página inicial trocada ou processos desconhecidos consumindo processador, tem cara de software indesejado. Nesse caso, otimizar não adianta — o consumo volta. O caminho está em <Link to="/blog/como-remover-virus-windows-iniciantes">como remover vírus e adware do Windows</Link>, e só depois vale reavaliar o desempenho.</p>
+        <h2>Antivírus: confirme qual proteção está realmente ativa</h2>
+        <p>Não presuma conflito apenas porque existem nomes diferentes instalados. Verifique no Windows Security qual solução está registrada como proteção ativa e revise produtos antigos ou incompletamente removidos quando houver evidência de conflito. A investigação deve partir do estado real do sistema, não de uma regra genérica de “um antivírus sempre deixa o PC lento”.</p>
 
-        <h2>Reinstalar: quando faz sentido e quando é atalho errado</h2>
-        <p>Reinstalação limpa resolve acúmulo de configuração quebrada, software residual e perfil corrompido. É a saída correta quando a máquina foi usada por anos, passou por várias instalações e continua lenta mesmo com hardware adequado.</p>
-        <p>Não é a saída quando o gargalo é disco mecânico ou pouca memória: nesses casos o sistema fica rápido por alguns dias e volta ao mesmo ponto. Reinstalar também exige backup verificado antes — arquivo copiado e conferido, não presumido. O procedimento de resguardo está em <Link to="/servicos/recuperacao-de-dados">recuperação e proteção de dados</Link>.</p>
+        <h2>Reinstalação do Windows: quando ela entra na decisão</h2>
+        <p>Reinstalar pode ser útil quando existe corrupção persistente, configuração difícil de rastrear ou acúmulo de software que não compensa corrigir individualmente. Ela <strong>não é teste diagnóstico</strong> para armazenamento defeituoso, pouca memória, superaquecimento ou problema elétrico.</p>
+        <p>Antes de reinstalar, faça backup verificável dos dados, confirme chaves de recuperação e licenças necessárias e registre o que precisará ser restaurado. Para decidir entre reparar e reinstalar, consulte <Link to="/decisoes/formatar-ou-reparar">formatar ou reparar</Link>.</p>
 
-        <h2>Ordem de trabalho que usamos na bancada</h2>
+        <aside className="rounded-lg border border-destructive/40 bg-destructive/5 p-4 not-prose my-6">
+          <p className="m-0 text-sm"><strong>Critério de parada:</strong> interrompa tentativas de “otimização” se houver ruído anormal de armazenamento, erros recorrentes de leitura, desligamentos, cheiro de queimado, bateria estufada ou risco aos dados. Nesses casos, preservar dados e diagnosticar hardware vem antes de limpar, formatar ou atualizar.</p>
+        </aside>
+
+        <h2>Sequência prática de diagnóstico</h2>
         <ol>
-          <li>Reproduzir a lentidão descrita pelo cliente, no mesmo cenário de uso.</li>
-          <li>Medir qual recurso satura durante essa reprodução.</li>
-          <li>Verificar saúde do disco e temperatura sob carga.</li>
-          <li>Descartar software indesejado e proteção duplicada.</li>
-          <li>Ajustar inicialização, drivers e sincronização.</li>
-          <li>Só então propor upgrade ou reinstalação, com o motivo medido registrado.</li>
+          <li>Defina uma tarefa em que a lentidão possa ser reproduzida.</li>
+          <li>Registre quais recursos e processos mudam durante essa tarefa.</li>
+          <li>Separe inicialização, memória, armazenamento, CPU e temperatura em hipóteses diferentes.</li>
+          <li>Altere uma variável por vez e repita o mesmo teste.</li>
+          <li>Só proponha upgrade quando o componente atual estiver demonstravelmente limitando a tarefa.</li>
+          <li>Considere reinstalação depois de proteger os dados e quando o problema estiver realmente na camada de software.</li>
         </ol>
-        <p>Essa ordem existe para não vender peça antes de provar necessidade. O critério de verificação e cobrança está em <Link to="/diagnostico-tecnico">como funciona o diagnóstico técnico</Link>; quando o desfecho é troca de armazenamento, o passo a passo está em <Link to="/blog/como-clonar-hd-para-ssd">como clonar o HD para SSD sem perder nada</Link>.</p>
 
-        <h2>Resumo prático</h2>
-        <p>Descreva o tipo de lentidão, meça qual recurso satura, elimine causas externas (infecção, proteção duplicada, temperatura) e trate o gargalo real. Ajuste de sistema muda sensação; disco, memória e refrigeração mudam capacidade. Quando a máquina está lenta em Curitiba e você não quer trocar peça no escuro, o atendimento começa pela medição — não pela venda.</p>
+        <h2>Perguntas rápidas</h2>
+        <h3>Disco em 100% significa que o HD está ruim?</h3>
+        <p>Não. Mostra que o recurso de disco está muito ocupado naquele momento. É preciso identificar o processo, observar duração e repetição e, quando houver sinais de falha, avaliar a saúde da unidade separadamente.</p>
+
+        <h3>Memória em 80% significa que preciso de mais RAM?</h3>
+        <p>Não existe um limite universal desse tipo. O diagnóstico depende da carga, paginação, aplicativos em uso, possibilidade de expansão e de a falta de memória coincidir com o sintoma.</p>
+
+        <h3>SSD sempre deixa qualquer PC rápido?</h3>
+        <p>Não. SSD reduz latência de armazenamento, mas não corrige CPU limitada, RAM insuficiente, superaquecimento, malware, driver defeituoso ou aplicação pesada.</p>
+
+        <h3>Formatar é a melhor forma de descobrir a causa?</h3>
+        <p>Não. Formatação altera muitas variáveis de uma vez e pode mascarar o diagnóstico. Use-a quando houver motivo para reconstruir a camada de software e somente após proteger os dados.</p>
+
+        <h2>Próximos passos relacionados</h2>
+        <p>Para uma triagem estruturada, use <Link to="/ferramentas/checklist-computador-lento">checklist de computador lento</Link> e <Link to="/diagnostico-tecnico">diagnóstico técnico</Link>. Se o problema apontar para armazenamento, continue em <Link to="/blog/como-fazer-upgrade-ssd-nvme">upgrade de SSD/NVMe</Link>; se houver sinais de software indesejado, veja <Link to="/blog/como-remover-virus-windows-iniciantes">remoção segura de malware</Link>.</p>
+
+        <EditorialReferences slug="windows-11-lento-como-resolver" />
       </>
     ),
   },
-
-
 
   "windows-11-vale-a-pena-atualizar": {
     title: "Windows 11: Vale a Pena Atualizar?",
