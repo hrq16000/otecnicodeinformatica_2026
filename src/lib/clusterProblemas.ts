@@ -73,7 +73,7 @@ export const CLUSTER_PROBLEMAS: ClusterProblema[] = [
     metaDescription:
       "Internet lenta ou com queda toda hora? Veja como separar sinal fraco do Wi-Fi, roteador e operadora com testes simples, antes de trocar plano ou aparelho.",
     resumo:
-      "Internet lenta e queda de Wi-Fi não são a mesma coisa. O diagnóstico separa três camadas: o link que chega ao imóvel, o roteador/ponto de acesso que distribui a rede e o caminho sem fio até cada dispositivo. Comparar cabo, proximidade do roteador e outro aparelho ajuda a descobrir em qual camada a falha realmente está."
+      "Internet lenta e queda de Wi-Fi não são a mesma coisa. O diagnóstico separa três camadas: o link que chega ao imóvel, o roteador/ponto de acesso que distribui a rede e o caminho sem fio até cada dispositivo. Comparar cabo, proximidade do roteador e outro aparelho ajuda a descobrir em qual camada a falha realmente está.",
     waMessage:
       "Olá! Vim da página sobre Wi-Fi instável. Meu sinal cai/fica lento e preciso de diagnóstico da rede.",
     sintomas: [
