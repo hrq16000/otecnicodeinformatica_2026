@@ -123,7 +123,43 @@ async function checkBlogHubRuntime() {
   note("Blog hub: lista apenas aprovados + política editorial visível");
 }
 
-// ── 4. HTML inicial dos artigos + hub ──────────────────────
+
+// ── 4. Owners aprovadas precisam de corpo renderizável ─────
+function checkApprovedOwnersRenderable(posts, duplicates) {
+  if (duplicates.length) {
+    fail(`inventário editorial: slugs duplicados entre fontes: ${duplicates.join(", ")}`);
+  }
+
+  const bySlug = new Map(posts.map((post) => [post.slug, post]));
+  let checked = 0;
+  for (const slug of EDITORIAL_WAVE_SLUGS) {
+    const post = bySlug.get(slug);
+    if (!post) {
+      fail(`owner aprovada sem definição renderizável: /blog/${slug}`);
+      continue;
+    }
+
+    if (post.origin === "programmatic") {
+      if (!post.title?.trim() || !post.excerpt?.trim() || (post.bodySignals ?? 0) < 2) {
+        fail(`owner programática aprovada sem sinais suficientes de corpo: /blog/${slug}`);
+        continue;
+      }
+    } else {
+      const hasBody =
+        Boolean(post.lead?.trim()) &&
+        (post.wordCount ?? 0) >= 180 &&
+        ((post.headings?.length ?? 0) > 0 || (post.sections?.length ?? 0) > 0);
+      if (!hasBody) {
+        fail(`owner aprovada sem corpo editorial suficiente: /blog/${slug} (origem=${post.origin ?? "desconhecida"})`);
+        continue;
+      }
+    }
+    checked++;
+  }
+  note(`owners aprovadas: ${checked}/${EDITORIAL_WAVE_SLUGS.length} com corpo renderizável`);
+}
+
+// ── 5. HTML inicial dos artigos + hub ──────────────────────
 async function checkStaticHtml(posts) {
   if (!(await exists(DIST))) { fail("dist/ ausente — rode o build antes do gate"); return; }
 
@@ -239,7 +275,7 @@ async function checkStaticHtml(posts) {
   note(`HTML inicial: ${checked}/${posts.length} artigos verificados (${EDITORIAL_WAVE_SLUGS.length} indexáveis da onda)`);
 }
 
-// ── 5. Sitemaps ────────────────────────────────────────────
+// ── 6. Sitemaps ────────────────────────────────────────────
 async function checkSitemaps() {
   const pub = path.join(ROOT, "public");
   const files = (await fs.readdir(pub)).filter((f) => /^sitemap.*\.xml$/.test(f));
@@ -278,7 +314,7 @@ async function checkSitemaps() {
   note(`sitemaps: blog/problemas/marcas conforme manifesto curado; principal = ${total} URLs`);
 }
 
-// ── 6. Datas ───────────────────────────────────────────────
+// ── 7. Datas ───────────────────────────────────────────────
 async function checkDates(posts) {
   const now = Date.now();
   for (const post of posts) {
@@ -295,11 +331,12 @@ async function checkDates(posts) {
 async function main() {
   const { posts, duplicates } = await getBlogPosts(".");
   note(`inventário: ${posts.length} artigos únicos (${posts.filter(p => p.origin === "manual").length} manuais, ${posts.filter(p => p.origin === "programmatic").length} programáticos)`);
-  if (duplicates.length) note(`slugs duplicados ignorados: ${duplicates.length} (${duplicates.join(", ")})`);
+  if (duplicates.length) note(`slugs duplicados detectados: ${duplicates.length} (${duplicates.join(", ")})`);
 
   await checkRegistry();
   await checkBlogPostRuntime();
   await checkBlogHubRuntime();
+  checkApprovedOwnersRenderable(posts, duplicates);
   await checkStaticHtml(posts);
   await checkSitemaps();
   await checkDates(posts);
