@@ -73,7 +73,7 @@ export const CLUSTER_PROBLEMAS: ClusterProblema[] = [
     metaDescription:
       "Wi-Fi caindo ou internet lenta? Separe cobertura, roteador, dispositivo e link da operadora com testes simples antes de trocar plano ou equipamento.",
     resumo:
-      "Wi-Fi instável pode vir do link da operadora, do roteador, da cobertura ou de um único dispositivo. A investigação separa essas camadas comparando conexão por cabo, sinal próximo ao roteador e comportamento no ponto onde a queda ou lentidão aparece."
+      "Wi-Fi instável pode vir do link da operadora, do roteador, da cobertura ou de um único dispositivo. A investigação separa essas camadas comparando conexão por cabo, sinal próximo ao roteador e comportamento no ponto onde a queda ou lentidão aparece.",
     waMessage:
       "Olá! Vim da página sobre Wi-Fi instável. Meu sinal cai/fica lento e preciso de diagnóstico da rede.",
     sintomas: [
