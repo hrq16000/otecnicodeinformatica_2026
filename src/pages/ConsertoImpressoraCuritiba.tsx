@@ -8,17 +8,18 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 import { Printer, MessageCircle, CalendarCheck, CheckCircle, Clock, Shield, ArrowRight } from "lucide-react";
 import { trackPageView, trackCTAClick } from "@/lib/analytics";
 import { WHATSAPP_NUMBER as WA_NUMBER } from "@/lib/siteConfig";
+import { VALOR_VISITA_LABEL } from "@/lib/precosConfig";
 
 const WHATSAPP = WA_NUMBER;
 const PATH = "/conserto-impressora-curitiba";
 
-const TITLE = "Conserto de Impressora em Curitiba | Assistência Técnica";
+const TITLE = "Conserto de Impressora em Curitiba | Reparo Multimarcas";
 const DESC =
-  "Conserto e diagnóstico de impressoras em Curitiba: falha de impressão, papel, Wi-Fi, driver e multifuncionais. Atendimento conforme a agenda, com valor informado antes do reparo.";
+  "Conserto e assistência técnica independente de impressoras em Curitiba: falha de impressão, papel, Wi-Fi, driver, jato de tinta, laser e multifuncionais.";
 
 const FAQS = [
-  { question: "Quanto custa consertar uma impressora em Curitiba?", answer: "O atendimento começa em R$ 99,99 para diagnóstico + limpeza. Trocas de cabeça de impressão, fusor ou rolo de tração variam por modelo — valor sempre fechado antes do conserto, sem surpresa." },
-  { question: "Vocês trabalham com qual marca de impressora?", answer: "HP, Epson, Brother, Canon, Samsung, Lexmark, Ricoh, Xerox e Pantum. Fazemos jato de tinta, tanque de tinta (EcoTank, Smart Tank, MegaTank), laser mono/colorida e multifuncionais." },
+  { question: "Quanto custa consertar uma impressora em Curitiba?", answer: `A visita técnica de inspeção, quando aplicável, parte de ${VALOR_VISITA_LABEL}. Reparos de bancada, peças e suprimentos dependem do modelo e da causa confirmada; o escopo é apresentado antes da execução.` },
+  { question: "Vocês trabalham com qual marca de impressora?", answer: "O atendimento é independente e multimarcas; não somos assistência autorizada dos fabricantes. A possibilidade de reparo depende do modelo, do tipo de mecanismo, da disponibilidade de peças e do defeito confirmado." },
   { question: "Minha impressora não puxa papel. O que pode ser?", answer: "Rolo de tração gasto, sujeira no caminho do papel, sensor ou peça mecânica podem causar o sintoma. O diagnóstico precisa separar essas hipóteses antes de indicar troca de peça." },
   { question: "Atendem em domicílio ou só na bancada?", answer: "O atendimento pode ser feito no endereço quando o diagnóstico permite. Casos que exigem desmontagem, teste prolongado ou peça específica podem seguir para bancada, conforme a triagem e a agenda." },
   { question: "Vale a pena consertar minha impressora ou comprar outra?", answer: "Depende do defeito, do estado geral, da disponibilidade de peças e do custo de uma equivalente. O orçamento deve ser comparado com o valor e a vida útil esperada do equipamento antes da decisão." },
@@ -54,7 +55,7 @@ const ConsertoImpressoraCuritiba = () => {
         ]}
       />
       <ServiceLandingSchema
-        serviceName="Conserto de Impressora"
+        serviceName="Conserto e Assistência Técnica Independente de Impressora"
         description={DESC}
         path={PATH}
         priceFrom={99.99}
@@ -72,9 +73,9 @@ const ConsertoImpressoraCuritiba = () => {
             Conserto de Impressora em Curitiba
           </h1>
           <p className="tldr text-xl text-white/90 max-w-3xl mx-auto mb-8" data-speakable="true">
-            Assistência técnica para impressoras em Curitiba, com diagnóstico de falhas de
-            impressão, alimentação de papel, conexão, driver e rede. Atendimento conforme a
-            agenda e <strong>valor informado antes do reparo</strong>.
+            Assistência técnica independente e multimarcas em Curitiba, com diagnóstico de falhas de
+            impressão, alimentação de papel, conexão, driver, rede e mecanismo. A causa é separada
+            antes de indicar peça, suprimento ou <strong>qualquer reparo</strong>.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <Button size="lg" onClick={waClick} className="bg-[#25D366] hover:bg-[#128C7E] text-white">
@@ -90,7 +91,7 @@ const ConsertoImpressoraCuritiba = () => {
       <section className="py-8 bg-accent/10 border-y border-accent/20">
         <div className="container mx-auto px-4 text-center">
           <p className="text-2xl font-bold text-primary">
-            Diagnóstico + limpeza a partir de <span className="text-accent">R$ 99,99</span>
+            Visita técnica de inspeção, quando aplicável: <span className="text-accent">{VALOR_VISITA_LABEL}</span>
           </p>
           <p className="text-muted-foreground mt-2">Triagem por sintoma · orçamento antes do reparo · atendimento conforme a agenda</p>
         </div>
@@ -103,11 +104,11 @@ const ConsertoImpressoraCuritiba = () => {
           </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 max-w-5xl mx-auto">
             {[
-              { t: "Impressora não puxa papel", d: "Troca do rolo de tração e limpeza do mecanismo." },
-              { t: "Imprime borrado ou com falhas", d: "Limpeza profunda da cabeça de impressão ou troca quando necessário." },
-              { t: "Erro de driver / não conecta no Wi-Fi", d: "Reinstalação e configuração de IP fixo na rede." },
+              { t: "Impressora não puxa papel", d: "Verificação de tração, caminho do papel, sensores e obstruções antes de indicar peça." },
+              { t: "Imprime borrado ou com falhas", d: "Separação entre suprimento, cabeça de impressão, alinhamento, fusor ou mecanismo conforme a tecnologia." },
+              { t: "Erro de driver / não conecta no Wi-Fi", d: "Teste de rede, endereço, porta, fila e driver antes de alterar a configuração." },
               { t: "Cartucho ou toner não reconhecido", d: "Verificação de encaixe, suprimento, chip e compatibilidade antes de indicar substituição." },
-              { t: "Atolamento constante de papel", d: "Limpeza dos sensores e troca de roletes desgastados." },
+              { t: "Atolamento constante de papel", d: "Inspeção do caminho do papel, roletes, sensores e resíduos para localizar o ponto do atolamento." },
               { t: "Sistema de tinta / tanque", d: "Diagnóstico de alimentação, ar no circuito, reconhecimento e fluxo antes de alterar o sistema." },
             ].map((p) => (
               <div key={p.t} className="p-5 rounded-xl border bg-card hover:shadow-md transition">
@@ -157,31 +158,34 @@ const ConsertoImpressoraCuritiba = () => {
 
       <section className="py-14 bg-secondary">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-heading font-bold text-center mb-8">
-            Tabela de preços orientativa
+          <h2 className="text-3xl font-heading font-bold text-center mb-4">
+            O que muda o orçamento do conserto
           </h2>
-          <div className="max-w-3xl mx-auto overflow-x-auto rounded-xl border bg-card">
+          <p className="text-muted-foreground text-center max-w-3xl mx-auto mb-8">
+            O mesmo sintoma pode ter causas e custos diferentes. O orçamento é definido pelo modelo,
+            pela tecnologia da impressora, pela peça necessária e pela possibilidade de testar o
+            equipamento no local ou em bancada.
+          </p>
+          <div className="max-w-4xl mx-auto overflow-x-auto rounded-xl border bg-card">
             <table className="w-full text-sm" data-speakable="true">
               <thead className="bg-muted">
-                <tr><th className="text-left p-3">Serviço</th><th className="text-right p-3">A partir de</th></tr>
+                <tr><th className="text-left p-3">Sinal observado</th><th className="text-left p-3">O que precisa ser separado</th></tr>
               </thead>
               <tbody>
                 {[
-                  ["Diagnóstico + limpeza geral", "R$ 99,99"],
-                  ["Troca de rolo de tração", "R$ 129,99"],
-                  ["Limpeza/troca de cabeça de impressão", "R$ 189,99"],
-                  ["Recarga de cartucho (par)", "R$ 89,99"],
-                  ["Instalação de bulk ink (tanque externo)", "R$ 249,99"],
-                  ["Conserto de fusor (laser)", "R$ 299,99"],
-                  ["Configuração de impressão Wi-Fi / em rede", "R$ 99,99"],
-                ].map(([s, p]) => (
-                  <tr key={s} className="border-t"><td className="p-3">{s}</td><td className="p-3 text-right font-semibold text-primary">{p}</td></tr>
+                  ["Não puxa ou atola papel", "Obstrução, rolete, sensor, bandeja e caminho mecânico."],
+                  ["Imprime falhado ou borrado", "Suprimento, cabeça, alinhamento, fusor ou transferência conforme a tecnologia."],
+                  ["Aparece offline", "Rede, endereço IP, porta, fila, driver e comunicação do próprio equipamento."],
+                  ["Não reconhece cartucho/toner", "Encaixe, chip, compatibilidade, contato e estado do suprimento."],
+                  ["Não liga ou reinicia", "Fonte, alimentação, placa e eventual dano elétrico antes de insistir no uso."],
+                ].map(([sinal, teste]) => (
+                  <tr key={sinal} className="border-t"><td className="p-3 font-semibold text-primary">{sinal}</td><td className="p-3">{teste}</td></tr>
                 ))}
               </tbody>
             </table>
           </div>
           <p className="text-xs text-muted-foreground text-center mt-3">
-            Valores orientativos para Curitiba e região; o orçamento final depende do modelo, da causa confirmada e das peças necessárias.
+            As condições comerciais vigentes ficam na página de preços e políticas. Peças, suprimentos e materiais dependem do caso e não são presumidos no valor de inspeção.
           </p>
         </div>
       </section>
