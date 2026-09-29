@@ -1071,6 +1071,228 @@ export const blogSupplementalPosts: Record<string, BlogPostContent> = {
       </>
     ),
   },
+
+  "como-clonar-hd-para-ssd": {
+    title: "Clonar HD para SSD: quando clonar, quando reinstalar e onde o processo falha",
+    excerpt:
+      "A diferença real entre clonar e reinstalar, como saber se o disco de origem aguenta a clonagem, os pontos em que o processo trava e o que conferir antes de apagar o disco antigo.",
+    date: "2026-08-12",
+    readTime: "11 min",
+    category: "Manutenção",
+    content: (
+      <>
+        <p className="lead">Clonar busca reproduzir no disco novo as partições, o sistema, os programas, os arquivos e as configurações necessários para manter o ambiente de trabalho. É útil quando a origem está saudável, mas não substitui backup e nem garante inicialização automática em todo hardware: o estado do disco, o esquema de partições e o modo de boot precisam ser conferidos.</p>
+
+        <h2>Clonar ou reinstalar</h2>
+        <p>Clonar preserva tudo, inclusive o que estava errado. Reinstalar limpa tudo, inclusive o que estava certo. A escolha depende do estado atual do sistema.</p>
+        <ul>
+          <li><strong>Clonagem faz sentido</strong> quando o sistema está saudável, com programas licenciados difíceis de reinstalar e configurações que levariam horas para refazer.</li>
+          <li><strong>Reinstalação faz sentido</strong> quando há travamentos, erros recorrentes, infecção recente ou histórico longo de instalações e desinstalações. Clonar um sistema problemático apenas leva o problema para o disco novo, mais rápido.</li>
+        </ul>
+
+        <h2>Antes de começar: a origem aguenta?</h2>
+        <p>Uma clonagem pode exigir leitura extensa e contínua da origem. Se o HD já apresenta erros de leitura, ruído mecânico, desaparecimentos ou travamentos, insistir em uma cópia longa pode aumentar o risco de a unidade piorar durante o processo.</p>
+        <p>Nesse cenário, a ordem correta se inverte: primeiro copia-se os arquivos pessoais para outro lugar, depois se avalia a clonagem. Disco com sinal de falha física não é caso de clonagem doméstica; é caso de recuperação, tratado em <a href="/blog/como-recuperar-dados-hd-com-defeito">recuperação de dados em HD com defeito</a>.</p>
+        <p>Existe ainda o requisito de espaço: o que importa não é a capacidade do disco antigo, e sim o volume realmente ocupado. Um HD de 1 TB com 180 GB usados cabe em um SSD de 240 GB, desde que a ferramenta consiga redimensionar as partições.</p>
+
+        <h2>Preparação que evita retrabalho</h2>
+        <ol>
+          <li><strong>Backup separado dos arquivos que não podem sumir.</strong> Clonagem não é backup: se algo der errado no meio, você precisa de uma cópia independente.</li>
+          <li><strong>Liberar espaço antes.</strong> Arquivos temporários e downloads antigos ocupam tempo de cópia sem servir para nada.</li>
+          <li><strong>Conferir como o disco será conectado.</strong> Em desktop, sobra porta interna. Em notebook, quase sempre é preciso um adaptador USB para conectar o disco novo durante o processo.</li>
+          <li><strong>Alimentação estável.</strong> Queda de energia no meio da cópia deixa o destino inconsistente. Em notebook, com carregador ligado.</li>
+        </ol>
+
+        <h2>Onde o processo costuma falhar</h2>
+        <ul>
+          <li><strong>Erro de leitura na origem.</strong> A ferramenta para em determinada porcentagem e não avança: são setores ilegíveis. Insistir castiga o disco.</li>
+          <li><strong>Partição de inicialização ausente.</strong> Copiar apenas a partição visível do sistema deixa de fora a partição de boot, e o computador não inicia. A cópia precisa incluir todas as partições do disco, não só a maior.</li>
+          <li><strong>Destino menor que o ocupado.</strong> A cópia nem começa, ou começa e para no fim.</li>
+          <li><strong>Origem e destino conectados na primeira validação.</strong> Dependendo do firmware e de como a clonagem preservou identificadores e partições de boot, a máquina pode escolher o disco antigo. Quando a arquitetura permitir, valide primeiro o disco novo isoladamente e só reconecte a origem depois de confirmar que o sistema inicia por ele.</li>
+          <li><strong>Inicialização incompatível com a cópia.</strong> Modo de firmware, esquema de partições e carregador de boot precisam permanecer coerentes com a instalação clonada. Uma mudança de UEFI/Legacy, controlador ou ordem de boot pode produzir sintoma parecido com clonagem incompleta.</li>
+        </ul>
+
+        <h2>Depois da clonagem</h2>
+        <ol>
+          <li>Quando a troca física permitir, faça a primeira validação com o disco novo como único candidato de boot e confirme que o sistema inicia normalmente.</li>
+          <li>Confira se os arquivos pessoais estão todos lá — pastas de documentos, imagens e área de trabalho.</li>
+          <li>Verifique se o espaço total do novo disco aparece disponível. Sobra não alocada significa que a partição não foi expandida e precisa ser ajustada.</li>
+          <li>Use a máquina alguns dias antes de apagar o disco antigo. Ele é a sua rede de segurança nesse intervalo.</li>
+        </ol>
+        <p>Só depois desse período faz sentido reaproveitar o disco antigo como armazenamento secundário — procedimento descrito em <a href="/blog/como-instalar-segundo-ssd-notebook">segundo SSD no notebook</a>.</p>
+
+        <h2>O que a troca de disco resolve — e o que não resolve</h2>
+        <p>Quando o gargalo está no acesso ao disco, migrar de um HD mecânico saudável para SSD tende a reduzir bastante o tempo de inicialização e de abertura de programas. O ganho percebido varia com processador, memória, estado do sistema e padrão de uso; SSD não corrige sozinho outras causas de lentidão.</p>
+        <p>O que não muda: pouca memória continua limitando quem trabalha com muitas abas e programas simultâneos; processador antigo continua sendo o limite em tarefas pesadas; e sistema cheio de programas iniciando junto continua demorando a ficar utilizável. Esses fatores estão separados em <a href="/blog/computador-lento-causas-solucoes">computador lento: causas e como decidir</a>.</p>
+
+        <h2>Quando levar para a bancada</h2>
+        <p>Faz sentido interromper e buscar avaliação quando o disco de origem faz ruído, a clonagem trava repetidamente no mesmo ponto, a máquina não inicia depois da cópia ou os dados importantes não têm backup. Em unidades com sinais de falha física, novas tentativas de leitura podem aumentar desgaste e complicar a recuperação.</p>
+        <p>O critério de verificação e cobrança está em <a href="/diagnostico-tecnico">como funciona o diagnóstico técnico</a>, e a migração completa faz parte do <a href="/servicos/upgrade-ssd-ram">upgrade de SSD e memória</a>.</p>
+
+        <h2>Resumo prático</h2>
+        <p>Clone quando o sistema está saudável e reinstale quando não está. Confira a saúde do disco de origem antes, tenha backup independente dos arquivos essenciais, copie o disco inteiro e não apenas a partição visível, inicie com um disco só e mantenha o antigo intacto por alguns dias antes de apagar qualquer coisa.</p>
+      </>
+    ),
+  },
+  "como-diagnosticar-placa-mae-defeituosa": {
+    title: "Placa-mãe defeituosa: como confirmar antes de trocar a peça errada",
+    excerpt:
+      "Inspeção visual, teste mínimo e eliminação sistemática para distinguir falha de placa-mãe de falha de memória, fonte ou refrigeração — e quando reparo eletrônico ainda faz sentido.",
+    date: "2026-08-12",
+    readTime: "11 min",
+    category: "Procedimentos Técnicos",
+    content: (
+      <>
+        <p className="lead">Placa-mãe é o diagnóstico que mais se conclui por eliminação e o que mais se erra por pressa. Ela não costuma dar um sintoma próprio: ela faz outro componente parecer defeituoso. Confirmar exige método, e o método é sempre reduzir a máquina até sobrar uma variável.</p>
+
+        <h2>Por que o sintoma engana</h2>
+        <p>A placa distribui energia, comanda o vídeo integrado, controla memória, armazenamento e portas. Quando um desses caminhos falha na própria placa, o efeito aparece no periférico ligado ali. Um slot de memória com contato ruim gera erro que parece pente defeituoso; uma regulagem instável na placa gera reinício que parece fonte fraca; um controlador de USB travado parece cabo ou dispositivo.</p>
+        <p>Por isso, não é seguro concluir “placa-mãe” apenas pelo sintoma. A hipótese ganha força quando alimentação, memória, periféricos, temperatura e configuração foram isolados de forma controlada e o comportamento permanece reproduzível.</p>
+
+        <h2>Inspeção visual — o passo que resolve muitos casos</h2>
+        <p>Antes de qualquer teste, com o cabo de força retirado, observe a placa com boa luz:</p>
+        <ul>
+          <li><strong>Capacitores deformados ou com resíduo:</strong> topo abaulado, aberto ou com crosta escura indicam peça no fim.</li>
+          <li><strong>Escurecimento e carbonização:</strong> trilha ou componente queimado é evidência direta.</li>
+          <li><strong>Corrosão:</strong> manchas esverdeadas ou esbranquiçadas indicam umidade ou líquido derramado, comum em máquinas guardadas.</li>
+          <li><strong>Dano mecânico:</strong> pino torto no soquete, trava de slot quebrada, trilha rompida perto de furo de parafuso.</li>
+          <li><strong>Poeira compactada e pasta térmica ressecada:</strong> não é defeito de placa, mas muda o comportamento térmico e precisa ser corrigido antes de qualquer conclusão.</li>
+        </ul>
+
+        <h2>Teste mínimo: reduzir até sobrar o essencial</h2>
+        <p>A montagem mínima existe para eliminar interferência. Ficam apenas placa, processador com refrigeração, um módulo de memória e a fonte. Saem armazenamento, placa de vídeo dedicada, periféricos e cabos de painel frontal que não sejam necessários.</p>
+        <ol>
+          <li>Monte só o essencial e tente ligar usando o vídeo integrado, quando existir.</li>
+          <li>Se chegar à tela de configuração da BIOS, a placa responde no nível básico — o defeito está no que foi removido.</li>
+          <li>Se não chegar, devolva um componente por vez e observe em qual deles o comportamento muda.</li>
+          <li>Anote cada passo. Diagnóstico de placa se perde quando se troca duas coisas ao mesmo tempo.</li>
+        </ol>
+
+        <h2>Isolando memória e slots</h2>
+        <p>Teste um módulo por vez e, quando o manual permitir, compare os slots. Se um módulo específico falha em diferentes posições enquanto outro funciona, a memória vira suspeita forte. Se módulos conhecidos como bons falham de forma repetível na mesma posição, investigue o slot e a placa, mas considere também controlador de memória, soquete/processador e regras de população da plataforma antes de fechar diagnóstico. Encaixe parcial e contato ruim também podem imitar esse quadro.</p>
+
+        <h2>Descartando a fonte antes de acusar a placa</h2>
+        <p>Falhas de alimentação podem imitar uma placa sem resposta. Confirme a fonte por método adequado ao caso — incluindo medição e, quando disponível, comparação com uma fonte conhecida e compatível. O procedimento completo está em <a href="/blog/como-testar-fonte-de-alimentacao-pc">como testar a fonte de alimentação</a>. Esse descarte aumenta a qualidade do diagnóstico antes de atribuir a causa à placa.</p>
+
+        <h2>Sinais de diagnóstico da própria placa</h2>
+        <p>Muitas placas indicam onde o processo parou: sequência sonora quando existe alto-falante interno, LEDs de estágio identificando processador, memória, vídeo ou inicialização, e visor de código em modelos mais completos. Esses códigos variam por fabricante — o valor deles é apontar a etapa que travou, não entregar a peça culpada. Confira o significado no manual do modelo exato, nunca em tabela genérica.</p>
+
+        <h2>Quando as evidências passam a apontar para a placa</h2>
+        <ul>
+          <li>Montagem mínima continua sem inicializar depois de fonte e memória serem verificadas por comparação controlada e a compatibilidade do processador ser confirmada.</li>
+          <li>Uma porta, slot ou função da placa falha de forma reproduzível com componentes compatíveis e conhecidos como funcionais, depois de descartadas as dependências daquela interface.</li>
+          <li>Dano físico visível: queimado, corrosão, trilha rompida, pino do soquete danificado.</li>
+          <li>Instabilidade persistente após descartar energia, memória e temperatura.</li>
+        </ul>
+
+        <h2>Reparar ou substituir</h2>
+        <p>Nem todo defeito de placa exige substituição completa. Conector danificado, componente discreto ou trilha acessível podem ter reparo viável depois de medição em bancada. Já corrosão extensa, dano em múltiplas áreas ou falhas em componentes complexos podem tornar o reparo técnica ou economicamente desfavorável. A decisão depende do modelo, disponibilidade de peças, extensão do dano e custo de uma placa compatível.</p>
+        <p>A decisão também depende da plataforma: placa antiga exige processador e memória da mesma geração, então trocar a placa às vezes puxa dois componentes junto. Esse cálculo é apresentado antes de qualquer autorização, com peça e mão de obra separadas.</p>
+
+        <h2>O que não fazer</h2>
+        <ul>
+          <li>Insistir em ligar repetidamente uma máquina com cheiro de queimado.</li>
+          <li>Aquecer a placa com fonte de calor doméstica na esperança de reativar solda.</li>
+          <li>Trocar processador por suspeita, sem descarte prévio de fonte e memória.</li>
+          <li>Comprar placa antes de confirmar compatibilidade com o processador e a memória que já existem.</li>
+        </ul>
+
+        <h2>Próximo passo</h2>
+        <p>Se a máquina não dá nenhum sinal, comece por <a href="/servicos/computador-nao-liga">computador não liga</a>. Quando a suspeita se firma na eletrônica, o procedimento de bancada está em <a href="/servicos/conserto-placa">conserto de placa</a>, e o critério de verificação e cobrança em <a href="/diagnostico-tecnico">como funciona o diagnóstico técnico</a>.</p>
+
+        <h2>Resumo prático</h2>
+        <p>Inspecione antes de testar, reduza a máquina ao mínimo, compare memória e alimentação de forma controlada e registre o que muda a cada etapa. Dano físico visível aumenta a suspeita, mas o escopo do defeito ainda precisa ser medido. Sem evidência direta, é a eliminação documentada das outras hipóteses que sustenta a decisão de reparar ou substituir.</p>
+      </>
+    ),
+  },
+
+  "boot-uefi-ou-legacy-como-identificar": {
+    title: "UEFI ou Legacy: como identificar o modo de inicialização do seu PC",
+    excerpt:
+      "Como identificar o modo de boot usado pelo Windows, relacionar UEFI/Legacy com GPT/MBR sem aplicar regras universais e decidir quando não alterar firmware, Secure Boot ou partições.",
+    date: "2026-08-31",
+    readTime: "11 min",
+    category: "Diagnóstico",
+    content: (
+      <>
+        <p className="lead">Antes de trocar UEFI, Legacy ou CSM, descubra como o Windows atual está iniciando. O modo de firmware, o carregador de boot e o esquema de partições fazem parte do mesmo caminho de inicialização; alterar apenas uma dessas peças pode deixar uma instalação existente sem boot ou acionar recuperação de criptografia.</p>
+
+        <h2>Resposta curta</h2>
+        <p>No Windows, comece por <strong>Informações do Sistema (msinfo32)</strong> e confira o campo <strong>Modo da BIOS</strong>. Ele informa se aquela instalação foi iniciada em UEFI ou em modo herdado. Depois identifique o estilo de partição do <strong>disco do sistema</strong> como GPT ou MBR. Essa combinação ajuda a entender a instalação atual, mas não deve ser transformada em uma regra universal para qualquer disco, firmware ou outro sistema operacional.</p>
+        <p>Em equipamentos modernos compatíveis com Windows 11, UEFI é o caminho esperado e o Secure Boot faz parte dos requisitos de plataforma. Em instalações antigas, Legacy/CSM e MBR ainda podem aparecer. O ponto importante é preservar o estado conhecido antes de alterar o firmware.</p>
+
+        <h2>1. Identifique o modo em que o Windows realmente iniciou</h2>
+        <p>Abra <strong>Informações do Sistema</strong> e procure por “Modo da BIOS”. Se o valor for UEFI, o Windows desta sessão foi iniciado nesse modo. Se aparecer Legacy ou Herdado, a sessão foi iniciada pelo caminho legado. Esse dado é mais útil do que deduzir o modo apenas pela aparência da tela de firmware.</p>
+        <p>Se o Windows não inicia, a investigação muda: registre as opções atuais do firmware e procure entradas como <strong>Windows Boot Manager</strong>, UEFI, CSM ou Legacy, lembrando que os nomes variam por fabricante. Uma etiqueta no menu de boot é indício, não prova isolada de como o sistema instalado foi preparado.</p>
+
+        <h2>2. Confira GPT ou MBR no disco do sistema</h2>
+        <p>No Gerenciamento de Disco, abra as propriedades do disco que contém o Windows e verifique o estilo de partição. Em PowerShell, <code>Get-Disk</code> também mostra a coluna <code>Partition Style</code>. Confirme que está olhando o disco do sistema: um computador pode ter discos GPT e MBR ao mesmo tempo.</p>
+        <p>Para instalações suportadas do Windows em modo UEFI, GPT é o esquema esperado. Instalações legadas mais antigas normalmente usam MBR. Encontrar uma combinação diferente não é motivo para converter ou apagar o disco por tentativa: primeiro confirme qual volume contém o boot e como o firmware está iniciando a máquina.</p>
+
+        <h2>3. Como interpretar os sinais sem simplificar demais</h2>
+        <table>
+          <thead><tr><th>O que você observa</th><th>O que isso sugere no Windows</th><th>Próximo passo seguro</th></tr></thead>
+          <tbody>
+            <tr><td>Modo da BIOS = UEFI e disco do sistema = GPT</td><td>Configuração comum em instalações modernas do Windows</td><td>Preserve o modo; altere apenas se houver motivo documentado.</td></tr>
+            <tr><td>Modo da BIOS = Legacy/Herdado e disco do sistema = MBR</td><td>Instalação legada coerente com PCs ou instalações mais antigas</td><td>Não troque para UEFI apenas para testar.</td></tr>
+            <tr><td>Firmware oferece UEFI e Legacy/CSM</td><td>O equipamento suporta mais de um caminho de boot</td><td>Descubra qual deles o sistema atual usa antes de mudar.</td></tr>
+            <tr><td>Disco secundário é GPT ou MBR</td><td>Isso não prova o modo de boot do Windows</td><td>Verifique o disco do sistema e o campo Modo da BIOS.</td></tr>
+            <tr><td>Secure Boot está desligado</td><td>Não basta, sozinho, para concluir que o Windows está em Legacy</td><td>Confirme o modo real no sistema e a política do equipamento.</td></tr>
+          </tbody>
+        </table>
+
+        <h2>4. Trocar UEFI e Legacy depois da instalação exige preparação</h2>
+        <p>A documentação da Microsoft orienta que, depois que o Windows é instalado, o equipamento normalmente continua iniciando no mesmo modo usado durante a instalação. Apenas alternar UEFI/Legacy no Setup pode fazer o firmware deixar de encontrar o carregador esperado.</p>
+        <p>Quando uma migração de BIOS legado/MBR para UEFI/GPT é realmente necessária, o Windows fornece o <strong>MBR2GPT</strong> em cenários suportados. A ferramenta valida o disco antes da conversão e modifica estruturas de boot; depois, o firmware ainda precisa ser configurado para UEFI. Isso não transforma conversão em procedimento de tentativa: backup, validação e chave de recuperação continuam importantes.</p>
+
+        <h2>5. Secure Boot é uma camada de confiança do boot</h2>
+        <p>Secure Boot é um recurso do ecossistema UEFI que verifica componentes do processo de inicialização conforme políticas de confiança. Ele não é um “modo de desempenho” e não deve ser ligado ou desligado para tentar corrigir qualquer erro de boot sem entender a causa.</p>
+        <p>Se uma mídia externa não inicializa, confirme origem, assinatura, forma como foi criada e compatibilidade com o firmware. Desabilitar Secure Boot permanentemente apenas para contornar uma mídia desconhecida troca diagnóstico por redução de proteção.</p>
+
+        <h2>6. BitLocker muda o nível de cuidado</h2>
+        <p>Mudanças em firmware, TPM, Secure Boot ou caminho de inicialização podem levar o BitLocker a pedir a chave de recuperação. Antes de converter o disco, atualizar firmware ou alterar configurações relevantes, confirme que a chave está disponível e siga o procedimento da Microsoft para o cenário específico. Em ambiente corporativo, preserve também as políticas definidas pela equipe de TI.</p>
+
+        <h2>7. Situações em que o problema não é “UEFI versus Legacy”</h2>
+        <ul>
+          <li><strong>Disco não aparece no firmware:</strong> investigue detecção, alimentação, slot e compatibilidade; trocar modo de boot não faz um dispositivo fisicamente ausente aparecer.</li>
+          <li><strong>Windows Boot Manager desapareceu:</strong> confirme se a partição EFI e o BCD estão íntegros antes de mudar o modo inteiro do firmware.</li>
+          <li><strong>SSD novo sem sistema:</strong> não haver entrada de boot é esperado até existir um carregador válido.</li>
+          <li><strong>Pendrive não aparece:</strong> confirme como a mídia foi criada, a porta usada e o modo suportado pela mídia.</li>
+        </ul>
+        <p>Se o armazenamento não é reconhecido pelo firmware, use <a href="/blog/hd-nao-e-reconhecido-na-bios-o-que-fazer">HD ou SSD não reconhecido na BIOS</a>. Se a máquina passou a abrir apenas a tela de firmware depois de uma troca de SSD, veja <a href="/blog/troquei-o-ssd-e-o-pc-so-abre-a-bios">troquei o SSD e o PC só abre a BIOS</a>.</p>
+
+        <h2>8. Quando parar antes de alterar mais opções</h2>
+        <ul>
+          <li>Você não sabe se o disco do sistema está em GPT ou MBR.</li>
+          <li>Há BitLocker ou criptografia do dispositivo e a chave de recuperação não está disponível.</li>
+          <li>O PC é corporativo e você não sabe se Secure Boot, TPM ou firmware são gerenciados.</li>
+          <li>O disco deixou de aparecer depois de uma mudança de controlador ou firmware.</li>
+          <li>Você pretende converter partições sem backup verificado dos dados importantes.</li>
+        </ul>
+
+        <h2>9. Sequência de diagnóstico que preserva reversibilidade</h2>
+        <ol>
+          <li>Registre com foto as opções atuais do firmware.</li>
+          <li>No Windows, anote o campo Modo da BIOS.</li>
+          <li>Confirme qual é o disco do sistema e se ele usa GPT ou MBR.</li>
+          <li>Verifique BitLocker e guarde a chave de recuperação fora do equipamento.</li>
+          <li>Defina o objetivo: instalar outro sistema, converter uma instalação existente ou apenas escolher um dispositivo de boot.</li>
+          <li>Faça uma alteração por vez e valide se o Windows continua iniciando.</li>
+        </ol>
+
+        <h2>Fontes primárias Microsoft</h2>
+        <ul>
+          <li><a href="https://learn.microsoft.com/pt-br/windows-hardware/manufacture/desktop/boot-to-uefi-mode-or-legacy-bios-mode?view=windows-11" rel="nofollow noopener" target="_blank">Microsoft Learn — Inicializar no modo UEFI ou no modo BIOS herdado</a></li>
+          <li><a href="https://learn.microsoft.com/pt-br/windows-hardware/drivers/bringup/switch-legacy-bios-boot-and-csm-to-uefi-and-gpt" rel="nofollow noopener" target="_blank">Microsoft Learn — Alternar BIOS legado/CSM para UEFI e GPT</a></li>
+          <li><a href="https://learn.microsoft.com/pt-br/windows/deployment/mbr-to-gpt" rel="nofollow noopener" target="_blank">Microsoft Learn — MBR2GPT</a></li>
+          <li><a href="https://learn.microsoft.com/pt-br/windows-hardware/drivers/bringup/secure-boot" rel="nofollow noopener" target="_blank">Microsoft Learn — Secure Boot</a></li>
+        </ul>
+
+        <h2>Resumo prático</h2>
+        <p>Use o Modo da BIOS do Windows para identificar como a sessão atual iniciou, confirme GPT/MBR no disco do sistema e trate menus do firmware como evidência complementar. Não converta partições nem altere UEFI/Legacy, Secure Boot ou TPM por tentativa. Quando uma migração for necessária, siga o procedimento documentado para o Windows instalado, com backup e recuperação do BitLocker disponíveis.</p>
+      </>
+    ),
+  },
 };
 
 export default blogSupplementalPosts;
