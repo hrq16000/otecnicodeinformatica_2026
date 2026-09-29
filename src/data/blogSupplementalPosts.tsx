@@ -1083,6 +1083,9 @@ export const blogSupplementalPosts: Record<string, BlogPostContent> = {
       <>
         <p className="lead">Clonar busca reproduzir no disco novo as partições, o sistema, os programas, os arquivos e as configurações necessários para manter o ambiente de trabalho. É útil quando a origem está saudável, mas não substitui backup e nem garante inicialização automática em todo hardware: o estado do disco, o esquema de partições e o modo de boot precisam ser conferidos.</p>
 
+        <h2>Resposta direta: dá para clonar HD para SSD?</h2>
+        <p>Sim — desde que o disco de origem esteja legível, o volume ocupado caiba no SSD e a clonagem inclua as partições necessárias para inicialização. Se o HD apresenta ruído, erros de leitura ou desaparece do sistema, a prioridade deixa de ser clonar e passa a ser preservar os dados. Se o Windows já está instável, reinstalar costuma ser mais coerente do que copiar o problema para o SSD novo.</p>
+
         <h2>Clonar ou reinstalar</h2>
         <p>Clonar preserva tudo, inclusive o que estava errado. Reinstalar limpa tudo, inclusive o que estava certo. A escolha depende do estado atual do sistema.</p>
         <ul>
@@ -1144,6 +1147,9 @@ export const blogSupplementalPosts: Record<string, BlogPostContent> = {
     content: (
       <>
         <p className="lead">Placa-mãe é o diagnóstico que mais se conclui por eliminação e o que mais se erra por pressa. Ela não costuma dar um sintoma próprio: ela faz outro componente parecer defeituoso. Confirmar exige método, e o método é sempre reduzir a máquina até sobrar uma variável.</p>
+
+        <h2>Resposta direta: como saber se a placa-mãe está com defeito?</h2>
+        <p>Não existe um teste único que confirme placa-mãe defeituosa em todos os casos. A suspeita fica consistente quando o defeito continua reproduzível depois de verificar alimentação, memória, periféricos, temperatura e compatibilidade, ou quando existe evidência física direta como queimado, corrosão, trilha rompida ou soquete danificado. Trocar a placa antes dessa eliminação é uma das formas mais comuns de gastar com a peça errada.</p>
 
         <h2>Por que o sintoma engana</h2>
         <p>A placa distribui energia, comanda o vídeo integrado, controla memória, armazenamento e portas. Quando um desses caminhos falha na própria placa, o efeito aparece no periférico ligado ali. Um slot de memória com contato ruim gera erro que parece pente defeituoso; uma regulagem instável na placa gera reinício que parece fonte fraca; um controlador de USB travado parece cabo ou dispositivo.</p>
@@ -1207,9 +1213,9 @@ export const blogSupplementalPosts: Record<string, BlogPostContent> = {
   },
 
   "boot-uefi-ou-legacy-como-identificar": {
-    title: "UEFI ou Legacy: como identificar o modo de inicialização do seu PC",
+    title: "UEFI ou Legacy: como saber qual está ativo e quando mudar",
     excerpt:
-      "Como identificar o modo de boot usado pelo Windows, relacionar UEFI/Legacy com GPT/MBR sem aplicar regras universais e decidir quando não alterar firmware, Secure Boot ou partições.",
+      "Veja como identificar UEFI ou Legacy no Windows, conferir GPT/MBR com segurança e entender quando não alterar firmware, Secure Boot ou partições.",
     date: "2026-08-31",
     readTime: "11 min",
     category: "Diagnóstico",
