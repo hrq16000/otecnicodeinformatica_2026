@@ -435,6 +435,37 @@ export async function getBlogPosts(rootDir = ".") {
   }
 
 
+  // --- Owners editoriais recuperadas (blogRecoveredPosts) ---
+  // Mesma regra do runtime: conteúdo restaurado precisa participar do inventário
+  // de build/prerender para não existir apenas no cliente.
+  const recoveredPath = path.join(rootDir, "src/data/blogRecoveredPosts.tsx");
+  const recoveredSrc = await fs.readFile(recoveredPath, "utf8");
+  const recoveredMatches = [...recoveredSrc.matchAll(entryRe)];
+  for (let i = 0; i < recoveredMatches.length; i++) {
+    const slug = recoveredMatches[i][1];
+    const start = recoveredMatches[i].index;
+    const end = i + 1 < recoveredMatches.length ? recoveredMatches[i + 1].index : recoveredSrc.length;
+    const block = recoveredSrc.slice(start, end);
+    const title = extractField(block, "title");
+    const excerpt = extractField(block, "excerpt");
+    const date = extractField(block, "date");
+    const category = extractField(block, "category");
+    const readTime = extractField(block, "readTime");
+    if (!title) continue;
+    if (seen.has(slug)) { duplicates.push(slug); continue; }
+    seen.add(slug);
+    posts.push({
+      slug, title, excerpt: excerpt ?? "", date: date ?? HOWTO_DEFAULT_DATE,
+      category: category ?? "", origin: "manual",
+      readTime: readTime ?? "10 min",
+      lead: extractLead(block),
+      headings: extractHeadings(block),
+      sections: extractSections(block),
+      wordCount: countWords(block),
+    });
+  }
+
+
   // --- Programáticos (defs em blogProgrammaticPosts.tsx) ---
   const progPath = path.join(rootDir, "src/data/blogProgrammaticPosts.tsx");
   const progSrc = await fs.readFile(progPath, "utf8");
