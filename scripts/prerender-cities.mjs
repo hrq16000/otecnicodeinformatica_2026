@@ -454,9 +454,7 @@ export async function getBlogPosts(rootDir = ".") {
       const category = extractField(block, "category");
       const readTime = extractField(block, "readTime");
       if (!title) continue;
-      if (seen.has(slug)) { duplicates.push(slug); continue; }
-      seen.add(slug);
-      posts.push({
+      const supplementalPost = {
         slug, title, excerpt: excerpt ?? "", date: date ?? HOWTO_DEFAULT_DATE,
         category: category ?? "", origin: "manual",
         readTime: readTime ?? "10 min",
@@ -464,7 +462,13 @@ export async function getBlogPosts(rootDir = ".") {
         headings: extractHeadings(block),
         sections: extractSections(block),
         wordCount: countWords(block),
-      });
+      };
+      const existingIndex = posts.findIndex((post) => post.slug === slug);
+      if (existingIndex >= 0) posts[existingIndex] = supplementalPost;
+      else {
+        seen.add(slug);
+        posts.push(supplementalPost);
+      }
     }
   }
 
@@ -486,9 +490,13 @@ export async function getBlogPosts(rootDir = ".") {
     const date = extractField(block, "date");
     const category = extractField(block, "category");
     if (!title) continue;
-    if (seen.has(slug)) { duplicates.push(slug); continue; }
-    seen.add(slug);
-    posts.push({ slug, title, excerpt: excerpt ?? "", date: date ?? HOWTO_DEFAULT_DATE, category: category ?? "", origin: "programmatic" });
+    const programmaticPost = { slug, title, excerpt: excerpt ?? "", date: date ?? HOWTO_DEFAULT_DATE, category: category ?? "", origin: "programmatic" };
+    const existingIndex = posts.findIndex((post) => post.slug === slug);
+    if (existingIndex >= 0) posts[existingIndex] = programmaticPost;
+    else {
+      seen.add(slug);
+      posts.push(programmaticPost);
+    }
   }
 
   return { posts, duplicates };
