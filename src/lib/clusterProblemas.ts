@@ -291,7 +291,7 @@ export const CLUSTER_PROBLEMAS: ClusterProblema[] = [
     titulo: "Arquivos apagados ou disco que não abre: o que fazer agora",
     metaTitle: "Arquivos apagados: o que fazer antes de recuperar | O Técnico",
     metaDescription:
-      "Apagou arquivos, formatou por engano ou o HD parou de abrir? O que você faz na primeira hora define a chance de recuperação. Veja o que evitar e como funciona a avaliação.",
+      "Apagou arquivos, formatou por engano ou o HD parou de abrir? Veja o que fazer logo após a perda, o que evitar e como o tipo de mídia influencia a tentativa de recuperação.",
     resumo:
       "Em recuperação de dados, a primeira decisão é parar de gravar no dispositivo. Em HDs e algumas mídias, dados apagados podem permanecer até serem sobrescritos. Em SSDs modernos, recursos como TRIM e coleta de lixo podem tornar blocos apagados indisponíveis muito antes, mesmo sem nova gravação visível. Por isso o tipo de mídia e o que aconteceu depois da perda mudam completamente a chance de recuperação.",
     waMessage:
@@ -299,11 +299,11 @@ export const CLUSTER_PROBLEMAS: ClusterProblema[] = [
     sintomas: [
       {
         titulo: "Apaguei e esvaziei a lixeira",
-        desc: "Em HD ou mídia sem TRIM, desligar cedo pode preservar blocos que ainda não foram sobrescritos. Em SSDs, a exclusão pode acionar TRIM e reduzir drasticamente a chance de recuperação. O tipo de armazenamento precisa ser identificado antes de estimar possibilidade."
+        desc: "Em HD ou mídia sem TRIM, desligar cedo pode preservar blocos que ainda não foram sobrescritos. Em SSDs, a exclusão pode acionar TRIM e reduzir drasticamente a chance de recuperação. O tipo de armazenamento precisa ser identificado antes de estimar possibilidade.",
       },
       {
         titulo: "Formatei o disco ou o pendrive por engano",
-        desc: "Formatação rápida geralmente recria estruturas do sistema de arquivos sem fazer uma sobrescrita completa de todos os blocos. Em HD isso pode deixar dados recuperáveis; em SSD, TRIM e controladores modernos podem invalidar blocos rapidamente. Não existe garantia baseada apenas no tipo de formatação."
+        desc: "Formatação rápida geralmente recria estruturas do sistema de arquivos sem fazer uma sobrescrita completa de todos os blocos. Em HD isso pode deixar dados recuperáveis; em SSD, TRIM e controladores modernos podem invalidar blocos rapidamente. Não existe garantia baseada apenas no tipo de formatação.",
       },
       {
         titulo: "O disco pede para ser formatado ao conectar",
@@ -369,11 +369,11 @@ export const CLUSTER_PROBLEMAS: ClusterProblema[] = [
       },
       {
         q: "Programas de recuperação que baixo na internet funcionam?",
-        a: "Podem funcionar em alguns casos lógicos, principalmente quando a mídia está saudável. O risco é instalar ou salvar resultados no mesmo dispositivo, sobrescrever dados ainda recuperáveis ou insistir numa mídia fisicamente instável. Se os arquivos forem importantes, o primeiro passo é preservar o estado da mídia."
+        a: "Podem funcionar em alguns casos lógicos, principalmente quando a mídia está saudável. O risco é instalar ou salvar resultados no mesmo dispositivo, sobrescrever dados ainda recuperáveis ou insistir numa mídia fisicamente instável. Se os arquivos forem importantes, o primeiro passo é preservar o estado da mídia.",
       },
       {
         q: "Quanto tempo leva?",
-        a: "O tempo depende do tamanho da mídia, velocidade de leitura, quantidade de erros e tipo de falha. Varredura lógica e imagem de um dispositivo saudável podem ser bem diferentes de uma mídia com setores instáveis ou defeito físico; a estimativa vem depois da avaliação."
+        a: "O tempo depende do tamanho da mídia, velocidade de leitura, quantidade de erros e tipo de falha. Varredura lógica e imagem de um dispositivo saudável podem ser bem diferentes de uma mídia com setores instáveis ou defeito físico; a estimativa vem depois da avaliação.",
       },
       {
         q: "Depois de recuperar, como evitar de novo?",
