@@ -210,18 +210,18 @@ export const SERVICOS_CORE: Record<string, ServicoLandingData> = {
     ],
     blocoLocal: [
       {
-        titulo: "Os três defeitos que mais chegam em notebook",
+        titulo: "Três grupos de falhas comuns em notebook",
         paragrafos: [
-          "O primeiro é superaquecimento: ventoinha barulhenta, base quente, queda de desempenho ou desligamento sob carga. Poeira, fluxo de ar obstruído, ventoinha, dissipador e interface térmica entram na inspeção; a causa precisa ser confirmada antes de abrir o equipamento ou trocar material térmico."
-          "O segundo é não ligar. Aqui é preciso separar fonte, conector de energia, bateria, memória e placa. Um notebook que acende LEDs mas não mostra imagem segue uma linha diferente de um equipamento sem qualquer sinal de energia. Essa separação vem antes de comprar carregador ou condenar a placa."
-          "O terceiro é dano físico: dobradiça estourada, tela trincada, teclado com líquido, porta de carga solta. Líquido é urgência real — quanto mais tempo ligado, maior a corrosão. O certo é desligar, não tentar secar com secador e levar o equipamento o quanto antes.",
+          "Um grupo é o térmico: ventoinha barulhenta, base quente, queda de desempenho ou desligamento sob carga. Poeira, fluxo de ar obstruído, ventoinha, dissipador e interface térmica entram na inspeção; a causa precisa ser confirmada antes de abrir o equipamento ou trocar material térmico.",
+          "Outro grupo é o de falha de energia ou inicialização. É preciso separar fonte, conector, bateria, memória e placa. Um notebook que acende LEDs mas não mostra imagem segue uma linha diferente de um equipamento sem qualquer sinal de energia. Essa separação vem antes de comprar carregador ou condenar a placa.",
+          "Há ainda dano físico: dobradiça quebrada, tela trincada, teclado atingido por líquido ou porta de carga solta. Se houve líquido, manter o equipamento energizado pode ampliar corrosão e curto; a orientação segura é desligar, evitar calor de secador e avaliar o aparelho antes de novas tentativas.",
         ],
       },
       {
         titulo: "Conserto ou troca: como avaliamos peças de notebook",
         paragrafos: [
           "Notebook tem peça cara e componente soldado. Antes de indicar reparo, comparamos o custo total do serviço com o valor de mercado do equipamento e com o que ele ainda entrega para o seu uso. Se a soma passar de boa parte do valor do aparelho e o desempenho continuar limitado, dizemos isso com clareza — mesmo perdendo o serviço.",
-          "Há casos intermediários que valem muito a pena: máquina com placa saudável e apenas disco lento ou pouca memória volta a ser produtiva com upgrade, por uma fração do preço de um modelo novo. Já placa com dano por líquido ou falha de chip gráfico entra em outra faixa de risco, e explicamos a chance real de sucesso antes de qualquer autorização.",
+          "Há casos em que um gargalo isolado de armazenamento ou memória pode justificar upgrade sem trocar o equipamento inteiro. O ganho depende do restante da plataforma e do uso real. Placa com dano por líquido ou falha de componente soldado entra em outra faixa de risco, que precisa ser explicada antes de qualquer autorização.",
           "Trabalhamos com peças compatíveis e informamos quando o item é original, paralelo ou recondicionado. Você aprova o valor antes da execução; nada é trocado sem sua confirmação.",
         ],
       },
@@ -272,7 +272,7 @@ export const SERVICOS_CORE: Record<string, ServicoLandingData> = {
     h1: "Manutenção e conserto de computador em Curitiba",
     h1Accent: "sem troca de peça desnecessária",
     intro:
-      "Computador de mesa que não liga, trava, reinicia, dá tela azul ou fica sem vídeo permite testar fonte, memória, armazenamento, placa de vídeo e placa-mãe por etapas. O diagnóstico isola o componente ou a camada de software antes de indicar troca. Esta página é sobre desktop; notebook segue um fluxo próprio de manutenção."
+      "Computador de mesa que não liga, trava, reinicia, dá tela azul ou fica sem vídeo permite testar fonte, memória, armazenamento, placa de vídeo e placa-mãe por etapas. O diagnóstico isola o componente ou a camada de software antes de indicar troca. Esta página é sobre desktop; notebook segue um fluxo próprio de manutenção.",
     whatsappMessage: "Olá! Meu computador de mesa está com problema. Podem avaliar?",
     incluso: [
       { title: "Diagnóstico completo", desc: "Teste de fonte, memória, armazenamento e placa-mãe." },
@@ -301,7 +301,7 @@ export const SERVICOS_CORE: Record<string, ServicoLandingData> = {
     ],
     atendimento: {
       residencial:
-        "A modalidade é definida na triagem: software e configuração podem começar remotamente; rede e periféricos podem exigir visita; desmontagem, troca de componentes e testes prolongados normalmente seguem para bancada."
+        "A modalidade é definida na triagem: software e configuração podem começar remotamente; rede e periféricos podem exigir visita; desmontagem, troca de componentes e testes prolongados normalmente seguem para bancada.",
       empresarial:
         "Manutenção de desktops e estações de trabalho de escritórios e empresas, de forma pontual ou preventiva, para manter a equipe produtiva.",
     },
@@ -860,7 +860,7 @@ export const SERVICOS_CORE: Record<string, ServicoLandingData> = {
     h1: "Suporte técnico empresarial e help desk para empresas",
     h1Accent: "menos paradas, mais previsibilidade",
     intro:
-      "Suporte técnico empresarial organiza incidentes de estações, usuários, rede, impressão, backup e acesso a sistemas sem confundir help desk avulso com contrato recorrente. Esta página explica escopo, modalidades, limites e triagem; a contratação local por cidade permanece nas páginas específicas."
+      "Suporte técnico empresarial organiza incidentes de estações, usuários, rede, impressão, backup e acesso a sistemas sem confundir help desk avulso com contrato recorrente. Esta página explica escopo, modalidades, limites e triagem; a contratação local por cidade permanece nas páginas específicas.",
     whatsappMessage: "Olá! Preciso de suporte técnico de informática para uma empresa.",
     incluso: [
       { title: "Estações de trabalho", desc: "Manutenção e configuração dos computadores da equipe." },
