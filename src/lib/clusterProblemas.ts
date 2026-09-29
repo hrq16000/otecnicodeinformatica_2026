@@ -79,7 +79,7 @@ export const CLUSTER_PROBLEMAS: ClusterProblema[] = [
     sintomas: [
       {
         titulo: "Cai só em alguns cômodos ou andares",
-        desc: "Sinal que desaparece em um ponto específico indica atenuação por parede, laje, espelho ou caixa metálica. Nesses casos trocar de plano não muda nada: o problema é cobertura, resolvido com posicionamento, repetidor cabeado ou malha mesh.",
+        desc: "Quando o sinal piora em pontos específicos, obstáculos, distância, posicionamento e interferência entram primeiro no diagnóstico. A comparação entre cômodos ajuda a separar cobertura de limitação do link; a solução pode envolver reposicionamento, ponto cabeado, access point ou malha, conforme o ambiente.",
       },
       {
         titulo: "Desconecta sozinho em horários parecidos",
@@ -87,7 +87,7 @@ export const CLUSTER_PROBLEMAS: ClusterProblema[] = [
       },
       {
         titulo: "Conecta, mas 'sem internet'",
-        desc: "O aparelho enxerga a rede e não navega. Aqui a falha está entre roteador e provedor: DNS, arrendamento de IP, cabo de entrada mal encaixado ou modem em modo incorreto — não na antena do notebook.",
+        desc: "O aparelho enxerga a rede, mas não navega. A investigação passa por DNS, endereço IP, gateway, roteador, modem/link do provedor e pelo próprio dispositivo. Comparar outro aparelho na mesma rede evita concluir cedo demais onde está a falha.",
       },
       {
         titulo: "Rápido no celular, lento no computador",
@@ -97,11 +97,11 @@ export const CLUSTER_PROBLEMAS: ClusterProblema[] = [
     causas: [
       {
         titulo: "Roteador em local ruim",
-        desc: "Dentro de armário, atrás da TV, no chão ou colado à parede externa. O equipamento distribui sinal em esfera; obstáculo próximo derruba a cobertura inteira.",
+        desc: "Armário, móveis, paredes, metal e posicionamento desfavorável podem atenuar o sinal ou criar áreas de cobertura pior. Antes de trocar equipamento, vale comparar o desempenho em posições diferentes e observar se o padrão acompanha o ambiente.",
       },
       {
         titulo: "Equipamento da operadora fazendo tudo sozinho",
-        desc: "Modem/roteador combinado atende bem apartamentos pequenos. Em imóvel grande, com laje ou muitas paredes, ele não dá conta e precisa de um distribuidor adicional — de preferência ligado por cabo.",
+        desc: "Modem/roteador combinado pode ser suficiente em ambientes menores e simples. Em imóveis maiores, com lajes, paredes ou muitos dispositivos, pode ser necessário adicionar pontos de acesso ou malha; backhaul cabeado costuma oferecer maior previsibilidade quando é viável.",
       },
       {
         titulo: "Canal e faixa saturados",
@@ -109,7 +109,7 @@ export const CLUSTER_PROBLEMAS: ClusterProblema[] = [
       },
       {
         titulo: "Cabeamento e conectores",
-        desc: "Cabo de rede prensado por móvel, conector mal crimpado ou emenda improvisada geram queda intermitente que parece 'problema da internet'.",
+        desc: "Cabo de rede prensado, conector mal crimpado ou emenda inadequada podem causar perda de pacote, negociação instável ou quedas intermitentes que se confundem com falha do provedor.",
       },
       {
         titulo: "Repetidor mal configurado",
@@ -118,19 +118,19 @@ export const CLUSTER_PROBLEMAS: ClusterProblema[] = [
     ],
     antesDeChamar: [
       "Teste a velocidade com o aparelho ao lado do roteador e depois no cômodo que reclama — a diferença já indica se é cobertura ou provedor.",
-      "Ligue um notebook por cabo no roteador. Se por cabo funciona bem, a internet está chegando e o problema é a distribuição sem fio.",
-      "Anote o horário das quedas por dois ou três dias. Padrão de horário muda completamente o diagnóstico.",
+      "Quando for possível, compare o mesmo cenário por cabo. Se o desempenho cabeado se mantém estável e o Wi‑Fi piora, cobertura, interferência, banda e configuração sem fio ganham prioridade no diagnóstico.",
+      "Anote o horário das quedas por dois ou três dias. Um padrão de horário ajuda a priorizar hipóteses como interferência, congestionamento, rotina de equipamento ou instabilidade externa.",
       "Verifique se a rede piorou depois de alguma mudança: móvel novo, repetidor, troca de plano, mudança do roteador de lugar.",
     ],
     naoFaca: [
       "Não resete o roteador da operadora sem ter as credenciais de acesso — em algumas conexões a reconfiguração exige suporte do provedor.",
-      "Não instale vários repetidores em sequência. Cada salto divide a banda e aumenta a instabilidade.",
-      "Não troque de plano antes do diagnóstico: se o gargalo é cobertura, mais megas não chegam ao cômodo.",
+      "Evite encadear repetidores sem medir o resultado. Dependendo do modo de operação e do backhaul, cada salto pode reduzir throughput, aumentar latência e ampliar a instabilidade.",
+      "Evite trocar de plano antes de comparar link cabeado e cobertura. Se o gargalo estiver na distribuição sem fio, aumentar a velocidade contratada pode não melhorar o ponto com sinal ruim.",
     ],
     modalidades: [
       {
         titulo: "Suporte remoto",
-        desc: "Ajuste de canal, separação de faixas, DNS, configuração de repetidor e revisão de dispositivos podem ser feitos com acesso remoto, quando ainda existe conexão utilizável.",
+        desc: "Ajustes de canal, faixas, DNS e configurações de alguns dispositivos podem ser avaliados ou executados remotamente quando ainda há conexão utilizável e acesso administrativo disponível.",
       },
       {
         titulo: "Atendimento no endereço",
@@ -138,13 +138,13 @@ export const CLUSTER_PROBLEMAS: ClusterProblema[] = [
       },
       {
         titulo: "Projeto de rede para empresa",
-        desc: "Escritório com muitos dispositivos, impressora em rede e sistema em nuvem pede segmentação, cabeamento e equipamento adequado — não repetidor doméstico.",
+        desc: "Ambientes com muitos dispositivos, impressoras em rede e aplicações críticas podem exigir segmentação, cabeamento e pontos de acesso dimensionados para a carga, em vez de ampliar a rede sem medir capacidade e cobertura.",
       },
     ],
     faq: [
       {
         q: "Trocar o roteador resolve Wi-Fi que cai?",
-        a: "Resolve quando o equipamento é o gargalo — modelo antigo, sem 5 GHz ou com defeito. Não resolve quando o problema é posicionamento, cabo ou interferência. Por isso o diagnóstico vem antes da indicação de compra.",
+        a: "Pode resolver quando o equipamento é o gargalo, por limitação, falha ou incompatibilidade. Se a causa for posicionamento, cabeamento, interferência ou configuração, a troca isolada pode não corrigir o problema. Por isso o diagnóstico vem antes da indicação de compra.",
       },
       {
         q: "Mesh é melhor que repetidor?",
@@ -156,7 +156,7 @@ export const CLUSTER_PROBLEMAS: ClusterProblema[] = [
       },
       {
         q: "Dá para resolver sem visita?",
-        a: "Parte dos casos sim — configuração e ajuste de canal são feitos remotamente. Cobertura, cabeamento e interferência física exigem medição no local.",
+        a: "Parte dos casos pode ser tratada remotamente, especialmente configuração e testes lógicos. Cobertura, cabeamento e interferência física normalmente exigem medição no local para uma conclusão confiável.",
       },
       {
         q: "Vocês vendem o equipamento?",
@@ -307,11 +307,11 @@ export const CLUSTER_PROBLEMAS: ClusterProblema[] = [
       },
       {
         titulo: "O disco pede para ser formatado ao conectar",
-        desc: "Sinal de estrutura de arquivos corrompida. Aceitar a formatação é o erro mais caro dessa situação.",
+        desc: "Pode indicar corrupção do sistema de arquivos, falha da mídia ou incompatibilidade de leitura. Confirmar uma formatação antes de avaliar o dispositivo pode gravar novos metadados e dificultar a tentativa de recuperação.",
       },
       {
         titulo: "HD externo fazendo barulho de clique",
-        desc: "Ruído repetitivo indica problema mecânico. Aqui cada nova ligação pode danificar mais a superfície: o correto é desligar e não insistir.",
+        desc: "Ruído repetitivo pode indicar falha mecânica. Nessa situação, novas tentativas de energização podem agravar o dano; se os dados forem importantes, o mais seguro é interromper o uso e avaliar a mídia antes de insistir.",
       },
     ],
     causas: [
@@ -321,7 +321,7 @@ export const CLUSTER_PROBLEMAS: ClusterProblema[] = [
       },
       {
         titulo: "Corrupção lógica",
-        desc: "Queda de energia durante gravação, remoção do pendrive sem ejetar e falha de atualização deixam a tabela de arquivos inconsistente.",
+        desc: "Queda de energia durante gravação, remoção abrupta de mídia e falhas de atualização podem deixar estruturas do sistema de arquivos inconsistentes.",
       },
       {
         titulo: "Falha física do disco",
@@ -334,14 +334,14 @@ export const CLUSTER_PROBLEMAS: ClusterProblema[] = [
     ],
     antesDeChamar: [
       "Pare de usar o equipamento ou o disco imediatamente. Não instale nada nele — nem o programa de recuperação.",
-      "Se for disco externo ou pendrive, desconecte e guarde. Reconectar várias vezes piora casos mecânicos.",
+      "Se for disco externo ou pendrive, desconecte e guarde. Reconectar repetidamente pode agravar falhas físicas e também aumentar o risco de novas gravações automáticas.",
       "Liste o que precisa voltar: pastas, período, tipos de arquivo. Isso orienta a busca e a validação do resultado.",
-      "Verifique se existe cópia esquecida: nuvem, e-mail, celular, HD antigo. Boa parte dos casos se resolve antes de qualquer laboratório.",
+      "Verifique se existe cópia esquecida: nuvem, e-mail, celular, HD antigo. Em alguns casos, localizar uma cópia íntegra evita qualquer intervenção na mídia afetada.",
     ],
     naoFaca: [
       "Não aceite a formatação sugerida pelo sistema quando o disco 'pede para formatar'.",
-      "Não rode utilitários de correção de disco no volume afetado — eles reorganizam a estrutura e podem eliminar o que ainda seria recuperável.",
-      "Não abra o disco rígido. Ambiente doméstico contamina os pratos e encerra a chance de recuperação mecânica.",
+      "Evite utilitários de reparo no volume afetado antes de preservar a mídia. Eles podem alterar estruturas do sistema de arquivos e reduzir opções de recuperação.",
+      "Não abra um disco rígido fora de ambiente e procedimento adequados. Poeira e manuseio incorreto podem contaminar componentes internos e reduzir severamente a possibilidade de recuperação mecânica.",
       "Não grave nada novo no dispositivo, nem os próprios arquivos recuperados.",
     ],
     modalidades: [
@@ -351,7 +351,7 @@ export const CLUSTER_PROBLEMAS: ClusterProblema[] = [
       },
       {
         titulo: "Recuperação lógica",
-        desc: "Exclusão, formatação e corrupção de estrutura, trabalhando sempre sobre cópia do dispositivo, nunca no original.",
+        desc: "Exclusão, formatação e corrupção de estrutura, priorizando imagem ou cópia da mídia quando tecnicamente possível para reduzir alterações no original.",
       },
       {
         titulo: "Encaminhamento especializado",
@@ -365,7 +365,7 @@ export const CLUSTER_PROBLEMAS: ClusterProblema[] = [
       },
       {
         q: "Quanto custa recuperar dados?",
-        a: "Depende do tipo de falha. Casos lógicos têm custo previsível; casos físicos dependem de peça, tempo e encaminhamento. O valor é apresentado depois da avaliação e antes de qualquer execução.",
+        a: "Depende do tipo de falha, da mídia, do volume de dados e do nível de acesso possível. Casos físicos podem exigir encaminhamento especializado. O valor é apresentado depois da avaliação e antes de qualquer execução.",
       },
       {
         q: "Programas de recuperação que baixo na internet funcionam?",
