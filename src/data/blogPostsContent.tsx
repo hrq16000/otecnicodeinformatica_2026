@@ -11494,35 +11494,35 @@ crontab -e
     ),
   },
   "como-conectar-wifi-tv-nao-conecta": {
-    title: "Smart TV não conecta no Wi-Fi: como separar problema de rede de defeito da TV",
+    title: "Smart TV não conecta no Wi‑Fi: o que testar antes de resetar",
     excerpt:
-      "Como descobrir se a Smart TV não conecta por causa da rede, da faixa de 5 GHz, do isolamento do roteador ou de falha no módulo Wi-Fi do aparelho — e o que fazer em cada caso.",
+      "Smart TV não encontra a rede, cai do Wi‑Fi ou conecta sem internet? Compare celular, cabo, bandas, roteador e módulo Wi‑Fi antes de resetar ou trocar peça.",
     date: "2026-08-12",
     readTime: "11 min",
     category: "Redes",
     content: (
       <>
-        <p className="lead">Smart TV que não conecta tem duas famílias de causa muito diferentes: a rede não está entregando conexão utilizável naquele ponto da casa, ou o módulo Wi-Fi da própria TV está falhando. Os dois sintomas parecem iguais na tela. A diferença aparece no teste, e é ela que decide se o caso se resolve no roteador ou exige avaliação do aparelho.</p>
+        <p className="lead">Smart TV que não conecta pode falhar por cobertura, configuração do roteador, compatibilidade de banda, software da própria TV ou defeito no módulo Wi‑Fi. Antes de resetar tudo, compare o comportamento de outro dispositivo no mesmo ponto, teste a rede por cabo quando possível e registre exatamente se a TV não encontra a rede, conecta sem internet ou cai depois de algum tempo.</p>
 
         <h2>O teste que separa os dois cenários</h2>
         <p>Antes de qualquer configuração, leve um celular até o local exato da TV — mesma altura, mesma parede, TV ligada. Depois observe:</p>
         <ul>
-          <li><strong>Celular também pega mal ali:</strong> o problema é cobertura. A TV está apenas na pior posição da casa, normalmente atrás de móvel, em parede com estrutura metálica ou no cômodo mais distante do roteador.</li>
-          <li><strong>Celular conecta bem e a TV não enxerga a rede:</strong> o caso costuma ser de faixa ou de configuração do roteador, não de alcance.</li>
-          <li><strong>A TV conecta, mas cai sozinha depois de minutos ou horas:</strong> comportamento típico de rede saturada, canal congestionado ou módulo Wi-Fi do aparelho com falha térmica — nessa ordem de probabilidade.</li>
-          <li><strong>A TV não enxerga nenhuma rede, nem a do vizinho:</strong> forte indício de falha no módulo Wi-Fi do aparelho.</li>
+          <li><strong>Celular também pega mal ali:</strong> cobertura e interferência ganham prioridade, mas ainda compare o resultado perto do roteador e, se possível, por cabo antes de descartar o link do provedor.</li>
+          <li><strong>Celular conecta bem e a TV não enxerga a rede:</strong> confira compatibilidade de banda, nome da rede, segurança usada pelo roteador e software da TV antes de suspeitar do módulo sem fio.</li>
+          <li><strong>A TV conecta, mas cai sozinha depois de minutos ou horas:</strong> compare outros dispositivos no mesmo horário. Interferência, roteador, software da TV e módulo Wi‑Fi entram como hipóteses; o padrão sozinho não define a ordem.</li>
+          <li><strong>A TV não enxerga nenhuma rede:</strong> confirme antes se o Wi‑Fi está habilitado e se o modelo suporta a banda usada. Persistindo após reinício e atualização, o módulo sem fio passa a ser uma hipótese relevante.</li>
         </ul>
 
-        <h2>Faixa de 5 GHz: a causa mais frequente de "a rede não aparece"</h2>
-        <p>Muitas TVs, inclusive modelos recentes de linha de entrada, operam apenas em 2,4 GHz. Se o roteador transmite as duas faixas com o mesmo nome de rede, a TV pode simplesmente não listar nada — para ela, aquela rede não existe.</p>
-        <p>A solução é separar os nomes das faixas no roteador e conectar a TV explicitamente à faixa de 2,4 GHz. Ela alcança mais longe e atravessa parede melhor; a perda de velocidade é irrelevante para vídeo, que consome muito menos banda do que a maioria das pessoas imagina.</p>
+        <h2>2,4 GHz e 5 GHz: confirme o que a sua TV realmente suporta</h2>
+        <p>Algumas TVs aceitam apenas 2,4 GHz; outras suportam 2,4 e 5 GHz, com limitações que variam por modelo e região. Consulte a especificação do aparelho antes de concluir que a rede “sumiu” por defeito. Nome único para as duas bandas normalmente funciona, mas separar temporariamente os SSIDs pode ajudar no diagnóstico de compatibilidade.</p>
+        <p>Como teste, conecte a TV à banda que o fabricante declara suportar e compare estabilidade no mesmo local. A faixa de 2,4 GHz tende a ter maior alcance; 5 GHz costuma oferecer mais capacidade perto do roteador. Streaming depende de estabilidade e throughput suficiente, não de uma regra fixa de banda.</p>
 
         <h2>Isolamento de clientes e rede de visitantes</h2>
         <p>Roteadores de operadora frequentemente vêm com rede de visitantes ativa e isolamento entre aparelhos. A TV conectada nessa rede acessa a internet, mas não conversa com celular nem computador — e aí o espelhamento de tela e os aplicativos de controle deixam de funcionar, mesmo com o vídeo rodando normalmente.</p>
         <p>Quando o sintoma é "a TV tem internet mas o celular não a encontra", esse é o primeiro item a verificar. A separação correta entre rede de trabalho, rede doméstica e rede de visitantes faz parte do que ajustamos em <Link to="/servicos/redes-e-wifi">redes e Wi-Fi</Link>.</p>
 
         <h2>Canal congestionado em prédio</h2>
-        <p>Em edifício, dezenas de redes disputam as mesmas frequências. A TV conecta, o ícone fica normal, e mesmo assim o vídeo trava e a conexão cai. Não é defeito: é disputa por espaço no ar. Fixar um canal menos ocupado em 2,4 GHz e reposicionar o roteador para longe de metal, espelho, caixa d'água e do próprio armário costuma mudar o resultado mais do que trocar de aparelho.</p>
+        <p>Em edifícios, redes vizinhas podem disputar os mesmos canais. Se a TV conecta, mas vídeo trava ou a conexão cai, compare o comportamento em horários e pontos diferentes antes de concluir por defeito. Ajuste de canal, largura de canal e posicionamento do roteador só deve ser feito depois de registrar a configuração atual e medir o resultado.</p>
 
         <h2>O que fazer, na ordem que evita retrabalho</h2>
         <ol>
@@ -11566,7 +11566,7 @@ crontab -e
         <p>Não prometemos reparo antes de avaliar, e não trocamos placa por suposição. A avaliação de imagem, som, placa e alimentação segue o escopo descrito em <Link to="/servicos/conserto-tv">conserto de TV</Link>, com o critério de verificação e cobrança explicado em <Link to="/diagnostico-tecnico">como funciona o diagnóstico técnico</Link>.</p>
 
         <h2>Resumo prático</h2>
-        <p>Compare a TV com o celular no mesmo ponto para separar cobertura de configuração. Se a rede não aparece na lista, quase sempre é faixa de 5 GHz; se aparece e cai, é congestionamento ou distância; se o celular não encontra a TV, é rede de visitantes ou isolamento; se por cabo funciona e por Wi-Fi nunca funciona, é o módulo sem fio do aparelho — e aí vale comparar o custo do reparo com a solução por cabo ou aparelho externo.</p>
+        <p>Compare a TV com outro dispositivo no mesmo ponto, confirme as bandas suportadas pelo modelo e, quando possível, teste por cabo. Esses três testes separam boa parte dos casos de cobertura, configuração e falha do módulo. Rede de visitantes e isolamento explicam alguns cenários de espelhamento; queda recorrente exige comparar roteador, interferência, software e hardware antes de trocar peça.</p>
       </>
     ),
   },
@@ -11741,22 +11741,22 @@ crontab -e
   // Intenção informacional. Não localiza a página: a ponte comercial e local
   // acontece por links contextuais, nunca por repetição de cidade no texto.
   "como-formatar-pc-sem-perder-arquivos": {
-    title: "Como formatar o PC ou notebook sem perder arquivos",
+    title: "Como formatar PC ou notebook sem perder arquivos: checklist seguro",
     excerpt:
-      "O que decidir antes de formatar: quando a reinstalação resolve, quando não resolve, como preservar arquivos, contas e licenças, e a diferença entre redefinir o sistema e instalar do zero.",
+      "Como formatar PC ou notebook sem perder arquivos: backup, BitLocker, contas, licenças, drivers e escolha entre redefinir, reparar ou instalar o Windows do zero.",
     date: "2026-08-14",
     readTime: "12 min",
     category: "Procedimentos Técnicos",
     content: (
       <>
-        <p className="lead">Formatar é uma decisão, não um botão. Feita na hora certa, devolve uma máquina previsível. Feita como palpite, apaga anos de arquivo e devolve o mesmo problema em duas semanas. Este guia mostra como decidir e como executar sem perder o que importa.</p>
+        <p className="lead">Formatar é uma decisão, não um botão de “acelerar”. Antes de reinstalar o Windows, confirme que os arquivos importantes têm cópia verificável, registre contas e licenças, guarde a chave do BitLocker quando existir e descubra se a causa é realmente software. Este guia organiza essa decisão para reduzir o risco de apagar dados e terminar com o mesmo defeito.</p>
 
         <h2>Antes: formatar resolve o seu caso?</h2>
         <p>Reinstalar o sistema resolve o que é software: configuração quebrada, perfil corrompido, resíduo de programas desinstalados pela metade, atualização mal aplicada, infecção persistente. Não resolve o que é físico nem o que é limite de hardware.</p>
         <ul>
-          <li><strong>Disco mecânico com Windows 10/11:</strong> a máquina volta rápida por poucos dias e regride. O gargalo é a fila de leitura do disco, não o sistema.</li>
+          <li><strong>Disco mecânico sob carga alta:</strong> a reinstalação pode aliviar software acumulado, mas não elimina a limitação de latência do HD. Meça uso de disco e saúde da unidade antes de concluir que formatar resolve.</li>
           <li><strong>Pouca memória:</strong> o sistema recém-instalado abre menos coisas ao mesmo tempo — isso não é ganho de desempenho, é uso menor.</li>
-          <li><strong>Superaquecimento:</strong> queda de velocidade depois de alguns minutos é temperatura, não software.</li>
+          <li><strong>Superaquecimento:</strong> se o desempenho cai conforme a temperatura sobe, a causa pode ser térmica; confirme temperatura e ventilação antes de reinstalar.</li>
           <li><strong>Disco com setores em falha:</strong> formatar sobre um disco falhando costuma travar no meio da instalação e pode inviabilizar a recuperação depois.</li>
           <li><strong>Travamento ao ligar, sem chegar ao sistema:</strong> investigue hardware antes; formatação não é diagnóstico.</li>
         </ul>
@@ -11777,15 +11777,15 @@ crontab -e
         <h2>Redefinir o sistema x instalar do zero</h2>
         <p>São procedimentos diferentes com resultados diferentes:</p>
         <ul>
-          <li><strong>Redefinir mantendo arquivos:</strong> o Windows reinstala a si mesmo e preserva as pastas do usuário. Remove programas instalados. É o caminho mais rápido para configuração quebrada.</li>
+          <li><strong>Redefinir mantendo arquivos:</strong> o Windows reinstala componentes do sistema e preserva arquivos pessoais conforme a opção escolhida, mas remove aplicativos e pode exigir reconfiguração. Faça backup mesmo assim.</li>
           <li><strong>Reinstalação por cima (mantendo tudo):</strong> repara componentes do sistema preservando programas e arquivos. Útil quando o Windows falha em atualizar ou apresenta erro recorrente.</li>
-          <li><strong>Instalação limpa:</strong> apaga a partição do sistema e começa do zero. É a única opção confiável quando houve infecção séria ou quando a máquina acumulou anos de instalação.</li>
+          <li><strong>Instalação limpa:</strong> recria o ambiente do zero e pode ser adequada quando há corrupção persistente ou quando você quer eliminar aplicações/configurações acumuladas. Em incidentes de segurança, a decisão também depende de backup confiável, credenciais e do tipo de comprometimento.</li>
         </ul>
         <p>O passo a passo detalhado da instalação limpa, incluindo mídia de instalação e particionamento, está em <Link to="/blog/como-instalar-windows-11-do-zero">como instalar o Windows 11 do zero</Link>. Se a motivação for infecção, leia antes <Link to="/blog/como-remover-virus-windows-iniciantes">como remover vírus e adware</Link>: em boa parte dos casos a limpeza dirigida resolve sem apagar nada.</p>
 
         <h2>Licença, contas e drivers</h2>
-        <p>Em máquinas de fábrica, a licença normalmente está vinculada ao equipamento e é reconhecida automaticamente após a instalação. Em máquinas montadas, a licença costuma estar vinculada a uma conta — entrar com a mesma conta evita perder a ativação. Programas pagos exigem o registro original; sem ele, reinstalar significa comprar de novo.</p>
-        <p>Depois da instalação, a ordem dos drivers importa: chipset primeiro, depois vídeo, rede, áudio e periféricos. Prefira sempre o site do fabricante do equipamento. Pacotes genéricos de "atualizador de drivers" são uma das causas mais comuns de instabilidade em máquina recém-formatada.</p>
+        <p>A ativação do Windows depende do tipo de licença e do vínculo existente com o hardware ou a conta Microsoft. Muitas máquinas reativam automaticamente após reinstalação da mesma edição, mas isso não deve ser presumido. Antes de apagar o sistema, confirme edição, status de ativação e credenciais. Programas pagos seguem regras próprias do fornecedor; registre chaves, conta e método de recuperação antes de reinstalar.</p>
+        <p>Depois da instalação, prefira Windows Update e os canais oficiais do fabricante do notebook, placa-mãe ou componente. Em alguns equipamentos a sequência de chipset, armazenamento, vídeo, rede e áudio influencia dependências. Evite “atualizadores universais” de terceiros, que podem instalar versões inadequadas.</p>
 
         <h2>O que costuma dar errado</h2>
         <ul>
