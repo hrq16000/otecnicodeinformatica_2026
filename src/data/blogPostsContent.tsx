@@ -12524,76 +12524,91 @@ bcdboot C:\\Windows /s S: /f UEFI`}</code></pre>
   },
 
   "curto-circuito-placa-mae-como-identificar": {
-    title: "Curto-circuito na placa-mãe: como identificar e isolar o problema",
+    title: "Curto-circuito na placa-mãe: sinais, teste mínimo e diagnóstico seguro",
     excerpt:
-      "Como reconhecer um curto de alimentação, isolar componente por componente com o teste fora do gabinete e saber quando o reparo deixa de ser viável.",
+      "PC liga e desliga na hora? Veja como separar fonte, contato com gabinete, periféricos e placa-mãe sem trocar peças por tentativa nem usar continuidade como prova de curto.",
     date: "2026-08-26",
-    readTime: "10 min",
+    readTime: "12 min",
     category: "Procedimentos Técnicos",
     content: (
       <>
-        <p className="lead">Existe uma diferença clara entre um computador que não liga e um computador que tenta ligar e desiste. O segundo caso quase sempre significa que a proteção da fonte encontrou consumo fora do esperado — o comportamento típico de um curto na alimentação da placa ou de algum componente ligado a ela.</p>
+        <p className="lead">Um computador que energiza por um instante e desliga não confirma, sozinho, curto-circuito na placa-mãe. O mesmo padrão pode aparecer quando a proteção da fonte atua, quando a própria fonte falha, quando existe contato indevido com o gabinete, quando um cabo ou periférico derruba uma linha de alimentação ou quando há defeito no circuito de energia da placa. O diagnóstico seguro consiste em reduzir o sistema ao mínimo e observar o que muda a cada comparação.</p>
 
         <h2>Resposta curta</h2>
-        <p>Se as ventoinhas giram por uma fração de segundo e tudo desliga, repetidamente, trate como suspeita de curto. O caminho é remover tudo o que não é essencial e testar a placa fora do gabinete com processador, um módulo de memória e fonte — o chamado teste de bancada mínima. O que reintroduzir e provocar o desligamento é o culpado.</p>
+        <p>Se o PC liga e desliga imediatamente, pare de repetir tentativas. Desligue da tomada, procure cheiro de queimado, líquido, carbonização ou conector danificado e desconecte os componentes não essenciais. Se você tem prática de montagem, compare uma configuração mínima fora do gabinete e uma fonte compatível comprovadamente funcional. Se o sintoma persistir mesmo assim, a placa-mãe se torna uma hipótese mais forte, mas ainda precisa de diagnóstico de bancada antes de ser condenada.</p>
 
-        <h2>O que é um curto de alimentação</h2>
-        <p>A fonte entrega tensões fixas (12 V, 5 V, 3,3 V) e monitora quanto está sendo consumido. Quando um caminho de corrente indevido aparece — um componente rompido internamente, um parafuso solto encostando na placa, um cabo pinçado — o consumo dispara. Em vez de queimar, a fonte corta a saída em milissegundos. É por isso que o sintoma aparece como uma partida abortada, e não como fumaça.</p>
+        <h2>O que significa “curto” neste diagnóstico</h2>
+        <p>Fontes ATX possuem circuitos de proteção e podem interromper a saída quando detectam uma condição elétrica anormal. Um desligamento quase instantâneo é compatível com proteção atuando, mas não informa onde está a falha. A origem pode estar na fonte, no cabeamento, em um periférico, em uma porta danificada, no contato da placa com o gabinete ou no próprio circuito de alimentação da placa-mãe.</p>
+        <p>Por isso, <strong>“liga e desliga” é um sintoma, não um diagnóstico</strong>. A confirmação vem de comparações controladas: retirar um ramo, mudar uma única variável por vez e verificar se o comportamento se repete.</p>
 
-        <h2>Por que acontece</h2>
+        <h2>O que pode provocar o mesmo sintoma</h2>
         <ul>
-          <li><strong>Capacitor eletrolítico degradado:</strong> topo abaulado, base suja ou eletrólito seco. Um dos motivos mais comuns em placas com mais de cinco anos.</li>
-          <li><strong>Montagem incorreta:</strong> espaçador metálico em furo sem furo correspondente na placa, parafuso extra, chapa do gabinete tocando a solda.</li>
-          <li><strong>Surto elétrico:</strong> descarga na rede que compromete o estágio de entrada da placa ou de um periférico.</li>
-          <li><strong>Líquido e corrosão:</strong> resíduo condutivo entre trilhas, frequente após limpeza malfeita ou umidade.</li>
-          <li><strong>Periférico com defeito:</strong> disco, placa de vídeo, cooler ou porta USB com curto derruba a alimentação inteira, e a placa leva a culpa injustamente.</li>
+          <li><strong>Contato indevido com o gabinete:</strong> espaçador em posição errada, parafuso solto, chapa ou conector pressionando uma região da placa.</li>
+          <li><strong>Cabo ou periférico com falha:</strong> placa de vídeo, unidade de armazenamento, hub USB, cabo frontal ou outro dispositivo pode derrubar a alimentação quando conectado.</li>
+          <li><strong>Conector de energia inadequado ou mal assentado:</strong> ATX de 24 pinos, alimentação do processador e conexões da placa de vídeo precisam estar corretos para o equipamento.</li>
+          <li><strong>Fonte defeituosa ou incompatibilidade de cabeamento:</strong> uma fonte pode entrar em proteção por falha própria. Em fontes modulares, não reutilize cabos de outro modelo a menos que o fabricante declare compatibilidade explícita.</li>
+          <li><strong>Líquido, corrosão ou dano térmico:</strong> resíduos condutivos, oxidação e carbonização podem criar caminhos elétricos indesejados.</li>
+          <li><strong>Falha na placa-mãe:</strong> componentes do estágio de alimentação, controladores, capacitores ou outras partes da placa podem falhar sem deixar marca visível.</li>
         </ul>
 
-        <h2>Onde procurar</h2>
-        <p>Concentre a inspeção visual em quatro regiões: a área de regulagem em volta do soquete do processador, onde ficam bobinas e capacitores; o entorno dos conectores de energia de 24 e 8 pinos; a face traseira da placa, sob os pontos de fixação; e a região das portas USB, que sofre com conexões forçadas. Procure abaulamento, resíduo esbranquiçado, marca escura e cheiro característico.</p>
+        <h2>Onde olhar antes de desmontar tudo</h2>
+        <p>Com o equipamento desligado da tomada, faça primeiro uma inspeção visual. Observe os conectores principais de energia, a região de alimentação ao redor do processador, as portas USB, os cabos do painel frontal, a face traseira próxima aos pontos de fixação e qualquer área com resíduo, oxidação, plástico deformado ou marca escura. Ausência de marca visível não exclui falha elétrica.</p>
 
-        <h2>O que fazer: isolamento em etapas</h2>
+        <h2>Isolamento em etapas: mude uma variável por vez</h2>
         <ol>
-          <li><strong>Registre o estado atual.</strong> Fotografe as conexões antes de desmontar — isso evita erro na remontagem.</li>
-          <li><strong>Desconecte tudo o que não é essencial:</strong> discos, placa de vídeo dedicada, leitores, cabos frontais de USB e áudio, ventoinhas extras. Deixe placa, processador com o cooler, um módulo de memória e a fonte.</li>
-          <li><strong>Teste fora do gabinete.</strong> Apoie a placa sobre a própria caixa de papelão dela, nunca sobre superfície metálica. Se assim ela liga, o curto era contato com o gabinete — quase sempre um espaçador fora de lugar.</li>
-          <li><strong>Reintroduza um item por vez</strong>, ligando e desligando a cada passo. O componente que reproduzir o desligamento imediato é o responsável.</li>
-          <li><strong>Troque a fonte por outra comprovadamente boa.</strong> Proteção disparando também é sintoma de fonte em degradação, e o roteiro de verificação está em <Link to="/blog/como-testar-fonte-de-alimentacao-pc" className="text-accent">como testar a fonte de alimentação</Link>.</li>
-          <li><strong>Observe o LED de diagnóstico</strong> ou o display de código, quando a placa tiver. Ele diferencia falha de alimentação de falha de memória ou de vídeo.</li>
+          <li><strong>Registre o estado atual.</strong> Fotografe cabos e conectores antes de remover qualquer peça. Se a falha começou após upgrade ou limpeza, anote exatamente o que foi mexido.</li>
+          <li><strong>Corte a energia.</strong> Desligue o computador, retire o cabo da tomada e não manipule conectores com o sistema energizado.</li>
+          <li><strong>Retire o que não é necessário para o teste.</strong> Desconecte armazenamento, acessórios USB internos, placas adicionais e demais periféricos que não sejam necessários para observar se a placa permanece energizada. A configuração mínima exata depende do processador e da placa.</li>
+          <li><strong>Confira montagem e conectores.</strong> Verifique espaçadores, parafusos soltos, ATX de 24 pinos e alimentação do processador. Não force conectores parecidos em posições para as quais não foram projetados.</li>
+          <li><strong>Compare fora do gabinete somente se você tiver prática.</strong> Apoie a placa em superfície firme e não condutiva e teste a configuração mínima. Se o comportamento muda fora do gabinete, contato mecânico ou montagem passam a merecer prioridade de inspeção; isso não identifica automaticamente um espaçador específico.</li>
+          <li><strong>Compare com uma fonte compatível e conhecida como funcional.</strong> Não reaproveite cabos modulares de outra fonte por aparência. Use os cabos destinados ao modelo que está sendo testado.</li>
+          <li><strong>Reintroduza um ramo por vez.</strong> Se o desligamento reaparece após conectar um dispositivo ou cabo, esse ramo vira a principal hipótese a confirmar. Correlação nesse teste não basta para condenar a peça sem uma segunda verificação.</li>
+          <li><strong>Use os sinais da própria placa.</strong> LEDs, códigos de diagnóstico ou bipes podem indicar em qual etapa o POST parou, conforme o manual do modelo.</li>
         </ol>
+
         <aside className="rounded-lg border border-destructive/40 bg-destructive/5 p-4 not-prose my-6">
-          <p className="m-0 text-sm"><strong>Segurança:</strong> desligue a chave da fonte e retire o cabo antes de qualquer manipulação. Não abra a fonte de alimentação. Não faça medições com o equipamento energizado se você não tem prática — a medição correta de curto é feita com o aparelho desligado, em modo de continuidade ou resistência, e conclusões erradas levam à troca de peças boas.</p>
+          <p className="m-0 text-sm"><strong>Critério de parada:</strong> não abra a fonte de alimentação. Não use apenas o bipe de continuidade do multímetro para “provar” um curto: algumas linhas de baixa tensão podem apresentar resistência baixa sem estarem em curto. Injeção de tensão, medições energizadas e diagnóstico em nível de componente exigem instrumentação, limite de corrente e experiência de bancada. Pare também diante de líquido, carbonização, cheiro forte de queimado ou conector derretido.</p>
         </aside>
 
-        <h2>Tabela diagnóstica: o que o comportamento indica</h2>
+        <h2>Tabela de triagem: sintoma, hipótese e próximo teste</h2>
         <table>
           <thead>
             <tr>
               <th>Comportamento observado</th>
-              <th>Causa provável</th>
-              <th>O que verificar</th>
+              <th>Hipótese a priorizar</th>
+              <th>Próximo teste seguro</th>
             </tr>
           </thead>
           <tbody>
-            <tr><td>Ventoinhas giram meio segundo e tudo desliga, em ciclo</td><td>Proteção da fonte contra consumo excessivo</td><td>Bancada mínima fora do gabinete</td></tr>
-            <tr><td>Fora do gabinete liga, dentro não</td><td>Contato metálico indevido</td><td>Espaçadores, parafusos extras e chapa traseira</td></tr>
-            <tr><td>Só desliga quando um disco ou a placa de vídeo está conectada</td><td>Periférico em curto</td><td>Reintrodução um item por vez</td></tr>
-            <tr><td>Capacitor abaulado ou resíduo esbranquiçado visível</td><td>Componente degradado ou corrosão</td><td>Inspeção nas duas faces da placa</td></tr>
-            <tr><td>Não liga nem com outra fonte comprovadamente boa</td><td>Falha no circuito de regulagem da placa</td><td>Avaliação de bancada e decisão econômica</td></tr>
+            <tr><td>Energiza por um instante e desliga em ciclo</td><td>Proteção da fonte, fonte defeituosa ou falha em algum ramo alimentado</td><td>Reduzir a configuração e comparar com fonte compatível conhecida</td></tr>
+            <tr><td>Fora do gabinete permanece ligado, montado volta a desligar</td><td>Contato mecânico, espaçador, parafuso ou cabo pressionado</td><td>Revisar pontos de fixação e remontar sem adicionar componentes</td></tr>
+            <tr><td>O sintoma reaparece ao conectar um dispositivo específico</td><td>Dispositivo, cabo, conector ou ramo associado</td><td>Confirmar o comportamento sem esse ramo e testar o item separadamente</td></tr>
+            <tr><td>Há líquido, corrosão, plástico deformado ou carbonização</td><td>Dano físico ou contaminação condutiva</td><td>Não energizar novamente antes de inspeção e limpeza técnica adequadas</td></tr>
+            <tr><td>Persiste em configuração mínima e com fonte compatível funcional</td><td>Placa-mãe, processador ou alimentação local ainda precisam ser separados</td><td>Diagnóstico de bancada com esquema e medições apropriadas quando disponíveis</td></tr>
           </tbody>
         </table>
 
-        <h2>Como resolver</h2>
+        <h2>Como decidir o reparo sem trocar peças por tentativa</h2>
         <ul>
-          <li><strong>Curto por montagem:</strong> remontar com os espaçadores corretos resolve definitivamente e sem custo de peça.</li>
-          <li><strong>Periférico em curto:</strong> substituir o item identificado devolve a máquina ao normal; a placa estava íntegra.</li>
-          <li><strong>Capacitores degradados:</strong> a substituição é reparo em nível de componente, com ferro de solda adequado e peça de mesma especificação. Não é serviço para improviso.</li>
-          <li><strong>Curto no circuito de regulagem:</strong> exige instrumentação de bancada. Em placas comuns, o custo do reparo costuma se aproximar do valor de uma placa nova — a decisão passa a ser econômica.</li>
+          <li><strong>Problema de montagem:</strong> corrija o ponto de contato e valide o equipamento novamente antes de reconectar todos os componentes.</li>
+          <li><strong>Ramo periférico suspeito:</strong> confirme cabo, porta e dispositivo separadamente antes de substituir qualquer peça.</li>
+          <li><strong>Fonte suspeita:</strong> compare com unidade compatível e funcional; não conclua pela ventoinha da fonte nem por um teste isolado sem carga.</li>
+          <li><strong>Corrosão ou líquido:</strong> interrompa a energização. O dano pode avançar sob componentes e conectores mesmo quando a superfície parece seca.</li>
+          <li><strong>Falha em nível de placa:</strong> o reparo depende do componente afetado, disponibilidade de peças, complexidade da placa e valor do equipamento. A decisão econômica vem depois do diagnóstico, não antes.</li>
         </ul>
-        <p>Depois que a máquina volta a ligar, confirme estabilidade sob carga e temperatura antes de fechar o caso: o padrão de ligar e desligar também aparece por aquecimento, com sintoma parecido mas causa diferente.</p>
 
-        <h2>Quando chamar um técnico</h2>
-        <p>Chame quando houver cheiro de queimado, marca de carbonização, líquido derramado ou capacitor estufado; quando o desligamento persistir com a bancada mínima e outra fonte; quando existirem dados importantes no disco; e sempre que o reparo envolver solda. O diagnóstico com instrumentos está em <Link to="/diagnostico-tecnico" className="text-accent">diagnóstico técnico</Link>, e o atendimento de bancada em <Link to="/servicos/manutencao-de-computador" className="text-accent">manutenção de computador</Link>. Se o próximo passo for eliminar dúvida sobre a placa, o roteiro complementar está em <Link to="/blog/como-diagnosticar-placa-mae-defeituosa" className="text-accent">como diagnosticar placa-mãe defeituosa</Link>.</p>
+        <h2>Perguntas rápidas</h2>
+        <h3>PC liga e desliga significa placa-mãe queimada?</h3>
+        <p>Não. O sintoma também pode vir da fonte, de um periférico, de um cabo, da montagem ou de uma proteção acionada por outra condição elétrica. A placa-mãe só deve ser condenada depois que essas hipóteses forem separadas.</p>
+
+        <h3>Multímetro em continuidade confirma curto na placa?</h3>
+        <p>Não sozinho. O bipe indica que a resistência ficou abaixo do limiar definido pelo instrumento; em alguns circuitos isso pode acontecer sem defeito. Diagnóstico de placa exige conhecer a linha medida e interpretar resistência, esquema e comportamento do circuito.</p>
+
+        <h3>Posso testar com outra fonte?</h3>
+        <p>Sim, desde que a unidade seja adequada ao equipamento e esteja comprovadamente funcional. Em fonte modular, use os cabos corretos daquela fonte; conectores fisicamente parecidos não garantem pinagem compatível.</p>
+
+        <h2>Quando procurar avaliação técnica</h2>
+        <p>Procure bancada quando houver cheiro de queimado, carbonização, líquido ou corrosão; quando a falha persistir em configuração mínima e com fonte compatível funcional; quando o equipamento estiver em garantia; ou quando o próximo passo exigir medição energizada ou reparo em componente. O método está descrito em <Link to="/diagnostico-tecnico" className="text-accent">diagnóstico técnico</Link>, e o atendimento de bancada em <Link to="/servicos/manutencao-de-computador" className="text-accent">manutenção de computador</Link>. Para ampliar a investigação da placa sem assumir curto como causa, veja <Link to="/blog/como-diagnosticar-placa-mae-defeituosa" className="text-accent">como diagnosticar placa-mãe defeituosa</Link>.</p>
       </>
     ),
   },
