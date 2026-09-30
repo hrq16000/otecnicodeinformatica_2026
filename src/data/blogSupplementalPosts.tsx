@@ -1185,6 +1185,125 @@ export const blogSupplementalPosts: Record<string, BlogPostContent> = {
       </>
     ),
   },
+  "botao-power-nao-funciona-jump-start-placa-mae": {
+    title: "Botão power não funciona: como testar o PWR_SW sem condenar fonte ou placa",
+    excerpt:
+      "Como separar botão, cabo e conector frontal de uma falha real de alimentação, identificar o PWR_SW pelo manual e interpretar corretamente o teste de partida pela placa-mãe.",
+    date: "2026-09-29",
+    readTime: "13 min",
+    category: "Procedimentos Técnicos",
+    content: (
+      <>
+        <p className="lead">Quando o botão do gabinete não produz nenhuma reação, o circuito do painel frontal é apenas uma das hipóteses. Em desktops, o botão de power normalmente aciona um par específico do header frontal da placa-mãe. Fazer um contato momentâneo <strong>nos pinos corretos e identificados pelo manual</strong> pode retirar botão e cabo da equação — mas o resultado precisa ser interpretado com cuidado.</p>
+
+        <h2>Resposta direta: o que o teste no PWR_SW realmente prova?</h2>
+        <p>Se o computador não responde ao botão, mas inicia de forma repetível quando o par <strong>Power Switch/PWR_SW</strong> correto é acionado diretamente, o circuito do botão, o cabo ou o encaixe no header passa a ser a hipótese principal. Isso <strong>não prova que toda a placa-mãe ou a fonte estejam perfeitas</strong>; apenas mostra que o pedido de partida chegou por outro caminho e foi aceito naquele teste.</p>
+        <p>Se o computador também não reage ao acionamento direto, o botão deixa de ser a explicação principal e a investigação volta para alimentação, conectores ATX/EPS, fonte, placa-mãe e demais condições de partida.</p>
+
+        <h2>Antes de abrir: “não liga” é diferente de “liga sem vídeo”</h2>
+        <table>
+          <thead><tr><th>Sintoma</th><th>O que significa para o diagnóstico</th></tr></thead>
+          <tbody>
+            <tr><td>Nenhum LED, nenhuma ventoinha, nenhuma reação</td><td>Comece por energia, fonte, conexões e circuito de acionamento.</td></tr>
+            <tr><td>Ventoinhas giram, mas não há imagem</td><td>O botão já cumpriu a função de iniciar; siga para POST/vídeo, não para PWR_SW.</td></tr>
+            <tr><td>Liga e desliga logo depois</td><td>Há uma tentativa de partida; botão travado é possível, mas proteção, montagem, fonte e placa também entram.</td></tr>
+            <tr><td>Só funciona ao movimentar o botão/cabo</td><td>Aumenta a suspeita de mau contato mecânico ou cabo, mas confirme antes de substituir.</td></tr>
+          </tbody>
+        </table>
+        <p>Se as ventoinhas já giram e o problema é imagem, use <a href="/problemas/computador-nao-da-imagem">computador liga mas não dá imagem</a>. O artigo atual é para o cenário em que o comando de ligar não produz a resposta esperada.</p>
+
+        <h2>O que é o conector do painel frontal</h2>
+        <p>Placas de desktop costumam reunir botão power, reset e LEDs do gabinete em um header identificado por nomes como <code>F_PANEL</code>, <code>JFP1</code> ou equivalentes. A posição e o pinout mudam conforme o fabricante e o modelo. Por isso, a serigrafia da placa ajuda, mas o <strong>manual do modelo exato</strong> é a referência principal.</p>
+        <p>Manuais da MSI, por exemplo, mostram no JFP1 conexões distintas para Power Switch, Reset Switch, Power LED e HDD LED. Os LEDs têm polaridade indicada; os pares de chave correspondem ao acionamento dos botões. Esse exemplo serve para entender o conceito, não para copiar a posição dos pinos para outra placa.</p>
+
+        <h2>1. Verifique o básico sem energizar a placa aberta</h2>
+        <ol>
+          <li>Desligue o computador e retire o cabo da tomada antes de mexer em conectores internos.</li>
+          <li>Confirme tomada, cabo de força e chave traseira da fonte quando existir.</li>
+          <li>Confira se o conector ATX principal e o conector de alimentação da CPU estão totalmente assentados.</li>
+          <li>Localize no manual o header frontal e o par de <strong>Power Switch</strong>.</li>
+          <li>Confira se o plugue do gabinete está exatamente nesse par, sem deslocamento lateral.</li>
+        </ol>
+        <p>Não remova bateria CMOS, não troque cabos modulares da fonte e não faça contato entre pinos desconhecidos como primeira tentativa.</p>
+
+        <h2>2. Inspecione botão, cabo e conector</h2>
+        <p>Procure cabo prensado, fio rompido perto do botão, conector solto, plugue deslocado e botão mecanicamente preso. Em gabinetes com pequena placa frontal, observe também conectores intermediários. Não é necessário desmontar o próprio mecanismo do botão se o teste no header já consegue isolá-lo.</p>
+        <p>Um botão preso pode manter o sinal de power acionado por mais tempo que o esperado e alterar o comportamento da máquina. Se a haste não retorna normalmente, desconecte o plugue do PWR_SW antes de continuar o diagnóstico.</p>
+
+        <h2>3. Como fazer o teste de acionamento direto com segurança</h2>
+        <p>Esse teste é apropriado apenas para um <strong>desktop</strong> em que você identificou com certeza o par Power Switch pelo manual. Fabricantes como a MSI usam o mesmo princípio em seus próprios roteiros de diagnóstico: retirar o cabo frontal e acionar momentaneamente o par de power para verificar se a máquina inicia.</p>
+        <ol>
+          <li>Com o cabo de energia removido, identifique e fotografe a posição do conector PWR_SW.</li>
+          <li>Retire somente o plugue do botão power, sem mexer nos demais headers.</li>
+          <li>Confirme mais uma vez no manual quais são exatamente os dois pinos de Power Switch.</li>
+          <li>Reconecte o cabo de força e coloque a fonte em condição normal de uso.</li>
+          <li>Com uma ferramenta de cabo isolado, faça <strong>contato momentâneo apenas entre os dois pinos identificados</strong> e afaste imediatamente.</li>
+          <li>Observe a resposta sem tocar em outros pontos da placa.</li>
+        </ol>
+        <aside className="rounded-lg border border-destructive/40 bg-destructive/5 p-4 not-prose my-6">
+          <p className="m-0 text-sm"><strong>Segurança:</strong> não faça esse teste se você não consegue identificar o par correto. Não deslize ferramenta sobre outros pinos, não toque em áreas energizadas da placa e nunca abra a fonte de alimentação. Notebook, all-in-one e equipamentos com placa de botão própria não devem ser tratados como um desktop com header frontal.</p>
+        </aside>
+
+        <h2>Como interpretar o resultado</h2>
+        <table>
+          <thead><tr><th>Resultado</th><th>Leitura correta</th><th>Próximo passo</th></tr></thead>
+          <tbody>
+            <tr><td>Liga pelo PWR_SW direto e não liga pelo botão</td><td>Botão, cabo ou conexão frontal ficam fortemente implicados.</td><td>Inspecione continuidade/encaixe ou substitua o conjunto frontal compatível.</td></tr>
+            <tr><td>Liga por ambos depois de reencaixar</td><td>Pode ter havido mau contato no conector.</td><td>Valide várias partidas; não conclua defeito de peça por um evento isolado.</td></tr>
+            <tr><td>Não reage nem pelo PWR_SW direto</td><td>O teste não encontrou um atalho para o botão.</td><td>Volte para alimentação, ATX/EPS, fonte, montagem e placa-mãe.</td></tr>
+            <tr><td>Energiza, mas não conclui POST</td><td>O comando de power foi aceito; o defeito está em outra etapa.</td><td>Siga memória, vídeo, CPU, firmware e placa.</td></tr>
+            <tr><td>Liga e desliga rapidamente</td><td>Há tentativa de partida, mas o sintoma não aponta uma causa única.</td><td>Separe fonte, montagem, periféricos e placa em configuração mínima.</td></tr>
+          </tbody>
+        </table>
+
+        <h2>Se ligou pelo header, o que ainda pode estar errado?</h2>
+        <p>O teste confirma que a placa respondeu ao acionamento direto naquela condição. Ele não valida estabilidade da fonte sob carga, todas as linhas de alimentação, memória, CPU, vídeo ou demais circuitos da placa. Se a máquina parte e depois reinicia, trava ou não dá vídeo, siga o sintoma novo em vez de considerar o computador “aprovado”.</p>
+        <p>Para alimentação, use <a href="/blog/como-testar-fonte-de-alimentacao-pc">como testar a fonte do PC com critérios seguros</a>. Para placa, veja <a href="/blog/como-diagnosticar-placa-mae-defeituosa">como diagnosticar placa-mãe sem trocar peça por tentativa</a>.</p>
+
+        <h2>Se não ligou pelo header, o botão está descartado?</h2>
+        <p>O botão deixa de ser a explicação suficiente para o sintoma, mas o teste ainda depende de os pinos estarem corretos e de a placa receber alimentação adequada. Confirme ATX principal, alimentação da CPU e a própria fonte antes de concluir placa-mãe.</p>
+        <p>Se existe LED de standby, ele mostra que algum circuito de espera está alimentado; não é certificação da fonte inteira. Se não existe LED no modelo, a ausência de luz também não é evidência por si só.</p>
+
+        <h2>Reset switch pode ser usado para testar?</h2>
+        <p>Em muitos gabinetes de desktop, power e reset são chaves momentâneas do mesmo tipo e um técnico pode usar o botão reset como comparação temporária, conectando-o ao par PWR_SW correto. Faça isso apenas quando o manual/pinout estiver claro e como teste reversível, não como modificação permanente improvisada.</p>
+
+        <h2>Notebook e all-in-one são outro diagnóstico</h2>
+        <p>Notebooks podem usar botão soldado, placa auxiliar, flat cable, teclado ou circuito dedicado de power. Não procure um “JFP1” genérico nem tente curto em pads desconhecidos. Para esse cenário, use <a href="/blog/notebook-nao-liga-o-que-fazer">notebook não liga: como separar alimentação, bateria e placa</a>.</p>
+
+        <h2>Quando parar</h2>
+        <ul>
+          <li>Você não encontra o manual ou não consegue identificar com certeza o par Power Switch.</li>
+          <li>Há cheiro de queimado, plástico derretido, corrosão ou líquido.</li>
+          <li>O equipamento desliga repetidamente por proteção.</li>
+          <li>O conector ATX/EPS apresenta aquecimento ou dano visível.</li>
+          <li>O PC está em garantia e a abertura pode afetar o atendimento do fabricante.</li>
+          <li>O teste exigiria tocar em pads, trilhas ou pontos não documentados.</li>
+        </ul>
+
+        <h2>Perguntas frequentes</h2>
+        <h3>Se o PC liga ao encostar nos pinos, a placa-mãe está boa?</h3>
+        <p>Isso mostra que a placa aceitou o comando de partida naquele teste. É uma evidência útil contra o circuito do botão, mas não valida todas as funções da placa.</p>
+
+        <h3>O Power Switch tem lado positivo e negativo?</h3>
+        <p>Nos headers de desktop em que o fabricante documenta o par como chave momentânea, o conector do switch não depende da polaridade como os LEDs. Sempre siga o manual do modelo, porque a posição dos pinos muda.</p>
+
+        <h3>Posso encostar qualquer dois pinos do F_PANEL para testar?</h3>
+        <p>Não. Identifique exatamente o par Power Switch. O mesmo header pode conter LEDs, reset e pinos reservados.</p>
+
+        <h3>Se não liga pelo botão nem pelos pinos, é a fonte?</h3>
+        <p>Não necessariamente. Fonte é uma hipótese importante, mas alimentação da CPU, conectores, montagem e placa-mãe também podem impedir a partida.</p>
+
+        <h3>Posso fazer esse teste em notebook?</h3>
+        <p>Não como regra. A arquitetura do botão em notebook varia muito e frequentemente não usa um header frontal de desktop acessível. Use documentação específica do modelo ou diagnóstico de bancada.</p>
+
+        <h2>Resumo prático</h2>
+        <p>O acionamento direto do PWR_SW serve para <strong>isolar o botão e o cabo frontal</strong>. Identifique o par pelo manual, mude uma variável por vez e interprete a resposta sem extrapolar: ligar pelo header aponta para o circuito do botão; não ligar mantém abertas as hipóteses de alimentação e placa. O teste é diagnóstico, não atalho para concluir que o restante do computador está saudável.</p>
+
+        <EditorialReferences slug="botao-power-nao-funciona-jump-start-placa-mae" />
+      </>
+    ),
+  },
+
   "codigos-de-erro-tela-azul-windows": {
     title: "Códigos da tela azul do Windows: como interpretar stop codes sem adivinhar a causa",
     excerpt:
