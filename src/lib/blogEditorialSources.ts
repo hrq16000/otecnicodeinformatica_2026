@@ -473,6 +473,31 @@ export const EDITORIAL_SOURCES: Record<string, EditorialSource> = {
       "Limpar cache remove dados temporários; limpar dados remove configurações e dados do aplicativo.",
     ],
   },
+  "gnu-ddrescue-manual-2026": {
+    id: "gnu-ddrescue-manual-2026",
+    title: "GNU ddrescue Manual",
+    publisher: "GNU Project",
+    url: "https://www.gnu.org/software/ddrescue/manual/ddrescue_manual.html",
+    accessedAt: "2026-09-30",
+    sourceType: "official",
+    supports: [
+      "O GNU ddrescue copia primeiro as partes legíveis de uma mídia com falhas e usa mapfile para registrar o progresso e retomar o resgate.",
+      "O manual orienta fazer uma cópia da unidade com falha e tentar reparar a cópia, não o original, e alerta para não reparar sistema de arquivos diretamente em uma unidade com erros de I/O.",
+    ],
+  },
+  "seagate-noisy-drive-2026": {
+    id: "seagate-noisy-drive-2026",
+    title: "O que eu devo fazer quando o disco rígido faz barulho?",
+    publisher: "Seagate Support",
+    url: "https://www.seagate.com/br/pt/support/kb/what-should-i-do-for-a-noisy-disk-drive-193731en/",
+    accessedAt: "2026-09-30",
+    sourceType: "official",
+    supports: [
+      "Discos rígidos podem produzir vibrações e cliques durante leitura, gravação e verificações internas; som isolado não identifica uma falha mecânica específica.",
+      "A Seagate orienta usar ferramenta de diagnóstico quando há preocupação com ruído, em vez de classificar o tipo de defeito apenas pelo som.",
+    ],
+  },
+
   "intel-thermal-paste-2026": {
     id: "intel-thermal-paste-2026",
     title: "How to Apply Thermal Paste and How It Works",
@@ -1392,14 +1417,18 @@ export const ARTICLE_SOURCE_MANIFEST: Record<string, ArticleSourceManifest> = {
   },
   "como-recuperar-dados-hd-com-defeito": {
     slug: "como-recuperar-dados-hd-com-defeito",
-    sources: [],
+    sources: [
+      "ms-windows-file-recovery",
+      "gnu-ddrescue-manual-2026",
+      "seagate-noisy-drive-2026",
+    ],
     technicalReview: "reviewed",
     factChecked: true,
-    factCheckedAt: "2026-08-12",
-    stableKnowledge: true,
+    factCheckedAt: "2026-09-30",
     notes:
-      "Reescrito na Onda 5A: removido o texto-modelo herdado e a marca de origem. Declara explicitamente que recuperação de dados não tem garantia de sucesso; separa falha lógica de falha física; encaminha casos mecânicos a laboratório especializado. Sem taxa de sucesso, sem prazo e sem preço prometido.",
+      "Revisão material em 2026-09-30 guiada pelo GSC: 6 impressões, 0 cliques e posição média 17 entre 2026-04-01 e 2026-09-27. A query exposta 'conserto de hd' foi tratada distinguindo recuperar dados de voltar a confiar na unidade. A versão suplementar substitui editorialmente o texto monolítico antigo, remove diagnóstico de falha mecânica apenas por clique/ruído, separa exclusão lógica de erros de I/O e falha física, prioriza origem/destino separados e imagem antes de reparo quando a mídia está instável, e reforça que recuperação não tem garantia de sucesso.",
   },
+
   "notebook-nao-liga-o-que-fazer": {
     slug: "notebook-nao-liga-o-que-fazer",
     sources: [

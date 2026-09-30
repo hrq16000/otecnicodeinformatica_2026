@@ -198,14 +198,14 @@ const WAVE_5A: EditorialApproval[] = [
     status: "approved",
     authorType: "organization",
     authorId: INSTITUTIONAL_AUTHOR.id,
-    reviewedAt: "2026-08-12",
+    reviewedAt: "2026-09-30",
     approvedAt: "2026-08-12",
     imageOrigin: "licensed",
     imageLicense: "CC BY-SA 2.0",
     imageAttribution:
       "Foto: Brian Wong (Wikimedia Commons), CC BY-SA 2.0 — https://commons.wikimedia.org/wiki/File:Toshiba_Laptop_Hard_Drive.jpg",
     notes:
-      "Reescrita integral na Onda 5A; fact-check registrado em blogEditorialSources.ts; capa é fotografia real licenciada, sem IA.",
+      "Revisão material em 2026-09-30 guiada pelo GSC: 6 impressões, 0 cliques e posição média 17 entre 2026-04-01 e 2026-09-27. A query real “conserto de hd” foi tratada separando recuperação de dados de reutilização do hardware. A versão suplementar passa a sobrepor editorialmente o texto monolítico antigo, remove diagnóstico mecânico só por ruído, separa exclusão lógica/erros de I/O/falha física e prioriza imagem/cópia antes de reparo quando a unidade está instável.",
   },
   {
     slug: "como-fazer-upgrade-ssd-nvme",
