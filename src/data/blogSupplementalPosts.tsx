@@ -11,6 +11,281 @@ import { MODALIDADES } from "@/lib/precosConfig";
  * do blog compõem base + suplementares + programáticos.
  */
 export const blogSupplementalPosts: Record<string, BlogPostContent> = {
+  "como-aprender-informatica": {
+    title: "Como aprender informática do zero: roteiro prático para estudar sozinho e evoluir por competências",
+    excerpt:
+      "Um plano de estudo de informática não começa por decorar atalhos. Aprenda arquivos, Windows, internet, produtividade, segurança, backup e diagnóstico em uma sequência prática com exercícios para saber quando avançar.",
+    date: "2026-09-30",
+    readTime: "16 min",
+    category: "Informática Básica",
+    content: (
+      <>
+        <p className="lead">
+          Para <strong>aprender informática do zero</strong>, estude por competências que você consegue demonstrar,
+          não por uma lista infinita de termos. A sequência mais útil começa em arquivos e sistema operacional,
+          passa por internet, documentos, nuvem e segurança e só depois avança para manutenção, redes e suporte
+          técnico. O objetivo é conseguir executar tarefas reais sem depender de um tutorial diferente para cada
+          clique.
+        </p>
+
+        <h2>Resposta direta: como aprender informática passo a passo</h2>
+        <ol>
+          <li>Aprenda a organizar arquivos, pastas, downloads e dispositivos.</li>
+          <li>Domine o básico do Windows: instalar, localizar, atualizar e remover aplicativos.</li>
+          <li>Aprenda navegador, pesquisa, downloads, e-mail e segurança contra golpes.</li>
+          <li>Pratique documentos, planilhas e apresentações com tarefas reais.</li>
+          <li>Entenda sincronização, nuvem e backup antes de confiar seus arquivos a um único lugar.</li>
+          <li>Aprenda a identificar recursos do computador e diagnosticar problemas sem “formatar por tentativa”.</li>
+          <li>Depois do básico, escolha uma trilha: suporte, redes, hardware, programação, dados ou produtividade.</li>
+        </ol>
+
+        <h2>O que significa “saber informática” na prática?</h2>
+        <table>
+          <thead>
+            <tr><th>Competência</th><th>Você sabe quando consegue...</th><th>Próximo nível</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Arquivos e pastas</td><td>criar, mover, renomear, localizar e recuperar um arquivo sem depender da Área de Trabalho</td><td>backup e sincronização</td></tr>
+            <tr><td>Sistema operacional</td><td>instalar apps confiáveis, atualizar, usar Configurações e interpretar avisos</td><td>diagnóstico e permissões</td></tr>
+            <tr><td>Internet</td><td>distinguir site, navegador, busca, download, conta e autenticação</td><td>rede e segurança</td></tr>
+            <tr><td>Produtividade</td><td>produzir um documento, planilha e apresentação simples</td><td>automação e colaboração</td></tr>
+            <tr><td>Segurança</td><td>reconhecer phishing, usar MFA e preservar dados antes de testar correções</td><td>gestão de identidade e resposta a incidentes</td></tr>
+            <tr><td>Diagnóstico</td><td>descrever o sintoma, reproduzir, medir e alterar uma variável por vez</td><td>suporte técnico</td></tr>
+          </tbody>
+        </table>
+
+        <h2>1. Comece por arquivos e pastas — é a base de quase tudo</h2>
+        <p>
+          Antes de estudar hardware ou comandos, aprenda onde seus arquivos estão. Use o Explorador de Arquivos para
+          criar uma pasta de estudo, organizar subpastas, copiar, mover, renomear e pesquisar documentos. A Microsoft
+          documenta o Explorador como a ferramenta central para trabalhar com arquivos locais e de nuvem no Windows.
+        </p>
+        <p>
+          Exercício: crie uma pasta <strong>Curso de Informática</strong>, dentro dela crie
+          <strong>Documentos</strong>, <strong>Planilhas</strong>, <strong>Imagens</strong> e
+          <strong>Backup-teste</strong>. Salve arquivos em cada uma, mova-os e encontre-os depois usando a pesquisa,
+          sem abrir “Recentes”.
+        </p>
+
+        <h2>2. Aprenda a diferença entre arquivo, aplicativo, atalho e pasta</h2>
+        <p>
+          Um atalho pode apontar para um arquivo ou programa sem ser o arquivo em si. Excluir um atalho não é a mesma
+          coisa que desinstalar um aplicativo. Uma pasta organiza itens; um aplicativo executa uma função; um arquivo
+          guarda conteúdo ou dados.
+        </p>
+        <p>
+          Exercício: localize o executável ou a entrada de um programa instalado, fixe e desafixe um atalho do menu
+          Iniciar e depois remova o programa pelas Configurações. Observe a diferença entre esses três atos.
+        </p>
+
+        <h2>3. Domine o Windows sem decorar todas as telas</h2>
+        <p>
+          O importante é entender a lógica: <strong>Configurações</strong> para opções do sistema,
+          <strong>Gerenciador de Tarefas</strong> para processos e recursos, <strong>Explorador</strong> para arquivos,
+          <strong>Windows Update</strong> para atualizações e <strong>Segurança do Windows</strong> para o estado de
+          proteção.
+        </p>
+        <p>
+          Menus mudam ao longo das versões. Em vez de decorar a posição exata de cada botão, aprenda a pesquisar a
+          configuração pelo nome e a reconhecer o objetivo de cada ferramenta.
+        </p>
+
+        <h2>4. Aprenda internet separando navegador, busca e site</h2>
+        <p>
+          Navegador é o programa usado para acessar páginas. Mecanismo de busca ajuda a encontrar páginas. Site é o
+          destino. Parece simples, mas essa distinção evita golpes comuns em que um anúncio ou resultado patrocinado é
+          confundido com o endereço oficial de uma empresa.
+        </p>
+        <p>
+          Exercício: pesquise uma empresa conhecida, identifique o domínio oficial, abra uma nova aba digitando o
+          endereço diretamente e compare com o resultado de busca. Observe domínio, HTTPS e destino antes de entrar
+          com senha.
+        </p>
+
+        <h2>5. Downloads: aprenda origem, arquivo e destino</h2>
+        <p>
+          Antes de executar qualquer download, saiba <strong>de onde veio</strong>, <strong>o que é o arquivo</strong>
+          e <strong>onde ele foi salvo</strong>. Não execute instaladores oferecidos por pop-ups ou “atualizadores”
+          desconhecidos.
+        </p>
+        <p>
+          Exercício: baixe um PDF de uma fonte oficial, localize-o na pasta Downloads, mova para sua pasta de estudo,
+          renomeie e abra. Depois faça o mesmo com uma imagem. O objetivo é dominar o fluxo, não acumular arquivos.
+        </p>
+
+        <h2>6. E-mail: aprenda mensagem, anexo, link e identidade</h2>
+        <p>
+          Saber enviar e receber e-mail é apenas o começo. Pratique responder mantendo contexto, anexar o arquivo
+          correto, baixar anexos com segurança e verificar o endereço real do remetente.
+        </p>
+        <p>
+          Nunca use urgência da mensagem como prova de legitimidade. Para cobrança, banco, suporte ou alteração de
+          senha, prefira abrir o aplicativo/site oficial por conta própria em vez de usar o link recebido.
+        </p>
+
+        <h2>7. Documentos: aprenda estrutura antes de formatação</h2>
+        <p>
+          Em um editor de texto, domine títulos, parágrafos, listas, tabelas, cabeçalhos e exportação para PDF.
+          Formatação consistente vale mais do que encher o documento de fontes e efeitos.
+        </p>
+        <p>
+          Projeto prático: crie um orçamento fictício de uma página com título, descrição, tabela de itens, total e
+          observações; exporte para PDF e confira se o arquivo abre corretamente.
+        </p>
+
+        <h2>8. Planilhas: aprenda célula, intervalo, fórmula e referência</h2>
+        <p>
+          Comece por dados organizados em linhas e colunas. Depois use operações simples como soma, média e
+          porcentagem. Só avance para funções complexas quando você entende por que uma fórmula está usando determinada
+          célula ou intervalo.
+        </p>
+        <p>
+          Projeto prático: monte uma planilha de despesas com Data, Categoria, Descrição e Valor; calcule total e
+          total por categoria. Depois altere um valor e confirme que os resultados se atualizam.
+        </p>
+
+        <h2>9. Nuvem e sincronização não substituem automaticamente um plano de backup</h2>
+        <p>
+          Serviços de nuvem podem sincronizar pastas e proteger cópias de arquivos, mas sincronização e backup não são
+          sinônimos em todo cenário. Exclusões e alterações podem ser sincronizadas também. A Microsoft documenta como
+          o OneDrive pode proteger pastas conhecidas do Windows; a CISA recomenda backup como proteção contra falhas,
+          exclusão acidental e ataques.
+        </p>
+        <p>
+          Exercício: escolha uma pasta de teste, sincronize-a e observe o que acontece ao editar, renomear e excluir
+          um arquivo. Faça isso com dados sem importância até entender o comportamento do serviço.
+        </p>
+
+        <h2>10. Segurança: aprenda hábitos antes de “escolher o melhor antivírus”</h2>
+        <p>
+          Um usuário que reconhece phishing, mantém sistema atualizado, usa senhas exclusivas, MFA e backups reduz
+          muito risco antes de discutir produtos adicionais. Windows 10 e Windows 11 incluem o aplicativo Segurança
+          do Windows e o Microsoft Defender Antivirus.
+        </p>
+        <p>
+          Estude também{" "}
+          <a href="/blog/como-proteger-computador-golpes-internet">
+            como se proteger de golpes na internet
+          </a>{" "}
+          e{" "}
+          <a href="/blog/como-saber-se-pc-tem-virus-malware">
+            como diferenciar sintoma de evidência de malware
+          </a>.
+        </p>
+
+        <h2>11. Aprenda hardware pela função, não apenas pelo nome</h2>
+        <p>
+          Você não precisa decorar todos os modelos de processador. Comece entendendo funções: CPU executa trabalho,
+          RAM mantém dados ativos, armazenamento guarda dados persistentemente, placa-mãe interliga componentes,
+          fonte alimenta o conjunto e rede conecta equipamentos.
+        </p>
+        <p>
+          Exercício: abra as Informações do Sistema ou o Gerenciador de Tarefas e identifique CPU, memória e
+          armazenamento do seu computador. Depois pesquise apenas as especificações do seu próprio modelo.
+        </p>
+
+        <h2>12. Diagnóstico: descreva o problema antes de tentar corrigir</h2>
+        <p>
+          A habilidade mais importante de suporte é separar <strong>sintoma</strong> de <strong>causa</strong>.
+          “Computador lento” é sintoma. A causa pode estar em CPU, memória, disco, temperatura, atualização ou
+          aplicativo.
+        </p>
+        <p>
+          Use um roteiro: quando começou? acontece sempre? em qual aplicativo? o que mudou? qual recurso está
+          saturado? qual teste reduz hipóteses? Altere uma variável por vez.
+        </p>
+
+        <h2>13. Um roteiro de 4 semanas para quem estuda sozinho</h2>
+        <table>
+          <thead>
+            <tr><th>Semana</th><th>Foco</th><th>Entrega prática</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>1</td><td>arquivos, Windows, instalação e pesquisa</td><td>pasta de estudo organizada + checklist do PC</td></tr>
+            <tr><td>2</td><td>internet, e-mail, documentos e PDF</td><td>orçamento/documento final exportado</td></tr>
+            <tr><td>3</td><td>planilhas, nuvem, backup e segurança</td><td>planilha funcional + backup-teste restaurado</td></tr>
+            <tr><td>4</td><td>hardware, rede e diagnóstico</td><td>relatório de diagnóstico de um problema simples</td></tr>
+          </tbody>
+        </table>
+        <p>
+          Quatro semanas não transformam alguém em técnico. O objetivo é criar uma base verificável e uma rotina de
+          prática. Repita os projetos até conseguir fazê-los sem depender de instruções passo a passo.
+        </p>
+
+        <h2>14. Como saber se você realmente aprendeu um assunto?</h2>
+        <ul>
+          <li>Você consegue explicar o conceito com palavras próprias.</li>
+          <li>Consegue executar a tarefa em um computador diferente sem depender da posição exata dos botões.</li>
+          <li>Consegue identificar um erro e voltar ao estado anterior.</li>
+          <li>Consegue dizer o que não sabe e onde buscar a documentação oficial.</li>
+          <li>Consegue preservar dados antes de experimentar uma correção.</li>
+        </ul>
+
+        <h2>15. Quando sair da informática básica</h2>
+        <p>
+          Depois que arquivos, Windows, internet, produtividade, backup e segurança deixarem de exigir esforço
+          constante, escolha uma trilha. Para suporte, aprofunde diagnóstico, hardware, Windows e redes. Para
+          programação, avance para lógica, terminal, Git e uma linguagem. Para escritório, aprofunde planilhas,
+          automação e colaboração.
+        </p>
+        <p>
+          Não tente estudar todas as áreas ao mesmo tempo. Uma base comum forte torna cada especialização mais fácil.
+        </p>
+
+        <h2>Erros comuns de quem tenta aprender informática sozinho</h2>
+        <ul>
+          <li>Assistir vídeos sem executar nada.</li>
+          <li>Decorar atalhos antes de entender o fluxo.</li>
+          <li>Baixar ferramentas de terceiros para tarefas que o sistema já faz.</li>
+          <li>Formatar o computador para qualquer problema.</li>
+          <li>Treinar em arquivos importantes sem backup.</li>
+          <li>Pular direto para “manutenção avançada” sem dominar arquivos, rede e segurança.</li>
+        </ul>
+
+        <h2>Perguntas frequentes</h2>
+        <h3>Dá para aprender informática sozinho?</h3>
+        <p>
+          Sim. Use documentação, exercícios e projetos práticos. O critério de evolução deve ser conseguir executar e
+          explicar a tarefa, não apenas terminar um vídeo ou curso.
+        </p>
+
+        <h3>Preciso fazer curso para aprender informática básica?</h3>
+        <p>
+          Não obrigatoriamente. Um curso pode dar estrutura e acompanhamento, mas a prática continua indispensável.
+          Para quem estuda sozinho, um roteiro com entregas semanais reduz o estudo aleatório.
+        </p>
+
+        <h3>O que estudar primeiro: hardware ou Windows?</h3>
+        <p>
+          Para a maioria dos iniciantes, arquivos, Windows e internet vêm primeiro. Hardware fica muito mais útil
+          quando você já consegue observar o sistema e relacionar sintomas a recursos.
+        </p>
+
+        <h3>Quanto tempo leva para aprender informática?</h3>
+        <p>
+          Não existe prazo universal. Depende do ponto de partida, frequência de prática e objetivo. Meça por
+          competências concluídas em vez de por horas assistidas.
+        </p>
+
+        <h3>Como me tornar um bom profissional de informática?</h3>
+        <p>
+          Depois da base, aprofunde uma trilha, documente diagnósticos, aprenda a preservar dados, use fontes oficiais
+          e evite conclusões sem evidência. Saber pesquisar e testar com método é mais importante do que fingir saber
+          tudo.
+        </p>
+
+        <h2>Resumo prático</h2>
+        <p>
+          <strong>Aprenda fazendo.</strong> Organize arquivos, domine o sistema, use internet com segurança, produza
+          documentos e planilhas, entenda nuvem/backup e só então avance para hardware, redes e diagnóstico. Cada
+          etapa deve terminar com uma tarefa que você consegue repetir sem tutorial.
+        </p>
+
+        <EditorialReferences slug="como-aprender-informatica" />
+      </>
+    ),
+  },
+
   "como-configurar-roteador-wifi-iniciantes": {
     title: "Como configurar um roteador Wi‑Fi do zero: internet, segurança e rede sem depender da marca",
     excerpt:

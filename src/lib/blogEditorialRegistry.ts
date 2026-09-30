@@ -559,14 +559,14 @@ const WAVE_9B: EditorialApproval[] = [
     status: "approved",
     authorType: "organization",
     authorId: INSTITUTIONAL_AUTHOR.id,
-    reviewedAt: "2026-08-15",
+    reviewedAt: "2026-09-30",
     approvedAt: "2026-08-15",
     imageOrigin: "licensed",
     imageLicense: "CC BY-SA 2.0",
     imageAttribution:
       "Foto: Michael Surran (Wikimedia Commons), CC BY-SA 2.0 — https://commons.wikimedia.org/wiki/File:Students_working_on_class_assignment_in_computer_lab.jpg",
     notes:
-      "Pilar nacional LEARNING/COURSE escrito do zero na Rodada 9B; capa é fotografia real licenciada (CC BY-SA 2.0), sem IA.",
+      "Revisão material em 2026-09-30 guiada pelo GSC: 21 impressões, 0 cliques e posição média ~49,10 entre 2026-04-01 e 2026-09-27. Queries reais incluem aprender informática passo a passo/do zero/sozinho e informática para iniciantes. A versão suplementar preserva a URL e transforma o pilar em roteiro por competências e projetos, com arquivos, Windows, internet, produtividade, nuvem/backup, segurança, hardware, redes e diagnóstico.",
   },
 ];
 
