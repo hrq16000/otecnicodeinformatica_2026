@@ -353,6 +353,19 @@ export const EDITORIAL_SOURCES: Record<string, EditorialSource> = {
     ],
   },
 
+  "certbr-fasciculos-seguranca-2026": {
+    id: "certbr-fasciculos-seguranca-2026",
+    title: "Fascículos — Cartilha de Segurança para Internet",
+    publisher: "CERT.br / NIC.br",
+    url: "https://cartilha.cert.br/fasciculos/",
+    accessedAt: "2026-09-30",
+    sourceType: "official",
+    supports: [
+      "O CERT.br publica orientações para autenticação forte, incluindo segunda etapa de verificação.",
+      "A Cartilha recomenda backups para reduzir o risco de perda de dados e reúne orientações sobre golpes e proteção de computadores.",
+    ],
+  },
+
   "certbr-golpes": {
     id: "certbr-golpes",
     title: "Cartilha de Segurança para Internet — Golpes",
@@ -1395,6 +1408,21 @@ export const ARTICLE_SOURCE_MANIFEST: Record<string, ArticleSourceManifest> = {
     factCheckedAt: "2026-09-27",
     notes:
       "Reescrita material concluída: rsync é tratado como cópia/sincronização e não como backup por si só; barra final, --dry-run e --delete seguem a manpage oficial; automação só entra após validação manual e o texto exige retenção independente e teste de restauração. Promovido em 2026-09-27 após capa licenciada/proveniência, ownership e gates editoriais.",
+  },
+
+  "informatica-basica": {
+    slug: "informatica-basica",
+    sources: [
+      "ms-file-explorer-windows",
+      "ms-find-files-windows",
+      "ms-onedrive-folder-backup",
+      "certbr-fasciculos-seguranca-2026",
+    ],
+    technicalReview: "reviewed",
+    factChecked: true,
+    factCheckedAt: "2026-09-30",
+    notes:
+      "Revisão material em 2026-09-30 guiada pelo GSC: 55 impressões, 0 cliques e posição média ~49,36 entre 2026-04-01 e 2026-09-27. Queries reais incluem 'conhecimento basico informatica' (17 impressões), 'informatica basica', 'informatica basica conteudo', 'informatica basica resumo', 'noções básicas de informática' e variações. A versão suplementar substitui editorialmente o texto monolítico antigo com mapa de competências, checklist prático, separação entre básico e avançado, organização de arquivos, produtividade, nuvem/backup e segurança. Fontes Microsoft e CERT.br ficam visíveis.",
   },
 
   "pc-nao-liga-o-que-fazer": {
