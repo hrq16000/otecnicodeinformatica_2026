@@ -711,6 +711,43 @@ export const EDITORIAL_SOURCES: Record<string, EditorialSource> = {
       "Os parâmetros podem ser obtidos no log do sistema ou a partir do arquivo de despejo e analisados com ferramentas de depuração.",
     ],
   },
+  "ms-memory-manager-performance-2026": {
+    id: "ms-memory-manager-performance-2026",
+    title: "Performance Tuning for Cache and Memory Manager Subsystems",
+    publisher: "Microsoft Learn",
+    url: "https://learn.microsoft.com/en-us/windows-server/administration/performance-tuning/subsystem/cache-memory-management/",
+    accessedAt: "2026-09-30",
+    sourceType: "official",
+    supports: [
+      "O Windows usa memória para cache de arquivos e páginas em standby podem continuar disponíveis para reutilização, portanto cache alto não equivale automaticamente a falta de RAM.",
+      "A investigação de pressão de memória deve considerar memória disponível e consumo real, não apenas a porcentagem total ocupada.",
+    ],
+  },
+  "ms-page-file-introduction-2026": {
+    id: "ms-page-file-introduction-2026",
+    title: "Introduction to the page file",
+    publisher: "Microsoft Learn",
+    url: "https://learn.microsoft.com/en-us/troubleshoot/windows-client/performance/introduction-to-the-page-file",
+    accessedAt: "2026-09-30",
+    sourceType: "official",
+    supports: [
+      "A carga de memória confirmada (commit charge) é comparada ao limite de confirmação do sistema; ao atingir o limite, processos podem deixar de obter memória e ocorrer travamentos ou outras falhas.",
+      "Arquivos de paginação gerenciados pelo sistema podem crescer quando necessário e quando há espaço disponível, sustentando a recomendação de não desativar o pagefile por regra genérica.",
+    ],
+  },
+  "ms-computer-memory-overview-2026": {
+    id: "ms-computer-memory-overview-2026",
+    title: "Tudo sobre memória de computador",
+    publisher: "Microsoft Support",
+    url: "https://support.microsoft.com/pt-br/windows/experience/compatibility/all-about-computer-memory",
+    accessedAt: "2026-09-30",
+    sourceType: "official",
+    supports: [
+      "RAM mantém dados ativos acessíveis mais rapidamente que o armazenamento e maior capacidade permite manter mais trabalho simultâneo sem a mesma pressão de desempenho.",
+      "A necessidade de RAM depende do tipo de uso; valores mínimos ou recomendações gerais não substituem a medição da carga real e a compatibilidade do equipamento.",
+    ],
+  },
+
   "ms-small-memory-dump": {
     id: "ms-small-memory-dump",
     title: "Small Memory Dump",
@@ -1893,13 +1930,17 @@ export const ARTICLE_SOURCE_MANIFEST: Record<string, ArticleSourceManifest> = {
   },
   "memoria-ram-insuficiente-sintomas": {
     slug: "memoria-ram-insuficiente-sintomas",
-    sources: [],
+    sources: [
+      "ms-memory-manager-performance-2026",
+      "ms-page-file-introduction-2026",
+      "ms-computer-memory-overview-2026",
+      "memtest86plus-official",
+    ],
     technicalReview: "reviewed",
     factChecked: true,
-    factCheckedAt: "2026-08-25",
-    stableKnowledge: true,
+    factCheckedAt: "2026-09-30",
     notes:
-      "Revisão concluída (Onda 10C): leitura correta dos campos Em uso, Confirmado e Em cache no Gerenciador de Tarefas, distinção entre falta de memória e gargalo de disco, critérios de compatibilidade (tipo, formato, slots, limite da placa, memória soldada) e ganho de dual channel. Conhecimento técnico estável — sem fonte visível.",
+      "Revisão material em 2026-09-30 guiada pelo GSC: 4 impressões, 0 cliques e posição média ~24 entre 2026-04-01 e 2026-09-27. A única query individual exposta foi 'memoria insuficiente' (2 impressões, posição média 40,5); nenhuma variação foi inventada. A versão suplementar separa uso alto, cache, memória disponível, commit/pagefile, vazamento de processo, paginação, gargalo de disco e defeito físico; remove regras universais de quantidade de RAM e exige compatibilidade antes de upgrade. Fontes Microsoft e Memtest86+ ficam visíveis.",
   },
   "codigos-de-erro-tela-azul-windows": {
     slug: "codigos-de-erro-tela-azul-windows",
