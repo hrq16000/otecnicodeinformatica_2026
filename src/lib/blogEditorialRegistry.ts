@@ -163,14 +163,14 @@ const WAVE_4Z: EditorialApproval[] = [
     status: "approved",
     authorType: "organization",
     authorId: INSTITUTIONAL_AUTHOR.id,
-    reviewedAt: "2026-08-12",
+    reviewedAt: "2026-09-30",
     approvedAt: "2026-08-12",
     imageOrigin: "licensed",
     imageLicense: "CC BY 3.0",
     imageAttribution:
       "Foto: Rider Adil (Wikimedia Commons), CC BY 3.0 — https://commons.wikimedia.org/wiki/File:Laptop_hardware.jpg",
     notes:
-      "Revisão técnica concluída e fact-check registrado em blogEditorialSources.ts; capa é fotografia real licenciada, sem IA.",
+      "Revisão material em 2026-09-30 guiada pelo GSC: 11 impressões, 0 cliques e posição média ~10,91 entre 2026-04-01 e 2026-09-27. A versão suplementar passa a sobrepor editorialmente o texto monolítico antigo, preservando a mesma URL. Triagem separada em sem energia, sem POST, sem vídeo e sem boot, com carregador/bateria/placa tratados como hipóteses, procedimentos de reset condicionados ao fabricante, batteryreport apenas quando o Windows inicia e critérios de parada explícitos. Queries individuais não foram expostas pelo GSC e nenhuma foi inventada.",
   },
   {
     slug: "computador-lento-causas-solucoes",
