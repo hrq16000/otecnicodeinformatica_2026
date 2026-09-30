@@ -227,6 +227,20 @@ export const EDITORIAL_SOURCES: Record<string, EditorialSource> = {
     ],
   },
 
+  "ms-camera-privacy-windows-2026": {
+    id: "ms-camera-privacy-windows-2026",
+    title: "Gerenciar permissões de aplicativo para uma câmera no Windows",
+    publisher: "Microsoft Support",
+    url: "https://support.microsoft.com/pt-br/windows/privacy/manage-app-permissions-for-a-camera-in-windows",
+    accessedAt: "2026-09-30",
+    sourceType: "official",
+    supports: [
+      "O Windows 11 separa acesso à câmera do dispositivo, acesso para aplicativos da Microsoft Store e acesso para aplicativos de área de trabalho.",
+      "Aplicativos de área de trabalho podem não aparecer com controle individual; o acesso deles é governado pela chave específica para apps de desktop.",
+      "Quando a configuração de acesso à câmera não pode ser alterada, um administrador do dispositivo pode precisar modificar a política.",
+    ],
+  },
+
   "ms-camera-troubleshooting-windows": {
     id: "ms-camera-troubleshooting-windows",
     title: "Camera doesn't work in Windows",
@@ -1922,14 +1936,17 @@ export const ARTICLE_SOURCE_MANIFEST: Record<string, ArticleSourceManifest> = {
   },
   "permissoes-de-camera-no-windows": {
     slug: "permissoes-de-camera-no-windows",
-    sources: [],
+    sources: [
+      "ms-camera-privacy-windows-2026",
+      "ms-camera-troubleshooting-windows",
+    ],
     technicalReview: "reviewed",
     factChecked: true,
-    factCheckedAt: "2026-08-26",
-    stableKnowledge: true,
+    factCheckedAt: "2026-09-30",
     notes:
-      "Revisão concluída (Onda 10C, Lote 4): quatro camadas independentes de permissão (dispositivo, aplicativos, aplicativo individual e aplicativos de área de trabalho), permissão por site no navegador, impacto de privacidade explicado e ressalva de máquina gerenciada por política. Sem marca comercial e sem promessa. Conhecimento técnico estável — sem fonte visível.",
+      "Revisão material em 2026-09-30 guiada pelo GSC: 4 impressões, 0 cliques e posição média ~8,75 entre 2026-04-01 e 2026-09-27. A versão suplementar substitui editorialmente o texto monolítico antigo, preservando a mesma URL. A investigação passa a separar acesso do dispositivo, apps da Microsoft Store, apps de desktop, permissão do navegador/site e seleção da câmera no app. Queries individuais não foram expostas pelo GSC e nenhuma foi inventada. Fontes Microsoft visíveis sustentam a hierarquia de permissões, exceções de apps desktop, política administrativa e retorno para detecção/driver quando a câmera também falha no app Câmera.",
   },
+
   "webcam-usb-nao-e-detectada": {
     slug: "webcam-usb-nao-e-detectada",
     sources: ["ms-camera-troubleshooting-windows"],
