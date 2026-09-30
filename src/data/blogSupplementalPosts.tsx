@@ -11,6 +11,210 @@ import { MODALIDADES } from "@/lib/precosConfig";
  * do blog compõem base + suplementares + programáticos.
  */
 export const blogSupplementalPosts: Record<string, BlogPostContent> = {
+  "como-saber-se-pc-tem-virus-malware": {
+    title: "Como saber se o notebook ou PC está com vírus: sinais, testes e quando agir",
+    excerpt:
+      "Lentidão, pop-ups ou ventoinha acelerada não provam infecção. Aprenda a separar sintoma de evidência, verificar o Windows com segurança e reconhecer quando o risco exige contenção imediata.",
+    date: "2026-09-30",
+    readTime: "14 min",
+    category: "Segurança Digital",
+    content: (
+      <>
+        <p className="lead">
+          Para saber se um notebook ou PC está com vírus, não procure um único “sintoma mágico”. Malware pode causar
+          pop-ups, redirecionamentos, processos estranhos, bloqueio de arquivos ou alterações de segurança, mas
+          lentidão, aquecimento e travamentos também aparecem por problemas de disco, memória, atualização, navegador
+          ou excesso de programas. O diagnóstico seguro combina <strong>sinais observáveis, histórico do que mudou e
+          verificações de segurança</strong>, sem instalar “limpadores” aleatórios.
+        </p>
+
+        <h2>Resposta direta: como saber se o computador está com vírus?</h2>
+        <ol>
+          <li>Identifique o que mudou e desde quando: navegador, arquivos, contas, desempenho ou configurações de segurança.</li>
+          <li>Separe sintomas restritos ao navegador de alterações que afetam o Windows inteiro.</li>
+          <li>Confirme qual antivírus está ativo e verifique o histórico de proteção no aplicativo Segurança do Windows ou no produto instalado.</li>
+          <li>Execute uma verificação com a solução de segurança já confiável no equipamento; não baixe ferramenta desconhecida a partir de um alerta.</li>
+          <li>Se houver criptografia de arquivos, controle remoto não autorizado, roubo de conta ou atividade financeira suspeita, contenha primeiro e investigue depois.</li>
+        </ol>
+
+        <h2>Sintoma não é diagnóstico: o que cada sinal realmente indica</h2>
+        <table>
+          <thead>
+            <tr><th>Sinal</th><th>O que pode significar</th><th>Próxima verificação</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>PC ou notebook ficou lento</td><td>Malware é uma hipótese, mas também disco saturado, pouca memória, atualização ou aplicativo pesado</td><td>Compare uso de CPU, memória, disco e programas recentes</td></tr>
+            <tr><td>Pop-ups e redirecionamentos</td><td>Extensão maliciosa, permissão de notificação, adware ou página fraudulenta</td><td>Teste outro navegador/perfil e revise extensões e permissões</td></tr>
+            <tr><td>Antivírus ou proteção foi desativada sem você pedir</td><td>Mudança de software, política administrativa ou possível interferência maliciosa</td><td>Confirme qual produto está registrado como proteção ativa</td></tr>
+            <tr><td>Arquivos ganharam extensões estranhas ou ficaram inacessíveis</td><td>Pode indicar ransomware ou corrupção; não é caso para “continuar testando”</td><td>Isole a máquina da rede e preserve evidências</td></tr>
+            <tr><td>Conta envia mensagens ou logins aparecem de locais desconhecidos</td><td>Comprometimento de credencial pode existir mesmo sem malware local</td><td>Troque senha em dispositivo confiável e revise sessões/MFA</td></tr>
+          </tbody>
+        </table>
+
+        <h2>1. Comece pelo histórico: o que aconteceu antes do problema?</h2>
+        <p>
+          A pergunta mais útil é “o que mudou antes do sintoma?”. Instalação de programa, extensão de navegador,
+          arquivo recebido, acesso remoto concedido a alguém, aviso de “suporte técnico”, atualização ou restauração
+          recente ajudam a reduzir hipóteses. Um notebook que ficou lento depois de uma atualização não deve ser
+          classificado como infectado apenas porque a ventoinha acelerou.
+        </p>
+        <p>
+          Registre horários, nomes de aplicativos, mensagens exibidas e alterações percebidas antes de apagar
+          arquivos ou redefinir o sistema. Esse contexto é importante se a investigação precisar avançar.
+        </p>
+
+        <h2>2. Se o problema aparece só no navegador, investigue o navegador primeiro</h2>
+        <p>
+          Redirecionamento de pesquisa, nova página inicial, anúncios inesperados ou notificações insistentes podem
+          estar ligados a extensão, permissão de site ou perfil do navegador. Compare com outro navegador ou com um
+          perfil limpo. Se o comportamento desaparece fora daquele perfil, isso reduz a chance de um problema que
+          afeta o Windows inteiro.
+        </p>
+        <p>
+          Não clique em telefone, botão de “limpeza” ou download sugerido por pop-up. A Microsoft alerta que golpes
+          de falso suporte usam mensagens alarmistas e números de telefone para induzir a vítima a entregar acesso
+          ou pagar por um problema que pode nem existir.
+        </p>
+
+        <h2>3. Confirme qual proteção está ativa antes de instalar qualquer outra</h2>
+        <p>
+          Windows 10 e Windows 11 incluem o aplicativo Segurança do Windows e o Microsoft Defender Antivirus. Quando
+          outro antivírus compatível está ativo, o Defender pode deixar de ser o antivírus principal. Por isso,
+          “não vejo o Defender rodando” não prova infecção: primeiro confirme qual solução está registrada como
+          proteção do sistema.
+        </p>
+        <p>
+          Abra a área de proteção contra vírus e ameaças, confira o estado atual e o histórico de detecções. Se já
+          existe um produto corporativo ou gerenciado, siga a política desse ambiente em vez de instalar um segundo
+          antivírus por conta própria.
+        </p>
+
+        <h2>4. Faça a verificação sem transformar o teste em novo risco</h2>
+        <p>
+          Use a solução de segurança já confiável e atualizada no computador. Evite baixar “antivírus portátil”,
+          cracks, ativadores ou utilitários oferecidos em anúncios e vídeos aleatórios. Uma ferramenta obtida no
+          mesmo fluxo que gerou o alerta pode ser parte do golpe.
+        </p>
+        <p>
+          Uma verificação sem detecções reduz algumas hipóteses, mas não prova que todos os sintomas têm causa
+          benigna. Continue comparando o comportamento observado com aplicativos instalados, inicialização,
+          extensões, contas e eventos recentes. Da mesma forma, uma detecção deve ser interpretada pelo nome,
+          localização e ação registrada, não apenas pela cor do alerta.
+        </p>
+
+        <h2>5. “Processo estranho” sozinho também não confirma vírus</h2>
+        <p>
+          O Gerenciador de Tarefas mostra processos do Windows, drivers, aplicativos, serviços e atualizadores que
+          podem ter nomes pouco familiares. Encerrar processos aleatoriamente pode causar perda de trabalho ou
+          instabilidade. Antes de classificar algo como malware, relacione o processo a um programa instalado,
+          verifique o editor quando disponível e observe se o comportamento reaparece após uma inicialização normal.
+        </p>
+        <p>
+          O sinal fica mais relevante quando existe um conjunto coerente: processo desconhecido reaparece, proteção
+          é desativada, navegador é alterado novamente, novas tarefas surgem ou há comunicação/atividade de conta
+          que o usuário não reconhece.
+        </p>
+
+        <h2>6. Quando o risco deixa de ser “diagnóstico doméstico”</h2>
+        <ul>
+          <li><strong>Arquivos criptografados ou nota de resgate:</strong> desconecte a máquina da rede e não pague como primeira reação.</li>
+          <li><strong>Acesso remoto concedido a desconhecido:</strong> encerre a sessão, desconecte a rede e trate credenciais como potencialmente expostas.</li>
+          <li><strong>Conta comprometida:</strong> em outro dispositivo confiável, troque a senha, encerre sessões e ative autenticação multifator quando disponível.</li>
+          <li><strong>Fraude bancária:</strong> use os canais oficiais da instituição; não continue conversando pelo contato que iniciou o golpe.</li>
+          <li><strong>Máquina empresarial:</strong> preserve evidências e acione o responsável de TI antes de “formatar para resolver”.</li>
+        </ul>
+
+        <h2>7. Ransomware exige contenção antes de limpeza</h2>
+        <p>
+          Se arquivos mudaram de extensão em massa, ficaram inacessíveis e surgiu pedido de pagamento, trate como
+          possível ransomware. A orientação da CISA prioriza resposta e contenção; continuar abrindo arquivos,
+          navegando em compartilhamentos ou mantendo a máquina conectada pode ampliar o impacto.
+        </p>
+        <p>
+          Backup é parte da recuperação, mas só deve ser conectado ou restaurado depois de entender se o ambiente
+          continua comprometido. Para estratégia de cópias, veja{" "}
+          <a href="/blog/backup-como-proteger-seus-arquivos">como proteger seus arquivos com backup</a>.
+        </p>
+
+        <h2>8. Golpe e malware podem acontecer juntos — ou separadamente</h2>
+        <p>
+          Um falso suporte pode convencer a pessoa a instalar software de acesso remoto sem usar malware tradicional.
+          Phishing pode roubar uma senha sem alterar o computador. Por isso, “o antivírus não encontrou nada” não
+          elimina a necessidade de revisar contas quando houve entrega de senha, código MFA, dados bancários ou acesso
+          remoto.
+        </p>
+        <p>
+          Se a suspeita começou por mensagem, ligação ou página pedindo urgência, compare também o roteiro de{" "}
+          <a href="/blog/como-proteger-computador-golpes-internet">proteção contra golpes na internet</a>.
+        </p>
+
+        <h2>9. Quando remover, quando restaurar e quando reinstalar</h2>
+        <p>
+          A escolha depende do nível de confiança que você precisa recuperar. Adware simples ou extensão indesejada
+          pode ser resolvido removendo o componente e validando o comportamento. Já persistência desconhecida,
+          múltiplas alterações de segurança, invasão com privilégio administrativo ou ambiente empresarial sensível
+          podem justificar uma reconstrução mais controlada do sistema.
+        </p>
+        <p>
+          Reinstalar o Windows não deve ser resposta automática para toda lentidão. Antes, preserve documentos,
+          confirme backups, licenças, BitLocker e dados de autenticação necessários. Para uma sequência de remoção
+          voltada a iniciantes, veja{" "}
+          <a href="/blog/como-remover-virus-windows-iniciantes">como remover vírus no Windows com critérios de parada</a>.
+        </p>
+
+        <h2>Checklist de decisão</h2>
+        <ul>
+          <li><strong>Só está lento:</strong> investigue desempenho antes de concluir “vírus”.</li>
+          <li><strong>Só o navegador mudou:</strong> revise perfil, extensões e permissões antes de tratar como infecção do sistema.</li>
+          <li><strong>A proteção registra ameaça:</strong> confira nome, caminho e ação aplicada.</li>
+          <li><strong>Proteção foi desativada sem explicação:</strong> trate como sinal relevante e investigue a origem.</li>
+          <li><strong>Há criptografia, acesso remoto indevido ou fraude:</strong> contenha imediatamente e preserve evidências.</li>
+        </ul>
+
+        <h2>Perguntas frequentes</h2>
+        <h3>Como saber se o notebook está com vírus?</h3>
+        <p>
+          O método é o mesmo de um PC Windows: combine sintomas, histórico e verificações de segurança. Lentidão,
+          calor ou bateria durando menos não confirmam malware sozinhos.
+        </p>
+
+        <h3>Se o antivírus não encontrou nada, posso descartar vírus?</h3>
+        <p>
+          Não de forma absoluta. Uma verificação limpa é uma evidência útil, mas o diagnóstico também depende do
+          comportamento observado, de contas, navegador, aplicativos instalados e mudanças recentes.
+        </p>
+
+        <h3>Pop-up dizendo “seu PC está infectado” é prova?</h3>
+        <p>
+          Não. Páginas e anúncios podem imitar alertas de segurança. Não ligue para números nem instale programas
+          indicados pelo próprio pop-up; abra a solução de segurança por um caminho confiável do sistema.
+        </p>
+
+        <h3>Devo trocar minhas senhas no computador suspeito?</h3>
+        <p>
+          Se existe possibilidade de comprometimento, prefira trocar as credenciais em outro dispositivo confiável e
+          depois encerre sessões antigas e ative MFA quando disponível.
+        </p>
+
+        <h3>Formatar sempre elimina o problema?</h3>
+        <p>
+          Uma reinstalação controlada pode recuperar confiança no sistema em alguns cenários, mas não corrige uma
+          conta já roubada, um roteador comprometido ou dados expostos. O escopo do incidente precisa ser entendido.
+        </p>
+
+        <h2>Resumo prático</h2>
+        <p>
+          <strong>Vírus não é diagnosticado por um único sintoma.</strong> Comece pelo que mudou, compare navegador e
+          sistema, confirme a proteção ativa, use apenas ferramentas confiáveis e trate ransomware, acesso remoto
+          indevido e roubo de credenciais como incidentes que pedem contenção. O objetivo não é “achar um vírus a
+          qualquer custo”, mas recuperar confiança no computador e nas contas sem criar um novo risco durante o teste.
+        </p>
+
+        <EditorialReferences slug="como-saber-se-pc-tem-virus-malware" />
+      </>
+    ),
+  },
+
   "ssd-nao-aparece-no-instalador-do-windows": {
     title: "SSD não aparece no instalador do Windows: como diagnosticar sem apagar dados",
     excerpt:
