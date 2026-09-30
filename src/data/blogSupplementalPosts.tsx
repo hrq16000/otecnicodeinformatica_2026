@@ -1185,6 +1185,131 @@ export const blogSupplementalPosts: Record<string, BlogPostContent> = {
       </>
     ),
   },
+  "windows-update-travado-desfazendo-alteracoes": {
+    title: 'Windows Update: "desfazendo alterações feitas no computador" — o que fazer',
+    excerpt:
+      "O Windows tentou instalar uma atualização e voltou atrás? Veja como interpretar a reversão, registrar o erro, usar o solucionador e o Windows RE e evitar desligamentos ou scripts que pioram o quadro.",
+    date: "2026-09-30",
+    readTime: "14 min",
+    category: "Diagnóstico",
+    content: (
+      <>
+        <p className="lead">A mensagem <strong>“desfazendo alterações feitas no computador”</strong> normalmente aparece quando uma atualização não conclui e o Windows tenta retornar a um estado inicializável. Isso é diferente de “Windows corrompido” e também não identifica a causa sozinho. O próximo passo depende de uma pergunta simples: <strong>o computador conseguiu voltar ao Windows ou ficou preso em um ciclo de falha?</strong></p>
+
+        <h2>Resposta direta: o que fazer quando aparece “desfazendo alterações”?</h2>
+        <ol>
+          <li>Se o Windows ainda está aplicando ou revertendo a atualização, não force desligamento apenas porque a porcentagem parece parada.</li>
+          <li>Quando voltar à área de trabalho, faça backup dos arquivos importantes antes de repetir a atualização.</li>
+          <li>Abra o histórico do Windows Update e anote a atualização/KB e qualquer código de erro.</li>
+          <li>Execute o solucionador do Windows Update no aplicativo <strong>Obter Ajuda</strong> e aplique as correções recomendadas.</li>
+          <li>Desconecte hardware externo não essencial e tente novamente apenas depois de corrigir a causa provável.</li>
+          <li>Se o PC não voltar ao Windows, trate o caso como recuperação: use o Windows RE e preserve a chave BitLocker antes de ações destrutivas.</li>
+        </ol>
+
+        <h2>“Desfazendo alterações” é uma reversão, não um diagnóstico</h2>
+        <p>Uma atualização pode falhar durante download, preparação, instalação ou depois da reinicialização. Quando a etapa final não é concluída, o Windows pode tentar remover o que acabou de aplicar e retornar ao estado anterior. A reversão informa que a atualização não foi mantida; ela <strong>não prova</strong> que o SSD, o driver, a memória ou o próprio Windows estejam defeituosos.</p>
+        <p>A Microsoft orienta investigar falhas de Windows Update pelo solucionador oficial e pelo código apresentado. Códigos diferentes apontam para caminhos diferentes — por exemplo, compatibilidade de driver, espaço em disco, arquivos de atualização ou permissões — e não devem ser tratados por uma receita única.</p>
+
+        <h2>1. O computador voltou normalmente ao Windows?</h2>
+        <p>Se sim, você ganhou a melhor condição para investigar: o sistema está inicializável. Antes de clicar em “Tentar novamente”:</p>
+        <ul>
+          <li>Faça backup dos arquivos pessoais importantes.</li>
+          <li>Abra <strong>Configurações → Windows Update → Histórico de atualizações</strong>.</li>
+          <li>Registre o nome/KB da atualização que falhou e o código de erro, se houver.</li>
+          <li>Confirme espaço livre suficiente e alimentação estável.</li>
+          <li>Remova temporariamente periféricos não essenciais, como HD externo, dock, leitor e adaptadores USB.</li>
+          <li>Reinicie o Windows normalmente antes de uma nova tentativa.</li>
+        </ul>
+
+        <h2>2. Comece pelo solucionador oficial, não por scripts de reset</h2>
+        <p>No Windows 11, a Microsoft orienta iniciar pelo solucionador do Windows Update no aplicativo <strong>Obter Ajuda</strong>. Ele executa diagnósticos e tenta corrigir problemas comuns sem exigir que você altere manualmente serviços, permissões ou o Registro.</p>
+        <p>Isso é preferível a baixar scripts de “reset completo do Windows Update” que mudam várias camadas de uma vez e dificultam saber o que realmente resolveu — ou o que quebrou.</p>
+
+        <h2>3. Use o código de erro para escolher a próxima etapa</h2>
+        <p>O código de erro vale mais que uma lista genérica de causas. A própria documentação Microsoft diferencia falhas ligadas a driver, espaço, cache/componentes, permissões e interrupção da atualização. Registre o código exatamente como aparece.</p>
+        <p>Se o erro for recorrente, compare também o mesmo KB e o mesmo estágio. Uma falha reproduzível depois da reinicialização é diferente de uma falha no download.</p>
+
+        <h2>4. Não use atividade de disco ou ventoinha como cronômetro absoluto</h2>
+        <p>LED piscando, ventoinha variando ou porcentagem parada podem acompanhar atividade real, mas esses sinais não informam quanto tempo “ainda falta”. Da mesma forma, silêncio e tela aparentemente congelada não criam um limite universal seguro para desligar.</p>
+        <p>Atualizações variam conforme hardware, tamanho, estado do armazenamento e etapa de manutenção. Forçar desligamento durante aplicação ou reversão pode deixar o sistema em uma condição pior. Se não existe mensagem de erro e o processo ainda está em curso, preserve energia estável e evite interrupções.</p>
+
+        <h2>5. Se voltou ao Windows, desconecte o que não é essencial</h2>
+        <p>A Microsoft recomenda remover dispositivos externos de armazenamento, docks e outros equipamentos não necessários à funcionalidade básica antes de repetir uma atualização problemática. Isso reduz variáveis de driver e detecção.</p>
+        <p>Não desinstale driver, antivírus ou utilitário por tentativa. Faça isso somente quando o código, o histórico ou a documentação do fabricante apontar compatibilidade como hipótese relevante.</p>
+
+        <h2>6. Espaço livre e alimentação importam, mas sem “número mágico”</h2>
+        <p>Atualizações precisam de espaço para baixar, descompactar e manter arquivos de reversão. Em vez de usar um percentual fixo universal, confira se o Windows Update acusa falta de espaço e libere armazenamento de forma segura antes de repetir.</p>
+        <p>Em notebook, mantenha o carregador conectado durante uma atualização importante. Em desktop, evite iniciar o processo quando a alimentação elétrica estiver instável.</p>
+
+        <h2>7. Limpar SoftwareDistribution não deve ser a primeira reação</h2>
+        <p>Recriar o cache do Windows Update pode ser útil em cenários específicos, mas não corrige driver incompatível, falta de espaço, falha de armazenamento ou problema de boot. Comece pelo solucionador e pelo código de erro. Se o cache realmente for a hipótese, use o procedimento específico em <a href="/blog/limpar-cache-do-windows-update-softwaredistribution">como limpar o cache do Windows Update</a>, que preserva reversibilidade.</p>
+
+        <h2>8. O PC entrou em laço e não volta ao Windows</h2>
+        <p>Nesse cenário, pare de tratar o problema como “só uma atualização que falhou”. O computador agora está em uma trilha de <strong>recuperação de inicialização</strong>.</p>
+        <p>O Windows Recovery Environment (Windows RE) oferece ferramentas como Reparo de Inicialização, Configurações de Inicialização e <strong>Desinstalar Atualizações</strong>. Se o problema começou imediatamente após uma atualização e o Windows não inicia, a própria Microsoft documenta a remoção da atualização recente pelo WinRE como uma opção de recuperação.</p>
+
+        <h2>9. Antes de usar o Windows RE, confirme o BitLocker</h2>
+        <p>Dispositivos criptografados podem solicitar a chave de recuperação para acessar determinadas opções. Confirme a chave em outro dispositivo antes de avançar. Se você não tem a chave e os arquivos são importantes, pare antes de redefinir, reinstalar ou alterar partições.</p>
+
+        <h2>10. Ordem de recuperação: da menos destrutiva para a mais disruptiva</h2>
+        <ol>
+          <li>Reparo de Inicialização quando o Windows não consegue iniciar normalmente.</li>
+          <li>Desinstalar a atualização recente quando a falha começou logo após ela.</li>
+          <li>Restauração do Sistema, quando existe ponto adequado e você entende o que será revertido.</li>
+          <li>Redefinição/reinstalação somente depois de backup e avaliação do impacto.</li>
+        </ol>
+        <p>A Microsoft organiza as opções de recuperação exatamente com efeitos diferentes. “Formatar” não é o próximo passo automático de uma reversão de atualização.</p>
+
+        <h2>11. Se a mesma atualização falha sempre</h2>
+        <p>Não repita indefinidamente. Registre:</p>
+        <ul>
+          <li>KB/nome da atualização;</li>
+          <li>código de erro;</li>
+          <li>se falha antes ou depois da reinicialização;</li>
+          <li>hardware ou driver alterado recentemente;</li>
+          <li>quanto espaço havia disponível;</li>
+          <li>se o Windows volta sozinho ao estado anterior.</li>
+        </ul>
+        <p>Com esse histórico, o diagnóstico passa de “Windows Update travou” para uma falha reproduzível.</p>
+
+        <h2>O que não fazer</h2>
+        <ul>
+          <li>Desligar à força apenas porque a porcentagem ficou parada.</li>
+          <li>Executar vários scripts de “reset do Update” de procedência desconhecida.</li>
+          <li>Desativar permanentemente o Windows Update.</li>
+          <li>Apagar cache, serviços e chaves do Registro todos ao mesmo tempo.</li>
+          <li>Formatar o computador antes de garantir backup e chave BitLocker.</li>
+          <li>Tratar qualquer código 0x8... como tendo a mesma causa.</li>
+        </ul>
+
+        <h2>Quando parar e procurar diagnóstico</h2>
+        <p>Pare quando o computador não volta ao Windows, entra em loop, perde acesso ao SSD, pede uma chave BitLocker que você não possui, apresenta tela azul recorrente ou existem dados importantes sem backup. Nesse ponto, preserve o estado atual e os arquivos antes de insistir.</p>
+        <p>Para uma falha mais ampla do serviço, veja <a href="/blog/windows-update-nao-funciona-o-que-verificar">Windows Update não funciona: o que verificar</a>. Se o sistema entrou em recuperação repetida, veja <a href="/blog/windows-reparo-automatico-em-loop">reparo automático em loop</a>.</p>
+
+        <h2>Perguntas frequentes</h2>
+        <h3>“Desfazendo alterações feitas no computador” apaga meus arquivos?</h3>
+        <p>A mensagem indica que o Windows está revertendo alterações da atualização. Ela não significa, por si só, que seus arquivos pessoais foram apagados. Ainda assim, faça backup assim que o Windows voltar a iniciar.</p>
+
+        <h3>Quanto tempo devo esperar?</h3>
+        <p>Não existe um tempo universal seguro para todas as atualizações e todos os computadores. Evite usar um número fixo ou apenas o LED do disco como critério para forçar desligamento.</p>
+
+        <h3>Posso tentar a mesma atualização novamente?</h3>
+        <p>Sim, depois de registrar o erro e corrigir a causa provável. Repetir sem mudar nada tende apenas a reproduzir a mesma falha.</p>
+
+        <h3>Preciso apagar SoftwareDistribution?</h3>
+        <p>Não como primeira etapa. O cache é apenas uma das possíveis origens; use primeiro o solucionador oficial e o código de erro.</p>
+
+        <h3>Se o Windows não inicia depois da reversão, devo formatar?</h3>
+        <p>Não automaticamente. O Windows RE oferece opções menos destrutivas, inclusive Reparo de Inicialização e Desinstalar Atualizações. Preserve backup e BitLocker antes de avançar.</p>
+
+        <h2>Resumo prático</h2>
+        <p>“Desfazendo alterações” significa que uma atualização não foi mantida e o Windows está tentando voltar. Se o sistema inicia, registre KB/código, faça backup e use o solucionador oficial antes de repetir. Se não inicia, mude para a trilha de recuperação pelo Windows RE e avance da opção menos destrutiva para a mais disruptiva, sempre preservando dados e BitLocker.</p>
+
+        <EditorialReferences slug="windows-update-travado-desfazendo-alteracoes" />
+      </>
+    ),
+  },
+
   "notebook-nao-liga-o-que-fazer": {
     title: "Notebook não liga: como separar energia, POST, vídeo e boot sem piorar o defeito",
     excerpt:

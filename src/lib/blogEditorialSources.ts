@@ -1904,14 +1904,19 @@ export const ARTICLE_SOURCE_MANIFEST: Record<string, ArticleSourceManifest> = {
   },
   "windows-update-travado-desfazendo-alteracoes": {
     slug: "windows-update-travado-desfazendo-alteracoes",
-    sources: [],
+    sources: [
+      "ms-windows-update-troubleshoot",
+      "ms-windows-recovery-environment",
+      "ms-recovery-options-windows",
+      "ms-bitlocker-recovery",
+    ],
     technicalReview: "reviewed",
     factChecked: true,
-    factCheckedAt: "2026-08-26",
-    stableKnowledge: true,
+    factCheckedAt: "2026-09-30",
     notes:
-      "Revisão concluída (Onda 10C, Lote 4): distinção entre interface parada e processo parado, reversão como mecanismo de proteção, causas comuns, códigos de erro sem causa única e critério de parada com criptografia de disco. Sem marca comercial e sem promessa. Conhecimento técnico estável — sem fonte visível.",
+      "Revisão material em 2026-09-30 guiada pelo GSC: 8 impressões, 0 cliques e posição média 12 entre 2026-04-01 e 2026-09-27. A query exposta 'desfazendo alterações feitas no computador' foi incorporada diretamente ao título/resposta. A versão suplementar substitui editorialmente o texto monolítico antigo, removendo tempo/LED/ventoinha como critérios determinísticos, priorizando backup, histórico/KB/código, solucionador oficial do Windows Update, hardware externo não essencial e, quando o Windows não inicia, Windows RE/Desinstalar Atualizações com chave BitLocker. Limpeza de cache deixa de ser primeira reação e formatação fica como opção posterior, não automática.",
   },
+
   "boot-uefi-ou-legacy-como-identificar": {
     slug: "boot-uefi-ou-legacy-como-identificar",
     sources: [
