@@ -1807,13 +1807,17 @@ export const ARTICLE_SOURCE_MANIFEST: Record<string, ArticleSourceManifest> = {
 
   "quanto-custa-formatar-um-computador": {
     slug: "quanto-custa-formatar-um-computador",
-    sources: [],
+    sources: [
+      "ms-win11-installation-media",
+      "ms-win11-activation",
+      "ms-bitlocker-recovery",
+      "ms-onedrive-folder-backup",
+    ],
     technicalReview: "reviewed",
     factChecked: true,
-    factCheckedAt: "2026-08-14",
-    stableKnowledge: true,
+    factCheckedAt: "2026-09-30",
     notes:
-      "Revisão concluída (Onda 8E): todos os valores citados vêm da fonte única src/lib/precosConfig.ts (visita avulsa a partir de R$ 99,99 a cada 30 minutos, pacote de 2 horas R$ 279,99 e mínimo pré-aprovado de R$ 299,99 com coleta e entrega). Peças e licenças declaradas como não inclusas. Nenhum valor estimado, nenhuma média de mercado inventada e nenhuma comparação com concorrente.",
+      "Revisão material em 2026-09-30 guiada pelo GSC: 1 impressão, 0 cliques e posição média 11 entre 2026-04-01 e 2026-09-27. A nova owner suplementar preserva a fonte única de preços em src/lib/precosConfig.ts e importa MODALIDADES diretamente, sem duplicar valores em conteúdo. Diferencia mão de obra, backup, BitLocker, licença, peças e instalação por mídia oficial; remove comparação com média de mercado e trata formatação como decisão de escopo, não solução universal. Queries individuais não foram expostas pelo GSC e nenhuma foi inventada.",
   },
   "computador-entra-direto-na-bios": {
     slug: "computador-entra-direto-na-bios",
