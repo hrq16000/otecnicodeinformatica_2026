@@ -495,14 +495,14 @@ const WAVE_8E: EditorialApproval[] = [
     status: "approved",
     authorType: "organization",
     authorId: INSTITUTIONAL_AUTHOR.id,
-    reviewedAt: "2026-09-28",
+    reviewedAt: "2026-09-30",
     approvedAt: "2026-08-14",
     imageOrigin: "licensed",
     imageLicense: "CC BY 2.0",
     imageAttribution:
       "Foto: Hamed Saber (Wikimedia Commons), CC BY 2.0 — https://commons.wikimedia.org/wiki/File:VAIO_TZ_laptop_hard_disk.jpg",
     notes:
-      "Reescrita integral na Onda 8E (o rascunho programático homônimo foi removido); intenção informacional declarada em contentIntentMap.ts; capa é fotografia real licenciada, sem IA.",
+      "Revisão material em 2026-09-30 guiada pelo GSC: 109 impressões, 1 clique e posição média ~9,53 entre 2026-04-01 e 2026-09-27. A versão suplementar passa a sobrepor editorialmente o texto monolítico antigo, preservando a mesma URL. Esclarece formatação versus preservação, separa backup, Redefinir este PC, reparo/reinstalação e instalação limpa, e reforça BitLocker, ativação, mídia oficial, identificação do disco e critérios de parada. Queries individuais não foram expostas pelo GSC e nenhuma foi inventada.",
   },
   {
     slug: "quanto-custa-formatar-um-computador",

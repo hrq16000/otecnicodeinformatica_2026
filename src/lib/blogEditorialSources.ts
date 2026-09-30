@@ -1698,14 +1698,19 @@ export const ARTICLE_SOURCE_MANIFEST: Record<string, ArticleSourceManifest> = {
   },
   "como-formatar-pc-sem-perder-arquivos": {
     slug: "como-formatar-pc-sem-perder-arquivos",
-    sources: [],
+    sources: [
+      "ms-recovery-options-windows",
+      "ms-bitlocker-backup-key",
+      "ms-win11-installation-media",
+      "ms-win11-activation",
+    ],
     technicalReview: "reviewed",
     factChecked: true,
-    factCheckedAt: "2026-08-14",
-    stableKnowledge: true,
+    factCheckedAt: "2026-09-30",
     notes:
-      "Revisão concluída (Onda 8E): critério de quando reinstalar resolve e quando não resolve, backup verificado (abrir o arquivo no destino) como pré-requisito, chave de criptografia antes de qualquer formatação, diferença entre redefinir, reinstalar por cima e instalação limpa, vínculo de licença e ordem de drivers. Sem promessa de prazo, sem marca comercial e sem passo comercial disfarçado de tutorial. Conhecimento técnico estável — sem fonte visível.",
+      "Revisão material em 2026-09-30 guiada pelo GSC: 109 impressões, 1 clique e posição média ~9,53 entre 2026-04-01 e 2026-09-27. A versão suplementar substitui editorialmente o texto monolítico antigo e esclarece que formatar/apagar uma partição não preserva os dados nela: preservação depende de backup verificado ou de opções específicas de recuperação. Separa Redefinir este PC > Manter meus arquivos, reparo/reinstalação e instalação limpa; reforça BitLocker, ativação, mídia oficial, identificação do disco e parada diante de falha física. Queries individuais não foram expostas pelo GSC e nenhuma foi inventada.",
   },
+
   "quanto-custa-formatar-um-computador": {
     slug: "quanto-custa-formatar-um-computador",
     sources: [],
