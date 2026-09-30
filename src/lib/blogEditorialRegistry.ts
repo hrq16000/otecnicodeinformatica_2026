@@ -655,14 +655,14 @@ const WAVE_10C: EditorialApproval[] = [
     status: "approved",
     authorType: "organization",
     authorId: INSTITUTIONAL_AUTHOR.id,
-    reviewedAt: "2026-08-25",
+    reviewedAt: "2026-09-29",
     approvedAt: "2026-08-25",
     imageOrigin: "licensed",
     imageLicense: "CC BY-SA 4.0",
     imageAttribution:
       "Foto: JIP (Wikimedia Commons), CC BY-SA 4.0 — https://commons.wikimedia.org/wiki/File:Blue_Screen_Of_Death_at_Urheilupuisto_metro_station.jpg",
     notes:
-      "Satélite escrito do zero na Onda 10C; fact-check registrado em blogEditorialSources.ts; capa é fotografia real licenciada, sem IA.",
+      "Revisão material em 2026-09-29 guiada pelo GSC: 6 impressões, 0 cliques e posição média ~7,17 entre 2026-04-01 e 2026-09-27. A versão suplementar passa a sobrepor editorialmente o texto monolítico antigo, preservando a mesma URL. Stop codes deixam de ser tratados como diagnóstico determinístico; entram parâmetros, dump, contexto, recorrência, WHEA, critérios de parada e fontes Microsoft visíveis. Queries individuais não foram expostas pelo GSC e nenhuma foi inventada.",
   },
   {
     slug: "testar-memoria-ram-memtest86",
