@@ -443,13 +443,13 @@ const WAVE_5H: EditorialApproval[] = [
     status: "approved",
     authorType: "organization",
     authorId: INSTITUTIONAL_AUTHOR.id,
-    reviewedAt: "2026-08-12",
+    reviewedAt: "2026-09-29",
     approvedAt: "2026-08-12",
     imageOrigin: "licensed",
     imageLicense: "CC BY-SA 2.5",
     imageAttribution: "Foto: Darkone (Wikimedia Commons), CC BY-SA 2.5 — https://commons.wikimedia.org/wiki/File:ASRock_K7VT4A_Pro_Mainboard.jpg",
     notes:
-      "Reescrita integral na Onda 5H; fact-check registrado em blogEditorialSources.ts; capa é fotografia real licenciada, sem IA.",
+      "Revisão material em 2026-09-29 guiada pelo GSC: 58 impressões, 0 cliques e posição média ~9,88 entre 2026-04-01 e 2026-09-27. Conteúdo expandido para separar alimentação, POST, memória, vídeo, firmware e falhas parciais; inclui matriz de sintomas, configuração mínima com limites, validação pós-reparo, critérios de parada e fontes técnicas visíveis. Queries individuais não foram expostas pelo GSC e nenhuma foi inventada.",
   },
 ];
 
