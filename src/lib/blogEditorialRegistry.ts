@@ -545,14 +545,14 @@ const WAVE_9B: EditorialApproval[] = [
     status: "approved",
     authorType: "organization",
     authorId: INSTITUTIONAL_AUTHOR.id,
-    reviewedAt: "2026-08-15",
+    reviewedAt: "2026-09-30",
     approvedAt: "2026-08-15",
     imageOrigin: "licensed",
     imageLicense: "CC BY 2.0",
     imageAttribution:
       "Foto: woodleywonderworks (Wikimedia Commons), CC BY 2.0 — https://commons.wikimedia.org/wiki/File:Student_on_computer.jpg",
     notes:
-      "Pilar nacional DEFINITION/LEARNING escrito do zero na Rodada 9B; capa é fotografia real licenciada (CC BY 2.0), sem IA.",
+      "Revisão material em 2026-09-30 guiada pelo GSC: 55 impressões, 0 cliques e posição média ~49,36 entre 2026-04-01 e 2026-09-27. Queries reais como “conhecimento basico informatica”, “informatica basica”, “informatica basica conteúdo”, “informatica basica resumo” e “noções básicas de informática” foram incorporadas. A versão suplementar passa a sobrepor editorialmente o texto monolítico antigo, com mapa de competências, checklist prático, arquivos/pastas, produtividade, nuvem/backup, segurança e separação explícita entre básico e avançado.",
   },
   {
     slug: "como-aprender-informatica",
