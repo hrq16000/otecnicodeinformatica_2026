@@ -1369,13 +1369,12 @@ export const ARTICLE_SOURCE_MANIFEST: Record<string, ArticleSourceManifest> = {
   },
   "como-clonar-hd-para-ssd": {
     slug: "como-clonar-hd-para-ssd",
-    sources: [],
+    sources: ["ms-bitlocker-backup-key", "ms-bcdboot"],
     technicalReview: "reviewed",
     factChecked: true,
-    factCheckedAt: "2026-08-12",
-    stableKnowledge: true,
+    factCheckedAt: "2026-09-29",
     notes:
-      "Revisão concluída (Onda 5E): critério entre clonar e reinstalar, alerta de leitura integral em disco com setores defeituosos, exigência de backup independente, cópia de todas as partições e primeiro boot com disco único. Sem indicação de marca de software e sem promessa de ganho numérico. Conhecimento técnico estável — sem fonte visível.",
+      "Revisão material em 2026-09-29 guiada pelo GSC: 52 impressões, 0 cliques e posição média ~7,92 entre 2026-04-01 e 2026-09-27. O conteúdo passa a separar clonar, reinstalar e primeiro preservar dados; corrige a simplificação de SSD menor, trata partições de boot e BitLocker, valida o primeiro boot antes de apagar a origem e adiciona critérios de parada para HD instável. Queries individuais não foram expostas pelo GSC e nenhuma foi inventada. BitLocker e BCDBoot são ancorados em documentação oficial Microsoft.",
   },
   "como-instalar-segundo-ssd-notebook": {
     slug: "como-instalar-segundo-ssd-notebook",
