@@ -1185,6 +1185,107 @@ export const blogSupplementalPosts: Record<string, BlogPostContent> = {
       </>
     ),
   },
+  "permissoes-de-camera-no-windows": {
+    title: "Permissões de câmera no Windows: por que funciona em um app e falha em outro",
+    excerpt:
+      "Como separar acesso do dispositivo, aplicativos da Microsoft Store, apps de desktop, navegador e site quando a câmera funciona em um lugar e é bloqueada em outro.",
+    date: "2026-09-30",
+    readTime: "12 min",
+    category: "Procedimentos Técnicos",
+    content: (
+      <>
+        <p className="lead">Se a câmera funciona no aplicativo Câmera do Windows, mas falha no navegador ou em um programa específico, o problema pode estar em <strong>permissão</strong>, não no hardware. No Windows, acesso do dispositivo, aplicativos da Microsoft Store, aplicativos de desktop e permissões de site são camadas diferentes.</p>
+
+        <h2>Resposta direta: onde liberar a câmera no Windows 11?</h2>
+        <p>Abra <strong>Configurações → Privacidade e segurança → Câmera</strong>. Confirme, nesta ordem:</p>
+        <ol>
+          <li><strong>Acesso à câmera</strong> ativado no dispositivo;</li>
+          <li><strong>Permitir que os aplicativos acessem sua câmera</strong> ativado;</li>
+          <li>a permissão individual do aplicativo da Microsoft Store, quando ele aparecer na lista;</li>
+          <li><strong>Permitir que aplicativos da área de trabalho acessem sua câmera</strong> ativado para navegadores, clientes de reunião e outros programas desktop.</li>
+        </ol>
+        <p>Se o uso é pelo navegador, ainda existe uma camada adicional: o <strong>site</strong> precisa estar autorizado a usar a câmera.</p>
+
+        <h2>1. Teste primeiro no aplicativo Câmera</h2>
+        <p>Abra o aplicativo Câmera do Windows. Se ele mostra imagem, o dispositivo está sendo reconhecido e a investigação muda para permissão/seleção dentro do aplicativo que falha. Se o próprio aplicativo Câmera não funciona, siga para permissões globais, driver e detecção.</p>
+        <p>Quando a câmera nem aparece no sistema, use <a href="/blog/webcam-nao-funciona-o-que-verificar">webcam não funciona: o que verificar</a>. Para webcam externa que nem é detectada, use <a href="/blog/webcam-usb-nao-e-detectada">webcam USB não detectada</a>.</p>
+
+        <h2>2. As camadas de permissão não são equivalentes</h2>
+        <table>
+          <thead><tr><th>Camada</th><th>Controla</th><th>Quando costuma ser o problema</th></tr></thead>
+          <tbody>
+            <tr><td>Acesso à câmera</td><td>Disponibilidade geral do recurso no dispositivo</td><td>A câmera fica bloqueada de forma ampla</td></tr>
+            <tr><td>Permitir apps acessarem a câmera</td><td>Aplicativos da Microsoft Store</td><td>Apps modernos falham mesmo com câmera detectada</td></tr>
+            <tr><td>Permissão individual</td><td>App específico da Store</td><td>Um app funciona e outro não</td></tr>
+            <tr><td>Apps da área de trabalho</td><td>Navegadores e programas desktop</td><td>Browser/cliente de reunião não recebe vídeo</td></tr>
+            <tr><td>Permissão do site</td><td>Site dentro do navegador</td><td>Um site funciona e outro fica bloqueado</td></tr>
+          </tbody>
+        </table>
+
+        <h2>3. Por que meu aplicativo não aparece na lista?</h2>
+        <p>A Microsoft diferencia aplicativos da Microsoft Store de <strong>aplicativos de desktop</strong>. Programas desktop podem não aparecer com um botão individual na lista. Nesses casos, o controle relevante é a chave geral de aplicativos da área de trabalho.</p>
+        <p>Por isso, não conclua que o Windows “não reconheceu” o aplicativo só porque ele não aparece como item individual.</p>
+
+        <h2>4. Navegador: Windows liberado ainda não significa site liberado</h2>
+        <p>Mesmo com a câmera liberada para aplicativos de desktop, o navegador mantém permissões por site. Se uma videoconferência funciona em um domínio e falha em outro, confira a permissão daquele site antes de reinstalar driver.</p>
+        <p>No Edge, a Microsoft informa que o site ainda precisa receber autorização própria para usar câmera/microfone. Outros navegadores têm controle equivalente.</p>
+
+        <h2>5. Se a opção estiver cinza ou não puder ser alterada</h2>
+        <p>Em computador corporativo ou escolar, o acesso pode estar sob controle do administrador. A própria Microsoft informa que, quando a configuração de acesso à câmera não pode ser alterada, pode ser necessário um administrador do dispositivo.</p>
+        <p>Não use Registro, política local ou scripts para contornar uma política de máquina gerenciada sem autorização.</p>
+
+        <h2>6. Câmera liberada, mas o app ainda não mostra imagem</h2>
+        <p>Verifique dentro do próprio aplicativo qual câmera está selecionada. Notebooks podem ter câmera interna, câmera infravermelha/Windows Hello e webcam USB ao mesmo tempo. O app pode estar apontando para outro dispositivo.</p>
+        <p>Também feche temporariamente outros aplicativos que estejam usando a câmera. Depois faça um teste cruzado: Câmera do Windows → aplicativo problemático → navegador/site.</p>
+
+        <h2>7. O indicador de câmera ajuda a entender o que está acontecendo</h2>
+        <p>A Microsoft informa que dispositivos podem acender um LED físico quando a câmera está ativa; quando não há luz dedicada, o Windows pode mostrar uma notificação. Esse indicador é útil para perceber que algum processo abriu a câmera, mas não identifica sozinho qual aplicativo está com problema.</p>
+
+        <h2>8. Windows Hello é uma exceção importante</h2>
+        <p>A câmera usada pelo Windows Hello pode funcionar mesmo em situações em que o acesso de aplicativos esteja desativado. Portanto, “o reconhecimento facial funciona” não prova que permissões de câmera para apps estejam corretas.</p>
+
+        <h2>Sequência segura de diagnóstico</h2>
+        <ol>
+          <li>Teste no aplicativo Câmera do Windows.</li>
+          <li>Abra Configurações → Privacidade e segurança → Câmera.</li>
+          <li>Confirme acesso do dispositivo e acesso de apps.</li>
+          <li>Se for app da Store, confirme a permissão individual.</li>
+          <li>Se for navegador/programa desktop, confirme a chave de apps de área de trabalho.</li>
+          <li>Se for navegador, confira também a permissão do site.</li>
+          <li>Dentro do app, confirme qual câmera está selecionada.</li>
+          <li>Se ainda falhar, volte para driver/detecção, não continue alterando privacidade ao acaso.</li>
+        </ol>
+
+        <h2>O que não fazer</h2>
+        <ul>
+          <li>Liberar a câmera globalmente para todos os sites como “solução”.</li>
+          <li>Editar Registro para contornar política corporativa.</li>
+          <li>Reinstalar driver antes de confirmar se o hardware já funciona no app Câmera.</li>
+          <li>Assumir defeito físico porque um único site bloqueou o vídeo.</li>
+          <li>Assumir que Windows Hello funcionando significa permissão de apps funcionando.</li>
+        </ul>
+
+        <h2>Perguntas frequentes</h2>
+        <h3>Por que a câmera funciona no Teams/Zoom e não no navegador?</h3>
+        <p>Porque o navegador e o site têm permissões próprias. Compare a chave de aplicativos de desktop com a permissão do domínio que está tentando usar.</p>
+
+        <h3>Por que meu programa não aparece na lista de apps com acesso à câmera?</h3>
+        <p>Ele pode ser um aplicativo de desktop. Esses programas não necessariamente recebem um controle individual na mesma lista.</p>
+
+        <h3>Se a opção está cinza, é defeito?</h3>
+        <p>Não necessariamente. Pode existir política administrativa. Em máquina gerenciada, confirme com o administrador antes de tentar alterar configuração por outros meios.</p>
+
+        <h3>Se o app Câmera funciona, o hardware está perfeito?</h3>
+        <p>Ele fornece evidência forte de que câmera/driver básicos estão funcionando naquele teste. Ainda podem existir problemas específicos de aplicativo, dispositivo selecionado ou uso concorrente.</p>
+
+        <h2>Resumo prático</h2>
+        <p>Quando a câmera funciona em um lugar e falha em outro, siga a cadeia <strong>dispositivo → apps → app individual/desktop → navegador → site</strong>. Mude uma camada por vez. Se o app Câmera também falhar, volte para detecção e driver em vez de continuar mexendo apenas em permissões.</p>
+
+        <EditorialReferences slug="permissoes-de-camera-no-windows" />
+      </>
+    ),
+  },
+
   "como-recuperar-dados-hd-com-defeito": {
     title: "Recuperar dados de HD com defeito: o que fazer antes de tentar consertar",
     excerpt:
