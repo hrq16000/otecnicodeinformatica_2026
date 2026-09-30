@@ -1425,7 +1425,7 @@ export const ARTICLE_SOURCE_MANIFEST: Record<string, ArticleSourceManifest> = {
     factChecked: true,
     factCheckedAt: "2026-09-29",
     notes:
-      "Revisão material em 2026-09-29 guiada pelo GSC e pela restauração da owner editorial: 7 impressões, 0 cliques e posição média ~8,43 entre 2026-04-01 e 2026-09-27. O artigo separa formato M.2 de protocolo SATA/NVMe, exige confirmação do segundo slot no modelo exato, orienta montagem reversível, diferencia disco de dados de migração do Windows, explica inicialização segura no Gerenciamento de Disco e adiciona critérios de parada. Queries individuais não foram expostas pelo GSC e nenhuma foi inventada. Compatibilidade M.2/NVMe, inicialização de disco e BitLocker são ancorados em fontes oficiais/primárias.",
+      "Revisão material em 2026-09-29 guiada pelo GSC: 7 impressões, 0 cliques e posição média ~8,43 entre 2026-04-01 e 2026-09-27. A versão suplementar substitui editorialmente a versão monolítica antiga, preservando a mesma URL. O artigo separa formato M.2 de protocolo SATA/NVMe, exige confirmação do segundo slot no modelo exato, orienta montagem reversível, diferencia disco de dados de migração do Windows, explica inicialização segura no Gerenciamento de Disco e adiciona critérios de parada. Queries individuais não foram expostas pelo GSC e nenhuma foi inventada. Compatibilidade M.2/NVMe, inicialização de disco e BitLocker são ancorados em fontes oficiais/primárias.",
   },
 
   "ransomware-como-proteger-empresa": {
