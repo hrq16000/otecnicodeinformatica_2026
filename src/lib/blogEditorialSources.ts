@@ -1419,13 +1419,12 @@ export const ARTICLE_SOURCE_MANIFEST: Record<string, ArticleSourceManifest> = {
   },
   "como-conectar-wifi-tv-nao-conecta": {
     slug: "como-conectar-wifi-tv-nao-conecta",
-    sources: [],
+    sources: ["fcc-home-network-tips"],
     technicalReview: "reviewed",
     factChecked: true,
-    factCheckedAt: "2026-08-12",
-    stableKnowledge: true,
+    factCheckedAt: "2026-09-29",
     notes:
-      "Revisão concluída (Onda 5G): teste comparativo com celular no mesmo ponto, limitação de 2,4 GHz em TVs, isolamento de clientes/rede de visitantes, congestionamento de canal em prédio e critério para suspeitar do módulo Wi-Fi do aparelho. Sem estatística inventada e sem promessa de reparo. Conhecimento técnico estável — sem fonte visível.",
+      "Revisão material em 2026-09-29 guiada pelo GSC: 257 impressões, 0 cliques e posição média ~9,22 na janela assentada até 2026-09-27. O texto deixa de tratar banda, cabo ou reset como respostas automáticas; separa descoberta, autenticação, acesso à internet, quedas e descoberta local. Comparação no mesmo ponto e influência da rede doméstica são ancoradas na orientação oficial da FCC. Queries individuais não foram expostas pelo GSC e nenhuma foi inventada.",
   },
   "como-testar-fonte-de-alimentacao-pc": {
     slug: "como-testar-fonte-de-alimentacao-pc",
