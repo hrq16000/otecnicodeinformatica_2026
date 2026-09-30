@@ -509,14 +509,14 @@ const WAVE_8E: EditorialApproval[] = [
     status: "approved",
     authorType: "organization",
     authorId: INSTITUTIONAL_AUTHOR.id,
-    reviewedAt: "2026-08-14",
+    reviewedAt: "2026-09-30",
     approvedAt: "2026-08-14",
     imageOrigin: "licensed",
     imageLicense: "Domínio público (obra do governo federal dos EUA)",
     imageAttribution:
       "Foto: Airman 1st Class Jordyn Fetter, U.S. Air Force (Wikimedia Commons), domínio público — https://commons.wikimedia.org/wiki/File:Replacing_hardware_160210-F-KR223-021.jpg",
     notes:
-      "URL nova da Onda 8E com intenção comercial de avaliação de custo; todos os valores vêm de src/lib/precosConfig.ts; capa é fotografia real de domínio público, sem IA.",
+      "Revisão material em 2026-09-30 guiada pelo GSC: 1 impressão, 0 cliques e posição média 11 entre 2026-04-01 e 2026-09-27. URL Inspection: PASS, Submitted and indexed, ALLOWED, INDEXING_ALLOWED, SUCCESSFUL e rastreada como MOBILE. A owner suplementar usa diretamente MODALIDADES de src/lib/precosConfig.ts para manter os valores sincronizados, amplia escopo/backup/licença/BitLocker e registra fontes oficiais Microsoft. Queries individuais não foram expostas pelo GSC e nenhuma foi inventada.",
   },
 ];
 
