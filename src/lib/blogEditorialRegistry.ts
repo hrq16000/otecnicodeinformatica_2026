@@ -316,14 +316,14 @@ const WAVE_5D: EditorialApproval[] = [
     status: "approved",
     authorType: "organization",
     authorId: INSTITUTIONAL_AUTHOR.id,
-    reviewedAt: "2026-08-12",
+    reviewedAt: "2026-09-30",
     approvedAt: "2026-08-12",
     imageOrigin: "licensed",
     imageLicense: "CC BY-SA 3.0",
     imageAttribution:
       "Foto: Jyothis (Wikimedia Commons), CC BY-SA 3.0 — https://commons.wikimedia.org/wiki/File:Thermal_compound_Applied.JPG",
     notes:
-      "Reescrita integral na Onda 5D; fact-check registrado em blogEditorialSources.ts; capa é fotografia real licenciada, sem IA.",
+      "Revisão material em 2026-09-30 guiada pelo GSC: 24 impressões, 0 cliques e posição média ~17,33 entre 2026-04-01 e 2026-09-27. Queries reais de troca de pasta térmica foram incorporadas. A versão suplementar passa a sobrepor editorialmente o texto monolítico antigo, com diagnóstico antes da desmontagem, manual/OEM, isolamento da bateria, preservação de pads, reaplicação após remoção do dissipador, sem quantidade universal para notebook, validação antes/depois e critérios de parada.",
   },
 ];
 

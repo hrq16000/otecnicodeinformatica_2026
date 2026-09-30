@@ -473,6 +473,31 @@ export const EDITORIAL_SOURCES: Record<string, EditorialSource> = {
       "Limpar cache remove dados temporários; limpar dados remove configurações e dados do aplicativo.",
     ],
   },
+  "intel-thermal-paste-2026": {
+    id: "intel-thermal-paste-2026",
+    title: "How to Apply Thermal Paste and How It Works",
+    publisher: "Intel",
+    url: "https://www.intel.com/content/www/us/en/gaming/resources/how-to-apply-thermal-paste.html",
+    accessedAt: "2026-09-30",
+    sourceType: "official",
+    supports: [
+      "O material térmico preenche imperfeições microscópicas entre processador e solução de refrigeração para melhorar a transferência de calor.",
+      "A Intel orienta consultar as instruções do cooler e do material, evitar adicionar pasta sobre material pré-aplicado e reaplicar quando o cooler é removido.",
+    ],
+  },
+  "amd-thermal-interface-2026": {
+    id: "amd-thermal-interface-2026",
+    title: "Instruções para instalação e Informações de Garantia para processadores AMD",
+    publisher: "AMD",
+    url: "https://www.amd.com/pt/resources/support-articles/faqs/CPU-200.html",
+    accessedAt: "2026-09-30",
+    sourceType: "official",
+    supports: [
+      "A AMD exige solução térmica adequada e material de interface térmica compatível.",
+      "Quando a solução térmica é removida após a instalação, a AMD orienta limpar e aplicar novo material de interface antes da reinstalação.",
+    ],
+  },
+
   "hp-computer-no-power-2026": {
     id: "hp-computer-no-power-2026",
     title: "HP PCs - Computer does not turn on, start, or boot",
@@ -1511,14 +1536,17 @@ export const ARTICLE_SOURCE_MANIFEST: Record<string, ArticleSourceManifest> = {
   },
   "como-trocar-pasta-termica-notebook": {
     slug: "como-trocar-pasta-termica-notebook",
-    sources: [],
+    sources: [
+      "intel-thermal-paste-2026",
+      "amd-thermal-interface-2026",
+    ],
     technicalReview: "reviewed",
     factChecked: true,
-    factCheckedAt: "2026-08-12",
-    stableKnowledge: true,
+    factCheckedAt: "2026-09-30",
     notes:
-      "Revisão concluída (Onda 5D): critério para separar interface térmica de obstrução, ordem alternada de soltura/aperto do dissipador, preservação de almofadas térmicas, preferência por composto não condutivo, sem marca, sem quantidade em medida absoluta e sem promessa de resultado. Conhecimento técnico estável — sem fonte visível.",
+      "Revisão material em 2026-09-30 guiada pelo GSC: 24 impressões, 0 cliques e posição média ~17,33 entre 2026-04-01 e 2026-09-27. Queries reais incluem 'como trocar a pasta termica do notebook', 'como trocar pasta termica', 'troca da pasta termica', 'troca de pasta térmica' e variações. A versão suplementar substitui editorialmente o texto monolítico antigo e reforça diagnóstico antes da desmontagem, manual do modelo, isolamento de bateria, preservação de thermal pads, reaplicação após remoção do dissipador, ausência de quantidade universal para notebook, validação antes/depois sob a mesma carga e critérios de parada.",
   },
+
   "como-clonar-hd-para-ssd": {
     slug: "como-clonar-hd-para-ssd",
     sources: ["ms-bitlocker-backup-key", "ms-bcdboot"],
