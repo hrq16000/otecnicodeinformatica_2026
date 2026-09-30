@@ -714,14 +714,14 @@ const WAVE_10D: EditorialApproval[] = [
     status: "approved",
     authorType: "organization",
     authorId: INSTITUTIONAL_AUTHOR.id,
-    reviewedAt: "2026-08-26",
+    reviewedAt: "2026-09-30",
     approvedAt: "2026-08-26",
     imageOrigin: "licensed",
     imageLicense: "CC BY-SA 2.0",
     imageAttribution:
       "Foto: Kent Madsen (Wikimedia Commons), CC BY-SA 2.0 — https://commons.wikimedia.org/wiki/File:CMOS_Battery,_Motherboard.jpg",
     notes:
-      "Satélite escrito do zero na Onda 10D; fact-check registrado em blogEditorialSources.ts; capa é fotografia real licenciada, sem IA.",
+      "Revisão material em 2026-09-30 guiada pelo GSC: 11 impressões, 0 cliques e posição média 27 entre 2026-04-01 e 2026-09-27. As únicas queries individuais expostas foram 'bios corrompida' e 'reparar bios'. A versão suplementar preserva a mesma URL e separa reset de CMOS/configuração, atualização e recuperação real de firmware; exige procedimento específico do fabricante/modelo, alimentação estável e preparação da chave BitLocker.",
   },
 ];
 
