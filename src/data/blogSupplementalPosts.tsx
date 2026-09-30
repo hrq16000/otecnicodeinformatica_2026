@@ -1186,76 +1186,143 @@ export const blogSupplementalPosts: Record<string, BlogPostContent> = {
     ),
   },
   "como-diagnosticar-placa-mae-defeituosa": {
-    title: "Placa-mãe defeituosa: como confirmar antes de trocar a peça errada",
+    title: "Placa-mãe com defeito: como diagnosticar sem trocar peça por tentativa",
     excerpt:
-      "Inspeção visual, teste mínimo e eliminação sistemática para distinguir falha de placa-mãe de falha de memória, fonte ou refrigeração — e quando reparo eletrônico ainda faz sentido.",
-    date: "2026-08-12",
-    readTime: "11 min",
+      "Separe alimentação, POST, memória, vídeo, firmware e defeito físico antes de condenar a placa-mãe. Veja testes controlados, limites e critérios para parar.",
+    date: "2026-09-29",
+    readTime: "15 min",
     category: "Procedimentos Técnicos",
     content: (
       <>
-        <p className="lead">Placa-mãe é o diagnóstico que mais se conclui por eliminação e o que mais se erra por pressa. Ela não costuma dar um sintoma próprio: ela faz outro componente parecer defeituoso. Confirmar exige método, e o método é sempre reduzir a máquina até sobrar uma variável.</p>
+        <p className="lead">Placa-mãe raramente deve ser o primeiro diagnóstico. O mesmo sintoma — não ligar, reiniciar, ficar sem vídeo ou travar no POST — pode nascer na fonte, memória, processador, placa de vídeo, periférico, montagem, firmware ou na própria placa. O diagnóstico mais confiável reduz variáveis, registra o que muda e só aumenta a suspeita da placa quando alternativas compatíveis foram eliminadas de forma controlada.</p>
 
-        <h2>Resposta direta: como saber se a placa-mãe está com defeito?</h2>
-        <p>Não existe um teste único que confirme placa-mãe defeituosa em todos os casos. A suspeita fica consistente quando o defeito continua reproduzível depois de verificar alimentação, memória, periféricos, temperatura e compatibilidade, ou quando existe evidência física direta como queimado, corrosão, trilha rompida ou soquete danificado. Trocar a placa antes dessa eliminação é uma das formas mais comuns de gastar com a peça errada.</p>
+        <h2>Resposta direta: quando a placa-mãe vira suspeita forte?</h2>
+        <p>A suspeita fica forte quando o defeito permanece reproduzível em uma configuração mínima, com alimentação e memória verificadas por comparação controlada, compatibilidade confirmada e sem periféricos desnecessários; ou quando existe evidência física direta, como carbonização, corrosão, trilha rompida, conector danificado ou pinos do soquete deformados.</p>
+        <p>Mesmo assim, “liga mas não dá vídeo” ou “reinicia sozinho” não são provas de placa-mãe. Eles apenas mostram em qual etapa o computador parou. O trabalho é descobrir se a falha ocorre antes da alimentação estabilizar, durante o POST, na inicialização de vídeo/memória ou depois que o firmware já entregou o controle ao sistema.</p>
 
-        <h2>Por que o sintoma engana</h2>
-        <p>A placa distribui energia, comanda o vídeo integrado, controla memória, armazenamento e portas. Quando um desses caminhos falha na própria placa, o efeito aparece no periférico ligado ali. Um slot de memória com contato ruim gera erro que parece pente defeituoso; uma regulagem instável na placa gera reinício que parece fonte fraca; um controlador de USB travado parece cabo ou dispositivo.</p>
-        <p>Por isso, não é seguro concluir “placa-mãe” apenas pelo sintoma. A hipótese ganha força quando alimentação, memória, periféricos, temperatura e configuração foram isolados de forma controlada e o comportamento permanece reproduzível.</p>
+        <h2>Mapa rápido: sintoma não é diagnóstico</h2>
+        <table>
+          <thead>
+            <tr><th>O que acontece</th><th>Hipóteses que ainda precisam ser separadas</th><th>Próxima comparação útil</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Nenhum sinal de energia</td><td>Tomada, cabo, fonte, botão/painel frontal, curto de montagem, placa</td><td>Confirmar alimentação e acionamento antes de memória ou sistema.</td></tr>
+            <tr><td>Ventoinhas giram, sem vídeo</td><td>POST, memória, CPU, GPU, monitor/cabo, firmware, placa</td><td>Separar “sem imagem” de “não conclui POST”.</td></tr>
+            <tr><td>Liga e desliga rapidamente</td><td>Proteção da fonte, curto, alimentação de CPU, montagem, placa</td><td>Reduzir a configuração e revisar conexões sem insistir em ciclos repetidos.</td></tr>
+            <tr><td>Falha só em uma porta ou slot</td><td>Periférico, cabo, compatibilidade, slot, controlador, placa</td><td>Comparar com componente conhecido como funcional e outra interface compatível.</td></tr>
+            <tr><td>Trava ou reinicia sob carga</td><td>Fonte, temperatura, memória, CPU, GPU, placa</td><td>Reproduzir uma variável por vez e registrar temperatura/alimentação.</td></tr>
+          </tbody>
+        </table>
 
-        <h2>Inspeção visual — o passo que resolve muitos casos</h2>
-        <p>Antes de qualquer teste, com o cabo de força retirado, observe a placa com boa luz:</p>
+        <h2>1. Comece com inspeção desligada e sem energia</h2>
+        <p>Retire o cabo de força antes de tocar em componentes internos. Use boa iluminação e procure sinais que mudam a prioridade do diagnóstico:</p>
         <ul>
-          <li><strong>Capacitores deformados ou com resíduo:</strong> topo abaulado, aberto ou com crosta escura indicam peça no fim.</li>
-          <li><strong>Escurecimento e carbonização:</strong> trilha ou componente queimado é evidência direta.</li>
-          <li><strong>Corrosão:</strong> manchas esverdeadas ou esbranquiçadas indicam umidade ou líquido derramado, comum em máquinas guardadas.</li>
-          <li><strong>Dano mecânico:</strong> pino torto no soquete, trava de slot quebrada, trilha rompida perto de furo de parafuso.</li>
-          <li><strong>Poeira compactada e pasta térmica ressecada:</strong> não é defeito de placa, mas muda o comportamento térmico e precisa ser corrigido antes de qualquer conclusão.</li>
+          <li><strong>Carbonização ou cheiro de queimado:</strong> interrompa novas tentativas até localizar a área afetada.</li>
+          <li><strong>Corrosão ou resíduo de líquido:</strong> a extensão pode ir além do ponto visível; limpeza superficial não comprova recuperação.</li>
+          <li><strong>Pinos tortos no soquete:</strong> podem afetar memória, PCIe, vídeo ou inicialização e não devem ser “endireitados por tentativa”.</li>
+          <li><strong>Conectores ATX/EPS danificados:</strong> escurecimento, plástico deformado ou folga mudam a investigação para alimentação e contato.</li>
+          <li><strong>Parafuso, espaçador ou objeto metálico fora de posição:</strong> pode criar contato indevido com o gabinete.</li>
         </ul>
+        <p>Poeira e pasta térmica envelhecida merecem correção quando afetam refrigeração, mas não devem ser tratadas como prova de defeito eletrônico da placa.</p>
 
-        <h2>Teste mínimo: reduzir até sobrar o essencial</h2>
-        <p>A montagem mínima existe para eliminar interferência. Ficam apenas placa, processador com refrigeração, um módulo de memória e a fonte. Saem armazenamento, placa de vídeo dedicada, periféricos e cabos de painel frontal que não sejam necessários.</p>
+        <h2>2. Separe alimentação de placa antes de culpar a placa</h2>
+        <p>Uma fonte pode acionar ventoinhas e ainda assim não manter as saídas dentro das condições exigidas sob carga. O guia ATX define faixas de regulação e proteções, portanto uma observação isolada em repouso não basta para declarar a fonte saudável. Quando houver suspeita de alimentação, use medição adequada ou uma fonte conhecida, compatível e em boas condições como comparação controlada.</p>
+        <p>O procedimento e seus limites estão em <a href="/blog/como-testar-fonte-de-alimentacao-pc">como testar a fonte de alimentação do PC</a>. Se o computador desliga imediatamente, consulte também <a href="/blog/curto-circuito-placa-mae-como-identificar">como separar curto de outros desligamentos de proteção</a>. Proteção acionada não identifica sozinha qual peça originou a condição.</p>
+
+        <h2>3. Faça uma configuração mínima — mas entenda o que ela prova</h2>
+        <p>O objetivo da configuração mínima é retirar variáveis, não “provar” automaticamente que a placa está boa ou ruim. Em um desktop típico, permanecem placa-mãe, processador com refrigeração, alimentação necessária e um módulo de memória na posição indicada pelo manual. Placa de vídeo dedicada só permanece quando a plataforma não oferece outro caminho de vídeo utilizável.</p>
         <ol>
-          <li>Monte só o essencial e tente ligar usando o vídeo integrado, quando existir.</li>
-          <li>Se chegar à tela de configuração da BIOS, a placa responde no nível básico — o defeito está no que foi removido.</li>
-          <li>Se não chegar, devolva um componente por vez e observe em qual deles o comportamento muda.</li>
-          <li>Anote cada passo. Diagnóstico de placa se perde quando se troca duas coisas ao mesmo tempo.</li>
+          <li>Desconecte armazenamento, USBs, placas adicionais e acessórios não essenciais.</li>
+          <li>Confirme ATX principal e alimentação do processador; conectores visualmente parecidos não devem ser trocados entre si.</li>
+          <li>Use um módulo de memória conhecido como funcional e o slot recomendado pelo manual para configuração com um módulo.</li>
+          <li>Ligue uma vez e observe LEDs de diagnóstico, bipes, códigos de POST e comportamento das ventoinhas.</li>
+          <li>Altere uma única variável por vez. Se trocar memória e fonte ao mesmo tempo, você perde a evidência de qual mudança alterou o sintoma.</li>
         </ol>
+        <p>Se a máquina alcança o firmware na configuração mínima, isso mostra que o caminho básico de inicialização funcionou naquele teste. Não prova que todas as portas, slots e controladores da placa estejam saudáveis.</p>
 
-        <h2>Isolando memória e slots</h2>
-        <p>Teste um módulo por vez e, quando o manual permitir, compare os slots. Se um módulo específico falha em diferentes posições enquanto outro funciona, a memória vira suspeita forte. Se módulos conhecidos como bons falham de forma repetível na mesma posição, investigue o slot e a placa, mas considere também controlador de memória, soquete/processador e regras de população da plataforma antes de fechar diagnóstico. Encaixe parcial e contato ruim também podem imitar esse quadro.</p>
+        <h2>4. Memória: erro pode vir do módulo, slot, CPU ou placa</h2>
+        <p>Teste um módulo por vez e siga a ordem de slots indicada no manual. Um módulo que falha em diferentes slots enquanto outro funciona nas mesmas condições aponta mais para o módulo. Já diferentes módulos conhecidos como bons falhando repetidamente no mesmo slot aumentam a suspeita daquele caminho, mas ainda podem existir dependências do soquete, do controlador de memória integrado ao processador ou das regras de população da plataforma.</p>
+        <p>Ferramentas de teste de memória ajudam a detectar erro, mas não identificam automaticamente a peça causadora. A própria documentação do Memtest86+ ressalta que erros podem envolver memória, processador, caches ou placa-mãe. Por isso, resultado de teste deve ser combinado com isolamento físico e repetibilidade.</p>
+        <p>Se precisar aprofundar essa etapa, use <a href="/blog/testar-memoria-ram-memtest86">como testar memória RAM sem confundir erro com peça culpada</a>.</p>
 
-        <h2>Descartando a fonte antes de acusar a placa</h2>
-        <p>Falhas de alimentação podem imitar uma placa sem resposta. Confirme a fonte por método adequado ao caso — incluindo medição e, quando disponível, comparação com uma fonte conhecida e compatível. O procedimento completo está em <a href="/blog/como-testar-fonte-de-alimentacao-pc">como testar a fonte de alimentação</a>. Esse descarte aumenta a qualidade do diagnóstico antes de atribuir a causa à placa.</p>
+        <h2>5. LEDs, bipes e códigos de POST indicam estágio, não sentença</h2>
+        <p>Muitas placas oferecem LEDs CPU/DRAM/VGA/BOOT, alto-falante para bipes ou visor de código. Esses recursos são úteis para descobrir <em>onde</em> a inicialização parou. O significado exato depende do fabricante, modelo e versão do firmware.</p>
+        <p>Se o LED DRAM permanece aceso, por exemplo, isso orienta a investigação para treinamento de memória, módulo, slot, controlador e compatibilidade — não autoriza concluir “memória queimada” nem “placa queimada”. Consulte o manual do modelo exato e compare o comportamento depois de uma única mudança controlada.</p>
 
-        <h2>Sinais de diagnóstico da própria placa</h2>
-        <p>Muitas placas indicam onde o processo parou: sequência sonora quando existe alto-falante interno, LEDs de estágio identificando processador, memória, vídeo ou inicialização, e visor de código em modelos mais completos. Esses códigos variam por fabricante — o valor deles é apontar a etapa que travou, não entregar a peça culpada. Confira o significado no manual do modelo exato, nunca em tabela genérica.</p>
+        <h2>6. Sem vídeo não significa automaticamente defeito de placa-mãe</h2>
+        <p>Antes de atribuir ausência de imagem à placa, confirme onde o monitor está conectado, se o processador realmente possui vídeo integrado, se existe placa de vídeo dedicada e se o sistema aparenta completar o POST. Um computador que inicializa, responde ao teclado ou chega ao sistema sem imagem segue um caminho diferente de uma máquina que nunca conclui POST.</p>
+        <p>O roteiro específico está em <a href="/problemas/computador-nao-da-imagem">computador liga mas não dá imagem</a>. A separação entre POST e vídeo evita substituir placa-mãe por um problema de GPU, cabo, monitor ou configuração.</p>
 
-        <h2>Quando as evidências passam a apontar para a placa</h2>
+        <h2>7. Firmware e CMOS: não transforme reset em receita universal</h2>
+        <p>Resetar configurações pode ajudar quando a hipótese é uma configuração incompatível, overclock, treinamento de memória ou alteração de firmware. Mas isso também apaga ajustes e pode mudar comportamento de boot. Registre a configuração atual antes de qualquer reset e confirme a chave de recuperação se houver criptografia sensível a mudanças de firmware.</p>
+        <p>Atualização de BIOS/UEFI também não deve ser usada como “teste” em uma máquina instável. Primeiro confirme o motivo da atualização, o modelo exato, a versão e o procedimento de recuperação disponível. Interromper uma gravação de firmware pode adicionar uma falha que não existia.</p>
+
+        <h2>8. Quando uma porta ou slot isolado falha</h2>
+        <p>Uma placa pode funcionar parcialmente. USB, áudio, Ethernet, SATA, M.2, PCIe ou um slot de memória podem apresentar falha localizada enquanto o restante do computador inicializa normalmente. Para sustentar esse diagnóstico:</p>
         <ul>
-          <li>Montagem mínima continua sem inicializar depois de fonte e memória serem verificadas por comparação controlada e a compatibilidade do processador ser confirmada.</li>
-          <li>Uma porta, slot ou função da placa falha de forma reproduzível com componentes compatíveis e conhecidos como funcionais, depois de descartadas as dependências daquela interface.</li>
-          <li>Dano físico visível: queimado, corrosão, trilha rompida, pino do soquete danificado.</li>
-          <li>Instabilidade persistente após descartar energia, memória e temperatura.</li>
+          <li>repita com outro cabo ou periférico conhecido como funcional;</li>
+          <li>compare com outra porta equivalente quando existir;</li>
+          <li>confirme no manual se a interface é compartilhada ou desabilitada por outra configuração;</li>
+          <li>elimine driver e sistema operacional quando a função também puder ser observada no firmware ou em outro ambiente compatível;</li>
+          <li>registre se a falha acompanha o periférico ou permanece na mesma interface.</li>
         </ul>
 
-        <h2>Reparar ou substituir</h2>
-        <p>Nem todo defeito de placa exige substituição completa. Conector danificado, componente discreto ou trilha acessível podem ter reparo viável depois de medição em bancada. Já corrosão extensa, dano em múltiplas áreas ou falhas em componentes complexos podem tornar o reparo técnica ou economicamente desfavorável. A decisão depende do modelo, disponibilidade de peças, extensão do dano e custo de uma placa compatível.</p>
-        <p>A decisão também depende da plataforma: placa antiga exige processador e memória da mesma geração, então trocar a placa às vezes puxa dois componentes junto. Esse cálculo é apresentado antes de qualquer autorização, com peça e mão de obra separadas.</p>
-
-        <h2>O que não fazer</h2>
+        <h2>9. Evidências que aumentam de verdade a probabilidade de defeito na placa</h2>
         <ul>
-          <li>Insistir em ligar repetidamente uma máquina com cheiro de queimado.</li>
-          <li>Aquecer a placa com fonte de calor doméstica na esperança de reativar solda.</li>
-          <li>Trocar processador por suspeita, sem descarte prévio de fonte e memória.</li>
-          <li>Comprar placa antes de confirmar compatibilidade com o processador e a memória que já existem.</li>
+          <li>Dano físico ou corrosão na própria placa, especialmente quando coincide com a área funcional que falhou.</li>
+          <li>Configuração mínima não conclui POST com fonte e memória verificadas por comparação controlada e CPU compatível.</li>
+          <li>Uma interface específica falha com diferentes componentes conhecidos como bons enquanto outra interface equivalente funciona.</li>
+          <li>O defeito muda ao aplicar leve pressão ou movimentação em área danificada — situação que deve interromper uso, não virar técnica de reparo.</li>
+          <li>Instrumentação de bancada localiza alimentação ausente, componente em curto ou sinal que não progride, dentro de um procedimento técnico documentado.</li>
         </ul>
 
-        <h2>Próximo passo</h2>
-        <p>Se a máquina não dá nenhum sinal, comece por <a href="/servicos/computador-nao-liga">computador não liga</a>. Quando a suspeita se firma na eletrônica, o procedimento de bancada está em <a href="/servicos/conserto-placa">conserto de placa</a>, e o critério de verificação e cobrança em <a href="/diagnostico-tecnico">como funciona o diagnóstico técnico</a>.</p>
+        <h2>10. Evidências que ainda não bastam para condenar a placa</h2>
+        <ul>
+          <li>Ventoinha girar sem vídeo.</li>
+          <li>Um único erro de memória sem isolamento de módulo e slot.</li>
+          <li>Um dispositivo USB deixar de funcionar.</li>
+          <li>O PC desligar imediatamente sem separar fonte, cabeamento e montagem.</li>
+          <li>O Windows travar ou reiniciar sem reproduzir o problema fora do sistema.</li>
+          <li>Um código de POST consultado em tabela genérica da internet, sem o manual do modelo.</li>
+        </ul>
+
+        <h2>Reparar a placa ou substituir?</h2>
+        <p>Depois de confirmar a placa como origem provável, a decisão passa a ser econômica e técnica. Um conector, componente discreto ou trilha acessível pode ser reparável em bancada. Corrosão extensa, dano em múltiplas camadas, falhas recorrentes em diferentes circuitos ou indisponibilidade de componentes podem tornar a substituição mais racional.</p>
+        <p>Também avalie a plataforma inteira. Em gerações antigas, uma placa compatível usada pode custar perto de uma migração que já troca placa, processador e memória. O diagnóstico deve informar o defeito e as opções; a decisão de investimento vem depois.</p>
+
+        <h2>Depois de reparar ou trocar, valide antes de encerrar</h2>
+        <ul>
+          <li>Confirme POST e inicialização repetível a frio e a quente.</li>
+          <li>Teste memória nas condições suportadas pela plataforma.</li>
+          <li>Valide armazenamento, rede, USB, áudio e demais interfaces realmente usadas.</li>
+          <li>Observe temperatura e estabilidade sob carga compatível com o uso do equipamento.</li>
+          <li>Se houve troca de placa, confira boot, drivers, ativação e criptografia antes de apagar qualquer estado anterior.</li>
+        </ul>
+
+        <h2>Quando parar e levar para bancada</h2>
+        <p>Interrompa testes domésticos se houver cheiro de queimado, carbonização, corrosão relevante, líquido, conector derretido, pinos danificados, desligamento repetido por proteção ou necessidade de medir circuitos energizados. Não abra a fonte de alimentação e não use calor doméstico, “reflow” improvisado ou curto entre pontos da placa como tentativa de recuperação.</p>
+        <p>Se a causa ainda estiver aberta, veja <a href="/diagnostico-tecnico">como funciona o diagnóstico técnico</a>. Para falha eletrônica confirmada, o fluxo está em <a href="/servicos/conserto-placa">conserto de placa</a>.</p>
+
+        <h2>Perguntas frequentes</h2>
+        <h3>Se o computador liga mas não dá vídeo, a placa-mãe está com defeito?</h3>
+        <p>Não necessariamente. Memória, CPU, GPU, monitor, cabo, firmware e alimentação ainda podem produzir o mesmo sintoma. Primeiro separe POST de caminho de vídeo.</p>
+
+        <h3>LED de DRAM aceso significa memória RAM ruim?</h3>
+        <p>Ele mostra que a inicialização parou na etapa relacionada à memória. Módulo, slot, controlador de memória, soquete, compatibilidade e configuração ainda precisam ser separados.</p>
+
+        <h3>Resetar CMOS confirma defeito de BIOS?</h3>
+        <p>Não. Reset restaura configurações; ele não regrava automaticamente o firmware nem prova que o chip de firmware esteja defeituoso.</p>
+
+        <h3>Posso testar a placa-mãe com outra fonte?</h3>
+        <p>Uma fonte conhecida, compatível e em boas condições é uma comparação útil quando a alimentação é suspeita. Ela precisa ter conectores e capacidade apropriados e nunca deve misturar cabos modulares de fontes diferentes.</p>
+
+        <h3>Um teste de memória com erro condena a placa?</h3>
+        <p>Não. O erro precisa ser reproduzido e isolado entre módulo, slot e plataforma; ferramentas de memória não identificam sozinhas qual componente físico é o causador.</p>
 
         <h2>Resumo prático</h2>
-        <p>Inspecione antes de testar, reduza a máquina ao mínimo, compare memória e alimentação de forma controlada e registre o que muda a cada etapa. Dano físico visível aumenta a suspeita, mas o escopo do defeito ainda precisa ser medido. Sem evidência direta, é a eliminação documentada das outras hipóteses que sustenta a decisão de reparar ou substituir.</p>
+        <p>Diagnosticar placa-mãe é um processo de exclusão documentada. Separe alimentação, POST, memória, vídeo, firmware e interfaces; use comparação controlada, mude uma variável por vez e trate códigos como pistas de estágio. Só condene a placa quando as alternativas relevantes tiverem sido eliminadas ou houver evidência física/eletrônica direta.</p>
+
+        <EditorialReferences slug="como-diagnosticar-placa-mae-defeituosa" />
       </>
     ),
   },

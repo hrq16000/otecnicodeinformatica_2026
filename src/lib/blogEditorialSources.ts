@@ -1436,14 +1436,19 @@ export const ARTICLE_SOURCE_MANIFEST: Record<string, ArticleSourceManifest> = {
   },
   "como-diagnosticar-placa-mae-defeituosa": {
     slug: "como-diagnosticar-placa-mae-defeituosa",
-    sources: [],
+    sources: [
+      "intel-atx3-dc-regulation",
+      "intel-atx3-short-circuit-protection",
+      "memtest86plus-readme",
+      "memtest86plus-official",
+    ],
     technicalReview: "reviewed",
     factChecked: true,
-    factCheckedAt: "2026-08-12",
-    stableKnowledge: true,
+    factCheckedAt: "2026-09-29",
     notes:
-      "Revisão concluída (Onda 5H): inspeção visual, montagem mínima, isolamento de módulo × slot, descarte prévio da fonte, leitura de códigos de estágio pelo manual do modelo e critério econômico entre reparo eletrônico e substituição de plataforma. Sem tabela genérica de bips e sem promessa de reparo. Conhecimento técnico estável — sem fonte visível.",
+      "Revisão material em 2026-09-29 guiada pelo GSC: 58 impressões, 0 cliques e posição média ~9,88 entre 2026-04-01 e 2026-09-27. O artigo agora trata placa-mãe como diagnóstico por exclusão documentada, separa alimentação, POST, memória, vídeo, firmware e falhas parciais, explicita os limites de configuração mínima, LEDs/códigos e testes de memória e inclui critérios claros de parada. Queries individuais não foram expostas pelo GSC e nenhuma foi inventada. Regulação/proteção da fonte é ancorada no guia ATX da Intel e os limites diagnósticos dos testes de memória na documentação oficial do Memtest86+.",
   },
+
   "windows-11-lento-como-resolver": {
     slug: "windows-11-lento-como-resolver",
     sources: ["ms-pc-performance", "ms-startup-apps"],
