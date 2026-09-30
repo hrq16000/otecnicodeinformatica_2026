@@ -1549,13 +1549,17 @@ export const ARTICLE_SOURCE_MANIFEST: Record<string, ArticleSourceManifest> = {
 
   "computador-lento-causas-solucoes": {
     slug: "computador-lento-causas-solucoes",
-    sources: [],
+    sources: [
+      "ms-pc-performance",
+      "ms-startup-apps",
+      "ms-windows-security-overview",
+      "ms-optimize-drives",
+    ],
     technicalReview: "reviewed",
     factChecked: true,
-    factCheckedAt: "2026-07-12",
-    stableKnowledge: true,
+    factCheckedAt: "2026-09-30",
     notes:
-      "Fact-check concluído: formatação não é solução universal, SSD não resolve todo gargalo, memória sem número mínimo universal e malware tratado como possibilidade (não diagnóstico). Sem percentuais de ganho e sem métrica do Gerenciador de Tarefas como diagnóstico definitivo. Conhecimento técnico estável, sem afirmação instável — sem fonte visível.",
+      "Revisão material em 2026-09-30 guiada pelo GSC: 1 impressão, 0 cliques e posição média 9 entre 2026-04-01 e 2026-09-27. A versão suplementar passa a sobrepor editorialmente o conteúdo-base, preservando a mesma URL. O diagnóstico separa lentidão de inicialização, carga, aplicativo e armazenamento; trata Gerenciador de Tarefas como sinal e não diagnóstico; remove formatação, SSD, RAM e malware como respostas automáticas; inclui matriz de decisão, critérios de parada e fontes oficiais Microsoft. Queries individuais não foram expostas pelo GSC e nenhuma foi inventada.",
   },
   "como-instalar-windows-11-do-zero": {
     slug: "como-instalar-windows-11-do-zero",
