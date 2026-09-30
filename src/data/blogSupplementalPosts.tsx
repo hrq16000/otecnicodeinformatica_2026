@@ -11,6 +11,234 @@ import { MODALIDADES } from "@/lib/precosConfig";
  * do blog compõem base + suplementares + programáticos.
  */
 export const blogSupplementalPosts: Record<string, BlogPostContent> = {
+  "fila-de-impressao-travada-spooler-windows": {
+    title: "Fila de impressão travada no Windows: como limpar o spooler sem apagar o diagnóstico",
+    excerpt:
+      "Documento preso, spooler parando ou impressora sem responder? Separe fila corrompida, serviço, driver e comunicação com a impressora antes de reinstalar tudo.",
+    date: "2026-09-30",
+    readTime: "13 min",
+    category: "Procedimentos Técnicos",
+    content: (
+      <>
+        <p className="lead">
+          Quando a <strong>fila de impressão trava</strong>, o objetivo não é apenas “zerar tudo”. Primeiro descubra
+          se existe um trabalho preso, se o serviço <strong>Spooler de Impressão</strong> parou, se o driver está
+          fazendo o serviço cair ou se a fila está saudável e a falha está na comunicação com a impressora. O Windows
+          permite limpar a fila e reiniciar o spooler, mas repetir esse procedimento sem entender por que o problema
+          volta pode esconder uma falha de driver, porta, rede ou do próprio equipamento.
+        </p>
+
+        <h2>Resposta direta: como destravar a fila de impressão</h2>
+        <ol>
+          <li>Abra a fila da impressora e tente cancelar os trabalhos normalmente.</li>
+          <li>Se a fila não limpa, reinicie o serviço <strong>Spooler de Impressão</strong>.</li>
+          <li>Se os trabalhos continuam presos, pare o spooler e limpe apenas os arquivos de trabalhos na pasta de spool.</li>
+          <li>Inicie o serviço novamente e envie <strong>uma página de teste</strong>, não vários documentos ao mesmo tempo.</li>
+          <li>Se o spooler voltar a travar, investigue driver, impressora, porta/rede e o trabalho que dispara a falha.</li>
+        </ol>
+
+        <h2>Fila travada, spooler parado e impressora offline não são a mesma coisa</h2>
+        <table>
+          <thead>
+            <tr><th>Sintoma</th><th>Camada provável</th><th>Primeiro teste</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Um documento fica em “Excluindo” ou “Enviando”</td><td>Fila/spool</td><td>Cancelar trabalhos e reiniciar spooler</td></tr>
+            <tr><td>Todos os trabalhos param e o serviço cai</td><td>Spooler/driver/componente de impressão</td><td>Registrar evento e testar driver oficial</td></tr>
+            <tr><td>Fila esvazia, mas nada sai na impressora</td><td>Porta, rede, USB ou equipamento</td><td>Testar página e verificar estado/porta</td></tr>
+            <tr><td>Impressora aparece como offline</td><td>Conectividade/status</td><td>Tratar a causa de offline separadamente</td></tr>
+            <tr><td>Outro PC imprime normalmente</td><td>Problema mais local ao Windows/driver/fila</td><td>Comparar driver, porta e fila do PC afetado</td></tr>
+          </tbody>
+        </table>
+
+        <h2>1. Comece cancelando os trabalhos pela própria fila</h2>
+        <p>
+          A Microsoft orienta primeiro abrir a fila da impressora e cancelar os trabalhos presos. Esse é o caminho
+          menos invasivo: preserva a configuração da impressora e evita mexer no serviço quando o problema é apenas
+          um documento que ficou bloqueado.
+        </p>
+        <p>
+          Se o cancelamento conclui e uma página de teste imprime, não há motivo para apagar drivers ou reinstalar a
+          impressora. Se o item fica permanentemente em “Excluindo”, “Pausado”, “Erro” ou “Enviando dados”, avance
+          para o serviço de spooler.
+        </p>
+
+        <h2>2. Reinicie o Spooler de Impressão antes de apagar arquivos manualmente</h2>
+        <p>
+          Abra <strong>services.msc</strong>, localize <strong>Spooler de Impressão</strong> e use
+          <strong>Reiniciar</strong>. Reiniciar o serviço faz parte do roteiro oficial da Microsoft para trabalhos
+          presos e para erros em que o spooler deixa de responder.
+        </p>
+        <p>
+          Depois do reinício, volte à fila. Se ela ficou vazia, envie apenas um trabalho pequeno. Isso ajuda a
+          identificar se o problema era transitório ou se um documento, driver ou impressora faz o travamento voltar.
+        </p>
+
+        <h2>3. Quando limpar manualmente a pasta de spool</h2>
+        <p>
+          Se cancelar pela interface e reiniciar o serviço não removerem os trabalhos, a Microsoft documenta a
+          limpeza manual da pasta <code>%WINDIR%\System32\spool\PRINTERS</code>. Faça isso somente com o
+          <strong>Spooler de Impressão parado</strong>; os arquivos ali representam trabalhos temporários da fila.
+        </p>
+        <ol>
+          <li>Pare o serviço <strong>Spooler de Impressão</strong>.</li>
+          <li>Abra <code>%WINDIR%\System32\spool\PRINTERS</code>.</li>
+          <li>Exclua os arquivos de trabalhos presos dentro dessa pasta.</li>
+          <li>Inicie novamente o serviço <strong>Spooler de Impressão</strong>.</li>
+          <li>Teste com uma única página.</li>
+        </ol>
+        <p>
+          Não use esse procedimento como rotina para “manutenção preventiva”. Ele é uma correção para fila presa. Se
+          você precisa repetir isso com frequência, existe outra causa a investigar.
+        </p>
+
+        <h2>4. Comando para reiniciar spooler: quando faz sentido</h2>
+        <p>
+          As consultas reais do GSC desta página incluem <strong>“reiniciar spooler de impressão”</strong> e
+          <strong>“reiniciar spooler de impressão cmd”</strong>. Em um Prompt de Comando aberto como administrador,
+          o fluxo documentado pela Microsoft é parar e iniciar o serviço:
+        </p>
+        <pre><code>{`net stop spooler
+net start spooler`}</code></pre>
+        <p>
+          O comando não corrige automaticamente driver defeituoso, porta errada ou impressora desconectada. Ele só
+          reinicia a camada de spooler. Se o serviço não inicia, registre o erro em vez de repetir o comando.
+        </p>
+
+        <h2>5. Spooler parando sozinho: não trate como “fila suja” para sempre</h2>
+        <p>
+          O GSC também mostra consultas como <strong>“spooler de impressão parando sozinho”</strong> e
+          <strong>“spooler de impressão não inicia”</strong>. Quando o serviço cai novamente logo após iniciar,
+          limpar a fila pode resolver apenas o efeito.
+        </p>
+        <p>
+          A documentação da Microsoft orienta considerar drivers e componentes de impressão, instabilidade do sistema,
+          políticas em ambientes gerenciados e conflitos de software. Em PC doméstico, um driver desatualizado ou
+          incompatível merece atenção principalmente quando a falha começa após instalar ou trocar uma impressora.
+        </p>
+
+        <h2>6. Como identificar se um trabalho específico dispara a falha</h2>
+        <p>
+          Depois de limpar a fila, imprima primeiro uma página de teste do Windows. Em seguida, teste um documento
+          simples. Só depois tente novamente o arquivo que estava preso. Se o spooler cai apenas com um documento ou
+          aplicativo específico, a investigação muda: formato, renderização ou driver podem estar envolvidos.
+        </p>
+        <p>
+          Evite reenviar o mesmo arquivo várias vezes enquanto a fila está travada. Isso cria múltiplos trabalhos e
+          torna mais difícil separar causa de consequência.
+        </p>
+
+        <h2>7. Driver: quando atualizar ou reinstalar</h2>
+        <p>
+          A Microsoft orienta manter o driver da impressora atualizado e recorrer ao fabricante quando necessário.
+          Se o spooler começou a falhar depois de trocar driver, adicionar uma impressora antiga ou instalar um pacote
+          de impressão, use o driver oficial do modelo exato.
+        </p>
+        <p>
+          Não use “driver packs” genéricos nem baixe DLLs avulsas para a pasta do spooler. Em ambiente empresarial,
+          confirme o pacote aprovado pelo TI antes de remover drivers compartilhados ou filas implantadas por política.
+        </p>
+
+        <h2>8. Fila vazia não prova que a impressora está funcionando</h2>
+        <p>
+          Se o trabalho sai da fila rapidamente, mas nada é impresso, o spooler pode ter concluído sua parte. A falha
+          pode estar na porta TCP/IP, USB, rede Wi-Fi, endereço da impressora, status offline, papel, toner ou erro do
+          equipamento.
+        </p>
+        <p>
+          Para status offline, siga a trilha específica em{" "}
+          <a href="/blog/impressora-offline-como-resolver">impressora offline no Windows</a>. Não continue limpando o
+          spooler quando o problema real é conectividade.
+        </p>
+
+        <h2>9. “Enviando dados para o spool” parado</h2>
+        <p>
+          Uma das consultas reais observadas foi <strong>“enviando dados para o spool”</strong>. Se a geração do
+          trabalho não termina, compare outro documento e outro aplicativo. Arquivo muito complexo, aplicativo
+          travado ou driver podem impedir a criação completa do trabalho antes mesmo de ele chegar à impressora.
+        </p>
+        <p>
+          Se uma página de teste do Windows funciona, mas um PDF, planilha ou sistema específico não, evite concluir
+          que o serviço está quebrado. A diferença entre os trabalhos é uma evidência útil.
+        </p>
+
+        <h2>10. Impressora de rede: spooler e porta precisam ser separados</h2>
+        <p>
+          Em impressoras de rede, a fila local pode funcionar enquanto o endereço da impressora mudou ou ficou
+          inacessível. Compare o endereço configurado na porta da impressora com o endereço atual do equipamento.
+          Uma fila que acumula trabalhos porque o destino está indisponível não deve ser diagnosticada apenas como
+          “spooler com defeito”.
+        </p>
+        <p>
+          Se vários computadores perdem a mesma impressora ao mesmo tempo, a hipótese de rede/equipamento ganha peso.
+          Se só um PC falha, compare fila, driver e porta desse computador.
+        </p>
+
+        <h2>11. Ambiente corporativo: cuidado com políticas e servidor de impressão</h2>
+        <p>
+          Em domínio, VDI ou ambiente com servidor de impressão, filas e drivers podem ser distribuídos centralmente.
+          Não remova drivers, altere políticas ou desative serviços em um servidor apenas para testar. A Microsoft
+          documenta que políticas podem inclusive controlar o serviço de spooler.
+        </p>
+        <p>
+          Nesses ambientes, registre horário, nome da fila, servidor, erro e evento antes de alterar a configuração.
+          Isso permite identificar se a falha é local, no servidor ou no pacote de driver compartilhado.
+        </p>
+
+        <h2>Critérios de parada</h2>
+        <ul>
+          <li>O spooler não inicia e apresenta erro recorrente.</li>
+          <li>O serviço cai novamente sempre que uma impressora específica é carregada.</li>
+          <li>A máquina usa filas implantadas por domínio ou servidor de impressão gerenciado.</li>
+          <li>A correção exigiria remover pacotes de driver sem saber quais impressoras dependem deles.</li>
+          <li>Há sinais de falha física ou de comunicação da impressora que não pertencem à fila do Windows.</li>
+        </ul>
+
+        <h2>Perguntas frequentes</h2>
+        <h3>Reiniciar o spooler apaga documentos?</h3>
+        <p>
+          Reiniciar o serviço não deve ser confundido com limpar manualmente a pasta de spool. A limpeza manual remove
+          os trabalhos pendentes daquela fila local; por isso, confirme antes se algum documento precisa ser reenviado.
+        </p>
+
+        <h3>Posso apagar tudo em System32\spool?</h3>
+        <p>
+          Não. O procedimento oficial se refere aos arquivos de trabalhos dentro de
+          <code>%WINDIR%\System32\spool\PRINTERS</code>, com o serviço parado. Não apague outras pastas do
+          subsistema de impressão.
+        </p>
+
+        <h3>Spooler parando sozinho é vírus?</h3>
+        <p>
+          Não por si só. Driver, componente de impressão, política e instabilidade também podem causar falha. O
+          diagnóstico precisa considerar o que faz o serviço cair.
+        </p>
+
+        <h3>Se limpar a fila resolve, acabou o problema?</h3>
+        <p>
+          Se não volta a ocorrer, pode ter sido apenas um trabalho preso. Se a fila trava repetidamente, investigue
+          driver, aplicativo, porta e impressora.
+        </p>
+
+        <h3>Devo reinstalar a impressora primeiro?</h3>
+        <p>
+          Não necessariamente. Comece pelo estado da fila e do spooler. Reinstalação faz mais sentido quando há
+          evidência de driver/configuração quebrados ou quando o fabricante orienta esse fluxo.
+        </p>
+
+        <h2>Resumo prático</h2>
+        <p>
+          <strong>Destrave primeiro, diagnostique depois.</strong> Cancele os trabalhos, reinicie o spooler e use a
+          limpeza manual da pasta de fila somente quando necessário. Se o spooler não inicia ou para sozinho, não
+          transforme a limpeza em rotina: investigue driver, política, aplicativo, porta e a impressora que dispara a
+          falha.
+        </p>
+
+        <EditorialReferences slug="fila-de-impressao-travada-spooler-windows" />
+      </>
+    ),
+  },
+
   "memoria-ram-insuficiente-sintomas": {
     title: "Memória RAM insuficiente: sintomas, como confirmar e quando fazer upgrade",
     excerpt:
