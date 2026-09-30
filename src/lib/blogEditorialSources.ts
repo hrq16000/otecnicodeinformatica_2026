@@ -473,6 +473,55 @@ export const EDITORIAL_SOURCES: Record<string, EditorialSource> = {
       "Limpar cache remove dados temporários; limpar dados remove configurações e dados do aplicativo.",
     ],
   },
+  "ms-bug-check-code-reference": {
+    id: "ms-bug-check-code-reference",
+    title: "Bug check code reference",
+    publisher: "Microsoft Learn",
+    url: "https://learn.microsoft.com/en-us/windows-hardware/drivers/debugger/bug-check-code-reference2",
+    accessedAt: "2026-09-29",
+    sourceType: "official",
+    supports: [
+      "A referência da Microsoft lista os códigos de bug check e orienta usar o WinDbg/!analyze para obter informações e parâmetros do stop code.",
+      "Um arquivo de despejo pode conter mais contexto sobre o estado da memória no momento da falha do que o texto exibido na tela.",
+    ],
+  },
+  "ms-blue-screen-data": {
+    id: "ms-blue-screen-data",
+    title: "Analyze bug check (stop code error) data",
+    publisher: "Microsoft Learn",
+    url: "https://learn.microsoft.com/en-us/windows-hardware/drivers/debugger/blue-screen-data",
+    accessedAt: "2026-09-29",
+    sourceType: "official",
+    supports: [
+      "Cada bug check possui quatro parâmetros associados que podem acrescentar contexto específico ao código.",
+      "Os parâmetros podem ser obtidos no log do sistema ou a partir do arquivo de despejo e analisados com ferramentas de depuração.",
+    ],
+  },
+  "ms-small-memory-dump": {
+    id: "ms-small-memory-dump",
+    title: "Small Memory Dump",
+    publisher: "Microsoft Learn",
+    url: "https://learn.microsoft.com/en-us/windows-hardware/drivers/debugger/small-memory-dump",
+    accessedAt: "2026-09-29",
+    sourceType: "official",
+    supports: [
+      "Pequenos despejos podem incluir a mensagem de bug check, parâmetros, pilha do kernel e lista de drivers carregados.",
+      "Quando esse tipo de dump é gerado, os arquivos são mantidos no diretório %SystemRoot%\\Minidump.",
+    ],
+  },
+  "ms-whea-hardware-errors": {
+    id: "ms-whea-hardware-errors",
+    title: "Hardware Errors and Error Sources",
+    publisher: "Microsoft Learn",
+    url: "https://learn.microsoft.com/en-us/windows-hardware/drivers/whea/hardware-errors-and-error-sources",
+    accessedAt: "2026-09-29",
+    sourceType: "official",
+    supports: [
+      "A WHEA recebe e representa condições de erro de hardware reportadas por diferentes fontes da plataforma.",
+      "As fontes podem incluir processador, cache/memória, chipset, barramentos de E/S e dispositivos, portanto um erro WHEA não identifica sozinho uma peça específica.",
+    ],
+  },
+
   "memtest86plus-readme": {
     id: "memtest86plus-readme",
     title: "Memtest86+ — README and troubleshooting",
@@ -1581,14 +1630,20 @@ export const ARTICLE_SOURCE_MANIFEST: Record<string, ArticleSourceManifest> = {
   },
   "codigos-de-erro-tela-azul-windows": {
     slug: "codigos-de-erro-tela-azul-windows",
-    sources: [],
+    sources: [
+      "ms-bug-check-code-reference",
+      "ms-blue-screen-data",
+      "ms-small-memory-dump",
+      "ms-whea-hardware-errors",
+      "memtest86plus-readme",
+    ],
     technicalReview: "reviewed",
     factChecked: true,
-    factCheckedAt: "2026-08-25",
-    stableKnowledge: true,
+    factCheckedAt: "2026-09-29",
     notes:
-      "Revisão concluída (Onda 10C): significado das categorias MEMORY_MANAGEMENT, IRQL_NOT_LESS_OR_EQUAL, PAGE_FAULT_IN_NONPAGED_AREA, CRITICAL_PROCESS_DIED, DPC_WATCHDOG_VIOLATION, SYSTEM_SERVICE_EXCEPTION, INACCESSIBLE_BOOT_DEVICE e WHEA_UNCORRECTABLE_ERROR; localização dos registros em Visualizador de Eventos e minidumps. Sem promessa de resultado. Conhecimento técnico estável — sem fonte visível.",
+      "Revisão material em 2026-09-29 guiada pelo GSC: 6 impressões, 0 cliques e posição média ~7,17 entre 2026-04-01 e 2026-09-27. A versão suplementar substitui editorialmente o texto monolítico antigo e remove inferências determinísticas como stop code = peça, arquivo .sys = culpado e códigos variáveis = RAM/fonte/temperatura. Passa a usar stop code, parâmetros, contexto, dumps e recorrência como evidências complementares; WHEA é tratado como arquitetura de erro de hardware, não diagnóstico de uma peça específica. Queries individuais não foram expostas pelo GSC e nenhuma foi inventada. Fontes Microsoft visíveis sustentam bug checks, parâmetros, minidumps e WHEA.",
   },
+
   "testar-memoria-ram-memtest86": {
     slug: "testar-memoria-ram-memtest86",
     sources: ["memtest86plus-readme", "memtest86plus-official"],
