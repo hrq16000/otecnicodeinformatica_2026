@@ -877,14 +877,14 @@ const WAVE_10G: EditorialApproval[] = [
     status: "approved",
     authorType: "organization",
     authorId: INSTITUTIONAL_AUTHOR.id,
-    reviewedAt: "2026-08-26",
+    reviewedAt: "2026-09-30",
     approvedAt: "2026-08-26",
     imageOrigin: "licensed",
     imageLicense: "CC BY-SA 4.0",
     imageAttribution:
       "Foto: Santeri Viinamäki (Wikimedia Commons), CC BY-SA 4.0 — https://commons.wikimedia.org/wiki/File:Tape_over_laptop_webcam.jpg",
     notes:
-      "Satélite de permissões, escrito do zero na Onda 10C (Lote 4); fact-check registrado em blogEditorialSources.ts; capa é imagem real licenciada, sem IA.",
+      "Revisão material em 2026-09-30 guiada pelo GSC: 4 impressões, 0 cliques e posição média ~8,75 entre 2026-04-01 e 2026-09-27. A versão suplementar passa a sobrepor editorialmente o texto monolítico antigo, preservando a mesma URL. A investigação separa acesso do dispositivo, apps da Store, apps desktop, navegador/site e seleção da câmera no aplicativo, com fonte Microsoft visível e sem inventar queries individuais.",
   },
   {
     slug: "webcam-usb-nao-e-detectada",
