@@ -956,14 +956,14 @@ const WAVE_11A: EditorialApproval[] = [
     status: "approved",
     authorType: "organization",
     authorId: INSTITUTIONAL_AUTHOR.id,
-    reviewedAt: "2026-08-31",
+    reviewedAt: "2026-09-29",
     approvedAt: "2026-08-31",
     imageOrigin: "licensed",
     imageLicense: "CC BY-SA 4.0",
     imageAttribution:
       "Captura: Paowee (Wikimedia Commons), CC BY-SA 4.0 — https://commons.wikimedia.org/wiki/File:Lenovo_ThinkPad_T470_UEFI_BIOS_1.75_setup_-_boot_menu_selection.JPG",
     notes:
-      "Pilar do cluster de BIOS/UEFI, escrito do zero na Onda 11A (Lote 4); fact-check registrado em blogEditorialSources.ts; capa é imagem real licenciada, sem IA.",
+      "Revisão material em 2026-09-29 guiada pelo GSC: 49 impressões, 0 cliques e posição média ~9,49; resposta direta para boot mode UEFI/Legacy, matriz UEFI/Legacy/CSM/Secure Boot, migração MBR→GPT com limites, BitLocker, critérios de parada e fontes Microsoft visíveis. Queries reais expostas pelo GSC foram incorporadas sem extrapolar demanda.",
   },
   {
     slug: "ordem-de-boot-na-bios-como-configurar",

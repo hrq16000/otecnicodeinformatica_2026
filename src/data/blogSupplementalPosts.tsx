@@ -1328,89 +1328,126 @@ export const blogSupplementalPosts: Record<string, BlogPostContent> = {
   },
 
   "boot-uefi-ou-legacy-como-identificar": {
-    title: "UEFI ou Legacy: como saber qual está ativo e quando mudar",
+    title: "UEFI ou Legacy: como identificar o boot mode e saber quando mudar",
     excerpt:
-      "Veja como identificar UEFI ou Legacy no Windows, conferir GPT/MBR com segurança e entender quando não alterar firmware, Secure Boot ou partições.",
-    date: "2026-08-31",
-    readTime: "11 min",
+      "Veja como descobrir se o Windows iniciou em UEFI ou Legacy, conferir GPT/MBR, entender CSM e Secure Boot e evitar perder o boot ao mudar o firmware.",
+    date: "2026-09-29",
+    readTime: "14 min",
     category: "Diagnóstico",
     content: (
       <>
-        <p className="lead">Antes de trocar UEFI, Legacy ou CSM, descubra como o Windows atual está iniciando. O modo de firmware, o carregador de boot e o esquema de partições fazem parte do mesmo caminho de inicialização; alterar apenas uma dessas peças pode deixar uma instalação existente sem boot ou acionar recuperação de criptografia.</p>
+        <p className="lead">“UEFI ou Legacy?” é uma pergunta sobre o caminho usado para iniciar o computador, não apenas sobre uma opção visual da BIOS. No Windows, o dado mais direto é o campo <strong>Modo da BIOS</strong> em Informações do Sistema. Depois, confirme o estilo de partição do disco do sistema e o objetivo da mudança. Alterar UEFI, Legacy ou CSM por tentativa pode fazer uma instalação que funcionava deixar de iniciar.</p>
 
-        <h2>Resposta curta</h2>
-        <p>No Windows, comece por <strong>Informações do Sistema (msinfo32)</strong> e confira o campo <strong>Modo da BIOS</strong>. Ele informa se aquela instalação foi iniciada em UEFI ou em modo herdado. Depois identifique o estilo de partição do <strong>disco do sistema</strong> como GPT ou MBR. Essa combinação ajuda a entender a instalação atual, mas não deve ser transformada em uma regra universal para qualquer disco, firmware ou outro sistema operacional.</p>
-        <p>Em equipamentos modernos compatíveis com Windows 11, UEFI é o caminho esperado e o Secure Boot faz parte dos requisitos de plataforma. Em instalações antigas, Legacy/CSM e MBR ainda podem aparecer. O ponto importante é preservar o estado conhecido antes de alterar o firmware.</p>
+        <h2>Resposta direta: como saber se o boot mode é UEFI ou Legacy?</h2>
+        <ol>
+          <li>Abra <strong>Informações do Sistema</strong> executando <strong>msinfo32</strong>.</li>
+          <li>Em <strong>Resumo do Sistema</strong>, localize <strong>Modo da BIOS</strong>.</li>
+          <li>Se aparecer <strong>UEFI</strong>, esta sessão do Windows foi iniciada em UEFI.</li>
+          <li>Se aparecer <strong>Legacy/Herdado</strong>, a sessão foi iniciada pelo caminho legado.</li>
+          <li>Depois confira se o <strong>disco do sistema</strong> usa GPT ou MBR; isso ajuda a entender a instalação, mas não substitui o campo Modo da BIOS.</li>
+        </ol>
+        <p>A documentação da Microsoft usa o próprio <code>msinfo32</code> para verificar se a máquina está iniciando em BIOS legado ou UEFI. Para a pergunta “qual modo está ativo agora?”, esse é o ponto de partida mais útil no Windows.</p>
 
-        <h2>1. Identifique o modo em que o Windows realmente iniciou</h2>
-        <p>Abra <strong>Informações do Sistema</strong> e procure por “Modo da BIOS”. Se o valor for UEFI, o Windows desta sessão foi iniciado nesse modo. Se aparecer Legacy ou Herdado, a sessão foi iniciada pelo caminho legado. Esse dado é mais útil do que deduzir o modo apenas pela aparência da tela de firmware.</p>
-        <p>Se o Windows não inicia, a investigação muda: registre as opções atuais do firmware e procure entradas como <strong>Windows Boot Manager</strong>, UEFI, CSM ou Legacy, lembrando que os nomes variam por fabricante. Uma etiqueta no menu de boot é indício, não prova isolada de como o sistema instalado foi preparado.</p>
-
-        <h2>2. Confira GPT ou MBR no disco do sistema</h2>
-        <p>No Gerenciamento de Disco, abra as propriedades do disco que contém o Windows e verifique o estilo de partição. Em PowerShell, <code>Get-Disk</code> também mostra a coluna <code>Partition Style</code>. Confirme que está olhando o disco do sistema: um computador pode ter discos GPT e MBR ao mesmo tempo.</p>
-        <p>Para instalações suportadas do Windows em modo UEFI, GPT é o esquema esperado. Instalações legadas mais antigas normalmente usam MBR. Encontrar uma combinação diferente não é motivo para converter ou apagar o disco por tentativa: primeiro confirme qual volume contém o boot e como o firmware está iniciando a máquina.</p>
-
-        <h2>3. Como interpretar os sinais sem simplificar demais</h2>
+        <h2>UEFI, Legacy e CSM: o que cada nome significa</h2>
         <table>
-          <thead><tr><th>O que você observa</th><th>O que isso sugere no Windows</th><th>Próximo passo seguro</th></tr></thead>
+          <thead><tr><th>Termo</th><th>O que representa</th><th>Como tratar no diagnóstico</th></tr></thead>
           <tbody>
-            <tr><td>Modo da BIOS = UEFI e disco do sistema = GPT</td><td>Configuração comum em instalações modernas do Windows</td><td>Preserve o modo; altere apenas se houver motivo documentado.</td></tr>
-            <tr><td>Modo da BIOS = Legacy/Herdado e disco do sistema = MBR</td><td>Instalação legada coerente com PCs ou instalações mais antigas</td><td>Não troque para UEFI apenas para testar.</td></tr>
-            <tr><td>Firmware oferece UEFI e Legacy/CSM</td><td>O equipamento suporta mais de um caminho de boot</td><td>Descubra qual deles o sistema atual usa antes de mudar.</td></tr>
-            <tr><td>Disco secundário é GPT ou MBR</td><td>Isso não prova o modo de boot do Windows</td><td>Verifique o disco do sistema e o campo Modo da BIOS.</td></tr>
-            <tr><td>Secure Boot está desligado</td><td>Não basta, sozinho, para concluir que o Windows está em Legacy</td><td>Confirme o modo real no sistema e a política do equipamento.</td></tr>
+            <tr><td>UEFI</td><td>Interface de firmware moderna usada no processo de inicialização</td><td>É o caminho esperado em instalações modernas suportadas do Windows.</td></tr>
+            <tr><td>Legacy / BIOS herdado</td><td>Caminho de inicialização compatível com o modelo tradicional de BIOS</td><td>Pode existir em instalações antigas; não deve ser trocado sem verificar a instalação atual.</td></tr>
+            <tr><td>CSM</td><td>Módulo de compatibilidade que permite ao firmware UEFI oferecer comportamento de boot legado</td><td>Estar disponível no menu não prova que o Windows atual esteja usando Legacy.</td></tr>
+            <tr><td>Secure Boot</td><td>Recurso de segurança do ecossistema UEFI para o processo de inicialização</td><td>Não é um “modo rápido” e não deve ser desabilitado como solução genérica para erro de boot.</td></tr>
           </tbody>
         </table>
 
-        <h2>4. Trocar UEFI e Legacy depois da instalação exige preparação</h2>
-        <p>A documentação da Microsoft orienta que, depois que o Windows é instalado, o equipamento normalmente continua iniciando no mesmo modo usado durante a instalação. Apenas alternar UEFI/Legacy no Setup pode fazer o firmware deixar de encontrar o carregador esperado.</p>
-        <p>Quando uma migração de BIOS legado/MBR para UEFI/GPT é realmente necessária, o Windows fornece o <strong>MBR2GPT</strong> em cenários suportados. A ferramenta valida o disco antes da conversão e modifica estruturas de boot; depois, o firmware ainda precisa ser configurado para UEFI. Isso não transforma conversão em procedimento de tentativa: backup, validação e chave de recuperação continuam importantes.</p>
+        <h2>1. Confirme o modo pelo Windows, não pela aparência da tela</h2>
+        <p>Uma tela gráfica de firmware não prova UEFI e uma tela simples não prova Legacy. Fabricantes podem apresentar interfaces muito diferentes. O que interessa é como a sessão atual foi inicializada. No Windows funcionando, <strong>msinfo32 → Modo da BIOS</strong> responde isso diretamente.</p>
+        <p>Se o Windows não inicia, registre as opções atuais do firmware e procure entradas como <strong>Windows Boot Manager</strong>, UEFI, CSM ou Legacy. Esses nomes são pistas. O manual do equipamento e a estrutura de boot do disco completam a investigação.</p>
 
-        <h2>5. Secure Boot é uma camada de confiança do boot</h2>
-        <p>Secure Boot é um recurso do ecossistema UEFI que verifica componentes do processo de inicialização conforme políticas de confiança. Ele não é um “modo de desempenho” e não deve ser ligado ou desligado para tentar corrigir qualquer erro de boot sem entender a causa.</p>
-        <p>Se uma mídia externa não inicializa, confirme origem, assinatura, forma como foi criada e compatibilidade com o firmware. Desabilitar Secure Boot permanentemente apenas para contornar uma mídia desconhecida troca diagnóstico por redução de proteção.</p>
+        <h2>2. GPT ou MBR ajuda a entender o disco do sistema</h2>
+        <p>No Gerenciamento de Disco, abra as propriedades do disco que contém o Windows e veja o estilo de partição. Em PowerShell, <code>Get-Disk</code> também mostra <code>Partition Style</code>. Confirme o disco correto: um mesmo computador pode ter um disco GPT e outro MBR.</p>
+        <p>Em uma instalação moderna do Windows iniciada em UEFI, GPT é a estrutura esperada. Instalações legadas podem usar MBR. Mas “o disco é GPT” não deve virar atalho para concluir como qualquer outro sistema do computador está inicializando; use o estado do sistema e do disco de boot em conjunto.</p>
 
-        <h2>6. BitLocker muda o nível de cuidado</h2>
-        <p>Mudanças em firmware, TPM, Secure Boot ou caminho de inicialização podem levar o BitLocker a pedir a chave de recuperação. Antes de converter o disco, atualizar firmware ou alterar configurações relevantes, confirme que a chave está disponível e siga o procedimento da Microsoft para o cenário específico. Em ambiente corporativo, preserve também as políticas definidas pela equipe de TI.</p>
+        <h2>3. Como interpretar combinações comuns</h2>
+        <table>
+          <thead><tr><th>O que você encontrou</th><th>Leitura provável</th><th>Conduta segura</th></tr></thead>
+          <tbody>
+            <tr><td>Modo da BIOS = UEFI + disco do sistema GPT</td><td>Instalação moderna coerente</td><td>Preserve o modo, a menos que exista um motivo documentado para mudança.</td></tr>
+            <tr><td>Modo da BIOS = Legacy + disco do sistema MBR</td><td>Instalação herdada coerente</td><td>Não troque apenas para “ver se melhora”.</td></tr>
+            <tr><td>Firmware oferece UEFI e Legacy/CSM</td><td>O equipamento suporta caminhos diferentes</td><td>Descubra qual caminho o sistema instalado usa antes de alterar.</td></tr>
+            <tr><td>Disco secundário é GPT</td><td>Informa o estilo daquele disco</td><td>Não use isso para inferir sozinho o boot do Windows.</td></tr>
+            <tr><td>Secure Boot está desligado</td><td>O recurso não está ativo</td><td>Isso, sozinho, não prova que o boot atual seja Legacy.</td></tr>
+          </tbody>
+        </table>
 
-        <h2>7. Situações em que o problema não é “UEFI versus Legacy”</h2>
+        <h2>4. Devo usar UEFI ou Legacy?</h2>
+        <p>Para uma instalação nova e suportada do Windows em hardware moderno, UEFI é o caminho recomendado pela documentação atual da Microsoft e integra recursos de segurança da plataforma. Isso não significa que toda máquina antiga em Legacy deva ser convertida imediatamente.</p>
+        <p>Se o computador já funciona em Legacy, a pergunta correta é “o que eu ganho e o que preciso alterar para migrar?”. Converter apenas por estética do menu não traz benefício. A migração passa por compatibilidade do firmware, estrutura GPT, carregador de boot, criptografia e validação posterior.</p>
+
+        <h2>5. Trocar UEFI/Legacy depois da instalação pode quebrar o boot</h2>
+        <p>O Windows normalmente continua iniciando no mesmo modo em que foi instalado. Se você apenas mudar o firmware de Legacy para UEFI — ou o contrário — o carregador esperado pode deixar de ser encontrado. Isso não significa que o SSD ou o Windows foram apagados; significa que firmware e estrutura de inicialização deixaram de combinar.</p>
+        <p>Se a máquina passou a abrir direto no Setup depois de uma troca de SSD, use o roteiro <a href="/blog/troquei-o-ssd-e-o-pc-so-abre-a-bios">troquei o SSD e o PC só abre a BIOS</a>. Se o disco nem aparece no firmware, investigue <a href="/blog/hd-nao-e-reconhecido-na-bios-o-que-fazer">HD ou SSD não reconhecido na BIOS</a> antes de mudar o boot mode.</p>
+
+        <h2>6. Quando MBR2GPT entra na conversa</h2>
+        <p>Em cenários suportados, a Microsoft fornece o <strong>MBR2GPT</strong> para validar e converter o disco do sistema de MBR para GPT sem usar a reformatação como caminho obrigatório. A ferramenta possui pré-requisitos e faz alterações reais na estrutura de boot; depois da conversão, o firmware precisa ser configurado para UEFI.</p>
+        <p>Isso não deve ser usado como “tentativa de conserto”. Antes de qualquer conversão, confirme backup, BitLocker, suporte UEFI do equipamento e a razão da mudança. Se a validação da ferramenta não aprovar o layout, não force a conversão apagando partições para encaixar o disco em uma receita.</p>
+
+        <h2>7. Secure Boot não é sinônimo de UEFI ligado</h2>
+        <p>Secure Boot funciona dentro do ecossistema UEFI, mas o estado dele é uma informação diferente do modo em que o Windows iniciou. Um equipamento pode estar em UEFI com Secure Boot desabilitado. Portanto, “Secure Boot off” não basta para diagnosticar “Legacy”.</p>
+        <p>Se uma mídia externa não inicializa, confirme procedência, forma de criação e compatibilidade antes de reduzir a proteção do firmware. Desabilitar Secure Boot permanentemente apenas para fazer uma mídia desconhecida iniciar troca um problema de diagnóstico por um problema de segurança.</p>
+
+        <h2>8. BitLocker: confirme a recuperação antes de mudar firmware</h2>
+        <p>Mudanças relevantes em firmware, TPM, Secure Boot e caminho de inicialização podem levar um dispositivo criptografado a solicitar a chave de recuperação. Antes de alterar esse conjunto, confirme que a chave está acessível fora do computador. Em máquina corporativa, preserve também as políticas definidas pela organização.</p>
+
+        <h2>9. Quando o problema não é UEFI versus Legacy</h2>
         <ul>
-          <li><strong>Disco não aparece no firmware:</strong> investigue detecção, alimentação, slot e compatibilidade; trocar modo de boot não faz um dispositivo fisicamente ausente aparecer.</li>
-          <li><strong>Windows Boot Manager desapareceu:</strong> confirme se a partição EFI e o BCD estão íntegros antes de mudar o modo inteiro do firmware.</li>
-          <li><strong>SSD novo sem sistema:</strong> não haver entrada de boot é esperado até existir um carregador válido.</li>
-          <li><strong>Pendrive não aparece:</strong> confirme como a mídia foi criada, a porta usada e o modo suportado pela mídia.</li>
-        </ul>
-        <p>Se o armazenamento não é reconhecido pelo firmware, use <a href="/blog/hd-nao-e-reconhecido-na-bios-o-que-fazer">HD ou SSD não reconhecido na BIOS</a>. Se a máquina passou a abrir apenas a tela de firmware depois de uma troca de SSD, veja <a href="/blog/troquei-o-ssd-e-o-pc-so-abre-a-bios">troquei o SSD e o PC só abre a BIOS</a>.</p>
-
-        <h2>8. Quando parar antes de alterar mais opções</h2>
-        <ul>
-          <li>Você não sabe se o disco do sistema está em GPT ou MBR.</li>
-          <li>Há BitLocker ou criptografia do dispositivo e a chave de recuperação não está disponível.</li>
-          <li>O PC é corporativo e você não sabe se Secure Boot, TPM ou firmware são gerenciados.</li>
-          <li>O disco deixou de aparecer depois de uma mudança de controlador ou firmware.</li>
-          <li>Você pretende converter partições sem backup verificado dos dados importantes.</li>
+          <li><strong>SSD não detectado:</strong> boot mode não corrige unidade fisicamente ausente ou incompatível.</li>
+          <li><strong>Windows Boot Manager ausente:</strong> investigue entrada de boot, partição EFI e BCD antes de trocar o modo inteiro.</li>
+          <li><strong>SSD novo sem sistema:</strong> não existir entrada inicializável pode ser normal até haver um carregador válido.</li>
+          <li><strong>Pendrive não aparece:</strong> confirme como a mídia foi criada, a porta e o modo suportado pela própria mídia.</li>
+          <li><strong>PC entra direto na BIOS:</strong> veja primeiro <a href="/blog/computador-entra-direto-na-bios">computador entra direto na BIOS</a>, pois detecção do disco e ordem de boot também podem ser a causa.</li>
         </ul>
 
-        <h2>9. Sequência de diagnóstico que preserva reversibilidade</h2>
+        <h2>10. Sequência que preserva reversibilidade</h2>
         <ol>
-          <li>Registre com foto as opções atuais do firmware.</li>
-          <li>No Windows, anote o campo Modo da BIOS.</li>
-          <li>Confirme qual é o disco do sistema e se ele usa GPT ou MBR.</li>
-          <li>Verifique BitLocker e guarde a chave de recuperação fora do equipamento.</li>
-          <li>Defina o objetivo: instalar outro sistema, converter uma instalação existente ou apenas escolher um dispositivo de boot.</li>
-          <li>Faça uma alteração por vez e valide se o Windows continua iniciando.</li>
+          <li>Fotografe ou anote o estado atual do firmware.</li>
+          <li>No Windows, registre <strong>Modo da BIOS</strong> em msinfo32.</li>
+          <li>Confirme qual disco contém o sistema e se ele usa GPT ou MBR.</li>
+          <li>Confirme BitLocker e a chave de recuperação.</li>
+          <li>Defina o objetivo: instalação nova, migração Legacy→UEFI, recuperação de boot ou apenas escolher outro dispositivo.</li>
+          <li>Consulte o procedimento suportado para esse objetivo.</li>
+          <li>Faça uma mudança por vez e valide novamente o boot.</li>
         </ol>
 
-        <h2>Fontes primárias Microsoft</h2>
+        <h2>Quando parar antes de alterar mais opções</h2>
         <ul>
-          <li><a href="https://learn.microsoft.com/pt-br/windows-hardware/manufacture/desktop/boot-to-uefi-mode-or-legacy-bios-mode?view=windows-11" rel="nofollow noopener" target="_blank">Microsoft Learn — Inicializar no modo UEFI ou no modo BIOS herdado</a></li>
-          <li><a href="https://learn.microsoft.com/pt-br/windows-hardware/drivers/bringup/switch-legacy-bios-boot-and-csm-to-uefi-and-gpt" rel="nofollow noopener" target="_blank">Microsoft Learn — Alternar BIOS legado/CSM para UEFI e GPT</a></li>
-          <li><a href="https://learn.microsoft.com/pt-br/windows/deployment/mbr-to-gpt" rel="nofollow noopener" target="_blank">Microsoft Learn — MBR2GPT</a></li>
-          <li><a href="https://learn.microsoft.com/pt-br/windows-hardware/drivers/bringup/secure-boot" rel="nofollow noopener" target="_blank">Microsoft Learn — Secure Boot</a></li>
+          <li>Você não consegue identificar o disco do sistema.</li>
+          <li>Há criptografia e a chave de recuperação não está disponível.</li>
+          <li>O PC é corporativo e firmware/TPM/Secure Boot podem ser gerenciados.</li>
+          <li>O disco começou a desaparecer do firmware.</li>
+          <li>A máquina tem mais de um sistema e você não sabe qual carregador pertence a cada instalação.</li>
+          <li>Você pretende converter ou apagar partições sem backup verificado.</li>
         </ul>
 
+        <h2>Perguntas frequentes</h2>
+        <h3>Boot mode UEFI ou Legacy: onde vejo no Windows?</h3>
+        <p>Abra <strong>msinfo32</strong> e confira <strong>Modo da BIOS</strong>. Esse campo informa como a sessão atual do Windows foi inicializada.</p>
+
+        <h3>GPT significa que o PC está obrigatoriamente em UEFI?</h3>
+        <p>GPT é o estilo de partição do disco. Em instalações modernas do Windows ele normalmente acompanha UEFI, mas o diagnóstico deve confirmar o modo real do sistema, não inferi-lo apenas por outro disco ou por uma única propriedade.</p>
+
+        <h3>Posso mudar Legacy para UEFI sem formatar?</h3>
+        <p>Há cenários suportados em que o MBR2GPT permite migrar o disco do sistema sem reformatação, mas a ferramenta tem pré-requisitos e a mudança exige reconfiguração posterior do firmware. Faça backup e valide o cenário antes de converter.</p>
+
+        <h3>CSM e Legacy são a mesma coisa?</h3>
+        <p>CSM é um módulo de compatibilidade oferecido por alguns firmwares UEFI para suportar comportamento de inicialização legado. A presença da opção CSM não prova que o Windows esteja usando esse modo.</p>
+
+        <h3>Secure Boot desligado quer dizer que estou em Legacy?</h3>
+        <p>Não. Um sistema pode iniciar em UEFI com Secure Boot desabilitado. Verifique o Modo da BIOS no Windows.</p>
+
         <h2>Resumo prático</h2>
-        <p>Use o Modo da BIOS do Windows para identificar como a sessão atual iniciou, confirme GPT/MBR no disco do sistema e trate menus do firmware como evidência complementar. Não converta partições nem altere UEFI/Legacy, Secure Boot ou TPM por tentativa. Quando uma migração for necessária, siga o procedimento documentado para o Windows instalado, com backup e recuperação do BitLocker disponíveis.</p>
+        <p>Para descobrir UEFI ou Legacy, comece pelo <strong>Modo da BIOS</strong> do Windows, confirme GPT/MBR no disco do sistema e entenda o objetivo antes de tocar no firmware. Para instalações modernas suportadas, UEFI é o caminho esperado; para uma instalação Legacy já funcional, migrar exige planejamento, não um simples toggle. Preserve backup, BitLocker e a configuração original antes de qualquer conversão.</p>
+
+        <EditorialReferences slug="boot-uefi-ou-legacy-como-identificar" />
       </>
     ),
   },
