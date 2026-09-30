@@ -610,14 +610,14 @@ const WAVE_9C: EditorialApproval[] = [
     status: "approved",
     authorType: "organization",
     authorId: INSTITUTIONAL_AUTHOR.id,
-    reviewedAt: "2026-09-28",
+    reviewedAt: "2026-09-30",
     approvedAt: "2026-08-25",
     imageOrigin: "licensed",
     imageLicense: "CC BY-SA 4.0",
     imageAttribution:
       "Foto: Ilya Plekhanov (Wikimedia Commons), CC BY-SA 4.0 — https://commons.wikimedia.org/wiki/File:Samsung_960_EVO_in_M.2_slot_02.jpg",
     notes:
-      "Satélite de cenário de upgrade escrito do zero na Onda 9C; fact-check registrado em blogEditorialSources.ts; capa é fotografia real licenciada, sem IA.",
+      "Revisão material em 2026-09-30 guiada pelo GSC: 89 impressões, 1 clique e posição média ~9,20 entre 2026-04-01 e 2026-09-27. A versão suplementar passa a sobrepor editorialmente o texto monolítico antigo, preservando a mesma URL. Diagnóstico reorganizado em detecção física, cenário do SSD, Windows Boot Manager, UEFI/Legacy, controlador e estrutura de boot, com BitLocker, preservação do disco antigo e fontes oficiais visíveis. Queries individuais não foram expostas pelo GSC e nenhuma foi inventada.",
   },
 ];
 
