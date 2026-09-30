@@ -233,14 +233,14 @@ const WAVE_5B: EditorialApproval[] = [
     status: "approved",
     authorType: "organization",
     authorId: INSTITUTIONAL_AUTHOR.id,
-    reviewedAt: "2026-08-12",
+    reviewedAt: "2026-09-30",
     approvedAt: "2026-08-12",
     imageOrigin: "licensed",
     imageLicense: "CC BY 4.0",
     imageAttribution:
       "Foto: Hayden Schiff (Wikimedia Commons), CC BY 4.0 — https://commons.wikimedia.org/wiki/File:TP-Link_TL-WR740N_router_HS5.jpg",
     notes:
-      "Reescrita integral na Onda 5B; fact-check registrado em blogEditorialSources.ts; capa é fotografia real licenciada, sem IA.",
+      "Revisão material em 2026-09-30 guiada pelo GSC: 14 impressões, 0 cliques e posição média ~34,43 entre 2026-04-01 e 2026-09-27. O conteúdo suplementar preserva a URL e responde às queries reais de configurar/usar roteador e Wi‑Fi, organizando WAN, LAN/DHCP, SSID/segurança, administração e validação sem depender de painel ou IP universal.",
   },
   {
     slug: "como-saber-quem-esta-usando-meu-wifi",
