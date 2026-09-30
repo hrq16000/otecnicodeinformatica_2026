@@ -101,6 +101,43 @@ export const ALLOWED_SOURCE_HOSTS = [
 // FONTES CONSULTADAS (URLs confirmadas em 2026-07-12).
 // ─────────────────────────────────────────────────────────────
 export const EDITORIAL_SOURCES: Record<string, EditorialSource> = {
+  "ms-print-spooler-service-2026": {
+    id: "ms-print-spooler-service-2026",
+    title: "Corrigir o problema do serviço de spooler de impressão não estar executando erros no Windows",
+    publisher: "Microsoft Support",
+    url: "https://support.microsoft.com/pt-br/windows/hardware/printer/fix-print-spooler-service-not-running-errors-in-windows",
+    accessedAt: "2026-09-30",
+    sourceType: "official",
+    supports: [
+      "O Spooler de Impressão gerencia trabalhos de impressão no Windows; quando falha, documentos podem ficar presos na fila e a impressora pode deixar de responder.",
+      "A Microsoft orienta reiniciar o serviço e revisar drivers conflitantes ou desatualizados quando o spooler apresenta falhas recorrentes.",
+    ],
+  },
+  "ms-print-job-stuck-queue-2026": {
+    id: "ms-print-job-stuck-queue-2026",
+    title: "Corrigir o trabalho de impressão travado em erros de fila no Windows",
+    publisher: "Microsoft Support",
+    url: "https://support.microsoft.com/pt-br/windows/hardware/printer/fix-print-job-stuck-in-queue-errors-in-windows",
+    accessedAt: "2026-09-30",
+    sourceType: "official",
+    supports: [
+      "A Microsoft orienta primeiro cancelar trabalhos pela fila e reiniciar o Spooler de Impressão.",
+      "Quando o cancelamento não limpa a fila, o procedimento oficial é parar o spooler, excluir os arquivos de trabalhos em C:\\Windows\\System32\\spool\\PRINTERS e iniciar o serviço novamente.",
+    ],
+  },
+  "ms-printer-connection-printing-2026": {
+    id: "ms-printer-connection-printing-2026",
+    title: "Corrigir problemas de conexão e impressão de impressora no Windows",
+    publisher: "Microsoft Support",
+    url: "https://support.microsoft.com/pt-br/windows/hardware/printer/fix-printer-connection-and-printing-problems-in-windows",
+    accessedAt: "2026-09-30",
+    sourceType: "official",
+    supports: [
+      "O roteiro oficial separa atualização de driver, limpeza/redefinição do spooler e problemas de status offline, sustentando o diagnóstico por camadas.",
+      "A Microsoft recomenda usar o driver mais recente apropriado para a impressora antes de concluir que a fila é a causa de toda falha de impressão.",
+    ],
+  },
+
   "ms-win11-requirements": {
     id: "ms-win11-requirements",
     title: "Windows 11 requirements",
@@ -2027,13 +2064,16 @@ export const ARTICLE_SOURCE_MANIFEST: Record<string, ArticleSourceManifest> = {
   },
   "fila-de-impressao-travada-spooler-windows": {
     slug: "fila-de-impressao-travada-spooler-windows",
-    sources: [],
+    sources: [
+      "ms-print-spooler-service-2026",
+      "ms-print-job-stuck-queue-2026",
+      "ms-printer-connection-printing-2026",
+    ],
     technicalReview: "reviewed",
     factChecked: true,
-    factCheckedAt: "2026-08-26",
-    stableKnowledge: true,
+    factCheckedAt: "2026-09-30",
     notes:
-      "Revisão concluída (Onda 10C, Lote 2): papel do serviço de spooler, causa dos trabalhos corrompidos, procedimento de parada do serviço e limpeza da pasta de trabalhos, ressalva de ambiente gerenciado e critério para suspeitar do driver. Sem marca comercial e sem promessa. Conhecimento técnico estável — sem fonte visível.",
+      "Revisão material em 2026-09-30 guiada pelo GSC: 9 impressões, 0 cliques e posição média ~45,56 entre 2026-04-01 e 2026-09-27. Queries reais incluem 'enviando dados para o spool', 'reiniciar spooler de impressão', 'reiniciar spooler de impressão cmd', 'spooler de impressão não inicia' e 'spooler de impressão parando sozinho'. A versão suplementar separa trabalho preso, serviço parado, falha recorrente de driver/componente, status offline e conectividade; limita a limpeza manual à pasta PRINTERS com o serviço parado e não recomenda DLL/driver de terceiros. Fontes Microsoft visíveis.",
   },
   "hd-nao-e-reconhecido-na-bios-o-que-fazer": {
     slug: "hd-nao-e-reconhecido-na-bios-o-que-fazer",

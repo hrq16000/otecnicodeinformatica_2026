@@ -759,14 +759,14 @@ const WAVE_10E: EditorialApproval[] = [
     status: "approved",
     authorType: "organization",
     authorId: INSTITUTIONAL_AUTHOR.id,
-    reviewedAt: "2026-08-26",
+    reviewedAt: "2026-09-30",
     approvedAt: "2026-08-26",
     imageOrigin: "licensed",
     imageLicense: "CC BY-SA 4.0",
     imageAttribution:
       "Foto: Solomon203 (Wikimedia Commons), CC BY-SA 4.0 — https://commons.wikimedia.org/wiki/File:Sharp_MX-M465_of_Aurora_Office_Equipment_20161029.jpg",
     notes:
-      "Satélite escrito do zero na Onda 10C (Lote 2); fact-check registrado em blogEditorialSources.ts; capa é fotografia real licenciada, sem IA.",
+      "Revisão material em 2026-09-30 guiada pelo GSC: 9 impressões, 0 cliques e posição média ~45,56 entre 2026-04-01 e 2026-09-27. Queries reais incluem reinício por CMD, spooler que não inicia/parando sozinho e trabalhos presos. A versão suplementar preserva a mesma URL e separa fila, serviço, driver, offline e conectividade, com limpeza manual limitada à pasta de trabalhos e fontes Microsoft visíveis.",
   },
 ];
 
