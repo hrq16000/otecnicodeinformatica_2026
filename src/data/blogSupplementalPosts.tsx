@@ -1201,7 +1201,7 @@ export const blogSupplementalPosts: Record<string, BlogPostContent> = {
         <p>Não troque pasta por calendário nem apenas porque a carcaça está quente. Primeiro reproduza o sintoma sob a mesma carga e registre o comportamento.</p>
 
         <h2>O que a pasta térmica realmente faz</h2>
-        <p>A Intel descreve o Thermal Interface Material (TIM) como o material que preenche pequenas irregularidades entre a superfície do processador e a solução de refrigeração, melhorando a transferência de calor. Isso explica o papel da pasta: ela ajuda o dissipador a trabalhar; não substitui dissipador, heatpipe ou fluxo de ar. citeturn422999search0turn422999search1</p>
+        <p>A Intel descreve o Thermal Interface Material (TIM) como o material que preenche pequenas irregularidades entre a superfície do processador e a solução de refrigeração, melhorando a transferência de calor. Isso explica o papel da pasta: ela ajuda o dissipador a trabalhar; não substitui dissipador, heatpipe ou fluxo de ar.</p>
 
         <h2>1. Antes de abrir, confirme que o problema é térmico</h2>
         <ul>
@@ -1226,14 +1226,14 @@ export const blogSupplementalPosts: Record<string, BlogPostContent> = {
 
         <h2>5. Remoção do dissipador: siga a sequência indicada</h2>
         <p>Alguns dissipadores trazem parafusos numerados; outros dependem do manual. Solte gradualmente os pontos de fixação conforme a sequência prevista. Não faça alavanca sobre a placa nem force um conjunto que ainda tenha parafuso ou trava preso.</p>
-        <p>A AMD também orienta reaplicar material de interface quando a solução térmica é removida e reinstalada; a ideia importante é a mesma: uma interface usada/removida não deve ser simplesmente remontada como se nada tivesse acontecido. citeturn422999search5</p>
+        <p>A AMD também orienta reaplicar material de interface quando a solução térmica é removida e reinstalada; a ideia importante é a mesma: uma interface usada/removida não deve ser simplesmente remontada como se nada tivesse acontecido.</p>
 
         <h2>6. Limpeza: remova o material antigo sem contaminar a placa</h2>
         <p>Limpe as superfícies de contato com material sem fiapos e produto apropriado para eletrônica. Evite excesso de líquido e aguarde secagem completa. Não raspe chip ou dissipador com metal.</p>
         <p>Não toque a superfície limpa com os dedos: óleo e sujeira reduzem a qualidade do contato.</p>
 
         <h2>7. Quantidade de pasta: não existe uma medida universal para notebook</h2>
-        <p>Guias de processadores desktop podem mostrar padrões como ponto central, mas notebooks usam chips, bases e soluções térmicas diferentes. A quantidade e o método devem seguir a orientação do fabricante do equipamento ou do TIM. A própria Intel recomenda ler as instruções do cooler/material antes da aplicação. citeturn422999search0</p>
+        <p>Guias de processadores desktop podem mostrar padrões como ponto central, mas notebooks usam chips, bases e soluções térmicas diferentes. A quantidade e o método devem seguir a orientação do fabricante do equipamento ou do TIM. A própria Intel recomenda ler as instruções do cooler/material antes da aplicação.</p>
         <ul>
           <li>Não misture pasta nova com camada antiga.</li>
           <li>Não coloque pasta por cima de material pré-aplicado.</li>
