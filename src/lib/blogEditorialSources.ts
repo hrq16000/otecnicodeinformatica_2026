@@ -473,6 +473,31 @@ export const EDITORIAL_SOURCES: Record<string, EditorialSource> = {
       "Limpar cache remove dados temporários; limpar dados remove configurações e dados do aplicativo.",
     ],
   },
+  "msi-front-panel-power-test-2026": {
+    id: "msi-front-panel-power-test-2026",
+    title: "O que fazer quando o PC não inicia ou não dá vídeo",
+    publisher: "MSI Support",
+    url: "https://br.msi.com/support/technical_details/MB_Boot_No_Display",
+    accessedAt: "2026-09-29",
+    sourceType: "official",
+    supports: [
+      "A MSI orienta confirmar o Power Switch no header frontal e, quando o cabo frontal é suspeito, remover esse cabo e acionar diretamente o par Power Switch como teste de diagnóstico.",
+      "O teste de painel frontal é apenas uma etapa de uma sequência maior que também verifica compatibilidade e hardware, portanto não valida sozinho todos os componentes.",
+    ],
+  },
+  "msi-jfp1-front-panel-manual": {
+    id: "msi-jfp1-front-panel-manual",
+    title: "JFP1: Front Panel Connectors",
+    publisher: "MSI",
+    url: "https://download-2.msi.com/archive/mnu_exe/mb/H610TI-S03_H610TI-S01.pdf",
+    accessedAt: "2026-09-29",
+    sourceType: "official",
+    supports: [
+      "O header JFP1 do manual separa Power Switch, Reset Switch, Power LED e HDD LED.",
+      "O manual marca polaridade para LEDs e mostra Power Switch/Reset Switch como pares de chave, reforçando que o pinout deve ser consultado no modelo específico.",
+    ],
+  },
+
   "ms-bug-check-code-reference": {
     id: "ms-bug-check-code-reference",
     title: "Bug check code reference",
@@ -1655,14 +1680,18 @@ export const ARTICLE_SOURCE_MANIFEST: Record<string, ArticleSourceManifest> = {
   },
   "botao-power-nao-funciona-jump-start-placa-mae": {
     slug: "botao-power-nao-funciona-jump-start-placa-mae",
-    sources: [],
+    sources: [
+      "msi-front-panel-power-test-2026",
+      "msi-jfp1-front-panel-manual",
+      "intel-atx3-dc-regulation",
+    ],
     technicalReview: "reviewed",
     factChecked: true,
-    factCheckedAt: "2026-08-26",
-    stableKnowledge: true,
+    factCheckedAt: "2026-09-29",
     notes:
-      "Revisão concluída (Onda 10D): função do bloco F_PANEL/JFP1, ausência de polaridade no par PWR_SW, procedimento de encosto momentâneo entre os pinos, uso do par de reset como contorno e limites do teste em notebooks e all-in-one. Alertas de segurança sobre não abrir a fonte e sobre garantia. Conhecimento técnico estável — sem fonte visível.",
+      "Revisão material em 2026-09-29 guiada pelo GSC: 8 impressões, 0 cliques e posição média ~10,88 entre 2026-04-01 e 2026-09-27. A versão suplementar substitui editorialmente o texto monolítico antigo, preservando a mesma URL. O acionamento direto do PWR_SW passa a ser tratado como teste de isolamento de botão/cabo, não como prova de fonte ou placa saudáveis; o pinout depende do manual do modelo, laptops/all-in-one são excluídos do procedimento genérico e foram adicionados critérios de parada. Queries individuais não foram expostas pelo GSC e nenhuma foi inventada. O teste do header e o papel do JFP1 são ancorados em documentação oficial MSI; limites de validação da fonte são coerentes com o guia ATX da Intel.",
   },
+
   "curto-circuito-placa-mae-como-identificar": {
     slug: "curto-circuito-placa-mae-como-identificar",
     sources: [],
