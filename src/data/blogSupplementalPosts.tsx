@@ -1185,6 +1185,127 @@ export const blogSupplementalPosts: Record<string, BlogPostContent> = {
       </>
     ),
   },
+  "notebook-nao-liga-o-que-fazer": {
+    title: "Notebook não liga: como separar energia, POST, vídeo e boot sem piorar o defeito",
+    excerpt:
+      "Sem luz, liga sem imagem, bipa, desliga sozinho ou só funciona na tomada? Use uma triagem segura para separar carregador, bateria, POST, tela e inicialização antes de abrir o notebook.",
+    date: "2026-09-30",
+    readTime: "15 min",
+    category: "Manutenção",
+    content: (
+      <>
+        <p className="lead">“Notebook não liga” pode descrever pelo menos quatro falhas diferentes: <strong>sem energia</strong>, <strong>sem POST</strong>, <strong>sem vídeo</strong> ou <strong>sem boot do sistema</strong>. Tratar tudo como “placa-mãe” ou “bateria” leva a troca de peça por tentativa. A primeira etapa é registrar exatamente o que o equipamento ainda consegue fazer.</p>
+
+        <h2>Resposta direta: qual é o seu sintoma?</h2>
+        <table>
+          <thead><tr><th>Sintoma</th><th>Camada provável</th><th>Primeira verificação</th></tr></thead>
+          <tbody>
+            <tr><td>Nenhuma luz, som ou ventoinha</td><td>Entrada de energia / circuito de power</td><td>Tomada, carregador correto, conector e sinais visíveis.</td></tr>
+            <tr><td>LED ou ventoinha reage, mas não aparece imagem</td><td>POST ou vídeo</td><td>Observe códigos de LED/bipe e se há imagem externa.</td></tr>
+            <tr><td>Mostra logo do fabricante e para</td><td>POST concluído parcialmente ou boot</td><td>Registre mensagem/código antes de reiniciar.</td></tr>
+            <tr><td>Chega à BIOS/UEFI, mas não ao Windows</td><td>Armazenamento / boot</td><td>Confirme se SSD/HD é detectado e se existe entrada de boot.</td></tr>
+            <tr><td>Funciona só com carregador</td><td>Bateria / alimentação</td><td>Separe “bateria não mantém carga” de “notebook não liga”.</td></tr>
+          </tbody>
+        </table>
+        <p>HP e Dell também estruturam a triagem separando ausência de energia, ausência de POST, ausência de boot e ausência de vídeo. Essa divisão é mais útil do que começar por uma peça específica.</p>
+
+        <h2>1. Se não há nenhum sinal de vida</h2>
+        <p>Comece do lado de fora do notebook. Use uma tomada que você sabe que funciona, retire réguas ou extensões suspeitas e confirme que o carregador é compatível com o modelo. Conector fisicamente igual não garante tensão, potência ou protocolo corretos.</p>
+        <ul>
+          <li>Observe cabo cortado, pino torto, plástico derretido ou aquecimento anormal.</li>
+          <li>Se o carregador possui LED, registre se ele permanece aceso antes e depois de conectar ao notebook.</li>
+          <li>Se o notebook usa USB-C, confirme no manual qual porta aceita carga e qual potência é exigida; nem toda porta USB-C necessariamente recebe energia.</li>
+          <li>Não abra o carregador nem improvise adaptadores.</li>
+        </ul>
+        <p>Se houver outro carregador <strong>oficialmente compatível</strong> disponível, uma comparação controlada pode separar carregador de notebook. Não use fonte “parecida” apenas porque encaixa.</p>
+
+        <h2>2. Remova periféricos antes de aprofundar</h2>
+        <p>Desconecte pendrives, HDs externos, hubs, impressoras, cartões de memória e acessórios não essenciais. HP inclui a remoção de dispositivos externos no seu procedimento básico de triagem, justamente para eliminar um ramo de falha sem abrir o equipamento.</p>
+        <p>Depois, tente uma única partida e registre o resultado. Se o comportamento mudou, reconecte um item por vez; isso preserva a evidência.</p>
+
+        <h2>3. Reset elétrico: só como procedimento documentado</h2>
+        <p>Fabricantes como HP e Dell documentam procedimentos de descarga/reset de energia para determinados notebooks, normalmente com o equipamento desligado, adaptador desconectado e botão power mantido pressionado por alguns segundos. <strong>O procedimento e o tempo variam</strong>; siga o manual ou suporte oficial do modelo em vez de transformar “segurar power” em regra universal.</p>
+        <p>Esse reset não repara bateria, placa ou carregador. Ele apenas elimina alguns estados de energia residual/controlador antes de repetir o teste.</p>
+
+        <h2>4. LED acende ou ventoinha gira, mas não há imagem</h2>
+        <p>Nesse ponto o notebook já não está em “sem energia”. A investigação passa a ser <strong>sem POST ou sem vídeo</strong>. Registre qualquer padrão de LED ou bipe; muitos fabricantes usam códigos próprios e a tabela precisa ser a do modelo/família correta.</p>
+        <p>Se o equipamento parece iniciar, testar uma saída externa pode ajudar a separar tela/cabo de vídeo de um problema mais amplo, mas ausência de imagem externa também não condena a placa-mãe automaticamente. Veja <a href="/problemas/computador-nao-da-imagem">computador liga mas não dá imagem</a> para a lógica de vídeo/POST.</p>
+
+        <h2>5. Mostra logo, BIOS ou mensagem? Então ele está avançando mais</h2>
+        <p>Se aparece logo do fabricante, tela de diagnóstico, BIOS/UEFI ou mensagem de erro, fotografe antes de reiniciar. O equipamento já passou de uma falha de “nenhuma energia” e está oferecendo informação útil.</p>
+        <ul>
+          <li><strong>Entra direto na BIOS:</strong> confira detecção do SSD e entrada de boot em <a href="/blog/computador-entra-direto-na-bios">computador entra direto na BIOS</a>.</li>
+          <li><strong>No Bootable Device:</strong> siga <a href="/blog/erro-no-bootable-device-como-resolver">erro No Bootable Device</a>.</li>
+          <li><strong>Reparo automático em loop:</strong> use <a href="/blog/windows-reparo-automatico-em-loop">Windows em reparo automático</a>.</li>
+        </ul>
+        <p>Não formate nem inicialize disco apenas porque o Windows não abriu. A prioridade é preservar dados e identificar a camada da falha.</p>
+
+        <h2>6. Liga apenas conectado à tomada</h2>
+        <p>Esse sintoma é diferente de “notebook não liga”. Se o notebook funciona normalmente com o adaptador, a investigação se concentra em bateria, conexão da bateria, gerenciamento de carga e, conforme o projeto, circuito de alimentação.</p>
+        <p>Quando o Windows ainda inicia, o comando oficial <code>powercfg /batteryreport</code> gera um relatório de histórico e características de uso da bateria. Ele é útil para contexto, mas <strong>não transforma sozinho uma bateria em “boa” ou “ruim”</strong> e não substitui diagnóstico elétrico.</p>
+
+        <h2>7. Bateria estufada, líquido, cheiro ou calor anormal: pare</h2>
+        <p>Não continue tentando ligar um notebook com bateria deformando a carcaça, líquido derramado, cheiro de queimado, fumaça, estalos ou aquecimento concentrado no conector/carregador. Desconecte da energia quando for seguro fazê-lo e não perfure, pressione ou tente “desinchar” uma bateria.</p>
+        <p>Após contato com líquido, não use secador, forno, arroz ou calor para acelerar secagem. Energizar repetidamente aumenta a chance de corrosão ativa e dano elétrico.</p>
+
+        <h2>8. O que códigos de LED e bipes realmente significam</h2>
+        <p>Padrões de piscadas e bipes são úteis quando o fabricante documenta o código para aquela plataforma. Eles indicam a etapa em que o equipamento encontrou uma condição, mas não devem ser traduzidos por tabelas genéricas da internet.</p>
+        <p>Procure o manual de serviço ou a página de suporte pelo modelo exato. Se o código aponta para memória, por exemplo, ainda pode ser necessário separar módulo, slot e controlador antes de condenar a RAM.</p>
+
+        <h2>9. O que evitar porque apaga evidência ou cria risco</h2>
+        <ul>
+          <li>Abrir carregador ou bateria.</li>
+          <li>Usar fonte incompatível “só para testar”.</li>
+          <li>Fazer ponte em pads ou conectores internos sem documentação do modelo.</li>
+          <li>Remover memória, SSD, bateria interna e cabo de tela todos de uma vez.</li>
+          <li>Atualizar BIOS/UEFI como tentativa genérica em uma máquina instável.</li>
+          <li>Formatar o SSD antes de confirmar se os dados estão seguros.</li>
+          <li>Insistir em dezenas de partidas quando há cheiro, calor anormal ou líquido.</li>
+        </ul>
+
+        <h2>10. Se você tiver experiência para abrir o notebook</h2>
+        <p>A desmontagem deve seguir o manual de serviço do modelo. A ordem segura costuma começar por desligar energia externa e isolar a bateria interna antes de tocar em memória, SSD ou cabos, mas o acesso e a sequência variam. Alguns modelos exigem remover tampa, blindagem ou conectores delicados.</p>
+        <p>Se a máquina está em garantia, confirme antes as regras de serviço. Se você não tem ferramenta adequada ou experiência com flats e travas, parar antes da abertura preserva o equipamento.</p>
+
+        <h2>11. Como organizar o diagnóstico sem trocar peças</h2>
+        <ol>
+          <li>Classifique: sem energia, sem POST, sem vídeo ou sem boot.</li>
+          <li>Registre LEDs, bipes, mensagens e o que aconteceu antes da falha.</li>
+          <li>Elimine tomada, carregador compatível e periféricos externos.</li>
+          <li>Siga o reset de energia oficial do fabricante quando aplicável.</li>
+          <li>Se há sinais de vida, mude para a trilha de POST/vídeo.</li>
+          <li>Se chega à BIOS ou mostra mensagens, investigue boot/armazenamento sem apagar dados.</li>
+          <li>Faça apenas uma alteração por vez.</li>
+        </ol>
+
+        <h2>Quando procurar diagnóstico técnico</h2>
+        <p>Procure avaliação quando não há resposta com carregador compatível conhecido, quando existe dano físico, líquido, bateria deformada, conector aquecendo, código de diagnóstico recorrente, desligamento imediato ou necessidade de abrir o equipamento para medir linhas internas. Nessa etapa, o objetivo é localizar a falha antes de comprar bateria, carregador ou placa.</p>
+        <p>Veja <a href="/diagnostico-tecnico">como funciona o diagnóstico técnico</a> e <a href="/servicos/manutencao-de-notebook">manutenção de notebook</a>.</p>
+
+        <h2>Perguntas frequentes</h2>
+        <h3>Notebook sem luz nenhuma é sempre carregador?</h3>
+        <p>Não. Carregador é uma hipótese, mas conector, bateria, circuito de entrada e placa também podem produzir ausência total de sinais.</p>
+
+        <h3>Se a luz acende, a placa-mãe está boa?</h3>
+        <p>Não. Um LED mostra apenas que algum circuito recebeu energia. POST, memória, CPU, vídeo e outras linhas ainda podem falhar.</p>
+
+        <h3>Posso testar com qualquer carregador que encaixe?</h3>
+        <p>Não. Confirme compatibilidade elétrica e de protocolo pelo fabricante. Conector parecido não garante segurança.</p>
+
+        <h3>Notebook liga só na tomada: preciso trocar bateria?</h3>
+        <p>A bateria fica mais suspeita, mas conexão, gerenciamento de carga e circuito interno ainda precisam ser considerados. Se o Windows inicia, o battery report ajuda a registrar histórico, não a fechar o diagnóstico sozinho.</p>
+
+        <h3>Segurar o botão power por 20 segundos resolve?</h3>
+        <p>Alguns fabricantes documentam procedimentos semelhantes para modelos compatíveis. Use a orientação oficial do seu modelo; não trate duração e sequência como regra universal.</p>
+
+        <h2>Resumo prático</h2>
+        <p>Quando um notebook “não liga”, primeiro descubra <strong>em que etapa ele para</strong>. Elimine energia externa e periféricos, use apenas procedimentos oficiais do modelo e não confunda ausência de vídeo ou boot com ausência de energia. Pare diante de líquido, bateria deformada, cheiro ou calor anormal e preserve os dados antes de qualquer ação destrutiva.</p>
+
+        <EditorialReferences slug="notebook-nao-liga-o-que-fazer" />
+      </>
+    ),
+  },
+
   "computador-entra-direto-na-bios": {
     title: "Computador entra direto na BIOS: como separar disco, boot e firmware",
     excerpt:
