@@ -357,7 +357,7 @@ const WAVE_5E: EditorialApproval[] = [
     imageAttribution:
       "Foto: Deviantart (Wikimedia Commons), CC BY-SA 2.0 — https://commons.wikimedia.org/wiki/File:WesterDigital-Black-NVMe-SSD.jpg",
     notes:
-      "Revisão material em 2026-09-29 guiada pelo GSC e restauração da owner no mapa estático: 7 impressões, 0 cliques e posição média ~8,43 entre 2026-04-01 e 2026-09-27. Conteúdo novo cobre compatibilidade real de segundo slot, M.2 SATA × NVMe, montagem segura, inicialização no Windows, uso como dados versus migração, falhas de detecção, BitLocker, validação e critérios de parada. Queries individuais não foram expostas pelo GSC e nenhuma foi inventada.",
+      "Revisão material em 2026-09-29 guiada pelo GSC: 7 impressões, 0 cliques e posição média ~8,43 entre 2026-04-01 e 2026-09-27. A versão suplementar passa a sobrepor editorialmente a versão monolítica antiga, preservando a mesma URL. Conteúdo novo cobre compatibilidade real de segundo slot, M.2 SATA × NVMe, montagem segura, inicialização no Windows, uso como dados versus migração, falhas de detecção, BitLocker, validação e critérios de parada. Queries individuais não foram expostas pelo GSC e nenhuma foi inventada.",
   },
 ];
 
