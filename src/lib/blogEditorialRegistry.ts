@@ -582,14 +582,14 @@ const WAVE_9C: EditorialApproval[] = [
     status: "approved",
     authorType: "organization",
     authorId: INSTITUTIONAL_AUTHOR.id,
-    reviewedAt: "2026-08-25",
+    reviewedAt: "2026-09-29",
     approvedAt: "2026-08-25",
     imageOrigin: "licensed",
     imageLicense: "CC BY 2.0",
     imageAttribution:
       "Foto: Paul Schultz (Wikimedia Commons), CC BY 2.0 — https://commons.wikimedia.org/wiki/File:BIOS_Setup_First_Time.jpg",
     notes:
-      "Pilar diagnóstico escrito do zero na Onda 9C; fact-check registrado em blogEditorialSources.ts; capa é fotografia real licenciada, sem IA.",
+      "Revisão material em 2026-09-29 guiada pelo GSC: 12 impressões, 0 cliques e posição média ~13,08 entre 2026-04-01 e 2026-09-27. A versão suplementar passa a sobrepor editorialmente o texto monolítico antigo, preservando a mesma URL. Diagnóstico reorganizado em detecção do disco, entrada Windows Boot Manager, UEFI/Legacy, estrutura de boot, retenção de configurações, BitLocker e critérios de parada; a única query individual exposta pelo GSC foi tratada sem desviar a intenção principal.",
   },
   {
     slug: "erro-no-bootable-device-como-resolver",
