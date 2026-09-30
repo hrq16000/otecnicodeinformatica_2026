@@ -933,14 +933,14 @@ const WAVE_10G: EditorialApproval[] = [
     status: "approved",
     authorType: "organization",
     authorId: INSTITUTIONAL_AUTHOR.id,
-    reviewedAt: "2026-08-26",
+    reviewedAt: "2026-09-30",
     approvedAt: "2026-08-26",
     imageOrigin: "licensed",
     imageLicense: "Public Domain",
     imageAttribution:
       "Foto: PantheraLeo1359531 (Wikimedia Commons), domínio público — https://commons.wikimedia.org/wiki/File:Windows_Update_%E2%80%93_VirtualBox_Windows_11_24H2_(Version_10.0.26100.1742)_04_02_2025_18_22_13crop.png",
     notes:
-      "Satélite de reversão de atualização, escrito do zero na Onda 10C (Lote 4); desligamento forçado tratado com ressalva explícita; fact-check registrado em blogEditorialSources.ts; capa é imagem real licenciada, sem IA.",
+      "Revisão material em 2026-09-30 guiada pelo GSC: 8 impressões, 0 cliques e posição média 12 entre 2026-04-01 e 2026-09-27. A query real “desfazendo alterações feitas no computador” foi incorporada à resposta. A versão suplementar passa a sobrepor editorialmente o texto monolítico antigo, preservando a mesma URL; remove heurísticas determinísticas de tempo/LED/ventoinha, prioriza histórico/KB/código e solucionador oficial, e usa Windows RE/BitLocker quando o sistema não volta a iniciar.",
   },
 ];
 
