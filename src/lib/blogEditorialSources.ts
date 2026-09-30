@@ -1415,14 +1415,19 @@ export const ARTICLE_SOURCE_MANIFEST: Record<string, ArticleSourceManifest> = {
   },
   "como-instalar-segundo-ssd-notebook": {
     slug: "como-instalar-segundo-ssd-notebook",
-    sources: [],
+    sources: [
+      "ms-initialize-new-disks",
+      "nvme-official-faq",
+      "kingston-ssd-faq",
+      "ms-bitlocker-backup-key",
+    ],
     technicalReview: "reviewed",
     factChecked: true,
-    factCheckedAt: "2026-08-12",
-    stableKnowledge: true,
+    factCheckedAt: "2026-09-29",
     notes:
-      "Revisão concluída (Onda 5E): verificação de slot M.2 livre, comprimento e chaveamento antes da compra; limites reais do caddy no lugar do leitor óptico; desconexão da bateria interna; inicialização do disco após a montagem. Sem marca e sem promessa de ganho de desempenho. Conhecimento técnico estável — sem fonte visível.",
+      "Revisão material em 2026-09-29 guiada pelo GSC: 7 impressões, 0 cliques e posição média ~8,43 entre 2026-04-01 e 2026-09-27. A versão suplementar substitui editorialmente a versão monolítica antiga, preservando a mesma URL. O artigo separa formato M.2 de protocolo SATA/NVMe, exige confirmação do segundo slot no modelo exato, orienta montagem reversível, diferencia disco de dados de migração do Windows, explica inicialização segura no Gerenciamento de Disco e adiciona critérios de parada. Queries individuais não foram expostas pelo GSC e nenhuma foi inventada. Compatibilidade M.2/NVMe, inicialização de disco e BitLocker são ancorados em fontes oficiais/primárias.",
   },
+
   "ransomware-como-proteger-empresa": {
     slug: "ransomware-como-proteger-empresa",
     sources: [],
