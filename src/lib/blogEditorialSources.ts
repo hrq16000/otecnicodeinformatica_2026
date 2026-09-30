@@ -1601,13 +1601,18 @@ export const ARTICLE_SOURCE_MANIFEST: Record<string, ArticleSourceManifest> = {
   },
   "como-configurar-roteador-wifi-iniciantes": {
     slug: "como-configurar-roteador-wifi-iniciantes",
-    sources: ["wifi-alliance-security", "wifi-alliance-home"],
+    sources: [
+      "wifi-alliance-security",
+      "wifi-alliance-home",
+      "cisa-secure-wifi-networks",
+      "nsa-router-hygiene-2026",
+      "fcc-home-network-tips",
+    ],
     technicalReview: "reviewed",
     factChecked: true,
-    factCheckedAt: "2026-08-12",
-    stableKnowledge: true,
+    factCheckedAt: "2026-09-30",
     notes:
-      "Reescrito na Onda 5B. Sem velocidade prometida, sem marca de equipamento recomendada e sem passo dependente de painel específico de fabricante. Recomendações de canal (1/6/11 em 2,4 GHz) e de padrão de segurança (WPA3/WPA2-AES, WPS desligado) são conhecimento técnico estável.",
+      "Revisão material em 2026-09-30 guiada pelo GSC: 14 impressões, 0 cliques e posição média ~34,43 entre 2026-04-01 e 2026-09-27. Queries reais incluem 'como configurar o wi fi', 'como criar uma rede wi fi com roteador', variações de 'como usar roteador', 'configuração de wi-fi', 'configuração do modem' e 'roteador wifi como configurar'. A versão suplementar organiza configuração por camadas (provedor/WAN, LAN/DHCP, Wi‑Fi e administração), separa gateway/roteador/ponto de acesso, evita IPs e painéis universais, reduz risco de duplo NAT e ancora segurança/firmware/cobertura em Wi‑Fi Alliance, CISA, NSA e FCC.",
   },
   "como-saber-quem-esta-usando-meu-wifi": {
     slug: "como-saber-quem-esta-usando-meu-wifi",
