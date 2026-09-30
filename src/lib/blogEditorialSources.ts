@@ -882,6 +882,43 @@ export const EDITORIAL_SOURCES: Record<string, EditorialSource> = {
     ],
   },
 
+  "ms-msinfo32-2026": {
+    id: "ms-msinfo32-2026",
+    title: "msinfo32",
+    publisher: "Microsoft Learn",
+    url: "https://learn.microsoft.com/pt-br/windows-server/administration/windows-commands/msinfo32",
+    accessedAt: "2026-09-29",
+    sourceType: "official",
+    supports: [
+      "O msinfo32 abre Informações do Sistema e reúne informações de hardware, componentes e ambiente de software do computador.",
+      "A ferramenta pode ser usada como ponto de verificação do modo em que o Windows foi inicializado.",
+    ],
+  },
+  "ms-boot-uefi-legacy-2026": {
+    id: "ms-boot-uefi-legacy-2026",
+    title: "Inicializar no modo UEFI ou no modo BIOS herdado",
+    publisher: "Microsoft Learn",
+    url: "https://learn.microsoft.com/pt-br/windows-hardware/manufacture/desktop/boot-to-uefi-mode-or-legacy-bios-mode?view=windows-11",
+    accessedAt: "2026-09-29",
+    sourceType: "official",
+    supports: [
+      "Depois que o Windows é instalado, o dispositivo normalmente continua inicializando no mesmo modo usado durante a instalação.",
+      "Para instalações novas e suportadas, a documentação recomenda o modo UEFI mais recente.",
+    ],
+  },
+  "ms-mbr2gpt-2026": {
+    id: "ms-mbr2gpt-2026",
+    title: "MBR2GPT",
+    publisher: "Microsoft Learn",
+    url: "https://learn.microsoft.com/pt-br/windows/deployment/mbr-to-gpt",
+    accessedAt: "2026-09-29",
+    sourceType: "official",
+    supports: [
+      "O MBR2GPT valida o layout e pode converter o disco do sistema de MBR para GPT em cenários suportados sem usar a reformatação como etapa obrigatória.",
+      "Depois da conversão para GPT, o firmware precisa ser configurado para inicializar em UEFI.",
+    ],
+  },
+
   "ms-secure-boot-windows11-2026": {
     id: "ms-secure-boot-windows11-2026",
     title: "Windows 11 and Secure Boot",
@@ -1741,14 +1778,20 @@ export const ARTICLE_SOURCE_MANIFEST: Record<string, ArticleSourceManifest> = {
   },
   "boot-uefi-ou-legacy-como-identificar": {
     slug: "boot-uefi-ou-legacy-como-identificar",
-    sources: [],
+    sources: [
+      "ms-msinfo32-2026",
+      "ms-boot-uefi-legacy-2026",
+      "ms-mbr2gpt-2026",
+      "ms-secure-boot-windows11-2026",
+      "ms-bitlocker-backup-key",
+    ],
     technicalReview: "reviewed",
     factChecked: true,
-    factCheckedAt: "2026-08-31",
-    stableKnowledge: true,
+    factCheckedAt: "2026-09-29",
     notes:
-      "Revisão concluída (Onda 11A, Lote 4): identificação do modo de inicialização por msinfo32, diskpart e Gerenciamento de Disco; relação entre GPT/UEFI e MBR/Legacy; ressalva de que trocar o modo sem converter a partição impede o boot. Sem marca comercial e sem promessa. Conhecimento técnico estável — sem fonte visível.",
+      "Revisão material em 2026-09-29 guiada pelo GSC: 49 impressões, 0 cliques e posição média ~9,49 entre 2026-04-01 e 2026-09-27. O conteúdo responde diretamente a boot mode UEFI/Legacy, separa firmware, CSM, GPT/MBR e Secure Boot, explica os riscos de alternar o modo após a instalação e trata MBR2GPT e BitLocker com critérios de parada. Queries expostas incluem variações de 'boot mode uefi ou legacy'; nenhuma consulta além das retornadas pelo GSC foi inventada. Fontes Microsoft visíveis sustentam identificação, boot mode, conversão e segurança.",
   },
+
   "ordem-de-boot-na-bios-como-configurar": {
     slug: "ordem-de-boot-na-bios-como-configurar",
     sources: [],
