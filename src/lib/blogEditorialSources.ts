@@ -1606,14 +1606,20 @@ export const ARTICLE_SOURCE_MANIFEST: Record<string, ArticleSourceManifest> = {
   },
   "computador-entra-direto-na-bios": {
     slug: "computador-entra-direto-na-bios",
-    sources: [],
+    sources: [
+      "ms-boot-uefi-legacy-2026",
+      "ms-bcdboot",
+      "ms-bitlocker-backup-key",
+      "ms-secure-boot-windows11-2026",
+      "nvme-official-faq",
+    ],
     technicalReview: "reviewed",
     factChecked: true,
-    factCheckedAt: "2026-08-25",
-    stableKnowledge: true,
+    factCheckedAt: "2026-09-29",
     notes:
-      "Revisão concluída (Onda 9C): papel do POST, ordem de verificação entre detecção do disco, modo de boot (UEFI/CSM), bateria CMOS e Fast Boot; comportamento de slots M.2 compartilhados com portas SATA; critério de parada quando há suspeita de falha física. Sem marca comercial, sem preço e sem promessa de resultado. Conhecimento técnico estável — sem fonte visível.",
+      "Revisão material em 2026-09-29 guiada pelo GSC: 12 impressões, 0 cliques e posição média ~13,08 entre 2026-04-01 e 2026-09-27. A versão suplementar substitui editorialmente o texto monolítico antigo, preservando a mesma URL. Remove absolutos como 'entrou na BIOS = não encontrou sistema', lista fechada de quatro causas, regras universais de GPT/MBR, Secure Boot/Fast Boot e vida útil de CMOS; reorganiza a investigação em detecção física do disco, entrada de boot, UEFI/Legacy, estrutura do carregador, retenção de configuração e preservação de dados. A única query individual exposta foi 'como entrar na bios com o pc ligado', tratada em seção própria via Inicialização Avançada sem desviar a intenção principal. Fontes Microsoft/NVM Express sustentam firmware, BCDBoot, BitLocker, Secure Boot e M.2/NVMe.",
   },
+
   "erro-no-bootable-device-como-resolver": {
     slug: "erro-no-bootable-device-como-resolver",
     sources: ["ms-bcdboot", "ms-bitlocker-recovery"],

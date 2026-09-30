@@ -1185,6 +1185,138 @@ export const blogSupplementalPosts: Record<string, BlogPostContent> = {
       </>
     ),
   },
+  "computador-entra-direto-na-bios": {
+    title: "Computador entra direto na BIOS: como separar disco, boot e firmware",
+    excerpt:
+      "PC abre a BIOS/UEFI em vez do Windows? Veja como verificar detecção do SSD, Windows Boot Manager, UEFI/Legacy, configurações perdidas e falha de boot sem apagar dados.",
+    date: "2026-09-29",
+    readTime: "15 min",
+    category: "Procedimentos Técnicos",
+    content: (
+      <>
+        <p className="lead">Um computador que abre direto o Setup da BIOS/UEFI está mostrando que o processo normal de inicialização não seguiu até o sistema operacional. Isso <strong>não prova que a BIOS esteja defeituosa</strong> e também não prova, sozinho, que o SSD morreu ou que o Windows foi apagado. O diagnóstico melhora quando você separa três perguntas: <strong>o firmware detecta o disco?</strong>, <strong>existe uma entrada de boot válida?</strong> e <strong>o modo/configuração do firmware combina com a instalação?</strong></p>
+
+        <h2>Resposta direta: por que o PC entra direto na BIOS?</h2>
+        <p>As causas possíveis ficam em camadas. O armazenamento pode não ser detectado; o disco pode aparecer sem uma entrada de inicialização utilizável; a ordem de boot pode ter mudado; o modo UEFI/Legacy pode não corresponder ao estado da instalação; uma alteração de hardware/firmware pode ter afetado a cadeia de boot; ou a própria configuração do firmware pode estar sendo perdida. Tecla pressionada, dispositivo externo e falhas de POST também podem levar ao Setup em determinados modelos.</p>
+        <p>Por isso, não comece alterando CSM, Secure Boot, SATA/AHCI, VMD, RAID ou partições. Primeiro registre o estado atual e identifique em qual camada o processo parou.</p>
+
+        <h2>Mapa rápido de decisão</h2>
+        <table>
+          <thead><tr><th>O que você observa</th><th>O que isso indica</th><th>Próximo passo seguro</th></tr></thead>
+          <tbody>
+            <tr><td>SSD/HD não aparece no firmware</td><td>O problema está antes do carregador do Windows.</td><td>Verificar conexão, slot, alimentação e compatibilidade; preservar dados se a detecção é intermitente.</td></tr>
+            <tr><td>Disco aparece, mas não há Windows Boot Manager</td><td>Detecção física existe, mas a cadeia de boot precisa ser investigada.</td><td>Confirmar UEFI/Legacy, estrutura de boot e mudanças recentes.</td></tr>
+            <tr><td>Windows Boot Manager aparece, mas o PC volta ao Setup</td><td>A entrada existe, porém a tentativa de boot não conclui.</td><td>Confirmar prioridade, estado do disco e integridade do boot sem apagar partições.</td></tr>
+            <tr><td>Data/hora e opções voltam ao padrão</td><td>Configurações do firmware podem não estar sendo retidas.</td><td>Investigar RTC/bateria/configuração conforme o manual do equipamento.</td></tr>
+            <tr><td>Problema começou após trocar/clonar SSD</td><td>A mudança recente é a principal evidência.</td><td>Separar detecção do novo SSD, estrutura clonada e entrada de boot.</td></tr>
+          </tbody>
+        </table>
+
+        <h2>1. Antes de mudar qualquer opção, registre o estado atual</h2>
+        <p>Fotografe as telas de <strong>Boot</strong>, armazenamento, modo UEFI/Legacy/CSM e qualquer configuração de controlador que você pretenda tocar. Se houver BitLocker ou criptografia do dispositivo, confirme a chave de recuperação antes de mudanças relevantes de firmware ou boot.</p>
+        <p>Essa etapa parece simples, mas evita transformar um defeito único em dois. Quando várias opções são alteradas ao mesmo tempo, fica difícil saber qual mudança ajudou ou piorou.</p>
+
+        <h2>2. O firmware detecta fisicamente o SSD ou HD?</h2>
+        <p>Procure o modelo da unidade em áreas como Storage, NVMe, SATA Information ou equivalentes. Os nomes variam por fabricante. Se a unidade <strong>não aparece</strong>, o Windows e o BCD ainda não são a prioridade: o firmware precisa primeiro enxergar o dispositivo.</p>
+        <ul>
+          <li>Em SATA, confirme alimentação, cabo e porta com o equipamento desligado.</li>
+          <li>Em M.2, confirme protocolo aceito pelo slot, formato físico e encaixe.</li>
+          <li>Consulte o manual quando houver mais de um M.2 ou compartilhamento de recursos com portas SATA/PCIe.</li>
+          <li>Se a unidade some e volta, aquece de forma anormal ou contém dados importantes sem backup, pare antes de escrever, formatar ou reinstalar.</li>
+        </ul>
+        <p>Para esse cenário, use <a href="/blog/hd-nao-e-reconhecido-na-bios-o-que-fazer">HD ou SSD não reconhecido na BIOS</a>. M.2 é formato físico e não garante, sozinho, compatibilidade SATA ou NVMe.</p>
+
+        <h2>3. O disco aparece: existe uma entrada de boot coerente?</h2>
+        <p>Em instalações modernas do Windows em UEFI, é comum existir uma entrada chamada <strong>Windows Boot Manager</strong>. O disco aparecer na lista de armazenamento e a entrada de boot existir são evidências diferentes: a primeira confirma detecção física; a segunda indica que o firmware conhece um caminho de inicialização.</p>
+        <p>Se o disco aparece, mas o Windows Boot Manager não, não conclua que “o SSD está bom” nem que “o Windows sumiu”. A estrutura EFI/BCD, o modo de firmware, a clonagem e outras alterações podem estar envolvidos.</p>
+
+        <h2>4. UEFI, Legacy e CSM: não altere por tentativa</h2>
+        <p>A Microsoft documenta que uma instalação normalmente continua inicializando no mesmo modo usado quando foi preparada. Alternar UEFI e Legacy/CSM sem entender o disco pode fazer uma instalação existente deixar de aparecer como opção inicializável.</p>
+        <p>O roteiro para identificar o estado atual está em <a href="/blog/boot-uefi-ou-legacy-como-identificar">UEFI ou Legacy: como identificar o boot mode</a>. Use o estilo GPT/MBR como parte da evidência, não como regra para converter o disco no escuro.</p>
+
+        <h2>5. Windows Boot Manager existe, mas a máquina volta para o Setup</h2>
+        <p>Confirme primeiro se a entrada correta está selecionada como prioridade e se a tentativa de inicialização gera alguma mensagem. Se o firmware oferece um menu temporário de boot, usá-lo para selecionar a entrada existente é mais reversível do que alterar várias opções permanentes de uma vez.</p>
+        <p>Se a entrada é escolhida e o boot falha, a investigação passa para estrutura de inicialização e sistema. O BCDBoot é uma ferramenta oficial da Microsoft para configurar/reparar arquivos de boot em cenários apropriados, mas não deve ser usado como comando genérico sem antes identificar corretamente volumes e criptografia.</p>
+        <p>Para esse caminho, veja <a href="/blog/erro-no-bootable-device-como-resolver">No Bootable Device: como diagnosticar</a>.</p>
+
+        <h2>6. Se começou depois de trocar ou clonar o SSD</h2>
+        <p>Preserve o disco antigo e trate a mudança como evidência principal. Confirme:</p>
+        <ol>
+          <li>se o SSD novo aparece no firmware;</li>
+          <li>se a clonagem incluiu as partições necessárias;</li>
+          <li>se existe uma entrada de boot coerente;</li>
+          <li>se o firmware continua no mesmo modo usado pela instalação;</li>
+          <li>se o computador está realmente tentando iniciar pelo SSD novo.</li>
+        </ol>
+        <p>O roteiro específico está em <a href="/blog/troquei-o-ssd-e-o-pc-so-abre-a-bios">troquei o SSD e o PC só abre a BIOS</a> e o planejamento da migração em <a href="/blog/como-clonar-hd-para-ssd">como clonar HD para SSD</a>.</p>
+
+        <h2>7. Dispositivos USB e ordem de boot</h2>
+        <p>Desconectar temporariamente pendrives, HDs externos e cartões é uma comparação simples e reversível. Alguns firmwares podem priorizar mídia removível ou alterar a sequência quando um dispositivo inicializável é conectado. Se o comportamento muda sem esses dispositivos, revise a ordem de boot em vez de formatar qualquer unidade.</p>
+        <p>Não considere “pendrive conectado” uma causa automática. Ele só é relevante se o firmware realmente tentar usá-lo ou se a prioridade mudar.</p>
+
+        <h2>8. Data, hora e configurações voltam sozinhas?</h2>
+        <p>Se relógio e opções do firmware não permanecem depois de desligar completamente o equipamento, investigue o circuito de retenção/RTC e a bateria de firmware conforme o projeto do modelo. Desktops frequentemente usam bateria removível; notebooks podem usar soluções e acessos diferentes.</p>
+        <p>Não troque bateria apenas porque o PC entrou uma vez no Setup. A evidência mais útil é a <strong>perda repetida de data/configurações</strong>.</p>
+
+        <h2>9. Secure Boot e Fast Boot não são correções universais</h2>
+        <p><strong>Secure Boot</strong> faz parte da cadeia de confiança do UEFI. Desabilitá-lo como primeira tentativa reduz proteção e pode não ter relação com o problema. Quando houver mídia ou carregador específico envolvido, confirme compatibilidade e assinatura antes de mudar a política.</p>
+        <p><strong>Fast Boot</strong> também varia por firmware. Se há suspeita de que uma otimização de inicialização está interferindo na detecção, registre o valor atual e faça uma única comparação reversível. Não misture Fast Boot do firmware com Inicialização Rápida do Windows como se fossem o mesmo mecanismo.</p>
+
+        <h2>10. E se o Setup abrir por tecla ou botão?</h2>
+        <p>Teclas como Del, F2 ou Esc podem abrir o firmware em muitos equipamentos, mas o atalho varia. Um teclado defeituoso, tecla presa ou botão dedicado do fabricante pode influenciar a entrada no Setup. Teste sem periféricos externos desnecessários e observe o comportamento antes de desmontar armazenamento.</p>
+
+        <h2>11. Como entrar na BIOS/UEFI a partir do Windows</h2>
+        <p>Se o seu objetivo não é corrigir um PC que entra sozinho no Setup, mas <strong>abrir o firmware com o Windows funcionando</strong>, versões suportadas do Windows oferecem acesso às <strong>Configurações de Firmware UEFI</strong> pela Inicialização Avançada quando o equipamento expõe essa opção. Isso evita depender de acertar uma tecla durante os primeiros segundos da partida.</p>
+        <p>Essa é uma intenção diferente do defeito tratado no restante do artigo, mas responde à dúvida sem misturar os dois cenários.</p>
+
+        <h2>Sequência recomendada</h2>
+        <ol>
+          <li>Fotografe as configurações atuais e confirme a chave BitLocker quando aplicável.</li>
+          <li>Remova temporariamente mídia USB desnecessária.</li>
+          <li>Confirme se o SSD/HD aparece fisicamente no firmware.</li>
+          <li>Se aparece, procure a entrada de boot correspondente, como Windows Boot Manager.</li>
+          <li>Confirme UEFI/Legacy sem alternar por tentativa.</li>
+          <li>Revise a última mudança de SSD, clonagem, firmware ou controlador.</li>
+          <li>Observe se data/hora e configurações estão sendo perdidas.</li>
+          <li>Se a unidade está instável, pare e preserve os dados antes de reparar o boot.</li>
+        </ol>
+
+        <h2>O que não fazer</h2>
+        <ul>
+          <li>Inicializar, formatar ou converter o disco apenas porque ele não aparece como opção de boot.</li>
+          <li>Alternar UEFI, CSM, Secure Boot, AHCI/RAID/VMD e ordem de boot todos de uma vez.</li>
+          <li>Apagar partições EFI para “recriar do zero” sem backup e identificação correta dos volumes.</li>
+          <li>Atualizar BIOS em uma máquina eletricamente instável como tentativa genérica de correção.</li>
+          <li>Continuar ligando repetidamente um disco que desaparece, faz ruído ou contém a única cópia dos dados.</li>
+        </ul>
+
+        <h2>Quando parar e levar para avaliação</h2>
+        <p>Pare quando o disco some de forma intermitente, quando há ruído mecânico, quando o firmware trava, quando o computador desliga durante o POST, quando BitLocker está ativo sem chave disponível ou quando você não consegue identificar com segurança o disco/partições de boot. Nesses casos, preservar dados e estado do defeito é mais importante do que insistir em uma inicialização.</p>
+
+        <h2>Perguntas frequentes</h2>
+        <h3>Entrar direto na BIOS significa que o SSD queimou?</h3>
+        <p>Não. Primeiro confirme se o SSD aparece no firmware. Mesmo quando aparece, entrada de boot, modo UEFI/Legacy e estrutura do carregador ainda podem impedir o Windows de iniciar.</p>
+
+        <h3>Se o SSD aparece na BIOS, ele está saudável?</h3>
+        <p>A detecção é uma evidência básica de comunicação, não um teste de saúde. Um disco com falha pode ser detectado e ainda apresentar erros ou desaparecer depois.</p>
+
+        <h3>Devo ativar CSM para o Windows voltar a iniciar?</h3>
+        <p>Não sem saber em que modo a instalação foi preparada. Alterar CSM/Legacy pode esconder uma entrada UEFI válida ou criar outro problema de boot.</p>
+
+        <h3>Posso desativar Secure Boot para testar?</h3>
+        <p>Somente quando existe uma hipótese concreta ligada ao carregador/mídia e você sabe como restaurar a configuração. Não é uma correção genérica para “entra direto na BIOS”.</p>
+
+        <h3>Windows Boot Manager sumiu. Preciso formatar?</h3>
+        <p>Não automaticamente. Primeiro confirme detecção do disco, modo de firmware e estrutura de boot. Reparar a inicialização é diferente de reinstalar ou apagar dados.</p>
+
+        <h2>Resumo prático</h2>
+        <p>Quando o computador entra direto na BIOS, siga a cadeia: <strong>disco detectado → entrada de boot → modo UEFI/Legacy → estrutura de inicialização → retenção de configurações</strong>. Faça uma mudança por vez, preserve BitLocker e dados e não transforme opções de firmware em tentativa e erro.</p>
+
+        <EditorialReferences slug="computador-entra-direto-na-bios" />
+      </>
+    ),
+  },
+
   "botao-power-nao-funciona-jump-start-placa-mae": {
     title: "Botão power não funciona: como testar o PWR_SW sem condenar fonte ou placa",
     excerpt:
