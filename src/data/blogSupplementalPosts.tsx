@@ -11,6 +11,212 @@ import { MODALIDADES } from "@/lib/precosConfig";
  * do blog compõem base + suplementares + programáticos.
  */
 export const blogSupplementalPosts: Record<string, BlogPostContent> = {
+  "servico-de-audio-do-windows-nao-esta-em-execucao": {
+    title: "Serviço de Áudio do Windows não está em execução: diagnóstico sem baixar arquivos aleatórios",
+    excerpt:
+      "Sem som, serviço parado ou erro dizendo que o Windows não encontra audio.exe? Separe serviço, dispositivo, driver e inicialização quebrada antes de reinstalar qualquer coisa.",
+    date: "2026-09-30",
+    readTime: "13 min",
+    category: "Procedimentos Técnicos",
+    content: (
+      <>
+        <p className="lead">
+          A mensagem <strong>“o Serviço de Áudio do Windows não está em execução”</strong> indica um problema na
+          camada de serviços de áudio, mas ela não é sinônimo de driver quebrado, alto-falante defeituoso ou arquivo
+          `audio.exe` ausente. O diagnóstico correto começa separando quatro cenários: serviço parado, dispositivo
+          não detectado, dispositivo detectado sem reprodução e uma referência quebrada a um executável chamado
+          `audio.exe`.
+        </p>
+
+        <h2>Resposta direta: o que verificar primeiro</h2>
+        <ol>
+          <li>Confirme a mensagem exata: serviço de áudio parado, dispositivo ausente ou apenas “sem som”.</li>
+          <li>Veja se o dispositivo de saída aparece nas Configurações de Som e no Gerenciador de Dispositivos.</li>
+          <li>Em <strong>Serviços</strong>, verifique Windows Audio e Windows Audio Endpoint Builder; a própria Microsoft inclui o reinício desses serviços no roteiro oficial de áudio.</li>
+          <li>Se o serviço volta e para novamente, procure a causa em driver, atualização, corrupção de sistema ou software que interfere na pilha de áudio.</li>
+          <li>Se o erro menciona <strong>audio.exe</strong>, não baixe um executável avulso: descubra qual aplicativo, atalho ou item de inicialização está tentando chamar esse arquivo.</li>
+        </ol>
+
+        <h2>Serviço parado, driver e “audio.exe” são problemas diferentes</h2>
+        <table>
+          <thead>
+            <tr><th>Sintoma</th><th>Camada mais provável</th><th>Próximo teste</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>“Serviço de Áudio do Windows não está em execução”</td><td>Serviços do Windows</td><td>Verificar Windows Audio, Endpoint Builder e RPC</td></tr>
+            <tr><td>Nenhum dispositivo de saída aparece</td><td>Detecção/driver/hardware</td><td>Gerenciador de Dispositivos e driver oficial</td></tr>
+            <tr><td>Dispositivo aparece, mas não há som</td><td>Saída selecionada, volume, app ou formato</td><td>Confirmar saída padrão e testar outro app</td></tr>
+            <tr><td>Só um aplicativo está sem som</td><td>Roteamento/mixer do aplicativo</td><td>Comparar com sons do sistema e outro app</td></tr>
+            <tr><td>“Windows não pode encontrar audio.exe”</td><td>Referência a executável/atalho/inicialização</td><td>Identificar quem chama o arquivo; não baixar um EXE substituto</td></tr>
+          </tbody>
+        </table>
+
+        <h2>1. Quando a mensagem realmente aponta para o serviço de áudio</h2>
+        <p>
+          O Windows usa serviços para manter a infraestrutura de áudio disponível aos aplicativos. No roteiro
+          oficial de solução de problemas, a Microsoft orienta reiniciar <strong>Windows Audio</strong>,
+          <strong>Windows Audio Endpoint Builder</strong> e <strong>Remote Procedure Call (RPC)</strong> quando a
+          falha está nessa camada.
+        </p>
+        <p>
+          Abra <strong>services.msc</strong> pelo menu Iniciar e observe o estado antes de alterar qualquer
+          configuração. Se Windows Audio está parado, tente iniciá-lo ou reiniciá-lo. Se ele inicia normalmente e o
+          som volta, valide se o problema reaparece após reiniciar o computador. Um serviço que para de novo pede
+          investigação da causa; mudar opções aleatórias de inicialização pode apenas esconder o sintoma.
+        </p>
+
+        <h2>2. Não force dependências nem desative serviços para “testar”</h2>
+        <p>
+          Tutoriais antigos às vezes sugerem alterar manualmente dependências, tipos de inicialização ou serviços do
+          sistema sem verificar o estado original. Isso é especialmente arriscado em computadores corporativos, onde
+          políticas podem controlar serviços. Se houver erro de acesso, política ou dependência, registre a mensagem
+          exata antes de mudar configurações.
+        </p>
+        <p>
+          RPC é infraestrutura central do Windows e não deve ser tratado como um “serviço de áudio opcional”.
+          O objetivo do diagnóstico é confirmar se a cadeia necessária está disponível, não desligar componentes
+          para descobrir o que acontece.
+        </p>
+
+        <h2>3. Se o serviço está rodando, confirme se existe um dispositivo de saída</h2>
+        <p>
+          Serviço ativo não cria um dispositivo que o Windows não detecta. Se a lista de saída está vazia ou o
+          adaptador de áudio sumiu do Gerenciador de Dispositivos, mude o foco para detecção, driver e hardware. A
+          Microsoft separa explicitamente o caso de <strong>dispositivo de saída ausente</strong> do caso em que o
+          dispositivo existe, mas não reproduz som.
+        </p>
+        <p>
+          Depois de uma atualização ou reinstalação, prefira o driver fornecido pelo fabricante do notebook,
+          placa-mãe ou dispositivo quando o Windows não consegue restabelecer a detecção. Evite pacotes de driver
+          genéricos de sites de terceiros.
+        </p>
+
+        <h2>4. Se o dispositivo aparece, mas não toca som</h2>
+        <p>
+          Quando alto-falante ou fone aparece normalmente, teste primeiro as variáveis simples: saída selecionada,
+          volume, mudo, dispositivo padrão e reprodução em outro aplicativo. Um serviço funcionando com dispositivo
+          detectado reduz a probabilidade de a causa ser “Windows Audio parado”.
+        </p>
+        <p>
+          Se apenas um aplicativo falha enquanto os sons do sistema funcionam, verifique o mixer de volume e a saída
+          atribuída àquele aplicativo. Isso evita reinstalar driver ou reiniciar serviços por um problema de
+          roteamento específico de um programa.
+        </p>
+
+        <h2>5. “Windows não pode encontrar audio.exe” não significa “baixe audio.exe”</h2>
+        <p>
+          O GSC desta página expôs consultas como <strong>“audio.exe”</strong> e
+          <strong>“Windows não pode encontrar audio.exe”</strong>. Essa mensagem descreve uma tentativa de abrir um
+          executável com esse nome. Ela deve ser tratada separadamente da mensagem sobre o Serviço de Áudio do
+          Windows.
+        </p>
+        <p>
+          Não é seguro baixar um arquivo chamado `audio.exe` de um site aleatório apenas para preencher o caminho
+          ausente. Primeiro descubra <strong>quem está chamando esse arquivo</strong>: um programa removido,
+          atalho, item de inicialização, tarefa agendada ou outro software. Se a mensagem começou depois da
+          desinstalação de um aplicativo, uma referência de inicialização órfã é uma hipótese mais útil do que
+          presumir que falta um componente oficial do Windows.
+        </p>
+
+        <h2>6. Como investigar a referência a audio.exe sem mexer no Registro às cegas</h2>
+        <ul>
+          <li>Observe em que momento o erro aparece: login, abertura de um aplicativo ou conexão de um dispositivo.</li>
+          <li>Revise os <strong>Aplicativos de Inicialização</strong> no Gerenciador de Tarefas/Configurações.</li>
+          <li>Se o erro só ocorre ao abrir um atalho, verifique o destino desse atalho.</li>
+          <li>Se começou após remover um programa, reinstale-o pelo canal oficial apenas se você realmente precisa dele; caso contrário, remova a chamada órfã por um mecanismo suportado.</li>
+          <li>Não crie arquivos vazios nem copie executáveis de outro computador para “satisfazer” o caminho.</li>
+        </ul>
+
+        <h2>7. Se o áudio parou depois de uma atualização</h2>
+        <p>
+          Atualizações podem coincidir com mudança de driver ou comportamento do serviço. A Microsoft recomenda, em
+          cenários de áudio pós-atualização, verificar atualizações, atualizar o driver e, quando disponível,
+          considerar a reversão do driver que começou a falhar. O ponto importante é manter a relação temporal:
+          <strong>o que mudou imediatamente antes de o áudio parar?</strong>
+        </p>
+        <p>
+          Não desinstale vários componentes ao mesmo tempo. Faça uma mudança por vez e teste, para preservar a
+          capacidade de identificar o que realmente resolveu ou piorou o problema.
+        </p>
+
+        <h2>8. Erro ao iniciar Windows Audio: registre o código</h2>
+        <p>
+          Se o serviço não inicia e o Windows mostra um código ou mensagem de dependência, anote esse texto. Erros de
+          permissão, dependência, arquivo de sistema ou política exigem caminhos diferentes. “Não inicia” é um
+          sintoma; o código ajuda a reduzir a investigação.
+        </p>
+        <p>
+          Em máquina gerenciada por empresa, domínio ou ferramenta de administração, não altere política ou serviços
+          sem autorização. O estado pode estar sendo aplicado centralmente.
+        </p>
+
+        <h2>9. Quando suspeitar de hardware</h2>
+        <p>
+          Se nenhum dispositivo de áudio integrado aparece mesmo após driver oficial e o problema persiste em uma
+          instalação confiável, a hipótese de firmware/hardware ganha peso. Em desktops, áudio frontal e traseiro
+          também podem separar problema do painel frontal de problema do codec/placa. Em notebook, falha de
+          alto-falante não é a mesma coisa que ausência do controlador de áudio.
+        </p>
+        <p>
+          Teste com um dispositivo USB ou Bluetooth conhecido apenas como comparação de caminho de áudio; ele não
+          “conserta” automaticamente o codec interno, mas ajuda a saber se o Windows consegue reproduzir por outra
+          interface.
+        </p>
+
+        <h2>Critérios de parada</h2>
+        <ul>
+          <li>O serviço falha repetidamente com erro que você não consegue interpretar.</li>
+          <li>O dispositivo desaparece e reaparece no Gerenciador de Dispositivos.</li>
+          <li>O problema começou após líquido, impacto ou dano elétrico.</li>
+          <li>A máquina é corporativa e a alteração exigiria mudar política, driver empacotado ou serviço gerenciado.</li>
+          <li>A correção exigiria baixar DLL/EXE solto de fonte não oficial.</li>
+        </ul>
+
+        <h2>Perguntas frequentes</h2>
+        <h3>Posso apenas reiniciar o serviço Windows Audio?</h3>
+        <p>
+          Sim, reiniciar os serviços de áudio faz parte do roteiro oficial da Microsoft. Se o problema volta
+          repetidamente, trate o reinício como teste, não como diagnóstico final.
+        </p>
+
+        <h3>Windows Audio está rodando, mas continuo sem som. E agora?</h3>
+        <p>
+          Verifique se o dispositivo aparece, qual saída está selecionada, o mixer do aplicativo e o driver. Serviço
+          ativo não prova que toda a cadeia de áudio está funcional.
+        </p>
+
+        <h3>O Windows diz que não encontra audio.exe. Esse arquivo é do sistema?</h3>
+        <p>
+          A mensagem, sozinha, não informa a origem do executável. Não presuma que um `audio.exe` ausente deve ser
+          baixado. Identifique qual programa ou item de inicialização está tentando abri-lo.
+        </p>
+
+        <h3>Reinstalar o driver resolve serviço de áudio parado?</h3>
+        <p>
+          Pode ajudar quando a causa está ligada ao driver, mas não é resposta universal. Primeiro separe serviço,
+          detecção do dispositivo e reprodução.
+        </p>
+
+        <h3>Vale formatar o Windows por causa desse erro?</h3>
+        <p>
+          Não como primeira reação. Serviço, driver, saída incorreta e referência de inicialização quebrada têm
+          correções muito menos destrutivas. Reinstalação só entra depois de diagnóstico e preservação de dados.
+        </p>
+
+        <h2>Resumo prático</h2>
+        <p>
+          <strong>“Serviço de Áudio do Windows não está em execução”</strong>, <strong>“sem dispositivo de
+          saída”</strong> e <strong>“Windows não pode encontrar audio.exe”</strong> são problemas diferentes.
+          Confirme a camada antes de agir. Reinicie os serviços que a Microsoft documenta, verifique detecção e
+          driver quando o dispositivo some e trate `audio.exe` como referência a investigar — nunca como convite
+          para baixar um executável aleatório.
+        </p>
+
+        <EditorialReferences slug="servico-de-audio-do-windows-nao-esta-em-execucao" />
+      </>
+    ),
+  },
+
   "como-saber-se-pc-tem-virus-malware": {
     title: "Como saber se o notebook ou PC está com vírus: sinais, testes e quando agir",
     excerpt:

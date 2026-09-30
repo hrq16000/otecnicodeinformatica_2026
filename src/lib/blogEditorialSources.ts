@@ -512,6 +512,19 @@ export const EDITORIAL_SOURCES: Record<string, EditorialSource> = {
       "O manual orienta fazer uma cópia da unidade com falha e tentar reparar a cópia, não o original, e alerta para não reparar sistema de arquivos diretamente em uma unidade com erros de I/O.",
     ],
   },
+  "ms-audio-services-windows-2026": {
+    id: "ms-audio-services-windows-2026",
+    title: "Corrigir problemas de som ou áudio no Windows",
+    publisher: "Microsoft Support",
+    url: "https://support.microsoft.com/pt-br/windows/hardware/audio/fix-sound-or-audio-problems-in-windows",
+    accessedAt: "2026-09-30",
+    sourceType: "official",
+    supports: [
+      "O roteiro oficial da Microsoft inclui reiniciar Windows Audio, Windows Audio Endpoint Builder e Remote Procedure Call (RPC) quando a falha está na camada de serviços de áudio.",
+      "O reinício dos serviços é uma etapa de diagnóstico, não uma conclusão universal; se o áudio não volta, a investigação continua por dispositivo, saída, driver e outras camadas.",
+    ],
+  },
+
   "ms-audio-output-undetected-2026": {
     id: "ms-audio-output-undetected-2026",
     title: "Corrigir dispositivo de saída de áudio ausente ou não detectado no Windows",
@@ -2043,13 +2056,16 @@ export const ARTICLE_SOURCE_MANIFEST: Record<string, ArticleSourceManifest> = {
 
   "servico-de-audio-do-windows-nao-esta-em-execucao": {
     slug: "servico-de-audio-do-windows-nao-esta-em-execucao",
-    sources: [],
+    sources: [
+      "ms-audio-services-windows-2026",
+      "ms-audio-output-undetected-2026",
+      "ms-audio-headphones-no-sound-2026",
+    ],
     technicalReview: "reviewed",
     factChecked: true,
-    factCheckedAt: "2026-08-26",
-    stableKnowledge: true,
+    factCheckedAt: "2026-09-30",
     notes:
-      "Revisão concluída (Onda 10C, Lote 3): cadeia Windows Audio e Construtor de Ponto de Extremidade, ordem de reinício, dependências de RPC e agendador multimídia, ressalva de máquina gerenciada por política e critério para reinstalar driver oficial. Sem marca comercial e sem promessa. Conhecimento técnico estável — sem fonte visível.",
+      "Revisão material em 2026-09-30 guiada pelo GSC: 5 impressões, 0 cliques e posição média ~22,4 entre 2026-04-01 e 2026-09-27. As únicas queries individuais expostas foram 'audio.exe', 'o windows não pode encontrar audio.exe' e 'windows não pode encontrar audio.exe'. A versão suplementar separa serviço Windows Audio parado de dispositivo/driver ausente, dispositivo detectado sem reprodução e referência quebrada a um executável chamado audio.exe; não recomenda baixar EXE ou DLL avulso. Fontes oficiais Microsoft ficam visíveis e sustentam serviços, detecção e reprodução.",
   },
   "webcam-nao-funciona-o-que-verificar": {
     slug: "webcam-nao-funciona-o-que-verificar",
