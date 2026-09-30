@@ -1594,6 +1594,24 @@ const WAVE_11U: EditorialApproval[] = [
   },
 ];
 
+
+const WAVE_11V: EditorialApproval[] = [
+  {
+    slug: "como-saber-se-pc-tem-virus-malware",
+    status: "approved",
+    authorType: "organization",
+    authorId: INSTITUTIONAL_AUTHOR.id,
+    reviewedAt: "2026-09-30",
+    approvedAt: FIRST_WAVE_APPROVED_AT,
+    imageOrigin: "generated",
+    imageLicense: "Ativo gerado sob encomenda para uso próprio da marca",
+    imageAttribution: "O Técnico de Informática",
+    notes:
+      "Revisão material em 2026-09-30 guiada pelo GSC: 7 impressões, 0 cliques e posição média ~24,43 entre 2026-04-01 e 2026-09-27. A única query individual exposta foi 'como saber se o notebook esta com virus' (1 impressão, posição 40). A versão suplementar passa a sobrepor editorialmente o conteúdo-base, preservando a mesma URL; separa sintoma de evidência, navegador de sistema, malware de comprometimento de conta e falso suporte, adiciona matriz de decisão, contenção para ransomware/acesso remoto e critérios de parada, sem inventar queries.",
+  },
+];
+
+
 export const APPROVED_EDITORIAL_CONTENT = new Map<string, EditorialApproval>([
 
   ...FIRST_WAVE_SLUGS.map((slug) => [
@@ -1663,6 +1681,7 @@ export const APPROVED_EDITORIAL_CONTENT = new Map<string, EditorialApproval>([
   ...WAVE_11S.map((a) => [a.slug, a] as [string, EditorialApproval]),
   ...WAVE_11T.map((a) => [a.slug, a] as [string, EditorialApproval]),
   ...WAVE_11U.map((a) => [a.slug, a] as [string, EditorialApproval]),
+  ...WAVE_11V.map((a) => [a.slug, a] as [string, EditorialApproval]),
 
 ]);
 
