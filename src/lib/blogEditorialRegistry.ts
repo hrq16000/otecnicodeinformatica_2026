@@ -832,14 +832,14 @@ const WAVE_10F: EditorialApproval[] = [
     status: "approved",
     authorType: "organization",
     authorId: INSTITUTIONAL_AUTHOR.id,
-    reviewedAt: "2026-08-26",
+    reviewedAt: "2026-09-30",
     approvedAt: "2026-08-26",
     imageOrigin: "licensed",
     imageLicense: "CC0",
     imageAttribution:
       "Foto: Em3rgent0rdr (Wikimedia Commons), CC0 — https://commons.wikimedia.org/wiki/File:Phone-connectors-labeled.jpg",
     notes:
-      "Satélite escrito do zero na Onda 10C (Lote 3); fact-check registrado em blogEditorialSources.ts; capa é fotografia real licenciada, sem IA.",
+      "Revisão material em 2026-09-30 guiada pelo GSC: 40 impressões, 0 cliques e posição média ~25,08 entre 2026-04-01 e 2026-09-27. Queries reais de P2, entrada frontal, notebook e PC não reconhecendo fone foram incorporadas. A versão suplementar passa a sobrepor editorialmente o texto monolítico antigo, separando P2/USB/Bluetooth, detecção/reprodução, painel frontal/driver e áudio/microfone-permissões.",
   },
   {
     slug: "servico-de-audio-do-windows-nao-esta-em-execucao",
