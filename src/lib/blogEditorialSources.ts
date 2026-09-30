@@ -1743,14 +1743,21 @@ export const ARTICLE_SOURCE_MANIFEST: Record<string, ArticleSourceManifest> = {
   },
   "troquei-o-ssd-e-o-pc-so-abre-a-bios": {
     slug: "troquei-o-ssd-e-o-pc-so-abre-a-bios",
-    sources: [],
+    sources: [
+      "nvme-official-faq",
+      "ms-initialize-new-disks",
+      "ms-boot-uefi-legacy-2026",
+      "ms-bcdboot",
+      "ms-bitlocker-backup-key",
+      "ms-win11-installation-media",
+    ],
     technicalReview: "reviewed",
     factChecked: true,
-    factCheckedAt: "2026-08-25",
-    stableKnowledge: true,
+    factCheckedAt: "2026-09-30",
     notes:
-      "Revisão concluída (Onda 9C): disco novo sem tabela de partições, compatibilidade de chave/slot M.2 (SATA × NVMe), conflito de linhas PCIe e portas SATA, controlador em AHCI, instalação com apenas o disco novo conectado e critério entre instalar do zero e clonar. Conhecimento técnico estável — sem fonte visível.",
+      "Revisão material em 2026-09-30 guiada pelo GSC: 89 impressões, 1 clique e posição média ~9,20 entre 2026-04-01 e 2026-09-27. A versão suplementar substitui editorialmente o texto monolítico antigo e reorganiza o diagnóstico em detecção física do SSD, tipo de cenário (novo/clonado/reaproveitado/segundo disco), Windows Boot Manager, UEFI/Legacy, controlador e estrutura de boot. Remove a ideia de que SSD novo precisa ser preparado manualmente antes da instalação, evita toggles de AHCI/RAID/VMD/CSM por tentativa, reforça BitLocker e preservação do disco antigo e usa fontes oficiais NVM Express/Microsoft visíveis. Queries individuais não foram expostas pelo GSC e nenhuma foi inventada.",
   },
+
   "limpar-arquivos-temporarios-windows": {
     slug: "limpar-arquivos-temporarios-windows",
     sources: [],
