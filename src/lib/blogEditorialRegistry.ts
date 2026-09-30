@@ -336,14 +336,14 @@ const WAVE_5E: EditorialApproval[] = [
     status: "approved",
     authorType: "organization",
     authorId: INSTITUTIONAL_AUTHOR.id,
-    reviewedAt: "2026-08-12",
+    reviewedAt: "2026-09-29",
     approvedAt: "2026-08-12",
     imageOrigin: "licensed",
     imageLicense: "CC BY-SA 3.0",
     imageAttribution:
       "Foto: Wikimedia Commons, licença livre — https://commons.wikimedia.org/wiki/File:Maxtor_HDD_and_Intel_SSD_20100117.jpg",
     notes:
-      "Reescrita integral na Onda 5E; fact-check registrado em blogEditorialSources.ts; capa é fotografia real licenciada, sem IA.",
+      "Revisão material em 2026-09-29 guiada pelo GSC; aprofunda decisão entre clonar/reinstalar/preservar dados, SSD menor, partições de boot, BitLocker, validação pós-clone e critérios de parada. Fact-check registrado em blogEditorialSources.ts; capa real licenciada, sem IA.",
   },
   {
     slug: "como-instalar-segundo-ssd-notebook",
