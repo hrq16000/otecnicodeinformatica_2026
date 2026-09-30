@@ -1599,6 +1599,22 @@ export const ARTICLE_SOURCE_MANIFEST: Record<string, ArticleSourceManifest> = {
     notes:
       "Revisão aprofundada em 2026-09-12: resposta proporcional a mensagem, clique, credencial, acesso remoto e fraude financeira; preservação de evidências e canais oficiais priorizados. Fontes primárias visíveis, sem aplicativo de terceiros, estatística ou promessa de recuperação de valores.",
   },
+  "como-aprender-informatica": {
+    slug: "como-aprender-informatica",
+    sources: [
+      "ms-file-explorer-windows",
+      "ms-find-files-windows",
+      "ms-onedrive-folder-backup",
+      "ms-windows-security-overview",
+      "cisa-backup",
+    ],
+    technicalReview: "reviewed",
+    factChecked: true,
+    factCheckedAt: "2026-09-30",
+    notes:
+      "Revisão material em 2026-09-30 guiada pelo GSC: 21 impressões, 0 cliques e posição média ~49,10 entre 2026-04-01 e 2026-09-27. Queries reais incluem 'aprender informática passo a passo', 'como aprender informática', 'como aprender informática do zero', 'como aprender informática sozinho', 'informática para iniciantes' e consultas de dicas. A versão suplementar substitui a abordagem genérica por uma trilha baseada em competências e projetos: arquivos/pastas, Windows, internet/e-mail, documentos, planilhas, nuvem/backup, segurança, hardware, rede e diagnóstico. Fontes Microsoft e CISA sustentam arquivos, pesquisa, sincronização/backup e proteção; nenhum prazo universal ou promessa de profissionalização foi inventado.",
+  },
+
   "como-configurar-roteador-wifi-iniciantes": {
     slug: "como-configurar-roteador-wifi-iniciantes",
     sources: [
