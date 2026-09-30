@@ -499,6 +499,43 @@ export const EDITORIAL_SOURCES: Record<string, EditorialSource> = {
       "O manual orienta fazer uma cópia da unidade com falha e tentar reparar a cópia, não o original, e alerta para não reparar sistema de arquivos diretamente em uma unidade com erros de I/O.",
     ],
   },
+  "ms-audio-output-undetected-2026": {
+    id: "ms-audio-output-undetected-2026",
+    title: "Corrigir dispositivo de saída de áudio ausente ou não detectado no Windows",
+    publisher: "Microsoft Support",
+    url: "https://support.microsoft.com/pt-br/windows/hardware/audio/fix-missing-or-undetected-audio-output-device-in-windows",
+    accessedAt: "2026-09-30",
+    sourceType: "official",
+    supports: [
+      "A Microsoft diferencia dispositivo de saída ausente de problemas de reprodução e orienta verificar Gerenciador de Dispositivos, habilitação e alterações de hardware.",
+      "Quando o driver de áudio está ausente ou incompatível, a Microsoft recomenda usar o driver mais recente do fabricante do PC ou dispositivo.",
+    ],
+  },
+  "ms-audio-headphones-no-sound-2026": {
+    id: "ms-audio-headphones-no-sound-2026",
+    title: "Corrigir problemas de áudio quando nenhum som é reproduzido por alto-falantes ou fones de ouvido no Windows",
+    publisher: "Microsoft Support",
+    url: "https://support.microsoft.com/pt-br/windows/hardware/audio/fix-audio-issues-when-no-sound-plays-from-speakers-or-headphones-in-windows",
+    accessedAt: "2026-09-30",
+    sourceType: "official",
+    supports: [
+      "Quando o dispositivo existe mas não reproduz som, a Microsoft orienta confirmar a saída selecionada, volume e dispositivo padrão antes de etapas mais invasivas.",
+      "A página separa ausência de reprodução de ausência de detecção, sustentando a árvore de diagnóstico por camadas.",
+    ],
+  },
+  "ms-microphone-problems-2026": {
+    id: "ms-microphone-problems-2026",
+    title: "Corrigir problemas do microfone",
+    publisher: "Microsoft Support",
+    url: "https://support.microsoft.com/pt-br/windows/hardware/drivers/fix-microphone-problems",
+    accessedAt: "2026-09-30",
+    sourceType: "official",
+    supports: [
+      "A Microsoft orienta confirmar o dispositivo de entrada e as permissões de microfone quando o áudio do headset funciona mas a captura não.",
+      "As permissões de microfone para aplicativos e aplicativos de desktop são camadas separadas da detecção física do headset.",
+    ],
+  },
+
   "seagate-bios-sata-not-detected-2026": {
     id: "seagate-bios-sata-not-detected-2026",
     title: "O BIOS não detecta ou reconhece o disco rígido ATA/SATA",
@@ -1949,14 +1986,18 @@ export const ARTICLE_SOURCE_MANIFEST: Record<string, ArticleSourceManifest> = {
   },
   "fone-de-ouvido-nao-e-reconhecido-no-pc": {
     slug: "fone-de-ouvido-nao-e-reconhecido-no-pc",
-    sources: [],
+    sources: [
+      "ms-audio-output-undetected-2026",
+      "ms-audio-headphones-no-sound-2026",
+      "ms-microphone-problems-2026",
+    ],
     technicalReview: "reviewed",
     factChecked: true,
-    factCheckedAt: "2026-08-26",
-    stableKnowledge: true,
+    factCheckedAt: "2026-09-30",
     notes:
-      "Revisão concluída (Onda 10C, Lote 3): detecção de conector, cabo interno do painel frontal, diferença entre plugue combinado e entradas separadas, perfis Bluetooth estéreo e de comunicação e permissões de microfone. Sem marca comercial e sem promessa. Conhecimento técnico estável — sem fonte visível.",
+      "Revisão material em 2026-09-30 guiada pelo GSC: 40 impressões, 0 cliques e posição média ~25,08 entre 2026-04-01 e 2026-09-27. Queries reais incluem 'fone de ouvido não funciona no notebook', 'meu fone de ouvido não funciona no pc', 'pc não reconhece fone', 'entrada frontal fone de ouvido não funciona' e 'como saber se a entrada p2 esta funcionando'. A versão suplementar substitui editorialmente o texto monolítico antigo, separando P2, USB e Bluetooth, ausência de detecção de ausência de som, painel frontal de driver e áudio de microfone/permissões. Fontes Microsoft ficam visíveis.",
   },
+
   "servico-de-audio-do-windows-nao-esta-em-execucao": {
     slug: "servico-de-audio-do-windows-nao-esta-em-execucao",
     sources: [],
