@@ -686,14 +686,14 @@ const WAVE_10D: EditorialApproval[] = [
     status: "approved",
     authorType: "organization",
     authorId: INSTITUTIONAL_AUTHOR.id,
-    reviewedAt: "2026-08-26",
+    reviewedAt: "2026-09-29",
     approvedAt: "2026-08-26",
     imageOrigin: "licensed",
     imageLicense: "CC BY-SA 4.0",
     imageAttribution:
       "Foto: Hans Haase (Wikimedia Commons), CC BY-SA 4.0 — https://commons.wikimedia.org/wiki/File:JPANEL_MB_IMG_1121.JPG",
     notes:
-      "Satélite escrito do zero na Onda 10D; fact-check registrado em blogEditorialSources.ts; capa é fotografia real licenciada, sem IA.",
+      "Revisão material em 2026-09-29 guiada pelo GSC: 8 impressões, 0 cliques e posição média ~10,88 entre 2026-04-01 e 2026-09-27. A versão suplementar passa a sobrepor editorialmente o texto monolítico antigo, preservando a mesma URL. O teste PWR_SW foi reenquadrado como isolamento do circuito do botão, com pinout pelo manual, interpretação não determinística, separação entre sem energia e sem POST, exclusão de notebooks/all-in-one e critérios de parada. Queries individuais não foram expostas pelo GSC e nenhuma foi inventada.",
   },
   {
     slug: "curto-circuito-placa-mae-como-identificar",
