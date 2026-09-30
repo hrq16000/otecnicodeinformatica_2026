@@ -10875,84 +10875,126 @@ crontab -e
     ),
   },
   "como-conectar-wifi-tv-nao-conecta": {
-    title: "Smart TV não conecta no Wi‑Fi: o que testar antes de resetar",
+    title: "Smart TV não conecta no Wi‑Fi: diagnóstico antes de resetar ou trocar peça",
     excerpt:
-      "Smart TV não encontra a rede, cai do Wi‑Fi ou conecta sem internet? Compare celular, cabo, bandas, roteador e módulo Wi‑Fi antes de resetar ou trocar peça.",
+      "TV não encontra a rede, conecta sem internet ou cai do Wi‑Fi? Separe cobertura, compatibilidade, roteador, software e hardware com testes comparativos antes de resetar.",
     date: "2026-08-12",
-    readTime: "11 min",
+    readTime: "14 min",
     category: "Redes",
     content: (
       <>
-        <p className="lead">Smart TV que não conecta pode falhar por cobertura, configuração do roteador, compatibilidade de banda, software da própria TV ou defeito no módulo Wi‑Fi. Antes de resetar tudo, compare o comportamento de outro dispositivo no mesmo ponto, teste a rede por cabo quando possível e registre exatamente se a TV não encontra a rede, conecta sem internet ou cai depois de algum tempo.</p>
+        <p className="lead">Quando a Smart TV não conecta ao Wi‑Fi, o erro pode estar na cobertura, na compatibilidade entre TV e roteador, na autenticação, no acesso à internet, no software do aparelho ou no próprio hardware sem fio. O diagnóstico melhora muito quando você identifica <strong>qual etapa falha</strong>: a TV não vê a rede, vê mas não autentica, conecta sem internet ou conecta e cai depois.</p>
 
-        <h2>O teste que separa os dois cenários</h2>
-        <p>Antes de qualquer configuração, leve um celular até o local exato da TV — mesma altura, mesma parede, TV ligada. Depois observe:</p>
-        <ul>
-          <li><strong>Celular também pega mal ali:</strong> cobertura e interferência ganham prioridade, mas ainda compare o resultado perto do roteador e, se possível, por cabo antes de descartar o link do provedor.</li>
-          <li><strong>Celular conecta bem e a TV não enxerga a rede:</strong> confira compatibilidade de banda, nome da rede, segurança usada pelo roteador e software da TV antes de suspeitar do módulo sem fio.</li>
-          <li><strong>A TV conecta, mas cai sozinha depois de minutos ou horas:</strong> compare outros dispositivos no mesmo horário. Interferência, roteador, software da TV e módulo Wi‑Fi entram como hipóteses; o padrão sozinho não define a ordem.</li>
-          <li><strong>A TV não enxerga nenhuma rede:</strong> confirme antes se o Wi‑Fi está habilitado e se o modelo suporta a banda usada. Persistindo após reinício e atualização, o módulo sem fio passa a ser uma hipótese relevante.</li>
-        </ul>
+        <h2>Resposta direta</h2>
+        <p>Antes de resetar a TV, trocar o roteador ou condenar o módulo Wi‑Fi, faça quatro comparações: <strong>outro dispositivo no mesmo ponto da TV, a TV perto do roteador quando isso for viável, a TV por cabo Ethernet quando o modelo permitir e a configuração declarada pelo fabricante para aquela TV</strong>. O objetivo é reduzir variáveis e descobrir se a falha acompanha o local, a rede ou o aparelho.</p>
 
-        <h2>2,4 GHz e 5 GHz: confirme o que a sua TV realmente suporta</h2>
-        <p>Algumas TVs aceitam apenas 2,4 GHz; outras suportam 2,4 e 5 GHz, com limitações que variam por modelo e região. Consulte a especificação do aparelho antes de concluir que a rede “sumiu” por defeito. Nome único para as duas bandas normalmente funciona, mas separar temporariamente os SSIDs pode ajudar no diagnóstico de compatibilidade.</p>
-        <p>Como teste, conecte a TV à banda que o fabricante declara suportar e compare estabilidade no mesmo local. A faixa de 2,4 GHz tende a ter maior alcance; 5 GHz costuma oferecer mais capacidade perto do roteador. Streaming depende de estabilidade e throughput suficiente, não de uma regra fixa de banda.</p>
-
-        <h2>Isolamento de clientes e rede de visitantes</h2>
-        <p>Roteadores de operadora frequentemente vêm com rede de visitantes ativa e isolamento entre aparelhos. A TV conectada nessa rede acessa a internet, mas não conversa com celular nem computador — e aí o espelhamento de tela e os aplicativos de controle deixam de funcionar, mesmo com o vídeo rodando normalmente.</p>
-        <p>Quando o sintoma é "a TV tem internet mas o celular não a encontra", esse é o primeiro item a verificar. A separação correta entre rede de trabalho, rede doméstica e rede de visitantes faz parte do que ajustamos em <Link to="/servicos/redes-e-wifi">redes e Wi-Fi</Link>.</p>
-
-        <h2>Canal congestionado em prédio</h2>
-        <p>Em edifícios, redes vizinhas podem disputar os mesmos canais. Se a TV conecta, mas vídeo trava ou a conexão cai, compare o comportamento em horários e pontos diferentes antes de concluir por defeito. Ajuste de canal, largura de canal e posicionamento do roteador só deve ser feito depois de registrar a configuração atual e medir o resultado.</p>
-
-        <h2>O que fazer, na ordem que evita retrabalho</h2>
-        <ol>
-          <li><strong>Desligar TV e roteador da tomada</strong> por um minuto, religando primeiro o roteador e aguardando ele estabilizar. Isso limpa sessões travadas dos dois lados.</li>
-          <li><strong>Esquecer a rede na TV e reconectar</strong>, digitando a senha com atenção a maiúsculas e minúsculas — o teclado da TV frequentemente ativa maiúscula automática na primeira letra.</li>
-          <li><strong>Conectar à faixa de 2,4 GHz</strong> com nome próprio, se as faixas ainda estiverem unificadas.</li>
-          <li><strong>Verificar rede de visitantes e isolamento de clientes</strong> no roteador.</li>
-          <li><strong>Atualizar o sistema da TV</strong>, quando ela conseguir conectar ao menos por cabo — correções de conectividade são comuns nessas atualizações.</li>
-          <li><strong>Testar por cabo de rede.</strong> É o teste decisivo: se por cabo funciona perfeitamente e por Wi-Fi nunca funciona, o módulo sem fio do aparelho é o suspeito principal.</li>
-        </ol>
-        <p>Reset de fábrica só faz sentido depois desses passos. Ele apaga contas, aplicativos e preferências e raramente resolve o que os itens anteriores não resolveram.</p>
-
-        <aside className="not-prose my-8 rounded-2xl border border-accent/25 bg-accent/[0.04] p-5 md:p-6" aria-labelledby="matriz-tv-wifi">
-          <span className="text-xs font-semibold uppercase tracking-[0.14em] text-accent">Matriz de diagnóstico</span>
-          <h2 id="matriz-tv-wifi" className="mt-2 text-xl font-heading font-bold text-foreground">Sintoma, teste e próximo passo</h2>
+        <aside className="not-prose my-8 rounded-2xl border border-accent/25 bg-accent/[0.04] p-5 md:p-6" aria-labelledby="tv-wifi-sintomas">
+          <span className="text-xs font-semibold uppercase tracking-[0.14em] text-accent">Diagnóstico por sintoma</span>
+          <h2 id="tv-wifi-sintomas" className="mt-2 text-xl font-heading font-bold text-foreground">O que o comportamento da TV realmente indica</h2>
           <div className="mt-5 overflow-x-auto rounded-xl border border-border bg-background">
-            <table className="w-full min-w-[620px] text-left text-sm">
+            <table className="w-full min-w-[720px] text-left text-sm">
               <thead className="bg-muted/60 text-foreground">
                 <tr>
-                  <th className="p-3 font-semibold">O que aparece</th>
-                  <th className="p-3 font-semibold">Teste seguro</th>
-                  <th className="p-3 font-semibold">Decisão</th>
+                  <th className="p-3 font-semibold">Sintoma</th>
+                  <th className="p-3 font-semibold">O que comparar</th>
+                  <th className="p-3 font-semibold">Hipóteses que ganham força</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-border text-muted-foreground">
-                <tr><td className="p-3">Celular e TV falham no mesmo ponto</td><td className="p-3">Compare perto do roteador e no local da TV</td><td className="p-3">Trate cobertura antes de mexer na TV.</td></tr>
-                <tr><td className="p-3">TV não encontra a rede, mas o celular encontra</td><td className="p-3">Confira a faixa disponível e separe o nome de 2,4 GHz</td><td className="p-3">Ajuste a rede; não compre adaptador por palpite.</td></tr>
-                <tr><td className="p-3">TV navega, mas não aparece para o celular</td><td className="p-3">Verifique rede de visitantes e isolamento de clientes</td><td className="p-3">Mantenha os dois na mesma rede doméstica.</td></tr>
-                <tr><td className="p-3">Cabo funciona e Wi‑Fi falha sempre</td><td className="p-3">Atualize o sistema e repita o teste após reconectar a rede</td><td className="p-3">Só então avalie o módulo Wi‑Fi ou uma solução cabeada.</td></tr>
+                <tr><td className="p-3">A TV não encontra a rede</td><td className="p-3">Outro aparelho no mesmo ponto + bandas suportadas pela TV</td><td className="p-3">Cobertura, banda/canal, configuração do roteador, rádio da TV</td></tr>
+                <tr><td className="p-3">A TV vê a rede, mas não conecta</td><td className="p-3">Senha, modo de segurança, rede salva e outro SSID compatível</td><td className="p-3">Autenticação, compatibilidade de segurança, configuração persistida</td></tr>
+                <tr><td className="p-3">A TV conecta, mas fica sem internet</td><td className="p-3">Outro dispositivo na mesma rede e teste por cabo</td><td className="p-3">Roteador, DHCP/DNS, link do provedor ou software da TV</td></tr>
+                <tr><td className="p-3">Conecta e cai depois</td><td className="p-3">Horário, distância, outros aparelhos e comportamento por cabo</td><td className="p-3">Cobertura, interferência, roteador, software ou hardware sem fio</td></tr>
+                <tr><td className="p-3">Internet funciona, mas celular não encontra a TV</td><td className="p-3">Rede de visitantes, isolamento e se ambos estão no mesmo segmento</td><td className="p-3">Descoberta local bloqueada, não necessariamente falha de internet</td></tr>
               </tbody>
             </table>
           </div>
         </aside>
 
-        <aside className="not-prose my-8 rounded-xl border border-amber-500/30 bg-amber-500/10 p-5 text-sm text-foreground" aria-label="Antes de restaurar a Smart TV">
-          <strong>Não comece pelo reset de fábrica.</strong> Ele remove contas, aplicativos e preferências, mas não corrige falta de cobertura, instabilidade da operadora ou isolamento configurado no roteador. Faça os testes acima e registre o resultado antes de apagar qualquer configuração.
+        <h2>1. Compare outro aparelho exatamente onde a TV está</h2>
+        <p>Use um celular ou notebook no mesmo ponto físico da TV. A FCC destaca que o desempenho dentro de casa depende da rede Wi‑Fi, da posição do roteador e dos dispositivos conectados; por isso, a comparação no mesmo local é mais útil do que testar em outro cômodo.</p>
+        <ul>
+          <li><strong>Se celular e TV falham no mesmo ponto:</strong> investigue primeiro cobertura, interferência e posicionamento antes de concluir que a TV está defeituosa.</li>
+          <li><strong>Se o celular funciona bem e a TV não encontra a rede:</strong> a diferença pode estar na compatibilidade da TV, no rádio do aparelho, no software ou na configuração usada pelo roteador.</li>
+          <li><strong>Se só a TV cai:</strong> registre quando ocorre e compare o resultado por cabo ou perto do roteador antes de trocar hardware.</li>
+        </ul>
+
+        <h2>2. Não presuma que toda Smart TV suporta as mesmas bandas e modos</h2>
+        <p>O suporte a 2,4 GHz, 5 GHz, canais, largura de canal e modos de segurança varia por modelo e mercado. Verifique o manual ou a especificação oficial da TV. O fato de um celular enxergar determinada rede não prova que a TV consiga usar a mesma combinação de banda, canal e segurança.</p>
+        <p>Quando o roteador usa um único nome para várias bandas, separar temporariamente os SSIDs pode ser útil como <strong>teste de compatibilidade</strong>. Isso não significa que redes separadas sejam obrigatoriamente melhores no uso diário; serve apenas para descobrir em qual combinação a TV consegue se associar.</p>
+
+        <h2>3. Se a TV vê a rede, mas não autentica</h2>
+        <p>Nesse cenário a cobertura já foi suficiente para a TV enxergar o SSID. A investigação muda para senha, perfil salvo, modo de segurança e compatibilidade. Faça a sequência sem alterar várias coisas ao mesmo tempo:</p>
+        <ol>
+          <li>Confirme a senha em outro dispositivo.</li>
+          <li>Remova apenas a rede salva na TV e cadastre novamente.</li>
+          <li>Confira no manual se o modelo tem alguma limitação de banda ou modo de segurança.</li>
+          <li>Se você alterar temporariamente a configuração do roteador para testar, registre como estava antes e reverta o que não for necessário.</li>
+        </ol>
+        <p>Evite desativar proteção da rede apenas para “fazer funcionar”. Uma incompatibilidade de segurança deve ser tratada escolhendo uma configuração suportada e adequada para os dispositivos da casa, não deixando a rede aberta.</p>
+
+        <h2>4. Se aparece “conectado”, mas a TV fica sem internet</h2>
+        <p>Estar associado ao Wi‑Fi não significa que a TV conseguiu chegar à internet. Compare outro aparelho conectado ao mesmo roteador naquele momento. Se todos ficam sem internet, a causa pode estar no roteador, modem/ONU ou provedor. Se apenas a TV falha, reiniciar a conexão da TV, renovar a rede salva e atualizar o software do aparelho passam a ser verificações mais relevantes.</p>
+        <p>Alterar DNS manualmente pode ser um teste em casos específicos, mas não deve ser o primeiro reflexo: ele não corrige sinal fraco, senha, falha de associação nem queda do link do provedor.</p>
+
+        <h2>5. Cabo Ethernet é uma comparação controlada, não um veredito automático</h2>
+        <p>Se a TV possui Ethernet, o cabo ajuda a retirar o rádio Wi‑Fi da equação. <strong>Se por cabo funciona e por Wi‑Fi não, isso estreita o diagnóstico para o caminho sem fio, mas não prova sozinho que o módulo Wi‑Fi queimou.</strong> Ainda podem existir diferenças de configuração, compatibilidade, cobertura ou software.</p>
+        <p>O hardware da TV ganha peso na hipótese quando a falha persiste em redes conhecidas como funcionais, perto do roteador, com configuração compatível e após atualização do sistema, enquanto a interface cabeada permanece estável.</p>
+
+        <h2>6. Rede de visitantes e isolamento explicam falhas de espelhamento</h2>
+        <p>Uma TV pode navegar normalmente e, ainda assim, não aparecer para o celular ou notebook. Isso acontece quando os aparelhos estão em redes diferentes ou quando o roteador impede comunicação entre clientes. Nesses casos, o problema é de <strong>descoberta local</strong>, não necessariamente de acesso à internet.</p>
+        <p>Antes de mexer em aplicativo, Bluetooth ou resetar a TV, confirme se telefone e TV estão na mesma rede doméstica e se a rede de visitantes ou o isolamento entre clientes não está separando os dispositivos.</p>
+
+        <h2>7. Quedas recorrentes exigem registrar padrão, não adivinhar causa</h2>
+        <p>Se a TV conecta e cai depois, anote horário, duração, intensidade do sinal percebida por outros aparelhos e se o problema aparece em outros dispositivos. Em prédios e ambientes densos, interferência e disputa de canal podem contribuir, mas não devem ser presumidas sem comparação.</p>
+        <p>Uma boa sequência é testar a TV no ponto habitual, depois mais perto do roteador e, quando possível, por cabo. Se o problema só existe em um local, a rede ganha prioridade. Se acompanha a TV em condições diferentes, o aparelho ganha prioridade.</p>
+
+        <h2>8. Ordem de testes que reduz retrabalho</h2>
+        <ol>
+          <li><strong>Defina o sintoma exato:</strong> não vê rede, não autentica, conecta sem internet ou cai.</li>
+          <li><strong>Compare outro dispositivo no mesmo ponto.</strong></li>
+          <li><strong>Confirme bandas e requisitos do modelo da TV.</strong></li>
+          <li><strong>Remova e recrie somente a conexão Wi‑Fi da TV.</strong></li>
+          <li><strong>Atualize o software da TV</strong> pelo método oficial disponível para o modelo.</li>
+          <li><strong>Teste mais perto do roteador</strong> se houver suspeita de cobertura.</li>
+          <li><strong>Teste por Ethernet</strong> quando a TV oferecer essa interface.</li>
+          <li><strong>Verifique rede de visitantes/isolamento</strong> se internet funciona, mas espelhamento e controle local não.</li>
+          <li><strong>Considere reset de fábrica por último</strong>, depois de registrar contas, configurações e o resultado dos testes anteriores.</li>
+        </ol>
+
+        <aside className="not-prose my-8 rounded-xl border border-amber-500/30 bg-amber-500/10 p-5 text-sm text-foreground" aria-label="Antes do reset de fábrica">
+          <strong>Reset não é diagnóstico.</strong> Ele apaga contas, aplicativos e preferências, mas não corrige cobertura ruim, incompatibilidade entre rádio e roteador, isolamento de clientes ou falha física. Use-o somente quando os testes menos destrutivos não explicaram o comportamento e o procedimento oficial do fabricante o indicar.
         </aside>
 
-        <h2>Quando é defeito da TV — e o que isso significa na prática</h2>
-        <p>Quando a TV não lista nenhuma rede, conecta por cabo sem falha e o problema persiste após atualização e reset, o cenário aponta para o módulo Wi-Fi do aparelho. Nesse ponto entra uma conversa honesta de custo: em boa parte dos televisores de linha de entrada, o reparo dessa parte custa mais do que resolver o uso com conexão cabeada ou com um aparelho externo de streaming ligado à porta HDMI.</p>
-        <p>Não prometemos reparo antes de avaliar, e não trocamos placa por suposição. A avaliação de imagem, som, placa e alimentação segue o escopo descrito em <Link to="/servicos/conserto-tv">conserto de TV</Link>, com o critério de verificação e cobrança explicado em <Link to="/diagnostico-tecnico">como funciona o diagnóstico técnico</Link>.</p>
+        <h2>Quando suspeitar do hardware da TV</h2>
+        <p>A suspeita de módulo Wi‑Fi, antena, cabo interno ou placa aumenta quando a TV falha em mais de uma rede funcional, perto do roteador, com configuração compatível, enquanto outros dispositivos funcionam normalmente. Mesmo assim, o diagnóstico físico deve separar módulo, antena/conexão, alimentação e placa antes de comprar peça.</p>
+        <p>Se houver cheiro de queimado, aquecimento anormal, sinais de líquido ou instabilidade elétrica, interrompa testes repetidos de liga/desliga. A avaliação de imagem, som, placa e alimentação está descrita em <Link to="/servicos/conserto-tv" className="text-accent">conserto de TV</Link>. O processo de triagem e seus limites estão em <Link to="/diagnostico-tecnico" className="text-accent">diagnóstico técnico</Link>.</p>
+
+        <h2>Perguntas frequentes</h2>
+        <h3>Por que a TV encontra o Wi‑Fi, mas não conecta?</h3>
+        <p>Porque encontrar o nome da rede é apenas a etapa de detecção. A autenticação ainda depende de senha, modo de segurança e compatibilidade entre a TV e a configuração do roteador.</p>
+
+        <h3>Devo usar 2,4 GHz ou 5 GHz na Smart TV?</h3>
+        <p>Use a banda que o modelo declara suportar e que se comporta melhor no local. Não há uma resposta universal: distância, paredes, capacidade do roteador e da própria TV mudam o resultado.</p>
+
+        <h3>Se por cabo funciona e por Wi‑Fi não, o módulo sem fio está queimado?</h3>
+        <p>Não necessariamente. O cabo remove várias variáveis do Wi‑Fi e torna o caminho sem fio mais suspeito, mas ainda é preciso separar cobertura, compatibilidade, configuração e software antes de concluir por defeito físico.</p>
+
+        <h3>Trocar o DNS resolve TV sem internet?</h3>
+        <p>Pode ser um teste em situações específicas, mas não é solução universal. Primeiro descubra se outros aparelhos também estão sem internet e se a TV recebeu conexão estável com o roteador.</p>
+
+        <h3>Reset de fábrica deve ser o primeiro passo?</h3>
+        <p>Não. É uma medida destrutiva de configuração. Compare rede, bandas, outro dispositivo, software e cabo antes; assim você preserva informações úteis para o diagnóstico.</p>
 
         <h2>Resumo prático</h2>
-        <p>Compare a TV com outro dispositivo no mesmo ponto, confirme as bandas suportadas pelo modelo e, quando possível, teste por cabo. Esses três testes separam boa parte dos casos de cobertura, configuração e falha do módulo. Rede de visitantes e isolamento explicam alguns cenários de espelhamento; queda recorrente exige comparar roteador, interferência, software e hardware antes de trocar peça.</p>
+        <p>O melhor diagnóstico não começa pelo reset nem pela compra de peça. Começa classificando o sintoma e comparando condições. Outro aparelho no mesmo ponto separa parte dos problemas de cobertura; a documentação do modelo separa compatibilidade; o cabo ajuda a isolar o caminho sem fio; e testes em mais de uma rede evitam condenar a TV por um problema do roteador. Para revisar posicionamento, cobertura e configuração da rede, consulte <Link to="/servicos/redes-e-wifi" className="text-accent">redes e Wi‑Fi</Link> e o <Link to="/guia-tecnico-informatica#tema-redes-wifi" className="text-accent">Atlas de redes e Wi‑Fi</Link>.</p>
+
+        <EditorialReferences slug="como-conectar-wifi-tv-nao-conecta" />
       </>
     ),
   },
 
-  
+
   "como-fazer-teste-velocidade-internet": {
     title: "Como fazer teste de velocidade da internet e interpretar download, latência e Wi-Fi",
     excerpt:
