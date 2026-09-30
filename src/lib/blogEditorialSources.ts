@@ -1342,10 +1342,10 @@ export const ARTICLE_SOURCE_MANIFEST: Record<string, ArticleSourceManifest> = {
     sources: [],
     technicalReview: "reviewed",
     factChecked: true,
-    factCheckedAt: "2026-08-12",
+    factCheckedAt: "2026-09-29",
     stableKnowledge: true,
     notes:
-      "Revisão concluída (Rodada 4Y): identificação da tela pelo código do painel, distinção entre defeito de painel e de cabo/placa de vídeo, alerta de risco em telas coladas e touch, sem indicação de peça específica, sem preço de peça e sem promessa de compatibilidade universal. Conhecimento técnico estável — sem fonte visível.",
+      "Revisão material em 2026-09-29 guiada pelo GSC: remove preços, marcas, prazos artificiais de teste, promessa de diagnóstico em minutos, alegações de laboratório/garantia e procedimentos genéricos sem relação com tela. Reorganiza o conteúdo em diagnóstico do sintoma, compatibilidade do painel, desenergização, cabo/conector, teste antes do fechamento, critérios de parada e validação pós-troca. Conhecimento técnico estável — sem fonte visível.",
   },
   "como-limpar-notebook-por-dentro": {
     slug: "como-limpar-notebook-por-dentro",
