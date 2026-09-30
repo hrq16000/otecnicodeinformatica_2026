@@ -177,14 +177,14 @@ const WAVE_4Z: EditorialApproval[] = [
     status: "approved",
     authorType: "organization",
     authorId: INSTITUTIONAL_AUTHOR.id,
-    reviewedAt: "2026-08-12",
+    reviewedAt: "2026-09-30",
     approvedAt: "2026-08-12",
     imageOrigin: "licensed",
     imageLicense: "CC BY 4.0",
     imageAttribution:
       "Foto: Mk2010 (Wikimedia Commons), CC BY 4.0 — https://commons.wikimedia.org/wiki/File:Actuator_arm_assembly_of_a_hard_disk_drive.jpg",
     notes:
-      "Revisão técnica concluída e fact-check registrado em blogEditorialSources.ts; capa é fotografia real licenciada, sem IA.",
+      "Revisão material em 2026-09-30 guiada pelo GSC: 1 impressão, 0 cliques e posição média 9 entre 2026-04-01 e 2026-09-27. URL Inspection: PASS, Submitted and indexed, ALLOWED, INDEXING_ALLOWED, SUCCESSFUL e rastreada como MOBILE. A nova owner suplementar organiza a lentidão por contexto e evidência, evita formatar ou trocar hardware por palpite e registra fontes oficiais Microsoft. Queries individuais não foram expostas pelo GSC e nenhuma foi inventada.",
   },
 ];
 
