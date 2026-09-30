@@ -641,14 +641,14 @@ const WAVE_10C: EditorialApproval[] = [
     status: "approved",
     authorType: "organization",
     authorId: INSTITUTIONAL_AUTHOR.id,
-    reviewedAt: "2026-08-25",
+    reviewedAt: "2026-09-30",
     approvedAt: "2026-08-25",
     imageOrigin: "licensed",
     imageLicense: "CC BY-SA 4.0",
     imageAttribution:
       "Foto: D-Kuru (Wikimedia Commons), CC BY-SA 4.0 — https://commons.wikimedia.org/wiki/File:DDR_4_SO-DIMM_RAM_slot_PNr%C2%B00837.jpg",
     notes:
-      "Satélite escrito do zero na Onda 10C; fact-check registrado em blogEditorialSources.ts; capa é fotografia real licenciada, sem IA.",
+      "Revisão material em 2026-09-30 guiada pelo GSC: 4 impressões, 0 cliques e posição média ~24 entre 2026-04-01 e 2026-09-27. A única query individual exposta foi 'memoria insuficiente' (2 impressões, posição média 40,5). A versão suplementar passa a sobrepor editorialmente o texto anterior, preservando a URL; diferencia uso alto/cache de pressão real, commit/pagefile, vazamento, paginação, gargalo de disco e defeito físico, sem impor quantidade universal de RAM.",
   },
   {
     slug: "codigos-de-erro-tela-azul-windows",
