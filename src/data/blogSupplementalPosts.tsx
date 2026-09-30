@@ -1534,6 +1534,128 @@ export const blogSupplementalPosts: Record<string, BlogPostContent> = {
     ),
   },
 
+  "hd-nao-e-reconhecido-na-bios-o-que-fazer": {
+    title: "Computador não reconhece HD ou SSD: como separar BIOS, Windows e falha da unidade",
+    excerpt:
+      "HD ou SSD não aparece? Veja como distinguir ausência na BIOS/UEFI de problema no Windows, conferir SATA/M.2/NVMe e preservar os dados antes de inicializar ou formatar.",
+    date: "2026-09-30",
+    readTime: "15 min",
+    category: "Diagnóstico",
+    content: (
+      <>
+        <p className="lead">Quando o computador não reconhece um HD ou SSD, a primeira pergunta não é “qual programa instalar?”, e sim <strong>em qual camada a unidade desaparece</strong>: BIOS/UEFI, Gerenciamento de Disco, Explorador de Arquivos ou boot. Essa separação evita transformar um problema de detecção em perda de dados por inicialização ou formatação precipitada.</p>
+
+        <h2>Resposta direta: o que fazer se o PC não reconhece o HD ou SSD?</h2>
+        <ol>
+          <li>Abra a BIOS/UEFI e procure a unidade nas telas de armazenamento/SATA/NVMe.</li>
+          <li>Se ela <strong>não aparece no firmware</strong>, investigue conexão, alimentação, slot, compatibilidade e a própria unidade.</li>
+          <li>Se ela <strong>aparece na BIOS/UEFI, mas não no Explorador</strong>, abra o Gerenciamento de Disco antes de tocar no hardware.</li>
+          <li>Se o disco já tinha arquivos, <strong>não inicialize nem formate</strong> só porque o Windows oferece essa opção.</li>
+          <li>Se houver ruído anormal, desconexões ou dados únicos, pare testes agressivos e priorize preservação/recuperação.</li>
+        </ol>
+
+        <h2>BIOS/UEFI não reconhece é diferente de Windows não mostrar</h2>
+        <table>
+          <thead><tr><th>Onde aparece?</th><th>O que isso indica</th><th>Próximo passo</th></tr></thead>
+          <tbody>
+            <tr><td>Nem BIOS/UEFI nem Windows</td><td>Falha está antes do sistema operacional</td><td>Configuração, cabo, energia, slot, compatibilidade ou unidade.</td></tr>
+            <tr><td>BIOS/UEFI sim, Windows não</td><td>Hardware foi enumerado pelo firmware</td><td>Gerenciamento de Disco, controlador, estado do volume e driver.</td></tr>
+            <tr><td>Gerenciamento de Disco sim, Explorador não</td><td>Disco existe para o Windows</td><td>Letra, volume, offline, RAW ou disco novo não alocado.</td></tr>
+            <tr><td>Aparece e some</td><td>Detecção instável</td><td>Evitar escrita; investigar enlace/alimentação/unidade antes de reparar.</td></tr>
+          </tbody>
+        </table>
+
+        <h2>1. Se não aparece na BIOS/UEFI, não comece pelo Windows</h2>
+        <p>A Seagate orienta verificar se a porta está habilitada no firmware e depois isolar conexão, alimentação, cabo e a própria unidade quando um dispositivo SATA não é detectado. Isso vale como lógica de diagnóstico, não como prova de que qualquer disco Seagate ou não-Seagate tenha uma causa específica.</p>
+        <p>O ponto principal é simples: se a BIOS/UEFI não enumera a unidade, o Windows ainda não teve chance de montá-la. Reinstalar driver de volume, atribuir letra ou rodar CHKDSK não corrige ausência física no firmware.</p>
+
+        <h2>2. Desktop SATA: separe dados e alimentação</h2>
+        <p>Com o computador desligado e sem energia, confira o encaixe do cabo SATA de dados e do cabo de alimentação. Se houver segurança e disponibilidade, compare com um cabo e uma porta conhecidos como funcionais.</p>
+        <ul>
+          <li>Troque <strong>uma variável por vez</strong>.</li>
+          <li>Não use cabo modular de fonte diferente, mesmo que o conector pareça igual.</li>
+          <li>Se o HD mecânico apresenta ruído novo junto de falha de detecção, reduza tentativas.</li>
+          <li>Se o disco contém dados únicos, preservar vem antes de testes prolongados.</li>
+        </ul>
+
+        <h2>3. Notebook: não force abertura sem manual do modelo</h2>
+        <p>Notebooks podem usar SATA de 2,5 polegadas, M.2 SATA, M.2 NVMe ou combinações específicas. O acesso também varia. Se a bateria é interna, siga o procedimento do fabricante antes de desconectar ou reassentar armazenamento.</p>
+        <p>“Notebook não reconhece HD” não significa automaticamente disco defeituoso: cabo flat, adaptador, slot, compatibilidade e configuração do firmware também podem participar.</p>
+
+        <h2>4. M.2 não significa automaticamente NVMe</h2>
+        <p>M.2 descreve o formato físico. Um módulo M.2 pode usar SATA ou PCIe/NVMe conforme o projeto. Por isso, um SSD que encaixa mecanicamente pode não ser compatível com o protocolo daquele slot.</p>
+        <p>Confirme no manual: <strong>protocolo aceito, chaveamento, comprimento do módulo, geração PCIe e regras de compartilhamento</strong>. Algumas placas desabilitam determinadas portas SATA quando certos slots M.2 estão ocupados; isso é específico do modelo, não regra universal.</p>
+
+        <h2>5. SSD novo não aparece: antes de culpar o SSD, confirme o caminho</h2>
+        <p>Para SSD SATA, firmware/porta/cabo continuam relevantes. Para NVMe, procure a unidade em telas específicas de NVMe ou armazenamento PCIe — nem todo firmware mostra o dispositivo na mesma lista usada para SATA.</p>
+        <p>Se o SSD aparece no firmware mas não no Windows, mude de trilha: veja <a href="/blog/ssd-nvme-nao-aparece-no-gerenciador-de-discos">SSD aparece na BIOS, mas não no Gerenciamento de Disco</a>.</p>
+
+        <h2>6. Aparece na BIOS, mas não em “Este Computador”</h2>
+        <p>Abra o <strong>Gerenciamento de Disco</strong> e observe antes de clicar. Disco novo pode aparecer como não inicializado/não alocado; disco usado pode aparecer offline, RAW ou sem letra. Esses estados não significam a mesma coisa.</p>
+        <p>A documentação Microsoft de inicialização de discos é voltada a <strong>discos novos</strong>. Se a unidade já continha dados e agora aparece como “não inicializada”, não trate isso como convite para inicializar.</p>
+
+        <h2>7. “Não inicializado” em disco com dados é critério de parada</h2>
+        <p>Inicializar grava estrutura de partição. Em uma unidade nova e vazia, é parte da preparação normal. Em uma unidade usada que desapareceu e voltou como desconhecida/não inicializada, a prioridade muda para diagnóstico e recuperação.</p>
+        <p>Se os dados importam, veja <a href="/blog/como-recuperar-dados-hd-com-defeito">como recuperar dados de HD com defeito</a> antes de qualquer operação destrutiva.</p>
+
+        <h2>8. O disco aparece, mas o computador entra direto na BIOS</h2>
+        <p>Detecção física e boot são camadas diferentes. O firmware pode enxergar o SSD e ainda não encontrar uma entrada inicializável válida. Nesse caso, investigue Windows Boot Manager, UEFI/Legacy e estrutura de boot em <a href="/blog/computador-entra-direto-na-bios">computador entra direto na BIOS</a>.</p>
+
+        <h2>9. Troquei o SSD e agora só abre a BIOS</h2>
+        <p>Depois de troca ou clonagem, confirme se o SSD novo é detectado, se a migração incluiu as partições necessárias e se o firmware está tentando iniciar no modo correto. O roteiro específico está em <a href="/blog/troquei-o-ssd-e-o-pc-so-abre-a-bios">troquei o SSD e o PC só abre a BIOS</a>.</p>
+
+        <h2>10. A unidade aparece e some: trate como instabilidade, não como “problema de letra”</h2>
+        <p>Desconexão intermitente pode envolver cabo, alimentação, slot/controlador ou a própria unidade. Evite gravar grandes volumes ou rodar benchmarks antes de entender a causa, principalmente se aquela é a única cópia dos dados.</p>
+
+        <h2>11. Ruído em HD mecânico não fecha diagnóstico sozinho</h2>
+        <p>HDs fazem sons normais de operação. O que aumenta a preocupação é um <strong>som novo ou repetitivo combinado com sintomas</strong>: travamentos, desaparecimento da BIOS, erros de leitura ou dificuldade para copiar. Não use apenas “clique” para decretar cabeça defeituosa.</p>
+
+        <h2>12. Outro computador ou case USB ajuda, mas tem limites</h2>
+        <p>Testar em outro caminho pode ser útil, mas adaptadores também têm limitações de protocolo, capacidade e alimentação. Um M.2 SATA não vira NVMe pelo case, e vice-versa. Resultado negativo em adaptador incompatível não condena a unidade.</p>
+
+        <h2>Árvore de decisão rápida</h2>
+        <ol>
+          <li><strong>Não aparece na BIOS/UEFI:</strong> firmware → compatibilidade → conexão/energia → unidade.</li>
+          <li><strong>Aparece na BIOS, não no Windows:</strong> controlador/driver → Gerenciamento de Disco.</li>
+          <li><strong>Aparece no Gerenciamento de Disco:</strong> estado/volume/letra, sem formatar se houver dados.</li>
+          <li><strong>Aparece e some:</strong> pare gravações e investigue estabilidade.</li>
+          <li><strong>Tem dados únicos:</strong> preservação antes de reparo.</li>
+        </ol>
+
+        <h2>O que não fazer</h2>
+        <ul>
+          <li>Formatar ou inicializar um disco usado só para “ver se volta”.</li>
+          <li>Trocar BIOS/UEFI, AHCI/RAID/VMD e Secure Boot todos ao mesmo tempo.</li>
+          <li>Rodar CHKDSK em mídia instável antes de preservar os dados.</li>
+          <li>Usar cabo modular de outra fonte.</li>
+          <li>Forçar M.2 em slot/protocolo incompatível.</li>
+          <li>Concluir defeito do HD/SSD por um único teste negativo.</li>
+        </ul>
+
+        <h2>Perguntas frequentes</h2>
+        <h3>BIOS não reconhece SSD: é defeito?</h3>
+        <p>Não necessariamente. Porta desabilitada, cabo, alimentação, slot, protocolo incompatível e a própria unidade ainda precisam ser separados.</p>
+
+        <h3>PC não reconhece HD, mas ele gira. Está bom?</h3>
+        <p>Girar mostra apenas que o motor recebeu energia em um HD mecânico. Não valida comunicação, leitura nem saúde da mídia.</p>
+
+        <h3>SSD aparece na BIOS mas não no Windows. Preciso formatar?</h3>
+        <p>Não automaticamente. Veja o estado no Gerenciamento de Disco. Só inicialize/formate como preparação normal quando você confirmou que é um disco novo e sem dados a preservar.</p>
+
+        <h3>M.2 e NVMe são a mesma coisa?</h3>
+        <p>Não. M.2 é formato físico; NVMe é um protocolo de armazenamento sobre PCIe. Confirme o que o slot e a unidade suportam.</p>
+
+        <h3>Posso testar o HD em outro computador?</h3>
+        <p>Sim, quando isso pode ser feito com segurança e compatibilidade. Use o resultado como evidência adicional, não como diagnóstico único.</p>
+
+        <h2>Resumo prático</h2>
+        <p>Quando o computador não reconhece HD ou SSD, comece por <strong>onde a unidade desaparece</strong>. Ausente na BIOS/UEFI: investigue caminho físico, configuração e compatibilidade. Presente no firmware: passe para o Windows e o estado do disco. Em qualquer cenário com dados importantes, evite inicialização, formatação e reparos de escrita antes de preservar a informação.</p>
+
+        <EditorialReferences slug="hd-nao-e-reconhecido-na-bios-o-que-fazer" />
+      </>
+    ),
+  },
+
   "como-recuperar-dados-hd-com-defeito": {
     title: "Recuperar dados de HD com defeito: o que fazer antes de tentar consertar",
     excerpt:

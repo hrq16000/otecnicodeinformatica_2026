@@ -499,6 +499,31 @@ export const EDITORIAL_SOURCES: Record<string, EditorialSource> = {
       "O manual orienta fazer uma cópia da unidade com falha e tentar reparar a cópia, não o original, e alerta para não reparar sistema de arquivos diretamente em uma unidade com erros de I/O.",
     ],
   },
+  "seagate-bios-sata-not-detected-2026": {
+    id: "seagate-bios-sata-not-detected-2026",
+    title: "O BIOS não detecta ou reconhece o disco rígido ATA/SATA",
+    publisher: "Seagate Support",
+    url: "https://www.seagate.com/pt/pt/support/kb/the-bios-does-not-detect-or-recognize-the-ata-sata-hard-drive-168595en/",
+    accessedAt: "2026-09-30",
+    sourceType: "official",
+    supports: [
+      "A ausência de um HD SATA no BIOS pode envolver porta desabilitada, cabo, alimentação e a própria unidade; o diagnóstico deve isolar essas camadas.",
+      "A Seagate orienta verificar habilitação da porta e conexões antes de concluir falha da unidade.",
+    ],
+  },
+  "seagate-bios-ssd-not-detected-2026": {
+    id: "seagate-bios-ssd-not-detected-2026",
+    title: "O BIOS não detecta ou reconhece a unidade de estado sólido",
+    publisher: "Seagate Support",
+    url: "https://www.seagate.com/pt/pt/support/kb/the-bios-does-not-detect-or-recognize-the-solid-state-drive-005707en/",
+    accessedAt: "2026-09-30",
+    sourceType: "official",
+    supports: [
+      "A ausência de um SSD SATA no BIOS pode envolver porta/configuração, conexão e falha da unidade.",
+      "Detecção no firmware deve ser resolvida antes de tratar estados de volume no sistema operacional.",
+    ],
+  },
+
   "seagate-noisy-drive-2026": {
     id: "seagate-noisy-drive-2026",
     title: "O que eu devo fazer quando o disco rígido faz barulho?",
@@ -1878,14 +1903,20 @@ export const ARTICLE_SOURCE_MANIFEST: Record<string, ArticleSourceManifest> = {
   },
   "hd-nao-e-reconhecido-na-bios-o-que-fazer": {
     slug: "hd-nao-e-reconhecido-na-bios-o-que-fazer",
-    sources: [],
+    sources: [
+      "seagate-bios-sata-not-detected-2026",
+      "seagate-bios-ssd-not-detected-2026",
+      "ms-initialize-new-disks",
+      "nvme-official-faq",
+      "seagate-noisy-drive-2026",
+    ],
     technicalReview: "reviewed",
     factChecked: true,
-    factCheckedAt: "2026-08-26",
-    stableKnowledge: true,
+    factCheckedAt: "2026-09-30",
     notes:
-      "Revisão concluída (Onda 10C, Lote 3): separação entre alimentação, enlace de dados e defeito da mídia; reassentamento, troca de cabo e porta, compartilhamento de faixas entre M.2 e SATA e ressalva explícita de não escrever em disco com ruído ou dados sem cópia. Sem marca comercial e sem promessa. Conhecimento técnico estável — sem fonte visível.",
+      "Revisão material em 2026-09-30 guiada pelo GSC: 68 impressões, 0 cliques e posição média ~25,94 entre 2026-04-01 e 2026-09-27. Queries reais incluem 'computador nao reconhece hd' (17 impressões), 'pc não reconhece hd' (14), 'ssd nao reconhecido', 'bios não reconhece ssd' e variações. A versão suplementar substitui editorialmente o texto monolítico antigo, separa BIOS/UEFI de Windows, SATA de M.2/NVMe, detecção de boot de estado do volume e reforça preservação de dados antes de inicialização/formatação. Fontes Seagate, Microsoft e NVM Express ficam visíveis.",
   },
+
   "ssd-nvme-nao-aparece-no-gerenciador-de-discos": {
     slug: "ssd-nvme-nao-aparece-no-gerenciador-de-discos",
     sources: [],
