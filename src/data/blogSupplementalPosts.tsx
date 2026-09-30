@@ -1,6 +1,7 @@
 import React from "react";
 import type { BlogPostContent } from "@/data/blogPostsContent";
 import { EditorialReferences } from "@/components/BlogPostFAQ";
+import { MODALIDADES } from "@/lib/precosConfig";
 
 /**
  * Conteúdos editoriais suplementares.
@@ -1998,6 +1999,222 @@ export const blogSupplementalPosts: Record<string, BlogPostContent> = {
         <p>Quando o computador não reconhece HD ou SSD, comece por <strong>onde a unidade desaparece</strong>. Ausente na BIOS/UEFI: investigue caminho físico, configuração e compatibilidade. Presente no firmware: passe para o Windows e o estado do disco. Em qualquer cenário com dados importantes, evite inicialização, formatação e reparos de escrita antes de preservar a informação.</p>
 
         <EditorialReferences slug="hd-nao-e-reconhecido-na-bios-o-que-fazer" />
+      </>
+    ),
+  },
+
+  "quanto-custa-formatar-um-computador": {
+    title: "Quanto custa formatar um computador? Valores, escopo e o que realmente entra",
+    excerpt:
+      "Veja os valores praticados pelo O Técnico de Informática, o que muda entre visita e bancada, quando backup/licença/peças entram à parte e como comparar um orçamento de formatação sem cair em preço incompleto.",
+    date: "2026-09-30",
+    readTime: "13 min",
+    category: "Manutenção e Decisão",
+    content: (
+      <>
+        <p className="lead">
+          O custo de uma formatação não deve ser resumido a um número solto. O valor depende da modalidade de
+          atendimento e do que precisa ser feito antes e depois da reinstalação: preservar arquivos, confirmar
+          BitLocker, reinstalar o Windows por mídia oficial, restaurar dados, validar drivers e separar eventuais
+          problemas de hardware. Abaixo estão <strong>os valores vigentes do próprio O Técnico de Informática</strong>,
+          carregados da mesma fonte usada pelo restante do portal — não são média nacional nem preço de concorrentes.
+        </p>
+
+        <h2>Resposta direta: quanto custa no O Técnico de Informática?</h2>
+        <p>
+          Não existe uma tarifa única chamada “formatação”. O atendimento é enquadrado conforme o equipamento está
+          funcionando, o tempo técnico necessário e se o caso exige bancada, coleta ou entrega. Os valores atuais são:
+        </p>
+        <table>
+          <thead>
+            <tr><th>Modalidade</th><th>Valor vigente</th><th>Como é cobrado</th></tr>
+          </thead>
+          <tbody>
+            {MODALIDADES.map((modalidade) => (
+              <tr key={modalidade.id}>
+                <td><strong>{modalidade.titulo}</strong></td>
+                <td>{modalidade.valorLabel}</td>
+                <td>{modalidade.unidade}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+        <p>
+          Esses valores representam tempo técnico e modalidade de atendimento. <strong>Peças, componentes, licenças
+          e materiais não estão automaticamente incluídos.</strong> Reparos acima do escopo pré-aprovado dependem de
+          autorização, conforme a modalidade aplicável.
+        </p>
+
+        <h2>1. “Formatar” pode significar serviços diferentes</h2>
+        <p>
+          Antes de comparar preço, confirme o que o orçamento chama de formatação. Há diferença entre reinstalar o
+          Windows, usar opções de recuperação do próprio sistema, apagar uma unidade, preservar dados e reconstruir
+          todo o ambiente com aplicativos e arquivos. Dois orçamentos com o mesmo nome podem entregar escopos muito
+          diferentes.
+        </p>
+        <table>
+          <thead>
+            <tr><th>Necessidade real</th><th>O trabalho pode envolver</th><th>Pergunta que deve ser respondida antes</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Windows corrompido, mas disco íntegro</td><td>Diagnóstico, reparo ou reinstalação</td><td>É mesmo necessário apagar o sistema?</td></tr>
+            <tr><td>Computador lento</td><td>Diagnóstico de gargalo antes de reinstalar</td><td>A lentidão é de software ou hardware?</td></tr>
+            <tr><td>Arquivos importantes no equipamento</td><td>Backup verificado e restauração</td><td>Quais pastas e contas precisam ser preservadas?</td></tr>
+            <tr><td>Disco com erro ou instabilidade</td><td>Preservação de dados antes de qualquer escrita</td><td>É seguro continuar usando a unidade?</td></tr>
+            <tr><td>Troca de HD/SSD</td><td>Instalação limpa ou migração, conforme o caso</td><td>O novo armazenamento é compatível e os dados estão protegidos?</td></tr>
+          </tbody>
+        </table>
+
+        <h2>2. O que costuma alterar o escopo — e, portanto, o custo</h2>
+        <p>
+          O preço não deve subir por surpresa. O correto é descobrir o escopo antes da execução e registrar o que será
+          feito. Os fatores que mais mudam o trabalho são:
+        </p>
+        <ul>
+          <li><strong>Backup:</strong> quantidade de dados, localização dos arquivos, integridade do armazenamento e destino da cópia.</li>
+          <li><strong>BitLocker:</strong> uma unidade protegida pode exigir a chave de recuperação antes de acessar ou preservar dados.</li>
+          <li><strong>Conta e licença:</strong> ativação legítima do Windows depende da licença digital ou chave válida associada ao dispositivo/conta.</li>
+          <li><strong>Drivers e firmware:</strong> alguns equipamentos exigem validação específica depois da instalação.</li>
+          <li><strong>Aplicativos:</strong> reinstalar programas comerciais pode depender de instaladores, contas e licenças do cliente.</li>
+          <li><strong>Falha de hardware:</strong> memória, SSD/HD ou outro componente defeituoso muda o caso de “formatação” para diagnóstico/reparo.</li>
+        </ul>
+
+        <h2>3. Backup não é uma frase no orçamento: precisa ser verificável</h2>
+        <p>
+          “Fazer backup” só é útil quando está claro <strong>o que será copiado, para onde e como a cópia será
+          conferida</strong>. Área de Trabalho, Documentos e Imagens podem estar localmente no computador, sincronizados
+          pelo OneDrive ou misturados entre armazenamento local e nuvem. Antes de apagar ou reinstalar, confirme onde
+          estão os arquivos importantes.
+        </p>
+        <p>
+          Se houver conteúdo apenas na nuvem ou arquivos sob demanda, interromper a sincronização ou mover pastas sem
+          entender o estado pode gerar confusão. A documentação oficial do OneDrive orienta a conferir o destino dos
+          arquivos ao alterar o backup de pastas conhecidas.
+        </p>
+
+        <h2>4. BitLocker pode mudar completamente a prioridade</h2>
+        <p>
+          Se a unidade estiver criptografada, a chave de recuperação pode ser necessária para acessar os dados. Antes
+          de uma reinstalação, troca de hardware ou tentativa de recuperação, confirme se a chave está disponível.
+          Apagar o disco sem essa verificação transforma um problema de sistema em perda de dados evitável.
+        </p>
+
+        <h2>5. Licença do Windows não deve ser confundida com mão de obra</h2>
+        <p>
+          Instalar o Windows e licenciar o Windows são coisas diferentes. A Microsoft documenta que a ativação depende
+          de licença digital ou chave de produto legítima. O serviço técnico não deve prometer licença nova dentro do
+          valor de mão de obra quando ela não estiver explicitamente incluída.
+        </p>
+        <p>
+          Da mesma forma, programas pagos — Microsoft 365, antivírus comercial, softwares de projeto e outros — exigem
+          as credenciais ou licenças correspondentes. Um orçamento transparente separa instalação/configuração de
+          compra de licença.
+        </p>
+
+        <h2>6. Mídia oficial e instalação limpa: o que deve acontecer</h2>
+        <p>
+          Quando a decisão técnica for por reinstalação, a mídia oficial da Microsoft é a referência apropriada. Isso
+          evita imagens modificadas, ativadores e pacotes de origem incerta. Depois da instalação, o trabalho ainda pode
+          incluir atualizações, drivers, validação dos dispositivos e restauração dos arquivos acordados.
+        </p>
+        <p>
+          Isso explica por que comparar apenas “quem cobra menos para formatar” pode ser enganoso: um preço pode cobrir
+          somente a reinstalação básica enquanto outro inclui diagnóstico prévio, preservação, configuração e testes
+          posteriores.
+        </p>
+
+        <h2>7. Formatação não é solução automática para computador lento</h2>
+        <p>
+          Se o motivo do orçamento é lentidão, primeiro descubra o gargalo. Reinstalar o sistema não corrige SSD/HD
+          falhando, memória insuficiente para a carga real, superaquecimento, fonte instável ou aplicativo específico
+          consumindo recursos. Nesses casos, formatar pode gastar tempo sem resolver a causa.
+        </p>
+        <p>
+          Para esse diagnóstico, consulte também o guia
+          {" "}<a href="/blog/computador-lento-causas-solucoes">computador lento: como descobrir o gargalo</a>.
+        </p>
+
+        <h2>8. Como comparar dois orçamentos de formatação</h2>
+        <p>Em vez de comparar só o total, peça resposta para estas perguntas:</p>
+        <ol>
+          <li>O diagnóstico inicial está incluído?</li>
+          <li>O serviço prevê backup? Quais pastas e qual destino?</li>
+          <li>Há confirmação de BitLocker antes de apagar ou reinstalar?</li>
+          <li>A instalação usa mídia oficial?</li>
+          <li>Drivers e atualizações estão no escopo?</li>
+          <li>Restauração dos arquivos está incluída?</li>
+          <li>Licenças de Windows e aplicativos estão incluídas ou são do cliente?</li>
+          <li>Peças estão incluídas?</li>
+          <li>Se aparecer defeito de hardware, o trabalho para para nova autorização?</li>
+          <li>O orçamento informa modalidade, tempo e condições de atendimento?</li>
+        </ol>
+
+        <h2>9. O que os valores do portal não significam</h2>
+        <ul>
+          <li>Não são “preço médio do Brasil”.</li>
+          <li>Não são comparação com concorrentes.</li>
+          <li>Não significam que qualquer formatação será resolvida em visita curta.</li>
+          <li>Não incluem automaticamente peça, licença ou material.</li>
+          <li>Não são promessa de que reinstalar o Windows resolverá o defeito relatado.</li>
+        </ul>
+        <p>
+          O valor correto é o da modalidade compatível com o caso, usando a fonte de preços atual do portal e mantendo
+          qualquer ampliação de escopo sujeita a autorização.
+        </p>
+
+        <h2>10. Antes de autorizar: o checklist mínimo</h2>
+        <ul>
+          <li>Liste arquivos que não podem ser perdidos.</li>
+          <li>Confirme se existe backup recente e acessível.</li>
+          <li>Verifique se há BitLocker e onde está a chave de recuperação.</li>
+          <li>Tenha acesso às contas Microsoft e aos aplicativos que precisarão ser reinstalados.</li>
+          <li>Confirme se a licença do Windows já pertence ao equipamento.</li>
+          <li>Peça separação entre mão de obra, peças, licenças e materiais.</li>
+          <li>Não autorize apagamento se o disco estiver instável e os dados ainda não estiverem protegidos.</li>
+        </ul>
+
+        <h2>Perguntas frequentes</h2>
+        <h3>Quanto custa formatar um computador no O Técnico de Informática?</h3>
+        <p>
+          O valor depende da modalidade vigente mostrada na tabela desta página. A visita avulsa, o pacote de até duas
+          horas e o atendimento com coleta/diagnóstico têm regras diferentes, todas carregadas diretamente da fonte de
+          preços oficial do portal.
+        </p>
+
+        <h3>O preço inclui licença do Windows?</h3>
+        <p>
+          Não automaticamente. Peças, componentes e licenças não fazem parte dos valores-base salvo quando o orçamento
+          disser expressamente o contrário. A ativação usa licença digital ou chave legítima existente/adquirida.
+        </p>
+
+        <h3>Backup está incluído na formatação?</h3>
+        <p>
+          Depende do escopo acordado. O orçamento deve dizer o que será preservado, o destino da cópia e se a restauração
+          faz parte do serviço. Não presuma que “formatar” inclui automaticamente backup completo.
+        </p>
+
+        <h3>Formatar deixa qualquer computador mais rápido?</h3>
+        <p>
+          Não. Se a causa for hardware, carga incompatível com o equipamento ou outro gargalo, reinstalar o sistema pode
+          não resolver. Diagnóstico vem antes da decisão.
+        </p>
+
+        <h3>Dá para formatar sem perder arquivos?</h3>
+        <p>
+          É possível preservar dados quando eles estão acessíveis e a estratégia é planejada, mas apagar uma partição
+          não preserva o conteúdo dela. Faça backup verificável antes de qualquer ação destrutiva. Veja
+          {" "}<a href="/blog/como-formatar-pc-sem-perder-arquivos">como formatar o PC sem perder arquivos</a>.
+        </p>
+
+        <h2>Resumo: preço transparente começa pelo escopo</h2>
+        <p>
+          Para saber quanto custa, primeiro descubra <strong>qual serviço realmente será executado</strong>. Use os
+          valores vigentes do portal, confirme modalidade, backup, BitLocker, licença, peças e testes finais. Um orçamento
+          bom não esconde tudo dentro da palavra “formatação”: ele separa o que está incluído, o que depende do cliente
+          e o que exige nova autorização.
+        </p>
+
+        <EditorialReferences slug="quanto-custa-formatar-um-computador" />
       </>
     ),
   },
