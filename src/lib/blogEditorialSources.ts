@@ -95,6 +95,8 @@ export const ALLOWED_SOURCE_HOSTS = [
   "edc.intel.com",
   "nsa.gov",
   "www.nsa.gov",
+  "www.dell.com",
+  "support.hp.com",
 ] as const;
 
 // ─────────────────────────────────────────────────────────────
@@ -135,6 +137,31 @@ export const EDITORIAL_SOURCES: Record<string, EditorialSource> = {
     supports: [
       "O roteiro oficial separa atualização de driver, limpeza/redefinição do spooler e problemas de status offline, sustentando o diagnóstico por camadas.",
       "A Microsoft recomenda usar o driver mais recente apropriado para a impressora antes de concluir que a fila é a causa de toda falha de impressão.",
+    ],
+  },
+
+  "dell-bios-recovery-2026": {
+    id: "dell-bios-recovery-2026",
+    title: "Recuperar o BIOS em um computador ou tablet Dell após uma falha de inicialização ou POST",
+    publisher: "Dell Support",
+    url: "https://www.dell.com/support/kbdoc/pt-br/000132453/recuperar-o-bios-em-um-computador-ou-tablet-dell-ap%C3%B3s-uma-falha-de-inicializa%C3%A7%C3%A3o-ou-post",
+    accessedAt: "2026-09-30",
+    sourceType: "official",
+    supports: [
+      "A Dell documenta mecanismos próprios de recuperação de BIOS por imagem no disco e por USB em equipamentos compatíveis, confirmando que recuperação de firmware é específica do fabricante/modelo.",
+      "O procedimento oficial exige alimentação adequada e orienta não desligar o equipamento durante a recuperação.",
+    ],
+  },
+  "hp-bios-recovery-2026": {
+    id: "hp-bios-recovery-2026",
+    title: "HP Notebook – Recuperar o BIOS (Basic Input/Output System)",
+    publisher: "HP Support",
+    url: "https://support.hp.com/br-pt/document/ish_4120903-4029041-16",
+    accessedAt: "2026-09-30",
+    sourceType: "official",
+    supports: [
+      "A HP documenta recuperação de BIOS por combinação de teclas ou unidade de recuperação em modelos compatíveis e ressalva que o recurso não é universal.",
+      "A recuperação depende do suporte do equipamento e do procedimento específico do fabricante, não de uma sequência genérica aplicável a qualquer placa.",
     ],
   },
 
@@ -2030,13 +2057,17 @@ export const ARTICLE_SOURCE_MANIFEST: Record<string, ArticleSourceManifest> = {
   },
   "bios-corrompida-reset-cmos-atualizacao": {
     slug: "bios-corrompida-reset-cmos-atualizacao",
-    sources: [],
+    sources: [
+      "dell-bios-recovery-2026",
+      "hp-bios-recovery-2026",
+      "ms-bitlocker-backup-key",
+      "ms-bitlocker-recovery",
+    ],
     technicalReview: "reviewed",
     factChecked: true,
-    factCheckedAt: "2026-08-26",
-    stableKnowledge: true,
+    factCheckedAt: "2026-09-30",
     notes:
-      "Revisão concluída (Onda 10D): distinção entre memória CMOS e firmware gravado em chip, vida útil típica da bateria CR2032, procedimento por jumper CLR_CMOS e por remoção de bateria, recursos de recuperação por USB e chip duplo e risco de chave de recuperação em disco criptografado. Conhecimento técnico estável — sem fonte visível.",
+      "Revisão material em 2026-09-30 guiada pelo GSC: 11 impressões, 0 cliques e posição média 27 entre 2026-04-01 e 2026-09-27. As únicas queries individuais expostas foram 'bios corrompida' (3 impressões) e 'reparar bios' (2); o restante ficou suprimido pelo GSC e nenhuma query foi inventada. A versão suplementar separa configuração/CMOS, atualização e recuperação de firmware; trata ausência de POST como sintoma, exige procedimento do fabricante/modelo e alimentação estável, e reforça a chave BitLocker antes de alterações de firmware. Fontes oficiais Dell, HP e Microsoft ficam visíveis.",
   },
   // ── Onda 10C — Lote 2 (internet/Wi-Fi e impressoras).
   "internet-lenta-provedor-ou-roteador": {
