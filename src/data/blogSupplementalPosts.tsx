@@ -1286,6 +1286,140 @@ export const blogSupplementalPosts: Record<string, BlogPostContent> = {
     ),
   },
 
+  "troquei-o-ssd-e-o-pc-so-abre-a-bios": {
+    title: "Troquei o SSD e o PC só abre a BIOS: como recuperar o boot sem apagar dados",
+    excerpt:
+      "Depois da troca do SSD, separe detecção física, Windows Boot Manager, UEFI/Legacy, clonagem e instalação limpa antes de mexer em partições, VMD/AHCI ou formatar.",
+    date: "2026-09-30",
+    readTime: "15 min",
+    category: "Procedimentos Técnicos",
+    content: (
+      <>
+        <p className="lead">Depois de trocar o HD ou SSD, cair direto na BIOS/UEFI significa que a cadeia normal de inicialização não chegou ao Windows. Isso pode acontecer porque o SSD novo está vazio, porque a clonagem não gerou um boot utilizável, porque o firmware não está vendo a unidade ou porque a entrada de inicialização não combina com o modo atual. A sequência segura é <strong>detecção do SSD → entrada de boot → modo UEFI/Legacy → estrutura de inicialização → decisão entre clonar ou instalar</strong>.</p>
+
+        <h2>Resposta direta: o que verificar primeiro?</h2>
+        <ol>
+          <li>Confirme se o SSD aparece no firmware com modelo/capacidade coerentes.</li>
+          <li>Descubra se ele é um SSD novo vazio, um clone ou um disco que já tinha Windows.</li>
+          <li>Procure uma entrada como <strong>Windows Boot Manager</strong>.</li>
+          <li>Confirme UEFI/Legacy sem mudar opções por tentativa.</li>
+          <li>Se houve clonagem, preserve o disco antigo até o novo iniciar sozinho e os arquivos estarem conferidos.</li>
+          <li>Se o SSD é novo e vazio, use mídia oficial do Windows para instalar — não é preciso “preparar” manualmente o disco antes.</li>
+        </ol>
+
+        <h2>Comece classificando o cenário</h2>
+        <table>
+          <thead><tr><th>Cenário</th><th>O que esperar</th><th>Próximo passo</th></tr></thead>
+          <tbody>
+            <tr><td>SSD novo e vazio</td><td>Pode aparecer no firmware sem ter nenhuma entrada de boot</td><td>Instalar o Windows ou outro sistema pelo instalador oficial.</td></tr>
+            <tr><td>SSD clonado</td><td>Deveria conter partições e dados do sistema, mas o boot ainda pode falhar</td><td>Confirmar partições de sistema, UEFI/Legacy e Windows Boot Manager.</td></tr>
+            <tr><td>SSD reaproveitado de outro PC</td><td>Pode ter instalação incompatível, criptografia ou drivers/controlador diferentes</td><td>Preservar dados e decidir entre adaptação/reparo e instalação limpa.</td></tr>
+            <tr><td>Segundo SSD apenas para dados</td><td>Não precisa ser o disco de boot</td><td>Manter o Windows no disco atual e inicializar/criar volume no novo SSD quando necessário.</td></tr>
+          </tbody>
+        </table>
+
+        <h2>1. O SSD aparece no BIOS/UEFI?</h2>
+        <p>Procure o modelo da unidade nas telas de armazenamento, NVMe, SATA ou informações do sistema. Se o firmware <strong>não detecta</strong> o SSD, não comece por Windows Boot Manager, BCD ou formatação: a investigação ainda está na camada de hardware/compatibilidade.</p>
+        <ul>
+          <li>Em M.2, confirme protocolo aceito pelo slot e tamanho físico.</li>
+          <li>Em SATA, confira alimentação, cabo e porta com o equipamento desligado.</li>
+          <li>Em notebooks, confirme no manual se o slot é SATA, PCIe/NVMe ou possui restrições.</li>
+          <li>Se a detecção é intermitente, pare de gravar dados importantes e investigue estabilidade antes de instalar o sistema.</li>
+        </ul>
+        <p><strong>M.2 não significa automaticamente NVMe.</strong> M.2 descreve o formato; a unidade e o slot ainda precisam usar uma interface compatível. Veja também <a href="/blog/como-fazer-upgrade-ssd-nvme">como escolher e instalar SSD NVMe</a>.</p>
+
+        <h2>2. O SSD aparece, mas não existe Windows Boot Manager</h2>
+        <p>Isso é normal em um SSD novo sem sistema. Em um disco clonado ou reaproveitado, porém, a ausência da entrada pode indicar que o firmware não encontrou uma estrutura de boot utilizável naquele modo.</p>
+        <p>Não confunda <strong>disco detectado</strong> com <strong>Windows inicializável</strong>. O firmware pode enxergar perfeitamente a unidade e ainda não ter uma entrada válida para iniciar o sistema.</p>
+
+        <h2>3. SSD novo não precisa ser inicializado manualmente antes de instalar o Windows</h2>
+        <p>A ferramenta de Gerenciamento de Disco da Microsoft é apropriada para inicializar discos que serão usados pelo Windows em tarefas como armazenamento de dados. Para uma instalação nova do sistema, o próprio instalador do Windows pode criar as partições necessárias a partir de espaço não alocado.</p>
+        <p>Portanto, não é necessário criar manualmente GPT/MBR, formatar ou montar uma letra de unidade antes da instalação. Quanto menos alterações desnecessárias você fizer no SSD novo, menor a chance de selecionar o disco errado.</p>
+
+        <h2>4. Se a intenção era manter tudo como estava, trate como migração/clonagem</h2>
+        <p>Clonar é diferente de copiar arquivos. Uma migração de sistema precisa preservar não apenas a partição com documentos e programas, mas também a estrutura necessária para inicialização. Se o clone terminou mas o PC abre na BIOS, confirme:</p>
+        <ul>
+          <li>se todas as partições necessárias foram copiadas;</li>
+          <li>se o SSD de destino é detectado de forma estável;</li>
+          <li>se o firmware está no mesmo modo usado pela instalação original;</li>
+          <li>se existe uma entrada Windows Boot Manager coerente;</li>
+          <li>se o computador está tentando iniciar o SSD novo e não outra unidade.</li>
+        </ul>
+        <p>Preserve o disco antigo até validar várias inicializações no SSD novo e abrir os arquivos importantes. O planejamento completo está em <a href="/blog/como-clonar-hd-para-ssd">como clonar HD para SSD</a>.</p>
+
+        <h2>5. UEFI, Legacy e CSM: não altere por tentativa</h2>
+        <p>A Microsoft documenta que, depois da instalação, o Windows normalmente continua inicializando no mesmo modo usado durante a instalação. Mudar UEFI/Legacy/CSM por tentativa pode fazer uma instalação existente deixar de aparecer como inicializável.</p>
+        <p>Se você não sabe qual modo o sistema usava, consulte <a href="/blog/boot-uefi-ou-legacy-como-identificar">UEFI ou Legacy: como identificar o boot mode</a> antes de alterar o firmware.</p>
+
+        <h2>6. AHCI, RAID, RST e VMD não são botões de “fazer SSD aparecer”</h2>
+        <p>Alguns equipamentos usam controladores de armazenamento que exigem configuração e driver específicos. Alterar AHCI/RAID/VMD/RST sem registrar o estado anterior pode fazer uma instalação existente deixar de acessar o disco, além de disparar recuperação do BitLocker em algumas mudanças de plataforma.</p>
+        <p>Se o SSD aparece no firmware, mas não no instalador do Windows, consulte a documentação do fabricante do computador/placa para saber se o instalador precisa de driver do controlador. Não desligue recursos por tentativa apenas para o disco surgir.</p>
+
+        <h2>7. BitLocker: confirme a chave antes de mudanças de boot</h2>
+        <p>Se o disco antigo ou o clone usa BitLocker/Criptografia do Dispositivo, tenha a chave de recuperação acessível antes de alterar firmware, TPM, Secure Boot ou estrutura de inicialização. Uma solicitação de recuperação não significa necessariamente perda de dados; significa que o estado esperado de segurança mudou.</p>
+
+        <h2>8. Quando usar a mídia de instalação do Windows</h2>
+        <p>Para um SSD realmente novo e vazio, use a mídia oficial do Windows criada em outro computador. Inicie pelo pendrive pelo menu de boot do equipamento e selecione o SSD correto no instalador.</p>
+        <p>Se houver mais de um disco conectado, identifique cada um por capacidade/modelo antes de excluir ou criar partições. Desconectar temporariamente outros discos pode reduzir ambiguidade quando isso for fácil e seguro no equipamento, mas não é uma regra universal para todo notebook/desktop.</p>
+
+        <h2>9. Se o clone existe, mas o boot está quebrado</h2>
+        <p>Ferramentas como <strong>BCDBoot</strong> existem para configurar/reparar arquivos de inicialização em cenários apropriados. Isso não deve virar um comando genérico copiado da internet: é necessário identificar corretamente a instalação do Windows, o volume de sistema e a criptografia antes de executar reparos.</p>
+        <p>O roteiro específico está em <a href="/blog/erro-no-bootable-device-como-resolver">No Bootable Device: como diagnosticar e reparar</a>.</p>
+
+        <h2>10. Instalação limpa ou clonagem?</h2>
+        <table>
+          <thead><tr><th>Objetivo</th><th>Clonagem</th><th>Instalação limpa</th></tr></thead>
+          <tbody>
+            <tr><td>Manter programas/configurações</td><td>Preserva mais estado quando a origem está saudável</td><td>Exige reinstalação/configuração</td></tr>
+            <tr><td>Sistema antigo com erros persistentes</td><td>Pode levar o problema junto</td><td>Cria ambiente novo, após backup</td></tr>
+            <tr><td>Origem com sinais de falha física</td><td>Não deve ser repetida indiscriminadamente</td><td>Primeiro recupere dados; depois instale no SSD novo</td></tr>
+            <tr><td>SSD novo sem nada</td><td>Precisa de uma origem válida</td><td>É o caminho direto usando mídia oficial</td></tr>
+          </tbody>
+        </table>
+
+        <h2>11. Depois que iniciar, valide antes de apagar o disco antigo</h2>
+        <ul>
+          <li>Reinicie mais de uma vez e confirme boot pelo SSD novo.</li>
+          <li>Abra arquivos importantes e aplicativos essenciais.</li>
+          <li>Confirme que o Windows vê capacidade e partições esperadas.</li>
+          <li>Verifique atualizações/drivers necessários.</li>
+          <li>Somente depois de backup e validação decida o destino do disco antigo.</li>
+        </ul>
+
+        <h2>O que não fazer</h2>
+        <ul>
+          <li>Apagar partições antes de confirmar qual disco contém os dados.</li>
+          <li>Alternar UEFI/Legacy/CSM, AHCI/RAID/VMD e Secure Boot todos de uma vez.</li>
+          <li>Formatar o SSD clonado só porque não iniciou.</li>
+          <li>Apagar o disco antigo assim que a clonagem termina.</li>
+          <li>Assumir que M.2 significa NVMe ou que qualquer slot aceita qualquer módulo.</li>
+          <li>Executar BCDBoot/particionamento sem identificar volumes e BitLocker.</li>
+        </ul>
+
+        <h2>Perguntas frequentes</h2>
+        <h3>SSD novo precisa ser formatado antes de instalar o Windows?</h3>
+        <p>Não necessariamente. O instalador oficial do Windows pode preparar o SSD a partir de espaço não alocado.</p>
+
+        <h3>O SSD aparece na BIOS, mas não aparece como opção de boot. Está com defeito?</h3>
+        <p>Não. Detecção física e existência de uma entrada inicializável são coisas diferentes. SSD novo vazio pode ser detectado e ainda não ter Windows Boot Manager.</p>
+
+        <h3>Troquei o SSD e perdi o Windows?</h3>
+        <p>O Windows estava no disco antigo, a menos que tenha sido clonado ou instalado no novo SSD. Trocar fisicamente a unidade não transfere o sistema automaticamente.</p>
+
+        <h3>Posso ativar CSM ou Legacy para voltar a iniciar?</h3>
+        <p>Não por tentativa. Primeiro descubra em que modo a instalação foi preparada.</p>
+
+        <h3>Devo apagar o SSD antigo depois de clonar?</h3>
+        <p>Somente depois de validar o novo SSD, conferir arquivos e manter backup independente.</p>
+
+        <h2>Resumo prático</h2>
+        <p>Depois de trocar o SSD, não trate a BIOS como defeito. Primeiro confirme que o SSD é detectado, depois identifique se ele está vazio ou contém um clone, procure uma entrada de boot válida e preserve UEFI/Legacy/controlador até entender o cenário. Instale o Windows em SSD novo vazio; repare a inicialização apenas quando existe uma instalação para reparar; e mantenha o disco antigo intacto até o novo sistema estar realmente validado.</p>
+
+        <EditorialReferences slug="troquei-o-ssd-e-o-pc-so-abre-a-bios" />
+      </>
+    ),
+  },
+
   "como-recuperar-dados-hd-com-defeito": {
     title: "Recuperar dados de HD com defeito: o que fazer antes de tentar consertar",
     excerpt:
