@@ -1534,6 +1534,220 @@ export const blogSupplementalPosts: Record<string, BlogPostContent> = {
     ),
   },
 
+  "informatica-basica": {
+    title: "Informática básica: conhecimentos, conteúdos e habilidades essenciais",
+    excerpt:
+      "Veja o que é informática básica, quais conteúdos fazem parte, o que uma pessoa iniciante precisa saber na prática e como evoluir de arquivos e internet até segurança e produtividade.",
+    date: "2026-09-30",
+    readTime: "16 min",
+    category: "Fundamentos",
+    content: (
+      <>
+        <p className="lead">Informática básica é o conjunto de conhecimentos necessários para <strong>usar computador, internet e ferramentas digitais com autonomia e segurança</strong>. O foco não é programar nem administrar servidores, mas executar tarefas reais: organizar arquivos, navegar, enviar e-mail, editar documentos, usar planilhas simples, participar de reuniões, imprimir, fazer backup e reconhecer riscos digitais.</p>
+
+        <h2>Resumo: o que é informática básica?</h2>
+        <p>Em termos práticos, uma pessoa com conhecimentos básicos de informática consegue:</p>
+        <ul>
+          <li>usar teclado, mouse, monitor, portas USB e periféricos comuns;</li>
+          <li>abrir, fechar e alternar programas;</li>
+          <li>criar, localizar, copiar, mover, renomear e excluir arquivos e pastas;</li>
+          <li>navegar na internet e identificar o endereço real de um site;</li>
+          <li>usar e-mail e anexos;</li>
+          <li>criar texto, planilha e PDF simples;</li>
+          <li>instalar ou selecionar impressora e outros dispositivos básicos;</li>
+          <li>usar armazenamento em nuvem e backup;</li>
+          <li>proteger contas, senhas e dados contra golpes comuns;</li>
+          <li>resolver pequenos problemas sem depender imediatamente de suporte.</li>
+        </ul>
+
+        <h2>Conteúdo de informática básica: mapa completo</h2>
+        <table>
+          <thead><tr><th>Área</th><th>Conhecimentos essenciais</th><th>Exemplo de tarefa</th></tr></thead>
+          <tbody>
+            <tr><td>Hardware</td><td>CPU, RAM, SSD/HD, monitor, teclado, mouse, USB, rede</td><td>Identificar onde conectar um pendrive ou webcam.</td></tr>
+            <tr><td>Sistema operacional</td><td>Área de trabalho, janelas, configurações, programas</td><td>Abrir Configurações e trocar uma opção.</td></tr>
+            <tr><td>Arquivos e pastas</td><td>Salvar, copiar, mover, renomear, extensão, Lixeira</td><td>Encontrar um PDF baixado e movê-lo para Documentos.</td></tr>
+            <tr><td>Internet</td><td>Navegador, URL, busca, abas, download/upload</td><td>Pesquisar, baixar um arquivo e conferir a origem.</td></tr>
+            <tr><td>E-mail</td><td>Assunto, destinatário, anexo, resposta, spam</td><td>Enviar currículo em PDF.</td></tr>
+            <tr><td>Documentos</td><td>Texto, formatação, listas, tabelas, PDF</td><td>Criar uma carta e exportar em PDF.</td></tr>
+            <tr><td>Planilhas</td><td>Células, linhas, colunas, soma, média, filtro</td><td>Montar controle simples de gastos.</td></tr>
+            <tr><td>Nuvem e backup</td><td>Sincronização, cópia, compartilhamento, recuperação</td><td>Guardar uma segunda cópia de documentos importantes.</td></tr>
+            <tr><td>Segurança</td><td>Senhas, 2FA, phishing, atualizações, malware</td><td>Reconhecer link suspeito antes de clicar.</td></tr>
+          </tbody>
+        </table>
+
+        <h2>1. Hardware: reconhecer sem precisar desmontar</h2>
+        <p>Informática básica não exige saber reparar placa-mãe. O importante é reconhecer o papel dos componentes para entender mensagens, compras e diagnósticos simples.</p>
+        <ul>
+          <li><strong>CPU/processador:</strong> executa instruções e influencia o desempenho geral.</li>
+          <li><strong>Memória RAM:</strong> mantém dados temporários dos programas em uso.</li>
+          <li><strong>SSD ou HD:</strong> guarda sistema, programas e arquivos.</li>
+          <li><strong>Placa-mãe:</strong> conecta os componentes.</li>
+          <li><strong>Monitor, teclado e mouse:</strong> principais dispositivos de entrada/saída.</li>
+          <li><strong>Rede/Wi-Fi:</strong> conecta o computador à rede local e à internet.</li>
+        </ul>
+        <p>O objetivo é saber distinguir “memória” de “armazenamento”, por exemplo. RAM não é o local onde seus documentos ficam salvos.</p>
+
+        <h2>2. Sistema operacional: saber se localizar</h2>
+        <p>No Windows, conhecimentos básicos incluem usar o menu Iniciar, barra de tarefas, Configurações, janelas e atalhos. A lógica se transfere para outros sistemas: abrir aplicativos, trocar entre eles, localizar configurações e encerrar corretamente.</p>
+        <p>Atalhos úteis para começar:</p>
+        <ul>
+          <li><code>Ctrl + C</code> copiar;</li>
+          <li><code>Ctrl + V</code> colar;</li>
+          <li><code>Ctrl + X</code> recortar;</li>
+          <li><code>Ctrl + Z</code> desfazer;</li>
+          <li><code>Alt + Tab</code> alternar janelas;</li>
+          <li><code>Windows + E</code> abrir o Explorador de Arquivos.</li>
+        </ul>
+
+        <h2>3. Arquivos e pastas: a habilidade mais importante do iniciante</h2>
+        <p>O Explorador de Arquivos é a ferramenta do Windows para localizar, abrir, organizar e gerenciar arquivos e pastas. A Microsoft também permite mostrar extensões de nomes, o que ajuda a entender se um arquivo é PDF, imagem, planilha ou executável.</p>
+        <p>Conceitos que precisam ficar claros:</p>
+        <ul>
+          <li><strong>Arquivo:</strong> informação salva, como foto, documento ou planilha.</li>
+          <li><strong>Pasta:</strong> organização de arquivos e outras pastas.</li>
+          <li><strong>Extensão:</strong> parte como <code>.pdf</code>, <code>.jpg</code>, <code>.docx</code> ou <code>.xlsx</code>.</li>
+          <li><strong>Caminho:</strong> local completo onde o arquivo está armazenado.</li>
+          <li><strong>Copiar:</strong> cria outra cópia.</li>
+          <li><strong>Mover:</strong> muda o arquivo de lugar.</li>
+        </ul>
+        <p>Trocar a extensão no nome não converte o formato. Para transformar um documento em PDF, use a função de exportar/salvar como PDF do aplicativo.</p>
+
+        <h2>4. Como organizar arquivos para não “sumirem”</h2>
+        <p>Uma estrutura simples funciona melhor que dezenas de pastas. Use nomes descritivos e separe por assunto. Exemplo:</p>
+        <ul>
+          <li><strong>Documentos/Pessoal</strong></li>
+          <li><strong>Documentos/Trabalho</strong></li>
+          <li><strong>Documentos/Financeiro/2026</strong></li>
+          <li><strong>Imagens/Família</strong></li>
+        </ul>
+        <p>Se não lembra onde salvou, pesquise pelo nome ou por parte dele. O Windows permite pesquisar na barra de tarefas ou dentro do Explorador de Arquivos.</p>
+
+        <h2>5. Internet, navegador e endereço de site</h2>
+        <p>Internet é a rede; navegador é o programa usado para abrir páginas. Chrome, Edge, Firefox e Safari são navegadores.</p>
+        <ul>
+          <li><strong>URL:</strong> endereço de uma página.</li>
+          <li><strong>Domínio:</strong> nome principal do site.</li>
+          <li><strong>Aba:</strong> página aberta dentro da janela do navegador.</li>
+          <li><strong>Download:</strong> trazer um arquivo para o dispositivo.</li>
+          <li><strong>Upload:</strong> enviar um arquivo para um serviço.</li>
+          <li><strong>Histórico:</strong> registro de páginas visitadas.</li>
+        </ul>
+        <p>O cadeado/HTTPS protege a conexão, mas não garante que o site seja honesto. Um golpista também pode usar HTTPS.</p>
+
+        <h2>6. E-mail: o básico que o trabalho exige</h2>
+        <p>Quem usa e-mail profissionalmente precisa dominar:</p>
+        <ul>
+          <li>assunto claro;</li>
+          <li>destinatário correto;</li>
+          <li>anexo no formato certo;</li>
+          <li>responder e encaminhar sem perder contexto;</li>
+          <li>identificar spam e phishing;</li>
+          <li>baixar anexos apenas quando a origem é confiável.</li>
+        </ul>
+
+        <h2>7. Texto, planilha e PDF</h2>
+        <p>Informática básica normalmente inclui ferramentas de produtividade. Não é necessário dominar recursos avançados, mas é importante conseguir produzir um resultado utilizável.</p>
+        <h3>Editor de texto</h3>
+        <ul>
+          <li>digitar e corrigir;</li>
+          <li>usar títulos, negrito e listas;</li>
+          <li>inserir imagem ou tabela simples;</li>
+          <li>salvar e exportar em PDF.</li>
+        </ul>
+        <h3>Planilha</h3>
+        <ul>
+          <li>entender célula, linha e coluna;</li>
+          <li>formatar números e datas;</li>
+          <li>usar soma e média simples;</li>
+          <li>ordenar e filtrar dados.</li>
+        </ul>
+
+        <h2>8. Nuvem não é backup automaticamente</h2>
+        <p>Serviços de nuvem podem sincronizar arquivos entre dispositivos, mas sincronização e backup não são a mesma coisa. Se um arquivo apagado ou criptografado for sincronizado, a alteração pode chegar aos outros dispositivos.</p>
+        <p>Para dados importantes, mantenha cópias independentes. Veja <a href="/blog/backup-como-proteger-seus-arquivos">backup: como proteger seus arquivos</a>.</p>
+
+        <h2>9. Segurança digital faz parte da informática básica</h2>
+        <p>O CERT.br mantém material público brasileiro sobre segurança na internet e reforça hábitos como autenticação forte, backups e atenção a golpes.</p>
+        <ul>
+          <li>use senhas exclusivas e longas;</li>
+          <li>ative autenticação em duas etapas quando disponível;</li>
+          <li>mantenha sistema e navegador atualizados;</li>
+          <li>desconfie de mensagens com urgência e links inesperados;</li>
+          <li>baixe programas de fontes oficiais;</li>
+          <li>não entregue acesso remoto a desconhecidos;</li>
+          <li>mantenha backup dos arquivos importantes.</li>
+        </ul>
+
+        <h2>10. Noções básicas de diagnóstico</h2>
+        <p>Autonomia não significa abrir o computador. Significa conseguir responder perguntas simples antes de pedir ajuda:</p>
+        <ul>
+          <li>o problema acontece em um programa ou em todos?</li>
+          <li>a internet caiu ou apenas um site não abre?</li>
+          <li>o arquivo sumiu ou está em outra pasta?</li>
+          <li>o computador está lento ou apenas um aplicativo?</li>
+          <li>o dispositivo aparece nas Configurações ou no Gerenciador de Dispositivos?</li>
+        </ul>
+        <p>Registrar mensagem de erro, horário e o que mudou antes do problema já melhora muito qualquer suporte.</p>
+
+        <h2>Checklist: conhecimentos básicos de informática</h2>
+        <p>Use esta lista como teste prático. Você já domina informática básica quando consegue, sozinho:</p>
+        <ul>
+          <li>criar uma pasta e salvar um documento dentro dela;</li>
+          <li>localizar um arquivo baixado;</li>
+          <li>copiar arquivos para pendrive ou nuvem;</li>
+          <li>enviar e-mail com anexo;</li>
+          <li>criar documento e exportar PDF;</li>
+          <li>montar planilha simples com soma;</li>
+          <li>instalar/selecionar uma impressora conhecida;</li>
+          <li>participar de reunião com câmera e microfone;</li>
+          <li>identificar domínio de um site;</li>
+          <li>ativar 2FA e reconhecer tentativa básica de phishing;</li>
+          <li>fazer e conferir um backup.</li>
+        </ul>
+
+        <h2>Informática básica para trabalho</h2>
+        <p>Em vagas administrativas e de atendimento, “informática básica” costuma significar autonomia com e-mail, documentos, planilhas, arquivos, navegador, impressão e reuniões. O nível exato depende da vaga; uma empresa pode exigir planilha mais avançada ou software próprio.</p>
+
+        <h2>Informática básica para concurso</h2>
+        <p>Em concurso, o conteúdo é definido pelo edital. Pode incluir Windows, LibreOffice/Microsoft 365, redes, segurança, navegadores, atalhos e conceitos de hardware. Não use uma lista genérica como substituto do edital da banca.</p>
+
+        <h2>O que normalmente já é outro nível</h2>
+        <p>Programação, administração de servidores, montagem e reparo eletrônico, redes corporativas, banco de dados e segurança ofensiva normalmente pertencem a níveis técnicos ou especializados. Informática básica serve como base para chegar neles.</p>
+
+        <h2>Como evoluir depois do básico</h2>
+        <ol>
+          <li>fortaleça arquivos/pastas e segurança;</li>
+          <li>pratique texto e planilha em tarefas reais;</li>
+          <li>aprenda backup e nuvem;</li>
+          <li>depois escolha uma trilha: suporte, redes, programação, dados, design ou produtividade.</li>
+        </ol>
+        <p>Para montar uma sequência de estudo, veja <a href="/blog/como-aprender-informatica">como aprender informática</a>. Para a definição da área, veja <a href="/blog/o-que-e-informatica">o que é informática</a>. O hub técnico está em <a href="/guia-tecnico-informatica">Guia Técnico de Informática</a>.</p>
+
+        <h2>Perguntas frequentes</h2>
+        <h3>O que é conhecimento básico de informática?</h3>
+        <p>É a capacidade de usar computador, arquivos, internet, e-mail e ferramentas comuns com autonomia, além de aplicar cuidados básicos de segurança.</p>
+
+        <h3>Quais são os conteúdos de informática básica?</h3>
+        <p>Hardware, sistema operacional, arquivos, internet, e-mail, editor de texto, planilha, PDF, impressão, nuvem, backup e segurança digital são os núcleos mais comuns.</p>
+
+        <h3>Informática básica inclui Excel?</h3>
+        <p>Normalmente inclui planilha em nível inicial: células, formatação, soma, média, ordenação e filtro. Recursos avançados dependem do curso ou vaga.</p>
+
+        <h3>Informática básica inclui programação?</h3>
+        <p>Geralmente não. Programação é uma trilha posterior; o básico concentra-se no uso das ferramentas digitais.</p>
+
+        <h3>Como saber se já tenho informática básica?</h3>
+        <p>Faça tarefas reais sem ajuda: organize arquivos, envie anexo, crie PDF, use planilha simples, faça backup e ajuste uma configuração. Competência prática vale mais que decorar termos.</p>
+
+        <h2>Resumo final</h2>
+        <p><strong>Informática básica é autonomia digital.</strong> O núcleo é saber usar sistema, arquivos, internet, e-mail, documentos, planilhas, nuvem e segurança. A melhor forma de aprender é praticar tarefas reais e entender o motivo de cada ação, não decorar cliques.</p>
+
+        <EditorialReferences slug="informatica-basica" />
+      </>
+    ),
+  },
+
   "fone-de-ouvido-nao-e-reconhecido-no-pc": {
     title: "Fone de ouvido não funciona no PC ou notebook: como diagnosticar P2, USB e Bluetooth",
     excerpt:
