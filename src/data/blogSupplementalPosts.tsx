@@ -11,6 +11,264 @@ import { MODALIDADES } from "@/lib/precosConfig";
  * do blog compõem base + suplementares + programáticos.
  */
 export const blogSupplementalPosts: Record<string, BlogPostContent> = {
+  "como-configurar-roteador-wifi-iniciantes": {
+    title: "Como configurar um roteador Wi‑Fi do zero: internet, segurança e rede sem depender da marca",
+    excerpt:
+      "Aprenda a ligar modem/ONT e roteador, identificar WAN e LAN, criar o Wi‑Fi, proteger a administração e validar a conexão sem seguir telas específicas de uma única marca.",
+    date: "2026-09-30",
+    readTime: "15 min",
+    category: "Redes e Wi-Fi",
+    content: (
+      <>
+        <p className="lead">
+          Configurar um roteador Wi‑Fi não é apenas trocar o nome da rede. O caminho seguro é separar
+          <strong> internet do provedor</strong>, <strong>roteamento</strong>, <strong>Wi‑Fi</strong> e
+          <strong> administração do equipamento</strong>. Os menus mudam entre fabricantes, mas a lógica permanece:
+          conectar a porta correta, obter endereço na WAN, definir uma rede local, criar SSID e senha seguros e testar
+          antes de alterar canais, DNS ou outras opções avançadas.
+        </p>
+
+        <h2>Resposta direta: como configurar o roteador Wi‑Fi</h2>
+        <ol>
+          <li>Identifique o equipamento do provedor: modem, ONT ou gateway.</li>
+          <li>Conecte a saída de internet desse equipamento à porta <strong>WAN/Internet</strong> do roteador quando o projeto usa roteador separado.</li>
+          <li>Acesse o painel pelo endereço/documentação do próprio equipamento, não por um IP “universal” presumido.</li>
+          <li>Confirme se a WAN recebe internet automaticamente ou se o provedor exige PPPoE, VLAN ou outra configuração.</li>
+          <li>Defina nome da rede (SSID), proteção WPA3 quando suportada ou WPA2 com AES, e senha forte.</li>
+          <li>Troque a senha administrativa do roteador e mantenha o firmware atualizado.</li>
+          <li>Teste internet por cabo e por Wi‑Fi perto do roteador antes de mexer em cobertura ou canais.</li>
+        </ol>
+
+        <h2>Modem, ONT, gateway e roteador: quem faz o quê?</h2>
+        <table>
+          <thead>
+            <tr><th>Equipamento/função</th><th>Papel</th><th>O que observar</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Modem/ONT</td><td>Termina o acesso do provedor</td><td>Pode entregar internet diretamente ou também rotear</td></tr>
+            <tr><td>Gateway do provedor</td><td>Combina acesso + roteador + Wi‑Fi</td><td>Adicionar outro roteador pode criar duas camadas de NAT</td></tr>
+            <tr><td>Roteador</td><td>Cria a rede local e encaminha tráfego entre LAN e WAN</td><td>Normalmente entrega endereços via DHCP</td></tr>
+            <tr><td>Ponto de acesso</td><td>Oferece Wi‑Fi para uma rede já roteada</td><td>Não deve necessariamente criar uma segunda rede/NAT</td></tr>
+          </tbody>
+        </table>
+
+        <h2>1. Antes de conectar: descubra se o equipamento do provedor já é roteador</h2>
+        <p>
+          Muitas operadoras entregam um único aparelho que já faz modem/ONT, roteamento, DHCP e Wi‑Fi. Se você liga
+          outro roteador na saída LAN desse gateway usando o modo roteador padrão, pode criar <strong>duplo NAT</strong>.
+          Isso não impede toda navegação, mas pode complicar jogos, VPNs, câmeras, redirecionamentos de porta e alguns
+          serviços.
+        </p>
+        <p>
+          Se o objetivo é apenas melhorar cobertura, talvez o segundo equipamento deva operar como ponto de acesso ou
+          fazer parte de uma solução mesh compatível. Se você precisa que o novo roteador controle toda a rede, o
+          modo bridge/pass-through do equipamento do provedor pode ser necessário — mas isso depende da operadora e
+          não deve ser ativado sem saber como a autenticação da internet funciona.
+        </p>
+
+        <h2>2. WAN e LAN: não são portas equivalentes</h2>
+        <p>
+          Em um roteador doméstico comum, a porta <strong>WAN/Internet</strong> recebe a conexão “de fora”, enquanto
+          as portas <strong>LAN</strong> atendem os dispositivos da rede local. Alguns modelos permitem reatribuir
+          portas, então confirme os rótulos e o manual.
+        </p>
+        <p>
+          Depois de ligar os cabos, teste primeiro com um computador via LAN se possível. Isso reduz a quantidade de
+          variáveis: você consegue descobrir se a internet chegou ao roteador antes de diagnosticar Wi‑Fi.
+        </p>
+
+        <h2>3. Como entrar no painel sem adivinhar 192.168.x.x</h2>
+        <p>
+          Não existe um endereço administrativo único para todos os roteadores. Use a etiqueta, manual, aplicativo
+          oficial ou o endereço do gateway padrão recebido por um dispositivo conectado. Se o painel exige conta do
+          fabricante, use apenas o aplicativo/site oficial.
+        </p>
+        <p>
+          Evite pesquisar “senha padrão universal” e testar combinações em um equipamento que não é seu. Em aparelho
+          próprio, se a senha administrativa foi esquecida, consulte o procedimento oficial de recuperação/reset do
+          modelo antes de apagar toda a configuração.
+        </p>
+
+        <h2>4. Internet na WAN: automático, PPPoE, VLAN e casos do provedor</h2>
+        <p>
+          Muitos acessos entregam endereço automaticamente ao roteador. Outros exigem credenciais PPPoE, parâmetros de
+          VLAN ou configuração fornecida pela operadora. Não copie usuário, senha ou VLAN de tutorial de outra
+          operadora/região.
+        </p>
+        <p>
+          Se a WAN fica sem endereço, teste o cabo, a porta correta e confirme com o provedor quais parâmetros são
+          necessários. Em alguns cenários, trocar o equipamento conectado pode exigir reiniciar o modem/ONT ou aguardar
+          a renovação da sessão do provedor.
+        </p>
+
+        <h2>5. Nome do Wi‑Fi: escolha um SSID que não exponha informação desnecessária</h2>
+        <p>
+          O SSID é o nome da rede exibido aos dispositivos. Ele não precisa revelar endereço, sobrenome, apartamento
+          ou modelo do roteador. Ocultar o SSID não deve ser tratado como mecanismo principal de segurança; a proteção
+          depende de autenticação, criptografia, atualização e boa administração da rede.
+        </p>
+        <p>
+          Você pode usar o mesmo nome em bandas diferentes quando o roteador faz direção automática de clientes, ou
+          separar nomes temporariamente para diagnóstico. Não há uma única escolha correta para toda casa.
+        </p>
+
+        <h2>6. Segurança do Wi‑Fi: WPA3 quando disponível, WPA2 compatível quando necessário</h2>
+        <p>
+          A Wi‑Fi Alliance documenta WPA3 como a geração mais atual de segurança Wi‑Fi. Em redes com dispositivos
+          antigos, pode ser necessário modo de transição ou WPA2 compatível. O importante é evitar protocolos antigos
+          e configurações fracas apenas para “fazer conectar”.
+        </p>
+        <p>
+          Use uma senha de Wi‑Fi longa e não reutilizada. Para visitantes ou dispositivos que não precisam acessar
+          computadores e NAS da casa, uma rede de convidados com isolamento adequado pode reduzir exposição.
+        </p>
+
+        <h2>7. A senha administrativa do roteador é diferente da senha do Wi‑Fi</h2>
+        <p>
+          Uma protege o acesso à rede sem fio; a outra protege o painel que controla a rede. A NSA recomenda senhas
+          administrativas fortes e exclusivas e firmware atualizado para higiene de roteadores. Não mantenha
+          credenciais administrativas padrão quando o equipamento permite alterá-las.
+        </p>
+        <p>
+          Se o roteador oferece administração remota pela internet, deixe desativada quando você não precisa desse
+          recurso. Se precisa, siga a documentação oficial e proteja a conta associada.
+        </p>
+
+        <h2>8. WPS: conveniência não deve substituir configuração segura</h2>
+        <p>
+          Se todos os seus dispositivos conseguem ser conectados por senha/QR/aplicativo oficial, não há necessidade
+          de manter métodos de pareamento que você não usa. A configuração exata de WPS varia por equipamento; trate
+          o manual do fabricante como referência para ativar ou desativar.
+        </p>
+        <p>
+          Não confunda o botão físico de WPS com reset. Em alguns equipamentos os botões são separados; em outros,
+          pressionar por tempos diferentes executa funções distintas.
+        </p>
+
+        <h2>9. 2,4 GHz, 5 GHz e 6 GHz: escolha por alcance, compatibilidade e interferência</h2>
+        <p>
+          Bandas mais altas podem oferecer mais largura de banda e mais canais, mas alcance e penetração em paredes
+          variam. 2,4 GHz costuma alcançar mais longe e atende muitos dispositivos simples; 5 GHz e 6 GHz podem ser
+          preferíveis perto do roteador quando os aparelhos suportam.
+        </p>
+        <p>
+          Não force todos os dispositivos para uma banda apenas por “ser mais rápida”. Primeiro confirme cobertura e
+          compatibilidade no local de uso.
+        </p>
+
+        <h2>10. Canal Wi‑Fi: automático é um ponto de partida razoável</h2>
+        <p>
+          Em instalação doméstica simples, deixe a seleção automática inicialmente e valide a estabilidade. Se houver
+          interferência ou congestionamento, aí faz sentido medir o ambiente e comparar canais.
+        </p>
+        <p>
+          Em 2,4 GHz, larguras e sobreposição de canais exigem cuidado; em 5/6 GHz há mais possibilidades e regras
+          regulatórias diferentes. Não copie um canal “melhor” de outra casa sem observar o ambiente local.
+        </p>
+
+        <h2>11. DHCP: por que os dispositivos recebem IP automaticamente</h2>
+        <p>
+          O DHCP do roteador normalmente distribui endereço IP, gateway e DNS aos dispositivos da rede. Em uma rede
+          doméstica simples deve existir <strong>um serviço DHCP coerente para aquele segmento</strong>. Dois
+          roteadores entregando DHCP na mesma LAN podem produzir configurações imprevisíveis.
+        </p>
+        <p>
+          Reservas DHCP são úteis quando impressoras, NAS ou outros equipamentos precisam manter o mesmo endereço
+          interno sem configurar IP fixo manualmente em cada aparelho.
+        </p>
+
+        <h2>12. DNS não é a primeira coisa a trocar quando “não tem internet”</h2>
+        <p>
+          Antes de alterar DNS, confirme se a WAN tem endereço, se o roteador alcança a internet e se um dispositivo
+          conectado recebe IP/gateway corretamente. Trocar DNS não corrige cabo na porta errada, autenticação PPPoE
+          ausente ou WAN sem endereço.
+        </p>
+        <p>
+          Se o acesso por endereço IP funciona, mas nomes não resolvem, DNS passa a ser uma hipótese melhor.
+        </p>
+
+        <h2>13. Como testar se a configuração ficou certa</h2>
+        <ol>
+          <li>Confirme que a WAN está conectada e recebeu os parâmetros esperados.</li>
+          <li>Teste um dispositivo via cabo, quando possível.</li>
+          <li>Conecte ao Wi‑Fi perto do roteador e teste navegação.</li>
+          <li>Afaste-se gradualmente e observe cobertura, não apenas velocidade.</li>
+          <li>Reinicie um dispositivo e confirme que ele reconecta e recebe endereço normalmente.</li>
+          <li>Teste a rede de convidados, se criada, e confirme se ela não expõe recursos internos indevidos.</li>
+        </ol>
+
+        <h2>14. Se o Wi‑Fi funciona, mas a internet não</h2>
+        <p>
+          Estar conectado ao SSID prova apenas que o dispositivo alcança o roteador. Verifique o estado da WAN,
+          endereço recebido, autenticação e conexão com o provedor. Se todos os dispositivos ficam sem internet ao
+          mesmo tempo, a investigação começa antes do Wi‑Fi.
+        </p>
+        <p>
+          Para separar provedor de rede interna, veja também{" "}
+          <a href="/blog/internet-lenta-provedor-ou-roteador">internet lenta: provedor ou roteador?</a>.
+        </p>
+
+        <h2>15. Se a internet funciona perto, mas cai longe</h2>
+        <p>
+          Isso aponta mais para cobertura/interferência do que para autenticação da WAN. Reposicione o roteador em
+          local mais central e aberto antes de comprar repetidores. Em imóveis maiores, solução mesh/cabeada pode ser
+          mais previsível do que empilhar repetidores.
+        </p>
+        <p>
+          Para cobertura, veja{" "}
+          <a href="/blog/como-melhorar-sinal-wifi-em-casa">como melhorar o sinal Wi‑Fi em casa</a>.
+        </p>
+
+        <h2>Critérios de parada</h2>
+        <ul>
+          <li>O provedor exige parâmetros que você não possui, como PPPoE/VLAN específicos.</li>
+          <li>O gateway da operadora é gerenciado remotamente e mudanças são restauradas automaticamente.</li>
+          <li>Há telefonia/IPTV vinculada ao equipamento do provedor e você não sabe como o serviço está segmentado.</li>
+          <li>Ativar bridge faria você perder acesso sem saber como reverter.</li>
+          <li>O firmware do roteador está descontinuado ou há falhas recorrentes de reinicialização/aquecimento.</li>
+        </ul>
+
+        <h2>Perguntas frequentes</h2>
+        <h3>Como criar uma rede Wi‑Fi com roteador?</h3>
+        <p>
+          Conecte a internet à WAN quando aplicável, acesse o painel oficial, configure a conexão do provedor, crie
+          SSID e segurança, salve e teste. O nome dos menus muda por fabricante.
+        </p>
+
+        <h3>Posso ligar um roteador em outro roteador?</h3>
+        <p>
+          Sim, mas o modo escolhido importa. Roteador atrás de roteador pode criar duplo NAT; ponto de acesso tende a
+          ser mais simples quando você só precisa expandir a mesma rede.
+        </p>
+
+        <h3>Qual IP uso para configurar o roteador?</h3>
+        <p>
+          Use o endereço informado pelo equipamento ou o gateway padrão da conexão local. Não presuma um IP universal.
+        </p>
+
+        <h3>Preciso separar 2,4 GHz e 5 GHz?</h3>
+        <p>
+          Não obrigatoriamente. Separar pode ajudar em diagnóstico e compatibilidade; manter um SSID único pode ser
+          conveniente em equipamentos que gerenciam as bandas automaticamente.
+        </p>
+
+        <h3>Trocar DNS melhora o Wi‑Fi?</h3>
+        <p>
+          DNS pode afetar resolução de nomes, mas não aumenta sinal, corrige interferência ou resolve WAN desconectada.
+        </p>
+
+        <h2>Resumo prático</h2>
+        <p>
+          <strong>Configure por camadas:</strong> provedor/WAN primeiro, rede local depois, Wi‑Fi em seguida e
+          segurança administrativa por último. Teste cada etapa antes de mexer em recursos avançados. Isso evita
+          transformar um problema simples de cabo ou autenticação em uma sequência de alterações difíceis de reverter.
+        </p>
+
+        <EditorialReferences slug="como-configurar-roteador-wifi-iniciantes" />
+      </>
+    ),
+  },
+
   "bios-corrompida-reset-cmos-atualizacao": {
     title: "BIOS corrompida: como diferenciar reset de CMOS, atualização e recuperação de firmware",
     excerpt:
