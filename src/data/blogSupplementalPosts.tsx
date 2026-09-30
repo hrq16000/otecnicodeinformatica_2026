@@ -1286,6 +1286,120 @@ export const blogSupplementalPosts: Record<string, BlogPostContent> = {
     ),
   },
 
+  "como-formatar-pc-sem-perder-arquivos": {
+    title: "Como formatar o PC sem perder arquivos: o que realmente preserva dados",
+    excerpt:
+      "Entenda a diferença entre backup, Redefinir este PC, reinstalação por cima e instalação limpa — e como preservar arquivos, BitLocker, contas e licenças antes de qualquer formatação.",
+    date: "2026-09-30",
+    readTime: "15 min",
+    category: "Procedimentos Técnicos",
+    content: (
+      <>
+        <p className="lead">“Formatar sem perder arquivos” mistura procedimentos diferentes. <strong>Formatar ou apagar uma partição destrói o conteúdo dela</strong>; o que evita perda de dados é ter backup verificado ou escolher uma opção de recuperação que preserve arquivos pessoais. No Windows, “Redefinir este PC &gt; Manter meus arquivos” não é igual a uma instalação limpa, e uma reinstalação por mídia também pode ter efeitos diferentes conforme o caminho escolhido.</p>
+
+        <h2>Resposta direta: quais opções preservam arquivos?</h2>
+        <table>
+          <thead><tr><th>Procedimento</th><th>Arquivos pessoais</th><th>Aplicativos</th><th>Quando considerar</th></tr></thead>
+          <tbody>
+            <tr><td>Backup + instalação limpa</td><td>Preservados na cópia externa, não no disco formatado</td><td>Precisam ser reinstalados</td><td>Quando você quer começar do zero e já conferiu o backup.</td></tr>
+            <tr><td>Redefinir este PC — Manter meus arquivos</td><td>O Windows preserva arquivos pessoais conforme a opção</td><td>Aplicativos instalados são removidos</td><td>Quando o Windows ainda oferece a recuperação e você aceita reconfigurar programas.</td></tr>
+            <tr><td>Reinstalação/reparo iniciado dentro do Windows</td><td>Pode preservar arquivos e, em alguns cenários, aplicativos</td><td>Depende da opção disponível</td><td>Quando o objetivo é reparar o sistema sem começar do zero.</td></tr>
+            <tr><td>Formatar/apagar a partição</td><td>Não</td><td>Não</td><td>Somente depois de backup e decisão consciente por instalação limpa.</td></tr>
+          </tbody>
+        </table>
+
+        <h2>1. Antes de tudo: confirme se formatar é realmente necessário</h2>
+        <p>Reinstalar o Windows corrige problemas de software, mas não conserta SSD/HD falhando, memória defeituosa, superaquecimento, fonte instável ou outros defeitos físicos. Se o computador trava, apresenta erros de leitura, some com o disco ou desliga sob carga, investigue hardware antes de apagar o sistema.</p>
+        <p>Se o objetivo é apenas melhorar lentidão, comece em <a href="/problemas/computador-lento">computador lento: como diagnosticar</a>. Formatar sem diagnóstico pode devolver a mesma máquina lenta depois de algumas horas.</p>
+
+        <h2>2. Backup não é “copiei e torci para ter dado certo”</h2>
+        <p>Antes de qualquer procedimento que possa apagar dados, faça uma cópia em outro local e <strong>verifique a cópia</strong>. O mínimo inclui:</p>
+        <ul>
+          <li>Documentos, Área de Trabalho, Imagens, Vídeos e Downloads.</li>
+          <li>Pastas de projetos e arquivos de trabalho fora das bibliotecas padrão.</li>
+          <li>Favoritos e senhas do navegador, quando não estão sincronizados.</li>
+          <li>Arquivos locais de e-mail e dados de programas que não ficam na nuvem.</li>
+          <li>Chaves/licenças de softwares pagos e credenciais de contas.</li>
+          <li>Chave de recuperação do BitLocker quando houver criptografia.</li>
+        </ul>
+        <p>Abra alguns arquivos diretamente no destino do backup. Se eles não abrem, a cópia não está validada.</p>
+
+        <h2>3. BitLocker vem antes de formatação, troca de disco ou firmware</h2>
+        <p>Se o Windows usa BitLocker ou Criptografia do Dispositivo, confirme a chave de recuperação em um local acessível fora do computador. Alterações de hardware, firmware ou recuperação podem solicitar essa chave. Sem ela, você pode ficar sem acesso a dados que ainda estavam intactos.</p>
+
+        <h2>4. “Redefinir este PC — Manter meus arquivos” não é formatação limpa</h2>
+        <p>As opções de recuperação do Windows incluem <strong>Redefinir este PC</strong>. Quando você escolhe “Manter meus arquivos”, o Windows reinstala o sistema preservando arquivos pessoais conforme o fluxo, mas remove aplicativos instalados e redefine configurações.</p>
+        <p>Isso pode ser útil quando o objetivo é reparar o Windows sem começar do zero. Mesmo assim, a Microsoft recomenda backup antes de opções de recuperação porque interrupções e erros ainda podem acontecer.</p>
+
+        <h2>5. Reinstalação por cima: quando preservar programas importa</h2>
+        <p>Em alguns cenários, iniciar a reinstalação/reparo de dentro de um Windows funcional permite manter mais estado do sistema do que uma instalação limpa. A disponibilidade das opções depende da edição, versão, mídia e compatibilidade da instalação.</p>
+        <p>Use esse caminho quando o sistema ainda inicia e o objetivo é reparar componentes do Windows, não apagar tudo. Se o problema é malware grave ou corrupção que reaparece, uma instalação limpa pode ser mais apropriada depois de backup confiável.</p>
+
+        <h2>6. Instalação limpa: a opção mais destrutiva, mas também a mais previsível</h2>
+        <p>Uma instalação limpa remove o ambiente antigo e cria um Windows novo. Ela é apropriada quando você quer zerar aplicativos/configurações ou quando recuperação/reparo não resolveu. Para isso, use mídia oficial do Windows e selecione o disco correto com atenção.</p>
+        <p>O procedimento completo está em <a href="/blog/como-instalar-windows-11-do-zero">como instalar o Windows 11 do zero</a>. Não apague partições de outros discos só porque aparecem na mesma tela.</p>
+
+        <h2>7. Com dois discos, identifique antes de apagar qualquer coisa</h2>
+        <p>Em computadores com SSD + HD, dois SSDs ou armazenamento externo conectado, o risco principal é selecionar o disco errado. Compare capacidade, modelo e quais dados existem em cada unidade antes de excluir partições.</p>
+        <p>Se a instalação será feita em um SSD novo, veja também <a href="/blog/troquei-o-ssd-e-o-pc-so-abre-a-bios">troquei o SSD e o PC só abre a BIOS</a>.</p>
+
+        <h2>8. Ativação do Windows: registre edição e estado antes</h2>
+        <p>A ativação pode usar licença digital ou chave de produto vinculada ao dispositivo/conta, dependendo do caso. Antes de reinstalar, anote a edição do Windows e confira se o sistema está ativado. Reinstalar uma edição diferente pode exigir correção posterior.</p>
+
+        <h2>9. Drivers: prefira Windows Update e fabricante</h2>
+        <p>Depois da instalação, use Windows Update e o site oficial do fabricante do notebook, placa-mãe ou componente. Evite “pacotes universais” de driver baixados de sites desconhecidos.</p>
+        <p>Se o instalador não vê o SSD, isso pode envolver driver/controlador de armazenamento. Não altere AHCI/RAID/VMD/RST por tentativa sem registrar o estado anterior e consultar o fabricante.</p>
+
+        <h2>10. Se o disco apresenta erro, pare antes de formatar</h2>
+        <p>Se a cópia trava, a unidade desaparece, o Windows acusa erros de leitura ou o HD produz comportamento anormal, a prioridade deixa de ser formatação. Preserve os dados antes de fazer qualquer operação destrutiva.</p>
+        <p>O roteiro para isso está em <a href="/blog/como-recuperar-dados-hd-com-defeito">recuperar dados de HD com defeito</a>.</p>
+
+        <h2>11. Checklist antes de clicar em “Excluir” ou “Formatar”</h2>
+        <ol>
+          <li>Backup verificado em outro destino.</li>
+          <li>Chave BitLocker disponível.</li>
+          <li>Contas, senhas e licenças registradas.</li>
+          <li>Edição do Windows e ativação conferidas.</li>
+          <li>Mídia oficial de instalação pronta.</li>
+          <li>Disco de destino identificado por modelo/capacidade.</li>
+          <li>Arquivos locais de e-mail e programas específicos copiados.</li>
+          <li>Decisão clara entre redefinir, reparar e instalar do zero.</li>
+        </ol>
+
+        <h2>O que não fazer</h2>
+        <ul>
+          <li>Confiar em “Manter meus arquivos” como substituto de backup.</li>
+          <li>Formatar primeiro e tentar recuperar depois.</li>
+          <li>Apagar partições de vários discos sem identificar cada unidade.</li>
+          <li>Usar mídia de instalação de origem desconhecida.</li>
+          <li>Desativar BitLocker sem saber onde está a chave de recuperação.</li>
+          <li>Reinstalar o Windows repetidamente em disco com sinais de falha física.</li>
+        </ul>
+
+        <h2>Perguntas frequentes</h2>
+        <h3>É possível formatar e manter os arquivos na mesma partição?</h3>
+        <p>Não no sentido de apagar/formatar a partição e manter os dados nela. Para preservar arquivos, faça backup ou use uma opção de recuperação que explicitamente mantenha arquivos pessoais.</p>
+
+        <h3>“Redefinir este PC — Manter meus arquivos” mantém programas?</h3>
+        <p>Não. A opção preserva arquivos pessoais conforme o processo, mas remove aplicativos instalados e redefine configurações.</p>
+
+        <h3>Preciso da chave do Windows?</h3>
+        <p>Depende do tipo de ativação. Muitas máquinas usam licença digital, mas confirme edição e estado de ativação antes de reinstalar.</p>
+
+        <h3>Posso formatar se o SSD está com erro?</h3>
+        <p>Se há dados importantes e sinais de falha, preserve os arquivos primeiro. Formatação não é diagnóstico nem reparo de hardware.</p>
+
+        <h3>Qual opção perde menos coisas?</h3>
+        <p>Depende do problema. Redefinir mantendo arquivos preserva mais dados pessoais que uma instalação limpa, mas remove aplicativos. Um reparo iniciado dentro do Windows pode preservar ainda mais estado em cenários compatíveis. Sempre faça backup.</p>
+
+        <h2>Resumo prático</h2>
+        <p>Para “formatar sem perder arquivos”, o ponto central é <strong>não confundir formatação com preservação</strong>. Faça backup verificável, confirme BitLocker e licenças, escolha entre redefinir, reparar ou instalar do zero e só apague partições depois de identificar o disco correto. A instalação limpa é a etapa mais destrutiva — não a primeira tentativa.</p>
+
+        <EditorialReferences slug="como-formatar-pc-sem-perder-arquivos" />
+      </>
+    ),
+  },
+
   "troquei-o-ssd-e-o-pc-so-abre-a-bios": {
     title: "Troquei o SSD e o PC só abre a BIOS: como recuperar o boot sem apagar dados",
     excerpt:
