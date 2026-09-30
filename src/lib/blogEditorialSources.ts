@@ -1606,12 +1606,19 @@ export const ARTICLE_SOURCE_MANIFEST: Record<string, ArticleSourceManifest> = {
   },
   "como-saber-se-pc-tem-virus-malware": {
     slug: "como-saber-se-pc-tem-virus-malware",
-    sources: ["certbr-golpes", "cisa-stop-ransomware", "ms-tech-support-scams"],
+    sources: [
+      "ms-windows-security-overview",
+      "ms-controlled-folder-access",
+      "certbr-golpes",
+      "cisa-stop-ransomware",
+      "ms-tech-support-scams",
+      "ms-phishing-protection",
+    ],
     technicalReview: "reviewed",
     factChecked: true,
-    factCheckedAt: "2026-07-12",
+    factCheckedAt: "2026-09-30",
     notes:
-      "Fact-check concluído: sintomas não confirmam infecção, contenção segura (desconectar da rede, não pagar resgate), troca de senha em dispositivo confiável, sem ferramenta desconhecida e sem prometer remoção ou preservação integral. Golpe de falso suporte tratado. Fontes CERT.br/CISA/Microsoft.",
+      "Revisão material em 2026-09-30 guiada pelo GSC: 7 impressões, 0 cliques e posição média ~24,43 entre 2026-04-01 e 2026-09-27. A única query individual exposta foi 'como saber se o notebook esta com virus' (1 impressão, posição 40), tratada diretamente sem inventar variações. A versão suplementar separa sintoma de evidência, navegador de sistema, malware de comprometimento de conta e golpe de falso suporte, confirma a proteção ativa antes de recomendar qualquer ferramenta, prioriza contenção em ransomware/acesso remoto e evita promessas de detecção ou remoção total. Fontes oficiais Microsoft, CISA e CERT.br ficam visíveis.",
   },
   "como-melhorar-sinal-wifi-em-casa": {
     slug: "como-melhorar-sinal-wifi-em-casa",
