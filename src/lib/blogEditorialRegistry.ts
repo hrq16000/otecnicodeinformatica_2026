@@ -776,14 +776,14 @@ const WAVE_10F: EditorialApproval[] = [
     status: "approved",
     authorType: "organization",
     authorId: INSTITUTIONAL_AUTHOR.id,
-    reviewedAt: "2026-08-26",
+    reviewedAt: "2026-09-30",
     approvedAt: "2026-08-26",
     imageOrigin: "licensed",
     imageLicense: "CC BY-SA 3.0",
     imageAttribution:
       "Foto: Dsimic (Wikimedia Commons), CC BY-SA 3.0 — https://commons.wikimedia.org/wiki/File:2.5-inch_SATA_drive_on_top_of_a_3.5-inch_SATA_drive,_close-up_of_data_and_power_connectors.jpg",
     notes:
-      "Satélite escrito do zero na Onda 10C (Lote 3); fact-check registrado em blogEditorialSources.ts; capa é fotografia real licenciada, sem IA.",
+      "Revisão material em 2026-09-30 guiada pelo GSC: 68 impressões, 0 cliques e posição média ~25,94 entre 2026-04-01 e 2026-09-27. Queries reais como “computador nao reconhece hd”, “pc não reconhece hd”, “ssd nao reconhecido” e “bios não reconhece ssd” foram incorporadas. A versão suplementar passa a sobrepor editorialmente o texto monolítico antigo, separando BIOS/UEFI de Windows, SATA de M.2/NVMe, boot de estado do volume e preservação de dados antes de operações destrutivas.",
   },
   {
     slug: "ssd-nvme-nao-aparece-no-gerenciador-de-discos",
