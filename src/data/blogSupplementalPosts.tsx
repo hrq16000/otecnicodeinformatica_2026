@@ -1534,6 +1534,138 @@ export const blogSupplementalPosts: Record<string, BlogPostContent> = {
     ),
   },
 
+  "fone-de-ouvido-nao-e-reconhecido-no-pc": {
+    title: "Fone de ouvido não funciona no PC ou notebook: como diagnosticar P2, USB e Bluetooth",
+    excerpt:
+      "PC não reconhece fone? Veja como separar saída errada, P2/painel frontal, combo jack, driver, USB, Bluetooth e microfone antes de abrir o equipamento.",
+    date: "2026-09-30",
+    readTime: "14 min",
+    category: "Diagnóstico",
+    content: (
+      <>
+        <p className="lead">Se o PC ou notebook não reconhece o fone de ouvido, não comece reinstalando driver. Primeiro descubra <strong>qual tipo de conexão você está usando</strong> — P2 analógico, USB ou Bluetooth — e depois separe o próprio fone, a saída escolhida no Windows e o caminho físico até o computador.</p>
+
+        <h2>Resposta direta: o que fazer quando o PC não reconhece o fone?</h2>
+        <ol>
+          <li>Teste o fone em outro aparelho compatível.</li>
+          <li>No Windows, abra <strong>Configurações → Sistema → Som</strong> e confirme a saída selecionada.</li>
+          <li>Se for P2, teste outra porta compatível, como traseira vs frontal no desktop, quando disponível.</li>
+          <li>Se o fone aparece no sistema, mas não sai som, trate como problema de saída/volume/driver, não como “fone não detectado”.</li>
+          <li>Se o microfone falha e o áudio funciona, investigue entrada, tipo de conector e permissões separadamente.</li>
+          <li>Se for USB ou Bluetooth, confirme se o dispositivo foi enumerado/conectado antes de mexer em conector analógico.</li>
+        </ol>
+
+        <h2>“Não reconhece” pode significar quatro coisas diferentes</h2>
+        <table>
+          <thead><tr><th>Sintoma</th><th>Camada provável</th><th>Próxima verificação</th></tr></thead>
+          <tbody>
+            <tr><td>Fone não aparece como saída</td><td>Detecção/driver/conexão</td><td>Gerenciador de Dispositivos e conexão usada.</td></tr>
+            <tr><td>Fone aparece, mas não sai som</td><td>Saída, volume, mixer, driver</td><td>Selecionar saída correta e testar reprodução.</td></tr>
+            <tr><td>Áudio funciona, microfone não</td><td>Entrada, plugue/adaptador, permissão</td><td>Selecionar microfone e revisar privacidade.</td></tr>
+            <tr><td>Funciona atrás, não na frente</td><td>Painel frontal/caminho físico/configuração</td><td>Comparar portas e revisar ligação do painel.</td></tr>
+          </tbody>
+        </table>
+
+        <h2>1. Valide o próprio fone antes de culpar o computador</h2>
+        <p>Teste em outro celular, notebook ou aparelho compatível. Se o mesmo fone falha em mais de um equipamento, o defeito pode estar no fone, cabo, conector ou controle de volume/mudo dele.</p>
+        <p>Se outro fone conhecido como funcional também falha no PC, a suspeita passa para o computador. Essa comparação é mais útil que remover driver no primeiro minuto.</p>
+
+        <h2>2. Confira a saída ativa no Windows</h2>
+        <p>A Microsoft orienta verificar qual dispositivo está selecionado em <strong>Configurações → Sistema → Som</strong>. Em PCs com HDMI, monitor, dock, Bluetooth ou headset USB, o Windows pode manter outra saída como padrão.</p>
+        <ul>
+          <li>Selecione explicitamente o fone/headset.</li>
+          <li>Confira se o volume geral e o volume do aplicativo não estão mudos.</li>
+          <li>Se houver várias saídas com nomes parecidos, teste uma por vez.</li>
+          <li>Evite remover dispositivos antes de confirmar que o problema não é apenas seleção.</li>
+        </ul>
+
+        <h2>3. Fone P2: painel frontal e traseiro ajudam a isolar</h2>
+        <p>Em desktop, comparar a saída frontal com a traseira pode separar caminhos. Se a traseira funciona e a frontal não, isso aumenta a suspeita sobre o caminho do painel frontal — conector, cabo interno, header da placa-mãe ou configuração do codec — mas não prova sozinho qual ponto falhou.</p>
+        <p>A query “entrada frontal fone de ouvido não funciona” pede exatamente essa separação: primeiro confirme que o mesmo fone funciona atrás; só depois vale abrir o gabinete para revisar a ligação do painel, sempre pelo manual da placa/gabinete.</p>
+
+        <h2>4. Como saber se a entrada P2 está funcionando?</h2>
+        <p>Use um fone conhecido como funcional e compare a mesma reprodução em outra saída. Se uma porta funciona e outra não, o problema ficou restrito ao caminho daquela porta. Se nenhuma saída analógica funciona, volte para seleção de dispositivo, driver e controlador de áudio.</p>
+        <p>Não introduza objeto metálico na entrada para “testar contato” e não aplique limpa-contato sem orientação do fabricante.</p>
+
+        <h2>5. Notebook com conector combinado merece atenção</h2>
+        <p>Muitos notebooks usam uma única entrada para áudio e microfone, enquanto desktops podem ter portas separadas. Um headset com microfone pode precisar de um adaptador compatível quando o computador separa saída e entrada.</p>
+        <p>Evite assumir que qualquer adaptador resolve: confirme no manual se a porta é apenas saída ou combo headset e use acessório compatível com o equipamento.</p>
+
+        <h2>6. O dispositivo aparece, mas não toca</h2>
+        <p>A Microsoft diferencia “dispositivo ausente” de “dispositivo presente sem som”. Se o fone aparece como saída, confira seleção, volume, formato/aprimoramentos e driver antes de investigar hardware.</p>
+        <p>Se nenhum alto-falante ou fone reproduz áudio, use <a href="/blog/computador-sem-som-o-que-verificar">computador sem som: o que verificar</a>, porque o problema já é mais amplo que um conector específico.</p>
+
+        <h2>7. O fone não aparece no Windows</h2>
+        <p>Abra o <strong>Gerenciador de Dispositivos</strong> e veja se o controlador/dispositivo de áudio está habilitado. A Microsoft orienta mostrar dispositivos ocultos e verificar alterações de hardware quando a saída desaparece.</p>
+        <p>Se o driver estiver ausente ou incompatível, prefira o pacote do fabricante do notebook, placa-mãe ou dispositivo de áudio. Evite programas genéricos de “atualização automática de drivers”.</p>
+
+        <h2>8. Áudio funciona, mas o microfone do headset não</h2>
+        <p>Isso é outro diagnóstico. Confirme o dispositivo de entrada em <strong>Configurações → Sistema → Som</strong> e depois as permissões em <strong>Privacidade e segurança → Microfone</strong>. A Microsoft separa acesso geral, acesso de aplicativos e acesso de aplicativos desktop.</p>
+        <p>Se o notebook tem porta combo e o headset usa conexão incompatível/adaptador incorreto, a saída pode funcionar enquanto o microfone não é encaminhado corretamente.</p>
+
+        <h2>9. Headset USB não é P2</h2>
+        <p>Um headset USB inclui seu próprio caminho de áudio e normalmente aparece como dispositivo separado no Windows. Se ele não é detectado, teste outra porta USB, evite hubs não essenciais e confira o Gerenciador de Dispositivos.</p>
+        <p>Se outro dispositivo USB funciona na mesma porta e o headset falha em vários computadores, a suspeita se desloca para o headset.</p>
+
+        <h2>10. Bluetooth: pareado não significa selecionado</h2>
+        <p>Um headset Bluetooth pode estar pareado e conectado, mas outra saída continuar selecionada. Confirme o dispositivo em Som e no aplicativo de chamada. Se a conexão estiver instável, remova apenas o pareamento daquele dispositivo e refaça depois de confirmar bateria e proximidade.</p>
+
+        <h2>11. Quando reinstalar driver faz sentido</h2>
+        <p>Reinstalação é razoável quando o dispositivo some do Gerenciador, aparece com erro, o problema começou após troca/atualização de driver ou o suporte oficial do fabricante recomenda o pacote correto.</p>
+        <p>Não use reinstalação como primeiro passo quando a falha é só em uma porta física e outra porta funciona normalmente.</p>
+
+        <h2>12. Quando a falha parece física</h2>
+        <ul>
+          <li>Porta folgada ou afundada.</li>
+          <li>Som corta ao movimentar o plugue.</li>
+          <li>Falha começou após queda, líquido ou desmontagem.</li>
+          <li>Painel frontal parou depois de manutenção/montagem.</li>
+          <li>Outra porta funciona com o mesmo fone e mesmas configurações.</li>
+        </ul>
+        <p>Nesses casos, o próximo passo pode ser inspeção do conector, cabo do painel ou solda, não mais software.</p>
+
+        <h2>Árvore de decisão rápida</h2>
+        <ol>
+          <li><strong>Fone funciona em outro aparelho?</strong> Se não, investigue o fone.</li>
+          <li><strong>Windows mostra o dispositivo?</strong> Se sim, seleção/volume/driver; se não, detecção/driver/conexão.</li>
+          <li><strong>Outra porta funciona?</strong> Se sim, isole o caminho físico da porta problemática.</li>
+          <li><strong>Som funciona e microfone não?</strong> Entrada/permissão/conector combinado.</li>
+          <li><strong>USB/Bluetooth?</strong> Trate como dispositivo separado, não como P2.</li>
+        </ol>
+
+        <h2>O que não fazer</h2>
+        <ul>
+          <li>Baixar “driver booster” antes de identificar o dispositivo.</li>
+          <li>Abrir notebook apenas porque o Windows escolheu outra saída.</li>
+          <li>Trocar várias configurações e drivers ao mesmo tempo.</li>
+          <li>Forçar plugue ou adaptador incompatível.</li>
+          <li>Introduzir metal ou líquido na entrada P2.</li>
+        </ul>
+
+        <h2>Perguntas frequentes</h2>
+        <h3>Meu fone de ouvido não funciona no PC. O que verifico primeiro?</h3>
+        <p>Teste o fone em outro aparelho e confirme a saída ativa no Windows. Esses dois passos separam rapidamente fone, seleção de áudio e computador.</p>
+
+        <h3>PC não reconhece fone na entrada frontal. É o cabo do gabinete?</h3>
+        <p>Pode ser, mas primeiro compare a saída traseira e confirme configurações. Se atrás funciona e na frente não, o caminho frontal fica mais suspeito.</p>
+
+        <h3>Notebook não reconhece fone de ouvido. Preciso de driver?</h3>
+        <p>Nem sempre. Confirme saída ativa, tipo de conector e se o controlador aparece no Gerenciador de Dispositivos. Driver é uma hipótese quando o dispositivo está ausente ou com erro.</p>
+
+        <h3>Som do fone funciona, mas microfone não. O fone está com defeito?</h3>
+        <p>Não necessariamente. Entrada selecionada, permissões e compatibilidade do conector/adaptador ainda precisam ser verificadas.</p>
+
+        <h3>Como saber se a entrada P2 está funcionando?</h3>
+        <p>Use um fone conhecido como funcional e compare com outra saída compatível do mesmo computador. Isso isola a porta sem desmontar o equipamento.</p>
+
+        <h2>Resumo prático</h2>
+        <p>Quando o fone não funciona no PC, siga a ordem <strong>fone → tipo de conexão → saída do Windows → porta física → driver → microfone/permissões</strong>. Compare uma variável por vez. Só abra o equipamento quando os testes de software e de outra porta realmente apontarem para o caminho físico.</p>
+
+        <EditorialReferences slug="fone-de-ouvido-nao-e-reconhecido-no-pc" />
+      </>
+    ),
+  },
+
   "hd-nao-e-reconhecido-na-bios-o-que-fazer": {
     title: "Computador não reconhece HD ou SSD: como separar BIOS, Windows e falha da unidade",
     excerpt:
