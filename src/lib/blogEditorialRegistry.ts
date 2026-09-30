@@ -414,13 +414,13 @@ const WAVE_5G: EditorialApproval[] = [
     status: "approved",
     authorType: "organization",
     authorId: INSTITUTIONAL_AUTHOR.id,
-    reviewedAt: "2026-09-28",
+    reviewedAt: "2026-09-29",
     approvedAt: "2026-08-12",
     imageOrigin: "licensed",
     imageLicense: "CC BY-SA 4.0",
     imageAttribution: "Foto: Suyash Dwivedi (Wikimedia Commons), CC BY-SA 4.0 — https://commons.wikimedia.org/wiki/File:LG_Smart_TV_WIFI_%2B_IR_Remote_04.jpg",
     notes:
-      "Reescrita integral na Onda 5G; fact-check registrado em blogEditorialSources.ts; capa é fotografia real licenciada, sem IA.",
+      "Revisão material em 2026-09-29 guiada pelo GSC; diagnóstico reorganizado por sintoma, comparações controladas, compatibilidade do modelo, cabo como teste não conclusivo, reset por último e FAQ de decisão. Fact-check registrado em blogEditorialSources.ts; capa real licenciada, sem IA.",
   },
 ];
 
