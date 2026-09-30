@@ -473,6 +473,43 @@ export const EDITORIAL_SOURCES: Record<string, EditorialSource> = {
       "Limpar cache remove dados temporários; limpar dados remove configurações e dados do aplicativo.",
     ],
   },
+  "hp-computer-no-power-2026": {
+    id: "hp-computer-no-power-2026",
+    title: "HP PCs - Computer does not turn on, start, or boot",
+    publisher: "HP Support",
+    url: "https://support.hp.com/us-en/document/ish_3974055-3873564-16",
+    accessedAt: "2026-09-30",
+    sourceType: "official",
+    supports: [
+      "A HP separa problemas de ausência de energia, ausência de vídeo e falha de inicialização e orienta remover periféricos antes de aprofundar o diagnóstico.",
+      "A HP documenta um hard reset com energia externa removida em cenários compatíveis, reforçando que o procedimento depende do equipamento e deve seguir suporte oficial.",
+    ],
+  },
+  "dell-laptop-no-power-2026": {
+    id: "dell-laptop-no-power-2026",
+    title: "Solucionar problemas de energia em um notebook Dell",
+    publisher: "Dell Technologies Support",
+    url: "https://www.dell.com/support/kbdoc/pt-br/000124389/solucionar-problemas-de-energia-em-um-notebook-dell",
+    accessedAt: "2026-09-30",
+    sourceType: "official",
+    supports: [
+      "A Dell trata ausência de energia como cenário distinto de ausência de POST e de vídeo e usa diagnósticos específicos do fabricante quando suportados.",
+      "A Dell orienta consultar o manual do modelo e procedimentos oficiais antes de desmontagem ou substituição de componentes.",
+    ],
+  },
+  "ms-powercfg-batteryreport": {
+    id: "ms-powercfg-batteryreport",
+    title: "Opções de linha de comando powercfg",
+    publisher: "Microsoft Learn",
+    url: "https://learn.microsoft.com/pt-br/windows-hardware/design/device-experiences/powercfg-command-line-options",
+    accessedAt: "2026-09-30",
+    sourceType: "official",
+    supports: [
+      "O comando powercfg /batteryreport gera um relatório HTML com características de uso da bateria ao longo do tempo de vida do sistema.",
+      "O relatório de bateria fornece contexto de uso quando o Windows ainda inicia; ele não é um teste elétrico do hardware.",
+    ],
+  },
+
   "msi-front-panel-power-test-2026": {
     id: "msi-front-panel-power-test-2026",
     title: "O que fazer quando o PC não inicia ou não dá vídeo",
@@ -1340,14 +1377,18 @@ export const ARTICLE_SOURCE_MANIFEST: Record<string, ArticleSourceManifest> = {
   },
   "notebook-nao-liga-o-que-fazer": {
     slug: "notebook-nao-liga-o-que-fazer",
-    sources: [],
+    sources: [
+      "hp-computer-no-power-2026",
+      "dell-laptop-no-power-2026",
+      "ms-powercfg-batteryreport",
+    ],
     technicalReview: "reviewed",
     factChecked: true,
-    factCheckedAt: "2026-07-12",
-    stableKnowledge: true,
+    factCheckedAt: "2026-09-30",
     notes:
-      "Desalinhamento resolvido: title/H1/introdução/estrutura focados exclusivamente em notebook; desktop aparece só como menção contextual curta, fora de title e H1. Conteúdo baseado em conhecimento técnico estável de triagem segura, sem afirmação específica de fabricante, sem número instável e sem procedimento perigoso. Não afirma causa única sem diagnóstico. Sem fonte visível por depender de conhecimento estável.",
+      "Revisão material em 2026-09-30 guiada pelo GSC: 11 impressões, 0 cliques e posição média ~10,91 entre 2026-04-01 e 2026-09-27. A versão suplementar substitui editorialmente o texto monolítico antigo, preservando a mesma URL. A triagem passa a separar sem energia, sem POST, sem vídeo e sem boot; remove carregador/bateria/placa como conclusões automáticas; condiciona reset elétrico e códigos de diagnóstico ao fabricante/modelo; adiciona batteryreport apenas quando o Windows ainda inicia e reforça critérios de parada para líquido, bateria deformada, cheiro e calor anormal. Queries individuais não foram expostas pelo GSC e nenhuma foi inventada.",
   },
+
   "computador-lento-causas-solucoes": {
     slug: "computador-lento-causas-solucoes",
     sources: [],
