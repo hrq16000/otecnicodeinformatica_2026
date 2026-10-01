@@ -143,14 +143,14 @@ const WAVE_4Y: EditorialApproval[] = [
     status: "approved",
     authorType: "organization",
     authorId: INSTITUTIONAL_AUTHOR.id,
-    reviewedAt: "2026-09-29",
+    reviewedAt: "2026-10-01",
     approvedAt: "2026-08-12",
     imageOrigin: "licensed",
     imageLicense: "CC0 1.0",
     imageAttribution:
       "Foto: Gregory Karastergios (Wikimedia Commons), CC0 1.0 — https://commons.wikimedia.org/w/index.php?curid=113932150",
     notes:
-      "Revisão técnica concluída e fact-check registrado em blogEditorialSources.ts; capa é fotografia real de domínio público (CC0), sem IA.",
+      "Revisão material em 2026-10-01 guiada pelo GSC: 23 impressões, 0 cliques e posição média ~25,35 entre 2026-04-01 e 2026-09-28. Queries reais cobrem 'como trocar a tela do notebook', 'como trocar tela de notebook', 'troca de tela de notebook', 'troca tela notebook' e variações. A versão suplementar preserva a URL e aprofunda compatibilidade do painel, conector/resolução/fixação/touch, desenergização, cabo/dobradiça, validação antes do fechamento e critérios de parada, com fontes oficiais Dell e Lenovo.",
   },
 ];
 
