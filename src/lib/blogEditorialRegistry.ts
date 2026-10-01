@@ -919,14 +919,14 @@ const WAVE_10G: EditorialApproval[] = [
     status: "approved",
     authorType: "organization",
     authorId: INSTITUTIONAL_AUTHOR.id,
-    reviewedAt: "2026-08-26",
+    reviewedAt: "2026-10-01",
     approvedAt: "2026-08-26",
     imageOrigin: "licensed",
     imageLicense: "Public Domain",
     imageAttribution:
       "Foto: Wikipedian5122024 (Wikimedia Commons), domínio público — https://commons.wikimedia.org/wiki/File:Windows_10-11_update_screen_notice.png",
     notes:
-      "Satélite de cache do Update, escrito do zero na Onda 10C (Lote 4); procedimento publicado é reversível (renomear, nunca apagar como primeiro passo); fact-check registrado em blogEditorialSources.ts; capa é imagem real licenciada, sem IA.",
+      "Revisão material em 2026-10-01 guiada pelo GSC: 6 impressões, 0 cliques e posição média ~54,33 entre 2026-04-01 e 2026-09-28. A única query individual exposta foi 'software distribution'. A versão suplementar preserva a URL e aprofunda função do cache, triagem prévia, renomeação reversível, serviços, limites de formatação/reset e separação entre cache, DISM/SFC e falhas específicas do Windows Update.",
   },
   {
     slug: "windows-update-travado-desfazendo-alteracoes",
