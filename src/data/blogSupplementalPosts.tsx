@@ -11,6 +11,216 @@ import { MODALIDADES } from "@/lib/precosConfig";
  * do blog compõem base + suplementares + programáticos.
  */
 export const blogSupplementalPosts: Record<string, BlogPostContent> = {
+  "erros-comuns-upgrade-computador": {
+    title: "Compatibilidade de PC antes do upgrade: RAM, SSD, GPU, fonte e BIOS sem comprar peça errada",
+    excerpt:
+      "Antes de trocar RAM, SSD, placa de vídeo ou processador, valide padrão, slot, firmware, energia, espaço físico e suporte do sistema. Use esta matriz para evitar os erros mais comuns de upgrade.",
+    date: "2026-10-01",
+    readTime: "14 min",
+    category: "Hardware e Upgrades",
+    content: (
+      <>
+        <p className="lead">
+          A consulta <strong>“compatibilidade PC”</strong> parece simples, mas um upgrade pode falhar em várias
+          camadas diferentes: a peça pode encaixar fisicamente e ainda assim não ser suportada pela BIOS; pode ser
+          reconhecida, mas trabalhar em velocidade menor; pode exigir mais energia, outro cabo, outro modo de boot ou
+          uma atualização de firmware. A regra é validar <strong>compatibilidade elétrica, lógica e física</strong>
+          antes de comprar.
+        </p>
+
+        <h2>Resposta direta: o que verificar antes de qualquer upgrade</h2>
+        <ol>
+          <li>Identifique modelo exato da placa-mãe ou notebook.</li>
+          <li>Leia o manual e a lista de especificações do fabricante.</li>
+          <li>Confirme padrão físico e elétrico da peça.</li>
+          <li>Verifique versão de BIOS/UEFI e requisitos de firmware.</li>
+          <li>Confira fonte, conectores e espaço físico.</li>
+          <li>Faça backup e preserve chave BitLocker antes de mudanças relevantes.</li>
+          <li>Troque uma variável por vez e valide estabilidade depois.</li>
+        </ol>
+
+        <h2>Matriz rápida de compatibilidade</h2>
+        <table>
+          <thead>
+            <tr><th>Upgrade</th><th>O que precisa combinar</th><th>Erro comum</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>RAM</td><td>geração, formato, capacidade suportada, slots, perfil</td><td>comprar DDR incompatível ou misturar kits</td></tr>
+            <tr><td>SSD M.2</td><td>formato, chave, interface SATA/NVMe, comprimento</td><td>confundir M.2 com NVMe</td></tr>
+            <tr><td>GPU</td><td>slot PCIe, espaço, alimentação, fonte e gabinete</td><td>considerar apenas “cabe no PCIe”</td></tr>
+            <tr><td>CPU</td><td>socket, chipset, BIOS, VRM e suporte oficial</td><td>mesmo socket ≠ suporte garantido</td></tr>
+            <tr><td>Windows 11</td><td>CPU suportada, TPM 2.0, Secure Boot e firmware</td><td>olhar só RAM/armazenamento</td></tr>
+          </tbody>
+        </table>
+
+        <h2>1. RAM: geração e formato vêm antes da frequência</h2>
+        <p>
+          DDR4 e DDR5 não são intercambiáveis. Notebooks podem usar SO-DIMM enquanto desktops usam DIMM. Além disso,
+          placa e processador têm limites de capacidade, organização e frequência suportadas.
+        </p>
+        <p>
+          Mesmo quando dois módulos funcionam separadamente, misturar kits pode obrigar o sistema a usar parâmetros
+          mais conservadores ou introduzir instabilidade. Para diagnóstico, valide primeiro em configuração padrão,
+          sem XMP/EXPO.
+        </p>
+
+        <h2>2. M.2 não significa automaticamente NVMe</h2>
+        <p>
+          M.2 descreve o formato físico. A unidade pode usar SATA ou PCIe/NVMe, dependendo do modelo e do slot. Um
+          notebook pode ter conector M.2 que aceita apenas um protocolo ou um tamanho específico.
+        </p>
+        <p>
+          Antes de comprar, confirme no manual o tipo de interface, comprimento suportado e se o slot compartilha
+          recursos com portas SATA ou PCIe.
+        </p>
+
+        <h2>3. SSD novo pode exigir decisão entre clonagem e instalação limpa</h2>
+        <p>
+          Clonar mantém aplicativos e configuração; instalar do zero recomeça o sistema. Nenhuma opção é
+          universalmente “melhor”. Se o sistema atual está saudável e a clonagem é suportada, pode ser a escolha mais
+          rápida. Se há corrupção, migração de firmware ou mudança estrutural, instalação limpa pode fazer mais sentido.
+        </p>
+        <p>
+          Preserve backup e chave BitLocker antes de mexer em partições ou substituir o disco principal.
+        </p>
+
+        <h2>4. GPU: compatibilidade é mais do que o slot PCIe</h2>
+        <p>
+          Mesmo que a placa use PCIe, verifique comprimento, altura, espessura, espaço para cabos, conectores de
+          alimentação e capacidade da fonte. Gabinetes compactos podem impedir a instalação física.
+        </p>
+        <p>
+          Também confira se a fonte oferece os conectores exigidos sem adaptadores improvisados e se há margem para
+          consumo do restante do sistema.
+        </p>
+
+        <h2>5. Fonte: potência nominal sozinha não fecha a conta</h2>
+        <p>
+          Compare potência, conectores, padrão ATX e qualidade/proteções da fonte. Uma fonte “de muitos watts” sem os
+          conectores corretos ou fora de especificação não é uma base segura para uma GPU nova.
+        </p>
+        <p>
+          Não use adaptadores de procedência duvidosa para contornar ausência de conector PCIe/EPS adequado.
+        </p>
+
+        <h2>6. CPU: mesmo socket não garante suporte</h2>
+        <p>
+          Placa-mãe, chipset e versão de BIOS determinam se um processador é oficialmente suportado. A lista de CPUs do
+          fabricante é a referência mais segura.
+        </p>
+        <p>
+          Em alguns casos, a BIOS precisa ser atualizada antes de instalar o processador novo. Faça isso enquanto o
+          sistema ainda funciona com a CPU atual, se o fabricante exigir e o procedimento for suportado.
+        </p>
+
+        <h2>7. BIOS/UEFI: atualize por necessidade, não por ansiedade</h2>
+        <p>
+          Firmware pode ampliar compatibilidade com processadores, memória e dispositivos, mas atualização não deve
+          ser usada como “tentativa genérica” para qualquer upgrade. Leia o changelog e confirme se a versão resolve
+          exatamente a compatibilidade necessária.
+        </p>
+        <p>
+          Garanta alimentação estável e siga o procedimento oficial do modelo.
+        </p>
+
+        <h2>8. Windows 11: compatibilidade do hardware não é só desempenho</h2>
+        <p>
+          Os requisitos do Windows 11 incluem itens de firmware e segurança, como TPM 2.0 e Secure Boot, além de CPU,
+          memória e armazenamento. Um PC pode ter desempenho suficiente e ainda não cumprir os requisitos oficiais.
+        </p>
+
+        <h2>9. BitLocker: prepare a chave antes de mudanças de hardware/firmware</h2>
+        <p>
+          Alterações em firmware, TPM, Secure Boot ou hardware podem levar o BitLocker a solicitar a chave de
+          recuperação. Confirme onde ela está salva antes do upgrade.
+        </p>
+
+        <h2>10. Upgrade em notebook exige verificar peças soldadas</h2>
+        <p>
+          Muitos notebooks modernos têm RAM, armazenamento ou Wi‑Fi parcialmente soldados. “Abrir e trocar” não pode
+          ser presumido. Consulte o manual de serviço e a configuração exata do equipamento.
+        </p>
+
+        <h2>11. Valide uma peça por vez</h2>
+        <p>
+          Se você troca RAM, SSD e GPU ao mesmo tempo e o computador deixa de iniciar, perde a referência de qual
+          mudança causou o problema. Faça alterações em etapas e valide boot, estabilidade e desempenho depois de cada
+          uma.
+        </p>
+
+        <h2>12. Crie um plano de rollback</h2>
+        <p>
+          Guarde a peça antiga até o novo conjunto estar estável. Para SSD, mantenha o disco antigo intacto até
+          confirmar boot, arquivos e aplicativos no novo. Para BIOS, saiba como retornar configurações e onde está a
+          documentação de recuperação.
+        </p>
+
+        <h2>13. Sinais de incompatibilidade depois do upgrade</h2>
+        <ul>
+          <li>PC liga, mas não dá POST após trocar RAM/CPU.</li>
+          <li>SSD não aparece na BIOS/UEFI.</li>
+          <li>GPU funciona, mas reinicia sob carga.</li>
+          <li>Memória opera muito abaixo do esperado ou gera erros.</li>
+          <li>Windows pede chave BitLocker após mudança de firmware.</li>
+        </ul>
+
+        <h2>14. Compatibilidade não é o mesmo que vantagem real</h2>
+        <p>
+          Uma peça pode ser compatível e ainda não resolver seu gargalo. Antes de comprar, meça CPU, memória, disco e
+          GPU durante a carga que você quer melhorar. Upgrade deve responder a um limite observado, não apenas a uma
+          especificação maior.
+        </p>
+
+        <h2>Critérios de parada</h2>
+        <ul>
+          <li>O fabricante não documenta suporte da peça ou da CPU.</li>
+          <li>É necessário adaptar cabos de alimentação fora da especificação.</li>
+          <li>A BIOS necessária exige uma versão intermediária que você não consegue validar.</li>
+          <li>O notebook tem componentes soldados ou montagem delicada sem documentação de serviço.</li>
+          <li>Há dados importantes sem backup antes de mexer no armazenamento principal.</li>
+        </ul>
+
+        <h2>Perguntas frequentes</h2>
+        <h3>Como saber se uma peça é compatível com meu PC?</h3>
+        <p>
+          Comece pelo modelo exato da placa-mãe/notebook, manual e lista de suporte do fabricante. Depois valide
+          padrão físico, interface, energia, firmware e espaço.
+        </p>
+
+        <h3>Qualquer SSD M.2 funciona?</h3>
+        <p>
+          Não. M.2 é formato; o slot pode aceitar SATA, NVMe/PCIe ou ambos, além de comprimentos específicos.
+        </p>
+
+        <h3>Se a CPU tem o mesmo socket, funciona?</h3>
+        <p>
+          Não necessariamente. Chipset, BIOS e suporte oficial da placa-mãe também importam.
+        </p>
+
+        <h3>Preciso formatar ao trocar SSD?</h3>
+        <p>
+          Não obrigatoriamente. Clonagem e instalação limpa são opções diferentes; a escolha depende do estado do
+          sistema e do objetivo da migração.
+        </p>
+
+        <h3>Posso misturar memórias RAM?</h3>
+        <p>
+          Pode funcionar, mas não há garantia de operação nos melhores parâmetros. Para estabilidade, kits
+          compatíveis e validados juntos são mais previsíveis.
+        </p>
+
+        <h2>Resumo prático</h2>
+        <p>
+          <strong>Compatibilidade PC é uma cadeia.</strong> A peça precisa caber, ser eletricamente adequada, ser
+          reconhecida pelo firmware e funcionar com o sistema. Valide manual, suporte oficial, energia e rollback
+          antes de comprar — e troque uma variável por vez.
+        </p>
+
+        <EditorialReferences slug="erros-comuns-upgrade-computador" />
+      </>
+    ),
+  },
+
   "como-saber-quem-esta-usando-meu-wifi": {
     title: "Como ver quem está usando seu Wi‑Fi: identificar dispositivos sem confundir MAC aleatório com invasão",
     excerpt:
