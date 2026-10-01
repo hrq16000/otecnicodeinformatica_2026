@@ -108,14 +108,14 @@ const WAVE_4X: EditorialApproval[] = [
     status: "approved",
     authorType: "organization",
     authorId: INSTITUTIONAL_AUTHOR.id,
-    reviewedAt: "2026-07-12",
+    reviewedAt: "2026-10-01",
     approvedAt: "2026-08-12",
     imageOrigin: "licensed",
     imageLicense: "CC BY 2.0",
     imageAttribution:
       "Foto: Shixart1985 (Wikimedia Commons), CC BY 2.0 — https://commons.wikimedia.org/w/index.php?curid=194512723",
     notes:
-      "Revisão técnica concluída e fact-check registrado em blogEditorialSources.ts; capa é fotografia real licenciada (Openverse/Wikimedia Commons), sem IA.",
+      "Revisão material em 2026-10-01 guiada pelo GSC: 2 impressões, 0 cliques e posição média 9 entre 2026-04-01 e 2026-09-28. O GSC não expôs consultas individuais e nenhuma foi inventada. A versão suplementar preserva a URL e aprofunda preparação, backup, BitLocker, requisitos, mídia oficial, UEFI, seleção segura de disco/partições, ativação, drivers e validação pós-instalação, sem bypass, crack ou imagem modificada.",
   },
 ];
 

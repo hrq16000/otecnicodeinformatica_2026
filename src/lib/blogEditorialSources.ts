@@ -1898,12 +1898,15 @@ export const ARTICLE_SOURCE_MANIFEST: Record<string, ArticleSourceManifest> = {
       "ms-win11-installation-media",
       "ms-win11-activation",
       "ms-bitlocker-recovery",
+      "ms-bitlocker-backup-key",
+      "ms-recovery-options-windows",
+      "ms-boot-uefi-legacy-2026",
     ],
     technicalReview: "reviewed",
     factChecked: true,
-    factCheckedAt: "2026-07-12",
+    factCheckedAt: "2026-10-01",
     notes:
-      "Desalinhamento resolvido: title/H1/introdução/estrutura realinhados à instalação limpa do Windows 11 (guia de preparação e decisão segura). Afirmações materiais (requisitos, mídia oficial, ativação/licença, BitLocker/chave de recuperação) sustentadas por fontes oficiais Microsoft. Sem ativador, crack, bypass de requisitos, imagem modificada ou download de terceiros. Publisher: Microsoft.",
+      "Revisão material em 2026-10-01 guiada pelo GSC: 2 impressões, 0 cliques e posição média 9 entre 2026-04-01 e 2026-09-28. O GSC não expôs queries individuais para a URL e nenhuma consulta foi inventada. A versão suplementar aprofunda backup, BitLocker, requisitos, mídia oficial, UEFI, seleção segura de disco/partições, ativação, drivers, pós-instalação e critérios de parada. Mantém proibição explícita de ativadores, cracks, bypass de requisitos, ISOs modificadas e downloads de terceiros. Fontes oficiais Microsoft ficam visíveis.",
   },
   "quando-trocar-hd-por-ssd": {
     slug: "quando-trocar-hd-por-ssd",
