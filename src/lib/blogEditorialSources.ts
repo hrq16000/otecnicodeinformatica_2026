@@ -1122,6 +1122,31 @@ export const EDITORIAL_SOURCES: Record<string, EditorialSource> = {
       "O arquivo de configuração concentra a maior parte do estado necessário para reconstrução do firewall.",
     ],
   },
+  "ms-ad-ds-install-2026": {
+    id: "ms-ad-ds-install-2026",
+    title: "Instalar o Active Directory Domain Services no Windows Server",
+    publisher: "Microsoft Learn",
+    url: "https://learn.microsoft.com/pt-br/windows-server/identity/ad-ds/deploy/install-active-directory-domain-services--level-100-",
+    accessedAt: "2026-10-01",
+    sourceType: "official",
+    supports: [
+      "A Microsoft documenta instalação do AD DS pelo Server Manager ou PowerShell e diferencia nova floresta, domínio adicional e controlador adicional em domínio existente.",
+      "A documentação atual se aplica a Windows Server 2025, 2022, 2019 e 2016 e inclui validação de pré-requisitos e credenciais conforme o cenário.",
+    ],
+  },
+  "ms-ad-ds-system-state-backup-2026": {
+    id: "ms-ad-ds-system-state-backup-2026",
+    title: "Active Directory Forest Recovery - Back up the System State data",
+    publisher: "Microsoft Learn",
+    url: "https://learn.microsoft.com/en-us/windows-server/identity/ad-ds/manage/forest-recovery-guide/ad-forest-recovery-backing-up-system-state",
+    accessedAt: "2026-10-01",
+    sourceType: "official",
+    supports: [
+      "A Microsoft documenta backup de estado do sistema como parte do processo de recuperação de controladores de domínio.",
+      "O guia de recuperação de floresta trata backup e restauração do AD como procedimentos próprios, não como simples cópia de arquivos ou snapshot genérico.",
+    ],
+  },
+
   "ms-ad-ds-overview": {
     id: "ms-ad-ds-overview",
     title: "Active Directory Domain Services overview",
@@ -2771,12 +2796,18 @@ export const ARTICLE_SOURCE_MANIFEST: Record<string, ArticleSourceManifest> = {
   },
   "como-configurar-active-directory": {
     slug: "como-configurar-active-directory",
-    sources: ["ms-ad-ds-overview", "ms-ad-ds-dns", "ms-ad-ds-security"],
+    sources: [
+      "ms-ad-ds-overview",
+      "ms-ad-ds-dns",
+      "ms-ad-ds-security",
+      "ms-ad-ds-install-2026",
+      "ms-ad-ds-system-state-backup-2026",
+    ],
     technicalReview: "reviewed",
     factChecked: true,
-    factCheckedAt: "2026-09-25",
+    factCheckedAt: "2026-10-01",
     notes:
-      "Reescrita material completa em 2026-09-25 com documentação Microsoft atual para Windows Server: AD DS, dependência de DNS, segurança, redundância, GPO, backup e critérios de parada.",
+      "Revisão material em 2026-10-01 guiada pelo GSC: 1 impressão, 0 cliques e posição 44 entre 2026-04-01 e 2026-09-28. A única query individual exposta foi 'servidor ad'. A versão suplementar organiza a implantação por arquitetura: nova floresta versus DC adicional, namespace/DNS, IP estável, promoção, DSRM, validação de SYSVOL/NETLOGON, OUs/GPOs, redundância/replicação, horário, contas privilegiadas e backup de estado do sistema. Fontes Microsoft Learn atuais para Windows Server ficam visíveis; nenhuma query adicional foi inventada.",
   },
 
   "como-configurar-repetidor-wifi": {
