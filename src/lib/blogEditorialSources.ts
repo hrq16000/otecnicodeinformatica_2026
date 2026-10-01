@@ -99,6 +99,7 @@ export const ALLOWED_SOURCE_HOSTS = [
   "www.nsa.gov",
   "www.dell.com",
   "support.hp.com",
+  "download.lenovo.com",
   "acm.org",
   "www.acm.org",
   "ccecc.acm.org",
@@ -794,6 +795,31 @@ export const EDITORIAL_SOURCES: Record<string, EditorialSource> = {
       "A HP documenta um hard reset com energia externa removida em cenários compatíveis, reforçando que o procedimento depende do equipamento e deve seguir suporte oficial.",
     ],
   },
+  "dell-lcd-repair-options-2026": {
+    id: "dell-lcd-repair-options-2026",
+    title: "Opções de reparo para telas LCD rachadas e quebradas em notebooks, tablets e telefones Dell",
+    publisher: "Dell Support",
+    url: "https://www.dell.com/support/kbdoc/pt-br/000123759/op%C3%A7%C3%B5es-de-reparo-para-telas-lcd-rachadas-e-quebradas-em-notebooks-tablets-e-telefones-dell",
+    accessedAt: "2026-10-01",
+    sourceType: "official",
+    supports: [
+      "A Dell orienta verificar a elegibilidade de componentes para substituição pelo cliente e consultar o suporte/manual do produto antes de reparos de tela.",
+      "Danos de tela podem exigir reparo específico do produto e cobertura/garantia deve ser verificada antes da abertura do equipamento.",
+    ],
+  },
+  "lenovo-lcd-panel-replacement-2026": {
+    id: "lenovo-lcd-panel-replacement-2026",
+    title: "Substituindo o painel do LCD",
+    publisher: "Lenovo",
+    url: "https://download.lenovo.com/pccbbs/pubs/v310z/pt-br/contents/fru_lcdpanel.html",
+    accessedAt: "2026-10-01",
+    sourceType: "official",
+    supports: [
+      "A Lenovo documenta a substituição de painel como procedimento dependente de sequência específica do equipamento e orienta desligar e desconectar cabos antes do reparo.",
+      "O procedimento oficial mostra que acesso ao painel e ao cabo LCD depende da arquitetura do equipamento, reforçando que não existe uma desmontagem universal.",
+    ],
+  },
+
   "dell-laptop-no-power-2026": {
     id: "dell-laptop-no-power-2026",
     title: "Solucionar problemas de energia em um notebook Dell",
@@ -1999,13 +2025,15 @@ export const ARTICLE_SOURCE_MANIFEST: Record<string, ArticleSourceManifest> = {
   },
   "como-trocar-tela-notebook-passo-a-passo": {
     slug: "como-trocar-tela-notebook-passo-a-passo",
-    sources: [],
+    sources: [
+      "dell-lcd-repair-options-2026",
+      "lenovo-lcd-panel-replacement-2026",
+    ],
     technicalReview: "reviewed",
     factChecked: true,
-    factCheckedAt: "2026-09-29",
-    stableKnowledge: true,
+    factCheckedAt: "2026-10-01",
     notes:
-      "Revisão material em 2026-09-29 guiada pelo GSC: remove preços, marcas, prazos artificiais de teste, promessa de diagnóstico em minutos, alegações de laboratório/garantia e procedimentos genéricos sem relação com tela. Reorganiza o conteúdo em diagnóstico do sintoma, compatibilidade do painel, desenergização, cabo/conector, teste antes do fechamento, critérios de parada e validação pós-troca. Conhecimento técnico estável — sem fonte visível.",
+      "Revisão material em 2026-10-01 guiada pelo GSC: 23 impressões, 0 cliques e posição média ~25,35 entre 2026-04-01 e 2026-09-28. Queries reais incluem 'como trocar a tela do notebook', 'como trocar tela de notebook', 'troca de tela de notebook', 'troca tela notebook', 'trocar tela do notebook' e variações. A versão suplementar aprofunda diagnóstico antes da compra, compatibilidade por painel/conector/resolução/fixação/touch, desenergização e isolamento de bateria, cabo/dobradiça, teste antes do fechamento e critérios de parada. Fontes oficiais Dell e Lenovo ficam visíveis; nenhuma query adicional foi inventada.",
   },
   "como-limpar-notebook-por-dentro": {
     slug: "como-limpar-notebook-por-dentro",
