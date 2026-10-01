@@ -596,14 +596,14 @@ const WAVE_9C: EditorialApproval[] = [
     status: "approved",
     authorType: "organization",
     authorId: INSTITUTIONAL_AUTHOR.id,
-    reviewedAt: "2026-09-02",
+    reviewedAt: "2026-10-01",
     approvedAt: "2026-08-25",
     imageOrigin: "licensed",
     imageLicense: "CC BY-SA 2.5",
     imageAttribution:
       "Foto: Thomas Rosenau (Wikimedia Commons), CC BY-SA 2.5 — https://commons.wikimedia.org/wiki/File:Serial_ATA_hard_disk_connected.jpg",
     notes:
-      "Satélite de erro específico escrito do zero na Onda 9C; revisão material de segurança e fontes oficiais concluída em 2026-09-02; capa é fotografia real licenciada, sem IA.",
+      "Revisão material em 2026-10-01 guiada pelo GSC: 5 impressões, 0 cliques e posição média ~38,8 entre 2026-04-01 e 2026-09-28. Queries reais cobrem 'no boot device found', 'no bootable device como resolver' e 'no bootable device please restart'. A versão suplementar preserva a URL e reorganiza o diagnóstico em detecção do disco, entrada de boot, UEFI/Legacy, WinRE, BCDBoot e proteção BitLocker, sem formatação destrutiva por tentativa.",
   },
   {
     slug: "troquei-o-ssd-e-o-pc-so-abre-a-bios",
