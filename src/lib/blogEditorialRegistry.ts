@@ -745,14 +745,14 @@ const WAVE_10E: EditorialApproval[] = [
     status: "approved",
     authorType: "organization",
     authorId: INSTITUTIONAL_AUTHOR.id,
-    reviewedAt: "2026-08-26",
+    reviewedAt: "2026-09-30",
     approvedAt: "2026-08-26",
     imageOrigin: "licensed",
     imageLicense: "CC BY-SA 2.0",
     imageAttribution:
       "Foto: Cheon Fong Liew (Wikimedia Commons), CC BY-SA 2.0 — https://commons.wikimedia.org/wiki/File:Dell_Color_Laser_Network_Printer_1320cn_ports.jpg",
     notes:
-      "Satélite escrito do zero na Onda 10C (Lote 2); fact-check registrado em blogEditorialSources.ts; capa é fotografia real licenciada, sem IA.",
+      "Revisão material em 2026-09-30 guiada pelo GSC: 5 impressões, 0 cliques e posição média ~47,8 entre 2026-04-01 e 2026-09-28. Queries reais 'como tirar impressora do offline' e 'porque a impressora fica offline' orientam a versão suplementar, que preserva a URL e separa equipamento, rede, porta, fila, spooler e driver.",
   },
   {
     slug: "fila-de-impressao-travada-spooler-windows",
