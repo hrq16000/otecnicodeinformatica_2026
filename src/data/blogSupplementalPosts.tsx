@@ -11,6 +11,182 @@ import { MODALIDADES } from "@/lib/precosConfig";
  * do blog compõem base + suplementares + programáticos.
  */
 export const blogSupplementalPosts: Record<string, BlogPostContent> = {
+  "como-resolver-tela-azul-windows": {
+    title: "Tela azul no Windows: como investigar o erro sem formatar por tentativa",
+    excerpt:
+      "A tela azul é um bug check do Windows: o código de parada é uma pista, não um diagnóstico completo. Veja como registrar o erro, observar o contexto, testar alterações recentes e decidir quando parar.",
+    date: "2026-10-01",
+    readTime: "15 min",
+    category: "Windows",
+    content: (
+      <>
+        <p className="lead">
+          Uma <strong>tela azul</strong> no Windows indica que o sistema encontrou uma condição crítica e interrompeu a execução
+          para evitar continuar em um estado inconsistente. O texto ou <em>stop code</em> exibido ajuda na investigação, mas
+          <strong> não identifica sozinho a peça ou o software culpado</strong>.
+        </p>
+
+        <h2>Resposta direta: o que fazer quando aparece tela azul</h2>
+        <ol>
+          <li>Fotografe ou anote o código de parada e qualquer nome de arquivo exibido.</li>
+          <li>Registre o que estava acontecendo imediatamente antes do erro.</li>
+          <li>Observe se a falha começou depois de atualização, driver, programa ou hardware novo.</li>
+          <li>Se o Windows inicia, faça backup dos arquivos importantes antes de testes mais invasivos.</li>
+          <li>Teste uma mudança por vez para conseguir relacionar causa e efeito.</li>
+          <li>Se a tela azul impede a inicialização, use as opções oficiais do Ambiente de Recuperação do Windows.</li>
+          <li>Se houver sinais de falha física, perda de dados ou corrupção crescente, interrompa os testes.</li>
+        </ol>
+
+        <h2>O código da tela azul é uma pista, não um veredito</h2>
+        <p>
+          A Microsoft trata a tela azul como um <em>bug check</em>. Cada bug check possui um código e parâmetros que podem
+          acrescentar contexto. Dois computadores podem exibir o mesmo código por causas diferentes; por isso, trocar RAM,
+          SSD, placa-mãe ou reinstalar o Windows apenas pelo nome do erro é diagnóstico por tentativa.
+        </p>
+
+        <h2>Antes de corrigir, descubra quando o erro acontece</h2>
+        <table>
+          <thead><tr><th>Momento</th><th>Hipóteses que ganham relevância</th><th>Próxima observação</th></tr></thead>
+          <tbody>
+            <tr><td>Logo ao iniciar</td><td>driver, boot, atualização, armazenamento</td><td>modo de recuperação e alterações recentes</td></tr>
+            <tr><td>Durante jogo ou carga pesada</td><td>driver, temperatura, energia, hardware</td><td>temperaturas, estabilidade e evento repetível</td></tr>
+            <tr><td>Ao conectar periférico</td><td>driver ou dispositivo</td><td>reproduzir sem o periférico</td></tr>
+            <tr><td>Após atualização</td><td>driver, sistema ou firmware</td><td>histórico e opções oficiais de reversão</td></tr>
+            <tr><td>Aleatoriamente</td><td>memória, armazenamento, energia, driver</td><td>padrão, frequência e logs</td></tr>
+          </tbody>
+        </table>
+
+        <h2>1. Registre a mensagem completa</h2>
+        <p>
+          Fotografe o código de parada. Se houver nome de driver ou arquivo, registre também. Evite pesquisar apenas uma
+          palavra isolada e aplicar qualquer solução encontrada: o contexto do equipamento importa.
+        </p>
+
+        <h2>2. Verifique alterações recentes</h2>
+        <p>
+          Se a falha começou imediatamente depois de instalar driver, atualização, software ou hardware, essa mudança
+          merece prioridade na investigação. Correlação temporal não prova causa, mas reduz o espaço de busca.
+        </p>
+
+        <h2>3. Não use atualizador de driver genérico como primeira resposta</h2>
+        <p>
+          Drivers devem vir do Windows Update ou do fabricante do equipamento/componente quando necessário. Utilitários
+          de terceiros que prometem “corrigir todos os drivers” podem introduzir versões inadequadas e dificultar o diagnóstico.
+        </p>
+
+        <h2>4. Se o Windows ainda inicia, proteja os dados primeiro</h2>
+        <p>
+          Antes de executar testes destrutivos, restauração, reinstalação ou procedimentos em armazenamento, copie os dados
+          importantes. Uma tela azul pode ser lógica, mas também pode aparecer em cenários de hardware instável.
+        </p>
+
+        <h2>5. Memória RAM é uma hipótese, não a resposta automática</h2>
+        <p>
+          Erros de memória podem causar travamentos e bug checks, mas o código da tela azul não confirma sozinho um módulo
+          defeituoso. Testes de memória precisam ser interpretados junto com estabilidade, configuração e alterações recentes.
+        </p>
+
+        <h2>6. Armazenamento exige cuidado extra</h2>
+        <p>
+          Se há lentidão anormal, arquivos corrompidos, desaparecimento do disco ou erros de leitura, evite insistir em
+          verificações que escrevam intensamente no dispositivo antes de proteger os dados. Nesses casos, recuperação de
+          dados pode ser mais importante que “corrigir o Windows”.
+        </p>
+
+        <h2>7. Temperatura e energia entram no diagnóstico quando o contexto aponta para isso</h2>
+        <p>
+          Uma falha sob carga pode justificar inspeção térmica e elétrica, mas “tela azul = superaquecimento” é uma
+          simplificação incorreta. Procure repetibilidade: mesma carga, mesma condição, mesmo comportamento.
+        </p>
+
+        <h2>8. Use o Ambiente de Recuperação quando o Windows não inicia</h2>
+        <p>
+          O Windows RE oferece ferramentas como Reparo de Inicialização, Configurações de Inicialização e Desinstalar
+          Atualizações. Algumas ações podem exigir a chave do BitLocker em dispositivos criptografados.
+        </p>
+
+        <h2>9. Modo de Segurança serve para reduzir variáveis</h2>
+        <p>
+          Quando disponível, iniciar com um conjunto reduzido de drivers e serviços ajuda a comparar o comportamento do
+          sistema. Se o problema desaparece, isso não identifica automaticamente o culpado, mas direciona a investigação
+          para software, driver ou serviço que não está ativo nesse modo.
+        </p>
+
+        <h2>10. Arquivos de despejo podem explicar mais que a foto da tela</h2>
+        <p>
+          O Windows pode registrar arquivos de despejo com informações do bug check. A documentação Microsoft mostra que
+          os parâmetros do código e o dump podem fornecer contexto adicional para análise com ferramentas de depuração.
+        </p>
+
+        <h2>11. Um único erro e erros repetidos são situações diferentes</h2>
+        <p>
+          Uma ocorrência isolada após atualização ou desligamento inesperado merece registro e observação. Erros recorrentes,
+          especialmente sob a mesma condição, justificam investigação sistemática.
+        </p>
+
+        <h2>12. Não formate o computador antes de separar hardware de software</h2>
+        <p>
+          Reinstalar o Windows pode mascarar temporariamente um problema de driver ou configuração e não corrige memória,
+          armazenamento, energia ou placa defeituosos. Formatação deve ser uma decisão com motivo claro, não o primeiro teste.
+        </p>
+
+        <h2>13. Troque uma variável por vez</h2>
+        <p>
+          Atualizar BIOS, trocar RAM, reinstalar driver e formatar no mesmo dia elimina a capacidade de saber o que resolveu
+          ou piorou. Uma sequência controlada produz diagnóstico mais confiável.
+        </p>
+
+        <h2>14. Preserve evidências antes de limpar o sistema</h2>
+        <p>
+          Antes de apagar logs, redefinir o Windows ou substituir peças, anote códigos, datas e condições. Essas informações
+          ajudam a distinguir um evento isolado de um padrão.
+        </p>
+
+        <h2>Critérios de parada</h2>
+        <ul>
+          <li>O disco apresenta sinais de falha ou dados importantes já estão inacessíveis.</li>
+          <li>O equipamento desliga, aquece excessivamente ou apresenta cheiro/sinais elétricos anormais.</li>
+          <li>A tela azul ocorre durante atualização de firmware ou logo após alteração de BIOS que você não domina.</li>
+          <li>O Windows RE solicita BitLocker e a chave de recuperação não está disponível.</li>
+          <li>Os erros persistem mesmo após remover mudanças recentes e testes básicos controlados.</li>
+        </ul>
+
+        <h2>Perguntas frequentes</h2>
+        <h3>Tela azul significa problema na memória RAM?</h3>
+        <p>
+          Não necessariamente. RAM é uma das hipóteses possíveis. Drivers, armazenamento, energia, firmware e outros
+          componentes também podem participar. O código e o contexto precisam ser analisados juntos.
+        </p>
+
+        <h3>Posso continuar usando o computador depois de uma tela azul?</h3>
+        <p>
+          Se foi um evento isolado e o sistema voltou ao normal, registre o código e observe. Se repetir, houver corrupção
+          de arquivos ou sinais físicos, proteja os dados e investigue antes de continuar usando normalmente.
+        </p>
+
+        <h3>Formatar resolve tela azul?</h3>
+        <p>
+          Pode resolver causas exclusivamente de software em alguns cenários, mas não é diagnóstico e não corrige hardware
+          defeituoso. Reinstalar deve vir depois de proteger dados e excluir hipóteses relevantes.
+        </p>
+
+        <h3>Qual é a primeira coisa que devo fazer?</h3>
+        <p>
+          Registrar o código de parada e o contexto. Sem isso, a investigação começa perdendo a principal evidência disponível.
+        </p>
+
+        <h2>Resumo prático</h2>
+        <p>
+          <strong>Tela azul é um sintoma crítico, não um diagnóstico fechado.</strong> Registre o código, relacione-o ao
+          contexto, priorize mudanças recentes, proteja seus dados e teste uma variável por vez. Quando houver sinais de
+          falha física ou risco de perda de dados, pare antes de transformar um problema recuperável em dano maior.
+        </p>
+
+        <EditorialReferences slug="como-resolver-tela-azul-windows" />
+      </>
+    ),
+  },
+
   "como-organizar-arquivos-windows-iniciantes": {
     title: "Como organizar arquivos no computador: pastas, nomes, busca, backup e rotina simples",
     excerpt:
