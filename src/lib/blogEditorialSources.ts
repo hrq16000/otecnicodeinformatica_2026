@@ -2653,13 +2653,17 @@ export const ARTICLE_SOURCE_MANIFEST: Record<string, ArticleSourceManifest> = {
   },
   "arquivo-corrompido-nao-abre-o-que-fazer": {
     slug: "arquivo-corrompido-nao-abre-o-que-fazer",
-    sources: [],
+    sources: [
+      "ms-file-history",
+      "ms-windows-file-recovery",
+      "ms-onedrive-folder-backup",
+      "ms-chkdsk-2026",
+    ],
     technicalReview: "reviewed",
     factChecked: true,
-    factCheckedAt: "2026-09-03",
-    stableKnowledge: true,
+    factCheckedAt: "2026-10-01",
     notes:
-      "Revisão concluída (Onda 11G): trabalho sempre sobre cópia, distinção entre arquivo corrompido e programa incompatível, leitura de sinais de mídia em falha, recuperação por versões anteriores e limite claro para tentativa em disco com defeito. Conhecimento técnico estável — sem fonte visível.",
+      "Revisão material em 2026-10-01 guiada pelo GSC: 1 impressão, 0 cliques e posição 38 entre 2026-04-01 e 2026-09-28 para a query real 'arquivo corrompido'. A versão suplementar preserva o original, diferencia corrupção de incompatibilidade/download incompleto, prioriza versões anteriores/backup, limita CHKDSK ao sistema de arquivos, separa recuperação de arquivo apagado de reparo de documento e define quando vários arquivos falhando indicam problema de armazenamento. Fontes Microsoft visíveis; nenhuma query adicional foi inventada.",
   },
   "como-configurar-2fa-em-tudo": {
     slug: "como-configurar-2fa-em-tudo",

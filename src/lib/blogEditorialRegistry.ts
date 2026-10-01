@@ -1213,14 +1213,14 @@ const WAVE_11G: EditorialApproval[] = [
     status: "approved",
     authorType: "organization",
     authorId: INSTITUTIONAL_AUTHOR.id,
-    reviewedAt: "2026-09-03",
+    reviewedAt: "2026-10-01",
     approvedAt: "2026-09-03",
     imageOrigin: "licensed",
     imageLicense: "CC BY 4.0",
     imageAttribution:
       "Foto: Mk2010 (Wikimedia Commons), CC BY 4.0 — https://commons.wikimedia.org/wiki/File:Hard_disk_drive_platter,_Samsung_MP0402H.jpg",
     notes:
-      "Procedimento para arquivo que não abre escrito do zero na Onda 11G: separa arquivo corrompido de programa incompatível, protege a cópia original e define quando o caso vira recuperação de dados. Não canibaliza os artigos de HD com defeito nem os de backup. Capa é fotografia real licenciada, sem IA.",
+      "Revisão material em 2026-10-01 guiada pelo GSC: query real 'arquivo corrompido' com 1 impressão e posição 38 entre 2026-04-01 e 2026-09-28. A versão suplementar preserva a URL e aprofunda preservação da cópia original, incompatibilidade versus corrupção, versões anteriores/backup, limite do CHKDSK e critérios para migrar o caso para recuperação de dados.",
   },
 ];
 
