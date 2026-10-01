@@ -1681,6 +1681,24 @@ const WAVE_11Z: EditorialApproval[] = [
 ];
 
 
+const WAVE_12A: EditorialApproval[] = [
+  {
+    slug: "como-resolver-tela-azul-windows",
+    status: "approved",
+    authorType: "organization",
+    authorId: INSTITUTIONAL_AUTHOR.id,
+    reviewedAt: "2026-10-01",
+    approvedAt: "2026-08-12",
+    imageOrigin: "licensed",
+    imageLicense: "CC BY 4.0",
+    imageAttribution:
+      "Foto: QueenBarenziah (Wikimedia Commons), CC BY 4.0 — https://commons.wikimedia.org/w/index.php?curid=130534314",
+    notes:
+      "Revisão material em 2026-10-01 guiada pelo GSC: a query real 'tela azul' teve 1 impressão, 0 cliques e posição média 63 no período fechado até 2026-09-28. A versão suplementar preserva a URL e aprofunda bug checks, contexto, alterações recentes, Windows RE, dumps e critérios de parada.",
+  },
+];
+
+
 export const APPROVED_EDITORIAL_CONTENT = new Map<string, EditorialApproval>([
 
   ...FIRST_WAVE_SLUGS.map((slug) => [
@@ -1755,6 +1773,7 @@ export const APPROVED_EDITORIAL_CONTENT = new Map<string, EditorialApproval>([
   ...WAVE_11X.map((a) => [a.slug, a] as [string, EditorialApproval]),
   ...WAVE_11Y.map((a) => [a.slug, a] as [string, EditorialApproval]),
   ...WAVE_11Z.map((a) => [a.slug, a] as [string, EditorialApproval]),
+  ...WAVE_12A.map((a) => [a.slug, a] as [string, EditorialApproval]),
 
 ]);
 
