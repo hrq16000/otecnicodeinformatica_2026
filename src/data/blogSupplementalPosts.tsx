@@ -11,6 +11,193 @@ import { MODALIDADES } from "@/lib/precosConfig";
  * do blog compõem base + suplementares + programáticos.
  */
 export const blogSupplementalPosts: Record<string, BlogPostContent> = {
+  "como-melhorar-sinal-wifi-em-casa": {
+    title: "Sinal de Wi-Fi fraco: como melhorar a cobertura sem trocar tudo por tentativa",
+    excerpt:
+      "Sinal de Wi-Fi fraco não é a mesma coisa que internet lenta. Veja como separar cobertura, interferência, dispositivo e provedor antes de mover o roteador, trocar canal ou comprar repetidor.",
+    date: "2026-10-01",
+    readTime: "15 min",
+    category: "Redes e Wi-Fi",
+    content: (
+      <>
+        <p className="lead">
+          Quando o <strong>sinal de Wi-Fi está fraco</strong>, o primeiro passo não é comprar um repetidor nem trocar
+          o roteador. Primeiro descubra <strong>onde a degradação acontece</strong>: em um único aparelho, em um cômodo,
+          em uma faixa de frequência, em toda a rede sem fio ou também por cabo. Essa separação evita tratar cobertura
+          como se fosse falha da operadora — e evita trocar equipamento quando o problema está no cliente ou na posição
+          do ponto de acesso.
+        </p>
+
+        <h2>Resposta direta: como melhorar sinal de Wi-Fi fraco</h2>
+        <ol>
+          <li>Compare o mesmo aparelho perto e longe do roteador.</li>
+          <li>Teste outro aparelho no mesmo ponto para separar cliente de cobertura.</li>
+          <li>Quando possível, compare com uma conexão por cabo para separar Wi-Fi de internet.</li>
+          <li>Reposicione o roteador em local aberto, mais central e menos obstruído.</li>
+          <li>Evite esconder o equipamento atrás de móveis, dentro de armários ou junto de fontes fortes de interferência.</li>
+          <li>Use a banda adequada ao alcance e à capacidade dos dispositivos, sem assumir uma regra universal.</li>
+          <li>Atualize firmware do roteador e sistema/driver do cliente quando houver atualização oficial aplicável.</li>
+          <li>Se a casa exigir múltiplos pontos, considere solução mesh ou pontos adicionais bem posicionados.</li>
+        </ol>
+
+        <h2>Sinal fraco, internet lenta e queda de conexão são problemas diferentes</h2>
+        <table>
+          <thead>
+            <tr><th>Sintoma</th><th>Hipótese principal</th><th>Teste útil</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Sinal cai com a distância</td><td>cobertura/obstáculos</td><td>comparar perto e longe</td></tr>
+            <tr><td>Sinal cheio, mas navegação lenta</td><td>capacidade, congestionamento ou provedor</td><td>comparar cabo e Wi-Fi</td></tr>
+            <tr><td>Só um dispositivo é ruim</td><td>cliente, driver, antena ou economia de energia</td><td>testar outro aparelho no mesmo local</td></tr>
+            <tr><td>Todos ficam ruins no mesmo cômodo</td><td>cobertura/interferência local</td><td>medir em pontos intermediários</td></tr>
+            <tr><td>Quedas mesmo perto do roteador</td><td>roteador, firmware, cliente ou interferência</td><td>comparar dispositivos e registrar horário</td></tr>
+          </tbody>
+        </table>
+
+        <h2>1. Comece pelo teste mais simples: perto versus longe</h2>
+        <p>
+          Use o mesmo notebook ou celular e repita a mesma atividade perto do roteador e no ponto problemático. Se o
+          comportamento melhora muito perto do equipamento, a hipótese de cobertura ganha força. Se continua ruim ao
+          lado do roteador, não faz sentido tratar apenas alcance.
+        </p>
+
+        <h2>2. Compare outro dispositivo no mesmo ponto</h2>
+        <p>
+          Um adaptador Wi-Fi antigo, driver inadequado, antena danificada ou política agressiva de economia de energia
+          pode parecer “sinal ruim da casa”. Se dois aparelhos diferentes se comportam de forma muito diferente no
+          mesmo local, investigue o cliente antes de redesenhar a rede.
+        </p>
+
+        <h2>3. Compare Wi-Fi com cabo quando o objetivo é separar a rede local da internet</h2>
+        <p>
+          A FCC destaca que a experiência dentro de casa depende também da rede Wi-Fi, da posição do roteador e dos
+          dispositivos conectados. Uma conexão cabeada compatível pode servir como referência para verificar se o
+          gargalo está no enlace de internet ou no trecho sem fio.
+        </p>
+
+        <h2>4. Posição do roteador importa mais do que parece</h2>
+        <p>
+          Prefira um ponto aberto e relativamente central em relação às áreas de uso. Armários fechados, móveis
+          volumosos, cantos extremos da casa e obstáculos densos podem reduzir a área útil do sinal. Não existe uma
+          altura ou distância universal: o objetivo é reduzir barreiras e melhorar a geometria entre ponto de acesso e
+          clientes.
+        </p>
+
+        <h2>5. 2,4 GHz, 5 GHz e 6 GHz não têm um “vencedor” universal</h2>
+        <p>
+          Faixas diferentes oferecem combinações diferentes de alcance, capacidade, disponibilidade de canais e
+          compatibilidade. O melhor resultado depende do ambiente e do dispositivo. Se o roteador gerencia bandas
+          automaticamente, não desative esse comportamento apenas porque um tutorial recomenda separar SSIDs.
+        </p>
+
+        <h2>6. Evite regras fixas de canal</h2>
+        <p>
+          Não existe um canal “melhor para todo mundo”. Vizinhos, largura de canal, outros pontos de acesso e o próprio
+          espectro disponível mudam de ambiente para ambiente. Trocar manualmente sem medir pode piorar o cenário.
+        </p>
+
+        <h2>7. Interferência não é sinônimo de “muitos vizinhos”</h2>
+        <p>
+          Redes próximas são apenas uma parte do ambiente de rádio. Outros emissores, obstáculos, reflexões e
+          dispositivos legados também podem afetar a experiência. Use comparação por local e horário em vez de concluir
+          apenas pela quantidade de SSIDs visíveis.
+        </p>
+
+        <h2>8. Mesh pode resolver cobertura; não corrige qualquer problema</h2>
+        <p>
+          A Wi-Fi Alliance descreve soluções residenciais de múltiplos pontos para ampliar cobertura. Isso é útil quando
+          um único ponto de acesso não cobre bem todo o imóvel. Porém, adicionar nós não corrige automaticamente link de
+          internet ruim, cliente defeituoso ou posicionamento inadequado.
+        </p>
+
+        <h2>9. O ponto adicional também precisa receber um bom enlace</h2>
+        <p>
+          Repetidor ou nó mesh instalado exatamente no “ponto morto” pode receber sinal ruim e retransmitir uma conexão
+          já degradada. Posicione o ponto adicional onde ainda exista conexão consistente com o restante da rede ou use
+          backhaul cabeado quando o projeto e os equipamentos suportarem.
+        </p>
+
+        <h2>10. Repetidor simples e mesh não são equivalentes</h2>
+        <p>
+          Ambos podem ampliar cobertura, mas topologia, gerenciamento, roaming e capacidade variam entre produtos. Não
+          compre pela palavra “mesh” ou “repetidor” isoladamente; verifique número de ambientes, paredes, dispositivos,
+          disponibilidade de Ethernet e compatibilidade do ecossistema.
+        </p>
+
+        <h2>11. Mais potência não é uma solução completa</h2>
+        <p>
+          Comunicação Wi-Fi é bidirecional: o roteador precisa alcançar o cliente e o cliente também precisa responder.
+          Aumentar potência de um lado não elimina limitações de antena, interferência e capacidade do outro lado.
+        </p>
+
+        <h2>12. Firmware e atualizações do cliente podem alterar estabilidade</h2>
+        <p>
+          Quando há falha recorrente, consulte atualizações oficiais do fabricante do roteador, notebook, placa Wi-Fi
+          ou sistema operacional. Não instale firmware de procedência duvidosa nem driver genérico aleatório.
+        </p>
+
+        <h2>13. Quantidade de dispositivos também importa</h2>
+        <p>
+          Muitos dispositivos ativos podem disputar tempo de rádio e largura de banda. O sintoma pode ser lentidão ou
+          latência alta mesmo com indicador de sinal forte. Nessa situação, mover o roteador pode não resolver.
+        </p>
+
+        <h2>14. Faça um mapa prático da casa</h2>
+        <p>
+          Escolha pontos fixos — perto do roteador, corredor, quarto e ponto problemático — e repita o mesmo teste com
+          o mesmo dispositivo. O objetivo é descobrir onde a degradação começa e se ela é consistente.
+        </p>
+
+        <h2>15. Não use “barrinhas de sinal” como única métrica</h2>
+        <p>
+          O indicador gráfico é uma simplificação e varia entre sistemas. Combine a percepção de sinal com estabilidade,
+          latência e desempenho real. Duas barras em dispositivos diferentes não são uma unidade comparável.
+        </p>
+
+        <h2>16. Quando vale redesenhar a rede</h2>
+        <p>
+          Se a cobertura ruim é estrutural — imóvel grande, múltiplos pavimentos, paredes densas ou ponto principal em
+          posição inevitavelmente ruim — pode ser mais previsível usar múltiplos pontos de acesso ou mesh bem
+          distribuído do que perseguir ajustes de canal indefinidamente.
+        </p>
+
+        <h2>Critérios de parada</h2>
+        <ul>
+          <li>O problema também ocorre por cabo e não apenas no Wi-Fi.</li>
+          <li>O roteador reinicia, aquece excessivamente ou perde configurações.</li>
+          <li>Há ambiente corporativo com controladora, VLANs ou políticas que você não administra.</li>
+          <li>O acesso ao equipamento é da operadora e mudanças podem interromper telefonia, TV ou autenticação.</li>
+          <li>Há necessidade de passar cabos, instalar pontos em altura ou trabalhar próximo de rede elétrica.</li>
+        </ul>
+
+        <h2>Perguntas frequentes</h2>
+        <h3>Sinal de Wi-Fi fraco significa que a internet da operadora está ruim?</h3>
+        <p>Não. Cobertura Wi-Fi e entrega da internet são camadas diferentes.</p>
+
+        <h3>Trocar o roteador sempre melhora o sinal?</h3>
+        <p>Não. Pode ajudar quando o equipamento é inadequado ou defeituoso, mas posição e obstáculos continuam relevantes.</p>
+
+        <h3>Mesh é melhor que repetidor?</h3>
+        <p>
+          Não existe resposta universal. Mesh tende a oferecer gerenciamento integrado entre múltiplos pontos, mas o
+          resultado depende do posicionamento, do backhaul e da capacidade dos equipamentos.
+        </p>
+
+        <h3>Existe um canal Wi-Fi ideal?</h3>
+        <p>Não para todos os ambientes. A escolha depende do espectro local, largura de canal e equipamentos presentes.</p>
+
+        <h2>Resumo prático</h2>
+        <p>
+          <strong>Sinal fraco deve ser investigado como cobertura antes de virar troca de equipamento.</strong> Compare
+          perto e longe, outro dispositivo e, quando possível, cabo versus Wi-Fi. Só adicione repetidor, mesh ou outro
+          ponto quando a evidência mostrar que um único ponto não cobre adequadamente o imóvel.
+        </p>
+
+        <EditorialReferences slug="como-melhorar-sinal-wifi-em-casa" />
+      </>
+    ),
+  },
+
   "como-configurar-active-directory": {
     title: "Servidor AD: como planejar e configurar Active Directory sem depender de um assistente de versão",
     excerpt:
