@@ -1699,6 +1699,24 @@ const WAVE_12A: EditorialApproval[] = [
 ];
 
 
+const WAVE_12B: EditorialApproval[] = [
+  {
+    slug: "como-instalar-windows-11-do-zero",
+    status: "approved",
+    authorType: "organization",
+    authorId: INSTITUTIONAL_AUTHOR.id,
+    reviewedAt: "2026-10-01",
+    approvedAt: "2026-08-12",
+    imageOrigin: "licensed",
+    imageLicense: "CC BY 2.0",
+    imageAttribution:
+      "Foto: Shixart1985 (Wikimedia Commons), CC BY 2.0 — https://commons.wikimedia.org/w/index.php?curid=194512723",
+    notes:
+      "Revisão material em 2026-10-01 guiada por GSC real de página: 2 impressões, 0 cliques e posição média 9 no período fechado até 2026-09-28. Sem query individual exposta; nenhuma foi inventada. A versão suplementar preserva a URL e aprofunda requisitos, backup, BitLocker, mídia oficial, partições, ativação, drivers e critérios de parada.",
+  },
+];
+
+
 export const APPROVED_EDITORIAL_CONTENT = new Map<string, EditorialApproval>([
 
   ...FIRST_WAVE_SLUGS.map((slug) => [
@@ -1774,6 +1792,7 @@ export const APPROVED_EDITORIAL_CONTENT = new Map<string, EditorialApproval>([
   ...WAVE_11Y.map((a) => [a.slug, a] as [string, EditorialApproval]),
   ...WAVE_11Z.map((a) => [a.slug, a] as [string, EditorialApproval]),
   ...WAVE_12A.map((a) => [a.slug, a] as [string, EditorialApproval]),
+  ...WAVE_12B.map((a) => [a.slug, a] as [string, EditorialApproval]),
 
 ]);
 
