@@ -2044,12 +2044,12 @@ export const ARTICLE_SOURCE_MANIFEST: Record<string, ArticleSourceManifest> = {
   },
   "organizacao-de-ti-para-pequenos-escritorios": {
     slug: "organizacao-de-ti-para-pequenos-escritorios",
-    sources: ["cisa-backup", "nist-sp-800-34"],
+    sources: ["cisa-backup", "nist-sp-800-34", "cisa-upskill-checklist"],
     technicalReview: "reviewed",
     factChecked: true,
-    factCheckedAt: "2026-08-06",
+    factCheckedAt: "2026-10-01",
     notes:
-      "Revisão concluída (Rodada 3O): conteúdo organizacional, sem consultoria de conformidade, sem SLA, sem promessa de continuidade e sem orientação para armazenar senhas junto ao inventário. Limite entre camada de máquina e sistemas de terceiros explicitado. Estratégia de cópias apresentada como referência, com teste de restauração obrigatório — sustentada por CISA/NIST.",
+      "Revisão material em 2026-10-01 guiada por sinal real de página no GSC: 1 impressão, 0 cliques e posição média 2 entre 2026-04-01 e 2026-09-28. Nenhuma query individual foi exposta e nenhuma foi inventada. A versão suplementar aprofunda inventário, responsáveis, privilégios administrativos, MFA, backup com restauração testada, rede, dispositivos compartilhados, entrada/saída de usuários e documentação mínima, sem inventar SLA, conformidade ou garantia de continuidade.",
   },
   "como-escolher-uma-workstation": {
     slug: "como-escolher-uma-workstation",
