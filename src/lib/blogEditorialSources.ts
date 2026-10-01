@@ -170,6 +170,19 @@ export const EDITORIAL_SOURCES: Record<string, EditorialSource> = {
       "Quando o cancelamento não limpa a fila, o procedimento oficial é parar o spooler, excluir os arquivos de trabalhos em C:\\Windows\\System32\\spool\\PRINTERS e iniciar o serviço novamente.",
     ],
   },
+  "ms-printer-offline-2026": {
+    id: "ms-printer-offline-2026",
+    title: "Solução de problemas de impressoras offline no Windows",
+    publisher: "Microsoft Support",
+    url: "https://support.microsoft.com/pt-br/windows/hardware/printer/troubleshooting-offline-printer-problems-in-windows",
+    accessedAt: "2026-09-30",
+    sourceType: "official",
+    supports: [
+      "A Microsoft orienta confirmar energia/conexão, mesma rede Wi‑Fi, impressora padrão, fila, modo offline e reinstalação controlada quando uma impressora aparece Offline.",
+      "Status Offline deve ser investigado junto da conectividade e da configuração da fila, não tratado automaticamente como falha do spooler.",
+    ],
+  },
+
   "ms-printer-connection-printing-2026": {
     id: "ms-printer-connection-printing-2026",
     title: "Corrigir problemas de conexão e impressão de impressora no Windows",
@@ -2203,13 +2216,16 @@ export const ARTICLE_SOURCE_MANIFEST: Record<string, ArticleSourceManifest> = {
   },
   "impressora-offline-como-resolver": {
     slug: "impressora-offline-como-resolver",
-    sources: [],
+    sources: [
+      "ms-printer-offline-2026",
+      "ms-printer-connection-printing-2026",
+      "ms-print-job-stuck-queue-2026",
+    ],
     technicalReview: "reviewed",
     factChecked: true,
-    factCheckedAt: "2026-08-26",
-    stableKnowledge: true,
+    factCheckedAt: "2026-09-30",
     notes:
-      "Revisão concluída (Onda 10C, Lote 2): significado real do status offline, empréstimo de endereço com prazo, conferência entre página de configuração do aparelho e porta cadastrada, reserva no roteador, isolamento de clientes/rede de visitantes e distinção frente a falha mecânica. Sem marca comercial e sem promessa. Conhecimento técnico estável — sem fonte visível.",
+      "Revisão material em 2026-09-30 guiada pelo GSC: 5 impressões, 0 cliques e posição média ~47,8 entre 2026-04-01 e 2026-09-28. As queries individuais expostas foram 'como tirar impressora do offline' e 'porque a impressora fica offline'. A versão suplementar separa energia/erro físico, Wi‑Fi/rede, porta TCP/IP, fila/estado offline, spooler e driver; evita reinstalação como primeira reação e interliga a trilha específica de fila travada. Fontes Microsoft visíveis.",
   },
   "fila-de-impressao-travada-spooler-windows": {
     slug: "fila-de-impressao-travada-spooler-windows",
