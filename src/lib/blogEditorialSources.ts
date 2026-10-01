@@ -97,12 +97,53 @@ export const ALLOWED_SOURCE_HOSTS = [
   "www.nsa.gov",
   "www.dell.com",
   "support.hp.com",
+  "acm.org",
+  "www.acm.org",
+  "ccecc.acm.org",
+  "csed.acm.org",
 ] as const;
 
 // ─────────────────────────────────────────────────────────────
 // FONTES CONSULTADAS (URLs confirmadas em 2026-07-12).
 // ─────────────────────────────────────────────────────────────
 export const EDITORIAL_SOURCES: Record<string, EditorialSource> = {
+  "acm-computing-curricula-2020": {
+    id: "acm-computing-curricula-2020",
+    title: "Computing Curricula 2020 (CC2020)",
+    publisher: "Association for Computing Machinery / IEEE Computer Society",
+    url: "https://www.acm.org/binaries/content/assets/education/curricula-recommendations/cc2020.pdf",
+    accessedAt: "2026-09-30",
+    sourceType: "standard",
+    supports: [
+      "Computing é tratado como um campo amplo com múltiplas disciplinas e especializações, incluindo ciência da computação, engenharia de computação, sistemas de informação, tecnologia da informação e engenharia de software.",
+      "As disciplinas de computing compartilham fundamentos, mas diferem em foco, competências e aplicações.",
+    ],
+  },
+  "acm-computing-subdisciplines-2026": {
+    id: "acm-computing-subdisciplines-2026",
+    title: "The Sub-Disciplines of Computing",
+    publisher: "ACM Committee for Computing Education in Community Colleges",
+    url: "https://ccecc.acm.org/guidance",
+    accessedAt: "2026-09-30",
+    sourceType: "official",
+    supports: [
+      "A ACM categoriza computing em disciplinas como Computer Science, Computer Engineering, Software Engineering, Information Systems e Information Technology.",
+      "As descrições disciplinares ajudam a diferenciar fundamentos/algoritmos, integração hardware-software, desenvolvimento de software, sistemas organizacionais e infraestrutura/tecnologia da informação.",
+    ],
+  },
+  "acm-cs2023-vision-2026": {
+    id: "acm-cs2023-vision-2026",
+    title: "CS2023 Vision Statement",
+    publisher: "ACM / IEEE-CS / AAAI",
+    url: "https://csed.acm.org/vision-statement/",
+    accessedAt: "2026-09-30",
+    sourceType: "standard",
+    supports: [
+      "Ciência da Computação é apresentada como disciplina fundamental de computing voltada ao uso de computadores para resolver problemas de forma sistemática.",
+      "Competências práticas e disposições profissionais complementam conhecimento conceitual em currículos modernos de computação.",
+    ],
+  },
+
   "ms-print-spooler-service-2026": {
     id: "ms-print-spooler-service-2026",
     title: "Corrigir o problema do serviço de spooler de impressão não estar executando erros no Windows",
@@ -1599,6 +1640,20 @@ export const ARTICLE_SOURCE_MANIFEST: Record<string, ArticleSourceManifest> = {
     notes:
       "Revisão aprofundada em 2026-09-12: resposta proporcional a mensagem, clique, credencial, acesso remoto e fraude financeira; preservação de evidências e canais oficiais priorizados. Fontes primárias visíveis, sem aplicativo de terceiros, estatística ou promessa de recuperação de valores.",
   },
+  "o-que-e-informatica": {
+    slug: "o-que-e-informatica",
+    sources: [
+      "acm-computing-curricula-2020",
+      "acm-computing-subdisciplines-2026",
+      "acm-cs2023-vision-2026",
+    ],
+    technicalReview: "reviewed",
+    factChecked: true,
+    factCheckedAt: "2026-09-30",
+    notes:
+      "Revisão material em 2026-09-30 guiada pelo GSC: 78 impressões, 0 cliques e posição média ~64,68 entre 2026-04-01 e 2026-09-27; as consultas expostas incluem 'informatica', 'informática', 'o que e informatica', 'o que significa informatica', 'o que estuda a informática', 'area de informatica' e variações ortográficas. A versão suplementar transforma o pilar em definição ampla e estruturada, separando informática do uso cotidiano, TI, Ciência da Computação, Engenharia de Computação, Sistemas de Informação e Engenharia de Software, com exemplos, áreas e aplicações. Nenhuma equivalência disciplinar foi inventada; a taxonomia é ancorada em ACM/IEEE.",
+  },
+
   "como-aprender-informatica": {
     slug: "como-aprender-informatica",
     sources: [
