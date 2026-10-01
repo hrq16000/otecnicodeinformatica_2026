@@ -11,6 +11,252 @@ import { MODALIDADES } from "@/lib/precosConfig";
  * do blog compõem base + suplementares + programáticos.
  */
 export const blogSupplementalPosts: Record<string, BlogPostContent> = {
+  "como-instalar-windows-11-do-zero": {
+    title: "Como instalar o Windows 11 do zero: preparação, mídia oficial, partições e pós-instalação",
+    excerpt:
+      "Instalação limpa do Windows 11 exige mais do que iniciar por um pendrive. Veja como preparar backup, BitLocker, compatibilidade, mídia oficial, partições, ativação, drivers e validação final sem usar bypass ou imagem modificada.",
+    date: "2026-10-01",
+    readTime: "16 min",
+    category: "Windows",
+    content: (
+      <>
+        <p className="lead">
+          <strong>Instalar o Windows 11 do zero</strong> significa fazer uma instalação limpa, removendo ou
+          substituindo a instalação anterior no disco escolhido. O procedimento pode apagar dados. Antes de iniciar,
+          confirme backup, licença/ativação, compatibilidade, chave do BitLocker e qual disco realmente será usado.
+          Use apenas a mídia oficial da Microsoft.
+        </p>
+
+        <h2>Resposta direta: como fazer uma instalação limpa do Windows 11</h2>
+        <ol>
+          <li>Faça backup dos arquivos e confirme que consegue restaurá-los.</li>
+          <li>Guarde a chave de recuperação do BitLocker, quando o dispositivo usa criptografia.</li>
+          <li>Confirme os requisitos e compatibilidade do computador com o Windows 11.</li>
+          <li>Crie a mídia de instalação usando a ferramenta ou ISO oficial da Microsoft.</li>
+          <li>Inicialize pelo pendrive no modo UEFI apropriado.</li>
+          <li>Escolha corretamente o disco/partição de destino antes de excluir qualquer volume.</li>
+          <li>Conclua a instalação, atualize o Windows e instale apenas drivers necessários de fontes oficiais.</li>
+          <li>Valide ativação, dispositivos, rede, armazenamento e restaure os dados.</li>
+        </ol>
+
+        <h2>Instalação limpa, redefinição e upgrade não são a mesma coisa</h2>
+        <table>
+          <thead>
+            <tr><th>Opção</th><th>O que faz</th><th>Quando considerar</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Upgrade</td><td>mantém sistema, apps e arquivos quando suportado</td><td>migração sem apagar o ambiente atual</td></tr>
+            <tr><td>Redefinir este PC</td><td>reinstala o Windows com opções de manter/remover arquivos</td><td>recuperação sem necessariamente preparar mídia externa</td></tr>
+            <tr><td>Instalação limpa</td><td>instala uma nova cópia no destino escolhido</td><td>recomeço controlado, troca de disco ou ambiente comprometido</td></tr>
+          </tbody>
+        </table>
+
+        <h2>1. Backup vem antes do pendrive</h2>
+        <p>
+          Copie documentos, fotos, projetos, favoritos/exportações relevantes e outros dados importantes para outro
+          destino. Não confie apenas em “acho que está tudo na nuvem”: confira o conteúdo e abra alguns arquivos a
+          partir do backup.
+        </p>
+        <p>
+          Se o computador tem mais de um disco, identifique qual contém os dados e qual receberá o Windows. Quando
+          possível, desconectar temporariamente discos que não participam da instalação reduz o risco de selecionar o
+          destino errado.
+        </p>
+
+        <h2>2. BitLocker: tenha a chave de recuperação antes de alterar o disco</h2>
+        <p>
+          Se a unidade usa BitLocker ou Criptografia de Dispositivo, confirme onde está a chave de recuperação. Ela
+          pode ser necessária ao acessar uma instalação antiga, outro disco ou após mudanças de firmware.
+        </p>
+        <p>
+          Não formate uma unidade criptografada contendo dados que ainda precisam ser recuperados.
+        </p>
+
+        <h2>3. Confirme compatibilidade com o Windows 11</h2>
+        <p>
+          A Microsoft publica os requisitos mínimos do Windows 11. Além de CPU, memória e armazenamento, a plataforma
+          exige firmware UEFI, Secure Boot compatível e TPM 2.0 nos cenários suportados.
+        </p>
+        <p>
+          Este guia não recomenda contornar requisitos. Em equipamento não suportado, avalie o sistema oficialmente
+          compatível ou a substituição/atualização de hardware.
+        </p>
+
+        <h2>4. Crie mídia apenas com a Microsoft</h2>
+        <p>
+          Use a página oficial de download do Windows 11 para criar mídia ou obter a ISO. Evite imagens “lite”,
+          modificadas, pré-ativadas ou distribuídas por terceiros. Elas podem alterar componentes, segurança e
+          confiabilidade do sistema.
+        </p>
+
+        <h2>5. UEFI: inicie o pendrive no modo correto</h2>
+        <p>
+          Em computadores modernos, a instalação suportada normalmente usa UEFI. No menu de boot, o mesmo pendrive
+          pode aparecer com mais de uma opção. Se o computador já opera em UEFI, escolha a entrada correspondente.
+        </p>
+        <p>
+          Evite alternar CSM/Legacy, Secure Boot ou modo do controlador de armazenamento por tentativa. Mudanças podem
+          afetar detecção do disco e uma instalação existente.
+        </p>
+
+        <h2>6. O instalador não vê o SSD? Não apague nada ainda</h2>
+        <p>
+          Se o disco não aparece no instalador, confirme primeiro se ele é detectado na BIOS/UEFI. Em algumas
+          plataformas, controladores de armazenamento ou modos específicos exigem driver fornecido pelo fabricante.
+        </p>
+        <p>
+          Não transforme ausência de disco em motivo para apagar outros volumes ou mudar configurações aleatoriamente.
+        </p>
+
+        <h2>7. Tela de partições: esta é a etapa de maior risco de perda de dados</h2>
+        <p>
+          Leia capacidade e identificação do disco com atenção. Em uma instalação realmente limpa, partições do
+          sistema anterior podem ser removidas <strong>somente depois de confirmar que o disco certo foi selecionado e
+          que os dados necessários já estão protegidos</strong>.
+        </p>
+        <p>
+          O instalador consegue criar as estruturas necessárias no espaço não alocado. Não é preciso copiar receitas
+          universais de tamanhos e partições quando o objetivo é uma instalação padrão.
+        </p>
+
+        <h2>8. GPT, MBR e modo de boot</h2>
+        <p>
+          Windows 11 suportado em hardware moderno trabalha com UEFI. Se o disco traz uma estrutura antiga ou foi
+          reaproveitado de outro computador, conflitos de layout podem aparecer.
+        </p>
+        <p>
+          Não converta ou limpe um disco que ainda contém dados importantes. Primeiro preserve os dados e confirme o
+          cenário.
+        </p>
+
+        <h2>9. Conta, rede e configuração inicial</h2>
+        <p>
+          As telas de configuração inicial variam conforme edição e versão do Windows. Siga o fluxo apresentado pela
+          versão oficial instalada. Evite scripts que removem componentes ou alteram a experiência de primeira
+          inicialização antes de validar o sistema.
+        </p>
+
+        <h2>10. Ativação: normalmente a licença válida se resolve depois da conexão</h2>
+        <p>
+          A Microsoft documenta ativação digital e chave de produto. Em máquinas que já tinham uma licença válida para
+          a mesma edição, a ativação pode ocorrer automaticamente após conexão e reconhecimento do dispositivo.
+        </p>
+        <p>
+          Não use ativadores, KMS não autorizado, cracks ou chaves de origem duvidosa.
+        </p>
+
+        <h2>11. Escolha a edição correta</h2>
+        <p>
+          Home e Pro possuem licenças e recursos diferentes. Instalar uma edição diferente daquela associada à licença
+          do dispositivo pode impedir ativação automática.
+        </p>
+
+        <h2>12. Depois da instalação: rode Windows Update antes de caçar drivers</h2>
+        <p>
+          Conecte à internet e instale atualizações do Windows. Muitos drivers básicos chegam por esse fluxo. Depois,
+          verifique o Gerenciador de Dispositivos e procure no fabricante apenas os drivers que permanecem ausentes ou
+          que precisam de versão específica.
+        </p>
+        <p>
+          Evite pacotes genéricos de “driver updater” de terceiros.
+        </p>
+
+        <h2>13. Drivers de chipset, vídeo e rede</h2>
+        <p>
+          Para componentes críticos, prefira Microsoft Update e páginas oficiais do fabricante do computador ou do
+          componente. Em notebooks, drivers do fabricante do equipamento podem conter personalizações de energia,
+          teclas e dispositivos integrados.
+        </p>
+
+        <h2>14. Valide o armazenamento depois da instalação</h2>
+        <p>
+          Confirme que o Windows está no disco esperado, que os demais discos aparecem corretamente e que não existe
+          volume importante faltando. Só então considere apagar a instalação antiga ou reutilizar outras unidades.
+        </p>
+
+        <h2>15. Restaure dados com critério</h2>
+        <p>
+          Copie arquivos pessoais de volta após validar o sistema. Não restaure executáveis, ferramentas e ajustes
+          antigos indiscriminadamente se a instalação limpa foi motivada por malware ou corrupção.
+        </p>
+
+        <h2>16. Instalação limpa não corrige defeito físico</h2>
+        <p>
+          Se o computador trava durante a instalação, perde o SSD, reinicia por temperatura ou apresenta erros de
+          memória, investigue hardware. Reinstalar repetidamente não corrige RAM, armazenamento, fonte ou placa-mãe
+          defeituosos.
+        </p>
+
+        <h2>17. Quando usar “Redefinir este PC” em vez de instalação limpa</h2>
+        <p>
+          Se o Windows ainda inicia e o objetivo é recuperação do sistema, as opções nativas de redefinição podem ser
+          menos trabalhosas. Instalação limpa é adequada quando você precisa controlar totalmente o disco de destino,
+          trocar armazenamento ou reconstruir o ambiente a partir de mídia externa confiável.
+        </p>
+
+        <h2>Checklist antes de clicar em excluir</h2>
+        <ul>
+          <li>Backup conferido e restaurável.</li>
+          <li>Chave BitLocker disponível.</li>
+          <li>Licença/edição conhecida.</li>
+          <li>Mídia oficial da Microsoft.</li>
+          <li>Disco de destino identificado por capacidade/modelo.</li>
+          <li>Dados de outros discos protegidos.</li>
+          <li>Compatibilidade do equipamento confirmada.</li>
+        </ul>
+
+        <h2>Critérios de parada</h2>
+        <ul>
+          <li>Você não sabe qual disco contém os dados importantes.</li>
+          <li>O BitLocker está ativo e a chave não está disponível.</li>
+          <li>O SSD desaparece da BIOS/UEFI ou do instalador de forma intermitente.</li>
+          <li>O computador reinicia, superaquece ou apresenta erros durante a instalação.</li>
+          <li>O equipamento não atende aos requisitos suportados do Windows 11.</li>
+        </ul>
+
+        <h2>Perguntas frequentes</h2>
+        <h3>Instalar Windows 11 do zero apaga tudo?</h3>
+        <p>
+          Pode apagar, dependendo das partições que você remover ou formatar. Faça backup e identifique o disco antes
+          de alterar qualquer volume.
+        </p>
+
+        <h3>Preciso de chave de produto durante a instalação?</h3>
+        <p>
+          Nem sempre. Dispositivos com licença digital válida podem ativar depois. A edição instalada precisa
+          corresponder à licença.
+        </p>
+
+        <h3>Posso baixar uma ISO modificada?</h3>
+        <p>
+          Não é recomendado. Use mídia oficial da Microsoft para reduzir riscos de segurança, componentes removidos e
+          alterações desconhecidas.
+        </p>
+
+        <h3>Devo desativar TPM ou Secure Boot?</h3>
+        <p>
+          Não como método para contornar requisitos. Use uma configuração suportada pelo Windows 11 e pelo fabricante
+          do equipamento.
+        </p>
+
+        <h3>O instalador não vê meu SSD. Devo formatar outro disco?</h3>
+        <p>
+          Não. Primeiro diagnostique detecção na BIOS/UEFI, controlador e driver. Não altere um disco diferente para
+          tentar resolver a ausência do SSD pretendido.
+        </p>
+
+        <h2>Resumo prático</h2>
+        <p>
+          <strong>Uma instalação limpa segura começa antes de iniciar pelo pendrive.</strong> Proteja dados e
+          BitLocker, confirme compatibilidade e licença, use mídia oficial, selecione cuidadosamente o destino e valide
+          drivers/ativação depois. Não use bypass, cracks ou imagens modificadas como atalhos.
+        </p>
+
+        <EditorialReferences slug="como-instalar-windows-11-do-zero" />
+      </>
+    ),
+  },
+
   "historico-de-arquivos-windows-como-configurar": {
     title: "Histórico de Arquivos no Windows: como configurar, restaurar versões e entender os limites",
     excerpt:
