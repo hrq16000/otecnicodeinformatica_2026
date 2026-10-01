@@ -1317,9 +1317,9 @@ const WAVE_11I: EditorialApproval[] = [
   },
   {
     slug: "erros-comuns-upgrade-computador", status: "approved", authorType: "organization", authorId: INSTITUTIONAL_AUTHOR.id,
-    reviewedAt: "2026-09-25", approvedAt: "2026-09-25", imageOrigin: "owned", imageLicense: "Todos os direitos reservados",
+    reviewedAt: "2026-10-01", approvedAt: "2026-09-25", imageOrigin: "owned", imageLicense: "Todos os direitos reservados",
     imageAttribution: "Arte editorial original: O Técnico de Informática — https://otecnicodeinformatica.com.br/blog/erros-comuns-upgrade-computador",
-    notes: "Reescrita completa com documentação de memória, SSD/NVMe, requisitos do Windows e BitLocker; acrescenta compatibilidade, backup, firmware, energia e validação pós-upgrade.",
+    notes: "Revisão material em 2026-10-01 guiada pelo GSC: 1 impressão, 0 cliques e posição 3 entre 2026-04-01 e 2026-09-28. A única query exposta foi 'compatibilidade pc'. A versão suplementar preserva a URL e aprofunda RAM, SSD, GPU, fonte, CPU, BIOS/UEFI, Windows 11, BitLocker, validação uma peça por vez e rollback.",
   },
   {
     slug: "como-configurar-vpn-empresarial", status: "approved", authorType: "organization", authorId: INSTITUTIONAL_AUTHOR.id,
