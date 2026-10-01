@@ -2262,13 +2262,16 @@ export const ARTICLE_SOURCE_MANIFEST: Record<string, ArticleSourceManifest> = {
   },
   "computador-sem-som-o-que-verificar": {
     slug: "computador-sem-som-o-que-verificar",
-    sources: [],
+    sources: [
+      "ms-audio-services-windows-2026",
+      "ms-audio-output-undetected-2026",
+      "ms-audio-headphones-no-sound-2026",
+    ],
     technicalReview: "reviewed",
     factChecked: true,
-    factCheckedAt: "2026-08-26",
-    stableKnowledge: true,
+    factCheckedAt: "2026-09-30",
     notes:
-      "Revisão concluída (Onda 10C, Lote 3): ordem de verificação de saída padrão, mixer por aplicativo, conector físico, serviço de áudio e driver; distinção entre falha de software e hardware. Sem marca comercial e sem promessa. Conhecimento técnico estável — sem fonte visível.",
+      "Revisão material em 2026-09-30 guiada pelo GSC: 4 impressões, 0 cliques e posição média 49 entre 2026-04-01 e 2026-09-28. As queries expostas foram 'sem som' (3 impressões) e 'testar som pc' (1). A versão suplementar organiza diagnóstico por saída, mixer, detecção, conexão física, driver e serviço; separa P2/USB/Bluetooth/HDMI e interliga os guias específicos de fone e Windows Audio. Fontes Microsoft visíveis.",
   },
   "fone-de-ouvido-nao-e-reconhecido-no-pc": {
     slug: "fone-de-ouvido-nao-e-reconhecido-no-pc",
