@@ -818,14 +818,14 @@ const WAVE_10F: EditorialApproval[] = [
     status: "approved",
     authorType: "organization",
     authorId: INSTITUTIONAL_AUTHOR.id,
-    reviewedAt: "2026-08-26",
+    reviewedAt: "2026-09-30",
     approvedAt: "2026-08-26",
     imageOrigin: "licensed",
     imageLicense: "Public Domain",
     imageAttribution:
       "Foto: Shaddack (Wikimedia Commons), domínio público — https://commons.wikimedia.org/wiki/File:Photo-audiojacks.jpg",
     notes:
-      "Satélite escrito do zero na Onda 10C (Lote 3); fact-check registrado em blogEditorialSources.ts; capa é fotografia real em domínio público, sem IA.",
+      "Revisão material em 2026-09-30 guiada pelo GSC: 4 impressões, 0 cliques e posição média 49 entre 2026-04-01 e 2026-09-28. Queries reais 'sem som' e 'testar som pc' orientam a versão suplementar, que preserva a URL e separa saída, mixer, detecção, conexão física, driver e serviço de áudio, com interlinks para fone e Windows Audio.",
   },
   {
     slug: "fone-de-ouvido-nao-e-reconhecido-no-pc",
