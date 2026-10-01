@@ -1015,14 +1015,14 @@ const WAVE_11C: EditorialApproval[] = [
     status: "approved",
     authorType: "organization",
     authorId: INSTITUTIONAL_AUTHOR.id,
-    reviewedAt: "2026-09-03",
+    reviewedAt: "2026-10-01",
     approvedAt: "2026-09-03",
     imageOrigin: "licensed",
     imageLicense: "CC BY-SA 3.0",
     imageAttribution:
       "Foto: Zephyris (Wikimedia Commons), CC BY-SA 3.0 — https://commons.wikimedia.org/wiki/File:Male_and_Female_USB_Connectors.jpg",
     notes:
-      "Guia de diagnóstico de periférico USB, escrito do zero na Onda 11C; isola porta, cabo, alimentação e driver sem canibalizar o roteiro específico de webcam; capa é fotografia real licenciada, sem IA.",
+      "Revisão material em 2026-10-01 guiada pelo GSC: 2 impressões, 0 cliques e posição média ~44,5 entre 2026-04-01 e 2026-09-28. Queries reais: 'dispositivo usb não reconhecido' e 'usb não reconhecido'. A versão suplementar preserva a URL e aprofunda porta, cabo, alimentação, enumeração, códigos do Gerenciador de Dispositivos e driver sem canibalizar webcam ou proteção contra gravação.",
   },
   {
     slug: "como-testar-restauracao-de-backup",
