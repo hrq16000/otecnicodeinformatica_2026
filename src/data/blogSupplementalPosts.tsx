@@ -11,6 +11,152 @@ import { MODALIDADES } from "@/lib/precosConfig";
  * do blog compõem base + suplementares + programáticos.
  */
 export const blogSupplementalPosts: Record<string, BlogPostContent> = {
+  "como-remover-virus-windows-iniciantes": {
+    title: "Como remover vírus do Windows com segurança: conter, verificar, limpar e evitar reinfecção",
+    excerpt:
+      "Remover vírus do Windows não é instalar qualquer antivírus: primeiro contenha o risco, preserve dados, use as ferramentas de segurança do sistema e só reinstale quando houver motivo técnico.",
+    date: "2026-10-01",
+    readTime: "15 min",
+    category: "Segurança",
+    content: (
+      <>
+        <p className="lead">
+          Se você suspeita de <strong>vírus ou malware no Windows</strong>, comece reduzindo o risco: desconecte contas sensíveis
+          quando necessário, evite novos logins em sites importantes e preserve seus arquivos antes de partir para limpeza.
+          A remoção deve ser feita em camadas, com uma mudança por vez.
+        </p>
+
+        <h2>Resposta direta: como remover vírus do Windows</h2>
+        <ol>
+          <li>Desconecte o computador de serviços sensíveis se houver sinais de comprometimento ativo.</li>
+          <li>Atualize o Windows e as definições de segurança quando isso for possível com segurança.</li>
+          <li>Execute uma verificação completa pelo Windows Security.</li>
+          <li>Revise programas instalados, extensões do navegador e itens de inicialização suspeitos.</li>
+          <li>Troque senhas importantes em outro dispositivo confiável se houver risco de roubo de credenciais.</li>
+          <li>Faça backup dos dados pessoais, evitando copiar executáveis suspeitos.</li>
+          <li>Se a ameaça persistir, avalie verificação offline ou reinstalação limpa.</li>
+        </ol>
+
+        <h2>1. Diferencie malware de adware, extensão indesejada e falha comum</h2>
+        <p>
+          Pop-ups, navegador redirecionando, consumo alto de CPU e lentidão podem ter causas diferentes. Nem todo sintoma
+          significa infecção. Antes de remover programas aleatoriamente, registre quando o problema começou e quais mudanças
+          ocorreram no sistema.
+        </p>
+
+        <h2>2. Contenção vem antes da limpeza</h2>
+        <p>
+          Se há comportamento ativo de fraude, ransomware, envio de mensagens sem autorização ou roubo de sessão, reduza a
+          exposição antes de investigar. Evite acessar banco, e-mail principal ou painéis administrativos no computador suspeito.
+        </p>
+
+        <h2>3. Use o Windows Security como primeira camada</h2>
+        <p>
+          O Windows 10 e o Windows 11 incluem o Microsoft Defender Antivirus dentro do Windows Security. Em um computador
+          doméstico comum, essa é a primeira camada coerente antes de instalar múltiplas ferramentas concorrentes.
+        </p>
+
+        <h2>4. Não execute vários antivírus em tempo real ao mesmo tempo</h2>
+        <p>
+          Produtos de segurança podem disputar recursos e gerar conflitos. Se outro antivírus compatível estiver ativo,
+          o Microsoft Defender pode deixar de atuar como principal. Saiba qual produto está protegendo o sistema antes de
+          instalar outro.
+        </p>
+
+        <h2>5. Revise programas instalados e inicialização</h2>
+        <p>
+          Software desconhecido instalado recentemente, utilitários que prometem “otimizar” tudo e itens inesperados na
+          inicialização merecem revisão. Remova apenas o que puder identificar com segurança.
+        </p>
+
+        <h2>6. Revise extensões e permissões do navegador</h2>
+        <p>
+          Se o problema aparece apenas no navegador, verifique extensões, mecanismo de busca, página inicial e permissões
+          de notificações. Sincronização de perfil pode reintroduzir uma extensão problemática em outro dispositivo.
+        </p>
+
+        <h2>7. Senhas devem ser trocadas em dispositivo confiável quando houver risco de roubo</h2>
+        <p>
+          Se você suspeita de captura de credenciais, não use a própria máquina comprometida para redefinir as contas mais
+          importantes. Priorize e-mail principal, banco, redes sociais, armazenamento em nuvem e contas administrativas.
+        </p>
+
+        <h2>8. Backup precisa evitar carregar a ameaça junto</h2>
+        <p>
+          Preserve documentos, fotos e arquivos pessoais. Tenha cuidado com executáveis, instaladores, scripts e arquivos
+          desconhecidos. Um backup útil protege dados sem transformar a cópia em vetor de reinfecção.
+        </p>
+
+        <h2>9. Reinicialização não prova que o vírus foi removido</h2>
+        <p>
+          Algumas ameaças persistem por tarefas agendadas, serviços, extensões, scripts ou sincronização de conta. Depois da
+          limpeza, observe se o comportamento volta após reiniciar e reconectar os serviços.
+        </p>
+
+        <h2>10. Ransomware exige resposta diferente</h2>
+        <p>
+          Se arquivos foram criptografados, não trate o caso como “vírus comum”. Preserve evidências, isole o equipamento e
+          priorize recuperação por backup. A orientação de segurança pública não trata pagamento de resgate como primeira reação.
+        </p>
+
+        <h2>11. Quando considerar reinstalação limpa</h2>
+        <p>
+          Reinstalação passa a fazer sentido quando a ameaça persiste, a integridade do sistema ficou duvidosa, há alterações
+          administrativas não explicadas ou o custo de provar a limpeza supera o de reconstruir o ambiente com segurança.
+        </p>
+
+        <h2>12. Reinstalar sem corrigir a origem pode causar reinfecção</h2>
+        <p>
+          Se a ameaça veio de senha comprometida, extensão sincronizada, software pirata ou instalador adulterado, formatar
+          sem remover a origem pode fazer o problema retornar rapidamente.
+        </p>
+
+        <h2>13. Depois da limpeza, atualize e reduza superfícies de risco</h2>
+        <p>
+          Mantenha Windows, navegador e aplicativos suportados atualizados, remova software desnecessário e habilite
+          autenticação multifator nas contas importantes quando disponível.
+        </p>
+
+        <h2>Critérios de parada</h2>
+        <ul>
+          <li>Há ransomware ou criptografia de arquivos.</li>
+          <li>O equipamento contém dados empresariais críticos ou credenciais administrativas.</li>
+          <li>Você não consegue distinguir arquivos pessoais de executáveis suspeitos antes do backup.</li>
+          <li>A ameaça retorna após limpeza e reinicialização.</li>
+          <li>Há indícios de comprometimento de contas fora do computador.</li>
+        </ul>
+
+        <h2>Perguntas frequentes</h2>
+        <h3>O Windows Defender é suficiente?</h3>
+        <p>
+          Ele é a proteção integrada do Windows e serve como primeira camada coerente. A necessidade de outras ferramentas
+          depende do contexto, do risco e do tipo de incidente; instalar vários antivírus ao mesmo tempo não melhora automaticamente a proteção.
+        </p>
+
+        <h3>Formatar o computador remove vírus?</h3>
+        <p>
+          Uma reinstalação limpa pode eliminar malware presente na instalação anterior, mas não corrige credenciais roubadas,
+          arquivos maliciosos restaurados depois ou uma origem externa que continua ativa.
+        </p>
+
+        <h3>Posso continuar usando o computador enquanto removo o vírus?</h3>
+        <p>
+          Se há suspeita de comprometimento ativo, evite tarefas sensíveis até concluir a investigação. O risco principal é
+          continuar fornecendo novas credenciais ou dados para uma ameaça ainda presente.
+        </p>
+
+        <h2>Resumo prático</h2>
+        <p>
+          <strong>Remover malware é um processo de contenção, verificação, limpeza e prevenção de reinfecção.</strong>
+          Use a proteção integrada do Windows, revise extensões e programas, troque credenciais em ambiente confiável quando
+          necessário e considere reinstalação apenas quando houver motivo técnico claro.
+        </p>
+
+        <EditorialReferences slug="como-remover-virus-windows-iniciantes" />
+      </>
+    ),
+  },
+
   "como-instalar-windows-11-do-zero": {
     title: "Como instalar Windows 11 do zero: preparação, mídia oficial, licença e pós-instalação",
     excerpt:
