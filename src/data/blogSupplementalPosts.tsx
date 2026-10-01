@@ -11,6 +11,230 @@ import { MODALIDADES } from "@/lib/precosConfig";
  * do blog compõem base + suplementares + programáticos.
  */
 export const blogSupplementalPosts: Record<string, BlogPostContent> = {
+  "como-configurar-active-directory": {
+    title: "Servidor AD: como planejar e configurar Active Directory sem depender de um assistente de versão",
+    excerpt:
+      "Antes de promover um Windows Server a controlador de domínio, planeje nome DNS, IP, DNS, contas administrativas, controlador adicional, GPO e backup. Veja uma sequência segura para um servidor AD.",
+    date: "2026-10-01",
+    readTime: "16 min",
+    category: "Infraestrutura e Servidores",
+    content: (
+      <>
+        <p className="lead">
+          Um <strong>servidor AD</strong> não é apenas um Windows Server com uma função instalada. O Active Directory
+          Domain Services (AD DS) passa a concentrar identidade, autenticação, políticas e dependências críticas de
+          DNS. Antes de promover o primeiro controlador de domínio, defina <strong>nome do domínio, endereçamento,
+          DNS, contas administrativas, redundância e recuperação</strong>. O assistente pode mudar entre versões; a
+          arquitetura correta continua sendo a parte mais importante.
+        </p>
+
+        <h2>Resposta direta: como configurar um servidor Active Directory</h2>
+        <ol>
+          <li>Defina se será uma nova floresta ou um controlador adicional em domínio existente.</li>
+          <li>Configure nome do servidor, IP estável e DNS coerente com o desenho do domínio.</li>
+          <li>Instale a função AD DS pelo Server Manager ou PowerShell.</li>
+          <li>Promova o servidor para controlador de domínio com as credenciais apropriadas.</li>
+          <li>Valide DNS, SYSVOL, autenticação e replicação antes de ingressar muitos computadores.</li>
+          <li>Crie OUs e GPOs por função/necessidade, não por improviso.</li>
+          <li>Planeje um segundo controlador de domínio e backup de estado do sistema.</li>
+        </ol>
+
+        <h2>Antes da instalação: decisões que não devem ser deixadas para o assistente</h2>
+        <table>
+          <thead>
+            <tr><th>Decisão</th><th>O que definir</th><th>Risco de improvisar</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Escopo</td><td>nova floresta ou domínio existente</td><td>criar namespace errado</td></tr>
+            <tr><td>DNS</td><td>zona e servidores usados pelos clientes</td><td>logon/GPO/descoberta falharem</td></tr>
+            <tr><td>Endereço</td><td>IP estável do DC</td><td>dependências apontarem para endereço variável</td></tr>
+            <tr><td>Nome</td><td>hostname e domínio DNS</td><td>renomeações posteriores mais complexas</td></tr>
+            <tr><td>Redundância</td><td>controlador adicional e DNS</td><td>autenticação depender de um único servidor</td></tr>
+            <tr><td>Recuperação</td><td>backup de estado do sistema e teste de restauração</td><td>não ter caminho de recuperação confiável</td></tr>
+          </tbody>
+        </table>
+
+        <h2>1. Nova floresta ou controlador adicional?</h2>
+        <p>
+          A Microsoft trata esses cenários de forma distinta. Uma nova floresta cria a raiz de uma nova estrutura de
+          identidade; um controlador adicional entra em um domínio existente e replica o diretório. Não crie uma nova
+          floresta apenas porque “é o primeiro servidor desta filial” se a organização já possui um domínio que deve
+          permanecer unificado.
+        </p>
+
+        <h2>2. O nome DNS do domínio merece planejamento</h2>
+        <p>
+          O Active Directory usa DNS de forma estrutural. Evite decidir o namespace durante a instalação sem entender
+          como ele se relaciona ao domínio público, certificados, aplicações e redes existentes.
+        </p>
+        <p>
+          O nome escolhido precisa ser consistente com o desenho real da organização; não copie nomes de exemplo como
+          <code>contoso.com</code> ou <code>empresa.local</code> de tutoriais.
+        </p>
+
+        <h2>3. Configure endereço estável antes de promover</h2>
+        <p>
+          Controladores de domínio e DNS são infraestrutura. Use endereçamento planejado e documentado. O ponto não é
+          “IP fixo porque tutorial manda”, mas garantir que clientes e outros servidores encontrem os serviços
+          essenciais de forma previsível.
+        </p>
+
+        <h2>4. DNS é parte do Active Directory, não um detalhe posterior</h2>
+        <p>
+          AD DS depende de registros DNS para localizar controladores e serviços. Clientes do domínio devem consultar
+          DNS capaz de resolver a zona do Active Directory. Apontar estações apenas para DNS público pode quebrar
+          descoberta de domínio mesmo quando a internet funciona.
+        </p>
+
+        <h2>5. Instalação da função e promoção são etapas diferentes</h2>
+        <p>
+          Instalar a função AD DS disponibiliza os componentes. Depois, o servidor ainda precisa ser promovido a
+          controlador de domínio. A documentação atual da Microsoft mantém suporte ao Server Manager e ao PowerShell
+          para Windows Server 2025, 2022, 2019 e 2016.
+        </p>
+
+        <h2>6. Credenciais dependem do cenário</h2>
+        <p>
+          Para uma nova floresta, a instalação parte de uma conta administrativa local. Para adicionar um controlador
+          a um domínio existente, são necessárias permissões de domínio adequadas. Não use uma conta privilegiada
+          permanente para tarefas diárias só porque ela foi necessária na implantação.
+        </p>
+
+        <h2>7. DSRM não é “mais uma senha qualquer”</h2>
+        <p>
+          A senha do Directory Services Restore Mode participa de cenários de recuperação. Armazene-a de forma segura
+          e controlada. Não reutilize uma senha administrativa comum nem dependa da memória de uma única pessoa.
+        </p>
+
+        <h2>8. Valide o primeiro DC antes de ingressar a empresa inteira</h2>
+        <p>
+          Antes de mover dezenas de computadores, confirme resolução DNS, registros do domínio, compartilhamentos
+          SYSVOL/NETLOGON, autenticação e eventos do servidor. Um domínio que “aceitou a promoção” ainda precisa ser
+          validado operacionalmente.
+        </p>
+
+        <h2>9. Organize OUs pela administração real, não pelo organograma decorativo</h2>
+        <p>
+          Organizational Units ajudam a delegar administração e aplicar GPOs. Crie OUs quando existe diferença real
+          de política, administração ou ciclo de vida. Replicar cada departamento e subdepartamento do organograma
+          sem necessidade cria complexidade sem benefício.
+        </p>
+
+        <h2>10. GPO: comece pequeno e com escopo verificável</h2>
+        <p>
+          Evite uma “GPO monolítica” com dezenas de configurações. Separe políticas por objetivo, teste em uma OU
+          controlada e valide o resultado antes de ampliar o escopo. Documente o motivo de cada política.
+        </p>
+
+        <h2>11. Um único controlador de domínio é um ponto único de falha</h2>
+        <p>
+          Em ambiente onde o AD é necessário para operação, planeje controlador adicional e DNS redundante. Isso não
+          significa instalar vários DCs sem desenho; significa não deixar autenticação, DNS e políticas dependentes de
+          um único equipamento.
+        </p>
+
+        <h2>12. Replicação precisa ser saudável antes de chamar de redundância</h2>
+        <p>
+          Um segundo DC que não replica corretamente não é redundância. Valide replicação, DNS e tempo entre
+          controladores. Monitore eventos e corrija inconsistências antes de adicionar novas dependências.
+        </p>
+
+        <h2>13. Horário incorreto pode quebrar autenticação</h2>
+        <p>
+          Kerberos depende de tempo coerente. Defina uma estratégia de horário para a hierarquia do domínio e evite
+          configurar fontes de tempo aleatórias em cada servidor.
+        </p>
+
+        <h2>14. Backup de VM não deve ser a única ideia de recuperação</h2>
+        <p>
+          A Microsoft documenta backup de <strong>estado do sistema</strong> para controladores de domínio e possui um
+          guia específico de recuperação de floresta. Tenha backup compatível com AD e procedimento documentado de
+          restauração; snapshot ou imagem isolada não substitui automaticamente uma estratégia de recuperação.
+        </p>
+
+        <h2>15. Teste a recuperação antes da emergência</h2>
+        <p>
+          Um backup só é confiável quando existe caminho conhecido para restaurá-lo. Mantenha documentação de DSRM,
+          backups, responsáveis, ordem de recuperação e dependências externas.
+        </p>
+
+        <h2>16. Ingressar computadores no domínio: DNS primeiro</h2>
+        <p>
+          Se uma estação não encontra o domínio, verifique DNS antes de desabilitar firewall ou alterar políticas por
+          tentativa. O cliente precisa localizar os serviços do domínio por DNS e alcançar o controlador.
+        </p>
+
+        <h2>17. Conta administrativa separada da conta de uso diário</h2>
+        <p>
+          Use privilégios elevados apenas quando necessários. A documentação de segurança do AD DS reforça proteção
+          de contas privilegiadas e redução de exposição administrativa.
+        </p>
+
+        <h2>18. Não instale serviços aleatórios no controlador de domínio</h2>
+        <p>
+          Reduza o número de funções e aplicações desnecessárias no DC. Quanto mais software e exposição, maior a
+          superfície operacional e de segurança de um servidor que participa da identidade de toda a organização.
+        </p>
+
+        <h2>19. Quando um RODC faz sentido</h2>
+        <p>
+          Read-Only Domain Controller pode atender cenários específicos, como locais com menor segurança física e
+          requisitos próprios de replicação de credenciais. Não é “o DC mais seguro por padrão” para qualquer filial;
+          use apenas quando o desenho justificar.
+        </p>
+
+        <h2>20. Critérios de parada</h2>
+        <ul>
+          <li>Você não sabe se a empresa já possui domínio/floresta existente.</li>
+          <li>O DNS corporativo atual não foi mapeado.</li>
+          <li>Não há backup nem plano de recuperação.</li>
+          <li>O servidor será o único DC de um ambiente crítico sem plano de redundância.</li>
+          <li>Há aplicações legadas, trusts ou integrações de identidade não inventariadas.</li>
+          <li>A implantação está sendo feita diretamente em produção sem ambiente ou OU de teste.</li>
+        </ul>
+
+        <h2>Perguntas frequentes</h2>
+        <h3>O que é um servidor AD?</h3>
+        <p>
+          Normalmente é um Windows Server atuando como controlador de domínio com AD DS, participando de identidade,
+          autenticação, políticas e, frequentemente, DNS do domínio.
+        </p>
+
+        <h3>Preciso de DNS no Active Directory?</h3>
+        <p>
+          Sim, o AD DS depende de DNS para localizar serviços e controladores. O desenho pode variar, mas clientes do
+          domínio precisam consultar DNS que resolva corretamente a zona do AD.
+        </p>
+
+        <h3>Posso ter apenas um controlador de domínio?</h3>
+        <p>
+          Tecnicamente é possível em ambientes pequenos, mas isso cria dependência operacional de um único servidor.
+          Para ambientes importantes, planeje redundância e recuperação.
+        </p>
+
+        <h3>AD substitui backup?</h3>
+        <p>
+          Não. Replicação entre controladores não é backup. Exclusões e alterações indevidas podem replicar também.
+        </p>
+
+        <h3>Preciso usar PowerShell?</h3>
+        <p>
+          Não obrigatoriamente. A Microsoft suporta instalação pelo Server Manager e pelo PowerShell. O mais importante
+          é entender e documentar as decisões de arquitetura.
+        </p>
+
+        <h2>Resumo prático</h2>
+        <p>
+          <strong>Um servidor AD começa no desenho, não no botão “Promover”.</strong> Planeje DNS, namespace, IP,
+          privilégios, redundância e recuperação; só depois instale AD DS. Valide o primeiro controlador, teste GPOs
+          em escopo pequeno e mantenha backup de estado do sistema e documentação de recuperação.
+        </p>
+
+        <EditorialReferences slug="como-configurar-active-directory" />
+      </>
+    ),
+  },
+
   "como-fazer-teste-velocidade-internet": {
     title: "Como fazer teste de velocidade da internet: download, upload, ping, jitter e perda sem interpretar errado",
     excerpt:
