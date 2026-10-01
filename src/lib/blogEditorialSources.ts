@@ -2145,9 +2145,9 @@ export const ARTICLE_SOURCE_MANIFEST: Record<string, ArticleSourceManifest> = {
     sources: ["memtest86plus-readme", "memtest86plus-official"],
     technicalReview: "reviewed",
     factChecked: true,
-    factCheckedAt: "2026-09-13",
+    factCheckedAt: "2026-10-01",
     notes:
-      "Revisão aprofundada em 2026-09-13: separação entre detecção de erro e identificação da peça, linha de base sem XMP/EXPO, isolamento controlado entre módulo e slot, limites de um resultado sem erros e fontes oficiais visíveis do Memtest86+.",
+      "Revisão material em 2026-10-01 guiada pelo GSC: 3 impressões, 0 cliques e posição média ~23,67 entre 2026-04-01 e 2026-09-28. A única query individual exposta foi 'teste de memoria ram' (1 impressão, posição 57). A versão suplementar aprofunda execução e interpretação do Memtest86+, reforça linha de base sem XMP/EXPO, isolamento cruzado módulo/slot, diferença entre detectar instabilidade e identificar a peça, limites de um teste sem erros e distinção entre RAM insuficiente e RAM defeituosa. Fontes oficiais Memtest86+ mantidas visíveis; nenhuma query adicional foi inventada.",
   },
   "botao-power-nao-funciona-jump-start-placa-mae": {
     slug: "botao-power-nao-funciona-jump-start-placa-mae",

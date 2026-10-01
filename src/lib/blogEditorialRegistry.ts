@@ -669,14 +669,14 @@ const WAVE_10C: EditorialApproval[] = [
     status: "approved",
     authorType: "organization",
     authorId: INSTITUTIONAL_AUTHOR.id,
-    reviewedAt: "2026-09-13",
+    reviewedAt: "2026-10-01",
     approvedAt: "2026-09-13",
     imageOrigin: "licensed",
     imageLicense: "CC BY-SA 4.0",
     imageAttribution:
       "Foto: Fastily (Wikimedia Commons), CC BY-SA 4.0 — https://commons.wikimedia.org/wiki/File:Memtest86%2B_2019-08-09.jpg",
     notes:
-      "Revisão aprofundada em 2026-09-13 com protocolo de isolamento, limites diagnósticos, FAQ técnica e fontes primárias visíveis; capa é fotografia real licenciada, sem IA.",
+      "Revisão material em 2026-10-01 guiada pelo GSC: 3 impressões, 0 cliques e posição média ~23,67 entre 2026-04-01 e 2026-09-28. A única query individual exposta foi 'teste de memoria ram'. A versão suplementar preserva a URL e aprofunda execução, interpretação, linha de base sem XMP/EXPO, isolamento módulo/slot, limites de teste sem erros e distinção entre capacidade insuficiente e defeito de memória.",
   },
 ];
 

@@ -11,6 +11,219 @@ import { MODALIDADES } from "@/lib/precosConfig";
  * do blog compõem base + suplementares + programáticos.
  */
 export const blogSupplementalPosts: Record<string, BlogPostContent> = {
+  "testar-memoria-ram-memtest86": {
+    title: "Teste de memória RAM com Memtest86+: como executar, interpretar erros e isolar módulo ou slot",
+    excerpt:
+      "Memtest86+ encontrou erro? Isso confirma instabilidade de memória, mas não identifica sozinho a peça culpada. Veja como criar uma linha de base, testar módulos e slots e entender o que um teste sem erros realmente significa.",
+    date: "2026-10-01",
+    readTime: "13 min",
+    category: "Diagnóstico de Hardware",
+    content: (
+      <>
+        <p className="lead">
+          Um <strong>teste de memória RAM</strong> é útil quando existem travamentos, telas azuis, corrupção ou
+          instabilidade, mas o resultado precisa ser interpretado com método. O Memtest86+ roda fora do sistema
+          operacional e consegue detectar erros durante padrões de leitura e escrita, porém o próprio projeto
+          deixa claro que um erro pode envolver <strong>RAM, controlador de memória, CPU, caches ou placa-mãe</strong>.
+          O diagnóstico começa no erro; ele não termina ali.
+        </p>
+
+        <h2>Resposta direta: como testar memória RAM com Memtest86+</h2>
+        <ol>
+          <li>Baixe o Memtest86+ somente do site oficial e crie a mídia de inicialização.</li>
+          <li>Antes do teste, volte memória e CPU a parâmetros padrão se houver XMP/EXPO/overclock.</li>
+          <li>Inicie pelo pendrive em UEFI ou BIOS conforme o equipamento suportar.</li>
+          <li>Deixe o teste completar ciclos suficientes para observar recorrência, não apenas alguns minutos.</li>
+          <li>Se houver erro, anote endereço, teste, CPU e momento e depois isole módulos e slots um por vez.</li>
+          <li>Se não houver erro, trate o resultado como redução de probabilidade — não prova absoluta de memória perfeita.</li>
+        </ol>
+
+        <h2>O que um erro no Memtest86+ significa?</h2>
+        <table>
+          <thead>
+            <tr><th>Resultado</th><th>Interpretação correta</th><th>Próximo passo</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Erros aparecem rapidamente</td><td>Existe instabilidade reproduzível na cadeia de memória</td><td>Voltar a padrões e isolar módulo/slot</td></tr>
+            <tr><td>Erros só com dois módulos</td><td>Pode envolver combinação, controlador, timings ou slot</td><td>Testar cada módulo individualmente</td></tr>
+            <tr><td>Um módulo falha em vários slots</td><td>O módulo ganha força como suspeito</td><td>Confirmar em configuração padrão</td></tr>
+            <tr><td>Vários módulos falham no mesmo slot</td><td>Slot/placa/controlador ganham força</td><td>Comparar outro slot e revisar CPU/placa</td></tr>
+            <tr><td>Nenhum erro</td><td>Não houve falha detectada naquele cenário</td><td>Correlacionar com sintomas e outras causas</td></tr>
+          </tbody>
+        </table>
+
+        <h2>1. Memtest86+ e MemTest86 não são o mesmo produto</h2>
+        <p>
+          O <strong>Memtest86+</strong> é um projeto gratuito e de código aberto executado de forma independente do
+          sistema operacional. Ele não é o mesmo produto que o <strong>MemTest86</strong> da PassMark. Ao procurar a
+          ferramenta, confira o site oficial e o nome exato para não baixar imagem, instalador ou “versão modificada”
+          de terceiros.
+        </p>
+
+        <h2>2. Crie uma linha de base antes de culpar a RAM</h2>
+        <p>
+          Se a máquina usa XMP, EXPO, overclock, undervolt ou timings manuais, volte primeiro a parâmetros padrão.
+          Um erro pode aparecer porque a configuração está agressiva para o controlador ou para o conjunto de
+          módulos, mesmo quando os DIMMs não apresentam defeito físico.
+        </p>
+        <p>
+          Registre também versão da BIOS/UEFI, quantidade de módulos, capacidade de cada um e slots ocupados. Isso
+          transforma o teste em evidência comparável.
+        </p>
+
+        <h2>3. Testar todos os módulos juntos é só a primeira etapa</h2>
+        <p>
+          O teste com a configuração completa mostra se o conjunto é estável naquele estado. Se houver erro, a
+          próxima etapa é reduzir variáveis. Desligue o equipamento, desconecte a energia e siga o manual antes de
+          remover módulos.
+        </p>
+        <p>
+          Teste um módulo por vez no slot recomendado pelo fabricante. Se todos passarem individualmente, mas falharem
+          juntos, investigue combinação, controlador de memória, perfil XMP/EXPO, BIOS e compatibilidade.
+        </p>
+
+        <h2>4. Como isolar módulo de slot</h2>
+        <p>
+          Um bom protocolo usa comparação cruzada. Mantenha o mesmo módulo e mude apenas o slot; depois mantenha o
+          slot e mude apenas o módulo. Se um erro acompanha o módulo em vários slots, o módulo ganha peso como
+          hipótese. Se acompanha o slot com diferentes módulos, placa/slot/controlador ganham peso.
+        </p>
+        <p>
+          Evite trocar módulo, slot, BIOS e frequência ao mesmo tempo. Mudanças simultâneas destroem a capacidade de
+          saber qual variável alterou o resultado.
+        </p>
+
+        <h2>5. Quantos passes são necessários?</h2>
+        <p>
+          Não existe um número mágico que transforme um teste em garantia absoluta. Falhas severas podem aparecer
+          rapidamente; erros intermitentes podem exigir mais tempo, temperatura e repetição. O objetivo é obter uma
+          amostra suficiente para responder à pergunta do diagnóstico.
+        </p>
+        <p>
+          Se a máquina falha depois de horas de uso, um teste de poucos minutos tem pouco poder para descartar uma
+          instabilidade térmica ou intermitente.
+        </p>
+
+        <h2>6. Um resultado sem erros não “certifica” a memória</h2>
+        <p>
+          O Memtest86+ testa a memória em um cenário específico, fora do sistema operacional. Um resultado limpo
+          reduz a probabilidade de algumas falhas, mas não exclui problemas dependentes de carga, temperatura,
+          controlador, BIOS, fonte, placa-mãe ou software.
+        </p>
+        <p>
+          Se o Windows continua apresentando tela azul, compare o contexto dos erros, dumps, temperaturas e outros
+          componentes em vez de repetir o mesmo teste indefinidamente.
+        </p>
+
+        <h2>7. Erro de memória não identifica automaticamente a peça defeituosa</h2>
+        <p>
+          A documentação do Memtest86+ explicita que os erros podem envolver memória, processador, caches ou placa-mãe.
+          Em plataformas modernas, o controlador de memória pode estar integrado à CPU. Por isso, “deu erro =
+          módulo ruim” é uma conclusão forte demais.
+        </p>
+
+        <h2>8. ECC muda a interpretação</h2>
+        <p>
+          Em sistemas com memória ECC, erros corrigidos podem ser registrados pelo firmware, sistema operacional ou
+          controladora sem necessariamente aparecer como o mesmo tipo de falha de uma plataforma doméstica. Em
+          workstation ou servidor, consulte também logs de hardware e documentação da plataforma.
+        </p>
+
+        <h2>9. Sintomas que justificam testar RAM</h2>
+        <ul>
+          <li>Telas azuis recorrentes com causas variadas.</li>
+          <li>Travamentos durante cargas diferentes.</li>
+          <li>Arquivos ou instalações que se corrompem repetidamente sem explicação.</li>
+          <li>Falhas após instalar ou trocar módulos.</li>
+          <li>Instabilidade após ativar XMP/EXPO ou alterar frequência/timings.</li>
+        </ul>
+        <p>
+          Esses sintomas também podem vir de armazenamento, CPU, driver ou alimentação. O teste de RAM entra como
+          parte do diagnóstico, não como resposta única.
+        </p>
+
+        <h2>10. Depois de encontrar um erro, o que fazer?</h2>
+        <ol>
+          <li>Volte BIOS/UEFI a padrões de memória.</li>
+          <li>Repita o teste para confirmar recorrência.</li>
+          <li>Teste módulos individualmente.</li>
+          <li>Compare slots quando o manual permitir.</li>
+          <li>Atualize BIOS apenas quando houver motivo/documentação oficial para compatibilidade.</li>
+          <li>Se o erro persistir de forma consistente, substitua ou teste a peça suspeita em ambiente controlado.</li>
+        </ol>
+
+        <h2>11. Quando a memória nova dá erro</h2>
+        <p>
+          Módulo novo não significa automaticamente compatível. Verifique geração, capacidade suportada, densidade,
+          organização dos módulos e requisitos do fabricante. Kits misturados podem operar em parâmetros diferentes
+          do anunciado individualmente.
+        </p>
+        <p>
+          Se o erro aparece apenas com perfil XMP/EXPO, compare em configuração padrão antes de abrir garantia do
+          módulo.
+        </p>
+
+        <h2>12. Relação com “memória insuficiente”</h2>
+        <p>
+          <strong>RAM defeituosa</strong> e <strong>RAM insuficiente</strong> são problemas diferentes. Falta de
+          capacidade aparece como pressão de memória/paginação sob carga; defeito aparece como instabilidade e erros.
+          Para capacidade, veja{" "}
+          <a href="/blog/memoria-ram-insuficiente-sintomas">
+            memória RAM insuficiente: como confirmar antes do upgrade
+          </a>.
+        </p>
+
+        <h2>Critérios de parada</h2>
+        <ul>
+          <li>O equipamento exige desmontagem que pode danificar conectores ou violar procedimento de serviço.</li>
+          <li>Há memória soldada sem módulo removível para isolamento simples.</li>
+          <li>O sistema é servidor/workstation com ECC e logs de hardware que exigem análise específica.</li>
+          <li>O erro persiste em módulos diferentes e slots diferentes, sugerindo CPU/placa/controlador.</li>
+          <li>O computador apresenta superaquecimento, falha de energia ou dano físico concomitante.</li>
+        </ul>
+
+        <h2>Perguntas frequentes</h2>
+        <h3>Um erro no Memtest86+ confirma RAM ruim?</h3>
+        <p>
+          Confirma instabilidade detectada no caminho de memória, mas não identifica sozinho a peça. Isole módulo,
+          slot, configuração e controlador antes de concluir.
+        </p>
+
+        <h3>Se passou no Memtest86+, a RAM está perfeita?</h3>
+        <p>
+          Não é garantia absoluta. Significa que o teste não encontrou erro naquele cenário e duração.
+        </p>
+
+        <h3>Preciso desligar XMP ou EXPO?</h3>
+        <p>
+          Para criar uma linha de base diagnóstica, sim: compare primeiro em parâmetros padrão. Depois reative o perfil
+          e veja se a instabilidade reaparece.
+        </p>
+
+        <h3>Posso testar todos os módulos juntos?</h3>
+        <p>
+          Sim, como triagem. Se aparecer erro, o próximo passo é isolar os componentes para descobrir onde a falha
+          acompanha a configuração.
+        </p>
+
+        <h3>Windows Memory Diagnostic substitui o Memtest86+?</h3>
+        <p>
+          São ferramentas diferentes e podem complementar o diagnóstico. Esta página trata especificamente do
+          Memtest86+, executado fora do sistema operacional.
+        </p>
+
+        <h2>Resumo prático</h2>
+        <p>
+          <strong>Use o Memtest86+ para detectar instabilidade, não para adivinhar a peça.</strong> Teste primeiro em
+          configuração padrão, registre o resultado e isole módulo e slot com uma variável por vez. Erro reproduzível
+          é evidência forte; teste limpo é útil, mas não encerra sozinho uma investigação de travamentos.
+        </p>
+
+        <EditorialReferences slug="testar-memoria-ram-memtest86" />
+      </>
+    ),
+  },
+
   "computador-sem-som-o-que-verificar": {
     title: "Computador sem som: roteiro para testar saída, dispositivo, driver e serviço de áudio",
     excerpt:
