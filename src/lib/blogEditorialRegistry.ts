@@ -1276,14 +1276,14 @@ const WAVE_11H: EditorialApproval[] = [
     status: "approved",
     authorType: "organization",
     authorId: INSTITUTIONAL_AUTHOR.id,
-    reviewedAt: "2026-09-25",
+    reviewedAt: "2026-10-01",
     approvedAt: "2026-09-25",
     imageOrigin: "owned",
     imageLicense: "Todos os direitos reservados",
     imageAttribution:
       "Arte editorial original: O Técnico de Informática — https://otecnicodeinformatica.com.br/blog/como-configurar-active-directory",
     notes:
-      "Reescrita completa com Microsoft Learn: AD DS, DNS, segurança, redundância, GPO, backup e critérios de parada. Capa vetorial própria, sem IA.",
+      "Revisão material em 2026-10-01 guiada pelo GSC: 1 impressão, 0 cliques e posição 44 entre 2026-04-01 e 2026-09-28. A única query exposta foi 'servidor ad'. A versão suplementar preserva a URL e aprofunda nova floresta versus DC adicional, DNS/namespace, promoção, DSRM, validação, OUs/GPOs, redundância, replicação, contas privilegiadas e backup de estado do sistema com fontes Microsoft Learn atuais.",
   },
   {
     slug: "como-deixar-celular-android-mais-rapido",
