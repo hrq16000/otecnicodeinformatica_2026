@@ -1752,6 +1752,24 @@ const WAVE_12D: EditorialApproval[] = [
 ];
 
 
+const WAVE_12E: EditorialApproval[] = [
+  {
+    slug: "ordem-de-boot-na-bios-como-configurar",
+    status: "approved",
+    authorType: "organization",
+    authorId: INSTITUTIONAL_AUTHOR.id,
+    reviewedAt: "2026-10-01",
+    approvedAt: "2026-08-31",
+    imageOrigin: "licensed",
+    imageLicense: "CC BY 2.0",
+    imageAttribution:
+      "Foto: Paul Schultz (Wikimedia Commons), CC BY 2.0 — https://commons.wikimedia.org/wiki/File:BIOS_Setup_First_Time.jpg",
+    notes:
+      "Revisão material em 2026-10-01 guiada por GSC real de página: 1 impressão, 0 cliques e posição média 5 no período fechado até 2026-09-28. Sem query individual exposta; nenhuma foi inventada. A versão suplementar preserva a URL e aprofunda boot temporário, prioridade permanente, Windows Boot Manager, UEFI, Secure Boot e BitLocker.",
+  },
+];
+
+
 export const APPROVED_EDITORIAL_CONTENT = new Map<string, EditorialApproval>([
 
   ...FIRST_WAVE_SLUGS.map((slug) => [
@@ -1830,6 +1848,7 @@ export const APPROVED_EDITORIAL_CONTENT = new Map<string, EditorialApproval>([
   ...WAVE_12B.map((a) => [a.slug, a] as [string, EditorialApproval]),
   ...WAVE_12C.map((a) => [a.slug, a] as [string, EditorialApproval]),
   ...WAVE_12D.map((a) => [a.slug, a] as [string, EditorialApproval]),
+  ...WAVE_12E.map((a) => [a.slug, a] as [string, EditorialApproval]),
 
 ]);
 
