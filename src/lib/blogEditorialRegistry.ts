@@ -1717,6 +1717,24 @@ const WAVE_12B: EditorialApproval[] = [
 ];
 
 
+const WAVE_12C: EditorialApproval[] = [
+  {
+    slug: "como-remover-virus-windows-iniciantes",
+    status: "approved",
+    authorType: "organization",
+    authorId: INSTITUTIONAL_AUTHOR.id,
+    reviewedAt: "2026-10-01",
+    approvedAt: "2026-08-12",
+    imageOrigin: "licensed",
+    imageLicense: "CC BY-SA 4.0",
+    imageAttribution:
+      "Foto: BrayLockBoy (Wikimedia Commons), CC BY-SA 4.0 — https://commons.wikimedia.org/wiki/File:MEMZ_Trojan_running_on_Samsung_N130,_13_December_2019.jpg",
+    notes:
+      "Revisão material em 2026-10-01 guiada por GSC real de página: 2 impressões, 0 cliques e posição média 28 no período fechado até 2026-09-28. Sem query individual exposta; nenhuma foi inventada. A versão suplementar preserva a URL e aprofunda contenção, Defender, credenciais, backup, ransomware, reinfecção e critérios de reinstalação.",
+  },
+];
+
+
 export const APPROVED_EDITORIAL_CONTENT = new Map<string, EditorialApproval>([
 
   ...FIRST_WAVE_SLUGS.map((slug) => [
@@ -1793,6 +1811,7 @@ export const APPROVED_EDITORIAL_CONTENT = new Map<string, EditorialApproval>([
   ...WAVE_11Z.map((a) => [a.slug, a] as [string, EditorialApproval]),
   ...WAVE_12A.map((a) => [a.slug, a] as [string, EditorialApproval]),
   ...WAVE_12B.map((a) => [a.slug, a] as [string, EditorialApproval]),
+  ...WAVE_12C.map((a) => [a.slug, a] as [string, EditorialApproval]),
 
 ]);
 

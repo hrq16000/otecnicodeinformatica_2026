@@ -2206,13 +2206,12 @@ export const ARTICLE_SOURCE_MANIFEST: Record<string, ArticleSourceManifest> = {
   },
   "como-remover-virus-windows-iniciantes": {
     slug: "como-remover-virus-windows-iniciantes",
-    sources: [],
+    sources: ["ms-windows-security-overview", "cisa-stop-ransomware", "cisa-upskill-checklist"],
     technicalReview: "reviewed",
     factChecked: true,
-    factCheckedAt: "2026-08-12",
-    stableKnowledge: true,
+    factCheckedAt: "2026-10-01",
     notes:
-      "Revisão concluída (Onda 5I): distinção entre adware/sequestro de navegador e malware, contenção antes da limpeza, ordem de remoção em camadas, causas de reinfecção (persistência, sincronização de perfil, origem ativa), proibição de pagamento de resgate e critério de reinstalação. Sem indicação de marca de ferramenta. Conhecimento técnico estável — sem fonte visível.",
+      "Revisão material em 2026-10-01 guiada por sinal real de página no GSC: 2 impressões, 0 cliques e posição média 28 entre 2026-04-01 e 2026-09-28. Nenhuma query individual foi exposta e nenhuma foi inventada. A versão suplementar aprofunda contenção, Windows Security/Defender, revisão de extensões e inicialização, credenciais, backup seletivo, ransomware, reinfecção e critérios de reinstalação. Fontes oficiais Microsoft e CISA ficam visíveis.",
   },
   "como-formatar-pc-sem-perder-arquivos": {
     slug: "como-formatar-pc-sem-perder-arquivos",
