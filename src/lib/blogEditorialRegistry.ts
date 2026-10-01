@@ -1735,6 +1735,23 @@ const WAVE_12C: EditorialApproval[] = [
 ];
 
 
+const WAVE_12D: EditorialApproval[] = [
+  {
+    slug: "organizacao-de-ti-para-pequenos-escritorios",
+    status: "approved",
+    authorType: "organization",
+    authorId: INSTITUTIONAL_AUTHOR.id,
+    reviewedAt: "2026-10-01",
+    approvedAt: "2026-08-12",
+    imageOrigin: "generated",
+    imageLicense: "custom-owned",
+    imageAttribution: "O Técnico de Informática",
+    notes:
+      "Revisão material em 2026-10-01 guiada por GSC real de página: 1 impressão, 0 cliques e posição média 2 no período fechado até 2026-09-28. Sem query individual exposta; nenhuma foi inventada. A versão suplementar preserva a URL e aprofunda inventário, contas, backup, rede, documentação e recuperação sem SLA ou promessa de continuidade.",
+  },
+];
+
+
 export const APPROVED_EDITORIAL_CONTENT = new Map<string, EditorialApproval>([
 
   ...FIRST_WAVE_SLUGS.map((slug) => [
@@ -1812,6 +1829,7 @@ export const APPROVED_EDITORIAL_CONTENT = new Map<string, EditorialApproval>([
   ...WAVE_12A.map((a) => [a.slug, a] as [string, EditorialApproval]),
   ...WAVE_12B.map((a) => [a.slug, a] as [string, EditorialApproval]),
   ...WAVE_12C.map((a) => [a.slug, a] as [string, EditorialApproval]),
+  ...WAVE_12D.map((a) => [a.slug, a] as [string, EditorialApproval]),
 
 ]);
 
