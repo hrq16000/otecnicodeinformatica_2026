@@ -11,6 +11,183 @@ import { MODALIDADES } from "@/lib/precosConfig";
  * do blog compõem base + suplementares + programáticos.
  */
 export const blogSupplementalPosts: Record<string, BlogPostContent> = {
+  "arquivo-corrompido-nao-abre-o-que-fazer": {
+    title: "Arquivo corrompido não abre: como preservar o original, testar outra cópia e tentar recuperação",
+    excerpt:
+      "Um arquivo que não abre pode estar corrompido, incompleto ou apenas incompatível com o aplicativo. Veja como preservar a cópia original, testar versões anteriores e separar problema lógico de falha no disco.",
+    date: "2026-10-01",
+    readTime: "13 min",
+    category: "Recuperação de Dados",
+    content: (
+      <>
+        <p className="lead">
+          <strong>Arquivo corrompido</strong> não é sinônimo de “arquivo perdido”. Antes de usar reparadores, confirme
+          se o problema está no arquivo, no aplicativo que tenta abri-lo ou no armazenamento onde ele está salvo. A
+          regra mais importante é simples: <strong>não trabalhe sobre a única cópia</strong>. Preserve o original e
+          faça as tentativas em duplicatas.
+        </p>
+
+        <h2>Resposta direta: o que fazer quando um arquivo não abre</h2>
+        <ol>
+          <li>Faça uma cópia do arquivo em outro local antes de testar qualquer reparo.</li>
+          <li>Confirme extensão, tamanho e aplicativo correto para abrir o formato.</li>
+          <li>Tente outra cópia conhecida do mesmo arquivo, quando existir.</li>
+          <li>Procure versões anteriores, histórico de arquivos, nuvem ou backup.</li>
+          <li>Se o arquivo veio de download, e-mail ou pendrive, obtenha uma nova cópia da origem.</li>
+          <li>Se vários arquivos falham no mesmo disco, pare de tratar como problema de um único arquivo e investigue o armazenamento.</li>
+        </ol>
+
+        <h2>Arquivo corrompido ou aplicativo incompatível?</h2>
+        <table>
+          <thead>
+            <tr><th>Sinal</th><th>Hipótese</th><th>Teste útil</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Só um aplicativo não abre</td><td>associação ou compatibilidade</td><td>abrir em outro aplicativo compatível</td></tr>
+            <tr><td>Arquivo tem 0 KB ou tamanho anormal</td><td>cópia/download incompleto</td><td>obter novamente da origem</td></tr>
+            <tr><td>Várias cópias do mesmo arquivo falham</td><td>arquivo realmente danificado</td><td>versão anterior/backup</td></tr>
+            <tr><td>Vários arquivos do mesmo disco começam a falhar</td><td>armazenamento/sistema de arquivos</td><td>parar escrita e diagnosticar mídia</td></tr>
+            <tr><td>Arquivo abre parcialmente</td><td>estrutura interna danificada</td><td>exportar o que ainda é legível para nova cópia</td></tr>
+          </tbody>
+        </table>
+
+        <h2>1. Preserve a cópia original antes de qualquer tentativa</h2>
+        <p>
+          Ferramentas de reparo podem modificar o arquivo. Por isso, crie uma cópia e mantenha o original intacto.
+          Se o arquivo está em um disco com sinais de falha, copie primeiro para outro armazenamento quando isso for
+          possível sem forçar leituras repetidas.
+        </p>
+
+        <h2>2. Confira extensão, tamanho e origem</h2>
+        <p>
+          Um arquivo com extensão errada pode parecer “corrompido”. Compare com outro arquivo válido do mesmo tipo,
+          confira o tamanho e lembre de onde ele veio. Downloads incompletos, anexos truncados e cópias interrompidas
+          podem gerar arquivos que existem no disco, mas não contêm todo o conteúdo necessário.
+        </p>
+
+        <h2>3. Teste outro aplicativo compatível</h2>
+        <p>
+          Um documento pode não abrir em um programa específico e ainda estar íntegro. Se houver outro aplicativo
+          confiável e compatível com o formato, teste a cópia nele. Isso ajuda a separar corrupção real de problema
+          de associação, versão ou compatibilidade.
+        </p>
+        <p>
+          Evite enviar documentos confidenciais para “reparadores online” desconhecidos. Além do risco de privacidade,
+          muitos serviços apenas tentam conversões genéricas.
+        </p>
+
+        <h2>4. Se veio de download, e-mail ou nuvem, tente obter novamente</h2>
+        <p>
+          Quando a origem ainda existe, uma nova cópia costuma ser mais segura do que tentar reconstruir um arquivo
+          incompleto. Baixe novamente, peça outro anexo ou restaure outra versão da nuvem.
+        </p>
+
+        <h2>5. Use versões anteriores antes de reparadores de terceiros</h2>
+        <p>
+          Se o computador usa Histórico de Arquivos, backup ou versionamento em nuvem, procure uma versão anterior.
+          Uma versão íntegra é melhor do que uma reconstrução parcial.
+        </p>
+        <p>
+          Para arquivos protegidos pelo OneDrive, verifique o histórico/estado de sincronização e a lixeira do serviço.
+          Para backup local, confirme a data da versão antes de sobrescrever o arquivo atual.
+        </p>
+
+        <h2>6. Se o arquivo abre parcialmente, salve o conteúdo recuperável em outro arquivo</h2>
+        <p>
+          Alguns formatos permitem abrir parte do conteúdo. Se isso acontecer, não continue salvando sobre o mesmo
+          arquivo. Exporte ou copie o conteúdo legível para um novo documento.
+        </p>
+
+        <h2>7. CHKDSK não “conserta o conteúdo” de um documento</h2>
+        <p>
+          O CHKDSK verifica estruturas do sistema de arquivos e pode corrigir erros do volume. Ele não reconstrói o
+          conteúdo lógico de um DOCX, XLSX, PDF, foto ou banco de dados. Use-o apenas quando há motivo para investigar
+          o sistema de arquivos, e não como reparador universal de documentos.
+        </p>
+
+        <h2>8. Vários arquivos corrompendo mudam o diagnóstico</h2>
+        <p>
+          Se documentos diferentes começam a apresentar erro no mesmo SSD, HD, cartão ou pendrive, investigue o
+          armazenamento. Falhas de leitura, desconexões e corrupção recorrente podem indicar problema do sistema de
+          arquivos ou da mídia.
+        </p>
+        <p>
+          Nesse cenário, evite copiar arquivos novos para a mesma unidade. Se os dados forem importantes, priorize
+          preservação e recuperação antes de “testar até funcionar”.
+        </p>
+
+        <h2>9. Não renomeie extensão para “converter” o arquivo</h2>
+        <p>
+          Trocar <code>.docx</code> por <code>.pdf</code>, por exemplo, não converte o conteúdo. Extensão é apenas uma
+          indicação do formato. Renomear pode tornar o diagnóstico ainda mais confuso.
+        </p>
+
+        <h2>10. Reparadores do próprio aplicativo podem ajudar</h2>
+        <p>
+          Alguns aplicativos oferecem “Abrir e reparar”, importação parcial ou recuperação automática. Use esses
+          recursos em uma cópia do arquivo e preserve o original. O resultado pode ser parcial.
+        </p>
+
+        <h2>11. Quando usar recuperação de arquivos</h2>
+        <p>
+          Se o arquivo foi apagado, sobrescrito parcialmente ou não existe mais em local acessível, o problema deixa
+          de ser apenas “arquivo que não abre” e entra em recuperação de dados. A Microsoft oferece o Windows File
+          Recovery para alguns cenários de exclusão em armazenamento local.
+        </p>
+        <p>
+          Quanto mais você escreve na unidade após uma exclusão, maior o risco de sobrescrever dados recuperáveis.
+        </p>
+
+        <h2>12. Quando parar de tentar sozinho</h2>
+        <ul>
+          <li>O disco faz ruídos anormais ou desconecta durante leitura.</li>
+          <li>O mesmo armazenamento está corrompendo vários arquivos.</li>
+          <li>Os dados são únicos e importantes, sem backup.</li>
+          <li>O arquivo pertence a banco de dados, projeto profissional ou formato proprietário crítico.</li>
+          <li>As tentativas exigiriam sobrescrever a única cópia existente.</li>
+        </ul>
+
+        <h2>Perguntas frequentes</h2>
+        <h3>Arquivo corrompido tem conserto?</h3>
+        <p>
+          Às vezes. Depende do formato, do tipo de dano e de existir conteúdo interno ainda legível. Versão anterior
+          íntegra é sempre preferível a reconstrução.
+        </p>
+
+        <h3>Posso usar CHKDSK para reparar um arquivo?</h3>
+        <p>
+          CHKDSK trabalha no sistema de arquivos do volume. Ele não repara a estrutura interna de um documento
+          específico.
+        </p>
+
+        <h3>Se o arquivo não abre, significa que está corrompido?</h3>
+        <p>
+          Não. Pode ser aplicativo incompatível, extensão incorreta, download incompleto ou falta de suporte ao formato.
+        </p>
+
+        <h3>Renomear a extensão resolve?</h3>
+        <p>
+          Não como regra. Renomear não converte o formato nem recria conteúdo perdido.
+        </p>
+
+        <h3>Devo usar um reparador online?</h3>
+        <p>
+          Só com muita cautela. Arquivos podem conter dados privados, e a taxa de recuperação varia. Prefira primeiro
+          versões anteriores, backup e ferramentas do próprio aplicativo.
+        </p>
+
+        <h2>Resumo prático</h2>
+        <p>
+          <strong>Preserve o original, confirme o formato e procure outra versão antes de reparar.</strong> Se o
+          problema envolve vários arquivos no mesmo disco, mude o foco para armazenamento. Recuperação boa começa
+          reduzindo escrita e evitando transformar um arquivo parcialmente recuperável em perda definitiva.
+        </p>
+
+        <EditorialReferences slug="arquivo-corrompido-nao-abre-o-que-fazer" />
+      </>
+    ),
+  },
+
   "limpar-cache-do-windows-update-softwaredistribution": {
     title: "SoftwareDistribution: quando limpar o cache do Windows Update e como fazer sem apagar por tentativa",
     excerpt:
