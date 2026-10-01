@@ -74,7 +74,7 @@ export const blogSupplementalPosts: Record<string, BlogPostContent> = {
           A documentação oficial dos fabricantes é importante porque a sequência de desmontagem e o nível de
           substituição permitido variam por produto. A Dell, por exemplo, orienta verificar a elegibilidade de peças
           substituíveis pelo cliente e o suporte do modelo; manuais Lenovo seguem sequências específicas antes de
-          chegar ao painel. citeturn242665search0turn242665search1
+          chegar ao painel.
         </p>
 
         <h2>3. O código do painel original é a melhor referência prática</h2>
@@ -176,7 +176,7 @@ export const blogSupplementalPosts: Record<string, BlogPostContent> = {
         <p>
           Alguns fabricantes classificam determinadas peças como substituíveis pelo cliente em alguns modelos; em
           outros, recomendam assistência. A Dell orienta consultar quais componentes são elegíveis para
-          auto-substituição e procurar suporte quando necessário. citeturn242665search0
+          auto-substituição e procurar suporte quando necessário.
         </p>
         <p>
           Se o equipamento ainda está coberto por garantia ou proteção contra dano acidental, confirme as condições
