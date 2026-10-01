@@ -247,14 +247,14 @@ const WAVE_5B: EditorialApproval[] = [
     status: "approved",
     authorType: "organization",
     authorId: INSTITUTIONAL_AUTHOR.id,
-    reviewedAt: "2026-09-28",
+    reviewedAt: "2026-10-01",
     approvedAt: "2026-08-12",
     imageOrigin: "licensed",
     imageLicense: "CC BY-SA 4.0",
     imageAttribution:
       "Foto: Mrbeastmodeallday (Wikimedia Commons), CC BY-SA 4.0 — https://commons.wikimedia.org/wiki/File:Home_wifi.jpg",
     notes:
-      "Reescrita integral na Onda 5B; fact-check registrado em blogEditorialSources.ts; capa é fotografia real licenciada, sem IA.",
+      "Revisão material em 2026-10-01 guiada pelo GSC: 105 impressões, 1 clique e posição média ~10,96 entre 2026-04-01 e 2026-09-28. Queries reais: 'como ver quantas pessoas estão conectadas no wifi' e 'como ver quem está usando meu wifi'. A versão suplementar preserva a URL e aprofunda inventário de clientes, MAC privado/aleatório, identificação por comparação controlada e resposta segura a dispositivo realmente desconhecido.",
   },
 ];
 
