@@ -11,6 +11,207 @@ import { MODALIDADES } from "@/lib/precosConfig";
  * do blog compõem base + suplementares + programáticos.
  */
 export const blogSupplementalPosts: Record<string, BlogPostContent> = {
+  "limpar-cache-do-windows-update-softwaredistribution": {
+    title: "SoftwareDistribution: quando limpar o cache do Windows Update e como fazer sem apagar por tentativa",
+    excerpt:
+      "A pasta SoftwareDistribution guarda dados temporários do Windows Update. Limpar o cache pode ajudar em downloads corrompidos, mas deve vir depois da triagem e preferencialmente por renomeação reversível.",
+    date: "2026-10-01",
+    readTime: "12 min",
+    category: "Windows e Atualizações",
+    content: (
+      <>
+        <p className="lead">
+          <strong>SoftwareDistribution</strong> é uma pasta usada pelo Windows Update para armazenar dados temporários
+          relacionados a download e processamento de atualizações. Renomeá-la pode forçar o Windows a reconstruir
+          esse cache e baixar novamente arquivos, mas <strong>não é a primeira solução para qualquer erro de
+          atualização</strong>. Antes, confirme o código/KB, espaço livre, internet, reinicializações pendentes e o
+          solucionador oficial.
+        </p>
+
+        <h2>Resposta direta: quando limpar o cache do Windows Update?</h2>
+        <p>
+          Considere limpar/recriar o cache quando o Windows Update apresenta download corrompido, progresso que volta
+          ao início, erro persistente associado a arquivos temporários ou quando o solucionador oficial não resolveu.
+          Se o problema é incompatibilidade de driver, falta de espaço, atualização específica com falha ou sistema
+          que não inicia, a pasta SoftwareDistribution pode não ser a causa.
+        </p>
+
+        <h2>Antes de mexer na SoftwareDistribution</h2>
+        <ol>
+          <li>Anote o código de erro e a KB que está falhando.</li>
+          <li>Reinicie o Windows e tente novamente.</li>
+          <li>Confirme espaço livre e conexão estável.</li>
+          <li>Desconecte hardware externo não essencial quando o erro começou durante uma atualização.</li>
+          <li>Execute o solucionador oficial do Windows Update.</li>
+          <li>Só então considere recriar o cache.</li>
+        </ol>
+
+        <h2>O que existe na pasta SoftwareDistribution?</h2>
+        <p>
+          Ela participa do armazenamento de arquivos temporários e metadados usados pelo Windows Update. Ao
+          reconstruí-la, o Windows pode precisar baixar novamente pacotes e reconstruir parte do histórico exibido na
+          interface.
+        </p>
+        <p>
+          Por isso, apagar a pasta indiscriminadamente não “conserta o Windows”; no máximo remove um estado de cache
+          que pode estar corrompido.
+        </p>
+
+        <h2>Por que preferir renomear em vez de apagar?</h2>
+        <p>
+          Renomear para algo como <strong>SoftwareDistribution.old</strong> é reversível enquanto você valida o
+          resultado. Se o Windows Update volta a funcionar e uma nova pasta é criada, o cache antigo pode ser removido
+          depois, quando você já confirmou que não precisa voltar atrás.
+        </p>
+        <p>
+          Isso também facilita diferenciar “o cache resolveu” de “apaguei arquivos e não sei mais o estado anterior”.
+        </p>
+
+        <h2>Procedimento seguro em alto nível</h2>
+        <ol>
+          <li>Abra um terminal administrativo.</li>
+          <li>Pare temporariamente os serviços envolvidos no Windows Update, conforme a orientação oficial.</li>
+          <li>Renomeie a pasta <code>C:\Windows\SoftwareDistribution</code> para um nome de backup.</li>
+          <li>Inicie novamente os serviços.</li>
+          <li>Abra o Windows Update e procure atualizações de novo.</li>
+          <li>Observe se o erro original mudou, desapareceu ou reaparece.</li>
+        </ol>
+
+        <h2>Não desative permanentemente o Windows Update</h2>
+        <p>
+          Parar um serviço durante manutenção é diferente de deixá-lo desativado. Depois de reconstruir o cache, os
+          serviços devem voltar ao estado operacional esperado para que o Windows consiga verificar e instalar
+          atualizações.
+        </p>
+
+        <h2>O que você perde ao recriar o cache?</h2>
+        <p>
+          Arquivos temporários de atualização podem ser baixados novamente e parte do histórico visual pode ser
+          reconstruída. Isso não significa que atualizações instaladas são “desinstaladas”. O estado real dos
+          componentes instalados é diferente do cache de download.
+        </p>
+
+        <h2>Quando limpar SoftwareDistribution não ajuda</h2>
+        <table>
+          <thead>
+            <tr><th>Problema</th><th>Por que cache pode não ajudar</th><th>Próxima investigação</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Falta de espaço</td><td>o update continua sem espaço para concluir</td><td>armazenamento</td></tr>
+            <tr><td>Driver incompatível</td><td>o pacote baixa, mas falha na instalação</td><td>driver/hardware</td></tr>
+            <tr><td>Corrupção de componentes</td><td>o problema está além do cache</td><td>DISM/SFC conforme diagnóstico</td></tr>
+            <tr><td>Atualização específica problemática</td><td>o mesmo pacote falha novamente</td><td>KB/código/histórico</td></tr>
+            <tr><td>Windows não inicia</td><td>não há sessão normal para manutenção</td><td>Windows RE</td></tr>
+          </tbody>
+        </table>
+
+        <h2>SoftwareDistribution e Catroot2 não são a mesma coisa</h2>
+        <p>
+          Tutoriais de “reset completo” frequentemente agrupam SoftwareDistribution e Catroot2. São componentes
+          diferentes. Não renomeie pastas adicionais só porque um script genérico manda; comece pelo problema real e
+          pela orientação oficial aplicável.
+        </p>
+
+        <h2>Se o erro voltar depois que o cache foi recriado</h2>
+        <p>
+          Isso é informação útil: o problema provavelmente não era apenas o conteúdo temporário. Volte ao código de
+          erro, KB, logs e estágio exato em que a atualização falha.
+        </p>
+        <p>
+          Para o diagnóstico geral, veja{" "}
+          <a href="/blog/windows-update-nao-funciona-o-que-verificar">
+            Windows Update não funciona: o que verificar
+          </a>.
+        </p>
+
+        <h2>Se aparece “desfazendo alterações”</h2>
+        <p>
+          Não limpe cache enquanto o Windows ainda está concluindo ou revertendo uma atualização. Se a máquina entra
+          em ciclo de reversão, use o roteiro específico de{" "}
+          <a href="/blog/windows-update-travado-desfazendo-alteracoes">
+            Windows Update travado em “desfazendo alterações”
+          </a>.
+        </p>
+
+        <h2>DISM e SFC: outro nível de diagnóstico</h2>
+        <p>
+          Se a hipótese é corrupção da imagem/component store ou arquivos do sistema, DISM e SFC têm funções próprias.
+          Eles não devem ser executados automaticamente só porque um download do Update falhou.
+        </p>
+        <p>
+          Cache, imagem de componentes e arquivos protegidos são camadas diferentes do Windows.
+        </p>
+
+        <h2>Quanto tempo o primeiro Windows Update pode levar depois?</h2>
+        <p>
+          Depois de recriar o cache, o Windows pode precisar verificar novamente, reconstruir metadados e baixar
+          pacotes. O tempo varia por máquina, conexão e quantidade de atualizações; não existe prazo universal.
+        </p>
+
+        <h2>Posso apagar SoftwareDistribution.old imediatamente?</h2>
+        <p>
+          É mais seguro primeiro confirmar que o Windows Update voltou a verificar e baixar normalmente. Depois da
+          validação, a pasta antiga deixa de ter utilidade como reversão do cache.
+        </p>
+
+        <h2>Ambiente corporativo: cuidado adicional</h2>
+        <p>
+          Computadores gerenciados podem usar políticas, WSUS, ferramentas MDM ou janelas de manutenção. Não force
+          reset de componentes sem saber como o dispositivo recebe atualizações.
+        </p>
+
+        <h2>Critérios de parada</h2>
+        <ul>
+          <li>O Windows não inicia normalmente.</li>
+          <li>Há BitLocker e você pretende entrar em recuperação sem a chave disponível.</li>
+          <li>O dispositivo é gerenciado por empresa/escola.</li>
+          <li>O mesmo erro reaparece após cache novo, indicando outra causa.</li>
+          <li>Há falha de armazenamento, desligamentos ou corrupção recorrente.</li>
+        </ul>
+
+        <h2>Perguntas frequentes</h2>
+        <h3>Posso excluir a pasta SoftwareDistribution?</h3>
+        <p>
+          O Windows consegue recriar dados de cache, mas a abordagem mais controlada é renomear primeiro, validar e só
+          depois remover a cópia antiga.
+        </p>
+
+        <h3>Limpar SoftwareDistribution desinstala atualizações?</h3>
+        <p>
+          Não é o objetivo do procedimento. Ele recria dados temporários/cache do Windows Update; atualizações já
+          instaladas são outra camada do sistema.
+        </p>
+
+        <h3>Preciso parar serviços antes de renomear?</h3>
+        <p>
+          Sim, a pasta pode estar em uso pelos componentes do Windows Update. Siga a sequência oficial e reinicie os
+          serviços depois.
+        </p>
+
+        <h3>Devo usar scripts de reset do Windows Update?</h3>
+        <p>
+          Prefira procedimentos transparentes e oficiais. Scripts genéricos podem alterar vários serviços, pastas e
+          configurações sem mostrar qual mudança realmente resolveu o problema.
+        </p>
+
+        <h3>Limpar cache melhora desempenho do Windows?</h3>
+        <p>
+          Não é ferramenta de otimização geral. Use quando existe problema específico do Windows Update que justifica
+          reconstruir os dados temporários.
+        </p>
+
+        <h2>Resumo prático</h2>
+        <p>
+          <strong>SoftwareDistribution é cache, não diagnóstico.</strong> Comece pelo erro real e pelo solucionador
+          oficial. Se houver evidência de cache corrompido, prefira uma recriação reversível por renomeação, reinicie
+          os serviços e valide o resultado antes de remover a pasta antiga.
+        </p>
+
+        <EditorialReferences slug="limpar-cache-do-windows-update-softwaredistribution" />
+      </>
+    ),
+  },
+
   "dispositivo-usb-nao-reconhecido-o-que-fazer": {
     title: "Dispositivo USB não reconhecido: como separar porta, cabo, energia, enumeração e driver",
     excerpt:
