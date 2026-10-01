@@ -11,6 +11,193 @@ import { MODALIDADES } from "@/lib/precosConfig";
  * do blog compõem base + suplementares + programáticos.
  */
 export const blogSupplementalPosts: Record<string, BlogPostContent> = {
+  "como-organizar-arquivos-windows-iniciantes": {
+    title: "Como organizar arquivos no computador: pastas, nomes, busca, backup e rotina simples",
+    excerpt:
+      "Organizar arquivos no computador não é criar dezenas de pastas: é conseguir encontrar, entender e proteger cada documento. Veja uma estrutura simples, regras de nome, busca, OneDrive e backup sem mover tudo por impulso.",
+    date: "2026-10-01",
+    readTime: "14 min",
+    category: "Windows",
+    content: (
+      <>
+        <p className="lead">
+          Para <strong>organizar arquivos no computador</strong>, comece por uma estrutura pequena e previsível. O objetivo
+          não é deixar o Explorador “bonito”, e sim tornar cada arquivo <strong>fácil de localizar, identificar e proteger</strong>.
+          Antes de mover milhares de itens, faça uma cópia de segurança e evite reorganizar pastas de sistema ou dados
+          sincronizados sem entender o impacto.
+        </p>
+
+        <h2>Resposta direta: como organizar arquivos no computador</h2>
+        <ol>
+          <li>Separe arquivos pessoais, trabalho/estudo, projetos e temporários.</li>
+          <li>Use poucas pastas principais e subpastas apenas quando houver necessidade real.</li>
+          <li>Dê nomes claros aos arquivos, preferencialmente com assunto e data quando isso ajudar.</li>
+          <li>Escolha um padrão e mantenha-o consistente.</li>
+          <li>Use a pesquisa do Explorador em vez de criar profundidade excessiva de pastas.</li>
+          <li>Revise Downloads e Área de Trabalho periodicamente.</li>
+          <li>Entenda o que está sincronizado com OneDrive antes de mover ou excluir em massa.</li>
+          <li>Mantenha backup independente e teste se consegue restaurar arquivos importantes.</li>
+        </ol>
+
+        <h2>Uma estrutura simples funciona melhor do que dezenas de níveis</h2>
+        <table>
+          <thead><tr><th>Pasta principal</th><th>Uso</th><th>Exemplo de subpastas</th></tr></thead>
+          <tbody>
+            <tr><td>Documentos</td><td>arquivos pessoais e administrativos</td><td>Finanças, Saúde, Casa</td></tr>
+            <tr><td>Trabalho ou Estudos</td><td>atividades profissionais ou acadêmicas</td><td>Clientes, Disciplinas, Projetos</td></tr>
+            <tr><td>Fotos e Vídeos</td><td>mídia pessoal</td><td>Ano, Evento, Viagem</td></tr>
+            <tr><td>Projetos</td><td>trabalhos com início e fim</td><td>Projeto A, Projeto B</td></tr>
+            <tr><td>Arquivo</td><td>conteúdo concluído que ainda precisa ser guardado</td><td>2025, 2026</td></tr>
+          </tbody>
+        </table>
+
+        <h2>1. Comece pelo que você realmente procura</h2>
+        <p>
+          Se você normalmente pensa “contrato da empresa X” ou “fotos da viagem Y”, use essas categorias como base.
+          Uma estrutura copiada de outra pessoa pode parecer organizada, mas falha se não combinar com a forma como você
+          procura seus próprios arquivos.
+        </p>
+
+        <h2>2. Evite a árvore de pastas profunda demais</h2>
+        <p>
+          Pastas dentro de pastas dentro de pastas aumentam o tempo de navegação e tornam caminhos longos difíceis de
+          entender. Prefira poucos níveis e use a pesquisa do Windows para localizar nome, tipo ou conteúdo quando aplicável.
+        </p>
+
+        <h2>3. Use nomes de arquivo que façam sentido fora da pasta</h2>
+        <p>
+          Nomes como <code>documento-final-novo-2.pdf</code> perdem contexto rapidamente. Quando útil, inclua assunto,
+          entidade e data. Por exemplo: <code>2026-10-contrato-cliente-x.pdf</code>. Não existe um padrão obrigatório;
+          consistência é mais importante do que uma fórmula universal.
+        </p>
+
+        <h2>4. Datas no formato ano-mês-dia ajudam na ordenação</h2>
+        <p>
+          Em arquivos que dependem de cronologia, <code>AAAA-MM-DD</code> ou <code>AAAA-MM</code> mantém a ordenação
+          alfabética próxima da ordem temporal. Use apenas quando a data realmente ajuda a distinguir versões ou eventos.
+        </p>
+
+        <h2>5. Não use “final”, “final2” e “final-agora-vai” como controle de versão</h2>
+        <p>
+          Para documentos com várias revisões, prefira versão explícita, data ou uma ferramenta que mantenha histórico.
+          Se várias pessoas editam o mesmo arquivo, armazenamento colaborativo com versionamento pode ser mais seguro do
+          que múltiplas cópias locais.
+        </p>
+
+        <h2>6. Área de Trabalho não deve virar arquivo permanente</h2>
+        <p>
+          A Área de Trabalho funciona bem como espaço temporário. Se tudo fica ali, o local deixa de ajudar. Mova itens
+          concluídos para a pasta correspondente e mantenha atalhos apenas para o que precisa de acesso frequente.
+        </p>
+
+        <h2>7. Downloads precisa de revisão periódica</h2>
+        <p>
+          A pasta Downloads acumula instaladores, anexos e arquivos temporários. Antes de apagar, identifique o que é
+          importante e mova para a pasta correta. Não trate “limpar Downloads” como exclusão automática.
+        </p>
+
+        <h2>8. Use pesquisa e filtros do Explorador de Arquivos</h2>
+        <p>
+          O Windows permite pesquisar por nome e usar filtros no Explorador. Isso reduz a necessidade de criar dezenas
+          de subpastas apenas para localizar um arquivo depois.
+        </p>
+
+        <h2>9. Acesso Rápido serve para atalhos, não para duplicar arquivos</h2>
+        <p>
+          Fixar uma pasta no Acesso Rápido cria um caminho de navegação conveniente; não é necessário copiar o conteúdo
+          para outro lugar só para chegar nele mais rápido.
+        </p>
+
+        <h2>10. OneDrive: sincronização não é a mesma coisa que backup independente</h2>
+        <p>
+          Se Documentos, Imagens ou Área de Trabalho estão protegidos/sincronizados pelo OneDrive, uma mudança local pode
+          ser propagada. Antes de reorganizar em massa, confirme quais pastas estão sincronizadas e como funciona a
+          restauração ou histórico disponível na sua conta.
+        </p>
+
+        <h2>11. Mover em massa sem backup pode transformar organização em perda de dados</h2>
+        <p>
+          Antes de uma grande reorganização, faça uma cópia independente dos arquivos importantes. Depois da mudança,
+          abra uma amostra de documentos e confirme que os caminhos e sincronizações continuam corretos.
+        </p>
+
+        <h2>12. Não mova pastas de sistema por tutorial genérico</h2>
+        <p>
+          Pastas do Windows, programas e perfis de usuário possuem dependências. Organize seus arquivos pessoais; não
+          recoloque diretórios de sistema ou de aplicações sem documentação específica e motivo claro.
+        </p>
+
+        <h2>13. Separe arquivo ativo de arquivo histórico</h2>
+        <p>
+          Projetos em andamento precisam ficar acessíveis. Conteúdo concluído, mas que ainda deve ser mantido, pode ir
+          para uma pasta de arquivo histórico. Isso reduz ruído sem apagar informação útil.
+        </p>
+
+        <h2>14. Uma pasta “A organizar” pode ajudar — desde que seja temporária</h2>
+        <p>
+          Quando a origem está muito desorganizada, crie uma área transitória para itens ainda não classificados.
+          Defina uma rotina para esvaziá-la; caso contrário, ela apenas vira o novo acúmulo.
+        </p>
+
+        <h2>15. Duplicados: não apague só pelo nome</h2>
+        <p>
+          Dois arquivos podem ter nomes semelhantes e conteúdos diferentes. Antes de remover duplicatas, compare
+          tamanho, data, origem e, quando necessário, conteúdo. Preserve uma cópia enquanto houver dúvida.
+        </p>
+
+        <h2>16. Crie uma rotina que você consiga manter</h2>
+        <p>
+          Uma organização sustentável exige pouca manutenção. Reserve alguns minutos periodicamente para revisar
+          Downloads, Área de Trabalho e a pasta temporária. Um sistema simples mantido vale mais que uma estrutura
+          sofisticada abandonada.
+        </p>
+
+        <h2>Critérios de parada</h2>
+        <ul>
+          <li>O disco apresenta erros, ruídos, desaparecimentos ou lentidão anormal.</li>
+          <li>Arquivos importantes já não abrem ou aparecem corrompidos.</li>
+          <li>Você não sabe quais pastas estão sincronizadas com serviços em nuvem.</li>
+          <li>A reorganização envolve perfis corporativos, compartilhamentos ou permissões que você não administra.</li>
+          <li>Não existe uma cópia confiável dos dados antes de uma movimentação em massa.</li>
+        </ul>
+
+        <h2>Perguntas frequentes</h2>
+        <h3>Qual é a melhor forma de organizar arquivos no computador?</h3>
+        <p>
+          Use poucas categorias principais, nomes consistentes e pesquisa. A melhor estrutura é a que permite encontrar
+          os arquivos sem depender da memória de onde cada item foi salvo.
+        </p>
+
+        <h3>Devo organizar por assunto ou por data?</h3>
+        <p>
+          Depende do uso. Assunto costuma funcionar para documentos e projetos; data ajuda em fotos, eventos e arquivos
+          recorrentes. Também é possível combinar os dois.
+        </p>
+
+        <h3>Posso deixar tudo no OneDrive?</h3>
+        <p>
+          Você pode usar OneDrive para sincronização e proteção de pastas quando adequado, mas não trate sincronização
+          como única estratégia de backup. Mantenha uma cópia independente para dados importantes.
+        </p>
+
+        <h3>Como organizar muitos arquivos de uma vez?</h3>
+        <p>
+          Faça por etapas: backup, classificação das pastas principais, processamento de uma categoria por vez e
+          validação. Evite movimentos massivos sem possibilidade de reversão.
+        </p>
+
+        <h2>Resumo prático</h2>
+        <p>
+          <strong>Organizar arquivos é criar um sistema previsível para encontrar e proteger informação.</strong>
+          Comece com poucas pastas, nomes claros, pesquisa do Windows e revisão periódica. Antes de mudanças grandes,
+          confirme sincronização e backup; organização que aumenta risco de perda de dados não é uma melhoria.
+        </p>
+
+        <EditorialReferences slug="como-organizar-arquivos-windows-iniciantes" />
+      </>
+    ),
+  },
+
   "como-melhorar-sinal-wifi-em-casa": {
     title: "Sinal de Wi-Fi fraco: como melhorar a cobertura sem trocar tudo por tentativa",
     excerpt:

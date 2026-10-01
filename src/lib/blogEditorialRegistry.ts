@@ -1664,6 +1664,23 @@ const WAVE_11Y: EditorialApproval[] = [
 ];
 
 
+const WAVE_11Z: EditorialApproval[] = [
+  {
+    slug: "como-organizar-arquivos-windows-iniciantes",
+    status: "approved",
+    authorType: "organization",
+    authorId: INSTITUTIONAL_AUTHOR.id,
+    reviewedAt: "2026-10-01",
+    approvedAt: "2026-09-25",
+    imageOrigin: "owned",
+    imageLicense: "Todos os direitos reservados",
+    imageAttribution: "Arte editorial original: O Técnico de Informática — https://otecnicodeinformatica.com.br/blog/como-organizar-arquivos-windows-iniciantes",
+    notes:
+      "Revisão material em 2026-10-01 guiada pelo GSC: 2 impressões, 0 cliques e posição média 59,5 entre 2026-04-01 e 2026-09-28. A única query individual exposta foi 'como organizar arquivos no computador'. A versão suplementar preserva a URL e aprofunda organização, pesquisa, sincronização e backup com foco em segurança de dados.",
+  },
+];
+
+
 export const APPROVED_EDITORIAL_CONTENT = new Map<string, EditorialApproval>([
 
   ...FIRST_WAVE_SLUGS.map((slug) => [
@@ -1737,6 +1754,7 @@ export const APPROVED_EDITORIAL_CONTENT = new Map<string, EditorialApproval>([
   ...WAVE_11W.map((a) => [a.slug, a] as [string, EditorialApproval]),
   ...WAVE_11X.map((a) => [a.slug, a] as [string, EditorialApproval]),
   ...WAVE_11Y.map((a) => [a.slug, a] as [string, EditorialApproval]),
+  ...WAVE_11Z.map((a) => [a.slug, a] as [string, EditorialApproval]),
 
 ]);
 
