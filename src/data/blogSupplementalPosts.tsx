@@ -11,6 +11,210 @@ import { MODALIDADES } from "@/lib/precosConfig";
  * do blog compõem base + suplementares + programáticos.
  */
 export const blogSupplementalPosts: Record<string, BlogPostContent> = {
+  "notebook-superaquecendo-o-que-fazer": {
+    title: "Notebook superaquecendo: como diagnosticar calor, ventoinha e perda de desempenho",
+    excerpt:
+      "Notebook quente não significa automaticamente defeito. Aprenda a separar carga normal, ventilação bloqueada, throttling, ventoinha, poeira, pasta térmica e sinais de risco como bateria estufada ou desligamentos.",
+    date: "2026-09-30",
+    readTime: "14 min",
+    category: "Diagnóstico de Hardware",
+    content: (
+      <>
+        <p className="lead">
+          Um <strong>notebook superaquecendo</strong> deve ser diagnosticado pelo comportamento, não por um único
+          número de temperatura. Processadores modernos aumentam temperatura sob carga e possuem mecanismos de
+          proteção, como redução de frequência e desligamento. O problema ganha relevância quando aparecem
+          <strong> perda de desempenho, ventoinha anormal, travamentos, desligamentos, calor excessivo em uso leve ou
+          bloqueio de ventilação</strong>.
+        </p>
+
+        <h2>Resposta direta: o que fazer quando o notebook está superaquecendo?</h2>
+        <ol>
+          <li>Use o notebook em superfície plana e rígida, com entradas e saídas de ar livres.</li>
+          <li>Compare o comportamento em repouso e sob a tarefa que causa o aquecimento.</li>
+          <li>Observe CPU, GPU, disco e processos para descobrir se existe carga real.</li>
+          <li>Verifique se a ventoinha gira e se o fluxo de ar mudou em relação ao normal.</li>
+          <li>Limpe externamente as aberturas; desmontagem interna só quando o modelo e o procedimento são conhecidos.</li>
+          <li>Se houver throttling, desligamentos, cheiro, bateria estufada ou carcaça deformada, pare e investigue antes de continuar usando.</li>
+        </ol>
+
+        <h2>Calor normal, superaquecimento e defeito não são a mesma coisa</h2>
+        <table>
+          <thead><tr><th>Situação</th><th>Interpretação</th><th>Próximo passo</th></tr></thead>
+          <tbody>
+            <tr><td>Esquenta durante jogo/renderização e volta ao normal depois</td><td>Pode ser carga normal</td><td>Comparar desempenho e especificação do fabricante</td></tr>
+            <tr><td>Ventoinha acelera e CPU reduz frequência</td><td>Pode haver throttling térmico</td><td>Verificar fluxo de ar, carga e solução térmica</td></tr>
+            <tr><td>Esquenta muito em uso leve</td><td>Carga em segundo plano, ventilação ou falha</td><td>Medir processos e observar ventoinha</td></tr>
+            <tr><td>Desliga sozinho sob carga</td><td>Proteção térmica ou outra falha elétrica</td><td>Interromper testes agressivos e diagnosticar</td></tr>
+            <tr><td>Carcaça abrindo/trackpad levantado</td><td>Possível bateria estufada</td><td>Parar uso e serviço técnico</td></tr>
+          </tbody>
+        </table>
+
+        <h2>1. Não use uma temperatura universal como sentença</h2>
+        <p>
+          A Intel informa que limites térmicos variam por processador, BIOS e projeto do equipamento. Temperaturas
+          instantâneas altas sob carga não são, sozinhas, prova de defeito. O fabricante do notebook conhece a solução
+          térmica, limites acústicos e perfis de potência daquele modelo.
+        </p>
+        <p>
+          Compare sempre a temperatura com a carga, frequência, potência e comportamento do sistema. Um notebook fino
+          pode operar quente sob pico e ainda estar dentro do projeto; outro pode perder desempenho cedo por fluxo de
+          ar comprometido.
+        </p>
+
+        <h2>2. Throttling é proteção, mas também é evidência útil</h2>
+        <p>
+          Processadores podem reduzir frequência e potência ao atingir limites térmicos. Essa proteção evita dano,
+          mas se ela ocorre continuamente em uma carga que antes funcionava melhor, existe uma evidência objetiva de
+          que a dissipação ou o perfil térmico precisa ser investigado.
+        </p>
+        <p>
+          Não tente “desativar proteção térmica”. O correto é descobrir por que o sistema está alcançando o limite.
+        </p>
+
+        <h2>3. Superfície macia pode bloquear ventilação</h2>
+        <p>
+          Fabricantes de notebooks orientam uso em superfície plana e rígida. Cama, sofá, cobertor e almofadas podem
+          obstruir entradas de ar na parte inferior e reduzir o fluxo. Esse teste é simples: repita a mesma tarefa em
+          uma mesa limpa e compare temperatura, rotação da ventoinha e desempenho.
+        </p>
+
+        <h2>4. Antes de abrir o notebook, verifique a carga de software</h2>
+        <p>
+          Abra o Gerenciador de Tarefas enquanto o notebook está quente. Um processo usando CPU/GPU de forma intensa
+          explica por que o sistema está gerando calor. Atualizações, indexação, jogos, renderização, navegador e
+          sincronização podem elevar consumo.
+        </p>
+        <p>
+          Se o equipamento aquece sem carga aparente, reinicie e compare. Persistência de consumo anormal pode indicar
+          problema de software, driver ou processo que precisa ser identificado antes de mexer na refrigeração.
+        </p>
+
+        <h2>5. Ventoinha barulhenta nem sempre significa defeito</h2>
+        <p>
+          A ventoinha acelera para remover calor. Barulho maior durante carga pode ser normal. O sinal mais preocupante
+          é mudança de comportamento: ruído mecânico, raspagem, parada intermitente, fluxo de ar muito menor ou
+          ventoinha que não gira quando o sistema está quente.
+        </p>
+
+        <h2>6. Limpeza externa é diferente de desmontagem</h2>
+        <p>
+          Poeira pode restringir entradas e saídas. Limpar as aberturas externas com o notebook desligado é uma etapa
+          menos invasiva. Abrir o equipamento exige conhecer parafusos, cabos, bateria e procedimento específico do
+          modelo.
+        </p>
+        <p>
+          Não use jato de ar de forma que faça a ventoinha girar descontroladamente e não introduza líquidos nas
+          aberturas.
+        </p>
+
+        <h2>7. Pasta térmica não tem intervalo universal de troca</h2>
+        <p>
+          Não existe regra confiável de “trocar pasta a cada X meses” para todo notebook. Alguns usam pasta, outros
+          compostos de fase, pads ou soluções específicas. Abrir o conjunto térmico sem necessidade pode piorar a
+          montagem.
+        </p>
+        <p>
+          A troca faz mais sentido quando existe evidência de degradação da interface, manutenção do dissipador ou
+          orientação do fabricante. Para o procedimento em si, veja{" "}
+          <a href="/blog/como-trocar-pasta-termica-notebook">como trocar pasta térmica em notebook com segurança</a>.
+        </p>
+
+        <h2>8. BIOS, firmware e perfis de energia podem alterar o comportamento térmico</h2>
+        <p>
+          Fabricantes podem ajustar curvas de ventoinha, limites de potência e modos silencioso/desempenho por BIOS ou
+          aplicativo próprio. Se o comportamento mudou após uma atualização, registre a versão e consulte as notas do
+          fabricante antes de reverter ou atualizar novamente.
+        </p>
+        <p>
+          Um perfil de “alto desempenho” pode gerar mais calor; um perfil equilibrado pode reduzir potência sem
+          significar defeito.
+        </p>
+
+        <h2>9. Base refrigerada ajuda?</h2>
+        <p>
+          Pode ajudar em alguns modelos se melhorar o fluxo de ar nas entradas corretas, mas não corrige ventoinha
+          quebrada, dissipador mal montado ou bateria estufada. Use como complemento, não como diagnóstico.
+        </p>
+
+        <h2>10. Bateria estufada é critério de parada</h2>
+        <p>
+          Bateria de íons de lítio pode inchar com envelhecimento ou falha. Sinais incluem carcaça separando, trackpad
+          levantado ou notebook instável sobre superfície plana. Nessa situação, pare de pressionar a carcaça ou
+          continuar carregando por tentativa.
+        </p>
+
+        <h2>11. Quando o calor aponta para problema de hardware</h2>
+        <ul>
+          <li>Ventoinha não gira ou apresenta ruído mecânico.</li>
+          <li>Notebook desliga sob carga moderada repetidamente.</li>
+          <li>Fluxo de ar é muito fraco mesmo com ventoinha acelerada.</li>
+          <li>Dissipador foi removido e remontado recentemente.</li>
+          <li>Há sinais de líquido, impacto, queimado ou deformação.</li>
+          <li>Temperatura/performance pioraram muito sem mudança equivalente de carga.</li>
+        </ul>
+
+        <h2>12. Como medir sem transformar o teste em tortura</h2>
+        <p>
+          Prefira comparar tarefas reais: vídeo, navegação, compilação, jogo ou aplicativo usado no dia a dia.
+          Stress tests extremos podem levar o processador deliberadamente ao limite e não representam toda rotina.
+        </p>
+        <p>
+          Registre temperatura, frequência, uso e tempo até estabilizar. O valor comparativo antes/depois de uma
+          correção é mais útil que um pico isolado.
+        </p>
+
+        <h2>13. Se o notebook fica lento quando esquenta</h2>
+        <p>
+          Esse padrão é compatível com limitação térmica, mas também pode envolver energia ou outros gargalos.
+          Confirme se a frequência da CPU/GPU cai ao mesmo tempo em que a temperatura sobe. Se sim, investigue
+          ventilação, perfil de potência e solução térmica.
+        </p>
+
+        <h2>14. Se o notebook desliga sozinho</h2>
+        <p>
+          Pare de repetir cargas pesadas. Processadores possuem mecanismos de proteção térmica, mas desligamentos
+          também podem vir de bateria, fonte, placa, VRM ou firmware. Preserve dados e diagnostique sem insistir.
+        </p>
+
+        <h2>Critérios de parada</h2>
+        <ul>
+          <li>Bateria estufada, cheiro forte, fumaça ou carcaça deformada.</li>
+          <li>Desligamentos repetidos sob pouca carga.</li>
+          <li>Ventoinha parada ou com ruído mecânico.</li>
+          <li>Necessidade de desmontar heatpipes/bateria sem manual do modelo.</li>
+          <li>Notebook corporativo ou em garantia que exigiria violar procedimento autorizado.</li>
+        </ul>
+
+        <h2>Perguntas frequentes</h2>
+        <h3>Notebook quente é sempre superaquecimento?</h3>
+        <p>Não. Temperatura aumenta com carga e o projeto térmico varia por modelo. Observe desempenho, throttling e estabilidade.</p>
+
+        <h3>Qual temperatura é perigosa?</h3>
+        <p>Não há valor universal para todo notebook. Consulte o processador e, principalmente, a documentação do fabricante do equipamento.</p>
+
+        <h3>Trocar pasta térmica sempre resolve?</h3>
+        <p>Não. O problema pode estar em poeira, ventoinha, carga, firmware, montagem ou outra falha.</p>
+
+        <h3>Posso usar notebook na cama?</h3>
+        <p>Se a superfície bloquear as entradas de ar, o resfriamento piora. Prefira superfície plana e rígida.</p>
+
+        <h3>Ventoinha alta significa que vai queimar?</h3>
+        <p>Não necessariamente. Ela pode estar respondendo corretamente à carga. Mudança brusca de ruído ou ausência de fluxo merece investigação.</p>
+
+        <h2>Resumo prático</h2>
+        <p>
+          <strong>Diagnostique por comportamento.</strong> Garanta ventilação, identifique a carga, compare
+          temperatura com frequência e desempenho, observe ventoinha e não use uma temperatura ou intervalo de pasta
+          térmica como regra universal. Bateria estufada, desligamentos, cheiro e falha de ventoinha são sinais para
+          parar e investigar.
+        </p>
+
+        <EditorialReferences slug="notebook-superaquecendo-o-que-fazer" />
+      </>
+    ),
+  },
+
   "o-que-e-informatica": {
     title: "O que é informática? Significado, áreas, exemplos e diferença para TI e computação",
     excerpt:

@@ -1612,6 +1612,24 @@ const WAVE_11V: EditorialApproval[] = [
 ];
 
 
+
+const WAVE_11W: EditorialApproval[] = [
+  {
+    slug: "notebook-superaquecendo-o-que-fazer",
+    status: "approved",
+    authorType: "organization",
+    authorId: INSTITUTIONAL_AUTHOR.id,
+    reviewedAt: "2026-09-30",
+    approvedAt: FIRST_WAVE_APPROVED_AT,
+    imageOrigin: "generated",
+    imageLicense: "Ativo gerado sob encomenda para uso próprio da marca",
+    imageAttribution: "O Técnico de Informática",
+    notes:
+      "Revisão material em 2026-09-30 guiada pelo GSC: 4 impressões, 0 cliques e posição média ~50,75 entre 2026-04-01 e 2026-09-28. A única query individual exposta foi 'notebook superaquecendo' (4 impressões). A versão suplementar preserva a URL e mantém intenção específica de notebook, separando carga, ventilação, throttling, ventoinha, poeira, interface térmica e bateria estufada, sem temperatura ou prazo universal de pasta térmica.",
+  },
+];
+
+
 export const APPROVED_EDITORIAL_CONTENT = new Map<string, EditorialApproval>([
 
   ...FIRST_WAVE_SLUGS.map((slug) => [
@@ -1682,6 +1700,7 @@ export const APPROVED_EDITORIAL_CONTENT = new Map<string, EditorialApproval>([
   ...WAVE_11T.map((a) => [a.slug, a] as [string, EditorialApproval]),
   ...WAVE_11U.map((a) => [a.slug, a] as [string, EditorialApproval]),
   ...WAVE_11V.map((a) => [a.slug, a] as [string, EditorialApproval]),
+  ...WAVE_11W.map((a) => [a.slug, a] as [string, EditorialApproval]),
 
 ]);
 
