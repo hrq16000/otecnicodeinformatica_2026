@@ -1317,6 +1317,43 @@ export const EDITORIAL_SOURCES: Record<string, EditorialSource> = {
     ],
   },
 
+  "ms-usb-not-recognized-2026": {
+    id: "ms-usb-not-recognized-2026",
+    title: "Corrigir problemas com a USB-C no Windows",
+    publisher: "Microsoft Support",
+    url: "https://support.microsoft.com/pt-br/windows/hardware/usb/fix-usb-c-problems-in-windows",
+    accessedAt: "2026-10-01",
+    sourceType: "official",
+    supports: [
+      "A Microsoft relaciona a mensagem de dispositivo USB não reconhecido a problema reportado pelo dispositivo ou a falha de driver e orienta consultar o código no Gerenciador de Dispositivos.",
+      "O estado e o código do dispositivo ajudam a distinguir reconhecimento/driver de outras falhas do caminho USB.",
+    ],
+  },
+  "ms-device-manager-error-codes-2026": {
+    id: "ms-device-manager-error-codes-2026",
+    title: "Códigos de erro no Gerenciador de Dispositivos no Windows",
+    publisher: "Microsoft Support",
+    url: "https://support.microsoft.com/pt-br/windows/hardware/drivers/error-codes-in-device-manager-in-windows",
+    accessedAt: "2026-10-01",
+    sourceType: "official",
+    supports: [
+      "O Gerenciador de Dispositivos expõe códigos de erro no status do dispositivo e diferentes códigos possuem causas e resoluções distintas.",
+      "Atualização ou reinstalação de driver é apropriada para códigos específicos, não como explicação universal para qualquer falha USB.",
+    ],
+  },
+  "ms-usb-enumeration-unknown-device-2026": {
+    id: "ms-usb-enumeration-unknown-device-2026",
+    title: "Case Study - Troubleshooting an Unknown USB Device",
+    publisher: "Microsoft Learn",
+    url: "https://learn.microsoft.com/en-us/windows-hardware/drivers/usbcon/case-study--troubleshooting-an-unknown-usb-device-by-using-etw-and-netmon",
+    accessedAt: "2026-10-01",
+    sourceType: "official",
+    supports: [
+      "Falhas durante a enumeração USB podem fazer o hub reportar a chegada do dispositivo, mas o Windows marcá-lo como desconhecido.",
+      "Falhas de reset de porta, atribuição de endereço ou leitura/validação de descritores podem impedir a enumeração antes da identificação normal do dispositivo.",
+    ],
+  },
+
   "ms-file-explorer-windows": {
     id: "ms-file-explorer-windows",
     title: "Explorador de Arquivos no Windows",
@@ -2466,13 +2503,16 @@ export const ARTICLE_SOURCE_MANIFEST: Record<string, ArticleSourceManifest> = {
   },
   "dispositivo-usb-nao-reconhecido-o-que-fazer": {
     slug: "dispositivo-usb-nao-reconhecido-o-que-fazer",
-    sources: [],
+    sources: [
+      "ms-usb-not-recognized-2026",
+      "ms-device-manager-error-codes-2026",
+      "ms-usb-enumeration-unknown-device-2026",
+    ],
     technicalReview: "reviewed",
     factChecked: true,
-    factCheckedAt: "2026-09-03",
-    stableKnowledge: true,
+    factCheckedAt: "2026-10-01",
     notes:
-      "Revisão concluída (Onda 11C): sequência de isolamento porta/cabo/dispositivo/alimentação, explicação da enumeração USB, alerta contra desinstalar controladores em série e parada obrigatória em disco externo com dados sem cópia. Conhecimento técnico estável — sem fonte visível.",
+      "Revisão material em 2026-10-01 guiada pelo GSC: 2 impressões, 0 cliques e posição média ~44,5 entre 2026-04-01 e 2026-09-28. Queries reais expostas: 'dispositivo usb não reconhecido' e 'usb não reconhecido'. A versão suplementar aprofunda isolamento por porta/cabo/dispositivo/alimentação, enumeração USB, códigos do Gerenciador de Dispositivos, limites de reinstalação de driver e proteção de dados em armazenamento externo. Fontes Microsoft visíveis; nenhuma query inventada.",
   },
   "como-testar-restauracao-de-backup": {
     slug: "como-testar-restauracao-de-backup",

@@ -11,6 +11,244 @@ import { MODALIDADES } from "@/lib/precosConfig";
  * do blog compõem base + suplementares + programáticos.
  */
 export const blogSupplementalPosts: Record<string, BlogPostContent> = {
+  "dispositivo-usb-nao-reconhecido-o-que-fazer": {
+    title: "Dispositivo USB não reconhecido: como separar porta, cabo, energia, enumeração e driver",
+    excerpt:
+      "Windows mostra USB não reconhecido? Teste por camadas: porta, cabo, alimentação, enumeração e driver. Evite reinstalar controladores em série ou formatar um disco externo antes de preservar os dados.",
+    date: "2026-10-01",
+    readTime: "13 min",
+    category: "Diagnóstico de Periféricos",
+    content: (
+      <>
+        <p className="lead">
+          Quando aparece <strong>“dispositivo USB não reconhecido”</strong>, o Windows detectou que algo foi conectado,
+          mas não conseguiu completar corretamente a identificação ou inicialização daquele dispositivo. A causa pode
+          estar na porta, no cabo, na alimentação, no próprio periférico, na enumeração USB ou no driver. O melhor
+          diagnóstico reduz variáveis antes de reinstalar qualquer coisa.
+        </p>
+
+        <h2>Resposta direta: o que fazer quando o USB não é reconhecido</h2>
+        <ol>
+          <li>Desconecte o dispositivo e teste outra porta diretamente no computador.</li>
+          <li>Se houver cabo destacável, compare com outro cabo compatível e confiável.</li>
+          <li>Teste o mesmo dispositivo em outro computador.</li>
+          <li>Teste outro dispositivo conhecido na porta suspeita.</li>
+          <li>Abra o Gerenciador de Dispositivos e registre o nome/status/código de erro.</li>
+          <li>Se for armazenamento com dados importantes, preserve os dados antes de ações destrutivas.</li>
+          <li>Atualize ou reinstale apenas o dispositivo/driver identificado, não todos os controladores USB de uma vez.</li>
+        </ol>
+
+        <h2>O diagnóstico muda conforme o comportamento</h2>
+        <table>
+          <thead>
+            <tr><th>Sintoma</th><th>Hipótese mais útil</th><th>Próximo teste</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Nada acontece em uma porta</td><td>porta/alimentação</td><td>outro dispositivo na mesma porta</td></tr>
+            <tr><td>Funciona em outra porta</td><td>porta/hub/caminho específico</td><td>comparar portas traseiras/frontais</td></tr>
+            <tr><td>Funciona em outro PC</td><td>Windows/driver/controlador local</td><td>Gerenciador de Dispositivos</td></tr>
+            <tr><td>Falha em todos os PCs</td><td>cabo ou dispositivo</td><td>outro cabo e inspeção física</td></tr>
+            <tr><td>Conecta/desconecta repetidamente</td><td>energia, cabo, conector ou falha</td><td>eliminar hub e comparar cabo/porta</td></tr>
+            <tr><td>Aparece “Unknown USB Device”</td><td>falha de enumeração</td><td>registrar código/status do dispositivo</td></tr>
+          </tbody>
+        </table>
+
+        <h2>1. Teste outra porta antes de mexer em driver</h2>
+        <p>
+          Conecte diretamente ao computador, sem hub ou extensão durante o diagnóstico. Em desktop, compare portas
+          traseiras ligadas diretamente à placa-mãe com portas frontais, que dependem de cabeamento interno.
+        </p>
+        <p>
+          Se o mesmo dispositivo funciona em outra porta, o foco muda para a porta, hub interno, conector ou energia
+          daquela rota — não para o periférico como um todo.
+        </p>
+
+        <h2>2. Cabo USB pode carregar e ainda falhar em dados</h2>
+        <p>
+          Alguns cabos são somente carga; outros têm condutores danificados e ainda fornecem energia sem comunicação
+          confiável. Se o dispositivo usa cabo destacável, compare com outro cabo que você sabe transmitir dados.
+        </p>
+        <p>
+          Evite concluir “a porta está boa porque acendeu uma luz”. Alimentação e comunicação usam funções diferentes.
+        </p>
+
+        <h2>3. Compare o dispositivo em outro computador</h2>
+        <p>
+          Esse teste separa rapidamente o Windows local do periférico. Se o dispositivo falha em máquinas diferentes,
+          a hipótese de cabo/dispositivo ganha força. Se funciona em outro PC, investigue driver, controlador e
+          configuração do primeiro computador.
+        </p>
+
+        <h2>4. Use o Gerenciador de Dispositivos como evidência</h2>
+        <p>
+          A Microsoft orienta abrir as propriedades do dispositivo e registrar o código exibido em
+          <strong>Status do dispositivo</strong>. Códigos diferentes apontam para problemas diferentes; não trate todo
+          triângulo amarelo como “driver faltando”.
+        </p>
+        <p>
+          Anote o nome exibido, categoria, código e se a entrada aparece/desaparece quando você reconecta o periférico.
+        </p>
+
+        <h2>5. O que é enumeração USB?</h2>
+        <p>
+          Quando um USB é conectado, o host precisa detectar sua chegada, atribuir endereço e ler descritores que
+          identificam fabricante, produto e configuração. A documentação Microsoft mostra que uma falha nessa etapa
+          pode fazer o dispositivo aparecer como desconhecido.
+        </p>
+        <p>
+          Por isso, “Unknown USB Device” não significa automaticamente que falta um driver. O Windows pode nem ter
+          conseguido identificar corretamente o hardware para chegar à etapa normal de driver.
+        </p>
+
+        <h2>6. Device Descriptor Request Failed: o que significa</h2>
+        <p>
+          Esse tipo de mensagem indica falha ao obter informações necessárias do dispositivo durante a enumeração.
+          Pode envolver o próprio periférico, cabo, porta, energia ou caminho USB.
+        </p>
+        <p>
+          O teste mais valioso continua sendo cruzado: outro cabo, outra porta e outro computador antes de ações de
+          software mais invasivas.
+        </p>
+
+        <h2>7. Energia insuficiente pode parecer falha de reconhecimento</h2>
+        <p>
+          Discos externos, interfaces, webcams e outros periféricos podem exigir mais energia do que um hub passivo ou
+          porta problemática consegue fornecer de forma estável. Se o dispositivo reinicia, desconecta ou só funciona
+          em determinadas portas, elimine hubs e adaptadores durante o teste.
+        </p>
+        <p>
+          Em dispositivos que possuem fonte própria, confirme também a alimentação externa.
+        </p>
+
+        <h2>8. Driver: atualize o alvo correto</h2>
+        <p>
+          Se o dispositivo enumera e aparece com um código coerente com driver, use Windows Update ou o fabricante do
+          hardware. A Microsoft documenta atualização/reinstalação como resolução para vários códigos do Gerenciador
+          de Dispositivos.
+        </p>
+        <p>
+          Evite programas de “atualização automática de todos os drivers” e pacotes de origem desconhecida.
+        </p>
+
+        <h2>9. Não desinstale todos os controladores USB como primeira reação</h2>
+        <p>
+          Remover controladores/hubs em série pode derrubar teclado, mouse e outros dispositivos e ainda não corrigir
+          um periférico defeituoso. Primeiro identifique qual entrada muda quando o dispositivo é conectado.
+        </p>
+        <p>
+          Se for necessário reinstalar uma entrada específica, registre o estado anterior e tenha um método de entrada
+          alternativo caso teclado/mouse dependam do mesmo barramento.
+        </p>
+
+        <h2>10. Pendrive ou disco externo: dados vêm antes de “reparar”</h2>
+        <p>
+          Se o USB é armazenamento e contém dados importantes, não inicialize, formate ou recrie partições só porque
+          ele não aparece no Explorador. Primeiro descubra se o Windows detecta o dispositivo e o disco.
+        </p>
+        <p>
+          Uma unidade que some e volta, desconecta durante leitura ou apresenta erros deve ser tratada como possível
+          falha de armazenamento.
+        </p>
+
+        <h2>11. Dispositivo reconhecido, mas não aparece no Explorador</h2>
+        <p>
+          Isso já é outro estágio do diagnóstico. Se o hardware aparece no Gerenciador de Dispositivos e no
+          Gerenciamento de Disco, mas não tem letra/volume montado, o problema não é mais “USB não reconhecido” no
+          sentido de enumeração.
+        </p>
+        <p>
+          Não confunda falta de letra de unidade com falha de porta USB.
+        </p>
+
+        <h2>12. USB-C adiciona variáveis de modo e capacidade</h2>
+        <p>
+          Conectores USB-C podem transportar diferentes combinações de dados, energia e vídeo conforme porta, cabo e
+          dispositivo. O formato do conector não garante que toda função seja suportada.
+        </p>
+        <p>
+          Se um dock, monitor ou armazenamento funciona em uma USB-C e não em outra, consulte as capacidades das
+          portas do modelo.
+        </p>
+
+        <h2>13. Se só um tipo de dispositivo falha</h2>
+        <p>
+          Se pendrives funcionam, mas uma webcam específica não, concentre-se no dispositivo/driver daquela classe. Se
+          nenhum USB funciona, aumente a prioridade de controlador, chipset, firmware e hardware da placa.
+        </p>
+        <p>
+          Para webcam especificamente, use{" "}
+          <a href="/blog/webcam-usb-nao-e-detectada">webcam USB não detectada</a>.
+        </p>
+
+        <h2>14. Se o USB é reconhecido, mas está protegido contra gravação</h2>
+        <p>
+          Isso é outra intenção: o dispositivo foi detectado, porém recusa escrita. Veja{" "}
+          <a href="/blog/pendrive-somente-leitura-protegido-contra-gravacao">
+            USB protegido contra gravação
+          </a>.
+        </p>
+
+        <h2>15. Quando atualizar chipset/firmware entra no diagnóstico</h2>
+        <p>
+          Se várias portas/dispositivos apresentam comportamento anormal no mesmo computador e testes físicos não
+          explicam o problema, verifique atualizações oficiais de chipset, BIOS/UEFI e drivers do fabricante do PC ou
+          placa-mãe.
+        </p>
+        <p>
+          Não atualize firmware como primeira reação para um único pendrive defeituoso.
+        </p>
+
+        <h2>Critérios de parada</h2>
+        <ul>
+          <li>O armazenamento contém dados importantes e desconecta durante leitura.</li>
+          <li>Há cheiro de queimado, conector aquecendo ou dano físico.</li>
+          <li>Várias portas deixam de funcionar após dano elétrico/líquido.</li>
+          <li>O dispositivo exige fonte própria e a alimentação está instável.</li>
+          <li>A correção exigiria remover controladores sem teclado/mouse alternativos.</li>
+        </ul>
+
+        <h2>Perguntas frequentes</h2>
+        <h3>Por que aparece “dispositivo USB não reconhecido”?</h3>
+        <p>
+          Porque o Windows não conseguiu completar corretamente a identificação/inicialização do dispositivo. A causa
+          pode ser porta, cabo, energia, periférico, enumeração ou driver.
+        </p>
+
+        <h3>É sempre problema de driver?</h3>
+        <p>
+          Não. Falhas de enumeração podem ocorrer antes de o Windows identificar hardware suficiente para carregar o
+          driver correto.
+        </p>
+
+        <h3>Posso desinstalar “Unknown USB Device”?</h3>
+        <p>
+          Pode ser uma etapa de teste em alguns casos, mas primeiro registre o código e faça os testes físicos. Não
+          remova todos os controladores USB indiscriminadamente.
+        </p>
+
+        <h3>Se funciona em outro PC, o USB está bom?</h3>
+        <p>
+          É uma evidência forte de que o dispositivo consegue operar, mas ainda pode existir sensibilidade a cabo,
+          energia ou compatibilidade. O foco principal passa para o computador afetado.
+        </p>
+
+        <h3>Se acende, significa que a porta funciona?</h3>
+        <p>
+          Não. A porta pode fornecer energia e falhar na comunicação de dados.
+        </p>
+
+        <h2>Resumo prático</h2>
+        <p>
+          <strong>Diagnostique por comparação.</strong> Outra porta, outro cabo, outro computador e outro dispositivo
+          conhecido reduzem hipóteses rapidamente. Depois use o Gerenciador de Dispositivos e o código de erro para
+          decidir se o próximo passo é driver, controlador ou hardware.
+        </p>
+
+        <EditorialReferences slug="dispositivo-usb-nao-reconhecido-o-que-fazer" />
+      </>
+    ),
+  },
+
   "impressora-offline-como-resolver": {
     title: "Impressora offline no Windows: como descobrir por que ficou offline e voltar a imprimir",
     excerpt:
