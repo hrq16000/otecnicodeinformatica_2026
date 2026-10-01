@@ -2929,9 +2929,9 @@ export const ARTICLE_SOURCE_MANIFEST: Record<string, ArticleSourceManifest> = {
     sources: ["ms-file-explorer-windows", "ms-find-files-windows", "ms-onedrive-folder-backup"],
     technicalReview: "reviewed",
     factChecked: true,
-    factCheckedAt: "2026-09-25",
+    factCheckedAt: "2026-10-01",
     notes:
-      "Onda 11K: reescrita material com estrutura de pastas, nomenclatura, pesquisa, Acesso Rápido, sincronização, backup e critérios de parada diante de falha de disco.",
+      "Revisão material em 2026-10-01 guiada pelo GSC: 2 impressões, 0 cliques e posição média 59,5 entre 2026-04-01 e 2026-09-28. A única query individual exposta foi 'como organizar arquivos no computador'. A versão suplementar aprofunda estrutura de pastas, nomenclatura, datas, busca, Acesso Rápido, Downloads, OneDrive, duplicatas, backup e movimentação segura, sem inventar consultas ou transformar sincronização em backup. Fontes Microsoft permanecem visíveis.",
   },
   "como-trocar-senha-wifi": {
     slug: "como-trocar-senha-wifi",
