@@ -1232,6 +1232,20 @@ export const EDITORIAL_SOURCES: Record<string, EditorialSource> = {
       "O Histórico de Arquivos mantém cópias de arquivos pessoais e permite restaurar versões anteriores quando previamente configurado.",
     ],
   },
+  "ms-windows-update-cache-2026": {
+    id: "ms-windows-update-cache-2026",
+    title: "Solucionar problemas de atualização do Windows",
+    publisher: "Microsoft Support",
+    url: "https://support.microsoft.com/pt-br/windows/deployment/updates-lifecycle/troubleshoot-problems-updating-windows",
+    accessedAt: "2026-10-01",
+    sourceType: "official",
+    supports: [
+      "A Microsoft orienta começar por diagnóstico básico e pelo solucionador do Windows Update antes de avançar para procedimentos manuais.",
+      "O guia oficial inclui limpeza do cache do Windows Update como etapa específica quando arquivos temporários corrompidos podem estar causando erros.",
+      "A limpeza do cache não substitui investigação de conectividade, espaço, hardware externo ou outros fatores que impedem a atualização.",
+    ],
+  },
+
   "ms-windows-update-troubleshoot": {
     id: "ms-windows-update-troubleshoot",
     title: "Solução de problemas do Windows Update",
@@ -2428,13 +2442,15 @@ export const ARTICLE_SOURCE_MANIFEST: Record<string, ArticleSourceManifest> = {
   },
   "limpar-cache-do-windows-update-softwaredistribution": {
     slug: "limpar-cache-do-windows-update-softwaredistribution",
-    sources: [],
+    sources: [
+      "ms-windows-update-cache-2026",
+      "ms-windows-update-troubleshoot",
+    ],
     technicalReview: "reviewed",
     factChecked: true,
-    factCheckedAt: "2026-08-26",
-    stableKnowledge: true,
+    factCheckedAt: "2026-10-01",
     notes:
-      "Revisão concluída (Onda 10C, Lote 4): função da pasta, procedimento reversível por renomeação, custo real (histórico e novo download), casos em que o tratamento não ajuda e recusa de scripts de reset de terceiros. Sem marca comercial e sem promessa. Conhecimento técnico estável — sem fonte visível.",
+      "Revisão material em 2026-10-01 guiada pelo GSC: 6 impressões, 0 cliques e posição média ~54,33 entre 2026-04-01 e 2026-09-28. A única query individual exposta foi 'software distribution' (1 impressão, posição 46). A versão suplementar explica função e limites da pasta, prioriza solucionador/triagem antes do reset, prefere renomeação reversível em vez de exclusão, separa cache de DISM/SFC/driver/espaço e recusa scripts genéricos de reset. Fontes Microsoft visíveis; nenhuma query adicional foi inventada.",
   },
   "windows-update-travado-desfazendo-alteracoes": {
     slug: "windows-update-travado-desfazendo-alteracoes",
