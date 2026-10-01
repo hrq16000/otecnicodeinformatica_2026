@@ -2066,13 +2066,12 @@ export const ARTICLE_SOURCE_MANIFEST: Record<string, ArticleSourceManifest> = {
   },
   "como-resolver-tela-azul-windows": {
     slug: "como-resolver-tela-azul-windows",
-    sources: [],
+    sources: ["ms-bug-check-code-reference", "ms-blue-screen-data", "ms-windows-recovery-environment"],
     technicalReview: "reviewed",
     factChecked: true,
-    factCheckedAt: "2026-08-12",
-    stableKnowledge: true,
+    factCheckedAt: "2026-10-01",
     notes:
-      "Revisão concluída (Rodada 4Y): interpretação do código de parada como pista e não como diagnóstico fechado, ordem segura de verificação (alterações recentes, memória, disco, energia), aviso explícito de risco de perda de dados quando o disco está envolvido e nenhuma promessa de correção definitiva. Conhecimento técnico estável — sem fonte visível.",
+      "Revisão material em 2026-10-01 guiada pelo GSC: 1 impressão, 0 cliques e posição média 63 entre 2026-04-01 e 2026-09-28; a única query individual exposta foi 'tela azul'. A versão suplementar trata bug check/stop code como pista, registra contexto e alterações recentes, separa software de hardware, orienta backup, Windows RE e dumps, e inclui critérios de parada sem prometer diagnóstico pelo código nem recomendar formatação por tentativa. Fontes oficiais Microsoft ficam visíveis; nenhuma query adicional foi inventada.",
   },
   "como-trocar-tela-notebook-passo-a-passo": {
     slug: "como-trocar-tela-notebook-passo-a-passo",
