@@ -1061,14 +1061,14 @@ const WAVE_11D: EditorialApproval[] = [
     status: "approved",
     authorType: "organization",
     authorId: INSTITUTIONAL_AUTHOR.id,
-    reviewedAt: "2026-09-03",
+    reviewedAt: "2026-10-01",
     approvedAt: "2026-09-03",
     imageOrigin: "licensed",
     imageLicense: "Free Art License 1.3",
     imageAttribution:
       "Foto: smial (Wikimedia Commons), Free Art License 1.3 — https://commons.wikimedia.org/wiki/File:USB_stick_with_write_protection_IMGP7832_wp.jpg",
     notes:
-      "Diagnóstico de mídia removível em somente leitura, escrito do zero na Onda 11D: separa trava física, política do sistema, sistema de arquivos danificado e memória em fim de vida, com cópia obrigatória antes de qualquer correção. Não canibaliza o guia geral de USB não reconhecido. Capa é fotografia real licenciada, sem IA.",
+      "Revisão material em 2026-10-01 guiada pelo GSC: 2 impressões, 0 cliques e posição média ~24,5 entre 2026-04-01 e 2026-09-28. A única query individual exposta foi 'usb protegido contra gravação'. A versão suplementar preserva a URL e aprofunda trava física, atributos readonly, política, sistema de arquivos, falha de controlador, cópia prévia dos dados e critérios de parada, com fontes Microsoft visíveis.",
   },
   {
     slug: "historico-de-arquivos-windows-como-configurar",
