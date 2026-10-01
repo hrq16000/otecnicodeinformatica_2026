@@ -11,6 +11,180 @@ import { MODALIDADES } from "@/lib/precosConfig";
  * do blog compõem base + suplementares + programáticos.
  */
 export const blogSupplementalPosts: Record<string, BlogPostContent> = {
+  "como-instalar-windows-11-do-zero": {
+    title: "Como instalar Windows 11 do zero: preparação, mídia oficial, licença e pós-instalação",
+    excerpt:
+      "Instalar o Windows 11 do zero exige mais do que criar um pendrive: confirme compatibilidade, proteja dados e BitLocker, use mídia oficial, preserve ativação e só apague partições quando souber exatamente o que está fazendo.",
+    date: "2026-10-01",
+    readTime: "16 min",
+    category: "Windows",
+    content: (
+      <>
+        <p className="lead">
+          Uma instalação limpa do Windows 11 remove a instalação anterior e recria o sistema. Antes de começar,
+          confirme <strong>compatibilidade, backup, licença/ativação, chave do BitLocker e origem oficial da mídia</strong>.
+          O objetivo não é apenas “formatar”, mas reinstalar com possibilidade de recuperação se algo der errado.
+        </p>
+
+        <h2>Resposta direta: como instalar Windows 11 do zero com segurança</h2>
+        <ol>
+          <li>Confirme que o computador atende aos requisitos oficiais do Windows 11.</li>
+          <li>Faça backup dos arquivos pessoais e valide se consegue abrir a cópia.</li>
+          <li>Salve a chave de recuperação do BitLocker quando aplicável.</li>
+          <li>Confirme a edição/licença usada no equipamento.</li>
+          <li>Crie a mídia de instalação apenas com ferramenta ou imagem oficial da Microsoft.</li>
+          <li>Inicialize pela mídia e confira com atenção o disco/partição antes de apagar qualquer coisa.</li>
+          <li>Conclua a instalação, conecte à internet e verifique ativação.</li>
+          <li>Execute Windows Update e instale somente drivers necessários de fontes oficiais.</li>
+          <li>Restaure os arquivos pessoais apenas depois de confirmar estabilidade básica.</li>
+        </ol>
+
+        <h2>1. Antes de tudo, decida se instalação limpa é realmente necessária</h2>
+        <p>
+          Instalação limpa é apropriada quando você quer recomeçar o sistema, remover uma instalação comprometida ou
+          substituir o disco com uma configuração nova. Para problemas pontuais, recuperação, reparo ou remoção de um
+          software podem ser menos destrutivos.
+        </p>
+
+        <h2>2. Compatibilidade vem antes do pendrive</h2>
+        <p>
+          Verifique os requisitos oficiais do Windows 11, incluindo CPU suportada, TPM, Secure Boot, memória e armazenamento.
+          Não use bypass de requisitos ou imagens modificadas como solução padrão: isso pode colocar o equipamento fora do
+          suporte previsto e dificultar futuras atualizações.
+        </p>
+
+        <h2>3. Faça backup e teste o backup</h2>
+        <p>
+          Copiar arquivos sem conferir se a cópia abre não é uma validação. Antes de apagar o disco, teste documentos,
+          fotos e arquivos críticos no destino de backup. Se existirem aplicações com dados locais, exporte-os quando necessário.
+        </p>
+
+        <h2>4. BitLocker pode bloquear o acesso depois de mudanças</h2>
+        <p>
+          Em máquinas com criptografia, registre a chave de recuperação do BitLocker antes de alterar boot, firmware,
+          partições ou instalar o sistema. Sem essa chave, dados criptografados podem ficar inacessíveis.
+        </p>
+
+        <h2>5. Use somente mídia oficial</h2>
+        <p>
+          A Microsoft disponibiliza ferramentas e imagens oficiais para criar mídia de instalação. Evite ISOs modificadas,
+          ativadores, cracks e downloads de procedência duvidosa.
+        </p>
+
+        <h2>6. Pendrive bootável não precisa de “otimizador”</h2>
+        <p>
+          Siga o método oficial de criação de mídia. Ferramentas de terceiros podem ser úteis em cenários específicos,
+          mas não são necessárias para a instalação padrão e não devem substituir a origem oficial da imagem.
+        </p>
+
+        <h2>7. Confirme o disco certo antes de excluir partições</h2>
+        <p>
+          O ponto de maior risco é a seleção de disco. Em computadores com mais de uma unidade, compare capacidade,
+          modelo e finalidade. Se houver dúvida, pare antes de apagar. Desconectar unidades secundárias, quando seguro e
+          apropriado, pode reduzir risco de selecionar o disco errado.
+        </p>
+
+        <h2>8. “Excluir todas as partições” não é regra universal</h2>
+        <p>
+          Em uma instalação realmente limpa no disco destinado ao Windows, apagar as partições existentes pode ser parte
+          do processo. Mas isso destrói dados e pode remover partições de recuperação do fabricante. Faça isso somente com
+          backup validado e entendimento claro do que está sendo apagado.
+        </p>
+
+        <h2>9. UEFI, Secure Boot e TPM devem seguir a configuração suportada</h2>
+        <p>
+          Não altere firmware por tentativa. Se o computador já atende aos requisitos e inicializa corretamente em UEFI,
+          preserve a configuração funcional. Mudanças de modo de boot e armazenamento podem impedir a inicialização.
+        </p>
+
+        <h2>10. A ativação normalmente depende da licença já vinculada</h2>
+        <p>
+          Em muitos equipamentos, a ativação digital volta automaticamente quando a mesma edição é instalada e o
+          computador se conecta à internet. Ainda assim, confirme a edição correta e o estado de ativação após concluir.
+        </p>
+
+        <h2>11. Não instale pacote aleatório de drivers</h2>
+        <p>
+          Depois da instalação, rode o Windows Update. Se algum dispositivo continuar sem driver adequado, procure a
+          página oficial do fabricante do computador ou componente. Evite programas que prometem “atualizar todos os drivers”.
+        </p>
+
+        <h2>12. Instale o mínimo antes de restaurar tudo</h2>
+        <p>
+          Confirme rede, vídeo, áudio, armazenamento, ativação e atualizações antes de recolocar todos os programas.
+          Isso ajuda a identificar rapidamente se algum problema pertence ao sistema base ou a software adicional.
+        </p>
+
+        <h2>13. Restaure arquivos sem trazer lixo antigo por reflexo</h2>
+        <p>
+          Copie documentos e dados necessários. Não recoloque pastas de sistema, caches, executáveis antigos ou diretórios
+          inteiros de programas esperando que funcionem como antes.
+        </p>
+
+        <h2>14. Crie um ponto de referência pós-instalação</h2>
+        <p>
+          Depois de estabilizar sistema, drivers e atualizações, registre quais drivers especiais foram necessários,
+          onde estão os backups e qual edição do Windows está ativada. Isso facilita futuras manutenções.
+        </p>
+
+        <h2>Erros comuns</h2>
+        <ul>
+          <li>Formatar sem backup testado.</li>
+          <li>Apagar o disco errado em computador com múltiplas unidades.</li>
+          <li>Ignorar BitLocker antes de mudar firmware ou partições.</li>
+          <li>Usar ISO modificada ou ativador.</li>
+          <li>Alterar UEFI/Legacy/AHCI por tentativa.</li>
+          <li>Instalar dezenas de drivers de terceiros sem necessidade.</li>
+          <li>Restaurar programas antigos copiando pastas de instalação.</li>
+        </ul>
+
+        <h2>Critérios de parada</h2>
+        <ul>
+          <li>Você não tem backup confiável dos dados importantes.</li>
+          <li>Não sabe qual disco contém os arquivos que devem ser preservados.</li>
+          <li>O BitLocker está ativo e a chave de recuperação não foi localizada.</li>
+          <li>O instalador não reconhece o armazenamento e você não conhece a controladora/driver necessário.</li>
+          <li>O equipamento não atende aos requisitos oficiais e a solução exigiria bypass não suportado.</li>
+          <li>Há sinais de falha física no SSD/HD.</li>
+        </ul>
+
+        <h2>Perguntas frequentes</h2>
+        <h3>Instalar Windows 11 do zero apaga tudo?</h3>
+        <p>
+          Uma instalação limpa pode apagar todos os dados do disco selecionado, dependendo das partições removidas.
+          Trate o processo como potencialmente destrutivo e tenha backup antes de começar.
+        </p>
+
+        <h3>Preciso comprar outra licença?</h3>
+        <p>
+          Nem sempre. Se o computador já possui uma licença digital válida para a edição instalada, a ativação pode
+          ocorrer novamente após conexão à internet. Verifique o estado de ativação depois da instalação.
+        </p>
+
+        <h3>Posso baixar qualquer ISO do Windows 11?</h3>
+        <p>
+          Não é recomendável. Use a imagem ou ferramenta oficial da Microsoft para reduzir risco de arquivo alterado,
+          malware ou incompatibilidade.
+        </p>
+
+        <h3>Vale a pena formatar para deixar o PC mais rápido?</h3>
+        <p>
+          Só quando a causa justifica. Lentidão pode vir de armazenamento, memória, temperatura, software ou hardware.
+          Formatar sem diagnóstico pode apenas esconder o problema temporariamente.
+        </p>
+
+        <h2>Resumo prático</h2>
+        <p>
+          <strong>Instalação limpa deve começar pela proteção dos dados, não pela exclusão das partições.</strong>
+          Confirme requisitos, backup, BitLocker, licença e mídia oficial. Só então reinstale, valide ativação,
+          atualizações e drivers antes de restaurar seus arquivos.
+        </p>
+
+        <EditorialReferences slug="como-instalar-windows-11-do-zero" />
+      </>
+    ),
+  },
+
   "como-resolver-tela-azul-windows": {
     title: "Tela azul no Windows: como investigar o erro sem formatar por tentativa",
     excerpt:
