@@ -2076,12 +2076,19 @@ export const ARTICLE_SOURCE_MANIFEST: Record<string, ArticleSourceManifest> = {
 
   "erro-no-bootable-device-como-resolver": {
     slug: "erro-no-bootable-device-como-resolver",
-    sources: ["ms-bcdboot", "ms-bitlocker-recovery"],
+    sources: [
+      "ms-bcdboot",
+      "ms-bitlocker-recovery",
+      "ms-bitlocker-backup-key",
+      "ms-windows-recovery-environment",
+      "ms-recovery-options-windows",
+      "ms-boot-uefi-legacy-2026",
+    ],
     technicalReview: "reviewed",
     factChecked: true,
-    factCheckedAt: "2026-09-02",
+    factCheckedAt: "2026-10-01",
     notes:
-      "Revisão material em 2026-09-02: removeu conclusões absolutas sobre saúde do disco e integridade da EFI, inseriu a verificação do BitLocker antes do prompt, explicou o limite de /scanos e retirou o bloco copiável de criação/formatação de partição EFI. BCDBoot e recuperação do BitLocker sustentados por fontes oficiais Microsoft visíveis.",
+      "Revisão material em 2026-10-01 guiada pelo GSC: 5 impressões, 0 cliques e posição média ~38,8 entre 2026-04-01 e 2026-09-28. Queries reais expostas: 'no boot device found', 'no bootable device como resolver', 'no bootable device found' e 'no bootable device please restart'. A versão suplementar organiza o diagnóstico em detecção física do disco, Windows Boot Manager, UEFI/Legacy, WinRE e BCDBoot, reforça BitLocker antes de alterações e evita formatar/recriar EFI por tentativa. Fontes Microsoft visíveis; nenhuma query inventada.",
   },
   "troquei-o-ssd-e-o-pc-so-abre-a-bios": {
     slug: "troquei-o-ssd-e-o-pc-so-abre-a-bios",

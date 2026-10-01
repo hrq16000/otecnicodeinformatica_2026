@@ -11,6 +11,221 @@ import { MODALIDADES } from "@/lib/precosConfig";
  * do blog compõem base + suplementares + programáticos.
  */
 export const blogSupplementalPosts: Record<string, BlogPostContent> = {
+  "erro-no-bootable-device-como-resolver": {
+    title: "No bootable device: como diagnosticar disco, UEFI e inicialização sem formatar por tentativa",
+    excerpt:
+      "O erro No bootable device não significa automaticamente HD/SSD queimado. Veja como separar disco não detectado, entrada de boot ausente, modo UEFI/Legacy incompatível e carregador do Windows danificado.",
+    date: "2026-10-01",
+    readTime: "14 min",
+    category: "Procedimentos Técnicos",
+    content: (
+      <>
+        <p className="lead">
+          A mensagem <strong>“No bootable device”</strong>, <strong>“No boot device found”</strong> ou
+          <strong>“No bootable device please restart”</strong> significa que o firmware não encontrou uma opção de
+          inicialização utilizável naquele momento. Isso não prova, sozinho, que o SSD/HD morreu. O diagnóstico deve
+          seguir uma ordem: <strong>o disco é detectado?</strong> Existe uma entrada de boot válida? O equipamento está
+          em UEFI ou Legacy coerente com a instalação? O carregador do Windows ainda existe?
+        </p>
+
+        <h2>Resposta direta: como resolver No bootable device</h2>
+        <ol>
+          <li>Entre na BIOS/UEFI e confirme se o SSD ou HD aparece fisicamente.</li>
+          <li>Se o disco aparece, procure uma entrada como <strong>Windows Boot Manager</strong>.</li>
+          <li>Confirme se o modo de inicialização (UEFI/Legacy) corresponde ao sistema que já estava instalado.</li>
+          <li>Antes de usar ferramentas de recuperação, confirme se o disco usa BitLocker e se a chave está disponível.</li>
+          <li>Use o Ambiente de Recuperação do Windows para diagnosticar boot; não formate nem recrie partições EFI por tentativa.</li>
+          <li>Se o disco não aparece no firmware, mude o foco para conexão, slot, alimentação, controlador ou falha do armazenamento.</li>
+        </ol>
+
+        <h2>O erro pode estar em quatro camadas diferentes</h2>
+        <table>
+          <thead>
+            <tr><th>O que você observa</th><th>Camada provável</th><th>Próximo passo</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>SSD/HD não aparece na BIOS/UEFI</td><td>hardware, conexão ou controlador</td><td>verificar detecção física antes de reparar boot</td></tr>
+            <tr><td>Disco aparece, mas não há Windows Boot Manager</td><td>entrada/estrutura de boot</td><td>confirmar modo UEFI e usar recuperação</td></tr>
+            <tr><td>Windows Boot Manager existe, mas não inicia</td><td>BCD/arquivos de boot/sistema</td><td>usar WinRE e BCDBoot quando apropriado</td></tr>
+            <tr><td>Erro começou após mudar UEFI/Legacy/CSM</td><td>modo de boot incompatível</td><td>restaurar o modo anterior/documentado</td></tr>
+          </tbody>
+        </table>
+
+        <h2>1. Primeiro: o disco aparece na BIOS/UEFI?</h2>
+        <p>
+          Se o armazenamento não aparece no firmware, comandos de reparo do Windows não conseguem corrigir essa
+          ausência. Verifique o modelo listado em Storage, NVMe, SATA ou seção equivalente. Em notebook, o nome pode
+          aparecer sob informações do sistema, não necessariamente em “Boot”.
+        </p>
+        <p>
+          Se o disco sumiu depois de uma troca de SSD, confira compatibilidade do slot, encaixe e tipo de unidade. Se
+          sumiu sem intervenção e volta de forma intermitente, preserve dados e trate isso como possível problema de
+          hardware antes de insistir em reparos lógicos.
+        </p>
+
+        <h2>2. Disco detectado não significa que existe uma opção inicializável</h2>
+        <p>
+          Um SSD pode aparecer fisicamente e ainda assim o firmware não encontrar uma entrada válida. Em instalações
+          UEFI do Windows, é comum existir uma opção chamada <strong>Windows Boot Manager</strong>. Se ela desapareceu,
+          a causa pode estar na configuração do firmware, na partição do sistema ou nos arquivos de boot.
+        </p>
+        <p>
+          Não crie uma partição nova nem formate a existente só porque a entrada sumiu. Primeiro confirme a estrutura
+          atual e tente mecanismos de recuperação suportados.
+        </p>
+
+        <h2>3. UEFI e Legacy: não altere por tentativa</h2>
+        <p>
+          Uma instalação feita em UEFI normalmente espera continuar sendo iniciada em UEFI. Mudar para Legacy/CSM
+          pode fazer uma instalação saudável parecer “não inicializável”. O inverso também pode ocorrer em instalações
+          antigas.
+        </p>
+        <p>
+          Se o erro começou logo após uma mudança de BIOS, volte ao modo anterior. Para entender o modo usado pelo
+          Windows e pelo firmware, veja{" "}
+          <a href="/blog/boot-uefi-ou-legacy-como-identificar">como identificar UEFI ou Legacy</a>.
+        </p>
+
+        <h2>4. BitLocker vem antes de reparos de boot</h2>
+        <p>
+          Mudanças de firmware, TPM, Secure Boot ou estrutura de inicialização podem levar o BitLocker a pedir a chave
+          de recuperação. Antes de alterar configurações ou executar recuperação, confirme onde a chave está guardada.
+        </p>
+        <p>
+          Se o volume está criptografado e você não tem a chave, não continue com operações destrutivas. O objetivo é
+          recuperar a inicialização sem transformar um problema de boot em perda de acesso aos dados.
+        </p>
+
+        <h2>5. Use o Ambiente de Recuperação do Windows antes do Prompt</h2>
+        <p>
+          O Windows Recovery Environment (WinRE) oferece opções de Reparo de Inicialização, restauração e ferramentas
+          avançadas. Em muitos casos, o primeiro teste deve ser o <strong>Reparo de Inicialização</strong>, porque ele
+          tenta corrigir problemas comuns sem exigir comandos manuais.
+        </p>
+        <p>
+          Se o WinRE não abre pelo próprio disco, use mídia oficial do Windows para acessar as opções de reparo. Isso
+          não exige iniciar uma instalação limpa.
+        </p>
+
+        <h2>6. BCDBoot: útil quando a estrutura existe, mas o boot precisa ser recriado</h2>
+        <p>
+          A Microsoft documenta o <strong>BCDBoot</strong> para configurar ou reparar o ambiente de boot copiando
+          arquivos a partir de uma instalação do Windows. Ele é uma ferramenta de recuperação, não um comando para
+          executar cegamente em qualquer erro “No bootable device”.
+        </p>
+        <p>
+          Antes de usar BCDBoot, identifique corretamente a instalação do Windows, o volume de sistema e o modo de
+          firmware. Letras de unidade no WinRE podem ser diferentes das letras vistas no Windows normal.
+        </p>
+
+        <h2>7. Por que não recomendamos formatar a partição EFI por tentativa</h2>
+        <p>
+          Apagar ou formatar a partição EFI remove arquivos que podem ser necessários para uma instalação ainda
+          recuperável e pode afetar outros sistemas instalados. Tutoriais que começam criando uma EFI nova sem
+          inventariar o disco pulam uma etapa crítica do diagnóstico.
+        </p>
+        <p>
+          Primeiro identifique as partições existentes e use ferramentas suportadas para reconstruir arquivos de boot
+          quando necessário.
+        </p>
+
+        <h2>8. “bootrec /scanos não encontra Windows” não prova que os arquivos sumiram</h2>
+        <p>
+          Resultados de ferramentas de boot precisam ser interpretados no contexto. Uma instalação pode estar em
+          volume criptografado, montada com outra letra, ou usar uma estrutura de inicialização que não aparece como o
+          usuário espera naquele comando.
+        </p>
+        <p>
+          Verifique o conteúdo dos volumes e o estado do BitLocker antes de concluir que “o Windows foi apagado”.
+        </p>
+
+        <h2>9. Se o erro começou depois de trocar SSD</h2>
+        <p>
+          Pergunte qual cenário ocorreu: SSD novo para instalação limpa, SSD clonado, SSD reaproveitado de outro PC ou
+          segundo disco adicionado. Cada caso muda o diagnóstico.
+        </p>
+        <p>
+          Para uma troca de SSD que cai direto na BIOS, veja{" "}
+          <a href="/blog/troquei-o-ssd-e-o-pc-so-abre-a-bios">SSD novo e PC abrindo apenas a BIOS</a>.
+        </p>
+
+        <h2>10. Se a BIOS esquece a ordem de boot</h2>
+        <p>
+          Se a entrada correta funciona depois de selecionada, mas some ou perde prioridade após desligar, investigue
+          retenção das configurações do firmware e atualizações de BIOS. Isso é diferente de um carregador de boot
+          danificado.
+        </p>
+        <p>
+          Não atribua todo problema de ordem de boot à bateria CMOS; equipamentos e firmwares modernos podem armazenar
+          configurações de formas diferentes.
+        </p>
+
+        <h2>11. Quando suspeitar do armazenamento</h2>
+        <p>
+          A hipótese de SSD/HD ganha peso quando a unidade desaparece do firmware, apresenta detecção intermitente,
+          erros de leitura, travamentos durante acesso ou dados SMART/diagnósticos coerentes com falha. Nesse caso,
+          preservar dados é prioridade maior do que reconstruir boot repetidamente.
+        </p>
+
+        <h2>12. “No bootable device please restart” em notebook</h2>
+        <p>
+          Alguns notebooks mostram mensagens próprias do fabricante, mas a lógica continua: confirmar detecção do
+          armazenamento, modo de boot, entrada válida e estrutura de inicialização. Não copie menus de outro modelo;
+          opções e nomenclaturas variam.
+        </p>
+
+        <h2>Critérios de parada</h2>
+        <ul>
+          <li>O SSD/HD desaparece da BIOS/UEFI ou é detectado de forma intermitente.</li>
+          <li>Há dados importantes sem backup e seria necessário escrever na estrutura de partições.</li>
+          <li>O BitLocker está ativo e a chave de recuperação não está disponível.</li>
+          <li>O erro começou após impacto, líquido ou falha elétrica.</li>
+          <li>Você não consegue identificar com segurança qual volume contém o Windows e qual é a partição de sistema.</li>
+        </ul>
+
+        <h2>Perguntas frequentes</h2>
+        <h3>No bootable device significa HD queimado?</h3>
+        <p>
+          Não. O erro significa que o firmware não encontrou uma opção inicializável válida. O disco pode estar
+          ausente, ou pode estar presente com problema de configuração/boot.
+        </p>
+
+        <h3>Devo mudar de UEFI para Legacy?</h3>
+        <p>
+          Não por tentativa. Use o modo compatível com a instalação existente. Trocar o modo pode esconder a entrada
+          correta e criar um novo problema.
+        </p>
+
+        <h3>Posso formatar a partição EFI e recriar?</h3>
+        <p>
+          Não como primeira reação. Primeiro inventarie a estrutura e tente recuperação suportada. Formatação é
+          destrutiva e pode remover uma estrutura ainda recuperável.
+        </p>
+
+        <h3>BCDBoot resolve sempre?</h3>
+        <p>
+          Não. Ele é apropriado quando existe uma instalação do Windows e a estrutura de boot precisa ser configurada
+          ou reparada. Não corrige disco não detectado nem falha física.
+        </p>
+
+        <h3>Se o disco aparece na BIOS, ele está saudável?</h3>
+        <p>
+          Não. Detecção física é apenas uma evidência. Um disco pode ser detectado e ainda apresentar erros de leitura
+          ou falhas intermitentes.
+        </p>
+
+        <h2>Resumo prático</h2>
+        <p>
+          <strong>Diagnostique em camadas.</strong> Confirme o disco, a entrada de boot, o modo UEFI/Legacy e só depois
+          a estrutura do carregador. Preserve BitLocker e dados antes de escrever no disco. “No bootable device” é um
+          ponto de partida para diagnóstico — não uma ordem para formatar.
+        </p>
+
+        <EditorialReferences slug="erro-no-bootable-device-como-resolver" />
+      </>
+    ),
+  },
+
   "testar-memoria-ram-memtest86": {
     title: "Teste de memória RAM com Memtest86+: como executar, interpretar erros e isolar módulo ou slot",
     excerpt:
