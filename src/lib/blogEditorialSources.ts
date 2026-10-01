@@ -2035,12 +2035,12 @@ export const ARTICLE_SOURCE_MANIFEST: Record<string, ArticleSourceManifest> = {
   },
   "como-melhorar-sinal-wifi-em-casa": {
     slug: "como-melhorar-sinal-wifi-em-casa",
-    sources: ["wifi-alliance-home"],
+    sources: ["wifi-alliance-home", "fcc-home-network-tips"],
     technicalReview: "reviewed",
     factChecked: true,
-    factCheckedAt: "2026-07-12",
+    factCheckedAt: "2026-10-01",
     notes:
-      "Fact-check concluído: diferencia sinal e internet, dispositivo e rede, operadora e Wi-Fi local; sem canal/frequência/potência universais; foco residencial. Cobertura com múltiplos pontos (mesh) sustentada pela Wi-Fi Alliance.",
+      "Revisão material em 2026-10-01 guiada pelo GSC: 1 impressão, 0 cliques e posição média 77 entre 2026-04-01 e 2026-09-28. A única query individual exposta foi 'sinal de wifi fraco'. A versão suplementar preserva a URL e separa cobertura de internet lenta, cliente de rede, posicionamento, bandas, interferência, capacidade, repetidor/mesh e backhaul, sem canal universal, potência universal ou promessa de cobertura. Fontes oficiais Wi-Fi Alliance e FCC permanecem visíveis; nenhuma query adicional foi inventada.",
   },
   "organizacao-de-ti-para-pequenos-escritorios": {
     slug: "organizacao-de-ti-para-pequenos-escritorios",
