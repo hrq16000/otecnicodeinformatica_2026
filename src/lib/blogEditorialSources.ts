@@ -2745,12 +2745,20 @@ export const ARTICLE_SOURCE_MANIFEST: Record<string, ArticleSourceManifest> = {
   },
   "erros-comuns-upgrade-computador": {
     slug: "erros-comuns-upgrade-computador",
-    sources: ["kingston-memory-support", "kingston-ssd-faq", "nvme-official-faq", "ms-win11-requirements", "ms-bitlocker-backup-key"],
+    sources: [
+      "kingston-memory-support",
+      "kingston-ssd-faq",
+      "nvme-official-faq",
+      "nvme-base-specification-overview",
+      "ms-win11-requirements",
+      "ms-bitlocker-backup-key",
+      "intel-atx3-dc-regulation",
+    ],
     technicalReview: "reviewed",
     factChecked: true,
-    factCheckedAt: "2026-09-25",
+    factCheckedAt: "2026-10-01",
     notes:
-      "Reescrita completa em 2026-09-25: corrige erros textuais e a recomendação absoluta de instalação limpa; adiciona compatibilidade real de RAM, M.2/SATA/NVMe, BIOS, GPU/fonte, backup e validação pós-upgrade.",
+      "Revisão material em 2026-10-01 guiada pelo GSC: 1 impressão, 0 cliques e posição 3 entre 2026-04-01 e 2026-09-28. A única query individual exposta foi 'compatibilidade pc'. A versão suplementar transforma a owner em matriz prática de compatibilidade para RAM, SSD M.2/SATA/NVMe, GPU, fonte, CPU, BIOS/UEFI e Windows 11; reforça BitLocker, atualização de firmware por necessidade, validação uma peça por vez e plano de rollback. Fontes Kingston, NVM Express, Microsoft e Intel visíveis; nenhuma query adicional foi inventada.",
   },
   "como-configurar-vpn-empresarial": {
     slug: "como-configurar-vpn-empresarial",
