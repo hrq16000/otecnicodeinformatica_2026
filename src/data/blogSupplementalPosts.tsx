@@ -11,6 +11,216 @@ import { MODALIDADES } from "@/lib/precosConfig";
  * do blog compõem base + suplementares + programáticos.
  */
 export const blogSupplementalPosts: Record<string, BlogPostContent> = {
+  "como-fazer-teste-velocidade-internet": {
+    title: "Como fazer teste de velocidade da internet: download, upload, ping, jitter e perda sem interpretar errado",
+    excerpt:
+      "Teste a internet de forma comparável: controle Wi‑Fi e outros usos, repita medições e interprete download, upload, latência, jitter e perda. Veja também a diferença entre a antiga referência EAQ e as ferramentas atuais da ESAQ/Anatel.",
+    date: "2026-10-01",
+    readTime: "14 min",
+    category: "Redes e Wi-Fi",
+    content: (
+      <>
+        <p className="lead">
+          Um <strong>teste de velocidade da internet</strong> só é útil quando você sabe o que está medindo. O
+          resultado pode variar por Wi‑Fi, dispositivo, servidor, congestionamento local e provedor. Para comparar com
+          o plano contratado, faça medições controladas e registre <strong>download, upload, latência, jitter e perda
+          de pacotes</strong>. A Anatel atualmente referencia ferramentas da <strong>ESAQ</strong>, incluindo o site
+          Brasil Banda Larga; a sigla <strong>EAQ</strong> aparece em referências históricas do modelo anterior.
+        </p>
+
+        <h2>Resposta direta: como fazer um teste de velocidade confiável</h2>
+        <ol>
+          <li>Pause downloads, backups, streaming e atualizações em outros dispositivos.</li>
+          <li>Quando possível, use cabo Ethernet como referência para separar internet de Wi‑Fi.</li>
+          <li>Se testar por Wi‑Fi, fique perto do roteador e registre banda/padrão usados.</li>
+          <li>Faça mais de uma medição em horários diferentes.</li>
+          <li>Registre download, upload, latência, jitter e perda — não apenas “Mbps”.</li>
+          <li>Compare resultados equivalentes: mesmo dispositivo, conexão, local e ferramenta.</li>
+        </ol>
+
+        <h2>O que cada número significa</h2>
+        <table>
+          <thead>
+            <tr><th>Métrica</th><th>O que mede</th><th>Onde costuma aparecer</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Download</td><td>dados recebidos da internet</td><td>streaming, downloads, navegação</td></tr>
+            <tr><td>Upload</td><td>dados enviados para a internet</td><td>backup, chamadas, envio de arquivos</td></tr>
+            <tr><td>Latência/ping</td><td>tempo de ida e volta da comunicação</td><td>jogos, chamadas, acesso remoto</td></tr>
+            <tr><td>Jitter</td><td>variação da latência entre medições</td><td>voz/vídeo em tempo real</td></tr>
+            <tr><td>Perda de pacotes</td><td>pacotes que não chegam ao destino</td><td>quedas, áudio cortado, retransmissões</td></tr>
+          </tbody>
+        </table>
+
+        <h2>1. “EAQ teste velocidade”: qual é a referência atual?</h2>
+        <p>
+          A Anatel hoje apresenta as ferramentas de medição da <strong>ESAQ — Entidade de Suporte à Aferição da
+          Qualidade</strong>. Entre elas está o site Brasil Banda Larga e o aplicativo ESAQ. A sigla EAQ aparece em
+          documentação histórica relacionada à antiga Entidade Aferidora da Qualidade.
+        </p>
+        <p>
+          Portanto, se você pesquisou por “EAQ teste velocidade”, a intenção continua válida, mas a referência oficial
+          atual da Anatel usa ESAQ/Brasil Banda Larga.
+        </p>
+
+        <h2>2. Um único teste não define a qualidade da conexão</h2>
+        <p>
+          Uma medição é uma fotografia daquele instante. Resultado baixo pode vir de outro dispositivo consumindo
+          banda, Wi‑Fi congestionado, limitação do próprio computador/celular, servidor de teste ou condição do
+          provedor.
+        </p>
+        <p>
+          Repita em horários diferentes e mantenha as condições o mais constantes possível antes de concluir que há
+          degradação persistente.
+        </p>
+
+        <h2>3. Cabo ajuda a separar banda larga de rede Wi‑Fi</h2>
+        <p>
+          A Anatel destaca que a experiência depende do terminal, da conexão e do provedor, e que limitações do Wi‑Fi
+          podem impedir o usuário de atingir no dispositivo a capacidade entregue ao modem/roteador.
+        </p>
+        <p>
+          Por isso, quando o objetivo é investigar a banda larga fixa, uma medição cabeada compatível com a velocidade
+          do plano é uma referência útil. Isso não significa que Wi‑Fi seja “sempre lento”; significa apenas que
+          acrescenta variáveis ao teste.
+        </p>
+
+        <h2>4. Se só o Wi‑Fi está lento, não culpe o provedor imediatamente</h2>
+        <p>
+          Compare um teste por cabo com um teste sem fio no mesmo momento. Se o cabo está coerente e o Wi‑Fi muito
+          abaixo, investigue cobertura, interferência, banda, padrão Wi‑Fi e capacidade do dispositivo.
+        </p>
+        <p>
+          Veja também{" "}
+          <a href="/blog/internet-lenta-provedor-ou-roteador">internet lenta: provedor ou roteador?</a>.
+        </p>
+
+        <h2>5. O dispositivo de teste também pode ser o gargalo</h2>
+        <p>
+          Porta Ethernet de 100 Mb/s, adaptador Wi‑Fi antigo, CPU ocupada, VPN ou economia de energia podem limitar a
+          medição. Antes de comparar uma conexão rápida, confirme que o dispositivo consegue operar acima da faixa
+          que você pretende medir.
+        </p>
+
+        <h2>6. Pause tráfego concorrente</h2>
+        <p>
+          Backups em nuvem, atualizações, consoles, streaming e câmeras podem consumir download ou upload durante o
+          teste. Uma medição com a rede ocupada responde “quanto sobrou agora”, não “qual é a capacidade disponível
+          sem concorrência”.
+        </p>
+
+        <h2>7. Download alto com upload baixo é um cenário diferente</h2>
+        <p>
+          Não reduza o diagnóstico a um único número. Se download está coerente e upload degrada, investigue uso de
+          upstream, sinal, plano e equipamento. Upload ruim pode afetar chamadas, backup e envio de arquivos mesmo
+          quando streaming parece normal.
+        </p>
+
+        <h2>8. Ping baixo não é sinônimo de alta velocidade</h2>
+        <p>
+          Latência mede atraso, não volume de dados por segundo. Uma conexão pode ter bom download e latência ruim, ou
+          o contrário. Para jogos e videoconferência, estabilidade e latência podem importar tanto quanto Mbps.
+        </p>
+
+        <h2>9. Jitter e perda ajudam a explicar “internet rápida que trava”</h2>
+        <p>
+          A Anatel inclui jitter e percentual de perda de pacotes entre as métricas das ferramentas ESAQ. Quando esses
+          valores pioram, aplicações em tempo real podem sofrer mesmo que o teste mostre boa taxa de download.
+        </p>
+
+        <h2>10. Escolha o mesmo método para comparar antes e depois</h2>
+        <p>
+          Se você está avaliando mudança de roteador, cabo ou plano, repita a medição com o mesmo dispositivo e
+          ferramenta. Trocar todas as variáveis ao mesmo tempo impede saber o que realmente mudou.
+        </p>
+
+        <h2>11. Teste em mais de um horário</h2>
+        <p>
+          Resultado consistentemente ruim é mais relevante do que uma única queda. Faça medições em períodos de uso
+          diferentes e registre data, horário, conexão usada e resultados.
+        </p>
+
+        <h2>12. Não use resultado de Wi‑Fi distante como prova isolada do link</h2>
+        <p>
+          Se você está em outro cômodo, atrás de paredes ou conectado a um repetidor, o teste mede todo esse caminho.
+          Para discutir a banda larga entregue, primeiro estabeleça uma referência perto do equipamento ou por cabo.
+        </p>
+
+        <h2>13. Como documentar um problema para o suporte</h2>
+        <ul>
+          <li>Plano contratado e tecnologia de acesso.</li>
+          <li>Data e horário das medições.</li>
+          <li>Dispositivo e forma de conexão: cabo ou Wi‑Fi.</li>
+          <li>Download, upload, latência, jitter e perda.</li>
+          <li>Se outros dispositivos estavam usando a rede.</li>
+          <li>Se o problema aparece em um serviço específico ou em vários.</li>
+        </ul>
+
+        <h2>14. Um serviço específico lento pode não ser problema da operadora</h2>
+        <p>
+          A própria Anatel recomenda comparar outras aplicações quando um serviço está degradado. Se apenas um site,
+          jogo ou plataforma apresenta problema, teste outros destinos antes de concluir que toda a conexão está lenta.
+        </p>
+
+        <h2>15. O teste não substitui diagnóstico de cobertura Wi‑Fi</h2>
+        <p>
+          Se a velocidade cai conforme você se afasta do roteador, a investigação muda para cobertura e interferência.
+          Veja{" "}
+          <a href="/blog/como-melhorar-sinal-wifi-em-casa">como melhorar o sinal Wi‑Fi em casa</a>.
+        </p>
+
+        <h2>Critérios de parada</h2>
+        <ul>
+          <li>O dispositivo usado não suporta a velocidade que você tenta medir.</li>
+          <li>Há VPN, proxy ou software corporativo que altera o caminho da conexão.</li>
+          <li>Você só consegue testar por Wi‑Fi em local de sinal fraco.</li>
+          <li>A rede está compartilhada e não é possível pausar tráfego concorrente.</li>
+          <li>O problema ocorre apenas em um serviço específico, exigindo diagnóstico daquele destino.</li>
+        </ul>
+
+        <h2>Perguntas frequentes</h2>
+        <h3>EAQ e ESAQ são a mesma coisa?</h3>
+        <p>
+          Não. EAQ é uma referência histórica do modelo anterior de aferição; a Anatel atualmente apresenta a ESAQ
+          como entidade responsável pelas ferramentas de medição do RQUAL.
+        </p>
+
+        <h3>Qual teste de velocidade a Anatel indica?</h3>
+        <p>
+          A Anatel lista o site Brasil Banda Larga e o aplicativo ESAQ entre as ferramentas de medição de desempenho
+          da banda larga.
+        </p>
+
+        <h3>Preciso testar por cabo?</h3>
+        <p>
+          Não para todo objetivo, mas o cabo é uma referência importante quando você quer separar desempenho do link
+          de limitações do Wi‑Fi.
+        </p>
+
+        <h3>Por que dois testes dão resultados diferentes?</h3>
+        <p>
+          Porque horário, servidor, tráfego concorrente, Wi‑Fi, dispositivo e rota podem mudar. Compare séries de
+          medições em condições equivalentes.
+        </p>
+
+        <h3>Velocidade baixa em um teste prova descumprimento do contrato?</h3>
+        <p>
+          Não trate uma medição isolada como prova definitiva. Registre uma série comparável e siga os canais e regras
+          oficiais aplicáveis ao seu serviço.
+        </p>
+
+        <h2>Resumo prático</h2>
+        <p>
+          <strong>Meça com método.</strong> Controle o tráfego da rede, use cabo como referência quando possível,
+          repita testes e registre todas as métricas. Para a consulta “EAQ teste velocidade”, atualize a referência:
+          hoje a Anatel apresenta ferramentas da ESAQ/Brasil Banda Larga.
+        </p>
+
+        <EditorialReferences slug="como-fazer-teste-velocidade-internet" />
+      </>
+    ),
+  },
+
   "como-trocar-tela-notebook-passo-a-passo": {
     title: "Como trocar a tela do notebook: compatibilidade, desmontagem segura e validação antes de fechar",
     excerpt:
