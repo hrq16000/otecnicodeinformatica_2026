@@ -2580,13 +2580,17 @@ export const ARTICLE_SOURCE_MANIFEST: Record<string, ArticleSourceManifest> = {
   },
   "historico-de-arquivos-windows-como-configurar": {
     slug: "historico-de-arquivos-windows-como-configurar",
-    sources: [],
+    sources: [
+      "ms-file-history",
+      "ms-onedrive-folder-backup",
+      "cisa-backup",
+      "nist-sp-800-34",
+    ],
     technicalReview: "reviewed",
     factChecked: true,
-    factCheckedAt: "2026-09-03",
-    stableKnowledge: true,
+    factCheckedAt: "2026-10-01",
     notes:
-      "Revisão concluída (Onda 11D): escopo real do versionamento nativo (pastas de usuário, não sistema), destino em disco físico separado, dimensionamento e retenção, diferença entre versionar e sincronizar e teste de restauração como etapa final. Conhecimento técnico estável — sem fonte visível.",
+      "Revisão material em 2026-10-01 guiada pelo GSC: 1 impressão, 0 cliques e posição 10 entre 2026-04-01 e 2026-09-28. O GSC não expôs queries individuais para a URL e nenhuma consulta foi inventada. A versão suplementar aprofunda configuração, destino separado, escopo, capacidade, retenção, restauração de teste, diferença entre Histórico de Arquivos e sincronização, papel complementar do OneDrive e limites do recurso como única estratégia de backup. Fontes Microsoft, CISA e NIST ficam visíveis.",
   },
   "monitor-sem-sinal-o-que-verificar": {
     slug: "monitor-sem-sinal-o-que-verificar",
