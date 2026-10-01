@@ -2581,13 +2581,12 @@ export const ARTICLE_SOURCE_MANIFEST: Record<string, ArticleSourceManifest> = {
 
   "ordem-de-boot-na-bios-como-configurar": {
     slug: "ordem-de-boot-na-bios-como-configurar",
-    sources: [],
+    sources: ["ms-boot-uefi-legacy-2026", "ms-secure-boot-windows11-2026", "ms-bitlocker-recovery"],
     technicalReview: "reviewed",
     factChecked: true,
-    factCheckedAt: "2026-08-31",
-    stableKnowledge: true,
+    factCheckedAt: "2026-10-01",
     notes:
-      "Revisão concluída (Onda 11A, Lote 4): diferença entre menu temporário de boot e alteração permanente da prioridade, efeito de Secure Boot e CSM, e recomendação explícita de anotar a configuração original antes de alterar. Sem marca comercial e sem promessa. Conhecimento técnico estável — sem fonte visível.",
+      "Revisão material em 2026-10-01 guiada por sinal real de página no GSC: 1 impressão, 0 cliques e posição média 5 entre 2026-04-01 e 2026-09-28. Nenhuma query individual foi exposta e nenhuma foi inventada. A versão suplementar diferencia menu de boot temporário de prioridade permanente, explica Windows Boot Manager, UEFI/Legacy, Secure Boot, BitLocker, validação de mídia e critérios de parada. Fontes oficiais Microsoft ficam visíveis.",
   },
   "windows-reparo-automatico-em-loop": {
     slug: "windows-reparo-automatico-em-loop",
