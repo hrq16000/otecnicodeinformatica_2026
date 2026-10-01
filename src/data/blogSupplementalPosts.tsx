@@ -11,6 +11,212 @@ import { MODALIDADES } from "@/lib/precosConfig";
  * do blog compõem base + suplementares + programáticos.
  */
 export const blogSupplementalPosts: Record<string, BlogPostContent> = {
+  "computador-sem-som-o-que-verificar": {
+    title: "Computador sem som: roteiro para testar saída, dispositivo, driver e serviço de áudio",
+    excerpt:
+      "PC sem áudio? Separe saída errada, volume/mixer, dispositivo não detectado, cabo/conector, driver e serviço do Windows antes de reinstalar tudo.",
+    date: "2026-09-30",
+    readTime: "13 min",
+    category: "Procedimentos Técnicos",
+    content: (
+      <>
+        <p className="lead">
+          Quando o <strong>computador fica sem som</strong>, o diagnóstico mais rápido é separar quatro perguntas:
+          <strong> há um dispositivo de áudio detectado?</strong>, <strong>a saída correta está selecionada?</strong>,
+          <strong>o Windows consegue reproduzir por outro aplicativo?</strong> e <strong>o problema está no
+          dispositivo físico ou na camada de software?</strong>. Isso evita reinstalar driver quando o áudio só foi
+          direcionado para HDMI, Bluetooth ou outra saída.
+        </p>
+
+        <h2>Resposta direta: como testar o som do PC</h2>
+        <ol>
+          <li>Confirme volume, mudo e a saída selecionada no Windows.</li>
+          <li>Teste um som do sistema e um segundo aplicativo.</li>
+          <li>Veja se alto-falante/fone aparece nas Configurações de Som e no Gerenciador de Dispositivos.</li>
+          <li>Se usa cabo P2, USB, HDMI ou Bluetooth, teste a conexão específica.</li>
+          <li>Abra o mixer de volume e confira se apenas um aplicativo está mudo ou roteado para outra saída.</li>
+          <li>Se o dispositivo some, investigue driver/detecção; se aparece mas não reproduz, investigue saída, mixer e serviço.</li>
+        </ol>
+
+        <h2>“Sem som” pode estar em camadas diferentes</h2>
+        <table>
+          <thead><tr><th>Sintoma</th><th>Camada provável</th><th>Primeiro teste</th></tr></thead>
+          <tbody>
+            <tr><td>Nenhum dispositivo de saída aparece</td><td>driver/detecção/hardware</td><td>Gerenciador de Dispositivos</td></tr>
+            <tr><td>Dispositivo aparece, mas nada toca</td><td>saída/mixer/serviço</td><td>som do sistema + saída padrão</td></tr>
+            <tr><td>Só um aplicativo está sem som</td><td>mixer/roteamento do app</td><td>comparar com outro aplicativo</td></tr>
+            <tr><td>Som foi para monitor/TV</td><td>HDMI/DisplayPort virou saída</td><td>selecionar alto-falante correto</td></tr>
+            <tr><td>Fone P2 não é reconhecido</td><td>conector/driver/jack detection</td><td>trilha específica de fone</td></tr>
+          </tbody>
+        </table>
+
+        <h2>1. Comece pela saída selecionada</h2>
+        <p>
+          O Windows pode ter várias saídas ao mesmo tempo: alto-falantes internos, monitor HDMI, TV, headset USB,
+          Bluetooth e interfaces externas. Clique no controle de volume e confirme qual dispositivo está ativo.
+        </p>
+        <p>
+          Se o computador perdeu som depois de conectar monitor, dock ou TV, a saída pode ter mudado automaticamente.
+          Voltar para o dispositivo correto é um teste melhor do que reinstalar driver imediatamente.
+        </p>
+
+        <h2>2. Teste dois tipos de áudio</h2>
+        <p>
+          Reproduza um som do Windows e depois áudio em outro aplicativo. Se um funciona e outro não, o problema tende
+          a estar no aplicativo, navegador, mixer ou dispositivo atribuído àquele programa.
+        </p>
+        <p>
+          Se nada reproduz, avance para detecção do dispositivo e estado do serviço.
+        </p>
+
+        <h2>3. Abra o mixer de volume</h2>
+        <p>
+          Aplicativos podem ter volume próprio e saída própria. Um navegador pode estar mudo enquanto o sistema toca
+          normalmente; um jogo pode estar roteado para um headset desconectado.
+        </p>
+        <p>
+          Ajuste uma variável por vez. Se o mixer resolve, não há evidência para mexer em BIOS, driver ou serviço.
+        </p>
+
+        <h2>4. Se nenhum dispositivo aparece, mude o foco para detecção</h2>
+        <p>
+          A Microsoft trata o caso de <strong>dispositivo de saída ausente</strong> separadamente. Abra o Gerenciador
+          de Dispositivos e observe controladores de som e dispositivos de áudio.
+        </p>
+        <p>
+          Depois de atualização ou reinstalação do Windows, use preferencialmente o driver oficial do fabricante do
+          notebook, placa-mãe ou interface de áudio. Evite pacotes genéricos de driver.
+        </p>
+
+        <h2>5. Se o dispositivo aparece, mas não há som</h2>
+        <p>
+          Confirme saída padrão, volume, mudo e teste outra fonte. Se usa caixas externas, verifique alimentação e
+          entrada selecionada. Em notebook, compare alto-falante interno com fone ou dispositivo USB conhecido.
+        </p>
+        <p>
+          Esse teste cruzado ajuda a separar “Windows não reproduz áudio” de “um alto-falante específico não funciona”.
+        </p>
+
+        <h2>6. P2, USB, Bluetooth e HDMI não falham do mesmo jeito</h2>
+        <ul>
+          <li><strong>P2:</strong> depende de conector, pinagem e detecção do codec.</li>
+          <li><strong>USB:</strong> aparece como dispositivo próprio e pode usar driver dedicado.</li>
+          <li><strong>Bluetooth:</strong> depende de pareamento, perfil e conexão ativa.</li>
+          <li><strong>HDMI/DisplayPort:</strong> o áudio pode ser enviado junto com vídeo para monitor/TV.</li>
+        </ul>
+        <p>
+          Para fone que não é reconhecido, use o guia{" "}
+          <a href="/blog/fone-de-ouvido-nao-e-reconhecido-no-pc">fone de ouvido não reconhecido no PC</a>.
+        </p>
+
+        <h2>7. Serviço Windows Audio: quando verificar</h2>
+        <p>
+          Se o Windows informa que o serviço de áudio não está em execução, a Microsoft inclui a reinicialização de
+          Windows Audio e Windows Audio Endpoint Builder no roteiro oficial.
+        </p>
+        <p>
+          Se o serviço inicia e cai novamente, não transforme “reiniciar serviço” em solução permanente. Veja{" "}
+          <a href="/blog/servico-de-audio-do-windows-nao-esta-em-execucao">
+            Serviço de Áudio do Windows não está em execução
+          </a>.
+        </p>
+
+        <h2>8. Driver: atualizar, reinstalar ou reverter?</h2>
+        <p>
+          Driver merece atenção quando o dispositivo sumiu, apareceu com erro ou o problema começou após atualização.
+          Se o fabricante oferece pacote específico para o modelo, use esse canal.
+        </p>
+        <p>
+          Não altere vários drivers ao mesmo tempo. Faça uma mudança e teste para preservar a relação de causa e efeito.
+        </p>
+
+        <h2>9. Som parou depois de conectar monitor ou dock</h2>
+        <p>
+          HDMI e DisplayPort podem assumir a reprodução. O Windows pode continuar funcionando perfeitamente, mas
+          enviar o áudio para o monitor. Confirme a saída antes de tratar como defeito.
+        </p>
+        <p>
+          Se o monitor não possui alto-falantes, selecione novamente o dispositivo interno ou externo desejado.
+        </p>
+
+        <h2>10. Alto-falante interno vs. fone: use comparação</h2>
+        <p>
+          Se o fone funciona e o alto-falante interno não, a cadeia do Windows está ao menos parcialmente funcional.
+          Se nenhum funciona, a hipótese de software/driver ganha peso. Se um dispositivo USB funciona, isso não prova
+          que o codec interno está saudável, mas ajuda a separar caminhos.
+        </p>
+
+        <h2>11. BIOS/UEFI: não é primeira parada</h2>
+        <p>
+          Alguns equipamentos têm opções relacionadas a áudio integrado, mas não entre na BIOS por reflexo. Primeiro
+          confirme saída, dispositivo, driver e serviço. Só investigue firmware quando existe motivo concreto, como
+          áudio integrado desabilitado após reset/configuração.
+        </p>
+
+        <h2>12. Se o som está baixo, distorcido ou falhando</h2>
+        <p>
+          Isso é diferente de “sem som”. Compare outro arquivo, aplicativo e dispositivo. Distorção pode vir do
+          alto-falante, cabo, conector, amplificação, formato ou processamento.
+        </p>
+        <p>
+          Não aumente volume ao máximo para testar um alto-falante que já apresenta ruído mecânico.
+        </p>
+
+        <h2>13. Como saber se o problema é hardware</h2>
+        <ul>
+          <li>O dispositivo interno some mesmo com driver oficial e sistema estável.</li>
+          <li>Conector apresenta folga, dano ou funciona apenas em determinada posição.</li>
+          <li>Alto-falante chia/raspa em qualquer sistema ou fonte.</li>
+          <li>O problema começou após líquido, impacto ou reparo físico.</li>
+          <li>Dispositivo externo conhecido funciona, mas o caminho interno não.</li>
+        </ul>
+
+        <h2>14. O que não fazer</h2>
+        <ul>
+          <li>Baixar DLL ou “audio.exe” de site aleatório.</li>
+          <li>Instalar vários driver packs de terceiros.</li>
+          <li>Desativar serviços do Windows sem registrar o estado original.</li>
+          <li>Formatar o computador antes de separar saída, dispositivo e aplicativo.</li>
+          <li>Abrir notebook para trocar alto-falante sem testar primeiro a camada de software.</li>
+        </ul>
+
+        <h2>Critérios de parada</h2>
+        <ul>
+          <li>O Gerenciador de Dispositivos mostra erro persistente que você não consegue interpretar.</li>
+          <li>O serviço de áudio cai repetidamente.</li>
+          <li>Há dano por líquido/impacto.</li>
+          <li>A máquina é corporativa e driver/política são gerenciados.</li>
+          <li>A correção exigiria software ou driver de origem duvidosa.</li>
+        </ul>
+
+        <h2>Perguntas frequentes</h2>
+        <h3>Como testar o som do PC?</h3>
+        <p>Confirme a saída, reproduza som do sistema e outro aplicativo, e compare com outro dispositivo de áudio quando possível.</p>
+
+        <h3>Meu PC está sem som, mas o volume está alto. O que verificar?</h3>
+        <p>Veja a saída selecionada, mixer do aplicativo, detecção do dispositivo e conexão física.</p>
+
+        <h3>Preciso reinstalar o driver?</h3>
+        <p>Não como primeira etapa. Reinstalação faz mais sentido quando há evidência de falha de detecção/driver.</p>
+
+        <h3>Se o fone funciona, o alto-falante está queimado?</h3>
+        <p>Não necessariamente, mas a comparação reduz algumas hipóteses. Ainda podem existir roteamento, detecção e problemas físicos do alto-falante.</p>
+
+        <h3>Formatar o Windows resolve falta de som?</h3>
+        <p>Pode eliminar alguns problemas de software, mas é uma medida desproporcional antes de testar saída, dispositivo, driver e serviço.</p>
+
+        <h2>Resumo prático</h2>
+        <p>
+          <strong>Sem som é um sintoma.</strong> Comece pela saída selecionada e pelo mixer, confirme se o dispositivo
+          existe, teste outra fonte e só depois avance para driver e serviço. Comparações simples evitam desmontagem,
+          reinstalação e formatação desnecessárias.
+        </p>
+
+        <EditorialReferences slug="computador-sem-som-o-que-verificar" />
+      </>
+    ),
+  },
+
   "notebook-superaquecendo-o-que-fazer": {
     title: "Notebook superaquecendo: como diagnosticar calor, ventoinha e perda de desempenho",
     excerpt:
