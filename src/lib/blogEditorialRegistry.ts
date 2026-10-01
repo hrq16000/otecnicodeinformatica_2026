@@ -1630,6 +1630,23 @@ const WAVE_11W: EditorialApproval[] = [
 ];
 
 
+const WAVE_11X: EditorialApproval[] = [
+  {
+    slug: "como-escolher-uma-workstation",
+    status: "approved",
+    authorType: "organization",
+    authorId: INSTITUTIONAL_AUTHOR.id,
+    reviewedAt: "2026-10-01",
+    approvedAt: FIRST_WAVE_APPROVED_AT,
+    imageOrigin: "generated",
+    imageLicense: "Ativo gerado sob encomenda para uso próprio da marca",
+    imageAttribution: "O Técnico de Informática",
+    notes:
+      "Revisão material em 2026-10-01 guiada pelo GSC: 2 impressões, 0 cliques e posição média ~30,5 entre 2026-04-01 e 2026-09-28. A única query individual exposta foi 'o que é workstation' (1 impressão, posição 57). A versão suplementar preserva a URL e redefine a owner como guia de decisão por carga real, software, CPU, GPU, RAM, armazenamento, rede, expansão, suporte e continuidade, sem benchmark inventado, configuração universal ou recomendação comercial.",
+  },
+];
+
+
 export const APPROVED_EDITORIAL_CONTENT = new Map<string, EditorialApproval>([
 
   ...FIRST_WAVE_SLUGS.map((slug) => [
@@ -1701,6 +1718,7 @@ export const APPROVED_EDITORIAL_CONTENT = new Map<string, EditorialApproval>([
   ...WAVE_11U.map((a) => [a.slug, a] as [string, EditorialApproval]),
   ...WAVE_11V.map((a) => [a.slug, a] as [string, EditorialApproval]),
   ...WAVE_11W.map((a) => [a.slug, a] as [string, EditorialApproval]),
+  ...WAVE_11X.map((a) => [a.slug, a] as [string, EditorialApproval]),
 
 ]);
 

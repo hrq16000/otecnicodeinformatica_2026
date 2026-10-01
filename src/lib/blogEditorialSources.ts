@@ -423,6 +423,19 @@ export const EDITORIAL_SOURCES: Record<string, EditorialSource> = {
       "Após exposição de credenciais, deve-se registrar o incidente, trocar senhas reutilizadas, ativar autenticação multifator e avisar a instituição envolvida.",
     ],
   },
+  "ms-win11-pro-workstations-2026": {
+    id: "ms-win11-pro-workstations-2026",
+    title: "Windows 11 Pro para Estações de Trabalho",
+    publisher: "Microsoft",
+    url: "https://www.microsoft.com/pt-br/windows/business/windows-11-pro-workstations",
+    accessedAt: "2026-10-01",
+    sourceType: "official",
+    supports: [
+      "A Microsoft posiciona o Windows 11 Pro para Estações de Trabalho para cargas de trabalho exigentes e recursos avançados de processamento.",
+      "A edição inclui recursos voltados a armazenamento resiliente e compartilhamento acelerado de arquivos em hardware compatível, sem transformar a edição do sistema operacional em substituto para dimensionamento de hardware.",
+    ],
+  },
+
   "ms-windows-security-overview": {
     id: "ms-windows-security-overview",
     title: "Windows Security app overview",
@@ -1960,13 +1973,16 @@ export const ARTICLE_SOURCE_MANIFEST: Record<string, ArticleSourceManifest> = {
   },
   "como-escolher-uma-workstation": {
     slug: "como-escolher-uma-workstation",
-    sources: [],
+    sources: [
+      "ms-win11-pro-workstations-2026",
+      "nvme-official-faq",
+      "ms-computer-memory-overview-2026",
+    ],
     technicalReview: "reviewed",
     factChecked: true,
-    factCheckedAt: "2026-08-06",
-    stableKnowledge: true,
+    factCheckedAt: "2026-10-01",
     notes:
-      "Revisão concluída (Rodada 3O): critérios de levantamento de requisitos, sem configuração universal, sem benchmark, sem promessa de desempenho, sem nome de software no slug/H1/title e sem selo de homologação não publicado pelo fabricante. Conhecimento técnico estável — sem fonte visível.",
+      "Revisão material em 2026-10-01 guiada pelo GSC: 2 impressões, 0 cliques e posição média ~30,5 entre 2026-04-01 e 2026-09-28. A única query individual exposta foi 'o que é workstation' (1 impressão, posição 57). A versão suplementar define workstation sem reduzir o conceito a 'PC caro', organiza seleção por carga real, software, CPU, GPU, RAM, armazenamento, rede, expansão, suporte e continuidade, sem configuração universal, benchmark inventado ou recomendação comercial. Fontes oficiais Microsoft/NVM Express e documentação de memória já registrada ficam visíveis; nenhuma query adicional foi inventada.",
   },
   "como-resolver-tela-azul-windows": {
     slug: "como-resolver-tela-azul-windows",
