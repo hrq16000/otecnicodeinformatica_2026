@@ -1363,9 +1363,9 @@ const WAVE_11J: EditorialApproval[] = [
   },
   {
     slug: "como-fazer-teste-velocidade-internet", status: "approved", authorType: "organization", authorId: INSTITUTIONAL_AUTHOR.id,
-    reviewedAt: "2026-09-25", approvedAt: "2026-09-25", imageOrigin: "licensed", imageLicense: "CC BY 4.0",
+    reviewedAt: "2026-10-01", approvedAt: "2026-09-25", imageOrigin: "licensed", imageLicense: "CC BY 4.0",
     imageAttribution: "Foto: VulcanSphere (Wikimedia Commons), CC BY 4.0 — https://commons.wikimedia.org/wiki/File:ARRIS_CM820B_DOCSIS_Cable_Modem.jpg",
-    notes: "Reescrita com FCC: referência cabeada, múltiplas medições, download/upload/latência/jitter/perda; remove regra absoluta sobre Wi‑Fi e percentuais regulatórios antigos.",
+    notes: "Revisão material em 2026-10-01 guiada pelo GSC: 1 impressão, 0 cliques e posição média 5 entre 2026-04-01 e 2026-09-28. A única query exposta foi 'eaq teste velocidade'. A versão suplementar preserva a URL, atualiza a referência histórica EAQ para o contexto atual ESAQ/Brasil Banda Larga da Anatel e aprofunda download, upload, latência, jitter, perda, controle de variáveis e interpretação por séries comparáveis.",
   },
 ];
 

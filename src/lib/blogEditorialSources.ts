@@ -99,6 +99,7 @@ export const ALLOWED_SOURCE_HOSTS = [
   "www.nsa.gov",
   "www.dell.com",
   "support.hp.com",
+  "www.gov.br",
   "download.lenovo.com",
   "acm.org",
   "www.acm.org",
@@ -564,6 +565,31 @@ export const EDITORIAL_SOURCES: Record<string, EditorialSource> = {
       "Redes residenciais com múltiplos pontos (EasyMesh) para melhorar cobertura em ambientes maiores.",
     ],
   },
+  "anatel-ferramentas-medicao-2026": {
+    id: "anatel-ferramentas-medicao-2026",
+    title: "Ferramentas de medição",
+    publisher: "Agência Nacional de Telecomunicações (Anatel)",
+    url: "https://www.gov.br/anatel/pt-br/dados/qualidade/qualidade-dos-servicos/medicoes-da-banda-larga",
+    accessedAt: "2026-10-01",
+    sourceType: "official",
+    supports: [
+      "A Anatel apresenta atualmente as ferramentas da ESAQ, incluindo Brasil Banda Larga e aplicativo ESAQ, para medir desempenho de banda larga fixa e móvel.",
+      "As ferramentas medem download, upload, latência bidirecional, jitter e perda de pacotes; a Anatel também destaca que terminal, conexão Wi-Fi e provedor influenciam a experiência.",
+    ],
+  },
+  "anatel-velocidade-conexao-2026": {
+    id: "anatel-velocidade-conexao-2026",
+    title: "Velocidade de conexão",
+    publisher: "Agência Nacional de Telecomunicações (Anatel)",
+    url: "https://www.gov.br/anatel/pt-br/consumidor/conheca-seus-direitos-2/banda-larga/velocidade-de-conexao",
+    accessedAt: "2026-10-01",
+    sourceType: "official",
+    supports: [
+      "A Anatel orienta o consumidor a verificar a velocidade da banda larga por meio do Brasil Banda Larga e a comparar o desempenho com as condições informadas no contrato.",
+      "Uma medição deve ser interpretada no contexto do serviço e das condições do teste, e não como regra universal isolada.",
+    ],
+  },
+
   "fcc-home-network-tips": {
     id: "fcc-home-network-tips",
     title: "Home Network Tips",
@@ -2845,12 +2871,17 @@ export const ARTICLE_SOURCE_MANIFEST: Record<string, ArticleSourceManifest> = {
   },
   "como-fazer-teste-velocidade-internet": {
     slug: "como-fazer-teste-velocidade-internet",
-    sources: ["fcc-home-network-tips", "fcc-speed-test-app-faq"],
+    sources: [
+      "anatel-ferramentas-medicao-2026",
+      "anatel-velocidade-conexao-2026",
+      "fcc-home-network-tips",
+      "fcc-speed-test-app-faq",
+    ],
     technicalReview: "reviewed",
     factChecked: true,
-    factCheckedAt: "2026-09-25",
+    factCheckedAt: "2026-10-01",
     notes:
-      "Reescrita material: remove regra falsa de que Wi-Fi é sempre mais lento e percentuais regulatórios antigos; ensina referência cabeada, repetição de medições, latência, jitter e perda.",
+      "Revisão material em 2026-10-01 guiada pelo GSC: 1 impressão, 0 cliques e posição média 5 entre 2026-04-01 e 2026-09-28. A única query exposta foi 'eaq teste velocidade' (1 impressão, posição 5). A versão suplementar esclarece que EAQ é referência histórica e que a Anatel atualmente apresenta as ferramentas da ESAQ/Brasil Banda Larga; aprofunda método comparável, referência cabeada, controle de tráfego, download/upload/latência/jitter/perda, influência de terminal/Wi-Fi/provedor e limites de uma medição isolada. Fontes oficiais Anatel e FCC ficam visíveis; nenhuma query adicional foi inventada.",
   },
 
   "como-resetar-senha-windows": {
