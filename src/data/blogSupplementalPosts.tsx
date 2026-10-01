@@ -11,6 +11,186 @@ import { MODALIDADES } from "@/lib/precosConfig";
  * do blog compõem base + suplementares + programáticos.
  */
 export const blogSupplementalPosts: Record<string, BlogPostContent> = {
+  "historico-de-arquivos-windows-como-configurar": {
+    title: "Histórico de Arquivos no Windows: como configurar, restaurar versões e entender os limites",
+    excerpt:
+      "O Histórico de Arquivos cria versões de arquivos pessoais em outra unidade. Veja como configurar, testar restauração e diferenciar versionamento, sincronização e backup completo.",
+    date: "2026-10-01",
+    readTime: "13 min",
+    category: "Backup e Recuperação",
+    content: (
+      <>
+        <p className="lead">
+          O <strong>Histórico de Arquivos</strong> é um recurso de versionamento do Windows para manter cópias de
+          arquivos pessoais e permitir restaurar versões anteriores quando ele foi configurado antes do problema.
+          Ele é útil contra exclusão ou alteração acidental, mas <strong>não substitui sozinho um plano completo de
+          backup</strong>.
+        </p>
+
+        <h2>Resposta direta: como usar o Histórico de Arquivos</h2>
+        <ol>
+          <li>Use uma unidade separada do disco principal, preferencialmente externa ou de rede compatível.</li>
+          <li>Ative o Histórico de Arquivos nas opções de backup disponíveis no Windows.</li>
+          <li>Confirme quais pastas entram no versionamento.</li>
+          <li>Deixe a unidade conectada conforme a frequência de backup necessária.</li>
+          <li>Faça um teste real de restauração antes de confiar no recurso.</li>
+        </ol>
+
+        <h2>O que o Histórico de Arquivos faz — e o que não faz</h2>
+        <table>
+          <thead>
+            <tr><th>Recurso</th><th>Serve para</th><th>Não substitui</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Histórico de Arquivos</td><td>versionar arquivos pessoais</td><td>imagem completa do sistema</td></tr>
+            <tr><td>OneDrive/sincronização</td><td>sincronizar e proteger pastas configuradas</td><td>backup isolado de todas as alterações</td></tr>
+            <tr><td>Backup externo</td><td>manter cópia separada</td><td>versionamento automático se não configurado</td></tr>
+          </tbody>
+        </table>
+
+        <h2>1. Use um destino fisicamente separado</h2>
+        <p>
+          Manter versões no mesmo disco que contém os arquivos originais reduz a proteção contra falha física da
+          unidade. O ideal é usar outro dispositivo ou destino de rede compatível.
+        </p>
+
+        <h2>2. Confirme o escopo antes de confiar no recurso</h2>
+        <p>
+          O Histórico de Arquivos trabalha com arquivos pessoais e pastas incluídas no recurso. Ele não deve ser
+          tratado como imagem completa do Windows, clonagem de disco ou cópia integral de todos os aplicativos.
+        </p>
+        <p>
+          Verifique documentos, imagens, área de trabalho e outras pastas importantes. Se você guarda projetos em
+          locais personalizados, confirme se eles realmente entram no histórico.
+        </p>
+
+        <h2>3. Capacidade do destino importa</h2>
+        <p>
+          Versionamento consome espaço conforme arquivos mudam. Projetos grandes e arquivos que são alterados com
+          frequência podem ocupar muito mais espaço do que o tamanho atual das pastas.
+        </p>
+        <p>
+          Não dimensione o disco apenas pelo tamanho de hoje. Considere retenção e crescimento.
+        </p>
+
+        <h2>4. Histórico de Arquivos não é o mesmo que sincronização</h2>
+        <p>
+          Sincronização mantém versões ou cópias conforme as regras do serviço, mas também propaga alterações e
+          exclusões em muitos cenários. Histórico de Arquivos cria versões em um destino separado quando configurado.
+        </p>
+        <p>
+          Os dois recursos podem complementar-se, mas não devem ser tratados como equivalentes.
+        </p>
+
+        <h2>5. Como restaurar uma versão anterior</h2>
+        <p>
+          A Microsoft documenta a restauração de arquivos pelo Histórico de Arquivos. Quando houver uma versão válida,
+          prefira restaurar para um local de teste primeiro se você ainda precisa comparar com o arquivo atual.
+        </p>
+        <p>
+          Isso evita substituir uma versão recente que talvez contenha dados úteis.
+        </p>
+
+        <h2>6. Teste de restauração é obrigatório</h2>
+        <p>
+          Backup que nunca foi restaurado ainda não foi validado. Crie um arquivo de teste, deixe o histórico gerar
+          uma versão, altere o arquivo e tente recuperar a versão anterior.
+        </p>
+        <p>
+          Confirme também se a unidade de destino continua acessível e se o histórico está sendo atualizado.
+        </p>
+
+        <h2>7. Unidade desconectada não recebe novas versões</h2>
+        <p>
+          Se o destino externo fica guardado a maior parte do tempo, as novas versões só poderão ser gravadas quando
+          ele estiver disponível. Ajuste a rotina de conexão ao risco e à frequência de mudanças dos arquivos.
+        </p>
+
+        <h2>8. O que acontece quando o destino enche</h2>
+        <p>
+          Retenção e limpeza de versões antigas precisam ser acompanhadas. Antes de apagar versões para ganhar espaço,
+          confirme se você não depende delas para recuperar projetos antigos.
+        </p>
+
+        <h2>9. Histórico de Arquivos não protege contra tudo</h2>
+        <p>
+          Falha simultânea, roubo, dano físico, ransomware e erros de configuração podem afetar a estratégia. Por isso,
+          dados importantes devem ter mais de uma camada de proteção.
+        </p>
+        <p>
+          A CISA recomenda backup como parte da proteção contra perda de dados por falhas, exclusão acidental e ataques.
+        </p>
+
+        <h2>10. OneDrive pode complementar o plano</h2>
+        <p>
+          O OneDrive pode proteger e sincronizar pastas conhecidas do Windows. Isso é útil para disponibilidade e
+          versionamento do serviço, mas continua importante entender quais pastas estão incluídas e como exclusões e
+          arquivos somente online funcionam.
+        </p>
+
+        <h2>11. Não descarte a unidade antiga logo após migração</h2>
+        <p>
+          Ao trocar de computador ou disco, mantenha a fonte antiga por um período seguro até validar que documentos,
+          fotos, projetos e históricos foram recuperados corretamente.
+        </p>
+
+        <h2>12. Quando usar imagem de sistema ou outro backup</h2>
+        <p>
+          Se o objetivo é recuperar rapidamente o ambiente inteiro, aplicativos, configurações e sistema operacional,
+          Histórico de Arquivos pode não ser suficiente. Use uma estratégia de backup apropriada ao nível de
+          recuperação necessário.
+        </p>
+
+        <h2>Checklist de validação</h2>
+        <ul>
+          <li>Destino separado do disco principal.</li>
+          <li>Pastas críticas realmente incluídas.</li>
+          <li>Espaço livre acompanhado.</li>
+          <li>Rotina de conexão do destino definida.</li>
+          <li>Restauração de teste concluída com sucesso.</li>
+          <li>Segunda camada de backup para dados críticos.</li>
+        </ul>
+
+        <h2>Perguntas frequentes</h2>
+        <h3>Histórico de Arquivos faz backup do Windows inteiro?</h3>
+        <p>
+          Não. O foco é versionamento de arquivos pessoais. Para recuperação completa do sistema, use uma estratégia
+          específica de imagem ou reinstalação/backup.
+        </p>
+
+        <h3>Posso usar o mesmo disco do Windows?</h3>
+        <p>
+          Isso reduz a proteção contra falha física. Um destino separado é mais adequado para backup.
+        </p>
+
+        <h3>Histórico de Arquivos substitui OneDrive?</h3>
+        <p>
+          Não. São mecanismos diferentes. Eles podem complementar-se conforme o objetivo.
+        </p>
+
+        <h3>Se eu apagar um arquivo, consigo recuperar?</h3>
+        <p>
+          Se existia uma versão gravada antes da exclusão e o histórico continua disponível, a restauração pode ser
+          possível.
+        </p>
+
+        <h3>Como sei se meu backup funciona?</h3>
+        <p>
+          Faça uma restauração de teste. Ver o disco conectado não prova que os arquivos podem ser recuperados.
+        </p>
+
+        <h2>Resumo prático</h2>
+        <p>
+          <strong>Use o Histórico de Arquivos como versionamento, não como única defesa.</strong> Escolha destino
+          separado, valide o escopo, acompanhe espaço e faça restauração de teste. Para dados importantes, combine
+          versionamento com outra camada de backup.
+        </p>
+
+        <EditorialReferences slug="historico-de-arquivos-windows-como-configurar" />
+      </>
+    ),
+  },
+
   "como-escolher-uma-workstation": {
     title: "O que é workstation e como escolher uma estação de trabalho pela carga real",
     excerpt:
