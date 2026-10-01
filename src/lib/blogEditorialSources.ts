@@ -1827,13 +1827,16 @@ export const ARTICLE_SOURCE_MANIFEST: Record<string, ArticleSourceManifest> = {
   },
   "como-saber-quem-esta-usando-meu-wifi": {
     slug: "como-saber-quem-esta-usando-meu-wifi",
-    sources: ["wifi-alliance-security"],
+    sources: [
+      "wifi-alliance-security",
+      "nsa-router-hygiene-2026",
+      "cisa-secure-wifi-networks",
+    ],
     technicalReview: "reviewed",
     factChecked: true,
-    factCheckedAt: "2026-08-12",
-    stableKnowledge: true,
+    factCheckedAt: "2026-10-01",
     notes:
-      "Reescrito na Onda 5B. Explicita que endereço MAC aleatório por rede torna nomes desconhecidos inconclusivos e que filtro de MAC não é medida de segurança. Sem indicação de aplicativo de terceiros e sem promessa de detecção de invasão.",
+      "Revisão material em 2026-10-01 guiada pelo GSC: 105 impressões, 1 clique e posição média ~10,96 entre 2026-04-01 e 2026-09-28. As queries individuais expostas foram 'como ver quantas pessoas estão conectadas no wifi' e 'como ver quem está usando meu wifi'. A versão suplementar transforma a owner em inventário seguro de clientes do roteador, explica hostname/IP/MAC/fabricante, MAC privado/aleatório, estado online/offline, rede de convidados e resposta proporcional a dispositivo realmente desconhecido. Reforça WPA2/WPA3, senha administrativa forte e firmware atualizado; filtro MAC não é tratado como proteção principal e nenhum app de terceiros é recomendado.",
   },
   "como-fazer-upgrade-ssd-nvme": {
     slug: "como-fazer-upgrade-ssd-nvme",
