@@ -11,6 +11,219 @@ import { MODALIDADES } from "@/lib/precosConfig";
  * do blog compõem base + suplementares + programáticos.
  */
 export const blogSupplementalPosts: Record<string, BlogPostContent> = {
+  "pendrive-somente-leitura-protegido-contra-gravacao": {
+    title: "USB protegido contra gravação: como separar trava física, atributo readonly e falha do pendrive",
+    excerpt:
+      "Pendrive ficou somente leitura? Antes de formatar ou usar comandos, copie os dados que ainda abrem e descubra se a proteção vem de chave física, atributo do Windows, política, sistema de arquivos ou controlador em falha.",
+    date: "2026-10-01",
+    readTime: "12 min",
+    category: "Diagnóstico de Hardware",
+    content: (
+      <>
+        <p className="lead">
+          A mensagem <strong>“USB protegido contra gravação”</strong> pode ter origens muito diferentes. Em alguns
+          casos existe uma trava física; em outros o Windows vê o disco ou volume como somente leitura; também pode
+          haver política administrativa, corrupção do sistema de arquivos ou um controlador que colocou a memória em
+          modo de proteção porque o dispositivo está falhando. <strong>Copiar os dados legíveis vem antes de tentar
+          corrigir.</strong>
+        </p>
+
+        <h2>Resposta direta: o que verificar primeiro</h2>
+        <ol>
+          <li>Se os arquivos ainda abrem, copie-os para outro disco antes de qualquer reparo.</li>
+          <li>Confira se o pendrive/adaptador possui chave física de bloqueio.</li>
+          <li>Teste outra porta e, se possível, outro computador para separar dispositivo de política local.</li>
+          <li>No DiskPart, consulte os atributos do disco/volume antes de tentar removê-los.</li>
+          <li>Se o atributo readonly volta sozinho ou a unidade falha ao escrever em vários computadores, suspeite de falha do dispositivo.</li>
+          <li>Formatação fica por último e só quando os dados já estão preservados.</li>
+        </ol>
+
+        <h2>Quatro causas que parecem iguais para o usuário</h2>
+        <table>
+          <thead>
+            <tr><th>Cenário</th><th>Sinal útil</th><th>Próximo passo</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Trava física</td><td>chave Lock/Unlock no adaptador ou mídia</td><td>reposicionar e reconectar</td></tr>
+            <tr><td>Atributo readonly</td><td>DiskPart mostra somente leitura</td><td>consultar e limpar o atributo correto</td></tr>
+            <tr><td>Política/permissão</td><td>problema só naquele computador/ambiente</td><td>comparar outro PC e políticas</td></tr>
+            <tr><td>Falha do dispositivo</td><td>readonly persiste em vários PCs, erros ou desconexões</td><td>preservar dados e substituir</td></tr>
+          </tbody>
+        </table>
+
+        <h2>1. Não formate antes de copiar o que ainda está acessível</h2>
+        <p>
+          Se o pendrive ficou somente leitura mas os arquivos continuam legíveis, isso é uma vantagem diagnóstica:
+          copie primeiro o conteúdo importante. Uma tentativa de reparo ou formatação pode piorar uma unidade que já
+          está instável.
+        </p>
+        <p>
+          Se há erros de leitura, desconexões frequentes ou lentidão anormal durante a cópia, pare de insistir em
+          gravações e trate o caso como recuperação de dados.
+        </p>
+
+        <h2>2. Verifique trava física — inclusive no adaptador</h2>
+        <p>
+          Alguns pendrives e, principalmente, cartões SD usados em adaptadores possuem chave física de proteção.
+          Confira a posição da chave com o dispositivo removido e reconecte depois.
+        </p>
+        <p>
+          Em adaptadores defeituosos, a chave pode não ser lida corretamente. Se o cartão funciona em outro adaptador,
+          a hipótese muda de software para o acessório.
+        </p>
+
+        <h2>3. Teste em outro computador antes de alterar o Registro</h2>
+        <p>
+          Se a unidade grava normalmente em outro PC, a investigação deve ficar no primeiro sistema: política,
+          permissões, software de segurança ou configuração. Se fica somente leitura em vários computadores, a
+          probabilidade de causa no próprio dispositivo cresce.
+        </p>
+        <p>
+          Essa comparação simples evita editar Registro ou política de grupo quando o problema é físico.
+        </p>
+
+        <h2>4. DiskPart: consulte antes de limpar atributos</h2>
+        <p>
+          A Microsoft documenta o comando <strong>attributes disk</strong> para exibir, definir ou limpar atributos
+          do disco selecionado. O mesmo conceito existe para <strong>attributes volume</strong>. Primeiro identifique
+          com segurança o disco correto; selecionar o disco errado pode causar perda de dados em comandos posteriores.
+        </p>
+        <p>
+          O objetivo inicial é observar. Se o atributo readonly estiver realmente definido no disco correto, limpar
+          esse atributo pode fazer sentido. Isso <strong>não</strong> resolve trava física, política corporativa nem
+          controlador de memória em falha.
+        </p>
+
+        <h2>5. “Current Read-only State” e “Read-only” não devem ser tratados como a mesma prova</h2>
+        <p>
+          O estado apresentado pela ferramenta pode refletir o que o dispositivo está reportando naquele momento,
+          enquanto o atributo configurável pode ser outro dado. Se o comando limpa o atributo, mas a unidade continua
+          recusando gravação, não repita comandos indefinidamente.
+        </p>
+        <p>
+          Teste uma gravação pequena depois de reconectar. Se o readonly reaparece, registre o comportamento.
+        </p>
+
+        <h2>6. CHKDSK verifica sistema de arquivos; não “desbloqueia” hardware</h2>
+        <p>
+          O CHKDSK verifica o sistema de arquivos e metadados de um volume; com parâmetros de correção, pode reparar
+          erros lógicos. Ele não remove uma trava física e não conserta um controlador que colocou a memória em modo
+          somente leitura por falha.
+        </p>
+        <p>
+          Em mídia suspeita, preserve os dados antes de executar reparos que escrevam no volume.
+        </p>
+
+        <h2>7. Quando uma política do Windows pode estar envolvida</h2>
+        <p>
+          Em computadores corporativos, escolas ou máquinas gerenciadas, políticas podem bloquear gravação em
+          armazenamento removível. Nesses casos, o comportamento pode afetar vários pendrives no mesmo PC e desaparecer
+          fora daquele ambiente.
+        </p>
+        <p>
+          Não contorne política administrativa em equipamento gerenciado. Confirme com o responsável de TI.
+        </p>
+
+        <h2>8. Permissão de arquivo não é igual a proteção contra gravação do dispositivo</h2>
+        <p>
+          Falta de permissão em uma pasta ou arquivo pode impedir uma operação específica, mas não é a mesma coisa que
+          o dispositivo inteiro reportar somente leitura. Observe se você consegue criar uma pasta vazia na raiz do
+          pendrive e se o erro ocorre em todos os arquivos.
+        </p>
+
+        <h2>9. Formatar só faz sentido depois de separar dados de dispositivo</h2>
+        <p>
+          Se os dados não importam ou já foram copiados, a formatação pode ser usada para reconstruir o sistema de
+          arquivos. Porém, uma unidade que está fisicamente protegida ou que entrou em readonly por falha do controlador
+          continuará recusando escrita.
+        </p>
+        <p>
+          Portanto, “formatar” não deve ser vendido como solução universal para write protection.
+        </p>
+
+        <h2>10. Quando o readonly pode ser sinal de fim de vida</h2>
+        <p>
+          Algumas memórias flash podem passar a recusar novas gravações quando o controlador detecta degradação ou
+          falhas internas. O usuário pode ainda conseguir ler parte dos dados, mas a unidade deixa de ser confiável
+          para uso futuro.
+        </p>
+        <p>
+          Se o comportamento persiste em vários computadores, após reconexão e sem trava física, priorize a cópia dos
+          dados e a substituição da unidade em vez de procurar utilitário “milagroso”.
+        </p>
+
+        <h2>11. Não use “low level format” ou firmware aleatório</h2>
+        <p>
+          Ferramentas genéricas de baixo nível, utilitários de controladores desconhecidos e firmwares encontrados em
+          fóruns podem destruir a tabela de tradução interna ou tornar os dados inacessíveis. Sem identificação exata
+          do controlador e objetivo de recuperação, o risco supera o benefício.
+        </p>
+
+        <h2>12. Sequência segura de diagnóstico</h2>
+        <ol>
+          <li>Copiar dados legíveis.</li>
+          <li>Verificar trava física.</li>
+          <li>Testar outra porta e outro computador.</li>
+          <li>Consultar atributos com DiskPart.</li>
+          <li>Se apropriado, limpar apenas o atributo readonly do disco/volume correto.</li>
+          <li>Revalidar gravação pequena.</li>
+          <li>Usar CHKDSK somente quando a hipótese for corrupção lógica e os dados estiverem preservados.</li>
+          <li>Formatar apenas quando aceitável perder/recriar a estrutura do volume.</li>
+          <li>Substituir a mídia se readonly persistir ou houver sinais de falha.</li>
+        </ol>
+
+        <h2>Critérios de parada</h2>
+        <ul>
+          <li>O pendrive desconecta durante leitura ou escrita.</li>
+          <li>Os dados são importantes e ainda não foram copiados.</li>
+          <li>O dispositivo aparece com capacidade errada ou some do sistema.</li>
+          <li>O readonly retorna imediatamente em vários computadores.</li>
+          <li>Seria necessário usar firmware/controlador de procedência incerta.</li>
+        </ul>
+
+        <h2>Perguntas frequentes</h2>
+        <h3>Como tirar USB do modo protegido contra gravação?</h3>
+        <p>
+          Primeiro descubra a origem. Se for atributo readonly do Windows, DiskPart pode exibir e limpar esse atributo.
+          Se for trava física, política ou falha do controlador, o mesmo comando não resolve.
+        </p>
+
+        <h3>DiskPart apaga os arquivos?</h3>
+        <p>
+          Consultar atributos não apaga dados. Porém, o DiskPart também possui comandos destrutivos; por isso é
+          essencial selecionar o disco correto e não executar comandos que não fazem parte do diagnóstico.
+        </p>
+
+        <h3>Formatar remove proteção contra gravação?</h3>
+        <p>
+          Só se a causa permitir gravação e estiver na estrutura lógica. Se o dispositivo está realmente bloqueado
+          ou falhando, a própria formatação será recusada ou o problema voltará.
+        </p>
+
+        <h3>Se consigo ler mas não gravar, o pendrive está perdido?</h3>
+        <p>
+          Não necessariamente, mas é um sinal para copiar os dados imediatamente. Depois de preservar os arquivos,
+          você pode testar se a causa é lógica ou física.
+        </p>
+
+        <h3>Vale a pena continuar usando um pendrive que voltou a gravar?</h3>
+        <p>
+          Se o readonly ocorreu sem causa clara, acompanhe o comportamento e não use essa mídia como única cópia de
+          dados importantes. Recorrência é motivo para substituição.
+        </p>
+
+        <h2>Resumo prático</h2>
+        <p>
+          <strong>Proteção contra gravação é um sintoma, não uma causa.</strong> Preserve dados, separe trava física,
+          atributo do Windows, política e falha do dispositivo. Use DiskPart para observar e corrigir atributo quando
+          realmente aplicável; não confunda isso com reparo de hardware.
+        </p>
+
+        <EditorialReferences slug="pendrive-somente-leitura-protegido-contra-gravacao" />
+      </>
+    ),
+  },
+
   "erro-no-bootable-device-como-resolver": {
     title: "No bootable device: como diagnosticar disco, UEFI e inicialização sem formatar por tentativa",
     excerpt:

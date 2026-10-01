@@ -1280,6 +1280,43 @@ export const EDITORIAL_SOURCES: Record<string, EditorialSource> = {
       "O disco de redefinição é uma medida preventiva para contas locais e precisa ser criado enquanto a conta está acessível.",
     ],
   },
+  "ms-diskpart-attributes-disk-2026": {
+    id: "ms-diskpart-attributes-disk-2026",
+    title: "attributes disk",
+    publisher: "Microsoft Learn",
+    url: "https://learn.microsoft.com/pt-br/windows-server/administration/windows-commands/attributes-disk",
+    accessedAt: "2026-10-01",
+    sourceType: "official",
+    supports: [
+      "O DiskPart pode exibir, definir e limpar o atributo readonly do disco selecionado.",
+      "O disco precisa ser selecionado antes de executar attributes disk, por isso a identificação correta do alvo faz parte do procedimento seguro.",
+    ],
+  },
+  "ms-diskpart-attributes-volume-2026": {
+    id: "ms-diskpart-attributes-volume-2026",
+    title: "attributes volume",
+    publisher: "Microsoft Learn",
+    url: "https://learn.microsoft.com/pt-br/windows-server/administration/windows-commands/attributes-volume",
+    accessedAt: "2026-10-01",
+    sourceType: "official",
+    supports: [
+      "O DiskPart também expõe e altera atributos do volume selecionado, incluindo readonly.",
+      "Atributos de disco e de volume são escopos diferentes e não devem ser tratados como prova de falha física.",
+    ],
+  },
+  "ms-chkdsk-2026": {
+    id: "ms-chkdsk-2026",
+    title: "chkdsk",
+    publisher: "Microsoft Learn",
+    url: "https://learn.microsoft.com/pt-br/windows-server/administration/windows-commands/chkdsk",
+    accessedAt: "2026-10-01",
+    sourceType: "official",
+    supports: [
+      "O CHKDSK verifica o sistema de arquivos e metadados do volume; parâmetros como /f e /r fazem reparos específicos.",
+      "CHKDSK atua sobre a estrutura lógica do volume e não substitui diagnóstico de trava física, política ou falha do controlador da mídia.",
+    ],
+  },
+
   "ms-file-explorer-windows": {
     id: "ms-file-explorer-windows",
     title: "Explorador de Arquivos no Windows",
@@ -2455,13 +2492,16 @@ export const ARTICLE_SOURCE_MANIFEST: Record<string, ArticleSourceManifest> = {
   },
   "pendrive-somente-leitura-protegido-contra-gravacao": {
     slug: "pendrive-somente-leitura-protegido-contra-gravacao",
-    sources: [],
+    sources: [
+      "ms-diskpart-attributes-disk-2026",
+      "ms-diskpart-attributes-volume-2026",
+      "ms-chkdsk-2026",
+    ],
     technicalReview: "reviewed",
     factChecked: true,
-    factCheckedAt: "2026-09-03",
-    stableKnowledge: true,
+    factCheckedAt: "2026-10-01",
     notes:
-      "Revisão concluída (Onda 11D): quatro origens do estado somente leitura, sequência de isolamento com cópia dos dados antes de qualquer correção, limite real da formatação e parada obrigatória diante de sinais de falha de controlador. Sem indicar utilitário de terceiros. Conhecimento técnico estável — sem fonte visível.",
+      "Revisão material em 2026-10-01 guiada pelo GSC: 2 impressões, 0 cliques e posição média ~24,5 entre 2026-04-01 e 2026-09-28. A única query individual exposta foi 'usb protegido contra gravação' (1 impressão, posição 34). A versão suplementar separa trava física, atributo readonly de disco/volume, política, corrupção lógica e possível falha de controlador; prioriza cópia dos dados, usa DiskPart apenas no alvo identificado e limita CHKDSK ao sistema de arquivos. Fontes Microsoft visíveis; nenhuma query adicional foi inventada.",
   },
   "historico-de-arquivos-windows-como-configurar": {
     slug: "historico-de-arquivos-windows-como-configurar",
