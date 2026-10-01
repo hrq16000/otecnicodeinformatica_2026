@@ -11,6 +11,238 @@ import { MODALIDADES } from "@/lib/precosConfig";
  * do blog compõem base + suplementares + programáticos.
  */
 export const blogSupplementalPosts: Record<string, BlogPostContent> = {
+  "como-saber-quem-esta-usando-meu-wifi": {
+    title: "Como ver quem está usando seu Wi‑Fi: identificar dispositivos sem confundir MAC aleatório com invasão",
+    excerpt:
+      "Aprenda a listar dispositivos conectados ao roteador, reconhecer celulares, TVs e IoT, entender MAC aleatório e agir quando houver algo realmente desconhecido — sem depender de app de terceiros.",
+    date: "2026-10-01",
+    readTime: "13 min",
+    category: "Redes e Wi-Fi",
+    content: (
+      <>
+        <p className="lead">
+          Para <strong>ver quem está usando seu Wi‑Fi</strong>, o melhor ponto de partida é a lista de clientes do
+          próprio roteador ou sistema mesh. Mas um nome desconhecido ou um endereço MAC diferente não prova invasão:
+          celulares e notebooks modernos podem usar <strong>endereços MAC privados/aleatórios por rede</strong>, e
+          alguns dispositivos aparecem apenas pelo fabricante ou por um identificador genérico. O diagnóstico correto
+          é fazer um inventário e comparar evidências.
+        </p>
+
+        <h2>Resposta direta: como ver quantas pessoas ou dispositivos estão conectados no Wi‑Fi</h2>
+        <ol>
+          <li>Acesse o painel ou aplicativo oficial do seu roteador/mesh.</li>
+          <li>Abra a lista de clientes conectados, dispositivos, DHCP ou rede local.</li>
+          <li>Compare nome do dispositivo, fabricante, IP, MAC e horário de atividade.</li>
+          <li>Desligue temporariamente um aparelho conhecido e veja qual entrada desaparece.</li>
+          <li>Repita até mapear celulares, TVs, câmeras, assistentes, impressoras e outros IoT.</li>
+          <li>Se restar um dispositivo realmente desconhecido, troque a senha do Wi‑Fi e remova/renegocie acessos.</li>
+        </ol>
+
+        <h2>O que a lista do roteador realmente mostra?</h2>
+        <table>
+          <thead>
+            <tr><th>Campo</th><th>O que ajuda a descobrir</th><th>Limite</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Nome/hostname</td><td>pode revelar “iPhone”, “TV”, “Notebook”</td><td>pode estar vazio ou genérico</td></tr>
+            <tr><td>Endereço MAC</td><td>identifica a interface naquela rede</td><td>pode ser privado/aleatório</td></tr>
+            <tr><td>Fabricante</td><td>ajuda a reconhecer marca do chip/dispositivo</td><td>nem sempre corresponde à marca visível do produto</td></tr>
+            <tr><td>IP local</td><td>mostra qual endereço o roteador entregou</td><td>pode mudar com DHCP</td></tr>
+            <tr><td>Tempo/atividade</td><td>ajuda a correlacionar uso</td><td>roteadores simples podem registrar pouco histórico</td></tr>
+          </tbody>
+        </table>
+
+        <h2>1. Comece pelo painel do roteador, não por um “scanner milagroso”</h2>
+        <p>
+          O roteador é quem normalmente entrega endereços IP e mantém a tabela de clientes da rede. Por isso, a lista
+          oficial do equipamento costuma ser a fonte mais útil para saber quais dispositivos estão conectados naquele
+          momento.
+        </p>
+        <p>
+          Os nomes dos menus variam: “Connected devices”, “Clients”, “DHCP clients”, “Network map” ou “Dispositivos”.
+          Use o manual ou aplicativo oficial do modelo. Não existe um endereço administrativo universal para todos os
+          roteadores.
+        </p>
+
+        <h2>2. “Tem 12 conectados” não significa 12 pessoas</h2>
+        <p>
+          Uma única pessoa pode ter celular, notebook, relógio, TV, console e assistente conectados. Câmeras,
+          impressoras, lâmpadas e tomadas inteligentes também contam como clientes.
+        </p>
+        <p>
+          Então a pergunta mais útil é <strong>“quais dispositivos são meus?”</strong>, não apenas “quantas pessoas
+          estão usando”.
+        </p>
+
+        <h2>3. Use desligamento controlado para identificar entradas</h2>
+        <p>
+          Pegue um dispositivo conhecido, como seu celular, e desligue o Wi‑Fi por alguns segundos. Atualize a lista
+          do roteador e veja qual entrada desaparece. Anote nome, IP e MAC. Depois reconecte.
+        </p>
+        <p>
+          Faça isso com TV, notebook, console e outros aparelhos. É um método simples, reversível e mais confiável do
+          que adivinhar pelo nome exibido.
+        </p>
+
+        <h2>4. MAC aleatório: por que seu próprio celular pode parecer “desconhecido”</h2>
+        <p>
+          Sistemas atuais podem usar um endereço MAC privado por rede para reduzir rastreamento. Isso significa que o
+          MAC visto no roteador pode não ser o endereço físico impresso no aparelho e pode mudar conforme configuração
+          ou rede.
+        </p>
+        <p>
+          Antes de concluir que há invasão, abra as configurações de Wi‑Fi do próprio aparelho e compare o endereço
+          usado naquela rede específica.
+        </p>
+
+        <h2>5. Fabricante ajuda, mas não fecha diagnóstico</h2>
+        <p>
+          Alguns roteadores mostram o fabricante associado ao prefixo do MAC. Isso pode indicar Apple, Samsung, Intel,
+          Espressif, Tuya ou outro fornecedor de chip. Mas uma TV de determinada marca pode usar módulo Wi‑Fi de outra
+          empresa.
+        </p>
+        <p>
+          Trate fabricante como pista, não como identidade final.
+        </p>
+
+        <h2>6. Dispositivo offline também pode aparecer na lista</h2>
+        <p>
+          Muitos roteadores mantêm histórico de clientes conhecidos mesmo quando estão desconectados. Verifique se a
+          interface distingue <strong>online</strong>, <strong>offline</strong>, <strong>recentemente conectado</strong>
+          ou similar.
+        </p>
+        <p>
+          Não conte um histórico antigo como usuário conectado naquele instante.
+        </p>
+
+        <h2>7. Se restou algo realmente desconhecido</h2>
+        <p>
+          Se você já identificou seus próprios dispositivos e ainda há um cliente ativo desconhecido, troque a senha
+          do Wi‑Fi por uma senha longa e exclusiva e reconecte apenas os dispositivos autorizados. Isso força clientes
+          antigos a autenticar novamente.
+        </p>
+        <p>
+          Também confira o padrão de segurança. A Wi‑Fi Alliance recomenda WPA3 quando disponível, mantendo
+          compatibilidade apropriada com WPA2 quando necessário.
+        </p>
+
+        <h2>8. Troque também a senha administrativa do roteador</h2>
+        <p>
+          A senha do Wi‑Fi e a senha do painel administrativo têm funções diferentes. Se a senha administrativa ainda
+          é padrão, qualquer pessoa com acesso local pode tentar alterar a configuração da rede.
+        </p>
+        <p>
+          A NSA recomenda senhas administrativas fortes e exclusivas e firmware atualizado como parte da higiene de
+          roteadores.
+        </p>
+
+        <h2>9. Filtro de MAC não deve ser tratado como proteção principal</h2>
+        <p>
+          Permitir ou bloquear clientes por MAC pode ser útil para organização, mas o endereço MAC não é um segredo
+          robusto nem substitui autenticação forte. Não confie em “lista branca de MAC” como barreira principal contra
+          acesso indevido.
+        </p>
+
+        <h2>10. Rede de convidados ajuda a separar dispositivos</h2>
+        <p>
+          Se o roteador oferece rede de convidados, use-a para visitantes e, quando apropriado, para dispositivos IoT
+          que não precisam acessar computadores, NAS ou impressoras internas. Isso facilita inventário e reduz
+          exposição entre grupos.
+        </p>
+        <p>
+          Confirme se o modo convidado realmente isola os clientes internos; o comportamento varia por modelo.
+        </p>
+
+        <h2>11. “Bloquear dispositivo” pode não resolver para sempre</h2>
+        <p>
+          Se um cliente usa MAC privado, bloquear apenas um endereço pode ser contornado por uma nova identidade na
+          rede. A resposta mais consistente para acesso não autorizado é corrigir a autenticação: nova senha forte,
+          WPA2/WPA3 adequado e controle administrativo do roteador.
+        </p>
+
+        <h2>12. Como manter um inventário simples da rede</h2>
+        <p>
+          Crie uma tabela com <strong>nome real</strong>, <strong>nome exibido</strong>, <strong>tipo</strong>,
+          <strong>MAC daquela rede</strong> e <strong>local</strong>. Atualize quando comprar ou remover aparelhos.
+        </p>
+        <p>
+          Isso é especialmente útil em casas com muitos dispositivos IoT e pequenos escritórios.
+        </p>
+
+        <h2>13. O que fazer se a internet continua lenta</h2>
+        <p>
+          Muitos clientes conectados não significam necessariamente saturação. Um único upload pesado, backup em
+          nuvem, streaming ou dispositivo com sinal ruim pode consumir recursos desproporcionalmente.
+        </p>
+        <p>
+          Para separar uso interno de problema do provedor, veja{" "}
+          <a href="/blog/internet-lenta-provedor-ou-roteador">internet lenta: provedor ou roteador?</a>.
+        </p>
+
+        <h2>14. Quando suspeitar de comprometimento do roteador</h2>
+        <ul>
+          <li>Senha administrativa foi alterada sem autorização.</li>
+          <li>DNS ou redirecionamentos mudaram sem explicação.</li>
+          <li>Configurações reaparecem depois de você corrigir.</li>
+          <li>Firmware está desatualizado ou fora de suporte.</li>
+          <li>Há clientes desconhecidos que retornam mesmo após troca de senha e reconexão controlada.</li>
+        </ul>
+        <p>
+          Nesses casos, preserve configurações úteis, atualize firmware por fonte oficial e considere reset de fábrica
+          seguido de configuração limpa, se o fabricante orientar.
+        </p>
+
+        <h2>Critérios de parada</h2>
+        <ul>
+          <li>Você não tem acesso administrativo ao roteador porque o equipamento é gerenciado pelo provedor.</li>
+          <li>Há telefonia/IPTV ou configuração empresarial que pode ser perdida com reset.</li>
+          <li>O firmware não recebe mais atualizações de segurança.</li>
+          <li>A lista de clientes do equipamento é inconsistente ou não mostra estado online/offline.</li>
+        </ul>
+
+        <h2>Perguntas frequentes</h2>
+        <h3>Como ver quantas pessoas estão conectadas no Wi‑Fi?</h3>
+        <p>
+          O roteador mostra dispositivos, não pessoas. Abra a lista de clientes e identifique cada aparelho; uma
+          pessoa pode ter vários dispositivos conectados.
+        </p>
+
+        <h3>Como saber quem está usando meu Wi‑Fi?</h3>
+        <p>
+          Compare a lista do roteador com seus aparelhos, usando nome, IP, MAC da rede, fabricante e desligamento
+          controlado. Não conclua invasão por um nome desconhecido isolado.
+        </p>
+
+        <h3>Um MAC desconhecido é invasor?</h3>
+        <p>
+          Não necessariamente. Pode ser um aparelho seu usando MAC privado/aleatório ou um módulo com fabricante
+          diferente da marca do produto.
+        </p>
+
+        <h3>Bloquear MAC resolve?</h3>
+        <p>
+          Pode ajudar a remover um cliente específico, mas não substitui senha forte e WPA2/WPA3. Para acesso não
+          autorizado, altere a autenticação da rede.
+        </p>
+
+        <h3>Preciso instalar aplicativo para descobrir?</h3>
+        <p>
+          Não necessariamente. O painel oficial do roteador geralmente já fornece a lista de clientes necessária para
+          começar o inventário.
+        </p>
+
+        <h2>Resumo prático</h2>
+        <p>
+          <strong>Inventarie antes de acusar.</strong> A lista do roteador mostra dispositivos, não pessoas, e MAC
+          aleatório pode fazer seu próprio aparelho parecer novo. Identifique clientes por comparação controlada e,
+          se houver algo realmente não autorizado, troque credenciais e fortaleça a segurança da rede.
+        </p>
+
+        <EditorialReferences slug="como-saber-quem-esta-usando-meu-wifi" />
+      </>
+    ),
+  },
+
   "historico-de-arquivos-windows-como-configurar": {
     title: "Histórico de Arquivos no Windows: como configurar, restaurar versões e entender os limites",
     excerpt:
