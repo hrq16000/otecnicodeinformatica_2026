@@ -93,6 +93,8 @@ export const ALLOWED_SOURCE_HOSTS = [
   "openvpn.net",
   "www.kingston.com",
   "edc.intel.com",
+  "intel.com",
+  "www.intel.com",
   "nsa.gov",
   "www.nsa.gov",
   "www.dell.com",
@@ -702,6 +704,43 @@ export const EDITORIAL_SOURCES: Record<string, EditorialSource> = {
     supports: [
       "Discos rígidos podem produzir vibrações e cliques durante leitura, gravação e verificações internas; som isolado não identifica uma falha mecânica específica.",
       "A Seagate orienta usar ferramenta de diagnóstico quando há preocupação com ruído, em vez de classificar o tipo de defeito apenas pelo som.",
+    ],
+  },
+
+  "intel-processor-temperature-2026": {
+    id: "intel-processor-temperature-2026",
+    title: "Information about Temperature for Intel Processors",
+    publisher: "Intel Support",
+    url: "https://www.intel.com/content/www/us/en/support/articles/000005597/processors.html",
+    accessedAt: "2026-09-30",
+    sourceType: "official",
+    supports: [
+      "Limites térmicos e mecanismos de proteção variam por processador e projeto; não existe uma faixa típica universal aplicável a todo notebook.",
+      "Processadores podem reduzir potência/frequência e desligar para proteção quando limites térmicos são atingidos.",
+    ],
+  },
+  "hp-notebook-overheating-2026": {
+    id: "hp-notebook-overheating-2026",
+    title: "Notebooks HP - Reduza o calor dentro do laptop para evitar superaquecimento no Windows",
+    publisher: "HP Support",
+    url: "https://support.hp.com/br-pt/document/ish_3936214-3919514-16",
+    accessedAt: "2026-09-30",
+    sourceType: "official",
+    supports: [
+      "Superfícies macias podem bloquear entradas de ar; fabricantes orientam superfície plana e rígida e limpeza das aberturas externas.",
+      "Ventoinha alta, lentidão, reinícios e travamentos podem acompanhar superaquecimento, mas devem ser interpretados junto do fluxo de ar e da carga.",
+    ],
+  },
+  "dell-laptop-battery-swelling-2026": {
+    id: "dell-laptop-battery-swelling-2026",
+    title: "Dell Laptop Battery - Frequently Asked Questions",
+    publisher: "Dell Support",
+    url: "https://www.dell.com/support/kbdoc/en-us/000175212/dell-laptop-battery-frequently-asked-questions",
+    accessedAt: "2026-09-30",
+    sourceType: "official",
+    supports: [
+      "Baterias de notebook podem inchar; sinais incluem carcaça separando, trackpad/teclado elevados e instabilidade sobre superfície plana.",
+      "Bateria inchada deve ser tratada como condição que exige ação, não como mero sintoma térmico a ser ignorado.",
     ],
   },
 
@@ -1777,13 +1816,16 @@ export const ARTICLE_SOURCE_MANIFEST: Record<string, ArticleSourceManifest> = {
   },
   "notebook-superaquecendo-o-que-fazer": {
     slug: "notebook-superaquecendo-o-que-fazer",
-    sources: [],
+    sources: [
+      "intel-processor-temperature-2026",
+      "hp-notebook-overheating-2026",
+      "dell-laptop-battery-swelling-2026",
+    ],
     technicalReview: "reviewed",
     factChecked: true,
-    factCheckedAt: "2026-07-12",
-    stableKnowledge: true,
+    factCheckedAt: "2026-09-30",
     notes:
-      "Fact-check concluído: sem temperatura universal de risco e sem intervalo universal para pasta térmica; alertas de segurança presentes (bateria estufada, cheiro, desligamentos) com orientação de parar o uso; foco em notebook. Conhecimento técnico estável — sem fonte visível.",
+      "Revisão material em 2026-09-30 guiada pelo GSC: 4 impressões, 0 cliques e posição média ~50,75 entre 2026-04-01 e 2026-09-28. A única query individual exposta foi 'notebook superaquecendo' (4 impressões), tratada diretamente sem inventar variações. A versão suplementar separa carga normal, ventilação bloqueada, throttling, ventoinha, poeira, interface térmica e sinais de segurança como desligamentos e bateria estufada; evita temperatura e intervalo de pasta universais. Fontes Intel, HP e Dell ficam visíveis.",
   },
   "backup-como-proteger-seus-arquivos": {
     slug: "backup-como-proteger-seus-arquivos",
