@@ -11,6 +11,331 @@ import { MODALIDADES } from "@/lib/precosConfig";
  * do blog compõem base + suplementares + programáticos.
  */
 export const blogSupplementalPosts: Record<string, BlogPostContent> = {
+  "o-que-e-informatica": {
+    title: "O que é informática? Significado, áreas, exemplos e diferença para TI e computação",
+    excerpt:
+      "Informática é o uso organizado de sistemas computacionais para tratar informação. Entenda o que a área estuda, suas principais disciplinas, aplicações e como ela se relaciona com TI, ciência da computação e engenharia.",
+    date: "2026-09-30",
+    readTime: "15 min",
+    category: "Informática Básica",
+    content: (
+      <>
+        <p className="lead">
+          <strong>Informática</strong> é o conjunto de conhecimentos e práticas usados para representar, processar,
+          armazenar, transmitir e proteger informação com sistemas computacionais. Na prática, ela envolve
+          <strong> hardware, software, dados, redes, pessoas e processos</strong>. Por isso, informática não é apenas
+          “saber mexer no computador” e também não é sinônimo perfeito de uma única graduação ou profissão.
+        </p>
+
+        <h2>Resposta direta: o que significa informática?</h2>
+        <p>
+          Em uso cotidiano, informática é a área relacionada ao uso de computadores e tecnologias digitais para
+          trabalhar com informação. Ela cobre desde tarefas básicas — criar documentos, organizar arquivos, usar a
+          internet e proteger contas — até temas profissionais como sistemas operacionais, redes, programação,
+          bancos de dados, segurança, suporte, nuvem e infraestrutura.
+        </p>
+        <p>
+          Em educação e mercado, os limites do termo variam. A ACM organiza a área mais ampla de
+          <strong> computing</strong> em disciplinas como Ciência da Computação, Engenharia de Computação,
+          Engenharia de Software, Sistemas de Informação e Tecnologia da Informação. Isso ajuda a entender por que
+          “informática” funciona melhor como <strong>termo amplo</strong> do que como rótulo de uma única especialidade.
+        </p>
+
+        <h2>Informática em uma frase</h2>
+        <blockquote>
+          Informática é o uso de sistemas computacionais para transformar dados em informação útil e executar tarefas
+          de forma digital, conectada e automatizada.
+        </blockquote>
+
+        <h2>Quais são os componentes básicos da informática?</h2>
+        <table>
+          <thead>
+            <tr><th>Componente</th><th>O que representa</th><th>Exemplos</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Hardware</td><td>Parte física dos sistemas</td><td>CPU, RAM, SSD, placa-mãe, roteador, monitor</td></tr>
+            <tr><td>Software</td><td>Programas e sistemas que executam funções</td><td>Windows, Linux, navegador, editor, ERP</td></tr>
+            <tr><td>Dados</td><td>Informações representadas digitalmente</td><td>arquivos, registros, bancos de dados, imagens</td></tr>
+            <tr><td>Redes</td><td>Comunicação entre dispositivos e sistemas</td><td>Wi‑Fi, Ethernet, internet, VPN</td></tr>
+            <tr><td>Segurança</td><td>Proteção de sistemas, contas e dados</td><td>MFA, backup, controle de acesso, atualização</td></tr>
+            <tr><td>Pessoas e processos</td><td>Forma como a tecnologia é usada e administrada</td><td>usuários, suporte, políticas, rotinas</td></tr>
+          </tbody>
+        </table>
+
+        <h2>1. O que a informática estuda?</h2>
+        <p>
+          A informática pode estudar desde o funcionamento de um computador até a forma como sistemas digitais
+          resolvem problemas reais. Dependendo do nível de profundidade, entram temas como representação de dados,
+          lógica, programação, arquitetura de computadores, sistemas operacionais, redes, bancos de dados, segurança,
+          engenharia de software, experiência do usuário, inteligência artificial e gestão de tecnologia.
+        </p>
+        <p>
+          A ACM trata a computação como um campo com várias disciplinas relacionadas, cada uma com ênfases diferentes.
+          Ciência da Computação, por exemplo, enfatiza fundamentos, algoritmos e software; Engenharia de Computação
+          integra hardware e software; Sistemas de Informação aproxima tecnologia e organizações; Tecnologia da
+          Informação enfatiza infraestrutura e uso operacional; Engenharia de Software se concentra no desenvolvimento
+          disciplinado de sistemas de software.
+        </p>
+
+        <h2>2. Informática não é apenas computador de mesa</h2>
+        <p>
+          Hoje, sistemas computacionais estão em celulares, carros, máquinas industriais, roteadores, relógios,
+          equipamentos médicos, serviços de nuvem e dispositivos embarcados. O termo “informática” continua útil
+          justamente porque a informação digital deixou de ficar restrita ao PC.
+        </p>
+        <p>
+          Quando você usa um aplicativo bancário, participa de uma videoconferência, sincroniza fotos, consulta um
+          sistema empresarial ou conecta um sensor à internet, está usando diferentes camadas de computação e
+          tecnologia da informação.
+        </p>
+
+        <h2>3. O que é informática básica?</h2>
+        <p>
+          Informática básica é a camada de competências necessárias para usar tecnologia com autonomia e segurança.
+          Inclui arquivos e pastas, sistema operacional, navegador, e-mail, documentos, planilhas, armazenamento,
+          nuvem, backup e práticas básicas de segurança.
+        </p>
+        <p>
+          Ela não exige conhecer eletrônica, redes avançadas ou programação. O foco é conseguir trabalhar com
+          informação digital sem depender de ajuda para cada tarefa. Para esse nível, veja o guia de{" "}
+          <a href="/blog/informatica-basica">informática básica</a>.
+        </p>
+
+        <h2>4. Qual a diferença entre informática e tecnologia da informação (TI)?</h2>
+        <p>
+          No uso cotidiano, os termos se sobrepõem bastante. Uma forma útil de separar é considerar
+          <strong> informática</strong> como termo amplo para o uso e estudo de sistemas computacionais e
+          <strong> TI</strong> como uma disciplina e função profissional mais ligada a entregar, operar, integrar,
+          manter e proteger tecnologia para pessoas e organizações.
+        </p>
+        <p>
+          A ACM reconhece Information Technology como uma das disciplinas de computing, distinta de Ciência da
+          Computação, Sistemas de Informação, Engenharia de Computação e Engenharia de Software. Portanto, dizer que
+          “TI é toda a informática” simplifica demais; TI é uma parte importante do ecossistema.
+        </p>
+
+        <h2>5. Informática e Ciência da Computação são a mesma coisa?</h2>
+        <p>
+          Não exatamente. Ciência da Computação é uma disciplina acadêmica específica dentro do campo maior da
+          computação. Ela estuda fundamentos e métodos para resolver problemas por meio de computação, incluindo
+          algoritmos, estruturas de dados, linguagens, sistemas, inteligência artificial e teoria.
+        </p>
+        <p>
+          Informática é um termo mais abrangente no português cotidiano. Ele pode incluir uso de sistemas, suporte,
+          redes, manutenção, produtividade e outras áreas que não correspondem necessariamente ao foco central de um
+          curso de Ciência da Computação.
+        </p>
+
+        <h2>6. E Engenharia de Computação?</h2>
+        <p>
+          Engenharia de Computação trabalha na interseção entre eletrônica, hardware e software. O foco pode incluir
+          processadores, sistemas embarcados, arquitetura, dispositivos e integração entre componentes físicos e
+          programas.
+        </p>
+        <p>
+          Isso a diferencia do uso genérico de “informática”, que pode existir sem qualquer projeto eletrônico ou
+          desenvolvimento de hardware.
+        </p>
+
+        <h2>7. O que é Sistemas de Informação?</h2>
+        <p>
+          Sistemas de Informação estuda como tecnologia, dados, processos e pessoas se combinam para atender
+          necessidades de organizações. O profissional pode trabalhar com análise de requisitos, processos, sistemas
+          empresariais, dados, governança, implantação e integração.
+        </p>
+        <p>
+          Portanto, nem todo trabalho de informática é Sistemas de Informação, mas sistemas empresariais são uma
+          aplicação importante da informática.
+        </p>
+
+        <h2>8. O que é Engenharia de Software?</h2>
+        <p>
+          Engenharia de Software trata do desenvolvimento sistemático de software: requisitos, arquitetura, projeto,
+          testes, qualidade, manutenção e evolução. Programar faz parte de muitos projetos, mas engenharia de software
+          inclui decisões e processos que vão além de escrever código.
+        </p>
+        <p>
+          Em uma empresa, suporte técnico, redes e infraestrutura podem trabalhar junto com engenharia de software,
+          mas são funções diferentes dentro do mesmo ambiente tecnológico.
+        </p>
+
+        <h2>9. Principais áreas da informática no mercado</h2>
+        <ul>
+          <li><strong>Suporte técnico:</strong> diagnóstico, configuração e resolução de problemas.</li>
+          <li><strong>Infraestrutura:</strong> computadores, servidores, armazenamento e serviços.</li>
+          <li><strong>Redes:</strong> conectividade, Wi‑Fi, switching, roteamento e acesso remoto.</li>
+          <li><strong>Segurança:</strong> proteção, identidade, monitoramento e resposta a incidentes.</li>
+          <li><strong>Desenvolvimento:</strong> aplicações, sites, APIs, automações e software.</li>
+          <li><strong>Dados:</strong> bancos de dados, análise, engenharia e ciência de dados.</li>
+          <li><strong>Nuvem:</strong> serviços, infraestrutura, identidade e aplicações distribuídas.</li>
+          <li><strong>Gestão de TI:</strong> serviços, ativos, fornecedores, governança e projetos.</li>
+        </ul>
+
+        <h2>10. Exemplos de informática no dia a dia</h2>
+        <ul>
+          <li>Criar e compartilhar um documento.</li>
+          <li>Fazer backup de fotos.</li>
+          <li>Configurar um roteador Wi‑Fi.</li>
+          <li>Instalar uma atualização de sistema.</li>
+          <li>Usar autenticação em dois fatores.</li>
+          <li>Consultar um banco de dados empresarial.</li>
+          <li>Desenvolver um aplicativo.</li>
+          <li>Diagnosticar por que um computador está lento.</li>
+          <li>Sincronizar arquivos entre computador e nuvem.</li>
+          <li>Automatizar uma tarefa repetitiva.</li>
+        </ul>
+
+        <h2>11. Informática é só software?</h2>
+        <p>
+          Não. Software depende de hardware para executar e frequentemente de redes, armazenamento, energia e
+          dispositivos de entrada/saída. Um diagnóstico de informática pode exigir observar várias dessas camadas ao
+          mesmo tempo.
+        </p>
+        <p>
+          Por exemplo, um programa lento pode estar limitado por CPU, memória, armazenamento, rede, banco de dados ou
+          pelo próprio código. A área funciona justamente porque essas camadas se relacionam.
+        </p>
+
+        <h2>12. Informática é só manutenção de computadores?</h2>
+        <p>
+          Também não. Manutenção é apenas uma aplicação. Informática inclui criação de sistemas, comunicação,
+          automação, análise de dados, segurança, infraestrutura, operação e uso produtivo da tecnologia.
+        </p>
+        <p>
+          Técnicos de suporte trabalham com uma parte muito concreta desse campo: transformar sintomas em diagnósticos
+          e devolver sistemas a um estado funcional e seguro.
+        </p>
+
+        <h2>13. Qual é a importância da informática?</h2>
+        <p>
+          A informática permite armazenar e processar grandes volumes de informação, automatizar tarefas, conectar
+          pessoas e sistemas e executar operações que seriam lentas ou inviáveis manualmente. Empresas dependem dela
+          para comunicação, vendas, finanças, logística, atendimento, produção e tomada de decisão.
+        </p>
+        <p>
+          Para indivíduos, a mesma infraestrutura aparece em educação, trabalho, acesso a serviços, entretenimento,
+          comunicação e gestão da vida digital.
+        </p>
+
+        <h2>14. Informática e dados</h2>
+        <p>
+          Dados são representações digitais de fatos, eventos ou objetos. A informática fornece mecanismos para
+          coletar, armazenar, organizar, transformar e apresentar esses dados. Informação surge quando dados são
+          interpretados em um contexto útil.
+        </p>
+        <p>
+          Bancos de dados, planilhas, arquivos, logs e sistemas de análise são formas diferentes de trabalhar com essa
+          matéria-prima digital.
+        </p>
+
+        <h2>15. Informática e redes</h2>
+        <p>
+          Computadores isolados resolvem muitos problemas, mas redes ampliam seu alcance. Elas permitem compartilhar
+          arquivos, acessar sistemas remotos, usar serviços de nuvem, navegar na internet e conectar dispositivos.
+        </p>
+        <p>
+          Para quem está começando, entender endereço IP, roteador, Wi‑Fi, internet e DNS já cria uma base útil para
+          perceber que “estar conectado ao Wi‑Fi” e “ter acesso à internet” não são exatamente a mesma coisa.
+        </p>
+
+        <h2>16. Informática e segurança digital</h2>
+        <p>
+          Quanto mais sistemas armazenam informação importante, maior a necessidade de proteger identidade, contas,
+          dispositivos e dados. Segurança inclui atualização, autenticação, controle de acesso, criptografia, backup,
+          monitoramento e comportamento do usuário.
+        </p>
+        <p>
+          Segurança não é uma etapa opcional acrescentada no fim. Ela faz parte do uso responsável de tecnologia,
+          desde a informática básica até sistemas corporativos.
+        </p>
+
+        <h2>17. Informática e automação</h2>
+        <p>
+          Uma das maiores vantagens dos sistemas computacionais é executar tarefas de forma repetível. Automação pode
+          ser simples, como uma fórmula de planilha, ou complexa, como um pipeline que processa dados e aciona vários
+          serviços.
+        </p>
+        <p>
+          Programação, scripts, integrações e ferramentas de automação são formas de transformar uma rotina manual em
+          processo executável por software.
+        </p>
+
+        <h2>18. Informática e inteligência artificial</h2>
+        <p>
+          Inteligência artificial é uma área da computação, não um substituto para todo o restante da informática.
+          Sistemas de IA ainda dependem de software, dados, infraestrutura, redes, segurança e governança.
+        </p>
+        <p>
+          Para usar IA de forma competente, continuam valendo fundamentos como qualidade dos dados, segurança das
+          contas, verificação de resultados e entendimento do problema que está sendo resolvido.
+        </p>
+
+        <h2>19. O que uma pessoa precisa saber para dizer que tem conhecimentos de informática?</h2>
+        <p>
+          Não existe uma lista única. Para informática básica, uma boa referência é conseguir trabalhar com arquivos,
+          sistema operacional, navegador, e-mail, documentos, planilhas, nuvem e segurança com autonomia. Para nível
+          profissional, cada especialidade exige competências adicionais.
+        </p>
+        <p>
+          Se o objetivo é construir essa base, siga o roteiro de{" "}
+          <a href="/blog/como-aprender-informatica">como aprender informática do zero</a>.
+        </p>
+
+        <h2>20. Informática é uma profissão?</h2>
+        <p>
+          “Informática” descreve um campo. Dentro dele existem várias profissões: técnico de suporte, administrador de
+          sistemas, analista de redes, desenvolvedor, engenheiro de software, profissional de segurança, analista de
+          dados, especialista em nuvem e muitas outras.
+        </p>
+        <p>
+          Os nomes e fronteiras variam entre empresas e países. Por isso, ao escolher carreira ou formação, compare as
+          competências e atividades reais, não apenas o título.
+        </p>
+
+        <h2>Perguntas frequentes</h2>
+        <h3>O que significa a palavra informática?</h3>
+        <p>
+          No uso moderno, o termo se refere ao tratamento automatizado/digital da informação por sistemas
+          computacionais e ao conjunto de conhecimentos necessários para criar, operar e usar esses sistemas.
+        </p>
+
+        <h3>O que estuda a informática?</h3>
+        <p>
+          Hardware, software, dados, redes, segurança, sistemas, programação e aplicações da tecnologia. A
+          profundidade varia conforme a especialidade.
+        </p>
+
+        <h3>Informática é o mesmo que TI?</h3>
+        <p>
+          Os termos se sobrepõem no cotidiano, mas TI é uma disciplina e função profissional mais específica dentro
+          do campo amplo da computação/informática.
+        </p>
+
+        <h3>Informática é Ciência da Computação?</h3>
+        <p>
+          Não. Ciência da Computação é uma disciplina acadêmica específica. Informática é um termo mais abrangente no
+          uso cotidiano em português.
+        </p>
+
+        <h3>Qual a diferença entre informática básica e avançada?</h3>
+        <p>
+          Informática básica prioriza uso autônomo e seguro. Níveis avançados entram em administração, redes,
+          desenvolvimento, bancos de dados, segurança, automação, infraestrutura e outras especializações.
+        </p>
+
+        <h2>Resumo prático</h2>
+        <p>
+          <strong>Informática é um campo amplo.</strong> Ela reúne hardware, software, dados, redes, segurança, pessoas
+          e processos para trabalhar com informação por meio de sistemas computacionais. TI, Ciência da Computação,
+          Engenharia de Computação, Sistemas de Informação e Engenharia de Software são disciplinas relacionadas,
+          mas não idênticas.
+        </p>
+
+        <EditorialReferences slug="o-que-e-informatica" />
+      </>
+    ),
+  },
+
   "como-aprender-informatica": {
     title: "Como aprender informática do zero: roteiro prático para estudar sozinho e evoluir por competências",
     excerpt:
