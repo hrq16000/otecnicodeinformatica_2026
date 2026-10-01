@@ -2247,13 +2247,16 @@ export const ARTICLE_SOURCE_MANIFEST: Record<string, ArticleSourceManifest> = {
   },
   "impressora-offline-como-resolver": {
     slug: "impressora-offline-como-resolver",
-    sources: [],
+    sources: [
+      "ms-printer-connection-printing-2026",
+      "ms-print-job-stuck-queue-2026",
+      "ms-print-spooler-service-2026",
+    ],
     technicalReview: "reviewed",
     factChecked: true,
-    factCheckedAt: "2026-08-26",
-    stableKnowledge: true,
+    factCheckedAt: "2026-10-01",
     notes:
-      "Revisão concluída (Onda 10C, Lote 2): significado real do status offline, empréstimo de endereço com prazo, conferência entre página de configuração do aparelho e porta cadastrada, reserva no roteador, isolamento de clientes/rede de visitantes e distinção frente a falha mecânica. Sem marca comercial e sem promessa. Conhecimento técnico estável — sem fonte visível.",
+      "Revisão material em 2026-10-01 guiada pelo GSC: 5 impressões, 0 cliques e posição média ~47,8 entre 2026-04-01 e 2026-09-28. Queries reais expostas: 'como tirar impressora do offline' e 'porque a impressora fica offline'. A versão suplementar separa energia/USB/rede de fila/spooler, compara IP real com porta cadastrada, trata DHCP/reserva, isolamento de clientes, filas duplicadas, driver e impressora padrão sem canibalizar o guia específico de spooler. Fontes Microsoft visíveis; nenhuma query inventada.",
   },
   "fila-de-impressao-travada-spooler-windows": {
     slug: "fila-de-impressao-travada-spooler-windows",

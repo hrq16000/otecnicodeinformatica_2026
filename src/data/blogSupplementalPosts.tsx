@@ -11,6 +11,233 @@ import { MODALIDADES } from "@/lib/precosConfig";
  * do blog compõem base + suplementares + programáticos.
  */
 export const blogSupplementalPosts: Record<string, BlogPostContent> = {
+  "impressora-offline-como-resolver": {
+    title: "Impressora offline no Windows: como descobrir por que ficou offline e voltar a imprimir",
+    excerpt:
+      "Impressora offline nem sempre é falha do spooler. Aprenda a separar energia, USB/rede, endereço IP, porta cadastrada, fila, driver e seleção da impressora correta antes de reinstalar tudo.",
+    date: "2026-10-01",
+    readTime: "13 min",
+    category: "Diagnóstico de Periféricos",
+    content: (
+      <>
+        <p className="lead">
+          Quando o Windows mostra <strong>“impressora offline”</strong>, isso significa que o computador não está
+          conseguindo se comunicar com a fila/dispositivo esperado naquele momento. A causa pode ser simples — energia,
+          cabo ou Wi‑Fi — ou estar na porta TCP/IP, no endereço que mudou, na fila, no driver ou até na impressora
+          errada selecionada. O melhor diagnóstico é separar <strong>conectividade</strong> de
+          <strong>fila/spooler</strong>.
+        </p>
+
+        <h2>Resposta direta: como tirar a impressora do offline</h2>
+        <ol>
+          <li>Confirme que a impressora está ligada e sem erro físico no painel.</li>
+          <li>Se for USB, teste cabo/porta e confirme se o Windows detecta o dispositivo.</li>
+          <li>Se for de rede, confirme se a impressora recebeu IP e se o computador está na mesma rede alcançável.</li>
+          <li>Abra a fila correta e verifique se “Usar impressora offline” não está ativado.</li>
+          <li>Compare o endereço real da impressora com a porta cadastrada no Windows.</li>
+          <li>Se a fila estiver travada, trate o spooler separadamente.</li>
+          <li>Reinstale driver/dispositivo só depois de confirmar que o caminho físico e de rede está correto.</li>
+        </ol>
+
+        <h2>Por que a impressora fica offline?</h2>
+        <table>
+          <thead>
+            <tr><th>Sintoma</th><th>Hipótese mais útil</th><th>Teste inicial</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Painel apagado</td><td>energia/fonte</td><td>tomada, cabo, fonte e botão</td></tr>
+            <tr><td>USB some e volta</td><td>cabo/porta/driver</td><td>outra porta e outro cabo</td></tr>
+            <tr><td>Rede: IP mudou</td><td>porta aponta para endereço antigo</td><td>comparar IP atual com porta TCP/IP</td></tr>
+            <tr><td>Ping responde, mas não imprime</td><td>fila/porta/driver/serviço</td><td>fila, porta, spooler e página de teste</td></tr>
+            <tr><td>Só um PC vê offline</td><td>configuração daquele Windows</td><td>comparar com outro computador</td></tr>
+            <tr><td>Todos os PCs veem offline</td><td>impressora/rede</td><td>painel, IP e conexão ao roteador/switch</td></tr>
+          </tbody>
+        </table>
+
+        <h2>1. Comece no equipamento, não no Windows</h2>
+        <p>
+          Verifique se a impressora está ligada, sem atolamento, tampa aberta, papel ausente, erro de toner/tinta ou
+          mensagem de rede. Uma impressora com erro local pode aparecer offline ou indisponível sem que exista problema
+          no driver.
+        </p>
+        <p>
+          Se o painel permite imprimir uma página de configuração/status, use-a para confirmar o estado do aparelho e,
+          em modelos de rede, o endereço IP atual.
+        </p>
+
+        <h2>2. USB: conexão física vem antes de reinstalar driver</h2>
+        <p>
+          Para impressora USB, teste outra porta diretamente no computador, evitando hub durante o diagnóstico. Se
+          possível, compare com outro cabo compatível. Observe se o Windows emite som de conexão/desconexão e se o
+          dispositivo aparece no Gerenciador de Dispositivos ou em Impressoras e scanners.
+        </p>
+        <p>
+          Se a impressora some do sistema ao movimentar o cabo ou porta, reinstalar software não corrige uma conexão
+          física instável.
+        </p>
+
+        <h2>3. Rede: descubra o IP real da impressora</h2>
+        <p>
+          Em impressoras Ethernet ou Wi‑Fi, o status offline aparece com frequência quando o endereço IP muda e a fila
+          do Windows continua apontando para o endereço antigo. Compare o IP exibido/imprimido pela própria impressora
+          com o endereço configurado na porta do Windows.
+        </p>
+        <p>
+          Se a impressora recebe IP automaticamente por DHCP, uma reserva no roteador pode reduzir mudanças futuras.
+          Use o endereço correto do equipamento, não um IP copiado de tutorial.
+        </p>
+
+        <h2>4. Estar no Wi‑Fi não prova que a impressora está acessível</h2>
+        <p>
+          Redes de convidados e alguns pontos de acesso isolam clientes entre si. Um notebook pode navegar na internet
+          e ainda não conseguir alcançar a impressora na mesma casa/escritório.
+        </p>
+        <p>
+          Compare o segmento de rede, o gateway e, quando permitido, teste conectividade com o IP da impressora. Se a
+          rede possui VLANs, isolamento ou firewall, o problema pode estar no caminho entre os dispositivos.
+        </p>
+
+        <h2>5. Confira se você está usando a fila certa</h2>
+        <p>
+          O Windows pode manter filas antigas do mesmo modelo, instalações via WSD e filas TCP/IP simultâneas. Antes
+          de alterar qualquer coisa, confira o nome da impressora selecionada e qual porta ela usa.
+        </p>
+        <p>
+          Excluir filas duplicadas só deve ser feito depois de identificar qual delas realmente corresponde ao
+          equipamento em uso.
+        </p>
+
+        <h2>6. “Usar impressora offline” pode estar ativado</h2>
+        <p>
+          Abra a fila da impressora e verifique o estado. Se a opção de trabalhar offline estiver marcada, desative-a
+          e tente novamente. Isso é diferente de corrigir uma impressora que está realmente inacessível na rede.
+        </p>
+
+        <h2>7. Limpe primeiro um trabalho problemático, não a instalação inteira</h2>
+        <p>
+          Um documento preso pode bloquear a fila e dar a impressão de que a impressora está indisponível. Cancele o
+          trabalho e tente imprimir uma página de teste simples.
+        </p>
+        <p>
+          Se a fila não limpa ou o serviço para, siga o guia específico de{" "}
+          <a href="/blog/fila-de-impressao-travada-spooler-windows">
+            fila de impressão travada e spooler
+          </a>.
+        </p>
+
+        <h2>8. Porta TCP/IP errada é diferente de driver errado</h2>
+        <p>
+          Se a fila aponta para o endereço errado, reinstalar o mesmo driver pode recriar exatamente o mesmo problema.
+          Primeiro corrija o destino da porta; depois valide o driver.
+        </p>
+        <p>
+          Em impressoras de rede, páginas de configuração e o painel do equipamento ajudam a confirmar o endereço
+          atual antes de alterar a porta no Windows.
+        </p>
+
+        <h2>9. WSD versus porta TCP/IP: não troque sem motivo</h2>
+        <p>
+          O Windows pode descobrir impressoras de rede via WSD. Em alguns ambientes isso funciona bem; em outros, uma
+          porta TCP/IP estável é mais previsível. A escolha depende da rede e do modelo.
+        </p>
+        <p>
+          Não migre de um método para outro só porque viu a palavra “offline”. Primeiro confirme se o problema é
+          descoberta, endereço ou comunicação.
+        </p>
+
+        <h2>10. Driver: use o fabricante quando houver necessidade específica</h2>
+        <p>
+          O Windows pode instalar drivers automaticamente, mas recursos avançados podem exigir pacote do fabricante.
+          Se o hardware está acessível e a porta está correta, mas a página de teste falha, aí o driver entra como
+          hipótese mais forte.
+        </p>
+        <p>
+          Evite sites de terceiros para baixar driver. Use Windows Update ou o suporte oficial do fabricante.
+        </p>
+
+        <h2>11. Reiniciar a impressora e o computador ajuda — mas não substitui diagnóstico</h2>
+        <p>
+          Reiniciar pode renovar sessões, DHCP e filas temporárias. Se o problema volta, registre o que mudou: o IP da
+          impressora mudou? a fila travou? o dispositivo USB desconectou? Sem essa observação, o reinício vira apenas
+          um paliativo.
+        </p>
+
+        <h2>12. Quando configurar reserva de IP</h2>
+        <p>
+          Se a impressora de rede recebe um endereço diferente com frequência e a fila depende de porta TCP/IP fixa,
+          uma reserva DHCP no roteador pode estabilizar o endereço sem configurar IP manual fora do escopo da rede.
+        </p>
+        <p>
+          A reserva deve corresponder ao endereço MAC real da impressora e ficar dentro do planejamento da rede.
+        </p>
+
+        <h2>13. Impressora padrão e “última usada”</h2>
+        <p>
+          Em máquinas com várias filas, o trabalho pode estar sendo enviado para uma impressora diferente da esperada.
+          Confirme o dispositivo selecionado no aplicativo e, se necessário, defina uma impressora padrão coerente com
+          o uso.
+        </p>
+
+        <h2>14. Como separar problema do PC de problema da impressora</h2>
+        <ul>
+          <li>Outro computador imprime normalmente: concentre-se no Windows/fila/driver do primeiro PC.</li>
+          <li>Nenhum computador imprime: concentre-se na impressora/rede.</li>
+          <li>USB funciona em outro PC: porta, driver ou configuração local ganham força.</li>
+          <li>Rede funciona por IP em outro PC, mas não no primeiro: investigue firewall, fila e porta local.</li>
+        </ul>
+
+        <h2>Critérios de parada</h2>
+        <ul>
+          <li>A impressora apresenta erro mecânico, cheiro de queimado ou ruído anormal.</li>
+          <li>O endereço IP não pode ser alterado porque a rede é gerenciada.</li>
+          <li>Há servidor de impressão ou política corporativa controlando a fila.</li>
+          <li>Seria necessário apagar várias filas sem saber qual delas é a ativa.</li>
+          <li>O equipamento some da rede/USB de forma intermitente e precisa de diagnóstico físico.</li>
+        </ul>
+
+        <h2>Perguntas frequentes</h2>
+        <h3>Como tirar a impressora do offline?</h3>
+        <p>
+          Confirme energia e conexão, verifique a fila correta, desative “Usar impressora offline” se estiver marcado
+          e, em rede, compare o IP atual da impressora com a porta cadastrada no Windows.
+        </p>
+
+        <h3>Por que a impressora fica offline mesmo ligada?</h3>
+        <p>
+          Porque “ligada” não garante comunicação. O computador pode estar apontando para IP antigo, fila errada,
+          porta incorreta, driver com falha ou rede que isola os dispositivos.
+        </p>
+
+        <h3>Preciso reinstalar a impressora?</h3>
+        <p>
+          Não como primeira etapa. Reinstalação faz sentido depois que você confirma que conexão, endereço e porta
+          estão corretos e a fila continua inválida.
+        </p>
+
+        <h3>Reiniciar o spooler resolve impressora offline?</h3>
+        <p>
+          Pode resolver quando a causa está na fila/serviço, mas não corrige IP errado, cabo desconectado, Wi‑Fi
+          isolado ou impressora desligada.
+        </p>
+
+        <h3>É melhor usar IP fixo?</h3>
+        <p>
+          Uma reserva DHCP costuma ser suficiente em muitos ambientes. O importante é manter o endereço esperado pela
+          porta do Windows estável e coerente com a rede.
+        </p>
+
+        <h2>Resumo prático</h2>
+        <p>
+          <strong>“Offline” é um estado de comunicação, não um diagnóstico.</strong> Comece na impressora, depois
+          conexão, endereço, porta e fila. Só depois avance para driver e reinstalação. Isso evita perder tempo
+          reinstalando software quando o problema real é um IP que mudou ou um cabo que não comunica.
+        </p>
+
+        <EditorialReferences slug="impressora-offline-como-resolver" />
+      </>
+    ),
+  },
+
   "pendrive-somente-leitura-protegido-contra-gravacao": {
     title: "USB protegido contra gravação: como separar trava física, atributo readonly e falha do pendrive",
     excerpt:
