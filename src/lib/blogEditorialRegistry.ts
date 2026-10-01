@@ -1647,6 +1647,23 @@ const WAVE_11X: EditorialApproval[] = [
 ];
 
 
+const WAVE_11Y: EditorialApproval[] = [
+  {
+    slug: "como-melhorar-sinal-wifi-em-casa",
+    status: "approved",
+    authorType: "organization",
+    authorId: INSTITUTIONAL_AUTHOR.id,
+    reviewedAt: "2026-10-01",
+    approvedAt: FIRST_WAVE_APPROVED_AT,
+    imageOrigin: "generated",
+    imageLicense: "Ativo gerado sob encomenda para uso próprio da marca",
+    imageAttribution: "O Técnico de Informática",
+    notes:
+      "Revisão material em 2026-10-01 guiada pelo GSC: 1 impressão, 0 cliques e posição média 77 entre 2026-04-01 e 2026-09-28. A única query individual exposta foi 'sinal de wifi fraco'. A versão suplementar preserva a URL e aprofunda diagnóstico de cobertura, cliente, interferência, bandas e desenho com múltiplos pontos, sem inventar queries ou regras universais.",
+  },
+];
+
+
 export const APPROVED_EDITORIAL_CONTENT = new Map<string, EditorialApproval>([
 
   ...FIRST_WAVE_SLUGS.map((slug) => [
@@ -1719,6 +1736,7 @@ export const APPROVED_EDITORIAL_CONTENT = new Map<string, EditorialApproval>([
   ...WAVE_11V.map((a) => [a.slug, a] as [string, EditorialApproval]),
   ...WAVE_11W.map((a) => [a.slug, a] as [string, EditorialApproval]),
   ...WAVE_11X.map((a) => [a.slug, a] as [string, EditorialApproval]),
+  ...WAVE_11Y.map((a) => [a.slug, a] as [string, EditorialApproval]),
 
 ]);
 
