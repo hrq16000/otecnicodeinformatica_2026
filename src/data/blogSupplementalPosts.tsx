@@ -11,6 +11,185 @@ import { MODALIDADES } from "@/lib/precosConfig";
  * do blog compõem base + suplementares + programáticos.
  */
 export const blogSupplementalPosts: Record<string, BlogPostContent> = {
+  "organizacao-de-ti-para-pequenos-escritorios": {
+    title: "Organização de TI para pequenos escritórios: inventário, contas, backup e rotina sem burocracia",
+    excerpt:
+      "Pequenos escritórios não precisam de uma estrutura corporativa pesada para organizar a TI. Um inventário simples, contas bem separadas, backup testado, atualizações e documentação mínima já reduzem muito o improviso.",
+    date: "2026-10-01",
+    readTime: "16 min",
+    category: "Empresas",
+    content: (
+      <>
+        <p className="lead">
+          Organizar a TI de um pequeno escritório significa saber <strong>o que existe, quem usa, onde estão os dados,
+          como recuperar uma falha e quem tem acesso administrativo</strong>. O objetivo não é criar burocracia, mas
+          eliminar dependência de memória, senhas soltas e decisões improvisadas.
+        </p>
+
+        <h2>Resposta direta: o mínimo que um pequeno escritório deve organizar</h2>
+        <ol>
+          <li>Inventário de computadores, roteadores, impressoras e licenças relevantes.</li>
+          <li>Responsável por cada equipamento e conta administrativa.</li>
+          <li>Lista de serviços usados: e-mail, nuvem, sistemas, backup e internet.</li>
+          <li>Backups definidos e testados com restauração real.</li>
+          <li>Atualizações de Windows, navegadores e aplicações sob controle.</li>
+          <li>Autenticação forte e MFA nas contas críticas quando disponível.</li>
+          <li>Rede Wi-Fi e acesso de visitantes separados quando fizer sentido.</li>
+          <li>Documentação mínima para recuperar o ambiente sem depender de uma única pessoa.</li>
+        </ol>
+
+        <h2>1. Comece pelo inventário, não pelo software</h2>
+        <p>
+          Registre modelo, número de patrimônio interno quando existir, usuário principal, sistema operacional, função
+          do equipamento e observações relevantes. Não armazene senhas dentro desse inventário.
+        </p>
+
+        <h2>2. Separe equipamento, conta e dado</h2>
+        <p>
+          Um computador pode ser substituído; uma conta pode ser recuperada; um dado perdido pode ser irrecuperável.
+          Tratar essas três camadas separadamente ajuda a definir prioridades e evita confundir manutenção de máquina
+          com continuidade do negócio.
+        </p>
+
+        <h2>3. Defina quem administra o quê</h2>
+        <p>
+          Contas administrativas não devem depender de alguém que ninguém sabe identificar. Registre qual pessoa ou
+          fornecedor administra e-mail, domínio, roteador, nuvem, backup e sistemas críticos, sem expor credenciais em
+          documentos compartilhados.
+        </p>
+
+        <h2>4. Evite todo mundo como administrador local</h2>
+        <p>
+          Quando não há necessidade, usuários de rotina podem trabalhar sem privilégios administrativos permanentes.
+          Isso reduz alterações acidentais e dificulta que um erro simples vire uma mudança estrutural no sistema.
+        </p>
+
+        <h2>5. MFA deve proteger as contas que sustentam o escritório</h2>
+        <p>
+          E-mail principal, armazenamento em nuvem, painel de domínio, ferramentas financeiras e contas administrativas
+          merecem autenticação multifator quando o serviço oferece esse recurso. O segundo fator não substitui senha
+          forte, mas reduz o impacto de uma credencial isolada comprometida.
+        </p>
+
+        <h2>6. Backup precisa ter dono, destino e teste de restauração</h2>
+        <p>
+          Não basta “ter backup”. Defina quais dados entram, onde ficam, com que frequência são copiados e como alguém
+          comprova que a restauração funciona. CISA e NIST tratam recuperação e teste como parte da continuidade, não
+          como detalhe opcional.
+        </p>
+
+        <h2>7. Sincronização em nuvem não substitui automaticamente backup</h2>
+        <p>
+          Um arquivo sincronizado pode replicar exclusão ou alteração. Use sincronização quando ela atende colaboração
+          e disponibilidade, mas mantenha estratégia de recuperação independente para dados importantes.
+        </p>
+
+        <h2>8. Faça uma lista dos sistemas que não podem “sumir”</h2>
+        <p>
+          Registre quais aplicações sustentam emissão de notas, atendimento, agenda, arquivos de clientes, financeiro,
+          e-mail e comunicação. Para cada uma, anote fornecedor, acesso oficial, responsável e como recuperar a conta.
+        </p>
+
+        <h2>9. Atualizações precisam de rotina, não de improviso</h2>
+        <p>
+          Sistemas operacionais, navegadores e aplicações suportadas devem ser atualizados regularmente. Em software
+          crítico, vale registrar a mudança e validar o funcionamento depois da atualização.
+        </p>
+
+        <h2>10. Documente a rede de forma simples</h2>
+        <p>
+          Registre operadora, equipamento principal, pontos de acesso, nome das redes e quem administra a configuração.
+          Não coloque a senha do Wi-Fi ou do roteador em planilha aberta para toda a equipe.
+        </p>
+
+        <h2>11. Rede de visitantes pode reduzir exposição desnecessária</h2>
+        <p>
+          Quando o roteador oferece esse recurso, uma rede de convidados ajuda a separar dispositivos pessoais de
+          visitantes dos equipamentos de trabalho. A disponibilidade e o isolamento real dependem do equipamento usado.
+        </p>
+
+        <h2>12. Impressoras e dispositivos compartilhados também fazem parte da TI</h2>
+        <p>
+          Impressora, scanner, NAS e câmeras conectadas podem ter firmware, senhas administrativas e dependência de rede.
+          Inclua esses dispositivos no inventário quando forem relevantes para a operação.
+        </p>
+
+        <h2>13. Tenha um procedimento para entrada e saída de pessoas</h2>
+        <p>
+          Quando alguém entra, defina quais contas e permissões são necessárias. Quando sai, revogue acessos, transfira
+          arquivos corporativos e confirme que contas de terceiros não ficaram vinculadas ao usuário anterior.
+        </p>
+
+        <h2>14. Diferencie manutenção preventiva de promessa de indisponibilidade zero</h2>
+        <p>
+          Rotinas de atualização, backup e revisão reduzem risco, mas não garantem continuidade absoluta. Evite prometer
+          que uma checklist simples elimina falhas ou substitui planejamento adequado para sistemas críticos.
+        </p>
+
+        <h2>15. Crie uma pasta de documentação mínima</h2>
+        <p>
+          Guarde inventário, responsáveis, contatos de fornecedores, procedimentos de recuperação e diagramas simples.
+          Credenciais devem ficar em solução apropriada, separadas da documentação operacional quando possível.
+        </p>
+
+        <h2>16. Revise periodicamente o que mudou</h2>
+        <p>
+          Equipamentos são trocados, funcionários mudam, serviços expiram e contas deixam de ser usadas. Uma revisão curta
+          e recorrente evita que a documentação fique inútil poucos meses depois.
+        </p>
+
+        <h2>Matriz prática de organização</h2>
+        <table>
+          <thead><tr><th>Área</th><th>O que registrar</th><th>Como validar</th></tr></thead>
+          <tbody>
+            <tr><td>Equipamentos</td><td>modelo, usuário, função, status</td><td>conferência física e inventário</td></tr>
+            <tr><td>Contas</td><td>responsável, MFA, recuperação</td><td>teste de acesso e recuperação</td></tr>
+            <tr><td>Dados</td><td>origem, destino, criticidade</td><td>restauração de amostra</td></tr>
+            <tr><td>Rede</td><td>equipamentos, redes, responsável</td><td>mapa simples e teste de conectividade</td></tr>
+            <tr><td>Software</td><td>licença, versão, fornecedor</td><td>inventário e atualização</td></tr>
+          </tbody>
+        </table>
+
+        <h2>Critérios de parada</h2>
+        <ul>
+          <li>Há dados importantes sem qualquer backup confiável.</li>
+          <li>Ninguém sabe quem controla domínio, e-mail ou contas administrativas.</li>
+          <li>Um único funcionário concentra senhas e acesso sem processo de recuperação.</li>
+          <li>Existem sistemas críticos sem documentação de fornecedor ou responsável.</li>
+          <li>O escritório precisa de requisitos regulatórios ou de continuidade que excedem uma organização básica.</li>
+        </ul>
+
+        <h2>Perguntas frequentes</h2>
+        <h3>Preciso contratar servidor para organizar a TI?</h3>
+        <p>
+          Não necessariamente. A organização começa por inventário, identidade, backup, rede e documentação. Servidor só
+          faz sentido quando existe necessidade técnica que justifique custo e administração adicionais.
+        </p>
+
+        <h3>Planilha serve para inventário?</h3>
+        <p>
+          Para um escritório pequeno, pode servir se for atualizada e não armazenar segredos. Quando a complexidade cresce,
+          uma ferramenta dedicada pode facilitar histórico e controle.
+        </p>
+
+        <h3>Qual é o item mais importante?</h3>
+        <p>
+          Não há um único item universal, mas backup testado e controle de contas críticas costumam ter impacto direto na
+          capacidade de recuperar o negócio depois de falha ou perda de acesso.
+        </p>
+
+        <h2>Resumo prático</h2>
+        <p>
+          <strong>Organização de TI para pequenos escritórios é tornar o ambiente recuperável e previsível.</strong>
+          Saiba quais ativos existem, quem controla as contas, onde estão os dados, como restaurá-los e quais serviços
+          sustentam a operação. Quanto menos conhecimento ficar preso na cabeça de uma pessoa, melhor.
+        </p>
+
+        <EditorialReferences slug="organizacao-de-ti-para-pequenos-escritorios" />
+      </>
+    ),
+  },
+
   "como-remover-virus-windows-iniciantes": {
     title: "Como remover vírus do Windows com segurança: conter, verificar, limpar e evitar reinfecção",
     excerpt:
