@@ -11,6 +11,232 @@ import { MODALIDADES } from "@/lib/precosConfig";
  * do blog compõem base + suplementares + programáticos.
  */
 export const blogSupplementalPosts: Record<string, BlogPostContent> = {
+  "como-trocar-tela-notebook-passo-a-passo": {
+    title: "Como trocar a tela do notebook: compatibilidade, desmontagem segura e validação antes de fechar",
+    excerpt:
+      "Antes de trocar a tela do notebook, confirme o defeito, o código do painel, conector, resolução e fixação. Veja uma sequência segura para evitar comprar a peça errada ou danificar cabo, placa e moldura.",
+    date: "2026-10-01",
+    readTime: "15 min",
+    category: "Manutenção de Notebook",
+    content: (
+      <>
+        <p className="lead">
+          <strong>Trocar a tela do notebook</strong> não começa retirando a moldura. Primeiro confirme que o defeito
+          realmente está no painel e depois valide a compatibilidade da peça. Telas com o mesmo tamanho em polegadas
+          podem usar <strong>conectores, resolução, posição do conector, espessura, fixação e tecnologia diferentes</strong>.
+          O procedimento também muda muito entre modelos: alguns permitem acesso frontal; outros exigem remover tampa
+          traseira, dobradiças ou até a bateria antes de chegar ao cabo do display.
+        </p>
+
+        <h2>Resposta direta: como trocar a tela do notebook com segurança</h2>
+        <ol>
+          <li>Confirme se o defeito é do painel e não apenas de cabo, GPU, backlight ou sistema.</li>
+          <li>Identifique o modelo exato do notebook e, se possível, o código do painel original.</li>
+          <li>Valide resolução, conector, posição do conector, fixação, touch e espessura.</li>
+          <li>Desligue o notebook, remova o carregador e isole/desconecte a bateria quando o projeto permitir.</li>
+          <li>Siga o manual de serviço do modelo para desmontagem, sem improvisar sequência genérica.</li>
+          <li>Conecte o novo painel sem energizar o equipamento durante o manuseio do cabo.</li>
+          <li>Teste imagem, brilho, webcam/sensores e fechamento antes de recolocar todos os acabamentos.</li>
+        </ol>
+
+        <h2>Antes de comprar: tamanho igual não significa compatibilidade</h2>
+        <table>
+          <thead>
+            <tr><th>Item</th><th>O que comparar</th><th>Por que importa</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Tamanho</td><td>diagonal e área ativa</td><td>não define sozinho a peça correta</td></tr>
+            <tr><td>Resolução</td><td>HD, Full HD, QHD etc.</td><td>muda exigência do painel e compatibilidade</td></tr>
+            <tr><td>Conector</td><td>tipo, número de pinos e posição</td><td>um conector fisicamente diferente não deve ser forçado</td></tr>
+            <tr><td>Fixação</td><td>parafusos, abas, adesivo, trilhos</td><td>muda completamente a montagem</td></tr>
+            <tr><td>Touch</td><td>touch separado ou integrado</td><td>alguns conjuntos são tela + digitalizador</td></tr>
+            <tr><td>Espessura</td><td>perfil do painel e moldura</td><td>uma peça “compatível” pode não fechar corretamente</td></tr>
+          </tbody>
+        </table>
+
+        <h2>1. Confirme se o defeito está realmente na tela</h2>
+        <p>
+          Linhas, manchas, áreas quebradas e vazamento de cristal após impacto apontam fortemente para o painel. Mas
+          ausência total de imagem pode vir de cabo, conector, GPU, placa-mãe ou falta de POST. Antes de comprar uma
+          tela, teste um monitor externo quando o notebook permite e observe se há imagem durante a inicialização.
+        </p>
+        <p>
+          Se a imagem muda ao movimentar a tampa, o cabo de vídeo ou a região da dobradiça ganha peso como hipótese.
+          Trocar o painel sem isolar esse cenário pode deixar o defeito intacto.
+        </p>
+
+        <h2>2. Identifique o notebook pelo modelo completo, não apenas pela família</h2>
+        <p>
+          “Inspiron 15”, “IdeaPad 3” ou “Pavilion 14” podem existir em várias gerações e configurações. Use o modelo
+          completo, service tag/serial quando aplicável e o manual de serviço correspondente.
+        </p>
+        <p>
+          A documentação oficial dos fabricantes é importante porque a sequência de desmontagem e o nível de
+          substituição permitido variam por produto. A Dell, por exemplo, orienta verificar a elegibilidade de peças
+          substituíveis pelo cliente e o suporte do modelo; manuais Lenovo seguem sequências específicas antes de
+          chegar ao painel.
+        </p>
+
+        <h2>3. O código do painel original é a melhor referência prática</h2>
+        <p>
+          Quando a desmontagem segura permite visualizar a etiqueta traseira do painel, registre o código exato antes
+          de comprar a reposição. Isso reduz o risco de adquirir uma peça que tenha o mesmo tamanho, mas conector,
+          resolução ou fixação diferentes.
+        </p>
+        <p>
+          Não remova a etiqueta nem descarte o painel antigo até o reparo estar validado.
+        </p>
+
+        <h2>4. Não energize o cabo do display durante o manuseio</h2>
+        <p>
+          Antes de desconectar o cabo da tela, desligue completamente o notebook, retire o carregador e isole a bateria
+          conforme o projeto do equipamento. Em notebooks com bateria interna, isso normalmente exige acesso ao
+          interior do chassi antes da moldura.
+        </p>
+        <p>
+          Conectar ou desconectar o cabo do display com a placa energizada pode criar curto ou dano em linhas de
+          alimentação/sinal. Se a bateria não puder ser isolada com segurança, esse é um bom ponto para interromper o
+          procedimento.
+        </p>
+
+        <h2>5. Moldura colada e tela sem parafusos exigem método diferente</h2>
+        <p>
+          Muitos notebooks modernos usam molduras encaixadas, fitas adesivas extensíveis ou painéis colados. Forçar
+          espátula em pontos errados pode quebrar a moldura, câmera, antenas ou o próprio painel.
+        </p>
+        <p>
+          Se o manual do modelo prevê tiras adesivas, use o método e os consumíveis correspondentes. Não substitua por
+          cola permanente que impeça manutenção futura.
+        </p>
+
+        <h2>6. Dobradiça dura ou quebrada precisa ser resolvida antes da tela nova</h2>
+        <p>
+          Uma dobradiça travada pode ter provocado a quebra original. Instalar um painel novo sem corrigir a carga
+          mecânica pode causar nova trinca, deslocar a tampa ou romper o cabo.
+        </p>
+        <p>
+          Verifique suportes, parafusos, buchas e estrutura da tampa antes de fechar o conjunto.
+        </p>
+
+        <h2>7. O cabo de vídeo merece inspeção separada</h2>
+        <p>
+          Procure dobra excessiva, marca de esmagamento, conector desalinhado ou dano próximo à dobradiça. O cabo deve
+          entrar reto no conector, sem pressão lateral e sem “forçar para caber”.
+        </p>
+        <p>
+          Se o conector da tela nova não corresponde exatamente ao cabo existente, pare. Adaptadores improvisados não
+          são uma solução segura para incompatibilidade de painel.
+        </p>
+
+        <h2>8. Touchscreen pode ser conjunto completo</h2>
+        <p>
+          Em alguns notebooks, painel LCD/OLED, vidro e digitalizador formam um conjunto. Em outros, as peças são
+          separadas. Comprar apenas o LCD quando o dano está no vidro ou no digitalizador pode não resolver o problema.
+        </p>
+        <p>
+          Confirme no catálogo/manual de peças do modelo se o reparo é por painel isolado ou assembly completo.
+        </p>
+
+        <h2>9. Teste antes de fechar totalmente</h2>
+        <p>
+          Depois de montar o painel e reconectar a bateria, faça um teste controlado antes de recolocar todos os
+          acabamentos. Verifique imagem desde o POST, brilho, cores, ausência de linhas, webcam, microfone e sensores
+          integrados na tampa quando existirem.
+        </p>
+        <p>
+          Não deixe conectores expostos encostarem em metal durante esse teste.
+        </p>
+
+        <h2>10. Se a tela acende, mas fica preta</h2>
+        <p>
+          Uma tela iluminada sem imagem pode indicar incompatibilidade, cabo mal encaixado, problema de sinal ou falha
+          no circuito de vídeo. Compare com o painel antigo e com monitor externo antes de assumir que a peça nova veio
+          defeituosa.
+        </p>
+
+        <h2>11. Se a imagem aparece com cores erradas ou piscando</h2>
+        <p>
+          Refaça a inspeção do cabo e do conector. Piscar, linhas ou cores anormais podem vir de contato incompleto ou
+          dano no cabo, além de defeito do próprio painel.
+        </p>
+
+        <h2>12. Tela de maior resolução nem sempre é upgrade simples</h2>
+        <p>
+          Trocar uma tela HD por Full HD ou por tecnologia diferente pode exigir compatibilidade específica do cabo,
+          firmware e montagem. Não trate resolução maior como atualização plug-and-play apenas porque o painel cabe.
+        </p>
+
+        <h2>13. Webcam, antenas e sensores passam pela região da tampa</h2>
+        <p>
+          Ao desmontar a tela, preserve cabos de webcam, microfone, antenas Wi‑Fi e sensores que percorrem a tampa e a
+          dobradiça. Um reparo de tela não deve criar uma nova falha de câmera ou rede.
+        </p>
+
+        <h2>14. Garantia e reparabilidade variam por fabricante</h2>
+        <p>
+          Alguns fabricantes classificam determinadas peças como substituíveis pelo cliente em alguns modelos; em
+          outros, recomendam assistência. A Dell orienta consultar quais componentes são elegíveis para
+          auto-substituição e procurar suporte quando necessário.
+        </p>
+        <p>
+          Se o equipamento ainda está coberto por garantia ou proteção contra dano acidental, confirme as condições
+          antes de abrir a tampa.
+        </p>
+
+        <h2>Critérios de parada</h2>
+        <ul>
+          <li>A bateria está inchada ou não pode ser isolada com segurança.</li>
+          <li>O manual exige desmontagem extensa que você não consegue executar sem risco.</li>
+          <li>A dobradiça está quebrada, arrancando a carcaça ou comprimindo o cabo.</li>
+          <li>O conector da tela nova não corresponde exatamente ao original.</li>
+          <li>Há cheiro de queimado, dano por líquido ou sinais de curto.</li>
+          <li>O notebook não dá POST nem imagem externa, indicando problema além do painel.</li>
+        </ul>
+
+        <h2>Perguntas frequentes</h2>
+        <h3>Posso comprar qualquer tela do mesmo tamanho?</h3>
+        <p>
+          Não. Tamanho em polegadas é apenas um dos critérios. Conector, posição, resolução, fixação, touch e espessura
+          também precisam ser compatíveis.
+        </p>
+
+        <h3>Preciso desconectar a bateria?</h3>
+        <p>
+          Para manusear o cabo do display, a placa não deve permanecer energizada. Em notebooks com bateria interna,
+          siga o manual do modelo para isolar/desconectar a bateria antes do conector da tela.
+        </p>
+
+        <h3>Se a tela quebrou, basta trocar o painel?</h3>
+        <p>
+          Nem sempre. Dobradiça, tampa, cabo, moldura e estrutura de fixação também podem ter sido danificados pelo
+          mesmo impacto.
+        </p>
+
+        <h3>Como saber qual tela comprar?</h3>
+        <p>
+          Use o modelo completo do notebook, catálogo de peças/manual e, quando possível, o código exato do painel
+          original. Evite escolher apenas por foto ou tamanho.
+        </p>
+
+        <h3>Uma tela Full HD pode substituir uma HD?</h3>
+        <p>
+          Só quando o modelo, cabo, conector, montagem e firmware suportam aquela combinação. Não assuma compatibilidade
+          apenas porque o painel encaixa fisicamente.
+        </p>
+
+        <h2>Resumo prático</h2>
+        <p>
+          <strong>Troca de tela é um reparo de compatibilidade e montagem, não só de tamanho.</strong> Confirme o
+          defeito, identifique a peça correta, desenergize o equipamento, siga o manual do modelo e teste antes de
+          fechar. Se houver incompatibilidade de conector, dobradiça danificada ou bateria que não pode ser isolada,
+          pare antes de transformar um defeito de tela em dano de placa.
+        </p>
+
+        <EditorialReferences slug="como-trocar-tela-notebook-passo-a-passo" />
+      </>
+    ),
+  },
+
   "erros-comuns-upgrade-computador": {
     title: "Compatibilidade de PC antes do upgrade: RAM, SSD, GPU, fonte e BIOS sem comprar peça errada",
     excerpt:
