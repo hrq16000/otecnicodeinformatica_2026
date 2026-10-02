@@ -327,7 +327,8 @@
           "paragrafos": [
             "Informar bairro e condição do aparelho ajuda a definir se o cliente deve manter o dispositivo desligado, se é seguro transportá-lo e qual forma de encaminhamento faz sentido. Centro e demais referências locais servem apenas para organizar essa logística.",
             "Fotos externas podem mostrar trinca, deformação ou dano de carcaça, mas não substituem avaliação interna. A triagem usa imagem como contexto, não como laudo definitivo.",
-            "A condição da carcaça também importa. Trinca próxima à bateria, tampa deformada ou estrutura torta pode influenciar segurança e montagem, mesmo quando a tela ainda responde normalmente."
+            "A condição da carcaça também importa. Trinca próxima à bateria, tampa deformada ou estrutura torta pode influenciar segurança e montagem, mesmo quando a tela ainda responde normalmente.",
+            "Se o aparelho ainda está funcional, também vale registrar se o defeito aparece ao carregar, durante chamada, uso de câmera ou aquecimento. Esse padrão ajuda a reproduzir a falha sem desmontar por tentativa."
           ]
         },
         {
@@ -412,7 +413,8 @@
           "titulo": "Aplicativos e licenças também fazem parte da mudança",
           "paragrafos": [
             "Programas licenciados, máquinas virtuais e aplicações com configuração sensível podem depender de caminhos, ativação ou hardware. Mesmo uma clonagem bem-sucedida precisa considerar o que deve ser validado depois da troca.",
-            "Informar esses usos antes do serviço ajuda a preparar testes e reduz a chance de descobrir uma dependência importante somente quando o computador já voltou ao trabalho."
+            "Informar esses usos antes do serviço ajuda a preparar testes e reduz a chance de descobrir uma dependência importante somente quando o computador já voltou ao trabalho.",
+            "Depois da migração, é útil validar inicialização, programas principais e espaço livre. O ganho precisa ser percebido no uso real, não apenas confirmado porque o novo SSD foi reconhecido."
           ]
         },
         {
@@ -584,7 +586,8 @@
           "titulo": "Remoto, visita e bancada não são concorrentes",
           "paragrafos": [
             "Conta, software, permissões, navegador e parte dos problemas de Windows podem começar remotamente. Cabeamento, energia, equipamento que não liga e falhas físicas normalmente exigem presença.",
-            "Quando o teste precisa ser prolongado, a bancada pode ser mais adequada. O importante é a empresa saber antes qual modalidade será usada e o que precisa ficar indisponível durante o atendimento."
+            "Quando o teste precisa ser prolongado, a bancada pode ser mais adequada. O importante é a empresa saber antes qual modalidade será usada e o que precisa ficar indisponível durante o atendimento.",
+            "Quando existe equipamento de rede, impressora compartilhada ou pasta central, a triagem também verifica se o problema está isolado ou afeta vários usuários. Essa distinção muda a prioridade e evita intervenção repetida em cada estação."
           ]
         },
         {
@@ -669,7 +672,8 @@
           "titulo": "A sessão começa com autorização e escopo definidos",
           "paragrafos": [
             "O cliente deve saber qual ferramenta será usada, quem vai acessar e o que será verificado. A tela fica visível e o acesso deve permanecer restrito ao objetivo do chamado.",
-            "Quando senha ou autenticação são necessárias, o próprio cliente pode preencher. O suporte não precisa conhecer credenciais que não fazem parte do diagnóstico."
+            "Quando senha ou autenticação são necessárias, o próprio cliente pode preencher. O suporte não precisa conhecer credenciais que não fazem parte do diagnóstico.",
+            "Antes de conectar, a triagem também confirma se o equipamento é pessoal ou corporativo e se existem políticas de administrador. Isso evita tentar alterações que dependem de autorização interna e permite transformar a sessão em diagnóstico documentado quando o bloqueio pertence à empresa."
           ]
         },
         {
@@ -692,7 +696,8 @@
           "titulo": "A agenda remota também varia de 2 a 72 horas úteis",
           "paragrafos": [
             "A ausência de deslocamento não significa sessão automática ou imediata. O chamado entra na fila conforme urgência e disponibilidade do prestador adequado.",
-            "Um bloqueio que impede trabalho pode receber prioridade maior que uma configuração sem impacto imediato. Ainda assim, a faixa de 2 a 72 horas úteis continua sendo a referência operacional para início."
+            "Um bloqueio que impede trabalho pode receber prioridade maior que uma configuração sem impacto imediato. Ainda assim, a faixa de 2 a 72 horas úteis continua sendo a referência operacional para início.",
+            "Se o problema envolve trabalho, informe se existe alternativa temporária, como outro computador ou acesso pelo navegador. Esse detalhe ajuda a classificar urgência sem prometer atendimento instantâneo."
           ]
         },
         {
@@ -785,7 +790,8 @@
           "titulo": "Peças usadas exigem leitura diferente dos resultados",
           "paragrafos": [
             "Componentes reaproveitados podem funcionar, mas ter histórico desconhecido. Fonte antiga, SSD com muitas horas ou memória de outro conjunto mudam a interpretação de qualquer instabilidade encontrada durante o teste.",
-            "Informar origem e tempo aproximado de uso ajuda a separar defeito de montagem de falha preexistente. Essa distinção é importante para documentar responsabilidade."
+            "Informar origem e tempo aproximado de uso ajuda a separar defeito de montagem de falha preexistente. Essa distinção é importante para documentar responsabilidade.",
+            "Quando uma peça usada apresenta comportamento duvidoso, o teste precisa isolá-la antes de culpar a montagem. Comparar com componente conhecido, quando disponível, ajuda a separar incompatibilidade de desgaste anterior."
           ]
         },
         {
@@ -864,7 +870,8 @@
           "titulo": "Temperatura precisa ser relacionada ao desempenho",
           "paragrafos": [
             "Uma leitura alta isolada não explica tudo. É necessário observar se CPU ou GPU reduzem frequência, se ventoinhas respondem, se o gabinete tem fluxo de ar e se o defeito coincide com aquecimento.",
-            "Limpeza, pasta térmica, ajuste de curva e reorganização do gabinete entram apenas quando os sinais justificam. O objetivo é corrigir a causa, não aplicar manutenção genérica."
+            "Limpeza, pasta térmica, ajuste de curva e reorganização do gabinete entram apenas quando os sinais justificam. O objetivo é corrigir a causa, não aplicar manutenção genérica.",
+            "Também é útil observar temperatura ambiente e posição do gabinete. Equipamento encostado em móvel fechado pode recircular ar quente e apresentar um comportamento diferente do mesmo conjunto em bancada aberta."
           ]
         },
         {
@@ -886,7 +893,8 @@
           "titulo": "Janela de 2 a 72 horas úteis conforme urgência",
           "paragrafos": [
             "PC totalmente parado pode receber prioridade maior que ajuste de desempenho, sempre conforme agenda e perfil do prestador. A faixa operacional indica quando o atendimento pode começar.",
-            "Teste prolongado, falha intermitente, firmware ou necessidade de peça podem exigir acompanhamento além da primeira janela."
+            "Teste prolongado, falha intermitente, firmware ou necessidade de peça podem exigir acompanhamento além da primeira janela.",
+            "Quando a falha ocorre apenas em um jogo, vale comparar outro aplicativo pesado antes de concluir que o hardware está defeituoso. Driver, arquivo do jogo e configuração específica também podem produzir sintomas parecidos."
           ]
         },
         {
