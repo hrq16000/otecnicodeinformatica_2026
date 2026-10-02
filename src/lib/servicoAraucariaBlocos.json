@@ -55,7 +55,8 @@
           "titulo": "O que enviar na triagem",
           "paragrafos": [
             "Informe marca, modelo, defeito, tempo de uso, histórico de queda ou líquido e se o notebook ainda liga. Se houver mensagem de erro, fotografe. Se não carregar, diga se outro carregador compatível já foi testado. Se estiver lento, explique em que momento a lentidão aparece.",
-            "Com esse conjunto de informações e o bairro em Araucária, a equipe consegue definir melhor a próxima etapa e a janela disponível antes de qualquer deslocamento."
+            "Com esse conjunto de informações e o bairro em Araucária, a equipe consegue definir melhor a próxima etapa e a janela disponível antes de qualquer deslocamento.",
+            "Se o notebook usa criptografia, conta corporativa ou armazenamento com dados importantes, informe isso antes de qualquer intervenção. O diagnóstico pode exigir uma ordem diferente de testes para reduzir risco sobre os arquivos e preservar acesso quando o sistema ainda inicia."
           ]
         }
       ],
@@ -145,7 +146,8 @@
           "titulo": "Como abrir o chamado com informação útil",
           "paragrafos": [
             "Diga se o PC não liga, liga sem vídeo, reinicia, trava ou fica lento. Informe se houve troca recente de peça, queda de energia, cheiro de queimado ou atualização. Se souber, envie processador, placa-mãe, fonte, memória e armazenamento.",
-            "Acrescente o bairro em Araucária e se o gabinete pode ser transportado. A triagem usa esses dados para escolher modalidade e janela de atendimento."
+            "Acrescente o bairro em Araucária e se o gabinete pode ser transportado. A triagem usa esses dados para escolher modalidade e janela de atendimento.",
+            "Se o computador é usado em comércio, escritório ou produção, informe qual função ele cumpre e se existe máquina substituta. Esse contexto ajuda a classificar urgência e também evita sugerir uma manutenção longa quando uma solução provisória segura pode manter a operação enquanto o reparo definitivo é planejado."
           ]
         }
       ],
@@ -176,7 +178,7 @@
         "/servicos/upgrade-ssd-ram",
         "/servicos/pc-gamer",
         "/tecnico-informatica-araucaria",
-        "/problemas/computador-nao-liga"
+        "/servicos/computador-nao-liga"
       ],
       "cidadeSlug": "araucaria",
       "cidadeNome": "Araucária"
@@ -235,7 +237,8 @@
           "titulo": "Dados úteis antes de mover a televisão",
           "paragrafos": [
             "Envie marca, modelo, polegadas, estado da tela, presença de som, luz de standby e comportamento ao ligar. Informe queda, impacto, líquido ou oscilação elétrica e, se possível, mande foto da etiqueta traseira.",
-            "Com o bairro em Araucária e as condições de acesso, a triagem define a etapa seguinte. Não é necessário transportar a TV antes dessa orientação."
+            "Com o bairro em Araucária e as condições de acesso, a triagem define a etapa seguinte. Não é necessário transportar a TV antes dessa orientação.",
+            "Se a TV está instalada em painel, suporte articulado ou móvel planejado, isso também deve ser informado. A retirada pode exigir uma logística diferente da de um aparelho apoiado em rack, e esse detalhe precisa ser conhecido antes para evitar improviso na movimentação."
           ]
         }
       ],
@@ -325,7 +328,8 @@
           "titulo": "O que enviar antes do encaminhamento",
           "paragrafos": [
             "Informe marca, modelo exato, defeito, histórico de queda ou líquido, condição da tela, comportamento da bateria e se o aparelho ainda carrega. Fotos externas ajudam a identificar dano físico, mas não fecham diagnóstico.",
-            "Acrescente o bairro em Araucária. A triagem define a forma de encaminhamento e a janela disponível antes de pedir qualquer movimentação do aparelho."
+            "Acrescente o bairro em Araucária. A triagem define a forma de encaminhamento e a janela disponível antes de pedir qualquer movimentação do aparelho.",
+            "Se o aparelho usa eSIM, autenticação bancária ou aplicativos de trabalho, avise antes da abertura. Dependendo do reparo, pode ser prudente confirmar backup, acesso à conta principal e forma de recuperação das credenciais para não transformar uma falha física em perda de acesso digital."
           ]
         }
       ],
@@ -415,7 +419,8 @@
           "titulo": "Informações que ajudam a planejar o upgrade",
           "paragrafos": [
             "Envie marca e modelo do computador, capacidade do disco, quantidade de memória e descreva a lentidão. Diga se o equipamento demora ao ligar, trava durante o uso ou fica lento apenas com vários programas.",
-            "Com esses dados e o bairro em Araucária, a triagem define o que precisa ser confirmado presencialmente e qual janela pode ser oferecida antes da compra de componente."
+            "Com esses dados e o bairro em Araucária, a triagem define o que precisa ser confirmado presencialmente e qual janela pode ser oferecida antes da compra de componente.",
+            "Também informe se o computador usa programas licenciados, máquina virtual ou arquivos que dependem de caminhos específicos. Uma migração que preserva o Windows pode manter muita coisa funcionando, mas aplicações com ativação própria ou configuração sensível precisam ser tratadas com atenção antes da clonagem."
           ]
         }
       ],
