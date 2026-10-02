@@ -1,0 +1,92 @@
+name: npm-audit-diagnostic
+
+on:
+  push:
+    branches:
+      - "diag/npm-audit-20261002"
+
+permissions:
+  contents: read
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "24"
+          cache: npm
+      - name: Full npm audit JSON
+        shell: bash
+        run: |
+          npm audit --json > audit-full.json || true
+          node - <<'NODE'
+          const fs = require("fs");
+          const r = JSON.parse(fs.readFileSync("audit-full.json", "utf8"));
+          const m = r.metadata?.vulnerabilities || {};
+          console.log("AUDIT_FULL_METADATA", JSON.stringify({
+            critical: m.critical || 0,
+            high: m.high || 0,
+            moderate: m.moderate || 0,
+            low: m.low || 0,
+            info: m.info || 0,
+            total: m.total || 0
+          }));
+          const rows = Object.entries(r.vulnerabilities || {}).map(([name,v]) => ({
+            name,
+            severity:v.severity,
+            direct:!!v.isDirect,
+            fixAvailable:v.fixAvailable
+          }));
+          console.log("AUDIT_FULL_VULNS", JSON.stringify(rows));
+          NODE
+      - name: Production-only npm audit JSON
+        shell: bash
+        run: |
+          npm audit --omit=dev --json > audit-prod.json || true
+          node - <<'NODE'
+          const fs = require("fs");
+          const r = JSON.parse(fs.readFileSync("audit-prod.json", "utf8"));
+          const m = r.metadata?.vulnerabilities || {};
+          console.log("AUDIT_PROD_METADATA", JSON.stringify({
+            critical: m.critical || 0,
+            high: m.high || 0,
+            moderate: m.moderate || 0,
+            low: m.low || 0,
+            info: m.info || 0,
+            total: m.total || 0
+          }));
+          const rows = Object.entries(r.vulnerabilities || {}).map(([name,v]) => ({
+            name,
+            severity:v.severity,
+            direct:!!v.isDirect,
+            fixAvailable:v.fixAvailable
+          }));
+          console.log("AUDIT_PROD_VULNS", JSON.stringify(rows));
+          NODE
+      - name: Simulate non-breaking automatic fix
+        shell: bash
+        run: |
+          npm audit fix --dry-run --json > audit-fix-dry.json || true
+          node - <<'NODE'
+          const fs = require("fs");
+          const r = JSON.parse(fs.readFileSync("audit-fix-dry.json", "utf8"));
+          const m = r.metadata?.vulnerabilities || {};
+          console.log("AUDIT_FIX_DRY_METADATA", JSON.stringify({
+            critical: m.critical || 0,
+            high: m.high || 0,
+            moderate: m.moderate || 0,
+            low: m.low || 0,
+            info: m.info || 0,
+            total: m.total || 0
+          }));
+          console.log("AUDIT_FIX_DRY_CHANGES", JSON.stringify({
+            added:r.added ?? null,
+            removed:r.removed ?? null,
+            changed:r.changed ?? null,
+            audited:r.audited ?? null
+          }));
+          NODE
+      - name: Verify no tracked file changed
+        run: git diff --exit-code
