@@ -76,9 +76,9 @@ describe("fila 16–20 — serviço × Araucária", () => {
 
   it("mantém uma combinação de Araucária fora da fila na regra padrão", () => {
     const d = resolveLocal("/servicos/pc-gamer/araucaria");
-    expect(d.indexability).toBe("canonicalized");
+    expect(d.indexability).toBe("noindex");
     expect(d.sitemap).toBe(false);
-    expect(canonicalFor("/servicos/pc-gamer/araucaria")).toBe("/servicos/pc-gamer");
+    expect(canonicalFor("/servicos/pc-gamer/araucaria")).toBe("/servicos/pc-gamer/araucaria");
   });
 
   it("mantém similaridade autoral entre as cinco abaixo do teto de segurança", () => {
