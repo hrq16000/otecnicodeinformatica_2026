@@ -126,7 +126,8 @@
           "titulo": "Dados importantes alteram a ordem da manutenção",
           "paragrafos": [
             "Se o computador guarda arquivos sem cópia, armazenamento com sinais de erro precisa ser tratado com cuidado. Testes agressivos ou reinstalação de sistema podem aumentar o risco quando o disco já apresenta falhas de leitura ou desconexões.",
-            "Antes de qualquer etapa que possa alterar o conteúdo, a triagem pergunta sobre documentos críticos, criptografia e existência de backup. Em alguns casos preservar os dados vem antes de buscar desempenho ou estabilidade."
+            "Antes de qualquer etapa que possa alterar o conteúdo, a triagem pergunta sobre documentos críticos, criptografia e existência de backup. Em alguns casos preservar os dados vem antes de buscar desempenho ou estabilidade.",
+            "Se o computador usa criptografia, software corporativo ou armazenamento com dados únicos, isso precisa ser informado antes de testes que alterem partições ou sistema. A prioridade pode ser preservar uma cópia antes de tentar recuperar desempenho."
           ]
         },
         {
@@ -178,7 +179,7 @@
         "/servicos/upgrade-ssd/campo-largo",
         "/servicos/pc-gamer/campo-largo",
         "/tecnico-informatica-campo-largo",
-        "/problemas/computador-nao-liga"
+        "/servicos/computador-nao-liga"
       ],
       "cidadeSlug": "campo-largo",
       "cidadeNome": "Campo Largo"
@@ -202,7 +203,8 @@
           "titulo": "O sintoma orienta qual circuito merece atenção primeiro",
           "paragrafos": [
             "Som com tela escura pode levantar hipótese de iluminação, mas fonte e outros circuitos ainda precisam ser considerados. Reinício repetido, linhas fixas, metade da imagem ou entrada HDMI intermitente apontam para caminhos diferentes.",
-            "Um vídeo curto do defeito e a etiqueta traseira ajudam bastante na triagem. Modelo e tamanho evitam preparar logística ou componente incompatível e permitem decidir se a primeira avaliação precisa acontecer com o aparelho presente."
+            "Um vídeo curto do defeito e a etiqueta traseira ajudam bastante na triagem. Modelo e tamanho evitam preparar logística ou componente incompatível e permitem decidir se a primeira avaliação precisa acontecer com o aparelho presente.",
+            "Quando o defeito aparece somente em uma fonte de sinal, também é útil testar outra entrada, cabo ou aplicativo antes de movimentar o aparelho. Isso ajuda a separar falha interna da TV de problema externo na conexão."
           ]
         },
         {
@@ -216,7 +218,8 @@
           "titulo": "Intermitência precisa ser registrada quando aparece",
           "paragrafos": [
             "Se a falha surge somente depois de aquecer, ao trocar de entrada ou ao abrir um aplicativo específico, informe o tempo e a situação. Esse detalhe ajuda a reproduzir o comportamento sem deixar a TV ligada por tentativa durante horas.",
-            "Também vale dizer se houve oscilação elétrica, atualização, impacto ou contato com líquido. Esses eventos não provam a causa, mas podem mudar a ordem da inspeção."
+            "Também vale dizer se houve oscilação elétrica, atualização, impacto ou contato com líquido. Esses eventos não provam a causa, mas podem mudar a ordem da inspeção.",
+            "Se a imagem some depois de alguns minutos e volta ao esfriar, registre o tempo aproximado. Esse comportamento pode ser importante para reproduzir a falha sem manter o aparelho ligado indefinidamente."
           ]
         },
         {
@@ -230,7 +233,8 @@
           "titulo": "Viabilidade do reparo precisa ser discutida antes da aprovação",
           "paragrafos": [
             "Falha de fonte, iluminação ou placa pode ter cenário diferente de painel fisicamente danificado ou componente principal indisponível. O diagnóstico deve informar quando custo, risco ou falta de peça tornam o reparo pouco racional.",
-            "O objetivo não é consertar a qualquer preço. Quando existem alternativas, o cliente precisa entender o que está sendo reparado, qual risco permanece e se o investimento faz sentido para aquele aparelho."
+            "O objetivo não é consertar a qualquer preço. Quando existem alternativas, o cliente precisa entender o que está sendo reparado, qual risco permanece e se o investimento faz sentido para aquele aparelho.",
+            "Também é importante diferenciar painel fisicamente quebrado de defeito eletrônico que apenas afeta imagem. Essa separação evita criar expectativa de reparo onde o custo ou a disponibilidade do conjunto inviabilizam a intervenção."
           ]
         },
         {
@@ -292,7 +296,8 @@
           "titulo": "Código exato do aparelho vem antes da peça",
           "paragrafos": [
             "Modelos com nomes parecidos podem usar telas, baterias e conectores diferentes. Por isso a etiqueta, as informações do sistema ou outro identificador do aparelho precisam ser confirmados antes de falar em componente.",
-            "Também é importante saber se houve queda, líquido, aquecimento, falha após atualização ou perda progressiva de autonomia. O histórico muda a ordem da inspeção e evita comprar peça inadequada."
+            "Também é importante saber se houve queda, líquido, aquecimento, falha após atualização ou perda progressiva de autonomia. O histórico muda a ordem da inspeção e evita comprar peça inadequada.",
+            "Mesmo dentro da mesma família de aparelhos, revisões e variantes podem usar peças diferentes. Confirmar código exato antes de encomendar componente evita incompatibilidade e retrabalho."
           ]
         },
         {
@@ -306,7 +311,8 @@
           "titulo": "Dados e contas precisam entrar no planejamento",
           "paragrafos": [
             "Quando o aparelho ainda funciona, vale confirmar backup, acesso à conta principal e mecanismos de recuperação. Uma intervenção de sistema pode exigir autenticação depois, e descobrir isso tarde aumenta o transtorno.",
-            "Durante testes, o acesso deve ficar limitado ao necessário para validar tela, áudio, câmera, biometria, rede ou outra função reparada. Não existe justificativa para navegar por conteúdo pessoal sem relação com o serviço."
+            "Durante testes, o acesso deve ficar limitado ao necessário para validar tela, áudio, câmera, biometria, rede ou outra função reparada. Não existe justificativa para navegar por conteúdo pessoal sem relação com o serviço.",
+            "Se o aparelho concentra autenticação bancária ou de trabalho, vale confirmar alternativas de acesso antes da intervenção. Essa preparação reduz o impacto caso seja necessário reiniciar, atualizar ou deixar o dispositivo fora de uso por algum período."
           ]
         },
         {
@@ -320,7 +326,8 @@
           "titulo": "Campo Largo influencia encaminhamento e coleta",
           "paragrafos": [
             "Informar bairro e condição do aparelho ajuda a definir se o cliente deve manter o dispositivo desligado, se é seguro transportá-lo e qual forma de encaminhamento faz sentido. Centro e demais referências locais servem apenas para organizar essa logística.",
-            "Fotos externas podem mostrar trinca, deformação ou dano de carcaça, mas não substituem avaliação interna. A triagem usa imagem como contexto, não como laudo definitivo."
+            "Fotos externas podem mostrar trinca, deformação ou dano de carcaça, mas não substituem avaliação interna. A triagem usa imagem como contexto, não como laudo definitivo.",
+            "A condição da carcaça também importa. Trinca próxima à bateria, tampa deformada ou estrutura torta pode influenciar segurança e montagem, mesmo quando a tela ainda responde normalmente."
           ]
         },
         {
@@ -382,7 +389,8 @@
           "titulo": "O comportamento da máquina indica qual recurso está no limite",
           "paragrafos": [
             "Disco em uso constante, inicialização lenta e programas demorando para abrir sugerem um cenário. Lentidão apenas com muitas abas ou aplicações aponta mais para memória. Travamento sob carga pode envolver ainda temperatura ou outro componente.",
-            "A análise combina relato e medições para não transformar SSD em recomendação automática. O upgrade deve atacar o gargalo que realmente limita o uso."
+            "A análise combina relato e medições para não transformar SSD em recomendação automática. O upgrade deve atacar o gargalo que realmente limita o uso.",
+            "Espaço livre também precisa ser observado. Disco quase cheio pode piorar a experiência e criar sintomas parecidos com armazenamento lento, então capacidade disponível entra na leitura antes de comprar componente."
           ]
         },
         {
@@ -396,7 +404,8 @@
           "titulo": "Migração depende da saúde do armazenamento atual",
           "paragrafos": [
             "Quando o disco de origem está saudável, clonagem pode preservar sistema, programas e arquivos. Se há erros de leitura, desconexões ou lentidão severa, insistir numa cópia integral pode aumentar o risco sobre os dados.",
-            "Nessa situação, upgrade e recuperação deixam de ser a mesma tarefa. Preservar arquivos pode se tornar prioridade e a migração precisa ser redesenhada depois."
+            "Nessa situação, upgrade e recuperação deixam de ser a mesma tarefa. Preservar arquivos pode se tornar prioridade e a migração precisa ser redesenhada depois.",
+            "Antes de clonar, é útil conferir se existem erros no sistema de arquivos e se o dispositivo mantém leitura estável por tempo suficiente. Isso ajuda a escolher entre migração direta e preservação seletiva de dados."
           ]
         },
         {
@@ -410,7 +419,8 @@
           "titulo": "Janela operacional de 2 a 72 horas úteis",
           "paragrafos": [
             "Uma máquina parada pode receber prioridade maior que um upgrade preventivo, sempre conforme disponibilidade do prestador adequado. A janela de 2 a 72 horas úteis organiza o início do atendimento.",
-            "Peça compatível, volume de dados e método de migração definem o tempo total. Uma cópia grande ou um disco de origem instável pode levar mais tempo que a instalação física do SSD."
+            "Peça compatível, volume de dados e método de migração definem o tempo total. Uma cópia grande ou um disco de origem instável pode levar mais tempo que a instalação física do SSD.",
+            "Se a melhoria é para trabalho, o horário de parada também influencia a estratégia. Em alguns casos é melhor preparar a migração para uma janela específica do que interromper a máquina em pleno expediente."
           ]
         },
         {
@@ -472,7 +482,8 @@
           "titulo": "Primeiro preservar, depois procurar",
           "paragrafos": [
             "Se a perda é lógica, novas gravações podem ocupar o espaço onde ainda existem fragmentos dos arquivos antigos. Se a mídia apresenta falha física, repetidas inicializações podem piorar leitura ou provocar mais desconexões.",
-            "Por isso a orientação inicial costuma ser interromper uso e documentar o que ocorreu. Essa pausa simples pode ser mais valiosa que executar uma ferramenta aleatória imediatamente."
+            "Por isso a orientação inicial costuma ser interromper uso e documentar o que ocorreu. Essa pausa simples pode ser mais valiosa que executar uma ferramenta aleatória imediatamente.",
+            "Também é importante evitar instalar ferramentas de recuperação no mesmo volume afetado. Mesmo uma instalação pequena pode sobrescrever estruturas ou blocos que ainda seriam úteis numa tentativa posterior."
           ]
         },
         {
@@ -486,14 +497,16 @@
           "titulo": "Priorizar arquivos importantes evita desperdício de leitura",
           "paragrafos": [
             "Em uma mídia grande e instável, nem sempre faz sentido tratar todos os dados com o mesmo peso. Documentos, fotos únicas, banco de dados e material de trabalho podem receber prioridade maior que arquivos facilmente substituíveis.",
-            "O cliente deve indicar o que realmente importa antes da tentativa. Essa ordem ajuda a usar tempo de leitura de forma mais inteligente quando a mídia não consegue ser copiada integralmente."
+            "O cliente deve indicar o que realmente importa antes da tentativa. Essa ordem ajuda a usar tempo de leitura de forma mais inteligente quando a mídia não consegue ser copiada integralmente.",
+            "Quando existem muitos arquivos, o cliente pode separar prioridade por pasta, extensão ou período. Essa lista ajuda a orientar a leitura quando a mídia não permite uma cópia completa."
           ]
         },
         {
           "titulo": "Clonagem é uma ferramenta de preservação, não garantia",
           "paragrafos": [
             "Quando o dispositivo ainda responde, criar uma cópia setor a setor pode permitir que a busca por arquivos aconteça fora do original. Isso reduz manipulação direta da mídia que já mostrou instabilidade.",
-            "Nem toda clonagem consegue atingir 100% dos setores. O relatório precisa separar o que foi lido, o que falhou e quais limitações permanecem, sem prometer quantidade de arquivos antes da análise."
+            "Nem toda clonagem consegue atingir 100% dos setores. O relatório precisa separar o que foi lido, o que falhou e quais limitações permanecem, sem prometer quantidade de arquivos antes da análise.",
+            "Depois de criar uma imagem ou clone parcial, a busca por arquivos pode acontecer fora do dispositivo original. Isso reduz novas manipulações na mídia que já apresentou instabilidade."
           ]
         },
         {
@@ -507,7 +520,8 @@
           "titulo": "Rede nacional e responsabilidade sobre informação",
           "paragrafos": [
             "A operação começou em Curitiba em 2006 e hoje integra uma rede nacional com mais de 6 mil prestadores credenciados. Esse alcance não autoriza afirmar quantos especialistas estão disponíveis em Campo Largo.",
-            "A referência de tarifa mínima justa reconhece tempo, responsabilidade e cuidado com dados. Antes de solicitar, informe mídia, capacidade, erro observado, tentativas já feitas e quais arquivos são prioritários."
+            "A referência de tarifa mínima justa reconhece tempo, responsabilidade e cuidado com dados. Antes de solicitar, informe mídia, capacidade, erro observado, tentativas já feitas e quais arquivos são prioritários.",
+            "Privacidade também precisa ser tratada com seriedade. A recuperação deve se limitar ao escopo solicitado e a entrega precisa ser combinada de forma que o cliente saiba onde os dados recuperados serão armazenados."
           ]
         }
       ],
