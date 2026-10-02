@@ -13,6 +13,11 @@ const SJP_COM_CONTEUDO = [
   "/servicos/suporte-empresas/sao-jose-dos-pinhais",
   "/servicos/atendimento-remoto/sao-jose-dos-pinhais",
   "/servicos/montagem-de-pc/sao-jose-dos-pinhais",
+  "/servicos/pc-gamer/sao-jose-dos-pinhais",
+  "/servicos/suporte-home-office/sao-jose-dos-pinhais",
+  "/servicos/suporte-tecnico-empresarial/sao-jose-dos-pinhais",
+  "/servicos/manutencao-preventiva-empresas/sao-jose-dos-pinhais",
+  "/servicos/backup-para-empresas/sao-jose-dos-pinhais",
 ];
 
 const TOPONIMOS = /(sao jose dos pinhais|sao jose|curitiba|sjp)/g;
@@ -50,7 +55,7 @@ const corpo = (path: string) => {
 };
 
 describe("Rodada 5D — serviço × São José dos Pinhais", () => {
-  it("declara e promove as 10 rotas com conteúdo local próprio", () => {
+  it("declara e promove as 15 rotas com conteúdo local próprio", () => {
     expect(SERVICO_SJP_PATHS.sort()).toEqual([...SJP_COM_CONTEUDO].sort());
     for (const path of SJP_COM_CONTEUDO) {
       const d = resolveLocal(path);
@@ -62,15 +67,6 @@ describe("Rodada 5D — serviço × São José dos Pinhais", () => {
     }
   });
 
-  it("mantém canonicalizado o serviço × SJP fora da lista promovida", () => {
-    const path = "/servicos/pc-gamer/sao-jose-dos-pinhais";
-    const d = resolveLocal(path);
-    expect(d.indexability).toBe("canonicalized");
-    expect(d.sitemap).toBe(false);
-    expect(canonicalFor(path)).toBe("/servicos/pc-gamer");
-    expect(isNoindex(path)).toBe(true);
-  });
-
   it("resolve o conteúdo local por cidade e declara a cidade correta (areaServed)", () => {
     for (const path of SJP_COM_CONTEUDO) {
       const slug = path.split("/")[2];
@@ -79,7 +75,7 @@ describe("Rodada 5D — serviço × São José dos Pinhais", () => {
       expect(p?.cidadeNome).toBe("São José dos Pinhais");
       expect(p?.cidadeSlug).toBe("sao-jose-dos-pinhais");
     }
-    expect(servicoLocal("conserto-notebook", "araucaria")).toBeNull();
+    expect(servicoLocal("conserto-notebook", "campo-largo")).toBeNull();
   });
 
   it("não repete a intenção nem a metadata da versão de Curitiba", () => {
