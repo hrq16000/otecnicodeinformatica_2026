@@ -23,6 +23,19 @@ const TOP10_SERVICO_CIDADE_PROMOVIDAS = [
   "/servicos/montagem-de-pc/sao-jose-dos-pinhais",
 ];
 
+const FILA_11_20_SERVICO_CIDADE = [
+  "/servicos/pc-gamer/sao-jose-dos-pinhais",
+  "/servicos/suporte-home-office/sao-jose-dos-pinhais",
+  "/servicos/suporte-tecnico-empresarial/sao-jose-dos-pinhais",
+  "/servicos/manutencao-preventiva-empresas/sao-jose-dos-pinhais",
+  "/servicos/backup-para-empresas/sao-jose-dos-pinhais",
+  "/servicos/conserto-notebook/araucaria",
+  "/servicos/conserto-pc/araucaria",
+  "/servicos/conserto-tv/araucaria",
+  "/servicos/conserto-celular/araucaria",
+  "/servicos/upgrade-ssd/araucaria",
+];
+
 describe("localIndexPolicy — regra de ouro", () => {
   it("nunca coloca no sitemap uma entidade não indexável", () => {
     for (const d of declaredEntities()) {
@@ -50,13 +63,29 @@ describe("localIndexPolicy — promoção top 10 service × cidade", () => {
     }
   });
 
-  it("mantém 27 entidades SERVICO_CIDADE explícitas após adicionar somente as 10 promovidas", () => {
-    const servicoCidade = declaredEntities().filter((d) => d.family === "SERVICO_CIDADE");
-    expect(servicoCidade).toHaveLength(27);
+  it("mantém as 10 URLs da primeira promoção estáveis", () => {
+    for (const path of TOP10_SERVICO_CIDADE_PROMOVIDAS) {
+      const d = resolveLocal(path);
+      expect(d.indexability).toBe("index");
+      expect(canonicalFor(path)).toBe(path);
+      expect(d.sitemap).toBe(true);
+    }
+  });
+
+  it("promove a fila 11–20 e mantém somente 37 SERVICO_CIDADE explícitas", () => {
+    for (const path of FILA_11_20_SERVICO_CIDADE) {
+      const d = resolveLocal(path);
+      expect(d.family).toBe("SERVICO_CIDADE");
+      expect(d.indexability).toBe("index");
+      expect(canonicalFor(path)).toBe(path);
+      expect(d.sitemap).toBe(true);
+      expect(d.tier).toBe("SERVICO_CIDADE_COM_INTENCAO_LOCAL");
+    }
+    expect(declaredEntities().filter((d) => d.family === "SERVICO_CIDADE")).toHaveLength(37);
   });
 
   it("mantém outra combinação da família na regra padrão canonicalized", () => {
-    const path = "/servicos/pc-gamer/sao-jose-dos-pinhais";
+    const path = "/servicos/pc-gamer/araucaria";
     const d = resolveLocal(path);
     expect(d.indexability).toBe("canonicalized");
     expect(d.sitemap).toBe(false);
