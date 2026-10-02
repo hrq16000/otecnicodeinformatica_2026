@@ -1052,7 +1052,8 @@
           "titulo": "O que preparar antes de pedir ajuda",
           "paragrafos": [
             "Informe se o computador é pessoal ou corporativo, qual programa falhou, se outras pessoas da empresa têm o mesmo problema e se a internet funciona em outros dispositivos. Capturas de erro e fotos dos cabos ajudam quando há periférico envolvido.",
-            "Diga também o bairro em São José dos Pinhais caso seja necessário migrar para atendimento presencial. A triagem define a modalidade e a janela antes de qualquer deslocamento."
+            "Diga também o bairro em São José dos Pinhais caso seja necessário migrar para atendimento presencial. A triagem define a modalidade e a janela antes de qualquer deslocamento.",
+            "Se o trabalho depende de autenticação em múltiplos fatores, arquivos sincronizados ou acesso a sistema corporativo, informe isso na abertura. Assim é possível diferenciar uma falha local do computador de uma indisponibilidade de conta ou serviço externo e evitar mudanças desnecessárias no equipamento."
           ]
         }
       ],
@@ -1142,7 +1143,8 @@
           "titulo": "O que uma empresa deve informar ao abrir o chamado",
           "paragrafos": [
             "Informe endereço, pessoa responsável, número aproximado de usuários afetados, sistema ou equipamento envolvido e o que deixou de funcionar. Diga também se há alternativa temporária e se a falha impede faturamento, atendimento ou acesso a dados.",
-            "Com esse contexto, o chamado recebe prioridade e modalidade adequadas. Se houver necessidade recorrente, o histórico pode embasar uma proposta específica, sem presumir contrato ou pacote antes da análise."
+            "Com esse contexto, o chamado recebe prioridade e modalidade adequadas. Se houver necessidade recorrente, o histórico pode embasar uma proposta específica, sem presumir contrato ou pacote antes da análise.",
+            "Também vale informar se o problema já aconteceu antes e com que frequência. Reincidência muda a abordagem: em vez de apenas restaurar o funcionamento, o atendimento pode precisar registrar causa provável, dependências e um plano de correção mais duradouro para evitar repetição do mesmo chamado."
           ]
         }
       ],
@@ -1232,7 +1234,8 @@
           "titulo": "O que levantar antes de programar a manutenção",
           "paragrafos": [
             "Liste as estações, identifique quais são essenciais e informe o melhor horário para retirar cada uma de uso. Se existem notebooks remotos, servidores, impressoras ou softwares específicos, isso precisa entrar na triagem para separar o que cabe na rotina do que exige outro escopo.",
-            "Com esse inventário, a manutenção pode ser planejada por prioridade e janela, em vez de começar sem saber quantos equipamentos serão avaliados."
+            "Com esse inventário, a manutenção pode ser planejada por prioridade e janela, em vez de começar sem saber quantos equipamentos serão avaliados.",
+            "Se a empresa já possui uma rotina interna, relatórios anteriores ou lista de máquinas críticas, esse material deve acompanhar o agendamento. Comparar o estado atual com registros anteriores é mais útil do que repetir uma limpeza genérica sem saber se temperatura, armazenamento ou atualização realmente mudaram."
           ]
         }
       ],
@@ -1322,7 +1325,8 @@
           "titulo": "O que a empresa deve informar na triagem",
           "paragrafos": [
             "Liste os computadores e locais onde ficam os dados, informe o volume aproximado quando souber e identifique quais arquivos são essenciais para continuar trabalhando. Diga também se já existe HD externo, NAS, nuvem ou rotina automática.",
-            "Com essas informações e o endereço em São José dos Pinhais, é possível separar diagnóstico remoto, visita e projeto de implantação. Nenhuma política de retenção ou garantia de recuperação deve ser presumida antes desse levantamento."
+            "Com essas informações e o endereço em São José dos Pinhais, é possível separar diagnóstico remoto, visita e projeto de implantação. Nenhuma política de retenção ou garantia de recuperação deve ser presumida antes desse levantamento.",
+            "Também é importante dizer quem precisa recuperar os dados quando o responsável habitual não estiver disponível. Um plano que depende de uma única pessoa conhecer senha, mídia e procedimento cria outro ponto de falha; a documentação deve permitir que a empresa entenda como acionar a restauração com segurança."
           ]
         }
       ],
