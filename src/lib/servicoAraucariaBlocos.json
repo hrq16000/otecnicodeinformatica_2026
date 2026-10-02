@@ -203,7 +203,8 @@
           "titulo": "Som sem imagem não fecha diagnóstico",
           "paragrafos": [
             "Áudio funcionando com tela escura pode sugerir problema de iluminação, mas fonte, circuito de alimentação e painel também precisam ser considerados. Reinício constante leva a outra linha de investigação; manchas ou linhas fixas podem indicar cenário de painel.",
-            "Por isso a triagem pede modelo, polegadas e vídeo curto do sintoma quando possível. Esse material ajuda a decidir se vale movimentar o aparelho e qual tipo de avaliação será necessária."
+            "Por isso a triagem pede modelo, polegadas e vídeo curto do sintoma quando possível. Esse material ajuda a decidir se vale movimentar o aparelho e qual tipo de avaliação será necessária.",
+            "Se o defeito aparece apenas depois de aquecer, informe o tempo aproximado até a falha. Esse padrão pode ser importante para reproduzir o comportamento durante a avaliação."
           ]
         },
         {
@@ -388,7 +389,8 @@
           "titulo": "O gargalo precisa aparecer nos sintomas",
           "paragrafos": [
             "Inicialização demorada e disco constantemente ocupado apontam para um cenário diferente de máquina que fica lenta apenas com muitas abas ou programas. Falta de memória e armazenamento lento podem coexistir, mas cada um pede uma solução diferente.",
-            "Antes do upgrade, a avaliação procura entender quando a lentidão acontece e qual componente está limitando o uso. Isso evita instalar SSD em equipamento cujo problema principal está em outra parte."
+            "Antes do upgrade, a avaliação procura entender quando a lentidão acontece e qual componente está limitando o uso. Isso evita instalar SSD em equipamento cujo problema principal está em outra parte.",
+            "Também vale observar quanto espaço livre resta no disco atual. Armazenamento quase cheio pode piorar a experiência e precisa ser separado de um gargalo puramente de velocidade."
           ]
         },
         {
