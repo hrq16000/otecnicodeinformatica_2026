@@ -21,7 +21,7 @@ jobs:
           bun-version: latest
       - uses: actions/setup-node@v4
         with:
-          node-version: "20"
+          node-version: "22"
           cache: npm
       - name: Install exact lockfile
         run: npm ci
@@ -37,7 +37,7 @@ jobs:
         run: npx playwright install --with-deps chromium firefox webkit
       - name: Start Bun dev server for E2E
         run: |
-          bun run dev -- --host 0.0.0.0 --port 8080 --strictPort > /tmp/e2e-server.log 2>&1 &
+          npm run dev -- --host 0.0.0.0 --port 8080 --strictPort > /tmp/e2e-server.log 2>&1 &
           echo $! > /tmp/e2e-server.pid
           for i in {1..60}; do
             if curl -fsS http://localhost:8080 >/dev/null; then
