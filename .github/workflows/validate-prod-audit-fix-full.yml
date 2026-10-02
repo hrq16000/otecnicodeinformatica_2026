@@ -35,17 +35,17 @@ jobs:
         run: npm run build
       - name: Install Playwright browsers
         run: npx playwright install --with-deps chromium firefox webkit
-      - name: Start production preview
+      - name: Start production server
         run: |
-          npx vite preview --port 8080 --strictPort > /tmp/vite-preview.log 2>&1 &
-          echo $! > /tmp/vite-preview.pid
+          PORT=8080 HOST=0.0.0.0 node dist/server/index.mjs > /tmp/prod-server.log 2>&1 &
+          echo $! > /tmp/prod-server.pid
           for i in {1..60}; do
             if curl -fsS http://localhost:8080 >/dev/null; then
               exit 0
             fi
             sleep 1
           done
-          cat /tmp/vite-preview.log
+          cat /tmp/prod-server.log
           exit 1
       - name: Full E2E Chromium
         env:
