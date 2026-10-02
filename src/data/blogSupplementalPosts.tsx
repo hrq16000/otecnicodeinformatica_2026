@@ -11,6 +11,152 @@ import { MODALIDADES } from "@/lib/precosConfig";
  * do blog compõem base + suplementares + programáticos.
  */
 export const blogSupplementalPosts: Record<string, BlogPostContent> = {
+  "windows-update-nao-funciona-o-que-verificar": {
+    title: "Windows Update não funciona: o que verificar antes de resetar componentes ou formatar",
+    excerpt:
+      "Quando o Windows Update falha, o melhor caminho é identificar em qual etapa parou, registrar o código do erro, validar espaço, rede, data/hora e integridade do sistema antes de partir para limpeza de cache ou reinstalação.",
+    date: "2026-10-01",
+    readTime: "15 min",
+    category: "Windows",
+    content: (
+      <>
+        <p className="lead">
+          Quando o <strong>Windows Update não funciona</strong>, trate o problema como um fluxo: verificar, baixar,
+          preparar, instalar e eventualmente reverter. Saber em qual etapa a falha ocorre evita aplicar comandos genéricos
+          que não têm relação com a causa.
+        </p>
+
+        <h2>Resposta direta: o que verificar primeiro</h2>
+        <ol>
+          <li>Anote a mensagem ou código de erro exibido.</li>
+          <li>Confirme data/hora, conexão estável e espaço livre suficiente.</li>
+          <li>Reinicie o computador se houver atualização pendente aguardando conclusão.</li>
+          <li>Abra o histórico de atualizações e identifique qual KB ou componente falhou.</li>
+          <li>Execute o solucionador oficial do Windows Update quando disponível.</li>
+          <li>Remova temporariamente periféricos não essenciais se a falha começou após uma mudança de hardware.</li>
+          <li>Use procedimentos de cache ou reparo somente depois da triagem básica.</li>
+          <li>Se o Windows não inicia, passe para as opções oficiais do Ambiente de Recuperação.</li>
+        </ol>
+
+        <h2>1. Identifique a etapa da falha</h2>
+        <table>
+          <thead><tr><th>Etapa</th><th>Sintoma comum</th><th>O que observar</th></tr></thead>
+          <tbody>
+            <tr><td>Verificação</td><td>não encontra ou não consulta atualizações</td><td>rede, serviços do sistema, data/hora</td></tr>
+            <tr><td>Download</td><td>percentual não avança</td><td>rede, espaço, cache</td></tr>
+            <tr><td>Preparação</td><td>fica preparando por muito tempo</td><td>espaço, integridade, reinício pendente</td></tr>
+            <tr><td>Instalação</td><td>falha em uma KB específica</td><td>código, driver, componente afetado</td></tr>
+            <tr><td>Reversão</td><td>“desfazendo alterações”</td><td>histórico, atualização específica, Windows RE</td></tr>
+          </tbody>
+        </table>
+
+        <h2>2. O código de erro vale mais que “não atualiza”</h2>
+        <p>
+          Registre o código antes de limpar logs, cache ou reiniciar várias vezes. Ele ajuda a separar falha de download,
+          incompatibilidade, falta de espaço, driver, corrupção de componentes e outros cenários.
+        </p>
+
+        <h2>3. Confira espaço livre e reinicialização pendente</h2>
+        <p>
+          Atualizações precisam de espaço temporário e podem depender de uma reinicialização anterior. Antes de executar
+          comandos avançados, confirme que o sistema não está apenas aguardando a conclusão de uma etapa anterior.
+        </p>
+
+        <h2>4. Evite desativar serviços do Windows Update como solução permanente</h2>
+        <p>
+          Interromper serviços pode fazer parte de procedimentos documentados de manutenção do cache, mas manter Windows Update
+          desativado cria outro problema: o sistema deixa de receber correções. Não use scripts genéricos que desligam componentes
+          sem explicar como e quando restaurá-los.
+        </p>
+
+        <h2>5. O solucionador oficial deve vir antes de resets agressivos</h2>
+        <p>
+          Quando disponível para a versão instalada, o solucionador do Windows Update é uma etapa de baixo risco e pode
+          corrigir estados comuns sem exigir limpeza manual de componentes.
+        </p>
+
+        <h2>6. Limpar SoftwareDistribution não é resposta universal</h2>
+        <p>
+          O cache do Windows Update pode ser reconstruído em cenários específicos, mas ele não corrige falta de espaço,
+          driver incompatível, falha física de disco ou qualquer outro problema fora do cache. Use essa técnica somente
+          quando o diagnóstico aponta para o componente de atualização.
+        </p>
+
+        <h2>7. Diferencie reparo de arquivos do sistema de reparo da imagem</h2>
+        <p>
+          Ferramentas de verificação de arquivos e reparo da imagem têm objetivos diferentes. Não execute uma sequência
+          enorme de comandos apenas porque aparecem em tutoriais; registre o estado antes e valide se cada etapa mudou algo.
+        </p>
+
+        <h2>8. Histórico de atualizações ajuda a encontrar repetição</h2>
+        <p>
+          Se a mesma atualização falha repetidamente, registre o identificador da KB e a data. Isso é mais útil que apenas
+          repetir “verificar atualizações” várias vezes.
+        </p>
+
+        <h2>9. Drivers podem participar do problema</h2>
+        <p>
+          Algumas atualizações dependem de drivers e firmware compatíveis. Se a falha começou depois de uma troca de hardware
+          ou driver, essa relação temporal merece investigação. Evite atualizadores de driver genéricos.
+        </p>
+
+        <h2>10. Não force desligamento durante instalação por impaciência</h2>
+        <p>
+          Durante instalação e reversão, interromper energia pode transformar uma falha recuperável em corrupção. Só desligue
+          à força quando houver motivo técnico claro para concluir que o processo realmente travou e você tiver plano de recuperação.
+        </p>
+
+        <h2>11. Quando o Windows entra em loop, use as opções de recuperação</h2>
+        <p>
+          Se o sistema não volta a iniciar, o Windows RE oferece opções como Reparo de Inicialização e Desinstalar Atualizações.
+          Em máquinas com BitLocker, algumas ações podem exigir a chave de recuperação.
+        </p>
+
+        <h2>12. Formatação deve ser a última categoria de decisão, não o primeiro teste</h2>
+        <p>
+          Reinstalar o Windows pode ser apropriado quando a instalação está muito danificada ou a recuperação é mais cara que
+          reconstruir o ambiente. Mas formatar não deve substituir a investigação de disco, memória, driver ou firmware.
+        </p>
+
+        <h2>Critérios de parada</h2>
+        <ul>
+          <li>O disco apresenta erros, desaparece ou há arquivos corrompidos.</li>
+          <li>O Windows não inicia e a chave BitLocker não está disponível.</li>
+          <li>A falha começou após atualização de firmware que não pode ser revertida com segurança.</li>
+          <li>O mesmo erro persiste depois de triagem, solucionador e verificação controlada.</li>
+          <li>Há dados importantes sem backup antes de procedimentos mais invasivos.</li>
+        </ul>
+
+        <h2>Perguntas frequentes</h2>
+        <h3>Posso apagar a pasta SoftwareDistribution?</h3>
+        <p>
+          Ela pode ser reconstruída, mas isso não deve ser a primeira ação nem uma resposta para qualquer erro. Prefira
+          procedimento reversível e documentado quando o problema realmente aponta para cache.
+        </p>
+
+        <h3>Windows Update travado significa que o PC está com vírus?</h3>
+        <p>
+          Não. Malware é apenas uma hipótese entre muitas. Falhas de rede, espaço, driver, componentes do sistema e atualizações
+          específicas são causas mais diretamente relacionadas ao próprio processo de atualização.
+        </p>
+
+        <h3>Formatar resolve Windows Update?</h3>
+        <p>
+          Pode resolver problemas graves de software, mas não corrige falha física nem é necessário na maioria das primeiras
+          etapas de diagnóstico. Use como decisão posterior, com backup e motivo técnico claro.
+        </p>
+
+        <h2>Resumo prático</h2>
+        <p>
+          <strong>Windows Update deve ser diagnosticado por etapa e evidência.</strong> Registre código e KB, confira espaço,
+          rede e reinícios pendentes, use o solucionador oficial e só depois avance para cache, reparo de componentes ou recuperação.
+        </p>
+
+        <EditorialReferences slug="windows-update-nao-funciona-o-que-verificar" />
+      </>
+    ),
+  },
+
   "ordem-de-boot-na-bios-como-configurar": {
     title: "Ordem de boot na BIOS/UEFI: como configurar sem quebrar a inicialização do Windows",
     excerpt:
