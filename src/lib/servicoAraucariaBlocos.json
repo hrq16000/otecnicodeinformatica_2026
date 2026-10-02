@@ -125,7 +125,8 @@
           "titulo": "Atendimento entre 2 e 72 horas úteis",
           "paragrafos": [
             "A janela operacional varia de 2 a 72 horas úteis conforme urgência e disponibilidade de agenda. Um computador de trabalho parado pode receber prioridade sobre uma revisão sem impacto imediato, mas a posição final depende do prestador disponível e do tipo de teste necessário.",
-            "Esse intervalo não é prazo garantido para entregar o PC reparado. Peça, recuperação de dados, teste de estabilidade e bancada podem ampliar o tempo depois do diagnóstico."
+            "Esse intervalo não é prazo garantido para entregar o PC reparado. Peça, recuperação de dados, teste de estabilidade e bancada podem ampliar o tempo depois do diagnóstico.",
+            "Quando existe risco de dados, esse fator também muda a ordem do trabalho. Um disco com sinais de falha pode exigir cópia antes de testes agressivos, mesmo que o pedido inicial seja apenas resolver travamento ou lentidão."
           ]
         },
         {
@@ -223,7 +224,8 @@
           "titulo": "Reparo e viabilidade econômica são decisões diferentes",
           "paragrafos": [
             "Algumas falhas de fonte, iluminação ou conexão podem ter cenário de reparo diferente de painel trincado ou peça principal indisponível. O diagnóstico precisa informar quando o custo ou o risco deixam de fazer sentido frente ao valor do aparelho.",
-            "A avaliação serve também para evitar gasto ruim. Quando existem caminhos diferentes, o cliente deve entender custo, risco e disponibilidade antes de aprovar."
+            "A avaliação serve também para evitar gasto ruim. Quando existem caminhos diferentes, o cliente deve entender custo, risco e disponibilidade antes de aprovar.",
+            "Se o defeito é intermitente, vale registrar em vídeo quando ele aparece e em quais entradas ou aplicativos. Essa evidência ajuda a reproduzir o comportamento sem manter a TV ligada por tentativa durante horas."
           ]
         },
         {
@@ -300,7 +302,8 @@
           "titulo": "Bateria estufada e líquido exigem prioridade de segurança",
           "paragrafos": [
             "Bateria deformada, aparelho abrindo a tampa ou aquecimento anormal pedem interrupção de uso e carga até avaliação. Em dano por líquido, insistir em ligar pode ampliar corrosão e curto na placa.",
-            "Prioridade de triagem não significa garantia de recuperação. O estado interno só pode ser conhecido depois da inspeção, e a decisão depende da extensão do dano."
+            "Prioridade de triagem não significa garantia de recuperação. O estado interno só pode ser conhecido depois da inspeção, e a decisão depende da extensão do dano.",
+            "Tela quebrada com imagem ainda visível também pede cuidado: pressionar a área danificada, continuar usando o aparelho no bolso ou carregar enquanto a carcaça está deformada pode aumentar o problema. A orientação inicial é reduzir uso até entender a condição física."
           ]
         },
         {
@@ -314,7 +317,8 @@
           "titulo": "Dados pessoais fazem parte do risco técnico",
           "paragrafos": [
             "O acesso ao aparelho deve ficar limitado ao que é necessário para testar a função reparada. Quando câmera, áudio, biometria ou rede exigem desbloqueio, a necessidade precisa ser explicada ao cliente.",
-            "Em problemas de sistema, vale confirmar se existe backup antes de uma intervenção que possa afetar dados. Em troca física simples não existe justificativa para navegar por conteúdo pessoal."
+            "Em problemas de sistema, vale confirmar se existe backup antes de uma intervenção que possa afetar dados. Em troca física simples não existe justificativa para navegar por conteúdo pessoal.",
+            "Quando o aparelho ainda funciona, o cliente pode aproveitar a triagem para verificar se consegue acessar a conta principal e os mecanismos de recuperação. Esse preparo não conserta o hardware, mas reduz o impacto caso a intervenção exija reinicialização, atualização ou substituição do equipamento."
           ]
         },
         {
@@ -391,7 +395,8 @@
           "titulo": "Compatibilidade vem antes da compra",
           "paragrafos": [
             "Notebook e desktop podem aceitar SATA, M.2 SATA ou NVMe, além de formatos e capacidades diferentes. Também é necessário saber se existe slot livre, se o firmware reconhece a peça e se a memória usa padrão compatível.",
-            "Confirmar esses detalhes antes de comprar reduz devolução e adaptação improvisada. A peça certa é a que funciona com a plataforma e entrega ganho compatível com o uso."
+            "Confirmar esses detalhes antes de comprar reduz devolução e adaptação improvisada. A peça certa é a que funciona com a plataforma e entrega ganho compatível com o uso.",
+            "Em desktop, também vale verificar quantidade de portas e alimentação disponíveis; em notebook, abertura e fixação podem variar bastante. A compatibilidade física é tão importante quanto a interface anunciada na ficha técnica."
           ]
         },
         {
