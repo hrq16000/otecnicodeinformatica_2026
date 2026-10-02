@@ -517,7 +517,8 @@
           "titulo": "O que informar antes de qualquer tentativa",
           "paragrafos": [
             "Diga qual é a mídia, capacidade, sistema usado, o que aconteceu e quais tentativas já foram feitas. Informe se o dispositivo ainda aparece, se emite ruído, se pede formatação e quais pastas ou tipos de arquivo são realmente prioritários.",
-            "Acrescente o bairro em Araucária e se a mídia está dentro de notebook, desktop ou equipamento externo. Com esse contexto, a triagem consegue orientar transporte, prioridade e próxima etapa sem exigir tentativa improvisada."
+            "Acrescente o bairro em Araucária e se a mídia está dentro de notebook, desktop ou equipamento externo. Com esse contexto, a triagem consegue orientar transporte, prioridade e próxima etapa sem exigir tentativa improvisada.",
+            "Se o pedido envolve muitos arquivos, também ajuda priorizar o que realmente precisa voltar primeiro. Fotos, documentos fiscais, bancos de dados e arquivos de trabalho podem ter importância diferente; essa ordem orienta a tentativa e evita gastar tempo com conteúdo substituível antes do essencial."
           ]
         }
       ],
@@ -593,7 +594,8 @@
           "titulo": "Registro reduz repetição de diagnóstico",
           "paragrafos": [
             "Quando um incidente é encerrado, vale registrar equipamento, sintoma, causa provável, mudança executada e pendências. Se o defeito reaparece, o histórico ajuda a identificar padrão e evita começar novamente pela mesma lista de perguntas.",
-            "Esse registro é especialmente útil em pequenas empresas sem equipe interna de TI. O objetivo não é criar burocracia, e sim deixar informação suficiente para o próximo atendimento ser mais consistente."
+            "Esse registro é especialmente útil em pequenas empresas sem equipe interna de TI. O objetivo não é criar burocracia, e sim deixar informação suficiente para o próximo atendimento ser mais consistente.",
+            "Quando o mesmo incidente aparece em usuários diferentes, vale registrar horário, máquinas envolvidas e qualquer mudança recente no ambiente. Esse padrão pode apontar para atualização, rede, autenticação ou serviço compartilhado, em vez de vários defeitos independentes."
           ]
         },
         {
@@ -607,7 +609,8 @@
           "titulo": "Como abrir um chamado empresarial útil",
           "paragrafos": [
             "Informe endereço, pessoa responsável, quantidade aproximada de usuários afetados, equipamento ou sistema envolvido e se existe alternativa temporária. Diga se a falha começou após atualização, queda de energia, troca de roteador ou outra mudança recente.",
-            "Se houver mais de um problema, liste separadamente. Com esse material e a região de Araucária, a triagem consegue organizar prioridade, modalidade e janela de atendimento com menos interrupção para a equipe."
+            "Se houver mais de um problema, liste separadamente. Com esse material e a região de Araucária, a triagem consegue organizar prioridade, modalidade e janela de atendimento com menos interrupção para a equipe.",
+            "Também informe se existe algum equipamento que não pode ser desligado durante o expediente. Essa restrição muda a sequência do atendimento e ajuda a planejar uma janela que preserve a operação enquanto a causa é investigada."
           ]
         }
       ],
@@ -669,7 +672,8 @@
           "titulo": "Problemas adequados ao remoto",
           "paragrafos": [
             "Configuração de programas, contas, navegadores, parte dos erros de Windows, impressão já ligada à rede e ajustes de reunião podem ser avaliados à distância. Também é possível fazer triagem inicial de lentidão quando a máquina ainda responde.",
-            "Máquina que não liga, tela sem imagem, conector quebrado, superaquecimento severo ou sinal Wi‑Fi que precisa ser medido dentro do imóvel fogem desse escopo e devem migrar para outra modalidade."
+            "Máquina que não liga, tela sem imagem, conector quebrado, superaquecimento severo ou sinal Wi‑Fi que precisa ser medido dentro do imóvel fogem desse escopo e devem migrar para outra modalidade.",
+            "A sessão também pode servir para coletar evidências antes de uma etapa física: mensagens de erro, logs básicos, espaço livre, comportamento do sistema e histórico de atualização. Isso não substitui teste de hardware, mas reduz o número de hipóteses antes do deslocamento."
           ]
         },
         {
@@ -697,7 +701,8 @@
           "titulo": "Como preparar a máquina para a triagem",
           "paragrafos": [
             "Informe versão do sistema quando souber, descreva o erro, diga desde quando começou e envie captura de tela. Confirme também se a internet funciona e se o computador consegue abrir o navegador.",
-            "Se o equipamento pertence a uma empresa, avise sobre restrições de administrador. Isso evita tentar mudanças que dependem do TI interno e ajuda a decidir se a sessão pode avançar ou deve virar diagnóstico para repasse."
+            "Se o equipamento pertence a uma empresa, avise sobre restrições de administrador. Isso evita tentar mudanças que dependem do TI interno e ajuda a decidir se a sessão pode avançar ou deve virar diagnóstico para repasse.",
+            "Se o erro acontece apenas em determinado programa, informe versão, conta usada e se o mesmo comportamento ocorre em outro computador. Esse contraste ajuda a separar falha local de indisponibilidade do serviço ou restrição da própria aplicação."
           ]
         }
       ],
@@ -752,7 +757,8 @@
           "titulo": "Compatibilidade precisa ser conferida como conjunto",
           "paragrafos": [
             "Processador, placa-mãe e memória formam o núcleo, mas gabinete, cooler, fonte, armazenamento e placa de vídeo também precisam conversar entre si. Uma peça compatível eletricamente pode não caber fisicamente ou exigir conector que a fonte não oferece.",
-            "A conferência antes da montagem reduz improviso. Se existe dúvida sobre BIOS, altura do cooler ou comprimento da GPU, ela deve ser resolvida antes de forçar instalação."
+            "A conferência antes da montagem reduz improviso. Se existe dúvida sobre BIOS, altura do cooler ou comprimento da GPU, ela deve ser resolvida antes de forçar instalação.",
+            "Quando componentes vieram de compras diferentes, também é importante conferir revisões e acessórios incluídos. Placa-mãe sem espaçador correto, cooler sem kit compatível ou gabinete sem espaço para radiador podem interromper a montagem mesmo quando as especificações principais parecem corretas."
           ]
         },
         {
@@ -766,7 +772,8 @@
           "titulo": "Primeiro boot não encerra o serviço",
           "paragrafos": [
             "Depois de ligar, entram BIOS ou UEFI, reconhecimento de memória e armazenamento, temperatura, atualização necessária e configuração básica. Um PC que mostra imagem ainda pode ter memória em velocidade errada ou componente não detectado.",
-            "A validação inclui testes compatíveis com o uso esperado. Não existe um benchmark único que prove estabilidade para qualquer configuração, por isso o conjunto de testes depende da máquina."
+            "A validação inclui testes compatíveis com o uso esperado. Não existe um benchmark único que prove estabilidade para qualquer configuração, por isso o conjunto de testes depende da máquina.",
+            "Durante a validação, também se observa ruído anormal, rotação de ventoinhas, estabilidade das portas e reconhecimento dos dispositivos. O objetivo é entregar uma máquina que passou por verificação coerente com a configuração, não apenas uma montagem que conseguiu inicializar uma vez."
           ]
         },
         {
@@ -787,7 +794,8 @@
           "titulo": "O que enviar antes de agendar",
           "paragrafos": [
             "Liste processador, placa-mãe, memória, fonte, gabinete, armazenamento, cooler e placa de vídeo. Se alguma peça ainda será comprada, informe antes para que a compatibilidade seja revisada.",
-            "Diga também o bairro em Araucária e se as peças já estão lacradas, usadas ou vieram de outro computador. Isso ajuda a separar montagem nova, reaproveitamento e diagnóstico de componente."
+            "Diga também o bairro em Araucária e se as peças já estão lacradas, usadas ou vieram de outro computador. Isso ajuda a separar montagem nova, reaproveitamento e diagnóstico de componente.",
+            "Se houver componentes usados, avise sobre origem e tempo de uso quando souber. A montagem pode funcionar, mas uma peça antiga ou sem histórico muda a interpretação de qualquer instabilidade encontrada durante os testes."
           ]
         }
       ],
@@ -842,7 +850,8 @@
           "titulo": "Reproduzir o defeito é melhor que adivinhar a peça",
           "paragrafos": [
             "Tela preta, reinício, queda de clock, artefato visual e fechamento de jogo apontam para caminhos diferentes. A análise observa temperatura, uso de memória, alimentação, armazenamento, driver e comportamento da GPU no momento da falha.",
-            "Quando o problema não aparece, trocar componente por suspeita vira tentativa cara. O objetivo é construir evidência suficiente para indicar software, refrigeração, fonte, memória, SSD ou placa de vídeo."
+            "Quando o problema não aparece, trocar componente por suspeita vira tentativa cara. O objetivo é construir evidência suficiente para indicar software, refrigeração, fonte, memória, SSD ou placa de vídeo.",
+            "Falhas intermitentes exigem anotar frequência e contexto. Se o problema aparece apenas depois de determinada temperatura, em uma cena específica ou com um periférico conectado, essa informação vale mais do que uma descrição genérica de 'travou'."
           ]
         },
         {
@@ -870,14 +879,16 @@
           "titulo": "Rede nacional sem transformar alcance em promessa local",
           "paragrafos": [
             "A empresa nasceu em Curitiba em 2006 e hoje integra uma rede nacional com mais de 6 mil prestadores credenciados. Em Araucária, esse alcance é usado para consultar disponibilidade, não para publicar quantidade municipal sem fonte.",
-            "A referência de tarifa mínima justa procura remunerar o tempo de teste e diagnóstico. Em PC gamer, a etapa mais valiosa muitas vezes é descobrir qual peça não precisa ser trocada."
+            "A referência de tarifa mínima justa procura remunerar o tempo de teste e diagnóstico. Em PC gamer, a etapa mais valiosa muitas vezes é descobrir qual peça não precisa ser trocada.",
+            "Quando o objetivo é upgrade e não reparo, a análise muda para gargalo. Uso real de CPU, GPU, memória e armazenamento ajuda a identificar qual componente limita desempenho e evita comprar uma peça cara que a plataforma atual não consegue aproveitar."
           ]
         },
         {
           "titulo": "Informações úteis antes do teste",
           "paragrafos": [
             "Envie processador, placa de vídeo, memória, fonte e armazenamento quando souber. Descreva em qual jogo ou aplicação a falha aparece, quanto tempo leva e se houve troca recente de peça, driver ou BIOS.",
-            "Informe também o bairro em Araucária e se o gabinete pode ser transportado com segurança. Esses dados ajudam a escolher modalidade, equipamento de teste e janela de atendimento."
+            "Informe também o bairro em Araucária e se o gabinete pode ser transportado com segurança. Esses dados ajudam a escolher modalidade, equipamento de teste e janela de atendimento.",
+            "Também vale informar resolução e taxa de atualização do monitor, porque a meta de desempenho depende disso. Um conjunto adequado para 1080p pode ter exigência diferente em 1440p ou em altas taxas de quadros."
           ]
         }
       ],
@@ -932,7 +943,8 @@
           "titulo": "Primeiro identificar onde o trabalho parou",
           "paragrafos": [
             "É diferente perder acesso à VPN, ficar sem áudio em reunião ou ter a máquina sem energia. Cada situação aponta para uma camada: conta, aplicativo, sistema, rede, periférico ou hardware.",
-            "A triagem pergunta o que ainda funciona e se outro dispositivo apresenta o mesmo problema. Isso reduz mudanças aleatórias e ajuda a recuperar uma solução provisória quando a correção definitiva depende de outra equipe."
+            "A triagem pergunta o que ainda funciona e se outro dispositivo apresenta o mesmo problema. Isso reduz mudanças aleatórias e ajuda a recuperar uma solução provisória quando a correção definitiva depende de outra equipe.",
+            "Também ajuda separar problema recorrente de incidente pontual. Uma câmera que some depois de toda atualização ou uma VPN que falha sempre em determinada rede indicam um padrão que merece correção mais duradoura, não apenas um ajuste temporário."
           ]
         },
         {
@@ -946,7 +958,8 @@
           "titulo": "A janela operacional fica entre 2 e 72 horas úteis",
           "paragrafos": [
             "A urgência considera se o usuário ainda consegue trabalhar por algum caminho e qual tarefa foi interrompida. Mesmo em home office, a agenda depende da disponibilidade do prestador adequado.",
-            "A faixa de 2 a 72 horas úteis indica o início do atendimento. Bloqueio do TI da empresa, falha do provedor ou peça física podem exigir continuidade fora dessa janela."
+            "A faixa de 2 a 72 horas úteis indica o início do atendimento. Bloqueio do TI da empresa, falha do provedor ou peça física podem exigir continuidade fora dessa janela.",
+            "Quando o trabalho depende de reunião ou acesso a sistema em horário fixo, informe esse compromisso na triagem. Isso não cria garantia de atendimento imediato, mas ajuda a classificar o impacto e a buscar a melhor janela disponível."
           ]
         },
         {
@@ -967,7 +980,8 @@
           "titulo": "O que preparar antes de pedir ajuda",
           "paragrafos": [
             "Informe se o equipamento é pessoal ou corporativo, qual aplicativo ou função parou, se a internet funciona em outros dispositivos e se o problema ocorre apenas em uma conta. Envie captura da mensagem de erro quando houver.",
-            "Se houver chance de visita, acrescente o bairro e os horários em que o posto pode ser interrompido. Isso ajuda a montar uma sequência que preserve o expediente."
+            "Se houver chance de visita, acrescente o bairro e os horários em que o posto pode ser interrompido. Isso ajuda a montar uma sequência que preserve o expediente.",
+            "Se o posto usa dock, adaptadores, headset USB ou vários monitores, liste esses itens. Periféricos intermediários podem ser a causa da falha e precisam entrar no diagnóstico para evitar atribuir o problema ao notebook sem evidência."
           ]
         }
       ],
@@ -1022,14 +1036,16 @@
           "titulo": "Chamado deve identificar pessoa, máquina e processo afetado",
           "paragrafos": [
             "Uma descrição útil informa quem percebeu o problema, qual equipamento está envolvido e qual tarefa deixou de funcionar. Se várias pessoas foram afetadas, isso também precisa aparecer desde a abertura.",
-            "Esse contexto permite diferenciar incidente individual de falha sistêmica. Também ajuda a registrar o que foi feito e comparar quando o problema retorna."
+            "Esse contexto permite diferenciar incidente individual de falha sistêmica. Também ajuda a registrar o que foi feito e comparar quando o problema retorna.",
+            "Também é útil registrar o horário em que o incidente começou e se houve alteração recente em roteador, política, usuário ou atualização. Esse contexto temporal ajuda a conectar causa e efeito quando várias mudanças aconteceram no ambiente."
           ]
         },
         {
           "titulo": "Incidente, manutenção e projeto precisam ficar separados",
           "paragrafos": [
             "Restaurar acesso de um usuário é diferente de revisar vinte estações ou redesenhar a rede da empresa. Misturar tudo no mesmo chamado cria prazo e custo difíceis de controlar.",
-            "A triagem separa correção imediata, atividade programável e mudança estrutural. Assim cada item recebe escopo e autorização compatíveis com o trabalho necessário."
+            "A triagem separa correção imediata, atividade programável e mudança estrutural. Assim cada item recebe escopo e autorização compatíveis com o trabalho necessário.",
+            "Projetos maiores também precisam de janela própria para teste e retorno. Migrar arquivos, trocar várias estações ou reorganizar rede sem separar implantação de suporte diário aumenta o risco de deixar a equipe sem caminho de reversão."
           ]
         },
         {
@@ -1043,7 +1059,8 @@
           "titulo": "Remoto primeiro quando reduz interrupção",
           "paragrafos": [
             "Contas, permissões, software e parte dos problemas de estação podem começar remotamente. Rede física, energia, equipamento que não liga e cabeamento normalmente exigem presença.",
-            "Quando a visita é necessária, o histórico do chamado deve acompanhar o atendimento. Isso reduz retrabalho e ajuda a levar a ferramenta ou peça de teste adequada."
+            "Quando a visita é necessária, o histórico do chamado deve acompanhar o atendimento. Isso reduz retrabalho e ajuda a levar a ferramenta ou peça de teste adequada.",
+            "Se o remoto encontra uma dependência física, o registro deve dizer exatamente qual ponto precisa ser validado no local. Assim a visita começa com objetivo definido e reduz a chance de deslocamento apenas para repetir diagnóstico já feito."
           ]
         },
         {
@@ -1057,7 +1074,8 @@
           "titulo": "O que registrar ao encerrar cada atendimento",
           "paragrafos": [
             "Vale guardar causa provável, ação executada, equipamento envolvido, responsável que autorizou e pendências. Se a solução foi provisória, isso deve ficar explícito para não ser confundido com correção definitiva.",
-            "Quando chamados semelhantes começam a se repetir, o histórico pode indicar manutenção preventiva, substituição planejada ou projeto. Essa decisão deve nascer dos registros, não de uma oferta genérica de contrato."
+            "Quando chamados semelhantes começam a se repetir, o histórico pode indicar manutenção preventiva, substituição planejada ou projeto. Essa decisão deve nascer dos registros, não de uma oferta genérica de contrato.",
+            "Ao longo do tempo, esse histórico permite distinguir equipamento problemático de processo mal definido. Uma estação que quebra repetidamente pede outra decisão diferente de vários usuários cometendo o mesmo erro por falta de configuração padronizada."
           ]
         }
       ],
@@ -1112,7 +1130,8 @@
           "titulo": "Checklist por estação cria comparação ao longo do tempo",
           "paragrafos": [
             "Cada máquina deve ter uma sequência mínima de verificação: armazenamento, espaço livre, inicialização, atualizações, segurança, temperatura quando aplicável, periféricos e sinais físicos. O resultado precisa registrar o que foi observado.",
-            "Na próxima rodada, esse histórico ajuda a distinguir um novo problema de algo que já vinha se degradando. Sem registro, a preventiva perde boa parte do valor."
+            "Na próxima rodada, esse histórico ajuda a distinguir um novo problema de algo que já vinha se degradando. Sem registro, a preventiva perde boa parte do valor.",
+            "Quando possível, também é útil registrar capacidade e idade aproximada do armazenamento, porque desgaste e espaço livre mudam a leitura de desempenho. O objetivo não é prever falha com certeza, e sim identificar sinais que merecem acompanhamento."
           ]
         },
         {
@@ -1126,7 +1145,8 @@
           "titulo": "Executar em lotes reduz parada da equipe",
           "paragrafos": [
             "Em vez de retirar todas as estações de uso ao mesmo tempo, a manutenção pode ser organizada por setor ou grupo. Uma parte passa pela revisão enquanto as demais continuam trabalhando.",
-            "A ordem deve considerar máquinas críticas e janelas de menor movimento. A região de Araucária entra na logística do atendimento, mas a sequência técnica permanece baseada no inventário."
+            "A ordem deve considerar máquinas críticas e janelas de menor movimento. A região de Araucária entra na logística do atendimento, mas a sequência técnica permanece baseada no inventário.",
+            "Equipamentos compartilhados podem exigir uma ordem diferente dos usados por uma única pessoa. A empresa deve indicar quais máquinas sustentam tarefas críticas para que a preventiva não retire justamente o recurso mais importante no pior horário."
           ]
         },
         {
@@ -1147,7 +1167,9 @@
           "titulo": "O que levantar antes de programar",
           "paragrafos": [
             "Liste estações, usuários, máquinas essenciais, melhor horário para interrupção e qualquer histórico recente de lentidão, aquecimento ou erro. Informe também notebooks que ficam fora do escritório e periféricos que precisam entrar no checklist.",
-            "Se existem relatórios antigos, eles ajudam a comparar evolução. Com esse inventário e o endereço em Araucária, a execução pode ser dividida de forma mais previsível."
+            "Se existem relatórios antigos, eles ajudam a comparar evolução. Com esse inventário e o endereço em Araucária, a execução pode ser dividida de forma mais previsível.",
+            "Também vale listar problemas que os usuários consideram 'normais' por acontecerem há meses. Lentidão, ruído, desconexão e reinício ocasional podem virar itens de observação e ajudar a preventiva a focar no que já demonstra mudança de comportamento.",
+            "Se houver software específico do negócio, informe antes da revisão. Atualizações ou alterações precisam respeitar compatibilidade e janela de uso, evitando que uma manutenção genérica quebre uma aplicação essencial."
           ]
         }
       ],
@@ -1202,28 +1224,32 @@
           "titulo": "Começar pelos dados críticos evita copiar tudo sem prioridade",
           "paragrafos": [
             "Contratos, banco de dados, documentos compartilhados e material histórico podem ter necessidades diferentes de retenção e velocidade de recuperação. O primeiro passo é classificar o que realmente precisa voltar primeiro.",
-            "Esse inventário também revela dados esquecidos fora da pasta principal, como arquivos locais de um usuário ou exportações que não entram no serviço de nuvem."
+            "Esse inventário também revela dados esquecidos fora da pasta principal, como arquivos locais de um usuário ou exportações que não entram no serviço de nuvem.",
+            "Também é importante identificar dados que já estão em serviços de terceiros e entender se aquilo é sincronização ou backup. Uma pasta sincronizada pode propagar exclusão para todos os dispositivos, enquanto retenção de versões pode permitir recuperação posterior."
           ]
         },
         {
           "titulo": "Cópias precisam ficar separadas do mesmo risco",
           "paragrafos": [
             "Um disco externo sempre conectado ao computador pode ser atingido pela mesma falha elétrica, malware ou exclusão que afetou o original. Separar destinos reduz a chance de um único incidente destruir tudo.",
-            "A combinação entre cópia local, externa e nuvem depende de volume, conexão, confidencialidade e tempo de restauração. Não existe desenho único que sirva para qualquer empresa."
+            "A combinação entre cópia local, externa e nuvem depende de volume, conexão, confidencialidade e tempo de restauração. Não existe desenho único que sirva para qualquer empresa.",
+            "O risco físico também importa. Guardar duas mídias lado a lado no mesmo local pode proteger contra defeito de um disco, mas não contra furto, incêndio ou outro evento que atinja o ambiente inteiro."
           ]
         },
         {
           "titulo": "Retenção protege contra erro descoberto tarde",
           "paragrafos": [
             "Sobrescrever a cópia de ontem com a versão de hoje pode ser insuficiente quando um arquivo foi corrompido ou alterado dias antes sem ninguém perceber. Manter versões permite voltar a estados anteriores.",
-            "A quantidade de histórico precisa equilibrar risco e armazenamento. O importante é que a política seja conhecida e compatível com a rotina real da empresa."
+            "A quantidade de histórico precisa equilibrar risco e armazenamento. O importante é que a política seja conhecida e compatível com a rotina real da empresa.",
+            "A retenção pode ser diferente por conjunto de dados. Arquivos que mudam diariamente precisam de histórico diferente de documentos arquivados, e a política deve refletir essa frequência em vez de aplicar a mesma regra a tudo."
           ]
         },
         {
           "titulo": "Teste de restauração transforma cópia em evidência",
           "paragrafos": [
             "Ver um status verde no software não prova que o arquivo volta corretamente. A rotina precisa restaurar amostras e confirmar abertura, integridade e caminho de recuperação.",
-            "Também vale documentar credenciais, responsáveis e procedimento. Se apenas uma pessoa sabe recuperar, existe um novo ponto único de falha."
+            "Também vale documentar credenciais, responsáveis e procedimento. Se apenas uma pessoa sabe recuperar, existe um novo ponto único de falha.",
+            "Durante o teste, é útil registrar quanto tempo a recuperação leva e quais etapas dependem de internet, senha ou mídia física. Esse tempo real ajuda a empresa a saber se o plano atende a necessidade de continuidade."
           ]
         },
         {
