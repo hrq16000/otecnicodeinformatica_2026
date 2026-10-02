@@ -1,0 +1,83 @@
+name: validate-prod-audit-fix-full
+
+on:
+  push:
+    branches:
+      - "security/fix-prod-audit-20261002"
+    paths:
+      - ".github/workflows/validate-prod-audit-fix-full.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+      - uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: latest
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: npm
+      - name: Install exact lockfile
+        run: npm ci
+      - name: Production audit must be clean
+        run: npm audit --omit=dev
+      - name: Unit tests
+        run: npm run test:unit
+      - name: Integration tests
+        run: npm run test:integration
+      - name: Production build
+        run: npm run build
+      - name: Install Playwright browsers
+        run: npx playwright install --with-deps chromium firefox webkit
+      - name: Start production preview
+        run: |
+          npx vite preview --port 8080 --strictPort > /tmp/vite-preview.log 2>&1 &
+          echo $! > /tmp/vite-preview.pid
+          for i in {1..60}; do
+            if curl -fsS http://localhost:8080 >/dev/null; then
+              exit 0
+            fi
+            sleep 1
+          done
+          cat /tmp/vite-preview.log
+          exit 1
+      - name: Full E2E Chromium
+        env:
+          CI: "true"
+          PW_BROWSER: chromium
+          E2E_BASE_URL: http://localhost:8080
+          E2E_SUPABASE_URL: ${{ secrets.VITE_SUPABASE_URL }}
+          E2E_SUPABASE_ANON_KEY: ${{ secrets.VITE_SUPABASE_PUBLISHABLE_KEY }}
+          E2E_NONADMIN_EMAIL: ${{ secrets.E2E_NONADMIN_EMAIL }}
+          E2E_NONADMIN_PASSWORD: ${{ secrets.E2E_NONADMIN_PASSWORD }}
+        run: npx playwright test --config=playwright.ci.config.ts
+      - name: Full E2E Firefox
+        env:
+          CI: "true"
+          PW_BROWSER: firefox
+          E2E_BASE_URL: http://localhost:8080
+          E2E_SUPABASE_URL: ${{ secrets.VITE_SUPABASE_URL }}
+          E2E_SUPABASE_ANON_KEY: ${{ secrets.VITE_SUPABASE_PUBLISHABLE_KEY }}
+          E2E_NONADMIN_EMAIL: ${{ secrets.E2E_NONADMIN_EMAIL }}
+          E2E_NONADMIN_PASSWORD: ${{ secrets.E2E_NONADMIN_PASSWORD }}
+        run: npx playwright test --config=playwright.ci.config.ts
+      - name: Full E2E WebKit
+        env:
+          CI: "true"
+          PW_BROWSER: webkit
+          E2E_BASE_URL: http://localhost:8080
+          E2E_SUPABASE_URL: ${{ secrets.VITE_SUPABASE_URL }}
+          E2E_SUPABASE_ANON_KEY: ${{ secrets.VITE_SUPABASE_PUBLISHABLE_KEY }}
+          E2E_NONADMIN_EMAIL: ${{ secrets.E2E_NONADMIN_EMAIL }}
+          E2E_NONADMIN_PASSWORD: ${{ secrets.E2E_NONADMIN_PASSWORD }}
+        run: npx playwright test --config=playwright.ci.config.ts
+      - name: Final production audit
+        run: npm audit --omit=dev
+      - name: Verify repository unchanged by validation
+        run: git diff --exit-code
