@@ -2528,13 +2528,17 @@ export const ARTICLE_SOURCE_MANIFEST: Record<string, ArticleSourceManifest> = {
   },
   "windows-update-nao-funciona-o-que-verificar": {
     slug: "windows-update-nao-funciona-o-que-verificar",
-    sources: [],
+    sources: [
+      "ms-windows-update-troubleshoot",
+      "ms-windows-update-cache-2026",
+      "ms-windows-recovery-environment",
+      "ms-recovery-options-windows",
+    ],
     technicalReview: "reviewed",
     factChecked: true,
-    factCheckedAt: "2026-08-26",
-    stableKnowledge: true,
+    factCheckedAt: "2026-10-01",
     notes:
-      "Revisão concluída (Onda 10C, Lote 4): estágios de verificação, download, preparação, instalação e reversão; triagem antes de comandos; diferença entre verificação de arquivos do sistema e reparo da imagem de componentes; proibição de desabilitar serviços do Update. Sem marca comercial e sem promessa. Conhecimento técnico estável — sem fonte visível.",
+      "Revisão material em 2026-10-01 guiada por sinal real de página no GSC: 2 impressões, 0 cliques e posição média 51,5 entre 2026-04-01 e 2026-09-28. A query individual exposta ('estagio da correção c') foi tratada como ruidosa e não virou pauta. A versão suplementar organiza a falha por estágios, prioriza código/KB, espaço, rede, solucionador oficial, cache apenas quando pertinente e Windows RE quando o sistema não inicia; sem desativação permanente de serviços ou formatação por tentativa.",
   },
   "limpar-cache-do-windows-update-softwaredistribution": {
     slug: "limpar-cache-do-windows-update-softwaredistribution",
