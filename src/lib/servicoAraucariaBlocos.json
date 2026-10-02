@@ -652,7 +652,7 @@
       "nome": "Atendimento Remoto",
       "intentGlobal": "entender quando suporte remoto resolve software, configuração, acesso e diagnóstico inicial sem deslocamento",
       "intentLocal": "iniciar suporte remoto em Araucária com sessão autorizada e transição clara para atendimento físico quando o diagnóstico apontar hardware ou rede local",
-      "title": "Suporte Remoto em Araucária | Windows, programas e acesso",
+      "title": "Suporte Remoto em Araucária | Sessão assistida e diagnóstico",
       "description": "Suporte remoto em Araucária para Windows, programas, contas e configuração, com sessão autorizada e encaminhamento físico quando necessário.",
       "h1": "Suporte remoto em Araucária",
       "subtitulo": "Acesso assistido para problemas que podem ser avaliados pela internet, sem fingir que uma sessão remota substitui teste físico quando o defeito está no hardware.",
