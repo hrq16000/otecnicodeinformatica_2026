@@ -11,6 +11,158 @@ import { MODALIDADES } from "@/lib/precosConfig";
  * do blog compõem base + suplementares + programáticos.
  */
 export const blogSupplementalPosts: Record<string, BlogPostContent> = {
+  "ordem-de-boot-na-bios-como-configurar": {
+    title: "Ordem de boot na BIOS/UEFI: como configurar sem quebrar a inicialização do Windows",
+    excerpt:
+      "Aprenda a diferenciar menu de boot temporário e prioridade permanente, identificar Windows Boot Manager, iniciar por USB com segurança e evitar mudanças desnecessárias em UEFI, Secure Boot e BitLocker.",
+    date: "2026-10-01",
+    readTime: "14 min",
+    category: "BIOS e UEFI",
+    content: (
+      <>
+        <p className="lead">
+          Alterar a <strong>ordem de boot na BIOS/UEFI</strong> define qual dispositivo o firmware tenta iniciar primeiro.
+          Para usar um pendrive uma única vez, o menu temporário de boot costuma ser mais seguro do que mudar a prioridade
+          permanente. Antes de alterar qualquer opção, registre a configuração original.
+        </p>
+
+        <h2>Resposta direta: como mudar a ordem de boot</h2>
+        <ol>
+          <li>Entre no firmware UEFI/BIOS ou no menu temporário de boot do equipamento.</li>
+          <li>Identifique a entrada correta: Windows Boot Manager, SSD/HD, USB ou outro dispositivo.</li>
+          <li>Para uso único, prefira o menu temporário de boot quando disponível.</li>
+          <li>Se precisar mudar a prioridade permanente, altere apenas a ordem necessária.</li>
+          <li>Não troque UEFI por Legacy/CSM apenas para “fazer aparecer” um dispositivo.</li>
+          <li>Não desative Secure Boot sem uma necessidade técnica documentada.</li>
+          <li>Salve, reinicie e confirme se o sistema esperado inicia.</li>
+          <li>Depois de instalar ou diagnosticar, restaure a prioridade normal quando fizer sentido.</li>
+        </ol>
+
+        <h2>Menu de boot temporário x ordem permanente</h2>
+        <table>
+          <thead><tr><th>Opção</th><th>Quando usar</th><th>Efeito</th></tr></thead>
+          <tbody>
+            <tr><td>Boot menu</td><td>iniciar uma vez por USB, SSD externo ou rede</td><td>vale apenas para aquela inicialização</td></tr>
+            <tr><td>Boot priority</td><td>mudar a sequência padrão do computador</td><td>permanece até nova alteração</td></tr>
+          </tbody>
+        </table>
+
+        <h2>1. Windows Boot Manager normalmente é a entrada correta do Windows em UEFI</h2>
+        <p>
+          Em sistemas instalados em modo UEFI, o firmware pode mostrar <strong>Windows Boot Manager</strong> em vez do nome
+          físico do SSD. Isso é esperado. Colocar apenas o nome do disco acima do Windows Boot Manager pode não produzir o
+          resultado imaginado.
+        </p>
+
+        <h2>2. Não mude UEFI/Legacy por tentativa</h2>
+        <p>
+          O modo usado para iniciar deve ser compatível com a forma como o sistema foi instalado. A documentação Microsoft
+          explica que, depois da instalação, o Windows normalmente continua inicializando no mesmo modo. Trocar para Legacy/CSM
+          sem planejamento pode fazer uma instalação funcional deixar de iniciar.
+        </p>
+
+        <h2>3. Pendrive não aparece? Primeiro valide a mídia</h2>
+        <p>
+          Antes de mexer em várias opções do firmware, confirme se o pendrive foi criado corretamente, se está conectado antes
+          de abrir o menu de boot e se o equipamento reconhece a porta utilizada. Um pendrive mal preparado não é corrigido
+          simplesmente alterando a prioridade.
+        </p>
+
+        <h2>4. Secure Boot não é sinônimo de bloqueio de USB</h2>
+        <p>
+          Secure Boot protege a cadeia de inicialização contra software não autorizado. Mídias compatíveis podem inicializar
+          com ele habilitado. Desativá-lo sem necessidade reduz uma proteção do sistema e pode criar diferenças de estado que
+          precisam ser revertidas depois.
+        </p>
+
+        <h2>5. BitLocker merece atenção antes de mudanças de firmware</h2>
+        <p>
+          Mudanças relevantes no ambiente de boot podem levar o Windows a solicitar a chave de recuperação do BitLocker.
+          Se o dispositivo usa criptografia, localize essa chave antes de alterar firmware, modo de boot ou outras configurações
+          relacionadas à inicialização.
+        </p>
+
+        <h2>6. Evite “Load Defaults” como primeira tentativa</h2>
+        <p>
+          Restaurar padrões do firmware pode alterar diversas configurações de uma vez: boot, virtualização, segurança,
+          controladora e outros itens. Isso dificulta saber o que realmente mudou. Prefira alterações pequenas e reversíveis.
+        </p>
+
+        <h2>7. Anote ou fotografe a configuração original</h2>
+        <p>
+          Antes de mover entradas, registre a ordem atual. Se o computador deixar de iniciar, essa referência permite restaurar
+          rapidamente o estado anterior sem depender da memória.
+        </p>
+
+        <h2>8. Mais de um disco exige atenção extra</h2>
+        <p>
+          Em máquinas com vários SSDs ou HDs, o firmware pode listar entradas parecidas. Confirme qual sistema está em cada
+          unidade antes de mudar a prioridade. Não conclua que o primeiro disco físico listado é necessariamente o sistema principal.
+        </p>
+
+        <h2>9. Depois de instalar o Windows, remova a dependência do pendrive</h2>
+        <p>
+          Após uma instalação, o computador deve voltar a iniciar pela entrada do sistema no armazenamento interno. Se ele
+          continua entrando no instalador, remova a mídia ou restaure a prioridade para Windows Boot Manager.
+        </p>
+
+        <h2>10. “No bootable device” não se resolve sempre mudando a ordem</h2>
+        <p>
+          Se a entrada correta desapareceu, o armazenamento não é reconhecido ou os arquivos de boot estão danificados, mudar
+          a ordem pode não resolver. Nesses casos, o problema está além da simples prioridade.
+        </p>
+
+        <h2>11. Use mudanças temporárias para diagnóstico</h2>
+        <p>
+          Para testar um pendrive de recuperação ou outro sistema, iniciar uma única vez pelo menu de boot reduz o risco de
+          deixar uma configuração permanente esquecida.
+        </p>
+
+        <h2>12. Não copie teclas de acesso de outro fabricante como regra universal</h2>
+        <p>
+          F2, Del, F12, Esc e outras teclas variam por fabricante e modelo. Consulte a documentação do equipamento quando
+          necessário em vez de insistir em uma tecla genérica.
+        </p>
+
+        <h2>Critérios de parada</h2>
+        <ul>
+          <li>O SSD/HD deixou de aparecer no firmware.</li>
+          <li>O BitLocker pede uma chave de recuperação que você não possui.</li>
+          <li>A mudança exige converter MBR/GPT ou alterar UEFI/Legacy sem plano de reversão.</li>
+          <li>O pendrive não aparece mesmo após validar mídia e portas.</li>
+          <li>O sistema principal deixou de iniciar após uma alteração e você não registrou a configuração anterior.</li>
+        </ul>
+
+        <h2>Perguntas frequentes</h2>
+        <h3>USB precisa ficar em primeiro na ordem de boot?</h3>
+        <p>
+          Não. Para uma instalação ou diagnóstico pontual, o menu temporário costuma ser suficiente. Manter USB sempre em
+          primeiro pode apenas mudar o comportamento de inicialização quando houver mídia conectada.
+        </p>
+
+        <h3>Posso colocar o SSD acima de Windows Boot Manager?</h3>
+        <p>
+          Em sistemas UEFI, Windows Boot Manager pode ser a entrada correta do sistema. A nomenclatura varia, então não troque
+          apenas pelo nome físico do disco sem entender a instalação existente.
+        </p>
+
+        <h3>Preciso desativar Secure Boot para instalar Windows 11?</h3>
+        <p>
+          Não como regra. O Windows 11 é projetado para UEFI e Secure Boot. Use mídia oficial e mantenha a configuração suportada
+          sempre que possível.
+        </p>
+
+        <h2>Resumo prático</h2>
+        <p>
+          <strong>Para iniciar por outro dispositivo, mude o mínimo possível.</strong> Prefira o boot temporário, preserve UEFI
+          e Secure Boot quando não houver motivo técnico para alterar, proteja a chave do BitLocker e registre a configuração original.
+        </p>
+
+        <EditorialReferences slug="ordem-de-boot-na-bios-como-configurar" />
+      </>
+    ),
+  },
+
   "organizacao-de-ti-para-pequenos-escritorios": {
     title: "Organização de TI para pequenos escritórios: inventário, contas, backup e rotina sem burocracia",
     excerpt:
