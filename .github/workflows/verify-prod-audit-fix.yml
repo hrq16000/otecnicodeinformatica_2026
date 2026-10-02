@@ -1,0 +1,41 @@
+name: verify-prod-audit-fix
+
+on:
+  push:
+    branches:
+      - "security/fix-prod-audit-20261002"
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: npm
+      - name: Install exact lockfile
+        run: npm ci --no-audit --no-fund
+      - name: Production audit must be clean
+        run: npm audit --omit=dev
+      - name: Install Playwright Chromium
+        run: npx playwright install --with-deps chromium
+      - name: Full test suite
+        run: npm run test:all
+        env:
+          CI: "true"
+      - name: Production build
+        run: npm run build
+      - name: Final production audit JSON
+        shell: bash
+        run: |
+          npm audit --omit=dev --json > /tmp/audit-prod-final.json
+          node - <<'NODE'
+          const fs=require("fs");
+          const r=JSON.parse(fs.readFileSync("/tmp/audit-prod-final.json","utf8"));
+          console.log("FINAL_PROD_AUDIT", JSON.stringify(r.metadata?.vulnerabilities||{}));
+          NODE
