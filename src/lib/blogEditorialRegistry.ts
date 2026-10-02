@@ -1788,6 +1788,24 @@ const WAVE_12F: EditorialApproval[] = [
 ];
 
 
+const WAVE_12G: EditorialApproval[] = [
+  {
+    slug: "como-configurar-bios-uefi-corretamente",
+    status: "approved",
+    authorType: "organization",
+    authorId: INSTITUTIONAL_AUTHOR.id,
+    reviewedAt: "2026-10-01",
+    approvedAt: "2026-09-25",
+    imageOrigin: "owned",
+    imageLicense: "Todos os direitos reservados",
+    imageAttribution:
+      "Arte editorial original: O Técnico de Informática — https://otecnicodeinformatica.com.br/blog/como-configurar-bios-uefi-corretamente",
+    notes:
+      "Revisão material em 2026-10-01 guiada por GSC real: 2 impressões, 0 cliques e posição média 58,5; query individual 'uefi' com 1 impressão. A versão suplementar preserva a URL e aprofunda baseline, Secure Boot, TPM, BitLocker, armazenamento, firmware e rollback.",
+  },
+];
+
+
 export const APPROVED_EDITORIAL_CONTENT = new Map<string, EditorialApproval>([
 
   ...FIRST_WAVE_SLUGS.map((slug) => [
@@ -1868,6 +1886,7 @@ export const APPROVED_EDITORIAL_CONTENT = new Map<string, EditorialApproval>([
   ...WAVE_12D.map((a) => [a.slug, a] as [string, EditorialApproval]),
   ...WAVE_12E.map((a) => [a.slug, a] as [string, EditorialApproval]),
   ...WAVE_12F.map((a) => [a.slug, a] as [string, EditorialApproval]),
+  ...WAVE_12G.map((a) => [a.slug, a] as [string, EditorialApproval]),
 
 ]);
 

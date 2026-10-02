@@ -2946,11 +2946,12 @@ export const ARTICLE_SOURCE_MANIFEST: Record<string, ArticleSourceManifest> = {
 
   "como-configurar-bios-uefi-corretamente": {
     slug: "como-configurar-bios-uefi-corretamente",
-    sources: ["ms-secure-boot-windows11-2026", "ms-enable-tpm2-2026", "ms-bitlocker-backup-key"],
+    sources: ["ms-boot-uefi-legacy-2026", "ms-secure-boot-windows11-2026", "ms-enable-tpm2-2026", "ms-bitlocker-backup-key"],
     technicalReview: "reviewed",
     factChecked: true,
-    factCheckedAt: "2026-09-25",
-    notes: "Onda 11L: removidos absolutos sobre UEFI/AHCI/XMP e chaves de fabricante; adicionados baseline, BitLocker, Secure Boot, TPM, armazenamento, critérios de parada e decisão por objetivo.",
+    factCheckedAt: "2026-10-01",
+    notes:
+      "Revisão material em 2026-10-01 guiada pelo GSC: 2 impressões, 0 cliques e posição média 58,5 entre 2026-04-01 e 2026-09-28; a query individual exposta foi 'uefi' (1 impressão, posição 112). A versão suplementar aprofunda baseline, UEFI/Legacy, Secure Boot, TPM, BitLocker, armazenamento, perfis de memória, virtualização, firmware, rollback e critérios de parada, sem receita universal ou alteração por tentativa.",
   },
   "como-configurar-servidor-de-arquivos": {
     slug: "como-configurar-servidor-de-arquivos",

@@ -11,6 +11,170 @@ import { MODALIDADES } from "@/lib/precosConfig";
  * do blog compõem base + suplementares + programáticos.
  */
 export const blogSupplementalPosts: Record<string, BlogPostContent> = {
+  "como-configurar-bios-uefi-corretamente": {
+    title: "Como configurar BIOS/UEFI corretamente: baseline, Secure Boot, TPM, armazenamento e rollback",
+    excerpt:
+      "Configurar BIOS/UEFI com segurança é mudar somente o que o objetivo exige. Registre o baseline, proteja a chave BitLocker, preserve o modo de boot compatível e valide cada alteração antes de seguir.",
+    date: "2026-10-01",
+    readTime: "16 min",
+    category: "BIOS e UEFI",
+    content: (
+      <>
+        <p className="lead">
+          Configurar <strong>BIOS/UEFI</strong> corretamente não significa ativar todas as opções “modernas”. O caminho
+          seguro é registrar o estado atual, definir o objetivo da mudança e alterar uma variável por vez. Em computadores
+          com Windows e BitLocker, mudanças de firmware podem exigir a chave de recuperação.
+        </p>
+
+        <h2>Resposta direta: o que verificar na BIOS/UEFI</h2>
+        <ol>
+          <li>Fotografe ou anote as configurações atuais antes de alterar.</li>
+          <li>Confirme se o Windows está instalado em UEFI e não mude para Legacy/CSM por tentativa.</li>
+          <li>Mantenha Secure Boot habilitado quando não houver necessidade técnica de desativá-lo.</li>
+          <li>Confirme TPM 2.0 quando necessário para Windows 11 e recursos de segurança.</li>
+          <li>Não altere modo de armazenamento, RAID/VMD/AHCI, sem entender o impacto no sistema instalado.</li>
+          <li>Localize a chave de recuperação do BitLocker antes de alterações de firmware relevantes.</li>
+          <li>Faça uma mudança por vez, salve, reinicie e valide.</li>
+          <li>Se o sistema deixar de iniciar, reverta a última mudança antes de tentar outras.</li>
+        </ol>
+
+        <h2>1. Comece pelo objetivo, não pelo menu</h2>
+        <p>
+          Antes de entrar no firmware, defina por que você precisa mexer nele: instalar um sistema, ativar virtualização,
+          habilitar TPM, corrigir ordem de boot, reconhecer armazenamento ou ajustar um recurso específico. Sem objetivo,
+          o risco de mudar opções desnecessárias aumenta.
+        </p>
+
+        <h2>2. Registre um baseline</h2>
+        <p>
+          Fotografe as telas principais, especialmente boot, segurança, armazenamento e qualquer opção que você pretende
+          alterar. Esse baseline funciona como ponto de retorno se o computador parar de iniciar ou algum dispositivo sumir.
+        </p>
+
+        <h2>3. UEFI e Legacy/CSM não são intercambiáveis sem consequência</h2>
+        <p>
+          O Windows normalmente continua inicializando no mesmo modo usado durante a instalação. Mudar UEFI para Legacy/CSM
+          pode impedir o boot de uma instalação funcional. Não troque o modo apenas para tentar resolver um problema de mídia USB.
+        </p>
+
+        <h2>4. Secure Boot deve permanecer ativo quando possível</h2>
+        <p>
+          Secure Boot ajuda a proteger a cadeia de inicialização contra software não autorizado. Algumas tarefas específicas
+          podem exigir desativação temporária, mas isso deve ter motivo claro e plano de reativação.
+        </p>
+
+        <h2>5. TPM 2.0 pode aparecer com nomes diferentes</h2>
+        <p>
+          A Microsoft documenta que TPM pode aparecer no firmware com nomenclaturas diferentes, como Intel PTT ou AMD fTPM.
+          A localização varia conforme fabricante e modelo. Não presuma que a opção inexistente em um menu significa ausência física.
+        </p>
+
+        <h2>6. BitLocker precisa ser considerado antes de qualquer mudança de segurança</h2>
+        <p>
+          Alterações em TPM, Secure Boot, firmware e sequência de inicialização podem mudar a medição de confiança do sistema.
+          Se BitLocker estiver ativo, tenha a chave de recuperação em local acessível antes de salvar alterações.
+        </p>
+
+        <h2>7. Armazenamento é uma área de alto risco</h2>
+        <p>
+          Trocar AHCI, RAID, VMD ou opções equivalentes sem preparar o sistema operacional pode fazer o Windows deixar de
+          reconhecer o volume de inicialização. Não altere o modo de armazenamento como tentativa genérica para “fazer o SSD aparecer”.
+        </p>
+
+        <h2>8. XMP/EXPO/perfis de memória não são requisito de funcionamento</h2>
+        <p>
+          Perfis de memória podem elevar frequência e alterar parâmetros do kit, mas estabilidade deve vir antes de desempenho.
+          Se o computador está sendo diagnosticado por travamentos, mantenha um baseline estável antes de aplicar perfis agressivos.
+        </p>
+
+        <h2>9. Virtualização deve ser ativada por necessidade</h2>
+        <p>
+          Recursos de virtualização podem ser necessários para máquinas virtuais, segurança baseada em virtualização e algumas
+          ferramentas de desenvolvimento. Ative quando houver objetivo claro e valide se o sistema continua estável.
+        </p>
+
+        <h2>10. Atualização de BIOS/UEFI não é manutenção de rotina obrigatória</h2>
+        <p>
+          Atualize firmware quando existir correção, compatibilidade ou requisito relevante para o equipamento. Uma atualização
+          mal conduzida pode impedir o boot; siga a documentação oficial do fabricante e evite interromper energia durante o processo.
+        </p>
+
+        <h2>11. “Load Defaults” altera mais coisas do que parece</h2>
+        <p>
+          Restaurar padrões pode modificar boot, segurança, armazenamento, virtualização e memória de uma só vez. Use apenas
+          quando entender o impacto e tiver como reconstruir as opções necessárias depois.
+        </p>
+
+        <h2>12. Faça uma alteração por vez</h2>
+        <p>
+          Se você muda Secure Boot, modo de armazenamento, memória e virtualização no mesmo reinício, perde a capacidade de
+          saber qual mudança causou um problema. Mudanças incrementais tornam o rollback muito mais simples.
+        </p>
+
+        <h2>13. Valide depois de cada alteração</h2>
+        <p>
+          Confirme boot, dispositivos, rede, BitLocker, estabilidade e o recurso que motivou a mudança. Se algo deixou de
+          funcionar, reverta a última alteração antes de continuar explorando outros menus.
+        </p>
+
+        <h2>14. Não copie configurações de outro computador como receita</h2>
+        <p>
+          Dois modelos podem usar firmware, controladoras e recursos diferentes. Mesmo nomes semelhantes não garantem o mesmo
+          comportamento. A referência correta é a documentação do fabricante e o estado funcional do próprio equipamento.
+        </p>
+
+        <h2>15. Segurança física também importa</h2>
+        <p>
+          Em ambientes compartilhados ou empresariais, senha de firmware, bloqueio de boot externo e proteção física podem fazer
+          parte da estratégia. Essas medidas devem ser administradas com processo de recuperação, porque esquecer credenciais de
+          firmware pode bloquear manutenção legítima.
+        </p>
+
+        <h2>Critérios de parada</h2>
+        <ul>
+          <li>Você não possui a chave BitLocker e a alteração afeta boot, TPM ou Secure Boot.</li>
+          <li>O Windows deixa de iniciar após mudar UEFI/Legacy ou modo de armazenamento.</li>
+          <li>O SSD/HD deixa de aparecer no firmware.</li>
+          <li>A atualização de firmware exige procedimento que você não consegue validar no fabricante.</li>
+          <li>O equipamento apresenta instabilidade depois de aplicar perfil de memória ou outra otimização.</li>
+        </ul>
+
+        <h2>Perguntas frequentes</h2>
+        <h3>UEFI é sempre melhor que Legacy?</h3>
+        <p>
+          Para sistemas modernos suportados, UEFI é o modo esperado, mas não se deve trocar um sistema já instalado sem entender
+          o esquema de partição e o processo de migração. A decisão depende do estado atual e do objetivo.
+        </p>
+
+        <h3>Preciso desativar Secure Boot para instalar Windows 11?</h3>
+        <p>
+          Não como regra. O Windows 11 foi projetado para operar com UEFI e Secure Boot. Use mídia oficial e mantenha a configuração
+          suportada sempre que possível.
+        </p>
+
+        <h3>Ativar TPM apaga meus arquivos?</h3>
+        <p>
+          Ativar TPM por si só não é um comando de exclusão de dados, mas mudanças de TPM podem afetar mecanismos de proteção e
+          provocar solicitação de recuperação do BitLocker. Garanta acesso à chave antes de alterar.
+        </p>
+
+        <h3>Posso atualizar a BIOS para melhorar desempenho?</h3>
+        <p>
+          Só quando a atualização resolve algo relevante ou é recomendada pelo fabricante para compatibilidade/segurança.
+          Não trate firmware como “driver comum” que precisa ser atualizado sem motivo.
+        </p>
+
+        <h2>Resumo prático</h2>
+        <p>
+          <strong>A melhor configuração de BIOS/UEFI é a mínima necessária para o objetivo, com rollback possível.</strong>
+          Preserve o baseline, BitLocker, modo de boot e armazenamento; mude uma opção por vez e valide antes de seguir.
+        </p>
+
+        <EditorialReferences slug="como-configurar-bios-uefi-corretamente" />
+      </>
+    ),
+  },
+
   "windows-update-nao-funciona-o-que-verificar": {
     title: "Windows Update não funciona: o que verificar antes de resetar componentes ou formatar",
     excerpt:
