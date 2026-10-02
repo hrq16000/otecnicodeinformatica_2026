@@ -66,12 +66,12 @@ describe("fila 30 — serviço × Campo Largo", () => {
     expect(pagina?.cidadeNome).toBe("Campo Largo");
   });
 
-  it("mantém outra combinação de Campo Largo em fail-closed", () => {
+  it("mantém outra combinação de Campo Largo na regra padrão canonicalized", () => {
     const path = "/servicos/conserto-pc/campo-largo";
     const d = resolveLocal(path);
-    expect(d.indexability).toBe("noindex");
+    expect(d.indexability).toBe("canonicalized");
     expect(d.sitemap).toBe(false);
-    expect(canonicalFor(path)).toBe(path);
+    expect(canonicalFor(path)).toBe("/servicos/conserto-pc");
   });
 
   it("mantém conserto de notebook de Campo Largo distinto das outras cidades", () => {
