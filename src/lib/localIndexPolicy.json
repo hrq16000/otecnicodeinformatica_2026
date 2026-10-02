@@ -527,6 +527,116 @@
       "tier": "SERVICO_CIDADE_COM_INTENCAO_LOCAL",
       "intent": "contratar upgrade de SSD ou memória em Araucária com diagnóstico do gargalo, conferência de compatibilidade e plano de migração",
       "reason": "Promoção validada por reports/enriquecimento-fila-11-20-service-cidade-2026-10.md: conteúdo autoral próprio, 97,2% de unicidade e 2,8% de similaridade máxima."
+    },
+    {
+      "path": "/servicos/backup-recuperacao/araucaria",
+      "family": "SERVICO_CIDADE",
+      "indexability": "index",
+      "canonical": "/servicos/backup-recuperacao/araucaria",
+      "sitemap": true,
+      "parent": "/servicos/recuperacao-de-dados",
+      "tier": "SERVICO_CIDADE_COM_INTENCAO_LOCAL",
+      "intent": "solicitar recuperação de dados em Araucária com triagem da mídia, preservação antes de novas gravações e definição da etapa seguinte conforme o risco",
+      "reason": "Promoção validada por reports/enriquecimento-fila-21-30-service-cidade-2026-10.md: conteúdo autoral próprio, 97,0% de unicidade e 3,0% de similaridade máxima."
+    },
+    {
+      "path": "/servicos/suporte-empresas/araucaria",
+      "family": "SERVICO_CIDADE",
+      "indexability": "index",
+      "canonical": "/servicos/suporte-empresas/araucaria",
+      "sitemap": true,
+      "parent": "/servicos/suporte-tecnico-empresarial",
+      "tier": "SERVICO_CIDADE_COM_INTENCAO_LOCAL",
+      "intent": "contratar suporte de TI em Araucária com prioridade baseada no impacto da falha e modalidade definida entre remoto, visita ou bancada",
+      "reason": "Promoção validada por reports/enriquecimento-fila-21-30-service-cidade-2026-10.md: conteúdo autoral próprio, 97,1% de unicidade e 2,9% de similaridade máxima."
+    },
+    {
+      "path": "/servicos/atendimento-remoto/araucaria",
+      "family": "SERVICO_CIDADE",
+      "indexability": "index",
+      "canonical": "/servicos/atendimento-remoto/araucaria",
+      "sitemap": true,
+      "parent": "/atendimento-remoto",
+      "tier": "SERVICO_CIDADE_COM_INTENCAO_LOCAL",
+      "intent": "iniciar suporte remoto em Araucária com sessão autorizada e transição clara para atendimento físico quando o diagnóstico apontar hardware ou rede local",
+      "reason": "Promoção validada por reports/enriquecimento-fila-21-30-service-cidade-2026-10.md: conteúdo autoral próprio, 97,3% de unicidade e 2,7% de similaridade máxima."
+    },
+    {
+      "path": "/servicos/montagem-de-pc/araucaria",
+      "family": "SERVICO_CIDADE",
+      "indexability": "index",
+      "canonical": "/servicos/montagem-de-pc/araucaria",
+      "sitemap": true,
+      "parent": "/servicos/montagem-de-pc",
+      "tier": "SERVICO_CIDADE_COM_INTENCAO_LOCAL",
+      "intent": "contratar montagem de PC em Araucária com conferência de peças antes da instalação, organização física e testes após o primeiro boot",
+      "reason": "Promoção validada por reports/enriquecimento-fila-21-30-service-cidade-2026-10.md: conteúdo autoral próprio, 97,1% de unicidade e 2,9% de similaridade máxima."
+    },
+    {
+      "path": "/servicos/pc-gamer/araucaria",
+      "family": "SERVICO_CIDADE",
+      "indexability": "index",
+      "canonical": "/servicos/pc-gamer/araucaria",
+      "sitemap": true,
+      "parent": "/servicos/pc-gamer",
+      "tier": "SERVICO_CIDADE_COM_INTENCAO_LOCAL",
+      "intent": "diagnosticar PC gamer em Araucária com reprodução da falha, leitura de estabilidade e recomendação de reparo ou upgrade somente depois dos testes",
+      "reason": "Promoção validada por reports/enriquecimento-fila-21-30-service-cidade-2026-10.md: conteúdo autoral próprio, 97,0% de unicidade e 3,0% de similaridade máxima."
+    },
+    {
+      "path": "/servicos/suporte-home-office/araucaria",
+      "family": "SERVICO_CIDADE",
+      "indexability": "index",
+      "canonical": "/servicos/suporte-home-office/araucaria",
+      "sitemap": true,
+      "parent": "/servicos/suporte-home-office",
+      "tier": "SERVICO_CIDADE_COM_INTENCAO_LOCAL",
+      "intent": "resolver falhas de home office em Araucária com remoto primeiro quando possível e transição para visita se o problema estiver no ambiente ou no hardware",
+      "reason": "Promoção validada por reports/enriquecimento-fila-21-30-service-cidade-2026-10.md: conteúdo autoral próprio, 96,9% de unicidade e 3,1% de similaridade máxima."
+    },
+    {
+      "path": "/servicos/suporte-tecnico-empresarial/araucaria",
+      "family": "SERVICO_CIDADE",
+      "indexability": "index",
+      "canonical": "/servicos/suporte-tecnico-empresarial/araucaria",
+      "sitemap": true,
+      "parent": "/servicos/suporte-tecnico-empresarial",
+      "tier": "SERVICO_CIDADE_COM_INTENCAO_LOCAL",
+      "intent": "estruturar suporte técnico empresarial em Araucária com registro de chamados, prioridade por impacto e continuidade entre remoto, visita e projeto",
+      "reason": "Promoção validada por reports/enriquecimento-fila-21-30-service-cidade-2026-10.md: conteúdo autoral próprio, 97,5% de unicidade e 2,5% de similaridade máxima."
+    },
+    {
+      "path": "/servicos/manutencao-preventiva-empresas/araucaria",
+      "family": "SERVICO_CIDADE",
+      "indexability": "index",
+      "canonical": "/servicos/manutencao-preventiva-empresas/araucaria",
+      "sitemap": true,
+      "parent": "/servicos/manutencao-preventiva-empresas",
+      "tier": "SERVICO_CIDADE_COM_INTENCAO_LOCAL",
+      "intent": "programar manutenção preventiva de computadores em empresa de Araucária com checklist por estação e execução em lotes para reduzir parada",
+      "reason": "Promoção validada por reports/enriquecimento-fila-21-30-service-cidade-2026-10.md: conteúdo autoral próprio, 96,9% de unicidade e 3,1% de similaridade máxima."
+    },
+    {
+      "path": "/servicos/backup-para-empresas/araucaria",
+      "family": "SERVICO_CIDADE",
+      "indexability": "index",
+      "canonical": "/servicos/backup-para-empresas/araucaria",
+      "sitemap": true,
+      "parent": "/servicos/backup-para-empresas",
+      "tier": "SERVICO_CIDADE_COM_INTENCAO_LOCAL",
+      "intent": "planejar backup empresarial em Araucária com inventário de dados críticos, separação de cópias e teste de restauração antes de depender do plano",
+      "reason": "Promoção validada por reports/enriquecimento-fila-21-30-service-cidade-2026-10.md: conteúdo autoral próprio, 97,4% de unicidade e 2,6% de similaridade máxima."
+    },
+    {
+      "path": "/servicos/conserto-notebook/campo-largo",
+      "family": "SERVICO_CIDADE",
+      "indexability": "index",
+      "canonical": "/servicos/conserto-notebook/campo-largo",
+      "sitemap": true,
+      "parent": "/servicos/manutencao-de-notebook",
+      "tier": "SERVICO_CIDADE_COM_INTENCAO_LOCAL",
+      "intent": "solicitar conserto de notebook em Campo Largo com triagem pelo modelo, preservação de dados e escolha entre remoto, visita, coleta ou bancada",
+      "reason": "Promoção validada por reports/enriquecimento-fila-21-30-service-cidade-2026-10.md: conteúdo autoral próprio, 96,5% de unicidade e 3,5% de similaridade máxima."
     }
   ],
   "bairrosAncora": [
