@@ -8,6 +8,16 @@ import {
 
 const CAMPO_LARGO_PROMOVIDAS = [
   "/servicos/conserto-notebook/campo-largo",
+  "/servicos/conserto-pc/campo-largo",
+  "/servicos/conserto-tv/campo-largo",
+  "/servicos/conserto-celular/campo-largo",
+  "/servicos/upgrade-ssd/campo-largo",
+  "/servicos/backup-recuperacao/campo-largo",
+  "/servicos/suporte-empresas/campo-largo",
+  "/servicos/atendimento-remoto/campo-largo",
+  "/servicos/montagem-de-pc/campo-largo",
+  "/servicos/pc-gamer/campo-largo",
+  "/servicos/suporte-home-office/campo-largo",
 ];
 
 const normalizar = (t: string) =>
@@ -44,50 +54,58 @@ const corpo = (path: string) => {
   ].join(" ");
 };
 
-describe("fila 30 — serviço × Campo Largo", () => {
-  it("declara somente conserto de notebook nesta rodada", () => {
-    expect(SERVICO_CAMPO_LARGO_PATHS).toEqual(CAMPO_LARGO_PROMOVIDAS);
+describe("filas 30–40 — serviço × Campo Largo", () => {
+  it("declara exatamente as onze páginas autorais aprovadas", () => {
+    expect([...SERVICO_CAMPO_LARGO_PATHS].sort()).toEqual([...CAMPO_LARGO_PROMOVIDAS].sort());
   });
 
-  it("promove a página para index, canonical self e sitemap", () => {
-    const path = CAMPO_LARGO_PROMOVIDAS[0];
-    const d = resolveLocal(path);
-    const pagina = TODAS_PAGINAS_LOCAIS.find((p) => p.path === path)!;
-    expect(d.indexability).toBe("index");
-    expect(canonicalFor(path)).toBe(path);
-    expect(d.sitemap).toBe(true);
-    expect(d.parent).toBe(pagina.parent);
+  it("promove as onze páginas para index, canonical self e sitemap", () => {
+    for (const path of CAMPO_LARGO_PROMOVIDAS) {
+      const d = resolveLocal(path);
+      const pagina = TODAS_PAGINAS_LOCAIS.find((p) => p.path === path)!;
+      expect(d.indexability).toBe("index");
+      expect(canonicalFor(path)).toBe(path);
+      expect(d.sitemap).toBe(true);
+      expect(d.parent).toBe(pagina.parent);
+    }
   });
 
   it("resolve Campo Largo no conteúdo autoral", () => {
-    const pagina = servicoLocal("conserto-notebook", "campo-largo");
-    expect(pagina).not.toBeNull();
-    expect(pagina?.cidadeSlug).toBe("campo-largo");
-    expect(pagina?.cidadeNome).toBe("Campo Largo");
+    for (const path of CAMPO_LARGO_PROMOVIDAS) {
+      const slug = path.split("/")[2];
+      const pagina = servicoLocal(slug, "campo-largo");
+      expect(pagina).not.toBeNull();
+      expect(pagina?.cidadeSlug).toBe("campo-largo");
+      expect(pagina?.cidadeNome).toBe("Campo Largo");
+    }
   });
 
-  it("mantém outra combinação de Campo Largo na regra padrão canonicalized", () => {
-    const path = "/servicos/conserto-pc/campo-largo";
+  it("mantém combinação de Campo Largo fora da fila na regra padrão canonicalized", () => {
+    const path = "/servicos/suporte-tecnico-empresarial/campo-largo";
     const d = resolveLocal(path);
     expect(d.indexability).toBe("canonicalized");
     expect(d.sitemap).toBe(false);
-    expect(canonicalFor(path)).toBe("/servicos/conserto-pc");
+    expect(canonicalFor(path)).toBe("/servicos/suporte-tecnico-empresarial");
   });
 
-  it("mantém conserto de notebook de Campo Largo distinto das outras cidades", () => {
-    const alvo = CAMPO_LARGO_PROMOVIDAS[0];
-    for (const outra of [
-      "/servicos/conserto-notebook/curitiba",
-      "/servicos/conserto-notebook/sao-jose-dos-pinhais",
-      "/servicos/conserto-notebook/araucaria",
-    ]) {
-      expect(jaccard(ngramas(corpo(alvo)), ngramas(corpo(outra)))).toBeLessThan(0.45);
+  it("mantém similaridade autoral de Campo Largo abaixo do teto", () => {
+    for (let i = 0; i < CAMPO_LARGO_PROMOVIDAS.length; i += 1) {
+      for (let j = i + 1; j < CAMPO_LARGO_PROMOVIDAS.length; j += 1) {
+        expect(
+          jaccard(
+            ngramas(corpo(CAMPO_LARGO_PROMOVIDAS[i])),
+            ngramas(corpo(CAMPO_LARGO_PROMOVIDAS[j])),
+          ),
+        ).toBeLessThan(0.45);
+      }
     }
   });
 
   it("aponta para o serviço-pai e para a landing da cidade", () => {
-    const pagina = TODAS_PAGINAS_LOCAIS.find((p) => p.path === CAMPO_LARGO_PROMOVIDAS[0])!;
-    expect(pagina.interlinks).toContain(pagina.parent);
-    expect(pagina.interlinks).toContain("/tecnico-informatica-campo-largo");
+    for (const path of CAMPO_LARGO_PROMOVIDAS) {
+      const pagina = TODAS_PAGINAS_LOCAIS.find((p) => p.path === path)!;
+      expect(pagina.interlinks).toContain(pagina.parent);
+      expect(pagina.interlinks).toContain("/tecnico-informatica-campo-largo");
+    }
   });
 });
