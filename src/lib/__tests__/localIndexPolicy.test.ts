@@ -84,12 +84,12 @@ describe("localIndexPolicy — promoção top 10 service × cidade", () => {
     expect(declaredEntities().filter((d) => d.family === "SERVICO_CIDADE")).toHaveLength(37);
   });
 
-  it("mantém outra combinação da família na regra padrão canonicalized", () => {
+  it("mantém outra combinação da família no estado fail-closed anterior", () => {
     const path = "/servicos/pc-gamer/araucaria";
     const d = resolveLocal(path);
-    expect(d.indexability).toBe("canonicalized");
+    expect(d.indexability).toBe("noindex");
     expect(d.sitemap).toBe(false);
-    expect(canonicalFor(path)).toBe("/servicos/pc-gamer");
+    expect(canonicalFor(path)).toBe(path);
   });
 });
 
