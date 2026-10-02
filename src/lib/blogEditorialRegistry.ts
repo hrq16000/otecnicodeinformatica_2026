@@ -1770,6 +1770,24 @@ const WAVE_12E: EditorialApproval[] = [
 ];
 
 
+const WAVE_12F: EditorialApproval[] = [
+  {
+    slug: "windows-update-nao-funciona-o-que-verificar",
+    status: "approved",
+    authorType: "organization",
+    authorId: INSTITUTIONAL_AUTHOR.id,
+    reviewedAt: "2026-10-01",
+    approvedAt: "2026-08-26",
+    imageOrigin: "licensed",
+    imageLicense: "Public Domain",
+    imageAttribution:
+      "Foto: Dion Dresschers (Wikimedia Commons), domínio público — https://commons.wikimedia.org/wiki/File:Cc0-windows-update_dion_dresschers.png",
+    notes:
+      "Revisão material em 2026-10-01 guiada por GSC real de página: 2 impressões, 0 cliques e posição média 51,5 no período fechado até 2026-09-28. A query individual exposta foi considerada ruidosa e não foi extrapolada. A versão suplementar preserva a URL e aprofunda estágios, código/KB, espaço, solucionador oficial, cache e recuperação.",
+  },
+];
+
+
 export const APPROVED_EDITORIAL_CONTENT = new Map<string, EditorialApproval>([
 
   ...FIRST_WAVE_SLUGS.map((slug) => [
@@ -1849,6 +1867,7 @@ export const APPROVED_EDITORIAL_CONTENT = new Map<string, EditorialApproval>([
   ...WAVE_12C.map((a) => [a.slug, a] as [string, EditorialApproval]),
   ...WAVE_12D.map((a) => [a.slug, a] as [string, EditorialApproval]),
   ...WAVE_12E.map((a) => [a.slug, a] as [string, EditorialApproval]),
+  ...WAVE_12F.map((a) => [a.slug, a] as [string, EditorialApproval]),
 
 ]);
 
