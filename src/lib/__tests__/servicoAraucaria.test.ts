@@ -12,6 +12,15 @@ const ARAUCARIA_PROMOVIDAS = [
   "/servicos/conserto-tv/araucaria",
   "/servicos/conserto-celular/araucaria",
   "/servicos/upgrade-ssd/araucaria",
+  "/servicos/backup-recuperacao/araucaria",
+  "/servicos/suporte-empresas/araucaria",
+  "/servicos/atendimento-remoto/araucaria",
+  "/servicos/montagem-de-pc/araucaria",
+  "/servicos/pc-gamer/araucaria",
+  "/servicos/suporte-home-office/araucaria",
+  "/servicos/suporte-tecnico-empresarial/araucaria",
+  "/servicos/manutencao-preventiva-empresas/araucaria",
+  "/servicos/backup-para-empresas/araucaria",
 ];
 
 const normalizar = (t: string) =>
@@ -48,12 +57,12 @@ const corpo = (path: string) => {
   ].join(" ");
 };
 
-describe("fila 16–20 — serviço × Araucária", () => {
-  it("declara somente as cinco páginas autorais desta rodada", () => {
+describe("filas 16–29 — serviço × Araucária", () => {
+  it("declara exatamente as quatorze páginas autorais aprovadas", () => {
     expect(SERVICO_ARAUCARIA_PATHS.sort()).toEqual([...ARAUCARIA_PROMOVIDAS].sort());
   });
 
-  it("promove as cinco páginas para index, canonical self e sitemap", () => {
+  it("promove as quatorze páginas para index, canonical self e sitemap", () => {
     for (const path of ARAUCARIA_PROMOVIDAS) {
       const d = resolveLocal(path);
       const pagina = TODAS_PAGINAS_LOCAIS.find((p) => p.path === path)!;
@@ -74,14 +83,15 @@ describe("fila 16–20 — serviço × Araucária", () => {
     }
   });
 
-  it("mantém uma combinação de Araucária fora da fila na regra padrão", () => {
-    const d = resolveLocal("/servicos/pc-gamer/araucaria");
+  it("mantém combinação de Araucária fora da fila em fail-closed", () => {
+    const path = "/servicos/redes-wifi/araucaria";
+    const d = resolveLocal(path);
     expect(d.indexability).toBe("noindex");
     expect(d.sitemap).toBe(false);
-    expect(canonicalFor("/servicos/pc-gamer/araucaria")).toBe("/servicos/pc-gamer/araucaria");
+    expect(canonicalFor(path)).toBe(path);
   });
 
-  it("mantém similaridade autoral entre as cinco abaixo do teto de segurança", () => {
+  it("mantém similaridade autoral entre as quatorze abaixo do teto de segurança", () => {
     for (let i = 0; i < ARAUCARIA_PROMOVIDAS.length; i += 1) {
       for (let j = i + 1; j < ARAUCARIA_PROMOVIDAS.length; j += 1) {
         expect(
