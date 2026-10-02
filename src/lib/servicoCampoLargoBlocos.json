@@ -576,7 +576,8 @@
           "titulo": "A abertura do chamado precisa explicar o impacto",
           "paragrafos": [
             "Informar apenas 'o computador não funciona' é pouco para organizar prioridade. O chamado deve dizer quem foi afetado, qual tarefa deixou de ser feita e se existe outro equipamento ou procedimento provisório que mantenha a operação.",
-            "Esse contexto permite distinguir parada crítica, degradação de desempenho, dúvida de usuário e melhoria programável. A fila fica mais coerente quando urgência nasce do impacto real."
+            "Esse contexto permite distinguir parada crítica, degradação de desempenho, dúvida de usuário e melhoria programável. A fila fica mais coerente quando urgência nasce do impacto real.",
+            "Quando vários usuários relatam o mesmo sintoma, vale registrar horários e mudanças recentes no ambiente. Isso ajuda a perceber se a origem está em rede, autenticação, atualização ou serviço compartilhado, em vez de tratar cada estação como um defeito isolado."
           ]
         },
         {
@@ -590,7 +591,8 @@
           "titulo": "Histórico reduz o custo de repetir investigação",
           "paragrafos": [
             "Registrar equipamento, usuário, sintoma, causa provável, ação realizada e pendências transforma chamados isolados em informação útil. Se o problema retorna, o próximo atendimento consegue comparar com o que já aconteceu.",
-            "Reincidência pode indicar atualização problemática, rede, equipamento degradado ou processo mal configurado. Sem histórico, todos esses sinais se perdem entre atendimentos."
+            "Reincidência pode indicar atualização problemática, rede, equipamento degradado ou processo mal configurado. Sem histórico, todos esses sinais se perdem entre atendimentos.",
+            "Também é útil marcar o que ficou apenas como contorno temporário. Uma solução que mantém a operação por algumas horas não deve ser confundida com correção definitiva, porque isso dificulta decidir a próxima ação."
           ]
         },
         {
@@ -611,7 +613,8 @@
           "titulo": "Rede nacional e remuneração compatível com responsabilidade",
           "paragrafos": [
             "A empresa começou em Curitiba em 2006 e hoje integra uma rede nacional com mais de 6 mil prestadores credenciados. Esse dado não representa quantidade fixa de profissionais em Campo Largo.",
-            "A referência de tarifa mínima justa procura sustentar triagem, teste, deslocamento e documentação. Suporte empresarial bem executado depende de tempo para entender a causa, e não apenas de fazer o equipamento voltar a funcionar por alguns minutos."
+            "A referência de tarifa mínima justa procura sustentar triagem, teste, deslocamento e documentação. Suporte empresarial bem executado depende de tempo para entender a causa, e não apenas de fazer o equipamento voltar a funcionar por alguns minutos.",
+            "Se existe máquina ou sistema que não pode ser desligado no expediente, essa restrição precisa entrar na triagem. Planejar a janela correta reduz risco de o suporte criar uma nova interrupção enquanto tenta resolver a primeira."
           ]
         }
       ],
@@ -673,14 +676,16 @@
           "titulo": "Software e configuração são bons candidatos ao remoto",
           "paragrafos": [
             "Programas que não abrem, navegador mal configurado, permissões, contas, impressoras já conectadas e parte dos erros do sistema podem ser avaliados pela sessão. Também é possível coletar informações sobre desempenho quando a máquina ainda responde.",
-            "Esse processo ajuda a reunir evidências antes de decidir por visita. Mensagens de erro, espaço livre, comportamento após atualização e serviços em execução podem reduzir o número de hipóteses."
+            "Esse processo ajuda a reunir evidências antes de decidir por visita. Mensagens de erro, espaço livre, comportamento após atualização e serviços em execução podem reduzir o número de hipóteses.",
+            "Quando o erro acontece só em um programa, também vale comparar versão, conta usada e comportamento em outro computador. Esse contraste ajuda a separar falha local de indisponibilidade do próprio serviço."
           ]
         },
         {
           "titulo": "Hardware e ambiente marcam o limite da sessão",
           "paragrafos": [
             "Computador sem energia, tela sem imagem, conector quebrado, aquecimento severo e sinal Wi‑Fi que precisa ser medido dentro do imóvel não podem ser resolvidos apenas por acesso remoto.",
-            "Quando esse limite aparece, o atendimento precisa migrar de forma consciente. O histórico da sessão deve acompanhar a próxima etapa para evitar repetir todo o diagnóstico."
+            "Quando esse limite aparece, o atendimento precisa migrar de forma consciente. O histórico da sessão deve acompanhar a próxima etapa para evitar repetir todo o diagnóstico.",
+            "A triagem pode ainda confirmar espaço livre, atualizações recentes e dispositivos conectados. Esses dados não resolvem hardware à distância, mas ajudam a chegar à visita com menos hipóteses abertas."
           ]
         },
         {
@@ -701,7 +706,8 @@
           "titulo": "Rede nacional e valor do trabalho técnico remoto",
           "paragrafos": [
             "A operação começou em Curitiba em 2006 e hoje integra uma rede nacional com mais de 6 mil prestadores credenciados. O número é nacional e não representa equipe fixa em Campo Largo.",
-            "A referência de tarifa mínima justa reconhece análise, tempo de sessão e responsabilidade técnica. Resolver sem deslocamento reduz logística, mas não elimina o valor do diagnóstico."
+            "A referência de tarifa mínima justa reconhece análise, tempo de sessão e responsabilidade técnica. Resolver sem deslocamento reduz logística, mas não elimina o valor do diagnóstico.",
+            "Ao encerrar a sessão, registrar o que foi alterado é importante para evitar mudanças contraditórias numa próxima intervenção. Esse histórico também permite desfazer uma configuração se surgir efeito colateral."
           ]
         }
       ],
@@ -756,7 +762,8 @@
           "titulo": "Compatibilidade precisa ser conferida como sistema",
           "paragrafos": [
             "Processador, placa-mãe e memória são apenas parte da equação. Gabinete, fonte, cooler, armazenamento, placa de vídeo e acessórios precisam funcionar juntos elétrica e fisicamente.",
-            "Conferir modelo, revisão e conectores antes da montagem reduz improviso. Uma peça que 'serve' no papel pode exigir atualização de firmware, suporte específico ou espaço que o gabinete não oferece."
+            "Conferir modelo, revisão e conectores antes da montagem reduz improviso. Uma peça que 'serve' no papel pode exigir atualização de firmware, suporte específico ou espaço que o gabinete não oferece.",
+            "Componentes comprados em lojas diferentes podem vir com revisões ou acessórios distintos. Conferir espaçadores, cabos, suportes e kits de montagem antes de começar reduz a chance de parar o serviço por uma peça pequena que faltou."
           ]
         },
         {
@@ -770,7 +777,8 @@
           "titulo": "Primeiro boot é só o começo da validação",
           "paragrafos": [
             "Depois de aparecer imagem, entram reconhecimento de memória e armazenamento, versão de BIOS, temperatura, perfil de ventoinha e configuração básica. Um componente não detectado ou memória operando fora do esperado pode passar despercebido se o teste termina cedo.",
-            "A validação usa testes coerentes com a configuração e com o uso esperado. Não existe um único benchmark que prove estabilidade para qualquer máquina."
+            "A validação usa testes coerentes com a configuração e com o uso esperado. Não existe um único benchmark que prove estabilidade para qualquer máquina.",
+            "Durante a validação também se observa ruído anormal, comportamento das ventoinhas, portas e dispositivos conectados. A ideia é identificar problema de montagem antes de a máquina voltar para uso diário."
           ]
         },
         {
@@ -784,14 +792,16 @@
           "titulo": "A janela operacional varia de 2 a 72 horas úteis",
           "paragrafos": [
             "Montagem com todas as peças disponíveis e compatibilidade já conferida tende a ser mais previsível que um conjunto que ainda depende de troca, atualização de BIOS ou diagnóstico de componente.",
-            "A faixa organiza o início do atendimento. Se um problema aparece durante validação, a entrega pode exigir uma etapa adicional antes de a máquina ser considerada pronta."
+            "A faixa organiza o início do atendimento. Se um problema aparece durante validação, a entrega pode exigir uma etapa adicional antes de a máquina ser considerada pronta.",
+            "Quando a configuração será usada para trabalho, estudo ou jogo, essa finalidade ajuda a escolher testes mais coerentes. Uma máquina para planilhas não precisa da mesma validação de um conjunto destinado a carga pesada."
           ]
         },
         {
           "titulo": "Rede nacional e valorização da montagem completa",
           "paragrafos": [
             "A empresa nasceu em Curitiba em 2006 e hoje integra uma rede nacional com mais de 6 mil prestadores credenciados. Em Campo Largo, a disponibilidade é consultada sem declarar quantidade local sem fonte.",
-            "A referência de tarifa mínima justa reconhece conferência, montagem, organização, configuração e teste. Reduzir o serviço a encaixar componentes desvaloriza justamente as etapas que evitam retorno."
+            "A referência de tarifa mínima justa reconhece conferência, montagem, organização, configuração e teste. Reduzir o serviço a encaixar componentes desvaloriza justamente as etapas que evitam retorno.",
+            "Também vale combinar como serão entregues caixas, acessórios e componentes que sobraram. Manter esse material organizado facilita garantia, futura manutenção e identificação da origem de cada peça."
           ]
         }
       ],
@@ -846,7 +856,8 @@
           "titulo": "Reproduzir a falha vale mais que trocar por suspeita",
           "paragrafos": [
             "O diagnóstico observa quando o problema surge, quanto tempo leva e quais recursos estão em uso. Temperatura, consumo, memória, armazenamento e driver ajudam a construir uma hipótese com base em comportamento real.",
-            "Se a falha não é reproduzida, a recomendação precisa ser cautelosa. Trocar placa de vídeo ou fonte apenas porque são peças caras não garante resolver a causa."
+            "Se a falha não é reproduzida, a recomendação precisa ser cautelosa. Trocar placa de vídeo ou fonte apenas porque são peças caras não garante resolver a causa.",
+            "Falhas intermitentes ficam mais fáceis de investigar quando o usuário informa jogo, resolução, tempo até o defeito e se existe algum periférico específico envolvido. Esses detalhes podem revelar um padrão que um teste genérico não mostra."
           ]
         },
         {
@@ -867,7 +878,8 @@
           "titulo": "Upgrade deve perseguir gargalo, não novidade",
           "paragrafos": [
             "Quando o objetivo é melhorar FPS ou estabilidade, uso real de CPU, GPU, memória e armazenamento ajuda a identificar qual componente limita a experiência. Resolução e taxa de atualização do monitor também mudam a meta.",
-            "Uma placa de vídeo mais forte pode entregar pouco ganho se o processador, memória ou plataforma já limitam o conjunto. O investimento precisa ser compatível com o restante da máquina."
+            "Uma placa de vídeo mais forte pode entregar pouco ganho se o processador, memória ou plataforma já limitam o conjunto. O investimento precisa ser compatível com o restante da máquina.",
+            "Quando o objetivo é aumentar desempenho, também é importante comparar a meta do usuário com o monitor disponível. Buscar muitos quadros por segundo em determinada resolução pode exigir prioridade de upgrade diferente."
           ]
         },
         {
@@ -881,7 +893,8 @@
           "titulo": "Rede nacional e remuneração do tempo de teste",
           "paragrafos": [
             "A operação começou em Curitiba em 2006 e hoje integra uma rede nacional com mais de 6 mil prestadores credenciados. O número não representa a quantidade de técnicos gamer em Campo Largo.",
-            "A referência de tarifa mínima justa procura valorizar justamente a etapa de medição e diagnóstico. Em PC gamer, descobrir qual peça não precisa ser trocada pode economizar mais que qualquer intervenção."
+            "A referência de tarifa mínima justa procura valorizar justamente a etapa de medição e diagnóstico. Em PC gamer, descobrir qual peça não precisa ser trocada pode economizar mais que qualquer intervenção.",
+            "Se houve troca recente de placa, memória, fonte ou BIOS, informe isso na abertura. Mudanças recentes costumam ser um ponto valioso para reconstruir quando a instabilidade começou."
           ]
         }
       ],
@@ -936,7 +949,8 @@
           "titulo": "Descobrir qual camada falhou é o primeiro objetivo",
           "paragrafos": [
             "VPN que não conecta, câmera que some, áudio que falha e segundo monitor sem sinal apontam para áreas diferentes. A triagem pergunta o que ainda funciona e se outro dispositivo apresenta o mesmo comportamento.",
-            "Essa comparação ajuda a separar conta, aplicativo, sistema, rede doméstica, periférico e hardware. Quanto mais cedo a camada correta é identificada, menor a chance de mudanças aleatórias."
+            "Essa comparação ajuda a separar conta, aplicativo, sistema, rede doméstica, periférico e hardware. Quanto mais cedo a camada correta é identificada, menor a chance de mudanças aleatórias.",
+            "Se o problema acontece sempre no mesmo horário, depois de acordar o notebook ou ao conectar a VPN, esse padrão deve ser informado. Repetição em condição específica ajuda a distinguir evento casual de uma falha reproduzível."
           ]
         },
         {
@@ -950,14 +964,16 @@
           "titulo": "Periféricos intermediários merecem atenção",
           "paragrafos": [
             "Dock, adaptador USB-C, hub, headset, webcam e conversores podem ser o ponto de falha entre notebook e dispositivo final. Se esses itens não entram na triagem, o notebook pode ser acusado sem evidência.",
-            "Listar como os cabos estão conectados e o que mudou recentemente ajuda a testar por exclusão. Uma foto do posto de trabalho pode ser útil quando existem muitos adaptadores."
+            "Listar como os cabos estão conectados e o que mudou recentemente ajuda a testar por exclusão. Uma foto do posto de trabalho pode ser útil quando existem muitos adaptadores.",
+            "Periféricos alimentados por dock ou hub também podem competir por energia e largura de banda. Saber como estão conectados ajuda a testar o caminho completo, não apenas o notebook."
           ]
         },
         {
           "titulo": "A janela operacional varia de 2 a 72 horas úteis",
           "paragrafos": [
             "Um usuário completamente impedido de trabalhar pode ter prioridade maior que ajuste programável, mas a agenda continua dependendo da disponibilidade do prestador adequado.",
-            "A faixa indica o início do atendimento. Dependência do TI interno, provedor, peça física ou visita pode estender a solução além desse intervalo."
+            "A faixa indica o início do atendimento. Dependência do TI interno, provedor, peça física ou visita pode estender a solução além desse intervalo.",
+            "Se existe reunião, entrega ou acesso crítico em horário marcado, informe isso na triagem. O dado ajuda a classificar impacto e procurar a melhor janela disponível, sem transformar prioridade em promessa automática."
           ]
         },
         {
@@ -971,7 +987,8 @@
           "titulo": "Rede nacional e valorização do suporte remoto",
           "paragrafos": [
             "A empresa nasceu em Curitiba em 2006 e hoje integra uma rede nacional com mais de 6 mil prestadores credenciados. O dado é nacional e não mede quantidade de técnicos em Campo Largo.",
-            "A referência de tarifa mínima justa reconhece que análise remota também é trabalho técnico. Resolver sem deslocamento reduz logística, mas continua exigindo diagnóstico, tempo e responsabilidade."
+            "A referência de tarifa mínima justa reconhece que análise remota também é trabalho técnico. Resolver sem deslocamento reduz logística, mas continua exigindo diagnóstico, tempo e responsabilidade.",
+            "Quando o equipamento pertence à empresa, também é necessário respeitar políticas de administrador e segurança. Se uma mudança depende do TI interno, o atendimento pode registrar o diagnóstico e preparar informações para repasse."
           ]
         }
       ],
