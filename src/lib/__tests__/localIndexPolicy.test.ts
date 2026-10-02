@@ -36,6 +36,19 @@ const FILA_11_20_SERVICO_CIDADE = [
   "/servicos/upgrade-ssd/araucaria",
 ];
 
+const FILA_21_30_SERVICO_CIDADE = [
+  "/servicos/backup-recuperacao/araucaria",
+  "/servicos/suporte-empresas/araucaria",
+  "/servicos/atendimento-remoto/araucaria",
+  "/servicos/montagem-de-pc/araucaria",
+  "/servicos/pc-gamer/araucaria",
+  "/servicos/suporte-home-office/araucaria",
+  "/servicos/suporte-tecnico-empresarial/araucaria",
+  "/servicos/manutencao-preventiva-empresas/araucaria",
+  "/servicos/backup-para-empresas/araucaria",
+  "/servicos/conserto-notebook/campo-largo",
+];
+
 describe("localIndexPolicy — regra de ouro", () => {
   it("nunca coloca no sitemap uma entidade não indexável", () => {
     for (const d of declaredEntities()) {
@@ -72,7 +85,7 @@ describe("localIndexPolicy — promoção top 10 service × cidade", () => {
     }
   });
 
-  it("promove a fila 11–20 e mantém somente 37 SERVICO_CIDADE explícitas", () => {
+  it("mantém a fila 11–20 estável", () => {
     for (const path of FILA_11_20_SERVICO_CIDADE) {
       const d = resolveLocal(path);
       expect(d.family).toBe("SERVICO_CIDADE");
@@ -81,11 +94,22 @@ describe("localIndexPolicy — promoção top 10 service × cidade", () => {
       expect(d.sitemap).toBe(true);
       expect(d.tier).toBe("SERVICO_CIDADE_COM_INTENCAO_LOCAL");
     }
-    expect(declaredEntities().filter((d) => d.family === "SERVICO_CIDADE")).toHaveLength(37);
+  });
+
+  it("promove a fila 21–30 e totaliza 47 SERVICO_CIDADE explícitas", () => {
+    for (const path of FILA_21_30_SERVICO_CIDADE) {
+      const d = resolveLocal(path);
+      expect(d.family).toBe("SERVICO_CIDADE");
+      expect(d.indexability).toBe("index");
+      expect(canonicalFor(path)).toBe(path);
+      expect(d.sitemap).toBe(true);
+      expect(d.tier).toBe("SERVICO_CIDADE_COM_INTENCAO_LOCAL");
+    }
+    expect(declaredEntities().filter((d) => d.family === "SERVICO_CIDADE")).toHaveLength(47);
   });
 
   it("mantém outra combinação da família no estado fail-closed anterior", () => {
-    const path = "/servicos/pc-gamer/araucaria";
+    const path = "/servicos/redes-wifi/araucaria";
     const d = resolveLocal(path);
     expect(d.indexability).toBe("noindex");
     expect(d.sitemap).toBe(false);

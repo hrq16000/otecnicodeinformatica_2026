@@ -1,0 +1,97 @@
+{
+  "_doc": "FILA 30 — SERVIÇO × CAMPO LARGO. Fonte autoral local fail-closed. Somente slugs declarados neste arquivo recebem conteúdo local; indexabilidade continua governada por src/lib/localIndexPolicy.json.",
+  "paginas": {
+    "conserto-notebook": {
+      "path": "/servicos/conserto-notebook/campo-largo",
+      "parent": "/servicos/manutencao-de-notebook",
+      "nome": "Conserto de Notebook",
+      "intentGlobal": "entender diagnóstico e manutenção de notebook: alimentação, tela, teclado, bateria, temperatura, armazenamento e sistema",
+      "intentLocal": "solicitar conserto de notebook em Campo Largo com triagem pelo modelo, preservação de dados e escolha entre remoto, visita, coleta ou bancada",
+      "title": "Conserto de Notebook em Campo Largo | Diagnóstico e dados",
+      "description": "Conserto de notebook em Campo Largo com triagem por modelo e sintoma, avaliação de hardware e sistema e definição da modalidade conforme o caso.",
+      "h1": "Conserto de notebook em Campo Largo",
+      "subtitulo": "Avaliação para separar falha de alimentação, tela, teclado, armazenamento, temperatura e software sem começar pela troca de peça.",
+      "intro": [
+        "Notebook que liga devagar, desliga sozinho, deixa de carregar ou perde imagem pode ter causas que se sobrepõem. Um armazenamento degradado pode parecer problema de Windows; bateria e carregador podem produzir sintomas parecidos; aquecimento pode reduzir desempenho sem deixar mensagem clara. A triagem precisa partir do comportamento real da máquina.",
+        "Em Campo Largo, referências como Centro, Ferraria, Bateias, Santa Cruz, Rondinha, Botiatuva, Itaqui e São Marcos ajudam a organizar a logística quando o caso precisa sair do remoto. Esses nomes orientam deslocamento e agenda, não representam filial ou técnico fixo em cada região."
+      ],
+      "blocos": [
+        {
+          "titulo": "Modelo, etiqueta e histórico vêm antes da desmontagem",
+          "paragrafos": [
+            "A identificação correta do notebook ajuda a verificar carregador, bateria, tela, teclado, memória e opções de armazenamento compatíveis. Além do modelo, é importante saber se houve queda, contato com líquido, oscilação elétrica, atualização ou troca recente de componente.",
+            "Esses dados evitam intervenções por tentativa. Formatar uma máquina com SSD instável, trocar bateria sem testar alimentação ou encomendar tela apenas pelo nome comercial são exemplos de decisões que podem aumentar custo e risco.",
+            "Se o notebook apresenta defeito intermitente, registre em que posição da tela, nível de bateria ou tempo de uso ele aparece. Dobradiça, cabo de vídeo, conector de carga e temperatura podem produzir falhas que só surgem em determinadas condições."
+          ]
+        },
+        {
+          "titulo": "Energia e carga precisam ser testadas por etapas",
+          "paragrafos": [
+            "Quando o notebook não carrega, carregador, conector, bateria e circuito de alimentação entram na investigação. Se liga apenas conectado, isso é um sinal; se não responde a carregador conhecido e compatível, o caminho muda.",
+            "A avaliação busca confirmar onde a energia deixa de chegar antes de indicar peça. O objetivo é evitar trocar um componente funcional enquanto a falha permanece em outro ponto do circuito."
+          ]
+        },
+        {
+          "titulo": "Lentidão pode estar no disco, na memória ou na temperatura",
+          "paragrafos": [
+            "Inicialização demorada, travamento ao abrir programas e uso alto de disco apontam para um cenário diferente de máquina que fica lenta apenas com várias aplicações. Memória insuficiente, armazenamento, sistema carregado e aquecimento podem coexistir.",
+            "O diagnóstico observa quando a lentidão aparece e procura sinais físicos e de sistema. SSD, memória, limpeza ou correção de software só entram depois de identificar qual gargalo realmente pesa no uso."
+          ]
+        },
+        {
+          "titulo": "Dados importantes mudam a ordem do trabalho",
+          "paragrafos": [
+            "Se o notebook guarda arquivos únicos, a preservação precisa ser considerada antes de testes que possam forçar um armazenamento instável. Disco com erros, desconexões ou ruído pode exigir cópia ou outra estratégia antes do reparo principal.",
+            "Também vale informar criptografia, conta corporativa e autenticação importante. Esses detalhes não mudam o defeito físico, mas podem mudar a sequência segura de intervenção.",
+            "Quando existem arquivos sem cópia, também vale informar quais pastas são prioritárias. Isso ajuda a escolher uma sequência que preserve dados antes de intervenções mais invasivas no sistema ou no armazenamento."
+          ]
+        },
+        {
+          "titulo": "A janela operacional varia de 2 a 72 horas úteis",
+          "paragrafos": [
+            "O atendimento é organizado conforme urgência e disponibilidade do prestador adequado. Uma máquina usada para trabalho e completamente parada pode receber prioridade maior que uma revisão programável, sem eliminar a necessidade de agenda real.",
+            "A faixa de 2 a 72 horas úteis indica o início do atendimento, não a conclusão do conserto. Peça, bancada, teste prolongado ou recuperação de dados podem exigir tempo adicional depois do diagnóstico."
+          ]
+        },
+        {
+          "titulo": "Rede nacional e logística em Campo Largo",
+          "paragrafos": [
+            "A operação começou em Curitiba em 2006 e hoje integra uma rede nacional com mais de 6 mil prestadores credenciados. Em Campo Largo, a rede é usada para consultar disponibilidade sem transformar esse número em contagem municipal de técnicos.",
+            "A referência de tarifa mínima justa ao prestador reconhece triagem, deslocamento, desmontagem e teste. Para solicitar, informe o bairro, modelo, sintoma e se o equipamento pode ser movimentado; a modalidade é definida antes de qualquer deslocamento."
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "pergunta": "Atendem notebook no Centro, Ferraria ou Bateias?",
+          "resposta": "Essas regiões entram como referências locais de agenda, mas a disponibilidade e a modalidade são confirmadas caso a caso."
+        },
+        {
+          "pergunta": "Notebook que não carrega sempre precisa de bateria?",
+          "resposta": "Não. Carregador, conector, bateria e circuito de alimentação podem gerar sintomas semelhantes e precisam ser separados pelo diagnóstico."
+        },
+        {
+          "pergunta": "Dá para começar remotamente?",
+          "resposta": "Quando a máquina liga e o problema é de software ou configuração, sim. Falhas físicas exigem outra modalidade."
+        },
+        {
+          "pergunta": "O conserto termina em até 72 horas úteis?",
+          "resposta": "Não necessariamente. Essa faixa organiza o início do atendimento; peças, bancada e testes podem exigir prazo adicional."
+        },
+        {
+          "pergunta": "Quantos técnicos de notebook existem em Campo Largo?",
+          "resposta": "Não publicamos contagem municipal sem fonte confirmada. O dado institucional é de mais de 6 mil prestadores credenciados na rede nacional."
+        }
+      ],
+      "interlinks": [
+        "/servicos/manutencao-de-notebook",
+        "/servicos/upgrade-ssd-ram",
+        "/servicos/recuperacao-de-dados",
+        "/tecnico-informatica-campo-largo",
+        "/precos-e-politicas"
+      ],
+      "cidadeSlug": "campo-largo",
+      "cidadeNome": "Campo Largo"
+    }
+  }
+}
