@@ -1136,7 +1136,8 @@
           "titulo": "Rede nacional com compromisso de remuneração sustentável",
           "paragrafos": [
             "A operação começou em Curitiba em 2006 e evoluiu para uma rede nacional com mais de 6 mil prestadores credenciados. Em São José dos Pinhais, esse alcance permite buscar disponibilidade sem criar uma contagem municipal artificial.",
-            "A referência de tarifa mínima justa ao prestador procura sustentar diagnóstico, registro e responsabilidade sobre o ambiente do cliente. Suporte empresarial mal remunerado tende a virar correção apressada; o objetivo é permitir que o técnico teste e documente o que executou."
+            "A referência de tarifa mínima justa ao prestador procura sustentar diagnóstico, registro e responsabilidade sobre o ambiente do cliente. Suporte empresarial mal remunerado tende a virar correção apressada; o objetivo é permitir que o técnico teste e documente o que executou.",
+            "A continuidade também depende de registrar quem autorizou a intervenção e o que ficou pendente. Esse fechamento simples ajuda a empresa a separar correção concluída, observação para acompanhar e mudança que ainda precisa de aprovação."
           ]
         },
         {
@@ -1206,7 +1207,8 @@
           "titulo": "Prevenção não esconde reparo corretivo",
           "paragrafos": [
             "Se uma estação apresenta disco com erro, bateria estufada, fonte instável ou outra falha confirmada, o caso deixa de ser apenas preventivo. O reparo precisa ser separado, explicado e aprovado antes de executar.",
-            "Essa separação evita transformar uma manutenção programada em orçamento imprevisível. A empresa sabe o que fazia parte da rotina e o que surgiu como intervenção adicional."
+            "Essa separação evita transformar uma manutenção programada em orçamento imprevisível. A empresa sabe o que fazia parte da rotina e o que surgiu como intervenção adicional.",
+            "O relatório da preventiva também deve evitar diagnóstico absoluto quando o teste apenas aponta tendência. Um armazenamento com sinais de degradação, por exemplo, pede acompanhamento ou substituição planejada; a comunicação precisa diferenciar risco observado de falha já confirmada."
           ]
         },
         {
@@ -1304,7 +1306,8 @@
           "titulo": "Teste de restauração é parte do serviço",
           "paragrafos": [
             "Um backup que nunca foi restaurado é apenas uma hipótese. A validação precisa recuperar amostras ou um conjunto definido e confirmar que os arquivos abrem e que a equipe sabe onde encontrá-los.",
-            "Também é importante registrar credenciais e dependências necessárias para restaurar o ambiente. Descobrir durante a emergência que a senha, a chave ou o aplicativo não está disponível anula parte da proteção."
+            "Também é importante registrar credenciais e dependências necessárias para restaurar o ambiente. Descobrir durante a emergência que a senha, a chave ou o aplicativo não está disponível anula parte da proteção.",
+            "O teste também precisa considerar versão e retenção. Recuperar o arquivo de hoje não prova que a empresa consegue voltar a uma versão anterior quando alguém sobrescreve ou exclui informação dias depois."
           ]
         },
         {
