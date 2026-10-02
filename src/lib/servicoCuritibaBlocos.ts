@@ -14,6 +14,7 @@
 // ─────────────────────────────────────────────────────────────
 import data from "./servicoCuritibaBlocos.json";
 import dataSjp from "./servicoSjpBlocos.json";
+import dataAraucaria from "./servicoAraucariaBlocos.json";
 
 export interface BlocoLocal {
   titulo: string;
@@ -47,11 +48,13 @@ export interface ServicoCuritibaPagina {
 
 const PAGINAS = (data as { paginas: Record<string, ServicoCuritibaPagina> }).paginas;
 const PAGINAS_SJP = (dataSjp as { paginas: Record<string, ServicoCuritibaPagina> }).paginas;
+const PAGINAS_ARAUCARIA = (dataAraucaria as { paginas: Record<string, ServicoCuritibaPagina> }).paginas;
 
 /** Mapa cidade → (slug de serviço → conteúdo local). */
 export const SERVICO_CIDADE_PAGINAS: Record<string, Record<string, ServicoCuritibaPagina>> = {
   curitiba: PAGINAS,
   "sao-jose-dos-pinhais": PAGINAS_SJP,
+  araucaria: PAGINAS_ARAUCARIA,
 };
 
 /** Slugs de serviço com conteúdo local próprio para Curitiba. */
@@ -63,10 +66,14 @@ export const SERVICO_CURITIBA_PATHS = Object.values(PAGINAS).map((p) => p.path);
 /** Paths declarados para São José dos Pinhais (Rodada 5D). */
 export const SERVICO_SJP_PATHS = Object.values(PAGINAS_SJP).map((p) => p.path);
 
+/** Paths declarados para Araucária (fila 16–20). */
+export const SERVICO_ARAUCARIA_PATHS = Object.values(PAGINAS_ARAUCARIA).map((p) => p.path);
+
 /** Todas as páginas serviço × cidade com conteúdo local declarado. */
 export const TODAS_PAGINAS_LOCAIS: ServicoCuritibaPagina[] = [
   ...Object.values(PAGINAS),
   ...Object.values(PAGINAS_SJP),
+  ...Object.values(PAGINAS_ARAUCARIA),
 ];
 
 /** Conteúdo local do par serviço × cidade, ou null (fail-closed). */
