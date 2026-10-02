@@ -1139,6 +1139,358 @@
         "/problemas/computador-reiniciando",
         "/tecnico-informatica-curitiba"
       ]
+    },
+    "conserto-tv": {
+      "path": "/servicos/conserto-tv/curitiba",
+      "parent": "/servicos/conserto-tv",
+      "nome": "Conserto de TV",
+      "intentGlobal": "entender diagnóstico e reparo de televisores: fonte, iluminação, imagem, áudio, sistema e viabilidade de peça",
+      "intentLocal": "solicitar conserto de TV em Curitiba com triagem prévia, definição de coleta/encaminhamento e janela real de atendimento",
+      "title": "Conserto de TV em Curitiba | Triagem, coleta e reparo",
+      "description": "Conserto de TV em Curitiba com triagem por sintoma e modelo, orientação sobre coleta ou encaminhamento e janela de atendimento conforme urgência e agenda.",
+      "h1": "Conserto de TV em Curitiba",
+      "subtitulo": "Diagnóstico de televisão em Curitiba com triagem do sintoma, decisão sobre a melhor forma de receber o aparelho e prazo informado sem promessas irreais.",
+      "intro": [
+        "TV que liga e apaga, fica com som sem imagem, mostra faixas na tela ou demora a iniciar exige uma triagem diferente de computador. O tamanho do aparelho, o tipo de painel e o risco de transporte mudam a forma de atendimento; por isso o primeiro passo é identificar marca, modelo, polegadas e o comportamento exato antes de definir deslocamento.",
+        "Em Curitiba, o atendimento é organizado a partir dessa triagem e da região do cliente. Centro, Água Verde, Portão, Boqueirão, CIC e Santa Felicidade são referências úteis para planejar deslocamento, assim como os eixos da Linha Verde e da BR-277. Isso não representa unidade física em bairro algum: a modalidade é combinada conforme agenda, distância e segurança para o equipamento."
+      ],
+      "blocos": [
+        {
+          "titulo": "Sintoma de TV não deve ser tratado como defeito genérico",
+          "paragrafos": [
+            "Tela completamente escura com áudio presente aponta para uma linha de investigação diferente de uma TV que reinicia, perde HDMI ou exibe manchas. Em modelos LED, fonte e iluminação precisam ser separadas de falhas de painel; em Smart TVs, travamentos de sistema também podem parecer defeito eletrônico. A triagem pede vídeo curto do sintoma quando possível, porque isso ajuda a decidir se o caso precisa de bancada desde o início.",
+            "O objetivo é evitar deslocar uma televisão grande sem necessidade e, no sentido oposto, evitar mandar um técnico ao endereço para um reparo que depende de instrumentos de bancada. Se houver tela trincada, impacto ou líquido, isso precisa ser informado antes, pois muda completamente a avaliação de viabilidade."
+          ]
+        },
+        {
+          "titulo": "Como Curitiba entra na logística do atendimento",
+          "paragrafos": [
+            "Curitiba combina regiões densas, prédios sem acesso simples para carga e descarga e bairros mais afastados do eixo central. Uma TV de 55 ou 65 polegadas em apartamento no Centro ou Água Verde exige outra logística de um aparelho menor em casa térrea no Boqueirão ou CIC. Por isso o endereço aproximado e as condições de retirada fazem parte da triagem, junto com tamanho e modelo.",
+            "Quando o equipamento precisa sair do local, a orientação de transporte considera manter a tela na posição adequada, evitar pressão sobre o painel e proteger quinas e base. A confirmação da modalidade e da janela acontece antes de qualquer deslocamento; não se presume coleta automática nem atendimento domiciliar para todos os casos."
+          ]
+        },
+        {
+          "titulo": "Janela de 2 a 72 horas úteis: o que ela significa para TV",
+          "paragrafos": [
+            "A operação trabalha com uma janela variável de atendimento entre 2 e 72 horas úteis, conforme urgência e disponibilidade de agendamento. Em TV, esse intervalo se refere à organização do atendimento e da triagem técnica, não a uma promessa de reparo concluído nesse mesmo período. Um aparelho que apenas precisa de avaliação inicial pode entrar mais rápido na agenda; um equipamento grande, com logística de retirada ou necessidade de profissional adequado ao tipo de defeito, pode exigir encaixe posterior.",
+            "A prioridade também leva em conta a agenda do prestador mais próximo disponível e a natureza do caso. Depois que a TV é avaliada, o prazo de reparo passa a depender de diagnóstico, viabilidade e eventual disponibilidade de peça. Separar essas duas etapas evita prometer um tempo que a eletrônica ou o fornecedor não conseguem cumprir."
+          ]
+        },
+        {
+          "titulo": "Rede nacional sem apagar a realidade local",
+          "paragrafos": [
+            "A operação que deu origem à rede começou em Curitiba em 2006 e hoje se conecta a uma rede nacional com mais de 6 mil prestadores credenciados. Na prática, a rede amplia a capacidade de localizar profissionais disponíveis sem transformar esse número em uma contagem artificial por cidade: não há promessa de quantidade fixa de técnicos em Curitiba nem de cobertura instantânea em qualquer bairro.",
+            "O modelo também adota como compromisso a valorização do prestador, com referência de tarifa mínima justa ao técnico em contraste com a prática histórica de remuneração muito baixa no setor. A lógica é simples: atendimento técnico exige deslocamento, ferramenta, responsabilidade sobre o equipamento e tempo de diagnóstico; pressionar o profissional a trabalhar por valor inviável tende a piorar disponibilidade e cuidado."
+          ]
+        },
+        {
+          "titulo": "O que enviar na triagem antes de mover a TV",
+          "paragrafos": [
+            "Informe marca, modelo completo da etiqueta traseira, tamanho em polegadas, há quanto tempo o problema aparece e o que acontece ao apertar o botão de ligar. Diga também se existe som, luz de standby, imagem muito escura, linhas, manchas, reinícios, falha em HDMI ou histórico de queda e oscilação elétrica. Uma foto da etiqueta e um vídeo curto do defeito costumam ser mais úteis do que apenas dizer que a televisão 'parou'.",
+            "Com esses dados e o bairro em Curitiba, a equipe consegue direcionar a etapa seguinte com menos tentativa e erro. O cliente recebe a modalidade disponível e a janela de atendimento antes de confirmar; qualquer reparo depende de diagnóstico e aprovação, e problemas de painel podem ser economicamente inviáveis dependendo do modelo."
+          ]
+        },
+        {
+          "titulo": "Quando vale comparar reparo e substituição",
+          "paragrafos": [
+            "Nem toda TV deve ser consertada a qualquer custo. Falhas de fonte, iluminação e conectividade podem ter cenários de reparo diferentes de painel quebrado ou peça sem reposição. O diagnóstico serve também para decidir se faz sentido investir no equipamento, especialmente em modelos mais antigos ou quando o valor da peça se aproxima do valor de substituição do aparelho.",
+            "A decisão deve partir de dados do modelo e do defeito, não de pressão para fechar serviço. Quando houver mais de uma alternativa técnica, a orientação é apresentar o que muda em custo, risco e disponibilidade de peça para que o cliente escolha com clareza."
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "pergunta": "Vocês fazem conserto de TV em qualquer bairro de Curitiba?",
+          "resposta": "O atendimento parte de Curitiba e é organizado conforme bairro, agenda, tamanho da TV e modalidade necessária. A confirmação de disponibilidade acontece na triagem; não há promessa de cobertura instantânea em todos os bairros."
+        },
+        {
+          "pergunta": "A janela de 2 a 72 horas úteis é o prazo para a TV ficar pronta?",
+          "resposta": "Não. É a janela variável para organizar o atendimento conforme urgência e disponibilidade do prestador mais próximo. O prazo de reparo só pode ser informado depois do diagnóstico e, quando houver troca, da disponibilidade de peça."
+        },
+        {
+          "pergunta": "Preciso informar o modelo antes do atendimento?",
+          "resposta": "Sim. Marca, modelo, polegadas e sintoma ajudam a decidir se o caso exige bancada, qual logística faz sentido e se existe alguma limitação conhecida de peça ou painel."
+        },
+        {
+          "pergunta": "TV com som e sem imagem sempre é LED queimado?",
+          "resposta": "Não. Iluminação é uma possibilidade, mas fonte, circuito de alimentação, painel e outras falhas podem produzir sintomas parecidos. O diagnóstico precisa separar essas causas."
+        },
+        {
+          "pergunta": "A rede tem quantos técnicos em Curitiba?",
+          "resposta": "Não publicamos uma contagem por cidade sem base confirmada. A operação integra uma rede nacional com mais de 6 mil prestadores credenciados, e a disponibilidade local é consultada caso a caso na triagem."
+        }
+      ],
+      "interlinks": [
+        "/servicos/conserto-tv",
+        "/conserto-tv-curitiba",
+        "/precos-e-politicas",
+        "/areas-atendidas",
+        "/coleta-e-entrega"
+      ]
+    },
+    "conserto-celular": {
+      "path": "/servicos/conserto-celular/curitiba",
+      "parent": "/servicos/conserto-celular",
+      "nome": "Conserto de Celular",
+      "intentGlobal": "entender reparo de smartphone: tela, bateria, carga, áudio, câmera, sistema e diagnóstico de placa",
+      "intentLocal": "solicitar conserto de celular em Curitiba com triagem por modelo, dano e prioridade, sem inventar estoque ou prazo de peça",
+      "title": "Conserto de Celular em Curitiba | Tela, bateria e carga",
+      "description": "Conserto de celular em Curitiba com triagem por modelo e defeito, orientação sobre encaminhamento do aparelho e atendimento conforme urgência e agenda.",
+      "h1": "Conserto de celular em Curitiba",
+      "subtitulo": "Triagem local para smartphone com identificação exata do modelo, histórico do dano e definição da forma de atendimento antes de qualquer reparo.",
+      "intro": [
+        "Celular quebrado concentra uma urgência diferente: nele estão autenticação bancária, mensagens, trabalho, fotos e acesso a contas. Mesmo assim, pressa não pode virar diagnóstico por chute. Tela sem toque, bateria estufada, conector intermitente, aparelho molhado e falha de sistema exigem procedimentos e riscos diferentes.",
+        "Em Curitiba, a triagem considera o modelo exato e a região do cliente antes de orientar o encaminhamento. Centro, Batel, Água Verde, Portão, Boqueirão e bairros ao longo da Linha Verde são referências de deslocamento; a cidade é atendida a partir da operação de Curitiba, sem afirmar loja, filial ou laboratório em cada região."
+      ],
+      "blocos": [
+        {
+          "titulo": "O modelo exato muda peça, desmontagem e risco",
+          "paragrafos": [
+            "Dizer apenas 'é um Samsung' ou 'é um iPhone' não basta para preparar um reparo. Variações do mesmo nome comercial podem usar telas, conectores e baterias diferentes. A etiqueta, o código do modelo nas configurações ou a identificação da carcaça ajudam a evitar compra de peça incompatível e permitem explicar antes se o aparelho precisa ser aberto para diagnóstico.",
+            "Queda com tela acesa mas sem toque não é o mesmo que tela totalmente apagada. Bateria que descarrega rápido não é igual a aparelho que desliga sob carga. E celular que molhou deve ser tratado como caso de corrosão potencial, sem insistir em ligar ou carregar repetidamente. A triagem separa esses cenários antes de falar em preço ou prazo."
+          ]
+        },
+        {
+          "titulo": "Curitiba e a decisão entre rapidez e deslocamento seguro",
+          "paragrafos": [
+            "Quem está no Centro ou Batel pode ter necessidade de recuperar o aparelho no meio do expediente; quem está no Portão, Boqueirão ou CIC pode preferir combinar uma janela que evite atravessar a cidade em horário de pico. A logística faz parte do atendimento porque celular é pequeno, mas concentra dados sensíveis e peças frágeis.",
+            "A triagem informa qual forma de encaminhamento está disponível naquele chamado. Não se promete visita domiciliar para troca de tela nem se inventa ponto fixo de atendimento: o fluxo é confirmado antes, de acordo com agenda, região, defeito e necessidade de bancada."
+          ]
+        },
+        {
+          "titulo": "Por que o atendimento pode variar de 2 a 72 horas úteis",
+          "paragrafos": [
+            "A janela operacional informada para atendimento varia de 2 a 72 horas úteis. Casos urgentes e simples de classificar podem encontrar encaixe mais cedo; chamados sem urgência, em horário de maior carga ou que exigem um profissional com experiência específica naquele tipo de reparo podem ficar para uma janela posterior. A agenda do prestador mais próximo disponível entra nessa decisão.",
+            "Essa janela não transforma peça em estoque nem garante conserto final dentro do mesmo intervalo. Depois que o aparelho é inspecionado, a conclusão depende do defeito real e, quando necessário, de componente compatível. A distinção entre 'ser atendido' e 'ficar pronto' é essencial para não criar expectativa falsa."
+          ]
+        },
+        {
+          "titulo": "Dados pessoais exigem limite claro no reparo",
+          "paragrafos": [
+            "Smartphone guarda fotos, mensagens, contas e tokens de autenticação. O técnico deve acessar apenas o necessário para testar a função reparada. Quando um teste exige desbloqueio, a necessidade precisa ser explicada ao cliente; sempre que possível, o próprio cliente acompanha ou executa a etapa sensível.",
+            "Antes de intervenções que possam afetar o sistema, vale confirmar backup disponível. Se o problema for apenas físico, como tela ou conector, não há motivo técnico para navegar por conteúdo pessoal. Esse limite é parte da qualidade do atendimento, não um extra opcional."
+          ]
+        },
+        {
+          "titulo": "A rede nacional começou com operação local",
+          "paragrafos": [
+            "Curitiba é o ponto de origem da operação iniciada em 2006; a estrutura evoluiu para uma rede nacional com mais de 6 mil prestadores credenciados. Esse dado é nacional e não deve ser convertido em número de técnicos na cidade. Para cada solicitação, a disponibilidade é verificada pela urgência, região e agenda real.",
+            "O compromisso de valorização do prestador usa a referência de uma tarifa mínima justa ao técnico, evitando a lógica de remunerar diagnóstico e deslocamento por valores que inviabilizam o trabalho. Em reparo de celular isso importa porque desmontagem cuidadosa, teste e responsabilidade sobre dados exigem tempo técnico real."
+          ]
+        },
+        {
+          "titulo": "O que informar antes de pedir orçamento",
+          "paragrafos": [
+            "Envie marca, modelo exato, defeito percebido, histórico de queda ou contato com líquido e se o aparelho ainda liga, carrega e responde ao toque. Para falha de bateria, diga se há aquecimento ou estufamento. Para conector, informe se carrega apenas em determinada posição. Para tela, uma foto externa ajuda a diferenciar vidro, display e estrutura.",
+            "Com esse conjunto de informações, a conversa inicial consegue direcionar o reparo com mais precisão. O valor final continua dependente da condição real e da peça necessária; nada deve ser vendido como diagnóstico fechado apenas pelo WhatsApp."
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "pergunta": "Consertam celular em todas as regiões de Curitiba?",
+          "resposta": "A disponibilidade é confirmada por bairro, agenda e tipo de reparo. Curitiba é a base da operação, mas a forma de encaminhamento do aparelho é definida na triagem e não pressupõe unidade física em cada região."
+        },
+        {
+          "pergunta": "Quanto demora para ser atendido?",
+          "resposta": "A janela de atendimento varia de 2 a 72 horas úteis conforme urgência e disponibilidade do prestador mais próximo. Isso não é prazo garantido de reparo concluído; peça e diagnóstico podem exigir tempo adicional."
+        },
+        {
+          "pergunta": "Preciso passar minha senha ao técnico?",
+          "resposta": "Somente quando um teste realmente exigir acesso e com explicação do motivo. O acesso deve ficar limitado à função necessária para validar o reparo."
+        },
+        {
+          "pergunta": "Celular molhado deve ser colocado no arroz?",
+          "resposta": "Não é uma solução técnica confiável. O mais seguro é desligar, evitar novas tentativas de carga e buscar avaliação, porque energia aplicada sobre uma placa úmida pode ampliar a corrosão e o dano."
+        },
+        {
+          "pergunta": "Vocês têm mais de 6 mil técnicos em Curitiba?",
+          "resposta": "Não. O dado confirmado é de uma rede nacional com mais de 6 mil prestadores credenciados. Não publicamos quantidade por cidade sem fonte específica."
+        }
+      ],
+      "interlinks": [
+        "/servicos/conserto-celular",
+        "/conserto-celular-curitiba",
+        "/precos-e-politicas",
+        "/seguranca-dos-dados",
+        "/areas-atendidas"
+      ]
+    },
+    "suporte-empresas": {
+      "path": "/servicos/suporte-empresas/curitiba",
+      "parent": "/servicos/suporte-tecnico-empresarial",
+      "nome": "Suporte Técnico para Empresas",
+      "intentGlobal": "entender suporte de TI para pequenas empresas: estações, rede, impressoras, acesso, backup e continuidade operacional",
+      "intentLocal": "contratar suporte de TI para empresa em Curitiba com triagem por impacto, atendimento remoto ou no local e priorização por urgência",
+      "title": "Suporte de TI para Empresas em Curitiba | Atendimento técnico",
+      "description": "Suporte de TI para pequenas empresas em Curitiba com triagem por impacto, atendimento remoto ou presencial conforme o caso e agenda por prioridade.",
+      "h1": "Suporte de TI para empresas em Curitiba",
+      "subtitulo": "Atendimento técnico para pequenas operações que precisam recuperar computadores, rede e rotinas de trabalho sem promessas de disponibilidade irreais.",
+      "intro": [
+        "Quando uma pequena empresa perde acesso ao sistema, à impressora compartilhada, ao e-mail ou à rede, o problema deixa de ser apenas técnico e passa a interromper uma rotina inteira. A primeira triagem precisa identificar quantas pessoas foram afetadas, se existe alternativa provisória e se o incidente pode ser resolvido remotamente antes de deslocar alguém.",
+        "Em Curitiba, o contexto muda entre escritórios do Centro, Batel e Água Verde, lojas e serviços no Portão ou Hauer e operações na CIC e no entorno da Linha Verde. O atendimento é organizado a partir da cidade-sede e da agenda real, sem tratar cada bairro como filial nem assumir o mesmo tempo para todo chamado."
+      ],
+      "blocos": [
+        {
+          "titulo": "Prioridade empresarial começa pelo impacto, não pelo equipamento",
+          "paragrafos": [
+            "Um único computador lento pode ser inconveniente; o computador do caixa, a máquina que emite documento fiscal ou a estação que concentra arquivos pode paralisar a operação. A triagem pergunta quem está parado, qual serviço deixou de funcionar e se existe alternativa temporária. Isso permite separar urgência operacional de tarefas que podem ser agendadas sem prejudicar o negócio.",
+            "Rede, impressão, credenciais, Windows, armazenamento e periféricos são tratados como partes de um fluxo. Trocar uma peça sem entender a causa pode devolver a máquina funcionando e manter o problema de rede ou perfil de usuário que originou a interrupção."
+          ]
+        },
+        {
+          "titulo": "Atendimento remoto ou no endereço em Curitiba",
+          "paragrafos": [
+            "Falhas de configuração, e-mail, acesso a sistemas, impressora lógica e muitos problemas de Windows podem começar por sessão remota autorizada. Quando há suspeita de fonte, cabeamento, roteador, disco, periférico físico ou múltiplas máquinas afetadas, a avaliação no endereço tende a ser mais adequada.",
+            "A região entra no planejamento do chamado. Um escritório no Centro ou Rebouças pode exigir janela compatível com acesso a estacionamento e horário comercial; uma operação no Hauer, Boqueirão ou CIC pode depender de deslocamento pela Linha Verde ou outros eixos de tráfego. A modalidade é definida antes de enviar o profissional."
+          ]
+        },
+        {
+          "titulo": "Como funciona a janela de 2 a 72 horas úteis para empresas",
+          "paragrafos": [
+            "O atendimento pode variar entre 2 e 72 horas úteis porque a fila é classificada por urgência e impacto. Uma empresa totalmente parada tem prioridade diferente de uma solicitação de instalação que pode ser programada. Além disso, o sistema procura encaixar o prestador mais próximo disponível com perfil compatível com o problema, em vez de prometer um horário que não existe na agenda.",
+            "O intervalo é uma janela operacional, não um contrato de disponibilidade contínua nem prazo fechado para resolver qualquer incidente. Depois da avaliação, serviços que dependem de peça, cabeamento, reinstalação extensa ou decisão do responsável podem levar mais tempo, e essa nova expectativa precisa ser informada antes da execução."
+          ]
+        },
+        {
+          "titulo": "Suporte útil documenta causa, decisão e próximo passo",
+          "paragrafos": [
+            "Em ambiente empresarial, resolver sem registrar o que foi feito cria reincidência e dependência. O atendimento deve identificar sintoma, causa provável ou confirmada, ação executada e o que precisa ser acompanhado. Quando o problema retorna, esse histórico reduz repetição de testes e ajuda a perceber padrão.",
+            "Também é importante separar manutenção corretiva de mudança de infraestrutura. Adicionar pontos de rede, substituir máquinas, migrar backup ou reorganizar permissões são projetos diferentes de restaurar uma estação parada. Misturar tudo em um chamado urgente dificulta preço, prazo e responsabilidade."
+          ]
+        },
+        {
+          "titulo": "Rede nacional com valorização de quem executa o serviço",
+          "paragrafos": [
+            "A empresa nasceu em Curitiba em 2006 e a operação se expandiu para uma rede nacional com mais de 6 mil prestadores credenciados. Esse alcance ajuda a organizar disponibilidade, mas não autoriza dizer quantos profissionais existem em Curitiba ou prometer técnico imediato em toda a cidade; cada chamado continua dependente de agenda.",
+            "A política declarada de valorização do prestador inclui a defesa de tarifa mínima justa ao técnico. Para empresas, isso protege um ponto essencial: diagnóstico empresarial exige responsabilidade sobre dados, continuidade e ambiente de trabalho. Remuneração inviável tende a incentivar atendimento apressado, enquanto uma relação sustentável permite cobrar registro, teste e encerramento adequado."
+          ]
+        },
+        {
+          "titulo": "Informações que aceleram a triagem empresarial",
+          "paragrafos": [
+            "Antes de chamar, informe o endereço em Curitiba, quantidade aproximada de pessoas afetadas, equipamentos envolvidos, mensagem de erro e o que mudou pouco antes da falha. Diga se existe acesso à internet, se outras máquinas funcionam e se o problema impede faturamento, atendimento ao público ou acesso a arquivos.",
+            "Com essas informações é possível decidir se o primeiro movimento será remoto, visita ou coleta de um equipamento específico. A empresa recebe a janela disponível e aprova o escopo antes da execução; demandas recorrentes podem ser avaliadas separadamente, sem presumir plano mensal ou contrato padronizado."
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "pergunta": "Atendem pequenas empresas em Curitiba?",
+          "resposta": "Sim, mediante triagem e disponibilidade de agenda. O atendimento pode ser remoto, no endereço ou envolver coleta, conforme o problema e o impacto na operação."
+        },
+        {
+          "pergunta": "Qual é o prazo de atendimento para empresa?",
+          "resposta": "A janela varia de 2 a 72 horas úteis conforme urgência, impacto e disponibilidade do prestador mais próximo. Não é uma promessa de solução completa no mesmo intervalo."
+        },
+        {
+          "pergunta": "Vocês oferecem suporte mensal?",
+          "resposta": "Não presumimos plano mensal padronizado. Necessidades recorrentes podem ser avaliadas e ter escopo próprio, sempre com condições registradas antes."
+        },
+        {
+          "pergunta": "Problema de rede pode começar por acesso remoto?",
+          "resposta": "Alguns casos de configuração podem. Quando é necessário medir sinal, verificar cabeamento, roteador, switch ou conexão física, a avaliação precisa ocorrer no local."
+        },
+        {
+          "pergunta": "Quantos prestadores atendem empresas em Curitiba?",
+          "resposta": "Não publicamos número por cidade sem fonte confirmada. O dado institucional é de uma rede nacional com mais de 6 mil prestadores credenciados; a disponibilidade em Curitiba é consultada no chamado."
+        }
+      ],
+      "interlinks": [
+        "/servicos/suporte-tecnico-empresarial",
+        "/empresa-de-ti-curitiba",
+        "/atendimento-remoto",
+        "/servicos/redes-e-wifi",
+        "/precos-e-politicas"
+      ]
+    },
+    "atendimento-remoto": {
+      "path": "/servicos/atendimento-remoto/curitiba",
+      "parent": "/atendimento-remoto",
+      "nome": "Atendimento Remoto",
+      "intentGlobal": "entender quando suporte remoto resolve problemas de software, configuração e acesso sem deslocamento",
+      "intentLocal": "iniciar suporte remoto a partir de Curitiba e saber quando o chamado precisa migrar para atendimento presencial",
+      "title": "Suporte Remoto em Curitiba | Windows, programas e acesso",
+      "description": "Suporte remoto para clientes em Curitiba: triagem por WhatsApp, sessão autorizada para software e configuração e encaminhamento presencial quando há falha física.",
+      "h1": "Suporte remoto em Curitiba",
+      "subtitulo": "Atendimento por sessão autorizada para problemas que realmente podem ser resolvidos à distância, com limite claro quando o defeito exige presença física.",
+      "intro": [
+        "Suporte remoto faz sentido quando o computador ainda liga, conecta à internet e o problema está em software, configuração ou acesso. Ele não substitui visita para cabo rompido, fonte defeituosa, Wi‑Fi que precisa ser medido no imóvel ou máquina que nem inicia. A triagem serve justamente para não forçar atendimento remoto onde ele não ajuda.",
+        "Para quem está em Curitiba, começar à distância pode evitar deslocamento entre Centro, Batel, Água Verde, Portão, CIC ou bairros mais afastados. Se a sessão mostra que existe falha física, o chamado pode ser redirecionado para modalidade local conforme agenda, sem fingir que todo problema cabe numa tela compartilhada."
+      ],
+      "blocos": [
+        {
+          "titulo": "O que realmente dá para resolver por acesso remoto",
+          "paragrafos": [
+            "Configuração de Windows, programas que não abrem, contas de e-mail, impressoras já conectadas à rede, atualização de drivers, organização de inicialização e alguns erros de navegador são bons candidatos. O técnico acompanha o comportamento do sistema em tempo real e consegue testar mudanças sem sair do contexto do usuário.",
+            "O limite aparece quando o software depende de algo físico: disco com ruído, superaquecimento, cabo de rede solto, roteador mal posicionado, bateria estufada ou computador que não liga. Nesses casos, continuar tentando remotamente só consome tempo; a triagem deve migrar o atendimento."
+          ]
+        },
+        {
+          "titulo": "Sessão autorizada e visível ao cliente",
+          "paragrafos": [
+            "O acesso remoto precisa ser iniciado com consentimento e acompanhado pelo usuário. A pessoa vê o que está sendo feito e pode encerrar a sessão. Senhas e dados sensíveis não devem ser solicitados por formulários públicos; quando uma etapa exige autenticação, o ideal é que o próprio cliente digite a credencial.",
+            "O técnico acessa apenas o necessário para diagnosticar e corrigir o problema. Pastas pessoais, fotos e documentos não fazem parte do atendimento salvo quando a própria tarefa envolve backup, localização de arquivo ou recuperação autorizada."
+          ]
+        },
+        {
+          "titulo": "De 2 a 72 horas úteis: por que uma sessão remota também entra em fila",
+          "paragrafos": [
+            "Mesmo sem deslocamento, o atendimento remoto depende de triagem e agenda. A janela operacional varia entre 2 e 72 horas úteis: casos urgentes com máquina funcional e profissional disponível podem entrar cedo; solicitações programáveis ou períodos de maior demanda podem ser encaixados depois. A prioridade é definida pelo impacto e pela disponibilidade do prestador mais próximo em capacidade, não por promessa automática.",
+            "Uma vez iniciada a sessão, alguns problemas podem ser resolvidos rapidamente e outros exigem download, atualização, reinicialização ou análise adicional. O intervalo de 2 a 72 horas não é garantia de conclusão: ele explica quando o atendimento pode ser organizado e por que urgência e agenda mudam a posição do chamado."
+          ]
+        },
+        {
+          "titulo": "Por que Curitiba continua relevante num serviço à distância",
+          "paragrafos": [
+            "A localização importa porque o remoto pode virar presencial. Se a análise identifica SSD com falha, fonte instável ou necessidade de mexer no roteador, saber que o cliente está em Curitiba permite planejar a continuidade sem recomeçar a triagem. Bairro, disponibilidade e modalidade passam a orientar o próximo passo.",
+            "Também é comum o suporte remoto servir de filtro técnico antes de uma visita, reduzindo deslocamentos desnecessários pela Linha Verde, Centro ou eixos como a BR-277. O ganho não é vender rapidez artificial; é usar o canal certo para cada tipo de problema."
+          ]
+        },
+        {
+          "titulo": "Da operação curitibana para uma rede nacional",
+          "paragrafos": [
+            "A empresa começou em Curitiba em 2006 e hoje integra uma rede nacional com mais de 6 mil prestadores credenciados. No atendimento remoto, isso amplia a possibilidade de encontrar disponibilidade sem transformar a rede em uma promessa de resposta instantânea ou em número fictício de profissionais por cidade.",
+            "A valorização do prestador também orienta esse modelo. A referência de tarifa mínima justa reconhece o tempo de análise e responsabilidade técnica, inclusive quando o serviço é feito pela internet. Remoto não significa trabalho sem valor; significa retirar o custo de um deslocamento que não agrega quando o defeito é lógico."
+          ]
+        },
+        {
+          "titulo": "Como preparar o computador para a triagem",
+          "paragrafos": [
+            "Antes da sessão, descreva o erro, diga qual versão do Windows está usando se souber, informe se a internet está estável e quando o problema começou. Uma foto ou captura da mensagem de erro ajuda. Se o computador não liga, reinicia sozinho ou faz ruído anormal, avise antes: esses sinais podem impedir o atendimento remoto.",
+            "Mantenha arquivos importantes sincronizados ou com backup quando houver risco de alteração de sistema. A triagem informa a janela disponível e explica a ferramenta de acesso; nada deve ser instalado por link de origem duvidosa ou número não reconhecido."
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "pergunta": "Quais problemas podem ser resolvidos remotamente em Curitiba?",
+          "resposta": "Principalmente software, configuração, acesso, programas, contas e alguns problemas de Windows. Falhas físicas, rede que exige medição no imóvel ou equipamento que não liga precisam de outra modalidade."
+        },
+        {
+          "pergunta": "O suporte remoto é imediato?",
+          "resposta": "Não há promessa de atendimento instantâneo. A janela varia de 2 a 72 horas úteis conforme urgência e disponibilidade de agenda, mesmo quando não existe deslocamento."
+        },
+        {
+          "pergunta": "O técnico consegue ver todos os meus arquivos?",
+          "resposta": "A sessão permite visualizar a tela, mas o atendimento deve se limitar ao necessário para a tarefa. O cliente acompanha a sessão e pode encerrá-la."
+        },
+        {
+          "pergunta": "Se o problema for físico, perco a triagem remota?",
+          "resposta": "Não. O que foi identificado serve para encaminhar a continuidade, e o chamado pode migrar para visita, coleta ou bancada conforme o defeito e a agenda."
+        },
+        {
+          "pergunta": "A rede nacional garante alguém disponível em Curitiba a qualquer hora?",
+          "resposta": "Não. A rede nacional tem mais de 6 mil prestadores credenciados, mas a disponibilidade local é real e variável. Por isso cada chamado recebe uma janela conforme urgência e agenda."
+        }
+      ],
+      "interlinks": [
+        "/atendimento-remoto",
+        "/tecnico-informatica-curitiba",
+        "/servicos/suporte-tecnico-empresarial",
+        "/seguranca-dos-dados",
+        "/precos-e-politicas"
+      ]
     }
   }
 }

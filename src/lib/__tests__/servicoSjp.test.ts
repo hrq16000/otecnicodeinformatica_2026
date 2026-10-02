@@ -2,11 +2,21 @@ import { describe, expect, it } from "vitest";
 import { resolveLocal, canonicalFor, isNoindex } from "../localIndexPolicy";
 import { servicoLocal, SERVICO_SJP_PATHS, TODAS_PAGINAS_LOCAIS } from "../servicoCuritibaBlocos";
 
-const SJP = [
+const SJP_INDEXAVEIS = [
   "/servicos/conserto-notebook/sao-jose-dos-pinhais",
   "/servicos/conserto-pc/sao-jose-dos-pinhais",
   "/servicos/redes-wifi/sao-jose-dos-pinhais",
   "/servicos/backup-recuperacao/sao-jose-dos-pinhais",
+];
+
+const SJP_COM_CONTEUDO = [
+  ...SJP_INDEXAVEIS,
+  "/servicos/conserto-tv/sao-jose-dos-pinhais",
+  "/servicos/conserto-celular/sao-jose-dos-pinhais",
+  "/servicos/upgrade-ssd/sao-jose-dos-pinhais",
+  "/servicos/suporte-empresas/sao-jose-dos-pinhais",
+  "/servicos/atendimento-remoto/sao-jose-dos-pinhais",
+  "/servicos/montagem-de-pc/sao-jose-dos-pinhais",
 ];
 
 const TOPONIMOS = /(sao jose dos pinhais|sao jose|curitiba|sjp)/g;
@@ -44,9 +54,9 @@ const corpo = (path: string) => {
 };
 
 describe("Rodada 5D — serviço × São José dos Pinhais", () => {
-  it("promove exatamente as 4 rotas com conteúdo local declarado", () => {
-    expect(SERVICO_SJP_PATHS.sort()).toEqual([...SJP].sort());
-    for (const path of SJP) {
+  it("declara as 10 rotas com conteúdo local, mas mantém só as 4 antigas promovidas", () => {
+    expect(SERVICO_SJP_PATHS.sort()).toEqual([...SJP_COM_CONTEUDO].sort());
+    for (const path of SJP_INDEXAVEIS) {
       const d = resolveLocal(path);
       expect(d.indexability).toBe("index");
       expect(canonicalFor(path)).toBe(path);
@@ -55,7 +65,7 @@ describe("Rodada 5D — serviço × São José dos Pinhais", () => {
     }
   });
 
-  it("mantém canonicalizado o serviço × SJP sem conteúdo local", () => {
+  it("mantém canonicalizado o serviço × SJP enriquecido sem promoção explícita", () => {
     const d = resolveLocal("/servicos/conserto-tv/sao-jose-dos-pinhais");
     expect(d.indexability).not.toBe("index");
     expect(d.sitemap).toBe(false);
@@ -63,7 +73,7 @@ describe("Rodada 5D — serviço × São José dos Pinhais", () => {
   });
 
   it("resolve o conteúdo local por cidade e declara a cidade correta (areaServed)", () => {
-    for (const path of SJP) {
+    for (const path of SJP_COM_CONTEUDO) {
       const slug = path.split("/")[2];
       const p = servicoLocal(slug, "sao-jose-dos-pinhais");
       expect(p).not.toBeNull();
@@ -74,7 +84,7 @@ describe("Rodada 5D — serviço × São José dos Pinhais", () => {
   });
 
   it("não repete a intenção nem a metadata da versão de Curitiba", () => {
-    for (const path of SJP) {
+    for (const path of SJP_COM_CONTEUDO) {
       const slug = path.split("/")[2];
       const sjp = servicoLocal(slug, "sao-jose-dos-pinhais");
       const ctb = servicoLocal(slug, "curitiba");
@@ -89,7 +99,7 @@ describe("Rodada 5D — serviço × São José dos Pinhais", () => {
   });
 
   it("mantém a similaridade Curitiba × SJP abaixo do teto, com topônimos removidos", () => {
-    for (const path of SJP) {
+    for (const path of SJP_COM_CONTEUDO) {
       const slug = path.split("/")[2];
       const outra = `/servicos/${slug}/curitiba`;
       expect(jaccard(corpo(path), corpo(outra))).toBeLessThan(0.45);
@@ -97,15 +107,15 @@ describe("Rodada 5D — serviço × São José dos Pinhais", () => {
   });
 
   it("mantém originalidade entre os serviços de SJP", () => {
-    for (let i = 0; i < SJP.length; i += 1) {
-      for (let j = i + 1; j < SJP.length; j += 1) {
-        expect(jaccard(corpo(SJP[i]), corpo(SJP[j]))).toBeLessThan(0.45);
+    for (let i = 0; i < SJP_COM_CONTEUDO.length; i += 1) {
+      for (let j = i + 1; j < SJP_COM_CONTEUDO.length; j += 1) {
+        expect(jaccard(corpo(SJP_COM_CONTEUDO[i]), corpo(SJP_COM_CONTEUDO[j]))).toBeLessThan(0.45);
       }
     }
   });
 
   it("aponta interlink obrigatório para o serviço-pai e para a landing da cidade", () => {
-    for (const path of SJP) {
+    for (const path of SJP_COM_CONTEUDO) {
       const p = TODAS_PAGINAS_LOCAIS.find((x) => x.path === path)!;
       expect(p.interlinks).toContain(p.parent);
       expect(p.interlinks).toContain("/tecnico-informatica-sao-jose-pinhais");
