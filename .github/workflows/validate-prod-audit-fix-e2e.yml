@@ -1,0 +1,58 @@
+name: validate-prod-audit-fix-e2e
+
+on:
+  push:
+    branches:
+      - "diag/prod-audit-fix-e2e-20261002"
+
+permissions:
+  contents: read
+
+jobs:
+  e2e:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: npm
+      - name: Install deps
+        run: npm ci --no-audit --no-fund
+      - name: Production audit
+        run: npm audit --omit=dev
+      - name: Install Playwright chromium
+        run: npx playwright install --with-deps chromium
+      - name: Build
+        run: npm run build
+      - name: Start preview
+        run: npx vite preview --port 8080 &
+        env:
+          CI: "true"
+      - name: Wait for server
+        run: npx wait-on http://localhost:8080 --timeout 60000
+      - name: Targeted E2E
+        run: npx playwright test e2e/whatsapp-funnel.spec.ts e2e/termos-e-condicoes.spec.ts e2e/seo-sitemap-robots.spec.ts e2e/como-funciona-mobile.spec.ts e2e/security-data-exposure.spec.ts
+        env:
+          E2E_BASE_URL: http://localhost:8080
+          E2E_SUPABASE_URL: ${{ secrets.VITE_SUPABASE_URL }}
+          E2E_SUPABASE_ANON_KEY: ${{ secrets.VITE_SUPABASE_PUBLISHABLE_KEY }}
+          E2E_NONADMIN_EMAIL: ${{ secrets.E2E_NONADMIN_EMAIL }}
+          E2E_NONADMIN_PASSWORD: ${{ secrets.E2E_NONADMIN_PASSWORD }}
+      - name: A11y empresarial
+        run: npx playwright test e2e/a11y-empresarial.spec.ts
+        env:
+          E2E_BASE_URL: http://localhost:8080
+      - name: A11y rotas publicas
+        run: npx playwright test e2e/a11y-rotas-publicas.spec.ts
+        env:
+          E2E_BASE_URL: http://localhost:8080
+      - name: Visual reduced motion
+        run: npx playwright test e2e/visual-reduced-motion.spec.ts --project=chromium
+        env:
+          E2E_BASE_URL: http://localhost:8080
+      - name: Final production audit
+        run: npm audit --omit=dev
+      - name: Verify unchanged
+        run: git diff --exit-code
