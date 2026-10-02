@@ -20,7 +20,8 @@
           "titulo": "Modelo, etiqueta e histórico vêm antes da desmontagem",
           "paragrafos": [
             "A identificação correta do notebook ajuda a verificar carregador, bateria, tela, teclado, memória e opções de armazenamento compatíveis. Além do modelo, é importante saber se houve queda, contato com líquido, oscilação elétrica, atualização ou troca recente de componente.",
-            "Esses dados evitam intervenções por tentativa. Formatar uma máquina com SSD instável, trocar bateria sem testar alimentação ou encomendar tela apenas pelo nome comercial são exemplos de decisões que podem aumentar custo e risco."
+            "Esses dados evitam intervenções por tentativa. Formatar uma máquina com SSD instável, trocar bateria sem testar alimentação ou encomendar tela apenas pelo nome comercial são exemplos de decisões que podem aumentar custo e risco.",
+            "Se o notebook apresenta defeito intermitente, registre em que posição da tela, nível de bateria ou tempo de uso ele aparece. Dobradiça, cabo de vídeo, conector de carga e temperatura podem produzir falhas que só surgem em determinadas condições."
           ]
         },
         {
@@ -41,7 +42,8 @@
           "titulo": "Dados importantes mudam a ordem do trabalho",
           "paragrafos": [
             "Se o notebook guarda arquivos únicos, a preservação precisa ser considerada antes de testes que possam forçar um armazenamento instável. Disco com erros, desconexões ou ruído pode exigir cópia ou outra estratégia antes do reparo principal.",
-            "Também vale informar criptografia, conta corporativa e autenticação importante. Esses detalhes não mudam o defeito físico, mas podem mudar a sequência segura de intervenção."
+            "Também vale informar criptografia, conta corporativa e autenticação importante. Esses detalhes não mudam o defeito físico, mas podem mudar a sequência segura de intervenção.",
+            "Quando existem arquivos sem cópia, também vale informar quais pastas são prioritárias. Isso ajuda a escolher uma sequência que preserve dados antes de intervenções mais invasivas no sistema ou no armazenamento."
           ]
         },
         {
