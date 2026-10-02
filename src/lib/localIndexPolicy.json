@@ -637,6 +637,116 @@
       "tier": "SERVICO_CIDADE_COM_INTENCAO_LOCAL",
       "intent": "solicitar conserto de notebook em Campo Largo com triagem pelo modelo, preservação de dados e escolha entre remoto, visita, coleta ou bancada",
       "reason": "Promoção validada por reports/enriquecimento-fila-21-30-service-cidade-2026-10.md: conteúdo autoral próprio, 96,5% de unicidade e 3,5% de similaridade máxima."
+    },
+    {
+      "path": "/servicos/conserto-pc/campo-largo",
+      "family": "SERVICO_CIDADE",
+      "indexability": "index",
+      "canonical": "/servicos/conserto-pc/campo-largo",
+      "sitemap": true,
+      "parent": "/servicos/manutencao-de-computador",
+      "tier": "SERVICO_CIDADE_COM_INTENCAO_LOCAL",
+      "intent": "solicitar conserto de PC em Campo Largo com triagem do sintoma, separação entre hardware e software e definição de visita ou bancada",
+      "reason": "Promoção validada por reports/enriquecimento-fila-31-40-service-cidade-2026-10.md: conteúdo autoral próprio, 95,4% de unicidade e 4,6% de similaridade máxima."
+    },
+    {
+      "path": "/servicos/conserto-tv/campo-largo",
+      "family": "SERVICO_CIDADE",
+      "indexability": "index",
+      "canonical": "/servicos/conserto-tv/campo-largo",
+      "sitemap": true,
+      "parent": "/servicos/conserto-tv",
+      "tier": "SERVICO_CIDADE_COM_INTENCAO_LOCAL",
+      "intent": "solicitar conserto de TV em Campo Largo com triagem por modelo e sintoma, avaliação de transporte e confirmação da modalidade antes de mover o aparelho",
+      "reason": "Promoção validada por reports/enriquecimento-fila-31-40-service-cidade-2026-10.md: conteúdo autoral próprio, 97,4% de unicidade e 2,6% de similaridade máxima."
+    },
+    {
+      "path": "/servicos/conserto-celular/campo-largo",
+      "family": "SERVICO_CIDADE",
+      "indexability": "index",
+      "canonical": "/servicos/conserto-celular/campo-largo",
+      "sitemap": true,
+      "parent": "/servicos/conserto-celular",
+      "tier": "SERVICO_CIDADE_COM_INTENCAO_LOCAL",
+      "intent": "solicitar conserto de celular em Campo Largo com triagem por modelo, dano físico, prioridade de segurança e cuidado com dados e acessos",
+      "reason": "Promoção validada por reports/enriquecimento-fila-31-40-service-cidade-2026-10.md: conteúdo autoral próprio, 96,1% de unicidade e 3,9% de similaridade máxima."
+    },
+    {
+      "path": "/servicos/upgrade-ssd/campo-largo",
+      "family": "SERVICO_CIDADE",
+      "indexability": "index",
+      "canonical": "/servicos/upgrade-ssd/campo-largo",
+      "sitemap": true,
+      "parent": "/servicos/upgrade-ssd-ram",
+      "tier": "SERVICO_CIDADE_COM_INTENCAO_LOCAL",
+      "intent": "contratar upgrade de SSD ou memória em Campo Largo com medição do gargalo, conferência de compatibilidade e plano de migração antes da compra",
+      "reason": "Promoção validada por reports/enriquecimento-fila-31-40-service-cidade-2026-10.md: conteúdo autoral próprio, 97,0% de unicidade e 3,0% de similaridade máxima."
+    },
+    {
+      "path": "/servicos/backup-recuperacao/campo-largo",
+      "family": "SERVICO_CIDADE",
+      "indexability": "index",
+      "canonical": "/servicos/backup-recuperacao/campo-largo",
+      "sitemap": true,
+      "parent": "/servicos/recuperacao-de-dados",
+      "tier": "SERVICO_CIDADE_COM_INTENCAO_LOCAL",
+      "intent": "solicitar recuperação de dados em Campo Largo com preservação da mídia, classificação da falha e prioridade definida pelos arquivos realmente importantes",
+      "reason": "Promoção validada por reports/enriquecimento-fila-31-40-service-cidade-2026-10.md: conteúdo autoral próprio, 97,4% de unicidade e 2,6% de similaridade máxima."
+    },
+    {
+      "path": "/servicos/suporte-empresas/campo-largo",
+      "family": "SERVICO_CIDADE",
+      "indexability": "index",
+      "canonical": "/servicos/suporte-empresas/campo-largo",
+      "sitemap": true,
+      "parent": "/servicos/suporte-tecnico-empresarial",
+      "tier": "SERVICO_CIDADE_COM_INTENCAO_LOCAL",
+      "intent": "contratar suporte de TI em Campo Largo com prioridade por impacto, histórico do chamado e escolha entre remoto, visita ou bancada",
+      "reason": "Promoção validada por reports/enriquecimento-fila-31-40-service-cidade-2026-10.md: conteúdo autoral próprio, 97,1% de unicidade e 2,9% de similaridade máxima."
+    },
+    {
+      "path": "/servicos/atendimento-remoto/campo-largo",
+      "family": "SERVICO_CIDADE",
+      "indexability": "index",
+      "canonical": "/servicos/atendimento-remoto/campo-largo",
+      "sitemap": true,
+      "parent": "/atendimento-remoto",
+      "tier": "SERVICO_CIDADE_COM_INTENCAO_LOCAL",
+      "intent": "iniciar suporte remoto em Campo Largo com sessão autorizada, diagnóstico de software e transição para atendimento físico quando o limite estiver no hardware ou na rede local",
+      "reason": "Promoção validada por reports/enriquecimento-fila-31-40-service-cidade-2026-10.md: conteúdo autoral próprio, 93,9% de unicidade e 6,1% de similaridade máxima."
+    },
+    {
+      "path": "/servicos/montagem-de-pc/campo-largo",
+      "family": "SERVICO_CIDADE",
+      "indexability": "index",
+      "canonical": "/servicos/montagem-de-pc/campo-largo",
+      "sitemap": true,
+      "parent": "/servicos/montagem-de-pc",
+      "tier": "SERVICO_CIDADE_COM_INTENCAO_LOCAL",
+      "intent": "contratar montagem de PC em Campo Largo com conferência de peças, validação elétrica e física e testes antes da entrega",
+      "reason": "Promoção validada por reports/enriquecimento-fila-31-40-service-cidade-2026-10.md: conteúdo autoral próprio, 94,7% de unicidade e 5,3% de similaridade máxima."
+    },
+    {
+      "path": "/servicos/pc-gamer/campo-largo",
+      "family": "SERVICO_CIDADE",
+      "indexability": "index",
+      "canonical": "/servicos/pc-gamer/campo-largo",
+      "sitemap": true,
+      "parent": "/servicos/pc-gamer",
+      "tier": "SERVICO_CIDADE_COM_INTENCAO_LOCAL",
+      "intent": "diagnosticar PC gamer em Campo Largo reproduzindo a falha sob carga e avaliando gargalo antes de recomendar reparo ou upgrade",
+      "reason": "Promoção validada por reports/enriquecimento-fila-31-40-service-cidade-2026-10.md: conteúdo autoral próprio, 95,1% de unicidade e 4,9% de similaridade máxima."
+    },
+    {
+      "path": "/servicos/suporte-home-office/campo-largo",
+      "family": "SERVICO_CIDADE",
+      "indexability": "index",
+      "canonical": "/servicos/suporte-home-office/campo-largo",
+      "sitemap": true,
+      "parent": "/servicos/suporte-home-office",
+      "tier": "SERVICO_CIDADE_COM_INTENCAO_LOCAL",
+      "intent": "resolver falhas de home office em Campo Largo com triagem remota primeiro e visita quando o problema estiver no ambiente, no hardware ou na conectividade local",
+      "reason": "Promoção validada por reports/enriquecimento-fila-31-40-service-cidade-2026-10.md: conteúdo autoral próprio, 95,6% de unicidade e 4,4% de similaridade máxima."
     }
   ],
   "bairrosAncora": [
