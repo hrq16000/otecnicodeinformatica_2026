@@ -49,6 +49,19 @@ const FILA_21_30_SERVICO_CIDADE = [
   "/servicos/conserto-notebook/campo-largo",
 ];
 
+const FILA_31_40_SERVICO_CIDADE = [
+  "/servicos/conserto-pc/campo-largo",
+  "/servicos/conserto-tv/campo-largo",
+  "/servicos/conserto-celular/campo-largo",
+  "/servicos/upgrade-ssd/campo-largo",
+  "/servicos/backup-recuperacao/campo-largo",
+  "/servicos/suporte-empresas/campo-largo",
+  "/servicos/atendimento-remoto/campo-largo",
+  "/servicos/montagem-de-pc/campo-largo",
+  "/servicos/pc-gamer/campo-largo",
+  "/servicos/suporte-home-office/campo-largo",
+];
+
 describe("localIndexPolicy — regra de ouro", () => {
   it("nunca coloca no sitemap uma entidade não indexável", () => {
     for (const d of declaredEntities()) {
@@ -96,7 +109,7 @@ describe("localIndexPolicy — promoção top 10 service × cidade", () => {
     }
   });
 
-  it("promove a fila 21–30 e totaliza 47 SERVICO_CIDADE explícitas", () => {
+  it("mantém a fila 21–30 estável", () => {
     for (const path of FILA_21_30_SERVICO_CIDADE) {
       const d = resolveLocal(path);
       expect(d.family).toBe("SERVICO_CIDADE");
@@ -105,7 +118,18 @@ describe("localIndexPolicy — promoção top 10 service × cidade", () => {
       expect(d.sitemap).toBe(true);
       expect(d.tier).toBe("SERVICO_CIDADE_COM_INTENCAO_LOCAL");
     }
-    expect(declaredEntities().filter((d) => d.family === "SERVICO_CIDADE")).toHaveLength(47);
+  });
+
+  it("promove a fila 31–40 e totaliza 57 SERVICO_CIDADE explícitas", () => {
+    for (const path of FILA_31_40_SERVICO_CIDADE) {
+      const d = resolveLocal(path);
+      expect(d.family).toBe("SERVICO_CIDADE");
+      expect(d.indexability).toBe("index");
+      expect(canonicalFor(path)).toBe(path);
+      expect(d.sitemap).toBe(true);
+      expect(d.tier).toBe("SERVICO_CIDADE_COM_INTENCAO_LOCAL");
+    }
+    expect(declaredEntities().filter((d) => d.family === "SERVICO_CIDADE")).toHaveLength(57);
   });
 
   it("mantém outra combinação da família no estado fail-closed anterior", () => {
