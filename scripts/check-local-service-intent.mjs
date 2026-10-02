@@ -53,6 +53,17 @@ const TOPONIMOS = [
   "tindiquera",
   "estacao",
   "iguacu",
+  "campo largo",
+  "ferraria",
+  "bateias",
+  "santa cruz",
+  "rondinha",
+  "botiatuva",
+  "itaqui",
+  "sao marcos",
+  "tres corregos",
+  "vila solene",
+  "timbotuva",
 ];
 
 await prepararSsr(rotasLocais({ incluirSitemap: true }), { dist: DIST });
