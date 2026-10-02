@@ -694,7 +694,8 @@
           "titulo": "Rede nacional e valor do diagnóstico remoto",
           "paragrafos": [
             "A operação começou em Curitiba em 2006 e hoje integra uma rede nacional com mais de 6 mil prestadores credenciados. O número é nacional e não representa uma quantidade fixa de especialistas disponíveis em Araucária.",
-            "A referência de tarifa mínima justa também se aplica ao remoto. Resolver uma falha sem deslocamento não significa ausência de trabalho técnico; análise, responsabilidade e tempo de sessão continuam fazendo parte do serviço."
+            "A referência de tarifa mínima justa também se aplica ao remoto. Resolver uma falha sem deslocamento não significa ausência de trabalho técnico; análise, responsabilidade e tempo de sessão continuam fazendo parte do serviço.",
+            "Mesmo quando a solução parece simples, o encerramento deve registrar o que foi alterado. Isso facilita desfazer uma configuração caso outro sistema dependa dela e reduz repetição de tentativa numa sessão futura."
           ]
         },
         {
@@ -1067,7 +1068,8 @@
           "titulo": "Rede nacional e remuneração compatível com responsabilidade",
           "paragrafos": [
             "A empresa nasceu em Curitiba em 2006 e hoje integra uma rede nacional com mais de 6 mil prestadores credenciados. O número é nacional e não prova uma quantidade fixa de técnicos empresariais em Araucária.",
-            "A referência de tarifa mínima justa procura sustentar tempo de diagnóstico, documentação e responsabilidade sobre o ambiente. Suporte recorrente precisa permitir análise, não apenas uma sequência de soluções improvisadas."
+            "A referência de tarifa mínima justa procura sustentar tempo de diagnóstico, documentação e responsabilidade sobre o ambiente. Suporte recorrente precisa permitir análise, não apenas uma sequência de soluções improvisadas.",
+            "A continuidade também melhora quando o próximo técnico consegue entender rapidamente o histórico do ambiente. Registro e remuneração adequada trabalham juntos para evitar atendimento apressado e sem contexto."
           ]
         },
         {
