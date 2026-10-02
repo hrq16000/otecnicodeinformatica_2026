@@ -781,7 +781,8 @@
           "titulo": "Como chegar à sessão com a triagem pronta",
           "paragrafos": [
             "Descreva o problema, envie captura da mensagem de erro quando houver e diga se o computador liga normalmente, se a internet funciona e se o erro começou após atualização ou instalação. Se houver ruído, cheiro de queimado ou desligamento súbito, informe antes e evite insistir em uso.",
-            "A triagem confirma se o remoto é adequado, qual janela está disponível e como será feita a autorização da sessão. Links de acesso devem vir pelo canal oficial combinado."
+            "A triagem confirma se o remoto é adequado, qual janela está disponível e como será feita a autorização da sessão. Links de acesso devem vir pelo canal oficial combinado.",
+            "Se o chamado envolver computador de empresa, informe também se outras estações apresentam o mesmo sintoma e se existe alternativa temporária de trabalho. Esse detalhe ajuda a distinguir falha isolada de problema de conta, rede ou serviço compartilhado e evita encaminhar como defeito local algo que afeta mais pessoas."
           ]
         }
       ],
