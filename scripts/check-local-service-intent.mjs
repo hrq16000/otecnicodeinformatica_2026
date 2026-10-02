@@ -46,6 +46,13 @@ const TOPONIMOS = [
   "afonso pena",
   "rui barbosa",
   "sjp",
+  "araucaria",
+  "fazenda velha",
+  "costeira",
+  "campina da barra",
+  "tindiquera",
+  "estacao",
+  "iguacu",
 ];
 
 await prepararSsr(rotasLocais({ incluirSitemap: true }), { dist: DIST });

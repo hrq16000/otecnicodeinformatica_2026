@@ -1,0 +1,467 @@
+{
+  "_doc": "FILA 16–20 — SERVIÇO × ARAUCÁRIA. Fonte autoral local exclusiva para as cinco combinações priorizadas. Regra fail-closed: somente slugs declarados neste arquivo recebem conteúdo local; indexabilidade continua governada por src/lib/localIndexPolicy.json.",
+  "paginas": {
+    "conserto-notebook": {
+      "path": "/servicos/conserto-notebook/araucaria",
+      "parent": "/servicos/manutencao-de-notebook",
+      "nome": "Conserto de Notebook",
+      "intentGlobal": "entender diagnóstico e manutenção de notebook: energia, tela, teclado, bateria, temperatura, armazenamento e sistema",
+      "intentLocal": "solicitar conserto de notebook em Araucária com triagem pelo modelo, definição da modalidade e agenda conforme urgência e disponibilidade",
+      "title": "Conserto de Notebook em Araucária | Diagnóstico e reparo",
+      "description": "Conserto de notebook em Araucária com triagem por modelo e sintoma, avaliação de hardware e sistema e atendimento conforme urgência e agenda.",
+      "h1": "Conserto de notebook em Araucária",
+      "subtitulo": "Diagnóstico orientado pelo sintoma para separar energia, tela, teclado, armazenamento, aquecimento e software antes de indicar reparo.",
+      "intro": [
+        "Notebook que deixa de carregar, aquece, perde imagem ou fica lento pode ter causas que se misturam. Uma bateria ruim pode parecer defeito de fonte; armazenamento degradado pode parecer Windows corrompido; aquecimento pode causar queda de desempenho sem desligar a máquina. A triagem precisa começar pelo modelo e pelo comportamento real.",
+        "Em Araucária, referências como Centro, Fazenda Velha, Costeira, Campina da Barra, Tindiquera e Estação ajudam a organizar a logística quando o caso precisa de presença física ou bancada. Isso não representa filial em bairro algum; a modalidade e a janela são confirmadas antes."
+      ],
+      "blocos": [
+        {
+          "titulo": "Modelo e sintoma definem a primeira hipótese",
+          "paragrafos": [
+            "A etiqueta do notebook ajuda a identificar carregador, bateria, tela, teclado e possibilidades de upgrade compatíveis. Além do modelo, é importante dizer se a máquina liga, se acende algum LED, se aparece imagem, se o ventilador gira e se o defeito surgiu depois de queda, líquido ou atualização.",
+            "Esses sinais evitam começar pela peça errada. Trocar carregador sem testar entrada, trocar bateria sem medir alimentação ou formatar uma máquina com disco falhando são exemplos de intervenção que pode mascarar a causa."
+          ]
+        },
+        {
+          "titulo": "Aquecimento e lentidão precisam ser separados",
+          "paragrafos": [
+            "Temperatura alta pode vir de poeira, dissipação comprometida, ventoinha, pasta térmica ou uso intenso. Lentidão pode estar no armazenamento, memória, sistema ou no próprio controle térmico reduzindo frequência para proteger o equipamento.",
+            "A revisão compara sintomas e medições antes de decidir entre limpeza, ajuste de sistema, SSD, memória ou reparo físico. Nem todo notebook lento precisa ser formatado e nem todo notebook quente precisa apenas de pasta térmica."
+          ]
+        },
+        {
+          "titulo": "Janela de 2 a 72 horas úteis conforme urgência e agenda",
+          "paragrafos": [
+            "O atendimento é organizado numa janela de 2 a 72 horas úteis, dependendo da urgência e da disponibilidade do prestador mais próximo adequado ao caso. Máquina usada para trabalho e totalmente parada pode receber prioridade maior que uma manutenção programável, sem eliminar a necessidade de encaixe real.",
+            "A janela se refere ao início do atendimento. Diagnóstico de placa, busca de peça, teste prolongado ou recuperação de dados podem exigir prazo adicional depois que o equipamento é avaliado."
+          ]
+        },
+        {
+          "titulo": "Araucária entra na logística do chamado",
+          "paragrafos": [
+            "Quando o notebook precisa ser movimentado, informar bairro e disponibilidade do cliente ajuda a escolher entre visita, coleta ou bancada. Centro, Fazenda Velha, Costeira, Campina da Barra e Tindiquera são referências de organização, não promessa de atendimento imediato.",
+            "Casos de software podem começar remotamente se o equipamento liga e tem internet. Falhas de tela, carga, teclado, dobradiça, superaquecimento ou placa normalmente exigem contato físico com a máquina."
+          ]
+        },
+        {
+          "titulo": "Rede nacional sem inventar presença local",
+          "paragrafos": [
+            "A empresa nasceu em Curitiba em 2006 e hoje integra uma rede nacional com mais de 6 mil prestadores credenciados. Esse dado é nacional e não deve ser transformado em número de técnicos em Araucária; a disponibilidade local é consultada conforme o chamado.",
+            "A referência de tarifa mínima justa ao prestador reconhece tempo de diagnóstico, deslocamento, desmontagem e responsabilidade sobre o equipamento. O objetivo é evitar que a remuneração pressione o técnico a pular testes necessários."
+          ]
+        },
+        {
+          "titulo": "O que enviar na triagem",
+          "paragrafos": [
+            "Informe marca, modelo, defeito, tempo de uso, histórico de queda ou líquido e se o notebook ainda liga. Se houver mensagem de erro, fotografe. Se não carregar, diga se outro carregador compatível já foi testado. Se estiver lento, explique em que momento a lentidão aparece.",
+            "Com esse conjunto de informações e o bairro em Araucária, a equipe consegue definir melhor a próxima etapa e a janela disponível antes de qualquer deslocamento.",
+            "Se o notebook usa criptografia, conta corporativa ou armazenamento com dados importantes, informe isso antes de qualquer intervenção. O diagnóstico pode exigir uma ordem diferente de testes para reduzir risco sobre os arquivos e preservar acesso quando o sistema ainda inicia."
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "pergunta": "Atendem notebook no Centro e Fazenda Velha?",
+          "resposta": "Essas regiões entram como referências locais de agenda, mas a disponibilidade é confirmada caso a caso conforme modalidade e prestador disponível."
+        },
+        {
+          "pergunta": "Notebook que não carrega sempre precisa trocar bateria?",
+          "resposta": "Não. Carregador, conector, circuito de alimentação e a própria bateria podem produzir sintomas parecidos. O diagnóstico precisa separar essas causas."
+        },
+        {
+          "pergunta": "O conserto fica pronto em até 72 horas úteis?",
+          "resposta": "Não necessariamente. De 2 a 72 horas úteis é a janela para organizar o atendimento; peça, bancada ou teste podem exigir prazo adicional."
+        },
+        {
+          "pergunta": "Dá para começar por acesso remoto?",
+          "resposta": "Quando o notebook liga e o problema é de software ou configuração, sim. Falhas físicas exigem outra modalidade."
+        },
+        {
+          "pergunta": "Quantos técnicos atendem notebook em Araucária?",
+          "resposta": "Não publicamos contagem municipal sem fonte confirmada. O dado institucional é de mais de 6 mil prestadores credenciados na rede nacional."
+        }
+      ],
+      "interlinks": [
+        "/servicos/manutencao-de-notebook",
+        "/servicos/upgrade-ssd-ram",
+        "/servicos/recuperacao-de-dados",
+        "/tecnico-informatica-araucaria",
+        "/precos-e-politicas"
+      ],
+      "cidadeSlug": "araucaria",
+      "cidadeNome": "Araucária"
+    },
+    "conserto-pc": {
+      "path": "/servicos/conserto-pc/araucaria",
+      "parent": "/servicos/manutencao-de-computador",
+      "nome": "Conserto de PC",
+      "intentGlobal": "entender manutenção de computador desktop: energia, vídeo, memória, armazenamento, temperatura, sistema e periféricos",
+      "intentLocal": "solicitar conserto de PC em Araucária com triagem do sintoma, avaliação de hardware e agenda definida conforme urgência",
+      "title": "Conserto de PC em Araucária | Diagnóstico de hardware e Windows",
+      "description": "Conserto de PC em Araucária com triagem de energia, vídeo, memória, SSD, temperatura e Windows antes de trocar peças.",
+      "h1": "Conserto de PC em Araucária",
+      "subtitulo": "Avaliação de desktop para descobrir a causa antes da troca: alimentação, vídeo, memória, armazenamento, temperatura e sistema.",
+      "intro": [
+        "Desktop que não liga, reinicia, perde vídeo ou trava não deve ser tratado como um único tipo de defeito. Fonte, memória, placa-mãe, armazenamento, temperatura e sistema podem produzir sintomas semelhantes. O diagnóstico precisa reproduzir a falha e testar por etapas.",
+        "Para clientes de Araucária, a triagem considera o tamanho do gabinete, possibilidade de teste no local e necessidade de bancada. Centro, Fazenda Velha, Costeira, Campina da Barra, Tindiquera e Iguaçu são referências para organizar deslocamento, sempre conforme agenda."
+      ],
+      "blocos": [
+        {
+          "titulo": "PC que não liga: energia antes de software",
+          "paragrafos": [
+            "Quando não há sinal de partida, a investigação começa por alimentação, cabos, fonte, botão, conexões internas e placa-mãe. Não faz sentido discutir formatação ou driver antes de confirmar que o equipamento consegue iniciar de forma estável.",
+            "Se liga mas não exibe imagem, entram memória, vídeo, monitor, cabo e inicialização da placa. Separar 'não liga' de 'liga sem vídeo' muda completamente o diagnóstico."
+          ]
+        },
+        {
+          "titulo": "Travamento e reinício exigem teste de estabilidade",
+          "paragrafos": [
+            "Reinício sob carga pode envolver temperatura, fonte, memória ou placa de vídeo. Congelamento aleatório pode vir de RAM, armazenamento, sistema ou periférico. O teste precisa acompanhar quando e como a falha aparece.",
+            "Depois de identificar o padrão, a intervenção pode ser limpeza, correção de sistema, troca de peça ou apenas ajuste de configuração. Trocar componentes por tentativa encarece o reparo e pode deixar a causa real intacta."
+          ]
+        },
+        {
+          "titulo": "Atendimento entre 2 e 72 horas úteis",
+          "paragrafos": [
+            "A janela operacional varia de 2 a 72 horas úteis conforme urgência e disponibilidade de agenda. Um computador de trabalho parado pode receber prioridade sobre uma revisão sem impacto imediato, mas a posição final depende do prestador disponível e do tipo de teste necessário.",
+            "Esse intervalo não é prazo garantido para entregar o PC reparado. Peça, recuperação de dados, teste de estabilidade e bancada podem ampliar o tempo depois do diagnóstico.",
+            "Quando existe risco de dados, esse fator também muda a ordem do trabalho. Um disco com sinais de falha pode exigir cópia antes de testes agressivos, mesmo que o pedido inicial seja apenas resolver travamento ou lentidão."
+          ]
+        },
+        {
+          "titulo": "Deslocamento em Araucária depende do tipo de gabinete e falha",
+          "paragrafos": [
+            "Gabinete grande, múltiplos discos ou necessidade de teste prolongado podem tornar a bancada mais adequada. Problemas simples de periférico ou rede podem ser avaliados no endereço. A decisão é tomada antes do deslocamento.",
+            "Informar o bairro e a configuração reduz improviso. Centro, Fazenda Velha, Costeira, Campina da Barra e Estação servem como referências logísticas, não como indicação de ponto físico."
+          ]
+        },
+        {
+          "titulo": "Rede nacional e tarifa técnica sustentável",
+          "paragrafos": [
+            "A operação começou em Curitiba em 2006 e hoje integra uma rede nacional com mais de 6 mil prestadores credenciados. Em Araucária, a rede amplia a busca por disponibilidade, mas não autoriza publicar número local de profissionais sem fonte.",
+            "A política de valorização do prestador trabalha com uma referência de tarifa mínima justa. Diagnóstico de desktop exige tempo, ferramenta e responsabilidade; pagar apenas pela peça trocada pode estimular uma solução rápida sem investigação suficiente."
+          ]
+        },
+        {
+          "titulo": "Como abrir o chamado com informação útil",
+          "paragrafos": [
+            "Diga se o PC não liga, liga sem vídeo, reinicia, trava ou fica lento. Informe se houve troca recente de peça, queda de energia, cheiro de queimado ou atualização. Se souber, envie processador, placa-mãe, fonte, memória e armazenamento.",
+            "Acrescente o bairro em Araucária e se o gabinete pode ser transportado. A triagem usa esses dados para escolher modalidade e janela de atendimento.",
+            "Se o computador é usado em comércio, escritório ou produção, informe qual função ele cumpre e se existe máquina substituta. Esse contexto ajuda a classificar urgência e também evita sugerir uma manutenção longa quando uma solução provisória segura pode manter a operação enquanto o reparo definitivo é planejado."
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "pergunta": "PC que liga sem imagem é sempre placa de vídeo?",
+          "resposta": "Não. Memória, cabo, monitor, placa-mãe, vídeo integrado e outras falhas podem causar o mesmo sintoma."
+        },
+        {
+          "pergunta": "Atendem desktop em Araucária no endereço?",
+          "resposta": "Alguns casos podem ser avaliados no local; outros exigem bancada. A modalidade é definida pela triagem e pela agenda."
+        },
+        {
+          "pergunta": "Qual a janela de atendimento?",
+          "resposta": "Entre 2 e 72 horas úteis, conforme urgência e disponibilidade do prestador adequado. Isso não é prazo final de reparo."
+        },
+        {
+          "pergunta": "Vocês trocam peça sem testar?",
+          "resposta": "A orientação é diagnosticar antes de recomendar troca, justamente para evitar substituir componente que não é a causa."
+        },
+        {
+          "pergunta": "Há quantos técnicos de PC em Araucária?",
+          "resposta": "Não divulgamos contagem municipal sem base confirmada. A rede nacional tem mais de 6 mil prestadores credenciados."
+        }
+      ],
+      "interlinks": [
+        "/servicos/manutencao-de-computador",
+        "/servicos/upgrade-ssd-ram",
+        "/servicos/pc-gamer",
+        "/tecnico-informatica-araucaria",
+        "/servicos/computador-nao-liga"
+      ],
+      "cidadeSlug": "araucaria",
+      "cidadeNome": "Araucária"
+    },
+    "conserto-tv": {
+      "path": "/servicos/conserto-tv/araucaria",
+      "parent": "/servicos/conserto-tv",
+      "nome": "Conserto de TV",
+      "intentGlobal": "entender diagnóstico de televisão: fonte, iluminação, placa principal, painel, áudio, entradas e sistema",
+      "intentLocal": "solicitar conserto de TV em Araucária com triagem por modelo e sintoma, logística segura e agenda condicionada à disponibilidade",
+      "title": "Conserto de TV em Araucária | Triagem e avaliação",
+      "description": "Conserto de TV em Araucária com triagem por modelo, polegadas e sintoma, orientação de transporte e avaliação antes de indicar peça.",
+      "h1": "Conserto de TV em Araucária",
+      "subtitulo": "Triagem antes de movimentar o aparelho para separar falha de alimentação, iluminação, sistema, placa ou painel e definir a logística correta.",
+      "intro": [
+        "Televisão que liga sem imagem, reinicia, perde entradas ou mostra linhas precisa ser tratada conforme o sintoma e o modelo. Em aparelhos grandes, o transporte também faz parte do problema: movimentar uma tela sem proteção pode transformar um defeito eletrônico em dano físico.",
+        "Em Araucária, a triagem considera polegadas, acesso ao imóvel e região do cliente antes de decidir coleta, encaminhamento ou outra modalidade. Centro, Fazenda Velha, Costeira, Campina da Barra e Tindiquera são referências logísticas, sem implicar oficina em cada área."
+      ],
+      "blocos": [
+        {
+          "titulo": "Som sem imagem não fecha diagnóstico",
+          "paragrafos": [
+            "Áudio funcionando com tela escura pode sugerir problema de iluminação, mas fonte, circuito de alimentação e painel também precisam ser considerados. Reinício constante leva a outra linha de investigação; manchas ou linhas fixas podem indicar cenário de painel.",
+            "Por isso a triagem pede modelo, polegadas e vídeo curto do sintoma quando possível. Esse material ajuda a decidir se vale movimentar o aparelho e qual tipo de avaliação será necessária.",
+            "Se o defeito aparece apenas depois de aquecer, informe o tempo aproximado até a falha. Esse padrão pode ser importante para reproduzir o comportamento durante a avaliação."
+          ]
+        },
+        {
+          "titulo": "Tamanho da TV muda a logística",
+          "paragrafos": [
+            "Aparelhos grandes exigem cuidado com posição, quinas e pressão sobre a tela. Também é importante saber se há escadas, elevador ou restrição de acesso antes de combinar qualquer retirada.",
+            "A modalidade não é presumida. O atendimento confirma como o equipamento será recebido e em que janela, evitando que o cliente mova uma TV pesada sem necessidade."
+          ]
+        },
+        {
+          "titulo": "De 2 a 72 horas úteis para organizar o atendimento",
+          "paragrafos": [
+            "A janela operacional varia de 2 a 72 horas úteis conforme urgência, disponibilidade de agenda e necessidade de profissional adequado ao defeito. Uma triagem clara e logística simples podem facilitar o encaixe; casos volumosos ou específicos podem exigir outra janela.",
+            "Esse período não significa TV reparada em até 72 horas. O prazo final depende do diagnóstico, da viabilidade do reparo e de eventual disponibilidade de componente."
+          ]
+        },
+        {
+          "titulo": "Reparo e viabilidade econômica são decisões diferentes",
+          "paragrafos": [
+            "Algumas falhas de fonte, iluminação ou conexão podem ter cenário de reparo diferente de painel trincado ou peça principal indisponível. O diagnóstico precisa informar quando o custo ou o risco deixam de fazer sentido frente ao valor do aparelho.",
+            "A avaliação serve também para evitar gasto ruim. Quando existem caminhos diferentes, o cliente deve entender custo, risco e disponibilidade antes de aprovar.",
+            "Se o defeito é intermitente, vale registrar em vídeo quando ele aparece e em quais entradas ou aplicativos. Essa evidência ajuda a reproduzir o comportamento sem manter a TV ligada por tentativa durante horas."
+          ]
+        },
+        {
+          "titulo": "Rede nacional com remuneração técnica responsável",
+          "paragrafos": [
+            "A empresa nasceu em Curitiba em 2006 e hoje integra uma rede nacional com mais de 6 mil prestadores credenciados. Em Araucária, esse alcance serve para consultar disponibilidade sem inventar quantidade de técnicos na cidade.",
+            "A referência de tarifa mínima justa ao prestador reconhece o tempo de diagnóstico e o risco de manipular equipamentos grandes. A ideia é sustentar cuidado técnico em vez de pressionar por uma visita barata sem condição de resolver."
+          ]
+        },
+        {
+          "titulo": "Dados úteis antes de mover a televisão",
+          "paragrafos": [
+            "Envie marca, modelo, polegadas, estado da tela, presença de som, luz de standby e comportamento ao ligar. Informe queda, impacto, líquido ou oscilação elétrica e, se possível, mande foto da etiqueta traseira.",
+            "Com o bairro em Araucária e as condições de acesso, a triagem define a etapa seguinte. Não é necessário transportar a TV antes dessa orientação.",
+            "Se a TV está instalada em painel, suporte articulado ou móvel planejado, isso também deve ser informado. A retirada pode exigir uma logística diferente da de um aparelho apoiado em rack, e esse detalhe precisa ser conhecido antes para evitar improviso na movimentação."
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "pergunta": "Preciso levar a TV antes de falar com vocês?",
+          "resposta": "Não. Primeiro informe modelo, polegadas, sintoma e localização para definir a modalidade e evitar transporte desnecessário."
+        },
+        {
+          "pergunta": "Som sem imagem é sempre LED?",
+          "resposta": "Não. Iluminação é uma hipótese, mas outras falhas podem produzir o mesmo sintoma e precisam ser testadas."
+        },
+        {
+          "pergunta": "A TV fica pronta em até 72 horas úteis?",
+          "resposta": "Não necessariamente. A faixa de 2 a 72 horas úteis organiza o atendimento; o reparo depende do diagnóstico e de eventual peça."
+        },
+        {
+          "pergunta": "Atendem regiões como Fazenda Velha e Costeira?",
+          "resposta": "Essas áreas entram como referências de agenda, mas a disponibilidade e a logística são confirmadas na triagem."
+        },
+        {
+          "pergunta": "Quantos técnicos de TV existem em Araucária?",
+          "resposta": "Não publicamos contagem municipal sem fonte confirmada. O dado institucional é de mais de 6 mil prestadores credenciados na rede nacional."
+        }
+      ],
+      "interlinks": [
+        "/servicos/conserto-tv",
+        "/conserto-tv-curitiba",
+        "/tecnico-informatica-araucaria",
+        "/precos-e-politicas",
+        "/areas-atendidas"
+      ],
+      "cidadeSlug": "araucaria",
+      "cidadeNome": "Araucária"
+    },
+    "conserto-celular": {
+      "path": "/servicos/conserto-celular/araucaria",
+      "parent": "/servicos/conserto-celular",
+      "nome": "Conserto de Celular",
+      "intentGlobal": "entender reparo de smartphone: tela, bateria, conector, áudio, câmera, sistema e danos por líquido",
+      "intentLocal": "solicitar conserto de celular em Araucária com triagem por modelo, dano, urgência e cuidado com dados",
+      "title": "Conserto de Celular em Araucária | Queda, bateria e carga",
+      "description": "Conserto de celular em Araucária com triagem por modelo e defeito, cuidado com dados e atendimento conforme urgência e disponibilidade.",
+      "h1": "Conserto de celular em Araucária",
+      "subtitulo": "Avaliação orientada pelo modelo e pelo dano para decidir entre tela, bateria, carga, sistema ou placa sem presumir a peça antes do teste.",
+      "intro": [
+        "Celular que caiu, molhou, parou de carregar ou perdeu o toque precisa de uma triagem que considere tanto hardware quanto dados. O mesmo nome comercial pode ter variantes com peças diferentes, e um aparelho que ainda liga pode esconder dano progressivo na bateria ou na placa.",
+        "Em Araucária, a localização ajuda a organizar o encaminhamento depois da triagem. Centro, Fazenda Velha, Costeira, Campina da Barra, Tindiquera e Estação são referências de agenda; não representam loja ou laboratório em cada região."
+      ],
+      "blocos": [
+        {
+          "titulo": "Identificar o modelo evita peça errada",
+          "paragrafos": [
+            "Antes de falar em tela, bateria ou conector, é necessário confirmar o código exato do aparelho. Modelos visualmente parecidos podem usar componentes diferentes, e comprar peça apenas pelo nome da linha aumenta o risco de incompatibilidade.",
+            "A triagem pede também histórico do dano: queda, líquido, aquecimento, carga intermitente ou falha após atualização. Esses detalhes mudam a ordem dos testes."
+          ]
+        },
+        {
+          "titulo": "Bateria estufada e líquido exigem prioridade de segurança",
+          "paragrafos": [
+            "Bateria deformada, aparelho abrindo a tampa ou aquecimento anormal pedem interrupção de uso e carga até avaliação. Em dano por líquido, insistir em ligar pode ampliar corrosão e curto na placa.",
+            "Prioridade de triagem não significa garantia de recuperação. O estado interno só pode ser conhecido depois da inspeção, e a decisão depende da extensão do dano.",
+            "Tela quebrada com imagem ainda visível também pede cuidado: pressionar a área danificada, continuar usando o aparelho no bolso ou carregar enquanto a carcaça está deformada pode aumentar o problema. A orientação inicial é reduzir uso até entender a condição física."
+          ]
+        },
+        {
+          "titulo": "Janela de atendimento entre 2 e 72 horas úteis",
+          "paragrafos": [
+            "A organização do atendimento varia de 2 a 72 horas úteis conforme urgência e disponibilidade. Um aparelho essencial para autenticação ou trabalho pode ser classificado com urgência maior, enquanto reparos programáveis aguardam um encaixe adequado.",
+            "Essa janela não é prazo de peça nem de conserto concluído. Após a abertura podem surgir necessidade de componente específico, reparo de placa ou outros testes."
+          ]
+        },
+        {
+          "titulo": "Dados pessoais fazem parte do risco técnico",
+          "paragrafos": [
+            "O acesso ao aparelho deve ficar limitado ao que é necessário para testar a função reparada. Quando câmera, áudio, biometria ou rede exigem desbloqueio, a necessidade precisa ser explicada ao cliente.",
+            "Em problemas de sistema, vale confirmar se existe backup antes de uma intervenção que possa afetar dados. Em troca física simples não existe justificativa para navegar por conteúdo pessoal.",
+            "Quando o aparelho ainda funciona, o cliente pode aproveitar a triagem para verificar se consegue acessar a conta principal e os mecanismos de recuperação. Esse preparo não conserta o hardware, mas reduz o impacto caso a intervenção exija reinicialização, atualização ou substituição do equipamento."
+          ]
+        },
+        {
+          "titulo": "Rede nacional e valorização do profissional",
+          "paragrafos": [
+            "A operação começou em Curitiba em 2006 e hoje integra uma rede nacional com mais de 6 mil prestadores credenciados. Para Araucária, isso significa consultar disponibilidade sem inventar uma quantidade local de técnicos.",
+            "A referência de tarifa mínima justa reconhece desmontagem cuidadosa, diagnóstico, teste e responsabilidade sobre dados. O objetivo é permitir um atendimento técnico sustentável, não remunerar apenas a peça substituída."
+          ]
+        },
+        {
+          "titulo": "O que enviar antes do encaminhamento",
+          "paragrafos": [
+            "Informe marca, modelo exato, defeito, histórico de queda ou líquido, condição da tela, comportamento da bateria e se o aparelho ainda carrega. Fotos externas ajudam a identificar dano físico, mas não fecham diagnóstico.",
+            "Acrescente o bairro em Araucária. A triagem define a forma de encaminhamento e a janela disponível antes de pedir qualquer movimentação do aparelho.",
+            "Se o aparelho usa eSIM, autenticação bancária ou aplicativos de trabalho, avise antes da abertura. Dependendo do reparo, pode ser prudente confirmar backup, acesso à conta principal e forma de recuperação das credenciais para não transformar uma falha física em perda de acesso digital."
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "pergunta": "Celular molhado deve continuar carregando para testar?",
+          "resposta": "Não. Se houve líquido, o mais seguro é evitar novas tentativas de carga e buscar avaliação, porque energia pode ampliar o dano."
+        },
+        {
+          "pergunta": "Bateria estufada pode continuar em uso?",
+          "resposta": "Não é recomendado. Deformação e aquecimento anormal exigem interrupção de uso até avaliação."
+        },
+        {
+          "pergunta": "O atendimento termina em até 72 horas úteis?",
+          "resposta": "A faixa de 2 a 72 horas úteis é para organizar o atendimento. Peça e complexidade do reparo podem exigir prazo adicional."
+        },
+        {
+          "pergunta": "Atendem clientes da Fazenda Velha e Centro?",
+          "resposta": "Essas regiões entram como referências locais, mas a disponibilidade é confirmada conforme agenda e tipo de reparo."
+        },
+        {
+          "pergunta": "Há mais de 6 mil técnicos em Araucária?",
+          "resposta": "Não. Mais de 6 mil é o número da rede nacional de prestadores credenciados; não publicamos contagem municipal sem fonte."
+        }
+      ],
+      "interlinks": [
+        "/servicos/conserto-celular",
+        "/conserto-celular-curitiba",
+        "/tecnico-informatica-araucaria",
+        "/seguranca-dos-dados",
+        "/precos-e-politicas"
+      ],
+      "cidadeSlug": "araucaria",
+      "cidadeNome": "Araucária"
+    },
+    "upgrade-ssd": {
+      "path": "/servicos/upgrade-ssd/araucaria",
+      "parent": "/servicos/upgrade-ssd-ram",
+      "nome": "Upgrade de SSD e Memória",
+      "intentGlobal": "entender quando SSD ou memória melhora desempenho e como avaliar compatibilidade e migração",
+      "intentLocal": "contratar upgrade de SSD ou memória em Araucária com diagnóstico do gargalo, conferência de compatibilidade e plano de migração",
+      "title": "Upgrade de SSD em Araucária | Gargalo, compatibilidade e dados",
+      "description": "Upgrade de SSD e memória em Araucária com avaliação do gargalo, compatibilidade, saúde do disco atual e migração quando tecnicamente viável.",
+      "h1": "Upgrade de SSD e memória em Araucária",
+      "subtitulo": "Melhoria baseada no gargalo real: medir armazenamento, memória e estado do sistema antes de comprar peça e decidir como migrar os dados.",
+      "intro": [
+        "Trocar HD por SSD pode transformar a resposta de uma máquina antiga, mas não resolve tudo. Se a lentidão vem de pouca memória, superaquecimento, processador saturado ou armazenamento já defeituoso, a decisão precisa considerar esses fatores antes da compra.",
+        "Em Araucária, a triagem pode começar pela identificação do computador e do uso. Centro, Fazenda Velha, Costeira, Campina da Barra, Tindiquera e Estação são referências para organizar atendimento quando a máquina precisa de avaliação física."
+      ],
+      "blocos": [
+        {
+          "titulo": "O gargalo precisa aparecer nos sintomas",
+          "paragrafos": [
+            "Inicialização demorada e disco constantemente ocupado apontam para um cenário diferente de máquina que fica lenta apenas com muitas abas ou programas. Falta de memória e armazenamento lento podem coexistir, mas cada um pede uma solução diferente.",
+            "Antes do upgrade, a avaliação procura entender quando a lentidão acontece e qual componente está limitando o uso. Isso evita instalar SSD em equipamento cujo problema principal está em outra parte.",
+            "Também vale observar quanto espaço livre resta no disco atual. Armazenamento quase cheio pode piorar a experiência e precisa ser separado de um gargalo puramente de velocidade."
+          ]
+        },
+        {
+          "titulo": "Compatibilidade vem antes da compra",
+          "paragrafos": [
+            "Notebook e desktop podem aceitar SATA, M.2 SATA ou NVMe, além de formatos e capacidades diferentes. Também é necessário saber se existe slot livre, se o firmware reconhece a peça e se a memória usa padrão compatível.",
+            "Confirmar esses detalhes antes de comprar reduz devolução e adaptação improvisada. A peça certa é a que funciona com a plataforma e entrega ganho compatível com o uso.",
+            "Em desktop, também vale verificar quantidade de portas e alimentação disponíveis; em notebook, abertura e fixação podem variar bastante. A compatibilidade física é tão importante quanto a interface anunciada na ficha técnica."
+          ]
+        },
+        {
+          "titulo": "Migração depende da saúde do disco antigo",
+          "paragrafos": [
+            "Quando o armazenamento atual está saudável, a clonagem pode preservar sistema e arquivos. Se há erro de leitura, travamento ou ruído, insistir numa cópia integral pode ser arriscado e o foco muda para preservar dados.",
+            "Upgrade e recuperação de dados são escopos diferentes. O cliente precisa saber quando a situação deixou de ser uma simples troca de armazenamento."
+          ]
+        },
+        {
+          "titulo": "Janela operacional de 2 a 72 horas úteis",
+          "paragrafos": [
+            "O atendimento é organizado entre 2 e 72 horas úteis conforme urgência e disponibilidade do prestador adequado. Uma máquina parada pode ter prioridade maior que um upgrade preventivo, sempre respeitando a agenda real.",
+            "A janela não garante peça disponível nem migração concluída no mesmo período. Volume de dados, compatibilidade e saúde do disco definem o prazo depois da avaliação."
+          ]
+        },
+        {
+          "titulo": "Rede nacional e valorização da etapa de diagnóstico",
+          "paragrafos": [
+            "A empresa nasceu em Curitiba em 2006 e hoje integra uma rede nacional com mais de 6 mil prestadores credenciados. Em Araucária, a rede serve para consultar disponibilidade sem afirmar quantidade local sem fonte.",
+            "A tarifa mínima justa ao prestador reconhece que verificar compatibilidade, fazer backup, migrar dados e testar a máquina faz parte do trabalho. Reduzir o serviço a instalar uma peça cria incentivo para pular as etapas que protegem o cliente."
+          ]
+        },
+        {
+          "titulo": "Informações que ajudam a planejar o upgrade",
+          "paragrafos": [
+            "Envie marca e modelo do computador, capacidade do disco, quantidade de memória e descreva a lentidão. Diga se o equipamento demora ao ligar, trava durante o uso ou fica lento apenas com vários programas.",
+            "Com esses dados e o bairro em Araucária, a triagem define o que precisa ser confirmado presencialmente e qual janela pode ser oferecida antes da compra de componente.",
+            "Também informe se o computador usa programas licenciados, máquina virtual ou arquivos que dependem de caminhos específicos. Uma migração que preserva o Windows pode manter muita coisa funcionando, mas aplicações com ativação própria ou configuração sensível precisam ser tratadas com atenção antes da clonagem."
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "pergunta": "Todo computador antigo aceita SSD?",
+          "resposta": "Muitos aceitam alguma forma de SSD, mas o padrão e a compatibilidade precisam ser confirmados pelo modelo e pela interface disponível."
+        },
+        {
+          "pergunta": "SSD resolve falta de memória?",
+          "resposta": "Não. SSD reduz latência de armazenamento; falta de RAM é outro gargalo e precisa ser avaliada separadamente."
+        },
+        {
+          "pergunta": "Dá para manter o Windows e os arquivos?",
+          "resposta": "Quando o disco atual está saudável, pode ser possível migrar. Se há falha de leitura, a prioridade pode mudar para preservação de dados."
+        },
+        {
+          "pergunta": "Qual a janela para atendimento em Araucária?",
+          "resposta": "Entre 2 e 72 horas úteis conforme urgência e disponibilidade. Peça e migração podem exigir tempo adicional."
+        },
+        {
+          "pergunta": "Quantos técnicos de upgrade existem em Araucária?",
+          "resposta": "Não publicamos contagem municipal sem fonte confirmada. A rede nacional possui mais de 6 mil prestadores credenciados."
+        }
+      ],
+      "interlinks": [
+        "/servicos/upgrade-ssd-ram",
+        "/servicos/manutencao-de-notebook",
+        "/servicos/manutencao-de-computador",
+        "/servicos/recuperacao-de-dados",
+        "/tecnico-informatica-araucaria"
+      ],
+      "cidadeSlug": "araucaria",
+      "cidadeNome": "Araucária"
+    }
+  }
+}

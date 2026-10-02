@@ -417,6 +417,116 @@
       "tier": "SERVICO_CIDADE_COM_INTENCAO_LOCAL",
       "intent": "contratar montagem de PC em São José dos Pinhais com conferência de compatibilidade, montagem segura e testes antes da conclusão",
       "reason": "Promoção validada por reports/enriquecimento-top10-service-cidade-2026-10.md: conteúdo autoral próprio, 96,5% de unicidade e 3,5% de similaridade máxima, dentro do limite de segurança."
+    },
+    {
+      "path": "/servicos/pc-gamer/sao-jose-dos-pinhais",
+      "family": "SERVICO_CIDADE",
+      "indexability": "index",
+      "canonical": "/servicos/pc-gamer/sao-jose-dos-pinhais",
+      "sitemap": true,
+      "parent": "/servicos/pc-gamer",
+      "tier": "SERVICO_CIDADE_COM_INTENCAO_LOCAL",
+      "intent": "diagnosticar PC gamer em São José dos Pinhais com teste sob carga, triagem do sintoma e agenda conforme urgência e disponibilidade",
+      "reason": "Promoção validada por reports/enriquecimento-fila-11-20-service-cidade-2026-10.md: conteúdo autoral próprio, 96,9% de unicidade e 3,1% de similaridade máxima."
+    },
+    {
+      "path": "/servicos/suporte-home-office/sao-jose-dos-pinhais",
+      "family": "SERVICO_CIDADE",
+      "indexability": "index",
+      "canonical": "/servicos/suporte-home-office/sao-jose-dos-pinhais",
+      "sitemap": true,
+      "parent": "/servicos/suporte-home-office",
+      "tier": "SERVICO_CIDADE_COM_INTENCAO_LOCAL",
+      "intent": "resolver falhas de home office em São José dos Pinhais com triagem remota primeiro e visita quando houver problema físico ou de rede local",
+      "reason": "Promoção validada por reports/enriquecimento-fila-11-20-service-cidade-2026-10.md: conteúdo autoral próprio, 97,3% de unicidade e 2,7% de similaridade máxima."
+    },
+    {
+      "path": "/servicos/suporte-tecnico-empresarial/sao-jose-dos-pinhais",
+      "family": "SERVICO_CIDADE",
+      "indexability": "index",
+      "canonical": "/servicos/suporte-tecnico-empresarial/sao-jose-dos-pinhais",
+      "sitemap": true,
+      "parent": "/servicos/suporte-tecnico-empresarial",
+      "tier": "SERVICO_CIDADE_COM_INTENCAO_LOCAL",
+      "intent": "estruturar suporte técnico para empresa em São José dos Pinhais com triagem, prioridade, registro de chamados e continuidade entre atendimentos",
+      "reason": "Promoção validada por reports/enriquecimento-fila-11-20-service-cidade-2026-10.md: conteúdo autoral próprio, 97,8% de unicidade e 2,2% de similaridade máxima."
+    },
+    {
+      "path": "/servicos/manutencao-preventiva-empresas/sao-jose-dos-pinhais",
+      "family": "SERVICO_CIDADE",
+      "indexability": "index",
+      "canonical": "/servicos/manutencao-preventiva-empresas/sao-jose-dos-pinhais",
+      "sitemap": true,
+      "parent": "/servicos/manutencao-preventiva-empresas",
+      "tier": "SERVICO_CIDADE_COM_INTENCAO_LOCAL",
+      "intent": "programar manutenção preventiva em empresa de São José dos Pinhais com checklist, agenda por estações e separação entre prevenção e reparo corretivo",
+      "reason": "Promoção validada por reports/enriquecimento-fila-11-20-service-cidade-2026-10.md: conteúdo autoral próprio, 97,9% de unicidade e 2,1% de similaridade máxima."
+    },
+    {
+      "path": "/servicos/backup-para-empresas/sao-jose-dos-pinhais",
+      "family": "SERVICO_CIDADE",
+      "indexability": "index",
+      "canonical": "/servicos/backup-para-empresas/sao-jose-dos-pinhais",
+      "sitemap": true,
+      "parent": "/servicos/backup-para-empresas",
+      "tier": "SERVICO_CIDADE_COM_INTENCAO_LOCAL",
+      "intent": "planejar backup para empresa em São José dos Pinhais com levantamento de dados críticos, rotina de cópia e teste de restauração",
+      "reason": "Promoção validada por reports/enriquecimento-fila-11-20-service-cidade-2026-10.md: conteúdo autoral próprio, 97,8% de unicidade e 2,2% de similaridade máxima."
+    },
+    {
+      "path": "/servicos/conserto-notebook/araucaria",
+      "family": "SERVICO_CIDADE",
+      "indexability": "index",
+      "canonical": "/servicos/conserto-notebook/araucaria",
+      "sitemap": true,
+      "parent": "/servicos/manutencao-de-notebook",
+      "tier": "SERVICO_CIDADE_COM_INTENCAO_LOCAL",
+      "intent": "solicitar conserto de notebook em Araucária com triagem pelo modelo, definição da modalidade e agenda conforme urgência e disponibilidade",
+      "reason": "Promoção validada por reports/enriquecimento-fila-11-20-service-cidade-2026-10.md: conteúdo autoral próprio, 97,3% de unicidade e 2,7% de similaridade máxima."
+    },
+    {
+      "path": "/servicos/conserto-pc/araucaria",
+      "family": "SERVICO_CIDADE",
+      "indexability": "index",
+      "canonical": "/servicos/conserto-pc/araucaria",
+      "sitemap": true,
+      "parent": "/servicos/manutencao-de-computador",
+      "tier": "SERVICO_CIDADE_COM_INTENCAO_LOCAL",
+      "intent": "solicitar conserto de PC em Araucária com triagem do sintoma, avaliação de hardware e agenda definida conforme urgência",
+      "reason": "Promoção validada por reports/enriquecimento-fila-11-20-service-cidade-2026-10.md: conteúdo autoral próprio, 96,9% de unicidade e 3,1% de similaridade máxima."
+    },
+    {
+      "path": "/servicos/conserto-tv/araucaria",
+      "family": "SERVICO_CIDADE",
+      "indexability": "index",
+      "canonical": "/servicos/conserto-tv/araucaria",
+      "sitemap": true,
+      "parent": "/servicos/conserto-tv",
+      "tier": "SERVICO_CIDADE_COM_INTENCAO_LOCAL",
+      "intent": "solicitar conserto de TV em Araucária com triagem por modelo e sintoma, logística segura e agenda condicionada à disponibilidade",
+      "reason": "Promoção validada por reports/enriquecimento-fila-11-20-service-cidade-2026-10.md: conteúdo autoral próprio, 97,3% de unicidade e 2,7% de similaridade máxima."
+    },
+    {
+      "path": "/servicos/conserto-celular/araucaria",
+      "family": "SERVICO_CIDADE",
+      "indexability": "index",
+      "canonical": "/servicos/conserto-celular/araucaria",
+      "sitemap": true,
+      "parent": "/servicos/conserto-celular",
+      "tier": "SERVICO_CIDADE_COM_INTENCAO_LOCAL",
+      "intent": "solicitar conserto de celular em Araucária com triagem por modelo, dano, urgência e cuidado com dados",
+      "reason": "Promoção validada por reports/enriquecimento-fila-11-20-service-cidade-2026-10.md: conteúdo autoral próprio, 95,3% de unicidade e 4,7% de similaridade máxima."
+    },
+    {
+      "path": "/servicos/upgrade-ssd/araucaria",
+      "family": "SERVICO_CIDADE",
+      "indexability": "index",
+      "canonical": "/servicos/upgrade-ssd/araucaria",
+      "sitemap": true,
+      "parent": "/servicos/upgrade-ssd-ram",
+      "tier": "SERVICO_CIDADE_COM_INTENCAO_LOCAL",
+      "intent": "contratar upgrade de SSD ou memória em Araucária com diagnóstico do gargalo, conferência de compatibilidade e plano de migração",
+      "reason": "Promoção validada por reports/enriquecimento-fila-11-20-service-cidade-2026-10.md: conteúdo autoral próprio, 97,2% de unicidade e 2,8% de similaridade máxima."
     }
   ],
   "bairrosAncora": [
