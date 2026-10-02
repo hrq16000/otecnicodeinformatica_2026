@@ -1,5 +1,5 @@
 {
-  "_doc": "FILA 16–20 — SERVIÇO × ARAUCÁRIA. Fonte autoral local exclusiva para as cinco combinações priorizadas. Regra fail-closed: somente slugs declarados neste arquivo recebem conteúdo local; indexabilidade continua governada por src/lib/localIndexPolicy.json.",
+  "_doc": "FILAS 16–29 — SERVIÇO × ARAUCÁRIA. Fonte autoral local exclusiva para combinações priorizadas e validadas. Regra fail-closed: somente slugs declarados neste arquivo recebem conteúdo local; indexabilidade continua governada por src/lib/localIndexPolicy.json.",
   "paginas": {
     "conserto-notebook": {
       "path": "/servicos/conserto-notebook/araucaria",
@@ -458,6 +458,816 @@
         "/servicos/manutencao-de-notebook",
         "/servicos/manutencao-de-computador",
         "/servicos/recuperacao-de-dados",
+        "/tecnico-informatica-araucaria"
+      ],
+      "cidadeSlug": "araucaria",
+      "cidadeNome": "Araucária"
+    },
+    "backup-recuperacao": {
+      "path": "/servicos/backup-recuperacao/araucaria",
+      "parent": "/servicos/recuperacao-de-dados",
+      "nome": "Backup e Recuperação de Dados",
+      "intentGlobal": "entender recuperação de dados: exclusão, falha lógica, defeito físico, clonagem, limites técnicos e prevenção",
+      "intentLocal": "solicitar recuperação de dados em Araucária com triagem da mídia, preservação antes de novas gravações e definição da etapa seguinte conforme o risco",
+      "title": "Recuperação de Dados em Araucária | HD, SSD e arquivos",
+      "description": "Recuperação de dados em Araucária com triagem de HD, SSD e pen drive, preservação da mídia e definição do procedimento antes de novas tentativas.",
+      "h1": "Recuperação de dados em Araucária",
+      "subtitulo": "O atendimento começa protegendo a mídia e classificando o tipo de falha antes de decidir entre cópia, clonagem, recuperação lógica ou avaliação física.",
+      "intro": [
+        "Arquivo apagado, HD que deixou de aparecer, SSD com erro e pen drive pedindo formatação não devem receber a mesma tentativa. Cada gravação nova pode substituir dados antigos, e insistir em ligar uma mídia fisicamente instável pode reduzir as chances de leitura. A primeira decisão técnica é evitar piorar a situação.",
+        "Em Araucária, a triagem pode considerar Centro, Fazenda Velha, Costeira, Campina da Barra, Tindiquera, Estação e outras referências locais apenas para organizar entrega, coleta ou visita quando aplicável. Não existe promessa de laboratório ou equipe fixa em cada região."
+      ],
+      "blocos": [
+        {
+          "titulo": "Parar de usar pode ser a intervenção mais importante",
+          "paragrafos": [
+            "Se o problema envolve exclusão acidental, formatação ou partição perdida, continuar usando o computador pode gravar novos dados sobre o espaço que ainda contém partes dos arquivos antigos. Por isso a orientação inicial costuma ser interromper downloads, atualizações e instalações até entender o cenário.",
+            "Quando a mídia apresenta ruído, desconexões, travamentos fortes ou demora anormal para ser reconhecida, o cuidado precisa ser ainda maior. Repetir inicializações e ferramentas de reparo sem diagnóstico pode agravar uma falha que já é física."
+          ]
+        },
+        {
+          "titulo": "Falha lógica e falha física seguem caminhos diferentes",
+          "paragrafos": [
+            "Arquivos apagados, sistema de arquivos corrompido e partição perdida entram numa linha lógica. Disco que não gira, desconecta, apresenta setores instáveis ou controlador defeituoso pode exigir outro tipo de tratamento. Misturar os dois caminhos cria risco desnecessário.",
+            "A triagem pergunta o que aconteceu antes do problema, se houve queda, oscilação elétrica, lentidão progressiva ou mensagem de erro. Esses sinais não fecham diagnóstico sozinhos, mas ajudam a escolher a abordagem mais segura."
+          ]
+        },
+        {
+          "titulo": "Clonagem pode vir antes da busca pelos arquivos",
+          "paragrafos": [
+            "Quando a mídia ainda responde, mas demonstra instabilidade, copiar setor a setor para outro destino pode ser mais seguro que procurar documentos diretamente no original. A ideia é preservar o estado atual antes de trabalhar sobre uma cópia.",
+            "Essa decisão depende da saúde do dispositivo. Em alguns casos a clonagem completa não é viável e a estratégia precisa priorizar áreas mais importantes. O cliente deve saber o limite técnico antes de criar expectativa sobre quantidade ou integridade de arquivos."
+          ]
+        },
+        {
+          "titulo": "Janela de atendimento entre 2 e 72 horas úteis",
+          "paragrafos": [
+            "O início do atendimento é organizado numa janela de 2 a 72 horas úteis conforme urgência e disponibilidade do prestador adequado. Uma mídia que contém dados essenciais e está piorando pode receber prioridade maior que uma recuperação não urgente, sempre sujeita à agenda real.",
+            "Esse intervalo não é prazo de recuperação concluída. Leitura instável, grande volume de dados, necessidade de clonagem ou avaliação especializada podem exigir mais tempo depois da primeira análise."
+          ]
+        },
+        {
+          "titulo": "Rede nacional sem prometer capacidade local fixa",
+          "paragrafos": [
+            "A operação começou em Curitiba em 2006 e hoje integra uma rede nacional com mais de 6 mil prestadores credenciados. Em Araucária, esse alcance serve para consultar disponibilidade e perfil técnico sem transformar o número nacional em contagem municipal.",
+            "A política de valorização trabalha com referência de tarifa mínima justa ao prestador. Recuperação de dados exige responsabilidade, tempo de leitura e cuidado com a mídia; remunerar apenas pelo arquivo entregue pode incentivar tentativas rápidas que não respeitam o risco."
+          ]
+        },
+        {
+          "titulo": "O que informar antes de qualquer tentativa",
+          "paragrafos": [
+            "Diga qual é a mídia, capacidade, sistema usado, o que aconteceu e quais tentativas já foram feitas. Informe se o dispositivo ainda aparece, se emite ruído, se pede formatação e quais pastas ou tipos de arquivo são realmente prioritários.",
+            "Acrescente o bairro em Araucária e se a mídia está dentro de notebook, desktop ou equipamento externo. Com esse contexto, a triagem consegue orientar transporte, prioridade e próxima etapa sem exigir tentativa improvisada."
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "pergunta": "Posso continuar usando o computador depois de apagar arquivos?",
+          "resposta": "Não é recomendado quando os dados são importantes. Novas gravações podem sobrescrever áreas que ainda contêm partes recuperáveis."
+        },
+        {
+          "pergunta": "HD que faz ruído deve ser ligado várias vezes para testar?",
+          "resposta": "Não. Ruído ou instabilidade podem indicar falha física, e repetidas tentativas podem piorar a situação."
+        },
+        {
+          "pergunta": "A recuperação termina em até 72 horas úteis?",
+          "resposta": "Não necessariamente. A faixa de 2 a 72 horas úteis organiza o início do atendimento; clonagem, leitura instável ou avaliação especializada podem exigir mais tempo."
+        },
+        {
+          "pergunta": "Vocês garantem recuperar todos os arquivos?",
+          "resposta": "Não. A possibilidade depende do estado da mídia e do que ocorreu depois da perda. O correto é avaliar antes de prometer resultado."
+        },
+        {
+          "pergunta": "Quantos especialistas atendem Araucária?",
+          "resposta": "Não publicamos contagem municipal sem fonte confirmada. O dado institucional é de mais de 6 mil prestadores credenciados na rede nacional."
+        }
+      ],
+      "interlinks": [
+        "/servicos/recuperacao-de-dados",
+        "/servicos/backup-para-empresas/araucaria",
+        "/seguranca-dos-dados",
+        "/tecnico-informatica-araucaria",
+        "/precos-e-politicas"
+      ],
+      "cidadeSlug": "araucaria",
+      "cidadeNome": "Araucária"
+    },
+    "suporte-empresas": {
+      "path": "/servicos/suporte-empresas/araucaria",
+      "parent": "/servicos/suporte-tecnico-empresarial",
+      "nome": "Suporte de TI para Empresas",
+      "intentGlobal": "entender suporte de TI para pequenas empresas: estações, rede, impressoras, acesso, backup e continuidade operacional",
+      "intentLocal": "contratar suporte de TI em Araucária com prioridade baseada no impacto da falha e modalidade definida entre remoto, visita ou bancada",
+      "title": "Suporte de TI para Empresas em Araucária | Prioridade por impacto",
+      "description": "Suporte de TI para pequenas empresas em Araucária com triagem por impacto, remoto ou presencial conforme o caso e agenda condicionada à urgência.",
+      "h1": "Suporte de TI para empresas em Araucária",
+      "subtitulo": "Atendimento que começa pelo processo afetado — faturamento, acesso, rede, estação ou periférico — antes de decidir a modalidade e a prioridade do chamado.",
+      "intro": [
+        "Uma empresa pode ter dez problemas diferentes no mesmo dia e apenas um deles realmente interromper a operação. Impressora secundária fora da rede não tem o mesmo impacto de caixa parado, estação sem acesso ao sistema ou pasta compartilhada indisponível para toda a equipe. A prioridade precisa nascer do efeito no trabalho.",
+        "Em Araucária, o endereço entra depois dessa classificação para organizar eventual visita. Centro, Fazenda Velha, Costeira, Campina da Barra, Capela Velha e Estação funcionam como referências logísticas; não representam unidade física ou equipe permanente em cada local."
+      ],
+      "blocos": [
+        {
+          "titulo": "Impacto operacional vem antes do nome do equipamento",
+          "paragrafos": [
+            "A abertura do chamado deve explicar o que deixou de funcionar e quem foi afetado. Uma única estação pode ser crítica se concentra faturamento; várias máquinas lentas podem permitir trabalho enquanto uma correção programada é organizada.",
+            "Esse contexto evita tratar todos os pedidos como urgência máxima. A triagem consegue separar parada real, degradação de desempenho, dúvida de usuário e melhoria planejada."
+          ]
+        },
+        {
+          "titulo": "Remoto, visita e bancada têm papéis diferentes",
+          "paragrafos": [
+            "Problemas de conta, software, permissões, impressora já conectada e parte das falhas de Windows podem começar remotamente quando existe internet. Cabeamento, switch, fonte, armazenamento defeituoso e equipamentos que não ligam costumam exigir presença física.",
+            "Se o equipamento precisa sair do local para teste prolongado, a bancada entra como terceira modalidade. A empresa deve saber essa transição antes de perder acesso à máquina."
+          ]
+        },
+        {
+          "titulo": "A janela operacional varia de 2 a 72 horas úteis",
+          "paragrafos": [
+            "O atendimento é organizado conforme urgência e disponibilidade do prestador adequado. Chamados que impedem faturamento ou acesso a dados podem receber prioridade maior que instalação programável, sem transformar prioridade em promessa de chegada imediata.",
+            "O intervalo de 2 a 72 horas úteis representa a janela para iniciar a etapa combinada. Peça, autorização de responsável, provedor externo ou projeto maior podem exigir continuidade fora desse período."
+          ]
+        },
+        {
+          "titulo": "Registro reduz repetição de diagnóstico",
+          "paragrafos": [
+            "Quando um incidente é encerrado, vale registrar equipamento, sintoma, causa provável, mudança executada e pendências. Se o defeito reaparece, o histórico ajuda a identificar padrão e evita começar novamente pela mesma lista de perguntas.",
+            "Esse registro é especialmente útil em pequenas empresas sem equipe interna de TI. O objetivo não é criar burocracia, e sim deixar informação suficiente para o próximo atendimento ser mais consistente."
+          ]
+        },
+        {
+          "titulo": "Rede nacional e remuneração técnica sustentável",
+          "paragrafos": [
+            "A empresa começou em Curitiba em 2006 e hoje integra uma rede nacional com mais de 6 mil prestadores credenciados. Em Araucária, esse alcance serve para procurar disponibilidade sem inventar quantidade local de profissionais.",
+            "A referência de tarifa mínima justa ao prestador procura sustentar triagem, deslocamento, teste e documentação. Suporte empresarial pressionado apenas por preço tende a virar correção rápida sem investigação do motivo que fez o problema voltar."
+          ]
+        },
+        {
+          "titulo": "Como abrir um chamado empresarial útil",
+          "paragrafos": [
+            "Informe endereço, pessoa responsável, quantidade aproximada de usuários afetados, equipamento ou sistema envolvido e se existe alternativa temporária. Diga se a falha começou após atualização, queda de energia, troca de roteador ou outra mudança recente.",
+            "Se houver mais de um problema, liste separadamente. Com esse material e a região de Araucária, a triagem consegue organizar prioridade, modalidade e janela de atendimento com menos interrupção para a equipe."
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "pergunta": "Preciso ter contrato para pedir suporte?",
+          "resposta": "Não. Chamados avulsos podem ser atendidos; recorrência pode justificar outro modelo, mas isso só deve ser discutido depois de entender a demanda real."
+        },
+        {
+          "pergunta": "Problema crítico garante atendimento imediato?",
+          "resposta": "Não. O impacto influencia a prioridade, mas a janela depende da disponibilidade. O intervalo operacional informado é de 2 a 72 horas úteis."
+        },
+        {
+          "pergunta": "Atendimento remoto resolve tudo?",
+          "resposta": "Não. Software e configuração podem começar remotamente, enquanto falhas físicas, rede cabeada e equipamentos sem energia exigem outra modalidade."
+        },
+        {
+          "pergunta": "Atendem empresas na Fazenda Velha ou Centro?",
+          "resposta": "Essas regiões entram como referências locais de agenda, mas a disponibilidade é confirmada por chamado."
+        },
+        {
+          "pergunta": "Quantos prestadores empresariais existem em Araucária?",
+          "resposta": "Não publicamos contagem municipal sem fonte confirmada. A rede nacional possui mais de 6 mil prestadores credenciados."
+        }
+      ],
+      "interlinks": [
+        "/servicos/suporte-tecnico-empresarial",
+        "/servicos/manutencao-preventiva-empresas/araucaria",
+        "/servicos/backup-para-empresas/araucaria",
+        "/atendimento-remoto",
+        "/tecnico-informatica-araucaria"
+      ],
+      "cidadeSlug": "araucaria",
+      "cidadeNome": "Araucária"
+    },
+    "atendimento-remoto": {
+      "path": "/servicos/atendimento-remoto/araucaria",
+      "parent": "/atendimento-remoto",
+      "nome": "Atendimento Remoto",
+      "intentGlobal": "entender quando suporte remoto resolve software, configuração, acesso e diagnóstico inicial sem deslocamento",
+      "intentLocal": "iniciar suporte remoto em Araucária com sessão autorizada e transição clara para atendimento físico quando o diagnóstico apontar hardware ou rede local",
+      "title": "Suporte Remoto em Araucária | Windows, programas e acesso",
+      "description": "Suporte remoto em Araucária para Windows, programas, contas e configuração, com sessão autorizada e encaminhamento físico quando necessário.",
+      "h1": "Suporte remoto em Araucária",
+      "subtitulo": "Acesso assistido para problemas que podem ser avaliados pela internet, sem fingir que uma sessão remota substitui teste físico quando o defeito está no hardware.",
+      "intro": [
+        "Suporte remoto é eficiente quando o computador liga, entra no sistema e ainda tem conexão. Nessa situação, erros de programa, conta, impressora configurada, atualização, navegador, permissões e parte dos problemas de Windows podem ser investigados sem deslocamento.",
+        "Para quem está em Araucária, a cidade continua importante porque o remoto pode encontrar um limite. Se o diagnóstico aponta cabo, Wi‑Fi do ambiente, disco, fonte, memória ou outro componente físico, a etapa seguinte precisa considerar endereço, modalidade e agenda local."
+      ],
+      "blocos": [
+        {
+          "titulo": "Sessão remota começa por autorização e objetivo definido",
+          "paragrafos": [
+            "Antes de conectar, o cliente precisa saber qual ferramenta será usada e o que será verificado. A sessão deve ficar visível e limitada ao escopo do chamado, sem acesso desnecessário a arquivos pessoais.",
+            "Quando uma ação exige senha, autenticação ou confirmação do usuário, a participação do cliente é preferível. O suporte técnico não precisa conhecer credenciais que podem ser digitadas diretamente pelo próprio responsável."
+          ]
+        },
+        {
+          "titulo": "Problemas adequados ao remoto",
+          "paragrafos": [
+            "Configuração de programas, contas, navegadores, parte dos erros de Windows, impressão já ligada à rede e ajustes de reunião podem ser avaliados à distância. Também é possível fazer triagem inicial de lentidão quando a máquina ainda responde.",
+            "Máquina que não liga, tela sem imagem, conector quebrado, superaquecimento severo ou sinal Wi‑Fi que precisa ser medido dentro do imóvel fogem desse escopo e devem migrar para outra modalidade."
+          ]
+        },
+        {
+          "titulo": "A sessão também entra numa janela de 2 a 72 horas úteis",
+          "paragrafos": [
+            "Não existe atendimento remoto automaticamente imediato. A solicitação entra na agenda conforme urgência e disponibilidade do prestador adequado, dentro da janela operacional de 2 a 72 horas úteis.",
+            "A vantagem é eliminar deslocamento quando o caso permite, não furar uma fila artificialmente. Um erro que impede trabalho pode receber prioridade maior que configuração programável, respeitando a agenda real."
+          ]
+        },
+        {
+          "titulo": "Quando Araucária volta a importar fisicamente",
+          "paragrafos": [
+            "Se a sessão identifica defeito físico, o bairro e a possibilidade de movimentar o equipamento ajudam a planejar visita, coleta ou bancada. Centro, Fazenda Velha, Costeira, Campina da Barra, Tindiquera e Estação são referências logísticas úteis.",
+            "O histórico da sessão acompanha essa mudança de modalidade. Assim o atendimento físico não precisa repetir todo o diagnóstico inicial e pode partir do que já foi observado."
+          ]
+        },
+        {
+          "titulo": "Rede nacional e valor do diagnóstico remoto",
+          "paragrafos": [
+            "A operação começou em Curitiba em 2006 e hoje integra uma rede nacional com mais de 6 mil prestadores credenciados. O número é nacional e não representa uma quantidade fixa de especialistas disponíveis em Araucária.",
+            "A referência de tarifa mínima justa também se aplica ao remoto. Resolver uma falha sem deslocamento não significa ausência de trabalho técnico; análise, responsabilidade e tempo de sessão continuam fazendo parte do serviço."
+          ]
+        },
+        {
+          "titulo": "Como preparar a máquina para a triagem",
+          "paragrafos": [
+            "Informe versão do sistema quando souber, descreva o erro, diga desde quando começou e envie captura de tela. Confirme também se a internet funciona e se o computador consegue abrir o navegador.",
+            "Se o equipamento pertence a uma empresa, avise sobre restrições de administrador. Isso evita tentar mudanças que dependem do TI interno e ajuda a decidir se a sessão pode avançar ou deve virar diagnóstico para repasse."
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "pergunta": "Suporte remoto funciona se o computador não liga?",
+          "resposta": "Não. Sem inicialização e conexão, é necessário avaliar outra modalidade."
+        },
+        {
+          "pergunta": "Preciso entregar minhas senhas?",
+          "resposta": "Não como regra. Sempre que possível, o próprio cliente digita credenciais e confirma autenticações durante a sessão."
+        },
+        {
+          "pergunta": "A sessão começa imediatamente?",
+          "resposta": "Não há promessa de início imediato. A janela operacional varia de 2 a 72 horas úteis conforme urgência e agenda."
+        },
+        {
+          "pergunta": "Se descobrir defeito físico, perco o diagnóstico feito?",
+          "resposta": "Não. O histórico da triagem pode orientar a etapa presencial ou de bancada."
+        },
+        {
+          "pergunta": "Existe equipe remota fixa em Araucária?",
+          "resposta": "Não publicamos estrutura local fixa sem confirmação. A rede nacional tem mais de 6 mil prestadores credenciados."
+        }
+      ],
+      "interlinks": [
+        "/atendimento-remoto",
+        "/servicos/suporte-home-office/araucaria",
+        "/servicos/suporte-tecnico-empresarial/araucaria",
+        "/tecnico-informatica-araucaria",
+        "/seguranca-dos-dados"
+      ],
+      "cidadeSlug": "araucaria",
+      "cidadeNome": "Araucária"
+    },
+    "montagem-de-pc": {
+      "path": "/servicos/montagem-de-pc/araucaria",
+      "parent": "/servicos/montagem-de-pc",
+      "nome": "Montagem de PC",
+      "intentGlobal": "entender escolha de componentes, compatibilidade, alimentação, refrigeração, BIOS e validação da montagem",
+      "intentLocal": "contratar montagem de PC em Araucária com conferência de peças antes da instalação, organização física e testes após o primeiro boot",
+      "title": "Montagem de PC em Araucária | Peças, BIOS e validação",
+      "description": "Montagem de PC em Araucária com conferência de compatibilidade, alimentação, BIOS, refrigeração e testes antes da entrega.",
+      "h1": "Montagem de PC em Araucária",
+      "subtitulo": "A montagem começa antes da chave de fenda: compatibilidade, conectores, espaço físico e firmware precisam ser conferidos para a máquina iniciar e permanecer estável.",
+      "intro": [
+        "Montar um computador não é apenas encaixar componentes compatíveis no papel. CPU pode exigir versão de BIOS específica, placa de vídeo pode não caber no gabinete, memória pode precisar de configuração e fonte pode ter potência anunciada sem os conectores corretos.",
+        "Em Araucária, a triagem também define como as peças serão recebidas e onde a montagem será feita. Centro, Fazenda Velha, Costeira, Campina da Barra, Capela Velha e Estação são referências de deslocamento, sempre conforme agenda."
+      ],
+      "blocos": [
+        {
+          "titulo": "Compatibilidade precisa ser conferida como conjunto",
+          "paragrafos": [
+            "Processador, placa-mãe e memória formam o núcleo, mas gabinete, cooler, fonte, armazenamento e placa de vídeo também precisam conversar entre si. Uma peça compatível eletricamente pode não caber fisicamente ou exigir conector que a fonte não oferece.",
+            "A conferência antes da montagem reduz improviso. Se existe dúvida sobre BIOS, altura do cooler ou comprimento da GPU, ela deve ser resolvida antes de forçar instalação."
+          ]
+        },
+        {
+          "titulo": "Fonte e cabeamento precisam respeitar o projeto",
+          "paragrafos": [
+            "Adaptadores improvisados e cabos incompatíveis podem criar risco elétrico. A alimentação deve usar os conectores previstos para placa-mãe, processador e placa de vídeo, com potência adequada ao conjunto e margem coerente.",
+            "Organizar cabos não é apenas estética. Fluxo de ar, manutenção futura e tensão mecânica sobre conectores também melhoram quando o cabeamento é planejado."
+          ]
+        },
+        {
+          "titulo": "Primeiro boot não encerra o serviço",
+          "paragrafos": [
+            "Depois de ligar, entram BIOS ou UEFI, reconhecimento de memória e armazenamento, temperatura, atualização necessária e configuração básica. Um PC que mostra imagem ainda pode ter memória em velocidade errada ou componente não detectado.",
+            "A validação inclui testes compatíveis com o uso esperado. Não existe um benchmark único que prove estabilidade para qualquer configuração, por isso o conjunto de testes depende da máquina."
+          ]
+        },
+        {
+          "titulo": "A janela operacional varia de 2 a 72 horas úteis",
+          "paragrafos": [
+            "O atendimento é organizado conforme urgência e disponibilidade. Montagem com todas as peças prontas e compatibilidade já conferida tende a ser mais previsível que um conjunto que ainda depende de peça, atualização de BIOS ou troca de componente.",
+            "A faixa de 2 a 72 horas úteis organiza o início do atendimento, não garante entrega final. Problemas detectados nas peças ou testes podem exigir outra etapa."
+          ]
+        },
+        {
+          "titulo": "Rede nacional e valorização do trabalho de montagem",
+          "paragrafos": [
+            "A empresa começou em Curitiba em 2006 e hoje integra uma rede nacional com mais de 6 mil prestadores credenciados. Em Araucária, a disponibilidade é consultada conforme agenda e perfil técnico, sem declarar equipe fixa na cidade.",
+            "A política de tarifa mínima justa reconhece conferência, montagem, organização e validação. Tratar o serviço apenas como encaixe de peça desvaloriza justamente as etapas que evitam incompatibilidade e retorno."
+          ]
+        },
+        {
+          "titulo": "O que enviar antes de agendar",
+          "paragrafos": [
+            "Liste processador, placa-mãe, memória, fonte, gabinete, armazenamento, cooler e placa de vídeo. Se alguma peça ainda será comprada, informe antes para que a compatibilidade seja revisada.",
+            "Diga também o bairro em Araucária e se as peças já estão lacradas, usadas ou vieram de outro computador. Isso ajuda a separar montagem nova, reaproveitamento e diagnóstico de componente."
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "pergunta": "Vocês montam com peças compradas pelo cliente?",
+          "resposta": "Sim, desde que a compatibilidade seja conferida e eventuais limitações sejam informadas antes."
+        },
+        {
+          "pergunta": "PC ligar significa que a montagem está pronta?",
+          "resposta": "Não. Ainda é preciso conferir detecção dos componentes, temperatura, configuração e estabilidade."
+        },
+        {
+          "pergunta": "A montagem termina em até 72 horas úteis?",
+          "resposta": "A faixa organiza o início do atendimento. Peça incompatível, BIOS ou falha detectada podem exigir tempo adicional."
+        },
+        {
+          "pergunta": "Fazem montagem de PC gamer?",
+          "resposta": "Sim, com atenção a alimentação, refrigeração, espaço físico e testes compatíveis com o conjunto."
+        },
+        {
+          "pergunta": "Quantos montadores atendem Araucária?",
+          "resposta": "Não publicamos contagem municipal sem fonte confirmada. A rede nacional tem mais de 6 mil prestadores credenciados."
+        }
+      ],
+      "interlinks": [
+        "/servicos/montagem-de-pc",
+        "/servicos/pc-gamer/araucaria",
+        "/servicos/upgrade-ssd/araucaria",
+        "/tecnico-informatica-araucaria",
+        "/precos-e-politicas"
+      ],
+      "cidadeSlug": "araucaria",
+      "cidadeNome": "Araucária"
+    },
+    "pc-gamer": {
+      "path": "/servicos/pc-gamer/araucaria",
+      "parent": "/servicos/pc-gamer",
+      "nome": "PC gamer",
+      "intentGlobal": "entender desempenho de PC gamer, gargalos, estabilidade, alimentação, refrigeração e upgrade",
+      "intentLocal": "diagnosticar PC gamer em Araucária com reprodução da falha, leitura de estabilidade e recomendação de reparo ou upgrade somente depois dos testes",
+      "title": "PC Gamer em Araucária | Estabilidade, fonte e temperatura",
+      "description": "Diagnóstico de PC gamer em Araucária para travamentos, reinícios, temperatura, fonte, memória, SSD e GPU com teste antes de recomendar troca.",
+      "h1": "PC gamer em Araucária",
+      "subtitulo": "Investigação de falhas sob carga para separar temperatura, energia, memória, armazenamento, driver e placa de vídeo antes de investir em componente novo.",
+      "intro": [
+        "PC gamer costuma esconder defeitos que não aparecem no uso leve. A máquina pode navegar normalmente e falhar só depois de alguns minutos de jogo, durante compilação pesada ou quando CPU e GPU trabalham juntas. Esse comportamento exige teste sob carga, não apenas ligar e abrir o desktop.",
+        "Em Araucária, a modalidade depende do tamanho do gabinete e do tipo de teste necessário. Centro, Fazenda Velha, Costeira, Campina da Barra, Tindiquera e Estação funcionam como referências para logística, sem representar oficina permanente."
+      ],
+      "blocos": [
+        {
+          "titulo": "Reproduzir o defeito é melhor que adivinhar a peça",
+          "paragrafos": [
+            "Tela preta, reinício, queda de clock, artefato visual e fechamento de jogo apontam para caminhos diferentes. A análise observa temperatura, uso de memória, alimentação, armazenamento, driver e comportamento da GPU no momento da falha.",
+            "Quando o problema não aparece, trocar componente por suspeita vira tentativa cara. O objetivo é construir evidência suficiente para indicar software, refrigeração, fonte, memória, SSD ou placa de vídeo."
+          ]
+        },
+        {
+          "titulo": "Temperatura precisa ser lida durante carga real",
+          "paragrafos": [
+            "Limpeza e pasta térmica podem ser necessárias, mas não são resposta universal. Fluxo de ar, curva de ventoinha, dissipador, filtro obstruído e gabinete restritivo também afetam o resultado.",
+            "A revisão considera como a temperatura evolui e se existe redução de desempenho para proteger o hardware. Só depois se decide se a intervenção é física, de configuração ou de projeto do gabinete."
+          ]
+        },
+        {
+          "titulo": "Fonte deve ser avaliada além da potência impressa",
+          "paragrafos": [
+            "Potência nominal não conta sozinha a história. Qualidade do modelo, conectores, estado dos cabos e picos de consumo da configuração entram na análise, especialmente depois de upgrade de placa de vídeo.",
+            "Reinício instantâneo sob carga ou conector aquecido pede atenção. Adaptador improvisado não deve ser usado para esconder falta de alimentação adequada."
+          ]
+        },
+        {
+          "titulo": "Janela de 2 a 72 horas úteis conforme urgência",
+          "paragrafos": [
+            "A organização do atendimento varia com a urgência e a agenda do prestador apropriado. Um PC completamente parado pode receber prioridade maior que ajuste de desempenho programável, mas a disponibilidade precisa ser real.",
+            "Esse intervalo cobre o início do atendimento. Teste prolongado, peça, atualização de firmware ou falha intermitente podem exigir acompanhamento além da primeira janela."
+          ]
+        },
+        {
+          "titulo": "Rede nacional sem transformar alcance em promessa local",
+          "paragrafos": [
+            "A empresa nasceu em Curitiba em 2006 e hoje integra uma rede nacional com mais de 6 mil prestadores credenciados. Em Araucária, esse alcance é usado para consultar disponibilidade, não para publicar quantidade municipal sem fonte.",
+            "A referência de tarifa mínima justa procura remunerar o tempo de teste e diagnóstico. Em PC gamer, a etapa mais valiosa muitas vezes é descobrir qual peça não precisa ser trocada."
+          ]
+        },
+        {
+          "titulo": "Informações úteis antes do teste",
+          "paragrafos": [
+            "Envie processador, placa de vídeo, memória, fonte e armazenamento quando souber. Descreva em qual jogo ou aplicação a falha aparece, quanto tempo leva e se houve troca recente de peça, driver ou BIOS.",
+            "Informe também o bairro em Araucária e se o gabinete pode ser transportado com segurança. Esses dados ajudam a escolher modalidade, equipamento de teste e janela de atendimento."
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "pergunta": "Travamento em jogo significa defeito da GPU?",
+          "resposta": "Não necessariamente. Fonte, memória, temperatura, driver e armazenamento também podem causar falha sob carga."
+        },
+        {
+          "pergunta": "Vale trocar a pasta térmica antes de diagnosticar?",
+          "resposta": "Só quando o estado e as medições justificam. Temperatura depende de vários fatores, não apenas da pasta."
+        },
+        {
+          "pergunta": "Atendem PC gamer no endereço?",
+          "resposta": "Alguns casos podem começar no local; testes longos ou desmontagem ampla podem exigir bancada. A modalidade é definida na triagem."
+        },
+        {
+          "pergunta": "Qual a janela de atendimento?",
+          "resposta": "Entre 2 e 72 horas úteis conforme urgência e disponibilidade. Isso não garante conclusão do reparo no mesmo período."
+        },
+        {
+          "pergunta": "Há quantos técnicos gamer em Araucária?",
+          "resposta": "Não publicamos contagem municipal sem fonte confirmada. O dado institucional é de mais de 6 mil prestadores na rede nacional."
+        }
+      ],
+      "interlinks": [
+        "/servicos/pc-gamer",
+        "/servicos/montagem-de-pc/araucaria",
+        "/servicos/upgrade-ssd/araucaria",
+        "/problemas/computador-esquentando",
+        "/tecnico-informatica-araucaria"
+      ],
+      "cidadeSlug": "araucaria",
+      "cidadeNome": "Araucária"
+    },
+    "suporte-home-office": {
+      "path": "/servicos/suporte-home-office/araucaria",
+      "parent": "/servicos/suporte-home-office",
+      "nome": "Suporte para home office",
+      "intentGlobal": "entender requisitos de um posto de trabalho remoto, conectividade, periféricos, aplicativos, segurança e continuidade",
+      "intentLocal": "resolver falhas de home office em Araucária com remoto primeiro quando possível e transição para visita se o problema estiver no ambiente ou no hardware",
+      "title": "Suporte para Home Office em Araucária | VPN, reunião e rede",
+      "description": "Suporte para home office em Araucária para VPN, reunião, monitor, impressora, Windows e rede, com triagem remota e visita quando necessária.",
+      "h1": "Suporte para home office em Araucária",
+      "subtitulo": "Atendimento para recuperar o posto de trabalho distinguindo conta corporativa, software, internet do ambiente, periférico e defeito físico.",
+      "intro": [
+        "Home office mistura infraestrutura doméstica e exigência corporativa. Uma reunião pode falhar por permissão da câmera, uma VPN pode depender de credencial da empresa e o Wi‑Fi pode funcionar na sala, mas ficar instável no cômodo onde o notebook está. O diagnóstico precisa separar essas camadas.",
+        "Em Araucária, a sessão remota é priorizada quando o computador liga e tem conexão. Se o problema exige medir sinal, trocar cabo, verificar fonte ou atuar no equipamento, endereço e agenda local passam a definir a etapa seguinte."
+      ],
+      "blocos": [
+        {
+          "titulo": "Primeiro identificar onde o trabalho parou",
+          "paragrafos": [
+            "É diferente perder acesso à VPN, ficar sem áudio em reunião ou ter a máquina sem energia. Cada situação aponta para uma camada: conta, aplicativo, sistema, rede, periférico ou hardware.",
+            "A triagem pergunta o que ainda funciona e se outro dispositivo apresenta o mesmo problema. Isso reduz mudanças aleatórias e ajuda a recuperar uma solução provisória quando a correção definitiva depende de outra equipe."
+          ]
+        },
+        {
+          "titulo": "Remoto resolve configuração, não substitui medição física",
+          "paragrafos": [
+            "Permissões, aplicativos de reunião, contas, impressoras já conectadas e parte dos erros de Windows podem ser avaliados à distância. O cliente acompanha a sessão e participa das autenticações.",
+            "Sinal ruim dentro do imóvel, cabo defeituoso, notebook que não liga, aquecimento e periférico fisicamente danificado precisam de outra modalidade. Nesses casos, insistir no remoto apenas alonga o chamado."
+          ]
+        },
+        {
+          "titulo": "A janela operacional fica entre 2 e 72 horas úteis",
+          "paragrafos": [
+            "A urgência considera se o usuário ainda consegue trabalhar por algum caminho e qual tarefa foi interrompida. Mesmo em home office, a agenda depende da disponibilidade do prestador adequado.",
+            "A faixa de 2 a 72 horas úteis indica o início do atendimento. Bloqueio do TI da empresa, falha do provedor ou peça física podem exigir continuidade fora dessa janela."
+          ]
+        },
+        {
+          "titulo": "Localização importa quando há visita",
+          "paragrafos": [
+            "Centro, Fazenda Velha, Costeira, Campina da Barra, Tindiquera e Estação são referências para organizar deslocamento em Araucária. Nenhuma delas representa unidade física ou garantia de atendimento imediato.",
+            "Quando a triagem remota já isolou o problema, a visita recebe contexto antes de começar. Isso reduz repetição de perguntas e ajuda a levar ferramenta compatível com o caso."
+          ]
+        },
+        {
+          "titulo": "Rede nacional e valor do suporte sem deslocamento",
+          "paragrafos": [
+            "A operação começou em Curitiba em 2006 e hoje integra uma rede nacional com mais de 6 mil prestadores credenciados. A disponibilidade em Araucária é consultada conforme agenda, sem afirmar equipe fixa local.",
+            "A referência de tarifa mínima justa reconhece que uma solução remota continua exigindo conhecimento, tempo e responsabilidade. A ausência de deslocamento não transforma diagnóstico em trabalho sem valor."
+          ]
+        },
+        {
+          "titulo": "O que preparar antes de pedir ajuda",
+          "paragrafos": [
+            "Informe se o equipamento é pessoal ou corporativo, qual aplicativo ou função parou, se a internet funciona em outros dispositivos e se o problema ocorre apenas em uma conta. Envie captura da mensagem de erro quando houver.",
+            "Se houver chance de visita, acrescente o bairro e os horários em que o posto pode ser interrompido. Isso ajuda a montar uma sequência que preserve o expediente."
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "pergunta": "Vocês atendem notebook da empresa usado em casa?",
+          "resposta": "Sim, respeitando permissões e políticas internas. Quando algo depende do TI da empresa, o diagnóstico pode ser preparado para repasse."
+        },
+        {
+          "pergunta": "Wi‑Fi ruim no escritório de casa pode ser resolvido remotamente?",
+          "resposta": "Algumas configurações podem ser avaliadas, mas cobertura e interferência muitas vezes exigem medição no ambiente."
+        },
+        {
+          "pergunta": "Home office parado garante atendimento imediato?",
+          "resposta": "Não. O impacto aumenta a prioridade, mas a janela operacional continua entre 2 e 72 horas úteis conforme disponibilidade."
+        },
+        {
+          "pergunta": "Atendem Fazenda Velha e Centro?",
+          "resposta": "Essas regiões são referências locais de agenda. A disponibilidade é confirmada na triagem."
+        },
+        {
+          "pergunta": "Quantos técnicos de home office existem em Araucária?",
+          "resposta": "Não publicamos contagem municipal sem base confirmada. A rede nacional possui mais de 6 mil prestadores credenciados."
+        }
+      ],
+      "interlinks": [
+        "/servicos/suporte-home-office",
+        "/atendimento-remoto",
+        "/servicos/suporte-empresas/araucaria",
+        "/tecnico-informatica-araucaria",
+        "/seguranca-dos-dados"
+      ],
+      "cidadeSlug": "araucaria",
+      "cidadeNome": "Araucária"
+    },
+    "suporte-tecnico-empresarial": {
+      "path": "/servicos/suporte-tecnico-empresarial/araucaria",
+      "parent": "/servicos/suporte-tecnico-empresarial",
+      "nome": "Suporte técnico empresarial",
+      "intentGlobal": "entender modelos de suporte empresarial, organização de chamados, continuidade, documentação e escopo recorrente",
+      "intentLocal": "estruturar suporte técnico empresarial em Araucária com registro de chamados, prioridade por impacto e continuidade entre remoto, visita e projeto",
+      "title": "Suporte Técnico Empresarial em Araucária | Chamados e continuidade",
+      "description": "Suporte técnico empresarial em Araucária com registro de chamados, prioridade por impacto, triagem remota e visita quando o problema exige presença.",
+      "h1": "Suporte técnico empresarial em Araucária",
+      "subtitulo": "Uma operação de suporte que usa histórico, responsável e impacto para tratar incidentes sem transformar toda solicitação em urgência isolada.",
+      "intro": [
+        "Suporte empresarial recorrente precisa guardar memória. Quando cada chamado começa sem saber qual máquina, usuário e ajuste foram tratados anteriormente, a empresa paga novamente pelo mesmo diagnóstico e perde a chance de identificar um padrão.",
+        "Em Araucária, a organização começa pela classificação do incidente e só depois entra a logística. Centro, Fazenda Velha, Costeira, Campina da Barra, Capela Velha e Estação podem influenciar deslocamento, mas não a prioridade técnica."
+      ],
+      "blocos": [
+        {
+          "titulo": "Chamado deve identificar pessoa, máquina e processo afetado",
+          "paragrafos": [
+            "Uma descrição útil informa quem percebeu o problema, qual equipamento está envolvido e qual tarefa deixou de funcionar. Se várias pessoas foram afetadas, isso também precisa aparecer desde a abertura.",
+            "Esse contexto permite diferenciar incidente individual de falha sistêmica. Também ajuda a registrar o que foi feito e comparar quando o problema retorna."
+          ]
+        },
+        {
+          "titulo": "Incidente, manutenção e projeto precisam ficar separados",
+          "paragrafos": [
+            "Restaurar acesso de um usuário é diferente de revisar vinte estações ou redesenhar a rede da empresa. Misturar tudo no mesmo chamado cria prazo e custo difíceis de controlar.",
+            "A triagem separa correção imediata, atividade programável e mudança estrutural. Assim cada item recebe escopo e autorização compatíveis com o trabalho necessário."
+          ]
+        },
+        {
+          "titulo": "A janela de 2 a 72 horas úteis organiza prioridade e agenda",
+          "paragrafos": [
+            "Falha que impede faturamento ou acesso compartilhado pode receber prioridade maior que instalação de software programável. Ainda assim, o início depende de um prestador disponível e adequado ao tipo de incidente.",
+            "A faixa operacional não representa garantia de conclusão. Se o diagnóstico encontra peça, provedor, autorização interna ou projeto maior, a continuidade é combinada separadamente."
+          ]
+        },
+        {
+          "titulo": "Remoto primeiro quando reduz interrupção",
+          "paragrafos": [
+            "Contas, permissões, software e parte dos problemas de estação podem começar remotamente. Rede física, energia, equipamento que não liga e cabeamento normalmente exigem presença.",
+            "Quando a visita é necessária, o histórico do chamado deve acompanhar o atendimento. Isso reduz retrabalho e ajuda a levar a ferramenta ou peça de teste adequada."
+          ]
+        },
+        {
+          "titulo": "Rede nacional e remuneração compatível com responsabilidade",
+          "paragrafos": [
+            "A empresa nasceu em Curitiba em 2006 e hoje integra uma rede nacional com mais de 6 mil prestadores credenciados. O número é nacional e não prova uma quantidade fixa de técnicos empresariais em Araucária.",
+            "A referência de tarifa mínima justa procura sustentar tempo de diagnóstico, documentação e responsabilidade sobre o ambiente. Suporte recorrente precisa permitir análise, não apenas uma sequência de soluções improvisadas."
+          ]
+        },
+        {
+          "titulo": "O que registrar ao encerrar cada atendimento",
+          "paragrafos": [
+            "Vale guardar causa provável, ação executada, equipamento envolvido, responsável que autorizou e pendências. Se a solução foi provisória, isso deve ficar explícito para não ser confundido com correção definitiva.",
+            "Quando chamados semelhantes começam a se repetir, o histórico pode indicar manutenção preventiva, substituição planejada ou projeto. Essa decisão deve nascer dos registros, não de uma oferta genérica de contrato."
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "pergunta": "Suporte empresarial exige mensalidade?",
+          "resposta": "Não. O formato depende da recorrência e do escopo real; chamados avulsos continuam possíveis."
+        },
+        {
+          "pergunta": "Qual a diferença para suporte de TI avulso?",
+          "resposta": "O suporte empresarial estruturado enfatiza histórico, prioridade e continuidade entre incidentes, além da resolução do chamado atual."
+        },
+        {
+          "pergunta": "Atendem no local?",
+          "resposta": "Quando o problema exige presença física e há agenda, sim. Casos compatíveis podem começar remotamente."
+        },
+        {
+          "pergunta": "A janela é sempre de até 72 horas úteis?",
+          "resposta": "Essa é a faixa operacional para organizar o início do atendimento conforme urgência e disponibilidade, não um prazo final de resolução."
+        },
+        {
+          "pergunta": "Quantos prestadores empresariais existem em Araucária?",
+          "resposta": "Não publicamos contagem municipal sem fonte confirmada. A rede nacional tem mais de 6 mil prestadores credenciados."
+        }
+      ],
+      "interlinks": [
+        "/servicos/suporte-tecnico-empresarial",
+        "/servicos/suporte-empresas/araucaria",
+        "/servicos/manutencao-preventiva-empresas/araucaria",
+        "/servicos/backup-para-empresas/araucaria",
+        "/tecnico-informatica-araucaria"
+      ],
+      "cidadeSlug": "araucaria",
+      "cidadeNome": "Araucária"
+    },
+    "manutencao-preventiva-empresas": {
+      "path": "/servicos/manutencao-preventiva-empresas/araucaria",
+      "parent": "/servicos/manutencao-preventiva-empresas",
+      "nome": "Manutenção preventiva para empresas",
+      "intentGlobal": "entender manutenção preventiva empresarial, checklist, periodicidade, sinais de degradação e separação entre prevenção e reparo",
+      "intentLocal": "programar manutenção preventiva de computadores em empresa de Araucária com checklist por estação e execução em lotes para reduzir parada",
+      "title": "Manutenção Preventiva de TI em Araucária | Checklist por estação",
+      "description": "Manutenção preventiva empresarial em Araucária com checklist por estação, agenda em lotes e separação entre prevenção e reparo corretivo.",
+      "h1": "Manutenção preventiva para empresas em Araucária",
+      "subtitulo": "Revisão planejada para detectar sinais de degradação sem retirar todo o escritório de operação e sem misturar manutenção preventiva com reparo corretivo.",
+      "intro": [
+        "Preventiva só faz sentido quando existe critério repetível. Limpar máquinas aleatoriamente sem registrar armazenamento, atualizações, espaço livre, temperatura e sintomas recorrentes não cria histórico e não ajuda a perceber qual estação está se aproximando de uma falha.",
+        "Em Araucária, a agenda pode ser organizada por grupos de equipamentos para reduzir impacto na operação. O número de máquinas, horário disponível e necessidade de presença física definem o formato antes do início."
+      ],
+      "blocos": [
+        {
+          "titulo": "Checklist por estação cria comparação ao longo do tempo",
+          "paragrafos": [
+            "Cada máquina deve ter uma sequência mínima de verificação: armazenamento, espaço livre, inicialização, atualizações, segurança, temperatura quando aplicável, periféricos e sinais físicos. O resultado precisa registrar o que foi observado.",
+            "Na próxima rodada, esse histórico ajuda a distinguir um novo problema de algo que já vinha se degradando. Sem registro, a preventiva perde boa parte do valor."
+          ]
+        },
+        {
+          "titulo": "Prevenção não deve esconder reparo corretivo",
+          "paragrafos": [
+            "Se a revisão encontra disco com erro, bateria deformada, fonte instável ou outro defeito confirmado, o caso precisa ser separado da rotina preventiva. A intervenção corretiva exige explicação e aprovação própria.",
+            "Essa divisão mantém o escopo previsível e evita que a empresa descubra um orçamento maior apenas depois que várias máquinas já foram abertas."
+          ]
+        },
+        {
+          "titulo": "Executar em lotes reduz parada da equipe",
+          "paragrafos": [
+            "Em vez de retirar todas as estações de uso ao mesmo tempo, a manutenção pode ser organizada por setor ou grupo. Uma parte passa pela revisão enquanto as demais continuam trabalhando.",
+            "A ordem deve considerar máquinas críticas e janelas de menor movimento. A região de Araucária entra na logística do atendimento, mas a sequência técnica permanece baseada no inventário."
+          ]
+        },
+        {
+          "titulo": "A janela operacional varia de 2 a 72 horas úteis",
+          "paragrafos": [
+            "Como prevenção é programável, ela costuma ser encaixada de forma diferente de um incidente crítico. Ainda assim, disponibilidade de agenda e quantidade de equipamentos precisam ser consideradas.",
+            "A faixa de 2 a 72 horas úteis organiza o início do atendimento. A duração total depende da quantidade de estações e do que aparecer no checklist."
+          ]
+        },
+        {
+          "titulo": "Rede nacional e valorização do tempo de prevenção",
+          "paragrafos": [
+            "A operação começou em Curitiba em 2006 e hoje integra uma rede nacional com mais de 6 mil prestadores credenciados. A disponibilidade em Araucária é consultada conforme agenda, sem declarar equipe local fixa.",
+            "A referência de tarifa mínima justa reconhece que revisar uma máquina saudável também consome tempo técnico. O valor está justamente em medir e registrar antes que o equipamento pare."
+          ]
+        },
+        {
+          "titulo": "O que levantar antes de programar",
+          "paragrafos": [
+            "Liste estações, usuários, máquinas essenciais, melhor horário para interrupção e qualquer histórico recente de lentidão, aquecimento ou erro. Informe também notebooks que ficam fora do escritório e periféricos que precisam entrar no checklist.",
+            "Se existem relatórios antigos, eles ajudam a comparar evolução. Com esse inventário e o endereço em Araucária, a execução pode ser dividida de forma mais previsível."
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "pergunta": "Preventiva inclui troca de peça?",
+          "resposta": "Não automaticamente. Defeito encontrado deve ser tratado como intervenção corretiva e aprovado separadamente."
+        },
+        {
+          "pergunta": "Precisa parar todo o escritório?",
+          "resposta": "Não necessariamente. A execução pode ser dividida em grupos de estações quando a operação permite."
+        },
+        {
+          "pergunta": "Qual a janela para começar?",
+          "resposta": "Entre 2 e 72 horas úteis conforme agenda. A duração total depende da quantidade de equipamentos."
+        },
+        {
+          "pergunta": "A manutenção gera registro?",
+          "resposta": "A proposta é manter checklist e observações por estação para permitir comparação e acompanhamento."
+        },
+        {
+          "pergunta": "Há equipe preventiva fixa em Araucária?",
+          "resposta": "Não publicamos estrutura fixa sem confirmação. A rede nacional possui mais de 6 mil prestadores credenciados."
+        }
+      ],
+      "interlinks": [
+        "/servicos/manutencao-preventiva-empresas",
+        "/servicos/suporte-tecnico-empresarial/araucaria",
+        "/servicos/backup-para-empresas/araucaria",
+        "/tecnico-informatica-araucaria",
+        "/precos-e-politicas"
+      ],
+      "cidadeSlug": "araucaria",
+      "cidadeNome": "Araucária"
+    },
+    "backup-para-empresas": {
+      "path": "/servicos/backup-para-empresas/araucaria",
+      "parent": "/servicos/backup-para-empresas",
+      "nome": "Backup para empresas",
+      "intentGlobal": "entender estratégias de backup empresarial, retenção, versões, destinos de cópia e teste de restauração",
+      "intentLocal": "planejar backup empresarial em Araucária com inventário de dados críticos, separação de cópias e teste de restauração antes de depender do plano",
+      "title": "Backup para Empresas em Araucária | Retenção e teste de restauração",
+      "description": "Backup empresarial em Araucária com inventário de dados críticos, cópias separadas, retenção e teste de restauração.",
+      "h1": "Backup para empresas em Araucária",
+      "subtitulo": "Planejamento de cópias que começa pelo que precisa ser recuperado e termina com teste real de restauração, não apenas com um indicador dizendo que o backup rodou.",
+      "intro": [
+        "Uma empresa pode ter cópia automática todos os dias e ainda descobrir, na emergência, que o arquivo importante nunca entrou na rotina ou que a senha necessária para restaurar ninguém mais conhece. Backup precisa ser pensado a partir da recuperação, não apenas da geração da cópia.",
+        "Em Araucária, o levantamento considera onde ficam os dados, quem usa, qual volume existe e quais máquinas são críticas. Centro, Fazenda Velha, Costeira, Campina da Barra, Capela Velha e Estação entram apenas como referências logísticas quando há etapa presencial."
+      ],
+      "blocos": [
+        {
+          "titulo": "Começar pelos dados críticos evita copiar tudo sem prioridade",
+          "paragrafos": [
+            "Contratos, banco de dados, documentos compartilhados e material histórico podem ter necessidades diferentes de retenção e velocidade de recuperação. O primeiro passo é classificar o que realmente precisa voltar primeiro.",
+            "Esse inventário também revela dados esquecidos fora da pasta principal, como arquivos locais de um usuário ou exportações que não entram no serviço de nuvem."
+          ]
+        },
+        {
+          "titulo": "Cópias precisam ficar separadas do mesmo risco",
+          "paragrafos": [
+            "Um disco externo sempre conectado ao computador pode ser atingido pela mesma falha elétrica, malware ou exclusão que afetou o original. Separar destinos reduz a chance de um único incidente destruir tudo.",
+            "A combinação entre cópia local, externa e nuvem depende de volume, conexão, confidencialidade e tempo de restauração. Não existe desenho único que sirva para qualquer empresa."
+          ]
+        },
+        {
+          "titulo": "Retenção protege contra erro descoberto tarde",
+          "paragrafos": [
+            "Sobrescrever a cópia de ontem com a versão de hoje pode ser insuficiente quando um arquivo foi corrompido ou alterado dias antes sem ninguém perceber. Manter versões permite voltar a estados anteriores.",
+            "A quantidade de histórico precisa equilibrar risco e armazenamento. O importante é que a política seja conhecida e compatível com a rotina real da empresa."
+          ]
+        },
+        {
+          "titulo": "Teste de restauração transforma cópia em evidência",
+          "paragrafos": [
+            "Ver um status verde no software não prova que o arquivo volta corretamente. A rotina precisa restaurar amostras e confirmar abertura, integridade e caminho de recuperação.",
+            "Também vale documentar credenciais, responsáveis e procedimento. Se apenas uma pessoa sabe recuperar, existe um novo ponto único de falha."
+          ]
+        },
+        {
+          "titulo": "A janela de atendimento varia de 2 a 72 horas úteis",
+          "paragrafos": [
+            "Uma empresa sem cópia alguma pode receber prioridade maior que uma revisão programada, sempre conforme disponibilidade de agenda. O intervalo operacional organiza o início do levantamento.",
+            "Implantação, cópia inicial e teste podem durar além dessa janela, especialmente quando existe grande volume de dados ou conexão limitada. O prazo real nasce do inventário."
+          ]
+        },
+        {
+          "titulo": "Rede nacional e responsabilidade sobre dados",
+          "paragrafos": [
+            "A empresa nasceu em Curitiba em 2006 e hoje integra uma rede nacional com mais de 6 mil prestadores credenciados. Em Araucária, a disponibilidade é consultada sem publicar número municipal de técnicos.",
+            "A referência de tarifa mínima justa reconhece que backup envolve planejamento, configuração, documentação e teste. O trabalho não termina quando o software começa a copiar."
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "pergunta": "Um HD externo é suficiente?",
+          "resposta": "Pode ser uma camada, mas uma única cópia conectada ao mesmo ambiente deixa riscos importantes. O desenho depende do que precisa ser protegido."
+        },
+        {
+          "pergunta": "Backup em nuvem dispensa cópia local?",
+          "resposta": "Não existe regra universal. Volume, internet, retenção e tempo de restauração precisam ser considerados."
+        },
+        {
+          "pergunta": "É necessário testar a restauração?",
+          "resposta": "Sim. Testar é a forma de confirmar que a cópia realmente pode ser recuperada."
+        },
+        {
+          "pergunta": "Quanto tempo leva para implantar?",
+          "resposta": "A janela para iniciar varia de 2 a 72 horas úteis. O tempo total depende de volume, destinos e velocidade de transferência."
+        },
+        {
+          "pergunta": "Quantos técnicos de backup atendem Araucária?",
+          "resposta": "Não publicamos contagem municipal sem fonte confirmada. A rede nacional possui mais de 6 mil prestadores credenciados."
+        }
+      ],
+      "interlinks": [
+        "/servicos/backup-para-empresas",
+        "/servicos/backup-recuperacao/araucaria",
+        "/servicos/suporte-tecnico-empresarial/araucaria",
+        "/seguranca-dos-dados",
         "/tecnico-informatica-araucaria"
       ],
       "cidadeSlug": "araucaria",
