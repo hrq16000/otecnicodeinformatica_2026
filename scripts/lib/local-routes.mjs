@@ -6,7 +6,7 @@
  */
 import { readFileSync, existsSync, readdirSync } from "node:fs";
 import { join } from "node:path";
-import { BAIRROS_ANCORA_META, pathsIndexaveis } from "./local-index-policy.mjs";
+import { BAIRROS_ANCORA_META, ENTIDADES, pathsIndexaveis } from "./local-index-policy.mjs";
 
 const norm = (p) => {
   const s = String(p).replace(/\/+$/, "");
@@ -37,6 +37,11 @@ export function rotasDosSitemapsLocais(dir = "public") {
 export function rotasLocais({ incluirSitemap = false } = {}) {
   const rotas = new Set(["/", "/areas-atendidas"]);
   for (const p of pathsIndexaveis()) rotas.add(norm(p));
+  // Pais de serviço × cidade precisam entrar no harness mesmo quando o serviço-pai
+  // é uma rota pública real que não pertence ao sitemap curado local.
+  for (const e of ENTIDADES) {
+    if (e.family === "SERVICO_CIDADE" && e.parent) rotas.add(norm(e.parent));
+  }
   for (const b of BAIRROS_ANCORA_META) {
     rotas.add(norm(`/bairros/${b.slug}`));
     if (b.parent) rotas.add(norm(b.parent));

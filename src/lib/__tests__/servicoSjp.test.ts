@@ -2,15 +2,11 @@ import { describe, expect, it } from "vitest";
 import { resolveLocal, canonicalFor, isNoindex } from "../localIndexPolicy";
 import { servicoLocal, SERVICO_SJP_PATHS, TODAS_PAGINAS_LOCAIS } from "../servicoCuritibaBlocos";
 
-const SJP_INDEXAVEIS = [
+const SJP_COM_CONTEUDO = [
   "/servicos/conserto-notebook/sao-jose-dos-pinhais",
   "/servicos/conserto-pc/sao-jose-dos-pinhais",
   "/servicos/redes-wifi/sao-jose-dos-pinhais",
   "/servicos/backup-recuperacao/sao-jose-dos-pinhais",
-];
-
-const SJP_COM_CONTEUDO = [
-  ...SJP_INDEXAVEIS,
   "/servicos/conserto-tv/sao-jose-dos-pinhais",
   "/servicos/conserto-celular/sao-jose-dos-pinhais",
   "/servicos/upgrade-ssd/sao-jose-dos-pinhais",
@@ -54,22 +50,25 @@ const corpo = (path: string) => {
 };
 
 describe("Rodada 5D — serviço × São José dos Pinhais", () => {
-  it("declara as 10 rotas com conteúdo local, mas mantém só as 4 antigas promovidas", () => {
+  it("declara e promove as 10 rotas com conteúdo local próprio", () => {
     expect(SERVICO_SJP_PATHS.sort()).toEqual([...SJP_COM_CONTEUDO].sort());
-    for (const path of SJP_INDEXAVEIS) {
+    for (const path of SJP_COM_CONTEUDO) {
       const d = resolveLocal(path);
+      const p = TODAS_PAGINAS_LOCAIS.find((x) => x.path === path)!;
       expect(d.indexability).toBe("index");
       expect(canonicalFor(path)).toBe(path);
       expect(d.sitemap).toBe(true);
-      expect(d.parent?.startsWith("/servicos/")).toBe(true);
+      expect(d.parent).toBe(p.parent);
     }
   });
 
-  it("mantém canonicalizado o serviço × SJP enriquecido sem promoção explícita", () => {
-    const d = resolveLocal("/servicos/conserto-tv/sao-jose-dos-pinhais");
-    expect(d.indexability).not.toBe("index");
+  it("mantém canonicalizado o serviço × SJP fora da lista promovida", () => {
+    const path = "/servicos/pc-gamer/sao-jose-dos-pinhais";
+    const d = resolveLocal(path);
+    expect(d.indexability).toBe("canonicalized");
     expect(d.sitemap).toBe(false);
-    expect(isNoindex("/servicos/conserto-tv/sao-jose-dos-pinhais")).toBe(true);
+    expect(canonicalFor(path)).toBe("/servicos/pc-gamer");
+    expect(isNoindex(path)).toBe(true);
   });
 
   it("resolve o conteúdo local por cidade e declara a cidade correta (areaServed)", () => {
@@ -92,8 +91,6 @@ describe("Rodada 5D — serviço × São José dos Pinhais", () => {
       expect(sjp.intentLocal).not.toBe(ctb.intentLocal);
       expect(normalizar(sjp.title)).not.toBe(normalizar(ctb.title));
       expect(normalizar(sjp.description)).not.toBe(normalizar(ctb.description));
-      // H1 local pode seguir "<serviço> em <cidade>" — a diferença exigida está
-      // no corpo, na intenção e na metadata, verificadas nos demais casos.
       expect(sjp.h1).not.toBe(ctb.h1);
     }
   });

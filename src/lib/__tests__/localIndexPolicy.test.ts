@@ -10,6 +10,19 @@ import {
 } from "@/lib/localIndexPolicy";
 import { SERVICOS_CORE } from "@/lib/servicosCore";
 
+const TOP10_SERVICO_CIDADE_PROMOVIDAS = [
+  "/servicos/conserto-tv/curitiba",
+  "/servicos/conserto-celular/curitiba",
+  "/servicos/suporte-empresas/curitiba",
+  "/servicos/atendimento-remoto/curitiba",
+  "/servicos/conserto-tv/sao-jose-dos-pinhais",
+  "/servicos/conserto-celular/sao-jose-dos-pinhais",
+  "/servicos/upgrade-ssd/sao-jose-dos-pinhais",
+  "/servicos/suporte-empresas/sao-jose-dos-pinhais",
+  "/servicos/atendimento-remoto/sao-jose-dos-pinhais",
+  "/servicos/montagem-de-pc/sao-jose-dos-pinhais",
+];
+
 describe("localIndexPolicy — regra de ouro", () => {
   it("nunca coloca no sitemap uma entidade não indexável", () => {
     for (const d of declaredEntities()) {
@@ -21,6 +34,33 @@ describe("localIndexPolicy — regra de ouro", () => {
     for (const d of declaredEntities()) {
       if (d.indexability === "index") expect(d.canonical).toBe(d.path);
     }
+  });
+});
+
+
+describe("localIndexPolicy — promoção top 10 service × cidade", () => {
+  it("promove exatamente as 10 URLs validadas para index + canonical self + sitemap", () => {
+    for (const path of TOP10_SERVICO_CIDADE_PROMOVIDAS) {
+      const d = resolveLocal(path);
+      expect(d.family).toBe("SERVICO_CIDADE");
+      expect(d.indexability).toBe("index");
+      expect(canonicalFor(path)).toBe(path);
+      expect(d.sitemap).toBe(true);
+      expect(d.tier).toBe("SERVICO_CIDADE_COM_INTENCAO_LOCAL");
+    }
+  });
+
+  it("mantém 27 entidades SERVICO_CIDADE explícitas após adicionar somente as 10 promovidas", () => {
+    const servicoCidade = declaredEntities().filter((d) => d.family === "SERVICO_CIDADE");
+    expect(servicoCidade).toHaveLength(27);
+  });
+
+  it("mantém outra combinação da família na regra padrão canonicalized", () => {
+    const path = "/servicos/pc-gamer/sao-jose-dos-pinhais";
+    const d = resolveLocal(path);
+    expect(d.indexability).toBe("canonicalized");
+    expect(d.sitemap).toBe(false);
+    expect(canonicalFor(path)).toBe("/servicos/pc-gamer");
   });
 });
 

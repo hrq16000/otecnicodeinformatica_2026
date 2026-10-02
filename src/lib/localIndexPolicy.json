@@ -307,6 +307,116 @@
       "tier": "SERVICO_CIDADE_COM_INTENCAO_LOCAL",
       "intent": "acionar backup ou recuperação de dados em São José dos Pinhais com retirada cuidadosa da mídia",
       "reason": "Rodada 5D: instrução de parar o uso, transporte protegido da mídia e prazo de bancada para quem espera rota — logística local própria."
+    },
+    {
+      "path": "/servicos/conserto-tv/curitiba",
+      "family": "SERVICO_CIDADE",
+      "indexability": "index",
+      "canonical": "/servicos/conserto-tv/curitiba",
+      "sitemap": true,
+      "parent": "/servicos/conserto-tv",
+      "tier": "SERVICO_CIDADE_COM_INTENCAO_LOCAL",
+      "intent": "contratar conserto de TV em Curitiba com triagem por modelo e sintoma, logística segura do aparelho e janela conforme urgência e agenda",
+      "reason": "Promoção validada por reports/enriquecimento-top10-service-cidade-2026-10.md: conteúdo autoral próprio, 98,3% de unicidade e 1,7% de similaridade máxima, dentro do limite de segurança."
+    },
+    {
+      "path": "/servicos/conserto-celular/curitiba",
+      "family": "SERVICO_CIDADE",
+      "indexability": "index",
+      "canonical": "/servicos/conserto-celular/curitiba",
+      "sitemap": true,
+      "parent": "/servicos/conserto-celular",
+      "tier": "SERVICO_CIDADE_COM_INTENCAO_LOCAL",
+      "intent": "contratar conserto de celular em Curitiba com triagem pelo modelo e dano, proteção de dados e encaminhamento conforme urgência e agenda",
+      "reason": "Promoção validada por reports/enriquecimento-top10-service-cidade-2026-10.md: conteúdo autoral próprio, 98,8% de unicidade e 1,2% de similaridade máxima, dentro do limite de segurança."
+    },
+    {
+      "path": "/servicos/suporte-empresas/curitiba",
+      "family": "SERVICO_CIDADE",
+      "indexability": "index",
+      "canonical": "/servicos/suporte-empresas/curitiba",
+      "sitemap": true,
+      "parent": "/servicos/suporte-tecnico-empresarial",
+      "tier": "SERVICO_CIDADE_COM_INTENCAO_LOCAL",
+      "intent": "contratar suporte de TI para empresa em Curitiba com prioridade por impacto, atendimento remoto ou no endereço e agenda por urgência",
+      "reason": "Promoção validada por reports/enriquecimento-top10-service-cidade-2026-10.md: conteúdo autoral próprio, 98,5% de unicidade e 1,5% de similaridade máxima, dentro do limite de segurança."
+    },
+    {
+      "path": "/servicos/atendimento-remoto/curitiba",
+      "family": "SERVICO_CIDADE",
+      "indexability": "index",
+      "canonical": "/servicos/atendimento-remoto/curitiba",
+      "sitemap": true,
+      "parent": "/atendimento-remoto",
+      "tier": "SERVICO_CIDADE_COM_INTENCAO_LOCAL",
+      "intent": "contratar suporte remoto em Curitiba para software e configuração, com sessão autorizada e encaminhamento local quando houver falha física",
+      "reason": "Promoção validada por reports/enriquecimento-top10-service-cidade-2026-10.md: conteúdo autoral próprio, 98,5% de unicidade e 1,5% de similaridade máxima, dentro do limite de segurança."
+    },
+    {
+      "path": "/servicos/conserto-tv/sao-jose-dos-pinhais",
+      "family": "SERVICO_CIDADE",
+      "indexability": "index",
+      "canonical": "/servicos/conserto-tv/sao-jose-dos-pinhais",
+      "sitemap": true,
+      "parent": "/servicos/conserto-tv",
+      "tier": "SERVICO_CIDADE_COM_INTENCAO_LOCAL",
+      "intent": "contratar conserto de TV em São José dos Pinhais com triagem por modelo, logística segura e atendimento organizado por urgência e disponibilidade",
+      "reason": "Promoção validada por reports/enriquecimento-top10-service-cidade-2026-10.md: conteúdo autoral próprio, 97,6% de unicidade e 2,4% de similaridade máxima, dentro do limite de segurança."
+    },
+    {
+      "path": "/servicos/conserto-celular/sao-jose-dos-pinhais",
+      "family": "SERVICO_CIDADE",
+      "indexability": "index",
+      "canonical": "/servicos/conserto-celular/sao-jose-dos-pinhais",
+      "sitemap": true,
+      "parent": "/servicos/conserto-celular",
+      "tier": "SERVICO_CIDADE_COM_INTENCAO_LOCAL",
+      "intent": "contratar conserto de celular em São José dos Pinhais com triagem por modelo, dano, prioridade e risco sobre dados",
+      "reason": "Promoção validada por reports/enriquecimento-top10-service-cidade-2026-10.md: conteúdo autoral próprio, 98,7% de unicidade e 1,3% de similaridade máxima, dentro do limite de segurança."
+    },
+    {
+      "path": "/servicos/upgrade-ssd/sao-jose-dos-pinhais",
+      "family": "SERVICO_CIDADE",
+      "indexability": "index",
+      "canonical": "/servicos/upgrade-ssd/sao-jose-dos-pinhais",
+      "sitemap": true,
+      "parent": "/servicos/upgrade-ssd-ram",
+      "tier": "SERVICO_CIDADE_COM_INTENCAO_LOCAL",
+      "intent": "contratar upgrade de SSD ou memória em São José dos Pinhais com avaliação de compatibilidade, migração segura e atendimento programado",
+      "reason": "Promoção validada por reports/enriquecimento-top10-service-cidade-2026-10.md: conteúdo autoral próprio, 96,5% de unicidade e 3,5% de similaridade máxima, dentro do limite de segurança."
+    },
+    {
+      "path": "/servicos/suporte-empresas/sao-jose-dos-pinhais",
+      "family": "SERVICO_CIDADE",
+      "indexability": "index",
+      "canonical": "/servicos/suporte-empresas/sao-jose-dos-pinhais",
+      "sitemap": true,
+      "parent": "/servicos/suporte-tecnico-empresarial",
+      "tier": "SERVICO_CIDADE_COM_INTENCAO_LOCAL",
+      "intent": "contratar suporte de TI para empresa em São José dos Pinhais com prioridade por impacto e modalidade definida pela triagem",
+      "reason": "Promoção validada por reports/enriquecimento-top10-service-cidade-2026-10.md: conteúdo autoral próprio, 98,0% de unicidade e 2,0% de similaridade máxima, dentro do limite de segurança."
+    },
+    {
+      "path": "/servicos/atendimento-remoto/sao-jose-dos-pinhais",
+      "family": "SERVICO_CIDADE",
+      "indexability": "index",
+      "canonical": "/servicos/atendimento-remoto/sao-jose-dos-pinhais",
+      "sitemap": true,
+      "parent": "/atendimento-remoto",
+      "tier": "SERVICO_CIDADE_COM_INTENCAO_LOCAL",
+      "intent": "contratar suporte remoto em São José dos Pinhais para software e configuração, com sessão autorizada e transição para atendimento físico quando necessário",
+      "reason": "Promoção validada por reports/enriquecimento-top10-service-cidade-2026-10.md: conteúdo autoral próprio, 98,9% de unicidade e 1,1% de similaridade máxima, dentro do limite de segurança."
+    },
+    {
+      "path": "/servicos/montagem-de-pc/sao-jose-dos-pinhais",
+      "family": "SERVICO_CIDADE",
+      "indexability": "index",
+      "canonical": "/servicos/montagem-de-pc/sao-jose-dos-pinhais",
+      "sitemap": true,
+      "parent": "/servicos/montagem-de-pc",
+      "tier": "SERVICO_CIDADE_COM_INTENCAO_LOCAL",
+      "intent": "contratar montagem de PC em São José dos Pinhais com conferência de compatibilidade, montagem segura e testes antes da conclusão",
+      "reason": "Promoção validada por reports/enriquecimento-top10-service-cidade-2026-10.md: conteúdo autoral próprio, 96,5% de unicidade e 3,5% de similaridade máxima, dentro do limite de segurança."
     }
   ],
   "bairrosAncora": [
