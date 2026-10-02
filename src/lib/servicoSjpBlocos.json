@@ -907,6 +907,456 @@
       ],
       "cidadeSlug": "sao-jose-dos-pinhais",
       "cidadeNome": "São José dos Pinhais"
+    },
+    "pc-gamer": {
+      "path": "/servicos/pc-gamer/sao-jose-dos-pinhais",
+      "parent": "/servicos/pc-gamer",
+      "nome": "PC gamer",
+      "intentGlobal": "entender desempenho de PC gamer, gargalos, temperatura, fonte, memória, armazenamento, placa de vídeo e estabilidade",
+      "intentLocal": "diagnosticar PC gamer em São José dos Pinhais com teste sob carga, triagem do sintoma e agenda conforme urgência e disponibilidade",
+      "title": "PC Gamer em São José dos Pinhais | Travamentos e upgrade",
+      "description": "Diagnóstico de PC gamer em São José dos Pinhais para travamentos, temperatura, fonte, memória, SSD e placa de vídeo, com teste antes de trocar peças.",
+      "h1": "PC gamer em São José dos Pinhais",
+      "subtitulo": "Revisão orientada pelo sintoma para separar falha de energia, temperatura, memória, armazenamento, driver e placa de vídeo antes de recomendar upgrade.",
+      "intro": [
+        "PC que abre o Windows normalmente e falha apenas quando o jogo exige mais carga precisa ser analisado no cenário real do defeito. Reinício repentino, tela preta, queda brusca de desempenho e travamento com áudio preso podem nascer de causas diferentes; trocar placa de vídeo por tentativa costuma apenas encarecer a investigação.",
+        "Em São José dos Pinhais, a triagem considera também como a máquina será movimentada e em que região está o cliente. Centro, Afonso Pena, Cidade Jardim, São Pedro e Guatupê são referências para organizar agenda e deslocamento, sem representar filial ou equipe fixa em cada bairro."
+      ],
+      "blocos": [
+        {
+          "titulo": "Teste sob carga vem antes do upgrade",
+          "paragrafos": [
+            "O primeiro passo é reproduzir a falha de forma controlada e observar temperatura, consumo, memória, armazenamento e comportamento de CPU e GPU. Um reinício seco pode apontar para alimentação ou proteção térmica; artefatos visuais pedem investigação diferente de um jogo que simplesmente fecha.",
+            "Quando a causa está em driver, configuração, BIOS ou software, trocar componente não resolve. Quando o problema é físico, o teste ajuda a limitar a peça suspeita e reduz compras desnecessárias."
+          ]
+        },
+        {
+          "titulo": "Fonte e temperatura precisam ser avaliadas em conjunto",
+          "paragrafos": [
+            "Fonte adequada não se resume ao número de watts do rótulo. Conectores, qualidade do modelo, distribuição de carga e estado dos cabos importam, principalmente depois de troca de placa de vídeo. Ao mesmo tempo, gabinete com fluxo de ar ruim pode derrubar desempenho mesmo com fonte correta.",
+            "A revisão verifica ventoinhas, dissipadores, fixação, poeira, pasta térmica e circulação de ar. A intervenção é feita apenas quando a medição e o estado físico justificam, sem vender limpeza ou troca de peça como resposta automática."
+          ]
+        },
+        {
+          "titulo": "Janela de 2 a 72 horas úteis para um chamado gamer",
+          "paragrafos": [
+            "A organização do atendimento varia de 2 a 72 horas úteis conforme urgência e disponibilidade de agenda. Um computador completamente parado pode receber prioridade sobre uma otimização programada; um caso que exige bancada e teste prolongado depende de um profissional disponível para esse tipo de diagnóstico.",
+            "Essa janela indica quando o atendimento pode começar, não quando todo reparo estará concluído. Se aparecer necessidade de peça, BIOS específica ou teste demorado, o prazo final é combinado depois do diagnóstico."
+          ]
+        },
+        {
+          "titulo": "São José dos Pinhais entra na logística, não no diagnóstico",
+          "paragrafos": [
+            "Um gabinete grande com vidro lateral exige transporte diferente de um desktop compacto. Informar o bairro e se o equipamento pode ser movimentado com segurança ajuda a definir se a avaliação começa no endereço, por coleta ou em bancada.",
+            "A localização não altera o critério técnico. O mesmo sintoma recebe a mesma sequência de testes, esteja o cliente no Centro, em Afonso Pena ou em Cidade Jardim; o que muda é a logística disponível na agenda."
+          ]
+        },
+        {
+          "titulo": "Rede nacional e valorização de quem executa o teste",
+          "paragrafos": [
+            "A operação começou em Curitiba em 2006 e hoje integra uma rede nacional com mais de 6 mil prestadores credenciados. Esse número é nacional e não deve ser transformado em contagem de técnicos de PC gamer em São José dos Pinhais; a disponibilidade local é consultada chamado a chamado.",
+            "A política de valorização do prestador trabalha com a referência de tarifa mínima justa. Em PC gamer isso importa porque diagnóstico sob carga, desmontagem e validação consomem tempo técnico real; remunerar apenas a troca da peça incentiva pular a etapa que evita erro."
+          ]
+        },
+        {
+          "titulo": "O que enviar antes do atendimento",
+          "paragrafos": [
+            "Informe processador, placa de vídeo, quantidade de memória, fonte, armazenamento e descreva em que situação a falha aparece. Se possível, diga o jogo ou aplicação, o tempo até o defeito e se houve alteração recente de driver, peça ou BIOS.",
+            "Fotos internas e do rótulo da fonte podem ajudar, mas não substituem teste. Com esse material e o bairro em São José dos Pinhais, a triagem consegue definir a modalidade e a janela de atendimento com mais precisão."
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "pergunta": "Meu PC reinicia só em jogo. É a fonte?",
+          "resposta": "Pode ser, mas temperatura, memória, GPU, driver e outros fatores também podem causar falha sob carga. O correto é reproduzir o sintoma e comparar os sinais antes de trocar peça."
+        },
+        {
+          "pergunta": "Fazem upgrade de PC gamer em São José dos Pinhais?",
+          "resposta": "Sim, quando o upgrade é compatível e faz sentido para o gargalo identificado. Compatibilidade elétrica, física e de firmware é conferida antes da recomendação."
+        },
+        {
+          "pergunta": "O atendimento acontece em até 72 horas úteis?",
+          "resposta": "A janela para organizar o atendimento varia de 2 a 72 horas úteis conforme urgência e agenda. Reparos que dependem de peça ou teste prolongado podem exigir tempo adicional."
+        },
+        {
+          "pergunta": "Preciso levar o gabinete antes da triagem?",
+          "resposta": "Não. Primeiro envie a configuração, o sintoma e sua localização. A modalidade é definida antes para evitar transporte desnecessário."
+        },
+        {
+          "pergunta": "Quantos técnicos gamer existem em SJP?",
+          "resposta": "Não publicamos contagem por cidade sem fonte confirmada. O dado institucional é de mais de 6 mil prestadores credenciados na rede nacional."
+        }
+      ],
+      "interlinks": [
+        "/servicos/pc-gamer",
+        "/servicos/montagem-de-pc/sao-jose-dos-pinhais",
+        "/servicos/upgrade-ssd/sao-jose-dos-pinhais",
+        "/problemas/computador-esquentando",
+        "/tecnico-informatica-sao-jose-pinhais"
+      ],
+      "cidadeSlug": "sao-jose-dos-pinhais",
+      "cidadeNome": "São José dos Pinhais"
+    },
+    "suporte-home-office": {
+      "path": "/servicos/suporte-home-office/sao-jose-dos-pinhais",
+      "parent": "/servicos/suporte-home-office",
+      "nome": "Suporte para home office",
+      "intentGlobal": "entender como manter um posto de trabalho remoto estável, seguro e funcional",
+      "intentLocal": "resolver falhas de home office em São José dos Pinhais com triagem remota primeiro e visita quando houver problema físico ou de rede local",
+      "title": "Suporte para Home Office em São José dos Pinhais",
+      "description": "Suporte para home office em São José dos Pinhais: VPN, reunião, monitor, impressora, Windows e rede, com remoto primeiro e visita quando necessária.",
+      "h1": "Suporte para home office em São José dos Pinhais",
+      "subtitulo": "Atendimento para recuperar o posto de trabalho sem confundir falha de software com problema físico, rede interna ou restrição do equipamento corporativo.",
+      "intro": [
+        "Quando o trabalho depende de VPN, reunião por vídeo, segundo monitor e acesso a arquivos, uma falha pequena pode consumir o expediente inteiro. O atendimento começa separando o que está no computador do que está na rede, na conta corporativa ou no equipamento da empresa.",
+        "Em São José dos Pinhais, o acesso remoto costuma ser o primeiro caminho quando a máquina liga e a internet funciona. Se o problema exige medição de sinal, troca de cabo, periférico físico ou inspeção do equipamento, a continuidade é organizada conforme região e agenda."
+      ],
+      "blocos": [
+        {
+          "titulo": "Reunião, VPN e periféricos têm causas diferentes",
+          "paragrafos": [
+            "Câmera que não aparece pode ser permissão, driver ou conexão física. VPN que recusa acesso pode envolver credencial, rede, certificado ou política da empresa. Segundo monitor sem sinal pode ser configuração, cabo, adaptador ou limitação de porta.",
+            "A triagem tenta classificar o problema antes de alterar qualquer coisa. Em notebook corporativo, também é necessário respeitar bloqueios de administrador e políticas internas, evitando contornar controles que pertencem à empresa."
+          ]
+        },
+        {
+          "titulo": "Remoto primeiro quando o computador ainda está operacional",
+          "paragrafos": [
+            "Se o Windows inicia e existe conexão, configurações de software, contas, aplicativos de reunião, impressoras já conectadas e parte dos erros de sistema podem ser analisados à distância. O usuário acompanha a sessão e autoriza o acesso.",
+            "Quando há superaquecimento, ruído, máquina que não liga, cabo rompido ou Wi‑Fi que precisa ser medido dentro do imóvel, o remoto deixa de ser a ferramenta certa e o chamado migra para outra modalidade."
+          ]
+        },
+        {
+          "titulo": "De 2 a 72 horas úteis conforme impacto e disponibilidade",
+          "paragrafos": [
+            "A janela operacional do atendimento varia de 2 a 72 horas úteis. Um posto completamente parado durante o expediente pode ser classificado com urgência maior que uma configuração programável, mas a agenda do prestador disponível continua sendo necessária.",
+            "Essa faixa explica o início do atendimento, não garante a solução final no mesmo período. Problemas de provedor, peça física ou dependência do TI da empresa podem alongar a conclusão e precisam ser tratados como etapas separadas."
+          ]
+        },
+        {
+          "titulo": "A localização ajuda quando o remoto encontra limite",
+          "paragrafos": [
+            "Centro, Afonso Pena, Cidade Jardim, São Pedro e Guatupê são referências úteis quando o chamado precisa de visita. A região ajuda a organizar deslocamento e encaixe entre compromissos, mas não implica unidade física em nenhum bairro.",
+            "Quando a sessão remota já identificou que a falha é física, o técnico recebe contexto antes de sair. Isso evita repetir perguntas e aumenta a chance de levar a ferramenta adequada para a próxima etapa."
+          ]
+        },
+        {
+          "titulo": "Rede nacional sem promessa de disponibilidade permanente",
+          "paragrafos": [
+            "A empresa nasceu em Curitiba em 2006 e hoje integra uma rede nacional com mais de 6 mil prestadores credenciados. O dado não representa a quantidade de profissionais em São José dos Pinhais e não significa atendimento instantâneo em qualquer horário.",
+            "A valorização do prestador, com referência de tarifa mínima justa, também vale para suporte remoto. Diagnosticar VPN, Windows ou rede exige conhecimento e responsabilidade mesmo sem deslocamento; o modelo busca reconhecer esse trabalho em vez de tratá-lo como gratuito."
+          ]
+        },
+        {
+          "titulo": "O que preparar antes de pedir ajuda",
+          "paragrafos": [
+            "Informe se o computador é pessoal ou corporativo, qual programa falhou, se outras pessoas da empresa têm o mesmo problema e se a internet funciona em outros dispositivos. Capturas de erro e fotos dos cabos ajudam quando há periférico envolvido.",
+            "Diga também o bairro em São José dos Pinhais caso seja necessário migrar para atendimento presencial. A triagem define a modalidade e a janela antes de qualquer deslocamento."
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "pergunta": "Atendem notebook corporativo usado em casa?",
+          "resposta": "Sim, respeitando as permissões e políticas da empresa. Quando a correção depende de administrador interno, o diagnóstico pode ser organizado para repasse ao TI responsável."
+        },
+        {
+          "pergunta": "Wi-Fi ruim no cômodo de trabalho pode ser resolvido remotamente?",
+          "resposta": "Algumas configurações podem ser verificadas à distância, mas cobertura e interferência muitas vezes precisam ser medidas no ambiente real."
+        },
+        {
+          "pergunta": "O suporte remoto é imediato?",
+          "resposta": "Não há promessa de início imediato. A janela varia de 2 a 72 horas úteis conforme urgência e disponibilidade de agenda."
+        },
+        {
+          "pergunta": "Se o problema for físico, o chamado precisa recomeçar?",
+          "resposta": "Não. A triagem remota serve como contexto para a etapa presencial ou de bancada, quando essa transição é necessária."
+        },
+        {
+          "pergunta": "A rede tem quantos técnicos de home office em SJP?",
+          "resposta": "Não publicamos quantidade municipal sem base confirmada. São mais de 6 mil prestadores credenciados na rede nacional."
+        }
+      ],
+      "interlinks": [
+        "/servicos/suporte-home-office",
+        "/atendimento-remoto",
+        "/servicos/redes-wifi/sao-jose-dos-pinhais",
+        "/tecnico-informatica-sao-jose-pinhais",
+        "/seguranca-dos-dados"
+      ],
+      "cidadeSlug": "sao-jose-dos-pinhais",
+      "cidadeNome": "São José dos Pinhais"
+    },
+    "suporte-tecnico-empresarial": {
+      "path": "/servicos/suporte-tecnico-empresarial/sao-jose-dos-pinhais",
+      "parent": "/servicos/suporte-tecnico-empresarial",
+      "nome": "Suporte técnico empresarial",
+      "intentGlobal": "entender suporte técnico empresarial, organização de chamados, continuidade, documentação e manutenção da operação",
+      "intentLocal": "estruturar suporte técnico para empresa em São José dos Pinhais com triagem, prioridade, registro de chamados e continuidade entre atendimentos",
+      "title": "Suporte Técnico Empresarial em São José dos Pinhais",
+      "description": "Suporte técnico empresarial em São José dos Pinhais com triagem, prioridade por impacto, registro do atendimento e continuidade entre chamados.",
+      "h1": "Suporte técnico empresarial em São José dos Pinhais",
+      "subtitulo": "Uma operação de suporte organizada por impacto, histórico e responsabilidade técnica, em vez de tratar cada incidente como um problema isolado.",
+      "intro": [
+        "Empresa que abre vários chamados ao longo do mês precisa de mais do que apagar incêndios. A diferença de um suporte empresarial estruturado está em registrar o que aconteceu, saber qual máquina e usuário foram afetados e usar o histórico para evitar repetir a mesma investigação.",
+        "Em São José dos Pinhais, a triagem considera impacto na operação, possibilidade de atendimento remoto e necessidade real de presença física. A localização entra na agenda quando há visita; a prioridade nasce do processo que parou, não do bairro."
+      ],
+      "blocos": [
+        {
+          "titulo": "Chamado precisa ter contexto e responsável",
+          "paragrafos": [
+            "Cada solicitação deve identificar usuário, equipamento, sintoma e impacto. Isso permite distinguir falha individual de problema que afeta várias estações. Quando possível, também se registra o que mudou antes do erro e quais tentativas já foram feitas.",
+            "Esse histórico reduz retrabalho. Se um problema volta, o próximo atendimento não começa do zero e fica mais fácil perceber padrão em atualização, rede, armazenamento ou configuração."
+          ]
+        },
+        {
+          "titulo": "Incidente, manutenção e projeto não são a mesma coisa",
+          "paragrafos": [
+            "Restaurar uma estação que parou é incidente. Atualizar várias máquinas em janela planejada é manutenção. Trocar parque, reorganizar rede ou migrar dados é projeto. Misturar essas três categorias cria expectativa errada de prazo e custo.",
+            "O suporte empresarial funciona melhor quando o escopo é separado. O chamado urgente recebe o foco necessário e mudanças maiores são planejadas sem interromper a rotina de forma improvisada."
+          ]
+        },
+        {
+          "titulo": "A janela de atendimento varia de 2 a 72 horas úteis",
+          "paragrafos": [
+            "A fila é organizada conforme impacto e disponibilidade do prestador mais próximo adequado ao caso. Falha que impede faturamento, acesso a arquivos ou uso de várias estações recebe tratamento diferente de uma instalação que pode ser agendada.",
+            "O intervalo de 2 a 72 horas úteis representa a janela operacional para iniciar o atendimento. Não é garantia de resolução completa, porque peça, autorização do responsável ou mudança de infraestrutura podem exigir uma nova etapa."
+          ]
+        },
+        {
+          "titulo": "Atendimento remoto reduz deslocamento desnecessário",
+          "paragrafos": [
+            "Configuração de contas, permissões, software e parte dos problemas de Windows podem começar remotamente. Cabeamento, switch, fonte, disco ou equipamento que não liga normalmente exigem avaliação local.",
+            "Quando a visita é necessária em regiões como Centro, Afonso Pena, Cidade Jardim, São Pedro ou Guatupê, a agenda é confirmada antes. Não há promessa de equipe fixa ou resposta instantânea em cada bairro."
+          ]
+        },
+        {
+          "titulo": "Rede nacional com compromisso de remuneração sustentável",
+          "paragrafos": [
+            "A operação começou em Curitiba em 2006 e evoluiu para uma rede nacional com mais de 6 mil prestadores credenciados. Em São José dos Pinhais, esse alcance permite buscar disponibilidade sem criar uma contagem municipal artificial.",
+            "A referência de tarifa mínima justa ao prestador procura sustentar diagnóstico, registro e responsabilidade sobre o ambiente do cliente. Suporte empresarial mal remunerado tende a virar correção apressada; o objetivo é permitir que o técnico teste e documente o que executou."
+          ]
+        },
+        {
+          "titulo": "O que uma empresa deve informar ao abrir o chamado",
+          "paragrafos": [
+            "Informe endereço, pessoa responsável, número aproximado de usuários afetados, sistema ou equipamento envolvido e o que deixou de funcionar. Diga também se há alternativa temporária e se a falha impede faturamento, atendimento ou acesso a dados.",
+            "Com esse contexto, o chamado recebe prioridade e modalidade adequadas. Se houver necessidade recorrente, o histórico pode embasar uma proposta específica, sem presumir contrato ou pacote antes da análise."
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "pergunta": "Qual a diferença entre suporte empresarial e um chamado avulso?",
+          "resposta": "O suporte empresarial trabalha também com histórico, prioridade e continuidade entre ocorrências. Um chamado avulso pode resolver um incidente sem necessariamente organizar a operação recorrente."
+        },
+        {
+          "pergunta": "É preciso contratar mensalidade?",
+          "resposta": "Não. Necessidades recorrentes podem receber escopo próprio, mas não presumimos plano mensal antes de entender o volume e o tipo de chamado."
+        },
+        {
+          "pergunta": "Chamado crítico é atendido em duas horas?",
+          "resposta": "Urgência aumenta a prioridade, mas a janela continua dependente da agenda disponível. O intervalo operacional informado é de 2 a 72 horas úteis."
+        },
+        {
+          "pergunta": "Vocês atendem no endereço da empresa?",
+          "resposta": "Quando o problema exige presença física e há agenda, sim. Outros casos podem começar remotamente para evitar deslocamento desnecessário."
+        },
+        {
+          "pergunta": "Quantos prestadores empresariais existem em SJP?",
+          "resposta": "Não publicamos contagem por município sem fonte confirmada. O dado disponível é de mais de 6 mil prestadores credenciados na rede nacional."
+        }
+      ],
+      "interlinks": [
+        "/servicos/suporte-tecnico-empresarial",
+        "/servicos/suporte-empresas/sao-jose-dos-pinhais",
+        "/atendimento-remoto",
+        "/servicos/manutencao-preventiva-empresas/sao-jose-dos-pinhais",
+        "/tecnico-informatica-sao-jose-pinhais"
+      ],
+      "cidadeSlug": "sao-jose-dos-pinhais",
+      "cidadeNome": "São José dos Pinhais"
+    },
+    "manutencao-preventiva-empresas": {
+      "path": "/servicos/manutencao-preventiva-empresas/sao-jose-dos-pinhais",
+      "parent": "/servicos/manutencao-preventiva-empresas",
+      "nome": "Manutenção preventiva para empresas",
+      "intentGlobal": "entender manutenção preventiva de computadores empresariais, rotina de verificação, limpeza, atualização e prevenção de falhas",
+      "intentLocal": "programar manutenção preventiva em empresa de São José dos Pinhais sem interromper a operação e com agenda organizada por estações e prioridade",
+      "title": "Manutenção Preventiva Empresarial em São José dos Pinhais",
+      "description": "Manutenção preventiva de computadores em empresas de São José dos Pinhais com checklist, agenda por estações e separação entre prevenção e reparo corretivo.",
+      "h1": "Manutenção preventiva para empresas em São José dos Pinhais",
+      "subtitulo": "Rotina programada para revisar estações antes da falha, com checklist e janela de execução que respeita o funcionamento da empresa.",
+      "intro": [
+        "Manutenção preventiva não é consertar uma máquina que já parou. O objetivo é identificar armazenamento degradando, temperatura fora do padrão, atualização pendente, excesso de inicialização e outros sinais antes de virarem interrupção de trabalho.",
+        "Em São José dos Pinhais, a agenda preventiva pode ser organizada por grupos de estações para não tirar toda a equipe de operação ao mesmo tempo. O formato depende do número de equipamentos, do horário disponível e do que pode ser feito remotamente ou no endereço."
+      ],
+      "blocos": [
+        {
+          "titulo": "Checklist evita manutenção baseada em memória",
+          "paragrafos": [
+            "Cada estação precisa ser verificada com uma sequência consistente: saúde do armazenamento, atualizações, espaço livre, inicialização, temperatura quando aplicável, antivírus, periféricos e sinais de falha física. O resultado deve registrar o que foi encontrado e o que ficou pendente.",
+            "Sem checklist, uma visita preventiva vira uma coleção de ajustes aleatórios. O valor está em repetir critérios que permitam comparar o estado das máquinas ao longo do tempo."
+          ]
+        },
+        {
+          "titulo": "Prevenção não esconde reparo corretivo",
+          "paragrafos": [
+            "Se uma estação apresenta disco com erro, bateria estufada, fonte instável ou outra falha confirmada, o caso deixa de ser apenas preventivo. O reparo precisa ser separado, explicado e aprovado antes de executar.",
+            "Essa separação evita transformar uma manutenção programada em orçamento imprevisível. A empresa sabe o que fazia parte da rotina e o que surgiu como intervenção adicional."
+          ]
+        },
+        {
+          "titulo": "Agenda entre 2 e 72 horas úteis para organizar a execução",
+          "paragrafos": [
+            "A janela operacional varia de 2 a 72 horas úteis conforme disponibilidade e urgência. Como manutenção preventiva normalmente é programável, ela pode ser encaixada em horário que reduza impacto na equipe, sem competir com incidentes realmente críticos.",
+            "Esse intervalo é usado para organizar o início do atendimento. A duração da manutenção depende da quantidade de estações e do que for encontrado, por isso o tempo total é definido a partir do escopo real."
+          ]
+        },
+        {
+          "titulo": "Planejar por grupos reduz parada da empresa",
+          "paragrafos": [
+            "Em vez de desligar todas as máquinas de uma vez, a empresa pode separar setores ou estações em blocos. Um grupo passa pela revisão enquanto os demais continuam operando, desde que a infraestrutura permita.",
+            "A logística é combinada conforme endereço e rotina. Centro, Afonso Pena, Cidade Jardim e outras regiões entram apenas como referência de deslocamento, sem promessa de equipe fixa por bairro."
+          ]
+        },
+        {
+          "titulo": "Rede nacional e valorização do tempo preventivo",
+          "paragrafos": [
+            "A empresa nasceu em Curitiba em 2006 e hoje integra uma rede nacional com mais de 6 mil prestadores credenciados. A disponibilidade em São José dos Pinhais é consultada conforme agenda e perfil técnico, sem transformar o número nacional em contagem local.",
+            "A política de tarifa mínima justa reconhece que prevenção exige tempo mesmo quando nada está quebrado. Testar, registrar e revisar uma máquina saudável também é trabalho técnico; o objetivo é evitar a lógica de só valorizar o profissional quando existe peça para trocar."
+          ]
+        },
+        {
+          "titulo": "O que levantar antes de programar a manutenção",
+          "paragrafos": [
+            "Liste as estações, identifique quais são essenciais e informe o melhor horário para retirar cada uma de uso. Se existem notebooks remotos, servidores, impressoras ou softwares específicos, isso precisa entrar na triagem para separar o que cabe na rotina do que exige outro escopo.",
+            "Com esse inventário, a manutenção pode ser planejada por prioridade e janela, em vez de começar sem saber quantos equipamentos serão avaliados."
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "pergunta": "Manutenção preventiva inclui troca de peças?",
+          "resposta": "Não automaticamente. Se a revisão encontrar peça com falha, o reparo deve ser tratado como intervenção corretiva e aprovado separadamente."
+        },
+        {
+          "pergunta": "É preciso parar todas as máquinas ao mesmo tempo?",
+          "resposta": "Não necessariamente. Quando a operação permite, o trabalho pode ser organizado em grupos para reduzir impacto."
+        },
+        {
+          "pergunta": "Qual o prazo para agendar?",
+          "resposta": "A janela operacional varia de 2 a 72 horas úteis conforme disponibilidade. Como é um serviço programável, o horário também considera a rotina da empresa."
+        },
+        {
+          "pergunta": "O checklist gera registro?",
+          "resposta": "A proposta de uma manutenção preventiva organizada é registrar o que foi verificado, o que foi ajustado e o que precisa de ação posterior."
+        },
+        {
+          "pergunta": "Há equipe fixa de manutenção preventiva em SJP?",
+          "resposta": "Não publicamos equipe fixa ou contagem municipal sem confirmação. A rede nacional tem mais de 6 mil prestadores credenciados e a disponibilidade local é consultada por chamado."
+        }
+      ],
+      "interlinks": [
+        "/servicos/manutencao-preventiva-empresas",
+        "/servicos/suporte-tecnico-empresarial/sao-jose-dos-pinhais",
+        "/servicos/backup-para-empresas/sao-jose-dos-pinhais",
+        "/tecnico-informatica-sao-jose-pinhais",
+        "/precos-e-politicas"
+      ],
+      "cidadeSlug": "sao-jose-dos-pinhais",
+      "cidadeNome": "São José dos Pinhais"
+    },
+    "backup-para-empresas": {
+      "path": "/servicos/backup-para-empresas/sao-jose-dos-pinhais",
+      "parent": "/servicos/backup-para-empresas",
+      "nome": "Backup para empresas",
+      "intentGlobal": "entender backup empresarial, cópias redundantes, retenção, restauração e proteção contra perda de dados",
+      "intentLocal": "planejar backup para empresa em São José dos Pinhais com levantamento de dados críticos, rotina de cópia e teste de restauração",
+      "title": "Backup para Empresas em São José dos Pinhais | Cópia e restauração",
+      "description": "Backup empresarial em São José dos Pinhais com levantamento de dados críticos, rotina de cópia, retenção adequada e teste de restauração.",
+      "h1": "Backup para empresas em São José dos Pinhais",
+      "subtitulo": "Planejamento de cópias com foco no que precisa ser recuperado, onde armazenar e como provar que a restauração funciona antes de uma emergência.",
+      "intro": [
+        "Ter um disco externo conectado não significa ter um plano de backup. A empresa precisa saber quais dados são críticos, quanto histórico precisa manter e como recuperar os arquivos se a máquina principal, o armazenamento ou a conta em nuvem falhar.",
+        "Em São José dos Pinhais, a implantação começa pelo levantamento da rotina real da empresa. Arquivos de escritório, banco de dados, documentos compartilhados e estações móveis podem exigir estratégias diferentes; não existe uma cópia única que sirva para todo ambiente."
+      ],
+      "blocos": [
+        {
+          "titulo": "Backup começa pelo que precisa voltar primeiro",
+          "paragrafos": [
+            "Antes de escolher ferramenta, é preciso listar dados essenciais e entender quanto tempo de perda seria aceitável em cada conjunto. Um arquivo de contrato, uma base operacional e uma pasta de material antigo podem ter prioridades diferentes.",
+            "Esse inventário evita gastar armazenamento com cópia indiscriminada enquanto um dado realmente crítico fica fora da rotina. A política de backup precisa refletir o trabalho da empresa, não apenas a capacidade do disco."
+          ]
+        },
+        {
+          "titulo": "Cópia única não é proteção suficiente",
+          "paragrafos": [
+            "Quando o backup fica sempre conectado à mesma máquina, falha elétrica, malware, exclusão acidental ou problema físico pode atingir original e cópia ao mesmo tempo. Separar mídias ou destinos reduz esse risco.",
+            "A escolha entre armazenamento local, externo e nuvem depende de volume, conexão, confidencialidade e necessidade de restauração. O desenho deve explicar onde cada cópia fica e quem é responsável por verificar o processo."
+          ]
+        },
+        {
+          "titulo": "Teste de restauração é parte do serviço",
+          "paragrafos": [
+            "Um backup que nunca foi restaurado é apenas uma hipótese. A validação precisa recuperar amostras ou um conjunto definido e confirmar que os arquivos abrem e que a equipe sabe onde encontrá-los.",
+            "Também é importante registrar credenciais e dependências necessárias para restaurar o ambiente. Descobrir durante a emergência que a senha, a chave ou o aplicativo não está disponível anula parte da proteção."
+          ]
+        },
+        {
+          "titulo": "Atendimento entre 2 e 72 horas úteis conforme urgência",
+          "paragrafos": [
+            "A janela operacional para iniciar a avaliação varia de 2 a 72 horas úteis. Uma empresa sem qualquer cópia dos dados críticos pode receber prioridade maior que uma revisão programada de rotina, sempre condicionada à agenda do prestador disponível.",
+            "Implantação e cópia inicial podem levar mais tempo que a janela de atendimento, especialmente com grande volume de dados ou conexão limitada. O prazo real é definido depois do levantamento."
+          ]
+        },
+        {
+          "titulo": "Rede nacional e valorização da responsabilidade sobre dados",
+          "paragrafos": [
+            "A operação começou em Curitiba em 2006 e hoje faz parte de uma rede nacional com mais de 6 mil prestadores credenciados. Em São José dos Pinhais, esse alcance é usado para buscar disponibilidade sem inventar quantidade local de profissionais.",
+            "A referência de tarifa mínima justa ao técnico reconhece que backup envolve responsabilidade sobre dados do cliente, configuração, teste e documentação. O trabalho não termina quando a cópia começa; é preciso verificar se ela pode ser recuperada."
+          ]
+        },
+        {
+          "titulo": "O que a empresa deve informar na triagem",
+          "paragrafos": [
+            "Liste os computadores e locais onde ficam os dados, informe o volume aproximado quando souber e identifique quais arquivos são essenciais para continuar trabalhando. Diga também se já existe HD externo, NAS, nuvem ou rotina automática.",
+            "Com essas informações e o endereço em São José dos Pinhais, é possível separar diagnóstico remoto, visita e projeto de implantação. Nenhuma política de retenção ou garantia de recuperação deve ser presumida antes desse levantamento."
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "pergunta": "Um HD externo já conta como backup empresarial?",
+          "resposta": "Pode fazer parte da estratégia, mas uma única cópia sempre conectada ao mesmo ambiente deixa riscos importantes. O desenho depende dos dados e do nível de proteção necessário."
+        },
+        {
+          "pergunta": "Vocês testam a restauração?",
+          "resposta": "A validação de restauração é parte importante de um plano de backup. O objetivo é confirmar que os arquivos podem ser recuperados e que o processo é conhecido."
+        },
+        {
+          "pergunta": "Quanto tempo leva para configurar?",
+          "resposta": "A janela para iniciar o atendimento varia de 2 a 72 horas úteis. O tempo de implantação depende do volume de dados, destinos escolhidos e velocidade de transferência."
+        },
+        {
+          "pergunta": "Backup em nuvem substitui qualquer outra cópia?",
+          "resposta": "Não existe uma resposta universal. Nuvem pode ser uma camada importante, mas o desenho precisa considerar volume, acesso, credenciais, retenção e restauração."
+        },
+        {
+          "pergunta": "Quantos técnicos de backup atendem SJP?",
+          "resposta": "Não publicamos contagem municipal sem fonte confirmada. O dado institucional é de mais de 6 mil prestadores credenciados na rede nacional."
+        }
+      ],
+      "interlinks": [
+        "/servicos/backup-para-empresas",
+        "/servicos/suporte-tecnico-empresarial/sao-jose-dos-pinhais",
+        "/servicos/manutencao-preventiva-empresas/sao-jose-dos-pinhais",
+        "/servicos/recuperacao-de-dados",
+        "/tecnico-informatica-sao-jose-pinhais"
+      ],
+      "cidadeSlug": "sao-jose-dos-pinhais",
+      "cidadeNome": "São José dos Pinhais"
     }
   }
 }
