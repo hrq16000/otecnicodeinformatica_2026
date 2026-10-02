@@ -1,0 +1,74 @@
+name: npm-audit-fix-preview
+
+on:
+  push:
+    branches:
+      - "diag/npm-audit-20261002"
+
+permissions:
+  contents: read
+
+jobs:
+  preview:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "24"
+          cache: npm
+      - name: Snapshot manifests
+        run: |
+          cp package.json /tmp/package.before.json
+          cp package-lock.json /tmp/package-lock.before.json
+      - name: Install locked dependencies
+        run: npm ci
+      - name: Run npm audit fix without force
+        shell: bash
+        run: |
+          npm audit fix || true
+      - name: Report exact manifest and lock changes
+        shell: bash
+        run: |
+          node - <<'NODE'
+          const fs = require("fs");
+          const before = JSON.parse(fs.readFileSync("/tmp/package-lock.before.json","utf8"));
+          const after = JSON.parse(fs.readFileSync("package-lock.json","utf8"));
+          const b = before.packages || {};
+          const a = after.packages || {};
+          const paths = new Set([...Object.keys(b), ...Object.keys(a)]);
+          const rows = [];
+          for (const p of [...paths].sort()) {
+            const bv = b[p]?.version ?? null;
+            const av = a[p]?.version ?? null;
+            if (bv !== av) rows.push({path:p||"<root>",before:bv,after:av,devBefore:b[p]?.dev??null,devAfter:a[p]?.dev??null});
+          }
+          console.log("LOCK_VERSION_CHANGES", JSON.stringify(rows));
+          const bp = JSON.parse(fs.readFileSync("/tmp/package.before.json","utf8"));
+          const ap = JSON.parse(fs.readFileSync("package.json","utf8"));
+          console.log("PACKAGE_JSON_CHANGED", JSON.stringify(bp)!==JSON.stringify(ap));
+          console.log("PACKAGE_JSON_DIFF", JSON.stringify({before:{dependencies:bp.dependencies,devDependencies:bp.devDependencies},after:{dependencies:ap.dependencies,devDependencies:ap.devDependencies}}));
+          NODE
+          git diff -- package.json package-lock.json > /tmp/audit-fix.diff
+          cat /tmp/audit-fix.diff
+      - name: Production audit after fix
+        shell: bash
+        run: |
+          npm audit --omit=dev --json > /tmp/audit-prod-after.json || true
+          node - <<'NODE'
+          const fs=require("fs");
+          const r=JSON.parse(fs.readFileSync("/tmp/audit-prod-after.json","utf8"));
+          console.log("AUDIT_PROD_AFTER", JSON.stringify(r.metadata?.vulnerabilities||{}));
+          console.log("AUDIT_PROD_AFTER_VULNS", JSON.stringify(r.vulnerabilities||{}));
+          NODE
+      - name: Package preview artifact
+        run: |
+          mkdir -p /tmp/audit-preview
+          cp package.json /tmp/audit-preview/package.json
+          cp package-lock.json /tmp/audit-preview/package-lock.json
+          cp /tmp/audit-fix.diff /tmp/audit-preview/audit-fix.diff
+          cp /tmp/audit-prod-after.json /tmp/audit-preview/audit-prod-after.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: npm-audit-fix-preview
+          path: /tmp/audit-preview
