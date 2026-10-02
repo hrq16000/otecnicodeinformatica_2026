@@ -9,14 +9,34 @@ permissions:
   contents: read
 
 jobs:
-  verify:
+  node20-core:
     runs-on: ubuntu-latest
-    timeout-minutes: 35
+    timeout-minutes: 25
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
           node-version: "20"
+          cache: npm
+      - name: Install exact lockfile
+        run: npm ci --no-audit --no-fund
+      - name: Production audit must be clean
+        run: npm audit --omit=dev
+      - name: Unit tests
+        run: npm run test:unit
+      - name: Integration tests
+        run: npm run test:integration
+      - name: Production build
+        run: npm run build
+
+  node24-full:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "24"
           cache: npm
       - name: Install exact lockfile
         run: npm ci --no-audit --no-fund
