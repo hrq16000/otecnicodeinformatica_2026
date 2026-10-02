@@ -1,5 +1,5 @@
 {
-  "_doc": "FILA 30 — SERVIÇO × CAMPO LARGO. Fonte autoral local fail-closed. Somente slugs declarados neste arquivo recebem conteúdo local; indexabilidade continua governada por src/lib/localIndexPolicy.json.",
+  "_doc": "FILAS 30–40 — SERVIÇO × CAMPO LARGO. Fonte autoral local fail-closed para as combinações priorizadas e validadas. Somente slugs declarados neste arquivo recebem conteúdo local; indexabilidade continua governada por src/lib/localIndexPolicy.json.",
   "paginas": {
     "conserto-notebook": {
       "path": "/servicos/conserto-notebook/campo-largo",
@@ -87,6 +87,456 @@
         "/servicos/manutencao-de-notebook",
         "/servicos/upgrade-ssd-ram",
         "/servicos/recuperacao-de-dados",
+        "/tecnico-informatica-campo-largo",
+        "/precos-e-politicas"
+      ],
+      "cidadeSlug": "campo-largo",
+      "cidadeNome": "Campo Largo"
+    },
+    "conserto-pc": {
+      "path": "/servicos/conserto-pc/campo-largo",
+      "parent": "/servicos/manutencao-de-computador",
+      "nome": "Conserto de PC",
+      "intentGlobal": "entender diagnóstico e manutenção de desktop: alimentação, vídeo, memória, armazenamento, temperatura e sistema",
+      "intentLocal": "solicitar conserto de PC em Campo Largo com triagem do sintoma, separação entre hardware e software e definição de visita ou bancada",
+      "title": "Conserto de PC em Campo Largo | Energia, vídeo e estabilidade",
+      "description": "Conserto de PC em Campo Largo com triagem de energia, vídeo, memória, SSD, temperatura e Windows antes de indicar troca de componente.",
+      "h1": "Conserto de PC em Campo Largo",
+      "subtitulo": "Diagnóstico de desktop por sintomas para separar alimentação, vídeo, memória, armazenamento, temperatura e sistema antes de investir em peça.",
+      "intro": [
+        "Desktop que não liga, liga sem imagem, reinicia sob carga ou trava aleatoriamente exige uma sequência diferente para cada sintoma. Fonte, memória, placa-mãe, armazenamento, vídeo e sistema podem produzir sinais parecidos, por isso a investigação precisa eliminar hipóteses em vez de trocar componentes por tentativa.",
+        "Em Campo Largo, referências como Centro, Ferraria, Bateias, Santa Cruz, Rondinha, Botiatuva, Itaqui e São Marcos ajudam a organizar a logística quando a máquina precisa sair do remoto. A região orienta agenda e transporte, sem indicar oficina ou técnico permanente em cada bairro."
+      ],
+      "blocos": [
+        {
+          "titulo": "Não liga e liga sem vídeo são problemas diferentes",
+          "paragrafos": [
+            "Quando não há qualquer sinal de partida, a checagem começa por tomada, cabo, fonte, botão, conexões internas e placa-mãe. Se ventoinhas giram, LEDs acendem e ainda assim não há imagem, memória, saída de vídeo, monitor e inicialização da placa entram em outra sequência de testes.",
+            "Essa separação evita conclusões rápidas. Um gabinete silencioso e uma máquina que energiza sem imagem podem parecer iguais para quem usa, mas exigem ferramentas e hipóteses completamente diferentes durante o diagnóstico."
+          ]
+        },
+        {
+          "titulo": "Reinício e travamento pedem teste em condição real",
+          "paragrafos": [
+            "Reinício súbito durante jogo ou trabalho pesado pode apontar para alimentação, temperatura, memória ou placa de vídeo. Travamento que surge em tarefas leves pode ter relação com armazenamento, driver ou sistema. O padrão de uso no momento da falha ajuda a direcionar os testes.",
+            "Quando possível, a máquina é submetida a carga controlada e observação de temperatura, memória e estabilidade. O objetivo é reproduzir o defeito com segurança antes de atribuir a causa a uma peça específica."
+          ]
+        },
+        {
+          "titulo": "Dados importantes alteram a ordem da manutenção",
+          "paragrafos": [
+            "Se o computador guarda arquivos sem cópia, armazenamento com sinais de erro precisa ser tratado com cuidado. Testes agressivos ou reinstalação de sistema podem aumentar o risco quando o disco já apresenta falhas de leitura ou desconexões.",
+            "Antes de qualquer etapa que possa alterar o conteúdo, a triagem pergunta sobre documentos críticos, criptografia e existência de backup. Em alguns casos preservar os dados vem antes de buscar desempenho ou estabilidade."
+          ]
+        },
+        {
+          "titulo": "A janela operacional vai de 2 a 72 horas úteis",
+          "paragrafos": [
+            "A prioridade considera impacto e disponibilidade do prestador adequado. Um computador usado em atividade essencial e totalmente parado pode receber atenção antes de uma revisão sem urgência, mas o encaixe continua dependente da agenda real.",
+            "Esse intervalo representa o início do atendimento, não a entrega do equipamento reparado. Peças, bancada, teste prolongado, falha intermitente ou recuperação de dados podem exigir tempo adicional depois do diagnóstico inicial."
+          ]
+        },
+        {
+          "titulo": "Campo Largo entra na logística, não na conclusão técnica",
+          "paragrafos": [
+            "Gabinetes grandes, múltiplos discos ou necessidade de teste prolongado podem tornar a bancada mais adequada. Em outros casos, periférico, rede ou configuração podem ser avaliados no endereço. A modalidade deve ser definida antes do deslocamento.",
+            "Informar bairro, tamanho aproximado do gabinete e possibilidade de transporte ajuda a planejar o atendimento. Centro, Ferraria, Bateias e demais regiões citadas funcionam como referências logísticas, sem promessa de disponibilidade imediata."
+          ]
+        },
+        {
+          "titulo": "Rede nacional e valorização do diagnóstico",
+          "paragrafos": [
+            "A operação começou em Curitiba em 2006 e hoje integra uma rede nacional com mais de 6 mil prestadores credenciados. Esse dado é nacional e não representa a quantidade de técnicos disponíveis em Campo Largo, que é consultada chamado a chamado.",
+            "A referência de tarifa mínima justa ao prestador reconhece o tempo de teste, desmontagem e responsabilidade sobre a máquina. Um diagnóstico bem remunerado reduz o incentivo de pular etapas apenas para chegar rapidamente a uma troca de peça."
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "pergunta": "PC que liga sem imagem é sempre placa de vídeo?",
+          "resposta": "Não. Memória, cabo, monitor, placa-mãe, vídeo integrado e inicialização também podem produzir o mesmo sintoma."
+        },
+        {
+          "pergunta": "Dá para começar por atendimento no local?",
+          "resposta": "Depende do defeito. Alguns casos podem ser avaliados no endereço; testes longos ou desmontagem maior podem exigir bancada."
+        },
+        {
+          "pergunta": "O computador fica pronto em até 72 horas úteis?",
+          "resposta": "Não necessariamente. A faixa de 2 a 72 horas úteis organiza o início do atendimento, não o prazo final do reparo."
+        },
+        {
+          "pergunta": "Formatar é o primeiro passo quando o PC trava?",
+          "resposta": "Não. Travamento pode envolver hardware, temperatura, armazenamento ou driver. A causa deve ser investigada antes de reinstalar o sistema."
+        },
+        {
+          "pergunta": "Quantos técnicos de PC atendem Campo Largo?",
+          "resposta": "Não publicamos contagem municipal sem fonte confirmada. O dado institucional é de mais de 6 mil prestadores credenciados na rede nacional."
+        }
+      ],
+      "interlinks": [
+        "/servicos/manutencao-de-computador",
+        "/servicos/upgrade-ssd/campo-largo",
+        "/servicos/pc-gamer/campo-largo",
+        "/tecnico-informatica-campo-largo",
+        "/problemas/computador-nao-liga"
+      ],
+      "cidadeSlug": "campo-largo",
+      "cidadeNome": "Campo Largo"
+    },
+    "conserto-tv": {
+      "path": "/servicos/conserto-tv/campo-largo",
+      "parent": "/servicos/conserto-tv",
+      "nome": "Conserto de TV",
+      "intentGlobal": "entender diagnóstico de televisão: alimentação, imagem, iluminação, placa principal, painel, áudio e entradas",
+      "intentLocal": "solicitar conserto de TV em Campo Largo com triagem por modelo e sintoma, avaliação de transporte e confirmação da modalidade antes de mover o aparelho",
+      "title": "Conserto de TV em Campo Largo | Imagem, energia e transporte",
+      "description": "Conserto de TV em Campo Largo com triagem por modelo, polegadas e sintoma, orientação de transporte e avaliação antes de recomendar peça.",
+      "h1": "Conserto de TV em Campo Largo",
+      "subtitulo": "Triagem técnica antes do transporte para distinguir falha de energia, imagem, iluminação, placa, sistema e painel.",
+      "intro": [
+        "Uma televisão que tem som e não mostra imagem exige investigação diferente de outra que reinicia, perde HDMI ou nem acende o standby. Em telas grandes, o diagnóstico começa antes da bancada porque transportar o aparelho de forma inadequada pode criar um dano físico que não existia.",
+        "Para clientes de Campo Largo, a triagem considera modelo, polegadas, acesso ao imóvel e região antes de definir qualquer movimentação. Centro, Ferraria, Bateias, Santa Cruz, Rondinha, Botiatuva e Itaqui são referências de logística, não endereços de oficina."
+      ],
+      "blocos": [
+        {
+          "titulo": "O sintoma orienta qual circuito merece atenção primeiro",
+          "paragrafos": [
+            "Som com tela escura pode levantar hipótese de iluminação, mas fonte e outros circuitos ainda precisam ser considerados. Reinício repetido, linhas fixas, metade da imagem ou entrada HDMI intermitente apontam para caminhos diferentes.",
+            "Um vídeo curto do defeito e a etiqueta traseira ajudam bastante na triagem. Modelo e tamanho evitam preparar logística ou componente incompatível e permitem decidir se a primeira avaliação precisa acontecer com o aparelho presente."
+          ]
+        },
+        {
+          "titulo": "Polegadas e instalação mudam a forma de transportar",
+          "paragrafos": [
+            "TV apoiada em rack, presa em painel ou instalada em suporte articulado não tem a mesma condição de retirada. Escadas, elevador, largura de passagem e necessidade de proteção da tela também precisam ser conhecidos antes de combinar coleta.",
+            "A recomendação é não improvisar transporte de aparelho grande apenas para 'levar para ver'. Primeiro se define a modalidade e quem será responsável por cada etapa, reduzindo risco sobre painel e moldura."
+          ]
+        },
+        {
+          "titulo": "Intermitência precisa ser registrada quando aparece",
+          "paragrafos": [
+            "Se a falha surge somente depois de aquecer, ao trocar de entrada ou ao abrir um aplicativo específico, informe o tempo e a situação. Esse detalhe ajuda a reproduzir o comportamento sem deixar a TV ligada por tentativa durante horas.",
+            "Também vale dizer se houve oscilação elétrica, atualização, impacto ou contato com líquido. Esses eventos não provam a causa, mas podem mudar a ordem da inspeção."
+          ]
+        },
+        {
+          "titulo": "A janela de atendimento é de 2 a 72 horas úteis",
+          "paragrafos": [
+            "A organização considera urgência, logística e disponibilidade de profissional adequado ao tipo de aparelho. Televisão muito grande, defeito específico ou acesso complexo pode exigir agenda diferente de uma triagem simples.",
+            "A faixa informa quando o atendimento pode começar. Diagnóstico, disponibilidade de componente, teste prolongado e viabilidade econômica definem o prazo final depois da avaliação."
+          ]
+        },
+        {
+          "titulo": "Viabilidade do reparo precisa ser discutida antes da aprovação",
+          "paragrafos": [
+            "Falha de fonte, iluminação ou placa pode ter cenário diferente de painel fisicamente danificado ou componente principal indisponível. O diagnóstico deve informar quando custo, risco ou falta de peça tornam o reparo pouco racional.",
+            "O objetivo não é consertar a qualquer preço. Quando existem alternativas, o cliente precisa entender o que está sendo reparado, qual risco permanece e se o investimento faz sentido para aquele aparelho."
+          ]
+        },
+        {
+          "titulo": "Rede nacional sem criar promessa de oficina local",
+          "paragrafos": [
+            "A empresa nasceu em Curitiba em 2006 e hoje integra uma rede nacional com mais de 6 mil prestadores credenciados. Em Campo Largo, a disponibilidade é consultada conforme o chamado e não existe contagem municipal publicada sem fonte confirmada.",
+            "A referência de tarifa mínima justa reconhece diagnóstico, manuseio e risco de equipamentos grandes. Antes de solicitar, envie marca, modelo, polegadas, sintoma e bairro; a logística é definida antes de qualquer deslocamento."
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "pergunta": "Preciso levar a TV antes da triagem?",
+          "resposta": "Não. Modelo, polegadas, sintoma e localização devem ser avaliados primeiro para evitar transporte desnecessário."
+        },
+        {
+          "pergunta": "Som sem imagem significa LED queimado?",
+          "resposta": "Pode ser uma hipótese, mas outras falhas podem produzir o mesmo sintoma. É preciso testar antes de concluir."
+        },
+        {
+          "pergunta": "A TV fica pronta em até 72 horas úteis?",
+          "resposta": "Não necessariamente. Essa faixa organiza o início do atendimento; o prazo de reparo depende do diagnóstico e de eventual peça."
+        },
+        {
+          "pergunta": "Atendem Ferraria, Bateias e Centro?",
+          "resposta": "Essas regiões entram como referências de agenda. A disponibilidade e a forma de atendimento são confirmadas na triagem."
+        },
+        {
+          "pergunta": "Quantos técnicos de TV existem em Campo Largo?",
+          "resposta": "Não publicamos contagem por município sem fonte confirmada. A rede nacional possui mais de 6 mil prestadores credenciados."
+        }
+      ],
+      "interlinks": [
+        "/servicos/conserto-tv",
+        "/conserto-tv-curitiba",
+        "/tecnico-informatica-campo-largo",
+        "/precos-e-politicas",
+        "/areas-atendidas"
+      ],
+      "cidadeSlug": "campo-largo",
+      "cidadeNome": "Campo Largo"
+    },
+    "conserto-celular": {
+      "path": "/servicos/conserto-celular/campo-largo",
+      "parent": "/servicos/conserto-celular",
+      "nome": "Conserto de Celular",
+      "intentGlobal": "entender reparo de smartphone: tela, bateria, conector, câmera, áudio, sistema e danos por líquido",
+      "intentLocal": "solicitar conserto de celular em Campo Largo com triagem por modelo, dano físico, prioridade de segurança e cuidado com dados e acessos",
+      "title": "Conserto de Celular em Campo Largo | Tela, bateria e segurança",
+      "description": "Conserto de celular em Campo Largo com triagem por modelo, queda, carga, bateria, tela e sistema, com atenção a dados e credenciais.",
+      "h1": "Conserto de celular em Campo Largo",
+      "subtitulo": "Avaliação por modelo e histórico do dano para separar tela, bateria, carga, sistema e placa sem presumir a peça antes do teste.",
+      "intro": [
+        "Queda, contato com líquido, bateria deformada e conector que só carrega em determinada posição exigem decisões diferentes. Em smartphone, o reparo também envolve dados e autenticações, porque o aparelho costuma concentrar acesso bancário, e-mail, trabalho e verificação em duas etapas.",
+        "Em Campo Largo, a localização entra na logística depois da triagem. Centro, Ferraria, Bateias, Santa Cruz, Rondinha, Botiatuva e São Marcos ajudam a organizar agenda ou encaminhamento, sem representar loja física ou disponibilidade permanente em cada região."
+      ],
+      "blocos": [
+        {
+          "titulo": "Código exato do aparelho vem antes da peça",
+          "paragrafos": [
+            "Modelos com nomes parecidos podem usar telas, baterias e conectores diferentes. Por isso a etiqueta, as informações do sistema ou outro identificador do aparelho precisam ser confirmados antes de falar em componente.",
+            "Também é importante saber se houve queda, líquido, aquecimento, falha após atualização ou perda progressiva de autonomia. O histórico muda a ordem da inspeção e evita comprar peça inadequada."
+          ]
+        },
+        {
+          "titulo": "Bateria deformada e líquido mudam a prioridade",
+          "paragrafos": [
+            "Aparelho que abre a tampa, aquece de forma anormal ou apresenta bateria visivelmente estufada não deve continuar em carga e uso normal até avaliação. Em caso de líquido, insistir em ligar também pode ampliar curto e corrosão.",
+            "Prioridade de segurança não significa promessa de recuperação. Só a inspeção consegue mostrar a extensão do dano e se o equipamento pode ser testado com segurança."
+          ]
+        },
+        {
+          "titulo": "Dados e contas precisam entrar no planejamento",
+          "paragrafos": [
+            "Quando o aparelho ainda funciona, vale confirmar backup, acesso à conta principal e mecanismos de recuperação. Uma intervenção de sistema pode exigir autenticação depois, e descobrir isso tarde aumenta o transtorno.",
+            "Durante testes, o acesso deve ficar limitado ao necessário para validar tela, áudio, câmera, biometria, rede ou outra função reparada. Não existe justificativa para navegar por conteúdo pessoal sem relação com o serviço."
+          ]
+        },
+        {
+          "titulo": "Atendimento entre 2 e 72 horas úteis",
+          "paragrafos": [
+            "A janela operacional considera urgência e disponibilidade. Um aparelho essencial para autenticação profissional pode ter impacto diferente de um segundo dispositivo com reparo programável, mas o início ainda depende da agenda real.",
+            "Essa faixa não é prazo de peça nem de reparo concluído. Tela específica, reparo de placa, teste de bateria ou dano por líquido podem exigir uma etapa adicional."
+          ]
+        },
+        {
+          "titulo": "Campo Largo influencia encaminhamento e coleta",
+          "paragrafos": [
+            "Informar bairro e condição do aparelho ajuda a definir se o cliente deve manter o dispositivo desligado, se é seguro transportá-lo e qual forma de encaminhamento faz sentido. Centro e demais referências locais servem apenas para organizar essa logística.",
+            "Fotos externas podem mostrar trinca, deformação ou dano de carcaça, mas não substituem avaliação interna. A triagem usa imagem como contexto, não como laudo definitivo."
+          ]
+        },
+        {
+          "titulo": "Rede nacional e trabalho técnico valorizado",
+          "paragrafos": [
+            "A operação começou em Curitiba em 2006 e hoje integra uma rede nacional com mais de 6 mil prestadores credenciados. Esse número não representa a quantidade de técnicos de celular em Campo Largo.",
+            "A referência de tarifa mínima justa reconhece desmontagem cuidadosa, diagnóstico, teste e responsabilidade sobre dados. O foco é permitir uma avaliação técnica sustentável em vez de reduzir o serviço ao preço da peça."
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "pergunta": "Celular molhado deve ser ligado para conferir se funciona?",
+          "resposta": "Não é recomendado. Energia pode ampliar curto e corrosão; a avaliação deve acontecer antes de novas tentativas."
+        },
+        {
+          "pergunta": "Bateria estufada pode continuar carregando?",
+          "resposta": "Não. Deformação e aquecimento anormal exigem interrupção de uso e carga até avaliação."
+        },
+        {
+          "pergunta": "O reparo termina em até 72 horas úteis?",
+          "resposta": "Não necessariamente. A faixa organiza o início do atendimento; peça e complexidade podem aumentar o prazo."
+        },
+        {
+          "pergunta": "Vocês precisam da minha senha?",
+          "resposta": "Não como regra. Quando algum teste exige desbloqueio, a necessidade deve ser explicada e o próprio cliente pode participar da autenticação."
+        },
+        {
+          "pergunta": "Quantos técnicos de celular atendem Campo Largo?",
+          "resposta": "Não publicamos contagem municipal sem fonte confirmada. A rede nacional tem mais de 6 mil prestadores credenciados."
+        }
+      ],
+      "interlinks": [
+        "/servicos/conserto-celular",
+        "/conserto-celular-curitiba",
+        "/tecnico-informatica-campo-largo",
+        "/seguranca-dos-dados",
+        "/precos-e-politicas"
+      ],
+      "cidadeSlug": "campo-largo",
+      "cidadeNome": "Campo Largo"
+    },
+    "upgrade-ssd": {
+      "path": "/servicos/upgrade-ssd/campo-largo",
+      "parent": "/servicos/upgrade-ssd-ram",
+      "nome": "Upgrade de SSD e Memória",
+      "intentGlobal": "entender quando SSD ou memória melhora desempenho, compatibilidade de interfaces e opções de migração",
+      "intentLocal": "contratar upgrade de SSD ou memória em Campo Largo com medição do gargalo, conferência de compatibilidade e plano de migração antes da compra",
+      "title": "Upgrade de SSD em Campo Largo | Gargalo, compatibilidade e migração",
+      "description": "Upgrade de SSD e memória em Campo Largo com avaliação do gargalo, compatibilidade física e lógica e plano de migração de dados.",
+      "h1": "Upgrade de SSD e memória em Campo Largo",
+      "subtitulo": "Melhoria baseada no gargalo real: medir armazenamento, memória e comportamento do sistema antes de escolher peça e decidir a migração.",
+      "intro": [
+        "SSD pode reduzir drasticamente o tempo de inicialização de uma máquina antiga, mas não corrige pouca memória, superaquecimento ou processador saturado. Antes de comprar componente, é preciso entender em que situação a lentidão aparece e se o armazenamento atual ainda está saudável.",
+        "Em Campo Largo, a triagem pode começar remotamente com modelo e sintomas e migrar para avaliação física quando necessário. Centro, Ferraria, Bateias, Santa Cruz, Rondinha e Botiatuva entram como referências de logística, sem representar unidade fixa."
+      ],
+      "blocos": [
+        {
+          "titulo": "O comportamento da máquina indica qual recurso está no limite",
+          "paragrafos": [
+            "Disco em uso constante, inicialização lenta e programas demorando para abrir sugerem um cenário. Lentidão apenas com muitas abas ou aplicações aponta mais para memória. Travamento sob carga pode envolver ainda temperatura ou outro componente.",
+            "A análise combina relato e medições para não transformar SSD em recomendação automática. O upgrade deve atacar o gargalo que realmente limita o uso."
+          ]
+        },
+        {
+          "titulo": "Interface, formato e espaço físico precisam ser conferidos",
+          "paragrafos": [
+            "SATA, M.2 SATA e NVMe usam possibilidades diferentes, e nem todo slot M.2 aceita qualquer protocolo. Em desktop também entram portas, cabos e alimentação; em notebook, abertura e fixação variam conforme o projeto.",
+            "A compatibilidade deve ser confirmada pelo modelo e pela placa antes da compra. Isso reduz devolução, adaptação improvisada e risco de descobrir incompatibilidade com a máquina já desmontada."
+          ]
+        },
+        {
+          "titulo": "Migração depende da saúde do armazenamento atual",
+          "paragrafos": [
+            "Quando o disco de origem está saudável, clonagem pode preservar sistema, programas e arquivos. Se há erros de leitura, desconexões ou lentidão severa, insistir numa cópia integral pode aumentar o risco sobre os dados.",
+            "Nessa situação, upgrade e recuperação deixam de ser a mesma tarefa. Preservar arquivos pode se tornar prioridade e a migração precisa ser redesenhada depois."
+          ]
+        },
+        {
+          "titulo": "Aplicativos e licenças também fazem parte da mudança",
+          "paragrafos": [
+            "Programas licenciados, máquinas virtuais e aplicações com configuração sensível podem depender de caminhos, ativação ou hardware. Mesmo uma clonagem bem-sucedida precisa considerar o que deve ser validado depois da troca.",
+            "Informar esses usos antes do serviço ajuda a preparar testes e reduz a chance de descobrir uma dependência importante somente quando o computador já voltou ao trabalho."
+          ]
+        },
+        {
+          "titulo": "Janela operacional de 2 a 72 horas úteis",
+          "paragrafos": [
+            "Uma máquina parada pode receber prioridade maior que um upgrade preventivo, sempre conforme disponibilidade do prestador adequado. A janela de 2 a 72 horas úteis organiza o início do atendimento.",
+            "Peça compatível, volume de dados e método de migração definem o tempo total. Uma cópia grande ou um disco de origem instável pode levar mais tempo que a instalação física do SSD."
+          ]
+        },
+        {
+          "titulo": "Rede nacional e valorização da etapa de planejamento",
+          "paragrafos": [
+            "A empresa nasceu em Curitiba em 2006 e hoje integra uma rede nacional com mais de 6 mil prestadores credenciados. Em Campo Largo, a disponibilidade é consultada sem publicar quantidade municipal de profissionais.",
+            "A referência de tarifa mínima justa reconhece diagnóstico, compatibilidade, backup e validação. Instalar a peça é apenas uma parte do trabalho; o ganho real depende de escolher componente adequado e preservar o que já existe."
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "pergunta": "Todo notebook aceita SSD NVMe?",
+          "resposta": "Não. O padrão do slot e a compatibilidade da placa precisam ser confirmados pelo modelo."
+        },
+        {
+          "pergunta": "SSD resolve falta de memória RAM?",
+          "resposta": "Não. São gargalos diferentes e devem ser medidos separadamente."
+        },
+        {
+          "pergunta": "Dá para manter o Windows e os programas?",
+          "resposta": "Quando o armazenamento de origem está saudável, pode ser possível migrar. Aplicações específicas ainda precisam ser validadas depois."
+        },
+        {
+          "pergunta": "O upgrade termina em até 72 horas úteis?",
+          "resposta": "A faixa organiza o início do atendimento. Peça, volume de dados e saúde do disco podem exigir tempo adicional."
+        },
+        {
+          "pergunta": "Quantos técnicos de upgrade existem em Campo Largo?",
+          "resposta": "Não publicamos contagem municipal sem fonte confirmada. O dado institucional é de mais de 6 mil prestadores credenciados."
+        }
+      ],
+      "interlinks": [
+        "/servicos/upgrade-ssd-ram",
+        "/servicos/conserto-notebook/campo-largo",
+        "/servicos/conserto-pc/campo-largo",
+        "/servicos/recuperacao-de-dados",
+        "/tecnico-informatica-campo-largo"
+      ],
+      "cidadeSlug": "campo-largo",
+      "cidadeNome": "Campo Largo"
+    },
+    "backup-recuperacao": {
+      "path": "/servicos/backup-recuperacao/campo-largo",
+      "parent": "/servicos/recuperacao-de-dados",
+      "nome": "Backup e Recuperação de Dados",
+      "intentGlobal": "entender recuperação de dados: exclusão, corrupção, falha física, clonagem, limites e prevenção",
+      "intentLocal": "solicitar recuperação de dados em Campo Largo com preservação da mídia, classificação da falha e prioridade definida pelos arquivos realmente importantes",
+      "title": "Recuperação de Dados em Campo Largo | Preservação antes da tentativa",
+      "description": "Recuperação de dados em Campo Largo para HD, SSD e pen drive com preservação da mídia, triagem da falha e definição segura da próxima etapa.",
+      "h1": "Recuperação de dados em Campo Largo",
+      "subtitulo": "O primeiro objetivo é não piorar a mídia: classificar a falha e preservar o estado atual antes de procurar arquivos.",
+      "intro": [
+        "Quando um HD desaparece, um SSD pede formatação ou arquivos são apagados por engano, a pressa pode trabalhar contra a recuperação. Instalar programas no mesmo disco, copiar novos arquivos ou repetir ferramentas de reparo pode sobrescrever dados ou forçar uma mídia já instável.",
+        "Em Campo Largo, a triagem organiza também a forma de encaminhamento. Centro, Ferraria, Bateias, Santa Cruz, Rondinha, Botiatuva e Itaqui ajudam a planejar entrega ou coleta quando necessária, mas não representam laboratório permanente em cada região."
+      ],
+      "blocos": [
+        {
+          "titulo": "Primeiro preservar, depois procurar",
+          "paragrafos": [
+            "Se a perda é lógica, novas gravações podem ocupar o espaço onde ainda existem fragmentos dos arquivos antigos. Se a mídia apresenta falha física, repetidas inicializações podem piorar leitura ou provocar mais desconexões.",
+            "Por isso a orientação inicial costuma ser interromper uso e documentar o que ocorreu. Essa pausa simples pode ser mais valiosa que executar uma ferramenta aleatória imediatamente."
+          ]
+        },
+        {
+          "titulo": "Falha lógica e física não aceitam o mesmo procedimento",
+          "paragrafos": [
+            "Exclusão, partição perdida e sistema de arquivos corrompido seguem uma linha diferente de disco que não gira, desconecta ou apresenta erros crescentes. A triagem tenta separar esses cenários antes de decidir qualquer software ou teste.",
+            "Histórico de queda, oscilação elétrica, lentidão progressiva e ruído ajuda a classificar o risco. Nenhum desses sinais isoladamente garante o diagnóstico, mas todos influenciam a estratégia."
+          ]
+        },
+        {
+          "titulo": "Priorizar arquivos importantes evita desperdício de leitura",
+          "paragrafos": [
+            "Em uma mídia grande e instável, nem sempre faz sentido tratar todos os dados com o mesmo peso. Documentos, fotos únicas, banco de dados e material de trabalho podem receber prioridade maior que arquivos facilmente substituíveis.",
+            "O cliente deve indicar o que realmente importa antes da tentativa. Essa ordem ajuda a usar tempo de leitura de forma mais inteligente quando a mídia não consegue ser copiada integralmente."
+          ]
+        },
+        {
+          "titulo": "Clonagem é uma ferramenta de preservação, não garantia",
+          "paragrafos": [
+            "Quando o dispositivo ainda responde, criar uma cópia setor a setor pode permitir que a busca por arquivos aconteça fora do original. Isso reduz manipulação direta da mídia que já mostrou instabilidade.",
+            "Nem toda clonagem consegue atingir 100% dos setores. O relatório precisa separar o que foi lido, o que falhou e quais limitações permanecem, sem prometer quantidade de arquivos antes da análise."
+          ]
+        },
+        {
+          "titulo": "A janela de início varia de 2 a 72 horas úteis",
+          "paragrafos": [
+            "Urgência e disponibilidade de perfil técnico entram na organização. Dados essenciais de trabalho numa mídia que está piorando podem justificar prioridade maior que uma recuperação sem impacto imediato.",
+            "A faixa não representa prazo final de recuperação. Grande volume, instabilidade, clonagem ou necessidade de avaliação especializada podem exigir mais tempo."
+          ]
+        },
+        {
+          "titulo": "Rede nacional e responsabilidade sobre informação",
+          "paragrafos": [
+            "A operação começou em Curitiba em 2006 e hoje integra uma rede nacional com mais de 6 mil prestadores credenciados. Esse alcance não autoriza afirmar quantos especialistas estão disponíveis em Campo Largo.",
+            "A referência de tarifa mínima justa reconhece tempo, responsabilidade e cuidado com dados. Antes de solicitar, informe mídia, capacidade, erro observado, tentativas já feitas e quais arquivos são prioritários."
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "pergunta": "Posso instalar um programa de recuperação no mesmo disco?",
+          "resposta": "Não é recomendado quando os dados são importantes, porque novas gravações podem sobrescrever espaço ainda recuperável."
+        },
+        {
+          "pergunta": "HD com ruído deve continuar ligado para testar?",
+          "resposta": "Não. Ruído ou instabilidade podem indicar falha física e novas tentativas podem piorar a condição."
+        },
+        {
+          "pergunta": "Vocês garantem recuperar tudo?",
+          "resposta": "Não. O resultado depende do estado da mídia e do que aconteceu depois da perda. Só a avaliação permite estimar possibilidades."
+        },
+        {
+          "pergunta": "A recuperação termina em até 72 horas úteis?",
+          "resposta": "Não necessariamente. A faixa organiza o início do atendimento; leitura e clonagem podem exigir mais tempo."
+        },
+        {
+          "pergunta": "Quantos especialistas atendem Campo Largo?",
+          "resposta": "Não publicamos contagem municipal sem fonte confirmada. A rede nacional possui mais de 6 mil prestadores credenciados."
+        }
+      ],
+      "interlinks": [
+        "/servicos/recuperacao-de-dados",
+        "/servicos/backup-para-empresas",
+        "/seguranca-dos-dados",
         "/tecnico-informatica-campo-largo",
         "/precos-e-politicas"
       ],
