@@ -9253,9 +9253,9 @@ net start spooler`}</code></pre>
   },
 
   "como-recuperar-dados-hd-com-defeito": {
-    title: "Recuperar dados de HD com defeito: o que fazer antes de tentar consertar",
+    title: "HD com defeito: como tentar recuperar dados sem piorar a falha",
     excerpt:
-      "HD lento, sumindo, com erros de leitura ou ruído? Veja quando parar de usar, quando uma cópia/imagem é prioridade e por que reparar o sistema de arquivos no disco original pode piorar a recuperação.",
+      "HD lento, sumindo, com erros ou ruído? Veja quando parar de usar, por que não rodar reparos no disco original e quando priorizar imagem de resgate ou laboratório.",
     date: "2026-09-30",
     readTime: "15 min",
     category: "Procedimentos Técnicos",
@@ -9481,9 +9481,9 @@ net start spooler`}</code></pre>
   },
 
   "windows-update-travado-desfazendo-alteracoes": {
-    title: 'Windows Update: "desfazendo alterações feitas no computador" — o que fazer',
+    title: '"Desfazendo alterações feitas no computador": o que fazer',
     excerpt:
-      "O Windows tentou instalar uma atualização e voltou atrás? Veja como interpretar a reversão, registrar o erro, usar o solucionador e o Windows RE e evitar desligamentos ou scripts que pioram o quadro.",
+      "Windows voltou atrás após atualizar? Veja quando esperar, como registrar KB e erro, usar o solucionador e o Windows RE e quando não forçar o desligamento.",
     date: "2026-09-30",
     readTime: "14 min",
     category: "Diagnóstico",
@@ -9859,9 +9859,9 @@ net start spooler`}</code></pre>
   },
 
   "botao-power-nao-funciona-jump-start-placa-mae": {
-    title: "Botão power não funciona: como testar o PWR_SW sem condenar fonte ou placa",
+    title: "Botão power não liga o PC? Veja como testar o PWR_SW",
     excerpt:
-      "Como separar botão, cabo e conector frontal de uma falha real de alimentação, identificar o PWR_SW pelo manual e interpretar corretamente o teste de partida pela placa-mãe.",
+      "Se o PC não reage ao botão, veja como diferenciar botão, cabo, header frontal, fonte e placa-mãe e o que o teste no PWR_SW realmente prova.",
     date: "2026-09-29",
     readTime: "13 min",
     category: "Procedimentos Técnicos",
