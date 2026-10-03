@@ -55,7 +55,7 @@ export const CLUSTER_EQUIPAMENTOS_ROUTES = [
   },
   {
     "path": "/equipamentos/notebook",
-    "title": "Notebook com problema: sintomas e reparos | O Técnico de Informática",
+    "title": "Notebook não liga, esquenta ou não carrega? O que verificar",
     "description": "Notebook lento, que não liga, superaquecendo, com tela apagada ou bateria que não segura carga. Veja o que cada sintoma indica e qual atendimento resolve.",
     "h1": "Notebook: sintomas mais comuns e como cada um é resolvido",
     "subtitulo": "Notebook concentra em pouco espaço fonte, bateria, placa, tela e dissipação — por isso o mesmo sintoma pode ter origens completamente diferentes. A avaliação começa separando o que é energia, o que é imagem, o que é temperatura e o que é software, antes de falar em peça.",
