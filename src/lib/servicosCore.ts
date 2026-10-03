@@ -503,9 +503,9 @@ export const SERVICOS_CORE: Record<string, ServicoLandingData> = {
   "remocao-de-virus": {
     path: "remocao-de-virus",
     trackingKey: "remocao-virus",
-    metaTitle: "Remoção de Vírus e Malware em Curitiba | PC e Notebook",
+    metaTitle: "Remoção de vírus em Curitiba: malware, adware e navegador",
     metaDescription:
-      "Remoção de vírus, malware e sequestro de navegador em Curitiba. Limpeza segura, proteção dos seus dados e reinstalação quando necessário. Atendimento via WhatsApp.",
+      "Pop-ups, navegador sequestrado ou programas desconhecidos? Veja como funciona o diagnóstico, a limpeza e quando preservar dados ou reinstalar o sistema.",
     serviceName: "Remoção de Vírus e Malware",
     serviceDescription:
       "Remoção de vírus, malware e adware com proteção de dados, limpeza do navegador e reinstalação quando necessário, em Curitiba e região.",
