@@ -8,7 +8,7 @@
       "intentGlobal": "entender diagnóstico de televisão: alimentação, imagem, iluminação, placa principal, painel, áudio, entradas e sistema",
       "intentLocal": "solicitar conserto de TV em Colombo com triagem por modelo, tamanho e sintoma, definição segura de transporte e diagnóstico antes de aprovar peça ou reparo",
       "title": "Conserto de TV em Colombo | Triagem e diagnóstico antes do reparo",
-      "description": "Conserto de TV em Colombo com triagem por modelo, tamanho e sintoma, orientação de transporte e diagnóstico antes de indicar peça ou reparo.",
+      "description": "Assistência para TV em Colombo com leitura do sintoma, avaliação de risco no transporte e diagnóstico em bancada antes de aprovar componente ou reparo.",
       "h1": "Conserto de TV em Colombo",
       "subtitulo": "Triagem técnica para separar falha de alimentação, imagem, iluminação, placa, sistema e painel antes de movimentar ou abrir o aparelho.",
       "intro": [
@@ -292,8 +292,8 @@
       "nome": "Suporte Técnico Empresarial",
       "intentGlobal": "organizar suporte de TI para empresas por impacto, estações, usuários, rede, software, segurança, continuidade e rotina preventiva",
       "intentLocal": "contratar suporte técnico empresarial em Colombo com triagem por impacto, registro do chamado e definição entre atendimento remoto e presencial sem inventar SLA ou equipe fixa",
-      "title": "Suporte Técnico Empresarial em Colombo | TI por impacto e prioridade",
-      "description": "Suporte técnico empresarial em Colombo com triagem por impacto, atendimento remoto ou presencial e diagnóstico antes de alterar estações, rede ou sistemas.",
+      "title": "Suporte de TI para Empresas em Colombo | Chamados, rede e continuidade",
+      "description": "Suporte de TI para empresas em Colombo com priorização por impacto, registro do chamado, análise de estações e rede e definição da modalidade adequada.",
       "h1": "Suporte técnico empresarial em Colombo",
       "subtitulo": "Atendimento orientado pelo impacto real na operação, separando falha de estação, usuário, rede, aplicativo e infraestrutura antes de executar mudanças.",
       "intro": [
