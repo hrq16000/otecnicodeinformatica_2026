@@ -10,15 +10,13 @@ Esta rodada define o método; não consultou o banco de produção, não extraiu
 
 ## O que os registros permitem distinguir
 
-O modelo do portal contém candidaturas e perfis de parceiros com estados operacionais distintos: iniciado, aguardando análise, aprovado, ativo, vencido e suspenso. A listagem pública é limitada a perfis ativos. Portanto:
+O código administrativo do portal define estados distintos para os registros de parceiros: iniciado, aguardando análise, aprovado, ativo, vencido e suspenso. A lista pública consulta uma visão própria do banco, destinada aos perfis ativos. Os critérios e o esquema vigentes devem ser confirmados antes de cada extração.
 
 - candidatura recebida não equivale a parceiro aprovado ou ativo;
 - aprovação não equivale a perfil publicado;
 - perfil ativo/publicado não equivale a profissional disponível para qualquer serviço ou localidade;
 - os perfis ativos do portal não representam o total de participantes de outras redes ou comunidades;
 - os dados da candidatura e a lista pública têm finalidades e campos diferentes.
-
-Os nomes dos estados acima devem ser confirmados contra o esquema e as regras vigentes antes de cada extração, pois a aplicação pode evoluir.
 
 ## Indicadores e regras de apuração
 
@@ -62,7 +60,7 @@ A existência de uma configuração comercial própria do portal também não de
 
 ## Referências de implementação
 
-- `src/lib/partnersApi.ts`: tipos e leitura de perfis públicos ativos.
+- `src/lib/partnersApi.ts`: consulta de perfis por meio da visão pública `partners_public`.
 - `src/lib/partnersAdminApi.ts`: estados e operações administrativas de parceiros.
 - `src/pages/profissionais/CadastroParceiro.tsx`: fluxo de candidatura; a página é destinada a cadastro e não serve como contagem de adesões.
 - Migrações Supabase que definem `partners`, políticas de acesso e a visão pública `partners_public`: consultar o histórico vigente antes da extração.
