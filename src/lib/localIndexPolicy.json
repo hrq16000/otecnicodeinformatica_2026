@@ -747,6 +747,50 @@
       "tier": "SERVICO_CIDADE_COM_INTENCAO_LOCAL",
       "intent": "resolver falhas de home office em Campo Largo com triagem remota primeiro e visita quando o problema estiver no ambiente, no hardware ou na conectividade local",
       "reason": "Promoção validada por reports/enriquecimento-fila-31-40-service-cidade-2026-10.md: conteúdo autoral próprio, 95,6% de unicidade e 4,4% de similaridade máxima."
+    },
+    {
+      "path": "/servicos/conserto-tv/pinhais",
+      "family": "SERVICO_CIDADE",
+      "indexability": "index",
+      "canonical": "/servicos/conserto-tv/pinhais",
+      "sitemap": true,
+      "parent": "/servicos/conserto-tv",
+      "tier": "SERVICO_CIDADE_COM_INTENCAO_LOCAL",
+      "intent": "solicitar conserto de TV em Pinhais com triagem por modelo, tamanho e sintoma, orientação de transporte e definição de coleta ou entrega antes de movimentar o aparelho",
+      "reason": "Micro-lote GSC Pinhais 1–4: família com 112 impressões no GSC atual; conteúdo autoral com 902 palavras e 97,5% de unicidade, auditado antes da promoção."
+    },
+    {
+      "path": "/servicos/suporte-tecnico-empresarial/pinhais",
+      "family": "SERVICO_CIDADE",
+      "indexability": "index",
+      "canonical": "/servicos/suporte-tecnico-empresarial/pinhais",
+      "sitemap": true,
+      "parent": "/servicos/suporte-tecnico-empresarial",
+      "tier": "SERVICO_CIDADE_COM_INTENCAO_LOCAL",
+      "intent": "contratar suporte técnico empresarial em Pinhais com triagem por impacto, definição entre remoto e presencial, registro do chamado e planejamento da continuidade da operação",
+      "reason": "Micro-lote GSC Pinhais 1–4: família com 13 impressões no GSC atual; conteúdo autoral com 783 palavras e 97,7% de unicidade, auditado antes da promoção."
+    },
+    {
+      "path": "/servicos/backup-recuperacao/pinhais",
+      "family": "SERVICO_CIDADE",
+      "indexability": "index",
+      "canonical": "/servicos/backup-recuperacao/pinhais",
+      "sitemap": true,
+      "parent": "/servicos/recuperacao-de-dados",
+      "tier": "SERVICO_CIDADE_COM_INTENCAO_LOCAL",
+      "intent": "solicitar recuperação de dados em Pinhais com preservação da mídia, triagem do sintoma, prioridade pelos arquivos essenciais e definição segura de coleta ou encaminhamento",
+      "reason": "Micro-lote GSC Pinhais 1–4: família com 6 impressões no GSC atual; conteúdo autoral com 744 palavras e 98,3% de unicidade, auditado antes da promoção."
+    },
+    {
+      "path": "/servicos/pc-gamer/pinhais",
+      "family": "SERVICO_CIDADE",
+      "indexability": "index",
+      "canonical": "/servicos/pc-gamer/pinhais",
+      "sitemap": true,
+      "parent": "/servicos/pc-gamer",
+      "tier": "SERVICO_CIDADE_COM_INTENCAO_LOCAL",
+      "intent": "solicitar diagnóstico de PC gamer em Pinhais reproduzindo a falha sob carga, conferindo energia e temperatura e identificando gargalo antes de recomendar reparo ou upgrade",
+      "reason": "Micro-lote GSC Pinhais 1–4: família com 1 impressão no GSC atual; conteúdo autoral com 767 palavras e 94,9% de unicidade, auditado antes da promoção."
     }
   ],
   "bairrosAncora": [
