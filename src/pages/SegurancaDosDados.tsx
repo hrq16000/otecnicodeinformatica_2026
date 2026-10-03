@@ -17,9 +17,9 @@ import { whatsappLink, absoluteUrl } from "@/lib/siteConfig";
 import { trackPageView, trackCTAClick } from "@/lib/analytics";
 
 const PATH = "/seguranca-dos-dados";
-const TITLE = "Segurança dos Dados na Assistência Técnica | Curitiba";
+const TITLE = "Segurança dos dados na assistência técnica: senhas e backup";
 const DESCRIPTION =
-  "Como arquivos, senhas e acessos são tratados durante a assistência técnica em Curitiba: autorização, acesso mínimo, backup prévio, cópias temporárias.";
+  "Entenda como arquivos, senhas e acessos devem ser tratados na assistência técnica: autorização, acesso mínimo, backup, cópias temporárias e limites reais de segurança.";
 
 const WA_MESSAGE =
   "Olá! Vim da página de segurança dos dados e quero tirar uma dúvida antes do atendimento.";
