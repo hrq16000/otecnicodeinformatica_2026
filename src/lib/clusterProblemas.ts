@@ -1066,9 +1066,9 @@ export const CLUSTER_PROBLEMAS: ClusterProblema[] = [
     slug: "windows-nao-inicia",
     path: "/problemas/windows-nao-inicia",
     titulo: "Windows não inicia: erro 0xc0000428, reparo automático e loop de boot",
-    metaTitle: "Windows não inicia: reparo automático, boot e 0xc0000428",
+    metaTitle: "Windows não inicia? Reparo automático, boot e 0xc0000428",
     metaDescription:
-      "Windows não inicia, entra em reparo automático ou mostra 0xc0000428? Veja como separar boot, SSD/HD, BCD, WinRE e BitLocker antes de formatar.",
+      "Windows não inicia ou entra em reparo automático? Separe boot, SSD/HD, BCD, WinRE, BitLocker e erro 0xc0000428 antes de formatar ou reinstalar.",
     resumo:
       "Se o computador liga mas o Windows não inicia, primeiro identifique até onde a inicialização chega: firmware, tela de recuperação, reparo automático, código de erro ou reinício. Isso separa falha de boot de um PC que nem conclui o POST. No erro 0xc0000428, o Windows informa falha de validação de uma imagem de inicialização; o arquivo citado e o que mudou antes do erro definem o próximo teste.",
     waMessage:
