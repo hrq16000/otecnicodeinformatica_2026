@@ -5560,9 +5560,9 @@ Ideal: 1000VA / 600W (para crescimento)`}</code></pre>
   },
 
   "como-fazer-upgrade-ssd-nvme": {
-    title: "Upgrade para SSD NVMe: compatibilidade, migração e quando vale a pena",
+    title: "Upgrade para SSD NVMe: como saber se seu PC é compatível",
     excerpt:
-      "Como confirmar se o computador aceita NVMe, separar M.2 de interface, proteger os dados, escolher entre clonagem e instalação limpa e validar o novo SSD sem trocar peça por expectativa.",
+      "Veja como confirmar slot M.2, suporte a NVMe, boot e espaço antes da compra e como escolher entre clonagem e instalação limpa sem confundir formato e interface.",
     date: "2026-04-20",
     readTime: "13 min",
     category: "Procedimentos Técnicos",
@@ -10875,9 +10875,9 @@ crontab -e
     ),
   },
   "como-conectar-wifi-tv-nao-conecta": {
-    title: "Smart TV não conecta no Wi‑Fi: diagnóstico antes de resetar ou trocar peça",
+    title: "Smart TV não conecta no Wi‑Fi? Veja o que testar primeiro",
     excerpt:
-      "TV não encontra a rede, conecta sem internet ou cai do Wi‑Fi? Separe cobertura, compatibilidade, roteador, software e hardware com testes comparativos antes de resetar.",
+      "TV não acha a rede, conecta sem internet ou cai do Wi‑Fi? Veja como separar sinal, compatibilidade, roteador, software e falha da TV antes de resetar.",
     date: "2026-08-12",
     readTime: "14 min",
     category: "Redes",
@@ -12670,9 +12670,9 @@ bcdboot C:\\Windows /s S: /f UEFI`}</code></pre>
   },
 
   "curto-circuito-placa-mae-como-identificar": {
-    title: "Curto-circuito na placa-mãe: sinais, teste mínimo e diagnóstico seguro",
+    title: "PC liga e desliga na hora? Como identificar possível curto",
     excerpt:
-      "PC liga e desliga na hora? Veja como separar fonte, contato com gabinete, periféricos e placa-mãe sem trocar peças por tentativa nem usar continuidade como prova de curto.",
+      "Veja como separar fonte, cabos, gabinete, periféricos e placa-mãe quando o PC liga e desliga, sem tratar continuidade ou troca de peças como prova de curto.",
     date: "2026-08-26",
     readTime: "12 min",
     category: "Procedimentos Técnicos",
