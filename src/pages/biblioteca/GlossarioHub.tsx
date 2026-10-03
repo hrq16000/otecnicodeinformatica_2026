@@ -18,9 +18,9 @@ import {
 import { RISCO_BADGE_CLASSES } from "@/pages/biblioteca/riscoBadge";
 
 const PATH = "/glossario";
-const TITLE = "Glossário Técnico de Informática | O Técnico de Informática";
+const TITLE = "Glossário de informática: BIOS, UEFI, NVMe, BitLocker e mais";
 const DESCRIPTION =
-  "15 termos técnicos explicados sem jargão: BSOD, SMART, TPM, BitLocker, UEFI, DNS, NVMe e mais — com o que é seguro verificar e o que não fazer em cada um.";
+  "Entenda termos de informática e suporte técnico em linguagem direta: BIOS, UEFI, NVMe, BitLocker, DNS, SMART e BSOD, com verificações seguras e limites.";
 
 const WA_MESSAGE =
   "Olá! Estava lendo o glossário técnico do portal e quero descrever meu problema para a triagem.";
