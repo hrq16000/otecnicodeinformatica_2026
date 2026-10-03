@@ -1,5 +1,5 @@
 {
-  "_doc": "MICRO-LOTE GSC COLOMBO 1–4 — conteúdo local autoral fail-closed. Seleção baseada no GSC de 2026-09-03 a 2026-09-30, settled through 2026-09-29. A presença deste arquivo NÃO liga indexação; localIndexPolicy.json continua sendo a fonte de verdade.",
+  "_doc": "MICRO-LOTES GSC COLOMBO 1–8 — conteúdo local autoral fail-closed antes da promoção. Seleção baseada no GSC de 2026-09-03 a 2026-09-30, settled through 2026-09-29. localIndexPolicy.json continua sendo a fonte de verdade da indexação.",
   "paginas": {
     "conserto-tv": {
       "path": "/servicos/conserto-tv/colombo",
@@ -378,6 +378,386 @@
         "/servicos/manutencao-preventiva-empresas",
         "/servicos/backup-para-empresas",
         "/precos-e-politicas"
+      ],
+      "cidadeSlug": "colombo",
+      "cidadeNome": "Colombo"
+    },
+    "upgrade-ssd": {
+      "path": "/servicos/upgrade-ssd/colombo",
+      "parent": "/servicos/upgrade-ssd-ram",
+      "nome": "Upgrade de SSD e Memória",
+      "intentGlobal": "avaliar upgrade de SSD e memória com compatibilidade, gargalo, migração de dados e expectativa de ganho baseada no uso real",
+      "intentLocal": "solicitar upgrade de SSD e memória em Colombo com triagem de compatibilidade, preservação de dados e decisão entre troca, expansão ou migração antes da compra",
+      "title": "Upgrade de SSD em Colombo | Compatibilidade, memória e migração",
+      "description": "Upgrade de SSD e memória em Colombo com verificação de compatibilidade, análise do gargalo e planejamento de migração antes da compra de peças.",
+      "h1": "Upgrade de SSD e memória em Colombo",
+      "subtitulo": "Avaliação técnica para descobrir se o gargalo está no armazenamento, na memória ou em outra parte do computador antes de comprar peça.",
+      "intro": [
+        "Trocar o armazenamento por SSD pode reduzir bastante o tempo de espera quando o computador ainda depende de um disco mecânico ou de uma unidade muito lenta, mas nem toda lentidão nasce daí. Memória insuficiente, temperatura alta, software carregado e processador limitado podem continuar segurando a máquina. Por isso a proposta começa pela medição do uso real, não pela venda de uma peça.",
+        "Em Colombo, o atendimento pode começar com modelo do notebook ou placa-mãe, capacidade atual, tipo de uso e uma leitura do armazenamento. A partir dessas informações dá para separar compatibilidade, necessidade de clonagem, espaço para segunda unidade e eventual expansão de memória. Compra e execução só fazem sentido depois que essa combinação estiver clara."
+      ],
+      "blocos": [
+        {
+          "titulo": "Compatibilidade vem antes de capacidade e marca",
+          "paragrafos": [
+            "Notebook e desktop podem aceitar SATA de 2,5 polegadas, M.2 SATA, NVMe ou combinações específicas. O formato físico sozinho não garante que a interface seja compatível. Conferir modelo, manual ou identificação da placa evita comprar uma unidade que encaixa, mas não funciona.",
+            "Na memória, geração, frequência, quantidade de slots e limite da plataforma importam tanto quanto a capacidade anunciada. Misturar módulos sem verificar especificações pode gerar funcionamento abaixo do esperado ou instabilidade difícil de relacionar à peça nova.",
+            "Quando existe dúvida, a triagem prioriza identificação precisa do equipamento e do que já está instalado. Essa etapa reduz devolução, desmontagem desnecessária e expectativa de ganho baseada apenas em propaganda."
+          ]
+        },
+        {
+          "titulo": "O gargalo precisa aparecer nos dados de uso",
+          "paragrafos": [
+            "Um computador que demora a iniciar e mantém o disco em uso intenso pode se beneficiar muito de SSD. Já uma máquina com SSD saudável e memória sempre esgotada pede investigação diferente. O upgrade correto é aquele que responde ao componente que realmente limita a tarefa.",
+            "Também é útil observar o tipo de trabalho: navegador com muitas abas, edição de imagem, planilhas pesadas, jogos e aplicativos corporativos pressionam recursos de modos diferentes. A mesma configuração não é ideal para todos os usos.",
+            "Quando o equipamento é antigo, o custo do upgrade deve ser comparado com o estado geral da plataforma. Uma peça nova pode prolongar bem a vida útil, mas não deve ser apresentada como solução universal para hardware já limitado em vários pontos."
+          ]
+        },
+        {
+          "titulo": "Clonagem e instalação limpa são decisões diferentes",
+          "paragrafos": [
+            "Clonar preserva sistema, programas e configurações, o que pode ser conveniente quando o Windows está saudável. Porém, copiar um sistema já corrompido ou carregado de problemas leva parte da dívida junto para a nova unidade.",
+            "Instalação limpa reduz heranças de software, mas exige planejamento de arquivos, credenciais, licenças e reinstalação de aplicativos. A escolha deve considerar o estado do sistema e o que precisa continuar disponível depois da troca.",
+            "Antes de qualquer migração, arquivos importantes precisam de estratégia de preservação. A nova peça não substitui automaticamente uma cópia de segurança verificável em outro destino."
+          ]
+        },
+        {
+          "titulo": "SSD novo não autoriza ignorar a saúde dos dados antigos",
+          "paragrafos": [
+            "Se o HD ou SSD atual apresenta erros, travamentos ou desaparece do sistema, a prioridade muda. Fazer uma clonagem longa em uma mídia instável pode aumentar a leitura justamente quando se deveria reduzir esforço e preservar o que é essencial.",
+            "Nessa situação, a triagem separa upgrade de recuperação de dados. Primeiro se avalia o risco e o valor das informações; depois se decide se vale tentar copiar, recuperar ou instalar o sistema em uma nova unidade sem insistir na antiga.",
+            "Essa ordem evita que um serviço de desempenho seja tratado como se fosse apenas transferência mecânica de conteúdo."
+          ]
+        },
+        {
+          "titulo": "A janela operacional organiza o início do atendimento",
+          "paragrafos": [
+            "A operação trabalha com referência de 2 a 72 horas úteis para início conforme urgência e disponibilidade. Em Colombo, a confirmação do modelo e da peça pode acontecer antes do deslocamento, mas a faixa não garante upgrade concluído dentro desse período.",
+            "Compra de componente, migração extensa, testes e eventual ajuste do sistema podem aumentar o tempo total. A previsão fica mais confiável depois que compatibilidade, método de migração e estado do armazenamento são confirmados.",
+            "Urgência pode influenciar prioridade, porém não substitui disponibilidade real nem cria SLA inexistente."
+          ]
+        },
+        {
+          "titulo": "A rede nacional não representa estoque ou equipe fixa em Colombo",
+          "paragrafos": [
+            "A operação começou em Curitiba em 2006 e hoje integra uma rede nacional com mais de 6 mil prestadores credenciados. Esse número é nacional e não indica quantidade de técnicos ou peças disponíveis em Colombo.",
+            "Cada chamado depende do perfil necessário, agenda e logística. Não se presume filial, estoque local ou disponibilidade imediata de um modelo específico de SSD ou memória.",
+            "O compromisso com uma tarifa mínima justa para o prestador valoriza diagnóstico e compatibilidade, inclusive quando a conclusão é que a troca desejada não resolveria o gargalo principal."
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "pergunta": "Todo computador lento melhora com SSD?",
+          "resposta": "Não. SSD ajuda quando armazenamento é parte relevante do gargalo; memória, temperatura, software e processador também precisam ser considerados."
+        },
+        {
+          "pergunta": "Dá para manter meus programas e arquivos?",
+          "resposta": "Em muitos casos sim por clonagem, desde que o sistema e a unidade atual estejam em condição adequada. A estratégia é definida antes da troca."
+        },
+        {
+          "pergunta": "Posso comprar o SSD antes da avaliação?",
+          "resposta": "Pode, mas é mais seguro confirmar formato, interface e capacidade suportada para evitar peça incompatível."
+        },
+        {
+          "pergunta": "A troca termina em até 72 horas úteis?",
+          "resposta": "Não necessariamente. Essa faixa se refere ao início do atendimento; peça, migração e testes podem ampliar o tempo."
+        },
+        {
+          "pergunta": "Quantos técnicos fazem upgrade em Colombo?",
+          "resposta": "Não publicamos contagem municipal sem fonte confirmada. A referência institucional é de mais de 6 mil prestadores na rede nacional."
+        }
+      ],
+      "interlinks": [
+        "/servicos/upgrade-ssd-ram",
+        "/tecnico-informatica-colombo",
+        "/blog/como-clonar-hd-para-ssd",
+        "/precos-e-politicas"
+      ],
+      "cidadeSlug": "colombo",
+      "cidadeNome": "Colombo"
+    },
+    "backup-recuperacao": {
+      "path": "/servicos/backup-recuperacao/colombo",
+      "parent": "/servicos/recuperacao-de-dados",
+      "nome": "Backup e Recuperação de Dados",
+      "intentGlobal": "proteger ou tentar recuperar arquivos de HD, SSD, pendrive e computador com risco de perda, separando backup, cópia e recuperação",
+      "intentLocal": "solicitar backup ou recuperação de dados em Colombo com triagem do tipo de falha, prioridade dos arquivos e redução de escrita antes de qualquer tentativa",
+      "title": "Recuperação de Dados em Colombo | HD, SSD e arquivos importantes",
+      "description": "Recuperação de dados em Colombo com triagem de HD ou SSD, priorização dos arquivos e orientação para reduzir novas gravações antes da tentativa.",
+      "h1": "Backup e recuperação de dados em Colombo",
+      "subtitulo": "Triagem para separar arquivo apagado, mídia instável, falha de inicialização e necessidade de backup antes de executar novas gravações.",
+      "intro": [
+        "Arquivo apagado, computador que deixou de iniciar e HD que faz ruído não pertencem ao mesmo cenário. O primeiro cuidado é entender se a mídia continua acessível, se há sinais físicos, se novas gravações estão acontecendo e quais dados têm maior prioridade. Quanto mais incerto o estado do armazenamento, menos sentido faz testar ferramentas ao acaso.",
+        "Em Colombo, a abertura do chamado pode começar com tipo de equipamento, capacidade da unidade, sintomas e lista do que precisa ser preservado. Essa informação ajuda a decidir se o caso é simples cópia, backup preventivo, tentativa lógica de recuperação ou uma situação que exige interromper o uso e avaliar a mídia com mais cautela."
+      ],
+      "blocos": [
+        {
+          "titulo": "Parar de gravar pode ser mais importante que instalar um programa",
+          "paragrafos": [
+            "Quando um arquivo é apagado, o espaço pode ficar disponível para reutilização. Continuar instalando aplicativos, baixando conteúdo ou atualizando o sistema aumenta a chance de sobrescrever áreas que ainda poderiam conter dados recuperáveis.",
+            "Se o armazenamento apresenta travamentos, sumiços ou erros de leitura, insistir em tarefas pesadas também pode piorar a condição. O objetivo inicial é preservar evidência e reduzir atividade desnecessária.",
+            "Por isso a triagem pergunta o que aconteceu depois da perda. Saber se houve formatação, reinstalação ou uso intenso muda a expectativa e a estratégia."
+          ]
+        },
+        {
+          "titulo": "Backup é prevenção; recuperação acontece depois que algo já deu errado",
+          "paragrafos": [
+            "Copiar arquivos importantes para outro destino e verificar se eles abrem é uma medida preventiva. Recuperação tenta resgatar conteúdo depois de exclusão, corrupção ou falha. Misturar os dois conceitos pode criar falsa sensação de segurança.",
+            "Uma rotina útil considera onde os arquivos ficam, com que frequência mudam e qual perda seria aceitável. Documento de trabalho, foto única e instalador disponível na internet não têm o mesmo valor.",
+            "Também é importante evitar uma única cópia no mesmo equipamento. Uma falha elétrica, roubo ou corrupção pode atingir origem e suposta cópia ao mesmo tempo se ambas dependem do mesmo dispositivo."
+          ]
+        },
+        {
+          "titulo": "Falha lógica e falha física exigem abordagens diferentes",
+          "paragrafos": [
+            "Partição ausente, arquivo corrompido ou exclusão acidental podem ocorrer mesmo com a unidade ainda respondendo normalmente. Já ruído mecânico, desconexão frequente, superaquecimento ou mídia que deixa de ser reconhecida elevam a suspeita de problema físico.",
+            "A triagem não promete recuperação porque o resultado depende do estado real da mídia e do que aconteceu desde a perda. Percentual garantido sem diagnóstico seria apenas estimativa sem base.",
+            "Quando a situação ultrapassa o escopo de tentativa convencional, o cliente deve ser informado sobre risco, limites e alternativas antes de autorizar procedimentos adicionais."
+          ]
+        },
+        {
+          "titulo": "Priorizar arquivos reduz trabalho inútil e orienta a tentativa",
+          "paragrafos": [
+            "Antes de iniciar, vale listar pastas, extensões, datas aproximadas e projetos mais importantes. Isso ajuda a reconhecer sucesso parcial e evita tratar todos os gigabytes como se tivessem a mesma relevância.",
+            "Em ambientes de trabalho, credenciais, bancos locais, arquivos de sistema e documentos do usuário podem exigir tratamento diferente. Nem tudo que ocupa espaço precisa ser recuperado para restabelecer a atividade.",
+            "Depois da tentativa, a validação inclui abrir amostras e confirmar integridade, não apenas contar nomes de arquivos encontrados."
+          ]
+        },
+        {
+          "titulo": "A janela de atendimento não é garantia de recuperação",
+          "paragrafos": [
+            "A referência operacional de 2 a 72 horas úteis varia conforme urgência e disponibilidade e se aplica ao início do atendimento. Recuperação pode levar mais tempo por leitura lenta, volume de dados, triagem ou necessidade de recurso adicional.",
+            "Casos com risco físico não devem ser acelerados apenas para caber em uma promessa de prazo. A prioridade é evitar ações que reduzam as chances de preservar informação.",
+            "O tempo estimado só ganha sentido depois que a mídia responde aos primeiros testes e o escopo dos arquivos é conhecido."
+          ]
+        },
+        {
+          "titulo": "Disponibilidade local é confirmada sem transformar a rede nacional em número municipal",
+          "paragrafos": [
+            "A operação começou em Curitiba em 2006 e integra uma rede nacional com mais de 6 mil prestadores credenciados. O total é nacional e não representa quantidade de especialistas em recuperação disponíveis em Colombo.",
+            "Cada caso é encaminhado conforme perfil técnico, agenda e logística. A página não presume laboratório, filial ou estrutura fixa no município sem evidência específica.",
+            "O compromisso com uma tarifa mínima justa para o prestador reconhece triagem e diagnóstico, inclusive quando a recomendação mais segura é interromper tentativas caseiras e preservar a mídia."
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "pergunta": "Apaguei um arquivo. Devo instalar um recuperador no mesmo disco?",
+          "resposta": "Isso pode gerar novas gravações. O ideal é reduzir uso da unidade até definir a estratégia."
+        },
+        {
+          "pergunta": "Vocês garantem recuperar todos os arquivos?",
+          "resposta": "Não. O resultado depende do estado da mídia, sobrescrita e tipo de falha; a triagem serve justamente para avaliar limites e risco."
+        },
+        {
+          "pergunta": "Backup e recuperação são a mesma coisa?",
+          "resposta": "Não. Backup é prevenção com cópia verificável; recuperação acontece depois de uma perda ou falha."
+        },
+        {
+          "pergunta": "O atendimento termina em até 72 horas úteis?",
+          "resposta": "Não necessariamente. A faixa organiza o início; leitura, volume e condição da mídia podem ampliar o tempo."
+        },
+        {
+          "pergunta": "Quantos especialistas atendem Colombo?",
+          "resposta": "Não publicamos contagem municipal sem fonte confirmada. A rede nacional possui mais de 6 mil prestadores credenciados."
+        }
+      ],
+      "interlinks": [
+        "/servicos/recuperacao-de-dados",
+        "/tecnico-informatica-colombo",
+        "/problemas/arquivos-apagados",
+        "/blog/como-recuperar-dados-hd-com-defeito"
+      ],
+      "cidadeSlug": "colombo",
+      "cidadeNome": "Colombo"
+    },
+    "redes-wifi": {
+      "path": "/servicos/redes-wifi/colombo",
+      "parent": "/servicos/redes-e-wifi",
+      "nome": "Redes e Wi-Fi",
+      "intentGlobal": "diagnosticar cobertura, velocidade, estabilidade e configuração de rede antes de trocar roteador, repetidor ou plano",
+      "intentLocal": "solicitar diagnóstico de rede e Wi-Fi em Colombo com separação entre provedor, roteador, interferência, cobertura e dispositivo antes de comprar equipamento",
+      "title": "Wi-Fi e Redes em Colombo | Diagnóstico de sinal, roteador e cobertura",
+      "description": "Suporte de Wi-Fi e redes em Colombo para quedas, sinal fraco e baixa velocidade, com diagnóstico de cobertura, roteador, provedor e dispositivo.",
+      "h1": "Redes e Wi-Fi em Colombo",
+      "subtitulo": "Diagnóstico para descobrir se a falha está no provedor, no roteador, na cobertura, na configuração ou apenas em um dispositivo.",
+      "intro": [
+        "Internet lenta e Wi-Fi ruim não são sinônimos. A conexão pode chegar corretamente ao modem e perder desempenho apenas pela rede sem fio, ou pode existir problema no próprio link do provedor. Também há casos em que somente um notebook ou celular falha enquanto os demais equipamentos continuam normais. Separar essas camadas evita trocar roteador sem necessidade.",
+        "Em Colombo, a triagem começa com endereço, operadora, modelo do equipamento, tamanho aproximado do ambiente e descrição de onde a falha aparece. Testes perto e longe do roteador, por cabo quando possível e em mais de um dispositivo ajudam a transformar a queixa em um mapa do problema antes de propor repetidor, novo ponto de acesso ou mudança de configuração."
+      ],
+      "blocos": [
+        {
+          "titulo": "Primeiro é preciso separar internet de Wi-Fi",
+          "paragrafos": [
+            "Um teste conectado por cabo, quando disponível, ajuda a verificar se a limitação já chega do provedor. Se a velocidade cabeada está adequada e o desempenho cai somente no sem fio, a investigação passa para sinal, canal, posicionamento e capacidade do roteador.",
+            "Se todos os dispositivos perdem acesso ao mesmo tempo, a causa provável é diferente de um notebook que desconecta sozinho. Horário, frequência e quantidade de aparelhos afetados são informações úteis para não misturar falhas distintas.",
+            "Testes isolados também precisam de contexto. Um único resultado de velocidade pode variar por servidor e carga; o objetivo é observar padrão repetível."
+          ]
+        },
+        {
+          "titulo": "Cobertura é consequência de distância, obstáculos e frequência",
+          "paragrafos": [
+            "Paredes, lajes, móveis, posição baixa e distância reduzem sinal. A banda de 5 GHz costuma oferecer mais capacidade em curta distância, enquanto frequências mais baixas tendem a alcançar melhor alguns ambientes. A escolha depende do espaço e dos dispositivos.",
+            "Colocar repetidor em um ponto onde o sinal já chega muito fraco pode apenas repetir uma conexão ruim. Antes de acrescentar equipamento, é melhor descobrir onde a cobertura começa a degradar e qual ligação o novo ponto terá com a rede principal.",
+            "Em ambientes maiores, múltiplos pontos bem posicionados podem funcionar melhor que tentar forçar um único roteador a cobrir tudo."
+          ]
+        },
+        {
+          "titulo": "Canal congestionado e configuração também afetam estabilidade",
+          "paragrafos": [
+            "Redes vizinhas podem disputar espectro, especialmente em regiões com muitos roteadores próximos. Escolha automática de canal nem sempre produz o melhor resultado permanente, então medições e testes comparativos ajudam a avaliar.",
+            "Largura de canal, modo de segurança, firmware e recursos como band steering também podem alterar comportamento. Mudanças devem ser feitas uma por vez para que seja possível identificar o efeito real.",
+            "Restaurar o roteador para padrão sem registrar a configuração anterior pode apagar credenciais e regras importantes. Em residência ou pequeno negócio, documentar antes reduz risco de transformar uma lentidão em indisponibilidade."
+          ]
+        },
+        {
+          "titulo": "Trocar o plano não resolve cobertura interna ruim",
+          "paragrafos": [
+            "Aumentar a velocidade contratada pode melhorar a capacidade disponível, mas não corrige um cômodo sem sinal ou um dispositivo com adaptador problemático. Da mesma forma, comprar roteador mais caro não garante benefício se ele continuar mal posicionado.",
+            "A proposta técnica precisa responder ao gargalo observado. Às vezes basta reposicionar, atualizar ou corrigir configuração; em outros casos, cabeamento ou um ponto adicional é a solução mais consistente.",
+            "Para home office e uso profissional, estabilidade pode ser mais importante que o pico máximo de velocidade. Videoconferência e acesso remoto sofrem mais com perda e variação do que com números altos em teste ocasional."
+          ]
+        },
+        {
+          "titulo": "A janela operacional depende de urgência e disponibilidade",
+          "paragrafos": [
+            "A operação trabalha com referência de 2 a 72 horas úteis para início do atendimento. Parte do diagnóstico de Wi-Fi pode começar remotamente com testes orientados, e a necessidade de visita é confirmada conforme o comportamento observado.",
+            "Cabeamento, instalação de ponto ou mudança física pode exigir levantamento adicional. A faixa de início não é prazo garantido para concluir toda intervenção.",
+            "Informar quantidade de ambientes afetados, equipamentos críticos e horários de maior problema melhora a triagem sem criar promessa de atendimento imediato."
+          ]
+        },
+        {
+          "titulo": "Rede nacional não significa equipe fixa em Colombo",
+          "paragrafos": [
+            "A operação começou em Curitiba em 2006 e hoje integra uma rede nacional com mais de 6 mil prestadores credenciados. Esse total é nacional e não representa quantidade de técnicos de rede disponíveis em Colombo.",
+            "A disponibilidade é confirmada para cada chamado conforme perfil, agenda e necessidade de deslocamento. Não se presume filial nem estoque local de roteadores ou materiais.",
+            "O compromisso com uma tarifa mínima justa para o prestador valoriza diagnóstico e medição, inclusive quando o resultado mostra que o problema pertence ao provedor ou a um único dispositivo."
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "pergunta": "Wi-Fi lento significa que preciso trocar o roteador?",
+          "resposta": "Não necessariamente. Provedor, posição, interferência, configuração e dispositivo também podem limitar o desempenho."
+        },
+        {
+          "pergunta": "Repetidor sempre melhora o sinal?",
+          "resposta": "Não. Se ele recebe sinal ruim ou está mal posicionado, pode repetir uma conexão já degradada."
+        },
+        {
+          "pergunta": "Dá para diagnosticar parte do problema remotamente?",
+          "resposta": "Sim. Testes orientados podem separar link, Wi-Fi e dispositivo antes de decidir se a visita é necessária."
+        },
+        {
+          "pergunta": "O serviço termina em até 72 horas úteis?",
+          "resposta": "Não necessariamente. A faixa organiza o início do atendimento; instalação física ou materiais podem exigir mais tempo."
+        },
+        {
+          "pergunta": "Quantos técnicos de rede atendem Colombo?",
+          "resposta": "Não publicamos contagem municipal sem fonte confirmada. A rede nacional possui mais de 6 mil prestadores credenciados."
+        }
+      ],
+      "interlinks": [
+        "/servicos/redes-e-wifi",
+        "/tecnico-informatica-colombo",
+        "/blog/como-configurar-roteador-wifi-iniciantes",
+        "/blog/como-fazer-teste-velocidade-internet"
+      ],
+      "cidadeSlug": "colombo",
+      "cidadeNome": "Colombo"
+    },
+    "pc-gamer": {
+      "path": "/servicos/pc-gamer/colombo",
+      "parent": "/servicos/pc-gamer",
+      "nome": "PC Gamer",
+      "intentGlobal": "diagnosticar estabilidade, temperatura, desempenho e compatibilidade de PC gamer antes de trocar GPU, CPU, fonte, memória ou refrigeração",
+      "intentLocal": "solicitar diagnóstico de PC gamer em Colombo com testes por carga, compatibilidade e objetivo de desempenho antes de upgrade ou troca de componente",
+      "title": "PC Gamer em Colombo | Diagnóstico de FPS, temperatura e estabilidade",
+      "description": "Suporte para PC gamer em Colombo com diagnóstico de FPS baixo, travamentos, temperatura, fonte e compatibilidade antes de indicar upgrade.",
+      "h1": "Diagnóstico e suporte para PC gamer em Colombo",
+      "subtitulo": "Testes para separar gargalo, temperatura, driver, energia e configuração antes de transformar queda de FPS em compra de hardware.",
+      "intro": [
+        "FPS baixo, travamento, reinício e temperatura alta parecem problemas de desempenho, mas podem ter origens muito diferentes. Um jogo específico pode estar limitado por configuração ou driver, enquanto reinício sob carga pode apontar para energia, temperatura ou instabilidade. A triagem começa pelo comportamento reproduzível, não pela peça mais cara do computador.",
+        "Em Colombo, o atendimento considera a configuração atual, resolução usada, jogos ou aplicativos afetados, mudanças recentes e objetivo esperado. Essa combinação permite comparar o que a máquina entrega com o que o usuário realmente precisa antes de sugerir placa de vídeo, processador, memória, fonte ou refrigeração."
+      ],
+      "blocos": [
+        {
+          "titulo": "Queda de FPS precisa ser medida no componente certo",
+          "paragrafos": [
+            "Uso de CPU, GPU, memória, VRAM e temperatura durante a cena problemática ajuda a descobrir qual recurso está no limite. Sem essas medições, reduzir tudo a placa de vídeo cria risco de investir e manter o gargalo.",
+            "Resolução, limite de quadros, qualidade gráfica e tecnologias de reconstrução mudam a carga do sistema. Comparar resultados só faz sentido quando o cenário de teste é conhecido.",
+            "Também é importante observar frame time e estabilidade, não apenas média de FPS. Uma média aceitável pode esconder travadas frequentes que prejudicam mais a experiência que um número um pouco menor, porém estável."
+          ]
+        },
+        {
+          "titulo": "Temperatura alta precisa ser relacionada a frequência e carga",
+          "paragrafos": [
+            "Componentes modernos ajustam frequência conforme temperatura e energia. A leitura precisa mostrar se existe redução de clock, limite térmico ou comportamento normal para aquele modelo, em vez de usar um número isolado como diagnóstico.",
+            "Limpeza, fluxo de ar, curva de ventoinha e contato do sistema de refrigeração podem influenciar. Trocar pasta térmica sem verificar montagem e ventilação pode produzir pouco resultado.",
+            "Quando há desligamento, cheiro de queimado ou conector aquecido, insistir em benchmark pesado não é a primeira escolha. Segurança e preservação do hardware têm prioridade."
+          ]
+        },
+        {
+          "titulo": "Fonte deve ser avaliada pela carga e pela configuração completa",
+          "paragrafos": [
+            "Potência anunciada não conta toda a história. Modelo, qualidade, idade, conectores e comportamento sob carga precisam entrar na análise, especialmente depois de upgrade de GPU ou CPU.",
+            "Reinício apenas em jogos pode envolver fonte, mas também temperatura, driver, memória e instabilidade de overclock. Testes devem reduzir variáveis antes de condenar um componente.",
+            "Adaptadores improvisados e cabos inadequados merecem atenção porque podem introduzir risco além do problema de desempenho."
+          ]
+        },
+        {
+          "titulo": "Upgrade bom responde ao objetivo do jogador",
+          "paragrafos": [
+            "Quem joga competitivo em alta taxa de atualização tem prioridade diferente de quem busca qualidade visual em resolução maior. O orçamento precisa ser relacionado ao alvo de desempenho e aos jogos usados como referência.",
+            "Trocar GPU com processador já no limite pode produzir ganho menor que o esperado. Da mesma forma, comprar processador novo quando a placa de vídeo está totalmente ocupada pode não alterar a experiência principal.",
+            "Compatibilidade física, firmware, fonte e espaço do gabinete também entram antes da compra. A peça precisa funcionar no conjunto, não apenas ser tecnicamente mais rápida."
+          ]
+        },
+        {
+          "titulo": "A janela de atendimento não substitui tempo de teste",
+          "paragrafos": [
+            "A referência institucional é de 2 a 72 horas úteis para início conforme urgência e disponibilidade. Em PC gamer, alguns sintomas só aparecem em carga prolongada, então validar estabilidade pode exigir tempo adicional.",
+            "Peça, benchmark comparativo e falha intermitente também ampliam a duração total. A previsão melhora quando o defeito é reproduzido e o objetivo do upgrade está documentado.",
+            "Prioridade pode considerar máquina totalmente parada, mas não cria promessa de solução imediata ou SLA não contratado."
+          ]
+        },
+        {
+          "titulo": "A rede nacional não é uma contagem de especialistas em Colombo",
+          "paragrafos": [
+            "A operação começou em Curitiba em 2006 e hoje integra uma rede nacional com mais de 6 mil prestadores credenciados. O dado é nacional e não representa quantidade de técnicos especializados em PC gamer no município.",
+            "O perfil adequado e a agenda são confirmados para cada chamado. Não se presume laboratório, estoque ou equipe permanente em Colombo.",
+            "O compromisso com uma tarifa mínima justa para o prestador valoriza diagnóstico e teste, inclusive quando a recomendação é manter a configuração atual ou adiar um upgrade que teria pouco efeito."
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "pergunta": "FPS baixo significa que preciso trocar a placa de vídeo?",
+          "resposta": "Não. CPU, memória, temperatura, driver, configuração e resolução também podem limitar o desempenho."
+        },
+        {
+          "pergunta": "Temperatura alta sempre exige trocar pasta térmica?",
+          "resposta": "Não. Fluxo de ar, montagem, ventoinhas e comportamento do componente precisam ser avaliados em conjunto."
+        },
+        {
+          "pergunta": "Dá para testar fonte apenas pela potência indicada?",
+          "resposta": "Não. Modelo, qualidade, idade, conectores e estabilidade sob carga também importam."
+        },
+        {
+          "pergunta": "O diagnóstico termina em até 72 horas úteis?",
+          "resposta": "Não necessariamente. A faixa organiza o início; testes prolongados e falha intermitente podem exigir mais tempo."
+        },
+        {
+          "pergunta": "Quantos técnicos de PC gamer atendem Colombo?",
+          "resposta": "Não publicamos contagem municipal sem fonte confirmada. A rede nacional possui mais de 6 mil prestadores credenciados."
+        }
+      ],
+      "interlinks": [
+        "/servicos/pc-gamer",
+        "/tecnico-informatica-colombo",
+        "/blog/erros-comuns-upgrade-computador",
+        "/blog/como-fazer-upgrade-ssd-nvme"
       ],
       "cidadeSlug": "colombo",
       "cidadeNome": "Colombo"
