@@ -13,11 +13,13 @@ const raw = read("../../src/lib/servicoCuritibaBlocos.json");
 const rawSjp = read("../../src/lib/servicoSjpBlocos.json");
 const rawAraucaria = read("../../src/lib/servicoAraucariaBlocos.json");
 const rawCampoLargo = read("../../src/lib/servicoCampoLargoBlocos.json");
+const rawPinhais = read("../../src/lib/servicoPinhaisBlocos.json");
 
 export const SERVICO_CURITIBA_PAGINAS = raw.paginas;
 export const SERVICO_SJP_PAGINAS = rawSjp.paginas;
 export const SERVICO_ARAUCARIA_PAGINAS = rawAraucaria.paginas;
 export const SERVICO_CAMPO_LARGO_PAGINAS = rawCampoLargo.paginas;
+export const SERVICO_PINHAIS_PAGINAS = rawPinhais.paginas;
 
 /** Cidade → (slug de serviço → conteúdo local). */
 export const SERVICO_CIDADE_PAGINAS = {
@@ -25,6 +27,7 @@ export const SERVICO_CIDADE_PAGINAS = {
   "sao-jose-dos-pinhais": rawSjp.paginas,
   araucaria: rawAraucaria.paginas,
   "campo-largo": rawCampoLargo.paginas,
+  pinhais: rawPinhais.paginas,
 };
 
 /** Todas as páginas serviço × cidade com conteúdo autoral declarado. */
@@ -33,6 +36,7 @@ export const TODAS_PAGINAS_LOCAIS = [
   ...Object.values(rawSjp.paginas),
   ...Object.values(rawAraucaria.paginas),
   ...Object.values(rawCampoLargo.paginas),
+  ...Object.values(rawPinhais.paginas),
 ];
 
 export function servicoCuritibaPorPath(path) {
@@ -49,3 +53,5 @@ export const SERVICO_SJP_PATHS = Object.values(rawSjp.paginas).map((p) => p.path
 
 export const SERVICO_ARAUCARIA_PATHS = Object.values(rawAraucaria.paginas).map((p) => p.path);
 export const SERVICO_CAMPO_LARGO_PATHS = Object.values(rawCampoLargo.paginas).map((p) => p.path);
+
+export const SERVICO_PINHAIS_PATHS = Object.values(rawPinhais.paginas).map((p) => p.path);
