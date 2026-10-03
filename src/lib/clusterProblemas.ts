@@ -830,9 +830,9 @@ export const CLUSTER_PROBLEMAS: ClusterProblema[] = [
     slug: "computador-nao-da-imagem",
     path: "/problemas/computador-nao-da-imagem",
     titulo: "Computador liga mas não aparece imagem no monitor",
-    metaTitle: "Computador liga mas não dá imagem: o que testar | O Técnico",
+    metaTitle: "Computador liga mas não dá imagem: RAM, GPU ou monitor?",
     metaDescription:
-      "Computador liga mas não dá imagem ou mostra “sem sinal”? Separe monitor, cabo, RAM, placa de vídeo, fonte e POST antes de comprar ou trocar qualquer peça.",
+      "PC liga, coolers giram, mas fica sem vídeo? Separe monitor, cabo, RAM, GPU, fonte e POST com testes seguros antes de comprar ou trocar peças.",
     resumo:
       "Se o computador liga mas não dá imagem, comece separando tela/cabo de falha de POST. Confirme a entrada do monitor e a saída de vídeo usada; depois teste memória, placa de vídeo, alimentação e sinais de diagnóstico da placa-mãe. O sintoma, sozinho, não confirma placa de vídeo nem placa-mãe — a decisão deve vir da eliminação controlada das hipóteses.",
     waMessage:
