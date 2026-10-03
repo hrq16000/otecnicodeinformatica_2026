@@ -7920,9 +7920,9 @@ net start spooler`}</code></pre>
   },
 
   "como-clonar-hd-para-ssd": {
-    title: "Clonar HD para SSD: como decidir, preparar e validar a migração",
+    title: "Como clonar HD para SSD sem perder Windows ou arquivos",
     excerpt:
-      "Quando vale clonar, quando reinstalar, como conferir espaço, partições e BitLocker, validar o boot no SSD e saber quando parar porque o HD de origem está falhando.",
+      "Veja quando vale clonar HD para SSD, como conferir espaço, partições e BitLocker e como validar o boot sem apagar o disco antigo antes da hora.",
     date: "2026-08-12",
     readTime: "14 min",
     category: "Manutenção",
@@ -9727,9 +9727,9 @@ net start spooler`}</code></pre>
   },
 
   "computador-entra-direto-na-bios": {
-    title: "Computador entra direto na BIOS: como separar disco, boot e firmware",
+    title: "PC entra direto na BIOS? SSD, boot e Windows Boot Manager",
     excerpt:
-      "PC abre a BIOS/UEFI em vez do Windows? Veja como verificar detecção do SSD, Windows Boot Manager, UEFI/Legacy, configurações perdidas e falha de boot sem apagar dados.",
+      "PC abre direto na BIOS/UEFI? Veja como checar SSD, Windows Boot Manager, ordem de boot e UEFI/Legacy sem formatar ou apagar dados por tentativa.",
     date: "2026-09-29",
     readTime: "15 min",
     category: "Procedimentos Técnicos",
@@ -10129,9 +10129,9 @@ net start spooler`}</code></pre>
   },
 
   "como-instalar-segundo-ssd-notebook": {
-    title: "Como instalar um segundo SSD no notebook: compatibilidade, montagem e configuração",
+    title: "Como instalar segundo SSD no notebook: M.2, SATA ou NVMe?",
     excerpt:
-      "Como confirmar slot, interface e formato antes da compra, instalar um segundo SSD com segurança e fazê-lo aparecer no Windows sem apagar o disco errado.",
+      "Veja como confirmar slot, interface e formato antes da compra, instalar um segundo SSD e fazê-lo aparecer no Windows sem apagar o disco errado.",
     date: "2026-09-29",
     readTime: "14 min",
     category: "Procedimentos Técnicos",
