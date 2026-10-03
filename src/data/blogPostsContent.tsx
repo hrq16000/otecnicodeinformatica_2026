@@ -317,9 +317,9 @@ export const blogPostsContentBase: Record<string, BlogPostContent> = {
     ),
   },
   "trocar-windows-por-linux-vale-a-pena": {
-    title: "Trocar Windows por Linux vale a pena? Checklist de compatibilidade antes de migrar",
+    title: "Linux vale a pena no seu PC? O que testar antes de trocar o Windows",
     excerpt:
-      "Decida com base em aplicativos, periféricos, arquivos, jogos e suporte do hardware. Veja como testar Linux por USB antes de alterar o disco.",
+      "Veja como avaliar aplicativos, jogos, periféricos, drivers e arquivos e como testar Linux por USB antes de alterar o disco ou abandonar o Windows.",
     date: "2026-09-25",
     readTime: "11 min",
     category: "Linux",
@@ -2586,9 +2586,9 @@ docker run -d --name db --network minha-rede postgres
   },
 
   "como-proteger-computador-golpes-internet": {
-    title: "Como se proteger de golpes na internet: o que checar antes de clicar",
+    title: "Golpes na internet: como identificar phishing e falso suporte",
     excerpt:
-      "Phishing, sites clonados, falso suporte técnico e extensões maliciosas: como reconhecer cada padrão, o que verificar antes de clicar e o que fazer nas primeiras horas depois de cair em um golpe.",
+      "Aprenda a reconhecer phishing, sites clonados, falso suporte e extensões suspeitas e o que fazer após clicar, informar senha ou instalar acesso remoto.",
     date: "2026-08-12",
     readTime: "14 min",
     category: "Segurança",
