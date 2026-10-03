@@ -120,9 +120,9 @@ export const CLUSTER_EQUIPAMENTOS: ClusterEquipamento[] = [
     slug: "desktop",
     path: "/equipamentos/desktop",
     titulo: "Desktop e PC: falhas frequentes, upgrades e o que checar",
-    metaTitle: "Desktop com problema: falhas e upgrades | O Técnico de Informática",
+    metaTitle: "PC ou desktop com problema? Falhas comuns e o que verificar",
     metaDescription:
-      "PC que não liga, reinicia sozinho, faz barulho ou ficou lento. Entenda o que cada sintoma indica no desktop, o que checar antes e qual atendimento resolve.",
+      "PC não liga, reinicia, faz barulho ou ficou lento? Veja como separar fonte, memória, armazenamento, vídeo e aquecimento antes de trocar peças por tentativa.",
     resumo:
       "No desktop as peças são separadas e acessíveis, o que torna o diagnóstico mais direto — e também mais fácil de errar por substituição no chute. Testamos por eliminação: energia, placa, memória, armazenamento e vídeo, um de cada vez, com registro do resultado.",
     waMessage:
@@ -204,9 +204,9 @@ export const CLUSTER_EQUIPAMENTOS: ClusterEquipamento[] = [
     slug: "impressora",
     path: "/equipamentos/impressora",
     titulo: "Impressora: instalação, rede e falhas que travam o trabalho",
-    metaTitle: "Impressora com problema: instalação e rede | O Técnico de Informática",
+    metaTitle: "Impressora não imprime ou some da rede? O que verificar",
     metaDescription:
-      "Impressora que some da rede, não imprime, imprime falhado ou não conecta no Wi-Fi. Veja causas reais, o que checar antes e qual atendimento resolve.",
+      "Impressora offline, sem Wi-Fi, sumindo da rede ou imprimindo com falhas? Veja como separar conexão, fila, driver, IP e defeito físico antes de reinstalar tudo.",
     resumo:
       "Boa parte dos chamados de impressora não é defeito do aparelho: é rede, driver ou fila de impressão. Separar isso antes evita assistência desnecessária — e evita também o oposto, insistir em software quando o problema é mecânico.",
     waMessage:
