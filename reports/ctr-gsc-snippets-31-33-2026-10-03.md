@@ -5,7 +5,7 @@
 - `main` no início: `8fc86a7bd2c828a5b41bc707fd18d7a9c03a1e4f`
 - Branch: `seo/ctr-gsc-snippets-31-33-20261003`
 - Escopo: somente metadata de 3 páginas maduras com sinal GSC posterior à última alteração relevante.
-- Sem alteração de URL, slug, canonical, robots, sitemap, schema, index policy, corpo do conteúdo, CTA ou política comercial.
+- Sem alteração de URL, slug, canonical, robots, sitemap, schema, index policy, CTA ou política comercial. O texto visível do hub de equipamentos foi preservado.
 - Páginas CTR 1–30 permanecem congeladas até nova janela pós-mudança.
 
 ## Evidência GSC pós-estabilidade
@@ -48,7 +48,9 @@ As consultas por `query` filtradas por cada página retornaram 0 linhas. Nenhuma
 
 **Depois**
 - Title: `Notebook não liga, esquenta ou não carrega? O que verificar`
-- Description: `Notebook lento, sem imagem, esquentando ou com bateria que não carrega? Veja como separar energia, tela, temperatura, armazenamento e software antes de trocar peças.`
+- Description: `Notebook lento, que não liga, superaquecendo, com tela apagada ou bateria que não segura carga. Veja o que cada sintoma indica e qual atendimento resolve.`
+
+Observação: apenas o title foi alterado nesta página. A description permanece igual porque também é reutilizada como texto visível no hub `/equipamentos`.
 
 ### 33. Contato
 
