@@ -7,6 +7,7 @@ const atendimentoLinks = [
   { icon: Search, title: "Diagnóstico Técnico", desc: "Por que o diagnóstico é essencial", to: "/diagnostico-tecnico" },
   { icon: Monitor, title: "Equipamentos", desc: "O que atendemos", to: "/equipamentos-atendidos" },
   { icon: Truck, title: "Coleta e Entrega", desc: "Logística para equipamentos", to: "/coleta-e-entrega" },
+  { icon: MapPin, title: "Áreas Atendidas", desc: "Bairros, cidades e cobertura", to: "/areas-atendidas" },
   { icon: AlertTriangle, title: "Quando Não Compensa", desc: "Transparência na decisão", to: "/quando-nao-compensa" },
   { icon: BookOpen, title: "Casos Reais", desc: "Problemas e soluções reais", to: "/problemas-reais-e-casos" },
   { icon: MessageCircle, title: "Contato", desc: "Fale conosco", to: "/contato" },
