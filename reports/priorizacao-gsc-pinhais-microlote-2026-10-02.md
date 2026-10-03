@@ -89,6 +89,6 @@ Somente após a auditoria autoral acima, a branch declara estas quatro entidades
 - `sitemap: true`;
 - tier `SERVICO_CIDADE_COM_INTENCAO_LOCAL`.
 
-A policy passa de **57 para 61 `SERVICO_CIDADE` explícitas**. As demais combinações de Pinhais continuam fail-closed; por exemplo, `/servicos/conserto-celular/pinhais` permanece canonicalizada para o serviço-pai.
+A policy passa de **57 para 61 `SERVICO_CIDADE` explícitas**. As demais combinações de Pinhais continuam fail-closed; por exemplo, `/servicos/conserto-celular/pinhais` permanece `noindex`, canonical self e fora do sitemap pela classificação conservadora atual.
 
 A efetivação em produção fica condicionada aos testes/gates e ao merge da PR.
