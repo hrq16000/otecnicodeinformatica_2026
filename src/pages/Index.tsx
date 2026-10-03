@@ -16,6 +16,8 @@ import { TrustStrip } from "@/components/TrustStrip";
 import { LazyOnVisible } from "@/components/LazyOnVisible";
 import { SkeletonSection } from "@/components/SkeletonSection";
 import { siteConfig } from "@/lib/siteConfig";
+import { Link } from "@/lib/router-compat";
+import { DISCOVERY_PILLAR_LINKS } from "@/lib/discoveryPillars";
 
 const HomeSections = lazy(() =>
   import("@/components/home/HomeSections").then((m) => ({ default: m.HomeSections })),
@@ -62,6 +64,33 @@ const Index = () => {
       <main>
         <HeroTriagem />
         <TrustStrip />
+
+        {/* Links SSR de primeiro nível para pilares ainda desconhecidos pelo Google.
+            Mantidos fora de lazy/Suspense para existirem no HTML inicial. */}
+        <section className="border-y border-border/60 bg-secondary/50 py-6" aria-labelledby="home-discovery-title">
+          <div className="container mx-auto">
+            <div className="mx-auto max-w-6xl">
+              <h2 id="home-discovery-title" className="mb-4 text-center text-lg font-bold text-foreground md:text-xl">
+                Encontre rápido a informação certa para o atendimento
+              </h2>
+              <nav aria-label="Páginas essenciais do atendimento" className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+                {DISCOVERY_PILLAR_LINKS.map((item) => (
+                  <Link
+                    key={item.to}
+                    to={item.to}
+                    className="rounded-xl border border-border bg-background p-4 transition-colors hover:border-accent/40 hover:bg-accent/5"
+                  >
+                    <span className="block font-semibold text-primary">{item.title}</span>
+                    <span className="mt-1 block text-sm leading-relaxed text-muted-foreground">
+                      {item.description}
+                    </span>
+                  </Link>
+                ))}
+              </nav>
+            </div>
+          </div>
+        </section>
+
         <ContextosBento />
         <EncontreSuaSolucao />
         <DiagnosticoIa />
