@@ -75,7 +75,7 @@ describe("Rodada 5D — serviço × São José dos Pinhais", () => {
       expect(p?.cidadeNome).toBe("São José dos Pinhais");
       expect(p?.cidadeSlug).toBe("sao-jose-dos-pinhais");
     }
-    expect(servicoLocal("conserto-notebook", "colombo")).toBeNull();
+    expect(servicoLocal("conserto-notebook", "fazenda-rio-grande")).toBeNull();
   });
 
   it("não repete a intenção nem a metadata da versão de Curitiba", () => {
