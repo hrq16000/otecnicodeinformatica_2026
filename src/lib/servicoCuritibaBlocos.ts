@@ -16,6 +16,7 @@ import data from "./servicoCuritibaBlocos.json";
 import dataSjp from "./servicoSjpBlocos.json";
 import dataAraucaria from "./servicoAraucariaBlocos.json";
 import dataCampoLargo from "./servicoCampoLargoBlocos.json";
+import dataPinhais from "./servicoPinhaisBlocos.json";
 
 export interface BlocoLocal {
   titulo: string;
@@ -51,6 +52,7 @@ const PAGINAS = (data as { paginas: Record<string, ServicoCuritibaPagina> }).pag
 const PAGINAS_SJP = (dataSjp as { paginas: Record<string, ServicoCuritibaPagina> }).paginas;
 const PAGINAS_ARAUCARIA = (dataAraucaria as { paginas: Record<string, ServicoCuritibaPagina> }).paginas;
 const PAGINAS_CAMPO_LARGO = (dataCampoLargo as { paginas: Record<string, ServicoCuritibaPagina> }).paginas;
+const PAGINAS_PINHAIS = (dataPinhais as { paginas: Record<string, ServicoCuritibaPagina> }).paginas;
 
 /** Mapa cidade → (slug de serviço → conteúdo local). */
 export const SERVICO_CIDADE_PAGINAS: Record<string, Record<string, ServicoCuritibaPagina>> = {
@@ -58,6 +60,7 @@ export const SERVICO_CIDADE_PAGINAS: Record<string, Record<string, ServicoCuriti
   "sao-jose-dos-pinhais": PAGINAS_SJP,
   araucaria: PAGINAS_ARAUCARIA,
   "campo-largo": PAGINAS_CAMPO_LARGO,
+  pinhais: PAGINAS_PINHAIS,
 };
 
 /** Slugs de serviço com conteúdo local próprio para Curitiba. */
@@ -75,12 +78,16 @@ export const SERVICO_ARAUCARIA_PATHS = Object.values(PAGINAS_ARAUCARIA).map((p) 
 /** Paths declarados para Campo Largo (fila 30). */
 export const SERVICO_CAMPO_LARGO_PATHS = Object.values(PAGINAS_CAMPO_LARGO).map((p) => p.path);
 
+/** Paths declarados para Pinhais (micro-lote GSC 2026-10). */
+export const SERVICO_PINHAIS_PATHS = Object.values(PAGINAS_PINHAIS).map((p) => p.path);
+
 /** Todas as páginas serviço × cidade com conteúdo local declarado. */
 export const TODAS_PAGINAS_LOCAIS: ServicoCuritibaPagina[] = [
   ...Object.values(PAGINAS),
   ...Object.values(PAGINAS_SJP),
   ...Object.values(PAGINAS_ARAUCARIA),
   ...Object.values(PAGINAS_CAMPO_LARGO),
+  ...Object.values(PAGINAS_PINHAIS),
 ];
 
 /** Conteúdo local do par serviço × cidade, ou null (fail-closed). */
