@@ -76,6 +76,13 @@ const MICRO_LOTE_COLOMBO_1_4 = [
   "/servicos/suporte-tecnico-empresarial/colombo",
 ];
 
+const MICRO_LOTE_COLOMBO_5_8 = [
+  "/servicos/upgrade-ssd/colombo",
+  "/servicos/backup-recuperacao/colombo",
+  "/servicos/redes-wifi/colombo",
+  "/servicos/pc-gamer/colombo",
+];
+
 describe("localIndexPolicy — regra de ouro", () => {
   it("nunca coloca no sitemap uma entidade não indexável", () => {
     for (const d of declaredEntities()) {
@@ -156,7 +163,7 @@ describe("localIndexPolicy — promoção top 10 service × cidade", () => {
     }
   });
 
-  it("promove o micro-lote GSC Colombo 1–4 e totaliza 65 SERVICO_CIDADE explícitas", () => {
+  it("mantém o micro-lote GSC Colombo 1–4 estável", () => {
     for (const path of MICRO_LOTE_COLOMBO_1_4) {
       const d = resolveLocal(path);
       expect(d.family).toBe("SERVICO_CIDADE");
@@ -165,7 +172,18 @@ describe("localIndexPolicy — promoção top 10 service × cidade", () => {
       expect(d.sitemap).toBe(true);
       expect(d.tier).toBe("SERVICO_CIDADE_COM_INTENCAO_LOCAL");
     }
-    expect(declaredEntities().filter((d) => d.family === "SERVICO_CIDADE")).toHaveLength(65);
+  });
+
+  it("promove o micro-lote GSC Colombo 5–8 e totaliza 69 SERVICO_CIDADE explícitas", () => {
+    for (const path of MICRO_LOTE_COLOMBO_5_8) {
+      const d = resolveLocal(path);
+      expect(d.family).toBe("SERVICO_CIDADE");
+      expect(d.indexability).toBe("index");
+      expect(canonicalFor(path)).toBe(path);
+      expect(d.sitemap).toBe(true);
+      expect(d.tier).toBe("SERVICO_CIDADE_COM_INTENCAO_LOCAL");
+    }
+    expect(declaredEntities().filter((d) => d.family === "SERVICO_CIDADE")).toHaveLength(69);
   });
 
   it("mantém outra combinação da família no estado fail-closed anterior", () => {
