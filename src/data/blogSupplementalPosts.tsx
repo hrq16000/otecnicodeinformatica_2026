@@ -1957,9 +1957,9 @@ export const blogSupplementalPosts: Record<string, BlogPostContent> = {
   },
 
   "como-trocar-tela-notebook-passo-a-passo": {
-    title: "Como trocar a tela do notebook: compatibilidade, desmontagem segura e validação antes de fechar",
+    title: "Como trocar tela de notebook sem comprar a peça errada",
     excerpt:
-      "Antes de trocar a tela do notebook, confirme o defeito, o código do painel, conector, resolução e fixação. Veja uma sequência segura para evitar comprar a peça errada ou danificar cabo, placa e moldura.",
+      "Veja como confirmar se o defeito é da tela, identificar painel, conector e resolução e desmontar com segurança antes de comprar ou fechar o notebook.",
     date: "2026-10-01",
     readTime: "15 min",
     category: "Manutenção de Notebook",
@@ -9606,9 +9606,9 @@ net start spooler`}</code></pre>
   },
 
   "notebook-nao-liga-o-que-fazer": {
-    title: "Notebook não liga: como separar energia, POST, vídeo e boot sem piorar o defeito",
+    title: "Notebook não liga? Carregador, bateria, POST ou tela",
     excerpt:
-      "Sem luz, liga sem imagem, bipa, desliga sozinho ou só funciona na tomada? Use uma triagem segura para separar carregador, bateria, POST, tela e inicialização antes de abrir o notebook.",
+      "Sem luz, liga sem imagem, bipa ou desliga? Veja como separar carregador, bateria, POST, vídeo e boot antes de abrir ou trocar peças.",
     date: "2026-09-30",
     readTime: "15 min",
     category: "Manutenção",
@@ -9978,9 +9978,9 @@ net start spooler`}</code></pre>
   },
 
   "codigos-de-erro-tela-azul-windows": {
-    title: "Códigos da tela azul do Windows: como interpretar stop codes sem adivinhar a causa",
+    title: "Tela azul no Windows: o que significam os códigos de erro",
     excerpt:
-      "Aprenda o que um stop code realmente indica, como usar contexto, parâmetros e arquivos de despejo e por que MEMORY_MANAGEMENT, WHEA e outros códigos não condenam uma peça sozinhos.",
+      "Entenda stop codes como MEMORY_MANAGEMENT e WHEA, use contexto e minidumps e evite culpar RAM, SSD ou placa-mãe sem diagnóstico.",
     date: "2026-09-29",
     readTime: "15 min",
     category: "Procedimentos Técnicos",
