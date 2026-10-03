@@ -1844,9 +1844,9 @@ export const SERVICOS_CORE: Record<string, ServicoLandingData> = {
   "pc-gamer": {
     path: "pc-gamer",
     trackingKey: "pc-gamer",
-    metaTitle: "Manutenção de PC Gamer em Curitiba | Desempenho e Upgrade",
+    metaTitle: "PC gamer travando ou esquentando em Curitiba? Diagnóstico",
     metaDescription:
-      "Manutenção de PC gamer em Curitiba: queda de FPS, travamento, superaquecimento e desligamento em jogo. Medição de temperatura, revisão de fonte e upgrade avaliado antes.",
+      "Queda de FPS, travamentos ou desligamentos em jogo? Veja como separar temperatura, fonte, armazenamento e software antes de trocar placa ou fazer upgrade.",
     serviceName: "Manutenção e Upgrade de PC Gamer",
     serviceDescription:
       "Diagnóstico de desempenho, temperatura e estabilidade em computadores gamer, com limpeza, revisão térmica, avaliação de fonte e upgrade de componentes em Curitiba e região.",
