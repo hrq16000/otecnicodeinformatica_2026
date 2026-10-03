@@ -36,7 +36,7 @@ export const CLUSTER_EQUIPAMENTOS: ClusterEquipamento[] = [
     slug: "notebook",
     path: "/equipamentos/notebook",
     titulo: "Notebook: sintomas mais comuns e como cada um é resolvido",
-    metaTitle: "Notebook com problema: sintomas e reparos | O Técnico de Informática",
+    metaTitle: "Notebook não liga, esquenta ou não carrega? O que verificar",
     metaDescription:
       "Notebook lento, que não liga, superaquecendo, com tela apagada ou bateria que não segura carga. Veja o que cada sintoma indica e qual atendimento resolve.",
     resumo:
