@@ -80,12 +80,12 @@ describe("micro-lote GSC Pinhais 1–4", () => {
     }
   });
 
-  it("mantém combinação de Pinhais fora do micro-lote canonicalizada no pai", () => {
+  it("mantém combinação de Pinhais fora do micro-lote noindex e fora do sitemap", () => {
     const path = "/servicos/conserto-celular/pinhais";
     const d = resolveLocal(path);
-    expect(d.indexability).toBe("canonicalized");
+    expect(d.indexability).toBe("noindex");
     expect(d.sitemap).toBe(false);
-    expect(canonicalFor(path)).toBe("/servicos/conserto-celular");
+    expect(canonicalFor(path)).toBe(path);
   });
 
   it("mantém cada nova página abaixo do teto de similaridade contra todo o corpus", () => {
