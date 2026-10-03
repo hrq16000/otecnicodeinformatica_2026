@@ -1066,7 +1066,7 @@ export const CLUSTER_PROBLEMAS: ClusterProblema[] = [
     slug: "windows-nao-inicia",
     path: "/problemas/windows-nao-inicia",
     titulo: "Windows não inicia: erro 0xc0000428, reparo automático e loop de boot",
-    metaTitle: "Windows não inicia? Reparo automático, boot e erro 0xc0000428",
+    metaTitle: "Windows não inicia? Reparo automático, boot e 0xc0000428",
     metaDescription:
       "Windows não inicia ou entra em reparo automático? Separe boot, SSD/HD, BCD, WinRE, BitLocker e erro 0xc0000428 antes de formatar ou reinstalar.",
     resumo:
