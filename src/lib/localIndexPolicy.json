@@ -791,6 +791,50 @@
       "tier": "SERVICO_CIDADE_COM_INTENCAO_LOCAL",
       "intent": "solicitar diagnóstico de PC gamer em Pinhais reproduzindo a falha sob carga, conferindo energia e temperatura e identificando gargalo antes de recomendar reparo ou upgrade",
       "reason": "Micro-lote GSC Pinhais 1–4: família com 1 impressão no GSC atual; conteúdo autoral com 767 palavras e 94,9% de unicidade, auditado antes da promoção."
+    },
+    {
+      "path": "/servicos/conserto-tv/colombo",
+      "family": "SERVICO_CIDADE",
+      "indexability": "index",
+      "canonical": "/servicos/conserto-tv/colombo",
+      "sitemap": true,
+      "parent": "/servicos/conserto-tv",
+      "tier": "SERVICO_CIDADE_COM_INTENCAO_LOCAL",
+      "intent": "solicitar conserto de TV em Colombo com triagem por modelo, tamanho e sintoma, definição segura de transporte e diagnóstico antes de aprovar peça ou reparo",
+      "reason": "Micro-lote GSC Colombo 1–4: família com 112 impressões no GSC atual; conteúdo autoral com 822 palavras e 96,6% de unicidade, auditado antes da promoção."
+    },
+    {
+      "path": "/servicos/conserto-notebook/colombo",
+      "family": "SERVICO_CIDADE",
+      "indexability": "index",
+      "canonical": "/servicos/conserto-notebook/colombo",
+      "sitemap": true,
+      "parent": "/servicos/manutencao-de-notebook",
+      "tier": "SERVICO_CIDADE_COM_INTENCAO_LOCAL",
+      "intent": "solicitar conserto de notebook em Colombo com triagem pelo sintoma, preservação de dados, avaliação de risco físico e escolha entre remoto, visita, coleta ou bancada",
+      "reason": "Micro-lote GSC Colombo 1–4: família com 47 impressões no GSC atual; conteúdo autoral com 748 palavras e 97,2% de unicidade, auditado antes da promoção."
+    },
+    {
+      "path": "/servicos/conserto-pc/colombo",
+      "family": "SERVICO_CIDADE",
+      "indexability": "index",
+      "canonical": "/servicos/conserto-pc/colombo",
+      "sitemap": true,
+      "parent": "/servicos/manutencao-de-computador",
+      "tier": "SERVICO_CIDADE_COM_INTENCAO_LOCAL",
+      "intent": "solicitar conserto de PC em Colombo com triagem do sintoma, separação entre hardware e software e definição de visita ou bancada sem troca por tentativa",
+      "reason": "Micro-lote GSC Colombo 1–4: família com 18 impressões no GSC atual; conteúdo autoral com 708 palavras e 97,4% de unicidade, auditado antes da promoção."
+    },
+    {
+      "path": "/servicos/suporte-tecnico-empresarial/colombo",
+      "family": "SERVICO_CIDADE",
+      "indexability": "index",
+      "canonical": "/servicos/suporte-tecnico-empresarial/colombo",
+      "sitemap": true,
+      "parent": "/servicos/suporte-tecnico-empresarial",
+      "tier": "SERVICO_CIDADE_COM_INTENCAO_LOCAL",
+      "intent": "contratar suporte técnico empresarial em Colombo com triagem por impacto, registro do chamado e definição entre atendimento remoto e presencial sem inventar SLA ou equipe fixa",
+      "reason": "Micro-lote GSC Colombo 1–4: família com 13 impressões no GSC atual; conteúdo autoral com 697 palavras e 88,1% de unicidade, auditado antes da promoção."
     }
   ],
   "bairrosAncora": [

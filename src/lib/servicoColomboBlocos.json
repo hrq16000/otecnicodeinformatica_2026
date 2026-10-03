@@ -1,0 +1,386 @@
+{
+  "_doc": "MICRO-LOTE GSC COLOMBO 1–4 — conteúdo local autoral fail-closed. Seleção baseada no GSC de 2026-09-03 a 2026-09-30, settled through 2026-09-29. A presença deste arquivo NÃO liga indexação; localIndexPolicy.json continua sendo a fonte de verdade.",
+  "paginas": {
+    "conserto-tv": {
+      "path": "/servicos/conserto-tv/colombo",
+      "parent": "/servicos/conserto-tv",
+      "nome": "Conserto de TV",
+      "intentGlobal": "entender diagnóstico de televisão: alimentação, imagem, iluminação, placa principal, painel, áudio, entradas e sistema",
+      "intentLocal": "solicitar conserto de TV em Colombo com triagem por modelo, tamanho e sintoma, definição segura de transporte e diagnóstico antes de aprovar peça ou reparo",
+      "title": "Conserto de TV em Colombo | Triagem e diagnóstico antes do reparo",
+      "description": "Assistência para TV em Colombo com leitura do sintoma, avaliação de risco no transporte e diagnóstico em bancada antes de aprovar componente ou reparo.",
+      "h1": "Conserto de TV em Colombo",
+      "subtitulo": "Triagem técnica para separar falha de alimentação, imagem, iluminação, placa, sistema e painel antes de movimentar ou abrir o aparelho.",
+      "intro": [
+        "Televisão sem imagem, com som normal, não deve receber a mesma hipótese de uma TV que reinicia, perde HDMI ou simplesmente não liga. A triagem começa pelo comportamento: marca, modelo, polegadas, luz de standby, presença de áudio, momento em que a falha surgiu e se houve queda de energia, impacto ou atualização. Esse registro evita transformar sintomas diferentes em uma única resposta genérica.",
+        "Em Colombo, o endereço ajuda a planejar coleta ou entrega depois que a condição do aparelho é entendida. Televisores precisam de avaliação em bancada quando o reparo exige abertura e medição interna; por isso a logística é combinada antes do transporte. Não se presume oficina local, técnico fixo ou prazo imediato apenas por a operação atender o município."
+      ],
+      "blocos": [
+        {
+          "titulo": "Identificar o modelo exato reduz erro de diagnóstico e de peça",
+          "paragrafos": [
+            "A etiqueta traseira informa a variante correta do televisor. Modelos com nome comercial parecido podem usar painéis, fontes e placas diferentes, então procurar componente apenas pela aparência aumenta o risco de comprar a peça errada. Uma foto legível da etiqueta já melhora a triagem antes de qualquer deslocamento.",
+            "Se o defeito aparece somente depois de algum tempo ligado, um vídeo curto pode ser mais útil que uma descrição genérica. Registrar o que acontece antes da tela apagar, do áudio sumir ou do aparelho reiniciar ajuda a reproduzir a condição na bancada e reduz trocas por tentativa.",
+            "O sintoma orienta a sequência de testes, mas não fecha a causa sozinho. Som sem imagem pode apontar para iluminação, porém alimentação, placa principal, conexões e circuito de imagem ainda precisam ser avaliados antes de concluir."
+          ]
+        },
+        {
+          "titulo": "Transporte faz parte do risco quando a tela é grande",
+          "paragrafos": [
+            "Mover uma televisão exige considerar tamanho, peso, suporte de parede, acesso ao imóvel e forma de proteger a tela. Um equipamento com defeito eletrônico pode ganhar dano físico se for deitado de forma inadequada, pressionado no painel ou transportado sem apoio suficiente.",
+            "Por isso coleta e entrega precisam ser combinadas com clareza. A triagem deve definir quem fará a movimentação, em que condição o aparelho será recebido e se existe embalagem ou proteção adequada. Improvisar transporte apenas para acelerar o atendimento pode aumentar o prejuízo.",
+            "Quando o cliente leva o aparelho por conta própria, ainda vale registrar antes o estado externo, acessórios entregues e sintoma observado. Essa informação ajuda a distinguir o problema original de qualquer alteração ocorrida durante o trajeto."
+          ]
+        },
+        {
+          "titulo": "Falha intermitente precisa de contexto, não de adivinhação",
+          "paragrafos": [
+            "TV que funciona fria e falha depois de aquecer, entrada que perde sinal apenas com um dispositivo ou aplicativo que trava após atualização são cenários diferentes. O tempo até o defeito, a fonte de sinal e as condições em que ele acontece ajudam a decidir quais etapas reproduzir primeiro.",
+            "Oscilação elétrica, raio, cheiro de queimado, estalo ou aquecimento anormal são informações de segurança e devem ser relatadas já na abertura. Nesses casos, insistir em ligar repetidamente o aparelho pode ser inadequado até uma avaliação técnica.",
+            "Se o defeito desaparece antes da chegada à bancada, isso não prova que a TV está normal. O registro do comportamento continua sendo útil para orientar teste prolongado e impedir que a ausência momentânea do sintoma leve a uma conclusão apressada."
+          ]
+        },
+        {
+          "titulo": "Orçamento vem depois de descobrir o que realmente falhou",
+          "paragrafos": [
+            "O custo de uma fonte, iluminação, placa principal ou painel pode ser muito diferente. Informar preço final antes de saber qual estágio está defeituoso cria expectativa sem base. A sequência correta é diagnóstico, explicação da causa provável, avaliação de peça e só então proposta para execução.",
+            "Também é necessário considerar viabilidade. Em alguns aparelhos, uma peça pode ter custo ou disponibilidade que torna o reparo pouco racional em comparação com substituição. O cliente deve receber essa informação antes de autorizar, sem pressão para seguir com um serviço que não faça sentido.",
+            "Tela quebrada e falha eletrônica de imagem também precisam ser separadas. Visualmente ambas podem resultar em ausência de imagem, mas a origem, o risco e a viabilidade de reparo são completamente diferentes."
+          ]
+        },
+        {
+          "titulo": "A janela de 2 a 72 horas úteis se refere ao início do atendimento",
+          "paragrafos": [
+            "A operação utiliza uma janela variável de 2 a 72 horas úteis conforme urgência e disponibilidade. Em Colombo, essa referência pode organizar triagem, coleta ou encaminhamento, mas não significa televisão concluída dentro do mesmo período.",
+            "Diagnóstico intermitente, necessidade de componente, testes após o reparo e logística de transporte podem ampliar o tempo total. Um prazo de conclusão só pode ser discutido com mais precisão depois que a falha e a necessidade de peça são conhecidas.",
+            "Informar modelo, polegadas, sintoma e condição de transporte logo no primeiro contato torna a triagem mais eficiente. Prioridade pode variar conforme risco e impacto, mas não vira ETA garantido."
+          ]
+        },
+        {
+          "titulo": "Alcance nacional não deve ser convertido em equipe local fictícia",
+          "paragrafos": [
+            "A operação começou em Curitiba em 2006 e hoje integra uma rede nacional com mais de 6 mil prestadores credenciados. Esse número é nacional e não representa quantidade de técnicos de TV disponíveis em Colombo.",
+            "A disponibilidade é confirmada para cada chamado conforme perfil técnico, agenda e logística. A página não presume filial, bancada permanente ou quantidade municipal de profissionais sem fonte específica.",
+            "O compromisso com uma tarifa mínima justa para o prestador valoriza triagem, manuseio, diagnóstico e teste. Em televisão, essas etapas reduzem a chance de uma peça cara ser indicada apenas por suspeita."
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "pergunta": "Vocês consertam TV na casa do cliente em Colombo?",
+          "resposta": "O reparo que exige abertura e medição interna segue para avaliação em bancada. A triagem define a forma de coleta ou entrega conforme disponibilidade."
+        },
+        {
+          "pergunta": "Som sem imagem confirma defeito no LED?",
+          "resposta": "Não. Iluminação é uma hipótese possível, mas alimentação, placa e outros circuitos também precisam ser avaliados."
+        },
+        {
+          "pergunta": "Preciso transportar a TV antes de falar com o atendimento?",
+          "resposta": "Não. Informe modelo, polegadas, sintoma e endereço primeiro para definir a logística com mais segurança."
+        },
+        {
+          "pergunta": "A TV fica pronta em até 72 horas úteis?",
+          "resposta": "Não necessariamente. A faixa de 2 a 72 horas úteis organiza o início do atendimento; diagnóstico, peça e testes podem exigir tempo adicional."
+        },
+        {
+          "pergunta": "Quantos técnicos de TV atendem Colombo?",
+          "resposta": "Não publicamos contagem municipal sem fonte confirmada. O dado institucional é de mais de 6 mil prestadores credenciados na rede nacional."
+        }
+      ],
+      "interlinks": [
+        "/servicos/conserto-tv",
+        "/tecnico-informatica-colombo",
+        "/precos-e-politicas",
+        "/areas-atendidas"
+      ],
+      "cidadeSlug": "colombo",
+      "cidadeNome": "Colombo"
+    },
+    "conserto-notebook": {
+      "path": "/servicos/conserto-notebook/colombo",
+      "parent": "/servicos/manutencao-de-notebook",
+      "nome": "Conserto de Notebook",
+      "intentGlobal": "diagnosticar notebook com falha de inicialização, aquecimento, tela, teclado, bateria, armazenamento, memória, dobradiça ou sistema",
+      "intentLocal": "solicitar conserto de notebook em Colombo com triagem pelo sintoma, preservação de dados, avaliação de risco físico e escolha entre remoto, visita, coleta ou bancada",
+      "title": "Conserto de Notebook em Colombo | Diagnóstico antes da troca de peça",
+      "description": "Conserto de notebook em Colombo com triagem do sintoma, cuidado com dados e diagnóstico de aquecimento, tela, energia, armazenamento e sistema.",
+      "h1": "Conserto de notebook em Colombo",
+      "subtitulo": "Diagnóstico por sintoma para separar software, armazenamento, temperatura, energia e defeito físico antes de formatar ou trocar componentes.",
+      "intro": [
+        "Notebook lento, que desliga sozinho, aquece, não carrega ou perde vídeo pode apresentar sintomas parecidos com causas muito diferentes. A triagem começa perguntando quando o defeito surgiu, se houve queda, líquido, atualização, troca de peça ou mudança de carregador. Formatar por reflexo ou substituir componentes sem medir primeiro pode apagar evidências e não resolver a causa.",
+        "Em Colombo, a modalidade depende do estado do equipamento. Se o notebook liga e o problema está em software ou configuração, parte da análise pode começar remotamente. Falha elétrica, dobradiça, tela, conector, aquecimento severo ou máquina que não inicia pode exigir visita, coleta ou bancada conforme a condição do aparelho e a disponibilidade."
+      ],
+      "blocos": [
+        {
+          "titulo": "Antes de formatar, é preciso descobrir se o gargalo é realmente o sistema",
+          "paragrafos": [
+            "Lentidão pode vir de armazenamento degradado, memória insuficiente, temperatura alta, inicialização carregada ou erro do sistema. Reinstalar o Windows sem verificar esses pontos pode produzir melhora temporária ou nenhuma melhora, além de criar risco desnecessário para os arquivos.",
+            "Uso de disco, memória, temperatura, saúde do armazenamento e comportamento durante inicialização ajudam a separar as causas. Se o SSD ou HD apresenta falhas, a prioridade muda para preservar dados antes de qualquer procedimento mais invasivo.",
+            "Quando o equipamento ainda funciona, uma descrição do que fica lento também ajuda: abrir arquivos, iniciar o Windows, navegar, executar um programa específico ou voltar da suspensão são situações que apontam para camadas diferentes."
+          ]
+        },
+        {
+          "titulo": "Aquecimento precisa ser relacionado à carga e ao comportamento da máquina",
+          "paragrafos": [
+            "Ventoinha acelerada não significa automaticamente defeito, assim como temperatura alta isolada não explica toda queda de desempenho. É necessário observar se o processador reduz frequência, se o fluxo de ar está obstruído e se o problema aparece em carga ou até em repouso.",
+            "Limpeza e substituição de pasta térmica só devem ser indicadas quando o estado físico e as medições justificarem. Fazer manutenção térmica genérica em toda máquina lenta pode esconder falha de armazenamento, driver ou alimentação.",
+            "Se o notebook desliga, apresenta cheiro de queimado ou aquece de forma anormal em uma região específica, insistir em uso pesado antes da avaliação pode ser inadequado. Segurança e preservação do equipamento têm prioridade sobre reproduzir o defeito a qualquer custo."
+          ]
+        },
+        {
+          "titulo": "Tela, dobradiça e conector exigem atenção ao dano mecânico",
+          "paragrafos": [
+            "Imagem que some ao mover a tampa, dobradiça endurecida, carcaça abrindo ou conector frouxo são sinais físicos que precisam ser documentados antes de desmontar. Forçar a abertura pode transformar uma folga em quebra de tampa, cabo ou moldura.",
+            "Em casos assim, fotos do estado externo ajudam a registrar o ponto de partida. A avaliação deve separar falha de tela, cabo, conector, tampa e placa, porque trocar o componente errado aumenta custo sem corrigir a estrutura que provocou o problema.",
+            "Carregador e conector de energia também precisam ser avaliados como conjunto. Usar fonte incompatível ou adaptador improvisado pode gerar novos sintomas e dificultar o diagnóstico da falha original."
+          ]
+        },
+        {
+          "titulo": "Dados entram no diagnóstico antes de qualquer intervenção destrutiva",
+          "paragrafos": [
+            "Quando existem documentos, fotos ou projetos importantes, isso deve ser informado na abertura. Procedimentos que envolvem reinstalação, troca de armazenamento ou tentativa de recuperação precisam considerar primeiro o que deve ser preservado.",
+            "Se o armazenamento está instável, copiar tudo de forma indiscriminada pode não ser a melhor primeira ação. Priorizar arquivos essenciais e reduzir novas gravações ajuda a organizar a estratégia quando existe risco de perda.",
+            "O atendimento também precisa distinguir backup de migração. Ter uma cópia verificável em outro dispositivo é diferente de simplesmente mover o sistema para um SSD novo sem confirmar que os arquivos importantes permanecem acessíveis."
+          ]
+        },
+        {
+          "titulo": "A janela operacional varia de 2 a 72 horas úteis",
+          "paragrafos": [
+            "A operação trabalha com uma janela de início entre 2 e 72 horas úteis conforme urgência e disponibilidade. Em Colombo, o endereço e a modalidade entram no planejamento, mas a faixa não significa notebook reparado dentro desse período.",
+            "Falha intermitente, necessidade de bancada, peça, testes prolongados ou dependência de backup podem aumentar o tempo total. A previsão fica mais confiável depois do diagnóstico inicial e da confirmação do que será executado.",
+            "Informar logo no começo se a máquina é usada para trabalho, estudo ou atividade crítica ajuda a classificar impacto. Isso orienta prioridade sem criar promessa de encaixe imediato ou SLA inexistente."
+          ]
+        },
+        {
+          "titulo": "Rede nacional é contexto institucional, não contagem de Colombo",
+          "paragrafos": [
+            "A operação começou em Curitiba em 2006 e hoje integra uma rede nacional com mais de 6 mil prestadores credenciados. O número se refere à rede nacional e não à quantidade de técnicos de notebook em Colombo.",
+            "Cada chamado depende de disponibilidade e compatibilidade do perfil técnico com o problema. Não se presume equipe fixa, filial ou estoque local de peças apenas porque o município é atendido.",
+            "O compromisso com uma tarifa mínima justa para o prestador reconhece diagnóstico, desmontagem responsável, documentação e teste. Em notebook, descobrir que uma peça não precisa ser trocada pode evitar um custo muito maior que a própria avaliação."
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "pergunta": "Notebook lento precisa sempre ser formatado?",
+          "resposta": "Não. Armazenamento, memória, temperatura, programas e sistema precisam ser avaliados antes de decidir por formatação."
+        },
+        {
+          "pergunta": "Notebook esquentando exige troca de pasta térmica?",
+          "resposta": "Nem sempre. Fluxo de ar, ventoinha, dissipador, carga e outros fatores também influenciam a temperatura."
+        },
+        {
+          "pergunta": "Vocês preservam meus arquivos?",
+          "resposta": "A preservação é considerada antes de procedimentos com risco de perda. Informe quais dados são essenciais já na triagem."
+        },
+        {
+          "pergunta": "O reparo termina em até 72 horas úteis?",
+          "resposta": "Não necessariamente. A faixa organiza o início do atendimento; peça, bancada e testes podem ampliar o prazo."
+        },
+        {
+          "pergunta": "Quantos técnicos de notebook atendem Colombo?",
+          "resposta": "Não publicamos contagem municipal sem fonte confirmada. A rede nacional possui mais de 6 mil prestadores credenciados."
+        }
+      ],
+      "interlinks": [
+        "/servicos/manutencao-de-notebook",
+        "/tecnico-informatica-colombo",
+        "/problemas/computador-esquentando",
+        "/precos-e-politicas"
+      ],
+      "cidadeSlug": "colombo",
+      "cidadeNome": "Colombo"
+    },
+    "conserto-pc": {
+      "path": "/servicos/conserto-pc/colombo",
+      "parent": "/servicos/manutencao-de-computador",
+      "nome": "Conserto de PC",
+      "intentGlobal": "diagnosticar computador desktop que não liga, trava, reinicia, aquece, apresenta tela azul, falha de armazenamento, memória, fonte ou sistema",
+      "intentLocal": "solicitar conserto de PC em Colombo com triagem do sintoma, separação entre hardware e software e definição de visita ou bancada sem troca por tentativa",
+      "title": "Conserto de PC em Colombo | Hardware, Windows e diagnóstico",
+      "description": "Conserto de PC em Colombo para máquina que não liga, trava, reinicia ou fica lenta, com diagnóstico de hardware e software antes de trocar peças.",
+      "h1": "Conserto de PC em Colombo",
+      "subtitulo": "Triagem para separar fonte, memória, armazenamento, temperatura, placa, periférico e Windows antes de indicar reparo ou upgrade.",
+      "intro": [
+        "Computador que não liga, reinicia sob carga, apresenta tela azul ou simplesmente ficou lento não deve receber uma única receita. A abertura do chamado precisa registrar o que ainda funciona, quando o comportamento começou e se houve troca recente de peça, queda de energia, atualização ou mudança de periférico. Esse histórico define a ordem de teste e evita substituição aleatória.",
+        "Em Colombo, desktops podem ser avaliados no endereço quando o ambiente e o sintoma permitem, mas falhas que exigem teste prolongado, desmontagem ou comparação de componentes podem seguir para bancada. A modalidade é decidida pela triagem e pela disponibilidade, sem promessa de equipe fixa ou diagnóstico instantâneo."
+      ],
+      "blocos": [
+        {
+          "titulo": "PC que não liga começa por energia, não por placa-mãe",
+          "paragrafos": [
+            "Antes de condenar placa-mãe, a investigação considera tomada, cabo, filtro de linha, fonte, botão do gabinete, conexões internas e sinais de curto. Uma máquina sem vídeo também pode estar ligando parcialmente, por isso ruído de ventoinha e LEDs não bastam para concluir.",
+            "Se houve cheiro de queimado, estalo, conector aquecido ou repetidas tentativas de ligar depois de uma falha elétrica, o atendimento deve priorizar segurança. Insistir em energizar pode ampliar o dano ou dificultar a identificação do componente inicial.",
+            "Quando existe outra fonte ou componente para teste, a substituição temporária deve ser usada como evidência controlada, não como compra antecipada. O objetivo é provar a causa antes de recomendar gasto."
+          ]
+        },
+        {
+          "titulo": "Travamento e tela azul precisam ser relacionados ao momento da falha",
+          "paragrafos": [
+            "Uma tela azul durante inicialização aponta para caminhos diferentes de uma falha que surge apenas em jogo, cópia de arquivos ou várias horas de uso. Código de erro, frequência e atividade executada ajudam a separar sistema, memória, armazenamento, driver e temperatura.",
+            "Reinício sem mensagem também exige contexto. Fonte, proteção térmica, memória e falha de energia podem produzir comportamento parecido, então a análise deve observar o conjunto em vez de escolher uma peça por reputação.",
+            "Quando o problema é intermitente, registrar a condição de uso e tentar reproduzi-la de forma controlada é mais útil do que declarar o computador normal porque ele ficou estável por alguns minutos."
+          ]
+        },
+        {
+          "titulo": "Lentidão precisa ser medida antes de virar proposta de upgrade",
+          "paragrafos": [
+            "Uso de disco, memória, CPU e temperatura mostram onde o computador espera mais. Um SSD pode transformar uma máquina limitada por armazenamento, mas não corrige memória defeituosa, fonte instável ou software mal configurado.",
+            "Da mesma forma, aumentar memória sem observar o consumo real pode gerar pouco ganho. O upgrade deve responder a um gargalo identificado e considerar compatibilidade, objetivo do usuário e estado geral da plataforma.",
+            "Se a máquina é usada para tarefas básicas, trabalho pesado ou jogos, essa finalidade precisa entrar na avaliação. O melhor investimento depende do que o computador realmente precisa entregar."
+          ]
+        },
+        {
+          "titulo": "Arquivos importantes mudam a ordem do reparo",
+          "paragrafos": [
+            "Quando o PC apresenta armazenamento instável, erros de leitura ou falha de inicialização, a prioridade pode ser preservar dados antes de reinstalar sistema ou executar testes agressivos. O cliente deve informar quais arquivos não podem ser perdidos.",
+            "Backup não é apenas copiar uma pasta sem validar. É necessário confirmar que os dados importantes abriram no destino e que a mídia usada para a cópia não é a mesma unidade suspeita.",
+            "Se o reparo exigir formatação ou substituição de armazenamento, a proposta precisa deixar claro o que será preservado, o que depende de credenciais e quais aplicativos precisarão ser reinstalados depois."
+          ]
+        },
+        {
+          "titulo": "A janela de 2 a 72 horas úteis organiza o início, não a conclusão",
+          "paragrafos": [
+            "A referência operacional varia de 2 a 72 horas úteis conforme urgência e disponibilidade. Em Colombo, endereço, porte do gabinete e necessidade de bancada ajudam a definir a modalidade, mas a janela não promete PC reparado dentro do mesmo período.",
+            "Peça, teste prolongado, falha intermitente ou recuperação de dados podem ampliar o tempo total. A estimativa melhora depois que o defeito é reproduzido e o escopo de reparo é conhecido.",
+            "Máquina completamente parada pode ter prioridade maior que melhoria programada, porém prioridade continua dependente da agenda. O atendimento não deve transformar impacto em SLA que não foi contratado."
+          ]
+        },
+        {
+          "titulo": "Rede nacional não equivale a técnicos permanentemente alocados no município",
+          "paragrafos": [
+            "A operação começou em Curitiba em 2006 e hoje integra uma rede nacional com mais de 6 mil prestadores credenciados. Esse total é nacional e não representa quantidade de técnicos de PC em Colombo.",
+            "A disponibilidade é consultada caso a caso conforme perfil e agenda. Não se presume filial, estoque ou bancada local sem confirmação específica.",
+            "O compromisso com uma tarifa mínima justa para o prestador reconhece o tempo de diagnóstico, medição e validação. Em manutenção de PC, evitar a troca de uma peça saudável também é resultado técnico relevante."
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "pergunta": "PC que não liga significa placa-mãe queimada?",
+          "resposta": "Não. Fonte, energia, botão, conexões e outros componentes precisam ser verificados antes de concluir."
+        },
+        {
+          "pergunta": "Computador lento precisa de SSD?",
+          "resposta": "Pode ajudar quando o armazenamento é o gargalo, mas memória, temperatura e software também precisam ser medidos."
+        },
+        {
+          "pergunta": "Vocês atendem PC gamer?",
+          "resposta": "Sim, com diagnóstico de estabilidade, temperatura, energia e desempenho antes de indicar troca ou upgrade."
+        },
+        {
+          "pergunta": "O PC fica pronto em até 72 horas úteis?",
+          "resposta": "Não necessariamente. A faixa organiza o início do atendimento; testes, peça e bancada podem exigir tempo adicional."
+        },
+        {
+          "pergunta": "Quantos técnicos de PC atendem Colombo?",
+          "resposta": "Não publicamos contagem municipal sem fonte confirmada. A rede nacional possui mais de 6 mil prestadores credenciados."
+        }
+      ],
+      "interlinks": [
+        "/servicos/manutencao-de-computador",
+        "/tecnico-informatica-colombo",
+        "/servicos/pc-gamer",
+        "/precos-e-politicas"
+      ],
+      "cidadeSlug": "colombo",
+      "cidadeNome": "Colombo"
+    },
+    "suporte-tecnico-empresarial": {
+      "path": "/servicos/suporte-tecnico-empresarial/colombo",
+      "parent": "/servicos/suporte-tecnico-empresarial",
+      "nome": "Suporte Técnico Empresarial",
+      "intentGlobal": "organizar suporte de TI para empresas por impacto, estações, usuários, rede, software, segurança, continuidade e rotina preventiva",
+      "intentLocal": "contratar suporte técnico empresarial em Colombo com triagem por impacto, registro do chamado e definição entre atendimento remoto e presencial sem inventar SLA ou equipe fixa",
+      "title": "Suporte de TI para Empresas em Colombo | Chamados, rede e continuidade",
+      "description": "Suporte de TI para empresas em Colombo com priorização por impacto, registro do chamado, análise de estações e rede e definição da modalidade adequada.",
+      "h1": "Suporte técnico empresarial em Colombo",
+      "subtitulo": "Atendimento orientado pelo impacto real na operação, separando falha de estação, usuário, rede, aplicativo e infraestrutura antes de executar mudanças.",
+      "intro": [
+        "Quando uma empresa perde acesso ao sistema, uma estação deixa de iniciar ou várias pessoas ficam sem rede, o primeiro dado necessário é o impacto. Quantos usuários foram afetados, qual atividade parou, o que ainda funciona e se existe alternativa temporária ajudam a definir prioridade e evitam que um chamado amplo seja tratado como simples defeito de computador.",
+        "Para empresas em Colombo, parte da triagem pode começar remotamente quando existe conectividade e autorização suficiente. Falhas de cabeamento, energia, equipamento físico ou ambiente podem exigir presença no local. A modalidade e o deslocamento são confirmados depois do escopo inicial, sem pressupor equipe permanente, filial ou tempo de resposta fixo no município."
+      ],
+      "blocos": [
+        {
+          "titulo": "Prioridade precisa refletir impacto, não apenas ordem de chegada",
+          "paragrafos": [
+            "Uma impressora isolada indisponível tem impacto diferente de várias estações sem acesso ao sistema. A abertura do chamado deve registrar usuários afetados, processo interrompido e possibilidade de contingência para que a urgência seja classificada com contexto.",
+            "Esse histórico também ajuda a perceber reincidência. Se a mesma falha aparece toda semana, restaurar o funcionamento sem investigar padrão pode apenas adiar uma interrupção maior.",
+            "Prioridade não deve ser apresentada como promessa de atendimento instantâneo. Ela organiza o esforço dentro da disponibilidade real e do perfil técnico necessário para cada ocorrência."
+          ]
+        },
+        {
+          "titulo": "Remoto e presencial devem ser escolhidos pelo tipo de falha",
+          "paragrafos": [
+            "Permissões, aplicativos, configurações, parte dos erros de Windows e rotinas de usuário podem ser analisados remotamente com autorização. Quando o defeito está em cabo, ponto de rede, energia, roteador, equipamento que não liga ou outro elemento físico, a investigação precisa migrar para presença no local ou bancada.",
+            "Definir a modalidade antes do deslocamento permite reunir informações e ferramentas adequadas. Fotos, mensagens de erro, modelos dos equipamentos e mudanças recentes ajudam a preparar uma visita mais produtiva.",
+            "Em ambiente corporativo, qualquer acesso remoto deve respeitar credenciais, responsáveis e políticas internas. O atendimento não deve contornar controles de administrador apenas para encurtar o diagnóstico."
+          ]
+        },
+        {
+          "titulo": "Mudança técnica precisa ser reversível e documentada quando possível",
+          "paragrafos": [
+            "Alterar rede, driver, política, aplicativo ou conta sem registrar o estado anterior aumenta o risco de transformar uma falha localizada em indisponibilidade maior. Mudanças relevantes devem ter motivo, resultado esperado e caminho de retorno compatível com a criticidade.",
+            "Também é importante saber quem administra provedor, domínio, e-mail e sistemas de terceiros. Nem todo erro visível no computador pertence à infraestrutura local, e atribuir a causa ao lugar errado consome tempo sem restaurar a operação.",
+            "Quando a dependência é externa ou exige o TI interno, o diagnóstico ainda deve registrar evidências e testes executados para que o repasse não comece do zero."
+          ]
+        },
+        {
+          "titulo": "Continuidade inclui backup, atualização e pontos únicos de falha",
+          "paragrafos": [
+            "Suporte empresarial não precisa existir apenas na emergência. Backup sem teste de restauração, armazenamento perto do limite, estação com falhas recorrentes e roteador único para toda a operação são exemplos de riscos que podem ser registrados antes de causarem parada.",
+            "Prevenção não significa executar manutenção genérica em todos os equipamentos. A prioridade deve vir de risco observável e de ações verificáveis, como validar cópia, planejar atualização e identificar dependências críticas.",
+            "Em pequenos escritórios e comércios, uma única máquina pode concentrar arquivos, emissão, sistema ou impressora. Mapear essas dependências ajuda a decidir onde a redundância ou o backup realmente tem valor."
+          ]
+        },
+        {
+          "titulo": "A janela de 2 a 72 horas úteis organiza o início do atendimento",
+          "paragrafos": [
+            "A referência institucional varia de 2 a 72 horas úteis conforme urgência e disponibilidade. Uma empresa totalmente impedida de operar pode receber prioridade maior que melhoria programada, mas o encaixe depende da agenda e do profissional adequado.",
+            "Essa faixa não é prazo de solução. Falha intermitente, peça, provedor, fornecedor de software, autorização de administrador ou janela interna de manutenção podem ampliar a resolução depois do diagnóstico inicial.",
+            "Informar impacto, quantidade de usuários, endereço e horário em que uma intervenção pode ocorrer melhora a triagem. Isso reduz tempo perdido sem criar um SLA que não foi formalmente contratado."
+          ]
+        },
+        {
+          "titulo": "A rede é nacional; disponibilidade em Colombo é confirmada por chamado",
+          "paragrafos": [
+            "A operação começou em Curitiba em 2006 e hoje integra uma rede nacional com mais de 6 mil prestadores credenciados. O número é nacional e não representa quantidade de técnicos empresariais em Colombo.",
+            "A disponibilidade local depende do escopo, perfil técnico e agenda. Não se deve inferir filial, equipe permanente ou quantidade municipal a partir do alcance da rede.",
+            "O compromisso com uma tarifa mínima justa para o prestador reconhece triagem, documentação e diagnóstico, inclusive quando a solução é remota. Em ambiente empresarial, saber o que não deve ser alterado pode ser tão importante quanto executar uma correção."
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "pergunta": "O suporte empresarial em Colombo pode começar remotamente?",
+          "resposta": "Sim, quando existe conectividade, autorização e o problema pode ser analisado à distância. Falhas físicas ou de infraestrutura podem exigir atendimento presencial."
+        },
+        {
+          "pergunta": "Empresa parada garante atendimento imediato?",
+          "resposta": "Não. O impacto influencia a prioridade, mas a disponibilidade depende da agenda e do perfil técnico necessário."
+        },
+        {
+          "pergunta": "Vocês alteram política de administrador sem autorização?",
+          "resposta": "Não como regra. O atendimento deve respeitar responsáveis, permissões e políticas da empresa."
+        },
+        {
+          "pergunta": "A janela de 2 a 72 horas úteis é prazo de solução?",
+          "resposta": "Não. Ela organiza o início do atendimento; peças, terceiros, testes e autorizações podem ampliar o tempo total."
+        },
+        {
+          "pergunta": "Quantos técnicos empresariais atendem Colombo?",
+          "resposta": "Não publicamos contagem municipal sem fonte confirmada. A rede nacional possui mais de 6 mil prestadores credenciados."
+        }
+      ],
+      "interlinks": [
+        "/servicos/suporte-tecnico-empresarial",
+        "/tecnico-informatica-colombo",
+        "/servicos/manutencao-preventiva-empresas",
+        "/servicos/backup-para-empresas",
+        "/precos-e-politicas"
+      ],
+      "cidadeSlug": "colombo",
+      "cidadeNome": "Colombo"
+    }
+  }
+}
