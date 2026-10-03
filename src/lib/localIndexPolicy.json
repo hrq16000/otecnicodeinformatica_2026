@@ -835,6 +835,50 @@
       "tier": "SERVICO_CIDADE_COM_INTENCAO_LOCAL",
       "intent": "contratar suporte técnico empresarial em Colombo com triagem por impacto, registro do chamado e definição entre atendimento remoto e presencial sem inventar SLA ou equipe fixa",
       "reason": "Micro-lote GSC Colombo 1–4: família com 13 impressões no GSC atual; conteúdo autoral com 697 palavras e 88,1% de unicidade, auditado antes da promoção."
+    },
+    {
+      "path": "/servicos/upgrade-ssd/colombo",
+      "family": "SERVICO_CIDADE",
+      "indexability": "index",
+      "canonical": "/servicos/upgrade-ssd/colombo",
+      "sitemap": true,
+      "parent": "/servicos/upgrade-ssd-ram",
+      "tier": "SERVICO_CIDADE_COM_INTENCAO_LOCAL",
+      "intent": "solicitar upgrade de SSD e memória em Colombo com triagem de compatibilidade, preservação de dados e decisão entre troca, expansão ou migração antes da compra",
+      "reason": "Micro-lote GSC Colombo 5–8: família com 7 impressões no GSC atual; conteúdo autoral com 720 palavras e 97,3% de unicidade, auditado antes da promoção."
+    },
+    {
+      "path": "/servicos/backup-recuperacao/colombo",
+      "family": "SERVICO_CIDADE",
+      "indexability": "index",
+      "canonical": "/servicos/backup-recuperacao/colombo",
+      "sitemap": true,
+      "parent": "/servicos/recuperacao-de-dados",
+      "tier": "SERVICO_CIDADE_COM_INTENCAO_LOCAL",
+      "intent": "solicitar backup ou recuperação de dados em Colombo com triagem do tipo de falha, prioridade dos arquivos e redução de escrita antes de qualquer tentativa",
+      "reason": "Micro-lote GSC Colombo 5–8: família com 6 impressões no GSC atual; conteúdo autoral com 637 palavras e 97,9% de unicidade, auditado antes da promoção."
+    },
+    {
+      "path": "/servicos/redes-wifi/colombo",
+      "family": "SERVICO_CIDADE",
+      "indexability": "index",
+      "canonical": "/servicos/redes-wifi/colombo",
+      "sitemap": true,
+      "parent": "/servicos/redes-e-wifi",
+      "tier": "SERVICO_CIDADE_COM_INTENCAO_LOCAL",
+      "intent": "solicitar diagnóstico de rede e Wi-Fi em Colombo com separação entre provedor, roteador, interferência, cobertura e dispositivo antes de comprar equipamento",
+      "reason": "Micro-lote GSC Colombo 5–8: família com 5 impressões no GSC atual; conteúdo autoral com 684 palavras e 97,3% de unicidade, auditado antes da promoção."
+    },
+    {
+      "path": "/servicos/pc-gamer/colombo",
+      "family": "SERVICO_CIDADE",
+      "indexability": "index",
+      "canonical": "/servicos/pc-gamer/colombo",
+      "sitemap": true,
+      "parent": "/servicos/pc-gamer",
+      "tier": "SERVICO_CIDADE_COM_INTENCAO_LOCAL",
+      "intent": "solicitar diagnóstico de PC gamer em Colombo com testes por carga, compatibilidade e objetivo de desempenho antes de upgrade ou troca de componente",
+      "reason": "Micro-lote GSC Colombo 5–8: família com 1 impressão no GSC atual; conteúdo autoral com 605 palavras e 97,3% de unicidade, auditado antes da promoção."
     }
   ],
   "bairrosAncora": [
