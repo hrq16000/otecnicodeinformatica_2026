@@ -33,12 +33,23 @@ export const Route = createFileRoute("/blog_/$slug")({
         statusCode: 301,
       });
     }
-    const [{ blogPostsContentBase }, { blogSupplementalPosts }, { programmaticPosts }] = await Promise.all([
+    const [
+      { blogPostsContentBase },
+      { blogSupplementalPosts },
+      { programmaticPosts },
+      { blogEditorialOverrides },
+    ] = await Promise.all([
       import("@/data/blogPostsContent"),
       import("@/data/blogSupplementalPosts"),
       import("@/data/blogProgrammaticPosts"),
+      import("@/data/blogEditorialOverrides"),
     ]);
-    const posts = { ...blogPostsContentBase, ...blogSupplementalPosts, ...programmaticPosts };
+    const posts = {
+      ...blogPostsContentBase,
+      ...blogSupplementalPosts,
+      ...programmaticPosts,
+      ...blogEditorialOverrides,
+    };
     const post = posts[params.slug] ?? null;
     if (!post) return { post: null };
     return {
