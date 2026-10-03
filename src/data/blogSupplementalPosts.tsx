@@ -10246,9 +10246,9 @@ net start spooler`}</code></pre>
   },
 
   "como-diagnosticar-placa-mae-defeituosa": {
-    title: "Placa-mãe com defeito: como diagnosticar sem trocar peça por tentativa",
+    title: "Como saber se a placa-mãe está com defeito: diagnóstico",
     excerpt:
-      "Separe alimentação, POST, memória, vídeo, firmware e defeito físico antes de condenar a placa-mãe. Veja testes controlados, limites e critérios para parar.",
+      "Separe fonte, RAM, vídeo, POST e firmware antes de culpar a placa-mãe. Veja sinais fortes, testes controlados e quando parar sem trocar peça por tentativa.",
     date: "2026-09-29",
     readTime: "15 min",
     category: "Procedimentos Técnicos",
@@ -10388,9 +10388,9 @@ net start spooler`}</code></pre>
   },
 
   "boot-uefi-ou-legacy-como-identificar": {
-    title: "UEFI ou Legacy: como identificar o boot mode e saber quando mudar",
+    title: "Boot mode UEFI ou Legacy: como saber qual seu PC usa",
     excerpt:
-      "Veja como descobrir se o Windows iniciou em UEFI ou Legacy, conferir GPT/MBR, entender CSM e Secure Boot e evitar perder o boot ao mudar o firmware.",
+      "Veja como identificar UEFI ou Legacy no Windows com msinfo32, conferir GPT/MBR e entender quando mudar o modo de boot sem perder a inicialização.",
     date: "2026-09-29",
     readTime: "14 min",
     category: "Diagnóstico",
