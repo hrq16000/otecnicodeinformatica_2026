@@ -11,6 +11,10 @@ const COLOMBO_PROMOVIDAS = [
   "/servicos/conserto-notebook/colombo",
   "/servicos/conserto-pc/colombo",
   "/servicos/suporte-tecnico-empresarial/colombo",
+  "/servicos/upgrade-ssd/colombo",
+  "/servicos/backup-recuperacao/colombo",
+  "/servicos/redes-wifi/colombo",
+  "/servicos/pc-gamer/colombo",
 ];
 
 const normalizar = (t: string) =>
@@ -47,8 +51,8 @@ const corpo = (path: string) => {
   ].join(" ");
 };
 
-describe("micro-lote GSC Colombo 1–4", () => {
-  it("declara exatamente as quatro páginas autorais aprovadas", () => {
+describe("micro-lotes GSC Colombo 1–8", () => {
+  it("declara exatamente as oito páginas autorais aprovadas", () => {
     expect([...SERVICO_COLOMBO_PATHS].sort()).toEqual([...COLOMBO_PROMOVIDAS].sort());
   });
 
@@ -59,7 +63,7 @@ describe("micro-lote GSC Colombo 1–4", () => {
     }
   });
 
-  it("promove as quatro páginas para index, canonical self e sitemap", () => {
+  it("promove as oito páginas para index, canonical self e sitemap", () => {
     for (const path of COLOMBO_PROMOVIDAS) {
       const d = resolveLocal(path);
       const pagina = TODAS_PAGINAS_LOCAIS.find((p) => p.path === path)!;
