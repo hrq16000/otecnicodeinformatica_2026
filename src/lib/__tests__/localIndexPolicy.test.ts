@@ -69,6 +69,13 @@ const MICRO_LOTE_PINHAIS_1_4 = [
   "/servicos/pc-gamer/pinhais",
 ];
 
+const MICRO_LOTE_COLOMBO_1_4 = [
+  "/servicos/conserto-tv/colombo",
+  "/servicos/conserto-notebook/colombo",
+  "/servicos/conserto-pc/colombo",
+  "/servicos/suporte-tecnico-empresarial/colombo",
+];
+
 describe("localIndexPolicy — regra de ouro", () => {
   it("nunca coloca no sitemap uma entidade não indexável", () => {
     for (const d of declaredEntities()) {
@@ -138,7 +145,7 @@ describe("localIndexPolicy — promoção top 10 service × cidade", () => {
     }
   });
 
-  it("promove o micro-lote GSC Pinhais 1–4 e totaliza 61 SERVICO_CIDADE explícitas", () => {
+  it("mantém o micro-lote GSC Pinhais 1–4 estável", () => {
     for (const path of MICRO_LOTE_PINHAIS_1_4) {
       const d = resolveLocal(path);
       expect(d.family).toBe("SERVICO_CIDADE");
@@ -147,7 +154,18 @@ describe("localIndexPolicy — promoção top 10 service × cidade", () => {
       expect(d.sitemap).toBe(true);
       expect(d.tier).toBe("SERVICO_CIDADE_COM_INTENCAO_LOCAL");
     }
-    expect(declaredEntities().filter((d) => d.family === "SERVICO_CIDADE")).toHaveLength(61);
+  });
+
+  it("promove o micro-lote GSC Colombo 1–4 e totaliza 65 SERVICO_CIDADE explícitas", () => {
+    for (const path of MICRO_LOTE_COLOMBO_1_4) {
+      const d = resolveLocal(path);
+      expect(d.family).toBe("SERVICO_CIDADE");
+      expect(d.indexability).toBe("index");
+      expect(canonicalFor(path)).toBe(path);
+      expect(d.sitemap).toBe(true);
+      expect(d.tier).toBe("SERVICO_CIDADE_COM_INTENCAO_LOCAL");
+    }
+    expect(declaredEntities().filter((d) => d.family === "SERVICO_CIDADE")).toHaveLength(65);
   });
 
   it("mantém outra combinação da família no estado fail-closed anterior", () => {
