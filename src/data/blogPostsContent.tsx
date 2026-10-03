@@ -2715,9 +2715,9 @@ docker run -d --name db --network minha-rede postgres
   },
 
   "windows-11-lento-como-resolver": {
-    title: "Windows 11 lento: diagnóstico por recurso antes de otimizar",
+    title: "Windows 11 lento? Como descobrir o que está travando o PC",
     excerpt:
-      "Windows 11 lento não aponta para uma causa única. Veja como separar inicialização, armazenamento, memória, CPU, temperatura e software antes de decidir por ajuste, upgrade ou reinstalação.",
+      "Windows 11 lento ao iniciar, abrir programas ou alternar tarefas? Veja como comparar CPU, memória, disco, temperatura e processos antes de otimizar ou trocar peças.",
     date: "2026-08-12",
     readTime: "13 min",
     category: "Procedimentos Técnicos",
@@ -3654,9 +3654,9 @@ docker run -d --name db --network minha-rede postgres
   },
 
   "como-testar-fonte-de-alimentacao-pc": {
-    title: "Como testar a fonte do PC com segurança: sinais, limites e diagnóstico",
+    title: "Como testar a fonte do PC sem condenar a peça por engano",
     excerpt:
-      "Veja o que cada teste de fonte realmente prova, por que tensão em repouso não basta, quando parar e como confirmar a suspeita sem condenar fonte ou placa por tentativa.",
+      "PC não liga, reinicia ou desliga sob carga? Veja o que testes de fonte realmente provam, quando parar e como separar fonte, cabos e placa-mãe com segurança.",
     date: "2026-08-12",
     readTime: "12 min",
     category: "Procedimentos Técnicos",
@@ -13581,9 +13581,9 @@ bcdboot C:\\Windows /s S: /f UEFI`}</code></pre>
   },
 
   "webcam-usb-nao-e-detectada": {
-    title: "Webcam USB não é detectada no Windows: diagnóstico por etapas",
+    title: "Webcam USB não aparece no Windows? Veja o que verificar",
     excerpt:
-      "Como separar conexão USB, hub, enumeração, driver UVC, permissão e defeito físico quando uma webcam externa não aparece no Windows.",
+      "Webcam USB não é detectada? Veja como separar porta, hub, enumeração, driver UVC, permissões e defeito físico antes de reinstalar drivers ou trocar a câmera.",
     date: "2026-08-26",
     readTime: "10 min",
     category: "Procedimentos Técnicos",
