@@ -8,8 +8,8 @@
 export const CLUSTER_SOLUCOES_ROUTES = [
   {
     "path": "/solucoes",
-    "title": "Soluções técnicas: diagnóstico, formatação, SSD, backup e dados",
-    "description": "Entre pelo procedimento: diagnóstico, formatação, troca por SSD, backup e recuperação de dados. Cada página mostra etapas reais, o que evitar e a modalidade indicada.",
+    "title": "Soluções de informática: diagnóstico, SSD, backup e recuperação",
+    "description": "Veja quando faz sentido diagnosticar, formatar, trocar por SSD, fazer backup ou recuperar dados, com etapas, riscos e modalidade de atendimento indicada.",
     "h1": "Escolha o procedimento e veja como ele é executado",
     "subtitulo": "Sintoma parecido nem sempre pede o mesmo serviço: cada página descreve o procedimento pela ordem real de execução, o que evitar antes e a modalidade indicada.",
     "blocos": [
