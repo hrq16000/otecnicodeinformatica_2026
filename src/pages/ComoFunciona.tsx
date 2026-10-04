@@ -52,12 +52,12 @@ const WHATSAPP_NUMBER = WA_NUMBER;
 
 const ComoFunciona = () => {
   useEffect(() => {
-    document.title = "Como funciona o atendimento técnico de informática";
+    document.title = "Como funciona a solicitação de atendimento técnico";
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
       metaDescription.setAttribute(
         "content",
-        "Veja como funcionam triagem, escolha da modalidade, diagnóstico, aprovação do valor e execução, e quando o caso é remoto, visita ou bancada."
+        "Entenda a triagem, as opções de atendimento direto ou por profissional parceiro e como orçamento, disponibilidade e aceite são definidos."
       );
     }
     trackPageView("/como-funciona", "Como Funciona");
@@ -71,7 +71,7 @@ const ComoFunciona = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <PageSEO title="Como funciona o atendimento técnico de informática" description="Veja como funcionam triagem, escolha da modalidade, diagnóstico, aprovação do valor e execução, e quando o caso é remoto, visita ou bancada." path="/como-funciona" breadcrumbs={[{ name: "Início", path: "/" }, { name: "Como Funciona", path: "/como-funciona" }]} />
+      <PageSEO title="Como funciona a solicitação de atendimento técnico" description="Entenda a triagem, as opções de atendimento direto ou por profissional parceiro e como orçamento, disponibilidade e aceite são definidos." path="/como-funciona" breadcrumbs={[{ name: "Início", path: "/" }, { name: "Como Funciona", path: "/como-funciona" }]} />
       {/* JSON-LD FAQPage */}
       <script
         type="application/ld+json"
@@ -102,10 +102,10 @@ const ComoFunciona = () => {
             <div className="max-w-3xl mx-auto text-center">
               <ExperienciaBadge className="mb-4" />
               <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-5 leading-tight">
-                Da sua mensagem à entrega do equipamento
+                Da sua solicitação à decisão sobre o atendimento
               </h1>
               <p className="text-lg md:text-xl text-white/90 mb-8 leading-relaxed">
-                Um processo previsível em quatro etapas: você descreve o problema, fazemos a triagem, apresentamos diagnóstico e valor, e só então executamos.
+                A triagem identifica se o caso segue para atendimento direto do portal ou se será consultada a rede de profissionais parceiros. Disponibilidade, orçamento e próximos passos são informados antes de você decidir.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button variant="heroWhatsapp" size="lg" className="text-base md:text-lg px-8" asChild onClick={() => handleCTA("hero")}>
@@ -236,6 +236,41 @@ const ComoFunciona = () => {
           </div>
         </section>
 
+        {/* ===== FLUXO COM PROFISSIONAL PARCEIRO ===== */}
+        <section className="py-12 md:py-16 bg-secondary">
+          <div className="container mx-auto">
+            <div className="max-w-4xl mx-auto">
+              <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-4 text-center">
+                Quando consultamos um profissional parceiro
+              </h2>
+              <p className="text-center text-muted-foreground mb-8 max-w-2xl mx-auto">
+                Em solicitações que dependem de outro profissional ou localidade, podemos consultar parceiros independentes compatíveis com a especialidade. Essa consulta não garante disponibilidade nem proposta.
+              </p>
+              <ol className="grid gap-4 sm:grid-cols-2">
+                <li className="rounded-xl border border-border bg-background p-5">
+                  <strong className="block text-primary">1. Você explica o que precisa</strong>
+                  <span className="mt-2 block text-sm text-muted-foreground">Informe o problema, a cidade e, quando souber, a especialidade necessária pelo canal de atendimento.</span>
+                </li>
+                <li className="rounded-xl border border-border bg-background p-5">
+                  <strong className="block text-primary">2. Consultamos a rede</strong>
+                  <span className="mt-2 block text-sm text-muted-foreground">A solicitação pode ser apresentada a profissionais independentes compatíveis. A resposta depende do interesse e da disponibilidade de cada um.</span>
+                </li>
+                <li className="rounded-xl border border-border bg-background p-5">
+                  <strong className="block text-primary">3. Você recebe uma proposta</strong>
+                  <span className="mt-2 block text-sm text-muted-foreground">O profissional define o próprio orçamento e as condições do serviço. Se houver cobrança do portal, ela será informada separadamente antes da sua decisão.</span>
+                </li>
+                <li className="rounded-xl border border-border bg-background p-5">
+                  <strong className="block text-primary">4. Você decide</strong>
+                  <span className="mt-2 block text-sm text-muted-foreground">Você pode aceitar ou recusar. Se aceitar, o agendamento e o atendimento são combinados com o profissional responsável.</span>
+                </li>
+              </ol>
+              <p className="mt-6 text-center text-sm text-muted-foreground">
+                Parceiros são profissionais independentes, não empregados do portal. Preço, escopo, agenda e disponibilidade variam; nenhum serviço é confirmado sem sua concordância prévia com as condições apresentadas.
+              </p>
+            </div>
+          </div>
+        </section>
+
         {/* ===== 4. BLOCO DE PREÇOS ===== */}
         <section className="py-8 md:py-10 bg-accent/5">
           <div className="container mx-auto">
@@ -249,7 +284,7 @@ const ComoFunciona = () => {
                   A mão de obra começa a partir de <strong className="text-accent">R$ 99,99</strong> quando há visita ou diagnóstico presencial aplicável. O valor final depende da avaliação do problema, do tempo necessário e de eventuais peças, licenças ou materiais.
                 </p>
                 <p className="text-sm text-muted-foreground mb-6">
-                  Os valores podem variar conforme a complexidade do serviço, a necessidade de peças e a localização. O valor do atendimento é informado antes da execução. Veja os detalhes na página de preços e políticas.
+                  Este valor é referência para atendimentos diretos do portal. Quando a proposta é de um profissional parceiro, ele define o orçamento; qualquer cobrança do portal, se houver, é informada separadamente antes de você decidir. Veja as demais condições na página de preços e políticas.
                 </p>
                 <Button variant="cta" size="lg" asChild>
                   <Link to="/valores">
@@ -321,7 +356,7 @@ const ComoFunciona = () => {
                 Regiões Atendidas pelo Técnico de Informática
               </h2>
               <p className="text-center text-muted-foreground mb-8 max-w-2xl mx-auto reveal-text" data-reveal-delay="100">
-                Nosso atendimento técnico cobre Curitiba e toda a região metropolitana. Atendemos a domicílio ou remotamente, com agilidade e profissionalismo.
+                O atendimento direto parte de Curitiba; agenda e deslocamento variam conforme a localidade. Para municípios fora das áreas publicadas, consulte a disponibilidade. Quando a solicitação depende de profissional parceiro, disponibilidade e orçamento são confirmados para cada caso.
               </p>
               <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
                 {regioes.map((r, i) => (
