@@ -133,6 +133,37 @@ const MODALIDADES = [
   },
 ];
 
+const MATRIZ_DECISAO = [
+  {
+    sintoma: "Não liga, liga e apaga ou fica sem vídeo",
+    primeiraAcao:
+      "Evite insistir em várias tentativas de energia. Separe carregador/fonte e descreva se há LEDs, bipes, ventoinha, queda, líquido ou cheiro de queimado.",
+    caminho:
+      "Triagem primeiro; quando há suspeita elétrica, desmontagem ou medição, a tendência é seguir para bancada.",
+  },
+  {
+    sintoma: "Está lento, mas ainda inicia o Windows",
+    primeiraAcao:
+      "Observe quando a lentidão aparece e, se conseguir, anote uso de CPU, memória e disco no Gerenciador de Tarefas antes de formatar ou comprar peça.",
+    caminho:
+      "Pode começar remotamente ou no endereço; SSD, RAM ou formatação só entram depois de identificar o gargalo.",
+  },
+  {
+    sintoma: "Wi-Fi cai apenas em alguns cômodos ou dispositivos",
+    primeiraAcao:
+      "Compare perto do roteador e em outro aparelho. Se possível, teste por cabo para separar link do provedor, cobertura e problema do dispositivo.",
+    caminho:
+      "A avaliação no endereço costuma ser a modalidade útil porque distância, paredes, interferência e posição do roteador fazem parte do diagnóstico.",
+  },
+  {
+    sintoma: "Arquivos sumiram, o disco some ou faz ruído",
+    primeiraAcao:
+      "Pare de gravar novos arquivos e evite instalar programas de recuperação no mesmo disco. Ruído mecânico é motivo para interromper novas tentativas.",
+    caminho:
+      "A prioridade passa a ser preservar os dados. O caso pode exigir cópia controlada, imagem do disco ou laboratório, conforme o estado da mídia.",
+  },
+];
+
 const PASSOS = [
   "Você descreve o equipamento e o sintoma pela triagem, sem precisar de termos técnicos.",
   "A triagem indica a modalidade compatível: no endereço, remoto ou coleta.",
@@ -349,11 +380,48 @@ const TecnicoInformaticaCuritiba = () => {
           </div>
         </section>
 
-        {/* 3. Problemas mais atendidos */}
+        {/* 3. Matriz de decisão antes do atendimento */}
+        <section className="border-t border-border/60 bg-secondary/20 py-12 md:py-16">
+          <div className="container mx-auto">
+            <div className="max-w-3xl">
+              <p className="text-xs font-semibold uppercase tracking-wide text-accent">
+                Antes de agendar
+              </p>
+              <h2 className="mt-2 font-heading text-2xl font-bold text-foreground md:text-3xl">
+                O sintoma define o primeiro passo — não o nome do serviço
+              </h2>
+              <p className="mt-4 text-muted-foreground">
+                “Formatar”, “trocar a fonte” ou “colocar SSD” são soluções possíveis, não diagnósticos.
+                Esta matriz mostra o que vale observar antes do atendimento e qual caminho costuma ser
+                tecnicamente coerente para cada cenário.
+              </p>
+            </div>
+
+            <div className="mt-8 grid gap-5 lg:grid-cols-2">
+              {MATRIZ_DECISAO.map((item) => (
+                <article key={item.sintoma} className="rounded-xl border border-border/60 bg-card p-6">
+                  <h3 className="font-heading text-lg font-semibold text-foreground">{item.sintoma}</h3>
+                  <div className="mt-4 space-y-3 text-sm leading-relaxed text-muted-foreground">
+                    <p>
+                      <strong className="text-foreground">O que fazer primeiro:</strong>{" "}
+                      {item.primeiraAcao}
+                    </p>
+                    <p>
+                      <strong className="text-foreground">Caminho provável:</strong>{" "}
+                      {item.caminho}
+                    </p>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* 4. Problemas avaliados em Curitiba */}
         <section className="border-t border-border/60 bg-secondary/20 py-12 md:py-16">
           <div className="container mx-auto">
             <h2 className="font-heading text-2xl font-bold text-foreground md:text-3xl">
-              Problemas mais atendidos em Curitiba
+              Problemas que avaliamos em Curitiba
             </h2>
             <div className="mt-8 grid gap-6 md:grid-cols-2">
               {PROBLEMAS.map((p) => (
