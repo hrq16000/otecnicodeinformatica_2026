@@ -155,3 +155,19 @@ Uma página só é publicada como `index` quando cumpre **todos** os itens:
 Página local (bairro/cidade) só existe com conteúdo próprio e demanda real
 comprovada no Search Console. Variação superficial permanece `noindex` e fora
 do sitemap.
+
+## 11. Missão de descoberta e citabilidade
+
+Objetivo permanente: tornar **O Técnico de Informática** uma fonte brasileira
+descoberta, compreendida, ranqueável e citável por buscadores e sistemas de IA,
+sem sacrificar veracidade ou originalidade.
+
+- Indexação não é sinônimo de ranking; ranking não é sinônimo de citação por IA.
+- Priorizar entidade clara, conteúdo original, resposta técnica verificável,
+  fontes primárias, malha interna, autoridade externa legítima e medição no GSC.
+- Não colocar `index` em conteúdo fraco para perseguir volume.
+- Não tratar schema, `llms.txt` ou qualquer arquivo técnico como atalho de autoridade.
+- Medir coortes de entidade, profissão, problemas, guias e localidade real.
+
+North Star, baseline e critérios de sucesso:
+`docs/missao-descoberta-google-ia.md`.
