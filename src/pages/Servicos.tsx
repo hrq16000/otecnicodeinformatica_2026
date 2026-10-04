@@ -57,7 +57,7 @@ const FAQS = [
   {
     question: "Existe garantia do serviço executado?",
     answer:
-      "Sim. A mão de obra do serviço executado tem 90 dias de garantia no mesmo defeito tratado, e peças seguem a garantia do fornecedor ou fabricante. Nota fiscal de serviço é emitida mediante solicitação.",
+      "A garantia acompanha o serviço efetivamente executado e o defeito tratado, conforme as condições publicadas em preços e políticas. Peças seguem as condições do fornecedor ou fabricante quando aplicável.",
   },
 ];
 
@@ -76,16 +76,16 @@ const CARDS = [
   { slug: "recuperacao-de-dados", icon: Database, blurb: "HD, SSD e pendrive: avaliação primeiro. Recuperação não é garantida." },
   { slug: "redes-e-wifi", icon: Wifi, blurb: "Wi-Fi caindo ou sinal fraco em casa e na empresa? Cobertura e estabilidade." },
   { slug: "suporte-tecnico-empresarial", icon: Building2, blurb: "Estações, rede, impressoras e backups, pontual ou recorrente sob consulta." },
-  { slug: "conserto-tv", icon: Tv, blurb: "TV LED, LCD e Smart TV: avaliação em bancada com coleta e entrega, sem visita." },
+  { slug: "conserto-tv", icon: Tv, blurb: "TV LED, LCD e Smart TV: triagem por sintoma e avaliação em bancada quando o caso exige abertura e medição." },
   { slug: "conserto-placa", icon: CircuitBoard, blurb: "Placa de notebook, PC e TV reparada em nível de componente quando é viável." },
   { slug: "conserto-monitor", icon: Monitor, blurb: "Monitor sem imagem, piscando ou que não liga: fonte, backlight e placa em bancada." },
   { slug: "conserto-impressora-3d", icon: Wrench, blurb: "FDM e resina: extrusão, eixos, placa e calibração, com impressão de teste antes da devolução." },
 ] as const;
 
 
-const TITLE = "Serviços de Informática em Curitiba | PC e Notebook";
+const TITLE = "Serviços de informática em Curitiba | PC, notebook e Wi-Fi";
 const DESCRIPTION =
-  "Conheça os serviços de formatação, manutenção de computadores e notebooks, SSD, vírus, recuperação de dados, Wi-Fi e suporte empresarial.";
+  "Serviços de informática em Curitiba para PC e notebook, Wi-Fi, SSD, backup, vírus e suporte empresarial, com diagnóstico antes da execução.";
 
 const Servicos = () => {
   useEffect(() => {
@@ -386,10 +386,10 @@ const Servicos = () => {
       {/* CTA final */}
       <section className="bg-[hsl(var(--hero-bg))] py-16 text-white">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-2xl md:text-3xl font-heading font-bold">Vamos resolver isso hoje?</h2>
+          <h2 className="text-2xl md:text-3xl font-heading font-bold">Vamos definir o próximo passo?</h2>
           <p className="mx-auto mt-3 max-w-2xl text-white/80">
-            Fale direto com o técnico pelo WhatsApp. Diagnóstico honesto e valor aprovado antes de
-            qualquer serviço.
+            Descreva o equipamento e o sintoma pelo WhatsApp. A triagem define o próximo passo e o
+            escopo é aprovado antes de qualquer execução.
           </p>
           <a
             href={waHref}
