@@ -152,7 +152,7 @@ const ComoFunciona = () => {
           <div className="container mx-auto relative z-10">
             <div className="max-w-5xl mx-auto">
               <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-8 text-center reveal-text">
-                Atendimento Simples, Rápido e Transparente
+                Como a solicitação é encaminhada
               </h2>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
                 {resumoItems.map((item, i) => {
@@ -178,10 +178,10 @@ const ComoFunciona = () => {
           <div className="container mx-auto relative z-10">
             <div className="max-w-4xl mx-auto">
               <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-4 text-center reveal-text">
-                Passo a Passo: Do Primeiro Contato à Garantia
+                Atendimento direto do portal: do primeiro contato à garantia
               </h2>
               <p className="text-muted-foreground text-center mb-10 max-w-2xl mx-auto reveal-text" data-reveal-delay="100">
-                Conheça cada etapa do nosso processo de atendimento técnico em Curitiba. Transparência do início ao fim para você ter total segurança.
+                Quando o atendimento é realizado diretamente pelo portal, estas são as etapas. Se a solicitação seguir para parceiro, consulte o fluxo específico abaixo; o profissional define as condições do próprio serviço.
               </p>
 
               <div className="space-y-0">
@@ -342,7 +342,7 @@ const ComoFunciona = () => {
                 ))}
               </div>
               <p className="text-center text-sm text-muted-foreground mt-6">
-                Em todos os casos, o valor do atendimento é informado e aprovado <strong>antes</strong> da execução do serviço. Sem surpresas.
+                No atendimento direto e nos encaminhamentos, as condições aplicáveis são apresentadas antes de qualquer aceite ou execução.
               </p>
             </div>
           </div>
@@ -387,7 +387,7 @@ const ComoFunciona = () => {
                 Serviços de Informática Disponíveis
               </h2>
               <p className="text-center text-muted-foreground mb-8 max-w-2xl mx-auto reveal-text" data-reveal-delay="100">
-                Oferecemos uma gama completa de serviços técnicos para computadores, notebooks e redes. Cada serviço segue o mesmo processo transparente descrito acima.
+                O portal oferece os serviços listados abaixo. A modalidade — atendimento direto ou consulta a parceiro — é indicada após a triagem; serviços, disponibilidade e condições podem variar conforme o caso.
               </p>
               <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
                 {servicos.map((s, i) => {
@@ -814,7 +814,7 @@ const resumoItems = [
   { icon: MessageCircle, title: "Solicitação Rápida", text: "Chame via WhatsApp e explique seu problema em poucos minutos" },
   { icon: Search, title: "Diagnóstico Técnico", text: "Avaliação profissional no local ou remotamente" },
   { icon: Eye, title: "Execução Transparente", text: "Serviço realizado com sua aprovação e acompanhamento" },
-  { icon: Shield, title: "Garantia do Serviço", text: "Todo serviço inclui garantia por escrito de 90 dias em mão de obra sobre o ponto reparado" },
+  { icon: Shield, title: "Garantia do Serviço", text: "No atendimento direto do portal, aplica-se a garantia prevista na política comercial" },
 ];
 
 const etapas = [
@@ -920,7 +920,7 @@ const confiancaItems = [
   { icon: BadgeCheck, title: "Atendimento profissional e registrado", desc: "Escopo e valor registrados por escrito antes da execução. Nota fiscal de serviço emitida mediante solicitação e garantia registrada no valor aprovado." },
   { icon: Clock, title: "Atendimento Rápido — Conforme agenda", desc: "Na maioria dos casos, conseguimos atender conforme a disponibilidade da agenda. Nosso compromisso é não deixar você esperando. Agilidade é prioridade no nosso atendimento." },
   { icon: Eye, title: "Transparência Total nos Valores", desc: "Valor informado antes da execução. Sem taxas escondidas, sem surpresas no final. Você aprova cada etapa e cada valor antes de qualquer serviço ser realizado." },
-  { icon: Shield, title: "Garantia por Escrito em Todo Serviço", desc: "Todos os serviços possuem garantia de 90 dias em mão de obra sobre o ponto reparado. Se algo der errado dentro do prazo, voltamos para resolver sem custo adicional. Sua segurança é nossa prioridade." },
+  { icon: Shield, title: "Garantia por Escrito em Todo Serviço", desc: "No atendimento direto do portal, a garantia de mão de obra segue a política comercial. Em serviços de parceiros independentes, prazo e cobertura são definidos pelo profissional e informados antes do aceite." },
 ];
 
 const faqItems = [
@@ -928,17 +928,17 @@ const faqItems = [
   { question: "Quanto tempo leva um backup durante o atendimento?", answer: "Em disco saudável, normalmente no mesmo atendimento, variando com o volume de dados e a velocidade da mídia de destino. Discos com setores defeituosos exigem leitura em ritmo reduzido em bancada, com prazo informado depois da avaliação inicial." },
   { question: "Existe garantia de recuperar todos os arquivos?", answer: "Não. Em disco com falha física, arquivos sobrescritos ou dados criptografados por ransomware não há garantia de recuperação integral: o resultado depende do estado da mídia. Explicamos o cenário real antes de iniciar, sem prometer o que não pode ser assegurado." },
   { question: "Vocês guardam cópias dos meus dados depois do serviço?", answer: "Não. Cópias temporárias usadas no processo são apagadas na entrega, salvo pedido expresso seu de retenção por prazo definido. O acesso ao conteúdo se limita ao necessário para executar o serviço contratado." },
-  { question: "Quanto custa a visita técnica?", answer: "Quando há visita ou diagnóstico presencial aplicável, a mão de obra começa a partir de R$ 99,99. O valor final depende da avaliação do problema e do tempo necessário. Consulte os detalhes em /precos-e-politicas." },
+  { question: "Quanto custa a visita técnica?", answer: "No atendimento direto do portal, quando há visita ou diagnóstico presencial aplicável, a mão de obra começa a partir de R$ 99,99; condições em preços e políticas. Propostas de parceiros e eventual cobrança do portal são informadas separadamente antes do aceite." },
   { question: "O valor pode mudar depois da avaliação?", answer: "Sim, mas somente com sua aprovação prévia. Se durante o atendimento identificarmos algo que altere o escopo ou o valor, consultamos você antes de prosseguir. Nosso compromisso é transparência total — nenhum serviço adicional é executado sem sua autorização." },
-  { question: "Precisa pagar antes do atendimento?", answer: "Não. O pagamento é feito após a conclusão do serviço. Aceitamos PIX (preferencial), dinheiro, cartão de crédito e débito. Para empresas com contrato, oferecemos pagamento faturado." },
-  { question: "Em quanto tempo conseguem atender?", answer: "Na maioria dos casos, sim. Nosso objetivo é atender conforme a disponibilidade da agenda, dependendo da disponibilidade de agenda e da sua localização. Entre em contato via WhatsApp para verificar a disponibilidade." },
-  { question: "O serviço tem garantia?", answer: "Sim. Todos os serviços possuem garantia por escrito de 90 dias em mão de obra sobre o ponto reparado ou o serviço executado. Peças possuem garantia do fabricante. Se algo der errado dentro do prazo, voltamos para resolver sem custo adicional." },
+  { question: "Precisa pagar antes do atendimento?", answer: "No atendimento direto, o pagamento segue as condições informadas na proposta aprovada. Em encaminhamentos, forma e momento do pagamento são combinados antes do aceite com os responsáveis pelo serviço." },
+  { question: "Em quanto tempo conseguem atender?", answer: "O prazo depende da localidade e da agenda. Após a triagem, consulte a possibilidade e a estimativa para o seu caso; encaminhamento a parceiro depende também do interesse e da disponibilidade do profissional." },
+  { question: "O serviço tem garantia?", answer: "No atendimento direto do portal, a garantia de mão de obra segue a política comercial, com prazo e condições registrados na proposta aprovada. Em serviço executado por parceiro independente, prazo e cobertura são informados pelo próprio profissional antes do aceite." },
   { question: "Faz atendimento remoto?", answer: "Sim. Para problemas de software, configurações e muitos outros casos, realizamos atendimento remoto seguro. O técnico acessa seu computador de forma controlada e resolve o problema enquanto você acompanha em tempo real. É rápido, prático e mais econômico." },
   { question: "Atende empresas?", answer: "Sim. Temos planos específicos para empresas de todos os portes. Oferecemos suporte contínuo, manutenção preventiva, gestão de TI e atendimento prioritário. Emitimos nota fiscal de serviço e de produto." },
   { question: "Quais formas de pagamento são aceitas?", answer: "Aceitamos PIX (forma preferencial), dinheiro, cartão de crédito e débito. Para empresas com contrato mensal, oferecemos pagamento faturado com boleto ou transferência." },
   { question: "Precisa agendar ou atende por ordem de chegada?", answer: "É necessário agendar via WhatsApp. O agendamento garante que o técnico estará disponível no horário combinado, com todos os materiais necessários. Atendemos de segunda a sábado, com horários flexíveis." },
   { question: "O técnico leva peças para o atendimento?", answer: "Sim, quando possível. Se na pré-avaliação identificarmos a necessidade de peças específicas (como SSD, memória RAM, cabos), o técnico já leva os componentes para o atendimento. Peças especiais ou sob encomenda podem necessitar de agendamento adicional." },
-  { question: "Qual a área de cobertura do atendimento?", answer: "Atendemos Curitiba e toda a região metropolitana, incluindo São José dos Pinhais, Pinhais, Araucária e Campo Largo. Para bairros mais distantes, pode haver uma taxa adicional de deslocamento, sempre informada previamente." },
+  { question: "Qual a área de cobertura do atendimento?", answer: "O atendimento direto parte de Curitiba e depende da área publicada, agenda e deslocamento; para outras localidades, consulte antes. Em solicitações encaminhadas a parceiro, a cobertura é confirmada para cada caso, sem garantia de disponibilidade." },
   { question: "Como funciona o atendimento a domicílio?", answer: "O técnico vai até sua casa ou escritório com todas as ferramentas necessárias. Realiza o diagnóstico e o reparo no local, sem que você precise levar o equipamento a uma loja. Atendimento prático, rápido e profissional." },
 ];
 
