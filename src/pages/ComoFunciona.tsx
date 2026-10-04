@@ -281,7 +281,7 @@ const ComoFunciona = () => {
                   Quanto Custa o Atendimento?
                 </h2>
                 <p className="text-muted-foreground mb-3 leading-relaxed max-w-xl mx-auto">
-                  A mão de obra começa a partir de <strong className="text-accent">R$ 99,99</strong> quando há visita ou diagnóstico presencial aplicável. O valor final depende da avaliação do problema, do tempo necessário e de eventuais peças, licenças ou materiais.
+                  No atendimento direto do portal, quando há visita ou diagnóstico presencial aplicável, a mão de obra começa a partir de <strong className="text-accent">R$ 99,99</strong>. O valor final depende da avaliação do problema, do tempo necessário e de eventuais peças, licenças ou materiais.
                 </p>
                 <p className="text-sm text-muted-foreground mb-6">
                   Este valor é referência para atendimentos diretos do portal. Quando a proposta é de um profissional parceiro, ele define o orçamento; qualquer cobrança do portal, se houver, é informada separadamente antes de você decidir. Veja as demais condições na página de preços e políticas.
@@ -918,8 +918,8 @@ const servicos = [
 
 const confiancaItems = [
   { icon: BadgeCheck, title: "Atendimento profissional e registrado", desc: "Escopo e valor registrados por escrito antes da execução. Nota fiscal de serviço emitida mediante solicitação e garantia registrada no valor aprovado." },
-  { icon: Clock, title: "Atendimento Rápido — Conforme agenda", desc: "Na maioria dos casos, conseguimos atender conforme a disponibilidade da agenda. Nosso compromisso é não deixar você esperando. Agilidade é prioridade no nosso atendimento." },
-  { icon: Eye, title: "Transparência Total nos Valores", desc: "Valor informado antes da execução. Sem taxas escondidas, sem surpresas no final. Você aprova cada etapa e cada valor antes de qualquer serviço ser realizado." },
+  { icon: Clock, title: "Atendimento Rápido — Conforme agenda", desc: "A possibilidade de atendimento depende da agenda, da localidade e, quando aplicável, da disponibilidade do profissional parceiro. A triagem confirma as opções para cada solicitação." },
+  { icon: Eye, title: "Transparência Total nos Valores", desc: "No atendimento direto, o valor e o escopo são apresentados antes da execução. Em encaminhamentos, orçamento do profissional e eventual cobrança do portal são informados separadamente antes da decisão." },
   { icon: Shield, title: "Garantia por Escrito em Todo Serviço", desc: "No atendimento direto do portal, a garantia de mão de obra segue a política comercial. Em serviços de parceiros independentes, prazo e cobertura são definidos pelo profissional e informados antes do aceite." },
 ];
 
