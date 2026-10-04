@@ -39,13 +39,15 @@ A página do Jardim Independência foi reescrita para ter uma função editorial
     "Suporte remoto",
     "Configuração de rede e periféricos"
   ],
-  conteudoExclusivo: `Quando o computador liga, mas uma função específica para
+  conteudoExclusivo: `Quando o computador liga, mas uma função específica deixa de responder, o diagnóstico começa pelo que ainda funciona. Essa diferença ajuda a evitar uma intervenção maior do que o necessário.
 
-Uma impressora offline não exige o mesmo diagnóstico de um Windows que não inicia. Uma webcam ausente pode ser driver, permissão ou conexão USB. Um programa que fecha sozinho pode estar relacionado a atualização, perfil do usuário ou arquivos do próprio aplicativo.
+Uma impressora offline não exige o mesmo diagnóstico de um Windows que não inicia. Se outro computador ainda imprime, a investigação se concentra na estação afetada, na fila, na porta configurada e no driver. Se nenhum dispositivo consegue imprimir, rede e próprio equipamento entram primeiro.
 
-O objetivo da triagem é isolar a função afetada antes de alterar o restante do sistema. Se o problema puder ser reproduzido com o computador conectado, o suporte remoto pode ser suficiente para verificar configuração e software. Se houver falha física, a modalidade muda.
+Webcam, microfone e áudio seguem outra sequência. O dispositivo aparecer no Windows muda o diagnóstico para driver, permissão ou configuração; desaparecer de todas as portas e também de outro computador aumenta a suspeita de falha física.
 
-No Jardim Independência, essa abordagem evita transformar qualquer erro de software em formatação completa e dá à página uma intenção técnica diferente das rotas focadas em armazenamento ou hardware.`,
+Programa que fecha sozinho também não justifica formatação automática. Atualização recente, perfil do usuário, dependência do aplicativo e arquivos corrompidos são hipóteses que podem ser testadas antes de reinstalar o sistema inteiro.
+
+No Jardim Independência, a intenção editorial desta página é justamente essa: orientar problemas em que o computador ainda funciona parcialmente e mostrar quando suporte remoto pode resolver a camada de software e quando o caso precisa migrar para visita ou bancada.`,
   problemasComuns: [
     "Impressora aparece offline",
     "Webcam ou microfone deixa de funcionar",
