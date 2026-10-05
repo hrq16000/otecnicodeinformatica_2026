@@ -58,6 +58,15 @@ jobs:
       # Lint bloqueante executado pelo comando oficial `verify` abaixo (Biome + motion).
       # Comando oficial: gates essenciais de código e conteúdo.
       # Os testes já rodam no job `unit`, por isso ficam de fora aqui.
+      - name: Generate trust claims inventory (temporary diagnostic)
+        run: npm run report:afirmacoes
+      - name: Upload generated trust claims inventory (temporary diagnostic)
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: trust-claims-inventory-temporary
+          path: src/data/trustClaimsAudit.json
+          if-no-files-found: error
       - name: verify (gates essenciais — comando oficial)
         run: npm run verify -- --skip=test
       - name: Build
