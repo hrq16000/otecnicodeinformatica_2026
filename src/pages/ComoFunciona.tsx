@@ -11,6 +11,8 @@ import { JsonLdSchema } from "@/components/JsonLdSchema";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import { ExperienciaBadge } from "@/components/social-proof/ExperienciaBadge";
 import { trackPageView, trackCTAClick } from "@/lib/analytics";
+import { commercialConfig } from "@/lib/config/commercial";
+import { GARANTIA, PAGAMENTO } from "@/lib/politicaComercial";
 import { Button } from "@/components/ui/button";
 import { WHATSAPP_NUMBER as WA_NUMBER, SITE_BASE_URL } from "@/lib/siteConfig";
 import {
@@ -253,11 +255,11 @@ const ComoFunciona = () => {
                 </li>
                 <li className="rounded-xl border border-border bg-background p-5">
                   <strong className="block text-primary">2. Consultamos a rede</strong>
-                  <span className="mt-2 block text-sm text-muted-foreground">A solicitação pode ser apresentada a profissionais independentes compatíveis. A resposta depende do interesse e da disponibilidade de cada um.</span>
+                  <span className="mt-2 block text-sm text-muted-foreground">Com sua autorização, compartilhamos com profissionais independentes compatíveis apenas as informações necessárias para consultar o caso. A resposta depende do interesse e da disponibilidade de cada um.</span>
                 </li>
                 <li className="rounded-xl border border-border bg-background p-5">
                   <strong className="block text-primary">3. Você recebe uma proposta</strong>
-                  <span className="mt-2 block text-sm text-muted-foreground">O profissional define o próprio orçamento e as condições do serviço. Se houver cobrança do portal, ela será informada separadamente antes da sua decisão.</span>
+                  <span className="mt-2 block text-sm text-muted-foreground">O profissional define o próprio orçamento e as condições do serviço. Você recebe a proposta antes de decidir se aceita ou recusa.</span>
                 </li>
                 <li className="rounded-xl border border-border bg-background p-5">
                   <strong className="block text-primary">4. Você decide</strong>
@@ -265,7 +267,7 @@ const ComoFunciona = () => {
                 </li>
               </ol>
               <p className="mt-6 text-center text-sm text-muted-foreground">
-                Parceiros são profissionais independentes, não empregados do portal. Preço, escopo, agenda e disponibilidade variam; nenhum serviço é confirmado sem sua concordância prévia com as condições apresentadas.
+                Parceiros são profissionais independentes, não empregados do portal. Antes de encaminhar sua solicitação, explicamos quais informações serão compartilhadas e pedimos sua autorização. Preço, escopo, agenda e disponibilidade variam; nenhum serviço é confirmado sem sua concordância prévia com as condições apresentadas.
               </p>
             </div>
           </div>
@@ -283,8 +285,11 @@ const ComoFunciona = () => {
                 <p className="text-muted-foreground mb-3 leading-relaxed max-w-xl mx-auto">
                   No atendimento direto do portal, quando há visita ou diagnóstico presencial aplicável, a mão de obra começa a partir de <strong className="text-accent">R$ 99,99</strong>. O valor final depende da avaliação do problema, do tempo necessário e de eventuais peças, licenças ou materiais.
                 </p>
+                <p className="text-sm text-muted-foreground mb-3">
+                  {commercialConfig.pricingDisclaimer}
+                </p>
                 <p className="text-sm text-muted-foreground mb-6">
-                  Este valor é referência para atendimentos diretos do portal. Quando a proposta é de um profissional parceiro, ele define o orçamento; qualquer cobrança do portal, se houver, é informada separadamente antes de você decidir. Veja as demais condições na página de preços e políticas.
+                  Este valor é referência para atendimentos diretos do portal. Em encaminhamentos, o profissional parceiro define o orçamento e as condições do serviço. Veja as condições do atendimento direto na página de preços e políticas.
                 </p>
                 <Button variant="cta" size="lg" asChild>
                   <Link to="/valores">
@@ -303,8 +308,9 @@ const ComoFunciona = () => {
           <div className="container mx-auto">
             <div className="max-w-4xl mx-auto">
               <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-8 text-center reveal-text">
-                O Que Está Incluso no Atendimento
+                O Que Está Incluso no Atendimento Direto
               </h2>
+              <p className="text-center text-sm text-muted-foreground mb-8">A lista abaixo se aplica aos atendimentos realizados diretamente pelo portal. Nos encaminhamentos, modalidade e escopo são combinados com o profissional parceiro.</p>
               <div className="grid md:grid-cols-2 gap-4">
                 {inclusosItems.map((item, i) => (
                   <div key={i} className="flex items-start gap-3 bg-secondary rounded-lg p-4 hover:-translate-y-0.5 hover:shadow-sm transition-all stagger-item" style={{ animationDelay: `${i * 80}ms` }}>
@@ -882,7 +888,7 @@ const etapas = [
 
 const inclusosItems = [
   { title: "Diagnóstico Técnico Profissional", desc: "Avaliação completa do equipamento com identificação precisa do problema e das possíveis soluções." },
-  { title: "Atendimento no Local ou Remoto", desc: "Você escolhe: o técnico vai até você ou resolve remotamente via acesso seguro ao seu computador." },
+  { title: "Modalidade de Atendimento", desc: "Após a triagem, confirmamos se o caso pode ser atendido no local ou remotamente e quais opções estão disponíveis." },
   { title: "Orientação e Suporte Especializado", desc: "Explicação detalhada de tudo que foi feito, com dicas de manutenção preventiva para o futuro." },
   { title: "Execução Mediante Aprovação", desc: "Nenhum serviço é executado sem sua autorização prévia. Você controla todo o processo do início ao fim." },
 ];
@@ -919,8 +925,8 @@ const servicos = [
 const confiancaItems = [
   { icon: BadgeCheck, title: "Atendimento profissional e registrado", desc: "Escopo e valor registrados por escrito antes da execução. Nota fiscal de serviço emitida mediante solicitação e garantia registrada no valor aprovado." },
   { icon: Clock, title: "Atendimento Rápido — Conforme agenda", desc: "A possibilidade de atendimento depende da agenda, da localidade e, quando aplicável, da disponibilidade do profissional parceiro. A triagem confirma as opções para cada solicitação." },
-  { icon: Eye, title: "Transparência Total nos Valores", desc: "No atendimento direto, o valor e o escopo são apresentados antes da execução. Em encaminhamentos, orçamento do profissional e eventual cobrança do portal são informados separadamente antes da decisão." },
-  { icon: Shield, title: "Garantia por Escrito em Todo Serviço", desc: "No atendimento direto do portal, a garantia de mão de obra segue a política comercial. Em serviços de parceiros independentes, prazo e cobertura são definidos pelo profissional e informados antes do aceite." },
+  { icon: Eye, title: "Transparência nos Valores", desc: "No atendimento direto, o valor e o escopo são apresentados antes da execução. Em encaminhamentos, o profissional informa seu próprio orçamento e condições antes da decisão." },
+  { icon: Shield, title: "Garantia no Atendimento Direto", desc: `${GARANTIA.servicoLabel}. ${GARANTIA.registroLabel}. ${GARANTIA.pecasLabel}. Em serviços de parceiros independentes, prazo e cobertura são definidos pelo profissional e informados antes do aceite.` },
 ];
 
 const faqItems = [
@@ -928,11 +934,11 @@ const faqItems = [
   { question: "Quanto tempo leva um backup durante o atendimento?", answer: "Em disco saudável, normalmente no mesmo atendimento, variando com o volume de dados e a velocidade da mídia de destino. Discos com setores defeituosos exigem leitura em ritmo reduzido em bancada, com prazo informado depois da avaliação inicial." },
   { question: "Existe garantia de recuperar todos os arquivos?", answer: "Não. Em disco com falha física, arquivos sobrescritos ou dados criptografados por ransomware não há garantia de recuperação integral: o resultado depende do estado da mídia. Explicamos o cenário real antes de iniciar, sem prometer o que não pode ser assegurado." },
   { question: "Vocês guardam cópias dos meus dados depois do serviço?", answer: "Não. Cópias temporárias usadas no processo são apagadas na entrega, salvo pedido expresso seu de retenção por prazo definido. O acesso ao conteúdo se limita ao necessário para executar o serviço contratado." },
-  { question: "Quanto custa a visita técnica?", answer: "No atendimento direto do portal, quando há visita ou diagnóstico presencial aplicável, a mão de obra começa a partir de R$ 99,99; condições em preços e políticas. Propostas de parceiros e eventual cobrança do portal são informadas separadamente antes do aceite." },
+  { question: "Quanto custa a visita técnica?", answer: "No atendimento direto do portal, quando há visita ou diagnóstico presencial aplicável, a mão de obra começa a partir de R$ 99,99; condições em preços e políticas. Em encaminhamentos, o profissional parceiro informa seu próprio orçamento e condições antes do aceite." },
   { question: "O valor pode mudar depois da avaliação?", answer: "Sim, mas somente com sua aprovação prévia. Se durante o atendimento identificarmos algo que altere o escopo ou o valor, consultamos você antes de prosseguir. Nosso compromisso é transparência total — nenhum serviço adicional é executado sem sua autorização." },
-  { question: "Precisa pagar antes do atendimento?", answer: "No atendimento direto, o pagamento segue as condições informadas na proposta aprovada. Em encaminhamentos, forma e momento do pagamento são combinados antes do aceite com os responsáveis pelo serviço." },
+  { question: "Precisa pagar antes do atendimento?", answer: `${PAGAMENTO.momentoLabel}. Em encaminhamentos, forma e momento do pagamento são combinados com o profissional antes do aceite.` },
   { question: "Em quanto tempo conseguem atender?", answer: "O prazo depende da localidade e da agenda. Após a triagem, consulte a possibilidade e a estimativa para o seu caso; encaminhamento a parceiro depende também do interesse e da disponibilidade do profissional." },
-  { question: "O serviço tem garantia?", answer: "No atendimento direto do portal, a garantia de mão de obra segue a política comercial, com prazo e condições registrados na proposta aprovada. Em serviço executado por parceiro independente, prazo e cobertura são informados pelo próprio profissional antes do aceite." },
+  { question: "O serviço tem garantia?", answer: `${GARANTIA.servicoLabel}; ${GARANTIA.registroLabel}. ${GARANTIA.pecasLabel}. Em serviço executado por parceiro independente, prazo e cobertura são informados pelo próprio profissional antes do aceite.` },
   { question: "Faz atendimento remoto?", answer: "Sim. Para problemas de software, configurações e muitos outros casos, realizamos atendimento remoto seguro. O técnico acessa seu computador de forma controlada e resolve o problema enquanto você acompanha em tempo real. É rápido, prático e mais econômico." },
   { question: "Atende empresas?", answer: "Sim. Temos planos específicos para empresas de todos os portes. Oferecemos suporte contínuo, manutenção preventiva, gestão de TI e atendimento prioritário. Emitimos nota fiscal de serviço e de produto." },
   { question: "Quais formas de pagamento são aceitas?", answer: "Aceitamos PIX (forma preferencial), dinheiro, cartão de crédito e débito. Para empresas com contrato mensal, oferecemos pagamento faturado com boleto ou transferência." },
