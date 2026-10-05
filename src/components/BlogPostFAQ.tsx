@@ -61,6 +61,28 @@ const CATEGORY_EXTRA: Record<string, FAQItem[]> = {
 // categoria (que contêm valores comerciais).
 // ─────────────────────────────────────────────────────────────
 const PILOT_FAQ: Record<string, FAQItem[]> = {
+  "como-configurar-2fa-em-tudo": [
+    {
+      q: "SMS é inútil como segundo fator?",
+      a: "Não. Quando é a única opção, acrescenta uma barreira em relação à senha isolada. Porém, depende da segurança da linha e não é resistente a phishing; migre para um método mais forte quando o serviço permitir.",
+    },
+    {
+      q: "Aplicativo autenticador funciona sem internet?",
+      a: "Códigos TOTP normalmente são gerados no aparelho e não dependem de sinal no momento da entrada. Ainda assim, podem ser capturados por uma página falsa e exigem um plano de migração ou recuperação.",
+    },
+    {
+      q: "Passkey e chave física são a mesma coisa?",
+      a: "Ambas podem usar autenticação FIDO resistente a phishing, mas a credencial pode estar em uma chave dedicada, no dispositivo ou sincronizada por um provedor. A forma de backup e recuperação varia.",
+    },
+    {
+      q: "Posso usar o mesmo celular para a senha e para o segundo fator?",
+      a: "É comum e ainda pode elevar a segurança, mas concentra o risco de perda. Contas críticas devem ter um método reserva que não dependa apenas do aparelho principal.",
+    },
+    {
+      q: "O que fazer com o 2FA antes de trocar de celular?",
+      a: "Com o aparelho antigo ainda disponível, confira a migração suportada por cada serviço, registre o novo dispositivo, teste a entrada e só então remova o anterior. Não presuma que todos os códigos serão transferidos automaticamente.",
+    },
+  ],
   "windows-reparo-automatico-em-loop": [
     {
       q: "O Reparo Automático do Windows apaga meus arquivos?",
