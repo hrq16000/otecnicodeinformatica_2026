@@ -55,8 +55,10 @@ jobs:
           node-version: "20"
       - name: Install deps
         run: npm ci --no-audit --no-fund
-      - name: Lint (non-blocking warnings)
-        run: npm run lint --silent || echo "::warning::lint reported issues"
+      - name: Lint (non-blocking, bounded diagnostic)
+        timeout-minutes: 4
+        continue-on-error: true
+        run: npm run lint --silent || echo "::warning::lint reported issues or exceeded its diagnostic budget"
       # Comando oficial: gates essenciais de código e conteúdo.
       # Os testes já rodam no job `unit`, por isso ficam de fora aqui.
       - name: verify (gates essenciais — comando oficial)
