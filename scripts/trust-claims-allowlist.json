@@ -150,6 +150,41 @@
       "file": "src/components/admin/FunnelAcoesBairro.tsx",
       "rule": "sla",
       "why": "Painel administrativo interno (noindex, login): 'SLA' é meta interna de primeiro contato em 24 h, não promessa pública."
+    },
+    {
+      "file": "src/lib/bairrosData.ts",
+      "rule": "filial",
+      "why": "A única ocorrência atual usa endereço público da Rua da Cidadania CIC e declara explicitamente que não representa filial, oficina ou ponto físico da marca."
+    },
+    {
+      "file": "src/lib/bairrosLote2.ts",
+      "rule": "filial",
+      "why": "A única ocorrência atual cita referências públicas municipais e declara explicitamente que não representam filial ou oficina."
+    },
+    {
+      "file": "src/lib/bairrosLote4.ts",
+      "rule": "filial",
+      "why": "A única ocorrência atual cita estrutura pública da Regional/Rua da Cidadania e declara explicitamente que não representa oficina, filial ou ponto físico da marca."
+    },
+    {
+      "file": "src/lib/blogEditorialRegistry.ts",
+      "rule": "sla",
+      "why": "A única ocorrência atual está em nota interna de revisão editorial e declara que o conteúdo não tem SLA nem promessa de continuidade."
+    },
+    {
+      "file": "src/lib/cidadesData.ts",
+      "rule": "filial",
+      "why": "A única ocorrência atual cita endereços e espaços públicos de Pinhais e declara explicitamente que nenhum representa oficina, filial ou ponto físico da marca."
+    },
+    {
+      "file": "src/lib/cidadesData.ts",
+      "rule": "sla",
+      "why": "A única ocorrência atual declara explicitamente que não há SLA ou tempo fixo de chegada associado à cidade."
+    },
+    {
+      "file": "src/pages/ConsertoImpressoraCuritiba.tsx",
+      "rule": "assistencia-autorizada",
+      "why": "As duas ocorrências são FAQ de transparência: a pergunta verifica autorização e as respostas dizem explicitamente que não existe vínculo nem alegação de assistência autorizada."
     }
   ],
   "_scope": "Conteúdo editorial (blog, páginas de problema, marcas) descreve terceiros e legislação — fora do escopo do gate de claims institucionais."
