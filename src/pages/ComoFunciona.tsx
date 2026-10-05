@@ -11,6 +11,8 @@ import { JsonLdSchema } from "@/components/JsonLdSchema";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import { ExperienciaBadge } from "@/components/social-proof/ExperienciaBadge";
 import { trackPageView, trackCTAClick } from "@/lib/analytics";
+import { commercialConfig } from "@/lib/config/commercial";
+import { GARANTIA, PAGAMENTO } from "@/lib/politicaComercial";
 import { Button } from "@/components/ui/button";
 import { WHATSAPP_NUMBER as WA_NUMBER, SITE_BASE_URL } from "@/lib/siteConfig";
 import {
@@ -52,12 +54,12 @@ const WHATSAPP_NUMBER = WA_NUMBER;
 
 const ComoFunciona = () => {
   useEffect(() => {
-    document.title = "Como funciona o atendimento técnico de informática";
+    document.title = "Como funciona a solicitação de atendimento técnico";
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
       metaDescription.setAttribute(
         "content",
-        "Veja como funcionam triagem, escolha da modalidade, diagnóstico, aprovação do valor e execução, e quando o caso é remoto, visita ou bancada."
+        "Entenda a triagem, as opções de atendimento direto ou por profissional parceiro e como orçamento, disponibilidade e aceite são definidos."
       );
     }
     trackPageView("/como-funciona", "Como Funciona");
@@ -71,7 +73,7 @@ const ComoFunciona = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <PageSEO title="Como funciona o atendimento técnico de informática" description="Veja como funcionam triagem, escolha da modalidade, diagnóstico, aprovação do valor e execução, e quando o caso é remoto, visita ou bancada." path="/como-funciona" breadcrumbs={[{ name: "Início", path: "/" }, { name: "Como Funciona", path: "/como-funciona" }]} />
+      <PageSEO title="Como funciona a solicitação de atendimento técnico" description="Entenda a triagem, as opções de atendimento direto ou por profissional parceiro e como orçamento, disponibilidade e aceite são definidos." path="/como-funciona" breadcrumbs={[{ name: "Início", path: "/" }, { name: "Como Funciona", path: "/como-funciona" }]} />
       {/* JSON-LD FAQPage */}
       <script
         type="application/ld+json"
@@ -102,10 +104,10 @@ const ComoFunciona = () => {
             <div className="max-w-3xl mx-auto text-center">
               <ExperienciaBadge className="mb-4" />
               <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-5 leading-tight">
-                Da sua mensagem à entrega do equipamento
+                Da sua solicitação à decisão sobre o atendimento
               </h1>
               <p className="text-lg md:text-xl text-white/90 mb-8 leading-relaxed">
-                Um processo previsível em quatro etapas: você descreve o problema, fazemos a triagem, apresentamos diagnóstico e valor, e só então executamos.
+                A triagem identifica se o caso segue para atendimento direto do portal ou se será consultada a rede de profissionais parceiros. Disponibilidade, orçamento e próximos passos são informados antes de você decidir.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button variant="heroWhatsapp" size="lg" className="text-base md:text-lg px-8" asChild onClick={() => handleCTA("hero")}>
@@ -152,7 +154,7 @@ const ComoFunciona = () => {
           <div className="container mx-auto relative z-10">
             <div className="max-w-5xl mx-auto">
               <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-8 text-center reveal-text">
-                Atendimento Simples, Rápido e Transparente
+                Como a solicitação é encaminhada
               </h2>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
                 {resumoItems.map((item, i) => {
@@ -178,10 +180,10 @@ const ComoFunciona = () => {
           <div className="container mx-auto relative z-10">
             <div className="max-w-4xl mx-auto">
               <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-4 text-center reveal-text">
-                Passo a Passo: Do Primeiro Contato à Garantia
+                Atendimento direto do portal: do primeiro contato à garantia
               </h2>
               <p className="text-muted-foreground text-center mb-10 max-w-2xl mx-auto reveal-text" data-reveal-delay="100">
-                Conheça cada etapa do nosso processo de atendimento técnico em Curitiba. Transparência do início ao fim para você ter total segurança.
+                Quando o atendimento é realizado diretamente pelo portal, estas são as etapas. Se a solicitação seguir para parceiro, consulte o fluxo específico abaixo; o profissional define as condições do próprio serviço.
               </p>
 
               <div className="space-y-0">
@@ -236,6 +238,41 @@ const ComoFunciona = () => {
           </div>
         </section>
 
+        {/* ===== FLUXO COM PROFISSIONAL PARCEIRO ===== */}
+        <section className="py-12 md:py-16 bg-secondary">
+          <div className="container mx-auto">
+            <div className="max-w-4xl mx-auto">
+              <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-4 text-center">
+                Quando consultamos um profissional parceiro
+              </h2>
+              <p className="text-center text-muted-foreground mb-8 max-w-2xl mx-auto">
+                Em solicitações que dependem de outro profissional ou localidade, podemos consultar parceiros independentes compatíveis com a especialidade. Essa consulta não garante disponibilidade nem proposta.
+              </p>
+              <ol className="grid gap-4 sm:grid-cols-2">
+                <li className="rounded-xl border border-border bg-background p-5">
+                  <strong className="block text-primary">1. Você explica o que precisa</strong>
+                  <span className="mt-2 block text-sm text-muted-foreground">Informe o problema, a cidade e, quando souber, a especialidade necessária pelo canal de atendimento.</span>
+                </li>
+                <li className="rounded-xl border border-border bg-background p-5">
+                  <strong className="block text-primary">2. Consultamos a rede</strong>
+                  <span className="mt-2 block text-sm text-muted-foreground">Com sua autorização, compartilhamos com profissionais independentes compatíveis apenas as informações necessárias para consultar o caso. A resposta depende do interesse e da disponibilidade de cada um.</span>
+                </li>
+                <li className="rounded-xl border border-border bg-background p-5">
+                  <strong className="block text-primary">3. Você recebe uma proposta</strong>
+                  <span className="mt-2 block text-sm text-muted-foreground">O profissional define o próprio orçamento e as condições do serviço. Você recebe a proposta antes de decidir se aceita ou recusa.</span>
+                </li>
+                <li className="rounded-xl border border-border bg-background p-5">
+                  <strong className="block text-primary">4. Você decide</strong>
+                  <span className="mt-2 block text-sm text-muted-foreground">Você pode aceitar ou recusar. Se aceitar, o agendamento e o atendimento são combinados com o profissional responsável.</span>
+                </li>
+              </ol>
+              <p className="mt-6 text-center text-sm text-muted-foreground">
+                Parceiros são profissionais independentes, não empregados do portal. Antes de encaminhar sua solicitação, explicamos quais informações serão compartilhadas e pedimos sua autorização. Preço, escopo, agenda e disponibilidade variam; nenhum serviço é confirmado sem sua concordância prévia com as condições apresentadas.
+              </p>
+            </div>
+          </div>
+        </section>
+
         {/* ===== 4. BLOCO DE PREÇOS ===== */}
         <section className="py-8 md:py-10 bg-accent/5">
           <div className="container mx-auto">
@@ -246,10 +283,13 @@ const ComoFunciona = () => {
                   Quanto Custa o Atendimento?
                 </h2>
                 <p className="text-muted-foreground mb-3 leading-relaxed max-w-xl mx-auto">
-                  A mão de obra começa a partir de <strong className="text-accent">R$ 99,99</strong> quando há visita ou diagnóstico presencial aplicável. O valor final depende da avaliação do problema, do tempo necessário e de eventuais peças, licenças ou materiais.
+                  No atendimento direto do portal, quando há visita ou diagnóstico presencial aplicável, a mão de obra começa a partir de <strong className="text-accent">R$ 99,99</strong>. O valor final depende da avaliação do problema, do tempo necessário e de eventuais peças, licenças ou materiais.
+                </p>
+                <p className="text-sm text-muted-foreground mb-3">
+                  {commercialConfig.pricingDisclaimer}
                 </p>
                 <p className="text-sm text-muted-foreground mb-6">
-                  Os valores podem variar conforme a complexidade do serviço, a necessidade de peças e a localização. O valor do atendimento é informado antes da execução. Veja os detalhes na página de preços e políticas.
+                  Este valor é referência para atendimentos diretos do portal. Em encaminhamentos, o profissional parceiro define o orçamento e as condições do serviço. Veja as condições do atendimento direto na página de preços e políticas.
                 </p>
                 <Button variant="cta" size="lg" asChild>
                   <Link to="/valores">
@@ -268,8 +308,9 @@ const ComoFunciona = () => {
           <div className="container mx-auto">
             <div className="max-w-4xl mx-auto">
               <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-8 text-center reveal-text">
-                O Que Está Incluso no Atendimento
+                O Que Está Incluso no Atendimento Direto
               </h2>
+              <p className="text-center text-sm text-muted-foreground mb-8">A lista abaixo se aplica aos atendimentos realizados diretamente pelo portal. Nos encaminhamentos, modalidade e escopo são combinados com o profissional parceiro.</p>
               <div className="grid md:grid-cols-2 gap-4">
                 {inclusosItems.map((item, i) => (
                   <div key={i} className="flex items-start gap-3 bg-secondary rounded-lg p-4 hover:-translate-y-0.5 hover:shadow-sm transition-all stagger-item" style={{ animationDelay: `${i * 80}ms` }}>
@@ -307,7 +348,7 @@ const ComoFunciona = () => {
                 ))}
               </div>
               <p className="text-center text-sm text-muted-foreground mt-6">
-                Em todos os casos, o valor do atendimento é informado e aprovado <strong>antes</strong> da execução do serviço. Sem surpresas.
+                No atendimento direto e nos encaminhamentos, as condições aplicáveis são apresentadas antes de qualquer aceite ou execução.
               </p>
             </div>
           </div>
@@ -321,7 +362,7 @@ const ComoFunciona = () => {
                 Regiões Atendidas pelo Técnico de Informática
               </h2>
               <p className="text-center text-muted-foreground mb-8 max-w-2xl mx-auto reveal-text" data-reveal-delay="100">
-                Nosso atendimento técnico cobre Curitiba e toda a região metropolitana. Atendemos a domicílio ou remotamente, com agilidade e profissionalismo.
+                O atendimento direto parte de Curitiba; agenda e deslocamento variam conforme a localidade. Para municípios fora das áreas publicadas, consulte a disponibilidade. Quando a solicitação depende de profissional parceiro, disponibilidade e orçamento são confirmados para cada caso.
               </p>
               <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
                 {regioes.map((r, i) => (
@@ -352,7 +393,7 @@ const ComoFunciona = () => {
                 Serviços de Informática Disponíveis
               </h2>
               <p className="text-center text-muted-foreground mb-8 max-w-2xl mx-auto reveal-text" data-reveal-delay="100">
-                Oferecemos uma gama completa de serviços técnicos para computadores, notebooks e redes. Cada serviço segue o mesmo processo transparente descrito acima.
+                O portal oferece os serviços listados abaixo. A modalidade — atendimento direto ou consulta a parceiro — é indicada após a triagem; serviços, disponibilidade e condições podem variar conforme o caso.
               </p>
               <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
                 {servicos.map((s, i) => {
@@ -779,7 +820,7 @@ const resumoItems = [
   { icon: MessageCircle, title: "Solicitação Rápida", text: "Chame via WhatsApp e explique seu problema em poucos minutos" },
   { icon: Search, title: "Diagnóstico Técnico", text: "Avaliação profissional no local ou remotamente" },
   { icon: Eye, title: "Execução Transparente", text: "Serviço realizado com sua aprovação e acompanhamento" },
-  { icon: Shield, title: "Garantia do Serviço", text: "Todo serviço inclui garantia por escrito de 90 dias em mão de obra sobre o ponto reparado" },
+  { icon: Shield, title: "Garantia do Serviço", text: "No atendimento direto do portal, aplica-se a garantia prevista na política comercial" },
 ];
 
 const etapas = [
@@ -847,7 +888,7 @@ const etapas = [
 
 const inclusosItems = [
   { title: "Diagnóstico Técnico Profissional", desc: "Avaliação completa do equipamento com identificação precisa do problema e das possíveis soluções." },
-  { title: "Atendimento no Local ou Remoto", desc: "Você escolhe: o técnico vai até você ou resolve remotamente via acesso seguro ao seu computador." },
+  { title: "Modalidade de Atendimento", desc: "Após a triagem, confirmamos se o caso pode ser atendido no local ou remotamente e quais opções estão disponíveis." },
   { title: "Orientação e Suporte Especializado", desc: "Explicação detalhada de tudo que foi feito, com dicas de manutenção preventiva para o futuro." },
   { title: "Execução Mediante Aprovação", desc: "Nenhum serviço é executado sem sua autorização prévia. Você controla todo o processo do início ao fim." },
 ];
@@ -883,9 +924,9 @@ const servicos = [
 
 const confiancaItems = [
   { icon: BadgeCheck, title: "Atendimento profissional e registrado", desc: "Escopo e valor registrados por escrito antes da execução. Nota fiscal de serviço emitida mediante solicitação e garantia registrada no valor aprovado." },
-  { icon: Clock, title: "Atendimento Rápido — Conforme agenda", desc: "Na maioria dos casos, conseguimos atender conforme a disponibilidade da agenda. Nosso compromisso é não deixar você esperando. Agilidade é prioridade no nosso atendimento." },
-  { icon: Eye, title: "Transparência Total nos Valores", desc: "Valor informado antes da execução. Sem taxas escondidas, sem surpresas no final. Você aprova cada etapa e cada valor antes de qualquer serviço ser realizado." },
-  { icon: Shield, title: "Garantia por Escrito em Todo Serviço", desc: "Todos os serviços possuem garantia de 90 dias em mão de obra sobre o ponto reparado. Se algo der errado dentro do prazo, voltamos para resolver sem custo adicional. Sua segurança é nossa prioridade." },
+  { icon: Clock, title: "Atendimento Rápido — Conforme agenda", desc: "A possibilidade de atendimento depende da agenda, da localidade e, quando aplicável, da disponibilidade do profissional parceiro. A triagem confirma as opções para cada solicitação." },
+  { icon: Eye, title: "Transparência nos Valores", desc: "No atendimento direto, o valor e o escopo são apresentados antes da execução. Em encaminhamentos, o profissional informa seu próprio orçamento e condições antes da decisão." },
+  { icon: Shield, title: "Garantia no Atendimento Direto", desc: `${GARANTIA.servicoLabel}. ${GARANTIA.registroLabel}. ${GARANTIA.pecasLabel}. Em serviços de parceiros independentes, prazo e cobertura são definidos pelo profissional e informados antes do aceite.` },
 ];
 
 const faqItems = [
@@ -893,17 +934,17 @@ const faqItems = [
   { question: "Quanto tempo leva um backup durante o atendimento?", answer: "Em disco saudável, normalmente no mesmo atendimento, variando com o volume de dados e a velocidade da mídia de destino. Discos com setores defeituosos exigem leitura em ritmo reduzido em bancada, com prazo informado depois da avaliação inicial." },
   { question: "Existe garantia de recuperar todos os arquivos?", answer: "Não. Em disco com falha física, arquivos sobrescritos ou dados criptografados por ransomware não há garantia de recuperação integral: o resultado depende do estado da mídia. Explicamos o cenário real antes de iniciar, sem prometer o que não pode ser assegurado." },
   { question: "Vocês guardam cópias dos meus dados depois do serviço?", answer: "Não. Cópias temporárias usadas no processo são apagadas na entrega, salvo pedido expresso seu de retenção por prazo definido. O acesso ao conteúdo se limita ao necessário para executar o serviço contratado." },
-  { question: "Quanto custa a visita técnica?", answer: "Quando há visita ou diagnóstico presencial aplicável, a mão de obra começa a partir de R$ 99,99. O valor final depende da avaliação do problema e do tempo necessário. Consulte os detalhes em /precos-e-politicas." },
+  { question: "Quanto custa a visita técnica?", answer: "No atendimento direto do portal, quando há visita ou diagnóstico presencial aplicável, a mão de obra começa a partir de R$ 99,99; condições em preços e políticas. Em encaminhamentos, o profissional parceiro informa seu próprio orçamento e condições antes do aceite." },
   { question: "O valor pode mudar depois da avaliação?", answer: "Sim, mas somente com sua aprovação prévia. Se durante o atendimento identificarmos algo que altere o escopo ou o valor, consultamos você antes de prosseguir. Nosso compromisso é transparência total — nenhum serviço adicional é executado sem sua autorização." },
-  { question: "Precisa pagar antes do atendimento?", answer: "Não. O pagamento é feito após a conclusão do serviço. Aceitamos PIX (preferencial), dinheiro, cartão de crédito e débito. Para empresas com contrato, oferecemos pagamento faturado." },
-  { question: "Em quanto tempo conseguem atender?", answer: "Na maioria dos casos, sim. Nosso objetivo é atender conforme a disponibilidade da agenda, dependendo da disponibilidade de agenda e da sua localização. Entre em contato via WhatsApp para verificar a disponibilidade." },
-  { question: "O serviço tem garantia?", answer: "Sim. Todos os serviços possuem garantia por escrito de 90 dias em mão de obra sobre o ponto reparado ou o serviço executado. Peças possuem garantia do fabricante. Se algo der errado dentro do prazo, voltamos para resolver sem custo adicional." },
+  { question: "Precisa pagar antes do atendimento?", answer: `${PAGAMENTO.momentoLabel}. Em encaminhamentos, forma e momento do pagamento são combinados com o profissional antes do aceite.` },
+  { question: "Em quanto tempo conseguem atender?", answer: "O prazo depende da localidade e da agenda. Após a triagem, consulte a possibilidade e a estimativa para o seu caso; encaminhamento a parceiro depende também do interesse e da disponibilidade do profissional." },
+  { question: "O serviço tem garantia?", answer: `${GARANTIA.servicoLabel}; ${GARANTIA.registroLabel}. ${GARANTIA.pecasLabel}. Em serviço executado por parceiro independente, prazo e cobertura são informados pelo próprio profissional antes do aceite.` },
   { question: "Faz atendimento remoto?", answer: "Sim. Para problemas de software, configurações e muitos outros casos, realizamos atendimento remoto seguro. O técnico acessa seu computador de forma controlada e resolve o problema enquanto você acompanha em tempo real. É rápido, prático e mais econômico." },
   { question: "Atende empresas?", answer: "Sim. Temos planos específicos para empresas de todos os portes. Oferecemos suporte contínuo, manutenção preventiva, gestão de TI e atendimento prioritário. Emitimos nota fiscal de serviço e de produto." },
   { question: "Quais formas de pagamento são aceitas?", answer: "Aceitamos PIX (forma preferencial), dinheiro, cartão de crédito e débito. Para empresas com contrato mensal, oferecemos pagamento faturado com boleto ou transferência." },
   { question: "Precisa agendar ou atende por ordem de chegada?", answer: "É necessário agendar via WhatsApp. O agendamento garante que o técnico estará disponível no horário combinado, com todos os materiais necessários. Atendemos de segunda a sábado, com horários flexíveis." },
   { question: "O técnico leva peças para o atendimento?", answer: "Sim, quando possível. Se na pré-avaliação identificarmos a necessidade de peças específicas (como SSD, memória RAM, cabos), o técnico já leva os componentes para o atendimento. Peças especiais ou sob encomenda podem necessitar de agendamento adicional." },
-  { question: "Qual a área de cobertura do atendimento?", answer: "Atendemos Curitiba e toda a região metropolitana, incluindo São José dos Pinhais, Pinhais, Araucária e Campo Largo. Para bairros mais distantes, pode haver uma taxa adicional de deslocamento, sempre informada previamente." },
+  { question: "Qual a área de cobertura do atendimento?", answer: "O atendimento direto parte de Curitiba e depende da área publicada, agenda e deslocamento; para outras localidades, consulte antes. Em solicitações encaminhadas a parceiro, a cobertura é confirmada para cada caso, sem garantia de disponibilidade." },
   { question: "Como funciona o atendimento a domicílio?", answer: "O técnico vai até sua casa ou escritório com todas as ferramentas necessárias. Realiza o diagnóstico e o reparo no local, sem que você precise levar o equipamento a uma loja. Atendimento prático, rápido e profissional." },
 ];
 
