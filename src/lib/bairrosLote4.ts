@@ -27,7 +27,7 @@ export const BAIRROS_LOTE_4: Record<string, BairroLocalData> = {
     whatsappMessage:
       "Olá! Preciso de atendimento de informática no Boqueirão, em Curitiba. Pode me orientar?",
     introducaoLocal: [
-      "O Boqueirão é um bairro oficialmente atendido pela Regional Boqueirão de Curitiba, junto com Alto Boqueirão, Hauer e Xaxim. A Rua da Cidadania do Boqueirão fica na Avenida Marechal Floriano Peixoto, 8.430, na Praça Nossa Senhora do Carmo, integrada à estrutura do Terminal do Carmo. Essas referências públicas são usadas aqui apenas para localizar a cobertura; elas não significam oficina, filial ou ponto físico da marca no bairro.",
+      "O Boqueirão é um bairro oficialmente atendido pela Regional Boqueirão de Curitiba, junto com Alto Boqueirão, Hauer e Xaxim. A Rua da Cidadania do Boqueirão fica na Avenida Marechal Floriano Peixoto, 8.430, na Praça Nossa Senhora do Carmo, integrada à estrutura do Terminal do Carmo. Essas referências públicas são usadas aqui apenas para localizar a cobertura; são marcos geográficos, não endereços de atendimento da marca no bairro.",
       "A página parte de uma regra simples: bairro define onde o atendimento pode acontecer, mas não define a causa do defeito. Um computador lento pode estar limitado por armazenamento, memória, temperatura ou software; uma impressora offline pode ter falha de comunicação sem qualquer defeito mecânico; e um Wi-Fi instável pode ser cobertura, canal, roteador, dispositivo ou conexão do provedor. Por isso, a primeira etapa é descrever o sintoma e separar essas hipóteses antes de sugerir formatação, compra ou troca de peça.",
     ],
     contextoLocal: [
