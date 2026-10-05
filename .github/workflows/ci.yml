@@ -55,8 +55,7 @@ jobs:
           node-version: "20"
       - name: Install deps
         run: npm ci --no-audit --no-fund
-      - name: Lint (non-blocking warnings)
-        run: npm run lint --silent || echo "::warning::lint reported issues"
+      # Lint bloqueante executado pelo comando oficial `verify` abaixo (Biome + motion).
       # Comando oficial: gates essenciais de código e conteúdo.
       # Os testes já rodam no job `unit`, por isso ficam de fora aqui.
       - name: verify (gates essenciais — comando oficial)
