@@ -1747,7 +1747,7 @@ const WAVE_12D: EditorialApproval[] = [
     imageLicense: "custom-owned",
     imageAttribution: "O Técnico de Informática",
     notes:
-      "Revisão material em 2026-10-01 guiada por GSC real de página: 1 impressão, 0 cliques e posição média 2 no período fechado até 2026-09-28. Sem query individual exposta; nenhuma foi inventada. A versão suplementar preserva a URL e aprofunda inventário, contas, backup, rede, documentação e recuperação sem SLA ou promessa de continuidade.",
+      "Revisão material em 2026-10-01 guiada por GSC real de página: 1 impressão, 0 cliques e posição média 2 no período fechado até 2026-09-28. Sem query individual exposta; nenhuma foi inventada. A versão suplementar preserva a URL e aprofunda inventário, contas, backup, rede, documentação e recuperação sem compromisso de prazo ou continuidade de atendimento.",
   },
 ];
 
