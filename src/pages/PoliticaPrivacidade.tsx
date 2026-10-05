@@ -202,6 +202,7 @@ const sections: { id: string; title: string; icon: typeof ShieldCheck; body: Rea
         <li><strong>WhatsApp/Meta</strong> — para a conversa de atendimento.</li>
         <li><strong>Google (Analytics, Ads e AdSense)</strong> — métricas, otimização e exibição de anúncios.</li>
         <li><strong>Provedor de hospedagem</strong> — armazenamento técnico do site.</li>
+        <li><strong>Profissionais parceiros independentes</strong> — somente quando você autorizar o encaminhamento do pedido; compartilhamos os dados necessários para consultar disponibilidade e orçamento, como descrição do problema, localidade e forma de contato.</li>
         <li>Não vendemos seus dados a terceiros.</li>
       </ul>
     ),
