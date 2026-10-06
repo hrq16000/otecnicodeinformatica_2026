@@ -1,6 +1,3 @@
-Warning: truncated output (original token count: 11548)
-Total output lines: 955
-
 // Build-time prerender for /arrumar-pc/<cidade> and category hubs
 // (/conserto-{tv,som,videogame,celular}/<local>).
 // Generates static dist/<path>/index.html so FB/LinkedIn crawlers see
@@ -420,7 +417,144 @@ export async function getBlogPosts(rootDir = ".") {
     if (existingIndex !== undefined) {
       if (allowBaseOverride && posts[existingIndex].origin === "manual") {
         posts[existingIndex] = post;
-        overrides…1548 tokens truncated…Olá! Vim pelo guia "${post.title}" no site e quero falar sobre o meu equipamento.`,
+        overrides.push(post.slug);
+        return;
+      }
+      duplicates.push(post.slug);
+      return;
+    }
+
+    bySlug.set(post.slug, posts.length);
+    posts.push(post);
+  }
+
+  // --- Base manual (blogPostsContentBase) ---
+  const basePath = path.join(rootDir, "src/data/blogPostsContent.tsx");
+  const baseSrc = await fs.readFile(basePath, "utf8");
+  const entryRe = /^  "([a-z0-9-]+)":\s*\{/gm;
+  const matches = [...baseSrc.matchAll(entryRe)];
+  const baseSeen = new Set();
+  for (let i = 0; i < matches.length; i++) {
+    const slug = matches[i][1];
+    const start = matches[i].index;
+    const end = i + 1 < matches.length ? matches[i + 1].index : baseSrc.length;
+    const block = baseSrc.slice(start, end);
+    const title = extractField(block, "title");
+    const excerpt = extractField(block, "excerpt");
+    const date = extractField(block, "date");
+    const category = extractField(block, "category");
+    const readTime = extractField(block, "readTime");
+    if (!title) continue;
+    addPost({
+      slug, title, excerpt: excerpt ?? "", date: date ?? HOWTO_DEFAULT_DATE,
+      category: category ?? "", origin: "manual",
+      readTime: readTime ?? "10 min",
+      lead: extractLead(block),
+      headings: extractHeadings(block),
+      sections: extractSections(block),
+      wordCount: countWords(block),
+    }, baseSeen, "blogPostsContent.tsx");
+  }
+
+
+  // --- Suplementares manuais (blogSupplementalPosts) ---
+  const supplementalPath = path.join(rootDir, "src/data/blogSupplementalPosts.tsx");
+  const supplementalSrc = await fs.readFile(supplementalPath, "utf8");
+  const supplementalEntryRe = /^  "([a-z0-9-]+)":\s*\{/gm;
+  const supplementalMatches = [...supplementalSrc.matchAll(supplementalEntryRe)];
+  const supplementalSeen = new Set();
+  for (let i = 0; i < supplementalMatches.length; i++) {
+    const slug = supplementalMatches[i][1];
+    const start = supplementalMatches[i].index;
+    const end = i + 1 < supplementalMatches.length ? supplementalMatches[i + 1].index : supplementalSrc.length;
+    const block = supplementalSrc.slice(start, end);
+    const title = extractField(block, "title");
+    const excerpt = extractField(block, "excerpt");
+    const date = extractField(block, "date");
+    const category = extractField(block, "category");
+    const readTime = extractField(block, "readTime");
+    if (!title) continue;
+    addPost({
+      slug, title, excerpt: excerpt ?? "", date: date ?? HOWTO_DEFAULT_DATE,
+      category: category ?? "", origin: "supplemental",
+      readTime: readTime ?? "10 min",
+      lead: extractLead(block),
+      headings: extractHeadings(block),
+      sections: extractSections(block),
+      wordCount: countWords(block),
+    }, supplementalSeen, "blogSupplementalPosts.tsx", { allowBaseOverride: true });
+  }
+
+
+  // --- Programáticos (defs em blogProgrammaticPosts.tsx) ---
+  const progPath = path.join(rootDir, "src/data/blogProgrammaticPosts.tsx");
+  const progSrc = await fs.readFile(progPath, "utf8");
+  const defsIdx = progSrc.indexOf("const defs");
+  const defsSrc = defsIdx >= 0 ? progSrc.slice(defsIdx) : progSrc;
+  const slugRe = /slug:\s*"([a-z0-9-]+)"/g;
+  const slugMatches = [...defsSrc.matchAll(slugRe)];
+  const programmaticSeen = new Set();
+  for (let i = 0; i < slugMatches.length; i++) {
+    const slug = slugMatches[i][1];
+    const start = slugMatches[i].index;
+    const end = i + 1 < slugMatches.length ? slugMatches[i + 1].index : defsSrc.length;
+    const block = defsSrc.slice(start, end);
+    const title = extractField(block, "title");
+    const excerpt = extractField(block, "excerpt");
+    const date = extractField(block, "date");
+    const category = extractField(block, "category");
+    if (!title) continue;
+    addPost({
+      slug, title, excerpt: excerpt ?? "", date: date ?? HOWTO_DEFAULT_DATE,
+      category: category ?? "", origin: "programmatic",
+      bodySignals: (block.match(/\b(?:lead|sections|whenToCall)\s*:/g) || []).length,
+    }, programmaticSeen, "blogProgrammaticPosts.tsx");
+  }
+
+  return { posts, duplicates, overrides };
+}
+
+// Corpo estático (dentro do <noscript> do #root) de um artigo aprovado.
+// Todo o texto vem do próprio artigo: H1 = título real, lead = primeiro
+// parágrafo real, sumário = H2 reais. Nada é inventado aqui.
+// Mapa slug -> título dos artigos aprovados (preenchido antes da escrita).
+const APPROVED_TITLES = new Map();
+
+// Cross-links entre artigos aprovados: só aponta para páginas indexáveis
+// e canônicas (nunca para artigos noindex).
+function outrosGuiasAprovados(slug) {
+  const itens = [...APPROVED_TITLES.entries()]
+    .filter(([s]) => s !== slug)
+    .slice(0, 3)
+    .map(
+      ([s, t]) =>
+        `<li style="margin:4px 0"><a href="/blog/${s}" style="color:#7fd4ec">${htmlEscape(t)}</a></li>`,
+    )
+    .join("");
+  if (!itens) return "";
+  return `<h2 style="font-size:1.1rem;margin:24px 0 8px">Outros guias técnicos</h2><ul style="margin:0 0 8px;padding-left:20px">${itens}</ul>`;
+}
+
+// Capa editorial visível no corpo estático (a mesma usada em og:image e no
+// JSON-LD do artigo). Fail-closed: sem alt declarado, nada é renderizado.
+function capaEditorial(slug, wave) {
+  const alt = coverAltDe(slug);
+  if (!wave?.cover || !alt) return "";
+  return `<figure style="margin:0 0 16px"><img src="${wave.cover}" alt="${htmlEscape(alt)}" width="1200" height="630" decoding="async" fetchpriority="high" style="width:100%;height:auto;border-radius:12px" /><figcaption style="font-size:.8rem;opacity:.72;margin-top:6px">${htmlEscape(alt)} — ${htmlEscape(coverCreditoDe(slug) || "imagem de uso próprio do Técnico de Informática.")}</figcaption></figure>`;
+}
+
+// Miniatura da capa no hub /blog (mesma imagem da capa do artigo).
+function miniaturaEditorial(slug) {
+  const wave = getWaveArticle(slug);
+  const alt = coverAltDe(slug);
+  if (!wave?.cover || !alt) return "";
+  return `<img src="${wave.cover}" alt="${htmlEscape(alt)}" width="320" height="168" loading="lazy" decoding="async" style="width:100%;max-width:320px;height:auto;border-radius:10px;display:block;margin:0 0 6px" />`;
+}
+
+function editorialStaticBody(post, wave) {
+  const url = `${SITE}/blog/${post.slug}`;
+  const waText = encodeURIComponent(
+    `Olá! Vim pelo guia "${post.title}" no site e quero falar sobre o meu equipamento.`,
   );
   const sumario = post.headings.length
     ? `<h2 style="font-size:1.1rem;margin:24px 0 8px">O que este guia cobre</h2><ul style="margin:0 0 8px;padding-left:20px">${post.headings
