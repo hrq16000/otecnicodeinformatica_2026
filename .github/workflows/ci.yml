@@ -44,6 +44,9 @@ jobs:
     needs: unit
     runs-on: ubuntu-latest
     timeout-minutes: 15
+    env:
+      VITE_SENTRY_DSN: ${{ secrets.VITE_SENTRY_DSN }}
+      VITE_OTLP_ENDPOINT: ${{ secrets.VITE_OTLP_ENDPOINT }}
 
     steps:
       - uses: actions/checkout@v4
