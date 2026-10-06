@@ -198,6 +198,11 @@ const MAPA: Record<string, EditorialInboundLink[]> = {
   ],
   "/servicos/backup-para-empresas": [
     {
+      slug: "como-fazer-backup-na-nuvem",
+      label: "Backup na nuvem: como testar uma restauração",
+      hint: "Critérios para separar sincronização de backup e validar uma cópia antes de depender dela.",
+    },
+    {
       slug: "organizacao-de-ti-para-pequenos-escritorios",
       label: "Como organizar a informática de um pequeno escritório",
       hint: "Onde os arquivos moram, quem responde por eles e como testar a restauração.",

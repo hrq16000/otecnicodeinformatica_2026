@@ -67,10 +67,21 @@ function extrairArtigos(fonte) {
   }));
 }
 
+function extrairArtigosProgramaticos(fonte) {
+  const src = read(fonte);
+  const marcas = [...src.matchAll(/slug:\s*"([a-z0-9-]+)"/g)];
+  return marcas.map((m, i) => ({
+    slug: m[1],
+    raw: src.slice(m.index, i + 1 < marcas.length ? marcas[i + 1].index : src.length),
+  }));
+}
+
 const artigos = new Map(
-  [...extrairArtigos("src/data/blogPostsContent.tsx"), ...extrairArtigos("src/data/blogProgrammaticPosts.tsx")].map(
-    (a) => [a.slug, a.raw],
-  ),
+  [
+    ...extrairArtigos("src/data/blogPostsContent.tsx"),
+    ...extrairArtigos("src/data/blogSupplementalPosts.tsx"),
+    ...extrairArtigosProgramaticos("src/data/blogProgrammaticPosts.tsx"),
+  ].map((a) => [a.slug, a.raw]),
 );
 
 const textoVisivel = (raw) =>

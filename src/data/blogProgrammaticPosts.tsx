@@ -102,6 +102,16 @@ const defs: PostDef[] = [
           "Se a causa ainda estiver aberta, veja <a href=\"/diagnostico-tecnico\">como funciona o diagnóstico técnico</a> antes de autorizar troca de peça.",
         ],
       },
+      {
+        h: "6. Registre os sinais antes de decidir o próximo teste",
+        p:
+          "Anote se há algum LED, se as ventoinhas giram, se o teclado responde e se o monitor informa ausência de sinal. Registre também o momento em que o sintoma aparece: imediatamente ao apertar o botão, depois de alguns segundos, após o logotipo ou somente quando o Windows começa a carregar. Esses marcos ajudam a separar alimentação, POST, vídeo e inicialização sem tratar todos como ‘não liga’. Se houve mudança recente, como limpeza, queda, atualização de firmware ou instalação de peça, descreva exatamente o que foi alterado e se o comportamento mudou depois. Faça uma tentativa por vez e compare o resultado; repetir ciclos de liga e desliga sem observar diferenças não acrescenta evidência e pode aumentar o risco em equipamento instável.",
+      },
+      {
+        h: "7. Pare quando o teste exigir abrir ou medir componentes",
+        p:
+          "Cabos, conectores e indicadores variam entre modelos. Consulte o manual do fabricante para qualquer verificação que dependa do modelo e não abra a fonte de alimentação. Se houver cheiro de queimado, estalo, líquido, marcas de calor ou bateria estufada, desconecte o equipamento quando isso puder ser feito sem risco e não tente nova partida. Em notebooks, sinais de energia podem vir do adaptador, da bateria ou da placa; um teste genérico não confirma qual componente falhou. Em desktops, ventoinhas girando também não provam que a fonte esteja fornecendo todas as tensões corretamente. Quando a próxima etapa exigir medição elétrica, desmontagem desconhecida ou troca de peças, encaminhe o diagnóstico com os sinais anotados, em vez de comprar componentes por tentativa.",
+      },
     ],
     whenToCall:
       "Interrompa as tentativas e procure avaliação quando houver cheiro de queimado, estalo elétrico, líquido, componente visivelmente danificado, fonte que arma e desarma repetidamente ou quando o equipamento contiver dados importantes e o comportamento mudar a cada tentativa. Esses sinais pedem medição e inspeção controlada, não troca de peça por tentativa.",
@@ -219,6 +229,16 @@ const defs: PostDef[] = [
           "Roteiro passo a passo: <a href=\"/ferramentas/roteiro-wifi-instavel\">ferramenta de diagnóstico de Wi-Fi instável</a>.",
           "Cobertura, configuração e rede local: <a href=\"/servicos/redes-e-wifi\">serviço de redes e Wi-Fi</a>.",
         ],
+      },
+      {
+        h: "6. Registre a queda de forma comparável",
+        p:
+          "Anote horário, cômodo, dispositivo, distância aproximada do roteador e se outros aparelhos perderam conexão ao mesmo tempo. Registre também se a rede Wi-Fi desapareceu da lista, se continuou conectada sem acesso à internet ou se o aparelho apenas ficou lento. São situações diferentes. Se puder, compare um dispositivo no cabo com outro no Wi-Fi durante o mesmo intervalo e repita a comparação em mais de um horário. Um teste isolado de velocidade mede um momento específico e não prova sozinho onde ocorre a falha. Evite alterar canal, nome de rede, DNS e posição do roteador ao mesmo tempo: faça uma mudança reversível por vez, anote o valor anterior e compare no mesmo local. Assim você preserva o que já funciona e consegue identificar qual ajuste teve efeito.",
+      },
+      {
+        h: "7. Interprete os resultados sem atribuir culpa antes da hora",
+        p:
+          "Se apenas um aparelho cai, confira se o problema acompanha esse aparelho quando ele muda de cômodo ou usa outra rede conhecida. Se vários aparelhos perdem somente o Wi-Fi, observe a cobertura e o estado do roteador; isso ainda não prova defeito no equipamento. Se cabo e Wi-Fi param juntos, registre as luzes do modem/ONT e consulte o status do provedor, quando disponível. Não restaure o roteador de fábrica como primeiro passo: essa ação apaga configurações e pode interromper serviços de voz, TV ou dispositivos conectados. Uma atualização de firmware deve ser do fabricante e do modelo exato, com energia estável e cópia das configurações quando possível. Se o roteador reinicia, aquece demais ou apresenta falha em várias portas, interrompa mudanças aleatórias e procure avaliação da rede e do equipamento.",
       },
     ],
     whenToCall:
@@ -372,6 +392,21 @@ const defs: PostDef[] = [
           "Registre qual conta, dispositivo e método foram usados para restaurar; isso reduz improviso quando houver uma perda real.",
           "Use também o roteiro <a href=\"/blog/como-testar-restauracao-de-backup\">como testar a restauração de um backup</a>.",
         ],
+      },
+      {
+        h: "6. Monte um calendário que possa ser cumprido",
+        p:
+          "A frequência depende de quanto trabalho você aceita perder entre duas cópias. Para arquivos que mudam todos os dias, verifique se a rotina automática realmente executou; para pastas que mudam pouco, uma revisão periódica ainda é necessária. O intervalo não deve ser escolhido por uma regra universal: considere volume, conexão disponível, limite do plano e tempo para restaurar. Mantenha um registro simples com data da última execução, pastas incluídas, alertas recebidos e resultado do último teste. Se o serviço mostrar falha, espaço esgotado ou autenticação expirada, corrija a causa e repita uma restauração pequena antes de confiar novamente na rotina.",
+      },
+      {
+        h: "7. Considere o que acontece se a conta ficar indisponível",
+        p:
+          "Uma cópia na nuvem depende de acesso à conta, conexão e políticas do serviço. Guarde os meios de recuperação de autenticação fora do próprio computador protegido e mantenha uma cópia independente quando os arquivos forem importantes. Em uma mudança de provedor, não encerre a conta antiga assim que iniciar a transferência: compare amostras, confira nomes e tamanhos e abra documentos restaurados no destino. Se dados forem sincronizados em vários dispositivos, uma exclusão ou arquivo criptografado pode se propagar; pause a sincronização ao investigar uma alteração inesperada e preserve as versões disponíveis. Em empresas, combine quem pode iniciar a restauração e quais dados precisam voltar primeiro. O procedimento deve ser conhecido antes de uma emergência, não improvisado depois da perda.",
+      },
+      {
+        h: "8. Registre o resultado do teste",
+        p:
+          "Guarde a data, os arquivos escolhidos, o local de destino e qualquer aviso apresentado pelo serviço. Se um documento não abrir, uma pasta estiver incompleta ou a versão restaurada não corresponder à esperada, trate o teste como falha e investigue antes de apagar a origem. Esse registro permite comparar mudanças de conta, plano, aplicativo ou rotina sem depender da memória. Para equipes, identifique também quem validou a amostra e quem pode autorizar uma restauração mais ampla.",
       },
     ],
     whenToCall:
