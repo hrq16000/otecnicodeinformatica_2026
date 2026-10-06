@@ -44,6 +44,7 @@ jobs:
     needs: unit
     runs-on: ubuntu-latest
     timeout-minutes: 15
+    # Required by check:observability-env; absent values keep the deploy gate blocked.
     env:
       VITE_SENTRY_DSN: ${{ secrets.VITE_SENTRY_DSN }}
       VITE_OTLP_ENDPOINT: ${{ secrets.VITE_OTLP_ENDPOINT }}
