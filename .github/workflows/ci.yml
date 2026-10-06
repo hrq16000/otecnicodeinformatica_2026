@@ -55,13 +55,12 @@ jobs:
           node-version: "20"
       - name: Install deps
         run: npm ci --no-audit --no-fund
-      # Lint bloqueante executado pelo comando oficial `verify` abaixo (Biome + motion).
-      # Comando oficial: gates essenciais de código e conteúdo.
+      - name: Build
+        run: npm run build
+      # O verify inclui a governança editorial, que inspeciona a saída do build.
       # Os testes já rodam no job `unit`, por isso ficam de fora aqui.
       - name: verify (gates essenciais — comando oficial)
         run: npm run verify -- --skip=test
-      - name: Build
-        run: npm run build
       # Comando oficial: gates essenciais de publicação (exigem dist/).
       # Os passos opcionais (GSC/rede) não bloqueiam o CI.
       - name: deploy:check (gates de publicação — comando oficial)
@@ -360,5 +359,3 @@ jobs:
           name: lighthouse-reports
           path: .lighthouseci
           if-no-files-found: ignore
-
-
