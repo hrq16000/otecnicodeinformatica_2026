@@ -41,7 +41,7 @@ jobs:
         run: |
           set -euo pipefail
           rm -f /tmp/oti-preview.log /tmp/oti-preview-response.html
-          npm run preview -- --port 4173 > /tmp/oti-preview.log 2>&1 &
+          npx --yes wrangler dev --config dist/server/wrangler.json --port 4173 > /tmp/oti-preview.log 2>&1 &
           preview_pid=$!
           cleanup() { kill "$preview_pid" 2>/dev/null || true; }
           trap cleanup EXIT
@@ -65,8 +65,8 @@ jobs:
           fi
 
       - name: Lighthouse CI — budgets por rota de serviço
-        # O próprio LHCI sobe "vite preview" pelo lighthouserc.servicos.json.
-        # Não envolva com vite dev: HMR/optimizer distorcem TBT e não representam produção.
+        # O próprio LHCI sobe o Worker gerado pelo preset cloudflare-module via Wrangler.
+        # Não use vite dev/preview aqui: o bundle Nitro é dist/server/index.mjs.
         run: npx --yes @lhci/cli@0.14.x autorun --config=lighthouserc.servicos.json
       - name: Publicar relatórios
         if: always()
