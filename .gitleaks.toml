@@ -1,0 +1,10 @@
+title = "O Técnico de Informática — secret scanning"
+
+[extend]
+useDefault = true
+
+[allowlist]
+description = "Generated migration manifest: token fields are CSS design tokens, not credentials."
+paths = [
+  '''(^|/)\.lovable/migrate-to-tanstack/theme-port\.json$'''
+]
