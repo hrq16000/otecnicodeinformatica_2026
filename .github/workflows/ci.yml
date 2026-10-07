@@ -248,7 +248,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 15
     needs: e2e-full-matrix
-    if: always()
+    if: always() && needs.e2e-full-matrix.result != 'skipped'
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
