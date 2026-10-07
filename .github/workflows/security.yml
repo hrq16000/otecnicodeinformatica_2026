@@ -33,13 +33,13 @@ jobs:
           bun-version: latest
 
       - name: Install dependencies
-        run: bun install --frozen-lockfile
+        run: npm ci --no-audit --no-fund
 
       # 1) Fail the build on high/critical vulnerabilities de produção.
       - name: npm audit (high+critical)
         run: |
           set -e
-          bunx --bun npm audit --omit=dev --audit-level=high --json > audit.json || true
+          npm audit --omit=dev --audit-level=high --json > audit.json || true
           node - <<'NODE'
           const r = require("./audit.json");
           const m = r.metadata?.vulnerabilities || {};
