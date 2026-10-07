@@ -135,7 +135,8 @@ jobs:
 
 
       # 6) Guard against SEO regressions on the landing shell (title / desc / unique H1).
-      - name: Verify SEO basics on index.html
+      - name: Verify SEO basics on legacy index.html (when present)
+        if: ${{ hashFiles('index.html') != '' }}
         run: bun scripts/check-seo-basics.ts index.html
 
       # 7) Runtime data-exposure gate. Não há fallback nem chave versionada.
