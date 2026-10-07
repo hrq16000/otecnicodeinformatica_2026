@@ -74,7 +74,7 @@ jobs:
           timeout 8m docker run --rm \
             -v /tmp/gitleaks-tree:/repo:ro \
             ghcr.io/gitleaks/gitleaks:v8.30.1 \
-            dir /repo --redact --no-banner --verbose
+            dir /repo --config /repo/.gitleaks.toml --redact --no-banner --verbose
 
       # 3) Static analysis on JS/TS.
       - name: Semgrep (OWASP/React rulesets)
@@ -151,8 +151,8 @@ jobs:
       #    reviews or og_validation_status vs the committed baseline.
       - name: Security findings baseline (reviews + og_validation_status)
         env:
-          VITE_SUPABASE_URL: ${{ secrets.VITE_SUPABASE_URL || 'https://hisepaayuwxjrnumbqeq.supabase.co' }}
-          VITE_SUPABASE_PUBLISHABLE_KEY: ${{ secrets.VITE_SUPABASE_PUBLISHABLE_KEY || 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imhpc2VwYWF5dXd4anJudW1icWVxIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODM2MTU3NzcsImV4cCI6MjA5OTE5MTc3N30.d3ygLv0kgEFiT4hXlp6opB9mvOPLQSwSEKXuLIle164' }}
+          VITE_SUPABASE_URL: ${{ secrets.VITE_SUPABASE_URL }}
+          VITE_SUPABASE_PUBLISHABLE_KEY: ${{ secrets.VITE_SUPABASE_PUBLISHABLE_KEY }}
         run: node scripts/check-security-findings-baseline.mjs
 
 
