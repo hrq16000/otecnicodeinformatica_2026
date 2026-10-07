@@ -36,6 +36,34 @@ jobs:
         env:
           VITE_SITE_DOMAIN: otecnicodeinformatica.com.br
           VITE_SITE_INDEXING_ENABLED: "true"
+      - name: Smoke SSR do preview de produção
+        shell: bash
+        run: |
+          set -euo pipefail
+          rm -f /tmp/oti-preview.log /tmp/oti-preview-response.html
+          npm run preview -- --port 4173 > /tmp/oti-preview.log 2>&1 &
+          preview_pid=$!
+          cleanup() { kill "$preview_pid" 2>/dev/null || true; }
+          trap cleanup EXIT
+
+          for attempt in {1..30}; do
+            if curl --silent --output /dev/null http://127.0.0.1:4173/; then
+              break
+            fi
+            sleep 1
+          done
+
+          status="$(curl --silent --show-error --output /tmp/oti-preview-response.html --write-out '%{http_code}' http://127.0.0.1:4173/servicos/formatacao || true)"
+          if [ "$status" != "200" ]; then
+            echo "::error::Preview SSR retornou HTTP $status em /servicos/formatacao"
+            echo "----- server log -----"
+            cat /tmp/oti-preview.log || true
+            echo "----- response -----"
+            head -c 4000 /tmp/oti-preview-response.html || true
+            echo
+            exit 1
+          fi
+
       - name: Lighthouse CI — budgets por rota de serviço
         # O próprio LHCI sobe "vite preview" pelo lighthouserc.servicos.json.
         # Não envolva com vite dev: HMR/optimizer distorcem TBT e não representam produção.
