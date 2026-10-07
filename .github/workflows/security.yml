@@ -138,18 +138,14 @@ jobs:
       - name: Verify SEO basics on index.html
         run: bun scripts/check-seo-basics.ts index.html
 
-      # 7) Runtime data-exposure gate. Executa somente quando o ambiente externo
-      #    já possui as variáveis; o CI não carrega nem mantém chaves embutidas.
-      - name: Public data exposure gate (quando configurado)
-        if: ${{ secrets.VITE_SUPABASE_URL != '' && secrets.VITE_SUPABASE_PUBLISHABLE_KEY != '' }}
+      # 7) Runtime data-exposure gate. Não há fallback nem chave versionada.
+      #    O próprio script faz SKIP seguro (exit 0) quando o ambiente não fornece
+      #    as variáveis públicas; se elas existirem no CI, o gate roda normalmente.
+      - name: Public data exposure gate (environment-aware)
         env:
           VITE_SUPABASE_URL: ${{ secrets.VITE_SUPABASE_URL }}
           VITE_SUPABASE_PUBLISHABLE_KEY: ${{ secrets.VITE_SUPABASE_PUBLISHABLE_KEY }}
         run: node scripts/check-public-data-exposure.mjs
-
-      - name: Public data exposure gate — ambiente externo não configurado
-        if: ${{ secrets.VITE_SUPABASE_URL == '' || secrets.VITE_SUPABASE_PUBLISHABLE_KEY == '' }}
-        run: echo "::notice::Gate runtime externo não executado; nenhum segredo é necessário para validar este PR."
 
       # 8) Security-findings regression gate — fails if new findings appear for
       #    reviews or og_validation_status vs the committed baseline.
