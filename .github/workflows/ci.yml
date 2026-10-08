@@ -105,10 +105,30 @@ jobs:
       - name: Interlinking local gate (mãe ⇄ bairros/cidades)
         run: node scripts/with-ssr-server.mjs npm run check:local-interlinking
       - name: Gate de saúde de indexação (rotas + aliases)
+        shell: bash
         run: |
-          npx vite preview --port 4321 --strictPort &
-          for i in $(seq 1 60); do curl -sf -o /dev/null http://localhost:4321/ && break; sleep 1; done
-          node scripts/check-index-health.mjs --base=http://localhost:4321 --strict
+          set -euo pipefail
+          npx --yes wrangler dev --config dist/server/wrangler.json --port 4321 > /tmp/oti-index-worker.log 2>&1 &
+          worker_pid=$!
+          cleanup() {
+            kill "$worker_pid" 2>/dev/null || true
+            pkill -P "$worker_pid" 2>/dev/null || true
+          }
+          trap cleanup EXIT
+          ready=0
+          for i in $(seq 1 60); do
+            if curl -sf -o /dev/null http://127.0.0.1:4321/; then
+              ready=1
+              break
+            fi
+            sleep 1
+          done
+          if [ "$ready" != "1" ]; then
+            echo "::error::Worker de produção não respondeu na porta 4321"
+            cat /tmp/oti-index-worker.log || true
+            exit 1
+          fi
+          node scripts/check-index-health.mjs --base=http://127.0.0.1:4321 --strict
       - name: Relatório HTML de auditoria local
         run: npm run report:local-audit
 
@@ -144,8 +164,8 @@ jobs:
         run: npx playwright install --with-deps chromium
       - name: Build
         run: npm run build
-      - name: Start preview
-        run: npx vite preview --port 8080 &
+      - name: Start production Worker
+        run: npx --yes wrangler dev --config dist/server/wrangler.json --port 8080 > /tmp/oti-e2e-worker.log 2>&1 &
         env:
           CI: "true"
       - name: Wait for server
@@ -210,8 +230,8 @@ jobs:
         run: npx playwright install --with-deps ${{ matrix.browser }}
       - name: Build (uma única vez por job)
         run: npm run build
-      - name: Start preview
-        run: npx vite preview --port 8080 &
+      - name: Start production Worker
+        run: npx --yes wrangler dev --config dist/server/wrangler.json --port 8080 > /tmp/oti-e2e-matrix-worker.log 2>&1 &
       - name: Wait for server (healthcheck HTTP)
         run: npx wait-on http-get://localhost:8080/ --timeout 90000
       - name: Run shard ${{ matrix.shard }}/${{ matrix.totalShards }} (${{ matrix.browser }})
