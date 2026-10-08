@@ -41,19 +41,19 @@ jobs:
         run: |
           set -euo pipefail
           rm -f /tmp/oti-preview.log /tmp/oti-preview-response.html
-          npx --yes wrangler dev --config dist/server/wrangler.json --port 4173 > /tmp/oti-preview.log 2>&1 &
+          npx --yes wrangler dev --config dist/server/wrangler.json --port 4174 > /tmp/oti-preview.log 2>&1 &
           preview_pid=$!
           cleanup() { kill "$preview_pid" 2>/dev/null || true; }
           trap cleanup EXIT
 
           for attempt in {1..30}; do
-            if curl --silent --output /dev/null http://127.0.0.1:4173/; then
+            if curl --silent --output /dev/null http://127.0.0.1:4174/; then
               break
             fi
             sleep 1
           done
 
-          status="$(curl --silent --show-error --output /tmp/oti-preview-response.html --write-out '%{http_code}' http://127.0.0.1:4173/servicos/formatacao || true)"
+          status="$(curl --silent --show-error --output /tmp/oti-preview-response.html --write-out '%{http_code}' http://127.0.0.1:4174/servicos/formatacao || true)"
           if [ "$status" != "200" ]; then
             echo "::error::Preview SSR retornou HTTP $status em /servicos/formatacao"
             echo "----- server log -----"
