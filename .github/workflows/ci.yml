@@ -56,7 +56,19 @@ jobs:
       - name: Install deps
         run: npm ci --no-audit --no-fund
       - name: Lint (non-blocking warnings)
-        run: npm run lint --silent || echo "::warning::lint reported issues"
+        run: |
+          # O ESLint legado é observacional; os linters bloqueantes rodam no `verify`.
+          # Evita que arquivos editoriais muito grandes consumam todo o tempo do job
+          # e impeçam `verify`, build e `deploy:check` de sequer iniciar.
+          set +e
+          timeout --signal=TERM 120s npm run lint --silent
+          status=$?
+          if [ "$status" -eq 124 ]; then
+            echo "::warning::lint observacional excedeu 120s; gates bloqueantes seguem no verify"
+          elif [ "$status" -ne 0 ]; then
+            echo "::warning::lint observacional reportou problemas (exit $status)"
+          fi
+          exit 0
       # Comando oficial: gates essenciais de código e conteúdo.
       # Os testes já rodam no job `unit`, por isso ficam de fora aqui.
       - name: verify (gates essenciais — comando oficial)
