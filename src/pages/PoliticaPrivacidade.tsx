@@ -1,6 +1,6 @@
 import { whatsappLinkComContexto } from "@/lib/waContextLink";
 import { Helmet } from "react-helmet";
-import { useCanonical } from "@/lib/canonicalUrl";
+import { PageSEO } from "@/components/PageSEO";
 import { Link } from "@/lib/router-compat";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
@@ -309,20 +309,19 @@ const breadcrumbSchema = {
 };
 
 const PoliticaPrivacidade = () => {
-  useCanonical(CANONICAL);
-
   return (
     <>
+      <PageSEO
+        title="Política de Privacidade | O Técnico de Informática"
+        description="Política de Privacidade e LGPD d'O Técnico de Informática: como coletamos, usamos e protegemos seus dados, cookies, GA4, Google Ads e seus direitos."
+        path="/politica-de-privacidade"
+        ogType="article"
+        breadcrumbs={[
+          { name: "Início", path: "/" },
+          { name: "Política de Privacidade", path: "/politica-de-privacidade" },
+        ]}
+      />
       <Helmet>
-        <title>Política de Privacidade | O Técnico de Informática</title>
-        <meta
-          name="description"
-          content="Política de Privacidade e LGPD d'O Técnico de Informática: como coletamos, usamos e protegemos seus dados, cookies, GA4, Google Ads e seus direitos."
-        />
-        <meta property="og:title" content="Política de Privacidade | O Técnico de Informática" />
-        <meta property="og:url" content={CANONICAL} />
-        <meta property="og:type" content="article" />
-        <meta name="robots" content="index, follow" />
         <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
         <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>
       </Helmet>
