@@ -153,11 +153,6 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { children: OS_PREHYDRATION_SCRIPT },
 
 
-      {
-        src: "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3762170279587706",
-        async: true,
-        crossOrigin: "anonymous",
-      },
     ],
   }),
   shellComponent: RootShell,
