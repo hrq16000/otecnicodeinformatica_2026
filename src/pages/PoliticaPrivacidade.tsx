@@ -299,15 +299,6 @@ const faqSchema = {
   })),
 };
 
-const breadcrumbSchema = {
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Início", item: `${SITE_BASE_URL}/` },
-    { "@type": "ListItem", position: 2, name: "Política de Privacidade", item: CANONICAL },
-  ],
-};
-
 const PoliticaPrivacidade = () => {
   return (
     <>
@@ -323,7 +314,6 @@ const PoliticaPrivacidade = () => {
       />
       <Helmet>
         <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
-        <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>
       </Helmet>
 
       <Header />
