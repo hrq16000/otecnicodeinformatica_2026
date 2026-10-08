@@ -11,6 +11,15 @@ concurrency:
   group: ${{ github.workflow }}-${{ github.event_name }}-${{ github.event.pull_request.number || github.ref }}
   cancel-in-progress: true
 
+# Configuração pública/canônica do portal. Não contém credenciais.
+# Mantém build/SEO determinísticos sem depender de arquivo .env versionado.
+env:
+  VITE_SITE_DOMAIN: otecnicodeinformatica.com.br
+  VITE_SITE_INDEXING_ENABLED: "true"
+  VITE_BRAND_NAME: "O Técnico de Informática"
+  VITE_WHATSAPP_NUMBER: "5541997086380"
+  VITE_BUSINESS_HOURS: "Mo-Fr 08:00-18:00; Sa 09:00-13:00"
+
 jobs:
   # Camada 1 — testes de código (Vitest). Não sobe navegador, não builda.
   # Playwright NUNCA roda aqui; Vitest NUNCA coleta e2e/ (gate test:list).
