@@ -11,8 +11,12 @@ export function runClientInit() {
   try {
     document.documentElement.dataset.hydrated = "1";
     const meta = document.querySelector('meta[name="app-version"]');
-    const version = String(window.__APP_VERSION__ || "unknown");
-    const buildTime = String(window.__APP_BUILD_TIME__ || "");
+    const runtimeWindow = window as Window & {
+      __APP_VERSION__?: string;
+      __APP_BUILD_TIME__?: string;
+    };
+    const version = String(runtimeWindow.__APP_VERSION__ || "unknown");
+    const buildTime = String(runtimeWindow.__APP_BUILD_TIME__ || "");
     if (meta) meta.setAttribute("content", buildTime ? `${version} @ ${buildTime}` : version);
 
     const KEY = "__app_version__";
