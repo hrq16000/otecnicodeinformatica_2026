@@ -22,7 +22,7 @@ test.describe("Como Funciona + modais — CTAs e CLS", () => {
       }).observe({ type: "layout-shift", buffered: true });
     });
 
-    await page.goto(BASE + "/", { waitUntil: "domcontentloaded" });
+    await page.goto(BASE + "/como-funciona", { waitUntil: "domcontentloaded" });
 
     // Hidratação básica do hero antes do fallback
     await expect(page.getByRole("heading", { level: 1 })).toBeVisible();
@@ -31,21 +31,20 @@ test.describe("Como Funciona + modais — CTAs e CLS", () => {
     const telCount = await page.locator('a[href^="tel:"]').count();
     expect(telCount).toBe(0);
 
-    // Fluxo atual da home: o bloco abaixo da dobra é lazy por visibilidade.
-    // Primeiro aproximamos o placeholder do viewport; então validamos o CTA real.
-    await page.evaluate(() => window.scrollTo(0, document.body.scrollHeight));
-    const triagemCta = page.locator('[data-cta-location="fluxo_atendimento_cta"]');
-    await expect(triagemCta).toBeVisible({ timeout: 20_000 });
-    await expect(triagemCta).toBeEnabled();
-    expect(await triagemCta.getAttribute("href")).toContain("wa.me");
+    // CTAs canônicos da própria página /como-funciona.
+    const heroCta = page.getByRole("link", { name: /chamar no whatsapp/i }).first();
+    await expect(heroCta).toBeVisible();
+    await expect(heroCta).toBeEnabled();
+    expect(await heroCta.getAttribute("href")).toContain("wa.me");
 
-    // O link para o processo detalhado permanece navegável.
-    const processo = page.getByRole("link", { name: /ver o processo em detalhe/i });
-    await expect(processo).toBeVisible();
-    expect(await processo.getAttribute("href")).toContain("/como-funciona");
+    const stepCta = page.getByRole("link", { name: /iniciar atendimento agora/i }).first();
+    await stepCta.scrollIntoViewIfNeeded();
+    await expect(stepCta).toBeVisible();
+    await expect(stepCta).toBeEnabled();
+    expect(await stepCta.getAttribute("href")).toContain("wa.me");
 
-    // Sticky WhatsApp mobile permanece visível e clicável
-    const sticky = page.locator('[data-cta-location="hero_sticky_mobile"]');
+    // Botão global de WhatsApp permanece visível e clicável.
+    const sticky = page.getByTestId("whatsapp-float");
     await expect(sticky).toBeVisible();
     await expect(sticky).toBeEnabled();
 
