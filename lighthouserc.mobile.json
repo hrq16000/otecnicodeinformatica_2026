@@ -19,7 +19,6 @@
       "startServerReadyPattern": "Ready on|localhost:4173|127.0.0.1:4173",
       "numberOfRuns": 3,
       "settings": {
-        "preset": "mobile",
         "formFactor": "mobile",
         "screenEmulation": {
           "mobile": true,
