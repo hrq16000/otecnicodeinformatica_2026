@@ -7,41 +7,28 @@ export function runClientInit() {
   if (started || typeof window === "undefined") return;
   started = true;
 
-  void import("@/lib/errorReporter").then(({ initErrorReporter, APP_BUILD_INFO }) => {
-    initErrorReporter();
+  // Hidratação precisa ser sinalizada imediatamente; os serviços auxiliares não.
+  try {
+    document.documentElement.dataset.hydrated = "1";
+    const meta = document.querySelector('meta[name="app-version"]');
+    const version = String(window.__APP_VERSION__ || "unknown");
+    const buildTime = String(window.__APP_BUILD_TIME__ || "");
+    if (meta) meta.setAttribute("content", buildTime ? `${version} @ ${buildTime}` : version);
 
-    // Sinaliza hidratação + versão do build (o meta vem do head() da rota raiz).
-    try {
-      document.documentElement.dataset.hydrated = "1";
-      const meta = document.querySelector('meta[name="app-version"]');
-      if (meta) meta.setAttribute("content", `${APP_BUILD_INFO.version} @ ${APP_BUILD_INFO.buildTime}`);
-      // Cache-bust automático: 1 reload se a versão mudou nesta sessão (sem loop).
-      try {
-        const KEY = "__app_version__";
-        const last = sessionStorage.getItem(KEY);
-        if (last && last !== APP_BUILD_INFO.version) {
-          sessionStorage.setItem(KEY, APP_BUILD_INFO.version);
-          if (!sessionStorage.getItem("__app_version_reloaded__")) {
-            sessionStorage.setItem("__app_version_reloaded__", "1");
-            location.reload();
-          }
-        } else if (!last) {
-          sessionStorage.setItem(KEY, APP_BUILD_INFO.version);
-        } else {
-          sessionStorage.removeItem("__app_version_reloaded__");
-        }
-      } catch { /* noop */ }
-    } catch { /* noop */ }
-  });
-
-  void import("@/lib/ctaRuntimeGuard").then(({ installCtaRuntimeGuard }) => installCtaRuntimeGuard());
-  // Medição de leads por rota: WhatsApp e (se existir) toque em telefone.
-  void import("@/lib/leadTapTracking").then(({ installLeadTapTracking }) => installLeadTapTracking());
-  // Observabilidade (Sentry/OTLP) — só ativa quando as envs estão configuradas.
-  void import("@/lib/observability").then(({ iniciarObservabilidade }) => iniciarObservabilidade());
-  // RODADA 1 — trava de indexação + analytics só da propriedade própria.
-  void import("@/lib/indexingPolicy").then(({ applyIndexingPolicy }) => applyIndexingPolicy());
-  void import("@/lib/analytics").then(({ initGoogleTags }) => initGoogleTags());
+    const KEY = "__app_version__";
+    const last = sessionStorage.getItem(KEY);
+    if (last && last !== version) {
+      sessionStorage.setItem(KEY, version);
+      if (!sessionStorage.getItem("__app_version_reloaded__")) {
+        sessionStorage.setItem("__app_version_reloaded__", "1");
+        location.reload();
+      }
+    } else if (!last) {
+      sessionStorage.setItem(KEY, version);
+    } else {
+      sessionStorage.removeItem("__app_version_reloaded__");
+    }
+  } catch { /* noop */ }
 
   // Tema único (claro): remove qualquer `dark` herdado e força color-scheme light.
   try {
@@ -87,6 +74,12 @@ export function runClientInit() {
   };
 
   runWhenIdle(() => {
+    void import("@/lib/errorReporter").then(({ initErrorReporter }) => initErrorReporter());
+    void import("@/lib/ctaRuntimeGuard").then(({ installCtaRuntimeGuard }) => installCtaRuntimeGuard());
+    void import("@/lib/leadTapTracking").then(({ installLeadTapTracking }) => installLeadTapTracking());
+    void import("@/lib/observability").then(({ iniciarObservabilidade }) => iniciarObservabilidade());
+    void import("@/lib/indexingPolicy").then(({ applyIndexingPolicy }) => applyIndexingPolicy());
+    void import("@/lib/analytics").then(({ initGoogleTags }) => initGoogleTags());
     void import("@/lib/whatsappUtm").then(({ initWhatsAppUtm }) => initWhatsAppUtm());
     void import("@/lib/webVitals").then(({ initWebVitals }) => initWebVitals());
   });
