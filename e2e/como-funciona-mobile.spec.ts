@@ -31,33 +31,17 @@ test.describe("Como Funciona + modais — CTAs e CLS", () => {
     const telCount = await page.locator('a[href^="tel:"]').count();
     expect(telCount).toBe(0);
 
-    // Abre o modal "Prefiro agendar"
-    await page.getByRole("button", { name: /prefiro agendar/i }).click();
-    const modal = page.getByRole("dialog");
-    await expect(modal).toBeVisible();
+    // Fluxo atual da home: a triagem pública segue direto para WhatsApp.
+    const triagemCta = page.locator('[data-cta-location="fluxo_atendimento_cta"]');
+    await triagemCta.scrollIntoViewIfNeeded();
+    await expect(triagemCta).toBeVisible();
+    await expect(triagemCta).toBeEnabled();
+    expect(await triagemCta.getAttribute("href")).toContain("wa.me");
 
-    // CTA WhatsApp dentro do modal continua clicável
-    const modalCta = modal.getByRole("link", { name: /continuar no whatsapp/i });
-    await expect(modalCta).toBeVisible();
-    await expect(modalCta).toBeEnabled();
-    expect(await modalCta.getAttribute("href")).toContain("wa.me");
-
-    // Fecha modal
-    await modal.getByRole("button", { name: /fechar/i }).click();
-    await expect(modal).toBeHidden();
-
-    // Scroll até "Como funciona" e verifica CTAs por etapa
-    await page.evaluate(() => {
-      const el = document.getElementById("como-funciona-fluxo");
-      el?.scrollIntoView({ behavior: "instant" as ScrollBehavior, block: "start" });
-    });
-    for (let i = 1; i <= 4; i++) {
-      const cta = page.getByTestId(`como-funciona-cta-${i}`);
-      await expect(cta).toBeVisible();
-      await expect(cta).toBeEnabled();
-      const href = await cta.getAttribute("href");
-      expect(href).toContain("wa.me");
-    }
+    // O link para o processo detalhado permanece navegável.
+    const processo = page.getByRole("link", { name: /ver o processo em detalhe/i });
+    await expect(processo).toBeVisible();
+    expect(await processo.getAttribute("href")).toContain("/como-funciona");
 
     // Sticky WhatsApp mobile permanece visível e clicável
     const sticky = page.locator('[data-cta-location="hero_sticky_mobile"]');
