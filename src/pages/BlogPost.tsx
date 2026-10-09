@@ -25,6 +25,7 @@ import { BlogPostFAQ } from "@/components/BlogPostFAQ";
 import { EnriquecimentoFase2 } from "@/components/editorial/EnriquecimentoFase2";
 import { AtlasPonteArtigo } from "@/components/editorial/AtlasPonteArtigo";
 import { EditorialCta, EditorialRelatedLinks } from "@/components/editorial/EditorialCta";
+import { EditorialPillarLink } from "@/components/editorial/EditorialPillarLink";
 import {
   isEditorialApproved,
   getEditorialApproval,
@@ -35,6 +36,7 @@ import { SITE_BASE_URL, BRAND_NAME } from "@/lib/siteConfig";
 import { buildArticleToc, shouldRenderToc } from "@/lib/articleToc";
 import { ArticleToc } from "@/components/editorial/ArticleToc";
 import { getArticleSources, getTechnicalReviewStatus } from "@/lib/blogEditorialSources";
+import { extractEmbeddedFaq } from "@/lib/articleEmbeddedFaq";
 import NotFound from "./NotFound";
 import { encurtar, tituloComMarca, DESCRIPTION_MAX } from "@/lib/socialMeta";
 
@@ -114,6 +116,10 @@ const BlogPost = () => {
     const r = buildArticleToc(post.content);
     return { ...r, render: shouldRenderToc(r.headings) };
   }, [post]);
+  const embeddedFaqItems = useMemo(
+    () => extractEmbeddedFaq(post?.content ?? null),
+    [post],
+  );
 
   const wordCount = post ? Math.round(parseInt(post.readTime) * 220) : 1500;
 
@@ -405,10 +411,11 @@ const BlogPost = () => {
                 slug={slug ?? ""}
                 titles={Object.fromEntries(Object.entries(posts).map(([k, v]) => [k, v.title]))}
               />
+              <EditorialPillarLink slug={slug ?? ""} />
               <EditorialCta slug={slug ?? ""} titulo={post.title} />
 
 
-              <BlogPostFAQ category={post.category} slug={slug ?? ""} />
+              <BlogPostFAQ category={post.category} slug={slug ?? ""} embeddedItems={embeddedFaqItems} />
             </article>
           </div>
         </section>

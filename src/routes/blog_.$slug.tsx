@@ -3,6 +3,7 @@ import BlogPostPage from "@/pages/BlogPost";
 import { JsonLdSsrSink } from "@/lib/jsonLdSsr";
 import { SITE_BASE_URL } from "@/lib/siteConfig";
 import { isEditorialApproved } from "@/lib/blogEditorialRegistry";
+import { getEditorialCover } from "@/lib/blogEditorialCovers";
 import { withOgVersion } from "@/lib/ogCacheBust";
 import { metaSocial } from "@/lib/socialMeta";
 import { resolveRedirect } from "@/lib/redirectMatrix";
@@ -57,7 +58,10 @@ export const Route = createFileRoute("/blog_/$slug")({
     const slug = params.slug;
     const approved = isEditorialApproved(slug);
     const canonicalUrl = `${SITE_BASE_URL}/blog/${slug}`;
-    const heroImage = `${SITE_BASE_URL}/og-image.png`;
+    const editorialCover = getEditorialCover(slug);
+    const heroImage = editorialCover
+      ? `${SITE_BASE_URL}${editorialCover.src}`
+      : `${SITE_BASE_URL}/og-image.png`;
     const heroImageOg = withOgVersion(heroImage);
 
     // Rodada 4F: título, description, OG e Twitter saem todos de metaSocial(),

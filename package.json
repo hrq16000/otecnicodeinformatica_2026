@@ -88,6 +88,7 @@
     "report:editorial-wave": "bun scripts/report-editorial-wave.ts",
     "check:editorial-export-secrets": "node scripts/check-editorial-export-secrets.mjs",
     "check:editorial-governance": "node scripts/check-editorial-governance.mjs",
+    "check:editorial-governance:dist": "node scripts/check-editorial-governance.mjs --require-build-artifacts",
     "check:editorial-pilot": "node scripts/check-editorial-pilot.mjs",
     "check:editorial-technical-review": "node scripts/check-editorial-technical-review.mjs",
     "check:motion-loading": "node scripts/check-motion-loading.mjs",

@@ -3,25 +3,23 @@
 // Generates static dist/<path>/index.html so FB/LinkedIn crawlers see
 // the correct og:image, title, description and JSON-LD without executing JS.
 
-import { promises as fs } from "node:fs";
+import { promises as fs, readFileSync } from "node:fs";
 import path from "node:path";
 import { CURATED_ROUTES } from "./curated-routes-meta.mjs";
+import { jsonLdScriptsFor, staticBodyFor } from "./curated-static-body.mjs";
 import { blocos4q } from "./lib/blocos-4q.mjs";
-import { staticBodyFor, jsonLdScriptsFor } from "./curated-static-body.mjs";
-import { getWaveArticle, isWaveApproved } from "./lib/editorial-wave.mjs";
 import {
   CATEGORIES,
-  LOCAIS,
   categoryHubMeta,
   categoryLocalJsonLd,
   categoryLocalMeta,
   categoryLocalStaticBody,
   coverDe,
+  LOCAIS,
 } from "./lib/category-local.mjs";
-import { normalizeTitle, normalizeDescription } from "./lib/seo-meta.mjs";
-
+import { getWaveArticle, isWaveApproved } from "./lib/editorial-wave.mjs";
+import { normalizeDescription, normalizeTitle } from "./lib/seo-meta.mjs";
 import { BASE_URL } from "./lib/site-env.mjs";
-import { readFileSync } from "node:fs";
 
 // Alt das capas editoriais — fonte única em src/lib/blogEditorialCovers.ts.
 // Fail-closed: sem alt declarado, a capa não é renderizada no HTML estático
@@ -401,9 +399,32 @@ function countWords(block) {
 
 
 export async function getBlogPosts(rootDir = ".") {
-  const posts = [];
-  const seen = new Set();
+  const postsBySlug = new Map();
   const duplicates = [];
+  const overrides = [];
+
+  // Espelha a composição do runtime em BlogPost.tsx e blog_.$slug.tsx:
+  // base → suplementar → programático. Uma revisão suplementar pode substituir
+  // a base somente quando a URL já pertence à onda editorial aprovada. Qualquer
+  // outra colisão continua registrada como erro de governança, mas o inventário
+  // ainda usa a mesma definição final que o usuário/crawler receberá.
+  const addPost = (post) => {
+    const previous = postsBySlug.get(post.slug);
+    if (!previous) {
+      postsBySlug.set(post.slug, post);
+      return;
+    }
+
+    const approvedSupplementalOverride =
+      previous.source === "base" &&
+      post.source === "supplemental" &&
+      isWaveApproved(post.slug);
+
+    if (approvedSupplementalOverride) overrides.push(post.slug);
+    else duplicates.push(`${post.slug} (${previous.source} → ${post.source})`);
+
+    postsBySlug.set(post.slug, post);
+  };
 
   // --- Base manual (blogPostsContentBase) ---
   const basePath = path.join(rootDir, "src/data/blogPostsContent.tsx");
@@ -421,16 +442,15 @@ export async function getBlogPosts(rootDir = ".") {
     const category = extractField(block, "category");
     const readTime = extractField(block, "readTime");
     if (!title) continue;
-    if (seen.has(slug)) { duplicates.push(slug); continue; }
-    seen.add(slug);
-    posts.push({
+    addPost({
       slug, title, excerpt: excerpt ?? "", date: date ?? HOWTO_DEFAULT_DATE,
-      category: category ?? "", origin: "manual",
+      category: category ?? "", origin: "manual", source: "base",
       readTime: readTime ?? "10 min",
       lead: extractLead(block),
       headings: extractHeadings(block),
       sections: extractSections(block),
       wordCount: countWords(block),
+      raw: block,
     });
   }
 
@@ -451,16 +471,15 @@ export async function getBlogPosts(rootDir = ".") {
     const category = extractField(block, "category");
     const readTime = extractField(block, "readTime");
     if (!title) continue;
-    if (seen.has(slug)) { duplicates.push(slug); continue; }
-    seen.add(slug);
-    posts.push({
+    addPost({
       slug, title, excerpt: excerpt ?? "", date: date ?? HOWTO_DEFAULT_DATE,
-      category: category ?? "", origin: "supplemental",
+      category: category ?? "", origin: "supplemental", source: "supplemental",
       readTime: readTime ?? "10 min",
       lead: extractLead(block),
       headings: extractHeadings(block),
       sections: extractSections(block),
       wordCount: countWords(block),
+      raw: block,
     });
   }
 
@@ -482,16 +501,15 @@ export async function getBlogPosts(rootDir = ".") {
     const date = extractField(block, "date");
     const category = extractField(block, "category");
     if (!title) continue;
-    if (seen.has(slug)) { duplicates.push(slug); continue; }
-    seen.add(slug);
-    posts.push({
+    addPost({
       slug, title, excerpt: excerpt ?? "", date: date ?? HOWTO_DEFAULT_DATE,
-      category: category ?? "", origin: "programmatic",
+      category: category ?? "", origin: "programmatic", source: "programmatic",
       bodySignals: (block.match(/\b(?:lead|sections|whenToCall)\s*:/g) || []).length,
+      raw: block,
     });
   }
 
-  return { posts, duplicates };
+  return { posts: [...postsBySlug.values()], duplicates, overrides };
 }
 
 // Corpo estático (dentro do <noscript> do #root) de um artigo aprovado.
@@ -831,9 +849,16 @@ export async function prerenderCities(distDir) {
   // --- BLOG editorial (fail-closed) ---
   // Hub /blog + um HTML próprio por artigo. Todos noindex,follow e fora
   // de qualquer sitemap. Registro editorial vazio => nenhum indexável.
-  const { posts: blogPosts, duplicates: blogDuplicates } = await getBlogPosts(".");
+  const {
+    posts: blogPosts,
+    duplicates: blogDuplicates,
+    overrides: blogOverrides,
+  } = await getBlogPosts(".");
   if (blogDuplicates.length) {
-    console.warn(`[prerender-cities] blog: ${blogDuplicates.length} slug(s) duplicado(s) ignorado(s): ${blogDuplicates.join(", ")}`);
+    console.warn(`[prerender-cities] blog: ${blogDuplicates.length} colisão(ões) inesperada(s): ${blogDuplicates.join(", ")}`);
+  }
+  if (blogOverrides.length) {
+    console.log(`[prerender-cities] blog: ${blogOverrides.length} revisão(ões) suplementar(es) aprovada(s)`);
   }
 
   // Hub /blog — indexável somente quando há artigos aprovados na onda.

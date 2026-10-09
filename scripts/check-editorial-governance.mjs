@@ -14,14 +14,15 @@
 // ─────────────────────────────────────────────────────────────
 
 import { promises as fs } from "node:fs";
-import { WHATSAPP_NUMBER, BASE_URL } from "./lib/site-env.mjs";
 import path from "node:path";
-import { getBlogPosts } from "./prerender-cities.mjs";
 import { EDITORIAL_WAVE, EDITORIAL_WAVE_SLUGS, isWaveApproved } from "./lib/editorial-wave.mjs";
+import { BASE_URL, WHATSAPP_NUMBER } from "./lib/site-env.mjs";
+import { getBlogPosts } from "./prerender-cities.mjs";
 
 const ROOT = process.cwd();
 const DIST = path.join(ROOT, "dist");
 const SITE = BASE_URL;
+const REQUIRE_BUILD_ARTIFACTS = process.argv.includes("--require-build-artifacts");
 
 const errors = [];
 const notes = [];
@@ -161,7 +162,14 @@ function checkApprovedOwnersRenderable(posts, duplicates) {
 
 // ── 5. HTML inicial dos artigos + hub ──────────────────────
 async function checkStaticHtml(posts) {
-  if (!(await exists(DIST))) { fail("dist/ ausente — rode o build antes do gate"); return; }
+  if (!REQUIRE_BUILD_ARTIFACTS) {
+    note("HTML inicial: validação adiada para check:editorial-governance:dist após o build");
+    return;
+  }
+  if (!(await exists(DIST))) {
+    fail("dist/ ausente no gate pós-build");
+    return;
+  }
 
   // O build atual (TanStack Start + Nitro) gera .output/public como SPA/SSR
   // e não emite dist/index.html nem dist/blog/<slug>/index.html. Nesse caso,
@@ -197,8 +205,9 @@ async function checkStaticHtml(posts) {
   }
 
 
+  const approvedPosts = posts.filter((post) => isWaveApproved(post.slug));
   let checked = 0;
-  for (const post of posts) {
+  for (const post of approvedPosts) {
     const fp = path.join(DIST, "blog", post.slug, "index.html");
     if (!(await exists(fp))) { fail(`artigo sem HTML próprio: /blog/${post.slug}`); continue; }
     const h = await read(fp);
@@ -221,12 +230,15 @@ async function checkStaticHtml(posts) {
       if (!/"@type":\s*"BreadcrumbList"/.test(h)) fail(`/blog/${post.slug}: BreadcrumbList ausente`);
       if (count(h, /<h1[\s>]/gi) !== 1) fail(`/blog/${post.slug}: HTML estático deve ter exatamente 1 <h1>`);
       const wave = EDITORIAL_WAVE.find((a) => a.slug === post.slug);
-      if (!h.includes(`content="${SITE}${wave.cover}`)) fail(`/blog/${post.slug}: og:image deve usar a capa exclusiva`);
+      const expectedCover = `${SITE}${wave.cover}`;
+      const ogImage = h.match(/<meta\s+property=["']og:image["']\s+content=["']([^"']+)["']/i)?.[1];
+      if (!ogImage || !ogImage.startsWith(expectedCover))
+        fail(`/blog/${post.slug}: og:image deve usar a capa exclusiva`);
       if (!h.includes(`href="${wave.pilar}"`)) fail(`/blog/${post.slug}: link interno ao pilar ausente`);
       if (!h.includes('href="/blog"')) fail(`/blog/${post.slug}: link ao hub /blog ausente`);
-      // O CTA editorial passa pela triagem central, nunca por wa.me direto
-      // (ver check:editorial-no-direct-wa) — aqui exigimos que ele exista.
-      if (!/data-cta-location="editorial_static"/.test(h))
+      // Há dois componentes atuais: EditorialCta (triagem no próprio site) e
+      // CTASection guide (triagem contextual). Um deles precisa estar no SSR.
+      if (!/data-editorial-cta=|data-cta-location="(?:editorial_static|final_cta_guide)"/.test(h))
         fail(`/blog/${post.slug}: CTA editorial de triagem ausente`);
 
     }
@@ -239,7 +251,7 @@ async function checkStaticHtml(posts) {
     if (canonAll[0] && canonAll[0].includes(`"${SITE}/"`)) fail(`/blog/${post.slug}: canonical não pode ser da home`);
 
     // title / description — exatamente 1
-    if (count(h, /<title>/gi) !== 1) fail(`/blog/${post.slug}: esperado exatamente 1 <title>`);
+    if (count(h, /<title(?:\s[^>]*)?>/gi) !== 1) fail(`/blog/${post.slug}: esperado exatamente 1 <title>`);
     if (count(h, /<meta\s+name=["']description["']/gi) !== 1) fail(`/blog/${post.slug}: esperado exatamente 1 description`);
 
     // og:url self
@@ -272,7 +284,7 @@ async function checkStaticHtml(posts) {
 
     checked++;
   }
-  note(`HTML inicial: ${checked}/${posts.length} artigos verificados (${EDITORIAL_WAVE_SLUGS.length} indexáveis da onda)`);
+  note(`HTML inicial: ${checked}/${approvedPosts.length} artigos indexáveis verificados; rascunhos permanecem fora do snapshot curado`);
 }
 
 // ── 6. Sitemaps ────────────────────────────────────────────
@@ -307,11 +319,15 @@ async function checkSitemaps() {
     const fp = path.join(pub, f);
     if (await exists(fp)) total += count(await read(fp), /<loc>/gi);
   }
-  if (total !== CURATED_PATHS.length)
-    fail(
-      `sitemap principal: manifesto curado declara ${CURATED_PATHS.length} URLs, sitemap emitiu ${total} (rode npm run sitemap)`,
-    );
-  note(`sitemaps: blog/problemas/marcas conforme manifesto curado; principal = ${total} URLs`);
+  if (REQUIRE_BUILD_ARTIFACTS) {
+    if (total !== CURATED_PATHS.length)
+      fail(
+        `sitemap principal: manifesto curado declara ${CURATED_PATHS.length} URLs, sitemap emitiu ${total} (rode npm run sitemap)`,
+      );
+    note(`sitemaps: blog/problemas/marcas conforme manifesto curado; principal = ${total} URLs`);
+  } else {
+    note("sitemaps: política editorial validada; paridade numérica adiada para o gate pós-build");
+  }
 }
 
 // ── 7. Datas ───────────────────────────────────────────────
@@ -329,9 +345,15 @@ async function checkDates(posts) {
 }
 
 async function main() {
-  const { posts, duplicates } = await getBlogPosts(".");
-  note(`inventário: ${posts.length} artigos únicos (${posts.filter(p => p.origin === "manual").length} manuais, ${posts.filter(p => p.origin === "programmatic").length} programáticos)`);
-  if (duplicates.length) note(`slugs duplicados detectados: ${duplicates.length} (${duplicates.join(", ")})`);
+  const { posts, duplicates, overrides } = await getBlogPosts(".");
+  note(
+    `inventário: ${posts.length} artigos únicos (` +
+      `${posts.filter((p) => p.source === "base").length} base, ` +
+      `${posts.filter((p) => p.source === "supplemental").length} suplementares, ` +
+      `${posts.filter((p) => p.source === "programmatic").length} programáticos)`,
+  );
+  note(`revisões suplementares aprovadas: ${overrides.length}`);
+  if (duplicates.length) note(`colisões editoriais inesperadas: ${duplicates.length} (${duplicates.join(", ")})`);
 
   await checkRegistry();
   await checkBlogPostRuntime();
