@@ -41,7 +41,9 @@ test.describe("/termos-e-condicoes — schema, canonical, single H1, sitemap con
     expect(area.toLowerCase()).toContain("curitiba");
     const telefone = String((localBusiness as { telephone?: string }).telephone || "").replace(/\D/g, "");
     expect(telefone).toContain(WHATSAPP_NUMBER.replace(/\D/g, ""));
-    expect(JSON.stringify(localBusiness)).not.toMatch(/PostalAddress|streetAddress/i);
+    const localBusinessJson = JSON.stringify(localBusiness);
+    expect(localBusinessJson).not.toMatch(/streetAddress|postalCode/i);
+    expect(localBusinessJson).toMatch(/addressLocality/i);
 
     // FAQPage: minimum 5 questions
     const mainEntity = (faq as { mainEntity?: Array<{ name?: string; acceptedAnswer?: { text?: string } }> }).mainEntity || [];
