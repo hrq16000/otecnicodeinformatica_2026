@@ -568,18 +568,42 @@ export const IdleEnhancements = () => {
   const [enabled, setEnabled] = useState(false);
 
   useEffect(() => {
-    const activate = () => setEnabled(true);
-    const idleId: number = typeof window.requestIdleCallback === "function"
-      ? window.requestIdleCallback(activate, { timeout: 4500 })
-      : (globalThis.setTimeout(activate, 2500) as unknown as number);
+    let idleId: number | undefined;
+    let activated = false;
+
+    const activate = () => {
+      if (activated) return;
+      activated = true;
+      setEnabled(true);
+    };
+
+    // Chatbot, social proof e painéis auxiliares não participam do conteúdo
+    // crítico. Aguardar a janela inicial evita competir com LCP/hidratação;
+    // qualquer interação real do usuário libera imediatamente os recursos.
+    const scheduleIdle = () => {
+      if (typeof window.requestIdleCallback === "function") {
+        idleId = window.requestIdleCallback(activate, { timeout: 2000 });
+      } else {
+        idleId = globalThis.setTimeout(activate, 1000) as unknown as number;
+      }
+    };
+    const timerId = globalThis.setTimeout(scheduleIdle, 6000) as unknown as number;
+    const onInteraction = () => activate();
+
+    window.addEventListener("pointerdown", onInteraction, { once: true, passive: true });
+    window.addEventListener("keydown", onInteraction, { once: true });
 
     return () => {
-      if (typeof window.cancelIdleCallback === "function") {
-        window.cancelIdleCallback(idleId);
-      } else {
-        globalThis.clearTimeout(idleId);
+      globalThis.clearTimeout(timerId);
+      window.removeEventListener("pointerdown", onInteraction);
+      window.removeEventListener("keydown", onInteraction);
+      if (idleId !== undefined) {
+        if (typeof window.cancelIdleCallback === "function") {
+          window.cancelIdleCallback(idleId);
+        } else {
+          globalThis.clearTimeout(idleId);
+        }
       }
-
     };
   }, []);
 
