@@ -31,10 +31,11 @@ test.describe("Como Funciona + modais — CTAs e CLS", () => {
     const telCount = await page.locator('a[href^="tel:"]').count();
     expect(telCount).toBe(0);
 
-    // Fluxo atual da home: a triagem pública segue direto para WhatsApp.
+    // Fluxo atual da home: o bloco abaixo da dobra é lazy por visibilidade.
+    // Primeiro aproximamos o placeholder do viewport; então validamos o CTA real.
+    await page.evaluate(() => window.scrollTo(0, document.body.scrollHeight));
     const triagemCta = page.locator('[data-cta-location="fluxo_atendimento_cta"]');
-    await triagemCta.scrollIntoViewIfNeeded();
-    await expect(triagemCta).toBeVisible();
+    await expect(triagemCta).toBeVisible({ timeout: 20_000 });
     await expect(triagemCta).toBeEnabled();
     expect(await triagemCta.getAttribute("href")).toContain("wa.me");
 
