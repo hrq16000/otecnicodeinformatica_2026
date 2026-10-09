@@ -614,6 +614,18 @@ export const EDITORIAL_SOURCES: Record<string, EditorialSource> = {
       "Resultados isolados não bastam para caracterizar de forma confiável o comportamento recorrente da conexão.",
     ],
   },
+  "intel-no-boot-no-display": {
+    id: "intel-no-boot-no-display",
+    title: "How to Fix Issues With No Boot or No Display for Self-Build Systems",
+    publisher: "Intel Support",
+    url: "https://www.intel.com/content/www/us/en/support/articles/000021605/processors.html",
+    accessedAt: "2026-10-09",
+    sourceType: "official",
+    supports: [
+      "Em sistemas montados, a triagem de no boot/no display inclui conexões de energia e vídeo, entrada do monitor, encaixe da memória e sinais de POST conforme o manual da placa.",
+      "A documentação limita o procedimento ao hardware aplicável e recomenda suporte do fabricante para equipamentos OEM.",
+    ],
+  },
   "android-acelerar-dispositivo": {
     id: "android-acelerar-dispositivo",
     title: "Acelerar um dispositivo Android lento",
@@ -1799,13 +1811,12 @@ export const ARTICLE_SOURCE_MANIFEST: Record<string, ArticleSourceManifest> = {
 
   "pc-nao-liga-o-que-fazer": {
     slug: "pc-nao-liga-o-que-fazer",
-    sources: [],
+    sources: ["intel-no-boot-no-display"],
     technicalReview: "reviewed",
     factChecked: true,
     factCheckedAt: "2026-09-26",
-    stableKnowledge: true,
     notes:
-      "Revisão material concluída após reescrita: separa ausência de energia, POST/vídeo e boot; remove ponte com clipe na fonte, reset de CMOS como receita genérica, abrasivos e troca de peça por tentativa. Sem percentual de causa, sem diagnóstico fechado e com critérios claros de parada.",
+      "Revisão material ampliada em 2026-10-09: separa ausência de energia, POST/vídeo e boot; remove ponte com clipe na fonte, reset de CMOS como receita genérica, abrasivos e troca de peça por tentativa. A fonte oficial da Intel sustenta a triagem por conexões, memória e sinais de POST, com limite explícito para sistemas montados. Sem percentual de causa, sem diagnóstico fechado e com critérios claros de parada.",
   },
   "wifi-caindo-toda-hora": {
     slug: "wifi-caindo-toda-hora",

@@ -3,6 +3,7 @@ import { isEditorialApproved } from "@/lib/blogEditorialRegistry";
 import { SCHEMA_SLOTS, SLOT_PRIORITY, useJsonLdSlot } from "@/lib/jsonLdSlots";
 import { getArticleSources } from "@/lib/blogEditorialSources";
 import { SITE_BASE_URL } from "@/lib/siteConfig";
+import type { EmbeddedFaqItem } from "@/lib/articleEmbeddedFaq";
 
 
 type FAQItem = { q: string; a: string };
@@ -1214,10 +1215,18 @@ const PILOT_FAQ: Record<string, FAQItem[]> = {
 };
 
 
-export const BlogPostFAQ = ({ category, slug }: { category: string; slug: string }) => {
+export const BlogPostFAQ = ({
+  category,
+  slug,
+  embeddedItems = [],
+}: {
+  category: string;
+  slug: string;
+  embeddedItems?: EmbeddedFaqItem[];
+}) => {
   const override = PILOT_FAQ[slug];
   const extras = CATEGORY_EXTRA[category] ?? [];
-  const items = override ?? [...extras, ...BASE_FAQ].slice(0, 5);
+  const items = embeddedItems.length > 0 ? embeddedItems : override ?? [...extras, ...BASE_FAQ].slice(0, 5);
 
   // O schema da FAQ é construído DURANTE O RENDER e registrado no slot, para
   // aparecer no HTML servido. A versão anterior injetava <script> no document
@@ -1237,6 +1246,10 @@ export const BlogPostFAQ = ({ category, slug }: { category: string; slug: string
     };
   }, [slug, items]);
   useJsonLdSlot(SCHEMA_SLOTS.faq, faqSchema, SLOT_PRIORITY.page);
+
+  // O corpo do artigo já exibe estas perguntas; repetí-las criaria dois H2 e
+  // duas listas idênticas. O schema acima permanece derivado do texto visível.
+  if (embeddedItems.length > 0) return null;
 
   return (
     <section className="not-prose mt-12" data-faq-visivel>

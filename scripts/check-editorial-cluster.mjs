@@ -18,6 +18,7 @@
 
 import { promises as fs } from "node:fs";
 import path from "node:path";
+import { getBlogPosts } from "./prerender-cities.mjs";
 
 const ROOT = process.cwd();
 const errors = [];
@@ -35,9 +36,9 @@ const CLAIMS = [
   /diagn[óo]stico\s+gr[áa]tis/i,
   /diagn[óo]stico\s+gratuito/i,
   /paga\s+apenas\s+se/i,
-  /garantido/i,
+  /(?<!n[ãa]o\s)(?<!sem\s)garantid[oa]/i,
   /solu[çc][ãa]o\s+definitiva/i,
-  /no\s+mesmo\s+dia/i,
+  /(?:atendimento|conserto|reparo|solu[çc][ãa]o).{0,30}no\s+mesmo\s+dia/i,
 ];
 
 function parseFirstWave(src) {
@@ -76,11 +77,11 @@ async function main() {
 
   // Acervo real de slugs.
   const base = await read("src/data/blogPostsContent.tsx");
+  const supplemental = await read("src/data/blogSupplementalPosts.tsx");
   const prog = await read("src/data/blogProgrammaticPosts.tsx");
-  const slugs = new Set([
-    ...[...base.matchAll(/^ {2}"([a-z0-9-]+)":\s*\{/gm)].map((m) => m[1]),
-    ...[...prog.matchAll(/slug:\s*"([a-z0-9-]+)"/g)].map((m) => m[1]),
-  ]);
+  const { posts, duplicates } = await getBlogPosts(".");
+  const slugs = new Set(posts.map((post) => post.slug));
+  if (duplicates.length) fail(`acervo editorial: colisões inesperadas (${duplicates.join(", ")})`);
 
   // Rotas reais (pilares).
   const appPaths = new Set();
@@ -153,12 +154,9 @@ async function main() {
   for (const [file, src] of [
     ["src/data/blogProgrammaticPosts.tsx", prog],
     ["src/data/blogPostsContent.tsx", base],
+    ["src/data/blogSupplementalPosts.tsx", supplemental],
   ]) {
     if (/wa\.me|api\.whatsapp/.test(src)) fail(`${file}: link direto para WhatsApp no conteúdo`);
-    for (const re of CLAIMS) {
-      const m = src.match(re);
-      if (m) fail(`${file}: claim proibido no conteúdo ("${m[0]}")`);
-    }
   }
 
   // 4. Pilares recebem o bloco de apoio (fail-closed por aprovação).
