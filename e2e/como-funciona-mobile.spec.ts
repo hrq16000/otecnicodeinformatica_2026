@@ -2,7 +2,7 @@ import { test, expect, devices } from "@playwright/test";
 
 const BASE = process.env.E2E_BASE_URL || "http://localhost:8080";
 
-test.use({ ...devices["iPhone 13"] });
+test.use({ ...devices["Pixel 7"] });
 
 test.describe("Como Funciona + modais — CTAs e CLS", () => {
   test("CTAs WhatsApp permanecem clicáveis e sem links tel:", async ({ page }) => {
