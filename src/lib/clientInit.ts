@@ -77,14 +77,25 @@ export function runClientInit() {
     }
   };
 
-  runWhenIdle(() => {
-    void import("@/lib/errorReporter").then(({ initErrorReporter }) => initErrorReporter());
-    void import("@/lib/ctaRuntimeGuard").then(({ installCtaRuntimeGuard }) => installCtaRuntimeGuard());
-    void import("@/lib/leadTapTracking").then(({ installLeadTapTracking }) => installLeadTapTracking());
-    void import("@/lib/observability").then(({ iniciarObservabilidade }) => iniciarObservabilidade());
-    void import("@/lib/indexingPolicy").then(({ applyIndexingPolicy }) => applyIndexingPolicy());
-    void import("@/lib/analytics").then(({ initGoogleTags }) => initGoogleTags());
-    void import("@/lib/whatsappUtm").then(({ initWhatsAppUtm }) => initWhatsAppUtm());
-    void import("@/lib/webVitals").then(({ initWebVitals }) => initWebVitals());
-  });
+  let deferredStarted = false;
+  const startDeferredServices = () => {
+    if (deferredStarted) return;
+    deferredStarted = true;
+    runWhenIdle(() => {
+      void import("@/lib/errorReporter").then(({ initErrorReporter }) => initErrorReporter());
+      void import("@/lib/ctaRuntimeGuard").then(({ installCtaRuntimeGuard }) => installCtaRuntimeGuard());
+      void import("@/lib/leadTapTracking").then(({ installLeadTapTracking }) => installLeadTapTracking());
+      void import("@/lib/observability").then(({ iniciarObservabilidade }) => iniciarObservabilidade());
+      void import("@/lib/indexingPolicy").then(({ applyIndexingPolicy }) => applyIndexingPolicy());
+      void import("@/lib/analytics").then(({ initGoogleTags }) => initGoogleTags());
+      void import("@/lib/whatsappUtm").then(({ initWhatsAppUtm }) => initWhatsAppUtm());
+      void import("@/lib/webVitals").then(({ initWebVitals }) => initWebVitals());
+    });
+  };
+
+  // Não competir com hidratação/LCP. Interação real antecipa a inicialização;
+  // sem interação, os serviços auxiliares entram somente após a primeira janela.
+  window.addEventListener("pointerdown", startDeferredServices, { once: true, passive: true });
+  window.addEventListener("keydown", startDeferredServices, { once: true });
+  window.setTimeout(startDeferredServices, 6000);
 }
