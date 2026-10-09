@@ -1,5 +1,5 @@
 /// <reference types="vite/client" />
-import { Suspense, useEffect, useMemo, type ReactNode } from "react";
+import { lazy, Suspense, useEffect, useMemo, type ReactNode } from "react";
 import {
   createRootRouteWithContext,
   HeadContent,
@@ -25,16 +25,12 @@ import { PageViewTracker } from "@/components/PageViewTracker";
 import { RouteTransition } from "@/components/motion/RouteTransition";
 import { RouteLoader } from "@/components/RouteLoader";
 import { RouteProgress } from "@/components/RouteProgress";
-import { WhatsAppFunnel } from "@/components/WhatsAppFunnel";
+import { DeferredWhatsAppFunnel } from "@/components/DeferredWhatsAppFunnel";
 import { WhatsAppFloat } from "@/components/WhatsAppFloat";
 import { GlobalSmartSearch } from "@/components/GlobalSmartSearch";
 import { ScrollToTop } from "@/components/ScrollToTop";
 import ConsentBanner from "@/components/ConsentBanner";
-import {
-  IdleEnhancements,
-  LegacyNotFound,
-  legacyNavigateRedirects,
-} from "@/legacyRouteElements";
+import { IdleEnhancements } from "@/components/IdleEnhancements";
 import { REDIRECT_MATRIX } from "@/lib/redirectMatrix";
 import { reportLovableError } from "@/lib/lovable-error-reporting";
 import { runClientInit } from "@/lib/clientInit";
@@ -50,12 +46,35 @@ import { runClientInit } from "@/lib/clientInit";
 const WA_PREHYDRATION_SCRIPT = `
 window.__waFunnelQueue = window.__waFunnelQueue || [];
 document.addEventListener('click', function (e) {
-  if (document.documentElement.dataset.hydrated === '1') return;
-  var t = e.target && e.target.closest ? e.target.closest('[data-wa-funnel="required"]') : null;
-  if (!t) return;
-  window.__waFunnelQueue.push({ location: t.getAttribute('data-cta-location') || 'float' });
+  if (document.documentElement.dataset.waFunnelReady === '1') return;
+  var target = e.target && e.target.closest ? e.target.closest('a,button,[data-wa-funnel="required"]') : null;
+  if (!target) return;
+  var anchor = target.closest ? target.closest('a[href]') : null;
+  var href = anchor && anchor.getAttribute ? anchor.getAttribute('href') : '';
+  var isWa = /^https:\/\/(?:wa\.me|api\.whatsapp\.com)\//i.test(href || '');
+  var required = target.closest ? target.closest('[data-wa-funnel="required"]') : null;
+  if (!isWa && !required) return;
+
+  e.preventDefault();
+  var locNode = target.closest ? target.closest('[data-cta-location]') : null;
+  var location = (locNode && locNode.getAttribute('data-cta-location')) || 'cta';
+  var message = '';
+  try {
+    if (href) message = new URL(href, window.location.origin).searchParams.get('text') || '';
+  } catch (_) {}
+
+  window.__waFunnelQueue.push({ location: location, message: message || undefined });
+  window.dispatchEvent(new CustomEvent('wa-funnel:load'));
 }, true);
 `;
+
+const LegacyNotFound = lazy(() => import("@/pages/NotFound"));
+
+const legacyNavigateRedirects: Record<string, string> = {
+  "/patrocinadores": "/anuncie",
+  "/admin": "/admin/funnel",
+  "/index": "/",
+};
 
 const CONSENT_MODE_SCRIPT = `
 window.dataLayer = window.dataLayer || [];
@@ -217,7 +236,7 @@ function RootComponent() {
           </JsonLdCollectorContext.Provider>
 
 
-          <WhatsAppFunnel />
+          <DeferredWhatsAppFunnel />
           <GlobalSmartSearch />
           <WhatsAppFloat />
           <ConsentBanner />
