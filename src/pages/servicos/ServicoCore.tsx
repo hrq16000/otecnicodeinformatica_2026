@@ -15,7 +15,7 @@ import { BibliotecaPonte } from "@/components/informatica/BibliotecaPonte";
 import { MontagemWizard } from "@/components/servico/MontagemWizard";
 import { ProvasVisuaisMonitor } from "@/components/servico/ProvasVisuaisMonitor";
 import { WorkstationSection } from "@/components/servico/WorkstationSection";
-import { SERVICOS_CORE } from "@/lib/servicosCore";
+import type { ServicoLandingData } from "@/components/servico/ServicoLandingLayout";
 import { SERVICOS_LOCAL } from "@/lib/servicosLocal";
 import { visualDoServico } from "@/lib/servicoVisual3q";
 import { visualEmpresarial } from "@/lib/servicoVisual3r";
@@ -39,6 +39,55 @@ const LazyBelowFold = ({ children }: { children: React.ReactNode }) => (
   <Suspense fallback={null}>{children}</Suspense>
 );
 
+type CoreDataEntry = {
+  status: "pending" | "fulfilled" | "rejected";
+  promise: Promise<void>;
+  data?: ServicoLandingData;
+  error?: unknown;
+};
+
+const PRIORITY_CORE_DATA_LOADERS: Record<string, () => Promise<ServicoLandingData>> = {
+  formatacao: () => import("@/lib/servicosCoreShards/formatacao").then((m) => m.default),
+  "upgrade-ssd-ram": () => import("@/lib/servicosCoreShards/upgrade-ssd-ram").then((m) => m.default),
+  "recuperacao-de-dados": () => import("@/lib/servicosCoreShards/recuperacao-de-dados").then((m) => m.default),
+  "suporte-tecnico-empresarial": () =>
+    import("@/lib/servicosCoreShards/suporte-tecnico-empresarial").then((m) => m.default),
+};
+
+const coreDataCache = new Map<string, CoreDataEntry>();
+
+const readCoreData = (slug: string): ServicoLandingData | undefined => {
+  let entry = coreDataCache.get(slug);
+  if (!entry) {
+    entry = {
+      status: "pending",
+      promise: Promise.resolve(),
+    };
+    const target = entry;
+    const loader =
+      PRIORITY_CORE_DATA_LOADERS[slug] ??
+      (() =>
+        import("@/lib/servicosCore").then(
+          (m) => m.SERVICOS_CORE[slug] as ServicoLandingData | undefined,
+        ));
+    target.promise = loader().then(
+      (data) => {
+        target.data = data;
+        target.status = "fulfilled";
+      },
+      (error) => {
+        target.error = error;
+        target.status = "rejected";
+      },
+    );
+    coreDataCache.set(slug, target);
+  }
+
+  if (entry.status === "pending") throw entry.promise;
+  if (entry.status === "rejected") throw entry.error;
+  return entry.data;
+};
+
 
 /**
  * Página de serviço essencial (data-driven). Recebe o slug canônico e
@@ -46,8 +95,8 @@ const LazyBelowFold = ({ children }: { children: React.ReactNode }) => (
  * SERVICOS_LOCAL adiciona conteúdo local, FAQ de intenção local e
  * links internos contextuais para reforço de SEO local em Curitiba.
  */
-const ServicoCore = ({ slug }: { slug: keyof typeof SERVICOS_CORE }) => {
-  const base = SERVICOS_CORE[slug];
+const ServicoCore = ({ slug }: { slug: string }) => {
+  const base = readCoreData(slug);
   if (!base) return null;
 
   const local = SERVICOS_LOCAL[slug];
