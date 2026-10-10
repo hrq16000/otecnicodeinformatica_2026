@@ -1,4 +1,4 @@
-import { useEffect, type ReactNode } from "react";
+import { lazy, Suspense, useEffect, type ReactNode } from "react";
 import { Link } from "@/lib/router-compat";
 import { CheckCircle, ArrowRight } from "lucide-react";
 import { PageSEO } from "@/components/PageSEO";
@@ -34,9 +34,23 @@ import {
   FontesPrimarias,
 } from "@/components/BlocosEnriquecimento";
 import { ENRIQUECIMENTO_SERVICOS } from "@/lib/enriquecimentoServicos";
-import { BlocosB2b4d } from "@/components/b2b/BlocosB2b4d";
-import { BlocosRedes4e } from "@/components/redes/BlocosRedes4e";
 import { ENRIQUECIMENTO_4A, mesclarEnriquecimento } from "@/lib/enriquecimentoAtp4a";
+
+
+const LazyBlocosB2b4d = lazy(() =>
+  import("@/components/b2b/BlocosB2b4d").then((m) => ({ default: m.BlocosB2b4d })),
+);
+const LazyBlocosRedes4e = lazy(() =>
+  import("@/components/redes/BlocosRedes4e").then((m) => ({ default: m.BlocosRedes4e })),
+);
+
+const B2B_SERVICE_OWNERS = new Set([
+  "/servicos/suporte-tecnico-empresarial",
+  "/servicos/manutencao-preventiva-empresas",
+  "/servicos/backup-para-empresas",
+  "/servicos/suporte-home-office",
+]);
+const REDES_SERVICE_OWNERS = new Set(["/servicos/redes-e-wifi"]);
 
 
 export interface ServicoLandingData {
@@ -543,9 +557,17 @@ export const ServicoLandingLayout = ({ data }: { data: ServicoLandingData }) => 
         </section>
       )}
 
-      {/* Rodada 4D — bloco B2B autoral (fail-closed por rota) */}
-      <BlocosB2b4d path={`/servicos/${data.path}`} />
-      <BlocosRedes4e path={`/servicos/${data.path}`} />
+      {/* Rodadas 4D/4E — carregar JS somente nas owners declaradas. */}
+      {B2B_SERVICE_OWNERS.has(`/servicos/${data.path}`) ? (
+        <Suspense fallback={null}>
+          <LazyBlocosB2b4d path={`/servicos/${data.path}`} />
+        </Suspense>
+      ) : null}
+      {REDES_SERVICE_OWNERS.has(`/servicos/${data.path}`) ? (
+        <Suspense fallback={null}>
+          <LazyBlocosRedes4e path={`/servicos/${data.path}`} />
+        </Suspense>
+      ) : null}
 
       <PoliticaAtendimentoBloco />
 
