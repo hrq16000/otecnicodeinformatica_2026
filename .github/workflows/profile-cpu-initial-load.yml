@@ -1,0 +1,128 @@
+name: Diagnostico CPU primeira dobra (observacional)
+on:
+  push:
+    branches:
+      - fix/trust-claims-negation-copy-20261005
+    paths:
+      - .github/workflows/profile-cpu-initial-load.yml
+permissions:
+  contents: read
+jobs:
+  profile:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: latest
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22.12.0"
+      - run: npm ci --no-audit --no-fund
+      - run: npx playwright install --with-deps chromium
+      - run: npm run build
+        env:
+          VITE_SITE_DOMAIN: otecnicodeinformatica.com.br
+          VITE_SITE_INDEXING_ENABLED: "true"
+      - name: Perfil CDP em 3 rotas (somente diagnóstico, sem alterar budgets)
+        shell: bash
+        run: |
+          set -euo pipefail
+          npx --yes wrangler dev --config dist/server/wrangler.json --port 4173 > /tmp/pr370-profile-worker.log 2>&1 &
+          pid=$!
+          trap 'kill "$pid" 2>/dev/null || true' EXIT
+          npx wait-on http://127.0.0.1:4173 --timeout 60000
+          node --input-type=module <<'PROFILE_JS'
+          import { chromium } from 'playwright';
+          import { mkdir, writeFile } from 'node:fs/promises';
+          import { gzipSync } from 'node:zlib';
+          
+          const outputDir = 'reports/cpu-profiles';
+          const routes = [
+            { slug: 'home', path: '/' },
+            { slug: 'servico-backup', path: '/servicos/backup-para-empresas' },
+            { slug: 'servico-formatacao', path: '/servicos/formatacao' },
+          ];
+          await mkdir(outputDir, { recursive: true });
+          const browser = await chromium.launch({
+            headless: true, args: ['--no-sandbox', '--disable-dev-shm-usage'],
+          });
+          let failed = false;
+          try {
+            for (const route of routes) {
+              const context = await browser.newContext({
+                viewport: { width: 412, height: 915 },
+                deviceScaleFactor: 1.75, isMobile: true, hasTouch: true,
+              });
+              try {
+                const page = await context.newPage();
+                const cdp = await context.newCDPSession(page);
+                await cdp.send('Network.enable');
+                await cdp.send('Network.emulateNetworkConditions', {
+                  offline: false, latency: 150,
+                  downloadThroughput: 1638.4 * 1024 / 8,
+                  uploadThroughput: 750 * 1024 / 8,
+                });
+                await cdp.send('Emulation.setCPUThrottlingRate', { rate: 4 });
+                await page.addInitScript(() => {
+                  window.__profileLcp = [];
+                  try {
+                    const obs = new PerformanceObserver((list) => {
+                      for (const entry of list.getEntries()) {
+                        window.__profileLcp.push({
+                          name: entry.element?.tagName ?? '', startTime: entry.startTime,
+                        });
+                      }
+                    });
+                    obs.observe({ type: 'largest-contentful-paint', buffered: true });
+                  } catch { /* best-effort observation */ }
+                });
+                await cdp.send('Profiler.enable');
+                await cdp.send('Profiler.start');
+                const started = Date.now();
+                await page.goto('http://127.0.0.1:4173' + route.path, {
+                  waitUntil: 'load', timeout: 45000,
+                });
+                await page.waitForTimeout(1500);
+                const { profile } = await cdp.send('Profiler.stop');
+                const lcp = await page.evaluate(() => window.__profileLcp || []).catch(() => []);
+                const nodes = new Map(profile.nodes.map((n) => [n.id, n]));
+                const self = new Map();
+                for (let i = 0; i < (profile.samples?.length ?? 0); i++) {
+                  const id = profile.samples[i];
+                  self.set(id, (self.get(id) ?? 0) + (profile.timeDeltas?.[i] ?? 0));
+                }
+                const top = Array.from(self, ([id, durationUs]) => ({
+                  durationMs: Math.round(durationUs / 1000),
+                  functionName: nodes.get(id)?.callFrame?.functionName || '(anonymous)',
+                  url: nodes.get(id)?.callFrame?.url || '(no-url)',
+                  line: (nodes.get(id)?.callFrame?.lineNumber ?? -1) + 1,
+                  column: (nodes.get(id)?.callFrame?.columnNumber ?? -1) + 1,
+                })).sort((a, b) => b.durationMs - a.durationMs).slice(0, 35);
+                const summary = { route: route.path, elapsedMs: Date.now() - started, lcp, top };
+                await writeFile(outputDir + '/' + route.slug + '.summary.json',
+                  JSON.stringify(summary, null, 2));
+                await writeFile(outputDir + '/' + route.slug + '.cpuprofile.json.gz',
+                  gzipSync(JSON.stringify(profile)));
+                console.log(JSON.stringify(summary));
+              } catch (error) {
+                failed = true;
+                console.error(route.slug, error);
+              } finally {
+                await context.close();
+              }
+            }
+          } finally {
+            await browser.close();
+          }
+          if (failed) process.exitCode = 1;
+          PROFILE_JS
+      - name: Publicar perfis de CPU para diagnóstico
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: cpu-profile-3-routes
+          path: reports/cpu-profiles
+          retention-days: 14
+          if-no-files-found: warn
