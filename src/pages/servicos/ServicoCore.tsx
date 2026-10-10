@@ -95,8 +95,14 @@ const readCoreData = (slug: string): ServicoLandingData | undefined => {
  * SERVICOS_LOCAL adiciona conteúdo local, FAQ de intenção local e
  * links internos contextuais para reforço de SEO local em Curitiba.
  */
-const ServicoCore = ({ slug }: { slug: string }) => {
-  const base = readCoreData(slug);
+export const ServicoCore = ({
+  slug,
+  baseData,
+}: {
+  slug: string;
+  baseData?: ServicoLandingData;
+}) => {
+  const base = baseData ?? readCoreData(slug);
   if (!base) return null;
 
   const local = SERVICOS_LOCAL[slug];
