@@ -1,5 +1,4 @@
 import { useEffect } from "react";
-import { detectByIp, requestPreciseLocation } from "@/lib/geoContext";
 
 /**
  * Detecta a cidade por IP no carregamento e, após 3s, pede a
@@ -10,11 +9,17 @@ export const GeoAutoDetect = () => {
   useEffect(() => {
     let cancelled = false;
     const idle = window.setTimeout(() => {
-      if (!cancelled) void detectByIp();
-    }, 300);
+      if (cancelled) return;
+      void import("@/lib/geoContext").then(({ detectByIp }) => {
+        if (!cancelled) void detectByIp();
+      });
+    }, 6000);
     const precise = window.setTimeout(() => {
-      if (!cancelled) void requestPreciseLocation();
-    }, 3000);
+      if (cancelled) return;
+      void import("@/lib/geoContext").then(({ requestPreciseLocation }) => {
+        if (!cancelled) void requestPreciseLocation();
+      });
+    }, 12000);
     return () => {
       cancelled = true;
       window.clearTimeout(idle);

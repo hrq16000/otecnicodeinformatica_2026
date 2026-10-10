@@ -1,5 +1,8 @@
-import { useEffect, useState } from "react";
-import { SmartSearch } from "@/components/SmartSearch";
+import { lazy, Suspense, useEffect, useState } from "react";
+
+const SmartSearch = lazy(() =>
+  import("@/components/SmartSearch").then((m) => ({ default: m.SmartSearch })),
+);
 
 /**
  * Mantém a busca montada uma única vez para todo o portal. Qualquer botão ou
@@ -15,5 +18,10 @@ export function GlobalSmartSearch() {
     return () => window.removeEventListener("openSmartSearch", open);
   }, []);
 
-  return <SmartSearch isOpen={isOpen} onClose={() => setIsOpen(false)} />;
+  if (!isOpen) return null;
+  return (
+    <Suspense fallback={null}>
+      <SmartSearch isOpen={isOpen} onClose={() => setIsOpen(false)} />
+    </Suspense>
+  );
 }

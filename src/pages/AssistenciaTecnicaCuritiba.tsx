@@ -367,7 +367,7 @@ export default function AssistenciaTecnicaCuritiba() {
           />
 
           <div className="container mx-auto px-4 pt-10 pb-16 md:pt-16 md:pb-24 grid lg:grid-cols-[1.2fr_.8fr] gap-12 items-center">
-            <div data-atc-reveal>
+            <div data-atc-reveal className="atc-in">
               <span className="inline-flex items-center gap-2 rounded-full border border-accent/30 bg-accent/10 px-3 py-1 text-xs font-medium text-accent">
                 <Sparkles className="h-3.5 w-3.5" /> Especialistas em eletrônica e games
               </span>
@@ -410,7 +410,7 @@ export default function AssistenciaTecnicaCuritiba() {
             </div>
 
             {/* Rating card */}
-            <div data-atc-reveal className="relative lg:justify-self-end">
+            <div data-atc-reveal className="atc-in relative lg:justify-self-end">
               <div className="relative rounded-3xl border border-white/15 bg-white/[0.06] p-6 backdrop-blur-md shadow-[var(--shadow-xl)] max-w-sm">
                 <div className="flex items-center gap-3">
                   <div className="h-14 w-14 rounded-2xl bg-gradient-to-br from-accent to-primary flex items-center justify-center shadow-lg">

@@ -417,6 +417,11 @@ const TecnicoInformaticaCuritibaAds = lazyPagina(() => import("./pages/ads/Tecni
 // Páginas de Serviços Individuais
 const ServicoCore = lazyPagina(() => import("./pages/servicos/ServicoCore"));
 
+const FormatacaoCore = lazyPagina(() => import("./pages/servicos/FormatacaoCore"));
+const UpgradeSsdRamCore = lazyPagina(() => import("./pages/servicos/UpgradeSsdRamCore"));
+const RecuperacaoDadosCore = lazyPagina(() => import("./pages/servicos/RecuperacaoDadosCore"));
+const SuporteTecnicoEmpresarialCore = lazyPagina(() => import("./pages/servicos/SuporteTecnicoEmpresarialCore"));
+
 const MontagemPc = lazyPagina(() => import("./pages/servicos/MontagemPc"));
 const ComputadorLento = lazyPagina(() => import("./pages/servicos/ComputadorLento"));
 const ComputadorNaoLiga = lazyPagina(() => import("./pages/servicos/ComputadorNaoLiga"));
@@ -568,18 +573,42 @@ export const IdleEnhancements = () => {
   const [enabled, setEnabled] = useState(false);
 
   useEffect(() => {
-    const activate = () => setEnabled(true);
-    const idleId: number = typeof window.requestIdleCallback === "function"
-      ? window.requestIdleCallback(activate, { timeout: 4500 })
-      : (globalThis.setTimeout(activate, 2500) as unknown as number);
+    let idleId: number | undefined;
+    let activated = false;
+
+    const activate = () => {
+      if (activated) return;
+      activated = true;
+      setEnabled(true);
+    };
+
+    // Chatbot, social proof e painéis auxiliares não participam do conteúdo
+    // crítico. Aguardar a janela inicial evita competir com LCP/hidratação;
+    // qualquer interação real do usuário libera imediatamente os recursos.
+    const scheduleIdle = () => {
+      if (typeof window.requestIdleCallback === "function") {
+        idleId = window.requestIdleCallback(activate, { timeout: 2000 });
+      } else {
+        idleId = globalThis.setTimeout(activate, 1000) as unknown as number;
+      }
+    };
+    const timerId = globalThis.setTimeout(scheduleIdle, 6000) as unknown as number;
+    const onInteraction = () => activate();
+
+    window.addEventListener("pointerdown", onInteraction, { once: true, passive: true });
+    window.addEventListener("keydown", onInteraction, { once: true });
 
     return () => {
-      if (typeof window.cancelIdleCallback === "function") {
-        window.cancelIdleCallback(idleId);
-      } else {
-        globalThis.clearTimeout(idleId);
+      globalThis.clearTimeout(timerId);
+      window.removeEventListener("pointerdown", onInteraction);
+      window.removeEventListener("keydown", onInteraction);
+      if (idleId !== undefined) {
+        if (typeof window.cancelIdleCallback === "function") {
+          window.cancelIdleCallback(idleId);
+        } else {
+          globalThis.clearTimeout(idleId);
+        }
       }
-
     };
   }, []);
 
@@ -895,14 +924,14 @@ export const legacyRouteElements: Record<string, () => React.ReactElement> = {
   "/cftv/araucaria": () => <CFTVAraucaria />,
   "/cftv/campo-largo": () => <CFTVCampoLargo />,
   "/cftv/pinhais": () => <CFTVPinhais />,
-  "/servicos/formatacao": () => <ServicoCore slug="formatacao" />,
+  "/servicos/formatacao": () => <FormatacaoCore />,
   "/servicos/manutencao-de-notebook": () => <ServicoCore slug="manutencao-de-notebook" />,
   "/servicos/manutencao-de-computador": () => <ServicoCore slug="manutencao-de-computador" />,
-  "/servicos/upgrade-ssd-ram": () => <ServicoCore slug="upgrade-ssd-ram" />,
+  "/servicos/upgrade-ssd-ram": () => <UpgradeSsdRamCore />,
   "/servicos/remocao-de-virus": () => <ServicoCore slug="remocao-de-virus" />,
-  "/servicos/recuperacao-de-dados": () => <ServicoCore slug="recuperacao-de-dados" />,
+  "/servicos/recuperacao-de-dados": () => <RecuperacaoDadosCore />,
   "/servicos/redes-e-wifi": () => <ServicoCore slug="redes-e-wifi" />,
-  "/servicos/suporte-tecnico-empresarial": () => <ServicoCore slug="suporte-tecnico-empresarial" />,
+  "/servicos/suporte-tecnico-empresarial": () => <SuporteTecnicoEmpresarialCore />,
   "/servicos/manutencao-preventiva-empresas": () => <ServicoCore slug="manutencao-preventiva-empresas" />,
   "/servicos/backup-para-empresas": () => <ServicoCore slug="backup-para-empresas" />,
   "/servicos/suporte-home-office": () => <ServicoCore slug="suporte-home-office" />,

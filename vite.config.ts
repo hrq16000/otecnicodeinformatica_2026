@@ -43,6 +43,11 @@ export default defineConfig({
     // Redirect TanStack Start's bundled server entry to src/server.ts (our SSR error wrapper).
     // nitro/vite builds from this
     server: { entry: "server" },
+    // O routeTree tem centenas de rotas. Sem code splitting, todas entram no
+    // grafo inicial e aumentam parse/eval mesmo quando a visita usa uma rota só.
+    router: {
+      autoCodeSplitting: true,
+    },
     // O prerender integrado do TanStack Start precisa de ajustes para o preset
     // cloudflare-module. Usamos scripts/prerender-blog.mjs para renderizar as
     // rotas /blog/:slug aprovadas manualmente após o build.

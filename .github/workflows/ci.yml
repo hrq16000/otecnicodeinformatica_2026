@@ -11,6 +11,15 @@ concurrency:
   group: ${{ github.workflow }}-${{ github.event_name }}-${{ github.event.pull_request.number || github.ref }}
   cancel-in-progress: true
 
+# Configuração pública/canônica do portal. Não contém credenciais.
+# Mantém build/SEO determinísticos sem depender de arquivo .env versionado.
+env:
+  VITE_SITE_DOMAIN: otecnicodeinformatica.com.br
+  VITE_SITE_INDEXING_ENABLED: "true"
+  VITE_BRAND_NAME: "O Técnico de Informática"
+  VITE_WHATSAPP_NUMBER: "5541997086380"
+  VITE_BUSINESS_HOURS: "Mo-Fr 08:00-18:00; Sa 09:00-13:00"
+
 jobs:
   # Camada 1 — testes de código (Vitest). Não sobe navegador, não builda.
   # Playwright NUNCA roda aqui; Vitest NUNCA coleta e2e/ (gate test:list).
@@ -21,7 +30,7 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
-          node-version: "20"
+          node-version: "22.12.0"
       - name: Install deps
         run: npm ci --no-audit --no-fund
       - name: Inventário de testes (isolamento de runners, fail-closed)
@@ -44,6 +53,12 @@ jobs:
     needs: unit
     runs-on: ubuntu-latest
     timeout-minutes: 15
+    # Observabilidade externa é opcional no CI deste portal. Se Sentry/OTLP
+    # forem configurados no futuro, o mesmo gate valida os valores normalmente.
+    env:
+      OBSERVABILITY_OPTIONAL: "true"
+      VITE_SENTRY_DSN: ${{ secrets.VITE_SENTRY_DSN }}
+      VITE_OTLP_ENDPOINT: ${{ secrets.VITE_OTLP_ENDPOINT }}
 
     steps:
       - uses: actions/checkout@v4
@@ -52,17 +67,15 @@ jobs:
           bun-version: latest
       - uses: actions/setup-node@v4
         with:
-          node-version: "20"
+          node-version: "22.12.0"
       - name: Install deps
         run: npm ci --no-audit --no-fund
-      - name: Lint (non-blocking warnings)
-        run: npm run lint --silent || echo "::warning::lint reported issues"
-      # Comando oficial: gates essenciais de código e conteúdo.
+      - name: Build
+        run: npm run build
+      # O verify inclui a governança editorial, que inspeciona a saída do build.
       # Os testes já rodam no job `unit`, por isso ficam de fora aqui.
       - name: verify (gates essenciais — comando oficial)
         run: npm run verify -- --skip=test
-      - name: Build
-        run: npm run build
       # Comando oficial: gates essenciais de publicação (exigem dist/).
       # Os passos opcionais (GSC/rede) não bloqueiam o CI.
       - name: deploy:check (gates de publicação — comando oficial)
@@ -92,10 +105,30 @@ jobs:
       - name: Interlinking local gate (mãe ⇄ bairros/cidades)
         run: node scripts/with-ssr-server.mjs npm run check:local-interlinking
       - name: Gate de saúde de indexação (rotas + aliases)
+        shell: bash
         run: |
-          npx vite preview --port 4321 --strictPort &
-          for i in $(seq 1 60); do curl -sf -o /dev/null http://localhost:4321/ && break; sleep 1; done
-          node scripts/check-index-health.mjs --base=http://localhost:4321 --strict
+          set -euo pipefail
+          npx --yes wrangler dev --config dist/server/wrangler.json --port 4321 > /tmp/oti-index-worker.log 2>&1 &
+          worker_pid=$!
+          cleanup() {
+            kill "$worker_pid" 2>/dev/null || true
+            pkill -P "$worker_pid" 2>/dev/null || true
+          }
+          trap cleanup EXIT
+          ready=0
+          for i in $(seq 1 60); do
+            if curl -sf -o /dev/null http://127.0.0.1:4321/; then
+              ready=1
+              break
+            fi
+            sleep 1
+          done
+          if [ "$ready" != "1" ]; then
+            echo "::error::Worker de produção não respondeu na porta 4321"
+            cat /tmp/oti-index-worker.log || true
+            exit 1
+          fi
+          node scripts/check-index-health.mjs --base=http://127.0.0.1:4321 --strict
       - name: Relatório HTML de auditoria local
         run: npm run report:local-audit
 
@@ -122,17 +155,20 @@ jobs:
     needs: build
     steps:
       - uses: actions/checkout@v4
+      - uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: latest
       - uses: actions/setup-node@v4
         with:
-          node-version: "20"
+          node-version: "22.12.0"
       - name: Install deps
         run: npm ci --no-audit --no-fund
       - name: Install Playwright browsers
         run: npx playwright install --with-deps chromium
       - name: Build
         run: npm run build
-      - name: Start preview
-        run: npx vite preview --port 8080 &
+      - name: Start production Worker
+        run: npx --yes wrangler dev --config dist/server/wrangler.json --port 8080 > /tmp/oti-e2e-worker.log 2>&1 &
         env:
           CI: "true"
       - name: Wait for server
@@ -186,9 +222,12 @@ jobs:
         totalShards: [4]
     steps:
       - uses: actions/checkout@v4
+      - uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: latest
       - uses: actions/setup-node@v4
         with:
-          node-version: "20"
+          node-version: "22.12.0"
           cache: npm
       - name: Install deps
         run: npm ci --no-audit --no-fund
@@ -197,8 +236,8 @@ jobs:
         run: npx playwright install --with-deps ${{ matrix.browser }}
       - name: Build (uma única vez por job)
         run: npm run build
-      - name: Start preview
-        run: npx vite preview --port 8080 &
+      - name: Start production Worker
+        run: npx --yes wrangler dev --config dist/server/wrangler.json --port 8080 > /tmp/oti-e2e-matrix-worker.log 2>&1 &
       - name: Wait for server (healthcheck HTTP)
         run: npx wait-on http-get://localhost:8080/ --timeout 90000
       - name: Run shard ${{ matrix.shard }}/${{ matrix.totalShards }} (${{ matrix.browser }})
@@ -246,12 +285,12 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 15
     needs: e2e-full-matrix
-    if: always()
+    if: always() && needs.e2e-full-matrix.result != 'skipped'
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
-          node-version: "20"
+          node-version: "22.12.0"
           cache: npm
       - name: Install deps
         run: npm ci --no-audit --no-fund
@@ -308,7 +347,7 @@ jobs:
       - uses: actions/setup-node@v4
         if: steps.changes.outputs.ping == 'true'
         with:
-          node-version: "20"
+          node-version: "22.12.0"
       - name: Ping IndexNow with sitemap URLs
         if: steps.changes.outputs.ping == 'true'
         env:
@@ -327,9 +366,12 @@ jobs:
     if: github.event_name == 'pull_request'
     steps:
       - uses: actions/checkout@v4
+      - uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: latest
       - uses: actions/setup-node@v4
         with:
-          node-version: "20"
+          node-version: "22.12.0"
       - name: Install deps
         run: npm ci --no-audit --no-fund
       - name: Install Lighthouse CI
@@ -359,7 +401,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: lighthouse-reports
-          path: .lighthouseci
+          path: |
+            .lighthouseci
+            .lighthouseci-mobile
           if-no-files-found: ignore
-
-

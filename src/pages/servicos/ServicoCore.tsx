@@ -1,3 +1,4 @@
+import { lazy, Suspense } from "react";
 import { ServicoLandingLayout } from "@/components/servico/ServicoLandingLayout";
 import { VISUAL_3S_SERVICO_SLUGS } from "@/lib/visualEmpresarial3s";
 import { visual3T } from "@/lib/visualEmpresarial3t";
@@ -7,7 +8,6 @@ import { Blocos3U } from "@/components/servico/Blocos3U";
 import { blocos4A, cta4A } from "@/lib/blocos4a";
 import { Blocos4A } from "@/components/servico/Blocos4A";
 import { ClarezaVariacao } from "@/components/servico/ClarezaVariacao";
-import { Blocos3T } from "@/components/servico/Blocos3T";
 import { FichaComercialServico } from "@/components/servico/FichaComercialServico";
 import { AtlasPonteServico } from "@/components/informatica/AtlasPonteServico";
 import { BibliotecaPonte } from "@/components/informatica/BibliotecaPonte";
@@ -15,13 +15,78 @@ import { BibliotecaPonte } from "@/components/informatica/BibliotecaPonte";
 import { MontagemWizard } from "@/components/servico/MontagemWizard";
 import { ProvasVisuaisMonitor } from "@/components/servico/ProvasVisuaisMonitor";
 import { WorkstationSection } from "@/components/servico/WorkstationSection";
-import { SuporteModalidadesSection } from "@/components/servico/SuporteModalidadesSection";
-import { SuporteEmpresarialBlocos } from "@/components/servico/SuporteEmpresarialBlocos";
-import { SERVICOS_CORE } from "@/lib/servicosCore";
+import type { ServicoLandingData } from "@/components/servico/ServicoLandingLayout";
 import { SERVICOS_LOCAL } from "@/lib/servicosLocal";
 import { visualDoServico } from "@/lib/servicoVisual3q";
 import { visualEmpresarial } from "@/lib/servicoVisual3r";
 import { siteConfig } from "@/lib/siteConfig";
+
+const Blocos3T = lazy(() =>
+  import("@/components/servico/Blocos3T").then((m) => ({ default: m.Blocos3T })),
+);
+const SuporteEmpresarialBlocos = lazy(() =>
+  import("@/components/servico/SuporteEmpresarialBlocos").then((m) => ({
+    default: m.SuporteEmpresarialBlocos,
+  })),
+);
+const SuporteModalidadesSection = lazy(() =>
+  import("@/components/servico/SuporteModalidadesSection").then((m) => ({
+    default: m.SuporteModalidadesSection,
+  })),
+);
+
+const LazyBelowFold = ({ children }: { children: React.ReactNode }) => (
+  <Suspense fallback={null}>{children}</Suspense>
+);
+
+type CoreDataEntry = {
+  status: "pending" | "fulfilled" | "rejected";
+  promise: Promise<void>;
+  data?: ServicoLandingData;
+  error?: unknown;
+};
+
+const PRIORITY_CORE_DATA_LOADERS: Record<string, () => Promise<ServicoLandingData>> = {
+  formatacao: () => import("@/lib/servicosCoreShards/formatacao").then((m) => m.default),
+  "upgrade-ssd-ram": () => import("@/lib/servicosCoreShards/upgrade-ssd-ram").then((m) => m.default),
+  "recuperacao-de-dados": () => import("@/lib/servicosCoreShards/recuperacao-de-dados").then((m) => m.default),
+  "suporte-tecnico-empresarial": () =>
+    import("@/lib/servicosCoreShards/suporte-tecnico-empresarial").then((m) => m.default),
+};
+
+const coreDataCache = new Map<string, CoreDataEntry>();
+
+const readCoreData = (slug: string): ServicoLandingData | undefined => {
+  let entry = coreDataCache.get(slug);
+  if (!entry) {
+    entry = {
+      status: "pending",
+      promise: Promise.resolve(),
+    };
+    const target = entry;
+    const loader =
+      PRIORITY_CORE_DATA_LOADERS[slug] ??
+      (() =>
+        import("@/lib/servicosCore").then(
+          (m) => m.SERVICOS_CORE[slug] as ServicoLandingData | undefined,
+        ));
+    target.promise = loader().then(
+      (data) => {
+        target.data = data;
+        target.status = "fulfilled";
+      },
+      (error) => {
+        target.error = error;
+        target.status = "rejected";
+      },
+    );
+    coreDataCache.set(slug, target);
+  }
+
+  if (entry.status === "pending") throw entry.promise;
+  if (entry.status === "rejected") throw entry.error;
+  return entry.data;
+};
 
 
 /**
@@ -30,8 +95,14 @@ import { siteConfig } from "@/lib/siteConfig";
  * SERVICOS_LOCAL adiciona conteúdo local, FAQ de intenção local e
  * links internos contextuais para reforço de SEO local em Curitiba.
  */
-const ServicoCore = ({ slug }: { slug: keyof typeof SERVICOS_CORE }) => {
-  const base = SERVICOS_CORE[slug];
+export const ServicoCore = ({
+  slug,
+  baseData,
+}: {
+  slug: string;
+  baseData?: ServicoLandingData;
+}) => {
+  const base = baseData ?? readCoreData(slug);
   if (!base) return null;
 
   const local = SERVICOS_LOCAL[slug];
@@ -47,10 +118,10 @@ const ServicoCore = ({ slug }: { slug: keyof typeof SERVICOS_CORE }) => {
   // Blocos de política/checklist + wizard de solicitação (Rodada 3L / wizard).
   const extra =
     slug === "suporte-tecnico-empresarial" ? (
-      <>
+      <LazyBelowFold>
         <SuporteEmpresarialBlocos />
         <SuporteModalidadesSection />
-      </>
+      </LazyBelowFold>
     ) : slug === "montagem-de-pc" ? (
       <>
         <WorkstationSection />
@@ -174,7 +245,9 @@ const ServicoCore = ({ slug }: { slug: keyof typeof SERVICOS_CORE }) => {
   const extraFinal = cfgBlocos ? (
     <>
       {extra}
-      <Blocos3T slug={slug as string} />
+      <LazyBelowFold>
+        <Blocos3T slug={slug as string} />
+      </LazyBelowFold>
       {ficha}
     </>
   ) : cfg3u ? (

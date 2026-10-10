@@ -36,8 +36,38 @@ jobs:
         env:
           VITE_SITE_DOMAIN: otecnicodeinformatica.com.br
           VITE_SITE_INDEXING_ENABLED: "true"
+      - name: Smoke SSR do preview de produção
+        shell: bash
+        run: |
+          set -euo pipefail
+          rm -f /tmp/oti-preview.log /tmp/oti-preview-response.html
+          npx --yes wrangler dev --config dist/server/wrangler.json --port 4174 > /tmp/oti-preview.log 2>&1 &
+          preview_pid=$!
+          cleanup() { kill "$preview_pid" 2>/dev/null || true; }
+          trap cleanup EXIT
+
+          for attempt in {1..30}; do
+            if curl --silent --output /dev/null http://127.0.0.1:4174/; then
+              break
+            fi
+            sleep 1
+          done
+
+          status="$(curl --silent --show-error --output /tmp/oti-preview-response.html --write-out '%{http_code}' http://127.0.0.1:4174/servicos/formatacao || true)"
+          if [ "$status" != "200" ]; then
+            echo "::error::Preview SSR retornou HTTP $status em /servicos/formatacao"
+            echo "----- server log -----"
+            cat /tmp/oti-preview.log || true
+            echo "----- response -----"
+            head -c 4000 /tmp/oti-preview-response.html || true
+            echo
+            exit 1
+          fi
+
       - name: Lighthouse CI — budgets por rota de serviço
-        run: SSR_PORT=4173 SSR_SERVER_MODE=build node scripts/with-ssr-server.mjs npx --yes @lhci/cli@0.14.x autorun --config=lighthouserc.servicos.json
+        # O próprio LHCI sobe o Worker gerado pelo preset cloudflare-module via Wrangler.
+        # Não use vite dev/preview aqui: o bundle Nitro é dist/server/index.mjs.
+        run: npx --yes @lhci/cli@0.14.x autorun --config=lighthouserc.servicos.json
       - name: Publicar relatórios
         if: always()
         uses: actions/upload-artifact@v4

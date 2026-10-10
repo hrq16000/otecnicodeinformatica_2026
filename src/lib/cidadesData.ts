@@ -248,14 +248,14 @@ export const CIDADES: Record<string, CidadeData> = {
       "A modalidade é definida depois dessa separação. Configuração e parte das falhas de software podem começar remotamente; problemas que dependem do ambiente pedem visita; desmontagem, falha física e testes prolongados seguem para bancada. Escopo e valor são apresentados antes da execução.",
     ],
     contextoLocal: [
-      "Para confirmar a região do atendimento, usamos o endereço completo e referências públicas de Pinhais. O atendimento municipal da Prefeitura aparece no Centro, com pontos na Rua Renato Nunes Ribas e na Avenida Camilo di Lellis. O Parque das Águas, no eixo da Rodovia João Leopoldo Jacomel com a Estrada Ecológica, é outra referência pública útil para situar endereços na cidade. Nenhum desses locais representa oficina, filial ou ponto físico da marca.",
+      "Para confirmar a região do atendimento, usamos o endereço completo e referências públicas de Pinhais. O atendimento municipal da Prefeitura aparece no Centro, com pontos na Rua Renato Nunes Ribas e na Avenida Camilo di Lellis. O Parque das Águas, no eixo da Rodovia João Leopoldo Jacomel com a Estrada Ecológica, é outra referência pública útil para situar endereços na cidade. Essas referências geográficas públicas não são locais de prestação do serviço pela marca.",
       "Na rede Wi‑Fi, a localização do defeito importa mais que o nome do bairro. Se apenas um notebook perde conexão enquanto celular e TV continuam normais, adaptador, driver e configuração desse equipamento entram primeiro. Se vários aparelhos falham no mesmo ponto, posição do roteador, obstáculos, banda e distribuição do sinal passam a ser investigados.",
       "Em computador lento, o teste muda conforme o comportamento. Disco em uso constante, pouca memória, temperatura alta e excesso de programas podem produzir sensação semelhante de lentidão. Medir essas camadas antes de trocar SSD, adicionar RAM ou formatar evita gasto por tentativa.",
     ],
     logisticaLocal: [
       "O endereço completo é confirmado antes do agendamento. Referências como o Centro de Pinhais, a Avenida Camilo di Lellis, a Rodovia João Leopoldo Jacomel e o Parque das Águas ajudam a desambiguar a localização, mas não definem prazo de chegada.",
       "Suporte remoto faz sentido quando o equipamento liga, mantém conexão e o problema está em sistema, configuração, conta, navegador ou parte dos periféricos. Visita é mais adequada quando o defeito depende da rede, da impressora ou de outros elementos do ambiente. Bancada entra quando há desmontagem, falha física, armazenamento suspeito ou necessidade de teste prolongado.",
-      "Não há SLA ou tempo fixo de chegada associado à cidade. Agenda, deslocamento e prazo são informados depois da triagem, conforme endereço, modalidade, complexidade e eventual necessidade de peça.",
+      "Agenda, deslocamento e prazo são informados depois da triagem, conforme endereço, modalidade, complexidade e eventual necessidade de peça.",
     ],
     perfilLocal: [
       "Triagem entre software, hardware e conectividade antes de indicar solução",
