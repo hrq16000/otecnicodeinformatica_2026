@@ -142,6 +142,13 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     links: [
       { rel: "stylesheet", href: appCss },
       { rel: "preload", as: "image", href: "/logo.webp", type: "image/webp", fetchPriority: "high" },
+      {
+        rel: "preload",
+        as: "font",
+        type: "font/woff2",
+        href: "/fonts/outfit-var.woff2",
+        crossOrigin: "anonymous",
+      },
       { rel: "dns-prefetch", href: "https://www.googletagmanager.com" },
       { rel: "dns-prefetch", href: "https://www.google-analytics.com" },
       { rel: "icon", href: "/favicon.png", type: "image/png" },
