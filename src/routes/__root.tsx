@@ -51,7 +51,8 @@ document.addEventListener('click', function (e) {
   if (!target) return;
   var anchor = target.closest ? target.closest('a[href]') : null;
   var href = anchor && anchor.getAttribute ? anchor.getAttribute('href') : '';
-  var isWa = /^https:\/\/(?:wa\.me|api\.whatsapp\.com)\//i.test(href || '');
+  var lowerHref = (href || '').toLowerCase();
+  var isWa = lowerHref.indexOf('https://wa.me/') === 0 || lowerHref.indexOf('https://api.whatsapp.com/') === 0;
   var required = target.closest ? target.closest('[data-wa-funnel="required"]') : null;
   if (!isWa && !required) return;
 
@@ -143,20 +144,6 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { rel: "preload", as: "image", href: "/logo.webp", type: "image/webp", fetchPriority: "high" },
       { rel: "dns-prefetch", href: "https://www.googletagmanager.com" },
       { rel: "dns-prefetch", href: "https://www.google-analytics.com" },
-      {
-        rel: "preload",
-        as: "font",
-        type: "font/woff2",
-        href: "/fonts/figtree-var.woff2",
-        crossOrigin: "anonymous",
-      },
-      {
-        rel: "preload",
-        as: "font",
-        type: "font/woff2",
-        href: "/fonts/outfit-var.woff2",
-        crossOrigin: "anonymous",
-      },
       { rel: "icon", href: "/favicon.png", type: "image/png" },
       { rel: "apple-touch-icon", sizes: "192x192", href: "/apple-touch-icon.png" },
       { rel: "manifest", href: "/manifest.json", crossOrigin: "use-credentials" },
