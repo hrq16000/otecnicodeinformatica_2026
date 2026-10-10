@@ -69,6 +69,9 @@ const PRIORITY_CORE_DATA_LOADERS: Record<string, () => Promise<ServicoLandingDat
   formatacao: () => import("@/lib/servicosCoreShards/formatacao").then((m) => m.default),
   "upgrade-ssd-ram": () => import("@/lib/servicosCoreShards/upgrade-ssd-ram").then((m) => m.default),
   "recuperacao-de-dados": () => import("@/lib/servicosCoreShards/recuperacao-de-dados").then((m) => m.default),
+  "redes-e-wifi": () => import("@/lib/servicosCoreShards/redes-e-wifi").then((m) => m.default),
+  "manutencao-preventiva-empresas": () => import("@/lib/servicosCoreShards/manutencao-preventiva-empresas").then((m) => m.default),
+  "backup-para-empresas": () => import("@/lib/servicosCoreShards/backup-para-empresas").then((m) => m.default),
   "suporte-tecnico-empresarial": () =>
     import("@/lib/servicosCoreShards/suporte-tecnico-empresarial").then((m) => m.default),
 };
