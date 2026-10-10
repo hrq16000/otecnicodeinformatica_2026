@@ -1,0 +1,69 @@
+name: Aprovar 3 snapshots revisados PR370
+on:
+  push:
+    branches:
+      - fix/trust-claims-negation-copy-20261005
+    paths:
+      - .github/workflows/pr370-snapshot-review.yml
+permissions:
+  contents: write
+  actions: read
+jobs:
+  review-three-snapshots:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - name: Baixar screenshots de evidência CI da PR370
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh run download 38083429761 --repo ${{ github.repository }} --name visual-reduced-motion --dir /tmp/pr370-visual
+      - name: Aplicar somente 3 imagens revisadas, conferindo SHA256
+        shell: bash
+        run: |
+          set -euo pipefail
+          node --input-type=module <<'NODE'
+          import { readdirSync, readFileSync, writeFileSync, mkdirSync } from 'node:fs';
+          import { join, basename, dirname } from 'node:path';
+          import { createHash } from 'node:crypto';
+          const root = '/tmp/pr370-visual';
+          const target = 'e2e/visual-reduced-motion.spec.ts-snapshots';
+          const reviewed = {
+            home: '0cf8569dc3be09be90bda737bbbc58475d021ad114d04ef4f704cd1bb1f05559',
+            servicos: '25655c1e8d6c43bd50637f07d23783c296a0d5957b5ec453e4fb1eb409cd73e1',
+            empresas: '19010b40aa90e2bdfe4e3305f6bfe5e849f8f03e39bc516cafb91f16a8c4e470',
+          };
+          const walk = (dir) => readdirSync(dir, { withFileTypes: true }).flatMap(
+            d => d.isDirectory() ? walk(join(dir, d.name)) : [join(dir, d.name)]
+          );
+          const files = walk(root);
+          mkdirSync(target, { recursive: true });
+          for (const [slug, sha] of Object.entries(reviewed)) {
+            const name = 'reduced-motion-' + slug + '-actual.png';
+            const found = files.filter(f => basename(f) === name && !f.includes('-retry'));
+            if (found.length !== 1) throw Error('Arquivo de evidência ausente/duplicado: ' + name);
+            const bytes = readFileSync(found[0]);
+            const digest = createHash('sha256').update(bytes).digest('hex');
+            if (digest !== sha) throw Error('Evidência visual diferente da revisada: ' + slug);
+            const dest = join(target, 'reduced-motion-' + slug + '-chromium-linux.png');
+            writeFileSync(dest, bytes);
+            console.log('Snapshot revisado: ' + dest + ' SHA256=' + digest);
+          }
+          NODE
+          git add e2e/visual-reduced-motion.spec.ts-snapshots/reduced-motion-home-chromium-linux.png e2e/visual-reduced-motion.spec.ts-snapshots/reduced-motion-servicos-chromium-linux.png e2e/visual-reduced-motion.spec.ts-snapshots/reduced-motion-empresas-chromium-linux.png
+          git diff --cached --name-only > /tmp/pr370-snapshots-staged.txt
+          test "$(wc -l < /tmp/pr370-snapshots-staged.txt)" -eq 3
+          if grep -v '^e2e/visual-reduced-motion.spec.ts-snapshots/reduced-motion-\(home\|servicos\|empresas\)-chromium-linux.png$' /tmp/pr370-snapshots-staged.txt; then
+            echo "::error::Mudança fora dos três snapshots"; exit 1
+          fi
+          cat /tmp/pr370-snapshots-staged.txt
+      - name: Commit de baseline visual aprovado (sem bypass dos gates)
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "test(visual): approve 3 reviewed reduced-motion snapshots"
+          git push origin HEAD:fix/trust-claims-negation-copy-20261005
