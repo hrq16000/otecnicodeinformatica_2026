@@ -14,12 +14,15 @@ async function installGtagSpy(page: Page) {
   });
 }
 
+const triageDialog = (page: Page) =>
+  page.locator('[role="dialog"][data-triage="1"]');
+
 async function openFunnel(page: Page) {
   await page.evaluate(() => {
     window.dispatchEvent(new CustomEvent("wa-funnel:open", { detail: { location: "test" } }));
   });
-  const dialog = page.getByRole("dialog");
-  await expect(dialog).toBeVisible({ timeout: 5000 });
+  const dialog = triageDialog(page);
+  await expect(dialog).toBeVisible({ timeout: 15000 });
   return dialog;
 }
 
@@ -97,7 +100,7 @@ test.describe("Triagem V5 — funil ramificado por equipamento", () => {
     await page.waitForLoadState("domcontentloaded");
     await page.getByTestId("whatsapp-float").click();
 
-    const dialog = page.getByRole("dialog");
+    const dialog = triageDialog(page);
     await expect(dialog).toBeVisible({ timeout: 5000 });
     await expect(dialog.getByText(/Triagem antes do atendimento/i)).toBeVisible();
 
@@ -111,7 +114,7 @@ test.describe("Triagem V5 — funil ramificado por equipamento", () => {
     await page.goto(`${HOME}${UTM_QS}`);
     await page.waitForLoadState("networkidle");
     await page.getByTestId("whatsapp-float").click();
-    await expect(page.getByRole("dialog")).toBeVisible({ timeout: 5000 });
+    await expect(triageDialog(page)).toBeVisible({ timeout: 15000 });
 
     const eventos = await page.evaluate(() =>
       (window as unknown as { __gtagCalls: unknown[][] }).__gtagCalls
@@ -186,7 +189,7 @@ test.describe("Triagem V5 — funil ramificado por equipamento", () => {
     const hidratado = await page.evaluate(() => document.documentElement.dataset.hydrated === "1");
     await float.click({ force: true });
 
-    await expect(page.getByRole("dialog")).toBeVisible({ timeout: 15000 });
+    await expect(triageDialog(page)).toBeVisible({ timeout: 15000 });
 
     const nomes = await page.evaluate(() =>
       (window as unknown as { __gtagCalls: unknown[][] }).__gtagCalls

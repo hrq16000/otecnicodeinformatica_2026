@@ -1,3 +1,4 @@
+import { lazy, Suspense } from "react";
 import { ServicoLandingLayout } from "@/components/servico/ServicoLandingLayout";
 import { VISUAL_3S_SERVICO_SLUGS } from "@/lib/visualEmpresarial3s";
 import { visual3T } from "@/lib/visualEmpresarial3t";
@@ -7,7 +8,6 @@ import { Blocos3U } from "@/components/servico/Blocos3U";
 import { blocos4A, cta4A } from "@/lib/blocos4a";
 import { Blocos4A } from "@/components/servico/Blocos4A";
 import { ClarezaVariacao } from "@/components/servico/ClarezaVariacao";
-import { Blocos3T } from "@/components/servico/Blocos3T";
 import { FichaComercialServico } from "@/components/servico/FichaComercialServico";
 import { AtlasPonteServico } from "@/components/informatica/AtlasPonteServico";
 import { BibliotecaPonte } from "@/components/informatica/BibliotecaPonte";
@@ -15,13 +15,29 @@ import { BibliotecaPonte } from "@/components/informatica/BibliotecaPonte";
 import { MontagemWizard } from "@/components/servico/MontagemWizard";
 import { ProvasVisuaisMonitor } from "@/components/servico/ProvasVisuaisMonitor";
 import { WorkstationSection } from "@/components/servico/WorkstationSection";
-import { SuporteModalidadesSection } from "@/components/servico/SuporteModalidadesSection";
-import { SuporteEmpresarialBlocos } from "@/components/servico/SuporteEmpresarialBlocos";
 import { SERVICOS_CORE } from "@/lib/servicosCore";
 import { SERVICOS_LOCAL } from "@/lib/servicosLocal";
 import { visualDoServico } from "@/lib/servicoVisual3q";
 import { visualEmpresarial } from "@/lib/servicoVisual3r";
 import { siteConfig } from "@/lib/siteConfig";
+
+const Blocos3T = lazy(() =>
+  import("@/components/servico/Blocos3T").then((m) => ({ default: m.Blocos3T })),
+);
+const SuporteEmpresarialBlocos = lazy(() =>
+  import("@/components/servico/SuporteEmpresarialBlocos").then((m) => ({
+    default: m.SuporteEmpresarialBlocos,
+  })),
+);
+const SuporteModalidadesSection = lazy(() =>
+  import("@/components/servico/SuporteModalidadesSection").then((m) => ({
+    default: m.SuporteModalidadesSection,
+  })),
+);
+
+const LazyBelowFold = ({ children }: { children: React.ReactNode }) => (
+  <Suspense fallback={null}>{children}</Suspense>
+);
 
 
 /**
@@ -47,10 +63,10 @@ const ServicoCore = ({ slug }: { slug: keyof typeof SERVICOS_CORE }) => {
   // Blocos de política/checklist + wizard de solicitação (Rodada 3L / wizard).
   const extra =
     slug === "suporte-tecnico-empresarial" ? (
-      <>
+      <LazyBelowFold>
         <SuporteEmpresarialBlocos />
         <SuporteModalidadesSection />
-      </>
+      </LazyBelowFold>
     ) : slug === "montagem-de-pc" ? (
       <>
         <WorkstationSection />
@@ -174,7 +190,9 @@ const ServicoCore = ({ slug }: { slug: keyof typeof SERVICOS_CORE }) => {
   const extraFinal = cfgBlocos ? (
     <>
       {extra}
-      <Blocos3T slug={slug as string} />
+      <LazyBelowFold>
+        <Blocos3T slug={slug as string} />
+      </LazyBelowFold>
       {ficha}
     </>
   ) : cfg3u ? (
