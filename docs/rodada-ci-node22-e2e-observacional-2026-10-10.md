@@ -25,6 +25,8 @@ conteúdo.
   `package-lock.json`;
 - o consolidador E2E verifica se existem relatórios blob antes da mesclagem;
 - na ausência de blobs, ele gera inventário explicativo e aviso observacional;
+- o job de build encaminha os secrets `VITE_SENTRY_DSN` e
+  `VITE_OTLP_ENDPOINT` ao build e ao gate, sem valores fictícios ou fallback;
 - os shards, o E2E direcionado, o build, o SSR e os demais gates continuam
   bloqueantes nos pontos onde já eram bloqueantes;
 - nenhum limite editorial, SEO, acessibilidade ou desempenho foi reduzido.
@@ -42,6 +44,12 @@ indexabilidade, sitemap, preço, garantia ou CTA.
 - `git diff --check` aprovado;
 - confirmação completa do SSR e dos demais gates permanece a cargo do CI do
   próprio PR, que fornece o runtime Node 22.12.0 real.
+
+O primeiro CI em Node 22 comprovou a correção de runtime: o SSR iniciou, gerou
+485 snapshots e aprovou 108/108 artigos no gate editorial pós-build. Em seguida,
+o pipeline revelou que os secrets de observabilidade não eram encaminhados ao
+job. O mapeamento foi adicionado mantendo o comportamento fail-closed: secret
+ausente continua sendo erro explícito.
 
 ## Passivo não mascarado
 

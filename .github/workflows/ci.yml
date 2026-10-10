@@ -44,6 +44,11 @@ jobs:
     needs: unit
     runs-on: ubuntu-latest
     timeout-minutes: 15
+    # Os sinks continuam fail-closed: se os secrets não existirem, o gate
+    # check:observability-env bloqueia o job em vez de aceitar um valor fictício.
+    env:
+      VITE_SENTRY_DSN: ${{ secrets.VITE_SENTRY_DSN }}
+      VITE_OTLP_ENDPOINT: ${{ secrets.VITE_OTLP_ENDPOINT }}
 
     steps:
       - uses: actions/checkout@v4
