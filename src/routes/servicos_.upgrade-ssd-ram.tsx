@@ -1,13 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { JsonLdSsrSink } from "@/lib/jsonLdSsr";
-import ServicoCore from "@/pages/servicos/ServicoCore";
+import { legacyRouteElements } from "@/legacyRouteElements";
 
-const RouteComponent = () => (
-  <>
-    <ServicoCore slug="upgrade-ssd-ram" />
-    <JsonLdSsrSink />
-  </>
-);
+const RouteComponent = legacyRouteElements["/servicos/upgrade-ssd-ram"];
 
 export const Route = createFileRoute("/servicos_/upgrade-ssd-ram")({
   component: RouteComponent,

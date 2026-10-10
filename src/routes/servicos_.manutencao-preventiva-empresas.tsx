@@ -1,13 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { JsonLdSsrSink } from "@/lib/jsonLdSsr";
-import ServicoCore from "@/pages/servicos/ServicoCore";
+import { legacyRouteElements } from "@/legacyRouteElements";
 
-const RouteComponent = () => (
-  <>
-    <ServicoCore slug="manutencao-preventiva-empresas" />
-    <JsonLdSsrSink />
-  </>
-);
+const RouteComponent = legacyRouteElements["/servicos/manutencao-preventiva-empresas"];
 
 export const Route = createFileRoute("/servicos_/manutencao-preventiva-empresas")({
   component: RouteComponent,
