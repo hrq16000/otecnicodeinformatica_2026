@@ -1,7 +1,6 @@
 import { useEffect, useMemo } from "react";
 import { copyVariacao, variantePara } from "@/lib/experimentos4b";
 import { getSessionId } from "@/lib/funnelSubmission";
-import { setActiveVariant, track } from "@/lib/funnelAnalytics";
 
 /**
  * Rodada 4B — variação controlada de clareza acima da dobra.
@@ -17,13 +16,28 @@ export const ClarezaVariacao = ({ path }: { path: string }) => {
 
   useEffect(() => {
     if (!variacao) return;
-    setActiveVariant(variacao.id);
-    track("experiment_view", {
-      experiment: "clareza-dobra-4b",
-      variant: variacao.id,
-      cta_location: `${path}_hero`,
-    });
-    return () => setActiveVariant(null);
+    let active = true;
+    let loaded: typeof import("@/lib/funnelAnalytics") | null = null;
+
+    void import("@/lib/funnelAnalytics")
+      .then((funnel) => {
+        if (!active) return;
+        loaded = funnel;
+        funnel.setActiveVariant(variacao.id);
+        funnel.track("experiment_view", {
+          experiment: "clareza-dobra-4b",
+          variant: variacao.id,
+          cta_location: `${path}_hero`,
+        });
+      })
+      .catch(() => {
+        /* experimento não bloqueia a página */
+      });
+
+    return () => {
+      active = false;
+      loaded?.setActiveVariant(null);
+    };
   }, [variacao, path]);
 
   if (!variacao || variacao.id === "controle") return null;

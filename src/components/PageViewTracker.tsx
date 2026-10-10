@@ -1,41 +1,85 @@
 import { useEffect } from "react";
-import { ANALYTICS_EVENTS, buildRouteContext, getJourneyId, recordTouchpoint } from "@/lib/analyticsContract";
-import { track, registrarPageView, registrarAbandonoSePendente } from "@/lib/funnelAnalytics";
+
+let pageAnalyticsPromise:
+  | Promise<
+      [
+        typeof import("@/lib/analyticsContract"),
+        typeof import("@/lib/funnelAnalytics"),
+      ]
+    >
+  | null = null;
+
+const loadPageAnalytics = () => {
+  pageAnalyticsPromise ??= Promise.all([
+    import("@/lib/analyticsContract"),
+    import("@/lib/funnelAnalytics"),
+  ]);
+  return pageAnalyticsPromise;
+};
 
 /**
  * RODADA 6 — FASE 8. Page view com contexto comum (rota, família, cidade,
  * bairro, serviço, intenção). Campos ausentes não são inventados.
  *
  * Nunca bloqueia navegação: qualquer falha é silenciosa (fail open).
+ * A telemetria é carregada após a hidratação para não competir com o
+ * conteúdo inicial nem inflar a long task do bundle principal.
  */
 export const PageViewTracker = ({ path }: { path?: string }) => {
   useEffect(() => {
-    try {
-      const ctx = buildRouteContext(path);
-      const touch = recordTouchpoint(ctx);
-      track(ANALYTICS_EVENTS.pageView, {
-        ...ctx,
-        journey_id: getJourneyId(),
-        first_touch_route: touch.first_touch?.landing_route,
-        last_touch_route: touch.last_touch.landing_route,
+    let active = true;
+
+    void loadPageAnalytics()
+      .then(([contract, funnel]) => {
+        if (!active) return;
+        try {
+          const ctx = contract.buildRouteContext(path);
+          const touch = contract.recordTouchpoint(ctx);
+          funnel.track(contract.ANALYTICS_EVENTS.pageView, {
+            ...ctx,
+            journey_id: contract.getJourneyId(),
+            first_touch_route: touch.first_touch?.landing_route,
+            last_touch_route: touch.last_touch.landing_route,
+          });
+          funnel.registrarPageView();
+        } catch {
+          /* analytics nunca impede a navegação */
+        }
+      })
+      .catch(() => {
+        /* telemetria é best-effort */
       });
-      registrarPageView();
-    } catch {
-      /* analytics nunca impede a navegação */
-    }
+
+    return () => {
+      active = false;
+    };
   }, [path]);
 
   // FASE 13 — abandono de triagem sem timer invasivo.
   useEffect(() => {
-    const onHide = () => {
-      try {
-        registrarAbandonoSePendente();
-      } catch {
-        /* fail open */
-      }
+    let active = true;
+    let onHide: (() => void) | null = null;
+
+    void loadPageAnalytics()
+      .then(([, funnel]) => {
+        if (!active) return;
+        onHide = () => {
+          try {
+            funnel.registrarAbandonoSePendente();
+          } catch {
+            /* fail open */
+          }
+        };
+        window.addEventListener("pagehide", onHide);
+      })
+      .catch(() => {
+        /* telemetria é best-effort */
+      });
+
+    return () => {
+      active = false;
+      if (onHide) window.removeEventListener("pagehide", onHide);
     };
-    window.addEventListener("pagehide", onHide);
-    return () => window.removeEventListener("pagehide", onHide);
   }, []);
 
   return null;

@@ -24,13 +24,9 @@ import {
 import { siteConfig, whatsappLink } from "@/lib/siteConfig";
 import { RealImageSection, type ImageKey } from "@/components/RealImageSection";
 import { imagensParaServico } from "@/lib/servicoImagens";
-import { trackPageView, trackCTAClick } from "@/lib/analytics";
-import { trackWaClick } from "@/lib/funnelAnalytics";
-import { readAttribution } from "@/lib/attribution";
 import { getSessionId } from "@/lib/funnelSubmission";
 import { copyCtaMobile } from "@/lib/experimentosCtaMobile";
 import { whatsappLinkComContexto } from "@/lib/waContextLink";
-import { getGeoContext } from "@/lib/geoContext";
 import {
   RespostaRapida,
   TabelaDiagnosticaBloco,
@@ -140,7 +136,17 @@ export const ServicoLandingLayout = ({ data }: { data: ServicoLandingData }) => 
   const contextoB2B = data.contextoEmpresarial ?? EMPRESARIAL_CONTEXTO_CARDS;
 
   useEffect(() => {
-    trackPageView(`/servicos/${data.path}`, data.serviceName);
+    let active = true;
+    void import("@/lib/analytics")
+      .then(({ trackPageView }) => {
+        if (active) trackPageView(`/servicos/${data.path}`, data.serviceName);
+      })
+      .catch(() => {
+        /* analytics é best-effort */
+      });
+    return () => {
+      active = false;
+    };
   }, [data.path, data.serviceName]);
 
   /**
@@ -150,19 +156,30 @@ export const ServicoLandingLayout = ({ data }: { data: ServicoLandingData }) => 
    * conversão por rota no dashboard.
    */
   const handleCtaAt = (position: string) => () => {
-    trackCTAClick("whatsapp", data.trackingKey);
-    const attr = readAttribution();
-    const geo = getGeoContext();
-    trackWaClick(`${data.trackingKey}_${position}`, {
-      servico: data.trackingKey,
-      route: `/servicos/${data.path}`,
-      cta_position: position,
-      variant: position === "mobile_sticky" ? ctaMobile.id : undefined,
-      cidade: geo?.city ?? null,
-      attribution_channel: attr.channel,
-      utm_source: attr.source,
-      landing_page: attr.landing_page,
-    });
+    void Promise.all([
+      import("@/lib/analytics"),
+      import("@/lib/funnelAnalytics"),
+      import("@/lib/attribution"),
+      import("@/lib/geoContext"),
+    ])
+      .then(([analytics, funnel, attribution, geoContext]) => {
+        analytics.trackCTAClick("whatsapp", data.trackingKey);
+        const attr = attribution.readAttribution();
+        const geo = geoContext.getGeoContext();
+        funnel.trackWaClick(`${data.trackingKey}_${position}`, {
+          servico: data.trackingKey,
+          route: `/servicos/${data.path}`,
+          cta_position: position,
+          variant: position === "mobile_sticky" ? ctaMobile.id : undefined,
+          cidade: geo?.city ?? null,
+          attribution_channel: attr.channel,
+          utm_source: attr.source,
+          landing_page: attr.landing_page,
+        });
+      })
+      .catch(() => {
+        /* tracking nunca bloqueia o clique */
+      });
   };
 
   /**
