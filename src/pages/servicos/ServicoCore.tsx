@@ -9,8 +9,6 @@ import { blocos4A, cta4A } from "@/lib/blocos4a";
 
 import { ClarezaVariacao } from "@/components/servico/ClarezaVariacao";
 import { FichaComercialServico } from "@/components/servico/FichaComercialServico";
-import { AtlasPonteServico } from "@/components/informatica/AtlasPonteServico";
-import { BibliotecaPonte } from "@/components/informatica/BibliotecaPonte";
 
 
 
@@ -24,6 +22,16 @@ import { siteConfig } from "@/lib/siteConfig";
 // Componentes específicos de verticais não devem entrar no chunk inicial de
 // formatação, redes, backup, SSD etc. Mantemos seu SSR pelo mesmo Suspense
 // já adotado nos blocos editoriais abaixo da primeira dobra.
+// As pontes do Atlas e da Biblioteca são conteúdo editorial abaixo da dobra.
+// Não devem importar glossário, ferramentas e atlas durante a inicialização
+// de toda página comercial. A renderização continua em Suspense com SSR.
+const AtlasPonteServico = lazy(() =>
+  import("@/components/informatica/AtlasPonteServico").then((m) => ({ default: m.AtlasPonteServico })),
+);
+const BibliotecaPonte = lazy(() =>
+  import("@/components/informatica/BibliotecaPonte").then((m) => ({ default: m.BibliotecaPonte })),
+);
+
 const Blocos3U = lazy(() =>
   import("@/components/servico/Blocos3U").then((m) => ({ default: m.Blocos3U })),
 );
@@ -261,8 +269,10 @@ export const ServicoCore = ({
   const ficha = (
     <>
       <FichaComercialServico slug={slug as string} nome={base.serviceName} />
-      <AtlasPonteServico slug={slug as string} />
-      <BibliotecaPonte chave={slug as string} />
+      <LazyBelowFold>
+        <AtlasPonteServico slug={slug as string} />
+        <BibliotecaPonte chave={slug as string} />
+      </LazyBelowFold>
     </>
   );
 
