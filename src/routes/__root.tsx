@@ -10,6 +10,7 @@ import {
 } from "@tanstack/react-router";
 import { QueryClientProvider, type QueryClient } from "@tanstack/react-query";
 import appCss from "../styles.css?url";
+import { brandConfig } from "@/lib/config";
 import { OS_PREHYDRATION_SCRIPT } from "@/lib/os/osPrehydration";
 
 import { AppErrorBoundary } from "@/components/AppErrorBoundary";
@@ -141,12 +142,20 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     ],
     links: [
       { rel: "stylesheet", href: appCss },
-      { rel: "preload", as: "image", href: "/logo.webp", type: "image/webp", fetchPriority: "high" },
+      { rel: "preload", as: "image", href: brandConfig.logoOnLight, type: "image/webp", fetchPriority: "high" },
       {
         rel: "preload",
         as: "font",
         type: "font/woff2",
         href: "/fonts/outfit-var.woff2",
+        crossOrigin: "anonymous",
+      },
+      // Fonte de leitura da página: a descoberta antecipada elimina o encadeamento CSS → Figtree.
+      {
+        rel: "preload",
+        as: "font",
+        type: "font/woff2",
+        href: "/fonts/figtree-var.woff2",
         crossOrigin: "anonymous",
       },
       { rel: "dns-prefetch", href: "https://www.googletagmanager.com" },
