@@ -4,22 +4,41 @@ import { VISUAL_3S_SERVICO_SLUGS } from "@/lib/visualEmpresarial3s";
 import { visual3T } from "@/lib/visualEmpresarial3t";
 import { blocos3T, cta3T } from "@/lib/blocos3t";
 import { blocos3U, cta3U } from "@/lib/blocos3u";
-import { Blocos3U } from "@/components/servico/Blocos3U";
+
 import { blocos4A, cta4A } from "@/lib/blocos4a";
-import { Blocos4A } from "@/components/servico/Blocos4A";
+
 import { ClarezaVariacao } from "@/components/servico/ClarezaVariacao";
 import { FichaComercialServico } from "@/components/servico/FichaComercialServico";
 import { AtlasPonteServico } from "@/components/informatica/AtlasPonteServico";
 import { BibliotecaPonte } from "@/components/informatica/BibliotecaPonte";
 
-import { MontagemWizard } from "@/components/servico/MontagemWizard";
-import { ProvasVisuaisMonitor } from "@/components/servico/ProvasVisuaisMonitor";
-import { WorkstationSection } from "@/components/servico/WorkstationSection";
+
+
+
 import type { ServicoLandingData } from "@/components/servico/ServicoLandingLayout";
 import { SERVICOS_LOCAL } from "@/lib/servicosLocal";
 import { visualDoServico } from "@/lib/servicoVisual3q";
 import { visualEmpresarial } from "@/lib/servicoVisual3r";
 import { siteConfig } from "@/lib/siteConfig";
+
+// Componentes específicos de verticais não devem entrar no chunk inicial de
+// formatação, redes, backup, SSD etc. Mantemos seu SSR pelo mesmo Suspense
+// já adotado nos blocos editoriais abaixo da primeira dobra.
+const Blocos3U = lazy(() =>
+  import("@/components/servico/Blocos3U").then((m) => ({ default: m.Blocos3U })),
+);
+const Blocos4A = lazy(() =>
+  import("@/components/servico/Blocos4A").then((m) => ({ default: m.Blocos4A })),
+);
+const MontagemWizard = lazy(() =>
+  import("@/components/servico/MontagemWizard").then((m) => ({ default: m.MontagemWizard })),
+);
+const ProvasVisuaisMonitor = lazy(() =>
+  import("@/components/servico/ProvasVisuaisMonitor").then((m) => ({ default: m.ProvasVisuaisMonitor })),
+);
+const WorkstationSection = lazy(() =>
+  import("@/components/servico/WorkstationSection").then((m) => ({ default: m.WorkstationSection })),
+);
 
 const Blocos3T = lazy(() =>
   import("@/components/servico/Blocos3T").then((m) => ({ default: m.Blocos3T })),
@@ -123,12 +142,14 @@ export const ServicoCore = ({
         <SuporteModalidadesSection />
       </LazyBelowFold>
     ) : slug === "montagem-de-pc" ? (
-      <>
+      <LazyBelowFold>
         <WorkstationSection />
         <MontagemWizard />
-      </>
+      </LazyBelowFold>
     ) : slug === "conserto-monitor" ? (
-      <ProvasVisuaisMonitor />
+      <LazyBelowFold>
+        <ProvasVisuaisMonitor />
+      </LazyBelowFold>
     ) : undefined;
 
   // Rodada 3P — piloto visual de serviço (manutenção de notebook).
@@ -252,13 +273,13 @@ export const ServicoCore = ({
     </>
   ) : cfg3u ? (
     <>
-      <Blocos3U path={path3u} />
+      <LazyBelowFold><Blocos3U path={path3u} /></LazyBelowFold>
       {extra}
       {ficha}
     </>
   ) : cfg4a ? (
     <>
-      <Blocos4A path={path3u} />
+      <LazyBelowFold><Blocos4A path={path3u} /></LazyBelowFold>
       {extra}
       {ficha}
     </>
