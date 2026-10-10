@@ -5,7 +5,6 @@ import {
   HeadContent,
   Outlet,
   Scripts,
-  useRouter,
   useRouterState,
 } from "@tanstack/react-router";
 import { QueryClientProvider, type QueryClient } from "@tanstack/react-query";
@@ -32,7 +31,6 @@ import { GlobalSmartSearch } from "@/components/GlobalSmartSearch";
 import { ScrollToTop } from "@/components/ScrollToTop";
 import ConsentBanner from "@/components/ConsentBanner";
 import { IdleEnhancements } from "@/components/IdleEnhancements";
-import { REDIRECT_MATRIX } from "@/lib/redirectMatrix";
 import { reportLovableError } from "@/lib/lovable-error-reporting";
 import { runClientInit } from "@/lib/clientInit";
 
@@ -70,13 +68,7 @@ document.addEventListener('click', function (e) {
 }, true);
 `;
 
-const LegacyNotFound = lazy(() => import("@/pages/NotFound"));
-
-const legacyNavigateRedirects: Record<string, string> = {
-  "/patrocinadores": "/anuncie",
-  "/admin": "/admin/funnel",
-  "/index": "/",
-};
+const LazyRootNotFound = lazy(() => import("@/components/RootNotFound"));
 
 const CONSENT_MODE_SCRIPT = `
 window.dataLayer = window.dataLayer || [];
@@ -255,24 +247,11 @@ function RootComponent() {
  * verdade do CDN e do gate check:index-health) e os aliases <Navigate> do
  * roteador antigo; só então renderiza o NotFound real.
  */
+// Só monta a matriz de 301/aliases e a página 404 quando não houver rota.
 function RootNotFound() {
-  const router = useRouter();
-  const pathname = useRouterState({ select: (s) => s.location.pathname });
-  const normalized = pathname.replace(/\/+$/, "") || "/";
-  const target =
-    legacyNavigateRedirects[normalized] ??
-    REDIRECT_MATRIX.find((r) => r.from === normalized)?.to;
-
-  useEffect(() => {
-    if (target) {
-      router.navigate({ to: target, replace: true });
-    }
-  }, [target, router]);
-
-  if (target) return null;
   return (
     <Suspense fallback={<RouteLoader />}>
-      <LegacyNotFound />
+      <LazyRootNotFound />
     </Suspense>
   );
 }
