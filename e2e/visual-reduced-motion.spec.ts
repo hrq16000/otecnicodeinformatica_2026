@@ -151,11 +151,12 @@ for (const rota of rotasComLoading) {
         expect(esqueletoAnimando, "esqueleto animando sob reduced-motion").toBe(false);
       }
 
-      // Aguarda os handlers em voo antes de encerrar a interceptação.
-      // Evita a corrida "Route is already handled" durante o atraso controlado.
-      await page.unrouteAll({ behavior: "wait" });
+      // O atraso artificial permanece ativo até as requisições terminarem.
+      // Remover a rota antes de networkidle podia liberar requisições pendentes
+      // enquanto o callback ainda tentava route.continue() (double-handle).
       await expect(page.locator("h1").first()).toBeVisible({ timeout: 20000 });
       await page.waitForLoadState("networkidle");
+      await page.unrouteAll({ behavior: "wait" });
       await page.waitForTimeout(400);
 
       const cls = await page.evaluate(() => (window as unknown as { __CLS__: number }).__CLS__);
