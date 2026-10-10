@@ -401,5 +401,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: lighthouse-reports
-          path: .lighthouseci
+          path: |
+            .lighthouseci
+            .lighthouseci-mobile
           if-no-files-found: ignore
