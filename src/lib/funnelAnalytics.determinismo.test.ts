@@ -65,7 +65,7 @@ describe("determinismo GA4 — wa_funnel_open", () => {
     expect(assinaturas.size, "valores estáveis divergiram entre disparos").toBe(1);
   });
 
-  it("não duplica a medição persistida dentro da janela de dedupe", () => {
+  it("não duplica a medição persistida dentro da janela de dedupe", async () => {
     trackFunnelOpen("float", false);
     vi.advanceTimersByTime(50);
     trackFunnelOpen("float", false);
@@ -73,6 +73,9 @@ describe("determinismo GA4 — wa_funnel_open", () => {
     trackFunnelOpen("float", false);
 
     expect(payloads().length, "GA4 deve registrar todo engajamento").toBe(3);
+    // O SDK agora é importado sob demanda. Aguarda a conclusão do import
+    // dinâmico, mantendo a asserção exata de UMA única persistência.
+    await vi.dynamicImportSettled();
     expect(insert, "click_events recebeu registro duplicado").toHaveBeenCalledTimes(1);
   });
 });
