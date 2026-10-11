@@ -5,10 +5,13 @@ import {
   HeadContent,
   Outlet,
   Scripts,
+  useRouter,
   useRouterState,
 } from "@tanstack/react-router";
 import { QueryClientProvider, type QueryClient } from "@tanstack/react-query";
-import appCss from "../styles.css?url";
+// CSS global passa a ser um recurso do manifesto TanStack Start.
+// O SSR consegue descobrir/precarregar a folha antes de router.load().
+import "../styles.css";
 import { brandConfig } from "@/lib/config";
 import { OS_PREHYDRATION_SCRIPT } from "@/lib/os/osPrehydration";
 
@@ -133,7 +136,6 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:image:type", content: "image/png" },
     ],
     links: [
-      { rel: "stylesheet", href: appCss },
       { rel: "preload", as: "image", href: brandConfig.logoOnLight, type: "image/webp", fetchPriority: "high" },
       {
         rel: "preload",
