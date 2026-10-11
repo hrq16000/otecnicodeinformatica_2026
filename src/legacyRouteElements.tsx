@@ -33,7 +33,21 @@ const comSinkDeJsonLd = (Pagina: React.ComponentType<any>) => {
 /** `React.lazy` de página: resolve o módulo e já o compõe com o sink único. */
 const lazyPagina = (
   carregar: () => Promise<{ default: React.ComponentType<any> }>,
-) => lazy(() => carregar().then((m) => ({ default: comSinkDeJsonLd(m.default) })));
+) => {
+  // O registro de centenas de rotas é importado ao iniciar a aplicação.
+  // Criar centenas de React.lazy antecipadamente aumenta a avaliação do
+  // bundle principal mesmo quando nenhuma dessas páginas será visitada.
+  // Adiamos somente a criação do tipo React.lazy: a resolução continua no
+  // mesmo segmento Suspense/SSR, com o sink JSON-LD dentro da página.
+  let PaginaLazy: ReturnType<typeof lazy> | undefined;
+  const PaginaSobDemanda = (props: any) => {
+    PaginaLazy ??= lazy(() =>
+      carregar().then((m) => ({ default: comSinkDeJsonLd(m.default) })),
+    );
+    return <PaginaLazy {...props} />;
+  };
+  return PaginaSobDemanda;
+};
 
 /** A home só entra no chunk inicial quando a rota ativa é /. O sink JSON-LD
  * permanece dentro do próprio módulo resolvido, inclusive em SSR frio. */
