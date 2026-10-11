@@ -78,8 +78,8 @@ const legacySrc = splitRegistry
 // Fail-closed: a fachada lazy deve declarar EXATAMENTE os mesmos destinos
 // do registro com as implementações reais. Divergências viram FAIL_BROKEN_MOUNT.
 if (splitRegistry) {
-  const implPaths = new Set([...legacySrc.matchAll(/"(\\/[^"\\n]*)":\\s*\\(\\)\\s*=>/g)].map((m) => normalizePath(m[1])));
-  const facadePaths = new Set([...facadeSrc.matchAll(/"(\\/[^"\\n]*)":\\s*true\\b/g)].map((m) => normalizePath(m[1])));
+  const implPaths = new Set([...legacySrc.matchAll(/"(\/[^"\n]*)":\s*\(\)\s*=>/g)].map((m) => normalizePath(m[1])));
+  const facadePaths = new Set([...facadeSrc.matchAll(/"(\/[^"\n]*)":\s*true\b/g)].map((m) => normalizePath(m[1])));
   for (const path of implPaths) {
     if (!facadePaths.has(path)) {
       failures.push({
