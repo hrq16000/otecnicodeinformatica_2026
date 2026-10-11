@@ -24,18 +24,13 @@ import { imagensParaServico } from "@/lib/servicoImagens";
 import { getSessionId } from "@/lib/funnelSubmission";
 import { copyCtaMobile } from "@/lib/experimentosCtaMobile";
 import { whatsappLinkComContexto } from "@/lib/waContextLink";
-import {
-  RespostaRapida,
-  TabelaDiagnosticaBloco,
-  BlocosTecnicos,
-  FontesPrimarias,
-} from "@/components/BlocosEnriquecimento";
-import { ENRIQUECIMENTO_SERVICOS } from "@/lib/enriquecimentoServicos";
-import { ENRIQUECIMENTO_4A, mesclarEnriquecimento } from "@/lib/enriquecimentoAtp4a";
 
 
 // Blocos abaixo da dobra não devem aumentar o bundle de primeira interação.
 // React SSR resolve as boundaries, mantendo rodapé, links e interligação no HTML.
+const LazyServicoEnriquecimento = lazy(() =>
+  import("@/components/servico/ServicoEnriquecimento").then((m) => ({ default: m.ServicoEnriquecimento })),
+);
 const LazyFooter = lazy(() =>
   import("@/components/Footer").then((m) => ({ default: m.Footer })),
 );
@@ -149,12 +144,6 @@ export const ServicoLandingLayout = ({ data }: { data: ServicoLandingData }) => 
     etapa: "triagem",
   });
   const isEmpresarial = data.variante === "empresarial";
-  /** Enriquecimento 2 — blocos técnicos opcionais desta página de serviço. */
-  const enriquecimento = mesclarEnriquecimento(
-    ENRIQUECIMENTO_SERVICOS[data.path],
-    ENRIQUECIMENTO_4A[`/servicos/${data.path}`],
-  );
-
   const heroB2B = data.heroEmpresarial ?? EMPRESARIAL_SERVICO_HERO;
   const contextoB2B = data.contextoEmpresarial ?? EMPRESARIAL_CONTEXTO_CARDS;
 
@@ -371,14 +360,10 @@ export const ServicoLandingLayout = ({ data }: { data: ServicoLandingData }) => 
 
       {data.caixasPosicao === "antes-incluso" && caixasBlock}
 
-      {/* Enriquecimento 2 — resposta direta antes do conteúdo comercial */}
-      {enriquecimento?.respostaRapida && (
-        <section className="bg-background pt-10">
-          <div className="container mx-auto max-w-3xl px-4">
-            <RespostaRapida texto={enriquecimento.respostaRapida} />
-          </div>
-        </section>
-      )}
+      {/* Resposta rápida: SSR íntegro com dados editoriais carregados por segmento. */}
+      <Suspense fallback={null}>
+        <LazyServicoEnriquecimento tipo="resposta" slug={data.path} />
+      </Suspense>
 
 
 
@@ -552,21 +537,10 @@ export const ServicoLandingLayout = ({ data }: { data: ServicoLandingData }) => 
 
 
 
-      {/* Enriquecimento 2 — tabela diagnóstica e blocos de decisão */}
-      {(enriquecimento?.tabelaDiagnostica || enriquecimento?.tabelaExtra || enriquecimento?.blocos) && (
-        <section className="bg-background pb-4">
-          <div className="container mx-auto max-w-3xl px-4">
-            {enriquecimento?.tabelaDiagnostica ? (
-              <TabelaDiagnosticaBloco tabela={enriquecimento.tabelaDiagnostica} />
-            ) : null}
-            <BlocosTecnicos blocos={enriquecimento?.blocos} />
-            {enriquecimento?.tabelaExtra ? (
-              <TabelaDiagnosticaBloco tabela={enriquecimento.tabelaExtra} id="tabela-decisao" />
-            ) : null}
-            <FontesPrimarias fontes={enriquecimento?.fontes} />
-          </div>
-        </section>
-      )}
+      {/* Diagnóstico enriquecido: mantém tabelas e fontes no HTML SSR. */}
+      <Suspense fallback={null}>
+        <LazyServicoEnriquecimento tipo="diagnostico" slug={data.path} />
+      </Suspense>
 
       {/* Rodadas 4D/4E — carregar JS somente nas owners declaradas. */}
       {B2B_SERVICE_OWNERS.has(`/servicos/${data.path}`) ? (
