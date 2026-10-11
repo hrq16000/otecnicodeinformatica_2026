@@ -66,7 +66,49 @@ for (const p of CURATED_PATHS) {
 //   b) indireção pelo mapa `src/legacyRouteElements.tsx` (`legacyRouteElements["/x"]`),
 //      que associa cada path a um elemento (às vezes template data-driven com props).
 const LEGACY_MAP_FILE = "src/legacyRouteElements.tsx";
-const legacySrc = existsSync(join(ROOT, LEGACY_MAP_FILE)) ? readFileSync(join(ROOT, LEGACY_MAP_FILE), "utf8") : "";
+const LEGACY_IMPL_FILE = "src/legacyRouteElements.impl.tsx";
+const facadeSrc = existsSync(join(ROOT, LEGACY_MAP_FILE))
+  ? readFileSync(join(ROOT, LEGACY_MAP_FILE), "utf8")
+  : "";
+const splitRegistry = existsSync(join(ROOT, LEGACY_IMPL_FILE));
+const legacySrc = splitRegistry
+  ? readFileSync(join(ROOT, LEGACY_IMPL_FILE), "utf8")
+  : facadeSrc;
+
+// Fail-closed: a fachada lazy deve declarar EXATAMENTE os mesmos destinos
+// do registro com as implementações reais. Divergências viram FAIL_BROKEN_MOUNT.
+if (splitRegistry) {
+  const implPaths = new Set([...legacySrc.matchAll(/"(\\/[^"\\n]*)":\\s*\\(\\)\\s*=>/g)].map((m) => normalizePath(m[1])));
+  const facadePaths = new Set([...facadeSrc.matchAll(/"(\\/[^"\\n]*)":\\s*true\\b/g)].map((m) => normalizePath(m[1])));
+  for (const path of implPaths) {
+    if (!facadePaths.has(path)) {
+      failures.push({
+        reason: "FAIL_BROKEN_MOUNT",
+        alvo: path,
+        motivo: "implementação existe no catálogo mas falta na fachada lazy",
+        esperado: `declarar ${path} em ${LEGACY_MAP_FILE}`,
+      });
+    }
+  }
+  for (const path of facadePaths) {
+    if (!implPaths.has(path)) {
+      failures.push({
+        reason: "FAIL_BROKEN_MOUNT",
+        alvo: path,
+        motivo: "fachada lazy declara rota sem implementação no catálogo",
+        esperado: `declarar ${path} em ${LEGACY_IMPL_FILE} ou remover da fachada`,
+      });
+    }
+  }
+  if (implPaths.size === 0 || facadePaths.size === 0) {
+    failures.push({
+      reason: "FAIL_BROKEN_MOUNT",
+      alvo: LEGACY_MAP_FILE,
+      motivo: "catálogo ou fachada lazy vazios/ilegíveis",
+      esperado: "dois registros completos e equivalentes",
+    });
+  }
+}
 
 /** símbolo → módulo (`const X = lazy(() => import("./pages/X"))` ou import estático). */
 const simboloParaModulo = new Map();
