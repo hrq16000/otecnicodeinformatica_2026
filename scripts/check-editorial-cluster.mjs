@@ -91,7 +91,7 @@ async function main() {
     try {
       const s = await read(f);
       for (const m of s.matchAll(/path=\{?["'`]([^"'`}]+)["'`]/g)) appPaths.add(m[1]);
-      for (const m of s.matchAll(/^\s{2}"(\/[^"]*)":\s*\(\)\s*=>/gm)) appPaths.add(m[1]);
+      // Registros legados originais e fachada lazy mantêm as mesmas chaves.\n      for (const m of s.matchAll(/^\s{2}"(\/[^"]*)":\s*(?:\(\)\s*=>|true\b)/gm)) appPaths.add(m[1]);
     } catch { /* opcional */ }
   }
 
