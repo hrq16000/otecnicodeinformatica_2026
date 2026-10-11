@@ -4,11 +4,8 @@ import { CheckCircle, ArrowRight } from "lucide-react";
 import { PageSEO } from "@/components/PageSEO";
 import { ServiceLandingSchema, type ServiceFaq } from "@/components/ServiceLandingSchema";
 import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
-import { InterlinkingBlock } from "@/components/InterlinkingBlock";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import { PoliticaAtendimentoBloco } from "@/components/PoliticaAtendimentoBloco";
-import { EditorialContentLinks } from "@/components/editorial/EditorialContentLinks";
 import { ExperienciaBadge } from "@/components/social-proof/ExperienciaBadge";
 import { PageTableOfContents } from "@/components/ui/PageTableOfContents";
 import { TrustStrip } from "@/components/TrustStrip";
@@ -36,6 +33,18 @@ import {
 import { ENRIQUECIMENTO_SERVICOS } from "@/lib/enriquecimentoServicos";
 import { ENRIQUECIMENTO_4A, mesclarEnriquecimento } from "@/lib/enriquecimentoAtp4a";
 
+
+// Blocos abaixo da dobra não devem aumentar o bundle de primeira interação.
+// React SSR resolve as boundaries, mantendo rodapé, links e interligação no HTML.
+const LazyFooter = lazy(() =>
+  import("@/components/Footer").then((m) => ({ default: m.Footer })),
+);
+const LazyInterlinkingBlock = lazy(() =>
+  import("@/components/InterlinkingBlock").then((m) => ({ default: m.InterlinkingBlock })),
+);
+const LazyEditorialContentLinks = lazy(() =>
+  import("@/components/editorial/EditorialContentLinks").then((m) => ({ default: m.EditorialContentLinks })),
+);
 
 const LazyBlocosB2b4d = lazy(() =>
   import("@/components/b2b/BlocosB2b4d").then((m) => ({ default: m.BlocosB2b4d })),
@@ -513,7 +522,9 @@ export const ServicoLandingLayout = ({ data }: { data: ServicoLandingData }) => 
 
       {data.extra}
 
-      <EditorialContentLinks path={`/servicos/${data.path}`} />
+      <Suspense fallback={null}>
+        <LazyEditorialContentLinks path={`/servicos/${data.path}`} />
+      </Suspense>
 
       {/* Conteúdo local aprofundado — reforço de SEO local em Curitiba */}
       {data.blocoLocal && data.blocoLocal.length > 0 && (
@@ -662,9 +673,13 @@ export const ServicoLandingLayout = ({ data }: { data: ServicoLandingData }) => 
 
 
 
-      <InterlinkingBlock />
+      <Suspense fallback={null}>
+        <LazyInterlinkingBlock />
+      </Suspense>
       </main>
-      <Footer />
+      <Suspense fallback={null}>
+        <LazyFooter />
+      </Suspense>
       {/* Conversão mobile: CTA fixo com a mensagem de funil do próprio serviço */}
       <MobileServicoFunnelBar
         href={waHrefMobile}
