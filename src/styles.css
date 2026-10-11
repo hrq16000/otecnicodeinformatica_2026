@@ -1998,3 +1998,12 @@ html[data-reduced-motion="true"] *::after {
   html { scroll-behavior: auto !important; }
 }
 html[data-reduced-motion="true"] { scroll-behavior: auto !important; }
+
+/* Foto decorativa do hero: requisitar somente em viewport desktop.
+   <img> oculto com display:none ainda era requisitado no Lighthouse mobile,
+   competindo com /fotos/bancada-tecnica.jpg (LCP). */
+@media (min-width: 1024px) {
+  .home-desktop-photo {
+    background-image: url("/fotos/estacao-trabalho.jpg");
+  }
+}
