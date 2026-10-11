@@ -14,7 +14,6 @@ import {
   routeTypeFromPath,
   viewportBucket,
 } from "./trackingTaxonomy";
-import { supabase } from "@/integrations/supabase/client";
 import { podeMedirEvento } from "./clickDedup";
 import { gtagReportConversion, ADS_SEND_TO } from "./analytics";
 import {
@@ -469,13 +468,22 @@ function persistClickEvent(eventType: string, location: string, ctx: { modalidad
     ...row
   } = payload as Record<string, unknown> & { device?: string; viewport_width?: number };
 
-  // Fire-and-forget; nunca bloqueia o clique.
-  void supabase.from("click_events").insert(row as never).then(({ error }) => {
-    if (error && (window as unknown as { __funnelDebug?: boolean }).__funnelDebug) {
-      // eslint-disable-next-line no-console
-      console.debug("[click_events] insert failed", error.message);
-    }
-  });
+  // Só importa o cliente de persistência quando há um evento para gravar.
+  // O módulo de telemetria é usado na hidratação de todas as rotas; mantê-lo
+  // fora do grafo inicial evita avaliar o SDK antes da primeira persistência.
+  // Fire-and-forget: o envio e eventuais falhas nunca bloqueiam a navegação.
+  void import("@/integrations/supabase/client")
+    .then(({ supabase }) =>
+      supabase.from("click_events").insert(row as never).then(({ error }) => {
+        if (error && (window as unknown as { __funnelDebug?: boolean }).__funnelDebug) {
+          // eslint-disable-next-line no-console
+          console.debug("[click_events] insert failed", error.message);
+        }
+      }),
+    )
+    .catch(() => {
+      // Telemetria é best-effort, inclusive quando o SDK não carrega.
+    });
 }
 
 /**
