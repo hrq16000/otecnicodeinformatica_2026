@@ -70,9 +70,22 @@ export const HeroTriagem = () => {
         aria-hidden="true"
       />
 
-      {/* Foto decorativa apenas desktop: CSS media query evita 173 KB no mobile.
-          Preserva aparência desktop, sem disputar banda com foto LCP da home. */}
-      <div className="home-desktop-photo pointer-events-none absolute inset-y-0 right-0 hidden w-[46%] bg-cover bg-center lg:block" aria-hidden="true">
+      {/* A fonte desktop do <picture> é requisitada só em telas >= 1024px.
+          Mantemos <img> (inclusive para a máscara visual E2E e proporções estáveis).
+          O fallback mobile é um pixel inline, não uma requisição de 173 KB. */}
+      <div className="pointer-events-none absolute inset-y-0 right-0 hidden w-[46%] lg:block" aria-hidden="true">
+        <picture className="block h-full w-full">
+          <source media="(min-width: 1024px)" srcSet="/fotos/estacao-trabalho.jpg" />
+          <img
+            src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+            alt=""
+            aria-hidden="true"
+            width={1024}
+            height={765}
+            decoding="async"
+            className="h-full w-full object-cover object-center"
+          />
+        </picture>
         <div className="absolute inset-0 bg-gradient-to-r from-background via-background/70 to-background/10" />
         <div className="absolute inset-0 bg-gradient-to-b from-background/20 via-transparent to-background/70" />
       </div>
