@@ -37,10 +37,7 @@ const canonicalRoutes = new Set();
 const redirectRoutes = new Set();
 const redirectsBlock = (router.match(/legacyNavigateRedirects[^{]*\{([\s\S]*?)\n\};/) || [])[1] ?? "";
 for (const m of redirectsBlock.matchAll(/"([^"]+)":\s*"/g)) redirectRoutes.add(m[1]);
-// Aceita tanto o mapa original ("/x": () => <Componente />) quanto
-// a fachada lazy ("/x": true); a paridade entre ambos é fiscalizada por
-// check:orphan-pages, sem relaxar a proteção contra URL sem componente.
-for (const m of router.matchAll(/^\s{2}"(\/[^"]*)":\s*(?:\(\)\s*=>|true\b)/gm)) {
+for (const m of router.matchAll(/^\s{2}"(\/[^"]*)":\s*\(\)\s*=>/gm)) {
   if (!redirectRoutes.has(m[1])) canonicalRoutes.add(m[1]);
 }
 notes.push(`rotas canônicas: ${canonicalRoutes.size} · redirects: ${redirectRoutes.size}`);
