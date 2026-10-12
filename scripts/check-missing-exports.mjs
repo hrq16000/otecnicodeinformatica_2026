@@ -109,7 +109,8 @@ for (const file of files) {
   for (const sym of ROUTER_SYMBOLS) {
     if (imported.has(sym) || declared.has(sym)) continue;
     const usedAsJsx = new RegExp(`<${sym}[\\s/>]`).test(code);
-    const usedAsCall = new RegExp(`\\b${sym}\\s*\\(`).test(code);
+    // Apenas chamada livre: Route.useParams() é um método válido do TanStack.
+    const usedAsCall = new RegExp(`(?<![\\w$.])\\b${sym}\\s*\\(`).test(code);
     if (usedAsJsx || usedAsCall) {
       errors.push(`${rel}: usa "${sym}" sem importar de react-router-dom`);
     }
