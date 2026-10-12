@@ -29,7 +29,7 @@
     "check:telemetry-transparency": "node scripts/check-telemetry-transparency.mjs",
     "routes:generate": "tsr generate",
     "check:route-tree": "node scripts/check-route-tree.mjs",
-    "prebuild": "node scripts/generate-home-hero-variants.mjs && node scripts/copy-security-doc.mjs && node scripts/check-security-regressions.mjs && node scripts/check-route-tree.mjs && node scripts/check-interlinks-quality.mjs && node scripts/report-interlinks-qa.mjs && node scripts/check-orphan-trend.mjs --require && node scripts/generate-build-version.mjs && node scripts/sitemap-dynamic.mjs && node scripts/report-editorial-lotes.mjs && node scripts/report-autoridade-seo.mjs && node scripts/generate-robots.mjs && node scripts/generate-llms.mjs && node scripts/audit-seo-metadata.mjs && bun scripts/check-biblioteca-tecnica.ts && node scripts/check-national-authority-map.mjs && node scripts/check-image-variants.mjs",
+    "prebuild": "npm run routes:generate && npm run check:bairros-dynamic && node scripts/generate-home-hero-variants.mjs && node scripts/copy-security-doc.mjs && node scripts/check-security-regressions.mjs && node scripts/check-route-tree.mjs && node scripts/check-interlinks-quality.mjs && node scripts/report-interlinks-qa.mjs && node scripts/check-orphan-trend.mjs --require && node scripts/generate-build-version.mjs && node scripts/sitemap-dynamic.mjs && node scripts/report-editorial-lotes.mjs && node scripts/report-autoridade-seo.mjs && node scripts/generate-robots.mjs && node scripts/generate-llms.mjs && node scripts/audit-seo-metadata.mjs && bun scripts/check-biblioteca-tecnica.ts && node scripts/check-national-authority-map.mjs && node scripts/check-image-variants.mjs",
     "build": "vite build",
     "build:dev": "vite build --mode development",
     "check:seo": "bun scripts/check-seo-basics.ts index.html",
@@ -329,10 +329,10 @@
     "gates:local": "node scripts/with-ssr-server.mjs npm run check:local-all",
     "check:local-all": "npm run check:local-template-policy && npm run check:bairro-index-readiness && npm run check:local-index-policy && npm run check:local-doorway && npm run check:programmatic-similarity && npm run check:local-neighborhood-intent && npm run check:local-service-intent && npm run check:local-interlinking && npm run check:local-seo-quality && npm run check:local-intro-similarity && npm run check:local-schema && npm run check:bairros-galeria && npm run check:local-regression",
     "test": "vitest run",
-    "test:unit": "vitest run --project unit --project scripts",
+    "test:unit": "npm run routes:generate && vitest run --project unit --project scripts",
     "test:unit:watch": "vitest --project unit --project scripts",
     "unit": "npm run test:unit",
-    "test:integration": "vitest run --project integration",
+    "test:integration": "npm run routes:generate && vitest run --project integration",
     "test:list": "node scripts/report-test-inventory.mjs",
     "test:node-scripts": "node --test scripts/lib/bulk-redirects.test.mjs",
     "test:all": "npm run test:unit && npm run test:integration && npm run test:e2e",
@@ -395,7 +395,8 @@
     "deploy:check:strict": "node scripts/with-ssr-server.mjs node scripts/run-pipeline.mjs deploy:check --with-optional",
     "report:gsc-snapshot": "node scripts/report-gsc-snapshot.mjs",
     "report:gsc-baseline": "node scripts/report-gsc-baseline.mjs",
-    "check:bairro-index-readiness": "node scripts/check-bairro-index-readiness.mjs"
+    "check:bairro-index-readiness": "node scripts/check-bairro-index-readiness.mjs",
+    "check:bairros-dynamic": "node scripts/check-bairros-dynamic.mjs"
   },
   "dependencies": {
     "@ai-sdk/openai": "^4.0.72",
