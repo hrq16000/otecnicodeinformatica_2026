@@ -78,6 +78,22 @@ export default defineConfig({
     },
     build: {
       chunkSizeWarningLimit: 800,
+      // Experimento TBT isolado: separa apenas o runtime estável do roteador.
+      // Não particionar routeTree.gen.ts: a tentativa anterior gerou chunk
+      // >1 MB e foi revertida. SEO/SSR e os limites LHCI permanecem intactos.
+      rollupOptions: {
+        output: {
+          manualChunks(id: string) {
+            const path = id.replaceAll("\\", "/");
+            if (
+              path.includes("/node_modules/@tanstack/react-router/") ||
+              path.includes("/node_modules/@tanstack/router-core/")
+            ) {
+              return "vendor-router";
+            }
+          },
+        },
+      },
     },
   },
 });
