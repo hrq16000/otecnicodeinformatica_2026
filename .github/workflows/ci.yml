@@ -300,13 +300,44 @@ jobs:
           pattern: playwright-blob-*
           merge-multiple: true
           path: all-blob-reports
+      - name: Preparar blobs para consolidação
+        id: blobs
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p merged-report playwright-blob-flat
+
+          count=0
+          while IFS= read -r -d '' report; do
+            relative="${report#all-blob-reports/}"
+            flat_name="${relative//\//--}"
+            ln "$report" "playwright-blob-flat/$flat_name"
+            count=$((count + 1))
+          done < <(find all-blob-reports -type f -name '*.zip' -print0)
+
+          if [ "$count" -gt 0 ]; then
+            echo "available=true" >> "$GITHUB_OUTPUT"
+            echo "Blobs Playwright preparados: $count"
+            exit 0
+          fi
+
+          echo "available=false" >> "$GITHUB_OUTPUT"
+          cat > merged-report/inventario-falhas.md <<'EOF'
+          ## Matriz E2E observacional
+
+          Nenhum blob foi produzido. Os shards foram pulados ou encerrados antes da execução; consulte o gate bloqueante anterior.
+          EOF
+          echo "::warning::Nenhum blob E2E disponível; relatório observacional registrado sem mascarar o gate bloqueante anterior."
       - name: Merge into HTML
-        run: npx playwright merge-reports --reporter html ./all-blob-reports
+        if: steps.blobs.outputs.available == 'true'
+        run: npx playwright merge-reports --reporter html ./playwright-blob-flat
         env:
           PLAYWRIGHT_HTML_OUTPUT_DIR: merged-report/html
       - name: Merge into JSON
-        run: mkdir -p merged-report && npx playwright merge-reports --reporter json ./all-blob-reports > merged-report/results.json
+        if: steps.blobs.outputs.available == 'true'
+        run: npx playwright merge-reports --reporter json ./playwright-blob-flat > merged-report/results.json
       - name: Consolidar, deduplicar e classificar falhas
+        if: steps.blobs.outputs.available == 'true'
         run: node scripts/consolidate-e2e-failures.mjs merged-report/results.json --out merged-report/inventario-falhas.md
       - name: Resumo por navegador
         if: always()
