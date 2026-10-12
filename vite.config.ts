@@ -78,21 +78,6 @@ export default defineConfig({
     },
     build: {
       chunkSizeWarningLimit: 800,
-      // A árvore gerada contém centenas de registros. Separá-la do bootstrap
-      // limita o trabalho concentrado no arquivo index-*.js, sem alterar
-      // rotas, prerender, SSR ou as regras de indexação.
-      rollupOptions: {
-        output: {
-          manualChunks(id: string) {
-            const normalized = id.replaceAll("\\", "/");
-            if (normalized.endsWith("/src/routeTree.gen.ts")) return "route-tree";
-            if (
-              normalized.includes("/node_modules/@tanstack/react-router/") ||
-              normalized.includes("/node_modules/@tanstack/router-core/")
-            ) return "vendor-router";
-          },
-        },
-      },
     },
   },
 });

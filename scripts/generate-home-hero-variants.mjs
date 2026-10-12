@@ -11,7 +11,7 @@ import sharp from "sharp";
 
 const source = path.resolve("public/fotos/bancada-tecnica.jpg");
 const outputDir = path.dirname(source);
-const variants = [480, 768, 1280];
+const variants = [480, 768, 1024];
 const data = await readFile(source);
 await mkdir(outputDir, { recursive: true });
 const meta = await sharp(data).metadata();
