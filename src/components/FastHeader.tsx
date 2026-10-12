@@ -303,9 +303,9 @@ export const FastHeader = () => {
             src={brandConfig.logoOnLight}
             width="304"
             height="68"
-            decoding="async"
-            // Preserva logotipo imediato sem prioridade artificial sobre o hero/LCP.
-            fetchPriority="auto"
+            decoding="sync"
+            // @ts-ignore - fetchpriority is a valid HTML attribute
+            fetchpriority="high"
             // A redução no scroll usa transform (composição), não altura:
             // animar `height` aqui reflui a barra inteira e gerava CLS.
             className="h-11 w-auto origin-left object-scale-down transition-transform duration-200 will-change-transform sm:h-12 md:h-14 [html[data-scrolled='1']_&]:scale-[0.82]"

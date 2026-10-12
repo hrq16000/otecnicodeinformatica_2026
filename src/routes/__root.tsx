@@ -12,6 +12,7 @@ import { QueryClientProvider, type QueryClient } from "@tanstack/react-query";
 // CSS global passa a ser um recurso do manifesto TanStack Start.
 // O SSR consegue descobrir/precarregar a folha antes de router.load().
 import "../styles.css";
+import { brandConfig } from "@/lib/config";
 import { OS_PREHYDRATION_SCRIPT } from "@/lib/os/osPrehydration";
 
 import { AppErrorBoundary } from "@/components/AppErrorBoundary";
@@ -135,7 +136,8 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:image:type", content: "image/png" },
     ],
     links: [
-      // Logotipo já descoberto no HTML SSR do header: não competir com o LCP.
+      // Restaura a prioridade da imagem acima da dobra, conforme baseline TBT medido.
+      { rel: "preload", as: "image", href: brandConfig.logoOnLight, type: "image/webp", fetchPriority: "high" },
       {
         rel: "preload",
         as: "font",
