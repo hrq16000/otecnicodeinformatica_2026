@@ -3,8 +3,18 @@ import { createClient } from '@supabase/supabase-js';
 import type { Database } from './types';
 import { brokeredPreviewStorage } from './previewAuthStorage';
 
-const SUPABASE_URL = import.meta.env.VITE_SUPABASE_URL;
-const SUPABASE_PUBLISHABLE_KEY = import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY;
+const CONFIGURED_SUPABASE_URL = import.meta.env.VITE_SUPABASE_URL?.trim();
+const CONFIGURED_SUPABASE_PUBLISHABLE_KEY =
+  import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY?.trim();
+
+const SUPABASE_CONFIGURED = Boolean(
+  CONFIGURED_SUPABASE_URL && CONFIGURED_SUPABASE_PUBLISHABLE_KEY,
+);
+
+// Valores inertes permitem importar/listar/testar o frontend sem qualquer chave.
+// O fetch abaixo bloqueia rede quando a integração não está configurada.
+const SUPABASE_URL = CONFIGURED_SUPABASE_URL || 'http://127.0.0.1:54321';
+const SUPABASE_PUBLISHABLE_KEY = CONFIGURED_SUPABASE_PUBLISHABLE_KEY || 'disabled';
 
 
 function isNewSupabaseApiKey(value: string): boolean {
@@ -12,6 +22,14 @@ function isNewSupabaseApiKey(value: string): boolean {
 }
 
 function createSupabaseFetch(supabaseKey: string): typeof fetch {
+  if (!SUPABASE_CONFIGURED) {
+    return async () =>
+      new Response(JSON.stringify({ message: 'External data service is not configured.' }), {
+        status: 503,
+        headers: { 'content-type': 'application/json' },
+      });
+  }
+
   return (input, init) => {
     const headers = new Headers(
       typeof Request !== 'undefined' && input instanceof Request ? input.headers : undefined,

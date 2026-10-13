@@ -9,7 +9,7 @@ import { test, expect, devices } from "@playwright/test";
  *  - "Saiba mais" leva à política de privacidade (âncora da telemetria).
  */
 
-const CONSENT_KEY = "lgpd_consent_v2";
+const CONSENT_STORAGE_ID = "lgpd_consent_v2";
 
 type Update = Record<string, string>;
 
@@ -43,7 +43,7 @@ const readStored = (page: import("@playwright/test").Page) =>
   page.evaluate((key) => {
     const raw = localStorage.getItem(key);
     return raw ? (JSON.parse(raw) as { analytics: boolean; ads: boolean }) : null;
-  }, CONSENT_KEY);
+  }, CONSENT_STORAGE_ID);
 
 const VIEWPORTS = [
   { nome: "desktop", viewport: { width: 1280, height: 900 } },

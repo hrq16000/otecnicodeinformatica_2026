@@ -35,7 +35,7 @@ export const BAIRROS_LOTE_2: Record<string, BairroLocalData> = {
       "Quando existem arquivos importantes, backup é tratado antes de reinstalação ou intervenção em armazenamento. Se houver ruído, erro de leitura ou falha intermitente de HD/SSD, insistir no uso pode reduzir a chance de recuperação. Nesse caso, a prioridade deixa de ser desempenho e passa a ser preservação dos dados.",
     ],
     logisticaLocal: [
-      "O endereço completo é confirmado antes do atendimento. Como referências públicas da região, a Rua da Cidadania Santa Felicidade, a Rua Santa Bertila Boscardin e o Terminal Santa Felicidade ajudam a localizar o ponto, mas não representam filial ou oficina.",
+      "O endereço completo é confirmado antes do atendimento. Como referências públicas da região, a Rua da Cidadania Santa Felicidade, a Rua Santa Bertila Boscardin e o Terminal Santa Felicidade ajudam a localizar o ponto geográfico; o atendimento não ocorre nessas estruturas públicas.",
       "Configuração, navegador, contas, parte dos erros do Windows e algumas falhas de impressão podem começar por acesso remoto. Problemas que dependem da cobertura da rede, cabeamento, posição do roteador ou periféricos no ambiente exigem visita. Desmontagem, falha física e testes prolongados seguem para bancada.",
       "Não há promessa fixa de chegada associada ao bairro. Modalidade, agenda, deslocamento e prazo são definidos após a triagem conforme endereço, tipo de falha, complexidade e eventual necessidade de peça.",
     ],
@@ -618,7 +618,7 @@ export const BAIRROS_LOTE_2: Record<string, BairroLocalData> = {
     whatsappMessage:
       "Olá! Preciso de atendimento de informática no Guatupê, em São José dos Pinhais. Pode me orientar?",
     introducaoLocal: [
-      "O Guatupê possui atendimento descentralizado da Prefeitura na Subprefeitura Guatupê, localizada na Praça da Juventude. Essa referência pública serve para localizar a cobertura e não representam oficina, filial ou ponto físico da marca no endereço.",
+      "O Guatupê possui atendimento descentralizado da Prefeitura na Subprefeitura Guatupê, localizada na Praça da Juventude. Essa referência pública serve apenas para localizar a área; o atendimento não ocorre na estrutura municipal.",
       "Nesta página, a prioridade técnica é separar falha do computador, da rede e dos periféricos. Uma máquina de trabalho que não imprime, um notebook que perde Wi‑Fi e um Windows que trava podem interromper a rotina pelo mesmo motivo aparente, mas exigem testes diferentes.",
     ],
     contextoLocal: [

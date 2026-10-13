@@ -1,5 +1,5 @@
 /// <reference types="vite/client" />
-import { Suspense, useEffect, useMemo, type ReactNode } from "react";
+import { lazy, Suspense, useEffect, useMemo, type ReactNode } from "react";
 import {
   createRootRouteWithContext,
   HeadContent,
@@ -9,7 +9,10 @@ import {
   useRouterState,
 } from "@tanstack/react-router";
 import { QueryClientProvider, type QueryClient } from "@tanstack/react-query";
-import appCss from "../styles.css?url";
+// CSS global passa a ser um recurso do manifesto TanStack Start.
+// O SSR consegue descobrir/precarregar a folha antes de router.load().
+import "../styles.css";
+import { brandConfig } from "@/lib/config";
 import { OS_PREHYDRATION_SCRIPT } from "@/lib/os/osPrehydration";
 
 import { AppErrorBoundary } from "@/components/AppErrorBoundary";
@@ -25,17 +28,12 @@ import { PageViewTracker } from "@/components/PageViewTracker";
 import { RouteTransition } from "@/components/motion/RouteTransition";
 import { RouteLoader } from "@/components/RouteLoader";
 import { RouteProgress } from "@/components/RouteProgress";
-import { WhatsAppFunnel } from "@/components/WhatsAppFunnel";
+import { DeferredWhatsAppFunnel } from "@/components/DeferredWhatsAppFunnel";
 import { WhatsAppFloat } from "@/components/WhatsAppFloat";
 import { GlobalSmartSearch } from "@/components/GlobalSmartSearch";
 import { ScrollToTop } from "@/components/ScrollToTop";
 import ConsentBanner from "@/components/ConsentBanner";
-import {
-  IdleEnhancements,
-  LegacyNotFound,
-  legacyNavigateRedirects,
-} from "@/legacyRouteElements";
-import { REDIRECT_MATRIX } from "@/lib/redirectMatrix";
+import { IdleEnhancements } from "@/components/IdleEnhancements";
 import { reportLovableError } from "@/lib/lovable-error-reporting";
 import { runClientInit } from "@/lib/clientInit";
 
@@ -50,12 +48,30 @@ import { runClientInit } from "@/lib/clientInit";
 const WA_PREHYDRATION_SCRIPT = `
 window.__waFunnelQueue = window.__waFunnelQueue || [];
 document.addEventListener('click', function (e) {
-  if (document.documentElement.dataset.hydrated === '1') return;
-  var t = e.target && e.target.closest ? e.target.closest('[data-wa-funnel="required"]') : null;
-  if (!t) return;
-  window.__waFunnelQueue.push({ location: t.getAttribute('data-cta-location') || 'float' });
+  if (document.documentElement.dataset.waFunnelReady === '1') return;
+  var target = e.target && e.target.closest ? e.target.closest('a,button,[data-wa-funnel="required"]') : null;
+  if (!target) return;
+  var anchor = target.closest ? target.closest('a[href]') : null;
+  var href = anchor && anchor.getAttribute ? anchor.getAttribute('href') : '';
+  var lowerHref = (href || '').toLowerCase();
+  var isWa = lowerHref.indexOf('https://wa.me/') === 0 || lowerHref.indexOf('https://api.whatsapp.com/') === 0;
+  var required = target.closest ? target.closest('[data-wa-funnel="required"]') : null;
+  if (!isWa && !required) return;
+
+  e.preventDefault();
+  var locNode = target.closest ? target.closest('[data-cta-location]') : null;
+  var location = (locNode && locNode.getAttribute('data-cta-location')) || 'cta';
+  var message = '';
+  try {
+    if (href) message = new URL(href, window.location.origin).searchParams.get('text') || '';
+  } catch (_) {}
+
+  window.__waFunnelQueue.push({ location: location, message: message || undefined });
+  window.dispatchEvent(new CustomEvent('wa-funnel:load'));
 }, true);
 `;
+
+const LazyRootNotFound = lazy(() => import("@/components/RootNotFound"));
 
 const CONSENT_MODE_SCRIPT = `
 window.dataLayer = window.dataLayer || [];
@@ -120,17 +136,8 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:image:type", content: "image/png" },
     ],
     links: [
-      { rel: "stylesheet", href: appCss },
-      { rel: "preload", as: "image", href: "/logo.webp", type: "image/webp", fetchPriority: "high" },
-      { rel: "dns-prefetch", href: "https://www.googletagmanager.com" },
-      { rel: "dns-prefetch", href: "https://www.google-analytics.com" },
-      {
-        rel: "preload",
-        as: "font",
-        type: "font/woff2",
-        href: "/fonts/figtree-var.woff2",
-        crossOrigin: "anonymous",
-      },
+      // Restaura a prioridade da imagem acima da dobra, conforme baseline TBT medido.
+      { rel: "preload", as: "image", href: brandConfig.logoOnLight, type: "image/webp", fetchPriority: "high" },
       {
         rel: "preload",
         as: "font",
@@ -138,6 +145,16 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         href: "/fonts/outfit-var.woff2",
         crossOrigin: "anonymous",
       },
+      // Fonte de leitura da página: a descoberta antecipada elimina o encadeamento CSS → Figtree.
+      {
+        rel: "preload",
+        as: "font",
+        type: "font/woff2",
+        href: "/fonts/figtree-var.woff2",
+        crossOrigin: "anonymous",
+      },
+      { rel: "dns-prefetch", href: "https://www.googletagmanager.com" },
+      { rel: "dns-prefetch", href: "https://www.google-analytics.com" },
       { rel: "icon", href: "/favicon.png", type: "image/png" },
       { rel: "apple-touch-icon", sizes: "192x192", href: "/apple-touch-icon.png" },
       { rel: "manifest", href: "/manifest.json", crossOrigin: "use-credentials" },
@@ -153,11 +170,6 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { children: OS_PREHYDRATION_SCRIPT },
 
 
-      {
-        src: "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3762170279587706",
-        async: true,
-        crossOrigin: "anonymous",
-      },
     ],
   }),
   shellComponent: RootShell,
@@ -222,7 +234,7 @@ function RootComponent() {
           </JsonLdCollectorContext.Provider>
 
 
-          <WhatsAppFunnel />
+          <DeferredWhatsAppFunnel />
           <GlobalSmartSearch />
           <WhatsAppFloat />
           <ConsentBanner />
@@ -238,24 +250,11 @@ function RootComponent() {
  * verdade do CDN e do gate check:index-health) e os aliases <Navigate> do
  * roteador antigo; só então renderiza o NotFound real.
  */
+// Só monta a matriz de 301/aliases e a página 404 quando não houver rota.
 function RootNotFound() {
-  const router = useRouter();
-  const pathname = useRouterState({ select: (s) => s.location.pathname });
-  const normalized = pathname.replace(/\/+$/, "") || "/";
-  const target =
-    legacyNavigateRedirects[normalized] ??
-    REDIRECT_MATRIX.find((r) => r.from === normalized)?.to;
-
-  useEffect(() => {
-    if (target) {
-      router.navigate({ to: target, replace: true });
-    }
-  }, [target, router]);
-
-  if (target) return null;
   return (
     <Suspense fallback={<RouteLoader />}>
-      <LegacyNotFound />
+      <LazyRootNotFound />
     </Suspense>
   );
 }

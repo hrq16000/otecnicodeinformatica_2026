@@ -55,11 +55,11 @@ export const REDIRECT_MATRIX: RedirectRule[] = [
   { from: "/suporte-empresas", to: "/servicos/suporte-tecnico-empresarial", motivo: "url-antiga" },
 
   // ── Procedimentos migrados para /procedimentos/* ────────────
-  { from: "/reflow-bga-curitiba", to: "/procedimentos/reflow-bga-curitiba", motivo: "url-antiga" },
-  { from: "/reballing-bga-curitiba", to: "/procedimentos/reballing-bga-curitiba", motivo: "url-antiga" },
-  { from: "/troca-chip-bga-curitiba", to: "/procedimentos/troca-chip-bga-curitiba", motivo: "url-antiga" },
-  { from: "/microsoldagem-celular-curitiba", to: "/procedimentos/microsoldagem-celular-curitiba", motivo: "url-antiga" },
-  { from: "/recapacitacao-placa-eletronica-curitiba", to: "/procedimentos/recapacitacao-placa-eletronica-curitiba", motivo: "url-antiga" },
+  { from: "/reflow-bga-curitiba", to: "/procedimentos-placa", motivo: "url-antiga" },
+  { from: "/reballing-bga-curitiba", to: "/procedimentos-placa", motivo: "url-antiga" },
+  { from: "/troca-chip-bga-curitiba", to: "/procedimentos-placa", motivo: "url-antiga" },
+  { from: "/microsoldagem-celular-curitiba", to: "/procedimentos-placa", motivo: "url-antiga" },
+  { from: "/recapacitacao-placa-eletronica-curitiba", to: "/procedimentos-placa", motivo: "url-antiga" },
 
   // ── Institucionais ──────────────────────────────────────────
   { from: "/privacidade", to: "/politica-de-privacidade", motivo: "alias-institucional" },

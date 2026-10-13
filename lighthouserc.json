@@ -15,8 +15,8 @@
         "http://localhost:4173/bairros/agua-verde",
         "http://localhost:4173/tecnico-informatica-sao-jose-pinhais"
       ],
-      "startServerCommand": "bun run preview -- --port 4173",
-      "startServerReadyPattern": "Local:",
+      "startServerCommand": "npx --yes wrangler dev --config dist/server/wrangler.json --port 4173",
+      "startServerReadyPattern": "Ready on|localhost:4173|127.0.0.1:4173",
       "numberOfRuns": 3,
       "settings": {
         "preset": "desktop",

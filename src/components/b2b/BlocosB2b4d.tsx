@@ -1,11 +1,10 @@
-import { useState } from "react";
+import { lazy, Suspense, useState } from "react";
 import { Building2, MessageCircle } from "lucide-react";
 import {
   RespostaRapida,
   TabelaDiagnosticaBloco,
   BlocosTecnicos,
 } from "@/components/BlocosEnriquecimento";
-import ReviewsGrid from "@/components/ReviewsGrid";
 import {
   CIDADES_4D,
   type Cidade4d,
@@ -13,7 +12,8 @@ import {
   faq4d,
   mensagemWhatsapp4d,
 } from "@/lib/enriquecimento4dB2b";
-import { trackWaClick } from "@/lib/funnelAnalytics";
+
+const ReviewsGrid = lazy(() => import("@/components/ReviewsGrid"));
 
 /**
  * Rodada 4D — blocos de autoridade B2B em owners empresariais existentes.
@@ -36,12 +36,18 @@ export const BlocosB2b4d = ({ path }: { path: string }) => {
 
   const abrirFunil = () => {
     const message = mensagemWhatsapp4d(path, cidade) ?? undefined;
-    trackWaClick("b2b_4d", {
-      route: path,
-      cta_position: "bloco_b2b_4d",
-      segmento: "empresa",
-      cidade,
-    });
+    void import("@/lib/funnelAnalytics")
+      .then(({ trackWaClick }) =>
+        trackWaClick("b2b_4d", {
+          route: path,
+          cta_position: "bloco_b2b_4d",
+          segmento: "empresa",
+          cidade,
+        }),
+      )
+      .catch(() => {
+        /* tracking nunca bloqueia o funil */
+      });
     if (typeof window !== "undefined") {
       window.dispatchEvent(
         new CustomEvent("wa-funnel:open", {
@@ -129,13 +135,15 @@ export const BlocosB2b4d = ({ path }: { path: string }) => {
       </div>
 
       <div className="mt-10">
-        <ReviewsGrid
-          filter={{ city: cidade }}
-          limit={3}
-          showAverage
-          title="Atendimentos verificados"
-          whatsappCta={false}
-        />
+        <Suspense fallback={null}>
+          <ReviewsGrid
+            filter={{ city: cidade }}
+            limit={3}
+            showAverage
+            title="Atendimentos verificados"
+            whatsappCta={false}
+          />
+        </Suspense>
       </div>
     </section>
   );

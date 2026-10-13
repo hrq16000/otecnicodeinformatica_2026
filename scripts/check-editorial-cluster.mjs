@@ -76,9 +76,11 @@ async function main() {
 
   // Acervo real de slugs.
   const base = await read("src/data/blogPostsContent.tsx");
+  const supplemental = await read("src/data/blogSupplementalPosts.tsx");
   const prog = await read("src/data/blogProgrammaticPosts.tsx");
   const slugs = new Set([
     ...[...base.matchAll(/^ {2}"([a-z0-9-]+)":\s*\{/gm)].map((m) => m[1]),
+    ...[...supplemental.matchAll(/^ {2}"([a-z0-9-]+)":\s*\{/gm)].map((m) => m[1]),
     ...[...prog.matchAll(/slug:\s*"([a-z0-9-]+)"/g)].map((m) => m[1]),
   ]);
 

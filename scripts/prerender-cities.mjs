@@ -402,14 +402,38 @@ function countWords(block) {
 
 export async function getBlogPosts(rootDir = ".") {
   const posts = [];
-  const seen = new Set();
+  const bySlug = new Map();
   const duplicates = [];
+  const overrides = [];
+
+  function addPost(post, sourceSeen, source, { allowBaseOverride = false } = {}) {
+    if (sourceSeen.has(post.slug)) {
+      duplicates.push(`${post.slug} (${source})`);
+      return;
+    }
+    sourceSeen.add(post.slug);
+
+    const existingIndex = bySlug.get(post.slug);
+    if (existingIndex !== undefined) {
+      if (allowBaseOverride && posts[existingIndex].origin === "manual") {
+        posts[existingIndex] = post;
+        overrides.push(post.slug);
+        return;
+      }
+      duplicates.push(post.slug);
+      return;
+    }
+
+    bySlug.set(post.slug, posts.length);
+    posts.push(post);
+  }
 
   // --- Base manual (blogPostsContentBase) ---
   const basePath = path.join(rootDir, "src/data/blogPostsContent.tsx");
   const baseSrc = await fs.readFile(basePath, "utf8");
   const entryRe = /^  "([a-z0-9-]+)":\s*\{/gm;
   const matches = [...baseSrc.matchAll(entryRe)];
+  const baseSeen = new Set();
   for (let i = 0; i < matches.length; i++) {
     const slug = matches[i][1];
     const start = matches[i].index;
@@ -421,9 +445,7 @@ export async function getBlogPosts(rootDir = ".") {
     const category = extractField(block, "category");
     const readTime = extractField(block, "readTime");
     if (!title) continue;
-    if (seen.has(slug)) { duplicates.push(slug); continue; }
-    seen.add(slug);
-    posts.push({
+    addPost({
       slug, title, excerpt: excerpt ?? "", date: date ?? HOWTO_DEFAULT_DATE,
       category: category ?? "", origin: "manual",
       readTime: readTime ?? "10 min",
@@ -431,7 +453,7 @@ export async function getBlogPosts(rootDir = ".") {
       headings: extractHeadings(block),
       sections: extractSections(block),
       wordCount: countWords(block),
-    });
+    }, baseSeen, "blogPostsContent.tsx");
   }
 
 
@@ -440,6 +462,7 @@ export async function getBlogPosts(rootDir = ".") {
   const supplementalSrc = await fs.readFile(supplementalPath, "utf8");
   const supplementalEntryRe = /^  "([a-z0-9-]+)":\s*\{/gm;
   const supplementalMatches = [...supplementalSrc.matchAll(supplementalEntryRe)];
+  const supplementalSeen = new Set();
   for (let i = 0; i < supplementalMatches.length; i++) {
     const slug = supplementalMatches[i][1];
     const start = supplementalMatches[i].index;
@@ -451,9 +474,7 @@ export async function getBlogPosts(rootDir = ".") {
     const category = extractField(block, "category");
     const readTime = extractField(block, "readTime");
     if (!title) continue;
-    if (seen.has(slug)) { duplicates.push(slug); continue; }
-    seen.add(slug);
-    posts.push({
+    addPost({
       slug, title, excerpt: excerpt ?? "", date: date ?? HOWTO_DEFAULT_DATE,
       category: category ?? "", origin: "supplemental",
       readTime: readTime ?? "10 min",
@@ -461,7 +482,7 @@ export async function getBlogPosts(rootDir = ".") {
       headings: extractHeadings(block),
       sections: extractSections(block),
       wordCount: countWords(block),
-    });
+    }, supplementalSeen, "blogSupplementalPosts.tsx", { allowBaseOverride: true });
   }
 
 
@@ -472,6 +493,7 @@ export async function getBlogPosts(rootDir = ".") {
   const defsSrc = defsIdx >= 0 ? progSrc.slice(defsIdx) : progSrc;
   const slugRe = /slug:\s*"([a-z0-9-]+)"/g;
   const slugMatches = [...defsSrc.matchAll(slugRe)];
+  const programmaticSeen = new Set();
   for (let i = 0; i < slugMatches.length; i++) {
     const slug = slugMatches[i][1];
     const start = slugMatches[i].index;
@@ -482,16 +504,14 @@ export async function getBlogPosts(rootDir = ".") {
     const date = extractField(block, "date");
     const category = extractField(block, "category");
     if (!title) continue;
-    if (seen.has(slug)) { duplicates.push(slug); continue; }
-    seen.add(slug);
-    posts.push({
+    addPost({
       slug, title, excerpt: excerpt ?? "", date: date ?? HOWTO_DEFAULT_DATE,
       category: category ?? "", origin: "programmatic",
       bodySignals: (block.match(/\b(?:lead|sections|whenToCall)\s*:/g) || []).length,
-    });
+    }, programmaticSeen, "blogProgrammaticPosts.tsx");
   }
 
-  return { posts, duplicates };
+  return { posts, duplicates, overrides };
 }
 
 // Corpo estático (dentro do <noscript> do #root) de um artigo aprovado.

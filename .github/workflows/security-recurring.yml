@@ -31,8 +31,8 @@ jobs:
           bun-version: latest
       - uses: actions/setup-node@v4
         with:
-          node-version: 20
-      - run: bun install --frozen-lockfile
+          node-version: "22.12.0"
+      - run: npm ci --no-audit --no-fund
 
       # 1) Varredura estática dos internal_id corrigidos (fail-fast).
       - name: Gate de regressão de segurança
@@ -40,14 +40,14 @@ jobs:
 
       # 2) Testes automatizados do fluxo de código de verificação (hash-only).
       - name: Testes de segurança (unit)
-        run: bunx vitest run --project unit src/__tests__/security-os-codigo.test.ts
+        run: npx vitest run --project unit src/__tests__/security-os-codigo.test.ts
 
       # 3) Teste de integração: função definer administrativa inacessível ao usuário.
       - name: Teste de privilégio (integração)
         env:
           VITE_SUPABASE_URL: ${{ secrets.VITE_SUPABASE_URL }}
           VITE_SUPABASE_PUBLISHABLE_KEY: ${{ secrets.VITE_SUPABASE_PUBLISHABLE_KEY }}
-        run: bunx vitest run --project integration src/__tests__/security-definer-privileges.integration.test.ts
+        run: npx vitest run --project integration src/__tests__/security-definer-privileges.integration.test.ts
 
       # 4) Baseline de findings persistidos (reviews, og_validation_status etc.).
       - name: Baseline de findings
@@ -56,13 +56,17 @@ jobs:
           VITE_SUPABASE_PUBLISHABLE_KEY: ${{ secrets.VITE_SUPABASE_PUBLISHABLE_KEY }}
         run: node scripts/check-security-findings-baseline.mjs
 
-      # 5) Segredos/credenciais vazados no diff.
+      # 5) Segredos/credenciais presentes no snapshot rastreado atual.
       - name: Gitleaks secret scan
         run: |
+          set -euo pipefail
+          rm -rf /tmp/gitleaks-tree
+          mkdir -p /tmp/gitleaks-tree
+          git archive HEAD | tar -x -C /tmp/gitleaks-tree
           timeout 8m docker run --rm \
-            -v "${{ github.workspace }}:/repo" \
+            -v /tmp/gitleaks-tree:/repo:ro \
             ghcr.io/gitleaks/gitleaks:v8.30.1 \
-            git /repo --redact --no-banner --verbose
+            dir /repo --config /repo/.gitleaks.toml --redact --no-banner --verbose
 
       # 6) Notificação (Slack/e-mail) quando qualquer etapa acima falhar.
       - name: Notificar falha do pipeline de segurança

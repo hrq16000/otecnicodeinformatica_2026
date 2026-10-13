@@ -10,7 +10,7 @@ import { test, expect, type Page } from "@playwright/test";
  * funil uma única vez e exige exatamente um disparo de cada evento.
  */
 
-const CONSENT_KEY = "lgpd_consent_v2";
+const CONSENT_STORAGE_ID = "lgpd_consent_v2";
 
 type Cenario = { nome: string; consentimento: null | { analytics: boolean; ads: boolean } };
 
@@ -44,7 +44,7 @@ for (const cenario of CENARIOS) {
     if (cenario.consentimento) {
       await page.addInitScript(
         ([key, valor]) => localStorage.setItem(key as string, valor as string),
-        [CONSENT_KEY, JSON.stringify(cenario.consentimento)] as const,
+        [CONSENT_STORAGE_ID, JSON.stringify(cenario.consentimento)] as const,
       );
     }
     await context.route("https://wa.me/**", (route) => route.fulfill({ status: 204, body: "" }));

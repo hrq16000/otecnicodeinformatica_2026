@@ -2,6 +2,7 @@ import "./lib/error-capture";
 
 import { consumeLastCapturedError } from "./lib/error-capture";
 import { renderErrorPage } from "./lib/error-page";
+import { resolveRedirect } from "./lib/redirectMatrix";
 
 type ServerEntry = {
   fetch: (request: Request, env: unknown, ctx: unknown) => Promise<Response> | Response;
@@ -46,6 +47,15 @@ function isH3SwallowedErrorBody(body: string): boolean {
 
 const CANONICAL_HOST = "otecnicodeinformatica.com.br";
 
+export function canonicalPathRedirect(request: Request): Response | null {
+  const url = new URL(request.url);
+  const target = resolveRedirect(url.pathname);
+  if (!target) return null;
+
+  url.pathname = target;
+  return Response.redirect(url.toString(), 301);
+}
+
 export function canonicalHostRedirect(request: Request): Response | null {
   const url = new URL(request.url);
   const isCanonicalDomain =
@@ -68,6 +78,10 @@ export default {
     try {
       const canonicalRedirect = canonicalHostRedirect(request);
       if (canonicalRedirect) return canonicalRedirect;
+
+      const pathRedirect = canonicalPathRedirect(request);
+      if (pathRedirect) return pathRedirect;
+
       const handler = await getServerEntry();
       const response = await handler.fetch(request, env, ctx);
       return await normalizeCatastrophicSsrResponse(response);

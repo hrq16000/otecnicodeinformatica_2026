@@ -7,8 +7,8 @@
 // sem cookies e sem dados pessoais — descrita na Política de Cookies.
 // ─────────────────────────────────────────────────────────────
 
-export const CONSENT_KEY_V2 = "lgpd_consent_v2";
-export const CONSENT_KEY_LEGACY = "lgpd_consent_v1";
+export const CONSENT_STORAGE_ID_V2 = "lgpd_consent_v2";
+export const CONSENT_STORAGE_ID_LEGACY = "lgpd_consent_v1";
 export const CONSENT_VERSION = "2026-08-08";
 export const CONSENT_EVENT = "lgpd:consent-change";
 
@@ -28,7 +28,7 @@ export const ADSENSE_CONFIGURED = /^ca-pub-\d+$/.test(ADSENSE_CLIENT);
 export function readConsent(): ConsentRecord | null {
   if (typeof window === "undefined") return null;
   try {
-    const raw = localStorage.getItem(CONSENT_KEY_V2);
+    const raw = localStorage.getItem(CONSENT_STORAGE_ID_V2);
     if (raw) {
       const parsed = JSON.parse(raw) as Partial<ConsentRecord>;
       if (typeof parsed.analytics === "boolean" && typeof parsed.ads === "boolean") {
@@ -41,7 +41,7 @@ export function readConsent(): ConsentRecord | null {
       }
     }
     // Migração do formato antigo (tudo ou nada).
-    const legacy = localStorage.getItem(CONSENT_KEY_LEGACY);
+    const legacy = localStorage.getItem(CONSENT_STORAGE_ID_LEGACY);
     if (legacy === "granted" || legacy === "denied") {
       const granted = legacy === "granted";
       return { analytics: granted, ads: granted, ts: "", version: "1" };
@@ -113,9 +113,9 @@ export function saveConsent(
   };
   void recordConsent(record, source);
   try {
-    localStorage.setItem(CONSENT_KEY_V2, JSON.stringify(record));
+    localStorage.setItem(CONSENT_STORAGE_ID_V2, JSON.stringify(record));
     // Mantém compatibilidade com o bootstrap inline do index.html.
-    localStorage.setItem(CONSENT_KEY_LEGACY, choice.ads && choice.analytics ? "granted" : "denied");
+    localStorage.setItem(CONSENT_STORAGE_ID_LEGACY, choice.ads && choice.analytics ? "granted" : "denied");
   } catch {
     /* ignora storage bloqueado */
   }
@@ -130,8 +130,8 @@ export function saveConsent(
 /** Reabre o banner para o visitante trocar de ideia. */
 export function resetConsent() {
   try {
-    localStorage.removeItem(CONSENT_KEY_V2);
-    localStorage.removeItem(CONSENT_KEY_LEGACY);
+    localStorage.removeItem(CONSENT_STORAGE_ID_V2);
+    localStorage.removeItem(CONSENT_STORAGE_ID_LEGACY);
   } catch {
     /* ignora */
   }

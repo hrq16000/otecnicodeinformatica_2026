@@ -18,7 +18,7 @@ vi.mock("@/integrations/supabase/client", () => ({
   supabase: { from: () => ({ insert }) },
 }));
 
-import { trackFunnelOpen } from "./funnelAnalytics";
+import { trackFunnelOpen, registrarPageView } from "./funnelAnalytics";
 
 type Call = [string, string, Record<string, unknown>];
 
@@ -65,7 +65,7 @@ describe("determinismo GA4 — wa_funnel_open", () => {
     expect(assinaturas.size, "valores estáveis divergiram entre disparos").toBe(1);
   });
 
-  it("não duplica a medição persistida dentro da janela de dedupe", () => {
+  it("não duplica a medição persistida dentro da janela de dedupe", async () => {
     trackFunnelOpen("float", false);
     vi.advanceTimersByTime(50);
     trackFunnelOpen("float", false);
@@ -73,6 +73,33 @@ describe("determinismo GA4 — wa_funnel_open", () => {
     trackFunnelOpen("float", false);
 
     expect(payloads().length, "GA4 deve registrar todo engajamento").toBe(3);
+    // O SDK agora é importado sob demanda. Aguarda a conclusão do import
+    // dinâmico, mantendo a asserção exata de UMA única persistência.
+    await vi.dynamicImportSettled();
     expect(insert, "click_events recebeu registro duplicado").toHaveBeenCalledTimes(1);
+  });
+  it("não carrega SDK de persistência do page_view durante a primeira dobra", async () => {
+    registrarPageView();
+    await vi.dynamicImportSettled();
+    expect(insert, "page_view só deve persistir após a janela inicial").not.toHaveBeenCalled();
+
+    vi.advanceTimersByTime(7_900);
+    await vi.dynamicImportSettled();
+    expect(insert).not.toHaveBeenCalled();
+
+    vi.advanceTimersByTime(100);
+    await vi.dynamicImportSettled();
+    expect(insert).toHaveBeenCalledTimes(1);
+  });
+
+  it("antecipa a persistência de page_view ao interagir, sem duplicar", async () => {
+    registrarPageView();
+    window.dispatchEvent(new Event("pointerdown"));
+    await vi.dynamicImportSettled();
+    expect(insert).toHaveBeenCalledTimes(1);
+
+    vi.advanceTimersByTime(8_000);
+    await vi.dynamicImportSettled();
+    expect(insert).toHaveBeenCalledTimes(1);
   });
 });

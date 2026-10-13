@@ -70,17 +70,22 @@ export const HeroTriagem = () => {
         aria-hidden="true"
       />
 
+      {/* A fonte desktop do <picture> é requisitada só em telas >= 1024px.
+          Mantemos <img> (inclusive para a máscara visual E2E e proporções estáveis).
+          O fallback mobile é um pixel inline, não uma requisição de 173 KB. */}
       <div className="pointer-events-none absolute inset-y-0 right-0 hidden w-[46%] lg:block" aria-hidden="true">
-        <img
-          src="/fotos/estacao-trabalho.jpg"
-          alt=""
-          aria-hidden="true"
-          width={1024}
-          height={765}
-          fetchPriority="high"
-          decoding="async"
-          className="h-full w-full object-cover object-center"
-        />
+        <picture className="block h-full w-full">
+          <source media="(min-width: 1024px)" srcSet="/fotos/estacao-trabalho.jpg" />
+          <img
+            src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+            alt=""
+            aria-hidden="true"
+            width={1024}
+            height={765}
+            decoding="async"
+            className="h-full w-full object-cover object-center"
+          />
+        </picture>
         <div className="absolute inset-0 bg-gradient-to-r from-background via-background/70 to-background/10" />
         <div className="absolute inset-0 bg-gradient-to-b from-background/20 via-transparent to-background/70" />
       </div>
@@ -102,7 +107,13 @@ export const HeroTriagem = () => {
             empresas. Conte o que aconteceu com suas palavras — a parte técnica fica com a gente.
           </p>
           <figure className="relative mt-6 overflow-hidden rounded-2xl border border-border shadow-[var(--shadow-lg)] lg:hidden">
-            <img
+            <picture>
+              <source
+                type="image/avif"
+                srcSet="/fotos/bancada-tecnica-480.avif 480w, /fotos/bancada-tecnica-768.avif 768w, /fotos/bancada-tecnica-1024.avif 1024w"
+                sizes="(max-width: 1023px) calc(100vw - 34px), 768px"
+              />
+              <img
               src="/fotos/bancada-tecnica.jpg"
               alt="Bancada de diagnóstico com notebook, SSD e ferramentas de precisão"
               width={1024}
@@ -112,6 +123,7 @@ export const HeroTriagem = () => {
               decoding="async"
               className="aspect-[16/9] w-full object-cover object-[65%_center]"
             />
+            </picture>
             <figcaption className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent px-4 pb-3 pt-10 text-sm font-medium text-white">
               Diagnóstico técnico começa pela causa.
             </figcaption>

@@ -2,7 +2,7 @@ import { test, expect, devices } from "@playwright/test";
 
 const BASE = process.env.E2E_BASE_URL || "http://localhost:8080";
 
-test.use({ ...devices["iPhone 13"] });
+test.use({ ...devices["Pixel 7"] });
 
 test.describe("Como Funciona + modais — CTAs e CLS", () => {
   test("CTAs WhatsApp permanecem clicáveis e sem links tel:", async ({ page }) => {
@@ -22,7 +22,7 @@ test.describe("Como Funciona + modais — CTAs e CLS", () => {
       }).observe({ type: "layout-shift", buffered: true });
     });
 
-    await page.goto(BASE + "/", { waitUntil: "domcontentloaded" });
+    await page.goto(BASE + "/como-funciona", { waitUntil: "domcontentloaded" });
 
     // Hidratação básica do hero antes do fallback
     await expect(page.getByRole("heading", { level: 1 })).toBeVisible();
@@ -31,36 +31,20 @@ test.describe("Como Funciona + modais — CTAs e CLS", () => {
     const telCount = await page.locator('a[href^="tel:"]').count();
     expect(telCount).toBe(0);
 
-    // Abre o modal "Prefiro agendar"
-    await page.getByRole("button", { name: /prefiro agendar/i }).click();
-    const modal = page.getByRole("dialog");
-    await expect(modal).toBeVisible();
+    // CTAs canônicos da própria página /como-funciona.
+    const heroCta = page.getByRole("link", { name: /chamar no whatsapp/i }).first();
+    await expect(heroCta).toBeVisible();
+    await expect(heroCta).toBeEnabled();
+    expect(await heroCta.getAttribute("href")).toContain("wa.me");
 
-    // CTA WhatsApp dentro do modal continua clicável
-    const modalCta = modal.getByRole("link", { name: /continuar no whatsapp/i });
-    await expect(modalCta).toBeVisible();
-    await expect(modalCta).toBeEnabled();
-    expect(await modalCta.getAttribute("href")).toContain("wa.me");
+    const stepCta = page.getByRole("link", { name: /iniciar atendimento agora/i }).first();
+    await stepCta.scrollIntoViewIfNeeded();
+    await expect(stepCta).toBeVisible();
+    await expect(stepCta).toBeEnabled();
+    expect(await stepCta.getAttribute("href")).toContain("wa.me");
 
-    // Fecha modal
-    await modal.getByRole("button", { name: /fechar/i }).click();
-    await expect(modal).toBeHidden();
-
-    // Scroll até "Como funciona" e verifica CTAs por etapa
-    await page.evaluate(() => {
-      const el = document.getElementById("como-funciona-fluxo");
-      el?.scrollIntoView({ behavior: "instant" as ScrollBehavior, block: "start" });
-    });
-    for (let i = 1; i <= 4; i++) {
-      const cta = page.getByTestId(`como-funciona-cta-${i}`);
-      await expect(cta).toBeVisible();
-      await expect(cta).toBeEnabled();
-      const href = await cta.getAttribute("href");
-      expect(href).toContain("wa.me");
-    }
-
-    // Sticky WhatsApp mobile permanece visível e clicável
-    const sticky = page.locator('[data-cta-location="hero_sticky_mobile"]');
+    // Botão global de WhatsApp permanece visível e clicável.
+    const sticky = page.getByTestId("whatsapp-float");
     await expect(sticky).toBeVisible();
     await expect(sticky).toBeEnabled();
 

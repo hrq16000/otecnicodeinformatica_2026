@@ -43,6 +43,11 @@ export default defineConfig({
     // Redirect TanStack Start's bundled server entry to src/server.ts (our SSR error wrapper).
     // nitro/vite builds from this
     server: { entry: "server" },
+    // O routeTree tem centenas de rotas. Sem code splitting, todas entram no
+    // grafo inicial e aumentam parse/eval mesmo quando a visita usa uma rota só.
+    router: {
+      autoCodeSplitting: true,
+    },
     // O prerender integrado do TanStack Start precisa de ajustes para o preset
     // cloudflare-module. Usamos scripts/prerender-blog.mjs para renderizar as
     // rotas /blog/:slug aprovadas manualmente após o build.
@@ -73,6 +78,22 @@ export default defineConfig({
     },
     build: {
       chunkSizeWarningLimit: 800,
+      // Experimento TBT isolado: separa apenas o runtime estável do roteador.
+      // Não particionar routeTree.gen.ts: a tentativa anterior gerou chunk
+      // >1 MB e foi revertida. SEO/SSR e os limites LHCI permanecem intactos.
+      rollupOptions: {
+        output: {
+          manualChunks(id: string) {
+            const path = id.replaceAll("\\", "/");
+            if (
+              path.includes("/node_modules/@tanstack/react-router/") ||
+              path.includes("/node_modules/@tanstack/router-core/")
+            ) {
+              return "vendor-router";
+            }
+          },
+        },
+      },
     },
   },
 });

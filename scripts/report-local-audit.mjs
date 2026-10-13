@@ -13,7 +13,7 @@
  *   node scripts/report-local-audit.mjs --snapshot # grava o snapshot atual como "antes"
  */
 import { readFileSync, writeFileSync, existsSync, mkdirSync } from "node:fs";
-import { WHATSAPP_NUMBER } from "./lib/site-env.mjs";
+import { BASE_URL, WHATSAPP_NUMBER } from "./lib/site-env.mjs";
 import { join } from "node:path";
 import { execFileSync } from "node:child_process";
 

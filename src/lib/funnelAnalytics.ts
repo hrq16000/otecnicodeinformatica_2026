@@ -14,7 +14,6 @@ import {
   routeTypeFromPath,
   viewportBucket,
 } from "./trackingTaxonomy";
-import { supabase } from "@/integrations/supabase/client";
 import { podeMedirEvento } from "./clickDedup";
 import { gtagReportConversion, ADS_SEND_TO } from "./analytics";
 import {
@@ -469,13 +468,52 @@ function persistClickEvent(eventType: string, location: string, ctx: { modalidad
     ...row
   } = payload as Record<string, unknown> & { device?: string; viewport_width?: number };
 
-  // Fire-and-forget; nunca bloqueia o clique.
-  void supabase.from("click_events").insert(row as never).then(({ error }) => {
-    if (error && (window as unknown as { __funnelDebug?: boolean }).__funnelDebug) {
-      // eslint-disable-next-line no-console
-      console.debug("[click_events] insert failed", error.message);
-    }
-  });
+  // A gravação de page_view disparava a avaliação do SDK Supabase imediatamente
+  // após a hidratação de TODAS as rotas. O GA4 e a atribuição continuam
+  // imediatos no PageViewTracker; somente a persistência best-effort do banco
+  // aguarda a janela inicial de renderização.
+  // Eventos de clique/conversão/funil permanecem sem atraso.
+  const save = () => {
+    void import("@/integrations/supabase/client")
+      .then(({ supabase }) =>
+        supabase.from("click_events").insert(row as never).then(({ error }) => {
+          if (error && (window as unknown as { __funnelDebug?: boolean }).__funnelDebug) {
+            // eslint-disable-next-line no-console
+            console.debug("[click_events] insert failed", error.message);
+          }
+        }),
+      )
+      .catch(() => {
+        // Telemetria best-effort nunca bloqueia navegação nem o funil.
+      });
+  };
+  if (eventType !== "page_view") {
+    save();
+    return;
+  }
+
+  // Em sessões com intenção explícita ou saída antecipada, tenta persistir
+  // prontamente; o clique/lead nunca depende dessa operação.
+  let completed = false;
+  let timer: ReturnType<typeof setTimeout>;
+  const onVisibility = () => {
+    if (document.visibilityState === "hidden") flush();
+  };
+  const flush = () => {
+    if (completed) return;
+    completed = true;
+    clearTimeout(timer);
+    window.removeEventListener("pointerdown", flush);
+    window.removeEventListener("keydown", flush);
+    window.removeEventListener("pagehide", flush);
+    document.removeEventListener("visibilitychange", onVisibility);
+    save();
+  };
+  timer = window.setTimeout(flush, 8_000);
+  window.addEventListener("pointerdown", flush, { once: true, passive: true });
+  window.addEventListener("keydown", flush, { once: true });
+  window.addEventListener("pagehide", flush, { once: true });
+  document.addEventListener("visibilitychange", onVisibility);
 }
 
 /**

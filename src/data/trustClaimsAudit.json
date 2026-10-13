@@ -1,32 +1,32 @@
 {
-  "geradoEm": "2026-09-28",
-  "total": 279,
+  "geradoEm": "2026-10-05",
+  "total": 272,
   "porClasse": {
-    "COMPROVADA": 111,
+    "COMPROVADA": 109,
     "INSTITUCIONAL": 21,
-    "CONDICIONAL": 147,
+    "CONDICIONAL": 142,
     "REMOVIDA": 0,
     "PENDENTE": 0
   },
-  "urlsCuradas": 348,
+  "urlsCuradas": 403,
   "familias": [
     {
       "id": "garantia",
       "titulo": "Garantia",
       "risco": "Prazo ou abrangência divergente da política comercial central.",
-      "total": 111
+      "total": 109
     },
     {
       "id": "prazo-prometido",
       "titulo": "Prazo de atendimento prometido",
       "risco": "Prazo fixo sem controle de agenda, trânsito e peça.",
-      "total": 91
+      "total": 87
     },
     {
       "id": "todos-os-portes",
       "titulo": "Cobertura empresarial irrestrita",
       "risco": "“Todos os portes / todas as marcas / todos os modelos” não é sustentável.",
-      "total": 28
+      "total": 27
     },
     {
       "id": "identificacao-tecnico",
@@ -596,18 +596,6 @@
     },
     {
       "path": "/bairros/parque-industrial-frg",
-      "curada": false,
-      "total": 1,
-      "porClasse": {
-        "COMPROVADA": 0,
-        "INSTITUCIONAL": 0,
-        "CONDICIONAL": 1,
-        "REMOVIDA": 0,
-        "PENDENTE": 0
-      }
-    },
-    {
-      "path": "/bairros/sao-dimas-colombo",
       "curada": false,
       "total": 1,
       "porClasse": {
@@ -2071,6 +2059,18 @@
       }
     },
     {
+      "path": "/bairros/sao-marcos-campo-largo",
+      "curada": true,
+      "total": 0,
+      "porClasse": {
+        "COMPROVADA": 0,
+        "INSTITUCIONAL": 0,
+        "CONDICIONAL": 0,
+        "REMOVIDA": 0,
+        "PENDENTE": 0
+      }
+    },
+    {
       "path": "/bairros/sao-miguel-araucaria",
       "curada": true,
       "total": 0,
@@ -2108,6 +2108,18 @@
     },
     {
       "path": "/bairros/thomaz-coelho",
+      "curada": true,
+      "total": 0,
+      "porClasse": {
+        "COMPROVADA": 0,
+        "INSTITUCIONAL": 0,
+        "CONDICIONAL": 0,
+        "REMOVIDA": 0,
+        "PENDENTE": 0
+      }
+    },
+    {
+      "path": "/bairros/timbotuva-cl",
       "curada": true,
       "total": 0,
       "porClasse": {
@@ -3535,6 +3547,18 @@
       }
     },
     {
+      "path": "/conserto-impressora-curitiba",
+      "curada": true,
+      "total": 0,
+      "porClasse": {
+        "COMPROVADA": 0,
+        "INSTITUCIONAL": 0,
+        "CONDICIONAL": 0,
+        "REMOVIDA": 0,
+        "PENDENTE": 0
+      }
+    },
+    {
       "path": "/contato",
       "curada": true,
       "total": 0,
@@ -4435,7 +4459,67 @@
       }
     },
     {
+      "path": "/servicos/atendimento-remoto/araucaria",
+      "curada": true,
+      "total": 0,
+      "porClasse": {
+        "COMPROVADA": 0,
+        "INSTITUCIONAL": 0,
+        "CONDICIONAL": 0,
+        "REMOVIDA": 0,
+        "PENDENTE": 0
+      }
+    },
+    {
+      "path": "/servicos/atendimento-remoto/campo-largo",
+      "curada": true,
+      "total": 0,
+      "porClasse": {
+        "COMPROVADA": 0,
+        "INSTITUCIONAL": 0,
+        "CONDICIONAL": 0,
+        "REMOVIDA": 0,
+        "PENDENTE": 0
+      }
+    },
+    {
+      "path": "/servicos/atendimento-remoto/curitiba",
+      "curada": true,
+      "total": 0,
+      "porClasse": {
+        "COMPROVADA": 0,
+        "INSTITUCIONAL": 0,
+        "CONDICIONAL": 0,
+        "REMOVIDA": 0,
+        "PENDENTE": 0
+      }
+    },
+    {
+      "path": "/servicos/atendimento-remoto/sao-jose-dos-pinhais",
+      "curada": true,
+      "total": 0,
+      "porClasse": {
+        "COMPROVADA": 0,
+        "INSTITUCIONAL": 0,
+        "CONDICIONAL": 0,
+        "REMOVIDA": 0,
+        "PENDENTE": 0
+      }
+    },
+    {
       "path": "/servicos/backup-para-empresas",
+      "curada": true,
+      "total": 0,
+      "porClasse": {
+        "COMPROVADA": 0,
+        "INSTITUCIONAL": 0,
+        "CONDICIONAL": 0,
+        "REMOVIDA": 0,
+        "PENDENTE": 0
+      }
+    },
+    {
+      "path": "/servicos/backup-para-empresas/araucaria",
       "curada": true,
       "total": 0,
       "porClasse": {
@@ -4459,6 +4543,54 @@
       }
     },
     {
+      "path": "/servicos/backup-para-empresas/sao-jose-dos-pinhais",
+      "curada": true,
+      "total": 0,
+      "porClasse": {
+        "COMPROVADA": 0,
+        "INSTITUCIONAL": 0,
+        "CONDICIONAL": 0,
+        "REMOVIDA": 0,
+        "PENDENTE": 0
+      }
+    },
+    {
+      "path": "/servicos/backup-recuperacao/araucaria",
+      "curada": true,
+      "total": 0,
+      "porClasse": {
+        "COMPROVADA": 0,
+        "INSTITUCIONAL": 0,
+        "CONDICIONAL": 0,
+        "REMOVIDA": 0,
+        "PENDENTE": 0
+      }
+    },
+    {
+      "path": "/servicos/backup-recuperacao/campo-largo",
+      "curada": true,
+      "total": 0,
+      "porClasse": {
+        "COMPROVADA": 0,
+        "INSTITUCIONAL": 0,
+        "CONDICIONAL": 0,
+        "REMOVIDA": 0,
+        "PENDENTE": 0
+      }
+    },
+    {
+      "path": "/servicos/backup-recuperacao/colombo",
+      "curada": true,
+      "total": 0,
+      "porClasse": {
+        "COMPROVADA": 0,
+        "INSTITUCIONAL": 0,
+        "CONDICIONAL": 0,
+        "REMOVIDA": 0,
+        "PENDENTE": 0
+      }
+    },
+    {
       "path": "/servicos/backup-recuperacao/curitiba",
       "curada": true,
       "total": 0,
@@ -4471,7 +4603,67 @@
       }
     },
     {
+      "path": "/servicos/backup-recuperacao/pinhais",
+      "curada": true,
+      "total": 0,
+      "porClasse": {
+        "COMPROVADA": 0,
+        "INSTITUCIONAL": 0,
+        "CONDICIONAL": 0,
+        "REMOVIDA": 0,
+        "PENDENTE": 0
+      }
+    },
+    {
       "path": "/servicos/backup-recuperacao/sao-jose-dos-pinhais",
+      "curada": true,
+      "total": 0,
+      "porClasse": {
+        "COMPROVADA": 0,
+        "INSTITUCIONAL": 0,
+        "CONDICIONAL": 0,
+        "REMOVIDA": 0,
+        "PENDENTE": 0
+      }
+    },
+    {
+      "path": "/servicos/conserto-celular/araucaria",
+      "curada": true,
+      "total": 0,
+      "porClasse": {
+        "COMPROVADA": 0,
+        "INSTITUCIONAL": 0,
+        "CONDICIONAL": 0,
+        "REMOVIDA": 0,
+        "PENDENTE": 0
+      }
+    },
+    {
+      "path": "/servicos/conserto-celular/campo-largo",
+      "curada": true,
+      "total": 0,
+      "porClasse": {
+        "COMPROVADA": 0,
+        "INSTITUCIONAL": 0,
+        "CONDICIONAL": 0,
+        "REMOVIDA": 0,
+        "PENDENTE": 0
+      }
+    },
+    {
+      "path": "/servicos/conserto-celular/curitiba",
+      "curada": true,
+      "total": 0,
+      "porClasse": {
+        "COMPROVADA": 0,
+        "INSTITUCIONAL": 0,
+        "CONDICIONAL": 0,
+        "REMOVIDA": 0,
+        "PENDENTE": 0
+      }
+    },
+    {
+      "path": "/servicos/conserto-celular/sao-jose-dos-pinhais",
       "curada": true,
       "total": 0,
       "porClasse": {
@@ -4496,6 +4688,42 @@
     },
     {
       "path": "/servicos/conserto-monitor",
+      "curada": true,
+      "total": 0,
+      "porClasse": {
+        "COMPROVADA": 0,
+        "INSTITUCIONAL": 0,
+        "CONDICIONAL": 0,
+        "REMOVIDA": 0,
+        "PENDENTE": 0
+      }
+    },
+    {
+      "path": "/servicos/conserto-notebook/araucaria",
+      "curada": true,
+      "total": 0,
+      "porClasse": {
+        "COMPROVADA": 0,
+        "INSTITUCIONAL": 0,
+        "CONDICIONAL": 0,
+        "REMOVIDA": 0,
+        "PENDENTE": 0
+      }
+    },
+    {
+      "path": "/servicos/conserto-notebook/campo-largo",
+      "curada": true,
+      "total": 0,
+      "porClasse": {
+        "COMPROVADA": 0,
+        "INSTITUCIONAL": 0,
+        "CONDICIONAL": 0,
+        "REMOVIDA": 0,
+        "PENDENTE": 0
+      }
+    },
+    {
+      "path": "/servicos/conserto-notebook/colombo",
       "curada": true,
       "total": 0,
       "porClasse": {
@@ -4555,6 +4783,42 @@
       }
     },
     {
+      "path": "/servicos/conserto-pc/araucaria",
+      "curada": true,
+      "total": 0,
+      "porClasse": {
+        "COMPROVADA": 0,
+        "INSTITUCIONAL": 0,
+        "CONDICIONAL": 0,
+        "REMOVIDA": 0,
+        "PENDENTE": 0
+      }
+    },
+    {
+      "path": "/servicos/conserto-pc/campo-largo",
+      "curada": true,
+      "total": 0,
+      "porClasse": {
+        "COMPROVADA": 0,
+        "INSTITUCIONAL": 0,
+        "CONDICIONAL": 0,
+        "REMOVIDA": 0,
+        "PENDENTE": 0
+      }
+    },
+    {
+      "path": "/servicos/conserto-pc/colombo",
+      "curada": true,
+      "total": 0,
+      "porClasse": {
+        "COMPROVADA": 0,
+        "INSTITUCIONAL": 0,
+        "CONDICIONAL": 0,
+        "REMOVIDA": 0,
+        "PENDENTE": 0
+      }
+    },
+    {
       "path": "/servicos/conserto-pc/curitiba",
       "curada": true,
       "total": 0,
@@ -4592,6 +4856,78 @@
     },
     {
       "path": "/servicos/conserto-tv",
+      "curada": true,
+      "total": 0,
+      "porClasse": {
+        "COMPROVADA": 0,
+        "INSTITUCIONAL": 0,
+        "CONDICIONAL": 0,
+        "REMOVIDA": 0,
+        "PENDENTE": 0
+      }
+    },
+    {
+      "path": "/servicos/conserto-tv/araucaria",
+      "curada": true,
+      "total": 0,
+      "porClasse": {
+        "COMPROVADA": 0,
+        "INSTITUCIONAL": 0,
+        "CONDICIONAL": 0,
+        "REMOVIDA": 0,
+        "PENDENTE": 0
+      }
+    },
+    {
+      "path": "/servicos/conserto-tv/campo-largo",
+      "curada": true,
+      "total": 0,
+      "porClasse": {
+        "COMPROVADA": 0,
+        "INSTITUCIONAL": 0,
+        "CONDICIONAL": 0,
+        "REMOVIDA": 0,
+        "PENDENTE": 0
+      }
+    },
+    {
+      "path": "/servicos/conserto-tv/colombo",
+      "curada": true,
+      "total": 0,
+      "porClasse": {
+        "COMPROVADA": 0,
+        "INSTITUCIONAL": 0,
+        "CONDICIONAL": 0,
+        "REMOVIDA": 0,
+        "PENDENTE": 0
+      }
+    },
+    {
+      "path": "/servicos/conserto-tv/curitiba",
+      "curada": true,
+      "total": 0,
+      "porClasse": {
+        "COMPROVADA": 0,
+        "INSTITUCIONAL": 0,
+        "CONDICIONAL": 0,
+        "REMOVIDA": 0,
+        "PENDENTE": 0
+      }
+    },
+    {
+      "path": "/servicos/conserto-tv/pinhais",
+      "curada": true,
+      "total": 0,
+      "porClasse": {
+        "COMPROVADA": 0,
+        "INSTITUCIONAL": 0,
+        "CONDICIONAL": 0,
+        "REMOVIDA": 0,
+        "PENDENTE": 0
+      }
+    },
+    {
+      "path": "/servicos/conserto-tv/sao-jose-dos-pinhais",
       "curada": true,
       "total": 0,
       "porClasse": {
@@ -4699,7 +5035,31 @@
       }
     },
     {
+      "path": "/servicos/manutencao-preventiva-empresas/araucaria",
+      "curada": true,
+      "total": 0,
+      "porClasse": {
+        "COMPROVADA": 0,
+        "INSTITUCIONAL": 0,
+        "CONDICIONAL": 0,
+        "REMOVIDA": 0,
+        "PENDENTE": 0
+      }
+    },
+    {
       "path": "/servicos/manutencao-preventiva-empresas/curitiba",
+      "curada": true,
+      "total": 0,
+      "porClasse": {
+        "COMPROVADA": 0,
+        "INSTITUCIONAL": 0,
+        "CONDICIONAL": 0,
+        "REMOVIDA": 0,
+        "PENDENTE": 0
+      }
+    },
+    {
+      "path": "/servicos/manutencao-preventiva-empresas/sao-jose-dos-pinhais",
       "curada": true,
       "total": 0,
       "porClasse": {
@@ -4723,7 +5083,43 @@
       }
     },
     {
+      "path": "/servicos/montagem-de-pc/araucaria",
+      "curada": true,
+      "total": 0,
+      "porClasse": {
+        "COMPROVADA": 0,
+        "INSTITUCIONAL": 0,
+        "CONDICIONAL": 0,
+        "REMOVIDA": 0,
+        "PENDENTE": 0
+      }
+    },
+    {
+      "path": "/servicos/montagem-de-pc/campo-largo",
+      "curada": true,
+      "total": 0,
+      "porClasse": {
+        "COMPROVADA": 0,
+        "INSTITUCIONAL": 0,
+        "CONDICIONAL": 0,
+        "REMOVIDA": 0,
+        "PENDENTE": 0
+      }
+    },
+    {
       "path": "/servicos/montagem-de-pc/curitiba",
+      "curada": true,
+      "total": 0,
+      "porClasse": {
+        "COMPROVADA": 0,
+        "INSTITUCIONAL": 0,
+        "CONDICIONAL": 0,
+        "REMOVIDA": 0,
+        "PENDENTE": 0
+      }
+    },
+    {
+      "path": "/servicos/montagem-de-pc/sao-jose-dos-pinhais",
       "curada": true,
       "total": 0,
       "porClasse": {
@@ -4747,7 +5143,67 @@
       }
     },
     {
+      "path": "/servicos/pc-gamer/araucaria",
+      "curada": true,
+      "total": 0,
+      "porClasse": {
+        "COMPROVADA": 0,
+        "INSTITUCIONAL": 0,
+        "CONDICIONAL": 0,
+        "REMOVIDA": 0,
+        "PENDENTE": 0
+      }
+    },
+    {
+      "path": "/servicos/pc-gamer/campo-largo",
+      "curada": true,
+      "total": 0,
+      "porClasse": {
+        "COMPROVADA": 0,
+        "INSTITUCIONAL": 0,
+        "CONDICIONAL": 0,
+        "REMOVIDA": 0,
+        "PENDENTE": 0
+      }
+    },
+    {
+      "path": "/servicos/pc-gamer/colombo",
+      "curada": true,
+      "total": 0,
+      "porClasse": {
+        "COMPROVADA": 0,
+        "INSTITUCIONAL": 0,
+        "CONDICIONAL": 0,
+        "REMOVIDA": 0,
+        "PENDENTE": 0
+      }
+    },
+    {
       "path": "/servicos/pc-gamer/curitiba",
+      "curada": true,
+      "total": 0,
+      "porClasse": {
+        "COMPROVADA": 0,
+        "INSTITUCIONAL": 0,
+        "CONDICIONAL": 0,
+        "REMOVIDA": 0,
+        "PENDENTE": 0
+      }
+    },
+    {
+      "path": "/servicos/pc-gamer/pinhais",
+      "curada": true,
+      "total": 0,
+      "porClasse": {
+        "COMPROVADA": 0,
+        "INSTITUCIONAL": 0,
+        "CONDICIONAL": 0,
+        "REMOVIDA": 0,
+        "PENDENTE": 0
+      }
+    },
+    {
+      "path": "/servicos/pc-gamer/sao-jose-dos-pinhais",
       "curada": true,
       "total": 0,
       "porClasse": {
@@ -4772,6 +5228,18 @@
     },
     {
       "path": "/servicos/redes-e-wifi",
+      "curada": true,
+      "total": 0,
+      "porClasse": {
+        "COMPROVADA": 0,
+        "INSTITUCIONAL": 0,
+        "CONDICIONAL": 0,
+        "REMOVIDA": 0,
+        "PENDENTE": 0
+      }
+    },
+    {
+      "path": "/servicos/redes-wifi/colombo",
       "curada": true,
       "total": 0,
       "porClasse": {
@@ -4855,7 +5323,79 @@
       }
     },
     {
+      "path": "/servicos/suporte-empresas/araucaria",
+      "curada": true,
+      "total": 0,
+      "porClasse": {
+        "COMPROVADA": 0,
+        "INSTITUCIONAL": 0,
+        "CONDICIONAL": 0,
+        "REMOVIDA": 0,
+        "PENDENTE": 0
+      }
+    },
+    {
+      "path": "/servicos/suporte-empresas/campo-largo",
+      "curada": true,
+      "total": 0,
+      "porClasse": {
+        "COMPROVADA": 0,
+        "INSTITUCIONAL": 0,
+        "CONDICIONAL": 0,
+        "REMOVIDA": 0,
+        "PENDENTE": 0
+      }
+    },
+    {
+      "path": "/servicos/suporte-empresas/curitiba",
+      "curada": true,
+      "total": 0,
+      "porClasse": {
+        "COMPROVADA": 0,
+        "INSTITUCIONAL": 0,
+        "CONDICIONAL": 0,
+        "REMOVIDA": 0,
+        "PENDENTE": 0
+      }
+    },
+    {
+      "path": "/servicos/suporte-empresas/sao-jose-dos-pinhais",
+      "curada": true,
+      "total": 0,
+      "porClasse": {
+        "COMPROVADA": 0,
+        "INSTITUCIONAL": 0,
+        "CONDICIONAL": 0,
+        "REMOVIDA": 0,
+        "PENDENTE": 0
+      }
+    },
+    {
       "path": "/servicos/suporte-home-office",
+      "curada": true,
+      "total": 0,
+      "porClasse": {
+        "COMPROVADA": 0,
+        "INSTITUCIONAL": 0,
+        "CONDICIONAL": 0,
+        "REMOVIDA": 0,
+        "PENDENTE": 0
+      }
+    },
+    {
+      "path": "/servicos/suporte-home-office/araucaria",
+      "curada": true,
+      "total": 0,
+      "porClasse": {
+        "COMPROVADA": 0,
+        "INSTITUCIONAL": 0,
+        "CONDICIONAL": 0,
+        "REMOVIDA": 0,
+        "PENDENTE": 0
+      }
+    },
+    {
+      "path": "/servicos/suporte-home-office/campo-largo",
       "curada": true,
       "total": 0,
       "porClasse": {
@@ -4879,6 +5419,18 @@
       }
     },
     {
+      "path": "/servicos/suporte-home-office/sao-jose-dos-pinhais",
+      "curada": true,
+      "total": 0,
+      "porClasse": {
+        "COMPROVADA": 0,
+        "INSTITUCIONAL": 0,
+        "CONDICIONAL": 0,
+        "REMOVIDA": 0,
+        "PENDENTE": 0
+      }
+    },
+    {
       "path": "/servicos/suporte-tecnico-empresarial",
       "curada": true,
       "total": 0,
@@ -4891,7 +5443,55 @@
       }
     },
     {
+      "path": "/servicos/suporte-tecnico-empresarial/araucaria",
+      "curada": true,
+      "total": 0,
+      "porClasse": {
+        "COMPROVADA": 0,
+        "INSTITUCIONAL": 0,
+        "CONDICIONAL": 0,
+        "REMOVIDA": 0,
+        "PENDENTE": 0
+      }
+    },
+    {
+      "path": "/servicos/suporte-tecnico-empresarial/colombo",
+      "curada": true,
+      "total": 0,
+      "porClasse": {
+        "COMPROVADA": 0,
+        "INSTITUCIONAL": 0,
+        "CONDICIONAL": 0,
+        "REMOVIDA": 0,
+        "PENDENTE": 0
+      }
+    },
+    {
       "path": "/servicos/suporte-tecnico-empresarial/curitiba",
+      "curada": true,
+      "total": 0,
+      "porClasse": {
+        "COMPROVADA": 0,
+        "INSTITUCIONAL": 0,
+        "CONDICIONAL": 0,
+        "REMOVIDA": 0,
+        "PENDENTE": 0
+      }
+    },
+    {
+      "path": "/servicos/suporte-tecnico-empresarial/pinhais",
+      "curada": true,
+      "total": 0,
+      "porClasse": {
+        "COMPROVADA": 0,
+        "INSTITUCIONAL": 0,
+        "CONDICIONAL": 0,
+        "REMOVIDA": 0,
+        "PENDENTE": 0
+      }
+    },
+    {
+      "path": "/servicos/suporte-tecnico-empresarial/sao-jose-dos-pinhais",
       "curada": true,
       "total": 0,
       "porClasse": {
@@ -4963,7 +5563,55 @@
       }
     },
     {
+      "path": "/servicos/upgrade-ssd/araucaria",
+      "curada": true,
+      "total": 0,
+      "porClasse": {
+        "COMPROVADA": 0,
+        "INSTITUCIONAL": 0,
+        "CONDICIONAL": 0,
+        "REMOVIDA": 0,
+        "PENDENTE": 0
+      }
+    },
+    {
+      "path": "/servicos/upgrade-ssd/campo-largo",
+      "curada": true,
+      "total": 0,
+      "porClasse": {
+        "COMPROVADA": 0,
+        "INSTITUCIONAL": 0,
+        "CONDICIONAL": 0,
+        "REMOVIDA": 0,
+        "PENDENTE": 0
+      }
+    },
+    {
+      "path": "/servicos/upgrade-ssd/colombo",
+      "curada": true,
+      "total": 0,
+      "porClasse": {
+        "COMPROVADA": 0,
+        "INSTITUCIONAL": 0,
+        "CONDICIONAL": 0,
+        "REMOVIDA": 0,
+        "PENDENTE": 0
+      }
+    },
+    {
       "path": "/servicos/upgrade-ssd/curitiba",
+      "curada": true,
+      "total": 0,
+      "porClasse": {
+        "COMPROVADA": 0,
+        "INSTITUCIONAL": 0,
+        "CONDICIONAL": 0,
+        "REMOVIDA": 0,
+        "PENDENTE": 0
+      }
+    },
+    {
+      "path": "/servicos/upgrade-ssd/sao-jose-dos-pinhais",
       "curada": true,
       "total": 0,
       "porClasse": {
@@ -5449,7 +6097,7 @@
       "familiaTitulo": "Garantia",
       "risco": "Prazo ou abrangência divergente da política comercial central.",
       "arquivo": "src/data/blogPostsContent.tsx",
-      "linha": 2026,
+      "linha": 1557,
       "trecho": "<p className=\"text-muted-foreground mb-0\">O Técnico de Informática instala câmeras Intelbras em <strong>Itapoá, Guaratuba e todo o litoral do PR</strong>. Kit completo com 4 câmera",
       "classificacao": "COMPROVADA",
       "criterio": "Prazo e escopo vêm da fonte comercial única",
@@ -5462,7 +6110,7 @@
       "familiaTitulo": "Garantia",
       "risco": "Prazo ou abrangência divergente da política comercial central.",
       "arquivo": "src/data/blogPostsContent.tsx",
-      "linha": 2064,
+      "linha": 1595,
       "trecho": "<p>No Brasil, a <strong>Intelbras</strong> é líder absoluta em CFTV. Oferece equipamentos de qualidade, suporte nacional, garantia real e app de acesso remoto estável. Evite marcas",
       "classificacao": "COMPROVADA",
       "criterio": "Prazo e escopo vêm da fonte comercial única",
@@ -5475,7 +6123,7 @@
       "familiaTitulo": "Garantia",
       "risco": "Prazo ou abrangência divergente da política comercial central.",
       "arquivo": "src/data/blogPostsContent.tsx",
-      "linha": 2077,
+      "linha": 1608,
       "trecho": "<p className=\"text-muted-foreground mb-0\">Kit completo com 4 câmeras HD, DVR 4 canais, HD de gravação, cabos, conectores e <strong>instalação profissional inclusa</strong> por R$ 1",
       "classificacao": "COMPROVADA",
       "criterio": "Prazo e escopo vêm da fonte comercial única",
@@ -5488,7 +6136,7 @@
       "familiaTitulo": "Garantia",
       "risco": "Prazo ou abrangência divergente da política comercial central.",
       "arquivo": "src/data/blogPostsContent.tsx",
-      "linha": 2152,
+      "linha": 1683,
       "trecho": "<p className=\"text-muted-foreground mb-0\">Kit 4 câmeras Intelbras com instalação especializada por <strong>R$ 1.350</strong>. Atendimento no litoral do Paraná conforme disponibilid",
       "classificacao": "COMPROVADA",
       "criterio": "Prazo e escopo vêm da fonte comercial única",
@@ -5501,7 +6149,7 @@
       "familiaTitulo": "Tempo de experiência / atuação",
       "risco": "Anos de mercado divergentes entre páginas e sem fonte única.",
       "arquivo": "src/data/blogPostsContent.tsx",
-      "linha": 2273,
+      "linha": 1804,
       "trecho": "um problema detectado desde 2025. A empresa afirma estar trabalhando em uma correção, mas ainda não divulgou prazo.",
       "classificacao": "CONDICIONAL",
       "criterio": "Data de início da atuação técnica vem da configuração única do site, não de certificação externa",
@@ -5514,7 +6162,7 @@
       "familiaTitulo": "Prazo de atendimento prometido",
       "risco": "Prazo fixo sem controle de agenda, trânsito e peça.",
       "arquivo": "src/data/blogPostsContent.tsx",
-      "linha": 6349,
+      "linha": 5965,
       "trecho": "<p>Atendemos Curitiba, São José dos Pinhais, Pinhais, Colombo, Almirante Tamandaré, Araucária, Campo Largo, Campo Magro, Piraquara, Quatro Barras e Fazenda Rio Grande. Diagnóstico ",
       "classificacao": "CONDICIONAL",
       "criterio": "Tempos de deslocamento e janelas de atendimento são estimativas dependentes de agenda, trânsito e disponibilidade de peça",
@@ -5527,7 +6175,7 @@
       "familiaTitulo": "Prazo de atendimento prometido",
       "risco": "Prazo fixo sem controle de agenda, trânsito e peça.",
       "arquivo": "src/data/blogPostsContent.tsx",
-      "linha": 6464,
+      "linha": 6173,
       "trecho": "<p>Atendemos Curitiba, São José dos Pinhais, Pinhais, Colombo, Almirante Tamandaré, Araucária, Campo Largo, Campo Magro, Piraquara, Quatro Barras e Fazenda Rio Grande. Diagnóstico ",
       "classificacao": "CONDICIONAL",
       "criterio": "Tempos de deslocamento e janelas de atendimento são estimativas dependentes de agenda, trânsito e disponibilidade de peça",
@@ -5540,7 +6188,7 @@
       "familiaTitulo": "Prazo de atendimento prometido",
       "risco": "Prazo fixo sem controle de agenda, trânsito e peça.",
       "arquivo": "src/data/blogPostsContent.tsx",
-      "linha": 6672,
+      "linha": 6288,
       "trecho": "<p>Atendemos Curitiba, São José dos Pinhais, Pinhais, Colombo, Almirante Tamandaré, Araucária, Campo Largo, Campo Magro, Piraquara, Quatro Barras e Fazenda Rio Grande. Diagnóstico ",
       "classificacao": "CONDICIONAL",
       "criterio": "Tempos de deslocamento e janelas de atendimento são estimativas dependentes de agenda, trânsito e disponibilidade de peça",
@@ -5553,20 +6201,7 @@
       "familiaTitulo": "Prazo de atendimento prometido",
       "risco": "Prazo fixo sem controle de agenda, trânsito e peça.",
       "arquivo": "src/data/blogPostsContent.tsx",
-      "linha": 6787,
-      "trecho": "<p>Atendemos Curitiba, São José dos Pinhais, Pinhais, Colombo, Almirante Tamandaré, Araucária, Campo Largo, Campo Magro, Piraquara, Quatro Barras e Fazenda Rio Grande. Diagnóstico ",
-      "classificacao": "CONDICIONAL",
-      "criterio": "Tempos de deslocamento e janelas de atendimento são estimativas dependentes de agenda, trânsito e disponibilidade de peça",
-      "evidencia": "Não existe SLA contratado; o texto precisa manter o qualificador ('conforme disponibilidade', 'estimado', 'quando há peça em estoque')",
-      "acao": "Proibido prazo absoluto sem condicionante. 'Atendimento imediato' e 'resposta em até 5 minutos' foram removidos nesta rodada.",
-      "urls": []
-    },
-    {
-      "familia": "prazo-prometido",
-      "familiaTitulo": "Prazo de atendimento prometido",
-      "risco": "Prazo fixo sem controle de agenda, trânsito e peça.",
-      "arquivo": "src/data/blogPostsContent.tsx",
-      "linha": 6902,
+      "linha": 6403,
       "trecho": "<p>Atendemos Curitiba, São José dos Pinhais, Pinhais, Colombo, Almirante Tamandaré, Araucária, Campo Largo, Campo Magro, Piraquara, Quatro Barras e Fazenda Rio Grande. Diagnóstico ",
       "classificacao": "CONDICIONAL",
       "criterio": "Tempos de deslocamento e janelas de atendimento são estimativas dependentes de agenda, trânsito e disponibilidade de peça",
@@ -5579,7 +6214,7 @@
       "familiaTitulo": "Cobertura empresarial irrestrita",
       "risco": "“Todos os portes / todas as marcas / todos os modelos” não é sustentável.",
       "arquivo": "src/data/blogPostsContent.tsx",
-      "linha": 7021,
+      "linha": 6522,
       "trecho": "<p>A <strong>{BRAND_NAME}</strong> oferece suporte profissional para servidores e desktops Linux em Curitiba e região. Configuração de servidores web, e-mail, samba, firewall, moni",
       "classificacao": "CONDICIONAL",
       "criterio": "Atendimento a qualquer marca vale para diagnóstico e serviços de software/hardware comum; depende de disponibilidade de peça e de o modelo permitir reparo",
@@ -5592,7 +6227,7 @@
       "familiaTitulo": "Cobertura empresarial irrestrita",
       "risco": "“Todos os portes / todas as marcas / todos os modelos” não é sustentável.",
       "arquivo": "src/data/blogPostsContent.tsx",
-      "linha": 7141,
+      "linha": 6642,
       "trecho": "<p>A <strong>{BRAND_NAME}</strong> oferece suporte profissional para servidores e desktops Linux em Curitiba e região. Configuração de servidores web, e-mail, samba, firewall, moni",
       "classificacao": "CONDICIONAL",
       "criterio": "Atendimento a qualquer marca vale para diagnóstico e serviços de software/hardware comum; depende de disponibilidade de peça e de o modelo permitir reparo",
@@ -5605,7 +6240,7 @@
       "familiaTitulo": "Cobertura empresarial irrestrita",
       "risco": "“Todos os portes / todas as marcas / todos os modelos” não é sustentável.",
       "arquivo": "src/data/blogPostsContent.tsx",
-      "linha": 7261,
+      "linha": 6762,
       "trecho": "<p>A <strong>{BRAND_NAME}</strong> oferece suporte profissional para servidores e desktops Linux em Curitiba e região. Configuração de servidores web, e-mail, samba, firewall, moni",
       "classificacao": "CONDICIONAL",
       "criterio": "Atendimento a qualquer marca vale para diagnóstico e serviços de software/hardware comum; depende de disponibilidade de peça e de o modelo permitir reparo",
@@ -5618,7 +6253,7 @@
       "familiaTitulo": "Cobertura empresarial irrestrita",
       "risco": "“Todos os portes / todas as marcas / todos os modelos” não é sustentável.",
       "arquivo": "src/data/blogPostsContent.tsx",
-      "linha": 7381,
+      "linha": 6882,
       "trecho": "<p>A <strong>{BRAND_NAME}</strong> oferece suporte profissional para servidores e desktops Linux em Curitiba e região. Configuração de servidores web, e-mail, samba, firewall, moni",
       "classificacao": "CONDICIONAL",
       "criterio": "Atendimento a qualquer marca vale para diagnóstico e serviços de software/hardware comum; depende de disponibilidade de peça e de o modelo permitir reparo",
@@ -5631,7 +6266,7 @@
       "familiaTitulo": "Cobertura empresarial irrestrita",
       "risco": "“Todos os portes / todas as marcas / todos os modelos” não é sustentável.",
       "arquivo": "src/data/blogPostsContent.tsx",
-      "linha": 7501,
+      "linha": 7002,
       "trecho": "<p>A <strong>{BRAND_NAME}</strong> oferece suporte profissional para servidores e desktops Linux em Curitiba e região. Configuração de servidores web, e-mail, samba, firewall, moni",
       "classificacao": "CONDICIONAL",
       "criterio": "Atendimento a qualquer marca vale para diagnóstico e serviços de software/hardware comum; depende de disponibilidade de peça e de o modelo permitir reparo",
@@ -5644,7 +6279,7 @@
       "familiaTitulo": "Cobertura empresarial irrestrita",
       "risco": "“Todos os portes / todas as marcas / todos os modelos” não é sustentável.",
       "arquivo": "src/data/blogPostsContent.tsx",
-      "linha": 7621,
+      "linha": 7122,
       "trecho": "<p>A <strong>{BRAND_NAME}</strong> oferece suporte profissional para servidores e desktops Linux em Curitiba e região. Configuração de servidores web, e-mail, samba, firewall, moni",
       "classificacao": "CONDICIONAL",
       "criterio": "Atendimento a qualquer marca vale para diagnóstico e serviços de software/hardware comum; depende de disponibilidade de peça e de o modelo permitir reparo",
@@ -5657,20 +6292,7 @@
       "familiaTitulo": "Cobertura empresarial irrestrita",
       "risco": "“Todos os portes / todas as marcas / todos os modelos” não é sustentável.",
       "arquivo": "src/data/blogPostsContent.tsx",
-      "linha": 7741,
-      "trecho": "<p>A <strong>{BRAND_NAME}</strong> oferece suporte profissional para servidores e desktops Linux em Curitiba e região. Configuração de servidores web, e-mail, samba, firewall, moni",
-      "classificacao": "CONDICIONAL",
-      "criterio": "Atendimento a qualquer marca vale para diagnóstico e serviços de software/hardware comum; depende de disponibilidade de peça e de o modelo permitir reparo",
-      "evidencia": "Política de recusa documentada (ex.: painel de monitor/TV) em src/lib/politicaComercial.ts",
-      "acao": "Manter a ressalva de peça/viabilidade no mesmo bloco. 'Empresas de todos os portes' foi retirado.",
-      "urls": []
-    },
-    {
-      "familia": "todos-os-portes",
-      "familiaTitulo": "Cobertura empresarial irrestrita",
-      "risco": "“Todos os portes / todas as marcas / todos os modelos” não é sustentável.",
-      "arquivo": "src/data/blogPostsContent.tsx",
-      "linha": 7861,
+      "linha": 7242,
       "trecho": "<p>A <strong>{BRAND_NAME}</strong> oferece suporte profissional para servidores e desktops Linux em Curitiba e região. Configuração de servidores web, e-mail, samba, firewall, moni",
       "classificacao": "CONDICIONAL",
       "criterio": "Atendimento a qualquer marca vale para diagnóstico e serviços de software/hardware comum; depende de disponibilidade de peça e de o modelo permitir reparo",
@@ -5683,7 +6305,7 @@
       "familiaTitulo": "Prazo de atendimento prometido",
       "risco": "Prazo fixo sem controle de agenda, trânsito e peça.",
       "arquivo": "src/data/blogPostsContent.tsx",
-      "linha": 8962,
+      "linha": 8343,
       "trecho": "<li><strong>Plano de resposta a incidentes</strong> que inclua notificação à ANPD em até 48h</li>",
       "classificacao": "CONDICIONAL",
       "criterio": "Tempos de deslocamento e janelas de atendimento são estimativas dependentes de agenda, trânsito e disponibilidade de peça",
@@ -5696,7 +6318,7 @@
       "familiaTitulo": "Prazo de atendimento prometido",
       "risco": "Prazo fixo sem controle de agenda, trânsito e peça.",
       "arquivo": "src/data/blogPostsContent.tsx",
-      "linha": 9088,
+      "linha": 8469,
       "trecho": "<li><strong>Plano de resposta a incidentes</strong> que inclua notificação à ANPD em até 48h</li>",
       "classificacao": "CONDICIONAL",
       "criterio": "Tempos de deslocamento e janelas de atendimento são estimativas dependentes de agenda, trânsito e disponibilidade de peça",
@@ -5709,7 +6331,7 @@
       "familiaTitulo": "Prazo de atendimento prometido",
       "risco": "Prazo fixo sem controle de agenda, trânsito e peça.",
       "arquivo": "src/data/blogPostsContent.tsx",
-      "linha": 9291,
+      "linha": 8672,
       "trecho": "<li><strong>Plano de resposta a incidentes</strong> que inclua notificação à ANPD em até 48h</li>",
       "classificacao": "CONDICIONAL",
       "criterio": "Tempos de deslocamento e janelas de atendimento são estimativas dependentes de agenda, trânsito e disponibilidade de peça",
@@ -5722,7 +6344,7 @@
       "familiaTitulo": "Prazo de atendimento prometido",
       "risco": "Prazo fixo sem controle de agenda, trânsito e peça.",
       "arquivo": "src/data/blogPostsContent.tsx",
-      "linha": 9417,
+      "linha": 8798,
       "trecho": "<li><strong>Plano de resposta a incidentes</strong> que inclua notificação à ANPD em até 48h</li>",
       "classificacao": "CONDICIONAL",
       "criterio": "Tempos de deslocamento e janelas de atendimento são estimativas dependentes de agenda, trânsito e disponibilidade de peça",
@@ -5735,8 +6357,34 @@
       "familiaTitulo": "Prazo de atendimento prometido",
       "risco": "Prazo fixo sem controle de agenda, trânsito e peça.",
       "arquivo": "src/data/blogPostsContent.tsx",
-      "linha": 9543,
+      "linha": 8924,
       "trecho": "<li><strong>Plano de resposta a incidentes</strong> que inclua notificação à ANPD em até 48h</li>",
+      "classificacao": "CONDICIONAL",
+      "criterio": "Tempos de deslocamento e janelas de atendimento são estimativas dependentes de agenda, trânsito e disponibilidade de peça",
+      "evidencia": "Não existe SLA contratado; o texto precisa manter o qualificador ('conforme disponibilidade', 'estimado', 'quando há peça em estoque')",
+      "acao": "Proibido prazo absoluto sem condicionante. 'Atendimento imediato' e 'resposta em até 5 minutos' foram removidos nesta rodada.",
+      "urls": []
+    },
+    {
+      "familia": "prazo-prometido",
+      "familiaTitulo": "Prazo de atendimento prometido",
+      "risco": "Prazo fixo sem controle de agenda, trânsito e peça.",
+      "arquivo": "src/data/blogSupplementalPosts.tsx",
+      "linha": 1096,
+      "trecho": "Atualizar BIOS, trocar RAM, reinstalar driver e formatar no mesmo dia elimina a capacidade de saber o que resolveu",
+      "classificacao": "CONDICIONAL",
+      "criterio": "Tempos de deslocamento e janelas de atendimento são estimativas dependentes de agenda, trânsito e disponibilidade de peça",
+      "evidencia": "Não existe SLA contratado; o texto precisa manter o qualificador ('conforme disponibilidade', 'estimado', 'quando há peça em estoque')",
+      "acao": "Proibido prazo absoluto sem condicionante. 'Atendimento imediato' e 'resposta em até 5 minutos' foram removidos nesta rodada.",
+      "urls": []
+    },
+    {
+      "familia": "prazo-prometido",
+      "familiaTitulo": "Prazo de atendimento prometido",
+      "risco": "Prazo fixo sem controle de agenda, trânsito e peça.",
+      "arquivo": "src/data/blogSupplementalPosts.tsx",
+      "linha": 7996,
+      "trecho": "<li><strong>Mantenha o disco antigo intacto por um período de validação.</strong> Não formate a única cópia anterior no mesmo dia em que concluiu a migração.</li>",
       "classificacao": "CONDICIONAL",
       "criterio": "Tempos de deslocamento e janelas de atendimento são estimativas dependentes de agenda, trânsito e disponibilidade de peça",
       "evidencia": "Não existe SLA contratado; o texto precisa manter o qualificador ('conforme disponibilidade', 'estimado', 'quando há peça em estoque')",
@@ -5783,50 +6431,11 @@
       "urls": []
     },
     {
-      "familia": "prazo-prometido",
-      "familiaTitulo": "Prazo de atendimento prometido",
-      "risco": "Prazo fixo sem controle de agenda, trânsito e peça.",
-      "arquivo": "src/lib/bairrosLote2.ts",
-      "linha": 655,
-      "trecho": "question: \"O computador do meu comércio parou. Dá para resolver no mesmo dia?\",",
-      "classificacao": "CONDICIONAL",
-      "criterio": "Tempos de deslocamento e janelas de atendimento são estimativas dependentes de agenda, trânsito e disponibilidade de peça",
-      "evidencia": "Não existe SLA contratado; o texto precisa manter o qualificador ('conforme disponibilidade', 'estimado', 'quando há peça em estoque')",
-      "acao": "Proibido prazo absoluto sem condicionante. 'Atendimento imediato' e 'resposta em até 5 minutos' foram removidos nesta rodada.",
-      "urls": []
-    },
-    {
-      "familia": "garantia",
-      "familiaTitulo": "Garantia",
-      "risco": "Prazo ou abrangência divergente da política comercial central.",
-      "arquivo": "src/lib/bairrosLote3.ts",
-      "linha": 269,
-      "trecho": "{ question: \"Existe garantia do serviço?\", answer: \"A mão de obra do serviço executado tem 90 dias de garantia no mesmo defeito tratado. Peças seguem a garantia do fornecedor ou fa",
-      "classificacao": "COMPROVADA",
-      "criterio": "Prazo e escopo vêm da fonte comercial única",
-      "evidencia": "src/lib/config/commercial.ts + src/lib/politicaComercial.ts (90 dias de mão de obra no ponto reparado; peças conforme fabricante)",
-      "acao": "Manter sempre escopado: nunca 'garantia em todos os serviços' sem qualificar o que é coberto.",
-      "urls": []
-    },
-    {
-      "familia": "prazo-prometido",
-      "familiaTitulo": "Prazo de atendimento prometido",
-      "risco": "Prazo fixo sem controle de agenda, trânsito e peça.",
-      "arquivo": "src/lib/bairrosLote4.ts",
-      "linha": 97,
-      "trecho": "\"A partir dessa resposta, a triagem pelo WhatsApp separa o que dá para tratar por acesso remoto no mesmo dia, o que exige visita ao endereço onde o notebook está e o que precisa ir",
-      "classificacao": "CONDICIONAL",
-      "criterio": "Tempos de deslocamento e janelas de atendimento são estimativas dependentes de agenda, trânsito e disponibilidade de peça",
-      "evidencia": "Não existe SLA contratado; o texto precisa manter o qualificador ('conforme disponibilidade', 'estimado', 'quando há peça em estoque')",
-      "acao": "Proibido prazo absoluto sem condicionante. 'Atendimento imediato' e 'resposta em até 5 minutos' foram removidos nesta rodada.",
-      "urls": []
-    },
-    {
       "familia": "todos-os-portes",
       "familiaTitulo": "Cobertura empresarial irrestrita",
       "risco": "“Todos os portes / todas as marcas / todos os modelos” não é sustentável.",
       "arquivo": "src/lib/cidadesData.ts",
-      "linha": 97,
+      "linha": 115,
       "trecho": "\"Curitiba concentra muita gente que depende do computador todos os dias: home office, faculdade, profissionais liberais e empresas de todos os portes. Quando o notebook trava, o PC",
       "classificacao": "CONDICIONAL",
       "criterio": "Atendimento a qualquer marca vale para diagnóstico e serviços de software/hardware comum; depende de disponibilidade de peça e de o modelo permitir reparo",
@@ -5839,7 +6448,7 @@
       "familiaTitulo": "Garantia",
       "risco": "Prazo ou abrangência divergente da política comercial central.",
       "arquivo": "src/lib/cidadesData.ts",
-      "linha": 160,
+      "linha": 178,
       "trecho": "\"Para empresas de São José dos Pinhais, chamados repetidos no mesmo equipamento são tratados como um caso só: se o sintoma retorna dentro da garantia de 90 dias da mão de obra e se",
       "classificacao": "COMPROVADA",
       "criterio": "Prazo e escopo vêm da fonte comercial única",
@@ -5852,7 +6461,7 @@
       "familiaTitulo": "Garantia",
       "risco": "Prazo ou abrangência divergente da política comercial central.",
       "arquivo": "src/lib/cidadesData.ts",
-      "linha": 257,
+      "linha": 321,
       "trecho": "\"Entre os equipamentos, aparecem com frequência desktops de uso familiar prolongado e notebooks que passaram por reparos anteriores mal executados — parafusos faltando, pasta térmi",
       "classificacao": "COMPROVADA",
       "criterio": "Prazo e escopo vêm da fonte comercial única",
@@ -6983,21 +7592,8 @@
       "familiaTitulo": "Garantia",
       "risco": "Prazo ou abrangência divergente da política comercial central.",
       "arquivo": "src/lib/servicosCore.ts",
-      "linha": 1826,
+      "linha": 1827,
       "trecho": "\"O teste final tem um roteiro mínimo que não pulamos: monitor remontado, ligado em duas entradas de vídeo diferentes, verificação de uniformidade de brilho e período contínuo de fu",
-      "classificacao": "COMPROVADA",
-      "criterio": "Prazo e escopo vêm da fonte comercial única",
-      "evidencia": "src/lib/config/commercial.ts + src/lib/politicaComercial.ts (90 dias de mão de obra no ponto reparado; peças conforme fabricante)",
-      "acao": "Manter sempre escopado: nunca 'garantia em todos os serviços' sem qualificar o que é coberto.",
-      "urls": []
-    },
-    {
-      "familia": "garantia",
-      "familiaTitulo": "Garantia",
-      "risco": "Prazo ou abrangência divergente da política comercial central.",
-      "arquivo": "src/lib/servicosCore.ts",
-      "linha": 2022,
-      "trecho": "{ question: \"A garantia cobre a qualidade das minhas próximas impressões?\", answer: \"Não, e é importante ser claro nisso. A garantia de 90 dias cobre a mão de obra do ponto reparad",
       "classificacao": "COMPROVADA",
       "criterio": "Prazo e escopo vêm da fonte comercial única",
       "evidencia": "src/lib/config/commercial.ts + src/lib/politicaComercial.ts (90 dias de mão de obra no ponto reparado; peças conforme fabricante)",
@@ -7714,7 +8310,7 @@
       "familiaTitulo": "Identificação do técnico",
       "risco": "Compromisso operacional; precisa ser cumprido em todo atendimento.",
       "arquivo": "src/pages/bairros/BairroTemplate.tsx",
-      "linha": 102,
+      "linha": 107,
       "trecho": "title: \"Profissional Identificado\",",
       "classificacao": "INSTITUCIONAL",
       "criterio": "Compromisso operacional do negócio, não métrica",
@@ -7727,7 +8323,7 @@
       "familiaTitulo": "Identificação do técnico",
       "risco": "Compromisso operacional; precisa ser cumprido em todo atendimento.",
       "arquivo": "src/pages/bairros/BairroTemplate.tsx",
-      "linha": 103,
+      "linha": 108,
       "trecho": "description: \"Técnico identificado, com equipamentos profissionais e registro do atendimento. Segurança para sua família.\",",
       "classificacao": "INSTITUCIONAL",
       "criterio": "Compromisso operacional do negócio, não métrica",
@@ -7778,21 +8374,6 @@
       "acao": "Manter sempre escopado: nunca 'garantia em todos os serviços' sem qualificar o que é coberto.",
       "urls": [
         "/bairros/centro-almirante-tamandare"
-      ]
-    },
-    {
-      "familia": "prazo-prometido",
-      "familiaTitulo": "Prazo de atendimento prometido",
-      "risco": "Prazo fixo sem controle de agenda, trânsito e peça.",
-      "arquivo": "src/pages/bairros/ColareColombo.tsx",
-      "linha": 13,
-      "trecho": "tempoDeslocamento: \"Atendimento em até 50 min\",",
-      "classificacao": "CONDICIONAL",
-      "criterio": "Tempos de deslocamento e janelas de atendimento são estimativas dependentes de agenda, trânsito e disponibilidade de peça",
-      "evidencia": "Não existe SLA contratado; o texto precisa manter o qualificador ('conforme disponibilidade', 'estimado', 'quando há peça em estoque')",
-      "acao": "Proibido prazo absoluto sem condicionante. 'Atendimento imediato' e 'resposta em até 5 minutos' foram removidos nesta rodada.",
-      "urls": [
-        "/bairros/sao-dimas-colombo"
       ]
     },
     {
@@ -8853,32 +9434,6 @@
       "criterio": "Prazo e escopo vêm da fonte comercial única",
       "evidencia": "src/lib/config/commercial.ts + src/lib/politicaComercial.ts (90 dias de mão de obra no ponto reparado; peças conforme fabricante)",
       "acao": "Manter sempre escopado: nunca 'garantia em todos os serviços' sem qualificar o que é coberto.",
-      "urls": []
-    },
-    {
-      "familia": "prazo-prometido",
-      "familiaTitulo": "Prazo de atendimento prometido",
-      "risco": "Prazo fixo sem controle de agenda, trânsito e peça.",
-      "arquivo": "src/pages/servico-bairro/ServicoCidadePage.tsx",
-      "linha": 169,
-      "trecho": ": `Atendemos no seu endereço em ${cidade.nome} ainda hoje`",
-      "classificacao": "CONDICIONAL",
-      "criterio": "Tempos de deslocamento e janelas de atendimento são estimativas dependentes de agenda, trânsito e disponibilidade de peça",
-      "evidencia": "Não existe SLA contratado; o texto precisa manter o qualificador ('conforme disponibilidade', 'estimado', 'quando há peça em estoque')",
-      "acao": "Proibido prazo absoluto sem condicionante. 'Atendimento imediato' e 'resposta em até 5 minutos' foram removidos nesta rodada.",
-      "urls": []
-    },
-    {
-      "familia": "prazo-prometido",
-      "familiaTitulo": "Prazo de atendimento prometido",
-      "risco": "Prazo fixo sem controle de agenda, trânsito e peça.",
-      "arquivo": "src/pages/servico-bairro/ServicoCidadePage.tsx",
-      "linha": 336,
-      "trecho": "Entre em contato agora e agende seu atendimento a domicílio. Respondemos em até 15 minutos.",
-      "classificacao": "CONDICIONAL",
-      "criterio": "Tempos de deslocamento e janelas de atendimento são estimativas dependentes de agenda, trânsito e disponibilidade de peça",
-      "evidencia": "Não existe SLA contratado; o texto precisa manter o qualificador ('conforme disponibilidade', 'estimado', 'quando há peça em estoque')",
-      "acao": "Proibido prazo absoluto sem condicionante. 'Atendimento imediato' e 'resposta em até 5 minutos' foram removidos nesta rodada.",
       "urls": []
     },
     {

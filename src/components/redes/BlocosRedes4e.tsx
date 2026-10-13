@@ -16,7 +16,6 @@ import {
   mensagemWhatsapp4e,
 } from "@/lib/enriquecimento4eRedes";
 import { whatsappLinkComContexto } from "@/lib/waContextLink";
-import { trackWaClick } from "@/lib/funnelAnalytics";
 
 /**
  * Rodada 4E — blocos de rede, Wi-Fi e suporte remoto em owners existentes.
@@ -54,15 +53,21 @@ export const BlocosRedes4e = ({
 
   const abrirFunil = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
-    trackWaClick("redes_4e", {
-      route: path,
-      cta_position: "bloco_redes_4e",
-      segmento: "redes",
-      modalidade,
-      cidade,
-      utm_campaign: servico,
-      utm_source: "site",
-    });
+    void import("@/lib/funnelAnalytics")
+      .then(({ trackWaClick }) =>
+        trackWaClick("redes_4e", {
+          route: path,
+          cta_position: "bloco_redes_4e",
+          segmento: "redes",
+          modalidade,
+          cidade,
+          utm_campaign: servico,
+          utm_source: "site",
+        }),
+      )
+      .catch(() => {
+        /* tracking nunca bloqueia o funil */
+      });
     if (typeof window !== "undefined") {
       window.dispatchEvent(
         new CustomEvent("wa-funnel:open", {

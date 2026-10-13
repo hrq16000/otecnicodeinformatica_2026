@@ -1242,7 +1242,7 @@ export const BlogPostFAQ = ({ category, slug }: { category: string; slug: string
     <section className="not-prose mt-12" data-faq-visivel>
 
       <h2 className="font-heading font-bold text-primary text-xl md:text-2xl mb-4">
-        Perguntas frequentes
+        Dúvidas frequentes sobre este tema
       </h2>
       <div className="rounded-2xl border border-border bg-card divide-y divide-border overflow-hidden">
         {items.map((it, i) => (

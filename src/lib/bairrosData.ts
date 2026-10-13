@@ -95,7 +95,7 @@ export const BAIRROS: Record<string, BairroLocalData> = {
       "Quando há travamento, tela azul ou desligamento, a sequência de diagnóstico muda conforme o sinal observado. Erro reproduzível em software pode ser investigado remotamente; falha de energia, ausência de vídeo, temperatura elevada, ruído mecânico ou armazenamento suspeito pedem inspeção física e, quando necessário, bancada.",
     ],
     logisticaLocal: [
-      "A Regional CIC abrange CIC, Augusta, Riviera e São Miguel. A atual Rua da Cidadania CIC fica na Rua Orlando Luís Lamarca, 458, próxima ao Terminal CIC. Essas referências oficiais são usadas apenas para localizar a região atendida; não representam filial, oficina ou ponto físico da marca no endereço.",
+      "A Regional CIC abrange CIC, Augusta, Riviera e São Miguel. A atual Rua da Cidadania CIC fica na Rua Orlando Luís Lamarca, 458, próxima ao Terminal CIC. Essas referências oficiais ajudam a localizar a região atendida; são marcos geográficos, não endereços de atendimento da marca.",
       "A modalidade é definida pelo problema. Configuração, navegador, parte dos erros do Windows e algumas falhas de impressão podem começar por acesso remoto. Rede do local, cabeamento e dispositivos que precisam ser testados no ambiente pedem visita. Desmontagem, falha física e teste prolongado seguem para bancada.",
       "O endereço completo é confirmado antes do agendamento. Não existe promessa fixa de chegada vinculada ao bairro: agenda, deslocamento e prazo dependem do endereço, da modalidade, da complexidade e de eventual necessidade de peça.",
     ],

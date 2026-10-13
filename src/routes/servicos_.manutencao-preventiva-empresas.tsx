@@ -1,7 +1,9 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { legacyRouteElements } from "@/legacyRouteElements";
+import { lazyPaginaComJsonLd } from "@/lib/lazyPaginaComJsonLd";
 
-const RouteComponent = legacyRouteElements["/servicos/manutencao-preventiva-empresas"];
+// Página própria do slug: o registry global não é carregado nesta rota.
+// JSON-LD continua no segmento SSR da página resolvida.
+const RouteComponent = lazyPaginaComJsonLd(() => import("@/pages/servicos/ManutencaoPreventivaEmpresasCore"));
 
 export const Route = createFileRoute("/servicos_/manutencao-preventiva-empresas")({
   component: RouteComponent,
