@@ -40,6 +40,23 @@ jobs:
           path: reports/test-inventory.json
           if-no-files-found: warn
 
+  # O lint completo e preservado, mas roda independente do build: antes,
+  # um lint demorado impedia de executar os gates bloqueantes (era non-blocking).
+  lint:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    continue-on-error: true
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: npm
+      - name: Install deps
+        run: npm ci --no-audit --no-fund
+      - name: Lint completo do repositorio (observacional)
+        run: npm run lint --silent
+
   build:
     needs: unit
     runs-on: ubuntu-latest
@@ -55,8 +72,6 @@ jobs:
           node-version: "20"
       - name: Install deps
         run: npm ci --no-audit --no-fund
-      - name: Lint (non-blocking warnings)
-        run: npm run lint --silent || echo "::warning::lint reported issues"
       # Comando oficial: gates essenciais de código e conteúdo.
       # Os testes já rodam no job `unit`, por isso ficam de fora aqui.
       - name: verify (gates essenciais — comando oficial)
@@ -93,9 +108,18 @@ jobs:
         run: node scripts/with-ssr-server.mjs npm run check:local-interlinking
       - name: Gate de saúde de indexação (rotas + aliases)
         run: |
-          npx vite preview --port 4321 --strictPort &
-          for i in $(seq 1 60); do curl -sf -o /dev/null http://localhost:4321/ && break; sleep 1; done
-          node scripts/check-index-health.mjs --base=http://localhost:4321 --strict
+          set -euo pipefail
+          test -f dist/server/wrangler.json
+          npx --yes wrangler@4.45.4 dev --config dist/server/wrangler.json --local --ip 127.0.0.1 --port 4321 > /tmp/ci-index-worker.log 2>&1 &
+          worker_pid=$!
+          trap 'kill "$worker_pid" 2>/dev/null || true' EXIT
+          ready=0
+          for i in $(seq 1 60); do
+            if curl -fsS -o /dev/null http://127.0.0.1:4321/; then ready=1; break; fi
+            sleep 1
+          done
+          if [ "$ready" != "1" ]; then cat /tmp/ci-index-worker.log; exit 1; fi
+          node scripts/check-index-health.mjs --base=http://127.0.0.1:4321 --strict
       - name: Relatório HTML de auditoria local
         run: npm run report:local-audit
 
@@ -132,7 +156,7 @@ jobs:
       - name: Build
         run: npm run build
       - name: Start preview
-        run: npx vite preview --port 8080 &
+        run: npx --yes wrangler@4.45.4 dev --config dist/server/wrangler.json --local --ip 127.0.0.1 --port 8080 > /tmp/ci-e2e-worker.log 2>&1 &
         env:
           CI: "true"
       - name: Wait for server
@@ -198,7 +222,7 @@ jobs:
       - name: Build (uma única vez por job)
         run: npm run build
       - name: Start preview
-        run: npx vite preview --port 8080 &
+        run: npx --yes wrangler@4.45.4 dev --config dist/server/wrangler.json --local --ip 127.0.0.1 --port 8080 > /tmp/ci-e2e-worker.log 2>&1 &
       - name: Wait for server (healthcheck HTTP)
         run: npx wait-on http-get://localhost:8080/ --timeout 90000
       - name: Run shard ${{ matrix.shard }}/${{ matrix.totalShards }} (${{ matrix.browser }})
