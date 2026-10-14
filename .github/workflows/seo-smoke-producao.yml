@@ -1,0 +1,28 @@
+# Gate focado no domínio publicado: não depende de build local ou de chaves externas.
+# O smoke de borda/redirects é validado separadamente porque exige dist/route-manifest.json.
+name: SEO - indexabilidade em producao
+
+on:
+  pull_request:
+    paths:
+      - "scripts/smoke-pos-deploy.mjs"
+      - ".github/workflows/seo-smoke-producao.yml"
+  workflow_dispatch:
+
+concurrency:
+  group: seo-indexabilidade-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  validar:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    env:
+      SITE_BASE_URL: https://otecnicodeinformatica.com.br
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - name: Checar HTML SSR, meta robots, canonical, robots.txt e 8 sitemaps em producao
+        run: node scripts/smoke-pos-deploy.mjs
