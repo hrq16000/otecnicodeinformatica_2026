@@ -31,7 +31,7 @@ jobs:
         run: node scripts/smoke-pos-deploy.mjs
 
   redirects-ssr-preview:
-    name: Redirecionamentos 301 no SSR gerado pelo build
+    name: Redirecionamentos 301 no Worker gerado pelo build
     runs-on: ubuntu-24.04
     timeout-minutes: 12
     steps:
@@ -48,7 +48,11 @@ jobs:
         run: |
           set -euo pipefail
           npm run build
-          npx vite preview --port 4321 --strictPort > /tmp/seo-preview.log 2>&1 &
+          # Nitro gera um Cloudflare Worker (dist/server/index.mjs + wrangler.json).
+          # vite preview procura dist/server/server.js, que NAO existe neste preset.
+          test -f dist/server/index.mjs
+          test -f dist/server/wrangler.json
+          npx --yes wrangler@4.45.4 dev --config dist/server/wrangler.json --local --ip 127.0.0.1 --port 4321 > /tmp/seo-preview.log 2>&1 &
           server_pid=$!
           trap 'kill "$server_pid" 2>/dev/null || true' EXIT
           ready=0
