@@ -72,6 +72,12 @@ jobs:
           node-version: "20"
       - name: Install deps
         run: npm ci --no-audit --no-fund
+      # Diagnóstico reproduzível do gate check:afirmacoes. A divergência continua
+      # bloqueante, e o inventário calculado fica disponível para revisão/commit.
+      - name: Regenerar inventário de afirmações para comparação
+        run: npm run report:afirmacoes
+      - name: Exigir inventário versionado atualizado (bloqueante)
+        run: git diff --exit-code -- src/data/trustClaimsAudit.json
       # Comando oficial: gates essenciais de código e conteúdo.
       # Os testes já rodam no job `unit`, por isso ficam de fora aqui.
       - name: verify (gates essenciais — comando oficial)
@@ -131,6 +137,14 @@ jobs:
           path: reports/pipeline-*.json
           if-no-files-found: warn
 
+
+      - name: Upload inventário de afirmações calculado
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: trust-claims-audit-current
+          path: src/data/trustClaimsAudit.json
+          if-no-files-found: warn
 
       - name: Upload relatório de auditoria local
         if: always()
@@ -270,7 +284,9 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 15
     needs: e2e-full-matrix
-    if: always()
+    # Sem shards executados (por build bloqueado), não existem blobs.
+    # Shards executados com falha seguem para consolidação: não encobrir falhas.
+    if: ${{ always() && needs.e2e-full-matrix.result != 'skipped' }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
