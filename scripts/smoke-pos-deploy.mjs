@@ -67,6 +67,29 @@ for (const { path, precisa } of URLS) {
     const faltando = precisa.filter((t) => !body.includes(t));
     if (faltando.length) falhas.push(`FAIL_CONTENT ${path}: ausente ${faltando.join(", ")}`);
 
+    // GATE DE INDEXABILIDADE REAL: valida o HTML e os headers publicados,
+    // não só o build local. Todas as URLs do smoke são públicas e curadas.
+    const xRobots = res.headers.get("x-robots-tag") ?? "";
+    if (/\bnoindex\b/i.test(xRobots)) {
+      falhas.push(`FAIL_X_ROBOTS_NOINDEX ${path}: ${xRobots}`);
+    }
+
+    const robotsTags = [...body.matchAll(/<meta\b[^>]*>/gi)]
+      .map(([tag]) => tag)
+      .filter((tag) => /\bname\s*=\s*["']robots["']/i.test(tag));
+    if (robotsTags.length !== 1 ||
+        !/\bcontent\s*=\s*["']index\s*,\s*follow["']/i.test(robotsTags[0])) {
+      falhas.push(`FAIL_META_ROBOTS ${path}: esperado exatamente um index, follow (encontrados ${robotsTags.length})`);
+    }
+
+    const canonicalTags = [...body.matchAll(/<link\b[^>]*>/gi)]
+      .map(([tag]) => tag)
+      .filter((tag) => /\brel\s*=\s*["']canonical["']/i.test(tag));
+    const canonical = canonicalTags[0]?.match(/\bhref\s*=\s*["']([^"']+)["']/i)?.[1];
+    if (canonicalTags.length !== 1 || canonical !== `${BASE}${path}`) {
+      falhas.push(`FAIL_CANONICAL ${path}: esperado ${BASE}${path}; recebido ${canonical ?? "(ausente)"}`);
+    }
+
     if (path === "/" && versaoManifesto) {
       const m = body.match(/__APP_VERSION__\s*=\s*"([^"]+)"/);
       if (!m) falhas.push("FAIL_VERSION_TAG: __APP_VERSION__ não encontrado no HTML SSR");
