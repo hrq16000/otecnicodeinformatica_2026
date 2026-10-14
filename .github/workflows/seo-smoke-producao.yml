@@ -6,6 +6,9 @@ on:
   pull_request:
     paths:
       - "scripts/smoke-pos-deploy.mjs"
+      - "src/server.ts"
+      - "src/lib/redirectMatrix.ts"
+      - "src/__tests__/canonical-host-redirect.test.ts"
       - ".github/workflows/seo-smoke-producao.yml"
   workflow_dispatch:
 
@@ -26,3 +29,51 @@ jobs:
           node-version: "20"
       - name: Checar HTML SSR, meta robots, canonical, robots.txt e 8 sitemaps em producao
         run: node scripts/smoke-pos-deploy.mjs
+
+  redirects-ssr-preview:
+    name: Redirecionamentos 301 no SSR gerado pelo build
+    runs-on: ubuntu-24.04
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: "1.2.21"
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Instalar dependencias
+        run: npm ci --no-audit --no-fund
+      - name: Build e smoke HTTP 301 do SSR
+        run: |
+          set -euo pipefail
+          npm run build
+          npx vite preview --port 4321 --strictPort > /tmp/seo-preview.log 2>&1 &
+          server_pid=$!
+          trap 'kill "$server_pid" 2>/dev/null || true' EXIT
+          ready=0
+          for i in $(seq 1 40); do
+            if curl -fsS -o /dev/null http://127.0.0.1:4321/; then ready=1; break; fi
+            sleep 1
+          done
+          if [ "$ready" != "1" ]; then cat /tmp/seo-preview.log; exit 1; fi
+          node --input-type=module <<'NODE'
+          import assert from "node:assert/strict";
+          const origin = "http://127.0.0.1:4321";
+          const cases = [
+            ["/servicos/formatacao-computador?utm_source=bing", "/servicos/formatacao?utm_source=bing", "GET"],
+            ["/servicos/remocao-virus", "/servicos/remocao-de-virus", "HEAD"],
+            ["/privacidade?ref=rodape", "/politica-de-privacidade?ref=rodape", "GET"],
+            ["/blog/tela-azul-windows-como-resolver", "/blog/como-resolver-tela-azul-windows", "GET"],
+          ];
+          for (const [oldPath, target, method] of cases) {
+            const response = await fetch(origin + oldPath, { method, redirect: 'manual' });
+            const location = response.headers.get("location");
+            assert.equal(response.status, 301, `${oldPath} precisa retornar 301`);
+            assert.equal(new URL(location, origin).href, origin + target, `${oldPath} destino incorreto`);
+            console.log(`PASS ${method} ${oldPath} -> ${target}`);
+          }
+          const original = await fetch(origin + "/servicos/formatacao", { redirect: "manual" });
+          assert.equal(original.status, 200, "URL canonica precisa responder 200");
+          console.log("PASS URL canonica 200 e 4 redirecionamentos HTTP 301.");
+          NODE
