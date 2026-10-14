@@ -9,6 +9,13 @@ on:
       - "src/server.ts"
       - "src/lib/redirectMatrix.ts"
       - "src/__tests__/canonical-host-redirect.test.ts"
+      - "src/lib/bairrosData.ts"
+      - "src/lib/bairrosLote2.ts"
+      - "src/lib/bairrosLote4.ts"
+      - "src/lib/blogEditorialRegistry.ts"
+      - "src/lib/cidadesData.ts"
+      - "src/pages/ConsertoImpressoraCuritiba.tsx"
+      - "scripts/check-trust-claims.mjs"
       - ".github/workflows/seo-smoke-producao.yml"
   workflow_dispatch:
 
@@ -17,6 +24,20 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
+  confianca-e-seguranca-estatica:
+    name: Claims comerciais e regressao de seguranca — fail-closed
+    runs-on: ubuntu-24.04
+    timeout-minutes: 4
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Claims de confianca sem promessas nao comprovadas
+        run: node scripts/check-trust-claims.mjs
+      - name: Achados de seguranca anteriormente corrigidos
+        run: node scripts/check-security-regressions.mjs
+
   validar:
     runs-on: ubuntu-24.04
     timeout-minutes: 5
