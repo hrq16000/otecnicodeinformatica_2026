@@ -1,0 +1,45 @@
+name: Security quick triage (production deps and current secrets)
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - ".github/workflows/security-quick-triage.yml"
+      - "package.json"
+      - "package-lock.json"
+      - "src/**"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  production-dependencies:
+    name: Audit de vulnerabilidades altas/criticas em dependencias de producao
+    runs-on: ubuntu-24.04
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Instalar so dependencias de producao
+        run: npm ci --omit=dev --no-audit --no-fund --ignore-scripts
+      - name: Audit high/critical de producao — bloqueante
+        run: npm audit --omit=dev --audit-level=high
+
+  working-tree-secrets:
+    name: Secrets no estado atual do repositorio — bloqueante
+    runs-on: ubuntu-24.04
+    timeout-minutes: 6
+    steps:
+      - uses: actions/checkout@v4
+      - name: Scan de segredos em todos os arquivos atuais
+        run: |
+          docker run --rm -v "${{ github.workspace }}:/repo:ro" \
+            ghcr.io/gitleaks/gitleaks:v8.30.1 \
+            dir /repo --redact --no-banner
