@@ -25,6 +25,59 @@ import { getSessionId } from "@/lib/funnelSubmission";
 import { copyCtaMobile } from "@/lib/experimentosCtaMobile";
 import { whatsappLinkComContexto } from "@/lib/waContextLink";
 
+type DeferredHydrationProps = { children: ReactNode };
+
+/**
+ * Mantém o conteúdo abaixo da dobra no HTML SSR, mas não hidrata toda a árvore
+ * enquanto ela estiver fora da viewport. Links continuam funcionando como
+ * âncoras nativas antes da hidratação; rolagem, foco ou ponteiro liberam a
+ * fronteira imediatamente para preservar a interação.
+ */
+const waitForBelowFoldIntent = () =>
+  new Promise<void>((resolve) => {
+    if (typeof window === "undefined") {
+      resolve();
+      return;
+    }
+
+    let observer: IntersectionObserver | undefined;
+    let frame = 0;
+    const events: Array<keyof WindowEventMap> = ["pointerdown", "keydown", "focusin"];
+
+    const finish = () => {
+      observer?.disconnect();
+      if (frame) window.cancelAnimationFrame(frame);
+      events.forEach((event) => window.removeEventListener(event, finish));
+      resolve();
+    };
+
+    events.forEach((event) => window.addEventListener(event, finish, { once: true, passive: true }));
+
+    const observe = () => {
+      const target = document.getElementById("incluso");
+      if (!target) {
+        frame = window.requestAnimationFrame(observe);
+        return;
+      }
+      observer = new IntersectionObserver(
+        (entries) => {
+          if (entries.some((entry) => entry.isIntersecting)) finish();
+        },
+        { rootMargin: "160px 0px" },
+      );
+      observer.observe(target);
+    };
+
+    observe();
+  });
+
+const DeferredBelowFold = lazy(async () => {
+  await waitForBelowFoldIntent();
+  return {
+    default: ({ children }: DeferredHydrationProps) => <>{children}</>,
+  };
+});
+
 
 // Blocos abaixo da dobra não devem aumentar o bundle de primeira interação.
 // React SSR resolve as boundaries, mantendo rodapé, links e interligação no HTML.
@@ -312,6 +365,8 @@ export const ServicoLandingLayout = ({ data }: { data: ServicoLandingData }) => 
         </div>
       </section>
 
+      <Suspense fallback={null}>
+        <DeferredBelowFold>
       {/* Rodada 3S — contexto B2B logo abaixo do hero (só variante empresarial) */}
       {isEmpresarial && (
         <section className="border-b border-border bg-secondary py-8" aria-label="Contexto do atendimento empresarial">
@@ -649,6 +704,8 @@ export const ServicoLandingLayout = ({ data }: { data: ServicoLandingData }) => 
 
       <Suspense fallback={null}>
         <LazyInterlinkingBlock />
+      </Suspense>
+        </DeferredBelowFold>
       </Suspense>
       </main>
       <Suspense fallback={null}>
