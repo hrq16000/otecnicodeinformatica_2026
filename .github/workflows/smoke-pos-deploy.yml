@@ -6,6 +6,10 @@
 name: Smoke pós-deploy
 
 on:
+  pull_request:
+    paths:
+      - "scripts/smoke-pos-deploy.mjs"
+      - ".github/workflows/smoke-pos-deploy.yml"
   workflow_dispatch:
     inputs:
       base:
