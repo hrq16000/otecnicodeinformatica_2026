@@ -102,6 +102,70 @@ for (const { path, precisa } of URLS) {
   }
 }
 
+
+// Gate de descoberta da busca no domínio publicado, sem depender de GSC/API.
+// Reprova arquivo ausente, fallback HTML 200, sitemap vazio ou host errado.
+async function verificarDescoberta() {
+  let robots = "";
+  try {
+    const { res, body } = await buscar(BASE + "/robots.txt");
+    if (res.status !== 200) falhas.push("FAIL_ROBOTS_HTTP " + res.status);
+    else robots = body;
+  } catch (err) {
+    falhas.push("FAIL_ROBOTS_FETCH " + err.message);
+  }
+  const geral = robots.match(/(?:^|\n)User-agent:\s*\*\s*\r?\n([\s\S]*?)(?=\r?\nUser-agent:|$)/i)?.[1] ?? "";
+  if (!geral || /^\s*Disallow:\s*\/\s*$/im.test(geral)) {
+    falhas.push("FAIL_ROBOTS_CRAWL: User-agent * ausente ou bloqueio global");
+  }
+  if (!robots.includes("Sitemap: " + BASE + "/sitemap-index.xml")) {
+    falhas.push("FAIL_ROBOTS_DISCOVERY: sitemap-index nao anunciado");
+  }
+
+  let xml = "";
+  try {
+    const { res, body } = await buscar(BASE + "/sitemap-index.xml");
+    if (res.status !== 200) falhas.push("FAIL_INDEX_HTTP " + res.status);
+    else xml = body;
+  } catch (err) {
+    falhas.push("FAIL_INDEX_FETCH " + err.message);
+  }
+  if (!/<sitemapindex\b/i.test(xml)) {
+    falhas.push("FAIL_INDEX_XML: sitemap ausente ou substituido por HTML");
+    return;
+  }
+  const sub = [...xml.matchAll(/<loc>\s*(https:\/\/[^<]+)\s*<\/loc>/gi)].map((m) => m[1].trim());
+  if (!sub.includes(BASE + "/sitemap-main.xml") || !sub.includes(BASE + "/sitemap-servicos.xml")) {
+    falhas.push("FAIL_INDEX_CORE: main/servicos nao encontrados");
+  }
+  if (sub.length === 0 || new Set(sub).size !== sub.length) {
+    falhas.push("FAIL_INDEX_EMPTY_OR_DUPLICATE");
+  }
+  for (const url of sub) {
+    let parsed;
+    try { parsed = new URL(url); } catch {
+      falhas.push("FAIL_SITEMAP_URL " + url);
+      continue;
+    }
+    if (parsed.origin !== BASE || !/^\/sitemap-[a-z-]+\.xml$/.test(parsed.pathname)) {
+      falhas.push("FAIL_SITEMAP_HOST " + url);
+      continue;
+    }
+    try {
+      const { res, body } = await buscar(url);
+      if (res.status !== 200 || !/<urlset\b/i.test(body) || !body.includes("<loc>" + BASE + "/")) {
+        falhas.push("FAIL_SITEMAP_CHILD " + parsed.pathname + " HTTP " + res.status);
+      } else {
+        linhas.push("200 " + parsed.pathname + " [XML]");
+      }
+    } catch (err) {
+      falhas.push("FAIL_SITEMAP_FETCH " + parsed.pathname + " " + err.message);
+    }
+  }
+  if (robots && xml) linhas.push("200 /robots.txt + /sitemap-index.xml");
+}
+await verificarDescoberta();
+
 console.log(`SMOKE PÓS-DEPLOY — base=${BASE}`);
 for (const l of linhas) console.log(`  ✓ ${l}`);
 if (falhas.length) {
