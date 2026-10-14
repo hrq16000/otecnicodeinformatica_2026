@@ -63,6 +63,7 @@ jobs:
           if [ "$ready" != "1" ]; then cat /tmp/seo-preview.log; exit 1; fi
           node --input-type=module <<'NODE'
           import assert from "node:assert/strict";
+          import { readRedirectMatrix } from "./scripts/lib/route-manifest.mjs";
           const origin = "http://127.0.0.1:4321";
           const cases = [
             ["/servicos/formatacao-computador?utm_source=bing", "/servicos/formatacao?utm_source=bing", "GET"],
@@ -77,6 +78,21 @@ jobs:
             assert.equal(new URL(location, origin).href, origin + target, `${oldPath} destino incorreto`);
             console.log(`PASS ${method} ${oldPath} -> ${target}`);
           }
+          // Toda a matriz estatica de aliases tem que redirecionar em um salto.
+          // A fonte e lida do repositorio, sem copiar manualmente os 36 slugs.
+          const regras = await readRedirectMatrix(process.cwd());
+          assert.ok(regras.length >= 36, `matriz inesperadamente curta: ${regras.length}`);
+          for (const regra of regras) {
+            const antigo = regra.from + "?utm_source=seo-ci";
+            const esperado = new URL(regra.to + "?utm_source=seo-ci", origin).href;
+            const resp = await fetch(origin + antigo, { redirect: "manual" });
+            assert.equal(resp.status, 301, `${regra.from}: esperado 301, veio ${resp.status}`);
+            assert.equal(new URL(resp.headers.get("location"), origin).href, esperado, `${regra.from}: Location incorreto`);
+            const destino = await fetch(origin + regra.to, { redirect: "manual" });
+            assert.equal(destino.status, 200, `${regra.from}: destino ${regra.to} retornou ${destino.status}`);
+          }
+          console.log(`PASS matriz completa: ${regras.length} aliases 301 de salto unico e destinos 200.`);
+
           const original = await fetch(origin + "/servicos/formatacao", { redirect: "manual" });
           assert.equal(original.status, 200, "URL canonica precisa responder 200");
           console.log("PASS URL canonica 200 e 4 redirecionamentos HTTP 301.");
