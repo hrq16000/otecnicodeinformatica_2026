@@ -24,7 +24,28 @@ export function EditorialCta({
 }) {
   const entry = getEditorialEntry(slug);
   const cluster = entry ? EDITORIAL_CLUSTERS[entry.cluster] : undefined;
-  if (!cluster) return null;
+  // Artigos aprovados fora do mapa de clusters também precisam ter
+  // um próximo passo real no HTML SSR, sem abrir WhatsApp diretamente.
+  if (!cluster) {
+    return (
+      <aside className="not-prose mt-12 rounded-2xl border border-accent/20 bg-muted/30 p-6 md:p-8">
+        <h3 className="font-heading font-bold text-primary text-lg md:text-xl mb-2">
+          Precisa de orientação sobre este guia?
+        </h3>
+        <p className="text-muted-foreground text-sm mb-5">
+          Descreva seu equipamento e os sintomas antes de escolher uma modalidade de atendimento.
+        </p>
+        <Link
+          to={`/contato?assunto=${encodeURIComponent(`Guia: ${titulo}`)}`}
+          data-cta-location="editorial_static"
+          className="inline-flex items-center justify-center gap-2 bg-accent hover:bg-accent/90 text-accent-foreground font-semibold px-6 py-3 rounded-xl transition-colors"
+        >
+          <MessageSquare className="h-4 w-4" />
+          Solicitar triagem técnica
+        </Link>
+      </aside>
+    );
+  }
 
   const branch: CtaBranch = cluster.ctaBranch;
 
