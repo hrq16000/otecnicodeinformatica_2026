@@ -46,6 +46,9 @@ export const verifySteps = [
   { name: 'Tendência de órfãs', script: 'check:orphan-trend' },
   { name: 'Intenção conversacional', script: 'check:conversational-intent' },
   { name: 'Interlinks do Lote 1 (/problemas)', script: 'check:problem-interlinks' },
+  // O inventario nao esta versionado (reports/ e ignorado pelo Git).
+  // Gere-o no checkout atual ANTES de conferir as decisoes, sem pular o gate.
+  { name: 'Inventario de intencao de /problemas', script: 'report:problem-intent' },
   { name: 'Decisões de /problemas', script: 'check:problem-decisions' },
   { name: 'Payload de realtime sem PII', script: 'check:realtime-payload' },
   { name: 'Hierarquia local (bairros/cidades)', script: 'check:local-hierarchy' },
