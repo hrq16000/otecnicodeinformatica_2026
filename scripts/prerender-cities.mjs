@@ -400,10 +400,67 @@ function countWords(block) {
 }
 
 
+// O runtime usa { ...base, ...supplemental, ...programmatic } e dá
+// precedência ao artigo suplementar. Estas 49 substituições já coexistem
+// no acervo; não são novas URLs nem aprovam indexação. Novas colisões
+// continuam bloqueando o gate até revisão explícita deste manifesto.
+const SUPPLEMENTAL_SHADOW_SLUGS = new Set([
+  "arquivo-corrompido-nao-abre-o-que-fazer",
+  "bios-corrompida-reset-cmos-atualizacao",
+  "botao-power-nao-funciona-jump-start-placa-mae",
+  "codigos-de-erro-tela-azul-windows",
+  "como-aprender-informatica",
+  "como-configurar-active-directory",
+  "como-configurar-bios-uefi-corretamente",
+  "como-configurar-roteador-wifi-iniciantes",
+  "como-escolher-uma-workstation",
+  "como-fazer-teste-velocidade-internet",
+  "como-formatar-pc-sem-perder-arquivos",
+  "como-instalar-segundo-ssd-notebook",
+  "como-instalar-windows-11-do-zero",
+  "como-melhorar-sinal-wifi-em-casa",
+  "como-organizar-arquivos-windows-iniciantes",
+  "como-recuperar-dados-hd-com-defeito",
+  "como-remover-virus-windows-iniciantes",
+  "como-resolver-tela-azul-windows",
+  "como-saber-quem-esta-usando-meu-wifi",
+  "como-saber-se-pc-tem-virus-malware",
+  "como-trocar-pasta-termica-notebook",
+  "como-trocar-tela-notebook-passo-a-passo",
+  "computador-entra-direto-na-bios",
+  "computador-lento-causas-solucoes",
+  "computador-sem-som-o-que-verificar",
+  "dispositivo-usb-nao-reconhecido-o-que-fazer",
+  "erro-no-bootable-device-como-resolver",
+  "erros-comuns-upgrade-computador",
+  "fila-de-impressao-travada-spooler-windows",
+  "fone-de-ouvido-nao-e-reconhecido-no-pc",
+  "hd-nao-e-reconhecido-na-bios-o-que-fazer",
+  "historico-de-arquivos-windows-como-configurar",
+  "impressora-offline-como-resolver",
+  "informatica-basica",
+  "limpar-cache-do-windows-update-softwaredistribution",
+  "memoria-ram-insuficiente-sintomas",
+  "notebook-nao-liga-o-que-fazer",
+  "notebook-superaquecendo-o-que-fazer",
+  "o-que-e-informatica",
+  "ordem-de-boot-na-bios-como-configurar",
+  "organizacao-de-ti-para-pequenos-escritorios",
+  "pendrive-somente-leitura-protegido-contra-gravacao",
+  "permissoes-de-camera-no-windows",
+  "quanto-custa-formatar-um-computador",
+  "servico-de-audio-do-windows-nao-esta-em-execucao",
+  "testar-memoria-ram-memtest86",
+  "troquei-o-ssd-e-o-pc-so-abre-a-bios",
+  "windows-update-nao-funciona-o-que-verificar",
+  "windows-update-travado-desfazendo-alteracoes",
+]);
+
 export async function getBlogPosts(rootDir = ".") {
   const posts = [];
   const seen = new Set();
   const duplicates = [];
+  const observedShadows = new Set();
 
   // --- Base manual (blogPostsContentBase) ---
   const basePath = path.join(rootDir, "src/data/blogPostsContent.tsx");
@@ -451,9 +508,7 @@ export async function getBlogPosts(rootDir = ".") {
     const category = extractField(block, "category");
     const readTime = extractField(block, "readTime");
     if (!title) continue;
-    if (seen.has(slug)) { duplicates.push(slug); continue; }
-    seen.add(slug);
-    posts.push({
+    const supplementalPost = {
       slug, title, excerpt: excerpt ?? "", date: date ?? HOWTO_DEFAULT_DATE,
       category: category ?? "", origin: "supplemental",
       readTime: readTime ?? "10 min",
@@ -461,7 +516,20 @@ export async function getBlogPosts(rootDir = ".") {
       headings: extractHeadings(block),
       sections: extractSections(block),
       wordCount: countWords(block),
-    });
+    };
+    if (seen.has(slug)) {
+      const index = posts.findIndex((post) => post.slug === slug && post.origin === "manual");
+      // Apenas as substituições conhecidas seguem a precedência real do runtime.
+      if (index < 0 || !SUPPLEMENTAL_SHADOW_SLUGS.has(slug)) {
+        duplicates.push(slug);
+        continue;
+      }
+      posts[index] = supplementalPost;
+      observedShadows.add(slug);
+      continue;
+    }
+    seen.add(slug);
+    posts.push(supplementalPost);
   }
 
 
@@ -491,6 +559,10 @@ export async function getBlogPosts(rootDir = ".") {
     });
   }
 
+  // Mudanças na coexistência base/suplementar não podem passar em silêncio.
+  for (const slug of SUPPLEMENTAL_SHADOW_SLUGS) {
+    if (!observedShadows.has(slug)) duplicates.push(`sobrescrita-nao-confirmada:${slug}`);
+  }
   return { posts, duplicates };
 }
 
