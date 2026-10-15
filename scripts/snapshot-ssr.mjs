@@ -67,9 +67,14 @@ function rotasDaPolitica() {
 }
 
 async function baixar(rota) {
-  const res = await fetch(`${base}${rota}`, { headers: { "user-agent": "snapshot-ssr/1.0" } });
-  const html = await res.text();
-  return { status: res.status, html };
+  // Não seguir 301: um alias deve ser validado como redirect, não salvo
+  // como se fosse uma página 200 com canonical do destino.
+  const res = await fetch(`${base}${rota}`, {
+    headers: { "user-agent": "snapshot-ssr/1.0" },
+    redirect: "manual",
+  });
+  const html = res.status === 200 ? await res.text() : "";
+  return { status: res.status, html, location: res.headers.get("location") };
 }
 
 async function main() {
@@ -82,6 +87,7 @@ async function main() {
   console.log(`snapshot-ssr: ${rotas.length} rota(s) a partir de ${base}`);
 
   let ok = 0;
+  let redirects = 0;
   const falhas = [];
   const lote = 12;
   for (let i = 0; i < rotas.length; i += lote) {
@@ -96,6 +102,21 @@ async function main() {
       }),
     );
     for (const r of resultados) {
+      if (r.status === 301 || r.status === 308) {
+        try {
+          const target = new URL(r.location || "", base);
+          if (!r.location || target.origin !== new URL(base).origin || target.pathname === r.rota) {
+            throw new Error("Location ausente, externa ou autorreferente");
+          }
+          const destino = join(dist, `${r.rota.replace(/^\\//, "")}/redirect.json`);
+          mkdirSync(dirname(destino), { recursive: true });
+          writeFileSync(destino, JSON.stringify({ status: r.status, location: target.pathname }, null, 2));
+          redirects++;
+        } catch (err) {
+          falhas.push(`${r.rota} → redirect inválido: ${String(err)}`);
+        }
+        continue;
+      }
       if (r.status !== 200 || !r.html.includes("</html>")) {
         falhas.push(`${r.rota} → ${r.status}${r.erro ? ` (${r.erro})` : ""}`);
         continue;
@@ -113,7 +134,7 @@ async function main() {
     if (existsSync(src)) copyFileSync(src, join(dist, f));
   }
 
-  console.log(`snapshot-ssr: ${ok} HTML gravado(s) em ${dist}/`);
+  console.log(`snapshot-ssr: ${ok} HTML 200 e ${redirects} redirect(s) registrados em ${dist}/`);
   if (falhas.length) {
     console.log(`snapshot-ssr: ${falhas.length} rota(s) sem HTML:`);
     for (const f of falhas.slice(0, 30)) console.log(`  - ${f}`);
