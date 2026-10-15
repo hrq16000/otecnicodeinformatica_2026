@@ -240,7 +240,13 @@ async function checkStaticHtml(posts) {
 
     // title / description — exatamente 1
     if (count(h, /<title>/gi) !== 1) fail(`/blog/${post.slug}: esperado exatamente 1 <title>`);
-    if (count(h, /<meta\s+name=["']description["']/gi) !== 1) fail(`/blog/${post.slug}: esperado exatamente 1 description`);
+    // React 19 SSR pode serializar atributos em ordem distinta.
+    // Exigir exatamente uma description independente da ordem dos atributos.
+    const descriptions = [...h.matchAll(/<meta\b[^>]*>/gi)].filter(([tag]) =>
+      /\bname\s*=\s*(["'])description\1/i.test(tag),
+    );
+    if (descriptions.length !== 1)
+      fail(`/blog/${post.slug}: esperado exatamente 1 description (achou ${descriptions.length})`);
 
     // og:url self
     const ogUrl = h.match(/<meta\s+property=["']og:url["']\s+content=["']([^"']+)["']/i);
