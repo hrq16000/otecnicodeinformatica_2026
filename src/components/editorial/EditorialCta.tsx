@@ -135,6 +135,15 @@ export function EditorialCta({
           <ArrowRight className="h-4 w-4" />
         </Link>
       </div>
+      {/* Alternativa HTML indexável/acessível ao botão JS de triagem.
+          Preserva a localização e o funil original do botão acima. */}
+      <Link
+        to={`/contato?assunto=${encodeURIComponent(`Guia: ${titulo}`)}`}
+        data-cta-location="editorial_static"
+        className="mt-4 inline-flex text-sm font-medium text-accent underline underline-offset-4 hover:text-primary"
+      >
+        Prefere descrever o caso pelo formulário? Iniciar triagem
+      </Link>
     </div>
   );
 }
