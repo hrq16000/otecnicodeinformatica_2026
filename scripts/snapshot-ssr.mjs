@@ -108,7 +108,7 @@ async function main() {
           if (!r.location || target.origin !== new URL(base).origin || target.pathname === r.rota) {
             throw new Error("Location ausente, externa ou autorreferente");
           }
-          const destino = join(dist, `${r.rota.replace(/^\\//, "")}/redirect.json`);
+          const destino = join(dist, `${r.rota.slice(1)}/redirect.json`);
           mkdirSync(dirname(destino), { recursive: true });
           writeFileSync(destino, JSON.stringify({ status: r.status, location: target.pathname }, null, 2));
           redirects++;
