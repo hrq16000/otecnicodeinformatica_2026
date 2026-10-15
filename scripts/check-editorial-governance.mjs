@@ -197,9 +197,38 @@ async function checkStaticHtml(posts) {
   }
 
 
+  // Aliases programáticos devem responder 301; o snapshot não pode seguir
+  // o redirect e classificá-los como páginas 200 com canonical do destino.
+  const governanceSource = await read(path.join(ROOT, "src/lib/blogProgrammaticGovernance.ts"));
+  const redirectMatches = [...governanceSource.matchAll(
+    /slug:\s*"([^"]+)",\s*status:\s*"redirect",\s*target:\s*"([^"]+)"/g,
+  )];
+  if (redirectMatches.length === 0) fail("governança: nenhum alias editorial reconhecido");
+  const redirects = new Map(redirectMatches.map((m) => [m[1], m[2]]));
+  let redirected = 0;
   let checked = 0;
   for (const post of posts) {
     const fp = path.join(DIST, "blog", post.slug, "index.html");
+    const receipt = path.join(DIST, "blog", post.slug, "redirect.json");
+    const expectedTarget = redirects.get(post.slug);
+    if (expectedTarget) {
+      if (isWaveApproved(post.slug)) fail("/blog/" + post.slug + ": alias 301 na onda aprovada");
+      if (await exists(fp)) fail("/blog/" + post.slug + ": alias 301 publicou HTML 200");
+      if (!(await exists(receipt))) {
+        fail("/blog/" + post.slug + ": comprovante de redirect 301 ausente no snapshot");
+      } else {
+        try {
+          const actual = JSON.parse(await read(receipt));
+          if (actual.status !== 301 || actual.location !== expectedTarget)
+            fail("/blog/" + post.slug + ": esperado 301 para " + expectedTarget + ", obtido " + actual.status + " para " + actual.location);
+        } catch (err) {
+          fail("/blog/" + post.slug + ": comprovante de redirect inválido: " + String(err));
+        }
+      }
+      redirected++;
+      continue;
+    }
+    if (await exists(receipt)) fail("/blog/" + post.slug + ": redirect inesperado em artigo sem consolidação");
     if (!(await exists(fp))) { fail(`artigo sem HTML próprio: /blog/${post.slug}`); continue; }
     const h = await read(fp);
     const url = `${SITE}/blog/${post.slug}`;
@@ -278,7 +307,7 @@ async function checkStaticHtml(posts) {
 
     checked++;
   }
-  note(`HTML inicial: ${checked}/${posts.length} artigos verificados (${EDITORIAL_WAVE_SLUGS.length} indexáveis da onda)`);
+  note(`HTML inicial: ${checked} artigos e ${redirected} aliases 301 verificados (${posts.length} inventariados; ${EDITORIAL_WAVE_SLUGS.length} indexáveis da onda)`);
 }
 
 // ── 6. Sitemaps ────────────────────────────────────────────
