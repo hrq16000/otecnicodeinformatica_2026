@@ -104,7 +104,10 @@ const BlogPost = () => {
         ? post.image
         : `${SITE_BASE_URL}${post.image}`)
     : (slug ? getUniqueImage(slug).replace(/w=\d+/, 'w=1600').replace(/q=\d+/, 'q=80') + '&w=1600&h=900' : '');
-  const heroImageOg = withOgVersion(heroImage);
+  // Capas aprovadas precisam compartilhar a mesma URL exata no OG e no
+  // JSON-LD editorial. Evita divergência com o manifesto de capas e
+  // mantém o versionamento dos demais previews fora da onda.
+  const heroImageOg = editorialCover ? heroImage : withOgVersion(heroImage);
 
   // Compute word count from content (rough estimate via readTime)
   // Índice do artigo: derivado dos headings reais durante o render
