@@ -11,7 +11,6 @@ import { PageTableOfContents } from "@/components/ui/PageTableOfContents";
 import { TrustStrip } from "@/components/TrustStrip";
 import { EditorialCallout } from "@/components/servico/EditorialCallout";
 import { InlineTriageCTA } from "@/components/servico/InlineTriageCTA";
-import { MobileServicoFunnelBar } from "@/components/servico/MobileServicoFunnelBar";
 import type { ServicoCaixa } from "@/lib/servicoVisual3q";
 import {
   EMPRESARIAL_SERVICO_HERO,
@@ -21,9 +20,6 @@ import {
 import { siteConfig, whatsappLink } from "@/lib/siteConfig";
 import { RealImageSection, type ImageKey } from "@/components/RealImageSection";
 import { imagensParaServico } from "@/lib/servicoImagens";
-import { getSessionId } from "@/lib/funnelSubmission";
-import { copyCtaMobile } from "@/lib/experimentosCtaMobile";
-import { whatsappLinkComContexto } from "@/lib/waContextLink";
 
 type DeferredHydrationProps = { children: ReactNode };
 
@@ -76,6 +72,35 @@ const DeferredBelowFold = lazy(async () => {
   return {
     default: ({ children }: DeferredHydrationProps) => <>{children}</>,
   };
+});
+
+const waitForMobileFunnelIntent = () =>
+  new Promise<void>((resolve) => {
+    if (typeof window === "undefined") {
+      resolve();
+      return;
+    }
+
+    const events: Array<keyof WindowEventMap> = ["pointerdown", "keydown", "focusin"];
+    const timeout = window.setTimeout(finish, 2_000);
+
+    function finish() {
+      window.clearTimeout(timeout);
+      events.forEach((event) => window.removeEventListener(event, finish));
+      resolve();
+    }
+
+    events.forEach((event) => window.addEventListener(event, finish, { once: true, passive: true }));
+  });
+
+// O HTML do CTA móvel continua no SSR e o link funciona sem JavaScript. No
+// cliente, experimento e atribuição hidratam por intenção ou após a janela
+// crítica de carregamento.
+const LazyDeferredMobileServicoFunnel = lazy(async () => {
+  await waitForMobileFunnelIntent();
+  return import("@/components/servico/DeferredMobileServicoFunnel").then((m) => ({
+    default: m.DeferredMobileServicoFunnel,
+  }));
 });
 
 
@@ -186,16 +211,6 @@ const CTA_BASE =
 
 export const ServicoLandingLayout = ({ data }: { data: ServicoLandingData }) => {
   const waHref = whatsappLink(data.whatsappMessage);
-  // Rodada 4L — variação de copy do CTA mobile (determinística por sessão).
-  const sessionId = typeof window !== "undefined" ? getSessionId() : "";
-  const ctaMobile = copyCtaMobile(`/servicos/${data.path}`, sessionId, data.serviceName);
-  const waHrefMobile = whatsappLinkComContexto(data.whatsappMessage, {
-    medium: "cta_mobile",
-    servico: data.trackingKey,
-    posicao: "mobile_sticky",
-    variante: ctaMobile.id,
-    etapa: "triagem",
-  });
   const isEmpresarial = data.variante === "empresarial";
   const heroB2B = data.heroEmpresarial ?? EMPRESARIAL_SERVICO_HERO;
   const contextoB2B = data.contextoEmpresarial ?? EMPRESARIAL_CONTEXTO_CARDS;
@@ -220,7 +235,7 @@ export const ServicoLandingLayout = ({ data }: { data: ServicoLandingData }) => 
    * serviço, cidade detectada e atribuição de campanha) para leitura de
    * conversão por rota no dashboard.
    */
-  const handleCtaAt = (position: string) => () => {
+  const handleCtaAt = (position: string, variant?: string) => () => {
     void Promise.all([
       import("@/lib/analytics"),
       import("@/lib/funnelAnalytics"),
@@ -235,7 +250,7 @@ export const ServicoLandingLayout = ({ data }: { data: ServicoLandingData }) => 
           servico: data.trackingKey,
           route: `/servicos/${data.path}`,
           cta_position: position,
-          variant: position === "mobile_sticky" ? ctaMobile.id : undefined,
+          variant,
           cidade: geo?.city ?? null,
           attribution_channel: attr.channel,
           utm_source: attr.source,
@@ -246,18 +261,6 @@ export const ServicoLandingLayout = ({ data }: { data: ServicoLandingData }) => 
         /* tracking nunca bloqueia o clique */
       });
   };
-
-  /**
-   * Etapas exibidas na barra mobile: usa o processo real do serviço
-   * (títulos curtos) e cai no padrão de 4 etapas do portal quando a
-   * página declara menos de quatro passos.
-   */
-  const etapasFunil = (() => {
-    const doServico = data.processo.map((p) => p.title.split(" ").slice(0, 2).join(" "));
-    return doServico.length >= 4
-      ? doServico.slice(0, 4)
-      : ["Triagem", "Diagnóstico", "Aprovação", "Execução"];
-  })();
 
   // Rodada 3Q — caixas editoriais contextuais (no máximo três por página).
   const caixas = (data.caixas ?? []).slice(0, 3);
@@ -711,17 +714,18 @@ export const ServicoLandingLayout = ({ data }: { data: ServicoLandingData }) => 
       <Suspense fallback={null}>
         <LazyFooter />
       </Suspense>
-      {/* Conversão mobile: CTA fixo com a mensagem de funil do próprio serviço */}
-      <MobileServicoFunnelBar
-        href={waHrefMobile}
-        servicoLabel={data.serviceName}
-        etapas={etapasFunil}
-        apoio={ctaMobile.apoio}
-        variante={ctaMobile.id}
-        ctaLabel={isEmpresarial ? heroB2B.ctaPrimario : ctaMobile.ctaLabel}
-        location={`${data.trackingKey}_mobile_sticky`}
-        onClick={handleCtaAt("mobile_sticky")}
-      />
+      {/* Conversão mobile: HTML no SSR; hidratação da ilha fora da janela crítica. */}
+      <Suspense fallback={null}>
+        <LazyDeferredMobileServicoFunnel
+          path={`/servicos/${data.path}`}
+          trackingKey={data.trackingKey}
+          serviceName={data.serviceName}
+          whatsappMessage={data.whatsappMessage}
+          processo={data.processo}
+          ctaLabel={isEmpresarial ? heroB2B.ctaPrimario : undefined}
+          onClick={(variant) => handleCtaAt("mobile_sticky", variant)()}
+        />
+      </Suspense>
     </div>
   );
 };
