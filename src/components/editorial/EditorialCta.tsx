@@ -6,6 +6,9 @@ import {
   type CtaBranch,
 } from "@/lib/editorialClusters";
 import { isEditorialApproved, getApprovedSlugs } from "@/lib/blogEditorialRegistry";
+// Importa os pilares já curados no manifesto da onda editorial (mesma fonte do gate).
+// @ts-ignore — manifesto ESM sem declaração TypeScript; retorno tipado no consumo.
+import { getWaveArticle } from "../../../scripts/lib/editorial-wave.mjs";
 
 /**
  * CTA editorial da Rodada 4F.
@@ -26,6 +29,9 @@ export function EditorialCta({
   const cluster = entry ? EDITORIAL_CLUSTERS[entry.cluster] : undefined;
   // Artigos aprovados fora do mapa de clusters também precisam ter
   // um próximo passo real no HTML SSR, sem abrir WhatsApp diretamente.
+  const pilarDaOnda = isEditorialApproved(slug)
+    ? (getWaveArticle(slug) as { pilar: string; pilarLabel: string } | undefined)
+    : undefined;
   if (!cluster) {
     return (
       <aside className="not-prose mt-12 rounded-2xl border border-accent/20 bg-muted/30 p-6 md:p-8">
@@ -43,6 +49,16 @@ export function EditorialCta({
           <MessageSquare className="h-4 w-4" />
           Solicitar triagem técnica
         </Link>
+        {pilarDaOnda && (
+          <Link
+            to={pilarDaOnda.pilar}
+            data-editorial-pilar={pilarDaOnda.pilar}
+            className="mt-4 inline-flex items-center gap-2 text-sm font-medium text-accent underline underline-offset-4 hover:text-primary"
+          >
+            {pilarDaOnda.pilarLabel}
+            <ArrowRight className="h-4 w-4" />
+          </Link>
+        )}
       </aside>
     );
   }
