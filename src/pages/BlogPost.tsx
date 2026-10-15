@@ -1,6 +1,5 @@
 import { useEffect, useMemo } from "react";
 import { useParams, Link, Navigate } from "@/lib/router-compat";
-import { Helmet } from "react-helmet";
 import { useLoaderData } from "@tanstack/react-router";
 import { useCanonical } from "@/lib/canonicalUrl";
 import { Header } from "@/components/Header";
@@ -220,7 +219,8 @@ const BlogPost = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <Helmet>
+      {/* Metatags nativas React 19: emitidas no <head> já no SSR, sem depender de Helmet client-side. */}
+      <>
         <title>{tituloComMarca(post.title, "Blog | O Técnico de Informática")}</title>
         <meta name="description" content={encurtar(post.excerpt, DESCRIPTION_MAX)} />
         {/* robots/googlebot são gerenciados via efeito (registro editorial) */}
@@ -251,7 +251,7 @@ const BlogPost = () => {
         <meta name="twitter:image:alt" content={post.title} />
         {/* Preload hero image for faster LCP */}
         <link rel="preload" as="image" href={heroImage} fetchPriority="high" />
-      </Helmet>
+      </>
       <JsonLdSchema />
       <Header />
       <main>
