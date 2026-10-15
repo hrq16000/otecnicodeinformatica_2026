@@ -26,7 +26,6 @@ export const verifySteps = [
   { name: 'Contato canônico (WhatsApp único)', script: 'check:canonical-contact' },
   { name: 'Claims de confiança (E-E-A-T)', script: 'check:trust-claims' },
   { name: 'Inventário de afirmações em dia', script: 'check:afirmacoes' },
-  { name: 'Governança editorial', script: 'check:editorial-governance' },
   { name: 'Política de promoção (noindex → index)', script: 'check:promocao-index' },
   { name: 'Links internos', script: 'check:internal-links' },
   { name: 'Qualidade dos interlinks', script: 'check:interlinks-quality' },
@@ -59,6 +58,8 @@ export const verifySteps = [
 export const deployCheckSteps = [
   // O TanStack Start não emite um HTML por rota: os gates leem os snapshots SSR.
   { name: 'Snapshots SSR em dist/', script: 'snapshot:dist' },
+  // Requer dist/ e os sitemaps do build; não executar no verify pré-build.
+  { name: 'Governança editorial', script: 'check:editorial-governance' },
   { name: 'Env de observabilidade', script: 'check:observability-env' },
   { name: 'Sitemap editorial sincronizado', script: 'check:editorial-sitemap' },
   { name: 'Sitemap dinâmico (curado, fail-closed)', script: 'sitemap:dynamic:check' },
