@@ -13,6 +13,7 @@
 import { readFileSync, existsSync, mkdirSync, writeFileSync, copyFileSync, readdirSync } from "node:fs";
 import { join, dirname } from "node:path";
 import { CATEGORIES, LOCAIS } from "./lib/category-local.mjs";
+import { getBlogPosts } from "./prerender-cities.mjs";
 
 // Rotas serviço × cidade/bairro: mesmo quando noindex (fora do sitemap),
 // os gates de breadcrumb/intenção precisam do HTML renderizado.
@@ -72,7 +73,12 @@ async function baixar(rota) {
 }
 
 async function main() {
-  const rotas = [...new Set([...rotasDosSitemaps(), ...rotasDaPolitica(), ...rotasCategoriaLocal()])].sort();
+  // Sitemaps só incluem artigos aprovados, mas o gate editorial também
+  // precisa inspecionar o HTML e o noindex dos rascunhos. Nenhum artigo
+  // é adicionado ao sitemap nem promovido à indexação por este snapshot.
+  const { posts: artigos } = await getBlogPosts(".");
+  const rotasBlog = artigos.map(({ slug }) => `/blog/${slug}`);
+  const rotas = [...new Set([...rotasDosSitemaps(), ...rotasDaPolitica(), ...rotasCategoriaLocal(), ...rotasBlog])].sort();
   console.log(`snapshot-ssr: ${rotas.length} rota(s) a partir de ${base}`);
 
   let ok = 0;
