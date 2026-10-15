@@ -3,6 +3,7 @@ import BlogPostPage from "@/pages/BlogPost";
 import { JsonLdSsrSink } from "@/lib/jsonLdSsr";
 import { SITE_BASE_URL } from "@/lib/siteConfig";
 import { isEditorialApproved } from "@/lib/blogEditorialRegistry";
+import { getEditorialCover } from "@/lib/blogEditorialCovers";
 import { withOgVersion } from "@/lib/ogCacheBust";
 import { metaSocial } from "@/lib/socialMeta";
 import { resolveRedirect } from "@/lib/redirectMatrix";
@@ -57,8 +58,12 @@ export const Route = createFileRoute("/blog_/$slug")({
     const slug = params.slug;
     const approved = isEditorialApproved(slug);
     const canonicalUrl = `${SITE_BASE_URL}/blog/${slug}`;
-    const heroImage = `${SITE_BASE_URL}/og-image.png`;
-    const heroImageOg = withOgVersion(heroImage);
+    // O head da rota é o único dono dos metadados SSR deste artigo.
+    // Para conteúdo aprovado, use a capa editorial declarada no registro.
+    const editorialCover = approved ? getEditorialCover(slug) : null;
+    const heroImageOg = editorialCover
+      ? `${SITE_BASE_URL}${editorialCover.src}`
+      : withOgVersion(`${SITE_BASE_URL}/og-image.png`);
 
     // Rodada 4F: título, description, OG e Twitter saem todos de metaSocial(),
     // garantindo que og:title nunca divirja do <title> renderizado no SSR.
