@@ -36,6 +36,7 @@ import { ArticleToc } from "@/components/editorial/ArticleToc";
 import { getArticleSources, getTechnicalReviewStatus } from "@/lib/blogEditorialSources";
 import NotFound from "./NotFound";
 import { encurtar, tituloComMarca, DESCRIPTION_MAX } from "@/lib/socialMeta";
+import { BLOG_SEO_DESCRIPTIONS } from "@/lib/blogSeoDescriptions";
 
 type PostsMap = Record<string, BlogPostContent>;
 
@@ -65,7 +66,7 @@ const BlogPost = () => {
       document.title = tituloComMarca(post.title, "Blog | O Técnico de Informática");
       const metaDescription = document.querySelector('meta[name="description"]');
       if (metaDescription) {
-        metaDescription.setAttribute("content", encurtar(post.excerpt, DESCRIPTION_MAX));
+        metaDescription.setAttribute("content", encurtar((slug && BLOG_SEO_DESCRIPTIONS[slug]) || post.excerpt, DESCRIPTION_MAX));
       }
       trackPageView(`/blog/${slug}`, `Blog - ${post.title}`);
     }

@@ -6,6 +6,7 @@ import { isEditorialApproved } from "@/lib/blogEditorialRegistry";
 import { getEditorialCover } from "@/lib/blogEditorialCovers";
 import { withOgVersion } from "@/lib/ogCacheBust";
 import { metaSocial } from "@/lib/socialMeta";
+import { BLOG_SEO_DESCRIPTIONS } from "@/lib/blogSeoDescriptions";
 import { resolveRedirect } from "@/lib/redirectMatrix";
 
 /**
@@ -70,7 +71,7 @@ export const Route = createFileRoute("/blog_/$slug")({
     const meta: Array<Record<string, string>> = [
       ...metaSocial({
         titulo: post.title,
-        descricao: post.excerpt,
+        descricao: BLOG_SEO_DESCRIPTIONS[slug] ?? post.excerpt,
         url: canonicalUrl,
         imagem: heroImageOg,
         tipo: approved ? "article" : "website",
