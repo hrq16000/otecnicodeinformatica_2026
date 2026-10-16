@@ -16,8 +16,11 @@ test.describe("SEO — sitemap & robots", () => {
     const res = await request.get(`${BASE}/sitemap-main.xml`);
     expect(res.ok()).toBeTruthy();
     const body = await res.text();
-    expect(body).toContain(`${SITE_URL}/assistencia-tecnica-curitiba`);
-    expect(body).toContain(`${SITE_URL}/termos-e-condicoes`);
+    // Esta rota declara noindex; o sitemap deve listar só proprietários indexáveis.
+    expect(body).not.toContain(`${SITE_URL}/assistencia-tecnica-curitiba`);
+    // Este caminho é alias com canonical para a página fundida de políticas.
+    expect(body).toContain(`${SITE_URL}/precos-e-politicas`);
+    expect(body).not.toContain(`${SITE_URL}/termos-e-condicoes`);
     expect(body).toContain(`${SITE_URL}/`);
   });
 

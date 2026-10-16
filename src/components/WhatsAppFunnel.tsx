@@ -882,6 +882,10 @@ export const WhatsAppFunnel = () => {
   }, [previewMessage, originLocation, answers.equipment, answers.symptom]);
 
 
+  // Interceptação e hooks continuam ativos, mas a árvore pesada da triagem
+  // não é renderizada enquanto o modal está fechado.
+  if (!open) return null;
+
   // ---------- render helpers ----------
   const registerRef = (id: string) => (el: HTMLDivElement | null) => {
     fieldRefs.current.set(id, el);
