@@ -1,0 +1,63 @@
+name: Repair TanStack security lockfile (PR 384 only)
+
+on:
+  push:
+    branches:
+      - fix/seo-gate-producao-indexabilidade-20261014
+    paths:
+      - package.json
+
+permissions:
+  contents: write
+
+jobs:
+  regenerate-lockfile:
+    if: github.repository == 'hrq16000/otecnicodeinformatica_2026'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 18
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - name: Verify pinned patched TanStack version
+        run: |
+          node -e "if (require('./package.json').dependencies['@tanstack/react-start'] !== '1.169.2') process.exit(1)"
+      - name: Rebuild lockfile using official npm resolver (no force)
+        run: npm install --package-lock-only --ignore-scripts --no-audit --no-fund
+      - name: Verify lockfile and no unintended manifest changes
+        run: |
+          git diff --exit-code -- package.json
+          node - <<'NODE'
+          const lock = require('./package-lock.json');
+          const start = lock.packages['node_modules/@tanstack/react-start'];
+          if (start?.version !== '1.169.2') throw new Error('react-start not patched');
+          const core = Object.entries(lock.packages)
+            .filter(([p]) => p.endsWith('/@tanstack/start-server-core'))
+            .map(([, v]) => v.version);
+          if (!core.length || core.some(v => {
+            const [a, b, c] = v.split('.').map(Number);
+            return a < 1 || (a === 1 && (b < 169 || (b === 169 && c < 39)));
+          })) throw new Error('start-server-core version not patched');
+          console.log('Patched Start:', start.version, 'server-core:', core.join(', '));
+          NODE
+      - name: Install and confirm security (must pass before committing)
+        run: |
+          npm ci --no-audit --no-fund
+          npm audit --omit=dev --audit-level=high
+      - name: Confirm production build
+        run: npm run build
+      - name: Commit only regenerated package-lock if all gates passed
+        run: |
+          git add -- package-lock.json
+          if git diff --cached --quiet; then
+            echo "No lockfile changes."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "fix(deps): lock patched TanStack Start production graph"
+          git push origin HEAD:refs/heads/fix/seo-gate-producao-indexabilidade-20261014
