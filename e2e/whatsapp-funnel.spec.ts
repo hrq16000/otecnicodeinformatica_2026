@@ -5,12 +5,20 @@ const UTM_QS = "?utm_source=ci&utm_medium=cpc&utm_campaign=triage_v5_e2e&gclid=C
 
 async function installGtagSpy(page: Page) {
   await page.addInitScript(() => {
+    // O CI não dispõe de propriedade GA4: este stub intercepta a chamada ao
+    // contrato gtag sem enviar dados a terceiros nem depender do Consent Mode.
+    // Mantém o observador mesmo se o bootstrap tentar reatribuir window.gtag.
     (window as unknown as { __gtagCalls: unknown[][] }).__gtagCalls = [];
     (window as unknown as { dataLayer: unknown[] }).dataLayer = [];
-    (window as unknown as { gtag: (...a: unknown[]) => void }).gtag = function (...args: unknown[]) {
+    const gtagSpy = (...args: unknown[]) => {
       (window as unknown as { __gtagCalls: unknown[][] }).__gtagCalls.push(args);
       (window as unknown as { dataLayer: unknown[] }).dataLayer.push(args);
     };
+    Object.defineProperty(window, "gtag", {
+      configurable: true,
+      get: () => gtagSpy,
+      set: () => { /* somente no E2E: não substituir a instrumentação */ },
+    });
   });
 }
 
@@ -128,6 +136,10 @@ test.describe("Triagem V5 — funil ramificado por equipamento", () => {
     await page.getByTestId("whatsapp-float").click();
     await expect(page.getByRole("dialog")).toBeVisible({ timeout: 5000 });
 
+    // O funil entra via import assíncrono; aguardar a emissão real no stub.
+    await expect.poll(async () =>
+      (await readGtagEvents(page)).filter((event) => event.name === "wa_funnel_open").length,
+    ).toBe(1);
     const eventos = await readGtagEvents(page);
 
     const legado = eventos.filter((e) => e.name === "wa_funnel_open");
@@ -199,6 +211,9 @@ test.describe("Triagem V5 — funil ramificado por equipamento", () => {
 
     await expect(page.getByRole("dialog")).toBeVisible({ timeout: 15000 });
 
+    await expect.poll(async () =>
+      (await readGtagEvents(page)).filter((event) => event.name === "wa_funnel_open").length,
+    ).toBe(1);
     const nomes = (await readGtagEvents(page)).map((event) => event.name);
     expect(nomes.filter((n) => n === "wa_funnel_open")).toHaveLength(1);
     expect(nomes.filter((n) => n === "triage_start")).toHaveLength(1);
