@@ -1,4 +1,5 @@
 import { test, expect, devices } from "@playwright/test";
+import { CONSENT_KEY_V2 } from "../src/lib/consentKeys";
 
 /**
  * Consent Mode v2 — Aceitar / Recusar e link "Saiba mais".
@@ -9,7 +10,7 @@ import { test, expect, devices } from "@playwright/test";
  *  - "Saiba mais" leva à política de privacidade (âncora da telemetria).
  */
 
-const CONSENT_KEY = "lgpd_consent_v2";
+const CONSENT_KEY = CONSENT_KEY_V2;
 
 type Update = Record<string, string>;
 
