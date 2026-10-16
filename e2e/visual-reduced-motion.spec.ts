@@ -151,7 +151,10 @@ for (const rota of rotasComLoading) {
         expect(esqueletoAnimando, "esqueleto animando sob reduced-motion").toBe(false);
       }
 
-      await page.unroute(/\/src\/pages\/|\/assets\/.*\.js|\/rest\/v1\//);
+      // Mantém o handler até os assets pendentes serem liberados.
+      // Desregistrar a rota neste ponto criava corrida com route.continue()
+      // já agendado, causando "Route is already handled!" no teste.
+
       await expect(page.locator("h1").first()).toBeVisible({ timeout: 20000 });
       await page.waitForLoadState("networkidle");
       await page.waitForTimeout(400);
