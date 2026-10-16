@@ -20,6 +20,7 @@ import { blogPostsContentBase } from "@/data/blogPostsContent";
 import { blogSupplementalPosts } from "@/data/blogSupplementalPosts";
 import type { BlogPostContent } from "@/data/blogPostsContent";
 import { BlogPostFAQ } from "@/components/BlogPostFAQ";
+import { FotoCredito } from "@/components/FotoCredito";
 import { EnriquecimentoFase2 } from "@/components/editorial/EnriquecimentoFase2";
 import { AtlasPonteArtigo } from "@/components/editorial/AtlasPonteArtigo";
 import { EditorialCta, EditorialRelatedLinks } from "@/components/editorial/EditorialCta";
@@ -284,7 +285,7 @@ const BlogPost = () => {
           <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-primary/[0.02] rounded-full blur-[100px] pointer-events-none" />
           <div className="container mx-auto relative z-10">
             {/* Discover-ready hero image: always show large featured image */}
-            <div className="max-w-4xl mx-auto mb-10">
+            <figure className="max-w-4xl mx-auto mb-10">
               <AspectRatio ratio={16 / 9} className="bg-muted rounded-xl overflow-hidden shadow-2xl">
                 <img
                   src={heroImage}
@@ -309,7 +310,8 @@ const BlogPost = () => {
                   height={editorialCover ? 630 : 900}
                 />
               </AspectRatio>
-            </div>
+              <FotoCredito src={heroImage} legenda="Imagem de capa do artigo" />
+            </figure>
             {approved && approval && (
               <aside
                 aria-label="Informações de revisão editorial"
