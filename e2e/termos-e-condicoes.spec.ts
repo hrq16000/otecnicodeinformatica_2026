@@ -43,7 +43,11 @@ test.describe("/termos-e-condicoes — schema, canonical, single H1, sitemap con
     expect(WHATSAPP_NUMBER).toMatch(/^\d{12,15}$/);
     const actualPhone = ((localBusiness as { telephone?: string }).telephone || "").replace(/\D/g, "");
     expect(actualPhone).toBe(WHATSAPP_NUMBER);
-    expect(JSON.stringify(localBusiness)).not.toMatch(/PostalAddress|streetAddress/i);
+    // Localidade/região não constitui endereço físico de filial.
+    // Proíbe afirmar rua/CEP sem comprovação, mas aceita endereço regional no schema.
+    const address = (localBusiness as { address?: { streetAddress?: string; postalCode?: string } }).address;
+    expect(address?.streetAddress).toBeUndefined();
+    expect(address?.postalCode).toBeUndefined();
 
     // FAQPage: minimum 5 questions
     const mainEntity = (faq as { mainEntity?: Array<{ name?: string; acceptedAnswer?: { text?: string } }> }).mainEntity || [];
