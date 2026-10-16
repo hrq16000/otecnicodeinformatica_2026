@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-10-14",
+  "geradoEm": "2026-10-16",
   "total": 272,
   "porClasse": {
     "COMPROVADA": 109,
@@ -7725,7 +7725,7 @@
       "familiaTitulo": "Garantia",
       "risco": "Prazo ou abrangência divergente da política comercial central.",
       "arquivo": "src/pages/AssistenciaTecnicaCuritiba.tsx",
-      "linha": 489,
+      "linha": 490,
       "trecho": "Diagnóstico e reparo de consoles e placas com bancada própria, orçamento informado antes da execução e garantia conforme o serviço executado.",
       "classificacao": "COMPROVADA",
       "criterio": "Prazo e escopo vêm da fonte comercial única",
