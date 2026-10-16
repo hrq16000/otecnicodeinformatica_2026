@@ -73,7 +73,7 @@ test.describe("/termos-e-condicoes — schema, canonical, single H1, sitemap con
 
     const description = await page.locator('head meta[name="description"]').getAttribute("content");
     expect(description || "").toMatch(/R\$\s?99/);
-    await expect(page.getByText(/90 dias de garantia/i).first()).toBeVisible();
+    await expect(page.getByText(/garantia de 90 dias/i).first()).toBeVisible();
 
     const ogTitle = await page.locator('head meta[property="og:title"]').getAttribute("content");
     const twTitle = await page.locator('head meta[name="twitter:title"]').getAttribute("content");
