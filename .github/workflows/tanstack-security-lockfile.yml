@@ -6,6 +6,7 @@ on:
       - fix/seo-gate-producao-indexabilidade-20261014
     paths:
       - package.json
+      - .github/workflows/tanstack-security-lockfile.yml
 
 permissions:
   contents: write
@@ -23,6 +24,9 @@ jobs:
         with:
           node-version: '22'
           cache: npm
+      - uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: latest
       - name: Verify pinned patched TanStack version
         run: |
           node -e "if (require('./package.json').dependencies['@tanstack/react-start'] !== '1.169.2') process.exit(1)"
