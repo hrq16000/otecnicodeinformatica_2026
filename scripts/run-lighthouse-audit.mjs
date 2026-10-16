@@ -91,17 +91,38 @@ try {
   let seq = 0;
   for (const url of urls) {
     for (let attempt = 1; attempt <= runs; attempt++) {
+      // A API de Node recebe a configuração Lighthouse no 3º argumento.
+      // Colocá-la no objeto de flags (2º argumento) era ignorado: o relatório
+      // desktop usava indevidamente o throttling e o User-Agent de mobile.
+      // Preservamos os thresholds e as auditorias; corrigimos a medição.
+      const isDesktop = settings.preset === "desktop";
+      const lhConfig = {
+        extends: "lighthouse:default",
+        settings: {
+          formFactor: settings.formFactor ?? (isDesktop ? "desktop" : "mobile"),
+          screenEmulation: settings.screenEmulation ?? (isDesktop
+            ? { mobile: false, width: 1350, height: 940, deviceScaleFactor: 1, disabled: false }
+            : { mobile: true, width: 412, height: 915, deviceScaleFactor: 1.75, disabled: false }),
+          ...(isDesktop ? {
+            emulatedUserAgent: "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36",
+          } : {}),
+          throttling: settings.throttling ?? (isDesktop
+            ? {
+                rttMs: 40,
+                throughputKbps: 10240,
+                cpuSlowdownMultiplier: 1,
+                requestLatencyMs: 0,
+                downloadThroughputKbps: 0,
+                uploadThroughputKbps: 0,
+              }
+            : undefined),
+        },
+      };
       const result = await lighthouse(url, {
         port: chrome.port,
         output: "json",
         logLevel: "error",
-        formFactor: settings.formFactor ?? (settings.preset === "desktop" ? "desktop" : "mobile"),
-        ...(settings.preset === "desktop" ? { preset: "desktop" } : {}),
-        screenEmulation: settings.screenEmulation ?? (settings.preset === "desktop"
-          ? { mobile: false, width: 1350, height: 940, deviceScaleFactor: 1, disabled: false }
-          : { mobile: true, width: 412, height: 915, deviceScaleFactor: 1.75, disabled: false }),
-        ...(settings.throttling ? { throttling: settings.throttling } : {}),
-      });
+      }, lhConfig);
       if (!result?.lhr?.audits) throw new Error("Lighthouse nao retornou relatorio para " + url);
       const filename = path.join(output, "lhr-" + Date.now() + "-" + seq++ + ".json");
       writeFileSync(filename, JSON.stringify(result.lhr));
