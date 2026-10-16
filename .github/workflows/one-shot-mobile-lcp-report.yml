@@ -30,4 +30,5 @@ jobs:
         with:
           name: mobile-lcp-raw-smoke
           path: .lighthouseci-mobile/lhr-*.json
-          if-no-files-found: warn
+          include-hidden-files: true
+          if-no-files-found: error
