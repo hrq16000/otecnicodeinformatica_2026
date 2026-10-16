@@ -13,3 +13,22 @@ condition = "AND"
 paths = ['''(^|/)src/lib/consentKeys\.ts$''']
 regexTarget = "line"
 regexes = ['''^[[:space:]]*export const CONSENT_KEY_(V2|LEGACY) = "lgpd_consent_v[12]";[[:space:]]*$''']
+
+# As duas variaveis do .env usam exclusivamente o formato publico
+# sb_publishable_, nao o segredo sb_secret_. Nenhuma outra chave e dispensada.
+[[allowlists]]
+description = "Chaves sb_publishable publicas no env versionado"
+targetRules = ["generic-api-key"]
+condition = "AND"
+paths = ['''(^|/)\.env$''']
+regexTarget = "line"
+regexes = ['''^(VITE_)?SUPABASE_PUBLISHABLE_KEY="sb_publishable_[A-Za-z0-9_-]+"$''']
+
+# Token do manifesto de migracao e nome de classe CSS, nao credencial.
+[[allowlists]]
+description = "Seletor CSS duration-400 no manifesto de temas"
+targetRules = ["generic-api-key"]
+condition = "AND"
+paths = ['''(^|/)\.lovable/migrate-to-tanstack/theme-port\.json$''']
+regexTarget = "line"
+regexes = ['''^[[:space:]]*\{"token": "\.duration-400", "source": "src/index\.css", "reappliedIn": "src/styles\.css"\},?[[:space:]]*$''']
