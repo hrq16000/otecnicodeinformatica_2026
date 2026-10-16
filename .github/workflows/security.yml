@@ -134,19 +134,19 @@ jobs:
 
       # 7) Runtime data-exposure gate — proves anon cannot read private surfaces.
       #    Runs on every PR/push and BLOCKS the merge on any regression.
-      #    Uses only the public URL + publishable/anon key (safe to expose).
+      #    Uses the configured public pair; without CI secrets the scripts read the existing .env.
       - name: Public data exposure gate (anon key only)
         env:
-          VITE_SUPABASE_URL: ${{ secrets.VITE_SUPABASE_URL || 'https://hisepaayuwxjrnumbqeq.supabase.co' }}
-          VITE_SUPABASE_PUBLISHABLE_KEY: ${{ secrets.VITE_SUPABASE_PUBLISHABLE_KEY || 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imhpc2VwYWF5dXd4anJudW1icWVxIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODM2MTU3NzcsImV4cCI6MjA5OTE5MTc3N30.d3ygLv0kgEFiT4hXlp6opB9mvOPLQSwSEKXuLIle164' }}
+          VITE_SUPABASE_URL: ${{ secrets.VITE_SUPABASE_URL || '' }}
+          VITE_SUPABASE_PUBLISHABLE_KEY: ${{ secrets.VITE_SUPABASE_PUBLISHABLE_KEY || '' }}
         run: node scripts/check-public-data-exposure.mjs
 
       # 8) Security-findings regression gate — fails if new findings appear for
       #    reviews or og_validation_status vs the committed baseline.
       - name: Security findings baseline (reviews + og_validation_status)
         env:
-          VITE_SUPABASE_URL: ${{ secrets.VITE_SUPABASE_URL || 'https://hisepaayuwxjrnumbqeq.supabase.co' }}
-          VITE_SUPABASE_PUBLISHABLE_KEY: ${{ secrets.VITE_SUPABASE_PUBLISHABLE_KEY || 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imhpc2VwYWF5dXd4anJudW1icWVxIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODM2MTU3NzcsImV4cCI6MjA5OTE5MTc3N30.d3ygLv0kgEFiT4hXlp6opB9mvOPLQSwSEKXuLIle164' }}
+          VITE_SUPABASE_URL: ${{ secrets.VITE_SUPABASE_URL || '' }}
+          VITE_SUPABASE_PUBLISHABLE_KEY: ${{ secrets.VITE_SUPABASE_PUBLISHABLE_KEY || '' }}
         run: node scripts/check-security-findings-baseline.mjs
 
 
