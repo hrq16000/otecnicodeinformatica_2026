@@ -32,6 +32,13 @@ test.describe("Como funciona mobile — triagem, CTAs e CLS", () => {
     await expect(modal).toBeVisible();
     await expect(modal.getByText(/Triagem antes do atendimento/i)).toBeVisible();
     await expect(modal.getByRole("radio", { name: /Para mim ou minha residência/i })).toBeVisible();
+    // Se a triagem restaurou respostas, o fechamento solicita confirmação
+    // para não perder o progresso. Aceitar o prompt nativo sem remover o gate.
+    page.on("dialog", async (nativeDialog) => {
+      expect(nativeDialog.type()).toBe("confirm");
+      expect(nativeDialog.message()).toMatch(/Fechar a triagem/i);
+      await nativeDialog.accept();
+    });
     await modal.getByRole("button", { name: "Close" }).click();
     await expect(modal).toBeHidden();
 
