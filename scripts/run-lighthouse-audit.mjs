@@ -97,7 +97,9 @@ try {
         logLevel: "error",
         formFactor: settings.formFactor ?? (settings.preset === "desktop" ? "desktop" : "mobile"),
         ...(settings.preset === "desktop" ? { preset: "desktop" } : {}),
-        ...(settings.screenEmulation ? { screenEmulation: settings.screenEmulation } : {}),
+        screenEmulation: settings.screenEmulation ?? (settings.preset === "desktop"
+          ? { mobile: false, width: 1350, height: 940, deviceScaleFactor: 1, disabled: false }
+          : { mobile: true, width: 412, height: 915, deviceScaleFactor: 1.75, disabled: false }),
         ...(settings.throttling ? { throttling: settings.throttling } : {}),
       });
       if (!result?.lhr?.audits) throw new Error("Lighthouse nao retornou relatorio para " + url);
