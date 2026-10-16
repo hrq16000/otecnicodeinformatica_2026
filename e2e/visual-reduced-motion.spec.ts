@@ -11,6 +11,10 @@ import { test, expect, type Page } from "@playwright/test";
  *
  * Para gerar/atualizar os snapshots:
  *   npx playwright test e2e/visual-reduced-motion.spec.ts --update-snapshots
+ *
+ * A referência de /problemas foi revisada individualmente em 2026-10-16:
+ * a mudança observada afetava navegação, tipografia e espaçamento do hero,
+ * preservando conteúdo e controles. O limite de pixel/CLS permanece intacto.
  */
 const rotas = [
   { nome: "home", path: "/" },
