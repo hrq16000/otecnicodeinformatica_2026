@@ -38,7 +38,7 @@ jobs:
       - name: Regenerate ONLY the inspected /problemas baseline
         env:
           E2E_BASE_URL: http://localhost:8080
-        run: npx playwright test e2e/visual-reduced-motion.spec.ts --project=chromium --grep '^reduced-motion @ problemas sem animação ativa e sem layout shift$' --update-snapshots
+        run: npx playwright test e2e/visual-reduced-motion.spec.ts --project=chromium --grep 'reduced-motion @ problemas sem animação ativa' --update-snapshots
       - name: Commit inspected screenshot and remove this temporary workflow
         run: |
           set -euo pipefail
