@@ -1,0 +1,15 @@
+title = "O Tecnico de Informatica — deteccao de segredos"
+
+# Mantem todas as regras nativas do Gitleaks; nao suprime outros achados.
+[extend]
+useDefault = true
+
+# Somente os dois nomes literais de armazenamento de consentimento LGPD.
+# Nao sao credenciais nem tokens de API; valores persistidos no navegador.
+[[allowlists]]
+description = "Identificadores locais de consentimento LGPD, nao segredos"
+targetRules = ["generic-api-key"]
+condition = "AND"
+paths = ['''(^|/)src/lib/consentStore\.ts$''']
+regexTarget = "line"
+regexes = ['''^[[:space:]]*export const CONSENT_KEY_(V2|LEGACY) = "lgpd_consent_v[12]";[[:space:]]*$''']
