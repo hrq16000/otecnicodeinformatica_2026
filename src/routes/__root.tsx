@@ -25,7 +25,7 @@ import { PageViewTracker } from "@/components/PageViewTracker";
 import { RouteTransition } from "@/components/motion/RouteTransition";
 import { RouteLoader } from "@/components/RouteLoader";
 import { RouteProgress } from "@/components/RouteProgress";
-import { WhatsAppFunnel } from "@/components/WhatsAppFunnel";
+import { LazyWhatsAppFunnel } from "@/components/LazyWhatsAppFunnel";
 import { WhatsAppFloat } from "@/components/WhatsAppFloat";
 import { GlobalSmartSearch } from "@/components/GlobalSmartSearch";
 import { ScrollToTop } from "@/components/ScrollToTop";
@@ -206,7 +206,7 @@ function RootComponent() {
           </JsonLdCollectorContext.Provider>
 
 
-          <WhatsAppFunnel />
+          <LazyWhatsAppFunnel />
           <GlobalSmartSearch />
           <WhatsAppFloat />
           <ConsentBanner />
