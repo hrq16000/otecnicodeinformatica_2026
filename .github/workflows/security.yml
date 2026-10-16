@@ -140,9 +140,9 @@ jobs:
 
 
 
-      # 6) Guard against SEO regressions on the landing shell (title / desc / unique H1).
-      - name: Verify SEO basics on index.html
-        run: bun scripts/check-seo-basics.ts index.html
+      # 6) Valida o HTML SSR REAL da homepage no TanStack Start (sem index.html legacy).
+      - name: Verify SEO basics on SSR homepage
+        run: node scripts/with-ssr-server.mjs node scripts/check-seo-home-ssr.mjs
 
       # 7) Runtime data-exposure gate — proves anon cannot read private surfaces.
       #    Runs on every PR/push and BLOCKS the merge on any regression.
