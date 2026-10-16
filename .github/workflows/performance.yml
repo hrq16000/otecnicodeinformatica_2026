@@ -39,7 +39,7 @@ jobs:
       - name: Lighthouse CI — budgets por rota de serviço
         # LHCI inicia sozinho o Worker Cloudflare declarado no config.
         # Evita iniciar Vite dev em paralelo e medir TBT do ambiente errado.
-        run: npx --yes @lhci/cli@0.14.x autorun --config=lighthouserc.servicos.json
+        run: node scripts/run-lighthouse-audit.mjs --config=lighthouserc.servicos.json
       - name: Publicar relatórios
         if: always()
         uses: actions/upload-artifact@v4

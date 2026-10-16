@@ -1,0 +1,53 @@
+name: One-time audited Lighthouse and Sharp toolchain refresh
+
+on:
+  push:
+    branches:
+      - fix/seo-gate-producao-indexabilidade-20261014
+    paths:
+      - .github/workflows/refresh-audit-toolchain-once.yml
+permissions:
+  contents: write
+jobs:
+  refresh:
+    if: github.repository == 'hrq16000/otecnicodeinformatica_2026'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 24
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: latest
+      - name: Regenerate lockfiles without force
+        run: |
+          npm install --package-lock-only --ignore-scripts --no-audit --no-fund
+          bun install --lockfile-only
+          git diff --exit-code -- package.json
+          bun install --frozen-lockfile
+      - name: Require zero high or critical vulnerabilities (production and dev)
+        run: |
+          npm ci --no-audit --no-fund
+          npm audit --audit-level=high
+      - name: Validate unit suite and production build
+        run: |
+          npm run test:unit
+          npm run build
+      - name: Validate Lighthouse engine against local Worker
+        run: node scripts/run-lighthouse-audit.mjs --config=lighthouserc.servicos.json --smoke
+      - name: Commit reviewed dependency locks after all tests passed
+        run: |
+          git add -- package-lock.json bun.lock
+          if git diff --cached --quiet; then
+            echo "Dependency locks unchanged"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "fix(deps): lock audited Lighthouse 13 and Sharp 0.35.5"
+          git push origin HEAD:refs/heads/fix/seo-gate-producao-indexabilidade-20261014
