@@ -1,6 +1,6 @@
 import { lazy, Suspense, useEffect, useState } from "react";
 import { JsonLdSsrSink } from "@/lib/jsonLdSsr";
-import IndexPage from "./pages/Index";
+
 
 /**
  * ─────────────────────────────────────────────────────────────
@@ -36,8 +36,10 @@ const lazyPagina = (
   carregar: () => Promise<{ default: React.ComponentType<any> }>,
 ) => lazy(() => carregar().then((m) => ({ default: comSinkDeJsonLd(m.default) })));
 
-/** Home é import estático (não suspende), mas usa o mesmo sink único. */
-const Index = comSinkDeJsonLd(IndexPage);
+/** A home participa do code splitting, sem carregar os módulos editoriais
+ * em todas as outras rotas. O sink de JSON-LD permanece DENTRO do módulo
+ * resolvido pelo mesmo lazyPagina usado pelas demais páginas. */
+const Index = lazyPagina(() => import("./pages/Index"));
 
 // Lazy-loaded pages for code splitting & faster initial load
 const Servicos = lazyPagina(() => import("./pages/Servicos"));
