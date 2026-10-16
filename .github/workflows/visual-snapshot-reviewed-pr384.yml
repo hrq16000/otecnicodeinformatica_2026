@@ -36,12 +36,14 @@ jobs:
         env:
           E2E_BASE_URL: http://localhost:8080
         run: |
-          npx playwright test e2e/visual-reduced-motion.spec.ts --project=chromium --grep "sem animação ativa e sem layout shift" --update-snapshots
+          npx playwright test e2e/visual-reduced-motion.spec.ts --project=chromium --grep "reduced-motion @ (home|servicos|empresas).*sem animação ativa" --update-snapshots
       - name: Validar escopo de três imagens e publicar na branch PR384
         env:
           BRANCH: ${{ github.head_ref }}
         run: |
           set -euo pipefail
+          # O build gera metadados e sitemaps transitórios; não fazem parte do rebaseline.
+          git restore -- public
           git status --short
           changed=$(git diff --name-only)
           if [ -z "$changed" ]; then
