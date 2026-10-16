@@ -29,12 +29,13 @@ type DeferredHydrationProps = { children: ReactNode };
  * âncoras nativas antes da hidratação; rolagem, foco ou ponteiro liberam a
  * fronteira imediatamente para preservar a interação.
  */
-const waitForBelowFoldIntent = () =>
-  new Promise<void>((resolve) => {
-    if (typeof window === "undefined") {
-      resolve();
-      return;
-    }
+let belowFoldIntentPromise: Promise<void> | undefined;
+
+const waitForBelowFoldIntent = () => {
+  if (typeof window === "undefined") return Promise.resolve();
+  if (belowFoldIntentPromise) return belowFoldIntentPromise;
+
+  belowFoldIntentPromise = new Promise<void>((resolve) => {
 
     let observer: IntersectionObserver | undefined;
     let frame = 0;
@@ -67,11 +68,21 @@ const waitForBelowFoldIntent = () =>
     observe();
   });
 
+  return belowFoldIntentPromise;
+};
+
 const DeferredBelowFold = lazy(async () => {
   await waitForBelowFoldIntent();
   return {
     default: ({ children }: DeferredHydrationProps) => <>{children}</>,
   };
+});
+
+// O rodapé permanece fora de <main> e completo no SSR. No cliente, compartilha
+// o mesmo sinal da árvore abaixo da dobra para não competir com a hidratação do hero.
+const LazyDeferredFooter = lazy(async () => {
+  await waitForBelowFoldIntent();
+  return import("@/components/Footer").then((m) => ({ default: m.Footer }));
 });
 
 const waitForMobileFunnelIntent = () =>
@@ -108,9 +119,6 @@ const LazyDeferredMobileServicoFunnel = lazy(async () => {
 // React SSR resolve as boundaries, mantendo rodapé, links e interligação no HTML.
 const LazyServicoEnriquecimento = lazy(() =>
   import("@/components/servico/ServicoEnriquecimento").then((m) => ({ default: m.ServicoEnriquecimento })),
-);
-const LazyFooter = lazy(() =>
-  import("@/components/Footer").then((m) => ({ default: m.Footer })),
 );
 const LazyInterlinkingBlock = lazy(() =>
   import("@/components/InterlinkingBlock").then((m) => ({ default: m.InterlinkingBlock })),
@@ -712,7 +720,7 @@ export const ServicoLandingLayout = ({ data }: { data: ServicoLandingData }) => 
       </Suspense>
       </main>
       <Suspense fallback={null}>
-        <LazyFooter />
+        <LazyDeferredFooter />
       </Suspense>
       {/* Conversão mobile: HTML no SSR; hidratação da ilha fora da janela crítica. */}
       <Suspense fallback={null}>
