@@ -37,7 +37,9 @@ let stopped = false;
 function stop() {
   if (stopped) return;
   stopped = true;
-  if (chrome) void chrome.kill().catch(() => {});
+  if (chrome) {
+    try { chrome.kill(); } catch { /* Chrome ja encerrou */ }
+  }
   try {
     if (process.platform !== "win32") process.kill(-server.pid, "SIGTERM");
     else server.kill("SIGTERM");
