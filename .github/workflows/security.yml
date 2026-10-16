@@ -65,10 +65,22 @@ jobs:
       - name: Gitleaks secret scan
         if: always()
         run: |
-          timeout 8m docker run --rm \
-            -v "${{ github.workspace }}:/repo" \
+          # Verifica tanto os arquivos atuais quanto os commits novos da PR/push.
+          # Evita reprocessar TODO o historico de anos em cada CI (timeout).
+          set -euo pipefail
+          docker run --rm \
+            -v "${{ github.workspace }}:/repo:ro" \
             ghcr.io/gitleaks/gitleaks:v8.30.1 \
-            git /repo --redact --no-banner --verbose
+            dir /repo --config /repo/.gitleaks.toml --redact --no-banner
+          if [ "${{ github.event_name }}" = "pull_request" ]; then
+            RANGE="origin/main..HEAD"
+          else
+            RANGE="HEAD~1..HEAD"
+          fi
+          docker run --rm \
+            -v "${{ github.workspace }}:/repo:ro" \
+            ghcr.io/gitleaks/gitleaks:v8.30.1 \
+            git /repo --log-opts="$RANGE" --config /repo/.gitleaks.toml --redact --no-banner
 
       # 3) Static analysis on JS/TS.
       - name: Semgrep (OWASP/React rulesets)
