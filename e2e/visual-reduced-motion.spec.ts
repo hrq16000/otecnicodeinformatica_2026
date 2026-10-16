@@ -32,6 +32,7 @@ test.beforeEach(async ({ page }) => {
 async function observarLayoutShift(page: Page) {
   await page.addInitScript(() => {
     (window as unknown as { __CLS__: number }).__CLS__ = 0;
+    (window as unknown as { __CLS_SOURCES__: unknown[] }).__CLS_SOURCES__ = [];
     new PerformanceObserver((lista) => {
       for (const entrada of lista.getEntries() as (PerformanceEntry & {
         value: number;
@@ -39,6 +40,19 @@ async function observarLayoutShift(page: Page) {
       })[]) {
         if (!entrada.hadRecentInput) {
           (window as unknown as { __CLS__: number }).__CLS__ += entrada.value;
+          const withSources = entrada as typeof entrada & {
+            sources?: Array<{ node?: Node; previousRect?: DOMRectReadOnly; currentRect?: DOMRectReadOnly }>;
+          };
+          (window as unknown as { __CLS_SOURCES__: unknown[] }).__CLS_SOURCES__.push({
+            value: entrada.value,
+            nodes: (withSources.sources ?? []).slice(0, 5).map((source) => ({
+              tag: (source.node as Element | undefined)?.tagName ?? null,
+              id: (source.node as Element | undefined)?.id ?? null,
+              className: (source.node as Element | undefined)?.getAttribute?.("class")?.slice(0, 170) ?? null,
+              before: source.previousRect ? { x: source.previousRect.x, y: source.previousRect.y, height: source.previousRect.height } : null,
+              after: source.currentRect ? { x: source.currentRect.x, y: source.currentRect.y, height: source.currentRect.height } : null,
+            })),
+          });
         }
       }
     }).observe({ type: "layout-shift", buffered: true });
@@ -85,6 +99,12 @@ for (const rota of rotas) {
       expect(emMovimento, `elementos animando sob reduced-motion em ${rota.path}`).toEqual([]);
 
       const cls = await page.evaluate(() => (window as unknown as { __CLS__: number }).__CLS__);
+      if (cls > CLS_MAX) {
+        const sources = await page.evaluate(() =>
+          (window as unknown as { __CLS_SOURCES__: unknown[] }).__CLS_SOURCES__,
+        );
+        console.log(`[CLS sources] ${rota.path}`, JSON.stringify(sources));
+      }
       expect(cls, `CLS em ${rota.path}`).toBeLessThanOrEqual(CLS_MAX);
 
       // Regiões voláteis por natureza (consentimento, botão flutuante e

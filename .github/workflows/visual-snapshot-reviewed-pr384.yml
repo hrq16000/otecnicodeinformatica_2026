@@ -3,6 +3,7 @@ on:
   pull_request:
     paths:
       - ".github/workflows/visual-snapshot-reviewed-pr384.yml"
+      - "e2e/visual-reduced-motion.spec.ts"
 permissions:
   contents: write
 jobs:
