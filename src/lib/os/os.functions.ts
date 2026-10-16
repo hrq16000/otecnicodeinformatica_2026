@@ -8,7 +8,7 @@ import { createServerFn } from "@tanstack/react-start";
  * resposta, porque o código sozinho não é uma credencial forte.
  */
 export const consultarOsPorProtocolo = createServerFn({ method: "POST" })
-  .inputValidator((input: { protocolo: string }) => ({
+  .validator((input: { protocolo: string }) => ({
     protocolo: String(input?.protocolo ?? "").trim().toUpperCase(),
   }))
   .handler(async ({ data }) => {

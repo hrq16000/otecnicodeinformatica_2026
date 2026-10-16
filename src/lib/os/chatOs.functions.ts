@@ -16,7 +16,7 @@ const anexoSchema = z.object({
 const tokenSchema = z.string().min(20).max(200);
 
 export const abrirConversaOs = createServerFn({ method: "POST" })
-  .inputValidator((d: unknown) =>
+  .validator((d: unknown) =>
     z.object({ protocolo: z.string().min(6).max(40), telefone: z.string().min(8).max(24) }).parse(d),
   )
   .handler(async ({ data }) => {
@@ -30,7 +30,7 @@ export const abrirConversaOs = createServerFn({ method: "POST" })
   });
 
 export const lerConversaOs = createServerFn({ method: "POST" })
-  .inputValidator((d: unknown) => z.object({ token: tokenSchema }).parse(d))
+  .validator((d: unknown) => z.object({ token: tokenSchema }).parse(d))
   .handler(async ({ data }) => {
     const m = await import("./chatOs.server");
     try {
@@ -42,7 +42,7 @@ export const lerConversaOs = createServerFn({ method: "POST" })
   });
 
 export const prepararUploadOs = createServerFn({ method: "POST" })
-  .inputValidator((d: unknown) =>
+  .validator((d: unknown) =>
     z.object({ token: tokenSchema, mimeType: z.string().max(120), sizeBytes: z.number().int().positive() }).parse(d),
   )
   .handler(async ({ data }) => {
@@ -56,7 +56,7 @@ export const prepararUploadOs = createServerFn({ method: "POST" })
   });
 
 export const enviarMensagemOs = createServerFn({ method: "POST" })
-  .inputValidator((d: unknown) =>
+  .validator((d: unknown) =>
     z
       .object({
         token: tokenSchema,
@@ -77,7 +77,7 @@ export const enviarMensagemOs = createServerFn({ method: "POST" })
 
 export const listarConversasOsAdmin = createServerFn({ method: "POST" })
   .middleware([requireSupabaseAuth])
-  .inputValidator((d: unknown) => z.object({ busca: z.string().max(60).default("") }).parse(d))
+  .validator((d: unknown) => z.object({ busca: z.string().max(60).default("") }).parse(d))
   .handler(async ({ data, context }) => {
     const m = await import("./chatOs.server");
     await m.garantirAdmin(context.supabase as never, context.userId);
@@ -86,7 +86,7 @@ export const listarConversasOsAdmin = createServerFn({ method: "POST" })
 
 export const lerConversaOsAdmin = createServerFn({ method: "POST" })
   .middleware([requireSupabaseAuth])
-  .inputValidator((d: unknown) => z.object({ threadId: z.string().uuid() }).parse(d))
+  .validator((d: unknown) => z.object({ threadId: z.string().uuid() }).parse(d))
   .handler(async ({ data, context }) => {
     const m = await import("./chatOs.server");
     await m.garantirAdmin(context.supabase as never, context.userId);
@@ -95,7 +95,7 @@ export const lerConversaOsAdmin = createServerFn({ method: "POST" })
 
 export const responderConversaOsAdmin = createServerFn({ method: "POST" })
   .middleware([requireSupabaseAuth])
-  .inputValidator((d: unknown) =>
+  .validator((d: unknown) =>
     z
       .object({
         threadId: z.string().uuid(),
@@ -118,7 +118,7 @@ export const responderConversaOsAdmin = createServerFn({ method: "POST" })
 
 export const prepararUploadOsAdmin = createServerFn({ method: "POST" })
   .middleware([requireSupabaseAuth])
-  .inputValidator((d: unknown) =>
+  .validator((d: unknown) =>
     z
       .object({ threadId: z.string().uuid(), mimeType: z.string().max(120), sizeBytes: z.number().int().positive() })
       .parse(d),
@@ -131,7 +131,7 @@ export const prepararUploadOsAdmin = createServerFn({ method: "POST" })
 
 export const marcarConversaLidaAdmin = createServerFn({ method: "POST" })
   .middleware([requireSupabaseAuth])
-  .inputValidator((d: unknown) => z.object({ threadId: z.string().uuid() }).parse(d))
+  .validator((d: unknown) => z.object({ threadId: z.string().uuid() }).parse(d))
   .handler(async ({ data, context }) => {
     const m = await import("./chatOs.server");
     await m.garantirAdmin(context.supabase as never, context.userId);
@@ -140,7 +140,7 @@ export const marcarConversaLidaAdmin = createServerFn({ method: "POST" })
 
 export const atualizarStatusConversaAdmin = createServerFn({ method: "POST" })
   .middleware([requireSupabaseAuth])
-  .inputValidator((d: unknown) =>
+  .validator((d: unknown) =>
     z.object({ threadId: z.string().uuid(), status: z.enum(["aberta", "resolvida", "arquivada"]) }).parse(d),
   )
   .handler(async ({ data, context }) => {
@@ -151,7 +151,7 @@ export const atualizarStatusConversaAdmin = createServerFn({ method: "POST" })
 
 export const historicoOsAdminFn = createServerFn({ method: "POST" })
   .middleware([requireSupabaseAuth])
-  .inputValidator((d: unknown) => z.object({ protocolo: z.string().min(6).max(40) }).parse(d))
+  .validator((d: unknown) => z.object({ protocolo: z.string().min(6).max(40) }).parse(d))
   .handler(async ({ data, context }) => {
     const m = await import("./chatOs.server");
     await m.garantirAdmin(context.supabase as never, context.userId);

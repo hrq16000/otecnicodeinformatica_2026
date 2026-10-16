@@ -57,7 +57,7 @@ const vazio = (status: GscStatus, motivo: string): GscSnapshot => ({
 
 export const getGscSnapshot = createServerFn({ method: "GET" })
   .middleware([requireSupabaseAuth])
-  .inputValidator((data: unknown) => {
+  .validator((data: unknown) => {
     const d = (data ?? {}) as { dias?: number };
     const dias = Number(d.dias);
     return { dias: [7, 28, 90].includes(dias) ? dias : 28 };
@@ -197,7 +197,7 @@ export type GscUrlDetalhe = {
 
 export const getGscUrlDetalhe = createServerFn({ method: "GET" })
   .middleware([requireSupabaseAuth])
-  .inputValidator((data: unknown) => {
+  .validator((data: unknown) => {
     const d = (data ?? {}) as { pagina?: string; dias?: number };
     const dias = Number(d.dias);
     return { pagina: String(d.pagina ?? "").slice(0, 500), dias: [7, 28, 90].includes(dias) ? dias : 28 };
