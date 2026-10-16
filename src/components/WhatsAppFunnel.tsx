@@ -3,7 +3,7 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } f
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
 import { Checkbox } from "@/components/ui/checkbox";
-import * as Icons from "lucide-react";
+import { Laptop, Tv, Smartphone, TabletSmartphone, Speaker, Gamepad2, HelpCircle } from "lucide-react";
 import { ArrowRight, ArrowLeft, CheckCircle2, Lock, MessageCircle, Copy, ExternalLink } from "lucide-react";
 import { trackCTAClick } from "@/lib/analytics";
 import {
@@ -85,6 +85,10 @@ import {
 } from "@/lib/funnel/triageMachine";
 import { setErrorContext } from "@/lib/errorReporter";
 
+
+// Apenas os ícones presentes em EQUIPMENTS. O namespace Lucide inteiro
+// no bundle inicial impedia o tree-shaking e atrasava páginas sem modal aberto.
+const EQUIPMENT_ICONS = { Laptop, Tv, Smartphone, TabletSmartphone, Speaker, Gamepad2, HelpCircle } as const;
 
 const WA_HOSTS = ["wa.me", "api.whatsapp.com"];
 const REDUCED_MOTION =
@@ -1069,7 +1073,7 @@ export const WhatsAppFunnel = () => {
                     <p className="text-sm font-medium">Qual o equipamento?</p>
                     <div className="grid grid-cols-2 gap-2 sm:grid-cols-3">
                       {EQUIPMENTS.map((eq) => {
-                        const Icon = (Icons[eq.icon as keyof typeof Icons] || Icons.HelpCircle) as React.ComponentType<{ className?: string }>;
+                        const Icon = EQUIPMENT_ICONS[eq.icon as keyof typeof EQUIPMENT_ICONS] ?? HelpCircle;
                         const active = answers.equipment === eq.id;
                         return (
                           <button
