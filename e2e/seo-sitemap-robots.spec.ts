@@ -9,7 +9,7 @@ test.describe("SEO — sitemap & robots", () => {
       const res = await request.get(`${BASE}/atendimento-remoto`);
       expect(res.ok()).toBeTruthy();
       const html = await res.text();
-      const tags = html.match(/<meta\\b[^>]*\\bname=["']description["'][^>]*>/gi) ?? [];
+      const tags = html.match(/<meta\b[^>]*\bname=["']description["'][^>]*>/gi) ?? [];
       expect(tags, `metadescricao ausente/duplicada na resposta SSR ${run + 1}`).toHaveLength(1);
       expect(tags[0]).toContain("Suporte remoto de informática em Curitiba");
     }
