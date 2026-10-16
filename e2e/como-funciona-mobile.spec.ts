@@ -28,7 +28,7 @@ test.describe("Como funciona mobile — triagem, CTAs e CLS", () => {
     await expect(float).toBeVisible();
     await expect(float).toBeEnabled();
     await float.click();
-    const modal = page.getByRole("dialog");
+    const modal = page.locator('[data-triage="1"][role="dialog"]');
     await expect(modal).toBeVisible();
     await expect(modal.getByText(/Triagem antes do atendimento/i)).toBeVisible();
     await expect(modal.getByRole("radio", { name: /Para mim ou minha residência/i })).toBeVisible();

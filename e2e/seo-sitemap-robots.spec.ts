@@ -4,6 +4,16 @@ import { SITE_URL } from "./site-env";
 const BASE = process.env.E2E_BASE_URL ?? "http://localhost:8080";
 
 test.describe("SEO — sitemap & robots", () => {
+  test("landings transacionais mantêm noindex no HTML SSR", async ({ request }) => {
+    for (const path of ["/empresas", "/assistencia-tecnica-curitiba"]) {
+      const res = await request.get(`${BASE}${path}`);
+      expect(res.ok(), path).toBeTruthy();
+      const html = await res.text();
+      const tag = html.match(/<meta\\b[^>]*name=["']robots["'][^>]*>/i)?.[0] ?? "";
+      expect(tag, `robots ausente em ${path}`).toMatch(/noindex/i);
+      expect(tag, `follow ausente em ${path}`).toMatch(/follow/i);
+    }
+  });
   test("atendimento remoto entrega uma unica metadescricao ja no SSR", async ({ request }) => {
     for (let run = 0; run < 3; run++) {
       const res = await request.get(`${BASE}/atendimento-remoto`);

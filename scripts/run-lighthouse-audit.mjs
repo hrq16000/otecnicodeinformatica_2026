@@ -64,9 +64,22 @@ const problems = [];
 const metric = (r, key) => key.startsWith("categories:")
   ? r.categories?.[key.slice("categories:".length)]?.score
   : (r.audits?.[key]?.numericValue ?? r.audits?.[key]?.score);
+// Estas URLs são landing pages transacionais explicitamente noindex no código.
+// Manter Lighthouse de performance/acessibilidade nelas; em SEO exigir o
+// noindex declarado em vez de penalizar a escolha deliberada de não indexar.
+const intentionalNoindex = new Set(collect.expectedNoindexPaths ?? []);
 function assess(r, url, iteration) {
+  const isIntentionalNoindex = intentionalNoindex.has(new URL(url).pathname);
   for (const [name, assertion] of Object.entries(assertions)) {
     const [severity, rule] = Array.isArray(assertion) ? assertion : [assertion, {}];
+    if (name === "categories:seo" && isIntentionalNoindex) {
+      // O próprio Lighthouse precisa confirmar que a página não é indexável.
+      // Se o noindex desaparecer, falha bloqueante — nunca liberar index-on.
+      if (r.audits?.["is-crawlable"]?.score !== 0) {
+        problems.push(url + " run=" + iteration + " politica noindex ausente no Lighthouse");
+      }
+      continue;
+    }
     if (severity === "off") continue;
     const val = metric(r, name);
     const issue = val == null ? "auditoria ausente"
