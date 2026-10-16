@@ -1,0 +1,50 @@
+# One-shot review: only the /problemas baseline inspected on 2026-10-16.
+# This workflow removes itself in the same commit as the new snapshot.
+name: One-shot baseline visual problemas
+on:
+  push:
+    branches: [fix/seo-gate-producao-indexabilidade-20261014]
+    paths:
+      - .github/workflows/one-shot-rebaseline-problemas.yml
+permissions:
+  contents: read
+jobs:
+  update-inspected-baseline:
+    if: github.event.head_commit.message == 'chore(visual): one-shot inspected problemas baseline'
+    permissions:
+      contents: write
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Install dependencies
+        run: npm ci --no-audit --no-fund
+      - name: Install Chromium
+        run: npx playwright install --with-deps chromium
+      - name: Build SSR preview
+        run: npm run build
+      - name: Start local Worker
+        run: npx --yes wrangler@4.45.4 dev --config dist/server/wrangler.json --local --ip 127.0.0.1 --port 8080 > /tmp/one-shot-problemas.log 2>&1 &
+      - name: Wait for Worker
+        run: npx wait-on http://localhost:8080 --timeout 60000
+      - name: Regenerate ONLY the inspected /problemas baseline
+        env:
+          E2E_BASE_URL: http://localhost:8080
+        run: npx playwright test e2e/visual-reduced-motion.spec.ts --project=chromium --grep '^reduced-motion @ problemas sem animação ativa e sem layout shift$' --update-snapshots
+      - name: Commit inspected screenshot and remove this temporary workflow
+        run: |
+          set -euo pipefail
+          snapshot="e2e/visual-reduced-motion.spec.ts-snapshots/reduced-motion-problemas-chromium-linux.png"
+          test -s "$snapshot"
+          git add -- "$snapshot"
+          test "$(git diff --cached --name-only | wc -l | tr -d ' ')" = "1"
+          git rm -- .github/workflows/one-shot-rebaseline-problemas.yml
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "test(visual): approve inspected problemas baseline only"
+          git push origin "HEAD:${GITHUB_REF_NAME}"
