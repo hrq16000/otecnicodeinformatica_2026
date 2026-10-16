@@ -14,6 +14,21 @@ async function installGtagSpy(page: Page) {
   });
 }
 
+async function readGtagEvents(page: Page) {
+  return page.evaluate(() => {
+    const spy = (window as unknown as { __gtagCalls?: unknown[][] }).__gtagCalls ?? [];
+    const layer = (window as unknown as { dataLayer?: unknown[] }).dataLayer ?? [];
+    const queued = layer.map((call) => Array.from(call as ArrayLike<unknown>));
+    // Tanto o spy como o stub oficial do gtag encaminham para dataLayer.
+    // Usar só uma fonte evita contar duas vezes o mesmo evento.
+    const source = spy.some((c) => c[0] === "event") ? spy : queued;
+    return source.filter((c) => c[0] === "event").map((c) => ({
+      name: c[1] as string,
+      payload: c[2] as Record<string, unknown>,
+    }));
+  });
+}
+
 async function openFunnel(page: Page) {
   await page.evaluate(() => {
     window.dispatchEvent(new CustomEvent("wa-funnel:open", { detail: { location: "test" } }));
@@ -113,11 +128,7 @@ test.describe("Triagem V5 — funil ramificado por equipamento", () => {
     await page.getByTestId("whatsapp-float").click();
     await expect(page.getByRole("dialog")).toBeVisible({ timeout: 5000 });
 
-    const eventos = await page.evaluate(() =>
-      (window as unknown as { __gtagCalls: unknown[][] }).__gtagCalls
-        .filter((c) => c[0] === "event")
-        .map((c) => ({ name: c[1] as string, payload: c[2] as Record<string, unknown> })),
-    );
+    const eventos = await readGtagEvents(page);
 
     const legado = eventos.filter((e) => e.name === "wa_funnel_open");
     const canonico = eventos.filter((e) => e.name === "triage_start");
@@ -188,11 +199,7 @@ test.describe("Triagem V5 — funil ramificado por equipamento", () => {
 
     await expect(page.getByRole("dialog")).toBeVisible({ timeout: 15000 });
 
-    const nomes = await page.evaluate(() =>
-      (window as unknown as { __gtagCalls: unknown[][] }).__gtagCalls
-        .filter((c) => c[0] === "event")
-        .map((c) => c[1] as string),
-    );
+    const nomes = (await readGtagEvents(page)).map((event) => event.name);
     expect(nomes.filter((n) => n === "wa_funnel_open")).toHaveLength(1);
     expect(nomes.filter((n) => n === "triage_start")).toHaveLength(1);
 
