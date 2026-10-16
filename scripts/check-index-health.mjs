@@ -109,9 +109,16 @@ async function checkRoute(path, { alias = null } = {}) {
     // quando a URL tem barra final; sem ela cai no fallback SPA. Hospedagens
     // reais (Lovable/Cloudflare) resolvem a URL limpa, então tentamos a variante
     // com barra antes de acusar falta de prerender.
-    if (STRICT && !alias && path !== "/" && !path.endsWith("/")) {
-      const alt = await fetch(`${BASE}${path}/`, { redirect: "follow" });
-      if (alt.ok) res = alt;
+    if (STRICT) {
+      // Para aliases, o 301 e Location continuam obrigatorios. Porem a
+      // checagem do canonical usa a pagina proprietaria PRE-RENDERIZADA.
+      // Wrangler preview pode servir fallback SPA na URL limpa, enquanto
+      // /destino/ encontra o index.html com canonical self.
+      const target = alias || path;
+      if (target !== "/" && !target.endsWith("/")) {
+        const alt = await fetch(`${BASE}${target}/`, { redirect: "follow" });
+        if (alt.ok) res = alt;
+      }
     }
   } catch (e) {
     fail(`${path}: falha de rede (${e.message})`);
