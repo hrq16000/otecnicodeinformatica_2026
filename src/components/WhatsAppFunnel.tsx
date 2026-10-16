@@ -3,7 +3,7 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } f
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
 import { Checkbox } from "@/components/ui/checkbox";
-import * as Icons from "lucide-react";
+import { Laptop, Tv, Smartphone, TabletSmartphone, Speaker, Gamepad2, HelpCircle } from "lucide-react";
 import { ArrowRight, ArrowLeft, CheckCircle2, Lock, MessageCircle, Copy, ExternalLink } from "lucide-react";
 import { trackCTAClick } from "@/lib/analytics";
 import {
@@ -85,6 +85,10 @@ import {
 } from "@/lib/funnel/triageMachine";
 import { setErrorContext } from "@/lib/errorReporter";
 
+
+// Apenas os ícones presentes em EQUIPMENTS. O namespace Lucide inteiro
+// no bundle inicial impedia o tree-shaking e atrasava páginas sem modal aberto.
+const EQUIPMENT_ICONS = { Laptop, Tv, Smartphone, TabletSmartphone, Speaker, Gamepad2, HelpCircle } as const;
 
 const WA_HOSTS = ["wa.me", "api.whatsapp.com"];
 const REDUCED_MOTION =
@@ -488,6 +492,8 @@ export const WhatsAppFunnel = () => {
 
   // Global click interception for any WhatsApp anchor.
   useEffect(() => {
+    // O carregador leve intercepta cliques até este efeito instalar o funil completo.
+    document.documentElement.dataset.waFunnelReady = "1";
     const handler = (e: MouseEvent) => {
       if (submittingRef.current) return;
       const target = e.target as HTMLElement | null;
@@ -524,12 +530,12 @@ export const WhatsAppFunnel = () => {
     window.addEventListener("wa-funnel:open", evHandler as EventListener);
 
     // Drena cliques capturados antes da hidratação (buffer do __root).
-    const fila = (window as unknown as { __waFunnelQueue?: Array<{ location?: string }> }).__waFunnelQueue;
+    const fila = (window as unknown as { __waFunnelQueue?: Array<{ location?: string; message?: string }> }).__waFunnelQueue;
     if (fila && fila.length) {
       const primeiro = fila[0];
       (window as unknown as { __waFunnelQueue: unknown[] }).__waFunnelQueue = [];
       trackCTAClick("whatsapp", primeiro?.location || "float");
-      openFunnel(primeiro?.location || "float");
+      openFunnel(primeiro?.location || "float", primeiro?.message);
     }
 
 
@@ -553,6 +559,7 @@ export const WhatsAppFunnel = () => {
     }) as typeof window.open;
 
     return () => {
+      delete document.documentElement.dataset.waFunnelReady;
       document.removeEventListener("click", handler, true);
       window.removeEventListener("wa-funnel:open", evHandler as EventListener);
       window.open = originalOpen;
@@ -882,6 +889,10 @@ export const WhatsAppFunnel = () => {
   }, [previewMessage, originLocation, answers.equipment, answers.symptom]);
 
 
+  // Interceptação e hooks continuam ativos, mas a árvore pesada da triagem
+  // não é renderizada enquanto o modal está fechado.
+  if (!open) return null;
+
   // ---------- render helpers ----------
   const registerRef = (id: string) => (el: HTMLDivElement | null) => {
     fieldRefs.current.set(id, el);
@@ -1065,7 +1076,7 @@ export const WhatsAppFunnel = () => {
                     <p className="text-sm font-medium">Qual o equipamento?</p>
                     <div className="grid grid-cols-2 gap-2 sm:grid-cols-3">
                       {EQUIPMENTS.map((eq) => {
-                        const Icon = (Icons[eq.icon as keyof typeof Icons] || Icons.HelpCircle) as React.ComponentType<{ className?: string }>;
+                        const Icon = EQUIPMENT_ICONS[eq.icon as keyof typeof EQUIPMENT_ICONS] ?? HelpCircle;
                         const active = answers.equipment === eq.id;
                         return (
                           <button

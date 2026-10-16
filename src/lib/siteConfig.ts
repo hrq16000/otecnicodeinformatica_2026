@@ -71,7 +71,7 @@ export const siteConfig = {
   // Paridade com o HTML estático curado (scripts/curated-routes-meta.mjs) e ≤ 70 caracteres.
   // Rodada 11: intenção ampliada de "assistência" para "soluções de informática",
   // cobrindo tanto quem busca serviço quanto quem busca a solução do problema.
-  homeTitle: "Soluções de Informática e Assistência Técnica em Curitiba",
+  homeTitle: "O Técnico de Informática | Assistência Técnica em Curitiba",
   homeDescription:
     "Computador lento, notebook que não liga, Wi-Fi caindo ou arquivo perdido? Guias técnicos e assistência em informática para casa e empresa em Curitiba.",
   defaultOgImage: `${BASE_URL}${brandConfig.ogImage}`,

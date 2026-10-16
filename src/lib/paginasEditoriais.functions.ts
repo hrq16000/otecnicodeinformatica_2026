@@ -38,7 +38,7 @@ function clientePublico() {
 }
 
 export const obterPaginaEditorial = createServerFn({ method: "GET" })
-  .inputValidator((data: { slug: string }) => ({ slug: String(data.slug ?? "") }))
+  .validator((data: { slug: string }) => ({ slug: String(data.slug ?? "") }))
   .handler(async ({ data }): Promise<PaginaEditorial | null> => {
     if (!data.slug) return null;
     const { data: linha } = await clientePublico()

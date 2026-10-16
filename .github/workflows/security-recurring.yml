@@ -26,6 +26,8 @@ jobs:
     timeout-minutes: 20
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       - uses: oven-sh/setup-bun@v2
         with:
           bun-version: latest
@@ -59,10 +61,22 @@ jobs:
       # 5) Segredos/credenciais vazados no diff.
       - name: Gitleaks secret scan
         run: |
-          timeout 8m docker run --rm \
-            -v "${{ github.workspace }}:/repo" \
+          # Verifica tanto os arquivos atuais quanto os commits novos da PR/push.
+          # Evita reprocessar TODO o historico de anos em cada CI (timeout).
+          set -euo pipefail
+          docker run --rm \
+            -v "${{ github.workspace }}:/repo:ro" \
             ghcr.io/gitleaks/gitleaks:v8.30.1 \
-            git /repo --redact --no-banner --verbose
+            dir /repo --config /repo/.gitleaks.toml --redact --no-banner
+          if [ "${{ github.event_name }}" = "pull_request" ]; then
+            RANGE="origin/main..HEAD"
+          else
+            RANGE="HEAD~1..HEAD"
+          fi
+          docker run --rm \
+            -v "${{ github.workspace }}:/repo:ro" \
+            ghcr.io/gitleaks/gitleaks:v8.30.1 \
+            git /repo --log-opts="$RANGE" --config /repo/.gitleaks.toml --redact --no-banner
 
       # 6) Notificação (Slack/e-mail) quando qualquer etapa acima falhar.
       - name: Notificar falha do pipeline de segurança

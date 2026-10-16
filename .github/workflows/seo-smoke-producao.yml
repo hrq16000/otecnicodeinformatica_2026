@@ -1,0 +1,120 @@
+# Gate focado no domínio publicado: não depende de build local ou de chaves externas.
+# O smoke de borda/redirects é validado separadamente porque exige dist/route-manifest.json.
+name: SEO - indexabilidade em producao
+
+on:
+  pull_request:
+    paths:
+      - "scripts/smoke-pos-deploy.mjs"
+      - "src/server.ts"
+      - "src/lib/redirectMatrix.ts"
+      - "src/__tests__/canonical-host-redirect.test.ts"
+      - "src/lib/bairrosData.ts"
+      - "src/lib/bairrosLote2.ts"
+      - "src/lib/bairrosLote4.ts"
+      - "src/lib/blogEditorialRegistry.ts"
+      - "src/lib/cidadesData.ts"
+      - "src/pages/ConsertoImpressoraCuritiba.tsx"
+      - "scripts/check-trust-claims.mjs"
+      - ".github/workflows/seo-smoke-producao.yml"
+  workflow_dispatch:
+
+concurrency:
+  group: seo-indexabilidade-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  confianca-e-seguranca-estatica:
+    name: Claims comerciais e regressao de seguranca — fail-closed
+    runs-on: ubuntu-24.04
+    timeout-minutes: 4
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Claims de confianca sem promessas nao comprovadas
+        run: node scripts/check-trust-claims.mjs
+      - name: Achados de seguranca anteriormente corrigidos
+        run: node scripts/check-security-regressions.mjs
+
+  validar:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    env:
+      SITE_BASE_URL: https://otecnicodeinformatica.com.br
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - name: Checar HTML SSR, meta robots, canonical, robots.txt e 8 sitemaps em producao
+        run: node scripts/smoke-pos-deploy.mjs
+
+  redirects-ssr-preview:
+    name: Redirecionamentos 301 no Worker gerado pelo build
+    runs-on: ubuntu-24.04
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: "1.2.21"
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - name: Instalar dependencias
+        run: npm ci --no-audit --no-fund
+      - name: Build e smoke HTTP 301 do SSR
+        run: |
+          set -euo pipefail
+          npm run build
+          # Nitro gera um Cloudflare Worker (dist/server/index.mjs + wrangler.json).
+          # vite preview procura dist/server/server.js, que NAO existe neste preset.
+          test -f dist/server/index.mjs
+          test -f dist/server/wrangler.json
+          npx --yes wrangler@4.45.4 dev --config dist/server/wrangler.json --local --ip 127.0.0.1 --port 4321 > /tmp/seo-preview.log 2>&1 &
+          server_pid=$!
+          trap 'kill "$server_pid" 2>/dev/null || true' EXIT
+          ready=0
+          for i in $(seq 1 40); do
+            if curl -fsS -o /dev/null http://127.0.0.1:4321/; then ready=1; break; fi
+            sleep 1
+          done
+          if [ "$ready" != "1" ]; then cat /tmp/seo-preview.log; exit 1; fi
+          node --input-type=module <<'NODE'
+          import assert from "node:assert/strict";
+          import { readRedirectMatrix } from "./scripts/lib/route-manifest.mjs";
+          const origin = "http://127.0.0.1:4321";
+          const cases = [
+            ["/servicos/formatacao-computador?utm_source=bing", "/servicos/formatacao?utm_source=bing", "GET"],
+            ["/servicos/remocao-virus", "/servicos/remocao-de-virus", "HEAD"],
+            ["/privacidade?ref=rodape", "/politica-de-privacidade?ref=rodape", "GET"],
+            ["/blog/tela-azul-windows-como-resolver", "/blog/como-resolver-tela-azul-windows", "GET"],
+          ];
+          for (const [oldPath, target, method] of cases) {
+            const response = await fetch(origin + oldPath, { method, redirect: 'manual' });
+            const location = response.headers.get("location");
+            assert.equal(response.status, 301, `${oldPath} precisa retornar 301`);
+            assert.equal(new URL(location, origin).href, origin + target, `${oldPath} destino incorreto`);
+            console.log(`PASS ${method} ${oldPath} -> ${target}`);
+          }
+          // Toda a matriz estatica de aliases tem que redirecionar em um salto.
+          // A fonte e lida do repositorio, sem copiar manualmente os 36 slugs.
+          const regras = await readRedirectMatrix(process.cwd());
+          assert.ok(regras.length >= 36, `matriz inesperadamente curta: ${regras.length}`);
+          for (const regra of regras) {
+            const antigo = regra.from + "?utm_source=seo-ci";
+            const esperado = new URL(regra.to + "?utm_source=seo-ci", origin).href;
+            const resp = await fetch(origin + antigo, { redirect: "manual" });
+            assert.equal(resp.status, 301, `${regra.from}: esperado 301, veio ${resp.status}`);
+            assert.equal(new URL(resp.headers.get("location"), origin).href, esperado, `${regra.from}: Location incorreto`);
+            const destino = await fetch(origin + regra.to, { redirect: "manual" });
+            assert.equal(destino.status, 200, `${regra.from}: destino ${regra.to} retornou ${destino.status}`);
+          }
+          console.log(`PASS matriz completa: ${regras.length} aliases 301 de salto unico e destinos 200.`);
+
+          const original = await fetch(origin + "/servicos/formatacao", { redirect: "manual" });
+          assert.equal(original.status, 200, "URL canonica precisa responder 200");
+          console.log("PASS URL canonica 200 e 4 redirecionamentos HTTP 301.");
+          NODE

@@ -1,6 +1,5 @@
 import { useEffect, useMemo } from "react";
 import { useParams, Link, Navigate } from "@/lib/router-compat";
-import { Helmet } from "react-helmet";
 import { useLoaderData } from "@tanstack/react-router";
 import { useCanonical } from "@/lib/canonicalUrl";
 import { Header } from "@/components/Header";
@@ -16,12 +15,12 @@ import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { getUniqueImage } from "@/lib/blogImages";
 import { getEditorialCover } from "@/lib/blogEditorialCovers";
 import { getCategoryCover } from "@/lib/categoryCovers";
-import { withOgVersion } from "@/lib/ogCacheBust";
 import { programmaticPosts } from "@/data/blogProgrammaticPosts";
 import { blogPostsContentBase } from "@/data/blogPostsContent";
 import { blogSupplementalPosts } from "@/data/blogSupplementalPosts";
 import type { BlogPostContent } from "@/data/blogPostsContent";
 import { BlogPostFAQ } from "@/components/BlogPostFAQ";
+import { FotoCredito } from "@/components/FotoCredito";
 import { EnriquecimentoFase2 } from "@/components/editorial/EnriquecimentoFase2";
 import { AtlasPonteArtigo } from "@/components/editorial/AtlasPonteArtigo";
 import { EditorialCta, EditorialRelatedLinks } from "@/components/editorial/EditorialCta";
@@ -31,12 +30,13 @@ import {
   INSTITUTIONAL_AUTHOR,
   EDITORIAL_PUBLISHER,
 } from "@/lib/blogEditorialRegistry";
-import { SITE_BASE_URL, BRAND_NAME } from "@/lib/siteConfig";
+import { SITE_BASE_URL } from "@/lib/siteConfig";
 import { buildArticleToc, shouldRenderToc } from "@/lib/articleToc";
 import { ArticleToc } from "@/components/editorial/ArticleToc";
 import { getArticleSources, getTechnicalReviewStatus } from "@/lib/blogEditorialSources";
 import NotFound from "./NotFound";
 import { encurtar, tituloComMarca, DESCRIPTION_MAX } from "@/lib/socialMeta";
+import { BLOG_SEO_DESCRIPTIONS } from "@/lib/blogSeoDescriptions";
 
 type PostsMap = Record<string, BlogPostContent>;
 
@@ -66,7 +66,7 @@ const BlogPost = () => {
       document.title = tituloComMarca(post.title, "Blog | O Técnico de Informática");
       const metaDescription = document.querySelector('meta[name="description"]');
       if (metaDescription) {
-        metaDescription.setAttribute("content", encurtar(post.excerpt, DESCRIPTION_MAX));
+        metaDescription.setAttribute("content", encurtar((slug && BLOG_SEO_DESCRIPTIONS[slug]) || post.excerpt, DESCRIPTION_MAX));
       }
       trackPageView(`/blog/${slug}`, `Blog - ${post.title}`);
     }
@@ -104,7 +104,6 @@ const BlogPost = () => {
         ? post.image
         : `${SITE_BASE_URL}${post.image}`)
     : (slug ? getUniqueImage(slug).replace(/w=\d+/, 'w=1600').replace(/q=\d+/, 'q=80') + '&w=1600&h=900' : '');
-  const heroImageOg = withOgVersion(heroImage);
 
   // Compute word count from content (rough estimate via readTime)
   // Índice do artigo: derivado dos headings reais durante o render
@@ -217,38 +216,9 @@ const BlogPost = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <Helmet>
-        <title>{tituloComMarca(post.title, "Blog | O Técnico de Informática")}</title>
-        <meta name="description" content={encurtar(post.excerpt, DESCRIPTION_MAX)} />
-        {/* robots/googlebot são gerenciados via efeito (registro editorial) */}
-        <meta property="og:type" content={approved ? "article" : "website"} />
-        <meta property="og:title" content={tituloComMarca(post.title, "Blog | O Técnico de Informática")} />
-        <meta property="og:description" content={encurtar(post.excerpt, DESCRIPTION_MAX)} />
-        <meta property="og:url" content={`${SITE_BASE_URL}/blog/${slug}`} />
-        <meta property="og:site_name" content={BRAND_NAME} />
-        <meta property="og:locale" content="pt_BR" />
-        <meta property="og:image" content={heroImageOg} />
-        <meta property="og:image:secure_url" content={heroImageOg} />
-        <meta property="og:image:width" content={editorialCover ? "1200" : "1600"} />
-        <meta property="og:image:height" content={editorialCover ? "630" : "900"} />
-        <meta property="og:image:alt" content={post.title} />
-        {approved && (
-          <>
-            <meta property="article:published_time" content={`${post.date}T08:00:00-03:00`} />
-            <meta property="article:section" content={post.category} />
-            <meta property="article:tag" content={post.category} />
-            <meta property="article:author" content={BRAND_NAME} />
-            <meta property="article:publisher" content={SITE_BASE_URL} />
-          </>
-        )}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={tituloComMarca(post.title, "Blog | O Técnico de Informática")} />
-        <meta name="twitter:description" content={encurtar(post.excerpt, DESCRIPTION_MAX)} />
-        <meta name="twitter:image" content={heroImageOg} />
-        <meta name="twitter:image:alt" content={post.title} />
-        {/* Preload hero image for faster LCP */}
-        <link rel="preload" as="image" href={heroImage} fetchPriority="high" />
-      </Helmet>
+      {/* Head gerenciado exclusivamente pelo TanStack em routes/blog_.$slug.tsx.
+          Mantemos apenas o preload da imagem principal para o LCP. */}
+      <link rel="preload" as="image" href={heroImage} fetchPriority="high" />
       <JsonLdSchema />
       <Header />
       <main>
@@ -316,7 +286,7 @@ const BlogPost = () => {
           <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-primary/[0.02] rounded-full blur-[100px] pointer-events-none" />
           <div className="container mx-auto relative z-10">
             {/* Discover-ready hero image: always show large featured image */}
-            <div className="max-w-4xl mx-auto mb-10">
+            <figure className="max-w-4xl mx-auto mb-10">
               <AspectRatio ratio={16 / 9} className="bg-muted rounded-xl overflow-hidden shadow-2xl">
                 <img
                   src={heroImage}
@@ -341,7 +311,8 @@ const BlogPost = () => {
                   height={editorialCover ? 630 : 900}
                 />
               </AspectRatio>
-            </div>
+              <FotoCredito src={heroImage} legenda="Imagem de capa do artigo" />
+            </figure>
             {approved && approval && (
               <aside
                 aria-label="Informações de revisão editorial"
