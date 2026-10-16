@@ -42,18 +42,31 @@ test.describe("Como funciona mobile — triagem, CTAs e CLS", () => {
     await modal.getByRole("button", { name: "Close" }).click();
     await expect(modal).toBeHidden();
 
-    // A página própria de "Como funciona" conserva conteúdo, CTA e acesso à triagem.
-    await page.goto(BASE + "/como-funciona", { waitUntil: "domcontentloaded" });
-    await expect(page.getByRole("heading", { level: 1 })).toBeVisible();
-    const whatsappCta = page.getByRole("link", { name: /Chamar no WhatsApp/i }).first();
+    // Isola o fluxo da rota comercial de possíveis navegações pendentes
+    // originadas pelo fechamento assíncrono da triagem na home.
+    const detailsPage = await page.context().newPage();
+    await detailsPage.addInitScript(() => {
+      (window as unknown as { __cls: number }).__cls = 0;
+      new PerformanceObserver((entries) => {
+        for (const entry of entries.getEntries() as PerformanceEntry[]) {
+          const shift = entry as PerformanceEntry & { hadRecentInput?: boolean; value?: number };
+          if (!shift.hadRecentInput && typeof shift.value === "number") {
+            (window as unknown as { __cls: number }).__cls += shift.value;
+          }
+        }
+      }).observe({ type: "layout-shift", buffered: true });
+    });
+    await detailsPage.goto(BASE + "/como-funciona", { waitUntil: "domcontentloaded" });
+    await expect(detailsPage.getByRole("heading", { level: 1 })).toBeVisible();
+    const whatsappCta = detailsPage.getByRole("link", { name: /Chamar no WhatsApp/i }).first();
     await expect(whatsappCta).toBeVisible();
     await expect(whatsappCta).toBeEnabled();
     expect(await whatsappCta.getAttribute("href")).toContain("wa.me");
-    await expect(page.getByTestId("whatsapp-float")).toBeVisible();
-    expect(await page.locator('a[href^="tel:"]').count()).toBe(0);
+    await expect(detailsPage.getByTestId("whatsapp-float")).toBeVisible();
+    expect(await detailsPage.locator('a[href^="tel:"]').count()).toBe(0);
 
-    await page.waitForTimeout(800);
-    const cls = await page.evaluate(
+    await detailsPage.waitForTimeout(800);
+    const cls = await detailsPage.evaluate(
       () => (window as unknown as { __cls: number }).__cls || 0,
     );
     expect(cls, `CLS regrediu: ${cls}`).toBeLessThan(0.1);
