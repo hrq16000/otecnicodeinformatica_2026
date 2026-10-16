@@ -20,8 +20,9 @@ description = "Chaves publicas sb_publishable no .env"
 targetRules = ["generic-api-key"]
 condition = "AND"
 paths = ['''(^|/)\.env$''']
-regexTarget = "line"
-regexes = ['''^(VITE_)?SUPABASE_PUBLISHABLE_KEY="sb_publishable_[A-Za-z0-9_-]+"$''']
+# O match original do scanner inclui o valor publico; nao depende do nome da variavel.
+regexTarget = "match"
+regexes = ['''sb_publishable_[A-Za-z0-9_-]+''']
 
 # Token de CSS do manifesto, sem liberar credenciais em outras linhas.
 [[allowlists]]
