@@ -1,0 +1,63 @@
+name: Visual snapshots revisados PR384
+on:
+  pull_request:
+    paths:
+      - ".github/workflows/visual-snapshot-reviewed-pr384.yml"
+permissions:
+  contents: write
+jobs:
+  reviewed-three-routes:
+    if: ${{ github.event.pull_request.number == 384 && github.event.pull_request.head.repo.full_name == github.repository }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 22
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+          persist-credentials: true
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22.12.0"
+          cache: npm
+      - uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: "1.4.2"
+      - run: npm ci --no-audit --no-fund
+      - run: npm run build
+        env:
+          VITE_SITE_DOMAIN: otecnicodeinformatica.com.br
+          VITE_SITE_INDEXING_ENABLED: "true"
+      - run: npx playwright install --with-deps chromium
+      - name: Start Worker SSR (mesmo servidor do CI oficial)
+        run: npx --yes wrangler@4.45.4 dev --config dist/server/wrangler.json --local --ip 127.0.0.1 --port 8080 > /tmp/visual-worker.log 2>&1 &
+      - run: npx wait-on http://localhost:8080 --timeout 60000
+      - name: Atualizar apenas snapshots de layout inspecionados (sem alterar thresholds)
+        env:
+          E2E_BASE_URL: http://localhost:8080
+        run: |
+          npx playwright test e2e/visual-reduced-motion.spec.ts --project=chromium --grep "sem animação ativa e sem layout shift" --update-snapshots
+      - name: Validar escopo de três imagens e publicar na branch PR384
+        env:
+          BRANCH: ${{ github.head_ref }}
+        run: |
+          set -euo pipefail
+          git status --short
+          changed=$(git diff --name-only)
+          if [ -z "$changed" ]; then
+            echo "Nenhuma referência visual alterada."
+            exit 0
+          fi
+          while IFS= read -r file; do
+            case "$file" in
+              e2e/visual-reduced-motion.spec.ts-snapshots/reduced-motion-home-chromium-linux.png|e2e/visual-reduced-motion.spec.ts-snapshots/reduced-motion-servicos-chromium-linux.png|e2e/visual-reduced-motion.spec.ts-snapshots/reduced-motion-empresas-chromium-linux.png)
+                echo "Verificado: $file" ;;
+              *)
+                echo "ALTERAÇÃO FORA DO ESCOPO: $file"
+                exit 1 ;;
+            esac
+          done <<< "$changed"
+          git add e2e/visual-reduced-motion.spec.ts-snapshots/reduced-motion-home-chromium-linux.png e2e/visual-reduced-motion.spec.ts-snapshots/reduced-motion-servicos-chromium-linux.png e2e/visual-reduced-motion.spec.ts-snapshots/reduced-motion-empresas-chromium-linux.png
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "test(visual): refresh 3 individually inspected layout references"
+          git push origin "HEAD:$BRANCH"
