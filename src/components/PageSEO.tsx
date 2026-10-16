@@ -24,6 +24,7 @@ interface PageSEOPrimaryImage {
 interface PageSEOProps {
   title: string;
   description: string;
+  descriptionFromRouteHead?: boolean;
   path?: string;
   ogImage?: string;
   primaryImage?: PageSEOPrimaryImage;
@@ -41,6 +42,7 @@ interface PageSEOProps {
 export const PageSEO = ({
   title,
   description,
+  descriptionFromRouteHead = false,
   path = "",
   ogImage = DEFAULT_OG_IMAGE,
   primaryImage,
@@ -106,7 +108,7 @@ export const PageSEO = ({
   return (
     <>
       <title>{title}</title>
-      <meta name="description" content={description} />
+      {!descriptionFromRouteHead && <meta name="description" content={description} />}
       <meta name="robots" content={robotsContent(noindex)} />
       {INDEXING_ENABLED && url ? (
         <link rel="canonical" href={url} data-canonical-owner="managed" />

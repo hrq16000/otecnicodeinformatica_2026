@@ -4,6 +4,16 @@ import { SITE_URL } from "./site-env";
 const BASE = process.env.E2E_BASE_URL ?? "http://localhost:8080";
 
 test.describe("SEO — sitemap & robots", () => {
+  test("atendimento remoto entrega uma unica metadescricao ja no SSR", async ({ request }) => {
+    for (let run = 0; run < 3; run++) {
+      const res = await request.get(`${BASE}/atendimento-remoto`);
+      expect(res.ok()).toBeTruthy();
+      const html = await res.text();
+      const tags = html.match(/<meta\\b[^>]*\\bname=["']description["'][^>]*>/gi) ?? [];
+      expect(tags, `metadescricao ausente/duplicada na resposta SSR ${run + 1}`).toHaveLength(1);
+      expect(tags[0]).toContain("Suporte remoto de informática em Curitiba");
+    }
+  });
   test("robots.txt allows core routes", async ({ request }) => {
     const res = await request.get(`${BASE}/robots.txt`);
     expect(res.ok()).toBeTruthy();
