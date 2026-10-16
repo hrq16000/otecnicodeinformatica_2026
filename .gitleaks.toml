@@ -20,9 +20,19 @@ regexes = ['''^[[:space:]]*export const CONSENT_KEY_(V2|LEGACY) = "lgpd_consent_
 description = "Chaves sb_publishable publicas no env versionado"
 targetRules = ["generic-api-key"]
 condition = "AND"
-paths = ['''(^|/)\.env$''']
+paths = ['''(^|/)\.env
+
+# Token do manifesto de migracao e nome de classe CSS, nao credencial.
+[[allowlists]]
+description = "Seletor CSS duration-400 no manifesto de temas"
+targetRules = ["generic-api-key"]
+condition = "AND"
+paths = ['''(^|/)\.lovable/migrate-to-tanstack/theme-port\.json$''']
 regexTarget = "line"
-regexes = ['''^(VITE_)?SUPABASE_PUBLISHABLE_KEY="sb_publishable_[A-Za-z0-9_-]+"$''']
+regexes = ['''^[[:space:]]*\{"token": "\.duration-400", "source": "src/index\.css", "reappliedIn": "src/styles\.css"\},?[[:space:]]*$''']
+'']
+regexTarget = "match"
+regexes = ['''sb_publishable_[A-Za-z0-9_-]+''']
 
 # Token do manifesto de migracao e nome de classe CSS, nao credencial.
 [[allowlists]]
