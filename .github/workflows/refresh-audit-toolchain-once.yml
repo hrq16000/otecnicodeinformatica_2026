@@ -6,6 +6,7 @@ on:
       - fix/seo-gate-producao-indexabilidade-20261014
     paths:
       - .github/workflows/refresh-audit-toolchain-once.yml
+      - scripts/run-lighthouse-audit.mjs
 permissions:
   contents: write
 jobs:
