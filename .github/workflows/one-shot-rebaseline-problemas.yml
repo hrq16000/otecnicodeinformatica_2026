@@ -10,7 +10,7 @@ permissions:
   contents: read
 jobs:
   update-inspected-baseline:
-    if: github.event.head_commit.message == 'chore(visual): one-shot inspected problemas baseline'
+    if: "github.event.head_commit.message == 'chore(visual): one-shot inspected problemas baseline'"
     permissions:
       contents: write
     runs-on: ubuntu-latest
