@@ -1,0 +1,74 @@
+name: One-time safe remediation of dev dependency vulnerabilities
+
+on:
+  push:
+    branches:
+      - fix/seo-gate-producao-indexabilidade-20261014
+    paths:
+      - .github/workflows/dev-dependencies-once.yml
+permissions:
+  contents: write
+concurrency:
+  group: one-time-dev-audit-repair
+  cancel-in-progress: false
+jobs:
+  remediate:
+    if: github.repository == 'hrq16000/otecnicodeinformatica_2026'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: latest
+      - name: Capture before counts
+        run: |
+          npm audit --json > /tmp/audit-before.json || true
+          node -e "const j=require('/tmp/audit-before.json'); const v=j.metadata?.vulnerabilities || {}; console.log('BEFORE',v.high||0,v.critical||0);"
+      - name: Apply only compatible non-force fixes
+        run: npm audit fix --ignore-scripts --no-fund || true
+      - name: Verify production dependency security
+        run: npm audit --omit=dev --audit-level=high
+      - name: Validate improvement
+        id: reduction
+        run: |
+          npm audit --json > /tmp/audit-after.json || true
+          node - <<'NODE'
+          const fs = require('fs');
+          const a = require('/tmp/audit-before.json').metadata?.vulnerabilities || {};
+          const b = require('/tmp/audit-after.json').metadata?.vulnerabilities || {};
+          const before = (a.high || 0) + (a.critical || 0);
+          const after = (b.high || 0) + (b.critical || 0);
+          console.log('Audit high+critical before:', before, 'after:', after);
+          fs.appendFileSync(process.env.GITHUB_OUTPUT, 'improved=' + (after < before ? 'true' : 'false') + '\n');
+          if (after > before) throw new Error('Audit regression');
+          NODE
+      - name: Sync and verify Bun lock
+        if: steps.reduction.outputs.improved == 'true'
+        run: |
+          bun install --lockfile-only
+          bun install --frozen-lockfile
+      - name: Validate tests and build
+        if: steps.reduction.outputs.improved == 'true'
+        run: |
+          npm ci --no-audit --no-fund
+          npm run test:unit
+          npm run build
+      - name: Commit safe lockfile updates only
+        if: steps.reduction.outputs.improved == 'true'
+        run: |
+          git add -- package.json package-lock.json bun.lock
+          if git diff --cached --quiet; then
+            echo "No dependency changes"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "fix(deps): apply validated non-force security patches"
+          git push origin HEAD:refs/heads/fix/seo-gate-producao-indexabilidade-20261014
