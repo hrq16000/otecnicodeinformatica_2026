@@ -9,7 +9,7 @@ test.describe("SEO — sitemap & robots", () => {
       const res = await request.get(`${BASE}${path}`);
       expect(res.ok(), path).toBeTruthy();
       const html = await res.text();
-      const tag = html.match(/<meta\\b[^>]*name=["']robots["'][^>]*>/i)?.[0] ?? "";
+      const tag = html.match(/<meta\b[^>]*name=["']robots["'][^>]*>/i)?.[0] ?? "";
       expect(tag, `robots ausente em ${path}`).toMatch(/noindex/i);
       expect(tag, `follow ausente em ${path}`).toMatch(/follow/i);
     }
