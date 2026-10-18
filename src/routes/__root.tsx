@@ -9,7 +9,7 @@ import {
   useRouterState,
 } from "@tanstack/react-router";
 import { QueryClientProvider, type QueryClient } from "@tanstack/react-query";
-import appCss from "../styles.css?url";
+import appCss from "../styles.css?inline";
 import { OS_PREHYDRATION_SCRIPT } from "@/lib/os/osPrehydration";
 
 import { AppErrorBoundary } from "@/components/AppErrorBoundary";
@@ -119,8 +119,11 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:image:alt", content: "O Técnico de Informática" },
       { property: "og:image:type", content: "image/png" },
     ],
+    // O CSS global era o recurso bloqueante dominante no perfil móvel
+    // (≈2,86 s antes da primeira pintura). Embuti-lo no HTML elimina a
+    // segunda ida à rede sem mudar os estilos ou depender de JavaScript.
+    styles: [{ children: appCss }],
     links: [
-      { rel: "stylesheet", href: appCss },
       { rel: "preload", as: "image", href: "/logo.webp", type: "image/webp", fetchPriority: "high" },
       { rel: "dns-prefetch", href: "https://www.googletagmanager.com" },
       { rel: "dns-prefetch", href: "https://www.google-analytics.com" },
