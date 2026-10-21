@@ -103,7 +103,9 @@ export const HeroTriagem = () => {
           </p>
           <figure className="relative mt-6 overflow-hidden rounded-2xl border border-border shadow-[var(--shadow-lg)] lg:hidden">
             <img
-              src="/fotos/bancada-tecnica.jpg"
+              src="/fotos/bancada-tecnica-640.webp"
+              srcSet="/fotos/bancada-tecnica-360.webp 360w, /fotos/bancada-tecnica-640.webp 640w"
+              sizes="(max-width: 640px) calc(100vw - 2rem), 640px"
               alt="Bancada de diagnóstico com notebook, SSD e ferramentas de precisão"
               width={1024}
               height={735}
