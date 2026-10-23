@@ -1,6 +1,4 @@
 import { MessageCircle } from "lucide-react";
-import { toast } from "sonner";
-import { trackCTAClick } from "@/lib/analytics";
 import { cn } from "@/lib/utils";
 
 /**
@@ -11,12 +9,23 @@ import { cn } from "@/lib/utils";
  */
 export const WhatsAppFloat = () => {
   const handleClick = () => {
-    trackCTAClick("whatsapp", "float");
-    // Confirmação imediata do toque (mobile): o usuário sabe que o clique funcionou.
-    toast.success("Abrindo a triagem rápida do WhatsApp…", { duration: 2000 });
+    // A ação principal não espera analytics nem a biblioteca de toast. Ambos
+    // são dependências comerciais secundárias e só entram após intenção real.
     window.dispatchEvent(
       new CustomEvent("wa-funnel:open", { detail: { location: "float" } }),
     );
+
+    void Promise.all([
+      import("@/lib/analytics"),
+      import("sonner"),
+    ])
+      .then(([{ trackCTAClick }, { toast }]) => {
+        trackCTAClick("whatsapp", "float");
+        toast.success("Abrindo a triagem rápida do WhatsApp…", { duration: 2000 });
+      })
+      .catch(() => {
+        // O funil já foi acionado; telemetria/feedback nunca bloqueiam contato.
+      });
   };
 
 
