@@ -1,0 +1,49 @@
+name: One-time dependency security repair (PR 384)
+on:
+  push:
+    branches:
+      - fix/seo-gate-producao-indexabilidade-20261014
+    paths:
+      - .github/workflows/pr384-security-repair.yml
+permissions:
+  contents: write
+jobs:
+  update-audited-lockfiles:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: latest
+      - name: Upgrade affected dependencies within existing semver families
+        run: |
+          set -euxo pipefail
+          bun install --frozen-lockfile
+          bun update dompurify zod vite undici launch-editor
+          npm install --package-lock-only --ignore-scripts --no-fund
+          npm audit fix --package-lock-only --ignore-scripts --no-fund
+      - name: Verify lockfiles and fail closed on high or critical advisories
+        run: |
+          set -euxo pipefail
+          npm ci --ignore-scripts --no-fund --no-audit
+          npm audit --audit-level=high
+          bun install --frozen-lockfile
+          bunx --bun npm audit --audit-level=high
+      - name: Commit audited package updates only
+        run: |
+          set -euxo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -- package.json package-lock.json bun.lock
+          if git diff --cached --quiet; then
+            echo "No dependency updates required"
+            exit 0
+          fi
+          git commit -m "security(deps): refresh vulnerable packages and reproducible locks"
+          git push origin "HEAD:${GITHUB_REF_NAME}"
