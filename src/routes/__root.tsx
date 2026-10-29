@@ -38,6 +38,7 @@ import {
 import { REDIRECT_MATRIX } from "@/lib/redirectMatrix";
 import { reportLovableError } from "@/lib/lovable-error-reporting";
 import { runClientInit } from "@/lib/clientInit";
+import { brandConfig } from "@/lib/config/brand";
 
 // Google Consent Mode v2 — precisa rodar antes de qualquer ping (LGPD).
 // Portado do <head> do index.html pré-migração.
@@ -121,7 +122,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     ],
     links: [
       { rel: "stylesheet", href: appCss },
-      { rel: "preload", as: "image", href: "/logo.webp", type: "image/webp", fetchPriority: "high" },
+      { rel: "preload", as: "image", href: brandConfig.logoOnLight, fetchPriority: "high" },
       { rel: "dns-prefetch", href: "https://www.googletagmanager.com" },
       { rel: "dns-prefetch", href: "https://www.google-analytics.com" },
       { rel: "icon", href: "/favicon.png", type: "image/png" },
