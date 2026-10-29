@@ -73,6 +73,7 @@ export const HeroTriagem = () => {
       {/* Background decorativo só requisitado quando o bloco desktop é exibido;
           um <img> escondido via CSS era baixado também no mobile (~173 KB). */}
       <div
+        data-visual-background
         className="pointer-events-none absolute inset-y-0 right-0 hidden w-[46%] bg-cover bg-center lg:block"
         style={{ backgroundImage: "url('/fotos/estacao-trabalho.jpg')" }}
         aria-hidden="true"
