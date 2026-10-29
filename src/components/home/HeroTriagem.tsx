@@ -163,7 +163,9 @@ export const HeroTriagem = () => {
               height={735}
               loading="eager"
               fetchPriority="high"
-              decoding="async"
+              // Experimento isolado: a foto é o LCP; solicitar decodificação
+              // antes do próximo paint, sem alterar preload ou posição.
+              decoding="sync"
               className="aspect-[16/9] w-full object-cover object-[65%_center]"
             />
           </picture>
