@@ -24,7 +24,13 @@ const PESO_CLASSES: Record<string, string> = {
  * da marca na primeira leitura.
  */
 export const ContextosBento = () => (
-  <section className="border-b border-border bg-secondary/40 py-12 md:py-16" aria-labelledby="contextos-h2">
+  <section
+    className="border-b border-border bg-secondary/40 py-12 md:py-16"
+    aria-labelledby="contextos-h2"
+    // A seção fica após hero, compromissos e links SSR de descoberta.
+    // Evita layout/paint antecipado sem remover qualquer conteúdo do DOM/SSR.
+    style={{ contentVisibility: "auto", containIntrinsicSize: "auto 700px" }}
+  >
     <div className="container mx-auto">
       <header className="max-w-2xl">
         <h2
