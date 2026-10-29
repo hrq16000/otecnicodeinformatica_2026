@@ -98,24 +98,7 @@ export const HeroTriagem = () => {
             Computadores, notebooks, redes, Wi-Fi, sistemas, dados e suporte para pessoas e
             empresas. Conte o que aconteceu com suas palavras — a parte técnica fica com a gente.
           </p>
-          <figure className="relative mt-6 overflow-hidden rounded-2xl border border-border shadow-[var(--shadow-lg)] lg:hidden">
-            <picture>
-              <source srcSet="/fotos/bancada-tecnica-mobile.webp" type="image/webp" />
-              <img
-                src="/fotos/bancada-tecnica.jpg"
-                alt="Bancada de diagnóstico com notebook, SSD e ferramentas de precisão"
-                width={1024}
-                height={735}
-                loading="eager"
-                fetchPriority="high"
-                decoding="sync"
-                className="aspect-[16/9] w-full object-cover object-[65%_center]"
-              />
-            </picture>
-            <figcaption className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent px-4 pb-3 pt-10 text-sm font-medium text-white">
-              Diagnóstico técnico começa pela causa.
-            </figcaption>
-          </figure>
+
         </div>
 
         {/* Campo principal: "O que está acontecendo?" */}
@@ -167,6 +150,27 @@ export const HeroTriagem = () => {
             ))}
           </ul>
         </form>
+
+        {/* No mobile, a triagem vem antes da foto: CTA acessível na primeira
+            dobra e WebP editorial carregado só ao aproximar do viewport. */}
+        <figure className="relative mt-6 overflow-hidden rounded-2xl border border-border shadow-[var(--shadow-lg)] lg:hidden">
+          <picture>
+            <source srcSet="/fotos/bancada-tecnica-mobile.webp" type="image/webp" />
+            <img
+              src="/fotos/bancada-tecnica.jpg"
+              alt="Bancada de diagnóstico com notebook, SSD e ferramentas de precisão"
+              width={1024}
+              height={735}
+              loading="lazy"
+              fetchPriority="low"
+              decoding="async"
+              className="aspect-[16/9] w-full object-cover object-[65%_center]"
+            />
+          </picture>
+          <figcaption className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent px-4 pb-3 pt-10 text-sm font-medium text-white">
+            Diagnóstico técnico começa pela causa.
+          </figcaption>
+        </figure>
 
         {/* Quatro caminhos de entrada, cada um com CTA contextual. */}
         <nav
