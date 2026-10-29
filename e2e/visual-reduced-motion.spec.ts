@@ -111,14 +111,14 @@ for (const rota of rotas) {
       }
       expect(cls, `CLS em ${rota.path}`).toBeLessThanOrEqual(CLS_MAX);
 
-      // Regiões voláteis por natureza (consentimento, botão flutuante e
-      // imagens remotas) são mascaradas: o contrato aqui é layout, não pixel.
+      // Não mascarar o banner de consentimento: ele está visível no snapshot
+      // aprovado. A máscara apenas na captura atual gerava falso positivo.
+      // Mantém tolerância visual e limite de CLS sem alterações.
       await expect(page).toHaveScreenshot(`reduced-motion-${rota.nome}.png`, {
         clip: { x: 0, y: 0, width: 1280, height: 900 },
         maxDiffPixelRatio: 0.05,
         animations: "disabled",
         mask: [
-          page.locator("[data-cookie-banner], [class*='cookie']"),
           page.locator("button.wa-float-offset"),
           page.locator("img"),
           // O fundo fotográfico do hero migrou de <img> para CSS background.
