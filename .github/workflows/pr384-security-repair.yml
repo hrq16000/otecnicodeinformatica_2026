@@ -27,7 +27,9 @@ jobs:
           bun install --frozen-lockfile
           bun update dompurify zod vite undici launch-editor
           npm install --package-lock-only --ignore-scripts --no-fund
-          npm audit fix --package-lock-only --ignore-scripts --no-fund
+          # npm audit fix returns 1 even when only moderate advisories remain.
+          # Keep high/critical strictly blocking; don't force breaking majors.
+          npm audit fix --package-lock-only --ignore-scripts --no-fund || npm audit --audit-level=high
       - name: Verify lockfiles and fail closed on high or critical advisories
         run: |
           set -euxo pipefail
