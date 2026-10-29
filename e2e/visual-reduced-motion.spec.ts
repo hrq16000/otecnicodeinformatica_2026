@@ -121,6 +121,9 @@ for (const rota of rotas) {
           page.locator("[data-cookie-banner], [class*='cookie']"),
           page.locator("button.wa-float-offset"),
           page.locator("img"),
+          // O fundo fotográfico do hero migrou de <img> para CSS background.
+          // Mascara a mesma área volátil sem afrouxar tolerância nem CLS.
+          page.locator("[data-visual-background]"),
         ],
       });
     });
