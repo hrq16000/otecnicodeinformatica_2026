@@ -122,7 +122,8 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     ],
     links: [
       { rel: "preload", as: "font", href: "/fonts/figtree-var.woff2", type: "font/woff2", crossOrigin: "anonymous" },
-      { rel: "preload", as: "font", href: "/fonts/outfit-var.woff2", type: "font/woff2", crossOrigin: "anonymous" },
+      // Outfit segue definida no CSS (font-display: optional), sem disputar
+      // o preload mobile com a imagem LCP e o JavaScript inicial.
       { rel: "stylesheet", href: appCss },
       { rel: "preload", as: "image", href: brandConfig.logoOnLight, fetchPriority: "high" },
       { rel: "dns-prefetch", href: "https://www.googletagmanager.com" },
