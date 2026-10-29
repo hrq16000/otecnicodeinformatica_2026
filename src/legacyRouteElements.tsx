@@ -1099,11 +1099,7 @@ export const legacyRouteElements: Record<string, () => React.ReactElement> = {
 
 
 
-/** Redirects que antes eram <Navigate replace> no React Router. */
-export const legacyNavigateRedirects: Record<string, string> = {
-  "/patrocinadores": "/anuncie",
-  "/admin": "/admin/funnel",
-  "/index": "/",
-};
+/** Compartilha aliases com o shell sem importar todas as páginas. */
+export { legacyNavigateRedirects } from "./lib/legacyNavigateRedirects";
 
 export const LegacyNotFound = NotFound;
