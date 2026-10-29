@@ -20,6 +20,7 @@ import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { EDITORIAL_WAVE_SLUGS } from "./lib/editorial-wave.mjs";
+import { readStringArray } from "./lib/editorial-static-catalog.mjs";
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const rel = (p) => path.join(root, p);
@@ -51,26 +52,7 @@ const EXPECTED_PILOTS = ALL_PILOT_CANDIDATES.filter((s) => !EDITORIAL_WAVE_SLUGS
 // ou "blocked" (com justificativa objetiva em notes).
 
 
-const ALLOWED_SOURCE_HOSTS = new Set([
-  "microsoft.com",
-  "www.microsoft.com",
-  "learn.microsoft.com",
-  "support.microsoft.com",
-  "support.google.com",
-  "cisa.gov",
-  "www.cisa.gov",
-  "cert.br",
-  "cartilha.cert.br",
-  "nist.gov",
-  "www.nist.gov",
-  "csrc.nist.gov",
-  "wi-fi.org",
-  "www.wi-fi.org",
-  "nvmexpress.org",
-  "www.nvmexpress.org",
-  "fcc.gov",
-  "www.fcc.gov",
-]);
+const ALLOWED_SOURCE_HOSTS = new Set(readStringArray(read("src/lib/blogEditorialSources.ts"), "ALLOWED_SOURCE_HOSTS"));
 
 // Extrai blocos "  "slug": {" ... até o próximo top-level slug.
 function extractSlugBlocks(src) {
