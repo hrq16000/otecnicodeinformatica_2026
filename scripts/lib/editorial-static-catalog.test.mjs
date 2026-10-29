@@ -61,3 +61,13 @@ test("todas as pontes declaradas existem no corpo vencedor do catálogo real", (
     }
   }
 });
+
+test("fontes Seagate usam as URLs globais revisadas e manual MSI está classificado", () => {
+  const source = readFileSync(new URL("../../src/lib/blogEditorialSources.ts", import.meta.url), "utf8");
+  const hosts = readStringArray(source, "ALLOWED_SOURCE_HOSTS");
+  assert.ok(hosts.includes("download-2.msi.com"));
+  assert.equal(hosts.includes("unverified.download-2.msi.com"), false);
+  const urls = [...source.matchAll(/url:\s*"(https:\/\/www\.seagate\.com[^\"]+)"/g)].map((m) => m[1]);
+  assert.equal(urls.length, 3);
+  assert.ok(urls.every((url) => new URL(url).pathname.startsWith("/support/kb/")));
+});

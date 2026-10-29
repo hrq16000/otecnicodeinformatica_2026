@@ -110,6 +110,7 @@ export const ALLOWED_SOURCE_HOSTS = [
   "www.seagate.com",
   "www.amd.com",
   "br.msi.com",
+  "download-2.msi.com", // Manual H610TI: JFP1 conferido na página 17 (PDF 19/250).
 ] as const;
 
 // ─────────────────────────────────────────────────────────────
@@ -718,8 +719,8 @@ export const EDITORIAL_SOURCES: Record<string, EditorialSource> = {
     id: "seagate-bios-sata-not-detected-2026",
     title: "O BIOS não detecta ou reconhece o disco rígido ATA/SATA",
     publisher: "Seagate Support",
-    url: "https://www.seagate.com/pt/pt/support/kb/the-bios-does-not-detect-or-recognize-the-ata-sata-hard-drive-168595en/",
-    accessedAt: "2026-09-30",
+    url: "https://www.seagate.com/support/kb/the-bios-does-not-detect-or-recognize-the-ata-sata-hard-drive-168595en/",
+    accessedAt: "2026-10-29",
     sourceType: "official",
     supports: [
       "A ausência de um HD SATA no BIOS pode envolver porta desabilitada, cabo, alimentação e a própria unidade; o diagnóstico deve isolar essas camadas.",
@@ -730,8 +731,8 @@ export const EDITORIAL_SOURCES: Record<string, EditorialSource> = {
     id: "seagate-bios-ssd-not-detected-2026",
     title: "O BIOS não detecta ou reconhece a unidade de estado sólido",
     publisher: "Seagate Support",
-    url: "https://www.seagate.com/pt/pt/support/kb/the-bios-does-not-detect-or-recognize-the-solid-state-drive-005707en/",
-    accessedAt: "2026-09-30",
+    url: "https://www.seagate.com/support/kb/the-bios-does-not-detect-or-recognize-the-solid-state-drive-005707en/",
+    accessedAt: "2026-10-29",
     sourceType: "official",
     supports: [
       "A ausência de um SSD SATA no BIOS pode envolver porta/configuração, conexão e falha da unidade.",
@@ -743,8 +744,8 @@ export const EDITORIAL_SOURCES: Record<string, EditorialSource> = {
     id: "seagate-noisy-drive-2026",
     title: "O que eu devo fazer quando o disco rígido faz barulho?",
     publisher: "Seagate Support",
-    url: "https://www.seagate.com/br/pt/support/kb/what-should-i-do-for-a-noisy-disk-drive-193731en/",
-    accessedAt: "2026-09-30",
+    url: "https://www.seagate.com/support/kb/what-should-i-do-for-a-noisy-disk-drive-193731en/",
+    accessedAt: "2026-10-29",
     sourceType: "official",
     supports: [
       "Discos rígidos podem produzir vibrações e cliques durante leitura, gravação e verificações internas; som isolado não identifica uma falha mecânica específica.",
@@ -893,7 +894,7 @@ export const EDITORIAL_SOURCES: Record<string, EditorialSource> = {
     title: "JFP1: Front Panel Connectors",
     publisher: "MSI",
     url: "https://download-2.msi.com/archive/mnu_exe/mb/H610TI-S03_H610TI-S01.pdf",
-    accessedAt: "2026-09-29",
+    accessedAt: "2026-10-29",
     sourceType: "official",
     supports: [
       "O header JFP1 do manual separa Power Switch, Reset Switch, Power LED e HDD LED.",
