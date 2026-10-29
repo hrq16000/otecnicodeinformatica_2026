@@ -1,5 +1,5 @@
 /// <reference types="vite/client" />
-import { lazy, Suspense, useEffect, useMemo, type ReactNode } from "react";
+import { Suspense, useEffect, useMemo, type ReactNode } from "react";
 import {
   createRootRouteWithContext,
   HeadContent,
@@ -30,13 +30,11 @@ import { WhatsAppFloat } from "@/components/WhatsAppFloat";
 import { GlobalSmartSearch } from "@/components/GlobalSmartSearch";
 import { ScrollToTop } from "@/components/ScrollToTop";
 import ConsentBanner from "@/components/ConsentBanner";
-import { RootIdleEnhancements } from "@/components/RootIdleEnhancements";
-import { legacyNavigateRedirects } from "@/lib/legacyNavigateRedirects";
-
-// A página 404 só precisa do registro legado em URLs desconhecidas.
-const LegacyNotFound = lazy(() =>
-  import("@/legacyRouteElements").then((m) => ({ default: m.LegacyNotFound })),
-);
+import {
+  IdleEnhancements,
+  LegacyNotFound,
+  legacyNavigateRedirects,
+} from "@/legacyRouteElements";
 import { REDIRECT_MATRIX } from "@/lib/redirectMatrix";
 import { reportLovableError } from "@/lib/lovable-error-reporting";
 import { runClientInit } from "@/lib/clientInit";
@@ -215,7 +213,7 @@ function RootComponent() {
           <GlobalSmartSearch />
           <WhatsAppFloat />
           <ConsentBanner />
-          <RootIdleEnhancements />
+          <IdleEnhancements />
         </MotionProvider>
       </AppErrorBoundary>
     </QueryClientProvider>
