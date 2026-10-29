@@ -571,21 +571,27 @@ export const IdleEnhancements = () => {
   const [extrasReady, setExtrasReady] = useState(false);
 
   useEffect(() => {
-    // Toasts continuam no tempo ocioso. Widgets secundários não devem
-    // disputar rede/CPU com a primeira dobra e o LCP mobile (≈ 6 s).
+    // Não solicitar widgets de notificação no LCP: o requestIdleCallback
+    // anterior executava cedo demais (≈2,3 s), antes da primeira pintura.
+    // Se a pessoa interagir, antecipa a montagem dos toasts sem atrasar
+    // a resposta ao toque; em visitas passivas, aguarda a primeira dobra.
     const activate = () => setEnabled(true);
-    const idleId: number = typeof window.requestIdleCallback === "function"
-      ? window.requestIdleCallback(activate, { timeout: 4500 })
-      : (globalThis.setTimeout(activate, 2500) as unknown as number);
-    const extrasTimer = window.setTimeout(() => setExtrasReady(true), 8500);
+    const onInteraction = () => {
+      activate();
+      window.clearTimeout(activationTimer);
+      document.removeEventListener("pointerdown", onInteraction);
+      document.removeEventListener("keydown", onInteraction);
+    };
+    const activationTimer = window.setTimeout(activate, 7600);
+    document.addEventListener("pointerdown", onInteraction, { once: true, passive: true });
+    document.addEventListener("keydown", onInteraction, { once: true });
+    const extrasTimer = window.setTimeout(() => setExtrasReady(true), 11000);
 
     return () => {
+      window.clearTimeout(activationTimer);
       window.clearTimeout(extrasTimer);
-      if (typeof window.cancelIdleCallback === "function") {
-        window.cancelIdleCallback(idleId);
-      } else {
-        globalThis.clearTimeout(idleId);
-      }
+      document.removeEventListener("pointerdown", onInteraction);
+      document.removeEventListener("keydown", onInteraction);
     };
   }, []);
 
