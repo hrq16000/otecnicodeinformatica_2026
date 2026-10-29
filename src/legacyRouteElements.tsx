@@ -568,20 +568,24 @@ const Sonner = lazy(() => import("@/components/ui/sonner").then((m) => ({ defaul
 
 export const IdleEnhancements = () => {
   const [enabled, setEnabled] = useState(false);
+  const [extrasReady, setExtrasReady] = useState(false);
 
   useEffect(() => {
+    // Toasts continuam no tempo ocioso. Widgets secundários não devem
+    // disputar rede/CPU com a primeira dobra e o LCP mobile (≈ 6 s).
     const activate = () => setEnabled(true);
     const idleId: number = typeof window.requestIdleCallback === "function"
       ? window.requestIdleCallback(activate, { timeout: 4500 })
       : (globalThis.setTimeout(activate, 2500) as unknown as number);
+    const extrasTimer = window.setTimeout(() => setExtrasReady(true), 8500);
 
     return () => {
+      window.clearTimeout(extrasTimer);
       if (typeof window.cancelIdleCallback === "function") {
         window.cancelIdleCallback(idleId);
       } else {
         globalThis.clearTimeout(idleId);
       }
-
     };
   }, []);
 
@@ -591,9 +595,15 @@ export const IdleEnhancements = () => {
     <Suspense fallback={null}>
       <Toaster />
       <Sonner />
-      <WhatsAppChatbot />
-      <SocialProofProvider />
-      <GA4ChecklistPanel />
+      {extrasReady && (
+        <>
+          <WhatsAppChatbot />
+          <SocialProofProvider />
+          {typeof window !== "undefined" && window.location.pathname.startsWith("/admin/") && (
+            <GA4ChecklistPanel />
+          )}
+        </>
+      )}
     </Suspense>
   );
 };
