@@ -70,17 +70,13 @@ export const HeroTriagem = () => {
         aria-hidden="true"
       />
 
-      <div className="pointer-events-none absolute inset-y-0 right-0 hidden w-[46%] lg:block" aria-hidden="true">
-        <img
-          src="/fotos/estacao-trabalho.jpg"
-          alt=""
-          aria-hidden="true"
-          width={1024}
-          height={765}
-          fetchPriority="high"
-          decoding="async"
-          className="h-full w-full object-cover object-center"
-        />
+      {/* Background decorativo só requisitado quando o bloco desktop é exibido;
+          um <img> escondido via CSS era baixado também no mobile (~173 KB). */}
+      <div
+        className="pointer-events-none absolute inset-y-0 right-0 hidden w-[46%] bg-cover bg-center lg:block"
+        style={{ backgroundImage: "url('/fotos/estacao-trabalho.jpg')" }}
+        aria-hidden="true"
+      >
         <div className="absolute inset-0 bg-gradient-to-r from-background via-background/70 to-background/10" />
         <div className="absolute inset-0 bg-gradient-to-b from-background/20 via-transparent to-background/70" />
       </div>
