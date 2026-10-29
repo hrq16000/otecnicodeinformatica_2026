@@ -105,6 +105,11 @@ export const ALLOWED_SOURCE_HOSTS = [
   "www.acm.org",
   "ccecc.acm.org",
   "csed.acm.org",
+  // Fontes primárias classificadas em 2026-10-29; sem wildcard de subdomínio.
+  "www.gnu.org",
+  "www.seagate.com",
+  "www.amd.com",
+  "br.msi.com",
 ] as const;
 
 // ─────────────────────────────────────────────────────────────

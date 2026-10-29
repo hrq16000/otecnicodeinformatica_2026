@@ -1,5 +1,6 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
+import { readFileSync } from "node:fs";
 import { readArticleCatalog, readStringArray } from "./editorial-static-catalog.mjs";
 
 test("resolve a mesma precedência da página, sem validar pontes da versão substituída", () => {
@@ -41,4 +42,22 @@ test("falha fechado em declarações ausentes, dinâmicas ou malformadas", () =>
   assert.throws(() => readStringArray("const other = [];", "ALLOWED_SOURCE_HOSTS"), /ausente/);
   assert.throws(() => readStringArray("const hosts = getHosts();", "hosts"), /literal/);
   assert.throws(() => readArticleCatalog([{ name: "posts", source: "const posts = {" }]), /inválida/);
+});
+
+test("todas as pontes declaradas existem no corpo vencedor do catálogo real", () => {
+  const read = (path) => readFileSync(new URL(`../../${path}`, import.meta.url), "utf8");
+  const catalog = readArticleCatalog([
+    { name: "blogPostsContentBase", source: read("src/data/blogPostsContent.tsx") },
+    { name: "blogSupplementalPosts", source: read("src/data/blogSupplementalPosts.tsx") },
+    { name: "defs", definitions: true, source: read("src/data/blogProgrammaticPosts.tsx") },
+  ]);
+  const nodes = [...read("src/lib/contentIntentMap.ts").matchAll(/url:\s*"(\/blog\/[^\"]+)"[\s\S]*?bridgesTo:\s*\[([\s\S]*?)\]/g)];
+  assert.ok(nodes.length >= 30, "O mapa não pode desaparecer silenciosamente");
+  for (const [, url, destinations] of nodes) {
+    const article = catalog.get(url.slice("/blog/".length));
+    assert.ok(article, `${url}: artigo ausente`);
+    for (const [, destination] of destinations.matchAll(/"([^"]+)"/g)) {
+      assert.ok(article.links.has(destination), `${url}: ponte ausente ${destination}`);
+    }
+  }
 });

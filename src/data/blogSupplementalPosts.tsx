@@ -2799,6 +2799,7 @@ export const blogSupplementalPosts: Record<string, BlogPostContent> = {
           versionamento com outra camada de backup.
         </p>
 
+        <p>Valide a configuração com um <a href="/blog/como-testar-restauracao-de-backup">teste de restauração do backup</a> e use a decisão de <a href="/decisoes/backup-antes-da-manutencao">backup antes da manutenção</a> para preparar a intervenção. Em ambiente de trabalho, o escopo de <a href="/servicos/backup-para-empresas">backup para empresas</a> deve contemplar os dados e o tempo de recuperação necessários, não apenas uma unidade conectada.</p>
         <EditorialReferences slug="historico-de-arquivos-windows-como-configurar" />
       </>
     ),
@@ -3213,6 +3214,7 @@ export const blogSupplementalPosts: Record<string, BlogPostContent> = {
           reduzindo escrita e evitando transformar um arquivo parcialmente recuperável em perda definitiva.
         </p>
 
+        <p>Se há versões anteriores, consulte a restauração pelo <a href="/blog/historico-de-arquivos-windows-como-configurar">Histórico de Arquivos</a>. Se vários arquivos falham no mesmo disco, veja os limites de <a href="/blog/como-recuperar-dados-hd-com-defeito">recuperação em HD com defeito</a> antes de continuar. O atendimento de <a href="/servicos/recuperacao-de-dados">recuperação de dados</a> deve começar pela preservação da mídia, sem promessa de resultado.</p>
         <EditorialReferences slug="arquivo-corrompido-nao-abre-o-que-fazer" />
       </>
     ),
@@ -3652,6 +3654,7 @@ export const blogSupplementalPosts: Record<string, BlogPostContent> = {
           decidir se o próximo passo é driver, controlador ou hardware.
         </p>
 
+        <p>Se as comparações apontam para alimentação do computador, leia os limites de <a href="/blog/como-testar-fonte-de-alimentacao-pc">teste da fonte de alimentação</a>; esse é um cenário diferente de falha de um único dispositivo USB. Quando a verificação exigir medição de porta ou placa, leve os resultados ao <a href="/diagnostico-tecnico">diagnóstico técnico</a>.</p>
         <EditorialReferences slug="dispositivo-usb-nao-reconhecido-o-que-fazer" />
       </>
     ),
@@ -4092,6 +4095,7 @@ export const blogSupplementalPosts: Record<string, BlogPostContent> = {
           realmente aplicável; não confunda isso com reparo de hardware.
         </p>
 
+        <p>Se a mídia também desaparece ou falha na identificação, diferencie o sintoma no guia de <a href="/blog/dispositivo-usb-nao-reconhecido-o-que-fazer">dispositivo USB não reconhecido</a>. Depois de copiar os dados, faça um <a href="/blog/como-testar-restauracao-de-backup">teste de restauração do backup</a>. Se há arquivos únicos e erros de leitura, interrompa as tentativas e procure <a href="/diagnostico-tecnico">diagnóstico técnico</a>.</p>
         <EditorialReferences slug="pendrive-somente-leitura-protegido-contra-gravacao" />
       </>
     ),
@@ -4307,6 +4311,7 @@ export const blogSupplementalPosts: Record<string, BlogPostContent> = {
           ponto de partida para diagnóstico — não uma ordem para formatar.
         </p>
 
+        <p>Se o equipamento abre o firmware diretamente, siga a investigação de <a href="/blog/computador-entra-direto-na-bios">PC que entra na BIOS</a>. Diferencie <a href="/blog/como-clonar-hd-para-ssd">clonagem de HD para SSD</a> e <a href="/blog/como-instalar-windows-11-do-zero">instalação limpa do Windows 11</a>: nenhuma delas é reparo universal de boot. Se a estrutura continuar incerta, procure <a href="/diagnostico-tecnico">diagnóstico técnico</a> antes de escrever no disco.</p>
         <EditorialReferences slug="erro-no-bootable-device-como-resolver" />
       </>
     ),
@@ -4520,6 +4525,7 @@ export const blogSupplementalPosts: Record<string, BlogPostContent> = {
           é evidência forte; teste limpo é útil, mas não encerra sozinho uma investigação de travamentos.
         </p>
 
+        <p>Se há tela azul, registre o código e consulte o guia de <a href="/blog/codigos-de-erro-tela-azul-windows">erros de tela azul do Windows</a>, sem atribuir toda falha à RAM. Uma avaliação de <a href="/servicos/upgrade-ssd-ram">SSD e memória RAM</a> deve considerar os testes e a compatibilidade da máquina antes da troca.</p>
         <EditorialReferences slug="testar-memoria-ram-memtest86" />
       </>
     ),
@@ -5255,6 +5261,7 @@ export const blogSupplementalPosts: Record<string, BlogPostContent> = {
           mas não idênticas.
         </p>
 
+        <p>Para explorar problemas concretos dessas áreas, consulte o <a href="/blog">acervo de guias de informática</a> e escolha uma trilha pelo que você precisa compreender ou resolver.</p>
         <EditorialReferences slug="o-que-e-informatica" />
       </>
     ),
@@ -5530,6 +5537,7 @@ export const blogSupplementalPosts: Record<string, BlogPostContent> = {
           etapa deve terminar com uma tarefa que você consegue repetir sem tutorial.
         </p>
 
+        <p>Se os termos ainda confundem, comece pela definição de <a href="/blog/o-que-e-informatica">informática e suas áreas</a> e pelo checklist de <a href="/blog/informatica-basica">competências de informática básica</a>. Depois, escolha no <a href="/blog">acervo de guias</a> um problema compatível com seu nível.</p>
         <EditorialReferences slug="como-aprender-informatica" />
       </>
     ),
@@ -5996,6 +6004,7 @@ export const blogSupplementalPosts: Record<string, BlogPostContent> = {
           vídeo.
         </p>
 
+        <p>Se há imagem e o computador abre o firmware, compare o caso com <a href="/blog/computador-entra-direto-na-bios">PC que entra direto na BIOS</a>. Se ele liga e desliga, consulte os limites do diagnóstico de <a href="/blog/curto-circuito-placa-mae-como-identificar">possível curto na placa-mãe</a>. Sem uma hipótese sustentada, prefira <a href="/diagnostico-tecnico">diagnóstico técnico</a> a gravar firmware por tentativa.</p>
         <EditorialReferences slug="bios-corrompida-reset-cmos-atualizacao" />
       </>
     ),
@@ -6441,6 +6450,7 @@ net start spooler`}</code></pre>
           software, armazenamento, CPU ou estabilidade de hardware.
         </p>
 
+        <p>Se o gargalo observado é armazenamento, compare o cenário em <a href="/blog/quando-trocar-hd-por-ssd">quando trocar HD por SSD</a>. Quando a medição justificar uma intervenção, confira a compatibilidade e o escopo de <a href="/servicos/upgrade-ssd-ram">upgrade de SSD e RAM</a> antes de escolher peças.</p>
         <EditorialReferences slug="memoria-ram-insuficiente-sintomas" />
       </>
     ),
@@ -7540,6 +7550,8 @@ net start spooler`}</code></pre>
           conhecido é mais importante do que concluir o hardening na mesma sessão.
         </p>
 
+        <p>Se ainda não consegue interpretar caminhos, permissões ou a saída dos comandos, pratique primeiro com os <a href="/blog/comandos-linux-essenciais-iniciantes">comandos Linux para iniciantes</a>. Sem acesso de recuperação ou certeza sobre a configuração efetiva, reúna o inventário para um <a href="/diagnostico-tecnico">diagnóstico técnico</a> antes de alterar a autenticação do servidor.</p>
+
         <h2>Fontes oficiais consultadas</h2>
         <ul>
           <li>
@@ -7717,6 +7729,8 @@ net start spooler`}</code></pre>
           <li>Falhas de assinatura não são ignoradas.</li>
           <li>Existe backup/snapshot e método de validação para mudanças críticas.</li>
         </ul>
+
+        <p>Para compreender os comandos antes de executá-los, use a trilha de <a href="/blog/comandos-linux-essenciais-iniciantes">terminal Linux para iniciantes</a>. Em servidor remoto, revise também o <a href="/blog/como-configurar-ssh-seguro-linux">acesso SSH e sua recuperação</a>. Se a necessidade é trocar de sistema, siga o planejamento de <a href="/blog/como-instalar-ubuntu-do-zero">instalação do Ubuntu</a>; atualização de pacotes não equivale a reinstalação.</p>
 
         <h2>Fontes oficiais consultadas</h2>
         <ul>
@@ -7906,6 +7920,8 @@ net start spooler`}</code></pre>
           <li>Não uso <code>rm -rf</code>, <code>kill -9</code> ou <code>chmod 777</code> como solução padrão.</li>
           <li>Leio <code>man</code> ou <code>--help</code> antes de usar opção desconhecida.</li>
         </ul>
+
+        <p>Se arquivos, sistema e contas ainda não estão claros, retome a trilha de <a href="/blog/informatica-basica">informática básica</a>. Quando passar do terminal local para um servidor, estude <a href="/blog/como-configurar-ssh-seguro-linux">SSH seguro e recuperação de acesso</a> antes de modificar autenticação ou permissões remotas.</p>
 
         <h2>Fonte oficial consultada</h2>
         <ul>
@@ -8241,6 +8257,7 @@ net start spooler`}</code></pre>
         <h2>Resumo prático</h2>
         <p>Para “formatar sem perder arquivos”, o ponto central é <strong>não confundir formatação com preservação</strong>. Faça backup verificável, confirme BitLocker e licenças, escolha entre redefinir, reparar ou instalar do zero e só apague partições depois de identificar o disco correto. A instalação limpa é a etapa mais destrutiva — não a primeira tentativa.</p>
 
+        <p>Se você compara execução própria e atendimento, veja <a href="/blog/quanto-custa-formatar-um-computador">o que compõe o orçamento de formatação</a>. Sem causa identificada, comece pelo <a href="/diagnostico-tecnico">diagnóstico técnico</a>; o escopo do <a href="/servicos/formatacao">serviço de formatação</a> vem depois da preservação dos dados.</p>
         <EditorialReferences slug="como-formatar-pc-sem-perder-arquivos" />
       </>
     ),
@@ -8375,6 +8392,7 @@ net start spooler`}</code></pre>
         <h2>Resumo prático</h2>
         <p>Depois de trocar o SSD, não trate a BIOS como defeito. Primeiro confirme que o SSD é detectado, depois identifique se ele está vazio ou contém um clone, procure uma entrada de boot válida e preserve UEFI/Legacy/controlador até entender o cenário. Instale o Windows em SSD novo vazio; repare a inicialização apenas quando existe uma instalação para reparar; e mantenha o disco antigo intacto até o novo sistema estar realmente validado.</p>
 
+        <p>Para continuar por sintoma, consulte <a href="/blog/computador-entra-direto-na-bios">computador que entra direto na BIOS</a>. Só use o procedimento de <a href="/blog/como-instalar-windows-11-do-zero">instalação limpa do Windows 11</a> depois de confirmar o destino e preservar os dados. Se faltam confirmação de compatibilidade ou ferramentas de bancada, veja o escopo de <a href="/servicos/upgrade-ssd-ram">upgrade de SSD e RAM</a>.</p>
         <EditorialReferences slug="troquei-o-ssd-e-o-pc-so-abre-a-bios" />
       </>
     ),
@@ -8589,6 +8607,7 @@ net start spooler`}</code></pre>
         <h2>Resumo final</h2>
         <p><strong>Informática básica é autonomia digital.</strong> O núcleo é saber usar sistema, arquivos, internet, e-mail, documentos, planilhas, nuvem e segurança. A melhor forma de aprender é praticar tarefas reais e entender o motivo de cada ação, não decorar cliques.</p>
 
+        <p>Use o <a href="/blog">acervo de guias práticos</a> para escolher uma tarefa por vez e verificar se consegue repeti-la sem depender do tutorial.</p>
         <EditorialReferences slug="informatica-basica" />
       </>
     ),
@@ -9059,6 +9078,7 @@ net start spooler`}</code></pre>
           e o que exige nova autorização.
         </p>
 
+        <p>Confira as condições vigentes em <a href="/precos-e-politicas">preços e políticas</a> e compare-as com o escopo do <a href="/servicos/formatacao">serviço de formatação</a>. Quando a causa ainda não está identificada, prefira <a href="/diagnostico-tecnico">diagnóstico técnico</a> a contratar uma reinstalação por tentativa.</p>
         <EditorialReferences slug="quanto-custa-formatar-um-computador" />
       </>
     ),
@@ -9853,6 +9873,7 @@ net start spooler`}</code></pre>
         <h2>Resumo prático</h2>
         <p>Quando o computador entra direto na BIOS, siga a cadeia: <strong>disco detectado → entrada de boot → modo UEFI/Legacy → estrutura de inicialização → retenção de configurações</strong>. Faça uma mudança por vez, preserve BitLocker e dados e não transforme opções de firmware em tentativa e erro.</p>
 
+        <p>Se não for possível separar firmware, disco e carregador com segurança, reúna os sinais observados para o <a href="/diagnostico-tecnico">diagnóstico técnico</a>. A <a href="/servicos/manutencao-de-computador">manutenção de computador</a> entra quando existe uma intervenção justificada, não como motivo para apagar o sistema.</p>
         <EditorialReferences slug="computador-entra-direto-na-bios" />
       </>
     ),
@@ -9972,6 +9993,7 @@ net start spooler`}</code></pre>
         <h2>Resumo prático</h2>
         <p>O acionamento direto do PWR_SW serve para <strong>isolar o botão e o cabo frontal</strong>. Identifique o par pelo manual, mude uma variável por vez e interprete a resposta sem extrapolar: ligar pelo header aponta para o circuito do botão; não ligar mantém abertas as hipóteses de alimentação e placa. O teste é diagnóstico, não atalho para concluir que o restante do computador está saudável.</p>
 
+        <p>Se a próxima etapa exigir desmontagem ou medição que você não consegue executar com segurança, interrompa a tentativa e confira o escopo de <a href="/servicos/manutencao-de-computador">manutenção de computador</a>, levando o resultado do teste do botão e a identificação da placa.</p>
         <EditorialReferences slug="botao-power-nao-funciona-jump-start-placa-mae" />
       </>
     ),

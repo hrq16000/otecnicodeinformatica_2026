@@ -12754,6 +12754,7 @@ bcdboot C:\\Windows /s S: /f UEFI`}</code></pre>
         <p>Sim, desde que a unidade seja adequada ao equipamento e esteja comprovadamente funcional. Em fonte modular, use os cabos corretos daquela fonte; conectores fisicamente parecidos não garantem pinagem compatível.</p>
 
         <h2>Quando procurar avaliação técnica</h2>
+        <p>Antes de atribuir a falha à placa, compare os limites do <Link to="/blog/como-testar-fonte-de-alimentacao-pc">teste de fonte de alimentação</Link>. Isso ajuda a separar hipóteses sem abrir a fonte nem fazer medições energizadas por tentativa.</p>
         <p>Procure bancada quando houver cheiro de queimado, carbonização, líquido ou corrosão; quando a falha persistir em configuração mínima e com fonte compatível funcional; quando o equipamento estiver em garantia; ou quando o próximo passo exigir medição energizada ou reparo em componente. O método está descrito em <Link to="/diagnostico-tecnico" className="text-accent">diagnóstico técnico</Link>, e o atendimento de bancada em <Link to="/servicos/manutencao-de-computador" className="text-accent">manutenção de computador</Link>. Para ampliar a investigação da placa sem assumir curto como causa, veja <Link to="/blog/como-diagnosticar-placa-mae-defeituosa" className="text-accent">como diagnosticar placa-mãe defeituosa</Link>.</p>
       </>
     ),
