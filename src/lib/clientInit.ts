@@ -38,10 +38,8 @@ export function runClientInit() {
   // Medição de leads por rota: WhatsApp e (se existir) toque em telefone.
   void import("@/lib/leadTapTracking").then(({ installLeadTapTracking }) => installLeadTapTracking());
   // Observabilidade (Sentry/OTLP) — só ativa quando as envs estão configuradas.
-  void import("@/lib/observability").then(({ iniciarObservabilidade }) => iniciarObservabilidade());
   // RODADA 1 — trava de indexação + analytics só da propriedade própria.
   void import("@/lib/indexingPolicy").then(({ applyIndexingPolicy }) => applyIndexingPolicy());
-  void import("@/lib/analytics").then(({ initGoogleTags }) => initGoogleTags());
 
   // Tema único (claro): remove qualquer `dark` herdado e força color-scheme light.
   try {
@@ -87,6 +85,11 @@ export function runClientInit() {
   };
 
   runWhenIdle(() => {
+    // Analytics e observabilidade não bloqueiam a primeira pintura no celular.
+    // O ConsentBanner já persiste a escolha; initGoogleTags lê o estado atual
+    // ao inicializar, inclusive quando a escolha ocorreu antes do período ocioso.
+    void import("@/lib/analytics").then(({ initGoogleTags }) => initGoogleTags());
+    void import("@/lib/observability").then(({ iniciarObservabilidade }) => iniciarObservabilidade());
     void import("@/lib/whatsappUtm").then(({ initWhatsAppUtm }) => initWhatsAppUtm());
     void import("@/lib/webVitals").then(({ initWebVitals }) => initWebVitals());
   });
