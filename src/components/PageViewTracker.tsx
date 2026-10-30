@@ -2,7 +2,14 @@ import { useEffect } from "react";
 import { ANALYTICS_EVENTS, buildRouteContext, getJourneyId, recordTouchpoint } from "@/lib/analyticsContract";
 // O módulo de funil contém persistência e clientes de rede.
 // Mantê-lo fora do bundle inicial não altera a captura da atribuição.
-const getFunnelAnalytics = () => import("@/lib/funnelAnalytics");
+// Cache do módulo para que pagehide registre abandono sincronicamente,
+// mesmo com o download inicial postergado até a hidratação.
+let funnelAnalyticsReady: typeof import("@/lib/funnelAnalytics") | null = null;
+const getFunnelAnalytics = () =>
+  import("@/lib/funnelAnalytics").then((module) => {
+    funnelAnalyticsReady = module;
+    return module;
+  });
 
 /**
  * RODADA 6 — FASE 8. Page view com contexto comum (rota, família, cidade,
@@ -41,9 +48,15 @@ export const PageViewTracker = ({ path }: { path?: string }) => {
       try {
         // A importação já é solicitada pelo page view durante a montagem;
         // o listener preserva o registro de abandono sem import estático.
-        void getFunnelAnalytics()
-          .then(({ registrarAbandonoSePendente }) => registrarAbandonoSePendente())
-          .catch(() => { /* fail open */ });
+        if (funnelAnalyticsReady) {
+          // pagehide não aguarda Promises: após a carga inicial, o registro
+          // precisa permanecer síncrono para preservar eventos do funil.
+          funnelAnalyticsReady.registrarAbandonoSePendente();
+        } else {
+          void getFunnelAnalytics()
+            .then(({ registrarAbandonoSePendente }) => registrarAbandonoSePendente())
+            .catch(() => { /* fail open */ });
+        }
       } catch {
         /* fail open */
       }
