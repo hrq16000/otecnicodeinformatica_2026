@@ -1,5 +1,4 @@
 import { MessageCircle } from "lucide-react";
-import { trackCTAClick } from "@/lib/analytics";
 import { cn } from "@/lib/utils";
 
 /**
@@ -10,7 +9,11 @@ import { cn } from "@/lib/utils";
  */
 export const WhatsAppFloat = () => {
   const handleClick = () => {
-    trackCTAClick("whatsapp", "float");
+    // Telemetria é acessória: não incorporar analytics/observability ao bundle
+    // crítico de TODAS as rotas. A abertura da triagem permanece síncrona.
+    void import("@/lib/analytics")
+      .then(({ trackCTAClick }) => trackCTAClick("whatsapp", "float"))
+      .catch(() => { /* uma falha de métricas nunca bloqueia o atendimento */ });
     // Confirmação imediata do toque (mobile): o usuário sabe que o clique funcionou.
     // Notificação é acessória: não carregar Sonner em todas as visitas.
     // O tracking e o evento do funil continuam síncronos neste clique.
