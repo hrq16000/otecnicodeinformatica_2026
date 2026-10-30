@@ -121,8 +121,8 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:image:type", content: "image/png" },
     ],
     links: [
-      { rel: "preload", as: "font", href: "/fonts/figtree-var.woff2", type: "font/woff2", crossOrigin: "anonymous" },
-      { rel: "preload", as: "font", href: "/fonts/outfit-var.woff2", type: "font/woff2", crossOrigin: "anonymous" },
+      // As fontes usam font-display: optional no CSS. Evitar preload global:
+      // o download antecipado compete com o LCP no primeiro acesso mobile.
       { rel: "stylesheet", href: appCss },
       { rel: "preload", as: "image", href: brandConfig.logoOnLight, fetchPriority: "high" },
       { rel: "dns-prefetch", href: "https://www.googletagmanager.com" },
