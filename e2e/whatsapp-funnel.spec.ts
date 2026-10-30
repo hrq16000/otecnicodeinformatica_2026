@@ -5,12 +5,35 @@ const UTM_QS = "?utm_source=ci&utm_medium=cpc&utm_campaign=triage_v5_e2e&gclid=C
 
 async function installGtagSpy(page: Page) {
   await page.addInitScript(() => {
+    // O CI não dispõe de propriedade GA4: este stub intercepta a chamada ao
+    // contrato gtag sem enviar dados a terceiros nem depender do Consent Mode.
+    // Mantém o observador mesmo se o bootstrap tentar reatribuir window.gtag.
     (window as unknown as { __gtagCalls: unknown[][] }).__gtagCalls = [];
     (window as unknown as { dataLayer: unknown[] }).dataLayer = [];
-    (window as unknown as { gtag: (...a: unknown[]) => void }).gtag = function (...args: unknown[]) {
+    const gtagSpy = (...args: unknown[]) => {
       (window as unknown as { __gtagCalls: unknown[][] }).__gtagCalls.push(args);
       (window as unknown as { dataLayer: unknown[] }).dataLayer.push(args);
     };
+    Object.defineProperty(window, "gtag", {
+      configurable: true,
+      get: () => gtagSpy,
+      set: () => { /* somente no E2E: não substituir a instrumentação */ },
+    });
+  });
+}
+
+async function readGtagEvents(page: Page) {
+  return page.evaluate(() => {
+    const spy = (window as unknown as { __gtagCalls?: unknown[][] }).__gtagCalls ?? [];
+    const layer = (window as unknown as { dataLayer?: unknown[] }).dataLayer ?? [];
+    const queued = layer.map((call) => Array.from(call as ArrayLike<unknown>));
+    // Tanto o spy como o stub oficial do gtag encaminham para dataLayer.
+    // Usar só uma fonte evita contar duas vezes o mesmo evento.
+    const source = spy.some((c) => c[0] === "event") ? spy : queued;
+    return source.filter((c) => c[0] === "event").map((c) => ({
+      name: c[1] as string,
+      payload: c[2] as Record<string, unknown>,
+    }));
   });
 }
 
@@ -113,11 +136,11 @@ test.describe("Triagem V5 — funil ramificado por equipamento", () => {
     await page.getByTestId("whatsapp-float").click();
     await expect(page.getByRole("dialog")).toBeVisible({ timeout: 5000 });
 
-    const eventos = await page.evaluate(() =>
-      (window as unknown as { __gtagCalls: unknown[][] }).__gtagCalls
-        .filter((c) => c[0] === "event")
-        .map((c) => ({ name: c[1] as string, payload: c[2] as Record<string, unknown> })),
-    );
+    // O funil entra via import assíncrono; aguardar a emissão real no stub.
+    await expect.poll(async () =>
+      (await readGtagEvents(page)).filter((event) => event.name === "wa_funnel_open").length,
+    ).toBe(1);
+    const eventos = await readGtagEvents(page);
 
     const legado = eventos.filter((e) => e.name === "wa_funnel_open");
     const canonico = eventos.filter((e) => e.name === "triage_start");
@@ -188,11 +211,10 @@ test.describe("Triagem V5 — funil ramificado por equipamento", () => {
 
     await expect(page.getByRole("dialog")).toBeVisible({ timeout: 15000 });
 
-    const nomes = await page.evaluate(() =>
-      (window as unknown as { __gtagCalls: unknown[][] }).__gtagCalls
-        .filter((c) => c[0] === "event")
-        .map((c) => c[1] as string),
-    );
+    await expect.poll(async () =>
+      (await readGtagEvents(page)).filter((event) => event.name === "wa_funnel_open").length,
+    ).toBe(1);
+    const nomes = (await readGtagEvents(page)).map((event) => event.name);
     expect(nomes.filter((n) => n === "wa_funnel_open")).toHaveLength(1);
     expect(nomes.filter((n) => n === "triage_start")).toHaveLength(1);
 

@@ -1,4 +1,5 @@
 import type { ServiceFaq } from "@/components/ServiceLandingSchema";
+import { commercialConfig } from "@/lib/config/commercial";
 
 // ─────────────────────────────────────────────────────────────
 // Camada de SEO LOCAL dos serviços core.
@@ -34,10 +35,10 @@ export const SERVICOS_LOCAL: Record<string, ServicoLocalData> = {
   formatacao: {
     blocoLocal: [
       {
-        titulo: "Formatação de computador em Curitiba com backup dos arquivos",
+        titulo: "Como contratar formatação em Curitiba sem deixar o escopo em aberto",
         paragrafos: [
-          "Se você procura formatação de computador em Curitiba feita com cuidado, o ponto de partida é sempre o backup. Antes de reinstalar o Windows, copiamos documentos, fotos, planilhas e o que mais for importante para você, e só depois começamos a formatação de fato. Assim você não corre o risco de perder anos de arquivos por causa de uma reinstalação apressada.",
-          "Atendemos formatação de PC de mesa e formatação de notebook em Curitiba e região metropolitana, tanto em domicílio quanto por coleta e entrega. Trabalhamos com Windows 10 e Windows 11 originais, drivers atualizados e os programas essenciais do dia a dia (navegador, pacote de produtividade, leitor de PDF e antivírus) já configurados na entrega.",
+          "Informe o modelo do computador ou notebook, o sintoma e o bairro de Curitiba. Diga também quais arquivos só existem nessa máquina e quais programas você precisa usar depois. Essas informações ajudam a definir a modalidade de atendimento e o que precisa entrar na avaliação, sem confundir diagnóstico, instalação, backup e licença como se fossem um único item.",
+          "Antes da execução, confirme o que será reinstalado, quais pastas serão copiadas, a mídia de destino, a licença do sistema e os programas previstos. Falha de leitura do disco ou falta de chave de criptografia muda o plano: apagar o sistema não é uma tentativa de recuperar arquivos. Atendimento no endereço ou por coleta depende da disponibilidade e do trabalho necessário, confirmados na triagem.",
         ],
       },
       {
@@ -49,9 +50,9 @@ export const SERVICOS_LOCAL: Record<string, ServicoLocalData> = {
       },
     ],
     faqsLocais: [
-      { question: "Vocês fazem formatação de computador em domicílio em Curitiba?", answer: "Sim. Fazemos formatação a domicílio em Curitiba e região, com horário agendado, ou por coleta e entrega do equipamento quando você preferir. Em ambos os casos o backup dos seus dados é feito antes de reinstalar o sistema." },
-      { question: "Qual o valor da formatação de PC ou notebook em Curitiba?", answer: "O diagnóstico começa a partir de R$ 99,99 e o valor final da formatação depende do volume de backup, do tipo de equipamento e dos programas específicos que você usa. Você aprova o valor antes de qualquer serviço." },
-      { question: "A formatação inclui a instalação do Windows e dos programas?", answer: "Sim. Entregamos com Windows 10 ou 11 ativado, drivers instalados, navegador, antivírus e pacote de produtividade configurados conforme o seu uso." },
+      { question: "Vocês fazem formatação de computador em domicílio em Curitiba?", answer: "O atendimento no endereço é avaliado conforme o sintoma, o bairro, a disponibilidade e os testes necessários. Quando o caso pede bancada, coleta e entrega podem ser combinadas. Backup, escopo e agendamento são confirmados antes da execução." },
+      { question: "Qual o valor da formatação de PC ou notebook em Curitiba?", answer: `O diagnóstico parte de ${commercialConfig.diagnosticoLabel}; esse valor não representa uma formatação completa com todos os adicionais. ${commercialConfig.pricingDisclaimer} Backup, licenças e programas específicos são discriminados no escopo para aprovação.` },
+      { question: "A formatação inclui a instalação do Windows e dos programas?", answer: "A reinstalação e os programas entram conforme o orçamento aprovado e a compatibilidade do computador. A licença do Windows e dos aplicativos pagos é de responsabilidade do cliente. Antes de contratar, confira a edição do sistema, os aplicativos necessários e o que será restaurado do backup." },
     ],
     linksLocais: [
       ...REGIOES,

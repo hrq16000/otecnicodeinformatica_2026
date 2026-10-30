@@ -6,6 +6,9 @@ name: SEO daily health (404, redirects, canônicos, sitemap)
 #   • canônicos self-referentes e ausência de noindex nas URLs do sitemap
 #   • status dos sitemaps no Google Search Console + alerta (Slack/e-mail)
 on:
+  pull_request:
+    paths:
+      - ".github/workflows/seo-daily-health.yml"
   schedule:
     - cron: "42 7 * * *" # diário, 07:42 UTC (04:42 America/Sao_Paulo)
   workflow_dispatch:
@@ -17,9 +20,12 @@ jobs:
       CHECK_BASE_URL: https://otecnicodeinformatica.com.br
     steps:
       - uses: actions/checkout@v4
+      - uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: latest
       - uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: "22"
           cache: npm
       - run: npm ci
 

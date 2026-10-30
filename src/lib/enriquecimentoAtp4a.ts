@@ -534,6 +534,32 @@ export const ENRIQUECIMENTO_4A: Record<string, EnriquecimentoConteudo> = {
   /* CLUSTER E — quando formatar (owner comercial)                       */
   /* ------------------------------------------------------------------ */
   "/servicos/formatacao": {
+    tabelaExtra: {
+      titulo: "Como comparar orçamentos de formatação em Curitiba",
+      colunas: { sintoma: "Item do orçamento", causa: "O que precisa estar definido", verificar: "O que conferir antes de aprovar" },
+      linhas: [
+        {
+          sintoma: "Indicação do serviço",
+          causa: "Reparo pontual, remoção de vírus ou reinstalação, conforme a causa encontrada.",
+          verificar: "Peça a explicação do diagnóstico e da alternativa indicada: lentidão, sozinha, não define uma formatação.",
+        },
+        {
+          sintoma: "Backup e arquivos",
+          causa: "Pastas, volume, destino da cópia e condições de leitura do armazenamento.",
+          verificar: "Confirme o que será copiado e conferido antes de apagar. Recuperação de dados e mídia adicional precisam de escopo próprio.",
+        },
+        {
+          sintoma: "Windows e aplicativos",
+          causa: "Versão compatível, edição licenciada, drivers e lista de programas previstos.",
+          verificar: "Instalação e licença são itens diferentes. Confira se as licenças já existem e o que depende de compra ou assinatura.",
+        },
+        {
+          sintoma: "Valor, prazo e entrega",
+          causa: "Serviço, adicionais, modalidade de atendimento e condições da garantia.",
+          verificar: "Compare o escopo completo; o valor inicial de diagnóstico não é o preço final de todos os serviços. O prazo vem da avaliação.",
+        },
+      ],
+    },
     blocos: [
       {
         id: "quando-nao-resolve",
@@ -573,7 +599,7 @@ export const ENRIQUECIMENTO_4A: Record<string, EnriquecimentoConteudo> = {
         id: "checklist-pre-formatacao",
         titulo: "Checklist antes de autorizar",
         intro:
-          "Conferimos estes pontos junto com o cliente antes de iniciar. É a etapa que evita praticamente todo prejuízo associado a uma reinstalação.",
+          "Conferimos estes pontos junto com o cliente antes de iniciar. Eles definem o que pode ser preservado, o que precisa ser reconfigurado e quando interromper a reinstalação para avaliar os dados.",
         itens: [
           {
             titulo: "Cópia verificada, não apenas feita",
@@ -633,17 +659,51 @@ export const ENRIQUECIMENTO_4A: Record<string, EnriquecimentoConteudo> = {
           depois: ".",
         },
       },
+      {
+        id: "sistema-e-licenca",
+        titulo: "Windows, suporte e licença: o que decidir antes de reinstalar",
+        itens: [
+          {
+            titulo: "Compatibilidade do equipamento",
+            desc: "A formatação não altera os requisitos do Windows 11. Modelo, hardware e disponibilidade de drivers precisam ser conferidos antes de indicar a versão; um SSD novo, sozinho, não torna qualquer notebook compatível.",
+          },
+          {
+            titulo: "Suporte do Windows 10",
+            desc: "O suporte padrão terminou em 14 de outubro de 2025. Reinstalar não muda esse ciclo. As opções de atualização e eventual cobertura por ESU precisam ser verificadas nas condições vigentes da Microsoft para o equipamento e o tipo de uso.",
+          },
+          {
+            titulo: "Licença e edição correspondentes",
+            desc: "Uma licença digital existente pode permitir a reativação da mesma edição do Windows no dispositivo. Office, Microsoft 365 e outros programas têm licenças próprias; instalação, aquisição da licença e assinatura são condições distintas no orçamento.",
+          },
+        ],
+        fecho: {
+          antes: "Para entender as alternativas antes de contratar, consulte ",
+          to: "/solucoes/formatacao",
+          anchor: "quando a reinstalação do sistema faz sentido",
+          depois: ".",
+        },
+      },
     ],
     fontes: [
       {
-        titulo: "Microsoft Learn — encontrar a chave de recuperação do BitLocker",
-        url: "https://learn.microsoft.com/pt-br/windows/security/operating-system-security/data-protection/bitlocker/",
-        nota: "Referência oficial sobre criptografia de disco antes de reinstalar o sistema.",
+        titulo: "Microsoft Support — opções de recuperação no Windows",
+        url: "https://support.microsoft.com/pt-br/windows/experience/backup-recovery/recovery-options-in-windows",
+        nota: "Alternativas à instalação limpa, cópia prévia e chave de recuperação do BitLocker.",
       },
       {
-        titulo: "Microsoft — ciclo de vida e suporte das versões do Windows",
-        url: "https://learn.microsoft.com/pt-br/lifecycle/products/",
-        nota: "Fonte oficial para verificar até quando cada versão recebe atualizações.",
+        titulo: "Microsoft Support — reinstalação com mídia de instalação",
+        url: "https://support.microsoft.com/pt-br/windows/deployment/install-upgrade/reinstall-windows-with-the-installation-media",
+        nota: "Diferença entre reparo e instalação limpa, backup e reativação da edição licenciada.",
+      },
+      {
+        titulo: "Microsoft Support — ativar o Windows",
+        url: "https://support.microsoft.com/en-us/windows/activation/activate-windows",
+        nota: "Licença digital, edição correspondente e ativação após reinstalação.",
+      },
+      {
+        titulo: "Microsoft — fim do suporte do Windows",
+        url: "https://www.microsoft.com/en-us/windows/end-of-support",
+        nota: "Ciclo de suporte do Windows 10, requisitos de migração e opções vigentes de ESU.",
       },
     ],
   },

@@ -13,11 +13,13 @@
  *   node scripts/report-local-audit.mjs --snapshot # grava o snapshot atual como "antes"
  */
 import { readFileSync, writeFileSync, existsSync, mkdirSync } from "node:fs";
-import { WHATSAPP_NUMBER } from "./lib/site-env.mjs";
+import { BASE_URL, WHATSAPP_NUMBER } from "./lib/site-env.mjs";
 import { join } from "node:path";
 import { execFileSync } from "node:child_process";
 
-const DIST = "dist";
+// Os snapshots HTML SSR são gerados no deploy:check (403 páginas na última execução).
+// Não procurar o antigo dist/<rota>/index.html da SPA quando esse material existe.
+const DIST = existsSync("dist-jsonld") ? "dist-jsonld" : "dist";
 const BASE = BASE_URL;
 const OUT_DIR = "reports";
 const OUT = join(OUT_DIR, "local-audit.html");

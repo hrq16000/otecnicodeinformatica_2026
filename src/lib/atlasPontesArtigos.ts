@@ -21,6 +21,16 @@ export interface AtlasPonteArtigo {
 }
 
 export const ATLAS_PONTES_ARTIGOS: Record<string, AtlasPonteArtigo> = {
+  "como-fazer-backup-na-nuvem": {
+    temaId: "dados-backup",
+    porQue:
+      "Uma pasta sincronizada não garante recuperação. A trilha de dados e backup distingue cópias independentes, versionamento, controle de acesso e testes de restauração antes de depender de um provedor.",
+    proximoPasso: {
+      rotulo: "Nuvem ou HD externo",
+      to: "/decisoes/nuvem-ou-hd-externo",
+      contexto: "Compare retenção, acesso offline e a independência de cada cópia antes de escolher onde guardar arquivos.",
+    },
+  },
   "comandos-linux-essenciais-iniciantes": {
     temaId: "fundamentos",
     porQue:

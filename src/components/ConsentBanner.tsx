@@ -77,6 +77,7 @@ export const ConsentBanner = () => {
     // principal nem o botão flutuante de WhatsApp (canto inferior direito).
     <div
       ref={ref}
+      data-cookie-banner
       role="dialog"
       aria-label="Aviso de privacidade e cookies"
       style={{
@@ -99,9 +100,8 @@ export const ConsentBanner = () => {
       }}
     >
       <p style={{ margin: 0, marginBottom: 8 }}>
-        Usamos <strong>cookies opcionais</strong> de análise e anúncios. Mesmo sem aceitá-los, o
-        site registra diretamente dados técnicos mínimos das interações no funil de atendimento
-        para medir etapas e conversões, sem armazenar IP, nome, telefone ou texto livre.{" "}
+        Cookies de análise e anúncios são <strong>opcionais</strong>. O funil registra métricas
+        técnicas mínimas mesmo se você recusar, sem guardar IP, nome, telefone ou texto livre.{" "}
         <a
           href="/politica-de-privacidade#telemetria-funil"
           style={{ color: "#7dd3fc", textDecoration: "underline" }}

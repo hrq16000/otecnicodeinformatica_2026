@@ -109,7 +109,7 @@ async function checarHttp(hostname: string) {
 
 export const checarPropagacaoDns = createServerFn({ method: "POST" })
   .middleware([requireSupabaseAuth])
-  .inputValidator((data: { hostname: string; tipo: string; valorEsperado: string }) => {
+  .validator((data: { hostname: string; tipo: string; valorEsperado: string }) => {
     const hostname = String(data.hostname ?? "").trim().toLowerCase();
     if (!/^[a-z0-9.-]{4,253}$/.test(hostname)) throw new Error("Host inválido");
     const tipo = String(data.tipo ?? "A").trim().toUpperCase();

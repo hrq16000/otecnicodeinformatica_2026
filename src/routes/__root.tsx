@@ -25,7 +25,7 @@ import { PageViewTracker } from "@/components/PageViewTracker";
 import { RouteTransition } from "@/components/motion/RouteTransition";
 import { RouteLoader } from "@/components/RouteLoader";
 import { RouteProgress } from "@/components/RouteProgress";
-import { WhatsAppFunnel } from "@/components/WhatsAppFunnel";
+import { LazyWhatsAppFunnel } from "@/components/LazyWhatsAppFunnel";
 import { WhatsAppFloat } from "@/components/WhatsAppFloat";
 import { GlobalSmartSearch } from "@/components/GlobalSmartSearch";
 import { ScrollToTop } from "@/components/ScrollToTop";
@@ -38,6 +38,7 @@ import {
 import { REDIRECT_MATRIX } from "@/lib/redirectMatrix";
 import { reportLovableError } from "@/lib/lovable-error-reporting";
 import { runClientInit } from "@/lib/clientInit";
+import { brandConfig } from "@/lib/config/brand";
 
 // Google Consent Mode v2 — precisa rodar antes de qualquer ping (LGPD).
 // Portado do <head> do index.html pré-migração.
@@ -120,24 +121,12 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:image:type", content: "image/png" },
     ],
     links: [
+      // As fontes usam font-display: optional no CSS. Evitar preload global:
+      // o download antecipado compete com o LCP no primeiro acesso mobile.
       { rel: "stylesheet", href: appCss },
-      { rel: "preload", as: "image", href: "/logo.webp", type: "image/webp", fetchPriority: "high" },
+      { rel: "preload", as: "image", href: brandConfig.logoOnLight, fetchPriority: "high" },
       { rel: "dns-prefetch", href: "https://www.googletagmanager.com" },
       { rel: "dns-prefetch", href: "https://www.google-analytics.com" },
-      {
-        rel: "preload",
-        as: "font",
-        type: "font/woff2",
-        href: "/fonts/figtree-var.woff2",
-        crossOrigin: "anonymous",
-      },
-      {
-        rel: "preload",
-        as: "font",
-        type: "font/woff2",
-        href: "/fonts/outfit-var.woff2",
-        crossOrigin: "anonymous",
-      },
       { rel: "icon", href: "/favicon.png", type: "image/png" },
       { rel: "apple-touch-icon", sizes: "192x192", href: "/apple-touch-icon.png" },
       { rel: "manifest", href: "/manifest.json", crossOrigin: "use-credentials" },
@@ -153,11 +142,9 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { children: OS_PREHYDRATION_SCRIPT },
 
 
-      {
-        src: "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3762170279587706",
-        async: true,
-        crossOrigin: "anonymous",
-      },
+      // AdSense é injetado apenas com o consentimento de anúncios em
+      // src/lib/consentStore.ts. Não iniciar trabalho externo durante a
+      // hidratação nem carregar publicidade antes da escolha LGPD.
     ],
   }),
   shellComponent: RootShell,
@@ -222,7 +209,7 @@ function RootComponent() {
           </JsonLdCollectorContext.Provider>
 
 
-          <WhatsAppFunnel />
+          <LazyWhatsAppFunnel />
           <GlobalSmartSearch />
           <WhatsAppFloat />
           <ConsentBanner />
