@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-10-16",
+  "geradoEm": "2026-10-30",
   "total": 272,
   "porClasse": {
     "COMPROVADA": 109,
@@ -6383,7 +6383,7 @@
       "familiaTitulo": "Prazo de atendimento prometido",
       "risco": "Prazo fixo sem controle de agenda, trânsito e peça.",
       "arquivo": "src/data/blogSupplementalPosts.tsx",
-      "linha": 7996,
+      "linha": 8012,
       "trecho": "<li><strong>Mantenha o disco antigo intacto por um período de validação.</strong> Não formate a única cópia anterior no mesmo dia em que concluiu a migração.</li>",
       "classificacao": "CONDICIONAL",
       "criterio": "Tempos de deslocamento e janelas de atendimento são estimativas dependentes de agenda, trânsito e disponibilidade de peça",
