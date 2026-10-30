@@ -1,5 +1,4 @@
 import { useEffect } from "react";
-import { detectByIp, requestPreciseLocation } from "@/lib/geoContext";
 
 /**
  * Sugere região ao formulário fora do carregamento crítico (após 6,5 s)
@@ -9,17 +8,26 @@ import { detectByIp, requestPreciseLocation } from "@/lib/geoContext";
 export const GeoAutoDetect = () => {
   useEffect(() => {
     let cancelled = false;
-    // Evita consulta externa de geolocalização na janela de renderização
-    // inicial de páginas SSR. A região é apenas sugestão para o formulário:
-    // nenhum CTA depende dela para funcionar ou registrar o lead.
-    // Lighthouse identifica ipwho.is como uma origem fora do caminho crítico.
+    // Geolocalização é apenas sugestão e só roda depois de 6,5 s:
+    // não carregar seu módulo no JavaScript crítico de todas as rotas.
     const idle = window.setTimeout(() => {
-      if (!cancelled) void detectByIp();
+      if (!cancelled) {
+        void import("@/lib/geoContext")
+          .then(({ detectByIp }) => {
+            if (!cancelled) return detectByIp();
+          })
+          .catch(() => { /* geolocalização nunca bloqueia o formulário */ });
+      }
     }, 6500);
     // Não abrir solicitação de GPS enquanto o visitante ainda lê a página.
-    // Mantém a sugestão precisa em sessões mais longas sem bloquear o LCP.
     const precise = window.setTimeout(() => {
-      if (!cancelled) void requestPreciseLocation();
+      if (!cancelled) {
+        void import("@/lib/geoContext")
+          .then(({ requestPreciseLocation }) => {
+            if (!cancelled) return requestPreciseLocation();
+          })
+          .catch(() => { /* sugestão opcional, fail open */ });
+      }
     }, 10000);
     return () => {
       cancelled = true;
