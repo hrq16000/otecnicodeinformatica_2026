@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-10-16",
+  "geradoEm": "2026-10-30",
   "total": 272,
   "porClasse": {
     "COMPROVADA": 109,
@@ -7592,7 +7592,7 @@
       "familiaTitulo": "Garantia",
       "risco": "Prazo ou abrangência divergente da política comercial central.",
       "arquivo": "src/lib/servicosCore.ts",
-      "linha": 1827,
+      "linha": 1829,
       "trecho": "\"O teste final tem um roteiro mínimo que não pulamos: monitor remontado, ligado em duas entradas de vídeo diferentes, verificação de uniformidade de brilho e período contínuo de fu",
       "classificacao": "COMPROVADA",
       "criterio": "Prazo e escopo vêm da fonte comercial única",
