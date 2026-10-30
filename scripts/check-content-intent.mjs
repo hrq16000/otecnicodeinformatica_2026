@@ -17,6 +17,7 @@
  */
 import { readFileSync } from "node:fs";
 import path from "node:path";
+import { readArticleCatalog } from "./lib/editorial-static-catalog.mjs";
 
 const ROOT = process.cwd();
 const read = (p) => readFileSync(path.join(ROOT, p), "utf8");
@@ -27,7 +28,11 @@ const fail = (m) => falhas.push(m);
 const note = (m) => notas.push(m);
 
 const mapSrc = read("src/lib/contentIntentMap.ts");
-const conteudo = read("src/data/blogPostsContent.tsx");
+const artigos = readArticleCatalog([
+  { source: read("src/data/blogPostsContent.tsx"), name: "blogPostsContentBase" },
+  { source: read("src/data/blogSupplementalPosts.tsx"), name: "blogSupplementalPosts" },
+  { source: read("src/data/blogProgrammaticPosts.tsx"), name: "defs", definitions: true },
+]);
 const registro = read("src/lib/blogEditorialRegistry.ts");
 
 /** Extrai os nós declarados sem executar TypeScript. */
@@ -69,14 +74,15 @@ for (const n of nos.filter((x) => x.url.startsWith("/blog/"))) {
     fail(`artigo do mapa sem aprovação no registro editorial: ${slug}`);
   }
 
-  const bloco = extrairArtigo(conteudo, slug);
-  if (!bloco) {
-    fail(`artigo declarado no mapa não existe em blogPostsContent.tsx: ${slug}`);
+  const artigo = artigos.get(slug);
+  if (!artigo) {
+    fail(`artigo declarado no mapa não existe no catálogo editorial renderizado: ${slug}`);
     continue;
   }
+  const bloco = artigo.body;
 
   for (const destino of n.bridgesTo) {
-    if (!bloco.includes(`to="${destino}"`)) {
+    if (!artigo.links.has(destino)) {
       fail(`${slug}: ponte declarada ausente no corpo do artigo -> ${destino}`);
     }
   }
@@ -108,17 +114,10 @@ for (const n of nos.filter((x) => x.url.startsWith("/blog/"))) {
 const titulos = new Map();
 for (const n of nos.filter((x) => x.url.startsWith("/blog/"))) {
   const slug = n.url.replace("/blog/", "");
-  const t = (extrairArtigo(conteudo, slug) || "").match(/title:\s*"([^"]+)"/)?.[1];
+  const t = artigos.get(slug)?.title;
   if (!t) continue;
   if (titulos.has(t)) fail(`título duplicado entre ${titulos.get(t)} e ${slug}`);
   titulos.set(t, slug);
-}
-
-function extrairArtigo(src, slug) {
-  const i = src.indexOf(`"${slug}": {`);
-  if (i === -1) return null;
-  const prox = src.indexOf('\n  "', i + 5);
-  return src.slice(i, prox === -1 ? src.length : prox);
 }
 
 note(`mapa de intenção: ${nos.length} URLs, ${vistosPar.size} pares tema × intenção únicos`);
