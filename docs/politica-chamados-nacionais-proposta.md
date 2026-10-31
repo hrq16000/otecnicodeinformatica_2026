@@ -128,6 +128,16 @@ O protótipo interno `src/lib/gestaoNacional/rodizioRegional.ts`, acompanhado de
 - Uma apresentação de perfil não é despacho, mensagem automática, contratação, pagamento ou confirmação de disponibilidade para atender. É necessário definir consentimento, expiração da exibição, indisponibilidade entre consulta e contratação, e auditoria.
 - O resultado da revisão jurídica da cobrança e dos repasses permanece requisito anterior à habilitação pública; a classificação de “não intermediadora” é funcional, não uma conclusão jurídica presumida.
 
+### Rodada 6 — reaproveitamento do cadastro existente (sem cadastro duplicado)
+
+**Inspeção real do repositório:** a plataforma já possui `src/lib/partnersApi.ts`, `src/lib/partnersAdminApi.ts`, `src/pages/profissionais/CadastroParceiro.tsx`, `src/pages/profissionais/AreaParceiro.tsx`, `src/pages/admin/AdminParceiros.tsx` e os tipos existentes de `partners`/`partners_public`. O formulário já permite identidade profissional, município, UF, serviços e especialidades; o painel já registra aprovação administrativa. Porém, o cadastro existente é um **programa de perfis com plano anual**; `status=ativo` não comprova participação no grupo, competência validada para esta modalidade, disponibilidade ou cobertura para visita.
+
+**Ponte codificada:** `src/lib/gestaoNacional/parceiroExistenteAdapter.ts` e `.test.ts` reutilizam somente `id/status/cidade/estado` do tipo administrativo existente; exigem confirmação **separada e atual** de grupo WhatsApp, habilitação nacional, aceite de termos da modalidade, municípios e serviços validados e disponibilidade com expiração. Nada é inferido do contador do grupo, de serviços em texto livre, de cidade/UF não normalizadas ou do plano anual. A ponte devolve apenas ID interno e os campos necessários ao filtro; nenhum telefone, documento ou endereço privado.
+
+**Limite exato:** é uma transformação pura sobre dados já autorizados. O cadastro existente não foi modificado, e **não existe confirmação nacional persistida, painel de validação nacional nem integração real com a fila**. Antes de conectar essa ponte ao cadastro vivo, o backend precisa guardar atestações administrativas verificáveis (sem confiar em dados fornecidos pelo cliente), consentimento e disponibilidade com prazo de expiração, controles de acesso e trilha de auditoria. O programa anual de perfis não deve ser automaticamente imposto aos novos profissionais da modalidade nacional nem cancelado/alterado sem política comercial própria.
+
+**Próxima dependência:** definir modo de registro das confirmações complementares, com autoridade do administrador e permissão de atualização de disponibilidade pelo próprio profissional (sem permitir autoaprovação da comunidade ou da habilitação), respeitando LGPD. Nenhuma nova tabela ou migração foi aplicada nesta rodada.
+
 ## 6. Evidências para expansão regional e SEO
 
 Classificar cada entrada antes de qualquer afirmação pública:
