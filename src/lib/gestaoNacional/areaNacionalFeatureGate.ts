@@ -27,12 +27,10 @@ export type SituacaoPainelNacional =
  * Somente apresentação. O cliente jamais usa este resumo para conceder
  * autorização, escolher técnico ou confirmar pagamento.
  */
-export function situacaoPainelNacional(
+export function classificarResumoNacional(
   registro: ResumoNacionalTitular | null,
-  backendDisponivel: boolean,
   agora: Date,
-): SituacaoPainelNacional {
-  if (!backendDisponivel || !AREA_NACIONAL_INTEGRADA) return "nao_integrado";
+): Exclude<SituacaoPainelNacional, "nao_integrado"> {
   if (!(agora instanceof Date) || !Number.isFinite(agora.getTime())) {
     throw new RangeError("Relógio de referência inválido.");
   }
@@ -56,4 +54,14 @@ export function situacaoPainelNacional(
     ) return "habilitado_disponivel";
   }
   return "habilitado_indisponivel";
+}
+
+/** Aplicar gate em último lugar; não confiar na classificação como autorização. */
+export function situacaoPainelNacional(
+  registro: ResumoNacionalTitular | null,
+  backendDisponivel: boolean,
+  agora: Date,
+): SituacaoPainelNacional {
+  if (!backendDisponivel || !AREA_NACIONAL_INTEGRADA) return "nao_integrado";
+  return classificarResumoNacional(registro, agora);
 }
