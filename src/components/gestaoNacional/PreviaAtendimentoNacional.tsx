@@ -3,6 +3,11 @@
  * Integrar somente após aprovação contratual, preços, cadastro, cobertura,
  * comprovante de pagamento e testes. Nunca confundir com checkout ativo.
  */
+import { POLITICA_NACIONAL_PROPOSTA } from "@/lib/gestaoNacional/cotacaoNacional";
+
+const formatarCentavos = (centavos: number) =>
+  new Intl.NumberFormat("pt-BR", { style: "currency", currency: "BRL" }).format(centavos / 100);
+
 const URL_COMUNIDADE_TECNICOS =
   "https://chat.whatsapp.com/KUki7iAKg2f5ahsGfn4Su5?s=cl&p=a&iam=2";
 
@@ -29,25 +34,25 @@ export function PreviaAtendimentoNacional() {
       <div className="grid gap-4 md:grid-cols-2">
         <article className="space-y-2 rounded-xl border p-5">
           <h3 className="font-semibold">Atendimento padrão — até uma hora</h3>
-          <p className="text-2xl font-bold">R$ 159,99</p>
+          <p className="text-2xl font-bold">{formatarCentavos(POLITICA_NACIONAL_PROPOSTA.padrao.totalPrimeiraHoraCentavos)}</p>
           <dl>
-            <div className="flex justify-between gap-4"><dt>Repasse previsto ao técnico</dt><dd>R$ 150,00</dd></div>
-            <div className="flex justify-between gap-4"><dt>Taxa fixa da plataforma, incluída</dt><dd>R$ 9,99</dd></div>
+            <div className="flex justify-between gap-4"><dt>Repasse previsto ao técnico</dt><dd>{formatarCentavos(POLITICA_NACIONAL_PROPOSTA.padrao.repassePrimeiraHoraCentavos)}</dd></div>
+            <div className="flex justify-between gap-4"><dt>Taxa fixa da plataforma, incluída</dt><dd>{formatarCentavos(POLITICA_NACIONAL_PROPOSTA.padrao.taxaFixaPlataformaCentavos)}</dd></div>
           </dl>
         </article>
         <article className="space-y-2 rounded-xl border p-5">
           <h3 className="font-semibold">Urgência / horário especial — até uma hora</h3>
-          <p className="text-2xl font-bold">R$ 359,99</p>
+          <p className="text-2xl font-bold">{formatarCentavos(POLITICA_NACIONAL_PROPOSTA.especial.totalPrimeiraHoraCentavos)}</p>
           <dl>
-            <div className="flex justify-between gap-4"><dt>Repasse previsto ao técnico</dt><dd>R$ 330,00</dd></div>
-            <div className="flex justify-between gap-4"><dt>Taxa fixa da plataforma, incluída</dt><dd>R$ 29,99</dd></div>
+            <div className="flex justify-between gap-4"><dt>Repasse previsto ao técnico</dt><dd>{formatarCentavos(POLITICA_NACIONAL_PROPOSTA.especial.repassePrimeiraHoraCentavos)}</dd></div>
+            <div className="flex justify-between gap-4"><dt>Taxa fixa da plataforma, incluída</dt><dd>{formatarCentavos(POLITICA_NACIONAL_PROPOSTA.especial.taxaFixaPlataformaCentavos)}</dd></div>
           </dl>
         </article>
       </div>
       <div className="space-y-2 rounded-lg border p-5">
         <h3 className="font-semibold">Condições previstas</h3>
         <p>
-          Hora adicional: R$ 69,99, mediante autorização prévia. Até 3 km de ida,
+          Hora adicional: {formatarCentavos(POLITICA_NACIONAL_PROPOSTA.horaAdicionalCentavos)}, mediante autorização prévia. Até 3 km de ida,
           deslocamento isento. Acima desse limite, tarifas por quilômetro de ida e volta
           serão apresentadas no orçamento aprovado; estacionamento é fornecido ou pago
           pelo cliente. Quilometragem e estacionamento são repassados ao técnico.
