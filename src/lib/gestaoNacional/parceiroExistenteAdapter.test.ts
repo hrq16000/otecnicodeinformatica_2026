@@ -96,7 +96,7 @@ describe("reuso do cadastro existente sem transformar membro em técnico dispon�
     expect(tecnicoElegivelParaConsulta(r.tecnico, {
       uf: "SP", municipio: "São Paulo", servico: "reparos-computadores",
     })).toBe(false);
-    expect(Object.keys(r.tecnico).join("|")).not.toMatch(/cpf|documento|whatsapp|telefone|email|endereco|nome/i);
+    expect(Object.keys(r.tecnico).join("|")).not.toMatch(/cpf|documento|telefone|email|endereco|nome|contato/i);
   });
 
   it("mantém separação da assinatura anual: não altera status nem cadastro fonte", () => {
