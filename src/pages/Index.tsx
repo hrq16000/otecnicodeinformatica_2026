@@ -32,26 +32,31 @@ const SectionFallback = ({ height = "480px" }: { height?: string }) => (
 const Index = () => {
   // Metadados da home agora saem no HTML do SSR (PageSEO em JSX), não em efeito.
   useEffect(() => {
-    // ONDA 5M — pré-carrega os chunks abaixo da dobra em tempo ocioso.
-    // Sem isso, o bloco lazy só baixa quando já está visível e a troca
-    // esqueleto → conteúdo real acontece na tela (CLS alto e intermitente).
+    // Os módulos abaixo da primeira dobra têm carregamento próprio via
+    // LazyOnVisible. Não competir com o LCP por CPU/rede no boot mobile.
+    // Após 9 s o prefetch ocioso prepara as seções antes da navegação longa.
     const prefetch = () => {
       void import("@/components/home/HomeSections");
       void import("@/components/Footer");
     };
-    const ric = (window as unknown as { requestIdleCallback?: (cb: () => void) => number })
-      .requestIdleCallback;
-    const idleId = ric ? ric(prefetch) : window.setTimeout(prefetch, 1200);
+    let idleId: number | undefined;
+    const prefetchTimer = window.setTimeout(() => {
+      if (typeof window.requestIdleCallback === "function") {
+        idleId = window.requestIdleCallback(prefetch, { timeout: 2500 });
+      } else {
+        prefetch();
+      }
+    }, 9000);
 
     const id = window.setTimeout(() => {
       import("@/lib/analytics").then(({ trackPageView }) => trackPageView("/", "Home"));
     }, 1800);
     return () => {
       window.clearTimeout(id);
-      const cic = (window as unknown as { cancelIdleCallback?: (h: number) => void })
-        .cancelIdleCallback;
-      if (ric && cic) cic(idleId);
-      else window.clearTimeout(idleId);
+      window.clearTimeout(prefetchTimer);
+      if (idleId !== undefined && typeof window.cancelIdleCallback === "function") {
+        window.cancelIdleCallback(idleId);
+      }
     };
   }, []);
 

@@ -109,6 +109,7 @@ const Empresas = () => {
         description="Solicite atendimento técnico empresarial: estação parada, rede instável, impressoras, backup e manutenção preventiva. Triagem por prioridade de operação."
         path="/empresas"
         noindex
+        robotsFromRouteHead
       />
       <Header />
 

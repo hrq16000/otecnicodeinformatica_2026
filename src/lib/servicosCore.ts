@@ -1,5 +1,6 @@
 import type { ServicoLandingData } from "@/components/servico/ServicoLandingLayout";
 import { PROCESSOS } from "@/lib/servicosProcessos";
+import { commercialConfig } from "@/lib/config/commercial";
 
 // ─────────────────────────────────────────────────────────────
 // SERVIÇOS ESSENCIAIS — conteúdo próprio, local e profundo.
@@ -21,23 +22,23 @@ export const SERVICOS_CORE: Record<string, ServicoLandingData> = {
     trackingKey: "formatacao",
     metaTitle: "Formatação de PC e Notebook em Curitiba | Windows",
     metaDescription:
-      "Formatação de PC e notebook em Curitiba com backup, Windows original, drivers e programas essenciais. Diagnóstico a partir de R$ 99,99. Atendimento via WhatsApp.",
+      "Formatação de PC e notebook em Curitiba: diagnóstico antes de reinstalar, backup combinado e licença verificada. Escopo e valor aprovados antes do serviço.",
     serviceName: "Formatação de Computador e Notebook",
     serviceDescription:
-      "Formatação com backup prévio, Windows 10/11 original, drivers atualizados e programas essenciais, com atendimento em Curitiba e região.",
+      "Diagnóstico e reinstalação do Windows compatível com o equipamento, com backup, drivers e programas conforme o escopo aprovado, em Curitiba e região.",
     eyebrow: "Formatação em Curitiba",
     h1: "Formatação de computador e notebook em Curitiba",
-    h1Accent: "com backup dos seus arquivos",
+    h1Accent: "com backup combinado antes",
     intro:
-      "Windows corrompido, cheio de erro ou que não inicia direito? A formatação reinstala o sistema do zero — com Windows original, drivers e programas essenciais. Antes de tudo fazemos o backup dos seus arquivos e, ao final, restauramos seus dados. Importante: lentidão nem sempre se resolve formatando; por isso avaliamos a causa antes. Você descreve o caso pelo WhatsApp e seguimos com o diagnóstico.",
+      "Seu computador está lento, com erros ou não inicia? Antes de apagar o sistema, avaliamos se o caso pede reparo, remoção de vírus ou reinstalação. Na triagem você informa modelo, sintoma e bairro; o diagnóstico define os arquivos do backup, a versão compatível do Windows e os programas necessários. Escopo, valor e prazo são apresentados para sua aprovação. Disco com falha ou dados sem cópia exigem avaliar a preservação dos arquivos antes de formatar.",
     whatsappMessage: "Olá! Preciso formatar meu computador/notebook. Pode me orientar?",
     incluso: [
-      { title: "Backup prévio", desc: "Salvamos documentos, fotos e arquivos importantes antes de formatar." },
-      { title: "Windows original", desc: "Instalação limpa do Windows 10 ou 11, ativado e atualizado." },
-      { title: "Drivers completos", desc: "Todos os drivers de hardware instalados e funcionando." },
-      { title: "Programas essenciais", desc: "Navegador, pacote de produtividade, leitor de PDF e compactador." },
+      { title: "Backup combinado", desc: "Arquivos, destino da cópia e condições de leitura definidos antes de apagar o sistema." },
+      { title: "Sistema e licença", desc: "Versão compatível com o equipamento e ativação conforme a licença válida disponível." },
+      { title: "Drivers do modelo", desc: "Drivers obtidos nas fontes do fabricante, conforme suporte disponível para o equipamento." },
+      { title: "Programas acordados", desc: "Aplicativos previstos no orçamento, com licença válida ou alternativa gratuita aprovada." },
       { title: "Ajuste de desempenho", desc: "Inicialização enxuta e sistema configurado para o seu uso." },
-      { title: "Restauração dos dados", desc: "Seus arquivos de volta e organizados após o procedimento." },
+      { title: "Conferência da entrega", desc: "Inicialização, periféricos básicos e arquivos incluídos na cópia conferidos com você." },
     ],
     sinais: [
       "Windows corrompido que não inicia corretamente",
@@ -59,21 +60,22 @@ export const SERVICOS_CORE: Record<string, ServicoLandingData> = {
     ],
     atendimento: {
       residencial:
-        "Formatação a domicílio ou por coleta e entrega em Curitiba e região, com backup dos seus arquivos antes de reinstalar e horário combinado com você.",
+        "Atendimento em Curitiba e região, com modalidade definida pelo endereço, pelo sintoma e pelos testes necessários. Backup e agendamento são combinados antes da execução.",
       empresarial:
         "Formatação e padronização de máquinas de escritório e estações de trabalho, com Windows, drivers e programas essenciais configurados para a rotina da equipe.",
     },
     faqs: [
-      { question: "A formatação apaga meus arquivos?", answer: "A formatação reinstala o sistema do zero. Por isso fazemos backup dos seus dados antes e restauramos depois, sempre que o equipamento permite leitura das informações." },
-      { question: "Vocês instalam Office, antivírus e drivers?", answer: "Sim. Entregamos com Windows ativado, drivers atualizados, navegador, antivírus e pacote de produtividade configurados conforme o seu uso." },
+      { question: "A formatação apaga meus arquivos?", answer: "A instalação limpa pode apagar arquivos, programas e configurações. Antes de autorizar, combinamos quais pastas entram no backup, onde a cópia será guardada e como será conferida. Se o disco não permite leitura ou está criptografado sem a chave disponível, primeiro avaliamos a preservação dos dados; não tratamos a cópia como garantida." },
+      { question: "Vocês instalam Office, antivírus e drivers?", answer: "A instalação dos programas é definida no orçamento. Microsoft 365, Office e outros aplicativos pagos exigem licença ou assinatura válida do cliente; uma alternativa gratuita pode ser combinada. Os drivers seguem o modelo e as fontes do fabricante, e a proteção é configurada conforme o sistema escolhido." },
       { question: "Formatar sempre deixa o computador rápido?", answer: "Nem sempre. Formatar resolve problemas de software, mas lentidão também pode vir de HD antigo, pouca memória ou superaquecimento. Por isso avaliamos a causa antes: às vezes um SSD resolve mais que formatar." },
-      { question: "Em quanto tempo fica pronto?", answer: "Em geral de 2 a 4 horas, variando conforme o hardware e o volume de dados a copiar e restaurar." },
-      { question: "Atendem em domicílio ou por coleta?", answer: "Atendemos em Curitiba e região, com opção de atendimento em domicílio ou coleta e entrega do equipamento." },
-      { question: "O backup está incluído?", answer: "A cópia dos seus arquivos faz parte do procedimento sempre que o armazenamento permite leitura. Volumes muito grandes, discos com falha ou pedidos de mídia adicional são tratados como escopo à parte e informados antes da execução." },
-      { question: "A licença do Windows está incluída?", answer: "Não fornecemos ativação irregular. Máquinas com licença de fábrica normalmente reativam pela chave gravada na placa; quando não existe licença válida, explicamos como regularizar antes de concluir a instalação." },
-      { question: "Quais programas são instalados?", answer: "Navegador, leitor de PDF, compactador, antivírus e o pacote de produtividade compatível com o seu uso. Programas específicos de trabalho podem ser instalados desde que você forneça instalador e licença." },
-      { question: "É possível recuperar arquivos antes da formatação?", answer: "Na maioria dos casos, sim, e essa é a primeira etapa. Quando o disco apresenta setores defeituosos ou falha de leitura, a prioridade passa a ser preservar os dados, e a reinstalação só é discutida depois disso." },
-      { question: "A formatação tem garantia?", answer: "Sim, conforme o serviço executado e as condições publicadas na página de preços e políticas. A garantia cobre o serviço realizado, não novas infecções ou alterações feitas depois da entrega." },
+      { question: "Em quanto tempo fica pronto?", answer: `${commercialConfig.policies.prazos} O volume do backup, o estado do armazenamento e os programas a reconfigurar entram nessa avaliação.` },
+      { question: "Atendem em domicílio ou por coleta?", answer: `A triagem confirma a modalidade conforme endereço, sintoma e testes necessários em Curitiba e região. ${commercialConfig.policies.coleta}` },
+      { question: "O backup está incluído?", answer: "O backup precisa ser combinado no escopo antes da formatação: pastas, volume, destino e conferência da cópia. Discos com falha, recuperação de arquivos e mídia adicional exigem avaliação própria e valor informado antes. A ficha comercial apresenta as condições para aprovação." },
+      { question: "A licença do Windows está incluída?", answer: "O serviço de instalação não inclui automaticamente uma licença nova. Verificamos a licença existente e a edição correspondente do Windows; quando há licença digital válida para o dispositivo, a mesma edição pode ser reativada. Se for necessário adquirir licença, isso é informado antes para sua decisão." },
+      { question: "Quais programas são instalados?", answer: "A lista é combinada no orçamento conforme o uso: navegador, leitor de PDF, compactador, proteção e ferramentas de produtividade. Aplicativos pagos dependem de licença válida do cliente; programas de trabalho podem exigir instalador, dados de configuração e apoio do fornecedor." },
+      { question: "É possível recuperar arquivos antes da formatação?", answer: "A viabilidade depende do estado do armazenamento e do tipo de perda. Quando há falha de leitura, arquivos apagados ou criptografia sem a chave disponível, primeiro avaliamos a preservação dos dados. A formatação não é usada como tentativa de recuperação e só é discutida depois dessa avaliação." },
+      { question: "A formatação tem garantia?", answer: commercialConfig.policies.garantia },
+      { question: "Formatar um notebook antigo permite instalar Windows 11?", answer: "A reinstalação não muda os requisitos do Windows 11. Conferimos compatibilidade de hardware, drivers e licença antes de indicar o sistema. Se o equipamento não atende aos requisitos, apresentamos essa limitação antes do orçamento, sem prometer que a formatação torna a máquina compatível." },
     ],
     relacionados: [
       { label: "Manutenção de computador", to: "/servicos/manutencao-de-computador" },
@@ -131,7 +133,7 @@ export const SERVICOS_CORE: Record<string, ServicoLandingData> = {
       { label: "Coleta e entrega do equipamento", to: "/coleta-e-entrega" },
       { label: "Preços e políticas", to: "/precos-e-politicas" },
     ],
-    dateModified: "2026-08-05",
+    dateModified: "2026-10-30",
   },
 
   // 2 ─────────────────────────────────────────────────────────

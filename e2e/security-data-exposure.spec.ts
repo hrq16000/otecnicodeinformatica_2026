@@ -1,4 +1,5 @@
 import { test, expect, type APIRequestContext } from "@playwright/test";
+import { loadEnv } from "vite";
 
 /**
  * E2E — exposição de dados sensíveis (reviews + og_validation_status).
@@ -15,15 +16,25 @@ import { test, expect, type APIRequestContext } from "@playwright/test";
  * Falha no CI em caso de regressão (surface privada torna-se acessível).
  */
 
-// URL + chave anon públicas (mesmo par já embarcado no frontend).
+// Usa o mesmo par URL/chave publica do frontend, sem JWT fixo no repositorio.
+// Variaveis E2E/CI explicitas sempre tem prioridade sobre os defaults locais.
+const projectEnv = loadEnv("test", process.cwd(), "");
 const SUPABASE_URL =
   process.env.E2E_SUPABASE_URL ||
   process.env.VITE_SUPABASE_URL ||
-  "https://bwyskhzxvgyvyzshxkbf.supabase.co";
+  projectEnv.VITE_SUPABASE_URL ||
+  projectEnv.SUPABASE_URL;
 const ANON_KEY =
   process.env.E2E_SUPABASE_ANON_KEY ||
   process.env.VITE_SUPABASE_PUBLISHABLE_KEY ||
-  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imhpc2VwYWF5dXd4anJudW1icWVxIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODM2MTU3NzcsImV4cCI6MjA5OTE5MTc3N30.d3ygLv0kgEFiT4hXlp6opB9mvOPLQSwSEKXuLIle164";
+  projectEnv.VITE_SUPABASE_PUBLISHABLE_KEY ||
+  projectEnv.SUPABASE_PUBLISHABLE_KEY;
+
+if (!SUPABASE_URL || !ANON_KEY) {
+  throw new Error(
+    "E2E seguranca: URL e chave publishable/anon nao configuradas. Configure via ambiente ou .env do projeto.",
+  );
+}
 
 const REST = `${SUPABASE_URL.replace(/\/$/, "")}/rest/v1`;
 const BLOCKED = [401, 403];

@@ -7,8 +7,8 @@
 // sem cookies e sem dados pessoais — descrita na Política de Cookies.
 // ─────────────────────────────────────────────────────────────
 
-export const CONSENT_KEY_V2 = "lgpd_consent_v2";
-export const CONSENT_KEY_LEGACY = "lgpd_consent_v1";
+import { CONSENT_KEY_V2, CONSENT_KEY_LEGACY } from "./consentKeys";
+export { CONSENT_KEY_V2, CONSENT_KEY_LEGACY } from "./consentKeys";
 export const CONSENT_VERSION = "2026-08-08";
 export const CONSENT_EVENT = "lgpd:consent-change";
 

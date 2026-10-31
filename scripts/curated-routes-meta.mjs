@@ -25,7 +25,7 @@ import { ENTIDADES_ROUTES } from "./lib/entidades-static.mjs";
 const BASE_ROUTES = [
   {
     "path": "/",
-    "title": "Soluções de Informática e Assistência Técnica em Curitiba",
+    "title": "O Técnico de Informática | Assistência Técnica em Curitiba",
     "description": "Computador lento, notebook que não liga, Wi-Fi caindo ou arquivo perdido? Guias técnicos e assistência em informática para casa e empresa em Curitiba."
   },
   {

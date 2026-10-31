@@ -78,10 +78,10 @@ export const SERVICO_VISUAL_3Q = {
 
   formatacao: {
     resumo: [
-      { label: "Escopo", value: "Instalação limpa do sistema, drivers e programas essenciais" },
-      { label: "Dados", value: "Cópia prévia dos arquivos quando o disco permite leitura" },
+      { label: "Escopo", value: "Sistema, drivers e programas definidos no orçamento" },
+      { label: "Dados", value: "Backup combinado antes, conforme a leitura do armazenamento" },
       { label: "Antes de formatar", value: "Avaliação da causa — lentidão nem sempre é software" },
-      { label: "Aprovação", value: "Valor informado antes da execução" },
+      { label: "Aprovação", value: "Escopo, valor e prazo apresentados antes da execução" },
     ],
     toc: [
       { id: "incluso", label: "O que está incluso" },
@@ -98,7 +98,7 @@ export const SERVICO_VISUAL_3Q = {
         icone: "backup",
         titulo: "Antes da formatação",
         itens: [
-          "Cópia de documentos, fotos, downloads e área de trabalho.",
+          "Arquivos, pastas e destino da cópia combinados antes de apagar.",
           "Verificação da saúde do armazenamento antes de reinstalar.",
           "Disco com falha de leitura muda a prioridade: preservar os dados primeiro.",
         ],

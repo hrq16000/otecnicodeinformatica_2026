@@ -88,14 +88,37 @@ const head = (html, re) => (html.match(re) ?? [])[1];
 async function checkRoute(path, { alias = null } = {}) {
   let res;
   try {
+    if (alias) {
+      // Aliases não são páginas: devem ter 301 HTTP, apontar em UM salto
+      // para a owner canônica, e preservar o host do ambiente testado.
+      // `redirect: follow` sozinho escondia 200 em alias e 302 temporário.
+      const primeiraResposta = await fetch(`${BASE}${path}`, { redirect: "manual" });
+      const location = primeiraResposta.headers.get("location");
+      const esperado = new URL(alias, BASE).toString();
+      if (primeiraResposta.status !== 301) {
+        fail(`${path}: alias HTTP ${primeiraResposta.status} (esperado 301 → ${alias})`);
+      }
+      let destinoReal = "";
+      try { if (location) destinoReal = new URL(location, BASE).toString(); } catch { /* registro abaixo */ }
+      if (destinoReal !== esperado) {
+        fail(`${path}: Location "${location ?? "(ausente)"}" ≠ "${esperado}"`);
+      }
+    }
     res = await fetch(`${BASE}${path}`, { redirect: "follow" });
     // `vite preview` só resolve o index.html pré-renderizado de um diretório
     // quando a URL tem barra final; sem ela cai no fallback SPA. Hospedagens
     // reais (Lovable/Cloudflare) resolvem a URL limpa, então tentamos a variante
     // com barra antes de acusar falta de prerender.
-    if (STRICT && path !== "/" && !path.endsWith("/")) {
-      const alt = await fetch(`${BASE}${path}/`, { redirect: "follow" });
-      if (alt.ok) res = alt;
+    if (STRICT) {
+      // Para aliases, o 301 e Location continuam obrigatorios. Porem a
+      // checagem do canonical usa a pagina proprietaria PRE-RENDERIZADA.
+      // Wrangler preview pode servir fallback SPA na URL limpa, enquanto
+      // /destino/ encontra o index.html com canonical self.
+      const target = alias || path;
+      if (target !== "/" && !target.endsWith("/")) {
+        const alt = await fetch(`${BASE}${target}/`, { redirect: "follow" });
+        if (alt.ok) res = alt;
+      }
     }
   } catch (e) {
     fail(`${path}: falha de rede (${e.message})`);
@@ -117,11 +140,10 @@ async function checkRoute(path, { alias = null } = {}) {
   const canonicalHref = head(canonicals[0]?.[0] ?? "", /href=["']([^"']+)["']/i);
   const norm = (u) => (u ?? "").replace(/\/$/, "");
   if (alias) {
-    // Um alias jamais pode ter canonical self-referente: isso cria duplicidade
-    // com o destino. O canonical correto (destino) é aplicado na hidratação e
-    // é coberto por e2e/canonical-alias-seo.spec.ts.
-    if (norm(canonicalHref) === norm(`${CANONICAL_HOST}${path}`)) {
-      fail(`${path}: alias com canonical self-referente — deveria apontar para ${alias}`);
+    // O GET após 301 deve chegar diretamente à owner, cujo canonical é self.
+    const esperado = `${CANONICAL_HOST}${alias}`;
+    if (norm(canonicalHref) !== norm(esperado)) {
+      fail(`${path}: canonical de destino "${canonicalHref ?? "(ausente)"}" ≠ "${esperado}"`);
     }
   } else {
     const expected = `${CANONICAL_HOST}${path}`;

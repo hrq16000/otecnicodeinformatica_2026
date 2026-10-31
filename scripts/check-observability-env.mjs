@@ -12,7 +12,8 @@
  *
  * Escape hatch consciente: OBSERVABILITY_OPTIONAL=true.
  */
-import { existsSync, readFileSync } from "node:fs";
+import { existsSync, readFileSync, readdirSync, statSync } from "node:fs";
+import path from "node:path";
 
 const STRICT =
   process.argv.includes("--strict") ||
@@ -35,6 +36,52 @@ const valor = (chave) => (process.env[chave] || fromEnvFile(chave) || "").trim()
 
 const dsn = valor("VITE_SENTRY_DSN");
 const otlp = valor("VITE_OTLP_ENDPOINT");
+/**
+ * Verifica o artefato Wrangler REAL gerado pelo Nitro/Cloudflare. So um arquivo
+ * de deploy contendo observability.enabled=true e main valida o sink nativo.
+ * Ausencia do artefato em CI/production reprova; nao confia em env ficticia.
+ */
+const workerLogs = () => {
+  const root = path.resolve("dist");
+  if (!existsSync(root)) return "";
+  const stack = [{ dir: root, depth: 0 }];
+  while (stack.length) {
+    const { dir, depth } = stack.pop();
+    for (const ent of readdirSync(dir, { withFileTypes: true })) {
+      const full = path.join(dir, ent.name);
+      if (ent.isDirectory()) {
+        if (depth < 4 && ent.name !== "client" && ent.name !== "assets") {
+          stack.push({ dir: full, depth: depth + 1 });
+        }
+        continue;
+      }
+      if (!ent.isFile() || !/^wrangler\.(json|jsonc|toml)$/.test(ent.name)) continue;
+      const source = readFileSync(full, "utf8");
+      if (ent.name.endsWith(".toml")) {
+        if (/\[observability\][\s\S]*?^enabled\s*=\s*true/m.test(source) &&
+            /^main\s*=\s*["'][^"']+["']/m.test(source)) return full;
+        continue;
+      }
+      // Wrangler JSONC pode ter comentarios; o generated JSON valido e a prova preferida.
+      let cfg;
+      try {
+        cfg = JSON.parse(source);
+      } catch {
+        // Regex fechada so para JSONC Wrangler com campos citados explicitamente.
+        if (/"main"\s*:\s*"[^"]+"/.test(source) &&
+            /"observability"\s*:\s*\{[^}]*"enabled"\s*:\s*true/.test(source))
+          return full;
+        continue;
+      }
+      if (cfg?.main && (cfg.observability?.enabled === true || cfg.observability?.logs?.enabled === true))
+        return full;
+    }
+  }
+  return "";
+};
+
+const workerLogsConfig = workerLogs();
+
 const erros = [];
 
 if (dsn) {
@@ -52,9 +99,9 @@ if (otlp && !/^https?:\/\/[^\s]+$/.test(otlp)) {
     "VITE_OTLP_ENDPOINT inválido — informe a URL base do coletor OTLP (ex.: https://otlp.seu-coletor.com), sem o sufixo /v1/logs.",
   );
 }
-if (!dsn && !otlp) {
+if (!dsn && !otlp && !workerLogsConfig) {
   const msg =
-    "Nenhum sink de observabilidade configurado: defina VITE_SENTRY_DSN (erros) e/ou VITE_OTLP_ENDPOINT (logs/traces). Sem eles, erros de produção ficam invisíveis.";
+    "Nenhum sink confirmado: configure VITE_SENTRY_DSN / VITE_OTLP_ENDPOINT ou habilite Workers Logs no Wrangler gerado em dist/.";
   if (STRICT && process.env.OBSERVABILITY_OPTIONAL !== "true") erros.push(msg);
   else console.warn(`⚠ ${msg}`);
 }
@@ -68,5 +115,5 @@ if (erros.length) {
   process.exit(1);
 }
 console.log(
-  `✔ Observabilidade: ${[dsn && "Sentry", otlp && "OTLP"].filter(Boolean).join(" + ") || "desligada (dev)"}.`,
+  `✔ Observabilidade: ${[dsn && "Sentry", otlp && "OTLP", workerLogsConfig && `Workers Logs (${path.relative(process.cwd(), workerLogsConfig)})`].filter(Boolean).join(" + ") || "desligada (dev)"}.`,
 );

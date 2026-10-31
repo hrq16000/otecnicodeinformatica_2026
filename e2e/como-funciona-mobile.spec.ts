@@ -2,19 +2,16 @@ import { test, expect, devices } from "@playwright/test";
 
 const BASE = process.env.E2E_BASE_URL || "http://localhost:8080";
 
-test.use({ ...devices["iPhone 13"] });
+// iPhone 13 exige WebKit; seus launch args nao aceitam flags Chromium.
+test.use({ ...devices["iPhone 13"], launchOptions: { args: [] } });
 
-test.describe("Como Funciona + modais — CTAs e CLS", () => {
-  test("CTAs WhatsApp permanecem clicáveis e sem links tel:", async ({ page }) => {
-    // Coletor de CLS via PerformanceObserver
+test.describe("Como funciona mobile — triagem, CTAs e CLS", () => {
+  test("funil real abre e fecha; processo e WhatsApp continuam acessiveis", async ({ page }) => {
     await page.addInitScript(() => {
       (window as unknown as { __cls: number }).__cls = 0;
       new PerformanceObserver((list) => {
         for (const entry of list.getEntries() as PerformanceEntry[]) {
-          const e = entry as PerformanceEntry & {
-            hadRecentInput?: boolean;
-            value?: number;
-          };
+          const e = entry as PerformanceEntry & { hadRecentInput?: boolean; value?: number };
           if (!e.hadRecentInput && typeof e.value === "number") {
             (window as unknown as { __cls: number }).__cls += e.value;
           }
@@ -23,50 +20,53 @@ test.describe("Como Funciona + modais — CTAs e CLS", () => {
     });
 
     await page.goto(BASE + "/", { waitUntil: "domcontentloaded" });
-
-    // Hidratação básica do hero antes do fallback
     await expect(page.getByRole("heading", { level: 1 })).toBeVisible();
+    expect(await page.locator('a[href^="tel:"]').count()).toBe(0);
 
-    // Regra do projeto: sem links tel:
-    const telCount = await page.locator('a[href^="tel:"]').count();
-    expect(telCount).toBe(0);
-
-    // Abre o modal "Prefiro agendar"
-    await page.getByRole("button", { name: /prefiro agendar/i }).click();
-    const modal = page.getByRole("dialog");
+    // Fluxo de abertura comercial vigente: botão flutuante -> triagem por etapas.
+    const float = page.getByTestId("whatsapp-float");
+    await expect(float).toBeVisible();
+    await expect(float).toBeEnabled();
+    await float.click();
+    const modal = page.locator('[data-triage="1"][role="dialog"]');
     await expect(modal).toBeVisible();
-
-    // CTA WhatsApp dentro do modal continua clicável
-    const modalCta = modal.getByRole("link", { name: /continuar no whatsapp/i });
-    await expect(modalCta).toBeVisible();
-    await expect(modalCta).toBeEnabled();
-    expect(await modalCta.getAttribute("href")).toContain("wa.me");
-
-    // Fecha modal
-    await modal.getByRole("button", { name: /fechar/i }).click();
+    await expect(modal.getByText(/Triagem antes do atendimento/i)).toBeVisible();
+    await expect(modal.getByRole("radio", { name: /Para mim ou minha residência/i })).toBeVisible();
+    // Se a triagem restaurou respostas, o fechamento solicita confirmação
+    // para não perder o progresso. Aceitar o prompt nativo sem remover o gate.
+    page.on("dialog", async (nativeDialog) => {
+      expect(nativeDialog.type()).toBe("confirm");
+      expect(nativeDialog.message()).toMatch(/Fechar a triagem/i);
+      await nativeDialog.accept();
+    });
+    await modal.getByRole("button", { name: "Close" }).click();
     await expect(modal).toBeHidden();
 
-    // Scroll até "Como funciona" e verifica CTAs por etapa
-    await page.evaluate(() => {
-      const el = document.getElementById("como-funciona-fluxo");
-      el?.scrollIntoView({ behavior: "instant" as ScrollBehavior, block: "start" });
+    // Isola o fluxo da rota comercial de possíveis navegações pendentes
+    // originadas pelo fechamento assíncrono da triagem na home.
+    const detailsPage = await page.context().newPage();
+    await detailsPage.addInitScript(() => {
+      (window as unknown as { __cls: number }).__cls = 0;
+      new PerformanceObserver((entries) => {
+        for (const entry of entries.getEntries() as PerformanceEntry[]) {
+          const shift = entry as PerformanceEntry & { hadRecentInput?: boolean; value?: number };
+          if (!shift.hadRecentInput && typeof shift.value === "number") {
+            (window as unknown as { __cls: number }).__cls += shift.value;
+          }
+        }
+      }).observe({ type: "layout-shift", buffered: true });
     });
-    for (let i = 1; i <= 4; i++) {
-      const cta = page.getByTestId(`como-funciona-cta-${i}`);
-      await expect(cta).toBeVisible();
-      await expect(cta).toBeEnabled();
-      const href = await cta.getAttribute("href");
-      expect(href).toContain("wa.me");
-    }
+    await detailsPage.goto(BASE + "/como-funciona", { waitUntil: "domcontentloaded" });
+    await expect(detailsPage.getByRole("heading", { level: 1 })).toBeVisible();
+    const whatsappCta = detailsPage.getByRole("link", { name: /Chamar no WhatsApp/i }).first();
+    await expect(whatsappCta).toBeVisible();
+    await expect(whatsappCta).toBeEnabled();
+    expect(await whatsappCta.getAttribute("href")).toContain("wa.me");
+    await expect(detailsPage.getByTestId("whatsapp-float")).toBeVisible();
+    expect(await detailsPage.locator('a[href^="tel:"]').count()).toBe(0);
 
-    // Sticky WhatsApp mobile permanece visível e clicável
-    const sticky = page.locator('[data-cta-location="hero_sticky_mobile"]');
-    await expect(sticky).toBeVisible();
-    await expect(sticky).toBeEnabled();
-
-    // CLS abaixo do limite aceitável após interações
-    await page.waitForTimeout(800);
-    const cls = await page.evaluate(
+    await detailsPage.waitForTimeout(800);
+    const cls = await detailsPage.evaluate(
       () => (window as unknown as { __cls: number }).__cls || 0,
     );
     expect(cls, `CLS regrediu: ${cls}`).toBeLessThan(0.1);

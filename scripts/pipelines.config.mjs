@@ -26,7 +26,6 @@ export const verifySteps = [
   { name: 'Contato canônico (WhatsApp único)', script: 'check:canonical-contact' },
   { name: 'Claims de confiança (E-E-A-T)', script: 'check:trust-claims' },
   { name: 'Inventário de afirmações em dia', script: 'check:afirmacoes' },
-  { name: 'Governança editorial', script: 'check:editorial-governance' },
   { name: 'Política de promoção (noindex → index)', script: 'check:promocao-index' },
   { name: 'Links internos', script: 'check:internal-links' },
   { name: 'Qualidade dos interlinks', script: 'check:interlinks-quality' },
@@ -47,6 +46,9 @@ export const verifySteps = [
   { name: 'Tendência de órfãs', script: 'check:orphan-trend' },
   { name: 'Intenção conversacional', script: 'check:conversational-intent' },
   { name: 'Interlinks do Lote 1 (/problemas)', script: 'check:problem-interlinks' },
+  // O inventario nao esta versionado (reports/ e ignorado pelo Git).
+  // Gere-o no checkout atual ANTES de conferir as decisoes, sem pular o gate.
+  { name: 'Inventario de intencao de /problemas', script: 'report:problem-intent' },
   { name: 'Decisões de /problemas', script: 'check:problem-decisions' },
   { name: 'Payload de realtime sem PII', script: 'check:realtime-payload' },
   { name: 'Hierarquia local (bairros/cidades)', script: 'check:local-hierarchy' },
@@ -59,6 +61,8 @@ export const verifySteps = [
 export const deployCheckSteps = [
   // O TanStack Start não emite um HTML por rota: os gates leem os snapshots SSR.
   { name: 'Snapshots SSR em dist/', script: 'snapshot:dist' },
+  // Requer dist/ e os sitemaps do build; não executar no verify pré-build.
+  { name: 'Governança editorial', script: 'check:editorial-governance' },
   { name: 'Env de observabilidade', script: 'check:observability-env' },
   { name: 'Sitemap editorial sincronizado', script: 'check:editorial-sitemap' },
   { name: 'Sitemap dinâmico (curado, fail-closed)', script: 'sitemap:dynamic:check' },

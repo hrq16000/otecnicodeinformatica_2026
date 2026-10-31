@@ -1,4 +1,5 @@
 import { test, expect, type Page } from "@playwright/test";
+import { CONSENT_KEY_V2 } from "../src/lib/consentKeys";
 
 /**
  * Alerta contínuo de regressão (Enriquecimento 4A, item 11):
@@ -10,7 +11,7 @@ import { test, expect, type Page } from "@playwright/test";
  * funil uma única vez e exige exatamente um disparo de cada evento.
  */
 
-const CONSENT_KEY = "lgpd_consent_v2";
+const CONSENT_KEY = CONSENT_KEY_V2;
 
 type Cenario = { nome: string; consentimento: null | { analytics: boolean; ads: boolean } };
 

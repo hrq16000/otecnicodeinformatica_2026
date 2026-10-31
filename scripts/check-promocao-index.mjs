@@ -67,10 +67,25 @@ function extrairArtigos(fonte) {
   }));
 }
 
+// O blog serve tres acervos reais: monolitico, suplementar e programatico.
+ // O suplementar usa chaves "slug": {...}; o programatico usa defs: [{slug: "...", ...}].
+ // Ausencia real continua bloqueante; nao simular conteudo e nao criar baseline.
+function extrairProgramaticos() {
+  const src = read("src/data/blogProgrammaticPosts.tsx");
+  const defs = src.split("const defs: PostDef[] = [")[1]?.split(/^\];/m)[0] ?? "";
+  const marcas = [...defs.matchAll(/^    slug:\s*"([a-z0-9-]+)",/gm)];
+  return marcas.map((m, i) => ({
+    slug: m[1],
+    raw: defs.slice(m.index, i + 1 < marcas.length ? marcas[i + 1].index : defs.length),
+  }));
+}
+
 const artigos = new Map(
-  [...extrairArtigos("src/data/blogPostsContent.tsx"), ...extrairArtigos("src/data/blogProgrammaticPosts.tsx")].map(
-    (a) => [a.slug, a.raw],
-  ),
+  [
+    ...extrairArtigos("src/data/blogPostsContent.tsx"),
+    ...extrairArtigos("src/data/blogSupplementalPosts.tsx"),
+    ...extrairProgramaticos(),
+  ].map((a) => [a.slug, a.raw]),
 );
 
 const textoVisivel = (raw) =>

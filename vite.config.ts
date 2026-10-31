@@ -62,6 +62,9 @@ export default defineConfig({
     cloudflare: {
       nodeCompat: true,
       deployConfig: true,
+      // Cloudflare Workers Logs: sink nativo, sem DSN nem chave externa.
+      // O gate verifica o Wrangler gerado, nao apenas esta declaracao.
+      wrangler: { observability: { enabled: true, head_sampling_rate: 1 } },
     },
   },
   vite: {

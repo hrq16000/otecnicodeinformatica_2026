@@ -1,6 +1,6 @@
 import { lazy, Suspense, useEffect, useState } from "react";
 import { JsonLdSsrSink } from "@/lib/jsonLdSsr";
-import IndexPage from "./pages/Index";
+
 
 /**
  * ─────────────────────────────────────────────────────────────
@@ -36,8 +36,10 @@ const lazyPagina = (
   carregar: () => Promise<{ default: React.ComponentType<any> }>,
 ) => lazy(() => carregar().then((m) => ({ default: comSinkDeJsonLd(m.default) })));
 
-/** Home é import estático (não suspende), mas usa o mesmo sink único. */
-const Index = comSinkDeJsonLd(IndexPage);
+/** A home participa do code splitting, sem carregar os módulos editoriais
+ * em todas as outras rotas. O sink de JSON-LD permanece DENTRO do módulo
+ * resolvido pelo mesmo lazyPagina usado pelas demais páginas. */
+const Index = lazyPagina(() => import("./pages/Index"));
 
 // Lazy-loaded pages for code splitting & faster initial load
 const Servicos = lazyPagina(() => import("./pages/Servicos"));
@@ -566,20 +568,30 @@ const Sonner = lazy(() => import("@/components/ui/sonner").then((m) => ({ defaul
 
 export const IdleEnhancements = () => {
   const [enabled, setEnabled] = useState(false);
+  const [extrasReady, setExtrasReady] = useState(false);
 
   useEffect(() => {
+    // Não solicitar widgets de notificação no LCP: o requestIdleCallback
+    // anterior executava cedo demais (≈2,3 s), antes da primeira pintura.
+    // Se a pessoa interagir, antecipa a montagem dos toasts sem atrasar
+    // a resposta ao toque; em visitas passivas, aguarda a primeira dobra.
     const activate = () => setEnabled(true);
-    const idleId: number = typeof window.requestIdleCallback === "function"
-      ? window.requestIdleCallback(activate, { timeout: 4500 })
-      : (globalThis.setTimeout(activate, 2500) as unknown as number);
+    const onInteraction = () => {
+      activate();
+      window.clearTimeout(activationTimer);
+      document.removeEventListener("pointerdown", onInteraction);
+      document.removeEventListener("keydown", onInteraction);
+    };
+    const activationTimer = window.setTimeout(activate, 7600);
+    document.addEventListener("pointerdown", onInteraction, { once: true, passive: true });
+    document.addEventListener("keydown", onInteraction, { once: true });
+    const extrasTimer = window.setTimeout(() => setExtrasReady(true), 11000);
 
     return () => {
-      if (typeof window.cancelIdleCallback === "function") {
-        window.cancelIdleCallback(idleId);
-      } else {
-        globalThis.clearTimeout(idleId);
-      }
-
+      window.clearTimeout(activationTimer);
+      window.clearTimeout(extrasTimer);
+      document.removeEventListener("pointerdown", onInteraction);
+      document.removeEventListener("keydown", onInteraction);
     };
   }, []);
 
@@ -589,9 +601,15 @@ export const IdleEnhancements = () => {
     <Suspense fallback={null}>
       <Toaster />
       <Sonner />
-      <WhatsAppChatbot />
-      <SocialProofProvider />
-      <GA4ChecklistPanel />
+      {extrasReady && (
+        <>
+          <WhatsAppChatbot />
+          <SocialProofProvider />
+          {typeof window !== "undefined" && window.location.pathname.startsWith("/admin/") && (
+            <GA4ChecklistPanel />
+          )}
+        </>
+      )}
     </Suspense>
   );
 };

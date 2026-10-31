@@ -148,6 +148,19 @@ function main() {
     ocorrencias,
   };
 
+  // Preserve a data do inventario quando nenhuma afirmacao mudou.
+  // Assim a passagem de dia nao reprova o gate de integridade no CI.
+  const anterior = existsSync(OUT) ? JSON.parse(readFileSync(OUT, "utf8")) : null;
+  if (anterior && typeof anterior.geradoEm === "string") {
+    const semDataAnterior = { ...anterior };
+    const semDataAtual = { ...relatorio };
+    delete semDataAnterior.geradoEm;
+    delete semDataAtual.geradoEm;
+    if (JSON.stringify(semDataAnterior) === JSON.stringify(semDataAtual)) {
+      relatorio.geradoEm = anterior.geradoEm;
+    }
+  }
+
   const json = `${JSON.stringify(relatorio, null, 2)}\n`;
 
   if (modoCheck) {
@@ -155,11 +168,8 @@ function main() {
       console.error("✗ src/data/trustClaimsAudit.json ausente. Rode: npm run report:afirmacoes");
       process.exit(1);
     }
-    const atual = JSON.parse(readFileSync(OUT, "utf8"));
-    const igual =
-      atual.total === relatorio.total &&
-      JSON.stringify(atual.porClasse) === JSON.stringify(relatorio.porClasse) &&
-      atual.ocorrencias?.length === relatorio.ocorrencias.length;
+    // Valide TODO o payload, nao apenas a contagem de ocorrencias.
+    const igual = JSON.stringify(anterior) === JSON.stringify(relatorio);
     if (!igual) {
       console.error("✗ Relatório de afirmações desatualizado. Rode: npm run report:afirmacoes");
       process.exit(1);

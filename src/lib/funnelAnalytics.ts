@@ -188,7 +188,14 @@ export function track(name: string, params: Record<string, unknown> = {}) {
     window.__waFunnelEvents = window.__waFunnelEvents || [];
     window.__waFunnelEvents.push({ name, payload });
   }
-  g?.("event", name, payload);
+  if (g) {
+    g("event", name, payload);
+  } else if (typeof window !== "undefined" && Array.isArray(window.dataLayer)) {
+    // Durante carregamento tardio da triagem, o bootstrap do gtag pode ainda
+    // não existir. Preserva o evento na fila oficial do Consent Mode em vez
+    // de descartar o lead; o consentimento continua valendo no envio.
+    window.dataLayer.push(["event", name, payload]);
+  }
   // Espelho no sink de observabilidade (fail-closed: só sai se houver env).
   if (name === "wa_click" || name === "call_click" || name === "funnel_open") {
     void import("@/lib/observability").then(({ registrarEtapaFunil }) =>

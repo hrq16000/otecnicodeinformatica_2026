@@ -12,7 +12,7 @@ import { WHATSAPP_NUMBER as WA_NUMBER } from "@/lib/siteConfig";
 
 const WHATSAPP_NUMBER = WA_NUMBER;
 
-const PROCEDIMENTOS = [
+export const PROCEDIMENTOS = [
   {
     slug: "reflow-bga-curitiba",
     title: "Reflow BGA",

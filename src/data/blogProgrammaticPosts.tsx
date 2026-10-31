@@ -102,6 +102,26 @@ const defs: PostDef[] = [
           "Se a causa ainda estiver aberta, veja <a href=\"/diagnostico-tecnico\">como funciona o diagnóstico técnico</a> antes de autorizar troca de peça.",
         ],
       },
+      {
+        h: "6. Anote o estágio exato em que a inicialização para",
+        p:
+          "Ao pressionar o botão uma única vez, observe se há LEDs, ventoinhas, algum sinal na tela e se aparece o logotipo do fabricante. A ausência total de energia não deve ser tratada como falha do Windows. Um computador que exibe logotipo mas não encontra o sistema já passou por etapas diferentes de um equipamento que nunca produz imagem. Se o monitor mostra uma mensagem de entrada sem sinal, confirme a entrada selecionada e o cabo externo antes de concluir que a placa-mãe falhou. Anote também bipes ou indicadores de diagnóstico, mas interprete seus códigos somente pelo manual do modelo. Não use relatos genéricos de internet como tabela universal de bipes.",
+      },
+      {
+        h: "7. Compare mudanças recentes sem começar desmontagens",
+        p:
+          "Pergunte o que aconteceu antes da falha: mudança de tomada, transporte, limpeza, queda de energia, atualização ou instalação de peça. Se um acessório foi adicionado, desconectá-lo externamente para uma tentativa controlada pode ajudar a isolar o sintoma. Se a máquina foi aberta recentemente, não force conectores ou cabos internos sem conhecimento do modelo. Em notebooks, bateria, carregador e indicador de carga variam conforme o fabricante; um LED ausente isoladamente não comprova defeito na placa. Evite sucessivas tentativas de ligar se houver estalos, odor anormal ou aquecimento localizado. Nesses casos a prioridade deixa de ser iniciar o sistema e passa a ser segurança elétrica.",
+      },
+      {
+        h: "8. Preserve arquivos antes de qualquer recuperação agressiva",
+        p:
+          "Se o computador chega à tela de recuperação do sistema, registre a mensagem completa e o que ocorreu antes dela. Reinstalar o Windows ou redefinir a unidade pode remover programas e arquivos, portanto não trate isso como primeiro teste. Com dados importantes, confirme se há backup restaurável e se existe criptografia de disco antes de iniciar alterações. Trocar cabos internos, retirar SSD ou testar a unidade em outro computador exige considerar conexão, compatibilidade e proteção de dados; não faça isso por improviso. Uma falha de inicialização não prova que o armazenamento está danificado, assim como um SSD identificado na BIOS não garante que todos os arquivos estejam íntegros. Separe diagnóstico de recuperação.",
+      },
+      {
+        h: "9. Prepare informações úteis para uma avaliação técnica",
+        p:
+          "Reúna modelo do computador, idade aproximada, mudanças recentes, comportamento ao apertar power, mensagens na tela e se o defeito é intermitente. Fotos dos indicadores ou da mensagem de erro podem ser mais úteis que repetir tentativas de inicialização. Informe se existem dados sem backup e se o equipamento é usado para trabalho, pois isso altera a prioridade de preservação. Não autorize troca de fonte, placa-mãe ou SSD apenas com base na ausência de vídeo; peça que a hipótese e o teste que a confirma sejam explicados. Em caso de dano por líquido ou cheiro de queimado, mantenha o equipamento desligado e não o conecte à rede elétrica para produzir mais evidências.",
+      },
     ],
     whenToCall:
       "Interrompa as tentativas e procure avaliação quando houver cheiro de queimado, estalo elétrico, líquido, componente visivelmente danificado, fonte que arma e desarma repetidamente ou quando o equipamento contiver dados importantes e o comportamento mudar a cada tentativa. Esses sinais pedem medição e inspeção controlada, não troca de peça por tentativa.",
@@ -219,6 +239,26 @@ const defs: PostDef[] = [
           "Roteiro passo a passo: <a href=\"/ferramentas/roteiro-wifi-instavel\">ferramenta de diagnóstico de Wi-Fi instável</a>.",
           "Cobertura, configuração e rede local: <a href=\"/servicos/redes-e-wifi\">serviço de redes e Wi-Fi</a>.",
         ],
+      },
+      {
+        h: "6. Registre exatamente quando a queda ocorre",
+        p:
+          "Crie um registro simples com horário, duração aproximada, dispositivo afetado, local da casa e comportamento das luzes do roteador. Compare pelo menos dois episódios antes de mudar configurações. Se a falha surge apenas quando um notebook acorda da suspensão, observe a conexão desse aparelho em vez de reiniciar toda a rede. Se acontece em horários próximos, anote também uso simultâneo de vídeo, jogos ou chamadas, mas não conclua que consumo de banda seja a causa sem comparação. Uma evidência útil é saber se o nome da rede desaparece, se o dispositivo continua conectado sem internet ou se apenas um aplicativo perde comunicação. Cada cenário aponta para uma investigação distinta.",
+      },
+      {
+        h: "7. Diferencie rede local, internet e aplicativo",
+        p:
+          "Durante uma falha, veja se outros dispositivos continuam alcançando recursos dentro da mesma rede, quando existirem, e se outro aplicativo também perdeu acesso. Se o Wi-Fi permanece conectado mas páginas não carregam, a causa pode estar no acesso à internet, no DNS ou no serviço consultado, não necessariamente no sinal de rádio. Se apenas um site falha, compare com outros endereços antes de alterar o roteador. Se todos os dispositivos perdem acesso, registre se a conexão cabeada também caiu. Evite mudar DNS, canal, largura de banda e senha ao mesmo tempo: alterações simultâneas impedem descobrir o que realmente resolveu ou piorou o problema.",
+      },
+      {
+        h: "8. Decida entre reposicionar, cabeamento ou outro ponto de acesso",
+        p:
+          "Cobertura ruim perto de uma parede espessa não significa necessariamente defeito do roteador. Teste o mesmo dispositivo perto do equipamento e no cômodo afetado, preservando o horário de comparação. Se perto funciona e longe falha, revise a posição do roteador e obstáculos primeiro. Um ponto de acesso ligado por cabo pode oferecer resultado mais previsível em ambientes com várias paredes, mas exige passagem e infraestrutura adequadas. Sistemas mesh podem ajudar na cobertura, porém os nós também precisam de comunicação de qualidade entre si. Comprar repetidor para instalá-lo no ponto sem sinal tende a reproduzir o mesmo problema; planeje onde ele conseguirá receber a rede.",
+      },
+      {
+        h: "9. Saiba quando parar de ajustar e reunir evidências",
+        p:
+          "Antes de restaurar o roteador ao padrão de fábrica, guarde as configurações necessárias para a operadora e os equipamentos da residência. Evite carregar firmware de outro modelo ou revisão, mesmo que o nome comercial seja parecido. Se houver desligamentos espontâneos, aquecimento anormal, cheiro de queimado ou fonte danificada, interrompa o uso e procure avaliação apropriada. Para solicitar suporte, envie o registro de horários, a comparação entre cabo e Wi-Fi, o modelo do equipamento e as verificações já feitas. Esse resumo reduz tentativas repetidas e permite diferenciar problema de sinal, equipamento e enlace sem prometer uma solução universal.",
       },
     ],
     whenToCall:
@@ -372,6 +412,26 @@ const defs: PostDef[] = [
           "Registre qual conta, dispositivo e método foram usados para restaurar; isso reduz improviso quando houver uma perda real.",
           "Use também o roteiro <a href=\"/blog/como-testar-restauracao-de-backup\">como testar a restauração de um backup</a>.",
         ],
+      },
+      {
+        h: "6. Documente a conta e as permissões antes da primeira cópia",
+        p:
+          "Antes de enviar arquivos, anote quais pastas entram no plano, quem tem acesso a elas e qual conta administra a sincronização. Para documentos de trabalho, diferencie permissões de leitura, edição e compartilhamento público; um link aberto sem necessidade pode expor dados mesmo quando o backup funciona. Confirme como recuperar a conta se perder o telefone do segundo fator. Guarde códigos de recuperação em local protegido e diferente do dispositivo principal. Uma pasta criptografada pode ser adequada para dados sensíveis, mas verifique se você sabe recuperar a chave. Se não souber, resolva isso antes de depender da nuvem como única cópia.",
+      },
+      {
+        h: "7. Monte um calendário verificável, não uma rotina presumida",
+        p:
+          "Defina com que frequência arquivos importantes mudam e quanto trabalho você aceitaria perder: isso orienta a frequência das cópias. Confira se o aplicativo realmente enviou os últimos arquivos, em vez de confiar apenas no ícone verde do sistema. Verifique o espaço disponível, avisos de erro, tipos de arquivos excluídos e dispositivos que ficaram muitos dias sem conexão. Registre uma data de conferência e a próxima data de teste de restauração. Para arquivos alterados diariamente, uma verificação apenas anual pode ser insuficiente. Para um arquivo quase estático, uma cópia diária pode não trazer benefício proporcional. Adapte a frequência ao risco real, não a uma promessa comercial.",
+      },
+      {
+        h: "8. Faça uma restauração de ensaio com destino separado",
+        p:
+          "Escolha pelo menos um arquivo recentemente modificado e outro que tenha sido excluído ou substituído de propósito no ambiente de teste. Faça o resgate para uma pasta nova, com nome diferente, e confirme que o conteúdo abre e está íntegro. Se o serviço possuir versões, teste recuperar uma versão antiga sem sobrescrever o arquivo atual. Observe se a restauração depende de aplicativo específico, login adicional ou de uma conexão que não estará disponível durante uma emergência. Não exclua o original depois do ensaio; a experiência serve para identificar obstáculos antes de uma perda verdadeira. Anote os passos de recuperação de modo que outra pessoa autorizada consiga segui-los.",
+      },
+      {
+        h: "9. Preveja a perda da conta e a infecção do computador",
+        p:
+          "Sincronização pode propagar uma alteração indesejada feita no computador, incluindo corrupção ou criptografia maliciosa de arquivos. Por isso, mantenha uma segunda cópia independente, com acesso e retenção separados da pasta sincronizada. Se suspeitar de ransomware, evite conectar mídias de backup ao equipamento comprometido; preserve as cópias existentes e procure orientação para contenção antes de restaurar. Se perder o acesso à nuvem, use primeiro os canais oficiais de recuperação de conta; não entregue senhas ou códigos de verificação a quem oferecer recuperação por mensagem. Avalie periodicamente se a cópia externa ainda existe, se está acessível e se permite recuperar os arquivos prioritários.",
       },
     ],
     whenToCall:

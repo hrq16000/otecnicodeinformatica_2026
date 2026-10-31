@@ -1,5 +1,6 @@
 import { GA4_EVENTS, cityFromPath, neighborhoodSlugFromPath, normalizeTrackingLabel, routeTypeFromPath, serviceSlugFromPath, viewportBucket } from '@/lib/trackingTaxonomy';
 import { capturarEvento } from '@/lib/observability';
+import { CONSENT_EVENT, readConsent } from '@/lib/consentStore';
 
 
 // Google Analytics & Ads tracking utilities — no UI imports here to keep the first load lean.
@@ -26,11 +27,14 @@ export const ANALYTICS_ENABLED = Boolean(GA4_ID);
 export const ADS_ENABLED = Boolean(ADS_ID);
 
 /**
- * Carrega o gtag.js apenas quando há propriedade própria configurada.
- * Enquanto não houver, o site roda sem GA4/Ads — jamais na propriedade herdada.
+ * O gtag.js (~190 KB de transferência em medição Lighthouse) é opcional.
+ * Não carrega no caminho crítico sem consentimento de analytics.
+ * O bootstrap inline de Consent Mode permanece no head (estado inicial denied).
  */
-export const initGoogleTags = () => {
-  if (typeof window === 'undefined' || !GA4_ID) return;
+let listeningForAnalyticsConsent = false;
+
+const loadConsentedGoogleTags = () => {
+  if (!GA4_ID || !readConsent()?.analytics) return;
   if ((window as unknown as { __gtagLoaded?: boolean }).__gtagLoaded) return;
   (window as unknown as { __gtagLoaded?: boolean }).__gtagLoaded = true;
   window.gtag?.('config', GA4_ID, { anonymize_ip: true });
@@ -39,6 +43,17 @@ export const initGoogleTags = () => {
   s.async = true;
   s.src = `https://www.googletagmanager.com/gtag/js?id=${GA4_ID}`;
   document.head.appendChild(s);
+};
+
+export const initGoogleTags = () => {
+  if (typeof window === 'undefined' || !GA4_ID) return;
+  // O evento é emitido também quando o visitante muda sua decisão no banner.
+  if (!listeningForAnalyticsConsent) {
+    listeningForAnalyticsConsent = true;
+    window.addEventListener(CONSENT_EVENT, loadConsentedGoogleTags);
+  }
+  // Consentimento já gravado antes da hidratação: preserva GA4 existente.
+  loadConsentedGoogleTags();
 };
 
 

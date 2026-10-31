@@ -32,7 +32,7 @@ jobs:
 
       - run: npm run build
       - name: Lighthouse CI
-        run: npx --yes @lhci/cli autorun --collect.numberOfRuns=1 || true
+        run: node scripts/run-lighthouse-audit.mjs --config=lighthouserc.json --smoke || true
 
       - name: Gerar relatório diário
         env:

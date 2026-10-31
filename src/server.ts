@@ -2,6 +2,7 @@ import "./lib/error-capture";
 
 import { consumeLastCapturedError } from "./lib/error-capture";
 import { renderErrorPage } from "./lib/error-page";
+import { resolveRedirect } from "./lib/redirectMatrix";
 
 type ServerEntry = {
   fetch: (request: Request, env: unknown, ctx: unknown) => Promise<Response> | Response;
@@ -46,6 +47,29 @@ function isH3SwallowedErrorBody(body: string): boolean {
 
 const CANONICAL_HOST = "otecnicodeinformatica.com.br";
 
+/**
+ * Redirecionamento HTTP 301 na borda SSR para aliases oficiais.
+ * Um alias nao e pagina indexavel: preserva a query e vai em um salto ao
+ * destino canônico, antes do roteador TanStack emitir 404 para a URL antiga.
+ *
+ * GET/HEAD apenas; POST e outros metodos nunca sofrem redirects silenciosos.
+ * Usa a matriz unica (incluindo aliases editoriais), sem lista paralela.
+ */
+export function canonicalAliasRedirect(request: Request): Response | null {
+  if (request.method !== "GET" && request.method !== "HEAD") return null;
+  const url = new URL(request.url);
+  const destino = resolveRedirect(url.pathname);
+  if (!destino || destino === url.pathname) return null;
+
+  url.pathname = destino;
+  if (url.hostname === CANONICAL_HOST || url.hostname === `www.${CANONICAL_HOST}`) {
+    url.hostname = CANONICAL_HOST;
+    url.protocol = "https:";
+    url.port = "";
+  }
+  return Response.redirect(url.toString(), 301);
+}
+
 export function canonicalHostRedirect(request: Request): Response | null {
   const url = new URL(request.url);
   const isCanonicalDomain =
@@ -66,6 +90,8 @@ export function canonicalHostRedirect(request: Request): Response | null {
 export default {
   async fetch(request: Request, env: unknown, ctx: unknown) {
     try {
+      const aliasRedirect = canonicalAliasRedirect(request);
+      if (aliasRedirect) return aliasRedirect;
       const canonicalRedirect = canonicalHostRedirect(request);
       if (canonicalRedirect) return canonicalRedirect;
       const handler = await getServerEntry();

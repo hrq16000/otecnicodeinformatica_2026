@@ -1,0 +1,62 @@
+name: Security quick triage (production deps and current secrets)
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - ".github/workflows/security-quick-triage.yml"
+      - "package.json"
+      - "package-lock.json"
+      - "src/**"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  production-dependencies:
+    name: Audit de vulnerabilidades altas/criticas em dependencias de producao
+    runs-on: ubuntu-24.04
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Instalar so dependencias de producao
+        run: npm ci --omit=dev --no-audit --no-fund --ignore-scripts
+      - name: Proveniencia das versoes corrigidas sem atualizar o projeto
+        run: |
+          echo "seroval 1.6.3:"
+          npm view seroval@1.6.3 dist.integrity
+          echo "source-map-js 1.2.2:"
+          npm view source-map-js@1.2.2 dist.integrity
+      - name: Audit high/critical de producao — bloqueante
+        run: npm audit --omit=dev --audit-level=high
+
+  working-tree-secrets:
+    name: Secrets no estado atual do repositorio — bloqueante
+    runs-on: ubuntu-24.04
+    timeout-minutes: 6
+    steps:
+      - uses: actions/checkout@v4
+      - name: Scan de segredos em todos os arquivos atuais
+        run: |
+          set +e
+          docker run --rm \
+            -v "${{ github.workspace }}:/repo:ro" \
+            -v "${{ runner.temp }}:/safe-report" \
+            ghcr.io/gitleaks/gitleaks:v8.30.1 \
+            dir /repo --config /repo/.gitleaks.toml --redact --no-banner --report-format json --report-path /safe-report/secret-scan.json
+          status=$?
+          set -e
+          if test -f "${{ runner.temp }}/secret-scan.json"; then
+            # Somente regra, caminho e linha. Nunca exibir os valores encontrados.
+            node -e 'const fs=require("fs"); const v=JSON.parse(fs.readFileSync(process.argv[1],"utf8")); console.log("Achados atuais: "+v.length); for(const x of v)console.log((x.RuleID||"regra")+": "+(x.File||"arquivo")+":"+(x.StartLine||0));' "${{ runner.temp }}/secret-scan.json"
+            rm -f "${{ runner.temp }}/secret-scan.json"
+          fi
+          exit "$status"

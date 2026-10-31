@@ -67,6 +67,29 @@ for (const { path, precisa } of URLS) {
     const faltando = precisa.filter((t) => !body.includes(t));
     if (faltando.length) falhas.push(`FAIL_CONTENT ${path}: ausente ${faltando.join(", ")}`);
 
+    // GATE DE INDEXABILIDADE REAL: valida o HTML e os headers publicados,
+    // não só o build local. Todas as URLs do smoke são públicas e curadas.
+    const xRobots = res.headers.get("x-robots-tag") ?? "";
+    if (/\bnoindex\b/i.test(xRobots)) {
+      falhas.push(`FAIL_X_ROBOTS_NOINDEX ${path}: ${xRobots}`);
+    }
+
+    const robotsTags = [...body.matchAll(/<meta\b[^>]*>/gi)]
+      .map(([tag]) => tag)
+      .filter((tag) => /\bname\s*=\s*["']robots["']/i.test(tag));
+    if (robotsTags.length !== 1 ||
+        !/\bcontent\s*=\s*["']index\s*,\s*follow["']/i.test(robotsTags[0])) {
+      falhas.push(`FAIL_META_ROBOTS ${path}: esperado exatamente um index, follow (encontrados ${robotsTags.length})`);
+    }
+
+    const canonicalTags = [...body.matchAll(/<link\b[^>]*>/gi)]
+      .map(([tag]) => tag)
+      .filter((tag) => /\brel\s*=\s*["']canonical["']/i.test(tag));
+    const canonical = canonicalTags[0]?.match(/\bhref\s*=\s*["']([^"']+)["']/i)?.[1];
+    if (canonicalTags.length !== 1 || canonical !== `${BASE}${path}`) {
+      falhas.push(`FAIL_CANONICAL ${path}: esperado ${BASE}${path}; recebido ${canonical ?? "(ausente)"}`);
+    }
+
     if (path === "/" && versaoManifesto) {
       const m = body.match(/__APP_VERSION__\s*=\s*"([^"]+)"/);
       if (!m) falhas.push("FAIL_VERSION_TAG: __APP_VERSION__ não encontrado no HTML SSR");
@@ -78,6 +101,70 @@ for (const { path, precisa } of URLS) {
     falhas.push(`FAIL_FETCH ${path}: ${e.message}`);
   }
 }
+
+
+// Gate de descoberta da busca no domínio publicado, sem depender de GSC/API.
+// Reprova arquivo ausente, fallback HTML 200, sitemap vazio ou host errado.
+async function verificarDescoberta() {
+  let robots = "";
+  try {
+    const { res, body } = await buscar(BASE + "/robots.txt");
+    if (res.status !== 200) falhas.push("FAIL_ROBOTS_HTTP " + res.status);
+    else robots = body;
+  } catch (err) {
+    falhas.push("FAIL_ROBOTS_FETCH " + err.message);
+  }
+  const geral = robots.match(/(?:^|\n)User-agent:\s*\*\s*\r?\n([\s\S]*?)(?=\r?\nUser-agent:|$)/i)?.[1] ?? "";
+  if (!geral || /^\s*Disallow:\s*\/\s*$/im.test(geral)) {
+    falhas.push("FAIL_ROBOTS_CRAWL: User-agent * ausente ou bloqueio global");
+  }
+  if (!robots.includes("Sitemap: " + BASE + "/sitemap-index.xml")) {
+    falhas.push("FAIL_ROBOTS_DISCOVERY: sitemap-index nao anunciado");
+  }
+
+  let xml = "";
+  try {
+    const { res, body } = await buscar(BASE + "/sitemap-index.xml");
+    if (res.status !== 200) falhas.push("FAIL_INDEX_HTTP " + res.status);
+    else xml = body;
+  } catch (err) {
+    falhas.push("FAIL_INDEX_FETCH " + err.message);
+  }
+  if (!/<sitemapindex\b/i.test(xml)) {
+    falhas.push("FAIL_INDEX_XML: sitemap ausente ou substituido por HTML");
+    return;
+  }
+  const sub = [...xml.matchAll(/<loc>\s*(https:\/\/[^<]+)\s*<\/loc>/gi)].map((m) => m[1].trim());
+  if (!sub.includes(BASE + "/sitemap-main.xml") || !sub.includes(BASE + "/sitemap-servicos.xml")) {
+    falhas.push("FAIL_INDEX_CORE: main/servicos nao encontrados");
+  }
+  if (sub.length === 0 || new Set(sub).size !== sub.length) {
+    falhas.push("FAIL_INDEX_EMPTY_OR_DUPLICATE");
+  }
+  for (const url of sub) {
+    let parsed;
+    try { parsed = new URL(url); } catch {
+      falhas.push("FAIL_SITEMAP_URL " + url);
+      continue;
+    }
+    if (parsed.origin !== BASE || !/^\/sitemap-[a-z-]+\.xml$/.test(parsed.pathname)) {
+      falhas.push("FAIL_SITEMAP_HOST " + url);
+      continue;
+    }
+    try {
+      const { res, body } = await buscar(url);
+      if (res.status !== 200 || !/<urlset\b/i.test(body) || !body.includes("<loc>" + BASE + "/")) {
+        falhas.push("FAIL_SITEMAP_CHILD " + parsed.pathname + " HTTP " + res.status);
+      } else {
+        linhas.push("200 " + parsed.pathname + " [XML]");
+      }
+    } catch (err) {
+      falhas.push("FAIL_SITEMAP_FETCH " + parsed.pathname + " " + err.message);
+    }
+  }
+  if (robots && xml) linhas.push("200 /robots.txt + /sitemap-index.xml");
+}
+await verificarDescoberta();
 
 console.log(`SMOKE PÓS-DEPLOY — base=${BASE}`);
 for (const l of linhas) console.log(`  ✓ ${l}`);
