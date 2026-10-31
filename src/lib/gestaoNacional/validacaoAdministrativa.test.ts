@@ -69,6 +69,16 @@ describe("validação nacional — separação de autoridades", () => {
     expect(r.revisao).toBe(3);
   });
 
+  it("não habilita cadastro sem conta titular comprovada", () => {
+    expect(() => aplicarValidacaoNacional(
+      { ...base, titularUserId: null },
+      administrador,
+      { tipo: "confirmar_comunidade", confirmacao: "confirmada", referenciaEvidencia: "interna-01" },
+      0,
+      agora,
+    )).toThrow(/sem titular/);
+  });
+
   it("não permite autoaprovação de administrador que é titular do cadastro", () => {
     const r = fluxoValidado();
     expect(() => aplicarValidacaoNacional(r,
