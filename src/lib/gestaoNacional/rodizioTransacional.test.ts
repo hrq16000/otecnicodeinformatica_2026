@@ -34,6 +34,7 @@ function tecnico(id: string, situacao: "disponivel" | "ocupado" = "disponivel"):
 /** Somente mock de teste: backend real precisa de transação/índices no banco. */
 function repositorioEmMemoria(
   candidatos: TecnicoElegibilidadeNacional[],
+  autorizado = true,
 ): RepositorioRodizioNacional & { registros: RegistroApresentacaoNacional[]; posicoes: Map<string, string> } {
   const registros: RegistroApresentacaoNacional[] = [];
   const posicoes = new Map<string, string>();
@@ -48,6 +49,9 @@ function repositorioEmMemoria(
       await anterior;
       try {
         const tx: TransacaoRodizioNacional = {
+          async verificarSolicitacaoAutorizada() {
+            return autorizado;
+          },
           async buscarPorSolicitacao(id) {
             return registros.find((r) => r.solicitacaoId === id) ?? null;
           },
@@ -77,6 +81,15 @@ describe("rodízio transacional de EXIBIÇÃO — contrato sem backend", () => {
     expect(escopoRodizioNacional({ ...consultaBase, municipio: "sao jose dos pinhais", uf: "pr" }))
       .toBe("PR|sao jose dos pinhais|reparos-computadores");
     expect(() => escopoRodizioNacional({ ...consultaBase, uf: "XX|" })).toThrow();
+  });
+
+  it("bloqueia a fila antes de qualquer leitura sem pagamento validado pelo servidor", async () => {
+    const repo = repositorioEmMemoria([tecnico("a")], false);
+    expect(await apresentarProximoTecnicoNacional(repo, consultaBase)).toEqual({
+      estado: "nao_autorizado", tecnicoId: null, repeticao: false,
+    });
+    expect(repo.registros).toHaveLength(0);
+    expect(repo.posicoes.size).toBe(0);
   });
 
   it("não avança a fila sem candidatos realmente elegíveis", async () => {
