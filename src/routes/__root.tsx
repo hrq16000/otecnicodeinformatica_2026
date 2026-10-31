@@ -38,7 +38,6 @@ import {
 import { REDIRECT_MATRIX } from "@/lib/redirectMatrix";
 import { reportLovableError } from "@/lib/lovable-error-reporting";
 import { runClientInit } from "@/lib/clientInit";
-import { brandConfig } from "@/lib/config/brand";
 
 // Google Consent Mode v2 — precisa rodar antes de qualquer ping (LGPD).
 // Portado do <head> do index.html pré-migração.
