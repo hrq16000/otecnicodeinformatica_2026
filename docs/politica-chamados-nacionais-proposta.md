@@ -101,6 +101,24 @@ O protótipo interno `src/lib/gestaoNacional/rodizioRegional.ts`, acompanhado de
 - O cursor necessita de armazenamento privado com atualização **atômica por região + serviço**; auditoria de exibição, expiração/recusa, duplo aceite e autorização de acesso permanecem para uma camada de backend futura. Sem isso, a função é apenas um algoritmo e **não é rodízio operacional funcional**.
 - Nenhuma base de técnicos foi criada ou importada. Não cadastrar usuários fictícios ou transformar nomes de capturas em perfis sem consentimento e verificação.
 
+### Rodada 4 — fluxo de contratação e prévia de conteúdo isolados
+
+**Código entregue, sem ativação:**
+- `src/lib/gestaoNacional/contratacaoDiretaNacional.ts` e teste: limite **3 solicitações por cliente por data civil**, somente **serviços distintos**, verificação de idempotência, bloqueio de ID reaproveitado para outro pedido e rejeição de registros inválidos.
+- Cancelamentos no mesmo dia **continuam consumindo o limite** como política conservadora provisória; eventual exceção depende de definição de suporte, regras antifraude e direito do consumidor.
+- O limite **não deve** ser implementado contando apenas em memória/frontend: precisa de autenticação, fuso de referência oficialmente definido, persistência transacional, índice único (cliente + data + serviço/solicitação) e auditoria de concorrência antes de ser acionado em produção.
+- Máquina declarativa de estados: rascunho → cotação aceita → aguardando pagamento; confirmação de pagamento **sempre bloqueada por ausência de integração segura**. Não existe checkout nem pagamento validado neste código. Reembolso igualmente bloqueado até integração.
+- `src/components/gestaoNacional/PreviaAtendimentoNacional.tsx`: componente de **prévia não importado por nenhuma rota**, com comunicação para cliente e profissional, taxas incluídas e link de ingresso no grupo exclusivamente para técnicos. A cópia apresenta explicitamente o status de proposta, sem prometer abrangência.
+
+**Integrações ainda necessárias antes de publicação:**
+1. Revisão contratual e de direito concorrencial sobre a alegação de não intermediação, cobrança/repasse, oferta comercial e responsabilidade pela contratação direta.
+2. Cadastro e validação real dos prestadores, participação confirmada na comunidade, disponibilidade consentida por cidade/UF, identidade e proteção de dados.
+3. Persistência segura/atômica do cursor de rodízio por região e serviço; identificação e limitação transacional do cliente; registro de aceite do técnico.
+4. Provedor de pagamento oficial com autenticação de webhook, assinatura validada, valores e moedas conferidos com cotação imutável, idempotência, conciliação, reembolsos, tributação/documentos fiscais e tratamento de chargeback.
+5. Política de cancelamento, indisponibilidade, devolução, privacidade, adequação às normas consumeristas; testes de ponta a ponta, gates e observação real do deploy.
+
+**Condição de publicação:** nenhuma rota pública, botão de compra, cobrança, cadastro ou preço vigente será alterado pela PR enquanto o fluxo inteiro não estiver validado. Pode-se dividir a publicação em PRs independentes posteriormente; aprovação de código puro não equivale a lançamento operacional.
+
 ## 6. Evidências para expansão regional e SEO
 
 Classificar cada entrada antes de qualquer afirmação pública:
