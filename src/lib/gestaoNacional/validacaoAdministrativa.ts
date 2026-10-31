@@ -97,6 +97,10 @@ export function aplicarValidacaoNacional(
   ) {
     throw new Error("Acesso não autorizado ou revisão de cadastro desatualizada.");
   }
+  // Sem titular autenticado vinculado ao cadastro, nenhuma habilitação é liberada.
+  if (!stringCurta(atual.titularUserId) && acao.tipo !== "suspender_habilitacao") {
+    throw new Error("Cadastro sem titular autenticado: aprovação bloqueada.");
+  }
   const administrador = ator.papel === "administrador";
   const titular = ator.papel === "profissional" && atual.titularUserId === ator.userId;
   const acaoAdmin = ["confirmar_comunidade", "validar_habilitacao", "suspender_habilitacao"].includes(acao.tipo);
