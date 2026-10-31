@@ -164,6 +164,14 @@ Arquivos adicionados: `src/lib/gestaoNacional/validacaoAdministrativa.ts` e `val
 
 **Gates de entrega:** confirmar acesso ao banco oficial; transformar a proposta em migração versionada; executar testes SQL/RLS e advisors no ambiente correto; conectar backend e área profissional, atualizar tipos apenas após aplicação; validar CI e revisão jurídica/tributária antes de habilitar novos serviços. Modalidade de produção segue inativa.
 
+### Rodada 9 — integração visual desativada na área do parceiro
+
+- `src/components/gestaoNacional/PainelModalidadeNacional.tsx`: painel mobile-first para o profissional autenticado; comunica a distinção entre perfil anual e modalidade nacional, requisitos de comunidade, habilitação, aceite e disponibilidade. Não tem cadastro, disparo de chamado, checkbox de pagamento ou escrita direta.
+- `src/lib/gestaoNacional/areaNacionalFeatureGate.ts` e `.test.ts`: a constante `AREA_NACIONAL_INTEGRADA = false` mantém a modalidade desligada, inclusive quando a camada de apresentação receber dados simulados. Classificação visual isolada e testada, sem poder autorizar serviços.
+- `src/pages/profissionais/AreaParceiro.tsx`: ponto de montagem do novo painel dentro do painel autenticado existente, **atrás da flag false e com `backendDisponivel={false}`**. Portanto não há controle visível/ativo para os parceiros na rota atual, mesmo após eventual merge. Nenhuma rota nova, nenhum preço de produção alterado e nenhum plano anual modificado.
+- A futura ativação exige conector de backend seguro com **leitura somente do resumo pertencente ao titular autenticado**; ações distintas de disponibilidade e termos com autenticação, CAS de revisão e auditoria no banco oficial. Habilitação da comunidade e serviços continuam exclusivamente administrativos e nunca vêm de um formulário público.
+- Sem banco oficial conectado, SQL aplicado, credenciais ou provedor de pagamento, a rodagem real continua **bloqueada**. Remover a flag prematuramente não resolverá a infraestrutura.
+
 ## 6. Evidências para expansão regional e SEO
 
 Classificar cada entrada antes de qualquer afirmação pública:
