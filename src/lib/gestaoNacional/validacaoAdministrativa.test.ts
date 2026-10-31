@@ -160,6 +160,33 @@ describe("validação nacional — separação de autoridades", () => {
       .toThrow();
   });
 
+  it("recusa provas com URLs, telefone ou transcrição de conversa, aceita ID opaco", () => {
+    const r = fluxoValidado();
+    for (const referenciaEvidencia of [
+      "https://chat.whatsapp.com/exemplo",
+      "+5541999999999",
+      "11999999999",
+      "Mensagem recebida no grupo",
+      "abc",
+    ]) {
+      expect(() => aplicarValidacaoNacional(r, administrador, {
+        tipo: "confirmar_comunidade",
+        confirmacao: "confirmada",
+        referenciaEvidencia,
+      }, 3, agora)).toThrow();
+      expect(() => aplicarValidacaoNacional(r, administrador, {
+        ...aprovacao,
+        referenciaEvidencia,
+      }, 3, agora)).toThrow();
+    }
+    const valido = aplicarValidacaoNacional(r, administrador, {
+      tipo: "confirmar_comunidade",
+      confirmacao: "confirmada",
+      referenciaEvidencia: "verificacao_001",
+    }, 3, agora);
+    expect(valido.evento.referenciaEvidencia).toBe("verificacao_001");
+  });
+
   it("não aceita cobertura duplicada, raio inválido nem habilitação sem termos", () => {
     const t = aplicarValidacaoNacional(base, profissional,
       { tipo: "aceitar_termos", versao: "v1" }, 0, agora).registro;
