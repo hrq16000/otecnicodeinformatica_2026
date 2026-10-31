@@ -23,6 +23,12 @@ export interface RegistroApresentacaoNacional {
 }
 
 export interface TransacaoRodizioNacional {
+  /**
+   * Dado autoritativo conferido no backend, sob a mesma transação.
+   * NÃO aceitar sinalização do frontend, print de PIX ou mera criação de link.
+   * Cliente precisa estar autenticado e pagamento confirmado + conciliado.
+   */
+  verificarSolicitacaoAutorizada(solicitacaoId: string, escopo: string): Promise<boolean>;
   /** Read no mesmo lock/transação, não de cache eventual. */
   buscarPorSolicitacao(solicitacaoId: string): Promise<RegistroApresentacaoNacional | null>;
   consultarUltimoApresentado(): Promise<string | null>;
@@ -51,6 +57,7 @@ export interface ConsultaApresentacaoNacional {
 }
 
 export type ApresentacaoNacional =
+  | { estado: "nao_autorizado"; tecnicoId: null; repeticao: false }
   | { estado: "sem_profissional"; tecnicoId: null; repeticao: false }
   | { estado: "apresentado"; tecnicoId: string; repeticao: boolean };
 
@@ -94,6 +101,12 @@ export async function apresentarProximoTecnicoNacional(
   validarChave(consulta?.solicitacaoId);
   const escopo = escopoRodizioNacional(consulta);
   return repositorio.emTransacaoExclusiva(escopo, async (tx) => {
+    // Fail-closed: antes de ler/alterar fila, o servidor deve atestar pedido
+    // pertencente à região e cliente autenticado com pagamento real confirmado.
+    const autorizado = await tx.verificarSolicitacaoAutorizada(consulta.solicitacaoId, escopo);
+    if (!autorizado) {
+      return { estado: "nao_autorizado", tecnicoId: null, repeticao: false };
+    }
     const anterior = await tx.buscarPorSolicitacao(consulta.solicitacaoId);
     if (anterior) {
       if (anterior.escopo !== escopo) {
