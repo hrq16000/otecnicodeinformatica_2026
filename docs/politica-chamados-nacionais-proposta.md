@@ -172,6 +172,15 @@ Arquivos adicionados: `src/lib/gestaoNacional/validacaoAdministrativa.ts` e `val
 - A futura ativação exige conector de backend seguro com **leitura somente do resumo pertencente ao titular autenticado**; ações distintas de disponibilidade e termos com autenticação, CAS de revisão e auditoria no banco oficial. Habilitação da comunidade e serviços continuam exclusivamente administrativos e nunca vêm de um formulário público.
 - Sem banco oficial conectado, SQL aplicado, credenciais ou provedor de pagamento, a rodagem real continua **bloqueada**. Remover a flag prematuramente não resolverá a infraestrutura.
 
+### Rodada 10 — acesso autenticado ao resumo e diagnóstico de CI (não ativo)
+
+- `src/lib/gestaoNacional/resumoNacionalAutenticado.ts` + testes: contrato de leitura para ser executado **apenas no servidor**, sem parâmetro público de `userId` ou `parceiroId`. A identidade é obtida da sessão validada pelo backend; a consulta identifica o cadastro associado a `partners.user_id` e verifica a titularidade da confirmação nacional antes de entregar exclusivamente cinco campos seguros ao painel. Não inclui CPF, telefone, nome, município, endereço, documentos, provas ou informações financeiras. Falha fechada para ausência de sessão, falta de perfil e inconsistências do vínculo.
+- **Não é um endpoint e não há conexão com o banco:** a implementação fornece uma fronteira tipada com testes em mock, pronta para integração **apenas depois** da migração e autorização reais. Não usar `partners_public` para conferir habilitação. Não expor `national_ops` ao navegador nem reaproveitar `user_metadata` como papel de administrador.
+- No histórico do CI da PR #400, a execução `Security` do commit `346bf0ee` registrou **24 dependências high e 8 critical** no `npm audit`; incluem dependências diretas e transitivas (por exemplo `@tanstack/react-start`, `dompurify`, `vite`, `sharp`, `@lhci/cli`). `Gitleaks` reportou ocorrências com conteúdo ocultado nos logs, inclusive ao percorrer histórico Git, e uma execução atingiu o limite de 8 minutos. **Não inserir valores encontrados no código/docs**. Confirmação de exposição real, revogação/rotação quando cabível e revisão segura do histórico precisam ser tratadas em frente própria, sem desativar os gates nem tratar toda ocorrência como falso positivo.
+- O Lighthouse também falhou nessa execução histórica. O CI recente em rodadas sequenciais pode cancelar checks anteriores por concorrência; a conclusão atual deve ser verificada no `HEAD` do PR, não inferida de checks de commits superados.
+- **Ordem de remediação recomendada:** triagem de credenciais reais por responsável autorizado; atualização focada de dependências críticas com atualização consistente dos lockfiles e testes; revalidação de Gitleaks/segurança/performance; só então avaliar merge/ativação. A atualização das dependências não foi realizada nesta rodada por exigir compatibilidade com o portal inteiro.
+- O fluxo nacional permanece desativado; não altera contratos, indexação, preços, DNS, dados nem recebimentos.
+
 ## 6. Evidências para expansão regional e SEO
 
 Classificar cada entrada antes de qualquer afirmação pública:
