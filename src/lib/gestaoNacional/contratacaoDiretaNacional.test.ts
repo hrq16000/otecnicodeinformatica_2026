@@ -42,7 +42,7 @@ describe("limite diário — proposta nacional", () => {
     expect(verificarLimiteSolicitacoesNacional(anterior, { ...anterior[0], servicoId: "outro" })).toEqual({
       permitido: false, motivo: "id_em_conflito", totalNoDia: 2,
     });
-    expect(verificarLimiteSolicitacoesNacional([anterior[0], anterior[0]], nova)).toThrow();
+    expect(() => verificarLimiteSolicitacoesNacional([anterior[0], anterior[0]], nova)).toThrow();
   });
 
   it("contagens são isoladas por usuário e data civil", () => {
