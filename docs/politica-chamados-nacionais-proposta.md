@@ -119,6 +119,14 @@ O protótipo interno `src/lib/gestaoNacional/rodizioRegional.ts`, acompanhado de
 
 **Condição de publicação:** nenhuma rota pública, botão de compra, cobrança, cadastro ou preço vigente será alterado pela PR enquanto o fluxo inteiro não estiver validado. Pode-se dividir a publicação em PRs independentes posteriormente; aprovação de código puro não equivale a lançamento operacional.
 
+### Rodada 5 — avanço de integração transacional (ainda não operacional)
+- `src/lib/gestaoNacional/rodizioTransacional.ts` e teste: interface explícita para executar a **apresentação do próximo profissional dentro de uma transação exclusiva** por UF/município/serviço, consultar o cursor e gravar o registro com chave de idempotência. Em testes com armazenamento simulado e lock, dois pedidos simultâneos alternam A/B sem colisão; retries do mesmo pedido não consomem a próxima posição.
+- A fonte de profissionais deve ser lida **dentro da transação**, com confirmação atual de vínculo à comunidade, cadastro validado, capacitação e disponibilidade. O registro devolve apenas ID interno, não contato ou oferta de serviço ao profissional.
+- **Sem banco real, autenticação, lock efetivo entre instâncias ou índice único global de solicitação.** O adapter de persistência de produção ainda é obrigatório e deve garantir atomicidade, rollback e autorização. Sem ele não há rodízio funcional nem canal de contratação ativo.
+- `src/components/gestaoNacional/PreviaAtendimentoNacional.tsx` passou a ler os preços de `POLITICA_NACIONAL_PROPOSTA`, eliminando cópias manuais na prévia. O componente continua sem rota, sem CTA de cobrança e sem SEO público.
+- Uma apresentação de perfil não é despacho, mensagem automática, contratação, pagamento ou confirmação de disponibilidade para atender. É necessário definir consentimento, expiração da exibição, indisponibilidade entre consulta e contratação, e auditoria.
+- O resultado da revisão jurídica da cobrança e dos repasses permanece requisito anterior à habilitação pública; a classificação de “não intermediadora” é funcional, não uma conclusão jurídica presumida.
+
 ## 6. Evidências para expansão regional e SEO
 
 Classificar cada entrada antes de qualquer afirmação pública:
