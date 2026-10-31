@@ -52,6 +52,11 @@ function stringCurta(v: unknown, max = 160): v is string {
   return typeof v === "string" && v.trim().length > 0 && v.length <= max;
 }
 
+/** Identificador opaco de prova, jamais URL, print, texto ou número de telefone. */
+function referenciaDeProvaValida(v: unknown): v is string {
+  return typeof v === "string" && /^[A-Za-z][A-Za-z0-9_-]{4,119}$/.test(v);
+}
+
 function listaValidada(lista: readonly string[]): boolean {
   if (!Array.isArray(lista) || lista.length === 0 || lista.length > 100) return false;
   const vistos = new Set<string>();
@@ -122,7 +127,7 @@ export function aplicarValidacaoNacional(
 
   switch (acao.tipo) {
     case "confirmar_comunidade": {
-      if (!stringCurta(acao.referenciaEvidencia) ||
+      if (!referenciaDeProvaValida(acao.referenciaEvidencia) ||
           !["confirmada", "nao_confirmada"].includes(acao.confirmacao)) {
         throw new Error("Validação da comunidade exige evidência administrativa.");
       }
@@ -139,7 +144,7 @@ export function aplicarValidacaoNacional(
         proximo.comunidadeWhatsapp !== "confirmada" ||
         proximo.termosDaModalidadeAceitos !== true ||
         !stringCurta(proximo.versaoTermosAceita) ||
-        !stringCurta(acao.referenciaEvidencia) ||
+        !referenciaDeProvaValida(acao.referenciaEvidencia) ||
         !listaValidada(acao.municipios) ||
         !listaValidada(acao.servicos) ||
         !Number.isSafeInteger(acao.raioMetros) ||
