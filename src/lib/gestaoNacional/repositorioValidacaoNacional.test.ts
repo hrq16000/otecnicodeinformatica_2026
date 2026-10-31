@@ -89,6 +89,28 @@ describe("persistência de validação nacional: fronteira transacional sem DB r
     expect(mock.auditoria[0]).toMatchObject({ atorId: tecnico.userId, acao: "aceitar_termos" });
   });
 
+  it("guarda referencia interna de prova no evento da aprovacao, sem dados de WhatsApp", async () => {
+    const mock = criarMock(admin);
+    const resultado = await persistirValidacaoNacional(mock.backend, {
+      parceiroId: base.parceiroId,
+      revisaoEsperada: 0,
+      acao: {
+        tipo: "confirmar_comunidade",
+        confirmacao: "confirmada",
+        referenciaEvidencia: "verificacao-interna-001",
+      },
+    }, agora);
+    expect(resultado.evento).toMatchObject({
+      atorId: admin.userId,
+      acao: "confirmar_comunidade",
+      revisao: 1,
+      referenciaEvidencia: "verificacao-interna-001",
+    });
+    expect(mock.auditoria).toHaveLength(1);
+    expect(mock.auditoria[0].referenciaEvidencia).toBe("verificacao-interna-001");
+    expect(JSON.stringify(mock.auditoria)).not.toMatch(/telefone|cpf|whatsapp|print/i);
+  });
+
   it("nega autoaprovação de comunidade e habilitação", async () => {
     const mock = criarMock(tecnico);
     await expect(persistirValidacaoNacional(mock.backend, {
