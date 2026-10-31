@@ -152,6 +152,18 @@ Arquivos adicionados: `src/lib/gestaoNacional/validacaoAdministrativa.ts` e `val
 
 **Status:** sem novas rotas, sem endpoint, sem migração SQL, sem leitura/gravação de banco nem permissão nova. O produto ainda não pode receber chamados ou declarar 222 técnicos disponíveis. Falta decidir e implementar armazenamento seguro de atestações nacionais usando IDs do cadastro existente, sem acoplar taxa por chamado ao plano anual legado. Revisão jurídica, fiscal, proteção de dados e validações de CI continuam pendentes.
 
+### Rodada 8 — persistência preparada e isolamento do banco oficial
+**Descoberta de infraestrutura (31/10/2026):** o repositório define `project_id` em `supabase/config.toml`, mas **esse projeto não consta na conexão Supabase atualmente disponível neste chat**. Não executar DDL em outros projetos por semelhança do nome. O cadastro existente usa `partners` e o login atual, mas a modalidade nacional requer dados e regras adicionais.
+
+**Implementado na PR (sem integração à produção):**
+- `src/lib/gestaoNacional/repositorioValidacaoNacional.ts`: fronteira genérica de backend transacional, com identidade de operador **resolvida no servidor**, leitura sob lock por parceiro, revisão esperada, gravação atômica de estado e auditoria. Sem escrita direta do navegador, sem segredos e sem acoplar regras de negócio a Supabase.
+- `repositorioValidacaoNacional.test.ts`: testes em mock para titular aceitando termos, bloqueio de autoaprovação, falta de autenticação, atualização concorrente por revisão e rollback se falhar auditoria. **Mock não equivale a validação no banco real.**
+- `docs/nacional/persistencia-validacao-proposta.sql`: proposta de esquema PostgreSQL privado (uma validação por `partners.id` + auditoria). O SQL **não é migration**, não foi executado e não cria permissões de browser. A versão definitiva deve ser gerada por CLI após identificar o projeto oficial e validar esquema, privilégios, políticas, backups e queries.
+
+**Proteções obrigatórias:** somente backend autorizado pode obter/atualizar confirmações da comunidade e habilitação; técnico altera sua disponibilidade mediante titularidade verificada; acesso público às confirmações nacionais permanece negado até uma superfície segura e minimizada de leitura. Não há dados reais importados dos membros do WhatsApp. Não é seguro associar `partners_public` diretamente a provas de comunidade, autorização, preço, pagamentos ou endereços de técnicos.
+
+**Gates de entrega:** confirmar acesso ao banco oficial; transformar a proposta em migração versionada; executar testes SQL/RLS e advisors no ambiente correto; conectar backend e área profissional, atualizar tipos apenas após aplicação; validar CI e revisão jurídica/tributária antes de habilitar novos serviços. Modalidade de produção segue inativa.
+
 ## 6. Evidências para expansão regional e SEO
 
 Classificar cada entrada antes de qualquer afirmação pública:
