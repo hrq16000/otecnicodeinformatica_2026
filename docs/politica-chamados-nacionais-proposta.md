@@ -138,6 +138,20 @@ O protótipo interno `src/lib/gestaoNacional/rodizioRegional.ts`, acompanhado de
 
 **Próxima dependência:** definir modo de registro das confirmações complementares, com autoridade do administrador e permissão de atualização de disponibilidade pelo próprio profissional (sem permitir autoaprovação da comunidade ou da habilitação), respeitando LGPD. Nenhuma nova tabela ou migração foi aplicada nesta rodada.
 
+### Rodada 7 — controle de validação administrativa (somente domínio, ainda sem banco)
+
+Arquivos adicionados: `src/lib/gestaoNacional/validacaoAdministrativa.ts` e `validacaoAdministrativa.test.ts`, ambos isolados das rotas e do cadastro em produção.
+
+- **Administração autenticada:** exclusivamente valida a participação na comunidade (evidência interna), habilita a modalidade nacional mediante aceite de termos e cobertura/serviços comprovados, ou suspende um profissional. Não pode aprovar o próprio perfil. Perfil sem titular autenticado vinculado não pode ser habilitado.
+- **Profissional autenticado titular:** exclusivamente aceita uma versão de termos e define sua disponibilidade, com expiração. Não pode confirmar a própria comunidade, aprovar habilitação, criar municípios/serviços validados ou alterar o raio certificado.
+- **Desabilitação imediata da disponibilidade:** ao retirar confirmação da comunidade, suspender habilitação ou aceitar nova versão dos termos (que exige renovação da habilitação).
+- **Sem disponibilidade permanente:** janela de disponibilidade expira, com teto técnico **provisório de 24h** (não é promessa de atendimento ou SLA; confirmar parâmetro antes da operação). A avaliação de elegibilidade continua exigindo confirmação atual e distância confiável.
+- **Concorrência e auditoria:** aplicação pura exige revisão esperada e produz metadados de evento sem CPF/telefone. O futuro backend precisa de `UPDATE ... WHERE revisao = revisaoEsperada` atômico, trilha de auditoria imutável e transação única. Um teste em memória **não** substitui essas garantias.
+- **Fronteira de confiança:** papel de administrador, titularidade (`partners.user_id`), sessão autenticada e evidências da comunidade devem ser obtidos de fonte confiável do servidor, nunca de campos do formulário ou credenciais no browser. Limitar acesso por titular e administrador com verificações de permissão no banco/servidor. Não confiar exclusivamente na indicação de role enviada pelo cliente.
+- **Dados pessoais:** nenhuma lista do grupo é importada; não há coleta de nomes/telefones dos 222 membros por screenshots. Um vínculo confirmado é uma atestação auditável, não uma suposição baseada no contador de membros.
+
+**Status:** sem novas rotas, sem endpoint, sem migração SQL, sem leitura/gravação de banco nem permissão nova. O produto ainda não pode receber chamados ou declarar 222 técnicos disponíveis. Falta decidir e implementar armazenamento seguro de atestações nacionais usando IDs do cadastro existente, sem acoplar taxa por chamado ao plano anual legado. Revisão jurídica, fiscal, proteção de dados e validações de CI continuam pendentes.
+
 ## 6. Evidências para expansão regional e SEO
 
 Classificar cada entrada antes de qualquer afirmação pública:
