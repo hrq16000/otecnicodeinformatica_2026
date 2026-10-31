@@ -181,6 +181,15 @@ Arquivos adicionados: `src/lib/gestaoNacional/validacaoAdministrativa.ts` e `val
 - **Ordem de remediação recomendada:** triagem de credenciais reais por responsável autorizado; atualização focada de dependências críticas com atualização consistente dos lockfiles e testes; revalidação de Gitleaks/segurança/performance; só então avaliar merge/ativação. A atualização das dependências não foi realizada nesta rodada por exigir compatibilidade com o portal inteiro.
 - O fluxo nacional permanece desativado; não altera contratos, indexação, preços, DNS, dados nem recebimentos.
 
+### Rodada 11 — corrigida trilha de evidência da autorização nacional
+
+- Falha real de domínio corrigida: `aplicarValidacaoNacional` aceitava `referenciaEvidencia` durante validação de comunidade/habilitação, mas o `evento` que seria persistido não incluía essa referência. A futura auditoria perderia a ligação entre aprovação e comprovação.
+- Agora `ResultadoAtualizacaoNacional.evento.referenciaEvidencia` contém apenas o **identificador opaco** da evidência fornecida à operação administrativa. A validação proíbe URL do grupo, texto de conversa, string composta de telefone e outros formatos livres de prova; nenhuma cópia de conversa ou lista de membros é anexada.
+- Testes ampliados em `validacaoAdministrativa.test.ts` e `repositorioValidacaoNacional.test.ts` para comprovar a referência auditável após a transação e rejeitar tentativas de usar contatos, prints/URLs e texto.
+- A política de guarda da evidência real, autorização do operador, expiração e retenção adequada à LGPD ainda precisam ser implementadas no backend privado. Identificador opaco **não significa** confirmação verificada do grupo; comprovação depende de processo administrativo auditável.
+- Diagnóstico específico das verificações: a execução histórica de `Security` sinalizou dependências de alto/crítico risco e Gitleaks; **não foi executado `npm audit fix` cego** nem atualizados `package-lock.json`/`bun.lock` sem regeneração sincronizada. Nenhum gate foi desativado. Corrigir pacotes e revisar ocorrências do histórico requer alterações e testes focados.
+- Não houve implantação SQL, rota pública, alteração no cadastro anual, merge, pagamento ou publicação nacional nesta rodada.
+
 ## 6. Evidências para expansão regional e SEO
 
 Classificar cada entrada antes de qualquer afirmação pública:
