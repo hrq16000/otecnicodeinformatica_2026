@@ -43,6 +43,8 @@ export interface ResultadoAtualizacaoNacional {
     atorId: string;
     acao: AcaoValidacaoNacional["tipo"];
     revisao: number;
+    /** Referência interna de prova de comunidade/habilitação, jamais conteúdo do WhatsApp. */
+    referenciaEvidencia?: string;
   };
 }
 
@@ -206,6 +208,9 @@ export function aplicarValidacaoNacional(
       atorId: ator.userId,
       acao: acao.tipo,
       revisao: proximo.revisao,
+      ...(acao.tipo === "confirmar_comunidade" || acao.tipo === "validar_habilitacao"
+        ? { referenciaEvidencia: acao.referenciaEvidencia }
+        : {}),
     },
   };
 }
