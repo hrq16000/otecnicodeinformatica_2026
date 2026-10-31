@@ -117,6 +117,51 @@ export const ALLOWED_SOURCE_HOSTS = [
 // FONTES CONSULTADAS (URLs confirmadas em 2026-07-12).
 // ─────────────────────────────────────────────────────────────
 export const EDITORIAL_SOURCES: Record<string, EditorialSource> = {
+  "ms-w10-support-decision-20261031": {
+    id: "ms-w10-support-decision-20261031",
+    title: "O suporte ao Windows 10 terminou em 14 de outubro de 2025",
+    publisher: "Microsoft Support",
+    url: "https://support.microsoft.com/pt-br/windows/deployment/updates-lifecycle/windows-10-support-has-ended-on-october-14-2025",
+    accessedAt: "2026-10-31",
+    sourceType: "official",
+    supports: ["Fim do suporte regular em 14/10/2025 e opções de transição por ESU para dispositivos elegíveis."],
+  },
+  "ms-w11-unsupported-decision-20261031": {
+    id: "ms-w11-unsupported-decision-20261031",
+    title: "Windows 11 em dispositivos que não atendem aos requisitos mínimos",
+    publisher: "Microsoft Support",
+    url: "https://support.microsoft.com/pt-br/windows/experience/compatibility/windows-11-on-devices-that-don-t-meet-minimum-system-requirements",
+    accessedAt: "2026-10-31",
+    sourceType: "official",
+    supports: ["Hardware inelegível fica sem suporte e sem garantia de receber atualizações, inclusive de segurança."],
+  },
+  "ms-w11-upgrade-decision-20261031": {
+    id: "ms-w11-upgrade-decision-20261031",
+    title: "Atualize para o Windows 11: perguntas frequentes",
+    publisher: "Microsoft Support",
+    url: "https://support.microsoft.com/pt-br/windows/deployment/install-upgrade/upgrade-to-windows-11-faq",
+    accessedAt: "2026-10-31",
+    sourceType: "official",
+    supports: ["Compatibilidade, backup antes da mudança e diferença entre atualização e instalação limpa."],
+  },
+  "ms-w11-install-decision-20261031": {
+    id: "ms-w11-install-decision-20261031",
+    title: "Maneiras de instalar Windows 11",
+    publisher: "Microsoft Support",
+    url: "https://support.microsoft.com/pt-br/windows/deployment/install-upgrade/ways-to-install-windows-11",
+    accessedAt: "2026-10-31",
+    sourceType: "official",
+    supports: ["Verificação de Integridade do PC e preferência por aguardar a oferta no Windows Update."],
+  },
+  "ms-w11-return-decision-20261031": {
+    id: "ms-w11-return-decision-20261031",
+    title: "Volte para a versão anterior do Windows",
+    publisher: "Microsoft Support",
+    url: "https://support.microsoft.com/pt-br/windows/deployment/install-upgrade/go-back-to-the-previous-version-of-windows",
+    accessedAt: "2026-10-31",
+    sourceType: "official",
+    supports: ["Retorno com prazo limitado, dependência de arquivos anteriores e efeitos sobre aplicativos e configurações."],
+  },
   "acm-computing-curricula-2020": {
     id: "acm-computing-curricula-2020",
     title: "Computing Curricula 2020 (CC2020)",
@@ -1751,6 +1796,14 @@ export const EDITORIAL_SOURCES: Record<string, EditorialSource> = {
 //     (vazio) em blogEditorialRegistry.ts.
 // ─────────────────────────────────────────────────────────────
 export const ARTICLE_SOURCE_MANIFEST: Record<string, ArticleSourceManifest> = {
+  "windows-11-vale-a-pena-atualizar": {
+    slug: "windows-11-vale-a-pena-atualizar",
+    sources: ["ms-w10-support-decision-20261031", "ms-w11-unsupported-decision-20261031", "ms-w11-upgrade-decision-20261031", "ms-w11-install-decision-20261031", "ms-w11-return-decision-20261031", "ms-bitlocker-backup-key"],
+    technicalReview: "reviewed",
+    factChecked: true,
+    factCheckedAt: "2026-10-31",
+    notes: "Reconstrução na fonte base canônica, sem sombra suplementar. Decisão por suporte, elegibilidade, dependências, backup e retorno; FAQ técnico único. Data original preservada. Revisão de conteúdo não equivale à aprovação para indexação: promoção editorial e gates globais permanecem pendentes.",
+  },
   "comandos-linux-essenciais-iniciantes": {
     slug: "comandos-linux-essenciais-iniciantes",
     sources: ["ubuntu-cli-beginners-2026"],

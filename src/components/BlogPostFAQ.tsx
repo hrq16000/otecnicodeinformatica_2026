@@ -3,6 +3,7 @@ import { isEditorialApproved } from "@/lib/blogEditorialRegistry";
 import { SCHEMA_SLOTS, SLOT_PRIORITY, useJsonLdSlot } from "@/lib/jsonLdSlots";
 import { getArticleSources } from "@/lib/blogEditorialSources";
 import { SITE_BASE_URL } from "@/lib/siteConfig";
+import { WINDOWS11_MIGRATION_FAQ } from "@/lib/windows11MigrationFaq";
 
 
 type FAQItem = { q: string; a: string };
@@ -61,6 +62,7 @@ const CATEGORY_EXTRA: Record<string, FAQItem[]> = {
 // categoria (que contêm valores comerciais).
 // ─────────────────────────────────────────────────────────────
 const PILOT_FAQ: Record<string, FAQItem[]> = {
+  "windows-11-vale-a-pena-atualizar": WINDOWS11_MIGRATION_FAQ,
   "windows-reparo-automatico-em-loop": [
     {
       q: "O Reparo Automático do Windows apaga meus arquivos?",

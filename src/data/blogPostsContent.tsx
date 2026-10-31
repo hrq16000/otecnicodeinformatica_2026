@@ -2822,42 +2822,59 @@ docker run -d --name db --network minha-rede postgres
   },
 
   "windows-11-vale-a-pena-atualizar": {
-    title: "Windows 11: Vale a Pena Atualizar?",
-    excerpt: "Requisitos, novidades, vantagens e desvantagens.",
+    title: "Windows 11 vale a pena em 2026? Como decidir antes de migrar",
+    excerpt: "Decida pela compatibilidade do equipamento, programas essenciais, backup restaurável, chave BitLocker e plano de retorno — não por promessa de velocidade.",
     date: "2026-01-15",
-    readTime: "8 min",
+    readTime: "12 min",
     category: "Windows 11",
     content: (
       <>
-        <p className="lead">O Windows 11 já está maduro e estável. Mas <strong>será que vale a pena atualizar?</strong> Depende do seu hardware e do que você faz no computador.</p>
+        <p className="lead"><strong>Vale planejar a migração quando o PC é oficialmente compatível, os programas essenciais foram verificados e existe recuperação preparada.</strong> Aparência e promessa de velocidade não bastam. A decisão precisa separar suporte do sistema, capacidade do equipamento e continuidade do trabalho.</p>
+        <p>Revisão técnica e consulta de fontes: <time dateTime="2026-10-31">31 de outubro de 2026</time>. A data original de publicação foi preservada.</p>
 
-        <h2>Vantagens do Windows 11</h2>
+        <h2>Resposta direta: escolha pelo cenário</h2>
         <ul>
-          <li>Interface moderna e mais organizada</li>
-          <li>Melhor gerenciamento de múltiplas janelas (Snap Layouts)</li>
-          <li>Desempenho superior em jogos (DirectStorage, Auto HDR)</li>
-          <li>Integração com Android (apps no PC)</li>
-          <li>Segurança aprimorada com TPM 2.0</li>
+          <li><strong>Compatível e ambiente validado:</strong> programe a atualização oferecida pelo Windows Update, com backup e janela de manutenção.</li>
+          <li><strong>Compatível, mas com programa crítico sem confirmação:</strong> teste a dependência antes de mudar o computador de produção.</li>
+          <li><strong>Hardware incompatível:</strong> não trate bypass como caminho suportado; compare transição por ESU quando elegível, substituição ou outro sistema compatível com seu uso.</li>
+          <li><strong>Disco instável, dados únicos ou chave BitLocker desconhecida:</strong> interrompa o plano e resolva preservação e acesso primeiro.</li>
         </ul>
 
-        <h2>Desvantagens</h2>
-        <ul>
-          <li>Requisitos de hardware mais exigentes</li>
-          <li>Barra de tarefas com menos opções de personalização</li>
-          <li>Alguns programas antigos podem ter incompatibilidade</li>
-          <li>Menu Iniciar centralizado (nem todos gostam)</li>
-        </ul>
+        <h2>1. O suporte regular do Windows 10 já terminou</h2>
+        <p>O fim do suporte regular ocorreu em 14 de outubro de 2025. O computador continua funcionando, mas permanecer em uma instalação comum sem uma opção válida de atualizações de segurança não é equivalente a manter um sistema suportado. Edições com ciclo próprio, como determinadas LTSC, exigem consulta específica da edição; não aplique a regra doméstica a qualquer instalação chamada Windows 10.</p>
+        <p>O ESU é uma ponte temporária para dispositivos elegíveis, não uma renovação completa do produto. Confira inscrição, cobertura e condições atuais no programa oficial correspondente ao uso doméstico ou empresarial. Ter antivírus instalado ou receber atualização de um aplicativo não comprova que o próprio Windows esteja recebendo as correções necessárias.</p>
 
-        <h2>Quando Atualizar</h2>
-        <p>Se seu PC atende os requisitos e você usa Windows 10, <strong>vale atualizar</strong>. O Windows 10 perde suporte em outubro de 2025. Após isso, não recebe mais atualizações de segurança.</p>
+        <h2>2. Confirme a elegibilidade com a ferramenta oficial</h2>
+        <p>Comece pelo Windows Update e pela Verificação de Integridade do PC. Anote o motivo de uma reprovação antes de comprar peças ou alterar o firmware. Não presuma que todo bloqueio seja resolvido habilitando TPM: processador, firmware e outros requisitos também podem limitar a migração.</p>
+        <p>TPM e Inicialização Segura podem existir e estar desabilitados em certos equipamentos, mas o procedimento depende do fabricante e do modelo. Registre a configuração atual, confirme a chave de recuperação e consulte a documentação antes de mudar qualquer opção. Não troque UEFI por Legacy, nem altere o modo do controlador de armazenamento para tentar fazer a verificação passar.</p>
 
-        <h2>Quando NÃO Atualizar</h2>
-        <p>Se seu PC não tem TPM 2.0 nativamente, se você usa softwares específicos que podem não ser compatíveis, ou se está satisfeito e não quer arriscar instabilidades.</p>
+        <h2>3. Instalar não significa receber suporte</h2>
+        <p>A Microsoft não recomenda instalar Windows 11 em hardware inelegível. Nessa condição, o dispositivo não recebe suporte e as atualizações, inclusive de segurança, não são garantidas. Um instalador que conclui sem erro não comprova compatibilidade duradoura. Avalie esse risco antes de depender da máquina para trabalho ou dados importantes.</p>
+        <p>Compare alternativas pelo custo total: adaptar o uso, manter uma transição elegível, substituir o equipamento ou escolher outro sistema suportado. Inclua programas, periféricos e aprendizado nessa conta; uma mudança barata no primeiro dia pode exigir mais trabalho para reconstruir o ambiente.</p>
 
-        <div className="bg-accent/10 rounded-xl p-6 my-8">
-          <h3 className="text-accent font-bold mb-2">Quer Atualizar Com Segurança?</h3>
-          <p className="text-muted-foreground mb-0">Nosso técnico verifica compatibilidade, faz backup e atualiza sem risco de perder dados.</p>
-        </div>
+        <h2>4. Faça um inventário do que precisa continuar funcionando</h2>
+        <p>Liste aplicativos e versões, licenças, impressoras, scanners, VPN, certificados digitais, tokens e dispositivos especiais. Confirme suporte com cada fornecedor. Em máquina de empresa ou escola, a autorização da equipe responsável vem antes de uma atualização individual.</p>
+        <p>Não teste apenas se o aplicativo abre. Reproduza uma tarefa essencial: imprimir, assinar documento, importar arquivo, acessar o servidor ou concluir uma operação de trabalho. Registre o resultado e como reinstalar o recurso. Isso cria um critério de aprovação concreto, em vez de depender da impressão de que tudo parece normal.</p>
+
+        <h2>5. Separe migração de desempenho</h2>
+        <p>Uma versão mais recente do sistema não resolve automaticamente pouca memória, disco com defeito, aquecimento ou carga excessiva. Também não existe ganho universal em jogos. A escolha por suporte e segurança é diferente da escolha de hardware para corrigir um gargalo medido.</p>
+        <p>Se a máquina já está lenta ou instável, investigue antes de mudar várias variáveis. Use o guia de <Link to="/blog/windows-11-lento-como-resolver">diagnóstico de lentidão no Windows 11</Link> e registre quando o sintoma ocorre. Depois compare a mesma tarefa antes e depois; não atribua toda diferença à versão do sistema.</p>
+
+        <h2>6. Prepare backup e recuperação antes de iniciar</h2>
+        <p>Guarde os arquivos importantes em destino separado e abra uma amostra da cópia. Inclua pastas fora das bibliotecas habituais, arquivos locais de aplicativos e dados de outros usuários. Sincronização pode propagar exclusões: confirme se existe uma versão recuperável e não apenas uma segunda visualização do mesmo arquivo.</p>
+        <p>Localize a chave BitLocker fora do computador e confirme que ela corresponde ao dispositivo. Anote contas e licenças necessárias para reinstalação, sem compartilhar senhas ou chaves em mensagens públicas. O <Link to="/blog/como-testar-restauracao-de-backup">teste de restauração de backup</Link> ajuda a verificar a cópia antes de depender dela em uma emergência.</p>
+
+        <h2>7. Atualize pelo caminho suportado e valide a operação</h2>
+        <p>Prefira aguardar a oferta pelo Windows Update, conforme a orientação da Microsoft. Use downloads oficiais, energia estável e tempo suficiente para interrupções. Não confunda atualização preservando ambiente com <Link to="/blog/como-instalar-windows-11-do-zero">instalação limpa do Windows 11</Link>, que exige reconstrução e pode apagar dados conforme as escolhas feitas.</p>
+        <p>Depois, valide ativação, atualizações, rede, som, vídeo, suspensão e as tarefas do inventário. Registre falhas com mensagens e horários. Não apague imediatamente a cópia anterior ou os arquivos de retorno só para liberar espaço enquanto ainda verifica compatibilidade.</p>
+
+        <h2>8. Planeje o retorno e saiba quando parar</h2>
+        <p>A opção de voltar à versão anterior tem prazo limitado, normalmente dez dias, e depende da preservação dos arquivos exigidos pelo Windows. Ela não substitui backup e pode afetar aplicativos, drivers e configurações alterados depois da migração. Depois dessa janela, retornar pode exigir reinstalação e restauração dos dados.</p>
+        <p>Pare se o backup não foi testado, a chave necessária não está disponível, um recurso essencial segue sem validação ou o disco apresenta falhas. Voltar temporariamente ao Windows 10 pode recuperar uma operação, mas não resolve sozinho a necessidade de manter o ambiente protegido e suportado.</p>
+
+        <h2>Decisão final</h2>
+        <p>Atualize com uma lista de condições verificadas, não por pressão do instalador ou promessa comercial. Se a decisão depender de firmware, compatibilidade ou recuperação que você não consegue confirmar, reúna as evidências para um <Link to="/diagnostico-tecnico">diagnóstico técnico</Link>. Nenhum atendimento elimina todo risco; preservar dados e definir limites continua sendo parte do processo.</p>
+        <EditorialReferences slug="windows-11-vale-a-pena-atualizar" />
       </>
     ),
   },
