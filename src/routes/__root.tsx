@@ -124,7 +124,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       // As fontes usam font-display: optional no CSS. Evitar preload global:
       // o download antecipado compete com o LCP no primeiro acesso mobile.
       { rel: "stylesheet", href: appCss },
-      { rel: "preload", as: "image", href: brandConfig.logoOnLight, fetchPriority: "high" },
+      // O logo permanece no layout; não priorizar globalmente seu download sobre o LCP de cada rota.
       { rel: "dns-prefetch", href: "https://www.googletagmanager.com" },
       { rel: "dns-prefetch", href: "https://www.google-analytics.com" },
       { rel: "icon", href: "/favicon.png", type: "image/png" },
