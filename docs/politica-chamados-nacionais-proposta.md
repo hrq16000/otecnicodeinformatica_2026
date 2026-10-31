@@ -36,6 +36,14 @@ A qualificação de urgente/especial **não soma dois adicionais** quando mais d
 
 **Pendências que afetam o valor exato:** o patamar quilométrico incide sobre o percurso completo ou apenas o trecho além do limite? Como ficam 30,01 km, arredondamento e cobrança de km fracionário? O contrato precisa confirmar o repasse de R$ 69,99 da hora extra, se uma hora extra parcial é cobrada de forma integral ou proporcional e a regra de arredondamento de tempo. O serviço especial foi especificado como **R$ 359,99** com taxa fixa de R$ 29,99, sem preço inferior nesta modalidade. Qual é o regime de reembolso caso não haja técnico disponível? Essas regras precisam de aceite antes de ativar cálculo automático.
 
+### Rodada 2 — implementação isolada, NÃO habilitada
+
+O motor em `src/lib/gestaoNacional/cotacaoNacional.ts` implementa uma **interpretação provisória** dos parâmetros comerciais, com testes de fronteira em `cotacaoNacional.test.ts`. Não é consumido por rotas, não cria links de pagamento e retorna `aptaParaPagamento: false`. Os parâmetros locais atuais não foram modificados.
+
+**Regras codificadas para validação:** (1) distância de ida em metros inteiros; até 3.000 m, zero; acima de 3.000 m até 30.000 m, R$ 1,50/km para o percurso integral de ida e volta; acima de 30.000 m, R$ 2,00/km no percurso integral; (2) arredondamento do deslocamento ao centavo mais próximo; (3) horas adicionais inteiras **já aprovadas**; (4) repasse integral da hora adicional ao profissional, sujeita a confirmação contratual; (5) valor de estacionamento conhecido previamente ou vaga fornecida; (6) taxa fixa uma vez, sem aplicação sobre km, vaga ou hora adicional.
+
+**ATENÇÃO:** a mudança de faixa gera salto de cobrança em 3.001 m e 30.001 m (não é tarifa progressiva). Antes de qualquer oferta ao público, a gestão deve validar expressamente se deseja tarifar todo o percurso ou apenas o excedente, além de definir condições de horas fracionárias, conversão de distâncias, estacionamento sem previsão exata, tributos e cancelamentos. Reprovar ou modificar a regra se não coincidir com a operação real.
+
 ### Exemplos apenas explicativos, não orçamentos
 - Padrão, sem deslocamento e sem estacionamento: cliente **R$ 159,99**; profissional **R$ 150,00**; plataforma **R$ 9,99**.
 - Especial no teto, sem deslocamento e sem estacionamento: cliente **R$ 359,99**; profissional **R$ 330,00**; plataforma **R$ 29,99**.
