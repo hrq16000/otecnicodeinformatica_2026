@@ -91,6 +91,16 @@ Ramos alternativos: `expired`, `payment_failed`, `declined`, `technician_unavail
 - Se não houver profissional validado e disponível, **não** cobrar nem afirmar atendimento confirmado. Se já houver pagamento capturado, definir cancelamento/reembolso conforme direito aplicável, sem condicionar o direito do cliente à expressão contratual "não intermediamos".
 - Proteger localização exata do técnico: distância e área de cobertura são suficientes para cotação; endereço pessoal não aparece no portal público.
 
+### Rodada 3 — filtro e rodízio puros (NÃO integrados a cadastro)
+
+O protótipo interno `src/lib/gestaoNacional/rodizioRegional.ts`, acompanhado de `rodizioRegional.test.ts`, foi adicionado à mesma PR, sem tocar nas rotas em produção. Ele é **exclusivamente uma função pura de apresentação**: não busca contatos reais, não registra membros do WhatsApp, não contrata, não dispara mensagens, não cobra e não confirma solicitações.
+
+- Considera elegível somente o técnico cujo **vínculo à comunidade tenha sido confirmado separadamente**, cadastro da plataforma validado, habilitação aprovada e disponibilidade atual explícita. **222 membros no print ≠ 222 elegíveis**.
+- Filtra por UF, município exato, especialidade de atendimento e raio aceito, exigindo distância interna conhecida. A função trabalha sem nome, telefone ou endereço pessoal.
+- Retorna apenas ID interno e um **cursor de continuidade**; entre elegíveis, alterna por identificador estável, nunca por preço, impulso comercial, proximidade preferencial ou intervenção manual.
+- O cursor necessita de armazenamento privado com atualização **atômica por região + serviço**; auditoria de exibição, expiração/recusa, duplo aceite e autorização de acesso permanecem para uma camada de backend futura. Sem isso, a função é apenas um algoritmo e **não é rodízio operacional funcional**.
+- Nenhuma base de técnicos foi criada ou importada. Não cadastrar usuários fictícios ou transformar nomes de capturas em perfis sem consentimento e verificação.
+
 ## 6. Evidências para expansão regional e SEO
 
 Classificar cada entrada antes de qualquer afirmação pública:
