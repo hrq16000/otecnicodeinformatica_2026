@@ -69,7 +69,9 @@ function listaValidada(lista: readonly string[]): boolean {
   return true;
 }
 
-function expiraValidamente(expiraEm: string | null, agora: Date): boolean {
+/** Janela máxima única para cadastro, elegibilidade, resumo autenticado e painel. */
+export function prazoDisponibilidadeNacionalValido(expiraEm: unknown, agora: Date): boolean {
+  if (!(agora instanceof Date) || !Number.isFinite(agora.getTime())) return false;
   if (typeof expiraEm !== "string" || !/^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(?:\.\d{1,3})?Z$/.test(expiraEm)) {
     return false;
   }
@@ -188,7 +190,7 @@ export function aplicarValidacaoNacional(
           proximo.comunidadeWhatsapp !== "confirmada" ||
           proximo.habilitacaoNacional !== "validada" ||
           proximo.termosDaModalidadeAceitos !== true ||
-          !expiraValidamente(acao.expiraEm, agora)
+          !prazoDisponibilidadeNacionalValido(acao.expiraEm, agora)
         ) {
           throw new Error("Profissional sem habilitação vigente ou prazo válido.");
         }
