@@ -51,7 +51,7 @@ function campoValido(valor: unknown): valor is string {
   return typeof valor === "string" && valor.trim().length > 0 && valor.length <= 256;
 }
 
-function dataCivilValida(valor: string): boolean {
+export function dataCivilValida(valor: string): boolean {
   if (!/^\d{4}-\d{2}-\d{2}$/.test(valor)) return false;
   const [ano, mes, dia] = valor.split("-").map(Number);
   if (ano < 2000 || ano > 2100) return false;
