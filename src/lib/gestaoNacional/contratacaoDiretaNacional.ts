@@ -125,14 +125,14 @@ export type ResultadoTransicaoNacional =
   | { liberado: true; status: "transicao_de_dominio" }
   | {
       liberado: false;
-      status: "transicao_invalida" | "integracao_pagamento_pendente" | "reembolso_exige_integracao";
+      status: "transicao_invalida" | "integracao_pagamento_pendente" | "reembolso_exige_integracao" | "aceite_direto_exige_integracao";
     };
 
 const TRANSICOES_SEM_PAGAMENTO: Readonly<Partial<Record<EstadoContratacaoNacional, readonly EstadoContratacaoNacional[]>>> = {
   rascunho: ["cotacao_aceita", "cancelado"],
   cotacao_aceita: ["aguardando_pagamento", "cancelado"],
   aguardando_pagamento: ["cancelado"],
-  pagamento_confirmado: ["aceito_diretamente_pelo_tecnico", "cancelado"],
+  pagamento_confirmado: ["cancelado"],
   aceito_diretamente_pelo_tecnico: ["em_execucao", "cancelado"],
   em_execucao: ["concluido", "cancelado"],
 };
@@ -148,6 +148,10 @@ export function avaliarTransicaoContratacaoNacional(
 ): ResultadoTransicaoNacional {
   if (proximo === "pagamento_confirmado" && atual === "aguardando_pagamento") {
     return { liberado: false, status: "integracao_pagamento_pendente" };
+  }
+  if (proximo === "aceito_diretamente_pelo_tecnico" && atual === "pagamento_confirmado") {
+    // Aceite exige profissional autenticado, pedido vinculado e persistencia auditavel.
+    return { liberado: false, status: "aceite_direto_exige_integracao" };
   }
   if (proximo === "reembolsado" && atual === "cancelado") {
     return { liberado: false, status: "reembolso_exige_integracao" };
