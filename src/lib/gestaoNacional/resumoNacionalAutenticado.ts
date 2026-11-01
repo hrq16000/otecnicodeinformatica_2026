@@ -5,7 +5,10 @@
  * Não possui fallback para partners_public, dados mockados ou sessão do cliente.
  * Falha fechada quando não há identidade validada e vínculo no banco.
  */
-import type { RegistroValidacaoNacional } from "./validacaoAdministrativa";
+import {
+  prazoDisponibilidadeNacionalValido,
+  type RegistroValidacaoNacional,
+} from "./validacaoAdministrativa";
 import type { ResumoNacionalTitular } from "./areaNacionalFeatureGate";
 
 export type EstadoResumoNacional =
@@ -39,7 +42,14 @@ function identificadorConfiavel(id: unknown): id is string {
 }
 
 /** Projeção mínima; não inclui nome, telefone, documentos, evidência ou endereço. */
-function projetarResumo(registro: RegistroValidacaoNacional): ResumoNacionalTitular {
+function projetarResumo(registro: RegistroValidacaoNacional, agora: Date): ResumoNacionalTitular {
+  // Resposta do servidor deve ser conservadora mesmo se o estado persistido for incoerente.
+  const autorizada =
+    registro.comunidadeWhatsapp === "confirmada" &&
+    registro.habilitacaoNacional === "validada" &&
+    registro.termosDaModalidadeAceitos === true;
+  const prazoVigente = prazoDisponibilidadeNacionalValido(registro.disponibilidadeExpiraEm, agora);
+  const disponivel = autorizada && prazoVigente && registro.disponibilidade === "disponivel";
   return {
     comunidade:
       registro.comunidadeWhatsapp === "confirmada" ? "confirmada"
@@ -48,13 +58,8 @@ function projetarResumo(registro: RegistroValidacaoNacional): ResumoNacionalTitu
       registro.habilitacaoNacional === "validada" ? "validada"
         : registro.habilitacaoNacional === "suspensa" ? "suspensa" : "pendente",
     termos: registro.termosDaModalidadeAceitos === true ? "aceitos" : "pendente",
-    disponibilidade:
-      registro.disponibilidade === "disponivel" ? "disponivel"
-        : registro.disponibilidade === "ocupado" ? "ocupado" : "indisponivel",
-    disponibilidadeExpiraEm:
-      typeof registro.disponibilidadeExpiraEm === "string" &&
-      /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(?:\.\d{1,3})?Z$/.test(registro.disponibilidadeExpiraEm)
-        ? registro.disponibilidadeExpiraEm : null,
+    disponibilidade: disponivel ? "disponivel" : registro.disponibilidade === "ocupado" ? "ocupado" : "indisponivel",
+    disponibilidadeExpiraEm: disponivel ? registro.disponibilidadeExpiraEm : null,
   };
 }
 
@@ -66,7 +71,12 @@ function projetarResumo(registro: RegistroValidacaoNacional): ResumoNacionalTitu
  */
 export async function lerResumoNacionalDoTitular(
   repositorio: RepositorioLeituraNacional,
+  agora: Date = new Date(),
 ): Promise<EstadoResumoNacional> {
+  // O instante é gerado pelo servidor; testes passam um relógio fixo. Nunca obter da requisição.
+  if (!(agora instanceof Date) || !Number.isFinite(agora.getTime())) {
+    throw new RangeError("Relógio de servidor inválido.");
+  }
   if (!repositorio || typeof repositorio.emContextoAutenticado !== "function") {
     throw new TypeError("Repositório de leitura autenticada não configurado.");
   }
@@ -93,6 +103,6 @@ export async function lerResumoNacionalDoTitular(
       registro.titularUserId !== identidade.userId
     ) throw new Error("Registro nacional não pertence ao titular autenticado.");
 
-    return { estado: "pronto", resumo: projetarResumo(registro) };
+    return { estado: "pronto", resumo: projetarResumo(registro, agora) };
   });
 }
