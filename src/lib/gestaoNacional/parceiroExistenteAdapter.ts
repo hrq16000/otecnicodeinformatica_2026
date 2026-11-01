@@ -13,6 +13,7 @@
  */
 import type { AdminPartner } from "@/lib/partnersAdminApi";
 import type { TecnicoElegibilidadeNacional } from "./rodizioRegional";
+import { DURACAO_MAXIMA_DISPONIBILIDADE_MS } from "./validacaoAdministrativa";
 
 export type CadastroParceiroExistente = Pick<
   AdminPartner,
@@ -104,7 +105,9 @@ function metrosOk(valor: number | null): valor is number {
 function validadeDisponibilidadeOk(valor: string, agora: Date): boolean {
   if (typeof valor !== "string" || !/^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(?:\.\d{1,3})?Z$/.test(valor)) return false;
   const fim = Date.parse(valor);
-  return Number.isFinite(fim) && fim > agora.getTime();
+  const tempoRestante = fim - agora.getTime();
+  // Evita disponibilidade indefinida por data inválida/anômala ou escrita fora do fluxo validado.
+  return Number.isFinite(tempoRestante) && tempoRestante > 0 && tempoRestante <= DURACAO_MAXIMA_DISPONIBILIDADE_MS;
 }
 
 const negar = (motivo: Exclude<ResultadoPonteCadastroNacional, { elegivel: true }>["motivo"]): ResultadoPonteCadastroNacional =>
