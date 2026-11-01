@@ -74,6 +74,10 @@ describe("reuso do cadastro existente sem transformar membro em técnico dispon�
     expect(adaptar({}, { disponibilidade: "ocupado" }).motivo).toBe("indisponivel");
     expect(adaptar({}, { disponibilidadeExpiraEm: "2026-10-31T18:00:00Z" }).motivo).toBe("disponibilidade_expirada");
     expect(adaptar({}, { disponibilidadeExpiraEm: "nao-e-data" }).motivo).toBe("disponibilidade_expirada");
+    // A autorização de disponibilidade expira em no máximo 24 h, mesmo se uma base futura estiver incorreta.
+    expect(adaptar({}, { disponibilidadeExpiraEm: "2026-11-01T19:00:00Z" }).elegivel).toBe(true);
+    expect(adaptar({}, { disponibilidadeExpiraEm: "2026-11-01T19:00:00.001Z" }).motivo).toBe("disponibilidade_expirada");
+    expect(adaptar({}, { disponibilidadeExpiraEm: "2099-10-31T19:00:00Z" }).motivo).toBe("disponibilidade_expirada");
   });
 
   it("não infere municípios e especialidades da inscrição livre do parceiro", () => {
