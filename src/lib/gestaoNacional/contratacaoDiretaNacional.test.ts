@@ -76,7 +76,9 @@ describe("estado da contratação direta — sem confirmação falsa de pagament
       liberado: true, status: "transicao_de_dominio",
     });
     expect(avaliarTransicaoContratacaoNacional("cotacao_aceita", "aguardando_pagamento").liberado).toBe(true);
-    expect(avaliarTransicaoContratacaoNacional("pagamento_confirmado", "aceito_diretamente_pelo_tecnico").liberado).toBe(true);
+    expect(avaliarTransicaoContratacaoNacional("pagamento_confirmado", "aceito_diretamente_pelo_tecnico")).toEqual({
+      liberado: false, status: "aceite_direto_exige_integracao",
+    });
     expect(avaliarTransicaoContratacaoNacional("aceito_diretamente_pelo_tecnico", "em_execucao").liberado).toBe(true);
     expect(avaliarTransicaoContratacaoNacional("em_execucao", "concluido").liberado).toBe(true);
   });
