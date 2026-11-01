@@ -463,7 +463,7 @@
     "vaul": "^1.1.2",
     "vite-tsconfig-paths": "^6.0.2",
     "web-vitals": "^5.2.0",
-    "zod": "^4.6.5"
+    "zod": "4.6.7"
   },
   "devDependencies": {
     "@axe-core/playwright": "^4.12.1",
