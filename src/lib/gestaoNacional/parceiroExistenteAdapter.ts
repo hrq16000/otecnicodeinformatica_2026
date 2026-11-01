@@ -13,7 +13,7 @@
  */
 import type { AdminPartner } from "@/lib/partnersAdminApi";
 import type { TecnicoElegibilidadeNacional } from "./rodizioRegional";
-import { DURACAO_MAXIMA_DISPONIBILIDADE_MS } from "./validacaoAdministrativa";
+import { prazoDisponibilidadeNacionalValido } from "./validacaoAdministrativa";
 
 export type CadastroParceiroExistente = Pick<
   AdminPartner,
@@ -102,14 +102,6 @@ function metrosOk(valor: number | null): valor is number {
   return typeof valor === "number" && Number.isSafeInteger(valor) && valor >= 0;
 }
 
-function validadeDisponibilidadeOk(valor: string, agora: Date): boolean {
-  if (typeof valor !== "string" || !/^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(?:\.\d{1,3})?Z$/.test(valor)) return false;
-  const fim = Date.parse(valor);
-  const tempoRestante = fim - agora.getTime();
-  // Evita disponibilidade indefinida por data inválida/anômala ou escrita fora do fluxo validado.
-  return Number.isFinite(tempoRestante) && tempoRestante > 0 && tempoRestante <= DURACAO_MAXIMA_DISPONIBILIDADE_MS;
-}
-
 const negar = (motivo: Exclude<ResultadoPonteCadastroNacional, { elegivel: true }>["motivo"]): ResultadoPonteCadastroNacional =>
   ({ elegivel: false, tecnico: null, motivo });
 
@@ -136,7 +128,7 @@ export function adaptarParceiroExistenteParaNacional(
     return negar("modalidade_nao_validada");
   }
   if (confirmacao.disponibilidade !== "disponivel") return negar("indisponivel");
-  if (!validadeDisponibilidadeOk(confirmacao.disponibilidadeExpiraEm, agora)) {
+  if (!prazoDisponibilidadeNacionalValido(confirmacao.disponibilidadeExpiraEm, agora)) {
     return negar("disponibilidade_expirada");
   }
 
