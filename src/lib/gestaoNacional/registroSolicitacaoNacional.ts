@@ -140,6 +140,10 @@ export async function registrarSolicitacaoDiretaNacional(
           solicitacaoId: null,
         };
       }
+      if (limite.motivo !== "nova_solicitacao") {
+        // ID do servidor colidiu com registro existente: nunca criar duplicata.
+        throw new Error("ID interno de solicitacao nao e unico.");
+      }
       await tx.gravarSolicitacaoEAuditoria(registro);
       return { registrada: true, estado: "nova", solicitacaoId, totalNoDia: limite.totalNoDia + 1 };
     });
