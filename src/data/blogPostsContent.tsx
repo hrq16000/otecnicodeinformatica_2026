@@ -13203,21 +13203,23 @@ bcdboot C:\\Windows /s S: /f UEFI`}</code></pre>
     excerpt:
       "Como ler os indicadores SMART, por que CHKDSK não é a resposta padrão para disco suspeito de falha física e qual é a ordem correta: copiar primeiro, investigar depois.",
     date: "2026-08-26",
-    readTime: "10 min",
+    readTime: "12 min",
     category: "Diagnóstico",
     content: (
       <>
-        <p className="lead">Alerta de SMART, lentidão em rajadas, travamentos ao abrir pastas grandes e arquivos que somem: o padrão sugere mídia degradando. A decisão mais importante nesse momento não é qual ferramenta rodar — é a ordem das ações.</p>
+        <p className="lead"><strong>Alerta SMART exige preservar os dados antes de tentar corrigir o disco.</strong> SMART é telemetria do dispositivo, não um diagnóstico completo nem uma previsão exata de quando ele vai parar. Combine o aviso com o modelo, a interface, os sintomas e a existência de outra cópia dos arquivos.</p>
+        <p>Revisão técnica e consulta de fontes: <time dateTime="2026-11-01">1º de novembro de 2026</time>. Data original de publicação preservada.</p>
 
         <h2>Resposta curta</h2>
-        <p>Em disco suspeito de falha física, a prioridade é <strong>preservar os dados</strong>, nessa ordem: copiar o que importa (ou fazer imagem bit a bit), só então investigar a mídia e, por último, decidir entre substituir ou descartar. Rodar utilitário de correção antes da cópia inverte a prioridade e pode custar os arquivos.</p>
+        <p>Primeiro decida se a leitura ainda pode ser tentada com segurança. Se a unidade está estável e legível, preserve os arquivos importantes em outro destino. Se desaparece, produz ruído novo preocupante, congela o computador ou contém dados únicos de alto valor, interrompa as tentativas e avalie recuperação especializada. Fazer uma imagem não é automaticamente seguro: também exige ler o original e identificar corretamente origem e destino.</p>
 
         <aside className="rounded-lg border border-border bg-muted/40 p-4 not-prose my-6">
-          <p className="m-0 text-sm"><strong>Por que CHKDSK não é receita padrão:</strong> o CHKDSK corrige estruturas do sistema de arquivos e, com a opção de reparo de setores, força leituras repetidas e escritas em áreas já frágeis. Em mídia com ruído mecânico, SMART crítico, desconexões ou arquivos insubstituíveis, isso pode transformar um disco parcialmente legível em disco irrecuperável. Nesses casos, não rode. Ele faz sentido em disco saudável cujo problema é corrupção lógica após queda de energia ou desligamento forçado — não em disco morrendo.</p>
+          <p className="m-0 text-sm"><strong>Por que CHKDSK não é receita padrão:</strong> sem parâmetros ele informa o estado do volume; opções de reparo alteram o sistema de arquivos. A opção <code>/r</code> inclui <code>/f</code> e acrescenta busca por setores defeituosos e recuperação de informações legíveis. Isso não repara eletrônica, cabeças ou células. Havendo erros de entrada/saída ou suspeita física, preserve uma cópia antes de reparos lógicos; não inicie uma varredura extensa só para confirmar um aviso já relevante.</p>
         </aside>
 
         <h2>Como ler o SMART sem se enganar</h2>
-        <p>O SMART é um conjunto de contadores mantidos pelo próprio disco. Vale mais observar a <strong>tendência</strong> dos contadores em duas leituras separadas por alguns dias do que o veredito de "OK" que muitos programas exibem — disco em falha frequentemente ainda reporta status geral aprovado.</p>
+        <p>Registre fabricante, modelo, capacidade, interface, ferramenta e horário. Diferencie valor bruto, valor normalizado e limiar: nem todo número grande representa uma contagem simples de defeitos. A interpretação depende do dispositivo e do fabricante. Um relatório de HD SATA não deve ser aplicado automaticamente a SSD SATA ou NVMe.</p>
+        <p>Uma tendência pode ajudar quando a unidade está estável e os dados já estão protegidos. <strong>Não espere dias por uma segunda leitura se há falha ativa ou arquivos sem cópia.</strong> O estado geral aprovado não certifica todos os dados; a ausência de telemetria, por exemplo em uma ponte USB incompatível, também não significa ausência de problema.</p>
         <table>
           <thead>
             <tr>
@@ -13227,35 +13229,37 @@ bcdboot C:\\Windows /s S: /f UEFI`}</code></pre>
             </tr>
           </thead>
           <tbody>
-            <tr><td>Reallocated Sectors (HD)</td><td>Setores realocados pela reserva interna</td><td>Qualquer valor acima de zero pede backup imediato; valor que cresce indica degradação ativa</td></tr>
-            <tr><td>Current Pending Sector</td><td>Setores instáveis aguardando decisão</td><td>Sinal forte de mídia em falha; não rodar correção antes de copiar</td></tr>
-            <tr><td>Uncorrectable Sector Count</td><td>Leituras que falharam definitivamente</td><td>Dados nessas áreas já podem estar perdidos</td></tr>
-            <tr><td>UltraDMA CRC Error</td><td>Erros no enlace de dados</td><td>Normalmente cabo ou porta, não a mídia: trocar cabo e reavaliar</td></tr>
-            <tr><td>Percentage Used / Media Wearout (SSD)</td><td>Desgaste das células</td><td>Acima de 90% planeje substituição, mesmo sem sintoma</td></tr>
-            <tr><td>Available Spare (SSD)</td><td>Reserva de blocos livre</td><td>Queda abaixo do limiar do fabricante é aviso de fim de vida</td></tr>
+            <tr><td>Realocados / pendentes em HD</td><td>Indicadores de remapeamento ou leitura instável, conforme implementação</td><td>Consulte o modelo e combine evolução com erros observados; não force escrita para tentar zerar o contador</td></tr>
+            <tr><td>Erros não corrigíveis</td><td>Falhas de leitura registradas</td><td>Não identificam sozinhos quais arquivos foram afetados; compare logs e valide a cópia</td></tr>
+            <tr><td>CRC / interface SATA</td><td>Falhas de comunicação no enlace</td><td>Investigue cabo, porta e conexão; registre o histórico, pois o total pode não zerar após corrigir a conexão</td></tr>
+            <tr><td>Desgaste e reserva em SSD</td><td>Estimativas e alertas cujo sentido depende do campo e do modelo</td><td>Não misture porcentagem usada com vida restante nem aplique corte universal de 90%; consulte a ferramenta oficial</td></tr>
           </tbody>
         </table>
 
         <h2>Ordem correta de trabalho</h2>
         <ol>
-          <li><strong>Pare de usar o disco</strong> para tarefas comuns. Cada hora ligada em mídia degradando consome chance de leitura.</li>
-          <li><strong>Copie o essencial primeiro</strong> — documentos, fotos e projetos —, do menor para o maior, para um destino diferente. Nunca copie para o próprio disco suspeito.</li>
-          <li><strong>Se o volume de dados for grande ou a leitura falhar</strong>, o passo certo é imagem bit a bit em uma unidade sadia, e trabalhar sobre a cópia.</li>
-          <li><strong>Só depois</strong> avalie a mídia: leitura de SMART, teste de superfície somente leitura, teste estendido do fabricante.</li>
-          <li><strong>Decida a substituição</strong> com o dado em mãos. Disco com setores pendentes ou realocados crescendo não volta a ser confiável — mesmo que o sistema pareça normal.</li>
+          <li><strong>Reduza o uso:</strong> não instale ferramentas no disco suspeito, não formate e não execute correções automáticas antes de decidir a preservação.</li>
+          <li><strong>Confira a cópia existente:</strong> veja quais dados faltam e se o backup pode ser aberto sem acessar novamente o original.</li>
+          <li><strong>Escolha a estratégia:</strong> cópia seletiva pode servir em unidade estável; imagem com registro de progresso é uma técnica para cenários apropriados, não uma obrigação de tentativa doméstica.</li>
+          <li><strong>Valide o destino:</strong> confirme capacidade, identificação e ausência de dados que poderiam ser sobrescritos. Guarde a chave de criptografia quando necessária.</li>
+          <li><strong>Trabalhe sobre a cópia:</strong> faça reparos lógicos nela quando cabíveis e mantenha o original preservado.</li>
+          <li><strong>Teste somente se houver utilidade:</strong> após proteger os dados, um diagnóstico do fabricante pode apoiar substituição ou garantia; teste longo não é etapa obrigatória antes de retirar uma unidade instável.</li>
         </ol>
 
         <h2>Quando o CHKDSK cabe</h2>
-        <p>Cabe quando o disco está saudável no SMART, sem ruído, sem desconexões, e o sintoma é claramente lógico: pastas com nomes truncados após queda de energia, volume marcado como sujo, erro de sistema de arquivos em unidade secundária sem dados críticos. Mesmo aí, faça backup antes. Se qualquer sinal físico estiver presente, ele fica de fora.</p>
+        <p>Pode ser pertinente para inconsistências do sistema de arquivos, após preservar dados e avaliar se o armazenamento está estável. Um desligamento inesperado é contexto, não prova de que a falha seja apenas lógica. Volume RAW ou pasta inacessível também não autoriza uma receita universal. Escolha a operação pelo problema identificado e pelo efeito sobre os dados, não apenas pelo status geral do SMART.</p>
+        <h2>Imagem, clonagem e recuperação não são a mesma coisa</h2>
+        <p>Uma clonagem comum pode insistir em áreas ruins e não oferecer controle suficiente de retomada. Ferramentas de resgate, como GNU ddrescue, usam registro de progresso para priorizar partes legíveis e permitir retomada. Mesmo assim, um erro ao escolher o destino pode destruir outra unidade. Este guia não oferece uma linha pronta de comando: o inventário dos discos e o valor dos dados vêm antes da execução.</p>
 
         <h2>Ruído mecânico é caso à parte</h2>
-        <p>Clique repetitivo, estalo cadenciado ou arranhado indicam problema mecânico. Nesses casos, ligar o disco de novo para "tentar mais uma vez" é o comportamento mais caro possível. O detalhamento está em <Link to="/problemas/hd-fazendo-barulho" className="text-accent">HD fazendo barulho</Link> e o procedimento seguro em <Link to="/blog/como-recuperar-dados-hd-com-defeito" className="text-accent">como recuperar dados de HD com defeito</Link>.</p>
+        <p>Um som isolado não identifica a peça defeituosa. Porém, ruído novo intenso junto com perda de detecção ou leitura é motivo para parar, sobretudo sem backup. Não abra o HD, não use congelamento nem repita ciclos de energia por tentativa. Compare os sinais descritos em <Link to="/problemas/hd-fazendo-barulho" className="text-accent">HD fazendo barulho</Link> e os limites de <Link to="/blog/como-recuperar-dados-hd-com-defeito" className="text-accent">recuperação de HD com defeito</Link>.</p>
 
         <h2>Depois da troca</h2>
         <p>Substituído o disco, o passo que evita a repetição do episódio é a rotina de cópia — descrita em <Link to="/blog/backup-como-proteger-seus-arquivos" className="text-accent">backup: como proteger seus arquivos</Link>. Sobre quando a troca compensa em relação ao equipamento, veja <Link to="/blog/quando-trocar-hd-por-ssd" className="text-accent">quando trocar o HD por SSD</Link>.</p>
 
         <h2>Quando chamar um técnico</h2>
         <p>Chame antes de rodar qualquer utilitário se os arquivos não existirem em outro lugar. Serviço correspondente em <Link to="/servicos/recuperacao-de-dados" className="text-accent">recuperação de dados</Link>; avaliação do conjunto em <Link to="/diagnostico-tecnico" className="text-accent">diagnóstico técnico</Link>.</p>
+        <EditorialReferences slug="disco-com-setores-defeituosos-smart-o-que-fazer" />
       </>
     ),
   },

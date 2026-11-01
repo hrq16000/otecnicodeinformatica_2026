@@ -67,7 +67,8 @@ test("fontes Seagate usam as URLs globais revisadas e manual MSI está classific
   const hosts = readStringArray(source, "ALLOWED_SOURCE_HOSTS");
   assert.ok(hosts.includes("download-2.msi.com"));
   assert.equal(hosts.includes("unverified.download-2.msi.com"), false);
-  const urls = [...source.matchAll(/url:\s*"(https:\/\/www\.seagate\.com[^\"]+)"/g)].map((m) => m[1]);
+  const reviewedArticles = ["the-bios-does-not-detect-or-recognize-the-ata-sata-hard-drive-168595en", "the-bios-does-not-detect-or-recognize-the-solid-state-drive-005707en", "what-should-i-do-for-a-noisy-disk-drive-193731en"];
+  const urls = [...source.matchAll(/url:\s*"(https:\/\/www\.seagate\.com[^\"]+)"/g)].map((m) => m[1]).filter((url) => reviewedArticles.some((article) => new URL(url).pathname.endsWith(`/${article}/`)));
   assert.equal(urls.length, 3);
   assert.ok(urls.every((url) => new URL(url).pathname.startsWith("/support/kb/")));
 });

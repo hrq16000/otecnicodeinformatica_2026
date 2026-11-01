@@ -111,12 +111,40 @@ export const ALLOWED_SOURCE_HOSTS = [
   "www.amd.com",
   "br.msi.com",
   "download-2.msi.com", // Manual H610TI: JFP1 conferido na página 17 (PDF 19/250).
+  "github.com", // Documentação primária Seagate/openSeaChest, classificada em 2026-11-01.
 ] as const;
 
 // ─────────────────────────────────────────────────────────────
 // FONTES CONSULTADAS (URLs confirmadas em 2026-07-12).
 // ─────────────────────────────────────────────────────────────
 export const EDITORIAL_SOURCES: Record<string, EditorialSource> = {
+  "seagate-smart-warning-20261101": {
+    id: "seagate-smart-warning-20261101",
+    title: "My system reported a S.M.A.R.T. error on the drive",
+    publisher: "Seagate Support",
+    url: "https://www.seagate.com/support/kb/my-system-reported-a-smart-error-on-the-drive-184619en/",
+    accessedAt: "2026-11-01",
+    sourceType: "official",
+    supports: ["Um alerta SMART requer preservação dos dados; ele não permite prever precisamente quando a unidade falhará."],
+  },
+  "seagate-smart-interpretation-20261101": {
+    id: "seagate-smart-interpretation-20261101",
+    title: "How do I interpret SMART diagnostic utilities results?",
+    publisher: "Seagate Support",
+    url: "https://www.seagate.com/em/en/support/kb/how-do-i-interpret-smart-diagnostic-utilities-results-203971en/",
+    accessedAt: "2026-11-01",
+    sourceType: "official",
+    supports: ["Atributos e limiares dependem da implementação do fabricante; valores de ferramentas de terceiros não devem ser interpretados como regras universais."],
+  },
+  "seagate-openseachest-smart-20261101": {
+    id: "seagate-openseachest-smart-20261101",
+    title: "Drive Health and SMART — openSeaChest",
+    publisher: "Seagate",
+    url: "https://github.com/Seagate/openSeaChest/wiki/Drive-Health-and-SMART",
+    accessedAt: "2026-11-01",
+    sourceType: "official",
+    supports: ["Significados e formatos dos atributos são específicos do fabricante/modelo.", "O contador de CRC da interface registra erros desde a fabricação, portanto o total histórico não precisa zerar após corrigir o enlace."],
+  },
   "ms-w10-support-decision-20261031": {
     id: "ms-w10-support-decision-20261031",
     title: "O suporte ao Windows 10 terminou em 14 de outubro de 2025",
@@ -703,7 +731,7 @@ export const EDITORIAL_SOURCES: Record<string, EditorialSource> = {
     title: "GNU ddrescue Manual",
     publisher: "GNU Project",
     url: "https://www.gnu.org/software/ddrescue/manual/ddrescue_manual.html",
-    accessedAt: "2026-09-30",
+    accessedAt: "2026-11-01",
     sourceType: "official",
     supports: [
       "O GNU ddrescue copia primeiro as partes legíveis de uma mídia com falhas e usa mapfile para registrar o progresso e retomar o resgate.",
@@ -1464,7 +1492,7 @@ export const EDITORIAL_SOURCES: Record<string, EditorialSource> = {
     title: "chkdsk",
     publisher: "Microsoft Learn",
     url: "https://learn.microsoft.com/pt-br/windows-server/administration/windows-commands/chkdsk",
-    accessedAt: "2026-10-01",
+    accessedAt: "2026-11-01",
     sourceType: "official",
     supports: [
       "O CHKDSK verifica o sistema de arquivos e metadados do volume; parâmetros como /f e /r fazem reparos específicos.",
@@ -2505,13 +2533,12 @@ export const ARTICLE_SOURCE_MANIFEST: Record<string, ArticleSourceManifest> = {
   },
   "disco-com-setores-defeituosos-smart-o-que-fazer": {
     slug: "disco-com-setores-defeituosos-smart-o-que-fazer",
-    sources: [],
+    sources: ["seagate-smart-warning-20261101", "seagate-smart-interpretation-20261101", "seagate-openseachest-smart-20261101", "ms-chkdsk-2026", "gnu-ddrescue-manual-2026", "seagate-noisy-drive-2026"],
     technicalReview: "reviewed",
     factChecked: true,
-    factCheckedAt: "2026-08-26",
-    stableKnowledge: true,
+    factCheckedAt: "2026-11-01",
     notes:
-      "Revisão concluída (Onda 10C, Lote 3): leitura de contadores SMART por tendência, ordem copiar → investigar → substituir, imagem bit a bit e regra explícita de que CHKDSK não é recomendação padrão em mídia com ruído, SMART crítico, desconexões ou dados importantes. Sem marca comercial e sem promessa. Conhecimento técnico estável — sem fonte visível.",
+      "Revisão material em 2026-11-01 na fonte base canônica: remove espera por dias em falha ativa, corte universal de 90% para SSD, ruído como diagnóstico definitivo e clonagem como obrigação doméstica. Distingue leitura, reparo lógico e resgate; CRC histórico não deve ser zerado. Seis fontes primárias visíveis e cinco FAQs com fonte única. Aprovação e indexabilidade existentes preservadas, sem nova promoção.",
   },
   "computador-sem-som-o-que-verificar": {
     slug: "computador-sem-som-o-que-verificar",

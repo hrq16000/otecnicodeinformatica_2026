@@ -4,6 +4,7 @@ import { SCHEMA_SLOTS, SLOT_PRIORITY, useJsonLdSlot } from "@/lib/jsonLdSlots";
 import { getArticleSources } from "@/lib/blogEditorialSources";
 import { SITE_BASE_URL } from "@/lib/siteConfig";
 import { WINDOWS11_MIGRATION_FAQ } from "@/lib/windows11MigrationFaq";
+import { SMART_DISK_FAQ } from "@/lib/smartDiskFaq";
 
 
 type FAQItem = { q: string; a: string };
@@ -374,28 +375,7 @@ const PILOT_FAQ: Record<string, FAQItem[]> = {
       a: "É esperado logo após a clonagem. Mantenha um deles desconectado no primeiro boot para evitar confusão de assinatura e de ordem de partida.",
     },
   ],
-  "disco-com-setores-defeituosos-smart-o-que-fazer": [
-    {
-      q: "Devo rodar CHKDSK quando o SMART acusa problema?",
-      a: "Não como primeira ação. Em disco com ruído, SMART crítico, desconexões ou dados sem cópia, o CHKDSK força leituras e escritas em áreas frágeis e pode inviabilizar a recuperação. Copie os arquivos primeiro; o CHKDSK só cabe em disco saudável com corrupção lógica.",
-    },
-    {
-      q: "O que significa setor realocado?",
-      a: "É um setor que o disco marcou como ruim e substituiu por outro da reserva interna. Qualquer valor acima de zero pede backup imediato, e um contador que cresce indica degradação em curso.",
-    },
-    {
-      q: "O SMART diz OK. Posso confiar?",
-      a: "Nem sempre. O veredito geral costuma continuar aprovado mesmo com contadores críticos subindo. Observe a tendência dos indicadores em duas leituras separadas por alguns dias.",
-    },
-    {
-      q: "Qual é a ordem correta de trabalho?",
-      a: "Parar de usar o disco, copiar primeiro o que é essencial para outra unidade, fazer imagem bit a bit quando a leitura falhar, e só então investigar a mídia e decidir a substituição.",
-    },
-    {
-      q: "Erro de CRC no SMART significa disco ruim?",
-      a: "Normalmente não. Esse contador aponta erros no enlace de dados, quase sempre cabo ou porta. Troque o cabo, zere a observação e reavalie.",
-    },
-  ],
+  "disco-com-setores-defeituosos-smart-o-que-fazer": SMART_DISK_FAQ,
   "computador-sem-som-o-que-verificar": [
     {
       q: "Por que meu computador ficou sem som de repente?",
