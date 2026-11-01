@@ -5,6 +5,8 @@
  * Separar esta flag da UI evita criar uma rota pública e não altera o
  * programa anual de profissionais já existente.
  */
+import { prazoDisponibilidadeNacionalValido } from "./validacaoAdministrativa";
+
 export const AREA_NACIONAL_INTEGRADA = false as const;
 
 export type ResumoNacionalTitular = {
@@ -44,14 +46,9 @@ export function classificarResumoNacional(
     registro.comunidade !== "confirmada" ||
     registro.termos !== "aceitos"
   ) return "aguardando_verificacao";
-  if (registro.disponibilidade === "disponivel") {
-    const fim = registro.disponibilidadeExpiraEm;
-    if (
-      typeof fim === "string" &&
-      /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(?:\.\d{1,3})?Z$/.test(fim) &&
-      Number.isFinite(Date.parse(fim)) &&
-      Date.parse(fim) > agora.getTime()
-    ) return "habilitado_disponivel";
+  if (registro.disponibilidade === "disponivel" &&
+      prazoDisponibilidadeNacionalValido(registro.disponibilidadeExpiraEm, agora)) {
+    return "habilitado_disponivel";
   }
   return "habilitado_indisponivel";
 }
