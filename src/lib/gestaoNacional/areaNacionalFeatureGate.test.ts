@@ -55,6 +55,18 @@ describe("painel nacional no perfil existente — isolado por feature flag", () 
     expect(classificarResumoNacional(validado, agora)).toBe("habilitado_disponivel");
   });
 
+  it("alinha o painel com o limite de 24h do cadastro nacional", () => {
+    expect(classificarResumoNacional({
+      ...validado, disponibilidadeExpiraEm: "2026-11-01T20:00:00Z",
+    }, agora)).toBe("habilitado_disponivel");
+    expect(classificarResumoNacional({
+      ...validado, disponibilidadeExpiraEm: "2026-11-01T20:00:00.001Z",
+    }, agora)).toBe("habilitado_indisponivel");
+    expect(classificarResumoNacional({
+      ...validado, disponibilidadeExpiraEm: "2099-01-01T00:00:00Z",
+    }, agora)).toBe("habilitado_indisponivel");
+  });
+
   it("rejeita relógio inválido na função interna", () => {
     expect(() => classificarResumoNacional(validado, new Date("invalido"))).toThrow();
   });
