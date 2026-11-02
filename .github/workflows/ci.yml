@@ -176,7 +176,8 @@ jobs:
       - name: Install deps
         run: npm ci --no-audit --no-fund
       - name: Install Playwright browsers
-        run: npx playwright install --with-deps chromium
+        # The mobile project resolves to WebKit on this runner; install both.
+        run: npx playwright install --with-deps chromium webkit
       - name: Build
         run: npm run build
       - name: Start production-like SSR Worker (local only)
