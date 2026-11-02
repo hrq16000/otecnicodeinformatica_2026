@@ -90,12 +90,14 @@ jobs:
           name: trust-claims-inventory
           path: src/data/trustClaimsAudit.json
           if-no-files-found: warn
+      # O build gera dist/ e sitemaps exigidos pela governança editorial.
+      # Tanto Build quanto verify permanecem bloqueantes.
+      - name: Build
+        run: npm run build
       # Comando oficial: gates essenciais de código e conteúdo.
       # Os testes já rodam no job `unit`, por isso ficam de fora aqui.
       - name: verify (gates essenciais — comando oficial)
         run: npm run verify -- --skip=test
-      - name: Build
-        run: npm run build
       # Comando oficial: gates essenciais de publicação (exigem dist/).
       # Os passos opcionais (GSC/rede) não bloqueiam o CI.
       - name: deploy:check (gates de publicação — comando oficial)
