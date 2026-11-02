@@ -16,8 +16,10 @@ test.describe("SEO — sitemap & robots", () => {
     const res = await request.get(`${BASE}/sitemap-main.xml`);
     expect(res.ok()).toBeTruthy();
     const body = await res.text();
-    expect(body).toContain(`${SITE_URL}/assistencia-tecnica-curitiba`);
-    expect(body).toContain(`${SITE_URL}/termos-e-condicoes`);
+    expect(body).toContain(`${SITE_URL}/precos-e-politicas`);
+    // Noindex/alias URLs must remain excluded from indexable sitemap.
+    expect(body).not.toContain(`<loc>${SITE_URL}/assistencia-tecnica-curitiba</loc>`);
+    expect(body).not.toContain(`<loc>${SITE_URL}/termos-e-condicoes</loc>`);
     expect(body).toContain(`${SITE_URL}/`);
   });
 
