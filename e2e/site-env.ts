@@ -8,7 +8,7 @@ import { existsSync, readFileSync } from "node:fs";
  * contra o alvo certo). Aqui a origem é sempre a env do remix, com o mesmo
  * comportamento fail-closed dos gates: sem `VITE_SITE_DOMAIN`, sem domínio.
  */
-function readEnv(key: string): string {
+export function readEnv(key: string): string {
   if (process.env[key]) return String(process.env[key]).trim();
   for (const file of [".env.local", ".env"]) {
     if (!existsSync(file)) continue;
