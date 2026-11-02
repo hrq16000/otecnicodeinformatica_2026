@@ -55,8 +55,29 @@ jobs:
           node-version: "20"
       - name: Install deps
         run: npm ci --no-audit --no-fund
-      - name: Lint (non-blocking warnings)
-        run: npm run lint --silent || echo "::warning::lint reported issues"
+      # Observacional: evitar que um lint amplo congele os gates oficiais.
+      # A checagem de formato continua registrada, sem esconder o retorno.
+      - name: Lint (non-blocking warnings, bounded)
+        run: |
+          set +e
+          timeout --signal=TERM --kill-after=10s 120s npm run lint --silent > lint-observacional.log 2>&1
+          status=$?
+          set -e
+          if [ "$status" -eq 124 ] || [ "$status" -eq 137 ]; then
+            echo "::warning::Lint observacional excedeu 120 segundos (exit $status); consulte o artefato."
+          elif [ "$status" -ne 0 ]; then
+            echo "::warning::Lint observacional retornou exit $status; consulte o artefato."
+          else
+            echo "::notice::Lint observacional concluido."
+          fi
+          echo "Lint observacional (exit $status)" >> "$GITHUB_STEP_SUMMARY"
+      - name: Upload lint observacional
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: lint-observacional
+          path: lint-observacional.log
+          if-no-files-found: ignore
       # Comando oficial: gates essenciais de código e conteúdo.
       # Os testes já rodam no job `unit`, por isso ficam de fora aqui.
       - name: verify (gates essenciais — comando oficial)
