@@ -21,7 +21,7 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
-          node-version: "20"
+          node-version: "22"
       - name: Install deps
         run: npm ci --no-audit --no-fund
       - name: Inventário de testes (isolamento de runners, fail-closed)
@@ -52,7 +52,7 @@ jobs:
           bun-version: latest
       - uses: actions/setup-node@v4
         with:
-          node-version: "20"
+          node-version: "22"
       - name: Install deps
         run: npm ci --no-audit --no-fund
       # Observacional: evitar que um lint amplo congele os gates oficiais.
@@ -145,7 +145,7 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
-          node-version: "20"
+          node-version: "22"
       - name: Install deps
         run: npm ci --no-audit --no-fund
       - name: Install Playwright browsers
@@ -209,7 +209,7 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
-          node-version: "20"
+          node-version: "22"
           cache: npm
       - name: Install deps
         run: npm ci --no-audit --no-fund
@@ -272,7 +272,7 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
-          node-version: "20"
+          node-version: "22"
           cache: npm
       - name: Install deps
         run: npm ci --no-audit --no-fund
@@ -329,7 +329,7 @@ jobs:
       - uses: actions/setup-node@v4
         if: steps.changes.outputs.ping == 'true'
         with:
-          node-version: "20"
+          node-version: "22"
       - name: Ping IndexNow with sitemap URLs
         if: steps.changes.outputs.ping == 'true'
         env:
@@ -350,7 +350,7 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
-          node-version: "20"
+          node-version: "22"
       - name: Install deps
         run: npm ci --no-audit --no-fund
       - name: Install Lighthouse CI
