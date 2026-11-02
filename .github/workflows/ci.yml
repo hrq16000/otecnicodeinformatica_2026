@@ -78,6 +78,18 @@ jobs:
           name: lint-observacional
           path: lint-observacional.log
           if-no-files-found: ignore
+      # Reproduzir o artefato exato do gate sem enfraquecer a checagem.
+      - name: Regenerar inventário auditado de afirmações
+        run: npm run report:afirmacoes
+      - name: Exigir inventário de afirmações versionado atualizado
+        run: git diff --exit-code -- src/data/trustClaimsAudit.json
+      - name: Anexar inventário auditado para correção reproduzível
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: trust-claims-inventory
+          path: src/data/trustClaimsAudit.json
+          if-no-files-found: warn
       # Comando oficial: gates essenciais de código e conteúdo.
       # Os testes já rodam no job `unit`, por isso ficam de fora aqui.
       - name: verify (gates essenciais — comando oficial)
