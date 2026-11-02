@@ -38,7 +38,7 @@ export type DiagnosticoIa = {
 const Input = z.object({ descricao: z.string().trim().min(10).max(1200) });
 
 export const sugerirServico = createServerFn({ method: "POST" })
-  .inputValidator((d: unknown) => Input.parse(d))
+  .validator((d: unknown) => Input.parse(d))
   .handler(async ({ data }): Promise<DiagnosticoIa> => {
     const key = process.env["LOVABLE_API_KEY"];
     if (!key) throw new Error("Serviço de IA não configurado.");
