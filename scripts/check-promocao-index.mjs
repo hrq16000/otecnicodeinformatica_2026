@@ -67,10 +67,28 @@ function extrairArtigos(fonte) {
   }));
 }
 
+// Mesma precedencia editorial do runtime BlogPost.tsx:
+// base historica < revisoes suplementares < posts programaticos.
+// O programatico usa defs: PostDef[] (slug: "..."), nao chaves de objeto.
+function extrairProgramaticos() {
+  const src = read("src/data/blogProgrammaticPosts.tsx");
+  const inicio = src.indexOf("const defs:");
+  if (inicio < 0) throw new Error("Inventario programatico ausente: const defs");
+  const bloco = src.slice(inicio);
+  const marcas = [...bloco.matchAll(/^    slug:\s*"([a-z0-9-]+)",/gm)];
+  if (marcas.length === 0) throw new Error("Inventario programatico vazio");
+  return marcas.map((m, i) => ({
+    slug: m[1],
+    raw: bloco.slice(m.index, i + 1 < marcas.length ? marcas[i + 1].index : bloco.length),
+  }));
+}
+
 const artigos = new Map(
-  [...extrairArtigos("src/data/blogPostsContent.tsx"), ...extrairArtigos("src/data/blogProgrammaticPosts.tsx")].map(
-    (a) => [a.slug, a.raw],
-  ),
+  [
+    ...extrairArtigos("src/data/blogPostsContent.tsx"),
+    ...extrairArtigos("src/data/blogSupplementalPosts.tsx"),
+    ...extrairProgramaticos(),
+  ].map((a) => [a.slug, a.raw]),
 );
 
 const textoVisivel = (raw) =>
