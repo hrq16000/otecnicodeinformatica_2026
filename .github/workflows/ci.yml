@@ -93,6 +93,10 @@ jobs:
       # O build gera dist/ e sitemaps exigidos pela governança editorial.
       # Tanto Build quanto verify permanecem bloqueantes.
       - name: Build
+        env:
+          # Public client-side observability endpoints; never set fake values.
+          VITE_SENTRY_DSN: ${{ secrets.VITE_SENTRY_DSN }}
+          VITE_OTLP_ENDPOINT: ${{ secrets.VITE_OTLP_ENDPOINT || vars.VITE_OTLP_ENDPOINT }}
         run: npm run build
       # Comando oficial: gates essenciais de código e conteúdo.
       # Os testes já rodam no job `unit`, por isso ficam de fora aqui.
@@ -101,6 +105,10 @@ jobs:
       # Comando oficial: gates essenciais de publicação (exigem dist/).
       # Os passos opcionais (GSC/rede) não bloqueiam o CI.
       - name: deploy:check (gates de publicação — comando oficial)
+        env:
+          # Fail-closed when neither configured endpoint exists.
+          VITE_SENTRY_DSN: ${{ secrets.VITE_SENTRY_DSN }}
+          VITE_OTLP_ENDPOINT: ${{ secrets.VITE_OTLP_ENDPOINT || vars.VITE_OTLP_ENDPOINT }}
         run: npm run deploy:check
       # Gates de SEO com resumo anexado ao build (bloqueantes).
       - name: Gates de SEO (auditoria, descoberta, sitemap, robots)
