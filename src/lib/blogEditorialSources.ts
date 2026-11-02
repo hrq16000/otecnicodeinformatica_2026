@@ -118,6 +118,36 @@ export const ALLOWED_SOURCE_HOSTS = [
 // FONTES CONSULTADAS (URLs confirmadas em 2026-07-12).
 // ─────────────────────────────────────────────────────────────
 export const EDITORIAL_SOURCES: Record<string, EditorialSource> = {
+  "ms-migration-external-20261102": {
+    id: "ms-migration-external-20261102", title: "Mover arquivos usando armazenamento externo", publisher: "Microsoft Support",
+    url: "https://support.microsoft.com/pt-br/windows/experience/backup-recovery/move-your-files-to-a-new-windows-pc-using-an-external-storage-device",
+    accessedAt: "2026-11-02", sourceType: "official", supports: ["Copiar arquivos de diferentes pastas e conferir o destino antes de ejetar a unidade."],
+  },
+  "ms-migration-onedrive-20261102": {
+    id: "ms-migration-onedrive-20261102", title: "Migrar arquivos com OneDrive", publisher: "Microsoft Support",
+    url: "https://support.microsoft.com/pt-br/onedrive/windows/move-files-to-a-new-windows-pc-using-onedrive",
+    accessedAt: "2026-11-02", sourceType: "official", supports: ["Confirmar envio pela Web e usar a mesma conta no computador novo."],
+  },
+  "ms-migration-on-demand-20261102": {
+    id: "ms-migration-on-demand-20261102", title: "Arquivos Sob Demanda do OneDrive", publisher: "Microsoft Support",
+    url: "https://support.microsoft.com/pt-br/onedrive/save-disk-space-with-onedrive-files-on-demand-for-windows",
+    accessedAt: "2026-11-02", sourceType: "official", supports: ["Itens somente online, disponibilidade offline e propagação de exclusões sincronizadas."],
+  },
+  "ms-migration-apps-20261102": {
+    id: "ms-migration-apps-20261102", title: "Backup e restauração com Backup do Windows", publisher: "Microsoft Support",
+    url: "https://support.microsoft.com/pt-br/windows/experience/backup-recovery/back-up-and-restore-with-windows-backup",
+    accessedAt: "2026-11-02", sourceType: "official", supports: ["Restauração de atalhos e preferências não equivale a instalar todos os aplicativos."],
+  },
+  "ms-migration-hash-20261102": {
+    id: "ms-migration-hash-20261102", title: "Get-FileHash", publisher: "Microsoft Learn",
+    url: "https://learn.microsoft.com/pt-br/powershell/module/microsoft.powershell.utility/get-filehash?view=powershell-7.5",
+    accessedAt: "2026-11-02", sourceType: "official", supports: ["Comparação do conteúdo de arquivos por SHA-256, com caminhos literais."],
+  },
+  "ms-migration-reset-20261102": {
+    id: "ms-migration-reset-20261102", title: "Restaurar o computador: opções e limites", publisher: "Microsoft Support",
+    url: "https://support.microsoft.com/pt-br/windows/experience/backup-recovery/reset-your-pc",
+    accessedAt: "2026-11-02", sourceType: "official", supports: ["Backup e chave de recuperação antes de redefinir; limpeza doméstica não atende padrões industriais de eliminação."],
+  },
   "seagate-smart-warning-20261101": {
     id: "seagate-smart-warning-20261101",
     title: "My system reported a S.M.A.R.T. error on the drive",
@@ -2783,13 +2813,12 @@ export const ARTICLE_SOURCE_MANIFEST: Record<string, ArticleSourceManifest> = {
   },
   "como-migrar-arquivos-para-um-computador-novo": {
     slug: "como-migrar-arquivos-para-um-computador-novo",
-    sources: [],
+    sources: ["ms-migration-external-20261102", "ms-migration-onedrive-20261102", "ms-migration-on-demand-20261102", "ms-migration-apps-20261102", "ms-migration-hash-20261102", "ms-migration-reset-20261102"],
     technicalReview: "reviewed",
     factChecked: true,
-    factCheckedAt: "2026-09-03",
-    stableKnowledge: true,
+    factCheckedAt: "2026-11-02",
     notes:
-      "Revisão concluída (Onda 11E): inventário do que costuma ficar de fora, comparação objetiva entre métodos de transferência, conferência por quantidade e tamanho antes do descarte, retenção temporária do equipamento antigo e limpeza completa da unidade antes de venda ou doação. Conhecimento técnico estável — sem fonte visível.",
+      "Revisão material em 2026-11-02: inventário e critérios de aceite, cópia sem recorte, arquivos somente online, aplicativos e dados próprios, limites de contagem/tamanho e hash, backup independente e sanitização proporcional. Seis fontes Microsoft visíveis e cinco FAQs técnicas. URL e aprovação existentes preservadas.",
   },
   "teclado-de-notebook-nao-funciona-o-que-verificar": {
     slug: "teclado-de-notebook-nao-funciona-o-que-verificar",

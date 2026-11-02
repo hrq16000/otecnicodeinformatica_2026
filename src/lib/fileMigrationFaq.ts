@@ -1,0 +1,8 @@
+/** Fonte única das perguntas visíveis e do FAQPage da migração de arquivos. */
+export const FILE_MIGRATION_FAQ = [
+  { q: "Copiar Documentos transfere todos os meus dados?", a: "Não. Inclua outras pastas, outros usuários autorizados, dados de aplicativos, correio local e arquivos somente online. Use um inventário com origem, destino e teste de abertura para cada conjunto." },
+  { q: "Quantidade e tamanho iguais garantem uma cópia íntegra?", a: "Não. São verificações iniciais. Abra os arquivos críticos e, em origem saudável, compare hashes SHA-256 de arquivos fechados quando necessário. Um hash igual não comprova que o inventário está completo nem corrige corrupção já existente." },
+  { q: "Os arquivos do OneDrive já estão disponíveis sem internet?", a: "Não necessariamente. Itens somente online precisam ser baixados. Para o conjunto necessário offline, use Sempre manter neste dispositivo, aguarde a conclusão e teste sem rede. Excluir um item sincronizado pode apagá-lo também da nuvem e dos outros dispositivos." },
+  { q: "Posso transferir programas copiando suas pastas?", a: "Isso não substitui a instalação. Reinstale pela fonte oficial, confira licenças e migre os dados conforme o fornecedor. Sistemas com bancos de dados em uso exigem backup e restauração próprios." },
+  { q: "Quando posso apagar ou vender o computador antigo?", a: "Depois de resolver o inventário, testar dados e aplicativos e validar uma cópia independente recuperável. O prazo em dias não substitui esses critérios. A limpeza doméstica do Windows não equivale a sanitização certificada para exigências empresariais." },
+];

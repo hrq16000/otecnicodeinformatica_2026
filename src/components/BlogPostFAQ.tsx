@@ -5,6 +5,7 @@ import { getArticleSources } from "@/lib/blogEditorialSources";
 import { SITE_BASE_URL } from "@/lib/siteConfig";
 import { WINDOWS11_MIGRATION_FAQ } from "@/lib/windows11MigrationFaq";
 import { SMART_DISK_FAQ } from "@/lib/smartDiskFaq";
+import { FILE_MIGRATION_FAQ } from "@/lib/fileMigrationFaq";
 
 
 type FAQItem = { q: string; a: string };
@@ -376,6 +377,7 @@ const PILOT_FAQ: Record<string, FAQItem[]> = {
     },
   ],
   "disco-com-setores-defeituosos-smart-o-que-fazer": SMART_DISK_FAQ,
+  "como-migrar-arquivos-para-um-computador-novo": FILE_MIGRATION_FAQ,
   "computador-sem-som-o-que-verificar": [
     {
       q: "Por que meu computador ficou sem som de repente?",

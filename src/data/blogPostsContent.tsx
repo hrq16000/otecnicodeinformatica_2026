@@ -14657,7 +14657,7 @@ bcdboot C:\\Windows /s S: /f UEFI`}</code></pre>
   },
 
   "como-migrar-arquivos-para-um-computador-novo": {
-    title: "Como migrar arquivos para um computador novo sem perder nada",
+    title: "Como migrar arquivos para um computador novo com conferência segura",
     excerpt:
       "Inventário, método de transferência, conferência e só então o descarte do equipamento antigo. O roteiro que evita a descoberta tardia de que faltou alguma coisa.",
     date: "2026-09-03",
@@ -14665,10 +14665,10 @@ bcdboot C:\\Windows /s S: /f UEFI`}</code></pre>
     category: "Procedimentos Técnicos",
     content: (
       <>
-        <p className="lead">A perda de arquivo na troca de computador raramente acontece na cópia. Acontece antes, no inventário incompleto, e depois, quando o equipamento antigo é formatado ou vendido sem que ninguém tenha conferido o que realmente foi para o novo.</p>
+        <p className="lead">Trocar de computador exige mais que copiar Documentos. Arquivos fora das pastas habituais, dados de aplicativos e itens apenas online podem ficar para trás. Nenhum método promete perda zero: o objetivo é manter uma origem recuperável e demonstrar que o trabalho funciona no destino antes de apagar qualquer coisa.</p>
 
         <h2>Resposta curta</h2>
-        <p>Liste o que precisa ir, copie por um caminho só, confira arquivo por pasta comparando quantidade e tamanho, use o computador novo por alguns dias com o antigo ainda intacto e só então apague a máquina anterior. Migração não termina na cópia: termina na conferência.</p>
+        <p>Faça um inventário, prepare uma cópia independente e transfira por etapas registradas. Use copiar, não recortar. Confira o conteúdo no novo computador, teste os programas com seus dados e configure um backup recuperável. Só libere o antigo quando os critérios estiverem cumpridos; esperar um número fixo de dias não substitui a validação.</p>
 
         <h2>O inventário que quase sempre falta</h2>
         <ul>
@@ -14679,7 +14679,8 @@ bcdboot C:\\Windows /s S: /f UEFI`}</code></pre>
           <li>Licenças, chaves de ativação e instaladores que não estão mais disponíveis para download.</li>
           <li>Fotos e vídeos em cartões, celulares e discos externos que orbitam o mesmo computador.</li>
         </ul>
-        <p>Escreva essa lista antes de começar. Ela é o critério de conferência no fim — sem ela, "acho que veio tudo" é a única resposta possível.</p>
+        <p>Para cada item, registre origem, destino, responsável e teste de abertura. Inclua outros usuários do computador apenas com autorização. Separe dados pessoais dos corporativos: conta pessoal de nuvem, pendrive e compartilhamento de rede podem não ser destinos autorizados pela organização.</p>
+        <p>Confirme que consegue acessar as contas e os meios de recuperação sem depender exclusivamente da máquina antiga. Para discos criptografados, localize a chave de recuperação antes de remover a unidade ou redefinir o Windows. Não desative proteções para facilitar a cópia e não registre senhas, chaves ou códigos de recuperação na planilha de inventário.</p>
 
         <h2>Métodos e quando cada um serve</h2>
         <table>
@@ -14689,33 +14690,61 @@ bcdboot C:\\Windows /s S: /f UEFI`}</code></pre>
           <tbody>
             <tr><td>Disco externo ou pendrive</td><td>Volume moderado e sem rede confiável entre as máquinas</td><td>Depende de espaço livre e de mídia em bom estado</td></tr>
             <tr><td>Rede local (pasta compartilhada)</td><td>Os dois computadores ficam no mesmo local e ligados</td><td>Velocidade cai muito em Wi-Fi fraco</td></tr>
-            <tr><td>Nuvem</td><td>Poucos gigabytes e necessidade de acesso imediato no novo equipamento</td><td>Upload longo e limite de espaço do plano</td></tr>
-            <tr><td>Ligar o disco antigo direto no computador novo</td><td>O equipamento antigo não liga mais, mas o disco está íntegro</td><td>Exige abrir a máquina ou usar gaveta compatível</td></tr>
+            <tr><td>Nuvem</td><td>Conta autorizada, capacidade suficiente e conexão adequada ao volume</td><td>Exige confirmar envio, conta correta e disponibilidade local quando necessária</td></tr>
+            <tr><td>Acessar o disco antigo por adaptador</td><td>Computador não inicia, mas a unidade foi avaliada como estável</td><td>Compatibilidade física, criptografia e falha da mídia podem impedir ou tornar arriscado o acesso</td></tr>
           </tbody>
         </table>
-        <p>Escolher um caminho e mantê-lo evita o pior cenário da migração: metade dos arquivos em um pendrive, metade na nuvem e nenhuma lista do que está onde. Se o disco antigo apresentar lentidão extrema ou ruído durante a cópia, o assunto passa a ser <Link to="/blog/disco-com-setores-defeituosos-smart-o-que-fazer" className="text-accent">disco com setores defeituosos</Link>.</p>
+        <p>É possível combinar métodos, desde que cada lote tenha destino e resultado registrados. Não formate uma unidade que contém a única cópia só porque o Windows ofereceu essa opção. Em rede local, use acesso restrito e remova o compartilhamento temporário depois; não exponha a pasta à internet nem desligue o firewall como atalho.</p>
+
+        <h2>OneDrive: aparecer na pasta não significa estar baixado</h2>
+        <p>Confirme que os arquivos foram enviados e aparecem na conta correta pela Web antes de depender da nuvem. No novo computador, entre nessa mesma conta. Uma listagem com nomes não comprova disponibilidade offline: itens somente online precisam ser baixados para abrir sem conexão.</p>
+        <p>Para o conjunto que precisa funcionar offline, selecione <strong>Sempre manter neste dispositivo</strong>, aguarde a conclusão sem erros e teste a abertura sem rede. Verifique antes o espaço livre. Não exclua itens sincronizados na máquina antiga para “limpar só aquele PC”: a exclusão pode se propagar à nuvem e aos outros dispositivos. Faça uma cópia independente antes de qualquer limpeza.</p>
+
+        <h2>Aplicativos, e-mail e licenças têm migração própria</h2>
+        <p>Copiar a pasta de um programa não equivale a instalá-lo. Reinstale por fonte oficial, confirme compatibilidade e verifique as regras de ativação do fornecedor. O Backup do Windows pode restaurar preferências e atalhos de aplicativos, mas isso não garante que todo programa esteja instalado nem que todos os seus dados tenham sido transferidos.</p>
+        <p>Para sistemas de gestão, exporte ou faça backup pelo procedimento do fabricante e teste a restauração antes da mudança definitiva. Feche os aplicativos para copiar arquivos que possam estar em uso; bancos de dados ativos precisam de um procedimento próprio, não de uma cópia improvisada de pasta. Verifique correio local, anexos, modelos, certificados e arquivos de trabalho recentes. Importe favoritos e senhas somente pelo mecanismo confiável do navegador ou gerenciador; uma exportação de senhas pode ficar legível e exige proteção e remoção segura após o uso.</p>
 
         <h2>Conferência antes do descarte</h2>
-        <p>Compare, pasta a pasta, a quantidade de itens e o tamanho total entre origem e destino. Abra alguns arquivos grandes e alguns antigos — corrupção silenciosa costuma aparecer justamente neles. Só depois disso o computador antigo pode ser formatado, doado ou vendido. Manter a máquina antiga intacta por uma ou duas semanas custa nada e resolve o esquecimento tardio.</p>
+        <p>Quantidade e tamanho ajudam a encontrar omissões, mas não provam igualdade do conteúdo. Registre erros e itens ignorados; não os trate como transferência concluída. Abra documentos críticos no programa de destino, confira fotos e vídeos e execute uma tarefa real de trabalho. Uma amostra bem-sucedida não certifica todos os arquivos.</p>
+        <p>Em uma origem saudável, arquivos críticos já salvos e fechados podem ser comparados por SHA-256. No PowerShell, troque os caminhos abaixo pelos de um mesmo arquivo na origem e na cópia. O comando lê o arquivo; não faz reparo nem transferência.</p>
+        <pre><code>{'Get-FileHash -LiteralPath "C:\\Dados\\contrato.pdf" -Algorithm SHA256\nGet-FileHash -LiteralPath "E:\\Migracao\\contrato.pdf" -Algorithm SHA256'}</code></pre>
+        <p>Compare os valores Hash. Se diferirem, investigue versão, caminho, alteração durante a cópia ou erro de transferência antes de aceitar o lote. Hash igual confirma a comparação daquele conteúdo, não que o arquivo já estava íntegro na origem nem que o inventário está completo. Não faça leituras adicionais de verificação em disco com sinais de falha: a prioridade passa a ser preservar dados.</p>
+        <ul>
+          <li>Todo item do inventário tem destino identificado e pendências resolvidas.</li>
+          <li>Arquivos críticos abrem, programas funcionam com os dados e contas são acessíveis.</li>
+          <li>Há uma cópia independente recuperável, além do computador novo.</li>
+          <li>O responsável pelos dados aprovou a conferência antes de autorizar apagar o antigo.</li>
+        </ul>
 
         <h2>A cópia da migração não é o backup</h2>
         <p>Terminada a transferência, o computador novo fica com uma cópia única dos dados — exatamente a situação que a rotina de backup existe para evitar. O passo seguinte é configurar versões locais, descrito em <Link to="/blog/historico-de-arquivos-windows-como-configurar" className="text-accent">Histórico de Arquivos do Windows</Link>, e verificar o resultado conforme <Link to="/blog/como-testar-restauracao-de-backup" className="text-accent">como testar se o backup realmente funciona</Link>. A escolha do destino está em <Link to="/decisoes/nuvem-ou-hd-externo" className="text-accent">nuvem ou HD externo</Link>.</p>
 
         <h2>Antes de repassar o equipamento antigo</h2>
-        <p>Apagar arquivos e esvaziar a lixeira não remove o conteúdo do disco. Para doação ou venda, o procedimento correto é a limpeza completa da unidade, e não a exclusão manual das pastas. Para máquinas que serão reaproveitadas na casa ou no escritório, o caminho de reinstalação preservando dados está em <Link to="/blog/como-formatar-pc-sem-perder-arquivos" className="text-accent">como formatar o PC sem perder arquivos</Link>.</p>
+        <p>Excluir pastas e esvaziar a lixeira não é sanitização. Depois de validar a migração e o backup, o Windows oferece Remover tudo com limpeza de dados para repasse doméstico. A Microsoft ressalva que essa função não atende a padrões governamentais e industriais de eliminação. Dados empresariais, sensíveis ou sujeitos a política específica exigem procedimento de sanitização apropriado à mídia e à organização; não prometa irrecuperabilidade com uma redefinição comum.</p>
+        <p>Desconecte os discos de backup antes de iniciar qualquer apagamento e confirme a unidade selecionada. Reinstalar preservando arquivos não prepara uma máquina para outra pessoa. O contexto e os limites estão em <Link to="/blog/como-formatar-pc-sem-perder-arquivos" className="text-accent">reinstalação sem depender de uma única cópia</Link>.</p>
 
         <h2>O que NÃO fazer</h2>
         <ul>
           <li>Formatar o computador antigo antes de conferir tudo o que foi copiado.</li>
-          <li>Confiar em "copiar e colar" sem conferir quantidade e tamanho no destino.</li>
+          <li>Tratar quantidade e tamanho iguais como prova completa de integridade.</li>
           <li>Usar pendrive antigo e sem espaço como mídia única de transferência.</li>
           <li>Esquecer perfis de e-mail, favoritos e licenças por focar só em documentos.</li>
-          <li>Interromper a cópia na metade e recomeçar por outro caminho.</li>
+          <li>Ignorar arquivos não baixados, erros de cópia ou bancos de dados ainda em uso.</li>
           <li>Vender ou doar o equipamento sem limpeza completa da unidade.</li>
         </ul>
 
         <h2>Quando parar</h2>
-        <p>Pare se a cópia acusar erro de leitura repetido, se o disco de origem emitir ruído incomum ou se o sistema pedir formatação da mídia. Insistir em copiar de um disco com falha reduz a chance de recuperação posterior.</p>
+        <p>Interrompa as tentativas diante de erros de leitura repetidos, desaparecimento da unidade, ruído preocupante ou pedido de formatação de mídia com dados necessários. Não rode reparos, benchmarks ou sucessivas tentativas de cópia sobre a única origem. A decisão depende dos sintomas e do valor dos dados, conforme o guia de <Link to="/blog/disco-com-setores-defeituosos-smart-o-que-fazer" className="text-accent">SMART e preservação de dados</Link>. Pare também se faltar autorização, acesso legítimo à criptografia ou procedimento para o sistema empresarial.</p>
+
+        <h2>Fontes primárias consultadas</h2>
+        <ul>
+          <li><a href="https://support.microsoft.com/pt-br/windows/experience/backup-recovery/move-your-files-to-a-new-windows-pc-using-an-external-storage-device" target="_blank" rel="noopener noreferrer">Microsoft: transferência por armazenamento externo</a>.</li>
+          <li><a href="https://support.microsoft.com/pt-br/onedrive/windows/move-files-to-a-new-windows-pc-using-onedrive" target="_blank" rel="noopener noreferrer">Microsoft: migração usando OneDrive</a>.</li>
+          <li><a href="https://support.microsoft.com/pt-br/onedrive/save-disk-space-with-onedrive-files-on-demand-for-windows" target="_blank" rel="noopener noreferrer">Microsoft: Arquivos Sob Demanda e exclusão sincronizada</a>.</li>
+          <li><a href="https://support.microsoft.com/pt-br/windows/experience/backup-recovery/back-up-and-restore-with-windows-backup" target="_blank" rel="noopener noreferrer">Microsoft: escopo do Backup do Windows</a>.</li>
+          <li><a href="https://learn.microsoft.com/pt-br/powershell/module/microsoft.powershell.utility/get-filehash?view=powershell-7.5" target="_blank" rel="noopener noreferrer">Microsoft Learn: Get-FileHash</a>.</li>
+          <li><a href="https://support.microsoft.com/pt-br/windows/experience/backup-recovery/reset-your-pc" target="_blank" rel="noopener noreferrer">Microsoft: redefinição e limites da limpeza de dados</a>.</li>
+        </ul>
 
         <h2>Quando chamar um técnico</h2>
         <p>Chame quando o computador antigo não ligar mais, quando houver erro de leitura em arquivos importantes ou quando a migração envolver sistemas de trabalho, e-mails locais e vários equipamentos. A tentativa em disco com falha está descrita em <Link to="/blog/como-recuperar-dados-hd-com-defeito" className="text-accent">recuperação de dados em HD com defeito</Link> e o serviço em <Link to="/servicos/recuperacao-de-dados" className="text-accent">recuperação de dados</Link>. Para ambiente com equipe, o desdobramento é <Link to="/servicos/backup-para-empresas" className="text-accent">backup para empresas</Link>.</p>
