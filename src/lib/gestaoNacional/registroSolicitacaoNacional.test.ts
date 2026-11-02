@@ -169,9 +169,10 @@ describe("registro nacional de solicitacao — contrato isolado de backend", () 
     expect(await registrarSolicitacaoDiretaNacional(mock.armazenamento, entrada("inexistente", "chave_00000003")))
       .toEqual({ registrada: false, estado: "servico_nao_permitido", solicitacaoId: null });
     mock.substituirIdGerado("pedido_00000001");
-    await expect(registrarSolicitacaoDiretaNacional(mock.armazenamento, entrada("rede", "chave_00000004")))
-      .rejects.toThrow(/nao e unico/);
+    expect(await registrarSolicitacaoDiretaNacional(mock.armazenamento, entrada("rede", "chave_00000004")))
+      .toEqual({ registrada: false, estado: "id_em_conflito", solicitacaoId: null });
     expect(mock.registros).toHaveLength(1);
+    expect(mock.eventos).toEqual(["pedido_00000001"]);
   });
 
   it("duas requisicoes simultaneas da mesma chave produzem somente uma solicitacao", async () => {
