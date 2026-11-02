@@ -3,6 +3,7 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 import { BlocosRedes4e } from "@/components/redes/BlocosRedes4e";
 import { Link } from "@/lib/router-compat";
 import { PageSEO } from "@/components/PageSEO";
+import { ATENDIMENTO_REMOTO_DESCRIPTION } from "@/lib/atendimentoRemotoSeo";
 import { Header } from "@/components/Header";
 import { BenefitsGrid } from "@/components/BenefitsGrid";
 import { TrustStrip } from "@/components/TrustStrip";
@@ -25,8 +26,7 @@ import { BlocosLocal4c } from "@/components/local/BlocosLocal4c";
 
 const PATH = "/atendimento-remoto";
 const TITLE = "Atendimento Remoto de Informática em Curitiba";
-const DESCRIPTION =
-  "Suporte remoto de informática em Curitiba para configurações, sistema, programas, e-mail, impressora já conectada, orientação e home office.";
+const DESCRIPTION = ATENDIMENTO_REMOTO_DESCRIPTION;
 
 const WHATSAPP_MESSAGE = "Preciso de suporte remoto de informática.";
 
@@ -151,6 +151,7 @@ const AtendimentoRemoto = () => {
       <PageSEO
         title={TITLE}
         description={DESCRIPTION}
+        descriptionInRouteHead
         path={PATH}
         breadcrumbs={[
           { name: "Início", path: "/" },
