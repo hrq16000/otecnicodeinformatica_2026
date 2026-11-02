@@ -102,6 +102,18 @@ const defs: PostDef[] = [
           "Se a causa ainda estiver aberta, veja <a href=\"/diagnostico-tecnico\">como funciona o diagnóstico técnico</a> antes de autorizar troca de peça.",
         ],
       },
+      {
+        h: "6. Registre os sinais antes de decidir o reparo",
+        p: "Faça uma anotação curta sobre o que aconteceu na última inicialização normal e na primeira tentativa que falhou. Inclua se houve queda de energia, tempestade, mudança de tomada, transporte do gabinete, limpeza, instalação de memória ou atualização de firmware. Depois descreva exatamente o comportamento: LEDs apagados, ventoinhas imóveis, ventoinhas ligadas sem imagem, bipes, logotipo da fabricante ou tela de erro. A informação sobre a etapa em que o computador para vale mais do que a impressão genérica de que ele não liga. Fotografar uma mensagem visível ou anotar um padrão de bipes pode ajudar a consulta ao manual do equipamento. Não faça dezenas de tentativas para reproduzir o problema: se ele alterna entre funcionar e falhar, registre a frequência e evite agravar uma possível falha elétrica.",
+      },
+      {
+        h: "7. Tela apagada não prova que a placa-mãe falhou",
+        p: "Quando as luzes do gabinete estão acesas, compare primeiro o estado do monitor: energia, entrada de vídeo selecionada e conexão externa visível, sem desmontar o computador. Um monitor conectado à entrada errada pode simular ausência de inicialização, embora o equipamento esteja funcionando. Já uma mensagem de ausência de dispositivo de boot indica que houve vídeo e execução de firmware, então a hipótese deixa de ser simplesmente falta de energia. Quando for possível, observe se o teclado responde ou se o computador apresenta sons normais de inicialização, mas não interprete um único sinal isolado como diagnóstico definitivo. Em notebooks ou computadores compactos, a avaliação das saídas disponíveis e da alimentação também exige respeitar as instruções do fabricante. Cabos ou conectores com sinais de dano não devem ser manipulados durante a tentativa de ligar.",
+      },
+      {
+        h: "8. Proteja os arquivos antes de autorizar substituições",
+        p: "Uma falha de energia ou vídeo não significa automaticamente que o SSD ou HD perdeu os dados. Antes de aceitar formatação, instalação de sistema ou troca de armazenamento, informe ao técnico se existem arquivos únicos e se há uma cópia recuperável em outro dispositivo. Se a máquina exibe sinais de armazenamento defeituoso, ruídos incomuns ou erros recorrentes, interrompa tentativas de reparo por software sem avaliar o risco de perda. O orçamento deve diferenciar claramente diagnóstico, peça proposta, serviço e testes de entrega. Peça que o resultado de cada verificação seja registrado, mesmo quando nenhuma peça precisar ser substituída. Esse histórico evita repetir procedimentos em uma segunda visita e ajuda a escolher entre reparo, recuperação de dados e substituição do equipamento com critérios observáveis, não suposições.",
+      },
     ],
     whenToCall:
       "Interrompa as tentativas e procure avaliação quando houver cheiro de queimado, estalo elétrico, líquido, componente visivelmente danificado, fonte que arma e desarma repetidamente ou quando o equipamento contiver dados importantes e o comportamento mudar a cada tentativa. Esses sinais pedem medição e inspeção controlada, não troca de peça por tentativa.",
@@ -219,6 +231,18 @@ const defs: PostDef[] = [
           "Roteiro passo a passo: <a href=\"/ferramentas/roteiro-wifi-instavel\">ferramenta de diagnóstico de Wi-Fi instável</a>.",
           "Cobertura, configuração e rede local: <a href=\"/servicos/redes-e-wifi\">serviço de redes e Wi-Fi</a>.",
         ],
+      },
+      {
+        h: "6. Monte um diário simples das quedas",
+        p: "Durante dois ou três episódios, anote o horário, o cômodo, o equipamento afetado e o que continuou funcionando. Separe quatro situações: conectado ao Wi-Fi e sem Internet; desconectado da rede; roteador reiniciando; e apenas um aplicativo apresentando erro. Verifique, quando possível, se outro aparelho próximo apresenta a mesma falha e se um dispositivo conectado por cabo mantém o acesso. Uma chamada de vídeo pode falhar mesmo quando sites pequenos ainda carregam, por isso descreva a atividade afetada em vez de concluir que toda a Internet caiu. Se houver equipamento corporativo ou rede de convidados, confirme em qual rede o teste ocorreu. Esse diário permite comparar períodos de maior uso, barreiras físicas e mudanças de configuração sem precisar reiniciar a infraestrutura repetidamente.",
+      },
+      {
+        h: "7. Evite configurações que escondem a causa",
+        p: "Trocar simultaneamente nome da rede, senha, canal, banda, segurança e posicionamento impede descobrir qual mudança realmente ajudou. Faça uma alteração por vez, registre o valor anterior e teste novamente no mesmo local e com o mesmo aparelho. Não desative recursos de segurança nem use criptografia antiga para contornar falhas de compatibilidade sem uma avaliação fundamentada. Em ambientes com redes mesh ou repetidores, observe se a queda aparece durante o deslocamento entre cômodos ou também com o aparelho parado perto de um ponto de acesso. A diferença entre perda de sinal e perda de rota para a Internet deve ser verificada antes de comprar equipamentos. Se a configuração for administrada por condomínio, empresa ou provedor, peça orientação ao responsável antes de redefinir o aparelho.",
+      },
+      {
+        h: "8. Quando vale envolver o provedor ou o suporte local",
+        p: "Se a rede cabeada também deixa de funcionar, registre os indicadores do modem ou terminal óptico e procure o provedor para verificar ocorrências e estabilidade do link. Se apenas um dispositivo perde a conexão, investigue atualização de driver e economia de energia com procedimentos oficiais do sistema, preservando configurações que já funcionavam. Se a rede falha apenas em regiões distantes, a solução pode exigir estudo de posicionamento ou cobertura, não necessariamente troca do plano de Internet. Antes de contratar uma intervenção, apresente as comparações realizadas e pergunte como serão medidos sinal, latência e estabilidade depois do ajuste. Não confunda velocidade de download obtida em um teste isolado com qualidade de conexão durante o dia inteiro; estabilidade e perda de pacotes podem ser mais relevantes.",
       },
     ],
     whenToCall:
@@ -372,6 +396,18 @@ const defs: PostDef[] = [
           "Registre qual conta, dispositivo e método foram usados para restaurar; isso reduz improviso quando houver uma perda real.",
           "Use também o roteiro <a href=\"/blog/como-testar-restauracao-de-backup\">como testar a restauração de um backup</a>.",
         ],
+      },
+      {
+        h: "6. Defina o alcance e a frequência da cópia",
+        p: "Separe os arquivos por prioridade de recuperação. Documentos que mudam diariamente exigem um intervalo de cópia diferente de fotos antigas ou materiais arquivados. Anote quais pastas, aplicativos e dispositivos produzem dados importantes e confirme se o serviço realmente os inclui; uma pasta sincronizada não protege automaticamente tudo que está salvo no computador. Para contas utilizadas por mais de uma pessoa, estabeleça quem pode apagar, compartilhar e restaurar arquivos, sem divulgar senhas. Verifique também se há limitações de tamanho de arquivo, espaço disponível e políticas de retenção, consultando as informações atuais do próprio provedor. Faça um teste com um arquivo sem informações pessoais para conhecer o fluxo de envio e recuperação antes de confiar documentos essenciais à configuração.",
+      },
+      {
+        h: "7. Planeje recuperação de conta e incidente de segurança",
+        p: "O backup pode estar íntegro e ainda assim inacessível quando a pessoa perde acesso à conta. Configure autenticação em dois fatores e guarde os códigos de recuperação ou outro método aprovado pelo serviço fora do equipamento principal. Evite manter a única cópia das credenciais dentro da mesma conta que você pretende recuperar. Para equipes, defina um responsável e procedimentos de autorização, sem compartilhar senhas em mensagens. Se houver suspeita de malware ou sequestro de conta, não conecte imediatamente uma cópia limpa ao equipamento comprometido: primeiro interrompa a propagação e avalie a segurança do ambiente. Históricos de versões e cópias desconectadas ajudam a diferenciar uma exclusão acidental de um problema generalizado, mas sua eficácia depende das políticas e do prazo de retenção contratados.",
+      },
+      {
+        h: "8. Faça um ensaio de restauração documentado",
+        p: "Escolha amostras com características distintas: um documento pequeno, um conjunto de fotos e um arquivo de maior tamanho. Restaure tudo em uma pasta alternativa e abra os itens com os aplicativos adequados, conferindo conteúdo, nomes e organização. Registre o tempo necessário, a versão restaurada e o caminho usado para recuperar cada material, sem incluir credenciais no relatório. Se for possível, repita o ensaio em outro dispositivo autorizado para confirmar que a cópia não depende exclusivamente do computador de origem. Uma lista simples com data, resultado e limitações conhecidas é mais útil do que afirmar que os dados estão seguros apenas porque o serviço mostra um ícone de sincronização. Se o teste falhar, mantenha a origem preservada e corrija o processo antes de apagar qualquer arquivo.",
       },
     ],
     whenToCall:
