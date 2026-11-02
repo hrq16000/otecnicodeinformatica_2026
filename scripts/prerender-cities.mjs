@@ -406,10 +406,19 @@ export async function getBlogPosts(rootDir = ".") {
   const duplicates = [];
 
   // --- Base manual (blogPostsContentBase) ---
+  // Runtime precedence: base < supplemental < programmatic.
+  // Suplementares revisados prevalecem no SSR, como em BlogPost.tsx.
+  const supplementalPath = path.join(rootDir, "src/data/blogSupplementalPosts.tsx");
+  const supplementalSrc = await fs.readFile(supplementalPath, "utf8");
+  const supplementalEntryRe = /^  "([a-z0-9-]+)":\s*\{/gm;
+  const supplementalMatches = [...supplementalSrc.matchAll(supplementalEntryRe)];
+  const supplementalOwners = new Set(supplementalMatches.map((m) => m[1]));
+
   const basePath = path.join(rootDir, "src/data/blogPostsContent.tsx");
   const baseSrc = await fs.readFile(basePath, "utf8");
   const entryRe = /^  "([a-z0-9-]+)":\s*\{/gm;
   const matches = [...baseSrc.matchAll(entryRe)];
+  const baseSeen = new Set();
   for (let i = 0; i < matches.length; i++) {
     const slug = matches[i][1];
     const start = matches[i].index;
@@ -421,6 +430,11 @@ export async function getBlogPosts(rootDir = ".") {
     const category = extractField(block, "category");
     const readTime = extractField(block, "readTime");
     if (!title) continue;
+    // Duplicatas no mesmo acervo continuam bloqueantes.
+    if (baseSeen.has(slug)) { duplicates.push(slug); continue; }
+    baseSeen.add(slug);
+    // A versao suplementar e o owner publico no BlogPost (mesmo URL).
+    if (supplementalOwners.has(slug)) continue;
     if (seen.has(slug)) { duplicates.push(slug); continue; }
     seen.add(slug);
     posts.push({
@@ -436,10 +450,6 @@ export async function getBlogPosts(rootDir = ".") {
 
 
   // --- Suplementares manuais (blogSupplementalPosts) ---
-  const supplementalPath = path.join(rootDir, "src/data/blogSupplementalPosts.tsx");
-  const supplementalSrc = await fs.readFile(supplementalPath, "utf8");
-  const supplementalEntryRe = /^  "([a-z0-9-]+)":\s*\{/gm;
-  const supplementalMatches = [...supplementalSrc.matchAll(supplementalEntryRe)];
   for (let i = 0; i < supplementalMatches.length; i++) {
     const slug = supplementalMatches[i][1];
     const start = supplementalMatches[i].index;
