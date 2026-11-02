@@ -1,6 +1,7 @@
 import { test, expect, type Page } from "@playwright/test";
 import { readFileSync } from "node:fs";
 import { join } from "node:path";
+import { WHATSAPP_NUMBER } from "./site-env";
 
 const ROUTE = "/termos-e-condicoes";
 
@@ -38,8 +39,10 @@ test.describe("/termos-e-condicoes — schema, canonical, single H1, sitemap con
     // LocalBusiness: Curitiba in areaServed, telephone matches WhatsApp, no postal address
     const area = JSON.stringify((localBusiness as { areaServed?: unknown }).areaServed || "");
     expect(area.toLowerCase()).toContain("curitiba");
-    expect((localBusiness as { telephone?: string }).telephone).toMatch(/\+?55.*4197452053/);
-    expect(JSON.stringify(localBusiness)).not.toMatch(/PostalAddress|streetAddress/i);
+    expect(WHATSAPP_NUMBER, "contato oficial deve estar configurado").toMatch(/^\d{12,15}$/);
+    expect((localBusiness as { telephone?: string }).telephone).toBe(`+${WHATSAPP_NUMBER}`);
+    // Cidade/UF são permitidas; nunca inventar endereço físico.
+    expect(JSON.stringify(localBusiness)).not.toMatch(/streetAddress/i);
 
     // FAQPage: minimum 5 questions
     const mainEntity = (faq as { mainEntity?: Array<{ name?: string; acceptedAnswer?: { text?: string } }> }).mainEntity || [];
@@ -52,7 +55,8 @@ test.describe("/termos-e-condicoes — schema, canonical, single H1, sitemap con
     // BreadcrumbList: at least 2 items, last item matches canonical
     const items = (breadcrumb as { itemListElement?: Array<{ item?: string }> }).itemListElement || [];
     expect(items.length).toBeGreaterThanOrEqual(2);
-    expect(items[items.length - 1].item).toContain("/termos-e-condicoes");
+    // Alias público: breadcrumb deve apontar à página canônica curada.
+    expect(items[items.length - 1].item).toContain("/precos-e-politicas");
   });
 
   test("single H1 + correct canonical + SEO meta tags", async ({ page }) => {
@@ -63,12 +67,12 @@ test.describe("/termos-e-condicoes — schema, canonical, single H1, sitemap con
     await expect(h1).toHaveCount(1);
 
     const canonical = await page.locator('head link[rel="canonical"]').getAttribute("href");
-    expect(canonical).toContain("/termos-e-condicoes");
+    expect(canonical).toContain("/precos-e-politicas");
 
     await expect(page).toHaveTitle(/Termos.*Condi[çc]/i);
 
     const description = await page.locator('head meta[name="description"]').getAttribute("content");
-    expect(description || "").toMatch(/R\$\s?90/);
+    expect(description || "").toMatch(/R\$\s?99/);
     expect(description || "").toMatch(/R\$\s?99/);
 
     const ogTitle = await page.locator('head meta[property="og:title"]').getAttribute("content");
@@ -77,10 +81,11 @@ test.describe("/termos-e-condicoes — schema, canonical, single H1, sitemap con
     expect(twTitle).toBeTruthy();
   });
 
-  test("sitemap.xml contains /termos-e-condicoes", async () => {
+  test("sitemap.xml includes canonical policy route, excludes the alias", async () => {
     const sitemapPath = join(process.cwd(), "public", "sitemap.xml");
     const xml = readFileSync(sitemapPath, "utf8");
-    expect(xml).toContain("/termos-e-condicoes");
+    expect(xml).toContain("/precos-e-politicas");
+    expect(xml).not.toContain("<loc>https://otecnicodeinformatica.com.br/termos-e-condicoes</loc>");
   });
 
   test("h1 does not overflow on mobile and desktop", async ({ page }) => {
