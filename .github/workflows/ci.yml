@@ -162,7 +162,9 @@ jobs:
   e2e:
     runs-on: ubuntu-latest
     timeout-minutes: 20
-    needs: build
+    # E2E possui build proprio; pode diagnosticar independentemente do gate
+    # de observabilidade do build principal. Ambos seguem obrigatorios.
+    needs: unit
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
