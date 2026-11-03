@@ -136,9 +136,18 @@ jobs:
         run: node scripts/with-ssr-server.mjs npm run check:local-interlinking
       - name: Gate de saúde de indexação (rotas + aliases)
         run: |
-          npx vite preview --port 4321 --strictPort &
-          for i in $(seq 1 60); do curl -sf -o /dev/null http://localhost:4321/ && break; sleep 1; done
-          node scripts/check-index-health.mjs --base=http://localhost:4321 --strict
+          set -euo pipefail
+          test -f dist/server/wrangler.json
+          npx --yes wrangler@4.45.4 dev --config dist/server/wrangler.json --local --ip 127.0.0.1 --port 4321 > /tmp/ci-index-worker.log 2>&1 &
+          worker_pid=$!
+          trap 'kill "$worker_pid" 2>/dev/null || true' EXIT
+          ready=0
+          for i in $(seq 1 60); do
+            if curl -fsS -o /dev/null http://127.0.0.1:4321/; then ready=1; break; fi
+            sleep 1
+          done
+          if [ "$ready" != "1" ]; then cat /tmp/ci-index-worker.log; exit 1; fi
+          node scripts/check-index-health.mjs --base=http://127.0.0.1:4321 --strict
       - name: Relatório HTML de auditoria local
         run: npm run report:local-audit
 
