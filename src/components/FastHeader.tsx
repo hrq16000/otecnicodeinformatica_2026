@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState, type KeyboardEvent as ReactKeyboardEvent } from "react";
+import { lazy, Suspense, useEffect, useRef, useState, type KeyboardEvent as ReactKeyboardEvent } from "react";
 import {
   Menu,
   X,
@@ -19,7 +19,7 @@ import {
 import { whatsappLink } from "@/lib/siteConfig";
 import { brandConfig } from "@/lib/config";
 import { MegaMenu, type MegaGrupo } from "@/components/MegaMenu";
-import ComunidadeSocialProof from "@/components/nacional/ComunidadeSocialProof";
+const ComunidadeSocialProof = lazy(() => import("@/components/nacional/ComunidadeSocialProof"));
 
 const WA_SCHEDULE = whatsappLink("Olá! Quero agendar um atendimento técnico.");
 
@@ -206,6 +206,12 @@ const megaGrupos: MegaGrupo[] = [
 
 export const FastHeader = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [mostrarProva, setMostrarProva] = useState(false);
+  // Conteúdo social não essencial fica fora do bundle inicial/LCP.
+  useEffect(() => {
+    const id = window.setTimeout(() => setMostrarProva(true), 5000);
+    return () => window.clearTimeout(id);
+  }, []);
   const menuRef = useRef<HTMLDivElement | null>(null);
   const buttonRef = useRef<HTMLButtonElement | null>(null);
   const listRef = useRef<HTMLDivElement | null>(null);
@@ -412,7 +418,11 @@ export const FastHeader = () => {
           </div>
         </div>
       </div>
-      <ComunidadeSocialProof />
+      {mostrarProva && (
+        <Suspense fallback={null}>
+          <ComunidadeSocialProof />
+        </Suspense>
+      )}
     </header>
   );
 };
