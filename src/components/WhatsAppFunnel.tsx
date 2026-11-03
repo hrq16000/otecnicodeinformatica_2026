@@ -1,10 +1,12 @@
-import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState, type ComponentType } from "react";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
 import { Checkbox } from "@/components/ui/checkbox";
-import * as Icons from "lucide-react";
-import { ArrowRight, ArrowLeft, CheckCircle2, Lock, MessageCircle, Copy, ExternalLink } from "lucide-react";
+import {
+  ArrowRight, ArrowLeft, CheckCircle2, Lock, MessageCircle, Copy, ExternalLink,
+  Laptop, Tv, Smartphone, TabletSmartphone, Speaker, Gamepad2, HelpCircle,
+} from "lucide-react";
 import { trackCTAClick } from "@/lib/analytics";
 import {
   trackFunnelOpen,
@@ -85,6 +87,12 @@ import {
 } from "@/lib/funnel/triageMachine";
 import { setErrorContext } from "@/lib/errorReporter";
 
+
+// Mapa fechado: apenas os sete ícones realmente usados no catálogo.
+// Evita importar o namespace inteiro de lucide-react para o bundle do funil.
+const EQUIPMENT_ICONS: Record<string, ComponentType<{ className?: string }>> = {
+  Laptop, Tv, Smartphone, TabletSmartphone, Speaker, Gamepad2, HelpCircle,
+};
 
 const WA_HOSTS = ["wa.me", "api.whatsapp.com"];
 const REDUCED_MOTION =
@@ -1065,7 +1073,7 @@ export const WhatsAppFunnel = () => {
                     <p className="text-sm font-medium">Qual o equipamento?</p>
                     <div className="grid grid-cols-2 gap-2 sm:grid-cols-3">
                       {EQUIPMENTS.map((eq) => {
-                        const Icon = (Icons[eq.icon as keyof typeof Icons] || Icons.HelpCircle) as React.ComponentType<{ className?: string }>;
+                        const Icon = EQUIPMENT_ICONS[eq.icon] || HelpCircle;
                         const active = answers.equipment === eq.id;
                         return (
                           <button
