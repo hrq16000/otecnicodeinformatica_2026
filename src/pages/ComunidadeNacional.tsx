@@ -105,10 +105,10 @@ export default function ComunidadeNacional() {
               <aside className="rounded-3xl border border-border bg-background p-7 lg:col-span-2">
                 <p className="text-sm font-semibold uppercase tracking-wide text-muted-foreground">Crescimento da comunidade</p>
                 <p className="mt-2 font-heading text-5xl font-bold text-primary">
-                  {COMUNIDADE_RESUMO.membrosInformadosMaisDe}+
+                  {COMUNIDADE_RESUMO.membrosInformadosMaisDe}
                 </p>
                 <p className="mt-2 text-sm text-muted-foreground">
-                  integrantes, segundo informação da administração em {COMUNIDADE_RESUMO.atualizadoEm}.
+                  membros exibidos na captura do grupo em {COMUNIDADE_RESUMO.atualizadoEm}.
                   Membros do grupo não equivalem a técnicos cadastrados, validados ou disponíveis.
                 </p>
                 <div className="mt-6 border-t border-border pt-5">
@@ -127,7 +127,7 @@ export default function ComunidadeNacional() {
           <div className="mb-8 max-w-3xl">
             <h2 className="font-heading text-3xl font-bold text-foreground">Mapa da comunidade pelo Brasil</h2>
             <p className="mt-3 leading-relaxed text-muted-foreground">
-              Cada ponto representa um DDD identificado em evidência da comunidade, não um
+              Cada ponto representa um DDD identificado nas capturas da comunidade, não um
               profissional pronto para atender. O DDD indica a área de numeração telefônica
               e não comprova a cidade onde o integrante mora ou trabalha atualmente.
             </p>
