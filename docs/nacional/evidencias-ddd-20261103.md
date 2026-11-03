@@ -38,7 +38,7 @@
 3. O ZIP contém mensagens **“deseja entrar no grupo”**. Segundo o administrador,
    esses pedidos foram aceitos; ainda assim, qualquer DDD visto apenas em citações
    do histórico não deve ser anunciado como presença ativa individual.
-4. Nunca adicionar 17 DDDs históricos como pinos de “técnicos disponíveis” ou
+4. Nunca adicionar 15 DDDs históricos como pinos de “técnicos disponíveis” ou
    acionar o social proof por eles.
 5. Sem números individuais nem integração com o WhatsApp Group API, não há
    atualização automática da relação de membros; atualizar o agregado somente
