@@ -44,6 +44,7 @@ const mobileExtra: NavItem[] = [
   { label: "Atendimento a domicílio", href: "/atendimento-domicilio", icon: Home },
   { label: "Atendimento remoto", href: "/atendimento-remoto", icon: MonitorSmartphone },
   { label: "Profissionais parceiros", href: "/profissionais", icon: Users },
+  { label: "Comunidade nacional gratuita", href: "/comunidade-nacional", icon: Users },
   { label: "Valorização do trabalho técnico", href: "/valorizacao-do-trabalho-tecnico", icon: Info },
   { label: "Sobre", href: "/sobre", icon: Info },
 ];
@@ -173,6 +174,7 @@ const megaGrupos: MegaGrupo[] = [
         titulo: "Rede de parceiros",
         links: [
           { label: "Encontrar profissional", href: "/profissionais" },
+          { label: "Comunidade nacional e mapa DDD", href: "/comunidade-nacional" },
           { label: "Quero fazer parte da rede", href: "/profissionais/cadastro" },
           { label: "Valorização do trabalho técnico", href: "/valorizacao-do-trabalho-tecnico" },
         ],
