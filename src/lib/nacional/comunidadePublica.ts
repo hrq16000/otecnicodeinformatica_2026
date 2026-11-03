@@ -15,9 +15,299 @@ export type RegiaoComunidade = {
   revisadoEm: string;
 };
 
-// Populado somente após análise dos anexos do responsável.
-// Lista vazia é intencional: impede inventar cobertura antes das provas.
-export const REGIOES_COMUNIDADE: readonly RegiaoComunidade[] = [];
+/**
+ * DDDs observados nas 9 capturas encaminhadas em 03/11/2026.
+ * Cada cidade é um POLO DE REFERÊNCIA da área DDD, nunca domicílio de membro.
+ * O lote é deduplicado por DDD, não mede profissionais disponíveis.
+ */
+const DDD_CAPTURAS_20261103: readonly (readonly [string, string, string, string, number, number])[] = [
+  [
+    "11",
+    "SP",
+    "São Paulo",
+    "São Paulo",
+    -23.5505,
+    -46.6333
+  ],
+  [
+    "12",
+    "SP",
+    "São Paulo",
+    "São José dos Campos",
+    -23.1896,
+    -45.8841
+  ],
+  [
+    "13",
+    "SP",
+    "São Paulo",
+    "Santos",
+    -23.9608,
+    -46.3336
+  ],
+  [
+    "14",
+    "SP",
+    "São Paulo",
+    "Bauru",
+    -22.3246,
+    -49.0871
+  ],
+  [
+    "16",
+    "SP",
+    "São Paulo",
+    "Ribeirão Preto",
+    -21.1704,
+    -47.8103
+  ],
+  [
+    "17",
+    "SP",
+    "São Paulo",
+    "São José do Rio Preto",
+    -20.8197,
+    -49.3794
+  ],
+  [
+    "18",
+    "SP",
+    "São Paulo",
+    "Presidente Prudente",
+    -22.1256,
+    -51.3889
+  ],
+  [
+    "21",
+    "RJ",
+    "Rio de Janeiro",
+    "Rio de Janeiro",
+    -22.9068,
+    -43.1729
+  ],
+  [
+    "22",
+    "RJ",
+    "Rio de Janeiro",
+    "Campos dos Goytacazes",
+    -21.761,
+    -41.318
+  ],
+  [
+    "27",
+    "ES",
+    "Espírito Santo",
+    "Vitória",
+    -20.3155,
+    -40.3128
+  ],
+  [
+    "31",
+    "MG",
+    "Minas Gerais",
+    "Belo Horizonte",
+    -19.9167,
+    -43.9345
+  ],
+  [
+    "33",
+    "MG",
+    "Minas Gerais",
+    "Governador Valadares",
+    -18.855,
+    -41.955
+  ],
+  [
+    "34",
+    "MG",
+    "Minas Gerais",
+    "Uberlândia",
+    -18.9186,
+    -48.2772
+  ],
+  [
+    "35",
+    "MG",
+    "Minas Gerais",
+    "Poços de Caldas",
+    -21.787,
+    -46.562
+  ],
+  [
+    "37",
+    "MG",
+    "Minas Gerais",
+    "Divinópolis",
+    -20.1435,
+    -44.891
+  ],
+  [
+    "41",
+    "PR",
+    "Paraná",
+    "Curitiba",
+    -25.4284,
+    -49.2733
+  ],
+  [
+    "42",
+    "PR",
+    "Paraná",
+    "Ponta Grossa",
+    -25.095,
+    -50.1619
+  ],
+  [
+    "47",
+    "SC",
+    "Santa Catarina",
+    "Joinville",
+    -26.3044,
+    -48.8464
+  ],
+  [
+    "48",
+    "SC",
+    "Santa Catarina",
+    "Florianópolis",
+    -27.5954,
+    -48.548
+  ],
+  [
+    "51",
+    "RS",
+    "Rio Grande do Sul",
+    "Porto Alegre",
+    -30.0346,
+    -51.2177
+  ],
+  [
+    "61",
+    "DF",
+    "Distrito Federal",
+    "Brasília",
+    -15.7939,
+    -47.8828
+  ],
+  [
+    "62",
+    "GO",
+    "Goiás",
+    "Goiânia",
+    -16.6869,
+    -49.2648
+  ],
+  [
+    "66",
+    "MT",
+    "Mato Grosso",
+    "Rondonópolis",
+    -16.47,
+    -54.635
+  ],
+  [
+    "71",
+    "BA",
+    "Bahia",
+    "Salvador",
+    -12.9714,
+    -38.5014
+  ],
+  [
+    "73",
+    "BA",
+    "Bahia",
+    "Ilhéus",
+    -14.7889,
+    -39.0489
+  ],
+  [
+    "75",
+    "BA",
+    "Bahia",
+    "Feira de Santana",
+    -12.266,
+    -38.9663
+  ],
+  [
+    "77",
+    "BA",
+    "Bahia",
+    "Vitória da Conquista",
+    -14.8619,
+    -40.844
+  ],
+  [
+    "81",
+    "PE",
+    "Pernambuco",
+    "Recife",
+    -8.0476,
+    -34.877
+  ],
+  [
+    "84",
+    "RN",
+    "Rio Grande do Norte",
+    "Natal",
+    -5.7945,
+    -35.211
+  ],
+  [
+    "85",
+    "CE",
+    "Ceará",
+    "Fortaleza",
+    -3.7319,
+    -38.5267
+  ],
+  [
+    "88",
+    "CE",
+    "Ceará",
+    "Juazeiro do Norte",
+    -7.2131,
+    -39.3153
+  ],
+  [
+    "89",
+    "PI",
+    "Piauí",
+    "Picos",
+    -7.076,
+    -41.467
+  ],
+  [
+    "91",
+    "PA",
+    "Pará",
+    "Belém",
+    -1.4558,
+    -48.4902
+  ],
+  [
+    "94",
+    "PA",
+    "Pará",
+    "Marabá",
+    -5.381,
+    -49.132
+  ],
+  [
+    "98",
+    "MA",
+    "Maranhão",
+    "São Luís",
+    -2.5297,
+    -44.3028
+  ]
+];
+
+export const REGIOES_COMUNIDADE: readonly RegiaoComunidade[] = DDD_CAPTURAS_20261103.map(
+  ([ddd, uf, estado, cidadeReferencia, latitude, longitude]) => ({
+    ddd, uf, estado, cidadeReferencia, latitude, longitude, revisadoEm: "03/11/2026",
+  }),
+);
 
 export const COMUNIDADE_RESUMO = {
   membrosInformadosMaisDe: 400,
