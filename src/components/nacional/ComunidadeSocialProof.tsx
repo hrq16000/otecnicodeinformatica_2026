@@ -63,8 +63,10 @@ export default function ComunidadeSocialProof() {
         Isso não confirma a localização nem a disponibilidade atual de um profissional.
       </p>
       <p className="mt-2 text-sm text-muted-foreground">
-        Serviço rápido programado: referência de R$ 159,99, incluindo
-        R$ { (commercialConfig.comunidadeNacional.taxaClienteCentavos / 100).toFixed(2).replace(".", ",") }
+        Serviço rápido programado: referência de{" "}
+        {new Intl.NumberFormat("pt-BR", { style: "currency", currency: "BRL" }).format(commercialConfig.comunidadeNacional.atendimentoProgramadoCentavos / 100)},
+        incluindo{" "}
+        {new Intl.NumberFormat("pt-BR", { style: "currency", currency: "BRL" }).format(commercialConfig.comunidadeNacional.taxaClienteCentavos / 100)}
         de taxa da plataforma. Negociação direta e livre, sujeita à confirmação.
       </p>
       <a href="/comunidade-nacional" onClick={ocultar}
