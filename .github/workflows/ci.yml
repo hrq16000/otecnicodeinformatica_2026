@@ -258,6 +258,9 @@ jobs:
         with:
           node-version: "22"
           cache: npm
+      - uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: 1.4.2
       - name: Install deps
         run: npm ci --no-audit --no-fund
       - name: Install Playwright browser (${{ matrix.browser }})
@@ -265,10 +268,14 @@ jobs:
         run: npx playwright install --with-deps ${{ matrix.browser }}
       - name: Build (uma única vez por job)
         run: npm run build
-      - name: Start preview
-        run: npx vite preview --port 8080 &
-      - name: Wait for server (healthcheck HTTP)
-        run: npx wait-on http-get://localhost:8080/ --timeout 90000
+      - name: Start Cloudflare SSR worker
+        run: npx --yes wrangler@4.45.4 dev --config dist/server/wrangler.json --local --ip 127.0.0.1 --port 8080 > /tmp/ci-matrix-worker.log 2>&1 &
+      - name: Wait for SSR server (HTTP 200 mandatory)
+        run: |
+          if ! npx wait-on http-get://127.0.0.1:8080/ --timeout 90000; then
+            cat /tmp/ci-matrix-worker.log
+            exit 1
+          fi
       - name: Run shard ${{ matrix.shard }}/${{ matrix.totalShards }} (${{ matrix.browser }})
         run: npx playwright test --config=playwright.ci.config.ts --shard=${{ matrix.shard }}/${{ matrix.totalShards }}
         env:
@@ -399,6 +406,9 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: "22"
+      - uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: 1.4.2
       - name: Install deps
         run: npm ci --no-audit --no-fund
       - name: Install Lighthouse CI
