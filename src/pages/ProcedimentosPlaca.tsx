@@ -130,9 +130,9 @@ const ProcedimentosPlaca = () => {
                     {PROCEDIMENTOS.map((p) => (
                       <tr key={p.slug} className="border-b border-border/50 hover:bg-muted/30 transition-colors">
                         <td className="py-2.5 px-3 font-medium text-foreground">
-                          <Link to={`/procedimentos/${p.slug}`} className="hover:text-accent transition-colors">
+                          <a href={`#${p.slug}`} className="hover:text-accent transition-colors">
                             {p.title}
-                          </Link>
+                          </a>
                         </td>
                         <td className="py-2.5 px-3 text-muted-foreground">{p.preco}</td>
                         <td className="py-2.5 px-3 text-muted-foreground">{p.garantia}</td>
@@ -153,7 +153,7 @@ const ProcedimentosPlaca = () => {
               const Icon = proc.icon;
               return (
                 <AnimatedSection key={proc.slug} delay={0.1 * (i + 1)}>
-                  <div className="glass-card gradient-border rounded-xl p-6 md:p-8 hover:shadow-lg transition-shadow">
+                  <div id={proc.slug} className="glass-card gradient-border rounded-xl p-6 md:p-8 hover:shadow-lg transition-shadow scroll-mt-24">
                     <div className="flex flex-col md:flex-row gap-6">
                       <div className="flex-shrink-0">
                         <div className="w-14 h-14 rounded-xl bg-accent/10 flex items-center justify-center">
@@ -173,11 +173,11 @@ const ProcedimentosPlaca = () => {
                         <p className="text-sm text-muted-foreground">
                           <strong className="text-foreground">Indicado para:</strong> {proc.indicacao}
                         </p>
-                        <Link to={`/procedimentos/${proc.slug}`}>
+                        <a href="#contato-procedimentos">
                           <Button variant="outline" size="sm" className="gap-2 mt-2">
-                            Saiba mais <ArrowRight className="h-3.5 w-3.5" />
+                            Solicitar avaliação <ArrowRight className="h-3.5 w-3.5" />
                           </Button>
-                        </Link>
+                        </a>
                       </div>
                     </div>
                   </div>
@@ -188,7 +188,7 @@ const ProcedimentosPlaca = () => {
 
           {/* CTA */}
           <AnimatedSection delay={0.6}>
-            <div className="mt-12 glass-card rounded-xl p-8 text-center space-y-4 bg-accent/5">
+            <div id="contato-procedimentos" className="mt-12 glass-card rounded-xl p-8 text-center space-y-4 bg-accent/5 scroll-mt-24">
               <h2 className="text-xl font-bold text-foreground">
                 Não sabe qual procedimento seu equipamento precisa?
               </h2>
