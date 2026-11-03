@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
 import { MapPin, Users, CheckCircle2, Info, ArrowRight, ShieldCheck, Search } from "lucide-react";
 import { PageSEO } from "@/components/PageSEO";
+import HistoricoDDDs from "@/components/nacional/HistoricoDDDs";
 import { FastHeader } from "@/components/FastHeader";
 import { Footer } from "@/components/Footer";
 import { Link } from "@/lib/router-compat";
@@ -217,6 +218,8 @@ export default function ComunidadeNacional() {
             </div>
           </div>
         </section>
+
+        <HistoricoDDDs />
 
         <section className="border-y border-border bg-card py-14">
           <div className="container mx-auto max-w-6xl">
