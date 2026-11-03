@@ -16,7 +16,7 @@ export type RegiaoComunidade = {
 };
 
 /**
- * DDDs observados nas 9 capturas encaminhadas em 03/11/2026.
+ * DDDs observados nas 11 capturas encaminhadas em 03/11/2026.
  * Cada cidade é um POLO DE REFERÊNCIA da área DDD, nunca domicílio de membro.
  * O lote é deduplicado por DDD, não mede profissionais disponíveis.
  */
@@ -76,6 +76,22 @@ const DDD_CAPTURAS_20261103: readonly (readonly [string, string, string, string,
     "Presidente Prudente",
     -22.1256,
     -51.3889
+  ],
+  [
+    "19",
+    "SP",
+    "São Paulo",
+    "Campinas",
+    -22.9056,
+    -47.0608
+  ],
+  [
+    "28",
+    "ES",
+    "Espírito Santo",
+    "Cachoeiro de Itapemirim",
+    -20.8489,
+    -41.1128
   ],
   [
     "21",
@@ -310,10 +326,11 @@ export const REGIOES_COMUNIDADE: readonly RegiaoComunidade[] = DDD_CAPTURAS_2026
 );
 
 /**
- * DDDs adicionais encontrados no ZIP de conversas (até 03/11/2026).
- * O histórico inclui solicitações de entrada: isto NÃO comprova participação
- * efetiva, cadastro, validação, localização nem disponibilidade.
- * Exibir apenas em seção de HISTÓRICO, nunca como cobertura ou prova social.
+ * DDDs adicionais encontrados somente no ZIP (até 03/11/2026).
+ * O administrador confirmou que os pedidos de entrada foram aceitos.
+ * Ainda assim, menções de números no histórico não comprovam que cada pessoa
+ * permanece no grupo, esteja cadastrada, localizada ou disponível.
+ * Exibir separadamente da camada de DDDs vistos nas capturas.
  */
 export const DDD_SOMENTE_HISTORICO: readonly {
   ddd: string;
@@ -326,19 +343,9 @@ export const DDD_SOMENTE_HISTORICO: readonly {
     "poloReferencia": "Sorocaba"
   },
   {
-    "ddd": "19",
-    "uf": "SP",
-    "poloReferencia": "Campinas"
-  },
-  {
     "ddd": "24",
     "uf": "RJ",
     "poloReferencia": "Volta Redonda"
-  },
-  {
-    "ddd": "28",
-    "uf": "ES",
-    "poloReferencia": "Cachoeiro de Itapemirim"
   },
   {
     "ddd": "32",
@@ -408,7 +415,7 @@ export const DDD_SOMENTE_HISTORICO: readonly {
 ];
 
 export const COMUNIDADE_RESUMO = {
-  membrosInformadosMaisDe: 400,
+  membrosInformadosMaisDe: 416,
   atualizadoEm: "03/11/2026",
   grupoWhatsApp: "https://chat.whatsapp.com/KUki7iAKg2f5ahsGfn4Su5",
 } as const;
