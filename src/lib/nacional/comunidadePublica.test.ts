@@ -6,9 +6,14 @@ import {
   regioesPublicaveis,
   regioesPorUf,
   ufDaRegiao,
+  COMUNIDADE_RESUMO,
 } from "./comunidadePublica";
 
 describe("comunidade nacional", () => {
+  it("exibe os 416 membros da captura mais recente", () => {
+    expect(COMUNIDADE_RESUMO.membrosInformadosMaisDe).toBe(416);
+  });
+
   it("converte nomes de estados e siglas retornados pelo IP", () => {
     expect(ufDaRegiao("Paraná")).toBe("PR");
     expect(ufDaRegiao("BR-SP")).toBe("SP");
@@ -17,10 +22,10 @@ describe("comunidade nacional", () => {
   });
 
   it("não inventa profissionais quando não há DDD público confirmado", () => {
-    expect(regioesPublicaveis().length).toBe(35);
-    expect(DDD_SOMENTE_HISTORICO.length).toBe(17);
+    expect(regioesPublicaveis().length).toBe(37);
+    expect(DDD_SOMENTE_HISTORICO.length).toBe(15);
     const dddsConfirmados = new Set(REGIOES_COMUNIDADE.map((r) => r.ddd));
-    expect(dddsConfirmados.size).toBe(35);
+    expect(dddsConfirmados.size).toBe(37);
     expect(DDD_SOMENTE_HISTORICO.every((r) => !dddsConfirmados.has(r.ddd))).toBe(true);
     expect(new Set([...dddsConfirmados, ...DDD_SOMENTE_HISTORICO.map((r) => r.ddd)]).size).toBe(52);
     expect(regioesPorUf("SC").every((item) => item.uf === "SC")).toBe(true);
