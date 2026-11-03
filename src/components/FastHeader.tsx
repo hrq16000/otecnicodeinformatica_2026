@@ -19,6 +19,7 @@ import {
 import { whatsappLink } from "@/lib/siteConfig";
 import { brandConfig } from "@/lib/config";
 import { MegaMenu, type MegaGrupo } from "@/components/MegaMenu";
+import ComunidadeSocialProof from "@/components/nacional/ComunidadeSocialProof";
 
 const WA_SCHEDULE = whatsappLink("Olá! Quero agendar um atendimento técnico.");
 
@@ -411,6 +412,7 @@ export const FastHeader = () => {
           </div>
         </div>
       </div>
+      <ComunidadeSocialProof />
     </header>
   );
 };
