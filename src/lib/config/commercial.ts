@@ -27,6 +27,21 @@ export const commercialConfig = {
     pagamentos: "PIX, cartão de crédito, cartão de débito e dinheiro.",
   },
 
+  /**
+   * Comunidade nacional: referência sugerida para serviço rápido programado
+   * em horário comercial. Modalidade SEPARADA do atendimento local.
+   * NÃO autoriza checkout ou afirma técnico disponível.
+   * Cliente negocia diretamente com profissional independente.
+   */
+  comunidadeNacional: {
+    atendimentoProgramadoCentavos: 15999,
+    repasseTecnicoCentavos: 15000,
+    taxaClienteCentavos: 999,
+    participacaoTecnicoCentavos: 0,
+    pagamentoTaxa: "Pix por link, somente quando integrado e confirmado",
+    adicionalDeslocamentoEstacionamento: "100% ao técnico, mediante prévia aprovação",
+    negociacaoLivre: true,
+  },
   paymentMethods: ["PIX", "Cartão de crédito", "Cartão de débito", "Dinheiro"],
 } as const;
 
