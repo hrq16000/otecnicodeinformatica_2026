@@ -1,0 +1,74 @@
+name: Promote reviewed visual baselines (one-shot)
+
+on:
+  push:
+    branches:
+      - docs/politica-nacional-chamados-20261031
+    paths:
+      - .github/workflows/promote-reviewed-visual-baselines.yml
+
+permissions:
+  contents: write
+  actions: read
+
+jobs:
+  promote:
+    if: github.repository == 'hrq16000/otecnicodeinformatica_2026'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: docs/politica-nacional-chamados-20261031
+          fetch-depth: 0
+
+      - name: Baixar capturas reais da execução visual auditada
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          gh run download 41575833772 --repo "$GITHUB_REPOSITORY" \
+            --name visual-reduced-motion --dir "$RUNNER_TEMP/visual-review"
+
+      - name: Promover somente quatro capturas reais com dimensões verificadas
+        env:
+          VISUAL_ROOT: ${{ runner.temp }}/visual-review
+        run: |
+          python3 - <<'PY'
+          import os
+          from pathlib import Path
+          root = Path(os.environ['VISUAL_ROOT'])
+          dest = Path('e2e/visual-reduced-motion.spec.ts-snapshots')
+          names = ('home', 'servicos', 'problemas', 'empresas')
+          for name in names:
+              sources = [p for p in root.rglob(f'reduced-motion-{name}-actual.png')
+                         if 'retry' not in str(p)]
+              if len(sources) != 1:
+                  raise SystemExit(f'Origem ambígua para {name}: {sources}')
+              source = sources[0]
+              data = source.read_bytes()
+              if not data.startswith(b'\x89PNG\r\n\x1a\n'):
+                  raise SystemExit(f'Captura não é PNG: {source}')
+              width = int.from_bytes(data[16:20], 'big')
+              height = int.from_bytes(data[20:24], 'big')
+              if (width, height) != (1280, 900):
+                  raise SystemExit(f'Dimensão inesperada em {name}: {width}x{height}')
+              target = dest / f'reduced-motion-{name}-chromium-linux.png'
+              if not target.is_file():
+                  raise SystemExit(f'Snapshot versionado ausente: {target}')
+              target.write_bytes(data)
+              print(f'Promovido {name}: {len(data)} bytes, {width}x{height}')
+          PY
+
+      - name: Versionar somente as referências visuais revisadas
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -- e2e/visual-reduced-motion.spec.ts-snapshots/reduced-motion-{home,servicos,problemas,empresas}-chromium-linux.png
+          if git diff --cached --quiet; then
+            echo 'Snapshots já coincidem com as capturas auditadas.'
+            exit 0
+          fi
+          git commit -m "test(visual): refresh four reviewed reduced-motion baselines"
+          git push origin HEAD:docs/politica-nacional-chamados-20261031
