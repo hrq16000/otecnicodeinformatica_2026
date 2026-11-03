@@ -36,6 +36,7 @@ export const MAIN = [
   { path: "/atendimento-remoto", changefreq: "monthly", priority: "0.7" },
   { path: "/equipamentos-atendidos", changefreq: "monthly", priority: "0.6" },
   { path: "/areas-atendidas", changefreq: "monthly", priority: "0.7" },
+  { path: "/comunidade-nacional", changefreq: "weekly", priority: "0.7" },
   { path: "/diagnostico-tecnico", changefreq: "monthly", priority: "0.6" },
   { path: "/coleta-e-entrega", changefreq: "monthly", priority: "0.6" },
   { path: "/quando-nao-compensa", changefreq: "monthly", priority: "0.5" },
