@@ -155,7 +155,7 @@ function main() {
     const anterior = JSON.parse(readFileSync(OUT, "utf8"));
     const semData = ({ geradoEm: _geradoEm, ...dados }) => dados;
     if (JSON.stringify(semData(anterior)) === JSON.stringify(semData(relatorio)) &&
-        /^\\d{4}-\\d{2}-\\d{2}$/.test(anterior.geradoEm ?? "")) {
+        /^\d{4}-\d{2}-\d{2}$/.test(anterior.geradoEm ?? "")) {
       relatorio.geradoEm = anterior.geradoEm;
     }
   }
