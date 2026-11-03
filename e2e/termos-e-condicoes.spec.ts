@@ -82,10 +82,22 @@ test.describe("/termos-e-condicoes — schema, canonical, single H1, sitemap con
   });
 
   test("sitemap.xml includes canonical policy route, excludes the alias", async () => {
-    const sitemapPath = join(process.cwd(), "public", "sitemap.xml");
-    const xml = readFileSync(sitemapPath, "utf8");
-    expect(xml).toContain("/precos-e-politicas");
-    expect(xml).not.toContain("<loc>https://otecnicodeinformatica.com.br/termos-e-condicoes</loc>");
+    // sitemap.xml é um índice: URLs canônicas vivem nos sub-sitemaps.
+    // Exigir a URL no índice era um falso negativo que bloqueava o E2E.
+    const publicDir = join(process.cwd(), "public");
+    const indexXml = readFileSync(join(publicDir, "sitemap.xml"), "utf8");
+    expect(indexXml).toContain("<sitemapindex");
+    const subSitemaps = [...indexXml.matchAll(/<loc>([^<]+)<\/loc>/g)].map((m) => new URL(m[1]).pathname);
+    expect(subSitemaps.length).toBeGreaterThan(0);
+
+    const urls = subSitemaps.flatMap((sitemapPath) => {
+      // Só ler sitemaps versionados locais: não consultar rede nem aceitar path arbitrário.
+      expect(sitemapPath).toMatch(/^\/sitemap-[a-z0-9-]+\.xml$/);
+      const xml = readFileSync(join(publicDir, sitemapPath.slice(1)), "utf8");
+      return [...xml.matchAll(/<loc>([^<]+)<\/loc>/g)].map((m) => m[1]);
+    });
+    expect(urls).toContain("https://otecnicodeinformatica.com.br/precos-e-politicas");
+    expect(urls).not.toContain("https://otecnicodeinformatica.com.br/termos-e-condicoes");
   });
 
   test("h1 does not overflow on mobile and desktop", async ({ page }) => {
