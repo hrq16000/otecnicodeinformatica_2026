@@ -9,13 +9,14 @@ export default function HistoricoDDDs() {
           Regiões recentes e histórico da comunidade
         </h2>
         <p className="mt-3 max-w-4xl text-sm leading-relaxed text-muted-foreground">
-          As capturas de 03/11/2026 mostram {REGIOES_COMUNIDADE.length} áreas de DDD distintas.
+          As 11 capturas de 03/11/2026 mostram {REGIOES_COMUNIDADE.length} áreas de DDD distintas.
           O arquivo de conversas cita ainda {DDD_SOMENTE_HISTORICO.length} DDDs não presentes nas capturas.
-          Esses registros históricos incluem pedidos de adesão, por isso não entram no mapa de
-          participantes observados nem nas mensagens de prova social.
+          O administrador confirmou que os pedidos de entrada foram aceitos. Mesmo assim,
+          os números citados no histórico não comprovam presença atual individual,
+          por isso os DDDs só encontrados no histórico ficam separados dos pontos observados nas capturas.
         </p>
         <h3 className="mt-6 text-sm font-bold text-foreground">
-          DDDs adicionais encontrados somente no histórico (não confirmados)
+          DDDs adicionais mencionados no histórico
         </h3>
         <ul className="mt-3 flex flex-wrap gap-2">
           {DDD_SOMENTE_HISTORICO.map((r) => (
