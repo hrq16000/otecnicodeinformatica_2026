@@ -309,6 +309,104 @@ export const REGIOES_COMUNIDADE: readonly RegiaoComunidade[] = DDD_CAPTURAS_2026
   }),
 );
 
+/**
+ * DDDs adicionais encontrados no ZIP de conversas (até 03/11/2026).
+ * O histórico inclui solicitações de entrada: isto NÃO comprova participação
+ * efetiva, cadastro, validação, localização nem disponibilidade.
+ * Exibir apenas em seção de HISTÓRICO, nunca como cobertura ou prova social.
+ */
+export const DDD_SOMENTE_HISTORICO: readonly {
+  ddd: string;
+  uf: string;
+  poloReferencia: string;
+}[] = [
+  {
+    "ddd": "15",
+    "uf": "SP",
+    "poloReferencia": "Sorocaba"
+  },
+  {
+    "ddd": "19",
+    "uf": "SP",
+    "poloReferencia": "Campinas"
+  },
+  {
+    "ddd": "24",
+    "uf": "RJ",
+    "poloReferencia": "Volta Redonda"
+  },
+  {
+    "ddd": "28",
+    "uf": "ES",
+    "poloReferencia": "Cachoeiro de Itapemirim"
+  },
+  {
+    "ddd": "32",
+    "uf": "MG",
+    "poloReferencia": "Juiz de Fora"
+  },
+  {
+    "ddd": "44",
+    "uf": "PR",
+    "poloReferencia": "Maringá"
+  },
+  {
+    "ddd": "45",
+    "uf": "PR",
+    "poloReferencia": "Cascavel"
+  },
+  {
+    "ddd": "54",
+    "uf": "RS",
+    "poloReferencia": "Caxias do Sul"
+  },
+  {
+    "ddd": "55",
+    "uf": "RS",
+    "poloReferencia": "Santa Maria"
+  },
+  {
+    "ddd": "63",
+    "uf": "TO",
+    "poloReferencia": "Palmas"
+  },
+  {
+    "ddd": "65",
+    "uf": "MT",
+    "poloReferencia": "Cuiabá"
+  },
+  {
+    "ddd": "67",
+    "uf": "MS",
+    "poloReferencia": "Campo Grande"
+  },
+  {
+    "ddd": "69",
+    "uf": "RO",
+    "poloReferencia": "Porto Velho"
+  },
+  {
+    "ddd": "79",
+    "uf": "SE",
+    "poloReferencia": "Aracaju"
+  },
+  {
+    "ddd": "86",
+    "uf": "PI",
+    "poloReferencia": "Teresina"
+  },
+  {
+    "ddd": "87",
+    "uf": "PE",
+    "poloReferencia": "Petrolina"
+  },
+  {
+    "ddd": "92",
+    "uf": "AM",
+    "poloReferencia": "Manaus"
+  }
+];
+
 export const COMUNIDADE_RESUMO = {
   membrosInformadosMaisDe: 400,
   atualizadoEm: "03/11/2026",
