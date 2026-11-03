@@ -63,6 +63,7 @@ import { Route as ProblemasRouteImport } from './routes/problemas'
 import { Route as ProblemasReaisECasosRouteImport } from './routes/problemas-reais-e-casos'
 import { Route as ProcedimentosPlacaRouteImport } from './routes/procedimentos-placa'
 import { Route as ProfissionaisRouteImport } from './routes/profissionais'
+import { Route as ComunidadeNacionalRouteImport } from './routes/comunidade-nacional'
 import { Route as QuandoNaoCompensaRouteImport } from './routes/quando-nao-compensa'
 import { Route as SegurancaDosDadosRouteImport } from './routes/seguranca-dos-dados'
 import { Route as SejaParceiroRouteImport } from './routes/seja-parceiro'
@@ -770,6 +771,11 @@ const ProcedimentosPlacaRoute = ProcedimentosPlacaRouteImport.update({
 const ProfissionaisRoute = ProfissionaisRouteImport.update({
   id: '/profissionais',
   path: '/profissionais',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ComunidadeNacionalRoute = ComunidadeNacionalRouteImport.update({
+  id: '/comunidade-nacional',
+  path: '/comunidade-nacional',
   getParentRoute: () => rootRouteImport,
 } as any)
 const QuandoNaoCompensaRoute = QuandoNaoCompensaRouteImport.update({
@@ -3148,6 +3154,7 @@ export interface FileRoutesByFullPath {
   '/problemas-reais-e-casos': typeof ProblemasReaisECasosRoute
   '/procedimentos-placa': typeof ProcedimentosPlacaRoute
   '/profissionais': typeof ProfissionaisRoute
+  '/comunidade-nacional': typeof ComunidadeNacionalRoute
   '/quando-nao-compensa': typeof QuandoNaoCompensaRoute
   '/seguranca-dos-dados': typeof SegurancaDosDadosRoute
   '/seja-parceiro': typeof SejaParceiroRoute
@@ -3636,6 +3643,7 @@ export interface FileRoutesByTo {
   '/problemas-reais-e-casos': typeof ProblemasReaisECasosRoute
   '/procedimentos-placa': typeof ProcedimentosPlacaRoute
   '/profissionais': typeof ProfissionaisRoute
+  '/comunidade-nacional': typeof ComunidadeNacionalRoute
   '/quando-nao-compensa': typeof QuandoNaoCompensaRoute
   '/seguranca-dos-dados': typeof SegurancaDosDadosRoute
   '/seja-parceiro': typeof SejaParceiroRoute
@@ -4125,6 +4133,7 @@ export interface FileRoutesById {
   '/problemas-reais-e-casos': typeof ProblemasReaisECasosRoute
   '/procedimentos-placa': typeof ProcedimentosPlacaRoute
   '/profissionais': typeof ProfissionaisRoute
+  '/comunidade-nacional': typeof ComunidadeNacionalRoute
   '/quando-nao-compensa': typeof QuandoNaoCompensaRoute
   '/seguranca-dos-dados': typeof SegurancaDosDadosRoute
   '/seja-parceiro': typeof SejaParceiroRoute
@@ -4615,6 +4624,7 @@ export interface FileRouteTypes {
     | '/problemas-reais-e-casos'
     | '/procedimentos-placa'
     | '/profissionais'
+    | '/comunidade-nacional'
     | '/quando-nao-compensa'
     | '/seguranca-dos-dados'
     | '/seja-parceiro'
@@ -5103,6 +5113,7 @@ export interface FileRouteTypes {
     | '/problemas-reais-e-casos'
     | '/procedimentos-placa'
     | '/profissionais'
+    | '/comunidade-nacional'
     | '/quando-nao-compensa'
     | '/seguranca-dos-dados'
     | '/seja-parceiro'
@@ -5591,6 +5602,7 @@ export interface FileRouteTypes {
     | '/problemas-reais-e-casos'
     | '/procedimentos-placa'
     | '/profissionais'
+    | '/comunidade-nacional'
     | '/quando-nao-compensa'
     | '/seguranca-dos-dados'
     | '/seja-parceiro'
@@ -6080,6 +6092,7 @@ export interface RootRouteChildren {
   ProblemasReaisECasosRoute: typeof ProblemasReaisECasosRoute
   ProcedimentosPlacaRoute: typeof ProcedimentosPlacaRoute
   ProfissionaisRoute: typeof ProfissionaisRoute
+  ComunidadeNacionalRoute: typeof ComunidadeNacionalRoute
   QuandoNaoCompensaRoute: typeof QuandoNaoCompensaRoute
   SegurancaDosDadosRoute: typeof SegurancaDosDadosRoute
   SejaParceiroRoute: typeof SejaParceiroRoute
@@ -6892,6 +6905,13 @@ declare module '@tanstack/react-router' {
       path: '/profissionais'
       fullPath: '/profissionais'
       preLoaderRoute: typeof ProfissionaisRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/comunidade-nacional': {
+      id: '/comunidade-nacional'
+      path: '/comunidade-nacional'
+      fullPath: '/comunidade-nacional'
+      preLoaderRoute: typeof ComunidadeNacionalRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/quando-nao-compensa': {
@@ -9977,6 +9997,7 @@ const rootRouteChildren: RootRouteChildren = {
   ProblemasReaisECasosRoute: ProblemasReaisECasosRoute,
   ProcedimentosPlacaRoute: ProcedimentosPlacaRoute,
   ProfissionaisRoute: ProfissionaisRoute,
+  ComunidadeNacionalRoute: ComunidadeNacionalRoute,
   QuandoNaoCompensaRoute: QuandoNaoCompensaRoute,
   SegurancaDosDadosRoute: SegurancaDosDadosRoute,
   SejaParceiroRoute: SejaParceiroRoute,
