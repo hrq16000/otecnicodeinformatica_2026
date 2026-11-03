@@ -64,6 +64,18 @@ const DiretorioProfissionais = () => {
       <Header />
 
       <main>
+        <section className="border-b border-border bg-primary/5 py-5">
+          <div className="container mx-auto flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
+            <p className="text-sm leading-relaxed text-foreground">
+              <strong>Comunidade nacional gratuita:</strong> participação no grupo de técnicos não exige
+              plano anual. Veja o mapa por DDD e as condições da modalidade nacional, separados
+              deste diretório de perfis cadastrados.
+            </p>
+            <Link to="/comunidade-nacional" className="shrink-0 font-semibold text-primary underline underline-offset-4">
+              Conhecer a comunidade e o mapa
+            </Link>
+          </div>
+        </section>
         <section className="border-b border-border bg-card">
           <div className="container mx-auto py-12 md:py-16">
             <p className="inline-flex items-center gap-2 rounded-full bg-[hsl(var(--categoria)/0.12)] px-4 py-1.5 font-heading text-xs font-semibold uppercase tracking-wider text-[hsl(var(--categoria))]">
