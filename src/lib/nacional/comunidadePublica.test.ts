@@ -2,6 +2,7 @@ import { describe, expect, it } from "vitest";
 import { commercialConfig } from "@/lib/config/commercial";
 import {
   REGIOES_COMUNIDADE,
+  DDD_SOMENTE_HISTORICO,
   regioesPublicaveis,
   regioesPorUf,
   ufDaRegiao,
@@ -16,7 +17,12 @@ describe("comunidade nacional", () => {
   });
 
   it("não inventa profissionais quando não há DDD público confirmado", () => {
-    expect(regioesPublicaveis().length).toBeLessThanOrEqual(REGIOES_COMUNIDADE.length);
+    expect(regioesPublicaveis().length).toBe(35);
+    expect(DDD_SOMENTE_HISTORICO.length).toBe(17);
+    const dddsConfirmados = new Set(REGIOES_COMUNIDADE.map((r) => r.ddd));
+    expect(dddsConfirmados.size).toBe(35);
+    expect(DDD_SOMENTE_HISTORICO.every((r) => !dddsConfirmados.has(r.ddd))).toBe(true);
+    expect(new Set([...dddsConfirmados, ...DDD_SOMENTE_HISTORICO.map((r) => r.ddd)]).size).toBe(52);
     expect(regioesPorUf("SC").every((item) => item.uf === "SC")).toBe(true);
     expect(regioesPublicaveis().every((item) => /^\d{2}$/.test(item.ddd))).toBe(true);
   });
