@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState, type KeyboardEvent as ReactKeyboardEvent } from "react";
+import { lazy, Suspense, useEffect, useRef, useState, type KeyboardEvent as ReactKeyboardEvent } from "react";
 import {
   Menu,
   X,
@@ -19,6 +19,7 @@ import {
 import { whatsappLink } from "@/lib/siteConfig";
 import { brandConfig } from "@/lib/config";
 import { MegaMenu, type MegaGrupo } from "@/components/MegaMenu";
+const ComunidadeSocialProof = lazy(() => import("@/components/nacional/ComunidadeSocialProof"));
 
 const WA_SCHEDULE = whatsappLink("Olá! Quero agendar um atendimento técnico.");
 
@@ -44,6 +45,7 @@ const mobileExtra: NavItem[] = [
   { label: "Atendimento a domicílio", href: "/atendimento-domicilio", icon: Home },
   { label: "Atendimento remoto", href: "/atendimento-remoto", icon: MonitorSmartphone },
   { label: "Profissionais parceiros", href: "/profissionais", icon: Users },
+  { label: "Comunidade nacional gratuita", href: "/comunidade-nacional", icon: Users },
   { label: "Valorização do trabalho técnico", href: "/valorizacao-do-trabalho-tecnico", icon: Info },
   { label: "Sobre", href: "/sobre", icon: Info },
 ];
@@ -173,6 +175,7 @@ const megaGrupos: MegaGrupo[] = [
         titulo: "Rede de parceiros",
         links: [
           { label: "Encontrar profissional", href: "/profissionais" },
+          { label: "Comunidade nacional e mapa DDD", href: "/comunidade-nacional" },
           { label: "Quero fazer parte da rede", href: "/profissionais/cadastro" },
           { label: "Valorização do trabalho técnico", href: "/valorizacao-do-trabalho-tecnico" },
         ],
@@ -203,6 +206,12 @@ const megaGrupos: MegaGrupo[] = [
 
 export const FastHeader = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [mostrarProva, setMostrarProva] = useState(false);
+  // Conteúdo social não essencial fica fora do bundle inicial/LCP.
+  useEffect(() => {
+    const id = window.setTimeout(() => setMostrarProva(true), 5000);
+    return () => window.clearTimeout(id);
+  }, []);
   const menuRef = useRef<HTMLDivElement | null>(null);
   const buttonRef = useRef<HTMLButtonElement | null>(null);
   const listRef = useRef<HTMLDivElement | null>(null);
@@ -409,6 +418,11 @@ export const FastHeader = () => {
           </div>
         </div>
       </div>
+      {mostrarProva && (
+        <Suspense fallback={null}>
+          <ComunidadeSocialProof />
+        </Suspense>
+      )}
     </header>
   );
 };
