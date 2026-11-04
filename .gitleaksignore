@@ -1,0 +1,5 @@
+# Exclusão única de falso positivo comprovado, NÃO de credencial.
+# Commit 0125a11: KEY é apenas o nome estático de sessionStorage
+# ("comunidade_nacional_proof_v1") para dispensar o aviso de comunidade.
+# Não suprime novos achados nem altera regras do scanner.
+0125a11a4d322973c7f2e93de193d5d5f83e8fb1:src/components/nacional/ComunidadeSocialProof.tsx:generic-api-key:12
