@@ -86,7 +86,7 @@ export default function ComunidadeNacional() {
                 <p className="mt-5 max-w-2xl text-lg leading-relaxed text-muted-foreground">
                   Técnicos independentes de várias regiões do Brasil se conectam para compartilhar
                   conhecimento, divulgar o próprio trabalho e fortalecer a profissão.
-                  A participação no grupo é gratuita, sem mensalidade nem leilão de preços.
+                  A participação no grupo é gratuita, sem cobrança para entrar nem leilão de preços.
                 </p>
                 <div className="mt-7 flex flex-wrap gap-3">
                   <a
