@@ -15059,7 +15059,7 @@ bcdboot C:\\Windows /s S: /f UEFI`}</code></pre>
   "rede-wifi-nao-aparece-na-lista-o-que-verificar": {
     title: "Rede Wi-Fi não aparece na lista: o que verificar antes de trocar o roteador",
     excerpt:
-      "Sumir da lista é diferente de conectar e não navegar. Como separar adaptador desligado, banda de 5 GHz, rede oculta e roteador fora do ar em poucos testes.",
+      "Compare dois aparelhos no mesmo local e descubra se a rede Wi-Fi não aparece por alcance, configuração, banda, canal ou adaptador.",
     date: "2026-09-03",
     readTime: "10 min",
     category: "Redes",
@@ -15068,7 +15068,7 @@ bcdboot C:\\Windows /s S: /f UEFI`}</code></pre>
         <p className="lead">Uma rede que não aparece na lista é um problema de visibilidade do sinal, não de velocidade. Antes de reiniciar tudo ou comprar equipamento novo, vale responder a uma pergunta: sumiu <strong>só a sua rede</strong> ou sumiram <strong>todas</strong>?</p>
 
         <h2>Resposta curta</h2>
-        <p>Se nenhuma rede aparece, o problema está no dispositivo — adaptador desligado, modo avião ativo ou driver com falha. Se as redes dos vizinhos aparecem e a sua não, o problema está no roteador, na banda em que ele transmite ou no fato de o nome da rede estar oculto.</p>
+        <p>SSID é o nome da rede. Se ele não aparece, investigue a detecção antes de testar senha, DNS ou velocidade. Compare dois aparelhos no mesmo local, perto do ponto de acesso, no mesmo horário. Se só um não vê a rede, investigue a compatibilidade entre aparelho e ponto de acesso. Se nenhum vê, confirme alimentação, rádio e configuração do ponto de acesso, sem presumir que o equipamento esteja queimado.</p>
 
         <h2>Dois cenários, dois caminhos</h2>
         <table>
@@ -15076,33 +15076,33 @@ bcdboot C:\\Windows /s S: /f UEFI`}</code></pre>
             <tr><th>Situação</th><th>Onde investigar</th><th>Primeiro teste</th></tr>
           </thead>
           <tbody>
-            <tr><td>Nenhuma rede na lista</td><td>Dispositivo</td><td>Verificar o botão ou atalho de Wi-Fi e o modo avião</td></tr>
-            <tr><td>Outras redes sim, a sua não</td><td>Roteador</td><td>Verificar se outro dispositivo enxerga a rede</td></tr>
-            <tr><td>Aparece e some alternadamente</td><td>Alcance ou interferência</td><td>Aproximar-se do roteador e observar</td></tr>
-            <tr><td>Some só no computador novo</td><td>Banda ou canal</td><td>Verificar se a rede é de 5 GHz</td></tr>
+            <tr><td>Só um aparelho não lista nenhuma rede</td><td>Rádio, adaptador ou driver</td><td>Verificar Wi-Fi e modo avião onde outro aparelho lista redes</td></tr>
+            <tr><td>Só um aparelho não lista a rede desejada</td><td>Compatibilidade ou sinal recebido</td><td>Comparar modelos, bandas e canal no mesmo local</td></tr>
+            <tr><td>Nenhum aparelho próximo lista a rede desejada</td><td>Ponto de acesso ou nome oculto</td><td>Confirmar SSID, alimentação e rádio com o administrador</td></tr>
+            <tr><td>Rede aparece perto, mas some no cômodo</td><td>Cobertura como hipótese inicial</td><td>Repetir o teste em dois locais sem mudar configurações</td></tr>
           </tbody>
         </table>
 
         <h2>Quando nenhuma rede aparece</h2>
         <p>Comece pelo mais simples: muitos notebooks têm um atalho de teclado que desliga o rádio Wi-Fi, e o modo avião faz o mesmo pelo sistema. Em seguida, confirme se o adaptador está habilitado nas configurações de rede. Se ele nem aparece na lista de adaptadores, o caminho passa a ser driver ou hardware.</p>
-        <p>Um teste rápido separa configuração de defeito: conecte um adaptador Wi-Fi USB. Se as redes surgem com ele, o rádio interno é o suspeito. Se nada aparece nem assim, o problema está no sistema. Quando existe cabo disponível, vale validar a conexão pelo caminho descrito em <Link to="/blog/computador-nao-conecta-na-internet-por-cabo" className="text-accent">computador que não conecta por cabo</Link>, garantindo que a internet em si está funcionando.</p>
+        <p>No Windows, abra o Gerenciador de Dispositivos e confira o nome e o estado do adaptador sem fio. Se houver erro, anote o código e consulte Windows Update ou o fabricante do computador para o modelo exato. Se não estiver listado, o Windows não o detectou: isso não prova defeito físico. Se já tiver um adaptador USB compatível, compare no mesmo local; ele funcionar indica uma diferença entre os dois caminhos, mas não distingue sozinho hardware, driver e banda. O <Link to="/blog/computador-nao-conecta-na-internet-por-cabo" className="text-accent">teste por cabo</Link> ajuda a avaliar a conexão cabeada, não a emissão do SSID.</p>
 
         <h2>Quando só a sua rede sumiu</h2>
         <p>Verifique nesta ordem:</p>
         <ol>
-          <li><strong>Outro dispositivo enxerga a rede?</strong> Se o celular vê e o computador não, o roteador está transmitindo — a limitação é do dispositivo.</li>
-          <li><strong>A rede é de 5 GHz?</strong> Adaptadores antigos operam apenas em 2,4 GHz e simplesmente não listam redes de 5 GHz. Não é defeito: é incompatibilidade de banda.</li>
-          <li><strong>O nome da rede está oculto?</strong> Redes com difusão de nome desativada não aparecem na lista e precisam ser adicionadas manualmente, informando nome e senha.</li>
-          <li><strong>O roteador está ligado e com as luzes normais?</strong> Queda de energia às vezes deixa o equipamento em estado inconsistente.</li>
-          <li><strong>Houve mudança recente de canal?</strong> Alguns canais da faixa de 5 GHz exigem verificação de radar e ficam indisponíveis por alguns minutos após ligar.</li>
+          <li><strong>O outro aparelho vê o nome agora?</strong> Confira pela lista atual, não pelo histórico de redes salvas. Se ele vê o SSID, há sinal detectável para aquele aparelho, não necessariamente para todos os modelos.</li>
+          <li><strong>Qual é a banda?</strong> Um cliente só de 2,4 GHz não detecta uma rede exclusivamente de 5 GHz. Para 6 GHz, confirme suporte no ponto de acesso e no cliente, além de sistema, driver e disponibilidade regional. Wi-Fi 6 no nome comercial não comprova suporte a 6 GHz.</li>
+          <li><strong>O nome está oculto de propósito?</strong> Confirme com o administrador o nome exato e o tipo de segurança antes de adicionar manualmente. Não tente adivinhar dados nem desative a criptografia.</li>
+          <li><strong>O rádio da banda está habilitado?</strong> Confira o estado do ponto de acesso com seu administrador. Em redes mesh ou com o mesmo nome em várias bandas, ver um nome único não prova que todos os rádios estejam ativos.</li>
+          <li><strong>O canal mudou?</strong> Em determinados canais de 5 GHz, o DFS pode atrasar a transmissão ou provocar mudança de canal ao detectar radar. Anote canal, região configurada e horário; não copie uma lista estrangeira de canais nem altere o país para contornar limites.</li>
         </ol>
         <p>A configuração de nome, senha, banda e canal está detalhada em <Link to="/blog/como-configurar-roteador-wifi-iniciantes" className="text-accent">como configurar o roteador Wi-Fi</Link>.</p>
 
         <h2>Alcance não é o mesmo que ausência</h2>
-        <p>Rede que aparece fraca, some e volta é um problema de cobertura, não de visibilidade. Nesse caso, o assunto é posicionamento, obstáculos e eventual ampliação, tratado em <Link to="/blog/como-configurar-repetidor-wifi" className="text-accent">configuração de repetidor</Link>. Rede visível que conecta mas navega mal é outro problema ainda: a separação entre provedor e equipamento está em <Link to="/blog/internet-lenta-provedor-ou-roteador" className="text-accent">internet lenta: provedor ou roteador</Link>.</p>
+        <p>Se o nome aparece perto do roteador, mas some sempre no mesmo cômodo, investigue obstáculos e posicionamento antes de considerar um <Link to="/blog/como-configurar-repetidor-wifi" className="text-accent">repetidor</Link>. Se some até perto do equipamento em vários aparelhos, anote horários e verifique reinicializações ou mudanças de canal. Se o nome aparece e o aparelho conecta, mas navega mal, siga o diagnóstico de <Link to="/blog/internet-lenta-provedor-ou-roteador" className="text-accent">internet lenta: provedor ou roteador</Link>.</p>
 
-        <h2>Rede esquecida e perfil corrompido</h2>
-        <p>Quando a rede aparece para outros dispositivos e o computador insiste em ignorá-la, remover o perfil salvo e conectar de novo costuma resolver. O perfil guarda banda, segurança e senha; se qualquer um desses parâmetros mudou no roteador, o dispositivo pode se comportar de forma estranha até que o registro antigo seja apagado.</p>
+        <h2>Quando esquecer a rede faz sentido</h2>
+        <p>Esquecer a rede é um teste para um nome que aparece, mas deixou de autenticar após mudança de senha ou configuração. Não faz o rádio voltar a detectar uma banda incompatível. Antes de remover o perfil, confirme que pode configurá-lo de novo; em rede de trabalho, consulte o administrador.</p>
 
         <h2>O que NÃO fazer</h2>
         <ul>
@@ -15115,7 +15115,17 @@ bcdboot C:\\Windows /s S: /f UEFI`}</code></pre>
         </ul>
 
         <h2>Quando parar</h2>
-        <p>Pare antes de alterar configurações de provedor, de mexer em equipamento fornecido pela operadora em regime de comodato ou de trocar credenciais de conexão sem tê-las anotadas. Também pare se o roteador estiver quente demais, com luzes apagadas ou reiniciando sozinho: isso é falha de equipamento.</p>
+        <p>Pare antes de mudar equipamento gerenciado, credenciais ou configurações sem autorização e sem possibilidade de voltar. Se houver cheiro de queimado ou aquecimento anormal, não continue testando. Luzes apagadas ou reinícios recorrentes justificam verificar alimentação e equipamento com o responsável; não fecham o diagnóstico por si só.</p>
+
+        <h2>O que anotar antes de pedir ajuda</h2>
+        <p>Registre modelo dos aparelhos, versão do sistema, resultado perto e longe, banda ou canal confirmados e horário do teste. Não envie senha nem capturas com dados de redes de terceiros. Esse registro permite repetir o teste antes de comprar um adaptador ou trocar o roteador.</p>
+
+        <h2>Fontes primárias consultadas</h2>
+        <ul>
+          <li><a href="https://support.microsoft.com/pt-br/windows/experience/connectivity-networking/fix-wi-fi-connection-issues-in-windows" target="_blank" rel="noopener noreferrer">Microsoft Support — Diagnóstico de Wi-Fi no Windows</a>.</li>
+          <li><a href="https://www.intel.com/content/www/us/en/support/articles/000059260/wireless.html" target="_blank" rel="noopener noreferrer">Intel Support — Redes ausentes na lista de Wi-Fi</a>.</li>
+          <li><a href="https://www.intel.com/content/www/us/en/support/articles/000059385/wireless/intel-wi-fi-6e-products.html" target="_blank" rel="noopener noreferrer">Intel Support — Requisitos para Wi-Fi em 6 GHz</a>.</li>
+        </ul>
 
         <h2>Quando chamar um técnico</h2>
         <p>Chame quando a rede sumir para todos os dispositivos, quando houver necessidade de reconfigurar o equipamento do provedor ou quando o ambiente exigir cobertura planejada em mais de um ponto. O serviço correspondente é <Link to="/servicos/redes-e-wifi" className="text-accent">redes e Wi-Fi</Link>; para ambiente com equipe e vários equipamentos, o desdobramento é <Link to="/servicos/suporte-tecnico-empresarial" className="text-accent">suporte técnico empresarial</Link>.</p>

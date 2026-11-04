@@ -118,6 +118,21 @@ export const ALLOWED_SOURCE_HOSTS = [
 // FONTES CONSULTADAS (URLs confirmadas em 2026-07-12).
 // ─────────────────────────────────────────────────────────────
 export const EDITORIAL_SOURCES: Record<string, EditorialSource> = {
+  "wifi-windows-20261104": {
+    id: "wifi-windows-20261104", title: "Diagnóstico de Wi-Fi no Windows", publisher: "Microsoft Support",
+    url: "https://support.microsoft.com/pt-br/windows/experience/connectivity-networking/fix-wi-fi-connection-issues-in-windows",
+    accessedAt: "2026-11-04", sourceType: "official", supports: ["Verificação de rádio, adaptador, driver e frequência no Windows."],
+  },
+  "wifi-scan-intel-20261104": {
+    id: "wifi-scan-intel-20261104", title: "Redes ausentes na lista de Wi-Fi", publisher: "Intel Support",
+    url: "https://www.intel.com/content/www/us/en/support/articles/000059260/wireless.html",
+    accessedAt: "2026-11-04", sourceType: "official", supports: ["Relação entre canal, DFS e detecção em adaptadores Intel."],
+  },
+  "wifi-6ghz-intel-20261104": {
+    id: "wifi-6ghz-intel-20261104", title: "Requisitos para Wi-Fi em 6 GHz", publisher: "Intel Support",
+    url: "https://www.intel.com/content/www/us/en/support/articles/000059385/wireless/intel-wi-fi-6e-products.html",
+    accessedAt: "2026-11-04", sourceType: "official", supports: ["Compatibilidade de adaptador, sistema, driver e regras locais em 6 GHz."],
+  },
   "ms-migration-external-20261102": {
     id: "ms-migration-external-20261102", title: "Mover arquivos usando armazenamento externo", publisher: "Microsoft Support",
     url: "https://support.microsoft.com/pt-br/windows/experience/backup-recovery/move-your-files-to-a-new-windows-pc-using-an-external-storage-device",
@@ -2861,13 +2876,12 @@ export const ARTICLE_SOURCE_MANIFEST: Record<string, ArticleSourceManifest> = {
   },
   "rede-wifi-nao-aparece-na-lista-o-que-verificar": {
     slug: "rede-wifi-nao-aparece-na-lista-o-que-verificar",
-    sources: [],
+    sources: ["wifi-windows-20261104", "wifi-scan-intel-20261104", "wifi-6ghz-intel-20261104"],
     technicalReview: "reviewed",
     factChecked: true,
-    factCheckedAt: "2026-09-03",
-    stableKnowledge: true,
+    factCheckedAt: "2026-11-04",
     notes:
-      "Revisão concluída (Onda 11G): separação entre nenhuma rede visível e uma rede específica invisível, papel da banda de 5 GHz e do canal, SSID oculto, teste cruzado com outro dispositivo e limite entre configuração e defeito de adaptador. Conhecimento técnico estável — sem fonte visível.",
+      "Revisão material: comparação controlada entre aparelhos, distinção entre detecção e autenticação, bandas e DFS sem lista regional genérica, critérios de parada e fontes primárias visíveis.",
   },
   "arquivo-corrompido-nao-abre-o-que-fazer": {
     slug: "arquivo-corrompido-nao-abre-o-que-fazer",

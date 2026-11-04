@@ -1131,23 +1131,23 @@ const PILOT_FAQ: Record<string, FAQItem[]> = {
   "rede-wifi-nao-aparece-na-lista-o-que-verificar": [
     {
       q: "Nenhuma rede aparece. Por onde começar?",
-      a: "Pelo dispositivo. Verifique o atalho físico de Wi-Fi do notebook, o modo avião e se o adaptador está habilitado nas configurações de rede. Se o adaptador nem consta na lista do sistema, a suspeita passa a ser driver ou hardware.",
+      a: "Compare com outro aparelho no mesmo local. Se só um não lista redes, confira Wi-Fi, modo avião e estado do adaptador. Adaptador ausente no Gerenciador de Dispositivos significa que o Windows não o detectou, mas não confirma defeito físico.",
     },
     {
       q: "As redes dos vizinhos aparecem e a minha não. O que isso indica?",
-      a: "Indica que o rádio do dispositivo está funcionando e a investigação se desloca para o roteador: equipamento fora do ar, nome de rede oculto, mudança recente de canal ou rede transmitindo apenas em 5 GHz.",
+      a: "O aparelho detecta algum sinal. Compare com outro dispositivo perto do ponto de acesso: se só um não vê o nome, confira banda, canal e compatibilidade; se nenhum vê, confirme rádio, alimentação e SSID com o administrador.",
     },
     {
-      q: "Por que a rede de 5 GHz não aparece no computador antigo?",
-      a: "Porque adaptadores que operam somente em 2,4 GHz não conseguem listar redes de 5 GHz. Não é defeito, é limitação de banda do adaptador — um adaptador USB compatível resolve sem trocar o roteador.",
+      q: "Por que a rede de 5 GHz ou 6 GHz não aparece?",
+      a: "O aparelho precisa detectar a banda e o canal usados. Um adaptador só de 2,4 GHz não lista 5 GHz. Em 6 GHz, verifique também sistema, driver e disponibilidade regional; o rótulo Wi-Fi 6 não basta.",
     },
     {
-      q: "Ocultar o nome da rede deixa a conexão mais segura?",
-      a: "Não de forma relevante. A rede continua detectável por ferramentas comuns e a ocultação atrapalha a conexão de dispositivos legítimos, que passam a exigir cadastro manual de nome e senha.",
+      q: "Esquecer a rede ajuda quando o nome não aparece?",
+      a: "Não é o primeiro teste para SSID ausente. Faz mais sentido quando o nome aparece, mas a autenticação falha após uma mudança. Confirme antes que tem autorização e os dados para cadastrar o perfil novamente.",
     },
     {
-      q: "A rede aparece, some e volta. É o mesmo problema?",
-      a: "Não. Rede intermitente é questão de cobertura ou interferência: distância, paredes, posicionamento do roteador e concorrência de canal. Rede que nunca aparece é questão de visibilidade, que tem verificações próprias.",
+      q: "A rede aparece perto do roteador e some no cômodo. O que testar?",
+      a: "Repita a comparação nos dois lugares sem mudar configurações. Se a diferença se repete, cobertura é uma hipótese. Se some também perto do ponto de acesso em vários aparelhos, registre horários e investigue rádio, reinícios ou mudança de canal.",
     },
   ],
   "arquivo-corrompido-nao-abre-o-que-fazer": [
