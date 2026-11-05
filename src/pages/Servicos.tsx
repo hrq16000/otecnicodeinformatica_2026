@@ -261,6 +261,68 @@ const Servicos = () => {
         </div>
       </section>
 
+      {/* Comparação orientativa por modalidade, sem promessas de prazo ou cobertura. */}
+      <section aria-labelledby="modalidades-title" className="border-y border-border bg-secondary py-14 md:py-16">
+        <div className="container mx-auto px-4">
+          <div className="mx-auto max-w-5xl">
+            <h2 id="modalidades-title" className="font-heading text-2xl font-bold text-foreground md:text-3xl">
+              Suporte remoto, visita técnica ou reparo em bancada?
+            </h2>
+            <p className="mt-3 max-w-3xl text-muted-foreground">
+              Compare o formato mais provável para seu problema antes de pedir atendimento em Curitiba e região.
+              A confirmação depende do diagnóstico e da disponibilidade.
+            </p>
+            <div className="mt-8 grid gap-5 md:grid-cols-3">
+              {[
+                {
+                  title: "Suporte remoto",
+                  situation: "O equipamento liga e consegue acessar a internet.",
+                  examples: "Programas, contas, e-mail e configurações do Windows podem permitir orientação ou acesso remoto.",
+                  limit: "Não substitui testes físicos de peças ou energia.",
+                  href: "/atendimento-remoto",
+                  cta: "Entender suporte remoto",
+                },
+                {
+                  title: "Visita técnica",
+                  situation: "É necessário testar o equipamento ou a rede no local.",
+                  examples: "Computadores, periféricos, roteadores, Wi-Fi e cabeamento podem exigir testes presenciais.",
+                  limit: "Agenda, deslocamento e escopo precisam de confirmação.",
+                  href: "/atendimento-domicilio",
+                  cta: "Entender visita presencial",
+                },
+                {
+                  title: "Reparo em bancada",
+                  situation: "A análise pede desmontagem ou instrumentos específicos.",
+                  examples: "Suspeita de falha de placa, equipamento que não liga ou superaquecimento persistente.",
+                  limit: "Orçamento após diagnóstico; recuperação de dados não é garantida.",
+                  href: "/coleta-e-entrega",
+                  cta: "Entender coleta e bancada",
+                },
+              ].map((item) => (
+                <article key={item.title} className="flex flex-col rounded-xl border border-border bg-card p-6">
+                  <h3 className="font-heading text-lg font-bold text-foreground">{item.title}</h3>
+                  <p className="mt-3 text-sm font-semibold text-foreground">{item.situation}</p>
+                  <p className="mt-2 flex-1 text-sm leading-relaxed text-muted-foreground">{item.examples}</p>
+                  <p className="mt-4 border-t border-border pt-4 text-sm text-muted-foreground">
+                    <strong className="text-foreground">Limite: </strong>{item.limit}
+                  </p>
+                  <Link to={item.href} className="mt-5 inline-flex min-h-10 items-center gap-1.5 text-sm font-bold text-[hsl(var(--accent))] hover:underline">
+                    {item.cta} <ArrowRight className="h-4 w-4" aria-hidden="true" />
+                  </Link>
+                </article>
+              ))}
+            </div>
+            <p className="mt-6 max-w-4xl text-sm text-muted-foreground">
+              A modalidade indicada na triagem pode mudar após a avaliação. O escopo e o valor
+              precisam de aprovação antes da execução.{" "}
+              <Link to="/precos-e-politicas" className="font-semibold text-[hsl(var(--accent))] underline underline-offset-2">
+                Consulte preços e condições
+              </Link>.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* Como o atendimento começa */}
       <section className="py-14 md:py-16 bg-secondary">
         <div className="container mx-auto px-4">
