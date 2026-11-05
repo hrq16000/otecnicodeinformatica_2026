@@ -250,7 +250,7 @@ const BlogPost = () => {
         <link rel="preload" as="image" href={heroImage} fetchPriority="high" />
       </Helmet>
       <JsonLdSchema />
-      <Header />
+      <Header internalLeadOnly />
       <main>
         {/* Hero */}
         <section className="relative overflow-hidden">
