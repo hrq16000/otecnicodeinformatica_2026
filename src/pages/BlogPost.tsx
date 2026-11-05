@@ -413,9 +413,9 @@ const BlogPost = () => {
           </div>
         </section>
 
-        <CTASection intent="guide" subject={post.title} />
+        <CTASection intent="guide" subject={post.title} internalLeadOnly />
       </main>
-      <Footer />
+      <Footer internalLeadOnly />
     </div>
   );
 };
