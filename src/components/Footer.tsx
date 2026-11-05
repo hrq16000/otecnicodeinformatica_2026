@@ -70,7 +70,7 @@ const columns: Array<{ title: string; links: Array<{ label: string; to: string }
   },
 ];
 
-export const Footer = () => {
+export const Footer = ({ internalLeadOnly = false }: { internalLeadOnly?: boolean } = {}) => {
   const currentYear = new Date().getFullYear();
 
   // JSON-LD LocalBusiness — sem aggregateRating/review inventado. Telefone só aqui e em wa.me.
@@ -136,10 +136,16 @@ export const Footer = () => {
               São José dos Pinhais e Região Metropolitana.
             </p>
             <a
-              href={whatsappLink("Olá! Encontrei vocês no site e gostaria de saber mais sobre os serviços.")}
-              target="_blank"
-              rel="noopener noreferrer"
-              onClick={() => trackFooterWhatsApp("footer_primary")}
+              href={internalLeadOnly ? "/contato" : whatsappLink("Olá! Encontrei vocês no site e gostaria de saber mais sobre os serviços.")}
+              {...(internalLeadOnly ? {} : { target: "_blank", rel: "noopener noreferrer" })}
+              onClick={(event) => {
+                if (internalLeadOnly) {
+                  event.preventDefault();
+                  window.dispatchEvent(new CustomEvent("wa-funnel:open", { detail: { location: "footer_editorial" } }));
+                } else {
+                  void trackFooterWhatsApp("footer_primary");
+                }
+              }}
               data-cta-location="footer_primary"
               className="inline-flex min-h-11 items-center justify-center rounded-lg bg-accent px-5 text-sm font-bold text-accent-foreground motion-surface hover:shadow-[0_18px_40px_-12px_hsl(var(--accent)/0.55)]"
             >
