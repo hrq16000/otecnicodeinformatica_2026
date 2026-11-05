@@ -8496,23 +8496,23 @@ crontab -e
 
   "como-configurar-2fa-em-tudo": {
     title: "Como Configurar 2FA (Autenticação de Dois Fatores) em Tudo",
-    excerpt: "Guia prático para ativar 2FA em e-mail, redes sociais, bancos, servidores e aplicações empresariais.",
+    excerpt: "Como ativar MFA, testar um método reserva e recuperar o acesso após perder o celular, com limites para contas pessoais e corporativas.",
     date: "2026-04-20",
     readTime: "10 min",
     category: "Segurança e Redes",
     content: (
       <>
-        <p className="lead">A verificação em duas etapas (2FA) pede, além da senha, uma segunda prova de que é você: um código gerado no celular, uma chave física ou uma confirmação no aplicativo. Se a senha vazar, o invasor ainda para nessa segunda porta. Este guia mostra em que ordem ativar, qual método escolher em cada conta e como não ficar trancado para fora.</p>
+        <p className="lead">A autenticação multifator (MFA) combina provas de categorias diferentes, como senha e posse de uma chave. 2FA usa dois fatores. Isso reduz o risco de uma senha exposta, mas não torna a conta invulnerável: códigos podem ser capturados por páginas falsas e sessões podem ser comprometidas. Ativar a proteção exige também planejar como entrar se o celular for perdido.</p>
 
         <h2>O que muda quando o 2FA está ligado</h2>
-        <p>Senha é algo que você sabe. O segundo fator é algo que você tem (celular, chave USB) ou algo que você é (digital, rosto). A CISA recomenda a autenticação multifator como uma das medidas de maior impacto para contas pessoais e de trabalho, justamente porque a maioria das invasões começa com senha reaproveitada ou capturada em página falsa.</p>
+        <p>Senha é algo que você sabe. Outros fatores envolvem algo que você tem (como uma chave de segurança) ou uma característica biométrica usada para ativar um autenticador. A CISA recomenda MFA para reduzir o risco de acesso indevido quando uma senha é comprometida.</p>
         <p>O 2FA não substitui senha forte e única. Ele cobre o cenário em que a senha já não é segredo.</p>
 
-        <h2>Os métodos, do mais fraco ao mais forte</h2>
+        <h2>Métodos e limites: não são todos equivalentes</h2>
         <ul>
           <li><strong>Código por SMS</strong> — melhor que nada, mas vulnerável a clonagem de chip (troca de SIM). Use só quando o serviço não oferece outra opção.</li>
-          <li><strong>Código por e-mail</strong> — depende da segurança da própria caixa de e-mail; se ela cair, cai tudo junto.</li>
-          <li><strong>Aplicativo autenticador (TOTP)</strong> — Microsoft Authenticator, Google Authenticator, Aegis ou 2FAS geram um código de 6 dígitos que muda a cada 30 segundos, sem depender da operadora.</li>
+          <li><strong>Código por e-mail</strong> — depende da segurança da caixa de e-mail; comprometê-la pode comprometer também as verificações que chegam nela.</li>
+          <li><strong>Aplicativo autenticador (TOTP)</strong> — gera códigos temporários sem depender da operadora; formato e intervalo dependem do serviço. Não compartilhe o segredo de configuração nem o QR Code.</li>
           <li><strong>Notificação no aplicativo</strong> — prático, mas exige atenção: nunca aprove um pedido que você não iniciou.</li>
           <li><strong>Chave de segurança e passkeys (FIDO2/WebAuthn)</strong> — resistem a páginas falsas porque a chave só responde ao site verdadeiro. O NIST (SP 800-63B) classifica esse tipo de autenticador como resistente a phishing.</li>
         </ul>
@@ -8535,14 +8535,14 @@ crontab -e
           <li>Escolha "aplicativo autenticador" e leia o QR Code com o celular.</li>
           <li>Digite o código de 6 dígitos que aparecer para confirmar.</li>
           <li>Salve os <strong>códigos de recuperação</strong> oferecidos no final — imprima ou guarde num gerenciador de senhas.</li>
-          <li>Saia da conta e entre de novo para testar antes de fechar a página.</li>
+          <li>Teste um novo login em outra janela sem encerrar a sessão confiável já aberta. Confirme o método reserva antes de remover qualquer método antigo.</li>
         </ol>
 
         <h2>Verificação segura: não fique trancado para fora</h2>
         <p>O problema mais comum não é invasão, é perder o celular e não conseguir entrar. Antes de ativar em muitas contas:</p>
         <ul>
           <li>Guarde os códigos de recuperação fora do celular.</li>
-          <li>Use um autenticador com backup criptografado ou exportação (Microsoft Authenticator, 2FAS, Aegis).</li>
+          <li>Confira o que o backup do seu autenticador realmente restaura e como acessar a conta do backup sem depender do celular perdido.</li>
           <li>Cadastre um segundo método em contas críticas: uma chave física reserva ou um segundo aparelho.</li>
           <li>Ao trocar de celular, transfira o autenticador <strong>antes</strong> de apagar o aparelho antigo.</li>
         </ul>
@@ -8551,20 +8551,52 @@ crontab -e
         <ul>
           <li><strong>"Me passa o código que chegou aí"</strong> — nenhuma empresa séria pede o código por telefone ou mensagem. Quem pede está tentando entrar na sua conta.</li>
           <li><strong>Fadiga de notificação</strong> — dezenas de pedidos de aprovação seguidos até você tocar em "sim". Recuse e troque a senha.</li>
-          <li><strong>Página falsa em tempo real</strong> — copia senha e código ao mesmo tempo. Só passkeys e chaves físicas bloqueiam esse ataque.</li>
+          <li><strong>Página falsa em tempo real</strong> — pode retransmitir senha e código. Prefira autenticação resistente a phishing quando disponível; isso não elimina riscos de sessão comprometida ou de dispositivo infectado.</li>
         </ul>
 
-        <h2>Limites: quando pedir ajuda</h2>
-        <p>Se você já perdeu o acesso a uma conta com 2FA e não tem códigos de recuperação, o caminho é o processo oficial de recuperação do próprio serviço — ninguém de fora consegue "desbloquear" a conta. Em empresas com várias pessoas, faz sentido centralizar a política (quem usa qual método, onde ficam os códigos) em vez de cada um decidir sozinho.</p>
+        <h2>Perdi o celular ou o segundo fator: qual caminho seguir?</h2>
+        <p>Comece por um aparelho confiável e entre pelo endereço oficial digitado ou favorito conhecido, não por um anúncio de “recuperação”. Identifique se a conta é pessoal ou administrada por uma organização. Não apague o autenticador nem remova todos os métodos por tentativa.</p>
+        <table>
+          <thead><tr><th>Situação</th><th>Verificação segura</th><th>Limite</th></tr></thead>
+          <tbody>
+            <tr><td>Troca planejada com aparelho antigo disponível</td><td>Cadastre e teste o novo método antes de retirar o antigo</td><td>Ver o nome da conta no autenticador não comprova que ela autentica</td></tr>
+            <tr><td>Celular perdido, método reserva disponível</td><td>Use uma opção alternativa já cadastrada no login oficial</td><td>SMS, chave e passkey só ajudam se estiverem disponíveis e aceitos naquela conta</td></tr>
+            <tr><td>Conta pessoal sem alternativa funcional</td><td>Siga o fluxo oficial e suas instruções de comprovação</td><td>Recuperação pode não ser possível; senha e documentos não garantem resultado</td></tr>
+            <tr><td>Conta corporativa ou escolar</td><td>Contate o administrador pelo canal conhecido da organização</td><td>Redefinir MFA exige verificação de identidade, autorização e política própria</td></tr>
+          </tbody>
+        </table>
+
+        <h3>Conta Google: use as alternativas que já existiam</h3>
+        <p>Na opção de tentar outra forma de login, o Google pode oferecer código reserva salvo, outro aparelho conectado, chave de segurança ou passkey cadastrada em outro dispositivo. Sem alternativa, use a recuperação oficial. A disponibilidade depende da configuração; contas com Proteção Avançada têm regras próprias. Para conta de trabalho ou escola, procure o administrador. Não há prazo ou aprovação universal que um técnico possa prometer.</p>
+
+        <h3>Conta Microsoft pessoal não é conta de trabalho</h3>
+        <p>A Microsoft informa que, se a verificação em duas etapas estava ativa e nenhuma alternativa de verificação está acessível, o formulário de recuperação não contorna essa proteção; o suporte não pode alterar os dados da conta para liberar acesso. Não confunda troca oficial de informações de segurança, quando oferecida, com garantia de recuperação. Siga o fluxo específico apresentado no login.</p>
+        <p>Em conta corporativa ou escolar no Microsoft Entra, um administrador autorizado pode gerenciar métodos e exigir novo registro. Pedir novo registro pode remover métodos existentes e não é uma ação doméstica para executar às cegas. Revogação de sessões é uma medida separada: não presuma que cadastrar o novo telefone encerrou todas as sessões antigas.</p>
+
+        <h3>Restaurar o aplicativo não restaura qualquer credencial</h3>
+        <p>No Microsoft Authenticator, a restauração pode recuperar códigos de uso único elegíveis, mas credenciais de contas de trabalho ou escola não são restauradas: o nome pode voltar e ainda exigir login e novo registro. A documentação também limita a restauração ao mesmo tipo de dispositivo. Antes de apagar um telefone antigo, teste cada conta crítica no novo; não extrapole esse comportamento para todos os aplicativos autenticadores.</p>
+
+        <h2>Depois de recuperar: valide e trate o aparelho perdido</h2>
+        <ol>
+          <li>Confirme login com o método novo e uma alternativa independente, sem encerrar prematuramente o único acesso confiável.</li>
+          <li>Remova o método associado ao aparelho perdido quando o substituto estiver validado; se houver risco de acesso indevido, priorize a contenção pelo fluxo oficial ou administrador.</li>
+          <li>Revise dispositivos e sessões no serviço. Trate troca de senha, revogação de sessões e retirada de métodos como ações distintas.</li>
+          <li>Se códigos reserva foram expostos, substitua-os pelo mecanismo do provedor e proteja a nova cópia fora do aparelho perdido.</li>
+        </ol>
+        <p>Se houver pedidos de MFA não iniciados por você, não aprove para “parar os avisos”. Registre horário e serviço sem divulgar códigos e siga o roteiro de <Link to="/blog/como-proteger-computador-golpes-internet" className="text-accent">resposta a golpes digitais</Link>, quando aplicável.</p>
+
+        <h2>Quando parar e pedir ajuda</h2>
+        <p>Pare se o caminho exigir entregar senha, QR Code, segredo TOTP ou código reserva a outra pessoa. Não pague por promessa de burlar MFA e não instale controle remoto indicado por contato desconhecido. Em conta gerenciada, somente o administrador pode definir o procedimento autorizado. Um técnico pode orientar o uso dos canais legítimos; não garantir recuperação nem substituir a comprovação exigida pelo provedor.</p>
 
         <h2>Decisão rápida</h2>
         <ul>
           <li>Uso pessoal: autenticador no celular + códigos de recuperação impressos.</li>
           <li>Conta de administrador ou financeiro: chave física ou passkey.</li>
-          <li>Serviço que só oferece SMS: ative mesmo assim e peça à operadora bloqueio de troca de chip sem presença.</li>
+          <li>Serviço que só oferece SMS: use o método disponível e confira com a operadora quais proteções de troca de chip existem, sem presumir uma política universal.</li>
         </ul>
         <p>Revise as contas a cada seis meses: remova aparelhos antigos da lista de dispositivos confiáveis, confirme que o e-mail e o telefone de recuperação ainda são seus e gere novos códigos de recuperação se usou algum.</p>
-        <p>Para a parte de rede do escritório, que é outro assunto, veja o guia de proteção da rede Wi-Fi da empresa.</p>
+        <p>Para a parte de rede do escritório, que é outro assunto, veja <Link to="/blog/como-proteger-rede-wifi-empresa" className="text-accent">proteção da rede Wi-Fi da empresa</Link>.</p>
+        <EditorialReferences slug="como-configurar-2fa-em-tudo" />
 
 
       </>

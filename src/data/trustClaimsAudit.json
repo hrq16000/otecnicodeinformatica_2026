@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-10-31",
+  "geradoEm": "2026-11-05",
   "total": 272,
   "porClasse": {
     "COMPROVADA": 109,
@@ -6331,7 +6331,7 @@
       "familiaTitulo": "Prazo de atendimento prometido",
       "risco": "Prazo fixo sem controle de agenda, trânsito e peça.",
       "arquivo": "src/data/blogPostsContent.tsx",
-      "linha": 8689,
+      "linha": 8721,
       "trecho": "<li><strong>Plano de resposta a incidentes</strong> que inclua notificação à ANPD em até 48h</li>",
       "classificacao": "CONDICIONAL",
       "criterio": "Tempos de deslocamento e janelas de atendimento são estimativas dependentes de agenda, trânsito e disponibilidade de peça",
@@ -6344,7 +6344,7 @@
       "familiaTitulo": "Prazo de atendimento prometido",
       "risco": "Prazo fixo sem controle de agenda, trânsito e peça.",
       "arquivo": "src/data/blogPostsContent.tsx",
-      "linha": 8815,
+      "linha": 8847,
       "trecho": "<li><strong>Plano de resposta a incidentes</strong> que inclua notificação à ANPD em até 48h</li>",
       "classificacao": "CONDICIONAL",
       "criterio": "Tempos de deslocamento e janelas de atendimento são estimativas dependentes de agenda, trânsito e disponibilidade de peça",
@@ -6357,7 +6357,7 @@
       "familiaTitulo": "Prazo de atendimento prometido",
       "risco": "Prazo fixo sem controle de agenda, trânsito e peça.",
       "arquivo": "src/data/blogPostsContent.tsx",
-      "linha": 8941,
+      "linha": 8973,
       "trecho": "<li><strong>Plano de resposta a incidentes</strong> que inclua notificação à ANPD em até 48h</li>",
       "classificacao": "CONDICIONAL",
       "criterio": "Tempos de deslocamento e janelas de atendimento são estimativas dependentes de agenda, trânsito e disponibilidade de peça",

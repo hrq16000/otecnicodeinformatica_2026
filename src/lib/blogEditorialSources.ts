@@ -118,6 +118,26 @@ export const ALLOWED_SOURCE_HOSTS = [
 // FONTES CONSULTADAS (URLs confirmadas em 2026-07-12).
 // ─────────────────────────────────────────────────────────────
 export const EDITORIAL_SOURCES: Record<string, EditorialSource> = {
+  "google-mfa-recovery-20261105": {
+    id: "google-mfa-recovery-20261105", title: "Problemas de verificação em duas etapas", publisher: "Google Account Help",
+    url: "https://support.google.com/accounts/answer/185834?hl=pt-BR",
+    accessedAt: "2026-11-05", sourceType: "official", supports: ["Alternativas de verificação já cadastradas, recuperação e contas gerenciadas."],
+  },
+  "ms-mfa-recovery-limits-20261105": {
+    id: "ms-mfa-recovery-limits-20261105", title: "Limites do formulário de recuperação", publisher: "Microsoft Support",
+    url: "https://support.microsoft.com/en-us/accounts-billing/manage/help-with-the-microsoft-account-recovery-form",
+    accessedAt: "2026-11-05", sourceType: "official", supports: ["O formulário não contorna verificação em duas etapas sem métodos alternativos acessíveis."],
+  },
+  "ms-authenticator-restore-20261105": {
+    id: "ms-authenticator-restore-20261105", title: "Restauração do Microsoft Authenticator", publisher: "Microsoft Support",
+    url: "https://support.microsoft.com/en-us/authenticator/restore-account-credentials-from-microsoft-authenticator",
+    accessedAt: "2026-11-05", sourceType: "official", supports: ["Contas de trabalho/escola exigem novo registro; restauração depende do tipo de dispositivo."],
+  },
+  "ms-entra-mfa-methods-20261105": {
+    id: "ms-entra-mfa-methods-20261105", title: "Gestão de métodos MFA no Entra", publisher: "Microsoft Learn",
+    url: "https://learn.microsoft.com/en-us/entra/identity/authentication/howto-mfa-userdevicesettings",
+    accessedAt: "2026-11-05", sourceType: "official", supports: ["Administração autorizada, novo registro MFA e revogação de sessões são ações distintas."],
+  },
   "wifi-windows-20261104": {
     id: "wifi-windows-20261104", title: "Diagnóstico de Wi-Fi no Windows", publisher: "Microsoft Support",
     url: "https://support.microsoft.com/pt-br/windows/experience/connectivity-networking/fix-wi-fi-connection-issues-in-windows",
@@ -2899,12 +2919,12 @@ export const ARTICLE_SOURCE_MANIFEST: Record<string, ArticleSourceManifest> = {
   },
   "como-configurar-2fa-em-tudo": {
     slug: "como-configurar-2fa-em-tudo",
-    sources: ["cisa-require-mfa", "nist-800-63b-authenticators"],
+    sources: ["cisa-require-mfa", "nist-800-63b-authenticators", "google-mfa-recovery-20261105", "ms-mfa-recovery-limits-20261105", "ms-authenticator-restore-20261105", "ms-entra-mfa-methods-20261105"],
     technicalReview: "reviewed",
     factChecked: true,
-    factCheckedAt: "2026-09-25",
+    factCheckedAt: "2026-11-05",
     notes:
-      "Reescrita material completa em 2026-09-25: removidas estatísticas sem fonte, listas genéricas de produtos e promessas locais; diferencia 2FA de MFA, métodos resistentes a phishing, OTP, recuperação e ordem de implantação com base em CISA e NIST.",
+      "Revisão material em 2026-11-05: recuperação por cenário, conta pessoal versus gerenciada, limites do formulário Microsoft e do backup Authenticator, sessão confiável preservada durante troca planejada e contenção separada de novo registro. Fontes oficiais visíveis e cinco FAQs técnicas; não promete desbloqueio.",
   },
   "como-proteger-rede-wifi-empresa": {
     slug: "como-proteger-rede-wifi-empresa",

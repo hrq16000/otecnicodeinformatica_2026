@@ -1234,7 +1234,7 @@ const WAVE_11H: EditorialApproval[] = [
     status: "approved",
     authorType: "organization",
     authorId: INSTITUTIONAL_AUTHOR.id,
-    reviewedAt: "2026-09-25",
+    reviewedAt: "2026-11-05",
     approvedAt: "2026-09-25",
     imageOrigin: "owned",
     imageLicense: "Todos os direitos reservados",
