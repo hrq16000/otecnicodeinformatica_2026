@@ -201,7 +201,7 @@ const megaGrupos: MegaGrupo[] = [
 
 
 
-export const FastHeader = () => {
+export const FastHeader = ({ internalLeadOnly = false }: { internalLeadOnly?: boolean } = {}) => {
   const [menuOpen, setMenuOpen] = useState(false);
   const menuRef = useRef<HTMLDivElement | null>(null);
   const buttonRef = useRef<HTMLButtonElement | null>(null);
@@ -325,12 +325,16 @@ export const FastHeader = () => {
             <Search className="h-5 w-5" strokeWidth={2.2} aria-hidden="true" />
           </button>
           <a
-            href={WA_SCHEDULE}
-            target="_blank"
-            rel="noopener noreferrer"
-            onClick={() => trackHeaderClick("chatbot")}
+            href={internalLeadOnly ? "/contato" : WA_SCHEDULE}
+            {...(internalLeadOnly ? {} : { target: "_blank", rel: "noopener noreferrer", "data-wa-source": "whatsapp_cta" })}
+            onClick={(event) => {
+              if (internalLeadOnly) {
+                event.preventDefault();
+                window.dispatchEvent(new CustomEvent("wa-funnel:open", { detail: { location: "header_editorial" } }));
+              }
+              trackHeaderClick("chatbot");
+            }}
             data-cta-location="header_agendar"
-            data-wa-source="whatsapp_cta"
             aria-label="Iniciar atendimento"
             className="inline-flex min-h-11 items-center justify-center rounded-md bg-accent px-4 text-sm font-bold text-accent-foreground shadow-sm motion-surface hover:shadow-[0_18px_40px_-12px_hsl(var(--accent)/0.55)]"
           >
@@ -390,15 +394,17 @@ export const FastHeader = () => {
 
                 <div className="mt-2 border-t border-border p-2">
                   <a
-                    href={WA_SCHEDULE}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    onClick={() => {
+                    href={internalLeadOnly ? "/contato" : WA_SCHEDULE}
+                    {...(internalLeadOnly ? {} : { target: "_blank", rel: "noopener noreferrer", "data-wa-source": "whatsapp_cta" })}
+                    onClick={(event) => {
+                      if (internalLeadOnly) {
+                        event.preventDefault();
+                        window.dispatchEvent(new CustomEvent("wa-funnel:open", { detail: { location: "header_mobile_editorial" } }));
+                      }
                       trackHeaderClick("chatbot");
                       setMenuOpen(false);
                     }}
                     data-cta-location="header_mobile_agendar"
-                    data-wa-source="whatsapp_cta"
                     className="inline-flex min-h-11 w-full items-center justify-center gap-2 rounded-lg bg-accent px-4 text-sm font-bold text-accent-foreground"
                   >
                     Iniciar atendimento
