@@ -6,9 +6,9 @@ import { FastHeader } from "@/components/FastHeader";
  * página que use <Header /> nunca fique escondido atrás do header fixo.
  * A home (Index) usa <FastHeader /> diretamente com seu próprio spacer.
  */
-export const Header = () => (
+export const Header = ({ internalLeadOnly = false }: { internalLeadOnly?: boolean } = {}) => (
   <>
-    <FastHeader />
+    <FastHeader internalLeadOnly={internalLeadOnly} />
     <div aria-hidden="true" className="h-[var(--site-header-space)]" />
   </>
 );
