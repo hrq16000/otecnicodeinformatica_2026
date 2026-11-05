@@ -173,11 +173,11 @@ const ProcedimentosPlaca = () => {
                         <p className="text-sm text-muted-foreground">
                           <strong className="text-foreground">Indicado para:</strong> {proc.indicacao}
                         </p>
-                        <a href="#contato-procedimentos">
-                          <Button variant="outline" size="sm" className="gap-2 mt-2">
+                        <Button asChild variant="outline" size="sm" className="gap-2 mt-2">
+                          <a href="#contato-procedimentos">
                             Solicitar avaliação <ArrowRight className="h-3.5 w-3.5" />
-                          </Button>
-                        </a>
+                          </a>
+                        </Button>
                       </div>
                     </div>
                   </div>
@@ -196,21 +196,21 @@ const ProcedimentosPlaca = () => {
                 Envie fotos e a descrição do problema. Nosso técnico analisa e indica o procedimento correto — sem compromisso.
               </p>
               <div className="flex flex-wrap justify-center gap-3">
-                <a
-                  href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent("Olá! Preciso de um reparo em placa. Qual procedimento seria indicado para o meu caso?")}`}
-                  data-cta-location="procedimentos_placa_cta"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <Button className="gap-2 bg-green-600 hover:bg-green-700 text-white">
+                <Button asChild className="gap-2 bg-green-600 hover:bg-green-700 text-white">
+                  <a
+                    href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent("Olá! Preciso de um reparo em placa. Qual procedimento seria indicado para o meu caso?")}`}
+                    data-cta-location="procedimentos_placa_cta"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     <MessageCircle className="h-4 w-4" /> Consultar via WhatsApp
-                  </Button>
-                </a>
-                <Link to="/coleta-formulario">
-                  <Button variant="outline" className="gap-2">
+                  </a>
+                </Button>
+                <Button asChild variant="outline" className="gap-2">
+                  <Link to="/coleta-formulario">
                     Agendar Coleta <ArrowRight className="h-4 w-4" />
-                  </Button>
-                </Link>
+                  </Link>
+                </Button>
               </div>
             </div>
           </AnimatedSection>
