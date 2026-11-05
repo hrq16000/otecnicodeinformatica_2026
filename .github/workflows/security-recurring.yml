@@ -26,6 +26,8 @@ jobs:
     timeout-minutes: 20
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       - uses: oven-sh/setup-bun@v2
         with:
           bun-version: latest
@@ -56,13 +58,31 @@ jobs:
           VITE_SUPABASE_PUBLISHABLE_KEY: ${{ secrets.VITE_SUPABASE_PUBLISHABLE_KEY }}
         run: node scripts/check-security-findings-baseline.mjs
 
-      # 5) Segredos/credenciais vazados no diff.
-      - name: Gitleaks secret scan
+      # 5) Secrets in new PR/main commits; full history in scheduled scans.
+      # Invalid or missing base is a hard failure, not a bypass.
+      - name: Gitleaks secret scan (new commits)
+        if: github.event_name != 'schedule'
+        env:
+          BASE_SHA: ${{ github.event.pull_request.base.sha || github.event.before }}
         run: |
+          set -euo pipefail
+          if [ -z "${BASE_SHA}" ] || [ "${BASE_SHA}" = "0000000000000000000000000000000000000000" ]; then
+            echo "::error::Base revision missing; cannot prove secret scan coverage."
+            exit 1
+          fi
+          git cat-file -e "${BASE_SHA}^{commit}" || { echo "::error::Base revision unavailable."; exit 1; }
           timeout 8m docker run --rm \
             -v "${{ github.workspace }}:/repo" \
             ghcr.io/gitleaks/gitleaks:v8.30.1 \
-            git /repo --redact --no-banner --verbose
+            git /repo --redact --no-banner --log-opts="${BASE_SHA}..HEAD"
+
+      - name: Gitleaks secret scan (complete history)
+        if: github.event_name == 'schedule'
+        run: |
+          timeout 18m docker run --rm \
+            -v "${{ github.workspace }}:/repo" \
+            ghcr.io/gitleaks/gitleaks:v8.30.1 \
+            git /repo --redact --no-banner
 
       # 6) Notificação (Slack/e-mail) quando qualquer etapa acima falhar.
       - name: Notificar falha do pipeline de segurança
