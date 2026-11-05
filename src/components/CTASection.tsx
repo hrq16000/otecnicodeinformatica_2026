@@ -78,9 +78,12 @@ const CTA_CONTENT: Record<
 export const CTASection = ({
   intent = "problem",
   subject,
+  internalLeadOnly = false,
 }: {
   intent?: CtaIntent;
   subject?: string;
+  /** Artigos editoriais não expõem wa.me antes da triagem. */
+  internalLeadOnly?: boolean;
 }) => {
   const content = CTA_CONTENT[intent];
   const Icon = content.icon;
@@ -120,12 +123,17 @@ export const CTASection = ({
           <div className="flex w-full flex-col gap-3 md:w-80">
             <Button variant="heroWhatsapp" size="lg" className="w-full" asChild>
               <a
-                href={whatsappUrl}
-                target="_blank"
-                rel="noopener noreferrer"
+                href={internalLeadOnly ? "/contato" : whatsappUrl}
+                {...(internalLeadOnly ? {} : { target: "_blank", rel: "noopener noreferrer", "data-wa-source": "whatsapp_cta" })}
                 data-cta-location={location}
-                data-wa-source="whatsapp_cta"
-                onClick={() => trackCTAClick("whatsapp", location)}
+                onClick={(event) => {
+                  if (internalLeadOnly) {
+                    event.preventDefault();
+                    openChatbot();
+                  } else {
+                    trackCTAClick("whatsapp", location);
+                  }
+                }}
               >
                 <MessageCircle className="h-5 w-5" />
                 {content.primaryLabel}
