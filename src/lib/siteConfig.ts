@@ -71,9 +71,9 @@ export const siteConfig = {
   // Paridade com o HTML estático curado (scripts/curated-routes-meta.mjs) e ≤ 70 caracteres.
   // Rodada 11: intenção ampliada de "assistência" para "soluções de informática",
   // cobrindo tanto quem busca serviço quanto quem busca a solução do problema.
-  homeTitle: "Soluções de Informática e Assistência Técnica em Curitiba",
+  homeTitle: "O Técnico de Informática | Assistência Técnica em Curitiba",
   homeDescription:
-    "Computador lento, notebook que não liga, Wi-Fi caindo ou arquivo perdido? Guias técnicos e assistência em informática para casa e empresa em Curitiba.",
+    "O Técnico de Informática: assistência para PC, notebook, redes e Wi-Fi em Curitiba e São José dos Pinhais, com guias técnicos para todo o Brasil.",
   defaultOgImage: `${BASE_URL}${brandConfig.ogImage}`,
 
   // Contato — número NUNCA exibido como texto; só em wa.me / JSON-LD.
