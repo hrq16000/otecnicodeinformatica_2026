@@ -90,7 +90,7 @@ export const HeroTriagem = () => {
         <div className="max-w-3xl">
           <p className="inline-flex items-center gap-2 rounded-full bg-[hsl(var(--categoria)/0.12)] px-4 py-1.5 font-heading text-xs font-semibold uppercase tracking-wider text-[hsl(var(--categoria))]">
             <Wrench className="h-3.5 w-3.5" aria-hidden="true" />
-            Central de soluções técnicas
+            {brandConfig.brandName} · soluções técnicas
           </p>
 
           <h1 className="mt-5 font-heading text-3xl font-bold leading-[1.06] tracking-tight text-foreground sm:text-4xl md:text-5xl lg:text-[3.5rem]">
