@@ -121,23 +121,13 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     ],
     links: [
       { rel: "stylesheet", href: appCss },
-      { rel: "preload", as: "image", href: "/logo.webp", type: "image/webp", fetchPriority: "high" },
+      // O logo é pequeno e já aparece no HTML do cabeçalho. Evitar preload
+      // concorrendo com a imagem LCP da rota em conexões móveis lentas.
       { rel: "dns-prefetch", href: "https://www.googletagmanager.com" },
       { rel: "dns-prefetch", href: "https://www.google-analytics.com" },
-      {
-        rel: "preload",
-        as: "font",
-        type: "font/woff2",
-        href: "/fonts/figtree-var.woff2",
-        crossOrigin: "anonymous",
-      },
-      {
-        rel: "preload",
-        as: "font",
-        type: "font/woff2",
-        href: "/fonts/outfit-var.woff2",
-        crossOrigin: "anonymous",
-      },
+      // Fontes locais usam font-display: optional em styles.css.
+      // Sua descoberta via CSS evita reservar prioridade alta a dois WOFF2
+      // antes do conteúdo visível, mantendo fallback sem bloqueio de texto.
       { rel: "icon", href: "/favicon.png", type: "image/png" },
       { rel: "apple-touch-icon", sizes: "192x192", href: "/apple-touch-icon.png" },
       { rel: "manifest", href: "/manifest.json", crossOrigin: "use-credentials" },
