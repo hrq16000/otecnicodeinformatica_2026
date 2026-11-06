@@ -13,6 +13,7 @@
 import { createHash } from "node:crypto";
 import { pathToFileURL } from "node:url";
 import { resolve } from "node:path";
+import { writeFile } from "node:fs/promises";
 
 const url = process.argv[2];
 if (!url) {
@@ -30,6 +31,9 @@ const res = await fetchFn(new Request(`http://localhost${url}`), {}, {
   passThroughOnException() {},
 });
 const html = await res.text();
+// Captura opcional do HTML real do worker para auditorias locais. Sem alterar
+// o contrato JSON em stdout nem substituir o renderer por um fixture.
+if (process.argv[3]) await writeFile(process.argv[3], html, "utf8");
 
 const blocos = [
   ...html.matchAll(/<script[^>]*type="application\/ld\+json"[^>]*>([\s\S]*?)<\/script>/g),
@@ -59,5 +63,5 @@ const fp = createHash("sha256")
   .slice(0, 12);
 
 console.log(
-  JSON.stringify({ url, status: res.status, count: blocos.length, tipos: tiposUnicos, ids: idsUnicos, fp }),
+  JSON.stringify({ url, status: res.status, xRobotsTag: res.headers.get("x-robots-tag"), count: blocos.length, tipos: tiposUnicos, ids: idsUnicos, fp }),
 );

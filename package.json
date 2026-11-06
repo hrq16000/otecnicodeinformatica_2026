@@ -36,6 +36,7 @@
     "check:seo:curated": "bun scripts/check-seo-basics.ts --curated dist",
     "lint": "eslint .",
     "preview": "vite preview",
+    "check:editorial-batch-ssr": "node scripts/check-editorial-batch-ssr.mjs",
     "test:e2e": "playwright test",
     "test:smoke": "playwright test e2e/smoke-buttons.spec.ts",
     "snapshot:ssr": "node scripts/snapshot-ssr-jsonld.mjs",

@@ -1,4 +1,4 @@
-import { createFileRoute, redirect } from "@tanstack/react-router";
+import { createFileRoute, notFound, redirect } from "@tanstack/react-router";
 import BlogPostPage from "@/pages/BlogPost";
 import { JsonLdSsrSink } from "@/lib/jsonLdSsr";
 import { SITE_BASE_URL } from "@/lib/siteConfig";
@@ -42,7 +42,9 @@ export const Route = createFileRoute("/blog_/$slug")({
     ]);
     const posts = { ...blogPostsContentBase, ...blogSupplementalPosts, ...programmaticPosts };
     const post = posts[params.slug] ?? null;
-    if (!post) return { post: null };
+    // Slug ausente não é um artigo válido com corpo de erro (soft-404).
+    // O sinal do roteador mantém o status HTTP 404 já no SSR.
+    if (!post) throw notFound();
     return {
       post: {
         title: post.title,
