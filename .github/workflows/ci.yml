@@ -451,7 +451,11 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: lighthouse-reports
-          path: .lighthouseci
-          if-no-files-found: ignore
+          # Desktop e mobile têm diretórios distintos; publicar evidência de
+          # ambos os gates para diagnosticar FCP/LCP sem execuções cegas.
+          path: |
+            .lighthouseci/
+            .lighthouseci-mobile/
+          if-no-files-found: error
 
 
