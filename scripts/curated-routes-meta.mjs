@@ -25,8 +25,8 @@ import { ENTIDADES_ROUTES } from "./lib/entidades-static.mjs";
 const BASE_ROUTES = [
   {
     "path": "/",
-    "title": "Soluções de Informática e Assistência Técnica em Curitiba",
-    "description": "Computador lento, notebook que não liga, Wi-Fi caindo ou arquivo perdido? Guias técnicos e assistência em informática para casa e empresa em Curitiba."
+    "title": "O Técnico de Informática | Assistência Técnica em Curitiba",
+    "description": "O Técnico de Informática: assistência para PC, notebook, redes e Wi-Fi em Curitiba e São José dos Pinhais, com guias técnicos para todo o Brasil."
   },
   {
     "path": "/anuncie",
