@@ -27,29 +27,40 @@ CREATE TABLE national_ops.solicitacoes_autorizacao (
     consentimento_atual IS NULL OR jsonb_typeof(consentimento_atual) = 'object'
   ),
   chave_autorizacao_atual text,
-  CHECK ((consentimento_atual IS NULL) = (chave_autorizacao_atual IS NULL))
+  CHECK ((consentimento_atual IS NULL) = (chave_autorizacao_atual IS NULL)),
+  CONSTRAINT solicitacao_identidade_unica UNIQUE (solicitacao_id, cliente_id)
 );
 
 CREATE TABLE national_ops.autorizacoes_cotacao (
   id bigint GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
-  solicitacao_id text NOT NULL REFERENCES national_ops.solicitacoes_autorizacao(solicitacao_id),
+  solicitacao_id text NOT NULL,
   cliente_id text NOT NULL,
   revisao integer NOT NULL CHECK (revisao >= 1),
   chave_idempotencia text NOT NULL,
   consentimento jsonb NOT NULL CHECK (jsonb_typeof(consentimento) = 'object'),
   aceito_em timestamptz NOT NULL,
+  CONSTRAINT autorizacao_titular_fkey
+    FOREIGN KEY (solicitacao_id, cliente_id)
+    REFERENCES national_ops.solicitacoes_autorizacao (solicitacao_id, cliente_id)
+    ON DELETE RESTRICT,
   UNIQUE (solicitacao_id, revisao),
-  UNIQUE (cliente_id, chave_idempotencia)
+  UNIQUE (cliente_id, chave_idempotencia),
+  CONSTRAINT autorizacao_auditoria_vinculo_unique
+    UNIQUE (solicitacao_id, cliente_id, revisao)
 );
 
 CREATE TABLE national_ops.autorizacoes_auditoria (
   id bigint GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
-  solicitacao_id text NOT NULL REFERENCES national_ops.solicitacoes_autorizacao(solicitacao_id),
+  solicitacao_id text NOT NULL,
   cliente_id text NOT NULL,
   revisao integer NOT NULL CHECK (revisao >= 1),
   tipo text NOT NULL CHECK (tipo = 'cotacao_aceita_cliente'),
   instante_utc timestamptz NOT NULL,
   chave_idempotencia text NOT NULL,
+  CONSTRAINT auditoria_autorizacao_fkey
+    FOREIGN KEY (solicitacao_id, cliente_id, revisao)
+    REFERENCES national_ops.autorizacoes_cotacao (solicitacao_id, cliente_id, revisao)
+    ON DELETE RESTRICT,
   UNIQUE (solicitacao_id, revisao)
 );
 
@@ -84,6 +95,8 @@ COMMIT;
 -- [ ] RLS/role restrito e política de acesso backend avaliadas
 -- [ ] Locks e unicidade verificados com duas conexões PostgreSQL reais
 -- [ ] Testes contra reuso de chave e consentimento entre clientes
+-- [ ] Validar FKs compostas no banco real, inclusive cliente divergente
+-- [ ] Conferir imutabilidade de snapshots e logs via políticas/permissões
 -- [ ] Casos de atualização de revisão/versionamento imutável revisados
 -- [ ] Auditoria append-only, retenção LGPD e regra de expurgo aprovadas
 -- [ ] Crash, queda da conexão, deadlocks, rollback e recuperação testados
