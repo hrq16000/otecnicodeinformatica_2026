@@ -64,8 +64,16 @@ ALTER TABLE national_ops.autorizacoes_cotacao FORCE ROW LEVEL SECURITY;
 ALTER TABLE national_ops.autorizacoes_auditoria FORCE ROW LEVEL SECURITY;
 
 REVOKE ALL ON SCHEMA national_ops FROM PUBLIC;
-REVOKE ALL ON ALL TABLES IN SCHEMA national_ops FROM PUBLIC;
-REVOKE ALL ON ALL SEQUENCES IN SCHEMA national_ops FROM PUBLIC;
+-- Revogar apenas os NOVOS objetos. Jamais alterar permissões das outras
+-- tabelas do schema, inclusive partner_validacoes da proposta anterior.
+REVOKE ALL ON national_ops.solicitacoes_autorizacao FROM PUBLIC;
+REVOKE ALL ON national_ops.autorizacoes_cotacao FROM PUBLIC;
+REVOKE ALL ON national_ops.autorizacoes_auditoria FROM PUBLIC;
+REVOKE ALL ON SEQUENCE national_ops.autorizacoes_cotacao_id_seq FROM PUBLIC;
+REVOKE ALL ON SEQUENCE national_ops.autorizacoes_auditoria_id_seq FROM PUBLIC;
+-- FORCE RLS sem policies bloqueia até o serviço privado normal.
+-- Antes de ativar, definir e testar role/policies específicas de backend.
+-- Não usar BYPASSRLS nem conceder acesso a anon/authenticated.
 COMMIT;
 
 -- Antes de uma migration real:
