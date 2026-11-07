@@ -37,6 +37,7 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "check:editorial-batch-ssr": "node scripts/check-editorial-batch-ssr.mjs",
+    "test:editorial:offline": "vitest run --config vitest.editorial.config.ts",
     "test:e2e": "playwright test",
     "test:smoke": "playwright test e2e/smoke-buttons.spec.ts",
     "snapshot:ssr": "node scripts/snapshot-ssr-jsonld.mjs",
