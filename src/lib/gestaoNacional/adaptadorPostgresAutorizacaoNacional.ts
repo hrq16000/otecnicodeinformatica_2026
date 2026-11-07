@@ -43,6 +43,7 @@ export interface RelogioServidorNacional {
 
 type PedidoRow = {
   solicitacao_id: string;
+  cliente_id: string;
   estado: EstadoContratacaoNacional;
   condicoes_atuais: unknown;
   consentimento_atual: unknown;
@@ -119,13 +120,14 @@ export function criarAdaptadorPostgresAutorizacaoNacional(
               },
               async buscarPedido(id) {
                 const retorno = await conexao.query<PedidoRow>(
-                  "SELECT solicitacao_id, estado, condicoes_atuais, consentimento_atual, chave_autorizacao_atual " +
+                  "SELECT solicitacao_id, cliente_id, estado, condicoes_atuais, consentimento_atual, chave_autorizacao_atual " +
                   "FROM national_ops.solicitacoes_autorizacao " +
                   "WHERE solicitacao_id = $1 AND cliente_id = $2 FOR UPDATE",
                   [id, clienteId],
                 );
                 const row = retorno.rows[0];
-                if (!row || retorno.rows.length !== 1) return null;
+                if (!row || retorno.rows.length !== 1 ||
+                    row.solicitacao_id !== id || row.cliente_id !== clienteId) return null;
                 return {
                   solicitacaoId: row.solicitacao_id,
                   estado: row.estado,

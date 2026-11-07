@@ -44,7 +44,14 @@ const clone = <T>(v: T): T => structuredClone(v);
 
 function bancoSimulado({
   falhaAuditoria = false, erroConectar = false, falhaCas = false,
-}: { falhaAuditoria?: boolean; erroConectar?: boolean; falhaCas?: boolean } = {}) {
+  negarLeitura = false, devolverClienteIncorreto = false,
+}: {
+  falhaAuditoria?: boolean;
+  erroConectar?: boolean;
+  falhaCas?: boolean;
+  negarLeitura?: boolean;
+  devolverClienteIncorreto?: boolean;
+} = {}) {
   let registro: RegistroDb = {
     solicitacao_id: solicitacaoId, cliente_id: clienteId, estado: "rascunho",
     revisao_atual: 1, condicoes_atuais: clone(condicoes),
@@ -52,6 +59,7 @@ function bancoSimulado({
   };
   const usos: Uso[] = [];
   const logs: string[] = [];
+  const consultas: { sql: string; parametros: readonly unknown[] }[] = [];
   let liberadas = 0;
   let connAtivas = 0;
   const pool: PoolPgNacional = {
@@ -64,6 +72,7 @@ function bancoSimulado({
       const c: ConexaoPgNacional = {
         async query<T>(sql: string, params: readonly unknown[] = []): Promise<ConsultaPgNacional<T>> {
           logs.push(sql);
+          consultas.push({ sql, parametros: [...params] });
           if (sql === "BEGIN") {
             pendente = clone(registro);
             novosUsos = clone(usos);
@@ -73,9 +82,11 @@ function bancoSimulado({
           } else if (sql === "ROLLBACK") {
             pendenteAuditoria = 0;
           } else if (sql.includes("FROM national_ops.solicitacoes_autorizacao")) {
+            if (negarLeitura) throw new Error("permission denied for relation solicitacoes_autorizacao");
             const row = pendente.solicitacao_id === params[0] && pendente.cliente_id === params[1] ?
               [{
                 solicitacao_id: pendente.solicitacao_id,
+                cliente_id: devolverClienteIncorreto ? "cliente_0002" : pendente.cliente_id,
                 estado: pendente.estado,
                 condicoes_atuais: clone(pendente.condicoes_atuais),
                 consentimento_atual: clone(pendente.consentimento_atual),
@@ -117,7 +128,7 @@ function bancoSimulado({
     },
   };
   return {
-    pool, logs, usos,
+    pool, logs, consultas, usos,
     get registro() { return registro; },
     get liberadas() { return liberadas; },
     get connAtivas() { return connAtivas; },
@@ -179,14 +190,41 @@ describe("rodada 18 — adaptador PostgreSQL não conectado", () => {
     expect(mock.logs.at(-1)).toBe("ROLLBACK");
   });
 
-  it("não inicia conexão para outra identidade ou sem confirmação", async () => {
+  it("não lê outro titular nem altera pedidos, e não conecta sem confirmação", async () => {
     const mock = bancoSimulado();
     expect(await registrarAutorizacaoCotacaoNacional(montar(mock, "cliente_0002"), entrada()))
       .toMatchObject({ autorizada: false, estado: "nao_autorizado" });
+    const consulta = mock.consultas.find(c => c.sql.includes("FROM national_ops.solicitacoes_autorizacao"));
+    expect(consulta?.sql).toContain("cliente_id = $2");
+    expect(consulta?.parametros).toEqual([solicitacaoId, "cliente_0002"]);
+    expect(mock.logs.some(s => s.startsWith("UPDATE ") || s.startsWith("INSERT "))).toBe(false);
+    expect(mock.registro.estado).toBe("rascunho");
+    const consultasAntes = mock.consultas.length;
     expect(await registrarAutorizacaoCotacaoNacional(montar(mock), {
       ...entrada(), confirmouIntegralmente: false,
     })).toMatchObject({ autorizada: false, estado: "confirmacao_necessaria" });
-    expect(mock.logs).toEqual([]);
+    expect(mock.consultas).toHaveLength(consultasAntes);
+    expect(mock.liberadas).toBe(1);
+  });
+
+  it("falha fechada se a camada de consultas retorna outro cliente por engano", async () => {
+    const mock = bancoSimulado({ devolverClienteIncorreto: true });
+    expect(await registrarAutorizacaoCotacaoNacional(montar(mock), entrada()))
+      .toMatchObject({ autorizada: false, estado: "nao_autorizado" });
+    expect(mock.logs.some(s => s.startsWith("UPDATE ") || s.startsWith("INSERT "))).toBe(false);
+    expect(mock.registro.estado).toBe("rascunho");
+    expect(mock.liberadas).toBe(1);
+  });
+
+  it("permissão negada pelo PostgreSQL aborta a operação e não persiste", async () => {
+    const mock = bancoSimulado({ negarLeitura: true });
+    await expect(registrarAutorizacaoCotacaoNacional(montar(mock), entrada()))
+      .rejects.toThrow(/permission denied/);
+    expect(mock.logs.at(-1)).toBe("ROLLBACK");
+    expect(mock.logs.some(s => s.startsWith("UPDATE ") || s.startsWith("INSERT "))).toBe(false);
+    expect(mock.registro.estado).toBe("rascunho");
+    expect(mock.liberadas).toBe(1);
+    expect(mock.connAtivas).toBe(0);
   });
 
   it("falha de conexão não aciona outras operações", async () => {
