@@ -63,7 +63,9 @@ ALTER TABLE national_ops.solicitacoes_autorizacao FORCE ROW LEVEL SECURITY;
 ALTER TABLE national_ops.autorizacoes_cotacao FORCE ROW LEVEL SECURITY;
 ALTER TABLE national_ops.autorizacoes_auditoria FORCE ROW LEVEL SECURITY;
 
-REVOKE ALL ON SCHEMA national_ops FROM PUBLIC;
+-- Não alterar privilégios do SCHEMA existente nesta proposta: isso pode
+-- quebrar módulos anteriores. Validar grants atuais e criar uma role privada
+-- específica em migration revisada, sem conceder acesso público.
 -- Revogar apenas os NOVOS objetos. Jamais alterar permissões das outras
 -- tabelas do schema, inclusive partner_validacoes da proposta anterior.
 REVOKE ALL ON national_ops.solicitacoes_autorizacao FROM PUBLIC;
