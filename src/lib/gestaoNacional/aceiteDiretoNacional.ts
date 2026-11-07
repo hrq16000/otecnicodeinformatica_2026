@@ -7,6 +7,11 @@
  * Exige adaptador backend autenticado e transacao/lock real ANTES de habilitar.
  */
 import type { EstadoContratacaoNacional } from "./contratacaoDiretaNacional";
+import {
+  condicoesAceitasPeloClienteNacional,
+  type CondicoesVinculadasNacional,
+  type ConsentimentoCotacaoNacional,
+} from "./integridadeCotacaoNacional";
 
 export interface ProfissionalAceiteAutenticado {
   papel: "profissional";
@@ -25,13 +30,16 @@ export interface RegistroAceiteNacional {
   tecnicoAceitouId: string | null;
   /** Conferidos no backend, nunca derivados da tela ou do print de Pix. */
   pagamentoConciliado: boolean;
-  autorizacaoClienteConfirmada: boolean;
-  cotacaoVigente: boolean;
+  /** Proposta atual e aceite imutavel recuperados da persistencia autoritativa. */
+  condicoesAtuais: CondicoesVinculadasNacional;
+  consentimentoCliente: ConsentimentoCotacaoNacional | null;
 }
 
 export interface TransacaoAceiteDiretoNacional {
   /** Identidade e papel derivados da sessao validada pelo servidor. */
   resolverProfissionalAutenticado(): Promise<ProfissionalAceiteAutenticado | null>;
+  /** Hora UTC gerada no servidor, nunca informada pelo navegador. */
+  instanteUtcServidor(): Promise<string>;
   /** Busca pelo ID sob lock e valida titularidade/escopo em banco. */
   buscarSolicitacao(solicitacaoId: string): Promise<RegistroAceiteNacional | null>;
   /**
@@ -95,7 +103,18 @@ export async function registrarAceiteDiretoNacional(
     if (pedido.tecnicoApresentadoId !== ator.parceiroId) {
       return { aceito: false, estado: "nao_autorizado" };
     }
-    if (pedido.estado === "aceito_diretamente_pelo_tecnico") {
+    const repeticao = pedido.estado === "aceito_diretamente_pelo_tecnico";
+    const agora = await tx.instanteUtcServidor();
+    if (
+      !pedido.condicoesAtuais ||
+      pedido.condicoesAtuais.solicitacaoId !== solicitacaoId ||
+      pedido.condicoesAtuais.tecnicoId !== ator.parceiroId ||
+      !condicoesAceitasPeloClienteNacional(
+        pedido.condicoesAtuais, pedido.consentimentoCliente, agora, !repeticao,
+      )
+    ) return { aceito: false, estado: "aguardando_confirmacao" };
+
+    if (repeticao) {
       if (pedido.tecnicoAceitouId !== ator.parceiroId || pedido.pagamentoConciliado !== true) {
         return { aceito: false, estado: "nao_autorizado" };
       }
@@ -105,8 +124,7 @@ export async function registrarAceiteDiretoNacional(
       pedido.estado !== "pagamento_confirmado" ||
       pedido.tecnicoAceitouId !== null ||
       pedido.pagamentoConciliado !== true ||
-      pedido.autorizacaoClienteConfirmada !== true ||
-      pedido.cotacaoVigente !== true
+      pedido.consentimentoCliente === null
     ) return { aceito: false, estado: "aguardando_confirmacao" };
 
     if (!(await tx.profissionalContinuaElegivel(solicitacaoId, ator.parceiroId))) {

@@ -7,6 +7,8 @@ import {
   type TransacaoAceiteDiretoNacional,
 } from "./aceiteDiretoNacional";
 import { CONTRATACAO_NACIONAL_ATIVA } from "./contratacaoDiretaNacional";
+import { calcularCotacaoNacional, type EntradaCotacaoNacional } from "./cotacaoNacional";
+import type { CondicoesVinculadasNacional, ConsentimentoCotacaoNacional } from "./integridadeCotacaoNacional";
 
 const solicitacaoId = "pedido_00000001";
 const ator: ProfissionalAceiteAutenticado = {
@@ -16,14 +18,28 @@ const ator: ProfissionalAceiteAutenticado = {
   sessaoAutenticadaNoServidor: true,
   vinculoComParceiroValidadoNoServidor: true,
 };
+const parametros: EntradaCotacaoNacional = {
+  modalidade: "padrao", horasAdicionaisAprovadas: 0,
+  distanciaIdaMetros: 1000, estacionamento: { tipo: "vaga_fornecida_pelo_cliente" },
+};
+const condicoes: CondicoesVinculadasNacional = {
+  solicitacaoId, clienteId: "cliente_0001", tecnicoId: ator.parceiroId,
+  servicoId: "formatacao", escopo: "Formatar computador", revisao: 1,
+  validadeAteUtc: "2026-11-08T00:00:00.000Z",
+  parametros, valores: calcularCotacaoNacional(parametros),
+};
+const consentimento: ConsentimentoCotacaoNacional = {
+  condicoes, clienteAutenticadoId: condicoes.clienteId,
+  verificadoNoServidor: true, aceitoEmUtc: "2026-11-07T00:00:00.000Z",
+};
 const inicial: RegistroAceiteNacional = {
   solicitacaoId,
   estado: "pagamento_confirmado",
   tecnicoApresentadoId: ator.parceiroId,
   tecnicoAceitouId: null,
   pagamentoConciliado: true,
-  autorizacaoClienteConfirmada: true,
-  cotacaoVigente: true,
+  condicoesAtuais: condicoes,
+  consentimentoCliente: consentimento,
 };
 
 function criarMock({
@@ -55,6 +71,10 @@ function criarMock({
           async resolverProfissionalAutenticado() {
             chamadas.push("autenticacao");
             return identidade;
+          },
+          async instanteUtcServidor() {
+            chamadas.push("relogio");
+            return "2026-11-07T12:00:00.000Z";
           },
           async buscarSolicitacao(id) {
             chamadas.push("solicitacao");
@@ -148,8 +168,8 @@ describe("aceite DIRETO nacional - somente contrato backend nao publicado", () =
       { ...inicial, estado: "aguardando_pagamento" as const },
       { ...inicial, estado: "cancelado" as const },
       { ...inicial, pagamentoConciliado: false },
-      { ...inicial, autorizacaoClienteConfirmada: false },
-      { ...inicial, cotacaoVigente: false },
+      { ...inicial, consentimentoCliente: null },
+      { ...inicial, condicoesAtuais: { ...condicoes, revisao: 2 } },
       { ...inicial, tecnicoAceitouId: "outro_tecnico" },
     ]) {
       const mock = criarMock({ pedido });
@@ -193,5 +213,38 @@ describe("aceite DIRETO nacional - somente contrato backend nao publicado", () =
       .rejects.toThrow(/invalido/);
     await expect(registrarAceiteDiretoNacional(null as unknown as ArmazenamentoAceiteDiretoNacional, solicitacaoId))
       .rejects.toThrow(/invalido/);
+  });
+
+  it("bloqueia aceite mesmo com pagamento conciliado se preco, escopo ou tecnico mudaram", async () => {
+    for (const atualizadas of [
+      { ...condicoes, escopo: "Servico diferente" },
+      { ...condicoes, tecnicoId: "tecnico_0002" },
+      { ...condicoes, revisao: 2 },
+      { ...condicoes, valores: { ...condicoes.valores, totalClienteCentavos: 1 } },
+    ]) {
+      const mock = criarMock({ pedido: { ...inicial, condicoesAtuais: atualizadas } });
+      expect(await registrarAceiteDiretoNacional(mock.armazenamento, solicitacaoId))
+        .toEqual({ aceito: false, estado: "aguardando_confirmacao" });
+      expect(mock.chamadas).not.toContain("gravacao");
+      expect(mock.eventos).toHaveLength(0);
+    }
+  });
+
+  it("repeticao apos validade nao autoriza mudanca retroativa das condicoes", async () => {
+    const registroAceito: RegistroAceiteNacional = {
+      ...inicial, estado: "aceito_diretamente_pelo_tecnico",
+      tecnicoAceitouId: ator.parceiroId,
+      condicoesAtuais: { ...condicoes, validadeAteUtc: "2026-11-07T01:00:00.000Z" },
+      consentimentoCliente: { ...consentimento,
+        condicoes: { ...condicoes, validadeAteUtc: "2026-11-07T01:00:00.000Z" } },
+    };
+    const mock = criarMock({ pedido: registroAceito });
+    expect(await registrarAceiteDiretoNacional(mock.armazenamento, solicitacaoId))
+      .toEqual({ aceito: true, estado: "aceito_diretamente", repeticao: true });
+    const alterado = criarMock({ pedido: {
+      ...registroAceito, condicoesAtuais: { ...registroAceito.condicoesAtuais, escopo: "Outro escopo" },
+    } });
+    expect(await registrarAceiteDiretoNacional(alterado.armazenamento, solicitacaoId))
+      .toEqual({ aceito: false, estado: "aguardando_confirmacao" });
   });
 });
