@@ -60,10 +60,9 @@ export default defineConfig({
     trace: "on-first-retry",
     screenshot: "only-on-failure",
     video: "off",
-    launchOptions: { args: ["--no-sandbox", "--disable-dev-shm-usage"] },
   },
   projects: [
-    { name: "chromium", use: { ...devices["Desktop Chrome"] } },
+    { name: "chromium", use: { ...devices["Desktop Chrome"], launchOptions: { args: ["--no-sandbox", "--disable-dev-shm-usage"] } } },
     { name: "mobile", use: { ...devices["Pixel 7"] } },
   ],
   webServer,

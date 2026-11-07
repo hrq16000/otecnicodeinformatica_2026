@@ -62,6 +62,9 @@ export default defineConfig({
     cloudflare: {
       nodeCompat: true,
       deployConfig: true,
+      // Workers Logs persiste logs no painel Cloudflare: sink nativo real.
+      // O gate estrito verifica esta configuração no Wrangler gerado em dist/.
+      wrangler: { observability: { enabled: true, head_sampling_rate: 1 } },
     },
   },
   vite: {

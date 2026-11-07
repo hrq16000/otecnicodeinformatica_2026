@@ -127,6 +127,11 @@ const MAPA: Record<string, EditorialInboundLink[]> = {
       label: "Como organizar a informática de um pequeno escritório",
       hint: "Acessos, responsáveis e limites de sistemas mantidos por terceiros.",
     },
+    {
+      slug: "como-fazer-backup-na-nuvem",
+      label: "Backup na nuvem: como testar a restauração",
+      hint: "O que proteger, como separar sincronização de backup e como validar a cópia.",
+    },
   ],
   "/servicos/redes-e-wifi": [
     {

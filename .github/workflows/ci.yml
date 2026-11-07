@@ -21,7 +21,7 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
-          node-version: "20"
+          node-version: "22"
       - name: Install deps
         run: npm ci --no-audit --no-fund
       - name: Inventário de testes (isolamento de runners, fail-closed)
@@ -52,20 +52,63 @@ jobs:
           bun-version: latest
       - uses: actions/setup-node@v4
         with:
-          node-version: "20"
+          node-version: "22"
       - name: Install deps
         run: npm ci --no-audit --no-fund
-      - name: Lint (non-blocking warnings)
-        run: npm run lint --silent || echo "::warning::lint reported issues"
+      # Observacional: evitar que um lint amplo congele os gates oficiais.
+      # A checagem de formato continua registrada, sem esconder o retorno.
+      - name: Lint (non-blocking warnings, bounded)
+        run: |
+          set +e
+          timeout --signal=TERM --kill-after=10s 120s npm run lint --silent > lint-observacional.log 2>&1
+          status=$?
+          set -e
+          if [ "$status" -eq 124 ] || [ "$status" -eq 137 ]; then
+            echo "::warning::Lint observacional excedeu 120 segundos (exit $status); consulte o artefato."
+          elif [ "$status" -ne 0 ]; then
+            echo "::warning::Lint observacional retornou exit $status; consulte o artefato."
+          else
+            echo "::notice::Lint observacional concluido."
+          fi
+          echo "Lint observacional (exit $status)" >> "$GITHUB_STEP_SUMMARY"
+      - name: Upload lint observacional
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: lint-observacional
+          path: lint-observacional.log
+          if-no-files-found: ignore
+      # Reproduzir o artefato exato do gate sem enfraquecer a checagem.
+      - name: Regenerar inventário auditado de afirmações
+        run: npm run report:afirmacoes
+      - name: Exigir inventário de afirmações versionado atualizado
+        run: git diff --exit-code -- src/data/trustClaimsAudit.json
+      - name: Anexar inventário auditado para correção reproduzível
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: trust-claims-inventory
+          path: src/data/trustClaimsAudit.json
+          if-no-files-found: warn
+      # O build gera dist/ e sitemaps exigidos pela governança editorial.
+      # Tanto Build quanto verify permanecem bloqueantes.
+      - name: Build
+        env:
+          # Public client-side observability endpoints; never set fake values.
+          VITE_SENTRY_DSN: ${{ secrets.VITE_SENTRY_DSN }}
+          VITE_OTLP_ENDPOINT: ${{ secrets.VITE_OTLP_ENDPOINT || vars.VITE_OTLP_ENDPOINT }}
+        run: npm run build
       # Comando oficial: gates essenciais de código e conteúdo.
       # Os testes já rodam no job `unit`, por isso ficam de fora aqui.
       - name: verify (gates essenciais — comando oficial)
         run: npm run verify -- --skip=test
-      - name: Build
-        run: npm run build
       # Comando oficial: gates essenciais de publicação (exigem dist/).
       # Os passos opcionais (GSC/rede) não bloqueiam o CI.
       - name: deploy:check (gates de publicação — comando oficial)
+        env:
+          # Fail-closed when neither configured endpoint exists.
+          VITE_SENTRY_DSN: ${{ secrets.VITE_SENTRY_DSN }}
+          VITE_OTLP_ENDPOINT: ${{ secrets.VITE_OTLP_ENDPOINT || vars.VITE_OTLP_ENDPOINT }}
         run: npm run deploy:check
       # Gates de SEO com resumo anexado ao build (bloqueantes).
       - name: Gates de SEO (auditoria, descoberta, sitemap, robots)
@@ -93,9 +136,18 @@ jobs:
         run: node scripts/with-ssr-server.mjs npm run check:local-interlinking
       - name: Gate de saúde de indexação (rotas + aliases)
         run: |
-          npx vite preview --port 4321 --strictPort &
-          for i in $(seq 1 60); do curl -sf -o /dev/null http://localhost:4321/ && break; sleep 1; done
-          node scripts/check-index-health.mjs --base=http://localhost:4321 --strict
+          set -euo pipefail
+          test -f dist/server/wrangler.json
+          npx --yes wrangler@4.45.4 dev --config dist/server/wrangler.json --local --ip 127.0.0.1 --port 4321 > /tmp/ci-index-worker.log 2>&1 &
+          worker_pid=$!
+          trap 'kill "$worker_pid" 2>/dev/null || true' EXIT
+          ready=0
+          for i in $(seq 1 60); do
+            if curl -fsS -o /dev/null http://127.0.0.1:4321/; then ready=1; break; fi
+            sleep 1
+          done
+          if [ "$ready" != "1" ]; then cat /tmp/ci-index-worker.log; exit 1; fi
+          node scripts/check-index-health.mjs --base=http://127.0.0.1:4321 --strict
       - name: Relatório HTML de auditoria local
         run: npm run report:local-audit
 
@@ -119,24 +171,40 @@ jobs:
   e2e:
     runs-on: ubuntu-latest
     timeout-minutes: 20
-    needs: build
+    # E2E possui build proprio; pode diagnosticar independentemente do gate
+    # de observabilidade do build principal. Ambos seguem obrigatorios.
+    needs: unit
     steps:
       - uses: actions/checkout@v4
+      - uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: latest
       - uses: actions/setup-node@v4
         with:
-          node-version: "20"
+          node-version: "22"
       - name: Install deps
         run: npm ci --no-audit --no-fund
       - name: Install Playwright browsers
-        run: npx playwright install --with-deps chromium
+        # The mobile project resolves to WebKit on this runner; install both.
+        run: npx playwright install --with-deps chromium webkit
       - name: Build
         run: npm run build
-      - name: Start preview
-        run: npx vite preview --port 8080 &
-        env:
-          CI: "true"
-      - name: Wait for server
-        run: npx wait-on http://localhost:8080 --timeout 60000
+      - name: Start production-like SSR Worker (local only)
+        run: |
+          npx --yes wrangler@4.45.4 dev --config dist/server/wrangler.json --local --ip 127.0.0.1 --port 8080 > /tmp/e2e-ssr-worker.log 2>&1 &
+      - name: Wait for SSR HTML response (GET, not HEAD)
+        run: |
+          for i in $(seq 1 60); do
+            status="$(curl --silent --output /dev/null --write-out '%{http_code}' --max-time 3 http://127.0.0.1:8080/ || true)"
+            if [ "$status" = "200" ]; then
+              echo "SSR homepage answered HTTP 200"
+              exit 0
+            fi
+            sleep 1
+          done
+          cat /tmp/e2e-ssr-worker.log
+          echo "::error::SSR Worker did not return HTTP 200"
+          exit 1
       - name: Run targeted E2E (whatsapp + termos + sitemap + como-funciona + segurança)
         run: npx playwright test e2e/whatsapp-funnel.spec.ts e2e/termos-e-condicoes.spec.ts e2e/seo-sitemap-robots.spec.ts e2e/como-funciona-mobile.spec.ts e2e/security-data-exposure.spec.ts
         env:
@@ -188,8 +256,11 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
-          node-version: "20"
+          node-version: "22"
           cache: npm
+      - uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: 1.4.2
       - name: Install deps
         run: npm ci --no-audit --no-fund
       - name: Install Playwright browser (${{ matrix.browser }})
@@ -197,10 +268,14 @@ jobs:
         run: npx playwright install --with-deps ${{ matrix.browser }}
       - name: Build (uma única vez por job)
         run: npm run build
-      - name: Start preview
-        run: npx vite preview --port 8080 &
-      - name: Wait for server (healthcheck HTTP)
-        run: npx wait-on http-get://localhost:8080/ --timeout 90000
+      - name: Start Cloudflare SSR worker
+        run: npx --yes wrangler@4.45.4 dev --config dist/server/wrangler.json --local --ip 127.0.0.1 --port 8080 > /tmp/ci-matrix-worker.log 2>&1 &
+      - name: Wait for SSR server (HTTP 200 mandatory)
+        run: |
+          if ! npx wait-on http-get://127.0.0.1:8080/ --timeout 90000; then
+            cat /tmp/ci-matrix-worker.log
+            exit 1
+          fi
       - name: Run shard ${{ matrix.shard }}/${{ matrix.totalShards }} (${{ matrix.browser }})
         run: npx playwright test --config=playwright.ci.config.ts --shard=${{ matrix.shard }}/${{ matrix.totalShards }}
         env:
@@ -246,12 +321,13 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 15
     needs: e2e-full-matrix
-    if: always()
+    # No shards = no blobs. Shard failures still produce a report; do not mask them.
+    if: ${{ always() && needs.e2e-full-matrix.result != 'skipped' }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
-          node-version: "20"
+          node-version: "22"
           cache: npm
       - name: Install deps
         run: npm ci --no-audit --no-fund
@@ -259,8 +335,21 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           pattern: playwright-blob-*
-          merge-multiple: true
-          path: all-blob-reports
+          merge-multiple: false
+          path: all-blob-artifacts
+      - name: Collect blob files for Playwright merge (preserve shard evidence)
+        run: |
+          set -euo pipefail
+          mkdir -p all-blob-reports
+          mapfile -d '' files < <(find all-blob-artifacts -type f -name '*.zip' -print0 | sort -z)
+          if [ "${#files[@]}" -eq 0 ]; then
+            echo "::error::Nenhum blob Playwright entregue pelos shards."
+            exit 1
+          fi
+          for index in "${!files[@]}"; do
+            cp -- "${files[$index]}" "all-blob-reports/report-${index}.zip"
+          done
+          echo "Arquivos Playwright disponíveis para merge: ${#files[@]}"
       - name: Merge into HTML
         run: npx playwright merge-reports --reporter html ./all-blob-reports
         env:
@@ -308,7 +397,7 @@ jobs:
       - uses: actions/setup-node@v4
         if: steps.changes.outputs.ping == 'true'
         with:
-          node-version: "20"
+          node-version: "22"
       - name: Ping IndexNow with sitemap URLs
         if: steps.changes.outputs.ping == 'true'
         env:
@@ -329,7 +418,10 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
-          node-version: "20"
+          node-version: "22"
+      - uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: 1.4.2
       - name: Install deps
         run: npm ci --no-audit --no-fund
       - name: Install Lighthouse CI
@@ -359,7 +451,11 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: lighthouse-reports
-          path: .lighthouseci
-          if-no-files-found: ignore
+          # Desktop e mobile têm diretórios distintos; publicar evidência de
+          # ambos os gates para diagnosticar FCP/LCP sem execuções cegas.
+          path: |
+            .lighthouseci/
+            .lighthouseci-mobile/
+          if-no-files-found: error
 
 

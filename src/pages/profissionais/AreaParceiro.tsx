@@ -16,6 +16,8 @@ import {
 } from "@/lib/partnersApi";
 import { ImagePlus, LogOut, ShieldCheck, Trash2 } from "lucide-react";
 import type { Session } from "@supabase/supabase-js";
+import { AREA_NACIONAL_INTEGRADA } from "@/lib/gestaoNacional/areaNacionalFeatureGate";
+import { PainelModalidadeNacional } from "@/components/gestaoNacional/PainelModalidadeNacional";
 
 const ESPECIALIDADES = [
   "Manutenção de computador",
@@ -368,6 +370,10 @@ const PainelParceiro = ({ email }: { email: string }) => {
           </div>
         </div>
       </section>
+
+      {AREA_NACIONAL_INTEGRADA ? (
+        <PainelModalidadeNacional resumo={null} backendDisponivel={false} />
+      ) : null}
 
       <section>
         <h2 className="font-heading text-2xl font-bold text-foreground">Dados do perfil</h2>

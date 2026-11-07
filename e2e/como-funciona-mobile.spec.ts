@@ -1,70 +1,49 @@
-import { test, expect, devices } from "@playwright/test";
+import { test, expect } from "@playwright/test";
 
-const BASE = process.env.E2E_BASE_URL || "http://localhost:8080";
+// Exercitar a experiência mobile real em Chromium e no projeto mobile,
+// sem sobrescrever o navegador do projeto com um preset de WebKit.
+test.use({ viewport: { width: 390, height: 844 }, isMobile: true, hasTouch: true });
 
-test.use({ ...devices["iPhone 13"] });
-
-test.describe("Como Funciona + modais — CTAs e CLS", () => {
-  test("CTAs WhatsApp permanecem clicáveis e sem links tel:", async ({ page }) => {
-    // Coletor de CLS via PerformanceObserver
+test.describe("Como funciona — contato, funil e estabilidade mobile", () => {
+  test("CTA visível abre a triagem obrigatória e preserva CLS", async ({ page }) => {
     await page.addInitScript(() => {
       (window as unknown as { __cls: number }).__cls = 0;
-      new PerformanceObserver((list) => {
-        for (const entry of list.getEntries() as PerformanceEntry[]) {
-          const e = entry as PerformanceEntry & {
-            hadRecentInput?: boolean;
-            value?: number;
-          };
-          if (!e.hadRecentInput && typeof e.value === "number") {
-            (window as unknown as { __cls: number }).__cls += e.value;
+      try {
+        new PerformanceObserver((list) => {
+          for (const entry of list.getEntries() as PerformanceEntry[]) {
+            const shift = entry as PerformanceEntry & {
+              hadRecentInput?: boolean;
+              value?: number;
+            };
+            if (!shift.hadRecentInput && typeof shift.value === "number") {
+              (window as unknown as { __cls: number }).__cls += shift.value;
+            }
           }
-        }
-      }).observe({ type: "layout-shift", buffered: true });
+        }).observe({ type: "layout-shift", buffered: true });
+      } catch {
+        // Navegadores sem LayoutShift API: o teste mantém os gates de CTA.
+      }
     });
 
-    await page.goto(BASE + "/", { waitUntil: "domcontentloaded" });
-
-    // Hidratação básica do hero antes do fallback
+    const response = await page.goto("/como-funciona", { waitUntil: "domcontentloaded" });
+    expect(response?.ok()).toBeTruthy();
     await expect(page.getByRole("heading", { level: 1 })).toBeVisible();
+    expect(await page.locator('a[href^="tel:"]').count()).toBe(0);
 
-    // Regra do projeto: sem links tel:
-    const telCount = await page.locator('a[href^="tel:"]').count();
-    expect(telCount).toBe(0);
+    // Página atual: CTAs são links "Chamar no WhatsApp", não um botão
+    // "Prefiro agendar" nem uma timeline com IDs removidos do produto.
+    const cta = page.getByRole("link", { name: /Chamar no WhatsApp/i }).first();
+    await expect(cta).toBeVisible();
+    await expect(cta).toBeEnabled();
+    expect(await cta.getAttribute("href")).toMatch(/^https:\/\/wa\.me\//);
 
-    // Abre o modal "Prefiro agendar"
-    await page.getByRole("button", { name: /prefiro agendar/i }).click();
-    const modal = page.getByRole("dialog");
-    await expect(modal).toBeVisible();
+    // O listener global intercepta o contato e exige triagem antes do WhatsApp.
+    await cta.click();
+    const dialog = page.getByRole("dialog");
+    await expect(dialog).toBeVisible({ timeout: 15000 });
+    await expect(dialog.getByText(/Triagem antes do atendimento/i)).toBeVisible();
 
-    // CTA WhatsApp dentro do modal continua clicável
-    const modalCta = modal.getByRole("link", { name: /continuar no whatsapp/i });
-    await expect(modalCta).toBeVisible();
-    await expect(modalCta).toBeEnabled();
-    expect(await modalCta.getAttribute("href")).toContain("wa.me");
-
-    // Fecha modal
-    await modal.getByRole("button", { name: /fechar/i }).click();
-    await expect(modal).toBeHidden();
-
-    // Scroll até "Como funciona" e verifica CTAs por etapa
-    await page.evaluate(() => {
-      const el = document.getElementById("como-funciona-fluxo");
-      el?.scrollIntoView({ behavior: "instant" as ScrollBehavior, block: "start" });
-    });
-    for (let i = 1; i <= 4; i++) {
-      const cta = page.getByTestId(`como-funciona-cta-${i}`);
-      await expect(cta).toBeVisible();
-      await expect(cta).toBeEnabled();
-      const href = await cta.getAttribute("href");
-      expect(href).toContain("wa.me");
-    }
-
-    // Sticky WhatsApp mobile permanece visível e clicável
-    const sticky = page.locator('[data-cta-location="hero_sticky_mobile"]');
-    await expect(sticky).toBeVisible();
-    await expect(sticky).toBeEnabled();
-
-    // CLS abaixo do limite aceitável após interações
+    // A jornada não pode ter layout instável, inclusive após abrir o modal.
     await page.waitForTimeout(800);
     const cls = await page.evaluate(
       () => (window as unknown as { __cls: number }).__cls || 0,

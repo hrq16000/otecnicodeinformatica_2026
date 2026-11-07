@@ -151,7 +151,9 @@ for (const rota of rotasComLoading) {
         expect(esqueletoAnimando, "esqueleto animando sob reduced-motion").toBe(false);
       }
 
-      await page.unroute(/\/src\/pages\/|\/assets\/.*\.js|\/rest\/v1\//);
+      // Esperar handlers em voo terminarem antes de remover a interceptação:
+      // unroute() imediato podia disparar "Route is already handled".
+      await page.unrouteAll({ behavior: "wait" });
       await expect(page.locator("h1").first()).toBeVisible({ timeout: 20000 });
       await page.waitForLoadState("networkidle");
       await page.waitForTimeout(400);

@@ -37,7 +37,9 @@ export default defineConfig({
   forbidOnly: true,
   // Sem retries: falha reproduzida é falha registrada.
   retries: 0,
-  workers: 2,
+  // Firefox/WebKit consomem mais memória ao lado do Worker SSR local.
+  // Reduzir concorrência sem remover specs, browser, shards ou retries=0.
+  workers: browser === "chromium" ? 2 : 1,
   timeout: 45_000,
   expect: { timeout: 10_000 },
   reporter,

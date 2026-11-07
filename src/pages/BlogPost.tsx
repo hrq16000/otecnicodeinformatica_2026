@@ -250,7 +250,7 @@ const BlogPost = () => {
         <link rel="preload" as="image" href={heroImage} fetchPriority="high" />
       </Helmet>
       <JsonLdSchema />
-      <Header />
+      <Header internalLeadOnly />
       <main>
         {/* Hero */}
         <section className="relative overflow-hidden">
@@ -413,9 +413,9 @@ const BlogPost = () => {
           </div>
         </section>
 
-        <CTASection intent="guide" subject={post.title} />
+        <CTASection intent="guide" subject={post.title} internalLeadOnly />
       </main>
-      <Footer />
+      <Footer internalLeadOnly />
     </div>
   );
 };

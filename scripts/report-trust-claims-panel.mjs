@@ -148,6 +148,18 @@ function main() {
     ocorrencias,
   };
 
+  // Conservar a data da última alteração de conteúdo: CI não pode falhar
+  // todo dia apenas porque o calendário avançou. Diferenças reais no
+  // inventário continuam modificando o arquivo e bloqueando o gate.
+  if (existsSync(OUT)) {
+    const anterior = JSON.parse(readFileSync(OUT, "utf8"));
+    const semData = ({ geradoEm: _geradoEm, ...dados }) => dados;
+    if (JSON.stringify(semData(anterior)) === JSON.stringify(semData(relatorio)) &&
+        /^\d{4}-\d{2}-\d{2}$/.test(anterior.geradoEm ?? "")) {
+      relatorio.geradoEm = anterior.geradoEm;
+    }
+  }
+
   const json = `${JSON.stringify(relatorio, null, 2)}\n`;
 
   if (modoCheck) {

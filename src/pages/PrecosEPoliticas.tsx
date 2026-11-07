@@ -133,7 +133,7 @@ const PrecosEPoliticas = ({ path = "/precos-e-politicas" }: PrecosEPoliticasProp
 
   return (
     <div className="min-h-screen bg-background">
-      <PageSEO title="Termos, Condições, Valores e Prazos | O Técnico de Informática" description="Ponto único de termos, condições, valores e prazos: visita técnica de inspeção a partir de R$ 99,99 por 30 min." path="/precos-e-politicas" breadcrumbs={[{ name: "Início", path: "/" }, { name: "Termos, Condições, Valores e Prazos", path: "/precos-e-politicas" }]} />
+      <PageSEO title="Termos, Condições, Valores e Prazos | O Técnico de Informática" description="Ponto único de termos, condições, valores e prazos: visita técnica de inspeção a partir de R$ 99,99 por 30 min." descriptionInRouteHead={path === "/termos-e-condicoes"} path="/precos-e-politicas" breadcrumbs={[{ name: "Início", path: "/" }, { name: "Termos, Condições, Valores e Prazos", path: "/precos-e-politicas" }]} />
       <JsonLdSchema />
       <LocalBusinessJsonLd path="/precos-e-politicas" description="Termos, condições, valores e prazos do atendimento técnico de informática em Curitiba e Região Metropolitana." />
       <PrecosServiceSchema path="/precos-e-politicas" />
