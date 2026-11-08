@@ -10,7 +10,8 @@ export const Route = createFileRoute("/")({
     links: [{
       rel: "preload",
       as: "image",
-      href: "/fotos/bancada-tecnica.jpg",
+      href: "/fotos/bancada-tecnica-768.webp",
+      type: "image/webp",
       media: "(max-width: 1023px)",
       fetchPriority: "high",
     }],

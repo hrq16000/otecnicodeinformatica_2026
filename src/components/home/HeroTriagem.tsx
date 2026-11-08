@@ -102,16 +102,20 @@ export const HeroTriagem = () => {
             empresas. Conte o que aconteceu com suas palavras — a parte técnica fica com a gente.
           </p>
           <figure className="relative mt-6 overflow-hidden rounded-2xl border border-border shadow-[var(--shadow-lg)] lg:hidden">
-            <img
-              src="/fotos/bancada-tecnica.jpg"
-              alt="Bancada de diagnóstico com notebook, SSD e ferramentas de precisão"
-              width={1024}
-              height={735}
-              loading="eager"
-              fetchPriority="high"
-              decoding="async"
-              className="aspect-[16/9] w-full object-cover object-[65%_center]"
-            />
+            {/* Variante gerada pelo prebuild/predev, preservando o JPG original como fallback. */}
+            <picture>
+              <source srcSet="/fotos/bancada-tecnica-768.webp" type="image/webp" />
+              <img
+                src="/fotos/bancada-tecnica.jpg"
+                alt="Bancada de diagnóstico com notebook, SSD e ferramentas de precisão"
+                width={1024}
+                height={735}
+                loading="eager"
+                fetchPriority="high"
+                decoding="async"
+                className="aspect-[16/9] w-full object-cover object-[65%_center]"
+              />
+            </picture>
             <figcaption className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent px-4 pb-3 pt-10 text-sm font-medium text-white">
               Diagnóstico técnico começa pela causa.
             </figcaption>

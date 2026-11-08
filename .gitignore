@@ -29,3 +29,6 @@ reports/
 redirects/rollback/
 .stryker-tmp/
 dist-jsonld/
+
+# Variante mobile LCP gerada por predev/prebuild (preservar JPG original)
+/public/fotos/bancada-tecnica-768.webp
