@@ -143,11 +143,10 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { children: OS_PREHYDRATION_SCRIPT },
 
 
-      {
-        src: "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3762170279587706",
-        async: true,
-        crossOrigin: "anonymous",
-      },
+      // Não injetar adsbygoogle.js no SSR antes do aceite: o carregamento
+      // condicionado e idempotente já pertence a consentStore.loadAdsScript()
+      // (VITE_ADSENSE_CLIENT válido + consentimento explícito).
+      // Preservar a meta google-adsense-account e public/ads.txt.
     ],
   }),
   shellComponent: RootShell,
