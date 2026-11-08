@@ -169,7 +169,9 @@ jobs:
           retention-days: 30
 
   e2e:
-    runs-on: ubuntu-latest
+    # Playwright da versão travada no lockfile não suporta ubuntu26.04.
+    # O runner explícito restaura a instalação real dos navegadores no CI.
+    runs-on: ubuntu-24.04
     timeout-minutes: 20
     # E2E possui build proprio; pode diagnosticar independentemente do gate
     # de observabilidade do build principal. Ambos seguem obrigatorios.
@@ -242,7 +244,9 @@ jobs:
     # OBSERVACIONAL: registra o baseline de cada engine sem bloquear o merge —
     # o gate bloqueante continua sendo o job `e2e`.
     name: e2e ${{ matrix.browser }} shard ${{ matrix.shard }}/${{ matrix.totalShards }} (observacional)
-    runs-on: ubuntu-latest
+    # Evita a imagem ubuntu26.04, incompatível com o Chromium/WebKit/Firefox
+    # suportados pela versão de Playwright fixada em package-lock.json.
+    runs-on: ubuntu-24.04
     timeout-minutes: 25
     needs: build
     continue-on-error: true
