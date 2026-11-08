@@ -8,8 +8,8 @@ import { execFile } from "node:child_process";
 import { promisify } from "node:util";
 import { readFile, mkdir, writeFile } from "node:fs/promises";
 import { resolve, relative, extname } from "node:path";
-import { JSDOM } from "jsdom";
 import { chromium } from "playwright";
+import { inspectEditorialHtml as inspect } from "./lib/editorial-html-signals.mjs";
 
 const run = promisify(execFile);
 const origin = "https://otecnicodeinformatica.com.br";
@@ -17,44 +17,11 @@ const out = resolve("reports/editorial-batch-ssr");
 const assets = resolve("dist/client");
 const cases = [
   { slug: "windows-11-vale-a-pena-atualizar", approved: false, date: "2026-01-15" },
-  { slug: "disco-com-setores-defeituosos-smart-o-que-fazer", approved: true, date: "2026-08-26" },
-  { slug: "como-migrar-arquivos-para-um-computador-novo", approved: true, date: "2026-09-03" },
-  { slug: "rede-wifi-nao-aparece-na-lista-o-que-verificar", approved: true, date: "2026-09-03" },
-  { slug: "como-configurar-2fa-em-tudo", approved: true, date: "2026-04-20" },
+  { slug: "disco-com-setores-defeituosos-smart-o-que-fazer", approved: true, date: "2026-08-26", reviewedAt: "2026-11-01" },
+  { slug: "como-migrar-arquivos-para-um-computador-novo", approved: true, date: "2026-09-03", reviewedAt: "2026-11-02" },
+  { slug: "rede-wifi-nao-aparece-na-lista-o-que-verificar", approved: true, date: "2026-09-03", reviewedAt: "2026-11-04" },
+  { slug: "como-configurar-2fa-em-tudo", approved: true, date: "2026-04-20", reviewedAt: "2026-11-05" },
 ];
-const norm = (s) => s.replace(/\s+/g, " ").trim();
-function inspect(html, item) {
-  const doc = new JSDOM(html).window.document;
-  const url = origin + "/blog/" + item.slug;
-  assert.equal(doc.querySelectorAll('link[rel="canonical"]').length, 1, "canonical único");
-  assert.equal(doc.querySelector('link[rel="canonical"]').href, url);
-  assert.equal(doc.querySelectorAll("h1").length, 1, "H1 único");
-  assert.ok(doc.title.trim(), "título presente");
-  assert.ok(doc.querySelector('meta[name="description"]')?.content.trim(), "descrição presente");
-  const noindex = /noindex/i.test(doc.querySelector('meta[name="robots"]')?.content ?? "");
-  assert.equal(noindex, !item.approved, "indexabilidade preservada");
-  const nodes = [...doc.querySelectorAll('script[type="application/ld+json"]')]
-    .flatMap((el) => { const j = JSON.parse(el.textContent); return j["@graph"] ?? (Array.isArray(j) ? j : [j]); });
-  const hasType = (n, t) => [n["@type"]].flat().includes(t);
-  assert.ok(nodes.some((n) => hasType(n, "BreadcrumbList")), "breadcrumb SSR");
-  const article = nodes.find((n) => hasType(n, "Article"));
-  const faq = nodes.find((n) => hasType(n, "FAQPage"));
-  const visible = [...doc.querySelectorAll("[data-faq-visivel] details")].map((el) => ({
-    q: norm(el.querySelector("summary span").textContent),
-    a: norm(el.querySelector("div").textContent),
-  }));
-  assert.equal(visible.length, 5, "cinco FAQs visíveis");
-  if (item.approved) {
-    assert.equal(article?.["@id"], url + "#article");
-    assert.ok(article.datePublished.startsWith(item.date), "data original");
-    assert.equal(faq?.["@id"], url + "#faq");
-    assert.deepEqual(faq.mainEntity.map((n) => ({ q: norm(n.name), a: norm(n.acceptedAnswer.text) })), visible);
-  } else {
-    assert.equal(article, undefined, "rascunho não emite Article");
-    assert.equal(faq, undefined, "rascunho não emite FAQPage");
-  }
-  return { title: doc.title, canonical: url, noindex, schemas: nodes.map((n) => n["@type"]), faqCount: visible.length };
-}
 
 await mkdir(out, { recursive: true });
 // Ausência do browser ou do bundle é erro, não aprovação vazia.

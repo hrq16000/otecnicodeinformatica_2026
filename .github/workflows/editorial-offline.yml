@@ -26,3 +26,5 @@ jobs:
       # Sem secrets, .env, cliente Supabase ou chamadas de aplicação à rede.
       # Diagnóstico complementar: não substitui os gates globais de publicação.
       - run: npm run test:editorial:offline
+      - name: Contratos de HTML e schemas (fixtures locais, sem rede)
+        run: node --test scripts/lib/editorial-html-signals.test.mjs
