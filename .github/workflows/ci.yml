@@ -460,6 +460,10 @@ jobs:
           path: |
             .lighthouseci/
             .lighthouseci-mobile/
+          # Os nomes dos diretórios começam com ponto. A ação de upload
+          # ignora arquivos ocultos por padrão e perdia TODOS os LHRs.
+          include-hidden-files: true
+          retention-days: 7
           if-no-files-found: error
 
 

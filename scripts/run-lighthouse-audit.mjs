@@ -141,6 +141,22 @@ try {
       writeFileSync(filename, JSON.stringify(result.lhr));
       console.log("[Lighthouse]", url, attempt + "/" + runs,
         "perf=" + (result.lhr.categories?.performance?.score ?? "n/a"), filename);
+      // O LCP reprovou em TODAS as rotas mobile. Emitir evidência curta no
+      // log para localizar o gargalo sem abrir dezenas de JSONs por execução.
+      // Não muda settings, amostragem, assertions ou gravidade dos gates.
+      const audits = result.lhr.audits;
+      const lcpNode = audits["largest-contentful-paint-element"]?.details?.items?.[0]?.node;
+      const lcpElement = lcpNode?.selector ?? lcpNode?.snippet ?? "nao informado";
+      const metricMs = (key) => Math.round(audits[key]?.numericValue ?? -1);
+      console.log("[Lighthouse diagnostico]", JSON.stringify({
+        path: new URL(url).pathname,
+        run: attempt,
+        lcpMs: metricMs("largest-contentful-paint"),
+        fcpMs: metricMs("first-contentful-paint"),
+        ttfbMs: metricMs("server-response-time"),
+        tbtMs: metricMs("total-blocking-time"),
+        lcpElement: String(lcpElement).slice(0, 180),
+      }));
       if (!smoke) assess(result.lhr, url, attempt);
     }
   }
