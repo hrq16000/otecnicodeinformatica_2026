@@ -71,16 +71,22 @@ export const HeroTriagem = () => {
       />
 
       <div className="pointer-events-none absolute inset-y-0 right-0 hidden w-[46%] lg:block" aria-hidden="true">
-        <img
-          src="/fotos/estacao-trabalho.jpg"
-          alt=""
-          aria-hidden="true"
-          width={1024}
-          height={765}
-          fetchPriority="high"
-          decoding="async"
-          className="h-full w-full object-cover object-center"
-        />
+        {/* O browser requisitava a foto desktop mesmo com o wrapper oculto
+            em mobile. A <source media> impede os 173 KB desnecessários,
+            mantendo o JPG e sua prioridade alta em telas desktop. */}
+        <picture data-desktop-hero className="block h-full w-full">
+          <source media="(min-width: 1024px)" srcSet="/fotos/estacao-trabalho.jpg" />
+          <img
+            src="data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20width=%221%22%20height=%221%22/%3E"
+            alt=""
+            aria-hidden="true"
+            width={1024}
+            height={765}
+            fetchPriority="high"
+            decoding="async"
+            className="h-full w-full object-cover object-center"
+          />
+        </picture>
         <div className="absolute inset-0 bg-gradient-to-r from-background via-background/70 to-background/10" />
         <div className="absolute inset-0 bg-gradient-to-b from-background/20 via-transparent to-background/70" />
       </div>
