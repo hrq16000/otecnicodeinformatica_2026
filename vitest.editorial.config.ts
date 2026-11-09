@@ -25,6 +25,7 @@ export default defineConfig({
           "src/lib/__tests__/fileMigration.test.tsx",
           "src/lib/__tests__/wifiVisibility.test.tsx",
           "src/lib/__tests__/mfaRecovery.test.tsx",
+          "src/lib/__tests__/bootRecoveryEditorial.test.tsx",
         ],
   },
 });

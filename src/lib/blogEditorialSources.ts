@@ -118,6 +118,24 @@ export const ALLOWED_SOURCE_HOSTS = [
 // FONTES CONSULTADAS (URLs confirmadas em 2026-07-12).
 // ─────────────────────────────────────────────────────────────
 export const EDITORIAL_SOURCES: Record<string, EditorialSource> = {
+  "ms-diskpart-list-20261109": {
+    id: "ms-diskpart-list-20261109",
+    title: "DiskPart: listar discos e volumes",
+    publisher: "Microsoft Learn",
+    url: "https://learn.microsoft.com/pt-br/windows-server/administration/windows-commands/list",
+    accessedAt: "2026-11-09",
+    sourceType: "official",
+    supports: ["List disk e list volume são comandos de inventário; não identificam por si sós a EFI da instalação correta."],
+  },
+  "ms-startup-repair-20261109": {
+    id: "ms-startup-repair-20261109",
+    title: "Reparo de Inicialização no Windows",
+    publisher: "Microsoft Support",
+    url: "https://support.microsoft.com/pt-br/windows/experience/startup-boot/startup-repair",
+    accessedAt: "2026-11-09",
+    sourceType: "official",
+    supports: ["Reparo de Inicialização tenta corrigir falhas de boot e pode exigir a chave BitLocker."],
+  },
   "google-mfa-recovery-20261105": {
     id: "google-mfa-recovery-20261105", title: "Problemas de verificação em duas etapas", publisher: "Google Account Help",
     url: "https://support.google.com/accounts/answer/185834?hl=pt-BR",
@@ -513,11 +531,12 @@ export const EDITORIAL_SOURCES: Record<string, EditorialSource> = {
     title: "BCDBoot command-line options",
     publisher: "Microsoft Learn",
     url: "https://learn.microsoft.com/en-us/windows-hardware/manufacture/desktop/bcdboot-command-line-options-techref-di",
-    accessedAt: "2026-09-02",
+    accessedAt: "2026-11-09",
     sourceType: "official",
     supports: [
       "O BCDBoot configura ou repara o ambiente de inicialização copiando arquivos de boot da instalação do Windows para a partição de sistema.",
       "Os parâmetros de origem, destino e tipo de firmware precisam corresponder à instalação que será reparada.",
+      "Em UEFI, a opção /s indica a partição de destino e não cria entrada de boot na NVRAM.",
     ],
   },
   "ms-windows-recovery-environment": {
@@ -2414,6 +2433,8 @@ export const ARTICLE_SOURCE_MANIFEST: Record<string, ArticleSourceManifest> = {
     slug: "erro-no-bootable-device-como-resolver",
     sources: [
       "ms-bcdboot",
+      "ms-diskpart-list-20261109",
+      "ms-startup-repair-20261109",
       "ms-bitlocker-recovery",
       "ms-bitlocker-backup-key",
       "ms-windows-recovery-environment",
@@ -2422,9 +2443,9 @@ export const ARTICLE_SOURCE_MANIFEST: Record<string, ArticleSourceManifest> = {
     ],
     technicalReview: "reviewed",
     factChecked: true,
-    factCheckedAt: "2026-10-01",
+    factCheckedAt: "2026-11-09",
     notes:
-      "Revisão material em 2026-10-01 guiada pelo GSC: 5 impressões, 0 cliques e posição média ~38,8 entre 2026-04-01 e 2026-09-28. Queries reais expostas: 'no boot device found', 'no bootable device como resolver', 'no bootable device found' e 'no bootable device please restart'. A versão suplementar organiza o diagnóstico em detecção física do disco, Windows Boot Manager, UEFI/Legacy, WinRE e BCDBoot, reforça BitLocker antes de alterações e evita formatar/recriar EFI por tentativa. Fontes Microsoft visíveis; nenhuma query inventada.",
+      "Revisão material em 2026-11-09 na versão suplementar efetiva: inventário sem escrita, identificação BitLocker, distinção entre destino EFI e entrada na NVRAM, e uma única FAQ em paridade com o corpo. A seleção original foi guiada pelo GSC de abril a setembro de 2026; não representa demanda medida nesta rodada.",
   },
   "troquei-o-ssd-e-o-pc-so-abre-a-bios": {
     slug: "troquei-o-ssd-e-o-pc-so-abre-a-bios",

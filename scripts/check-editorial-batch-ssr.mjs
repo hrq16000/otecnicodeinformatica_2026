@@ -21,6 +21,7 @@ const cases = [
   { slug: "como-migrar-arquivos-para-um-computador-novo", approved: true, date: "2026-09-03", reviewedAt: "2026-11-02" },
   { slug: "rede-wifi-nao-aparece-na-lista-o-que-verificar", approved: true, date: "2026-09-03", reviewedAt: "2026-11-04" },
   { slug: "como-configurar-2fa-em-tudo", approved: true, date: "2026-04-20", reviewedAt: "2026-11-05" },
+  { slug: "erro-no-bootable-device-como-resolver", approved: true, date: "2026-10-01", reviewedAt: "2026-11-09" },
 ];
 
 await mkdir(out, { recursive: true });

@@ -4185,6 +4185,7 @@ export const blogSupplementalPosts: Record<string, BlogPostContent> = {
           Se o volume está criptografado e você não tem a chave, não continue com operações destrutivas. O objetivo é
           recuperar a inicialização sem transformar um problema de boot em perda de acesso aos dados.
         </p>
+        <p>Se o WinRE pedir a chave, compare o identificador exibido com o da chave de recuperação guardada. O identificador não é a chave de 48 dígitos, e senha ou PIN do Windows não a substituem. Em equipamento corporativo, procure o administrador. Não limpe o TPM nem desative o Secure Boot para tentar contornar a proteção.</p>
 
         <h2>5. Use o Ambiente de Recuperação do Windows antes do Prompt</h2>
         <p>
@@ -4196,6 +4197,7 @@ export const blogSupplementalPosts: Record<string, BlogPostContent> = {
           Se o WinRE não abre pelo próprio disco, use mídia oficial do Windows para acessar as opções de reparo. Isso
           não exige iniciar uma instalação limpa.
         </p>
+        <p>Se a unidade some, apresenta erros de leitura ou contém dados importantes sem cópia, não insista em reparos que escrevam no disco. Consulte primeiro o roteiro de <a href="/blog/disco-com-setores-defeituosos-smart-o-que-fazer">preservação de dados diante de alertas de armazenamento</a>. A opção automática também pode alterar arquivos de inicialização.</p>
 
         <h2>6. BCDBoot: útil quando a estrutura existe, mas o boot precisa ser recriado</h2>
         <p>
@@ -4207,6 +4209,11 @@ export const blogSupplementalPosts: Record<string, BlogPostContent> = {
           Antes de usar BCDBoot, identifique corretamente a instalação do Windows, o volume de sistema e o modo de
           firmware. Letras de unidade no WinRE podem ser diferentes das letras vistas no Windows normal.
         </p>
+        <h3>Faça um inventário antes de escolher origem e destino</h3>
+        <p>Em unidade estável, o prompt pode ajudar a listar discos e volumes sem alterá-los:</p>
+        <pre><code>{"diskpart\nlist disk\nlist volume\nexit"}</code></pre>
+        <p>O asterisco na coluna GPT informa o estilo do disco; não identifica o modo em que o pendrive foi iniciado. Um volume pequeno em FAT32 é apenas um indício, não prova de que ele seja a EFI daquela instalação. Com dois discos, clone ou dual boot, não escolha a partição pela letra, pelo tamanho ou por um número copiado de outro tutorial.</p>
+        <p>Copiar arquivos para a partição de sistema e cadastrar uma entrada no firmware são ações diferentes. Em UEFI, usar a opção <code>/s</code> do BCDBoot indica o destino, mas não cria a entrada de boot na NVRAM. Se o objetivo é recuperar a entrada Windows Boot Manager, não copie uma linha com <code>/s</code> como receita universal. Pare se não conseguir confirmar a instalação e a partição de destino.</p>
 
         <h2>7. Por que não recomendamos formatar a partição EFI por tentativa</h2>
         <p>
@@ -4272,37 +4279,6 @@ export const blogSupplementalPosts: Record<string, BlogPostContent> = {
           <li>O erro começou após impacto, líquido ou falha elétrica.</li>
           <li>Você não consegue identificar com segurança qual volume contém o Windows e qual é a partição de sistema.</li>
         </ul>
-
-        <h2>Perguntas frequentes</h2>
-        <h3>No bootable device significa HD queimado?</h3>
-        <p>
-          Não. O erro significa que o firmware não encontrou uma opção inicializável válida. O disco pode estar
-          ausente, ou pode estar presente com problema de configuração/boot.
-        </p>
-
-        <h3>Devo mudar de UEFI para Legacy?</h3>
-        <p>
-          Não por tentativa. Use o modo compatível com a instalação existente. Trocar o modo pode esconder a entrada
-          correta e criar um novo problema.
-        </p>
-
-        <h3>Posso formatar a partição EFI e recriar?</h3>
-        <p>
-          Não como primeira reação. Primeiro inventarie a estrutura e tente recuperação suportada. Formatação é
-          destrutiva e pode remover uma estrutura ainda recuperável.
-        </p>
-
-        <h3>BCDBoot resolve sempre?</h3>
-        <p>
-          Não. Ele é apropriado quando existe uma instalação do Windows e a estrutura de boot precisa ser configurada
-          ou reparada. Não corrige disco não detectado nem falha física.
-        </p>
-
-        <h3>Se o disco aparece na BIOS, ele está saudável?</h3>
-        <p>
-          Não. Detecção física é apenas uma evidência. Um disco pode ser detectado e ainda apresentar erros de leitura
-          ou falhas intermitentes.
-        </p>
 
         <h2>Resumo prático</h2>
         <p>
