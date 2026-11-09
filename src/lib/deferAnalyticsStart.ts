@@ -1,32 +1,26 @@
 /**
- * Adia o download de gtag.js (~190 KiB) até depois da primeira pintura.
- * O HTML SSR já contém Consent Mode v2 + stub de gtag/dataLayer;
- * eventos emitidos antes do carregamento continuam enfileirados.
+ * Carrega gtag.js (~190 KiB) fora da janela crítica inicial, preservando
+ * o Consent Mode v2 e o dataLayer já declarados no HTML SSR.
  *
- * Em visitas rápidas, clique/toque ou teclado inicia a biblioteca de imediato.
- * Se o navegador não expõe a entrada 'first-contentful-paint' (ou a aba
- * permanece oculta), fallback assegura inicialização automática em até 6s.
+ * A primeira interação do visitante inicia imediatamente o download, para
+ * não postergar eventos de conversão; sem interação, há fallback de 6s.
  *
- * Não modifica políticas de consentimento, IDs de GA4/Ads, conversões nem
- * telemetria first-party dos funis.
+ * A versão anterior usava o first-contentful-paint nativo para agendar
+ * o gtag. Nos LHRs (Lighthouse com throttling simulado), isso fez a
+ * transferência começar aos ~1,63s, ANTES do FCP simulado de ~4,3s.
+ * Não usar Paint Timing como equivalente ao FCP simulado do Lighthouse.
+ *
+ * Trade-off: pageviews sem interação e mais curtas que 6s podem não chegar
+ * ao GA4. Não altera telemetria first-party, IDs, consentimento ou funis.
  */
-export function deferAnalyticsStart(
-  start: () => void,
-  fallbackMs = 6000,
-  postPaintMs = 1250,
-): () => void {
+export function deferAnalyticsStart(start: () => void, delayMs = 6000): () => void {
   if (typeof window === "undefined") return () => {};
 
   let finished = false;
-  let paintTimer: number | undefined;
-  let observer: PerformanceObserver | undefined;
-
   const teardown = () => {
     window.removeEventListener("pointerdown", launch, true);
     window.removeEventListener("keydown", launch, true);
-    window.clearTimeout(fallbackTimer);
-    if (paintTimer !== undefined) window.clearTimeout(paintTimer);
-    observer?.disconnect();
+    window.clearTimeout(timer);
   };
   const launch = () => {
     if (finished) return;
@@ -34,34 +28,10 @@ export function deferAnalyticsStart(
     teardown();
     start();
   };
-  const afterPaint = () => {
-    if (finished || paintTimer !== undefined) return;
-    paintTimer = window.setTimeout(launch, postPaintMs);
-  };
 
-  const fallbackTimer = window.setTimeout(launch, fallbackMs);
+  const timer = window.setTimeout(launch, delayMs);
   window.addEventListener("pointerdown", launch, true);
   window.addEventListener("keydown", launch, true);
-
-  // O observer buffered captura FCP mesmo quando a hidratação já terminou.
-  // Não usar requestIdleCallback: ele pode disparar ANTES da pintura real.
-  try {
-    const existing = window.performance?.getEntriesByType?.("paint") ?? [];
-    if (existing.some((entry) => entry.name === "first-contentful-paint")) {
-      afterPaint();
-    } else if (typeof PerformanceObserver !== "undefined") {
-      observer = new PerformanceObserver((list) => {
-        if (list.getEntries().some((entry) => entry.name === "first-contentful-paint")) {
-          afterPaint();
-          observer?.disconnect();
-        }
-      });
-      observer.observe({ type: "paint", buffered: true });
-    }
-  } catch {
-    observer?.disconnect();
-    // Ambiente sem Paint Timing API: mantém fallback e primeira interação.
-  }
 
   return () => {
     if (finished) return;
