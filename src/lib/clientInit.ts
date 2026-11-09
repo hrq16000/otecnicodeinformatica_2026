@@ -1,3 +1,5 @@
+import { deferAnalyticsStart } from "@/lib/deferAnalyticsStart";
+
 // ported from src/main.tsx (pré-migração TanStack Start).
 // Roda uma única vez no cliente, após a hidratação — nunca no SSR.
 
@@ -41,7 +43,12 @@ export function runClientInit() {
   void import("@/lib/observability").then(({ iniciarObservabilidade }) => iniciarObservabilidade());
   // RODADA 1 — trava de indexação + analytics só da propriedade própria.
   void import("@/lib/indexingPolicy").then(({ applyIndexingPolicy }) => applyIndexingPolicy());
-  void import("@/lib/analytics").then(({ initGoogleTags }) => initGoogleTags());
+  // Gtag.js era baixado durante a primeira pintura (190 KiB em TODAS as rotas).
+  // Adia apenas o script terceiro: o stub Consent Mode já registra eventos no
+  // dataLayer e a primeira interação dispara o carregamento imediatamente.
+  deferAnalyticsStart(() => {
+    void import("@/lib/analytics").then(({ initGoogleTags }) => initGoogleTags());
+  });
 
   // Tema único (claro): remove qualquer `dark` herdado e força color-scheme light.
   try {
