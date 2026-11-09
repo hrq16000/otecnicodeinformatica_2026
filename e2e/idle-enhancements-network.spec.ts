@@ -19,6 +19,13 @@ test("home não baixa o chatbot secundário na primeira pintura; teclado pode an
   await page.goto(`${BASE}/`, { waitUntil: "domcontentloaded" });
   // As rotas são servidas por SSR; não depender de carregamento de fontes.
   await expect(page.locator("h1").first()).toBeVisible();
+  // A página é SSR: h1 visível não garante listeners React já montados.
+  // Aguarda a hidratação real para evitar falso negativo ao pressionar Tab.
+  await page.waitForFunction(
+    () => document.documentElement.dataset.hydrated === "1",
+    null,
+    { timeout: 20000 },
+  );
   await page.waitForTimeout(1100);
   expect(loads).toEqual([]);
 

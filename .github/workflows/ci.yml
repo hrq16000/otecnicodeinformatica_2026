@@ -218,6 +218,12 @@ jobs:
           # Se ausentes, o bloco autenticado é pulado (o bloco anon sempre roda).
           E2E_NONADMIN_EMAIL: ${{ secrets.E2E_NONADMIN_EMAIL }}
           E2E_NONADMIN_PASSWORD: ${{ secrets.E2E_NONADMIN_PASSWORD }}
+      # Os testes das rodadas 28/29/32 não podem depender apenas da matriz
+      # observacional: a aprovação do e2e obrigatório deve prová-los.
+      - name: E2E obrigatório — rede mobile, consentimento e recursos sob demanda
+        run: npx playwright test e2e/idle-enhancements-network.spec.ts e2e/home-desktop-hero-network.spec.ts e2e/consent-ads-script.spec.ts --project=chromium
+        env:
+          E2E_BASE_URL: http://localhost:8080
       - name: Acessibilidade axe-core (páginas empresariais 3T/3U)
         run: npx playwright test e2e/a11y-empresarial.spec.ts
         env:
