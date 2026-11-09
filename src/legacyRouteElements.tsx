@@ -568,18 +568,30 @@ export const IdleEnhancements = () => {
   const [enabled, setEnabled] = useState(false);
 
   useEffect(() => {
-    const activate = () => setEnabled(true);
-    const idleId: number = typeof window.requestIdleCallback === "function"
-      ? window.requestIdleCallback(activate, { timeout: 4500 })
-      : (globalThis.setTimeout(activate, 2500) as unknown as number);
+    // Rodada 32: Lighthouse confirmou cinco chunks de interface secundária
+    // requisitados ~310ms após a navegação, ANTES do FCP mobile (~4,4s).
+    // requestIdleCallback não garante a primeira pintura: pode rodar cedo
+    // enquanto a rede ainda carrega recursos críticos da página.
+    // Preservar ativação imediata na primeira interação e, sem interação,
+    // iniciar automaticamente após uma janela mínima de 6 segundos.
+    let finished = false;
+    const activate = () => {
+      if (finished) return;
+      finished = true;
+      window.clearTimeout(timer);
+      window.removeEventListener("pointerdown", activate, true);
+      window.removeEventListener("keydown", activate, true);
+      setEnabled(true);
+    };
+    const timer = window.setTimeout(activate, 6000);
+    window.addEventListener("pointerdown", activate, true);
+    window.addEventListener("keydown", activate, true);
 
     return () => {
-      if (typeof window.cancelIdleCallback === "function") {
-        window.cancelIdleCallback(idleId);
-      } else {
-        globalThis.clearTimeout(idleId);
-      }
-
+      finished = true;
+      window.clearTimeout(timer);
+      window.removeEventListener("pointerdown", activate, true);
+      window.removeEventListener("keydown", activate, true);
     };
   }, []);
 
