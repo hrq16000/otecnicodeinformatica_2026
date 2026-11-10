@@ -380,6 +380,28 @@ const PILOT_FAQ: Record<string, FAQItem[]> = {
   "disco-com-setores-defeituosos-smart-o-que-fazer": SMART_DISK_FAQ,
   "como-migrar-arquivos-para-um-computador-novo": FILE_MIGRATION_FAQ,
   "como-configurar-2fa-em-tudo": MFA_RECOVERY_FAQ,
+  "como-remover-virus-windows-iniciantes": [
+    {
+      q: "Uma extensão que volta prova que o Windows está infectado?",
+      a: "Não. Compare o momento em que volta com o perfil, o login e a sincronização. Extensões exigidas por política são outro cenário. Investigue também o sistema se os sintomas aparecerem fora do navegador.",
+    },
+    {
+      q: "O navegador diz que é gerenciado. Devo apagar as políticas?",
+      a: "Não por tentativa. Consulte as políticas sem alterá-las. Em computador de trabalho, confirme com a TI. Em aparelho pessoal, investigue contas, programas e origem da política antes de remover configurações.",
+    },
+    {
+      q: "Uma verificação do Defender basta para confirmar a limpeza?",
+      a: "Não. O Defender é uma primeira camada quando está ativo. Confira o Histórico de proteção e considere a verificação offline para suspeita persistente, planejando o reinício. Não instale vários antivírus residentes por tentativa.",
+    },
+    {
+      q: "Posso acessar banco e e-mail enquanto investigo?",
+      a: "Se houver indícios de comprometimento ativo, isole o aparelho da rede. Use outro dispositivo confiável para proteger as contas, conferir sessões e procurar os canais oficiais. Não aprove pedidos de autenticação inesperados.",
+    },
+    {
+      q: "Reinstalar o Windows impede que o adware volte?",
+      a: "Não necessariamente. Uma instalação limpa pode remover malware daquela instalação, mas não recupera credenciais roubadas nem corrige uma extensão sincronizada ou um instalador adulterado restaurado depois.",
+    },
+  ],
   "computador-sem-som-o-que-verificar": [
     {
       q: "Por que meu computador ficou sem som de repente?",
