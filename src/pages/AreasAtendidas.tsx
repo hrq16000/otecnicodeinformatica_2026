@@ -13,6 +13,7 @@ import { BAIRROS_DIRECTORY_POR_CIDADE, bairroHref } from "@/lib/bairrosDirectory
 
 import { trackPageView, trackCTAClick } from "@/lib/analytics";
 import { BlocosLocal4c } from "@/components/local/BlocosLocal4c";
+import { CoberturaNacionalParceiros } from "@/components/local/CoberturaNacionalParceiros";
 
 const PATH = "/areas-atendidas";
 const TITLE = "Áreas Atendidas em Curitiba e Região | Bairros e Cidades";
@@ -129,6 +130,14 @@ const AreasAtendidas = () => {
       `Olá! Preciso de atendimento técnico em ${nome} (${escopo === "bairro" ? "Curitiba" : "região metropolitana de Curitiba"}). Pode confirmar agenda e a modalidade indicada para o meu caso?`,
     );
 
+
+  const abrirFunilNacional = (cidade?: string, uf?: string) => {
+    const local = cidade && uf ? `${cidade} (${uf})` : "minha cidade";
+    abrirFunil(
+      `areas_nacional_${uf?.toLowerCase() ?? "geral"}`,
+      `Olá! Quero consultar a possibilidade de atendimento técnico de informática presencial ou remoto em ${local}. Gostaria de confirmar se existe profissional independente disponível na região e conhecer as condições.`,
+    );
+  };
 
   return (
     <div className="min-h-screen bg-background">
@@ -335,6 +344,8 @@ const AreasAtendidas = () => {
             </p>
           </div>
         </section>
+
+        <CoberturaNacionalParceiros onSolicitar={abrirFunilNacional} />
 
         <section className="border-t border-border/60 py-12 md:py-16">
           <div className="container mx-auto">
