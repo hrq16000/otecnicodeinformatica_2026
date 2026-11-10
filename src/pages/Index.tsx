@@ -95,6 +95,57 @@ const Index = () => {
         <EncontreSuaSolucao />
         <DiagnosticoIa />
         <CondicoesAtendimento />
+        {/* Convite institucional separado do funil de atendimento ao cliente. */}
+        <section
+          aria-labelledby="comunidade-tecnicos-title"
+          className="border-y border-border bg-card py-12 md:py-16"
+        >
+          <div className="container mx-auto">
+            <div className="mx-auto max-w-5xl rounded-3xl border border-border bg-background p-6 shadow-sm md:p-10">
+              <p className="text-sm font-bold uppercase tracking-wider text-accent">
+                Para profissionais de tecnologia
+              </p>
+              <h2
+                id="comunidade-tecnicos-title"
+                className="mt-3 max-w-3xl font-heading text-2xl font-bold text-foreground md:text-4xl"
+              >
+                É técnico de informática? Faça parte da comunidade nacional.
+              </h2>
+              <p className="mt-4 max-w-3xl text-base leading-relaxed text-muted-foreground">
+                Converse com outros profissionais, compartilhe conhecimento e fortaleça sua
+                independência. A comunidade é um espaço de colaboração para quem atua em
+                informática e tecnologia em diferentes regiões do Brasil.
+              </p>
+              <ul className="mt-6 grid gap-3 text-sm text-foreground sm:grid-cols-3">
+                <li className="rounded-xl border border-border p-4">Troca de experiências e soluções técnicas</li>
+                <li className="rounded-xl border border-border p-4">Contato com profissionais de outras regiões</li>
+                <li className="rounded-xl border border-border p-4">Valorização e autonomia no trabalho</li>
+              </ul>
+              <div className="mt-7 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+                <a
+                  href="https://chat.whatsapp.com/KUki7iAKg2f5ahsGfn4Su5"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex min-h-12 items-center justify-center rounded-xl bg-accent px-6 text-center font-bold text-accent-foreground transition-opacity hover:opacity-90"
+                >
+                  Quero entrar na comunidade
+                </a>
+                <Link
+                  to="/profissionais/cadastro"
+                  className="inline-flex min-h-12 items-center justify-center rounded-xl border border-border px-6 text-center font-bold text-foreground transition-colors hover:border-accent"
+                >
+                  Conhecer o cadastro profissional
+                </Link>
+              </div>
+              <p className="mt-5 max-w-3xl text-xs leading-relaxed text-muted-foreground">
+                Participar do grupo não significa ter perfil aprovado, receber solicitações ou
+                garantir trabalhos. O cadastro de perfil profissional é uma modalidade separada,
+                sujeita a análise e às condições próprias informadas no formulário.
+              </p>
+            </div>
+          </div>
+        </section>
+
         <FaixaFotografica />
         {/* FAQ no HTML servido: paridade obrigatória com o FAQPage JSON-LD. */}
         <HomeFaqSsr />
