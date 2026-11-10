@@ -7,6 +7,7 @@ const CONVITE_OFICIAL =
 test("banner e popup da comunidade usam o convite oficial sem bloquear a Home", async ({ page }) => {
   await page.clock.install();
   await page.goto("/", { waitUntil: "domcontentloaded" });
+  await page.waitForFunction(() => document.documentElement.dataset.hydrated === "1");
 
   const banner = page.locator('section[aria-labelledby="comunidade-tecnicos-title"]');
   await expect(banner.getByRole("heading", { name: /faça parte da comunidade nacional/i })).toBeVisible();
@@ -34,6 +35,7 @@ test("banner e popup da comunidade usam o convite oficial sem bloquear a Home", 
 
   // Fechamento é persistente na mesma origem por sete dias.
   await page.reload({ waitUntil: "domcontentloaded" });
+  await page.waitForFunction(() => document.documentElement.dataset.hydrated === "1");
   await page.clock.fastForward(15_000);
   await expect(popup).toHaveCount(0);
 });
