@@ -21,7 +21,7 @@ import { Link } from "@/lib/router-compat";
 import { DISCOVERY_PILLAR_LINKS } from "@/lib/discoveryPillars";
 
 // Convite comunitário separado do atendimento comercial e do programa anual de perfis.
-const COMUNIDADE_URL = "https://chat.whatsapp.com/KUki7iAKg2f5ahsGfn4Su5";
+const COMUNIDADE_URL = "https://chat.whatsapp.com/DVfSXlJR5YG16VtNtYcf5p?s=cl&p=a&iam=2";
 const CONVITE_DISPENSADO_ATE = "oti:convite-comunidade:dispensado-ate";
 const SETE_DIAS_MS = 7 * 24 * 60 * 60 * 1000;
 
