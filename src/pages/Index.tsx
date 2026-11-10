@@ -1,4 +1,5 @@
-import { lazy, Suspense, useEffect } from "react";
+import { lazy, Suspense, useCallback, useEffect, useState } from "react";
+import { Users, X, ArrowUpRight } from "lucide-react";
 import { PageSEO } from "@/components/PageSEO";
 import { FastHeader } from "@/components/FastHeader";
 import { JsonLdSchema } from "@/components/JsonLdSchema";
@@ -19,6 +20,11 @@ import { siteConfig } from "@/lib/siteConfig";
 import { Link } from "@/lib/router-compat";
 import { DISCOVERY_PILLAR_LINKS } from "@/lib/discoveryPillars";
 
+// Convite comunitário separado do atendimento comercial e do programa anual de perfis.
+const COMUNIDADE_URL = "https://chat.whatsapp.com/KUki7iAKg2f5ahsGfn4Su5";
+const CONVITE_DISPENSADO_ATE = "oti:convite-comunidade:dispensado-ate";
+const SETE_DIAS_MS = 7 * 24 * 60 * 60 * 1000;
+
 const HomeSections = lazy(() =>
   import("@/components/home/HomeSections").then((m) => ({ default: m.HomeSections })),
 );
@@ -30,6 +36,40 @@ const SectionFallback = ({ height = "480px" }: { height?: string }) => (
 );
 
 const Index = () => {
+  const [mostrarConvite, setMostrarConvite] = useState(false);
+
+  const dispensarConvite = useCallback(() => {
+    setMostrarConvite(false);
+    try {
+      window.localStorage.setItem(CONVITE_DISPENSADO_ATE, String(Date.now() + SETE_DIAS_MS));
+    } catch {
+      // A navegação segue normal quando o armazenamento estiver indisponível.
+    }
+  }, []);
+
+  useEffect(() => {
+    let dispensadoAte = 0;
+    try {
+      dispensadoAte = Number(window.localStorage.getItem(CONVITE_DISPENSADO_ATE)) || 0;
+    } catch {
+      // Navegação privada ou armazenamento bloqueado: convite continua opcional.
+    }
+    if (dispensadoAte > Date.now()) return;
+
+    // Não competir com o carregamento da primeira dobra nem interromper a triagem.
+    const temporizador = window.setTimeout(() => setMostrarConvite(true), 14000);
+    return () => window.clearTimeout(temporizador);
+  }, []);
+
+  useEffect(() => {
+    if (!mostrarConvite) return;
+    const aoTeclar = (evento: KeyboardEvent) => {
+      if (evento.key === "Escape") dispensarConvite();
+    };
+    window.addEventListener("keydown", aoTeclar);
+    return () => window.removeEventListener("keydown", aoTeclar);
+  }, [mostrarConvite, dispensarConvite]);
+
   // Metadados da home agora saem no HTML do SSR (PageSEO em JSX), não em efeito.
   useEffect(() => {
     // ONDA 5M — pré-carrega os chunks abaixo da dobra em tempo ocioso.
@@ -123,7 +163,7 @@ const Index = () => {
               </ul>
               <div className="mt-7 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
                 <a
-                  href="https://chat.whatsapp.com/KUki7iAKg2f5ahsGfn4Su5"
+                  href={COMUNIDADE_URL}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex min-h-12 items-center justify-center rounded-xl bg-accent px-6 text-center font-bold text-accent-foreground transition-opacity hover:opacity-90"
@@ -163,6 +203,54 @@ const Index = () => {
           </Suspense>
         </LazyOnVisible>
       </main>
+
+      {/* Aviso não modal: pode ser ignorado, fechado por teclado e não bloqueia o funil. */}
+      {mostrarConvite && (
+        <aside
+          aria-labelledby="convite-comunidade-popup-titulo"
+          data-testid="convite-comunidade-tecnicos"
+          className="fixed bottom-3 left-3 z-40 max-h-[min(55vh,320px)] w-[min(360px,calc(100vw-1.5rem))] overflow-y-auto rounded-2xl border border-border bg-card p-5 shadow-2xl sm:bottom-6 sm:left-6"
+        >
+          <div className="pointer-events-none absolute inset-0 rounded-2xl bg-gradient-to-br from-accent/10 via-transparent to-primary/10" aria-hidden="true" />
+          <div className="relative">
+            <div className="flex items-start justify-between gap-3">
+              <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-accent/15 text-accent">
+                <Users className="h-5 w-5" aria-hidden="true" />
+              </span>
+              <button
+                type="button"
+                onClick={dispensarConvite}
+                aria-label="Fechar convite da comunidade de técnicos"
+                className="inline-flex h-11 w-11 items-center justify-center rounded-lg text-muted-foreground transition-colors hover:bg-muted hover:text-foreground focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+              >
+                <X className="h-5 w-5" aria-hidden="true" />
+              </button>
+            </div>
+            <p className="mt-3 text-xs font-bold uppercase tracking-wider text-accent">
+              Para quem é técnico
+            </p>
+            <h2 id="convite-comunidade-popup-titulo" className="mt-1 font-heading text-xl font-bold leading-tight text-foreground">
+              Sua experiência tem valor. Conecte-se a outros técnicos.
+            </h2>
+            <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+              Troque conhecimento e fortaleça sua autonomia na comunidade nacional de técnicos.
+            </p>
+            <a
+              href={COMUNIDADE_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={dispensarConvite}
+              className="mt-4 inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-xl bg-accent px-4 text-center text-sm font-bold text-accent-foreground transition-opacity hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+            >
+              Participar da comunidade
+              <ArrowUpRight className="h-4 w-4" aria-hidden="true" />
+            </a>
+            <p className="mt-2 text-center text-xs text-muted-foreground">
+              Entrada no grupo não garante serviços ou cadastro aprovado.
+            </p>
+          </div>
+        </aside>
+      )}
 
       <LazyOnVisible
         minHeight="400px"
