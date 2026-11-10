@@ -111,7 +111,8 @@ test.describe("Triagem V5 — funil ramificado por equipamento", () => {
     await page.goto(`${HOME}${UTM_QS}`);
     await page.waitForLoadState("networkidle");
     await page.getByTestId("whatsapp-float").click();
-    await expect(page.getByRole("dialog")).toBeVisible({ timeout: 5000 });
+    // Aguarda o diálogo real da triagem, não o banner de cookies (também role=dialog).
+    await expect(page.locator('[role="dialog"][data-triage="1"]')).toBeVisible({ timeout: 10000 });
 
     const eventos = await page.evaluate(() =>
       (window as unknown as { __gtagCalls: unknown[][] }).__gtagCalls
@@ -186,7 +187,7 @@ test.describe("Triagem V5 — funil ramificado por equipamento", () => {
     const hidratado = await page.evaluate(() => document.documentElement.dataset.hydrated === "1");
     await float.click({ force: true });
 
-    await expect(page.getByRole("dialog")).toBeVisible({ timeout: 15000 });
+    await expect(page.locator('[role="dialog"][data-triage="1"]')).toBeVisible({ timeout: 15000 });
 
     const nomes = await page.evaluate(() =>
       (window as unknown as { __gtagCalls: unknown[][] }).__gtagCalls
