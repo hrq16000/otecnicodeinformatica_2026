@@ -532,12 +532,12 @@ export const WhatsAppFunnel = () => {
     window.addEventListener("wa-funnel:open", evHandler as EventListener);
 
     // Drena cliques capturados antes da hidratação (buffer do __root).
-    const fila = (window as unknown as { __waFunnelQueue?: Array<{ location?: string }> }).__waFunnelQueue;
+    const fila = (window as unknown as { __waFunnelQueue?: Array<{ location?: string; message?: string }> }).__waFunnelQueue;
     if (fila && fila.length) {
       const primeiro = fila[0];
       (window as unknown as { __waFunnelQueue: unknown[] }).__waFunnelQueue = [];
       trackCTAClick("whatsapp", primeiro?.location || "float");
-      openFunnel(primeiro?.location || "float");
+      openFunnel(primeiro?.location || "float", primeiro?.message);
     }
 
 
