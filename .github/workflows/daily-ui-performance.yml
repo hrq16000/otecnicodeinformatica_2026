@@ -20,6 +20,9 @@ jobs:
         with:
           node-version: 20
           cache: npm
+      - uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: 1.4.2
       - run: npm ci
 
       # Relatório de ontem: base da detecção de piora gradual dentro da tolerância.
