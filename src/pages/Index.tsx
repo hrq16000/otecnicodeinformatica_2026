@@ -18,6 +18,7 @@ import { SkeletonSection } from "@/components/SkeletonSection";
 import { siteConfig } from "@/lib/siteConfig";
 import { Link } from "@/lib/router-compat";
 import { DISCOVERY_PILLAR_LINKS } from "@/lib/discoveryPillars";
+import { deferHomeBelowFoldPrefetch } from "@/lib/deferHomeBelowFoldPrefetch";
 
 const HomeSections = lazy(() =>
   import("@/components/home/HomeSections").then((m) => ({ default: m.HomeSections })),
@@ -32,26 +33,20 @@ const SectionFallback = ({ height = "480px" }: { height?: string }) => (
 const Index = () => {
   // Metadados da home agora saem no HTML do SSR (PageSEO em JSX), não em efeito.
   useEffect(() => {
-    // ONDA 5M — pré-carrega os chunks abaixo da dobra em tempo ocioso.
-    // Sem isso, o bloco lazy só baixa quando já está visível e a troca
-    // esqueleto → conteúdo real acontece na tela (CLS alto e intermitente).
-    const prefetch = () => {
+    // Abaixo da dobra: não competir com a imagem LCP, CSS e hidratação inicial.
+    // requestIdleCallback podia disparar ~300ms após navegação, antes do FCP.
+    // Rolagem/teclado antecipam o prefetch para preservar a experiência e CLS.
+    const cancelPrefetch = deferHomeBelowFoldPrefetch(() => {
       void import("@/components/home/HomeSections");
       void import("@/components/Footer");
-    };
-    const ric = (window as unknown as { requestIdleCallback?: (cb: () => void) => number })
-      .requestIdleCallback;
-    const idleId = ric ? ric(prefetch) : window.setTimeout(prefetch, 1200);
+    });
 
     const id = window.setTimeout(() => {
       import("@/lib/analytics").then(({ trackPageView }) => trackPageView("/", "Home"));
     }, 1800);
     return () => {
       window.clearTimeout(id);
-      const cic = (window as unknown as { cancelIdleCallback?: (h: number) => void })
-        .cancelIdleCallback;
-      if (ric && cic) cic(idleId);
-      else window.clearTimeout(idleId);
+      cancelPrefetch();
     };
   }, []);
 
