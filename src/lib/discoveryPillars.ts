@@ -11,7 +11,7 @@ export const DISCOVERY_PILLAR_LINKS = [
   },
   {
     title: "Áreas atendidas",
-    description: "Consulte bairros, cidades e como a modalidade varia conforme a região.",
+    description: "Consulte Curitiba, região metropolitana e cidades parceiras do Brasil, com disponibilidade a confirmar.",
     to: "/areas-atendidas",
   },
   {
