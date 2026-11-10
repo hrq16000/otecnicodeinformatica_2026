@@ -27,6 +27,7 @@ issue → branch → PR → validação (build + gates) → merge em main
 - Nada entra em `main` sem PR validado.
 - Commit apenas das alterações da rodada em curso.
 - Build verde **não** é deploy público (ver seção 7).
+- Em triagem de segurança, autenticação, RLS, segredos ou achados de PR, aplicar `.agents/skills/security-evidence-triage/SKILL.md` como método complementar, sem substituir `SECURITY.md` nem os gates.
 
 ## 3. Proibições permanentes
 
