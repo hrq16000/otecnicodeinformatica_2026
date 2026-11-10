@@ -40,10 +40,6 @@ const resolveAppVersion = () => {
 
 export default defineConfig({
   tanstackStart: {
-    // Rodada 41: code-splitting oficial das configurações não críticas de rota.
-    // O wrapper já instala o plugin TanStack; NÃO duplicar plugins.
-    // Medir tamanho do JS inicial e preservar SSR/SEO/E2E antes de merge.
-    router: { autoCodeSplitting: true },
     // Redirect TanStack Start's bundled server entry to src/server.ts (our SSR error wrapper).
     // nitro/vite builds from this
     server: { entry: "server" },
