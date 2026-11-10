@@ -51,9 +51,28 @@ const WA_PREHYDRATION_SCRIPT = `
 window.__waFunnelQueue = window.__waFunnelQueue || [];
 document.addEventListener('click', function (e) {
   if (document.documentElement.dataset.hydrated === '1') return;
-  var t = e.target && e.target.closest ? e.target.closest('[data-wa-funnel="required"]') : null;
-  if (!t) return;
-  window.__waFunnelQueue.push({ location: t.getAttribute('data-cta-location') || 'float' });
+  var target = e.target && e.target.closest ? e.target : (e.target && e.target.parentElement);
+  if (!target || !target.closest) return;
+  var t = target.closest('[data-wa-funnel="required"]');
+  var a = target.closest('a[href]');
+  if (a && a.getAttribute('data-funnel-skip') === '1') return;
+  var wa = null;
+  if (a) {
+    try {
+      var parsed = new URL(a.getAttribute('href'), window.location.href);
+      if (parsed.hostname === 'wa.me' || parsed.hostname.endsWith('.wa.me') ||
+          parsed.hostname === 'api.whatsapp.com' || parsed.hostname.endsWith('.api.whatsapp.com')) wa = parsed;
+    } catch (_) { /* URL inválida não é WhatsApp */ }
+  }
+  if (!t && !wa) return;
+  // Nunca deixar o link sair do portal antes de capturar o interesse no funil.
+  if (a) e.preventDefault();
+  e.stopImmediatePropagation();
+  var location = (t && t.getAttribute('data-cta-location')) ||
+      (a && a.closest('header') ? 'header' : a && a.closest('footer') ? 'footer' : 'float');
+  if (!window.__waFunnelQueue.length) {
+    window.__waFunnelQueue.push({ location: location, message: wa ? (wa.searchParams.get('text') || undefined) : undefined });
+  }
 }, true);
 `;
 
