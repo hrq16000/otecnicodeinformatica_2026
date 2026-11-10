@@ -13,6 +13,7 @@ import { BAIRROS_DIRECTORY_POR_CIDADE, bairroHref } from "@/lib/bairrosDirectory
 
 import { trackPageView, trackCTAClick } from "@/lib/analytics";
 import { BlocosLocal4c } from "@/components/local/BlocosLocal4c";
+import { CoberturaNacionalSection } from "@/components/local/CoberturaNacionalSection";
 
 const PATH = "/areas-atendidas";
 const TITLE = "Áreas Atendidas em Curitiba e Região | Bairros e Cidades";
@@ -368,6 +369,8 @@ const AreasAtendidas = () => {
             </ul>
           </div>
         </section>
+
+        <CoberturaNacionalSection onSolicitar={abrirFunil} />
 
         <LocalFAQSection title="Perguntas frequentes sobre a área atendida" faqs={faqs} />
 
