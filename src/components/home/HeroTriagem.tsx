@@ -110,6 +110,7 @@ export const HeroTriagem = () => {
           <figure className="relative mt-6 overflow-hidden rounded-2xl border border-border shadow-[var(--shadow-lg)] lg:hidden">
             {/* Variante gerada pelo prebuild/predev, preservando o JPG original como fallback. */}
             <picture>
+              <source media="(max-width: 640px)" srcSet="/fotos/bancada-tecnica-640.webp" type="image/webp" />
               <source srcSet="/fotos/bancada-tecnica-768.webp" type="image/webp" />
               <img
                 src="/fotos/bancada-tecnica.jpg"
