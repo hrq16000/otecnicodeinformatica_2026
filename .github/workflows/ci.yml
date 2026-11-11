@@ -223,6 +223,7 @@ jobs:
           E2E_SUPABASE_URL: ${{ secrets.VITE_SUPABASE_URL }}
           E2E_SUPABASE_ANON_KEY: ${{ secrets.VITE_SUPABASE_PUBLISHABLE_KEY }}
       - name: Upload blob report (${{ matrix.browser }}-${{ matrix.shard }})
+        id: blob_upload
         if: always()
         uses: actions/upload-artifact@v4
         with:
@@ -230,8 +231,16 @@ jobs:
           path: blob-report/
           retention-days: 3
           if-no-files-found: ignore
-      # Nao duplicar traces/screenshots: anexos dos testes ja entram nos blobs
-      # da matriz e no relatorio consolidado. Os arquivos locais nao somem.
+      # Mantem evidencias UNICAS quando o reporter blob nao gerou artefato.
+      # Quando o blob existe, os anexos seguem dentro dele; nao duplicar.
+      - name: Evidencias fallback apenas sem blob (${{ matrix.browser }}-${{ matrix.shard }})
+        if: ${{ always() && steps.blob_upload.outputs.artifact-id == '' }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: playwright-evidence-fallback-${{ matrix.browser }}-${{ matrix.shard }}
+          path: test-results/
+          retention-days: 3
+          if-no-files-found: ignore
 
   e2e-matrix-report:
     # Consolida os blobs de todos os shards/engines. Roda mesmo com shards falhando,
