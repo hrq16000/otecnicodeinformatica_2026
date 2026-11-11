@@ -100,7 +100,7 @@ const Index = () => {
                   data-cta-location="home_rede_nacional_buscar"
                   className="mt-5 inline-flex min-h-12 items-center justify-center rounded-xl bg-accent px-4 py-3 text-center text-sm font-bold text-accent-foreground transition-colors hover:opacity-90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
                 >
-                  Encontrar técnicos perto de mim
+                  Buscar técnicos na minha região
                 </a>
               </article>
               <article className="flex min-w-0 flex-col rounded-2xl border border-border bg-card p-5 md:p-6">
