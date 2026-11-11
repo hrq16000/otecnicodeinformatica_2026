@@ -65,6 +65,71 @@ const Index = () => {
         <HeroTriagem />
         <TrustStrip />
 
+        {/* Encaminhamento institucional: catálogo nacional separado do funil
+            de atendimento local. Links reais, presentes no HTML SSR. */}
+        <section
+          aria-labelledby="rede-nacional-title"
+          className="border-y border-border/60 bg-secondary/40 py-9 md:py-12"
+        >
+          <div className="container mx-auto max-w-6xl">
+            <p className="text-xs font-bold uppercase tracking-wider text-accent">
+              Encontre um Técnico · Rede nacional de profissionais
+            </p>
+            <h2 id="rede-nacional-title" className="mt-2 font-heading text-2xl font-bold tracking-tight text-foreground md:text-3xl">
+              Procura um técnico perto de você? Ou quer ser encontrado por clientes?
+            </h2>
+            <p className="mt-3 max-w-3xl text-sm leading-relaxed text-muted-foreground md:text-base">
+              No Encontre um Técnico, clientes pesquisam profissionais cadastrados por
+              especialidade e cidade. Os técnicos divulgam seus serviços e regiões de
+              atendimento, com liberdade para negociar diretamente com cada cliente,
+              sem leilão de menor preço.
+            </p>
+            <div className="mt-6 grid gap-4 md:grid-cols-2">
+              <article className="flex min-w-0 flex-col rounded-2xl border border-border bg-card p-5 md:p-6">
+                <h3 className="font-heading text-lg font-bold text-foreground">
+                  Sou cliente: quero encontrar um técnico próximo
+                </h3>
+                <p className="mt-2 flex-1 text-sm leading-relaxed text-muted-foreground">
+                  Pesquise por cidade, região e especialidade. Confira os perfis
+                  disponíveis e faça sua solicitação pelo próprio portal.
+                </p>
+                <a
+                  href="https://www.encontreumtecnico.com.br/tecnicos"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  data-cta-location="home_rede_nacional_buscar"
+                  className="mt-5 inline-flex min-h-12 items-center justify-center rounded-xl bg-accent px-4 py-3 text-center text-sm font-bold text-accent-foreground transition-colors hover:opacity-90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+                >
+                  Encontrar técnicos perto de mim
+                </a>
+              </article>
+              <article className="flex min-w-0 flex-col rounded-2xl border border-border bg-card p-5 md:p-6">
+                <h3 className="font-heading text-lg font-bold text-foreground">
+                  Sou técnico: quero que clientes me encontrem
+                </h3>
+                <p className="mt-2 flex-1 text-sm leading-relaxed text-muted-foreground">
+                  Cadastre-se gratuitamente, informe suas especialidades e cidades
+                  atendidas e participe da busca de profissionais parceiros.
+                </p>
+                <a
+                  href="https://www.encontreumtecnico.com.br/cadastro"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  data-cta-location="home_rede_nacional_cadastro"
+                  className="mt-5 inline-flex min-h-12 items-center justify-center rounded-xl border border-accent/40 bg-background px-4 py-3 text-center text-sm font-bold text-accent transition-colors hover:bg-accent/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+                >
+                  Cadastrar meu perfil gratuitamente
+                </a>
+              </article>
+            </div>
+            <p className="mt-4 max-w-3xl text-xs leading-relaxed text-muted-foreground">
+              O portal é um diretório de profissionais independentes. A exibição
+              depende do cadastro e da região; não representa certificação técnica,
+              garantia de disponibilidade ou de contratação.
+            </p>
+          </div>
+        </section>
+
         {/* Links SSR de primeiro nível para pilares ainda desconhecidos pelo Google.
             Mantidos fora de lazy/Suspense para existirem no HTML inicial. */}
         <section className="border-y border-border/60 bg-secondary/50 py-6" aria-labelledby="home-discovery-title">
