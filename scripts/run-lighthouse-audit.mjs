@@ -141,6 +141,23 @@ try {
       writeFileSync(filename, JSON.stringify(result.lhr));
       console.log("[Lighthouse]", url, attempt + "/" + runs,
         "perf=" + (result.lhr.categories?.performance?.score ?? "n/a"), filename);
+      // Diagnostico observacional: LCP/FCP e pistas de atraso por rota.
+      // As assercoes continuam identicas; o LHR integral permanece no artefato.
+      // Mostrar itens limitados evita lotar os logs (12 rotas x 3 execucoes).
+      const audits = result.lhr.audits;
+      const diagItems = (auditName, limit) =>
+        JSON.stringify(audits[auditName]?.details?.items?.slice(0, limit) ?? []).slice(0, 1800);
+      console.log("[Lighthouse LCP diagnosis]", JSON.stringify({
+        url: new URL(url).pathname,
+        run: attempt,
+        lcpMs: audits["largest-contentful-paint"]?.numericValue ?? null,
+        fcpMs: audits["first-contentful-paint"]?.numericValue ?? null,
+        tbtMs: audits["total-blocking-time"]?.numericValue ?? null,
+        cls: audits["cumulative-layout-shift"]?.numericValue ?? null,
+        lcpElement: audits["largest-contentful-paint-element"]?.details?.items?.[0]?.node?.snippet ?? null,
+        lcpBreakdown: diagItems("lcp-breakdown-insight", 2),
+        renderBlocking: diagItems("render-blocking-insight", 4),
+      }));
       if (!smoke) assess(result.lhr, url, attempt);
     }
   }
