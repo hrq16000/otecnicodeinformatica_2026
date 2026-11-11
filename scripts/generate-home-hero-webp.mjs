@@ -12,10 +12,14 @@ import { fileURLToPath } from "node:url";
 const root = fileURLToPath(new URL("../", import.meta.url));
 export const HOME_HERO_SOURCE = path.join(root, "public/fotos/bancada-tecnica.jpg");
 export const HOME_HERO_WEBP = path.join(root, "public/fotos/bancada-tecnica-768.webp");
+export const HOME_HERO_MOBILE_WEBP = path.join(root, "public/fotos/bancada-tecnica-640.webp");
 
 export async function generateHomeHeroWebp({
   source = HOME_HERO_SOURCE,
   output = HOME_HERO_WEBP,
+  width = 768,
+  quality = 76,
+  maxBytes = 110 * 1024,
 } = {}) {
   const original = await stat(source);
   const originalMetadata = await sharp(source).metadata();
@@ -27,12 +31,12 @@ export async function generateHomeHeroWebp({
   // sem transportar a foto JPG original de 275KiB para visitantes WebP.
   const webp = await sharp(source)
     .rotate()
-    .resize({ width: 768, withoutEnlargement: true })
-    .webp({ quality: 76, effort: 5 })
+    .resize({ width, withoutEnlargement: true })
+    .webp({ quality, effort: 5 })
     .toBuffer();
   const info = await sharp(webp).metadata();
-  if (info.format !== "webp" || !info.width || info.width > 768 ||
-      webp.byteLength >= original.size || webp.byteLength > 110 * 1024 ||
+  if (info.format !== "webp" || !info.width || info.width > width ||
+      webp.byteLength >= original.size || webp.byteLength > maxBytes ||
       info.exif || info.xmp || info.icc) {
     throw new Error("Hero: variante não atingiu formato, peso ou privacidade esperados.");
   }
@@ -43,8 +47,21 @@ export async function generateHomeHeroWebp({
 }
 
 if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
-  generateHomeHeroWebp().then((result) => {
-    console.log("[home-hero] WebP gerado:", result);
+  Promise.all([
+    generateHomeHeroWebp(),
+    generateHomeHeroWebp({
+      output: HOME_HERO_MOBILE_WEBP,
+      width: 640,
+      quality: 70,
+      maxBytes: 65 * 1024,
+    }),
+  ]).then(([regular, mobile]) => {
+    // Falhar no prebuild se a variante mobile não reduzir a transferência LCP.
+    if (mobile.webpBytes >= regular.webpBytes) {
+      throw new Error("Hero: variante 640px não reduziu o peso do WebP de 768px.");
+    }
+    console.log("[home-hero] WebP 768px:", regular);
+    console.log("[home-hero] WebP 640px:", mobile);
   }).catch((error) => {
     console.error(error);
     process.exitCode = 1;
