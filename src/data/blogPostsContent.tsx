@@ -14787,66 +14787,42 @@ bcdboot C:\\Windows /s S: /f UEFI`}</code></pre>
   "teclado-de-notebook-nao-funciona-o-que-verificar": {
     title: "Teclado de notebook não funciona: o que verificar antes de trocar",
     excerpt:
-      "Teclas mortas, teclado inteiro parado ou caracteres trocados são problemas diferentes. Como separar sujeira, configuração, cabo flat e dano por líquido antes de comprar peça.",
+      "Teclas sem resposta, caracteres trocados ou teclado inteiro parado? Faça testes sem abrir o notebook e saiba quando interrompê-los após contato com líquido.",
     date: "2026-09-03",
     readTime: "10 min",
     category: "Diagnóstico",
     content: (
       <>
-        <p className="lead">"O teclado parou" descreve pelo menos quatro situações distintas, e cada uma leva a um caminho diferente. Trocar o teclado sem separá-las é a forma mais cara de descobrir que o problema era configuração de idioma ou um conector solto.</p>
+        <p className="lead">Se o notebook está seco e sem sinais de dano, compare as mesmas teclas em dois programas e depois com um teclado USB que você sabe que funciona. Se houve derramamento recente, pule esses testes: o primeiro passo é desligar o notebook com segurança.</p>
 
-        <h2>Resposta curta</h2>
-        <p>Ligue um teclado USB externo. Se ele funciona, o restante do computador está bem e a investigação fica restrita ao teclado interno, ao cabo flat e à sujeira. Se nem o externo responde, o assunto deixa de ser teclado e passa a ser sistema, porta ou inicialização.</p>
+        <h2>Caiu líquido? Pare antes de testar</h2>
+        <p>Se for seguro tocar no equipamento, desligue-o e desconecte o carregador. Não volte a ligar nem coloque para carregar só para ver se funciona. Não use secador, não abra o gabinete para soltar a bateria interna e siga a orientação do fabricante para o seu modelo. Se houver fumaça, faíscas ou calor anormal, não manuseie o equipamento. Mesmo que a superfície pareça seca, isso não mostra o estado dos componentes internos.</p>
 
-        <h2>Quatro sintomas, quatro causas prováveis</h2>
-        <ul>
-          <li><strong>Teclado inteiro sem resposta:</strong> conector flat solto, cabo danificado ou falha após abertura recente do equipamento.</li>
-          <li><strong>Algumas teclas não respondem:</strong> sujeira sob a membrana, resíduo de líquido ou trilha interrompida em uma linha específica.</li>
-          <li><strong>Caracteres saem trocados:</strong> layout de teclado errado no sistema — nada de hardware. Acento agudo virando aspas é o caso clássico de ABNT2 configurado como internacional.</li>
-          <li><strong>Teclas repetem sozinhas ou travam:</strong> membrana pressionada, chassi empenado ou tecla presa por resíduo.</li>
-        </ul>
-        <p>Anotar qual dos quatro é o seu evita percorrer testes que não têm relação com o sintoma.</p>
-
-        <h2>A sequência de verificação</h2>
+        <h2>O que o sintoma ajuda a separar</h2>
+        <p>Use texto descartável, nunca sua senha, e teste a mesma sequência em dois campos de texto, por exemplo no Bloco de Notas e em um campo de busca. Se a falha aparecer em apenas um programa, confira as configurações dele antes de mexer no Windows.</p>
         <table>
           <thead>
-            <tr><th>Ordem</th><th>Verificação</th><th>O que ela elimina</th></tr>
+            <tr><th scope="col">Sintoma</th><th scope="col">Primeira verificação</th><th scope="col">Como interpretar</th></tr>
           </thead>
           <tbody>
-            <tr><td>1</td><td>Conectar um teclado USB e digitar</td><td>Falha do sistema, do usuário logado ou da inicialização</td></tr>
-            <tr><td>2</td><td>Testar as mesmas teclas na tela de senha do sistema</td><td>Programa aberto travado ou perfil com configuração própria</td></tr>
-            <tr><td>3</td><td>Conferir o layout de teclado configurado</td><td>Caracteres trocados sem defeito físico</td></tr>
-            <tr><td>4</td><td>Verificar teclas de bloqueio numérico e função (Fn)</td><td>Bloco numérico sobreposto às letras em teclado compacto</td></tr>
-            <tr><td>5</td><td>Desligar, remover a alimentação e reiniciar sem periféricos</td><td>Estado travado do controlador de entrada</td></tr>
-            <tr><td>6</td><td>Observar se o teclado responde antes do sistema carregar (tela da BIOS)</td><td>Driver ou sistema — se responde ali, o hardware está vivo</td></tr>
+            <tr><td>Caracteres diferentes do que está impresso</td><td>Compare acentos e pontuação com o layout de entrada ativo. Use ABNT2 se ele corresponder ao teclado físico.</td><td>Se o ajuste resolve de modo repetível, não há motivo para comprar uma peça por esse sintoma.</td></tr>
+            <tr><td>Letras viram números ou o bloco numérico não digita</td><td>Confira Num Lock ou a combinação com Fn descrita no manual, se o modelo tiver essa função.</td><td>O modo numérico muda o que algumas teclas digitam; não explica, por si só, um teclado inteiro sem resposta.</td></tr>
+            <tr><td>Algumas teclas falham, prendem ou repetem</td><td>Anote as teclas e compare em dois programas. Se toques rápidos forem ignorados, confira se Teclas de Filtro está ativa.</td><td>Um grupo que falha sempre só no teclado interno justifica inspeção, mas não identifica a peça. Preserve recursos de acessibilidade usados de propósito.</td></tr>
+            <tr><td>Nenhuma tecla funciona</td><td>Veja se o ponteiro e a interface respondem. Teste um teclado USB com fio, diretamente no notebook.</td><td>Se o USB digita no mesmo campo, a falha é específica do teclado interno naquele teste. Isso não separa teclado, cabo, conector e outras causas.</td></tr>
           </tbody>
         </table>
-        <p>Se o teclado funciona na tela da BIOS e falha depois, o problema é de software. Se não funciona em lugar nenhum e o externo funciona, é o teclado interno ou o cabo dele.</p>
 
-        <h2>Quando houve líquido</h2>
-        <p>Líquido derramado exige conduta diferente do restante: desligue imediatamente, desconecte a fonte, não tente secar com secador quente e não ligue "só para testar". A urgência não é o teclado — é impedir que o líquido alcance a placa principal. Nesses casos, a abertura para secagem e limpeza deve ser feita o quanto antes, e o custo de esperar costuma ser bem maior que o de uma peça.</p>
+        <h2>Use um teclado externo para comparar, não para fechar o diagnóstico</h2>
+        <p>Use um teclado USB com fio já testado, sem hub, e repita a mesma sequência no mesmo campo. Se não funcionar, experimente outra porta. Se o ponteiro também parou ou o Windows não chegou à tela de entrada, o teste não isolou o teclado: siga o diagnóstico de <Link to="/blog/dispositivo-usb-nao-reconhecido-o-que-fazer" className="text-accent">USB não reconhecido</Link> ou de <Link to="/blog/notebook-nao-liga-o-que-fazer" className="text-accent">notebook que não liga</Link>, conforme o caso.</p>
+        <p>Se o ponteiro ainda funciona, o Teclado Virtual do Windows pode ajudar a digitar temporariamente. Na tela de entrada, procure-o no menu Acessibilidade, quando disponível. Ele ajuda a usar o sistema, mas não testa o teclado físico.</p>
 
-        <h2>Sujeira, poeira e uso</h2>
-        <p>Teclado que falha aos poucos, em teclas específicas e usadas com frequência, costuma acumular resíduo sob a membrana. A limpeza interna do equipamento, descrita em <Link to="/blog/como-limpar-notebook-por-dentro" className="text-accent">como limpar o notebook por dentro</Link>, resolve parte dos casos e faz parte da <Link to="/blog/manutencao-preventiva-de-computador-guia-completo" className="text-accent">rotina de manutenção preventiva</Link>. O que não resolve é o teclado com trilha rompida: nele, a peça precisa ser substituída.</p>
+        <h2>O que um teste fora do Windows consegue mostrar</h2>
+        <p>Se o fabricante documentar um diagnóstico de teclado para o seu modelo, siga o teste oficial. Num menu de inicialização, só interprete as teclas que ele realmente aceita. Se o teclado interno responde ali, o resultado vale para as teclas testadas e não exclui falha intermitente. Não altere BIOS, firmware ou proteções para fazer a comparação. Em equipamento de trabalho, acione o suporte interno antes de alterar drivers ou configurações administradas.</p>
 
-        <h2>Quando o teclado externo também não responde</h2>
-        <p>Aí o problema deixou de ser o teclado. Vale verificar se a porta reconhece outros dispositivos, caminho descrito em <Link to="/blog/dispositivo-usb-nao-reconhecido-o-que-fazer" className="text-accent">dispositivo USB não reconhecido</Link>, e se o equipamento realmente concluiu a inicialização, conforme <Link to="/blog/notebook-nao-liga-o-que-fazer" className="text-accent">notebook que não liga</Link>. Teclado morto em conjunto com touchpad morto aponta para o controlador de entrada, não para duas peças que falharam ao mesmo tempo.</p>
-
-        <h2>O que NÃO fazer</h2>
-        <ul>
-          <li>Comprar teclado novo antes de testar um teclado USB externo.</li>
-          <li>Lavar o teclado ou aplicar líquido de limpeza direto nas teclas.</li>
-          <li>Arrancar teclas com força para "limpar embaixo" — o clipe plástico quebra.</li>
-          <li>Ligar o equipamento logo após derramamento de líquido.</li>
-          <li>Reinstalar o sistema por causa de caracteres trocados.</li>
-          <li>Forçar o cabo flat no conector: ele entra sem resistência quando alinhado.</li>
-        </ul>
-
-        <h2>Quando parar</h2>
-        <p>Pare se houver cheiro de queimado, se o equipamento aquecer de forma anormal, se houver oxidação visível ou se o teclado tiver recebido líquido. Pare também quando a abertura exigir desmontagem completa do chassi: retirar dezenas de parafusos sem referência costuma criar um segundo problema.</p>
-
-        <h2>Quando chamar um técnico</h2>
-        <p>Chame quando o teclado interno estiver confirmado como morto, quando houver contato com líquido ou quando teclado e touchpad falharem juntos. A avaliação com peça de teste está em <Link to="/diagnostico-tecnico" className="text-accent">diagnóstico técnico</Link>; a substituição e a limpeza interna, em <Link to="/servicos/manutencao-de-notebook" className="text-accent">manutenção de notebook</Link>.</p>
+        <h2>Quando parar e o que anotar</h2>
+        <p>Se houver apenas poeira visível e nenhum sinal de dano, siga a limpeza externa do fabricante. Não arranque teclas, não borrife produto no teclado e não abra o gabinete como parte do teste. Se a falha se repetir no teclado interno e o externo funcionar, anote modelo, teclas afetadas, quando começou e onde você conseguiu reproduzir. Registre se houve queda, líquido ou manutenção recente. Esse registro ajuda a decidir o que inspecionar antes de autorizar uma troca.</p>
+        <p>Em notebook seco e estável, o teclado USB pode servir temporariamente para trabalhar e fazer <Link to="/blog/backup-como-proteger-seus-arquivos" className="text-accent">backup dos arquivos importantes</Link>. Se a falha exigir inspeção interna, a avaliação entra no escopo de <Link to="/servicos/manutencao-de-notebook" className="text-accent">manutenção de notebook</Link>.</p>
+        <EditorialReferences slug="teclado-de-notebook-nao-funciona-o-que-verificar" />
       </>
     ),
   },

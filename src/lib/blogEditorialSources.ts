@@ -99,6 +99,7 @@ export const ALLOWED_SOURCE_HOSTS = [
   "www.nsa.gov",
   "www.dell.com",
   "support.hp.com",
+  "www.asus.com",
   "www.gov.br",
   "download.lenovo.com",
   "acm.org",
@@ -118,6 +119,36 @@ export const ALLOWED_SOURCE_HOSTS = [
 // FONTES CONSULTADAS (URLs confirmadas em 2026-07-12).
 // ─────────────────────────────────────────────────────────────
 export const EDITORIAL_SOURCES: Record<string, EditorialSource> = {
+  "ms-keyboard-usb-20261111": {
+    id: "ms-keyboard-usb-20261111", title: "Problemas com mouse e teclado no Windows", publisher: "Microsoft Support",
+    url: "https://support.microsoft.com/pt-br/windows/hardware/input-devices/mouse-and-keyboard-problems-in-windows", accessedAt: "2026-11-11", sourceType: "official",
+    supports: ["Teste direto sem hub, outra porta USB e verificação do periférico."],
+  },
+  "ms-keyboard-layout-20261111": {
+    id: "ms-keyboard-layout-20261111", title: "Configurações de idioma e layout de teclado", publisher: "Microsoft Support",
+    url: "https://support.microsoft.com/pt-br/windows/hardware/input-devices/manage-the-language-and-keyboard-input-layout-settings-in-windows", accessedAt: "2026-11-11", sourceType: "official",
+    supports: ["Layout de entrada e diferença em relação ao idioma de exibição."],
+  },
+  "ms-keyboard-osk-20261111": {
+    id: "ms-keyboard-osk-20261111", title: "Usar o teclado na tela para digitar", publisher: "Microsoft Support",
+    url: "https://support.microsoft.com/pt-br/accessibility/windows/use-the-on-screen-keyboard-osk-to-type", accessedAt: "2026-11-11", sourceType: "official",
+    supports: ["Teclado Virtual e acesso pelo menu Acessibilidade na tela de entrada."],
+  },
+  "ms-keyboard-filter-20261111": {
+    id: "ms-keyboard-filter-20261111", title: "Recursos de acessibilidade para dispositivos de entrada", publisher: "Microsoft Support",
+    url: "https://support.microsoft.com/en-gb/accessibility/windows/make-your-mouse-keyboard-and-other-input-devices-easier-to-use", accessedAt: "2026-11-11", sourceType: "official",
+    supports: ["Teclas de Filtro podem ignorar toques breves ou repetidos."],
+  },
+  "dell-laptop-keyboard-20261111": {
+    id: "dell-laptop-keyboard-20261111", title: "Diagnóstico de teclado de notebook Dell", publisher: "Dell Support",
+    url: "https://www.dell.com/support/contents/en-us/article/product-support/self-support-knowledgebase/mouse-keyboard-touchpad/laptop-keyboard-not-working", accessedAt: "2026-11-11", sourceType: "official",
+    supports: ["Exemplo de teste funcional oferecido pelo fabricante para seus equipamentos."],
+  },
+  "asus-laptop-spill-20261111": {
+    id: "asus-laptop-spill-20261111", title: "Limpeza do notebook e orientação para derramamentos", publisher: "ASUS Brasil",
+    url: "https://www.asus.com/br/support/faq/1003050/", accessedAt: "2026-11-11", sourceType: "official",
+    supports: ["Desligar e desconectar o carregador após líquido, evitar secador e procurar avaliação conforme o modelo."],
+  },
   "google-chrome-unwanted-20261110": {
     id: "google-chrome-unwanted-20261110", title: "Remover anúncios e software indesejado no Chrome", publisher: "Google Chrome Help",
     url: "https://support.google.com/chrome/answer/2765944?co=GENIE.Platform%3DDesktop&hl=en-en", accessedAt: "2026-11-10", sourceType: "official",
@@ -2903,13 +2934,12 @@ export const ARTICLE_SOURCE_MANIFEST: Record<string, ArticleSourceManifest> = {
   },
   "teclado-de-notebook-nao-funciona-o-que-verificar": {
     slug: "teclado-de-notebook-nao-funciona-o-que-verificar",
-    sources: [],
+    sources: ["ms-keyboard-usb-20261111", "ms-keyboard-layout-20261111", "ms-keyboard-osk-20261111", "ms-keyboard-filter-20261111", "dell-laptop-keyboard-20261111", "asus-laptop-spill-20261111"],
     technicalReview: "reviewed",
     factChecked: true,
-    factCheckedAt: "2026-09-03",
-    stableKnowledge: true,
+    factCheckedAt: "2026-11-11",
     notes:
-      "Revisão concluída (Onda 11F): teste do teclado externo como divisor entre hardware interno e sistema, quatro sintomas com causas distintas, verificação de layout antes de suspeitar de peça, conduta específica para derramamento de líquido e limite claro de desmontagem. Conhecimento técnico estável — sem fonte visível.",
+      "Revisão material em 2026-11-11: parada por líquido antes de testar, comparação em dois programas, layout e acessibilidade, limites do teste USB e de pré-inicialização e registro antes da compra. Seis fontes oficiais visíveis e cinco FAQs.",
   },
   "computador-desliga-sozinho-o-que-verificar": {
     slug: "computador-desliga-sozinho-o-que-verificar",

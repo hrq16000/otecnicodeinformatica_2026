@@ -23,6 +23,7 @@ const cases = [
   { slug: "como-configurar-2fa-em-tudo", approved: true, date: "2026-04-20", reviewedAt: "2026-11-05" },
   { slug: "erro-no-bootable-device-como-resolver", approved: true, date: "2026-10-01", reviewedAt: "2026-11-09" },
   { slug: "como-remover-virus-windows-iniciantes", approved: true, date: "2026-10-01", reviewedAt: "2026-11-10" },
+  { slug: "teclado-de-notebook-nao-funciona-o-que-verificar", approved: true, date: "2026-09-03", reviewedAt: "2026-11-11" },
 ];
 
 await mkdir(out, { recursive: true });
