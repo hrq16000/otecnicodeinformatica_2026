@@ -228,16 +228,10 @@ jobs:
         with:
           name: playwright-blob-${{ matrix.browser }}-${{ matrix.shard }}
           path: blob-report/
-          retention-days: 7
+          retention-days: 3
           if-no-files-found: ignore
-      - name: Upload traces/screenshots (${{ matrix.browser }}-${{ matrix.shard }})
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: playwright-evidence-${{ matrix.browser }}-${{ matrix.shard }}
-          path: test-results/
-          retention-days: 7
-          if-no-files-found: ignore
+      # Nao duplicar traces/screenshots: anexos dos testes ja entram nos blobs
+      # da matriz e no relatorio consolidado. Os arquivos locais nao somem.
 
   e2e-matrix-report:
     # Consolida os blobs de todos os shards/engines. Roda mesmo com shards falhando,
@@ -278,7 +272,7 @@ jobs:
         with:
           name: playwright-report-consolidado
           path: merged-report/
-          retention-days: 14
+          retention-days: 3
 
 
   indexnow:
@@ -353,6 +347,7 @@ jobs:
         with:
           name: lighthouse-summary
           path: reports/lighthouse-summary.*
+          retention-days: 30
           if-no-files-found: ignore
       - name: Upload Lighthouse reports
         if: always()
@@ -360,6 +355,7 @@ jobs:
         with:
           name: lighthouse-reports
           path: .lighthouseci
+          retention-days: 7
           if-no-files-found: ignore
 
 
