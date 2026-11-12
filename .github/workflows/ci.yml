@@ -43,7 +43,7 @@ jobs:
   build:
     needs: unit
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 25
 
     steps:
       - uses: actions/checkout@v4
@@ -55,8 +55,19 @@ jobs:
           node-version: "20"
       - name: Install deps
         run: npm ci --no-audit --no-fund
+      # Advisory lint must not starve mandatory verify/build/deploy checks.
+      # Exit remains non-blocking exactly as before; timeout is surfaced as warning.
       - name: Lint (non-blocking warnings)
-        run: npm run lint --silent || echo "::warning::lint reported issues"
+        run: |
+          set +e
+          timeout --signal=TERM --kill-after=10s 120s npm run lint --silent
+          result=$?
+          if [ "$result" -eq 124 ] || [ "$result" -eq 137 ]; then
+            echo "::warning::Advisory lint exceeded 120s; mandatory verify/build/deploy gates remain blocking."
+          elif [ "$result" -ne 0 ]; then
+            echo "::warning::Advisory lint reported findings (exit $result)."
+          fi
+          exit 0
       # Comando oficial: gates essenciais de código e conteúdo.
       # Os testes já rodam no job `unit`, por isso ficam de fora aqui.
       - name: verify (gates essenciais — comando oficial)
