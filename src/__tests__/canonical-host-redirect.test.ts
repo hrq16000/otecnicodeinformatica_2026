@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 
-import { canonicalHostRedirect } from "../server";
+import { canonicalHostRedirect, legacyAliasRedirect } from "../server";
 
 describe("canonical host redirect", () => {
   it("redireciona http do host canônico para https preservando path e query", () => {
@@ -40,5 +40,23 @@ describe("canonical host redirect", () => {
     expect(
       canonicalHostRedirect(new Request("http://localhost:3000/teste")),
     ).toBeNull();
+  });
+});
+
+describe("redirect de aliases no SSR", () => {
+  it.each(["GET", "HEAD"])("retorna 301 para %s com a query original", (method) => {
+    const response = legacyAliasRedirect(
+      new Request("https://otecnicodeinformatica.com.br/privacidade/?utm_source=gsc", { method }),
+    );
+
+    expect(response?.status).toBe(301);
+    expect(response?.headers.get("location")).toBe(
+      "https://otecnicodeinformatica.com.br/politica-de-privacidade?utm_source=gsc",
+    );
+  });
+
+  it("deixa a rota canônica e POST passarem para o handler", () => {
+    expect(legacyAliasRedirect(new Request("https://otecnicodeinformatica.com.br/politica-de-privacidade"))).toBeNull();
+    expect(legacyAliasRedirect(new Request("https://otecnicodeinformatica.com.br/privacidade", { method: "POST" }))).toBeNull();
   });
 });
