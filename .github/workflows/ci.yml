@@ -329,17 +329,17 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
-          node-version: "20"
+          node-version: "22"
       - name: Install deps
         run: npm ci --no-audit --no-fund
       - name: Install Lighthouse CI
-        run: npm i -g @lhci/cli@0.13.x
+        run: npm i -g @lhci/cli@0.16.1
       - name: Build
         run: npm run build
       - name: Lighthouse desktop (bloqueante)
-        run: npm run lh:desktop
+        run: lhci autorun --config=lighthouserc.json
       - name: Lighthouse mobile (bloqueante)
-        run: npm run lh:mobile
+        run: lhci autorun --config=lighthouserc.mobile.json
       - name: Resumo Lighthouse (LCP/CLS/TTFB/A11y)
         if: always()
         run: node scripts/report-lighthouse-summary.mjs
