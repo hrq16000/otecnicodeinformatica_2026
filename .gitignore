@@ -29,3 +29,11 @@ reports/
 redirects/rollback/
 .stryker-tmp/
 dist-jsonld/
+
+# Local secrets/configs: never stage new dotenv files.
+# WARNING: ignore patterns do not untrack previously committed files.
+# Tracked secrets require separate remediation, including rotation if real.
+/.env
+/.env.*
+!/.env.example
+!/.env.local.example
