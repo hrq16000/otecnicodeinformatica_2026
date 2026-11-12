@@ -69,6 +69,12 @@ jobs:
             echo "::warning::Advisory lint reported findings (exit $result)."
           fi
           exit 0
+      - name: Configuração opcional de observabilidade
+        continue-on-error: true
+        run: npm run check:observability-env
+        env:
+          VITE_SENTRY_DSN: ${{ secrets.VITE_SENTRY_DSN || vars.VITE_SENTRY_DSN }}
+          VITE_OTLP_ENDPOINT: ${{ secrets.VITE_OTLP_ENDPOINT || vars.VITE_OTLP_ENDPOINT }}
       # A governança editorial dentro de verify exige dist/ e sitemap gerados;
       # construir primeiro mantém os gates editoriais bloqueantes.
       - name: Build
@@ -84,9 +90,6 @@ jobs:
       # Os passos opcionais (GSC/rede) não bloqueiam o CI.
       - name: deploy:check (gates de publicação — comando oficial)
         run: npm run deploy:check
-        env:
-          VITE_SENTRY_DSN: ${{ secrets.VITE_SENTRY_DSN || vars.VITE_SENTRY_DSN }}
-          VITE_OTLP_ENDPOINT: ${{ secrets.VITE_OTLP_ENDPOINT || vars.VITE_OTLP_ENDPOINT }}
       # Gates de SEO com resumo anexado ao build (bloqueantes).
       - name: Gates de SEO (auditoria, descoberta, sitemap, robots)
         run: |
