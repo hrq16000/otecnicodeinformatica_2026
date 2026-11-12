@@ -35,7 +35,7 @@
     "check:seo": "bun scripts/check-seo-basics.ts index.html",
     "check:seo:curated": "bun scripts/check-seo-basics.ts --curated dist",
     "lint": "eslint .",
-    "preview": "vite preview",
+    "preview": "npx --yes wrangler@4.160.1 dev --config dist/server/wrangler.json --local --ip 127.0.0.1",
     "test:e2e": "playwright test",
     "test:smoke": "playwright test e2e/smoke-buttons.spec.ts",
     "snapshot:ssr": "node scripts/snapshot-ssr-jsonld.mjs",

@@ -15,8 +15,9 @@
         "http://localhost:4173/bairros/agua-verde",
         "http://localhost:4173/tecnico-informatica-sao-jose-pinhais"
       ],
-      "startServerCommand": "bun run preview -- --port 4173",
-      "startServerReadyPattern": "Local:",
+      "startServerCommand": "npm run preview -- --port 4173",
+      "startServerReadyPattern": "Ready on",
+      "startServerReadyTimeout": 90000,
       "numberOfRuns": 3,
       "settings": {
         "preset": "mobile",
