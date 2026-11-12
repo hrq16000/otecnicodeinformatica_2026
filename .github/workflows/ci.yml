@@ -52,7 +52,8 @@ jobs:
           bun-version: latest
       - uses: actions/setup-node@v4
         with:
-          node-version: "20"
+          # Supabase Realtime SSR requires native WebSocket in Node 22+.
+          node-version: "22"
       - name: Install deps
         run: npm ci --no-audit --no-fund
       # Advisory lint must not starve mandatory verify/build/deploy checks.
