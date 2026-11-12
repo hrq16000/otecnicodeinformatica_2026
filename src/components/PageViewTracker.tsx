@@ -1,6 +1,15 @@
 import { useEffect } from "react";
 import { ANALYTICS_EVENTS, buildRouteContext, getJourneyId, recordTouchpoint } from "@/lib/analyticsContract";
-import { track, registrarPageView, registrarAbandonoSePendente } from "@/lib/funnelAnalytics";
+// O módulo de funil contém persistência e clientes de rede.
+// Mantê-lo fora do bundle inicial não altera a captura da atribuição.
+// Cache do módulo para que pagehide registre abandono sincronicamente,
+// mesmo com o download inicial postergado até a hidratação.
+let funnelAnalyticsReady: typeof import("@/lib/funnelAnalytics") | null = null;
+const getFunnelAnalytics = () =>
+  import("@/lib/funnelAnalytics").then((module) => {
+    funnelAnalyticsReady = module;
+    return module;
+  });
 
 /**
  * RODADA 6 — FASE 8. Page view com contexto comum (rota, família, cidade,
@@ -13,13 +22,21 @@ export const PageViewTracker = ({ path }: { path?: string }) => {
     try {
       const ctx = buildRouteContext(path);
       const touch = recordTouchpoint(ctx);
-      track(ANALYTICS_EVENTS.pageView, {
+      const eventPayload = {
         ...ctx,
         journey_id: getJourneyId(),
         first_touch_route: touch.first_touch?.landing_route,
         last_touch_route: touch.last_touch.landing_route,
-      });
-      registrarPageView();
+      };
+      // Sem import estático: evita baixar o cliente de persistência antes
+      // da primeira renderização. O contexto da rota é capturado no clique
+      // de navegação, antes da resolução do chunk assíncrono.
+      void getFunnelAnalytics()
+        .then(({ track, registrarPageView }) => {
+          track(ANALYTICS_EVENTS.pageView, eventPayload);
+          registrarPageView();
+        })
+        .catch(() => { /* Métricas nunca bloqueiam navegação. */ });
     } catch {
       /* analytics nunca impede a navegação */
     }
@@ -29,7 +46,17 @@ export const PageViewTracker = ({ path }: { path?: string }) => {
   useEffect(() => {
     const onHide = () => {
       try {
-        registrarAbandonoSePendente();
+        // A importação já é solicitada pelo page view durante a montagem;
+        // o listener preserva o registro de abandono sem import estático.
+        if (funnelAnalyticsReady) {
+          // pagehide não aguarda Promises: após a carga inicial, o registro
+          // precisa permanecer síncrono para preservar eventos do funil.
+          funnelAnalyticsReady.registrarAbandonoSePendente();
+        } else {
+          void getFunnelAnalytics()
+            .then(({ registrarAbandonoSePendente }) => registrarAbandonoSePendente())
+            .catch(() => { /* fail open */ });
+        }
       } catch {
         /* fail open */
       }

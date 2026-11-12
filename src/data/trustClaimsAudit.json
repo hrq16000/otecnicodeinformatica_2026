@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-11-10",
+  "geradoEm": "2026-11-12",
   "total": 272,
   "porClasse": {
     "COMPROVADA": 109,
@@ -5914,6 +5914,45 @@
       "familia": "identificacao-tecnico",
       "familiaTitulo": "Identificação do técnico",
       "risco": "Compromisso operacional; precisa ser cumprido em todo atendimento.",
+      "arquivo": "src/components/home/BancadaRealSection.tsx",
+      "linha": 25,
+      "trecho": "Bancada, técnico identificado e atendimento",
+      "classificacao": "INSTITUCIONAL",
+      "criterio": "Compromisso operacional do negócio, não métrica",
+      "evidencia": "Responsabilidade técnica declarada em src/lib/gestorResponsavel.ts",
+      "acao": "Manter. Não evoluir para 'técnico certificado' sem certificação documentada.",
+      "urls": []
+    },
+    {
+      "familia": "identificacao-tecnico",
+      "familiaTitulo": "Identificação do técnico",
+      "risco": "Compromisso operacional; precisa ser cumprido em todo atendimento.",
+      "arquivo": "src/components/home/HomeSections.tsx",
+      "linha": 331,
+      "trecho": "{/* 5B. PROVA REAL — bancada, técnico identificado e atendimento (fail-closed) */}",
+      "classificacao": "INSTITUCIONAL",
+      "criterio": "Compromisso operacional do negócio, não métrica",
+      "evidencia": "Responsabilidade técnica declarada em src/lib/gestorResponsavel.ts",
+      "acao": "Manter. Não evoluir para 'técnico certificado' sem certificação documentada.",
+      "urls": []
+    },
+    {
+      "familia": "garantia",
+      "familiaTitulo": "Garantia",
+      "risco": "Prazo ou abrangência divergente da política comercial central.",
+      "arquivo": "src/components/home/ProvasDeConfiancaSection.tsx",
+      "linha": 22,
+      "trecho": "titulo: \"Garantia por escrito, com escopo definido\",",
+      "classificacao": "COMPROVADA",
+      "criterio": "Prazo e escopo vêm da fonte comercial única",
+      "evidencia": "src/lib/config/commercial.ts + src/lib/politicaComercial.ts (90 dias de mão de obra no ponto reparado; peças conforme fabricante)",
+      "acao": "Manter sempre escopado: nunca 'garantia em todos os serviços' sem qualificar o que é coberto.",
+      "urls": []
+    },
+    {
+      "familia": "identificacao-tecnico",
+      "familiaTitulo": "Identificação do técnico",
+      "risco": "Compromisso operacional; precisa ser cumprido em todo atendimento.",
       "arquivo": "src/components/PainSection.tsx",
       "linha": 12,
       "trecho": "{ icon: Shield, text: \"Técnico identificado e de confiança\", description: \"Segurança para sua residência\" },",
@@ -5930,6 +5969,45 @@
       "arquivo": "src/components/ReviewsGrid.tsx",
       "linha": 59,
       "trecho": "desc: \"Técnico identificado e diagnóstico transparente antes de qualquer serviço.\",",
+      "classificacao": "INSTITUCIONAL",
+      "criterio": "Compromisso operacional do negócio, não métrica",
+      "evidencia": "Responsabilidade técnica declarada em src/lib/gestorResponsavel.ts",
+      "acao": "Manter. Não evoluir para 'técnico certificado' sem certificação documentada.",
+      "urls": []
+    },
+    {
+      "familia": "garantia",
+      "familiaTitulo": "Garantia",
+      "risco": "Prazo ou abrangência divergente da política comercial central.",
+      "arquivo": "src/components/scheduling/SchedulingSection.tsx",
+      "linha": 37,
+      "trecho": "{ icon: Shield, text: \"Garantia em todos os serviços\" },",
+      "classificacao": "COMPROVADA",
+      "criterio": "Prazo e escopo vêm da fonte comercial única",
+      "evidencia": "src/lib/config/commercial.ts + src/lib/politicaComercial.ts (90 dias de mão de obra no ponto reparado; peças conforme fabricante)",
+      "acao": "Manter sempre escopado: nunca 'garantia em todos os serviços' sem qualificar o que é coberto.",
+      "urls": []
+    },
+    {
+      "familia": "garantia",
+      "familiaTitulo": "Garantia",
+      "risco": "Prazo ou abrangência divergente da política comercial central.",
+      "arquivo": "src/components/social-proof/ExitIntentPopup.tsx",
+      "linha": 200,
+      "trecho": "<span>Garantia por escrito</span>",
+      "classificacao": "COMPROVADA",
+      "criterio": "Prazo e escopo vêm da fonte comercial única",
+      "evidencia": "src/lib/config/commercial.ts + src/lib/politicaComercial.ts (90 dias de mão de obra no ponto reparado; peças conforme fabricante)",
+      "acao": "Manter sempre escopado: nunca 'garantia em todos os serviços' sem qualificar o que é coberto.",
+      "urls": []
+    },
+    {
+      "familia": "identificacao-tecnico",
+      "familiaTitulo": "Identificação do técnico",
+      "risco": "Compromisso operacional; precisa ser cumprido em todo atendimento.",
+      "arquivo": "src/components/social-proof/TrustBadges.tsx",
+      "linha": 23,
+      "trecho": "title: \"Técnico identificado\",",
       "classificacao": "INSTITUCIONAL",
       "criterio": "Compromisso operacional do negócio, não métrica",
       "evidencia": "Responsabilidade técnica declarada em src/lib/gestorResponsavel.ts",
@@ -6012,84 +6090,6 @@
       "criterio": "Tempos de deslocamento e janelas de atendimento são estimativas dependentes de agenda, trânsito e disponibilidade de peça",
       "evidencia": "Não existe SLA contratado; o texto precisa manter o qualificador ('conforme disponibilidade', 'estimado', 'quando há peça em estoque')",
       "acao": "Proibido prazo absoluto sem condicionante. 'Atendimento imediato' e 'resposta em até 5 minutos' foram removidos nesta rodada.",
-      "urls": []
-    },
-    {
-      "familia": "identificacao-tecnico",
-      "familiaTitulo": "Identificação do técnico",
-      "risco": "Compromisso operacional; precisa ser cumprido em todo atendimento.",
-      "arquivo": "src/components/home/BancadaRealSection.tsx",
-      "linha": 25,
-      "trecho": "Bancada, técnico identificado e atendimento",
-      "classificacao": "INSTITUCIONAL",
-      "criterio": "Compromisso operacional do negócio, não métrica",
-      "evidencia": "Responsabilidade técnica declarada em src/lib/gestorResponsavel.ts",
-      "acao": "Manter. Não evoluir para 'técnico certificado' sem certificação documentada.",
-      "urls": []
-    },
-    {
-      "familia": "identificacao-tecnico",
-      "familiaTitulo": "Identificação do técnico",
-      "risco": "Compromisso operacional; precisa ser cumprido em todo atendimento.",
-      "arquivo": "src/components/home/HomeSections.tsx",
-      "linha": 331,
-      "trecho": "{/* 5B. PROVA REAL — bancada, técnico identificado e atendimento (fail-closed) */}",
-      "classificacao": "INSTITUCIONAL",
-      "criterio": "Compromisso operacional do negócio, não métrica",
-      "evidencia": "Responsabilidade técnica declarada em src/lib/gestorResponsavel.ts",
-      "acao": "Manter. Não evoluir para 'técnico certificado' sem certificação documentada.",
-      "urls": []
-    },
-    {
-      "familia": "garantia",
-      "familiaTitulo": "Garantia",
-      "risco": "Prazo ou abrangência divergente da política comercial central.",
-      "arquivo": "src/components/home/ProvasDeConfiancaSection.tsx",
-      "linha": 22,
-      "trecho": "titulo: \"Garantia por escrito, com escopo definido\",",
-      "classificacao": "COMPROVADA",
-      "criterio": "Prazo e escopo vêm da fonte comercial única",
-      "evidencia": "src/lib/config/commercial.ts + src/lib/politicaComercial.ts (90 dias de mão de obra no ponto reparado; peças conforme fabricante)",
-      "acao": "Manter sempre escopado: nunca 'garantia em todos os serviços' sem qualificar o que é coberto.",
-      "urls": []
-    },
-    {
-      "familia": "garantia",
-      "familiaTitulo": "Garantia",
-      "risco": "Prazo ou abrangência divergente da política comercial central.",
-      "arquivo": "src/components/scheduling/SchedulingSection.tsx",
-      "linha": 37,
-      "trecho": "{ icon: Shield, text: \"Garantia em todos os serviços\" },",
-      "classificacao": "COMPROVADA",
-      "criterio": "Prazo e escopo vêm da fonte comercial única",
-      "evidencia": "src/lib/config/commercial.ts + src/lib/politicaComercial.ts (90 dias de mão de obra no ponto reparado; peças conforme fabricante)",
-      "acao": "Manter sempre escopado: nunca 'garantia em todos os serviços' sem qualificar o que é coberto.",
-      "urls": []
-    },
-    {
-      "familia": "garantia",
-      "familiaTitulo": "Garantia",
-      "risco": "Prazo ou abrangência divergente da política comercial central.",
-      "arquivo": "src/components/social-proof/ExitIntentPopup.tsx",
-      "linha": 200,
-      "trecho": "<span>Garantia por escrito</span>",
-      "classificacao": "COMPROVADA",
-      "criterio": "Prazo e escopo vêm da fonte comercial única",
-      "evidencia": "src/lib/config/commercial.ts + src/lib/politicaComercial.ts (90 dias de mão de obra no ponto reparado; peças conforme fabricante)",
-      "acao": "Manter sempre escopado: nunca 'garantia em todos os serviços' sem qualificar o que é coberto.",
-      "urls": []
-    },
-    {
-      "familia": "identificacao-tecnico",
-      "familiaTitulo": "Identificação do técnico",
-      "risco": "Compromisso operacional; precisa ser cumprido em todo atendimento.",
-      "arquivo": "src/components/social-proof/TrustBadges.tsx",
-      "linha": 23,
-      "trecho": "title: \"Técnico identificado\",",
-      "classificacao": "INSTITUCIONAL",
-      "criterio": "Compromisso operacional do negócio, não métrica",
-      "evidencia": "Responsabilidade técnica declarada em src/lib/gestorResponsavel.ts",
-      "acao": "Manter. Não evoluir para 'técnico certificado' sem certificação documentada.",
       "urls": []
     },
     {
@@ -7592,13 +7592,28 @@
       "familiaTitulo": "Garantia",
       "risco": "Prazo ou abrangência divergente da política comercial central.",
       "arquivo": "src/lib/servicosCore.ts",
-      "linha": 1827,
+      "linha": 1829,
       "trecho": "\"O teste final tem um roteiro mínimo que não pulamos: monitor remontado, ligado em duas entradas de vídeo diferentes, verificação de uniformidade de brilho e período contínuo de fu",
       "classificacao": "COMPROVADA",
       "criterio": "Prazo e escopo vêm da fonte comercial única",
       "evidencia": "src/lib/config/commercial.ts + src/lib/politicaComercial.ts (90 dias de mão de obra no ponto reparado; peças conforme fabricante)",
       "acao": "Manter sempre escopado: nunca 'garantia em todos os serviços' sem qualificar o que é coberto.",
       "urls": []
+    },
+    {
+      "familia": "garantia",
+      "familiaTitulo": "Garantia",
+      "risco": "Prazo ou abrangência divergente da política comercial central.",
+      "arquivo": "src/pages/ads/TecnicoInformaticaCuritibaAds.tsx",
+      "linha": 103,
+      "trecho": "<h3 className=\"font-bold text-foreground\">Garantia por Escrito</h3>",
+      "classificacao": "COMPROVADA",
+      "criterio": "Prazo e escopo vêm da fonte comercial única",
+      "evidencia": "src/lib/config/commercial.ts + src/lib/politicaComercial.ts (90 dias de mão de obra no ponto reparado; peças conforme fabricante)",
+      "acao": "Manter sempre escopado: nunca 'garantia em todos os serviços' sem qualificar o que é coberto.",
+      "urls": [
+        "/ads/tecnico-informatica-curitiba"
+      ]
     },
     {
       "familia": "garantia",
@@ -7748,531 +7763,6 @@
       "acao": "Manter. Não evoluir para 'técnico certificado' sem certificação documentada.",
       "urls": [
         "/atendimento-domicilio"
-      ]
-    },
-    {
-      "familia": "experiencia-tempo",
-      "familiaTitulo": "Tempo de experiência / atuação",
-      "risco": "Anos de mercado divergentes entre páginas e sem fonte única.",
-      "arquivo": "src/pages/CFTV.tsx",
-      "linha": 44,
-      "trecho": "\"Kit 4 Câmeras Intelbras com instalação profissional inclusa e acesso remoto pelo celular. R$ 1.350 completo. Atendemos Curitiba, São José dos Pinhais, Itapoá e Guaratuba. Desde 19",
-      "classificacao": "CONDICIONAL",
-      "criterio": "Data de início da atuação técnica vem da configuração única do site, não de certificação externa",
-      "evidencia": "src/lib/siteConfig.ts (foundingDate 1998)",
-      "acao": "Só usar a data da fonte única. 'Mais de 20 anos de experiência' foi removido do copy de home por ser reivindicação solta.",
-      "urls": [
-        "/cftv"
-      ]
-    },
-    {
-      "familia": "experiencia-tempo",
-      "familiaTitulo": "Tempo de experiência / atuação",
-      "risco": "Anos de mercado divergentes entre páginas e sem fonte única.",
-      "arquivo": "src/pages/CFTV.tsx",
-      "linha": 56,
-      "trecho": "<PageSEO title=\"Kit 4 Câmeras de Segurança Intelbras | Instalação Profissional em Curitiba e Região | R$ 1.350\" description=\"Kit 4 Câmeras Intelbras com instalação profissional inc",
-      "classificacao": "CONDICIONAL",
-      "criterio": "Data de início da atuação técnica vem da configuração única do site, não de certificação externa",
-      "evidencia": "src/lib/siteConfig.ts (foundingDate 1998)",
-      "acao": "Só usar a data da fonte única. 'Mais de 20 anos de experiência' foi removido do copy de home por ser reivindicação solta.",
-      "urls": [
-        "/cftv"
-      ]
-    },
-    {
-      "familia": "experiencia-tempo",
-      "familiaTitulo": "Tempo de experiência / atuação",
-      "risco": "Anos de mercado divergentes entre páginas e sem fonte única.",
-      "arquivo": "src/pages/CFTV.tsx",
-      "linha": 88,
-      "trecho": "<span className=\"text-accent text-sm font-semibold\">Desde 1998 protegendo patrimônios</span>",
-      "classificacao": "CONDICIONAL",
-      "criterio": "Data de início da atuação técnica vem da configuração única do site, não de certificação externa",
-      "evidencia": "src/lib/siteConfig.ts (foundingDate 1998)",
-      "acao": "Só usar a data da fonte única. 'Mais de 20 anos de experiência' foi removido do copy de home por ser reivindicação solta.",
-      "urls": [
-        "/cftv"
-      ]
-    },
-    {
-      "familia": "garantia",
-      "familiaTitulo": "Garantia",
-      "risco": "Prazo ou abrangência divergente da política comercial central.",
-      "arquivo": "src/pages/CFTV.tsx",
-      "linha": 121,
-      "trecho": "<span className=\"flex items-center gap-1.5\"><CheckCircle2 className=\"h-4 w-4 text-accent\" /> Garantia de 1 ano</span>",
-      "classificacao": "COMPROVADA",
-      "criterio": "Prazo e escopo vêm da fonte comercial única",
-      "evidencia": "src/lib/config/commercial.ts + src/lib/politicaComercial.ts (90 dias de mão de obra no ponto reparado; peças conforme fabricante)",
-      "acao": "Manter sempre escopado: nunca 'garantia em todos os serviços' sem qualificar o que é coberto.",
-      "urls": [
-        "/cftv"
-      ]
-    },
-    {
-      "familia": "garantia",
-      "familiaTitulo": "Garantia",
-      "risco": "Prazo ou abrangência divergente da política comercial central.",
-      "arquivo": "src/pages/CFTV.tsx",
-      "linha": 177,
-      "trecho": "{ icon: Shield, title: \"Garantia de 1 Ano\", desc: \"Garantia completa no equipamento e na mão de obra. Suporte técnico sempre que precisar.\" },",
-      "classificacao": "COMPROVADA",
-      "criterio": "Prazo e escopo vêm da fonte comercial única",
-      "evidencia": "src/lib/config/commercial.ts + src/lib/politicaComercial.ts (90 dias de mão de obra no ponto reparado; peças conforme fabricante)",
-      "acao": "Manter sempre escopado: nunca 'garantia em todos os serviços' sem qualificar o que é coberto.",
-      "urls": [
-        "/cftv"
-      ]
-    },
-    {
-      "familia": "garantia",
-      "familiaTitulo": "Garantia",
-      "risco": "Prazo ou abrangência divergente da política comercial central.",
-      "arquivo": "src/pages/CFTV.tsx",
-      "linha": 204,
-      "trecho": "\"Garantia de 1 ano\",",
-      "classificacao": "COMPROVADA",
-      "criterio": "Prazo e escopo vêm da fonte comercial única",
-      "evidencia": "src/lib/config/commercial.ts + src/lib/politicaComercial.ts (90 dias de mão de obra no ponto reparado; peças conforme fabricante)",
-      "acao": "Manter sempre escopado: nunca 'garantia em todos os serviços' sem qualificar o que é coberto.",
-      "urls": [
-        "/cftv"
-      ]
-    },
-    {
-      "familia": "garantia",
-      "familiaTitulo": "Garantia",
-      "risco": "Prazo ou abrangência divergente da política comercial central.",
-      "arquivo": "src/pages/CFTV.tsx",
-      "linha": 386,
-      "trecho": "{ q: \"Tem garantia?\", a: \"Sim. Todos os equipamentos possuem garantia de 1 ano do fabricante (Intelbras). A instalação também tem garantia de mão de obra por 1 ano.\" },",
-      "classificacao": "COMPROVADA",
-      "criterio": "Prazo e escopo vêm da fonte comercial única",
-      "evidencia": "src/lib/config/commercial.ts + src/lib/politicaComercial.ts (90 dias de mão de obra no ponto reparado; peças conforme fabricante)",
-      "acao": "Manter sempre escopado: nunca 'garantia em todos os serviços' sem qualificar o que é coberto.",
-      "urls": [
-        "/cftv"
-      ]
-    },
-    {
-      "familia": "garantia",
-      "familiaTitulo": "Garantia",
-      "risco": "Prazo ou abrangência divergente da política comercial central.",
-      "arquivo": "src/pages/CFTV.tsx",
-      "linha": 483,
-      "trecho": "com garantia de 1 ano.",
-      "classificacao": "COMPROVADA",
-      "criterio": "Prazo e escopo vêm da fonte comercial única",
-      "evidencia": "src/lib/config/commercial.ts + src/lib/politicaComercial.ts (90 dias de mão de obra no ponto reparado; peças conforme fabricante)",
-      "acao": "Manter sempre escopado: nunca 'garantia em todos os serviços' sem qualificar o que é coberto.",
-      "urls": [
-        "/cftv"
-      ]
-    },
-    {
-      "familia": "garantia",
-      "familiaTitulo": "Garantia",
-      "risco": "Prazo ou abrangência divergente da política comercial central.",
-      "arquivo": "src/pages/ColetaEntrega.tsx",
-      "linha": 201,
-      "trecho": "{ icon: Package, title: \"4. Entrega com Garantia\", desc: \"Equipamento reparado, testado e devolvido no seu endereço. Garantia por escrito de todo o serviço realizado.\" },",
-      "classificacao": "COMPROVADA",
-      "criterio": "Prazo e escopo vêm da fonte comercial única",
-      "evidencia": "src/lib/config/commercial.ts + src/lib/politicaComercial.ts (90 dias de mão de obra no ponto reparado; peças conforme fabricante)",
-      "acao": "Manter sempre escopado: nunca 'garantia em todos os serviços' sem qualificar o que é coberto.",
-      "urls": [
-        "/coleta-e-entrega"
-      ]
-    },
-    {
-      "familia": "garantia",
-      "familiaTitulo": "Garantia",
-      "risco": "Prazo ou abrangência divergente da política comercial central.",
-      "arquivo": "src/pages/ComoFunciona.tsx",
-      "linha": 782,
-      "trecho": "{ icon: Shield, title: \"Garantia do Serviço\", text: \"Todo serviço inclui garantia por escrito de 90 dias em mão de obra sobre o ponto reparado\" },",
-      "classificacao": "COMPROVADA",
-      "criterio": "Prazo e escopo vêm da fonte comercial única",
-      "evidencia": "src/lib/config/commercial.ts + src/lib/politicaComercial.ts (90 dias de mão de obra no ponto reparado; peças conforme fabricante)",
-      "acao": "Manter sempre escopado: nunca 'garantia em todos os serviços' sem qualificar o que é coberto.",
-      "urls": [
-        "/como-funciona"
-      ]
-    },
-    {
-      "familia": "garantia",
-      "familiaTitulo": "Garantia",
-      "risco": "Prazo ou abrangência divergente da política comercial central.",
-      "arquivo": "src/pages/ComoFunciona.tsx",
-      "linha": 842,
-      "trecho": "\"Garantia por escrito de 90 dias em mão de obra sobre o serviço executado\",",
-      "classificacao": "COMPROVADA",
-      "criterio": "Prazo e escopo vêm da fonte comercial única",
-      "evidencia": "src/lib/config/commercial.ts + src/lib/politicaComercial.ts (90 dias de mão de obra no ponto reparado; peças conforme fabricante)",
-      "acao": "Manter sempre escopado: nunca 'garantia em todos os serviços' sem qualificar o que é coberto.",
-      "urls": [
-        "/como-funciona"
-      ]
-    },
-    {
-      "familia": "garantia",
-      "familiaTitulo": "Garantia",
-      "risco": "Prazo ou abrangência divergente da política comercial central.",
-      "arquivo": "src/pages/ComoFunciona.tsx",
-      "linha": 888,
-      "trecho": "{ icon: Shield, title: \"Garantia por Escrito em Todo Serviço\", desc: \"Todos os serviços possuem garantia de 90 dias em mão de obra sobre o ponto reparado. Se algo der errado dentro",
-      "classificacao": "COMPROVADA",
-      "criterio": "Prazo e escopo vêm da fonte comercial única",
-      "evidencia": "src/lib/config/commercial.ts + src/lib/politicaComercial.ts (90 dias de mão de obra no ponto reparado; peças conforme fabricante)",
-      "acao": "Manter sempre escopado: nunca 'garantia em todos os serviços' sem qualificar o que é coberto.",
-      "urls": [
-        "/como-funciona"
-      ]
-    },
-    {
-      "familia": "garantia",
-      "familiaTitulo": "Garantia",
-      "risco": "Prazo ou abrangência divergente da política comercial central.",
-      "arquivo": "src/pages/ComoFunciona.tsx",
-      "linha": 900,
-      "trecho": "{ question: \"O serviço tem garantia?\", answer: \"Sim. Todos os serviços possuem garantia por escrito de 90 dias em mão de obra sobre o ponto reparado ou o serviço executado. Peças p",
-      "classificacao": "COMPROVADA",
-      "criterio": "Prazo e escopo vêm da fonte comercial única",
-      "evidencia": "src/lib/config/commercial.ts + src/lib/politicaComercial.ts (90 dias de mão de obra no ponto reparado; peças conforme fabricante)",
-      "acao": "Manter sempre escopado: nunca 'garantia em todos os serviços' sem qualificar o que é coberto.",
-      "urls": [
-        "/como-funciona"
-      ]
-    },
-    {
-      "familia": "todos-os-portes",
-      "familiaTitulo": "Cobertura empresarial irrestrita",
-      "risco": "“Todos os portes / todas as marcas / todos os modelos” não é sustentável.",
-      "arquivo": "src/pages/ComoFunciona.tsx",
-      "linha": 902,
-      "trecho": "{ question: \"Atende empresas?\", answer: \"Sim. Temos planos específicos para empresas de todos os portes. Oferecemos suporte contínuo, manutenção preventiva, gestão de TI e atendime",
-      "classificacao": "CONDICIONAL",
-      "criterio": "Atendimento a qualquer marca vale para diagnóstico e serviços de software/hardware comum; depende de disponibilidade de peça e de o modelo permitir reparo",
-      "evidencia": "Política de recusa documentada (ex.: painel de monitor/TV) em src/lib/politicaComercial.ts",
-      "acao": "Manter a ressalva de peça/viabilidade no mesmo bloco. 'Empresas de todos os portes' foi retirado.",
-      "urls": [
-        "/como-funciona"
-      ]
-    },
-    {
-      "familia": "depoimento",
-      "familiaTitulo": "Depoimento, avaliação ou estrela",
-      "risco": "Prova social só pode existir se for verificável e atribuível.",
-      "arquivo": "src/pages/Depoimentos.tsx",
-      "linha": 100,
-      "trecho": "ratingValue: r.rating,",
-      "classificacao": "CONDICIONAL",
-      "criterio": "Schema de avaliação só é emitido quando existem avaliações reais acima do mínimo",
-      "evidencia": "src/lib/schemaValidation.ts (MIN_REVIEWS_FOR_AGGREGATE) e src/hooks/useAggregateRating.ts — fail-closed sem dados",
-      "acao": "Nunca declarar ratingValue estático. Depoimentos fabricados nas páginas de CFTV foram removidos.",
-      "urls": [
-        "/depoimentos"
-      ]
-    },
-    {
-      "familia": "prazo-prometido",
-      "familiaTitulo": "Prazo de atendimento prometido",
-      "risco": "Prazo fixo sem controle de agenda, trânsito e peça.",
-      "arquivo": "src/pages/FAQ.tsx",
-      "linha": 108,
-      "trecho": "answer: \"Na modalidade de diagnóstico com coleta, o cancelamento pode ser feito em até 24 horas corridas após a coleta, conforme as condições publicadas na página de termos, condiç",
-      "classificacao": "CONDICIONAL",
-      "criterio": "Tempos de deslocamento e janelas de atendimento são estimativas dependentes de agenda, trânsito e disponibilidade de peça",
-      "evidencia": "Não existe SLA contratado; o texto precisa manter o qualificador ('conforme disponibilidade', 'estimado', 'quando há peça em estoque')",
-      "acao": "Proibido prazo absoluto sem condicionante. 'Atendimento imediato' e 'resposta em até 5 minutos' foram removidos nesta rodada.",
-      "urls": [
-        "/faq"
-      ]
-    },
-    {
-      "familia": "todos-os-portes",
-      "familiaTitulo": "Cobertura empresarial irrestrita",
-      "risco": "“Todos os portes / todas as marcas / todos os modelos” não é sustentável.",
-      "arquivo": "src/pages/Marcas.tsx",
-      "linha": 343,
-      "trecho": "Atendemos todas as marcas de computadores, notebooks, celulares e TVs. Entre em contato e informe o modelo do seu equipamento.",
-      "classificacao": "CONDICIONAL",
-      "criterio": "Atendimento a qualquer marca vale para diagnóstico e serviços de software/hardware comum; depende de disponibilidade de peça e de o modelo permitir reparo",
-      "evidencia": "Política de recusa documentada (ex.: painel de monitor/TV) em src/lib/politicaComercial.ts",
-      "acao": "Manter a ressalva de peça/viabilidade no mesmo bloco. 'Empresas de todos os portes' foi retirado.",
-      "urls": [
-        "/marcas"
-      ]
-    },
-    {
-      "familia": "garantia",
-      "familiaTitulo": "Garantia",
-      "risco": "Prazo ou abrangência divergente da política comercial central.",
-      "arquivo": "src/pages/PoliticaPecasCliente.tsx",
-      "linha": 89,
-      "trecho": "\"É aceita, com o seu aceite registrado do risco de falha. Componente usado pode apresentar defeito a qualquer momento e isso não é coberto pela garantia do serviço, que cobre a exe",
-      "classificacao": "COMPROVADA",
-      "criterio": "Prazo e escopo vêm da fonte comercial única",
-      "evidencia": "src/lib/config/commercial.ts + src/lib/politicaComercial.ts (90 dias de mão de obra no ponto reparado; peças conforme fabricante)",
-      "acao": "Manter sempre escopado: nunca 'garantia em todos os serviços' sem qualificar o que é coberto.",
-      "urls": [
-        "/politica-de-pecas-do-cliente"
-      ]
-    },
-    {
-      "familia": "estatistica",
-      "familiaTitulo": "Estatística ou percentual atribuído",
-      "risco": "Percentual sem fonte primária citável.",
-      "arquivo": "src/pages/QuandoNaoCompensa.tsx",
-      "linha": 45,
-      "trecho": "alternativa: \"Se o problema for nos LEDs de retroiluminação ou na fonte, o reparo compensa e geralmente custa 10-25% do valor da TV. Só o diagnóstico diferencia.\",",
-      "classificacao": "CONDICIONAL",
-      "criterio": "Percentuais só permanecem quando descrevem faixa técnica de mercado ou custo, nunca desempenho próprio",
-      "evidencia": "Percentuais de atendimento próprio ('80% dos casos que atendemos', '90% dos chamados') foram removidos nesta rodada",
-      "acao": "Percentual novo exige fonte primária citada no mesmo bloco.",
-      "urls": [
-        "/quando-nao-compensa"
-      ]
-    },
-    {
-      "familia": "experiencia-tempo",
-      "familiaTitulo": "Tempo de experiência / atuação",
-      "risco": "Anos de mercado divergentes entre páginas e sem fonte única.",
-      "arquivo": "src/pages/SejaParceiro.tsx",
-      "linha": 37,
-      "trecho": "\"Experiência comprovada em manutenção de PCs, notebooks ou celulares\",",
-      "classificacao": "CONDICIONAL",
-      "criterio": "Data de início da atuação técnica vem da configuração única do site, não de certificação externa",
-      "evidencia": "src/lib/siteConfig.ts (foundingDate 1998)",
-      "acao": "Só usar a data da fonte única. 'Mais de 20 anos de experiência' foi removido do copy de home por ser reivindicação solta.",
-      "urls": [
-        "/seja-parceiro"
-      ]
-    },
-    {
-      "familia": "prazo-prometido",
-      "familiaTitulo": "Prazo de atendimento prometido",
-      "risco": "Prazo fixo sem controle de agenda, trânsito e peça.",
-      "arquivo": "src/pages/SejaParceiro.tsx",
-      "linha": 235,
-      "trecho": "Preencha o formulário e envie pelo WhatsApp. Nossa equipe retorna em até 24 horas.",
-      "classificacao": "CONDICIONAL",
-      "criterio": "Tempos de deslocamento e janelas de atendimento são estimativas dependentes de agenda, trânsito e disponibilidade de peça",
-      "evidencia": "Não existe SLA contratado; o texto precisa manter o qualificador ('conforme disponibilidade', 'estimado', 'quando há peça em estoque')",
-      "acao": "Proibido prazo absoluto sem condicionante. 'Atendimento imediato' e 'resposta em até 5 minutos' foram removidos nesta rodada.",
-      "urls": [
-        "/seja-parceiro"
-      ]
-    },
-    {
-      "familia": "garantia",
-      "familiaTitulo": "Garantia",
-      "risco": "Prazo ou abrangência divergente da política comercial central.",
-      "arquivo": "src/pages/Servicos.tsx",
-      "linha": 58,
-      "trecho": "question: \"Existe garantia do serviço executado?\",",
-      "classificacao": "COMPROVADA",
-      "criterio": "Prazo e escopo vêm da fonte comercial única",
-      "evidencia": "src/lib/config/commercial.ts + src/lib/politicaComercial.ts (90 dias de mão de obra no ponto reparado; peças conforme fabricante)",
-      "acao": "Manter sempre escopado: nunca 'garantia em todos os serviços' sem qualificar o que é coberto.",
-      "urls": [
-        "/servicos"
-      ]
-    },
-    {
-      "familia": "identificacao-tecnico",
-      "familiaTitulo": "Identificação do técnico",
-      "risco": "Compromisso operacional; precisa ser cumprido em todo atendimento.",
-      "arquivo": "src/pages/TecnicoInformaticaAlmiranteTamandare.tsx",
-      "linha": 36,
-      "trecho": "description: \"Profissional identificado, com registro do atendimento por escrito.\",",
-      "classificacao": "INSTITUCIONAL",
-      "criterio": "Compromisso operacional do negócio, não métrica",
-      "evidencia": "Responsabilidade técnica declarada em src/lib/gestorResponsavel.ts",
-      "acao": "Manter. Não evoluir para 'técnico certificado' sem certificação documentada.",
-      "urls": [
-        "/tecnico-informatica-almirante-tamandare"
-      ]
-    },
-    {
-      "familia": "garantia",
-      "familiaTitulo": "Garantia",
-      "risco": "Prazo ou abrangência divergente da política comercial central.",
-      "arquivo": "src/pages/TecnicoInformaticaAlmiranteTamandare.tsx",
-      "linha": 41,
-      "trecho": "description: \"Diagnóstico transparente, valor antes da execução e garantia por escrito.\",",
-      "classificacao": "COMPROVADA",
-      "criterio": "Prazo e escopo vêm da fonte comercial única",
-      "evidencia": "src/lib/config/commercial.ts + src/lib/politicaComercial.ts (90 dias de mão de obra no ponto reparado; peças conforme fabricante)",
-      "acao": "Manter sempre escopado: nunca 'garantia em todos os serviços' sem qualificar o que é coberto.",
-      "urls": [
-        "/tecnico-informatica-almirante-tamandare"
-      ]
-    },
-    {
-      "familia": "identificacao-tecnico",
-      "familiaTitulo": "Identificação do técnico",
-      "risco": "Compromisso operacional; precisa ser cumprido em todo atendimento.",
-      "arquivo": "src/pages/TecnicoInformaticaCampoMagro.tsx",
-      "linha": 25,
-      "trecho": "{ icon: Shield, title: \"Técnico Identificado\", description: \"Profissional identificado na chegada, com ferramentas próprias e registro do atendimento.\" },",
-      "classificacao": "INSTITUCIONAL",
-      "criterio": "Compromisso operacional do negócio, não métrica",
-      "evidencia": "Responsabilidade técnica declarada em src/lib/gestorResponsavel.ts",
-      "acao": "Manter. Não evoluir para 'técnico certificado' sem certificação documentada.",
-      "urls": [
-        "/tecnico-informatica-campo-magro"
-      ]
-    },
-    {
-      "familia": "garantia",
-      "familiaTitulo": "Garantia",
-      "risco": "Prazo ou abrangência divergente da política comercial central.",
-      "arquivo": "src/pages/TecnicoInformaticaCampoMagro.tsx",
-      "linha": 26,
-      "trecho": "{ icon: Wrench, title: \"Garantia por Escrito\", description: \"Valor informado antes da execução. Garantia conforme o serviço executado.\" },",
-      "classificacao": "COMPROVADA",
-      "criterio": "Prazo e escopo vêm da fonte comercial única",
-      "evidencia": "src/lib/config/commercial.ts + src/lib/politicaComercial.ts (90 dias de mão de obra no ponto reparado; peças conforme fabricante)",
-      "acao": "Manter sempre escopado: nunca 'garantia em todos os serviços' sem qualificar o que é coberto.",
-      "urls": [
-        "/tecnico-informatica-campo-magro"
-      ]
-    },
-    {
-      "familia": "identificacao-tecnico",
-      "familiaTitulo": "Identificação do técnico",
-      "risco": "Compromisso operacional; precisa ser cumprido em todo atendimento.",
-      "arquivo": "src/pages/TecnicoInformaticaFazendaRioGrande.tsx",
-      "linha": 35,
-      "trecho": "title: \"Profissional identificado\",",
-      "classificacao": "INSTITUCIONAL",
-      "criterio": "Compromisso operacional do negócio, não métrica",
-      "evidencia": "Responsabilidade técnica declarada em src/lib/gestorResponsavel.ts",
-      "acao": "Manter. Não evoluir para 'técnico certificado' sem certificação documentada.",
-      "urls": [
-        "/tecnico-informatica-fazenda-rio-grande"
-      ]
-    },
-    {
-      "familia": "identificacao-tecnico",
-      "familiaTitulo": "Identificação do técnico",
-      "risco": "Compromisso operacional; precisa ser cumprido em todo atendimento.",
-      "arquivo": "src/pages/TecnicoInformaticaFazendaRioGrande.tsx",
-      "linha": 36,
-      "trecho": "description: \"Técnico identificado, com equipamento profissional e registro do atendimento.\",",
-      "classificacao": "INSTITUCIONAL",
-      "criterio": "Compromisso operacional do negócio, não métrica",
-      "evidencia": "Responsabilidade técnica declarada em src/lib/gestorResponsavel.ts",
-      "acao": "Manter. Não evoluir para 'técnico certificado' sem certificação documentada.",
-      "urls": [
-        "/tecnico-informatica-fazenda-rio-grande"
-      ]
-    },
-    {
-      "familia": "garantia",
-      "familiaTitulo": "Garantia",
-      "risco": "Prazo ou abrangência divergente da política comercial central.",
-      "arquivo": "src/pages/TecnicoInformaticaFazendaRioGrande.tsx",
-      "linha": 41,
-      "trecho": "description: \"Valor antes da execução. Garantia por escrito em todos os reparos realizados.\",",
-      "classificacao": "COMPROVADA",
-      "criterio": "Prazo e escopo vêm da fonte comercial única",
-      "evidencia": "src/lib/config/commercial.ts + src/lib/politicaComercial.ts (90 dias de mão de obra no ponto reparado; peças conforme fabricante)",
-      "acao": "Manter sempre escopado: nunca 'garantia em todos os serviços' sem qualificar o que é coberto.",
-      "urls": [
-        "/tecnico-informatica-fazenda-rio-grande"
-      ]
-    },
-    {
-      "familia": "identificacao-tecnico",
-      "familiaTitulo": "Identificação do técnico",
-      "risco": "Compromisso operacional; precisa ser cumprido em todo atendimento.",
-      "arquivo": "src/pages/TecnicoInformaticaPiraquara.tsx",
-      "linha": 25,
-      "trecho": "{ icon: Shield, title: \"Técnico identificado\", description: \"Técnico identificado, com equipamento profissional e registro do atendimento.\" },",
-      "classificacao": "INSTITUCIONAL",
-      "criterio": "Compromisso operacional do negócio, não métrica",
-      "evidencia": "Responsabilidade técnica declarada em src/lib/gestorResponsavel.ts",
-      "acao": "Manter. Não evoluir para 'técnico certificado' sem certificação documentada.",
-      "urls": [
-        "/tecnico-informatica-piraquara"
-      ]
-    },
-    {
-      "familia": "garantia",
-      "familiaTitulo": "Garantia",
-      "risco": "Prazo ou abrangência divergente da política comercial central.",
-      "arquivo": "src/pages/TecnicoInformaticaPiraquara.tsx",
-      "linha": 26,
-      "trecho": "{ icon: Wrench, title: \"Garantia em Todo Serviço\", description: \"Diagnóstico transparente, valor antes da execução e garantia por escrito.\" },",
-      "classificacao": "COMPROVADA",
-      "criterio": "Prazo e escopo vêm da fonte comercial única",
-      "evidencia": "src/lib/config/commercial.ts + src/lib/politicaComercial.ts (90 dias de mão de obra no ponto reparado; peças conforme fabricante)",
-      "acao": "Manter sempre escopado: nunca 'garantia em todos os serviços' sem qualificar o que é coberto.",
-      "urls": [
-        "/tecnico-informatica-piraquara"
-      ]
-    },
-    {
-      "familia": "identificacao-tecnico",
-      "familiaTitulo": "Identificação do técnico",
-      "risco": "Compromisso operacional; precisa ser cumprido em todo atendimento.",
-      "arquivo": "src/pages/TecnicoInformaticaQuatroBarras.tsx",
-      "linha": 25,
-      "trecho": "{ icon: Shield, title: \"Profissional identificado\", description: \"Técnico identificado e equipado profissionalmente.\" },",
-      "classificacao": "INSTITUCIONAL",
-      "criterio": "Compromisso operacional do negócio, não métrica",
-      "evidencia": "Responsabilidade técnica declarada em src/lib/gestorResponsavel.ts",
-      "acao": "Manter. Não evoluir para 'técnico certificado' sem certificação documentada.",
-      "urls": [
-        "/tecnico-informatica-quatro-barras"
-      ]
-    },
-    {
-      "familia": "garantia",
-      "familiaTitulo": "Garantia",
-      "risco": "Prazo ou abrangência divergente da política comercial central.",
-      "arquivo": "src/pages/TecnicoInformaticaQuatroBarras.tsx",
-      "linha": 26,
-      "trecho": "{ icon: Wrench, title: \"Serviço Garantido\", description: \"Valor antes da execução. Garantia por escrito em todos os serviços.\" },",
-      "classificacao": "COMPROVADA",
-      "criterio": "Prazo e escopo vêm da fonte comercial única",
-      "evidencia": "src/lib/config/commercial.ts + src/lib/politicaComercial.ts (90 dias de mão de obra no ponto reparado; peças conforme fabricante)",
-      "acao": "Manter sempre escopado: nunca 'garantia em todos os serviços' sem qualificar o que é coberto.",
-      "urls": [
-        "/tecnico-informatica-quatro-barras"
-      ]
-    },
-    {
-      "familia": "garantia",
-      "familiaTitulo": "Garantia",
-      "risco": "Prazo ou abrangência divergente da política comercial central.",
-      "arquivo": "src/pages/TecnicoInformaticaQuatroBarras.tsx",
-      "linha": 80,
-      "trecho": "<p>Nosso técnico atende Quatro Barras com o mesmo padrão de qualidade de Curitiba: diagnóstico transparente, valor antes da execução e garantia por escrito. Para casos que exigem b",
-      "classificacao": "COMPROVADA",
-      "criterio": "Prazo e escopo vêm da fonte comercial única",
-      "evidencia": "src/lib/config/commercial.ts + src/lib/politicaComercial.ts (90 dias de mão de obra no ponto reparado; peças conforme fabricante)",
-      "acao": "Manter sempre escopado: nunca 'garantia em todos os serviços' sem qualificar o que é coberto.",
-      "urls": [
-        "/tecnico-informatica-quatro-barras"
-      ]
-    },
-    {
-      "familia": "garantia",
-      "familiaTitulo": "Garantia",
-      "risco": "Prazo ou abrangência divergente da política comercial central.",
-      "arquivo": "src/pages/ads/TecnicoInformaticaCuritibaAds.tsx",
-      "linha": 103,
-      "trecho": "<h3 className=\"font-bold text-foreground\">Garantia por Escrito</h3>",
-      "classificacao": "COMPROVADA",
-      "criterio": "Prazo e escopo vêm da fonte comercial única",
-      "evidencia": "src/lib/config/commercial.ts + src/lib/politicaComercial.ts (90 dias de mão de obra no ponto reparado; peças conforme fabricante)",
-      "acao": "Manter sempre escopado: nunca 'garantia em todos os serviços' sem qualificar o que é coberto.",
-      "urls": [
-        "/ads/tecnico-informatica-curitiba"
       ]
     },
     {
@@ -8684,6 +8174,231 @@
       ]
     },
     {
+      "familia": "experiencia-tempo",
+      "familiaTitulo": "Tempo de experiência / atuação",
+      "risco": "Anos de mercado divergentes entre páginas e sem fonte única.",
+      "arquivo": "src/pages/CFTV.tsx",
+      "linha": 44,
+      "trecho": "\"Kit 4 Câmeras Intelbras com instalação profissional inclusa e acesso remoto pelo celular. R$ 1.350 completo. Atendemos Curitiba, São José dos Pinhais, Itapoá e Guaratuba. Desde 19",
+      "classificacao": "CONDICIONAL",
+      "criterio": "Data de início da atuação técnica vem da configuração única do site, não de certificação externa",
+      "evidencia": "src/lib/siteConfig.ts (foundingDate 1998)",
+      "acao": "Só usar a data da fonte única. 'Mais de 20 anos de experiência' foi removido do copy de home por ser reivindicação solta.",
+      "urls": [
+        "/cftv"
+      ]
+    },
+    {
+      "familia": "experiencia-tempo",
+      "familiaTitulo": "Tempo de experiência / atuação",
+      "risco": "Anos de mercado divergentes entre páginas e sem fonte única.",
+      "arquivo": "src/pages/CFTV.tsx",
+      "linha": 56,
+      "trecho": "<PageSEO title=\"Kit 4 Câmeras de Segurança Intelbras | Instalação Profissional em Curitiba e Região | R$ 1.350\" description=\"Kit 4 Câmeras Intelbras com instalação profissional inc",
+      "classificacao": "CONDICIONAL",
+      "criterio": "Data de início da atuação técnica vem da configuração única do site, não de certificação externa",
+      "evidencia": "src/lib/siteConfig.ts (foundingDate 1998)",
+      "acao": "Só usar a data da fonte única. 'Mais de 20 anos de experiência' foi removido do copy de home por ser reivindicação solta.",
+      "urls": [
+        "/cftv"
+      ]
+    },
+    {
+      "familia": "experiencia-tempo",
+      "familiaTitulo": "Tempo de experiência / atuação",
+      "risco": "Anos de mercado divergentes entre páginas e sem fonte única.",
+      "arquivo": "src/pages/CFTV.tsx",
+      "linha": 88,
+      "trecho": "<span className=\"text-accent text-sm font-semibold\">Desde 1998 protegendo patrimônios</span>",
+      "classificacao": "CONDICIONAL",
+      "criterio": "Data de início da atuação técnica vem da configuração única do site, não de certificação externa",
+      "evidencia": "src/lib/siteConfig.ts (foundingDate 1998)",
+      "acao": "Só usar a data da fonte única. 'Mais de 20 anos de experiência' foi removido do copy de home por ser reivindicação solta.",
+      "urls": [
+        "/cftv"
+      ]
+    },
+    {
+      "familia": "garantia",
+      "familiaTitulo": "Garantia",
+      "risco": "Prazo ou abrangência divergente da política comercial central.",
+      "arquivo": "src/pages/CFTV.tsx",
+      "linha": 121,
+      "trecho": "<span className=\"flex items-center gap-1.5\"><CheckCircle2 className=\"h-4 w-4 text-accent\" /> Garantia de 1 ano</span>",
+      "classificacao": "COMPROVADA",
+      "criterio": "Prazo e escopo vêm da fonte comercial única",
+      "evidencia": "src/lib/config/commercial.ts + src/lib/politicaComercial.ts (90 dias de mão de obra no ponto reparado; peças conforme fabricante)",
+      "acao": "Manter sempre escopado: nunca 'garantia em todos os serviços' sem qualificar o que é coberto.",
+      "urls": [
+        "/cftv"
+      ]
+    },
+    {
+      "familia": "garantia",
+      "familiaTitulo": "Garantia",
+      "risco": "Prazo ou abrangência divergente da política comercial central.",
+      "arquivo": "src/pages/CFTV.tsx",
+      "linha": 177,
+      "trecho": "{ icon: Shield, title: \"Garantia de 1 Ano\", desc: \"Garantia completa no equipamento e na mão de obra. Suporte técnico sempre que precisar.\" },",
+      "classificacao": "COMPROVADA",
+      "criterio": "Prazo e escopo vêm da fonte comercial única",
+      "evidencia": "src/lib/config/commercial.ts + src/lib/politicaComercial.ts (90 dias de mão de obra no ponto reparado; peças conforme fabricante)",
+      "acao": "Manter sempre escopado: nunca 'garantia em todos os serviços' sem qualificar o que é coberto.",
+      "urls": [
+        "/cftv"
+      ]
+    },
+    {
+      "familia": "garantia",
+      "familiaTitulo": "Garantia",
+      "risco": "Prazo ou abrangência divergente da política comercial central.",
+      "arquivo": "src/pages/CFTV.tsx",
+      "linha": 204,
+      "trecho": "\"Garantia de 1 ano\",",
+      "classificacao": "COMPROVADA",
+      "criterio": "Prazo e escopo vêm da fonte comercial única",
+      "evidencia": "src/lib/config/commercial.ts + src/lib/politicaComercial.ts (90 dias de mão de obra no ponto reparado; peças conforme fabricante)",
+      "acao": "Manter sempre escopado: nunca 'garantia em todos os serviços' sem qualificar o que é coberto.",
+      "urls": [
+        "/cftv"
+      ]
+    },
+    {
+      "familia": "garantia",
+      "familiaTitulo": "Garantia",
+      "risco": "Prazo ou abrangência divergente da política comercial central.",
+      "arquivo": "src/pages/CFTV.tsx",
+      "linha": 386,
+      "trecho": "{ q: \"Tem garantia?\", a: \"Sim. Todos os equipamentos possuem garantia de 1 ano do fabricante (Intelbras). A instalação também tem garantia de mão de obra por 1 ano.\" },",
+      "classificacao": "COMPROVADA",
+      "criterio": "Prazo e escopo vêm da fonte comercial única",
+      "evidencia": "src/lib/config/commercial.ts + src/lib/politicaComercial.ts (90 dias de mão de obra no ponto reparado; peças conforme fabricante)",
+      "acao": "Manter sempre escopado: nunca 'garantia em todos os serviços' sem qualificar o que é coberto.",
+      "urls": [
+        "/cftv"
+      ]
+    },
+    {
+      "familia": "garantia",
+      "familiaTitulo": "Garantia",
+      "risco": "Prazo ou abrangência divergente da política comercial central.",
+      "arquivo": "src/pages/CFTV.tsx",
+      "linha": 483,
+      "trecho": "com garantia de 1 ano.",
+      "classificacao": "COMPROVADA",
+      "criterio": "Prazo e escopo vêm da fonte comercial única",
+      "evidencia": "src/lib/config/commercial.ts + src/lib/politicaComercial.ts (90 dias de mão de obra no ponto reparado; peças conforme fabricante)",
+      "acao": "Manter sempre escopado: nunca 'garantia em todos os serviços' sem qualificar o que é coberto.",
+      "urls": [
+        "/cftv"
+      ]
+    },
+    {
+      "familia": "garantia",
+      "familiaTitulo": "Garantia",
+      "risco": "Prazo ou abrangência divergente da política comercial central.",
+      "arquivo": "src/pages/ColetaEntrega.tsx",
+      "linha": 201,
+      "trecho": "{ icon: Package, title: \"4. Entrega com Garantia\", desc: \"Equipamento reparado, testado e devolvido no seu endereço. Garantia por escrito de todo o serviço realizado.\" },",
+      "classificacao": "COMPROVADA",
+      "criterio": "Prazo e escopo vêm da fonte comercial única",
+      "evidencia": "src/lib/config/commercial.ts + src/lib/politicaComercial.ts (90 dias de mão de obra no ponto reparado; peças conforme fabricante)",
+      "acao": "Manter sempre escopado: nunca 'garantia em todos os serviços' sem qualificar o que é coberto.",
+      "urls": [
+        "/coleta-e-entrega"
+      ]
+    },
+    {
+      "familia": "garantia",
+      "familiaTitulo": "Garantia",
+      "risco": "Prazo ou abrangência divergente da política comercial central.",
+      "arquivo": "src/pages/ComoFunciona.tsx",
+      "linha": 782,
+      "trecho": "{ icon: Shield, title: \"Garantia do Serviço\", text: \"Todo serviço inclui garantia por escrito de 90 dias em mão de obra sobre o ponto reparado\" },",
+      "classificacao": "COMPROVADA",
+      "criterio": "Prazo e escopo vêm da fonte comercial única",
+      "evidencia": "src/lib/config/commercial.ts + src/lib/politicaComercial.ts (90 dias de mão de obra no ponto reparado; peças conforme fabricante)",
+      "acao": "Manter sempre escopado: nunca 'garantia em todos os serviços' sem qualificar o que é coberto.",
+      "urls": [
+        "/como-funciona"
+      ]
+    },
+    {
+      "familia": "garantia",
+      "familiaTitulo": "Garantia",
+      "risco": "Prazo ou abrangência divergente da política comercial central.",
+      "arquivo": "src/pages/ComoFunciona.tsx",
+      "linha": 842,
+      "trecho": "\"Garantia por escrito de 90 dias em mão de obra sobre o serviço executado\",",
+      "classificacao": "COMPROVADA",
+      "criterio": "Prazo e escopo vêm da fonte comercial única",
+      "evidencia": "src/lib/config/commercial.ts + src/lib/politicaComercial.ts (90 dias de mão de obra no ponto reparado; peças conforme fabricante)",
+      "acao": "Manter sempre escopado: nunca 'garantia em todos os serviços' sem qualificar o que é coberto.",
+      "urls": [
+        "/como-funciona"
+      ]
+    },
+    {
+      "familia": "garantia",
+      "familiaTitulo": "Garantia",
+      "risco": "Prazo ou abrangência divergente da política comercial central.",
+      "arquivo": "src/pages/ComoFunciona.tsx",
+      "linha": 888,
+      "trecho": "{ icon: Shield, title: \"Garantia por Escrito em Todo Serviço\", desc: \"Todos os serviços possuem garantia de 90 dias em mão de obra sobre o ponto reparado. Se algo der errado dentro",
+      "classificacao": "COMPROVADA",
+      "criterio": "Prazo e escopo vêm da fonte comercial única",
+      "evidencia": "src/lib/config/commercial.ts + src/lib/politicaComercial.ts (90 dias de mão de obra no ponto reparado; peças conforme fabricante)",
+      "acao": "Manter sempre escopado: nunca 'garantia em todos os serviços' sem qualificar o que é coberto.",
+      "urls": [
+        "/como-funciona"
+      ]
+    },
+    {
+      "familia": "garantia",
+      "familiaTitulo": "Garantia",
+      "risco": "Prazo ou abrangência divergente da política comercial central.",
+      "arquivo": "src/pages/ComoFunciona.tsx",
+      "linha": 900,
+      "trecho": "{ question: \"O serviço tem garantia?\", answer: \"Sim. Todos os serviços possuem garantia por escrito de 90 dias em mão de obra sobre o ponto reparado ou o serviço executado. Peças p",
+      "classificacao": "COMPROVADA",
+      "criterio": "Prazo e escopo vêm da fonte comercial única",
+      "evidencia": "src/lib/config/commercial.ts + src/lib/politicaComercial.ts (90 dias de mão de obra no ponto reparado; peças conforme fabricante)",
+      "acao": "Manter sempre escopado: nunca 'garantia em todos os serviços' sem qualificar o que é coberto.",
+      "urls": [
+        "/como-funciona"
+      ]
+    },
+    {
+      "familia": "todos-os-portes",
+      "familiaTitulo": "Cobertura empresarial irrestrita",
+      "risco": "“Todos os portes / todas as marcas / todos os modelos” não é sustentável.",
+      "arquivo": "src/pages/ComoFunciona.tsx",
+      "linha": 902,
+      "trecho": "{ question: \"Atende empresas?\", answer: \"Sim. Temos planos específicos para empresas de todos os portes. Oferecemos suporte contínuo, manutenção preventiva, gestão de TI e atendime",
+      "classificacao": "CONDICIONAL",
+      "criterio": "Atendimento a qualquer marca vale para diagnóstico e serviços de software/hardware comum; depende de disponibilidade de peça e de o modelo permitir reparo",
+      "evidencia": "Política de recusa documentada (ex.: painel de monitor/TV) em src/lib/politicaComercial.ts",
+      "acao": "Manter a ressalva de peça/viabilidade no mesmo bloco. 'Empresas de todos os portes' foi retirado.",
+      "urls": [
+        "/como-funciona"
+      ]
+    },
+    {
+      "familia": "depoimento",
+      "familiaTitulo": "Depoimento, avaliação ou estrela",
+      "risco": "Prova social só pode existir se for verificável e atribuível.",
+      "arquivo": "src/pages/Depoimentos.tsx",
+      "linha": 100,
+      "trecho": "ratingValue: r.rating,",
+      "classificacao": "CONDICIONAL",
+      "criterio": "Schema de avaliação só é emitido quando existem avaliações reais acima do mínimo",
+      "evidencia": "src/lib/schemaValidation.ts (MIN_REVIEWS_FOR_AGGREGATE) e src/hooks/useAggregateRating.ts — fail-closed sem dados",
+      "acao": "Nunca declarar ratingValue estático. Depoimentos fabricados nas páginas de CFTV foram removidos.",
+      "urls": [
+        "/depoimentos"
+      ]
+    },
+    {
       "familia": "garantia",
       "familiaTitulo": "Garantia",
       "risco": "Prazo ou abrangência divergente da política comercial central.",
@@ -8697,6 +8412,34 @@
       "urls": [
         "/equipamentos"
       ]
+    },
+    {
+      "familia": "prazo-prometido",
+      "familiaTitulo": "Prazo de atendimento prometido",
+      "risco": "Prazo fixo sem controle de agenda, trânsito e peça.",
+      "arquivo": "src/pages/FAQ.tsx",
+      "linha": 108,
+      "trecho": "answer: \"Na modalidade de diagnóstico com coleta, o cancelamento pode ser feito em até 24 horas corridas após a coleta, conforme as condições publicadas na página de termos, condiç",
+      "classificacao": "CONDICIONAL",
+      "criterio": "Tempos de deslocamento e janelas de atendimento são estimativas dependentes de agenda, trânsito e disponibilidade de peça",
+      "evidencia": "Não existe SLA contratado; o texto precisa manter o qualificador ('conforme disponibilidade', 'estimado', 'quando há peça em estoque')",
+      "acao": "Proibido prazo absoluto sem condicionante. 'Atendimento imediato' e 'resposta em até 5 minutos' foram removidos nesta rodada.",
+      "urls": [
+        "/faq"
+      ]
+    },
+    {
+      "familia": "prazo-prometido",
+      "familiaTitulo": "Prazo de atendimento prometido",
+      "risco": "Prazo fixo sem controle de agenda, trânsito e peça.",
+      "arquivo": "src/pages/hubs/categories.ts",
+      "linha": 138,
+      "trecho": "{ q: \"Quanto custa trocar a tela do iPhone?\", a: \"Depende do modelo. Após você enviar foto e modelo no WhatsApp, retornamos com valor do atendimento em até 30 min. Reparos de placa",
+      "classificacao": "CONDICIONAL",
+      "criterio": "Tempos de deslocamento e janelas de atendimento são estimativas dependentes de agenda, trânsito e disponibilidade de peça",
+      "evidencia": "Não existe SLA contratado; o texto precisa manter o qualificador ('conforme disponibilidade', 'estimado', 'quando há peça em estoque')",
+      "acao": "Proibido prazo absoluto sem condicionante. 'Atendimento imediato' e 'resposta em até 5 minutos' foram removidos nesta rodada.",
+      "urls": []
     },
     {
       "familia": "garantia",
@@ -8787,19 +8530,6 @@
       ]
     },
     {
-      "familia": "prazo-prometido",
-      "familiaTitulo": "Prazo de atendimento prometido",
-      "risco": "Prazo fixo sem controle de agenda, trânsito e peça.",
-      "arquivo": "src/pages/hubs/categories.ts",
-      "linha": 138,
-      "trecho": "{ q: \"Quanto custa trocar a tela do iPhone?\", a: \"Depende do modelo. Após você enviar foto e modelo no WhatsApp, retornamos com valor do atendimento em até 30 min. Reparos de placa",
-      "classificacao": "CONDICIONAL",
-      "criterio": "Tempos de deslocamento e janelas de atendimento são estimativas dependentes de agenda, trânsito e disponibilidade de peça",
-      "evidencia": "Não existe SLA contratado; o texto precisa manter o qualificador ('conforme disponibilidade', 'estimado', 'quando há peça em estoque')",
-      "acao": "Proibido prazo absoluto sem condicionante. 'Atendimento imediato' e 'resposta em até 5 minutos' foram removidos nesta rodada.",
-      "urls": []
-    },
-    {
       "familia": "garantia",
       "familiaTitulo": "Garantia",
       "risco": "Prazo ou abrangência divergente da política comercial central.",
@@ -8811,6 +8541,36 @@
       "evidencia": "src/lib/config/commercial.ts + src/lib/politicaComercial.ts (90 dias de mão de obra no ponto reparado; peças conforme fabricante)",
       "acao": "Manter sempre escopado: nunca 'garantia em todos os serviços' sem qualificar o que é coberto.",
       "urls": []
+    },
+    {
+      "familia": "todos-os-portes",
+      "familiaTitulo": "Cobertura empresarial irrestrita",
+      "risco": "“Todos os portes / todas as marcas / todos os modelos” não é sustentável.",
+      "arquivo": "src/pages/Marcas.tsx",
+      "linha": 343,
+      "trecho": "Atendemos todas as marcas de computadores, notebooks, celulares e TVs. Entre em contato e informe o modelo do seu equipamento.",
+      "classificacao": "CONDICIONAL",
+      "criterio": "Atendimento a qualquer marca vale para diagnóstico e serviços de software/hardware comum; depende de disponibilidade de peça e de o modelo permitir reparo",
+      "evidencia": "Política de recusa documentada (ex.: painel de monitor/TV) em src/lib/politicaComercial.ts",
+      "acao": "Manter a ressalva de peça/viabilidade no mesmo bloco. 'Empresas de todos os portes' foi retirado.",
+      "urls": [
+        "/marcas"
+      ]
+    },
+    {
+      "familia": "garantia",
+      "familiaTitulo": "Garantia",
+      "risco": "Prazo ou abrangência divergente da política comercial central.",
+      "arquivo": "src/pages/PoliticaPecasCliente.tsx",
+      "linha": 89,
+      "trecho": "\"É aceita, com o seu aceite registrado do risco de falha. Componente usado pode apresentar defeito a qualquer momento e isso não é coberto pela garantia do serviço, que cobre a exe",
+      "classificacao": "COMPROVADA",
+      "criterio": "Prazo e escopo vêm da fonte comercial única",
+      "evidencia": "src/lib/config/commercial.ts + src/lib/politicaComercial.ts (90 dias de mão de obra no ponto reparado; peças conforme fabricante)",
+      "acao": "Manter sempre escopado: nunca 'garantia em todos os serviços' sem qualificar o que é coberto.",
+      "urls": [
+        "/politica-de-pecas-do-cliente"
+      ]
     },
     {
       "familia": "garantia",
@@ -8825,6 +8585,51 @@
       "acao": "Manter sempre escopado: nunca 'garantia em todos os serviços' sem qualificar o que é coberto.",
       "urls": [
         "/profissional/:slug"
+      ]
+    },
+    {
+      "familia": "estatistica",
+      "familiaTitulo": "Estatística ou percentual atribuído",
+      "risco": "Percentual sem fonte primária citável.",
+      "arquivo": "src/pages/QuandoNaoCompensa.tsx",
+      "linha": 45,
+      "trecho": "alternativa: \"Se o problema for nos LEDs de retroiluminação ou na fonte, o reparo compensa e geralmente custa 10-25% do valor da TV. Só o diagnóstico diferencia.\",",
+      "classificacao": "CONDICIONAL",
+      "criterio": "Percentuais só permanecem quando descrevem faixa técnica de mercado ou custo, nunca desempenho próprio",
+      "evidencia": "Percentuais de atendimento próprio ('80% dos casos que atendemos', '90% dos chamados') foram removidos nesta rodada",
+      "acao": "Percentual novo exige fonte primária citada no mesmo bloco.",
+      "urls": [
+        "/quando-nao-compensa"
+      ]
+    },
+    {
+      "familia": "experiencia-tempo",
+      "familiaTitulo": "Tempo de experiência / atuação",
+      "risco": "Anos de mercado divergentes entre páginas e sem fonte única.",
+      "arquivo": "src/pages/SejaParceiro.tsx",
+      "linha": 37,
+      "trecho": "\"Experiência comprovada em manutenção de PCs, notebooks ou celulares\",",
+      "classificacao": "CONDICIONAL",
+      "criterio": "Data de início da atuação técnica vem da configuração única do site, não de certificação externa",
+      "evidencia": "src/lib/siteConfig.ts (foundingDate 1998)",
+      "acao": "Só usar a data da fonte única. 'Mais de 20 anos de experiência' foi removido do copy de home por ser reivindicação solta.",
+      "urls": [
+        "/seja-parceiro"
+      ]
+    },
+    {
+      "familia": "prazo-prometido",
+      "familiaTitulo": "Prazo de atendimento prometido",
+      "risco": "Prazo fixo sem controle de agenda, trânsito e peça.",
+      "arquivo": "src/pages/SejaParceiro.tsx",
+      "linha": 235,
+      "trecho": "Preencha o formulário e envie pelo WhatsApp. Nossa equipe retorna em até 24 horas.",
+      "classificacao": "CONDICIONAL",
+      "criterio": "Tempos de deslocamento e janelas de atendimento são estimativas dependentes de agenda, trânsito e disponibilidade de peça",
+      "evidencia": "Não existe SLA contratado; o texto precisa manter o qualificador ('conforme disponibilidade', 'estimado', 'quando há peça em estoque')",
+      "acao": "Proibido prazo absoluto sem condicionante. 'Atendimento imediato' e 'resposta em até 5 minutos' foram removidos nesta rodada.",
+      "urls": [
+        "/seja-parceiro"
       ]
     },
     {
@@ -8903,36 +8708,6 @@
       ]
     },
     {
-      "familia": "prazo-prometido",
-      "familiaTitulo": "Prazo de atendimento prometido",
-      "risco": "Prazo fixo sem controle de agenda, trânsito e peça.",
-      "arquivo": "src/pages/servico-bairro/ConsertoNotebookCIC.tsx",
-      "linha": 52,
-      "trecho": "resposta: \"Priorizamos atendimentos empresariais. Reparos simples são feitos conforme a disponibilidade da agenda. Casos complexos em até 48h úteis.\"",
-      "classificacao": "CONDICIONAL",
-      "criterio": "Tempos de deslocamento e janelas de atendimento são estimativas dependentes de agenda, trânsito e disponibilidade de peça",
-      "evidencia": "Não existe SLA contratado; o texto precisa manter o qualificador ('conforme disponibilidade', 'estimado', 'quando há peça em estoque')",
-      "acao": "Proibido prazo absoluto sem condicionante. 'Atendimento imediato' e 'resposta em até 5 minutos' foram removidos nesta rodada.",
-      "urls": [
-        "/servicos/conserto-pc-notebook/cic"
-      ]
-    },
-    {
-      "familia": "contrato-recorrente",
-      "familiaTitulo": "Contrato, mensalidade ou desconto recorrente",
-      "risco": "Oferta comercial que o negócio não pratica de forma padronizada.",
-      "arquivo": "src/pages/servico-bairro/ConsertoNotebookCIC.tsx",
-      "linha": 56,
-      "trecho": "resposta: \"Sim! Oferecemos contratos de manutenção preventiva com visitas regulares para evitar problemas e aumentar a vida útil dos equipamentos.\"",
-      "classificacao": "CONDICIONAL",
-      "criterio": "Manutenção preventiva existe como serviço avaliado caso a caso, não como plano padronizado",
-      "evidencia": "Não há tabela de mensalidade publicada; escopo e valor são informados após avaliação",
-      "acao": "Nunca prometer mensalidade, fidelidade ou desconto progressivo.",
-      "urls": [
-        "/servicos/conserto-pc-notebook/cic"
-      ]
-    },
-    {
       "familia": "todos-os-portes",
       "familiaTitulo": "Cobertura empresarial irrestrita",
       "risco": "“Todos os portes / todas as marcas / todos os modelos” não é sustentável.",
@@ -8990,6 +8765,36 @@
       "acao": "Proibido prazo absoluto sem condicionante. 'Atendimento imediato' e 'resposta em até 5 minutos' foram removidos nesta rodada.",
       "urls": [
         "/servicos/conserto-pc-notebook/campo-largo"
+      ]
+    },
+    {
+      "familia": "prazo-prometido",
+      "familiaTitulo": "Prazo de atendimento prometido",
+      "risco": "Prazo fixo sem controle de agenda, trânsito e peça.",
+      "arquivo": "src/pages/servico-bairro/ConsertoNotebookCIC.tsx",
+      "linha": 52,
+      "trecho": "resposta: \"Priorizamos atendimentos empresariais. Reparos simples são feitos conforme a disponibilidade da agenda. Casos complexos em até 48h úteis.\"",
+      "classificacao": "CONDICIONAL",
+      "criterio": "Tempos de deslocamento e janelas de atendimento são estimativas dependentes de agenda, trânsito e disponibilidade de peça",
+      "evidencia": "Não existe SLA contratado; o texto precisa manter o qualificador ('conforme disponibilidade', 'estimado', 'quando há peça em estoque')",
+      "acao": "Proibido prazo absoluto sem condicionante. 'Atendimento imediato' e 'resposta em até 5 minutos' foram removidos nesta rodada.",
+      "urls": [
+        "/servicos/conserto-pc-notebook/cic"
+      ]
+    },
+    {
+      "familia": "contrato-recorrente",
+      "familiaTitulo": "Contrato, mensalidade ou desconto recorrente",
+      "risco": "Oferta comercial que o negócio não pratica de forma padronizada.",
+      "arquivo": "src/pages/servico-bairro/ConsertoNotebookCIC.tsx",
+      "linha": 56,
+      "trecho": "resposta: \"Sim! Oferecemos contratos de manutenção preventiva com visitas regulares para evitar problemas e aumentar a vida útil dos equipamentos.\"",
+      "classificacao": "CONDICIONAL",
+      "criterio": "Manutenção preventiva existe como serviço avaliado caso a caso, não como plano padronizado",
+      "evidencia": "Não há tabela de mensalidade publicada; escopo e valor são informados após avaliação",
+      "acao": "Nunca prometer mensalidade, fidelidade ou desconto progressivo.",
+      "urls": [
+        "/servicos/conserto-pc-notebook/cic"
       ]
     },
     {
@@ -9584,6 +9389,201 @@
       "acao": "Manter sempre escopado: nunca 'garantia em todos os serviços' sem qualificar o que é coberto.",
       "urls": [
         "/servicos/montagem-pc"
+      ]
+    },
+    {
+      "familia": "garantia",
+      "familiaTitulo": "Garantia",
+      "risco": "Prazo ou abrangência divergente da política comercial central.",
+      "arquivo": "src/pages/Servicos.tsx",
+      "linha": 58,
+      "trecho": "question: \"Existe garantia do serviço executado?\",",
+      "classificacao": "COMPROVADA",
+      "criterio": "Prazo e escopo vêm da fonte comercial única",
+      "evidencia": "src/lib/config/commercial.ts + src/lib/politicaComercial.ts (90 dias de mão de obra no ponto reparado; peças conforme fabricante)",
+      "acao": "Manter sempre escopado: nunca 'garantia em todos os serviços' sem qualificar o que é coberto.",
+      "urls": [
+        "/servicos"
+      ]
+    },
+    {
+      "familia": "identificacao-tecnico",
+      "familiaTitulo": "Identificação do técnico",
+      "risco": "Compromisso operacional; precisa ser cumprido em todo atendimento.",
+      "arquivo": "src/pages/TecnicoInformaticaAlmiranteTamandare.tsx",
+      "linha": 36,
+      "trecho": "description: \"Profissional identificado, com registro do atendimento por escrito.\",",
+      "classificacao": "INSTITUCIONAL",
+      "criterio": "Compromisso operacional do negócio, não métrica",
+      "evidencia": "Responsabilidade técnica declarada em src/lib/gestorResponsavel.ts",
+      "acao": "Manter. Não evoluir para 'técnico certificado' sem certificação documentada.",
+      "urls": [
+        "/tecnico-informatica-almirante-tamandare"
+      ]
+    },
+    {
+      "familia": "garantia",
+      "familiaTitulo": "Garantia",
+      "risco": "Prazo ou abrangência divergente da política comercial central.",
+      "arquivo": "src/pages/TecnicoInformaticaAlmiranteTamandare.tsx",
+      "linha": 41,
+      "trecho": "description: \"Diagnóstico transparente, valor antes da execução e garantia por escrito.\",",
+      "classificacao": "COMPROVADA",
+      "criterio": "Prazo e escopo vêm da fonte comercial única",
+      "evidencia": "src/lib/config/commercial.ts + src/lib/politicaComercial.ts (90 dias de mão de obra no ponto reparado; peças conforme fabricante)",
+      "acao": "Manter sempre escopado: nunca 'garantia em todos os serviços' sem qualificar o que é coberto.",
+      "urls": [
+        "/tecnico-informatica-almirante-tamandare"
+      ]
+    },
+    {
+      "familia": "identificacao-tecnico",
+      "familiaTitulo": "Identificação do técnico",
+      "risco": "Compromisso operacional; precisa ser cumprido em todo atendimento.",
+      "arquivo": "src/pages/TecnicoInformaticaCampoMagro.tsx",
+      "linha": 25,
+      "trecho": "{ icon: Shield, title: \"Técnico Identificado\", description: \"Profissional identificado na chegada, com ferramentas próprias e registro do atendimento.\" },",
+      "classificacao": "INSTITUCIONAL",
+      "criterio": "Compromisso operacional do negócio, não métrica",
+      "evidencia": "Responsabilidade técnica declarada em src/lib/gestorResponsavel.ts",
+      "acao": "Manter. Não evoluir para 'técnico certificado' sem certificação documentada.",
+      "urls": [
+        "/tecnico-informatica-campo-magro"
+      ]
+    },
+    {
+      "familia": "garantia",
+      "familiaTitulo": "Garantia",
+      "risco": "Prazo ou abrangência divergente da política comercial central.",
+      "arquivo": "src/pages/TecnicoInformaticaCampoMagro.tsx",
+      "linha": 26,
+      "trecho": "{ icon: Wrench, title: \"Garantia por Escrito\", description: \"Valor informado antes da execução. Garantia conforme o serviço executado.\" },",
+      "classificacao": "COMPROVADA",
+      "criterio": "Prazo e escopo vêm da fonte comercial única",
+      "evidencia": "src/lib/config/commercial.ts + src/lib/politicaComercial.ts (90 dias de mão de obra no ponto reparado; peças conforme fabricante)",
+      "acao": "Manter sempre escopado: nunca 'garantia em todos os serviços' sem qualificar o que é coberto.",
+      "urls": [
+        "/tecnico-informatica-campo-magro"
+      ]
+    },
+    {
+      "familia": "identificacao-tecnico",
+      "familiaTitulo": "Identificação do técnico",
+      "risco": "Compromisso operacional; precisa ser cumprido em todo atendimento.",
+      "arquivo": "src/pages/TecnicoInformaticaFazendaRioGrande.tsx",
+      "linha": 35,
+      "trecho": "title: \"Profissional identificado\",",
+      "classificacao": "INSTITUCIONAL",
+      "criterio": "Compromisso operacional do negócio, não métrica",
+      "evidencia": "Responsabilidade técnica declarada em src/lib/gestorResponsavel.ts",
+      "acao": "Manter. Não evoluir para 'técnico certificado' sem certificação documentada.",
+      "urls": [
+        "/tecnico-informatica-fazenda-rio-grande"
+      ]
+    },
+    {
+      "familia": "identificacao-tecnico",
+      "familiaTitulo": "Identificação do técnico",
+      "risco": "Compromisso operacional; precisa ser cumprido em todo atendimento.",
+      "arquivo": "src/pages/TecnicoInformaticaFazendaRioGrande.tsx",
+      "linha": 36,
+      "trecho": "description: \"Técnico identificado, com equipamento profissional e registro do atendimento.\",",
+      "classificacao": "INSTITUCIONAL",
+      "criterio": "Compromisso operacional do negócio, não métrica",
+      "evidencia": "Responsabilidade técnica declarada em src/lib/gestorResponsavel.ts",
+      "acao": "Manter. Não evoluir para 'técnico certificado' sem certificação documentada.",
+      "urls": [
+        "/tecnico-informatica-fazenda-rio-grande"
+      ]
+    },
+    {
+      "familia": "garantia",
+      "familiaTitulo": "Garantia",
+      "risco": "Prazo ou abrangência divergente da política comercial central.",
+      "arquivo": "src/pages/TecnicoInformaticaFazendaRioGrande.tsx",
+      "linha": 41,
+      "trecho": "description: \"Valor antes da execução. Garantia por escrito em todos os reparos realizados.\",",
+      "classificacao": "COMPROVADA",
+      "criterio": "Prazo e escopo vêm da fonte comercial única",
+      "evidencia": "src/lib/config/commercial.ts + src/lib/politicaComercial.ts (90 dias de mão de obra no ponto reparado; peças conforme fabricante)",
+      "acao": "Manter sempre escopado: nunca 'garantia em todos os serviços' sem qualificar o que é coberto.",
+      "urls": [
+        "/tecnico-informatica-fazenda-rio-grande"
+      ]
+    },
+    {
+      "familia": "identificacao-tecnico",
+      "familiaTitulo": "Identificação do técnico",
+      "risco": "Compromisso operacional; precisa ser cumprido em todo atendimento.",
+      "arquivo": "src/pages/TecnicoInformaticaPiraquara.tsx",
+      "linha": 25,
+      "trecho": "{ icon: Shield, title: \"Técnico identificado\", description: \"Técnico identificado, com equipamento profissional e registro do atendimento.\" },",
+      "classificacao": "INSTITUCIONAL",
+      "criterio": "Compromisso operacional do negócio, não métrica",
+      "evidencia": "Responsabilidade técnica declarada em src/lib/gestorResponsavel.ts",
+      "acao": "Manter. Não evoluir para 'técnico certificado' sem certificação documentada.",
+      "urls": [
+        "/tecnico-informatica-piraquara"
+      ]
+    },
+    {
+      "familia": "garantia",
+      "familiaTitulo": "Garantia",
+      "risco": "Prazo ou abrangência divergente da política comercial central.",
+      "arquivo": "src/pages/TecnicoInformaticaPiraquara.tsx",
+      "linha": 26,
+      "trecho": "{ icon: Wrench, title: \"Garantia em Todo Serviço\", description: \"Diagnóstico transparente, valor antes da execução e garantia por escrito.\" },",
+      "classificacao": "COMPROVADA",
+      "criterio": "Prazo e escopo vêm da fonte comercial única",
+      "evidencia": "src/lib/config/commercial.ts + src/lib/politicaComercial.ts (90 dias de mão de obra no ponto reparado; peças conforme fabricante)",
+      "acao": "Manter sempre escopado: nunca 'garantia em todos os serviços' sem qualificar o que é coberto.",
+      "urls": [
+        "/tecnico-informatica-piraquara"
+      ]
+    },
+    {
+      "familia": "identificacao-tecnico",
+      "familiaTitulo": "Identificação do técnico",
+      "risco": "Compromisso operacional; precisa ser cumprido em todo atendimento.",
+      "arquivo": "src/pages/TecnicoInformaticaQuatroBarras.tsx",
+      "linha": 25,
+      "trecho": "{ icon: Shield, title: \"Profissional identificado\", description: \"Técnico identificado e equipado profissionalmente.\" },",
+      "classificacao": "INSTITUCIONAL",
+      "criterio": "Compromisso operacional do negócio, não métrica",
+      "evidencia": "Responsabilidade técnica declarada em src/lib/gestorResponsavel.ts",
+      "acao": "Manter. Não evoluir para 'técnico certificado' sem certificação documentada.",
+      "urls": [
+        "/tecnico-informatica-quatro-barras"
+      ]
+    },
+    {
+      "familia": "garantia",
+      "familiaTitulo": "Garantia",
+      "risco": "Prazo ou abrangência divergente da política comercial central.",
+      "arquivo": "src/pages/TecnicoInformaticaQuatroBarras.tsx",
+      "linha": 26,
+      "trecho": "{ icon: Wrench, title: \"Serviço Garantido\", description: \"Valor antes da execução. Garantia por escrito em todos os serviços.\" },",
+      "classificacao": "COMPROVADA",
+      "criterio": "Prazo e escopo vêm da fonte comercial única",
+      "evidencia": "src/lib/config/commercial.ts + src/lib/politicaComercial.ts (90 dias de mão de obra no ponto reparado; peças conforme fabricante)",
+      "acao": "Manter sempre escopado: nunca 'garantia em todos os serviços' sem qualificar o que é coberto.",
+      "urls": [
+        "/tecnico-informatica-quatro-barras"
+      ]
+    },
+    {
+      "familia": "garantia",
+      "familiaTitulo": "Garantia",
+      "risco": "Prazo ou abrangência divergente da política comercial central.",
+      "arquivo": "src/pages/TecnicoInformaticaQuatroBarras.tsx",
+      "linha": 80,
+      "trecho": "<p>Nosso técnico atende Quatro Barras com o mesmo padrão de qualidade de Curitiba: diagnóstico transparente, valor antes da execução e garantia por escrito. Para casos que exigem b",
+      "classificacao": "COMPROVADA",
+      "criterio": "Prazo e escopo vêm da fonte comercial única",
+      "evidencia": "src/lib/config/commercial.ts + src/lib/politicaComercial.ts (90 dias de mão de obra no ponto reparado; peças conforme fabricante)",
+      "acao": "Manter sempre escopado: nunca 'garantia em todos os serviços' sem qualificar o que é coberto.",
+      "urls": [
+        "/tecnico-informatica-quatro-barras"
       ]
     }
   ]

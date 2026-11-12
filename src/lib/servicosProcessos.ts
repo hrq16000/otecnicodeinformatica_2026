@@ -9,9 +9,9 @@ export const PROCESSOS: Record<string, ProcessoEtapa[]> = {
   formatacao: [
     { step: "1", title: "Triagem do sintoma", desc: "Você descreve o que acontece com a máquina e checamos se formatar é mesmo o caminho." },
     { step: "2", title: "Checagem do disco", desc: "Verificamos a saúde do armazenamento antes de qualquer cópia — disco com falha muda o plano." },
-    { step: "3", title: "Backup dos dados", desc: "Documentos, fotos, área de trabalho e favoritos copiados para mídia separada." },
-    { step: "4", title: "Aprovação do valor", desc: "Escopo e valor apresentados antes de apagar qualquer coisa." },
-    { step: "5", title: "Instalação limpa", desc: "Windows original, drivers do modelo, programas essenciais e inicialização enxuta." },
+    { step: "3", title: "Aprovação do escopo", desc: "Backup, sistema compatível, programas, valor e prazo apresentados para aprovação antes da execução." },
+    { step: "4", title: "Cópia e conferência", desc: "Arquivos combinados copiados para destino separado e conferidos antes de apagar o sistema, quando há leitura viável." },
+    { step: "5", title: "Reinstalação acordada", desc: "Sistema e edição definidos conforme compatibilidade e licença, com drivers e programas previstos no orçamento." },
     { step: "6", title: "Restauração e conferência", desc: "Arquivos de volta nas pastas originais e teste feito junto com você." },
   ],
   "manutencao-de-notebook": [
