@@ -20,11 +20,15 @@ import { test, expect, type APIRequestContext } from "@playwright/test";
 const SUPABASE_URL = process.env.E2E_SUPABASE_URL || process.env.VITE_SUPABASE_URL;
 const ANON_KEY = process.env.E2E_SUPABASE_ANON_KEY || process.env.VITE_SUPABASE_PUBLISHABLE_KEY;
 
-if (!SUPABASE_URL || !ANON_KEY) {
-  throw new Error("E2E de segurança requer URL e chave pública do mesmo projeto Supabase, via variáveis E2E_ ou VITE_.");
+// A validação roda na execução, não no carregamento do arquivo: test:list
+// deve conseguir descobrir as specs sem precisar de variáveis de ambiente.
+function requirePublicConfig() {
+  if (!SUPABASE_URL || !ANON_KEY) {
+    throw new Error("E2E de segurança requer URL e chave pública reais do mesmo projeto Supabase via E2E_ ou VITE_.");
+  }
 }
 
-const REST = `${SUPABASE_URL.replace(/\/$/, "")}/rest/v1`;
+const REST = `${(SUPABASE_URL || "").replace(/\\/$/, "")}/rest/v1`;
 const BLOCKED = [401, 403];
 
 // Credenciais opcionais de um usuário de teste NÃO-ADMIN (só via env).
@@ -32,6 +36,7 @@ const NONADMIN_EMAIL = process.env.E2E_NONADMIN_EMAIL;
 const NONADMIN_PASSWORD = process.env.E2E_NONADMIN_PASSWORD;
 
 async function anonGet(request: APIRequestContext, path: string) {
+  requirePublicConfig();
   return request.get(`${REST}/${path}`, { headers: { apikey: ANON_KEY } });
 }
 
@@ -60,6 +65,7 @@ test.describe("Segurança — exposição de dados (anon)", () => {
   });
 
   test("anon NÃO insere em og_validation_status (bloqueado)", async ({ request }) => {
+    requirePublicConfig();
     const res = await request.post(`${REST}/og_validation_status`, {
       headers: { apikey: ANON_KEY, "Content-Type": "application/json" },
       data: {},
@@ -77,6 +83,7 @@ test.describe("Segurança — usuário autenticado NÃO-admin", () => {
   let accessToken = "";
 
   test.beforeAll(async ({ request }) => {
+    requirePublicConfig();
     const res = await request.post(
       `${SUPABASE_URL.replace(/\/$/, "")}/auth/v1/token?grant_type=password`,
       {
