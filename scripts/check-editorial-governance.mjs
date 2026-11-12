@@ -329,8 +329,8 @@ async function checkDates(posts) {
 }
 
 async function main() {
-  const { posts, duplicates } = await getBlogPosts(".");
-  note(`inventário: ${posts.length} artigos únicos (${posts.filter(p => p.origin === "manual").length} manuais, ${posts.filter(p => p.origin === "programmatic").length} programáticos)`);
+  const { posts, duplicates, overrides } = await getBlogPosts(".");
+  note(`inventário: ${posts.length} artigos únicos, ${overrides.length} revisões suplementares aprovadas`);
   if (duplicates.length) note(`slugs duplicados detectados: ${duplicates.length} (${duplicates.join(", ")})`);
 
   await checkRegistry();
