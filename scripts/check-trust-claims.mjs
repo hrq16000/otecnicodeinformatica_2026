@@ -14,7 +14,7 @@
  */
 import { readFileSync, readdirSync, statSync, existsSync } from "node:fs";
 import { WHATSAPP_NUMBER } from "./lib/site-env.mjs";
-import { join, relative } from "node:path";
+import { join, relative, sep } from "node:path";
 
 const ROOT = process.cwd();
 const SRC = join(ROOT, "src");
@@ -67,7 +67,7 @@ function walk(dir, out = []) {
 
 const findings = [];
 for (const file of walk(SRC)) {
-  const rel = relative(ROOT, file);
+  const rel = relative(ROOT, file).split(sep).join("/");
   const lines = readFileSync(file, "utf8").split("\n");
   lines.forEach((line, i) => {
     if (/^\s*(\/\/|\*|\/\*)/.test(line)) return; // comentários de governança

@@ -8,7 +8,7 @@
  * Uso: node scripts/check-route-tree.mjs
  */
 import { existsSync, readFileSync, readdirSync, statSync } from "node:fs";
-import { join } from "node:path";
+import { join, relative, sep } from "node:path";
 
 const GEN = "src/routeTree.gen.ts";
 
@@ -30,9 +30,11 @@ const walk = (dir) =>
     return statSync(full).isDirectory() ? walk(full) : [full];
   });
 
-const faltando = walk("src/routes")
+const ROUTES = "src/routes";
+const routeFiles = walk(ROUTES);
+const faltando = routeFiles
   .filter((f) => /\.tsx?$/.test(f) && !f.endsWith(".d.ts"))
-  .map((f) => f.replace(/^src\/routes\//, "").replace(/\.tsx?$/, ""))
+  .map((f) => relative(ROUTES, f).split(sep).join("/").replace(/\.tsx?$/, ""))
   .filter((id) => !gen.includes(`./routes/${id}`));
 
 if (faltando.length > 0) {
@@ -42,4 +44,4 @@ if (faltando.length > 0) {
   process.exit(1);
 }
 
-console.log(`[route-tree] OK — árvore gerada cobre ${walk("src/routes").length} arquivo(s) de rota.`);
+console.log(`[route-tree] OK — árvore gerada cobre ${routeFiles.length} arquivo(s) de rota.`);
