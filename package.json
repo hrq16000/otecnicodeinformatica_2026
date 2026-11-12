@@ -273,7 +273,7 @@
     "report:problemas-attribution": "node scripts/report-problemas-attribution.mjs dist",
     "generate:interlinks": "node scripts/generate-interlinks.mjs",
     "check:interlinks": "node scripts/generate-interlinks.mjs --check",
-    "check:observability-env": "node scripts/check-observability-env.mjs",
+    "check:observability-env": "node scripts/check-observability-env.mjs --strict",
     "check:real-images": "node scripts/check-real-images.mjs",
     "check:ai-images": "node scripts/check-ai-images.mjs",
     "report:publish-status": "node scripts/report-publish-status.mjs",
