@@ -38,7 +38,7 @@ jobs:
         run: |
           test "$(git branch --show-current)" = 'fix/security-dompurify-3417-20261031'
           test "$(git rev-parse HEAD)" = "$GITHUB_SHA"
-          node -e 'const p=require("./package.json");if(p.dependencies["@tanstack/react-start"]!=="1.169.5" || p.dependencies["@tanstack/react-router"]!=="1.170.18" || p.devDependencies["@tanstack/router-plugin"]!=="1.168.23")process.exit(1)'
+          node -e 'const p=require("./package.json");if(p.dependencies["@tanstack/react-start"]!=="1.169.5" || p.dependencies["@tanstack/react-router"]!=="1.170.18" || p.dependencies["@tanstack/router-plugin"]!=="1.168.23")process.exit(1)'
       - name: Guard removed TanStack validation API
         shell: bash
         run: |
@@ -50,8 +50,7 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          npm install @tanstack/react-start@1.169.5 @tanstack/react-router@1.170.46 --save-exact --package-lock-only --ignore-scripts --no-audit --no-fund
-          npm install -D @tanstack/router-plugin@1.169.0 --save-exact --package-lock-only --ignore-scripts --no-audit --no-fund
+          npm install @tanstack/react-start@1.169.5 @tanstack/react-router@1.170.46 @tanstack/router-plugin@1.169.0 --save-exact --package-lock-only --ignore-scripts --no-audit --no-fund
           bun install --lockfile-only --ignore-scripts
           node <<'NODE'
           const fs = require('node:fs');
@@ -59,7 +58,7 @@ jobs:
           const npmlock = JSON.parse(fs.readFileSync('package-lock.json','utf8'));
           const bunlock = fs.readFileSync('bun.lock','utf8');
           const version = '1.169.5';
-          if (pkg.dependencies['@tanstack/react-start'] !== version || pkg.dependencies['@tanstack/react-router'] !== '1.170.46' || pkg.devDependencies['@tanstack/router-plugin'] !== '1.169.0' || npmlock.packages['node_modules/@tanstack/react-start']?.version !== version || npmlock.packages['node_modules/@tanstack/react-router']?.version !== '1.170.46' || npmlock.packages['node_modules/@tanstack/router-plugin']?.version !== '1.169.0' || !bunlock.includes('"@tanstack/react-start": "1.169.5"') || !bunlock.includes('"@tanstack/react-router": "1.170.46"') || !bunlock.includes('"@tanstack/router-plugin": "1.169.0"')) throw Error('TanStack family mismatch across three files');
+          if (pkg.dependencies['@tanstack/react-start'] !== version || pkg.dependencies['@tanstack/react-router'] !== '1.170.46' || pkg.dependencies['@tanstack/router-plugin'] !== '1.169.0' || npmlock.packages['node_modules/@tanstack/react-start']?.version !== version || npmlock.packages['node_modules/@tanstack/react-router']?.version !== '1.170.46' || npmlock.packages['node_modules/@tanstack/router-plugin']?.version !== '1.169.0' || !bunlock.includes('"@tanstack/react-start": "1.169.5"') || !bunlock.includes('"@tanstack/react-router": "1.170.46"') || !bunlock.includes('"@tanstack/router-plugin": "1.169.0"')) throw Error('TanStack family mismatch across three files');
           const core = npmlock.packages['node_modules/@tanstack/start-server-core']?.version;
           if (!core || core.localeCompare('1.169.39', undefined, {numeric:true}) < 0) throw Error('Vulnerable start-server-core resolution: '+core);
           console.log('Package manifest/npm/Bun locks consistent; Start '+version+'; server core '+core);
