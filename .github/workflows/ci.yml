@@ -68,12 +68,14 @@ jobs:
             echo "::warning::Advisory lint reported findings (exit $result)."
           fi
           exit 0
+      # A governança editorial dentro de verify exige dist/ e sitemap gerados;
+      # construir primeiro mantém todos os 35 gates bloqueantes, sem skip.
+      - name: Build
+        run: npm run build
       # Comando oficial: gates essenciais de código e conteúdo.
       # Os testes já rodam no job `unit`, por isso ficam de fora aqui.
       - name: verify (gates essenciais — comando oficial)
         run: npm run verify -- --skip=test
-      - name: Build
-        run: npm run build
       # Comando oficial: gates essenciais de publicação (exigem dist/).
       # Os passos opcionais (GSC/rede) não bloqueiam o CI.
       - name: deploy:check (gates de publicação — comando oficial)
