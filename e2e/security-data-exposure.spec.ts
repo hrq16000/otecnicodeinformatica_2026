@@ -17,11 +17,16 @@ import { test, expect, type APIRequestContext } from "@playwright/test";
 
 // O CI injeta as variáveis públicas do projeto sob teste. Sem ambas,
 // falhar explicitamente: nunca executar testes de privacidade em outro backend.
-const SUPABASE_URL = process.env.E2E_SUPABASE_URL || process.env.VITE_SUPABASE_URL;
-const ANON_KEY = process.env.E2E_SUPABASE_ANON_KEY || process.env.VITE_SUPABASE_PUBLISHABLE_KEY;
-if (!SUPABASE_URL || !ANON_KEY) {
-  throw new Error("E2E de exposição de dados exige URL e chave pública do ambiente de teste");
-}
+const SUPABASE_URL = process.env.E2E_SUPABASE_URL || process.env.VITE_SUPABASE_URL || "";
+const ANON_KEY = process.env.E2E_SUPABASE_ANON_KEY || process.env.VITE_SUPABASE_PUBLISHABLE_KEY || "";
+
+// A listagem do inventário Playwright não recebe credenciais. Exigir as
+// variáveis no runtime preserva o gate sem quebrar `playwright test --list`.
+test.beforeAll(() => {
+  if (!SUPABASE_URL || !ANON_KEY) {
+    throw new Error("E2E de exposição de dados exige URL e chave pública do ambiente de teste");
+  }
+});
 
 const REST = `${SUPABASE_URL.replace(/\/$/, "")}/rest/v1`;
 const BLOCKED = [401, 403];
