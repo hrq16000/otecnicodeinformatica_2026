@@ -33,7 +33,7 @@ const EDITORIAL_POLICY = [
   "A autoria precisa ser identificada antes da publicação.",
   "As fontes são verificadas quando necessárias.",
   "As datas só são atualizadas após mudança material no conteúdo.",
-  "Toda imagem precisa ter origem conhecida (própria, licenciada ou gerada).",
+  "A publicação editorial exige imagens próprias ou licenciadas, com origem comprovada; imagens geradas por IA não são aprovadas.",
   "Correções podem ser solicitadas pela página de contato.",
   "Conteúdo patrocinado, quando houver, será claramente identificado.",
   "Exemplos didáticos nunca serão apresentados como casos reais.",
