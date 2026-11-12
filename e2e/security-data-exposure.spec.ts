@@ -28,7 +28,7 @@ function requirePublicConfig() {
   }
 }
 
-const REST = `${(SUPABASE_URL || "").replace(/\\/$/, "")}/rest/v1`;
+const REST = `${(SUPABASE_URL || "").replace(/\/$/, "")}/rest/v1`;
 const BLOCKED = [401, 403];
 
 // Credenciais opcionais de um usuário de teste NÃO-ADMIN (só via env).
