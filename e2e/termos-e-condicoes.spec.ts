@@ -1,6 +1,6 @@
 import { test, expect, type Page } from "@playwright/test";
-import { readFileSync } from "node:fs";
-import { join } from "node:path";
+import { SITE_URL, WHATSAPP_NUMBER } from "./site-env";
+import { commercialConfig } from "../src/lib/config/commercial";
 
 const ROUTE = "/termos-e-condicoes";
 
@@ -35,11 +35,15 @@ test.describe("/termos-e-condicoes — schema, canonical, single H1, sitemap con
     expect(localBusiness, "LocalBusiness required").toBeTruthy();
     expect(faq, "FAQPage required").toBeTruthy();
 
-    // LocalBusiness: Curitiba in areaServed, telephone matches WhatsApp, no postal address
+    // LocalBusiness: cidade atendida e contato configurado, sem endereço de rua inventado.
     const area = JSON.stringify((localBusiness as { areaServed?: unknown }).areaServed || "");
     expect(area.toLowerCase()).toContain("curitiba");
-    expect((localBusiness as { telephone?: string }).telephone).toMatch(/\+?55.*4197452053/);
-    expect(JSON.stringify(localBusiness)).not.toMatch(/PostalAddress|streetAddress/i);
+    expect(WHATSAPP_NUMBER).toBeTruthy();
+    expect((localBusiness as { telephone?: string }).telephone?.replace(/\D/g, "")).toBe(WHATSAPP_NUMBER.replace(/\D/g, ""));
+    expect((localBusiness as { address?: Record<string, unknown> }).address).toMatchObject({
+      "@type": "PostalAddress", addressLocality: "Curitiba", addressRegion: "PR", addressCountry: "BR",
+    });
+    expect(JSON.stringify(localBusiness)).not.toMatch(/streetAddress/i);
 
     // FAQPage: minimum 5 questions
     const mainEntity = (faq as { mainEntity?: Array<{ name?: string; acceptedAnswer?: { text?: string } }> }).mainEntity || [];
@@ -52,7 +56,7 @@ test.describe("/termos-e-condicoes — schema, canonical, single H1, sitemap con
     // BreadcrumbList: at least 2 items, last item matches canonical
     const items = (breadcrumb as { itemListElement?: Array<{ item?: string }> }).itemListElement || [];
     expect(items.length).toBeGreaterThanOrEqual(2);
-    expect(items[items.length - 1].item).toContain("/termos-e-condicoes");
+    expect(items[items.length - 1].item).toBe(`${SITE_URL}/precos-e-politicas`);
   });
 
   test("single H1 + correct canonical + SEO meta tags", async ({ page }) => {
@@ -63,13 +67,12 @@ test.describe("/termos-e-condicoes — schema, canonical, single H1, sitemap con
     await expect(h1).toHaveCount(1);
 
     const canonical = await page.locator('head link[rel="canonical"]').getAttribute("href");
-    expect(canonical).toContain("/termos-e-condicoes");
+    expect(canonical).toBe(`${SITE_URL}/precos-e-politicas`);
 
     await expect(page).toHaveTitle(/Termos.*Condi[çc]/i);
 
     const description = await page.locator('head meta[name="description"]').getAttribute("content");
-    expect(description || "").toMatch(/R\$\s?90/);
-    expect(description || "").toMatch(/R\$\s?99/);
+    expect(description).toContain(commercialConfig.minPriceLabel);
 
     const ogTitle = await page.locator('head meta[property="og:title"]').getAttribute("content");
     const twTitle = await page.locator('head meta[name="twitter:title"]').getAttribute("content");
@@ -77,10 +80,12 @@ test.describe("/termos-e-condicoes — schema, canonical, single H1, sitemap con
     expect(twTitle).toBeTruthy();
   });
 
-  test("sitemap.xml contains /termos-e-condicoes", async () => {
-    const sitemapPath = join(process.cwd(), "public", "sitemap.xml");
-    const xml = readFileSync(sitemapPath, "utf8");
-    expect(xml).toContain("/termos-e-condicoes");
+  test("sitemap contains the canonical terms page and excludes its alias", async ({ request }) => {
+    const response = await request.get("/sitemap-main.xml");
+    expect(response.ok()).toBeTruthy();
+    const urls = [...(await response.text()).matchAll(/<loc>(.*?)<\/loc>/g)].map((match) => match[1]);
+    expect(urls).toContain(`${SITE_URL}/precos-e-politicas`);
+    expect(urls).not.toContain(`${SITE_URL}/termos-e-condicoes`);
   });
 
   test("h1 does not overflow on mobile and desktop", async ({ page }) => {

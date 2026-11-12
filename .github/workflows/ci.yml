@@ -140,7 +140,7 @@ jobs:
           retention-days: 30
 
   e2e:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     timeout-minutes: 20
     needs: build
     steps:
@@ -154,7 +154,7 @@ jobs:
       - name: Install deps
         run: npm ci --no-audit --no-fund
       - name: Install Playwright browsers
-        run: npx playwright install --with-deps chromium
+        run: npx playwright install --with-deps chromium webkit
       - name: Build
         run: npm run build
       - name: Start preview
@@ -200,7 +200,7 @@ jobs:
     # OBSERVACIONAL: registra o baseline de cada engine sem bloquear o merge —
     # o gate bloqueante continua sendo o job `e2e`.
     name: e2e ${{ matrix.browser }} shard ${{ matrix.shard }}/${{ matrix.totalShards }} (observacional)
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     timeout-minutes: 25
     needs: build
     continue-on-error: true
@@ -223,7 +223,7 @@ jobs:
         run: npm ci --no-audit --no-fund
       - name: Install Playwright browser (${{ matrix.browser }})
         # Instalação oficial com dependências de sistema — sem LD_LIBRARY_PATH custom.
-        run: npx playwright install --with-deps ${{ matrix.browser }}
+        run: npx playwright install --with-deps ${{ matrix.browser }} webkit
       - name: Build (uma única vez por job)
         run: npm run build
       - name: Start preview
