@@ -15,15 +15,14 @@ import { test, expect, type APIRequestContext } from "@playwright/test";
  * Falha no CI em caso de regressão (surface privada torna-se acessível).
  */
 
-// URL + chave anon públicas (mesmo par já embarcado no frontend).
-const SUPABASE_URL =
-  process.env.E2E_SUPABASE_URL ||
-  process.env.VITE_SUPABASE_URL ||
-  "https://bwyskhzxvgyvyzshxkbf.supabase.co";
-const ANON_KEY =
-  process.env.E2E_SUPABASE_ANON_KEY ||
-  process.env.VITE_SUPABASE_PUBLISHABLE_KEY ||
-  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imhpc2VwYWF5dXd4anJudW1icWVxIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODM2MTU3NzcsImV4cCI6MjA5OTE5MTc3N30.d3ygLv0kgEFiT4hXlp6opB9mvOPLQSwSEKXuLIle164";
+// Par público do MESMO projeto, injetado pela configuração real do ambiente.
+// Falhar explicitamente se ausente, em vez de usar URL e JWT hardcoded divergentes.
+const SUPABASE_URL = process.env.E2E_SUPABASE_URL || process.env.VITE_SUPABASE_URL;
+const ANON_KEY = process.env.E2E_SUPABASE_ANON_KEY || process.env.VITE_SUPABASE_PUBLISHABLE_KEY;
+
+if (!SUPABASE_URL || !ANON_KEY) {
+  throw new Error("E2E de segurança requer URL e chave pública do mesmo projeto Supabase, via variáveis E2E_ ou VITE_.");
+}
 
 const REST = `${SUPABASE_URL.replace(/\/$/, "")}/rest/v1`;
 const BLOCKED = [401, 403];
