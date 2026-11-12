@@ -375,7 +375,9 @@ jobs:
 
   lighthouse:
     runs-on: ubuntu-latest
-    needs: build
+    # Executa seu próprio build; diagnóstico não depende do deploy:check,
+    # que permanece bloqueante na PR para segurança/publicação.
+    needs: unit
     if: github.event_name == 'pull_request'
     steps:
       - uses: actions/checkout@v4
@@ -417,6 +419,7 @@ jobs:
           path: |
             .lighthouseci/
             .lighthouseci-mobile/
+          include-hidden-files: true
           if-no-files-found: error
 
 
