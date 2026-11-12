@@ -740,6 +740,99 @@ export const CONTENT_INTENT_MAP: ContentNode[] = [
     justificativa:
       "O escopo é o arquivo individual que não abre, com trabalho sobre cópia e versões anteriores. Disco com defeito e rotina de backup continuam em URLs distintas.",
   },
+  {
+    url: "/blog/como-usar-rsync-backup-linux",
+    intent: "informational",
+    topic: "cópia e sincronização de arquivos com rsync dentro de uma estratégia de backup",
+    queries: [
+      "rsync backup linux",
+      "como usar rsync",
+      "rsync dry run delete",
+    ],
+    serviceParent: "/servicos/backup-para-empresas",
+    bridgesTo: [
+      "/blog/backup-como-proteger-seus-arquivos",
+      "/blog/como-testar-restauracao-de-backup",
+      "/decisoes/nuvem-ou-hd-externo",
+    ],
+    doNotDuplicate: [
+      "/blog/backup-como-proteger-seus-arquivos",
+      "/blog/como-testar-restauracao-de-backup",
+      "/blog/como-fazer-backup-na-nuvem",
+    ],
+    novaNestaRodada: false,
+    justificativa:
+      "Owner específico do uso do rsync: sintaxe, direção da cópia, barra final, dry-run, exclusões e --delete. Estratégia geral de backup, prova de restauração e backup em nuvem permanecem em URLs próprias.",
+  },
+  {
+    url: "/blog/como-configurar-ssh-seguro-linux",
+    intent: "informational",
+    topic: "configuração segura do servidor OpenSSH com autenticação por chave e prevenção de lockout",
+    queries: [
+      "configurar ssh seguro linux",
+      "ssh chave publica linux",
+      "desativar senha ssh sem perder acesso",
+    ],
+    serviceParent: "/servicos/suporte-tecnico-empresarial",
+    bridgesTo: [
+      "/blog/como-configurar-firewall-ufw-linux",
+      "/blog/comandos-linux-essenciais-iniciantes",
+      "/diagnostico-tecnico",
+    ],
+    doNotDuplicate: [
+      "/blog/como-configurar-firewall-ufw-linux",
+      "/blog/como-configurar-2fa-em-tudo",
+    ],
+    novaNestaRodada: false,
+    justificativa:
+      "Owner do acesso remoto OpenSSH: chaves, autenticação, usuários permitidos, validação do daemon e rollback. Firewall e MFA permanecem em owners separados.",
+  },
+  {
+    url: "/blog/como-gerenciar-pacotes-apt-dnf-linux",
+    intent: "informational",
+    topic: "gerenciamento seguro de pacotes Linux com APT e DNF/DNF5",
+    queries: [
+      "apt linux comandos",
+      "dnf5 comandos",
+      "instalar atualizar remover pacotes linux",
+    ],
+    serviceParent: "/servicos/suporte-tecnico-empresarial",
+    bridgesTo: [
+      "/blog/comandos-linux-essenciais-iniciantes",
+      "/blog/como-configurar-ssh-seguro-linux",
+      "/blog/como-instalar-ubuntu-do-zero",
+    ],
+    doNotDuplicate: [
+      "/blog/comandos-linux-essenciais-iniciantes",
+      "/blog/como-instalar-ubuntu-do-zero",
+    ],
+    novaNestaRodada: false,
+    justificativa:
+      "Owner de transações de pacotes e repositórios. Comandos básicos do shell e instalação do sistema operacional permanecem em URLs próprias.",
+  },
+  {
+    url: "/blog/comandos-linux-essenciais-iniciantes",
+    intent: "informational",
+    topic: "fundamentos do terminal Linux para iniciantes com uso seguro de arquivos, pipes, permissões e processos",
+    queries: [
+      "comandos linux iniciantes",
+      "comandos básicos linux",
+      "como usar terminal linux",
+    ],
+    serviceParent: "/guia-tecnico-informatica",
+    bridgesTo: [
+      "/blog/informatica-basica",
+      "/blog/como-gerenciar-pacotes-apt-dnf-linux",
+      "/blog/como-configurar-ssh-seguro-linux",
+    ],
+    doNotDuplicate: [
+      "/blog/como-gerenciar-pacotes-apt-dnf-linux",
+      "/blog/como-configurar-ssh-seguro-linux",
+    ],
+    novaNestaRodada: false,
+    justificativa:
+      "Owner dos fundamentos do shell e manipulação segura de caminhos/arquivos. Pacotes, SSH e administração especializada permanecem em URLs próprias.",
+  },
 ];
 
 /** Nó do mapa por URL canônica (sem barra final). */

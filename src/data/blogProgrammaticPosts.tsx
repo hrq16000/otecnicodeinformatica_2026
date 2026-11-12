@@ -53,36 +53,60 @@ const renderPost = (d: PostDef): React.ReactNode => (
 const defs: PostDef[] = [
   {
     slug: "pc-nao-liga-o-que-fazer",
-    title: "PC Não Liga: O Que Fazer Passo a Passo (Guia 2026)",
-    excerpt: "PC não dá sinal de vida? Veja o passo a passo para identificar se é fonte, placa-mãe, memória ou apenas mau contato.",
+    title: "PC não liga: como separar energia, vídeo e inicialização com segurança",
+    excerpt:
+      "PC sem sinal, com ventoinha sem vídeo ou reiniciando? Separe energia, POST e imagem antes de abrir a máquina ou trocar peças.",
     category: "Problemas de Computador",
-    lead: "Quando o PC simplesmente não liga, o pânico bate — mas em 70% dos casos o problema é simples: fonte, conexão, ou memória RAM. Veja como diagnosticar.",
+    readTime: "10 min",
+    lead:
+      "“PC não liga” pode descrever situações diferentes: nenhuma energia, ventoinhas girando sem imagem, liga e desliga, ou sistema que não inicia. Antes de qualquer desmontagem, identifique em qual etapa o computador para. Essa separação evita trocar fonte, memória ou placa-mãe por tentativa.",
     sections: [
-      { h: "1. Verifique a alimentação", p: "Antes de qualquer coisa, confirme o básico: cabo de força conectado, régua/estabilizador ligado e tomada funcionando (teste com outro aparelho)." },
       {
-        h: "2. Identifique os sinais",
+        h: "1. Comece pelo que pode ser verificado sem abrir o gabinete",
         list: [
-          "<strong>Nada acontece</strong> (sem LED, sem som): fonte ou cabo de força",
-          "<strong>LED acende, ventoinhas giram, mas não dá vídeo</strong>: memória RAM ou placa de vídeo",
-          "<strong>Liga e desliga sozinho</strong>: superaquecimento ou fonte fraca",
-          "<strong>Beeps repetidos</strong>: erro de POST (consulte o manual da placa-mãe)",
+          "Teste a tomada com outro aparelho e, se houver régua ou filtro antigo, compare diretamente em uma tomada conhecida como funcional.",
+          "Confira o cabo de força e a chave traseira da fonte, quando o modelo tiver essa chave.",
+          "Desconecte periféricos USB e acessórios externos e tente uma única inicialização de comparação.",
+          "Observe LEDs, ventoinhas, bipes e se o monitor chega a indicar mudança de sinal; anote o comportamento em vez de repetir tentativas em sequência.",
         ],
       },
       {
-        h: "3. Teste a fonte",
-        p: "Desconecte o cabo ATX (24 pinos) da placa-mãe. Use um clipe para fazer ponte entre o fio verde e qualquer preto no conector. Se a ventoinha da fonte girar, a fonte tem vida — mas isso não garante que está entregando tensão correta.",
+        h: "2. “Sem energia” é diferente de “liga, mas não dá vídeo”",
+        list: [
+          "<strong>Nenhum LED e nenhuma ventoinha:</strong> o caminho de alimentação precisa ser verificado antes de memória ou sistema.",
+          "<strong>Ventoinhas giram, mas não há imagem:</strong> trate como falha de POST/vídeo; consulte <a href=\"/problemas/computador-nao-da-imagem\">computador liga mas não dá imagem</a>.",
+          "<strong>Liga e desliga sozinho:</strong> alimentação, proteção térmica e placa podem estar envolvidas; veja <a href=\"/problemas/computador-desliga-sozinho\">computador desliga sozinho</a>.",
+          "<strong>Chega ao logotipo e trava:</strong> o problema já saiu da etapa de energia e entra em boot/sistema.",
+        ],
       },
       {
-        h: "4. Reassente memória RAM e placa de vídeo",
-        p: "Tire da tomada, abra o gabinete, remova os pentes de RAM e a GPU. Limpe os contatos com borracha branca, recoloque firmemente até travar. Em muitos casos isso resolve.",
+        h: "3. Depois de queda de energia, upgrade ou manutenção recente",
+        p:
+          "Se a falha começou imediatamente após trocar memória, placa de vídeo, SSD ou mexer em cabos internos, essa mudança é a evidência mais importante. Desligue da tomada antes de qualquer inspeção e não continue desmontando se não souber identificar conectores e travas do seu hardware.",
       },
       {
-        h: "5. Limpe a CMOS",
-        p: "Remova a bateria da placa-mãe (CR2032) por 30 segundos e recoloque. Isso reseta a BIOS e pode resolver problemas após upgrade ou configuração errada.",
+        h: "4. O que não usar como teste rápido",
+        list: [
+          "Não abra a carcaça da fonte de alimentação: capacitores internos podem manter energia mesmo fora da tomada.",
+          "Não use ponte com clipe no conector ATX como diagnóstico de usuário. Fazer a ventoinha girar não comprova tensões corretas sob carga e o procedimento adiciona risco desnecessário.",
+          "Não limpe contatos com abrasivos e não remova bateria CMOS como receita universal. Reset de firmware apaga configurações e só faz sentido quando há hipótese concreta ligada à configuração.",
+          "Não substitua peças em sequência para “ver se pega”. O diagnóstico deve reduzir hipóteses antes da compra.",
+        ],
+      },
+      {
+        h: "5. Próximos caminhos de diagnóstico",
+        list: [
+          "Suspeita de fonte: <a href=\"/blog/como-testar-fonte-de-alimentacao-pc\">como testar a fonte do PC com critérios seguros</a>.",
+          "Sinais de placa-mãe: <a href=\"/blog/como-diagnosticar-placa-mae-defeituosa\">como diagnosticar placa-mãe defeituosa</a>.",
+          "Botão frontal ou ligação do gabinete: <a href=\"/blog/botao-power-nao-funciona-jump-start-placa-mae\">botão power não funciona</a>.",
+          "Se a causa ainda estiver aberta, veja <a href=\"/diagnostico-tecnico\">como funciona o diagnóstico técnico</a> antes de autorizar troca de peça.",
+        ],
       },
     ],
-    whenToCall: "Se após esses passos o PC continua sem ligar, provavelmente é placa-mãe ou fonte com defeito interno — casos que exigem multímetro, fonte de bancada e às vezes microsoldagem.",
+    whenToCall:
+      "Interrompa as tentativas e procure avaliação quando houver cheiro de queimado, estalo elétrico, líquido, componente visivelmente danificado, fonte que arma e desarma repetidamente ou quando o equipamento contiver dados importantes e o comportamento mudar a cada tentativa. Esses sinais pedem medição e inspeção controlada, não troca de peça por tentativa.",
   },
+
   {
     slug: "tela-azul-windows-como-resolver",
     title: "Tela Azul no Windows: Como Resolver de Verdade (BSOD 2026)",
@@ -147,28 +171,60 @@ const defs: PostDef[] = [
   },
   {
     slug: "wifi-caindo-toda-hora",
-    title: "Wi-Fi Caindo Toda Hora? 10 Soluções Que Funcionam em 2026",
-    excerpt: "Internet caindo sem motivo aparente? Veja como resolver problemas de Wi-Fi instável em roteadores TP-Link, Intelbras, Vivo e outros.",
+    title: "Wi-Fi caindo toda hora: como descobrir se é sinal, roteador ou provedor",
+    excerpt:
+      "Wi-Fi desconecta em um aparelho ou na casa inteira? Compare cabo, distância, banda e dispositivos antes de trocar roteador ou culpar o provedor.",
     category: "Redes",
-    lead: "Wi-Fi instável é um dos problemas mais frustrantes — e raramente é culpa da operadora. Veja o método que técnicos usam para diagnosticar e resolver.",
+    readTime: "10 min",
+    lead:
+      "Quando o Wi-Fi cai, primeiro descubra qual camada falhou: um único dispositivo, somente a rede sem fio, o roteador inteiro ou também a conexão cabeada. Essa comparação é mais útil do que trocar canal, repetidor ou roteador sem evidência.",
     sections: [
       {
-        h: "Diagnóstico em 30 segundos",
+        h: "1. Isole a queda em quatro perguntas",
         list: [
-          "Cai só no celular ou também no PC com cabo?",
-          "Cai em todos os cômodos ou só em um?",
-          "Cai sempre no mesmo horário?",
-          "Começou após algum evento (mudança, novo aparelho, atualização)?",
+          "<strong>Só um dispositivo cai?</strong> O problema pode estar no adaptador, driver, economia de energia ou configuração daquele aparelho.",
+          "<strong>Todos perdem Wi-Fi, mas um computador no cabo continua online?</strong> A investigação fica concentrada na rede sem fio e no roteador.",
+          "<strong>Cabo e Wi-Fi caem juntos?</strong> O problema pode estar no roteador, modem/ONT ou no link do provedor.",
+          "<strong>Só acontece longe do roteador?</strong> Trate primeiro como cobertura e obstáculos, não como velocidade contratada.",
         ],
       },
-      { h: "Solução 1: mude o canal Wi-Fi", p: "No painel do roteador (geralmente 192.168.0.1 ou 192.168.1.1), troque o canal de 'Automático' para 1, 6 ou 11 (em 2.4GHz). Apartamentos sofrem com interferência de vizinhos." },
-      { h: "Solução 2: separe as bandas 2.4 e 5GHz", p: "Crie SSIDs diferentes. Use 5GHz para celulares e notebooks próximos; 2.4GHz para dispositivos longe ou IoT." },
-      { h: "Solução 3: atualize o firmware do roteador", p: "Firmware antigo trava periodicamente. Verifique no site do fabricante." },
-      { h: "Solução 4: posicionamento", p: "Roteador no centro da casa, alto, longe de espelhos, micro-ondas, paredes de concreto e aquários." },
-      { h: "Solução 5: dispositivos demais", p: "Roteadores básicos travam com mais de 15 conexões simultâneas. IoT (lâmpadas, câmeras) somam rapidamente." },
+      {
+        h: "2. Faça comparações simples antes de alterar a configuração",
+        list: [
+          "Teste perto do roteador e depois no ponto onde a queda costuma acontecer, usando o mesmo dispositivo.",
+          "Compare, no mesmo horário, um equipamento no cabo e outro no Wi-Fi quando isso for possível.",
+          "Reinicie modem/roteador uma vez para comparação; reiniciar todo dia não é solução e pode esconder a recorrência.",
+          "Se a falha começou após atualização ou troca de roteador, registre essa mudança antes de restaurar configurações de fábrica.",
+        ],
+      },
+      {
+        h: "3. 2,4 GHz, 5 GHz e canal: não existe ajuste universal",
+        p:
+          "Bandas e canais têm comportamentos diferentes conforme distância, obstáculos, vizinhança e capacidade do equipamento. Forçar um canal fixo ou separar nomes de rede pode ajudar em alguns ambientes, mas também pode piorar outros. Antes de alterar, registre a configuração atual e compare o resultado no mesmo local e horário.",
+      },
+      {
+        h: "4. Posicionamento e interferência",
+        list: [
+          "Evite esconder o roteador dentro de armário fechado, atrás de grandes superfícies metálicas ou no chão quando houver alternativa.",
+          "Paredes densas, lajes e distância reduzem sinal; um repetidor não corrige automaticamente um ponto em que o próprio repetidor já recebe sinal ruim.",
+          "Número de dispositivos, capacidade de rádio e firmware variam muito entre modelos; não use um limite universal de conexões como diagnóstico.",
+          "Atualize firmware apenas pela interface ou página oficial do fabricante e confirme o modelo/revisão de hardware antes de aplicar arquivo.",
+        ],
+      },
+      {
+        h: "5. Use o sintoma para seguir a trilha correta",
+        list: [
+          "Quedas intermitentes: <a href=\"/problemas/wifi-instavel\">Wi-Fi instável — causas e testes seguros</a>.",
+          "Dúvida entre operadora e rede local: <a href=\"/blog/internet-lenta-provedor-ou-roteador\">internet lenta: provedor ou roteador?</a>.",
+          "Roteiro passo a passo: <a href=\"/ferramentas/roteiro-wifi-instavel\">ferramenta de diagnóstico de Wi-Fi instável</a>.",
+          "Cobertura, configuração e rede local: <a href=\"/servicos/redes-e-wifi\">serviço de redes e Wi-Fi</a>.",
+        ],
+      },
     ],
-    whenToCall: "Se o Wi-Fi continua caindo após essas otimizações, pode ser hora de migrar para roteador mesh ou reconfigurar a rede com VLANs. Posso ajudar remotamente em qualquer cidade do Brasil.",
+    whenToCall:
+      "Vale partir para avaliação quando cabo e Wi-Fi caem juntos sem explicação do provedor, o roteador reinicia sozinho, a falha aparece em vários dispositivos mesmo perto dele, ou quando a solução exige reposicionar pontos, trocar equipamento ou revisar cabeamento. O objetivo é medir qual camada falha antes de comprar repetidor, mesh ou roteador novo.",
   },
+
   {
     slug: "pc-muito-lento-como-acelerar",
     title: "PC Muito Lento: Como Acelerar em 30 Minutos (Sem Formatar)",
@@ -269,50 +325,115 @@ const defs: PostDef[] = [
   },
   {
     slug: "como-fazer-backup-na-nuvem",
-    title: "Como Fazer Backup na Nuvem em 2026: Guia Completo e Seguro",
-    excerpt: "Aprenda a configurar backup automático na nuvem (Google Drive, OneDrive, Mega) e nunca mais perca fotos e documentos.",
+    title: "Backup na nuvem: como montar uma cópia que você consegue restaurar",
+    excerpt:
+      "Sincronizar não basta: organize arquivos, mantenha cópia independente, confirme versionamento e teste a restauração antes de confiar no backup.",
     category: "Segurança",
-    lead: "A regra 3-2-1 do backup: 3 cópias, em 2 mídias diferentes, com 1 fora de casa (nuvem). Veja como fazer sem complicação.",
+    readTime: "11 min",
+    lead:
+      "Backup na nuvem não é apenas colocar arquivos em uma pasta sincronizada. Uma estratégia útil precisa responder a três perguntas: o que está protegido, quantas cópias independentes existem e se uma restauração já foi testada. O provedor pode mudar; esses critérios continuam válidos.",
     sections: [
       {
-        h: "Compare os serviços (planos gratuitos)",
+        h: "1. Separe sincronização de backup",
         list: [
-          "<strong>Google Drive</strong>: 15GB grátis, integração com Android e Gmail",
-          "<strong>OneDrive</strong>: 5GB grátis, integrado ao Windows 11",
-          "<strong>Mega</strong>: 20GB grátis, foco em privacidade (criptografia)",
-          "<strong>iCloud</strong>: 5GB grátis, melhor para usuários Apple",
+          "<strong>Sincronização</strong> mantém arquivos alinhados entre dispositivos, mas uma exclusão ou alteração pode se propagar.",
+          "<strong>Versionamento e lixeira do provedor</strong> ajudam a recuperar estados anteriores, mas retenção e limites dependem do serviço e do plano.",
+          "<strong>Cópia independente</strong> fica fora do caminho normal de sincronização e reduz o risco de uma ação errada afetar tudo ao mesmo tempo.",
+          "Veja o conceito completo em <a href=\"/blog/backup-como-proteger-seus-arquivos\">backup: como proteger seus arquivos</a>.",
         ],
       },
-      { h: "Backup das fotos (o mais importante)", p: "Instale Google Fotos no celular e ative 'Backup'. Faça o mesmo no PC com Google Drive Desktop apontando para a pasta Imagens." },
-      { h: "Backup de documentos", p: "Mova a pasta Documentos para dentro do OneDrive ou Google Drive. Tudo que salvar ali sincroniza automaticamente." },
-      { h: "Backup de WhatsApp", p: "WhatsApp → Configurações → Conversas → Backup → diário no Google Drive (Android) ou iCloud (iPhone). Ative criptografia." },
-      { h: "Backup local também (regra 3-2-1)", p: "Compre um HD externo de 1TB e use o 'Histórico de Arquivos' do Windows. Mantenha desconectado quando não estiver fazendo backup (proteção contra ransomware)." },
+      {
+        h: "2. Defina primeiro o que não pode ser perdido",
+        list: [
+          "Documentos de trabalho, fotos originais, projetos, arquivos financeiros e chaves de recuperação merecem prioridade.",
+          "Não presuma que Área de Trabalho, Downloads, e-mail local ou pastas de aplicativos entram automaticamente na nuvem; confirme o escopo configurado.",
+          "Antes de migrar ou formatar, faça um inventário do que precisa existir depois da restauração.",
+        ],
+      },
+      {
+        h: "3. Use múltiplas cópias como estratégia, não como número mágico",
+        p:
+          "A regra 3-2-1 é uma referência conhecida: múltiplas cópias, em meios diferentes, com pelo menos uma fora do equipamento principal. O ponto importante não é decorar a fórmula, mas evitar que falha do computador, ransomware, exclusão acidental ou problema de conta atinja todas as cópias ao mesmo tempo.",
+      },
+      {
+        h: "4. Configure a nuvem sem depender de preços ou franquias que mudam",
+        list: [
+          "Escolha um serviço que ofereça autenticação forte, histórico/versionamento compatível com a sua necessidade e exportação dos arquivos.",
+          "Ative autenticação em dois fatores e guarde os meios de recuperação da conta em local separado.",
+          "Não baseie a decisão em uma franquia gratuita citada em um artigo: capacidade, preço e política de retenção mudam. Confira sempre a página oficial do provedor.",
+          "Para comparar nuvem e armazenamento local, use <a href=\"/decisoes/nuvem-ou-hd-externo\">nuvem ou HD externo?</a>.",
+        ],
+      },
+      {
+        h: "5. Teste a restauração antes de considerar o trabalho concluído",
+        list: [
+          "Escolha uma pequena amostra representativa: documento, foto, pasta e arquivo grande.",
+          "Restaure para um local diferente do original e abra os arquivos, em vez de apenas verificar se aparecem na interface.",
+          "Registre qual conta, dispositivo e método foram usados para restaurar; isso reduz improviso quando houver uma perda real.",
+          "Use também o roteiro <a href=\"/blog/como-testar-restauracao-de-backup\">como testar a restauração de um backup</a>.",
+        ],
+      },
     ],
-    whenToCall: "Configuro backup automático na nuvem + local remotamente em ~40 minutos. Ideal para quem tem fotos de família e documentos importantes e não quer arriscar.",
+    whenToCall:
+      "Procure ajuda quando os dados existem em vários serviços sem uma cópia claramente restaurável, quando a conta foi bloqueada ou comprometida, quando há grande volume para migrar, ou antes de formatar um computador que contém arquivos únicos. O objetivo é provar a restauração antes de apagar a origem.",
   },
+
   {
     slug: "como-recuperar-arquivos-apagados",
-    title: "Como Recuperar Arquivos Apagados (Mesmo da Lixeira)",
-    excerpt: "Apagou por engano? Esvaziou a lixeira? Pen drive corrompido? Veja como recuperar arquivos com ferramentas gratuitas e profissionais.",
+    title: "Arquivos apagados: o que fazer antes de tentar recuperar",
+    excerpt:
+      "Apagou um arquivo ou esvaziou a lixeira? Pare de gravar no mesmo disco, procure cópias existentes e só então escolha um método de recuperação.",
     category: "Procedimentos Técnicos",
-    lead: "Arquivo apagado raramente é arquivo perdido — o Windows apenas marca o espaço como livre. Quanto mais rápido você agir, maior a chance de recuperação.",
+    readTime: "11 min",
+    lead:
+      "Ao apagar um arquivo, a prioridade não é instalar várias ferramentas: é evitar novas gravações na mesma mídia. O resultado depende do tipo de armazenamento, do que aconteceu depois da exclusão e de existirem versões, lixeira, backup ou dados ainda não sobrescritos.",
     sections: [
-      { h: "Regra de ouro: pare de usar o disco", p: "Cada gravação nova pode sobrescrever os dados apagados. Se o arquivo era do C:, não baixe ferramenta de recuperação no C: — use outro disco ou pen drive." },
       {
-        h: "Ferramentas gratuitas que funcionam",
+        h: "1. Pare de escrever no local onde o arquivo estava",
         list: [
-          "<strong>Recuva</strong> — clássica, fácil para iniciantes",
-          "<strong>PhotoRec</strong> — gratuita, recupera fotos, vídeos e documentos por assinatura de arquivo",
-          "<strong>Disk Drill</strong> — interface bonita, versão gratuita até 500MB",
-          "<strong>EaseUS Data Recovery</strong> — boa taxa de sucesso, gratuita até 2GB",
+          "Não baixe ferramenta de recuperação no mesmo disco que continha o arquivo perdido.",
+          "Evite instalar programas, copiar arquivos grandes ou executar limpeza/otimização nessa unidade.",
+          "Se for cartão, pendrive ou disco externo, desconecte depois de identificar o problema e preserve a mídia até decidir o próximo passo.",
+          "Se o disco também apresenta ruído, desconexões ou lentidão severa, trate primeiro como possível falha física.",
         ],
       },
-      { h: "Cartão SD ou pen drive corrompido", p: "Não formate quando o Windows pedir! Use o PhotoRec apontando para o cartão. Funciona mesmo em mídias que aparecem como 'precisa formatar'." },
-      { h: "HD com bad blocks", p: "Use HDDScan ou Victoria para mapear setores ruins. Se o HD ainda for reconhecido, dá para clonar com ddrescue (Linux) e recuperar do clone." },
-      { h: "SSD apagado: chances baixas", p: "TRIM apaga permanentemente em SSDs. Recuperação só é possível em raros casos (TRIM desativado, RAID específico). Backup é a única defesa real." },
+      {
+        h: "2. Procure cópias antes de fazer varredura de recuperação",
+        list: [
+          "Confira Lixeira, histórico/versionamento do serviço de nuvem e outras máquinas sincronizadas.",
+          "Verifique backups externos e pontos de restauração de arquivos que você já tenha configurado.",
+          "Em ambientes corporativos, confirme se existe backup central antes de manipular a estação.",
+          "O guia <a href=\"/problemas/arquivos-apagados\">arquivos apagados: primeiros passos</a> organiza essa triagem.",
+        ],
+      },
+      {
+        h: "3. HD, SSD, pendrive e cartão não se comportam do mesmo jeito",
+        p:
+          "Em discos magnéticos, um arquivo excluído pode continuar recuperável até que seus blocos sejam sobrescritos. Em SSDs, recursos como TRIM e rotinas internas do controlador podem reduzir a possibilidade de recuperação, mas o comportamento depende do sistema, da unidade e do momento em que os comandos foram processados. Não trate “SSD = impossível” como regra absoluta.",
+      },
+      {
+        h: "4. Ferramentas de recuperação não devem escrever na origem",
+        list: [
+          "Quando uma ferramenta for apropriada, execute a partir de outra unidade e salve os arquivos recuperados em destino diferente.",
+          "Não formate uma mídia apenas porque o sistema pede formatação; isso altera estruturas que podem ser úteis à recuperação.",
+          "Não rode reparo de sistema de arquivos por tentativa em unidade com dados únicos sem antes avaliar o risco.",
+          "Se houver falha física ou setores instáveis, a abordagem muda para aquisição/imagem controlada; consulte <a href=\"/blog/como-recuperar-dados-hd-com-defeito\">recuperação de dados de HD com defeito</a>.",
+        ],
+      },
+      {
+        h: "5. Critérios de parada",
+        list: [
+          "HD com clique, raspagem, rotação irregular ou desaparecendo da BIOS/UEFI.",
+          "Unidade que desconecta durante leitura ou deixa o sistema travado.",
+          "Arquivos empresariais, fiscais, jurídicos ou pessoais sem nenhuma outra cópia.",
+          "Ransomware ou suspeita de invasão: preserve evidências e não misture recuperação de arquivo com limpeza do incidente.",
+        ],
+      },
     ],
-    whenToCall: "Em casos sérios (HD físico danificado, ransomware, partição perdida), evite mexer — cada tentativa amadora reduz as chances. Faço diagnóstico remoto antes de qualquer ação destrutiva.",
+    whenToCall:
+      "A avaliação especializada é indicada quando a mídia apresenta sinais físicos, quando os dados são insubstituíveis ou quando tentativas anteriores já alteraram partições e sistema de arquivos. Em recuperação, reduzir novas escritas costuma ser mais importante do que tentar mais uma ferramenta.",
   },
+
   {
     slug: "como-aumentar-velocidade-internet",
     title: "Como Aumentar a Velocidade da Internet em Casa (Sem Mudar de Plano)",
@@ -416,22 +537,7 @@ const defs: PostDef[] = [
     ],
     whenToCall: "Em notebooks modernos (especialmente gamer e Apple), a troca é delicada e exige desmontagem completa. Oriento por vídeo-chamada ou indico técnico próximo da sua cidade.",
   },
-  {
-    slug: "como-resetar-senha-windows",
-    title: "Como Resetar Senha do Windows (Esqueceu a Senha? Resolva)",
-    excerpt: "Esqueceu a senha do Windows 10/11? Veja métodos legítimos para resetar sem perder arquivos.",
-    category: "Software / Sistema",
-    lead: "Esquecer a senha não é fim do mundo — existem métodos legítimos para resetar sem reinstalar o Windows. Veja em ordem de simplicidade.",
-    sections: [
-      { h: "Método 1: conta Microsoft", p: "Se sua conta é Microsoft (e-mail), vá em account.microsoft.com em outro dispositivo e use 'Esqueci minha senha'. Após resetar, espere alguns minutos e tente no PC com a nova senha." },
-      { h: "Método 2: perguntas de segurança (conta local)", p: "Na tela de login, após errar a senha, aparece 'Redefinir senha'. Responda as perguntas que você configurou ao criar a conta." },
-      { h: "Método 3: pendrive de redefinição", p: "Se você criou um pendrive de redefinição antes (Painel de Controle → Contas), use-o agora." },
-      { h: "Método 4: outro usuário admin", p: "Se há outra conta de administrador, faça login e mude a senha em 'Gerenciar outra conta'." },
-      { h: "Método 5: modo de recuperação (avançado)", p: "Inicie pelo pendrive de instalação do Windows → 'Reparar o computador' → Prompt de Comando → renomeie utilman.exe para utilman.bak e copie cmd.exe como utilman.exe. Na tela de login, clique no ícone de acessibilidade — abrirá cmd. Digite: net user [usuário] [novasenha]." },
-      { h: "BitLocker ligado?", p: "Se o disco está criptografado e você não tem a chave de recuperação (salva na conta Microsoft), não há como recuperar — só formatando." },
-    ],
-    whenToCall: "Faço reset remoto após a conta ser desbloqueada, ou oriento o método correto para o seu caso (conta local, BitLocker, Pro vs Home). Sempre legal e sem perder arquivos.",
-  },
+
   {
     slug: "diferenca-windows-10-vs-11",
     title: "Windows 10 vs Windows 11: Devo Atualizar em 2026? (Análise Honesta)",
@@ -493,6 +599,8 @@ const defs: PostDef[] = [
 ];
 
 const HOWTO_DEFAULT_DATE = "2026-06-14";
+
+export const PROGRAMMATIC_POST_SLUGS = defs.map((d) => d.slug);
 
 export const programmaticPosts: Record<string, ProgrammaticPost> = defs.reduce(
   (acc, d) => {

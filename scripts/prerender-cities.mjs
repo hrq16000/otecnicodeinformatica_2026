@@ -329,7 +329,7 @@ function injectCuratedMeta(html, url, title, description) {
 
 // ─────────────────────────────────────────────────────────────
 // BLOG EDITORIAL — extração de slugs + metadados (fail-closed).
-// Parseia as fontes reais (blogPostsContentBase + programmaticPosts)
+// Parseia as fontes reais (blogPostsContentBase + blogSupplementalPosts + programmaticPosts)
 // para gerar HTML estático próprio por artigo. Todos os artigos são
 // noindex, follow (registro editorial vazio nesta fase). Fora do sitemap.
 // ─────────────────────────────────────────────────────────────
@@ -435,6 +435,36 @@ export async function getBlogPosts(rootDir = ".") {
   }
 
 
+  // --- Suplementares manuais (blogSupplementalPosts) ---
+  const supplementalPath = path.join(rootDir, "src/data/blogSupplementalPosts.tsx");
+  const supplementalSrc = await fs.readFile(supplementalPath, "utf8");
+  const supplementalEntryRe = /^  "([a-z0-9-]+)":\s*\{/gm;
+  const supplementalMatches = [...supplementalSrc.matchAll(supplementalEntryRe)];
+  for (let i = 0; i < supplementalMatches.length; i++) {
+    const slug = supplementalMatches[i][1];
+    const start = supplementalMatches[i].index;
+    const end = i + 1 < supplementalMatches.length ? supplementalMatches[i + 1].index : supplementalSrc.length;
+    const block = supplementalSrc.slice(start, end);
+    const title = extractField(block, "title");
+    const excerpt = extractField(block, "excerpt");
+    const date = extractField(block, "date");
+    const category = extractField(block, "category");
+    const readTime = extractField(block, "readTime");
+    if (!title) continue;
+    if (seen.has(slug)) { duplicates.push(slug); continue; }
+    seen.add(slug);
+    posts.push({
+      slug, title, excerpt: excerpt ?? "", date: date ?? HOWTO_DEFAULT_DATE,
+      category: category ?? "", origin: "supplemental",
+      readTime: readTime ?? "10 min",
+      lead: extractLead(block),
+      headings: extractHeadings(block),
+      sections: extractSections(block),
+      wordCount: countWords(block),
+    });
+  }
+
+
   // --- Programáticos (defs em blogProgrammaticPosts.tsx) ---
   const progPath = path.join(rootDir, "src/data/blogProgrammaticPosts.tsx");
   const progSrc = await fs.readFile(progPath, "utf8");
@@ -454,7 +484,11 @@ export async function getBlogPosts(rootDir = ".") {
     if (!title) continue;
     if (seen.has(slug)) { duplicates.push(slug); continue; }
     seen.add(slug);
-    posts.push({ slug, title, excerpt: excerpt ?? "", date: date ?? HOWTO_DEFAULT_DATE, category: category ?? "", origin: "programmatic" });
+    posts.push({
+      slug, title, excerpt: excerpt ?? "", date: date ?? HOWTO_DEFAULT_DATE,
+      category: category ?? "", origin: "programmatic",
+      bodySignals: (block.match(/\b(?:lead|sections|whenToCall)\s*:/g) || []).length,
+    });
   }
 
   return { posts, duplicates };

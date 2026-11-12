@@ -151,10 +151,13 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { children: CONSENT_MODE_SCRIPT },
       { children: WA_PREHYDRATION_SCRIPT },
       { children: OS_PREHYDRATION_SCRIPT },
-      // AdSense é injetado por consentStore.loadAdsScript somente depois do
-      // aceite explícito de anúncios. Não carregar aqui: além de contrariar
-      // a política LGPD visível, o script de terceiros degrada o primeiro
-      // carregamento de visitantes sem consentimento.
+
+
+      {
+        src: "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3762170279587706",
+        async: true,
+        crossOrigin: "anonymous",
+      },
     ],
   }),
   shellComponent: RootShell,

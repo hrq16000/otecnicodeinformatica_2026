@@ -23,7 +23,7 @@ Endereço, CEP e CNPJ **não** entram em nenhum campo público.
 | Categoria principal | Serviço de reparo de computadores |
 | Categorias secundárias | Serviço de reparo de eletrônicos · Serviço de reparo de televisores · Serviço de TI |
 | Telefone | +55 41 99708-6380 (WhatsApp) |
-| Site | https://tecnico.curitiba.br |
+| Site | https://[LEGACY_DOMAIN_REMOVED] |
 | Horário | Seg–Sex 08:00–18:00 · Sáb 09:00–13:00 · Dom fechado |
 | Atributos | Atendimento no local · Atendimento remoto · Retirada e entrega · Orçamento online |
 | Mensagens | Ativar (encaminha para o mesmo número do WhatsApp) |

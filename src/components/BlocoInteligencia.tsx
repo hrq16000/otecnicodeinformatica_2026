@@ -22,7 +22,7 @@ export const BlocoInteligencia = ({ compact = false }: BlocoInteligenciaProps) =
         {/* Imagem de destaque */}
         <div className="mb-8 rounded-xl overflow-hidden shadow-lg max-w-3xl mx-auto">
           <SmartImage wrapperClassName="w-full" 
-            src={IMAGES.bancadaTecnica} 
+            src="/fotos/bancada-tecnica.jpg" 
             alt={IMAGES.bancadaTecnicaAlt}
             className="w-full h-40 md:h-56 object-cover"
             

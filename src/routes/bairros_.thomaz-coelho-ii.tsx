@@ -1,8 +1,10 @@
-import { createFileRoute } from "@tanstack/react-router";
-import { legacyRouteElements } from "@/legacyRouteElements";
-
-const RouteComponent = legacyRouteElements["/bairros/thomaz-coelho-ii"];
+import { createFileRoute, redirect } from "@tanstack/react-router";
 
 export const Route = createFileRoute("/bairros_/thomaz-coelho-ii")({
-  component: RouteComponent,
+  beforeLoad: () => {
+    throw redirect({
+      to: "/bairros/thomaz-coelho",
+      statusCode: 301,
+    });
+  },
 });

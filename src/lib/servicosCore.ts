@@ -55,7 +55,7 @@ export const SERVICOS_CORE: Record<string, ServicoLandingData> = {
       { title: "Estado do sistema", desc: "Sistema muito corrompido ou com falhas pode demandar etapas extras." },
       { title: "Programas específicos", desc: "Softwares particulares (impressão fiscal, sistemas de trabalho) somam configuração." },
       { title: "Urgência", desc: "Prazos apertados podem influenciar o agendamento." },
-      { title: "Deslocamento", desc: "Atendimento em domicílio considera a localização em Curitiba e região." },
+      { title: "Modalidade", desc: "Remoto, visita, coleta ou bancada dependem do sintoma, do endereço e dos testes necessários." },
     ],
     atendimento: {
       residencial:
@@ -138,17 +138,17 @@ export const SERVICOS_CORE: Record<string, ServicoLandingData> = {
   "manutencao-de-notebook": {
     path: "manutencao-de-notebook",
     trackingKey: "manutencao-notebook",
-    metaTitle: "Assistência Técnica de Notebook em Curitiba | Diagnóstico",
+    metaTitle: "Manutenção e Conserto de Notebook | Diagnóstico",
     metaDescription:
-      "Assistência técnica de notebook em Curitiba: lentidão, aquecimento, tela, teclado, bateria e limpeza interna. Todas as marcas.",
+      "Manutenção e conserto de notebook com diagnóstico de lentidão, aquecimento, tela, teclado, bateria, carga, SSD, memória e Windows antes do reparo.",
     serviceName: "Manutenção de Notebook",
     serviceDescription:
-      "Diagnóstico e manutenção de notebooks: limpeza interna, troca de pasta térmica, tela, teclado, bateria e desempenho, com atendimento em Curitiba e região.",
-    eyebrow: "Notebook em Curitiba",
-    h1: "Assistência técnica de notebook em Curitiba",
+      "Diagnóstico e manutenção de notebooks: limpeza interna, sistema térmico, tela, teclado, bateria, carga, armazenamento e desempenho, conforme o defeito confirmado.",
+    eyebrow: "Manutenção de notebook",
+    h1: "Manutenção e conserto de notebook",
     h1Accent: "diagnóstico antes de informar o valor",
     intro:
-      "Notebook que não liga, esquenta e desliga, ficou lento ou está com tela, teclado ou bateria com defeito? Atendemos as marcas mais comuns do mercado e começamos sempre pelo diagnóstico, para identificar a causa real antes de falar em peça ou preço. Nem toda placa tem reparo viável, e explicamos isso com honestidade. Descreva o sintoma pelo WhatsApp e combinamos o próximo passo.",
+      "Notebook que não liga, esquenta, fica lento ou apresenta falha de tela, teclado, bateria ou carga precisa de diagnóstico antes de trocar peça. Separamos sistema, armazenamento, memória, temperatura, energia e dano físico para decidir entre ajuste, upgrade, reparo ou bancada. Descreva o sintoma e o modelo pelo WhatsApp para definir o próximo passo.",
     whatsappMessage: "Olá! Meu notebook está com problema. Podem avaliar?",
     incluso: [
       { title: "Diagnóstico do notebook", desc: "Avaliação de hardware e software para achar a causa real." },
@@ -175,11 +175,11 @@ export const SERVICOS_CORE: Record<string, ServicoLandingData> = {
       { title: "Complexidade", desc: "Reparos em placa e conectores exigem mais tempo de bancada." },
       { title: "Risco de dados", desc: "Quando há dados importantes, priorizamos backup antes de intervir." },
       { title: "Urgência", desc: "Prazos curtos podem alterar o agendamento e a disponibilidade de peça." },
-      { title: "Deslocamento", desc: "Coleta e entrega consideram a localização em Curitiba e região." },
+      { title: "Modalidade", desc: "Coleta, bancada, atendimento no endereço ou suporte remoto dependem do tipo de falha e do que pode ser resolvido com segurança." },
     ],
     atendimento: {
       residencial:
-        "Atendimento de notebook em domicílio ou por coleta e entrega em Curitiba e região, ideal para quem usa o aparelho em casa, nos estudos ou no home office.",
+        "A modalidade é definida na triagem: alguns casos permitem suporte remoto ou atendimento no endereço; desmontagem, troca de peça e testes prolongados normalmente exigem bancada.",
       empresarial:
         "Manutenção de notebooks corporativos e de equipes, com diagnóstico, limpeza, troca de peças e upgrade para reduzir paradas no trabalho.",
     },
@@ -187,7 +187,7 @@ export const SERVICOS_CORE: Record<string, ServicoLandingData> = {
       { question: "Meu notebook esquenta muito, tem solução?", answer: "Na maioria dos casos, sim. O aquecimento costuma vir de poeira acumulada e pasta térmica ressecada. Fazemos limpeza interna e avaliamos a ventoinha e o dissipador." },
       { question: "Vale a pena consertar ou é melhor trocar?", answer: "Depende do custo do reparo frente ao valor do aparelho. Após o diagnóstico explicamos com honestidade quando compensa consertar e quando não vale." },
       { question: "Vocês trocam tela e teclado?", answer: "Sim, avaliamos e substituímos tela, dobradiça, teclado, bateria e conectores, conforme o modelo e a disponibilidade de peça. Nem toda placa, porém, tem reparo viável." },
-      { question: "Preciso levar o notebook até vocês?", answer: "Atendemos em domicílio e também por coleta e entrega em Curitiba e região, conforme o tipo de serviço." },
+      { question: "Preciso levar o notebook até vocês?", answer: "Depende do defeito. Casos de software e configuração podem permitir atendimento remoto ou no endereço; desmontagem, troca de peça e testes prolongados normalmente exigem bancada ou coleta combinada." },
       { question: "Quanto tempo leva a manutenção?", answer: "Serviços simples podem sair conforme a disponibilidade da agenda; reparos que dependem de peça específica levam mais tempo. Informamos o prazo junto com o valor." },
       { question: "Meu notebook não liga. O que devo fazer?", answer: "Teste outra tomada, observe se algum LED acende e remova periféricos externos. Se não houver mudança, evite novas tentativas — principalmente após líquido, queda, cheiro ou aquecimento — e encaminhe para diagnóstico. Os sinais e as causas possíveis estão detalhados na página sobre notebook que não liga." },
       { question: "Notebook aquecendo precisa de limpeza?", answer: "Aquecimento pode estar relacionado a poeira acumulada e pasta térmica ressecada, mas também a ventoinha com desgaste, dissipador obstruído ou uso intenso sem ventilação. A limpeza é indicada depois da avaliação, não antes dela." },
@@ -198,6 +198,7 @@ export const SERVICOS_CORE: Record<string, ServicoLandingData> = {
       { question: "A manutenção do notebook tem garantia?", answer: "Sim, conforme o serviço efetivamente executado e a peça aplicada. As condições de garantia estão descritas na página de preços e políticas." },
     ],
     relacionados: [
+      { label: "Conserto de notebook em Curitiba", to: "/servicos/conserto-notebook/curitiba" },
       { label: "Upgrade de SSD e RAM", to: "/servicos/upgrade-ssd-ram" },
       { label: "Formatação", to: "/servicos/formatacao" },
       { label: "Remoção de vírus", to: "/servicos/remocao-de-virus" },
@@ -209,18 +210,18 @@ export const SERVICOS_CORE: Record<string, ServicoLandingData> = {
     ],
     blocoLocal: [
       {
-        titulo: "Os três defeitos que mais chegam em notebook",
+        titulo: "Três grupos de falhas comuns em notebook",
         paragrafos: [
-          "O primeiro é superaquecimento: ventoinha barulhenta, base quente, quedas em jogo ou videochamada e desligamento repentino. Quase sempre é pasta térmica ressecada somada a dissipador entupido de poeira e pelo de animal — serviço de bancada, com limpeza física e troca da interface térmica, não algo que se resolve por software.",
-          "O segundo é não ligar. Aqui é preciso separar fonte, conector de energia, bateria e placa. Um notebook que acende LED mas não dá vídeo tem causa diferente de um que não reage a nada. Fazemos essa separação no diagnóstico antes de falar em peça, porque trocar carregador por chute é o erro mais caro do usuário.",
-          "O terceiro é dano físico: dobradiça estourada, tela trincada, teclado com líquido, porta de carga solta. Líquido é urgência real — quanto mais tempo ligado, maior a corrosão. O certo é desligar, não tentar secar com secador e levar o equipamento o quanto antes.",
+          "Um grupo é o térmico: ventoinha barulhenta, base quente, queda de desempenho ou desligamento sob carga. Poeira, fluxo de ar obstruído, ventoinha, dissipador e interface térmica entram na inspeção; a causa precisa ser confirmada antes de abrir o equipamento ou trocar material térmico.",
+          "Outro grupo é o de falha de energia ou inicialização. É preciso separar fonte, conector, bateria, memória e placa. Um notebook que acende LEDs mas não mostra imagem segue uma linha diferente de um equipamento sem qualquer sinal de energia. Essa separação vem antes de comprar carregador ou condenar a placa.",
+          "Há ainda dano físico: dobradiça quebrada, tela trincada, teclado atingido por líquido ou porta de carga solta. Se houve líquido, manter o equipamento energizado pode ampliar corrosão e curto; a orientação segura é desligar, evitar calor de secador e avaliar o aparelho antes de novas tentativas.",
         ],
       },
       {
         titulo: "Conserto ou troca: como avaliamos peças de notebook",
         paragrafos: [
           "Notebook tem peça cara e componente soldado. Antes de indicar reparo, comparamos o custo total do serviço com o valor de mercado do equipamento e com o que ele ainda entrega para o seu uso. Se a soma passar de boa parte do valor do aparelho e o desempenho continuar limitado, dizemos isso com clareza — mesmo perdendo o serviço.",
-          "Há casos intermediários que valem muito a pena: máquina com placa saudável e apenas disco lento ou pouca memória volta a ser produtiva com upgrade, por uma fração do preço de um modelo novo. Já placa com dano por líquido ou falha de chip gráfico entra em outra faixa de risco, e explicamos a chance real de sucesso antes de qualquer autorização.",
+          "Há casos em que um gargalo isolado de armazenamento ou memória pode justificar upgrade sem trocar o equipamento inteiro. O ganho depende do restante da plataforma e do uso real. Placa com dano por líquido ou falha de componente soldado entra em outra faixa de risco, que precisa ser explicada antes de qualquer autorização.",
           "Trabalhamos com peças compatíveis e informamos quando o item é original, paralelo ou recondicionado. Você aprova o valor antes da execução; nada é trocado sem sua confirmação.",
         ],
       },
@@ -243,35 +244,35 @@ export const SERVICOS_CORE: Record<string, ServicoLandingData> = {
       {
         titulo: "Prazo, retirada e o que não fazemos",
         paragrafos: [
-          "Limpeza interna e troca de pasta costumam ficar prontas conforme a disponibilidade da agenda. Serviços que dependem de peça específica seguem o prazo de reposição, informado na aprovação. Quando o equipamento precisa de bancada, oferecemos coleta e entrega em Curitiba e região para você não perder o dia.",
+          "Limpeza interna, revisão térmica e reparos simples seguem a disponibilidade da agenda. Serviços que dependem de peça específica acompanham o prazo de reposição, informado antes da aprovação. Quando o equipamento precisa de bancada, a logística é definida na triagem.",
           "Não fazemos remoção de senha de equipamento sem comprovação de propriedade, não trabalhamos com desbloqueio de conta de fabricante e não assumimos reparo de placa com dano estrutural irreversível — nesses casos indicamos o caminho honesto, que às vezes é migrar seus dados e planejar a substituição.",
         ],
       },
     ],
     linksLocais: [
-      { label: "Atendimento técnico em Curitiba", to: "/tecnico-informatica-curitiba" },
-      { label: "Técnico no seu endereço", to: "/atendimento-domicilio" },
+      { label: "Conserto de notebook em Curitiba", to: "/servicos/conserto-notebook/curitiba" },
       { label: "Coleta e entrega do equipamento", to: "/coleta-e-entrega" },
+      { label: "Como funciona o atendimento", to: "/como-funciona" },
       { label: "Preços e políticas", to: "/precos-e-politicas" },
     ],
-    dateModified: "2026-08-05",
+    dateModified: "2026-09-28",
   },
 
   // 3 ─────────────────────────────────────────────────────────
   "manutencao-de-computador": {
     path: "manutencao-de-computador",
     trackingKey: "manutencao-computador",
-    metaTitle: "Assistência Técnica de Computador em Curitiba | PC",
+    metaTitle: "Manutenção e Conserto de Computador em Curitiba | PC",
     metaDescription:
-      "Assistência técnica de computador em Curitiba: travamentos, fonte, memória, HD/SSD e placa-mãe. Casa e empresa.",
+      "Manutenção e conserto de computador em Curitiba: diagnóstico de fonte, memória, SSD/HD, vídeo, temperatura, placa-mãe e Windows antes da troca de peça.",
     serviceName: "Manutenção de Computador (Desktop)",
     serviceDescription:
       "Diagnóstico e manutenção de PCs desktop: fonte, memória, armazenamento, placa-mãe, travamentos e limpeza, com atendimento em Curitiba e região.",
     eyebrow: "PC desktop em Curitiba",
-    h1: "Manutenção e assistência técnica de computador em Curitiba",
+    h1: "Manutenção e conserto de computador em Curitiba",
     h1Accent: "sem troca de peça desnecessária",
     intro:
-      "Computador que não liga, trava, reinicia sozinho, dá tela azul ou não dá vídeo? No desktop, quase todo componente pode ser testado de forma isolada — fonte, memória, armazenamento, placa de vídeo e placa-mãe. Testamos cada parte para isolar a causa real antes de indicar qualquer troca. Esta página é sobre PC de mesa; se o seu equipamento é notebook, veja a assistência específica. Fale pelo WhatsApp para começar o diagnóstico.",
+      "Computador de mesa que não liga, trava, reinicia, dá tela azul ou fica sem vídeo permite testar fonte, memória, armazenamento, placa de vídeo e placa-mãe por etapas. O diagnóstico isola o componente ou a camada de software antes de indicar troca. Esta página é sobre desktop; notebook segue um fluxo próprio de manutenção.",
     whatsappMessage: "Olá! Meu computador de mesa está com problema. Podem avaliar?",
     incluso: [
       { title: "Diagnóstico completo", desc: "Teste de fonte, memória, armazenamento e placa-mãe." },
@@ -300,7 +301,7 @@ export const SERVICOS_CORE: Record<string, ServicoLandingData> = {
     ],
     atendimento: {
       residencial:
-        "Manutenção de PC de mesa em domicílio ou por coleta e entrega em Curitiba e região, com diagnóstico transparente antes de aprovar qualquer serviço.",
+        "A modalidade é definida na triagem: software e configuração podem começar remotamente; rede e periféricos podem exigir visita; desmontagem, troca de componentes e testes prolongados normalmente seguem para bancada.",
       empresarial:
         "Manutenção de desktops e estações de trabalho de escritórios e empresas, de forma pontual ou preventiva, para manter a equipe produtiva.",
     },
@@ -308,7 +309,7 @@ export const SERVICOS_CORE: Record<string, ServicoLandingData> = {
       { question: "Meu PC liga mas não dá imagem, o que pode ser?", answer: "Pode ser memória, placa de vídeo, fonte ou placa-mãe. O diagnóstico isola o componente responsável antes de qualquer troca." },
       { question: "O computador reinicia sozinho, é grave?", answer: "Nem sempre. Costuma estar ligado a superaquecimento, fonte instável, memória ou software. Avaliamos para identificar a causa correta." },
       { question: "Vocês fazem limpeza e troca de pasta térmica?", answer: "Sim. A limpeza interna e a manutenção da refrigeração ajudam a reduzir travamentos e desligamentos por temperatura." },
-      { question: "Atendem em domicílio?", answer: "Sim, em Curitiba e região, com opção de coleta e entrega quando o reparo precisa de bancada." },
+      { question: "Atendem no endereço?", answer: "Quando o defeito depende do ambiente, da rede ou de periféricos, a visita pode ser adequada. Desmontagem, troca de componentes e testes prolongados normalmente exigem bancada. A modalidade é definida após a triagem." },
       { question: "Vale a pena consertar um PC antigo?", answer: "Depende do custo do reparo e de um upgrade frente ao valor da máquina. Explicamos com transparência quando compensa investir." },
       { question: "Computador lento precisa ser formatado?", answer: "Nem sempre. Lentidão pode estar relacionada a disco mecânico no fim da vida, memória insuficiente, temperatura alta ou sistema comprometido. A formatação só é indicada quando a causa é de software; o diagnóstico é o que faz essa separação." },
       { question: "Como saber se o problema é fonte ou placa-mãe?", answer: "Pela descrição não é possível afirmar. No desktop, alimentação e placa são testadas de forma isolada, com componentes conhecidos, para identificar qual dos dois está envolvido antes de qualquer substituição." },
@@ -384,17 +385,17 @@ export const SERVICOS_CORE: Record<string, ServicoLandingData> = {
   "upgrade-ssd-ram": {
     path: "upgrade-ssd-ram",
     trackingKey: "upgrade-ssd-ram",
-    metaTitle: "Instalação de SSD e Upgrade de Memória em Curitiba",
+    metaTitle: "Upgrade de SSD e RAM em Curitiba | SATA, NVMe e Memória",
     metaDescription:
-      "Instalação de SSD e upgrade de memória RAM em Curitiba com avaliação de compatibilidade, clonagem e backup. Ganho real de desempenho, sem promessa de milagre.",
+      "Upgrade de SSD e RAM em Curitiba com avaliação de SATA/NVMe, memória compatível, clonagem ou instalação limpa e backup antes da migração.",
     serviceName: "Upgrade de SSD e Memória RAM",
     serviceDescription:
       "Instalação de SSD e ampliação de RAM com avaliação de compatibilidade, clonagem do sistema e backup, para ganho real de desempenho em Curitiba e região.",
     eyebrow: "Desempenho em Curitiba",
-    h1: "Instalação de SSD e upgrade de memória RAM em Curitiba",
+    h1: "Upgrade de SSD e memória RAM em Curitiba",
     h1Accent: "ganho real de desempenho",
     intro:
-      "Trocar o HD por um SSD e ampliar a memória é o upgrade com melhor custo-benefício para a maioria das máquinas. Antes de indicar peça, avaliamos a compatibilidade do seu equipamento (SATA ou NVMe, limite de RAM) e, quando possível, clonamos o Windows para você não perder nada. O ganho é real, mas depende do gargalo de cada máquina — não prometemos milagre em equipamento condenado. Envie o modelo pelo WhatsApp para avaliação.",
+      "SSD e memória resolvem gargalos diferentes. Antes de indicar peça, verificamos se a lentidão vem de armazenamento, falta de RAM, temperatura ou software e confirmamos compatibilidade SATA/NVMe, slots e limite de memória. Clonagem ou instalação limpa é decidida pelo estado do sistema e do disco de origem. Envie o modelo e o sintoma pelo WhatsApp para avaliação.",
     whatsappMessage: "Olá! Quero fazer upgrade de SSD e/ou memória. Podem avaliar meu equipamento?",
     incluso: [
       { title: "Avaliação de compatibilidade", desc: "Checamos o que o seu equipamento suporta antes de indicar peças." },
@@ -495,16 +496,16 @@ export const SERVICOS_CORE: Record<string, ServicoLandingData> = {
       { label: "Técnico no seu endereço", to: "/atendimento-domicilio" },
       { label: "Preços e políticas", to: "/precos-e-politicas" },
     ],
-    dateModified: "2026-08-05",
+    dateModified: "2026-09-28",
   },
 
   // 5 ─────────────────────────────────────────────────────────
   "remocao-de-virus": {
     path: "remocao-de-virus",
     trackingKey: "remocao-virus",
-    metaTitle: "Remoção de Vírus e Malware em Curitiba | PC e Notebook",
+    metaTitle: "Remoção de vírus em Curitiba: malware, adware e navegador",
     metaDescription:
-      "Remoção de vírus, malware e sequestro de navegador em Curitiba. Limpeza segura, proteção dos seus dados e reinstalação quando necessário. Atendimento via WhatsApp.",
+      "Pop-ups, navegador sequestrado ou programas desconhecidos? Veja como funciona o diagnóstico, a limpeza e quando preservar dados ou reinstalar o sistema.",
     serviceName: "Remoção de Vírus e Malware",
     serviceDescription:
       "Remoção de vírus, malware e adware com proteção de dados, limpeza do navegador e reinstalação quando necessário, em Curitiba e região.",
@@ -719,17 +720,17 @@ export const SERVICOS_CORE: Record<string, ServicoLandingData> = {
   "redes-e-wifi": {
     path: "redes-e-wifi",
     trackingKey: "redes-wifi",
-    metaTitle: "Configuração de Redes e Wi-Fi em Curitiba | Roteadores",
+    metaTitle: "Wi-Fi e Redes em Curitiba | Mesh, Roteador e Cabeamento",
     metaDescription:
-      "Configuração de redes e Wi-Fi em Curitiba: internet instável, roteador, repetidor, cabeamento e rede empresarial. Cobertura melhor em casa e no trabalho.",
+      "Wi-Fi e redes em Curitiba: diagnóstico de sinal, roteador, mesh, repetidor, cabeamento e impressora em rede. Medição antes de indicar equipamento.",
     serviceName: "Redes e Wi-Fi",
     serviceDescription:
       "Instalação e configuração de redes e Wi-Fi residenciais e empresariais: roteador, repetidor, cabeamento e estabilidade, em Curitiba e região.",
     eyebrow: "Conectividade em Curitiba",
-    h1: "Instalação e configuração de redes e Wi-Fi em Curitiba",
+    h1: "Wi-Fi e redes em Curitiba: diagnóstico, cobertura e cabeamento",
     h1Accent: "internet estável em casa e na empresa",
     intro:
-      "Wi-Fi que cai, sinal fraco em alguns cômodos ou rede instável no trabalho? Avaliamos o ambiente e configuramos roteador, repetidores, mesh e cabeamento para melhorar cobertura e estabilidade. Muitas vezes o problema é o posicionamento ou o excesso de dispositivos, não o plano — mas falhas que são do provedor só confirmamos após diagnóstico. Fale pelo WhatsApp para avaliarmos o seu caso.",
+      "Wi-Fi que cai, sinal fraco em alguns cômodos ou rede instável no trabalho? Primeiro separamos cobertura, interferência, roteador, dispositivo e link do provedor. Só depois dessa medição indicamos reposicionamento, mesh, repetidor, cabeamento ou troca de equipamento. Fale pelo WhatsApp para descrever o ambiente e o sintoma.",
     whatsappMessage: "Olá! Preciso melhorar minha rede/Wi-Fi. Podem avaliar?",
     incluso: [
       { title: "Análise do ambiente", desc: "Avaliação de cobertura, interferências e pontos críticos." },
@@ -798,8 +799,8 @@ export const SERVICOS_CORE: Record<string, ServicoLandingData> = {
         titulo: "Por que o Wi-Fi cai em parte da casa (e o repetidor nem sempre resolve)",
         paragrafos: [
           "A queixa mais comum não é falta de internet, é falta de cobertura. O roteador costuma ficar onde o cabo da operadora entrou — hall, área de serviço, atrás da TV — e o sinal ainda precisa atravessar parede de concreto, laje, caixa d'água e espelho. Em imóveis alongados ou sobrados de Curitiba, o resultado é sempre o mesmo: sala com sinal cheio e quarto dos fundos com conexão que cai na videochamada.",
-          "Repetidor simples entrega metade da banda, porque escuta e retransmite pelo mesmo rádio. Quando ele é instalado justamente onde o sinal já chegava fraco, o problema piora: o celular gruda no repetidor ruim em vez de voltar ao roteador. Por isso medimos antes de indicar equipamento — em muitos casos, reposicionar o roteador e corrigir canal resolve sem custo de hardware.",
-          "Em prédios com muitas redes vizinhas, a faixa de 2,4 GHz vive congestionada. Separar as bandas, fixar canal limpo e priorizar 5 GHz para os aparelhos próximos costuma devolver estabilidade imediata, sem trocar nada.",
+          "Repetidor pode reduzir o throughput disponível quando usa o mesmo rádio para receber e retransmitir, e o resultado piora se ele for instalado onde o sinal de origem já chega fraco. Por isso medimos antes de indicar equipamento — em alguns cenários, reposicionar o roteador ou ajustar canal e banda resolve sem adicionar hardware.",
+          "Em prédios com muitas redes vizinhas, a faixa de 2,4 GHz pode ficar congestionada. Separar bandas, revisar canais e priorizar 5 GHz para dispositivos compatíveis e próximos pode melhorar estabilidade sem exigir troca imediata de equipamento.",
         ],
       },
       {
@@ -842,25 +843,25 @@ export const SERVICOS_CORE: Record<string, ServicoLandingData> = {
       { label: "Suporte para empresas", to: "/empresa-de-ti-curitiba" },
       { label: "Preços e políticas", to: "/precos-e-politicas" },
     ],
-    dateModified: "2026-08-06",
+    dateModified: "2026-09-26",
   },
 
   // 8 ─────────────────────────────────────────────────────────
   "suporte-tecnico-empresarial": {
     path: "suporte-tecnico-empresarial",
     trackingKey: "suporte-empresarial",
-    metaTitle: "Suporte Técnico para Empresas em Curitiba | Informática",
+    metaTitle: "Suporte Técnico Empresarial | Help Desk e Assistência de TI",
     metaDescription:
-      "Suporte técnico de informática para empresas em Curitiba, com atendimento para computadores, usuários, redes, impressoras e manutenção preventiva.",
+      "Suporte técnico empresarial e help desk: estações, usuários, rede, impressoras, backup, acesso remoto e atendimento avulso ou recorrente com escopo definido.",
     serviceName: "Suporte Técnico Empresarial",
     serviceDescription:
-      "Suporte de informática para empresas: estações, rede, impressoras, backups e manutenção preventiva, com atendimento pontual ou recorrente em Curitiba e região.",
-    eyebrow: "Empresas em Curitiba",
-    h1: "Suporte técnico de informática para empresas em Curitiba",
+      "Suporte de informática para empresas: estações, rede, impressoras, backups e manutenção preventiva, com atendimento pontual ou recorrente conforme escopo e modalidade.",
+    eyebrow: "Suporte para empresas",
+    h1: "Suporte técnico empresarial e help desk para empresas",
     h1Accent: "menos paradas, mais previsibilidade",
     intro:
-      "Empresa parada custa caro. Damos suporte técnico às estações de trabalho da equipe, à rede interna, às impressoras compartilhadas e às rotinas de backup, com atendimento pontual para emergências ou recorrente para prevenir problemas. É o suporte prático do dia a dia; a estruturação institucional de TI mais ampla você encontra na página Empresa de TI em Curitiba. Fale pelo WhatsApp para avaliarmos a necessidade.",
-    whatsappMessage: "Olá! Preciso de suporte técnico de informática para uma empresa em Curitiba.",
+      "Suporte técnico empresarial organiza incidentes de estações, usuários, rede, impressão, backup e acesso a sistemas sem confundir help desk avulso com contrato recorrente. Esta página explica escopo, modalidades, limites e triagem; a contratação local por cidade permanece nas páginas específicas.",
+    whatsappMessage: "Olá! Preciso de suporte técnico de informática para uma empresa.",
     incluso: [
       { title: "Estações de trabalho", desc: "Manutenção e configuração dos computadores da equipe." },
       { title: "Rede e conectividade", desc: "Estabilidade, segurança e organização da rede interna." },
@@ -883,8 +884,8 @@ export const SERVICOS_CORE: Record<string, ServicoLandingData> = {
       { title: "Complexidade da rede", desc: "Infraestrutura, servidores locais e segmentação." },
       { title: "Escopo do serviço", desc: "Atendimento pontual, projeto específico ou acompanhamento recorrente." },
       { title: "Rotinas de backup", desc: "Estruturar e manter backups influencia o escopo." },
-      { title: "Urgência", desc: "Emergências com empresa parada podem alterar prioridade." },
-      { title: "Deslocamento", desc: "Atendimento presencial considera a localização em Curitiba e região." },
+      { title: "Impacto operacional", desc: "Chamados que bloqueiam faturamento, acesso ou trabalho de várias pessoas recebem prioridade conforme agenda e escopo contratado." },
+      { title: "Deslocamento", desc: "Quando o atendimento é presencial, localização e modalidade são consideradas antes do agendamento." },
     ],
     atendimento: {
       residencial:
@@ -901,7 +902,7 @@ export const SERVICOS_CORE: Record<string, ServicoLandingData> = {
       { question: "É possível atender vários computadores?", answer: "Sim. Atendimentos com várias estações são organizados por lote e por prioridade, para que a operação não pare inteira durante o serviço." },
       { question: "Como funciona o faturamento?", answer: "O escopo é definido após o diagnóstico e o valor é apresentado e aprovado antes da execução. As formas de pagamento e as condições aplicáveis estão descritas na página de preços e políticas." },
       { question: "O atendimento empresarial tem garantia?", answer: "Sim, conforme o serviço executado e as condições publicadas em preços e políticas. A garantia cobre o serviço realizado, não novas falhas de causa diferente nem alterações feitas depois da entrega." },
-      { question: "Vocês atendem empresas de qual porte?", answer: "Atendemos principalmente autônomos, escritórios, comércios e micro e pequenas empresas em Curitiba e região, de forma avulsa ou recorrente, dentro da nossa capacidade operacional." },
+      { question: "Vocês atendem empresas de qual porte?", answer: "Atendemos principalmente autônomos, escritórios, comércios e micro e pequenas empresas, de forma avulsa ou recorrente, dentro da nossa capacidade operacional." },
       { question: "Como funciona o atendimento recorrente?", answer: "Definimos escopo, itens acompanhados e periodicidade conforme a necessidade da empresa. Não é suporte ilimitado: o que está incluído e o que é cobrado à parte fica registrado antes de começar." },
       { question: "Fazem atendimento de emergência?", answer: "Avaliamos situações com operação parada e priorizamos o restabelecimento conforme a disponibilidade da agenda. Não mantemos plantão em regime ininterrupto." },
       { question: "Resolvem problemas de rede e impressão?", answer: "Sim, esses estão entre os chamados mais comuns. Casos que envolvem cobertura, cabeamento ou reestruturação da conectividade são conduzidos pela página de redes e Wi-Fi." },
@@ -914,6 +915,7 @@ export const SERVICOS_CORE: Record<string, ServicoLandingData> = {
     ],
 
     relacionados: [
+      { label: "Suporte empresarial em Curitiba", to: "/servicos/suporte-tecnico-empresarial/curitiba" },
       { label: "Empresa de TI em Curitiba", to: "/empresa-de-ti-curitiba" },
       { label: "Manutenção preventiva para empresas", to: "/servicos/manutencao-preventiva-empresas" },
       { label: "Backup para empresas", to: "/servicos/backup-para-empresas" },
@@ -963,12 +965,13 @@ export const SERVICOS_CORE: Record<string, ServicoLandingData> = {
     ],
 
     linksLocais: [
+      { label: "Suporte empresarial em Curitiba", to: "/servicos/suporte-tecnico-empresarial/curitiba" },
       { label: "Empresa de TI em Curitiba", to: "/empresa-de-ti-curitiba" },
       { label: "Atendimento técnico em Curitiba", to: "/tecnico-informatica-curitiba" },
       { label: "Atendimento remoto", to: "/atendimento-remoto" },
       { label: "Preços e políticas", to: "/precos-e-politicas" },
     ],
-    dateModified: "2026-08-06",
+    dateModified: "2026-09-26",
   },
 
   // 9 ─────────────────────────────────────────────────────────
@@ -1477,17 +1480,17 @@ export const SERVICOS_CORE: Record<string, ServicoLandingData> = {
   "conserto-tv": {
     path: "conserto-tv",
     trackingKey: "conserto-tv",
-    metaTitle: "Conserto de TV e Smart TV em Curitiba | Bancada e Coleta",
+    metaTitle: "Conserto e Assistência Técnica de TV em Curitiba | Smart TV",
     metaDescription:
-      "Conserto de TV LED, LCD e Smart TV em Curitiba: avaliação em bancada, reparo em nível de componente quando viável, coleta e entrega.",
+      "Conserto e assistência técnica de TV e Smart TV em Curitiba: LED/LCD, sem imagem, backlight, fonte e placa. Triagem e coleta para diagnóstico em bancada.",
     serviceName: "Conserto de TV e Smart TV",
     serviceDescription:
-      "Avaliação e reparo de TV LED, LCD e Smart TV em Curitiba e região, com trabalho em bancada, reparo em nível de componente quando viável, critérios claros de aceite e recusa e logística de coleta e entrega.",
+      "Conserto de televisores LED, LCD e Smart TV em Curitiba e região, com coleta, avaliação em bancada, reparo em nível de componente quando viável e critérios claros de aceite ou recusa.",
     eyebrow: "TV e Smart TV em Curitiba",
-    h1: "Conserto de TV e Smart TV em Curitiba",
+    h1: "Conserto e assistência técnica de TV e Smart TV em Curitiba",
     h1Accent: "com avaliação em bancada, coleta e entrega",
     intro:
-      "Televisor que não liga, liga sem imagem, mostra imagem com listras ou manchas, perde o som, reinicia sozinho ou trava na tela da marca. Esses sintomas têm causas diferentes — fonte, placa principal, comando do painel, iluminação interna ou o próprio painel — e só a avaliação em bancada separa o que é reparável do que não compensa. Não fazemos visita para TV: o aparelho é coletado, avaliado com o equipamento aberto e você recebe o resultado por escrito antes de qualquer serviço. Descreva marca, modelo e sintoma pela triagem no WhatsApp.",
+      "TV LED, LCD ou Smart TV que não liga, fica sem imagem, perde o som, reinicia ou trava na tela da marca precisa de diagnóstico por sintoma. Fonte, placa principal, backlight, comando do painel e o próprio painel podem produzir sinais parecidos. A triagem começa pelo WhatsApp; quando o caso exige abertura e medição, o fluxo é coleta, avaliação em bancada e orçamento antes de qualquer reparo. Não prometemos conserto no endereço sem diagnóstico. Informe marca, modelo, tamanho e sintoma.",
     whatsappMessage:
       "Olá! Vim da página de conserto de TV e Smart TV. Triagem: (1) marca e modelo: (2) tamanho da tela: " +
       "(3) o que acontece ao ligar (não liga / sem imagem / sem som / listras / reinicia): (4) houve queda, raio ou oscilação de energia: " +
@@ -1530,33 +1533,34 @@ export const SERVICOS_CORE: Record<string, ServicoLandingData> = {
         "Televisores usados como painel em recepção, sala de reunião e área de espera: mesmo processo de bancada, com registro por equipamento para controle interno da empresa.",
     },
     faqs: [
-      { question: "Vocês fazem visita para consertar TV?", answer: "Não. Televisor exige bancada, instrumentos de medição e espaço de apoio para abrir o aparelho com segurança — nada disso é reproduzível na sala do cliente. Por isso o atendimento de TV é sempre por coleta, avaliação em laboratório e entrega. As condições e a taxa mínima estão publicadas na página de coleta e entrega e em preços e políticas." },
+      { question: "Tem conserto de TV a domicílio em Curitiba?", answer: "Não. O reparo de TV exige bancada, instrumentos de medição e apoio adequado para abrir o aparelho com segurança. O fluxo é coleta, avaliação em bancada e devolução. As condições da coleta e os valores aplicáveis ficam nas páginas de coleta e entrega e de preços e políticas." },
       { question: "Como sei se vale a pena consertar minha TV?", answer: "A resposta honesta só existe depois da avaliação com o aparelho aberto. Defeito de fonte ou de iluminação interna costuma ter reparo viável; painel trincado, com mancha de impacto ou com falha interna de linha normalmente não compensa, porque o painel é a parte mais cara do conjunto. Quando o reparo não compensa, dizemos isso e você decide — não empurramos serviço." },
       { question: "TV com tela quebrada tem conserto?", answer: "Na prática, não trabalhamos com troca de painel. Painel trincado, com marca de impacto ou com mancha interna é considerado fora de reparo aqui, porque o custo da peça e o risco de manuseio se aproximam ou ultrapassam o valor do aparelho. Você recebe essa informação na triagem, antes da coleta, para não pagar por uma avaliação previsível." },
       { question: "O que é reparo em nível de componente numa TV?", answer: "É trabalhar dentro da placa em vez de trocar a placa inteira. Medimos os estágios do circuito, identificamos o componente que falhou e substituímos apenas ele quando é viável e seguro. Nem todo defeito permite esse caminho: circuitos com componente indisponível, placa com dano extenso por corrosão ou por descarga elétrica, e módulos que só o fabricante fornece já montados seguem outra rota." },
       { question: "A tela está escura mas o som funciona. O que costuma ser?", answer: "Esse é o sintoma mais associado ao conjunto de iluminação interna ou ao circuito que o alimenta. Também pode envolver o comando do painel. A verificação é feita em bancada, com o aparelho aberto e medição direta — sem abrir, qualquer diagnóstico é chute. Só depois da medição informamos o que foi encontrado e qual o escopo do reparo." },
       { question: "Vocês consertam Smart TV travada na tela da marca?", answer: "Avaliamos. Travamento na inicialização pode vir de falha de alimentação, de memória interna ou da própria placa principal. O que não fazemos é modificação não oficial de software, instalação de firmware de origem duvidosa nem desbloqueio de recursos do aparelho. Trabalhamos com procedimentos suportados pelo fabricante ou com reparo eletrônico." },
       { question: "Minha TV tomou raio. Ainda dá para avaliar?", answer: "Dá para avaliar, com a ressalva de que descarga elétrica raramente atinge um ponto só. É comum encontrar fonte, placa principal e entradas comprometidas ao mesmo tempo. Nesses casos a avaliação define o quanto do conjunto foi afetado, e a decisão de seguir ou não depende da relação entre o escopo encontrado e o valor do aparelho." },
-      { question: "Existe garantia no conserto de TV?", answer: "Sim: 90 dias sobre a mão de obra e sobre o reparo executado, contados da entrega. A garantia cobre o defeito tratado e o serviço realizado. Ficam fora dela outros defeitos que apareçam depois em pontos diferentes do aparelho, dano por nova oscilação elétrica, queda, infiltração, tentativa de reparo por terceiros e o painel, que não é peça reparada por nós." },
+      { question: "Como funciona a garantia no conserto de TV?", answer: "A garantia segue o serviço executado e o ponto reparado, conforme as condições publicadas em preços e políticas. O laudo identifica o defeito tratado e os limites de cobertura, incluindo situações como dano novo, surto posterior, queda, infiltração ou intervenção de terceiros." },
       { question: "Vocês trabalham com peças originais?", answer: "Trabalhamos com componentes adequados à especificação do circuito. Em linha de televisores, boa parte dos componentes eletrônicos é de mercado e não tem versão de marca do fabricante do aparelho. Quando o reparo depende de módulo específico, informamos a origem da peça e o valor antes de comprar — nada é adquirido sem a sua autorização." },
       { question: "Quanto tempo demora o conserto de uma TV?", answer: "Não trabalhamos com promessa de prazo fixo. Depende do defeito encontrado, da necessidade de peça e da disponibilidade do componente no mercado. Depois da avaliação você recebe uma previsão realista para o seu caso específico, e qualquer mudança nessa previsão é comunicada." },
       { question: "Posso levar a TV até vocês em vez de coletar?", answer: "O fluxo padrão é a coleta, justamente porque o transporte de televisor tem risco: painel é sensível a pressão e a torção, e um aparelho mal apoiado no carro chega com dano novo. Se você preferir outro arranjo, trate isso na triagem pelo WhatsApp antes de mover o aparelho." },
-      { question: "Vocês consertam monitor de computador também?", answer: "Monitor entra como categoria atendida na avaliação de equipamentos, com o mesmo critério de bancada e as mesmas limitações de painel. Não existe página nem processo separado: o encaminhamento é feito pela triagem, junto com as demais categorias de equipamentos atendidos." },
+      { question: "Vocês consertam monitor de computador também?", answer: "Sim, monitor possui fluxo próprio de triagem e bancada. A página de conserto e manutenção de monitor detalha fonte, backlight, placa, entradas de vídeo e as limitações de painel antes da coleta." },
     ],
     relacionados: [
       { label: "Coleta e entrega", to: "/coleta-e-entrega" },
       { label: "Conserto de placa eletrônica", to: "/servicos/conserto-placa" },
+      { label: "Conserto de monitor", to: "/servicos/conserto-monitor" },
       { label: "Equipamentos atendidos", to: "/equipamentos-atendidos" },
       { label: "Quando não compensa consertar", to: "/quando-nao-compensa" },
       ...LINKS_BASE,
     ],
     blocoLocal: [
       {
-        titulo: "Sintomas de TV e o que cada um costuma indicar",
+        titulo: "Conserto de TV LED, LCD e Smart TV: sintomas e diagnóstico",
         paragrafos: [
           "Televisor que não dá nenhum sinal de vida — sem luz de espera, sem estalo, sem reação ao controle nem ao botão físico — aponta para o estágio de alimentação. A fonte de uma TV entrega tensões diferentes para partes diferentes do aparelho, e a falha de um único estágio pode derrubar tudo ou apenas parte do conjunto. É por isso que a medição precisa ser feita com o aparelho aberto e energizado por quem sabe onde encostar a ponta de prova: o interior de uma TV mantém pontos com tensão perigosa mesmo desligada da tomada.",
-          "Tela escura com som normal é outro cenário, e é o mais frequente na bancada. O aparelho processa o sinal, o áudio sai, mas nada aparece. Na maioria das vezes o problema está na iluminação interna do painel ou no circuito que a alimenta. Uma forma caseira de suspeitar disso é iluminar a tela de perto com uma lanterna, em ambiente escuro, e verificar se a imagem aparece fraca ao fundo. Isso é indício, não diagnóstico: a confirmação exige medição.",
-          "Listras verticais, faixas horizontais, manchas escuras que não mudam de lugar e áreas com cor deslocada normalmente têm origem no painel ou na conexão entre o painel e a placa que o comanda. Esse é o grupo de sintomas com maior chance de recusa técnica, porque o painel não é peça que reparamos. Já reinício espontâneo, desligamento após alguns minutos e travamento na tela da marca costumam envolver alimentação instável ou a placa principal, e esses têm chance real de reparo.",
+          "Tela escura com som normal é um sintoma comum em televisores LED e pode envolver a iluminação interna do painel ou o circuito que a alimenta; outras causas também são possíveis. Iluminar a tela de perto com uma lanterna, em ambiente escuro, pode revelar imagem fraca ao fundo e servir como indício, mas a confirmação exige medição em bancada.",
+          "Listras verticais, faixas horizontais, manchas fixas e áreas com cor deslocada podem envolver o painel ou a conexão entre ele e a placa de controle. Como não trabalhamos com troca de painel, a avaliação precisa separar falha de painel de falha eletrônica antes de indicar reparo. Reinício espontâneo, desligamento após alguns minutos e travamento na tela da marca podem envolver alimentação ou placa principal e também exigem medição.",
           "Perda de som com imagem normal, entrada HDMI que parou de funcionar em todas as fontes e falha de rede na Smart TV são sintomas de circuitos específicos da placa principal. Nesses casos vale um teste prévio simples antes de mover o aparelho: trocar o cabo, testar outra entrada, testar outra fonte de vídeo e reiniciar o aparelho pela tomada. Se o comportamento se mantém em todas as combinações, a origem é interna.",
         ],
       },
@@ -1589,7 +1593,7 @@ export const SERVICOS_CORE: Record<string, ServicoLandingData> = {
       {
         titulo: "Garantia, limites e o que não prometemos",
         paragrafos: [
-          "A garantia é de 90 dias sobre a mão de obra e sobre o reparo executado, contados da entrega. Ela cobre exatamente o defeito tratado. Se o mesmo problema retornar dentro desse período, o aparelho volta para a bancada sem custo de mão de obra. O que não está coberto: defeito novo em outro ponto do televisor, dano por descarga elétrica posterior, queda, infiltração, uso em tensão incorreta, e qualquer intervenção feita por terceiros depois da nossa entrega.",
+          "A garantia acompanha o serviço efetivamente executado e o ponto reparado, conforme as condições publicadas em preços e políticas. O laudo registra o defeito tratado e as limitações aplicáveis. Defeito novo em outro ponto do televisor, descarga elétrica posterior, queda, infiltração, uso inadequado ou intervenção de terceiros não são tratados como continuação automática do reparo anterior.",
           "Também não prometemos o que não podemos sustentar. Não garantimos que todo televisor tem conserto, não damos prazo fixo antes de saber qual peça o caso exige, não afirmamos que o aparelho vai durar mais um número específico de anos e não dizemos que o reparo devolve o televisor ao estado de novo. Equipamento com muitos anos de uso tem desgaste natural em componentes que ainda funcionam, e isso não é reparável de forma preventiva sem trocar tudo — o que não faz sentido econômico.",
           "Quando o reparo não compensa, a orientação é essa mesma, e ela vem acompanhada do motivo. Aparelho de tela menor com defeito no painel, televisor antigo cuja peça necessária custa mais que um modelo novo equivalente, ou conjunto com dano em várias frentes: nesses casos dizer que não vale a pena é o serviço mais útil que podemos prestar. A página sobre quando não compensa consertar detalha esse raciocínio para todas as categorias que atendemos.",
         ],
@@ -1601,7 +1605,7 @@ export const SERVICOS_CORE: Record<string, ServicoLandingData> = {
       { label: "Quando não compensa consertar", to: "/quando-nao-compensa" },
       { label: "Equipamentos atendidos", to: "/equipamentos-atendidos" },
     ],
-    dateModified: "2026-08-07",
+    dateModified: "2026-09-28",
   },
 
   // 14 ─────────────────────────────────────────────────────────
@@ -1718,17 +1722,17 @@ export const SERVICOS_CORE: Record<string, ServicoLandingData> = {
   "conserto-monitor": {
     path: "conserto-monitor",
     trackingKey: "conserto-monitor",
-    metaTitle: "Conserto de Monitor em Curitiba | Fonte, Backlight e Placa",
+    metaTitle: "Conserto e Manutenção de Monitor em Curitiba | LCD e LED",
     metaDescription:
-      "Conserto de monitor em Curitiba: monitor que não liga, sem imagem, piscando ou com backlight apagado.",
+      "Conserto e manutenção de monitor em Curitiba: diagnóstico de LCD/LED, fonte, backlight, placa e entradas de vídeo antes de indicar reparo.",
     serviceName: "Conserto de monitor",
     serviceDescription:
       "Avaliação e conserto de monitores em Curitiba e região: falhas de alimentação, fonte interna e externa, backlight, placa lógica e entradas de vídeo, com trabalho em bancada, critérios de aceite declarados e logística de coleta e entrega.",
     eyebrow: "Monitores em Curitiba",
-    h1: "Conserto de monitor em Curitiba",
+    h1: "Conserto e manutenção de monitor em Curitiba",
     h1Accent: "com avaliação em bancada e reparo em nível de componente",
     intro:
-      "Monitor que não liga, que acende o LED e não mostra imagem, que fica piscando ou que só aparece quando você aponta uma lanterna para a tela. Boa parte desses casos é falha elétrica — fonte, alimentação ou placa lógica — e tem reparo viável sem trocar o aparelho. O que não tratamos é dano físico ao painel: tela trincada ou com mancha de pressão depende de uma peça que costuma custar mais que um monitor novo, e dizemos isso antes de você gastar com coleta. Envie marca, modelo e o sintoma pela triagem no WhatsApp.",
+      "Monitor LCD/LED que não liga, acende o LED sem imagem, pisca ou fica escuro precisa ser separado entre alimentação, backlight, placa lógica, entrada de vídeo e painel. Falha eletrônica pode ter reparo viável; dano físico de painel costuma ter baixa viabilidade econômica e é triado antes da coleta. Envie marca, modelo, polegadas e o sintoma pelo WhatsApp.",
     whatsappMessage:
       "Olá! Vim da página de conserto de monitor e quero fazer a triagem. " +
       "(1) marca, modelo e polegadas: (2) o monitor liga (o LED de energia acende): " +
@@ -1777,7 +1781,7 @@ export const SERVICOS_CORE: Record<string, ServicoLandingData> = {
       { question: "A tela está preta mas o LED acende. O que é?", answer: "São dois cenários distintos e a bancada separa um do outro. Se ao apontar uma lanterna bem próxima da tela você consegue enxergar a imagem fraca, a imagem está sendo gerada normalmente e o que falhou foi a iluminação: driver de backlight ou barra de LED. Se não aparece nada nem com a lanterna, a suspeita passa para a placa lógica ou para o estágio de entrada de vídeo. O teste da lanterna é o primeiro que fazemos no recebimento, porque muda todo o caminho do diagnóstico." },
       { question: "Vocês trocam painel de monitor trincado?", answer: "Não. Essa é uma recusa declarada antes da coleta e ela vale para trinca, mancha de pressão, marca de impacto e infiltração no painel. O motivo é econômico e não técnico: o painel é a peça mais cara do conjunto e, na maior parte dos modelos, custa próximo ou acima do valor de um monitor novo equivalente. Preferimos dizer isso na triagem a coletar o aparelho, cobrar avaliação e devolver com a mesma resposta. Falhas eletrônicas e de alimentação, ao contrário, costumam ter boa viabilidade de reparo." },
       { question: "Monitor gamer de alta taxa de atualização tem atendimento?", answer: "Sim, para as mesmas falhas de qualquer outro monitor: alimentação, fonte externa, backlight, conector de vídeo e placa. O que não fazemos é prometer validação de desempenho. Não temos bancada dedicada para certificar taxa de atualização máxima, tempo de resposta, faixa de cor ampliada ou sincronização adaptativa, então não anunciamos esses itens como resultado do reparo. Testamos o monitor funcionando em duas entradas de vídeo, de forma estável, e é isso que declaramos no laudo." },
-      { question: "Qual é a garantia do conserto de monitor?", answer: "90 dias sobre a mão de obra e sobre o ponto reparado, contados da entrega. A cobertura é do defeito tratado e do componente que substituímos. Não estão cobertos: defeito novo em outro estágio do aparelho, dano por surto ou oscilação elétrica posterior, queda, infiltração, uso em tensão incorreta, intervenção de terceiros depois da nossa entrega e o painel, que não é peça reparada por nós. Quando o monitor chega com histórico de líquido ou de reparo anterior, a cobertura é registrada de forma ainda mais delimitada no laudo." },
+      { question: "Como funciona a garantia do conserto de monitor?", answer: "A garantia segue o serviço executado e o ponto efetivamente reparado, conforme as condições publicadas em preços e políticas. O laudo informa o que foi tratado e quais situações ficam fora da cobertura, como dano novo, surto posterior, queda, líquido ou intervenção de terceiros." },
       { question: "Compensa consertar ou é melhor comprar outro?", answer: "É a pergunta que a avaliação responde, e nem sempre a resposta favorece o reparo. Pesamos o valor do serviço, o valor de um monitor equivalente novo, a idade do aparelho, o tamanho e o estado geral. Em monitores pequenos e antigos, muito fora de garantia, o reparo frequentemente não compensa e dizemos isso. Já em monitores maiores, ultrawide, curvos ou de uso profissional, uma falha de fonte costuma ser bem mais barata de resolver do que substituir o conjunto." },
       { question: "Como funciona a coleta do monitor?", answer: "Pela logística de coleta e entrega, nas faixas de distância publicadas: até 8 km, de 8 a 15 km e de 15 a 30 km, o que inclui Curitiba e cidades vizinhas como São José dos Pinhais, Pinhais, Colombo, Araucária e Campo Largo. No recebimento registramos marca, modelo, número de série, estado do painel com foto, base ou pedestal, cabo e fonte. Esse registro protege os dois lados em caso de dúvida sobre avaria de transporte, e é por isso que ele é obrigatório." },
       { question: "Preciso enviar a base e os cabos junto?", answer: "A fonte externa sim, sempre, porque em muitos casos o defeito está nela e não no monitor. A base ou pedestal ajuda no teste final, já que o aparelho precisa ficar em pé e ligado por um período contínuo. O cabo de vídeo é opcional: temos cabos de bancada para o teste, mas se o seu cabo é parte da suspeita, envie junto para que possamos descartá-lo. Monitor ultrawide, curvo ou acima de 32 polegadas exige embalagem extra, e orientamos isso na triagem." },
@@ -1788,7 +1792,7 @@ export const SERVICOS_CORE: Record<string, ServicoLandingData> = {
       { question: "Existe risco de danificar o monitor durante o conserto?", answer: "Existe, e ele é declarado antes da coleta. Abrir um monitor envolve soltar clipes plásticos que endurecem com o tempo, manipular o cabo plano que liga a placa ao painel e movimentar o conjunto óptico. Em aparelhos antigos, plástico quebradiço pode trincar na abertura, e em alguns modelos o painel é acessível apenas por um caminho que exige manuseio direto. Trabalhamos com o aparelho apoiado, ferramenta apropriada e registro fotográfico de entrada, e você recebe aviso quando o modelo é de risco maior. O que não fazemos é prometer risco zero em equipamento que já chega com defeito." },
       { question: "O monitor pegou raio ou queda de energia. Muda alguma coisa?", answer: "Muda bastante. Surto elétrico raramente danifica um único ponto: normalmente atinge o estágio de entrada, pode alcançar o conversor de tensão e às vezes chega à placa lógica. Reparamos o que está no caminho identificado, mas alertamos que dano por surto costuma deixar componentes marginalmente comprometidos, que falham semanas depois. Por isso a garantia nesses casos cobre o ponto reparado e não o aparelho como um todo, e isso fica escrito no laudo. Se você tem outros equipamentos na mesma tomada, vale revisar o aterramento e o protetor antes da devolução." },
       { question: "Posso usar o monitor com uma fonte genérica enquanto isso?", answer: "Não recomendamos. Fonte com tensão correta mas corrente insuficiente faz o monitor ligar e desligar em ciclo, e fonte com polaridade ou tensão errada danifica o estágio de entrada de forma imediata e irreversível. Boa parte dos monitores que chegam com placa queimada passou por isso. Se a suspeita é da fonte, envie a original junto na coleta: testamos as duas e informamos qual peça precisa ser substituída." },
-      { question: "Qual é o prazo típico do conserto de monitor?", answer: "A avaliação em bancada fica pronta em até 2 dias úteis depois do recebimento, e você recebe o laudo com o valor antes de qualquer reparo. Aprovado o serviço, o caso mais comum — fonte, alimentação ou backlight com componente de linha — costuma ser concluído em 2 a 5 dias úteis. Reparo em placa lógica com necessidade de peça específica pode chegar a 10 dias úteis, dependendo do fornecimento. A coleta e a entrega entram além desse prazo, conforme a faixa de distância. Quando qualquer etapa atrasa, avisamos com o motivo em vez de deixar você perguntando." },
+      { question: "Quanto tempo leva o conserto de monitor?", answer: "O prazo é informado depois da avaliação, porque depende da falha encontrada, da desmontagem necessária e da disponibilidade de componente. Fonte, backlight e placa lógica têm tempos diferentes; coleta e entrega também entram no planejamento quando aplicáveis." },
       { question: "E se depois da avaliação eu não quiser fazer o conserto?", answer: "Você paga apenas a avaliação e a logística, e o monitor volta montado, com todas as peças e no mesmo estado em que chegou. Não fazemos retenção de equipamento e não desmontamos aparelho recusado para aproveitamento de peça. O laudo é seu e traz o que foi medido, o que foi encontrado e por que recomendamos ou não o reparo — inclusive quando a nossa recomendação é a de não consertar." },
     ],
     relacionados: [
@@ -1802,7 +1806,7 @@ export const SERVICOS_CORE: Record<string, ServicoLandingData> = {
       {
         titulo: "Os quatro caminhos de falha de um monitor",
         paragrafos: [
-          "Monitor é um equipamento com poucas partes e uma sequência de falha bastante previsível, o que torna o diagnóstico objetivo quando a bancada segue método. O primeiro caminho é a alimentação externa: o adaptador de fonte, aquele bloco que fica no cabo, é o componente que mais falha em toda a categoria. Ele envelhece, perde capacidade e passa a entregar tensão instável, o que faz o monitor desligar sozinho, piscar ou simplesmente não ligar. É a falha mais barata de resolver e a primeira que verificamos, justamente porque não faz sentido abrir um aparelho antes de descartar o que está fora dele.",
+          "Monitor tem poucos blocos funcionais principais, e o diagnóstico fica mais objetivo quando a bancada segue uma sequência. O primeiro caminho é a alimentação externa: o adaptador de fonte, quando existe, é uma causa comum e simples de descartar antes de abrir o aparelho. Ele pode perder capacidade e entregar tensão instável, fazendo o monitor desligar, piscar ou deixar de ligar. Por isso fonte, tomada, cabo e sinal de vídeo entram cedo no diagnóstico.",
           "O segundo caminho é a fonte interna, presente nos modelos que ligam direto na tomada. Aqui o padrão são capacitores que perdem característica com o tempo e com o calor, além de estágios de chaveamento que desarmam. O sintoma clássico é o monitor que tenta ligar, dá um sinal de vida e desiste, ou que funciona por alguns minutos e apaga. Esse conjunto de defeitos costuma ter reparo viável em nível de componente, com substituição pontual das peças que saíram de especificação, e é onde o trabalho de bancada mais se paga em relação a comprar outro aparelho.",
           "O terceiro caminho é a iluminação, o chamado backlight. A imagem continua sendo gerada, mas a tela fica escura porque o driver de iluminação ou as barras de LED pararam. O teste da lanterna resolve essa dúvida em segundos, e o reparo varia bastante: driver com componente queimado tem solução direta, enquanto barra de LED depende de peça compatível e de abrir o conjunto óptico. O quarto caminho é a placa lógica, responsável por interpretar o sinal das entradas HDMI, DisplayPort, VGA e USB-C — inclui desde conector físico solto ou quebrado até estágio de entrada danificado por conexão a quente.",
         ],
@@ -1830,7 +1834,7 @@ export const SERVICOS_CORE: Record<string, ServicoLandingData> = {
       { label: "Coleta e entrega", to: "/coleta-e-entrega" },
       { label: "Equipamentos atendidos", to: "/equipamentos-atendidos" },
     ],
-    dateModified: "2026-08-07",
+    dateModified: "2026-09-28",
   },
 
   // 16 ────────────────────────────────────────────────────────
@@ -1840,9 +1844,9 @@ export const SERVICOS_CORE: Record<string, ServicoLandingData> = {
   "pc-gamer": {
     path: "pc-gamer",
     trackingKey: "pc-gamer",
-    metaTitle: "Manutenção de PC Gamer em Curitiba | Desempenho e Upgrade",
+    metaTitle: "PC gamer travando ou esquentando em Curitiba? Diagnóstico",
     metaDescription:
-      "Manutenção de PC gamer em Curitiba: queda de FPS, travamento, superaquecimento e desligamento em jogo. Medição de temperatura, revisão de fonte e upgrade avaliado antes.",
+      "Queda de FPS, travamentos ou desligamentos em jogo? Veja como separar temperatura, fonte, armazenamento e software antes de trocar placa ou fazer upgrade.",
     serviceName: "Manutenção e Upgrade de PC Gamer",
     serviceDescription:
       "Diagnóstico de desempenho, temperatura e estabilidade em computadores gamer, com limpeza, revisão térmica, avaliação de fonte e upgrade de componentes em Curitiba e região.",
@@ -1954,17 +1958,17 @@ export const SERVICOS_CORE: Record<string, ServicoLandingData> = {
   "conserto-impressora-3d": {
     path: "conserto-impressora-3d",
     trackingKey: "conserto-impressora-3d",
-    metaTitle: "Conserto de Impressora 3D em Curitiba | FDM e Resina",
+    metaTitle: "Assistência Técnica e Conserto de Impressora 3D em Curitiba",
     metaDescription:
-      "Conserto e calibração de impressora 3D em Curitiba: entupimento de bico, falha de extrusão, camada deslocada, mesa desnivelada e placa queimada.",
+      "Assistência técnica e conserto de impressora 3D em Curitiba: FDM e resina, extrusão, hotend, nivelamento, eixos, sensores, fonte e placa.",
     serviceName: "Conserto e calibração de impressora 3D",
     serviceDescription:
       "Diagnóstico, reparo e calibração de impressoras 3D FDM e de resina em Curitiba e região: extrusão, hotend, eixos, correias, sensores, fonte e placa, com trabalho em bancada, ciclos de impressão de teste e escopo declarado antes da execução.",
     eyebrow: "Impressão 3D em Curitiba",
-    h1: "Conserto de impressora 3D em Curitiba",
+    h1: "Assistência técnica e conserto de impressora 3D em Curitiba",
     h1Accent: "com calibração e impressão de teste antes da devolução",
     intro:
-      "Bico entupido, extrusor patinando, camada deslocando no meio da peça, primeira camada que não gruda, ruído metálico nos eixos ou máquina que não liga depois de um surto de energia. Impressora 3D quebra por motivos mecânicos, elétricos e de parâmetro — e tratar tudo como se fosse configuração é o que faz o problema voltar. Aqui o equipamento entra em bancada, a causa é isolada e a máquina só volta depois de imprimir uma peça de teste. Envie modelo, tipo (FDM ou resina) e fotos da falha pela triagem no WhatsApp.",
+      "Bico entupido, extrusor patinando, camada deslocada, primeira camada que não adere, ruído nos eixos ou máquina que não liga podem ter origem mecânica, elétrica ou de parâmetro. A assistência técnica separa essas camadas antes de trocar peça ou alterar firmware. Quando o caso exige bancada, a validação inclui calibração e impressão de teste. Envie modelo, tipo (FDM ou resina) e fotos da falha pela triagem no WhatsApp.",
     whatsappMessage:
       "Olá! Vim da página de conserto de impressora 3D e quero fazer a triagem. " +
       "(1) marca e modelo da impressora: (2) é FDM (filamento) ou resina: " +
@@ -2016,7 +2020,7 @@ export const SERVICOS_CORE: Record<string, ServicoLandingData> = {
       { question: "Vocês fazem modelagem 3D ou preparam meus arquivos?", answer: "Não. O escopo é a máquina: mecânica, eletrônica e calibração. Não desenvolvemos modelagem, não corrigimos malha e não assumimos responsabilidade por falha de projeto do arquivo. O que fazemos é revisar o perfil de fatiamento quando o defeito é claramente de parâmetro, e essa revisão vem por escrito para você aplicar nas próximas peças." },
       { question: "Por que o mínimo da impressora 3D é maior que o dos outros equipamentos?", answer: "Porque o tempo de bancada é maior por natureza. Um conserto comum termina quando o aparelho liga e opera. Uma impressora 3D só pode ser considerada resolvida depois de imprimir: isso significa desmontar o conjunto de extrusão ou os eixos, remontar, calibrar mesa, offset, passo e fluxo, e então rodar ciclos completos de impressão de teste que levam horas cada um. O valor mínimo reflete esse tempo, e ele é informado antes da coleta, nunca depois." },
       { question: "Impressora que não liga depois de queda de energia tem conserto?", answer: "Frequentemente sim. Nesses casos a falha costuma estar na fonte, no fusível, no estágio de alimentação da placa ou em um driver de motor queimado. São reparos viáveis em nível de componente. O que muda o cenário é dano extenso na placa controladora: aí comparamos o custo de reparo com o de uma placa nova compatível e dizemos qual dos dois faz sentido, sem empurrar o caminho mais caro." },
-      { question: "A garantia cobre a qualidade das minhas próximas impressões?", answer: "Não, e é importante ser claro nisso. A garantia de 90 dias cobre a mão de obra do ponto reparado e o funcionamento do que foi tratado. Qualidade de impressão depende também do material que você usa, do perfil de fatiamento, da umidade do filamento e do modelo que você fatia — variáveis que ficam do seu lado depois da entrega. A peça de teste impressa na bancada documenta o estado da máquina no momento da devolução." },
+      { question: "A garantia cobre a qualidade das minhas próximas impressões?", answer: "A garantia segue o ponto reparado e as condições publicadas para o serviço. Qualidade de impressão também depende do material, perfil de fatiamento, umidade do filamento ou parâmetros de cura e do próprio arquivo. A peça de teste documenta o estado da máquina na devolução, mas não transforma variáveis de uso em garantia universal." },
       { question: "Preciso enviar o filamento ou a resina junto?", answer: "Ajuda bastante. Boa parte das falhas de extrusão e de cura é específica do material que você usa, e testar com o seu material reproduz o problema real em vez de um cenário ideal de bancada. Se não for possível, usamos material de referência para validar o funcionamento e o laudo registra que o teste foi feito com material diferente do seu." },
       { question: "Atendem impressora 3D em domicílio?", answer: "Na maior parte dos casos não compensa. O trabalho exige desmontagem, ferramenta de bancada e ciclos longos de impressão de teste, e nada disso cabe em uma janela de 30 minutos no seu endereço. Ajustes simples de perfil e orientação de uso podem ser resolvidos na própria triagem, sem coleta e sem custo de visita." },
       { question: "Vale a pena consertar uma impressora 3D antiga?", answer: "Depende de qual peça falhou e de quanto ela representa em relação a uma máquina nova equivalente. Reparo de eixo, extrusão, fonte e sensores costuma compensar com folga. Já uma máquina de entrada com placa e conjunto de extrusão comprometidos ao mesmo tempo pode chegar perto do valor de substituição — e nesse caso o parecer diz isso com o número na frente, para você decidir com informação em vez de com palpite." },
@@ -2042,7 +2046,7 @@ export const SERVICOS_CORE: Record<string, ServicoLandingData> = {
         paragrafos: [
           "Em Curitiba a impressão 3D já saiu do hobby: escritórios de arquitetura imprimem maquete e estudo volumétrico, engenharias validam encaixe antes de mandar usinar, laboratórios de prótese e clínicas de odontologia trabalham com resina, e pequenas operações produzem peça de reposição em baixo volume. Nesses cenários a máquina parada é fila de entrega parada, e o atendimento precisa refletir isso.",
           "Na prática, isso muda três coisas. Primeiro, o registro é individual por equipamento, o que importa quando há mais de uma máquina e é preciso saber qual já passou por qual intervenção. Segundo, o parecer separa o que devolve a máquina à operação agora do que pode ser programado para depois, em vez de entregar uma lista única de tudo que seria ideal fazer. Terceiro, a decisão entre reparar e substituir vem com o número na frente, porque para quem produz a conta é de disponibilidade, não só de custo de peça.",
-          "O que não muda é a política de valor: nada avança sem aprovação por escrito, peça não está inclusa no mínimo e a garantia cobre a mão de obra do ponto reparado. Uma impressora usada em produção volta com a peça de teste impressa e com os valores de calibração registrados, para servir de referência na próxima manutenção.",
+          "O que não muda é a política de aprovação: nada avança sem aceite do escopo e das peças necessárias. Uma impressora usada em produção volta com a peça de teste e com os valores de calibração registrados, para servir de referência na próxima manutenção."
         ],
       },
       {
@@ -2060,7 +2064,7 @@ export const SERVICOS_CORE: Record<string, ServicoLandingData> = {
       { label: "Reparo de placa eletrônica", to: "/servicos/conserto-placa" },
       { label: "Preços e políticas", to: "/precos-e-politicas" },
     ],
-    dateModified: "2026-08-25",
+    dateModified: "2026-09-28",
   },
 };
 

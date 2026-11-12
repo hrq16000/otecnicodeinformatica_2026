@@ -66,7 +66,7 @@ exclusivamente do manifesto curado `scripts/lib/curated-urls.mjs`.
 | Títulos duplicados entre páginas indexáveis | 1 par (`/precos-e-politicas` e seu alias `/valores`) |
 
 `/valores` é **alias intencional**: `robots: index, follow`, mas
-`canonical → https://tecnico.curitiba.br/precos-e-politicas`. Alias canonicalizado
+`canonical → https://[LEGACY_DOMAIN_REMOVED]/precos-e-politicas`. Alias canonicalizado
 não deve figurar no sitemap. Não é defeito.
 
 Todos os 15 slugs de `SERVICOS` do manifesto renderizam 200 útil, com `index, follow`,
@@ -82,7 +82,7 @@ O achado histórico **"serviços indexáveis ausentes do sitemap" está REFUTADO
 
 **Exceção registrada (não é serviço, não é P0):** `/assistencia-tecnica-curitiba` é rota
 real, `robots: index, follow` via `PageSEO`, **não prerenderizada** e **fora do sitemap curado**.
-No HTML inicial ela serve o shell (`canonical = https://tecnico.curitiba.br/`, title genérico),
+No HTML inicial ela serve o shell (`canonical = https://[LEGACY_DOMAIN_REMOVED]/`, title genérico),
 corrigido apenas após hidratação. O e2e `e2e/seo-sitemap-robots.spec.ts` ainda afirma que essa URL
 está em `sitemap-main.xml` — **o teste está dessincronizado do manifesto curado**. Ver P1-1.
 
@@ -168,14 +168,14 @@ Separação obrigatória mantida: **duplicação de metadados ≠ canibalizaçã
 
 ## 7. FASE 9 — GSC CANÔNICO (JANELA ÚNICA)
 
-Propriedade: `sc-domain:tecnico.curitiba.br`. Janela única e absoluta usada em **toda** esta rodada:
+Propriedade: `sc-domain:[LEGACY_DOMAIN_REMOVED]`. Janela única e absoluta usada em **toda** esta rodada:
 
 ```text
 2026-05-08 → 2026-08-04 (3 meses, dados completos)
 ```
 
 Snapshot complementar de indexação da home (28 dias, 2026-07-08 → 2026-08-04): "Submitted and indexed",
-canonical escolhido pelo Google = `https://tecnico.curitiba.br`, 2 cliques / 278 impressões,
+canonical escolhido pelo Google = `https://[LEGACY_DOMAIN_REMOVED]`, 2 cliques / 278 impressões,
 posição média 15,8. Nenhuma outra exportação foi misturada.
 
 Linhas relevantes (query × página), 3 meses:
@@ -273,7 +273,7 @@ Estado atual medido (`src/pages/AssistenciaTecnicaCuritiba.tsx:333-336` + `dist/
 - title: `Assistência Técnica em Curitiba | Consoles, PC e Placas`
 - description: `Assistência técnica em Curitiba: PlayStation, Xbox, Nintendo, placas de vídeo, PCs e notebooks. Diagnóstico…` (contém "orçamento", vocabulário proibido)
 - H1: "Assistência Técnica Especializada em Curitiba"
-- canonical (após hidratação): self; **canonical no HTML inicial: `https://tecnico.curitiba.br/`** (sem prerender)
+- canonical (após hidratação): self; **canonical no HTML inicial: `https://[LEGACY_DOMAIN_REMOVED]/`** (sem prerender)
 - robots: `index, follow`; **fora do sitemap curado**
 
 **O title/description ainda são de consoles?**

@@ -29,9 +29,9 @@ import { whatsappLink, absoluteUrl } from "@/lib/siteConfig";
 import { trackPageView, trackCTAClick } from "@/lib/analytics";
 
 const PATH = "/problemas/computador-lento";
-const TITLE = "Computador Lento? Diagnóstico | O Técnico de Informática";
+const TITLE = "Computador lento: causas, testes e quando SSD ou RAM ajudam";
 const DESCRIPTION =
-  "Computador ou notebook lento para ligar e abrir programas? Veja os sintomas, as causas possíveis, quando SSD ou memória resolvem.";
+  "Computador ou notebook lento? Veja como separar armazenamento, memória, temperatura e software antes de formatar ou fazer upgrade.";
 
 const WA_MESSAGE =
   "Olá! Vim da página sobre computador lento. Meu equipamento está lento e preciso de diagnóstico.";
@@ -39,11 +39,11 @@ const WA_MESSAGE =
 const SINTOMAS = [
   {
     titulo: "Demora muito para ligar e chegar à área de trabalho",
-    desc: "Quando a inicialização passa de alguns minutos, o gargalo costuma estar no armazenamento mecânico, na quantidade de programas iniciando junto com o sistema ou na saúde do disco.",
+    desc: "Quando a inicialização demora muito, armazenamento, programas de inicialização e saúde do disco entram cedo na investigação. O tempo sozinho não confirma a causa.",
   },
   {
     titulo: "Trava ao abrir navegador, planilha ou vários programas",
-    desc: "Sintoma típico de memória insuficiente para o uso real. O sistema passa a usar o disco como memória auxiliar e a resposta cai bruscamente.",
+    desc: "Quando a lentidão aparece com vários programas ou abas abertos, memória insuficiente entra como hipótese importante, junto com armazenamento e processos em segundo plano.",
   },
   {
     titulo: "Fica lento depois de alguns minutos de uso",
@@ -64,7 +64,7 @@ const SINTOMAS = [
 ];
 
 const CAUSAS = [
-  "HD mecânico como disco do sistema, hoje o gargalo mais comum",
+  "HD mecânico como disco do sistema, um gargalo frequente em máquinas mais antigas",
   "Memória RAM insuficiente para o uso real do dia a dia",
   "Disco cheio, sem espaço livre para o sistema trabalhar",
   "Excesso de programas iniciando junto com o Windows",
@@ -145,12 +145,12 @@ const FAQS = [
   {
     question: "Computador lento precisa sempre de formatação?",
     answer:
-      "Não. Formatar resolve o que é software — sistema corrompido, infecção persistente ou acúmulo de instalações. Não resolve HD mecânico lento, memória insuficiente nem aquecimento. Formatar nesses casos devolve uma melhora curta, e a lentidão volta em poucos dias.",
+      "Não. Formatar pode ajudar quando a causa está no software, mas não corrige armazenamento lento, pouca memória ou aquecimento. Por isso a causa precisa ser separada antes de decidir pela reinstalação.",
   },
   {
     question: "Trocar o HD por SSD resolve mesmo?",
     answer:
-      "Na maioria dos equipamentos que ainda usam HD mecânico como disco do sistema, é a mudança mais perceptível no dia a dia: inicialização, abertura de programas e resposta geral. Se a máquina já tem SSD e continua lenta, a causa é outra e o diagnóstico investiga memória, temperatura, software ou saúde do disco.",
+      "Em equipamentos que ainda usam HD mecânico como disco do sistema, migrar para SSD costuma ser uma das mudanças mais perceptíveis no uso diário. Se a máquina já tem SSD e continua lenta, memória, temperatura, software ou saúde do armazenamento entram na investigação.",
   },
   {
     question: "Quanta memória RAM é suficiente?",
@@ -227,7 +227,7 @@ const ComputadorLento = () => {
       <section className="bg-[hsl(var(--hero-bg))] text-white">
         <div className="container mx-auto max-w-4xl px-4 py-8 sm:py-12 md:py-14">
           <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-accent-on-dark sm:mb-3 sm:text-sm">
-            Sintoma · Curitiba e região
+            Sintoma técnico · desempenho
           </p>
           <h1 className="mb-3 text-[1.7rem] font-bold leading-[1.12] sm:mb-4 sm:text-3xl md:text-4xl">
             Computador lento: sintomas, causas possíveis e o que realmente resolve
@@ -484,16 +484,16 @@ const ComputadorLento = () => {
             <div className="rounded-lg border border-border bg-card p-5">
               <h3 className="mb-2 font-semibold text-foreground">Tempo estimado</h3>
               <p className="text-sm text-muted-foreground">
-                Casos de software e limpeza costumam ser resolvidos no mesmo atendimento. Troca de SSD ou memória
-                depende da disponibilidade da peça compatível. Casos com suspeita de falha física exigem bancada e
-                prazo informado antes de começar — se o prazo mudar, você é avisado.
+                O prazo depende da causa encontrada, da modalidade de atendimento e da disponibilidade de peça compatível.
+                Software, limpeza, SSD, memória e suspeita de falha física têm tempos diferentes; a previsão é informada
+                depois da triagem ou avaliação, antes da execução.
               </p>
             </div>
             <div className="rounded-lg border border-border bg-card p-5">
               <h3 className="mb-2 font-semibold text-foreground">Garantia declarada</h3>
               <p className="text-sm text-muted-foreground">
-                90 dias de garantia sobre a mão de obra do serviço executado, no mesmo defeito tratado. Peças e
-                componentes seguem a garantia do fornecedor ou fabricante, com a nota entregue junto ao equipamento.
+                A garantia acompanha o serviço efetivamente executado e as condições publicadas em preços e políticas.
+                Peças e componentes seguem a cobertura aplicável do fornecedor ou fabricante quando houver.
               </p>
             </div>
           </div>

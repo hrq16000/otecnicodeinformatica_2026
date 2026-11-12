@@ -22,6 +22,7 @@ import { servicoByPath, type BairroLocalData } from "@/lib/bairrosData";
 import { SCHEMA_SLOTS, SLOT_PRIORITY, useJsonLdSlot } from "@/lib/jsonLdSlots";
 import { BairroFotos } from "@/components/bairro/BairroFotos";
 import { fotoTecnicaDoBairro, galeriaDoBairro } from "@/lib/galeriaBairro";
+import { SintomasFrequentesBairro } from "@/components/bairro/SintomasFrequentesBairro";
 
 const CTA_CLASS =
   "inline-flex min-h-14 items-center justify-center gap-2 rounded-lg bg-accent px-7 text-base font-bold text-accent-foreground shadow-[0_14px_34px_-10px_hsl(var(--accent)/0.6)] motion-surface hover:shadow-[0_18px_40px_-12px_hsl(var(--accent)/0.55)]";
@@ -91,9 +92,10 @@ export const BairroLocalLayout = ({ data }: { data: BairroLocalData }) => {
       }
     : null;
 
-  // Bairro não é filial: a identidade institucional única vem do #organization
-  // global. Esta rota descreve a área atendida no WebPage, sem criar um
-  // LocalBusiness próprio com @id do bairro.
+  // Página de bairro não cria uma entidade LocalBusiness própria. O bairro é
+  // área de cobertura da entidade global do site, não filial/endereço separado.
+  // A entidade desta rota é WebPage + Place, evitando sinal de filial fictícia.
+
   const webPageSchema = {
     "@context": "https://schema.org",
     "@type": "WebPage",
@@ -160,11 +162,9 @@ export const BairroLocalLayout = ({ data }: { data: BairroLocalData }) => {
                 {data.h1}
               </h1>
               <p className="mt-5 max-w-2xl text-lg text-muted-foreground">{data.subtitulo}</p>
-              {data.introducaoLocal[0] ? (
-                <p className="mt-4 max-w-2xl text-sm leading-relaxed text-muted-foreground md:text-base">
-                  {data.introducaoLocal[0]}
-                </p>
-              ) : null}
+              <p className="mt-4 max-w-3xl text-base leading-relaxed text-muted-foreground">
+                {data.introducaoLocal[0]}
+              </p>
               <div className="mt-8">
                 <a
                   href={waHref}
@@ -200,7 +200,7 @@ export const BairroLocalLayout = ({ data }: { data: BairroLocalData }) => {
               </h2>
               <div className="mt-5 space-y-4 text-muted-foreground">
                 {data.introducaoLocal.slice(1).map((par, i) => (
-                  <p key={i + 1}>{par}</p>
+                  <p key={i}>{par}</p>
                 ))}
               </div>
               {data.contextoLocal?.length ? (
@@ -253,6 +253,8 @@ export const BairroLocalLayout = ({ data }: { data: BairroLocalData }) => {
             </aside>
           </div>
         </section>
+
+        <SintomasFrequentesBairro slug={data.slug} nome={data.nome} />
 
         {/* Ponte editorial: conteúdo útil antes do bloco comercial local. */}
         <section className="border-b border-border/60 bg-background py-12 md:py-16" aria-labelledby="leituras-bairro">

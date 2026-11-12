@@ -1,4 +1,5 @@
 -- Issue #32: revisão editorial do guia de bateria, sem alterar slug ou canonical.
+-- Aplica apenas sobre a versão inicial. Edições feitas pelo painel têm precedência.
 UPDATE public.paginas_editoriais
 SET
   titulo = 'Bateria do notebook dura pouco: como medir desgaste e consumo',
@@ -95,4 +96,6 @@ Não. Desligue o equipamento, interrompa o uso e evite pressionar ou perfurar a 
 Se os testes não separarem desgaste, consumo e falha de carregamento, uma avaliação pode medir o comportamento do conjunto e verificar a compatibilidade da peça. Leve o relatório e descreva quando a descarga acontece; isso reduz tentativa e erro antes de qualquer orçamento.
 $conteudo$,
   updated_at = now()
-WHERE slug = 'bateria-do-notebook-dura-pouco';
+WHERE slug = 'bateria-do-notebook-dura-pouco'
+  AND titulo = 'Bateria do notebook dura pouco: desgaste, configuração ou defeito?'
+  AND updated_at = created_at;

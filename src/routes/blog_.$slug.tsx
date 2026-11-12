@@ -1,10 +1,11 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, redirect } from "@tanstack/react-router";
 import BlogPostPage from "@/pages/BlogPost";
 import { JsonLdSsrSink } from "@/lib/jsonLdSsr";
 import { SITE_BASE_URL } from "@/lib/siteConfig";
 import { isEditorialApproved } from "@/lib/blogEditorialRegistry";
 import { withOgVersion } from "@/lib/ogCacheBust";
 import { metaSocial } from "@/lib/socialMeta";
+import { resolveRedirect } from "@/lib/redirectMatrix";
 
 /**
  * Única rota que não passa pelo mapa de `legacyRouteElements`, portanto compõe
@@ -25,11 +26,19 @@ function BlogPost() {
 export const Route = createFileRoute("/blog_/$slug")({
   component: BlogPost,
   loader: async ({ params }) => {
-    const [{ blogPostsContentBase }, { programmaticPosts }] = await Promise.all([
+    const redirectTarget = resolveRedirect(`/blog/${params.slug}`);
+    if (redirectTarget) {
+      throw redirect({
+        to: redirectTarget,
+        statusCode: 301,
+      });
+    }
+    const [{ blogPostsContentBase }, { blogSupplementalPosts }, { programmaticPosts }] = await Promise.all([
       import("@/data/blogPostsContent"),
+      import("@/data/blogSupplementalPosts"),
       import("@/data/blogProgrammaticPosts"),
     ]);
-    const posts = { ...blogPostsContentBase, ...programmaticPosts };
+    const posts = { ...blogPostsContentBase, ...blogSupplementalPosts, ...programmaticPosts };
     const post = posts[params.slug] ?? null;
     if (!post) return { post: null };
     return {

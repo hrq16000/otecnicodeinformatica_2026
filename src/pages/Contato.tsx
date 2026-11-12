@@ -23,12 +23,12 @@ const WHATSAPP_MESSAGE =
 
 const Contato = () => {
   useEffect(() => {
-    document.title = "Contato | Fale com o Técnico de Informática em Curitiba";
+    document.title = "Contato do Técnico de Informática em Curitiba | WhatsApp e triagem";
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
       metaDescription.setAttribute(
         "content",
-        "Descreva o problema do seu notebook, computador ou rede pelo WhatsApp e receba a modalidade indicada, o prazo e o valor antes da execução."
+        "Descreva o equipamento e o sintoma pelo WhatsApp. A triagem orienta a modalidade de atendimento e o escopo antes de qualquer execução."
       );
     }
     trackPageView("/contato", "Contato");
@@ -42,7 +42,7 @@ const Contato = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <PageSEO title="Contato | Fale com o Técnico de Informática em Curitiba" description="Descreva o problema do seu notebook, computador ou rede pelo WhatsApp e receba a modalidade indicada, o prazo e o valor antes da execução." path="/contato" breadcrumbs={[{ name: "Início", path: "/" }, { name: "Contato", path: "/contato" }]} />
+      <PageSEO title="Contato do Técnico de Informática em Curitiba | WhatsApp e triagem" description="Descreva o equipamento e o sintoma pelo WhatsApp. A triagem orienta a modalidade de atendimento e o escopo antes de qualquer execução." path="/contato" breadcrumbs={[{ name: "Início", path: "/" }, { name: "Contato", path: "/contato" }]} />
       <JsonLdSchema />
       <Header />
       <Breadcrumbs items={[{ label: "Contato" }]} />

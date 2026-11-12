@@ -1,4 +1,4 @@
-# Checklist de publicação — migração SEO tecnicocuritiba.com.br → tecnico.curitiba.br
+# Checklist de publicação — migração SEO [LEGACY_DOMAIN_REMOVED] → [LEGACY_DOMAIN_REMOVED]
 
 Anexe esta checklist à aprovação final. Toda linha precisa estar marcada com
 evidência (arquivo de relatório) antes de publicar `published: true`.
@@ -7,7 +7,7 @@ evidência (arquivo de relatório) antes de publicar `published: true`.
 
 - [ ] Controle da hospedagem/edge do domínio antigo confirmado (quem aplica as 612 regras).
 - [ ] Acesso ao Search Console das duas propriedades (para "Alteração de endereço").
-- [ ] Número oficial de WhatsApp confirmado: `5541997086380` (legado `5541997452053` deve sumir).
+- [ ] Número oficial de WhatsApp confirmado: `5541997086380` (legado `[LEGACY_CONTACT_REMOVED]` deve sumir).
 
 ## 1. Build e SEO estático
 

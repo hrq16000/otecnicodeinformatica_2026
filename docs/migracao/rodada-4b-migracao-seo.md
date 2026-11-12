@@ -1,11 +1,11 @@
-# RODADA 4B — Migração SEO `tecnicocuritiba.com.br` → `tecnico.curitiba.br`
+# RODADA 4B — Migração SEO `[LEGACY_DOMAIN_REMOVED]` → `[LEGACY_DOMAIN_REMOVED]`
 
 > **Status: PREPARADO, NÃO PUBLICADO.** Nenhum redirect, DNS, sitemap do
 > domínio antigo ou telefone foi alterado em produção nesta rodada.
 
 ## 1. Estado inicial dos repositórios
 
-| Item | Domínio novo (`tecnico.curitiba.br`) | Domínio antigo (`tecnicocuritiba.com.br`) |
+| Item | Domínio novo (`[LEGACY_DOMAIN_REMOVED]`) | Domínio antigo (`[LEGACY_DOMAIN_REMOVED]`) |
 |---|---|---|
 | Repositório | este projeto Lovable | **não acessível nesta sessão** |
 | Branch | `edit/edt-d5ce8183-8a63-4ddc-b692-04370240ef59` | — |
@@ -14,16 +14,16 @@
 | Hospedagem | Lovable (SPA + prerender curado) | **a confirmar** (serve build antigo do mesmo produto) |
 | Arquivo de redirect | `public/_redirects` (`/* → /index.html 200`) | não observável externamente |
 | Sitemaps | index + main/servicos/regioes/bairros | index + main/servicos/bairros/marcas/problemas/news |
-| robots | `Allow: /`, `Host: https://tecnico.curitiba.br` | `Allow: /` (sem diretiva de migração) |
+| robots | `Allow: /`, `Host: https://[LEGACY_DOMAIN_REMOVED]` | `Allow: /` (sem diretiva de migração) |
 | Canonical | self-referente no domínio novo | **self-referente no domínio ANTIGO** (competindo) |
-| WhatsApp | `5541997086380` (oficial em `siteConfig.ts`) | **`5541997452053`** (divergente, ativo em produção) |
+| WhatsApp | `5541997086380` (oficial em `siteConfig.ts`) | **`[LEGACY_CONTACT_REMOVED]`** (divergente, ativo em produção) |
 
 ### Decisões pendentes (bloqueiam a publicação)
 
-1. **Quem controla o deploy de `tecnicocuritiba.com.br`?** Repositório, plataforma e
+1. **Quem controla o deploy de `[LEGACY_DOMAIN_REMOVED]`?** Repositório, plataforma e
    se há Cloudflare/proxy na frente. Sem isso não há onde aplicar os 301.
 2. **Confirmação oficial do WhatsApp.** O portal antigo captura leads para
-   `5541997452053`. Só o dono do negócio pode confirmar qual número prevalece —
+   `[LEGACY_CONTACT_REMOVED]`. Só o dono do negócio pode confirmar qual número prevalece —
    não inferimos pelo código.
 3. **Acesso ao Search Console** das duas propriedades (para "Mudança de endereço").
 
@@ -122,17 +122,17 @@ houver pendência (usar após a publicação).
 
 ## 8. Links internos, NAP e WhatsApp
 
-- Domínio novo: **nenhuma referência a `tecnicocuritiba.com.br` no código** (verificado por busca).
+- Domínio novo: **nenhuma referência a `[LEGACY_DOMAIN_REMOVED]` no código** (verificado por busca).
 - Domínio antigo: 7 auto-referências absolutas ao próprio domínio na home +
-  `wa.me/5541997452053`. Correção preparada mas **bloqueada** pela decisão #2.
+  `wa.me/[LEGACY_CONTACT_REMOVED]`. Correção preparada mas **bloqueada** pela decisão #2.
 - NAP do domínio novo (fonte única `src/lib/siteConfig.ts`): nome, CNPJ
   41.723.708/0001-58, cidade, telefone E.164 — inalterado.
 
 ## 9. Search Console (checklist operacional — não executado)
 
-1. Verificar propriedade de domínio de `tecnicocuritiba.com.br` e de `tecnico.curitiba.br`.
+1. Verificar propriedade de domínio de `[LEGACY_DOMAIN_REMOVED]` e de `[LEGACY_DOMAIN_REMOVED]`.
 2. Publicar os 301 e validar com o gate.
-3. Enviar `https://tecnico.curitiba.br/sitemap-index.xml` na propriedade nova.
+3. Enviar `https://[LEGACY_DOMAIN_REMOVED]/sitemap-index.xml` na propriedade nova.
 4. Aplicar **Mudança de endereço** na propriedade antiga (exige 301 da home ativa).
 5. Inspecionar as 11 URLs críticas e solicitar indexação dos destinos.
 6. Monitorar por 90 dias: cobertura, "Página com redirecionamento", canonical
@@ -185,7 +185,7 @@ DNS, número ou conteúdo foi alterado em produção nesta rodada.
 | Comando | Função |
 | --- | --- |
 | `npm run migration:matrix` | Regera a matriz (622 URLs → 612 regras + 10 mantidas). |
-| `npm run check:nap -- --confirm=5541997086380` | Extrai WhatsApp/NAP do domínio antigo e do novo; **falha** sem a confirmação do número oficial e ao encontrar o legado 5541997452053. |
+| `npm run check:nap -- --confirm=5541997086380` | Extrai WhatsApp/NAP do domínio antigo e do novo; **falha** sem a confirmação do número oficial e ao encontrar o legado [LEGACY_CONTACT_REMOVED]. |
 | `npm run check:redirects` | Amostra (11 críticas + 30). Gera `reports/redirect-gate.json` e `reports/redirect-gate.md`. |
 | `npm run check:redirects:all` | Matriz completa, com coverage e lista de URLs pendentes. |
 | `node scripts/check-redirects.mjs --batch=100 --offset=200` | Validação por lotes. |

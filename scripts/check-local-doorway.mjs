@@ -39,7 +39,7 @@ const LIMITE_H2_OVERLAP = 0.7;
 const LIMITE_FAQ_OVERLAP = 0.6;
 
 
-const LOCALIDADES = [
+const LOCALIDADES_BASE = [
   "curitiba",
   "sao jose dos pinhais",
   "sao jose",
@@ -47,27 +47,28 @@ const LOCALIDADES = [
   "colombo",
   "araucaria",
   "campo largo",
-  "batel",
-  "agua verde",
-  "centro",
-  "portao",
-  "cic",
-  "cidade industrial",
-  "xaxim",
-  "sitio cercado",
-  "aviacao",
-  "ouro fino",
-  "santa felicidade",
-  "boa vista",
-  "bigorrilho",
-  "cabral",
-  "afonso pena",
-  "cruzeiro",
-  "costeira",
-  "guatupe",
   "regiao metropolitana",
   "rmc",
 ];
+
+const normalizaToponimo = (value) =>
+  String(value ?? "")
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .toLowerCase();
+
+const localidadeDoSlug = (slug) =>
+  slug
+    .replace(/-(sjp|pinhais|araucaria|campo-largo)$/, "")
+    .replace(/-/g, " ");
+
+const LOCALIDADES = [
+  ...new Set([
+    ...LOCALIDADES_BASE,
+    ...BAIRROS_ANCORA_META.map((b) => normalizaToponimo(b.cidade)),
+    ...BAIRROS_ANCORA_META.map((b) => localidadeDoSlug(b.slug)),
+  ].filter(Boolean)),
+].sort((a, b) => b.length - a.length)
 
 await prepararSsr(rotasLocais({ incluirSitemap: true }), { dist });
 abortarSeBloqueado("check-local-doorway");

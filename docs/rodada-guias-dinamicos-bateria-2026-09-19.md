@@ -1,5 +1,14 @@
 # Rodada: guias dinâmicos e bateria — 19/09/2026
 
+## Reconciliação com `main` — 12/11/2026
+
+- O diff atualizado contém a rota dinâmica, a serialização segura de JSON-LD no HTML, a migração de conteúdo e este registro.
+- O pipeline e as páginas locais usam as versões da `main`. A #426 concentra as correções dos gates compartilhados.
+- A migração aplica a revisão à versão original do guia. O teste local em PostgreSQL confirmou a atualização de uma linha, a preservação da visibilidade e a precedência de edições posteriores feitas pelo painel.
+- O worker compilado com as dependências do lockfile serviu Markdown, canonical, robots, `Article`, `BreadcrumbList` e cinco FAQs com paridade. A rota ausente retornou HTTP 404. O prebuild oficial no Windows reproduziu o problema de caminhos corrigido na #426.
+
+As seções de validação abaixo registram a rodada de setembro.
+
 ## Objetivo
 
 Corrigir a apresentação e os dados estruturados das páginas `/guias/:slug` e aplicar o padrão editorial ao guia `bateria-do-notebook-dura-pouco`.

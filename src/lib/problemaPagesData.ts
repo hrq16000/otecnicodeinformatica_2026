@@ -51,8 +51,8 @@ const RELATED_BASE = [
 export const problemaPagesData: ProblemaPageData[] = [
   {
     slug: "computador-nao-liga-curitiba",
-    title: "Computador Não Liga em Curitiba | Diagnóstico Profissional",
-    metaDescription: "Seu computador não liga? Veja causas reais, sintomas, riscos e como resolver com diagnóstico técnico em Curitiba. Atendimento a domicílio no mesmo dia.",
+    title: "Computador Não Liga? 6 Causas e o Que Testar Antes | Curitiba",
+    metaDescription: "PC não liga, sem luz ou só gira a ventoinha? Veja o que testar com segurança (tomada, fonte, memória) e quando chamar diagnóstico técnico em Curitiba.",
     h1: "Computador Não Liga em Curitiba — Causas Reais e Solução Profissional",
     categoria: "Problemas de Computador",
     intro: `Um computador que não liga pode gerar pânico — especialmente se você depende dele para trabalho, estudo ou uso diário. Mas antes de imaginar o pior cenário, saiba que esse é um dos problemas mais comuns que atendemos em Curitiba e região metropolitana. A maioria dos casos tem solução, desde que o diagnóstico seja feito corretamente.
@@ -136,8 +136,8 @@ O atendimento a domicílio está disponível no mesmo dia para a maioria das reg
   },
   {
     slug: "computador-liga-e-desliga-curitiba",
-    title: "Computador Liga e Desliga Sozinho | O Técnico de Informática",
-    metaDescription: "Computador ligando e desligando sozinho em Curitiba? Veja causas, riscos e solução profissional. Diagnóstico no mesmo dia.",
+    title: "Computador Liga e Desliga Sozinho: Causas e Como Resolver",
+    metaDescription: "PC liga e desliga em segundos ou reinicia sozinho? Entenda se é fonte, superaquecimento ou memória, o que verificar sem risco e quando levar ao técnico.",
     h1: "Computador Liga e Desliga Sozinho em Curitiba — O Que Está Acontecendo?",
     categoria: "Problemas de Computador",
     intro: `Seu computador liga por alguns segundos e desliga? Ou funciona por minutos e reinicia sem aviso? Esse é um dos problemas mais frustrantes e também um dos mais perigosos para o hardware. Cada vez que o computador desliga abruptamente, existe risco de dano ao disco rígido, corrupção de dados e até queima de componentes.
@@ -542,8 +542,8 @@ Se você ouve cliques vindos do computador, pare de usar imediatamente e faça b
   },
   {
     slug: "pc-nao-reconhece-hd-curitiba",
-    title: "PC Não Reconhece HD/SSD em Curitiba | Diagnóstico",
-    metaDescription: "Computador não reconhece HD ou SSD? Veja causas e soluções profissionais em Curitiba. Diagnóstico e recuperação de dados.",
+    title: "PC Não Reconhece HD ou SSD? Como Achar a Causa sem Perder Dados",
+    metaDescription: "HD ou SSD sumiu do Windows ou da BIOS? Veja como checar cabo, BIOS e Gerenciamento de Disco sem formatar, e quando buscar recuperação de dados.",
     h1: "PC Não Reconhece HD ou SSD em Curitiba — Causas e Soluções",
     categoria: "Problemas de Computador",
     intro: `Quando o computador não reconhece o HD ou SSD, o resultado é que o Windows não carrega, os dados ficam inacessíveis e o pânico bate. Mas calma — na maioria dos casos, os dados ainda estão lá, só o acesso que foi comprometido.
@@ -749,8 +749,8 @@ Na maioria dos casos, a solução é limpeza interna + troca de pasta térmica �
   },
   {
     slug: "notebook-desligando-sozinho-curitiba",
-    title: "Notebook Desligando Sozinho | O Técnico de Informática",
-    metaDescription: "Notebook desligando sozinho? Superaquecimento, bateria ou placa-mãe. Diagnóstico profissional em Curitiba.",
+    title: "Notebook Desligando Sozinho: Calor, Bateria ou Placa?",
+    metaDescription: "Notebook desliga do nada ou ao abrir jogos? Veja como diferenciar superaquecimento, bateria gasta e defeito de placa, e o que testar antes do reparo.",
     h1: "Notebook Desligando Sozinho em Curitiba — Causas e Solução",
     categoria: "Notebook",
     intro: `Notebook que desliga sozinho é sinal de proteção ativa — o sistema está se desligando para evitar dano. As causas mais comuns são superaquecimento (pasta térmica seca, poeira) e bateria degradada. Em casos mais sérios, pode ser a placa-mãe. O diagnóstico profissional identifica a causa exata antes de qualquer reparo.`,

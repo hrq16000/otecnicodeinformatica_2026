@@ -503,6 +503,217 @@ export const EDITORIAL_COVERS: Record<string, EditorialCover> = {
     width: 1200,
     height: 630,
   },
+  // ── Onda 11H — promoção noindex → index com capas vetoriais próprias da marca.
+  "como-configurar-2fa-em-tudo": {
+    src: "/blog/como-configurar-2fa-em-tudo.svg",
+    alt: "Ilustração editorial de autenticação multifator com cadeado e verificações independentes",
+    width: 1200,
+    height: 630,
+  },
+  "como-proteger-rede-wifi-empresa": {
+    src: "/blog/como-proteger-rede-wifi-empresa.svg",
+    alt: "Ilustração editorial de rede Wi-Fi empresarial segmentada e protegida por escudo",
+    width: 1200,
+    height: 630,
+  },
+  "como-configurar-firewall-pfsense": {
+    src: "/blog/como-configurar-firewall-pfsense.svg",
+    alt: "Ilustração editorial de firewall controlando tráfego entre segmentos de rede",
+    width: 1200,
+    height: 630,
+  },
+  "como-configurar-active-directory": {
+    src: "/blog/como-configurar-active-directory.svg",
+    alt: "Ilustração editorial de estrutura hierárquica de identidades, usuários e computadores",
+    width: 1200,
+    height: 630,
+  },
+  "como-deixar-celular-android-mais-rapido": {
+    src: "/blog/como-deixar-celular-android-mais-rapido.svg",
+    alt: "Ilustração editorial de smartphone com medidor de desempenho e armazenamento",
+    width: 1200,
+    height: 630,
+  },
+
+  // ── Onda 11I — segunda promoção noindex → index.
+  "como-configurar-repetidor-wifi": {
+    src: "/blog/como-configurar-repetidor-wifi.svg",
+    alt: "Ilustração editorial de roteador, repetidor e zonas de cobertura Wi-Fi",
+    width: 1200,
+    height: 630,
+  },
+  "trocar-windows-por-linux-vale-a-pena": {
+    src: "/blog/trocar-windows-por-linux-vale-a-pena.svg",
+    alt: "Ilustração editorial de duas rotas de sistema operacional ligadas ao mesmo computador",
+    width: 1200,
+    height: 630,
+  },
+  "erros-comuns-upgrade-computador": {
+    src: "/blog/erros-comuns-upgrade-computador.svg",
+    alt: "Ilustração editorial de placa, memória e SSD com sinais de compatibilidade",
+    width: 1200,
+    height: 630,
+  },
+  "como-configurar-vpn-empresarial": {
+    src: "/blog/como-configurar-vpn-empresarial.svg",
+    alt: "Ilustração editorial de túnel VPN ligando usuário remoto a rede corporativa",
+    width: 1200,
+    height: 630,
+  },
+  "como-recuperar-conta-hackeada": {
+    src: "/blog/como-recuperar-conta-hackeada.svg",
+    alt: "Ilustração editorial de recuperação de conta, chave e revisão de sessões",
+    width: 1200,
+    height: 630,
+  },
+
+  // ── Onda 11J — enriquecimento de Windows, backup e conectividade.
+  // Reuso controlado de fotografias já versionadas e licenciadas no acervo.
+  "como-deixar-windows-11-mais-rapido-iniciantes": {
+    src: "/blog/windows-11-lento-como-resolver.jpg",
+    alt: "Pessoa usando notebook em ambiente de trabalho durante diagnóstico de desempenho do Windows",
+    width: 1200,
+    height: 630,
+  },
+  "como-fazer-backup-fotos-windows-iniciantes": {
+    src: "/blog/historico-de-arquivos-windows-como-configurar.jpg",
+    alt: "HD externo portátil usado como destino de backup de fotos e arquivos pessoais",
+    width: 1200,
+    height: 630,
+  },
+  "como-atualizar-windows-corretamente": {
+    src: "/blog/windows-update-nao-funciona-o-que-verificar.jpg",
+    alt: "Tela do Windows Update durante verificação e instalação de atualizações",
+    width: 1200,
+    height: 630,
+  },
+  "como-recuperar-arquivos-apagados-windows": {
+    src: "/blog/como-testar-restauracao-de-backup.jpg",
+    alt: "Mídias de armazenamento usadas em backup e recuperação de arquivos",
+    width: 1200,
+    height: 630,
+  },
+  "como-fazer-teste-velocidade-internet": {
+    src: "/blog/internet-lenta-provedor-ou-roteador.jpg",
+    alt: "Modem de banda larga usado em testes para separar conexão do provedor e rede local",
+    width: 1200,
+    height: 630,
+  },
+
+
+  // ── Onda 11K — capas vetoriais próprias.
+  "como-resetar-senha-windows": {
+    src: "/blog/como-resetar-senha-windows.svg",
+    alt: "Ilustração editorial sobre recuperação oficial de acesso ao Windows",
+    width: 1200,
+    height: 630,
+  },
+  "como-organizar-arquivos-windows-iniciantes": {
+    src: "/blog/como-organizar-arquivos-windows-iniciantes.svg",
+    alt: "Ilustração editorial sobre organização de arquivos, pastas, busca e backup no Windows",
+    width: 1200,
+    height: 630,
+  },
+  "como-trocar-senha-wifi": {
+    src: "/blog/como-trocar-senha-wifi.svg",
+    alt: "Ilustração editorial sobre troca segura da senha da rede Wi-Fi",
+    width: 1200,
+    height: 630,
+  },
+
+  // ── Onda 11L — firmware, SMB e firewall Linux.
+  "como-configurar-bios-uefi-corretamente": {
+    src: "/blog/como-configurar-bios-uefi-corretamente.svg",
+    alt: "Ilustração editorial de firmware UEFI com boot, Secure Boot, TPM e armazenamento",
+    width: 1200, height: 630,
+  },
+  "como-configurar-servidor-de-arquivos": {
+    src: "/blog/como-configurar-servidor-de-arquivos.svg",
+    alt: "Ilustração editorial de servidor de arquivos com usuários, permissões e cópias de segurança",
+    width: 1200, height: 630,
+  },
+  "como-configurar-firewall-ufw-linux": {
+    src: "/blog/como-configurar-firewall-ufw-linux.svg",
+    alt: "Ilustração editorial de firewall UFW filtrando conexões para um servidor Linux",
+    width: 1200, height: 630,
+  },
+
+  // ── Onda 11M — promoção final do estoque programático qualificado.
+  "como-fazer-backup-na-nuvem": {
+    src: "/blog/como-fazer-backup-na-nuvem.svg",
+    alt: "Ilustração editorial de notebook, nuvem e unidade externa representando cópias independentes e restauração",
+    width: 1200,
+    height: 630,
+  },
+
+  // ── Onda 11N — promoção de Wi-Fi instável após revisão técnica.
+  "wifi-caindo-toda-hora": {
+    src: "/blog/wifi-caindo-toda-hora.svg",
+    alt: "Ilustração editorial de roteador, notebook e conexão cabeada representando diagnóstico de Wi-Fi instável",
+    width: 1200,
+    height: 630,
+  },
+
+  // ── Onda 11O — fechamento do estoque programático independente.
+  "pc-nao-liga-o-que-fazer": {
+    src: "/blog/pc-nao-liga-o-que-fazer.svg",
+    alt: "Ilustração editorial de gabinete, botão de energia, monitor e etapas de alimentação, POST e vídeo",
+    width: 1200,
+    height: 630,
+  },
+
+  // ── Onda 11P — Windows Setup e controlador de armazenamento.
+  "ssd-nao-aparece-no-instalador-do-windows": {
+    src: "/blog/ssd-nao-aparece-no-instalador-do-windows.svg",
+    alt: "Ilustração editorial de SSD, firmware e instalador do Windows conectados por uma sequência de diagnóstico",
+    width: 1200,
+    height: 630,
+  },
+
+  // ── Onda 11Q — instalação segura do Ubuntu.
+  "como-instalar-ubuntu-do-zero": {
+    src: "/blog/como-instalar-ubuntu-do-zero.svg",
+    alt: "Ilustração editorial de notebook, pendrive e disco representando instalação segura de Linux",
+    width: 1200,
+    height: 630,
+  },
+
+  // ── Onda 11R — rsync: promoção controlada após revisão técnica.
+  // Reuso controlado de fotografia real já versionada e licenciada no acervo.
+  "como-usar-rsync-backup-linux": {
+    src: "/blog/historico-de-arquivos-windows-como-configurar.jpg",
+    alt: "HD externo portátil conectado a um computador, representando cópia e sincronização de arquivos com rsync",
+    width: 1200,
+    height: 630,
+  },
+
+  // ── Onda 11S — SSH: promoção controlada após revisão técnica.
+  // Reuso controlado de fotografia real já versionada e licenciada no acervo.
+  "como-configurar-ssh-seguro-linux": {
+    src: "/blog/backup-nuvem-empresas-qual-escolher.jpg",
+    alt: "Corredor de data center com racks de servidores, representando administração remota segura por SSH",
+    width: 1200,
+    height: 630,
+  },
+
+  // ── Onda 11T — APT/DNF: promoção controlada após revisão técnica.
+  // Reuso controlado de arte editorial própria já versionada no acervo.
+  "como-gerenciar-pacotes-apt-dnf-linux": {
+    src: "/blog/como-instalar-ubuntu-do-zero.svg",
+    alt: "Ilustração editorial de ambiente Linux usada para representar instalação, atualização e remoção segura de pacotes",
+    width: 1200,
+    height: 630,
+  },
+
+  // ── Onda 11U — comandos Linux: promoção final da coorte Linux 1.
+  // Reuso controlado de arte editorial própria já versionada no acervo.
+  "comandos-linux-essenciais-iniciantes": {
+    src: "/blog/como-instalar-ubuntu-do-zero.svg",
+    alt: "Ilustração editorial de ambiente Linux usada para representar aprendizagem segura do terminal e comandos básicos",
+    width: 1200,
+    height: 630,
+  },
+
 };
 
 export function getEditorialCover(slug: string): EditorialCover | undefined {

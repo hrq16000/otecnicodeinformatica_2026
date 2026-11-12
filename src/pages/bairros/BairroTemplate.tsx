@@ -1,6 +1,7 @@
 import { SmartImage } from "@/components/SmartImage";
 import { useEffect } from "react";
 import { PageSEO } from "@/components/PageSEO";
+import { resolveLocal } from "@/lib/localIndexPolicy";
 import { SCHEMA_SLOTS, SLOT_PRIORITY, useJsonLdSlot } from "@/lib/jsonLdSlots";
 import { AnimatedSection } from "@/components/AnimatedSection";
 import { IMAGES } from "@/lib/images";
@@ -20,7 +21,7 @@ import { ServiceLocalLinks } from "@/components/ServiceLocalLinks";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import { trackPageView, trackCTAClick } from "@/lib/analytics";
 import { Button } from "@/components/ui/button";
-import { WHATSAPP_NUMBER as WA_NUMBER } from "@/lib/siteConfig";
+import { SITE_BASE_URL, WHATSAPP_NUMBER as WA_NUMBER, absoluteUrl, siteConfig } from "@/lib/siteConfig";
 import { 
   MessageCircle, 
   MapPin, 
@@ -52,8 +53,11 @@ interface BairroData {
   conteudoExclusivo?: string;
   problemasComuns?: string[];
   dicasLocais?: string;
-  /** Quando true, o bairro é âncora indexável (conteúdo único ≥300 palavras) */
-  indexavel?: boolean;
+  tituloSecaoPrincipal?: string;
+  tituloSecaoContexto?: string;
+  triagemResumo?: string;
+  faqTitulo?: string;
+  faqsCustom?: Array<{ question: string; answer: string }>;
 }
 
 interface BairroTemplateProps {
@@ -61,8 +65,18 @@ interface BairroTemplateProps {
 }
 
 export const BairroTemplate = ({ data }: BairroTemplateProps) => {
+  const path = `/bairros/${data.slug}`;
+  // Fonte única de indexabilidade/canonical: nunca confiar em flags locais
+  // herdados dos arquivos de bairro.
+  const indexDecision = resolveLocal(path);
   const whatsappMessage = `Olá! Preciso de um técnico de informática em ${data.nome}. Serviço: [DESCREVA O PROBLEMA]`;
   const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(whatsappMessage)}`;
+  const primaryImage = {
+    contentUrl: `${SITE_BASE_URL}/fotos/bancada-tecnica.jpg`,
+    width: 1024,
+    height: 735,
+    caption: `Bancada técnica usada em diagnóstico de computadores e notebooks — atendimento disponível em ${data.nome}, ${data.cidade}`,
+  };
 
   useEffect(() => {
     document.title = data.metaTitle;
@@ -70,7 +84,7 @@ export const BairroTemplate = ({ data }: BairroTemplateProps) => {
     if (metaDescription) {
       metaDescription.setAttribute("content", data.metaDescription);
     }
-    trackPageView(`/bairros/${data.slug}`, `Bairro ${data.nome}`);
+    trackPageView(path, `Bairro ${data.nome}`);
   }, [data]);
 
   const handleWhatsAppClick = () => {
@@ -81,12 +95,12 @@ export const BairroTemplate = ({ data }: BairroTemplateProps) => {
     {
       icon: MapPin,
       title: `Atendimento Local em ${data.nome}`,
-      description: `Técnico especializado com conhecimento da região. Chegamos rápido até você em ${data.nome} e arredores.`,
+      description: `Atendimento organizado para ${data.nome} e região, com modalidade e horário definidos após a triagem.`,
     },
     {
       icon: Clock,
       title: data.tempoDeslocamento,
-      description: "Atendimento ágil, com horário agendado conforme sua disponibilidade. Sem longas esperas.",
+      description: "O horário é combinado conforme endereço, tipo de falha e modalidade indicada na triagem.",
     },
     {
       icon: Shield,
@@ -95,37 +109,38 @@ export const BairroTemplate = ({ data }: BairroTemplateProps) => {
     },
     {
       icon: Wrench,
-      title: "Resolução na Hora",
-      description: "A maioria dos problemas é resolvida na primeira visita. Se precisar de peças, informamos antes.",
+      title: "Diagnóstico Antes da Execução",
+      description: "A solução depende do diagnóstico. Se houver necessidade de peça, bancada ou etapa adicional, isso é informado antes.",
     },
   ];
 
-  const localSchema = {
+  // A página de bairro representa uma área atendida, não uma filial.
+  // A entidade comercial permanece global; nesta rota publicamos apenas
+  // o serviço com areaServed local, evitando LocalBusiness fictício por bairro.
+  const serviceSchema = {
     "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "name": `Técnico de Informática em ${data.nome}`,
-    "description": data.metaDescription,
-    "areaServed": {
+    "@type": "Service",
+    "@id": `${absoluteUrl(path)}#service`,
+    name: `Assistência técnica de informática em ${data.nome}`,
+    description: data.metaDescription,
+    url: absoluteUrl(path),
+    serviceType: "Assistência técnica de informática",
+    provider: { "@id": `${siteConfig.baseUrl}/#organization` },
+    areaServed: {
       "@type": "Place",
-      "name": data.nome,
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": data.cidade,
-        "addressRegion": "PR",
-        "addressCountry": "BR"
-      }
+      name: `${data.nome}, ${data.cidade} - PR`,
     },
-    "hasOfferCatalog": {
+    hasOfferCatalog: {
       "@type": "OfferCatalog",
-      "name": "Serviços de Informática",
-      "itemListElement": data.servicosDestaque.map((servico) => ({
+      name: "Serviços de informática",
+      itemListElement: data.servicosDestaque.map((servico) => ({
         "@type": "Offer",
-        "itemOffered": { "@type": "Service", "name": servico }
-      }))
-    }
+        itemOffered: { "@type": "Service", name: servico },
+      })),
+    },
   };
 
-  useJsonLdSlot(SCHEMA_SLOTS.localBusiness, localSchema, SLOT_PRIORITY.page);
+  useJsonLdSlot(SCHEMA_SLOTS.service, serviceSchema, SLOT_PRIORITY.page);
 
   const getCityLink = () => {
     switch (data.cidade) {
@@ -146,7 +161,13 @@ export const BairroTemplate = ({ data }: BairroTemplateProps) => {
 
   return (
     <div className="min-h-screen bg-background">
-      <PageSEO noindex={!data.indexavel} title={data.metaTitle} description={data.metaDescription} path={`/bairros/${data.slug}`} breadcrumbs={[
+      <PageSEO
+        noindex={indexDecision.indexability !== "index"}
+        title={data.metaTitle}
+        description={data.metaDescription}
+        path={indexDecision.canonical}
+        primaryImage={primaryImage}
+        breadcrumbs={[
         { name: "Início", path: "/" },
         { name: `Técnico em ${data.cidade}`, path: getCityLink() },
         { name: data.nome, path: `/bairros/${data.slug}` }
@@ -205,7 +226,7 @@ export const BairroTemplate = ({ data }: BairroTemplateProps) => {
               <div className="inline-flex items-center gap-3 bg-white/10 backdrop-blur-sm border border-white/10 rounded-xl px-5 py-3 reveal-text" data-reveal-delay="300">
                 <Zap className="h-5 w-5 text-accent" />
                 <p className="text-white/90 text-sm">
-                  Serviços a partir de <strong className="text-accent">R$ 99,99</strong> • Atendimento hoje mesmo
+                  Serviços a partir de <strong className="text-accent">R$ 99,99</strong> • Agenda confirmada após triagem
                 </p>
               </div>
             </div>
@@ -241,8 +262,8 @@ export const BairroTemplate = ({ data }: BairroTemplateProps) => {
                 {/* Image with hover effect */}
                 <div className="mb-8 rounded-xl overflow-hidden shadow-lg group">
                   <SmartImage wrapperClassName="w-full" 
-                    src={IMAGES.atendimentoDomiciliar} 
-                    alt={`Técnico de informática realizando atendimento a domicílio no ${data.nome}, ${data.cidade}`}
+                    src="/fotos/bancada-tecnica.jpg" 
+                    alt={`Bancada técnica para diagnóstico de computadores e notebooks; atendimento disponível em ${data.nome}, ${data.cidade}`}
                     className="w-full h-48 md:h-64 object-cover transition-transform duration-700 group-"
                     
                     width="800"
@@ -252,15 +273,12 @@ export const BairroTemplate = ({ data }: BairroTemplateProps) => {
                 <div className="grid lg:grid-cols-5 gap-8">
                   <div className="lg:col-span-3">
                     <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-6 reveal-text">
-                      Assistência Técnica em Informática no {data.nome}
+                      {data.tituloSecaoPrincipal ?? `Assistência Técnica em Informática no ${data.nome}`}
                     </h2>
                     <div className="prose prose-lg text-muted-foreground">
                       <p className="mb-4">{data.descricaoLonga}</p>
                       <p className="mb-4">
-                        Nosso técnico de informática atende toda a região do {data.nome} e arredores, 
-                        oferecendo serviços completos de manutenção, conserto e suporte para computadores 
-                        e notebooks. Seja para residências ou empresas, garantimos atendimento profissional 
-                        com qualidade e pontualidade.
+                        {data.triagemResumo ?? `O atendimento em ${data.nome} começa pela triagem do sintoma e do endereço. A partir daí, definimos se o caso pode seguir por suporte remoto, visita ou bancada, preservando arquivos e evitando troca de peças ou formatação sem diagnóstico.`}
                       </p>
                     </div>
                     <div className="mt-6">
@@ -331,7 +349,7 @@ export const BairroTemplate = ({ data }: BairroTemplateProps) => {
             <div className="container mx-auto px-4 relative z-10">
               <div className="max-w-4xl mx-auto">
                 <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-6 reveal-text">
-                  Informática no {data.nome}: O Que Você Precisa Saber
+                  {data.tituloSecaoContexto ?? `Informática no ${data.nome}: O Que Você Precisa Saber`}
                 </h2>
 
                 <div className="prose prose-lg text-muted-foreground mb-8">
@@ -349,10 +367,9 @@ export const BairroTemplate = ({ data }: BairroTemplateProps) => {
                     com clareza o que precisa ser feito — e o que não precisa.
                   </p>
                   <p>
-                    Quando o reparo pode ser feito na hora (como formatação, troca de SSD, limpeza interna 
-                    ou configuração de rede), resolvemos na primeira visita. Quando o caso exige bancada 
-                    (como reparo de placa-mãe ou troca de tela), informamos prazo e valor antes de retirar 
-                    o equipamento. <strong>Transparência total, sem surpresas.</strong>
+                    Quando o diagnóstico indica um procedimento que pode ser executado no local, explicamos o que será feito 
+                    antes de começar. Quando o caso exige bancada, peça ou teste prolongado, informamos a 
+                    necessidade e o valor antes de retirar ou alterar o equipamento.
                   </p>
                 </div>
 
@@ -383,15 +400,15 @@ export const BairroTemplate = ({ data }: BairroTemplateProps) => {
                     ))}
                   </div>
                   <p className="text-muted-foreground text-sm mt-4 relative z-10">
-                    Se você enfrenta algum desses problemas no {data.nome}, fale com nosso técnico. 
-                    Atendemos com horário agendado e resolvemos a maioria dos casos na primeira visita.
+                    Se você enfrenta algum desses problemas no {data.nome}, descreva o sintoma na triagem. 
+                    A modalidade do atendimento é definida conforme o diagnóstico inicial e a condição do equipamento.
                   </p>
                 </div>
 
                 {/* Second image with hover zoom */}
                 <div className="mb-8 rounded-xl overflow-hidden shadow-lg group">
                   <SmartImage wrapperClassName="w-full" 
-                    src={IMAGES.notebookReparo} 
+                    src="/fotos/bancada-tecnica.jpg" 
                     alt={`Conserto de notebook e manutenção de computador no ${data.nome}, ${data.cidade}`}
                     className="w-full h-48 md:h-56 object-cover transition-transform duration-700 group-"
                     
@@ -492,14 +509,19 @@ export const BairroTemplate = ({ data }: BairroTemplateProps) => {
         </AnimatedSection>
 
         <AnimatedSection>
-          {bairroFAQs[data.slug] ? (
+          {data.faqsCustom?.length ? (
+            <LocalFAQSection
+              title={data.faqTitulo ?? `Dúvidas técnicas sobre atendimento em ${data.nome}`}
+              faqs={data.faqsCustom}
+            />
+          ) : bairroFAQs[data.slug] ? (
             <GeoSpecificFAQs bairroSlug={data.slug} bairroNome={data.nome} cidadeNome={data.cidade} />
           ) : (
             <LocalFAQSection
               title={`Perguntas Frequentes - ${data.nome}`}
               faqs={[
                 { question: `Vocês atendem a domicílio no ${data.nome}?`, answer: `Sim. Fazemos atendimento a domicílio no ${data.nome} (${data.cidade}) com horário agendado. Levamos ferramentas e fazemos diagnóstico no local sempre que possível.` },
-                { question: `Quanto tempo demora para o técnico chegar no ${data.nome}?`, answer: `Em geral, ${data.tempoDeslocamento.toLowerCase()}. O tempo pode variar conforme trânsito e disponibilidade do dia.` },
+                { question: `Como é definido o horário de atendimento no ${data.nome}?`, answer: `O horário é combinado depois da triagem, considerando o endereço, o tipo de falha, a modalidade indicada e a disponibilidade da agenda.` },
                 { question: `Quais serviços vocês fazem no ${data.nome}?`, answer: `Os mais comuns são ${data.servicosDestaque.slice(0, 4).join(", ")}. Também realizamos diagnóstico e manutenção preventiva.` },
                 { question: `Qual o valor da visita técnica no ${data.nome}?`, answer: "A visita técnica começa em R$ 99,99. Após o diagnóstico, informamos o valor informado antes de executar qualquer serviço adicional." },
               ]}

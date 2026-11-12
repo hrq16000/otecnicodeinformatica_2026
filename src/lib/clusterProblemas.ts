@@ -69,68 +69,68 @@ export const CLUSTER_PROBLEMAS: ClusterProblema[] = [
     slug: "wifi-instavel",
     path: "/problemas/wifi-instavel",
     titulo: "Wi-Fi caindo ou lento em parte da casa ou do escritório",
-    metaTitle: "Wi-Fi cai ou fica lento: causas e o que verificar | O Técnico",
+    metaTitle: "Internet lenta ou queda de Wi-Fi: o que verificar | O Técnico",
     metaDescription:
-      "Wi-Fi que cai, fica lento em alguns cômodos ou desconecta sozinho quase nunca é problema do plano. Veja as causas reais, o que testar antes e quando chamar técnico.",
+      "Internet lenta ou com queda toda hora? Veja como separar sinal fraco do Wi-Fi, roteador e operadora com testes simples, antes de trocar plano ou aparelho.",
     resumo:
-      "Na maior parte dos atendimentos de Wi-Fi instável o plano contratado está entregando o que promete — o sinal é que não chega. A investigação separa três coisas diferentes: a internet que entra no imóvel, o equipamento que distribui o sinal e o caminho físico até o aparelho que está reclamando.",
+      "Internet lenta e queda de Wi-Fi não são a mesma coisa. O diagnóstico separa três camadas: o link que chega ao imóvel, o roteador/ponto de acesso que distribui a rede e o caminho sem fio até cada dispositivo. Comparar cabo, proximidade do roteador e outro aparelho ajuda a descobrir em qual camada a falha realmente está.",
     waMessage:
       "Olá! Vim da página sobre Wi-Fi instável. Meu sinal cai/fica lento e preciso de diagnóstico da rede.",
     sintomas: [
       {
         titulo: "Cai só em alguns cômodos ou andares",
-        desc: "Sinal que desaparece em um ponto específico indica atenuação por parede, laje, espelho ou caixa metálica. Nesses casos trocar de plano não muda nada: o problema é cobertura, resolvido com posicionamento, repetidor cabeado ou malha mesh.",
+        desc: "Quando o sinal piora em pontos específicos, obstáculos, distância, posicionamento e interferência entram primeiro no diagnóstico. A comparação entre cômodos ajuda a separar cobertura de limitação do link; a solução pode envolver reposicionamento, ponto cabeado, access point ou malha, conforme o ambiente.",
       },
       {
         titulo: "Desconecta sozinho em horários parecidos",
-        desc: "Queda com hora marcada costuma ter causa externa: interferência de rede vizinha no mesmo canal, forno micro-ondas, equipamento com temporizador ou reinício automático do roteador da operadora.",
+        desc: "Padrão de horário pode apontar interferência, congestionamento, rotina de algum equipamento ou instabilidade do próprio link. O horário é uma pista, não uma conclusão: ele precisa ser comparado com outros dispositivos e, quando possível, com teste por cabo.",
       },
       {
         titulo: "Conecta, mas 'sem internet'",
-        desc: "O aparelho enxerga a rede e não navega. Aqui a falha está entre roteador e provedor: DNS, arrendamento de IP, cabo de entrada mal encaixado ou modem em modo incorreto — não na antena do notebook.",
+        desc: "O aparelho enxerga a rede, mas não navega. A investigação passa por DNS, endereço IP, gateway, roteador, modem/link do provedor e pelo próprio dispositivo. Comparar outro aparelho na mesma rede evita concluir cedo demais onde está a falha.",
       },
       {
         titulo: "Rápido no celular, lento no computador",
-        desc: "Quando um aparelho vai bem e outro não, a rede está saudável e o problema é do dispositivo: driver de rede, adaptador antigo, banda 2.4 GHz saturada ou economia de energia desligando a placa.",
+        desc: "Quando um aparelho vai bem e outro não no mesmo ponto e horário, a investigação começa pelo dispositivo: driver, adaptador, banda utilizada e economia de energia. Isso reduz a probabilidade de falha geral da rede, mas não elimina roteador ou interferência sem teste adicional.",
       },
     ],
     causas: [
       {
         titulo: "Roteador em local ruim",
-        desc: "Dentro de armário, atrás da TV, no chão ou colado à parede externa. O equipamento distribui sinal em esfera; obstáculo próximo derruba a cobertura inteira.",
+        desc: "Armário, móveis, paredes, metal e posicionamento desfavorável podem atenuar o sinal ou criar áreas de cobertura pior. Antes de trocar equipamento, vale comparar o desempenho em posições diferentes e observar se o padrão acompanha o ambiente.",
       },
       {
         titulo: "Equipamento da operadora fazendo tudo sozinho",
-        desc: "Modem/roteador combinado atende bem apartamentos pequenos. Em imóvel grande, com laje ou muitas paredes, ele não dá conta e precisa de um distribuidor adicional — de preferência ligado por cabo.",
+        desc: "Modem/roteador combinado pode ser suficiente em ambientes menores e simples. Em imóveis maiores, com lajes, paredes ou muitos dispositivos, pode ser necessário adicionar pontos de acesso ou malha; backhaul cabeado costuma oferecer maior previsibilidade quando é viável.",
       },
       {
         titulo: "Canal e faixa saturados",
-        desc: "Em prédio, dezenas de redes disputam os mesmos canais de 2.4 GHz. Reorganizar canal e separar as faixas 2.4/5 GHz costuma devolver estabilidade sem trocar nada.",
+        desc: "Em prédios, várias redes podem disputar canais na faixa de 2,4 GHz. Revisar canais, largura de canal e uso de 2,4/5 GHz pode melhorar estabilidade sem troca de equipamento, desde que o diagnóstico confirme interferência e os dispositivos sejam compatíveis.",
       },
       {
         titulo: "Cabeamento e conectores",
-        desc: "Cabo de rede prensado por móvel, conector mal crimpado ou emenda improvisada geram queda intermitente que parece 'problema da internet'.",
+        desc: "Cabo de rede prensado, conector mal crimpado ou emenda inadequada podem causar perda de pacote, negociação instável ou quedas intermitentes que se confundem com falha do provedor.",
       },
       {
         titulo: "Repetidor mal configurado",
-        desc: "Repetidor colocado onde o sinal já é fraco repete sinal fraco e ainda divide a banda pela metade. É a causa mais comum de rede que piorou depois de uma 'melhoria'.",
+        desc: "Repetidor colocado onde o sinal de origem já chega fraco tende a retransmitir uma conexão ruim. Em alguns modos, o mesmo rádio recebe e retransmite dados, reduzindo o throughput disponível. O impacto real depende do equipamento, da banda, do backhaul e do posicionamento.",
       },
     ],
     antesDeChamar: [
       "Teste a velocidade com o aparelho ao lado do roteador e depois no cômodo que reclama — a diferença já indica se é cobertura ou provedor.",
-      "Ligue um notebook por cabo no roteador. Se por cabo funciona bem, a internet está chegando e o problema é a distribuição sem fio.",
-      "Anote o horário das quedas por dois ou três dias. Padrão de horário muda completamente o diagnóstico.",
+      "Quando for possível, compare o mesmo cenário por cabo. Se o desempenho cabeado se mantém estável e o Wi‑Fi piora, cobertura, interferência, banda e configuração sem fio ganham prioridade no diagnóstico.",
+      "Anote o horário das quedas por dois ou três dias. Um padrão de horário ajuda a priorizar hipóteses como interferência, congestionamento, rotina de equipamento ou instabilidade externa.",
       "Verifique se a rede piorou depois de alguma mudança: móvel novo, repetidor, troca de plano, mudança do roteador de lugar.",
     ],
     naoFaca: [
       "Não resete o roteador da operadora sem ter as credenciais de acesso — em algumas conexões a reconfiguração exige suporte do provedor.",
-      "Não instale vários repetidores em sequência. Cada salto divide a banda e aumenta a instabilidade.",
-      "Não troque de plano antes do diagnóstico: se o gargalo é cobertura, mais megas não chegam ao cômodo.",
+      "Evite encadear repetidores sem medir o resultado. Dependendo do modo de operação e do backhaul, cada salto pode reduzir throughput, aumentar latência e ampliar a instabilidade.",
+      "Evite trocar de plano antes de comparar link cabeado e cobertura. Se o gargalo estiver na distribuição sem fio, aumentar a velocidade contratada pode não melhorar o ponto com sinal ruim.",
     ],
     modalidades: [
       {
         titulo: "Suporte remoto",
-        desc: "Ajuste de canal, separação de faixas, DNS, configuração de repetidor e revisão de dispositivos podem ser feitos com acesso remoto, quando ainda existe conexão utilizável.",
+        desc: "Ajustes de canal, faixas, DNS e configurações de alguns dispositivos podem ser avaliados ou executados remotamente quando ainda há conexão utilizável e acesso administrativo disponível.",
       },
       {
         titulo: "Atendimento no endereço",
@@ -138,25 +138,25 @@ export const CLUSTER_PROBLEMAS: ClusterProblema[] = [
       },
       {
         titulo: "Projeto de rede para empresa",
-        desc: "Escritório com muitos dispositivos, impressora em rede e sistema em nuvem pede segmentação, cabeamento e equipamento adequado — não repetidor doméstico.",
+        desc: "Ambientes com muitos dispositivos, impressoras em rede e aplicações críticas podem exigir segmentação, cabeamento e pontos de acesso dimensionados para a carga, em vez de ampliar a rede sem medir capacidade e cobertura.",
       },
     ],
     faq: [
       {
         q: "Trocar o roteador resolve Wi-Fi que cai?",
-        a: "Resolve quando o equipamento é o gargalo — modelo antigo, sem 5 GHz ou com defeito. Não resolve quando o problema é posicionamento, cabo ou interferência. Por isso o diagnóstico vem antes da indicação de compra.",
+        a: "Pode resolver quando o equipamento é o gargalo, por limitação, falha ou incompatibilidade. Se a causa for posicionamento, cabeamento, interferência ou configuração, a troca isolada pode não corrigir o problema. Por isso o diagnóstico vem antes da indicação de compra.",
       },
       {
         q: "Mesh é melhor que repetidor?",
-        a: "Em geral sim, porque os pontos trabalham como uma rede só e o aparelho troca de ponto sem cair. Mas mesh também depende de bom posicionamento e, quando possível, de ligação por cabo entre os pontos.",
+        a: "Mesh pode oferecer gerenciamento e roaming mais integrados que um repetidor simples, mas não é automaticamente melhor em todo ambiente. Posicionamento, qualidade do backhaul, compatibilidade dos dispositivos e possibilidade de cabeamento determinam o resultado.",
       },
       {
         q: "Preciso trocar meu plano de internet?",
-        a: "Só se o teste com cabo mostrar que a velocidade contratada não está chegando. Se por cabo o resultado é bom, o plano não é o problema.",
+        a: "A comparação por cabo ajuda a separar o link da distribuição sem fio. Se o desempenho cabeado também fica abaixo do esperado, provedor, modem/roteador e cabeamento entram na investigação. Se por cabo está consistente e o Wi-Fi piora à distância, cobertura e interferência ganham prioridade.",
       },
       {
         q: "Dá para resolver sem visita?",
-        a: "Parte dos casos sim — configuração e ajuste de canal são feitos remotamente. Cobertura, cabeamento e interferência física exigem medição no local.",
+        a: "Parte dos casos pode ser tratada remotamente, especialmente configuração e testes lógicos. Cobertura, cabeamento e interferência física normalmente exigem medição no local para uma conclusão confiável.",
       },
       {
         q: "Vocês vendem o equipamento?",
@@ -291,27 +291,27 @@ export const CLUSTER_PROBLEMAS: ClusterProblema[] = [
     titulo: "Arquivos apagados ou disco que não abre: o que fazer agora",
     metaTitle: "Arquivos apagados: o que fazer antes de recuperar | O Técnico",
     metaDescription:
-      "Apagou arquivos, formatou por engano ou o HD parou de abrir? O que você faz na primeira hora define a chance de recuperação. Veja o que evitar e como funciona a avaliação.",
+      "Apagou arquivos, formatou por engano ou o HD parou de abrir? Veja o que fazer logo após a perda, o que evitar e como o tipo de mídia influencia a tentativa de recuperação.",
     resumo:
-      "Em recuperação de dados, o maior inimigo é a tentativa apressada. Arquivo apagado normalmente continua no disco até ser sobrescrito — e cada programa instalado, cada cópia nova e cada tentativa de reparo automático aumenta a chance de sobrescrever exatamente o que você quer de volta. Nenhum profissional sério promete recuperação total antes da avaliação.",
+      "Em recuperação de dados, a primeira decisão é parar de gravar no dispositivo. Em HDs e algumas mídias, dados apagados podem permanecer até serem sobrescritos. Em SSDs modernos, recursos como TRIM e coleta de lixo podem tornar blocos apagados indisponíveis muito antes, mesmo sem nova gravação visível. Por isso o tipo de mídia e o que aconteceu depois da perda mudam completamente a chance de recuperação.",
     waMessage:
       "Olá! Vim da página sobre arquivos apagados. Preciso de avaliação para tentar recuperar dados.",
     sintomas: [
       {
         titulo: "Apaguei e esvaziei a lixeira",
-        desc: "Cenário com boa chance quando o equipamento é desligado logo. O sistema apenas marcou o espaço como livre; o conteúdo permanece até algo gravar por cima.",
+        desc: "Em HD ou mídia sem TRIM, desligar cedo pode preservar blocos que ainda não foram sobrescritos. Em SSDs, a exclusão pode acionar TRIM e reduzir drasticamente a chance de recuperação. O tipo de armazenamento precisa ser identificado antes de estimar possibilidade.",
       },
       {
         titulo: "Formatei o disco ou o pendrive por engano",
-        desc: "Formatação rápida não zera os dados. A estrutura de índice é refeita, mas os blocos continuam lá — desde que nada novo seja gravado.",
+        desc: "Formatação rápida geralmente recria estruturas do sistema de arquivos sem fazer uma sobrescrita completa de todos os blocos. Em HD isso pode deixar dados recuperáveis; em SSD, TRIM e controladores modernos podem invalidar blocos rapidamente. Não existe garantia baseada apenas no tipo de formatação.",
       },
       {
         titulo: "O disco pede para ser formatado ao conectar",
-        desc: "Sinal de estrutura de arquivos corrompida. Aceitar a formatação é o erro mais caro dessa situação.",
+        desc: "Pode indicar corrupção do sistema de arquivos, falha da mídia ou incompatibilidade de leitura. Confirmar uma formatação antes de avaliar o dispositivo pode gravar novos metadados e dificultar a tentativa de recuperação.",
       },
       {
         titulo: "HD externo fazendo barulho de clique",
-        desc: "Ruído repetitivo indica problema mecânico. Aqui cada nova ligação pode danificar mais a superfície: o correto é desligar e não insistir.",
+        desc: "Ruído repetitivo pode indicar falha mecânica. Nessa situação, novas tentativas de energização podem agravar o dano; se os dados forem importantes, o mais seguro é interromper o uso e avaliar a mídia antes de insistir.",
       },
     ],
     causas: [
@@ -321,7 +321,7 @@ export const CLUSTER_PROBLEMAS: ClusterProblema[] = [
       },
       {
         titulo: "Corrupção lógica",
-        desc: "Queda de energia durante gravação, remoção do pendrive sem ejetar e falha de atualização deixam a tabela de arquivos inconsistente.",
+        desc: "Queda de energia durante gravação, remoção abrupta de mídia e falhas de atualização podem deixar estruturas do sistema de arquivos inconsistentes.",
       },
       {
         titulo: "Falha física do disco",
@@ -334,14 +334,14 @@ export const CLUSTER_PROBLEMAS: ClusterProblema[] = [
     ],
     antesDeChamar: [
       "Pare de usar o equipamento ou o disco imediatamente. Não instale nada nele — nem o programa de recuperação.",
-      "Se for disco externo ou pendrive, desconecte e guarde. Reconectar várias vezes piora casos mecânicos.",
+      "Se for disco externo ou pendrive, desconecte e guarde. Reconectar repetidamente pode agravar falhas físicas e também aumentar o risco de novas gravações automáticas.",
       "Liste o que precisa voltar: pastas, período, tipos de arquivo. Isso orienta a busca e a validação do resultado.",
-      "Verifique se existe cópia esquecida: nuvem, e-mail, celular, HD antigo. Boa parte dos casos se resolve antes de qualquer laboratório.",
+      "Verifique se existe cópia esquecida: nuvem, e-mail, celular, HD antigo. Em alguns casos, localizar uma cópia íntegra evita qualquer intervenção na mídia afetada.",
     ],
     naoFaca: [
       "Não aceite a formatação sugerida pelo sistema quando o disco 'pede para formatar'.",
-      "Não rode utilitários de correção de disco no volume afetado — eles reorganizam a estrutura e podem eliminar o que ainda seria recuperável.",
-      "Não abra o disco rígido. Ambiente doméstico contamina os pratos e encerra a chance de recuperação mecânica.",
+      "Evite utilitários de reparo no volume afetado antes de preservar a mídia. Eles podem alterar estruturas do sistema de arquivos e reduzir opções de recuperação.",
+      "Não abra um disco rígido fora de ambiente e procedimento adequados. Poeira e manuseio incorreto podem contaminar componentes internos e reduzir severamente a possibilidade de recuperação mecânica.",
       "Não grave nada novo no dispositivo, nem os próprios arquivos recuperados.",
     ],
     modalidades: [
@@ -351,7 +351,7 @@ export const CLUSTER_PROBLEMAS: ClusterProblema[] = [
       },
       {
         titulo: "Recuperação lógica",
-        desc: "Exclusão, formatação e corrupção de estrutura, trabalhando sempre sobre cópia do dispositivo, nunca no original.",
+        desc: "Exclusão, formatação e corrupção de estrutura, priorizando imagem ou cópia da mídia quando tecnicamente possível para reduzir alterações no original.",
       },
       {
         titulo: "Encaminhamento especializado",
@@ -365,15 +365,15 @@ export const CLUSTER_PROBLEMAS: ClusterProblema[] = [
       },
       {
         q: "Quanto custa recuperar dados?",
-        a: "Depende do tipo de falha. Casos lógicos têm custo previsível; casos físicos dependem de peça, tempo e encaminhamento. O valor é apresentado depois da avaliação e antes de qualquer execução.",
+        a: "Depende do tipo de falha, da mídia, do volume de dados e do nível de acesso possível. Casos físicos podem exigir encaminhamento especializado. O valor é apresentado depois da avaliação e antes de qualquer execução.",
       },
       {
         q: "Programas de recuperação que baixo na internet funcionam?",
-        a: "Às vezes, em exclusão simples. O risco é instalar o programa no mesmo disco e sobrescrever justamente os arquivos que você quer. Se os dados forem importantes, não é o primeiro passo indicado.",
+        a: "Podem funcionar em alguns casos lógicos, principalmente quando a mídia está saudável. O risco é instalar ou salvar resultados no mesmo dispositivo, sobrescrever dados ainda recuperáveis ou insistir numa mídia fisicamente instável. Se os arquivos forem importantes, o primeiro passo é preservar o estado da mídia.",
       },
       {
         q: "Quanto tempo leva?",
-        a: "Varredura lógica costuma levar de horas a alguns dias, conforme o tamanho do disco. Casos físicos dependem de avaliação e de peça compatível.",
+        a: "O tempo depende do tamanho da mídia, velocidade de leitura, quantidade de erros e tipo de falha. Varredura lógica e imagem de um dispositivo saudável podem ser bem diferentes de uma mídia com setores instáveis ou defeito físico; a estimativa vem depois da avaliação.",
       },
       {
         q: "Depois de recuperar, como evitar de novo?",
@@ -392,36 +392,40 @@ export const CLUSTER_PROBLEMAS: ClusterProblema[] = [
   {
     slug: "computador-desliga-sozinho",
     path: "/problemas/computador-desliga-sozinho",
-    titulo: "Computador desligando sozinho ou reiniciando do nada",
-    metaTitle: "Computador desliga sozinho: causas e o que checar | O Técnico de Informática",
+    titulo: "Computador ou PC desligando sozinho: causas e testes seguros",
+    metaTitle: "Computador desligando sozinho: causas e testes seguros",
     metaDescription:
-      "Desligamento súbito quase sempre é temperatura, fonte ou alimentação — raramente vírus. Veja como identificar a causa, o que testar antes e quando parar de usar.",
+      "Computador ou PC desligando sozinho, mesmo sem esquentar? Veja como separar temperatura, fonte, tomada, memória e sistema antes de trocar peças.",
     resumo:
-      "Desligamento sem aviso, sem tela azul e sem mensagem é um comportamento de proteção: alguma coisa cortou a energia ou o processador atingiu o limite térmico e o equipamento se desligou para não queimar. Por isso o diagnóstico começa por temperatura e alimentação, não por formatação.",
+      "Quando o computador desliga sozinho, o sintoma precisa ser separado em dois grupos: corte seco de energia e reinício comandado pelo sistema. O primeiro costuma levar a temperatura, fonte, tomada ou placa; o segundo também pode envolver memória, driver, atualização ou falha registrada pelo Windows. Essa diferença evita formatar ou trocar peça antes de entender o padrão.",
     waMessage:
       "Olá! Vim da página sobre computador que desliga sozinho. Preciso de diagnóstico de temperatura/fonte.",
     sintomas: [
       {
         titulo: "Desliga depois de alguns minutos de uso pesado",
-        desc: "Jogo, edição de vídeo ou videochamada elevam a carga e a temperatura. Se o desligamento acontece justamente nesses momentos e o equipamento volta a ligar depois de esfriar, o padrão é térmico: dissipador entupido, ventoinha parada ou pasta térmica ressecada.",
+        desc: "Jogo, edição de vídeo ou videochamada elevam a carga e a temperatura. Se o desligamento coincide com esforço e melhora depois de esfriar, a hipótese térmica ganha força — mas ainda precisa ser confirmada por temperatura, ventilação e estado do sistema de refrigeração.",
       },
       {
         titulo: "Desliga a qualquer momento, mesmo parado",
-        desc: "Corte sem relação com carga aponta para alimentação: fonte com capacitor no fim da vida, cabo de força folgado, régua sobrecarregada ou oscilação na tomada. Nesses casos o equipamento apaga de forma seca, como se tirassem o plugue.",
+        desc: "Quando não há relação clara com temperatura ou carga, a investigação muda para alimentação e instabilidade: fonte degradada, cabo ou tomada com mau contato, régua sobrecarregada, memória instável e falha intermitente de placa entram na lista. O padrão do desligamento e o histórico de eventos ajudam a separar essas hipóteses.",
       },
       {
         titulo: "Reinicia sozinho e volta na tela de boas-vindas",
-        desc: "Reinício imediato, sem apagar de vez, costuma ser driver, atualização mal aplicada ou memória instável. É o único cenário desta lista em que o software entra como suspeito principal.",
+        desc: "Reinício imediato, sem permanecer totalmente desligado, também pode envolver driver, atualização, memória instável ou configuração de reinício automático. O histórico de eventos ajuda a separar software de corte real de energia.",
       },
       {
         titulo: "Não volta a ligar logo em seguida",
-        desc: "Quando o botão não responde por alguns minutos, a proteção da fonte foi acionada. Insistir em ligar repetidamente nessa condição é o caminho mais rápido para danificar placa-mãe e disco.",
+        desc: "Quando o botão não responde por alguns minutos, proteção térmica ou elétrica passa a ser uma hipótese importante, mas não é diagnóstico fechado. Evite insistir em ciclos repetidos de liga/desliga até identificar a causa.",
+      },
+      {
+        titulo: "Desliga sozinho e a temperatura parece normal",
+        desc: "Se CPU e gabinete não mostram aquecimento anormal, priorize alimentação e estabilidade: teste tomada e cabo, retire régua/extensão, observe se a falha aparece sob carga e consulte os eventos do sistema. Fonte, memória, placa e driver entram na investigação conforme o padrão.",
       },
     ],
     causas: [
       {
         titulo: "Superaquecimento por sujeira ou pasta térmica vencida",
-        desc: "Poeira compactada entre as aletas do dissipador reduz a troca de calor e a pasta térmica perde eficiência com o tempo. O processador chega ao limite e o desligamento é a última defesa antes do dano permanente.",
+        desc: "Poeira compactada entre as aletas reduz a troca de calor, ventoinha com falha limita o fluxo e a interface térmica pode degradar. Sob temperatura crítica, o equipamento pode reduzir desempenho ou desligar por proteção.",
       },
       {
         titulo: "Fonte de alimentação degradada ou subdimensionada",
@@ -429,7 +433,7 @@ export const CLUSTER_PROBLEMAS: ClusterProblema[] = [
       },
       {
         titulo: "Energia elétrica do ambiente",
-        desc: "Régua com muitos aparelhos, tomada sem aterramento e queda breve de rede provocam desligamentos que parecem defeito do computador. Um teste simples em outro ponto de energia separa as hipóteses.",
+        desc: "Régua sobrecarregada, tomada com mau contato, cabo defeituoso ou queda breve de energia podem imitar defeito do computador. Testar outro ponto de energia, sem extensão ou régua, ajuda a separar a alimentação externa da falha interna.",
       },
       {
         titulo: "Memória ou placa-mãe com falha intermitente",
@@ -446,7 +450,7 @@ export const CLUSTER_PROBLEMAS: ClusterProblema[] = [
     naoFaca: [
       "Não insista em apertar o botão de ligar várias vezes seguidas quando a máquina não responde.",
       "Não formate: desligamento por temperatura ou fonte volta igual depois da formatação, e os dados já terão ido embora.",
-      "Não use ar comprimido segurando as ventoinhas soltas — girar acima da rotação nominal danifica o rolamento.",
+      "Ao usar ar comprimido, mantenha a ventoinha imobilizada; deixá-la girar livremente em alta rotação pode danificar o conjunto.",
       "Não substitua a fonte por outra genérica sem conferir potência e conectores; fonte errada leva placa-mãe junto.",
     ],
     modalidades: [
@@ -466,7 +470,7 @@ export const CLUSTER_PROBLEMAS: ClusterProblema[] = [
     faq: [
       {
         q: "Computador que desliga sozinho é vírus?",
-        a: "Quase nunca. Vírus costuma deixar o sistema lento, exibir anúncios ou travar programas — não cortar a energia da máquina. Desligamento seco é sinal físico: temperatura, fonte ou alimentação.",
+        a: "Malware pode causar travamentos ou reinícios, mas um corte seco de energia deve levar primeiro à investigação de temperatura e alimentação. A distinção entre desligar completamente e reiniciar ajuda a decidir se software entra como hipótese relevante.",
       },
       {
         q: "Só limpar por dentro resolve?",
@@ -474,7 +478,7 @@ export const CLUSTER_PROBLEMAS: ClusterProblema[] = [
       },
       {
         q: "Posso continuar usando até resolver?",
-        a: "Se o desligamento é térmico e esporádico, o risco é moderado. Se acontece durante gravação de arquivos, o risco de corromper dados é real — a orientação é fazer cópia dos arquivos importantes antes de qualquer coisa.",
+        a: "Desligamentos inesperados podem interromper gravações e corromper arquivos ou o sistema. Faça backup do que for importante e evite uso pesado até identificar a causa, especialmente se houver cheiro, estalo, aquecimento anormal ou dificuldade para religar.",
       },
       {
         q: "Como vocês descobrem se é a fonte?",
@@ -482,14 +486,20 @@ export const CLUSTER_PROBLEMAS: ClusterProblema[] = [
       },
       {
         q: "Notebook também desliga sozinho por temperatura?",
-        a: "Sim, e com mais frequência que desktop, porque o espaço interno é menor. Em notebook a limpeza envolve desmontagem parcial e troca de pasta térmica — procedimento de bancada, não de mesa do cliente.",
+        a: "Pode acontecer. O espaço interno menor torna refrigeração e acúmulo de poeira relevantes, mas temperatura não deve ser assumida como causa sem observar o comportamento e medir o equipamento. Em notebook, limpeza interna e revisão térmica exigem desmontagem adequada.",
+      },
+      {
+        q: "Meu PC desliga sozinho e não é temperatura. O que verificar?",
+        a: "Comece separando corte seco de reinício. Se a temperatura está normal, verifique tomada e cabo, teste sem régua ou extensão, observe se a falha aparece sob carga e consulte o histórico de eventos do sistema. Fonte instável, memória, placa-mãe e drivers entram na investigação; trocar componentes por tentativa tende a encarecer o diagnóstico.",
       },
     ],
     relacionados: [
       { to: "/servicos/computador-nao-liga", titulo: "Computador não liga", desc: "Quando o desligamento evolui para máquina que não dá sinal nenhum." },
-      { to: "/problemas/computador-esquentando", titulo: "Computador esquentando", desc: "Desligamento repentino sob carga costuma ser proteção térmica — este é o sintoma vizinho." },
-      { to: "/servicos/manutencao-de-notebook", titulo: "Manutenção preventiva", desc: "Limpeza interna, troca de pasta térmica e revisão de refrigeração." },
-      { to: "/problemas", titulo: "Outros sintomas", desc: "Volte ao hub e escolha o problema mais parecido com o seu." },
+      { to: "/problemas/computador-esquentando", titulo: "Computador esquentando", desc: "Quando o desligamento aparece sob carga, compare o sintoma com a trilha de temperatura." },
+      { to: "/glossario/thermal-throttling", titulo: "Thermal throttling", desc: "Entenda a redução automática de desempenho por temperatura e por que ela é diferente de um corte de energia." },
+      { to: "/decisoes/backup-antes-da-manutencao", titulo: "Backup antes da manutenção", desc: "O que preservar antes de abrir a máquina, testar fonte ou iniciar uma intervenção." },
+      { to: "/servicos/manutencao-de-notebook", titulo: "Manutenção de notebook", desc: "Quando o sintoma exige desmontagem, limpeza interna ou avaliação de alimentação." },
+      { to: "/problemas", titulo: "Outros sintomas", desc: "Volte ao hub e compare o problema com outros sinais do equipamento." },
     ],
     foto: "bancada-tecnica",
   },
@@ -497,9 +507,9 @@ export const CLUSTER_PROBLEMAS: ClusterProblema[] = [
     slug: "notebook-nao-carrega",
     path: "/problemas/notebook-nao-carrega",
     titulo: "Notebook conectado na tomada e a bateria não carrega",
-    metaTitle: "Notebook não carrega: causas e testes seguros | O Técnico",
+    metaTitle: "Meu notebook não carrega: causas e testes seguros | O Técnico",
     metaDescription:
-      "Notebook ligado na tomada que não carrega pode ser fonte, conector, bateria ou placa. Veja como identificar cada caso, o que testar sozinho e o que evita gasto errado.",
+      "Notebook não carrega mesmo ligado na tomada? Veja como separar fonte, conector, bateria e placa com testes seguros e evitar comprar peça errada.",
     resumo:
       "“Conectada, não carregando” é uma mensagem que aparece em quatro cenários bem diferentes: carregador entregando tensão errada, conector de energia com mau contato, bateria no fim da vida útil ou circuito de carga da placa-mãe com falha. Cada um tem custo e solução distintos — e trocar a bateria por palpite é o erro mais comum.",
     waMessage:
@@ -820,17 +830,17 @@ export const CLUSTER_PROBLEMAS: ClusterProblema[] = [
     slug: "computador-nao-da-imagem",
     path: "/problemas/computador-nao-da-imagem",
     titulo: "Computador liga mas não aparece imagem no monitor",
-    metaTitle: "PC liga, mas não dá imagem: o que verificar | O Técnico",
+    metaTitle: "Computador liga mas não dá imagem: RAM, GPU ou monitor?",
     metaDescription:
-      "Gabinete liga, coolers giram e o monitor fica preto ou em “sem sinal”. Veja como separar monitor, cabo, memória, placa de vídeo e fonte antes de trocar qualquer peça.",
+      "PC liga, coolers giram, mas fica sem vídeo? Separe monitor, cabo, RAM, GPU, fonte e POST com testes seguros antes de comprar ou trocar peças.",
     resumo:
-      "Ligar e não dar imagem não é um defeito só: é o resultado visível de qualquer falha que impeça o computador de concluir a inicialização. O diagnóstico útil começa separando três blocos — o que exibe (monitor e cabo), o que gera vídeo (placa de vídeo ou vídeo integrado) e o que permite ligar (fonte, memória e placa-mãe). Trocar peça antes dessa separação é a forma mais cara de descobrir o problema.",
+      "Se o computador liga mas não dá imagem, comece separando tela/cabo de falha de POST. Confirme a entrada do monitor e a saída de vídeo usada; depois teste memória, placa de vídeo, alimentação e sinais de diagnóstico da placa-mãe. O sintoma, sozinho, não confirma placa de vídeo nem placa-mãe — a decisão deve vir da eliminação controlada das hipóteses.",
     waMessage:
       "Olá! Vim da página sobre computador que liga e não dá imagem. Preciso de diagnóstico do meu equipamento.",
     sintomas: [
       {
         titulo: "Monitor mostra “sem sinal” e entra em espera",
-        desc: "O monitor está funcionando e informando que nada chega até ele. A investigação vai para cabo, entrada selecionada e saída de vídeo usada — muita gente liga o cabo na saída da placa-mãe com uma placa de vídeo dedicada instalada.",
+        desc: "O monitor está energizado e informa que não recebeu sinal de vídeo. A investigação começa por cabo, entrada selecionada e saída usada no computador, incluindo a diferença entre a saída da placa-mãe e a da placa de vídeo dedicada.",
       },
       {
         titulo: "Tela totalmente preta, sem mensagem nenhuma",
@@ -838,7 +848,7 @@ export const CLUSTER_PROBLEMAS: ClusterProblema[] = [
       },
       {
         titulo: "Coolers giram, luzes acendem, nada acontece",
-        desc: "O computador aparenta ligar, mas não passa do POST. Memória mal encaixada, contato oxidado, placa de vídeo mal assentada e falha de placa-mãe são as causas mais comuns nesse padrão.",
+        desc: "O computador aparenta energizar, mas não conclui o POST. Memória mal encaixada, contato ruim, placa de vídeo, alimentação e placa-mãe entram na sequência de descarte; a ordem exata depende dos sinais de diagnóstico disponíveis.",
       },
       {
         titulo: "Bipes ou LEDs piscando em sequência",
@@ -852,7 +862,7 @@ export const CLUSTER_PROBLEMAS: ClusterProblema[] = [
     causas: [
       {
         titulo: "Cabo, adaptador ou entrada errada",
-        desc: "Cabo HDMI danificado, adaptador de má qualidade e entrada do monitor no canal errado respondem por uma parcela grande dos chamados. É a primeira verificação justamente porque não custa nada.",
+        desc: "Cabo HDMI defeituoso, adaptador incompatível ou entrada errada podem produzir exatamente o mesmo sintoma de uma falha interna. Por isso essa é a primeira verificação: é reversível, rápida e não exige abrir o computador.",
       },
       {
         titulo: "Memória RAM com mau contato ou defeituosa",
@@ -864,7 +874,7 @@ export const CLUSTER_PROBLEMAS: ClusterProblema[] = [
       },
       {
         titulo: "Fonte degradada",
-        desc: "Fonte que entrega tensão só no instante inicial faz o computador ligar sem concluir a inicialização. É uma causa frequente em máquinas com anos de uso e só se confirma com teste sob carga.",
+        desc: "Uma fonte instável pode energizar ventoinhas e LEDs sem manter o conjunto estável o bastante para completar a inicialização. A hipótese precisa ser confirmada por medição adequada ou comparação controlada com uma fonte compatível.",
       },
       {
         titulo: "Placa-mãe com capacitor ou trilha comprometidos",
@@ -879,7 +889,7 @@ export const CLUSTER_PROBLEMAS: ClusterProblema[] = [
       "Teste outro cabo e outra entrada do monitor, e confirme no menu do monitor qual entrada está selecionada.",
       "Se houver placa de vídeo dedicada, confirme que o cabo está na saída da placa e não na saída da placa-mãe.",
       "Ligue o monitor em outro aparelho (notebook, videogame ou TV box) para descobrir se o problema é do monitor.",
-      "Desligue da tomada, abra o gabinete e reencaixe firmemente memória e placa de vídeo até ouvir o clique das travas.",
+      "Se você tem segurança para abrir o gabinete, desligue da tomada e reencaixe memória e placa de vídeo sem forçar conectores. Se houver cheiro, marca de queima, líquido ou dúvida sobre o procedimento, interrompa e deixe a inspeção para bancada.",
       "Anote bipes, LEDs piscando e se algo mudou antes da falha: queda de energia, limpeza, troca de peça ou transporte.",
     ],
     naoFaca: [
@@ -896,7 +906,7 @@ export const CLUSTER_PROBLEMAS: ClusterProblema[] = [
       },
       {
         titulo: "Visita técnica com peças de referência",
-        desc: "Quando o computador precisa ficar onde está, a visita leva cabo, memória e fonte de teste para isolar o componente no local, em janela de até 30 minutos de inspeção.",
+        desc: "Quando o computador precisa ficar onde está, a visita pode usar cabos e componentes de referência para isolar a falha no local. O tempo e a modalidade dependem do sintoma, do acesso e dos testes necessários."
       },
       {
         titulo: "Bancada para teste sob carga",
@@ -906,7 +916,7 @@ export const CLUSTER_PROBLEMAS: ClusterProblema[] = [
     faq: [
       {
         q: "Meu computador liga e não dá imagem: é a placa de vídeo?",
-        a: "Pode ser, mas é a conclusão menos provável logo de início. Cabo, entrada errada, memória com mau contato e fonte degradada aparecem com muito mais frequência. A placa de vídeo só é apontada depois de testada em outro equipamento ou substituída por uma de referência.",
+        a: "Pode ser, mas o sintoma não permite fechar esse diagnóstico sozinho. Primeiro descarte cabo, entrada, memória, alimentação e sinais de POST; a placa de vídeo ganha força como hipótese quando o comportamento muda em teste controlado com outro vídeo compatível ou quando a própria placa apresenta evidência objetiva de falha.",
       },
       {
         q: "Os bipes ajudam a descobrir o problema?",
@@ -922,7 +932,7 @@ export const CLUSTER_PROBLEMAS: ClusterProblema[] = [
       },
       {
         q: "Dá para resolver sem levar o computador?",
-        a: "Cabo, entrada, reencaixe e configuração resolvem uma parte relevante dos casos remotamente ou em visita. Teste de fonte sob carga e inspeção de placa exigem bancada, com instrumentos que não vão para a casa do cliente.",
+        a: "Algumas verificações externas — cabo, entrada selecionada, conexão na saída correta e sinais visíveis — podem ser feitas sem bancada. Quando é preciso testar fonte, memória, placa de vídeo ou placa-mãe por comparação controlada, a bancada tende a ser o ambiente mais adequado.",
       },
     ],
     relacionados: [
@@ -938,11 +948,11 @@ export const CLUSTER_PROBLEMAS: ClusterProblema[] = [
     slug: "cheiro-de-queimado",
     path: "/problemas/cheiro-de-queimado",
     titulo: "Cheiro de queimado no computador, fonte ou carregador",
-    metaTitle: "Cheiro de queimado: desligue computador e carregador | O Técnico",
+    metaTitle: "Fonte com cheiro de queimado, mesmo funcionando? | O Técnico",
     metaDescription:
-      "Cheiro de queimado vindo do gabinete, da fonte ou do carregador é sinal elétrico e urgente. Veja o que desligar agora, o que nunca fazer e como o diagnóstico é conduzido.",
+      "Fonte com cheiro de queimado mas o PC ainda funciona? Desligue da tomada: veja por que continuar usando é arriscado e como o diagnóstico é feito.",
     resumo:
-      "Cheiro de queimado é um dos poucos sintomas em que a orientação certa é parar de usar o equipamento imediatamente. Ele indica que algum componente ultrapassou a temperatura de projeto ou que houve falha elétrica — e o risco deixa de ser só perder a peça: envolve dano em cascata na placa e, em casos extremos, princípio de incêndio. O diagnóstico depois é técnico e frio; o primeiro passo é elétrico e imediato.",
+      "Cheiro de queimado, derretimento, estalo ou fumaça exigem interromper o uso. Se for seguro tocar no plugue e não houver fogo, desligue o equipamento e desconecte a alimentação. Se houver fumaça ativa, chama, tomada derretida ou aparelho muito quente, não manuseie para investigar: afaste-se, corte a energia do circuito apenas se isso puder ser feito com segurança e acione o serviço de emergência quando houver incêndio. Só depois vem o diagnóstico do componente.",
     waMessage:
       "Olá! Vim da página sobre cheiro de queimado. Senti cheiro no meu equipamento e preciso de orientação urgente.",
     sintomas: [
@@ -955,8 +965,8 @@ export const CLUSTER_PROBLEMAS: ClusterProblema[] = [
         desc: "O equipamento apaga junto com o odor e não volta. Padrão típico de proteção da fonte atuando ou de componente que abriu em curto.",
       },
       {
-        titulo: "Cheiro adocicado ou de peixe",
-        desc: "Odor característico de capacitor eletrolítico rompido e de alguns retardantes de chama em sobreaquecimento. Merece inspeção visual da placa antes de religar.",
+        titulo: "Odor químico ou acre sem origem visível",
+        desc: "Materiais de isolamento, eletrólitos e plásticos aquecidos podem produzir odores diferentes. Não tente identificar o componente aproximando o rosto; desligue e deixe a localização para inspeção visual e elétrica em bancada.",
       },
       {
         titulo: "Estalo ou clarão junto do cheiro",
@@ -969,8 +979,8 @@ export const CLUSTER_PROBLEMAS: ClusterProblema[] = [
     ],
     causas: [
       {
-        titulo: "Fonte de alimentação em fim de vida",
-        desc: "Capacitores secos e ventilação obstruída fazem a fonte trabalhar acima do limite. É a origem mais comum de cheiro em computador de mesa e costuma envolver troca da peça, não reparo.",
+        titulo: "Fonte de alimentação ou estágio de entrada danificado",
+        desc: "Falha de componente, ventilação bloqueada, conexão ruim ou surto podem aquecer a fonte e seus cabos. A origem precisa ser isolada antes de substituir a peça, porque a placa ou a própria rede elétrica também podem estar envolvidas.",
       },
       {
         titulo: "Carregador ou cabo com mau contato",
@@ -989,16 +999,16 @@ export const CLUSTER_PROBLEMAS: ClusterProblema[] = [
         desc: "Capacitor estufado, bobina queimada ou circuito de alimentação em curto liberam odor característico. A inspeção sob lupa localiza o ponto antes de qualquer energização.",
       },
       {
-        titulo: "Bateria inchada ou danificada",
-        desc: "Célula de lítio deformada é risco separado: além do odor, existe possibilidade de aquecimento descontrolado. O procedimento correto é remover a bateria e descartar em ponto adequado.",
+        titulo: "Bateria de íons de lítio inchada ou danificada",
+        desc: "Inchaço, calor anormal, vazamento, estalo ou fumaça indicam risco de incêndio. Pare de carregar e usar. Não perfure, pressione nem tente remover uma bateria interna quente ou danificada sem treinamento; o descarte deve seguir a orientação local para bateria defeituosa.",
       },
     ],
     antesDeChamar: [
-      "Desligue o equipamento pelo botão de energia e tire o plugue da tomada — em notebook, retire também o carregador e a bateria removível.",
-      "Não religue para “ver se o cheiro volta”: se houve curto, a nova energização amplia o dano.",
-      "Identifique de onde vem o odor com o equipamento já desligado: fonte, carregador, régua, tomada ou monitor têm caminhos de reparo diferentes.",
-      "Verifique se há marca escura, derretimento no conector ou capacitor estufado, e fotografe o que encontrar para adiantar a triagem.",
-      "Se houver bateria visivelmente inchada, mantenha o aparelho em superfície não inflamável, longe de material combustível, até o atendimento.",
+      "Se não houver fumaça, chama, plugue derretido ou calor que impeça o manuseio seguro, desligue o equipamento e desconecte a alimentação. Se houver risco ao tocar, corte o circuito no disjuntor apenas se isso puder ser feito com segurança.",
+      "Não religue para “ver se o cheiro volta”: uma nova energização pode ampliar o dano ou iniciar aquecimento novamente.",
+      "Sem abrir o equipamento, observe de longe se o odor parece vir da tomada, régua, carregador, fonte externa, monitor ou gabinete. Não aproxime o rosto para cheirar componentes.",
+      "Fotografe somente sinais externos visíveis, como plugue escurecido ou plástico deformado. Não abra fonte, carregador ou bateria para procurar a origem.",
+      "Se houver bateria inchada, muito quente, estalando ou soltando fumaça, pare de carregar e não pressione nem perfure. Não mova um dispositivo em combustão; priorize afastamento e segurança.",
     ],
     naoFaca: [
       "Não use o equipamento “só um pouco para salvar arquivos” — o risco elétrico é maior que o benefício, e a cópia pode ser feita depois com o disco fora da máquina.",
@@ -1032,11 +1042,11 @@ export const CLUSTER_PROBLEMAS: ClusterProblema[] = [
       },
       {
         q: "Meus arquivos estão perdidos?",
-        a: "Na maioria dos casos elétricos o disco continua íntegro, mesmo quando a placa não tem reparo viável. Retiramos a unidade e copiamos os dados em separado. Não prometemos recuperação total antes de examinar o dispositivo.",
+        a: "Não dá para concluir pelo cheiro. O armazenamento pode ter permanecido íntegro ou pode ter sido afetado pelo mesmo evento elétrico. Primeiro eliminamos o risco de energização; depois o disco é avaliado separadamente e a recuperação é tratada sem prometer resultado antes do exame.",
       },
       {
         q: "Estabilizador ou nobreak evita esse problema?",
-        a: "Reduz o risco de surto pela rede, mas não substitui manutenção: poeira, fonte no fim da vida e conector com mau contato queimam mesmo com proteção instalada. Um bom filtro de linha ajuda; limpeza periódica e fonte adequada ajudam mais.",
+        a: "Proteção contra surto e nobreak podem reduzir riscos ligados a eventos da rede quando corretamente especificados, mas não impedem falha interna, conector frouxo, carregador defeituoso ou bateria danificada. A proteção precisa ser compatível com a instalação elétrica e com o equipamento.",
       },
       {
         q: "Vale a pena consertar um equipamento que queimou?",
@@ -1056,11 +1066,11 @@ export const CLUSTER_PROBLEMAS: ClusterProblema[] = [
     slug: "windows-nao-inicia",
     path: "/problemas/windows-nao-inicia",
     titulo: "Windows não inicia: erro 0xc0000428, reparo automático e loop de boot",
-    metaTitle: "Erro 0xc0000428: Windows não inicia | Técnico de Informática",
+    metaTitle: "Windows não inicia? Reparo automático, boot e 0xc0000428",
     metaDescription:
-      "PC liga, mas o Windows exibe 0xc0000428, reparo automático ou loop? Entenda assinatura digital, WinRE, BitLocker e a ordem segura sem formatar.",
+      "Windows não inicia ou entra em reparo automático? Separe boot, SSD/HD, BCD, WinRE, BitLocker e erro 0xc0000428 antes de formatar ou reinstalar.",
     resumo:
-      "Se a máquina acende e chega à tela de Recuperação, ela não é um “PC que não liga”: o firmware e parte da inicialização funcionaram, mas isso não prova que SSD, memória ou outros componentes estejam saudáveis. No código 0xc0000428, o Windows informa que não conseguiu validar o hash ou a assinatura de uma imagem de inicialização. O arquivo citado na tela e a mudança que antecedeu o erro determinam o próximo teste.",
+      "Se o computador liga mas o Windows não inicia, primeiro identifique até onde a inicialização chega: firmware, tela de recuperação, reparo automático, código de erro ou reinício. Isso separa falha de boot de um PC que nem conclui o POST. No erro 0xc0000428, o Windows informa falha de validação de uma imagem de inicialização; o arquivo citado e o que mudou antes do erro definem o próximo teste.",
     waMessage:
       "Olá! Vim da página sobre Windows que não inicia. Meu sistema não abre e preciso de diagnóstico sem perder arquivos.",
     sintomas: [
@@ -1232,13 +1242,19 @@ export const CLUSTER_PROBLEMAS: ClusterProblema[] = [
     slug: "computador-esquentando",
     path: "/problemas/computador-esquentando",
     titulo: "Computador ou notebook esquentando demais",
-    metaTitle: "Computador esquentando: causas e o que fazer | O Técnico",
+    metaTitle: "PC esquentando muito: causas e o que fazer | O Técnico",
     metaDescription:
-      "Ventoinha acelerada, base do notebook quente e queda de desempenho em jogos ou vídeo indicam problema térmico. Veja as causas, o que medir antes e qual manutenção resolve.",
+      "Computador ou PC esquentando muito? Veja como separar aquecimento normal, ventilação obstruída, poeira e falha de refrigeração antes de trocar peças.",
     resumo:
-      "Calor não é defeito por si só: todo equipamento aquece. O problema começa quando a temperatura passa do limite de projeto e o próprio processador reduz a velocidade para se proteger — é aí que a máquina fica lenta em tarefas pesadas, a ventoinha acelera sem parar e a base do notebook incomoda no colo. A investigação térmica é medida, não estimada.",
+      "Computador quente não significa, sozinho, defeito. A temperatura varia conforme processador, projeto do equipamento, ambiente e carga. O sinal mais útil é a combinação entre calor, ruído de ventoinha, perda de desempenho, travamento ou desligamento. O diagnóstico correto compara o comportamento com a especificação do fabricante e procura evidência de throttling, fluxo de ar ruim ou carga anormal antes de indicar limpeza ou troca de peça.",
     waMessage:
       "Olá! Vim da página sobre computador esquentando. Meu equipamento está muito quente e quero avaliação térmica.",
+    ponteEditorial: {
+      antes: "Se você quer medir antes de abrir o equipamento, siga o guia de ",
+      to: "/blog/como-monitorar-temperatura-do-computador",
+      anchor: "como monitorar temperatura e reconhecer throttling",
+      depois: ".",
+    },
     sintomas: [
       {
         titulo: "Ventoinha acelerada o tempo todo",
@@ -1246,7 +1262,7 @@ export const CLUSTER_PROBLEMAS: ClusterProblema[] = [
       },
       {
         titulo: "Cai o desempenho depois de alguns minutos",
-        desc: "Começa bem e piora com o uso é a assinatura clássica de redução automática de frequência por temperatura. O gráfico de desempenho despenca sempre no mesmo ponto.",
+        desc: "Começa bem e piora sob carga pode indicar redução automática de frequência por limite térmico ou de potência. Confirme com telemetria e com a especificação do processador, porque queda de clock também pode ter outras causas.",
       },
       {
         titulo: "Base do notebook quente demais para apoiar",
@@ -1267,8 +1283,8 @@ export const CLUSTER_PROBLEMAS: ClusterProblema[] = [
         desc: "Em notebook, uma manta de fiapo se forma entre a ventoinha e as aletas. É a causa mais comum e não aparece em nenhuma inspeção externa.",
       },
       {
-        titulo: "Pasta térmica ressecada",
-        desc: "O composto entre processador e dissipador perde eficiência com o tempo. Depois de alguns anos, a mesma carga passa a gerar dezenas de graus a mais.",
+        titulo: "Interface térmica ou dissipador com contato inadequado",
+        desc: "Pasta térmica degradada, aplicação inadequada, pressão irregular ou dissipador mal assentado podem elevar a resistência térmica. A hipótese precisa ser confirmada junto com limpeza, montagem e comportamento sob carga — não pela idade do equipamento isoladamente.",
       },
       {
         titulo: "Ventoinha com rolamento gasto",
@@ -1292,10 +1308,10 @@ export const CLUSTER_PROBLEMAS: ClusterProblema[] = [
       "Confira a saída de ar com a máquina ligada. Fluxo fraco com barulho alto praticamente confirma obstrução.",
       "Verifique no gerenciador de tarefas se algum processo mantém uso alto sem você estar usando nada.",
       "Apoie o notebook em superfície rígida e plana por um dia e compare — se melhorar bastante, parte do problema é apoio.",
-      "Anote há quantos anos o equipamento nunca passou por limpeza interna. Acima de dois anos de uso doméstico, a manutenção já está atrasada.",
+      "Registre quando foi a última limpeza e em que ambiente o equipamento trabalha. Poeira, pelos, fumaça, obra e uso intenso mudam muito o intervalo; não existe periodicidade universal que sirva para todo computador.",
     ],
     naoFaca: [
-      "Não sopre ar comprimido girando a ventoinha livremente: sem travar as pás, o giro forçado danifica o rolamento e gera tensão no circuito.",
+      "Não aplique jato de ar de forma que a ventoinha dispare em rotação livre. Em limpeza interna, imobilize as pás e siga o procedimento do fabricante para não forçar rolamento, conector ou circuito.",
       "Não use aspirador comum encostado na placa — a eletricidade estática gerada é risco real para componentes.",
       "Não empilhe pasta térmica achando que mais quantidade resfria mais; excesso atrapalha o contato e piora a condução.",
       "Não deixe o equipamento rodando em ciclo de travamento por calor: cada parada abrupta pode corromper o arquivo aberto.",
@@ -1317,7 +1333,7 @@ export const CLUSTER_PROBLEMAS: ClusterProblema[] = [
     faq: [
       {
         q: "Qual temperatura é considerada alta?",
-        a: "Depende do modelo, mas a referência prática é o comportamento: se o equipamento reduz a velocidade sozinho ou desliga por proteção, passou do limite dele. Por isso medimos antes e depois da manutenção, em vez de trabalhar com números genéricos.",
+        a: "Não existe um número universal. O limite depende do processador e do projeto térmico do equipamento. Compare a leitura com a especificação do fabricante e observe se há throttling, perda sustentada de desempenho ou desligamento de proteção. Temperatura alta durante carga pesada, isoladamente, não prova defeito.",
       },
       {
         q: "Base refrigeradora resolve?",
@@ -1325,11 +1341,11 @@ export const CLUSTER_PROBLEMAS: ClusterProblema[] = [
       },
       {
         q: "De quanto em quanto tempo fazer limpeza interna?",
-        a: "Em uso doméstico comum, algo entre um e dois anos. Em ambiente com pet, obra por perto, fumo ou uso intenso de jogos, o intervalo cai bastante. Quem carrega o notebook todo dia na mochila também acumula mais rápido.",
+        a: "Use condição, não calendário fixo. Fluxo de ar menor, ventoinha mais ruidosa, poeira visível nas entradas e aumento persistente de temperatura são sinais para inspecionar. Ambiente com pelos, fumaça, obra ou muita poeira costuma exigir revisão mais frequente.",
       },
       {
         q: "Trocar só a pasta térmica adianta?",
-        a: "Adianta quando o radiador está limpo e a ventoinha saudável. Se o caminho do ar continua obstruído, a pasta nova baixa poucos graus e o problema volta em semanas — por isso os dois serviços costumam andar juntos.",
+        a: "Pode ajudar quando a interface térmica está realmente comprometida, mas não corrige radiador obstruído, ventoinha defeituosa, dissipador mal assentado ou carga anormal de software. O ganho deve ser verificado comparando a mesma carga antes e depois.",
       },
       {
         q: "O calor pode ter estragado alguma peça?",
@@ -1348,9 +1364,9 @@ export const CLUSTER_PROBLEMAS: ClusterProblema[] = [
     slug: "impressora-nao-imprime",
     path: "/problemas/impressora-nao-imprime",
     titulo: "Impressora não imprime mesmo aparecendo conectada",
-    metaTitle: "Impressora não imprime: causas e o que checar | O Técnico de Informática",
+    metaTitle: "Impressora não quer imprimir? Causas e o que checar | O Técnico",
     metaDescription:
-      "Documento fica na fila, a impressora aparece offline ou sai página em branco? Veja o que separa falha de rede, driver e cabeça de impressão — e o que testar antes de chamar técnico.",
+      "Minha impressora não imprime: documento parado na fila, offline ou página em branco? Veja o que separa rede, driver e cabeça de impressão antes de chamar técnico.",
     resumo:
       "Impressora que não imprime raramente está quebrada. Na maior parte dos atendimentos o equipamento imprime perfeitamente quando testado sozinho: o que falha é o caminho entre o computador e ele — fila travada, endereço de rede que mudou, driver duplicado ou porta apontando para o lugar errado.",
     waMessage:
@@ -1465,21 +1481,21 @@ export const CLUSTER_PROBLEMAS: ClusterProblema[] = [
     slug: "teclado-notebook-nao-funciona",
     path: "/problemas/teclado-notebook-nao-funciona",
     titulo: "Teclado do notebook não funciona ou falha algumas teclas",
-    metaTitle: "Teclado do notebook falha: causas e o que testar | O Técnico",
+    metaTitle: "Teclado do notebook não funciona? Causas e testes | O Técnico",
     metaDescription:
-      "Teclas que não respondem, letra repetida ou teclado morto depois de líquido? Veja como separar falha de software, flat solto e dano físico antes de trocar a peça.",
+      "Por que o teclado do notebook não funciona? Veja testes seguros para separar Windows, layout, cabo flat, líquido e defeito físico antes de trocar a peça.",
     resumo:
-      "Teclado de notebook falha de três formas bem diferentes: teclas isoladas que param, o teclado inteiro que morre e teclas que digitam sozinhas ou repetem. Cada padrão aponta para uma origem distinta, e o teste com um teclado USB externo separa em minutos o que é peça do que é sistema.",
+      "Quando o teclado do notebook não funciona, o padrão da falha ajuda a reduzir as hipóteses, mas nenhum teste isolado fecha o diagnóstico. Um teclado USB externo, a tela de firmware/recuperação e a comparação entre teclas específicas e o teclado inteiro ajudam a separar software, configuração, cabo flat, oxidação e defeito da própria peça sem comprar teclado por tentativa.",
     waMessage:
       "Olá! Vim da página sobre teclado de notebook com defeito. Preciso de avaliação do meu teclado.",
     sintomas: [
       {
         titulo: "Algumas teclas pararam, o resto funciona",
-        desc: "Falha localizada quase sempre é membrana ou trilha rompida sob aquelas teclas. Software não escolhe teclas específicas para desligar — por isso esse padrão aponta para a peça.",
+        desc: "Falha localizada favorece hipótese de desgaste, sujeira, membrana ou trilha, mas remapeamento, layout, filtro de teclado e aplicativos também podem afetar teclas específicas. Compare o comportamento fora do aplicativo e, quando possível, antes do Windows carregar.",
       },
       {
         titulo: "Teclado inteiro sem resposta",
-        desc: "Quando nada responde, mas o touchpad funciona, a suspeita principal é o cabo flat solto ou oxidado no conector da placa. Se o touchpad também morreu, a origem tende a ser controladora ou driver.",
+        desc: "Quando nada responde, verifique primeiro se o problema também existe fora do Windows e se um teclado externo funciona. Cabo flat, alimentação, firmware, driver e a própria matriz do teclado continuam como hipóteses; o touchpad não é prova definitiva porque pode usar outro caminho de conexão.",
       },
       {
         titulo: "Tecla repetindo ou digitando sozinha",
@@ -1491,7 +1507,7 @@ export const CLUSTER_PROBLEMAS: ClusterProblema[] = [
       },
       {
         titulo: "Falha só depois de um tempo ligado",
-        desc: "Teclado que começa bem e falha com o notebook aquecido sugere mau contato que se agrava com dilatação — geralmente no conector ou em solda fria da controladora.",
+        desc: "Falha que aparece apenas depois de aquecer merece correlação com temperatura e tempo de uso. Mau contato é uma hipótese, mas o padrão também pode vir de software, energia ou outro componente; não conclua solda fria sem inspeção e medição.",
       },
     ],
     causas: [
@@ -1517,8 +1533,8 @@ export const CLUSTER_PROBLEMAS: ClusterProblema[] = [
       },
     ],
     antesDeChamar: [
-      "Ligue um teclado USB externo. Se ele digitar tudo normalmente, o sistema está bom e o problema é o teclado interno ou o cabo dele.",
-      "Reinicie e observe o teclado antes do Windows carregar, na tela de inicialização. Funcionando ali, a falha é de software.",
+      "Ligue um teclado USB externo. Se ele funcionar normalmente, o caminho do teclado interno fica mais suspeito, mas isso não elimina configuração, firmware ou driver específico do equipamento.",
+      "Quando o equipamento permitir, teste teclas na UEFI/BIOS ou no ambiente de recuperação. Funcionando fora do Windows, a investigação deve priorizar sistema, driver, layout e utilitários antes de trocar a peça.",
       "Teste a tecla suspeita em um editor de texto simples, sem jogo ou programa que reconfigure atalhos.",
       "Confira se o teclado numérico embutido está ativo quando letras viram números.",
       "Anote se houve líquido, queda ou abertura do equipamento nos últimos meses — muda completamente o roteiro do diagnóstico.",
@@ -1562,7 +1578,7 @@ export const CLUSTER_PROBLEMAS: ClusterProblema[] = [
       },
       {
         q: "Teclado que digita sozinho pode ser vírus?",
-        a: "É muito improvável. Digitação repetida em teclas específicas é contato preso. Antes de tratar como praga, o teste com teclado externo resolve a dúvida em um minuto.",
+        a: "Repetição consistente de uma tecla costuma apontar primeiro para contato físico, sujeira, líquido ou configuração, mas não trate isso como prova. Teste outro teclado, outro aplicativo e o ambiente de recuperação; se houver outros sinais de acesso indevido, investigue segurança separadamente.",
       },
     ],
     relacionados: [

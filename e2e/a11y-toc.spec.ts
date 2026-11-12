@@ -21,6 +21,9 @@ test.describe("TOC — acessibilidade", () => {
       await page.goto(ARTIGO);
       const nav = page.getByRole("navigation", { name: "Índice do artigo" });
       await expect(nav).toBeVisible();
+      // O artigo faz hidratação cliente após o SSR. Esperar o marcador no
+      // próprio nav evita depender dos controles internos de <details> fechado no mobile.
+      await expect(nav).toHaveAttribute("data-toc-ready", "true");
 
       const resultado = await new AxeBuilder({ page })
         .include("nav[aria-label='Índice do artigo']")
@@ -59,10 +62,9 @@ test.describe("TOC — acessibilidade", () => {
     await page.locator("details.article-toc > summary").click();
 
     const botao = page.locator(".article-toc__copy").first();
+    await expect(botao).toHaveAttribute("data-toc-ready", "true");
     await botao.click();
     await expect(botao).toBeFocused();
-    // A aplicação também possui a região aria-live do sistema de notificações.
-    // O status do TOC é o alvo semântico correto e permanece único.
-    await expect(page.getByRole("status")).toContainText("copiado");
+    await expect(page.locator("[data-toc-live-status]")).toContainText("copiado");
   });
 });

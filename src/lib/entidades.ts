@@ -18,7 +18,7 @@ import type { FontePrimaria } from "@/lib/enriquecimento";
  *    diagnóstico fica em /problemas, execução comercial em /servicos.
  */
 
-export const ENTIDADES_REVISADO_EM = "2026-09-02";
+export const ENTIDADES_REVISADO_EM = "2026-09-28";
 
 export type LinkEntidade = {
   rotulo: string;
@@ -33,6 +33,7 @@ export type TipoEntidade =
   | "Rede"
   | "Prática"
   | "Código de erro"
+  | "Profissão"
   | "Sintoma"
   | "Local"
   | "Serviço";
@@ -99,6 +100,128 @@ const CIDADES_BASE: LinkEntidade[] = [
 ];
 
 export const ENTIDADES: Entidade[] = [
+  {
+    slug: "tecnico-de-informatica",
+    nome: "Técnico de Informática",
+    tipo: "Profissão",
+    tambemChamada: ["Técnico em Informática", "técnico de TI", "profissional de informática", "suporte técnico"],
+    resumo:
+      "Profissional que diagnostica, configura e mantém computadores, sistemas e redes, conectando o sintoma relatado à solução técnica apropriada.",
+    definicao: [
+      "Técnico de informática é o profissional que atua na instalação, configuração, manutenção e suporte de computadores, sistemas, periféricos e redes. No Catálogo Nacional de Cursos Técnicos, a habilitação formal aparece como Técnico em Informática; no uso cotidiano e nas buscas, “técnico de informática” é uma forma comum de se referir ao profissional ou ao serviço.",
+      "O trabalho técnico começa antes da troca de peça: identifica em qual camada a falha acontece, separa hardware de software, preserva dados quando há risco e escolhe a modalidade adequada de atendimento. Um computador lento pode exigir diagnóstico de armazenamento, memória, temperatura ou sistema; um notebook que não liga pede outra sequência; uma rede instável exige separar Wi-Fi, roteador, dispositivo e provedor.",
+      "Nesta taxonomia, a entidade representa a profissão e o papel técnico. Ela não substitui o guia completo nem as páginas comerciais: organiza as relações entre sintomas, ferramentas, decisões, artigos, serviços e cobertura local para que pessoas e mecanismos de busca entendam como esses conteúdos pertencem ao mesmo campo.",
+    ],
+    problemas: [
+      {
+        rotulo: "Notebook não liga",
+        to: "/problemas/notebook-nao-liga",
+        contexto: "Exemplo de sintoma em que energia, imagem e inicialização precisam ser separados antes do reparo.",
+      },
+      {
+        rotulo: "Computador lento",
+        to: "/problemas/computador-lento",
+        contexto: "Mostra por que diagnóstico vem antes de formatar ou comprar uma peça.",
+      },
+      {
+        rotulo: "Windows não inicia",
+        to: "/problemas/windows-nao-inicia",
+        contexto: "Falha em que firmware, boot, armazenamento e sistema podem produzir sinais parecidos.",
+      },
+      {
+        rotulo: "Wi-Fi instável",
+        to: "/problemas/wifi-instavel",
+        contexto: "Caso em que o técnico precisa distinguir rede local, equipamento e link de internet.",
+      },
+    ],
+    ferramentas: [
+      {
+        rotulo: "Checklist de computador lento",
+        to: "/ferramentas/checklist-computador-lento",
+        contexto: "Coleta sinais antes de concluir que o problema exige troca de hardware.",
+      },
+      {
+        rotulo: "Roteiro de falha de inicialização",
+        to: "/ferramentas/roteiro-falha-de-inicializacao",
+        contexto: "Organiza a investigação quando o sistema não chega à área de trabalho.",
+      },
+      {
+        rotulo: "Checklist antes de formatar",
+        to: "/ferramentas/checklist-antes-de-formatar",
+        contexto: "Protege dados e reduz decisões irreversíveis antes de reinstalar o sistema.",
+      },
+    ],
+    decisoes: [
+      {
+        rotulo: "Formatar ou reparar",
+        to: "/decisoes/formatar-ou-reparar",
+        contexto: "Separa defeito reparável de sistema de cenário que realmente pede reinstalação.",
+      },
+      {
+        rotulo: "Remoto ou presencial",
+        to: "/decisoes/remoto-ou-presencial",
+        contexto: "Define a modalidade de suporte conforme o tipo de falha e a necessidade de acesso físico.",
+      },
+      {
+        rotulo: "Consertar ou substituir",
+        to: "/decisoes/consertar-ou-substituir",
+        contexto: "Ajuda a evitar reparo que não compensa em relação ao equipamento e ao uso pretendido.",
+      },
+    ],
+    artigos: [
+      {
+        rotulo: "Guia do técnico de informática",
+        to: "/guia-tecnico-informatica",
+        contexto: "Pilar que aprofunda profissão, formação, áreas de atuação, famílias de falha e trilhas de estudo.",
+      },
+      {
+        rotulo: "O que é informática",
+        to: "/blog/o-que-e-informatica",
+        contexto: "Fundamento conceitual do campo em que o técnico atua.",
+      },
+      {
+        rotulo: "Informática básica",
+        to: "/blog/informatica-basica",
+        contexto: "Base para entender sistema, hardware, arquivos, rede e segurança.",
+      },
+      {
+        rotulo: "Como aprender informática",
+        to: "/blog/como-aprender-informatica",
+        contexto: "Trilha para transformar conceitos isolados em aprendizado progressivo.",
+      },
+    ],
+    servicos: [
+      {
+        rotulo: "Manutenção de computador",
+        to: "/servicos/manutencao-de-computador",
+        contexto: "Diagnóstico e reparo de desktop quando a causa ainda precisa ser isolada.",
+      },
+      {
+        rotulo: "Manutenção de notebook",
+        to: "/servicos/manutencao-de-notebook",
+        contexto: "Atendimento de energia, imagem, aquecimento, sistema e componentes de notebook.",
+      },
+      {
+        rotulo: "Redes e Wi-Fi",
+        to: "/servicos/redes-e-wifi",
+        contexto: "Diagnóstico de conectividade, cobertura, roteador e rede local.",
+      },
+      {
+        rotulo: "Suporte técnico empresarial",
+        to: "/servicos/suporte-tecnico-empresarial",
+        contexto: "Aplicação do suporte técnico em ambientes com múltiplos equipamentos e usuários.",
+      },
+    ],
+    cidades: CIDADES_BASE,
+    relacionadas: ["windows", "ssd", "memoria-ram", "wifi", "backup", "computador-lento", "servico", "cidade"],
+    fontes: [
+      {
+        titulo: "MEC — Catálogo Nacional de Cursos Técnicos: Técnico em Informática",
+        url: "https://www.gov.br/saude/pt-br/composicao/sgtes/diretrizes-para-formacao-tecnica-na-saude/publicacoes/catalogo-nacional-de-cursos-tecnicos.pdf/@@download/file",
+        nota: "Referência oficial para a denominação da habilitação e o campo de atuação da formação técnica.",
+      },
+    ],
+  },
   {
     slug: "windows",
     nome: "Windows",
@@ -201,10 +324,10 @@ export const ENTIDADES: Entidade[] = [
     tipo: "Componente",
     tambemChamada: ["disco de estado sólido", "NVMe", "M.2", "SATA SSD"],
     resumo:
-      "Armazenamento em memória flash, sem partes móveis. É o componente com maior impacto perceptível em máquinas que ainda usam HD mecânico.",
+      "Armazenamento em memória flash, sem partes móveis. Em máquinas limitadas por HD mecânico, a migração para SSD costuma reduzir bastante o tempo de acesso ao sistema e aos programas.",
     definicao: [
       "SSD é o dispositivo de armazenamento que grava dados em chips de memória flash. Sem cabeçote nem disco girando, o tempo de acesso cai de milissegundos para microssegundos — é isso que faz o sistema abrir, salvar e alternar entre programas sem a espera típica do HD.",
-      "Existem dois formatos que costumam ser confundidos: o SSD SATA, que usa o mesmo cabo do HD antigo, e o SSD NVMe, encaixado direto na placa-mãe via PCIe. O ganho entre HD e SSD SATA é sempre grande; entre SATA e NVMe, só aparece em cargas pesadas de leitura e escrita.",
+      "Existem interfaces e formatos que costumam ser confundidos: SSD SATA pode usar o mesmo barramento do HD antigo, enquanto SSD NVMe normalmente usa PCIe em formato M.2. A diferença percebida depende do gargalo e da carga de trabalho; compatibilidade deve ser confirmada antes da compra.",
       "Como entidade, SSD concentra as decisões de upgrade, clonagem, reconhecimento do disco pelo sistema e substituição de HD com desgaste — sem se confundir com a entidade Backup, que trata da cópia dos dados, não do meio onde eles ficam.",
     ],
     problemas: [
@@ -258,6 +381,16 @@ export const ENTIDADES: Entidade[] = [
         rotulo: "SSD NVMe não aparece no gerenciador de discos",
         to: "/blog/ssd-nvme-nao-aparece-no-gerenciador-de-discos",
         contexto: "Reconhecimento do disco novo pelo firmware e pelo sistema.",
+      },
+      {
+        rotulo: "HD ou SSD não é reconhecido na BIOS",
+        to: "/blog/hd-nao-e-reconhecido-na-bios-o-que-fazer",
+        contexto: "Diagnóstico quando a unidade some antes mesmo de o Windows carregar.",
+      },
+      {
+        rotulo: "SSD não aparece no instalador do Windows",
+        to: "/blog/ssd-nao-aparece-no-instalador-do-windows",
+        contexto: "Quando o firmware reconhece a unidade, mas o Windows Setup não a lista como destino.",
       },
     ],
     servicos: [
@@ -373,10 +506,10 @@ export const ENTIDADES: Entidade[] = [
     tipo: "Rede",
     tambemChamada: ["rede sem fio", "wireless", "roteador"],
     resumo:
-      "Rede local sem fio entre o equipamento e o roteador. Instabilidade quase sempre é de meio físico, canal ou configuração — e não do provedor de internet.",
+      "Rede local sem fio entre o dispositivo e o ponto de acesso. Instabilidade pode vir do próprio aparelho, cobertura, interferência, roteador ou do link de internet, e cada camada exige um teste diferente.",
     definicao: [
-      "Wi-Fi é o trecho sem fio da rede: do dispositivo até o roteador. O que a maioria chama de \"internet caindo\" costuma ser esse trecho, e não o link contratado — a diferença aparece quando o cabo funciona e o sem fio não.",
-      "Três variáveis explicam a maior parte dos casos: distância e obstáculos entre dispositivo e roteador, disputa de canal com redes vizinhas, e configuração do próprio roteador (banda, potência, DHCP e DNS). Cada uma tem verificação própria e nenhuma exige troca imediata de equipamento.",
+      "Wi-Fi é o trecho sem fio entre o dispositivo e o ponto de acesso. Quando alguém relata \"internet caindo\", o sintoma ainda não identifica a causa: comparar cabo, outros dispositivos, distância e comportamento do roteador ajuda a separar rede local de falha no link do provedor.",
+      "Distância e obstáculos, interferência, banda utilizada, configuração do roteador, adaptador do dispositivo e qualidade do link podem produzir sintomas parecidos. O diagnóstico compara essas camadas antes de recomendar reposicionamento, cabeamento, mesh, repetidor ou troca de equipamento.",
       "Como entidade, Wi-Fi conecta o diagnóstico doméstico ao ambiente empresarial, onde o mesmo sintoma tem causas de projeto de rede — cobertura, número de pontos e segmentação.",
     ],
     problemas: [
@@ -888,6 +1021,11 @@ export const linksDaEntidade = (e: Entidade): string[] => [
  * em que ponto continuar aumenta o risco de perda de dados ou de dano.
  */
 export const LIMITES_ENTIDADE: Record<string, string[]> = {
+  "tecnico-de-informatica": [
+    "Verificação segura: registrar o sintoma, o momento em que acontece e o que mudou antes da falha; isso ajuda a separar sistema, hardware, rede e dados.",
+    "Quando parar: cheiro de queimado, líquido, fumaça, bateria deformada ou disco com ruído mecânico pedem interrupção imediata do uso e avaliação física.",
+    "Diagnóstico responsável não troca peça por tentativa nem formata antes de verificar a necessidade de preservar os dados.",
+  ],
   windows: [
     "Verificação segura: observar mensagens de erro, código exibido e o que mudou antes da falha.",
     "Quando parar: se a falha impede o sistema de carregar, não repita reinícios nem reparo automático em sequência — cada tentativa mexe em arquivos de sistema e reduz a chance de recuperação simples.",

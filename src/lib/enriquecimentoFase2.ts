@@ -466,4 +466,25 @@ export function getEnriquecimentoFase2(slug?: string | null): PilarFase2 | null 
   return INDICE_FASE2.get(slug) ?? null;
 }
 
+
+const LINKS_ESPECIFICOS_FASE2: Record<string, LinkFase2[]> = {
+  "hd-nao-e-reconhecido-na-bios-o-que-fazer": [
+    {
+      to: "/entidades/ssd",
+      anchor: "entidade SSD",
+      nota: "mapa de reconhecimento, upgrade, clonagem e falhas relacionadas ao armazenamento",
+    },
+    {
+      to: "/blog/ssd-nao-aparece-no-instalador-do-windows",
+      anchor: "SSD não aparece no instalador do Windows",
+      nota: "quando o firmware reconhece a unidade, mas o Windows Setup não mostra o disco",
+    },
+  ],
+};
+
+export function getLinksEspecificosFase2(slug?: string | null): LinkFase2[] {
+  if (!slug) return [];
+  return LINKS_ESPECIFICOS_FASE2[slug] ?? [];
+}
+
 export const FASE2_SLUGS = [...INDICE_FASE2.keys()];

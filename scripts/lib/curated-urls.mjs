@@ -56,8 +56,8 @@ export const HUBS = [
   { path: "/guia-tecnico-informatica", changefreq: "monthly", priority: "0.7" },
   // Página de autoridade técnica: método editorial, clusters e fontes primárias.
   { path: "/autoridade-tecnica", changefreq: "monthly", priority: "0.7" },
-  // /assistencia-tecnica-curitiba permanece noindex e fora do sitemap por
-  // sobreposição com a landing canônica /tecnico-informatica-curitiba.
+  // /assistencia-tecnica-curitiba permanece pública, mas noindex conforme
+  // src/lib/localIndexPolicy.json até ganhar intenção suficientemente distinta.
 ];
 
 /**
@@ -115,6 +115,7 @@ export const DECISOES_SLUGS = [
 
 /** Taxonomia de entidades (fonte: src/lib/entidades.ts). */
 export const ENTIDADES_SLUGS = [
+  "tecnico-de-informatica",
   "windows",
   "ssd",
   "memoria-ram",
@@ -173,6 +174,7 @@ export const SERVICOS = [
   "/servicos/conserto-placa",
   "/servicos/conserto-monitor",
   "/servicos/conserto-impressora-3d",
+  "/conserto-impressora-curitiba",
 
 ].map((path) => ({ path, changefreq: "weekly", priority: "0.85" }));
 

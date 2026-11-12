@@ -6,14 +6,12 @@
  * dev server já rodando.
  *
  * Uso: node scripts/with-ssr-server.mjs npm run check:local-regression
- * Produção: SSR_SERVER_MODE=build node scripts/with-ssr-server.mjs <comando>
  */
 import { spawn } from "node:child_process";
 
 const PORTA = Number(process.env["SSR_PORT"] ?? 8080);
 const BASE = `http://127.0.0.1:${PORTA}`;
 const TIMEOUT_MS = Number(process.env["SSR_BOOT_TIMEOUT_MS"] ?? 180_000);
-const MODO = process.env["SSR_SERVER_MODE"] === "build" ? "build" : "dev";
 
 const comando = process.argv.slice(2);
 if (comando.length === 0) {
@@ -35,20 +33,10 @@ async function esperarPronto() {
   return false;
 }
 
-const servidor =
-  MODO === "build"
-    ? spawn("node", ["scripts/serve-worker-build.mjs", String(PORTA)], {
-        stdio: ["ignore", "inherit", "inherit"],
-        env: { ...process.env },
-      })
-    : spawn(
-        "npx",
-        ["vite", "dev", "--port", String(PORTA), "--host", "127.0.0.1"],
-        {
-          stdio: ["ignore", "inherit", "inherit"],
-          env: { ...process.env },
-        },
-      );
+const servidor = spawn("npx", ["vite", "dev", "--port", String(PORTA), "--host", "127.0.0.1"], {
+  stdio: ["ignore", "inherit", "inherit"],
+  env: { ...process.env },
+});
 
 let encerrado = false;
 const derrubar = () => {
@@ -68,9 +56,7 @@ process.on("SIGINT", () => {
 
 const pronto = await esperarPronto();
 if (!pronto) {
-  console.error(
-    `[with-ssr-server] servidor SSR não respondeu em ${BASE} dentro do timeout.`,
-  );
+  console.error(`[with-ssr-server] servidor SSR não respondeu em ${BASE} dentro do timeout.`);
   derrubar();
   process.exit(1);
 }

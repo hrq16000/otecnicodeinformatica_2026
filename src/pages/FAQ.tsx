@@ -117,12 +117,12 @@ const faqCategories = [
 
 const FAQ = () => {
   useEffect(() => {
-    document.title = "Perguntas Frequentes | Atendimento, Valores e Limites Técnicos";
+    document.title = "FAQ de informática: atendimento, diagnóstico e garantia";
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
       metaDescription.setAttribute(
         "content",
-        "Respostas diretas sobre como funciona a triagem, quando o atendimento é remoto, visita ou bancada, valores a partir de R$ 99,99, garantias e limites técnicos."
+        "Veja respostas sobre triagem, atendimento remoto, visita, bancada, recuperação de dados, valores, garantia e limites antes de solicitar suporte."
       );
     }
     trackPageView("/faq", "FAQ");
@@ -148,7 +148,7 @@ const FAQ = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <PageSEO title="Perguntas Frequentes | Atendimento, Valores e Limites Técnicos" description="Respostas diretas sobre como funciona a triagem, quando o atendimento é remoto, visita ou bancada, valores a partir de R$ 99,99, garantias e limites técnicos." path="/faq" breadcrumbs={[{ name: "Início", path: "/" }, { name: "FAQ", path: "/faq" }]} />
+      <PageSEO title="FAQ de informática: atendimento, diagnóstico e garantia" description="Veja respostas sobre triagem, atendimento remoto, visita, bancada, recuperação de dados, valores, garantia e limites antes de solicitar suporte." path="/faq" breadcrumbs={[{ name: "Início", path: "/" }, { name: "FAQ", path: "/faq" }]} />
       <JsonLdSchema />
       <Header />
       <Breadcrumbs items={[{ label: "FAQ" }]} />

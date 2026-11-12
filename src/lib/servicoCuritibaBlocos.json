@@ -13,14 +13,14 @@
       "subtitulo": "Como funciona contratar o conserto do seu notebook em Curitiba: modalidades disponíveis, logística de coleta, prazos reais e o que informar na triagem.",
       "intro": [
         "Tela que pisca, dobradiça estalando, carcaça esquentando perto do teclado ou o aparelho desligando sozinho depois de meia hora: o notebook avisa antes de parar de vez. Como tudo fica dentro de um chassi fechado, a checagem começa pela alimentação e pela bateria, passa pela dissipação e só depois abre para inspeção interna.",
-        "Em Curitiba a triagem acontece pelo WhatsApp com foto do modelo e da etiqueta, porque peça de portátil é específica de linha. Casos de sistema resolvemos remoto no mesmo dia; casos físicos seguem para bancada com prazo informado antes de qualquer desmontagem."
+        "Em Curitiba a triagem acontece pelo WhatsApp com foto do modelo e da etiqueta, porque peça de portátil é específica de linha. Casos de sistema podem começar por avaliação remota; casos físicos seguem para visita, coleta ou bancada, com a modalidade e a janela confirmadas antes do deslocamento."
       ],
       "blocos": [
         {
           "titulo": "Como o atendimento de notebook acontece em Curitiba",
           "paragrafos": [
             "O atendimento começa sempre por uma triagem no WhatsApp, antes de qualquer deslocamento. Você descreve o modelo, o sintoma e o bairro; a partir daí definimos se o caso se resolve no seu endereço, se vale a pena combinar a coleta do aparelho ou se o notebook precisa ir para bancada. Notebook é um equipamento portátil, e essa portabilidade muda a logística: na maioria dos casos o cliente prefere entregar o aparelho ou receber a coleta a esperar um técnico no local.",
-            "Curitiba concentra a maior parte da nossa agenda, então a janela de atendimento costuma ser combinada para o mesmo dia ou para o dia seguinte, conforme a disponibilidade real. Não trabalhamos com promessa de chegada em minutos: informamos a janela possível na triagem e confirmamos o horário antes de sair."
+            "A janela de atendimento em Curitiba depende da agenda, do bairro, da modalidade e do tipo de defeito. Não prometemos chegada em minutos nem atendimento no mesmo dia: informamos a janela disponível na triagem e confirmamos o horário antes do deslocamento."
           ]
         },
         {
@@ -62,7 +62,7 @@
       "faq": [
         {
           "pergunta": "Vocês consertam notebook em qualquer região de Curitiba?",
-          "resposta": "Sim, Curitiba é a região de maior concentração da agenda. A modalidade (coleta, visita ou bancada) é definida na triagem pelo WhatsApp conforme o sintoma e o bairro."
+          "resposta": "Sim. A modalidade — coleta, visita, suporte remoto ou bancada — é definida na triagem conforme o sintoma, o bairro e o que pode ser resolvido com segurança."
         },
         {
           "pergunta": "Preciso levar o notebook ou vocês buscam?",
@@ -74,7 +74,7 @@
         },
         {
           "pergunta": "Em quanto tempo o notebook fica pronto?",
-          "resposta": "Depende do reparo. Serviços de software e limpeza costumam ser resolvidos no mesmo atendimento; trocas que dependem de peça sob encomenda seguem o prazo do fornecedor, informado por escrito antes da aprovação."
+          "resposta": "Depende do reparo e da agenda. Serviços de software podem permitir solução remota; limpeza e reparos físicos dependem da modalidade e da bancada. Trocas com peça sob encomenda seguem o prazo do fornecedor, informado antes da aprovação."
         },
         {
           "pergunta": "Atendem empresas com vários notebooks?",
@@ -617,9 +617,9 @@
       "intentGlobal": "entender modelos de suporte, escopo de atendimento, níveis de serviço e o que um contrato de TI cobre",
       "intentLocal": "contratar suporte técnico para uma empresa em Curitiba sabendo tempo de deslocamento, rotina de visitas e como abrir chamado no dia a dia",
       "title": "Suporte Técnico Empresarial em Curitiba | Chamado e Visita",
-      "description": "Suporte técnico empresarial em Curitiba: chamado por WhatsApp, atendimento remoto imediato e visita ao escritório conforme urgência.",
+      "description": "Suporte técnico empresarial em Curitiba: abertura de chamado, triagem remota e visita ao escritório conforme o tipo de falha e a disponibilidade da agenda.",
       "h1": "Suporte técnico empresarial em Curitiba",
-      "subtitulo": "Como funciona o atendimento para empresas de Curitiba: quem abre o chamado, o que é resolvido remoto na hora e quando o técnico vai até o escritório.",
+      "subtitulo": "Como funciona o atendimento para empresas de Curitiba: abertura do chamado, triagem remota, critérios de visita e condições confirmadas antes do deslocamento.",
       "intro": [
         "Escritório com dez, vinte ou cinquenta estações não sofre com um defeito espetacular: sofre com fila de pequenos chamados que ninguém resolve. Impressora fora da rede, usuário sem acesso à pasta, e-mail travado, sistema de gestão lento no fim do mês, máquina nova para configurar.",
         "O atendimento a empresas em Curitiba organiza isso por prioridade e canal único: quem abre o chamado, o que já foi tentado e qual o impacto para a operação. Nada é combinado por conversa paralela, e cada intervenção fica registrada para a próxima ocorrência ser mais rápida."
@@ -628,22 +628,22 @@
         {
           "titulo": "Como a sua empresa abre um chamado",
           "paragrafos": [
-            "O chamado começa pelo WhatsApp da operação, com uma frase objetiva: qual máquina, qual usuário e o que parou. Em Curitiba, essa triagem existe justamente para separar o que é resolvido em minutos por acesso remoto do que exige alguém no local.",
+            "O chamado começa pelo WhatsApp da operação, com uma frase objetiva: qual máquina, qual usuário e o que parou. Em Curitiba, essa triagem separa o que pode ser tratado remotamente do que realmente exige alguém no local.",
             "Quem abre o chamado normalmente é a pessoa que sentou na máquina, não um setor de TI. Por isso não pedimos código de erro nem diagnóstico: descrever o sintoma em português comum é suficiente para a triagem seguir."
           ]
         },
         {
           "titulo": "Remoto primeiro, visita quando faz diferença",
           "paragrafos": [
-            "A maior parte dos chamados de escritório — impressora que sumiu da rede, usuário sem acesso a pasta compartilhada, sistema que não abre depois de atualização — é resolvida remotamente sem esperar deslocamento.",
+            "Chamados de escritório como impressora fora da rede, usuário sem acesso a pasta compartilhada ou sistema que não abre depois de atualização podem ser avaliados remotamente primeiro, quando o equipamento liga e há conectividade.",
             "A visita entra quando o problema é físico ou de infraestrutura: máquina que não liga, cabeamento, switch, ponto de rede, troca de equipamento. Nesse caso, o horário é combinado antes considerando o trânsito de Curitiba e o expediente do escritório."
           ]
         },
         {
           "titulo": "Deslocamento e regiões de Curitiba",
           "paragrafos": [
-            "Atendimentos no Centro, Batel, Água Verde, Portão, Boa Vista e no eixo empresarial da Cidade Industrial costumam ser encaixados no mesmo dia quando o chamado entra pela manhã.",
-            "Fora desse raio, o atendimento continua acontecendo, mas com agendamento — a diferença é de janela de horário, não de escopo. Toda condição de deslocamento é informada antes da confirmação, nunca depois do serviço."
+            "Atendemos empresas em diferentes regiões de Curitiba. A janela presencial depende da agenda, do deslocamento e do tipo de incidente; ela é confirmada na triagem antes de qualquer visita.",
+            "A região do escritório não muda o escopo técnico, mas pode mudar a janela disponível para atendimento presencial. Toda condição de deslocamento é informada antes da confirmação, nunca depois do serviço."
           ]
         },
         {
@@ -663,23 +663,23 @@
         {
           "titulo": "Horário, urgência e expediente",
           "paragrafos": [
-            "O atendimento acompanha o horário comercial da operação. Chamados abertos perto do fim do expediente são triados no mesmo dia e, quando não dá para resolver, ficam com prioridade na abertura do dia seguinte.",
-            "Se a parada afeta faturamento — caixa, emissor fiscal, servidor de arquivos — avise isso na primeira mensagem. Urgência real muda a ordem da fila; urgência declarada sem contexto, não."
+            "O atendimento segue a disponibilidade informada na triagem. Chamados próximos ao fim do expediente podem exigir agendamento para outra janela, sem promessa automática de resposta ou visita no mesmo dia.",
+            "Se a parada afeta faturamento — caixa, emissor fiscal ou servidor de arquivos — informe isso na primeira mensagem. O impacto operacional ajuda a classificar o chamado, mas a prioridade e a janela continuam sujeitas à disponibilidade combinada."
           ]
         }
       ],
       "faq": [
         {
           "pergunta": "Vocês atendem empresas em qualquer região de Curitiba?",
-          "resposta": "Sim. O atendimento remoto não depende de região e a visita presencial cobre Curitiba inteira, com janelas de horário mais estreitas nas regiões mais distantes do eixo central."
+          "resposta": "Sim. O atendimento remoto não depende do bairro; para visita presencial, a janela é confirmada conforme agenda, deslocamento e tipo de incidente."
         },
         {
           "pergunta": "Preciso ter contrato para ser atendido?",
           "resposta": "Não. O atendimento avulso por chamado é o formato padrão. Visitas recorrentes só são sugeridas quando o próprio histórico de chamados mostra vantagem financeira."
         },
         {
-          "pergunta": "O suporte remoto é feito na hora?",
-          "resposta": "Quando a máquina liga e tem internet, sim — o acesso remoto é iniciado durante a triagem, sem esperar agendamento."
+          "pergunta": "O suporte remoto começa imediatamente?",
+          "resposta": "Quando a máquina liga e tem internet, verificamos na triagem se o caso permite acesso remoto e qual janela está disponível. O início não é automático nem garantido no mesmo momento."
         },
         {
           "pergunta": "Vocês configuram máquina nova de funcionário?",
@@ -879,86 +879,87 @@
       "parent": "/servicos/montagem-de-pc",
       "nome": "Montagem de computador",
       "intentGlobal": "entender escolha de componentes, compatibilidade, dimensionamento de fonte, refrigeração e etapas técnicas da montagem",
-      "intentLocal": "montar um computador em Curitiba sabendo quem compra as peças, onde a montagem acontece e como fica a garantia de cada componente",
-      "title": "Montagem de Computador em Curitiba | Peças e Garantia",
-      "description": "Montagem de computador em Curitiba: conferência da lista de peças antes da compra, montagem em bancada com testes e orientação sobre garantia de cada componente.",
-      "h1": "Montagem de computador em Curitiba",
-      "subtitulo": "Quem compra as peças, onde a máquina é montada e como funciona a garantia dos componentes quando a montagem é feita em Curitiba.",
+      "intentLocal": "contratar montagem de computador em Curitiba com conferência de compatibilidade, BIOS/UEFI, fonte, refrigeração, testes e documentação das peças antes da entrega",
+      "title": "Montagem de PC em Curitiba | Compatibilidade, BIOS, fonte e testes",
+      "description": "Montagem de PC em Curitiba com conferência de CPU, placa-mãe, memória, fonte, gabinete, BIOS/UEFI e testes de estabilidade antes da entrega.",
+      "h1": "Montagem de PC em Curitiba",
+      "subtitulo": "Conferência de compatibilidade antes da compra, montagem em bancada, BIOS/UEFI, organização elétrica e testes para entregar uma máquina validada — não apenas ligada.",
       "intro": [
-        "Montar um computador começa muito antes da chave de fenda: é decidir a configuração pelo uso real, conferir se placa-mãe, memória, fonte e gabinete conversam entre si e dimensionar o que sobra para um upgrade futuro. Peça incompatível comprada em promoção é o prejuízo mais comum.",
-        "Com a lista aprovada, vem a montagem física com organização de cabos, ajuste de BIOS/UEFI, instalação do sistema e testes de estabilidade antes da entrega em Curitiba. Serve tanto para máquina nova quanto para quem já tem peças compradas e não quer arriscar a montagem."
+        "Montar um computador começa na lista de peças. CPU, placa-mãe, memória, fonte, gabinete, cooler, armazenamento e placa de vídeo precisam ser compatíveis entre si física, elétrica e logicamente. Uma peça 'compatível no papel' ainda pode exigir atualização de BIOS, perfil de memória específico ou espaço que o gabinete não oferece.",
+        "Depois da conferência vem a montagem em bancada, com organização de cabos, primeira inicialização, ajustes necessários de BIOS/UEFI, instalação do sistema quando contratada e testes de estabilidade. A entrega acontece com o conjunto validado para o uso pretendido."
       ],
       "blocos": [
         {
-          "titulo": "Conferência da lista antes de qualquer compra",
+          "titulo": "Compatibilidade antes da compra",
           "paragrafos": [
-            "Antes de comprar, mandamos a lista pretendida e conferimos compatibilidade, dimensionamento de fonte e espaço do gabinete. Essa etapa é a que mais evita prejuízo em Curitiba: peça incompatível comprada em promoção raramente é devolvida sem custo.",
-            "Se a lista veio de um orçamento de loja, conferimos do mesmo jeito. Não é preciso comprar conosco para a conferência acontecer."
+            "A lista é revisada antes do pagamento sempre que possível. Conferimos soquete e chipset, suporte de memória, tamanho do cooler, comprimento e espessura da placa de vídeo, potência e conectores da fonte, formato da placa-mãe e espaço útil do gabinete.",
+            "Também verificamos dependências menos óbvias: versão de BIOS necessária para determinada CPU, quantidade de pistas ou portas disponíveis, compartilhamento de conectores M.2/SATA e limitações de memória em certas combinações."
           ]
         },
         {
-          "titulo": "Quem fornece as peças",
+          "titulo": "Fonte e alimentação sem adaptador improvisado",
           "paragrafos": [
-            "Você pode comprar tudo e nos chamar apenas para montar, ou pedir que a compra seja intermediada. Os dois formatos existem e o valor da mão de obra é o mesmo.",
-            "Quando a compra é sua, a garantia fica direto com a loja — o que costuma ser mais rápido para acionar. Explicamos essa diferença antes, porque ela pesa mais que a diferença de preço."
+            "A fonte é dimensionada para o conjunto real e para a forma de uso. Além da potência, conferimos conectores, padrão, qualidade e margem para picos de consumo. Adaptador não é tratado como solução automática para fonte inadequada.",
+            "Cabos modulares de fontes diferentes não são intercambiáveis por aparência. Cada fonte usa pinagem própria no lado modular; misturar cabos pode danificar componentes. A montagem mantém apenas cabos compatíveis com o modelo instalado."
           ]
         },
         {
-          "titulo": "Onde a montagem acontece",
+          "titulo": "BIOS/UEFI, memória e primeiro boot",
           "paragrafos": [
-            "A montagem é feita em bancada, não no seu endereço. Cabo mal encaixado e parafuso faltando aparecem justamente em montagem improvisada em cima da mesa da sala.",
-            "Em Curitiba, isso significa combinar a entrega das peças e a retirada da máquina pronta, ou usar coleta e entrega quando você não tem como se deslocar."
+            "No primeiro boot verificamos reconhecimento de processador, memória e armazenamento, além de versão de BIOS/UEFI. Quando a plataforma exige atualização, o procedimento é feito com cuidado antes de ativar ajustes de desempenho.",
+            "Perfis de memória como XMP ou equivalentes só são ativados depois que a máquina inicia estável em configuração básica. Frequência anunciada no kit não substitui teste de estabilidade no conjunto real."
           ]
         },
         {
-          "titulo": "Testes antes de entregar",
+          "titulo": "Refrigeração e organização do gabinete",
           "paragrafos": [
-            "A máquina só é entregue depois de ligar, rodar teste de estabilidade, verificar temperatura sob carga e confirmar que memória e armazenamento estão reconhecidos na velocidade correta.",
-            "Sai também com sistema instalado, atualizações aplicadas e drivers corretos — não com a configuração padrão da primeira inicialização."
+            "Orientação de ventoinhas, posição do radiador quando houver, pressão de ar, folga para cabos e distância entre GPU e painéis afetam temperatura e ruído. Organização interna não é apenas estética; ela também facilita manutenção e reduz obstrução do fluxo.",
+            "Depois da montagem, conferimos temperaturas em repouso e sob carga compatível com o uso da máquina. Se o gabinete ou o cooler limitarem o conjunto, isso é informado antes de recomendar alteração."
           ]
         },
         {
-          "titulo": "Garantia dividida em duas partes",
+          "titulo": "Sistema, drivers e validação",
           "paragrafos": [
-            "A garantia das peças é do fabricante ou da loja, com prazo próprio de cada componente. A garantia do serviço é da montagem: encaixe, cabeamento, configuração e funcionamento do conjunto entregue.",
-            "Se um componente falhar dentro do prazo, orientamos o acionamento e remontamos a máquina depois da troca sem cobrar a mão de obra de novo."
+            "Quando a instalação do sistema faz parte do escopo, usamos drivers corretos da plataforma e do fabricante da placa de vídeo, aplicamos atualizações relevantes e verificamos dispositivos no sistema. Software adicional é instalado conforme combinado.",
+            "A máquina passa por testes de memória, armazenamento e estabilidade adequados à configuração. O objetivo não é prometer que nunca haverá falha, e sim reduzir a chance de entregar uma montagem com erro básico, componente não reconhecido ou configuração instável."
           ]
         },
         {
-          "titulo": "Migrar do computador antigo",
+          "titulo": "Peças do cliente, garantia e documentação",
           "paragrafos": [
-            "Se existe uma máquina antiga, a migração de arquivos e programas é combinada junto com a montagem, evitando que você fique com dois computadores pela metade em casa.",
-            "Peças aproveitáveis do equipamento antigo — disco, memória, gabinete — são avaliadas antes. Reaproveitar é comum, mas só quando não compromete o resto da configuração nova."
+            "Você pode fornecer as peças. Nesse caso, registramos o que foi recebido e se algum item chega com sinal de uso, dano ou embalagem violada. Garantia de componente continua ligada à loja ou fabricante conforme a compra.",
+            "A garantia da montagem cobre o serviço executado. Se um componente apresentar defeito, ajudamos a separar falha de peça de problema de montagem para que o acionamento correto seja feito sem trocar componentes desnecessariamente."
           ]
         }
       ],
       "faq": [
         {
-          "pergunta": "Preciso comprar as peças com vocês?",
-          "resposta": "Não. Você pode comprar por conta própria; a conferência de compatibilidade e a montagem acontecem do mesmo jeito."
+          "pergunta": "Posso mandar minha lista de peças antes de comprar?",
+          "resposta": "Sim. Conferir compatibilidade antes da compra é a melhor etapa para evitar placa-mãe, memória, fonte, cooler ou gabinete incompatíveis."
         },
         {
-          "pergunta": "Vocês montam na minha casa em Curitiba?",
-          "resposta": "A montagem é em bancada, com testes. Combinamos entrega das peças e retirada da máquina pronta, ou coleta e entrega."
+          "pergunta": "Vocês atualizam a BIOS se a CPU exigir?",
+          "resposta": "Quando necessário e compatível com a placa, sim. Primeiro confirmamos modelo, versão atual e método disponível para reduzir risco durante a atualização."
         },
         {
-          "pergunta": "A máquina sai com sistema instalado?",
-          "resposta": "Sim, com sistema, atualizações e drivers corretos, além de teste de estabilidade e temperatura sob carga."
+          "pergunta": "Ativam XMP ou perfil de memória?",
+          "resposta": "Quando a plataforma suporta e o conjunto fica estável, sim. A ativação vem depois do primeiro boot e de uma validação básica, porque frequência anunciada não garante estabilidade em toda configuração."
         },
         {
-          "pergunta": "Como fica a garantia das peças?",
-          "resposta": "Fica com a loja ou o fabricante de cada componente. A garantia do nosso serviço cobre a montagem e a configuração entregues."
+          "pergunta": "A máquina é testada antes da entrega?",
+          "resposta": "Sim. Verificamos reconhecimento de componentes, memória, armazenamento, temperaturas e estabilidade de acordo com o uso previsto antes da entrega."
         },
         {
-          "pergunta": "Dá para aproveitar peças do computador antigo?",
-          "resposta": "Frequentemente sim. Avaliamos antes se o reaproveitamento não vira gargalo da configuração nova."
+          "pergunta": "Posso fornecer todas as peças?",
+          "resposta": "Sim. Registramos os componentes recebidos, montamos e testamos o conjunto. Garantia das peças continua com a loja ou fabricante; a garantia da montagem cobre o serviço executado."
         }
       ],
       "interlinks": [
         "/servicos/montagem-de-pc",
+        "/servicos/pc-gamer/curitiba",
         "/servicos/upgrade-ssd/curitiba",
         "/tecnico-informatica-curitiba",
-        "/coleta-e-entrega",
+        "/problemas/computador-esquentando",
         "/areas-atendidas"
       ]
     },
@@ -1055,87 +1056,440 @@
       "parent": "/servicos/pc-gamer",
       "nome": "PC gamer",
       "intentGlobal": "entender configurações, placas de vídeo, gargalos, refrigeração e desempenho esperado por faixa de investimento",
-      "intentLocal": "montar, revisar ou consertar um PC gamer em Curitiba, com bancada, teste sob carga e cuidado no transporte da máquina",
-      "title": "PC Gamer em Curitiba | Montagem, Revisão e Manutenção",
-      "description": "PC gamer em Curitiba: montagem em bancada com teste sob carga, revisão térmica de máquina que está travando e coleta com transporte cuidadoso da sua torre.",
-      "h1": "PC gamer em Curitiba: montagem, revisão e manutenção",
-      "subtitulo": "Onde a máquina é montada ou revisada em Curitiba, como funciona o transporte da torre e o que é testado antes de devolver.",
+      "intentLocal": "diagnosticar, revisar ou reparar PC gamer em Curitiba com teste de estabilidade, temperatura, fonte, memória, armazenamento e placa de vídeo antes de indicar upgrade",
+      "title": "PC gamer em Curitiba | Travamentos, temperatura e upgrade",
+      "description": "PC gamer travando, esquentando ou com queda de desempenho em Curitiba? Diagnóstico de temperatura, fonte, memória, SSD e GPU antes de trocar componente.",
+      "h1": "PC gamer em Curitiba: diagnóstico, revisão e upgrade",
+      "subtitulo": "Teste sob carga para separar temperatura, fonte, memória, armazenamento, placa de vídeo e software antes de trocar componente ou refazer a máquina.",
       "intro": [
-        "Queda de quadros no meio da partida, temperatura de GPU subindo até o jogo fechar, travamento com tela preta e ventoinha acelerada, ou fonte subdimensionada depois de uma troca de placa de vídeo. Máquina de jogo falha sob carga, e é exatamente sob carga que ela precisa ser testada.",
-        "Em Curitiba o trabalho passa por medir temperatura e clock em estresse, revisar refrigeração e pasta térmica, conferir folga da fonte, avaliar memória e armazenamento e indicar qual upgrade muda o desempenho de verdade. Vale para máquina nova a montar e para torre que já vinha rodando."
+        "PC gamer que trava apenas em jogo, perde desempenho depois de alguns minutos, reinicia sob carga ou apresenta tela preta precisa ser testado no cenário em que a falha realmente aparece. Temperatura, alimentação, memória, armazenamento, driver e placa de vídeo podem produzir sintomas parecidos.",
+        "A revisão começa pela reprodução controlada do defeito e pela leitura dos sinais do sistema. Só depois entram troca de pasta térmica, ajuste de fluxo de ar, substituição de fonte, memória, SSD ou placa. Upgrade é consequência do diagnóstico, não ponto de partida."
       ],
       "blocos": [
         {
-          "titulo": "Montagem, revisão ou reparo",
+          "titulo": "Travamento em jogo: temperatura, fonte, memória ou driver?",
           "paragrafos": [
-            "Três pedidos diferentes chegam com o mesmo nome. Montagem é máquina nova a partir das peças; revisão é máquina que funciona mas esquenta, faz barulho ou perdeu desempenho; reparo é máquina que travou, reinicia ou não dá imagem.",
-            "A triagem em Curitiba separa esses três casos logo no início, porque o prazo e a forma de atendimento mudam completamente entre eles."
+            "Quando o problema aparece apenas sob carga, observamos temperatura de CPU e GPU, uso de memória, estabilidade da fonte e comportamento dos drivers. Travamento com queda de clock aponta para um caminho; reinício abrupto aponta para outro; artefatos de vídeo e tela preta exigem testes específicos.",
+            "O objetivo é reproduzir a falha de forma controlada. Um PC que funciona em desktop e falha apenas durante jogo pesado não pode ser avaliado apenas por inicialização e navegação."
           ]
         },
         {
-          "titulo": "Por que é serviço de bancada",
+          "titulo": "Teste sob carga e estabilidade antes de trocar peça",
           "paragrafos": [
-            "Máquina gamer exige teste sob carga por tempo, com acompanhamento de temperatura e estabilidade. Isso não acontece direito em uma visita rápida no seu endereço.",
-            "Por isso o formato padrão em Curitiba é coleta ou entrega na bancada. A visita fica reservada para checagens simples e orientação de configuração."
+            "Após a inspeção inicial, executamos testes compatíveis com o sintoma para verificar CPU, GPU, memória e armazenamento. A duração e o tipo do teste variam conforme o defeito; não usamos um único benchmark como prova universal.",
+            "Quando o problema some após ajuste de software, driver ou configuração, isso também é resultado válido. A troca de componente só entra quando os sinais apontam para hardware ou quando o upgrade é uma decisão de desempenho, não de reparo."
           ]
         },
         {
-          "titulo": "Transporte da torre",
+          "titulo": "Temperatura e fluxo de ar do gabinete",
           "paragrafos": [
-            "Gabinete gamer é pesado e tem componentes grandes suspensos na placa. No transporte, placa de vídeo pesada e cooler de torre são desmontados quando necessário para o percurso não gerar dano novo.",
-            "Se você mesmo vai trazer a máquina, oriente-se antes por mensagem: em boa parte dos casos, dois minutos de instrução evitam um problema criado dentro do carro."
+            "Temperatura não depende apenas de pasta térmica. Ventoinhas instaladas na direção errada, filtro saturado, cabo bloqueando entrada de ar, gabinete restritivo e curva de rotação inadequada podem elevar a temperatura mesmo com dissipador em bom estado.",
+            "A revisão considera entrada e saída de ar, estado das ventoinhas, fixação do cooler e comportamento térmico sob carga. Limpeza e troca de pasta são feitas quando o estado físico e as medições justificam."
           ]
         },
         {
-          "titulo": "Temperatura e barulho",
+          "titulo": "Fonte: potência nominal não conta a história inteira",
           "paragrafos": [
-            "Queda de desempenho no meio da partida quase sempre é térmica: pasta ressecada, fluxo de ar errado no gabinete ou pó acumulado. A revisão trata isso e mede o resultado antes e depois.",
-            "Barulho repentino costuma ser cooler ou fonte. Fonte com ruído anormal é tratada com prioridade, porque falha de fonte leva outros componentes junto."
+            "Fonte precisa ser avaliada pela potência adequada ao conjunto, conectores disponíveis, qualidade do modelo e comportamento sob carga. Uma troca de placa de vídeo pode expor limitação que não aparecia na configuração antiga.",
+            "Ruído elétrico, desligamento instantâneo, reinício em pico de carga e conector aquecendo precisam de inspeção antes de continuar usando a máquina. Não recomendamos adaptadores improvisados para contornar falta de conector de alimentação."
           ]
         },
         {
-          "titulo": "Upgrade sem trocar tudo",
+          "titulo": "Upgrade com foco no gargalo real",
           "paragrafos": [
-            "Muita máquina em Curitiba chega para troca completa e sai com upgrade pontual. Identificar onde está o gargalo real evita gasto grande com ganho pequeno.",
-            "Quando a troca realmente compensa, dizemos com número: o que a peça nova entrega em relação à atual, sem promessa de desempenho que a máquina não vai alcançar."
+            "Antes de recomendar CPU, GPU, memória ou SSD, verificamos o uso atual e o tipo de jogo ou aplicação. Uma placa de vídeo mais forte não resolve falta de memória; mais RAM não corrige armazenamento degradado; processador novo pode exigir placa-mãe e memória diferentes.",
+            "Quando o upgrade faz sentido, conferimos compatibilidade elétrica, física e de firmware antes da compra. O objetivo é evitar peça cara com ganho pequeno ou componente que não cabe, não alimenta ou não conversa com a plataforma atual."
           ]
         },
         {
-          "titulo": "Entrega e teste final",
+          "titulo": "Bancada, transporte e devolução",
           "paragrafos": [
-            "A devolução acontece depois de teste sob carga, conferência de temperatura e verificação de que o armazenamento e a memória estão operando na velocidade correta.",
-            "Você recebe o relato do que foi feito e o que ficou fora do escopo — inclusive quando a recomendação é não gastar agora."
+            "Teste sob carga, desmontagem ampla e substituição de componentes são mais seguros em bancada. A modalidade de atendimento é combinada conforme o defeito, o endereço e a agenda; não existe promessa fixa de coleta ou prazo.",
+            "Antes da devolução, repetimos os testes relevantes e registramos o que foi alterado. Se a recomendação for não gastar naquele momento, isso também entra no parecer."
           ]
         }
       ],
       "faq": [
         {
-          "pergunta": "Vocês atendem PC gamer na minha casa em Curitiba?",
-          "resposta": "Para diagnóstico simples e orientação, sim. Montagem, revisão térmica e reparo são feitos em bancada, com teste sob carga."
+          "pergunta": "Meu PC trava só quando jogo. É a placa de vídeo?",
+          "resposta": "Não necessariamente. Temperatura, fonte, memória, driver e armazenamento também podem causar falha apenas sob carga. O diagnóstico precisa reproduzir o problema e comparar esses sinais."
         },
         {
-          "pergunta": "Como faço para levar minha torre?",
-          "resposta": "Você pode trazer ou solicitar coleta. Antes disso, orientamos por mensagem como transportar sem forçar a placa de vídeo e o cooler."
+          "pergunta": "Temperatura alta sempre resolve com troca de pasta térmica?",
+          "resposta": "Não. Fluxo de ar, ventoinhas, gabinete, fixação do cooler e curva de rotação também influenciam. A troca de pasta é feita quando a inspeção e as medições justificam."
         },
         {
-          "pergunta": "Minha máquina trava só quando jogo. É peça queimada?",
-          "resposta": "Na maioria das vezes é temperatura ou fonte no limite, não peça queimada. O teste sob carga é justamente o que diferencia esses cenários."
+          "pergunta": "Como saber se minha fonte aguenta a placa de vídeo?",
+          "resposta": "É preciso considerar consumo do conjunto, conectores, qualidade da fonte e margem de operação, não apenas o número de watts no rótulo. Conferimos isso antes de recomendar a GPU ou a fonte."
         },
         {
-          "pergunta": "Dá para melhorar sem trocar a máquina inteira?",
-          "resposta": "Frequentemente sim. Identificamos o gargalo real e indicamos o upgrade pontual quando o ganho justifica o gasto."
+          "pergunta": "Vale fazer upgrade ou montar outro PC?",
+          "resposta": "Depende da plataforma atual e do gargalo. Avaliamos CPU, GPU, memória, armazenamento e compatibilidade para comparar o ganho real de um upgrade com o custo de uma configuração nova."
         },
         {
-          "pergunta": "Vocês compram as peças?",
-          "resposta": "Podemos intermediar ou apenas conferir a lista que você pretende comprar, com a compatibilidade validada antes do pagamento."
+          "pergunta": "O PC gamer precisa ir para bancada?",
+          "resposta": "Quando o caso exige teste prolongado, desmontagem ou troca de componentes, bancada costuma ser a opção mais adequada. Ajustes simples de software podem começar remotamente quando a máquina está estável."
         }
       ],
       "interlinks": [
         "/servicos/pc-gamer",
         "/servicos/montagem-de-pc/curitiba",
+        "/servicos/upgrade-ssd/curitiba",
+        "/problemas/computador-esquentando",
+        "/problemas/computador-reiniciando",
+        "/tecnico-informatica-curitiba"
+      ]
+    },
+    "conserto-tv": {
+      "path": "/servicos/conserto-tv/curitiba",
+      "parent": "/servicos/conserto-tv",
+      "nome": "Conserto de TV",
+      "intentGlobal": "entender diagnóstico e reparo de televisores: fonte, iluminação, imagem, áudio, sistema e viabilidade de peça",
+      "intentLocal": "solicitar conserto de TV em Curitiba com triagem prévia, definição de coleta/encaminhamento e janela real de atendimento",
+      "title": "Conserto de TV em Curitiba | Triagem, coleta e reparo",
+      "description": "Conserto de TV em Curitiba com triagem por sintoma e modelo, orientação sobre coleta ou encaminhamento e janela de atendimento conforme urgência e agenda.",
+      "h1": "Conserto de TV em Curitiba",
+      "subtitulo": "Diagnóstico de televisão em Curitiba com triagem do sintoma, decisão sobre a melhor forma de receber o aparelho e prazo informado sem promessas irreais.",
+      "intro": [
+        "TV que liga e apaga, fica com som sem imagem, mostra faixas na tela ou demora a iniciar exige uma triagem diferente de computador. O tamanho do aparelho, o tipo de painel e o risco de transporte mudam a forma de atendimento; por isso o primeiro passo é identificar marca, modelo, polegadas e o comportamento exato antes de definir deslocamento.",
+        "Em Curitiba, o atendimento é organizado a partir dessa triagem e da região do cliente. Centro, Água Verde, Portão, Boqueirão, CIC e Santa Felicidade são referências úteis para planejar deslocamento, assim como os eixos da Linha Verde e da BR-277. Isso não representa unidade física em bairro algum: a modalidade é combinada conforme agenda, distância e segurança para o equipamento."
+      ],
+      "blocos": [
+        {
+          "titulo": "Sintoma de TV não deve ser tratado como defeito genérico",
+          "paragrafos": [
+            "Tela completamente escura com áudio presente aponta para uma linha de investigação diferente de uma TV que reinicia, perde HDMI ou exibe manchas. Em modelos LED, fonte e iluminação precisam ser separadas de falhas de painel; em Smart TVs, travamentos de sistema também podem parecer defeito eletrônico. A triagem pede vídeo curto do sintoma quando possível, porque isso ajuda a decidir se o caso precisa de bancada desde o início.",
+            "O objetivo é evitar deslocar uma televisão grande sem necessidade e, no sentido oposto, evitar mandar um técnico ao endereço para um reparo que depende de instrumentos de bancada. Se houver tela trincada, impacto ou líquido, isso precisa ser informado antes, pois muda completamente a avaliação de viabilidade."
+          ]
+        },
+        {
+          "titulo": "Como Curitiba entra na logística do atendimento",
+          "paragrafos": [
+            "Curitiba combina regiões densas, prédios sem acesso simples para carga e descarga e bairros mais afastados do eixo central. Uma TV de 55 ou 65 polegadas em apartamento no Centro ou Água Verde exige outra logística de um aparelho menor em casa térrea no Boqueirão ou CIC. Por isso o endereço aproximado e as condições de retirada fazem parte da triagem, junto com tamanho e modelo.",
+            "Quando o equipamento precisa sair do local, a orientação de transporte considera manter a tela na posição adequada, evitar pressão sobre o painel e proteger quinas e base. A confirmação da modalidade e da janela acontece antes de qualquer deslocamento; não se presume coleta automática nem atendimento domiciliar para todos os casos."
+          ]
+        },
+        {
+          "titulo": "Janela de 2 a 72 horas úteis: o que ela significa para TV",
+          "paragrafos": [
+            "A operação trabalha com uma janela variável de atendimento entre 2 e 72 horas úteis, conforme urgência e disponibilidade de agendamento. Em TV, esse intervalo se refere à organização do atendimento e da triagem técnica, não a uma promessa de reparo concluído nesse mesmo período. Um aparelho que apenas precisa de avaliação inicial pode entrar mais rápido na agenda; um equipamento grande, com logística de retirada ou necessidade de profissional adequado ao tipo de defeito, pode exigir encaixe posterior.",
+            "A prioridade também leva em conta a agenda do prestador mais próximo disponível e a natureza do caso. Depois que a TV é avaliada, o prazo de reparo passa a depender de diagnóstico, viabilidade e eventual disponibilidade de peça. Separar essas duas etapas evita prometer um tempo que a eletrônica ou o fornecedor não conseguem cumprir."
+          ]
+        },
+        {
+          "titulo": "Rede nacional sem apagar a realidade local",
+          "paragrafos": [
+            "A operação que deu origem à rede começou em Curitiba em 2006 e hoje se conecta a uma rede nacional com mais de 6 mil prestadores credenciados. Na prática, a rede amplia a capacidade de localizar profissionais disponíveis sem transformar esse número em uma contagem artificial por cidade: não há promessa de quantidade fixa de técnicos em Curitiba nem de cobertura instantânea em qualquer bairro.",
+            "O modelo também adota como compromisso a valorização do prestador, com referência de tarifa mínima justa ao técnico em contraste com a prática histórica de remuneração muito baixa no setor. A lógica é simples: atendimento técnico exige deslocamento, ferramenta, responsabilidade sobre o equipamento e tempo de diagnóstico; pressionar o profissional a trabalhar por valor inviável tende a piorar disponibilidade e cuidado."
+          ]
+        },
+        {
+          "titulo": "O que enviar na triagem antes de mover a TV",
+          "paragrafos": [
+            "Informe marca, modelo completo da etiqueta traseira, tamanho em polegadas, há quanto tempo o problema aparece e o que acontece ao apertar o botão de ligar. Diga também se existe som, luz de standby, imagem muito escura, linhas, manchas, reinícios, falha em HDMI ou histórico de queda e oscilação elétrica. Uma foto da etiqueta e um vídeo curto do defeito costumam ser mais úteis do que apenas dizer que a televisão 'parou'.",
+            "Com esses dados e o bairro em Curitiba, a equipe consegue direcionar a etapa seguinte com menos tentativa e erro. O cliente recebe a modalidade disponível e a janela de atendimento antes de confirmar; qualquer reparo depende de diagnóstico e aprovação, e problemas de painel podem ser economicamente inviáveis dependendo do modelo."
+          ]
+        },
+        {
+          "titulo": "Quando vale comparar reparo e substituição",
+          "paragrafos": [
+            "Nem toda TV deve ser consertada a qualquer custo. Falhas de fonte, iluminação e conectividade podem ter cenários de reparo diferentes de painel quebrado ou peça sem reposição. O diagnóstico serve também para decidir se faz sentido investir no equipamento, especialmente em modelos mais antigos ou quando o valor da peça se aproxima do valor de substituição do aparelho.",
+            "A decisão deve partir de dados do modelo e do defeito, não de pressão para fechar serviço. Quando houver mais de uma alternativa técnica, a orientação é apresentar o que muda em custo, risco e disponibilidade de peça para que o cliente escolha com clareza."
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "pergunta": "Vocês fazem conserto de TV em qualquer bairro de Curitiba?",
+          "resposta": "O atendimento parte de Curitiba e é organizado conforme bairro, agenda, tamanho da TV e modalidade necessária. A confirmação de disponibilidade acontece na triagem; não há promessa de cobertura instantânea em todos os bairros."
+        },
+        {
+          "pergunta": "A janela de 2 a 72 horas úteis é o prazo para a TV ficar pronta?",
+          "resposta": "Não. É a janela variável para organizar o atendimento conforme urgência e disponibilidade do prestador mais próximo. O prazo de reparo só pode ser informado depois do diagnóstico e, quando houver troca, da disponibilidade de peça."
+        },
+        {
+          "pergunta": "Preciso informar o modelo antes do atendimento?",
+          "resposta": "Sim. Marca, modelo, polegadas e sintoma ajudam a decidir se o caso exige bancada, qual logística faz sentido e se existe alguma limitação conhecida de peça ou painel."
+        },
+        {
+          "pergunta": "TV com som e sem imagem sempre é LED queimado?",
+          "resposta": "Não. Iluminação é uma possibilidade, mas fonte, circuito de alimentação, painel e outras falhas podem produzir sintomas parecidos. O diagnóstico precisa separar essas causas."
+        },
+        {
+          "pergunta": "A rede tem quantos técnicos em Curitiba?",
+          "resposta": "Não publicamos uma contagem por cidade sem base confirmada. A operação integra uma rede nacional com mais de 6 mil prestadores credenciados, e a disponibilidade local é consultada caso a caso na triagem."
+        }
+      ],
+      "interlinks": [
+        "/servicos/conserto-tv",
+        "/conserto-tv-curitiba",
+        "/precos-e-politicas",
+        "/areas-atendidas",
+        "/coleta-e-entrega"
+      ]
+    },
+    "conserto-celular": {
+      "path": "/servicos/conserto-celular/curitiba",
+      "parent": "/servicos/conserto-celular",
+      "nome": "Conserto de Celular",
+      "intentGlobal": "entender reparo de smartphone: tela, bateria, carga, áudio, câmera, sistema e diagnóstico de placa",
+      "intentLocal": "solicitar conserto de celular em Curitiba com triagem por modelo, dano e prioridade, sem inventar estoque ou prazo de peça",
+      "title": "Conserto de Celular em Curitiba | Tela, bateria e carga",
+      "description": "Conserto de celular em Curitiba com triagem por modelo e defeito, orientação sobre encaminhamento do aparelho e atendimento conforme urgência e agenda.",
+      "h1": "Conserto de celular em Curitiba",
+      "subtitulo": "Triagem local para smartphone com identificação exata do modelo, histórico do dano e definição da forma de atendimento antes de qualquer reparo.",
+      "intro": [
+        "Celular quebrado concentra uma urgência diferente: nele estão autenticação bancária, mensagens, trabalho, fotos e acesso a contas. Mesmo assim, pressa não pode virar diagnóstico por chute. Tela sem toque, bateria estufada, conector intermitente, aparelho molhado e falha de sistema exigem procedimentos e riscos diferentes.",
+        "Em Curitiba, a triagem considera o modelo exato e a região do cliente antes de orientar o encaminhamento. Centro, Batel, Água Verde, Portão, Boqueirão e bairros ao longo da Linha Verde são referências de deslocamento; a cidade é atendida a partir da operação de Curitiba, sem afirmar loja, filial ou laboratório em cada região."
+      ],
+      "blocos": [
+        {
+          "titulo": "O modelo exato muda peça, desmontagem e risco",
+          "paragrafos": [
+            "Dizer apenas 'é um Samsung' ou 'é um iPhone' não basta para preparar um reparo. Variações do mesmo nome comercial podem usar telas, conectores e baterias diferentes. A etiqueta, o código do modelo nas configurações ou a identificação da carcaça ajudam a evitar compra de peça incompatível e permitem explicar antes se o aparelho precisa ser aberto para diagnóstico.",
+            "Queda com tela acesa mas sem toque não é o mesmo que tela totalmente apagada. Bateria que descarrega rápido não é igual a aparelho que desliga sob carga. E celular que molhou deve ser tratado como caso de corrosão potencial, sem insistir em ligar ou carregar repetidamente. A triagem separa esses cenários antes de falar em preço ou prazo."
+          ]
+        },
+        {
+          "titulo": "Curitiba e a decisão entre rapidez e deslocamento seguro",
+          "paragrafos": [
+            "Quem está no Centro ou Batel pode ter necessidade de recuperar o aparelho no meio do expediente; quem está no Portão, Boqueirão ou CIC pode preferir combinar uma janela que evite atravessar a cidade em horário de pico. A logística faz parte do atendimento porque celular é pequeno, mas concentra dados sensíveis e peças frágeis.",
+            "A triagem informa qual forma de encaminhamento está disponível naquele chamado. Não se promete visita domiciliar para troca de tela nem se inventa ponto fixo de atendimento: o fluxo é confirmado antes, de acordo com agenda, região, defeito e necessidade de bancada."
+          ]
+        },
+        {
+          "titulo": "Por que o atendimento pode variar de 2 a 72 horas úteis",
+          "paragrafos": [
+            "A janela operacional informada para atendimento varia de 2 a 72 horas úteis. Casos urgentes e simples de classificar podem encontrar encaixe mais cedo; chamados sem urgência, em horário de maior carga ou que exigem um profissional com experiência específica naquele tipo de reparo podem ficar para uma janela posterior. A agenda do prestador mais próximo disponível entra nessa decisão.",
+            "Essa janela não transforma peça em estoque nem garante conserto final dentro do mesmo intervalo. Depois que o aparelho é inspecionado, a conclusão depende do defeito real e, quando necessário, de componente compatível. A distinção entre 'ser atendido' e 'ficar pronto' é essencial para não criar expectativa falsa."
+          ]
+        },
+        {
+          "titulo": "Dados pessoais exigem limite claro no reparo",
+          "paragrafos": [
+            "Smartphone guarda fotos, mensagens, contas e tokens de autenticação. O técnico deve acessar apenas o necessário para testar a função reparada. Quando um teste exige desbloqueio, a necessidade precisa ser explicada ao cliente; sempre que possível, o próprio cliente acompanha ou executa a etapa sensível.",
+            "Antes de intervenções que possam afetar o sistema, vale confirmar backup disponível. Se o problema for apenas físico, como tela ou conector, não há motivo técnico para navegar por conteúdo pessoal. Esse limite é parte da qualidade do atendimento, não um extra opcional."
+          ]
+        },
+        {
+          "titulo": "A rede nacional começou com operação local",
+          "paragrafos": [
+            "Curitiba é o ponto de origem da operação iniciada em 2006; a estrutura evoluiu para uma rede nacional com mais de 6 mil prestadores credenciados. Esse dado é nacional e não deve ser convertido em número de técnicos na cidade. Para cada solicitação, a disponibilidade é verificada pela urgência, região e agenda real.",
+            "O compromisso de valorização do prestador usa a referência de uma tarifa mínima justa ao técnico, evitando a lógica de remunerar diagnóstico e deslocamento por valores que inviabilizam o trabalho. Em reparo de celular isso importa porque desmontagem cuidadosa, teste e responsabilidade sobre dados exigem tempo técnico real."
+          ]
+        },
+        {
+          "titulo": "O que informar antes de pedir orçamento",
+          "paragrafos": [
+            "Envie marca, modelo exato, defeito percebido, histórico de queda ou contato com líquido e se o aparelho ainda liga, carrega e responde ao toque. Para falha de bateria, diga se há aquecimento ou estufamento. Para conector, informe se carrega apenas em determinada posição. Para tela, uma foto externa ajuda a diferenciar vidro, display e estrutura.",
+            "Com esse conjunto de informações, a conversa inicial consegue direcionar o reparo com mais precisão. O valor final continua dependente da condição real e da peça necessária; nada deve ser vendido como diagnóstico fechado apenas pelo WhatsApp."
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "pergunta": "Consertam celular em todas as regiões de Curitiba?",
+          "resposta": "A disponibilidade é confirmada por bairro, agenda e tipo de reparo. Curitiba é a base da operação, mas a forma de encaminhamento do aparelho é definida na triagem e não pressupõe unidade física em cada região."
+        },
+        {
+          "pergunta": "Quanto demora para ser atendido?",
+          "resposta": "A janela de atendimento varia de 2 a 72 horas úteis conforme urgência e disponibilidade do prestador mais próximo. Isso não é prazo garantido de reparo concluído; peça e diagnóstico podem exigir tempo adicional."
+        },
+        {
+          "pergunta": "Preciso passar minha senha ao técnico?",
+          "resposta": "Somente quando um teste realmente exigir acesso e com explicação do motivo. O acesso deve ficar limitado à função necessária para validar o reparo."
+        },
+        {
+          "pergunta": "Celular molhado deve ser colocado no arroz?",
+          "resposta": "Não é uma solução técnica confiável. O mais seguro é desligar, evitar novas tentativas de carga e buscar avaliação, porque energia aplicada sobre uma placa úmida pode ampliar a corrosão e o dano."
+        },
+        {
+          "pergunta": "Vocês têm mais de 6 mil técnicos em Curitiba?",
+          "resposta": "Não. O dado confirmado é de uma rede nacional com mais de 6 mil prestadores credenciados. Não publicamos quantidade por cidade sem fonte específica."
+        }
+      ],
+      "interlinks": [
+        "/servicos/conserto-celular",
+        "/conserto-celular-curitiba",
+        "/precos-e-politicas",
+        "/seguranca-dos-dados",
+        "/areas-atendidas"
+      ]
+    },
+    "suporte-empresas": {
+      "path": "/servicos/suporte-empresas/curitiba",
+      "parent": "/servicos/suporte-tecnico-empresarial",
+      "nome": "Suporte Técnico para Empresas",
+      "intentGlobal": "entender suporte de TI para pequenas empresas: estações, rede, impressoras, acesso, backup e continuidade operacional",
+      "intentLocal": "contratar suporte de TI para empresa em Curitiba com triagem por impacto, atendimento remoto ou no local e priorização por urgência",
+      "title": "Suporte de TI para Empresas em Curitiba | Atendimento técnico",
+      "description": "Suporte de TI para pequenas empresas em Curitiba com triagem por impacto, atendimento remoto ou presencial conforme o caso e agenda por prioridade.",
+      "h1": "Suporte de TI para empresas em Curitiba",
+      "subtitulo": "Atendimento técnico para pequenas operações que precisam recuperar computadores, rede e rotinas de trabalho sem promessas de disponibilidade irreais.",
+      "intro": [
+        "Quando uma pequena empresa perde acesso ao sistema, à impressora compartilhada, ao e-mail ou à rede, o problema deixa de ser apenas técnico e passa a interromper uma rotina inteira. A primeira triagem precisa identificar quantas pessoas foram afetadas, se existe alternativa provisória e se o incidente pode ser resolvido remotamente antes de deslocar alguém.",
+        "Em Curitiba, o contexto muda entre escritórios do Centro, Batel e Água Verde, lojas e serviços no Portão ou Hauer e operações na CIC e no entorno da Linha Verde. O atendimento é organizado a partir da cidade-sede e da agenda real, sem tratar cada bairro como filial nem assumir o mesmo tempo para todo chamado."
+      ],
+      "blocos": [
+        {
+          "titulo": "Prioridade empresarial começa pelo impacto, não pelo equipamento",
+          "paragrafos": [
+            "Um único computador lento pode ser inconveniente; o computador do caixa, a máquina que emite documento fiscal ou a estação que concentra arquivos pode paralisar a operação. A triagem pergunta quem está parado, qual serviço deixou de funcionar e se existe alternativa temporária. Isso permite separar urgência operacional de tarefas que podem ser agendadas sem prejudicar o negócio.",
+            "Rede, impressão, credenciais, Windows, armazenamento e periféricos são tratados como partes de um fluxo. Trocar uma peça sem entender a causa pode devolver a máquina funcionando e manter o problema de rede ou perfil de usuário que originou a interrupção."
+          ]
+        },
+        {
+          "titulo": "Atendimento remoto ou no endereço em Curitiba",
+          "paragrafos": [
+            "Falhas de configuração, e-mail, acesso a sistemas, impressora lógica e muitos problemas de Windows podem começar por sessão remota autorizada. Quando há suspeita de fonte, cabeamento, roteador, disco, periférico físico ou múltiplas máquinas afetadas, a avaliação no endereço tende a ser mais adequada.",
+            "A região entra no planejamento do chamado. Um escritório no Centro ou Rebouças pode exigir janela compatível com acesso a estacionamento e horário comercial; uma operação no Hauer, Boqueirão ou CIC pode depender de deslocamento pela Linha Verde ou outros eixos de tráfego. A modalidade é definida antes de enviar o profissional."
+          ]
+        },
+        {
+          "titulo": "Como funciona a janela de 2 a 72 horas úteis para empresas",
+          "paragrafos": [
+            "O atendimento pode variar entre 2 e 72 horas úteis porque a fila é classificada por urgência e impacto. Uma empresa totalmente parada tem prioridade diferente de uma solicitação de instalação que pode ser programada. Além disso, o sistema procura encaixar o prestador mais próximo disponível com perfil compatível com o problema, em vez de prometer um horário que não existe na agenda.",
+            "O intervalo é uma janela operacional, não um contrato de disponibilidade contínua nem prazo fechado para resolver qualquer incidente. Depois da avaliação, serviços que dependem de peça, cabeamento, reinstalação extensa ou decisão do responsável podem levar mais tempo, e essa nova expectativa precisa ser informada antes da execução."
+          ]
+        },
+        {
+          "titulo": "Suporte útil documenta causa, decisão e próximo passo",
+          "paragrafos": [
+            "Em ambiente empresarial, resolver sem registrar o que foi feito cria reincidência e dependência. O atendimento deve identificar sintoma, causa provável ou confirmada, ação executada e o que precisa ser acompanhado. Quando o problema retorna, esse histórico reduz repetição de testes e ajuda a perceber padrão.",
+            "Também é importante separar manutenção corretiva de mudança de infraestrutura. Adicionar pontos de rede, substituir máquinas, migrar backup ou reorganizar permissões são projetos diferentes de restaurar uma estação parada. Misturar tudo em um chamado urgente dificulta preço, prazo e responsabilidade."
+          ]
+        },
+        {
+          "titulo": "Rede nacional com valorização de quem executa o serviço",
+          "paragrafos": [
+            "A empresa nasceu em Curitiba em 2006 e a operação se expandiu para uma rede nacional com mais de 6 mil prestadores credenciados. Esse alcance ajuda a organizar disponibilidade, mas não autoriza dizer quantos profissionais existem em Curitiba ou prometer técnico imediato em toda a cidade; cada chamado continua dependente de agenda.",
+            "A política declarada de valorização do prestador inclui a defesa de tarifa mínima justa ao técnico. Para empresas, isso protege um ponto essencial: diagnóstico empresarial exige responsabilidade sobre dados, continuidade e ambiente de trabalho. Remuneração inviável tende a incentivar atendimento apressado, enquanto uma relação sustentável permite cobrar registro, teste e encerramento adequado."
+          ]
+        },
+        {
+          "titulo": "Informações que aceleram a triagem empresarial",
+          "paragrafos": [
+            "Antes de chamar, informe o endereço em Curitiba, quantidade aproximada de pessoas afetadas, equipamentos envolvidos, mensagem de erro e o que mudou pouco antes da falha. Diga se existe acesso à internet, se outras máquinas funcionam e se o problema impede faturamento, atendimento ao público ou acesso a arquivos.",
+            "Com essas informações é possível decidir se o primeiro movimento será remoto, visita ou coleta de um equipamento específico. A empresa recebe a janela disponível e aprova o escopo antes da execução; demandas recorrentes podem ser avaliadas separadamente, sem presumir plano mensal ou contrato padronizado."
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "pergunta": "Atendem pequenas empresas em Curitiba?",
+          "resposta": "Sim, mediante triagem e disponibilidade de agenda. O atendimento pode ser remoto, no endereço ou envolver coleta, conforme o problema e o impacto na operação."
+        },
+        {
+          "pergunta": "Qual é o prazo de atendimento para empresa?",
+          "resposta": "A janela varia de 2 a 72 horas úteis conforme urgência, impacto e disponibilidade do prestador mais próximo. Não é uma promessa de solução completa no mesmo intervalo."
+        },
+        {
+          "pergunta": "Vocês oferecem suporte mensal?",
+          "resposta": "Não presumimos plano mensal padronizado. Necessidades recorrentes podem ser avaliadas e ter escopo próprio, sempre com condições registradas antes."
+        },
+        {
+          "pergunta": "Problema de rede pode começar por acesso remoto?",
+          "resposta": "Alguns casos de configuração podem. Quando é necessário medir sinal, verificar cabeamento, roteador, switch ou conexão física, a avaliação precisa ocorrer no local."
+        },
+        {
+          "pergunta": "Quantos prestadores atendem empresas em Curitiba?",
+          "resposta": "Não publicamos número por cidade sem fonte confirmada. O dado institucional é de uma rede nacional com mais de 6 mil prestadores credenciados; a disponibilidade em Curitiba é consultada no chamado."
+        }
+      ],
+      "interlinks": [
+        "/servicos/suporte-tecnico-empresarial",
+        "/empresa-de-ti-curitiba",
+        "/atendimento-remoto",
+        "/servicos/redes-e-wifi",
+        "/precos-e-politicas"
+      ]
+    },
+    "atendimento-remoto": {
+      "path": "/servicos/atendimento-remoto/curitiba",
+      "parent": "/atendimento-remoto",
+      "nome": "Atendimento Remoto",
+      "intentGlobal": "entender quando suporte remoto resolve problemas de software, configuração e acesso sem deslocamento",
+      "intentLocal": "iniciar suporte remoto a partir de Curitiba e saber quando o chamado precisa migrar para atendimento presencial",
+      "title": "Suporte Remoto em Curitiba | Windows, programas e acesso",
+      "description": "Suporte remoto para clientes em Curitiba: triagem por WhatsApp, sessão autorizada para software e configuração e encaminhamento presencial quando há falha física.",
+      "h1": "Suporte remoto em Curitiba",
+      "subtitulo": "Atendimento por sessão autorizada para problemas que realmente podem ser resolvidos à distância, com limite claro quando o defeito exige presença física.",
+      "intro": [
+        "Suporte remoto faz sentido quando o computador ainda liga, conecta à internet e o problema está em software, configuração ou acesso. Ele não substitui visita para cabo rompido, fonte defeituosa, Wi‑Fi que precisa ser medido no imóvel ou máquina que nem inicia. A triagem serve justamente para não forçar atendimento remoto onde ele não ajuda.",
+        "Para quem está em Curitiba, começar à distância pode evitar deslocamento entre Centro, Batel, Água Verde, Portão, CIC ou bairros mais afastados. Se a sessão mostra que existe falha física, o chamado pode ser redirecionado para modalidade local conforme agenda, sem fingir que todo problema cabe numa tela compartilhada."
+      ],
+      "blocos": [
+        {
+          "titulo": "O que realmente dá para resolver por acesso remoto",
+          "paragrafos": [
+            "Configuração de Windows, programas que não abrem, contas de e-mail, impressoras já conectadas à rede, atualização de drivers, organização de inicialização e alguns erros de navegador são bons candidatos. O técnico acompanha o comportamento do sistema em tempo real e consegue testar mudanças sem sair do contexto do usuário.",
+            "O limite aparece quando o software depende de algo físico: disco com ruído, superaquecimento, cabo de rede solto, roteador mal posicionado, bateria estufada ou computador que não liga. Nesses casos, continuar tentando remotamente só consome tempo; a triagem deve migrar o atendimento."
+          ]
+        },
+        {
+          "titulo": "Sessão autorizada e visível ao cliente",
+          "paragrafos": [
+            "O acesso remoto precisa ser iniciado com consentimento e acompanhado pelo usuário. A pessoa vê o que está sendo feito e pode encerrar a sessão. Senhas e dados sensíveis não devem ser solicitados por formulários públicos; quando uma etapa exige autenticação, o ideal é que o próprio cliente digite a credencial.",
+            "O técnico acessa apenas o necessário para diagnosticar e corrigir o problema. Pastas pessoais, fotos e documentos não fazem parte do atendimento salvo quando a própria tarefa envolve backup, localização de arquivo ou recuperação autorizada."
+          ]
+        },
+        {
+          "titulo": "De 2 a 72 horas úteis: por que uma sessão remota também entra em fila",
+          "paragrafos": [
+            "Mesmo sem deslocamento, o atendimento remoto depende de triagem e agenda. A janela operacional varia entre 2 e 72 horas úteis: casos urgentes com máquina funcional e profissional disponível podem entrar cedo; solicitações programáveis ou períodos de maior demanda podem ser encaixados depois. A prioridade é definida pelo impacto e pela disponibilidade do prestador mais próximo em capacidade, não por promessa automática.",
+            "Uma vez iniciada a sessão, alguns problemas podem ser resolvidos rapidamente e outros exigem download, atualização, reinicialização ou análise adicional. O intervalo de 2 a 72 horas não é garantia de conclusão: ele explica quando o atendimento pode ser organizado e por que urgência e agenda mudam a posição do chamado."
+          ]
+        },
+        {
+          "titulo": "Por que Curitiba continua relevante num serviço à distância",
+          "paragrafos": [
+            "A localização importa porque o remoto pode virar presencial. Se a análise identifica SSD com falha, fonte instável ou necessidade de mexer no roteador, saber que o cliente está em Curitiba permite planejar a continuidade sem recomeçar a triagem. Bairro, disponibilidade e modalidade passam a orientar o próximo passo.",
+            "Também é comum o suporte remoto servir de filtro técnico antes de uma visita, reduzindo deslocamentos desnecessários pela Linha Verde, Centro ou eixos como a BR-277. O ganho não é vender rapidez artificial; é usar o canal certo para cada tipo de problema."
+          ]
+        },
+        {
+          "titulo": "Da operação curitibana para uma rede nacional",
+          "paragrafos": [
+            "A empresa começou em Curitiba em 2006 e hoje integra uma rede nacional com mais de 6 mil prestadores credenciados. No atendimento remoto, isso amplia a possibilidade de encontrar disponibilidade sem transformar a rede em uma promessa de resposta instantânea ou em número fictício de profissionais por cidade.",
+            "A valorização do prestador também orienta esse modelo. A referência de tarifa mínima justa reconhece o tempo de análise e responsabilidade técnica, inclusive quando o serviço é feito pela internet. Remoto não significa trabalho sem valor; significa retirar o custo de um deslocamento que não agrega quando o defeito é lógico."
+          ]
+        },
+        {
+          "titulo": "Como preparar o computador para a triagem",
+          "paragrafos": [
+            "Antes da sessão, descreva o erro, diga qual versão do Windows está usando se souber, informe se a internet está estável e quando o problema começou. Uma foto ou captura da mensagem de erro ajuda. Se o computador não liga, reinicia sozinho ou faz ruído anormal, avise antes: esses sinais podem impedir o atendimento remoto.",
+            "Mantenha arquivos importantes sincronizados ou com backup quando houver risco de alteração de sistema. A triagem informa a janela disponível e explica a ferramenta de acesso; nada deve ser instalado por link de origem duvidosa ou número não reconhecido."
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "pergunta": "Quais problemas podem ser resolvidos remotamente em Curitiba?",
+          "resposta": "Principalmente software, configuração, acesso, programas, contas e alguns problemas de Windows. Falhas físicas, rede que exige medição no imóvel ou equipamento que não liga precisam de outra modalidade."
+        },
+        {
+          "pergunta": "O suporte remoto é imediato?",
+          "resposta": "Não há promessa de atendimento instantâneo. A janela varia de 2 a 72 horas úteis conforme urgência e disponibilidade de agenda, mesmo quando não existe deslocamento."
+        },
+        {
+          "pergunta": "O técnico consegue ver todos os meus arquivos?",
+          "resposta": "A sessão permite visualizar a tela, mas o atendimento deve se limitar ao necessário para a tarefa. O cliente acompanha a sessão e pode encerrá-la."
+        },
+        {
+          "pergunta": "Se o problema for físico, perco a triagem remota?",
+          "resposta": "Não. O que foi identificado serve para encaminhar a continuidade, e o chamado pode migrar para visita, coleta ou bancada conforme o defeito e a agenda."
+        },
+        {
+          "pergunta": "A rede nacional garante alguém disponível em Curitiba a qualquer hora?",
+          "resposta": "Não. A rede nacional tem mais de 6 mil prestadores credenciados, mas a disponibilidade local é real e variável. Por isso cada chamado recebe uma janela conforme urgência e agenda."
+        }
+      ],
+      "interlinks": [
+        "/atendimento-remoto",
         "/tecnico-informatica-curitiba",
-        "/coleta-e-entrega",
-        "/servicos/upgrade-ssd/curitiba"
+        "/servicos/suporte-tecnico-empresarial",
+        "/seguranca-dos-dados",
+        "/precos-e-politicas"
       ]
     }
   }

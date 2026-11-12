@@ -1252,7 +1252,117 @@ export const ENRIQUECIMENTO_1: Record<string, EnriquecimentoConteudo> = {
         ],
       },
     ],
-  }
+  },
+
+  "/problemas/computador-esquentando": {
+    respostaRapida:
+      "Se o computador está esquentando, não use uma temperatura genérica como diagnóstico. Compare o comportamento sob a mesma carga, procure throttling ou desligamento de proteção, confirme se entradas e saídas de ar estão livres e consulte o limite do processador ou do fabricante do equipamento. Calor alto durante tarefa pesada pode ser normal; perda sustentada de desempenho, ventoinha no limite e desligamentos repetidos pedem investigação.",
+    tabelaDiagnostica: {
+      titulo: "Computador esquentando: sinal observado e próximo teste seguro",
+      linhas: [
+        { sintoma: "Quente sob jogo/renderização, sem queda de desempenho", causa: "Carga alta dentro do projeto térmico", verificar: "Comparar temperatura, frequência e limite oficial do processador/OEM", acao: "Não abrir a máquina só por um pico de temperatura" },
+        { sintoma: "Clock cai e desempenho piora após alguns minutos", causa: "Possível throttling térmico ou de potência", verificar: "Registrar frequência, potência, temperatura e momento da queda", acao: "Repetir a mesma carga após revisar fluxo de ar" },
+        { sintoma: "Ventoinha alta e pouco ar na saída", causa: "Entrada, filtro, radiador ou ventoinha obstruídos", verificar: "Inspeção externa e, em bancada, limpeza do conjunto", acao: "Não soprar a ventoinha em rotação livre" },
+        { sintoma: "Desliga sozinho, há cheiro ou bateria deformada", causa: "Proteção térmica, falha elétrica ou bateria", verificar: "Interromper o teste e avaliar em bancada", acao: "Não insistir em stress test ou nova partida" },
+      ],
+    },
+    blocos: [
+      {
+        id: "temperatura-sem-numero-magico",
+        titulo: "Como decidir sem um número mágico de temperatura",
+        intro: "O limite depende do processador, do notebook ou gabinete e da carga. O dado útil é a relação entre temperatura, frequência e comportamento.",
+        itens: [
+          { titulo: "Use a especificação do componente", desc: "Intel e fabricantes publicam limites e comportamento de proteção. Compare o modelo exato em vez de repetir faixas genéricas de internet." },
+          { titulo: "Meça a mesma carga antes e depois", desc: "Uma limpeza só é comprovada quando o mesmo teste mostra melhor fluxo, menor limitação ou comportamento mais estável — não por sensação ao tocar na carcaça." },
+          { titulo: "Separe pico de problema sustentado", desc: "Picos curtos podem acompanhar aumento normal de carga. O que pesa no diagnóstico é throttling persistente, perda de desempenho, ruído anormal ou desligamento." },
+          { titulo: "Pare diante de sinal elétrico", desc: "Cheiro, fumaça, estalo, bateria inchada ou desligamento abrupto mudam a prioridade de desempenho para segurança." },
+        ],
+        fecho: { antes: "Para entender a proteção que reduz clock e potência, consulte ", to: "/glossario/thermal-throttling", anchor: "thermal throttling no glossário técnico", depois: "." },
+      },
+    ],
+    fontes: [
+      {
+        titulo: "Intel Support — What Is Throttling and How Can It Be Resolved?",
+        url: "https://www.intel.com/content/www/us/en/support/articles/000088048/processors.html",
+        nota: "Explica a redução de clock por limite térmico e orienta verificar a solução de refrigeração compatível.",
+      },
+      {
+        titulo: "Intel Support — Does Intel Provide Typical Temperature Ranges for Each Processor?",
+        url: "https://www.intel.com/content/www/us/en/support/articles/000057551/processors.html",
+        nota: "A Intel não define uma faixa típica universal: o comportamento depende do projeto e da carga, e o limite deve ser consultado para o processador específico.",
+      },
+    ],
+  },
+
+  "/problemas/teclado-notebook-nao-funciona": {
+    respostaRapida:
+      "Se o teclado do notebook não funciona, comece sem desmontar: teste outro aplicativo, confirme layout e Num Lock, reinicie e compare com um teclado USB. Quando possível, teste teclas na UEFI/BIOS ou no ambiente de recuperação. Teclado externo funcionando aumenta a suspeita sobre o caminho interno, mas não prova sozinho que a peça está queimada.",
+    tabelaDiagnostica: {
+      titulo: "Teclado do notebook: padrão da falha e teste que separa hipóteses",
+      linhas: [
+        { sintoma: "Só algumas teclas falham", causa: "Membrana, sujeira, líquido, remapeamento ou layout", verificar: "Testar em editor simples e fora do aplicativo que apresentou a falha", acao: "Não arrancar keycaps sem conhecer o encaixe" },
+        { sintoma: "Teclado interno morto, USB funciona", causa: "Teclado, flat, alimentação ou driver específico", verificar: "Comparar no firmware/recuperação e revisar histórico de abertura ou líquido", acao: "Não comprar peça antes de identificar o código correto" },
+        { sintoma: "Interno e externo falham no Windows", causa: "Sistema, driver, acessibilidade, aplicativo ou segurança", verificar: "Testar ambiente de recuperação e revisar alterações recentes", acao: "Não instalar pacote de driver de origem desconhecida" },
+        { sintoma: "Falha começou após líquido", causa: "Resíduo, oxidação ou curto em evolução", verificar: "Desligar e avaliar internamente em bancada", acao: "Não usar secador quente nem despejar produto de limpeza" },
+      ],
+    },
+    blocos: [
+      {
+        id: "teclado-prova-por-camadas",
+        titulo: "Diagnóstico por camadas antes de trocar o teclado",
+        itens: [
+          { titulo: "Aplicativo e layout", desc: "Primeiro confirme se o problema aparece em mais de um programa e se idioma, Num Lock, teclas de função ou recursos de acessibilidade explicam o comportamento." },
+          { titulo: "Windows versus firmware", desc: "Se o teclado funciona fora do Windows, priorize driver, utilitário do fabricante e configuração. Se falha em todos os ambientes, o caminho físico ganha peso." },
+          { titulo: "Externo versus interno", desc: "Teclado USB é uma referência útil, mas usa outra interface. Ele ajuda a isolar o sintoma; não substitui inspeção do flat, conector e alimentação do teclado interno." },
+          { titulo: "Líquido muda a prioridade", desc: "Após derramamento, preservar a placa vem antes de continuar digitando. Resíduo pode evoluir para corrosão mesmo que algumas teclas ainda respondam." },
+        ],
+        fecho: { antes: "Quando houve líquido, siga também a orientação de ", to: "/problemas/notebook-molhado", anchor: "notebook molhado", depois: " antes de qualquer nova energização." },
+      },
+    ],
+    fontes: [
+      {
+        titulo: "Microsoft Support — Problemas com mouse e teclado no Windows",
+        url: "https://support.microsoft.com/pt-br/windows/hardware/input-devices/mouse-and-keyboard-problems-in-windows",
+        nota: "Orienta verificar conexão, alimentação, portas, danos físicos e sujeira antes de avançar para software.",
+      },
+    ],
+  },
+
+  "/problemas/cheiro-de-queimado": {
+    respostaRapida:
+      "Fonte, carregador ou computador com cheiro de queimado deve sair de uso. Se não houver fogo e for seguro manusear, desligue e retire a alimentação. Se houver fumaça ativa, chama, tomada derretida ou equipamento muito quente, não abra nem tente localizar o defeito aproximando o rosto; afaste-se e trate primeiro o risco de incêndio. Não religue para testar.",
+    tabelaDiagnostica: {
+      titulo: "Cheiro de queimado: prioridade de segurança antes do diagnóstico",
+      linhas: [
+        { sintoma: "Odor sem fumaça, aparelho frio o bastante para manusear", causa: "Fonte, cabo, carregador, conector ou componente aquecido", verificar: "Desligar, desconectar se for seguro e registrar de onde o odor parece vir", acao: "Não religar para confirmar" },
+        { sintoma: "Plugue ou tomada escurecidos/derretidos", causa: "Mau contato, arco ou sobreaquecimento na conexão", verificar: "Interromper o uso da tomada e avaliar também a instalação elétrica", acao: "Não trocar apenas o computador e continuar usando o mesmo ponto" },
+        { sintoma: "Bateria inchada, muito quente ou com ruído", causa: "Bateria de íons de lítio danificada", verificar: "Parar de carregar e seguir orientação de serviço/descarte para bateria defeituosa", acao: "Não perfurar, pressionar ou remover quente sem treinamento" },
+        { sintoma: "Fumaça ou chama", causa: "Incêndio/combustão ativa", verificar: "Afastar pessoas e acionar emergência; cortar energia apenas se for seguro", acao: "Não abrir gabinete, carregador ou fonte" },
+      ],
+    },
+    blocos: [
+      {
+        id: "queimado-seguranca-primeiro",
+        titulo: "O que o usuário pode fazer — e onde precisa parar",
+        itens: [
+          { titulo: "Pode: interromper o uso", desc: "Desligar e desconectar é apropriado apenas quando não há chama, fumaça intensa, plugue derretido ou calor que torne o toque inseguro." },
+          { titulo: "Pode: registrar sinais externos", desc: "Fotos do plugue, tomada, carregador ou região externa escurecida ajudam a triagem sem abrir o aparelho." },
+          { titulo: "Pare: diante de bateria deformada", desc: "Não pressione, perfure, dobre nem tente reaproveitar bateria inchada ou danificada. Baterias defeituosas exigem descarte orientado, não lixo comum." },
+          { titulo: "Pare: diante de fogo ou fumaça", desc: "A prioridade passa a ser pessoas e ambiente. Não tente continuar o diagnóstico do computador durante um evento ativo." },
+          { titulo: "Dados vêm depois da segurança", desc: "O disco pode ser avaliado separadamente quando o equipamento estiver seguro. Nunca energize uma placa suspeita só para copiar arquivos." },
+        ],
+        fecho: { antes: "Se o sintoma anterior era desligamento sob carga, compare também ", to: "/problemas/computador-desliga-sozinho", anchor: "computador desligando sozinho", depois: " sem repetir testes quando houver cheiro." },
+      },
+    ],
+    fontes: [
+      {
+        titulo: "CPSC — Batteries, Fire (High-Energy Density)",
+        url: "https://www.cpsc.gov/Regulations-Laws--Standards/Voluntary-Standards/Batteries-Fire-High-Energy-Density",
+        nota: "Reúne os riscos de sobreaquecimento, queimadura, incêndio e explosão associados a baterias de alta densidade de energia e normas de segurança relacionadas.",
+      },
+    ],
+  },
+
 };
 
 /** Busca o enriquecimento por caminho canônico da página. */

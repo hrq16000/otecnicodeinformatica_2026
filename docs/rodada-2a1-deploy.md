@@ -37,7 +37,7 @@ Não executável neste ambiente: o runner Playwright (Node e Python) não conseg
 Chromium no sandbox (`libglib-2.0.so.0` ausente). A suíte `e2e/soft-404.spec.ts` permanece
 íntegra e roda no CI. A validação equivalente foi feita por HTTP no artefato real (Fase 2).
 
-## Fase 4 — Produção (`https://tecnico.curitiba.br`)
+## Fase 4 — Produção (`https://[LEGACY_DOMAIN_REMOVED]`)
 
 Deploy concluído; home, assets e rotas profundas respondem **200** normalmente.
 **Bloqueio de infraestrutura:** a hospedagem Lovable não processa `dist/_redirects` e aplica

@@ -198,7 +198,6 @@ const CapelaVelhaAraucaria = lazyPagina(() => import("./pages/bairros/CapelaVelh
 const ThomazCoelhoAraucaria = lazyPagina(() => import("./pages/bairros/ThomazCoelhoAraucaria"));
 
 const CacheiraAraucaria = lazyPagina(() => import("./pages/bairros/CacheiraAraucaria"));
-const ThomazCoelhoIIAraucaria = lazyPagina(() => import("./pages/bairros/ThomazCoelhoIIAraucaria"));
 const JardimBoaVistaAraucaria = lazyPagina(() => import("./pages/bairros/JardimBoaVistaAraucaria"));
 const SaoMiguelAraucaria = lazyPagina(() => import("./pages/bairros/SaoMiguelAraucaria"));
 const CaliforniaAraucaria = lazyPagina(() => import("./pages/bairros/CaliforniaAraucaria"));
@@ -219,11 +218,9 @@ const TimbotuvaCL = lazyPagina(() => import("./pages/bairros/TimbotuvaCL"));
 const JardimPlanaltoIICL = lazyPagina(() => import("./pages/bairros/JardimPlanaltoIICL"));
 const JardimPedroDemeterco = lazyPagina(() => import("./pages/bairros/JardimPedroDemeterco"));
 const JardimKarlaPinhais = lazyPagina(() => import("./pages/bairros/JardimKarlaPinhais"));
-const JardimClaudiaIIPinhais = lazyPagina(() => import("./pages/bairros/JardimClaudiaIIPinhais"));
 const JardimWissingerPinhais = lazyPagina(() => import("./pages/bairros/JardimWissingerPinhais"));
 const VilaAmeliaPinhais = lazyPagina(() => import("./pages/bairros/VilaAmeliaPinhais"));
 const JardimEsplanadaPinhais = lazyPagina(() => import("./pages/bairros/JardimEsplanadaPinhais"));
-const VilaMariaAntonietaPinhais = lazyPagina(() => import("./pages/bairros/VilaMariaAntonietaPinhais"));
 const JardimDonaRosaPinhais = lazyPagina(() => import("./pages/bairros/JardimDonaRosaPinhais"));
 const ParqueNascentesPinhais = lazyPagina(() => import("./pages/bairros/ParqueNascentesPinhais"));
 const JardimTropicalPinhais = lazyPagina(() => import("./pages/bairros/JardimTropicalPinhais"));
@@ -258,7 +255,6 @@ const OuroFinoSJP = lazyPagina(() => import("./pages/bairros/OuroFinoSJP"));
 const AgricolareSJP = lazyPagina(() => import("./pages/bairros/AgricolareSJP"));
 const CampoLargoSJP = lazyPagina(() => import("./pages/bairros/CampoLargoSJP"));
 const ItaliaSJP = lazyPagina(() => import("./pages/bairros/ItaliaSJP"));
-const BordoDoCampoSJP2 = lazyPagina(() => import("./pages/bairros/BordoDoCampoSJP2"));
 const IndependenciaSJP = lazyPagina(() => import("./pages/bairros/IndependenciaSJP"));
 const OswaldoCruzColombo = lazyPagina(() => import("./pages/bairros/OswaldoCruzColombo"));
 const ColareColombo = lazyPagina(() => import("./pages/bairros/ColareColombo"));
@@ -698,7 +694,6 @@ export const legacyRouteElements: Record<string, () => React.ReactElement> = {
   "/bairros/capela-velha": () => <CapelaVelhaAraucaria />,
   "/bairros/thomaz-coelho": () => <ThomazCoelhoAraucaria />,
   "/bairros/cachoeira-araucaria": () => <CacheiraAraucaria />,
-  "/bairros/thomaz-coelho-ii": () => <ThomazCoelhoIIAraucaria />,
   "/bairros/jardim-boa-vista-araucaria": () => <JardimBoaVistaAraucaria />,
   "/bairros/sao-miguel-araucaria": () => <SaoMiguelAraucaria />,
   "/bairros/california-araucaria": () => <CaliforniaAraucaria />,
@@ -719,11 +714,9 @@ export const legacyRouteElements: Record<string, () => React.ReactElement> = {
   "/bairros/jardim-planalto-ii-cl": () => <JardimPlanaltoIICL />,
   "/bairros/jardim-pedro-demeterco": () => <JardimPedroDemeterco />,
   "/bairros/jardim-karla-pinhais": () => <JardimKarlaPinhais />,
-  "/bairros/jardim-claudia-ii-pinhais": () => <JardimClaudiaIIPinhais />,
   "/bairros/jardim-wissinger-pinhais": () => <JardimWissingerPinhais />,
   "/bairros/vila-amelia-pinhais": () => <VilaAmeliaPinhais />,
   "/bairros/jardim-esplanada-pinhais": () => <JardimEsplanadaPinhais />,
-  "/bairros/vila-maria-antonieta-pinhais": () => <VilaMariaAntonietaPinhais />,
   "/bairros/jardim-dona-rosa-pinhais": () => <JardimDonaRosaPinhais />,
   "/bairros/parque-nascentes-pinhais": () => <ParqueNascentesPinhais />,
   "/bairros/jardim-tropical-pinhais": () => <JardimTropicalPinhais />,
@@ -776,7 +769,6 @@ export const legacyRouteElements: Record<string, () => React.ReactElement> = {
   "/bairros/agricola-sjp": () => <AgricolareSJP />,
   "/bairros/campo-largo-roseira-sjp": () => <CampoLargoSJP />,
   "/bairros/italia-sjp": () => <ItaliaSJP />,
-  "/bairros/borda-campo-sjp": () => <BordoDoCampoSJP2 />,
   "/bairros/independencia-sjp": () => <IndependenciaSJP />,
   "/bairros/osvaldo-cruz-colombo": () => <OswaldoCruzColombo />,
   "/bairros/sao-dimas-colombo": () => <ColareColombo />,

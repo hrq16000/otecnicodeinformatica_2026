@@ -125,7 +125,7 @@ O gate falha se >50% das anchors locais de um arquivo usarem a fórmula genéric
 | `check:recurring-language` | ✔ |
 | `check:aggregate-rating` | ✔ 519 arquivos, nenhum rating |
 | **`check:local-hierarchy` (novo)** | ✔ |
-| `check:nap -- --confirm=…` | ✖ pré-existente: falhas apenas no domínio legado `tecnicocuritiba.com.br` (fora do nosso controle) |
+| `check:nap -- --confirm=…` | ✖ pré-existente: falhas apenas no domínio legado `[LEGACY_DOMAIN_REMOVED]` (fora do nosso controle) |
 | `check:jsonld-refs` | parcial — exige `dist/` gerado |
 
 ### Novo gate: `npm run check:local-hierarchy`

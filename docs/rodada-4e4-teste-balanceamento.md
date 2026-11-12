@@ -9,7 +9,7 @@
 
 ## A. Finalidade — legítima e específica
 
-Medir o funcionamento e a conversão do funil de atendimento do tecnico.curitiba.br:
+Medir o funcionamento e a conversão do funil de atendimento do [LEGACY_DOMAIN_REMOVED]:
 abertura, avanço, abandono e encaminhamento aos canais de contato, comparando
 origem, CTA e contexto técnico.
 

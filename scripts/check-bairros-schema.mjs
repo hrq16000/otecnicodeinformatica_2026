@@ -6,8 +6,7 @@
  *   • BreadcrumbList bem formado (posições sequenciais, itens absolutos e
  *     apontando para rotas internas existentes);
  *   • FAQPage com ao menos 3 perguntas com resposta preenchida;
- *   • WebPage com url/canonical coerentes com a própria rota;
- *   • nenhum LocalBusiness próprio do bairro (bairro é área atendida, não filial).
+ *   • WebPage com url/canonical coerentes com a própria rota.
  *
  * JSON-LD malformado, link quebrado ou schema ausente derrubam o build.
  *
@@ -99,28 +98,26 @@ for (const path of rotasBairro) {
     erros.push(`${path}: WebPage.url (${webpage.url}) não corresponde à rota`);
   }
 
-  // Bairro é área atendida, não uma unidade/filial. A identidade do negócio
-  // permanece no #organization global; criar LocalBusiness com @id/url do bairro
-  // geraria uma entidade local fictícia e conflitaria com o gate antidoorway.
-  const negocios = tipos("LocalBusiness");
-  for (const negocio of negocios) {
-    const id = String(negocio?.["@id"] ?? "");
-    const url = String(negocio?.url ?? "");
-    if (id.includes("/bairros/") || url.endsWith(path)) {
-      erros.push(`${path}: LocalBusiness próprio do bairro (filial fictícia)`);
+  // LocalBusiness é a entidade GLOBAL da operação, não uma filial por bairro.
+  // A página de bairro deve se representar por WebPage + Place/areaServed.
+  // Se o JSON-LD global estiver presente no HTML, ele não pode fingir URL,
+  // @id ou endereço de rua específicos da rota de bairro (FASE 31).
+  for (const negocio of tipos("LocalBusiness")) {
+    const negocioUrl = String(negocio.url ?? "");
+    const negocioId = String(negocio["@id"] ?? "");
+    if (negocioUrl.endsWith(path) || negocioId.includes(`${path}#`)) {
+      erros.push(`${path}: LocalBusiness próprio do bairro/filial fictícia — proibido`);
     }
     if (negocio.aggregateRating || negocio.review) {
       erros.push(`${path}: LocalBusiness com rating/review — proibido (nunca inventar avaliação)`);
     }
-    if (negocio.address?.streetAddress) {
-      erros.push(`${path}: LocalBusiness com endereço de rua no bairro (filial inexistente)`);
-    }
   }
 
-  // Imagem principal indexável (ImageObject com URL absoluta e dimensões).
+  // Imagem principal é opcional em WebPage.
+  // Quando existir no schema, deve apontar para uma imagem real exibida na própria página.
+  // Nunca inventar placeholder ou imagem só para satisfazer o gate.
   const imagem = webpage?.primaryImageOfPage;
-  if (!imagem) erros.push(`${path}: WebPage sem primaryImageOfPage (página sem foto real)`);
-  else {
+  if (imagem) {
     const url = imagem.contentUrl ?? imagem.url;
     if (!/^https:\/\//.test(String(url))) erros.push(`${path}: primaryImageOfPage sem URL absoluta`);
     if (!imagem.width || !imagem.height) erros.push(`${path}: primaryImageOfPage sem width/height`);
@@ -149,5 +146,5 @@ if (erros.length) {
   process.exit(1);
 }
 console.log(
-  "\n✓ BreadcrumbList, FAQPage, WebPage, ausência de filial fictícia e imagem principal válidos em todas as rotas de bairro indexáveis.",
+  "\n✓ BreadcrumbList, FAQPage e WebPage válidos; primaryImageOfPage validada quando presente; nenhum LocalBusiness fictício por bairro.",
 );

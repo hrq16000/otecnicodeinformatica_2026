@@ -19,7 +19,7 @@ alterada.** Nenhum conteúdo foi removido. Nenhum preço foi alterado.
 | --- | --- | --- | --- |
 | 1 | Ausência de contrato operacional na raiz (`AGENTS.md`) | arquivo inexistente | alta |
 | 2 | `README.md` com `REPLACE_WITH_PROJECT_ID`, sem domínio canônico, sugerindo deploy automático a partir de push | README linhas 1–74 originais | alta |
-| 3 | `docs/runbook-deploy.md` tratava `tecnico.curitiba.br` (marca de origem) como domínio principal | título + tabela de evidências + seção Cloudflare | alta |
+| 3 | `docs/runbook-deploy.md` tratava `[LEGACY_DOMAIN_REMOVED]` (marca de origem) como domínio principal | título + tabela de evidências + seção Cloudflare | alta |
 | 4 | "Diagnóstico gratuito" em páginas comerciais, em conflito com a fonte oficial (`commercialConfig.diagnosticoLabel = R$ 99,99` e `politicaComercial`: "é devido apenas o valor do diagnóstico informado antes") | `ConsertoNotebookPortao.tsx`, `ConsertoNotebookBatel.tsx`, `ArrumarPC.tsx`, `bairros/SaoDomingos.tsx` | alta |
 | 5 | "Garantia em Todos os Serviços" / "Serviço garantido... voltamos sem custo" — garantia irrestrita, divergente da regra central (garantia sobre a mão de obra do serviço executado) | `servico-bairro/ServicoCidadePage.tsx`, `TecnicoInformaticaCampoMagro.tsx` | alta |
 | 6 | "atendimento rápido" (17 ocorrências) e "receba o técnico ainda hoje" — promessa de prazo sem lastro | `problemaPagesData.ts`, páginas de bairro/serviço-bairro, `SchedulingSection.tsx` | média |

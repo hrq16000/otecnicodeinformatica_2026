@@ -1,6 +1,6 @@
 # Relatório final — RODADA 3B (+3B.1)
 
-Data: 06/08/2026 · Domínio: https://tecnico.curitiba.br
+Data: 06/08/2026 · Domínio: https://[LEGACY_DOMAIN_REMOVED]
 Escopo: conteúdo, interlinking, paridade estática e cluster de sintoma.
 Fora de escopo: infraestrutura, borda Cloudflare, tracking, backend.
 

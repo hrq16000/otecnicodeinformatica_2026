@@ -1,5 +1,5 @@
 import { Link } from "@/lib/router-compat";
-import { getEnriquecimentoFase2, FASE2_REVISADO_EM } from "@/lib/enriquecimentoFase2";
+import { getEnriquecimentoFase2, getLinksEspecificosFase2, FASE2_REVISADO_EM } from "@/lib/enriquecimentoFase2";
 
 /**
  * FASE 2 — bloco aditivo de limite técnico, fontes primárias e ligação
@@ -9,6 +9,7 @@ import { getEnriquecimentoFase2, FASE2_REVISADO_EM } from "@/lib/enriquecimentoF
 export const EnriquecimentoFase2 = ({ slug }: { slug: string }) => {
   const pilar = getEnriquecimentoFase2(slug);
   if (!pilar) return null;
+  const links = [...pilar.links, ...getLinksEspecificosFase2(slug)];
 
   return (
     <section
@@ -65,7 +66,7 @@ export const EnriquecimentoFase2 = ({ slug }: { slug: string }) => {
       <div className="mt-6">
         <h3 className="font-heading text-base font-bold text-foreground">Continue pelo caminho certo</h3>
         <ul className="mt-2 space-y-2 text-sm leading-relaxed text-muted-foreground">
-          {pilar.links.map((link) => (
+          {links.map((link) => (
             <li key={link.to}>
               <Link to={link.to} className="font-semibold text-accent underline-offset-4 hover:underline">
                 {link.anchor}

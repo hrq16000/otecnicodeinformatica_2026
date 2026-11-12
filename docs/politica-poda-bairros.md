@@ -1,4 +1,4 @@
-# Política de Poda de Bairros — tecnico.curitiba.br
+# Política de Poda de Bairros — [LEGACY_DOMAIN_REMOVED]
 
 Objetivo: eliminar *thin content* e canibalização entre as ~230 páginas de bairro
 herdadas do remix, mantendo apenas um conjunto enxuto de **bairros-âncora reais**
@@ -51,7 +51,7 @@ Só é elegível a indexação quando cumpre TODOS:
   tipos de imóvel, particularidades de rede/TV, referências geográficas
   específicas). Validado por `scripts/validate-bairro-copy.mjs`.
 - Sem `aggregateRating`/reviews fictícios (regra de integridade de schema).
-- Canonical/@id consistentes com `https://tecnico.curitiba.br`.
+- Canonical/@id consistentes com `https://[LEGACY_DOMAIN_REMOVED]`.
 - Sem sobreposição de intenção com outra página-âncora (evita canibalização).
 
 Se um bairro não cumprir os critérios, permanece `noindex` e fora do sitemap —

@@ -717,6 +717,391 @@ export const WAVE_11G_BATCH_1: EditorialWaveEntry[] = [
   },
 ];
 
+
+/** Onda 11H — promoção de acervo herdado após reescrita e fact-check. */
+export const WAVE_11H_BATCH_1: EditorialWaveEntry[] = [
+  {
+    wave: "11A",
+    batch: "9",
+    url: "/blog/como-configurar-2fa-em-tudo",
+    slug: "como-configurar-2fa-em-tudo",
+    ownerId: "mfa-2fa-contas-criticas",
+    cluster: "seguranca-identidade",
+    role: "pilar",
+    publishedAt: "2026-09-25",
+    targetQueries: ["como configurar 2fa", "autenticacao de dois fatores", "mfa como ativar"],
+    doNotDuplicate: ["/blog/como-proteger-computador-golpes-internet"],
+  },
+  {
+    wave: "11A",
+    batch: "9",
+    url: "/blog/como-proteger-rede-wifi-empresa",
+    slug: "como-proteger-rede-wifi-empresa",
+    ownerId: "wifi-empresa-seguranca",
+    cluster: "internet-wifi",
+    role: "pilar",
+    publishedAt: "2026-09-25",
+    targetQueries: ["como proteger wifi da empresa", "seguranca wifi empresarial", "wpa3 empresa"],
+    doNotDuplicate: ["/blog/como-configurar-roteador-wifi-iniciantes", "/blog/como-melhorar-sinal-wifi-em-casa"],
+  },
+  {
+    wave: "11A",
+    batch: "9",
+    url: "/blog/como-configurar-firewall-pfsense",
+    slug: "como-configurar-firewall-pfsense",
+    ownerId: "pfsense-firewall-configuracao",
+    cluster: "internet-wifi",
+    role: "satelite",
+    publishedAt: "2026-09-25",
+    targetQueries: ["como configurar pfsense", "regras firewall pfsense", "pfsense backup configuracao"],
+    doNotDuplicate: ["/blog/como-proteger-rede-wifi-empresa"],
+  },
+  {
+    wave: "11A",
+    batch: "9",
+    url: "/blog/como-configurar-active-directory",
+    slug: "como-configurar-active-directory",
+    ownerId: "active-directory-planejamento",
+    cluster: "informatica-empresas",
+    role: "pilar",
+    publishedAt: "2026-09-25",
+    targetQueries: ["como configurar active directory", "active directory dns", "planejar ad ds"],
+    doNotDuplicate: ["/blog/organizacao-de-ti-para-pequenos-escritorios"],
+  },
+  {
+    wave: "11A",
+    batch: "9",
+    url: "/blog/como-deixar-celular-android-mais-rapido",
+    slug: "como-deixar-celular-android-mais-rapido",
+    ownerId: "android-lento-diagnostico",
+    cluster: "fundamentos",
+    role: "satelite",
+    publishedAt: "2026-09-25",
+    targetQueries: ["celular android lento", "como deixar android mais rapido", "celular lento o que fazer"],
+    doNotDuplicate: ["/diagnostico-tecnico"],
+  },
+];
+
+/** Onda 11I — segunda promoção de acervo herdado qualificado. */
+export const WAVE_11I_BATCH_1: EditorialWaveEntry[] = [
+  {
+    wave: "11A", batch: "10", url: "/blog/como-configurar-repetidor-wifi", slug: "como-configurar-repetidor-wifi",
+    ownerId: "repetidor-wifi-configuracao", cluster: "internet-wifi", role: "satelite", publishedAt: "2026-09-25",
+    targetQueries: ["como configurar repetidor wifi", "onde colocar repetidor wifi", "repetidor wifi vale a pena"],
+    doNotDuplicate: ["/blog/como-melhorar-sinal-wifi-em-casa", "/blog/rede-wifi-nao-aparece-na-lista-o-que-verificar"],
+  },
+  {
+    wave: "11A", batch: "10", url: "/blog/trocar-windows-por-linux-vale-a-pena", slug: "trocar-windows-por-linux-vale-a-pena",
+    ownerId: "windows-linux-migracao", cluster: "fundamentos", role: "pilar", publishedAt: "2026-09-25",
+    targetQueries: ["trocar windows por linux vale a pena", "migrar windows para linux", "linux em pc antigo"],
+    doNotDuplicate: ["/decisoes/atualizar-para-windows-11", "/blog/como-instalar-windows-11-do-zero"],
+  },
+  {
+    wave: "11A", batch: "10", url: "/blog/erros-comuns-upgrade-computador", slug: "erros-comuns-upgrade-computador",
+    ownerId: "upgrade-compatibilidade-hardware", cluster: "hardware-upgrade", role: "satelite", publishedAt: "2026-09-25",
+    targetQueries: ["erros upgrade pc", "como saber se memoria ram e compativel", "ssd m2 sata nvme compatibilidade"],
+    doNotDuplicate: ["/servicos/upgrade-ssd-ram", "/decisoes/ssd-ou-memoria-ram"],
+  },
+  {
+    wave: "11A", batch: "10", url: "/blog/como-configurar-vpn-empresarial", slug: "como-configurar-vpn-empresarial",
+    ownerId: "vpn-empresarial-acesso-remoto", cluster: "informatica-empresas", role: "pilar", publishedAt: "2026-09-25",
+    targetQueries: ["como configurar vpn empresarial", "vpn acesso remoto empresa", "wireguard empresa"],
+    doNotDuplicate: ["/blog/como-configurar-firewall-pfsense", "/blog/como-proteger-rede-wifi-empresa"],
+  },
+  {
+    wave: "11A", batch: "10", url: "/blog/como-recuperar-conta-hackeada", slug: "como-recuperar-conta-hackeada",
+    ownerId: "conta-comprometida-recuperacao", cluster: "seguranca-identidade", role: "pilar", publishedAt: "2026-09-25",
+    targetQueries: ["como recuperar conta hackeada", "conta invadida o que fazer", "recuperar conta comprometida"],
+    doNotDuplicate: ["/blog/como-configurar-2fa-em-tudo", "/blog/como-proteger-computador-golpes-internet"],
+  },
+];
+
+/** Onda 11J — Windows, backup e conectividade qualificados. */
+export const WAVE_11J_BATCH_1: EditorialWaveEntry[] = [
+  {
+    wave: "11A", batch: "11", url: "/blog/como-deixar-windows-11-mais-rapido-iniciantes", slug: "como-deixar-windows-11-mais-rapido-iniciantes",
+    ownerId: "windows-11-desempenho-diagnostico", cluster: "lentidao", role: "satelite", publishedAt: "2026-09-25",
+    targetQueries: ["como deixar windows 11 mais rapido", "windows 11 lento", "pc windows 11 travando"],
+    doNotDuplicate: ["/blog/windows-11-lento-como-resolver", "/problemas/computador-lento"],
+  },
+  {
+    wave: "11A", batch: "11", url: "/blog/como-fazer-backup-fotos-windows-iniciantes", slug: "como-fazer-backup-fotos-windows-iniciantes",
+    ownerId: "backup-fotos-windows", cluster: "dados-backup", role: "satelite", publishedAt: "2026-09-25",
+    targetQueries: ["como fazer backup de fotos no windows", "backup fotos hd externo", "proteger fotos no pc"],
+    doNotDuplicate: ["/blog/backup-como-proteger-seus-arquivos", "/blog/historico-de-arquivos-windows-como-configurar"],
+  },
+  {
+    wave: "11A", batch: "11", url: "/blog/como-atualizar-windows-corretamente", slug: "como-atualizar-windows-corretamente",
+    ownerId: "windows-update-manutencao-segura", cluster: "windows-update", role: "satelite", publishedAt: "2026-09-25",
+    targetQueries: ["como atualizar windows 11", "atualizar windows corretamente", "windows update guia"],
+    doNotDuplicate: ["/blog/windows-update-nao-funciona-o-que-verificar", "/blog/windows-update-travado-desfazendo-alteracoes"],
+  },
+  {
+    wave: "11A", batch: "11", url: "/blog/como-recuperar-arquivos-apagados-windows", slug: "como-recuperar-arquivos-apagados-windows",
+    ownerId: "arquivos-apagados-windows-recuperacao", cluster: "dados-backup", role: "satelite", publishedAt: "2026-09-25",
+    targetQueries: ["recuperar arquivos apagados windows", "windows file recovery", "arquivo apagado lixeira vazia"],
+    doNotDuplicate: ["/servicos/recuperacao-de-dados", "/blog/como-recuperar-dados-hd-com-defeito"],
+  },
+  {
+    wave: "11A", batch: "11", url: "/blog/como-fazer-teste-velocidade-internet", slug: "como-fazer-teste-velocidade-internet",
+    ownerId: "teste-velocidade-internet-diagnostico", cluster: "internet-wifi", role: "satelite", publishedAt: "2026-09-25",
+    targetQueries: ["como testar velocidade da internet", "teste internet por cabo e wifi", "latencia jitter perda pacotes"],
+    doNotDuplicate: ["/blog/internet-lenta-provedor-ou-roteador", "/blog/como-melhorar-sinal-wifi-em-casa"],
+  },
+];
+
+
+/** Onda 11K — credenciais, organização e segurança Wi-Fi. */
+export const WAVE_11K_BATCH_1: EditorialWaveEntry[] = [
+  {
+    wave: "11A", batch: "12", url: "/blog/como-resetar-senha-windows", slug: "como-resetar-senha-windows",
+    ownerId: "windows-recuperacao-credencial-oficial", cluster: "sistemas-operacionais", role: "satelite", publishedAt: "2026-09-25",
+    targetQueries: ["esqueci senha windows", "resetar senha windows conta microsoft", "redefinir senha conta local windows"],
+    doNotDuplicate: ["/blog/como-recuperar-conta-hackeada", "/seguranca-dos-dados"],
+  },
+  {
+    wave: "11A", batch: "12", url: "/blog/como-organizar-arquivos-windows-iniciantes", slug: "como-organizar-arquivos-windows-iniciantes",
+    ownerId: "windows-organizacao-arquivos", cluster: "dados-backup", role: "satelite", publishedAt: "2026-09-25",
+    targetQueries: ["como organizar arquivos windows 11", "organizar pastas no windows", "como achar arquivos windows"],
+    doNotDuplicate: ["/blog/como-fazer-backup-fotos-windows-iniciantes", "/blog/como-migrar-arquivos-para-um-computador-novo"],
+  },
+  {
+    wave: "11A", batch: "12", url: "/blog/como-trocar-senha-wifi", slug: "como-trocar-senha-wifi",
+    ownerId: "wifi-alterar-credencial-seguranca", cluster: "internet-wifi", role: "satelite", publishedAt: "2026-09-25",
+    targetQueries: ["como trocar senha wifi", "mudar senha do roteador wifi", "alterar senha rede wifi"],
+    doNotDuplicate: ["/blog/como-proteger-rede-wifi-empresa", "/blog/como-configurar-roteador-wifi-iniciantes"],
+  },
+];
+
+
+/** Onda 11L — firmware, servidor de arquivos e firewall Linux. */
+export const WAVE_11L_BATCH_1: EditorialWaveEntry[] = [
+  {
+    wave: "11A", batch: "13", url: "/blog/como-configurar-bios-uefi-corretamente", slug: "como-configurar-bios-uefi-corretamente",
+    ownerId: "bios-uefi-configuracao-segura", cluster: "sistemas-operacionais", role: "satelite", publishedAt: "2026-09-25",
+    targetQueries: ["como configurar bios uefi", "secure boot tpm bios", "configurar uefi sem perder boot"],
+    doNotDuplicate: ["/blog/boot-uefi-ou-legacy-como-identificar", "/blog/ordem-de-boot-na-bios-como-configurar", "/blog/bios-corrompida-reset-cmos-atualizacao"],
+  },
+  {
+    wave: "11A", batch: "13", url: "/blog/como-configurar-servidor-de-arquivos", slug: "como-configurar-servidor-de-arquivos",
+    ownerId: "servidor-arquivos-smb-samba", cluster: "informatica-empresas", role: "pilar", publishedAt: "2026-09-25",
+    targetQueries: ["como configurar servidor de arquivos", "servidor smb windows", "samba servidor de arquivos"],
+    doNotDuplicate: ["/blog/como-configurar-active-directory", "/blog/organizacao-de-ti-para-pequenos-escritorios", "/servicos/backup-para-empresas"],
+  },
+  {
+    wave: "11A", batch: "13", url: "/blog/como-configurar-firewall-ufw-linux", slug: "como-configurar-firewall-ufw-linux",
+    ownerId: "ufw-firewall-host-ubuntu", cluster: "internet-wifi", role: "satelite", publishedAt: "2026-09-25",
+    targetQueries: ["como configurar ufw", "ufw ubuntu firewall", "permitir ssh ufw"],
+    doNotDuplicate: ["/blog/como-configurar-firewall-pfsense", "/blog/como-configurar-vpn-empresarial"],
+  },
+];
+
+
+/** Onda 11M — fechamento controlado do estoque programático qualificado. */
+export const WAVE_11M_BATCH_1: EditorialWaveEntry[] = [
+  {
+    wave: "11A",
+    batch: "14",
+    url: "/blog/como-fazer-backup-na-nuvem",
+    slug: "como-fazer-backup-na-nuvem",
+    ownerId: "backup-nuvem-restauracao-verificavel",
+    cluster: "dados-backup",
+    role: "satelite",
+    publishedAt: "2026-09-26",
+    targetQueries: ["como fazer backup na nuvem", "backup nuvem arquivos", "sincronizacao e backup diferenca"],
+    doNotDuplicate: ["/blog/backup-como-proteger-seus-arquivos", "/blog/como-testar-restauracao-de-backup", "/decisoes/nuvem-ou-hd-externo"],
+  },
+];
+
+
+/** Onda 11N — promoção controlada de Wi-Fi instável. */
+export const WAVE_11N_BATCH_1: EditorialWaveEntry[] = [
+  {
+    wave: "11A",
+    batch: "15",
+    url: "/blog/wifi-caindo-toda-hora",
+    slug: "wifi-caindo-toda-hora",
+    ownerId: "wifi-instavel-camadas-diagnostico",
+    cluster: "internet-wifi",
+    role: "satelite",
+    publishedAt: "2026-09-26",
+    targetQueries: ["wifi caindo toda hora", "wifi desconectando", "internet cai so no wifi"],
+    doNotDuplicate: ["/problemas/wifi-instavel", "/blog/internet-lenta-provedor-ou-roteador", "/ferramentas/roteiro-wifi-instavel"],
+  },
+];
+
+
+/** Onda 11O — fechamento do estoque programático independente. */
+export const WAVE_11O_BATCH_1: EditorialWaveEntry[] = [
+  {
+    wave: "11A",
+    batch: "16",
+    url: "/blog/pc-nao-liga-o-que-fazer",
+    slug: "pc-nao-liga-o-que-fazer",
+    ownerId: "desktop-nao-liga-energia-post-video",
+    cluster: "liga-e-desliga",
+    role: "pilar",
+    publishedAt: "2026-09-26",
+    targetQueries: ["pc nao liga", "computador nao liga", "pc liga mas nao da video"],
+    doNotDuplicate: [
+      "/blog/notebook-nao-liga-o-que-fazer",
+      "/blog/monitor-sem-sinal-o-que-verificar",
+      "/blog/como-testar-fonte-de-alimentacao-pc",
+      "/blog/como-diagnosticar-placa-mae-defeituosa",
+      "/blog/computador-desliga-sozinho-o-que-verificar",
+    ],
+  },
+];
+
+
+/** Onda 11P — Windows Setup e controlador de armazenamento. */
+export const WAVE_11P_BATCH_1: EditorialWaveEntry[] = [
+  {
+    wave: "11A",
+    batch: "17",
+    url: "/blog/ssd-nao-aparece-no-instalador-do-windows",
+    slug: "ssd-nao-aparece-no-instalador-do-windows",
+    ownerId: "ssd-ausente-windows-setup",
+    cluster: "armazenamento-nao-detectado",
+    role: "satelite",
+    publishedAt: "2026-09-26",
+    targetQueries: [
+      "ssd nao aparece no instalador do windows",
+      "windows setup nao mostra ssd",
+      "carregar driver armazenamento instalacao windows",
+    ],
+    doNotDuplicate: [
+      "/blog/ssd-nvme-nao-aparece-no-gerenciador-de-discos",
+      "/blog/hd-nao-e-reconhecido-na-bios-o-que-fazer",
+      "/blog/como-instalar-windows-11-do-zero",
+    ],
+  },
+];
+
+
+/** Onda 11Q — primeira qualificação do backlog Linux. */
+export const WAVE_11Q_BATCH_1: EditorialWaveEntry[] = [
+  {
+    wave: "11A",
+    batch: "18",
+    url: "/blog/como-instalar-ubuntu-do-zero",
+    slug: "como-instalar-ubuntu-do-zero",
+    ownerId: "ubuntu-instalacao-segura-desktop",
+    cluster: "sistemas-operacionais",
+    role: "pilar",
+    publishedAt: "2026-09-26",
+    targetQueries: [
+      "como instalar ubuntu do zero",
+      "instalar ubuntu por pendrive",
+      "como instalar ubuntu no pc",
+    ],
+    doNotDuplicate: [
+      "/blog/trocar-windows-por-linux-vale-a-pena",
+      "/blog/como-instalar-linux-dual-boot-windows",
+      "/blog/como-instalar-windows-11-do-zero",
+    ],
+  },
+];
+
+
+/** Onda 11R — promoção controlada do owner rsync. */
+export const WAVE_11R_BATCH_1: EditorialWaveEntry[] = [
+  {
+    wave: "11A",
+    batch: "19",
+    url: "/blog/como-usar-rsync-backup-linux",
+    slug: "como-usar-rsync-backup-linux",
+    ownerId: "rsync-copia-sincronizacao-backup",
+    cluster: "dados-backup",
+    role: "satelite",
+    publishedAt: "2026-09-27",
+    targetQueries: [
+      "rsync backup linux",
+      "como usar rsync",
+      "rsync dry run delete",
+    ],
+    doNotDuplicate: [
+      "/blog/backup-como-proteger-seus-arquivos",
+      "/blog/como-testar-restauracao-de-backup",
+      "/blog/como-fazer-backup-na-nuvem",
+    ],
+  },
+];
+
+
+/** Onda 11S — promoção controlada do owner SSH. */
+export const WAVE_11S_BATCH_1: EditorialWaveEntry[] = [
+  {
+    wave: "11A",
+    batch: "20",
+    url: "/blog/como-configurar-ssh-seguro-linux",
+    slug: "como-configurar-ssh-seguro-linux",
+    ownerId: "openssh-chaves-validacao-rollback",
+    cluster: "seguranca-infra",
+    role: "satelite",
+    publishedAt: "2026-09-27",
+    targetQueries: [
+      "configurar ssh seguro linux",
+      "ssh chave publica linux",
+      "desativar senha ssh sem perder acesso",
+    ],
+    doNotDuplicate: [
+      "/blog/como-configurar-firewall-ufw-linux",
+      "/blog/como-configurar-2fa-em-tudo",
+      "/blog/como-configurar-vpn-empresarial",
+    ],
+  },
+];
+
+
+/** Onda 11T — promoção controlada do owner APT/DNF. */
+export const WAVE_11T_BATCH_1: EditorialWaveEntry[] = [
+  {
+    wave: "11A",
+    batch: "21",
+    url: "/blog/como-gerenciar-pacotes-apt-dnf-linux",
+    slug: "como-gerenciar-pacotes-apt-dnf-linux",
+    ownerId: "linux-pacotes-apt-dnf",
+    cluster: "linux-fundamentos",
+    role: "satelite",
+    publishedAt: "2026-09-27",
+    targetQueries: [
+      "apt linux comandos",
+      "dnf5 comandos",
+      "instalar atualizar remover pacotes linux",
+    ],
+    doNotDuplicate: [
+      "/blog/comandos-linux-essenciais-iniciantes",
+      "/blog/como-instalar-ubuntu-do-zero",
+    ],
+  },
+];
+
+
+/** Onda 11U — promoção final da coorte Linux 1. */
+export const WAVE_11U_BATCH_1: EditorialWaveEntry[] = [
+  {
+    wave: "11A",
+    batch: "22",
+    url: "/blog/comandos-linux-essenciais-iniciantes",
+    slug: "comandos-linux-essenciais-iniciantes",
+    ownerId: "linux-terminal-comandos-basicos",
+    cluster: "linux-fundamentos",
+    role: "pilar",
+    publishedAt: "2026-09-27",
+    targetQueries: [
+      "comandos linux iniciantes",
+      "comandos básicos linux",
+      "como usar terminal linux",
+    ],
+    doNotDuplicate: [
+      "/blog/como-gerenciar-pacotes-apt-dnf-linux",
+      "/blog/como-configurar-ssh-seguro-linux",
+      "/blog/como-instalar-ubuntu-do-zero",
+    ],
+  },
+];
+
 export const EDITORIAL_WAVES: EditorialWaveEntry[] = [
   ...WAVE_10C_BATCH_0,
   ...WAVE_10D_BATCH_1,
@@ -728,6 +1113,20 @@ export const EDITORIAL_WAVES: EditorialWaveEntry[] = [
   ...WAVE_11E_BATCH_1,
   ...WAVE_11F_BATCH_1,
   ...WAVE_11G_BATCH_1,
+  ...WAVE_11H_BATCH_1,
+  ...WAVE_11I_BATCH_1,
+  ...WAVE_11J_BATCH_1,
+  ...WAVE_11K_BATCH_1,
+  ...WAVE_11L_BATCH_1,
+  ...WAVE_11M_BATCH_1,
+  ...WAVE_11N_BATCH_1,
+  ...WAVE_11O_BATCH_1,
+  ...WAVE_11P_BATCH_1,
+  ...WAVE_11Q_BATCH_1,
+  ...WAVE_11R_BATCH_1,
+  ...WAVE_11S_BATCH_1,
+  ...WAVE_11T_BATCH_1,
+  ...WAVE_11U_BATCH_1,
 ];
 
 /** URLs monitoradas (ordem estável, sem duplicatas). */

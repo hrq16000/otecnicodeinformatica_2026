@@ -3,7 +3,7 @@ import { FOTOS_LICENCIADAS } from "@/lib/fotosLicenciadas";
 
 const DESTAQUES = [
   { slug: "bancada-tecnica", legenda: "Diagnóstico começa com o equipamento aberto e o defeito confirmado." },
-  { slug: "rede-cabeamento", legenda: "Wi-Fi instável: quase sempre é cabo, energia ou posicionamento — não o plano de internet." },
+  { slug: "rede-cabeamento", legenda: "Wi-Fi instável: o diagnóstico separa link do provedor, roteador, cabeamento, cobertura e dispositivo." },
   { slug: "estacao-trabalho", legenda: "Estação parada é produtividade parada — prioridade em atendimento a empresas." },
 ];
 

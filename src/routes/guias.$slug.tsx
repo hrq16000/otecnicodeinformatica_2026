@@ -5,6 +5,7 @@ import { Footer } from "@/components/Footer";
 import { BRAND_NAME, absoluteUrl } from "@/lib/siteConfig";
 import { obterPaginaEditorial } from "@/lib/paginasEditoriais.functions";
 import { SCHEMA_SLOTS, SLOT_PRIORITY, useJsonLdSlot } from "@/lib/jsonLdSlots";
+import { JsonLdSsrSink } from "@/lib/jsonLdSsr";
 
 /**
  * Páginas por sintoma e solução criadas em /admin/paginas.
@@ -52,8 +53,17 @@ export const Route = createFileRoute("/guias/$slug")({
   },
   notFoundComponent: PaginaAusente,
   errorComponent: PaginaAusente,
-  component: PaginaIntencao,
+  component: GuiaDinamico,
 });
+
+function GuiaDinamico() {
+  return (
+    <>
+      <PaginaIntencao />
+      <JsonLdSsrSink />
+    </>
+  );
+}
 
 function PaginaAusente() {
   return (
@@ -75,21 +85,22 @@ type PerguntaFrequente = { pergunta: string; resposta: string };
 function textoPlano(texto: string) {
   return texto
     .replace(/\[([^\]]+)\]\([^)]+\)/g, "$1")
-    .replace(/[*_`>#-]/g, "")
+    .replace(/^[ \t]*(?:> *|[-*+] +|\d+\. +)/gm, "")
+    .replace(/<[^>]+>/g, "")
+    .replace(/(\*{1,3}|_{1,3}|`+)(\S(?:.*?\S)?)\1/g, "$2")
     .replace(/\s+/g, " ")
     .trim();
 }
 
 /** Extrai somente FAQs que também aparecem visivelmente no Markdown. */
 function extrairPerguntasFrequentes(texto: string): PerguntaFrequente[] {
-  const inicio = texto.search(/^## Perguntas frequentes\s*$/m);
-  if (inicio < 0) return [];
+  const secao = texto.replace(/\r\n/g, "\n").match(
+    /^##[ \t]+Perguntas frequentes[ \t]*\n([\s\S]*?)(?=^#{1,2}[ \t]+|(?![\s\S]))/m,
+  )?.[1];
+  if (!secao) return [];
 
-  const trecho = texto.slice(inicio).replace(/^## Perguntas frequentes\s*$/m, "");
-  const proximaSecao = trecho.search(/^##\s+/m);
-  const secao = proximaSecao >= 0 ? trecho.slice(0, proximaSecao) : trecho;
   const perguntas: PerguntaFrequente[] = [];
-  const padrao = /^###\s+(.+)\n+([\s\S]*?)(?=^###\s+|(?![\s\S]))/gm;
+  const padrao = /^###[ \t]+(.+)\n([\s\S]*?)(?=^###[ \t]+|(?![\s\S]))/gm;
 
   for (const correspondencia of secao.matchAll(padrao)) {
     const pergunta = textoPlano(correspondencia[1] ?? "");
@@ -103,6 +114,7 @@ function extrairPerguntasFrequentes(texto: string): PerguntaFrequente[] {
 function Corpo({ texto }: { texto: string }) {
   return (
     <ReactMarkdown
+      skipHtml
       components={{
         h2: ({ children }) => <h2 className="text-xl font-semibold mt-8 mb-3">{children}</h2>,
         h3: ({ children }) => <h3 className="text-lg font-semibold mt-6 mb-2">{children}</h3>,
@@ -171,7 +183,7 @@ function PaginaIntencao() {
   );
   useJsonLdSlot(
     SCHEMA_SLOTS.faq,
-    perguntasFrequentes.length
+    perguntasFrequentes.length >= 3
       ? {
           "@context": "https://schema.org",
           "@type": "FAQPage",

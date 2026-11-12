@@ -14,7 +14,7 @@ Regra do pacote: **campo sem fonte comprovada não é preenchido**. Onde falta d
 | Campo | Valor | Fonte | Autorizado |
 | --- | --- | --- | --- |
 | Nome | Técnico em Curitiba | `src/lib/siteConfig.ts` · memória Core | Sim |
-| Site | https://tecnico.curitiba.br | `siteConfig.url` · domínio canônico | Sim |
+| Site | https://[LEGACY_DOMAIN_REMOVED] | `siteConfig.url` · domínio canônico | Sim |
 | WhatsApp / telefone | +55 41 99708-6380 | `siteConfig.whatsappNumber` | Sim (canal único) |
 | Modelo operacional | Service Area Business | Governança 4G (resposta do responsável) | Sim |
 | Endereço público | Oculto | Governança 4G | Não publicar |
@@ -241,7 +241,7 @@ schema externo. Permanece no site exatamente como já está — sem alteração 
 - [ ] Cadastrar as áreas: Curitiba e São José dos Pinhais (somente estas)
 - [ ] Categoria principal: confirmar o nome real no catálogo e selecionar
 - [ ] Categorias secundárias: no máximo as 3 da Parte 5
-- [ ] Telefone: +55 41 99708-6380 · Site: https://tecnico.curitiba.br
+- [ ] Telefone: +55 41 99708-6380 · Site: https://[LEGACY_DOMAIN_REMOVED]
 - [ ] Descrição: colar a versão de 701 caracteres
 - [ ] Serviços: cadastrar os 12 itens com escopo explícito onde indicado
 - [ ] Horário: Seg–Sex 08:30–18:00 · Sáb 09:00–13:00 · Dom fechado (aprovado na 4I)

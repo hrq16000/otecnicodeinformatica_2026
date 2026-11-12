@@ -282,6 +282,7 @@
     "check:schema-standards": "node scripts/check-schema-standards.mjs dist",
     "generate:robots": "node scripts/generate-robots.mjs",
     "check:robots": "node scripts/check-robots.mjs dist",
+    "check:local-template-policy": "node scripts/check-local-template-policy.mjs",
     "check:local-index-policy": "node scripts/check-local-index-policy.mjs dist",
     "check:local-doorway": "node scripts/check-local-doorway.mjs dist",
     "check:local-intro-similarity": "node scripts/check-intro-similarity.mjs dist",
@@ -326,7 +327,7 @@
     "check:national-foundation-pillars": "node scripts/check-national-foundation-pillars.mjs",
     "ssr:with-server": "node scripts/with-ssr-server.mjs",
     "gates:local": "node scripts/with-ssr-server.mjs npm run check:local-all",
-    "check:local-all": "npm run check:local-index-policy && npm run check:local-doorway && npm run check:local-neighborhood-intent && npm run check:local-service-intent && npm run check:local-interlinking && npm run check:local-seo-quality && npm run check:local-intro-similarity && npm run check:local-schema && npm run check:bairros-galeria && npm run check:local-regression",
+    "check:local-all": "npm run check:local-template-policy && npm run check:bairro-index-readiness && npm run check:local-index-policy && npm run check:local-doorway && npm run check:programmatic-similarity && npm run check:local-neighborhood-intent && npm run check:local-service-intent && npm run check:local-interlinking && npm run check:local-seo-quality && npm run check:local-intro-similarity && npm run check:local-schema && npm run check:bairros-galeria && npm run check:local-regression",
     "test": "vitest run",
     "test:unit": "vitest run --project unit --project scripts",
     "test:unit:watch": "vitest --project unit --project scripts",
@@ -393,9 +394,11 @@
     "deploy:check:list": "node scripts/run-pipeline.mjs deploy:check --list",
     "deploy:check:strict": "node scripts/with-ssr-server.mjs node scripts/run-pipeline.mjs deploy:check --with-optional",
     "report:gsc-snapshot": "node scripts/report-gsc-snapshot.mjs",
-    "report:gsc-baseline": "node scripts/report-gsc-baseline.mjs"
+    "report:gsc-baseline": "node scripts/report-gsc-baseline.mjs",
+    "check:bairro-index-readiness": "node scripts/check-bairro-index-readiness.mjs"
   },
   "dependencies": {
+    "@ai-sdk/openai": "^4.0.72",
     "@hookform/resolvers": "^5.2.2",
     "@playwright/test": "1.56.1",
     "@radix-ui/react-accordion": "^1.2.12",
@@ -432,6 +435,7 @@
     "@tanstack/react-start": "1.168.32",
     "@tanstack/router-plugin": "1.168.23",
     "@types/dompurify": "^3.0.5",
+    "ai": "^7.0.107",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "cmdk": "^1.1.1",
@@ -459,18 +463,17 @@
     "vaul": "^1.1.2",
     "vite-tsconfig-paths": "^6.0.2",
     "web-vitals": "^5.2.0",
-    "zod": "^3.24.2"
+    "zod": "^4.6.5"
   },
   "devDependencies": {
     "@axe-core/playwright": "^4.12.1",
     "@biomejs/biome": "^2.5.8",
     "@eslint/js": "^9.32.0",
     "@lhci/cli": "^0.15.1",
-    "@lovable.dev/vite-tanstack-config": "^2.13.1",
+    "@lovable.dev/vite-tanstack-config": "2.23.1",
     "@stryker-mutator/core": "^9.6.1",
     "@stryker-mutator/vitest-runner": "^9.6.1",
     "@tailwindcss/typography": "^0.5.16",
-    "@testing-library/dom": "^10.4.2",
     "@testing-library/jest-dom": "^6.9.1",
     "@testing-library/react": "^16.3.2",
     "@types/node": "^22.16.5",
@@ -492,7 +495,8 @@
     "typescript-eslint": "^8.56.1",
     "vite": "^8.2.0",
     "vite-imagetools": "^10.0.1",
-    "vitest": "^4.1.9"
+    "vitest": "^4.1.9",
+    "@testing-library/dom": "^10.4.2"
   },
   "version": "0.0.0"
 }

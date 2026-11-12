@@ -82,6 +82,18 @@ export const LOTE_LOCAL_2 = data.loteLocal2 as string[];
 export const LOTE_LOCAL_3 = (data as { loteLocal3?: string[] }).loteLocal3 ?? [];
 /** Lote 4 de bairros âncora (Micro-Rodada Local 2) — rotas já existentes. */
 export const LOTE_LOCAL_4 = (data as { loteLocal4?: string[] }).loteLocal4 ?? [];
+/** Lote 5 — bairros adicionais de Curitiba + SJP com conteúdo autoral. */
+export const LOTE_LOCAL_5 = (data as { loteLocal5?: string[] }).loteLocal5 ?? [];
+/** Lote 6 — bairros promovidos somente após conteúdo autoral + medição de similaridade. */
+export const LOTE_LOCAL_6 = (data as { loteLocal6?: string[] }).loteLocal6 ?? [];
+/** Lote 7 — bairros de Araucária promovidos após validação autoral. */
+export const LOTE_LOCAL_7 = (data as { loteLocal7?: string[] }).loteLocal7 ?? [];
+/** Lote 8 — bairros adicionais de Campo Largo promovidos após validação autoral. */
+export const LOTE_LOCAL_8 = (data as { loteLocal8?: string[] }).loteLocal8 ?? [];
+/** Lote 9 — Tingui, Ipê e Borda do Campo promovidos após validação autoral. */
+export const LOTE_LOCAL_9 = (data as { loteLocal9?: string[] }).loteLocal9 ?? [];
+/** Lote 10 — Academia, Murici e Jardim Itália promovidos após validação autoral. */
+export const LOTE_LOCAL_10 = (data as { loteLocal10?: string[] }).loteLocal10 ?? [];
 
 /** Metadados do bairro âncora (cidade-pai, intenção, lote). */
 export function bairroAncora(slug: string): BairroAncora | undefined {

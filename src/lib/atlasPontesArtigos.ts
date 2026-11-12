@@ -21,6 +21,91 @@ export interface AtlasPonteArtigo {
 }
 
 export const ATLAS_PONTES_ARTIGOS: Record<string, AtlasPonteArtigo> = {
+  "comandos-linux-essenciais-iniciantes": {
+    temaId: "fundamentos",
+    porQue:
+      "O terminal é uma interface para operar arquivos, processos e rede; a trilha de fundamentos ajuda a entender primeiro o efeito do comando e só depois memorizar sintaxe.",
+    proximoPasso: {
+      rotulo: "Informática básica",
+      to: "/blog/informatica-basica",
+      contexto: "Conecte os comandos ao vocabulário de arquivos, sistema, rede e segurança.",
+    },
+  },
+  "como-gerenciar-pacotes-apt-dnf-linux": {
+    temaId: "fundamentos",
+    porQue:
+      "Gerenciadores de pacotes controlam origem, dependências, atualização e remoção de software; entender a distribuição e o repositório vem antes do comando.",
+    proximoPasso: {
+      rotulo: "Trocar Windows por Linux vale a pena?",
+      to: "/blog/trocar-windows-por-linux-vale-a-pena",
+      contexto: "Veja como disponibilidade de aplicativos e suporte entram na decisão de plataforma.",
+    },
+  },
+  "como-configurar-ssh-seguro-linux": {
+    temaId: "seguranca-privacidade",
+    porQue:
+      "SSH expõe uma superfície de autenticação remota. A trilha de segurança coloca identidade, chaves, acesso mínimo, firewall e recuperação antes de receitas de hardening.",
+    proximoPasso: {
+      rotulo: "Firewall UFW no Linux",
+      to: "/blog/como-configurar-firewall-ufw-linux",
+      contexto: "Restrinja a superfície de rede sem perder o caminho de administração.",
+    },
+  },
+  "como-usar-rsync-backup-linux": {
+    temaId: "dados-backup",
+    porQue:
+      "Rsync é uma ferramenta de cópia e sincronização; backup exige também independência, retenção e teste de restauração. A trilha de dados mantém essa distinção explícita.",
+    proximoPasso: {
+      rotulo: "Nuvem ou HD externo",
+      to: "/decisoes/nuvem-ou-hd-externo",
+      contexto: "Escolha onde manter uma cópia independente do sistema de origem.",
+    },
+  },
+
+  "hd-nao-e-reconhecido-na-bios-o-que-fazer": {
+    temaId: "dados-backup",
+    porQue:
+      "Disco que some da BIOS não é só um problema de inicialização: pode envolver energia, conexão, controladora ou falha da própria mídia. O Atlas coloca preservação de dados antes de qualquer tentativa que escreva no disco.",
+    proximoPasso: {
+      rotulo: "SMART e setores defeituosos",
+      to: "/blog/disco-com-setores-defeituosos-smart-o-que-fazer",
+      contexto:
+        "Entenda quais sinais de saúde do disco ajudam a separar falha lógica de degradação física.",
+    },
+  },
+  "o-que-e-informatica": {
+    temaId: "fundamentos",
+    porQue:
+      "Entender o que é informática vem antes de escolher ferramenta, curso ou serviço. O Atlas organiza esse campo amplo em fundamentos, sistemas, hardware, redes, segurança, dados e decisões práticas, sem misturar definição com atendimento.",
+    proximoPasso: {
+      rotulo: "Informática básica",
+      to: "/blog/informatica-basica",
+      contexto:
+        "Transforme a definição geral em conceitos e habilidades que aparecem no uso diário do computador.",
+    },
+  },
+  "informatica-basica": {
+    temaId: "fundamentos",
+    porQue:
+      "Informática básica é a camada de vocabulário e operação que sustenta todo o restante: arquivos, sistema, programas, armazenamento e rede. O Atlas conecta esses fundamentos aos sintomas reais e às verificações seguras.",
+    proximoPasso: {
+      rotulo: "Como aprender informática",
+      to: "/blog/como-aprender-informatica",
+      contexto:
+        "Organize uma sequência de estudo em vez de acumular dicas isoladas.",
+    },
+  },
+  "como-aprender-informatica": {
+    temaId: "fundamentos",
+    porQue:
+      "Aprender informática fica mais eficiente quando o estudo segue uma ordem: conceito, uso, sintoma, verificação e decisão. O Atlas oferece essa estrutura e evita que a aprendizagem vire uma coleção de tutoriais desconectados.",
+    proximoPasso: {
+      rotulo: "Guia do técnico de informática",
+      to: "/guia-tecnico-informatica#profissao",
+      contexto:
+        "Veja como os fundamentos se relacionam com a atuação profissional, suporte e diagnóstico técnico.",
+    },
+  },
   "manutencao-preventiva-de-computador-guia-completo": {
     temaId: "manutencao-preventiva",
     porQue:
@@ -293,6 +378,229 @@ export const ATLAS_PONTES_ARTIGOS: Record<string, AtlasPonteArtigo> = {
         "Critério de decisão por idade, uso e custo real do equipamento.",
     },
   },
+  "como-configurar-2fa-em-tudo": {
+    temaId: "seguranca-privacidade",
+    porQue:
+      "Autenticação multifator é a camada que limita o dano quando uma senha vaza. A trilha de segurança organiza senha exclusiva, fator resistente a phishing, recuperação e revisão de sessões como partes do mesmo controle de identidade.",
+    proximoPasso: {
+      rotulo: "Proteção contra golpes e phishing",
+      to: "/blog/como-proteger-computador-golpes-internet",
+      contexto:
+        "Aprenda a reconhecer o golpe que tenta capturar senha e segundo fator antes de qualquer alteração na conta.",
+    },
+  },
+  "como-proteger-rede-wifi-empresa": {
+    temaId: "redes-wifi",
+    porQue:
+      "Wi-Fi empresarial é infraestrutura de acesso: criptografia, segmentação, administração e ciclo de firmware precisam funcionar juntos. A trilha de redes separa cobertura, desempenho e segurança para evitar que uma correção esconda outro problema.",
+    proximoPasso: {
+      rotulo: "Redes e Wi-Fi",
+      to: "/servicos/redes-e-wifi",
+      contexto:
+        "Quando o desenho exige medição no local, cabeamento, novos pontos de acesso ou segmentação aplicada.",
+    },
+  },
+  "como-configurar-firewall-pfsense": {
+    temaId: "redes-wifi",
+    porQue:
+      "Firewall transforma o desenho lógico da rede em regras verificáveis: quem inicia tráfego, para onde e por qual serviço. A trilha de redes ajuda a definir segmentos antes de escrever regras e NAT.",
+    proximoPasso: {
+      rotulo: "Proteger o Wi-Fi da empresa",
+      to: "/blog/como-proteger-rede-wifi-empresa",
+      contexto:
+        "Organize SSIDs, visitantes, IoT e administração antes de aplicar o controle entre redes no firewall.",
+    },
+  },
+  "como-configurar-active-directory": {
+    temaId: "informatica-empresas",
+    porQue:
+      "Active Directory só entrega controle quando identidade, DNS, privilégio, políticas e recuperação são operados como uma rotina. A trilha empresarial coloca o diretório dentro da organização de TI, em vez de tratá-lo como instalação isolada de servidor.",
+    proximoPasso: {
+      rotulo: "Organização de TI para pequenos escritórios",
+      to: "/blog/organizacao-de-ti-para-pequenos-escritorios",
+      contexto:
+        "Conecte identidade e políticas ao inventário, dados, responsáveis e continuidade do ambiente.",
+    },
+  },
+  "como-deixar-celular-android-mais-rapido": {
+    temaId: "fundamentos",
+    porQue:
+      "Lentidão em Android também exige separar armazenamento, aplicativo, conexão, temperatura e limite do hardware. A trilha de fundamentos aplica o mesmo princípio de diagnóstico: observar a camada responsável antes de instalar ferramenta de limpeza.",
+    proximoPasso: {
+      rotulo: "Diagnóstico técnico",
+      to: "/diagnostico-tecnico",
+      contexto:
+        "Quando há aquecimento, reinicialização, risco para dados ou o teste por eliminação não identifica a causa.",
+    },
+  },
+
+  "como-configurar-repetidor-wifi": {
+    temaId: "redes-wifi",
+    porQue:
+      "Extensor de alcance só ajuda quando o problema real é cobertura e o ponto escolhido ainda recebe um sinal útil. A trilha de redes ensina a separar provedor, roteador, interferência, cobertura e arquitetura antes de adicionar equipamentos.",
+    proximoPasso: {
+      rotulo: "Internet lenta: provedor ou roteador",
+      to: "/blog/internet-lenta-provedor-ou-roteador",
+      contexto:
+        "Confirme se a origem da lentidão está na cobertura Wi-Fi ou já existe perto do roteador.",
+    },
+  },
+  "trocar-windows-por-linux-vale-a-pena": {
+    temaId: "sistemas-operacionais",
+    porQue:
+      "Migrar de sistema operacional é uma decisão de compatibilidade: aplicativos, hardware, boot, criptografia e recuperação precisam ser testados antes de alterar o disco.",
+    proximoPasso: {
+      rotulo: "Checklist antes de formatar",
+      to: "/ferramentas/checklist-antes-de-formatar",
+      contexto:
+        "Garanta dados, contas e chaves antes de instalar outro sistema ou reparticionar.",
+    },
+  },
+  "erros-comuns-upgrade-computador": {
+    temaId: "hardware-upgrades",
+    porQue:
+      "Upgrade seguro começa por compatibilidade elétrica, física, lógica e de firmware. A trilha de hardware ajuda a decidir se RAM, SSD, GPU ou fonte resolvem o gargalo real.",
+    proximoPasso: {
+      rotulo: "Upgrade de SSD e RAM",
+      to: "/servicos/upgrade-ssd-ram",
+      contexto:
+        "Quando a compatibilidade está confirmada e o objetivo é executar a troca com validação.",
+    },
+  },
+  "como-configurar-vpn-empresarial": {
+    temaId: "redes-wifi",
+    porQue:
+      "VPN cria um caminho autenticado para dentro da rede; identidade, rotas, DNS, segmentação, firewall e revogação precisam ser planejados juntos.",
+    proximoPasso: {
+      rotulo: "Firewall pfSense",
+      to: "/blog/como-configurar-firewall-pfsense",
+      contexto:
+        "Defina regras e segmentação do gateway antes de ampliar acesso remoto.",
+    },
+  },
+  "como-recuperar-conta-hackeada": {
+    temaId: "seguranca-privacidade",
+    porQue:
+      "Recuperar uma conta é só a primeira parte. A trilha de segurança conecta sessão, dispositivo, senha, MFA, recuperação e prevenção de phishing para impedir reentrada.",
+    proximoPasso: {
+      rotulo: "Configurar 2FA/MFA",
+      to: "/blog/como-configurar-2fa-em-tudo",
+      contexto:
+        "Depois de retomar controle, fortaleça autenticação e prepare métodos de recuperação.",
+    },
+  },
+
+  "como-deixar-windows-11-mais-rapido-iniciantes": {
+    temaId: "hardware-upgrades",
+    porQue:
+      "Desempenho no Windows precisa ser medido por recurso: CPU, memória, disco, inicialização e temperatura. A trilha de hardware evita transformar toda lentidão em formatação ou compra de peça.",
+    proximoPasso: {
+      rotulo: "SSD ou memória RAM",
+      to: "/decisoes/ssd-ou-memoria-ram",
+      contexto: "Compare o gargalo real antes de decidir qual upgrade faz sentido.",
+    },
+  },
+  "como-fazer-backup-fotos-windows-iniciantes": {
+    temaId: "dados-backup",
+    porQue:
+      "Fotos precisam sobreviver à falha do computador, à exclusão e à perda física. A trilha de dados separa cópia, sincronização, versionamento e restauração.",
+    proximoPasso: {
+      rotulo: "Testar restauração de backup",
+      to: "/blog/como-testar-restauracao-de-backup",
+      contexto: "Comprove que a cópia abre e pode ser restaurada antes de depender dela.",
+    },
+  },
+  "como-atualizar-windows-corretamente": {
+    temaId: "sistemas-operacionais",
+    porQue:
+      "Atualização é manutenção do sistema operacional: preparação, canal oficial, reinício e validação reduzem risco e tornam falhas reproduzíveis.",
+    proximoPasso: {
+      rotulo: "Windows Update não funciona",
+      to: "/blog/windows-update-nao-funciona-o-que-verificar",
+      contexto: "Use a trilha de diagnóstico quando a atualização falha ou retorna código de erro.",
+    },
+  },
+  "como-recuperar-arquivos-apagados-windows": {
+    temaId: "dados-backup",
+    porQue:
+      "Recuperação depende de preservar a mídia e reduzir novas gravações. A trilha de dados mostra quando restaurar backup, quando tentar recuperação lógica e quando parar.",
+    proximoPasso: {
+      rotulo: "Recuperação de dados",
+      to: "/servicos/recuperacao-de-dados",
+      contexto: "Entenda o limite entre exclusão lógica, mídia instável e defeito físico.",
+    },
+  },
+  "como-fazer-teste-velocidade-internet": {
+    temaId: "redes-wifi",
+    porQue:
+      "Velocidade é só uma parte da experiência de rede. A trilha de redes conecta download, upload, latência, jitter, perda, Ethernet e Wi-Fi ao ponto real da falha.",
+    proximoPasso: {
+      rotulo: "Internet lenta: provedor ou roteador",
+      to: "/blog/internet-lenta-provedor-ou-roteador",
+      contexto: "Transforme os resultados do teste em diagnóstico de provedor versus rede interna.",
+    },
+  },
+
+
+  "como-resetar-senha-windows": {
+    temaId: "sistemas-operacionais",
+    porQue:
+      "Recuperação de acesso exige identificar a credencial certa antes de alterar qualquer coisa. A trilha de sistemas conecta conta, Windows Hello, recuperação, BitLocker e preservação de dados.",
+    proximoPasso: {
+      rotulo: "Segurança dos dados",
+      to: "/seguranca-dos-dados",
+      contexto: "Revise credenciais, chaves de recuperação e cópias antes de qualquer reinstalação.",
+    },
+  },
+  "como-organizar-arquivos-windows-iniciantes": {
+    temaId: "dados-backup",
+    porQue:
+      "Organização só é confiável quando localização, sincronização e recuperação são entendidas juntas. A trilha de dados separa estrutura de pastas, nuvem e backup.",
+    proximoPasso: {
+      rotulo: "Testar restauração de backup",
+      to: "/blog/como-testar-restauracao-de-backup",
+      contexto: "Confirme que os arquivos organizados podem ser recuperados se o computador falhar.",
+    },
+  },
+  "como-trocar-senha-wifi": {
+    temaId: "redes-wifi",
+    porQue:
+      "A senha é uma das camadas da rede. A trilha de redes conecta autenticação, firmware, segmentação, cobertura e diagnóstico sem transformar reset de fábrica em rotina.",
+    proximoPasso: {
+      rotulo: "Proteger o Wi-Fi da empresa",
+      to: "/blog/como-proteger-rede-wifi-empresa",
+      contexto: "Avance de uma credencial doméstica para segmentação, administração e ciclo de firmware.",
+    },
+  },
+
+  "como-configurar-bios-uefi-corretamente": {
+    temaId: "sistemas-operacionais",
+    porQue: "Firmware, boot, Secure Boot, TPM, armazenamento e Windows formam uma mesma cadeia de inicialização. A trilha evita tratar cada opção da UEFI como ajuste isolado.",
+    proximoPasso: { rotulo: "Roteiro de falha de inicialização", to: "/ferramentas/roteiro-falha-de-inicializacao", contexto: "Use um roteiro reversível quando a máquina deixa de encontrar o sistema ou muda de comportamento após o firmware." },
+  },
+  "como-configurar-servidor-de-arquivos": {
+    temaId: "informatica-empresas",
+    porQue: "Servidor de arquivos une identidade, permissões, rede, continuidade e suporte. A trilha empresarial coloca SMB/Samba dentro da operação de TI, e não como uma pasta isolada.",
+    proximoPasso: { rotulo: "Organização de TI para pequenos escritórios", to: "/blog/organizacao-de-ti-para-pequenos-escritorios", contexto: "Conecte compartilhamentos a inventário, responsáveis, acessos e rotina de backup." },
+  },
+  "como-configurar-firewall-ufw-linux": {
+    temaId: "redes-wifi",
+    porQue: "UFW controla o tráfego do host, mas precisa respeitar a arquitetura de serviços, administração remota e demais camadas de firewall. A trilha de redes ajuda a modelar origem, destino e acesso.",
+    proximoPasso: { rotulo: "Firewall pfSense", to: "/blog/como-configurar-firewall-pfsense", contexto: "Quando o problema deixa de ser um único host e passa a envolver várias redes, NAT, VPN e segmentação." },
+  },
+
+  "como-instalar-ubuntu-do-zero": {
+    temaId: "sistemas-operacionais",
+    porQue:
+      "Instalar um sistema operacional é uma decisão de armazenamento e inicialização antes de ser um procedimento de software. A trilha conecta backup, firmware, disco, dual boot, criptografia e validação pós-instalação.",
+    proximoPasso: {
+      rotulo: "Trocar Windows por Linux: vale a pena?",
+      to: "/blog/trocar-windows-por-linux-vale-a-pena",
+      contexto:
+        "Compare compatibilidade, aplicativos e rotina de uso antes de transformar um teste do Ubuntu em migração definitiva.",
+    },
+  },
+
 };
 
 export interface AtlasPonteArtigoResolvida extends AtlasPonteArtigo {

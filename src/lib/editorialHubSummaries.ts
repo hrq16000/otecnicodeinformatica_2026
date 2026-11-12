@@ -1,7 +1,7 @@
 /**
  * Índice leve do hub editorial. Mantém título, resumo e tema no HTML inicial
  * de /blog sem transferir o corpo completo de cada artigo para a página-hub.
- * Atualizar junto de blogPostsContent.tsx e do registro editorial.
+ * Atualizar junto de blogPostsContent.tsx/blogSupplementalPosts.tsx e do registro editorial.
  */
 export type EditorialHubSummary = {
   title: string;
@@ -270,16 +270,16 @@ const rows: Array<EditorialHubSummary & { slug: string }> = [
   },
   {
     "slug": "o-que-e-informatica",
-    "title": "O que é informática? Definição completa em português",
-    "excerpt": "Entenda o que é informática, para que serve, onde é aplicada e qual a diferença entre informática, computação e TI. Guia nacional em português.",
+    "title": "O que é informática? Significado, definição e exemplos",
+    "excerpt": "Informática é o processamento automático da informação com computadores. Entenda hardware, software, redes, dados e a diferença entre informática, computação e TI.",
     "date": "2026-08-15",
     "readTime": "10 min",
     "category": "Fundamentos"
   },
   {
     "slug": "informatica-basica",
-    "title": "Informática Básica: O Que É, O Que Ensina e Por Onde Começar",
-    "excerpt": "Saiba o que é informática básica, o que se aprende, para que serve e como estudar do zero. Conteúdo nacional em português, sem filler.",
+    "title": "Informática básica: conteúdos, noções e conhecimentos essenciais",
+    "excerpt": "Informática básica reúne sistema operacional, arquivos, internet, e-mail, texto, planilhas, segurança e hardware. Veja os conhecimentos essenciais para iniciantes.",
     "date": "2026-08-15",
     "readTime": "12 min",
     "category": "Fundamentos"
@@ -287,7 +287,7 @@ const rows: Array<EditorialHubSummary & { slug: string }> = [
   {
     "slug": "como-aprender-informatica",
     "title": "Como Aprender Informática do Zero: Guia Prático para Iniciantes",
-    "excerpt": "Descubra como aprender informática do zero, em casa, para concurso ou trabalho. Roteiro prático, recursos gratuitos e dicas de estudo.",
+    "excerpt": "Como aprender informática do zero: roteiro passo a passo em 4 fases, com plano de 30 dias, exercícios práticos e objetivos para trabalho ou concurso.",
     "date": "2026-08-15",
     "readTime": "13 min",
     "category": "Fundamentos"
@@ -635,6 +635,78 @@ const rows: Array<EditorialHubSummary & { slug: string }> = [
     "date": "2026-09-03",
     "readTime": "11 min",
     "category": "Dados"
+  },
+  {
+    "slug": "como-fazer-backup-na-nuvem",
+    "title": "Backup na nuvem: como montar uma cópia que você consegue restaurar",
+    "excerpt": "Sincronizar não basta: organize arquivos, mantenha cópia independente, confirme versionamento e teste a restauração antes de confiar no backup.",
+    "date": "2026-09-26",
+    "readTime": "11 min",
+    "category": "Segurança"
+  },
+  {
+    "slug": "wifi-caindo-toda-hora",
+    "title": "Wi-Fi caindo toda hora: como descobrir se é sinal, roteador ou provedor",
+    "excerpt": "Wi-Fi desconecta em um aparelho ou na casa inteira? Compare cabo, distância, banda e dispositivos antes de trocar roteador ou culpar o provedor.",
+    "date": "2026-09-26",
+    "readTime": "10 min",
+    "category": "Redes"
+  },
+  {
+    "slug": "pc-nao-liga-o-que-fazer",
+    "title": "PC não liga: como separar energia, vídeo e inicialização com segurança",
+    "excerpt": "PC sem sinal, com ventoinha sem vídeo ou reiniciando? Separe energia, POST e imagem antes de abrir a máquina ou trocar peças.",
+    "date": "2026-09-26",
+    "readTime": "10 min",
+    "category": "Diagnóstico"
+  },
+  {
+    "slug": "ssd-nao-aparece-no-instalador-do-windows",
+    "title": "SSD não aparece no instalador do Windows: como diagnosticar sem apagar dados",
+    "excerpt": "A BIOS reconhece o SSD, mas o Windows Setup não mostra nenhuma unidade? Separe firmware, controlador, driver e compatibilidade antes de mudar VMD, RAID ou apagar partições.",
+    "date": "2026-09-26",
+    "readTime": "12 min",
+    "category": "Procedimentos Técnicos"
+  },
+  {
+    "slug": "como-instalar-ubuntu-do-zero",
+    "title": "Como instalar Ubuntu do zero: guia seguro para PC e notebook",
+    "excerpt": "Pendrive, backup, disco, dual boot, BitLocker e atualização pós-instalação organizados na ordem certa para instalar Ubuntu sem apagar dados por engano.",
+    "date": "2026-09-26",
+    "readTime": "13 min",
+    "category": "Linux"
+  },
+  {
+    "slug": "como-usar-rsync-backup-linux",
+    "title": "Como usar rsync para backup no Linux sem apagar arquivos por engano",
+    "excerpt": "Cópia local e remota, barra final, dry-run, --delete, automação e teste de restauração — com a diferença entre sincronização e backup explícita.",
+    "date": "2026-09-27",
+    "readTime": "13 min",
+    "category": "Linux"
+  },
+  {
+    "slug": "como-configurar-ssh-seguro-linux",
+    "title": "Como configurar SSH com segurança no Linux sem perder acesso",
+    "excerpt": "Chaves, sshd_config, validação antes do reload e rollback: endureça o OpenSSH em etapas sem transformar hardening em lockout.",
+    "date": "2026-09-27",
+    "readTime": "13 min",
+    "category": "Linux"
+  },
+  {
+    "slug": "como-gerenciar-pacotes-apt-dnf-linux",
+    "title": "APT e DNF no Linux: instalar, atualizar e remover pacotes com segurança",
+    "excerpt": "Identifique a distribuição, revise transações, diferencie APT de DNF/DNF5 e trate repositórios e automação sem comandos destrutivos por reflexo.",
+    "date": "2026-09-27",
+    "readTime": "13 min",
+    "category": "Linux"
+  },
+  {
+    "slug": "comandos-linux-essenciais-iniciantes",
+    "title": "Comandos Linux para iniciantes: terminal seguro sem decorar uma lista",
+    "excerpt": "Navegação, arquivos, grep, pipes, permissões e processos explicados pelo efeito de cada comando, com limites claros para sudo e operações destrutivas.",
+    "date": "2026-09-27",
+    "readTime": "12 min",
+    "category": "Linux"
   },
 ];
 

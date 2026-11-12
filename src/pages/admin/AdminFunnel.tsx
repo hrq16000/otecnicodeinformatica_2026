@@ -6,6 +6,7 @@ import { Footer } from "@/components/Footer";
 import FunnelStatusDiario from "@/components/admin/FunnelStatusDiario";
 import FunnelBairroServico from "@/components/admin/FunnelBairroServico";
 import FunnelAcoesBairro from "@/components/admin/FunnelAcoesBairro";
+import FunnelPrioridades from "@/components/admin/FunnelPrioridades";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
@@ -306,6 +307,7 @@ const AdminFunnel = () => {
       </Helmet>
       <Header />
       <main className="flex-1 container mx-auto px-4 py-6">
+        <FunnelPrioridades />
         <FunnelStatusDiario />
         <FunnelBairroServico />
         <FunnelAcoesBairro />

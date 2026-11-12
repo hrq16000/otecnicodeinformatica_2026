@@ -1,6 +1,6 @@
 # Instant Navigation — Guia de Replicação
 
-Este documento descreve a estratégia usada em **tecnicocuritiba.com.br**
+Este documento descreve a estratégia usada em **[LEGACY_DOMAIN_REMOVED]**
 para conseguir navegação **percebida como instantânea** (`<90ms` em
 rotas pré-aquecidas) em uma SPA React + Vite, sem flashes de tela
 branca nem loaders intermediários.

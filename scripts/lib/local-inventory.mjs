@@ -1,3 +1,5 @@
+import { BAIRROS_ANCORA } from "./local-index-policy.mjs";
+
 /**
  * ============================================================================
  * RODADA 2C — INVENTÁRIO E CLASSIFICAÇÃO DAS URLs LOCAIS
@@ -41,14 +43,12 @@ export const CIDADES_LOCAIS = [
   { path: "/tecnico-informatica-quatro-barras", nivel: 3, classe: "L3" },
 ].map((e) => ({ ...e, tipo: TIPOS.CIDADE }));
 
-/** Bairros-âncora de Curitiba aprovados pelos critérios do item 10. */
-export const BAIRROS_LOCAIS = [
-  { path: "/bairros/cic", classe: "L2" },
-  { path: "/bairros/batel", classe: "L2" },
-  { path: "/bairros/agua-verde", classe: "L2" },
-  { path: "/bairros/centro", classe: "L2" },
-  { path: "/bairros/portao", classe: "L2" },
-].map((e) => ({ ...e, tipo: TIPOS.BAIRRO }));
+/** Bairros-âncora indexáveis derivados da política central. */
+export const BAIRROS_LOCAIS = BAIRROS_ANCORA.map((slug) => ({
+  path: `/bairros/${slug}`,
+  classe: "L2",
+  tipo: TIPOS.BAIRRO,
+}));
 
 /**
  * Clusters mantidos fora do índice nesta rodada.

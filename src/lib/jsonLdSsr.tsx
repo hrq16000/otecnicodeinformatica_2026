@@ -53,7 +53,7 @@ export function JsonLdSsrSink() {
           key={entry.slot}
           type="application/ld+json"
           data-schema-key={entry.slot}
-          dangerouslySetInnerHTML={{ __html: entry.serialized }}
+          dangerouslySetInnerHTML={{ __html: entry.serialized.replace(/</g, "\\u003c") }}
         />
       ))}
     </>
