@@ -1,4 +1,4 @@
-name: PR401 - one-shot remaining high dependency remediation
+name: PR401 - one-shot Sharp high remediation
 
 on:
   push:
@@ -49,19 +49,19 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          npm install --save-dev --save-exact @lhci/cli@0.16.1 sharp@0.35.5 --package-lock-only --ignore-scripts --no-audit --no-fund
+          npm install --save-dev --save-exact sharp@0.35.5 --package-lock-only --ignore-scripts --no-audit --no-fund
           bun install --lockfile-only --ignore-scripts
           node <<'NODE'
           const assert=require('node:assert/strict'),fs=require('node:fs'),cp=require('node:child_process');
           const before=JSON.parse(cp.execFileSync('git',['show','HEAD:package.json'],{encoding:'utf8'}));
           const now=require('./package.json');
-          assert.equal(now.devDependencies['@lhci/cli'],'0.16.1');
+          assert.equal(now.devDependencies['@lhci/cli'],before.devDependencies['@lhci/cli']);
           assert.equal(now.devDependencies.sharp,'0.35.5');
-          assert.deepStrictEqual({...now,devDependencies:{...now.devDependencies,'@lhci/cli':before.devDependencies['@lhci/cli'],sharp:before.devDependencies.sharp}},before,'Unapproved direct dependency change');
+          assert.deepStrictEqual({...now,devDependencies:{...now.devDependencies,sharp:before.devDependencies.sharp}},before,'Unapproved direct dependency change');
           const npm=require('./package-lock.json');
-          if(npm.packages['node_modules/@lhci/cli']?.version!=='0.16.1'||npm.packages['node_modules/sharp']?.version!=='0.35.5')throw Error('npm lock did not upgrade direct dependencies');
+          if(npm.packages['node_modules/@lhci/cli']?.version!=='0.15.1'||npm.packages['node_modules/sharp']?.version!=='0.35.5')throw Error('npm lock did not upgrade direct dependencies');
           const bun=fs.readFileSync('bun.lock','utf8');
-          if(!bun.includes('@lhci/cli@0.16.1')||!bun.includes('sharp@0.35.5'))throw Error('Bun lock missed direct upgraded tools');
+          if(!bun.includes('sharp@0.35.5'))throw Error('Bun lock missed direct upgraded tools');
           NODE
           git diff --check
           test "$(git diff --name-only | sort | paste -sd, -)" = 'bun.lock,package-lock.json,package.json'
@@ -100,5 +100,5 @@ jobs:
           git add bun.lock package-lock.json package.json
           test "$(git diff --cached --name-only | sort | paste -sd, -)" = 'bun.lock,package-lock.json,package.json'
           git diff --cached --check
-          git commit -m 'fix(security): patch Lighthouse CI and Sharp high dependencies via npm and Bun'
+          git commit -m 'fix(security): patch Sharp high dependencies via npm and Bun'
           git push origin HEAD:refs/heads/fix/security-dompurify-3417-20261031
