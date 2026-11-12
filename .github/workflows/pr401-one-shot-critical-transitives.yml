@@ -50,7 +50,7 @@ jobs:
         run: |
           set -euo pipefail
           npm update proxy-addr shell-quote --package-lock-only --ignore-scripts --no-audit --no-fund
-          bun install --lockfile-only --ignore-scripts
+          bun update proxy-addr shell-quote --lockfile-only --ignore-scripts
           node <<'NODE'
           const fs=require('node:fs');
           const pkg=JSON.parse(fs.readFileSync('package.json','utf8'));
