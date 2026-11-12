@@ -494,7 +494,7 @@
     "sharp": "^0.34.5",
     "typescript": "^5.8.3",
     "typescript-eslint": "^8.56.1",
-    "vite": "^8.2.0",
+    "vite": "^8.3.8",
     "vite-imagetools": "^10.0.1",
     "vitest": "^4.1.9"
   },
