@@ -14907,6 +14907,7 @@ bcdboot C:\\Windows /s S: /f UEFI`}</code></pre>
 
         <h2>Resposta curta</h2>
         <p>Comece pelo estado da Ethernet no Windows e pelo encaixe do cabo. Se aparece “cabo de rede desconectado”, teste outro cabo conhecido e outra porta do roteador. Se a conexão aparece ativa, registre endereço IPv4, gateway e DNS com <code>ipconfig /all</code> antes de alterar qualquer coisa. Esses dados mostram em qual camada continuar; nenhuma luz ou comando, sozinho, identifica a peça defeituosa.</p>
+        <p><strong>Confirme por onde o teste saiu:</strong> num computador pessoal que você está usando presencialmente, desligue o Wi-Fi só durante o teste por cabo e religue-o ao terminar. No celular usado para comparação, pause os dados móveis e confirme que ele está no Wi-Fi do mesmo roteador. Se a sessão for remota ou a rede for gerenciada, não desligue interfaces nem desconecte a VPN por conta própria.</p>
 
         <h2>Fundamento: as cinco camadas do teste</h2>
         <table>
@@ -14927,7 +14928,7 @@ bcdboot C:\\Windows /s S: /f UEFI`}</code></pre>
         <p>Faça os testes por substituição, mudando uma variável por vez:</p>
         <table>
           <thead>
-            <tr><th>Ordem</th><th>Verificação</th><th>O que ela elimina</th></tr>
+            <tr><th scope="col">Ordem</th><th scope="col">Verificação</th><th scope="col">O que o resultado sugere</th></tr>
           </thead>
           <tbody>
             <tr><td>1</td><td>Reencaixar o cabo nas duas pontas</td><td>Conector parcialmente solto</td></tr>
@@ -14938,11 +14939,12 @@ bcdboot C:\\Windows /s S: /f UEFI`}</code></pre>
           </tbody>
         </table>
         <p>Observe também adaptadores USB, docks e conversores: testar outra porta USB ou ligar o cabo diretamente, quando possível, separa falha do acessório de falha da Ethernet integrada.</p>
+        <p><strong>Exemplo:</strong> o mesmo notebook e a mesma porta não dão enlace com o cabo da parede, mas funcionam com um cabo curto ligado diretamente ao roteador. Isso desloca a investigação para o trecho que ficou de fora: cabos das pontas, tomadas ou cabeamento embutido. Não identifica qual deles falhou. Se nem o teste direto funcionar, repita-o com outro computador antes de condenar a porta.</p>
 
         <h2>2. Leia a configuração sem modificá-la</h2>
         <p>Abra o Terminal ou Prompt de Comando e execute:</p>
         <pre><code>{`ipconfig /all`}</code></pre>
-        <p>Localize o adaptador Ethernet correto e anote o estado da mídia, o endereço IPv4, o gateway padrão e os servidores DNS. Um endereço automático na faixa <code>169.254.x.x</code>, acompanhado da ausência de gateway, indica que o Windows não recebeu uma concessão IPv4 por DHCP. Isso aponta para o caminho entre computador e servidor DHCP; não prova, por si só, defeito do roteador ou do provedor.</p>
+        <p>Localize o adaptador Ethernet correto, não o do Wi-Fi nem o da VPN. Anote o estado da mídia, se DHCP está habilitado, o IPv4, o gateway e os servidores DNS. Se a rede deveria entregar IPv4 por DHCP, um endereço de autoconfiguração na faixa <code>169.254.x.x</code> sem gateway IPv4 sugere que o Windows não obteve uma configuração IPv4 utilizável. Investigue DHCP e o caminho até ele, sem copiar o IP de outro computador. Esse sinal não diz se o IPv6 funciona e não prova falha do provedor.</p>
         <p>Não digite endereço IP, máscara, gateway ou DNS encontrados em tutorial. Em redes empresariais, VLANs, autenticação, IP fixo e políticas podem ser intencionais. Fotografe ou exporte a configuração antes de qualquer alteração e consulte quem administra a rede.</p>
 
         <h2>3. Separe rede local, DNS e internet</h2>
@@ -14951,15 +14953,15 @@ bcdboot C:\\Windows /s S: /f UEFI`}</code></pre>
         <p>Resposta consistente reforça que o caminho local alcança o roteador. Falta de resposta é um indício, não uma sentença: firewall ou política do equipamento pode bloquear ICMP. Confirme com o painel do roteador, outro dispositivo ou a equipe responsável pela rede antes de concluir.</p>
         <p>Depois, consulte um nome público:</p>
         <pre><code>{`nslookup example.com`}</code></pre>
-        <p>O <code>nslookup</code> mostra qual servidor DNS foi consultado e se houve resposta. Se a rede local funciona, mas a consulta falha, investigue DNS; se a consulta responde e o navegador não abre páginas, examine proxy, VPN, firewall, data e hora do sistema e o próprio navegador. Não “corrija” uma falha de DNS trocando cabo nem atribua toda falha de navegação ao provedor.</p>
+        <p>O <code>nslookup</code> mostra qual servidor DNS foi consultado e se ele respondeu. Uma resposta não comprova que o navegador usa o mesmo DNS nem que a conexão HTTPS abre. Se o nome resolve, mas só um navegador ou site falha, teste outro site conhecido e anote a mensagem antes de mexer em DNS, proxy ou VPN. Não ignore alertas de certificado nem desative o firewall para fazer a comparação.</p>
 
         <h2>4. Use Wi-Fi e outros dispositivos como comparação</h2>
         <p>Wi-Fi funcionando no mesmo roteador torna mais provável uma falha restrita ao caminho Ethernet, mas não exclui todas as causas externas. As interfaces podem receber DNS, endereço, VLAN, regras ou rotas diferentes; o roteador também pode tratar portas separadamente. Já cabo e Wi-Fi falhando em vários dispositivos ao mesmo tempo deslocam a suspeita para roteador, modem ou serviço externo.</p>
-        <p>Registre horário, dispositivos afetados e resultado de cada camada. Se há navegação, mas o desempenho é ruim, use o protocolo de <Link to="/blog/internet-lenta-provedor-ou-roteador" className="text-accent">internet lenta: provedor ou roteador</Link>. Para rever DHCP, nome e portas do equipamento doméstico, consulte <Link to="/blog/como-configurar-roteador-wifi-iniciantes" className="text-accent">como configurar o roteador</Link>.</p>
+        <p>Para encaminhar o problema, anote horário, adaptador, cabo e porta usados, estado do enlace, se houve IPv4/gateway e quais dispositivos falharam. Envie o relatório completo de rede apenas ao suporte autorizado; evite publicar endereços, nomes internos ou identificadores de adaptador. Se há navegação, mas o desempenho é ruim, use o protocolo de <Link to="/blog/internet-lenta-provedor-ou-roteador" className="text-accent">internet lenta: provedor ou roteador</Link>. Para rever DHCP, nome e portas do equipamento doméstico, consulte <Link to="/blog/como-configurar-roteador-wifi-iniciantes" className="text-accent">como configurar o roteador</Link>.</p>
 
         <h2>5. Driver e redefinição vêm depois</h2>
         <p>Se o adaptador sumiu, está desabilitado ou apresenta erro no Gerenciador de Dispositivos, confirme primeiro o modelo e obtenha o driver no fabricante do computador ou da placa. Em adaptador externo, siga também o diagnóstico de <Link to="/blog/dispositivo-usb-nao-reconhecido-o-que-fazer" className="text-accent">dispositivo USB não reconhecido</Link>.</p>
-        <p>A Redefinição de Rede do Windows deve ficar perto do fim, depois que cabo, porta, endereço, gateway, DNS e driver foram documentados. Ela remove e reinstala adaptadores e restaura configurações padrão; VPNs, adaptadores virtuais e parâmetros empresariais podem precisar de nova configuração. Em ambiente de trabalho, obtenha autorização antes.</p>
+        <p>A Redefinição de Rede do Windows é o último recurso do lado do computador, não um teste para o roteador. Ela remove e reinstala adaptadores e restaura configurações padrão; VPNs, adaptadores virtuais e parâmetros empresariais podem precisar de nova configuração. Só considere depois de documentar o diagnóstico, confirmar que consegue restaurar a configuração e que tem acesso presencial. Em equipamento de trabalho, encaminhe à TI.</p>
 
         <h2>Matriz de decisão</h2>
         <table>

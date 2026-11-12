@@ -13,7 +13,8 @@ import { inspectEditorialHtml as inspect } from "./lib/editorial-html-signals.mj
 
 const run = promisify(execFile);
 const origin = "https://otecnicodeinformatica.com.br";
-const out = resolve("reports/editorial-batch-ssr");
+const ssrOnly = process.argv.includes("--ssr-only");
+const out = resolve(ssrOnly ? "reports/editorial-batch-ssr-only" : "reports/editorial-batch-ssr");
 const assets = resolve("dist/client");
 const cases = [
   { slug: "windows-11-vale-a-pena-atualizar", approved: false, date: "2026-01-15" },
@@ -24,11 +25,12 @@ const cases = [
   { slug: "erro-no-bootable-device-como-resolver", approved: true, date: "2026-10-01", reviewedAt: "2026-11-09" },
   { slug: "como-remover-virus-windows-iniciantes", approved: true, date: "2026-10-01", reviewedAt: "2026-11-10" },
   { slug: "teclado-de-notebook-nao-funciona-o-que-verificar", approved: true, date: "2026-09-03", reviewedAt: "2026-11-11" },
+  { slug: "computador-nao-conecta-na-internet-por-cabo", approved: true, date: "2026-09-14", reviewedAt: "2026-11-12" },
 ];
 
 await mkdir(out, { recursive: true });
-// Ausência do browser ou do bundle é erro, não aprovação vazia.
-const browser = await chromium.launch({ headless: true });
+// O padrão exige navegador; a validação parcial é explícita e usa relatório separado.
+const browser = ssrOnly ? undefined : await chromium.launch({ headless: true });
 const results = [];
 try {
   for (const item of cases) {
@@ -41,6 +43,11 @@ try {
     assert.equal(first.fp, second.fp, "tipos/IDs estáveis em dois processos frios");
     const raw = await readFile(rawPath, "utf8");
     const before = inspect(raw, item);
+    if (!browser) {
+      results.push({ slug: item.slug, status: first.status, xRobotsTag: first.xRobotsTag, coldRenders: 2, ...before });
+      console.log("OK " + path + " | somente SSR frio | FAQ=" + before.faqCount);
+      continue;
+    }
     const page = await browser.newPage();
     const errors = [];
     page.on("pageerror", (e) => errors.push(e.message));
@@ -69,7 +76,8 @@ try {
   const missing = JSON.parse((await run("node", ["scripts/p0/render-jsonld-once.mjs", "/blog/editorial-inexistente-auditoria-20261106"], { maxBuffer: 1e8 })).stdout);
   assert.equal(missing.status, 404, "rota desconhecida deve retornar 404");
   assert.ok(!missing.tipos.includes("Article"), "404 não pode emitir Article");
-  await writeFile(resolve(out, "summary.json"), JSON.stringify({ scope: "local worker bundle + intercepted browser; not deployed", results, missingStatus: missing.status }, null, 2) + "\n");
+  const scope = ssrOnly ? "local worker bundle only; no browser; not deployed" : "local worker bundle + intercepted browser; not deployed";
+  await writeFile(resolve(out, "summary.json"), JSON.stringify({ scope, results, missingStatus: missing.status }, null, 2) + "\n");
 } finally {
-  await browser.close();
+  await browser?.close();
 }

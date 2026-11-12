@@ -28,6 +28,7 @@ export default defineConfig({
           "src/lib/__tests__/bootRecoveryEditorial.test.tsx",
           "src/lib/__tests__/adwareRecurrenceEditorial.test.tsx",
           "src/lib/__tests__/notebookKeyboardEditorial.test.tsx",
+          "src/lib/__tests__/ethernetEditorial.test.tsx",
         ],
   },
 });

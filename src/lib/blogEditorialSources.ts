@@ -119,6 +119,11 @@ export const ALLOWED_SOURCE_HOSTS = [
 // FONTES CONSULTADAS (URLs confirmadas em 2026-07-12).
 // ─────────────────────────────────────────────────────────────
 export const EDITORIAL_SOURCES: Record<string, EditorialSource> = {
+  "ms-windows-apipa-20261112": {
+    id: "ms-windows-apipa-20261112", title: "Endereçamento TCP/IP automático sem servidor DHCP", publisher: "Microsoft Learn",
+    url: "https://learn.microsoft.com/pt-br/windows-server/troubleshoot/how-to-use-automatic-tcpip-addressing-without-a-dh", accessedAt: "2026-11-12", sourceType: "official",
+    supports: ["Endereçamento automático IPv4 169.254 e limite de comunicação fora do segmento local."],
+  },
   "ms-keyboard-usb-20261111": {
     id: "ms-keyboard-usb-20261111", title: "Problemas com mouse e teclado no Windows", publisher: "Microsoft Support",
     url: "https://support.microsoft.com/pt-br/windows/hardware/input-devices/mouse-and-keyboard-problems-in-windows", accessedAt: "2026-11-11", sourceType: "official",
@@ -2953,12 +2958,12 @@ export const ARTICLE_SOURCE_MANIFEST: Record<string, ArticleSourceManifest> = {
   },
   "computador-nao-conecta-na-internet-por-cabo": {
     slug: "computador-nao-conecta-na-internet-por-cabo",
-    sources: ["ms-fix-ethernet-windows", "ms-ipconfig", "ms-ping", "ms-nslookup"],
+    sources: ["ms-fix-ethernet-windows", "ms-ipconfig", "ms-ping", "ms-nslookup", "ms-windows-apipa-20261112"],
     technicalReview: "reviewed",
     factChecked: true,
-    factCheckedAt: "2026-09-14",
+    factCheckedAt: "2026-11-12",
     notes:
-      "Revisão material em 2026-09-14 com fontes Microsoft visíveis: separação de enlace, configuração DHCP/IP, gateway, DNS e acesso externo; observação por ipconfig, ping e nslookup antes de mudanças; Redefinição de Rede reservada ao fim e comparação Wi-Fi × Ethernet sem conclusão absoluta.",
+      "Revisão material em 2026-11-12: isola o caminho usado, diferencia ligação direta e ponto de parede, explicita o limite do IPv4 automático e do nslookup e evita alteração em sessão remota ou equipamento gerenciado. Cinco fontes Microsoft visíveis.",
   },
   "ventoinha-do-computador-fazendo-barulho-o-que-verificar": {
     slug: "ventoinha-do-computador-fazendo-barulho-o-que-verificar",

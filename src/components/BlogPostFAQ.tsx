@@ -1114,19 +1114,19 @@ const PILOT_FAQ: Record<string, FAQItem[]> = {
     },
     {
       q: "Como testar o cabo sem equipamento próprio?",
-      a: "Por substituição e por troca de ponta. Use outro cabo comprovadamente bom no mesmo par de portas e, depois, o cabo original em outra porta do roteador. Se o enlace aparece com o outro cabo, o cabo original é o suspeito.",
+      a: "Compare com um cabo conhecido no mesmo par de portas. Se precisar testar outra porta, mantenha o cabo conhecido. Se o problema só aparece no ponto de parede, teste uma ligação direta ao roteador antes de atribuir a falha ao cabeamento embutido.",
     },
     {
-      q: "O cabo conecta mas aparece 'sem acesso à internet'. O que muda?",
-      a: "Muda a camada do teste. Com enlace ativo, registre IPv4, gateway e DNS com ipconfig /all. Depois verifique o gateway e a resolução de nomes; DHCP, DNS, rota externa, VPN, proxy ou política local ainda podem falhar.",
+      q: "O que significa IPv4 169.254 no adaptador Ethernet?",
+      a: "Se a rede usa DHCP e não há gateway IPv4, um endereço 169.254 de autoconfiguração sugere que o Windows não obteve configuração IPv4 pelo DHCP. Isso não diagnostica a conexão IPv6 nem prova falha no provedor.",
     },
     {
       q: "Wi-Fi funciona e o cabo não. Isso descarta o provedor?",
-      a: "Não de forma absoluta. É uma evidência forte de que a saída do roteador funciona e desloca o foco para a Ethernet, mas cabo e Wi-Fi podem receber DNS, endereço, VLAN, regras ou rotas diferentes. Confirme as outras camadas antes de concluir.",
+      a: "Não. Confirme primeiro que o outro aparelho está no Wi-Fi do mesmo roteador e não usando dados móveis. Se ele navega, vale investigar a Ethernet antes de acionar o provedor, mas as duas interfaces podem seguir configurações ou rotas diferentes.",
     },
     {
       q: "Quando usar a Redefinição de Rede do Windows?",
-      a: "Perto do fim, depois de documentar cabo, porta, endereço, gateway, DNS e driver. A redefinição remove e reinstala adaptadores e restaura padrões; VPNs, adaptadores virtuais e parâmetros empresariais podem precisar de nova configuração.",
+      a: "Como último recurso do Windows, com acesso presencial e configuração anotada. A redefinição pode exigir reinstalar ou reconfigurar VPNs e adaptadores virtuais. Em equipamento gerenciado, encaminhe o caso à TI.",
     },
   ],
   // ── Onda 11G — ruído de ventoinha, rede Wi-Fi invisível e arquivo corrompido.
