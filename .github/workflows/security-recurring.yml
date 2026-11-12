@@ -33,7 +33,7 @@ jobs:
           bun-version: latest
       - uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: "22"
       - run: bun install --frozen-lockfile
 
       # 1) Varredura estática dos internal_id corrigidos (fail-fast).
@@ -60,6 +60,8 @@ jobs:
 
       # 5) Segredos/credenciais vazados no diff.
       - name: Gitleaks secret scan
+        env:
+          BASE_SHA: ${{ github.event.pull_request.base.sha || github.event.before }}
         run: bash scripts/run-gitleaks-ci.sh
 
       # 6) Notificação (Slack/e-mail) quando qualquer etapa acima falhar.

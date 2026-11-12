@@ -64,6 +64,8 @@ jobs:
       # 2) Block secrets being committed.
       - name: Gitleaks secret scan
         if: always()
+        env:
+          BASE_SHA: ${{ github.event.pull_request.base.sha || github.event.before }}
         run: bash scripts/run-gitleaks-ci.sh
 
       # 3) Static analysis on JS/TS.
