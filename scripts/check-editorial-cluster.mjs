@@ -18,6 +18,7 @@
 
 import { promises as fs } from "node:fs";
 import path from "node:path";
+import { getBlogPosts } from "./prerender-cities.mjs";
 
 const ROOT = process.cwd();
 const errors = [];
@@ -77,10 +78,9 @@ async function main() {
   // Acervo real de slugs.
   const base = await read("src/data/blogPostsContent.tsx");
   const prog = await read("src/data/blogProgrammaticPosts.tsx");
-  const slugs = new Set([
-    ...[...base.matchAll(/^ {2}"([a-z0-9-]+)":\s*\{/gm)].map((m) => m[1]),
-    ...[...prog.matchAll(/slug:\s*"([a-z0-9-]+)"/g)].map((m) => m[1]),
-  ]);
+  const { posts, duplicates } = await getBlogPosts();
+  const slugs = new Set(posts.map((post) => post.slug));
+  if (duplicates.length) fail(`acervo editorial: colisões inesperadas (${duplicates.join(", ")})`);
 
   // Rotas reais (pilares).
   const appPaths = new Set();
