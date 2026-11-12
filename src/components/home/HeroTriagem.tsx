@@ -120,10 +120,11 @@ export const HeroTriagem = () => {
 
         {/* Campo principal: "O que está acontecendo?" */}
         <form
+          id="triagem"
           onSubmit={enviar}
           role="search"
           aria-label="Descreva o que está acontecendo"
-          className="mt-8 max-w-3xl"
+          className="mt-8 max-w-3xl scroll-mt-[var(--site-header-space)]"
         >
           <label
             htmlFor="triagem-sintoma"
