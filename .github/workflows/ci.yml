@@ -332,14 +332,14 @@ jobs:
           node-version: "22"
       - name: Install deps
         run: npm ci --no-audit --no-fund
-      - name: Install Lighthouse CI
-        run: npm i -g @lhci/cli@0.16.1
+      # Lighthouse CI is installed from the npm/Bun-validated project lockfiles.
+      # Do not install a fresh global release outside Bun's 24h age policy.
       - name: Build
         run: npm run build
       - name: Lighthouse desktop (bloqueante)
-        run: lhci autorun --config=lighthouserc.json
+        run: npm run lh:desktop
       - name: Lighthouse mobile (bloqueante)
-        run: lhci autorun --config=lighthouserc.mobile.json
+        run: npm run lh:mobile
       - name: Resumo Lighthouse (LCP/CLS/TTFB/A11y)
         if: always()
         run: node scripts/report-lighthouse-summary.mjs
